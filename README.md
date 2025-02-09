@@ -41,12 +41,18 @@
 - MOD 檔案名稱：Who Are You-127-3-6-3-1735149310
 - 手動維護最後下載日期：2025-02-09
 
-
 ### [MultiBind](https://www.nexusmods.com/warhammer40kdarktide/mods/337)
     多重綁定 - 讓你可以額外綁定按鍵
 - MOD 網站最後更新日期：Last updated 09 July 202410:46AM
 - MOD 版本：未提供
-- MOD 檔案名稱：IME_Enable-167-1-1-0-1686313314
+- MOD 檔案名稱：MultiBind.zip-337-V1-0-1720518374
+- 手動維護最後下載日期：2025-02-09
+
+### [More Characters and Loadouts](https://www.nexusmods.com/warhammer40kdarktide/mods/209)
+    新增更多角色與天賦頁面
+- MOD 網站最後更新日期：Last updated 15 September 2023 2:41AM
+- MOD 版本：1.0.0
+- MOD 檔案名稱：More Characters and Loadouts-209-1-0-0-1694742033
 - 手動維護最後下載日期：2025-02-09
 
 ---
