@@ -19,3 +19,10 @@
 - MOD 版本：Version 24.07.12
 - MOD 檔案名稱：Darktide Mod Framework-8-24-07-12-1720764449
 - 手動維護最後下載日期：2025-02-06
+
+### [Hybrid Sprint](https://www.nexusmods.com/warhammer40kdarktide/mods/342?tab=description)
+    混合衝刺 - 能夠解放雙手不需要一直衝刺
+- MOD 網站最後更新日期：Last updated 17 October 20241:44PM
+- MOD 版本：Version 1.3.1
+- MOD 檔案名稱：Hybrid Sprint-342-1-3-1-1729169092
+- 手動維護最後下載日期：2025-02-09
