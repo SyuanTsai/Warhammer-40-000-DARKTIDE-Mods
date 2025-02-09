@@ -36,6 +36,13 @@
 ---
 # 遊戲內操作相關MOD
 
+### [Talent Tree UX Improvements](https://www.nexusmods.com/warhammer40kdarktide/mods/216)
+   技能修改助手 - 能夠讓你快速地更換天賦支線
+- MOD 網站最後更新日期：Last updated 28 October 20231:34PM
+- MOD 版本：Version 1.5
+- MOD 檔案名稱：TalentRefundBelow-216-1-5-1698496483
+- 手動維護最後下載日期：2025-02-09
+
 ### [Hybrid Sprint](https://www.nexusmods.com/warhammer40kdarktide/mods/342?tab=description)
     混合衝刺 - 能夠解放雙手不需要一直衝刺
 - MOD 網站最後更新日期：Last updated 17 October 20241:44PM
