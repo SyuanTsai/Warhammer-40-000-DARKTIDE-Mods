@@ -14,7 +14,7 @@
 
 
 ### [Darktide Mod Framework](https://www.nexusmods.com/warhammer40kdarktide/mods/8?tab=descriptionn)
-
+    MOD框架 - 想要使用MOD必備，此MOD才能夠讓你開始加入其他的MOD
 - MOD 網站最後更新日期：Last updated 12 July 20247:07AM
 - MOD 版本：Version 24.07.12
 - MOD 檔案名稱：Darktide Mod Framework-8-24-07-12-1720764449
