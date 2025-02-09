@@ -99,9 +99,16 @@
 
 ### [Show Crit Chance](https://www.nexusmods.com/warhammer40kdarktide/mods/279)
     顯示爆擊率 - 顯示當前爆擊率
-- MOD 網站最後更新日期：Last updated 13 March 2024 6:29PM
+- MOD 網站最後更新日期：Last updated 26 September 2024 7:46AM
 - MOD 版本：1.0.8
 - MOD 檔案名稱：show_crit_chance_v108-279-1-0-8-1710354557
+- 手動維護最後下載日期：2025-02-09
+
+### [Debuff Indicator](https://www.nexusmods.com/warhammer40kdarktide/mods/137)
+    效果顯示
+- MOD 網站最後更新日期：Last updated 13 March 2024 6:29PM
+- MOD 版本：1.5.3
+- MOD 檔案名稱：Debuff Indicator-137-1-5-3-1727333171
 - 手動維護最後下載日期：2025-02-09
 
 ---
