@@ -62,6 +62,13 @@
 - MOD 檔案名稱：More Characters and Loadouts-209-1-0-0-1694742033
 - 手動維護最後下載日期：2025-02-09
 
+### [Decode Helper](https://www.nexusmods.com/warhammer40kdarktide/mods/252)
+    解碼助手 - 在解碼時顯示即將出現的目標符號。
+- MOD 網站最後更新日期：Last updated 01 December 20233:14PM
+- MOD 版本：1.1.0
+- MOD 檔案名稱：Decode_Helper-252-1-1-1701443693
+- 手動維護最後下載日期：2025-02-09
+
 ---
 # 遊戲內操作相關MOD
 
