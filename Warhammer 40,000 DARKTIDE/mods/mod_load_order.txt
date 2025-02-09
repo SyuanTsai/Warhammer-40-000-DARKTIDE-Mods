@@ -19,6 +19,7 @@ ScanHelper
 show_crit_chance
 debuff_indicator
 SuperImpact
+AutoTag
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
