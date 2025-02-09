@@ -23,7 +23,7 @@
 ### [Who Are You - Display account names](https://www.nexusmods.com/warhammer40kdarktide/mods/127)
     你是誰 - 顯示你Steam或者Xbox的帳號名稱
 - MOD 網站最後更新日期：Last updated 25 December 20245:55PM
-- MOD 版本：Version 3.633
+- MOD 版本：Version 3.6.3
 - MOD 檔案名稱：Who Are You-127-3-6-3-1735149310
 - 手動維護最後下載日期：2025-02-09
 
