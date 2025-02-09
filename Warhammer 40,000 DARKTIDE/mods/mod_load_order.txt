@@ -4,7 +4,8 @@
 -- Do not rename a mod's folders.
 -- You do not need to include 'base' or 'dmf' mod folders.
 -- ################################################################
--- 遊戲資訊相關MOD
+-- 遊戲體驗改善
+IME_Enable
 true_level
 who_are_you
 -- 遊戲內操作相關MOD
