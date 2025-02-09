@@ -16,6 +16,7 @@ DecodeMinigameSolver
 TrainSolver
 Tree_Helper
 ScanHelper
+show_crit_chance
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
