@@ -4,3 +4,5 @@
 -- Do not rename a mod's folders.
 -- You do not need to include 'base' or 'dmf' mod folders.
 -- ################################################################
+-- 遊戲資訊
+who_are_you
