@@ -111,6 +111,14 @@
 - MOD 檔案名稱：Debuff Indicator-137-1-5-3-1727333171
 - 手動維護最後下載日期：2025-02-09
 
+### [Super Impact](https://www.nexusmods.com/warhammer40kdarktide/mods/319)
+    超級衝擊 - 可以避免場地上一堆屍體擋住視線，但是會吃GPU
+- MOD 網站最後更新日期：Last updated 19 June 202411:31PM
+- MOD 版本：1.1
+- MOD 檔案名稱：SuperImpact.zip-319-V1-1-1718836296
+- 手動維護最後下載日期：2025-02-09
+
+
 ---
 # 遊戲內操作相關MOD
 
