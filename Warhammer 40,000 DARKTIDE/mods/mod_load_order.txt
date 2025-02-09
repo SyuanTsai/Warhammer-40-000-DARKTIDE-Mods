@@ -18,6 +18,7 @@ Tree_Helper
 ScanHelper
 show_crit_chance
 debuff_indicator
+SuperImpact
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
