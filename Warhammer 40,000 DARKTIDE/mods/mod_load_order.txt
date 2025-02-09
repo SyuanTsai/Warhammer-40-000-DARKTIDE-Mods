@@ -10,6 +10,7 @@ true_level
 who_are_you
 MultiBind
 more_characters_and_loadouts
+psych_ward
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
