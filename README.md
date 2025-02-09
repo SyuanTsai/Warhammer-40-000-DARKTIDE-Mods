@@ -76,6 +76,13 @@
 - MOD 檔案名稱：DecodeMinigameSolver-426-1-2-0-1732141309
 - 手動維護最後下載日期：2025-02-09
 
+### [Train Solver](https://www.nexusmods.com/warhammer40kdarktide/mods/420)
+    火車自動解碼器
+- MOD 網站最後更新日期：Last updated 15 November 20249:39PM
+- MOD 版本：1.1.0
+- MOD 檔案名稱：TrainSolver.zip-420-V1-1-1731706748
+- 手動維護最後下載日期：2025-02-09
+
 
 ---
 # 遊戲內操作相關MOD
