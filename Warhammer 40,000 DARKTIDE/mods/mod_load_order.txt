@@ -14,6 +14,7 @@ psych_ward
 Decode_Helper
 DecodeMinigameSolver
 TrainSolver
+Tree_Helper
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
