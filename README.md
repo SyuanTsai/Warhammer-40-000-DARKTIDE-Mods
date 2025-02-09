@@ -118,13 +118,20 @@
 - MOD 檔案名稱：SuperImpact.zip-319-V1-1-1718836296
 - 手動維護最後下載日期：2025-02-09
 
-
 ### [AutoTag](https://www.nexusmods.com/warhammer40kdarktide/mods/374)
     自動標記 - 只要準心有對到菁英以上都會自動標記
 - MOD 網站最後更新日期：Last updated 10 October 2024 6:58PM
 - MOD 版本：1.6
 - MOD 檔案名稱：AutoTag.zip-374-V1-6-1728583087
 - 手動維護最後下載日期：2025-02-09
+
+### [Stimms Pickup Icon](https://www.nexusmods.com/warhammer40kdarktide/mods/265)
+    強化針顯示改善，讓你可以清楚知道隊友目前的針是甚麼
+- MOD 網站最後更新日期：Last updated 31 December 2024 12:36PM
+- MOD 版本：1.3.1
+- MOD 檔案名稱：StimmsPickupIcon-265-1-3-1-1735648580
+- 手動維護最後下載日期：2025-02-09
+
 
 ---
 # 遊戲內操作相關MOD
