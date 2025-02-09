@@ -69,6 +69,14 @@
 - MOD 檔案名稱：Decode_Helper-252-1-1-1701443693
 - 手動維護最後下載日期：2025-02-09
 
+### [Decode Minigame Solver](https://www.nexusmods.com/warhammer40kdarktide/mods/426)
+    自動解碼器
+- MOD 網站最後更新日期：Last updated 20 November 2024 10:21PM
+- MOD 版本：1.2.0
+- MOD 檔案名稱：DecodeMinigameSolver-426-1-2-0-1732141309
+- 手動維護最後下載日期：2025-02-09
+
+
 ---
 # 遊戲內操作相關MOD
 

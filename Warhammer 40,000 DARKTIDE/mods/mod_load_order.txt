@@ -12,6 +12,7 @@ MultiBind
 more_characters_and_loadouts
 psych_ward
 Decode_Helper
+DecodeMinigameSolver
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
