@@ -1,9 +1,6 @@
 # Warhammer-40-000-DARKTIDE-Mods
 
-
-# Mod清單
-
-## 基本必須安裝
+# 基本必須安裝
 
 ### [Darktide Mod Loader](https://www.nexusmods.com/warhammer40kdarktide/mods/19?tab=description)
     MOD載入器 - 使用MOD必備
@@ -20,6 +17,8 @@
 - MOD 檔案名稱：Darktide Mod Framework-8-24-07-12-1720764449
 - 手動維護最後下載日期：2025-02-06
 
+---
+# 遊戲資訊相關MOD
 ### [True Level](https://www.nexusmods.com/warhammer40kdarktide/mods/156)
     真實等級 - 顯示真正的等級
 - MOD 網站最後更新日期：Last updated 25 December 20245:54PM
@@ -33,6 +32,9 @@
 - MOD 版本：Version 3.6.3
 - MOD 檔案名稱：Who Are You-127-3-6-3-1735149310
 - 手動維護最後下載日期：2025-02-09
+
+---
+# 遊戲內操作相關MOD
 
 ### [Hybrid Sprint](https://www.nexusmods.com/warhammer40kdarktide/mods/342?tab=description)
     混合衝刺 - 能夠解放雙手不需要一直衝刺
