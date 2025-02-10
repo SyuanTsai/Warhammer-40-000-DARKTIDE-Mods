@@ -139,6 +139,13 @@
 - MOD 檔案名稱：TransparentShield-439-1-2-0-1732995433
 - 手動維護最後下載日期：2025-02-09
 
+### [Killfeed Improvements](https://www.nexusmods.com/warhammer40kdarktide/mods/70)
+    擊殺名稱顯示改進
+- MOD 網站最後更新日期：Last updated 12 May 20249:47PM
+- MOD 版本：2.0.0
+- MOD 檔案名稱：KillfeedImprovements-70-2-0-0-1715546876
+- 手動維護最後下載日期：2025-02-10
+
 ---
 # 遊戲內操作相關MOD
 

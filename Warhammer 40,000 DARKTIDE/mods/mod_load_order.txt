@@ -22,6 +22,7 @@ SuperImpact
 AutoTag
 StimmsPickupIcon
 TransparentShield
+KillfeedImprovements
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
