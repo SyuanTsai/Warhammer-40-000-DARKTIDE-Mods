@@ -153,6 +153,13 @@
 - MOD 檔案名稱：GasOutline.zip-398-V1-0-1729931327
 - 手動維護最後下載日期：2025-02-10
 
+### [Alternate Grenade Icons](https://www.nexusmods.com/warhammer40kdarktide/mods/322)
+    替代手雷圖案 - 讓你可以快速辨識隊友帶甚麼手雷
+- MOD 網站最後更新日期：Last updated 08 June 2024 8:30PM
+- MOD 版本：1.0
+- MOD 檔案名稱：AlternateGrenadeIcons-322-1-0-1717874669
+- 手動維護最後下載日期：2025-02-10
+
 
 ---
 # 遊戲內操作相關MOD
