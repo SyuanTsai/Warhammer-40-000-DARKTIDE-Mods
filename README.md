@@ -146,6 +146,14 @@
 - MOD 檔案名稱：KillfeedImprovements-70-2-0-0-1715546876
 - 手動維護最後下載日期：2025-02-10
 
+### [Gas Outline](https://www.nexusmods.com/warhammer40kdarktide/mods/398)
+    瓦斯透明化 - 避免瓦斯導致你看不到隊友
+- MOD 網站最後更新日期：Last updated 26 October 2024 9:35AM
+- MOD 版本：1.0
+- MOD 檔案名稱：GasOutline.zip-398-V1-0-1729931327
+- 手動維護最後下載日期：2025-02-10
+
+
 ---
 # 遊戲內操作相關MOD
 
