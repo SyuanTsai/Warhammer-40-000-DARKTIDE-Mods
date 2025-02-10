@@ -27,6 +27,7 @@ GasOutline
 AlternateGrenadeIcons
 LoadoutMonitor
 QuickLookCard
+AutoLoot
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint

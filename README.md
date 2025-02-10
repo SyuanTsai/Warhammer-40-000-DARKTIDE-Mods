@@ -173,6 +173,14 @@
 - MOD 版本：1.8.2
 - MOD 檔案名稱：Loadout Monitor-160-1-5-02-1735979140
 - 手動維護最後下載日期：2025-02-10
+
+### [Auto Loot](https://www.nexusmods.com/warhammer40kdarktide/mods/375)
+    自動開啟箱子並撿取物品
+- MOD 網站最後更新日期：Last updated 11 October 2024 9:12AM
+- MOD 版本：1.0.2
+- MOD 檔案名稱：AutoLoot-375-1-0-2-1728634347
+- 手動維護最後下載日期：2025-02-10
+
 ---
 # 遊戲內操作相關MOD
 
