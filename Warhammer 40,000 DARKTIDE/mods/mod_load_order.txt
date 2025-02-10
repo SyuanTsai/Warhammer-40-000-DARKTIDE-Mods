@@ -23,6 +23,7 @@ AutoTag
 StimmsPickupIcon
 TransparentShield
 KillfeedImprovements
+GasOutline
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
