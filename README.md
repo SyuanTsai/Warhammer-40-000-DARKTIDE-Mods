@@ -170,3 +170,10 @@
 - MOD 版本：Version 1.3.1
 - MOD 檔案名稱：Hybrid Sprint-342-1-3-1-1729169092
 - 手動維護最後下載日期：2025-02-09
+
+### [Archivum Messelina](https://www.nexusmods.com/warhammer40kdarktide/mods/307)
+    梅塞利納檔案館 - 改善苦修搜尋
+- MOD 網站最後更新日期：Last updated 06 May 2024 3:22PM
+- MOD 版本：Version 2.0.2
+- MOD 檔案名稱：Archivum Messelina-307-2-0-2-1715005336
+- 手動維護最後下載日期：2025-02-10
