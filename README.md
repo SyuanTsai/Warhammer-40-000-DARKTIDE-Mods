@@ -188,6 +188,13 @@
 - MOD 檔案名稱：AutoLoot-375-1-0-2-1728634347
 - 手動維護最後下載日期：2025-02-11
 
+### [Danger Zone](https://www.nexusmods.com/warhammer40kdarktide/mods/440)
+    危險區域 - 顯示危險的範圍 爆桶、惡魔宿主...等
+- MOD 網站最後更新日期：Last updated 27 December 2024 2:53AM
+- MOD 版本：1.1.1
+- MOD 檔案名稱：danger_zone-440-1-1-1-1735267980
+- 手動維護最後下載日期：2025-02-11
+
 ---
 # 遊戲內操作相關MOD
 
