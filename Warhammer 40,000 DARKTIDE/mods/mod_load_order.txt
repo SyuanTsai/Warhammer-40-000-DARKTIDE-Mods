@@ -28,6 +28,7 @@ AlternateGrenadeIcons
 LoadoutMonitor
 QuickLookCard
 AutoLoot
+markers_aio
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
