@@ -30,6 +30,7 @@ QuickLookCard
 AutoLoot
 markers_aio
 danger_zone
+NumericUI
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
