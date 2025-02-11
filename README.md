@@ -195,6 +195,14 @@
 - MOD 檔案名稱：danger_zone-440-1-1-1-1735267980
 - 手動維護最後下載日期：2025-02-11
 
+### [Numeric UI](https://www.nexusmods.com/warhammer40kdarktide/mods/14)
+    UI改善
+- MOD 網站最後更新日期：Last updated 18 January 2025 5:13PM
+- MOD 版本：1.16.0
+- MOD 檔案名稱：NumericUI-14-1-16-0-1737224195
+- 手動維護最後下載日期：2025-02-11
+
+
 ---
 # 遊戲內操作相關MOD
 
