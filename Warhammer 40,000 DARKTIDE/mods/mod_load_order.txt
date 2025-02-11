@@ -5,6 +5,7 @@
 -- You do not need to include 'base' or 'dmf' mod folders.
 -- ################################################################
 -- 遊戲體驗改善
+Healthbars
 IME_Enable
 true_level
 who_are_you
