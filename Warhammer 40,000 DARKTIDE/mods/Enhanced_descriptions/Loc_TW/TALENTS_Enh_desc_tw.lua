@@ -16,19 +16,32 @@ local iu_actit = InputUtils.apply_color_to_input_text
 -- If you add a new entry (ex. MyEntry_rgb), just duplicate it in the list below (MyEntry_rgb = MyEntry_rgb,).
 
 local ppp___ppp = "\n+++-------------------------------------------------+++"
-local become_invis_drop_all_enemy_aggro = "- Become Invisible dropping all enemy aggro: Melee enemies reaggro immediately to another target if possible, firing Ranged enemies stop shooting, then reaggro if possible."
-local can_be_refr_dur_active_dur = "- Can be refreshed during active duration."
-local doesnt_stack_aura_psy = "- Doesn't Stack with the same Aura from another Psyker."
-local doesnt_interact_w_c_a_r_from_curio = "- Does not interact with Combat Ability Regeneration from Curios which only reduces the Maximum cooldown of a Combat Ability."
-local dmg_is_incr_by = "- Damage is increased by Rending/Brittleness, \"Skullcrusher\" Blessing (while Staggered) and buffs from \"Empowered Psionics\", \"Empyrean Empowerment\", \"Empyric Shock\", \"Disrupt Destiny\", \"Malefic Momentum\", \"Perfect Timing\", \"Scrier's Gaze\" (including \"Precognition\"), \"Warp Rider\", aura \"Kinetic Presence\" (against Elites), and small Ranged Damage node."
-local procs_on_succss_dodging = "- Procs on successfully dodging enemy Melee or Ranged attacks (except Gunners, Reaper, Sniper), and disabler attacks (Pox Hound jump, Trapper net, Mutant grab)."
-local red_both_tghns_n_health_dmg = "- Reduces both Toughness and Health Damage taken."
-local stacks_add_w_oth_dmg = "- Stacks additively with other Damage buffs, and multiplicatively with Power level buffs from Weapon Blessings."
-local stacks_mult_w_other_dmg_red_buffs = "- Stacks multiplicatively with other Damage Reduction buffs."
-local succss_dodge_means = "- \"Successful dodge\" means Dodging an enemy attack that is locked on the player with an accordingly timed Dodge or Sliding action."
-local warp_attc_refers_to = "- \"Warp attack\" refers to a list of attacks that have their Damage types denoted as \"Warp Damage types\": Force Swords' activated attacks, Force Staves' primary attacks, Force Staves' secondary attacks, Electrocution (\"Smite\", Electrokinetic Staff secondary, Shock Maul special action), \"Soulblaze\", \"Brain Rupture\"/\"Brain Burst\", \"Assail\", and \"Warp Rupture\"."
-local z_eff_of_this_tougn_rep = "- The effectiveness of this Toughness Replenishment is affected by certain player debuffs like toxic gas."
-local z_ghost_hitnrun_n_stripp = "- \"The Ghost\", \"Hit and Run\" and \"Stripped Down\" Weapon Blessings can proc this Talent (only against Ranged attacks)."
+local become_invis_drop_all_enemy_aggro = "- 進入隱形狀態並解除所有敵人的仇恨：若可能，近戰敵人會立即將仇恨轉移至其他目標；正在射擊的遠程敵人則會停止射擊，隨後若可能會重新鎖定目標。"
+local can_be_refr_dur_active_dur = "- 可在效果持續期間內重新觸發。"
+local doesnt_stack_aura_psy = "- 不會與另一位靈能者的相同光環效果疊加。"
+local doesnt_interact_w_c_a_r_from_curio = "- 不會與只降低戰鬥技能最大冷卻時間的珍品所提供的戰鬥技能回復產生互動。"
+local dmg_is_incr_by = "- 傷害會受到撕裂/脆弱、「碎顱者」祝福（針對被蹣跚的敵人）以及「靈能強化」、「至天高之力」、「亞空間震波」、「擾動命運」、「惡意攻勢」、「完美時機」、「占卜者的注視」（含「預知未來」）、「亞空間騎士」、光環「動能釋放」（對精英單位）和小型遠程傷害節點的增益所提升。"
+local procs_on_succss_dodging = "- 在成功閃避敵方近戰或遠程攻擊（不含 槍手、收割者、狙擊手），以及壓制型攻擊（瘟疫獵犬跳撲、陷阱兵網子、變種人擄抓）時觸發。"
+local red_both_tghns_n_health_dmg = "- 同時減少所受到的韌性與生命值傷害。"
+local stacks_add_w_oth_dmg = "- 與其他傷害增益做加法堆疊，並與武器祝福提供的力量等級加成做乘法堆疊。"
+local stacks_mult_w_other_dmg_red_buffs = "- 與其他傷害減免增益做乘法堆疊。"
+local succss_dodge_means = "- 「成功閃避」指的是透過適時的閃避或滑行動作，閃避已鎖定玩家的敵方攻擊。"
+local warp_attc_refers_to = "- 「亞空間攻擊」指的是所有傷害類型標示為「亞空間傷害」的攻擊，包括靈能劍的啟動攻擊、靈能法杖的主/副攻擊、感電（「懲戒」、電能法杖的副攻擊、電擊槌的特殊動作）、「靈魂之火」、「顱腦崩裂」/「顱腦爆裂」、「靈能攻擊」以及「刺耳尖嘯」。"
+local z_eff_of_this_tougn_rep = "- 此韌性回復的效能會受到某些玩家負面狀態（例如有毒氣體）的影響。"
+local z_ghost_hitnrun_n_stripp = "- 武器祝福「幽靈」、「游擊」和「輕裝」能觸發此天賦（僅限對遠程攻擊）。"
+-- local become_invis_drop_all_enemy_aggro = "- Become Invisible dropping all enemy aggro: Melee enemies reaggro immediately to another target if possible, firing Ranged enemies stop shooting, then reaggro if possible."
+-- local can_be_refr_dur_active_dur = "- Can be refreshed during active duration."
+-- local doesnt_stack_aura_psy = "- Doesn't Stack with the same Aura from another Psyker."
+-- local doesnt_interact_w_c_a_r_from_curio = "- Does not interact with Combat Ability Regeneration from Curios which only reduces the Maximum cooldown of a Combat Ability."
+-- local dmg_is_incr_by = "- Damage is increased by Rending/Brittleness, \"Skullcrusher\" Blessing (while Staggered) and buffs from \"Empowered Psionics\", \"Empyrean Empowerment\", \"Empyric Shock\", \"Disrupt Destiny\", \"Malefic Momentum\", \"Perfect Timing\", \"Scrier's Gaze\" (including \"Precognition\"), \"Warp Rider\", aura \"Kinetic Presence\" (against Elites), and small Ranged Damage node."
+-- local procs_on_succss_dodging = "- Procs on successfully dodging enemy Melee or Ranged attacks (except Gunners, Reaper, Sniper), and disabler attacks (Pox Hound jump, Trapper net, Mutant grab)."
+-- local red_both_tghns_n_health_dmg = "- Reduces both Toughness and Health Damage taken."
+-- local stacks_add_w_oth_dmg = "- Stacks additively with other Damage buffs, and multiplicatively with Power level buffs from Weapon Blessings."
+-- local stacks_mult_w_other_dmg_red_buffs = "- Stacks multiplicatively with other Damage Reduction buffs."
+-- local succss_dodge_means = "- \"Successful dodge\" means Dodging an enemy attack that is locked on the player with an accordingly timed Dodge or Sliding action."
+-- local warp_attc_refers_to = "- \"Warp attack\" refers to a list of attacks that have their Damage types denoted as \"Warp Damage types\": Force Swords' activated attacks, Force Staves' primary attacks, Force Staves' secondary attacks, Electrocution (\"Smite\", Electrokinetic Staff secondary, Shock Maul special action), \"Soulblaze\", \"Brain Rupture\"/\"Brain Burst\", \"Assail\", and \"Warp Rupture\"."
+-- local z_eff_of_this_tougn_rep = "- The effectiveness of this Toughness Replenishment is affected by certain player debuffs like toxic gas."
+-- local z_ghost_hitnrun_n_stripp = "- \"The Ghost\", \"Hit and Run\" and \"Stripped Down\" Weapon Blessings can proc this Talent (only against Ranged attacks)."
 
 --[+ ++ENHANCED DESCRIPTIONS++ +]--
 local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not translate this line!
@@ -37,6 +50,12 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 --[+ +BLITZ+ +]--
 	--[+ Blitz 0 - Brain Burst +]--
 	local ED_PSY_Blitz_0_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 無法爆擊。",
+		"- 基礎傷害：900。",
+		"- 永遠視為弱點命中。",
+		"- 對狂熱與不屈類型目標造成更高傷害。",
+		"{#color(255, 35, 5)}- 你可能會爆炸！險惡值（Peril）達到 97% 或以上時請勿使用！{#reset()}",
 		ppp___ppp,
 		"- Cannot Crit.",
 		"- Base Damage: 900.",
@@ -47,6 +66,15 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 
 	--[+ Blitz 1 - Brain Rupture +]--
 	local ED_PSY_Blitz_1_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 無法爆擊。",
+		"- 基礎傷害：1350。",
+		"- 永遠視為弱點命中。",
+		"- 對狂熱與不屈類型目標造成更高傷害。",
+		"- 主要攻擊在達到 50% 充能量時，會對目標施加輕度的充能蹣跚效果。無法對轟炸者、重錘兵、變種人、歐格林、瘟疫爆者、狂怒者、血痂霰彈槍手 或巨獸造成蹣跚。",
+		"- 撞擊時，會使除了變種人、巨獸以及具備主動力場護盾（void shield）之敵人外的所有敵人陷入蹣跚。",
+		dmg_is_incr_by,
+		"{#color(255, 35, 5)}- 你可能會爆炸！險惡值（Peril）達到 97% 或以上時請勿使用！{#reset()}",
 		ppp___ppp,
 		"- Cannot Crit.",
 		"- Base Damage: 1350.",
@@ -61,6 +89,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Blitz 1-1 - Kinetic Resonance +]--
 	local ED_PSY_Blitz_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 降低顱腦崩裂的主、副攻擊充能時間。",
+		"- 與「靈能強化」增益和敏捷興奮劑的充能時間減少效果相加堆疊。",
+		"- 與「骨折後遺症」、「刺耳尖嘯」、「亞空間意志」、「平心靜氣」、「占卜者的注視」、小型反噬抗性節點、戰鬥興奮劑，以及「閃擊強化」事件（mutator）等相關增益做乘法堆疊。",
+		ppp___ppp,
 		"- Reduces Brain Rupture's charge time for both primary and secondary attacks.",
 		"- Charge time reduction Stacks additively with \"Empowered Psionics\" buff and Celerity Stimm.",
 		"- Stacks multiplicatively with related buffs from \"By Crack of Bone\", \"Becalming Eruption\", \"Empyric Resolve\", \"Inner Tranquility\", \"Reality Anchor\", small Peril Resistance nodes, Combat Stimm, and the \"Enhanced Blitz\" mutator.",
@@ -69,12 +101,24 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Blitz 1-2 - Kinetic Flayer +]--
 	local ED_PSY_Blitz_1_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 由此天賦所觸發的「顱腦崩裂」攻擊，能享有「靈能強化」的傷害增益，而不會消耗其堆疊。",
+		"{#color(255, 35, 5)}- 目前存在一個錯誤：當險惡值（Peril）高於 97% 時，天賦會觸發並進入 15 秒冷卻，但敵人實際上不會受到任何傷害。{#reset()}",
+		ppp___ppp,
 		"- \"Brain Rupture\" attacks triggered by the Talent benefit from \"Empowered Psionics'\" Damage buff without consuming a Stack.",
 		"{#color(255, 35, 5)}- There is currently a bug: When Peril is above 97%, the Talent triggers and a 15-second Cooldown begins, but the enemy does NOT receive Damage at all.{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 2 - Smite +]--
 	local ED_PSY_Blitz_2_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 無法爆擊。",
+		"- 最遠射程：15 公尺。",
+		"- 只能鎖定敵人的軀幹部位。",
+		"- 無法對巨獸以及擁有主動力場護盾（void shield）的敵人造成蹣跚。",
+		"- 整體對各種裝甲傷害係數屬中等，對甲殼裝甲傷害係數偏低。",
+		dmg_is_incr_by,
+		-- "- Forces a short Quelling action when reaching 100% Peril removing ~8.5% Peril. If released below 100% Peril, pushes enemies back (if possible).", -- 原程式碼已註解
+		"{#color(255, 35, 5)}- 只有在以充能攻擊讓險惡值剛好達到 100% 的同時再使用一般攻擊，才可能爆炸！{#reset()}",
 		ppp___ppp,
 		"- Cannot crit.",
 		"- Max range: 15 meters.",
@@ -89,6 +133,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Blitz 2-1 - Lightning Storm +]--
 	local ED_PSY_Blitz_2_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 適用於懲戒的主要與次要攻擊。",
+		"- 將「懲戒」可連鎖到下一個目標的最遠距離由 5 公尺提升至 6 公尺。",
+		"- 同時也讓鎖定目標的最大距離增加 1 公尺，達到 16 公尺。",
+		ppp___ppp,
 		-- "- Increases max jumps from 1 to 2.",
 		"- Applies both to Smite's primary and secondary actions.",
 		"- Increases the Max radius within which \"Smite\" can chain to another target from 5 to 6 meters.",
@@ -97,6 +145,11 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 
 	--[+ Blitz 2-2 - Enfeeble +]--
 	local ED_PSY_Blitz_2_2_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		-- "- The debuff is being applied as long as the enemy is actively affected by \"Smite\".", -- 原程式碼已註解
+		"- 與「亞空間震波」或歐格林的「削弱敵人」、「重要干擾」或老兵的「鎖定目標!」等傷害承受增幅，及傷害增益，還有武器祝福提供的力量等級加成做乘法堆疊。",
+		"- 與另一位靈能者施加的相同減益效果無法堆疊。",
+		"- 任何可能對敵人造成感電效果的來源，若不是由「懲戒」或 「蓄力打擊」觸發，都不會啟動「衰弱詛咒」",
 		ppp___ppp,
 		-- "- The debuff is being applied as long as the enemy is actively affected by \"Smite\".",
 		"- Stacks multiplicatively with other Damage taken debuffs like \"Empyric Shock\" or Ogryn's \"Soften Them Up\", \"Valuable Destruction\" or Veteran's \"Focus Target!\", with Damage buffs, and with Power level buffs from Weapon Blessings.",
@@ -107,6 +160,12 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Blitz 2-3 - Charged Strike +]--
 	local ED_PSY_Blitz_2_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 每跳基礎傷害為 8。",
+		"- 傷害判定時間可持續最長 2 秒。",
+		"- 感電狀態會持續到最後一次傷害跳數結束後 2 秒。",
+		"-- 注意：第一次傷害跳數生效前的延遲取決於敵人的命中率（Hit mass），與「懲戒」相同。換言之，命中率越大，造成第一次傷害所需時間越長。因此，對於「巨獸」（20 擊中質量）而言，在 2 秒的傷害窗口結束前只能觸發 1 次傷害跳數。",
+		"-- 若選擇「衰弱詛咒」，此天賦的感電效果會有更有利的命中率消耗機制，使其對大多數敵人能加倍觸發傷害跳數；同時也能享有 10% 額外承受傷害的減益。從表面上看，每一跳傷害都會加一層減益，使受此減益的敵人在該跳數期間承受更高傷害，且所有攻擊者都能在感電效果正在作用並附加減益時受益（與「懲戒」機制相同）。",
+		ppp___ppp,
 		"- 8 base Damage per tick.",
 		"- The Damage window lasts up to 2 seconds.",
 		"- The Electrocuted state lasts until 2 seconds after the last Damage tick.",
@@ -116,6 +175,13 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 
 	--[+ Blitz 3 - Assail +]--
 	local ED_PSY_Blitz_3_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 可爆擊。最多可同時穿透（Cleave）2 個敵人。",
+		"- 每次投射物消耗 1 發彈藥，並於每 3 秒回復 1 發。",
+		-- "- Very low Damage against Carapace and low against Unyielding.", -- 原程式碼已註解
+		"- 受相應天賦與「戰鬥興奮劑」提供的險惡值（Peril）消耗減少效果影響。",
+		dmg_is_incr_by,
+		"{#color(255, 35, 5)}- 你可能會爆炸！若險惡值已達 100%，請勿使用！{#reset()}",
 		ppp___ppp,
 		"- Can Crit. Cleave up to 2 enemies.",
 		"- Costs 1 ammo and recharges it every 3 seconds.",
@@ -128,12 +194,18 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Blitz 3-1 - Ethereal Shards +]--
 	local ED_PSY_Blitz_3_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 若「靈能強化」啟動，則可穿透的敵人數翻倍至最多 6 個。",
+		"- 甲殼裝甲預設無法被穿透。",
+		ppp___ppp,
 		"- If \"Empowered Psionics\" is active, this is doubled, up to 6 targets.",
 		"- Carapace cannot be Cleaved by default.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 3-2 - Quick Shards +]--
 	local ED_PSY_Blitz_3_2_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 將投射物的回充時間由 3 秒縮短為 2.1 秒。",
+		"- 不會與「閃擊強化」事件（mutator）產生互動。",
 		ppp___ppp,
 		"- Reduces projectile recharge time from 3 to 2.1 seconds per projectile.",
 		"- Does not interact with the \"Enhanced Blitz\" mutator.",
@@ -143,9 +215,12 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Aura 0 - The Quickening +]--
 	local ED_PSY_Aura_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 與珍品提供的戰鬥技能回復，以及可使技能冷卻縮短 20% 的任務事件（mutators）相加堆疊。",
+		"- 這會將「靈能尖嘯」/「靈能學者之怒」的最大冷卻時間減少至 27.75 秒、「占卜者的注視」減少至 23.125 秒、「念力護盾」減少至 37 秒。",
+		doesnt_stack_aura_psy,
+		ppp___ppp,
 		"- Stacks additively with Combat Ability Regeneration from Curios and the mission mutators that reduce Ability Cooldowns by 20%.",
 		"- This Reduces the Max Cooldown of \"Venting Shriek\"/\"Psykinetic's Wrath\" to 27.75 seconds, for \"Scrier's Gaze\" to 23.125 seconds, and for \"Telekine Shield\" to 37 seconds.",
-		doesnt_stack_aura_psy,
 	}, "\n"), enhdesc_col)
 
 	--[+ Aura 1 - Kinetic Presence +]--
@@ -158,22 +233,32 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Aura 2 - Seer's Presence +]--
 	local ED_PSY_Aura_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 與珍品提供的戰鬥技能回復，以及可使技能冷卻縮短 20% 的任務事件（mutators）相加堆疊。",
+		"- 這會將「靈能尖嘯」/「靈能學者之怒」的最大冷卻時間減少至 27 秒、占卜者的注視」減少至 22.5 秒、「念力護盾」減少至 36 秒。",
+		doesnt_stack_aura_psy,
+		ppp___ppp,
 		"- Stacks additively with Combat Ability Regeneration from Curios and the mission mutators that reduce Ability Cooldowns by 20%.",
 		"- This Reduces the Cooldowns of \"Venting Shriek\"/\"Psykinetic's Wrath\" to 27 seconds, for \"Scrier's Gaze\" to 22.5 seconds, and for \"Telekine Shield\" to 36 seconds.",
-		doesnt_stack_aura_psy,
 	}, "\n"), enhdesc_col)
 
 	--[+ Aura 3 - Prescience +]--
 	local ED_PSY_Aura_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 適用於所有能夠爆擊的攻擊。",
+		"- 與其他爆擊機率來源相加堆疊。",
+		doesnt_stack_aura_psy,
+		ppp___ppp,
 		"- Applies to all attacks that can Crit.",
 		"- Stacks additively with other sources of Crit Chance.",
-		doesnt_stack_aura_psy,
 	}, "\n"), enhdesc_col)
 
 --[+ +ABILITIES+ +]--
 	--[+ Ability 0 - Psykinetic's Wrath +]--
 	local ED_PSY_Ability_0_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 可以用來防止靈能者自我爆炸。",
+		"- 亞空間震波能穿透物體，範圍最遠可達 30 公尺，因此你可以透過牆壁將瘟疫獵犬從隊友身上震開。",
+		"- 使正面 5 公尺範圍內的敵人暈眩（Stun）。",
 		ppp___ppp,
 		"- Can be used to prevent Psyker's self-explode.",
 		"- The Warp wave passes through objects and spreads up to 30 meters. So you can drop the Pox Hound from an Ally through the wall.",
@@ -182,6 +267,13 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 
 	--[+ Ability 1 - Venting Shriek +]--
 	local ED_PSY_Ability_1_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 永遠只鎖定敵人軀幹部位。",
+		"- 可以在爆炸倒數中使用，以防止靈能者自我爆炸。",
+		"- 亞空間震波可穿透物體，最遠可達 30 公尺。",
+		"- 使正面 5 公尺範圍內的敵人暈眩（Stun）。",
+		"- 衝擊強度會根據反噬提升，最高在 100% 險惡值時生效；最多可對甲殼造成輕度蹣跚。無法對變種人、巨獸以及有主動力場護盾（void shield）的敵人造成蹣跚。",
+		"- 衝擊強度亦會受到一些武器祝福影響：如「行刑者」、「殺戮者」、「優勢」、「不穩定能量」等等。僅在釋放吶喊時所裝備的武器觸發之增益才會生效。",
 		ppp___ppp,
 		"- Always targets torso hitzone.",
 		"- Can be used while exploding thereby preventing Psyker's self-explode.",
@@ -194,6 +286,8 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 
 	--[+ Ability 1-1 - Becalming Eruption +]--
 	local ED_PSY_Ability_1_1_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 與「骨折後遺症」、「亞空間意志」、「平心靜氣」、「動能撕裂者」等天賦、小型 「反噬抗性」 節點以及戰鬥興奮劑所提供的險惡值消耗減少效果做乘法堆疊。",
 		ppp___ppp,
 		"- Stacks multiplicatively with related Peril Cost Reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Inner Tranquility\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
 	}, "\n"), enhdesc_col)
