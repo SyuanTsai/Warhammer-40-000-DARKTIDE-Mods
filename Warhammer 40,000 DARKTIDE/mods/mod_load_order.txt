@@ -38,3 +38,4 @@ hybrid_sprint
 Archivum Messelina
 ManyMoreTry
 Spidey Sense
+creature_spawner
