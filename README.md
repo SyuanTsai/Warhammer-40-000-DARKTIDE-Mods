@@ -209,6 +209,12 @@
 - MOD 檔案名稱：NumericUI-14-1-16-0-1737224195
 - 手動維護最後下載日期：2025-02-11
 
+### [Spidey Sense](https://www.nexusmods.com/warhammer40kdarktide/mods/268)
+    蜘蛛感應 - 畫面顯示特定敵人位置
+- MOD 網站最後更新日期：Last updated 06 December 2024 1:05PM
+- MOD 版本：5.1.3
+- MOD 檔案名稱：Spidey Sense-268-5-1-3-1733490299
+- 手動維護最後下載日期：2025-02-13
 
 ---
 # 遊戲內操作相關MOD
