@@ -246,3 +246,10 @@
 - MOD 版本：Version 1.5.1
 - MOD 檔案名稱：ManyMoreTry-175-1-5-1-1719684577
 - 手動維護最後下載日期：2025-02-13
+
+### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
+    靈能是創造生怪
+- MOD 網站最後更新日期：Last updated 29 September 2024 8:39AM
+- MOD 版本：Version 24.09.29
+- MOD 檔案名稱：ManyMoreTry-175-1-5-1-1719684577
+- 手動維護最後下載日期：2025-02-13
