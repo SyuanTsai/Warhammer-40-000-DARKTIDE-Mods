@@ -39,3 +39,4 @@ Archivum Messelina
 ManyMoreTry
 Spidey Sense
 creature_spawner
+SoloPlay

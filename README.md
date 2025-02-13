@@ -253,3 +253,11 @@
 - MOD 版本：Version 24.09.29
 - MOD 檔案名稱：ManyMoreTry-175-1-5-1-1719684577
 - 手動維護最後下載日期：2025-02-13
+
+### [Solo Play (Havoc Update)](https://www.nexusmods.com/warhammer40kdarktide/mods/176)
+    單人遊戲 - 支援浩劫模式
+- MOD 網站最後更新日期：Last updated 31 December 2024 12:40PM
+- MOD 版本：Version 2.1.1
+- MOD 檔案名稱：SoloPlay-176-2-1-1-1735648805
+- 手動維護最後下載日期：2025-02-13
+
