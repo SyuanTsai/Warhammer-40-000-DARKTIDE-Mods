@@ -15,162 +15,166 @@ local iu_actit = InputUtils.apply_color_to_input_text
 --[+++MAIN+++]--
 	--[++Combat Ability CD++]--
 	local cmbtab_col = Color[mod:get("combat_ability_text_colour")](255, true) -- Do not translate this line!
-	local Ability_cd_rgb = iu_actit("Ability Cooldown", cmbtab_col)
-	local Cd_rgb = iu_actit("Cooldown", cmbtab_col)
-	local Combat_ability_rgb = iu_actit("Combat Ability", cmbtab_col)
-	local Combat_ability_cd_rgb = iu_actit("Combat Ability Cooldown", cmbtab_col)
+	local Ability_cd_rgb = iu_actit("能力冷卻", cmbtab_col)
+    local Cd_rgb = iu_actit("冷卻", cmbtab_col)
+    local Combat_ability_rgb = iu_actit("戰鬥技能", cmbtab_col)
+    local Combat_ability_cd_rgb = iu_actit("戰鬥技能冷卻", cmbtab_col)
 	--[++Health++]--
 	local hlth_col = Color[mod:get("health_text_colour")](255, true) -- Do not translate this line!
-	local Health_rgb = iu_actit("Health", hlth_col)
-	local Wound_rgb = iu_actit("Wound", hlth_col)
-	local Wounds_rgb = iu_actit("Wounds", hlth_col)
+	local Health_rgb = iu_actit("生命", hlth_col)
+    local Wound_rgb = iu_actit("創傷", hlth_col)
+    local Wounds_rgb = iu_actit("創傷", hlth_col)
 	--[++Peril++]--
 	local prl_col = Color[mod:get("peril_text_colour")](255, true) -- Do not translate this line!
 	local Peril_rgb = iu_actit("Peril", prl_col)
 	local Perils_rgb = iu_actit("Perils", prl_col)
+	local Peril_rgb = iu_actit("反噬", prl_col)
+    local Perils_rgb = iu_actit("反噬", prl_col)
 	--[++Stamina++]--
 	local stam_col = Color[mod:get("stamina_text_colour")](255, true) -- Do not translate this line!
-	local Stamina_rgb = iu_actit("Stamina", stam_col)
+	local Stamina_rgb = iu_actit("體力", stam_col)
 	-- local Stamina_c_r_rgb = iu_actit("Stamina Cost", stam_col)
 	--[++Toughness++]--
 	local tghn_col = Color[mod:get("toughness_text_colour")](255, true) -- Do not translate this line!
-	local Toughness_rgb = iu_actit("Toughness", tghn_col)
-	local Toughness_dmg_red_rgb = iu_actit("Toughness Damage Reduction", tghn_col)
+	local Toughness_rgb = iu_actit("韌性", tghn_col)
+    local Toughness_dmg_red_rgb = iu_actit("韌性傷害減免", tghn_col)
 --[+++BUFFS+++]--
 	--[++Cleave++]--
 	local clv_col = Color[mod:get("cleave_text_colour")](255, true) -- Do not translate this line!
-	local Cleave_rgb = iu_actit("Cleave", clv_col)
-	local Cleaving_rgb = iu_actit("Cleaving", clv_col)
+	local Cleave_rgb = iu_actit("破甲", clv_col)
+    local Cleaving_rgb = iu_actit("破甲中", clv_col)
 	--[++Crit Chance/Hit/Damage++]--
 	local crt_col = Color[mod:get("crit_text_colour")](255, true) -- Do not translate this line!
-	local Crt_chance_rgb = iu_actit("Crit Chance", crt_col)
-	local Crit_chance_rgb = iu_actit("Critical Chance", crt_col)
-	local Crit_hit_rgb = iu_actit("Critical Hit", crt_col)
-	local Crit_hit_chance_rgb = iu_actit("Critical Hit Chance", crt_col)
-	local Crit_hits_rgb = iu_actit("Critical Hits", crt_col)
-	local Crit_rgb = iu_actit("Critical", crt_col)
-	local Crit0_rgb = iu_actit("Crit", crt_col)
-	local Crit_dmg_r_rgb = iu_actit("Critical Damage", crt_col)
-	local Crit_chance_r_rgb = iu_actit("Critical Strike Chance", crt_col)
-	local Crit_strike_rgb = iu_actit("Critical Strike", crt_col)
-	local Crit_hit_color_rgb = iu_actit("Critical Hit Damage", crt_col)
+    local Crt_chance_rgb = iu_actit("爆擊機率", crt_col)
+    local Crit_chance_rgb = iu_actit("爆擊機率", crt_col)
+    local Crit_hit_rgb = iu_actit("爆擊", crt_col)
+    local Crit_hit_chance_rgb = iu_actit("爆擊機率", crt_col)
+    local Crit_hits_rgb = iu_actit("爆擊", crt_col)
+    local Crit_rgb = iu_actit("爆擊", crt_col)
+    local Crit0_rgb = iu_actit("爆擊", crt_col)
+    local Crit_dmg_r_rgb = iu_actit("爆擊傷害", crt_col)
+    local Crit_chance_r_rgb = iu_actit("爆擊機率", crt_col)
+    local Crit_strike_rgb = iu_actit("爆擊", crt_col)
+    local Crit_hit_color_rgb = iu_actit("爆擊傷害", crt_col)
 	--[++Damage++]--
 	local dmg_col = Color[mod:get("damage_text_colour")](255, true) -- Do not translate this line!
-	local Damage_rgb = iu_actit("Damage", dmg_col)
-	local Damagewrp_rgb = iu_actit("Warp-Damage", dmg_col)
+	local Damage_rgb = iu_actit("傷害", dmg_col)
+    local Damagewrp_rgb = iu_actit("扭曲傷害", dmg_col) -- 不確定這個翻譯是否正確
 	--[++Finesse++]--
 	local fns_col = Color[mod:get("finesse_text_colour")](255, true) -- Do not translate this line!
-	local Finesse_rgb = iu_actit("Finesse", fns_col)
-	local Finesse_dmg_rgb = iu_actit("Finesse Damage", fns_col)
+    local Finesse_rgb = iu_actit("精準", fns_col)
+    local Finesse_dmg_rgb = iu_actit("精準傷害", fns_col)
 	--[++Hit Mass++]--
 	local htms_col = Color[mod:get("hit_mass_text_colour")](255, true) -- Do not translate this line!
-	local Hit_mass_rgb = iu_actit("Hit Mass", htms_col)
+	local Hit_mass_rgb = iu_actit("命中率", htms_col)
 	--[++Impact++]--
 	local imp_col = Color[mod:get("impact_text_colour")](255, true) -- Do not translate this line!
 	local Impact_rgb = iu_actit("Impact", imp_col)
+	local Impact_rgb = iu_actit("衝擊", imp_col)
 	--[++Power++]--
 	local pwr_col = Color[mod:get("power_text_colour")](255, true) -- Do not translate this line!
-	local Power_rgb = iu_actit("Power", pwr_col)
-	local Strength_rgb = iu_actit("Strength", pwr_col)
+	local Power_rgb = iu_actit("力量", pwr_col)
+	local Strength_rgb = iu_actit("力量", pwr_col)
 	--[++Rending++]--
 	local rend_col = Color[mod:get("rending_text_colour")](255, true) -- Do not translate this line!
 	local Rending_rgb = iu_actit("Rending", rend_col)
+	local Rending_rgb = iu_actit("撕裂", rend_col)
 	--[++Weak Spot++]--
 	local wksp_col = Color[mod:get("weakspot_text_colour")](255, true) -- Do not translate this line!
-	local Weakspot_rgb = iu_actit("Weak Spot", wksp_col)
-	local Weakspothit_rgb = iu_actit("Weak Spot Hit", wksp_col)
-	local Weakspothits_rgb = iu_actit("Weak Spot Hits", wksp_col)
-	local Weakspot_dmg_rgb = iu_actit("Weak Spot Damage", wksp_col)
+	local Weakspot_rgb = iu_actit("弱點", wksp_col)
+	local Weakspothit_rgb = iu_actit("弱點命中", wksp_col)
+	local Weakspothits_rgb = iu_actit("弱點命中", wksp_col)
+	local Weakspot_dmg_rgb = iu_actit("弱點傷害", wksp_col)
 --[+++DEBUFFS+++]--
 	--[++Bleed++]--
 	local bld_col = Color[mod:get("bleed_text_colour")](255, true) -- Do not translate this line!
-	local Bleed_rgb = iu_actit("Bleed", bld_col)
-	local Bleeding_rgb = iu_actit("Bleeding", bld_col)
+    local Bleed_rgb = iu_actit("流血", bld_col)
+    local Bleeding_rgb = iu_actit("流血中", bld_col)
 	--[++Brittleness++]--
 	local brtl_col = Color[mod:get("brittleness_text_colour")](255, true) -- Do not translate this line!
-	local Brittleness_rgb = iu_actit("Brittleness", brtl_col)
+    local Brittleness_rgb = iu_actit("脆弱", brtl_col)
 	--[++Burn++]--
 	local brn_col = Color[mod:get("burn_text_colour")](255, true) -- Do not translate this line!
-	local Burn_rgb = iu_actit("Burn", brn_col)
-	local Burning_rgb = iu_actit("Burning", brn_col)
-	local Heat_rgb = iu_actit("Heat", brn_col)
+    local Burn_rgb = iu_actit("燃燒", brn_col)
+    local Burning_rgb = iu_actit("燃燒中", brn_col)
+    local Heat_rgb = iu_actit("熱量", brn_col)
 	--[++Corruption++]--
 	local crpt_col = Color[mod:get("corruption_text_colour")](255, true) -- Do not translate this line!
-	local Corruption_rgb = iu_actit("Corruption", crpt_col)
-	local Corruptdmg_rgb = iu_actit("Corruption Damage", crpt_col)
+	local Corruption_rgb = iu_actit("腐敗", crpt_col)
+    local Corruptdmg_rgb = iu_actit("腐敗傷害", crpt_col)
 	--[++Electrocuted++]--
 	local electr_col = Color[mod:get("electrocuted_text_colour")](255, true) -- Do not translate this line!
-	local Electrocute_rgb = iu_actit("Electrocute", electr_col)
-	local Electrocution_rgb = iu_actit("Electrocution", electr_col)
-	local Electrocuted_rgb = iu_actit("Electrocuted", electr_col)
-	local Electrocutes_rgb = iu_actit("Electrocutes", electr_col)
-	local Electrcuting_rgb = iu_actit("Electrocuting", electr_col)
+    local Electrocute_rgb = iu_actit("電擊", electr_col)
+    local Electrocution_rgb = iu_actit("電擊中", electr_col)
+    local Electrocuted_rgb = iu_actit("被電擊", electr_col)
+    local Electrocutes_rgb = iu_actit("電擊", electr_col)
+    local Electrcuting_rgb = iu_actit("電擊中", electr_col)
 	--[++Soulblaze++]--
 	local slblz_col = Color[mod:get("soulblaze_text_colour")](255, true) -- Do not translate this line!
-	local Soulblaze_rgb = iu_actit("Soulblaze", slblz_col)
+	local Soulblaze_rgb = iu_actit("靈火", slblz_col)
 	--[++Stagger++]--
 	local stgr_col = Color[mod:get("stagger_text_colour")](255, true) -- Do not translate this line!
-	local Stagger_rgb = iu_actit("Stagger", stgr_col)
-	local Staggering_rgb = iu_actit("Staggering", stgr_col)
-	local Staggers_rgb = iu_actit("Staggers", stgr_col)
-	local Stun_rgb = iu_actit("Stun", stgr_col)
-	local Stuns_rgb = iu_actit("Stuns", stgr_col)
-	local Stunned_rgb = iu_actit("Stunned", stgr_col)
-	local Staggered_rgb = iu_actit("Staggered", stgr_col)
+    local Stagger_rgb = iu_actit("踉蹌", stgr_col)
+    local Staggering_rgb = iu_actit("踉蹌中", stgr_col)
+    local Staggers_rgb = iu_actit("多次踉蹌", stgr_col)
+    local Stun_rgb = iu_actit("暈眩", stgr_col)
+    local Stuns_rgb = iu_actit("多次暈眩", stgr_col)
+    local Stunned_rgb = iu_actit("已暈眩", stgr_col)
+    local Staggered_rgb = iu_actit("已踉蹌", stgr_col)
 --[+++PSYKER+++]--
 	--[++Precision++]--
 	local prcsn_col = Color[mod:get("precision_text_colour")](255, true) -- Do not translate this line!
-	local Precision_rgb = iu_actit("Precision", prcsn_col)
+    local Precision_rgb = iu_actit("精確", prcsn_col)
 --[+++OGRYN+++]--
 	--[++Feel No Pain++]--
 	local fnp_col = Color[mod:get("fnp_text_colour")](255, true) -- Do not translate this line!
-	local Feel_no_pain_rgb = iu_actit("Feel No Pain", fnp_col)
+    local Feel_no_pain_rgb = iu_actit("麻木", fnp_col)
 	--[++Lucky Bullet++]--
 	local luckyb_col = Color[mod:get("luckyb_text_colour")](255, true) -- Do not translate this line!
-	local Lucky_bullet_rgb = iu_actit("Lucky Bullet", luckyb_col)
+    local Lucky_bullet_rgb = iu_actit("幸運子彈", luckyb_col)
 	--[+Trample+]--
 	local trample_col = Color[mod:get("trample_text_colour")](255, true) -- Do not translate this line!
-	local Trample_rgb = iu_actit("Trample", trample_col)
+    local Trample_rgb = iu_actit("踐踏", trample_col)
 --[+++ZEALOT+++]--
 	--[++Fury++]--
 	local fury_col = Color[mod:get("fury_text_colour")](255, true) -- Do not translate this line!
-	local Fury_rgb = iu_actit("Fury", fury_col)
+    local Fury_rgb = iu_actit("狂怒", fury_col)
 	--[++Momentum++]--
 	local moment_col = Color[mod:get("momentum_text_colour")](255, true) -- Do not translate this line!
-	local Momentum_rgb = iu_actit("Momentum", moment_col)
+	local Momentum_rgb = iu_actit("勢能", moment_col)
 	--[++Stealth++]--
 	local stlth_col = Color[mod:get("stealth_text_colour")](255, true) -- Do not translate this line!
-	local Stealth_rgb = iu_actit("Stealth", stlth_col)
+	local Stealth_rgb = iu_actit("隱身", stlth_col)
 --[+++VETERAN+++]--
 	--[++Focus++]--
 	local focus_col = Color[mod:get("focus_text_colour")](255, true) -- Do not translate this line!
-	local Focus_rgb = iu_actit("Focus", focus_col)
+	local Focus_rgb = iu_actit("專注", focus_col)
 	--[++Focus Target++]--
 	local focust_col = Color[mod:get("focust_text_colour")](255, true) -- Do not translate this line!
-	local Focus_Target_rgb = iu_actit("Focus Target", focust_col)
+   local Focus_Target_rgb = iu_actit("專注目標", focust_col)
 	--[++Melee Specialist++]--
 	local meleespec_col = Color[mod:get("meleespec_text_colour")](255, true) -- Do not translate this line!
-	local Meleespec_rgb = iu_actit("Melee Specialist", meleespec_col)
+    local Meleespec_rgb = iu_actit("近戰專家", meleespec_col)
 	--[++Ranged Specialist++]--
 	local rangedspec_col = Color[mod:get("rangedspec_text_colour")](255, true) -- Do not translate this line!
-	local Rangedspec_rgb = iu_actit("Ranged Specialist", rangedspec_col)
+    local Rangedspec_rgb = iu_actit("遠程專家", rangedspec_col)
 --[+++MISC+++]--
 	--[++Note++]--
 	local note_col = Color[mod:get("note_text_colour")](255, true) -- Do not translate this line!
-	local Fns_note_rgb = iu_actit(" Finesse increases Weakspot and Critical Damage.", note_col)
-	local Pwr_note_rgb = iu_actit(" Strength increases Damage, Stagger and Cleave.", note_col)
-	local Rend_note_rgb = iu_actit(" Rending increases your Damage.", note_col)
-	local Brtl_note_rgb = iu_actit(" Brittleness reduces the enemy's Armor.", note_col)
-	-- local Fire_n_trap_note_rgb = iu_actit(" Doesn't save you from Flamers and Trappers.", note_col)
-	-- local Trauma_note_rgb = iu_actit(" Doesn't work for secondary attacks of Trauma Staff.", note_col)
+    local Fns_note_rgb = iu_actit(" 精準會增加弱點與爆擊傷害。", note_col)
+    local Pwr_note_rgb = iu_actit(" 力量會增加傷害、踉蹌與破甲。", note_col)
+    local Rend_note_rgb = iu_actit(" 撕裂可以增加傷害。", note_col)
+    local Brtl_note_rgb = iu_actit(" 脆弱會降低敵人的護甲。", note_col)
+    -- local Fire_n_trap_note_rgb = iu_actit(" 不會保護你免於火焰槍與捕獸器。", note_col)
+    -- local Trauma_note_rgb = iu_actit(" 不適用於震盪法杖的次要攻擊。", note_col)
 	local Trauma_note_rgb = iu_actit("", note_col)
 	local Fire_n_trap_note_rgb = iu_actit("", note_col)
 --[+ Talents +]--
 	local tal_col = Color[mod:get("talents_text_colour")](255, true) -- Do not translate this line!
-	local Scriers_gaze_rgb = iu_actit("Scrier's Gaze", tal_col)
-	local Stun_gren_rgb = iu_actit("Stun Grenade", tal_col)
-	local Frag_gren_rgb = iu_actit("Frag Grenade", tal_col)
-	local Fragmentation_gren_rgb = iu_actit("Fragmentation Grenade", tal_col)
+	local Scriers_gaze_rgb = iu_actit("占卜者的凝視", tal_col)
+	local Stun_gren_rgb = iu_actit("暈眩手榴彈", tal_col)
+	local Frag_gren_rgb = iu_actit("破片手榴彈", tal_col)
+	local Fragmentation_gren_rgb = iu_actit("破片手榴彈", tal_col)
 
 -- In the list below, you also need to add a new entry or change an old one.
 return {
