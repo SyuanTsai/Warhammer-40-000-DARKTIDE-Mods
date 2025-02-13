@@ -48,6 +48,7 @@ if enhanced_descriptions_enabled then
 	--[+ Translations +]-- The first line below is for the Psyker and Zealot Enhanced Descriptions
 	TALENTS_Enh_desc_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/TALENTS_Enh_desc_ru") -- Russian
 	TALENTS_Enh_desc_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/TALENTS_Enh_desc_fr") -- French
+	TALENTS_Enh_desc_tw = mod:io_dofile("Enhanced_descriptions/Loc_TW/TALENTS_Enh_desc_tw") -- Traditional Chinese
 else
 	TALENTS_Enh_desc = mod:io_dofile("Enhanced_descriptions/NULL/TALENTS_Enh_desc_null")
 end
@@ -59,6 +60,7 @@ if enhanced_descriptions_enabled2 then
 	--[+ Translations +]-- The second line below is for the Veteran and Ogryn Enhanced Descriptions
 	TALENTS_Enh_desc2_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/TALENTS_Enh_desc2_ru") -- Russian
 	TALENTS_Enh_desc2_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/TALENTS_Enh_desc2_fr") -- French
+	TALENTS_Enh_desc2_tw = mod:io_dofile("Enhanced_descriptions/Loc_TW/TALENTS_Enh_desc2_tw") -- Traditional Chinese
 else
 	TALENTS_Enh_desc2 = mod:io_dofile("Enhanced_descriptions/NULL/TALENTS_Enh_desc2_null")
 end
@@ -70,6 +72,7 @@ if enhanced_descriptions_nodes_enabled then
 	--[+ Translations +]-- The third line below is for Enhanced Node Descriptions
 	TALENTS_Enh_desc_nodes_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/TALENTS_Enh_desc_nodes_ru") -- Russian
 	TALENTS_Enh_desc_nodes_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/TALENTS_Enh_desc_nodes_fr") -- French
+	TALENTS_Enh_desc_nodes_tw = mod:io_dofile("Enhanced_descriptions/Loc_TW/TALENTS_Enh_desc_nodes_tw") -- Traditional Chinese
 else
 	TALENTS_Enh_desc_nodes = mod:io_dofile("Enhanced_descriptions/NULL/TALENTS_Enh_desc_nodes_null")
 end
