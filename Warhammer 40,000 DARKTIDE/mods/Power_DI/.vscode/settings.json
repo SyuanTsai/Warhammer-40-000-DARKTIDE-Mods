@@ -1,0 +1,31 @@
+{
+    "Lua.diagnostics.globals": [
+        "Managers",
+        "APPLICATION_SETTINGS",
+        "SaveSystem",
+        "CLASS",
+        "callback",
+        "NetworkLookup",
+        "ScriptUnit",
+        "GameSession",
+        "Unit",
+        "NetworkConstants",
+        "POSITION_LOOKUP",
+        "Vector3",
+        "Mods",
+        "cjson",
+        "Color",
+        "Localize",
+        "Utf8",
+        "Clipboard",
+        "Keyboard",
+        "Log",
+        "RESOLUTION_LOOKUP",
+        "Application",
+        "ShadingEnvironment",
+        "World"
+    ],
+    "Lua.diagnostics.disable": [
+        "undefined-field"
+    ]
+}
