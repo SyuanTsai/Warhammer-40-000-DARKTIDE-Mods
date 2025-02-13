@@ -40,3 +40,4 @@ ManyMoreTry
 Spidey Sense
 creature_spawner
 SoloPlay
+Power_DI
