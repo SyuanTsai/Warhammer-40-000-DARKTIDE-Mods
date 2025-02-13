@@ -216,6 +216,13 @@
 - MOD 檔案名稱：Spidey Sense-268-5-1-3-1733490299
 - 手動維護最後下載日期：2025-02-13
 
+### [What The Localization](https://www.nexusmods.com/warhammer40kdarktide/mods/163)
+    翻譯修正器，
+- MOD 網站最後更新日期：Last updated 14 October 2023 10:30PM
+- MOD 版本：1.2.1
+- MOD 檔案名稱：WhatTheLocalization-163-1-2-1-1697319036
+- 手動維護最後下載日期：2025-02-13
+
 ---
 # 遊戲內操作相關MOD
 
