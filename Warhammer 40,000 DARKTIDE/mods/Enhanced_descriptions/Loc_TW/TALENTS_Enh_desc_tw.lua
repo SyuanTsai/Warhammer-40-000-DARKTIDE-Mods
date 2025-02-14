@@ -20,7 +20,7 @@ local become_invis_drop_all_enemy_aggro = "- 進入隱形狀態並解除所有�
 local can_be_refr_dur_active_dur = "- 可在效果持續期間內重新觸發。"
 local doesnt_stack_aura_psy = "- 不會與另一位靈能者的相同光環效果疊加。"
 local doesnt_interact_w_c_a_r_from_curio = "- 不會與只降低戰鬥技能最大冷卻時間的珍品所提供的戰鬥技能回復產生互動。"
-local dmg_is_incr_by = "- 傷害會受到撕裂/脆弱、「碎顱者」祝福（針對被蹣跚的敵人）以及「靈能強化」、「至天高之力」、「亞空間震波」、「擾動命運」、「惡意攻勢」、「完美時機」、「占卜者的注視」（含「預知未來」）、「亞空間騎士」、光環「動能釋放」（對精英單位）和小型遠程傷害節點的增益所提升。"
+local dmg_is_incr_by = "- 傷害會受到撕裂/脆弱、「碎顱者」祝福（針對被踉蹌的敵人）以及「靈能強化」、「至天高之力」、「亞空間震波」、「擾動命運」、「惡意攻勢」、「完美時機」、「占卜者的注視」（含「預知未來」）、「亞空間騎士」、光環「動能釋放」（對精英單位）和小型遠程傷害節點的增益所提升。"
 local procs_on_succss_dodging = "- 在成功閃避敵方近戰或遠程攻擊（不含 槍手、收割者、狙擊手），以及壓制型攻擊（瘟疫獵犬跳撲、陷阱兵網子、變種人擄抓）時觸發。"
 local red_both_tghns_n_health_dmg = "- 同時減少所受到的韌性與生命值傷害。"
 local stacks_add_w_oth_dmg = "- 與其他傷害增益做加法堆疊，並與武器祝福提供的力量等級加成做乘法堆疊。"
@@ -71,8 +71,8 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 基礎傷害：1350。",
 		"- 永遠視為弱點命中。",
 		"- 對狂熱與不屈類型目標造成更高傷害。",
-		"- 主要攻擊在達到 50% 充能量時，會對目標施加輕度的充能蹣跚效果。無法對轟炸者、重錘兵、變種人、歐格林、瘟疫爆者、狂怒者、血痂霰彈槍手 或巨獸造成蹣跚。",
-		"- 撞擊時，會使除了變種人、巨獸以及具備主動力場護盾（void shield）之敵人外的所有敵人陷入蹣跚。",
+		"- 主要攻擊在達到 50% 充能量時，會對目標施加輕度的充能踉蹌效果。無法對轟炸者、重錘兵、變種人、歐格林、瘟疫爆者、狂怒者、血痂霰彈槍手 或巨獸造成踉蹌。",
+		"- 撞擊時，會使除了變種人、巨獸以及具備主動力場護盾（void shield）之敵人外的所有敵人陷入踉蹌。",
 		dmg_is_incr_by,
 		"{#color(255, 35, 5)}- 你可能會爆炸！反噬值達到 97% 或以上時請勿使用！{#reset()}",
 		ppp___ppp,
@@ -114,7 +114,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 無法爆擊。",
 		"- 最遠射程：15 公尺。",
 		"- 只能鎖定敵人的軀幹部位。",
-		"- 無法對巨獸以及擁有主動力場護盾（void shield）的敵人造成蹣跚。",
+		"- 無法對巨獸以及擁有主動力場護盾（void shield）的敵人造成踉蹌。",
 		"- 整體對各種裝甲傷害係數屬中等，對甲殼裝甲傷害係數偏低。",
 		dmg_is_incr_by,
 		-- "- Forces a short Quelling action when reaching 100% Peril removing ~8.5% Peril. If released below 100% Peril, pushes enemies back (if possible).", -- 原程式碼已註解
@@ -272,7 +272,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 可以在爆炸倒數中使用，以防止靈能者自我爆炸。",
 		"- 亞空間震波可穿透物體，最遠可達 30 公尺。",
 		"- 使正面 5 公尺範圍內的敵人暈眩（Stun）。",
-		"- 衝擊強度會根據反噬提升，最高在 100% 反噬值時生效；最多可對甲殼造成輕度蹣跚。無法對變種人、巨獸以及有主動力場護盾（void shield）的敵人造成蹣跚。",
+		"- 衝擊強度會根據反噬提升，最高在 100% 反噬值時生效；最多可對甲殼造成輕度踉蹌。無法對變種人、巨獸以及有主動力場護盾（void shield）的敵人造成踉蹌。",
 		"- 衝擊強度亦會受到一些武器祝福影響：如「行刑者」、「殺戮者」、「優勢」、「不穩定能量」等等。僅在釋放吶喊時所裝備的武器觸發之增益才會生效。",
 		ppp___ppp,
 		"- Always targets torso hitzone.",
@@ -295,6 +295,18 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Ability 1-2 - Warp Rupture +]--
 	local ED_PSY_Ability_1_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 對所有裝甲類型的傷害係數相同，但傷害隨距離而衰減。",
+		"- 基礎傷害會依反噬值而變動：",
+		"_______________________________",
+		"反噬:           0%|  25%|  50%|  75%|  100%",
+		"傷害:     100|  125|  150|  175|  200",
+		"_______________________________",
+		"- 傷害會受到以下增益影響：",
+		"-- 來自天賦：「擾動命運」、「至天高之力」、「亞空間震波」（對受該減益效果影響的敵人）、「惡意攻勢」、「動能釋放」（對精英目標）、「完美時機」，以及「亞空間騎士」。",
+		"-- 來自武器祝福：",
+		"--- 近戰武器，如在啟動「刺耳尖嘯」前就已觸發的「行刑者」、「高壓電」（對感電敵人）、「碎顱者」（對踉蹌敵人）、「殺戮者」、「優勢」，以及「不穩定能量」。",
+		"--- 遠程武器，如在啟動「刺耳尖嘯」前就已觸發的「連續發射」、「持續阻擊」、「死亡噴吐」、「達姆彈」、「處決」（對踉蹌敵人）、「烈火熱焰」、「全孔射擊」、「刻不容緩」（對踉蹌敵人）、「鉗制射擊」、「火藥灼傷」，以及「連跑帶打」（在衝刺時）。",
+		ppp___ppp,
 		"- Has same armor Damage modifier against all armor types, loses Damage with range.",
 		"- Base Damage dealt scales with Peril:",
 		"_______________________________",
@@ -310,6 +322,19 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 
 	--[+ Ability 1-3 - Warp Creeping Flames +]--
 	local ED_PSY_Ability_1_3_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 施加到敵人身上的靈魂之火層數會隨靈能反噬變化：",
+		"_______________________________",
+		"層數: 1|      2|        3|       4|       5|       6",
+		"靈能反噬: 0%|~17%|~34%|~50%|~67%|~84%",
+		"_______________________________",
+		"- 持續 8 秒，每 0.75 秒觸發一次。",
+		"- 施加層數時會刷新持續時間。",
+		"- 與其他靈魂之火來源的層數累加。",
+		"- 靈魂之火傷害會受到撕裂與脆弱影響，並受到當前裝備武器的特技與以下天賦的增益：「擾動命運」、「至天高之力」、「惡意攻勢」、「動能釋放」、「完美時機」和「亞空間騎士」。",
+		"-- 武器祝福影響：",
+		"--- 近戰武器：「行刑者」、「高壓電」（對感電目標）、「碎顱者」（對被震懾目標）、「殺戮者」、「優勢」、「不穩定能量」、「異常打擊」。",
+		"--- 遠程武器：「連續發射」、「死亡噴吐」、「達姆彈」、「處決」（對被震懾目標）、「烈火熱焰」、「刻不容緩」（對被震懾目標）、「鉗制射擊」、「連跑帶打」（衝刺時）。",
 		ppp___ppp,
 		"- The amount of Soulblaze Stacks applied to enemies scales with Peril:",
 		"_______________________________",
@@ -328,6 +353,18 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Ability 2 - Telekine Shield +]--
 	local ED_PSY_Ability_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 護盾生命值：20。",
+		"- 尺寸：寬 6 公尺，高 3.5 公尺。",
+		"- 最大放置範圍：10 公尺。",
+		"- 總放置時間：0.6 秒。",
+		"- 可按住技能鍵預覽位置，並可透過格擋取消。",
+		"- 可阻擋：遠程掃描攻擊、拋射物（轟炸者手榴彈）、陷阱兵的網、火焰兵的直射火焰攻擊。",
+		"- 地面火焰區域與毒氣雲仍會擴散穿過護盾。",
+		"- 無法阻擋瘟疫爆者的爆炸。",
+		"- 護盾生命機制：",
+		"-- 每次受到遠程攻擊計算為 1 點傷害。受到傷害後的 0.33 秒內不會再受到傷害。",
+		"--- 例如，當護盾放置在一名血痂槍手前方，護盾將在槍手的第二輪掃射期間消失，因為它累計承受了 20 次有效攻擊。",
+		ppp___ppp,
 		"- Shield Health: 20.",
 		"- Dimensions: 6 meters wide, 3.5 meters high.",
 		"- Max placement range: 10 meters.",
@@ -344,11 +381,22 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Ability 2-1 - Bolstered Shield +]--
 	local ED_PSY_Ability_2_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 第二次充能的冷卻時間僅在第一次充能冷卻結束後開始計算。",
+		ppp___ppp,
 		"- The Cooldown of the second charge only starts after the first charge finished Cooldown.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2-2 - Enervating Threshold +]--
 	local ED_PSY_Ability_2_2_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 不造成傷害。",
+		"- 每 0.55 秒施加一次震懾。",
+		"- 觸電效果持續 3 秒。",
+		"- 可以暈眩所有敵人，**巨獸** 除外。",
+		"- 特殊敵人接觸護盾時必定受到影響。",
+		"- 每次受到特殊敵人直接命中身體的攻擊時，護盾會受到 8 點傷害，最多可擋 3 次「格擋」特殊敵人攻擊。遵守 0.33 秒傷害冷卻窗口，這意味著任何在 0.33 秒內發生的多次直接命中，均計為 1 次攻擊傷害。",
+		"",
+		"{#color(255, 35, 5)}- 當前存在一個錯誤：接觸護盾的特殊敵人僅造成 1 點傷害，而非 8 點。{#reset()}",
 		ppp___ppp,
 		"- Deals no Damage.",
 		"- Applies Stagger every 0.55 seconds.",
@@ -363,6 +411,13 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Ability 2-3 - Telekine Dome +]--
 	local ED_PSY_Ability_2_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 球體半徑為 6 公尺。",
+		"- 可在所有角度防禦敵方攻擊。",
+		"- 擁有與平面護盾相同的特性。",
+		"- 也會以相同方式承受遠程傷害。",
+		"",
+		"{#color(255, 35, 5)}- 當前存在一個錯誤：在圓頂內成功閃避的變種人總是會被震懾。{#reset()}",
+		ppp___ppp,
 		"- Sphere has a radius of 6 meters.",
 		"- Protects from enemy attacks at all degrees.",
 		"- Has the same properties as the flat shield.",
@@ -374,6 +429,8 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Ability 2-4 - Sanctuary +]--
 	local ED_PSY_Ability_2_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 此恢復效果可堆疊，若多個球體重疊則效果疊加。",
+		ppp___ppp,
 		"- This replenishment effect can Stack if multiple spheres overlap.",
 		z_eff_of_this_tougn_rep,
 		stacks_mult_w_other_dmg_red_buffs,
@@ -381,6 +438,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 
 	--[+ Ability 3 - Scrier's Gaze +]--
 	local ED_PSY_Ability_3_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 當技能處於超載階段時，冷卻時間會暫停。然而，其剩餘冷卻時間仍可透過觸發「靈能學者光環」或使用專注興奮劑來主動縮短。",
+		"- 最大冷卻時間可透過「先知之眼」、「亞空間虹吸」、來自珍品的戰鬥技能冷卻，以及降低技能冷卻時間 20% 的任務變異體來縮短。",
+		"- 超載結束後，提供 1.5 秒的緩衝時間，在此期間可執行靈能反噬動作而不會觸發靈能者自我爆炸。",
 		ppp___ppp,
 		"- While Ability is in overcharging phase Cooldown is paused. However, its remaining cooldown can still be actively reduced by proccing \"Psykinetic's Aura\" or using a Concentration Stimm.",
 		"- Its Maximum Cooldown can be Reduced by \"Seer's Presence\", \"Warp Siphon\", Combat Ability Regeneration from Curios, and by the mission mutators that reduce Ability Cooldowns by 20%.",
@@ -390,12 +451,18 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	-- [+ Ability 3-1 - Endurance +]--
 	local ED_PSY_Ability_3_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 不會在超載階段結束後持續存在。",
+		ppp___ppp,
 		"- Does not linger after overcharging phase.",
 		stacks_mult_w_other_dmg_red_buffs,
 	}, "\n"), enhdesc_col)
 
 	-- [+ Ability 3-2 - Precognition +]--
 	local ED_PSY_Ability_3_2_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 與其他「弱點」與「技巧」增益效果相加計算。",
+		"- 「順劈目標」時，每次攻擊可多次觸發。",
+		"- 這些可堆疊的傷害增益會在超載階段立即生效。",
 		ppp___ppp,
 		"- Stacks additively with other Weakspot and Finesse Damage buffs.",
 		"- Can proc multiple times per attack when Cleaving.",
@@ -405,12 +472,19 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Ability 3-3 - Warp Speed +]--
 	local ED_PSY_Ability_3_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 不會在超載階段結束後持續存在。",
+		"- 與「擾動命運」、「堅毅」、「移動速度增幅」和武器祝福如「提速」的移動速度增益相加堆疊。",
+		ppp___ppp,
 		"- Does not linger after overcharging phase.",
 		"- Stacks additively with movement speed buffs from \"Disrupt Destiny\", \"Mettle\", the small Movement speed node, and Weapon Blessings like \"Rev it Up\".",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3-4 - Reality Anchor +]--
 	local ED_PSY_Ability_3_4_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 不會在超載階段結束後持續存在。",
+		"- 與「骨折後遺症」、「亞空間意志」、「動能撕裂者」、小型反噬抗性節點和戰鬥興奮劑的反噬值消耗減少效果做乘法堆疊。",
+		"- 只有在靈能者在超載期間恢復亞空間充能時，才能與「平心靜氣」堆疊。",
 		ppp___ppp,
 		"- Does not linger after overcharging phase.",
 		"- Stacks multiplicatively with Peril cost reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
@@ -419,6 +493,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 
 	--[+ Ability 3-5 - Warp Unbound +]--
 	local ED_PSY_Ability_3_5_rgb = iu_actit(table.concat({
+	
+		ppp___ppp,
+    	"- 超載結束後，允許靈能者在 100% 反噬值下執行反噬生成動作 10 秒而不會觸發自我爆炸。",
+    	"- 請注意，當這 10 秒持續時間結束時，「占卜者的注視」的基本緩衝時間仍然適用，提供額外 1.5 秒的相同效果。",
 		ppp___ppp,
 		"- After overcharging has ended, allows Psyker to execute Peril-generating actions while at 100% Peril for 10 seconds without triggering the self-explosion.",
 		"- Note that when this 10 seconds duration ends, Scrier's Gaze's base grace period still applies, providing another 1.5 seconds of the same effect.",
@@ -429,6 +507,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Keystone_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		can_be_refr_dur_active_dur,
+		"- 與珍品提供的戰鬥技能冷卻，以及可使技能冷卻縮短 20% 的任務事件（mutators）相加堆疊。",
+		"- 例如，當靈能者擁有「先知之眼」光環（-0.1）、4 個亞空間充能和 12% 珍品提供的戰鬥技能冷卻（-0.12）時使用「念力護盾」，其最大冷卻時間由珍品屬性和光環首先減少至 40+40x(-0.1-0.12)=31.2 秒。此最大冷卻時間再由亞空間虹吸進一步減少至 31.2-31.2x(0.075x4)=21.84 秒（HUD 四捨五入：22 秒）。",
+		ppp___ppp,
 		"- Interacts with Combat Ability Regeneration from Curios and other Maximum Cooldown Reductions from \"Seer's Presence\" or the mission mutators that reduce Ability cooldowns by 20%.",
 		"- For example, when Psyker with \"Seer's Presence\" aura (-0.1), 4 Warp charges and 12% Combat Ability Regeneration (-0.12) from Curios uses \"Telekine Shield\", its Maximum cooldown of 40 seconds is first reduced by Curio stat and aura to 40+40x(-0.1-0.12)=31.2 seconds. This Max Cooldown is then considered by Warp Siphon and further reduced by the Warp charge-based reduction to 31.2-31.2x(0.075x4)=21.84 seconds (HUD rounds: 22 seconds).",
 		-- "- Does not interact with Concentration Stimm's remaining Cooldown Reduction effect which increases a character's base Ability Cooldown rate of 1 second per second by additional 3 seconds per second.",
@@ -437,12 +518,17 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Keystone 1-1 - Inner Tranquility +]--
 	local ED_PSY_Keystone_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 與自身線性堆疊（1 個亞空間充能 = 6% 反噬消耗減少，2 個 = 12%，3 個 = 18%，等等），並與「骨折後遺症」、「亞空間意志」、「動能撕裂者」、小型反噬抗性節點和戰鬥興奮劑的反噬消耗減少效果做乘法堆疊。",
+		"- 因為使用戰鬥技能時所有亞空間充能都會消失，此天賦無法立即與「平心靜氣」和「現實錨點」堆疊（除非靈能者在其持續期間內重新獲得亞空間充能）。",
+		ppp___ppp,
 		"- Stacks linearly with itself (1 Warp charge = 6% Peril Cost Reduction, 2 = 12%, 3 = 18%, etc) and multiplicatively with other Peril Cost Reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
 		"- Because all Warp charges are dropped when using a Combat Ability, the Talent cannot immediately Stack with \"Becalming Eruption\" and \"Reality Anchor\" (unless Psyker regains Warp charges during their active duration).",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-2 - Essence Harvest +]--
 	local ED_PSY_Keystone_1_2_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 不會增加韌性回復量。",
 		ppp___ppp,
 		"- Does not increase the amount of Toughness replenished.",
 		z_eff_of_this_tougn_rep,
@@ -457,18 +543,25 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Keystone 1-4 - In Fire Reborn +]--
 	local ED_PSY_Keystone_1_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 當一個被靈魂之火影響的敵人被靈魂之火、靈能者或盟友擊殺時，你會獲得一個亞空間充能。",
+		"- 此效果無距離限制，並且所有裝備此天賦的靈能者都能受益。",
+		ppp___ppp,
 		"- You gain a Warp charge when an enemy who is currently affected by Soulblaze is killed either by Soulblaze, by Psyker, or by an ally.",
 		"- This effect has no range limit and benefits all Psykers who have this talent equipped.",
 	}, "\n"), enhdesc_col)
-
+	
 	--[+ Keystone 1-5 - Psychic Vampire +]--
 	local ED_PSY_Keystone_1_5_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 如果多個靈能者在彼此的協同範圍內，當其中一個觸發天賦時，所有靈能者都會獲得一個亞空間充能。",
 		ppp___ppp,
 		"- If multiple Psykers are in Coherency with each other, all of them get a Warp charge when the Talent procs for one of them.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-6 - Warp Battery +]--
 	local ED_PSY_Keystone_1_6_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 將靈能者可持有的亞空間充能最大數量從4增加到6。",
 		ppp___ppp,
 		"- Increases the Max amount of Warp charges Psyker can hold from 4 to 6.",
 	}, "\n"), enhdesc_col)
@@ -477,15 +570,24 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Keystone_2_0_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		-- "- Consumes Stacks when attack connects with an enemy.",
+		"- 與其他適用的傷害增益做加法堆疊。",
+		"- 與「動能撕裂者」做加法堆疊，並與敏捷興奮劑的兩個充能時間減少效果做乘法/加法堆疊。",
+		"_______________________________",
+		ppp___ppp,
 		"- Stacks additively with other applicable Damage buffs.",
 		"- Stacking additively with \"Kinetic Resonance\", and multiplicatively/additively with Celerity Stimm's two charge time reductions.",
 		"_______________________________",
 	}, "\n"), enhdesc_col)
+	
 
 	--[+ Keystone 2 - Empowered Psionics - Empowered Smite +]--
 	local ED_PSY_Keystone_2_0_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		-- "- Consumes Stacks when releasing.",
+		"- 與其他適用的傷害增益做加法堆疊。",
+		"- 與敏捷興奮劑的相關增益做乘法堆疊。",
+		"_______________________________",
+		ppp___ppp,
 		"- Stacks additively with other applicable Damage buffs.",
 		"- Stacks multiplicatively with related buff from Celerity Stimm.",
 		"_______________________________",
@@ -495,6 +597,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Keystone_2_0_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		-- "- Consumes Stacks per thrown projectile.",
+		"- 允許在100%反噬時施放。",
+		"- 目標數量加倍。",
+		ppp___ppp,
 		"- Allows casting at 100% Peril.",
 		"- Double the number of targets.",
 	}, "\n"), enhdesc_col)
@@ -504,6 +609,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 
 	--[+ Keystone 2-2 - Psychic Leeching +]--
 	local ED_PSY_Keystone_2_2_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 當「顱腦崩裂」命中、當「懲戒」開始施放或充能後，以及當「靈能攻擊」生成投射物時觸發。",
+		z_eff_of_this_tougn_rep,
 		ppp___ppp,
 		"- Procs when \"Brain Rupture\" hits, when \"Smite\" starts casting or after charging, and when \"Assail\" spawns a projectile.",
 		z_eff_of_this_tougn_rep,
@@ -518,6 +626,12 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Keystone 3 - Disrupt Destiny +]--
 	local ED_PSY_Keystone_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 對標記的敵人造成傷害會刷新天賦的持續時間。",
+		"- 有效目標包括：渣滓/血痂暴徒、渣滓/血痂潛行者、渣滓射手、狂怒者、槍手、霰彈槍手和重錘兵。",
+		"- 與「堅毅」、「亞空間騎士」、移動速度節點和武器祝福如「提速」的移動速度增益相加堆疊。",
+		"- 精確加成與其他相關的傷害增益做加法堆疊。",
+		"- 可以在持續時間內通過擊殺或成功踉蹌標記的敵人，或通過靈魂之火、燃燒和流血對標記目標造成的傷害來刷新。",
+		ppp___ppp,
 		"- Dealing damage to Marked enemies refreshes the Talent's duration.",
 		"- Valid targets are: Dreg/Scab Bruisers, Dreg/Scab Stalkers, Scab Shooters, Ragers, Gunners, Shotgunners and Maulers.",
 		"- Stacks additively with Movement Speed buffs from \"Mettle\", \"Warp Speed\", Movement Speed node and Weapon Blessings like \"Rev it Up\".",
@@ -531,8 +645,11 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Keystone 3-2 - Purloin Providence +]--
 	local ED_PSY_Keystone_3_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 有 2% 的機率在同一次擊殺中觸發「戰鬥冥想」，總共移除 25% 的反噬。",
+		ppp___ppp,
 		"- There is a 2% chance that the Talent procs on the same kill alongside \"Battle Meditation\" removing 25% Peril total.",
 	}, "\n"), enhdesc_col)
+	
 
 	--[+ Keystone 3-3 - Lingering Influence +]--
 	-- local ED_PSY_Keystone_3_3_rgb = iu_actit(table.concat({ "", }, "\n"), enhdesc_col)
@@ -540,21 +657,33 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Keystone 3-4 - Cruel Fortune +]--
 	local ED_PSY_Keystone_3_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 觸發於近戰、遠程、「顱腦崩裂」或「靈能攻擊」攻擊。",
+		ppp___ppp,
 		"- Procs on Melee, Ranged, \"Brain Rupture\" or \"Assail\" attacks.",
 	}, "\n"), enhdesc_col)
+	
 
 --[+ +PASSIVES+ +]--
 	--[+ Passive 1 - Soulstealer +]--
 	local ED_PSY_Passive_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- If the warp attack is a Melee attack, the Talent's amount of 7.5% is added to Psyker's base 5% of Maximum Toughness gained on Melee kill.",
-		"-- For example, a Psyker with 96 Max Toughness killing two enemies with an activated Force sword attack replenishes 96x(0.1+0.15)=24 Toughness.",
+		"- 如果亞空間攻擊是近戰攻擊，天賦的 7.5% 效果會加到靈能者基礎的 5% 最大韌性獲得量上。",
+		"-- 例如，一個擁有 96 最大韌性的靈能者使用啟動的靈能劍擊殺兩個敵人，會恢復 96x(0.1+0.15)=24 韌性。",
 		z_eff_of_this_tougn_rep,
 		warp_attc_refers_to,
+		ppp___ppp,
+		"- If the warp attack is a Melee attack, the Talent's amount of 7.5% is added to Psyker's base 5% of Maximum Toughness gained on Melee kill.",
+		"-- For example, a Psyker with 96 Max Toughness killing two enemies with an activated Force sword attack replenishes 96x(0.1+0.15)=24 Toughness.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 2 - Mettle +]--
 	local ED_PSY_Passive_2_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 每次爆擊攻擊只觸發一次，不論擊中多少敵人。",
+		z_eff_of_this_tougn_rep,
+		"- 每次爆擊攻擊總是生成 1 層，不論擊中多少敵人。",
+		"-- 層數持續 4 秒，並可在持續時間內刷新。",
+		"-- 與「擾動命運」、「亞空間騎士」、小型移動速度節點和武器祝福如「提速」的移動速度增益相加堆疊。",
 		ppp___ppp,
 		"- Procs only once per Critical attack regardless of how many enemies have been hit.",
 		z_eff_of_this_tougn_rep,
@@ -566,14 +695,22 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Passive 3 - Quietude +]--
 	local ED_PSY_Passive_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 每 1% 反噬平息恢復 0.5% 最大韌性。",
+		"- 觸發於主動或被動平息。",
+		"- 例如，一個擁有 109 最大韌性的靈能者從 59% 真實反噬平息到 0% 反噬，會恢復 59x(109x0.005)=32.15 韌性（HUD 四捨五入：33）。",
+		z_eff_of_this_tougn_rep,
+		ppp___ppp,
 		"- Replenishes 0.5% of Maximum Toughness per 1% Peril Quelled.",
 		"- Procs on both active or passive quelling.",
 		"- For example, a Psyker with 109 Maximum Toughness Quelling down from 59% true Peril to 0% Peril, replenishes 59x(109x0.005)=32.15 Toughness (HUD rounds up: 33).",
-		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 4 - Warp Expenditure +]--
 	local ED_PSY_Passive_4_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 每 1% 反噬生成恢復 0.25% 最大韌性。",
+		"- 來自「平心靜氣」、「骨折後遺症」、「動能撕裂者」、「現實錨點」和反噬抗性節點的反噬值消耗減少效果會降低此天賦的效能！",
+		"- 例如，一個擁有 90 最大韌性的靈能者生成 44% 反噬，會恢復 44x(90x0.0025)=9.9 韌性。然而，同樣的靈能者在擁有 15% 反噬值消耗減少效果（來自 3 個小型反噬抗性節點）的情況下生成 44% 反噬，僅會恢復 44x(90x0.0025x0.95^3)=8.488 韌性。",
 		ppp___ppp,
 		"- Replenishes 0.25% of maximum Toughness per 1% Peril generated.",
 		"- Peril Cost Reduction buffs from \"Becalming Eruption\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\" and Peril Resistance nodes Reduce this Talent's efficiency!",
@@ -582,6 +719,17 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 
 	--[+ Passive 5 - Perilous Combustion +]--
 	local ED_PSY_Passive_5_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 堆疊效果在距離被擊殺敵人最多 4 公尺內生效。",
+		"- 不會對被靈能者的靈魂之火傷害跳數擊殺的精英或特殊敵人生效。",
+		"- 會對燃燒或流血跳數擊殺生效。",
+		"- 靈魂之火：",
+		"-- 持續 8 秒。",
+		"-- 與其他靈魂之火來源相同。",
+		"-- 每 0.75 秒觸發一次。",
+		"-- 施加堆疊時會刷新持續時間。",
+		"-- 對所有裝甲類型的傷害係數都很高，對甲殼裝甲的傷害係數很低。",
+		"{#color(255, 35, 5)}- 堆疊效果適用於惡魔宿主！{#reset()}",
 		ppp___ppp,
 		"- Stacks are applied at a distance of up to 4 meters from the killed enemy.",
 		"- Does not proc on Elites or Specials killed by Psyker's Soulblaze Damage ticks.",
@@ -594,9 +742,16 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"-- Very high armor Damage modifiers across the board, very low armor Damage modifier against Carapace.",
 		"{#color(255, 35, 5)}- Stacks apply to Daemonhosts!{#reset()}",
 	}, "\n"), enhdesc_col)
+	
 
 	--[+ Passive 6 - Perfect Timing +]--
 	local ED_PSY_Passive_6_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 用近戰爆擊、遠程或靈能攻擊擊中敵人會獲得疊加效果。",
+		"- 順劈攻擊時每次攻擊會生成多個疊加效果。",
+		"- 疊加效果可在持續期間內刷新。",
+		stacks_add_w_oth_dmg,
+		warp_attc_refers_to,
 		ppp___ppp,
 		"- Hitting enemies with a Critical Melee, Ranged, or Assail attack grants Stacks.",
 		"- Generates multiple Stacks per attack when Cleaving.",
@@ -608,6 +763,11 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Passive 7 - Battle Meditation +]--
 	local ED_PSY_Passive_7_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 從當前反噬值中移除 10% 反噬。",
+		"- 當敵人死於靈能者的近戰和遠程攻擊、傷害技能、持續傷害效果，或被靈能者推下懸崖進入地圖殺區時，有 10% 的機率觸發。",
+		"- 與「骨折後遺症」和「屠殺中的平靜」同時觸發。",
+		"- 有 2% 的機率在同一次擊殺中觸發「戰鬥冥想」，總共移除 25% 的反噬。",
+		ppp___ppp,
 		"- Removes 10% Peril from the current Peril amount.",
 		"- Has a 10% chance to proc when enemies die to Psyker's Melee and Ranged attacks, Damaging abilities, DoTs, and when pushed over ledges into map kill boxes by Psyker.",
 		"- Procs additionally to \"By Crack of Bone\" and \"Tranquility Through Slaughter\".",
@@ -616,6 +776,19 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 
 	--[+ Passive 8 - Wildfire +]--
 	local ED_PSY_Passive_8_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 每當受到至少 2 層靈魂之火影響的敵人死亡時，靈魂之火會擴散到 5 公尺範圍內的有效目標。",
+		"- 如果目標已經有 4 層或更多靈魂之火，則不會受到此天賦造成的靈魂之火堆疊。",
+		"- 有效目標最多可受到此天賦造成的 4 層靈魂之火堆疊。",
+		"- 擴散的靈魂之火堆疊數量取決於死亡敵人的靈魂之火堆疊數量：",
+		"_______________________________",
+		"堆疊數:       1|        2|       3|       4|      >4",
+		"擴散數:    0|       2|       3|        4|       4",
+		"_______________________________",
+		"- 擴散的有效目標最多為 4 個：",
+		"-- 如果有 4 層堆疊和 4 個目標 - 每個目標獲得 1 層堆疊；",
+		"-- 如果有 4 層堆疊和 3 個目標 - 1 個目標獲得 2 層堆疊，其他 2 個目標各獲得 1 層堆疊，等等。",
+		"惡魔宿主不是有效目標！",
 		ppp___ppp,
 		"- Whenever an Enemy who is affected by at least 2 Stacks of Soulblaze dies, it spreads to valid targets within a 5 meters radius.",
 		"- Targets do not receive Soulblaze Stacks caused by the Talent if they already have 4 Stacks or more on them.",
@@ -634,6 +807,11 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Passive 9 - Psykinetic's Aura +]--
 	local ED_PSY_Passive_9_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 對「靈能尖嘯」/「靈能學者之怒」為 1.5 秒，對「占卜者的注視」為 1.25 秒，對「念力護盾」為 2 秒。",
+		"- 不會與另一位靈能者的相同天賦疊加（每位靈能者觸發自己的天賦，分別減少冷卻時間）。",
+		"- 與專注興奮劑剩餘的每秒 3 秒冷卻時間減少效果同時觸發。",
+		doesnt_interact_w_c_a_r_from_curio,
+		ppp___ppp,
 		"- This is 1.5 seconds for \"Venting Shriek\"/\"Psykinetic's Wrath\", 1.25 seconds for \"Scrier's Gaze\", and 2 seconds for \"Telekine Shield\".",
 		"- Does not Stack with the same Talent of another Psyker (each Psyker procs their own Talent spreading the cooldown reduction separately).",
 		"- Procs additionally to Concentration Stimm's remaining cooldown reduction effect of 3 seconds per second.",
@@ -643,6 +821,8 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Passive 10 - Mind in Motion +]--
 	local ED_PSY_Passive_10_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 不會與移動速度增益效果產生互動。",
+		ppp___ppp,
 		"- Does not interact with Movement Speed buffs.",
 	}, "\n"), enhdesc_col)
 
@@ -650,12 +830,18 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Passive_11_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		stacks_add_w_oth_dmg,
-		"- The 8 seconds duration of each buff starts on respective kills and can be refreshed during active duration.",
+		"- 每個增益效果的 8 秒持續時間從相應的擊殺開始計算，並可在持續期間內刷新。",
 		warp_attc_refers_to,
+		ppp___ppp,
+		"- The 8 seconds duration of each buff starts on respective kills and can be refreshed during active duration.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 12 - Channeled Force +]--
 	local ED_PSY_Passive_12_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 在使用任何靈能法杖進行至少 95% 充能的次要攻擊後，增加法杖主要攻擊的傷害。",
+		can_be_refr_dur_active_dur,
+		"- 與其他傷害增益做加法堆疊。",
 		ppp___ppp,
 		"- Increases the Damage of staff Primary attacks after executing a charged secondary attack (at least 95% charged) with any Force Staff.",
 		can_be_refr_dur_active_dur,
@@ -664,6 +850,14 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 
 	--[+ Passive 13 - Perilous Assault +]--
 	local ED_PSY_Passive_13_rgb = iu_actit(table.concat({
+		ppp___ppp,
+		"- 這會減少切換物品槽（武器、閃擊技能、興奮劑、醫療包、彈藥箱、書籍等）時的操作時間：",
+		"_______________________________",
+		"反噬:     0|  20|  40|  50|  60|  80|  100",
+		"WS(%):  0|   10|  20|  25|  30|  40|   50",
+		"_______________________________",
+		"(*WS = 揮舞速度)",
+		"{#color(255, 35, 5)}- 客觀來說，靈能者目前的武器庫中沒有任何一種武器能顯著減少此天賦的揮舞時間。自動步槍和激光步槍在切換到它們並開始從腰部開火時擁有最長的揮舞時間為 0.65 秒。此天賦在 100% 反噬時會將這些時間減少到 0.43 秒。對於所有其他武器，時間減少的意義更小。{#reset()}",
 		ppp___ppp,
 		"- This reduces the time of Wielding actions when swapping item slots (weapons, Blitz abilities, stimms, med packs, ammo crates, books, etc):",
 		"_______________________________",

@@ -5,11 +5,18 @@
 - Toughness - 韌性
 - Hit Mass - 順劈傷害
 - Cleave - 順劈目標
+- Curios - 珍品
+- Weakspot - 弱點
+- Finesse - 技巧
+- Staggering - 踉蹌
+- Critical Melee - 近戰爆擊
+- Stacks - 疊加
 
 ### 興奮劑
 
 - Celerity Stimm - 敏捷興奮劑
 - Combat Stimm - 戰鬥興奮劑
+- Concentration Stimm - 專注興奮劑
 
 ### 怪物相關
 
@@ -29,16 +36,42 @@
 - Ogryn - 歐格林
 - Ragers - 狂怒者
 - Scab - 血痂
+- Dreg - 渣滓
 - Shotgunners - 霰彈槍手
+
+### 附加屬性
+
+- Combat Ability Regeneration - 戰鬥技能冷卻
 
 ### 事件相關
 
 - Enhanced Blitz - 閃擊強化
+- Reduce Ability Cooldowns by 20%. - 技能冷卻減少20%
+
+### 天賦相關
+
+- Peril Resistance - 移動速度增幅
 
 ### Weapon Blessing - 武器祝福
 
 - Skullcrusher - 碎顱者
-
+- Executor - 行刑者
+- Slaughterer - 殺戮者
+- Superiority - 優勢
+- Unstable Power - 不穩定能量
+- High Voltage - 高壓電
+- Blaze Away - 連續發射
+- Ceaseless Barrage - 持續阻擊
+- Deathspitter - 死亡噴吐
+- Dumdum - 達姆彈
+- Execution - 處決
+- Fire Frenzy - 烈火熱焰
+- Full Bore - 全孔射擊
+- No Respite - 刻不容緩
+- Pinning Fire - 鉗制射擊
+- Powderburn - 火藥灼傷
+- Run 'n' Gun - 連跑帶打
+- Rev it Up - 提速
 
 ### Psyker - 靈能者
 
@@ -75,6 +108,15 @@
 - Reality Anchor - 現實錨點
 - Enfeeble - 衰弱詛咒
 - Charged Strike - 蓄力打擊
+- Telekine Shield - 念力護盾
+- Venting Shriek - 靈能尖嘯
+- Psykinetic's Wrath - 靈能學者之怒
+- Kinetic Resonance - 動能撕裂者
+- Seer's Presence - 先知之眼
+- Warp Siphon - 亞空間虹吸
+- Mettle - 堅毅
+- Battle Meditation - 戰鬥冥想
+
 
 ### Ogryn - 歐格林
 
