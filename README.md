@@ -223,6 +223,13 @@
 - MOD 檔案名稱：WhatTheLocalization-163-1-2-1-1697319036
 - 手動維護最後下載日期：2025-02-13
 
+### [Enhanced Descriptions](https://www.nexusmods.com/warhammer40kdarktide/mods/210)
+    描述改善
+- MOD 網站最後更新日期：Last updated 05 February 2025 2:55PM
+- MOD 版本：1.2.1
+- MOD 檔案名稱：Enhanced Descriptions-210-2-52-1736024061
+- 手動維護最後下載日期：2025-02-13
+
 ### [Emperor's Guidance](https://www.nexusmods.com/warhammer40kdarktide/mods/468)
     靈能捏頭過濾器 - 能夠依照你要的順序捏頭
 - MOD 網站最後更新日期：Last updated 10 February 2025 6:26PM
