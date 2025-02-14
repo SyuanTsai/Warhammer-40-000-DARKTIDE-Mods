@@ -909,7 +909,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Passive 17 - By Crack of Bone +]--
 	local ED_PSY_Passive_17_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 移除反噬時，順劈攻擊每次揮擊可多次觸發。與「戰鬥冥想」和「戰鬥冥想」同時觸發。",
+		"- 移除反噬時，順劈攻擊每次揮擊可多次觸發。與「戰鬥冥想」和「盜竊天命」同時觸發。",
 		"- 與「平心靜氣」、「亞空間意志」、「動能撕裂者」、「現實錨點」、小型反噬抗性節點和戰鬥興奮劑的反噬值消耗減少效果做乘法疊加。",
 		ppp___ppp,
 		"- Removing Peril can proc multiple times per swing when Cleaving. Procs additionally to \"Battle Meditation\" and \"Purloin Providence\".",
