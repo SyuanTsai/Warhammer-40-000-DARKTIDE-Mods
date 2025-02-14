@@ -76,6 +76,8 @@ local localization_templates = {
 	create_template("talent_tree_oper_mod_006_desc_en", {"loc_talent_crit_chance_low_desc"}, {"en"}, function(locale, value) return "{crit_chance:%s} "..COLORS_KWords.Crit_hit_chance_rgb.."."..TALENTS_Enh_desc_nodes.ED_CritChncBst_rgb end), -- crit_chance:+5% -- Psyker, Veteran
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_006_desc_fr", {"loc_talent_crit_chance_low_desc"}, {"fr"}, function(locale, value) return "{crit_chance:%s} "..COLORS_KWords_fr.Crit_hit_chance_rgb_fr.."."..TALENTS_Enh_desc_nodes_fr.ED_CritChncBst_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_006_desc_tw", {"loc_talent_crit_chance_low_desc"}, {"zh-tw"}, function(locale, value) return "{crit_chance:%s} "..COLORS_KWords_tw.Crit_hit_chance_rgb.."."..TALENTS_Enh_desc_nodes_tw.ED_CritChncBst_rgb end),
 
 	--[+ Health Boost Low +]--
 		--create_template("talent_tree_oper_mod_005_l_en", {"loc_talent_health_low"}, {"en"}, function(locale, value) return "Health Boost Low" end),
