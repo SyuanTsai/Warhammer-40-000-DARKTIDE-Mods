@@ -223,6 +223,13 @@
 - MOD 檔案名稱：WhatTheLocalization-163-1-2-1-1697319036
 - 手動維護最後下載日期：2025-02-13
 
+### [Emperor's Guidance](https://www.nexusmods.com/warhammer40kdarktide/mods/468)
+    靈能捏頭過濾器 - 能夠依照你要的順序捏頭
+- MOD 網站最後更新日期：Last updated 10 February 2025 6:26PM
+- MOD 版本：1.2.1
+- MOD 檔案名稱：Emperor's Guidance 1.2.1-468-1-2-1-1739211976
+- 手動維護最後下載日期：2025-02-14
+
 ---
 # 遊戲內操作相關MOD
 
