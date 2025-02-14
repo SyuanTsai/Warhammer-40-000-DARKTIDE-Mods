@@ -8,7 +8,7 @@ mod.modified_elements = {
     "_nameplate",
     "_inspect_player",
     "_team_panel",
-    "_group_finder"
+    "_group_finder",
 }
 
 mod.sub_name_options = {
@@ -208,7 +208,7 @@ local loc = {
         ja = "サブネーム設定",
         ru = "Настройки дополнительной части имени",
         ["zh-cn"] = "附加名字设置",
-        fr = "Option du Nom Secondaire"
+        fr = "Option du Nom Secondaire",
         ["zh-tw"] = "附加名字設定",
     },
     tooltip_sub_name = {
