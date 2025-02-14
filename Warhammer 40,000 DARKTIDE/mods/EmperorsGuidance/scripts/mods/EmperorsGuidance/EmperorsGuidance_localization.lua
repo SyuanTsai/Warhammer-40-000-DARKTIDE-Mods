@@ -9,11 +9,11 @@ return {
 		["zh-tw"] = "皇帝的指引",
 	},
 	enable_tooltip = {
-		en = "Enable/Disable all enemies in this group."
+		en = "Enable/Disable all enemies in this group.",
 		["zh-tw"] = "啟用/停用此組所有敵人。",
 	},
 	visibility_tooltip = {
-		en = "Show/hide this group. Does not impact settings."
+		en = "Show/hide this group. Does not impact settings.",
 		["zh-tw"] = "顯示/隱藏此組，不影響設定。",
 	},
 	-- Global Settings
