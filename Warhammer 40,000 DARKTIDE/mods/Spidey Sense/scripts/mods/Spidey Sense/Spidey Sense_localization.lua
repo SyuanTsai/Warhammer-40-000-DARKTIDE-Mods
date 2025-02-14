@@ -357,7 +357,7 @@ local localizations = {
       ["zh-tw"] = "撲!!",
     },
     sniper_text = {
-      en = "SNIPER SHOT!"      
+      en = "SNIPER SHOT!",
       ["zh-tw"] = "狙擊!!",
       },
     render_trapper_warning = {
