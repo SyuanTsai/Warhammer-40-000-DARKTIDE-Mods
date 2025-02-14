@@ -115,7 +115,7 @@ return {
     },
 	ammo_small_border_colour = {
 		en = "Border Colour",
-		fr = "Couleur de la bordure"
+		fr = "Couleur de la bordure",
         ["zh-tw"] = "邊框顏色",
 	},
 
@@ -141,7 +141,7 @@ return {
     },
 	ammo_large_border_colour = {
 		en = "Border Colour",
-		fr = "Couleur de la bordure"
+		fr = "Couleur de la bordure",
         ["zh-tw"] = "邊框顏色",
 	},
 
