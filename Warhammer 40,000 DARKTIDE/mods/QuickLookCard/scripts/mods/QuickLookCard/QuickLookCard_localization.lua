@@ -61,7 +61,7 @@ return {
 		["zh-cn"] = "仅限武器",
 		ja = "武器のみ",
 		ru = "Только для оружия",
-		["zh-tw"] = "僅限武器,
+		["zh-tw"] = "僅限武器",
 	},
 	opt_blessing = {
 		en = Localize("loc_weapon_inventory_traits_title_text"),
