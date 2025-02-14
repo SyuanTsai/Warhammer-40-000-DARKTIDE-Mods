@@ -72,6 +72,10 @@
 - Powderburn - 火藥灼傷
 - Run 'n' Gun - 連跑帶打
 - Rev it Up - 提速
+- Deflector - 偏轉
+- Gloryhunter - 榮耀獵手
+- Reassuringly Accurate - 慰藉精準
+- Inspiring Barrage - 激勵彈幕
 
 ### Psyker - 靈能者
 
@@ -116,6 +120,7 @@
 - Warp Siphon - 亞空間虹吸
 - Mettle - 堅毅
 - Battle Meditation - 戰鬥冥想
+- Purloin Providence - 盜竊天命
 
 
 ### Ogryn - 歐格林
@@ -130,6 +135,9 @@
 ### Zealot - 狂信徒
 
 #### 狂信徒專有名詞
+
+#### 狂信徒天賦
+- Stun Grenade - 
 
 ### Veteran - 老兵
 
