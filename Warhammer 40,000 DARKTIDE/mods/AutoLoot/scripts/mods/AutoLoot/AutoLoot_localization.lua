@@ -56,7 +56,7 @@ return {
 		["zh-tw"] = "剩餘手榴彈的最低閾值，用於自動拾取手榴彈",
 	},
 	grenadesammo_group = {
-		en = "Grenades/Ammo"
+		en = "Grenades/Ammo",
 		["zh-tw"] = "手榴彈/彈藥",
 	},
 }
