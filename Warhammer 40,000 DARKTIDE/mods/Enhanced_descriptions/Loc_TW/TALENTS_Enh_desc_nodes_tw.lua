@@ -100,20 +100,20 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"- 狂信徒：與其他小型移動速度節點，以及來自「隱密領域」、「勃然大怒」和「提速」等武器祝福提供的移動速度增益相加疊加。",
 		"-- 與「堅定迅捷」提供的衝刺速度增益做乘法疊加。",
 		"- 老兵：與「滲透」、「不拋棄不放棄」、光環「抵近殺敵」，以及類似「提速」這種武器祝福提供的移動速度增益相加疊加。",
-		ppp___ppp,
-		"- PSYKER: Stacks additively with related buffs from: \"Disrupt Destiny\", \"Mettle\", \"Warp Speed\" and weapon Blessings like \"Rev it Up\".",
-		"- ZEALOT: Stacks additively with other small Movement Speed nodes and Movement Speed buffs from \"Shroudfield\", \"Thy Wrath be Swift\", and Weapon Blessings like \"Rev it Up\".",
-		"-- Stacks multiplicatively with Sprinting Speed buff from \"Swift Certainty\".",
-		"- VETERAN: Stacks additively with Movement Speed buffs from \"Infiltrate\", \"Leave No One Behind\", aura \"Close and Kill\", and Weapon Blessings like \"Rev it Up\".",
+		-- ppp___ppp,
+		-- "- PSYKER: Stacks additively with related buffs from: \"Disrupt Destiny\", \"Mettle\", \"Warp Speed\" and weapon Blessings like \"Rev it Up\".",
+		-- "- ZEALOT: Stacks additively with other small Movement Speed nodes and Movement Speed buffs from \"Shroudfield\", \"Thy Wrath be Swift\", and Weapon Blessings like \"Rev it Up\".",
+		-- "-- Stacks multiplicatively with Sprinting Speed buff from \"Swift Certainty\".",
+		-- "- VETERAN: Stacks additively with Movement Speed buffs from \"Infiltrate\", \"Leave No One Behind\", aura \"Close and Kill\", and Weapon Blessings like \"Rev it Up\".",
 	}, "\n"), enhdesc_col) -- Psyker, Veteran, Zealot
 
 	--[+ Peril Resistance +]--
 	local ED_PerilRes_rgb = iu_actit(table.concat({
 		"",
 		ppp___ppp,
-		"- 與其他小型節點，以及來自「骨折後遺症」、「刺耳尖嘯」、「亞空間意志」、「平心靜氣」、「動能共鳴」、「占卜者的注視」以及戰鬥興奮劑（Combat Stimm）等危險值消耗減少增益做乘法疊加。",
-		ppp___ppp,
-		"- Stacks multiplicatively with other small nodes and related Peril cost reduction buffs from \"By Crack of Bone\", \"Becalming Eruption\", \"Empyric Resolve\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\", and Combat Stimm.",
+		"- 與其他小型節點，以及來自「骨折後遺症」、「刺耳尖嘯」、「亞空間意志」、「平心靜氣」、「動能共鳴」、「占卜者的注視」以及戰鬥興奮劑等危險值消耗減少增益做乘法疊加。",
+		-- ppp___ppp,
+		-- "- Stacks multiplicatively with other small nodes and related Peril cost reduction buffs from \"By Crack of Bone\", \"Becalming Eruption\", \"Empyric Resolve\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\", and Combat Stimm.",
 	}, "\n"), enhdesc_col) -- Psyker,
 
 	--[+ Ranged Damage Boost +]--
@@ -121,9 +121,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"",
 		ppp___ppp,
 		"- 與其他小型遠程傷害節點以及其他相關傷害增益相加疊加。",
-		ppp___ppp,
-		"- Stacks additively with other small Ranged Damage nodes and other related Damage buffs.",
 		stacks_mult_power_lvl_weap_bless,
+		-- ppp___ppp,
+		-- "- Stacks additively with other small Ranged Damage nodes and other related Damage buffs.",
 	}, "\n"), enhdesc_col) -- Psyker, Ogryn, Veteran
 
 	--[+ Reload Boost +]--
@@ -133,10 +133,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"- 歐格林：與「領跑者」、「貼身火力」、武器天賦與祝福，以及敏捷興奮劑提供的裝填速度增益相加疊加。",
 		"- 老兵：與「集火」、「遠程刺客」、「戰術裝填」、「齊射能手」、武器天賦與祝福，以及敏捷興奮劑提供的裝填速度增益相加疊加。",
 		"-- 此效果也會提升戰鬥霰彈槍的特殊裝填動作速度。",
-		ppp___ppp,
-		"- OGRYN: Stacks additively with Reload speed buffs from \"Pacemaker\", \"Point-Blank Barrage\", Weapon Perks and Blessings, and Celerity Stimm.",
-		"- VETERAN: Stacks additively with Reload speed buffs from \"Fleeting Fire\", \"Marksman's Focus\", \"Tactical Reload\", \"Volley Adept\", Weapon Perks and Blessings, and Celerity Stimm.",
-		"-- This also increases the speed of the loading special action of Combat Shotguns.",
+		-- ppp___ppp,
+		-- "- OGRYN: Stacks additively with Reload speed buffs from \"Pacemaker\", \"Point-Blank Barrage\", Weapon Perks and Blessings, and Celerity Stimm.",
+		-- "- VETERAN: Stacks additively with Reload speed buffs from \"Fleeting Fire\", \"Marksman's Focus\", \"Tactical Reload\", \"Volley Adept\", Weapon Perks and Blessings, and Celerity Stimm.",
+		-- "-- This also increases the speed of the loading special action of Combat Shotguns.",
 	}, "\n"), enhdesc_col) -- Ogryn, Veteran
 
 	--[+ Rending Boost +]--
@@ -146,10 +146,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"- 適用於所有攻擊，提升對裝甲類型（甲殼、防彈、狂熱、不屈）的傷害，包括爆炸傷害與流血、燃燒等持續傷害效果（由歐格林施加）。",
 		"- 只影響歐格林自身的傷害。",
 		"- 與其他撕裂增益相加疊加，並與施加在敵人身上的脆弱（Brittleness）減益效果相加疊加。",
-		ppp___ppp,
-		"- Applies to all Attacks boosting Damage against armor types: Carapace, Flak, Maniac, Unyielding (including Damage of explosions and DoTs like Bleed and Burn applied by Ogryn).",
-		"- Only affects Ogryn's own Damage.",
-		"- Stacks additively with other Rending buffs and with Brittleness debuffs that are applied to enemies.",
+		-- ppp___ppp,
+		-- "- Applies to all Attacks boosting Damage against armor types: Carapace, Flak, Maniac, Unyielding (including Damage of explosions and DoTs like Bleed and Burn applied by Ogryn).",
+		-- "- Only affects Ogryn's own Damage.",
+		-- "- Stacks additively with other Rending buffs and with Brittleness debuffs that are applied to enemies.",
 	}, "\n"), enhdesc_col) -- Ogryn,
 
 	--[+ Stamina Boost +]--
@@ -158,9 +158,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		ppp___ppp,
 		"- 與珍品、武器天賦以及武器耐力模板提供的耐力值相加疊加。",
 		"- 玩家介面中的耐力條每一格代表 1 點耐力。",
-		ppp___ppp,
-		"- Stacks additively with Stamina values from Curios, Weapon Perks and Weapon Stamina templates.",
-		"- Each segment of the Stamina bar in the player HUD represents 1 Stamina.",
+		-- ppp___ppp,
+		-- "- Stacks additively with Stamina values from Curios, Weapon Perks and Weapon Stamina templates.",
+		-- "- Each segment of the Stamina bar in the player HUD represents 1 Stamina.",
 	}, "\n"), enhdesc_col) -- Veteran, Zealot
 
 	--[+ Suppression Boost +]--
@@ -170,10 +170,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"- 歐格林：與武器祝福「連續發射」提供的壓制增益相加疊加。",
 		"- 狂信徒：與武器祝福「火藥灼傷」提供的壓制增益相加疊加。",
 		"- 老兵：與「求勝心」、「讓他們全趴下!」，以及武器祝福「火藥灼傷」提供的壓制增益相加疊加。",	
-		ppp___ppp,
-		"- OGRYN: Stacks additively with Suppression buff from Weapon Blessing \"Ceaseless Barrage\".",
-		"- ZEALOT: Stacks additively with Suppression buff from Weapon Blessing \"Powderburn\".",
-		"- VETERAN: Stacks additively with Suppression buffs from \"Competitive Urge\", \"Keep Their Heads Down!\", and Weapon Blessing \"Powderburn\".",
+		-- ppp___ppp,
+		-- "- OGRYN: Stacks additively with Suppression buff from Weapon Blessing \"Ceaseless Barrage\".",
+		-- "- ZEALOT: Stacks additively with Suppression buff from Weapon Blessing \"Powderburn\".",
+		-- "- VETERAN: Stacks additively with Suppression buffs from \"Competitive Urge\", \"Keep Their Heads Down!\", and Weapon Blessing \"Powderburn\".",
 	}, "\n"), enhdesc_col) -- Ogryn, Veteran, Zealot
 
 	--[+ Stamina Regeneration Boost +]--
@@ -183,10 +183,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"- 將基礎耐力回復延遲從 1 秒縮短至 0.75 秒。",
 		"- 此時間為消耗耐力後開始回復耐力的延遲時間。",
 		"- 與其他小型耐力回復延遲減少節點相加疊加。",
-		ppp___ppp,
-		"- Reduces base Stamina Regeneration Delay from 1 to 0.75 seconds.",
-		"- This time is the Delay before Stamina starts Regenerating after having spent Stamina.",
-		"- Stacks additively with the other small Stamina Regeneration Delay reduction node.",
+		-- ppp___ppp,
+		-- "- Reduces base Stamina Regeneration Delay from 1 to 0.75 seconds.",
+		-- "- This time is the Delay before Stamina starts Regenerating after having spent Stamina.",
+		-- "- Stacks additively with the other small Stamina Regeneration Delay reduction node.",
 	}, "\n"), enhdesc_col) -- Veteran
 
 	--[+ Toughness Boost Low +]--
@@ -198,10 +198,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"-- 靈能者：例如，在 105 最大韌性（靈能者的基礎 60 加上三個 +15 韌性節點）的情況下，若裝備一件 +17% 韌性的珍品並擁有 +5% 韌性天賦，則最大韌性 105 會增加 105x(0.17+0.05)=23.1，提升至 128.1（介面顯示：129）。",
 		"-- 狂信徒：例如，在 85 最大韌性（狂信徒的基礎 70 加上一個 +15 韌性節點）的情況下，若裝備一件 +17% 韌性的珍品並擁有 +5% 韌性天賦，則最大韌性 85 會增加 85x(0.17+0.05)=18.7，提升至 103.7（介面顯示：104）。",
 		"- 角色的最大韌性是計算大多數天賦與祝福提供的韌性回復時的基礎值。",
-		ppp___ppp,
-		"-- PSYKER: For example, at 105 Max Toughness (Psyker's base 60 and three +15 Toughness node) with one +17% Toughness Curio with a +5% Toughness Perk, Psyker's Max Toughness of 105 is increased by 105x(0.17+0.05)=23.1 to 128.1 Toughness (HUD rounds up: 129).",
-		"-- ZEALOT: For example, at 85 Max Toughness (Zealot's base 70 and one +15 Toughness node) with one +17% Toughness Curio with a +5% Toughness Perk, Zealot's Max Toughness of 85 is increased by 85x(0.17+0.05)=18.7 to 103.7 Toughness (HUD rounds up: 104).",
-		"- A character's Maximum Toughness is the Base value that is used in Toughness replenished calculations of most Talents and Blessings.",
+		-- ppp___ppp,
+		-- "-- PSYKER: For example, at 105 Max Toughness (Psyker's base 60 and three +15 Toughness node) with one +17% Toughness Curio with a +5% Toughness Perk, Psyker's Max Toughness of 105 is increased by 105x(0.17+0.05)=23.1 to 128.1 Toughness (HUD rounds up: 129).",
+		-- "-- ZEALOT: For example, at 85 Max Toughness (Zealot's base 70 and one +15 Toughness node) with one +17% Toughness Curio with a +5% Toughness Perk, Zealot's Max Toughness of 85 is increased by 85x(0.17+0.05)=18.7 to 103.7 Toughness (HUD rounds up: 104).",
+		-- "- A character's Maximum Toughness is the Base value that is used in Toughness replenished calculations of most Talents and Blessings.",
 	}, "\n"), enhdesc_col) -- Psyker, Ogryn, Veteran, Zealot
 
 	--[+ Toughness Boost Medium +]--
@@ -213,10 +213,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"-- 歐格林：例如，在 75 最大韌性（歐格林的基礎 50 加上一個 +25 韌性節點）的情況下，若裝備一件 +17% 韌性的珍品並擁有 +5% 韌性天賦，則最大韌性 75 會增加 75x(0.17+0.05)=15.75，提升至 90.75（介面顯示：91）。",
 		"-- 老兵：例如，在 150 最大韌性（老兵的基礎 100 加上兩個 +25 韌性節點）的情況下，若裝備一件 +15% 韌性的珍品並擁有 +4% 韌性天賦，則最大韌性 150 會增加 150x(0.15+0.04)=28.5，提升至 178.5（介面顯示：179）。",
 		"- 角色的最大韌性是計算大多數天賦與祝福提供的韌性回復時的基礎值。",
-		ppp___ppp,
-		"-- OGRYN: For example, at 75 Max Toughness (Ogryn's base 50 and one +25 Toughness node) with one +17% Toughness Curio with a +5% Toughness Perk, Ogryn's Max Toughness of 75 is increased by 75x(0.17+0.05)=15.75 to 90.75 Toughness (HUD rounds up: 91).",
-		"-- VETERAN: For example, at 150 Max Toughness (Veteran's base 100 and two +25 Toughness nodes) with one +15% Toughness Curio with a +4% Toughness Perk, Veteran's Max Toughness of 150 is increased by 150x(0.15+0.04)=28.5 to 178.5 Toughness (HUD rounds up: 179).",
-		"- A character's Maximum Toughness is the Base value that is used in Toughness replenished calculations of most Talents and Blessings.",
+		-- ppp___ppp,
+		-- "-- OGRYN: For example, at 75 Max Toughness (Ogryn's base 50 and one +25 Toughness node) with one +17% Toughness Curio with a +5% Toughness Perk, Ogryn's Max Toughness of 75 is increased by 75x(0.17+0.05)=15.75 to 90.75 Toughness (HUD rounds up: 91).",
+		-- "-- VETERAN: For example, at 150 Max Toughness (Veteran's base 100 and two +25 Toughness nodes) with one +15% Toughness Curio with a +4% Toughness Perk, Veteran's Max Toughness of 150 is increased by 150x(0.15+0.04)=28.5 to 178.5 Toughness (HUD rounds up: 179).",
+		-- "- A character's Maximum Toughness is the Base value that is used in Toughness replenished calculations of most Talents and Blessings.",
 	}, "\n"), enhdesc_col) -- Ogryn, Veteran
 
 	--[+ Toughness Damage Reduction Low + Medium +]--
@@ -226,10 +226,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"- 與其他小型韌性傷害減少節點相加疊加。",
 		"- 這些加總後的減傷效果與其他傷害減少增益做乘法疊加。",
 		"-- 狂信徒：與「不滅意志」相加疊加。",
-		ppp___ppp,
-		"- Stacks additively with other small Toughness Damage Reduction nodes.",
-		"- Their sum Stacks multiplicatively with other Damage Reduction buffs.",
-		"-- ZEALOT: Stacks additively with \"I Shall Not Fall\".",
+		-- ppp___ppp,
+		-- "- Stacks additively with other small Toughness Damage Reduction nodes.",
+		-- "- Their sum Stacks multiplicatively with other Damage Reduction buffs.",
+		-- "-- ZEALOT: Stacks additively with \"I Shall Not Fall\".",
 	}, "\n"), enhdesc_col) -- Psyker, Ogryn, Veteran, Zealot
 
 -- In the list below, you also need to add a new entry or change an old one.

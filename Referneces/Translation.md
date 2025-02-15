@@ -53,6 +53,14 @@
 - Peril Resistance - 反噬抗性
 - Melee Damage Boost - 近戰增幅
 - Movement Speed Boost - 移動速度增幅
+- Reload Boost - 換彈速度增幅
+- Rending Boost - 撕裂增幅
+- Stamina Boost - 耐力增幅
+- Stamina Regeneration Boost - 耐力恢復增幅
+- Suppression Boost - 壓制增幅
+- Toughness Boost - 韌性增幅
+- Toughness Damage Reduction - 韌性減傷
+
 
 ### Weapon Blessing - 武器祝福
 
@@ -92,6 +100,18 @@
 
 #### 靈能者天賦
 
+- Brain Burst - 顱腦爆裂
+- Brain Rupture - 顱腦崩裂
+- Kinetic Resonance - 動能共鳴
+- Kinetic Presence - 動能釋放
+- Smite - 懲戒
+- Lightning Storm - 閃電風暴
+- Enfeeble - 衰弱詛咒
+- Charged Strike - 蓄力打擊
+- Assail - 靈能攻擊
+- Ethereal Shards - 乙太碎片
+- Quick Shards - 迅捷碎片
+
 - Empowered Psionics - 靈能強化
 - Empyrean Empowerment - 至天高之力
 - Empyric Shock - 亞空間震波
@@ -101,23 +121,15 @@
 - Scrier's Gaze - 占卜者的注視
 - Precognition - 預知未來
 - Warp Rider - 亞空間騎士
-- Kinetic Presence - 動能釋放
-- Smite - 懲戒
-- Brain Rupture - 顱腦崩裂
-- Brain Burst - 顱腦爆裂
-- Assail - 靈能攻擊
 - Warp Rupture - 刺耳尖嘯
 - By Crack of Bone - 骨折後遺症
 - Empyric Resolve - 亞空間意志
 - Inner Tranquility - 平心靜氣
 - Peril Resistance - 反噬抗性
 - Reality Anchor - 現實錨點
-- Enfeeble - 衰弱詛咒
-- Charged Strike - 蓄力打擊
 - Telekine Shield - 念力護盾
 - Venting Shriek - 靈能尖嘯
 - Psykinetic's Wrath - 靈能學者之怒
-- Kinetic Resonance - 動能撕裂者
 - Seer's Presence - 先知之眼
 - Warp Siphon - 亞空間虹吸
 - Mettle - 堅毅

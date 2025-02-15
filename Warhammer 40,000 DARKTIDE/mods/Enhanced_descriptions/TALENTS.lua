@@ -116,90 +116,120 @@ local localization_templates = {
 	create_template("talent_tree_oper_mod_003_desc_en", {"loc_talent_coherency_regen_low_desc"}, {"en"}, function(locale, value) return "{coherency_regen:%s} "..COLORS_KWords.Toughness_rgb.." Replenishment for you and Allies in Coherency."..TALENTS_Enh_desc_nodes.ED_InspiringP_rgb end), -- coherency_regen:+10% -- Veteran
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_003_desc_fr", {"loc_talent_coherency_regen_low_desc"}, {"fr"}, function(locale, value) return "{coherency_regen:%s} Vitesse de régénération de "..COLORS_KWords_fr.Toughness_rgb_fr.." pour vous et vos alliés en syntonie."..TALENTS_Enh_desc_nodes_fr.ED_InspiringP_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_003_desc_tw", {"loc_talent_coherency_regen_low_desc"}, {"zh-tw"}, function(locale, value) return "{coherency_regen:%s} "..COLORS_KWords_tw.Toughness_rgb.."."..TALENTS_Enh_desc_nodes_tw.ED_InspiringP_rgb end),
 
 	--[+ Melee Damage Boost Low +]--
 		--create_template("talent_tree_oper_mod_008_en", {"loc_talent_melee_damage_boost_low"}, {"en"}, function(locale, value) return "Melee Damage Boost Low" end),
 	create_template("talent_tree_oper_mod_008_desc_en", {"loc_talent_melee_damage_boost_low_desc"}, {"en"}, function(locale, value) return "{melee_damage:%s} Melee "..COLORS_KWords.Damage_rgb.."."..TALENTS_Enh_desc_nodes.ED_MeleeDmgBst_L_M_rgb end), -- melee_damage:+5% -- Ogryn, Veteran, Zealot
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_008_desc_fr", {"loc_talent_melee_damage_boost_low_desc"}, {"fr"}, function(locale, value) return "{melee_damage:%s} "..COLORS_KWords_fr.Damage_rgb_fr.." de mélée."..TALENTS_Enh_desc_nodes_fr.ED_MeleeDmgBst_L_M_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_008_desc_tw", {"loc_talent_melee_damage_boost_low_desc"}, {"zh-tw"}, function(locale, value) return "{melee_damage:%s} "..COLORS_KWords_tw.Damage_rgb.."."..TALENTS_Enh_desc_nodes_tw.ED_MeleeDmgBst_L_M_rgb end),
 
 	--[+ Melee Damage Boost Medium +]--
 		--create_template("talent_tree_oper_mod_008_1_en", {"loc_talent_melee_damage_boost_medium"}, {"en"}, function(locale, value) return "Melee Damage Boost Medium" end),
 	create_template("talent_tree_oper_mod_008_desc_en", {"loc_talent_melee_damage_boost_medium_desc"}, {"en"}, function(locale, value) return "{melee_damage:%s} Melee "..COLORS_KWords.Damage_rgb.."."..TALENTS_Enh_desc_nodes.ED_MeleeDmgBst_L_M_rgb end), -- melee_damage:+10% -- Veteran
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_008_desc_fr", {"loc_talent_melee_damage_boost_medium_desc"}, {"fr"}, function(locale, value) return "{melee_damage:%s} "..COLORS_KWords_fr.Damage_rgb_fr.." de mélée."..TALENTS_Enh_desc_nodes_fr.ED_MeleeDmgBst_L_M_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_008_desc_tw", {"loc_talent_melee_damage_boost_medium_desc"}, {"zh-tw"}, function(locale, value) return "{melee_damage:%s} "..COLORS_KWords_tw.Damage_rgb.."."..TALENTS_Enh_desc_nodes_tw.ED_MeleeDmgBst_L_M_rgb end),
 
 	--[+ Movement Speed Boost +]--
 		-- create_template("talent_tree_oper_mod_007_en",{"loc_talent_movement_speed_low"}, {"en"}, function(locale, value) return "Movement Speed Boost" end),
 	create_template("talent_tree_oper_mod_007_desc_en", {"loc_talent_movement_speed_low_desc"}, {"en"}, function(locale, value) return "{movement_speed:%s} Movement Speed."..TALENTS_Enh_desc_nodes.ED_MoveSpdBst_rgb end), -- movement_speed:+5%. -- Psyker, Veteran, Zealot
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_007_desc_fr", {"loc_talent_movement_speed_low_desc"}, {"fr"}, function(locale, value) return "{movement_speed:%s} Vitesse de déplacement."..TALENTS_Enh_desc_nodes_fr.ED_MoveSpdBst_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_007_desc_tw", {"loc_talent_movement_speed_low_desc"}, {"zh-tw"}, function(locale, value) return "{movement_speed:%s} 移動速度."..TALENTS_Enh_desc_nodes_tw.ED_MoveSpdBst_rgb end),
 
 	--[+ Peril Resistance +]--
 		-- create_template("talent_tree_oper_mod_001_en",{"loc_talent_warp_charge_low"}, {"en"}, function(locale, value) return "Peril Resistance" end),
 	create_template("talent_tree_oper_mod_001_desc_en", {"loc_talent_warp_charge_low_desc"}, {"en"}, function(locale, value) return "{warp_charge:%s} "..COLORS_KWords.Peril_rgb.." Generation."..TALENTS_Enh_desc_nodes.ED_PerilRes_rgb end), -- warp_charge:-5% -- Psyker
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_001_desc_fr", {"loc_talent_warp_charge_low_desc"}, {"fr"}, function(locale, value) return "{warp_charge:%s} Génération de "..COLORS_KWords_fr.Peril_rgb_fr.." ."..TALENTS_Enh_desc_nodes_fr.ED_PerilRes_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_001_desc_tw", {"loc_talent_warp_charge_low_desc"}, {"zh-tw"}, function(locale, value) return "{warp_charge:%s} "..COLORS_KWords_tw.Peril_rgb.."."..TALENTS_Enh_desc_nodes_tw.ED_PerilRes_rgb end),
 
 	--[+ Ranged Damage Boost +]--
 		-- create_template("talent_tree_oper_mod_004_en", {"loc_talent_ranged_damage_low"}, {"en"}, function(locale, value) return "Ranged Damage Boost" end),
 	create_template("talent_tree_oper_mod_004_desc_en", {"loc_talent_ranged_damage_low_desc"}, {"en"}, function(locale, value) return "{ranged_damage:%s} Ranged "..COLORS_KWords.Damage_rgb.."."..TALENTS_Enh_desc_nodes.ED_RangDmgBst_rgb end),  -- ranged_damage:+5% -- Psyker, Ogryn, Veteran
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_004_desc_fr", {"loc_talent_ranged_damage_low_desc"}, {"fr"}, function(locale, value) return "{ranged_damage:%s} "..COLORS_KWords_fr.Damage_rgb_fr.." de distance."..TALENTS_Enh_desc_nodes_fr.ED_RangDmgBst_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_004_desc_tw", {"loc_talent_ranged_damage_low_desc"}, {"zh-tw"}, function(locale, value) return "{ranged_damage:%s} "..COLORS_KWords_tw.Damage_rgb.."."..TALENTS_Enh_desc_nodes_tw.ED_RangDmgBst_rgb end),
 
 	--[+ Reload Boost +]--
 		-- create_template("talent_tree_oper_mod_011_en", {"loc_talent_reload_speed_low"}, {"en"}, function(locale, value) return "Reload Boost" end),
 	create_template("talent_tree_oper_mod_011_desc_en", {"loc_talent_reload_speed_low_desc"}, {"en"}, function(locale, value) return "{reload_speed:%s} Reload Speed."..TALENTS_Enh_desc_nodes.ED_ReloadBst_rgb end), -- reload_speed: +5% -- Ogryn, Veteran
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_011_desc_fr", {"loc_talent_reload_speed_low_desc"}, {"fr"}, function(locale, value) return "{reload_speed:%s} vitesse de rechargement."..TALENTS_Enh_desc_nodes_fr.ED_ReloadBst_rgb_fr end),
+			--[+ Traditional Chinese +]--	
+	create_template("talent_tree_oper_mod_011_desc_tw", {"loc_talent_reload_speed_low_desc"}, {"zh-tw"}, function(locale, value) return "{reload_speed:%s} 裝填速度."..TALENTS_Enh_desc_nodes_tw.ED_ReloadBst_rgb end),
 
 	--[+ Rending Boost +]--
 		-- create_template("talent_tree_oper_mod_013_en", {"loc_talent_armor_pen_low"}, {"en"}, function(locale, value) return "Rending Boost" end),
 	create_template("talent_tree_oper_mod_013_desc_en", {"loc_talent_armor_pen_low_desc"}, {"en"}, function(locale, value) return "{rending:%s} "..COLORS_KWords.Rending_rgb.."."..TALENTS_Enh_desc_nodes.ED_RendingBst_rgb end), -- rending: +5% -- Ogryn
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_013_desc_fr", {"loc_talent_armor_pen_low_desc"}, {"fr"}, function(locale, value) return "{rending:%s} "..COLORS_KWords_fr.Rending_rgb_fr.."."..TALENTS_Enh_desc_nodes_fr.ED_RendingBst_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_013_desc_tw", {"loc_talent_armor_pen_low_desc"}, {"zh-tw"}, function(locale, value) return "{rending:%s} "..COLORS_KWords_tw.Rending_rgb.."."..TALENTS_Enh_desc_nodes_tw.ED_RendingBst_rgb end),
 
 	--[+ Stamina Boost +]--
 		-- create_template("talent_tree_oper_mod_009_en", {"loc_talent_stamina_low"}, {"en"}, function(locale, value) return "Stamina Boost" end),
 	create_template("talent_tree_oper_mod_009_desc_en", {"loc_talent_stamina_low_desc"}, {"en"}, function(locale, value) return "{stamina:%s} "..COLORS_KWords.Stamina_rgb.."."..TALENTS_Enh_desc_nodes.ED_StaminaBst_rgb end), -- stamina: +1 -- Veteran, Zealot
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_009_desc_fr", {"loc_talent_stamina_low_desc"}, {"fr"}, function(locale, value) return "{stamina:%s} "..COLORS_KWords_fr.Stamina_rgb_fr.."."..TALENTS_Enh_desc_nodes_fr.ED_StaminaBst_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_009_desc_tw", {"loc_talent_stamina_low_desc"}, {"zh-tw"}, function(locale, value) return "{stamina:%s} "..COLORS_KWords_tw.Stamina_rgb.."."..TALENTS_Enh_desc_nodes_tw.ED_StaminaBst_rgb end),
 
 	--[+ Stamina Regeneration Boost +]--
 		-- create_template("talent_tree_oper_mod_012_en", {"loc_talent_stamina_regen_delay"}, {"en"}, function(locale, value) return "Stamina Regeneration Boost" end),
 	create_template("talent_tree_oper_mod_012_desc_en", {"loc_talent_stamina_regen_delay_desc"}, {"en"}, function(locale, value) return "{duration:%s} seconds "..COLORS_KWords.Stamina_rgb.." Regeneration Delay Reduction."..TALENTS_Enh_desc_nodes.ED_StamRegenBst_rgb end), -- duration: 0.25 -- Veteran
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_012_desc_fr", {"loc_talent_stamina_regen_delay_desc"}, {"fr"}, function(locale, value) return "{duration:%s} secondes de réduction du délai de régénération d'"..COLORS_KWords_fr.Stamina_rgb_fr.." ."..TALENTS_Enh_desc_nodes_fr.ED_StamRegenBst_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_012_desc_tw", {"loc_talent_stamina_regen_delay_desc"}, {"zh-tw"}, function(locale, value) return "{duration:%s} 秒 "..COLORS_KWords_tw.Stamina_rgb.."."..TALENTS_Enh_desc_nodes_tw.ED_StamRegenBst_rgb end),
 
 	--[+ Suppression Boost +]--
 		-- create_template("talent_tree_oper_mod_010_en", {"loc_talent_suppression_low"}, {"en"}, function(locale, value) return "Suppression Boost" end),
 	create_template("talent_tree_oper_mod_010_desc_en", {"loc_talent_suppression_low_desc"}, {"en"}, function(locale, value) return "{suppression:%s} Suppression Dealt to enemies."..TALENTS_Enh_desc_nodes.ED_SuppressionBst_rgb end), -- suppression: +25% -- Ogryn, Veteran, Zealot
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_010_desc_fr", {"loc_talent_suppression_low_desc"}, {"fr"}, function(locale, value) return "{suppression:%s} de suppression infligé."..TALENTS_Enh_desc_nodes_fr.ED_SuppressionBst_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_010_desc_tw", {"loc_talent_suppression_low_desc"}, {"zh-tw"}, function(locale, value) return "{suppression:%s} 壓制."..TALENTS_Enh_desc_nodes_tw.ED_SuppressionBst_rgb end),
 
 	--[+ Toughness Boost Low +]--
 		--create_template("talent_tree_oper_mod_000_l_en", {"loc_talent_toughness_boost_low"}, {"en"}, function(locale, value) return "Toughness Boost Low" end),
 	create_template("talent_tree_oper_mod_000_l_desc_en", {"loc_talent_toughness_boost_low_desc"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_rgb.."."..TALENTS_Enh_desc_nodes.ED_TghnsBst_L_rgb end), -- toughness: +15% -- Psyker, Ogryn, Veteran, Zealot
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_000_l_desc_fr", {"loc_talent_toughness_boost_low_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords_fr.Toughness_rgb_fr.."."..TALENTS_Enh_desc_nodes_fr.ED_TghnsBst_L_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_000_l_desc_tw", {"loc_talent_toughness_boost_low_desc"}, {"zh-tw"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords_tw.Toughness_rgb.."."..TALENTS_Enh_desc_nodes_tw.ED_TghnsBst_L_rgb end),
 
 	--[+ Toughness Boost Medium +]--
 		--create_template("talent_tree_oper_mod_000_m_en", {"loc_talent_toughness_boost_medium"}, {"en"}, function(locale, value) return "Toughness Boost Medium" end),
 	create_template("talent_tree_oper_mod_000_m_desc_en", {"loc_talent_toughness_boost_medium_desc"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_rgb.."."..TALENTS_Enh_desc_nodes.ED_TghnsBst_M_rgb end), -- toughness:+25% -- Ogryn, Veteran
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_000_m_desc_fr", {"loc_talent_toughness_boost_medium_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords_fr.Toughness_rgb_fr.."."..TALENTS_Enh_desc_nodes_fr.ED_TghnsBst_M_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_000_m_desc_tw", {"loc_talent_toughness_boost_medium_desc"}, {"zh-tw"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords_tw.Toughness_rgb.."."..TALENTS_Enh_desc_nodes_tw.ED_TghnsBst_M_rgb end),
 
 	--[+ Toughness Damage Reduction Low +]--
 		--create_template("talent_tree_oper_mod_002_l_en", {"loc_talent_toughness_damage_reduction_low"}, {"en"}, function(locale, value) return "Toughness Damage Reduction Low" end),
 	create_template("talent_tree_oper_mod_002_l_desc_en", {"loc_talent_toughness_damage_reduction_low_desc"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_dmg_red_rgb.."."..TALENTS_Enh_desc_nodes.ED_TghnsDmgRed_LM_rgb end), -- toughness:+5% -- Psyker, Veteran, Zealot
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_002_l_desc_fr", {"loc_talent_toughness_damage_reduction_low_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.."."..TALENTS_Enh_desc_nodes_fr.ED_TghnsDmgRed_LM_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_002_l_desc_tw", {"loc_talent_toughness_damage_reduction_low_desc"}, {"zh-tw"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords_tw.Toughness_dmg_red_rgb.."."..TALENTS_Enh_desc_nodes_tw.ED_TghnsDmgRed_LM_rgb end),
 
 	--[+ Toughness Damage Reduction Medium +]--
 		--create_template("talent_tree_oper_mod_002_m_en",{"loc_talent_toughness_damage_reduction_medium"}, {"en"}, function(locale, value) return "Toughness Damage Reduction Medium" end),
 	create_template("talent_tree_oper_mod_002_m_desc_en",{"loc_talent_toughness_damage_reduction_medium_desc"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_dmg_red_rgb.."."..TALENTS_Enh_desc_nodes.ED_TghnsDmgRed_LM_rgb end), -- toughness:+10% -- Ogryn, Veteran
 			--[+ French +]--
 	create_template("talent_tree_oper_mod_002_m_desc_fr",{"loc_talent_toughness_damage_reduction_medium_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.."."..TALENTS_Enh_desc_nodes_fr.ED_TghnsDmgRed_LM_rgb_fr end),
+			--[+ Traditional Chinese +]--
+	create_template("talent_tree_oper_mod_002_m_desc_tw",{"loc_talent_toughness_damage_reduction_medium_desc"}, {"zh-tw"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords_tw.Toughness_dmg_red_rgb.."."..TALENTS_Enh_desc_nodes_tw.ED_TghnsDmgRed_LM_rgb end),
 
 --[+ ++PSYKER++ +]--
 --[+ +BLITZ+ +]--
@@ -208,66 +238,88 @@ local localization_templates = {
 	create_template("talent_tree_psy_blitz0_000_desc_en", {"loc_ability_psyker_smite_description_new"}, {"en"}, function(locale, value) return "Charge up your Psychic Power and release it to deal high "..COLORS_KWords.Damage_rgb.." to a Single Enemy. Effective against Flak and Carapace Armoured Enemies."..TALENTS_Enh_desc.ED_PSY_Blitz_0_rgb end), -- & -> and -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_blitz0_000_desc_fr", {"loc_ability_psyker_smite_description_new"}, {"fr"}, function(locale, value) return "Chargez votre pouvoir Psychique et relachez-le pour infliger de gros "..COLORS_KWords_fr.Damage_rgb_fr.." à un ennemi unique. Efficace contre les ennemies en armure Légère et Carapace."..TALENTS_Enh_desc_fr.ED_PSY_Blitz_0_rgb_fr end),
-
+			--[+ Traditional Chinese - 顱腦爆裂 +]--
+	create_template("talent_tree_psy_blitz0_000_desc_tw", {"loc_ability_psyker_smite_description_new"}, {"zh-tw"}, function(locale, value) return "積蓄靈能力量，釋放時可對單個敵人造成大量"..COLORS_KWords_tw.Damage_rgb.."。對防彈、甲殼護甲敵人效果減弱。"..TALENTS_Enh_desc_tw.ED_PSY_Blitz_0_rgb end),
+	
 	--[+ Blitz 1 - Brain Rupture +]--
 		-- create_template("talent_tree_psy_blitz1_000_en", {"loc_talent_psyker_brain_burst_improved"}, {"en"}, function(locale, value) return "Brain Rupture" end),
 	create_template("talent_tree_psy_blitz1_000_desc_en", {"loc_talent_psyker_brain_burst_improved_description"}, {"en"}, function(locale, value) return "Charge up your Psychic Power and release it to deal immense "..COLORS_KWords.Damage_rgb.." to a Single Enemy. Effective against Flak and Carapace Armoured Enemies.\nThis is an augmented version of {talent_old:%s} dealing {damage:%s} "..COLORS_KWords.Damage_rgb.."."..TALENTS_Enh_desc.ED_PSY_Blitz_1_rgb end), -- talent_old: Brain Burst, damage: +50% -- & -> and -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_blitz1_000_desc_fr", {"loc_talent_psyker_brain_burst_improved_description"}, {"fr"}, function(locale, value) return "Chargez votre pouvoir Psychique et relachez-le pour infliger d'immense "..COLORS_KWords_fr.Damage_rgb_fr.." à un ennemi unique. Efficace contre les ennemies en armure Légère et Carapace.\nCeci est une version améliorée d'{talent_old:%s} infligeant {damage:%s} "..COLORS_KWords_fr.Damage_rgb_fr.."."..TALENTS_Enh_desc_fr.ED_PSY_Blitz_1_rgb_fr end),
+			--[+ Traditional Chinese - 顱腦崩裂 +]--
+	create_template("talent_tree_psy_blitz1_000_desc_tw", {"loc_talent_psyker_brain_burst_improved_description"}, {"zh-tw"}, function(locale, value) return "積蓄靈能力量，釋放時可對單個敵人造成巨大"..COLORS_KWords_tw.Damage_rgb.."。對防彈、甲殼護甲敵人效果減弱。\n這是{talent_old:%s}的增強版本，造成{damage:%s}"..COLORS_KWords_tw.Damage_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Blitz_1_rgb end),
 	
 	--[+ Blitz 1-1 - Kinetic Resonance +]--
 		-- create_template("talent_tree_psy_blitz1_001_en", {"loc_talent_psyker_ability_increase_brain_burst_speed"}, {"en"}, function(locale, value) return "Kinetic Resonance" end),
 	create_template("talent_tree_psy_blitz1_001_desc_en", {"loc_talent_psyker_ability_increase_brain_burst_speed_desc"}, {"en"}, function(locale, value) return "{smite_attack_speed:%s} faster charging of your {talent_name:%s} after using your "..COLORS_KWords.Combat_ability_rgb..", generating {warp_charge_cost:%s} less "..COLORS_KWords.Peril_rgb.." for {duration:%s} seconds."..TALENTS_Enh_desc.ED_PSY_Blitz_1_1_rgb end), -- talent_name: Brain Rupture, smite_attack_speed: +75%, warp_charge_cost: 50%, duration:10 -- s -> seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_blitz1_001_desc_fr", {"loc_talent_psyker_ability_increase_brain_burst_speed_desc"}, {"fr"}, function(locale, value) return "Lorsque vous utilisez votre "..COLORS_KWords_fr.Combat_ability_rgb_fr..", {talent_name:%s} charge {smite_attack_speed:%s} plus rapidement et génère {warp_charge_cost:%s} de "..COLORS_KWords_fr.Peril_rgb_fr.." en moins, pendant {duration:%s} secondes."..TALENTS_Enh_desc_fr.ED_PSY_Blitz_1_1_rgb_fr end),
+			--[+ Traditional Chinese - 動能共鳴+]--
+	create_template("talent_tree_psy_blitz1_001_desc_tw", {"loc_talent_psyker_ability_increase_brain_burst_speed_desc"}, {"zh-tw"}, function(locale, value) return "使用你的"..COLORS_KWords_tw.Combat_ability_rgb.." 後，{talent_name:%s}充能速度提升{smite_attack_speed:%s}，並在{duration:%s}秒內減少{warp_charge_cost:%s} "..COLORS_KWords_tw.Peril_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Blitz_1_1_rgb end),
 
 	--[+ Blitz 1-2 - Kinetic Flayer +]--
 		-- create_template("talent_tree_psy_blitz1_002_en", {"loc_talent_psyker_smite_on_hit"}, {"en"}, function(locale, value) return "Kinetic Flayer" end),
 	create_template("talent_tree_psy_blitz1_002_desc_en", {"loc_talent_psyker_smite_on_hit_special_elite_desc"}, {"en"}, function(locale, value) return "While below "..COLORS_Numbers.pc_97_rgb.." "..COLORS_KWords.Peril_rgb..", all Attacks against Speacials, Elites and Monstrosities, have {smite_chance:%s} chance to {talent_name:%s} the target on any of Psyker's damaging attacks. Cooldown {time:%s} seconds."..TALENTS_Enh_desc.ED_PSY_Blitz_1_2_rgb end), -- smite_chance: 10%, talent_name: Brain Rupture, time: 15 -- s -> seconds -- colors -- lil rewrite
 			--[+ French +]--
 	create_template("talent_tree_psy_blitz1_002_desc_fr", {"loc_talent_psyker_smite_on_hit_special_elite_desc"}, {"fr"}, function(locale, value) return "Tant que vous êtes en dessous de "..COLORS_Numbers.pc_97_rgb.." de "..COLORS_KWords_fr.Peril_rgb_fr..", Toute les attaques contre les spéciaux, les élites et les Monstruosités ont {smite_chance:%s} de chance d'appliquer {talent_name:%s} à la cible en cas de coup réussi. {time:%s} secondes de temps de recharge."..TALENTS_Enh_desc_fr.ED_PSY_Blitz_1_2_rgb_fr end),
+			--[+ Traditional Chinese - 動能釋放 +]--
+	create_template("talent_tree_psy_blitz1_002_desc_tw", {"loc_talent_psyker_smite_on_hit_special_elite_desc"}, {"zh-tw"}, function(locale, value) return "當你的"..COLORS_KWords_tw.Peril_rgb.." 低於"..COLORS_Numbers.pc_97_rgb.."時，對專家、精英和怪物的所有攻擊，有{smite_chance:%s}機率在任何對敵人造成傷害的攻擊中對目標施加{talent_name:%s}。冷卻時間{time:%s} 秒。"..TALENTS_Enh_desc_tw.ED_PSY_Blitz_1_2_rgb end),
 
 	--[+ Blitz 2 - Smite +]--
 		-- create_template("talent_tree_psy_blitz2_000_en", {"loc_ability_psyker_chain_lightning"}, {"en"}, function(locale, value) return "Smite" end),
 	create_template("talent_tree_psy_blitz2_000_desc_en", {"loc_ability_psyker_chain_lightning_description"}, {"en"}, function(locale, value) return "You unleash a torrent of chain Bio-Lightning that slowly jumps between enemies, dealing low "..COLORS_KWords.Electrcuting_rgb.." "..COLORS_KWords.Damage_rgb.." over time and very High "..COLORS_KWords.Stagger_rgb.." to them.\nSecondary charged attack deals more "..COLORS_KWords.Damage_rgb.." when released and also jumps faster from enemy to enemy."..TALENTS_Enh_desc.ED_PSY_Blitz_2_rgb end), -- total rewrite -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_blitz2_000_desc_fr", {"loc_ability_psyker_chain_lightning_description"}, {"fr"}, function(locale, value) return "Déchaînez un torrent de bio-foudre qui se propage lentement entre les ennemis, infligeant de faible "..COLORS_KWords_fr.Damage_rgb_fr.." et "..COLORS_KWords_fr.Electrcuting_rgb_fr.."  sur la durée avec un fort "..COLORS_KWords_fr.Stagger_rgb_fr..".\nL'attaque chargée secondaire inflige plus de "..COLORS_KWords_fr.Damage_rgb_fr.." et le taux de dispersion."..TALENTS_Enh_desc_fr.ED_PSY_Blitz_2_rgb_fr end),
+			--[+ Traditional Chinese - 懲戒 +]--
+	create_template("talent_tree_psy_blitz2_000_desc_tw", {"loc_ability_psyker_chain_lightning_description"}, {"zh-tw"}, function(locale, value) return "你釋放一股連鎖生物閃電，慢慢在敵人之間跳躍，對他們造成低"..COLORS_KWords_tw.Damage_rgb.."和高"..COLORS_KWords_tw.Stagger_rgb.."。\n次要充能攻擊在釋放時造成更多"..COLORS_KWords_tw.Damage_rgb.."，並且從敵人到敵人跳躍更快。"..TALENTS_Enh_desc_tw.ED_PSY_Blitz_2_rgb end),
 
 	--[+ Blitz 2-1 - Lightning Storm +]--
 		-- create_template("talent_tree_psy_blitz2_001_en",{"loc_talent_psyker_increased_chain_lightning_size"}, {"en"}, function(locale, value) return "Lightning Storm" end),
 	create_template("talent_tree_psy_blitz2_001_desc_en", {"loc_talent_psyker_increased_chain_lightning_size_description"}, {"en"}, function(locale, value) return "Increases the number of jumps of your {talent_name:%s} from "..COLORS_Numbers.n_1_rgb.." to "..COLORS_Numbers.n_2_rgb.."."..TALENTS_Enh_desc.ED_PSY_Blitz_2_1_rgb end), -- talent_name: Smite, max_jumps: +1 -- rewrite "by {max_jumps:%s}"
 			--[+ French +]--
 	create_template("talent_tree_psy_blitz2_001_desc_fr", {"loc_talent_psyker_increased_chain_lightning_size_description"}, {"fr"}, function(locale, value) return "Augmente le nombre de sauts de votre {talent_name:%s} de "..COLORS_Numbers.n_1_rgb.." à "..COLORS_Numbers.n_2_rgb.."."..TALENTS_Enh_desc_fr.ED_PSY_Blitz_2_1_rgb_fr end),
+			--[+ Traditional Chinese - 雷電風暴 +]--
+	create_template("talent_tree_psy_blitz2_001_desc_tw", {"loc_talent_psyker_increased_chain_lightning_size_description"}, {"zh-tw"}, function(locale, value) return "將你的{talent_name:%s}的跳躍次數從"..COLORS_Numbers.n_1_rgb.."增加到"..COLORS_Numbers.n_2_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Blitz_2_1_rgb end),
 
 	--[+ Blitz 2-2 - Enfeeble +]--
 		-- create_template("talent_tree_psy_blitz2_002_en", {"loc_talent_psyker_increased_chain_lightning_improved_target_buff"}, {"en"}, function(locale, value) return "Enfeeble" end),
 	create_template("talent_tree_psy_blitz2_002_desc_en", {"loc_talent_psyker_chain_lightning_improved_target_buff_alt_description"}, {"en"}, function(locale, value) return "{damage:%s} increased Base "..COLORS_KWords.Damage_rgb.." from all sources is taken by enemies affected by the "..COLORS_KWords.Electrocute_rgb.." effect of your {talent_name:%s}."..TALENTS_Enh_desc.ED_PSY_Blitz_2_2_rgb end), -- talent_name: Smite, damage: +10% -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_blitz2_002_desc_fr", {"loc_talent_psyker_chain_lightning_improved_target_buff_alt_description"}, {"fr"}, function(locale, value) return "Les ennemis qui sont "..COLORS_KWords_fr.Electrocuted_rgb_fr.." subissent {damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." supplémentaires de toutes les sources."..TALENTS_Enh_desc_fr.ED_PSY_Blitz_2_2_rgb_fr end),
+			--[+ Traditional Chinese - 衰弱詛咒 +]--
+	create_template("talent_tree_psy_blitz2_002_desc_tw", {"loc_talent_psyker_chain_lightning_improved_target_buff_alt_description"}, {"zh-tw"}, function(locale, value) return "受到你的{talent_name:%s}的"..COLORS_KWords_tw.Electrocute_rgb.."效果影響的敵人，將受到所有來源的{damage:%s}增加的基礎"..COLORS_KWords_tw.Damage_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Blitz_2_2_rgb end),
 
 	--[+ Blitz 2-3 - Charged Strike +]--
 		-- create_template("talent_tree_psy_blitz2_003_en", {"loc_talent_psyker_chain_lightning_heavy_attacks"}, {"en"}, function(locale, value) return "Charged Strike" end),
 	create_template("talent_tree_psy_blitz2_002_desc_en", {"loc_talent_psyker_chain_lightning_damage_heavy_attacks_desc"}, {"en"}, function(locale, value) return "Your Heavy Melee Attacks "..COLORS_KWords.Electrocute_rgb.." enemies hit, damaging them."..TALENTS_Enh_desc.ED_PSY_Blitz_2_3_rgb end), -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_blitz2_002_desc_fr", {"loc_talent_psyker_chain_lightning_damage_heavy_attacks_desc"}, {"fr"}, function(locale, value) return "Vos attaques puissantes de mélées "..COLORS_KWords_fr.Electrocutes_rgb_fr.." les ennemis, ce qui leur inflige des "..COLORS_KWords_fr.Damage_rgb_fr.." ."..TALENTS_Enh_desc_fr.ED_PSY_Blitz_2_3_rgb_fr end),
+			--[+ Traditional Chinese - 蓄力打擊 +]--
+	create_template("talent_tree_psy_blitz2_002_desc_tw", {"loc_talent_psyker_chain_lightning_damage_heavy_attacks_desc"}, {"zh-tw"}, function(locale, value) return "你的重型近戰攻擊會對敵人造成"..COLORS_KWords_tw.Electrocute_rgb.."，並對其造成傷害。"..TALENTS_Enh_desc_tw.ED_PSY_Blitz_2_3_rgb end),
 
 	--[+ Blitz 3 - Assail +]--
 		-- create_template("talent_tree_psy_blitz3_000_en", {"loc_ability_psyker_blitz_throwing_knives"}, {"en"}, function(locale, value) return "Assail" end),
 	create_template("talent_tree_psy_blitz3_000_desc_en", {"loc_ability_psyker_blitz_throwing_knives_description"}, {"en"}, function(locale, value) return "You throw swift, homing projectiles formed of psychic energy that follows the player's crosshair for "..COLORS_Numbers.n_2_5_rgb.." seconds to the nearest Enemy. Deals "..COLORS_Numbers.n_200_rgb.." Base "..COLORS_KWords.Damage_rgb.." to the first target and cost "..COLORS_Numbers.pc_10_rgb.." "..COLORS_KWords.Peril_rgb..".\nSecondary attack throws a homing projectile that flies for "..COLORS_Numbers.n_3_rgb.." seconds and hitting enemies within a "..COLORS_Numbers.n_50_rgb.." meter radius with a guaranteed hit. Deals "..COLORS_Numbers.n_340_rgb.." Base "..COLORS_KWords.Damage_rgb.." and cost "..COLORS_Numbers.pc_25_rgb.." "..COLORS_KWords.Peril_rgb.."."..TALENTS_Enh_desc.ED_PSY_Blitz_3_rgb end), -- total rewrite -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_blitz3_000_desc_fr", {"loc_ability_psyker_blitz_throwing_knives_description"}, {"fr"}, function(locale, value) return "Vous lancez des projectiles rapides et autoguidés formés d'énergie psychique qui suivent le réticule du joueur pendant "..COLORS_Numbers.n_2_5_rgb.." secondes jusqu'à l'ennemi le plus proche. Inflige "..COLORS_Numbers.n_200_rgb.." de "..COLORS_KWords_fr.Damage_rgb_fr.." à la première cible et coûte "..COLORS_Numbers.pc_10_rgb.." de "..COLORS_KWords_fr.Peril_rgb_fr..".\nL'attaque secondaire lance un projectile autoguidé qui vole pendant "..COLORS_Numbers.n_3_rgb.." secondes et touche les ennemis dans un rayon de "..COLORS_Numbers.n_50_rgb.." mètres avec une touche garantie. Inflige "..COLORS_Numbers.n_340_rgb.." de "..COLORS_KWords_fr.Damage_rgb_fr.." et coûte "..COLORS_Numbers.pc_25_rgb.." de "..COLORS_KWords_fr.Peril_rgb_fr.."."..TALENTS_Enh_desc_fr.ED_PSY_Blitz_3_rgb_fr end),
+			--[+ Traditional Chinese - 靈能攻擊 +]--
+	create_template("talent_tree_psy_blitz3_000_desc_tw", {"loc_ability_psyker_blitz_throwing_knives_description"}, {"zh-tw"}, function(locale, value) return "你投擲由靈能形成的迅速、自導導彈，跟隨玩家的準星對最近的敵人造成"..COLORS_Numbers.n_200_rgb.."基礎"..COLORS_KWords_tw.Damage_rgb.."，並消耗"..COLORS_Numbers.pc_10_rgb.."的"..COLORS_KWords_tw.Peril_rgb.."。\n次要攻擊投擲一枚自導導彈，飛行"..COLORS_Numbers.n_3_rgb.."秒，並在"..COLORS_Numbers.n_50_rgb.."米範圍內擊中敵人，確保命中。造成"..COLORS_Numbers.n_340_rgb.."基礎"..COLORS_KWords_tw.Damage_rgb.."，並消耗"..COLORS_Numbers.pc_25_rgb.."的"..COLORS_KWords_tw.Peril_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Blitz_3_rgb end),
 
 	--[+ Blitz 3-1 - Ethereal Shards +]--
 		-- create_template("talent_tree_psy_blitz3_001_en", {"loc_talent_psyker_throwing_knives_pierce"}, {"en"}, function(locale, value) return "Ethereal Shards" end),
 	create_template("talent_tree_psy_blitz3_001_desc_en", {"loc_talent_psyker_throwing_knives_pierce_description"}, {"en"}, function(locale, value) return "Projectiles from {talent_name:%s} now pierce additional targets, up from "..COLORS_Numbers.n_2_rgb.." to "..COLORS_Numbers.n_3_rgb.."."..TALENTS_Enh_desc.ED_PSY_Blitz_3_1_rgb end), -- talent_name: Assail -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_blitz3_001_desc_fr", {"loc_talent_psyker_throwing_knives_pierce_description"}, {"fr"}, function(locale, value) return "Les projectiles d'{talent_name:%s} percent désormais des cibles supplémentaires, passant de "..COLORS_Numbers.n_2_rgb.." à "..COLORS_Numbers.n_3_rgb.."."..TALENTS_Enh_desc_fr.ED_PSY_Blitz_3_1_rgb_fr end),
+			--[+ Traditional Chinese - 靈能碎片 +]--
+	create_template("talent_tree_psy_blitz3_001_desc_tw", {"loc_talent_psyker_throwing_knives_pierce_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}的射擊現在可以穿透更多目標，從"..COLORS_Numbers.n_2_rgb.."增加到"..COLORS_Numbers.n_3_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Blitz_3_1_rgb end),
 
 	--[+ Blitz 3-2 - Quick Shards +]--
 		-- create_template("talent_tree_psy_blitz3_002_en", {"loc_talent_psyker_throwing_knives_reduced_cooldown"}, {"en"}, function(locale, value) return "Quick Shards" end),
 	create_template("talent_tree_psy_blitz3_002_desc_en", {"loc_talent_psyker_throwing_knives_cast_speed_description"}, {"en"}, function(locale, value) return "{talent_name:%s} charges Replenish {recharge:%s} faster."..TALENTS_Enh_desc.ED_PSY_Blitz_3_2_rgb end), -- talent_name: Assail, recharge: 30%
 			--[+ French +]--
 	create_template("talent_tree_psy_blitz3_002_desc_fr", {"loc_talent_psyker_throwing_knives_cast_speed_description"}, {"fr"}, function(locale, value) return "Les charges d'{talent_name:%s} se régénerent {recharge:%s} plus rapidement."..TALENTS_Enh_desc_fr.ED_PSY_Blitz_3_2_rgb_fr end),
+			--[+ Traditional Chinese - 迅捷碎片 +]--
+	create_template("talent_tree_psy_blitz3_002_desc_tw", {"loc_talent_psyker_throwing_knives_cast_speed_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}的充能速度提高{recharge:%s}。"..TALENTS_Enh_desc_tw.ED_PSY_Blitz_3_2_rgb end),
 
 --[+ +AURA+ +]--
 	--[+ Aura 0 - The Quickening +]--
