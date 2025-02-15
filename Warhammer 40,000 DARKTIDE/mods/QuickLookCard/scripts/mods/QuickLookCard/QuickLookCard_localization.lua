@@ -228,7 +228,7 @@ return {
 		["zh-cn"] = "娴熟", -- 武器娴熟
 		ja = "策謀", -- 策謀
 		ru = "ТОЧН", -- Точность
-		["zh-tw"] = "熟練",
+		["zh-tw"] = "技巧",
 	},
 	stat_loc_stats_display_first_saw_damage = {
 		en = "SRD", -- Shredder
@@ -468,7 +468,7 @@ return {
 		["zh-cn"] = "体力", -- 体力
 		ja = "活力", -- スタミナ
 		ru = "ВНСЛ", -- Выносливость
-		["zh-tw"] = "體力",
+		["zh-tw"] = "耐力",
 	},
 	trait_gadget_stamina_regeneration = {
 		en = "STRG", -- Stamina Regeneration
@@ -517,7 +517,7 @@ return {
 		["zh-cn"] = "体力", -- 最大体力
 		ja = "活力", -- 最大スタミナ
 		ru = "ВНСЛ", -- Выносливость
-		["zh-tw"] = "體力", -- 最大體力
+		["zh-tw"] = "耐力", -- 最大體力
 	},
 	trait_gadget_innate_health_increase = {
 		en = "HP", -- Max Health
