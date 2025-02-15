@@ -21,7 +21,7 @@ local can_be_refr_dur_active_dur = "- 可在效果持續期間內重新觸發。
 local doesnt_stack_aura_psy = "- 不會與另一位靈能者的相同光環效果疊加。"
 local doesnt_interact_w_c_a_r_from_curio = "- 不會與只降低戰鬥技能最大冷卻時間的珍品所提供的戰鬥技能回復產生互動。"
 local dmg_is_incr_by = "- 傷害會受到撕裂/脆弱、「碎顱者」祝福（針對被踉蹌的敵人）以及「靈能強化」、「至天高之力」、「亞空間震波」、「擾動命運」、「惡意攻勢」、「完美時機」、「占卜者的注視」（含「預知未來」）、「亞空間騎士」、光環「動能釋放」（對精英單位）和小型遠程傷害節點的增益所提升。"
-local procs_on_succss_dodging = "- 在成功閃避敵方近戰或遠程攻擊（不含 槍手、收割者、狙擊手），以及壓制型攻擊（瘟疫獵犬跳撲、陷阱兵網子、變種人擄抓）時觸發。"
+local procs_on_succss_dodging = "- 在成功閃避敵方近戰或遠程攻擊（不含砲手、收割者、狙擊手），以及壓制型攻擊（瘟疫獵犬跳撲、陷阱兵網子、變種人擄抓）時觸發。"
 local red_both_tghns_n_health_dmg = "- 同時減少所受到的韌性與生命值傷害。"
 local stacks_add_w_oth_dmg = "- 與其他傷害增益做加法疊加，並與武器祝福提供的力量等級加成做乘法疊加。"
 local stacks_mult_w_other_dmg_red_buffs = "- 與其他傷害減免增益做乘法疊加。"
@@ -363,7 +363,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 無法阻擋瘟疫爆者的爆炸。",
 		"- 護盾生命機制：",
 		"-- 每次受到遠程攻擊計算為 1 點傷害。受到傷害後的 0.33 秒內不會再受到傷害。",
-		"--- 例如，當護盾放置在一名血痂槍手前方，護盾將在槍手的第二輪掃射期間消失，因為它累計承受了 20 次有效攻擊。",
+		"--- 例如，當護盾放置在一名血痂砲手前方，護盾將在砲手的第二輪掃射期間消失，因為它累計承受了 20 次有效攻擊。",
 		ppp___ppp,
 		"- Shield Health: 20.",
 		"- Dimensions: 6 meters wide, 3.5 meters high.",
@@ -627,7 +627,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Keystone_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 對標記的敵人造成傷害會刷新天賦的持續時間。",
-		"- 有效目標包括：渣滓/血痂暴徒、渣滓/血痂潛行者、渣滓射手、狂怒者、槍手、霰彈槍手和重錘兵。",
+		"- 有效目標包括：渣滓/血痂暴徒、渣滓/血痂潛行者、渣滓射手、狂怒者、砲手、霰彈槍手和重錘兵。",
 		"- 與「堅毅」、「亞空間騎士」、移動速度節點和武器祝福如「提速」的移動速度增益相加疊加。",
 		"- 精確加成與其他相關的傷害增益做加法疊加。",
 		"- 可以在持續時間內通過擊殺或成功踉蹌標記的敵人，或通過靈魂之火、燃燒和流血對標記目標造成的傷害來刷新。",
@@ -909,7 +909,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Passive 17 - By Crack of Bone +]--
 	local ED_PSY_Passive_17_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 移除反噬時，順劈攻擊每次揮擊可多次觸發。與「戰鬥冥想」和「戰鬥冥想」同時觸發。",
+		"- 移除反噬時，順劈攻擊每次揮擊可多次觸發。與「戰鬥冥想」和「盜竊天命」同時觸發。",
 		"- 與「平心靜氣」、「亞空間意志」、「動能撕裂者」、「現實錨點」、小型反噬抗性節點和戰鬥興奮劑的反噬值消耗減少效果做乘法疊加。",
 		ppp___ppp,
 		"- Removing Peril can proc multiple times per swing when Cleaving. Procs additionally to \"Battle Meditation\" and \"Purloin Providence\".",

@@ -13,12 +13,12 @@ local InputUtils = require("scripts/managers/input/input_utils")
 local iu_actit = InputUtils.apply_color_to_input_text
 
 local ppp___ppp = "+++-------------------------------------------------+++"
-local stacks_add_w_health_buff_cur = "- 與珍品的生命力增益堆疊。"
-local stacks_add_w_sm_mel_dmg_nodes = "- 會與其他小型近戰傷害節點以及其他相關傷害增益效果相加堆疊。"
-local stacks_mult_power_lvl_weap_bless = "- 會與武器祝福所提供的力量等級加成做乘法堆疊。"
+local stacks_add_w_health_buff_cur = "- 與珍品的生命力增益疊加。"
+local stacks_add_w_sm_mel_dmg_nodes = "- 會與其他小型近戰傷害節點以及其他相關傷害增益效果相加疊加。"
+local stacks_mult_power_lvl_weap_bless = "- 會與武器祝福所提供的力量等級加成做乘法疊加。"
 local also_appl_2_health_wl_downed = "- 倒地時也會套用在生命值上。"
-local stacks_add_w_sm_tghnss_nodes = "- 會與其他小型韌性節點相加堆疊。"
-local cur_max_tghnss_mult_by_tghnss_pc = "- 目前的最大韌性會受到珍品提供的韌性百分比加成做乘法堆疊。"
+local stacks_add_w_sm_tghnss_nodes = "- 會與其他小型韌性節點相加疊加。"
+local cur_max_tghnss_mult_by_tghnss_pc = "- 目前的最大韌性會受到珍品提供的韌性百分比加成做乘法疊加。"
 
 --[+ ++ENHANCED DESCRIPTIONS++ +]--
 local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
@@ -29,7 +29,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"",
 		ppp___ppp,
 		"- 適用於所有能夠爆擊的攻擊。",
-		"- 與其他爆擊機率的來源相加堆疊。",
+		"- 與其他爆擊機率的來源相加疊加。",
 		ppp___ppp,
 		"- Works for all attacks that can Crit.",
 		"- Stacks additively with other sources of Crit Chance.",
@@ -43,9 +43,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		stacks_add_w_health_buff_cur,
 		"-- 歐格林 +21% 生命值的珍品，加上一個 +5% 生命值的天賦，再加上這個 5% 的生命值節點，奧格林的最大生命值 300 會由 300x(0.21+0.05+0.05)=93 提升至 393。",
 		"-- 老兵：舉例來說，若有一件 +21% 生命值的珍品，加上一個 +5% 生命值的天賦，再加上這個 5% 的生命值節點，老兵的最大生命值 150 會由 150x(0.21+0.05+0.05)=46.5 提升至 196.5（在介面上會四捨五入為 197）。",
-		ppp___ppp,
-		"-- OGRYN: For example, one +21% Health Curio with a +5% Health Perk and this 5% Health node increase Ogryn's Max Health of 300 by 300x(0.21+0.05+0.05)=93 to 393 Health.",
-		"-- VETERAN: For example, one +21% Health Curio with a +5% Health Perk and this 5% Health node increase Veteran's Max Health of 150 by 150x(0.21+0.05+0.05)=46.5 to 196.5 Health (HUD rounds up: 197).",
 	}, "\n"), enhdesc_col) -- Veteran,
 
 	--[+ Health Boost Medium +]--
@@ -54,13 +51,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		ppp___ppp,
 		also_appl_2_health_wl_downed,
 		stacks_add_w_health_buff_cur,
-		"-- 靈能者 +21% 生命值的珍品，加上一個 +5% 生命值的天賦，再加上這個 10% 的生命值節點，靈能者的最大生命值 150 會由 150x(0.21+0.05+0.1)=54 提升至 204。",
+		"-- 靈能者：舉例來說，若有一件 +21% 生命值的珍品，加上一個 +5% 生命值的天賦，再加上這個 10% 的生命值節點，靈能者的最大生命值 150 會由 150x(0.21+0.05+0.1)=54 提升至 204。",
 		"-- 歐格林：舉例來說，若有一件 +21% 生命值的珍品，加上一個 +5% 生命值的天賦，再加上這個 10% 的生命值節點，奧格林的最大生命值 300 會由 300x(0.21+0.05+0.1)=108 提升至 408。",
 		"-- 狂信徒：舉例來說，若有一件 +21% 生命值的珍品，加上一個 +5% 生命值的天賦，再加上這個 10% 的生命值節點，狂信徒的最大生命值 200 會由 200x(0.21+0.05+0.1)=72 提升至 272。",
-		ppp___ppp,
-		"-- PSYKER: For example, one +21% Health Curio with a +5% Health Perk and this 10% Health node increase Psyker's Max Health of 150 by 150x(0.21+0.05+0.1)=54 to 204 Health.",
-		"-- OGRYN: For example, one +21% Health Curio with a +5% Health Perk and this 10% Health node increase Ogryn's Max Health of 300 by 300x(0.21+0.05+0.1)=108 to 408 Health.",
-		"-- ZEALOT: For example, one +21% Health Curio with a +5% Health Perk and this 10% Health node increase Zealot's Max Health of 200 by 200x(0.21+0.05+0.1)=72 to 272 Health.",
 	}, "\n"), enhdesc_col) -- Psyker, Ogryn, Zealot
 
 	--[+ Heavy Melee Damage Boost Low + Medium +]--
@@ -69,14 +62,13 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		ppp___ppp,
 		stacks_add_w_sm_mel_dmg_nodes,
 		stacks_mult_power_lvl_weap_bless,
-		"- This also applies to melee special actions of Ripper Guns, Grenadier Gauntlet (melee part), Rumbler, Heavy Stubbers, and Kickback.",
 	}, "\n"), enhdesc_col) -- Ogryn
 
 	--[+ Inspiring Presence +]--
 	local ED_InspiringP_rgb = iu_actit(table.concat({
 		"",
 		ppp___ppp,
-		"- 與歐格林的光環「跟緊我!」以及珍品提供的韌性回復速度相加堆疊。",
+		"- 與歐格林的光環「跟緊我!」以及珍品提供的韌性回復速度相加疊加。",
 		"- 提升同伴每秒基礎的相互關係韌性回復（CTR）量：",
 		"_______________________________",
 		"同伴數: | CTR:                 | 5 秒後：",
@@ -111,10 +103,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	local ED_MoveSpdBst_rgb = iu_actit(table.concat({
 		"",
 		ppp___ppp,
-		"- 靈能者：與「擾亂命運」、「堅毅」、「亞空間分裂」，以及像「提速」這類武器祝福提供的移動速度增益相加堆疊。",
-		"- 狂信徒：與其他小型移動速度節點，以及來自「隱密領域」、「勃然大怒」和「提速」等武器祝福提供的移動速度增益相加堆疊。",
-		"-- 與「堅定迅捷」提供的衝刺速度增益做乘法堆疊。",
-		"- 老兵：與「滲透」、「不拋棄不放棄」、光環「抵近殺敵」，以及類似「提速」這種武器祝福提供的移動速度增益相加堆疊。",
+		"- 靈能者：與「擾亂命運」、「堅毅」、「亞空間分裂」，以及像「提速」這類武器祝福提供的移動速度增益相加疊加。",
+		"- 狂信徒：與其他小型移動速度節點，以及來自「隱密領域」、「勃然大怒」和「提速」等武器祝福提供的移動速度增益相加疊加。",
+		"-- 與「堅定迅捷」提供的衝刺速度增益做乘法疊加。",
+		"- 老兵：與「滲透」、「不拋棄不放棄」、光環「抵近殺敵」，以及類似「提速」這種武器祝福提供的移動速度增益相加疊加。",
 		ppp___ppp,
 		"- PSYKER: Stacks additively with related buffs from: \"Disrupt Destiny\", \"Mettle\", \"Warp Speed\" and weapon Blessings like \"Rev it Up\".",
 		"- ZEALOT: Stacks additively with other small Movement Speed nodes and Movement Speed buffs from \"Shroudfield\", \"Thy Wrath be Swift\", and Weapon Blessings like \"Rev it Up\".",
@@ -126,7 +118,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	local ED_PerilRes_rgb = iu_actit(table.concat({
 		"",
 		ppp___ppp,
-		"- 與其他小型節點，以及來自「骨折後遺症」、「刺耳尖嘯」、「亞空間意志」、「平心靜氣」、「動能共鳴」、「占卜者的注視」以及戰鬥興奮劑（Combat Stimm）等危險值消耗減少增益做乘法堆疊。",
+		"- 與其他小型節點，以及來自「骨折後遺症」、「刺耳尖嘯」、「亞空間意志」、「平心靜氣」、「動能共鳴」、「占卜者的注視」以及戰鬥興奮劑（Combat Stimm）等危險值消耗減少增益做乘法疊加。",
 		ppp___ppp,
 		"- Stacks multiplicatively with other small nodes and related Peril cost reduction buffs from \"By Crack of Bone\", \"Becalming Eruption\", \"Empyric Resolve\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\", and Combat Stimm.",
 	}, "\n"), enhdesc_col) -- Psyker,
@@ -135,7 +127,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	local ED_RangDmgBst_rgb = iu_actit(table.concat({
 		"",
 		ppp___ppp,
-		"- 與其他小型遠程傷害節點以及其他相關傷害增益相加堆疊。",
+		"- 與其他小型遠程傷害節點以及其他相關傷害增益相加疊加。",
 		ppp___ppp,
 		"- Stacks additively with other small Ranged Damage nodes and other related Damage buffs.",
 		stacks_mult_power_lvl_weap_bless,
@@ -145,8 +137,8 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	local ED_ReloadBst_rgb = iu_actit(table.concat({
 		"",
 		ppp___ppp,
-		"- 歐格林：與「領跑者」、「貼身火力」、武器天賦與祝福，以及敏捷興奮劑提供的裝填速度增益相加堆疊。",
-		"- 老兵：與「集火」、「遠程刺客」、「戰術裝填」、「齊射能手」、武器天賦與祝福，以及敏捷興奮劑提供的裝填速度增益相加堆疊。",
+		"- 歐格林：與「領跑者」、「貼身火力」、武器天賦與祝福，以及敏捷興奮劑提供的裝填速度增益相加疊加。",
+		"- 老兵：與「集火」、「遠程刺客」、「戰術裝填」、「齊射能手」、武器天賦與祝福，以及敏捷興奮劑提供的裝填速度增益相加疊加。",
 		"-- 此效果也會提升戰鬥霰彈槍的特殊裝填動作速度。",
 		ppp___ppp,
 		"- OGRYN: Stacks additively with Reload speed buffs from \"Pacemaker\", \"Point-Blank Barrage\", Weapon Perks and Blessings, and Celerity Stimm.",
@@ -160,7 +152,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		ppp___ppp,
 		"- 適用於所有攻擊，提升對裝甲類型（甲殼、防彈、狂熱、不屈）的傷害，包括爆炸傷害與流血、燃燒等持續傷害效果（由歐格林施加）。",
 		"- 只影響歐格林自身的傷害。",
-		"- 與其他撕裂增益相加堆疊，並與施加在敵人身上的脆弱（Brittleness）減益效果相加堆疊。",
+		"- 與其他撕裂增益相加疊加，並與施加在敵人身上的脆弱（Brittleness）減益效果相加疊加。",
 		ppp___ppp,
 		"- Applies to all Attacks boosting Damage against armor types: Carapace, Flak, Maniac, Unyielding (including Damage of explosions and DoTs like Bleed and Burn applied by Ogryn).",
 		"- Only affects Ogryn's own Damage.",
@@ -171,7 +163,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	local ED_StaminaBst_rgb = iu_actit(table.concat({
 		"",
 		ppp___ppp,
-		"- 與珍品、武器天賦以及武器耐力模板提供的耐力值相加堆疊。",
+		"- 與珍品、武器天賦以及武器耐力模板提供的耐力值相加疊加。",
 		"- 玩家介面中的耐力條每一格代表 1 點耐力。",
 		ppp___ppp,
 		"- Stacks additively with Stamina values from Curios, Weapon Perks and Weapon Stamina templates.",
@@ -182,9 +174,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	local ED_SuppressionBst_rgb = iu_actit(table.concat({
 		"",
 		ppp___ppp,
-		"- 歐格林：與武器祝福「連續發射」提供的壓制增益相加堆疊。",
-		"- 狂信徒：與武器祝福「火藥灼傷」提供的壓制增益相加堆疊。",
-		"- 老兵：與「求勝心」、「讓他們全趴下!」，以及武器祝福「火藥灼傷」提供的壓制增益相加堆疊。",	
+		"- 歐格林：與武器祝福「連續發射」提供的壓制增益相加疊加。",
+		"- 狂信徒：與武器祝福「火藥灼傷」提供的壓制增益相加疊加。",
+		"- 老兵：與「求勝心」、「讓他們全趴下!」，以及武器祝福「火藥灼傷」提供的壓制增益相加疊加。",	
 		ppp___ppp,
 		"- OGRYN: Stacks additively with Suppression buff from Weapon Blessing \"Ceaseless Barrage\".",
 		"- ZEALOT: Stacks additively with Suppression buff from Weapon Blessing \"Powderburn\".",
@@ -197,7 +189,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		ppp___ppp,
 		"- 將基礎耐力回復延遲從 1 秒縮短至 0.75 秒。",
 		"- 此時間為消耗耐力後開始回復耐力的延遲時間。",
-		"- 與其他小型耐力回復延遲減少節點相加堆疊。",
+		"- 與其他小型耐力回復延遲減少節點相加疊加。",
 		ppp___ppp,
 		"- Reduces base Stamina Regeneration Delay from 1 to 0.75 seconds.",
 		"- This time is the Delay before Stamina starts Regenerating after having spent Stamina.",
@@ -238,9 +230,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	local ED_TghnsDmgRed_LM_rgb = iu_actit(table.concat({
 		"",
 		ppp___ppp,
-		"- 與其他小型韌性傷害減少節點相加堆疊。",
-		"- 這些加總後的減傷效果與其他傷害減少增益做乘法堆疊。",
-		"-- 狂信徒：與「不滅意志」相加堆疊。",
+		"- 與其他小型韌性傷害減少節點相加疊加。",
+		"- 這些加總後的減傷效果與其他傷害減少增益做乘法疊加。",
+		"-- 狂信徒：與「不滅意志」相加疊加。",
 		ppp___ppp,
 		"- Stacks additively with other small Toughness Damage Reduction nodes.",
 		"- Their sum Stacks multiplicatively with other Damage Reduction buffs.",
