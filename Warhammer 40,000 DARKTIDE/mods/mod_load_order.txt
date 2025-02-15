@@ -5,6 +5,9 @@
 -- You do not need to include 'base' or 'dmf' mod folders.
 -- ################################################################
 -- 遊戲體驗改善
+scoreboard
+ovenproof_scoreboard_plugin
+AutoLoot
 Healthbars
 IME_Enable
 true_level
@@ -28,16 +31,12 @@ GasOutline
 AlternateGrenadeIcons
 LoadoutMonitor
 QuickLookCard
-AutoLoot
 markers_aio
 danger_zone
 NumericUI
 WhatTheLocalization
 Enhanced_descriptions
 EmperorsGuidance
-scoreboard
-ovenproof_scoreboard_plugin
-
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint

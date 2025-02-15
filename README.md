@@ -20,6 +20,27 @@
 ---
 # 遊戲體驗改善
 
+### [Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/22)
+    UI改善
+- MOD 網站最後更新日期：Last updated 06 February 2024 4:18PM
+- MOD 版本：2.18
+- MOD 檔案名稱：Scoreboard-22-2-18-1707236330
+- 手動維護最後下載日期：2025-02-11
+
+### [Ovenproof's Scoreboard Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/241)
+    記分板UI改善
+- MOD 網站最後更新日期：Last updated 22 February 2024 2:22AM
+- MOD 版本：1.4.2
+- MOD 檔案名稱：Scoreboard-22-2-18-1707236330
+- 手動維護最後下載日期：2025-02-11
+
+### [Auto Loot](https://www.nexusmods.com/warhammer40kdarktide/mods/375)
+    自動開啟箱子並撿取物品
+- MOD 網站最後更新日期：Last updated 11 October 2024 9:12AM
+- MOD 版本：1.0.2
+- MOD 檔案名稱：AutoLoot-375-1-0-2-1728634347
+- 手動維護最後下載日期：2025-02-10
+
 ### [Healthbars](https://www.nexusmods.com/warhammer40kdarktide/mods/16)
     UI改善
 - MOD 網站最後更新日期：Last updated 18 January 2025 6:07PM
@@ -181,13 +202,6 @@
 - MOD 檔案名稱：Loadout Monitor-160-1-5-02-1735979140
 - 手動維護最後下載日期：2025-02-10
 
-### [Auto Loot](https://www.nexusmods.com/warhammer40kdarktide/mods/375)
-    自動開啟箱子並撿取物品
-- MOD 網站最後更新日期：Last updated 11 October 2024 9:12AM
-- MOD 版本：1.0.2
-- MOD 檔案名稱：AutoLoot-375-1-0-2-1728634347
-- 手動維護最後下載日期：2025-02-10
-
 ### [Markers Improved All-in-One](https://www.nexusmods.com/warhammer40kdarktide/mods/447)
     標記一體化 整合包
 - MOD 網站最後更新日期：Last updated 03 January 2025 9:05AM
@@ -236,20 +250,6 @@
 - MOD 版本：1.2.1
 - MOD 檔案名稱：Emperor's Guidance 1.2.1-468-1-2-1-1739211976
 - 手動維護最後下載日期：2025-02-14
-
-### [Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/22)
-    UI改善
-- MOD 網站最後更新日期：Last updated 06 February 2024 4:18PM
-- MOD 版本：2.18
-- MOD 檔案名稱：Scoreboard-22-2-18-1707236330
-- 手動維護最後下載日期：2025-02-11
-
-### [Ovenproof's Scoreboard Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/241)
-    記分板UI改善
-- MOD 網站最後更新日期：Last updated 22 February 2024 2:22AM
-- MOD 版本：1.4.2
-- MOD 檔案名稱：Scoreboard-22-2-18-1707236330
-- 手動維護最後下載日期：2025-02-11
 
 ---
 # 遊戲內操作相關MOD
