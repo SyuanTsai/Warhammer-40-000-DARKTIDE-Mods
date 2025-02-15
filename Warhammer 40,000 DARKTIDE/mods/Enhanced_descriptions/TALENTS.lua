@@ -377,85 +377,111 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_psy_abil1_001_desc_fr", {"loc_talent_psyker_shout_reduces_warp_charge_generation_description"}, {"fr"}, function(locale, value) return "À présent, {talent_name:%s} réduit la génération de "..COLORS_KWords_fr.Peril_rgb_fr.." de {warp_generation:%s} pour chaque ennemi touché. Jusqu'à {max_stacks:%s}"..COLORS_Numbers.pc_rgb..". Dure {duration:%s} secondes."..TALENTS_Enh_desc_fr.ED_PSY_Ability_1_1_rgb_fr end),
 			--[+ Traditional Chinese - 鎮靜爆發 +]--
-	-- create_template("talent_tree_psy_abil1_001_desc_tw", {"loc_talent_psyker_shout_reduces_warp_charge_generation_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在會減少{warp_generation:%s}的"..COLORS_KWords_tw.Peril_rgb.."生成量，每擊中一個敵人。最多{max_stacks:%s}"..COLORS_Numbers_tw.pc_rgb.."。持續{duration:%s}秒。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_1_1_rgb end),
+	create_template("talent_tree_psy_abil1_001_desc_tw", {"loc_talent_psyker_shout_reduces_warp_charge_generation_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在會減少{warp_generation:%s}的"..COLORS_KWords_tw.Peril_rgb.."生成量，每擊中一個敵人。最多{max_stacks:%s}"..COLORS_Numbers.pc_rgb.."。持續{duration:%s}秒。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_1_1_rgb end),
 
 	--[+ Ability 1-2 - Warp Rupture +]--
 		-- create_template("talent_tree_psy_abil1_002_en", {"loc_talent_psyker_shout_damage_per_warp_charge"}, {"en"}, function(locale, value) return "Warp Rupture" end),
 	create_template("talent_tree_psy_abil1_002_desc_en", {"loc_talent_psyker_shout_damage_per_warp_charge_description"}, {"en"}, function(locale, value) return "Your {talent_name:%s} now also deals {base_damage:%s}-{max_damage:%s} "..COLORS_KWords.Damage_rgb..", based off of your current "..COLORS_KWords.Peril_rgb.." percentage."..TALENTS_Enh_desc.ED_PSY_Ability_1_2_rgb end), -- talent_name: Venting Shriek, base_damage: 100, max_damage: 200 -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_abil1_002_desc_fr", {"loc_talent_psyker_shout_damage_per_warp_charge_description"}, {"fr"}, function(locale, value) return "Votre {talent_name:%s} inflige également de {base_damage:%s} à {max_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr..", basé sur votre pourcentage de "..COLORS_KWords_fr.Peril_rgb_fr.." actuel."..TALENTS_Enh_desc_fr.ED_PSY_Ability_1_2_rgb_fr end),
+			--[+ Traditional Chinese - 亞空間爆發 +]--
+	create_template("talent_tree_psy_abil1_002_desc_tw", {"loc_talent_psyker_shout_damage_per_warp_charge_description"}, {"zh-tw"}, function(locale, value) return "你的{talent_name:%s}現在也會造成{base_damage:%s}-{max_damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."，取決於你目前的"..COLORS_KWords_tw.Peril_rgb.."百分比。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_1_2_rgb end),
 
 	--[+ Ability 1-3 - Warp Creeping Flames +]--
 		-- create_template("talent_tree_psy_abil1_003_en", {"loc_talent_psyker_warpfire_on_shout"}, {"en"}, function(locale, value) return "Creeping Flames" end),
 	create_template("talent_tree_psy_abil1_003_desc_en", {"loc_talent_psyker_warpfire_on_shout_desc"}, {"en"}, function(locale, value) return "{talent_name:%s} applies {min_stacks:%s}{warpfire_stacks:%s} Stacks of "..COLORS_KWords.Soulblaze_rgb.." to targets Hit based on your current "..COLORS_KWords.Peril_rgb.."."..TALENTS_Enh_desc.ED_PSY_Ability_1_3_rgb end), -- talent_name: Venting Shriek, min_stacks: 1, warpfire_stacks: -6 -- Stack(s)->Stacks -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_abil1_003_desc_fr", {"loc_talent_psyker_warpfire_on_shout_desc"}, {"fr"}, function(locale, value) return "{talent_name:%s} applique {min_stacks:%s}{warpfire_stacks:%s} cumuls d'"..COLORS_KWords_fr.Soulblaze_rgb_fr.." aux cibles touchées en fonction de votre "..COLORS_KWords_fr.Peril_rgb_fr.." actuel."..TALENTS_Enh_desc_fr.ED_PSY_Ability_1_3_rgb_fr end),
+			--[+ Traditional Chinese - 蔓延火焰 +]--
+	create_template("talent_tree_psy_abil1_003_desc_tw", {"loc_talent_psyker_warpfire_on_shout_desc"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}根據你目前的"..COLORS_KWords_tw.Peril_rgb.."，對目標擊中造成{min_stacks:%s}{warpfire_stacks:%s}層"..COLORS_KWords_tw.Soulblaze_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_1_3_rgb end),
 
 	--[+ Ability 2 - Telekine Shield +]--
 		-- create_template("talent_tree_psy_abil2_000_en", {"loc_talent_psyker_combat_ability_shield"}, {"en"}, function(locale, value) return "Telekine Shield" end),
 	create_template("talent_tree_psy_abil2_000_desc_en", {"loc_talent_psyker_combat_ability_shield_description"}, {"en"}, function(locale, value) return "Spawns a psychic shield in front of you for {duration:%s} seconds. The shield blocks Enemy Ranged Attacks, while you and Allies can still shoot through.\nBase Cooldown: {cooldown:%s} seconds."..TALENTS_Enh_desc.ED_PSY_Ability_2_rgb end), -- duration: 17.5, cooldown: 40 -- s->seconds
 			--[+ French +]--
 	create_template("talent_tree_psy_abil2_000_desc_fr", {"loc_talent_psyker_combat_ability_shield_description"}, {"fr"}, function(locale, value) return "Invoque un bouclier psychique devant vous pendant {duration:%s} secondes. Le bouclier bloque les attaques à distance des ennemis, tandis que vous et vos alliés pouvez toujours tirer à travers.\nTemps de recharge de base : {cooldown:%s} secondes."..TALENTS_Enh_desc_fr.ED_PSY_Ability_2_rgb_fr end),
+			--[+ Traditional Chinese - 念力護盾 +]--
+	create_template("talent_tree_psy_abil2_000_desc_tw", {"loc_talent_psyker_combat_ability_shield_description"}, {"zh-tw"}, function(locale, value) return "在你前方生成一個靈能盾牌，持續{duration:%s}秒。盾牌可以阻擋敵人的遠程攻擊，而你和盟友仍然可以穿透射擊。\n基礎冷卻時間：{cooldown:%s}秒。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_2_rgb end),
 
 	--[+ Ability 2-1 - Bolstered Shield +]--
 		-- create_template("talent_tree_psy_abil2_001_en", {"loc_talent_psyker_force_field_charges"}, {"en"}, function(locale, value) return "Bolstered Shield" end),
 	create_template("talent_tree_psy_abil2_001_desc_en", {"loc_talent_psyker_force_field_charges_description"}, {"en"}, function(locale, value) return "{talent_name:%s} now holds up to {max_charges:%s} charges."..TALENTS_Enh_desc.ED_PSY_Ability_2_1_rgb end), -- talent_name: Telekine Shield, max_charges: 2
 			--[+ French +]--
 	create_template("talent_tree_psy_abil2_001_desc_fr", {"loc_talent_psyker_force_field_charges_description"}, {"fr"}, function(locale, value) return "{talent_name:%s} peut maintenant accumuler jusqu'à {max_charges:%s} charges."..TALENTS_Enh_desc_fr.ED_PSY_Ability_2_1_rgb_fr end),
+			--[+ Traditional Chinese - 強化護盾 +]--
+	create_template("talent_tree_psy_abil2_001_desc_tw", {"loc_talent_psyker_force_field_charges_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在最多可以持有{max_charges:%s}層。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_2_1_rgb end),
 
 	--[+ Ability 2-2 - Enervating Threshold +]--
 		-- create_template("talent_tree_psy_abil2_002_en", {"loc_talent_psyker_force_field_stun_increased"}, {"en"}, function(locale, value) return "Enervating Threshold" end),
 	create_template("talent_tree_psy_abil2_002_desc_en", {"loc_talent_psyker_force_field_stun_increased_description"}, {"en"}, function(locale, value) return "{ability:%s} has a {proc_chance:%s} chance to "..COLORS_KWords.Stun_rgb.." enemies that pass through it. Specialist enemies have a {special_proc_chance:%s} chance to get "..COLORS_KWords.Stunned_rgb.." but also damage the {ability:%s}."..TALENTS_Enh_desc.ED_PSY_Ability_2_2_rgb end), -- ability: Telekine Shield, proc_chance: 10%, special_proc_chance: 100% -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_abil2_002_desc_fr", {"loc_talent_psyker_force_field_stun_increased_description"}, {"fr"}, function(locale, value) return "{ability:%s} a {proc_chance:%s} de chances d'"..COLORS_KWords_fr.Stun_rgb_fr.." les ennemis qui le traversent. Les ennemis spécialistes ont {special_proc_chance:%s} de chances d'être "..COLORS_KWords_fr.Stunned_rgb_fr.." mais endommagent également le {ability:%s}."..TALENTS_Enh_desc_fr.ED_PSY_Ability_2_2_rgb_fr end),
+			--[+ Traditional Chinese - 衰弱界線 +]--
+	create_template("talent_tree_psy_abil2_002_desc_tw", {"loc_talent_psyker_force_field_stun_increased_description"}, {"zh-tw"}, function(locale, value) return "{ability:%s}有{proc_chance:%s}的機會使穿過它的敵人"..COLORS_KWords_tw.Stun_rgb.."。專家敵人有{special_proc_chance:%s}的機會被"..COLORS_KWords_tw.Stunned_rgb.."，但也會損害{ability:%s}。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_2_2_rgb end),
 
 	--[+ Ability 2-3 - Telekine Dome +]--
 		-- create_template("talent_tree_psy_abil2_003_en", {"loc_talent_psyker_force_field_dome"}, {"en"}, function(locale, value) return "Telekine Dome" end),
 	create_template("talent_tree_psy_abil2_003_desc_en", {"loc_talent_psyker_force_field_dome_new_desc"}, {"en"}, function(locale, value) return "{talent_name:%s} now forms a spherical shield which lasts {duration:%s} seconds."..TALENTS_Enh_desc.ED_PSY_Ability_2_3_rgb end), -- talent_name: Telekine Shield, duration: 25 -- s->seconds
 			--[+ French +]--
 	create_template("talent_tree_psy_abil2_003_desc_fr", {"loc_talent_psyker_force_field_dome_new_desc"}, {"fr"}, function(locale, value) return "{talent_name:%s} forme maintenant un bouclier sphérique qui dure {duration:%s} secondes."..TALENTS_Enh_desc_fr.ED_PSY_Ability_2_3_rgb_fr end),
+			--[+ Traditional Chinese - 念力穹頂 +]--
+	create_template("talent_tree_psy_abil2_003_desc_tw", {"loc_talent_psyker_force_field_dome_new_desc"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在形成一個球形護盾，持續{duration:%s}秒。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_2_3_rgb end),
 
 	--[+ Ability 2-4 - Sanctuary +]--
 		-- create_template("talent_tree_psy_abil2_004_en", {"loc_talent_psyker_force_field_grants_toughness"}, {"en"}, function(locale, value) return "Sanctuary" end),
 	create_template("talent_tree_psy_abil2_004_desc_en", {"loc_talent_psyker_force_field_grants_toughness_desc"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_rgb.." per second replenishes for Allies inside your {talent_name:%s}.\n{toughness_damage_reduction:%s} "..COLORS_KWords.Toughness_dmg_red_rgb.." for {duration:%s} seconds for all Allies inside your {talent_name:%s} when it dissipates."..TALENTS_Enh_desc.ED_PSY_Ability_2_4_rgb end), -- talent_name: Telekine Shield, toughness: 10%, toughness_damage_reduction: +50%, duration: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_abil2_004_desc_fr", {"loc_talent_psyker_force_field_grants_toughness_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." par seconde pour les alliés à l'intérieur de votre {talent_name:%s}.\n{toughness_damage_reduction:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." pendant {duration:%s} secondes pour tous les alliés à l'intérieur de votre {talent_name:%s} lorsqu'il se dissipe."..TALENTS_Enh_desc_fr.ED_PSY_Ability_2_4_rgb_fr end),
+			--[+ Traditional Chinese - 庇護所 +]--
+	create_template("talent_tree_psy_abil2_004_desc_tw", {"loc_talent_psyker_force_field_grants_toughness_desc"}, {"zh-tw"}, function(locale, value) return "在你的{talent_name:%s}內，每秒為盟友補充{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."。\n當你的{talent_name:%s}消散時，所有在內的盟友將獲得{duration:%s}秒的{toughness_damage_reduction:%s} "..COLORS_KWords_tw.Toughness_dmg_red_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_2_4_rgb end),
 
 	--[+ Ability 3 - Scrier's Gaze +]--
 		-- create_template("talent_tree_psy_abil3_000_en", {"loc_talent_psyker_combat_ability_overcharge_stance"}, {"en"}, function(locale, value) return "Scrier's Gaze" end),
 	create_template("talent_tree_psy_abil3_000_desc_en", {"loc_talent_psyker_combat_ability_overcharge_stance_new_description"}, {"en"}, function(locale, value) return "You enter "..COLORS_KWords.Scriers_gaze_rgb.." and gain {base_damage:%s} "..COLORS_KWords.Damage_rgb..", {crit_chance:%s} "..COLORS_KWords.Crit_chance_rgb.." and Suppression Immunity.\nFor every second in "..COLORS_KWords.Scriers_gaze_rgb.." you gain {damage_per_stack:%s} "..COLORS_KWords.Damage_rgb..", up to a maximum of {max_damage:%s}. This effect lingers for {duration:%s} seconds after leaving "..COLORS_KWords.Scriers_gaze_rgb..".\nWhile in "..COLORS_KWords.Scriers_gaze_rgb.." you build up "..COLORS_KWords.Peril_rgb..". Killing enemies while overcharging slows down the auto "..COLORS_KWords.Peril_rgb.." generation by reducing the effective timer by "..COLORS_Numbers.n_033_rgb.." seconds per Kill.\nAt {max_peril:%s} "..COLORS_KWords.Peril_rgb.." Ability ends.\nBase Cooldown: {cooldown:%s} seconds."..TALENTS_Enh_desc.ED_PSY_Ability_3_rgb end), -- base_damage: +10%, crit_chance: +20%, damage_per_stack: +1%, max_damage: +30%, duration: 10, max_peril: 100%, cooldown: 25 -- rewrite -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_abil3_000_desc_fr", {"loc_talent_psyker_combat_ability_overcharge_stance_new_description"}, {"fr"}, function(locale, value) return "Vous entrez sous "..COLORS_KWords_fr.Scriers_gaze_rgb_fr.." et gagnez {base_damage:%s} "..COLORS_KWords_fr.Damage_rgb_fr..", {crit_chance:%s} "..COLORS_KWords_fr.Crit_chance_rgb_fr.." ainsi que l'immunité à la suppression.\nPour chaque seconde sous "..COLORS_KWords_fr.Scriers_gaze_rgb_fr.." vous gagnez {damage_per_stack:%s} "..COLORS_KWords_fr.Damage_rgb_fr..", jusqu'à un maximum de {max_damage:%s}. Cet effet perdure {duration:%s} secondes après être sorti de "..COLORS_KWords_fr.Scriers_gaze_rgb_fr..".\nDurant "..COLORS_KWords_fr.Scriers_gaze_rgb_fr.." votre "..COLORS_KWords_fr.Peril_rgb_fr.." augmente continuellement. Tuer des ennemis durant la capacité ralentit la génération automatique du "..COLORS_KWords.Peril_rgb.." en réduisant le temps effectif de "..COLORS_Numbers.n_033_rgb.." secondes par meurtre.\nÀ {max_peril:%s} de "..COLORS_KWords_fr.Peril_rgb_fr.." la capacité s'arrête.\nTemps de recharge : {cooldown:%s} secondes."..TALENTS_Enh_desc_fr.ED_PSY_Ability_3_rgb_fr end),
-
+			--[+ Traditional Chinese - 占卜者的注視 +]--
+	create_template("talent_tree_psy_abil3_000_desc_tw", {"loc_talent_psyker_combat_ability_overcharge_stance_new_description"}, {"zh-tw"}, function(locale, value) return "進入"..COLORS_KWords_tw.Scriers_gaze_rgb.."，獲得{base_damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."，{crit_chance:%s}的"..COLORS_KWords_tw.Crit_chance_rgb.."，並獲得壓制免疫。\n在"..COLORS_KWords_tw.Scriers_gaze_rgb.."中，每秒獲得{damage_per_stack:%s}的"..COLORS_KWords_tw.Damage_rgb.."，最多可達{max_damage:%s}。此效果在離開"..COLORS_KWords_tw.Scriers_gaze_rgb.."後持續{duration:%s}秒。\n在"..COLORS_KWords_tw.Scriers_gaze_rgb.."期間，你會累積"..COLORS_KWords_tw.Peril_rgb.."。超載時每次擊殺敵人可減緩自動"..COLORS_KWords_tw.Peril_rgb.."的累積速度。\n當"..COLORS_KWords_tw.Peril_rgb.."達到{max_peril:%s}時，能力結束。\n基礎冷卻時間：{cooldown:%s}秒。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_3_rgb end),
+				
 	--[+ Ability 3-1 - Endurance +]--
 		-- create_template("talent_tree_psy_abil3_001_en", {"loc_ability_psyker_overcharge_reduced_toughness_damage_taken"}, {"en"}, function(locale, value) return "Endurance" end),
 	create_template("talent_tree_psy_abil3_001_desc_en", {"loc_ability_psyker_overcharge_reduced_toughness_damage_taken_description"}, {"en"}, function(locale, value) return "While overcharging, {talent_name:%s} grants {tdr:%s} "..COLORS_KWords.Toughness_dmg_red_rgb.."."..TALENTS_Enh_desc.ED_PSY_Ability_3_1_rgb end), -- talent_name: Scrier's Gaze, tdr: +20% -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_abil3_001_desc_fr", {"loc_ability_psyker_overcharge_reduced_toughness_damage_taken_description"}, {"fr"}, function(locale, value) return "Pendant {talent_name:%s} vous gagnez {tdr:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.."."..TALENTS_Enh_desc_fr.ED_PSY_Ability_3_1_rgb_fr end),
+			--[+ Traditional Chinese - 堅韌 +]--
+	create_template("talent_tree_psy_abil3_001_desc_tw", {"loc_ability_psyker_overcharge_reduced_toughness_damage_taken_description"}, {"zh-tw"}, function(locale, value) return "超載時，{talent_name:%s}提供{tdr:%s}的"..COLORS_KWords_tw.Toughness_dmg_red_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_3_1_rgb end),
 
 	--[+ Ability 3-2 - Precognition +]--
 		-- create_template("talent_tree_psy_abil3_002_en", -- Precognition {"loc_ability_psyker_overcharge_weakspot"}, {"en"}, function(locale, value) return "Precognition" end),
 	create_template("talent_tree_psy_abil3_002_desc_en", {"loc_ability_psyker_overcharge_weakspot_description"}, {"en"}, function(locale, value) return "While overcharging, makes "..COLORS_KWords.Weakspot_rgb.." kills generate {second:%s} additional Stack.\n\nFor each second spent in {talent_name:%s}, you now also gain {finesse_damage_per_stack:%s} "..COLORS_KWords.Finesse_dmg_rgb..", up to {max_finesse_damage:%s} Max, which lingers for {duration:%s} seconds after leaving {talent_name:%s}."..TALENTS_Enh_desc.ED_PSY_Ability_3_2_rgb end), -- second: 1, talent_name: Scrier's Gaze, finesse_damage_per_stack: +1%, max_finesse_damage: +30%, duration: 10 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_abil3_002_desc_fr", {"loc_ability_psyker_overcharge_weakspot_description"}, {"fr"}, function(locale, value) return "Pendant {talent_name:%s}, les éliminations par point faible compte comme {second:%s} sous {talent_name:%s}.\n\nPour chaque seconde passée dans {talent_name:%s}, vous gagnez également {finesse_damage_per_stack:%s} de "..COLORS_KWords_fr.Finesse_dmg_rgb_fr..", jusqu'à un maximum de {max_finesse_damage:%s}, ce qui persiste pendant {duration:%s} secondes après avoir quitté {talent_name:%s}."..TALENTS_Enh_desc_fr.ED_PSY_Ability_3_2_rgb_fr end),
+			--[+ Traditional Chinese - 預知未來 +]--
+	create_template("talent_tree_psy_abil3_002_desc_tw", {"loc_ability_psyker_overcharge_weakspot_description"}, {"zh-tw"}, function(locale, value) return "超載時，使"..COLORS_KWords_tw.Weakspot_rgb.."擊殺產生{second:%s}額外的層。\n\n在{talent_name:%s}中每秒，你現在也會獲得{finesse_damage_per_stack:%s}的"..COLORS_KWords_tw.Finesse_dmg_rgb.."，最多可達{max_finesse_damage:%s}，並在離開{talent_name:%s}後持續{duration:%s}秒。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_3_2_rgb end),
 
 	--[+ Ability 3-3 - Warp Speed +]--
 		-- create_template("talent_tree_psy_abil3_003_en", {"loc_ability_psyker_overcharge_movement_speed"}, {"en"}, function(locale, value) return "Warp Speed" end),
 	create_template("talent_tree_psy_abil3_003_desc_en", {"loc_ability_psyker_overcharge_movement_speed_description"}, {"en"}, function(locale, value) return "While overcharging, {talent_name:%s} increases your Movement Speed by {movement_speed:%s}."..TALENTS_Enh_desc.ED_PSY_Ability_3_3_rgb end), -- talent_name: Scrier's Gaze, movement_speed: +20%
 			--[+ French +]--
 	create_template("talent_tree_psy_abil3_003_desc_fr", {"loc_ability_psyker_overcharge_movement_speed_description"}, {"fr"}, function(locale, value) return "Pendant {talent_name:%s}, votre vitesse de déplacement augmente de {movement_speed:%s}."..TALENTS_Enh_desc_fr.ED_PSY_Ability_3_3_rgb_fr end),
+			--[+ Traditional Chinese - 亞空間加速 +]--
+	create_template("talent_tree_psy_abil3_003_desc_tw", {"loc_ability_psyker_overcharge_movement_speed_description"}, {"zh-tw"}, function(locale, value) return "超載時，{talent_name:%s}會增加你的移動速度{movement_speed:%s}。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_3_3_rgb end),
 
 	--[+ Ability 3-4 - Reality Anchor +]--
 		-- create_template("talent_tree_psy_abil3_004_en", {"loc_ability_psyker_overcharge_reduced_warp_charge"}, {"en"}, function(locale, value) return "Reality Anchor" end),
 	create_template("talent_tree_psy_abil3_004_desc_en", {"loc_ability_psyker_overcharge_reduced_warp_charge_description"}, {"en"}, function(locale, value) return "While overcharging, {talent_name:%s} also reduces your "..COLORS_KWords.Peril_rgb.." Generated by {warp_charge:%s}."..TALENTS_Enh_desc.ED_PSY_Ability_3_4_rgb end), -- talent_name: Scrier's Gaze, warp_charge: -20% -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_abil3_004_desc_fr", {"loc_ability_psyker_overcharge_reduced_warp_charge_description"}, {"fr"}, function(locale, value) return "Pendant {talent_name:%s} votre génération de "..COLORS_KWords.Peril_rgb.." est réduite de {warp_charge:%s}."..TALENTS_Enh_desc_fr.ED_PSY_Ability_3_4_rgb_fr end),
+			--[+ Traditional Chinese - 現實錨點 +]--
+	create_template("talent_tree_psy_abil3_004_desc_tw", {"loc_ability_psyker_overcharge_reduced_warp_charge_description"}, {"zh-tw"}, function(locale, value) return "超載時，{talent_name:%s}也會減少你的"..COLORS_KWords_tw.Peril_rgb.."生成量{warp_charge:%s}。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_3_4_rgb end),
 
 	--[+ Ability 3-5 - Warp Unbound +]--
 		-- create_template("talent_tree_psy_abil3_005_en", {"loc_talent_psyker_overcharge_infinite_casting"}, {"en"}, function(locale, value) return "Warp Unbound" end),
 	create_template("talent_tree_psy_abil3_005_desc_en", {"loc_talent_psyker_overcharge_infinite_casting_desc"}, {"en"}, function(locale, value) return "{talent_name:%s} now also prevents overloading from "..COLORS_KWords.Perils_rgb.." of the Warp, during its lingering effect."..TALENTS_Enh_desc.ED_PSY_Ability_3_5_rgb end), -- talent_name: Scrier's Gaze
 			--[+ French +]--
 	create_template("talent_tree_psy_abil3_005_desc_fr", {"loc_talent_psyker_overcharge_infinite_casting_desc"}, {"fr"}, function(locale, value) return "{talent_name:%s} empêche désormais également la surcharge due aux "..COLORS_KWords.Perils_rgb.." de Warp, pendant son effet persistant."..TALENTS_Enh_desc_fr.ED_PSY_Ability_3_5_rgb_fr end),
+			--[+ Traditional Chinese - 解放亞空間 +]--
+	create_template("talent_tree_psy_abil3_005_desc_tw", {"loc_talent_psyker_overcharge_infinite_casting_desc"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在也會在其持續效果期間防止來自亞空間的"..COLORS_KWords_tw.Perils_rgb.."過載。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_3_5_rgb end),
 
 --[+ +KEYSTONES+ +]--
 	--[+ Keystone 1 - Warp Siphon +]--
@@ -475,7 +501,7 @@ local localization_templates = {
 	create_template("talent_tree_psy_keys1_002_desc_en", {"loc_talent_psyker_toughness_regen_on_soul_desc"}, {"en"}, function(locale, value) return COLORS_Numbers.pc_6_rgb.." "..COLORS_KWords.Toughness_rgb.." is replenished per second for {time:%s} seconds after gaining Warp Charge, up to a Maximum of {toughness:%s}. Gaining a new Warp Charge during this time resets the timer."..TALENTS_Enh_desc.ED_PSY_Keystone_1_2_rgb end), -- toughness: 30%, time: 5 --  s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_keys1_002_desc_fr", {"loc_talent_psyker_toughness_regen_on_soul_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.pc_6_rgb.." de "..COLORS_KWords_fr.Toughness_rgb_fr.." est régénérée par seconde pendant {time:%s} secondes après avoir gagné une charge de Siphon de Warp, jusqu'à un maximum de {toughness:%s}. Gagner une nouvelle charge pendant ce temps réinitialise le compte à rebours."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_1_2_rgb_fr end), -- solidité: 30%, temps: 5 --  s->secondes -- couleurs
-
+		
 	--[+ Keystone 1-3 - Empyrean Empowerment +]--
 		-- create_template("talent_tree_psy_keys1_003_en", {"loc_talent_psyker_souls_increase_damage"}, {"en"}, function(locale, value) return "Empyrean Empowerment" end),
 	create_template("talent_tree_psy_keys1_003_desc_en", {"loc_talent_psyker_souls_increase_damage_desc"}, {"en"}, function(locale, value) return "{damage:%s} increase to all Base "..COLORS_KWords.Damage_rgb.." for each Warp Charge."..TALENTS_Enh_desc.ED_PSY_Keystone_1_3_rgb end), -- damage: +4% -- colors

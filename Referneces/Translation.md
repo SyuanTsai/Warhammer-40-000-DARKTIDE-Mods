@@ -117,25 +117,31 @@
 - Psykinetic's Wrath - 靈能學者之怒
 - Venting Shriek - 靈能尖嘯
 - Becalming Eruption - 平靜进發
-
-
-
+- Warp Rupture - 亞空間爆發
+- Warp Creeping Flames - 蔓延火焰
+- Telekine Shield - 念力護盾
+- Bolstered Shield - 強化護盾
+- Enervating Threshold - 衰弱界線
+- Telekine Dome - 念力穹頂
+- Sanctuary - 庇護所
+- Scrier's Gaze - 占卜者的注視
+- Endurance - 堅韌
 - Precognition - 預知未來
+- Warp Speed - 亞空間加速
+- Reality Anchor - 現實錨點
+
 - Empowered Psionics - 靈能強化
 - Empyrean Empowerment - 至天高之力
 - Empyric Shock - 亞空間震波
 - Disrupt Destiny - 擾動命運
 - Malefic Momentum - 惡意攻勢
 - Perfect Timing - 完美時機
-- Scrier's Gaze - 占卜者的注視
 - Warp Rider - 亞空間騎士
 - Warp Rupture - 刺耳尖嘯
 - By Crack of Bone - 骨折後遺症
 - Empyric Resolve - 亞空間意志
 - Inner Tranquility - 平心靜氣
 - Peril Resistance - 反噬抗性
-- Reality Anchor - 現實錨點
-- Telekine Shield - 念力護盾
 - Warp Siphon - 亞空間虹吸
 - Mettle - 堅毅
 - Battle Meditation - 戰鬥冥想

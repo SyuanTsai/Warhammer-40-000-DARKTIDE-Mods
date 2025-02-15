@@ -288,8 +288,8 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Ability_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 與「骨折後遺症」、「亞空間意志」、「平心靜氣」、「動能共鳴」等天賦、小型 「反噬抗性」 節點以及戰鬥興奮劑所提供的反噬值消耗減少效果做乘法疊加。",
-		ppp___ppp,
-		"- Stacks multiplicatively with related Peril Cost Reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Inner Tranquility\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
+		-- ppp___ppp,
+		-- "- Stacks multiplicatively with related Peril Cost Reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Inner Tranquility\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 1-2 - Warp Rupture +]--
@@ -298,26 +298,26 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 對所有裝甲類型的傷害係數相同，但傷害隨距離而衰減。",
 		"- 基礎傷害會依反噬值而變動：",
 		"_______________________________",
-		"反噬:           0%|  25%|  50%|  75%|  100%",
-		"傷害:     100|  125|  150|  175|  200",
+		"反噬:      0%|  25%|  50%|  75%|  100%",
+		"傷害:     100|   125|   150|   175|  200",
 		"_______________________________",
 		"- 傷害會受到以下增益影響：",
 		"-- 來自天賦：「擾動命運」、「至天高之力」、「亞空間震波」（對受該減益效果影響的敵人）、「惡意攻勢」、「動能釋放」（對精英目標）、「完美時機」，以及「亞空間騎士」。",
 		"-- 來自武器祝福：",
 		"--- 近戰武器，如在啟動「刺耳尖嘯」前就已觸發的「行刑者」、「高壓電」（對感電敵人）、「碎顱者」（對踉蹌敵人）、「殺戮者」、「優勢」，以及「不穩定能量」。",
 		"--- 遠程武器，如在啟動「刺耳尖嘯」前就已觸發的「連續發射」、「持續阻擊」、「死亡噴吐」、「達姆彈」、「處決」（對踉蹌敵人）、「烈火熱焰」、「全孔射擊」、「刻不容緩」（對踉蹌敵人）、「鉗制射擊」、「火藥灼傷」，以及「連跑帶打」（在衝刺時）。",
-		ppp___ppp,
-		"- Has same armor Damage modifier against all armor types, loses Damage with range.",
-		"- Base Damage dealt scales with Peril:",
-		"_______________________________",
-		"Peril:           0%|  25%|  50%|  75%|  100%",
-		"Damage:   100|   125|    150|   175|   200",
-		"_______________________________",
-		"- Damage is affected by Damage buffs: ",
-		"-- from Talents: \"Disrupt Destiny\", \"Empyrean Empowerment\", \"Empyric Shock\" (while debuffed), \"Malefic Momentum\", \"Kinetic Presence\" (vs Elites), \"Perfect Timing\", and \"\".Warp Rider\".",
-		"-- from Blessings of the Weapons:",
-		"--- Melee, if procced with weapon before Warp Rupture's activation: \"Executor\", \"High Voltage\" (vs Electrocuted), \"Skullcrusher\" (vs Staggered), \"Slaughterer\", \"Superiority\", and \"Unstable Power\".",
-		"--- Ranged, if procced with weapon before Warp Rupture's activation: \"Blaze Away\", \"Ceaseless Barrage\", \"Deathspitter\", \"Dumdum\", \"Execution\" (vs Staggered), \"Fire Frenzy\", \"Full Bore\", \"No Respite\" (vs Staggered), \"Pinning Fire\", \"Powderburn\", and \"Run 'n' Gun\" (while Sprinting).",
+		-- ppp___ppp,
+		-- "- Has same armor Damage modifier against all armor types, loses Damage with range.",
+		-- "- Base Damage dealt scales with Peril:",
+		-- "_______________________________",
+		-- "Peril:           0%|  25%|  50%|  75%|  100%",
+		-- "Damage:   100|   125|    150|   175|   200",
+		-- "_______________________________",
+		-- "- Damage is affected by Damage buffs: ",
+		-- "-- from Talents: \"Disrupt Destiny\", \"Empyrean Empowerment\", \"Empyric Shock\" (while debuffed), \"Malefic Momentum\", \"Kinetic Presence\" (vs Elites), \"Perfect Timing\", and \"\".Warp Rider\".",
+		-- "-- from Blessings of the Weapons:",
+		-- "--- Melee, if procced with weapon before Warp Rupture's activation: \"Executor\", \"High Voltage\" (vs Electrocuted), \"Skullcrusher\" (vs Staggered), \"Slaughterer\", \"Superiority\", and \"Unstable Power\".",
+		-- "--- Ranged, if procced with weapon before Warp Rupture's activation: \"Blaze Away\", \"Ceaseless Barrage\", \"Deathspitter\", \"Dumdum\", \"Execution\" (vs Staggered), \"Fire Frenzy\", \"Full Bore\", \"No Respite\" (vs Staggered), \"Pinning Fire\", \"Powderburn\", and \"Run 'n' Gun\" (while Sprinting).",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 1-3 - Warp Creeping Flames +]--
@@ -325,8 +325,8 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 施加到敵人身上的靈魂之火層數會隨靈能反噬變化：",
 		"_______________________________",
-		"層數: 1|      2|        3|       4|       5|       6",
-		"靈能反噬: 0%|~17%|~34%|~50%|~67%|~84%",
+		"層數:    1|      2|        3|       4|       5|       6",
+		"反噬: 0%|~17%|~34%|~50%|~67%|~84%",
 		"_______________________________",
 		"- 持續 8 秒，每 0.75 秒觸發一次。",
 		"- 施加層數時會刷新持續時間。",
@@ -335,19 +335,19 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"-- 武器祝福影響：",
 		"--- 近戰武器：「行刑者」、「高壓電」（對感電目標）、「碎顱者」（對被震懾目標）、「殺戮者」、「優勢」、「不穩定能量」、「異常打擊」。",
 		"--- 遠程武器：「連續發射」、「死亡噴吐」、「達姆彈」、「處決」（對被震懾目標）、「烈火熱焰」、「刻不容緩」（對被震懾目標）、「鉗制射擊」、「連跑帶打」（衝刺時）。",
-		ppp___ppp,
-		"- The amount of Soulblaze Stacks applied to enemies scales with Peril:",
-		"_______________________________",
-		"Stacks: 1|      2|        3|       4|       5|       6",
-		"Peril: 0%|~17%|~34%|~50%|~67%|~84%",
-		"_______________________________",
-		"- Lasts 8 seconds. Ticks every 0.75 seconds.",
-		"- Refreshes duration on Stack application.",
-		"- Stacks additively with other sources of Soulblaze.",
-		"- Soulblaze damage is increased by Rending and Brittleness, by Perks of currently equipped Weapons, and by Buffs from Talents: \"Disrupt Destiny\", \"Empyrean Empowerment\", \"Malefic Momentum\", \"Kinetic Presence\", \"Perfect Timing\", and \"Warp Rider\".",
-		"-- Blessings of the Weapons:",
-		"--- Melee: \"Executor\", \"High Voltage\" (vs Electrocuted), \"Skullcrusher\" (vs Staggered), \"Slaughterer\", \"Superiority\", \"Uncanny Strike\", and \"Unstable Power\".",
-		"--- Ranged: \"Blaze Away\", \"Deathspitter\", \"Dumdum\", \"Execution\" (vs Staggered), \"Fire Frenzy\", \"No Respite\" (vs Staggered), \"Pinning Fire\", and \"Run 'n' Gun\" (while Sprinting).",
+		-- ppp___ppp,
+		-- "- The amount of Soulblaze Stacks applied to enemies scales with Peril:",
+		-- "_______________________________",
+		-- "Stacks: 1|      2|        3|       4|       5|       6",
+		-- "Peril: 0%|~17%|~34%|~50%|~67%|~84%",
+		-- "_______________________________",
+		-- "- Lasts 8 seconds. Ticks every 0.75 seconds.",
+		-- "- Refreshes duration on Stack application.",
+		-- "- Stacks additively with other sources of Soulblaze.",
+		-- "- Soulblaze damage is increased by Rending and Brittleness, by Perks of currently equipped Weapons, and by Buffs from Talents: \"Disrupt Destiny\", \"Empyrean Empowerment\", \"Malefic Momentum\", \"Kinetic Presence\", \"Perfect Timing\", and \"Warp Rider\".",
+		-- "-- Blessings of the Weapons:",
+		-- "--- Melee: \"Executor\", \"High Voltage\" (vs Electrocuted), \"Skullcrusher\" (vs Staggered), \"Slaughterer\", \"Superiority\", \"Uncanny Strike\", and \"Unstable Power\".",
+		-- "--- Ranged: \"Blaze Away\", \"Deathspitter\", \"Dumdum\", \"Execution\" (vs Staggered), \"Fire Frenzy\", \"No Respite\" (vs Staggered), \"Pinning Fire\", and \"Run 'n' Gun\" (while Sprinting).",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2 - Telekine Shield +]--
@@ -364,26 +364,26 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 護盾生命機制：",
 		"-- 每次受到遠程攻擊計算為 1 點傷害。受到傷害後的 0.33 秒內不會再受到傷害。",
 		"--- 例如，當護盾放置在一名血痂砲手前方，護盾將在砲手的第二輪掃射期間消失，因為它累計承受了 20 次有效攻擊。",
-		ppp___ppp,
-		"- Shield Health: 20.",
-		"- Dimensions: 6 meters wide, 3.5 meters high.",
-		"- Max placement range: 10 meters.",
-		"- Total placement time: 0.6 seconds.",
-		"- You can hold Ability button to preview location and you can cancel it by blocking.",
-		"- Blocks: Ranged hit scan Attacks, projectiles (Bomber grenades), nets (Trappers), and flamethrower direct hits (Flamers)",
-		"- Ground fire patches and toxic gas clouds expand through the shield.",
-		"- Doesn't block Poxburster explosion.",
-		"- How shield health works:",
-		"-- Every incoming Ranged attack counts as dealing 1 Damage. After taking Damage, the shield doesn't take any more Damage for the next 0.33 seconds.",
-		"--- For example, placed in front of a Dreg Gunner, the shield will eventually disappear during the Gunner's second salvo, after it has taken 20 valid hits total.",
+		-- ppp___ppp,
+		-- "- Shield Health: 20.",
+		-- "- Dimensions: 6 meters wide, 3.5 meters high.",
+		-- "- Max placement range: 10 meters.",
+		-- "- Total placement time: 0.6 seconds.",
+		-- "- You can hold Ability button to preview location and you can cancel it by blocking.",
+		-- "- Blocks: Ranged hit scan Attacks, projectiles (Bomber grenades), nets (Trappers), and flamethrower direct hits (Flamers)",
+		-- "- Ground fire patches and toxic gas clouds expand through the shield.",
+		-- "- Doesn't block Poxburster explosion.",
+		-- "- How shield health works:",
+		-- "-- Every incoming Ranged attack counts as dealing 1 Damage. After taking Damage, the shield doesn't take any more Damage for the next 0.33 seconds.",
+		-- "--- For example, placed in front of a Dreg Gunner, the shield will eventually disappear during the Gunner's second salvo, after it has taken 20 valid hits total.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2-1 - Bolstered Shield +]--
 	local ED_PSY_Ability_2_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 第二次充能的冷卻時間僅在第一次充能冷卻結束後開始計算。",
-		ppp___ppp,
-		"- The Cooldown of the second charge only starts after the first charge finished Cooldown.",
+		-- ppp___ppp,
+		-- "- The Cooldown of the second charge only starts after the first charge finished Cooldown.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2-2 - Enervating Threshold +]--
@@ -392,20 +392,20 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 不造成傷害。",
 		"- 每 0.55 秒施加一次震懾。",
 		"- 觸電效果持續 3 秒。",
-		"- 可以暈眩所有敵人，**巨獸** 除外。",
+		"- 可以暈眩所有敵人，巨獸除外。",
 		"- 特殊敵人接觸護盾時必定受到影響。",
-		"- 每次受到特殊敵人直接命中身體的攻擊時，護盾會受到 8 點傷害，最多可擋 3 次「格擋」特殊敵人攻擊。遵守 0.33 秒傷害冷卻窗口，這意味著任何在 0.33 秒內發生的多次直接命中，均計為 1 次攻擊傷害。",
+		"- 每次受到特殊敵人直接命中身體的攻擊時，護盾會受到8點傷害，最多可擋3次「格擋」特殊敵人攻擊。遵守0.33 秒傷害冷卻窗口，這意味著任何在0.33 秒內發生的多次直接命中，均計為1次攻擊傷害。",
 		"",
 		"{#color(255, 35, 5)}- 當前存在一個錯誤：接觸護盾的特殊敵人僅造成 1 點傷害，而非 8 點。{#reset()}",
-		ppp___ppp,
-		"- Deals no Damage.",
-		"- Applies Stagger every 0.55 seconds.",
-		"- Electrocution effect lasts for 3 seconds.",
-		"- Can Stun all enemies except Monstrosities.",
-		"- Always applies the effect to Specials when they get in contact with the shield.",
-		"- The shield takes 8 Damage per direct body hit from Specials, disappearing after 3 \"blocked\" Specials. Respects the 0.33 seconds Damage Cooldown window which means that any amount of direct body hits from Specials that happen within 0.33 seconds of each other count as just 1 direct body hit taken.",
-		"",
-		"{#color(255, 35, 5)}- There is currently a bug: Specials that touch the shield only deal 1 Damage to it instead of 8.{#reset()}",
+		-- ppp___ppp,
+		-- "- Deals no Damage.",
+		-- "- Applies Stagger every 0.55 seconds.",
+		-- "- Electrocution effect lasts for 3 seconds.",
+		-- "- Can Stun all enemies except Monstrosities.",
+		-- "- Always applies the effect to Specials when they get in contact with the shield.",
+		-- "- The shield takes 8 Damage per direct body hit from Specials, disappearing after 3 \"blocked\" Specials. Respects the 0.33 seconds Damage Cooldown window which means that any amount of direct body hits from Specials that happen within 0.33 seconds of each other count as just 1 direct body hit taken.",
+		-- "",
+		-- "{#color(255, 35, 5)}- There is currently a bug: Specials that touch the shield only deal 1 Damage to it instead of 8.{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2-3 - Telekine Dome +]--
@@ -417,23 +417,23 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 也會以相同方式承受遠程傷害。",
 		"",
 		"{#color(255, 35, 5)}- 當前存在一個錯誤：在圓頂內成功閃避的變種人總是會被震懾。{#reset()}",
-		ppp___ppp,
-		"- Sphere has a radius of 6 meters.",
-		"- Protects from enemy attacks at all degrees.",
-		"- Has the same properties as the flat shield.",
-		"- Also takes Ranged Damage in the same way.",
-		"",
-		"{#color(255, 35, 5)}- There is currently a bug: Mutants that are successfully Dodged inside the dome always get Staggered.{#reset()}",
+		-- ppp___ppp,
+		-- "- Sphere has a radius of 6 meters.",
+		-- "- Protects from enemy attacks at all degrees.",
+		-- "- Has the same properties as the flat shield.",
+		-- "- Also takes Ranged Damage in the same way.",
+		-- "",
+		-- "{#color(255, 35, 5)}- There is currently a bug: Mutants that are successfully Dodged inside the dome always get Staggered.{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2-4 - Sanctuary +]--
 	local ED_PSY_Ability_2_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 此恢復效果可疊加，若多個球體重疊則效果疊加。",
-		ppp___ppp,
-		"- This replenishment effect can Stack if multiple spheres overlap.",
 		z_eff_of_this_tougn_rep,
 		stacks_mult_w_other_dmg_red_buffs,
+		-- ppp___ppp,
+		-- "- This replenishment effect can Stack if multiple spheres overlap.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3 - Scrier's Gaze +]--
@@ -442,19 +442,19 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 當技能處於超載階段時，冷卻時間會暫停。然而，其剩餘冷卻時間仍可透過觸發「靈能學者光環」或使用專注興奮劑來主動縮短。",
 		"- 最大冷卻時間可透過「先知之眼」、「亞空間虹吸」、來自珍品的戰鬥技能冷卻，以及降低技能冷卻時間 20% 的任務變異體來縮短。",
 		"- 超載結束後，提供 1.5 秒的緩衝時間，在此期間可執行靈能反噬動作而不會觸發靈能者自我爆炸。",
-		ppp___ppp,
-		"- While Ability is in overcharging phase Cooldown is paused. However, its remaining cooldown can still be actively reduced by proccing \"Psykinetic's Aura\" or using a Concentration Stimm.",
-		"- Its Maximum Cooldown can be Reduced by \"Seer's Presence\", \"Warp Siphon\", Combat Ability Regeneration from Curios, and by the mission mutators that reduce Ability Cooldowns by 20%.",
-		"- After overcharging has ended, grants a 1.5 seconds grace period in which Peril-generating actions can be executed without triggering Psyker's self-explosion.",
+		-- ppp___ppp,
+		-- "- While Ability is in overcharging phase Cooldown is paused. However, its remaining cooldown can still be actively reduced by proccing \"Psykinetic's Aura\" or using a Concentration Stimm.",
+		-- "- Its Maximum Cooldown can be Reduced by \"Seer's Presence\", \"Warp Siphon\", Combat Ability Regeneration from Curios, and by the mission mutators that reduce Ability Cooldowns by 20%.",
+		-- "- After overcharging has ended, grants a 1.5 seconds grace period in which Peril-generating actions can be executed without triggering Psyker's self-explosion.",
 	}, "\n"), enhdesc_col)
 
 	-- [+ Ability 3-1 - Endurance +]--
 	local ED_PSY_Ability_3_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 不會在超載階段結束後持續存在。",
-		ppp___ppp,
-		"- Does not linger after overcharging phase.",
 		stacks_mult_w_other_dmg_red_buffs,
+		-- ppp___ppp,
+		-- "- Does not linger after overcharging phase.",
 	}, "\n"), enhdesc_col)
 
 	-- [+ Ability 3-2 - Precognition +]--
@@ -463,10 +463,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與其他「弱點」與「技巧」增益效果相加計算。",
 		"- 「順劈目標」時，每次攻擊可多次觸發。",
 		"- 這些可疊加的傷害增益會在超載階段立即生效。",
-		ppp___ppp,
-		"- Stacks additively with other Weakspot and Finesse Damage buffs.",
-		"- Can proc multiple times per attack when Cleaving.",
-		"- These stacking Damage buffs are active immediately during the overcharging phase.",
+		-- ppp___ppp,
+		-- "- Stacks additively with other Weakspot and Finesse Damage buffs.",
+		-- "- Can proc multiple times per attack when Cleaving.",
+		-- "- These stacking Damage buffs are active immediately during the overcharging phase.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3-3 - Warp Speed +]--
@@ -474,9 +474,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 不會在超載階段結束後持續存在。",
 		"- 與「擾動命運」、「堅毅」、「移動速度增幅」和武器祝福如「提速」的移動速度增益相加疊加。",
-		ppp___ppp,
-		"- Does not linger after overcharging phase.",
-		"- Stacks additively with movement speed buffs from \"Disrupt Destiny\", \"Mettle\", the small Movement speed node, and Weapon Blessings like \"Rev it Up\".",
+		-- ppp___ppp,
+		-- "- Does not linger after overcharging phase.",
+		-- "- Stacks additively with movement speed buffs from \"Disrupt Destiny\", \"Mettle\", the small Movement speed node, and Weapon Blessings like \"Rev it Up\".",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3-4 - Reality Anchor +]--
@@ -485,21 +485,20 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 不會在超載階段結束後持續存在。",
 		"- 與「骨折後遺症」、「亞空間意志」、「動能共鳴」、小型反噬抗性節點和戰鬥興奮劑的反噬值消耗減少效果做乘法疊加。",
 		"- 只有在靈能者在超載期間恢復亞空間充能時，才能與「平心靜氣」疊加。",
-		ppp___ppp,
-		"- Does not linger after overcharging phase.",
-		"- Stacks multiplicatively with Peril cost reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
-		"- Can stack with \"Inner Tranquility\" only if Psyker regains Warp charges while overcharging.",
+		-- ppp___ppp,
+		-- "- Does not linger after overcharging phase.",
+		-- "- Stacks multiplicatively with Peril cost reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
+		-- "- Can stack with \"Inner Tranquility\" only if Psyker regains Warp charges while overcharging.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3-5 - Warp Unbound +]--
 	local ED_PSY_Ability_3_5_rgb = iu_actit(table.concat({
-	
 		ppp___ppp,
-    	"- 超載結束後，允許靈能者在 100% 反噬值下執行反噬生成動作 10 秒而不會觸發自我爆炸。",
-    	"- 請注意，當這 10 秒持續時間結束時，「占卜者的注視」的基本緩衝時間仍然適用，提供額外 1.5 秒的相同效果。",
-		ppp___ppp,
-		"- After overcharging has ended, allows Psyker to execute Peril-generating actions while at 100% Peril for 10 seconds without triggering the self-explosion.",
-		"- Note that when this 10 seconds duration ends, Scrier's Gaze's base grace period still applies, providing another 1.5 seconds of the same effect.",
+    	"- 超載結束後，允許靈能者在100%反噬值下執行反噬生成動作10秒而不會觸發自我爆炸。",
+    	"- 請注意，當這10秒持續時間結束時，「占卜者的注視」的基本緩衝時間仍然適用，提供額外1.5秒的相同效果。",
+		-- ppp___ppp,
+		-- "- After overcharging has ended, allows Psyker to execute Peril-generating actions while at 100% Peril for 10 seconds without triggering the self-explosion.",
+		-- "- Note that when this 10 seconds duration ends, Scrier's Gaze's base grace period still applies, providing another 1.5 seconds of the same effect.",
 	}, "\n"), enhdesc_col)
 
 --[+ +KEYSTONES+ +]--
