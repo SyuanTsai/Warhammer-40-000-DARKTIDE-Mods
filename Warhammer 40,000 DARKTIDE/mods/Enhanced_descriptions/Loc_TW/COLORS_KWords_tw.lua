@@ -123,7 +123,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
 --[+++PSYKER+++]--
 	--[++Precision++]--
 	local prcsn_col = Color[mod:get("precision_text_colour")](255, true) -- Do not translate this line!
-    local Precision_rgb = iu_actit("精確", prcsn_col)
+    local Precision_rgb = iu_actit("精準加成", prcsn_col)
 --[+++OGRYN+++]--
 	--[++Feel No Pain++]--
 	local fnp_col = Color[mod:get("fnp_text_colour")](255, true) -- Do not translate this line!
