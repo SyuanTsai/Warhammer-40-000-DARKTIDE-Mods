@@ -50,7 +50,9 @@
 
 ### 天賦相關
 
-- Peril Resistance - 移動速度增幅
+- Peril Resistance - 反噬抗性
+- Melee Damage Boost - 近戰增幅
+- Movement Speed Boost - 移動速度增幅
 
 ### Weapon Blessing - 武器祝福
 
@@ -145,5 +147,5 @@
 #### 老兵專有名詞
 
 #### 老兵天賦
-
+- Inspiring Presence - 鼓舞人心
 - Focus Target! - 鎖定目標
