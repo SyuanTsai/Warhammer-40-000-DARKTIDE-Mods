@@ -6,7 +6,6 @@
 -- ################################################################
 -- 遊戲體驗改善
 scoreboard
-ovenproof_scoreboard_plugin
 AutoLoot
 Healthbars
 IME_Enable
