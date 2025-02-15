@@ -376,7 +376,7 @@ local localization_templates = {
 	create_template("talent_tree_psy_abil1_001_desc_en", {"loc_talent_psyker_shout_reduces_warp_charge_generation_description"}, {"en"}, function(locale, value) return "{talent_name:%s} now decreases "..COLORS_KWords.Peril_rgb.." Generation by {warp_generation:%s} for each Enemy hit. Up to {max_stacks:%s}"..COLORS_Numbers.pc_rgb..". Lasts {duration:%s} seconds."..TALENTS_Enh_desc.ED_PSY_Ability_1_1_rgb end), -- talent_name: Venting Shriek, warp_generation: 1%, max_stacks: 25, duration: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_abil1_001_desc_fr", {"loc_talent_psyker_shout_reduces_warp_charge_generation_description"}, {"fr"}, function(locale, value) return "À présent, {talent_name:%s} réduit la génération de "..COLORS_KWords_fr.Peril_rgb_fr.." de {warp_generation:%s} pour chaque ennemi touché. Jusqu'à {max_stacks:%s}"..COLORS_Numbers.pc_rgb..". Dure {duration:%s} secondes."..TALENTS_Enh_desc_fr.ED_PSY_Ability_1_1_rgb_fr end),
-			--[+ Traditional Chinese - 鎮靜爆發 +]--
+			--[+ Traditional Chinese - 平靜进發 +]--
 	create_template("talent_tree_psy_abil1_001_desc_tw", {"loc_talent_psyker_shout_reduces_warp_charge_generation_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在會減少{warp_generation:%s}的"..COLORS_KWords_tw.Peril_rgb.."生成量，每擊中一個敵人。最多{max_stacks:%s}"..COLORS_Numbers.pc_rgb.."。持續{duration:%s}秒。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_1_1_rgb end),
 
 	--[+ Ability 1-2 - Warp Rupture +]--
@@ -480,7 +480,7 @@ local localization_templates = {
 	create_template("talent_tree_psy_abil3_005_desc_en", {"loc_talent_psyker_overcharge_infinite_casting_desc"}, {"en"}, function(locale, value) return "{talent_name:%s} now also prevents overloading from "..COLORS_KWords.Perils_rgb.." of the Warp, during its lingering effect."..TALENTS_Enh_desc.ED_PSY_Ability_3_5_rgb end), -- talent_name: Scrier's Gaze
 			--[+ French +]--
 	create_template("talent_tree_psy_abil3_005_desc_fr", {"loc_talent_psyker_overcharge_infinite_casting_desc"}, {"fr"}, function(locale, value) return "{talent_name:%s} empêche désormais également la surcharge due aux "..COLORS_KWords.Perils_rgb.." de Warp, pendant son effet persistant."..TALENTS_Enh_desc_fr.ED_PSY_Ability_3_5_rgb_fr end),
-			--[+ Traditional Chinese - 解放亞空間 +]--
+			--[+ Traditional Chinese - 亞空間突破 +]--
 	create_template("talent_tree_psy_abil3_005_desc_tw", {"loc_talent_psyker_overcharge_infinite_casting_desc"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在也會在其持續效果期間防止來自亞空間的"..COLORS_KWords_tw.Perils_rgb.."過載。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_3_5_rgb end),
 
 --[+ +KEYSTONES+ +]--
@@ -489,102 +489,136 @@ local localization_templates = {
 	create_template("talent_tree_psy_keys1_000_desc_en", {"loc_talent_psyker_souls_desc"}, {"en"}, function(locale, value) return "Killing an Elite or Specialist Enemy gains you a Warp Charge for {duration:%s} seconds, Stacking {stack:%s} times. Your next "..COLORS_KWords.Combat_ability_rgb.." spends all available Warp Charges to reduce the "..COLORS_KWords.Cd_rgb.." of that "..COLORS_KWords.Combat_ability_rgb.." by {cooldown_reduction:%s} per Warp Charge."..TALENTS_Enh_desc.ED_PSY_Keystone_1_rgb end), -- duration: 25, stack: 4, cooldown_reduction: 7.5% -- time(s)->times -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_keys1_000_desc_fr", {"loc_talent_psyker_souls_desc"}, {"fr"}, function(locale, value) return "Éliminer un ennemi Élite ou Spécialiste vous accorde une charge de Siphon de Warp pendant {duration:%s} secondes, Se cumuls jusqu'à {stack:%s} fois. Votre prochaine "..COLORS_KWords_fr.Combat_ability_rgb_fr.." utilise toutes les charges de Siphon de Warp disponibles pour une "..COLORS_KWords_fr.Ability_cd_rgb_fr.." de cette "..COLORS_KWords_fr.Combat_ability_rgb_fr.." de {cooldown_reduction:%s} par charge de Siphon de Warp."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_1_rgb_fr end), -- durée: 25, cumul: 4, réduction du temps de recharge: 7.5% -- colors
+			--[+ Traditional Chinese - 亞空間虹吸 +]--
+	create_template("talent_tree_psy_keys1_000_desc_tw", {"loc_talent_psyker_souls_desc"}, {"zh-tw"}, function(locale, value) return "擊殺精英或專家敵人將為你獲得一個持續{duration:%s}秒的亞空間吸能層，最多可堆疊{stack:%s}次。你的下一個"..COLORS_KWords_tw.Combat_ability_rgb.."將消耗所有可用的亞空間吸能層，以每個亞空間吸能層減少{cooldown_reduction:%s}的"..COLORS_KWords_tw.Cd_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_1_rgb end), -- 持續時間: 25, 堆疊: 4, 冷卻時間減少: 7.5% -- colors
 
 	--[+ Keystone 1-1 - Inner Tranquility +]--
 		-- create_template("talent_tree_psy_keys1_001_en", {"loc_talent_psyker_reduced_warp_charge_cost_venting_speed"}, {"en"}, function(locale, value) return "Inner Tranquility" end),
 	create_template("talent_tree_psy_keys1_001_desc_en", {"loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc"}, {"en"}, function(locale, value) return "{warp_charge_amount:%s} "..COLORS_KWords.Peril_rgb.." Generation Reduction for each Warp Charge."..TALENTS_Enh_desc.ED_PSY_Keystone_1_1_rgb end), -- warp_charge_amount: -6% -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_keys1_001_desc_fr", {"loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc"}, {"fr"}, function(locale, value) return "Réduction de la génération de "..COLORS_KWords_fr.Peril_rgb_fr.." de {warp_charge_amount:%s} pour chaque charge de Siphon de Warp."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_1_1_rgb_fr end), -- quantité de charge Warp: -6% -- colors
+			--[+ Traditional Chinese - 平心靜氣 +]--
+	create_template("talent_tree_psy_keys1_001_desc_tw", {"loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc"}, {"zh-tw"}, function(locale, value) return "每個亞空間吸能層減少{warp_charge_amount:%s}的"..COLORS_KWords_tw.Peril_rgb.."生成量。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_1_1_rgb end),
 
 	--[+ Keystone 1-2 - Essence Harvest +]--
 		-- create_template("talent_tree_psy_keys1_002_en", {"loc_talent_psyker_toughness_regen_on_soul"}, {"en"}, function(locale, value) return "Essence Harvest" end),
 	create_template("talent_tree_psy_keys1_002_desc_en", {"loc_talent_psyker_toughness_regen_on_soul_desc"}, {"en"}, function(locale, value) return COLORS_Numbers.pc_6_rgb.." "..COLORS_KWords.Toughness_rgb.." is replenished per second for {time:%s} seconds after gaining Warp Charge, up to a Maximum of {toughness:%s}. Gaining a new Warp Charge during this time resets the timer."..TALENTS_Enh_desc.ED_PSY_Keystone_1_2_rgb end), -- toughness: 30%, time: 5 --  s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_keys1_002_desc_fr", {"loc_talent_psyker_toughness_regen_on_soul_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.pc_6_rgb.." de "..COLORS_KWords_fr.Toughness_rgb_fr.." est régénérée par seconde pendant {time:%s} secondes après avoir gagné une charge de Siphon de Warp, jusqu'à un maximum de {toughness:%s}. Gagner une nouvelle charge pendant ce temps réinitialise le compte à rebours."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_1_2_rgb_fr end), -- solidité: 30%, temps: 5 --  s->secondes -- couleurs
+			--[+ Traditional Chinese - 吸精奪萃 +]--
+	create_template("talent_tree_psy_keys1_002_desc_tw", {"loc_talent_psyker_toughness_regen_on_soul_desc"}, {"zh-tw"}, function(locale, value) return "每秒補充{time:%s}秒的{toughness:%s}，最多可達{toughness:%s}，在獲得亞空間吸能層後。在此期間獲得新的亞空間吸能層將重置計時器。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_1_2_rgb end), -- solidité: 30%, temps: 5 --  s->秒 -- couleurs
 		
 	--[+ Keystone 1-3 - Empyrean Empowerment +]--
 		-- create_template("talent_tree_psy_keys1_003_en", {"loc_talent_psyker_souls_increase_damage"}, {"en"}, function(locale, value) return "Empyrean Empowerment" end),
 	create_template("talent_tree_psy_keys1_003_desc_en", {"loc_talent_psyker_souls_increase_damage_desc"}, {"en"}, function(locale, value) return "{damage:%s} increase to all Base "..COLORS_KWords.Damage_rgb.." for each Warp Charge."..TALENTS_Enh_desc.ED_PSY_Keystone_1_3_rgb end), -- damage: +4% -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_keys1_003_desc_fr", {"loc_talent_psyker_souls_increase_damage_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." de toute les sources pour chaque charge de Siphon de Warp."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_1_3_rgb_fr end), -- damage: +4% -- colors
+			--[+ Traditional Chinese - 至天高之力 +]--
+	create_template("talent_tree_psy_keys1_003_desc_tw", {"loc_talent_psyker_souls_increase_damage_desc"}, {"zh-tw"}, function(locale, value) return "每個亞空間吸能層增加{damage:%s}所有基礎"..COLORS_KWords_tw.Damage_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_1_3_rgb end), -- damage: +4% -- colors
 
 	--[+ Keystone 1-4 - In Fire Reborn +]--
 		-- create_template("talent_tree_psy_keys1_004_en", {"loc_talent_psyker_warpfire_generates_souls"}, {"en"}, function(locale, value) return "In Fire Reborn" end),
 	create_template("talent_tree_psy_keys1_004_desc_en", {"loc_talent_psyker_warpfire_generates_souls_desc"}, {"en"}, function(locale, value) return "{chance:%s} chance to gain a Warp Charge when you or an Ally kill an enemy who is currently affected by "..COLORS_KWords.Soulblaze_rgb.."."..TALENTS_Enh_desc.ED_PSY_Keystone_1_4_rgb end), -- chance: 10% -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_keys1_004_desc_fr", {"loc_talent_psyker_warpfire_generates_souls_desc"}, {"fr"}, function(locale, value) return "{chance:%s} chance de gagner une charge de Siphon de Warp lorsque vous ou un allié éliminer un ennemi actuellement affecté par "..COLORS_KWords_fr.Soulblaze_rgb_fr.."."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_1_4_rgb_fr end), -- chance: 10% -- colors
+			--[+ Traditional Chinese - 火焰重生 +]--
+	create_template("talent_tree_psy_keys1_004_desc_tw", {"loc_talent_psyker_warpfire_generates_souls_desc"}, {"zh-tw"}, function(locale, value) return "每當你或盟友消滅一個目前受到"..COLORS_KWords_tw.Soulblaze_rgb.."影響的敵人時，有{chance:%s}的機會獲得一個亞空間吸能層。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_1_4_rgb end), -- 機會: 10% -- colors
 
 	--[+ Keystone 1-5 - Psychic Vampire +]--
 		-- create_template("talent_tree_psy_keys1_005_en", {"loc_talent_psyker_souls_on_kill_coop"}, {"en"}, function(locale, value) return "Psychic Vampire" end),
 	create_template("talent_tree_psy_keys1_006_desc_en", {"loc_talent_psyker_souls_on_kill_coop_desc"}, {"en"}, function(locale, value) return "{soul_chance:%s} chance to gain a Warp Charge whenever you or an Ally in Coherency kills an enemy."..TALENTS_Enh_desc.ED_PSY_Keystone_1_5_rgb end), -- soul_chance: 4%
 			--[+ French +]--
 	create_template("talent_tree_psy_keys1_006_desc_fr", {"loc_talent_psyker_souls_on_kill_coop_desc"}, {"fr"}, function(locale, value) return "{soul_chance:%s} chance de gagner une charge de Siphon de Warp chaque fois que vous ou un allié en syntonie éliminés un ennemi."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_1_5_rgb_fr end), -- soul_chance: 4%
+			--[+ Traditional Chinese - 靈能吸血鬼 +]--
+	create_template("talent_tree_psy_keys1_006_desc_tw", {"loc_talent_psyker_souls_on_kill_coop_desc"}, {"zh-tw"}, function(locale, value) return "每當你或一個在協調中的盟友消滅一個敵人時，有{soul_chance:%s}的機會獲得一個亞空間吸能層。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_1_5_rgb end), -- 機會: 4%
 
 	--[+ Keystone 1-6 - Warp Battery +]--
 		-- create_template("talent_tree_psy_keys1_006_en", {"loc_talent_psyker_increased_souls"}, {"en"}, function(locale, value) return "Warp Battery" end),
 	create_template("talent_tree_psy_keys1_005_desc_en", {"loc_talent_psyker_increased_souls_desc"}, {"en"}, function(locale, value) return "You can store up to {soul_amount:%s} Warp Charges."..TALENTS_Enh_desc.ED_PSY_Keystone_1_6_rgb end), -- soul_amount: 6
 			--[+ French +]--
 	create_template("talent_tree_psy_keys1_005_desc_fr", {"loc_talent_psyker_increased_souls_desc"}, {"fr"}, function(locale, value) return "Vous pouvez stocker jusqu'à {soul_amount:%s} charges de Siphon de Warp."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_1_6_rgb_fr end), -- soul_amount: 6
+			--[+ Traditional Chinese - 亞空間電池 +]--
+	create_template("talent_tree_psy_keys1_005_desc_tw", {"loc_talent_psyker_increased_souls_desc"}, {"zh-tw"}, function(locale, value) return "你可以儲存多達{soul_amount:%s}個亞空間吸能層。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_1_6_rgb end), -- soul_amount: 6
 
 	--[+ Keystone 2 - Empowered Psionics +]--
 		-- create_template("talent_tree_psy_keys2_000_en", {"loc_talent_psyker_empowered_ability"}, {"en"}, function(locale, value) return "Empowered Psionics" end),
 	create_template("talent_tree_psy_keys2_000_desc_en", {"loc_talent_psyker_empowered_ability_description"}, {"en"}, function(locale, value) return "Kills have a {chance:%s} chance to Empower your next Blitz.\nEmpowered {blitz_one:%s}:\n{smite_damage:%s} "..COLORS_KWords.Damage_rgb..",\n{smite_cost:%s} "..COLORS_KWords.Peril_rgb.." Cost Reduction,\n{smite_attack_speed:%s} Cast time Reduction."..TALENTS_Enh_desc.ED_PSY_Keystone_2_0_1_rgb.."\nEmpowered {blitz_two:%s}:\n{chain_lightning_damage:%s} "..COLORS_KWords.Damage_rgb..",\n{chain_lightning_jump_time_multiplier:%s} faster spread between Enemies."..TALENTS_Enh_desc.ED_PSY_Keystone_2_0_2_rgb.."\nEmpowered {blitz_three:%s}:\n{throwing_knives_cost:%s} "..COLORS_KWords.Peril_rgb.." Cost Reduction,\nBase "..COLORS_KWords.Damage_rgb.." increase from {throwing_knives_old_damage:%s} to {throwing_knives_new_damage:%s}.\nDoes not consume any charges."..TALENTS_Enh_desc.ED_PSY_Keystone_2_0_3_rgb end), -- chance: 7.5%, blitz_one: Brain Rupture, smite_cost: 100%, smite_attack_speed: 50%, smite_damage: +50%, blitz_two: Smite, chain_lightning_damage: +200%, chain_lightning_jump_time_multiplier: 50%, blitz_three: Assail, throwing_knives_cost: 100%, throwing_knives_old_damage: 100, throwing_knives_new_damage: 150 -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_keys2_000_desc_fr", {"loc_talent_psyker_empowered_ability_description"}, {"fr"}, function(locale, value) return "Les éliminations ont {chance:%s} de chances de renforcer votre prochain Blitz.\n{blitz_one:%s} augmenté:\n{smite_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr..",\n{smite_cost:%s} de Réduction du coût de "..COLORS_KWords_fr.Peril_rgb_fr..",\n{smite_attack_speed:%s} de Vitesse de chargement."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_2_0_1_rgb_fr.."\n{blitz_two:%s} augmenté:\n{chain_lightning_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr..",\n{chain_lightning_jump_time_multiplier:%s} de vitesse de propagation entre les ennemis."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_2_0_2_rgb_fr.."\n{blitz_three:%s} augmenté:\n{throwing_knives_cost:%s} de Réduction du coût de "..COLORS_KWords_fr.Peril_rgb_fr..",\nAugmentation des dégâts de base de {throwing_knives_old_damage:%s} à {throwing_knives_new_damage:%s}.\nNe consomme aucun projectile."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_2_0_3_rgb_fr end), -- chance: 7.5%, blitz_one: Rupture cérébrale, smite_cost: 100%, smite_attack_speed: 50%, smite_damage: +50%, blitz_two: Frappe, chain_lightning_damage: +200%, chain_lightning_jump_time_multiplier: 50%, blitz_three: Assaillir, throwing_knives_cost: 100%, throwing_knives_old_damage: 100, throwing_knives_new_damage: 150 -- colors
+			--[+ Traditional Chinese - 靈能強化 +]--
+	create_template("talent_tree_psy_keys2_000_desc_tw", {"loc_talent_psyker_empowered_ability_description"}, {"zh-tw"}, function(locale, value) return "擊殺有{chance:%s}的機會強化你的下一個閃電。\n強化{blitz_one:%s}:\n{smite_damage:%s} "..COLORS_KWords_tw.Damage_rgb.."，\n{smite_cost:%s} "..COLORS_KWords_tw.Peril_rgb.."成本減少，\n{smite_attack_speed:%s} 施放時間減少。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_2_0_1_rgb.."\n強化{blitz_two:%s}:\n{chain_lightning_damage:%s} "..COLORS_KWords_tw.Damage_rgb.."，\n{chain_lightning_jump_time_multiplier:%s} 敵人之間的傳播速度更快。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_2_0_2_rgb.."\n強化{blitz_three:%s}:\n{throwing_knives_cost:%s} "..COLORS_KWords_tw.Peril_rgb.."成本減少，\n基礎"..COLORS_KWords_tw.Damage_rgb.."從{throwing_knives_old_damage:%s}增加到{throwing_knives_new_damage:%s}。\n不消耗任何充電。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_2_0_3_rgb end), -- chance: 7.5%, blitz_one: 腦裂，smite_cost: 100%, smite_attack_speed: 50%, smite_damage: +50%, blitz_two: 雷擊，chain_lightning_damage: +200%, chain_lightning_jump_time_multiplier: 50%, blitz_three: 突襲，throwing_knives_cost: 100%, throwing_knives_old_damage: 100, throwing_knives_new_damage: 150 -- colors
 
 	--[+ Keystone 2-1 - Bio-Lodestone +]--
 		-- create_template("talent_tree_psy_keys2_001_en", {"loc_talent_psyker_increase_empower_chain_lighting_chance"}, {"en"}, function(locale, value) return "Bio-Lodestone" end),
 	create_template("talent_tree_psy_keys2_001_desc_en", {"loc_talent_psyker_increase_empower_chain_lighting_chance_description"}, {"en"}, function(locale, value) return "Increases the chance to gain {talent_name:%s} on Kill from {proc_chance_before:%s} to {proc_chance_after:%s}." end), -- talent_name: Empowered Psionics, proc_chance_before: 7.5%, proc_chance_after: 12.5%
 			--[+ French +]--
 	create_template("talent_tree_psy_keys2_001_desc_fr", {"loc_talent_psyker_increase_empower_chain_lighting_chance_description"}, {"fr"}, function(locale, value) return "Augmente les chances de gagner {talent_name:%s} lors d'une élimination de {proc_chance_before:%s} à {proc_chance_after:%s}." end), -- talent_name: Psioniques Renforcés, proc_chance_before: 7.5%, proc_chance_after: 12.5%
+			--[+ Traditional Chinese - 生物磁石 +]--
+	create_template("talent_tree_psy_keys2_001_desc_tw", {"loc_talent_psyker_increase_empower_chain_lighting_chance_description"}, {"zh-tw"}, function(locale, value) return "將擊殺時獲得{talent_name:%s}的機率從{proc_chance_before:%s}增加到{proc_chance_after:%s}。" end), -- talent_name: Empowered Psionics, proc_chance_before: 7.5%, proc_chance_after: 12.5%
 
 	--[+ Keystone 2-2 - Psychic Leeching +]--
 		-- create_template("talent_tree_psy_keys2_002_en", {"loc_talent_psyker_empowered_chain_lightnings_replenish_toughness_to_allies"}, {"en"}, function(locale, value) return "Psychic Leeching" end),
 	create_template("talent_tree_psy_keys2_002_desc_en", {"loc_talent_psyker_empowered_chain_lightnings_replenish_toughness_to_allies_description"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_rgb.." Replenishment for you and Allies in Coherency when using your Blitz while {talent_name:%s} is active."..TALENTS_Enh_desc.ED_PSY_Keystone_2_2_rgb end), -- talent_name: Empowered Psionics, toughness: 15% -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_keys2_002_desc_fr", {"loc_talent_psyker_empowered_chain_lightnings_replenish_toughness_to_allies_description"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." pour vous et vos alliés en syntonie lorsque vous utilisez votre Blitz alors que {talent_name:%s} est actif."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_2_2_rgb_fr end), -- talent_name: Psioniques Renforcés, toughness: 15% -- colors
+			--[+ Traditional Chinese - 吸血閃電 +]--
+	create_template("talent_tree_psy_keys2_002_desc_tw", {"loc_talent_psyker_empowered_chain_lightnings_replenish_toughness_to_allies_description"}, {"zh-tw"}, function(locale, value) return "當使用你的閃電時，你和協調中的盟友將獲得{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."補充，當{talent_name:%s}處於活動狀態時。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_2_2_rgb end), -- talent_name: Empowered Psionics, toughness: 15% -- colors
 
    --[+ Keystone 2-3 - Overpowering Souls +]--
 		-- create_template("talent_tree_psy_keys2_003_en", {"loc_talent_psyker_empowered_ability_on_elite_kills"}, {"en"}, function(locale, value) return "Overpowering Souls" end),
 	create_template("talent_tree_psy_keys2_003_desc_en", {"loc_talent_psyker_empowered_ability_on_elite_kills_description"}, {"en"}, function(locale, value) return "Guaranteed chance to gain {talent_name:%s} on Elite Kills." end), -- talent_name: Empowered Psionics
 			--[+ French +]--
 	create_template("talent_tree_psy_keys2_003_desc_fr", {"loc_talent_psyker_empowered_ability_on_elite_kills_description"}, {"fr"}, function(locale, value) return "Chance garantie de gagner {talent_name:%s} lors d'une élimination d'élite." end), -- talent_name: Psioniques Renforcés
+			--[+ Traditional Chinese - 吞靈強擊 +]--
+	create_template("talent_tree_psy_keys2_003_desc_tw", {"loc_talent_psyker_empowered_ability_on_elite_kills_description"}, {"zh-tw"}, function(locale, value) return "擊殺精英時必定獲得{talent_name:%s}。" end), -- talent_name: Empowered Psionics
 
 	--[+ Keystone 2-4 - Charged Up +]--
 		-- create_template("talent_tree_psy_keys2_004_en", {"loc_talent_psyker_increased_empowered_chain_lightning_stacks"}, {"en"}, function(locale, value) return "Charged Up" end),
 	create_template("talent_tree_psy_keys2_004_desc_en", {"loc_talent_psyker_increased_empowered_chain_lightning_stacks_description"}, {"en"}, function(locale, value) return "You can now hold up to {max_stacks:%s} Stacks of {talent_name:%s}." end), -- max_stacks: 3, talent_name: Empowered Psionics
 			--[+ French +]--
 	create_template("talent_tree_psy_keys2_004_desc_fr", {"loc_talent_psyker_increased_empowered_chain_lightning_stacks_description"}, {"fr"}, function(locale, value) return "Vous pouvez maintenant cumuler jusqu'à {max_stacks:%s} charges de {talent_name:%s}." end), -- max_stacks: 3, talent_name: Psioniques Renforcés
+			--[+ Traditional Chinese - 充能完畢 +]--
+	create_template("talent_tree_psy_keys2_004_desc_tw", {"loc_talent_psyker_increased_empowered_chain_lightning_stacks_description"}, {"zh-tw"}, function(locale, value) return "你現在可以持有多達{max_stacks:%s}個{talent_name:%s}疊加。" end), -- max_stacks: 3, talent_name: Empowered Psionics
 
 	--[+ Keystone 3 - Disrupt Destiny +]--
 		-- create_template("talent_tree_psy_keys3_000_en", {"loc_talent_psyker_marked_enemies_passive"}, {"en"}, function(locale, value) return "Disrupt Destiny" end),
 	create_template("talent_tree_psy_keys3_000_desc_en", {"loc_talent_psyker_marked_enemies_passive_new_desc"}, {"en"}, function(locale, value) return "Every second, Enemies within "..COLORS_Numbers.n_40_rgb.." meters have a chance of being Marked. Killing a Marked Enemy Replenishes {toughness:%s} "..COLORS_KWords.Toughness_rgb..", grants {move_speed:%s} Movement Speed for {move_speed_duration:%s} seconds, and adds a "..COLORS_KWords.Precision_rgb.." Bonus for {bonus_duration} seconds.\nEach "..COLORS_KWords.Precision_rgb.." Bonus grants: {base_damage:%s} "..COLORS_KWords.Damage_rgb..", {crit_damage:%s} "..COLORS_KWords.Crit_dmg_r_rgb.." and {weakspot_damage:%s} "..COLORS_KWords.Weakspot_dmg_rgb..".\n"..COLORS_KWords.Precision_rgb.." Bonus Stacks {bonus_stacks:%s} times and when the duration ends, one Stack is removed and the duration is refreshed."..TALENTS_Enh_desc.ED_PSY_Keystone_3_rgb end), -- radius: 25->40, toughness: 10%, move_speed: +20%, move_speed_duration: 2.5, bonus_duration 4, base_damage: +1%, crit_damage: +2%, weakspot_damage: +2.5%, bonus_stacks: 15 -- m->meters -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_keys3_000_desc_fr", {"loc_talent_psyker_marked_enemies_passive_new_desc"}, {"fr"}, function(locale, value) return "Chaque seconde, les ennemis dans un rayon de "..COLORS_Numbers.n_40_rgb.." mètres ont une chance d'être marqués. Éliminer un ennemi marqué régénère {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr..", augmente la vitesse de déplacement de {move_speed:%s} pendant {move_speed_duration:%s} secondes et ajoute un cumule de "..COLORS_KWords_fr.Precision_rgb_fr.." pendant {bonus_duration} secondes.\nChaque cumule de "..COLORS_KWords_fr.Precision_rgb_fr.." octroie : {base_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr..", {crit_damage:%s} de "..COLORS_KWords_fr.Crit_dmg_r_rgb_fr.." et {weakspot_damage:%s} de "..COLORS_KWords_fr.Weakspot_dmg_rgb_fr..". Le bonus de "..COLORS_KWords_fr.Precision_rgb_fr.." se cumule jusqu'à {bonus_stacks:%s} fois et lorsque la durée expire, une charge est retirée et la durée est rafraîchie."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_3_rgb_fr end), -- radius: 25->40, toughness: 10%, move_speed: +20%, move_speed_duration: 2.5, bonus_duration 4, base_damage: +1%, crit_damage: +2%, weakspot_damage: +2.5%, bonus_stacks: 15 -- m->mètres -- s->secondes -- colors
+			--[+ Traditional Chinese - 擾動命運 +]--
+	create_template("talent_tree_psy_keys3_000_desc_tw", {"loc_talent_psyker_marked_enemies_passive_new_desc"}, {"zh-tw"}, function(locale, value) return "每秒，{radius:%s}米內的敵人有機會被標記。消滅被標記的敵人將補充{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."，為{move_speed_duration:%s}秒提供{move_speed:%s}的移動速度，並在{bonus_duration}秒內添加一個"..COLORS_KWords_tw.Precision_rgb.."累積。\n每個"..COLORS_KWords_tw.Precision_rgb.."累積提供：{base_damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."，{crit_damage:%s}的"..COLORS_KWords_tw.Crit_dmg_r_rgb.."和{weakspot_damage:%s}的"..COLORS_KWords_tw.Weakspot_dmg_rgb.."。\n"..COLORS_KWords_tw.Precision_rgb.."累積最多{bonus_stacks:%s}次，當持續時間結束時，將移除一個累積並刷新持續時間。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_3_rgb end), -- radius: 25->40, toughness: 10%, move_speed: +20%, move_speed_duration: 2.5, bonus_duration 4, base_damage: +1%, crit_damage: +2%, weakspot_damage: +2.5%, bonus_stacks: 15 -- m->米 -- s->秒 -- colors
 
 	--[+ Keystone 3-1 - Perfectionism +]--
 		-- create_template("talent_tree_psy_keys3_001_en", {"loc_talent_psyker_mark_increased_max_stacks"}, {"en"}, function(locale, value) return "Perfectionism" end),
 	create_template("talent_tree_psy_keys3_001_desc_en", {"loc_talent_psyker_mark_increased_max_stacks_description"}, {"en"}, function(locale, value) return "Maximum "..COLORS_KWords.Precision_rgb.." Bonus Stacks are increased from {stacks_previous:%s} to {stacks_after:%s}." end), -- stacks_previous: 15, stacks_after: 25 -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_keys3_001_desc_fr", {"loc_talent_psyker_mark_increased_max_stacks_description"}, {"fr"}, function(locale, value) return "Le nombre maximum de charges de cumuls de "..COLORS_KWords_fr.Precision_rgb_fr.." est augmenté de {stacks_previous:%s} à {stacks_after:%s}." end), -- stacks_previous: 15, stacks_after: 25 -- colors
+			--[+ Traditional Chinese - 完美主義 +]--
+	create_template("talent_tree_psy_keys3_001_desc_tw", {"loc_talent_psyker_mark_increased_max_stacks_description"}, {"zh-tw"}, function(locale, value) return "最大的"..COLORS_KWords_tw.Precision_rgb.."累積堆疊從{stacks_previous:%s}增加到{stacks_after:%s}。" end), -- stacks_previous: 15, stacks_after: 25 -- colors
 
 	--[+ Keystone 3-2 - Purloin Providence +]--
 		-- create_template("talent_tree_psy_keys3_002_en", {"loc_talent_psyker_mark_kills_can_vent"}, {"en"}, function(locale, value) return "Purloin Providence" end),
 	create_template("talent_tree_psy_keys3_002_desc_en", {"loc_talent_psyker_mark_kills_can_vent_description"}, {"en"}, function(locale, value) return "{chance:%s} chance to instantly Quell {warp_charge_percentage:%s} of your "..COLORS_KWords.Peril_rgb.." when killing enemies marked by {talent_name:%s}."..TALENTS_Enh_desc.ED_PSY_Keystone_3_2_rgb end), -- talent_name: Disrupt Destiny, chance: 20%, warp_charge_percentage: 15% -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_keys3_002_desc_fr", {"loc_talent_psyker_mark_kills_can_vent_description"}, {"fr"}, function(locale, value) return "{chance:%s} chance de réduire instantanément {warp_charge_percentage:%s} de votre "..COLORS_KWords_fr.Peril_rgb_fr.." en tuant des ennemis marqués par {talent_name:%s}."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_3_2_rgb_fr end), -- talent_name: Disrupt Destiny, chance: 20%, warp_charge_percentage: 15% -- colors
+			--[+ Traditional Chinese - 盜竊天命 +]--
+	create_template("talent_tree_psy_keys3_002_desc_tw", {"loc_talent_psyker_mark_kills_can_vent_description"}, {"zh-tw"}, function(locale, value) return "擊殺被{talent_name:%s}標記的敵人時，有{chance:%s}的機會立即消除你{warp_charge_percentage:%s}的"..COLORS_KWords_tw.Peril_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_3_2_rgb end), -- talent_name: Disrupt Destiny, chance: 20%, warp_charge_percentage: 15% -- colors
 
 	--[+ Keystone 3-3 - Lingering Influence +]--
 		-- create_template("talent_tree_psy_keys3_003_en", {"loc_talent_psyker_mark_increased_duration"}, {"en"}, function(locale, value) return "Lingering Influence" end),
 	create_template("talent_tree_psy_keys3_003_desc_en", {"loc_talent_psyker_mark_increased_duration_description"}, {"en"}, function(locale, value) return "Increase the duration of {talent_name:%s} from {duration_previous:%s} to {duration_after:%s} seconds." end), -- talent_name: Disrupt Destiny, duration_previous: 15, duration_after: 10 -- s->seconds
 			--[+ French +]--
 	create_template("talent_tree_psy_keys3_003_desc_fr", {"loc_talent_psyker_mark_increased_duration_description"}, {"fr"}, function(locale, value) return "Augmente la durée de {talent_name:%s} de {duration_previous:%s} à {duration_after:%s} secondes." end), -- talent_name: Disrupt Destiny, duration_previous: 15, duration_after: 10 -- s->seconds
+			--[+ Traditional Chinese - 持久影響 +]--
+	create_template("talent_tree_psy_keys3_003_desc_tw", {"loc_talent_psyker_mark_increased_duration_description"}, {"zh-tw"}, function(locale, value) return "將{talent_name:%s}的持續時間從{duration_previous:%s}增加到{duration_after:%s}秒。" end), -- talent_name: Disrupt Destiny, duration_previous: 15, duration_after: 10 -- s->秒
 
 	--[+ Keystone 3-4 - Cruel Fortune +]--
 		-- create_template("talent_tree_psy_keys3_004_en", {"loc_talent_psyker_mark_weakspot_stacks"}, {"en"}, function(locale, value) return "Cruel Fortune" end),
 	create_template("talent_tree_psy_keys3_004_desc_en", {"loc_talent_psyker_mark_weakspot_stacks_description"}, {"en"}, function(locale, value) return COLORS_KWords.Weakspot_rgb.." Kills grant {stacks:%s} additional Stacks of {talent_name:%s}."..TALENTS_Enh_desc.ED_PSY_Keystone_3_4_rgb end), -- stacks: 2 talent_name: Disrupt Destiny -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_keys3_004_desc_fr", {"loc_talent_psyker_mark_weakspot_stacks_description"}, {"fr"}, function(locale, value) return "Les éliminations sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." octroient {stacks:%s} cumuls supplémentaires de {talent_name:%s}."..TALENTS_Enh_desc_fr.ED_PSY_Keystone_3_4_rgb_fr end), -- stacks: 2 talent_name: Disrupt Destiny -- colors
+			--[+ Traditional Chinese - 殘忍命運 +]--
+	create_template("talent_tree_psy_keys3_004_desc_tw", {"loc_talent_psyker_mark_weakspot_stacks_description"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Weakspot_rgb.."擊殺將獲得{stacks:%s}個額外的{talent_name:%s}堆疊。"..TALENTS_Enh_desc_tw.ED_PSY_Keystone_3_4_rgb end), -- stacks: 2 talent_name: Disrupt Destiny -- colors
 
 --[+ +PASSIVES+ +]--
 	--[+ Passive 1 - Soulstealer +]--

@@ -506,31 +506,31 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Keystone_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		can_be_refr_dur_active_dur,
-		"- 與珍品提供的戰鬥技能冷卻，以及可使技能冷卻縮短 20% 的任務事件（mutators）相加疊加。",
-		"- 例如，當靈能者擁有「先知之眼」光環（-0.1）、4 個亞空間充能和 12% 珍品提供的戰鬥技能冷卻（-0.12）時使用「念力護盾」，其最大冷卻時間由珍品屬性和光環首先減少至 40+40x(-0.1-0.12)=31.2 秒。此最大冷卻時間再由亞空間虹吸進一步減少至 31.2-31.2x(0.075x4)=21.84 秒（HUD 四捨五入：22 秒）。",
-		ppp___ppp,
-		"- Interacts with Combat Ability Regeneration from Curios and other Maximum Cooldown Reductions from \"Seer's Presence\" or the mission mutators that reduce Ability cooldowns by 20%.",
-		"- For example, when Psyker with \"Seer's Presence\" aura (-0.1), 4 Warp charges and 12% Combat Ability Regeneration (-0.12) from Curios uses \"Telekine Shield\", its Maximum cooldown of 40 seconds is first reduced by Curio stat and aura to 40+40x(-0.1-0.12)=31.2 seconds. This Max Cooldown is then considered by Warp Siphon and further reduced by the Warp charge-based reduction to 31.2-31.2x(0.075x4)=21.84 seconds (HUD rounds: 22 seconds).",
+		"- 與珍品提供的戰鬥技能冷卻，以及可使技能冷卻縮短20%的任務事件（mutators）相加疊加。",
+		"- 例如，當靈能者擁有「先知之眼」光環（-0.1）、4個亞空間充能和12%珍品提供的戰鬥技能冷卻（-0.12）時使用「念力護盾」，其最大冷卻時間由珍品屬性和光環首先減少至40+40x(-0.1-0.12)=31.2秒。此最大冷卻時間再由亞空間虹吸進一步減少至31.2-31.2x(0.075x4)=21.84 秒（HUD 四捨五入：22 秒）。",
+		-- ppp___ppp,
+		-- "- Interacts with Combat Ability Regeneration from Curios and other Maximum Cooldown Reductions from \"Seer's Presence\" or the mission mutators that reduce Ability cooldowns by 20%.",
+		-- "- For example, when Psyker with \"Seer's Presence\" aura (-0.1), 4 Warp charges and 12% Combat Ability Regeneration (-0.12) from Curios uses \"Telekine Shield\", its Maximum cooldown of 40 seconds is first reduced by Curio stat and aura to 40+40x(-0.1-0.12)=31.2 seconds. This Max Cooldown is then considered by Warp Siphon and further reduced by the Warp charge-based reduction to 31.2-31.2x(0.075x4)=21.84 seconds (HUD rounds: 22 seconds).",
 		-- "- Does not interact with Concentration Stimm's remaining Cooldown Reduction effect which increases a character's base Ability Cooldown rate of 1 second per second by additional 3 seconds per second.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-1 - Inner Tranquility +]--
 	local ED_PSY_Keystone_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 與自身線性疊加（1 個亞空間充能 = 6% 反噬消耗減少，2 個 = 12%，3 個 = 18%，等等），並與「骨折後遺症」、「亞空間意志」、「動能共鳴」、小型反噬抗性節點和戰鬥興奮劑的反噬消耗減少效果做乘法疊加。",
+		"- 與自身線性疊加（1 個亞空間充能=6% 反噬消耗減少，2 個 = 12%，3 個 = 18%，等等），並與「骨折後遺症」、「亞空間意志」、「動能共鳴」、小型反噬抗性節點和戰鬥興奮劑的反噬消耗減少效果做乘法疊加。",
 		"- 因為使用戰鬥技能時所有亞空間充能都會消失，此天賦無法立即與「平心靜氣」和「現實錨點」疊加（除非靈能者在其持續期間內重新獲得亞空間充能）。",
-		ppp___ppp,
-		"- Stacks linearly with itself (1 Warp charge = 6% Peril Cost Reduction, 2 = 12%, 3 = 18%, etc) and multiplicatively with other Peril Cost Reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
-		"- Because all Warp charges are dropped when using a Combat Ability, the Talent cannot immediately Stack with \"Becalming Eruption\" and \"Reality Anchor\" (unless Psyker regains Warp charges during their active duration).",
+		-- ppp___ppp,
+		-- "- Stacks linearly with itself (1 Warp charge = 6% Peril Cost Reduction, 2 = 12%, 3 = 18%, etc) and multiplicatively with other Peril Cost Reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
+		-- "- Because all Warp charges are dropped when using a Combat Ability, the Talent cannot immediately Stack with \"Becalming Eruption\" and \"Reality Anchor\" (unless Psyker regains Warp charges during their active duration).",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-2 - Essence Harvest +]--
 	local ED_PSY_Keystone_1_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 不會增加韌性回復量。",
-		ppp___ppp,
-		"- Does not increase the amount of Toughness replenished.",
 		z_eff_of_this_tougn_rep,
+		-- ppp___ppp,
+		-- "- Does not increase the amount of Toughness replenished.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-3 - Empyrean Empowerment +]--
@@ -544,25 +544,25 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 當一個被靈魂之火影響的敵人被靈魂之火、靈能者或盟友擊殺時，你會獲得一個亞空間充能。",
 		"- 此效果無距離限制，並且所有裝備此天賦的靈能者都能受益。",
-		ppp___ppp,
-		"- You gain a Warp charge when an enemy who is currently affected by Soulblaze is killed either by Soulblaze, by Psyker, or by an ally.",
-		"- This effect has no range limit and benefits all Psykers who have this talent equipped.",
+		-- ppp___ppp,
+		-- "- You gain a Warp charge when an enemy who is currently affected by Soulblaze is killed either by Soulblaze, by Psyker, or by an ally.",
+		-- "- This effect has no range limit and benefits all Psykers who have this talent equipped.",
 	}, "\n"), enhdesc_col)
 	
 	--[+ Keystone 1-5 - Psychic Vampire +]--
 	local ED_PSY_Keystone_1_5_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 如果多個靈能者在彼此的協同範圍內，當其中一個觸發天賦時，所有靈能者都會獲得一個亞空間充能。",
-		ppp___ppp,
-		"- If multiple Psykers are in Coherency with each other, all of them get a Warp charge when the Talent procs for one of them.",
+		-- ppp___ppp,
+		-- "- If multiple Psykers are in Coherency with each other, all of them get a Warp charge when the Talent procs for one of them.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-6 - Warp Battery +]--
 	local ED_PSY_Keystone_1_6_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 將靈能者可持有的亞空間充能最大數量從4增加到6。",
-		ppp___ppp,
-		"- Increases the Max amount of Warp charges Psyker can hold from 4 to 6.",
+		-- ppp___ppp,
+		-- "- Increases the Max amount of Warp charges Psyker can hold from 4 to 6.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2 - Empowered Psionics - Empowered Brain Rupture +]--
@@ -572,10 +572,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與其他適用的傷害增益做加法疊加。",
 		"- 與「動能共鳴」做加法疊加，並與敏捷興奮劑的兩個充能時間減少效果做乘法/加法疊加。",
 		"_______________________________",
-		ppp___ppp,
-		"- Stacks additively with other applicable Damage buffs.",
-		"- Stacking additively with \"Kinetic Resonance\", and multiplicatively/additively with Celerity Stimm's two charge time reductions.",
-		"_______________________________",
+		-- ppp___ppp,
+		-- "- Stacks additively with other applicable Damage buffs.",
+		-- "- Stacking additively with \"Kinetic Resonance\", and multiplicatively/additively with Celerity Stimm's two charge time reductions.",
+		-- "_______________________________",
 	}, "\n"), enhdesc_col)
 	
 
@@ -586,10 +586,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與其他適用的傷害增益做加法疊加。",
 		"- 與敏捷興奮劑的相關增益做乘法疊加。",
 		"_______________________________",
-		ppp___ppp,
-		"- Stacks additively with other applicable Damage buffs.",
-		"- Stacks multiplicatively with related buff from Celerity Stimm.",
-		"_______________________________",
+		-- ppp___ppp,
+		-- "- Stacks additively with other applicable Damage buffs.",
+		-- "- Stacks multiplicatively with related buff from Celerity Stimm.",
+		-- "_______________________________",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2 - Empowered Psionics - Empowered Assail +]--
@@ -598,9 +598,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		-- "- Consumes Stacks per thrown projectile.",
 		"- 允許在100%反噬時施放。",
 		"- 目標數量加倍。",
-		ppp___ppp,
-		"- Allows casting at 100% Peril.",
-		"- Double the number of targets.",
+		-- ppp___ppp,
+		-- "- Allows casting at 100% Peril.",
+		-- "- Double the number of targets.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2-1 - Bio-Lodestone +]--
@@ -611,9 +611,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 當「顱腦崩裂」命中、當「懲戒」開始施放或充能後，以及當「靈能攻擊」生成投射物時觸發。",
 		z_eff_of_this_tougn_rep,
-		ppp___ppp,
-		"- Procs when \"Brain Rupture\" hits, when \"Smite\" starts casting or after charging, and when \"Assail\" spawns a projectile.",
-		z_eff_of_this_tougn_rep,
+		-- ppp___ppp,
+		-- "- Procs when \"Brain Rupture\" hits, when \"Smite\" starts casting or after charging, and when \"Assail\" spawns a projectile.",
+		-- z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2-3 - Overpowering Souls +]--
@@ -630,12 +630,12 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與「堅毅」、「亞空間騎士」、移動速度節點和武器祝福如「提速」的移動速度增益相加疊加。",
 		"- 精確加成與其他相關的傷害增益做加法疊加。",
 		"- 可以在持續時間內通過擊殺或成功踉蹌標記的敵人，或通過靈魂之火、燃燒和流血對標記目標造成的傷害來刷新。",
-		ppp___ppp,
-		"- Dealing damage to Marked enemies refreshes the Talent's duration.",
-		"- Valid targets are: Dreg/Scab Bruisers, Dreg/Scab Stalkers, Scab Shooters, Ragers, Gunners, Shotgunners and Maulers.",
-		"- Stacks additively with Movement Speed buffs from \"Mettle\", \"Warp Speed\", Movement Speed node and Weapon Blessings like \"Rev it Up\".",
-		"- Precision bonuses Stacks additively with other related Damage buffs.",
-		"- Can be refreshed during active duration either by killing or successfully Staggering the Marked enemy or by Damage ticks from Soulblaze, Burn and Bleed on the Marked target.",
+		-- ppp___ppp,
+		-- "- Dealing damage to Marked enemies refreshes the Talent's duration.",
+		-- "- Valid targets are: Dreg/Scab Bruisers, Dreg/Scab Stalkers, Scab Shooters, Ragers, Gunners, Shotgunners and Maulers.",
+		-- "- Stacks additively with Movement Speed buffs from \"Mettle\", \"Warp Speed\", Movement Speed node and Weapon Blessings like \"Rev it Up\".",
+		-- "- Precision bonuses Stacks additively with other related Damage buffs.",
+		-- "- Can be refreshed during active duration either by killing or successfully Staggering the Marked enemy or by Damage ticks from Soulblaze, Burn and Bleed on the Marked target.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 3-1 - Perfectionism +]--
@@ -644,9 +644,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Keystone 3-2 - Purloin Providence +]--
 	local ED_PSY_Keystone_3_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 有 2% 的機率在同一次擊殺中觸發「戰鬥冥想」，總共移除 25% 的反噬。",
-		ppp___ppp,
-		"- There is a 2% chance that the Talent procs on the same kill alongside \"Battle Meditation\" removing 25% Peril total.",
+		"- 有2%的機率在同一次擊殺中觸發「戰鬥冥想」，總共移除 25% 的反噬。",
+		-- ppp___ppp,
+		-- "- There is a 2% chance that the Talent procs on the same kill alongside \"Battle Meditation\" removing 25% Peril total.",
 	}, "\n"), enhdesc_col)
 	
 
@@ -657,8 +657,8 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Keystone_3_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 觸發於近戰、遠程、「顱腦崩裂」或「靈能攻擊」攻擊。",
-		ppp___ppp,
-		"- Procs on Melee, Ranged, \"Brain Rupture\" or \"Assail\" attacks.",
+		-- ppp___ppp,
+		-- "- Procs on Melee, Ranged, \"Brain Rupture\" or \"Assail\" attacks.",
 	}, "\n"), enhdesc_col)
 	
 
