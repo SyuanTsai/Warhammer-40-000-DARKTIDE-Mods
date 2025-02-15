@@ -20,7 +20,7 @@
 
 ### 怪物相關
 
-- Gunners - 槍手
+- Gunners - 砲手
 - Reaper - 收割者
 - Sniper - 狙擊手
 - Pox Hound - 瘟疫獵犬
