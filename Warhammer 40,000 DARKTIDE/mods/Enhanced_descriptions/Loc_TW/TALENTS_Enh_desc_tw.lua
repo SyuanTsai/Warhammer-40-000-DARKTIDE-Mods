@@ -233,12 +233,12 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Aura 2 - Seer's Presence +]--
 	local ED_PSY_Aura_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 與珍品提供的戰鬥技能回復，以及可使技能冷卻縮短 20% 的任務事件（mutators）相加疊加。",
+		"- 與珍品提供的戰鬥技能回復，以及可使技能冷卻縮短 20% 的任務事件相加疊加。",
 		"- 這會將「靈能尖嘯」/「靈能學者之怒」的最大冷卻時間減少至 27 秒、占卜者的注視」減少至 22.5 秒、「念力護盾」減少至 36 秒。",
 		doesnt_stack_aura_psy,
-		ppp___ppp,
-		"- Stacks additively with Combat Ability Regeneration from Curios and the mission mutators that reduce Ability Cooldowns by 20%.",
-		"- This Reduces the Cooldowns of \"Venting Shriek\"/\"Psykinetic's Wrath\" to 27 seconds, for \"Scrier's Gaze\" to 22.5 seconds, and for \"Telekine Shield\" to 36 seconds.",
+		-- ppp___ppp,
+		-- "- Stacks additively with Combat Ability Regeneration from Curios and the mission mutators that reduce Ability Cooldowns by 20%.",
+		-- "- This Reduces the Cooldowns of \"Venting Shriek\"/\"Psykinetic's Wrath\" to 27 seconds, for \"Scrier's Gaze\" to 22.5 seconds, and for \"Telekine Shield\" to 36 seconds.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Aura 3 - Prescience +]--
@@ -247,9 +247,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 適用於所有能夠爆擊的攻擊。",
 		"- 與其他爆擊機率來源相加疊加。",
 		doesnt_stack_aura_psy,
-		ppp___ppp,
-		"- Applies to all attacks that can Crit.",
-		"- Stacks additively with other sources of Crit Chance.",
+		-- ppp___ppp,
+		-- "- Applies to all attacks that can Crit.",
+		-- "- Stacks additively with other sources of Crit Chance.",
 	}, "\n"), enhdesc_col)
 
 --[+ +ABILITIES+ +]--
@@ -257,12 +257,12 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Ability_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 可以用來防止靈能者自我爆炸。",
-		"- 亞空間震波能穿透物體，範圍最遠可達 30 公尺，因此你可以透過牆壁將瘟疫獵犬從隊友身上震開。",
-		"- 使正面 5 公尺範圍內的敵人暈眩（Stun）。",
-		ppp___ppp,
-		"- Can be used to prevent Psyker's self-explode.",
-		"- The Warp wave passes through objects and spreads up to 30 meters. So you can drop the Pox Hound from an Ally through the wall.",
-		"- Stuns enemies within a 5 meter radius in front of Psyker.",
+		"- 亞空間震波能穿透物體，範圍最遠可達30公尺，因此你可以透過牆壁將瘟疫獵犬從隊友身上震開。",
+		"- 使正面5公尺範圍內的敵人暈眩（Stun）。",
+		-- ppp___ppp,
+		-- "- Can be used to prevent Psyker's self-explode.",
+		-- "- The Warp wave passes through objects and spreads up to 30 meters. So you can drop the Pox Hound from an Ally through the wall.",
+		-- "- Stuns enemies within a 5 meter radius in front of Psyker.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 1 - Venting Shriek +]--
@@ -270,18 +270,18 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 永遠只鎖定敵人軀幹部位。",
 		"- 可以在爆炸倒數中使用，以防止靈能者自我爆炸。",
-		"- 亞空間震波可穿透物體，最遠可達 30 公尺。",
-		"- 使正面 5 公尺範圍內的敵人暈眩（Stun）。",
+		"- 亞空間震波可穿透物體，最遠可達30公尺。",
+		"- 使正面5公尺範圍內的敵人暈眩（Stun）。",
 		"- 衝擊強度會根據反噬提升，最高在 100% 反噬值時生效；最多可對甲殼造成輕度踉蹌。無法對變種人、巨獸以及有主動力場護盾（void shield）的敵人造成踉蹌。",
 		"- 衝擊強度亦會受到一些武器祝福影響：如「行刑者」、「殺戮者」、「優勢」、「不穩定能量」等等。僅在釋放吶喊時所裝備的武器觸發之增益才會生效。",
-		ppp___ppp,
-		"- Always targets torso hitzone.",
-		"- Can be used while exploding thereby preventing Psyker's self-explode.",
-		"- The Warp wave passes through objects and spreads up to 30 meters.",
-		"- Stuns enemies within a 5 meter radius in front of Psyker.",
-		"- Stagger strength scales with Peril reaching its Maximum strength at 100% Peril. Up to light Staggers against Crushers. Cannot Stagger Mutants, Monstrosities and  and enemies with active void shield.",
-		"- Stagger strength decreases with range losing its efficiency almost entirely at 30 meters.",
-		"- Stagger strength is additionally affected by some Weapon Blessings: \"Executor\", \"Slaughterer\", \"Superiority\", \"Unstable Power\", etc. Applies only when the respective weapon is equipped when shouting.",
+		-- ppp___ppp,
+		-- "- Always targets torso hitzone.",
+		-- "- Can be used while exploding thereby preventing Psyker's self-explode.",
+		-- "- The Warp wave passes through objects and spreads up to 30 meters.",
+		-- "- Stuns enemies within a 5 meter radius in front of Psyker.",
+		-- "- Stagger strength scales with Peril reaching its Maximum strength at 100% Peril. Up to light Staggers against Crushers. Cannot Stagger Mutants, Monstrosities and  and enemies with active void shield.",
+		-- "- Stagger strength decreases with range losing its efficiency almost entirely at 30 meters.",
+		-- "- Stagger strength is additionally affected by some Weapon Blessings: \"Executor\", \"Slaughterer\", \"Superiority\", \"Unstable Power\", etc. Applies only when the respective weapon is equipped when shouting.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 1-1 - Becalming Eruption +]--

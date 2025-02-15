@@ -103,7 +103,6 @@
 - Brain Burst - 顱腦爆裂
 - Brain Rupture - 顱腦崩裂
 - Kinetic Resonance - 動能共鳴
-- Kinetic Presence - 動能釋放
 - Smite - 懲戒
 - Lightning Storm - 閃電風暴
 - Enfeeble - 衰弱詛咒
@@ -111,7 +110,17 @@
 - Assail - 靈能攻擊
 - Ethereal Shards - 乙太碎片
 - Quick Shards - 迅捷碎片
+- Quickening - 加速
+- Kinetic Presence - 動能釋放
+- Seer's Presence - 先知之眼
+- Prescience - 預兆
+- Psykinetic's Wrath - 靈能學者之怒
+- Venting Shriek - 靈能尖嘯
+- Becalming Eruption - 平靜进發
 
+
+
+- Precognition - 預知未來
 - Empowered Psionics - 靈能強化
 - Empyrean Empowerment - 至天高之力
 - Empyric Shock - 亞空間震波
@@ -119,7 +128,6 @@
 - Malefic Momentum - 惡意攻勢
 - Perfect Timing - 完美時機
 - Scrier's Gaze - 占卜者的注視
-- Precognition - 預知未來
 - Warp Rider - 亞空間騎士
 - Warp Rupture - 刺耳尖嘯
 - By Crack of Bone - 骨折後遺症
@@ -128,9 +136,6 @@
 - Peril Resistance - 反噬抗性
 - Reality Anchor - 現實錨點
 - Telekine Shield - 念力護盾
-- Venting Shriek - 靈能尖嘯
-- Psykinetic's Wrath - 靈能學者之怒
-- Seer's Presence - 先知之眼
 - Warp Siphon - 亞空間虹吸
 - Mettle - 堅毅
 - Battle Meditation - 戰鬥冥想

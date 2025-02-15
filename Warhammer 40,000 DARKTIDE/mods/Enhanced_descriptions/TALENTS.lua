@@ -327,24 +327,32 @@ local localization_templates = {
 	create_template("talent_tree_psy_aura0_000_desc_en", {"loc_talent_psyker_aura_reduced_ability_cooldown_description"}, {"en"}, function(locale, value) return "{cooldown_reduction:%s} "..COLORS_KWords.Ability_cd_rgb.." Reduction for you and Allies in Coherency."..TALENTS_Enh_desc.ED_PSY_Aura_0_rgb end), -- cooldown_reduction: +7.5% -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_aura0_000_desc_fr", {"loc_talent_psyker_aura_reduced_ability_cooldown_description"}, {"fr"}, function(locale, value) return "{cooldown_reduction:%s} de "..COLORS_KWords_fr.Ability_cd_rgb_fr.." pour vous et vos Alliés en syntonie."..TALENTS_Enh_desc_fr.ED_PSY_Aura_0_rgb_fr end),
+			--[+ Traditional Chinese - 加速 +]--
+	create_template("talent_tree_psy_aura0_000_desc_tw", {"loc_talent_psyker_aura_reduced_ability_cooldown_description"}, {"zh-tw"}, function(locale, value) return "你和同步的盟友的{cooldown_reduction:%s} "..COLORS_KWords_tw.Ability_cd_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Aura_0_rgb end),
 
 	--[+ Aura 1 - Kinetic Presence +]--
 		-- create_template("talent_tree_psy_aura1_000_en", {"loc_talent_psyker_base_3"}, {"en"}, function(locale, value) return "Kinetic Presence" end),
 	create_template("talent_tree_psy_aura1_000_desc_en", {"loc_talent_psyker_base_3_description"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Damage_rgb.." against Elite Enemies for you and Allies in Coherency."..TALENTS_Enh_desc.ED_PSY_Aura_1_rgb end), -- damage: +7.5% -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_aura1_000_desc_fr", {"loc_talent_psyker_base_3_description"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." contre les ennemis pour vos vous et vos alliés en syntonie."..TALENTS_Enh_desc_fr.ED_PSY_Aura_1_rgb_fr end),
+			--[+ Traditional Chinese - 動能釋放 +]--
+	create_template("talent_tree_psy_aura1_000_desc_tw", {"loc_talent_psyker_base_3_description"}, {"zh-tw"}, function(locale, value) return "你和同步的盟友對精英敵人造成{damage:%s} "..COLORS_KWords_tw.Damage_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Aura_1_rgb end),
 
 	--[+ Aura 2 - Seer's Presence +]--
 		-- create_template("talent_tree_psy_aura2_000_en", {"loc_talent_psyker_cooldown_aura_improved"}, {"en"}, function(locale, value) return "Seer's Presence" end),
 	create_template("talent_tree_psy_aura2_000_desc_en", {"loc_talent_psyker_cooldown_aura_improved_description"}, {"en"}, function(locale, value) return "{cooldown_reduction:%s} "..COLORS_KWords.Ability_cd_rgb.." Reduction for you and Allies in Coherency.\n\nThis is an augmented version of {talent_name:%s}."..TALENTS_Enh_desc.ED_PSY_Aura_2_rgb end), -- cooldown_reduction: +10%, talent_name: The Quickening -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_aura2_000_desc_fr", {"loc_talent_psyker_cooldown_aura_improved_description"}, {"fr"}, function(locale, value) return "{cooldown_reduction:%s} de "..COLORS_KWords_fr.Ability_cd_rgb_fr.." pour vous et vos Alliés en syntonie.\n\nIl s'agit une version améliorée de : {talent_name:%s}."..TALENTS_Enh_desc_fr.ED_PSY_Aura_2_rgb_fr end),
+			--[+ Traditional Chinese - 先知之眼 +]--
+	create_template("talent_tree_psy_aura2_000_desc_tw", {"loc_talent_psyker_cooldown_aura_improved_description"}, {"zh-tw"}, function(locale, value) return "你和同步的盟友的{cooldown_reduction:%s} "..COLORS_KWords_tw.Ability_cd_rgb.."。\n\n這是{talent_name:%s}的增強版本。"..TALENTS_Enh_desc_tw.ED_PSY_Aura_2_rgb end),
 
 	--[+ Aura 3 - Prescience +]--
 		-- create_template("talent_tree_psy_aura3_000_en", {"loc_ability_psyker_gunslinger_aura"}, {"en"}, function(locale, value) return "Prescience" end),
 	create_template("talent_tree_psy_aura3_000_desc_en", {"loc_ability_psyker_gunslinger_aura_description"}, {"en"}, function(locale, value) return "You and Allies in Coherency gain {critical_strike_chance:%s} "..COLORS_KWords.Crit_hit_chance_rgb.."."..TALENTS_Enh_desc.ED_PSY_Aura_3_rgb end), -- critical_strike_chance: +5% -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_aura3_000_desc_fr", {"loc_ability_psyker_gunslinger_aura_description"}, {"fr"}, function(locale, value) return "Vous et vos Alliés en syntonie gagne {critical_strike_chance:%s} "..COLORS_KWords_fr.Crit_hit_chance_rgb_fr.."."..TALENTS_Enh_desc_fr.ED_PSY_Aura_3_rgb_fr end),
+			--[+ Traditional Chinese - 預兆 +]--
+	create_template("talent_tree_psy_aura3_000_desc_tw", {"loc_ability_psyker_gunslinger_aura_description"}, {"zh-tw"}, function(locale, value) return "你和同步的盟友獲得{critical_strike_chance:%s} "..COLORS_KWords_tw.Crit_hit_chance_rgb.."。"..TALENTS_Enh_desc_tw.ED_PSY_Aura_3_rgb end),
 
 --[+ +ABILITIES+ +]--
 	--[+ Ability 0 - Psykinetic's Wrath +]--
@@ -352,18 +360,24 @@ local localization_templates = {
 	create_template("talent_tree_psy_abil0_000_desc_en", {"loc_talent_psyker_shout_ability_description"}, {"en"}, function(locale, value) return "Releases a cone-shaped shout in front of Psyker that "..COLORS_KWords.Staggers_rgb.." Enemies in front of you. Quells {warpcharge_vent:%s} "..COLORS_KWords.Peril_rgb..".\n\nBase Cooldown: {cooldown:%s} seconds."..TALENTS_Enh_desc.ED_PSY_Ability_0_rgb end), -- warpcharge_vent: 10%, cooldown: 30 -- rewrite -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_abil0_000_desc_fr", {"loc_talent_psyker_shout_ability_description"}, {"fr"}, function(locale, value) return "Libère un cri en forme de cône devant le Psyker qui fait "..COLORS_KWords_fr.Staggering_rgb_fr.." les ennemis devant vous. Réduit de {warpcharge_vent:%s} le "..COLORS_KWords_fr.Peril_rgb_fr..".\n\nTemps de recharge de base : {cooldown:%s} secondes."..TALENTS_Enh_desc_fr.ED_PSY_Ability_0_rgb_fr end),
+			--[+ Traditional Chinese - 靈能學者之怒 +]--
+	create_template("talent_tree_psy_abil0_000_desc_tw", {"loc_talent_psyker_shout_ability_description"}, {"zh-tw"}, function(locale, value) return "在靈能者前方釋放一個錐形的尖叫，使前方的敵人"..COLORS_KWords_tw.Staggers_rgb.."。減少{warpcharge_vent:%s} "..COLORS_KWords_tw.Peril_rgb.."。\n\n基礎冷卻時間：{cooldown:%s} 秒。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_0_rgb end),
 
 	--[+ Ability 1 - Venting Shriek +]--
 		--create_template("talent_tree_psy_abil1_000_en", {"loc_talent_psyker_shout_vent_warp_charge"}, {"en"}, function(locale, value) return "Venting Shriek" end),
 	create_template("talent_tree_psy_abil1_000_desc_en", {"loc_talent_psyker_shout_vent_warp_charge_description"}, {"en"}, function(locale, value) return "Releases a cone-shaped shout in front of Psyker that "..COLORS_KWords.Staggers_rgb.." Enemies in front of you. Quells {warpcharge_vent:%s} "..COLORS_KWords.Peril_rgb..".\n\nBase Cooldown: {cooldown:%s} seconds.\n\nThis is augmented version of {talent_name:%s}."..TALENTS_Enh_desc.ED_PSY_Ability_1_rgb end), -- warpcharge_vent: 50%, cooldown: 30, talent_name: Psykinetic's Wrath -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_abil1_000_desc_fr", {"loc_talent_psyker_shout_vent_warp_charge_description"}, {"fr"}, function(locale, value) return "Libère un cri en forme de cône devant le Psyker qui fait "..COLORS_KWords_fr.Staggering_rgb_fr.." les ennemis devant vous. Réduit de {warpcharge_vent:%s} le "..COLORS_KWords_fr.Peril_rgb_fr..".\n\nTemps de recharge de base : {cooldown:%s} secondes.\n\nC'est la version augmentée de {talent_name:%s}."..TALENTS_Enh_desc_fr.ED_PSY_Ability_1_rgb_fr end),
+			--[+ Traditional Chinese - 靈能尖嘯 +]--
+	create_template("talent_tree_psy_abil1_000_desc_tw", {"loc_talent_psyker_shout_vent_warp_charge_description"}, {"zh-tw"}, function(locale, value) return "在靈能者前方釋放一個錐形的尖叫，使前方的敵人"..COLORS_KWords_tw.Staggers_rgb.."。減少{warpcharge_vent:%s} "..COLORS_KWords_tw.Peril_rgb.."。\n\n基礎冷卻時間：{cooldown:%s} 秒。\n\n這是{talent_name:%s}的增強版本。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_1_rgb end),
 
 	--[+ Ability 1-1 - Becalming Eruption +]--
 		-- create_template("talent_tree_psy_abil1_001_en", {"loc_talent_psyker_shout_reduces_warp_charge_generation"}, {"en"}, function(locale, value) return "Becalming Eruption" end),
 	create_template("talent_tree_psy_abil1_001_desc_en", {"loc_talent_psyker_shout_reduces_warp_charge_generation_description"}, {"en"}, function(locale, value) return "{talent_name:%s} now decreases "..COLORS_KWords.Peril_rgb.." Generation by {warp_generation:%s} for each Enemy hit. Up to {max_stacks:%s}"..COLORS_Numbers.pc_rgb..". Lasts {duration:%s} seconds."..TALENTS_Enh_desc.ED_PSY_Ability_1_1_rgb end), -- talent_name: Venting Shriek, warp_generation: 1%, max_stacks: 25, duration: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_psy_abil1_001_desc_fr", {"loc_talent_psyker_shout_reduces_warp_charge_generation_description"}, {"fr"}, function(locale, value) return "À présent, {talent_name:%s} réduit la génération de "..COLORS_KWords_fr.Peril_rgb_fr.." de {warp_generation:%s} pour chaque ennemi touché. Jusqu'à {max_stacks:%s}"..COLORS_Numbers.pc_rgb..". Dure {duration:%s} secondes."..TALENTS_Enh_desc_fr.ED_PSY_Ability_1_1_rgb_fr end),
+			--[+ Traditional Chinese - 鎮靜爆發 +]--
+	-- create_template("talent_tree_psy_abil1_001_desc_tw", {"loc_talent_psyker_shout_reduces_warp_charge_generation_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在會減少{warp_generation:%s}的"..COLORS_KWords_tw.Peril_rgb.."生成量，每擊中一個敵人。最多{max_stacks:%s}"..COLORS_Numbers_tw.pc_rgb.."。持續{duration:%s}秒。"..TALENTS_Enh_desc_tw.ED_PSY_Ability_1_1_rgb end),
 
 	--[+ Ability 1-2 - Warp Rupture +]--
 		-- create_template("talent_tree_psy_abil1_002_en", {"loc_talent_psyker_shout_damage_per_warp_charge"}, {"en"}, function(locale, value) return "Warp Rupture" end),
