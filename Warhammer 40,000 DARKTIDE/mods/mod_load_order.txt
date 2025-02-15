@@ -36,8 +36,6 @@ WhatTheLocalization
 Enhanced_descriptions
 EmperorsGuidance
 scoreboard
-ovenproof_scoreboard_plugin
-
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint

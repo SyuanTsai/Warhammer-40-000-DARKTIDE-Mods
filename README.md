@@ -244,13 +244,6 @@
 - MOD 檔案名稱：Scoreboard-22-2-18-1707236330
 - 手動維護最後下載日期：2025-02-11
 
-### [Ovenproof's Scoreboard Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/241)
-    記分板UI改善
-- MOD 網站最後更新日期：Last updated 22 February 2024 2:22AM
-- MOD 版本：1.4.2
-- MOD 檔案名稱：Scoreboard-22-2-18-1707236330
-- 手動維護最後下載日期：2025-02-11
-
 ---
 # 遊戲內操作相關MOD
 
