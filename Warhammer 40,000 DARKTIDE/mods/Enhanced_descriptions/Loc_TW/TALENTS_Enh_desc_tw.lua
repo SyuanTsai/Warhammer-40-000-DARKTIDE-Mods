@@ -55,13 +55,13 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 基礎傷害：900。",
 		"- 永遠視為弱點命中。",
 		"- 對狂熱與不屈類型目標造成更高傷害。",
-		"{#color(255, 35, 5)}- 你可能會爆炸！反噬值（Peril）達到 97% 或以上時請勿使用！{#reset()}",
-		ppp___ppp,
-		"- Cannot Crit.",
-		"- Base Damage: 900.",
-		"- Always scores a Weakspot hit.",
-		"- Higher Damage against Maniac and Unyielding.",
-		"{#color(255, 35, 5)}- You may Explode! Don't use if Peril level is 97% or above!{#reset()}",
+		"{#color(255, 35, 5)}- 你可能會爆炸！反噬值達到 97% 或以上時請勿使用！{#reset()}",
+		-- ppp___ppp,
+		-- "- Cannot Crit.",
+		-- "- Base Damage: 900.",
+		-- "- Always scores a Weakspot hit.",
+		-- "- Higher Damage against Maniac and Unyielding.",
+		-- "{#color(255, 35, 5)}- You may Explode! Don't use if Peril level is 97% or above!{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 1 - Brain Rupture +]--
@@ -72,18 +72,18 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 永遠視為弱點命中。",
 		"- 對狂熱與不屈類型目標造成更高傷害。",
 		"- 主要攻擊在達到 50% 充能量時，會對目標施加輕度的充能踉蹌效果。無法對轟炸者、重錘兵、變種人、歐格林、瘟疫爆者、狂怒者、血痂霰彈槍手 或巨獸造成踉蹌。",
-		"- 撞擊時，會使除了變種人、巨獸以及具備主動力場護盾（void shield）之敵人外的所有敵人陷入踉蹌。",
+		"- 攻擊時，會使除了變種人、巨獸以及具備主動力場護盾（void shield）之敵人外的所有敵人陷入踉蹌。",
 		dmg_is_incr_by,
 		"{#color(255, 35, 5)}- 你可能會爆炸！反噬值達到 97% 或以上時請勿使用！{#reset()}",
-		ppp___ppp,
-		"- Cannot Crit.",
-		"- Base Damage: 1350.",
-		"- Always scores a Weakspot hit.",
-		"- Higher Damage against Maniac and Unyielding.",
-		"- Main attack applies a light Charge Stagger at 50% charge level to the targeted enemy. Cannot Stagger: Bombers, Maulers, Mutants, Ogryns, Poxbursters, Ragers, Scab Shotgunners or Monstrosities.",
-		"- On Impact Staggers all enemies except Mutants, Monstrosities and enemies with active void shield.",
-		dmg_is_incr_by,
-		"{#color(255, 35, 5)}- You may Explode! Don't use if Peril level is 97% or above!{#reset()}",
+		-- ppp___ppp,
+		-- "- Cannot Crit.",
+		-- "- Base Damage: 1350.",
+		-- "- Always scores a Weakspot hit.",
+		-- "- Higher Damage against Maniac and Unyielding.",
+		-- "- Main attack applies a light Charge Stagger at 50% charge level to the targeted enemy. Cannot Stagger: Bombers, Maulers, Mutants, Ogryns, Poxbursters, Ragers, Scab Shotgunners or Monstrosities.",
+		-- "- On Impact Staggers all enemies except Mutants, Monstrosities and enemies with active void shield.",
+		-- dmg_is_incr_by,
+		-- "{#color(255, 35, 5)}- You may Explode! Don't use if Peril level is 97% or above!{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 1-1 - Kinetic Resonance +]--
@@ -92,20 +92,20 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 降低顱腦崩裂的主、副攻擊充能時間。",
 		"- 與「靈能強化」增益和敏捷興奮劑的充能時間減少效果相加疊加。",
 		"- 與「骨折後遺症」、「刺耳尖嘯」、「亞空間意志」、「平心靜氣」、「現實錨點」、小型反噬抗性節點、戰鬥興奮劑，以及「閃擊強化」事件（mutator）等相關增益做乘法疊加。",
-		ppp___ppp,
-		"- Reduces Brain Rupture's charge time for both primary and secondary attacks.",
-		"- Charge time reduction Stacks additively with \"Empowered Psionics\" buff and Celerity Stimm.",
-		"- Stacks multiplicatively with related buffs from \"By Crack of Bone\", \"Becalming Eruption\", \"Empyric Resolve\", \"Inner Tranquility\", \"Reality Anchor\", small Peril Resistance nodes, Combat Stimm, and the \"Enhanced Blitz\" mutator.",
+		-- ppp___ppp,
+		-- "- Reduces Brain Rupture's charge time for both primary and secondary attacks.",
+		-- "- Charge time reduction Stacks additively with \"Empowered Psionics\" buff and Celerity Stimm.",
+		-- "- Stacks multiplicatively with related buffs from \"By Crack of Bone\", \"Becalming Eruption\", \"Empyric Resolve\", \"Inner Tranquility\", \"Reality Anchor\", small Peril Resistance nodes, Combat Stimm, and the \"Enhanced Blitz\" mutator.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 1-2 - Kinetic Flayer +]--
 	local ED_PSY_Blitz_1_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 由此天賦所觸發的「顱腦崩裂」攻擊，能享有「靈能強化」的傷害增益，而不會消耗其疊加。",
-		"{#color(255, 35, 5)}- 目前存在一個錯誤：當反噬值（Peril）高於 97% 時，天賦會觸發並進入 15 秒冷卻，但敵人實際上不會受到任何傷害。{#reset()}",
-		ppp___ppp,
-		"- \"Brain Rupture\" attacks triggered by the Talent benefit from \"Empowered Psionics'\" Damage buff without consuming a Stack.",
-		"{#color(255, 35, 5)}- There is currently a bug: When Peril is above 97%, the Talent triggers and a 15-second Cooldown begins, but the enemy does NOT receive Damage at all.{#reset()}",
+		"{#color(255, 35, 5)}- 目前存在一個錯誤：當反噬值高於 97% 時，天賦會觸發並進入 15 秒冷卻，但敵人實際上不會受到任何傷害。{#reset()}",
+		-- ppp___ppp,
+		-- "- \"Brain Rupture\" attacks triggered by the Talent benefit from \"Empowered Psionics'\" Damage buff without consuming a Stack.",
+		-- "{#color(255, 35, 5)}- There is currently a bug: When Peril is above 97%, the Talent triggers and a 15-second Cooldown begins, but the enemy does NOT receive Damage at all.{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 2 - Smite +]--
@@ -150,11 +150,11 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與「亞空間震波」或歐格林的「削弱敵人」、「重要干擾」或老兵的「鎖定目標!」等傷害承受增幅，及傷害增益，還有武器祝福提供的力量等級加成做乘法疊加。",
 		"- 與另一位靈能者施加的相同減益效果無法疊加。",
 		"- 任何可能對敵人造成感電效果的來源，若不是由「懲戒」或 「蓄力打擊」觸發，都不會啟動「衰弱詛咒」",
-		ppp___ppp,
-		-- "- The debuff is being applied as long as the enemy is actively affected by \"Smite\".",
-		"- Stacks multiplicatively with other Damage taken debuffs like \"Empyric Shock\" or Ogryn's \"Soften Them Up\", \"Valuable Destruction\" or Veteran's \"Focus Target!\", with Damage buffs, and with Power level buffs from Weapon Blessings.",
-		"- Doesn't Stack with the same debuff applied by another Psyker.",
-		"- Any source that may apply an Electrocution effect to enemies but is not Smite or Charged Strike will not proc Enfeeble.",
+		-- ppp___ppp,
+		-- -- "- The debuff is being applied as long as the enemy is actively affected by \"Smite\".",
+		-- "- Stacks multiplicatively with other Damage taken debuffs like \"Empyric Shock\" or Ogryn's \"Soften Them Up\", \"Valuable Destruction\" or Veteran's \"Focus Target!\", with Damage buffs, and with Power level buffs from Weapon Blessings.",
+		-- "- Doesn't Stack with the same debuff applied by another Psyker.",
+		-- "- Any source that may apply an Electrocution effect to enemies but is not Smite or Charged Strike will not proc Enfeeble.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 2-3 - Charged Strike +]--
@@ -165,30 +165,30 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 感電狀態會持續到最後一次傷害跳數結束後 2 秒。",
 		"-- 注意：第一次傷害跳數生效前的延遲取決於敵人的順劈傷害，與「懲戒」相同。換言之，順劈傷害越大，造成第一次傷害所需時間越長。因此，對於「巨獸」（20 順劈傷害）而言，在 2 秒的傷害窗口結束前只能觸發 1 次傷害跳數。",
 		"-- 若選擇「衰弱詛咒」，此天賦的感電效果會有更有利的命中率消耗機制，使其對大多數敵人能加倍觸發傷害跳數；同時也能享有 10% 額外承受傷害的減益。從表面上看，每一跳傷害都會加一層減益，使受此減益的敵人在該跳數期間承受更高傷害，且所有攻擊者都能在感電效果正在作用並附加減益時受益（與「懲戒」機制相同）。",
-		ppp___ppp,
-		"- 8 base Damage per tick.",
-		"- The Damage window lasts up to 2 seconds.",
-		"- The Electrocuted state lasts until 2 seconds after the last Damage tick.",
-		"-- Note that the time before the first Damage tick can happen depends on enemy Hit mass (just like with Smite itself), so the more Hit mass an enemy has the longer it will take this Talent's Electrocution effect to deal Damage. As a result, against Monstrosities (20 Hit mass), only 1 Damage tick can be executed before the Damage window of 2 seconds ends.",
-		"-- If Enfeeble is selected, the Electrocution effect receives a more favorable Hit mass cost which effectively doubles its tick rate against most enemies. With Enfeeble, it also benefits from the 10% increased Damage taken debuff. Apparently, each Damage tick adds one debuff Stack increasing the Damage that the debuffed enemy takes accordingly per tick. All attackers can benefit from this only while the Electrocution effect is actively Damaging and applying the debuff (just like with Smite itself).",
+		-- ppp___ppp,
+		-- "- 8 base Damage per tick.",
+		-- "- The Damage window lasts up to 2 seconds.",
+		-- "- The Electrocuted state lasts until 2 seconds after the last Damage tick.",
+		-- "-- Note that the time before the first Damage tick can happen depends on enemy Hit mass (just like with Smite itself), so the more Hit mass an enemy has the longer it will take this Talent's Electrocution effect to deal Damage. As a result, against Monstrosities (20 Hit mass), only 1 Damage tick can be executed before the Damage window of 2 seconds ends.",
+		-- "-- If Enfeeble is selected, the Electrocution effect receives a more favorable Hit mass cost which effectively doubles its tick rate against most enemies. With Enfeeble, it also benefits from the 10% increased Damage taken debuff. Apparently, each Damage tick adds one debuff Stack increasing the Damage that the debuffed enemy takes accordingly per tick. All attackers can benefit from this only while the Electrocution effect is actively Damaging and applying the debuff (just like with Smite itself).",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 3 - Assail +]--
 	local ED_PSY_Blitz_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 可爆擊。最多可同時穿透（Cleave）2 個敵人。",
+		"- 可爆擊。最多可同時穿透2 個敵人。",
 		"- 每次投射物消耗 1 發彈藥，並於每 3 秒回復 1 發。",
 		-- "- Very low Damage against Carapace and low against Unyielding.", -- 原程式碼已註解
 		"- 受相應天賦與「戰鬥興奮劑」提供的反噬值消耗減少效果影響。",
 		dmg_is_incr_by,
 		"{#color(255, 35, 5)}- 你可能會爆炸！若反噬值已達 100%，請勿使用！{#reset()}",
-		ppp___ppp,
-		"- Can Crit. Cleave up to 2 enemies.",
-		"- Costs 1 ammo and recharges it every 3 seconds.",
-		-- "- Very low Damage against Carapace and low against Unyielding.",
-		"- Affected by Peril Cost Reduction buffs from respective Talents and Combat Stimm.",
-		dmg_is_incr_by,
-		"{#color(255, 35, 5)}- You may Explode! Don't use if Peril level is 100%!{#reset()}",
+		-- ppp___ppp,
+		-- "- Can Crit. Cleave up to 2 enemies.",
+		-- "- Costs 1 ammo and recharges it every 3 seconds.",
+		-- -- "- Very low Damage against Carapace and low against Unyielding.",
+		-- "- Affected by Peril Cost Reduction buffs from respective Talents and Combat Stimm.",
+		-- dmg_is_incr_by,
+		-- "{#color(255, 35, 5)}- You may Explode! Don't use if Peril level is 100%!{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 3-1 - Ethereal Shards +]--
@@ -196,9 +196,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 若「靈能強化」啟動，則可穿透的敵人數翻倍至最多 6 個。",
 		"- 甲殼裝甲預設無法被穿透。",
-		ppp___ppp,
-		"- If \"Empowered Psionics\" is active, this is doubled, up to 6 targets.",
-		"- Carapace cannot be Cleaved by default.",
+		-- ppp___ppp,
+		-- "- If \"Empowered Psionics\" is active, this is doubled, up to 6 targets.",
+		-- "- Carapace cannot be Cleaved by default.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 3-2 - Quick Shards +]--
@@ -206,9 +206,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 將投射物的回充時間由 3 秒縮短為 2.1 秒。",
 		"- 不會與「閃擊強化」事件（mutator）產生互動。",
-		ppp___ppp,
-		"- Reduces projectile recharge time from 3 to 2.1 seconds per projectile.",
-		"- Does not interact with the \"Enhanced Blitz\" mutator.",
+		-- ppp___ppp,
+		-- "- Reduces projectile recharge time from 3 to 2.1 seconds per projectile.",
+		-- "- Does not interact with the \"Enhanced Blitz\" mutator.",
 	}, "\n"), enhdesc_col)
 
 --[+ +AURA+ +]--
@@ -287,7 +287,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Ability 1-1 - Becalming Eruption +]--
 	local ED_PSY_Ability_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 與「骨折後遺症」、「亞空間意志」、「平心靜氣」、「動能撕裂者」等天賦、小型 「反噬抗性」 節點以及戰鬥興奮劑所提供的反噬值消耗減少效果做乘法疊加。",
+		"- 與「骨折後遺症」、「亞空間意志」、「平心靜氣」、「動能共鳴」等天賦、小型 「反噬抗性」 節點以及戰鬥興奮劑所提供的反噬值消耗減少效果做乘法疊加。",
 		ppp___ppp,
 		"- Stacks multiplicatively with related Peril Cost Reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Inner Tranquility\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
 	}, "\n"), enhdesc_col)
@@ -483,7 +483,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Ability_3_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 不會在超載階段結束後持續存在。",
-		"- 與「骨折後遺症」、「亞空間意志」、「動能撕裂者」、小型反噬抗性節點和戰鬥興奮劑的反噬值消耗減少效果做乘法疊加。",
+		"- 與「骨折後遺症」、「亞空間意志」、「動能共鳴」、小型反噬抗性節點和戰鬥興奮劑的反噬值消耗減少效果做乘法疊加。",
 		"- 只有在靈能者在超載期間恢復亞空間充能時，才能與「平心靜氣」疊加。",
 		ppp___ppp,
 		"- Does not linger after overcharging phase.",
@@ -518,7 +518,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Keystone 1-1 - Inner Tranquility +]--
 	local ED_PSY_Keystone_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 與自身線性疊加（1 個亞空間充能 = 6% 反噬消耗減少，2 個 = 12%，3 個 = 18%，等等），並與「骨折後遺症」、「亞空間意志」、「動能撕裂者」、小型反噬抗性節點和戰鬥興奮劑的反噬消耗減少效果做乘法疊加。",
+		"- 與自身線性疊加（1 個亞空間充能 = 6% 反噬消耗減少，2 個 = 12%，3 個 = 18%，等等），並與「骨折後遺症」、「亞空間意志」、「動能共鳴」、小型反噬抗性節點和戰鬥興奮劑的反噬消耗減少效果做乘法疊加。",
 		"- 因為使用戰鬥技能時所有亞空間充能都會消失，此天賦無法立即與「平心靜氣」和「現實錨點」疊加（除非靈能者在其持續期間內重新獲得亞空間充能）。",
 		ppp___ppp,
 		"- Stacks linearly with itself (1 Warp charge = 6% Peril Cost Reduction, 2 = 12%, 3 = 18%, etc) and multiplicatively with other Peril Cost Reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
@@ -571,7 +571,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		-- "- Consumes Stacks when attack connects with an enemy.",
 		"- 與其他適用的傷害增益做加法疊加。",
-		"- 與「動能撕裂者」做加法疊加，並與敏捷興奮劑的兩個充能時間減少效果做乘法/加法疊加。",
+		"- 與「動能共鳴」做加法疊加，並與敏捷興奮劑的兩個充能時間減少效果做乘法/加法疊加。",
 		"_______________________________",
 		ppp___ppp,
 		"- Stacks additively with other applicable Damage buffs.",
@@ -709,7 +709,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Passive_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 每 1% 反噬生成恢復 0.25% 最大韌性。",
-		"- 來自「平心靜氣」、「骨折後遺症」、「動能撕裂者」、「現實錨點」和反噬抗性節點的反噬值消耗減少效果會降低此天賦的效能！",
+		"- 來自「平心靜氣」、「骨折後遺症」、「動能共鳴」、「現實錨點」和反噬抗性節點的反噬值消耗減少效果會降低此天賦的效能！",
 		"- 例如，一個擁有 90 最大韌性的靈能者生成 44% 反噬，會恢復 44x(90x0.0025)=9.9 韌性。然而，同樣的靈能者在擁有 15% 反噬值消耗減少效果（來自 3 個小型反噬抗性節點）的情況下生成 44% 反噬，僅會恢復 44x(90x0.0025x0.95^3)=8.488 韌性。",
 		ppp___ppp,
 		"- Replenishes 0.25% of maximum Toughness per 1% Peril generated.",
@@ -910,7 +910,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Passive_17_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 移除反噬時，順劈攻擊每次揮擊可多次觸發。與「戰鬥冥想」和「盜竊天命」同時觸發。",
-		"- 與「平心靜氣」、「亞空間意志」、「動能撕裂者」、「現實錨點」、小型反噬抗性節點和戰鬥興奮劑的反噬值消耗減少效果做乘法疊加。",
+		"- 與「平心靜氣」、「亞空間意志」、「動能共鳴」、「現實錨點」、小型反噬抗性節點和戰鬥興奮劑的反噬值消耗減少效果做乘法疊加。",
 		ppp___ppp,
 		"- Removing Peril can proc multiple times per swing when Cleaving. Procs additionally to \"Battle Meditation\" and \"Purloin Providence\".",
 		"- Reducing Peril Stacks multiplicatively with Peril Cost Reduction buffs from \"Becalming Eruption\", \"Empyric Resolve\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\", small Peril Resistance nodes, and Combat Stimm.",
@@ -1077,7 +1077,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Passive_29_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 減少 40% 反噬生成量。",
-		"- 與「骨折後遺症」、「平心靜氣」、「動能撕裂者」、「現實錨點」、小型反噬抗性節點和戰鬥興奮劑的反噬消耗減少效果做乘法疊加。",
+		"- 與「骨折後遺症」、「平心靜氣」、「動能共鳴」、「現實錨點」、小型反噬抗性節點和戰鬥興奮劑的反噬消耗減少效果做乘法疊加。",
 		"- 也減少近戰擊殺和天賦提供的韌性回復量 30%。",
 		"- 不影響協同韌性再生和武器祝福「榮耀獵手」、「激勵彈幕」和「令人安心的準確性」的韌性回復。",
 		"- 此回復減益效果與其他玩家減益效果（如有毒氣體）做乘法疊加。",
