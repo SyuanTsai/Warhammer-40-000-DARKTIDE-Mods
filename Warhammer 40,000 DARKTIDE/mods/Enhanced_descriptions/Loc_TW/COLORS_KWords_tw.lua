@@ -22,8 +22,8 @@ local iu_actit = InputUtils.apply_color_to_input_text
 	--[++Health++]--
 	local hlth_col = Color[mod:get("health_text_colour")](255, true) -- Do not translate this line!
 	local Health_rgb = iu_actit("生命", hlth_col)
-    local Wound_rgb = iu_actit("創傷", hlth_col)
-    local Wounds_rgb = iu_actit("創傷", hlth_col)
+    local Wound_rgb = iu_actit("傷痕", hlth_col)
+    local Wounds_rgb = iu_actit("傷痕", hlth_col)
 	--[++Peril++]--
 	local prl_col = Color[mod:get("peril_text_colour")](255, true) -- Do not translate this line!
 	local Peril_rgb = iu_actit("Peril", prl_col)
@@ -32,7 +32,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
     local Perils_rgb = iu_actit("反噬", prl_col)
 	--[++Stamina++]--
 	local stam_col = Color[mod:get("stamina_text_colour")](255, true) -- Do not translate this line!
-	local Stamina_rgb = iu_actit("體力", stam_col)
+	local Stamina_rgb = iu_actit("耐力", stam_col)
 	-- local Stamina_c_r_rgb = iu_actit("Stamina Cost", stam_col)
 	--[++Toughness++]--
 	local tghn_col = Color[mod:get("toughness_text_colour")](255, true) -- Do not translate this line!
