@@ -129,23 +129,35 @@
 - Precognition - 預知未來
 - Warp Speed - 亞空間加速
 - Reality Anchor - 現實錨點
-
-- Empowered Psionics - 靈能強化
+- Warp Unbound - 亞空間突破
+- Warp Siphon - 亞空間虹吸
+- Inner Tranquility - 平心靜氣
+- Essence Harvest - 吸精奪萃
 - Empyrean Empowerment - 至天高之力
-- Empyric Shock - 亞空間震波
+- In Fire Reborn - 涅槃
+- Psychic Vampire - 靈能吸血鬼
+- Warp Battery - 亞空間電池
+- Empowered Psionics - 靈能強化
+- Bio-Lodestone - 生物磁石
+- Psychic Leeching - 吸血閃電
+- Overpowering Souls - 吞靈強擊
+- Charged Up - 充能完畢
 - Disrupt Destiny - 擾動命運
+- Perfectionism - 完美主義
+- Purloin Providence - 盜竊天命
+- Lingering Influence - 持久影響
+- Cruel Fortune - 殘忍命運
+
+- Empyric Shock - 亞空間震波
 - Malefic Momentum - 惡意攻勢
 - Perfect Timing - 完美時機
 - Warp Rider - 亞空間騎士
 - Warp Rupture - 刺耳尖嘯
 - By Crack of Bone - 骨折後遺症
 - Empyric Resolve - 亞空間意志
-- Inner Tranquility - 平心靜氣
 - Peril Resistance - 反噬抗性
-- Warp Siphon - 亞空間虹吸
 - Mettle - 堅毅
 - Battle Meditation - 戰鬥冥想
-- Purloin Providence - 盜竊天命
 
 
 ### Ogryn - 歐格林
