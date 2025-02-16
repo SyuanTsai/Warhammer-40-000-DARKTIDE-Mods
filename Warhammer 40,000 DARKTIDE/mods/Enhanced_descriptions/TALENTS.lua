@@ -920,6 +920,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_aura0_000_desc_fr", {"loc_talent_zealot_aura_toughness_damage_coherency_desc"}, {"fr"}, function(locale, value) return "{damage_reduction:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." pour vous et les alliés en syntonie."..TALENTS_Enh_desc_fr.ED_ZEA_Aura_0_n_1_rgb_fr end), -- damage_reduction: +7.5% - colors
 			--[+ Traditional Chinese - 帝皇之諭 +]--
+	create_template("talent_tree_zea_aura0_000_desc_tw", {"loc_talent_zealot_aura_toughness_damage_coherency_desc"}, {"zh-tw"}, function(locale, value) return "為你和協同中的盟友提供{damage_reduction:%s}的"..COLORS_KWords_tw.Toughness_dmg_red_rgb.."。"..TALENTS_Enh_desc_tw.ED_ZEA_Aura_0_n_1_rgb end), -- damage_reduction: +7.5% - colors
 
 	--[+ Aura 1 - Benediction +]--
 		-- create_template("talent_tree_zea_aura_001_en", {"loc_talent_zealot_aura_efficiency"}, {"en"}, function(locale, value) return "Benediction" end),
@@ -927,6 +928,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_aura_001_desc_fr", {"loc_talent_zealot_toughness_aura_efficiency_desc"}, {"fr"}, function(locale, value) return "{damage_reduction:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." pour vous et les alliés en syntonie.\n\nCeci est une version augmentée de l'Aura de base - {talent_name:%s}."..TALENTS_Enh_desc_fr.ED_ZEA_Aura_0_n_1_rgb_fr end), -- damage_reduction: +15%. talent_name: The Emperor's Will -- colors
 			--[+ Traditional Chinese - 恩賜 +]--
+	create_template("talent_tree_zea_aura_001_desc_tw", {"loc_talent_zealot_toughness_aura_efficiency_desc"}, {"zh-tw"}, function(locale, value) return "為你和協同中的盟友提供{damage_reduction:%s}的"..COLORS_KWords_tw.Toughness_dmg_red_rgb.."。\n\n這是基礎光環 - {talent_name:%s}的增強版本。"..TALENTS_Enh_desc_tw.ED_ZEA_Aura_0_n_1_rgb end), -- damage_reduction: +15%. talent_name: The Emperor's Will -- colors
 
 	--[+ Aura 2 - Beacon of Purity +]--
 		-- create_template("talent_tree_zea_aura_002_en", {"loc_talent_zealot_corruption_healing_coherency_improved"}, {"en"}, function(locale, value) return "Beacon of Purity" end),
@@ -934,6 +936,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_aura_002_desc_fr", {"loc_talent_zealot_corruption_healing_coherency_improved_desc"}, {"fr"}, function(locale, value) return "Soigne {corruption:%s} de "..COLORS_KWords_fr.Corruption_rgb_fr.." de la blessure actuelle pour vous et les alliés en syntonie toutes les {interval:%s} secondes."..TALENTS_Enh_desc_fr.ED_ZEA_Aura_2_rgb_fr end), -- corruption: 1.5, interval: 1 -- s->second -- colors
 			--[+ Traditional Chinese - 純潔信標 +]--
+	create_template("talent_tree_zea_aura_002_desc_tw", {"loc_talent_zealot_corruption_healing_coherency_improved_desc"}, {"zh-tw"}, function(locale, value) return "每{interval:%s}秒為你和協同中的盟友治療當前的{corruption:%s} "..COLORS_KWords_tw.Corruption_rgb.."傷害。"..TALENTS_Enh_desc_tw.ED_ZEA_Aura_2_rgb end), -- corruption: 1.5, interval: 1 -- s->second -- colors
 
 	--[+ Aura 3 - Loner +]--
 		-- create_template("talent_tree_zea_aura_003_en", {"loc_talent_zealot_always_in_coherency"}, {"en"}, function(locale, value) return "Loner" end),
@@ -941,6 +944,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_aura_003_desc_fr", {"loc_talent_zealot_always_in_coherency_description"}, {"fr"}, function(locale, value) return "Le Fanatique compte comme étant en syntonie avec un allié, ce qui permet le taux le plus bas de régénération de "..COLORS_KWords_fr.Toughness_rgb_fr.." en syntonie de "..COLORS_Numbers.n_3_75_rgb.." de "..COLORS_KWords_fr.Toughness_rgb_fr.." par seconde."..TALENTS_Enh_desc_fr.ED_ZEA_Aura_3_rgb_fr end), -- coherency_min_stack:2.
 			--[+ Traditional Chinese - 孤狼 +]--
+	create_template("talent_tree_zea_aura_003_desc_tw", {"loc_talent_zealot_always_in_coherency_description"}, {"zh-tw"}, function(locale, value) return "使狂熱者被視為與一名盟友處於協同狀態，\n啟用最低協同"..COLORS_KWords_tw.Toughness_rgb.."再生率，每秒"..COLORS_Numbers.n_3_75_rgb.."的"..COLORS_KWords_tw.Toughness_rgb.."。"..TALENTS_Enh_desc_tw.ED_ZEA_Aura_3_rgb end), -- coherency_min_stack:2.
 
 --[+ +ABILITIES+ +]--
 	--[+ Ability 0 - Chastise the Wicked +]--
@@ -949,6 +953,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_abil0_000_desc_fr", {"loc_talent_zealot_2_combat_description_new"}, {"fr"}, function(locale, value) return "Effectuez une ruée vers l'avant, régénérez {toughness:%s} "..COLORS_KWords_fr.Toughness_rgb_fr..". Votre prochaine attaque de mêlée gagne {damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." et est un "..COLORS_KWords_fr.Crit_hit_rgb_fr.." garanti.\nTemps de recharge de base : {cooldown:%s} secondes."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_0_rgb_fr end), -- toughness: 50%, damage: 25%, cooldown: 30 -- s->seconds -- colors
 			--[+ Traditional Chinese - 懲奸除惡 +]--
+	create_template("talent_tree_zea_abil0_000_desc_tw", {"loc_talent_zealot_2_combat_description_new"}, {"zh-tw"}, function(locale, value) return "向前衝刺，恢復{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."。\n你的下一次近戰攻擊在接下來的{damage:%s}秒內增加{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."，並且保證暴擊。\n基礎冷卻時間：{cooldown:%s}秒。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_0_rgb end), -- toughness: 50%, damage: 25%, cooldown: 30 -- s->seconds -- colors
 
 	--[+ Ability 1 - Fury of the Faithful +]--
 		--create_template("talent_tree_zea_abil1_000_en", {"loc_talent_maniac_attack_speed_after_dash"}, {"en"}, function(locale, value) return "Fury of the Faithful" end),
@@ -956,6 +961,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_abil1_000_desc_fr", {"loc_talent_zealot_attack_speed_after_dash_desc"}, {"fr"}, function(locale, value) return "Effectuez une ruée vers l'avant, régénérez {toughness:%s} "..COLORS_KWords_fr.Toughness_rgb_fr.." et gagne {attack_speed:%s} de vitesse d'attaque pendant {time:%s} secondes. Votre prochaine attaque de mêlée gagne {damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." et est un "..COLORS_KWords_fr.Crit_hit_rgb_fr.." garanti.\nTemps de recharge de base : {cooldown:%s} secondes.\nCeci est une version augmentée de {talent_name:%s}."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_1_rgb_fr end), -- toughness: 50%, attack_speed: +20%, time: 10, damage: +25%, cooldown: 30, talent_name: Chastise the Wicked -- &->and -- s->seconds -- colors
 			--[+ Traditional Chinese - 有信者之怒 +]--
+	create_template("talent_tree_zea_abil1_000_desc_tw", {"loc_talent_zealot_attack_speed_after_dash_desc"}, {"zh-tw"}, function(locale, value) return "向前衝刺，恢復{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."，並在{time:%s}秒內獲得{attack_speed:%s}的攻擊速度。\n你的下一次近戰攻擊增加{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."，並且保證暴擊。\n基礎冷卻時間：{cooldown:%s}秒。\n這是{talent_name:%s}的增強版本。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_1_rgb end), -- toughness: 50%, attack_speed: +20%, time: 10, damage: +25%, cooldown: 30, talent_name: Chastise the Wicked -- &->and -- s->seconds -- colors
 
 	--[+ Ability 1-1 - Redoubled Zeal +]--
 		--create_template("talent_tree_zea_abil1_001_en", {"loc_talent_zealot_dash_has_more_charges"}, {"en"}, function(locale, value) return "Redoubled Zeal" end),
@@ -963,6 +969,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_abil1_001_desc_fr", {"loc_talent_zealot_dash_has_more_charges_desc"}, {"fr"}, function(locale, value) return "{talent_name:%s} a maintenant {charges:%s} charges."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_1_1_rgb_fr end), -- talent_name: Fury of the Faithful, charges: 2.
 			--[+ Traditional Chinese - 倍增狂熱 +]--
+	create_template("talent_tree_zea_abil1_001_desc_tw", {"loc_talent_zealot_dash_has_more_charges_desc"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在有{charges:%s}次使用機會。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_1_1_rgb end), -- talent_name: Fury of the Faithful, charges: 2.
 
 	--[+ Ability 1-2 - Invocation of Death +]--
 		--create_template("talent_tree_zea_abil1_002_en", {"loc_talent_maniac_cooldown_on_melee_crits"}, {"en"}, function(locale, value) return "Invocation of Death" end),
@@ -970,6 +977,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_abil1_002_desc_fr", {"loc_talent_maniac_cooldown_on_melee_crits_buff_desc"}, {"fr"}, function(locale, value) return "{cooldown_regen:%s} de régénération du "..COLORS_KWords_fr.Combat_ability_cd_rgb_fr.." pendant {duration:%s} secondes sur les coups "..COLORS_KWords_fr.Crit_hits_rgb_fr.." de mêlée."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_1_2_rgb_fr end), -- cooldown_regen: +200%, duration: 4 -- s->seconds -- colors
 			--[+ Traditional Chinese - 死亡禱文 +]--
+	create_template("talent_tree_zea_abil1_002_desc_tw", {"loc_talent_maniac_cooldown_on_melee_crits_buff_desc"}, {"zh-tw"}, function(locale, value) return "在近戰暴擊時，{duration:%s}秒內獲得{cooldown_regen:%s}的"..COLORS_KWords_tw.Ability_cd_rgb.."再生。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_1_2_rgb end), -- cooldown_regen: +200%, duration: 4 -- s->seconds -- colors
 
 	--[+ Ability 2 - Chorus of Spiritual Fortitude +]--
 		-- create_template("talent_tree_zea_abil2_000_en", {"loc_talent_zealot_bolstering_prayer"}, {"en"}, function(locale, value) return "Chorus of Spiritual Fortitude" end),
@@ -977,6 +985,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_abil2_000_desc_fr", {"loc_talent_zealot_bolstering_prayer_variant_two_description"}, {"fr"}, function(locale, value) return "Utilisez une relique sacrée qui libère des pulsations énérgetiques "..COLORS_Numbers.n_7_rgb.." fois toutes les {interval:%s} secondes.\nChaque pulsation accorde au Fanatique et aux alliés en syntonie une immunité aux "..COLORS_KWords_fr.Stuns_rgb_fr.." des attaques de mêlée et de distance et une invulnérabilité de "..COLORS_Numbers.n_1_5_rgb.." secondes.\nChaque pulsation régénère {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." pour les alliés en syntonie. Si l'allié est à toute ça "..COLORS_KWords_fr.Toughness_rgb_fr..", il gagne à la place {flat_toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." maximale (jaune) jusqu'à un total de {max_toughness:%s}.\nTemps de recharge de base : {cooldown:%s} secondes."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_2_rgb_fr end), -- interval: 0.8, toughness: 45%, flat_toughness: +20, max_toughness: +100, cooldown: 60 -- s->seconds -- colors
 			--[+ Traditional Chinese - 不屈靈魂合唱 +]--
+	create_template("talent_tree_zea_abil2_000_desc_tw", {"loc_talent_zealot_bolstering_prayer_variant_two_description"}, {"zh-tw"}, function(locale, value) return "揮舞一個神聖遺物，每{interval:%s}秒釋放能量脈衝"..COLORS_Numbers.n_7_rgb.."次。\n每個脈衝為狂熱者和協同中的盟友提供免疫近戰和遠程攻擊的"..COLORS_KWords_tw.Stuns_rgb.."和{flat_toughness:%s}秒的無敵。\n每個脈衝為協同中的盟友補充{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."。如果盟友的"..COLORS_KWords_tw.Toughness_rgb.."已滿，則獲得{flat_toughness:%s}最大（黃色）"..COLORS_KWords_tw.Toughness_rgb.."，最多為{max_toughness:%s}。\n基礎冷卻時間：{cooldown:%s}秒。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_2_rgb end), -- interval: 0.8, toughness: 45%, flat_toughness: +20, max_toughness: +100, cooldown: 60 -- s->seconds -- colors
 			
 	--[+ Ability 2-1 - Holy Cause +]--
 		-- create_template("talent_tree_zea_abil2_001_en", {"loc_talent_zealot_zealot_channel_grants_defensive_buff"}, {"en"}, function(locale, value) return "Holy Cause" end),
@@ -984,6 +993,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_abil2_001_desc_fr", {"loc_talent_zealot_zealot_channel_grants_defensive_buff_desc"}, {"fr"}, function(locale, value) return "Après avoir canalisé {stacks:%s} pulsations, accorde {toughness:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." à vous et aux alliés en syntonie. Dure {duration:%s} secondes."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_2_1_rgb_fr end), -- stacks: 5, toughness: +30%, duration: 10 -- s->seconds -- colors
 			--[+ Traditional Chinese - 神聖事業 +]--
+	create_template("talent_tree_zea_abil2_001_desc_tw", {"loc_talent_zealot_zealot_channel_grants_defensive_buff_desc"}, {"zh-tw"}, function(locale, value) return "{stacks:%s}次脈衝後，為你和協同中的盟友提供{toughness:%s}的"..COLORS_KWords_tw.Toughness_dmg_red_rgb.."。持續{duration:%s}秒。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_2_1_rgb end), -- stacks: 5, toughness: +30%, duration: 10 -- s->seconds -- colors
 
 	--[+ Ability 2-2 - Banishing Light +]--
 		-- create_template("talent_tree_zea_abil2_002_en", {"loc_talent_zealot_channel_staggers"}, {"en"}, function(locale, value) return "Banishing Light" end),
@@ -991,6 +1001,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_abil2_002_desc_fr", {"loc_talent_zealot_channel_staggers_desc"}, {"fr"}, function(locale, value) return "À Chaque pulsation du {talent_name:%s} les ennemis "..COLORS_KWords_fr.Staggers_rgb_fr.." et sont sous Suppresion. La portée augmente à chaque impulsion."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_2_2_rgb_fr end), -- talent_name: Chorus of Spiritual Fortitude -- &->and -- colors
 			--[+ Traditional Chinese - 放逐之光 +]--
+	create_template("talent_tree_zea_abil2_002_desc_tw", {"loc_talent_zealot_channel_staggers_desc"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}的每個脈衝也會使敵人"..COLORS_KWords_tw.Staggers_rgb.."並壓制。範圍隨著每個脈衝增加。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_2_2_rgb end), -- talent_name: Chorus of Spiritual Fortitude -- &->and -- colors
 
 	--[+ Ability 2-3 - Ecclesiarch's Call +]--
 		-- create_template("talent_tree_zea_abil2_003_en", {"loc_talent_zealot_zealot_channel_grants_offensive_buff"}, {"en"}, function(locale, value) return "Ecclesiarch's Call" end),
@@ -998,12 +1009,14 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_abil2_003_desc_fr", {"loc_talent_zealot_zealot_channel_grants_offensive_buff_desc"}, {"fr"}, function(locale, value) return "Après avoir canalisé {stacks:%s} pulsations, accorde {damage:%s} "..COLORS_KWords_fr.Damage_rgb_fr.." à vous et aux alliés en syntonie. Dure {duration:%s} secondes."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_2_3_rgb_fr end), -- stacks: 5, damage: +20%, duration: 10 -- s->seconds -- colors
 			--[+ Traditional Chinese - 教宗之喚 +]--
+	create_template("talent_tree_zea_abil2_003_desc_tw", {"loc_talent_zealot_zealot_channel_grants_offensive_buff_desc"}, {"zh-tw"}, function(locale, value) return "在{stacks:%s}次脈衝後，為你和協同中的盟友提供{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."。持續{duration:%s}秒。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_2_3_rgb end), -- stacks: 5, damage: +20%, duration: 10 -- s->seconds -- colors
 
 	--[+ Ability 2-4 - Martyr's Purpose +]--
 		-- create_template("talent_tree_zea_abil2_004_en", -- {"loc_talent_zealot_damage_taken_restores_cd"}, {"en"}, function(locale, value) return "Martyr's Purpose" end),
 	create_template("talent_tree_zea_abil2_004_desc_en", {"loc_talent_zealot_damage_taken_restores_cd_description"}, {"en"}, function(locale, value) return "{cooldown_restore:%s} of "..COLORS_KWords.Health_rgb.." "..COLORS_KWords.Damage_rgb.." taken is converted to "..COLORS_KWords.Ability_cd_rgb.." Reduction."..TALENTS_Enh_desc.ED_ZEA_Ability_2_4_rgb end), -- stacks: 5, damage: +20%, duration: 10 -- s->seconds -- colors
 	create_template("talent_tree_zea_abil2_004_desc_fr", {"loc_talent_zealot_damage_taken_restores_cd_description"}, {"fr"}, function(locale, value) return "{cooldown_restore:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." "..COLORS_KWords_fr.Health_rgb_fr.." subits est converti en réduction du "..COLORS_KWords_fr.Combat_ability_cd_rgb_fr.."."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_2_4_rgb_fr end), -- stacks: 5, damage: +20%, duration: 10 -- s->seconds -- colors
 			--[+ Traditional Chinese - 殉道者之願 +]--
+	create_template("talent_tree_zea_abil2_004_desc_tw", {"loc_talent_zealot_damage_taken_restores_cd_description"}, {"zh-tw"}, function(locale, value) return "每承受{cooldown_restore:%s}的"..COLORS_KWords_tw.Health_rgb..""..COLORS_KWords_tw.Damage_rgb.."，轉換為{cooldown_restore:%s}的"..COLORS_KWords_tw.Ability_cd_rgb.."減少。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_2_4_rgb end), -- stacks: 5, damage: +20%, duration: 10 -- s->seconds -- colors	
 
 	--[+ Ability 3 - Shroudfield +]--
 		-- create_template("talent_tree_zea_abil3_000_en", {"loc_ability_zealot_stealth"}, {"en"}, function(locale, value) return "Shroudfield" end),
@@ -1011,13 +1024,15 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_abil3_000_desc_fr", {"loc_ability_zealot_stealth_description"}, {"fr"}, function(locale, value) return "Vous passez en "..COLORS_KWords_fr.Stealth_rgb_fr.." pendant {duration:%s} secondes et gagnez {movement_speed:%s} de Vitesse de Déplacement.\nVotre prochaine attaque de Mélée gagne:\n{backstab_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." dans le dos,\n{finesse_damage:%s} de "..COLORS_KWords_fr.Finesse_dmg_rgb_fr.." et\n{crit_chance:%s} "..COLORS_KWords_fr.Crit_chance_rgb_fr..".\nTemps de recharge de base : {cooldown:%s} secondes."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_3_rgb_fr end), -- duration: 3, movement_speed: +20%, backstab_damage: +100%, finesse_damage: +100%, crit_chance: +100%, cooldown: 30 -- s->seconds -- &->and -- colors
 			--[+ Traditional Chinese - 隱秘領域 +]--
+	create_template("talent_tree_zea_abil3_000_desc_tw", {"loc_ability_zealot_stealth_description"}, {"zh-tw"}, function(locale, value) return "進入{duration:%s}秒的"..COLORS_KWords_tw.Stealth_rgb.."，並獲得{movement_speed:%s}的移動速度。\n你的下一次近戰攻擊獲得：\n{backstab_damage:%s}的"..COLORS_KWords_tw.DamageBack_rgb.."，\n{finesse_damage:%s}的"..COLORS_KWords_tw.Finesse_dmg_rgb.."和\n{crit_chance:%s}的"..COLORS_KWords_tw.Crit_chance_rgb.."。\n基礎冷卻時間：{cooldown:%s}秒。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_3_rgb end), -- duration: 3, movement_speed: +20%, backstab_damage: +100%, finesse_damage: +100%, crit_chance: +100%, cooldown: 30 -- s->seconds -- &->and -- colors
 
 	--[+ Ability 3-1 - Master-Crafted Shroudfield +]--
 		-- create_template("talent_tree_zea_abil3_001_en", {"loc_talent_zealot_increased_stealth_duration"}, {"en"}, function(locale, value) return "Master-Crafted Shroudfield" end),
 	create_template("talent_tree_zea_abil3_001_desc_en", {"loc_talent_zealot_increased_stealth_duration_description"}, {"en"}, function(locale, value) return COLORS_KWords.Stealth_rgb.." Duration is increased from "..COLORS_Numbers.n_3_rgb.." to {duration_2:%s} seconds." end), -- duration_2: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_abil3_001_desc_fr", {"loc_talent_zealot_increased_stealth_duration_description"}, {"fr"}, function(locale, value) return " La durée de la "..COLORS_KWords_fr.Stealth_rgb_fr.." est augmentée de "..COLORS_Numbers.n_3_rgb.." à {duration_2:%s} secondes." end), -- duration_2: 5 -- s->seconds -- colors
-			--[+ Traditional Chinese - 大師級隱秘領域 +]--			
+			--[+ Traditional Chinese - 大師級隱秘領域 +]--
+	create_template("talent_tree_zea_abil3_001_desc_tw", {"loc_talent_zealot_increased_stealth_duration_description"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Stealth_rgb.."持續時間從"..COLORS_Numbers.n_3_rgb.."增加到{duration_2:%s}秒。" end), -- duration_2: 5 -- s->seconds -- colors
 
 	--[+ Ability 3-2 - Perfectionist +]--
 		-- create_template("talent_tree_zea_abil3_002_en", {"loc_talent_zealot_stealth_increased_damage"}, {"en"}, function(locale, value) return "Perfectionist" end),
@@ -1025,6 +1040,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_abil3_002_desc_fr", {"loc_talent_zealot_stealth_increased_damage_description"}, {"fr"}, function(locale, value) return "{talent_name:%s} octroie:\n{damage_2:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." dans le dos et\n{damage:%s} de "..COLORS_KWords_fr.Finesse_dmg_rgb_fr..", mais augmente le "..COLORS_KWords_fr.Combat_ability_cd_rgb_fr.." de {cooldown:%s}."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_3_2_rgb_fr end), -- talent_name: Shroudfield, damage: +50%, damage_2: +50%, cooldown: 25% -- &->and -- colors
 			--[+ Traditional Chinese - 完美主義者 +]--
+	create_template("talent_tree_zea_abil3_002_desc_tw", {"loc_talent_zealot_stealth_increased_damage_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}額外提供：\n{damage_2:%s}的"..COLORS_KWords_tw.DamageBack_rgb.."和{damage:%s}的"..COLORS_KWords_tw.Finesse_dmg_rgb.."，\n但將{cooldown:%s}的"..COLORS_KWords_tw.Ability_cd_rgb.."增加。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_3_2_rgb end), -- talent_name: Shroudfield, damage: +50%, damage_2: +50%, cooldown: 25% -- &->and -- colors
 
 	--[+ Ability 3-3 - Invigorating Revelation +]--
 		-- create_template("talent_tree_zea_abil3_003_en", {"loc_talent_zealot_leaving_stealth_restores_toughness"}, {"en"}, function(locale, value) return "Invigorating Revelation" end),
@@ -1032,6 +1048,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_abil3_003_desc_fr", {"loc_talent_zealot_leaving_stealth_restores_toughness_desc"}, {"fr"}, function(locale, value) return "Vous récuperez {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." en {time:%s} secondes à la sortie de la "..COLORS_KWords_fr.Stealth_rgb_fr..". Vous gagnez aussi une réduction des "..COLORS_KWords_fr.Damage_rgb_fr.." de {damage:%s} pendant {time:%s} secondes."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_3_3_rgb_fr end), -- toughness: 40%, time: 5, damage: +20%, time: 5 -- s->seconds -- colors
 			--[+ Traditional Chinese - 振奮啟示 +]--
+	create_template("talent_tree_zea_abil3_003_desc_tw", {"loc_talent_zealot_leaving_stealth_restores_toughness_desc"}, {"zh-tw"}, function(locale, value) return "離開"..COLORS_KWords_tw.Stealth_rgb.."後，\n在{time:%s}秒內恢復{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."。\n同時獲得持續{time:%s}秒的{damage:%s}"..COLORS_KWords_tw.Damage_rgb.."減傷。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_3_3_rgb end), -- toughness: 40%, time: 5, damage: +20%, time: 5 -- s->seconds -- colors
 
 	--[+ Ability 3-4 - Pious Cut-Throat +]--
 		-- create_template("talent_tree_zea_abil3_004_en", {"loc_talent_zealot_backstab_kills_restore_cd"}, {"en"}, function(locale, value) return "Pious Cut-Throat" end),
@@ -1039,6 +1056,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_abil3_004_desc_fr", {"loc_talent_zealot_backstab_kills_restore_cd_description"}, {"fr"}, function(locale, value) return COLORS_Numbers.n_minus_rgb.."{ability_cooldown:%s} de "..COLORS_KWords_fr.Ability_cd_rgb_fr.." lors d'un élimination dans le dos."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_3_4_rgb_fr end), -- ability_cooldown: 20% -- colors
 			--[+ Traditional Chinese - 虔誠刺客 +]--
+	create_template("talent_tree_zea_abil3_004_desc_tw", {"loc_talent_zealot_backstab_kills_restore_cd_description"}, {"zh-tw"}, function(locale, value) return "在背刺擊殺時"..COLORS_Numbers.n_minus_rgb.."{ability_cooldown:%s}的"..COLORS_KWords_tw.Ability_cd_rgb.."。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_3_4_rgb end), -- ability_cooldown: 20% -- colors
 
 --[+ +KEYSTONES+ +]--
 	--[+ Keystone 1 - Blazing Piety +]--
@@ -1047,6 +1065,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_keys1_000_desc_fr", {"loc_talent_zealot_fanatic_rage_desc"}, {"fr"}, function(locale, value) return "Quand {max_stacks:%s} ennemis meurent dans un rayon de {radius:%s} mètres autour de vous, vous entrez en "..COLORS_KWords_fr.Fury_rgb_fr.." et obtenez {crit_chance:%s} "..COLORS_KWords_fr.Crit_hit_chance_rgb_fr.." pendant {duration:%s} secondes."..TALENTS_Enh_desc_fr.ED_ZEA_Keystone_1_rgb_fr end), -- crit_chance: +15%, duration: 8, max_stacks: 25, radius: 25 -- rewrite -- m->meters -- s->seconds -- colors
 			--[+ Traditional Chinese - 熾熱虔誠 +]--
+	create_template("talent_tree_zea_keys1_000_desc_tw", {"loc_talent_zealot_fanatic_rage_desc"}, {"zh-tw"}, function(locale, value) return "當{max_stacks:%s}個敵人在你周圍{radius:%s}米內死亡時，\n進入"..COLORS_KWords_tw.Fury_rgb.."並在{duration:%s}秒內獲得{crit_chance:%s}的"..COLORS_KWords_tw.Crit_hit_chance_rgb.."。"..TALENTS_Enh_desc_tw.ED_ZEA_Keystone_1_rgb end), -- crit_chance: +15%, duration: 8, max_stacks: 25, radius: 25 -- rewrite -- m->meters -- s->seconds -- colors
 
 	--[+ Keystone 1-1 - Stalwart +]--
 		-- create_template("talent_tree_zea_keys1_001_en", {"loc_talent_zealot_fanatic_rage_toughness"}, {"en"}, function(locale, value) return "Stalwart" end),
@@ -1054,6 +1073,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_keys1_001_desc_fr", {"loc_talent_zealot_fanatic_rage_toughness_reduction_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords_fr.Toughness_rgb_fr.." est régénérée en déclenchant la "..COLORS_KWords_fr.Fury_rgb_fr..". De plus, pendant que la "..COLORS_KWords_fr.Fury_rgb_fr.." est active, vous avez gagnez {toughness_damage_reduction:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.."."..TALENTS_Enh_desc_fr.ED_ZEA_Keystone_1_1_rgb_fr end), -- toughness: 50%, toughness_damage_reduction: +25% -- colors
 			--[+ Traditional Chinese - 死忠 +]--
+	create_template("talent_tree_zea_keys1_001_desc_tw", {"loc_talent_zealot_fanatic_rage_toughness_reduction_desc"}, {"zh-tw"}, function(locale, value) return "觸發"..COLORS_KWords_tw.Fury_rgb.."時恢復{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."。\n當"..COLORS_KWords_tw.Fury_rgb.."處於啟動狀態時，\n你獲得{toughness_damage_reduction:%s}的"..COLORS_KWords_tw.Toughness_dmg_red_rgb.."。"..TALENTS_Enh_desc_tw.ED_ZEA_Keystone_1_1_rgb end), -- toughness: 50%, toughness_damage_reduction: +25% -- colors
 
 	--[+ Keystone 1-2 - Fury Rising +]--
 		-- create_template("talent_tree_zea_keys1_002_en", {"loc_talent_zealot_fanatic_rage_crits"}, {"en"}, function(locale, value) return "Fury Rising" end),
@@ -1061,6 +1081,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_keys1_002_desc_fr", {"loc_talent_zealot_fanatic_rage_crits_desc"}, {"fr"}, function(locale, value) return "Vous gagnez un cumul de "..COLORS_KWords_fr.Fury_rgb_fr.." par "..COLORS_KWords_fr.Crit_hit_rgb_fr.." de mélée et de distance."..TALENTS_Enh_desc_fr.ED_ZEA_Keystone_1_2_rgb_fr end), -- colors
 			--[+ Traditional Chinese - 怒火升騰 +]--
+	create_template("talent_tree_zea_keys1_002_desc_tw", {"loc_talent_zealot_fanatic_rage_crits_desc"}, {"zh-tw"}, function(locale, value) return "每次近戰或遠程"..COLORS_KWords_tw.Crit_hit_rgb.."獲得一層"..COLORS_KWords_tw.Fury_rgb.."。"..TALENTS_Enh_desc_tw.ED_ZEA_Keystone_1_2_rgb end), -- colors
 
 	--[+ Keystone 1-3 - Infectious Zeal +]--
 		-- create_template("talent_tree_zea_keys1_003_en", {"loc_talent_zealot_shared_fanatic_rage"}, {"en"}, function(locale, value) return "Infectious Zeal" end),
@@ -1068,13 +1089,15 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_keys1_003_desc_fr", {"loc_talent_zealot_shared_fanatic_rage_desc"}, {"fr"}, function(locale, value) return ""..COLORS_Numbers.pc_10_rgb.." de "..COLORS_KWords_fr.Crit_chance_rgb_fr.." est conféré aux alliés en syntonie lorsque vous atteignez "..COLORS_Numbers.n_25_rgb.." cumuls de "..COLORS_KWords_fr.Fury_rgb_fr..". "..TALENTS_Enh_desc_fr.ED_ZEA_Keystone_1_3_rgb_fr end), -- crit_chance: +66%, talent_name: Blazing Piety -- colors {crit_chance:%s}
 			--[+ Traditional Chinese - 迅疾狂熱 +]--
+	create_template("talent_tree_zea_keys1_003_desc_tw", {"loc_talent_zealot_shared_fanatic_rage_desc"}, {"zh-tw"}, function(locale, value) return "當你達到"..COLORS_Numbers.n_25_rgb.."層"..COLORS_KWords_tw.Fury_rgb.."時，\n"..COLORS_Numbers.pc_10_rgb.."的"..COLORS_KWords_tw.Crit_chance_rgb.."將傳播給協同中的盟友。"..TALENTS_Enh_desc_tw.ED_ZEA_Keystone_1_3_rgb end), -- crit_chance: +66%, talent_name: Blazing Piety -- colors {crit_chance:%s}
 
 	--[+ Keystone 1-4 - Righteous Warrior +]--
 		-- create_template("talent_tree_zea_keys1_004_en", {"loc_talent_zealot_fanatic_rage_improved"}, {"en"}, function(locale, value) return "Righteous Warrior" end),
 	create_template("talent_tree_zea_keys1_004_desc_en", {"loc_talent_zealot_fanatic_rage_improved_desc"}, {"en"}, function(locale, value) return "{crit_chance:%s} "..COLORS_KWords.Crit_hit_chance_rgb.." from {talent_name:%s}."..TALENTS_Enh_desc.ED_ZEA_Keystone_1_4_rgb end), -- crit_chance: +10%, talent_name: Blazing Piety -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_keys1_004_desc_fr", {"loc_talent_zealot_fanatic_rage_improved_desc"}, {"fr"}, function(locale, value) return "{crit_chance:%s} de "..COLORS_KWords_fr.Crit_hit_chance_rgb_fr.." grâce à {talent_name:%s}."..TALENTS_Enh_desc_fr.ED_ZEA_Keystone_1_4_rgb_fr end), -- crit_chance: +10%, talent_name: Blazing Piety -- colors
-			--[+ Traditional Chinese - 正義戰士 +]--
+			--[+ Traditional Chinese - 正義勇士 +]--
+	create_template("talent_tree_zea_keys1_004_desc_tw", {"loc_talent_zealot_fanatic_rage_improved_desc"}, {"zh-tw"}, function(locale, value) return "來自{talent_name:%s}的{crit_chance:%s}的"..COLORS_KWords_tw.Crit_hit_chance_rgb.."。"..TALENTS_Enh_desc_tw.ED_ZEA_Keystone_1_4_rgb end), -- crit_chance: +10%, talent_name: Blazing Piety -- colors
 
 	--[+ Keystone 2 - Martyrdom +]--
 		-- create_template("talent_tree_zea_keys2_000_en", -- Martyrdom {"loc_talent_zealot_martyrdom"}, {"en"}, function(locale, value) return "Martyrdom" end),
@@ -1082,6 +1105,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_keys2_000_desc_fr", {"loc_talent_zealot_martyrdom_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." de mêlée pour chaque "..COLORS_KWords_fr.Wound_rgb_fr.." manquante, jusqu'à un maximum de {max_wounds:%s} "..COLORS_KWords_fr.Wounds_rgb_fr.." manquantes."..TALENTS_Enh_desc_fr.ED_ZEA_Keystone_2_rgb_fr end), -- damage: +8%, max_wounds: 7 -- colors
 			--[+ Traditional Chinese - 殉道 +]--
+	create_template("talent_tree_zea_keys2_000_desc_tw", {"loc_talent_zealot_martyrdom_desc"}, {"zh-tw"}, function(locale, value) return "每缺少一個"..COLORS_KWords_tw.Wound_rgb.."，\n近戰造成{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."，最多{max_wounds:%s}個"..COLORS_KWords_tw.Wounds_rgb.."。"..TALENTS_Enh_desc_tw.ED_ZEA_Keystone_2_rgb end), -- damage: +8%, max_wounds: 7 -- colors
 
 	--[+ Keystone 2-1 - I Shall Not Fall +]--
 		-- create_template("talent_tree_zea_keys2_001_en", {"loc_talent_zealot_martyrdom_grants_toughness"}, {"en"}, function(locale, value) return "I Shall Not Fall" end),
@@ -1089,6 +1113,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_keys2_001_desc_fr", {"loc_talent_zealot_martyrdom_grants_toughness_desc"}, {"fr"}, function(locale, value) return "{toughness_damage_reduction:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." par "..COLORS_KWords_fr.Wound_rgb_fr.." manquante."..TALENTS_Enh_desc_fr.ED_ZEA_Keystone_2_1_rgb_fr end), -- talent_name: Martyrdom, toughness_damage_reduction: +6.5% -- colors
 			--[+ Traditional Chinese - 不滅意志 +]--
+	create_template("talent_tree_zea_keys2_001_desc_tw", {"loc_talent_zealot_martyrdom_grants_toughness_desc"}, {"zh-tw"}, function(locale, value) return "每缺少一個"..COLORS_KWords_tw.Wound_rgb.."，\n獲得{toughness_damage_reduction:%s}的"..COLORS_KWords_tw.Toughness_dmg_red_rgb.."。"..TALENTS_Enh_desc_tw.ED_ZEA_Keystone_2_1_rgb end), -- talent_name: Martyrdom, toughness_damage_reduction: +6.5% -- colors
 
 	--[+ Keystone 2-2 - Maniac +]--
 		-- create_template("talent_tree_zea_keys2_002_en", {"loc_talent_zealot_attack_speed_per_martyrdom"}, {"en"}, function(locale, value) return "Maniac" end),
@@ -1096,6 +1121,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_keys2_002_desc_fr", {"loc_talent_zealot_attack_speed_per_martyrdom_desc"}, {"fr"}, function(locale, value) return "{attack_speed:%s} Vitesse d'attaque de mêlée par "..COLORS_KWords_fr.Wound_rgb_fr.." manquante."..TALENTS_Enh_desc_fr.ED_ZEA_Keystone_2_2_rgb_fr end), -- talent_name: Martyrdom, attack_speed: +4% -- colors
 			--[+ Traditional Chinese - 狂燥之心 +]--
+	create_template("talent_tree_zea_keys2_002_desc_tw", {"loc_talent_zealot_attack_speed_per_martyrdom_desc"}, {"zh-tw"}, function(locale, value) return "每缺少一個"..COLORS_KWords_tw.Wound_rgb.."，\n獲得{attack_speed:%s}的攻擊速度。"..TALENTS_Enh_desc_tw.ED_ZEA_Keystone_2_2_rgb end), -- talent_name: Martyrdom, attack_speed: +4% -- colors
 
 	--[+ Keystone 3 - Inexorable Judgement +]--
 		-- create_template("talent_tree_zea_keys3_000_en", {"loc_talent_zealot_quickness"}, {"en"}, function(locale, value) return "Inexorable Judgement" end),
@@ -1103,6 +1129,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_keys3_000_desc_fr", {"loc_talent_zealot_quickness_desc"}, {"fr"}, function(locale, value) return "Vos déplacement vous octroient "..COLORS_KWords_fr.Momentum_rgb_fr..". Se cumule {max_stacks:%s} fois.\nLorsque vous touchez un ennemi, dépensez tout les cumuls de "..COLORS_KWords_fr.Momentum_rgb_fr.." et gagnez par cumul pendant {duration:%s} secondes:\n{damage_modifier:%s} de "..COLORS_KWords_fr.Damage_rgb_fr..",\n{melee_attack_speed:%s} Vitesse d'attaque de mêlée,\n{ranged_attack_speed:%s} Vitesse d'attaque à distance."..TALENTS_Enh_desc_fr.ED_ZEA_Keystone_3_rgb_fr end), -- max_stacks: 15, melee_attack_speed: +1%, ranged_attack_speed: +1%, damage_modifier: +1%, duration: 6 -- rewrite colors Notice!
 			--[+ Traditional Chinese - 命定審判 +]--
+	create_template("talent_tree_zea_keys3_000_desc_tw", {"loc_talent_zealot_quickness_desc"}, {"zh-tw"}, function(locale, value) return "移動時獲得"..COLORS_KWords_tw.Momentum_rgb.."。最多累積{max_stacks:%s}次。\n當你擊中敵人時，消耗所有的"..COLORS_KWords_tw.Momentum_rgb.."，並在{duration:%s}秒內每層獲得：\n{damage_modifier:%s}的"..COLORS_KWords_tw.Damage_rgb.."、\n{melee_attack_speed:%s}的近戰攻擊速度、\n{ranged_attack_speed:%s}的遠程攻擊速度。"..TALENTS_Enh_desc_tw.ED_ZEA_Keystone_3_rgb end), -- max_stacks: 15, melee_attack_speed: +1%, ranged_attack_speed: +1%, damage_modifier: +1%, duration: 6 -- rewrite colors Notice!
 
 	--[+ Keystone 3-1 - Retributor's Stance +]--
 		-- create_template("talent_tree_zea_keys3_001_en", {"loc_talent_zealot_quickness_toughness_per_stack"}, {"en"}, function(locale, value) return "Retributor's Stance" end),
@@ -1110,6 +1137,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_keys3_001_desc_fr", {"loc_talent_zealot_quickness_toughness_per_stack_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." est régénérée pour chaque cumul de "..COLORS_KWords_fr.Momentum_rgb_fr.." dépensé."..TALENTS_Enh_desc_fr.ED_ZEA_Keystone_3_1_rgb_fr end), -- toughness: 2% -- colors
 			--[+ Traditional Chinese - 懲戒者姿態 +]--
+	create_template("talent_tree_zea_keys3_001_desc_tw", {"loc_talent_zealot_quickness_toughness_per_stack_desc"}, {"zh-tw"}, function(locale, value) return "每消耗一層"..COLORS_KWords_tw.Momentum_rgb.."，\n恢復{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."。"..TALENTS_Enh_desc_tw.ED_ZEA_Keystone_3_1_rgb end), -- toughness: 2% -- colors
 
 	--[+ Keystone 3-2 - Inebriate's Poise +]--
 		-- create_template("talent_tree_zea_keys3_002_en", {"loc_talent_zealot_quickness_dodge_stacks"}, {"en"}, function(locale, value) return "Inebriate's Poise" end),
@@ -1117,6 +1145,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_keys3_002_desc_fr", {"loc_talent_zealot_quickness_dodge_stacks_desc"}, {"fr"}, function(locale, value) return "Gagnez {stacks:%s} cumuls de "..COLORS_KWords_fr.Momentum_rgb_fr.." après une esquive réussie."..TALENTS_Enh_desc_fr.ED_ZEA_Keystone_3_2_rgb_fr end), -- stacks: 3 -- colors
 			--[+ Traditional Chinese - 飄忽身形 +]--
+	create_template("talent_tree_zea_keys3_002_desc_tw", {"loc_talent_zealot_quickness_dodge_stacks_desc"}, {"zh-tw"}, function(locale, value) return "成功閃避後獲得{stacks:%s}層"..COLORS_KWords_tw.Momentum_rgb.."。"..TALENTS_Enh_desc_tw.ED_ZEA_Keystone_3_2_rgb end), -- stacks: 3 -- colors
 
 --[+ +PASSIVES+ +]--
 	--[+ Passive 1 - Disdain +]--

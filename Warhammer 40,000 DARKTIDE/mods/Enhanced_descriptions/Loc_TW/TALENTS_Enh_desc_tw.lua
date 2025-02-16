@@ -1022,14 +1022,14 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 當血條中的任一段完全耗盡或被腐蝕時，該段即視為缺失。",
 		"- 在難度異端或詛咒下，狂信徒最高可擁有7段血量（基礎2段、來自珍品的+3段、以及「信仰之勇」的+2段），等同於可達成最多6層疊加。",
-		"- 每疊加可使近戰攻擊造成的傷害提升8%（在異端/詛咒下最高可+48%，更低難度最高可+56%）。",
+		"- 每疊加可使近戰攻擊造成的傷害提升8%（在異端、詛咒下最高可+48%，更低難度最高可+56%）。",
 		stacks_add_w_oth_dmg,
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2-1 - I Shall Not Fall(不滅意志) +]--
 	local ED_ZEA_Keystone_2_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 每缺失一段血量，便獲得6.5%的韌性減傷（在異端/詛咒最高可達39%，更低難度則可達45.5%）。",
+		"- 每缺失一段血量，便獲得6.5%的韌性減傷（在異端、詛咒最高可達39%，更低難度則可達45.5%）。",
 		"- 與小型韌性減傷天賦採加法疊加。",
 		"- 與其他減傷Buff在計算時採乘法疊加。",
 	}, "\n"), enhdesc_col)
@@ -1037,7 +1037,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Keystone 2-2 - Maniac(狂燥之心) +]--
 	local ED_ZEA_Keystone_2_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 每缺失一段血量時，使近戰武器攻擊動畫速度增加4%（在異端/詛咒最高可+24%，更低難度最高可+28%）。",
+		"- 每缺失一段血量時，使近戰武器攻擊動畫速度增加4%（在異端、詛咒最高可+24%，更低難度最高可+28%）。",
 		"- 與其他攻擊速度Buff採加法疊加。",
 	}, "\n"), enhdesc_col)
 

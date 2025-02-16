@@ -59,11 +59,12 @@ local iu_actit = InputUtils.apply_color_to_input_text
 	--[++Damage++]--
 	local dmg_col = Color[mod:get("damage_text_colour")](255, true) -- Do not translate this line!
 	local Damage_rgb = iu_actit("傷害", dmg_col)
+	local DamageBack_rgb = iu_actit("背刺傷害", dmg_col)
     local Damagewrp_rgb = iu_actit("亞空間傷害", dmg_col)
 	--[++Finesse++]--
 	local fns_col = Color[mod:get("finesse_text_colour")](255, true) -- Do not translate this line!
     local Finesse_rgb = iu_actit("精準", fns_col)
-    local Finesse_dmg_rgb = iu_actit("精準傷害", fns_col)
+    local Finesse_dmg_rgb = iu_actit("靈巧傷害", fns_col)
 	--[++Hit Mass++]--
 	local htms_col = Color[mod:get("hit_mass_text_colour")](255, true) -- Do not translate this line!
 	local Hit_mass_rgb = iu_actit("順劈傷害", htms_col)
@@ -209,6 +210,7 @@ return {
 	Crit_hit_color_rgb = Crit_hit_color_rgb,
 	Damage_rgb = Damage_rgb,
 	Damagewrp_rgb = Damagewrp_rgb,
+	DamageBack_rgb = DamageBack_rgb,
 	Damage_ru_rgb = Damage_ru_rgb,
 	Damagewrp_ru_rgb = Damagewrp_ru_rgb,
 	Electrocute_rgb = Electrocute_rgb,
