@@ -15,7 +15,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
 --[+++MAIN+++]--
 	--[++Combat Ability CD++]--
 	local cmbtab_col = Color[mod:get("combat_ability_text_colour")](255, true) -- Do not translate this line!
-	local Ability_cd_rgb = iu_actit("能力冷卻", cmbtab_col)
+	local Ability_cd_rgb = iu_actit("技能冷卻", cmbtab_col)
     local Cd_rgb = iu_actit("冷卻", cmbtab_col)
     local Combat_ability_rgb = iu_actit("戰鬥技能", cmbtab_col)
     local Combat_ability_cd_rgb = iu_actit("戰鬥技能冷卻", cmbtab_col)
@@ -41,25 +41,25 @@ local iu_actit = InputUtils.apply_color_to_input_text
 --[+++BUFFS+++]--
 	--[++Cleave++]--
 	local clv_col = Color[mod:get("cleave_text_colour")](255, true) -- Do not translate this line!
-	local Cleave_rgb = iu_actit("破甲", clv_col)
-    local Cleaving_rgb = iu_actit("破甲中", clv_col)
+	local Cleave_rgb = iu_actit("順劈攻擊", clv_col)
+    local Cleaving_rgb = iu_actit("順劈攻擊", clv_col)
 	--[++Crit Chance/Hit/Damage++]--
 	local crt_col = Color[mod:get("crit_text_colour")](255, true) -- Do not translate this line!
-    local Crt_chance_rgb = iu_actit("爆擊機率", crt_col)
-    local Crit_chance_rgb = iu_actit("爆擊機率", crt_col)
-    local Crit_hit_rgb = iu_actit("爆擊", crt_col)
-    local Crit_hit_chance_rgb = iu_actit("爆擊機率", crt_col)
-    local Crit_hits_rgb = iu_actit("爆擊", crt_col)
-    local Crit_rgb = iu_actit("爆擊", crt_col)
-    local Crit0_rgb = iu_actit("爆擊", crt_col)
-    local Crit_dmg_r_rgb = iu_actit("爆擊傷害", crt_col)
-    local Crit_chance_r_rgb = iu_actit("爆擊機率", crt_col)
-    local Crit_strike_rgb = iu_actit("爆擊", crt_col)
-    local Crit_hit_color_rgb = iu_actit("爆擊傷害", crt_col)
+    local Crt_chance_rgb = iu_actit("暴擊機率", crt_col)
+    local Crit_chance_rgb = iu_actit("暴擊機率", crt_col)
+    local Crit_hit_rgb = iu_actit("暴擊", crt_col)
+    local Crit_hit_chance_rgb = iu_actit("暴擊機率", crt_col)
+    local Crit_hits_rgb = iu_actit("暴擊", crt_col)
+    local Crit_rgb = iu_actit("暴擊", crt_col)
+    local Crit0_rgb = iu_actit("暴擊", crt_col)
+    local Crit_dmg_r_rgb = iu_actit("暴擊傷害", crt_col)
+    local Crit_chance_r_rgb = iu_actit("暴擊機率", crt_col)
+    local Crit_strike_rgb = iu_actit("暴擊", crt_col)
+    local Crit_hit_color_rgb = iu_actit("暴擊傷害", crt_col)
 	--[++Damage++]--
 	local dmg_col = Color[mod:get("damage_text_colour")](255, true) -- Do not translate this line!
 	local Damage_rgb = iu_actit("傷害", dmg_col)
-    local Damagewrp_rgb = iu_actit("靈能傷害(不確定翻譯)", dmg_col) -- 不確定這個翻譯是否正確
+    local Damagewrp_rgb = iu_actit("亞空間傷害", dmg_col)
 	--[++Finesse++]--
 	local fns_col = Color[mod:get("finesse_text_colour")](255, true) -- Do not translate this line!
     local Finesse_rgb = iu_actit("精準", fns_col)
@@ -82,7 +82,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
 	local wksp_col = Color[mod:get("weakspot_text_colour")](255, true) -- Do not translate this line!
 	local Weakspot_rgb = iu_actit("弱點", wksp_col)
 	local Weakspothit_rgb = iu_actit("弱點命中", wksp_col)
-	local Weakspothits_rgb = iu_actit("弱點命中", wksp_col)
+	local Weakspothits_rgb = iu_actit("命中弱點", wksp_col)
 	local Weakspot_dmg_rgb = iu_actit("弱點傷害", wksp_col)
 --[+++DEBUFFS+++]--
 	--[++Bleed++]--

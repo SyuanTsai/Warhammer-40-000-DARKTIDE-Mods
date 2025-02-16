@@ -26,7 +26,7 @@ local red_both_tghns_n_health_dmg = "- 同時減少所受到的韌性與生命�
 local stacks_add_w_oth_dmg = "- 與其他傷害增益做加法疊加，並與武器祝福提供的力量等級加成做乘法疊加。"
 local stacks_mult_w_other_dmg_red_buffs = "- 與其他傷害減免增益做乘法疊加。"
 local succss_dodge_means = "- 「成功閃避」指的是透過適時的閃避或滑行動作，閃避已鎖定玩家的敵方攻擊。"
-local warp_attc_refers_to = "- 「亞空間攻擊」指的是所有傷害類型標示為「亞空間傷害」的攻擊，包括靈能劍的啟動攻擊、靈能法杖的主/副攻擊、感電（「懲戒」、電能法杖的副攻擊、電擊槌的特殊動作）、「靈魂之火」、「顱腦崩裂」/「顱腦爆裂」、「靈能攻擊」以及「刺耳尖嘯」。"
+local warp_attc_refers_to = "- 「亞空間攻擊」指的是所有傷害類型標示為「亞空間傷害」的攻擊，包括靈能劍的啟動攻擊、靈能法杖的主、副攻擊、感電（「懲戒」、電能法杖的副攻擊、電擊槌的特殊動作）、「靈魂之火」、「顱腦崩裂」、「顱腦爆裂」、「靈能攻擊」以及「刺耳尖嘯」。"
 local z_eff_of_this_tougn_rep = "- 此韌性回復的效能會受到某些玩家負面狀態（例如有毒氣體）的影響。"
 local z_ghost_hitnrun_n_stripp = "- 武器祝福「幽靈」、「游擊」和「輕裝」能觸發此天賦（僅限對遠程攻擊）。"
 -- local become_invis_drop_all_enemy_aggro = "- Become Invisible dropping all enemy aggro: Melee enemies reaggro immediately to another target if possible, firing Ranged enemies stop shooting, then reaggro if possible."
@@ -666,13 +666,13 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Passive 1 - Soulstealer +]--
 	local ED_PSY_Passive_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 如果亞空間攻擊是近戰攻擊，天賦的 7.5% 效果會加到靈能者基礎的 5% 最大韌性獲得量上。",
-		"-- 例如，一個擁有 96 最大韌性的靈能者使用啟動的靈能劍擊殺兩個敵人，會恢復 96x(0.1+0.15)=24 韌性。",
+		"- 如果亞空間攻擊是近戰攻擊，天賦的7.5%效果會加到靈能者基礎的5%最大韌性獲得量上。",
+		"-- 例如，一個擁有 96最大韌性的靈能者使用啟動的靈能劍擊殺兩個敵人，會恢復96x(0.1+0.15)=24韌性。",
 		z_eff_of_this_tougn_rep,
 		warp_attc_refers_to,
-		ppp___ppp,
-		"- If the warp attack is a Melee attack, the Talent's amount of 7.5% is added to Psyker's base 5% of Maximum Toughness gained on Melee kill.",
-		"-- For example, a Psyker with 96 Max Toughness killing two enemies with an activated Force sword attack replenishes 96x(0.1+0.15)=24 Toughness.",
+		-- ppp___ppp,
+		-- "- If the warp attack is a Melee attack, the Talent's amount of 7.5% is added to Psyker's base 5% of Maximum Toughness gained on Melee kill.",
+		-- "-- For example, a Psyker with 96 Max Toughness killing two enemies with an activated Force sword attack replenishes 96x(0.1+0.15)=24 Toughness.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 2 - Mettle +]--
@@ -680,66 +680,66 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 每次爆擊攻擊只觸發一次，不論擊中多少敵人。",
 		z_eff_of_this_tougn_rep,
-		"- 每次爆擊攻擊總是生成 1 層，不論擊中多少敵人。",
-		"-- 層數持續 4 秒，並可在持續時間內刷新。",
+		"- 每次爆擊攻擊總是生成1層，不論擊中多少敵人。",
+		"-- 層數持續4秒，並可在持續時間內刷新。",
 		"-- 與「擾動命運」、「亞空間騎士」、小型移動速度節點和武器祝福如「提速」的移動速度增益相加疊加。",
 		ppp___ppp,
-		"- Procs only once per Critical attack regardless of how many enemies have been hit.",
-		z_eff_of_this_tougn_rep,
-		"- Always generates 1 Stack per Critical attack regardless of how many enemies have been hit.",
-		"-- Stacks last for 4 seconds and Can be refreshed during active duration.",
-		"-- Stacks additively with Movement Speed buffs from \"Disrupt Destiny\", \"Warp Speed\", the small Movement Speed node, and Weapon Blessings like \"Rev it Up\".",
+		-- "- Procs only once per Critical attack regardless of how many enemies have been hit.",
+		-- z_eff_of_this_tougn_rep,
+		-- "- Always generates 1 Stack per Critical attack regardless of how many enemies have been hit.",
+		-- "-- Stacks last for 4 seconds and Can be refreshed during active duration.",
+		-- "-- Stacks additively with Movement Speed buffs from \"Disrupt Destiny\", \"Warp Speed\", the small Movement Speed node, and Weapon Blessings like \"Rev it Up\".",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 3 - Quietude +]--
 	local ED_PSY_Passive_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 每 1% 反噬平息恢復 0.5% 最大韌性。",
+		"- 每 1% 反噬平息恢復0.5%最大韌性。",
 		"- 觸發於主動或被動平息。",
-		"- 例如，一個擁有 109 最大韌性的靈能者從 59% 真實反噬平息到 0% 反噬，會恢復 59x(109x0.005)=32.15 韌性（HUD 四捨五入：33）。",
+		"- 例如，一個擁有109最大韌性的靈能者從 59% 真實反噬平息到 0% 反噬，會恢復59x(109x0.005)=32.15韌性（HUD 四捨五入：33）。",
 		z_eff_of_this_tougn_rep,
-		ppp___ppp,
-		"- Replenishes 0.5% of Maximum Toughness per 1% Peril Quelled.",
-		"- Procs on both active or passive quelling.",
-		"- For example, a Psyker with 109 Maximum Toughness Quelling down from 59% true Peril to 0% Peril, replenishes 59x(109x0.005)=32.15 Toughness (HUD rounds up: 33).",
+		-- ppp___ppp,
+		-- "- Replenishes 0.5% of Maximum Toughness per 1% Peril Quelled.",
+		-- "- Procs on both active or passive quelling.",
+		-- "- For example, a Psyker with 109 Maximum Toughness Quelling down from 59% true Peril to 0% Peril, replenishes 59x(109x0.005)=32.15 Toughness (HUD rounds up: 33).",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 4 - Warp Expenditure +]--
 	local ED_PSY_Passive_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 每 1% 反噬生成恢復 0.25% 最大韌性。",
+		"- 每1%反噬生成恢復0.25%最大韌性。",
 		"- 來自「平心靜氣」、「骨折後遺症」、「動能共鳴」、「現實錨點」和反噬抗性節點的反噬值消耗減少效果會降低此天賦的效能！",
-		"- 例如，一個擁有 90 最大韌性的靈能者生成 44% 反噬，會恢復 44x(90x0.0025)=9.9 韌性。然而，同樣的靈能者在擁有 15% 反噬值消耗減少效果（來自 3 個小型反噬抗性節點）的情況下生成 44% 反噬，僅會恢復 44x(90x0.0025x0.95^3)=8.488 韌性。",
-		ppp___ppp,
-		"- Replenishes 0.25% of maximum Toughness per 1% Peril generated.",
-		"- Peril Cost Reduction buffs from \"Becalming Eruption\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\" and Peril Resistance nodes Reduce this Talent's efficiency!",
-		"- For example, a Psyker with 90 Max Toughness who generates 44% Peril, replenishes 44x(90x0.0025)=9.9 Toughness. However, the same Psyker generating 44% Peril with 15% Peril Cost Reduction from 3 small Peril Resistance nodes, replenishes only 44x(90x0.0025x0.95^3)=8.488 Toughness instead.",
+		"- 例如，一個擁有90最大韌性的靈能者生成44%反噬，會恢復44x(90x0.0025)=9.9韌性。然而，同樣的靈能者在擁有15%反噬值消耗減少效果（來自3個小型反噬抗性節點）的情況下生成44%反噬，僅會恢復44x(90x0.0025x0.95^3)=8.488韌性。",
+		-- ppp___ppp,
+		-- "- Replenishes 0.25% of maximum Toughness per 1% Peril generated.",
+		-- "- Peril Cost Reduction buffs from \"Becalming Eruption\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\" and Peril Resistance nodes Reduce this Talent's efficiency!",
+		-- "- For example, a Psyker with 90 Max Toughness who generates 44% Peril, replenishes 44x(90x0.0025)=9.9 Toughness. However, the same Psyker generating 44% Peril with 15% Peril Cost Reduction from 3 small Peril Resistance nodes, replenishes only 44x(90x0.0025x0.95^3)=8.488 Toughness instead.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 5 - Perilous Combustion +]--
 	local ED_PSY_Passive_5_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 疊加效果在距離被擊殺敵人最多 4 公尺內生效。",
+		"- 疊加效果在距離被擊殺敵人最多4公尺內生效。",
 		"- 不會對被靈能者的靈魂之火傷害跳數擊殺的精英或特殊敵人生效。",
 		"- 會對燃燒或流血跳數擊殺生效。",
 		"- 靈魂之火：",
-		"-- 持續 8 秒。",
+		"-- 持續8秒。",
 		"-- 與其他靈魂之火來源相同。",
-		"-- 每 0.75 秒觸發一次。",
+		"-- 每0.75秒觸發一次。",
 		"-- 施加疊加時會刷新持續時間。",
 		"-- 對所有裝甲類型的傷害係數都很高，對甲殼裝甲的傷害係數很低。",
 		"{#color(255, 35, 5)}- 疊加效果適用於惡魔宿主！{#reset()}",
-		ppp___ppp,
-		"- Stacks are applied at a distance of up to 4 meters from the killed enemy.",
-		"- Does not proc on Elites or Specials killed by Psyker's Soulblaze Damage ticks.",
-		"- Does proc on Burn or Bleed tick kills.",
-		"- Soulblaze:",
-		"-- Lasts 8s.",
-		"-- Same as other sources of Soulblaze.",
-		"-- Ticks every 0.75 seconds.",
-		"-- Refreshes duration on stack application.",
-		"-- Very high armor Damage modifiers across the board, very low armor Damage modifier against Carapace.",
-		"{#color(255, 35, 5)}- Stacks apply to Daemonhosts!{#reset()}",
+		-- ppp___ppp,
+		-- "- Stacks are applied at a distance of up to 4 meters from the killed enemy.",
+		-- "- Does not proc on Elites or Specials killed by Psyker's Soulblaze Damage ticks.",
+		-- "- Does proc on Burn or Bleed tick kills.",
+		-- "- Soulblaze:",
+		-- "-- Lasts 8s.",
+		-- "-- Same as other sources of Soulblaze.",
+		-- "-- Ticks every 0.75 seconds.",
+		-- "-- Refreshes duration on stack application.",
+		-- "-- Very high armor Damage modifiers across the board, very low armor Damage modifier against Carapace.",
+		-- "{#color(255, 35, 5)}- Stacks apply to Daemonhosts!{#reset()}",
 	}, "\n"), enhdesc_col)
 	
 
@@ -751,100 +751,100 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 疊加效果可在持續期間內刷新。",
 		stacks_add_w_oth_dmg,
 		warp_attc_refers_to,
-		ppp___ppp,
-		"- Hitting enemies with a Critical Melee, Ranged, or Assail attack grants Stacks.",
-		"- Generates multiple Stacks per attack when Cleaving.",
-		"- Stacks can be refreshed during active duration.",
-		stacks_add_w_oth_dmg,
-		warp_attc_refers_to,
+		-- ppp___ppp,
+		-- "- Hitting enemies with a Critical Melee, Ranged, or Assail attack grants Stacks.",
+		-- "- Generates multiple Stacks per attack when Cleaving.",
+		-- "- Stacks can be refreshed during active duration.",
+		-- stacks_add_w_oth_dmg,
+		-- warp_attc_refers_to,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 7 - Battle Meditation +]--
 	local ED_PSY_Passive_7_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 從當前反噬值中移除 10% 反噬。",
-		"- 當敵人死於靈能者的近戰和遠程攻擊、傷害技能、持續傷害效果，或被靈能者推下懸崖進入地圖殺區時，有 10% 的機率觸發。",
+		"- 從當前反噬值中移除10%反噬。",
+		"- 當敵人死於靈能者的近戰和遠程攻擊、傷害技能、持續傷害效果，或被靈能者推下懸崖進入地圖殺區時，有10%的機率觸發。",
 		"- 與「骨折後遺症」和「屠殺中的平靜」同時觸發。",
-		"- 有 2% 的機率在同一次擊殺中觸發「戰鬥冥想」，總共移除 25% 的反噬。",
-		ppp___ppp,
-		"- Removes 10% Peril from the current Peril amount.",
-		"- Has a 10% chance to proc when enemies die to Psyker's Melee and Ranged attacks, Damaging abilities, DoTs, and when pushed over ledges into map kill boxes by Psyker.",
-		"- Procs additionally to \"By Crack of Bone\" and \"Tranquility Through Slaughter\".",
-		"- There is a 2% chance that the Talent procs on the same kill alongside \"Purloin Providence\" removing 25% Peril total.",
+		"- 有2%的機率在同一次擊殺中觸發「戰鬥冥想」，總共移除25%的反噬。",
+		-- ppp___ppp,
+		-- "- Removes 10% Peril from the current Peril amount.",
+		-- "- Has a 10% chance to proc when enemies die to Psyker's Melee and Ranged attacks, Damaging abilities, DoTs, and when pushed over ledges into map kill boxes by Psyker.",
+		-- "- Procs additionally to \"By Crack of Bone\" and \"Tranquility Through Slaughter\".",
+		-- "- There is a 2% chance that the Talent procs on the same kill alongside \"Purloin Providence\" removing 25% Peril total.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 8 - Wildfire +]--
 	local ED_PSY_Passive_8_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 每當受到至少 2 層靈魂之火影響的敵人死亡時，靈魂之火會擴散到 5 公尺範圍內的有效目標。",
-		"- 如果目標已經有 4 層或更多靈魂之火，則不會受到此天賦造成的靈魂之火疊加。",
-		"- 有效目標最多可受到此天賦造成的 4 層靈魂之火疊加。",
+		"- 每當受到至少2層靈魂之火影響的敵人死亡時，靈魂之火會擴散到5公尺範圍內的有效目標。",
+		"- 如果目標已經有4層或更多靈魂之火，則不會受到此天賦造成的靈魂之火疊加。",
+		"- 有效目標最多可受到此天賦造成的4層靈魂之火疊加。",
 		"- 擴散的靈魂之火疊加數量取決於死亡敵人的靈魂之火疊加數量：",
 		"_______________________________",
-		"疊加數:       1|        2|       3|       4|      >4",
+		"疊加數:    1|        2|       3|       4|      >4",
 		"擴散數:    0|       2|       3|        4|       4",
 		"_______________________________",
 		"- 擴散的有效目標最多為 4 個：",
 		"-- 如果有 4 層疊加和 4 個目標 - 每個目標獲得 1 層疊加；",
 		"-- 如果有 4 層疊加和 3 個目標 - 1 個目標獲得 2 層疊加，其他 2 個目標各獲得 1 層疊加，等等。",
 		"惡魔宿主不是有效目標！",
-		ppp___ppp,
-		"- Whenever an Enemy who is affected by at least 2 Stacks of Soulblaze dies, it spreads to valid targets within a 5 meters radius.",
-		"- Targets do not receive Soulblaze Stacks caused by the Talent if they already have 4 Stacks or more on them.",
-		"- Valid targets can receive Soulblaze Stacks up to a Maximum of 4 that are caused by the Talent.",
-		"- The amount of Soulblaze Stacks that spread depends on the amount of Soulblaze stacks on the dying enemy:",
-		"_______________________________",
-		"Stacks:       1|        2|       3|       4|      >4",
-		"Spreads:    0|       2|       3|        4|       4",
-		"_______________________________",
-		"- The maximum amount of valid targets to spread is 4:",
-		"-- if 4 Stacks and 4 targets - each target receives 1 Stack;",
-		"-- if 4 Stacks and 3 targets - 1 target receives 2 Stacks while the other 2 targets receive 1 Stack each, etc.",
-		"Daemonhosts are No valid targets!",
+		-- ppp___ppp,
+		-- "- Whenever an Enemy who is affected by at least 2 Stacks of Soulblaze dies, it spreads to valid targets within a 5 meters radius.",
+		-- "- Targets do not receive Soulblaze Stacks caused by the Talent if they already have 4 Stacks or more on them.",
+		-- "- Valid targets can receive Soulblaze Stacks up to a Maximum of 4 that are caused by the Talent.",
+		-- "- The amount of Soulblaze Stacks that spread depends on the amount of Soulblaze stacks on the dying enemy:",
+		-- "_______________________________",
+		-- "Stacks:       1|        2|       3|       4|      >4",
+		-- "Spreads:    0|       2|       3|        4|       4",
+		-- "_______________________________",
+		-- "- The maximum amount of valid targets to spread is 4:",
+		-- "-- if 4 Stacks and 4 targets - each target receives 1 Stack;",
+		-- "-- if 4 Stacks and 3 targets - 1 target receives 2 Stacks while the other 2 targets receive 1 Stack each, etc.",
+		-- "Daemonhosts are No valid targets!",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 9 - Psykinetic's Aura +]--
 	local ED_PSY_Passive_9_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 對「靈能尖嘯」/「靈能學者之怒」為 1.5 秒，對「占卜者的注視」為 1.25 秒，對「念力護盾」為 2 秒。",
+		"- 對「靈能尖嘯」/「靈能學者之怒」為1.5秒，對「占卜者的注視」為1.25秒，對「念力護盾」為2秒。",
 		"- 不會與另一位靈能者的相同天賦疊加（每位靈能者觸發自己的天賦，分別減少冷卻時間）。",
-		"- 與專注興奮劑剩餘的每秒 3 秒冷卻時間減少效果同時觸發。",
+		"- 與專注興奮劑剩餘的每秒3秒冷卻時間減少效果同時觸發。",
 		doesnt_interact_w_c_a_r_from_curio,
-		ppp___ppp,
-		"- This is 1.5 seconds for \"Venting Shriek\"/\"Psykinetic's Wrath\", 1.25 seconds for \"Scrier's Gaze\", and 2 seconds for \"Telekine Shield\".",
-		"- Does not Stack with the same Talent of another Psyker (each Psyker procs their own Talent spreading the cooldown reduction separately).",
-		"- Procs additionally to Concentration Stimm's remaining cooldown reduction effect of 3 seconds per second.",
-		doesnt_interact_w_c_a_r_from_curio,
+		-- ppp___ppp,
+		-- "- This is 1.5 seconds for \"Venting Shriek\"/\"Psykinetic's Wrath\", 1.25 seconds for \"Scrier's Gaze\", and 2 seconds for \"Telekine Shield\".",
+		-- "- Does not Stack with the same Talent of another Psyker (each Psyker procs their own Talent spreading the cooldown reduction separately).",
+		-- "- Procs additionally to Concentration Stimm's remaining cooldown reduction effect of 3 seconds per second.",
+		-- doesnt_interact_w_c_a_r_from_curio,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 10 - Mind in Motion +]--
 	local ED_PSY_Passive_10_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 不會與移動速度增益效果產生互動。",
-		ppp___ppp,
-		"- Does not interact with Movement Speed buffs.",
+		-- ppp___ppp,
+		-- "- Does not interact with Movement Speed buffs.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 11 - Malefic Momentum +]--
 	local ED_PSY_Passive_11_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		stacks_add_w_oth_dmg,
-		"- 每個增益效果的 8 秒持續時間從相應的擊殺開始計算，並可在持續期間內刷新。",
+		"- 每個增益效果的8秒持續時間從相應的擊殺開始計算，並可在持續期間內刷新。",
 		warp_attc_refers_to,
-		ppp___ppp,
-		"- The 8 seconds duration of each buff starts on respective kills and can be refreshed during active duration.",
+		-- ppp___ppp,
+		-- "- The 8 seconds duration of each buff starts on respective kills and can be refreshed during active duration.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 12 - Channeled Force +]--
 	local ED_PSY_Passive_12_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 在使用任何靈能法杖進行至少 95% 充能的次要攻擊後，增加法杖主要攻擊的傷害。",
+		"- 在使用任何靈能法杖進行至少95%充能的次要攻擊後，增加法杖主要攻擊的傷害。",
 		can_be_refr_dur_active_dur,
 		"- 與其他傷害增益做加法疊加。",
-		ppp___ppp,
-		"- Increases the Damage of staff Primary attacks after executing a charged secondary attack (at least 95% charged) with any Force Staff.",
-		can_be_refr_dur_active_dur,
-		"- Stacks additively with other Damage buffs.",
+		-- ppp___ppp,
+		-- "- Increases the Damage of staff Primary attacks after executing a charged secondary attack (at least 95% charged) with any Force Staff.",
+		-- can_be_refr_dur_active_dur,
+		-- "- Stacks additively with other Damage buffs.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 13 - Perilous Assault +]--
@@ -852,37 +852,37 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 這會減少切換物品槽（武器、閃擊技能、興奮劑、醫療包、彈藥箱、書籍等）時的操作時間：",
 		"_______________________________",
-		"反噬:     0|  20|  40|  50|  60|  80|  100",
+		"反   噬:  0|  20|  40|  50|  60|  80|  100",
 		"WS(%):  0|   10|  20|  25|  30|  40|   50",
 		"_______________________________",
 		"(*WS = 揮舞速度)",
-		"{#color(255, 35, 5)}- 客觀來說，靈能者目前的武器庫中沒有任何一種武器能顯著減少此天賦的揮舞時間。自動步槍和激光步槍在切換到它們並開始從腰部開火時擁有最長的揮舞時間為 0.65 秒。此天賦在 100% 反噬時會將這些時間減少到 0.43 秒。對於所有其他武器，時間減少的意義更小。{#reset()}",
-		ppp___ppp,
-		"- This reduces the time of Wielding actions when swapping item slots (weapons, Blitz abilities, stimms, med packs, ammo crates, books, etc):",
-		"_______________________________",
-		"Peril:     0|  20|  40|  50|  60|  80|  100",
-		"WS(%):  0|   10|  20|  25|  30|  40|   50",
-		"_______________________________",
-		"(*WS = Wield Speed)",
-		"{#color(255, 35, 5)}- Objectively speaking, Psyker's current Weapon arsenal does not include a single Weapon for which this Talent would provide a significant wield time reduction. Autoguns and Lasguns have the 'longest' wield times with 0.65 seconds when switching to them and starting to fire from hip. The Talent, at 100% Peril, would reduce these times to 0.43 seconds. For all other Weapons, the time reductions are even less significant.{#reset()}",
+		"{#color(255, 35, 5)}- 客觀來說，靈能者目前的武器庫中沒有任何一種武器能顯著減少此天賦的揮舞時間。自動步槍和激光步槍在切換到它們並開始從腰部開火時擁有最長的揮舞時間為0.65秒。此天賦在100%反噬時會將這些時間減少到0.43秒。對於所有其他武器，時間減少的意義更小。{#reset()}",
+		-- ppp___ppp,
+		-- "- This reduces the time of Wielding actions when swapping item slots (weapons, Blitz abilities, stimms, med packs, ammo crates, books, etc):",
+		-- "_______________________________",
+		-- "Peril:     0|  20|  40|  50|  60|  80|  100",
+		-- "WS(%):  0|   10|  20|  25|  30|  40|   50",
+		-- "_______________________________",
+		-- "(*WS = Wield Speed)",
+		-- "{#color(255, 35, 5)}- Objectively speaking, Psyker's current Weapon arsenal does not include a single Weapon for which this Talent would provide a significant wield time reduction. Autoguns and Lasguns have the 'longest' wield times with 0.65 seconds when switching to them and starting to fire from hip. The Talent, at 100% Peril, would reduce these times to 0.43 seconds. For all other Weapons, the time reductions are even less significant.{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 14 - Lightning Speed +]--
 	local ED_PSY_Passive_14_rgb = iu_actit(table.concat({
 		ppp___ppp,
     	"- 與敏捷興奮劑的相關攻擊速度增益做加法疊加。",
-		ppp___ppp,
-		"- Stacks additively with related Attack Speed buff from Celerity Stimm.",
+		-- ppp___ppp,
+		-- "- Stacks additively with related Attack Speed buff from Celerity Stimm.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 15 - Souldrinker +]--
 	local ED_PSY_Passive_15_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 爆擊機率無法在持續期間內刷新。",
-		"- 每次實際擊殺敵人時恢復最大韌性。",
-		ppp___ppp,
-		"- Critical hit chance cannot be refreshed during active duration.",
-		"- Maximum Toughness is replenished with each actual enemy death.",
+		"- 每次擊殺敵人時恢復最大韌性。",
+		-- ppp___ppp,
+		-- "- Critical hit chance cannot be refreshed during active duration.",
+		-- "- Maximum Toughness is replenished with each actual enemy death.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 16 - Empyric Shock +]--
@@ -891,18 +891,18 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 對敵人施加一個減益效果，使其受到的亞空間攻擊傷害增加。",
 		can_be_refr_dur_active_dur,
 		"- 可穿透護盾施加。",
-		"- 減益效果與自身做乘法疊加，最高可達 33.8% (1.06⁵=1.338)，並與來自「衰弱詛咒」、歐格林的「削弱敵人」、「重要干擾」、老兵的「鎖定目標！」等其他敵人受到的傷害增益做乘法疊加，並與傷害增益和武器祝福提供的力量等級增益做乘法疊加。",
+		"- 減益效果與自身做乘法疊加，最高可達33.8%(1.06⁵=1.338)，並與來自「衰弱詛咒」、歐格林的「削弱敵人」、「重要干擾」、老兵的「鎖定目標！」等其他敵人受到的傷害增益做乘法疊加，並與傷害增益和武器祝福提供的力量等級增益做乘法疊加。",
 		warp_attc_refers_to,
 		"",
 		"{#color(255, 35, 5)}- 當前存在一個錯誤：地獄火法杖的左鍵攻擊無法施加減益效果。{#reset()}",
-		ppp___ppp,
-		"- Applies a debuff to enemies that increases the Damage they take from Warp attacks.",
-		can_be_refr_dur_active_dur,
-		"- Can be applied through shields.",
-		"- The debuff stacks multiplicatively with itself, up to 33.8% (1.06⁵=1.338), with other Damage taken debuffs on enemies from \"Enfeeble\", Ogryn's \"Soften Them Up\", \"Valuable Destruction\", Veteran's \"Focus Target!\", and multiplicatively with Damage buffs and with Power level buffs from Weapon Blessings.",
-		warp_attc_refers_to,
-		"",
-		"{#color(255, 35, 5)}- There is currently a bug: Inferno Staff left-clicks do not apply the debuff.{#reset()}",
+		-- ppp___ppp,
+		-- "- Applies a debuff to enemies that increases the Damage they take from Warp attacks.",
+		-- can_be_refr_dur_active_dur,
+		-- "- Can be applied through shields.",
+		-- "- The debuff stacks multiplicatively with itself, up to 33.8% (1.06⁵=1.338), with other Damage taken debuffs on enemies from \"Enfeeble\", Ogryn's \"Soften Them Up\", \"Valuable Destruction\", Veteran's \"Focus Target!\", and multiplicatively with Damage buffs and with Power level buffs from Weapon Blessings.",
+		-- warp_attc_refers_to,
+		-- "",
+		-- "{#color(255, 35, 5)}- There is currently a bug: Inferno Staff left-clicks do not apply the debuff.{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 17 - By Crack of Bone +]--
@@ -910,9 +910,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 移除反噬時，順劈攻擊每次揮擊可多次觸發。與「戰鬥冥想」和「盜竊天命」同時觸發。",
 		"- 與「平心靜氣」、「亞空間意志」、「動能共鳴」、「現實錨點」、小型反噬抗性節點和戰鬥興奮劑的反噬值消耗減少效果做乘法疊加。",
-		ppp___ppp,
-		"- Removing Peril can proc multiple times per swing when Cleaving. Procs additionally to \"Battle Meditation\" and \"Purloin Providence\".",
-		"- Reducing Peril Stacks multiplicatively with Peril Cost Reduction buffs from \"Becalming Eruption\", \"Empyric Resolve\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\", small Peril Resistance nodes, and Combat Stimm.",
+		-- ppp___ppp,
+		-- "- Removing Peril can proc multiple times per swing when Cleaving. Procs additionally to \"Battle Meditation\" and \"Purloin Providence\".",
+		-- "- Reducing Peril Stacks multiplicatively with Peril Cost Reduction buffs from \"Becalming Eruption\", \"Empyric Resolve\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\", small Peril Resistance nodes, and Combat Stimm.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 18 - Warp Splitting +]--
@@ -923,12 +923,12 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與「虛無碎片」和「靈能強化」做加法疊加，並與武器祝福「毀滅打擊」、「野蠻掃擊」和「憤怒」的相關增益做加法疊加。",
 		"- 與武器祝福提供的力量等級增益做乘法疊加。",
 		"- 請注意，甲殼裝甲無法被順劈。",
-		ppp___ppp,
-		"- Scaling proportionally with Peril.",
-		"- Increases the Maximum hit mass limit of attacks (Melee, Ranged, \"Assail\") by up to 100%, thereby allowing attacks to Cleave more enemies.",
-		"- Stacks additively with \"Ethereal Shards\" and \"Empowered Psionics\", and with related buffs from Weapon Blessings \"Devastating Strike\", \"Savage Sweep\", and \"Wrath\".",
-		"- Stacks multiplicatively with Power level buffs from Weapon Blessings.",
-		"- Note that Carapace armor cannot be Cleaved by default.",
+		-- ppp___ppp,
+		-- "- Scaling proportionally with Peril.",
+		-- "- Increases the Maximum hit mass limit of attacks (Melee, Ranged, \"Assail\") by up to 100%, thereby allowing attacks to Cleave more enemies.",
+		-- "- Stacks additively with \"Ethereal Shards\" and \"Empowered Psionics\", and with related buffs from Weapon Blessings \"Devastating Strike\", \"Savage Sweep\", and \"Wrath\".",
+		-- "- Stacks multiplicatively with Power level buffs from Weapon Blessings.",
+		-- "- Note that Carapace armor cannot be Cleaved by default.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 19 - Unlucky for Some +]--
@@ -936,9 +936,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 當靈能者倒下時，恢復協同範圍內盟友的韌性。",
 		"- 當盟友或靈能者死亡時不會觸發。",
-		ppp___ppp,
-		"- When Psyker goes down, replenishes Toughness to Allies in Coherency.",
-		"- Does not proc when the Ally or Psyker dies.",
+		-- ppp___ppp,
+		-- "- When Psyker goes down, replenishes Toughness to Allies in Coherency.",
+		-- "- Does not proc when the Ally or Psyker dies.",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
@@ -951,14 +951,14 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"反噬:       0|  20|  40|  50|  60|  80|  100",
 		"TDR(%): 10|  14|   19|   21|  23|  28|    33",
 		"_______________________________",
-		"(*TDR = 韌性傷害減免)",
-		ppp___ppp,
-		"- Always grants a minimum of 10% Toughness Damage Reduction regardless of current Peril amount:",
-		"_______________________________",
-		"Peril:       0|  20|  40|  50|  60|  80|  100",
-		"TDR(%): 10|  14|   19|   21|  23|  28|    33",
-		"_______________________________",
-		"(*TDR = Toughness Damage Reduction)",
+		"(*TDR = 韌性傷害減免 Toughness Damage Reduction)",
+		-- ppp___ppp,
+		-- "- Always grants a minimum of 10% Toughness Damage Reduction regardless of current Peril amount:",
+		-- "_______________________________",
+		-- "Peril:       0|  20|  40|  50|  60|  80|  100",
+		-- "TDR(%): 10|  14|   19|   21|  23|  28|    33",
+		-- "_______________________________",
+		-- "(*TDR = Toughness Damage Reduction)",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 21 - Empathic Evasion +]--
@@ -967,24 +967,24 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 用近戰爆擊、遠程或「靈能攻擊」擊中敵人會使靈能者進入 1 秒的「閃避狀態」，對抗遠程攻擊。",
 		can_be_refr_dur_active_dur,
 		"- 此效果在機制上與武器祝福「幽靈」、「游擊」和「輕裝」提供的效果相同。",
-		ppp___ppp,
-		"- Hitting enemies with a Critical Melee, Ranged, or \"Assail\" attack puts Psyker into \"Dodging state\" against Ranged attacks for 1 second.",
-		can_be_refr_dur_active_dur,
-		"- This effect is mechanically the same as the one provided by Weapon Blessings \"Ghost\", \"Hit and Run\", and \"Stripped Down\".",
+		-- ppp___ppp,
+		-- "- Hitting enemies with a Critical Melee, Ranged, or \"Assail\" attack puts Psyker into \"Dodging state\" against Ranged attacks for 1 second.",
+		-- can_be_refr_dur_active_dur,
+		-- "- This effect is mechanically the same as the one provided by Weapon Blessings \"Ghost\", \"Hit and Run\", and \"Stripped Down\".",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 22 - Anticipation +]--
 	local ED_PSY_Passive_22_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 將靈能者的基礎閃避停留時間從 0.2 秒增加到 0.3 秒。",
-		"- 「閃避停留時間」指的是在閃避技術結束後，角色仍被視為處於對抗近戰攻擊的「閃避狀態」的時間窗口。這使得閃避窗口在玩家輸入時更具寬容性。",
+		"- 將靈能者的基礎閃避停留時間從0.2秒增加到0.3秒。",
+		"- 「閃避持續時間」指的是在閃避技術結束後，角色仍被視為處於對抗近戰攻擊的「閃避狀態」的時間窗口。這使得閃避窗口在玩家輸入時更具寬容性。",
 		"- 同時增加一次有效閃避。",
 		"- 角色能執行的有效閃避總數因當前裝備的武器或物品的閃避模板而異。",
-		ppp___ppp,
-		"- Increases Psyker's base Dodge linger time from 0.2 seconds to 0.3 seconds.",
-		"- \"Dodge linger time\" refers to the time window in which a character is still considered to be in \"Dodging state\" against a Melee attack after a Dodge has technically ended. This makes the Dodge window more forgiving in regard to player input timing.",
-		"- Also adds one effective Dodge at all times.",
-		"- The overall amount of effective Dodges a character can perform varies depending on the Dodge template of the currently equipped Weapon or Iitem.",
+		-- ppp___ppp,
+		-- "- Increases Psyker's base Dodge linger time from 0.2 seconds to 0.3 seconds.",
+		-- "- \"Dodge linger time\" refers to the time window in which a character is still considered to be in \"Dodging state\" against a Melee attack after a Dodge has technically ended. This makes the Dodge window more forgiving in regard to player input timing.",
+		-- "- Also adds one effective Dodge at all times.",
+		-- "- The overall amount of effective Dodges a character can perform varies depending on the Dodge template of the currently equipped Weapon or Iitem.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 23 - Solidity +]--
@@ -992,17 +992,17 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 僅適用於主動平息，對被動平息無效。",
 		"- 在計算過程中與敏捷興奮劑的平息增益做乘法疊加。",
-		ppp___ppp,
-		"- Applies only to active quelling, passive quelling is unaffected.",
-		"- Stacks multiplicatively during calculation with the Quelling buff from Celerity Stimm.",
+		-- ppp___ppp,
+		-- "- Applies only to active quelling, passive quelling is unaffected.",
+		-- "- Stacks multiplicatively during calculation with the Quelling buff from Celerity Stimm.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 24 - Puppet Master +]--
 	local ED_PSY_Passive_24_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 將基礎協同範圍從 8 公尺增加到 12 公尺。",
-		ppp___ppp,
-		"- Increases base Coherency radius from 8 to 12 meters.",
+		"- 將基礎協同範圍從8公尺增加到12公尺。",
+		-- ppp___ppp,
+		-- "- Increases base Coherency radius from 8 to 12 meters.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 25 - Warp Rider +]--
@@ -1011,15 +1011,15 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		stacks_add_w_oth_dmg,
 		"_______________________________",
 		"反噬:       0|  20|  40|  50|  60|  80|  100",
-		"傷害(%): 0|     4|    8|   10|   12|   16|   20",
-		"_______________________________",
-		"(*傷害 = 傷害增加)",
-		ppp___ppp,
-		"_______________________________",
-		"Peril:       0|  20|  40|  50|  60|  80|  100",
 		"Dmg(%): 0|     4|    8|   10|   12|   16|   20",
 		"_______________________________",
-		"(*Dmg = Damage Increase)",
+		"(*Dmg = 傷害增加  Damage Increas)",
+		-- ppp___ppp,
+		-- "_______________________________",
+		-- "Peril:       0|  20|  40|  50|  60|  80|  100",
+		-- "Dmg(%): 0|     4|    8|   10|   12|   16|   20",
+		-- "_______________________________",
+		-- "(*Dmg = Damage Increase)",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 26 - Crystalline Will +]--
@@ -1033,15 +1033,15 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"-- 使所有敵人踉蹌，除了破碎者、變種人、巨獸、雙胞胎（僅限沒有虛空護盾的隊長）。",
 		"-- 對所有敵人造成600基礎傷害。",
 		"-- 爆炸傷害從中心到最大範圍逐漸減少，並且可以通過「擾動命運」、「至天高之力」、「惡意攻勢」（常規傷害增益）、「占卜者的注視」和「亞空間騎士」的傷害增益來增加。",
-		ppp___ppp,
-		"- Instead of knocking down Psyker on self-explosion, converts one Health Segment to full Corruption.",
-		"- Always converts one Segment regardless whether the Segment in question is already partially Corrupted or not.",
-		"- Also reduces the overall time of the self-explosion from 3 to 1.13 seconds.",
-		"- Psyker's self-explosion:",
-		"-- Max radius: 10 meters.",
-		"-- Staggers all enemies except for Crusher, Mutants, Monstrosities, Twins (Captains only without void shield).",
-		"-- Deals 600 base Damage against all enemies.",
-		"-- Explosion Damage decreases from center to Max range and can be increased by Damage buffs from \"Disrupt Destiny\", \"Empyrean Empowerment\", \"Malefic Momentum\" (regular Damage buff), \"Scrier's Gaze\", and \"Warp Rider\".",
+		-- ppp___ppp,
+		-- "- Instead of knocking down Psyker on self-explosion, converts one Health Segment to full Corruption.",
+		-- "- Always converts one Segment regardless whether the Segment in question is already partially Corrupted or not.",
+		-- "- Also reduces the overall time of the self-explosion from 3 to 1.13 seconds.",
+		-- "- Psyker's self-explosion:",
+		-- "-- Max radius: 10 meters.",
+		-- "-- Staggers all enemies except for Crusher, Mutants, Monstrosities, Twins (Captains only without void shield).",
+		-- "-- Deals 600 base Damage against all enemies.",
+		-- "-- Explosion Damage decreases from center to Max range and can be increased by Damage buffs from \"Disrupt Destiny\", \"Empyrean Empowerment\", \"Malefic Momentum\" (regular Damage buff), \"Scrier's Gaze\", and \"Warp Rider\".",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 27 - Kinetic Deflection +]--
@@ -1050,92 +1050,92 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 反噬消耗減少增益（來自「平心靜氣」、「骨折後遺症」、「亞空間意志」、「內在平靜」、「現實錨點」和小型反噬抗性節點）增加了耐力消耗轉換為反噬的效率。",
     	"- 也增加了來自珍品、近戰武器特技和「偏斜」武器祝福（也適用於遠程攻擊）的格擋效率增益，以及來自敏捷興奮劑的耐力消耗減少增益。",
     	"- 所有反噬消耗減少、格擋消耗減少和耐力消耗減少的來源都與自身和彼此乘法疊加。",
-		ppp___ppp,
-		"- The efficiency of the Stamina Cost-to-Peril conversion is increased by Peril Cost Reduction buffs from \"Becalming Eruption\", \"By Crack of Bone\", \"Empyric Resolve\", \"Inner Tranquility\", \"Reality Anchor\" and small Peril Resistance nodes.",
-		"- Also increased by Block Cost Reduction buffs from Block Efficiency from Curios, Melee weapon perks, and \"Deflector\" Weapon Blessing (also against Ranged attacks), and by Stamina Cost Reduction buff from Celerity Stimm.",
-		"- All sources of Peril Cost Reduction, Block Cost Reduction, and Stamina Cost Reduction Stack multiplicatively with themselves and each other.",
+		-- ppp___ppp,
+		-- "- The efficiency of the Stamina Cost-to-Peril conversion is increased by Peril Cost Reduction buffs from \"Becalming Eruption\", \"By Crack of Bone\", \"Empyric Resolve\", \"Inner Tranquility\", \"Reality Anchor\" and small Peril Resistance nodes.",
+		-- "- Also increased by Block Cost Reduction buffs from Block Efficiency from Curios, Melee weapon perks, and \"Deflector\" Weapon Blessing (also against Ranged attacks), and by Stamina Cost Reduction buff from Celerity Stimm.",
+		-- "- All sources of Peril Cost Reduction, Block Cost Reduction, and Stamina Cost Reduction Stack multiplicatively with themselves and each other.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 28 - Tranquility Through Slaughter +]--
 	local ED_PSY_Passive_28_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 用常規遠程攻擊的爆擊移除當前反噬值的 4%。",
+		"- 用常規遠程攻擊的爆擊移除當前反噬值的4%。",
 		"- 擊中護盾時觸發。",
 		"- 每次射擊僅觸發一次，無論擊中多少敵人。",
 		"- 與「戰鬥冥想」和「盜竊天命」同時觸發。",
 		warp_attc_refers_to,
-		ppp___ppp,
-		"- Critical hits with regular ranged attacks remove 4% Peril from the current Peril amount.",
-		"- Procs when hitting shields.",
-		"- Procs only once per shot regardless of how many enemies have been hit.",
-		"- Procs additionally to \"Battle Meditation\" and \"Purloin Providence\".",
-		warp_attc_refers_to,
+		-- ppp___ppp,
+		-- "- Critical hits with regular ranged attacks remove 4% Peril from the current Peril amount.",
+		-- "- Procs when hitting shields.",
+		-- "- Procs only once per shot regardless of how many enemies have been hit.",
+		-- "- Procs additionally to \"Battle Meditation\" and \"Purloin Providence\".",
+		-- warp_attc_refers_to,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 29 - Empyric Resolve +]--
 	local ED_PSY_Passive_29_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 減少 40% 反噬生成量。",
+		"- 減少40%反噬生成量。",
 		"- 與「骨折後遺症」、「平心靜氣」、「動能共鳴」、「現實錨點」、小型反噬抗性節點和戰鬥興奮劑的反噬消耗減少效果做乘法疊加。",
-		"- 也減少近戰擊殺和天賦提供的韌性回復量 30%。",
+		"- 也減少近戰擊殺和天賦提供的韌性回復量30%。",
 		"- 不影響協同韌性再生和武器祝福「榮耀獵手」、「激勵彈幕」和「令人安心的準確性」的韌性回復。",
 		"- 此回復減益效果與其他玩家減益效果（如有毒氣體）做乘法疊加。",
-		ppp___ppp,
-		"- Reduces the amount of peril generated by 40%.",
-		"- Stacks multiplicatively with Peril Cost Reduction buffs from \"Becalming Eruption\", \"By Crack of Bone\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\", small Peril Resistance nodes, and Combat Stimm.",
-		"- Also reduces the amount of any Toughness replenished from Melee kills and Talents by 30%.",
-		"- Does not affect Toughness replenishments from Coherency Toughness Regeneration and Weapon Blessings \"Gloryhunter\", \"Inspiring Barrage\", and \"Reassuringly Accurate\".",
-		"- This Replenishment debuff Stacks multiplicatively with other player debuffs like toxic gas.",
+		-- ppp___ppp,
+		-- "- Reduces the amount of peril generated by 40%.",
+		-- "- Stacks multiplicatively with Peril Cost Reduction buffs from \"Becalming Eruption\", \"By Crack of Bone\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\", small Peril Resistance nodes, and Combat Stimm.",
+		-- "- Also reduces the amount of any Toughness replenished from Melee kills and Talents by 30%.",
+		-- "- Does not affect Toughness replenishments from Coherency Toughness Regeneration and Weapon Blessings \"Gloryhunter\", \"Inspiring Barrage\", and \"Reassuringly Accurate\".",
+		-- "- This Replenishment debuff Stacks multiplicatively with other player debuffs like toxic gas.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 30 - Penetration of the Soul +]--
 	local ED_PSY_Passive_30_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 當反噬值達到或超過 75% 時，對亞空間攻擊賦予 10% 撕裂效果，提升對甲殼、片甲、狂熱者、不屈敵人的傷害。",
+		"- 當反噬值達到或超過75%時，對亞空間攻擊賦予10%撕裂效果，提升對甲殼、片甲、狂熱者、不屈敵人的傷害。",
 		"- 僅影響靈能者自身的傷害。",
 		"- 與其他撕裂增益和施加於敵人的脆弱減益做加法疊加。",
 		warp_attc_refers_to,
 		"{#color(255, 35, 5)}當前存在一個錯誤：撕裂乘數在傷害計算中未正確應用。\n此天賦無效!!!{#reset()}",
-		ppp___ppp,
-		"- While at or above 75% true Peril, grants 10% Rending to Warp attacks boosting Damage against armor types Carapace, Flak, Maniac, Unyielding.",
-		"- Only affects Psyker's own Damage.",
-		"- Stacks additively with other Rending buffs and with Brittleness debuffs that are applied to enemies.",
-		warp_attc_refers_to,
-		"{#color(255, 35, 5)}There is currently a bug: The Rending multiplier fails to be applied correctly during Damage calculation.\nTHIS TALENT DOES NOTHING!!!{#reset()}",
+		-- ppp___ppp,
+		-- "- While at or above 75% true Peril, grants 10% Rending to Warp attacks boosting Damage against armor types Carapace, Flak, Maniac, Unyielding.",
+		-- "- Only affects Psyker's own Damage.",
+		-- "- Stacks additively with other Rending buffs and with Brittleness debuffs that are applied to enemies.",
+		-- warp_attc_refers_to,
+		-- "{#color(255, 35, 5)}There is currently a bug: The Rending multiplier fails to be applied correctly during Damage calculation.\nTHIS TALENT DOES NOTHING!!!{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 31 - True Aim +]--
 	local ED_PSY_Passive_31_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 每次用近戰、遠程、「靈能攻擊」和「顱腦崩裂」/「顱腦爆裂」攻擊命中弱點時生成 1 層弱點疊加。",
-		"- 順劈攻擊（例如虛空打擊法杖的充能射擊進入密集區域）一次最多可累積 5 層弱點疊加，但不會立即消耗保證的爆擊。",
+		"- 每次用近戰、遠程、「靈能攻擊」和「顱腦崩裂」、「顱腦爆裂」攻擊命中弱點時生成1層弱點疊加。",
+		"- 順劈攻擊（例如虛空打擊法杖的充能射擊進入密集區域）一次最多可累積5層弱點疊加，但不會立即消耗保證的爆擊。",
 		"- 弱點疊加持續到被消耗為止。",
-		"- 「顱腦崩裂」/「顱腦爆裂」和「懲戒」不會消耗保證的爆擊。",
-		ppp___ppp,
-		"- Generates 1 Weakspot Stack per Weakspot hit with Melee, Ranged, \"Assail\" and \"Brain Rupture\"/\"Brain Burst\" attacks.",
-		"- Cleaving attacks (e.g. Voidstrike Staff charged shots into density) can accumulate up to 5 Weakspot Stacks at once but do not consume the guaranteed Crit right away.",
-		"- Weakspot Stacks last until consumed.",
-		"- \"Brain Rupture\"/\"Brain Burst\" and \"Smite\" do not consume the guaranteed Crit.",
+		"- 「顱腦崩裂」、「顱腦爆裂」和「懲戒」不會消耗保證的爆擊。",
+		-- ppp___ppp,
+		-- "- Generates 1 Weakspot Stack per Weakspot hit with Melee, Ranged, \"Assail\" and \"Brain Rupture\"/\"Brain Burst\" attacks.",
+		-- "- Cleaving attacks (e.g. Voidstrike Staff charged shots into density) can accumulate up to 5 Weakspot Stacks at once but do not consume the guaranteed Crit right away.",
+		-- "- Weakspot Stacks last until consumed.",
+		-- "- \"Brain Rupture\"/\"Brain Burst\" and \"Smite\" do not consume the guaranteed Crit.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 32 - Surety of Arms +]--
 	local ED_PSY_Passive_32_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"重新裝填時，增加 25% 裝填動畫速度。",
+		"重新裝填時，增加25%裝填動畫速度。",
 		"與武器祝福提供的裝填速度增益做加法疊加。",
-		"重新裝填時，根據彈匣中重新裝填的彈藥百分比，生成最多 25% 的反噬。",
-		"例如，當重新裝填 34 發彈藥，而彈匣容量為 59 發時，靈能者會生成 14.4% 的真實反噬；0.25x(34/59)=0.144。",
-		"重新裝填空彈匣會生成最大 25% 的反噬。",
-		"反噬消耗減少增益會降低此重新裝填彈藥轉換為反噬的效率。例如，重新裝填相同數量的彈藥，但彈匣容量相同，且有三個反噬抗性節點（即 warp_charge_amount 為 0.95³），靈能者只會生成 12.3% 的真實反噬；0.25x(34/59)x0.95³=0.123。",
-		"請注意，此天賦在重新裝填時總是會生成反噬，無論當前反噬量多少，但只有在真實反噬量低於或等於 75% 時才會增加裝填速度。",
-		ppp___ppp,
-		"- Increases Reload animation speed by 25%.",
-		"- Stacks additively with Reload speed buffs from Weapon Blessings.",
-		"- Upon Reload, generates up to 25% Peril based on the percentage of reloaded ammo in clip. ",
-		"- For example, when reloading 34 rounds of a clip that has a size of 59 rounds, Psyker would generate 14.4% true peril; 0.25x(34/59)=0.144.",
-		"- Reloading an empty clip generates the Max amount of 25% Peril. ",
-		"- Peril cost reduction buffs reduce the efficiency of this Reloaded-ammo-to-Peril conversion. For example, reloading the same amount of ammo in a clip of the same size, but with three Peril Resistance nodes (i.e. a warp_charge_amount of 0.95³), Psyker would only generate 12.3% true peril; 0.25x(34/59)x0.95³=0.123.",
-		"Note that the Talent always generates Peril on Reload regardless of current Peril amount but only grants the increased Reload speed when below or at 75% true Peril.",
+		"重新裝填時，根據彈匣中重新裝填的彈藥百分比，生成最25%的反噬。",
+		"例如，當重新裝填34發彈藥，而彈匣容量為59發時，靈能者會生成14.4%的真實反噬；0.25x(34/59)=0.144。",
+		"重新裝填空彈匣會生成最大25%的反噬。",
+		"反噬消耗減少增益會降低此重新裝填彈藥轉換為反噬的效率。例如，重新裝填相同數量的彈藥，但彈匣容量相同，且有三個反噬抗性節點（即亞空間充能量為0.95³），靈能者只會生成12.3%的真實反噬；0.25x(34/59)x0.95³=0.123。",
+		"請注意，此天賦在重新裝填時總是會生成反噬，無論當前反噬量多少，但只有在真實反噬量低於或等於75%時才會增加裝填速度。",
+		-- ppp___ppp,
+		-- "- Increases Reload animation speed by 25%.",
+		-- "- Stacks additively with Reload speed buffs from Weapon Blessings.",
+		-- "- Upon Reload, generates up to 25% Peril based on the percentage of reloaded ammo in clip. ",
+		-- "- For example, when reloading 34 rounds of a clip that has a size of 59 rounds, Psyker would generate 14.4% true peril; 0.25x(34/59)=0.144.",
+		-- "- Reloading an empty clip generates the Max amount of 25% Peril. ",
+		-- "- Peril cost reduction buffs reduce the efficiency of this Reloaded-ammo-to-Peril conversion. For example, reloading the same amount of ammo in a clip of the same size, but with three Peril Resistance nodes (i.e. a warp_charge_amount of 0.95³), Psyker would only generate 12.3% true peril; 0.25x(34/59)x0.95³=0.123.",
+		-- "Note that the Talent always generates Peril on Reload regardless of current Peril amount but only grants the increased Reload speed when below or at 75% true Peril.",
 	}, "\n"), enhdesc_col)
 
 --[+ ++ZEALOT++ +]--
