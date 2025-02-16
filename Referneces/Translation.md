@@ -182,8 +182,6 @@
 - Empyric Resolve - 亞空間意志
 - Penetration of the Soul - 靈魂穿透
 
-- Warp Rupture - 刺耳尖嘯
-
 ### Ogryn - 歐格林
 
 #### 歐格林專有名詞
@@ -193,18 +191,54 @@
 
 - Soften Them Up - 削弱敵人
 - Valuable Destruction - 重要干擾
-- 
+
+
+##### 閃擊
+
+##### 光環
+
+##### 主動技能
+
+##### 鑰石
+
+##### 一般天賦
+
 ### Zealot - 狂信徒
 
 #### 狂信徒專有名詞
 
 #### 狂信徒天賦
-- Stun Grenade - 
+
+##### 閃擊
+
+- Stun Grenade - 眩暈手雷
+- Stunstorm Grenade - 眩暈風暴手雷
+
+##### 光環
+
+##### 主動技能
+
+##### 鑰石
+
+##### 一般天賦
 
 ### Veteran - 老兵
 
 #### 老兵專有名詞
 
+
 #### 老兵天賦
+
 - Inspiring Presence - 鼓舞人心
 - Focus Target! - 鎖定目標
+
+##### 閃擊
+
+##### 光環
+
+##### 主動技能
+
+##### 鑰石
+
+##### 一般天賦
+
