@@ -978,408 +978,408 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	}, "\n"), enhdesc_col)
 
 --[+ +KEYSTONES+ +]--
-	--[+ Keystone 1 - Blazing Piety +]--
+	--[+ Keystone 1 - Blazing Piety(熾熱虔誠) +]--
 	local ED_ZEA_Keystone_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- After 8 seconds without a kill, considers Zealot as being out of combat. While out of combat, drops Stacks of \"Fury\" over time. While out of combat, starts dropping current Stacks of Fury one by one at a decelerating rate.",
-		"- The active Fury duration can be refreshed by killing enemies.",
-		"- Stacks additively with other sources of Crit Chance.",
+		"- 當狂信徒在8秒內未擊殺任何敵人時，系統會視其為脫離戰鬥狀態；脫離戰鬥後，狂怒疊加會隨時間逐漸下降，以愈來愈慢的速度一個一個消耗。",
+		"- 狂怒的持續時間可透過擊殺敵人來刷新。",
+		"- 與其他來源的爆擊機率採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 1-1 - Stalwart +]--
+	--[+ Keystone 1-1 - Stalwart(死忠) +]--
 	local ED_ZEA_Keystone_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- When reaching 25 Stacks of Fury, does two things:",
-		"-- 1. Replenishes 50% of Maximum Toughness immediately. Then, while maintaining 25 Stacks of Fury, also replenishes 2% of Max Toughness per kill.",
-		"--- Stacks additively with Zealot's base 5% Max Toughness gained on melee kill.",
+		"- 當狂怒疊加達到25層時，會有兩個效果：",
+		"-- 1. 立即回復50%最大韌性。同時，只要維持25層狂怒，每擊殺1名敵人就額外回復2%最大韌性。",
+		"--- 與狂信徒原本近戰擊殺可回復5%韌性的效果採加法疊加。",
 		"--"..z_eff_of_this_tougn_rep,
-		"-- 2. Grants 25% Toughness Damage Reduction for as long as 25 Stacks of Fury are maintained.",
+		"-- 2. 只要維持25層狂怒，便可獲得25%的韌性減傷。",
 		"--"..stacks_mult_w_other_dmg_red_buffs,
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 1-2 - Fury Rising +]--
+	--[+ Keystone 1-2 - Fury Rising(怒火升騰) +]--
 	local ED_ZEA_Keystone_1_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Can generate multiple Stacks per Critical Attack when Cleaving.",
-		"- Also procs on Critical Attacks against shields.",
+		"- 順劈攻擊時，若觸發暴擊，可能一次生成多層狂怒。",
+		"- 攻擊護盾若發生暴擊，也能觸發此效果。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 1-3 - Infectious Zeal +]--
+	--[+ Keystone 1-3 - Infectious Zeal(迅疾狂熱) +]--
 	local ED_ZEA_Keystone_1_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		can_be_refr_dur_active_dur,
-		"- Does not Stack with the same Talent from another Zealot.",
+		"- 不會與另一位狂信徒使用相同天賦重複疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 1-4 - Righteous Warrior +]--
+	--[+ Keystone 1-4 - Righteous Warrior(正義勇士) +]--
 	local ED_ZEA_Keystone_1_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases Critical Strike Chance for all attacks that can Crit, additionally to \"Blazing Piety's\" base 15% Crit Chance. (+25% total)",
+		"- 進一步提升所有可暴擊攻擊的爆擊機率，在「熾熱虔誠」原本的15%爆擊率基礎上再增幅（最終可達+25%）。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 2 - Martyrdom +]--
+	--[+ Keystone 2 - Martyrdom(殉道) +]--
 	local ED_ZEA_Keystone_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- A Segment counts as missing if it is fully depleted or fully converted by Corruption.",
-		"- On Heresy/Damnation, Zealot can have up to 7 total Health Segments (2 base, +3 from Curios, +2 from \"Faith's Fortitude\") thereby setting the effective Max Stack count to 6.",
-		"- Per stack, increases the Damage of Melee Attacks by 8% (up to +48% on Heresy/Damnation, up to +56% below)",
+		"- 當血條中的任一段完全耗盡或被腐蝕時，該段即視為缺失。",
+		"- 在難度異端或詛咒下，狂信徒最高可擁有7段血量（基礎2段、來自珍品的+3段、以及「信仰之勇」的+2段），等同於可達成最多6層疊加。",
+		"- 每疊加可使近戰攻擊造成的傷害提升8%（在異端/詛咒下最高可+48%，更低難度最高可+56%）。",
 		stacks_add_w_oth_dmg,
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 2-1 - I Shall Not Fall +]--
+	--[+ Keystone 2-1 - I Shall Not Fall(不滅意志) +]--
 	local ED_ZEA_Keystone_2_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Each missing Health Segment grants 6.5% Toughness Damage Reduction (up to 39% on Heresy/Damnation, up to 45.5% below).",
-		"- Stacks additively with small Toughness Damage Reduction nodes.",
-		"- The sum Stacks multiplicatively with other Damage Reduction buffs.",
+		"- 每缺失一段血量，便獲得6.5%的韌性減傷（在異端/詛咒最高可達39%，更低難度則可達45.5%）。",
+		"- 與小型韌性減傷天賦採加法疊加。",
+		"- 與其他減傷Buff在計算時採乘法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 2-2 - Maniac +]--
+	--[+ Keystone 2-2 - Maniac(狂燥之心) +]--
 	local ED_ZEA_Keystone_2_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Each missing Health Segment increases Melee weapon Attack animation Speed by 4% (up to +24% on Heresy/Damnation, up to +28% below).",
-		"- Stacks additively with other Attack Speed buffs.",
+		"- 每缺失一段血量時，使近戰武器攻擊動畫速度增加4%（在異端/詛咒最高可+24%，更低難度最高可+28%）。",
+		"- 與其他攻擊速度Buff採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 3 - Inexorable Judgement +]--
+	--[+ Keystone 3 - Inexorable Judgement(命定審判) +]--
 	local ED_ZEA_Keystone_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Sprinting generates stacks twice as fast.",
-		"- Hitting an enemy with a Melee or Ranged Attack drops all current Momentum Stacks.",
-		"- Per dropped stack of \"Momentum\", increases Melee and Ranged weapon attack animation speed by 1% and any Damage by 1% for 6 seconds.",
-		"- Also increases Dodge speed and Dodge distance by 0.5%, and Dodge reset time by 1% per dropped Stack.",
-		"- Can generate new \"Momentum\" Stacks while 6 seconds buff duration is active.",
-		"- The Attack Speed buffs Stack additively with other related buffs.",
+		"- 在衝刺(Sprinting)時會以雙倍速度生成「命定審判」疊加。",
+		"- 只要以近戰或遠程攻擊命中敵人，就會清空目前所有「命定審判」疊加。",
+		"- 每清空1層「命定審判」，便在6秒內讓近戰與遠程攻擊動畫速度提升1%，並使所有傷害提升1%。",
+		"- 同時每清空1層，閃避速度與閃避距離增加0.5%，閃避恢復時間增加1%。",
+		"- 在這6秒Buff期間內，仍可繼續累積新的「命定審判」。",
+		"- 與其他攻擊速度相關Buff採加法疊加。",
 		stacks_add_w_oth_dmg,
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 3-1 - Retributor's Stance +]--
+	--[+ Keystone 3-1 - Retributor's Stance(懲戒者姿態) +]--
 	local ED_ZEA_Keystone_3_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 3-2 - Inebriate's Poise +]--
+	--[+ Keystone 3-2 - Inebriate's Poise(飄忽身形) +]--
 	local ED_ZEA_Keystone_3_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Additionally generates 3 Momentum Stacks on successfully Dodging enemy Melee or Ranged attacks (except Gunners, Reaper, Sniper), and disabler attacks (Pox Hound jump, Trapper net, Mutant grab).",
+		"- 每成功閃避敵方近戰或遠程攻擊（除了砲手、收割者及狙擊手）與特殊束縛攻擊（如瘟疫獵犬撲擊、陷阱兵投網、變種人衝撞抓取）時，額外獲得3層「命定審判」。",
 		succss_dodge_means,
 		z_ghost_hitnrun_n_stripp,
 		"",
 	}, "\n"), enhdesc_col)
 
 --[+ +PASSIVES+ +]--
-	--[+ Passive 1 - Disdain +]--
+	--[+ Passive 1 - Disdain(蔑視) +]--
 	local ED_ZEA_Passive_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Can generate multiple Stacks per swing.",
-		"- Stacks last until consumed.",
+		"- 一次揮擊可能產生多層疊加。",
+		"- 疊加會一直存在，直到被消耗為止。",
 		stacks_add_w_oth_dmg,
-		"- Melee special actions of Ranged Weapons (bashes, etc) can generate and consume Stacks.",
+		"- 遠程武器的近戰特殊動作（如槍托揮擊等）也能產生並消耗這些疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 2 - Backstabber +]--
+	--[+ Passive 2 - Backstabber(背刺者) +]--
 	local ED_ZEA_Passive_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Enables backstabbing.",
-		"- Stacks additively with backstab Damage buffs from \"Shroudfield\" (and \"Perfectionist\").",
-		"- Multiplicatively during calculation with other Damage buffs and Power level buffs from Weapon Blessings.",
-		"- \"Backstabbing\" refers to Melee attacks executed from within a specific angle behind an enemy's back.",
+		"- 解鎖背刺機制。",
+		"- 與「隱秘領域」以及「完美主義者」的背刺傷害加成採加法疊加。",
+		"- 與其他傷害增益、武器威力增幅則是乘法計算。",
+		"- 「背刺」指從敵人背後的特定角度進行近戰攻擊。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 3 - Anoint in Blood +]--
+	--[+ Passive 3 - Anoint in Blood(鮮血受膏) +]--
 	local ED_ZEA_Passive_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- While the Ranged weapon is equipped, increases any Damage by 25% against Enemies within a 12.5 meters radius.",
+		"- 當裝備遠程武器時，對12.5米內的敵人造成的任何傷害提高25%。",
 		stacks_add_w_oth_dmg,
-		"Beyond 12.5 meters, the Damage buff decreases linearly until it loses its effect at 30 meters:",
+		"在12.5米之後，此傷害增益會隨距離遞減，至30米時減至0：",
 		"______________________________",
-		"Distance(m):1-12.5|   13|  15|  20|  25|  30",
-		"Damage(%):       25|~24|~21| ~14|  ~7|    0",
+		"距離(m): 1-12.5|   13|  15|  20|  25|  30",
+		"傷害(%):       25| ~24| ~21| ~14|  ~7|   0",
 		"______________________________",
-		"- This also increases the Damage of \"Blades of Faith\" and DoTs (including Immolation Grenade's burn and Stunstorm Grenade / Stun Grenade's electrocution) as long as Zealot stays within 30 meters to the enemy and has the Ranged weapon equipped.",
-		"- Note that Ranged weapons interact differently with this Talent depending on their individual effective Damage ranges.",
+		"- 只要狂信徒與敵人的距離在30米內且仍裝備遠程武器，這個效果也適用於「信仰之刃」以及各類持續傷害，包含「獻祭手雷」的燃燒、以及「眩暈風暴手雷」、「眩暈手雷」的感電等。",
+		"- 請注意，不同遠程武器的實際傷害範圍各不相同，與此天賦的互動方式也可能不同。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 4 - Scourge +]--
+	--[+ Passive 4 - Scourge(天災) +]--
 	local ED_ZEA_Passive_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Critical hits with Melee attacks (including Melee special actions of Ranged weapons) apply 2 Stacks of Bleed to enemies.",
-		"- Can't apply Bleed through shields.",
-		"- Bleed:",
-		"-- Lasts 1.5 seconds.",
-		"-- Ticks every 0.5 seconds.",
-		"-- Refreshes duration on Stack application.",
-		"-- Same as other sources of Bleed.",
-		"-- Above average armor Damage modifiers across the board, low armor Damage modifier against Carapace.",
+		"- 近戰攻擊的暴擊（包含遠程武器的近戰特殊動作）會對敵人施加2層流血。",
+		"- 無法透過護盾造成流血。",
+		"- 流血：",
+		"-- 持續1.5秒。",
+		"-- 每0.5秒造成傷害。",
+		"-- 有新的流血層數疊加時會刷新流血持續時間。",
+		"-- 與其他來源的流血相同。",
+		"-- 整體對護甲傷害修正略高，對甲殼傷害修正偏低。",
 		can_be_refr_dur_active_dur,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 5 - Enemies Within, Enemies Without +]--
+	--[+ Passive 5 - Enemies Within, Enemies Without(內憂外患) +]--
 	local ED_ZEA_Passive_5_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 距離不受地形影響。",
+		"- 當狂信徒掛在懸崖邊或被變種人、瘟疫獵犬、陷阱兵、惡魔宿主、混沌卵或納垢巨獸束縛時，此回復功能會暫停。",
+		"- 不會與Coherency韌性再生相互影響。",
 		"- Proximity check ignores map geometry.",
 		"- The replenishment is inactive while Zealot is hanging from a ledge and while disabled by Mutants, Pox Hounds, Trapper, Daemonhost, Chaos Spawn, or Beast of Nurgle.",
 		"- Does not interact with Coherency Toughness Regeneration.",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 6 - Fortitude in Fellowship +]--
+	--[+ Passive 6 - Fortitude in Fellowship(合抱成林) +]--
 	local ED_ZEA_Passive_6_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Adds a flat 50% to the Coherency factor that scales the amount of Coherency Toughness Regenerated per ally in Coherency.",
-		"- This buff Stacks additively with \"Loner\", and during calculation multiplicatively with Toughness Regeneration Speed from Curios, Veteran's small Talent node \"Inspiring Presence\", and Ogryn's aura \"Stay Close!\".",
-		"- Increases Zealot's base amount of Coherency Toughness Regenerated:",
+		"- 固定增加50%的協同基準值，提升協同範圍內每位隊友所提供的韌性再生量。",
+		"- 與「孤狼」的效果採加法疊加，最終計算時則與珍品提供的韌性再生速度、老兵的小型天賦「鼓舞人心」、歐格林光環「保持靠近!」等效果乘法相乘。",
+		"- 額外提升狂信徒的基礎協同韌性再生量：",
 		"_______________________________",
-		"Allies: | CTR:                 | After 5 seconds:",
-		"        0 |  0.00 -> 3.75    | 18.75(HUD:~19)",
-		"         1 |  3.75 -> 7.50    | 37.50(HUD:~38)",
-		"        2 |  5.63 -> 9.38   | 46.88(HUD:~47)",
-		"        3 |  7.50 -> 11.25   | 56.25(HUD:~57)",
+		"隊友數: | 協同韌性再生(CTR):  | 5秒後總計:",
+		"        0 |  0.00 -> 3.75       | 18.75(介面顯示約19)",
+		"         1 |  3.75 -> 7.50       | 37.50(介面顯示約38)",
+		"        2 |  5.63 -> 9.38       | 46.88(介面顯示約47)",
+		"        3 |  7.50 -> 11.25      | 56.25(介面顯示約57)",
 		"_______________________________",
 		"(*CTR = Coherency Toughness Regenerated)",
-		"- Note that because of how the Toughness Coherency Regen rate modifier is applied During Calculation, this Talent enables Coherency Toughness Regeneration for Zealot even with no Allies in Coherency.",
+		"- 由於協同韌性再生倍率是在計算過程中套用，此天賦可讓狂信徒即使在沒有隊友進入協同範圍時，仍獲得部分韌性再生。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 7 - Purge the Unclean +]--
+	--[+ Passive 7 - Purge the Unclean(淨化不潔) +]--
 	local ED_ZEA_Passive_7_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with the same Damage buffs from Weapon Perks, and during calculation multiplicatively with other Damage buffs and Power level buffs from Weapon Blessings.",
+		"- 與武器專長中的相同傷害加成採加法疊加，最終再與其他傷害增益或武器威力增幅乘法計算。",
+
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 8 - Blood Redemption +]--
+	--[+ Passive 8 - Blood Redemption(鮮血救贖) +]--
 	local ED_ZEA_Passive_8_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases the Zealot's base Maximum Toughness gained on Melee kill from 5% to 7.5%.",
+		"- 將狂信徒近戰擊殺所回復的韌性，從基礎的5%提升至7.5%。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 9 - Bleed for the Emperor +]--
+	--[+ Passive 9 - Bleed for the Emperor(為了帝皇) +]--
 	local ED_ZEA_Passive_9_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Procs only on Health Damage.",
-		"- If the amount of incoming Health Damage is high enough to deplete one of Zealot's Health segments, the Talent then reduces this Health Damage amount by 40%.",
+		"- 僅在受到生命值傷害時觸發。",
+		"- 若本次傷害足以摧毀狂信徒的一整段血量，該次傷害將降低40%。",
 		stacks_mult_w_other_dmg_red_buffs,
-		"- Does not reduce Toughness Damage taken.",
+		"- 不會減少韌性傷害。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 10 - Vicious Offering +]--
+	--[+ Passive 10 - Vicious Offering(惡毒贈禮) +]--
 	local ED_ZEA_Passive_10_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		z_eff_of_this_tougn_rep,
-		"- For example, with 120 max Toughness, Zealot would replenish 120x(0.05+0.1)=18 Toughness per Heavy Melee kill.",
+		"- 例如，若狂信徒最大韌性為120，則每次使用重擊近戰擊殺敵人時，可回復120x(0.05+0.1)=18點韌性。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 11 - The Voice of Terra +]--
+	--[+ Passive 11 - The Voice of Terra(泰拉之音) +]--
 	local ED_ZEA_Passive_11_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- When killing enemies with Ranged attacks (including \"Blades of Faith\"), replenishes 4% of Maximum Toughness. ",
-		"- Procs additionally to Weapon Blessings like \"Inspiring Barrage\", \"Reassuringly Accurate\", \"Gloryhunter\".",
+		"- 當使用遠程攻擊擊殺敵人時（包含「信仰之刃」），回復4%最大韌性。",
+		"- 與武器祝福「激勵彈幕」、「慰藉精準」、「榮耀獵手」同時生效。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 12 - Restoring Faith +]--
+	--[+ Passive 12 - Restoring Faith(恢復信仰) +]--
 	local ED_ZEA_Passive_12_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Procs only on Health Damage (also while in downed state).",
-		"- Can track up to 10 instances of Damage taken and restores the correct amount of Health when taking Damage while already restoring.",
+		"- 僅在受到生命值傷害時觸發（包含倒地時）。",
+		"- 最多可同時記錄10次受到的傷害，即便在恢復期間再次受到傷害，也會正確恢復。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 13 - Second Wind +]--
+	--[+ Passive 13 - Second Wind(精力復甦) +]--
 	local ED_ZEA_Passive_13_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Has a 0.5 seconds internal Cooldown.",
+		"- 具有0.5秒的內部冷卻。",
 		z_eff_of_this_tougn_rep,
 		procs_on_succss_dodging,
 		succss_dodge_means,
 		z_ghost_hitnrun_n_stripp,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 14 - Enduring Faith +]--
+	--[+ Passive 14 - Enduring Faith(堅韌信仰) +]--
 	local ED_ZEA_Passive_14_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Critical hits with Melee or Ranged attacks (including attacks with weapon special actions) grant 50% Toughness Damage Reduction for 4 seconds.",
+		"- 近戰或遠程攻擊若觸發暴擊（包含武器特殊動作），則在4秒內獲得50%的韌性減傷。",
 		can_be_refr_dur_active_dur,
 		stacks_mult_w_other_dmg_red_buffs,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 15 - The Emperor's Bullet +]--
+	--[+ Passive 15 - The Emperor's Bullet(帝皇之彈) +]--
 	local ED_ZEA_Passive_15_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- When ammo in clip reaches 0, increases Melee Stagger strength by 30% and Melee weapon Attack animation Speed by 10% for 5 seconds. ",
-		"- The Attack Speed buff Stacks additively with related buffs from \"Faithful Frenzy\", \"Fury of the Faithful\", \"Inexorable Judgement\", \"Maniac\", and Celerity Stimm; ",
-		"- The Stagger buff Stacks additively with related buffs from \"Grievous Wounds\", \"Hammer of Faith\", \"Punishment\", and Weapon Blessings , and multiplicatively with Power level buffs from Weapon Blessings.",
+		"- 當彈匣子彈量降至0時，在5秒內使近戰的踉蹌強度提升30%、近戰武器攻擊動作速度提升10%。",
+		"- 攻擊速度加成與「信仰狂亂」、「有信者之怒」、「命定審判」、「狂燥之心」以及敏捷興奮劑等相同類型的Buff以加法疊加。",
+		"- 踉蹌加成與「重傷」、「信仰之錘」、「懲罰」以及其他武器祝福以加法疊加，但與武器威力加成則是乘法相乘。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 16 - Dance of Death +]--
+	--[+ Passive 16 - Dance of Death(死亡之舞) +]--
 	local ED_ZEA_Passive_16_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with related buffs from \"Run 'n' Gun\" and \"Powderburn\" Weapon Blessings.",
+		"- 與武器祝福「連跑帶打」、「火藥灼傷」等相關增益採加法疊加。",
 		procs_on_succss_dodging,
 		succss_dodge_means,
 		z_ghost_hitnrun_n_stripp,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 17 - Duellist +]--
+	--[+ Passive 17 - Duellist(決鬥者) +]--
 	local ED_ZEA_Passive_17_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with other Weakspot and Finesse Damage buffs, and multiplicatively with Power level buffs from Weapon Blessings. ",
+		"- 與其他弱點攻擊或技巧(Finesse)傷害加成採加法疊加，與武器威力增幅等效果則是乘法計算。",
 		procs_on_succss_dodging,
 		succss_dodge_means,
 		z_ghost_hitnrun_n_stripp,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 18 - Until Death +]--
+	--[+ Passive 18 - Until Death(死戰到底) +]--
 	local ED_ZEA_Passive_18_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- If not on cooldown, prevents incoming Damage from lowering Zealot's current Health below 1 HP by granting Invulnerability for 5 seconds. ",
-		"- \"Invulnerability\" means that Zealot's Health cannot be reduced below 1. Zealot can still lose any Health above 1 while Invulnerable (e.g. by taking hits while being healed by a medical crate).",
-		"- Does not prevent death from instakills like when thrown out of bounds into a map killbox.",
+		"- 若此被動不在冷卻中，則在受到傷害時使狂信徒的生命值不會被降至1以下，並提供5秒無敵。",
+		"- 「無敵」意指狂信徒的血量不會低於1，但若血量高於1，依然會正常扣除（例如受到攻擊的同時被醫療箱回復）。",
+		"- 不會防止地形殺(如被摔出邊界)。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 19 - Unremitting +]--
+	--[+ Passive 19 - Unremitting(不斷奮戰) +]--
 	local ED_ZEA_Passive_19_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks multiplicatively with Sprint efficiency Perks from Curios, Ranged and Melee weapons, and Celerity Stimm.",
+		"- 與珍品、遠程與近戰武器、以及敏捷興奮劑提供的衝刺效率採乘法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 20 - Shield of Contempt +]--
+	--[+ Passive 20 - Shield of Contempt(輕蔑之盾) +]--
 	local ED_ZEA_Passive_20_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		red_both_tghns_n_health_dmg,
-		"- Procs only on Health Damage (also while in downed state).",
-		"- Always procs for Zealot if conditions are met.",
-		"- Has no Range limit when proc'ed by Allies or Bots (Coherency is NOT required!).",
-		"- The Talent can apply its Damage Reduction buff only once per proc.",
-		"- It has one Global Cooldown that is shared between all players (and bots).",
-		"- So if the Talent has been procced either by Zealot or by an Ally, it grants its Damage Reduction buff only to the player who triggered it before it goes on Cooldown for 10 seconds.",
-		"- The Cooldown starts immediately during the buff's 4 seconds duration.",
+		"- 僅在受到生命值傷害時觸發（包含倒地時）。",
+		"- 狂信徒自身只要符合條件就能觸發。",
+		"- 與隊友或機器人共用同一個冷卻(Global Cooldown)，不需協同範圍也能觸發。",
+		"- 此天賦觸發後，只會對觸發的那位玩家提供4秒的減傷效果，然後進入10秒冷卻。",
+		"- 冷卻在這4秒Buff期間就已開始計算。",
 		stacks_mult_w_other_dmg_red_buffs,
-		"- Does not have a HUD icon but plays a screen effect during its active duration.",
-		-- "- If there are multiple Zealots who all run \"Shield of Contempt\", the Talent works as follows: The first Zealot to take Health Damage 'claims' the Damage Reduction buff. It lasts for 4 seconds, during which it Stacks multiplicatively with other Zealots' \"Shield of Contempt\" buffs, up to 97.44% Damage Reduction with four Zealots (1-0.4⁴=0.9744), only if the other Zealots also proc their Talents while the duration of the buff that was 'claimed' by the first Zealot is still active. Since the Damage Reduction buff can only be applied once per proc, it does not benefit those Zealots who proc their Talents while the first Zealot still has the Damage Reduction buff. ",
+		"- 無使用者介面圖示，但在持續時間內會有畫面特效。",		
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 21 - Thy Wrath be Swift +]--
+	--[+ Passive 21 - Thy Wrath be Swift(勃然大怒) +]--
 	local ED_ZEA_Passive_21_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Grants immunity to Stuns and Slowdowns from both Melee and Ranged attacks.",
-		"- Also lets Zealot move through Fire patches without hindrance.",
-		"- The Movement Speed buff procs only on Health Damage taken.",
-		"- Stacks additively with related buffs from \"Shroudfield\" and weapon Blessings like \"Rev it Up\".",
-		"- Stacks multiplicatively with the Sprint speed buff from \"Swift Certainty\".",
+		"- 免疫來自近戰與遠程攻擊的眩暈與減速。",
+		"- 能無阻礙地穿越火焰區域。",
+		"- 只有在受到生命值傷害時，才會觸發移動速度加成。",
+		"- 與「隱秘領域」以及武器祝福「提」等相關移動速度加成採加法疊加。",
+		"- 與「堅定迅捷」提供的衝刺速度加成採乘法計算。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 22 - Good Balance +]--
+	--[+ Passive 22 - Good Balance(四平八穩) +]--
 	local ED_ZEA_Passive_22_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		red_both_tghns_n_health_dmg,
-		"- Can be refreshed during active duration.",
+		"- 可在持續時間內刷新。",
 		stacks_mult_w_other_dmg_red_buffs,
 		procs_on_succss_dodging,
 		succss_dodge_means,
 		z_ghost_hitnrun_n_stripp,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 23 - Desperation +]--
+	--[+ Passive 23 - Desperation(背水一戰) +]--
 	local ED_ZEA_Passive_23_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"When Stamina reaches 0 as a result of Sprinting, Pushing or Blocking enemy Melee attacks, increases the Damage of Melee attacks by 20% for 5 seconds.",
+		"當耐力因衝刺、推擊或阻擋敵方近戰攻擊而降至0時，於接下來5秒內使近戰攻擊的傷害提升20%。",
 		can_be_refr_dur_active_dur,
 		stacks_add_w_oth_dmg,
-		"- If procced by Sprinting, the start of the buff duration is delayed until the Sprinting action stops.",
+		"- 若是因衝刺而觸發，Buff的持續計時會在停止衝刺後才開始。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 24 - Holy Revenant +]--
+	--[+ Passive 24 - Holy Revenant(吊命聖徒) +]--
 	local ED_ZEA_Passive_24_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- During Until Death's 5 second duration, leeches 0.7% of non-Melee Damage and 2.1% of Melee Damage dealt to enemies.",
-		"- When Until Death ends, converts the leeched amount to Health, up to 25% of Zealot's Maximum Health.",
+		"- 在「死戰到底」的5秒期間，造成的非近戰傷害有0.7%轉化為吸血量，近戰傷害則有2.1%轉化為吸血量。",
+		"- 當「死戰到底」結束時，最多可將這些吸血量轉化為相當於25%最大生命值的回復。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 25 - Sainted Gunslinger +]--
+	--[+ Passive 25 - Sainted Gunslinger(封聖神射手) +]--
 	local ED_ZEA_Passive_25_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Melee kills grant Stacks (up to 5).",
-		"- Stacks last until consumed by Reloading or by Loading special ammo (Combat Shotguns).",
-		"- Per Stack, increases Reload animation Speed by 6%.",
-		"- Stacks additively with Reload Speed buffs from Weapon Perks, Weapon Blessings, and Celerity Stimm.",
-		"- This also increases the Loading Speed of the special action of Combat Shotguns.",
+		"- 每次近戰擊殺可獲得一層疊加(最高5層)。",
+		"- 疊加會持續到進行換彈或裝填特殊彈藥(戰鬥霰彈槍)時被消耗。",
+		"- 每層可使換彈動作速度提升6%。",
+		"- 與武器特性、武器祝福、以及敏捷興奮劑的換彈速度增益採加法疊加。",
+		"- 此效果同樣提升戰鬥霰彈槍特殊動作的裝填速度。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 26 - Hammer of Faith +]--
+	--[+ Passive 26 - Hammer of Faith(信仰之錘) +]--
 	local ED_ZEA_Passive_26_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases Stagger strength for both Melee and Ranged attacks.",
-		"- Also applies to Melee special actions of Ranged weapons.",
-		"- Stacks additively with related buffs from \"Grievous Wounds\", \"Punishment\" or \"The Emperor's Bullet\".",
+		"- 提升近戰與遠程攻擊的踉蹌強度。",
+		"- 同時影響遠程武器的近戰特殊動作。",
+		"- 與「重傷」、「懲罰」或「帝皇之彈」等相關增益採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 27 - Grievous Wounds +]--
+	--[+ Passive 27 - Grievous Wounds(重傷) +]--
 	local ED_ZEA_Passive_27_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases the Stagger strength on Weakspot hits with Melee attacks by 50%.",
-		"- Also applies to Melee special actions of Ranged weapons.",
-		"- Stacks additively with related buffs from \"Hammer of Faith\", \"Punishment\" or \"The Emperor's Bullet\".",
+		"- 近戰攻擊若擊中敵人弱點，踉蹌強度提高50%。",
+		"- 也影響遠程武器的近戰特殊動作。",
+		"- 與「信仰之錘」、「懲罰」、「帝皇之彈」的踉蹌加成採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 28 - Ambuscade +]--
+	--[+ Passive 28 - Ambuscade(伏擊) +]--
 	local ED_ZEA_Passive_28_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Enables Flanking.",
-		"- Increases damage by 30% when flanking.",
-		"- Stacks additively with the \"Raking Fire\" Weapon Blessing, and multiplicatively with other Damage buffs and Power level buffs from Weapon Blessings.",
-		"- \"Flanking\" refers to Ranged attacks executed from within a specific angle behind an enemy's back. It is the Ranged equivalent to Backstabbing.",
+		"- 解鎖「側面射擊(Flanking)」。",
+		"- 當側面射擊時，傷害增加30%。",
+		"- 與武器祝福「掃射」採加法疊加，最終再與其他傷害Buff與武器威力增幅做乘法計算。",
+		"- 「側面射擊」指從敵人背後特定角度執行的遠程攻擊，類似於背刺的遠程版。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 29 - Punishment +]--
+	--[+ Passive 29 - Punishment(懲罰) +]--
 	local ED_ZEA_Passive_29_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Hitting three or more enemies with Melee attacks grants Stacks (up to 5).",
-		"- Stacks last for 5 seconds and can be refreshed during active duration.",
-		"- Per stack, increases the stagger strength of melee and ranged attacks by 5%.",
-		"- Stacks additively with Stagger buffs from \"Grievous Wounds\", \"Hammer of Faith\", \"The Emperor's Bullet\" and Weapon Blessings, and multiplicatively with Power level buffs from Weapon Blessings.",
-		"- At max Stacks, also grants immunity to Stuns from both Melee and Ranged attacks (slowdown effects still apply), and makes Zealot's interact actions (e.g. reviving or object interactions) uninterruptible so that they cannot be canceled as part of hit reactions when taking Health Damage.",
+		"- 每次近戰攻擊擊中3名以上敵人時，會獲得疊加(最多5層)。",
+		"- 疊加持續5秒，可在持續期間內刷新。",
+		"- 每層使近戰與遠程攻擊的踉蹌強度提高5%。",
+		"- 與「重傷」、「信仰之錘」、「帝皇之彈」及其他武器祝福的踉蹌加成採加法疊加，與武器威力加成採乘法計算。",
+		"- 當疊加達到5層時，還能免疫來自近戰與遠程攻擊的眩暈(減速仍有效)，並使狂信徒的互動動作(如復活隊友、操作物件等)不會被血量傷害所中斷。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 30 - Faithful Frenzy +]--
+	--[+ Passive 30 - Faithful Frenzy(信仰狂亂) +]--
 	local ED_ZEA_Passive_30_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with related buffs from \"Fury of the Faithful\", \"Inexorable Judgement\", \"Maniac\", \"The Emperor's Bullet\" and Celerity Stimm.",
+		"- 與「有信者之怒」、「命定審判」、「狂燥之心」、「帝皇之彈」以及敏捷興奮劑等同類型的攻擊速度增益以加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 31 - Sustained Assault +]--
+	--[+ Passive 31 - Sustained Assault(持續突擊) +]--
 	local ED_ZEA_Passive_31_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Hitting enemies with Melee attacks (including Melee special actions of Ranged weapons) grants Stacks (up to 5).",
-		"- Stacks additively with Stagger buffs from \"Grievous Wounds\", \"Hammer of Faith\", \"The Emperor's Bullet\" and Weapon Blessings, and multiplicatively with Power level buffs from Weapon Blessings.",
-		"- Per Stack, increases Melee Damage by 4%.",
+		"- 近戰攻擊（包含遠程武器的近戰特殊動作）命中敵人時，會產生疊加(最多5層)。",
+		"- 與「重傷」、「信仰之錘」、「帝皇之彈」以及武器祝福的踉蹌加成採加法疊加，與武器威力加成採乘法計算。",
+		"- 每層可讓近戰攻擊傷害提升4%。",
 		stacks_add_w_oth_dmg,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 32 - The Master's Retribution +]--
 	local ED_ZEA_Passive_32_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- If not on Cooldown, releases a push that Staggers the attacker (if possible) when taking a Melee hit.",
-		"- The push has a range of 2.75 meters and a rather narrow effective push angle (~22°).",
-		"- Always applies to the direct attacker (if possible).",
-		"- Pushes additional targets (if possible) when they are inside the effective push angle.",
-		"- The Push cannot Stagger: Crusher, Mutants, Ragers, Monstrosities, and Captains/Twins.",
-		"- Bulwark's shield bash, despite not dealing any Damage, procs the Talent.",
-		"- Does not proc while Zealot is disabled or downed.",
+		"- 若此技能不在冷卻狀態，當狂信徒遭到近戰攻擊時會立即釋放推擊，使攻擊者踉蹌(若可踉蹌)。",
+		"- 推擊範圍2.75米，且有效推擊角度僅約22°。",
+		"- 只要在此角度內，都會對直接攻擊者及其他敵人施放推擊(若可)。",
+		"- 無法對粉碎者、變種人、狂怒者、巨獸與隊長/雙胞胎造成踉蹌。",
+		"- 即便遭到堡壘的無傷害盾擊，也會觸發此天賦。",
+		"- 狂信徒若處於被束縛或倒地狀態，則無法觸發。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 33 - Faith's Fortitude +]--
 	local ED_ZEA_Passive_33_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with extra Wounds from Curios.",
+		"- 與珍品提供的額外血量段效果以加法疊加。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 34 - Swift Certainty +]--
 	local ED_ZEA_Passive_34_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Always increases Sprinting Speed by 5%. This Sprint Speed buff Stacks multiplicatively with Movement Speed buffs from \"Shroudfield\", \"Thy Wrath be Swift\", the small Movement Speed node, and Weapon Blessings like \"Rev It Up\". ",
-		"- Also allows Zealot to stay in Sprint Dodging state when Stamina is depleted. Usually, when Dodging shooting enemies by Sprinting around them with an angle (the angle between Zealot's look direction and the position of the enemy has to be at least 70°), the enemy will ultimately start hitting the player as soon as Stamina reaches 0. The Talent preserves the Sprint Dodging capability regardless of whether Zealot has Stamina or not. ",
-		"Sprint Dodging does not fulfill proc condition of \"Dance of Death\", \"Duellist\", \"Good Balance\", \"Inebriate's Poise\", and \"Second Wind\".",
+		"- 固定提升5%的衝刺速度，並與「隱秘領域」、「勃然大怒」、小型移動速度天賦、以及武器祝福「提速」等提供的移動速度Buff採乘法相乘。",
+		"- 使狂信徒在耐力(Stamina)耗盡時，仍能維持衝刺躲避的狀態。一般而言，當以一定角度繞圈衝刺躲避射擊敵人(角度需至少70°)，一旦耐力歸0，敵人就能命中玩家；但本天賦可在無耐力的情況下依舊維持衝刺躲避。",
+		"衝刺躲避不會觸發「死亡之舞」、「決鬥者」、「四平八穩」、「飄忽身形(」以及「精力復甦」等天賦。",
 	}, "\n"), enhdesc_col)
 
 -- In the list below, you also need to add a new entry or change an old one.

@@ -14,7 +14,8 @@
 - Aura - 光環
 - Coherency - 協同
 - Auspex - 占卜儀
-
+- Fury - 狂怒
+- Weapon Perks - 武器專長
 ### 興奮劑
 
 - Celerity Stimm - 敏捷興奮劑
@@ -89,6 +90,7 @@
 - Gloryhunter - 榮耀獵手
 - Reassuringly Accurate - 慰藉精準
 - Inspiring Barrage - 激勵彈幕
+- Raking Fire - 掃射
 
 ### Psyker - 靈能者
 
@@ -249,7 +251,7 @@
 - Stalwart - 死忠
 - Fury Rising - 怒火升騰
 - Infectious Zeal - 迅疾狂熱
-- Righteous Warrior - 正義戰士
+- Righteous Warrior - 正義勇士
 - Martyrdom - 殉道
 - I Shall Not Fall - 不滅意志
 - Maniac - 狂燥之心
@@ -280,6 +282,8 @@
 - Shield of Contempt - 輕蔑之盾
 - Thy Wrath be Swift - 勃然大怒
 - Good Balance - 四平八穩
+- Desperation - 背水一戰
+- Holy Revenant - 吊命聖徒
 - Sainted Gunslinger - 封聖神射手
 - Hammer of Faith - 信仰之錘
 - Grievous Wounds - 重傷
