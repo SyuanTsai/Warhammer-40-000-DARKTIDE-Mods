@@ -1120,10 +1120,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 距離不受地形影響。",
 		"- 當狂信徒掛在懸崖邊或被變種人、瘟疫獵犬、陷阱兵、惡魔宿主、混沌卵或納垢巨獸束縛時，此回復功能會暫停。",
-		"- 不會與Coherency韌性再生相互影響。",
-		"- Proximity check ignores map geometry.",
-		"- The replenishment is inactive while Zealot is hanging from a ledge and while disabled by Mutants, Pox Hounds, Trapper, Daemonhost, Chaos Spawn, or Beast of Nurgle.",
-		"- Does not interact with Coherency Toughness Regeneration.",
+		"- 不會與協同韌性再生相互影響。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
