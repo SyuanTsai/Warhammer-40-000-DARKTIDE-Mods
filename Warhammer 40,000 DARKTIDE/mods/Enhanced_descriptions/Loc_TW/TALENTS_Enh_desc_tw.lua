@@ -763,31 +763,30 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Blitz 0 - Stun Grenade +]--
 	local ED_ZEA_Blitz_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Fuse time: 1.5 seconds.",
-		"- Explosion radius: 8 meters.",
-		"- Electrocution:",
-		"-- Lasts 8 seconds.",
-		"-- Stacks once.",
-		"-- Deals low Damage across the board.",
-		"-- Deals Damage and Stagger every 0.55 seconds.",
-		-- "-- Staggers all enemies in range except Mutants, monstrosities and Captains/Twins.",
-		"-- Ignores Bulwark shields.",
-		"-- Can be refreshed during active duration.",
+		"- 爆炸引信時間：1.5秒。",
+		"- 爆炸半徑：8米。",
+		"- 電擊：",
+		"-- 持續8秒。",
+		"-- 疊加一次。",
+		"-- 對所有敵人造成低傷害。",
+		"-- 每0.55秒造成傷害和踉蹌。",
+		"-- 忽略壁壘。",
+		"-- 可在持續期間內刷新。",
 	}, "\n"), enhdesc_col)
 	
 	--[+ Blitz 1 - Stunstorm Grenade +]--
 	local ED_ZEA_Blitz_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"-- Explosion radius is increased to 12 meters.",
-		"- Fuse time: 1.5 seconds.",
-		"- Electrocution:",
-		"-- Lasts 8 seconds.",
-		"-- Stacks once.",
-		"-- Deals low Damage across the board.",
-		"-- Deals Damage and Stagger every 0.55 seconds.",
-		"-- Staggers all enemies in range except Mutants, Scab Captain/Twins and Monstrosities.",
-		"-- Ignores Bulwark shields.",
-		"-- Can be refreshed during active duration.",
+		"- 爆炸半徑增加至12米。",
+		"- 爆炸引信時間：1.5秒。",
+		"- 電擊：",
+		"-- 持續8秒。",
+		"-- 疊加一次。",
+		"-- 對所有敵人造成低傷害。",
+		"-- 每0.55秒造成傷害和踉蹌。",
+		"-- 對範圍內所有敵人造成踉蹌，除了變種人、隊長/雙胞胎和巨獸。",
+		"-- 忽略壁壘。",
+		"-- 可在持續期間內刷新。",
 	}, "\n"), enhdesc_col)
 	
 	--[+ Blitz 2 - Immolation Grenade +]--
