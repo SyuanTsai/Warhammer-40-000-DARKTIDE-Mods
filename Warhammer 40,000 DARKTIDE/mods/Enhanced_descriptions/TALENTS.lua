@@ -886,24 +886,32 @@ local localization_templates = {
 	create_template("talent_tree_zea_blitz0_000_desc_en", {"loc_ability_shock_grenade_description"}, {"en"}, function(locale, value) return "Throw a "..COLORS_KWords.Stun_gren_rgb.." that "..COLORS_KWords.Electrocutes_rgb.." and "..COLORS_KWords.Stuns_rgb.." all Enemies within its blast radius."..TALENTS_Enh_desc.ED_ZEA_Blitz_0_rgb end), -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_blitz0_000_desc_fr", {"loc_ability_shock_grenade_description"}, {"fr"}, function(locale, value) return "Lancez une "..COLORS_KWords_fr.Stun_gren_rgb_fr.." qui vas "..COLORS_KWords_fr.Electrocute_rgb_fr.." et "..COLORS_KWords_fr.Stun_rgb_fr.." tous les ennemis dans son rayon d'explosion."..TALENTS_Enh_desc_fr.ED_ZEA_Blitz_0_rgb_fr end), -- colors
+			--[+ Traditional Chinese - 眩暈手雷 +]--
+	create_template("talent_tree_zea_blitz0_000_desc_tw", {"loc_ability_shock_grenade_description"}, {"zh-tw"}, function(locale, value) return "投擲一顆"..COLORS_KWords_tw.Stun_gren_rgb.."，\n使爆炸範圍內的所有敵人"..COLORS_KWords_tw.Electrocutes_rgb.."和"..COLORS_KWords_tw.Stuns_rgb.."。"..TALENTS_Enh_desc_tw.ED_ZEA_Blitz_0_rgb end), -- colors
 
 	--[+ Blitz 1 - Stunstorm Grenade +]--
 		-- create_template("talent_tree_zea_blitz1_000_en", {"loc_zealot_improved_stun_grenade"}, {"en"}, function(locale, value) return "Stunstorm Grenade" end),
 	create_template("talent_tree_zea_blitz1_000_desc_en", {"loc_zealot_improved_stun_grenade_desc"}, {"en"}, function(locale, value) return "Throw a "..COLORS_KWords.Stun_gren_rgb.." that explodes and applies a staggering "..COLORS_KWords.Electrocution_rgb.." effect to all enemies within its range.\n\nThis is an augmented version of {talent_name:%s} with {radius:%s} blast radius."..TALENTS_Enh_desc.ED_ZEA_Blitz_1_rgb end), -- talent_name: Stun Grenade, radius: +50% -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_blitz1_000_desc_fr", {"loc_zealot_improved_stun_grenade_desc"}, {"fr"}, function(locale, value) return "Lancez une "..COLORS_KWords_fr.Stun_gren_rgb_fr.." qui vas "..COLORS_KWords_fr.Electrocute_rgb_fr.." et "..COLORS_KWords_fr.Stun_rgb_fr.." tous les ennemis dans sa portée.\n\nCeci est une version augmentée de {talent_name:%s} avec un rayon d'explosion de {radius:%s}."..TALENTS_Enh_desc_fr.ED_ZEA_Blitz_1_rgb_fr end), -- talent_name: Stun Grenade, radius: +50% -- colors
+			--[+ Traditional Chinese - 眩暈風暴手雷 +]--
+	create_template("talent_tree_zea_blitz1_000_desc_tw", {"loc_zealot_improved_stun_grenade_desc"}, {"zh-tw"}, function(locale, value) return "投擲一顆"..COLORS_KWords_tw.Stun_gren_rgb.."，\n爆炸時對範圍內的所有敵人"..COLORS_KWords_tw.Electrocution_rgb.."效果。\n\n這是一個增強版的{talent_name:%s}，爆炸範圍為{radius:%s}。"..TALENTS_Enh_desc_tw.ED_ZEA_Blitz_1_rgb end), -- talent_name: Stun Grenade, radius: +50% -- colors
 
 	--[+ Blitz 2 - Immolation Grenade +]--
 		-- create_template("talent_tree_zea_blitz2_000_en", {"loc_talent_ability_fire_grenade"}, {"en"}, function(locale, value) return "Immolation Grenade" end),
 	create_template("talent_tree_zea_blitz2_000_desc_en", {"loc_talent_ability_fire_grenade_desc"}, {"en"}, function(locale, value) return "Throw a grenade that leaves a layer of flaming liquid, "..COLORS_KWords.Burning_rgb.." and "..COLORS_KWords.Staggering_rgb.." enemies, and barring their path. Most effective against Unarmoured Enemies."..TALENTS_Enh_desc.ED_ZEA_Blitz_2_rgb end), -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_blitz2_000_desc_fr", {"loc_talent_ability_fire_grenade_desc"}, {"fr"}, function(locale, value) return "Lancez une grenade qui laisse une couche de liquide enflammé, "..COLORS_KWords_fr.Burning_rgb_fr.." et faisant "..COLORS_KWords_fr.Staggering_rgb_fr.." les ennemis, barrant la voie. Éfficacité maximale contre les ennemis sans armures."..TALENTS_Enh_desc_fr.ED_ZEA_Blitz_2_rgb_fr end), -- colors
+			--[+ Traditional Chinese - 獻祭手雷 +]--
+	create_template("talent_tree_zea_blitz2_000_desc_tw", {"loc_talent_ability_fire_grenade_desc"}, {"zh-tw"}, function(locale, value) return "投擲一顆手雷，留下一層燃燒液體，\n使敵人"..COLORS_KWords_tw.Burning_rgb.."和"..COLORS_KWords_tw.Staggering_rgb.."，阻擋移動路線。\n對無護甲的敵人最有效。"..TALENTS_Enh_desc_tw.ED_ZEA_Blitz_2_rgb end), -- colors
 
 	--[+ Blitz 3 - Blades of Faith +]--
 		-- create_template("talent_tree_zea_blitz3_000_en", {"loc_ability_zealot_throwing_knifes"}, {"en"}, function(locale, value) return "Blades of Faith" end),
 	create_template("talent_tree_zea_blitz3_000_desc_en", {"loc_ability_zealot_throwing_knifes_desc"}, {"en"}, function(locale, value) return "Throw a consecrated knife to deal High "..COLORS_KWords.Damage_rgb.." to a Single Enemy."..TALENTS_Enh_desc.ED_ZEA_Blitz_3_rgb end), -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_blitz3_000_desc_fr", {"loc_ability_zealot_throwing_knifes_desc"}, {"fr"}, function(locale, value) return "Lancez un couteau consacré pour infliger de gros "..COLORS_KWords_fr.Damage_rgb_fr.." à un seul ennemi."..TALENTS_Enh_desc_fr.ED_ZEA_Blitz_3_rgb_fr end), -- colors
+			--[+ Traditional Chinese - 信仰之刃 +]--
+	create_template("talent_tree_zea_blitz3_000_desc_tw", {"loc_ability_zealot_throwing_knifes_desc"}, {"zh-tw"}, function(locale, value) return "投擲一把聖話小刀，對單一敵人造成高傷害。"..TALENTS_Enh_desc_tw.ED_ZEA_Blitz_3_rgb end), -- colors
 
 --[+ +AURA+ +]--
 	--[+ Aura 0 - The Emperors's Will +]--
