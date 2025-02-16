@@ -11,6 +11,9 @@
 - Staggering - 踉蹌
 - Critical Melee - 近戰爆擊
 - Stacks - 疊加
+- Aura - 光環
+- Coherency - 協同
+- Auspex - 占卜儀
 
 ### 興奮劑
 

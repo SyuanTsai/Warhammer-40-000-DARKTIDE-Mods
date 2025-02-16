@@ -760,7 +760,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 
 --[+ ++ZEALOT++ +]--
 --[+ +BLITZ+ +]--
-	--[+ Blitz 0 - Stun Grenade +]--
+	--[+ Blitz 0 - Stun Grenade(眩暈手雷) +]--
 	local ED_ZEA_Blitz_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 爆炸引信時間：1.5秒。",
@@ -774,7 +774,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"-- 可在持續期間內刷新。",
 	}, "\n"), enhdesc_col)
 	
-	--[+ Blitz 1 - Stunstorm Grenade +]--
+	--[+ Blitz 1 - Stunstorm Grenade(眩暈風暴手雷) +]--
 	local ED_ZEA_Blitz_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 爆炸半徑增加至12米。",
@@ -789,188 +789,192 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"-- 可在持續期間內刷新。",
 	}, "\n"), enhdesc_col)
 	
-	--[+ Blitz 2 - Immolation Grenade +]--
+	--[+ Blitz 2 - Immolation Grenade(獻祭手雷) +]--
 	local ED_ZEA_Blitz_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Fuse time: 1.7 seconds.",
-		"- Fire patch: Lasts 15 seconds. Radius 5 meters. Enemies avoid it.",
-		"- Burn (inside fire patch): Stacks once. Ticks every 0.875 seconds. Ignores Bulwark and Void shields.",
-		"-- Deals varying Damage per tick per armor type (Very high Damage against Unyielding; High Damage against Unarmoured, Infested, Maniac; Very low Damage against Carapace).",
-		-- "- Burn (leaving Fire patch): Lasts 1 second. Ticks every 1 second. Short burn effect with slightly less Damage.",
-		"- Burn damage is increased by: Rending/Brittleness, Perks of currently equipped Weapons, and the following buffs from:\n-- Talents: \"Anoint in Blood\", \"Purge the Unclean\", \"Ecclesiarch's Call\", and \"Inexorable Judgement\".\n-- Blessings:\n--- Melee: \"Executor\", \"High Voltage\", \"Skullcrusher\", and \"Slaughterer\".\n--- Ranged: \"Blaze Away\", \"Dumdum\", \"Deathspitter\", \"Execution\", \"Fire Frenzy\", \"Full Bore\", \"No Respite\", \"Pinning Fire\", and \"Run 'n' Gun\" (while sprinting).",
+		"- 引信時間：1.7秒。",
+		"- 火焰區域：持續15秒。半徑5米。敵人會避開該範圍。",
+		"- 燃燒（於火焰區域內）：只疊加一次。每0.875秒造成傷害。忽略壁壘與虛空護盾。",
+		"-- 針對不同護甲類型，造成不同傷害（對不屈敵人傷害極高；對無甲、感染者、狂熱者則是高傷害；對甲殼則非常低）。",
+		"--（可視需求）若目標離開火焰區域，可能有短暫殘留燒傷。",
+		"- 燃燒傷害會被以下提升：撕裂/脆弱、當前裝備武器的特性，以及下列天賦與祝福的相關加成：",
+		"-- 天賦: 「鮮血受膏」、「淨化不潔」、「教宗之喚」、「命定審判」。",
+		"-- 祝福：",
+		"--- 近戰：「行刑者」、「高壓電」、「碎顱者」、「殺戮者」。",
+		"--- 遠程：「連續發射」、「達姆彈」、「死亡噴吐」、「處決」、「烈火熱焰」、「全孔射擊」、「刻不容緩」、「鉗制射擊」、「連跑帶打」（衝刺時）。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Blitz 3 - Blades of Faith +]--
+	--[+ Blitz 3 - Blades of Faith(信仰之刃) +]--
 	local ED_ZEA_Blitz_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Quick Throw.",
-		"- Ammo: Replenishes 1 knife per melee Elite or Special kill. 2 knives per small ammo pickup. 6 knives per big ammo pickup. All knives per ammo crate.",
-		"- The knife flies along a curving trajectory.",
-		"- Damage: 585 base Damage.",
-		"-- High armor Damage modifiers against Maniac and Infested.",
-		"-- Extra Finesse boosts against Unarmoured and Flak.",
-		"-- Deals no Damage against Carapace unless weakspot like Mauler head.",
-		"-- Low Crit Chance - 5%.",
-		"-- No Damage falloff.",
-		"- Can Cleave 1 Groaner, Poxwalker, Scab/Dreg Stalker or Scab Shooter.",
-		"- Headshot kills all enemies except Ogryns, Ragers, Maulers and Monstrosities.\n- Knives are affected by Perks of currently equipped Weapons and by the following buffs from:",
-		"-- Talents: \"Anoint in Blood\", \"Purge the Unclean\", \"Ecclesiarch's Call\", and \"Inexorable Judgement\" (damage).",
-		"-- A lot of Melee and Ranged Blessings.",
+		"- 快速投擲。",
+		"- 彈藥補充：每次近戰處決菁英或特殊敵人可補充1把飛刀；小型彈藥補給補充2把飛刀；大型彈藥補給補充6把飛刀；彈藥箱補充全部飛刀。",
+		"- 飛刀沿著彎曲軌道飛行。",
+		"- 傷害：基礎傷害585。",
+		"-- 針對狂熱者與感染者具備高護甲傷害修正。",
+		"-- 額外技巧(Finesse)在對無甲與破片護甲(Flak)時有加成。",
+		"-- 若目標是甲殼(如Mauler頭部以外)，則不造成傷害。",
+		"-- 低爆擊率 - 5%。",
+		"-- 無距離衰減。",
+		"- 可順劈1個血痂槍兵、渣滓槍兵或更小型敵人。",
+		"- 頭部擊殺除了歐格林、狂怒者、重錘兵、巨獸以外的任何敵人。",
+		"- 飛刀會受到當前裝備武器特性的影響，並會受到以下天賦帶來的增益：",
+		"-- 天賦：「鮮血受膏」、「淨化不潔」、「教宗之喚」、「命定審判」（傷害）。",
+		"-- 以及許多近戰與遠程祝福。",
 	}, "\n"), enhdesc_col)
 
 --[+ +AURA+ +]--
-	--[+ Aura 0 - The Emperors's Will +]--
-	--[+ Aura 1 - Benediction +]--
+	--[+ Aura 0 - The Emperors's Will(帝皇之諭) +]--
+	--[+ Aura 1 - Benediction(恩賜) +]--
 	local ED_ZEA_Aura_0_n_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		stacks_mult_w_other_dmg_red_buffs,
-		"- Does not Stack with the same Aura from another Zealot.",
+		"- 不會與另一位狂信徒施放的同一光環效果重複疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Aura 2 - Beacon of Purity +]--
+	--[+ Aura 2 - Beacon of Purity(純潔信標) +]--
 	local ED_ZEA_Aura_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- This rate is strong enough to counter a Grimoire's Corruption Damage tick rate. However, the initial 40 Corruption Damage per book cannot be removed.",
+		"- 恢復速率足以抵銷法術書的腐蝕傷害，不過首次造成的40腐蝕傷害無法消除。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Aura 3 - Loner +]--
+	--[+ Aura 3 - Loner(孤狼) +]--
 	local ED_ZEA_Aura_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with \"Fortitude in Fellowship\", and during calculation multiplicatively with Toughness Regeneration Speed from Curios and related buffs from Veteran's small Talent node \"Inspiring Presence\" or Ogryn's aura \"Stay Close!\".",
-		"- Note that the proc conditions for Coherency Toughness Regeneration still apply.",
+		"- 與「合抱成林」效果疊加時採加法計算，並在計算過程中與老兵小型天賦「鼓舞人心」或歐格林光環「保持靠近!」提供的韌性恢復速度採乘法計算。",
+		"- 需要符合協同韌性再生(Coherency Toughness Regeneration)的前提才能觸發。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 0 - Chastise the Wicked +]--
+	--[+ Ability 1 - Fury of the Faithful(有信者之怒) +]--
 	local ED_ZEA_Ability_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Dash Range:",
-		"-- Base: 7 meters.",
-		"-- Aimed: up to 21 meters.",
-		"- Grants immunity to Toughness Damage and you Dodge all attacks while dashing.",
-		"- Applies a light Stagger on impact in a 3 meters radius.",
+		"- 突進距離：",
+		"-- 基礎：7米。",
+		"-- 瞄準：最遠21米。",
+		"- 突進時獲得韌性傷害免疫並且閃避所有攻擊。",
+		"- 碰撞到敵人時，在3米範圍內造成輕微踉蹌。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 1 - Fury of the Faithful +]--
+	--[+ Ability 1-1 - Redoubled Zeal(倍增狂熱) +]--
 	local ED_ZEA_Ability_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Dash:",
-		"-- Range: Base: 7 meters. Aimed(hold button): up to 21 meters.",
-		"-- Cannot be activated while jumping or falling.",
-		"-- You can't change direction, but you can Cancel the dash with Block or Back buttons.",
-		"-- You Dodge all Attacks and grants Immunity to Toughness Damage.",
-		"-- You can be stopped by Unyielding, Carapace, Monstrosities, as well as the Void shields.",
-		"- Melee armor penetration buff:",
-		"-- Adds a 100% Rending against Carapace, Flak, Maniac, Unyielding armor types to the next Melee Attack within 3 seconds after activation.",
-		"-- The first Melee Attack within the duration consumes this buff.",
-		"-- Ranged attacks do NOT benefit from this buff.",
-		"-- Stacks additively with other Attack Speed buffs from Talents and Celerity Stimm.",
+		"- 突進：",
+		"-- 範圍：基礎7米；（長按瞄準）最遠可達21米。",
+		"-- 無法在跳躍或下落時啟用。",
+		"-- 無法改變方向，但可透過格擋或向後鍵取消突進。",
+		"-- 突進期間閃避所有攻擊並獲得韌性傷害免疫。",
+		"-- 可能會被不屈敵人、甲殼、巨獸以及虛空護盾阻擋。",
+		"- 近戰穿甲加成：",
+		"-- 下次近戰攻擊在啟動後3秒內獲得針對甲殼、破片護甲、狂熱者、不屈敵人的100%撕裂。",
+		"-- 第一次近戰攻擊會消耗此Buff。",
+		"-- 遠程攻擊無法受此Buff加成。",
+		"-- 與其他天賦的攻擊速度Buff以及敏捷興奮劑效果採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 1-1 - Redoubled Zeal +]--
+	--[+ Ability 1-1 - Redoubled Zeal(倍增狂熱) +]--
 	local ED_ZEA_Ability_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- The Cooldown of the Second charge only starts after the First charge finished its Cooldown.",
+		"- 第二段充能的冷卻只有在第一段充能完成冷卻後才會開始。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 1-2 - Invocation of Death +]--
+	--[+ Ability 1-2 - Invocation of Death(死亡禱文) +]--
 	local ED_ZEA_Ability_1_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- This results in a total Cooldown Reduction of 12 seconds per proc (4 seconds from Base rate + 4x2 seconds from Talent)",
+		"- 每次觸發總共減少12秒冷卻（基礎4秒 + 天賦提供4次，每次2秒 = 額外8秒，共計12秒）。",
 		can_be_refr_dur_active_dur,
-		"- Procs additionally to Concentration Stimm's remaining Cooldown Reduction effect of 3 seconds per second.",
+		"- 與「專注興奮劑」的剩餘冷卻縮短效果（每秒3秒）同時生效。",
 		doesnt_interact_w_c_a_r_from_curio,
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2 - Chorus of Spiritual Fortitude +]--
+	--[+ Ability 2 - Chorus of Spiritual Fortitude(不屈靈魂合唱) +]--
 	local ED_ZEA_Ability_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Radius: 10 meters.",
-		"- Immunity to Stuns and Invulnerability can be refreshed during active duration.",
-		"- \"Invulnerability\" means that player Health can't fall below 1. Players can still lose any Health above 1.",
-		"- Yellow Toughness bonus lasts 10 seconds and does not Stack with bonus Toughness from the same Talent of another Zealot. But does Stack additively with Veteran's bonus Toughness from \"Duty and Honour\".",
-		"- Bonus Toughness acts as a 'second' Toughness bar and can be replenished by Melee kills, respective Talents, and Weapon Blessings",
-		-- "- Pulses deal no Damage and do not Stagger.",
-		-- "- Channeling can be canceled by Blocking, Sprinting, or pressing the Ability button again.",
-		-- "- While channeling, cooldown is paused. However, its cooldown can still be reduced by using a Concentration Stimm before activation or by benefitting from Psyker's talent Psykinetic's Aura while channeling; its maximum cooldown can be reduced by Combat Ability Regeneration from curios, by Psyker's aura Seer's Presence, and by the mission mutators that reduce ability cooldowns by 20%.",
+		"- 範圍：10米。",
+		"- 在效果持續期間，可刷新對眩暈或無敵的免疫效果。",
+		"- 「無敵」表示玩家的生命值不會低於1，但多餘的生命值仍可能被削減。",
+		"- 額外的黃色韌性持續10秒，且不會與另一位狂信徒使用相同天賦所提供的韌性重疊。但會與老兵天賦「責任與榮耀」的額外韌性採加法疊加。",
+		"- 額外韌性相當於第二條韌性槽，可藉由近戰擊殺、對應天賦或武器祝福恢復。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2-1 - Holy Cause +]--
+	--[+ Ability 2-1 - Holy Cause(神聖事業) +]--
 	local ED_ZEA_Ability_2_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Allies get the buff as long as they are in Coherency when the buff is triggered.",
+		"- 當Buff觸發時，只要盟友處於協同範圍內，就會獲得此Buff。",
 		stacks_mult_w_other_dmg_red_buffs,
-		"- Does not Stack with the same Talent from another Zealot.",
+		"- 不會與另一位狂信徒使用相同天賦重複疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2-2 - Banishing Light +]--
+	--[+ Ability 2-2 - Banishing Light(放逐之光) +]--
 	local ED_ZEA_Ability_2_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- This talent does three things:",
-		"-- 1. It enables pulses to Stagger non-suppressible enemies within 10 meters. Against Monstrosities and Captains/Twins within 4 meters, a forced Stagger is applied on the 1st, 3rd, 5th, and 7th pulse. Against all other non-Suppressible enemies within 4 meters, a forced Stagger is applied every pulse. Forced Stagger lasts 2 seconds.",
-		"-- 2. It enables each pulse to Suppress all suppressible enemies within 10 meters. Each pulse applies very high Suppression with an increased, randomly chosen Suppression decay delay.",
-		"--- Breeds that can be suppressed: Groaner, Dreg Gunner, Dreg Stalker, Poxwalker (only in this Talent's case), Reaper, Scab Gunner, Scab Shooter, Scab Stalker",
-		"-- 3. It increases the pulse radius of 10 meters by 0.1 meters per second while channeling, up to 10.5 meters. This affects the radius in which enemies get Suppressed or Staggered (does not increase Forced Stagger radius).",
+		"- 這個天賦有三個效果：",
+		"-- 1. 讓脈衝可以對10米內、不可壓制的敵人造成踉蹌。若是巨獸或隊長/雙胞胎且距離小於4米，則在第1、3、5、7次脈衝時施加強制踉蹌，其餘不可壓制的敵人（小於4米）則每次脈衝都會被強制踉蹌。強制踉蹌持續2秒。",
+		"-- 2. 每次脈衝都對10米內可壓制的敵人施加極高的壓制，並提高壓制衰減延遲。",
+		"--- 可壓制的敵人：瘟疫殭屍（本天賦特例）、渣滓砲手、渣滓槍手、血痂砲手、血痂射手、血痂槍手、收割者、砲手。",
+		"-- 3. 在引導期間，每秒將脈衝半徑由10米增加0.1米，最多到10.5米。此範圍內的敵人將受到壓制或踉蹌（但強制踉蹌的固定範圍不變）。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2-3 - Ecclesiarch's Call +]--
+	--[+ Ability 2-3 - Ecclesiarch's Call(教宗之喚) +]--
 	local ED_ZEA_Ability_2_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Allies get the buff as long as they are in Coherency when the buff is triggered.",
+		"- 當Buff觸發時，只要盟友處於協同範圍內，就會獲得此Buff。",
 		stacks_add_w_oth_dmg,
-		"- Does not Stack with the same Talent from another Zealot.",
+		"- 不會與另一位狂信徒使用相同天賦重複疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2-4 - Martyr's Purpose +]--
+	--[+ Ability 2-4 - Martyr's Purpose(殉道者之願) +]--
 	local ED_ZEA_Ability_2_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 倒地時不會觸發。",
+		"- 例如，若狂信徒的「不屈靈魂合唱」仍有55秒冷卻，且受到80點生命傷害，則剩餘冷卻55秒會被減少：60 x (80 x 0.01) = 48秒，最後只剩7秒。",
+		"- 與「專注興奮劑」的3秒/秒冷卻縮短效果同時生效。",
+		"- 不會與來自珍品的戰鬥技能再生效果互動，後者僅減少戰鬥技能的最大冷卻時間。",
 		"- Does not proc while downed.",
 		"- For example, if Zealot has 55 seconds of Chorus of Spiritual Fortitude's 60 seconds Cooldown remaining and takes 80 Health Damage, then the remaining 55 seconds are reduced by 60x(80x0.01)=48 to 7 seconds.",
 		"- Procs additionally to Concentration Stimm's Cooldown Reduction effect of 3 seconds per second.",
 		"- Does not interact with Combat Ability Regeneration from Curios which only reduces the Maximum Cooldown of a Combat Ability.",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 3 - Shroudfield +]--
+	--[+ Ability 3 - Shroudfield(隱秘領域) +]--
 	local ED_ZEA_Ability_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		become_invis_drop_all_enemy_aggro,
-		"- You can still take Damage during Invisibility.",
-		"- Stealth breaks on: hitting enemies with a Melee attack, any Ranged attack, throwing a grenade (quickthrow, aimed or underhand), finishing a Rescue/Revive/Pull up/Free from net action, throwing knives only break Stealth when they hit a target.",
-		"- Stealth does not break on: pushing enemies, using Stimms (on self or team mates), exploding grenades that have been thrown before going invisible, active DoT ticks, operating the Auspex device or minigame.",
-		-- "- Stealth grace window: actions that would break Stealth do not if they are executed within 0.5 seconds after going invisible, this allows, if timed accordingly, for one additional Melee or Ranged attack that already benefits from all applicable buffs but does not break Stealth yet.",
-		-- "- Buffs to movement Speed, Backstab Damage, Finesse Damage, and Crit chance last as long as the Invisibility. The Finesse buff Stacks additively with other related buffs; the backstab damage buff stacks additively with related buffs from Backstabber and Perfectionist, and multiplicatively during calculation with other damage buffs and power level buffs from weapon blessings; the movement speed buff stacks additively with related buffs, and multiplicatively with sprinting speed buffs (Swift Certainty).",
-		"{#color(255, 35, 5)}Doesn't hide you from a Daemonhosts!{#reset()}",
+		"- 隱形時仍然可能受傷。",
+		"- 會解除隱形的動作包括：以近戰攻擊命中敵人、任何遠程攻擊、投擲手雷（快速、瞄準或拋擲）、完成救援/復甦/拉起隊友或掙脫束縛的動作；投擲刀只有在命中目標時才會破除隱形。",
+		"- 不會解除隱形的動作包括：推擊敵人、使用興奮劑（自用或給隊友）、在隱形前已丟出去的手雷爆炸、主動的持續傷害效果、操作占卜儀與小遊戲等。",
+		"{#color(255, 35, 5)}無法躲避惡魔宿主!{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3-1 - Master-Crafted Shroudfield +]--
 	-- local ED_ZEA_Ability_3_1_rgb = iu_actit(table.concat({"",}, "\n"), enhdesc_col)
 
-	--[+ Ability 3-2 - Perfectionist +]--
+	--[+ Ability 3-2 - Perfectionist(完美主義者) +]--
 	local ED_ZEA_Ability_3_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- The Finesse buff Stacks additively with other related buffs.",
-		"- The backstab Damage buff Stacks additively with related buffs from \"Backstabber\" and \"Shroudfield\", and multiplicatively during calculation with other Damage buffs and Power level buffs from Weapon Blessings.",
-		"- Also increases Shroudfield's maximum cooldown from 30 to 37.5 seconds.",
-		"- This Max Ccooldown increase can be mitigated by the Max Cooldown Reductions from Psyker's Aura \"Seer's Presence\", Combat Ability Regeneration from Curios, and by the mission mutators that reduce Ability Cooldowns by 20%.",
+		"- 提升的技巧傷害與其他相關Buff採加法疊加。",
+		"- 背刺傷害與「背刺者」、「隱秘領域」的加成採加法疊加，計算時再與其他傷害或武器威力加成採乘法疊加。",
+		"- 同時將「隱秘領域」的最大冷卻由30秒增加至37.5秒。",
+		"- 此額外冷卻可被以下效果部分抵銷：靈能者光環「先知之眼」、珍品的戰鬥技能冷卻、以及任務關卡冷卻減少20%的增益等。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 3-3 - Invigorating Revelation +]--
+	--[+ Ability 3-3 - Invigorating Revelation(振奮啟示) +]--
 	local ED_ZEA_Ability_3_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- When Invisibility ends, replenishes 8% of Maximum Toughness per second for 5 seconds.",
+		"- 當隱形結束時，在接下來5秒內每秒恢復相當於最大韌性的8%。",
 		red_both_tghns_n_health_dmg,
 		stacks_mult_w_other_dmg_red_buffs,
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 3-4 - Pious Cut-Throat +]--
+	--[+ Ability 3-4 - Pious Cut-Throat(虔誠刺客) +]--
 	local ED_ZEA_Ability_3_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Has a 0.2 seconds internal Cooldown.",
-		"- This is 6 seconds for \"Fury of the Faithful\" and \"Shroudfield\" (7.5 seconds with \"Perfectionist\"), and 12 seconds for \"Chorus of Spiritual Fortitude\".",
-		"- \"Backstabbing\" refers to Melee attacks executed from within a specific angle behind an enemy's back.",
-		"- Procs additionally to Concentration Stimm's Cooldown Reduction effect of 3 seconds per second.",
+		"- 有0.2秒的內部冷卻時間。",
+		"- 「有信者之怒」與「隱秘領域」的冷卻因此被縮短至6秒（「完美主義者」下則為7.5秒），而「不屈靈魂合唱」則縮短至12秒。",
+		"- 「背刺」是從敵人背後特定角度進行的近戰攻擊。",
+		"- 與「專注興奮劑」的3秒/秒冷卻縮短效果同時生效。",
 		doesnt_interact_w_c_a_r_from_curio,
-		"- Revved up attacks of Chain Weapons proc this Talent only if the initial backstab hit kills the target right away.",
+		"- 連枷類(Chain Weapon)武器若要觸發此天賦，必須在背刺第一下就立即擊殺目標。",
 	}, "\n"), enhdesc_col)
 
 --[+ +KEYSTONES+ +]--
