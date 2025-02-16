@@ -1427,24 +1427,28 @@ local localization_templates = {
 	create_template("talent_tree_vet_blitz_000_desc_en", {"loc_ability_frag_grenade_description"}, {"en"}, function(locale, value) return COLORS_KWords.Fragmentation_gren_rgb.." that explodes after "..COLORS_Numbers.n_1_7_rgb.." seconds."..TALENTS_Enh_desc2.ED_VET_Blitz_0_rgb end), -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_blitz_000_desc_fr", {"loc_ability_frag_grenade_description"}, {"fr"}, function(locale, value) return "Lancez une "..COLORS_KWords_fr.Fragmentation_gren_rgb_fr.." qui explose après "..COLORS_Numbers.n_1_7_rgb.." secondes."..TALENTS_Enh_desc2_fr.ED_VET_Blitz_0_rgb_fr end), -- colors
+			--[+ Traditional Chinese - 破片手雷 +]--
 
 	--[+ Blitz 1 - Shredder Frag Grenade +]--
 		-- create_template("talent_tree_vet_blitz1_000_en", {"loc_talent_veteran_grenade_apply_bleed"}, {"en"}, function(locale, value) return "Shredder Frag Grenade" end),
 	create_template("talent_tree_vet_blitz1_000_desc_en", {"loc_talent_veteran_grenade_apply_bleed_desc"}, {"en"}, function(locale, value) return "Throw a "..COLORS_KWords.Frag_gren_rgb.." that explodes after "..COLORS_Numbers.n_1_7_rgb.." seconds. Applies {stacks:%s} Stacks of "..COLORS_KWords.Bleed_rgb.." to all Enemies Hit, causing "..COLORS_KWords.Damage_rgb.." over time. Up to "..COLORS_Numbers.n_16_rgb.." Max Stacks.\nThis is an augmented version of {talent_name:%s}."..TALENTS_Enh_desc2.ED_VET_Blitz_1_rgb end), -- stacks: 6, talent_name: Frag Grenade -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_blitz1_000_desc_fr", {"loc_talent_veteran_grenade_apply_bleed_desc"}, {"fr"}, function(locale, value) return "Lancez une "..COLORS_KWords_fr.Frag_gren_rgb_fr.." qui explose après "..COLORS_Numbers.n_1_7_rgb.." secondes. Applique {stacks:%s} cumuls de "..COLORS_KWords_fr.Bleed_rgb_fr.." à tous les ennemis touchés, causant des "..COLORS_KWords_fr.Damage_rgb_fr.." au fil du temps. Jusqu'à "..COLORS_Numbers.n_16_rgb.." cumuls max.\nIl s'agit d'une version augmentée de {talent_name:%s}."..TALENTS_Enh_desc2_fr.ED_VET_Blitz_1_rgb_fr end), -- stacks: 6, talent_name: Frag Grenade -- colors
+			--[+ Traditional Chinese - 粉碎者破片手雷 +]--
 
 	--[+ Blitz 2 - Krak Grenade +]--
 		-- create_template("talent_tree_vet_blitz2_000_en", {"loc_talent_ability_krak_grenade"}, {"en"}, function(locale, value) return "Krak Grenade" end),
 	create_template("talent_tree_vet_blitz2_000_desc_en", {"loc_talent_ability_krak_grenade_desc"}, {"en"}, function(locale, value) return "Throw a Grenade that explodes after "..COLORS_Numbers.n_2_rgb.." seconds and deals devastating "..COLORS_KWords.Damage_rgb..". Sticks to Flak Armoured, Carapace Armoured and Unyielding Enemies."..TALENTS_Enh_desc2.ED_VET_Blitz_2_rgb end), -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_blitz2_000_desc_fr", {"loc_talent_ability_krak_grenade_desc"}, {"fr"}, function(locale, value) return "Lancez une grenade qui explose après "..COLORS_Numbers.n_2_rgb.." secondes et inflige des "..COLORS_KWords_fr.Damage_rgb_fr.." dévastateurs. Adhère aux ennemis en armure légère, en armure Carapace et aux ennemis implacables."..TALENTS_Enh_desc2_fr.ED_VET_Blitz_2_rgb_fr end), -- colors
+			--[+ Traditional Chinese - 穿甲手雷 +]--
 
 	--[+ Blitz 3 - Smoke Grenade +]--
 		-- create_template("talent_tree_vet_blitz3_000_en", {"loc_ability_smoke_grenade"}, {"en"}, function(locale, value) return "Smoke Grenade" end),
 	create_template("talent_tree_vet_blitz3_000_desc_en", {"loc_ability_smoke_grenade_description"}, {"en"}, function(locale, value) return "Throw a Grenade that explodes after "..COLORS_Numbers.n_1_5_rgb.." seconds and creates a lingering Smoke cloud for {duration:%s} seconds. The cloud blocks line of sight for most enemies and reduces the sight range of enemies inside it."..TALENTS_Enh_desc2.ED_VET_Blitz_3_rgb end), -- duration: 15 -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_blitz3_000_desc_fr", {"loc_ability_smoke_grenade_description"}, {"fr"}, function(locale, value) return "Lancez une grenade qui explose après "..COLORS_Numbers.n_1_5_rgb.." secondes et crée un nuage de fumée persistant pendant {duration:%s} secondes. Le nuage bloque la ligne de vue pour la plupart des ennemis et réduit la portée de vue des ennemis à l'intérieur."..TALENTS_Enh_desc2_fr.ED_VET_Blitz_3_rgb_fr end), -- duration: 15 -- colors
+			--[+ Traditional Chinese - 煙霧手雷 +]--
 
 --[+ +AURA+ +]--
 	--[+ Aura 0 - Scavenger +]--
@@ -1452,24 +1456,28 @@ local localization_templates = {
 	create_template("talent_tree_vet_aura_000_desc_en", {"loc_talent_veteran_elite_kills_grant_ammo_coop_cd_desc"}, {"en"}, function(locale, value) return "Replenish {ammo:%s} Ammo for you and Allies in Coherency whenever any of you Kill an Elite or Specialist Enemy. This can occur once every {cooldown:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Aura_0_rgb end), -- ammo: 0.75%, cooldown: 5
 			--[+ French +]--
 	create_template("talent_tree_vet_aura_000_desc_fr", {"loc_talent_veteran_elite_kills_grant_ammo_coop_cd_desc"}, {"fr"}, function(locale, value) return "Récuperez {ammo:%s} de munitions pour vous et les alliés en syntonie chaque fois que l'un de vous tue un ennemi élite ou spécialiste. Cela peut se produire une fois toutes les {cooldown:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Aura_0_rgb_fr end), -- ammo: 0.75%, cooldown: 5
+			--[+ Traditional Chinese - 拾荒者 +]--
 
 	--[+ Aura 1 - Survivalist +]--
 		-- create_template("talent_tree_vet_aura_001_en", {"loc_talent_veteran_elite_kills_grant_ammo_coop_improved"}, {"en"}, function(locale, value) return "Survivalist" end),
 	create_template("talent_tree_vet_aura_001_desc_en", {"loc_talent_veteran_elite_kills_grant_ammo_coop_improved_cd_desc"}, {"en"}, function(locale, value) return "Replenish {ammo_2:%s} Ammo for you and Allies in Coherency whenever any of you Kill an Elite or Specialist Enemy. This can occur once every {cooldown:%s} seconds.\n\nThis is an augmented version of {talent_name:%s}."..TALENTS_Enh_desc2.ED_VET_Aura_1_rgb end), -- ammo_2: 1%, cooldown: 5, talent_name: Scavenger
 			--[+ French +]--
 	create_template("talent_tree_vet_aura_001_desc_fr", {"loc_talent_veteran_elite_kills_grant_ammo_coop_improved_cd_desc"}, {"fr"}, function(locale, value) return "Récuperez {ammo_2:%s} de munitions pour vous et les alliés en syntonie chaque fois que l'un de vous tue un ennemi élite ou spécialiste. Cela peut se produire une fois toutes les {cooldown:%s} secondes.\n\nIl s'agit d'une version augmentée de {talent_name:%s}."..TALENTS_Enh_desc2_fr.ED_VET_Aura_1_rgb_fr end), -- ammo_2: 1%, cooldown: 5, talent_name: Scavenger
+			--[+ Traditional Chinese - 生存專家 +]--
 
 	--[+ Aura 2 - Fire Team +]--
 		-- create_template("talent_tree_vet_aura_002_en", {"loc_talent_veteran_damage_coherency"}, {"en"}, function(locale, value) return "Fire Team" end),
 	create_template("talent_tree_vet_aura_002_desc_en", {"loc_talent_veteran_damage_coherency_desc"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Damage_rgb.." for you and Allies in Coherency."..TALENTS_Enh_desc2.ED_VET_Aura_2_rgb end), -- damage: +5% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_aura_002_desc_fr", {"loc_talent_veteran_damage_coherency_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." pour vous et les alliés en syntonie."..TALENTS_Enh_desc2_fr.ED_VET_Aura_2_rgb_fr end), -- damage: +5% -- colors
+			--[+ Traditional Chinese - 火力小分隊 +]--
 
 	--[+ Aura 3 - Close and Kill +]--
 		-- create_template("talent_tree_vet_aura_003_en", {"loc_talent_veteran_movement_speed_coherency"}, {"en"}, function(locale, value) return "Close and Kill" end),
 	create_template("talent_tree_vet_aura_003_desc_en", {"loc_talent_veteran_movement_speed_coherency_desc"}, {"en"}, function(locale, value) return "{movement_speed:%s} Movement Speed for your and Allies in Coherency."..TALENTS_Enh_desc2.ED_VET_Aura_3_rgb end), -- movement_speed: +5%
 			--[+ French +]--
 	create_template("talent_tree_vet_aura_003_desc_fr", {"loc_talent_veteran_movement_speed_coherency_desc"}, {"fr"}, function(locale, value) return "{movement_speed:%s} de Vitesse de déplacement pour vous et les alliés en syntonie."..TALENTS_Enh_desc2_fr.ED_VET_Aura_3_rgb_fr end), -- movement_speed: +5%
+			--[+ Traditional Chinese - 抵近殺敵 +]--
 
 --[+ +ABILITIES+ +]--
 	--[+ Ability 0 - Volley Fire +]--
@@ -1477,96 +1485,112 @@ local localization_templates = {
 	create_template("talent_tree_vet_abil_000_desc_en", {"loc_ability_veteran_base_ability_desc"}, {"en"}, function(locale, value) return "Enter Ranged Stance for {duration:%s} seconds. When in Ranged Stance you instantly equip your Ranged weapon and deal:\n{damage:%s} Ranged "..COLORS_KWords.Damage_rgb.." and\n{weakspot_damage:%s} Ranged "..COLORS_KWords.Weakspot_dmg_rgb..". Your Spread and Recoil are also greatly reduced.\nBase Cooldown: {cooldown:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Ability_0_rgb end), -- duration: 5, damage: +25%, weakspot_damage: +25%, cooldown: 30 -- &->and -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil_000_desc_fr", {"loc_ability_veteran_base_ability_desc"}, {"fr"}, function(locale, value) return "Passez en posture à distance pendant {duration:%s} secondes. En posture à distance, vous équipez instantanément votre arme à distance et infligez :\n{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." à distance et\n{weakspot_damage:%s} de "..COLORS_KWords_fr.Weakspot_dmg_rgb_fr.." à distance. Votre dispersion et votre recul sont également grandement réduits.\nTemps de recharge de base : {cooldown:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Ability_0_rgb_fr end), -- duration: 5, damage: +25%, weakspot_damage: +25%, cooldown: 30 -- &->et -- s->secondes -- couleurs
+			--[+ Traditional Chinese - 火力齊射 +]--
 
 	--[+ Ability 1 - Executioner's Stance +]--
 		-- create_template("talent_tree_vet_abil1_000_en", {"loc_talent_veteran_combat_ability_elite_and_special_outlines"}, {"en"}, function(locale, value) return "Executioner's Stance" end),
 	create_template("talent_tree_vet_abil1_000_desc_en", {"loc_talent_veteran_combat_ability_elite_and_special_outlines_refresh_description"}, {"en"}, function(locale, value) return "Enter Ranged Stance for {duration:%s} seconds. You instantly equip your Ranged weapon and deal:\n{damage:%s} Ranged "..COLORS_KWords.Damage_rgb..",\n{weakspot_damage:%s} Ranged "..COLORS_KWords.Weakspot_dmg_rgb..".\nHuman-sized Elite and Specialist Enemies within "..COLORS_Numbers.n_50_rgb.." meters of the Veteran are highlighted for {duration:%s} seconds.\nKilling an highlighted enemy refreshes the active duration by {refresh_duration:%s} seconds. This also refreshes the duration of outlines on enemies for Veteran.\nBase Cooldown: {cooldown:%s} seconds.\nThis is an augmented version of {old_talent_name:%s}."..TALENTS_Enh_desc2.ED_VET_Ability_1_rgb end), -- duration: 5, damage: +25%, weakspot_damage: +25%, duration: 5, cooldown: 30, old_talent_name: Volley Fire -- rewrite -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil1_000_desc_fr", {"loc_talent_veteran_combat_ability_elite_and_special_outlines_refresh_description"}, {"fr"}, function(locale, value) return "Passez en posture à distance pendant {duration:%s} secondes. Vous équipez instantanément votre arme à distance et infligez :\n{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." à distance,\n{weakspot_damage:%s} de "..COLORS_KWords_fr.Weakspot_dmg_rgb_fr.." à distance.\nLes ennemis élites et spécialistes de taille humaine situés à moins de "..COLORS_Numbers.n_50_rgb.." mètres du vétéran sont mis en surbrillance pendant {duration:%s} secondes.\nTuer un ennemi mis en surbrillance rafraîchit la durée active de {refresh_duration:%s} secondes. Cela rafraîchit également la durée des contours sur les ennemis pour le vétéran.\nTemps de recharge de base : {cooldown:%s} secondes.\nIl s'agit d'une version augmentée de {old_talent_name:%s}."..TALENTS_Enh_desc2_fr.ED_VET_Ability_1_rgb_fr end), -- duration: 5, damage: +25%, weakspot_damage: +25%, duration: 5, cooldown: 30, old_talent_name: Volley Fire -- rewrite -- s->secondes -- couleurs
+			--[+ Traditional Chinese - 處決者姿態 +]--
 
 	--[+ Ability 1-1 - Enhanced Target Priority +]--
 		-- create_template("talent_tree_vet_abil1_001_en", {"loc_talent_veteran_combat_ability_coherency_outlines"}, {"en"}, function(locale, value) return "Enhanced Target Priority" end),
 	create_template("talent_tree_vet_abil1_001_desc_en", {"loc_talent_veteran_combat_ability_coherency_outlines_description"}, {"en"}, function(locale, value) return "{talent_name:%s} now outlines all human-sized Elite and Specialist Enemies for Allies in Coherency for {duration:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Ability_1_1_rgb end), -- talent_name: Executioner's Stance, duration: 5 -- rewrite -- &->and -- s->seconds
 			--[+ French +]--
 	create_template("talent_tree_vet_abil1_001_desc_fr", {"loc_talent_veteran_combat_ability_coherency_outlines_description"}, {"fr"}, function(locale, value) return "{talent_name:%s} met désormais en surbrillance tous les ennemis élites et spécialistes de taille humaine pour les alliés en syntonie pendant {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Ability_1_1_rgb_fr end), -- talent_name: Executioner's Stance, duration: 5 -- rewrite -- &->et -- s->secondes
+			--[+ Traditional Chinese - 目標引導增強 +]--
 
 	--[+ Ability 1-2 - Counter-Fire +]--
 		-- create_template("talent_tree_vet_abil1_002_en", {"loc_talent_veteran_combat_ability_ranged_enemies_outlines"}, {"en"}, function(locale, value) return "Counter-Fire" end),
 	create_template("talent_tree_vet_abil1_002_desc_en", {"loc_talent_veteran_combat_ability_ranged_enemies_outlines_description"}, {"en"}, function(locale, value) return "{talent_name:%s} now outlines Scab/Dreg Stalkers and Scab Shooters, additionally to all human-sized Elites and Specials." end), -- talent_name: Executioner's Stance -- rewrite
 			--[+ French +]--
 	create_template("talent_tree_vet_abil1_002_desc_fr", {"loc_talent_veteran_combat_ability_ranged_enemies_outlines_description"}, {"fr"}, function(locale, value) return "{talent_name:%s} met désormais en surbrillance tout les ennemis à distance de taille humaine." end), -- talent_name: Executioner's Stance -- rewrite
+			--[+ Traditional Chinese - 火力反擊 +]--
 
 	--[+ Ability 1-3 - The Bigger they Are... +]--
 		-- create_template("talent_tree_vet_abil1_003_en", {"loc_talent_ranger_volley_fire_big_game_hunter"}, {"en"}, function(locale, value) return "The Bigger they Are..." end),
 	create_template("talent_tree_vet_abil1_003_desc_en", {"loc_talent_veteran_combat_ability_ogryn_outlines_description"}, {"en"}, function(locale, value) return "{talent_name:%s} now outlines Bulwarks, Crushers and Reapers, additionally to all human-sized Elites and Specials." end), -- talent_name: Executioner's Stance -- rewrite
 			--[+ French +]--
 	create_template("talent_tree_vet_abil1_003_desc_fr", {"loc_talent_veteran_combat_ability_ogryn_outlines_description"}, {"fr"}, function(locale, value) return "{talent_name:%s} met désormais en surbrillance les Remparts, Broyeurs et Fauchers, en plus de tous les élites et spécialistes de taille humaine." end), -- talent_name: Executioner's Stance -- rewrite
+			--[+ Traditional Chinese - 敵人越大... +]--
 
 	--[+ Ability 1-4 - Marksman +]--
 		-- create_template("talent_tree_vet_abil1_004_en", {"loc_talent_veteran_ability_marksman"}, {"en"}, function(locale, value) return "Marksman" end),
 	create_template("talent_tree_vet_abil1_004_desc_en", {"loc_talent_veteran_ability_marksman_desc"}, {"en"}, function(locale, value) return "{power:%s} "..COLORS_KWords.Strength_rgb.." for any "..COLORS_KWords.Weakspothits_rgb.." for {duration:%s} seconds after "..COLORS_KWords.Combat_ability_rgb.." use.\n\nWhen using {talent_name:%s}, this is applied after leaving "..COLORS_KWords.Stealth_rgb.."."..TALENTS_Enh_desc2.ED_VET_Ability_1_4_rgb end), -- duration: 10, power: +20%, talent_name: Infiltrate -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil1_004_desc_fr", {"loc_talent_veteran_ability_marksman_desc"}, {"fr"}, function(locale, value) return "{power:%s} de "..COLORS_KWords_fr.Strength_rgb_fr.." pour tous les "..COLORS_KWords_fr.Weakspothits_rgb_fr.." pendant {duration:%s} secondes après utilisation de la "..COLORS_KWords_fr.Combat_ability_rgb_fr..".\n\nLors de l'utilisation de {talent_name:%s}, cela s'applique après avoir quitté l'état de la "..COLORS_KWords_fr.Stealth_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_1_4_rgb_fr end), -- duration: 10, power: +20%, talent_name: Infiltrate -- s->secondes -- couleurs
+			--[+ Traditional Chinese - 鷹眼 +]--
 
 	--[+ Ability 2 - Voice of Command +]--
 		-- create_template("talent_tree_vet_abil2_000_en", {"loc_talent_veteran_combat_ability_stagger_nearby_enemies"}, {"en"}, function(locale, value) return "Voice of Command" end),
 	create_template("talent_tree_vet_abil2_000_desc_en", {"loc_talent_veteran_combat_ability_stagger_nearby_enemies_description"}, {"en"}, function(locale, value) return "Replenishes your "..COLORS_KWords.Toughness_rgb.." and "..COLORS_KWords.Staggers_rgb.." all Enemies within {range:%s} meters.\n\nBase Cooldown {cooldown:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Ability_2_rgb end), -- range: 9, cooldown: 30 -- &->and -- m->meters -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil2_000_desc_fr", {"loc_talent_veteran_combat_ability_stagger_nearby_enemies_description"}, {"fr"}, function(locale, value) return "Régénérez votre "..COLORS_KWords_fr.Toughness_rgb_fr.." et faites "..COLORS_KWords_fr.Staggering_rgb_fr.." tous les ennemis dans un rayon de {range:%s} mètres.\n\nTemps de recharge de base {cooldown:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Ability_2_rgb_fr end), -- range: 9, cooldown: 30 -- &->et -- m->mètres -- s->secondes -- couleurs
+			--[+ Traditional Chinese - 發號施令 +]--
 
 	--[+ Ability 2-1 - Duty and Honour +]--
 		-- create_template("talent_tree_vet_abil2_001_en", {"loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency"}, {"en"}, function(locale, value) return "Duty and Honour" end),
 	create_template("talent_tree_vet_abil2_001_desc_en", {"loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency_description"}, {"en"}, function(locale, value) return "{talent_name:%s} now also provides you and Allies in Coherency with {toughness:%s} "..COLORS_KWords.Toughness_rgb.." for {duration:%s} seconds. This can exceed your Maximum "..COLORS_KWords.Toughness_rgb.."."..TALENTS_Enh_desc2.ED_VET_Ability_2_1_rgb end), -- talent_name: Voice of Command, toughness: +50, duration: 15 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil2_001_desc_fr", {"loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency_description"}, {"fr"}, function(locale, value) return "{talent_name:%s} accorde également à vous et aux alliés en syntonie {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." pendant {duration:%s} secondes. Cela peut dépasser votre maximum de "..COLORS_KWords_fr.Toughness_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_2_1_rgb_fr end), -- talent_name: Voice of Command, toughness: +50, duration: 15 -- s->secondes -- couleurs
+			--[+ Traditional Chinese - 責任與榮譽 +]--
 
 	--[+ Ability 2-2 - Only In Death Does Duty End +]--
 		-- create_template("talent_tree_vet_abil2_002_en", {"loc_talent_veteran_combat_ability_revives"}, {"en"}, function(locale, value) return "Only In Death Does Duty End" end),
 	create_template("talent_tree_vet_abil2_002_desc_en", {"loc_talent_veteran_combat_ability_revives_description"}, {"en"}, function(locale, value) return "{talent_name:%s} revives Knocked Down Allies within Radius, but also reduces that Radius by {range:%s} and increases your "..COLORS_KWords.Ability_cd_rgb.." by {ability_cooldown:%s}."..TALENTS_Enh_desc2.ED_VET_Ability_2_2_rgb end), -- talent_name: Voice of Command, range: 33%, ability_cooldown: 50% -- &->and -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil2_002_desc_fr", {"loc_talent_veteran_combat_ability_revives_description"}, {"fr"}, function(locale, value) return "{talent_name:%s} ressuscite les alliés mis à terre dans le rayon, mais réduit également ce rayon de {range:%s} et augmente votre "..COLORS_KWords_fr.Combat_ability_cd_rgb_fr.." de {ability_cooldown:%s}."..TALENTS_Enh_desc2_fr.ED_VET_Ability_2_2_rgb_fr end), -- talent_name: Voice of Command, range: 33%, ability_cooldown: 50% -- &->et -- couleurs
+			--[+ Traditional Chinese - 只有死亡，職責才會終結 +]--
 
 	--[+ Ability 2-3 - For the Emperor! +]--
 		-- create_template("talent_tree_vet_abil2_003_en", {"loc_talent_veteran_combat_ability_melee_and_ranged_damage_to_coherency"}, {"en"}, function(locale, value) return "For the Emperor!" end),
 	create_template("talent_tree_vet_abil2_003_desc_en", {"loc_talent_veteran_combat_ability_melee_and_ranged_damage_to_coherency_description"}, {"en"}, function(locale, value) return "Your "..COLORS_KWords.Combat_ability_rgb.." gives for {duration:%s} seconds you and Allies in Coherency:\n{melee_damage:%s} Melee Base "..COLORS_KWords.Damage_rgb.." and\n{ranged_damage:%s} Ranged Base "..COLORS_KWords.Damage_rgb.."."..TALENTS_Enh_desc2.ED_VET_Ability_2_3_rgb end), --  duration: 5, melee_damage: +10%, ranged_damage: +10% -- rewrite -- &->and -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil2_003_desc_fr", {"loc_talent_veteran_combat_ability_melee_and_ranged_damage_to_coherency_description"}, {"fr"}, function(locale, value) return "Votre "..COLORS_KWords_fr.Combat_ability_rgb_fr.." donne pendant {duration:%s} secondes à vous et aux alliés en syntonie:\n{melee_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." de mêlée de base et\n{ranged_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." à distance de base."..TALENTS_Enh_desc2_fr.ED_VET_Ability_2_3_rgb_fr end), --  duration: 5, melee_damage: +10%, ranged_damage: +10% -- rewrite -- &->et -- s->secondes -- couleurs
+			--[+ Traditional Chinese - 為了皇帝！ +]--
 
 	--[+ Ability 3 - Infiltrate +]--
 		-- create_template("talent_tree_vet_abil3_000_en", {"loc_talent_veteran_invisibility_on_combat_ability"}, {"en"}, function(locale, value) return "Infiltrate" end),
 	create_template("talent_tree_vet_abil3_000_desc_en", {"loc_talent_veteran_invisibility_on_combat_ability_desc"}, {"en"}, function(locale, value) return "Replenish all "..COLORS_KWords.Toughness_rgb.." and enter "..COLORS_KWords.Stealth_rgb.." for {duration:%s} seconds, gaining {movement_speed:%s} Movement Speed. Leaving "..COLORS_KWords.Stealth_rgb.." Suppresses nearby Enemies. Attacking makes you leave "..COLORS_KWords.Stealth_rgb..".\nBase Cooldown: {cooldown:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Ability_3_rgb end), -- duration: 8, movement_speed: +25%, cooldown: 45 -- rewrite -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil3_000_desc_fr", {"loc_talent_veteran_invisibility_on_combat_ability_desc"}, {"fr"}, function(locale, value) return "Régénérez toute la "..COLORS_KWords_fr.Toughness_rgb_fr.." et entre en "..COLORS_KWords_fr.Stealth_rgb_fr.." pendant {duration:%s} secondes, gagnant {movement_speed:%s} de vitesse de déplacement. Quand vous quittez la "..COLORS_KWords_fr.Stealth_rgb_fr.." les ennemis à proximité subissent Suppresion. Attaquer vous fait quitter la "..COLORS_KWords_fr.Stealth_rgb_fr..".\nTemps de recharge de base : {cooldown:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Ability_3_rgb_fr end),
+			--[+ Traditional Chinese - 滲透 +]--
 
 	--[+ Ability 3-1 - Low Profile +]--
 		-- create_template("talent_tree_vet_abil3_001_en", {"loc_talent_veteran_reduced_threat_after_combat_ability"}, {"en"}, function(locale, value) return "Low Profile" end),
 	create_template("talent_tree_vet_abil3_001_desc_en", {"loc_talent_veteran_reduced_threat_after_stealth_desc"}, {"en"}, function(locale, value) return "{threat_multiplier:%s} Threat for {duration:%s} seconds on leaving "..COLORS_KWords.Stealth_rgb.."."..TALENTS_Enh_desc2.ED_VET_Ability_3_1_rgb end), -- threat_multiplier: -90%, duration: 10 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil3_001_desc_fr", {"loc_talent_veteran_reduced_threat_after_stealth_desc"}, {"fr"}, function(locale, value) return "{threat_multiplier:%s} Menace pour {duration:%s} secondes en quittant la "..COLORS_KWords_fr.Stealth_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_3_1_rgb_fr end),
+			--[+ Traditional Chinese - 低調 +]--
 
 	--[+ Ability 3-2 - Overwatch +]--
 		-- create_template("talent_tree_vet_abil3_002_en",{"loc_talent_veteran_combat_ability_extra_charge"}, {"en"}, function(locale, value) return "Overwatch" end),
 	create_template("talent_tree_vet_abil3_002_desc_en", {"loc_talent_veteran_combat_ability_extra_charge_description"}, {"en"}, function(locale, value) return "Your "..COLORS_KWords.Combat_ability_rgb.." gains {charges:%s} charge, but {ability_cooldown:%s} "..COLORS_KWords.Cd_rgb.."."..TALENTS_Enh_desc2.ED_VET_Ability_3_2_rgb end), -- charges: +1, ability_cooldown: +33%
 			--[+ French +]--
 	create_template("talent_tree_vet_abil3_002_desc_fr", {"loc_talent_veteran_combat_ability_extra_charge_description"}, {"fr"}, function(locale, value) return "Votre "..COLORS_KWords_fr.Combat_ability_rgb_fr.." gagne {charges:%s} charge, mais {ability_cooldown:%s} de "..COLORS_KWords_fr.Cd_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_3_2_rgb_fr end),
+			--[+ Traditional Chinese - 掩護射擊 +]--
 
 	--[+ Ability 3-3 - Hunter's Resolve +]--
 		-- create_template("talent_tree_vet_abil3_003_en", {"loc_talent_veteran_toughness_bonus_leaving_invisibility"}, {"en"}, function(locale, value) return "Hunter's Resolve" end),
 	create_template("talent_tree_vet_abil3_003_desc_en", {"loc_talent_veteran_toughness_bonus_leaving_invisibility_desc"}, {"en"}, function(locale, value) return "{tdr:%s} "..COLORS_KWords.Toughness_dmg_red_rgb.." is provided by {talent_name:%s} for {duration:%s} seconds upon leaving "..COLORS_KWords.Stealth_rgb.."."..TALENTS_Enh_desc2.ED_VET_Ability_3_3_rgb end), -- talent_name: Infiltrate, tdr: +50%, duration: 10 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil3_003_desc_fr", {"loc_talent_veteran_toughness_bonus_leaving_invisibility_desc"}, {"fr"}, function(locale, value) return "{tdr:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." est fourni par {talent_name:%s} pour {duration:%s} secondes en quittant la "..COLORS_KWords_fr.Stealth_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_3_3_rgb_fr end),
+			--[+ Traditional Chinese - 獵手決意 +]--
 
 	--[+ Ability 3-4 - Surprise Attack +]--
 		-- create_template("talent_tree_vet_abil3_004_en", {"loc_talent_veteran_damage_bonus_leaving_invisibility"}, {"en"}, function(locale, value) return "Surprise Attack" end),
 	create_template("talent_tree_vet_abil3_004_desc_en", {"loc_talent_veteran_damage_bonus_leaving_invisibility_desc"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Damage_rgb.." is granted by {talent_name:%s} for {duration:%s} seconds upon leaving "..COLORS_KWords.Stealth_rgb.."."..TALENTS_Enh_desc2.ED_VET_Ability_3_4_rgb end), -- talent_name: Infiltrate, damage: +30%, duration: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil3_004_desc_fr", {"loc_talent_veteran_damage_bonus_leaving_invisibility_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." est accordé par {talent_name:%s} pour {duration:%s} secondes en quittant la "..COLORS_KWords_fr.Stealth_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_3_4_rgb_fr end),
+			--[+ Traditional Chinese - 突襲 +]--
 
 	--[+ Ability 3-5 - Close Quarters Killzone +]--
 		-- create_template("talent_tree_vet_abil3_005_en", {"loc_talent_veteran_ability_assault"}, {"en"}, function(locale, value) return "Close Quarters Killzone" end),
 	create_template("talent_tree_vet_abil3_005_desc_en", {"loc_talent_veteran_ability_assault_desc"}, {"en"}, function(locale, value) return "{power:%s} Close "..COLORS_KWords.Damage_rgb.." for {duration:%s} seconds on "..COLORS_KWords.Combat_ability_rgb.." use.\n\nWhen using {talent_name:%s}, this begins on leaving "..COLORS_KWords.Stealth_rgb.."."..TALENTS_Enh_desc2.ED_VET_Ability_3_5_rgb end), -- power: +15%, duration: 10, talent_name: Infiltrate -- rewrite -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil3_005_desc_fr", {"loc_talent_veteran_ability_assault_desc"}, {"fr"}, function(locale, value) return "{power:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." rapprochés pour {duration:%s} secondes Lors de l'utilisation d'une "..COLORS_KWords_fr.Combat_ability_rgb_fr..".\n\nEn utilisant {talent_name:%s}, cela commence en quittant "..COLORS_KWords_fr.Stealth_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_3_5_rgb_fr end),
+			--[+ Traditional Chinese - 肉搏戰 +]--
 
 --[+ +KEYSTONES+ +]--
 	--[+ Keystone 1 - Marksman's Focus +]--
@@ -1574,90 +1598,105 @@ local localization_templates = {
 	create_template("talent_tree_vet_keys1_000_desc_en", {"loc_talent_veteran_snipers_focus_alt_description"}, {"en"}, function(locale, value) return "Ranged "..COLORS_KWords.Weakspot_rgb.." kills grant {stacks:%s} Stacks of "..COLORS_KWords.Focus_rgb..". Up to {max_stacks} Max Stacks. Sprinting, Sliding and Walking removes Stacks.\nEach Stack of "..COLORS_KWords.Focus_rgb.." grants:\n{power:%s} Ranged "..COLORS_KWords.Finesse_rgb.." strength and\n{reload_speed:%s} Reload Speed.\nRanged "..COLORS_KWords.Weakspot_rgb.." kills let you move without losing Stacks for {grace_time:%s} seconds. Ranged "..COLORS_KWords.Weakspothits_rgb.." lets you move without losing Stacks for {grace_time_hit:%s} second."..TALENTS_Enh_desc2.ED_VET_Keystone_1_rgb end), -- stacks: 3, max_stacks: 10, power: +7.5%, reload_speed: +1%, grace_time: 6, grace_time_hit: 3 -- stack(s)->stacks -- s->second/seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_000_desc_fr", {"loc_talent_veteran_snipers_focus_alt_description"}, {"fr"}, function(locale, value) return "Les tirs à distance sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." octroient {stacks:%s} cumuls de "..COLORS_KWords_fr.Focus_rgb_fr..". Jusqu'à {max_stacks} cumuls maximum. Courir, glisser et marcher supprime les cumuls.\nChaque cumul de "..COLORS_KWords_fr.Focus_rgb_fr.." octroie : {power:%s} de "..COLORS_KWords_fr.Finesse_dmg_rgb_fr.." à distance et {reload_speed:%s} vitesse de rechargement.\nLes élimination sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." à distance permettent de se déplacer sans perdre de cumuls pendant {grace_time:%s} secondes. Les tirs "..COLORS_KWords_fr.Weakspothits_rgb_fr.." permettent de se déplacer sans perdre de cumuls pendant {grace_time_hit:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_1_rgb_fr end),
+			--[+ Traditional Chinese - 狙擊專注 +]--
 
 	--[+ Keystone 1-1 - Chink in their Armour +]--
 		-- create_template("talent_tree_vet_keys1_001_en", {"loc_talent_veteran_snipers_focus_rending_bonus"}, {"en"}, function(locale, value) return "Chink in their Armour" end),
 	create_template("talent_tree_vet_keys1_001_desc_en", {"loc_talent_veteran_snipers_focus_rending_bonus_description"}, {"en"}, function(locale, value) return "{rending:%s} "..COLORS_KWords.Rending_rgb.." when at, or over, {stacks:%s} Stacks of "..COLORS_KWords.Focus_rgb.."."..TALENTS_Enh_desc2.ED_VET_Keystone_1_1_rgb end), -- rending: +10%, stacks: 10 -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_001_desc_fr", {"loc_talent_veteran_snipers_focus_rending_bonus_description"}, {"fr"}, function(locale, value) return "{rending:%s} de "..COLORS_KWords_fr.Rending_rgb_fr.." lorsque à, ou au-dessus de, {stacks:%s} cumuls de "..COLORS_KWords_fr.Focus_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_1_1_rgb_fr end),
+			--[+ Translations Chinese - 滲透盔甲 +]--
 
 	--[+ Keystone 1-2 - Tunnel Vision +]--
 		-- create_template("talent_tree_vet_keys1_002_en", {"loc_talent_veteran_snipers_focus_toughness_bonus"}, {"en"}, function(locale, value) return "Tunnel Vision" end),
 	create_template("talent_tree_vet_keys1_002_desc_en", {"loc_talent_veteran_snipers_focus_stamina_bonus_desc"}, {"en"}, function(locale, value) return "{toughness_replenish_multiplier:%s} "..COLORS_KWords.Toughness_rgb.." Replenishment for each Stack of "..COLORS_KWords.Focus_rgb..". In addition, "..COLORS_KWords.Weakspot_rgb.." kills restore {stamina:%s} "..COLORS_KWords.Stamina_rgb.."."..TALENTS_Enh_desc2.ED_VET_Keystone_1_2_rgb end), -- toughness_replenish_multiplier: +5%, stamina: 10% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_002_desc_fr", {"loc_talent_veteran_snipers_focus_stamina_bonus_desc"}, {"fr"}, function(locale, value) return "{toughness_replenish_multiplier:%s} de régénération de "..COLORS_KWords_fr.Toughness_rgb_fr.." pour chaque cumul de "..COLORS_KWords_fr.Focus_rgb_fr..". De plus, les éliminations sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." restaurent {stamina:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_1_2_rgb_fr end),
+			--[+ Translations Chinese - 視野狹窄 +]--
 
 	--[+ Keystone 1-3 - Long Range Assassin +]--
 		-- create_template("talent_tree_vet_keys1_003_en", {"loc_talent_veteran_snipers_focus_increased_stacks"}, {"en"}, function(locale, value) return "Long Range Assassin" end),
 	create_template("talent_tree_vet_keys1_003_desc_en", {"loc_talent_veteran_snipers_focus_increased_stacks_description"}, {"en"}, function(locale, value) return "Increase Maximum Stacks of "..COLORS_KWords.Focus_rgb.." from {stacks:%s} to {new_stacks:%s}." end), -- stacks: 10, new_stacks: 15 -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_003_desc_fr", {"loc_talent_veteran_snipers_focus_increased_stacks_description"}, {"fr"}, function(locale, value) return "Augmente les cumuls maximum de "..COLORS_KWords_fr.Focus_rgb_fr.." de {stacks:%s} à {new_stacks:%s}." end),
+			--[+ Translations Chinese - 遠程刺客 +]--
 
 	--[+ Keystone 1-4 - Camouflage +]--
 		-- create_template("talent_tree_vet_keys1_004_en", {"loc_talent_veteran_snipers_focus_stacks_on_still"}, {"en"}, function(locale, value) return "Camouflage" end),
 	create_template("talent_tree_vet_keys1_004_desc_en", {"loc_talent_veteran_snipers_focus_stacks_on_still_description"}, {"en"}, function(locale, value) return "Gain {stack:%s} Stack of "..COLORS_KWords.Focus_rgb.." every {time:%s} seconds when Standing Still or Walking when Crouched." end), -- stack: 1, time: 0.75 -- stack(s)->stacks -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_004_desc_fr", {"loc_talent_veteran_snipers_focus_stacks_on_still_description"}, {"fr"}, function(locale, value) return "Gagnez {stack:%s} cumul de "..COLORS_KWords_fr.Focus_rgb_fr.." toutes les {time:%s} secondes en restant immobile ou en marchant accroupi." end),
+			--[+ Translations Chinese - 偽裝 +]--
 
 	--[+ Keystone 2 - Focus Target! +]--
 		-- create_template("talent_tree_vet_keys2_000_en", {"loc_talent_veteran_improved_tag"}, {"en"}, function(locale, value) return "Focus Target!" end),
 	create_template("talent_tree_vet_keys2_000_desc_en", {"loc_talent_veteran_improved_tag_description"}, {"en"}, function(locale, value) return "Gain "..COLORS_KWords.Focus_Target_rgb.." every {time:%s} seconds. Stacks {max_stacks:%s} times.\nTagging an Enemy applies the "..COLORS_KWords.Focus_Target_rgb.." Stacks to them, causing them to take {damage:%s} additional "..COLORS_KWords.Damage_rgb.." for each Stack, and resets your "..COLORS_KWords.Focus_Target_rgb.." Stacks to "..COLORS_Numbers.n_1_rgb.."."..TALENTS_Enh_desc2.ED_VET_Keystone_2_rgb end), -- time: 2, max_stacks: 5, damage: +4% -- -() -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys2_000_desc_fr", {"loc_talent_veteran_improved_tag_description"}, {"fr"}, function(locale, value) return "Gagnez "..COLORS_KWords_fr.Focus_Target_rgb_fr.." toutes les {time:%s} secondes. Cumulable jusqu'à {max_stacks:%s} fois.\nMarquer un ennemi applique les cumuls de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." sur lui, le faisant subir {damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." supplémentaire par cumul, et réinitialise vos cumuls de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." à "..COLORS_Numbers.n_1_rgb.."."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_2_rgb_fr end),
+			--[+ Traditional Chinese - 鎖定目標 +]--
 
 	--[+ Keystone 2-1 - Target Down! +]--
 		-- create_template("talent_tree_vet_keys2_001_en", {"loc_talent_veteran_improved_tag_dead_bonus"}, {"en"}, function(locale, value) return "Target Down!" end),
 	create_template("talent_tree_vet_keys2_001_desc_en", {"loc_talent_veteran_improved_tag_dead_bonus_description"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_rgb.." and {stamina:%s} "..COLORS_KWords.Stamina_rgb.." are replenished for each stack of "..COLORS_KWords.Focus_Target_rgb.." applied when an enemy you have Tagged dies, for you and Allies in Coherency."..TALENTS_Enh_desc2.ED_VET_Keystone_2_1_rgb end), -- toughness: 5%, stamina: 5% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys2_001_desc_fr", {"loc_talent_veteran_improved_tag_dead_bonus_description"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." et {stamina:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.." sont récuperés  pour chaque cumul de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." appliqué lorsqu'un ennemi marqué meurt, pour vous et vos alliés en syntonie."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_2_1_rgb_fr end),
+			--[+ Traditional Chinese - 目標擊倒! +]--
 
 	--[+ Keystone 2-2 - Redirect Fire! +]--
 		-- create_template("talent_tree_vet_keys2_002_en", {"loc_talent_veteran_improved_tag_dead_coherency_bonus"}, {"en"}, function(locale, value) return "Redirect Fire!" end),
 	create_template("talent_tree_vet_keys2_002_desc_en", {"loc_talent_veteran_improved_tag_dead_coherency_bonus_description"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Damage_rgb.." is granted for each Stack of "..COLORS_KWords.Focus_Target_rgb.." applied when an enemy you have Tagged dies, to you and Allies in Coherency. Lasts {duration:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Keystone_2_2_rgb end), -- damage: +1.5%, duration: 10 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys2_002_desc_fr", {"loc_talent_veteran_improved_tag_dead_coherency_bonus_description"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." est accordé pour chaque cumul de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." appliqué lorsqu'un ennemi marqué meurt, pour vous et vos alliés en syntonie. Dure {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_2_2_rgb_fr end),
+			--[+ Traditional Chinese - 轉移火力! +]--
 
 	--[+ Keystone 2-3 - Focused Fire +]--
 		-- create_template("talent_tree_vet_keys2_003_en", {"loc_talent_veteran_improved_tag_more_damage"}, {"en"}, function(locale, value) return "Focused Fire" end),
 	create_template("talent_tree_vet_keys2_003_desc_en", {"loc_talent_veteran_improved_tag_more_damage_description"}, {"en"}, function(locale, value) return COLORS_KWords.Focus_Target_rgb.." Max Stacks increased from "..COLORS_Numbers.n_5_rgb.." to {max_stacks:%s}." end), -- max_stacks: 8 -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys2_003_desc_fr", {"loc_talent_veteran_improved_tag_more_damage_description"}, {"fr"}, function(locale, value) return "Le nombre maximum de cumul de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." est augmentés de "..COLORS_Numbers.n_5_rgb.." à {max_stacks:%s}." end),
+			--[+ Traditional Chinese - 集中火力 +]--
 
 	--[+ Keystone 3 - Weapons Specialist +]--
 		-- create_template("talent_tree_vet_keys3_000_en", {"loc_talent_veteran_weapon_switch"}, {"en"}, function(locale, value) return "Weapons Specialist" end),
 	create_template("talent_tree_vet_keys3_000_desc_en", {"loc_talent_veteran_weapon_switch_description"}, {"en"}, function(locale, value) return "Gain "..COLORS_KWords.Rangedspec_rgb.." on Melee kills. Stacks {ranged_stacks:%s} times.\nGain "..COLORS_KWords.Meleespec_rgb.." on Ranged kill. Stacks {melee_stacks:%s} times.\n\nWhen you wield your Ranged weapon, you activate your "..COLORS_KWords.Rangedspec_rgb.." effect, to gain:\n{ranged_attack_speed:%s} Ranged Attack Speed and\n{ranged_crit_chance:%s} Ranged "..COLORS_KWords.Crit_hit_rgb.." Chance on your next shot, per Stack. Lasts {ranged_duration:%s} seconds.\n\nWhen you wield your Melee weapon, you activate your "..COLORS_KWords.Meleespec_rgb.." effect, to gain:\n{melee_attack_speed:%s} Melee Attack Speed,\n"..COLORS_Numbers.n_plus_rgb.."{dodge_modifier:%s} Dodge Speed and Dodge Distance. Lasts {melee_duration:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Keystone_3_rgb end), -- ranged_stacks: 10, melee_stacks: 1, ranged_attack_speed: +2%, ranged_crit_chance: +33%, ranged_duration: 5, melee_attack_speed: +15%, dodge_modifier: 10%, melee_duration: 10 -- -() --  s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_000_desc_fr", {"loc_talent_veteran_weapon_switch_description"}, {"fr"}, function(locale, value) return "Obtenez "..COLORS_KWords_fr.Rangedspec_rgb_fr.." en éliminant des ennemis en mêlée. Cumule jusqu'à {ranged_stacks:%s} fois.\nObtenez "..COLORS_KWords_fr.Meleespec_rgb_fr.." en éliminant des ennemis à distance. Cumule jusqu'à {melee_stacks:%s} fois.\n\nLorsque vous maniez votre arme à distance, vous activez votre effet "..COLORS_KWords_fr.Rangedspec_rgb_fr..", pour obtenir :\n{ranged_attack_speed:%s} Vitesse d'attaque à distance et\n{ranged_crit_chance:%s} de "..COLORS_KWords_fr.Crit_chance_r_rgb_fr.." à distance lors de votre prochain tir, par cumul. Dure {ranged_duration:%s} secondes.\n\nLorsque vous maniez votre arme de mêlée, vous activez votre effet "..COLORS_KWords_fr.Meleespec_rgb_fr..", pour obtenir :\n{melee_attack_speed:%s} Vitesse d'attaque au corps à corps,\n"..COLORS_Numbers.n_plus_rgb.."{dodge_modifier:%s} Vitesse d'esquive et Distance d'esquive. Dure {melee_duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_rgb_fr end),
+			--[+ Traditional Chinese - 武器專家 +]--
 
 	--[+ Keystone 3-1 - Always Prepared +]--
 		-- create_template("talent_tree_vet_keys3_001_en", {"loc_talent_veteran_weapon_switch_replenish_ammo"}, {"en"}, function(locale, value) return "Always Prepared" end),
 	create_template("talent_tree_vet_keys3_001_desc_en", {"loc_talent_veteran_weapon_switch_replenish_ammo_description"}, {"en"}, function(locale, value) return "Activating "..COLORS_KWords.Rangedspec_rgb.." replenishes up to {ammo:%s} of your missing ammo in your Clip from your Reserve, rounded up, for each Stack."..TALENTS_Enh_desc2.ED_VET_Keystone_3_1_rgb end), -- ammo: 3.3% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_001_desc_fr", {"loc_talent_veteran_weapon_switch_replenish_ammo_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Rangedspec_rgb_fr.." recharge jusqu'à {ammo:%s} de vos munitions manquantes dans votre chargeur à partir de votre réserve, arrondi au supérieur, par cumul."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_1_rgb_fr end),
+			--[+ Traditional Chinese - 有備無患 +]--
 
 	--[+ Keystone 3-2 - Invigorated +]--
 		-- create_template("talent_tree_vet_keys3_002_en", {"loc_talent_veteran_weapon_switch_replenish_stamina"}, {"en"}, function(locale, value) return "Invigorated" end),
 	create_template("talent_tree_vet_keys3_002_desc_en", {"loc_talent_veteran_weapon_switch_replenish_stamina_description"}, {"en"}, function(locale, value) return "Activating "..COLORS_KWords.Meleespec_rgb.." restores {stamina:%s} "..COLORS_KWords.Stamina_rgb.."."..TALENTS_Enh_desc2.ED_VET_Keystone_3_2_rgb end), -- stamina: 20% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_002_desc_fr", {"loc_talent_veteran_weapon_switch_replenish_stamina_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Meleespec_rgb_fr.." restaure {stamina:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_2_rgb_fr end),
+			--[+ Traditional Chinese - 活力煥發 +]--
 
 	--[+ Keystone 3-3 - On Your Toes +]--
 		-- create_template("talent_tree_vet_keys3_003_en", {"loc_talent_veteran_weapon_switch_replenish_toughness"}, {"en"}, function(locale, value) return "On Your Toes" end),
 	create_template("talent_tree_vet_keys3_003_desc_en", {"loc_talent_veteran_weapon_switch_replenish_toughness_description"}, {"en"}, function(locale, value) return "Activating "..COLORS_KWords.Meleespec_rgb.." and "..COLORS_KWords.Rangedspec_rgb.." replenishes {toughness:%s} "..COLORS_KWords.Toughness_rgb..". {cooldown:%s} seconds Cooldown for each."..TALENTS_Enh_desc2.ED_VET_Keystone_3_3_rgb end), -- toughness: 20%, cooldown: 3 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_003_desc_fr", {"loc_talent_veteran_weapon_switch_replenish_toughness_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Meleespec_rgb_fr.." et "..COLORS_KWords_fr.Rangedspec_rgb_fr.." restaure {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr..". Temps de recharge de {cooldown:%s} secondes pour chacun."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_3_rgb_fr end),
+			--[+ Traditional Chinese - 時刻警覺 +]--
 
 	--[+ Keystone 3-4 - Fleeting Fire +]--
 		-- create_template("talent_tree_vet_keys3_004_en", {"loc_talent_veteran_weapon_switch_reload_speed"}, {"en"}, function(locale, value) return "Fleeting Fire" end),
 	create_template("talent_tree_vet_keys3_004_desc_en", {"loc_talent_veteran_weapon_switch_reload_speed_description"}, {"en"}, function(locale, value) return "Activating "..COLORS_KWords.Rangedspec_rgb.." grants {reload_speed:%s} Reload Speed for {duration:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Keystone_3_4_rgb end), -- reload_speed: 20%, duration: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_004_desc_fr", {"loc_talent_veteran_weapon_switch_reload_speed_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Rangedspec_rgb_fr.." accorde {reload_speed:%s} vitesse de rechargement pendant {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_4_rgb_fr end),
+			--[+ Traditional Chinese - 集火 +]--
 
 	--[+ Keystone 3-5 - Conditioning +]--
 		-- create_template("talent_tree_vet_keys3_005_en", {"loc_talent_veteran_weapon_switch_stamina_reduction"}, {"en"}, function(locale, value) return "Conditioning" end),
 	create_template("talent_tree_vet_keys3_005_desc_en", {"loc_talent_veteran_weapon_switch_stamina_reduction_description"}, {"en"}, function(locale, value) return "Activating "..COLORS_KWords.Meleespec_rgb.." grants {stamina_reduction:%s} "..COLORS_KWords.Stamina_rgb.." Cost Reduction for {duration:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Keystone_3_5_rgb end), -- stamina_reduction: 25%, duration: 3 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_005_desc_fr", {"loc_talent_veteran_weapon_switch_stamina_reduction_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Meleespec_rgb_fr.." accorde {stamina_reduction:%s} réduction du coût d'"..COLORS_KWords_fr.Stamina_rgb_fr.." pendant {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_5_rgb_fr end),
+			--[+ Traditional Chinese - 身體調節 +]--
 
 --[+ +PASSIVES+ +]--
 	--[+ Passive 1 - Longshot +]--
@@ -1665,54 +1704,63 @@ local localization_templates = {
 	create_template("talent_tree_vet_pas_001_desc_en", {"loc_talent_veteran_increased_damage_based_on_range_desc"}, {"en"}, function(locale, value) return "Deal up to {max_damage:%s} Ranged Base "..COLORS_KWords.Damage_rgb..". Bonus is reduced the nearer the target."..TALENTS_Enh_desc2.ED_VET_Passive_1_rgb end), -- max_damage: +20% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_001_desc_fr", {"loc_talent_veteran_increased_damage_based_on_range_desc"}, {"fr"}, function(locale, value) return "Inflige jusqu'à {max_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." de base à distance. Le bonus est réduit plus la cible est proche."..TALENTS_Enh_desc2_fr.ED_VET_Passive_1_rgb_fr end),
+			--[+ Traditional Chinese - 遠射 +]--
 
 	--[+ Passive 2 - Close Order Drill +]--
 		-- create_template("talent_tree_vet_pas_002_en", {"loc_talent_veteran_toughness_damage_reduction_per_ally"}, {"en"}, function(locale, value) return "Close Order Drill" end),
 	create_template("talent_tree_vet_pas_002_desc_en", {"loc_talent_veteran_toughness_damage_reduction_per_ally_description"}, {"en"}, function(locale, value) return COLORS_Numbers.n_plus_rgb..COLORS_Numbers.pc_11_rgb.." "..COLORS_KWords.Toughness_dmg_red_rgb.." per Ally in Coherency. Up to {toughness:%s}."..TALENTS_Enh_desc2.ED_VET_Passive_2_rgb end), -- toughness: +33% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_002_desc_fr", {"loc_talent_veteran_toughness_damage_reduction_per_ally_description"}, {"fr"}, function(locale, value) return COLORS_Numbers.n_plus_rgb..COLORS_Numbers.pc_11_rgb.." de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." par allié en syntonie. Jusqu'à {toughness:%s}."..TALENTS_Enh_desc2_fr.ED_VET_Passive_2_rgb_fr end),
+			--[+ Traditional Chinese - 密集隊形訓練 +]--
 
 	--[+ Passive 3 - One Motion +]--
 		-- create_template("talent_tree_vet_pas_003_en", {"loc_talent_veteran_reduce_swap_time"}, {"en"}, function(locale, value) return "One Motion" end),
 	create_template("talent_tree_vet_pas_003_desc_en", {"loc_talent_veteran_reduce_swap_time_desc"}, {"en"}, function(locale, value) return "{swap_speed} Weapon Swap Speed."..TALENTS_Enh_desc2.ED_VET_Passive_3_rgb end), -- swap_speed: +25%
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_003_desc_fr", {"loc_talent_veteran_reduce_swap_time_desc"}, {"fr"}, function(locale, value) return "{swap_speed:%s} Vitesse de changement d'arme."..TALENTS_Enh_desc2_fr.ED_VET_Passive_3_rgb_fr end),
+			--[+ Traditional Chinese - 行雲流水 +]--
 
 	--[+ Passive 4 - Exhilarating Takedown +]--
 		-- create_template("talent_tree_vet_pas_004_en", {"loc_talent_veteran_toughness_on_weakspot_kill"}, {"en"}, function(locale, value) return "Exhilarating Takedown" end),
 	create_template("talent_tree_vet_pas_004_desc_en", {"loc_talent_veteran_toughness_on_weakspot_kill_desc"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_rgb.." is replenished and "..COLORS_Numbers.n_1_rgb.." Stack of {toughness_damage_reduction:%s} "..COLORS_KWords.Toughness_dmg_red_rgb.." is gained for {duration:%s} seconds on a Ranged "..COLORS_KWords.Weakspot_rgb.." kill. Stacks {stacks:%s} times."..TALENTS_Enh_desc2.ED_VET_Passive_4_rgb end), -- toughness: 15%, toughness_damage_reduction: +10%, duration: 8, stacks: 3 -- rewrite -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_004_desc_fr", {"loc_talent_veteran_toughness_on_weakspot_kill_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." est récuperés et "..COLORS_Numbers.n_1_rgb.." cumul de {toughness_damage_reduction:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." est gagné pour {duration:%s} secondes lors d'une élimination à distance sur "..COLORS_KWords_fr.Weakspot_rgb_fr..". Cumule jusqu'à {stacks:%s} fois."..TALENTS_Enh_desc2_fr.ED_VET_Passive_4_rgb_fr end),
+			--[+ Traditional Chinese - 振奮擊倒 +]--
 
 	--[+ Passive 5 - Volley Adept +]--
 		-- create_template("talent_tree_vet_pas_005_en", {"loc_talent_veteran_reload_speed_on_elite_kill"}, {"en"}, function(locale, value) return "Volley Adept" end),
 	create_template("talent_tree_vet_pas_005_desc_en", {"loc_talent_veteran_reload_speed_on_elite_kill_desc"}, {"en"}, function(locale, value) return "{reload_speed:%s} Reload Speed on Elite and Specialist Enemy Kill."..TALENTS_Enh_desc2.ED_VET_Passive_5_rgb end), -- reload_speed: +30% -- &->and
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_005_desc_fr", {"loc_talent_veteran_reload_speed_on_elite_kill_desc"}, {"fr"}, function(locale, value) return "{reload_speed:%s} vitesse de rechargement lors de l'élimination d'un ennemi d'élite ou spécialiste."..TALENTS_Enh_desc2_fr.ED_VET_Passive_5_rgb_fr end),
+			--[+ Traditional Chinese - 齊射能手 +]--
 
 	--[+ Passive 6 - Charismatic +]--
 		-- create_template("talent_tree_vet_pas_006_en", {"loc_talent_veteran_increased_aura_radius"}, {"en"}, function(locale, value) return "Charismatic" end),
 	create_template("talent_tree_vet_pas_006_desc_en", {"loc_talent_veteran_increased_aura_radius_description"}, {"en"}, function(locale, value) return "{radius:%s} Aura radius."..TALENTS_Enh_desc2.ED_VET_Passive_6_rgb end), -- radius: +50%
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_006_desc_fr", {"loc_talent_veteran_increased_aura_radius_description"}, {"fr"}, function(locale, value) return "{radius:%s} rayon d'aura."..TALENTS_Enh_desc2_fr.ED_VET_Passive_6_rgb_fr end),
+			--[+ Traditional Chinese - 超凡魅力 +]--
 
 	--[+ Passive 7 - Confirmed Kill +]--
 		-- create_template("talent_tree_vet_pas_007_en", {"loc_talent_veteran_toughness_on_elite_kill"}, {"en"}, function(locale, value) return "Confirmed Kill" end),
 	create_template("talent_tree_vet_pas_007_desc_en", {"loc_talent_veteran_toughness_on_elite_kill_desc"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_rgb.." is replenished on killing an Elite or Specialist Enemy, and a further {toughness_over_time:%s} "..COLORS_KWords.Toughness_rgb.." over {duration:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Passive_7_rgb end), -- toughness: 10%, toughness_over_time: 20%, duration: 10 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_007_desc_fr", {"loc_talent_veteran_toughness_on_elite_kill_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." est restauré lors d'une éliminant d'élite ou de spécialiste, et {toughness_over_time:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." supplémentaire pendant {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_7_rgb_fr end),
+			--[+ Traditional Chinese - 擊殺紀錄 +]--
 
 	--[+ Passive 8 - Tactical Reload +]--
 		-- create_template("talent_tree_vet_pas_008_en", {"loc_talent_ranger_reload_speed_empty_mag"}, {"en"}, function(locale, value) return "Tactical Reload" end),
 	create_template("talent_tree_vet_pas_008_desc_en", {"loc_talent_veteran_reload_speed_non_empty_mag_desc"}, {"en"}, function(locale, value) return "{reload_speed:%s} Reload Speed if your weapon contains Ammo."..TALENTS_Enh_desc2.ED_VET_Passive_8_rgb end), -- reload_speed: +25%
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_008_desc_fr", {"loc_talent_veteran_reload_speed_non_empty_mag_desc"}, {"fr"}, function(locale, value) return "{reload_speed:%s} vitesse de rechargement si votre arme contient des munitions."..TALENTS_Enh_desc2_fr.ED_VET_Passive_8_rgb_fr end),
+			--[+ Traditional Chinese - 戰術裝填 +]--
 
 	--[+ Passive 9 - Out for Blood +]--
 		-- create_template("talent_tree_vet_pas_009_en", {"loc_talent_veteran_all_kills_replenish_toughness"}, {"en"}, function(locale, value) return "Out for Blood" end),
 	create_template("talent_tree_vet_pas_009_desc_en", {"loc_talent_veteran_all_kills_replenish_toughness_description"}, {"en"}, function(locale, value) return "{toughness:%s} additional "..COLORS_KWords.Toughness_rgb.." is replenished with each kill."..TALENTS_Enh_desc2.ED_VET_Passive_9_rgb end), -- toughness: 5% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_009_desc_fr", {"loc_talent_veteran_all_kills_replenish_toughness_description"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." supplémentaire est restauré avec chaque élimination."..TALENTS_Enh_desc2_fr.ED_VET_Passive_9_rgb_fr end),
+			--[+ Traditional Chinese - 嗜血 +]--
 
 	--[+ Passive 10 - Get Back in the Fight! +]--
 		-- create_template("talent_tree_vet_pas_010_en", {"loc_talent_veteran_movement_speed_on_toughness_broken"}, {"en"}, function(locale, value) return "Get Back in the Fight!" end),
