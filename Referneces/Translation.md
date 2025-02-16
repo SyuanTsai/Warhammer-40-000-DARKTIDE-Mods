@@ -213,10 +213,30 @@
 
 - Stun Grenade - 眩暈手雷
 - Stunstorm Grenade - 眩暈風暴手雷
+- Immolation Grenade - 獻祭手雷
+- Blades of Faith  - 信仰之刃 
 
 ##### 光環
 
+- The Emperors's Will - 帝皇之諭
+- Benediction - 恩賜
+- Beacon of Purity - 純潔信標
+- Loner - 孤狼
+
 ##### 主動技能
+
+- Chastise the Wicked - 懲奸除惡
+- Fury of the Faithful - 有信者之怒
+- Redoubled Zeal - 倍增狂熱
+- Invocation of Death - 死亡禱文
+- Chorus of Spiritual Fortitude - 不屈靈魂合唱
+- Holy Cause - 神聖事業
+- Banishing Light - 放逐之光
+- Ecclesiarch's Call - 教宗之喚
+- Martyr's Purpose - 殉道者之願
+
+
+
 
 ##### 鑰石
 
