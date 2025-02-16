@@ -234,13 +234,59 @@
 - Banishing Light - 放逐之光
 - Ecclesiarch's Call - 教宗之喚
 - Martyr's Purpose - 殉道者之願
-
-
-
+- Shroudfield - 隱秘領域
+- Master-Crafted Shroudfield - 大師級隱秘領域
+- Perfectionist - 完美主義者
+- Invigorating Revelation - 振奮啟示
+- Pious Cut-Throat - 虔誠刺客
 
 ##### 鑰石
 
+- Blazing Piety - 熾熱虔誠
+- Stalwart - 死忠
+- Fury Rising - 怒火升騰
+- Infectious Zeal - 迅疾狂熱
+- Righteous Warrior - 正義戰士
+- Martyrdom - 殉道
+- I Shall Not Fall - 不滅意志
+- Maniac - 狂燥之心
+- Inexorable Judgement - 命定審判
+- Retributor's Stance - 懲戒者姿態
+- Inebriate's Poise - 飄忽身形
+
 ##### 一般天賦
+
+- Disdain - 蔑視
+- Backstabber - 背刺者
+- Anoint in Blood - 鮮血受膏
+- Scourge - 天災
+- Enemies Within, Enemies Without - 內憂外患
+- Fortitude in Fellowship - 合抱成林
+- Purge the Unclean - 淨化不潔
+- Blood Redemption - 鮮血救贖
+- Bleed for the Emperor - 為了帝皇
+- Vicious Offering - 惡毒贈禮
+- The Voice of Terra - 泰拉之音
+- Restoring Faith  - 恢復信仰
+- Second Wind - 精力復甦
+- Enduring Faith - 堅韌信仰
+- The Emperor's Bullet - 帝皇之彈
+- Dance of Death - 死亡之舞
+- Duellist - 決鬥者
+- Until Death - 死戰到底
+- Shield of Contempt - 輕蔑之盾
+- Thy Wrath be Swift - 勃然大怒
+- Good Balance - 四平八穩
+- Sainted Gunslinger - 封聖神射手
+- Hammer of Faith - 信仰之錘
+- Grievous Wounds - 重傷
+- Ambuscade - 伏擊
+- Punishment - 懲罰
+- Faithful Frenzy - 信仰狂亂
+- Sustained Assault - 持續突擊
+- The Master's Retribution - 大師的反擊
+- Faith's Fortitude - 信仰之勇
+- Swift Certainty - 堅定迅捷
 
 ### Veteran - 老兵
 
