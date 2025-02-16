@@ -1767,192 +1767,224 @@ local localization_templates = {
 	create_template("talent_tree_vet_pas_010_desc_en", {"loc_talent_veteran_movement_bonus_on_toughness_broken_desc"}, {"en"}, function(locale, value) return "{stamina_percent:%s} "..COLORS_KWords.Stamina_rgb.." restored, along with "..COLORS_KWords.Stun_rgb.." and Slow Immunity, for {duration:%s} seconds when "..COLORS_KWords.Toughness_rgb.." is broken.\n\n{cooldown:%s} seconds Cooldown."..TALENTS_Enh_desc2.ED_VET_Passive_10_rgb end), -- duration: 6, stamina_percent: +50%, cooldown: 30 -- rewrite -- &->and -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_010_desc_fr", {"loc_talent_veteran_movement_bonus_on_toughness_broken_desc"}, {"fr"}, function(locale, value) return "{stamina_percent:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.." est restauré, avec une immunité au "..COLORS_KWords_fr.Stuns_rgb_fr.." et au ralentissement, pendant {duration:%s} secondes lorsque la "..COLORS_KWords_fr.Toughness_rgb_fr.." tombe à "..COLORS_Numbers.n_0_rgb..".\n\n{cooldown:%s} secondes de recharge."..TALENTS_Enh_desc2_fr.ED_VET_Passive_10_rgb_fr end),
+			--[+ Traditional Chinese - 重投戰鬥! +]--
 
 	--[+ Passive 11 - Catch a Breath +]--
 		-- create_template("talent_tree_vet_pas_011_en", {"loc_talent_veteran_replenish_toughness_outside_melee"}, {"en"}, function(locale, value) return "Catch a Breath" end),
 	create_template("talent_tree_vet_pas_011_desc_en", {"loc_talent_veteran_replenish_toughness_outside_melee_desc"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_rgb.." replenished per second when there are no enemies within {range:%s} meters."..TALENTS_Enh_desc2.ED_VET_Passive_11_rgb end), -- toughness: 5%, range: 8 -- m->meters -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_011_desc_fr", {"loc_talent_veteran_replenish_toughness_outside_melee_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." régénérés par seconde lorsqu'il n'y a pas d'ennemis dans un rayon de {range:%s} mètres."..TALENTS_Enh_desc2_fr.ED_VET_Passive_11_rgb_fr end),
+			--[+ Traditional Chinese - 喘息片刻 +]--
 
 	--[+ Passive 12 - Grenade Tinkerer +]--
 		-- create_template("talent_tree_vet_pas_012_en", {"loc_talent_veteran_improved_grenades"}, {"en"}, function(locale, value) return "Grenade Tinkerer" end),
 	create_template("talent_tree_vet_pas_012_desc_en", {"loc_talent_veteran_improved_grenades_desc"}, {"en"}, function(locale, value) return "Improve your chosen Grenade:\n{krak_grenade:%s}: {krak:%s} "..COLORS_KWords.Damage_rgb..".\n{frag_grenade:%s}: {frag_damage:%s} "..COLORS_KWords.Damage_rgb.." and Radius.\n{smoke_grenade:%s}: {smoke:%s} Duration."..TALENTS_Enh_desc2.ED_VET_Passive_12_rgb end), -- krak_grenade: Krak Grenade, krak: +50%, frag_grenade: Frag Grenade, frag_damage: +25%, smoke_grenade: Smoke Grenade, smoke: +100% -- &->and -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_012_desc_fr", {"loc_talent_veteran_improved_grenades_desc"}, {"fr"}, function(locale, value) return "Améliorez votre grenade choisie:\n{krak_grenade:%s}: {krak:%s} de "..COLORS_KWords_fr.Damage_rgb_fr..".\n{frag_grenade:%s}: {frag_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." et de rayon.\n{smoke_grenade:%s}: {smoke:%s} durée."..TALENTS_Enh_desc2_fr.ED_VET_Passive_12_rgb_fr end),
+			--[+ Traditional Chinese - 手雷專家 +]--
 
 	--[+ Passive 13 - Covering Fire +]--
 		-- create_template("talent_tree_vet_pas_013_en", {"loc_talent_veteran_replenish_toughness_and_boost_allies"}, {"en"}, function(locale, value) return "Covering Fire" end),
 	create_template("talent_tree_vet_pas_013_desc_en", {"loc_talent_veteran_replenish_toughness_and_boost_allies_desc"}, {"en"}, function(locale, value) return "When you kill an enemy with a Ranged Attack, Allies within {radius:%s} meters of the target Replenish {toughness:%s} "..COLORS_KWords.Toughness_rgb.." and receive {base_damage:%s} to all Base "..COLORS_KWords.Damage_rgb.." for {duration:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Passive_13_rgb end), -- radius: 5, toughness: 15%, base_damage: +10%, duration: 3 -- &->and s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_013_desc_fr", {"loc_talent_veteran_replenish_toughness_and_boost_allies_desc"}, {"fr"}, function(locale, value) return "Lorsque d'une élimination à distance, les alliés dans un rayon de {radius:%s} mètres de la cible régénèrent {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." et reçoivent {base_damage:%s} à tous les "..COLORS_KWords_fr.Damage_rgb_fr.." de base pour {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_13_rgb_fr end),
+			--[+ Traditional Chinese - 火力掩護 +]--
 
 	--[+ Passive 14 - Serrated Blade +]--
 		-- create_template("talent_tree_vet_pas_014_en", {"loc_talent_veteran_hits_cause_bleed"}, {"en"}, function(locale, value) return "Serrated Blade" end),
 	create_template("talent_tree_vet_pas_014_desc_en", {"loc_talent_veteran_hits_cause_bleed_desc"}, {"en"}, function(locale, value) return COLORS_Numbers.n_plus_rgb.."{stacks:%s} Stack of "..COLORS_KWords.Bleed_rgb.." to the target on Melee Hit. Up to "..COLORS_Numbers.n_16_rgb.."."..TALENTS_Enh_desc2.ED_VET_Passive_14_rgb end), -- stacks: 1 -- Stack(s)->Stacks -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_014_desc_fr", {"loc_talent_veteran_hits_cause_bleed_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.n_plus_rgb.."{stacks:%s} cumul de "..COLORS_KWords_fr.Bleed_rgb_fr.." sur la cible lors des coups de mêlée. Jusqu'à "..COLORS_Numbers.n_16_rgb.." cumuls."..TALENTS_Enh_desc2_fr.ED_VET_Passive_14_rgb_fr end),
+			--[+ Traditional Chinese - 鋸齒刀刃 +]--
 
 	--[+ Passive 15 - Agile Engagement +]--
 		-- create_template("talent_tree_vet_pas_015_en", {"loc_talent_veteran_kill_grants_damage_to_other_slot"}, {"en"}, function(locale, value) return "Agile Engagement" end),
 	create_template("talent_tree_vet_pas_015_desc_en", {"loc_talent_veteran_kill_grants_damage_to_other_slot_desc"}, {"en"}, function(locale, value) return "{damage:%s} Ranged "..COLORS_KWords.Damage_rgb.." on killing an enemy with a Melee attack.\n{damage:%s} Melee "..COLORS_KWords.Damage_rgb.." on killing an enemy with a Ranged attack.\nLasts {duration:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Passive_15_rgb end), -- damage: +25%, duration: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_015_desc_fr", {"loc_talent_veteran_kill_grants_damage_to_other_slot_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." de distance en tuant un ennemi avec une attaque de mêlée.\n{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." de mêlée lors d'une éliminant à distance.\nDure {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_15_rgb_fr end),
+			--[+ Traditional Chinese - 靈活接敵 +]--
 
 	--[+ Passive 16 - Kill Zone +]--
 		-- create_template("talent_tree_vet_pas_016_en", {"loc_talent_veteran_ranged_power_out_of_melee"}, {"en"}, function(locale, value) return "Kill Zone" end),
 	create_template("talent_tree_vet_pas_016_desc_en", {"loc_talent_veteran_ranged_power_out_of_melee_desc"}, {"en"}, function(locale, value) return "{ranged_damage:%s} Base Ranged "..COLORS_KWords.Damage_rgb.." when there are no Enemies within {radius:%s} meters."..TALENTS_Enh_desc2.ED_VET_Passive_16_rgb end), -- ranged_damage: +20%, radius: 8 -- m->meters -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_016_desc_fr", {"loc_talent_veteran_ranged_power_out_of_melee_desc"}, {"fr"}, function(locale, value) return "{ranged_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." de base lorsqu'il n'y a pas d'ennemis dans un rayon de {radius:%s} mètres."..TALENTS_Enh_desc2_fr.ED_VET_Passive_16_rgb_fr end),
+			--[+ Traditional Chinese - 殺戮地帶 +]--
 
 	--[+ Passive 17 - Opening Salvo +]--
 		-- create_template("talent_tree_vet_pas_017_en", {"loc_talent_veteran_bonus_crit_chance_on_ammo"}, {"en"}, function(locale, value) return "Opening Salvo" end),
 	create_template("talent_tree_vet_pas_017_desc_en", {"loc_talent_veteran_bonus_crit_chance_on_ammo_desc"}, {"en"}, function(locale, value) return "The first {ammo:%s} Ammo after a Reload has {crit_chance:%s} Ranged "..COLORS_KWords.Crit_hit_rgb.." Chance."..TALENTS_Enh_desc2.ED_VET_Passive_17_rgb end), -- ammo: 20%, crit_chance: +10% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_017_desc_fr", {"loc_talent_veteran_bonus_crit_chance_on_ammo_desc"}, {"fr"}, function(locale, value) return "Les premières {ammo:%s} munitions après un rechargement ont {crit_chance:%s} de "..COLORS_KWords_fr.Crit_hit_chance_rgb_fr.." à distance."..TALENTS_Enh_desc2_fr.ED_VET_Passive_17_rgb_fr end),
+			--[+ Traditional Chinese - 首輪齊射 +]--
 
 	--[+ Passive 18 - Field Improvisation +]--
 		-- create_template("talent_tree_vet_pas_018_en", {"loc_talent_veteran_better_deployables"}, {"en"}, function(locale, value) return "Field Improvisation" end),
 	create_template("talent_tree_vet_pas_018_desc_en", {"loc_talent_veteran_better_deployables_description"}, {"en"}, function(locale, value) return "Medi-Packs:\nHeal {damage_heal:%s} faster,\nReplenish {toughness:%s} "..COLORS_KWords.Toughness_rgb.." per second,\nCleanse "..COLORS_KWords.Corruption_rgb.." up to the next "..COLORS_KWords.Wound_rgb..".\n\nAmmo Crates also restore Grenades."..TALENTS_Enh_desc2.ED_VET_Passive_18_rgb end), -- damage_heal: +100%, toughness: 1% -- rewrite -- &->and -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_018_desc_fr", {"loc_talent_veteran_better_deployables_description"}, {"fr"}, function(locale, value) return "Caisse médical:\nSoignent {damage_heal:%s} plus rapidement,\nRégénèrent {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." par seconde,\nPurifie "..COLORS_KWords_fr.Corruption_rgb_fr.." jusqu'à la prochaine "..COLORS_KWords_fr.Wound_rgb_fr..".\n\nLes caisses de munitions restaurent également les grenades."..TALENTS_Enh_desc2_fr.ED_VET_Passive_18_rgb_fr end),
+			--[+ Traditional Chinese - 臨場發揮 +]--
 
 	--[+ Passive 19 - Twinned Blast +]--
 		-- create_template("talent_tree_vet_pas_019_en", {"loc_talent_veteran_extra_grenade_throw_chance"}, {"en"}, function(locale, value) return "Twinned Blast" end),
 	create_template("talent_tree_vet_pas_019_desc_en", {"loc_talent_veteran_extra_grenade_throw_chance_desc"}, {"en"}, function(locale, value) return "{chance:%s} chance to throw an additional Grenade but this still only consumes a single Grenade."..TALENTS_Enh_desc2.ED_VET_Passive_19_rgb end), -- chance: 20% -- -()
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_019_desc_fr", {"loc_talent_veteran_extra_grenade_throw_chance_desc"}, {"fr"}, function(locale, value) return "{chance:%s} de chance de lancer une grenade supplémentaire mais cela ne consomme qu'une seule grenade."..TALENTS_Enh_desc2_fr.ED_VET_Passive_19_rgb_fr end),
+			--[+ Traditional Chinese - 雙響炮 +]--
 
 	--[+ Passive 20 - Demolition Stockpile +]--
 		-- create_template("talent_tree_vet_pas_020_en", {"loc_talent_ranger_replenish_grenade"}, {"en"}, function(locale, value) return "Demolition Stockpile" end),
 	create_template("talent_tree_vet_pas_020_desc_en", {"loc_talent_veteran_replenish_grenade_desc"}, {"en"}, function(locale, value) return "Replenish {amount:%s} Grenade every {time:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Passive_20_rgb end), -- amount: 1, time: 60 -- Grenade(s)->Grenade -- s->seconds
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_020_desc_fr", {"loc_talent_veteran_replenish_grenade_desc"}, {"fr"}, function(locale, value) return "Vous régénérez {amount:%s} Grenade toutes les {time:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_20_rgb_fr end),
+			--[+ Traditional Chinese - 炸藥儲備 +]--
 
 	--[+ Passive 21 - Grenadier +]--
 		-- create_template("talent_tree_vet_pas_021_en", {"loc_talent_veteran_extra_grenade"}, {"en"}, function(locale, value) return "Grenadier" end),
 	create_template("talent_tree_vet_pas_021_desc_en", {"loc_talent_veteran_extra_grenade_description"}, {"en"}, function(locale, value) return "You can carry {ammo:%s} extra Grenade."..TALENTS_Enh_desc2.ED_VET_Passive_21_rgb end), -- ammo: 1 -- Grenade(s)->Grenade
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_021_desc_fr", {"loc_talent_veteran_extra_grenade_description"}, {"fr"}, function(locale, value) return "Vous pouvez porter {ammo:%s} grenade supplémentaire."..TALENTS_Enh_desc2_fr.ED_VET_Passive_21_rgb_fr end),
+			--[+ Traditional Chinese - 擲彈兵 +]--
 
 	--[+ Passive 22 - Leave No One Behind +]--
 		-- create_template("talent_tree_vet_pas_022_en", {"loc_talent_veteran_movement_speed_towards_downed"}, {"en"}, function(locale, value) return "Leave No One Behind" end),
 	create_template("talent_tree_vet_pas_022_desc_en", {"loc_talent_veteran_movement_speed_towards_downed_description"}, {"en"}, function(locale, value) return "{revive_speed:%s} Assist Speed and Revive Speed. {movement_speed:%s} Movement Speed and "..COLORS_KWords.Stun_rgb.." Immunity when moving towards a Knocked Down or Incapacitated Ally. Whenever you Revive a Knocked Down Ally, they receive {damage_reduction:%s} "..COLORS_KWords.Damage_rgb.." Reduction for {duration:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Passive_22_rgb end), -- revive_speed: +20%, movement_speed: +20%, damage_reduction: +33%, duration: 5 -- &->and -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_022_desc_fr", {"loc_talent_veteran_movement_speed_towards_downed_description"}, {"fr"}, function(locale, value) return "{revive_speed:%s} Vitesse d'assistance et de réanimation. {movement_speed:%s} Vitesse de déplacement et une immunité aux "..COLORS_KWords_fr.Stuns_rgb_fr.." en se dirigeant vers un allié renversé ou incapacité. Chaque fois que vous réanimez un allié renversé, il reçoit {damage_reduction:%s} de réduction de "..COLORS_KWords_fr.Damage_rgb_fr.." pendant {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_22_rgb_fr end),
+			--[+ Traditional Chinese - 不拋棄不放棄 +]--
 
 	--[+ Passive 23 - Precision Strikes +]--
 		-- create_template("talent_tree_vet_pas_023_en", {"loc_talent_veteran_increased_weakspot_damage"}, {"en"}, function(locale, value) return "Precision Strikes" end),
 	create_template("talent_tree_vet_pas_023_desc_en", {"loc_talent_veteran_increased_weakspot_damage_desc"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Weakspot_dmg_rgb.." from Melee and Ranged attacks."..TALENTS_Enh_desc2.ED_VET_Passive_23_rgb end), -- damage: +30% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_023_desc_fr", {"loc_talent_veteran_increased_weakspot_damage_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Weakspot_dmg_rgb_fr.." des attaques de mêlée et à distance."..TALENTS_Enh_desc2_fr.ED_VET_Passive_23_rgb_fr end),
+			--[+ Traditional Chinese - 精準打擊 +]--
 
 	--[+ Passive 24 - Determined +]--
 		-- create_template("talent_tree_vet_pas_024_en", {"loc_talent_veteran_supression_immunity"}, {"en"}, function(locale, value) return "Determined" end),
 	create_template("talent_tree_vet_pas_024_desc_en", {"loc_talent_veteran_supression_immunity_desc"}, {"en"}, function(locale, value) return "Grants Veteran immunity to Suppression dealt by Ranged enemies at all times." end),
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_024_desc_fr", {"loc_talent_veteran_supression_immunity_desc"}, {"fr"}, function(locale, value) return "Confère au vétéran une immunité contre la suppression infligée par les ennemis à distance en tout temps." end),
+			--[+ Traditional Chinese - 堅定不移 +]--
 
 	--[+ Passive 25 - Deadshot +]--
 		-- create_template("talent_tree_vet_pas_025_en", {"loc_talent_ranged_ads_drains_stamina_boost"}, {"en"}, function(locale, value) return "Deadshot" end),
 	create_template("talent_tree_vet_pas_025_desc_en", {"loc_talent_veteran_ads_drains_stamina_boost_desc"}, {"en"}, function(locale, value) return "While aiming and being above 0 "..COLORS_KWords.Stamina_rgb.." you Gain:\n{crit_chance:%s} "..COLORS_KWords.Crit_chance_rgb..",\n{sway_reduction:%s} Sway Reduction,\n"..COLORS_Numbers.pc_p19_rgb.." Spread Reduction and\n"..COLORS_Numbers.pc_p12_rgb.." Recoil Reduction,\nbut Drains:\n{stamina:%s} "..COLORS_KWords.Stamina_rgb.." per second and\n{stamina_per_shot:%s} an additional "..COLORS_KWords.Stamina_rgb.." per shot."..TALENTS_Enh_desc2.ED_VET_Passive_25_rgb end), -- crit_chance: +25%, sway_reduction: +60%, stamina: 0.75, stamina_per_shot: 0.25 -- rewrite on_Aim! -- &->and -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_025_desc_fr", {"loc_talent_veteran_ads_drains_stamina_boost_desc"}, {"fr"}, function(locale, value) return "En visant et en étant au-dessus de 0 d'"..COLORS_KWords_fr.Stamina_rgb_fr.." vous gagnez:\n{crit_chance:%s} de "..COLORS_KWords_fr.Crit_chance_rgb_fr..",\n{sway_reduction:%s} Réduction du balancement,\n"..COLORS_Numbers.pc_p19_rgb.." Réduction de la dispersion et\n"..COLORS_Numbers.pc_p12_rgb.." Réduction du recul,\nmais consomme:\n{stamina:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.." par seconde et\n{stamina_per_shot:%s} supplémentaire d'"..COLORS_KWords_fr.Stamina_rgb_fr.." par tir."..TALENTS_Enh_desc2_fr.ED_VET_Passive_25_rgb_fr end),
+			--[+ Traditional Chinese - 死亡射手 +]--
 
 	--[+ Passive 26 - Born Leader +]--
 		-- create_template("talent_tree_vet_pas_026_en", {"loc_talent_veteran_allies_share_toughness"}, {"en"}, function(locale, value) return "Born Leader" end),
 	create_template("talent_tree_vet_pas_026_desc_en", {"loc_talent_veteran_allies_share_toughness_description"}, {"en"}, function(locale, value) return "{toughness:%s} of any "..COLORS_KWords.Toughness_rgb.." you replenish is restored to Allies in Coherency."..TALENTS_Enh_desc2.ED_VET_Passive_26_rgb end), -- toughness: 15% -- rewrite -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_026_desc_fr", {"loc_talent_veteran_allies_share_toughness_description"}, {"fr"}, function(locale, value) return "{toughness:%s} de toute "..COLORS_KWords_fr.Toughness_rgb_fr.." que vous regagnez est restaurée aux Alliés en syntonie."..TALENTS_Enh_desc2_fr.ED_VET_Passive_26_rgb_fr end),
+			--[+ Traditional Chinese - 天生領袖 +]--
 
 	--[+ Passive 27 - Keep Their Heads Down! +]--
 		-- create_template("talent_tree_vet_pas_027_en", {"loc_talent_veteran_increase_suppression"}, {"en"}, function(locale, value) return "Keep Their Heads Down!" end),
 	create_template("talent_tree_vet_pas_027_desc_en", {"loc_talent_veteran_increase_suppression_desc"}, {"en"}, function(locale, value) return "{suppression:%s} Ranged Attack Suppression."..TALENTS_Enh_desc2.ED_VET_Passive_27_rgb end), -- suppression: +50%
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_027_desc_fr", {"loc_talent_veteran_increase_suppression_desc"}, {"fr"}, function(locale, value) return "{suppression:%s} Suppression des attaques à distance."..TALENTS_Enh_desc2_fr.ED_VET_Passive_27_rgb_fr end),
+			--[+ Traditional Chinese - 讓他們全趴下! +]--
 
 	--[+ Passive 28 - Reciprocity +]--
 		-- create_template("talent_tree_vet_pas_028_en", {"loc_talent_veteran_dodging_grants_crit"}, {"en"}, function(locale, value) return "Reciprocity" end),
 	create_template("talent_tree_vet_pas_028_desc_en", {"loc_talent_veteran_dodging_grants_crit_description"}, {"en"}, function(locale, value) return "{crit_chance:%s} "..COLORS_KWords.Crit_hit_rgb.." Chance for {duration:%s} seconds on successful Dodge. Stacks {stacks:%s} times."..TALENTS_Enh_desc2.ED_VET_Passive_28_rgb end), -- crit_chance: +5%, duration: 8, stacks: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_028_desc_fr", {"loc_talent_veteran_dodging_grants_crit_description"}, {"fr"}, function(locale, value) return "{crit_chance:%s} de "..COLORS_KWords_fr.Crit_chance_rgb_fr.." pour {duration:%s} secondes sur une esquive réussie. Se cumuls {stacks:%s} fois."..TALENTS_Enh_desc2_fr.ED_VET_Passive_28_rgb_fr end),
+			--[+ Traditional Chinese - 互惠互利 +]--
 
 	--[+ Passive 29 - Duck and Dive +]--
 		-- create_template("talent_tree_vet_pas_029_en", {"loc_talent_ranger_stamina_on_ranged_dodge"}, {"en"}, function(locale, value) return "Duck and Dive" end),
 	create_template("talent_tree_vet_pas_029_desc_en", {"loc_talent_veteran_stamina_on_ranged_dodge_desc"}, {"en"}, function(locale, value) return "{stamina:%s} of Max "..COLORS_KWords.Stamina_rgb.." on avoiding Ranged Attacks by Dodging, Sprinting or Sliding."..TALENTS_Enh_desc2.ED_VET_Passive_29_rgb end), -- stamina: +30%
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_029_desc_fr", {"loc_talent_veteran_stamina_on_ranged_dodge_desc"}, {"fr"}, function(locale, value) return "{stamina:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.." maximum en évitant les attaques à distance en esquivant, en courant ou en glissant."..TALENTS_Enh_desc2_fr.ED_VET_Passive_29_rgb_fr end),
+			--[+ Traditional Chinese - 靈活應對 +]--
 
 	--[+ Passive 30 - Fully Loaded +]--
 		-- create_template("talent_tree_vet_pas_030_en", {"loc_talent_veteran_ammo_increase"}, {"en"}, function(locale, value) return "Fully Loaded" end),
 	create_template("talent_tree_vet_pas_030_desc_en", {"loc_talent_veteran_ammo_increase_desc"}, {"en"}, function(locale, value) return "{ammo:%s} Ammo."..TALENTS_Enh_desc2.ED_VET_Passive_30_rgb end), -- ammo: +25%
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_030_desc_fr", {"loc_talent_veteran_ammo_increase_desc"}, {"fr"}, function(locale, value) return "{ammo:%s} Munitions."..TALENTS_Enh_desc2_fr.ED_VET_Passive_30_rgb_fr end),
+			--[+ Traditional Chinese - 全副武裝 +]--
 
 	--[+ Passive 31 - Tactical Awareness +]--
 		-- create_template("talent_tree_vet_pas_031_en", {"loc_talent_veteran_elite_kills_reduce_cooldown"}, {"en"}, function(locale, value) return "Tactical Awareness" end),
 	create_template("talent_tree_vet_pas_031_desc_en", {"loc_talent_veteran_elite_kills_reduce_cooldown_desc"}, {"en"}, function(locale, value) return COLORS_Numbers.n_minus_rgb.."{duration:%s} seconds to "..COLORS_KWords.Combat_ability_cd_rgb.." on killing a Specialist enemy."..TALENTS_Enh_desc2.ED_VET_Passive_31_rgb end), -- duration: 6 -- rewrite -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_031_desc_fr", {"loc_talent_veteran_elite_kills_reduce_cooldown_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.n_minus_rgb.."{duration:%s} secondes au "..COLORS_KWords_fr.Combat_ability_cd_rgb_fr.." lors d'une élimination de spécialiste."..TALENTS_Enh_desc2_fr.ED_VET_Passive_31_rgb_fr end), -- duration: 6 -- rewrite -- s->seconds -- colors
+			--[+ Traditional Chinese - 戰術意識 +]--
 
 	--[+ Passive 32 - Desperado +]--
 		-- create_template("talent_tree_vet_pas_032_en", {"loc_talent_veteran_increased_melee_crit_chance_and_melee_finesse"}, {"en"}, function(locale, value) return "Desperado" end),
 	create_template("talent_tree_vet_pas_032_desc_en", {"loc_talent_veteran_increased_melee_crit_chance_and_melee_finesse_desc"}, {"en"}, function(locale, value) return "{crit_chance:%s} Melee "..COLORS_KWords.Crit_hit_chance_rgb.." and\n{finesse:%s} Melee "..COLORS_KWords.Finesse_rgb.." Bonus."..TALENTS_Enh_desc2.ED_VET_Passive_32_rgb end), -- crit_chance: +10%, finesse: +25%, -- &->and -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_032_desc_fr", {"loc_talent_veteran_increased_melee_crit_chance_and_melee_finesse_desc"}, {"fr"}, function(locale, value) return "{crit_chance:%s} "..COLORS_KWords_fr.Crit_hit_chance_rgb_fr.." de mêlée et\n{finesse:%s} bonus de "..COLORS_KWords_fr.Finesse_rgb_fr.." de mêlée."..TALENTS_Enh_desc2_fr.ED_VET_Passive_32_rgb_fr end),
+			--[+ Traditional Chinese - 亡命之徒 +]--
 
 	--[+ Passive 33 - Shock Trooper +]--
 		-- create_template("talent_tree_vet_pas_033_en", {"loc_talent_veteran_no_ammo_consumption_on_lasweapon_crit"}, {"en"}, function(locale, value) return "Shock Trooper" end),
 	create_template("talent_tree_vet_pas_033_desc_en", {"loc_talent_veteran_no_ammo_consumption_on_lasweapon_crit_desc"}, {"en"}, function(locale, value) return COLORS_KWords.Crit_hits_rgb.." with Las-weapons consume no Ammo."..TALENTS_Enh_desc2.ED_VET_Passive_33_rgb end), -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_033_desc_fr", {"loc_talent_veteran_no_ammo_consumption_on_lasweapon_crit_desc"}, {"fr"}, function(locale, value) return "Les "..COLORS_KWords_fr.Crit_hits_rgb_fr.." avec les armes à lasers ne consomment pas de munitions."..TALENTS_Enh_desc2_fr.ED_VET_Passive_33_rgb_fr end),
+			--[+ Traditional Chinese - 突擊隊 +]--
 
 	--[+ Passive 34 - Superiority Complex +]--
 		-- create_template("talent_tree_vet_pas_034_en", {"loc_talent_veteran_increase_damage_vs_elites"}, {"en"}, function(locale, value) return "Superiority Complex" end),
 	create_template("talent_tree_vet_pas_034_desc_en", {"loc_talent_veteran_increase_damage_vs_elites_desc"}, {"en"}, function(locale, value) return "{damage:%s} Base "..COLORS_KWords.Damage_rgb.." to Elite Enemies."..TALENTS_Enh_desc2.ED_VET_Passive_34_rgb end), -- damage: +15% -- -() -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_034_desc_fr", {"loc_talent_veteran_increase_damage_vs_elites_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." pour les ennemis d'élite."..TALENTS_Enh_desc2_fr.ED_VET_Passive_34_rgb_fr end),
+			--[+ Traditional Chinese - 優越情節 +]--
 
 	--[+ Passive 35 - Iron Will +]--
 		-- create_template("talent_tree_vet_pas_035_en", {"loc_talent_veteran_block_break_gives_tdr"}, {"en"}, function(locale, value) return "Iron Will" end),
 	create_template("talent_tree_vet_pas_035_desc_en", {"loc_talent_veteran_tdr_on_high_toughness_desc"}, {"en"}, function(locale, value) return "{toughness_damage_reduction:%s} "..COLORS_KWords.Toughness_dmg_red_rgb.." if above {toughness_percent:%s} "..COLORS_KWords.Toughness_rgb.."."..TALENTS_Enh_desc2.ED_VET_Passive_35_rgb end), -- toughness_damage_reduction: +50%, toughness_percent: 75% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_035_desc_fr", {"loc_talent_veteran_tdr_on_high_toughness_desc"}, {"fr"}, function(locale, value) return "{toughness_damage_reduction:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." si au-dessus de {toughness_percent:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Passive_35_rgb_fr end),
+			--[+ Traditional Chinese - 鐵鐵意志 +]--
 
 	--[+ Passive 36 - Demolition Team +]--
 		-- create_template("talent_tree_vet_pas_036_en", {"loc_talent_ranger_grenade_on_elite_kills_coop"}, {"en"}, function(locale, value) return "Demolition Team" end),
 	create_template("talent_tree_vet_pas_036_desc_en", {"loc_talent_veteran_grenade_on_elite_kills_coop_desc"}, {"en"}, function(locale, value) return "{chance:%s} chance to replenish a Grenade when you or an Ally in Coherency kills an Elite or Specialist Enemy."..TALENTS_Enh_desc2.ED_VET_Passive_36_rgb end), -- chance: 5%
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_036_desc_fr", {"loc_talent_veteran_grenade_on_elite_kills_coop_desc"}, {"fr"}, function(locale, value) return "{chance:%s} chance de régénérez une grenade lorsque vous ou un allié en syntonie éliminez un ennemi d'élite ou spécialiste."..TALENTS_Enh_desc2_fr.ED_VET_Passive_36_rgb_fr end),
+			--[+ Traditional Chinese - 爆破小隊 +]--
 
 	--[+ Passive 37 - Exploit Weakness +]--
 		-- create_template("talent_tree_vet_pas_037_en", {"loc_talent_veteran_crits_rend"}, {"en"}, function(locale, value) return "Exploit Weakness" end),
 	create_template("talent_tree_vet_pas_037_desc_en", {"loc_talent_veteran_crits_rend_description"}, {"en"}, function(locale, value) return "{rending_multiplier:%s} "..COLORS_KWords.Brittleness_rgb.." is applied to the target by Melee "..COLORS_KWords.Crit_hits_rgb..". Stacks {max_stacks:%s} times and lasts {duration:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Passive_37_rgb end), -- rending_multiplier: 10%, max_stacks: 2, duration: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_037_desc_fr", {"loc_talent_veteran_crits_rend_description"}, {"fr"}, function(locale, value) return "{rending_multiplier:%s} de "..COLORS_KWords_fr.Brittleness_rgb_fr.." est appliqué à la cible lors d'un "..COLORS_KWords_fr.Crit_hits_rgb_fr.." de mêlée. Se cumule {max_stacks:%s} fois et dure {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_37_rgb_fr end),
+			--[+ Traditional Chinese - 趁火打劫 +]--
 
 	--[+ Passive 38 - Onslaught +]--
 		-- create_template("talent_tree_vet_pas_038_en", --  {"loc_talent_veteran_continous_hits_apply_rending"}, {"en"}, function(locale, value) return "Onslaught" end),
 	create_template("talent_tree_vet_pas_038_desc_en", {"loc_talent_veteran_continous_hits_apply_rending_description"}, {"en"}, function(locale, value) return "{rending_multiplier:%s} "..COLORS_KWords.Brittleness_rgb.." is applied to the target for {duration:%s} seconds by Continuous hits to a Single target. Stacks {max_stacks:%s} times."..TALENTS_Enh_desc2.ED_VET_Passive_38_rgb end), -- rending_multiplier: 2.5%, duration: 5, max_stacks: 16 -- rewrite -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_038_desc_fr", {"loc_talent_veteran_continous_hits_apply_rending_description"}, {"fr"}, function(locale, value) return "{rending_multiplier:%s} de "..COLORS_KWords_fr.Brittleness_rgb_fr.." est appliqué à la cible pour {duration:%s} secondes par des coups continus à une seule cible. Se cumule {max_stacks:%s} fois."..TALENTS_Enh_desc2_fr.ED_VET_Passive_38_rgb_fr end),
+			--[+ Traditional Chinese - 猛攻 +]--
 
 	--[+ Passive 39 - Trench Fighter Drill +]--
 		-- create_template("talent_tree_vet_pas_039_en", {"loc_talent_veteran_attack_speed"}, {"en"}, function(locale, value) return "Trench Fighter Drill" end),
 	create_template("talent_tree_vet_pas_039_desc_en", {"loc_talent_veteran_attack_speed_description"}, {"en"}, function(locale, value) return "{melee_attack_speed:%s} Melee Attack Speed."..TALENTS_Enh_desc2.ED_VET_Passive_39_rgb end), -- melee_attack_speed: +10%
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_039_desc_fr", {"loc_talent_veteran_attack_speed_description"}, {"fr"}, function(locale, value) return "{melee_attack_speed:%s} Vitesse d'attaque de mêlée."..TALENTS_Enh_desc2_fr.ED_VET_Passive_39_rgb_fr end),
+			--[+ Traditional Chinese - 戰壕兵訓練 +]--
 
 	--[+ Passive 40 - Skirmisher +]--
 		-- create_template("talent_tree_vet_pas_040_en", {"loc_talent_veteran_damage_damage_after_sprinting"}, {"en"}, function(locale, value) return "Skirmisher" end),
 	create_template("talent_tree_vet_pas_040_desc_en", {"loc_talent_veteran_damage_damage_after_sprinting_desc"}, {"en"}, function(locale, value) return "{base_damage:%s} to all Base "..COLORS_KWords.Damage_rgb.." for {duration:%s} seconds after Sprinting. Stacks {stacks:%s} times."..TALENTS_Enh_desc2.ED_VET_Passive_40_rgb end), -- base_damage: +5%, duration: 8, stacks: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_040_desc_fr", {"loc_talent_veteran_damage_damage_after_sprinting_desc"}, {"fr"}, function(locale, value) return "{base_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." pendant {duration:%s} secondes après avoir sprinté. Se cumule {stacks:%s} fois."..TALENTS_Enh_desc2_fr.ED_VET_Passive_40_rgb_fr end),
+			--[+ Traditional Chinese - 遊擊者 +]--
 
 	--[+ Passive 41 - Competitive Urge +]--
 		-- create_template("talent_tree_vet_pas_041_en", {"loc_talent_veteran_ally_kills_increase_damage"}, {"en"}, function(locale, value) return "Competitive Urge" end),
 	create_template("talent_tree_vet_pas_041_desc_en", {"loc_talent_veteran_ally_kills_increase_damage_description"}, {"en"}, function(locale, value) return "Whenever an Ally kills an Enemy you have a {proc_chance:%s} chance to gain for {duration:%s} seconds:\n{damage:%s} Base "..COLORS_KWords.Damage_rgb..",\n{melee_impact:%s} Melee "..COLORS_KWords.Impact_rgb.." and\n{suppression:%s} Suppression dealt."..TALENTS_Enh_desc2.ED_VET_Passive_41_rgb end), -- proc_chance: 2.5%, damage: +20%, melee_impact: +20%, suppression: +20%, duration: 8 -- rewrite -- &->and -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_041_desc_fr", {"loc_talent_veteran_ally_kills_increase_damage_description"}, {"fr"}, function(locale, value) return "Chaque fois qu'un allié tue un ennemi, vous avez {proc_chance:%s} de chance de gagner pendant {duration:%s} secondes:\n{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr..",\n{melee_impact:%s} d'"..COLORS_KWords_fr.Impact_rgb_fr.." de mêlée et\n{suppression:%s} de Suppression."..TALENTS_Enh_desc2_fr.ED_VET_Passive_41_rgb_fr end),
+			--[+ Traditional Chinese - 求勝心 +]--
 
 	--[+ Passive 42 - Rending Strikes +]--
 		-- create_template("talent_tree_vet_pas_042_en", {"loc_talent_veteran_rending_bonus"}, {"en"}, function(locale, value) return "Rending Strikes" end),

@@ -22,6 +22,19 @@
 - Combat Stimm - 戰鬥興奮劑
 - Concentration Stimm - 專注興奮劑
 
+
+### 武器
+- Ripper Gun - 擲彈兵臂鎧
+- Grenadier Gauntlet - 全自動霰彈槍
+- Heavy Stubbers - 雙鏈重型機槍 
+- Rumbler - 震盪槍
+- Kickback - 反衝者
+- Boltgun - 爆彈槍
+- Helbore Lasgun - 冥潮雷射槍
+- Infantry Lasgun - 步兵雷射槍
+- Laspistol - 重型雷射手槍
+- Recon Lasgun - 偵查雷射槍
+
 ### 怪物相關
 
 - Gunners - 砲手
@@ -91,6 +104,13 @@
 - Reassuringly Accurate - 慰藉精準
 - Inspiring Barrage - 激勵彈幕
 - Raking Fire - 掃射
+- Armourbane - 護甲之禍
+- Can Opener - 開罐器
+- Rending Shockwave - 撕扯震盪
+- Shattering Impact - 破碎衝擊 
+- Supercharge - 超級充能
+- Thunderous - 雷鳴
+- Penetrating Flame - 穿透火焰
 
 ### Psyker - 靈能者
 
@@ -196,7 +216,6 @@
 
 - Soften Them Up - 削弱敵人
 - Valuable Destruction - 重要干擾
-
 
 ##### 閃擊
 
@@ -361,6 +380,8 @@
 - Volley Adept - 齊射能手
 - Charismatic - 超凡魅力
 - Confirmed Kill - 擊殺紀錄
+- Tactical Reload - 戰術裝填
+- Out for Blood - 嗜血
 - Get Back in the Fight! - 重投戰鬥!
 - Catch a Breath - 喘息片刻
 - Grenade Tinkerer - 手雷專家
