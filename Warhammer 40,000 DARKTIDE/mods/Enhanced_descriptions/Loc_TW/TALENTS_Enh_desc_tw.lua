@@ -1119,7 +1119,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_ZEA_Passive_5_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 距離不受地形影響。",
-		"- 當狂信徒掛在懸崖邊或被變種人、瘟疫獵犬、陷阱兵、惡魔宿主、混沌卵或納垢巨獸束縛時，此回復功能會暫停。",
+		"- 當狂信徒掛在懸崖邊或被變種人、瘟疫獵犬、陷阱兵、惡魔宿主、混沌魔物或納垢巨獸束縛時，此回復功能會暫停。",
 		"- 不會與協同韌性再生相互影響。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
