@@ -1428,6 +1428,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_blitz_000_desc_fr", {"loc_ability_frag_grenade_description"}, {"fr"}, function(locale, value) return "Lancez une "..COLORS_KWords_fr.Fragmentation_gren_rgb_fr.." qui explose après "..COLORS_Numbers.n_1_7_rgb.." secondes."..TALENTS_Enh_desc2_fr.ED_VET_Blitz_0_rgb_fr end), -- colors
 			--[+ Traditional Chinese - 破片手雷 +]--
+	create_template("talent_tree_vet_blitz_000_desc_tw", {"loc_ability_frag_grenade_description"}, {"zh-tw"}, function(locale, value) return "在"..COLORS_Numbers.n_1_7_rgb.."秒後爆炸的"..COLORS_KWords_tw.Fragmentation_gren_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Blitz_0_rgb end), -- colors
 
 	--[+ Blitz 1 - Shredder Frag Grenade +]--
 		-- create_template("talent_tree_vet_blitz1_000_en", {"loc_talent_veteran_grenade_apply_bleed"}, {"en"}, function(locale, value) return "Shredder Frag Grenade" end),
@@ -1435,6 +1436,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_blitz1_000_desc_fr", {"loc_talent_veteran_grenade_apply_bleed_desc"}, {"fr"}, function(locale, value) return "Lancez une "..COLORS_KWords_fr.Frag_gren_rgb_fr.." qui explose après "..COLORS_Numbers.n_1_7_rgb.." secondes. Applique {stacks:%s} cumuls de "..COLORS_KWords_fr.Bleed_rgb_fr.." à tous les ennemis touchés, causant des "..COLORS_KWords_fr.Damage_rgb_fr.." au fil du temps. Jusqu'à "..COLORS_Numbers.n_16_rgb.." cumuls max.\nIl s'agit d'une version augmentée de {talent_name:%s}."..TALENTS_Enh_desc2_fr.ED_VET_Blitz_1_rgb_fr end), -- stacks: 6, talent_name: Frag Grenade -- colors
 			--[+ Traditional Chinese - 粉碎者破片手雷 +]--
+	create_template("talent_tree_vet_blitz1_000_desc_tw", {"loc_talent_veteran_grenade_apply_bleed_desc"}, {"zh-tw"}, function(locale, value) return "投擲一顆在"..COLORS_Numbers.n_1_7_rgb.."秒後爆炸的"..COLORS_KWords_tw.Frag_gren_rgb.."。對所有擊中的敵人造成{stacks:%s}層的"..COLORS_KWords_tw.Bleed_rgb.."，並造成持續的"..COLORS_KWords_tw.Damage_rgb.."。\n這是{talent_name:%s}的增強版本。"..TALENTS_Enh_desc2_tw.ED_VET_Blitz_1_rgb end), -- stacks: 6, talent_name: Frag Grenade -- colors
 
 	--[+ Blitz 2 - Krak Grenade +]--
 		-- create_template("talent_tree_vet_blitz2_000_en", {"loc_talent_ability_krak_grenade"}, {"en"}, function(locale, value) return "Krak Grenade" end),
@@ -1442,6 +1444,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_blitz2_000_desc_fr", {"loc_talent_ability_krak_grenade_desc"}, {"fr"}, function(locale, value) return "Lancez une grenade qui explose après "..COLORS_Numbers.n_2_rgb.." secondes et inflige des "..COLORS_KWords_fr.Damage_rgb_fr.." dévastateurs. Adhère aux ennemis en armure légère, en armure Carapace et aux ennemis implacables."..TALENTS_Enh_desc2_fr.ED_VET_Blitz_2_rgb_fr end), -- colors
 			--[+ Traditional Chinese - 穿甲手雷 +]--
+	create_template("talent_tree_vet_blitz2_000_desc_tw", {"loc_talent_ability_krak_grenade_desc"}, {"zh-tw"}, function(locale, value) return "投擲一顆在"..COLORS_Numbers.n_2_rgb.."秒後爆炸的手榴彈，造成毀滅性的"..COLORS_KWords_tw.Damage_rgb.."。\n黏附在防彈、甲殼和不屈的敵人身上。"..TALENTS_Enh_desc2_tw.ED_VET_Blitz_2_rgb end), -- colors
 
 	--[+ Blitz 3 - Smoke Grenade +]--
 		-- create_template("talent_tree_vet_blitz3_000_en", {"loc_ability_smoke_grenade"}, {"en"}, function(locale, value) return "Smoke Grenade" end),
@@ -1449,6 +1452,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_blitz3_000_desc_fr", {"loc_ability_smoke_grenade_description"}, {"fr"}, function(locale, value) return "Lancez une grenade qui explose après "..COLORS_Numbers.n_1_5_rgb.." secondes et crée un nuage de fumée persistant pendant {duration:%s} secondes. Le nuage bloque la ligne de vue pour la plupart des ennemis et réduit la portée de vue des ennemis à l'intérieur."..TALENTS_Enh_desc2_fr.ED_VET_Blitz_3_rgb_fr end), -- duration: 15 -- colors
 			--[+ Traditional Chinese - 煙霧手雷 +]--
+	create_template("talent_tree_vet_blitz3_000_desc_tw", {"loc_ability_smoke_grenade_description"}, {"zh-tw"}, function(locale, value) return "投擲一顆在"..COLORS_Numbers.n_1_5_rgb.."秒後爆炸的手榴彈，並維持{duration:%s}秒的煙霧雲。\n該雲會阻擋大多數敵人的視線，並降低其中敵人的視野範圍。"..TALENTS_Enh_desc2_tw.ED_VET_Blitz_3_rgb end), -- duration: 15 -- colors
 
 --[+ +AURA+ +]--
 	--[+ Aura 0 - Scavenger +]--
@@ -1457,6 +1461,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_aura_000_desc_fr", {"loc_talent_veteran_elite_kills_grant_ammo_coop_cd_desc"}, {"fr"}, function(locale, value) return "Récuperez {ammo:%s} de munitions pour vous et les alliés en syntonie chaque fois que l'un de vous tue un ennemi élite ou spécialiste. Cela peut se produire une fois toutes les {cooldown:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Aura_0_rgb_fr end), -- ammo: 0.75%, cooldown: 5
 			--[+ Traditional Chinese - 拾荒者 +]--
+	create_template("talent_tree_vet_aura_000_desc_tw", {"loc_talent_veteran_elite_kills_grant_ammo_coop_cd_desc"}, {"zh-tw"}, function(locale, value) return "每當你或你的協同盟友擊殺精英或專家敵人時，\n為你和同步盟友補充{ammo:%s}的彈藥。\n每{cooldown:%s}秒可發生一次。"..TALENTS_Enh_desc2_tw.ED_VET_Aura_0_rgb end), -- ammo: 0.75%, cooldown: 5
 
 	--[+ Aura 1 - Survivalist +]--
 		-- create_template("talent_tree_vet_aura_001_en", {"loc_talent_veteran_elite_kills_grant_ammo_coop_improved"}, {"en"}, function(locale, value) return "Survivalist" end),
@@ -1464,6 +1469,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_aura_001_desc_fr", {"loc_talent_veteran_elite_kills_grant_ammo_coop_improved_cd_desc"}, {"fr"}, function(locale, value) return "Récuperez {ammo_2:%s} de munitions pour vous et les alliés en syntonie chaque fois que l'un de vous tue un ennemi élite ou spécialiste. Cela peut se produire une fois toutes les {cooldown:%s} secondes.\n\nIl s'agit d'une version augmentée de {talent_name:%s}."..TALENTS_Enh_desc2_fr.ED_VET_Aura_1_rgb_fr end), -- ammo_2: 1%, cooldown: 5, talent_name: Scavenger
 			--[+ Traditional Chinese - 生存專家 +]--
+	create_template("talent_tree_vet_aura_001_desc_tw", {"loc_talent_veteran_elite_kills_grant_ammo_coop_improved_cd_desc"}, {"zh-tw"}, function(locale, value) return "每當你或你的協同盟友擊殺精英或專家敵人時，\n為你和同步盟友補充{ammo_2:%s}的彈藥。\n每{cooldown:%s}秒可發生一次。\n\n這是{talent_name:%s}的增強版本。"..TALENTS_Enh_desc2_tw.ED_VET_Aura_1_rgb end), -- ammo_2: 1%, cooldown: 5, talent_name: Scavenger
 
 	--[+ Aura 2 - Fire Team +]--
 		-- create_template("talent_tree_vet_aura_002_en", {"loc_talent_veteran_damage_coherency"}, {"en"}, function(locale, value) return "Fire Team" end),
@@ -1471,6 +1477,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_aura_002_desc_fr", {"loc_talent_veteran_damage_coherency_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." pour vous et les alliés en syntonie."..TALENTS_Enh_desc2_fr.ED_VET_Aura_2_rgb_fr end), -- damage: +5% -- colors
 			--[+ Traditional Chinese - 火力小分隊 +]--
+	create_template("talent_tree_vet_aura_002_desc_tw", {"loc_talent_veteran_damage_coherency_desc"}, {"zh-tw"}, function(locale, value) return "你和協同盟友的傷害增加{damage:%s}。"..TALENTS_Enh_desc2_tw.ED_VET_Aura_2_rgb end), -- damage: +5%
 
 	--[+ Aura 3 - Close and Kill +]--
 		-- create_template("talent_tree_vet_aura_003_en", {"loc_talent_veteran_movement_speed_coherency"}, {"en"}, function(locale, value) return "Close and Kill" end),
@@ -1478,6 +1485,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_aura_003_desc_fr", {"loc_talent_veteran_movement_speed_coherency_desc"}, {"fr"}, function(locale, value) return "{movement_speed:%s} de Vitesse de déplacement pour vous et les alliés en syntonie."..TALENTS_Enh_desc2_fr.ED_VET_Aura_3_rgb_fr end), -- movement_speed: +5%
 			--[+ Traditional Chinese - 抵近殺敵 +]--
+	create_template("talent_tree_vet_aura_003_desc_tw", {"loc_talent_veteran_movement_speed_coherency_desc"}, {"zh-tw"}, function(locale, value) return "你和協同盟友的移動速度增加{movement_speed:%s}。"..TALENTS_Enh_desc2_tw.ED_VET_Aura_3_rgb end), -- movement_speed: +5%
 
 --[+ +ABILITIES+ +]--
 	--[+ Ability 0 - Volley Fire +]--
@@ -1486,6 +1494,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil_000_desc_fr", {"loc_ability_veteran_base_ability_desc"}, {"fr"}, function(locale, value) return "Passez en posture à distance pendant {duration:%s} secondes. En posture à distance, vous équipez instantanément votre arme à distance et infligez :\n{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." à distance et\n{weakspot_damage:%s} de "..COLORS_KWords_fr.Weakspot_dmg_rgb_fr.." à distance. Votre dispersion et votre recul sont également grandement réduits.\nTemps de recharge de base : {cooldown:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Ability_0_rgb_fr end), -- duration: 5, damage: +25%, weakspot_damage: +25%, cooldown: 30 -- &->et -- s->secondes -- couleurs
 			--[+ Traditional Chinese - 火力齊射 +]--
+	create_template("talent_tree_vet_abil_000_desc_tw", {"loc_ability_veteran_base_ability_desc"}, {"zh-tw"}, function(locale, value) return "進入遠程姿態，持續{duration:%s}秒。\n在遠程姿態下，您立即裝備遠程武器並造成：\n{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."和\n{weakspot_damage:%s}的"..COLORS_KWords_tw.Weakspot_dmg_rgb.."。您的散射和後座力也大大降低。\n基礎冷卻時間：{cooldown:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_0_rgb end), -- duration: 5, damage: +25%, weakspot_damage: +25%, cooldown: 30 -- colors
 
 	--[+ Ability 1 - Executioner's Stance +]--
 		-- create_template("talent_tree_vet_abil1_000_en", {"loc_talent_veteran_combat_ability_elite_and_special_outlines"}, {"en"}, function(locale, value) return "Executioner's Stance" end),
@@ -1493,6 +1502,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil1_000_desc_fr", {"loc_talent_veteran_combat_ability_elite_and_special_outlines_refresh_description"}, {"fr"}, function(locale, value) return "Passez en posture à distance pendant {duration:%s} secondes. Vous équipez instantanément votre arme à distance et infligez :\n{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." à distance,\n{weakspot_damage:%s} de "..COLORS_KWords_fr.Weakspot_dmg_rgb_fr.." à distance.\nLes ennemis élites et spécialistes de taille humaine situés à moins de "..COLORS_Numbers.n_50_rgb.." mètres du vétéran sont mis en surbrillance pendant {duration:%s} secondes.\nTuer un ennemi mis en surbrillance rafraîchit la durée active de {refresh_duration:%s} secondes. Cela rafraîchit également la durée des contours sur les ennemis pour le vétéran.\nTemps de recharge de base : {cooldown:%s} secondes.\nIl s'agit d'une version augmentée de {old_talent_name:%s}."..TALENTS_Enh_desc2_fr.ED_VET_Ability_1_rgb_fr end), -- duration: 5, damage: +25%, weakspot_damage: +25%, duration: 5, cooldown: 30, old_talent_name: Volley Fire -- rewrite -- s->secondes -- couleurs
 			--[+ Traditional Chinese - 處決者姿態 +]--
+	create_template("talent_tree_vet_abil1_000_desc_tw", {"loc_talent_veteran_combat_ability_elite_and_special_outlines_refresh_description"}, {"zh-tw"},  function(locale, value) return "進入遠程姿態，持續{duration:%s}秒。\n您立即裝備遠程武器並造成：\n{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."，\n{weakspot_damage:%s}的"..COLORS_KWords_tw.Weakspot_dmg_rgb.."。\n在{duration:%s}秒內突顯人型精英和專家敵人。\n擊殺一個被突顯的敵人會刷新{refresh_duration:%s}秒的持續時間。\n這也會刷新老兵對敵人輪廓的持續時間。\n基礎冷卻時間：{cooldown:%s}秒。\n這是{old_talent_name:%s}的增強版本。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_1_rgb end), -- duration: 5, damage: +25%, weakspot_damage: +25%, duration: 5, cooldown: 30, old_talent_name: Volley Fire -- rewrite -- s->seconds -- colors
 
 	--[+ Ability 1-1 - Enhanced Target Priority +]--
 		-- create_template("talent_tree_vet_abil1_001_en", {"loc_talent_veteran_combat_ability_coherency_outlines"}, {"en"}, function(locale, value) return "Enhanced Target Priority" end),
@@ -1500,6 +1510,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil1_001_desc_fr", {"loc_talent_veteran_combat_ability_coherency_outlines_description"}, {"fr"}, function(locale, value) return "{talent_name:%s} met désormais en surbrillance tous les ennemis élites et spécialistes de taille humaine pour les alliés en syntonie pendant {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Ability_1_1_rgb_fr end), -- talent_name: Executioner's Stance, duration: 5 -- rewrite -- &->et -- s->secondes
 			--[+ Traditional Chinese - 目標引導增強 +]--
+	create_template("talent_tree_vet_abil1_001_desc_tw", {"loc_talent_veteran_combat_ability_coherency_outlines_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在會在{duration:%s}秒內突顯所有人型精英和專家敵人，供同步盟友使用。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_1_1_rgb end), -- talent_name: Executioner's Stance, duration: 5 -- rewrite -- &->和 -- s->seconds
 
 	--[+ Ability 1-2 - Counter-Fire +]--
 		-- create_template("talent_tree_vet_abil1_002_en", {"loc_talent_veteran_combat_ability_ranged_enemies_outlines"}, {"en"}, function(locale, value) return "Counter-Fire" end),
@@ -1507,6 +1518,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil1_002_desc_fr", {"loc_talent_veteran_combat_ability_ranged_enemies_outlines_description"}, {"fr"}, function(locale, value) return "{talent_name:%s} met désormais en surbrillance tout les ennemis à distance de taille humaine." end), -- talent_name: Executioner's Stance -- rewrite
 			--[+ Traditional Chinese - 火力反擊 +]--
+	create_template("talent_tree_vet_abil1_002_desc_tw", {"loc_talent_veteran_combat_ability_ranged_enemies_outlines_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在除了所有人形大小的精英與專家敵人外，也會將追蹤者與射手一併高亮顯示。" end), -- talent_name: Executioner's Stance, duration: 5 -- rewrite -- &->和 -- s->seconds
 
 	--[+ Ability 1-3 - The Bigger they Are... +]--
 		-- create_template("talent_tree_vet_abil1_003_en", {"loc_talent_ranger_volley_fire_big_game_hunter"}, {"en"}, function(locale, value) return "The Bigger they Are..." end),
@@ -1514,13 +1526,15 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil1_003_desc_fr", {"loc_talent_veteran_combat_ability_ogryn_outlines_description"}, {"fr"}, function(locale, value) return "{talent_name:%s} met désormais en surbrillance les Remparts, Broyeurs et Fauchers, en plus de tous les élites et spécialistes de taille humaine." end), -- talent_name: Executioner's Stance -- rewrite
 			--[+ Traditional Chinese - 敵人越大... +]--
-
+	create_template("talent_tree_vet_abil1_003_desc_tw", {"loc_talent_veteran_combat_ability_ogryn_outlines_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在除了所有人形大小的精英與專家敵人外，也會將堡壘、粉碎者與收割者一併高亮顯示。" end), -- talent_name: Executioner's Stance, duration: 5 -- rewrite -- &->和 -- s->seconds
+	
 	--[+ Ability 1-4 - Marksman +]--
 		-- create_template("talent_tree_vet_abil1_004_en", {"loc_talent_veteran_ability_marksman"}, {"en"}, function(locale, value) return "Marksman" end),
 	create_template("talent_tree_vet_abil1_004_desc_en", {"loc_talent_veteran_ability_marksman_desc"}, {"en"}, function(locale, value) return "{power:%s} "..COLORS_KWords.Strength_rgb.." for any "..COLORS_KWords.Weakspothits_rgb.." for {duration:%s} seconds after "..COLORS_KWords.Combat_ability_rgb.." use.\n\nWhen using {talent_name:%s}, this is applied after leaving "..COLORS_KWords.Stealth_rgb.."."..TALENTS_Enh_desc2.ED_VET_Ability_1_4_rgb end), -- duration: 10, power: +20%, talent_name: Infiltrate -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil1_004_desc_fr", {"loc_talent_veteran_ability_marksman_desc"}, {"fr"}, function(locale, value) return "{power:%s} de "..COLORS_KWords_fr.Strength_rgb_fr.." pour tous les "..COLORS_KWords_fr.Weakspothits_rgb_fr.." pendant {duration:%s} secondes après utilisation de la "..COLORS_KWords_fr.Combat_ability_rgb_fr..".\n\nLors de l'utilisation de {talent_name:%s}, cela s'applique après avoir quitté l'état de la "..COLORS_KWords_fr.Stealth_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_1_4_rgb_fr end), -- duration: 10, power: +20%, talent_name: Infiltrate -- s->secondes -- couleurs
 			--[+ Traditional Chinese - 鷹眼 +]--
+	create_template("talent_tree_vet_abil1_004_desc_tw", {"loc_talent_veteran_ability_marksman_desc"}, {"zh-tw"}, function(locale, value) return "在使用戰鬥技能後，持續{duration:%s}秒，對任何弱點打擊增加{power:%s}的"..COLORS_KWords_tw.Strength_rgb.."。\n\n在使用{talent_name:%s}後，效果在脫離潛行後生效。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_1_4_rgb end), -- duration: 10, power: +20%, talent_name: Infiltrate -- colors
 
 	--[+ Ability 2 - Voice of Command +]--
 		-- create_template("talent_tree_vet_abil2_000_en", {"loc_talent_veteran_combat_ability_stagger_nearby_enemies"}, {"en"}, function(locale, value) return "Voice of Command" end),
@@ -1528,6 +1542,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil2_000_desc_fr", {"loc_talent_veteran_combat_ability_stagger_nearby_enemies_description"}, {"fr"}, function(locale, value) return "Régénérez votre "..COLORS_KWords_fr.Toughness_rgb_fr.." et faites "..COLORS_KWords_fr.Staggering_rgb_fr.." tous les ennemis dans un rayon de {range:%s} mètres.\n\nTemps de recharge de base {cooldown:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Ability_2_rgb_fr end), -- range: 9, cooldown: 30 -- &->et -- m->mètres -- s->secondes -- couleurs
 			--[+ Traditional Chinese - 發號施令 +]--
+	create_template("talent_tree_vet_abil2_000_desc_tw", {"loc_talent_veteran_combat_ability_stagger_nearby_enemies_description"}, {"zh-tw"}, function(locale, value) return "補充你的"..COLORS_KWords_tw.Toughness_rgb.."並使{range:%s}米內的所有敵人"..COLORS_KWords_tw.Staggers_rgb.."。\n\n基礎冷卻時間{cooldown:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_2_rgb end), -- range: 9, cooldown: 30 -- &->和 -- m->米 -- s->seconds -- colors
 
 	--[+ Ability 2-1 - Duty and Honour +]--
 		-- create_template("talent_tree_vet_abil2_001_en", {"loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency"}, {"en"}, function(locale, value) return "Duty and Honour" end),
@@ -1535,6 +1550,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil2_001_desc_fr", {"loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency_description"}, {"fr"}, function(locale, value) return "{talent_name:%s} accorde également à vous et aux alliés en syntonie {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." pendant {duration:%s} secondes. Cela peut dépasser votre maximum de "..COLORS_KWords_fr.Toughness_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_2_1_rgb_fr end), -- talent_name: Voice of Command, toughness: +50, duration: 15 -- s->secondes -- couleurs
 			--[+ Traditional Chinese - 責任與榮譽 +]--
+	create_template("talent_tree_vet_abil2_001_desc_tw", {"loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在也會為你和同步盟友提供{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."，持續{duration:%s}秒。\n這可以超過你的最大"..COLORS_KWords_tw.Toughness_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_2_1_rgb end), -- talent_name: Voice of Command, toughness: +50, duration: 15 -- s->seconds -- colors
 
 	--[+ Ability 2-2 - Only In Death Does Duty End +]--
 		-- create_template("talent_tree_vet_abil2_002_en", {"loc_talent_veteran_combat_ability_revives"}, {"en"}, function(locale, value) return "Only In Death Does Duty End" end),
@@ -1542,6 +1558,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil2_002_desc_fr", {"loc_talent_veteran_combat_ability_revives_description"}, {"fr"}, function(locale, value) return "{talent_name:%s} ressuscite les alliés mis à terre dans le rayon, mais réduit également ce rayon de {range:%s} et augmente votre "..COLORS_KWords_fr.Combat_ability_cd_rgb_fr.." de {ability_cooldown:%s}."..TALENTS_Enh_desc2_fr.ED_VET_Ability_2_2_rgb_fr end), -- talent_name: Voice of Command, range: 33%, ability_cooldown: 50% -- &->et -- couleurs
 			--[+ Traditional Chinese - 只有死亡，職責才會終結 +]--
+	create_template("talent_tree_vet_abil2_002_desc_tw", {"loc_talent_veteran_combat_ability_revives_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}會在範圍內復活倒地的盟友，但也會將該範圍減少{range:%s}，並增加你的"..COLORS_KWords_tw.Ability_cd_rgb.." {ability_cooldown:%s}。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_2_2_rgb end), -- talent_name: Voice of Command, range: 33%, ability_cooldown: 50% -- &->和 -- colors
 
 	--[+ Ability 2-3 - For the Emperor! +]--
 		-- create_template("talent_tree_vet_abil2_003_en", {"loc_talent_veteran_combat_ability_melee_and_ranged_damage_to_coherency"}, {"en"}, function(locale, value) return "For the Emperor!" end),
@@ -1549,6 +1566,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil2_003_desc_fr", {"loc_talent_veteran_combat_ability_melee_and_ranged_damage_to_coherency_description"}, {"fr"}, function(locale, value) return "Votre "..COLORS_KWords_fr.Combat_ability_rgb_fr.." donne pendant {duration:%s} secondes à vous et aux alliés en syntonie:\n{melee_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." de mêlée de base et\n{ranged_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." à distance de base."..TALENTS_Enh_desc2_fr.ED_VET_Ability_2_3_rgb_fr end), --  duration: 5, melee_damage: +10%, ranged_damage: +10% -- rewrite -- &->et -- s->secondes -- couleurs
 			--[+ Traditional Chinese - 為了皇帝！ +]--
+	create_template("talent_tree_vet_abil2_003_desc_tw", {"loc_talent_veteran_combat_ability_melee_and_ranged_damage_to_coherency_description"}, {"zh-tw"}, function(locale, value) return "你的"..COLORS_KWords_tw.Combat_ability_rgb.."在{duration:%s}秒內給予你和同步盟友\n{melee_damage:%s}的基礎近戰"..COLORS_KWords_tw.Damage_rgb.."和\n{ranged_damage:%s}的基礎遠程"..COLORS_KWords_tw.Damage_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_2_3_rgb end), --  duration: 5, melee_damage: +10%, ranged_damage: +10% -- rewrite -- &->和 -- s->seconds -- colors
 
 	--[+ Ability 3 - Infiltrate +]--
 		-- create_template("talent_tree_vet_abil3_000_en", {"loc_talent_veteran_invisibility_on_combat_ability"}, {"en"}, function(locale, value) return "Infiltrate" end),
@@ -1556,6 +1574,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil3_000_desc_fr", {"loc_talent_veteran_invisibility_on_combat_ability_desc"}, {"fr"}, function(locale, value) return "Régénérez toute la "..COLORS_KWords_fr.Toughness_rgb_fr.." et entre en "..COLORS_KWords_fr.Stealth_rgb_fr.." pendant {duration:%s} secondes, gagnant {movement_speed:%s} de vitesse de déplacement. Quand vous quittez la "..COLORS_KWords_fr.Stealth_rgb_fr.." les ennemis à proximité subissent Suppresion. Attaquer vous fait quitter la "..COLORS_KWords_fr.Stealth_rgb_fr..".\nTemps de recharge de base : {cooldown:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Ability_3_rgb_fr end),
 			--[+ Traditional Chinese - 滲透 +]--
+	create_template("talent_tree_vet_abil3_000_desc_tw", {"loc_talent_veteran_invisibility_on_combat_ability_desc"}, {"zh-tw"}, function(locale, value) return "補充所有的"..COLORS_KWords_tw.Toughness_rgb.."並進入{duration:%s}秒的"..COLORS_KWords_tw.Stealth_rgb.."，獲得{movement_speed:%s}的移動速度。離開"..COLORS_KWords_tw.Stealth_rgb.."會壓制附近的敵人。攻擊會使你離開"..COLORS_KWords_tw.Stealth_rgb.."。\n基礎冷卻時間：{cooldown:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_3_rgb end), -- duration: 8, movement_speed: +25%, cooldown: 45 -- rewrite -- s->seconds -- colors
 
 	--[+ Ability 3-1 - Low Profile +]--
 		-- create_template("talent_tree_vet_abil3_001_en", {"loc_talent_veteran_reduced_threat_after_combat_ability"}, {"en"}, function(locale, value) return "Low Profile" end),
@@ -1563,6 +1582,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil3_001_desc_fr", {"loc_talent_veteran_reduced_threat_after_stealth_desc"}, {"fr"}, function(locale, value) return "{threat_multiplier:%s} Menace pour {duration:%s} secondes en quittant la "..COLORS_KWords_fr.Stealth_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_3_1_rgb_fr end),
 			--[+ Traditional Chinese - 低調 +]--
+	create_template("talent_tree_vet_abil3_001_desc_tw", {"loc_talent_veteran_reduced_threat_after_stealth_desc"}, {"zh-tw"}, function(locale, value) return "在離開"..COLORS_KWords_tw.Stealth_rgb.."後，{duration:%s}秒內的威脅值為{threat_multiplier:%s}。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_3_1_rgb end), -- threat_multiplier: -90%, duration: 10 -- rewrite -- s->seconds -- colors
 
 	--[+ Ability 3-2 - Overwatch +]--
 		-- create_template("talent_tree_vet_abil3_002_en",{"loc_talent_veteran_combat_ability_extra_charge"}, {"en"}, function(locale, value) return "Overwatch" end),
@@ -1570,6 +1590,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil3_002_desc_fr", {"loc_talent_veteran_combat_ability_extra_charge_description"}, {"fr"}, function(locale, value) return "Votre "..COLORS_KWords_fr.Combat_ability_rgb_fr.." gagne {charges:%s} charge, mais {ability_cooldown:%s} de "..COLORS_KWords_fr.Cd_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_3_2_rgb_fr end),
 			--[+ Traditional Chinese - 掩護射擊 +]--
+	create_template("talent_tree_vet_abil3_002_desc_tw", {"loc_talent_veteran_combat_ability_extra_charge_description"}, {"zh-tw"}, function(locale, value) return "你的"..COLORS_KWords_tw.Combat_ability_rgb.."獲得{charges:%s}次攻擊，但{ability_cooldown:%s}的"..COLORS_KWords_tw.Cd_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_3_2_rgb end), -- charges: +1, ability_cooldown: +33%
 
 	--[+ Ability 3-3 - Hunter's Resolve +]--
 		-- create_template("talent_tree_vet_abil3_003_en", {"loc_talent_veteran_toughness_bonus_leaving_invisibility"}, {"en"}, function(locale, value) return "Hunter's Resolve" end),
@@ -1577,13 +1598,15 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil3_003_desc_fr", {"loc_talent_veteran_toughness_bonus_leaving_invisibility_desc"}, {"fr"}, function(locale, value) return "{tdr:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." est fourni par {talent_name:%s} pour {duration:%s} secondes en quittant la "..COLORS_KWords_fr.Stealth_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_3_3_rgb_fr end),
 			--[+ Traditional Chinese - 獵手決意 +]--
+	create_template("talent_tree_vet_abil3_003_desc_tw", {"loc_talent_veteran_toughness_bonus_leaving_invisibility_desc"}, {"zh-tw"}, function(locale, value) return "在離開"..COLORS_KWords_tw.Stealth_rgb.."後\n{talent_name:%s}提供{tdr:%s}"..COLORS_KWords_tw.Toughness_dmg_red_rgb.."，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_3_3_rgb end), -- talent_name: Infiltrate, tdr: +50%, duration: 10 -- rewrite -- s->seconds -- colors
 
 	--[+ Ability 3-4 - Surprise Attack +]--
 		-- create_template("talent_tree_vet_abil3_004_en", {"loc_talent_veteran_damage_bonus_leaving_invisibility"}, {"en"}, function(locale, value) return "Surprise Attack" end),
 	create_template("talent_tree_vet_abil3_004_desc_en", {"loc_talent_veteran_damage_bonus_leaving_invisibility_desc"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Damage_rgb.." is granted by {talent_name:%s} for {duration:%s} seconds upon leaving "..COLORS_KWords.Stealth_rgb.."."..TALENTS_Enh_desc2.ED_VET_Ability_3_4_rgb end), -- talent_name: Infiltrate, damage: +30%, duration: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_abil3_004_desc_fr", {"loc_talent_veteran_damage_bonus_leaving_invisibility_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." est accordé par {talent_name:%s} pour {duration:%s} secondes en quittant la "..COLORS_KWords_fr.Stealth_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_3_4_rgb_fr end),
-			--[+ Traditional Chinese - 突襲 +]--
+			--[+ Traditional Chinese - 突襲襲擊 +]--
+	create_template("talent_tree_vet_abil3_004_desc_tw", {"loc_talent_veteran_damage_bonus_leaving_invisibility_desc"}, {"zh-tw"}, function(locale, value) return "在離開"..COLORS_KWords_tw.Stealth_rgb.."後\n{talent_name:%s}提供{damage:%s}"..COLORS_KWords_tw.Damage_rgb.."，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_3_4_rgb end), -- talent_name: Infiltrate, damage: +30%, duration: 5 -- rewrite -- s->seconds -- colors
 
 	--[+ Ability 3-5 - Close Quarters Killzone +]--
 		-- create_template("talent_tree_vet_abil3_005_en", {"loc_talent_veteran_ability_assault"}, {"en"}, function(locale, value) return "Close Quarters Killzone" end),
@@ -1591,6 +1614,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil3_005_desc_fr", {"loc_talent_veteran_ability_assault_desc"}, {"fr"}, function(locale, value) return "{power:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." rapprochés pour {duration:%s} secondes Lors de l'utilisation d'une "..COLORS_KWords_fr.Combat_ability_rgb_fr..".\n\nEn utilisant {talent_name:%s}, cela commence en quittant "..COLORS_KWords_fr.Stealth_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Ability_3_5_rgb_fr end),
 			--[+ Traditional Chinese - 肉搏戰 +]--
+	create_template("talent_tree_vet_abil3_005_desc_tw", {"loc_talent_veteran_ability_assault_desc"}, {"zh-tw"}, function(locale, value) return "在使用戰鬥技能後，對近距離的"..COLORS_KWords_tw.Damage_rgb.."增加{power:%s}，持續{duration:%s}秒。\n\n在使用{talent_name:%s}後，效果在脫離潛行後生效。"..TALENTS_Enh_desc2_tw.ED_VET_Ability_3_5_rgb end), -- power: +15%, duration: 10, talent_name: Infiltrate -- rewrite -- s->seconds -- colors
 
 --[+ +KEYSTONES+ +]--
 	--[+ Keystone 1 - Marksman's Focus +]--
@@ -1599,6 +1623,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_000_desc_fr", {"loc_talent_veteran_snipers_focus_alt_description"}, {"fr"}, function(locale, value) return "Les tirs à distance sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." octroient {stacks:%s} cumuls de "..COLORS_KWords_fr.Focus_rgb_fr..". Jusqu'à {max_stacks} cumuls maximum. Courir, glisser et marcher supprime les cumuls.\nChaque cumul de "..COLORS_KWords_fr.Focus_rgb_fr.." octroie : {power:%s} de "..COLORS_KWords_fr.Finesse_dmg_rgb_fr.." à distance et {reload_speed:%s} vitesse de rechargement.\nLes élimination sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." à distance permettent de se déplacer sans perdre de cumuls pendant {grace_time:%s} secondes. Les tirs "..COLORS_KWords_fr.Weakspothits_rgb_fr.." permettent de se déplacer sans perdre de cumuls pendant {grace_time_hit:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_1_rgb_fr end),
 			--[+ Traditional Chinese - 狙擊專注 +]--
+	create_template("talent_tree_vet_keys1_000_desc_tw", {"loc_talent_veteran_snipers_focus_alt_description"}, {"zh-tw"}, function(locale, value) return "遠程"..COLORS_KWords_tw.Weakspot_rgb.."擊殺獲得{stacks:%s}層"..COLORS_KWords_tw.Focus_rgb.."。最多{max_stacks}層。衝刺、滑行和行走會消耗層數。\n每層"..COLORS_KWords_tw.Focus_rgb.."提供：\n{power:%s}遠程"..COLORS_KWords_tw.Finesse_rgb.."強度和\n{reload_speed:%s}裝填速度。\n遠程"..COLORS_KWords_tw.Weakspot_rgb.."擊殺讓你在{grace_time:%s}秒內移動而不會失去層數。遠程"..COLORS_KWords_tw.Weakspothits_rgb.."讓你在{grace_time_hit:%s}秒內移動而不會失去層數。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_1_rgb end), -- stacks: 3, max_stacks: 10, power: +7.5%, reload_speed: +1%, grace_time: 6, grace_time_hit: 3 -- stack(s)->stacks -- s->second/seconds -- colors
 
 	--[+ Keystone 1-1 - Chink in their Armour +]--
 		-- create_template("talent_tree_vet_keys1_001_en", {"loc_talent_veteran_snipers_focus_rending_bonus"}, {"en"}, function(locale, value) return "Chink in their Armour" end),
@@ -1606,6 +1631,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_001_desc_fr", {"loc_talent_veteran_snipers_focus_rending_bonus_description"}, {"fr"}, function(locale, value) return "{rending:%s} de "..COLORS_KWords_fr.Rending_rgb_fr.." lorsque à, ou au-dessus de, {stacks:%s} cumuls de "..COLORS_KWords_fr.Focus_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_1_1_rgb_fr end),
 			--[+ Translations Chinese - 滲透盔甲 +]--
+
 
 	--[+ Keystone 1-2 - Tunnel Vision +]--
 		-- create_template("talent_tree_vet_keys1_002_en", {"loc_talent_veteran_snipers_focus_toughness_bonus"}, {"en"}, function(locale, value) return "Tunnel Vision" end),
@@ -1785,7 +1811,7 @@ local localization_templates = {
 
 	--[+ Passive 13 - Covering Fire +]--
 		-- create_template("talent_tree_vet_pas_013_en", {"loc_talent_veteran_replenish_toughness_and_boost_allies"}, {"en"}, function(locale, value) return "Covering Fire" end),
-	create_template("talent_tree_vet_pas_013_desc_en", {"loc_talent_veteran_replenish_toughness_and_boost_allies_desc"}, {"en"}, function(locale, value) return "When you kill an enemy with a Ranged Attack, Allies within {radius:%s} meters of the target Replenish {toughness:%s} "..COLORS_KWords.Toughness_rgb.." and receive {base_damage:%s} to all Base "..COLORS_KWords.Damage_rgb.." for {duration:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Passive_13_rgb end), -- radius: 5, toughness: 15%, base_damage: +10%, duration: 3 -- &->and s->seconds -- colors
+	create_template("talent_tree_vet_pas_013_desc_en", {"loc_talent_veteran_replenish_toughness_and_boost_allies_desc"}, {"en"}, function(locale, value) return "WhenCombat Shotgun you kill an enemy with a Ranged Attack, Allies within {radius:%s} meters of the target Replenish {toughness:%s} "..COLORS_KWords.Toughness_rgb.." and receive {base_damage:%s} to all Base "..COLORS_KWords.Damage_rgb.." for {duration:%s} seconds."..TALENTS_Enh_desc2.ED_VET_Passive_13_rgb end), -- radius: 5, toughness: 15%, base_damage: +10%, duration: 3 -- &->and s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_013_desc_fr", {"loc_talent_veteran_replenish_toughness_and_boost_allies_desc"}, {"fr"}, function(locale, value) return "Lorsque d'une élimination à distance, les alliés dans un rayon de {radius:%s} mètres de la cible régénèrent {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." et reçoivent {base_damage:%s} à tous les "..COLORS_KWords_fr.Damage_rgb_fr.." de base pour {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_13_rgb_fr end),
 			--[+ Traditional Chinese - 火力掩護 +]--
@@ -1991,12 +2017,14 @@ local localization_templates = {
 	create_template("talent_tree_vet_pas_042_desc_en", {"loc_talent_veteran_rending_bonus_desc"}, {"en"}, function(locale, value) return "{rending_multiplier:%s} "..COLORS_KWords.Rending_rgb.." to all weapons."..TALENTS_Enh_desc2.ED_VET_Passive_42_rgb end), -- rending_multiplier: +10% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_042_desc_fr", {"loc_talent_veteran_rending_bonus_desc"}, {"fr"}, function(locale, value) return "{rending_multiplier:%s} de "..COLORS_KWords_fr.Rending_rgb_fr.." pour toutes les armes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_42_rgb_fr end),
+			--[+ Traditional Chinese - 裂擊 +]--
 
 	--[+ Passive 43 - Bring it Down! +]--
 		-- create_template("talent_tree_vet_pas_043_en", {"loc_talent_veteran_big_game_hunter"}, {"en"}, function(locale, value) return "Bring it Down!" end),
 	create_template("talent_tree_vet_pas_043_desc_en", {"loc_talent_veteran_big_game_hunter_description"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Damage_rgb.." to Ogryns and Monstrosities."..TALENTS_Enh_desc2.ED_VET_Passive_43_rgb end), -- damage: +20% -- &->and -- () -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_043_desc_fr", {"loc_talent_veteran_big_game_hunter_description"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." aux Ogryns et Monstruosités."..TALENTS_Enh_desc2_fr.ED_VET_Passive_43_rgb_fr end),
+			--[+ Traditional Chinese - 幹掉它! +]--
 
 --[+ ++OGRYN++ +]--
 --[+ +BLITZ+ +]--
