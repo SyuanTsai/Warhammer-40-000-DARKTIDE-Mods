@@ -22,6 +22,19 @@
 - Combat Stimm - 戰鬥興奮劑
 - Concentration Stimm - 專注興奮劑
 
+
+### 武器
+- Ripper Gun - 擲彈兵臂鎧
+- Grenadier Gauntlet - 全自動霰彈槍
+- Heavy Stubbers - 雙鏈重型機槍 
+- Rumbler - 震盪槍
+- Kickback - 反衝者
+- Boltgun - 爆彈槍
+- Helbore Lasgun - 冥潮雷射槍
+- Infantry Lasgun - 步兵雷射槍
+- Laspistol - 重型雷射手槍
+- Recon Lasgun - 偵查雷射槍
+
 ### 怪物相關
 
 - Gunners - 砲手
@@ -91,6 +104,13 @@
 - Reassuringly Accurate - 慰藉精準
 - Inspiring Barrage - 激勵彈幕
 - Raking Fire - 掃射
+- Armourbane - 護甲之禍
+- Can Opener - 開罐器
+- Rending Shockwave - 撕扯震盪
+- Shattering Impact - 破碎衝擊 
+- Supercharge - 超級充能
+- Thunderous - 雷鳴
+- Penetrating Flame - 穿透火焰
 
 ### Psyker - 靈能者
 
@@ -197,7 +217,6 @@
 - Soften Them Up - 削弱敵人
 - Valuable Destruction - 重要干擾
 
-
 ##### 閃擊
 
 ##### 光環
@@ -303,15 +322,96 @@
 #### 老兵天賦
 
 - Inspiring Presence - 鼓舞人心
-- Focus Target! - 鎖定目標
 
 ##### 閃擊
+- Frag Grenade - 破片手雷
+- Shredder Frag Grenade - 粉碎者破片手雷
+- Krak Grenade - 穿甲手雷
+- Smoke Grenade - 煙霧手雷
 
 ##### 光環
+- Scavenger - 拾荒者
+- Survivalist - 生存專家
+- Fire Team - 火力小分隊
+- Close and Kill - 抵近殺敵
 
 ##### 主動技能
+- Volley Fire - 火力齊射
+- Executioner's Stance - 處決者姿態
+- Enhanced Target Priority - 目標引導增強
+- Counter-Fire - 火力反擊
+- The Bigger they Are... - 敵人越大...
+- Marksman - 鷹眼
+- Voice of Command - 發號施令
+- Duty and Honour - 責任與榮譽
+- Only In Death Does Duty End - 只有死亡，職責才會終結
+- For the Emperor! - 為了皇帝！
+- Infiltrate - 滲透
+- Low Profile - 低調
+- Overwatch - 掩護射擊
+- Hunter's Resolve - 獵手決意
+- Surprise Attack - 突襲
+- Close Quarters Killzone - 肉搏戰
 
 ##### 鑰石
 
+- Marksman's Focus - 狙擊專注
+- Chink in their Armour - 滲透盔甲
+- Tunnel Vision - 視野狹窄
+- Long Range Assassin - 遠程刺客
+- Camouflage - 偽裝
+- Focus Target! - 鎖定目標
+- Target Down! - 目標擊倒!
+- Redirect Fire! - 轉移火力!
+- Focused Fire - 集中火力
+- Weapons Specialist - 武器專家
+- Always Prepared - 有備無患
+- Invigorated - 活力煥發
+- On Your Toes - 時刻警覺
+- Fleeting Fire - 集火
+- Conditioning - 身體調節
+
 ##### 一般天賦
 
+- Longshot - 遠射
+- Close Order Drill - 密集隊形訓練
+- One Motion - 行雲流水
+- Exhilarating Takedown - 振奮擊倒
+- Volley Adept - 齊射能手
+- Charismatic - 超凡魅力
+- Confirmed Kill - 擊殺紀錄
+- Tactical Reload - 戰術裝填
+- Out for Blood - 嗜血
+- Get Back in the Fight! - 重投戰鬥!
+- Catch a Breath - 喘息片刻
+- Grenade Tinkerer - 手雷專家
+- Covering Fire - 火力掩護
+- Serrated Blade - 鋸齒刀刃
+- Agile Engagement - 靈活接敵
+- Kill Zone - 殺戮地帶
+- Opening Salvo - 首輪齊射
+- Field Improvisation - 臨場發揮
+- Twinned Blast - 雙響炮
+- Demolition Stockpile - 炸藥儲備
+- Grenadier - 擲彈兵
+- Leave No One Behind - 不拋棄不放棄
+- Precision Strikes - 堅定不移
+- Deadshot - 死亡射手
+- Born Leader - 天生領袖
+- Keep Their Heads Down! - 讓他們全趴下!
+- Reciprocity - 互惠互利
+- Duck and Dive - 靈活應對
+- Fully Loaded - 全副武裝
+- Tactical Awareness - 戰術意識
+- Desperado - 亡命之徒
+- Shock Trooper - 突擊隊
+- Superiority Complex - 優越情節
+- Iron Will - 鋼鐵意志
+- Demolition Team - 爆破小隊
+- Exploit Weakness - 趁火打劫
+- Onslaught - 猛攻
+- Trench Fighter Drill - 戰壕兵訓練
+- Skirmisher - 遊擊者
+- Competitive Urge - 求勝心
+- Rending Strikes - 裂擊
+- Bring it Down! - 幹掉它!

@@ -16,311 +16,279 @@ local iu_actit = InputUtils.apply_color_to_input_text
 -- If you add a new entry (ex. MyEntry_rgb), just duplicate it in the list below (MyEntry_rgb = MyEntry_rgb,).
 
 local ppp___ppp = "\n+++-------------------------------------------------+++"
-local become_invis_drop_all_enemy_aggro = "- Become Invisible dropping all enemy aggro: Melee enemies reaggro immediately to another target if possible, firing Ranged enemies stop shooting, then reaggro if possible."
-local can_be_refr_dur_active_dur = "- Can be refreshed during active duration."
-local doesnt_interact_w_c_a_r_from_curio = "- Does not interact with Combat Ability Regeneration from Curios which only reduces the Maximum cooldown of a Combat Ability."
-local doesnt_stack_w_z_same_aura_ogr = "- Does not Stack with the same Aura of another Ogryn."
-local doesnt_stack_w_z_same_aura_vet = "- Does not Stack with the same Aura from another Veteran"
-local procs_add_conc_stim_rem_cd_red = "- Procs additionally to Concentration Stimm's remaining Cooldown Reduction effect of 3 seconds per second."
-local stacks_add_w_oth_dmg = "- Stacks additively with other Damage buffs, and multiplicatively with Power level buffs from Weapon Blessings."
-local stacks_add_w_oth_rend_brit = "- Stacks additively with other Rending buffs and with Brittleness debuffs that are applied to enemies."
-local stacks_mult_w_other_dmg_red_buffs = "- Stacks multiplicatively with other Damage Reduction buffs."
-local this_also_incr_speed_load_com_shotg = "- This also increases the Speed of the loading special action of Combat Shotguns."
-local this_also_buffs_melee_sp_act_guns = "- This also buffs the Melee special actions of Ripper Gun, Grenadier Gauntlet (Melee part), Rumbler, Heavy Stubbers, and Kickback."
-local z_eff_of_this_tougn_rep = "- The effectiveness of this Toughness Replenishment is affected by certain player debuffs like toxic gas."
+
+local become_invis_drop_all_enemy_aggro = "- 進入隱形狀態並清除所有敵人仇恨：若可能的話，近戰敵人會立刻轉而鎖定其他目標，遠程敵人則會停止射擊，然後在可能時再度鎖定。"
+local can_be_refr_dur_active_dur = "- 可以在效果持續期間刷新。"
+local doesnt_interact_w_c_a_r_from_curio = "- 不會與珍品提供的戰鬥技能冷卻效果互動，因為該效果只會縮短戰鬥技能的最大冷卻時間。"
+local doesnt_stack_w_z_same_aura_ogr = "- 無法與其他歐格林的相同光環疊加。"
+local doesnt_stack_w_z_same_aura_vet = "- 無法與其他老兵的相同光環疊加。"
+local procs_add_conc_stim_rem_cd_red = "- 此觸發效果會額外疊加在專注興奮劑的每秒縮短3秒冷卻時間效果之上。"
+local stacks_add_w_oth_dmg = "- 與其他傷害增益以加法疊加，並與武器祝福提供的威力等級加成以乘法疊加。"
+local stacks_add_w_oth_rend_brit = "- 與其他撕裂增益，以及敵人身上的脆弱減益以加法疊加。"
+local stacks_mult_w_other_dmg_red_buffs = "- 與其他傷害減免增益以乘法疊加。"
+local this_also_incr_speed_load_com_shotg = "- 此效果同時提升戰鬥霰彈槍的特殊裝填動作速度。"
+local this_also_buffs_melee_sp_act_guns = "- 此效果也會增益「全自動霰彈槍」、「擲彈兵臂鎧」（近戰部分）、「震盪槍」、「雙鏈重型機槍 」及「反衝者」的近戰特殊動作。"
+local z_eff_of_this_tougn_rep = "- 這項韌性回復的效果會受到玩家身上某些減益（例如毒氣）的影響。"
 
 --[+ ++ENHANCED DESCRIPTIONS++ +]--
 local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 
 --[+ ++VETERAN++ +]--
 --[+ +BLITZ+ +]--
-	--[+ Blitz 0 - Frag Grenade +]--
+	--[+ Blitz 0 - Frag Grenade(破片手雷) +]--
 	local ED_VET_Blitz_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		-- "- Fuse time: 1.7 seconds.",
-		"- Explosion radius: 10 meters (max), 2 meters (epicenter).",
-		"- Explosion Damage:",
-		-- "-- Enemies inside epicenter will take more Damage, enemies between epicenter and max radius will take less Damage depending on distance",
-		"-- Base Damage epicenter: 500.",
-		"-- Base Damage between epicenter and max radius: 200.",
-		-- "-- Average armor Damage modifiers across the board, very low armor Damage modifier against Carapace.",
-		-- "-- Explosion Damage is increased by Rending/Brittleness, by \"Skullcrusher\" Blessing (while Staggered), and by Damage buffs from \"Bring it Down!\", \"Close Quarters Killzone\" (if within 30 meters to the enemy), \"Competitive Urge\", \"Covering Fire\" (if applied to Veteran by another Veteran), \"Focus Target!\" (if Tagged), \"Grenade Tinkerer\", \"Longshot\" (if not within 12.5 meters to the enemy), \"Redirect Fire!\", \"Skirmisher\", \"Superiority Complex\" (against Elites), \"Surprise Attack\", and aura \"Fire Team\".",
-		"- Stagger: Deals high Stagger against all enemies including Monstrosities, except for Captains/Twin.",
-		"- Ammo: replenishes all grenades per grenade pickup.",
+		"- 爆炸半徑：最大10米，中心2米。",
+		"- 爆炸傷害：",
+		"-- 中心區域基礎傷害：500。",
+		"-- 中心至最大半徑之間基礎傷害：200。",
+		"-- 施加高踉蹌，對所有敵人(包含巨獸)，但不包含隊長/雙胞胎。",
+		"- 彈藥：每次拾取手雷補給皆恢復所有手雷。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Blitz 1 - Frag Grenade +]--
+	--[+ Blitz 1 - Frag Grenade(破片手雷) +]--
 	local ED_VET_Blitz_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		-- "- Fuse time: 1.7 seconds.",
-		"- Explosion radius: 10 meters (max), 2 meters (epicenter).",
-		"- Explosion Damage:",
-		-- "-- Enemies inside epicenter will take more Damage, enemies between epicenter and max radius will take less Damage depending on distance",
-		"-- Base Damage epicenter: 500.",
-		"-- Base Damage between epicenter and max radius: 200.",
-		"-- Average armor Damage modifiers across the board, very low armor Damage modifier against Carapace.",
-		-- "-- Explosion Damage is increased by Rending/Brittleness, by \"Skullcrusher\" Blessing (while Staggered), and by Damage buffs from \"Bring it Down!\", \"Close Quarters Killzone\" (if within 30 meters to the enemy), \"Competitive Urge\", \"Covering Fire\" (if applied to Veteran by another Veteran), \"Focus Target!\" (if Tagged), \"Grenade Tinkerer\", \"Longshot\" (if not within 12.5 meters to the enemy), \"Redirect Fire!\", \"Skirmisher\", \"Superiority Complex\" (against Elites), \"Surprise Attack\", and aura \"Fire Team\".",
-		"- Stagger: Deals high Stagger against all enemies including Monstrosities, except for Captains/Twin.",
-		"- Ammo: replenishes all grenades per grenade pickup.",
-		"- Bleed: Applies 6 Stacks of Bleed on explosion.",
-		"-- The same Bleed like other sources of Bleed: 16 Max Stacks on a target, ticks every 0.5 seconds, lasts 1.5 seconds.",
-		"-- Bleed Damage is increased by the same sources (except \"Grenade Tinkerer\") that also buff the grenade's explosion Damage (see above).",
-		"-- Additionally, Bleed Damage is affected by Perks of currently equipped Weapons and the buffs from Blessings.",
-		-- "- Additionally, bleed damage is affected by perks of currently equipped weapons and the following buffs from:",
-		-- "- Blessings (Melee): if procced with Weapon before or during Bleed's active duration: \"Executor\", \"High Voltage\" (while Electrocuted), \"Skullcrusher\" (while Staggered), and \"Slaughterer\".",
-		-- "- Blessings (Ranged): if procced with Weapon before or during Bleed's active duration: \"Blaze Away\", \"Deathspitter\", \"Dumdum\", \"Execution\" (while Staggered), \"Fire Frenzy\", \"Full Bore\", \"No Respite\" (while Staggered), \"Pinning Fire\", and \"Run and Gun\" (while Sprinting).",
+		"- 爆炸半徑：最大10米，中心2米。",
+		"- 爆炸傷害：",
+		"-- 中心區域基礎傷害：500。",
+		"-- 中心至最大半徑之間基礎傷害：200。",
+		"-- 整體對護甲的傷害修正中等，對甲殼則非常低。",
+		"- 踉蹌：對所有敵人(包含巨獸)造成高踉蹌，但不包含隊長/雙胞胎。",
+		"- 彈藥：每次拾取手雷補給皆恢復所有手雷。",
+		"- 流血：爆炸時施加6層流血。",
+		"-- 與其他流血效果相同：單個目標最高16層，每0.5秒造成傷害，持續1.5秒。",
+		"-- 流血傷害同樣受到上述手雷爆炸傷害增益的影響(除了「手雷專家」)，並受到目前裝備武器特性(Perks)及祝福(Blessings)的增益。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Blitz 2 - Krak Grenade +]--
+	--[+ Blitz 2 - Krak Grenade(穿甲手雷) +]--
 	local ED_VET_Blitz_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Explosion radius: 1.5 meters (epicenter), 5 meters (max).",
-		"- Explosion damage:",
-		"-- Enemies inside epicenter will take more Damage, enemies between epicenter and Max radius will take less Damage depending on distance, enemies that the grenade sticks to always take epicenter damage.",
-		"-- Base Damage epicenter: 2400.",
-		"-- Base damage between epicenter and max radius: 500.",
-		"-- Inside epicenter, good armor Damage modifiers across the board and very high armor Damage modifiers against Carapace, Flak, Unyielding.",
-		"-- Outside epicenter, decent armor Damage modifiers across the board.",
-		-- "-- Explosion Damage is increased by Rending/Brittleness, by \"Skullcrusher\" Blessing (while Staggered), and by Damage buffs from \"Bring it Down!\", \"Close Quarters Killzone\" (if within 30 meters to the enemy), \"Competitive Urge\", \"Covering Fire\" (if applied to Veteran by another Veteran), \"Focus Target!\" (if Tagged), \"Grenade Tinkerer\", \"Longshot\" (if not within 12.5 meters to the enemy), \"Redirect Fire!\", \"Skirmisher\", \"Superiority Complex\" (against Elites), \"Surprise Attack\", and aura \"Fire Team\".",
-		"- Stagger:",
-		"-- Deals high Stagger against all enemies including Monstrosities.",
-		"-- Against Captains/Twins only without void shield.",
-		"- Ammo: replenishes all grenades per grenade pickup.",
-		-- "- Regardless of the hit zone the projectile sticks to, the explosion will always target center mass hit zone dealing the same Damage.",
+		"- 爆炸半徑：中心1.5米，最大5米。",
+		"- 爆炸傷害：",
+		"-- 位於中心區域的敵人受到更高傷害，中心至最大半徑的敵人受到距離遞減的較低傷害；若手雷附著在敵人身上，則會造成中心區域傷害。",
+		"-- 中心區域基礎傷害：2400。",
+		"-- 中心至最大半徑之間基礎傷害：500。",
+		"-- 在中心區域時，對所有護甲類型皆有不錯的傷害修正，並對甲殼、破片護甲、不屈敵有特別高的傷害修正。",
+		"-- 在外圍區域，整體傷害修正仍維持不錯。",
+		"- 踉蹌：",
+		"-- 對所有敵人(包含巨獸)造成高踉蹌。",
+		"-- 針對隊長/雙胞胎僅在沒有虛空護盾(Void shield)時生效。",
+		"- 彈藥：每次拾取手雷補給皆恢復所有手雷。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Blitz 3 - Smoke Grenade +]--
+	--[+ Blitz 3 - Smoke Grenade(煙霧手雷) +]--
 	local ED_VET_Blitz_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		-- "- Initial explosion deals no Damage and very light Stagger, 10m radius",
-		"- Smoke cloud effect:",
-		"-- Radius: 5.5 meters.",
-		-- "-- Lasts for 15 seconds.",
-		"-- Disables HUD nameplates of Allies.",
-		"-- Players inside smoke are considered \"concealed\" which alters the line of sight distance requirement of enemies during target selection.",
-		"-- If a player holds aggro of an enemy who is in Melee combat, the smoke has no effect on enemy perception.",
-		"-- If a player holds aggro of an enemy who is in Ranged combat, then the smoke makes the Ranged enemy stop firing and change positions (Reaper is less likely to reposition).",
-		"-- Gunners and Reaper when they are inside the smoke cloud's area of effect themselves keep firing at a player's last known position.",
-		"-- Pox Hounds cannot lock on a player who is inside smoke cloud's area of effect and will keep circling the cloud (no effect on Mutants and Poxbursters).",
-		-- "- Ammo: replenishes all grenades per grenade pickup.",
+		"- 煙霧雲效果：",
+		"-- 半徑：5.5米。",
+		"-- 會隱藏隊友的頭像(名條)。",
+		"-- 位於煙霧內的玩家被視為「隱蔽」，會改變敵人在選擇目標時的視線距離需求。",
+		"-- 若玩家已對敵人產生近戰仇恨(Melee combat)，則煙霧不影響敵人的感知。",
+		"-- 若玩家對正在進行遠程戰鬥的敵人保有仇恨，則煙霧會使該遠程敵人停止射擊並嘗試重新定位(收割者較不易移動)。",
+		"-- 若槍手或收割者也位於煙霧範圍內，會持續對玩家最後被發現的位置開火。",
+		"-- 瘟疫獵犬無法鎖定處於煙霧範圍內的玩家，會繞著煙霧徘徊(對變種人及瘟疫爆者無效)。",
 	}, "\n"), enhdesc_col)
 
 --[+ +AURA+ +]--
-	--[+ Aura 0 - Scavenger +]--
+	--[+ Aura 0 - Scavenger(拾荒者) +]--
 	local ED_VET_Aura_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		doesnt_stack_w_z_same_aura_vet..", multiple Veterans spread their replenished ammo amounts separately.",
-		-- "- For example, with a weapon that has 180 bullets max ammo in reserve: On the first proc, Veteran regains 180x0.01=1.8 bullets which is rounded down to 1; the leftover amount of 1.8-1=0.8 is carried over to the next proc. On the second proc, Veteran regains 180x0.01+0.8=2.6 bullets which is rounded down to 2; the leftover amount of 2.6-2=0.6 is once again carried over to the next proc, and so on. This means, in this case, Veteran gets 1 bullet on the first proc, 2 bullets on the next four procs, and then 1 bullet again on the fifth proc, and so on.",
+		doesnt_stack_w_z_same_aura_vet.."，若有多名老兵則分別回復各自的彈藥量。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Aura 1 - Survivalist +]--
+	--[+ Aura 1 - Survivalist(生存專家) +]--
 	local ED_VET_Aura_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		doesnt_stack_w_z_same_aura_vet..", multiple Veterans spread their replenished ammo amounts separately.",
-		"- For example, with a weapon that has 180 bullets max ammo in reserve: On the first proc, Veteran regains 180x0.01=1.8 bullets which is rounded down to 1; the leftover amount of 1.8-1=0.8 is carried over to the next proc. On the second proc, Veteran regains 180x0.01+0.8=2.6 bullets which is rounded down to 2; the leftover amount of 2.6-2=0.6 is once again carried over to the next proc, and so on. This means, in this case, Veteran gets 1 bullet on the first proc, 2 bullets on the next four procs, and then 1 bullet again on the fifth proc, and so on.",
+		doesnt_stack_w_z_same_aura_vet.."，若有多名老兵則分別回復各自的彈藥量。",
+		"- 例如，若武器備彈量為180發：首次觸發時回復180x0.01=1.8發，向下取整為1發；留下0.8發至下次觸發。第二次觸發時回復(180x0.01)+0.8=2.6發，向下取整為2發；再留0.6發到下次觸發，如此循環。也就是第一次觸發回復1發，接下來四次觸發各回復2發，第五次後又回復1發，如此往復。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Aura 2 - Fire Team +]--
+	--[+ Aura 2 - Fire Team(火力小分隊) +]--
 	local ED_VET_Aura_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		stacks_add_w_oth_dmg,
-		doesnt_stack_w_z_same_aura_vet..".",
+		doesnt_stack_w_z_same_aura_vet.."。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Aura 3 - Close and Kill +]--
+	--[+ Aura 3 - Close and Kill(抵近殺敵) +]--
 	local ED_VET_Aura_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with Movement Speed buffs from \"Infiltrate\", \"Leave No One Behind\", the small Movement Speed node, and Weapon Blessings like \"Rev it Up\".",
+		"- 與「滲透」、「不拋棄不放棄」、小型移動速度天賦，以及武器祝福「提速的移動速度加成採加法疊加。",
 		doesnt_stack_w_z_same_aura_vet..".",
 	}, "\n"), enhdesc_col)
 
 --[+ +ABILITIES+ +]--
-	--[+ Ability 0 - Volley Fire +]--
+	--[+ Ability 0 - Volley Fire(火力齊射) +]--
 	local ED_VET_Ability_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases both Ranged Damage and Ranged Weakspot Damage by 15%.",
-		"- Stacks additively with related Damage buffs.",
-		"- Increases Ranged Stagger strength by 50%.",
-		-- "- On activation, forces a swap to Ranged weapon playing a short wield animation.",
-		-- "- Grants a plethora of buffs to Veteran:",
-		-- "-- Immunity to Stuns and Slowdowns from both Melee and Ranged attacks, and Immunity to Suppression.",
-		-- "-- Veteran's attack actions cannot be interrupted as part of hit reactions.",
-		-- "-- Weapon Spread reduced by 38%.",
-		-- "-- Weapon Recoil reduced by 24%, randomness in recoil patterns replaced by a fixed one.",
-		-- "-- Weapon Sway reduced by 60% and slightly zoomed in Field Of View.",
-		-- "- Lasts for 5 seconds.",
-		-- "- Killing an outlined enemy refreshes the active duration by 5 seconds. This also refreshes the duration of outlines on enemies for Veteran.",
-		-- "- Ends early when Veteran gets disabled.",
+		"- 提升遠程傷害與遠程弱點傷害15%。",
+		"- 與其他相關傷害增益採加法疊加。",
+		"- 使遠程攻擊的踉蹌強度提升50%。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 1 - Executioner's Stance +]--
+	--[+ Ability 1 - Executioner's Stance(處決者姿態) +]--
 	local ED_VET_Ability_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Grants a plethora of buffs to Veteran:",
-		"-- Immunity to Stuns and Slowdowns from both Melee and Ranged attacks, and Immunity to Suppression.",
-		"-- Veteran's attack actions cannot be interrupted as part of hit reactions.",
-		"-- Weapon Spread reduced by 38%.",
-		"-- Weapon Recoil reduced by 24%, randomness in recoil patterns replaced by a fixed one.",
-		"-- Weapon Sway reduced by 60% and slightly zoomed in Field Of View.",
-		"- Stacks additively with related Damage buffs.",
-		"- Increases Ranged Stagger strength by 100%.",
-		"- Ends early when Veteran gets disabled.",
+		"- 提供多種增益：",
+		"-- 免疫近戰和遠程攻擊造成的眩暈與減速(Slowdowns)，也免疫壓制。",
+		"-- 老兵的攻擊不會因受擊硬直而被中斷。",
+		"-- 武器散射(Spread)降低38%。",
+		"-- 武器後座力(Recoil)降低24%，並將隨機後座改為固定後座模式。",
+		"-- 武器擺動(Sway)降低60%，且視野輕微縮放。",
+		"- 與其他相關傷害增益採加法疊加。",
+		"- 使遠程攻擊的踉蹌強度提升100%。",
+		"- 若老兵遭控場(Disabled)則此效果提前結束。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 1-1 - Enhanced Target Priority +]--
+	--[+ Ability 1-1 - Enhanced Target Priority(目標引導增強) +]--
 	local ED_VET_Ability_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Outlines visible to Allies always last 5 seconds.",
+		"- 老兵給予隊友的紅框顯示(Outlines)固定維持5秒。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 1-2 - Counter-Fire +]--
+	--[+ Ability 1-2 - Counter-Fire(火力反擊) +]--
 	-- local ED_VET_Ability_1_2_rgb = iu_actit(table.concat({ "", }, "\n"), enhdesc_col)
 
-	--[+ Ability 1-3 - The Bigger they Are... +]--
+	--[+ Ability 1-3 - The Bigger they Are...(敵人越大...) +]--
 	-- local ED_VET_Ability_1_3_rgb = iu_actit(table.concat({ "", }, "\n"), enhdesc_col)
 
-	--[+ Ability 1-4 - Marksman +]--
+	--[+ Ability 1-4 - Marksman(鷹眼) +]--
 	local ED_VET_Ability_1_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with other Power level buffs from Weapon Blessings, and multiplicatively with Damage buffs.",
-		"- \"Power level buffs\" increase the Base Power of attacks which benefits Damage, Stagger, and Cleave (where applicable).",
-		"- For \"Infiltrate\", the buff is active immediately, only the duration starts when invisibility ends.",
+		"- 與其他武器祝福的威力(Power level)增益採加法疊加，並與傷害增益採乘法計算。",
+		"- 「威力增益」表示提升攻擊基礎數值，可同時增進傷害、踉蹌與順劈。",
+		"- 對「滲透」而言，增益會立即生效，但計時會在隱形結束時才開始。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2 - Voice of Command +]--
+	--[+ Ability 2 - Voice of Command(發號施令) +]--
 	local ED_VET_Ability_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Sets Veteran's Toughness to 100% upon activation.",
-		"- Shout:",
-		"-- Holding the Ability button shows shout range; preview can be block canceled.",
-		"-- Radius: 9 meters.",
-		"-- Staggers all enemies within radius.",
-		"-- Stagger strength decreases with range.",
-		"-- Does not apply to enemies who are already Staggered.",
-		"-- Always forces a heavy Stagger against Crusher, Mauler, Mutants, Reaper, Monstrosities, and Captains/Twins (only without Void shield) for 2.5 seconds.",
-		"-- Does not apply to enemies who are already Staggered.",
-		"-- Staggers Bulwark only if Veteran is not in front of the shield.",
+		"- 啟動時將老兵的韌性設為100%。",
+		"- 喊聲(Shout)：",
+		"-- 按住技能鍵可顯示喊聲範圍，預覽時可用格擋取消。",
+		"-- 半徑：9米。",
+		"-- 範圍內所有敵人都會被踉蹌。",
+		"-- 踉蹌強度隨距離遞減。",
+		"-- 已處於踉蹌的敵人不會再次受到影響。",
+		"-- 針對粉碎者(Crusher)、重錘兵(Mauler)、變種人(Mutants)、收割者(Reaper)、巨獸(Monstrosities)以及沒有虛空護盾的隊長/雙胞胎，可強制施加重踉蹌2.5秒。",
+		"-- 若老兵處於盾兵(Bulwark)面前則不會踉蹌盾兵，除非不是正面。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2-1 - Duty and Honour +]--
+	--[+ Ability 2-1 - Duty and Honour(責任與榮譽) +]--
 	local ED_VET_Ability_2_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- For Veteran, Voice of Command adds 50 bonus Toughness (yellow), additionally to setting Veteran's Toughness to 100% upon activation.",
-		"- For allies who are in coherency with Veteran, Voice of Command adds 50 Toughness upon activation if their Toughness is below 100%.",
-		"- If their Toughness is at or above 100%, Voice of Command adds 50 bonus Toughness (yellow) to Allies.",
-		"- \"Charismatic\" increases the effective Range of this Talent.",
-		"- Veteran's bonus Toughness lasts for 15 seconds.",
-		"- Can Stack additively with itself and with bonus Toughness from Zealot's \"Chorus of Spiritual Fortitude\"..",
-		"- It acts as a 'second' Toughness bar and can be replenished by Melee kills, respective Talents, and Weapon Blessings.",
+		"- 對老兵本人：「發號施令」除了將韌性設為100%外，還額外提供50點黃韌性(Temporary Toughness)。",
+		"- 若隊友與老兵處於協同範圍內，則在技能啟動時：",
+		"-- 若隊友韌性低於100%，直接回復50點韌性。",
+		"-- 若隊友韌性已達100%或更高，改為額外提供50點黃韌性。",
+		"- 「超凡魅力」可增加此天賦的有效範圍。",
+		"- 老兵自身的額外韌性持續15秒。",
+		"- 可與自身或其他老兵重複施放，並可與狂信徒的「不屈靈魂合唱」提供的黃韌性加法疊加。",
+		"- 此部分額外韌性會像第二條韌性槽，可透過近戰擊殺、相應天賦或武器祝福進行補充。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2-2 - Only In Death Does Duty End +]--
 	local ED_VET_Ability_2_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- The Revive effect ignores map geometry.",
-		"- Reduces Voice of Command's radius from 9 to 6.03 meters.",
-		"- Allies who are not in this Radius do not get revived regardless of whether they are in Coherency with Veteran or not.",
-		"- Also increases \"Voice of Command's\" Maximum Cooldown from 30 to 45 seconds.",
-		"- This Max Cooldown increase Stacks additively with Max Cooldown Reductions from Psyker's aura \"Seer's Presence\", Combat Ability Regeneration from Curios, and the mission mutators that reduce Ability Cooldowns by 20%.",
-		"- For example, a Veteran with this Talent playing the Maelstrom mutator (-0.2) with three 4% Combat Ability Regeneration Curios (-0.12) will have a \"Voice of Command\" Max Cooldown of 30+30x(0.5-0.32)=35.4 seconds.",
+		"- 復活效果不受地形阻隔。",
+		"- 將「發號施令」的有效半徑由9米降至6.03米。",
+		"- 不在此範圍內的隊友無法被復活，無論是否在協同範圍。",
+		"- 也將「發號施令」的最大冷卻時間由30秒增加到45秒。",
+		"- 此額外冷卻會與靈能者光環「先知之眼」、珍品的戰鬥技能冷卻以及任務中的「技能冷卻減少20%」等效果加法疊加。",
+		"- 例如，一名擁有此天賦的老兵在玩「漩渦(Maelstrom)」關卡(-0.2)並配戴三個4%戰鬥技能冷卻珍品(-0.12)，其「發號施令」最大冷卻時間計算方式為30 + 30x(0.5 - 0.32) = 35.4秒。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2-3 - For the Emperor! +]--
+	--[+ Ability 2-3 - For the Emperor!(為了皇帝！) +]--
 	local ED_VET_Ability_2_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Allies get the buff as long as they are in Coherency when the buff is triggered.",
-		"- Stacks additively with the same Talent of another Veteran and with other Damage buffs.",
-		"- Multiplicatively with Power level buffs from Weapon Blessings.",
+		"- 只要在天賦觸發時，隊友處於協同範圍內，便可獲得此增益。",
+		"- 與其他老兵同樣天賦的效果以及其他傷害增益採加法疊加。",
+		"- 與武器祝福等提供的威力(Power level)增益採乘法計算。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 3 - Infiltrate +]--
+	--[+ Ability 3 - Infiltrate(滲透) +]--
 	local ED_VET_Ability_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stealth: "..become_invis_drop_all_enemy_aggro,
-		"-- You can still take Damage during Invisibility.",
-		"-- Stealth breaks on: hitting enemies with a Melee attack, any Ranged attack, throwing a grenade (quickthrow, aimed or underhand), finishing a Rescue/Revive/Pull up/Free from net action.",
-		"-- Stealth does not break on: throwing a grenade (underhand; Krak Grenades do break Stealth on underhand throws if the projectile hits an enemy); pushing enemies; using Stimms (on self or team mates); exploding grenades that have been thrown before going invisible; active DoT ticks; operating the Auspex device or minigame",
-		-- "-- Stealth grace window: actions that would break Stealth do not if they are executed within 0.5 seconds after going Invisible; this allows, if timed accordingly, for one additional Melee or Ranged attack that already benefits from all applicable buffs but does not break Stealth yet.",
-		-- "- Breeds that can be Suppressed: Groaner, Dreg Gunner, Dreg Stalker, Reaper, Scab Gunner, Scab Shooter, Scab Stalker.",
-		-- "- The Movement Speed buff lasts as long as the Invisibility (8 seconds) and Stacks additively with related buffs from \"Leave No One Behind\", aura \"Close and Kill\", the small Movement Speed node, and Weapon Blessings like \"Rev it Up\".",
-		"{#color(255, 35, 5)}Doesn't hide you from a Daemonhosts!{#reset()}",
+		"- 隱形： "..become_invis_drop_all_enemy_aggro,
+		"-- 進入隱形後仍可能受到傷害。",
+		"-- 下列行為會破除隱形：以近戰攻擊命中敵人、任意遠程攻擊、投擲手雷(快扔、瞄準或拋投)、完成救援/復甦/拉起或解網動作。",
+		"-- 下列行為不會破除隱形：拋投手雷(Underhand)時若未命中敵人、推擊敵人、使用興奮劑(自身或給隊友)、在隱形前丟出的手雷爆炸、已啟動的持續傷害效果(DoT)、操作占卜儀(Auspex)或小遊戲。",
+		"{#color(255, 35, 5)}惡魔宿主(Daemonhosts)不受此效果影響！{#reset()}",
 	}, "\n"), enhdesc_col)
 
-
-	--[+ Ability 3-1 - Low Profile +]--
+	--[+ Ability 3-1 - Low Profile(低調) +]--
 	local ED_VET_Ability_3_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- When Invisibility ends, grants a weight multiplier for 10 seconds.",
-		"- There are multiple factors that are used to calculate the score which determines enemy target selection of player units.",
-		"- The tldr is that this Talent grants a multiplier which manipulates the score calculation in the player's favor to make it less likely to be targeted by enemies.",
+		"- 當隱形結束後，持續10秒套用額外的權重倍率。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 3-2 - Overwatch +]--
+	--[+ Ability 3-2 - Overwatch(掩護射擊) +]--
 	local ED_VET_Ability_3_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- The Cooldown of the Second charge only starts after the First charge finished its Cooldown.",
-		"- Also increases Infiltrate's Maximum Cooldown from 45 to 59.85 seconds.",
-		"- This Max Cooldown increase Stacks additively with Max Cooldown Reductions from Psyker's aura \"Seer's Presence\", Combat Ability Regeneration from Curios, and the mission mutators that Reduce Ability Cooldowns by 20%.",
-		"- For example, a Veteran with this Talent playing the Maelstrom mutator (-0.2) with a Psyker who has the Cooldown aura (-0.1) will have an \"Infiltrate\" Max Cooldown of 45+45x(0.33-0.3)=46.35 seconds.",
+		"- 第二段充能的冷卻，只有在第一段充能結束後才會開始。",
+		"- 同時將「滲透」的最大冷卻由45秒增加至59.85秒。",
+		"- 此額外冷卻與靈能者光環「先知之眼」、珍品的戰鬥技能冷卻(Combat Ability Regeneration)以及「技能冷卻減少20%」等效果加法疊加。",
+		"- 例如，一名老兵在「漩渦(Maelstrom)」(-0.2)關卡中並與具有冷卻光環(-0.1)的靈能者組隊，其「滲透」最大冷卻計算方式為45 + 45 x (0.33 - 0.3) = 46.35秒。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 3-3 - Hunter's Resolve +]--
+	--[+ Ability 3-3 - Hunter's Resolve(獵手決意) +]--
 	local ED_VET_Ability_3_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- The 10 seconds duration starts when Invisibility ends.",
+		"- 10秒效果會在隱形結束後才開始計時。",
 		stacks_mult_w_other_dmg_red_buffs,
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 3-4 - Surprise Attack +]--
+	--[+ Ability 3-4 - Surprise Attack(突襲) +]--
 	local ED_VET_Ability_3_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- The 5 seconds duration starts when Invisibility ends.",
+		"- 5秒效果會在隱形結束後才開始計時。",
 		stacks_add_w_oth_dmg,
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 3-5 - Close Quarters Killzone +]--
+	--[+ Ability 3-5 - Close Quarters Killzone(肉搏戰) +]--
 	local ED_VET_Ability_3_5_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- For \"Infiltrate\", the buff is active immediately, only the duration starts when Invisibility ends.",
-		"- Beyond 12.5 meters, the Damage buff decreases linearly until it loses its effect at 30 meters:",
+		"- 對「滲透」而言，增益會立即生效，但計時會在隱形結束時才開始。",
+		"- 超過12.5米後，傷害增益會隨距離線性衰減，至30米時歸0：",
 		"_______________________________",
-		"Distance(m):  1-12.5|   15|   20|   25|   30",
-		"Damage(%):         15| ~13|    ~9|   ~4|     0",
+		"距離(m):    1-12.5|   15|   20|   25|   30",
+		"傷害(%):           15| ~13|   ~9|   ~4|    0",
 		"_______________________________",
 		stacks_add_w_oth_dmg,
 	}, "\n"), enhdesc_col)
 
 --[+ +KEYSTONES+ +]--
-	--[+ Keystone 1 - Marksman's Focus +]--
+	--[+ Keystone 1 - Marksman's Focus(狙擊專注) +]--
 	local ED_VET_Keystone_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Drops Stacks based on movement:",
-		"-- Walking removes 1 Stack per second.",
-		"-- Sprinting removes 1 Stack every 0.5 seconds.",
-		"-- Also accounts for respective Move Speed while Sliding.",
-		"- The Finesse bonus Stacks additively with other Weakspot and Finesse Damage buffs, and multiplicatively with Power level buffs from Weapon Blessings.",
-		"- The Reload Speed Stacks additively with buffs from \"Fleeting Fire\", \"Tactical Reload\", \"Volley Adept\", the small Reload Speed node, Weapon Perks, Weapon Blessings, and Celerity Stimm.",
-		"- The Reload Speed buff also increases the Speed of the loading special action of Combat Shotguns.",
+		"- 疊加(Stacks)會因移動方式而流失：",
+		"-- 走路(Walking)每秒移除1層疊加。",
+		"-- 衝刺(Sprinting)每0.5秒移除1層疊加。",
+		"-- 滑行(Sliding)時，也會依移動速度相應流失。",
+		"- 提供的「技巧(Finesse)」加成與其他弱點(Weakspot)與技巧傷害Buff採加法疊加，與武器祝福提供的威力(Power level)增益則乘法計算。",
+		"- 換彈速度(Reload Speed)加成與「集火」、「戰術裝填」、「齊射能手」、小型換彈速度天賦、武器專長、武器祝福、以及敏捷興奮劑等以加法疊加。",
+		"- 此換彈速度同樣提升戰鬥霰彈槍特殊裝填動作速度。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 1-1 - Chink in their Armour +]--
+	--[+ Keystone 1-1 - Chink in their Armour(滲透盔甲) +]--
 	local ED_VET_Keystone_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- When at or above 10 Focus Stacks, grants 10% Rending to all attacks boosting Damage against armor types Carapace, Flak, Maniac, Unyielding (including Damage of explosions and DoTs).",
-		"- Only affects Veteran's own Damage.",
+		"- 當「專注( Focus )」疊加達到10層或以上時，提供10%撕裂(Rending)效果，提升對甲殼、防彈、狂熱者、不屈敵等護甲類型的傷害(包含爆炸與持續傷害DoTs)。",
+		"- 僅影響老兵自身的傷害。",
 		stacks_add_w_oth_rend_brit,
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 1-2 - Tunnel Vision +]--
+	--[+ Keystone 1-2 - Tunnel Vision(視野狹窄) +]--
 	local ED_VET_Keystone_1_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- This Talent does two things:",
-		"-- 1. Per Focus Stack, increases the amount of any Toughness Replenished by Melee kills and Talents by 5% (up to +50% or, if \"Long Range Assassin\", up to +75%).",
-		"--- Does not apply to Coherency Toughness Regeneration.",
-		"--- For example, at 10 Stacks, a Veteran with 152 Max Toughness killing an enemy with a Melee attack replenishes 152x(0.05+0.05x0.5)=11.4 Toughness (HUD rounds up).",
+		"- 此天賦有兩個效果：",
+		"-- 1. 每層「專注」疊加，皆可提升近戰擊殺與天賦所回復的韌性量5%(最高可+50%，若搭配「遠程刺客」則可+75%)。",
+		"--- 不會影響協同韌性再生。",
+		"--- 舉例：若達10層疊加，老兵最大韌性為152，近戰擊殺時可回復152 x (0.05 + 0.05 x 0.5) = 11.4韌性(介面通常四捨五入)。",
 		"--"..z_eff_of_this_tougn_rep,
-		"-- 2. Ranged Weakspot kills replenish 10% of Maximum Stamina.",
-		"--- Can proc multiple times when Cleaving.",
+		"-- 2. 遠程弱點擊殺會回復10%最大耐力。",
+		"--- 當順劈(Cleave)時同樣可多次觸發。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-3 - Long Range Assassin +]--
@@ -329,95 +297,91 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Keystone 1-4 - Camouflage +]--
 	-- local ED_VET_Keystone_1_rgb = iu_actit(table.concat({ "", }, "\n"), enhdesc_col)
 
-	--[+ Keystone 2 - Focus Target! +]--
+	--[+ Keystone 2 - Focus Target!(鎖定目標!) +]--
 	local ED_VET_Keystone_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Upon Tagging an enemy, applies the amount of Focus Target Stacks currently held by Veteran to the enemy (always at least 1), and resets Veteran's Stack count to 1.",
-		"- Per applied Stack, increases any Damage taken by the Tagged enemy by 4%.",
-		"- This debuff lasts for the duration of the Tag (25 seconds) and can Stack up to 8 times on a single enemy.",
-		"- Enemies Tagged with this Talent are highlighted yellow.",
-		"- The current amount of Stacks on an enemy can only be overwritten if the amount of new Stacks to be applied is higher than the current one.",
-		"- Successfully overwriting Stacks refreshes the 25 seconds duration.",
-		"- Multiple Veterans can overwrite each other's Tags unless there are already 8 Stacks on the enemy.",
+		"- 老兵標記(Tag)敵人時，會將目前的「鎖定目標」疊加層數(至少1層)套用到該敵人身上，並將老兵的此疊加重置為1層。",
+		"- 每層疊加可使被標記敵人承受的所有傷害額外增加4%。",
+		"- 該Debuff持續與標記相同(25秒)，對同個敵人最多可疊加8層。",
+		"- 被此天賦標記的敵人會以黃色高亮。",
+		"- 若新套用的疊加層數大於敵人當前已有層數，才可覆蓋；並在成功覆蓋時重新計算25秒持續。",
+		"- 多名老兵可相互覆蓋，除非敵人已經累積8層。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 2-1 - Target Down! +]--
+	--[+ Keystone 2-1 - Target Down!(目標擊倒!) +]--
 	local ED_VET_Keystone_2_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Up to 40% of Max Toughness/Stamina at 8 Stacks.",
+		"- 在8層疊加時，可達到最高40%最大韌性/耐力回復。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 2-2 - Redirect Fire! +]--
+	--[+ Keystone 2-2 - Redirect Fire!(轉移火力!) +]--
 	local ED_VET_Keystone_2_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Up to 12% increased Damage at 8 Stacks.",
+		"- 在8層疊加時，最高可提供12%額外傷害。",
 		stacks_add_w_oth_dmg,
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2-3 - Focused Fire +]--
 	-- local ED_VET_Keystone_2_3_rgb = iu_actit(table.concat({ "", }, "\n"), enhdesc_col)
 
-	--[+ Keystone 3 - Weapons Specialist +]--
+	--[+ Keystone 3 - Weapons Specialist(武器專家) +]--
 	local ED_VET_Keystone_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		-- "- Generally, whether a Stack is allocated to Ranged Specialist or Melee Specialist depends on which weapon is equipped when the enemy dies.",
-		-- "-- Kills by DoTs allocate Stacks accordingly.",
-		-- "-- Kills by DoTs while having other items equipped (Grenade, Medpack, Ammo crate, Books, etc) do not generate any Stacks.",
-		"- Ranged Specialist Stacks additively with Celerity Stimm. Crit chance increase caps out at 3 Stacks in practicality, granting a guaranteed Ranged Crit.",
-		"- Melee Specialist Stacks additively with related buffs from \"Trench Fighter Drill\" and Celerity Stimm.",
+		"-- 「遠程專家」疊加可與敏捷興奮劑加法疊加。實際上，暴擊率在疊加3層時即可達到100%遠程暴擊。",
+		"-- 「近戰專家」疊加與「戰壕兵訓練」以及敏捷興奮劑的相關加成採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 3-1 - Always Prepared +]--
+	--[+ Keystone 3-1 - Always Prepared(有備無患) +]--
 	local ED_VET_Keystone_3_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- For example, Veteran with 6 Ranged Specialist Stacks and a weapon missing 36 bullets in its clip transfers 36x0.33x(6/10)=7.128 bullets which is rounded up to 8.",
+		"- 舉例：若老兵擁有6層「遠程專家」，武器彈匣中缺少36發子彈時，可轉移(36 x 0.33 x (6/10))=7.128，向上取整為8發。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 3-2 - Invigorated +]--
+	--[+ Keystone 3-2 - Invigorated(活力煥發) +]--
 	local ED_VET_Keystone_3_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Procs separately to the Stamina Replenishment from \"Duck and Dive\", \"Get Back in the Fight!\", and \"Target Down!\".",
+		"- 與「靈活應對」、「重投戰鬥!」、「目標擊倒!」的耐力回復可分開各自觸發。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 3-3 - On Your Toes +]--
+	--[+ Keystone 3-3 - On Your Toes(時刻警覺) +]--
 	local ED_VET_Keystone_3_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Each replenishment has a 3 seconds internal Cooldown that is tracked separately.",
+		"- 每次回復都具有3秒的內部冷卻，且各自獨立計算。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 3-4 - Fleeting Fire +]--
+	--[+ Keystone 3-4 - Fleeting Fire(集火) +]--
 	local ED_VET_Keystone_3_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with buffs from \"Marksman's Focus\", \"Tactical Reload\", \"Volley Adept\", the small Reload Speed node, Weapon Perks, Weapon Blessings, and Celerity Stimm.",
+		"- 與「狙擊專注」、「戰術換彈」、「齊射能手」、小型換彈速度天賦、武器專長、武器祝福、以及敏捷興奮劑等以加法疊加。",
 		this_also_incr_speed_load_com_shotg,
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 3-5 - Conditioning +]--
+	--[+ Keystone 3-5 - Conditioning(身體調節) +]--
 	local ED_VET_Keystone_3_5_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks multiplicatively with the Stamina Cost Reduction buff from Celerity Stimm:",
-		"-- 1. Reduces Stamina drain while Sprinting.",
-		"--- Stacks multiplicatively with the Sprint Cost Reduction buff from Celerity Stimm and Sprint Efficiency perk on Curios, Ranged and Melee weapons.",
-		"-- 2. Reduces Stamina drain when Blocking a Melee attack.",
-		"--- Stacks multiplicatively with Block Cost Reduction buff from Block Efficiency perk on Curios and Melee weapons.",
-		"-- 3. Reduces the Stamina drain when Pushing and also during Deadshot's duration.",
+		"- 與敏捷興奮劑提供的「耐力消耗減少」採乘法疊加：",
+		"-- 1. 減少衝刺時的耐力消耗。",
+		"--- 與敏捷興奮劑、以及珍品、遠程、近戰武器上「衝刺效率」採乘法計算。",
+		"-- 2. 減少格擋近戰攻擊時的耐力消耗。",
+		"--- 與珍品、近戰武器上的「格擋效率」採乘法計算。",
+		"-- 3. 減少推擊(Pushing)和「亡命射手」效果期間的耐力消耗。",
 	}, "\n"), enhdesc_col)
 
 --[+ +PASSIVES+ +]--
-	--[+ Passive 1 - Longshot +]--
+	--[+ Passive 1 - Longshot(遠射) +]--
 	local ED_VET_Passive_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases any Damage against enemies beyond 12.5 meters.",
-		"- The Damage buff increases linearly up to 20% at 30 meters. Within 12.5 meters distance, the Talent has no effect:",
+		"- 提升對12.5米以外敵人的所有傷害。",
+		"- 傷害增益會在線性範圍內提升至30米時最高+20%，若距離在12.5米內則無效果：",
 		"_______________________________",
-		"Distance(m):  1-12.5|   15|   20|   25|   30",
-		"Damage(%):           0|  ~3|    ~9|  ~15|   20",
+		"距離(m):    1-12.5|   15|   20|   25|   30",
+		"傷害(%):           0|  ~3|    ~9|  ~15|   20",
 		"_______________________________",
-		"- This also increases the Damage of explosions and DoTs as long as Veteran stays more than 12.5 meters away from the enemy.",
+		"- 只要老兵與敵人的距離大於12.5米，爆炸與持續傷害(DoTs)也會受到此增益。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 2 - Close Order Drill +]--
+	--[+ Passive 2 - Close Order Drill(密集隊形訓練) +]--
 	local ED_VET_Passive_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		-- "- Reduces Toughness Damage taken by 11% per Ally in Coherency.",
@@ -425,177 +389,175 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		stacks_mult_w_other_dmg_red_buffs,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 3 - One Motion +]--
+	--[+ Passive 3 - One Motion(行雲流水) +]--
 	local ED_VET_Passive_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases Wield Speed by 25%.",
-		"- This Reduces the time of Wielding actions when Swapping item slots (Weapons, Grenades, Stimms, Med packs, Ammo crates, Books, etc).",
-		"- For example, when switching to Boltgun or Helbore Lasguns, it takes 1.5 seconds (left-click) or 1.25 seconds (alt fire) until the Shooting/Charging actions can be started. These times are reduced by the Talent to 1.2 seconds and 1 second respectively. For other Weapons, this Talent does not provide significant wield time Reductions.",
+		"- 提升25%的武器切換速度。",
+		"- 減少從切換物品插槽(武器、手雷、興奮劑、醫療包、彈藥箱、書本等)到可使用行為(如射擊、蓄力)的時間。",
+		"- 舉例：切換到爆彈槍或冥潮雷射槍時，通常需要1.5秒(左鍵)或1.25秒(副射)才可開始射擊、蓄力；有此天賦後分別縮短為1.2秒與1秒。對其他武器影響可能不顯著。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 4 - Exhilarating Takedown +]--
+	--[+ Passive 4 - Exhilarating Takedown(振奮擊倒) +]--
 	local ED_VET_Passive_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Killing enemies with Ranged Weakspot hits does two things:",
-		"-- 1. Replenishes 15% of Maximum Toughness.",
-		"--- Can proc multiple times per shot when Cleaving.",
+		"- 以遠程弱點擊殺敵人時會觸發兩個效果：",
+		"-- 1. 回復15%最大韌性。",
+		"--- 當順劈(Cleave)時，每次擊殺都會觸發，可多次生效。",
 		"--"..z_eff_of_this_tougn_rep,
-		"-- 2. Grants Stacks (up to 3).",
-		"--- Stacks last for 8 seconds and can be refreshed during active duration.",
-		"--- Per Stack, reduces Toughness Damage taken by 10%.",
-		"--- Stacks multiplicatively with itself, up to 27.1% at Max Stacks (1-0.9³=0.271), and with other Damage Reduction buffs.",
+		"-- 2. 獲得最多3層疊加。",
+		"--- 疊加持續8秒，可在持續期間內刷新。",
+		"--- 每層減少10%的韌性傷害。",
+		"--- 疊加間以乘法計算，最高3層時為約27.1%減傷(1-0.9³=0.271)，可與其他減傷Buff乘法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 5 - Volley Adept +]--
+	--[+ Passive 5 - Volley Adept(齊射能手) +]--
 	local ED_VET_Passive_5_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- The buff is held until consumed upon Reloading.",
-		"- Stacks additively with Reload Speed buffs from \"Fleeting Fire\", \"Marksman's Focus\", \"Tactical Reload\", the small Reload Speed node, Weapon Perks, Weapon Blessings, and Celerity Stimm.",
+		"- Buff會一直存在直到進行換彈時被消耗。",
+		"- 與「集火」、「狙擊專注」、「戰術換彈」、小型換彈速度天賦、武器專長、武器祝福、以及敏捷興奮劑等以加法疊加。",
 		this_also_incr_speed_load_com_shotg,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 6 - Charismatic +]--
+	--[+ Passive 6 - Charismatic(超凡魅力) +]--
 	local ED_VET_Passive_6_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"Increases Veteran's Base Coherency radius from 8 meters to 12 meters.",
+		"將老兵的基礎協同範圍由8米提升至12米。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 7 - Confirmed Kill +]--
+	--[+ Passive 7 - Confirmed Kill(擊殺紀錄) +]--
 	local ED_VET_Passive_7_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Killing an Elite or a Special does two things:",
-		"-- 1. Immediately Replenishes 10% of Maximum Toughness per kill.",
-		"--- Can proc multiple times when Cleaving.",
-		"-- 2. Additionally per kill, replenishes 2% of Maximum Toughness per second for 10 seconds..",
-		"--- This replenishment over time effect can proc multiple times when Cleaving and Stacks without a cap (the default HUD displays only a limited amount of buff icons).",
+		"- 當擊殺菁英或專家敵人時，觸發兩項效果：",
+		"-- 1. 立即回復10%最大韌性。",
+		"--- 若同一擊殺動作順劈多個菁英、專家敵人，會多次觸發。",
+		"-- 2. 每次擊殺，於10秒內每秒回復2%最大韌性。",
+		"--- 此持續回復同樣可在一次擊殺中多次觸發(若順劈)，且可無上限疊加(介面圖示可能無法完全顯示)。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 8 - Tactical Reload +]--
+	--[+ Passive 8 - Tactical Reload(戰術換彈) +]--
 	local ED_VET_Passive_8_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases Reload animation Speed by 25% if the current ammo count in clip is above 0 when Reloading.",
-		"- Stacks additively with Reload Speed buffs from \"Fleeting Fire\", \"Marksman's Focus\", \"Volley Adept\", the small Reload Speed node, Weapon Perks, Weapon Blessings, and Celerity Stimm.",
+		"- 當彈匣尚有子彈時進行換彈，可使換彈動畫速度提升25%。",
+		"- 與「集火」、「狙擊專注」、「齊射能手」、小型換彈速度天賦、武器專長、武器祝福、以及敏捷興奮劑等以加法疊加。",
 		this_also_incr_speed_load_com_shotg,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 9 - Out for Blood +]--
+	--[+ Passive 9 - Out for Blood(嗜血) +]--
 	local ED_VET_Passive_9_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Procs on Melee and Ranged kills as well as on kills from explosions.",
-		"- Procs additionally to Weapon Blessings like \"Inspiring Barrage\", \"Reassuringly Accurate\", \"Gloryhunter\".",
-		"- When the Talent procs on a Melee kill, it replenishes 5% of Max Toughness additionally to Veteran's base 5% of Max Toughness gained on Melee kill.",
-		"- For example, killing 3 enemies with a Melee attack with 184 Max Toughness, Veteran would replenish 184x(0.15+0.15)=55.2 Toughness (HUD rounds: 56).",
+		"- 可透過近戰、遠程擊殺以及爆炸擊殺觸發。",
+		"- 與「激勵彈幕」、「慰藉精準」、「榮耀獵手」等武器祝福同時生效。",
+		"- 當以近戰擊殺觸發此天賦時，可額外回復5%最大韌性，並與老兵原本的近戰擊殺回復5%效果累加，共計10%。",
+		"- 舉例：同一次近戰攻擊擊殺3個敵人，若老兵最大韌性為184，則回復184 x (0.15 + 0.15) = 55.2韌性(介面顯示約56)。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 10 - Get Back in the Fight! +]--
+	--[+ Passive 10 - Get Back in the Fight!(重投戰鬥!) +]--
 	local ED_VET_Passive_10_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Lets Veteran move through Fire patches without hindrance.",
+		"- 使老兵可不受阻礙地穿過火焰區域。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 11 - Catch a Breath +]--
+	--[+ Passive 11 - Catch a Breath(喘息片刻) +]--
 	local ED_VET_Passive_11_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		z_eff_of_this_tougn_rep,
-		"- The proximity check ignores map geometry.",
-		"- Does not interact with Coherency Toughness.",
+		"- 鄰近判斷( Proximity check )不受地形影響。",
+		"- 不會影響協同韌性。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 12 - Grenade Tinkerer +]--
+	--[+ Passive 12 - Grenade Tinkerer(手雷專家) +]--
 	local ED_VET_Passive_12_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Frag Grenade:",
-		"-- Does not affect Bleeds applied by the explosion.",
-		"- Increases the radii of its epicenter and Max Range to 2.5 meters and 12.5 meters respectively.",
-		"- Smoke Grenade:",
-		"-- increases the cloud duration  from 15 to 30 seconds.",
-		"- The grenade Damage buffs Stack additively with Damage buffs from \"Bring it Down!\", \"Close Quarters Killzone\" (if within 30 meters to the enemy), \"Competitive Urge\", \"Covering Fire\" (if applied to Veteran by another Veteran), \"Longshot\" (if not within 12.5 meters to the enemy), \"Redirect Fire!\", \"Skirmisher\", \"Superiority Complex\" (against Elites ), \"Surprise Attack\", and aura \"Fire Team\".",
+		"- 破片手雷：",
+		"-- 不影響爆炸流血(Bleed)的應用。",
+		"- 將爆炸中心半徑與最大範圍分別提升至2.5米與12.5米。",
+		"- 煙霧手雷：",
+		"-- 煙霧雲持續時間由15秒延長至30秒。",
+		"- 此天賦提供的手雷傷害加成可與「幹掉它!」、「肉搏戰」（若在30米內）、「求勝心」、「火力掩護」（若由另一位老兵施加）、「遠射」（若在12.5米以外）、「轉移火力!」、「遊擊者」、「優越情節」（針對精英）、「突襲」以及光環「火力小分隊」等傷害增益加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 13 - Covering Fire +]--
+	--[+ Passive 13 - Covering Fire(火力掩護) +]--
 	local ED_VET_Passive_13_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Damage increase can be refreshed during active duration.",
+		"- 傷害增益可在持續時間內被刷新。",
 		stacks_add_w_oth_dmg,
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 14 - Serrated Blade +]--
+	--[+ Passive 14 - Serrated Blade(鋸齒刀刃) +]--
 	local ED_VET_Passive_14_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"Melee attacks (including Melee special actions of Ranged weapons) apply 1 Stack of Bleed to enemies.",
-		"- Up to 16 Max Bleed Stacks on a target.",
-		"- Can't apply Bleed through shields.",
-		"- Bleed:",
-		"-- Same as other sources of Bleed.",
-		"-- Lasts 1.5 seconds.",
-		"-- Ticks every 0.5 seconds.",
-		"-- Refreshes duration on Stack application.",
-		"-- Above average armor Damage modifiers across the board, low armor Damage modifier against Carapace.",
+		"近戰攻擊(包含遠程武器的近戰特殊動作)會對敵人施加1層流血。",
+		"- 單個目標最多可達16層流血。",
+		"- 無法穿透護盾造成流血。",
+		"- 流血：",
+		"-- 與其他流血效果相同。",
+		"-- 持續1.5秒。",
+		"-- 每0.5秒造成傷害。",
+		"-- 有新層數時會刷新持續時間。",
+		"-- 整體對護甲傷害修正略高，對甲殼傷害修正偏低。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 15 - Agile Engagement +]--
+	--[+ Passive 15 - Agile Engagement(靈活接敵) +]--
 	local ED_VET_Passive_15_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Active buff duration starts on the respective kill.",
+		"- Buff的持續時間於該次擊殺時開始計算。",
 		stacks_add_w_oth_dmg,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 16 - Kill Zone +]--
+	--[+ Passive 16 - Kill Zone(殺戮地帶) +]--
 	local ED_VET_Passive_16_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		stacks_add_w_oth_dmg,
-		"- The proximity check ignores map geometry.",
+		"- 鄰近判斷不受地形影響。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 17 - Opening Salvo +]--
+	--[+ Passive 17 - Opening Salvo(首輪齊射) +]--
 	local ED_VET_Passive_17_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"For example, with a weapon that has a clip size of 43 rounds, the additional Crit chance is granted for the first 9 rounds (i.e. as long as the current ammo in clip percentage is greater or equal to 0.8; 35/43=0.81 but 34/43=0.79).",
+		"舉例：若武器彈匣容量為43發，則前9發子彈(佔比≥80%)具有額外爆擊機率；當彈匣中剩34發(34/43=0.79)時，已低於80%門檻，故不再享受加成。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 18 - Field Improvisation +]--
+	--[+ Passive 18 - Field Improvisation(臨場發揮) +]--
 	local ED_VET_Passive_18_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- This Talent upgrades all Ammo crates and Med packs deployed by any player as long as Veteran is alive.",
-		"- Note that the Healing effect is always actively 'fighting' against the initial grimoire_chunk of 40 base Corruption Damage per book. But since this chunk cannot be removed, this can Quickly Drain a Med pack's limited reserve of 500 Health.",
-		"- To a minor extent, this also applies to players who are Downed within the Med pack's 3 meters radius: Despite the consumption of the Health reserve being reduced by 70% when healing a Downed player (the amount of Health restored to a Downed player is also reduced by 90%), the Med pack still can drain fairly quickly. ",
+		"- 只要老兵存活，任何玩家所放置的彈藥箱或醫療包都會被升級。",
+		"- 請注意，治療效果會不斷嘗試抑制魔法書造成的40基礎腐蝕傷害，但此40點無法消除，可能會使醫療包的500基礎血量快速消耗。",
+		"- 若玩家在3米範圍內倒地，雖然對倒地玩家的治療消耗量減少70%，回復量也減少90%，但醫療包的血量依然可能流失很快。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 19 - Twinned Blast +]--
 	local ED_VET_Passive_19_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Does not interact with the \"Enhanced Blitz\" difficulty mutator.",
-		"- The twinned grenade's fuse time is increased by 0.3 seconds.",
+		"- 與難度詞綴「閃擊強化」不互動。",
+		"- 第二顆手雷的引信時間增加0.3秒。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 20 - Demolition Stockpile +]--
+	--[+ Passive 20 - Demolition Stockpile(炸藥儲備) +]--
 	local ED_VET_Passive_20_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Does not interact with the \"Enhanced Blitz\" difficulty mutator.",
+		"- 與難度詞綴「閃擊強化」不互動。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 21 - Grenadier +]--
+	--[+ Passive 21 - Grenadier(擲彈兵) +]--
 	local ED_VET_Passive_21_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with the \"Enhanced Blitz\" difficulty mutator that adds another 2 grenades to Veteran's maximum grenade capacity.",
+		"- 與「閃擊強化」提供的加2最大手雷容量採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 22 - Leave No One Behind +]--
+	--[+ Passive 22 - Leave No One Behind(不拋棄不放棄) +]--
 	local ED_VET_Passive_22_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		-- "This Talent does three things:",
-		"- Always grants Veteran 20% increased Interaction Speed when Reviving Knocked down Allies, when Pulling up them from ledges and Freeing from nets.",
-		"- The Revive speed buff Stacks additively with Revive Speed (Ally) from Curios.",
-		"- This Talent does not increase the Interaction Speed when Rescuing Allies after they have respawned.",
-		-- "- Additionally, if an Ally is Knocked down or Incapacitated, grants Veteran Immunity to Stuns from both Melee and Ranged attacks and increases Movement Speed by 20% as long as Veteran is looking towards the Ally (view check ignores map geometry).",
-		"-- The Movement Speed buff Stacks additively with related buffs from \"Infiltrate\", aura \"Close and Kill\", the small Movement Speed node, and Weapon Blessings like \"Rev it Up\".",
-		"- \"Incapacitated\" includes: netted (by Trapper), pounced (by Pox Hounds), grabbed (by Daemonhost, Chaos Spawn, Mutants), eaten by Beast of Nurgle, hanging from ledge, and waiting for rescue after respawn.",
+		"- 老兵在拉起倒地隊友、從懸崖邊拉起或解救隊友時，互動速度(Interaction Speed)增加20%。",
+		"- 與珍品提供的「復活速度(Revive Speed)」加法疊加。",
+		"- 不影響已重生隊友(Rescue)的互動速度。",
+		"-- 移動速度加成與「滲透」、光環「抵近殺敵」、小型移動速度天賦、以及武器祝福「提速」採加法疊加。",
+		"- 「被束縛」包含：被陷阱兵投網、被瘟疫獵犬撲倒、被惡魔宿主、混沌魔物、變種人抓取、被納垢巨獸吞食、懸掛於邊緣、以及復活點等待救援。",
 		stacks_mult_w_other_dmg_red_buffs,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 23 - Precision Strikes +]--
+	--[+ Passive 23 - Precision Strikes(堅定不移) +]--
 	local ED_VET_Passive_23_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		stacks_add_w_oth_dmg,
@@ -604,55 +566,55 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Passive 24 - Determined +]--
 	-- local ED_VET_Passive_24_rgb = iu_actit(table.concat({ "", }, "\n"), enhdesc_col)
 
-	--[+ Passive 25 - Deadshot +]--
+	--[+ Passive 25 - Deadshot(亡命射手) +]--
 	local ED_VET_Passive_25_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- These buffs Stack additively with respective buffs from \"Executioner's Stance\".",
-		"- The Spread Reduction also Stacks with the related buff from the  \"Run and Gun \" Weapon Blessing.",
-		"- The Recoil Reduction also Stacks with the related buff from the \"Powderburn\" Weapon Blessing.",
-		"- When stamina reaches 0, the Talent loses its effect and applies a fixed immediate sway.",
-		"- For example, a Veteran with 7 Max Stamina aiming down sights for 5 seconds and shooting twice during this time will have 7-(5x0.75+2x0.25)=2.75 Stamina left after the 5 seconds have elapsed; or 39% as per player HUD. The Stamina Cost Reduction buffs from \"Conditioning\" and Celerity Stimm reduce this drain effect.",
-		"{#color(255, 35, 5)}- Note that this Talent has no effect on Plasma Gun.{#reset()}",
+		"- 相關Buff與「處決者姿態」可加法疊加。",
+		"- 武器散射(Spread)加成可與武器祝福「連跑帶打」採加法疊加。",
+		"- 後座力(Recoil)加成可與武器祝福「火藥灼傷」採加法疊加。",
+		"- 若耐力降為0，此天賦效果消失，並立即產生固定幅度的晃動(Sway)。",
+		"- 舉例：老兵最大耐力為7，開鏡瞄準5秒並在此期間射擊兩次，計算方式為 7 - (5 x 0.75 + 2 x 0.25) = 2.75耐力(約39%)。若搭配「身體調節」與敏捷興奮劑則可減少此消耗。",
+		"{#color(255, 35, 5)}- 注意此天賦對等離子槍無效。{#reset()}",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 26 - Born Leader +]--
+	--[+ Passive 26 - Born Leader(天生領袖) +]--
 	local ED_VET_Passive_26_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- This is effect is always active, even if Veteran is at 100% Toughness, and considers all Toughness replenished by Talents, Weapon Blessings, and Coherency Regeneration.",
-		"- Does not Stack with the same Talent from another Veteran, each Veteran spreads their amounts separately.",
+		"- 此效果無時限，即便老兵韌性為100%也會計算，並針對所有天賦、武器祝福與協同韌性再生的回復。",
+		"- 不會與另一位老兵的同名天賦重複疊加，各自獨立計算。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 27 - Keep Their Heads Down! +]--
+	--[+ Passive 27 - Keep Their Heads Down!(讓他們全趴下!) +]--
 	local ED_VET_Passive_27_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with related buff from \"Competitive Urge\", the small Suppression node, and the Weapon Blessing \"Powderburn\".",
+		-- 中文翻譯
+		"- 與「求勝心」、小型壓制天賦、以及武器祝福「火藥灼傷」的相關效果採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 28 - Reciprocity +]--
+	--[+ Passive 28 - Reciprocity(互惠互利) +]--
 	local ED_VET_Passive_28_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Successfully Dodging enemy Melee or Ranged attacks (except Gunners, Reaper, Sniper) and Disabler attacks (Pox Hound jump, Trapper net, Mutant grab) grants Stacks (up to 5).",
-		"- Stacks last for 8 seconds and can be refreshed during active duration.",
-		-- "- Per stack, grants 5% additional crit chance to Melee and Ranged attacks.",
-		"- \"Successful dodge\" means Dodging an enemy attack that is locked on the player with an accordingly timed Dodge or Sliding action.",
-		"- \"The Ghost\", \"Hit and Run\" and \"Stripped Down\" Weapon Blessings can proc this Talent (only against Ranged attacks).",
+		"- 當成功閃避( Dodge )敵方近、遠程攻擊(除砲手、收割者、狙擊手)與特殊束縛攻擊(瘟疫獵犬撲擊、陷阱兵投網、變種人衝撞抓取)時，獲得疊加(最多5層)。",
+		"- 疊加持續8秒，可在期間內刷新。",
+		"-- 「成功閃避」指敵人已鎖定玩家，但玩家以正確時機的閃避或滑行動作來迴避該攻擊。",
+		"-- 武器祝福「幽靈」、「游擊」與「輕裝」可觸發此天賦(僅對遠程攻擊)。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 29 - Duck and Dive +]--
+	--[+ Passive 29 - Duck and Dive(靈活應對) +]--
 	local ED_VET_Passive_29_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Has an internal cooldown of 3 seconds.",
-		"- Procs on regular Dodges, Sliding Dodges, and Dodges while Sprint Dodging.",
-		"- Note that this Talent requires the character to have more than 0 Stamina.",
-		"- \"The Ghost\", \"Hit and Run\" and \"Stripped Down\" Weapon Blessings can also proc this Talent.",
+		"- 具有3秒的內部冷卻。",
+		"- 一般閃避( Dodge )、滑行閃避、以及衝刺閃避皆可觸發。",
+		"- 此天賦需角色擁有>0耐力才能生效。",
+		"- 武器祝福「幽靈」、「游擊」與「輕裝」同樣可觸發。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 30 - Fully Loaded +]--
+	--[+ Passive 30 - Fully Loaded(全副武裝) +]--
 	local ED_VET_Passive_30_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases Veteran's maximum Ammo in reserve by 25%.",
-		"- Rounds down.",
+		"- 使老兵的最大備彈量增加25%。",
+		"- 向下取整。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 31 - Tactical Awareness +]--
@@ -662,19 +624,19 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		doesnt_interact_w_c_a_r_from_curio,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 32 - Desperado +]--
+	--[+ Passive 32 - Desperado(亡命之徒) +]--
 	local ED_VET_Passive_32_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Also applies to Melee special actions of Ranged weapons.",
-		"- Crit chance Stacks additively with other sources of Crit chance.",
-		"- Finesse bonus Stacks additively with other Weakspot and Finesse Damage buffs, and multiplicatively with Power level buffs from Weapon Blessings.",
+		"- 同樣適用遠程武器的近戰特殊動作。",
+		"- 爆擊率加成與其他爆擊率來源加法疊加。",
+		"- 技巧(Finesse)加成與其他弱點、技巧傷害Buff加法疊加，與武器祝福的威力增益乘法計算。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 33 - Shock Trooper +]--
+	--[+ Passive 33 - Shock Trooper(突擊隊) +]--
 	local ED_VET_Passive_33_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- For Helbore Lasguns, Infantry Lasguns, Laspistols, and Recon Lasguns, allows every shooting action that Crits to not consume ammo.",
-		"- Weapons with guaranteed Crit sequences (Recon Lasguns) don't consume Ammo for any of the Critical shots.",
+		"- 若使用冥潮雷射槍、步兵激光槍、重型雷射手槍及偵查雷射槍時，若該射擊為暴擊則不消耗子彈。",
+		"- 若武器具有固定暴擊序列(如偵查雷射槍)，則所有暴擊射擊皆不消耗彈藥。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 34 - Superiority Complex +]--
@@ -687,46 +649,46 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	local ED_VET_Passive_35_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		stacks_mult_w_other_dmg_red_buffs,
-		"- If Veteran has bonus Toughness (yellow) from \"Duty and Honour\" or Zealot's \"Chorus of Spiritual Fortitude\", the Talent considers the temporary new Maximum for its 75% threshold.",
-		"- For example, with 198 Max Toughness, the Talent will be active as long as Veteran is above 198x0.75=148.5 Toughness; however, with 50 bonus Toughness, the new temporary threshold is (198+50)x0.75=186 Toughness. This temporary threshold lasts until the duration of bonus Toughness expires.",
+		"- 若老兵擁有「責任與榮譽」或狂信徒的「不屈靈魂合唱」提供的黃韌性(額外韌性)，則此天賦會將暫時增加後的最大韌性計入75%門檻。",
+		"- 舉例：原本最大韌性198，需保持大於198x0.75=148.5才視為達標；若另外有50點黃韌性，則臨時的最大韌性變為198+50=248，75%門檻為186，直到那50點黃韌性消失為止。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 36 - Demolition Team +]--
 	local ED_VET_Passive_36_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Procs regardless whether Veteran is in Coherency with Allies or not.",
+		"- 無論老兵是否處於協範圍內，都能觸發。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 37 - Exploit Weakness +]--
 	local ED_VET_Passive_37_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Critical hits with Melee attacks apply a Brittleness debuff to enemies boosting Damage against armor types Carapace, Flak, Maniac, Unyielding (including Damage of explosions and DoTs).",
-		"- Can also be applied by Crit hits with Melee special actions of ranged weapons.",
-		"- Stacks additively with Rending buffs that only boost a character's own Damage.",
-		"- This Talent's Brittleness debuff is unique: rending_debuff_medium. It Stacks 2 times and applies a rending_multiplier of 10% per Stack.",
-		"- This debuff being unique also means that it is, in regard to the Brittleness debuff cap on an enemy, in fact a separate debuff which Stacks additively with the regular Brittleness debuff from \"Onslaught\" and from Weapon Blessings \"Armourbane\", \"Can Opener\", \"Rending Shockwave\", \"Shattering Impact\", \"Supercharge\", and \"Thunderous\".",
-		"- It also Stacks additively with the other unique rending_burn_debuff from the \"Penetrating Flame\" Weapon Blessing.",
+		"- 近戰攻擊若發生暴擊，則對敵人施加脆弱Debuff，提升對甲殼、破片護甲、狂熱者、不屈類型護甲造成的傷害(包含爆炸與持續傷害)。",
+		"- 遠程武器的近戰特殊動作之暴擊同樣可施加此效果。",
+		"- 與只增強自身傷害的「撕裂」類Buff以加法疊加。",
+		"- 本天賦施加的是「rending_debuff_medium」，可疊加2次，每層提供10%的rending_multiplier。",
+		"- 此Debuff與「猛攻」天賦或「護甲之禍」、「開罐器」、「撕扯震盪」、「破碎衝擊」、「超級充能」、「雷鳴」等武器祝福可同時存在、並加法疊加。也與「穿透火焰」武器祝福提供的rending_burn_debuff加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 38 - Onslaught +]--
+	--[+ Passive 38 - Onslaught(猛攻) +]--
 	local ED_VET_Passive_38_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Repeated Melee and Ranged hits against the same target apply a Brittleness debuff to enemies boosting Damage against armor types Carapace, Flak, Maniac, Unyielding (including damage of explosions and DoTs).",
-		"- Procs on the second hit against an enemy.",
-		"- Stacks additively with the unique Brittleness debuff from \"Exploit Weakness\", with other Brittleness debuffs, and with Rending buffs that only boost a character's own Damage.",
+		"- 重複的近戰與遠程攻擊命中相同目標時，施加脆弱Debuff，提升對甲殼、破片護甲、狂熱者、不屈類型護甲造成的傷害(含爆炸與DoTs)。",
+		"- 於第二下攻擊起觸發。",
+		"- 與「趁火打劫」的獨特脆弱，以及其他脆弱與只提升自身傷害的撕裂Buff採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 39 - Trench Fighter Drill +]--
+	--[+ Passive 39 - Trench Fighter Drill(戰壕兵訓練) +]--
 	local ED_VET_Passive_39_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with related buffs from \"Weapons Specialist\" and Celerity Stimm.",
+		"- 與「武器專家」及敏捷興奮劑的相關增益採加法疊加。",
+
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 40 - Skirmisher +]--
+	--[+ Passive 40 - Skirmisher(遊擊者) +]--
 	local ED_VET_Passive_40_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Every second spent sprinting grants Stacks (up to 5).",
-		"- Stacks can be refreshed during active duration.",
+		"- 每持續衝刺(Sprinting)1秒便獲得疊加(最多5層)。",
+		"- 疊加可在持續期間內刷新。",
 		stacks_add_w_oth_dmg,
 	}, "\n"), enhdesc_col)
 
@@ -734,24 +696,24 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	local ED_VET_Passive_41_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		can_be_refr_dur_active_dur,
-		"- The Damage buff and Stagger buff stack additively with other related buffs, and multiplicatively with Power level buffs from Weapon Blessings.",
-		"- The Suppression buff Stacks additively with \"Keep Their Heads Down!\", the small Suppression node, and Weapon Blessing \"Powderburn\".",
+		"- 傷害與踉蹌增益與其他相關Buff採加法疊加，與武器祝福提供的威力(Power level)增益乘法計算。",
+		"- 壓制(Suppression)增益則與「讓他們全趴下!」、小型壓制天賦，以及武器祝福「火藥灼傷」加法疊加。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 42 - Rending Strikes +]--
 	local ED_VET_Passive_42_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Grants 10% Rending to all attacks boosting Damage against armor types Carapace, Flak, Maniac, Unyielding (including Damage of explosions and DoTs).",
-		"- Only affects Veteran's own Damage.",
+		"- 提供10%的撕裂(Rending)，提升對甲殼、防彈、狂熱者、不屈類型護甲的傷害(包含爆炸與DoTs)。",
+		"- 僅影響老兵自身傷害。",
 		stacks_add_w_oth_rend_brit,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 43 - Bring it Down! +]--
 	local ED_VET_Passive_43_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases any Damage against enemies with the Ogryn tag (Bulwark, Crusher, Reaper) and against enemies with the Monster tag (Beast of Nurgle, Chaos Spawn, Daemonhost, Plague Ogryn).",
+		"- 提升對擁有「歐格林」標籤（包含堡壘、粉碎者、收割者）與「巨獸」標籤（包含納垢獸、混沌魔物、惡魔宿主、瘟疫歐格林等）的傷害。",
 		stacks_add_w_oth_dmg,
-		"- Does not buff Damage against Captains/Twins who do not have the Monster tag.",
+		"- 不會增幅隊長/雙胞胎傷害，因其不具「巨獸」標籤。",
 	}, "\n"), enhdesc_col)
 
 --[+ ++OGRYN++ +]--

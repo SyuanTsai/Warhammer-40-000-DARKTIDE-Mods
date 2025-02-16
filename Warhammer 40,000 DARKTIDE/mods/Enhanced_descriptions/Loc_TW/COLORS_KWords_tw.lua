@@ -63,7 +63,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
     local Damagewrp_rgb = iu_actit("亞空間傷害", dmg_col)
 	--[++Finesse++]--
 	local fns_col = Color[mod:get("finesse_text_colour")](255, true) -- Do not translate this line!
-    local Finesse_rgb = iu_actit("精準", fns_col)
+    local Finesse_rgb = iu_actit("靈巧", fns_col)
     local Finesse_dmg_rgb = iu_actit("靈巧傷害", fns_col)
 	--[++Hit Mass++]--
 	local htms_col = Color[mod:get("hit_mass_text_colour")](255, true) -- Do not translate this line!
@@ -116,7 +116,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
 	local stgr_col = Color[mod:get("stagger_text_colour")](255, true) -- Do not translate this line!
     local Stagger_rgb = iu_actit("踉蹌", stgr_col)
     local Staggering_rgb = iu_actit("踉蹌中", stgr_col)
-    local Staggers_rgb = iu_actit("多次踉蹌", stgr_col)
+    local Staggers_rgb = iu_actit("暈眩", stgr_col)
     local Stun_rgb = iu_actit("暈眩", stgr_col)
     local Stuns_rgb = iu_actit("致眩", stgr_col)
     local Stunned_rgb = iu_actit("已暈眩", stgr_col)
