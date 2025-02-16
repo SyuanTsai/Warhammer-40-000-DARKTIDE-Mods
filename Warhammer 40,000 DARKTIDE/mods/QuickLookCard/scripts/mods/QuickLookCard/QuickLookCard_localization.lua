@@ -559,7 +559,7 @@ return {
 		["zh-cn"] = "伤口", -- 生命格
 		ja = "傷口", -- 傷口
 		ru = "РАНЫ", -- Дополнительные раны
-		["zh-tw"] = "傷口", -- 生命格
+		["zh-tw"] = "傷痕", -- 傷痕
 	},
 	trait_weapon_trait_reduce_sprint_cost = {
 		en = "SPRT", -- Sprint Efficiency
