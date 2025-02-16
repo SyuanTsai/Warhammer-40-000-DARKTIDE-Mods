@@ -303,15 +303,62 @@
 #### 老兵天賦
 
 - Inspiring Presence - 鼓舞人心
-- Focus Target! - 鎖定目標
 
 ##### 閃擊
+- Frag Grenade - 破片手雷
+- Shredder Frag Grenade - 粉碎者破片手雷
+- Krak Grenade - 穿甲手雷
+- Smoke Grenade - 煙霧手雷
 
 ##### 光環
+- Scavenger - 拾荒者
+- Survivalist - 生存專家
+- Fire Team - 火力小分隊
+- Close and Kill - 抵近殺敵
 
 ##### 主動技能
+- Volley Fire - 火力齊射
+- Executioner's Stance - 處決者姿態
+- Enhanced Target Priority - 目標引導增強
+- Counter-Fire - 火力反擊
+- The Bigger they Are... - 敵人越大...
+- Marksman - 鷹眼
+- Voice of Command - 發號施令
+- Duty and Honour - 責任與榮譽
+- Only In Death Does Duty End - 只有死亡，職責才會終結
+- For the Emperor! - 為了皇帝！
+- Infiltrate - 滲透
+- Low Profile - 低調
+- Overwatch - 掩護射擊
+- Hunter's Resolve - 獵手決意
+- Surprise Attack - 突襲
+- Close Quarters Killzone - 肉搏戰
 
 ##### 鑰石
 
+- Marksman's Focus - 狙擊專注
+- Chink in their Armour - 滲透盔甲
+- Tunnel Vision - 視野狹窄
+- Long Range Assassin - 遠程刺客
+- Camouflage - 偽裝
+- Focus Target! - 鎖定目標
+- Target Down! - 目標擊倒!
+- Redirect Fire! - 轉移火力!
+- Focused Fire - 集中火力
+- Weapons Specialist - 武器專家
+- Always Prepared - 有備無患
+- Invigorated - 活力煥發
+- On Your Toes - 時刻警覺
+- Fleeting Fire - 集火
+- Conditioning - 身體調節
+
 ##### 一般天賦
+
+- Longshot - 遠射
+- Close Order Drill - 密集隊形訓練
+- One Motion - 行雲流水
+- Exhilarating Takedown - 振奮擊倒
+- Volley Adept - 齊射能手
+- Charismatic - 超凡魅力
+- Confirmed Kill - 擊殺紀錄
 
