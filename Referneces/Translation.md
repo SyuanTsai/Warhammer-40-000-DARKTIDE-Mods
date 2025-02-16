@@ -361,4 +361,36 @@
 - Volley Adept - 齊射能手
 - Charismatic - 超凡魅力
 - Confirmed Kill - 擊殺紀錄
-
+- Get Back in the Fight! - 重投戰鬥!
+- Catch a Breath - 喘息片刻
+- Grenade Tinkerer - 手雷專家
+- Covering Fire - 火力掩護
+- Serrated Blade - 鋸齒刀刃
+- Agile Engagement - 靈活接敵
+- Kill Zone - 殺戮地帶
+- Opening Salvo - 首輪齊射
+- Field Improvisation - 臨場發揮
+- Twinned Blast - 雙響炮
+- Demolition Stockpile - 炸藥儲備
+- Grenadier - 擲彈兵
+- Leave No One Behind - 不拋棄不放棄
+- Precision Strikes - 堅定不移
+- Deadshot - 死亡射手
+- Born Leader - 天生領袖
+- Keep Their Heads Down! - 讓他們全趴下!
+- Reciprocity - 互惠互利
+- Duck and Dive - 靈活應對
+- Fully Loaded - 全副武裝
+- Tactical Awareness - 戰術意識
+- Desperado - 亡命之徒
+- Shock Trooper - 突擊隊
+- Superiority Complex - 優越情節
+- Iron Will - 鋼鐵意志
+- Demolition Team - 爆破小隊
+- Exploit Weakness - 趁火打劫
+- Onslaught - 猛攻
+- Trench Fighter Drill - 戰壕兵訓練
+- Skirmisher - 遊擊者
+- Competitive Urge - 求勝心
+- Rending Strikes - 裂擊
+- Bring it Down! - 幹掉它!
