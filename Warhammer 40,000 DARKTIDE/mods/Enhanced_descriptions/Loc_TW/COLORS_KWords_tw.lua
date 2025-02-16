@@ -104,7 +104,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
 	--[++Electrocuted++]--
 	local electr_col = Color[mod:get("electrocuted_text_colour")](255, true) -- Do not translate this line!
     local Electrocute_rgb = iu_actit("電擊", electr_col)
-    local Electrocution_rgb = iu_actit("電擊中", electr_col)
+    local Electrocution_rgb = iu_actit("眩暈", electr_col)
     local Electrocuted_rgb = iu_actit("被電擊", electr_col)
     local Electrocutes_rgb = iu_actit("電擊", electr_col)
     local Electrcuting_rgb = iu_actit("電擊中", electr_col)
@@ -117,7 +117,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
     local Staggering_rgb = iu_actit("踉蹌中", stgr_col)
     local Staggers_rgb = iu_actit("多次踉蹌", stgr_col)
     local Stun_rgb = iu_actit("暈眩", stgr_col)
-    local Stuns_rgb = iu_actit("多次暈眩", stgr_col)
+    local Stuns_rgb = iu_actit("致眩", stgr_col)
     local Stunned_rgb = iu_actit("已暈眩", stgr_col)
     local Staggered_rgb = iu_actit("已踉蹌", stgr_col)
 --[+++PSYKER+++]--
@@ -171,7 +171,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
 --[+ Talents +]--
 	local tal_col = Color[mod:get("talents_text_colour")](255, true) -- Do not translate this line!
 	local Scriers_gaze_rgb = iu_actit("占卜者的凝視", tal_col)
-	local Stun_gren_rgb = iu_actit("暈眩手榴彈", tal_col)
+	local Stun_gren_rgb = iu_actit("眩暈手榴彈", tal_col)
 	local Frag_gren_rgb = iu_actit("破片手榴彈", tal_col)
 	local Fragmentation_gren_rgb = iu_actit("破片手榴彈", tal_col)
 
