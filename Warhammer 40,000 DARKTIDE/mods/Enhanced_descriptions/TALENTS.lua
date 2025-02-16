@@ -919,24 +919,28 @@ local localization_templates = {
 	create_template("talent_tree_zea_aura0_000_desc_en", {"loc_talent_zealot_aura_toughness_damage_coherency_desc"}, {"en"}, function(locale, value) return "{damage_reduction:%s} "..COLORS_KWords.Toughness_dmg_red_rgb.." for you and Allies in Coherency."..TALENTS_Enh_desc.ED_ZEA_Aura_0_n_1_rgb end), -- damage_reduction: +7.5% - colors
 			--[+ French +]--
 	create_template("talent_tree_zea_aura0_000_desc_fr", {"loc_talent_zealot_aura_toughness_damage_coherency_desc"}, {"fr"}, function(locale, value) return "{damage_reduction:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." pour vous et les alliés en syntonie."..TALENTS_Enh_desc_fr.ED_ZEA_Aura_0_n_1_rgb_fr end), -- damage_reduction: +7.5% - colors
+			--[+ Traditional Chinese - 帝皇之諭 +]--
 
 	--[+ Aura 1 - Benediction +]--
 		-- create_template("talent_tree_zea_aura_001_en", {"loc_talent_zealot_aura_efficiency"}, {"en"}, function(locale, value) return "Benediction" end),
 	create_template("talent_tree_zea_aura_001_desc_en", {"loc_talent_zealot_toughness_aura_efficiency_desc"}, {"en"}, function(locale, value) return "{damage_reduction:%s} "..COLORS_KWords.Toughness_dmg_red_rgb.." for you and Allies in Coherency.\n\nThis is an augmented version of the base Aura - {talent_name:%s}."..TALENTS_Enh_desc.ED_ZEA_Aura_0_n_1_rgb end), -- damage_reduction: +15%. talent_name: The Emperor's Will -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_aura_001_desc_fr", {"loc_talent_zealot_toughness_aura_efficiency_desc"}, {"fr"}, function(locale, value) return "{damage_reduction:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." pour vous et les alliés en syntonie.\n\nCeci est une version augmentée de l'Aura de base - {talent_name:%s}."..TALENTS_Enh_desc_fr.ED_ZEA_Aura_0_n_1_rgb_fr end), -- damage_reduction: +15%. talent_name: The Emperor's Will -- colors
+			--[+ Traditional Chinese - 恩賜 +]--
 
 	--[+ Aura 2 - Beacon of Purity +]--
 		-- create_template("talent_tree_zea_aura_002_en", {"loc_talent_zealot_corruption_healing_coherency_improved"}, {"en"}, function(locale, value) return "Beacon of Purity" end),
 	create_template("talent_tree_zea_aura_002_desc_en", {"loc_talent_zealot_corruption_healing_coherency_improved_desc"}, {"en"}, function(locale, value) return "{corruption:%s} "..COLORS_KWords.Corruption_rgb.." heals from the current "..COLORS_KWords.Wound_rgb.." for you and Allies in Coherency every {interval:%s} second."..TALENTS_Enh_desc.ED_ZEA_Aura_2_rgb end), -- corruption: 1.5, interval: 1 -- s->second -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_aura_002_desc_fr", {"loc_talent_zealot_corruption_healing_coherency_improved_desc"}, {"fr"}, function(locale, value) return "Soigne {corruption:%s} de "..COLORS_KWords_fr.Corruption_rgb_fr.." de la blessure actuelle pour vous et les alliés en syntonie toutes les {interval:%s} secondes."..TALENTS_Enh_desc_fr.ED_ZEA_Aura_2_rgb_fr end), -- corruption: 1.5, interval: 1 -- s->second -- colors
+			--[+ Traditional Chinese - 純潔信標 +]--
 
 	--[+ Aura 3 - Loner +]--
 		-- create_template("talent_tree_zea_aura_003_en", {"loc_talent_zealot_always_in_coherency"}, {"en"}, function(locale, value) return "Loner" end),
 	create_template("talent_tree_zea_aura_003_desc_en", {"loc_talent_zealot_always_in_coherency_description"}, {"en"}, function(locale, value) return "Makes Zealot count as being in Coherency with one Ally which enables the lowest rate of Coherency "..COLORS_KWords.Toughness_rgb.." Regeneration of "..COLORS_Numbers.n_3_75_rgb.." "..COLORS_KWords.Toughness_rgb.." per second."..TALENTS_Enh_desc.ED_ZEA_Aura_3_rgb end), -- coherency_min_stack:2.
 			--[+ French +]--
 	create_template("talent_tree_zea_aura_003_desc_fr", {"loc_talent_zealot_always_in_coherency_description"}, {"fr"}, function(locale, value) return "Le Fanatique compte comme étant en syntonie avec un allié, ce qui permet le taux le plus bas de régénération de "..COLORS_KWords_fr.Toughness_rgb_fr.." en syntonie de "..COLORS_Numbers.n_3_75_rgb.." de "..COLORS_KWords_fr.Toughness_rgb_fr.." par seconde."..TALENTS_Enh_desc_fr.ED_ZEA_Aura_3_rgb_fr end), -- coherency_min_stack:2.
+			--[+ Traditional Chinese - 孤狼 +]--
 
 --[+ +ABILITIES+ +]--
 	--[+ Ability 0 - Chastise the Wicked +]--
@@ -944,53 +948,62 @@ local localization_templates = {
 	create_template("talent_tree_zea_abil0_000_desc_en", {"loc_talent_zealot_2_combat_description_new"}, {"en"}, function(locale, value) return "Dash forward, Replenishing {toughness:%s} "..COLORS_KWords.Toughness_rgb..". Your next Melee Hit gains for "..COLORS_Numbers.n_3_rgb.." seconds {damage:%s} "..COLORS_KWords.Damage_rgb.." and is a guaranteed "..COLORS_KWords.Crit_hit_rgb..".\nBase Cooldown: {cooldown:%s} seconds."..TALENTS_Enh_desc.ED_ZEA_Ability_0_rgb end), -- toughness: 50%, damage: 25%, cooldown: 30 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_abil0_000_desc_fr", {"loc_talent_zealot_2_combat_description_new"}, {"fr"}, function(locale, value) return "Effectuez une ruée vers l'avant, régénérez {toughness:%s} "..COLORS_KWords_fr.Toughness_rgb_fr..". Votre prochaine attaque de mêlée gagne {damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." et est un "..COLORS_KWords_fr.Crit_hit_rgb_fr.." garanti.\nTemps de recharge de base : {cooldown:%s} secondes."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_0_rgb_fr end), -- toughness: 50%, damage: 25%, cooldown: 30 -- s->seconds -- colors
+			--[+ Traditional Chinese - 懲奸除惡 +]--
 
 	--[+ Ability 1 - Fury of the Faithful +]--
 		--create_template("talent_tree_zea_abil1_000_en", {"loc_talent_maniac_attack_speed_after_dash"}, {"en"}, function(locale, value) return "Fury of the Faithful" end),
 	create_template("talent_tree_zea_abil1_000_desc_en", {"loc_talent_zealot_attack_speed_after_dash_desc"}, {"en"}, function(locale, value) return "Dash forward, Replenishing {toughness:%s} "..COLORS_KWords.Toughness_rgb.." and gaining {attack_speed:%s} Attack Speed for {time:%s} seconds. Your next Melee Hit gains {damage:%s} "..COLORS_KWords.Damage_rgb.." and is a guaranteed "..COLORS_KWords.Crit_hit_rgb..".\nBase Cooldown: {cooldown:%s} seconds.\nThis is an augmented version of {talent_name:%s}."..TALENTS_Enh_desc.ED_ZEA_Ability_1_rgb end), -- toughness: 50%, attack_speed: +20%, time: 10, damage: +25%, cooldown: 30, talent_name: Chastise the Wicked -- &->and -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_abil1_000_desc_fr", {"loc_talent_zealot_attack_speed_after_dash_desc"}, {"fr"}, function(locale, value) return "Effectuez une ruée vers l'avant, régénérez {toughness:%s} "..COLORS_KWords_fr.Toughness_rgb_fr.." et gagne {attack_speed:%s} de vitesse d'attaque pendant {time:%s} secondes. Votre prochaine attaque de mêlée gagne {damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." et est un "..COLORS_KWords_fr.Crit_hit_rgb_fr.." garanti.\nTemps de recharge de base : {cooldown:%s} secondes.\nCeci est une version augmentée de {talent_name:%s}."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_1_rgb_fr end), -- toughness: 50%, attack_speed: +20%, time: 10, damage: +25%, cooldown: 30, talent_name: Chastise the Wicked -- &->and -- s->seconds -- colors
+			--[+ Traditional Chinese - 有信者之怒 +]--
 
 	--[+ Ability 1-1 - Redoubled Zeal +]--
 		--create_template("talent_tree_zea_abil1_001_en", {"loc_talent_zealot_dash_has_more_charges"}, {"en"}, function(locale, value) return "Redoubled Zeal" end),
 	create_template("talent_tree_zea_abil1_001_desc_en", {"loc_talent_zealot_dash_has_more_charges_desc"}, {"en"}, function(locale, value) return "{talent_name:%s} now has {charges:%s} charges."..TALENTS_Enh_desc.ED_ZEA_Ability_1_1_rgb end), -- talent_name: Fury of the Faithful, charges: 2.
 			--[+ French +]--
 	create_template("talent_tree_zea_abil1_001_desc_fr", {"loc_talent_zealot_dash_has_more_charges_desc"}, {"fr"}, function(locale, value) return "{talent_name:%s} a maintenant {charges:%s} charges."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_1_1_rgb_fr end), -- talent_name: Fury of the Faithful, charges: 2.
+			--[+ Traditional Chinese - 倍增狂熱 +]--
 
 	--[+ Ability 1-2 - Invocation of Death +]--
 		--create_template("talent_tree_zea_abil1_002_en", {"loc_talent_maniac_cooldown_on_melee_crits"}, {"en"}, function(locale, value) return "Invocation of Death" end),
 	create_template("talent_tree_zea_abil1_002_desc_en", {"loc_talent_maniac_cooldown_on_melee_crits_buff_desc"}, {"en"}, function(locale, value) return "{cooldown_regen:%s} "..COLORS_KWords.Ability_cd_rgb.." Regeneration for {duration:%s} seconds on Melee "..COLORS_KWords.Crit_hits_rgb.."."..TALENTS_Enh_desc.ED_ZEA_Ability_1_2_rgb end), -- cooldown_regen: +200%, duration: 4 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_abil1_002_desc_fr", {"loc_talent_maniac_cooldown_on_melee_crits_buff_desc"}, {"fr"}, function(locale, value) return "{cooldown_regen:%s} de régénération du "..COLORS_KWords_fr.Combat_ability_cd_rgb_fr.." pendant {duration:%s} secondes sur les coups "..COLORS_KWords_fr.Crit_hits_rgb_fr.." de mêlée."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_1_2_rgb_fr end), -- cooldown_regen: +200%, duration: 4 -- s->seconds -- colors
+			--[+ Traditional Chinese - 死亡禱文 +]--
 
 	--[+ Ability 2 - Chorus of Spiritual Fortitude +]--
 		-- create_template("talent_tree_zea_abil2_000_en", {"loc_talent_zealot_bolstering_prayer"}, {"en"}, function(locale, value) return "Chorus of Spiritual Fortitude" end),
 	create_template("talent_tree_zea_abil2_000_desc_en", {"loc_talent_zealot_bolstering_prayer_variant_two_description"}, {"en"}, function(locale, value) return "Wield a Holy relic that releases pulses of energy "..COLORS_Numbers.n_7_rgb.." times every {interval:%s} seconds.\nEach pulse grants Zealot and Allies in Coherency immunity to "..COLORS_KWords.Stuns_rgb.." from both Melee and Ranged attacks and Invulnerability for "..COLORS_Numbers.n_1_5_rgb.." seconds.\nEach pulse Replenishes {toughness:%s} "..COLORS_KWords.Toughness_rgb.." to Allies in Coherency. If the Ally is at full "..COLORS_KWords.Toughness_rgb.." they instead gain {flat_toughness:%s} Max (yellow) "..COLORS_KWords.Toughness_rgb.." up to a total of {max_toughness:%s}.\nBase Cooldown: {cooldown:%s} seconds."..TALENTS_Enh_desc.ED_ZEA_Ability_2_rgb end), -- interval: 0.8, toughness: 45%, flat_toughness: +20, max_toughness: +100, cooldown: 60 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_abil2_000_desc_fr", {"loc_talent_zealot_bolstering_prayer_variant_two_description"}, {"fr"}, function(locale, value) return "Utilisez une relique sacrée qui libère des pulsations énérgetiques "..COLORS_Numbers.n_7_rgb.." fois toutes les {interval:%s} secondes.\nChaque pulsation accorde au Fanatique et aux alliés en syntonie une immunité aux "..COLORS_KWords_fr.Stuns_rgb_fr.." des attaques de mêlée et de distance et une invulnérabilité de "..COLORS_Numbers.n_1_5_rgb.." secondes.\nChaque pulsation régénère {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." pour les alliés en syntonie. Si l'allié est à toute ça "..COLORS_KWords_fr.Toughness_rgb_fr..", il gagne à la place {flat_toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." maximale (jaune) jusqu'à un total de {max_toughness:%s}.\nTemps de recharge de base : {cooldown:%s} secondes."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_2_rgb_fr end), -- interval: 0.8, toughness: 45%, flat_toughness: +20, max_toughness: +100, cooldown: 60 -- s->seconds -- colors
-
+			--[+ Traditional Chinese - 不屈靈魂合唱 +]--
+			
 	--[+ Ability 2-1 - Holy Cause +]--
 		-- create_template("talent_tree_zea_abil2_001_en", {"loc_talent_zealot_zealot_channel_grants_defensive_buff"}, {"en"}, function(locale, value) return "Holy Cause" end),
 	create_template("talent_tree_zea_abil2_001_desc_en", {"loc_talent_zealot_zealot_channel_grants_defensive_buff_desc"}, {"en"}, function(locale, value) return "After channeling {stacks:%s} pulses, grants {toughness:%s} "..COLORS_KWords.Toughness_dmg_red_rgb.." to you and Allies in Coherency. Lasts {duration:%s} seconds."..TALENTS_Enh_desc.ED_ZEA_Ability_2_1_rgb end), -- stacks: 5, toughness: +30%, duration: 10 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_abil2_001_desc_fr", {"loc_talent_zealot_zealot_channel_grants_defensive_buff_desc"}, {"fr"}, function(locale, value) return "Après avoir canalisé {stacks:%s} pulsations, accorde {toughness:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." à vous et aux alliés en syntonie. Dure {duration:%s} secondes."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_2_1_rgb_fr end), -- stacks: 5, toughness: +30%, duration: 10 -- s->seconds -- colors
+			--[+ Traditional Chinese - 神聖事業 +]--
 
 	--[+ Ability 2-2 - Banishing Light +]--
 		-- create_template("talent_tree_zea_abil2_002_en", {"loc_talent_zealot_channel_staggers"}, {"en"}, function(locale, value) return "Banishing Light" end),
 	create_template("talent_tree_zea_abil2_002_desc_en", {"loc_talent_zealot_channel_staggers_desc"}, {"en"}, function(locale, value) return "Each pulse from {talent_name:%s} also "..COLORS_KWords.Staggers_rgb.." and Suppresses Enemies. Range increases with every pulse."..TALENTS_Enh_desc.ED_ZEA_Ability_2_2_rgb end), -- talent_name: Chorus of Spiritual Fortitude -- &->and -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_abil2_002_desc_fr", {"loc_talent_zealot_channel_staggers_desc"}, {"fr"}, function(locale, value) return "À Chaque pulsation du {talent_name:%s} les ennemis "..COLORS_KWords_fr.Staggers_rgb_fr.." et sont sous Suppresion. La portée augmente à chaque impulsion."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_2_2_rgb_fr end), -- talent_name: Chorus of Spiritual Fortitude -- &->and -- colors
+			--[+ Traditional Chinese - 放逐之光 +]--
 
 	--[+ Ability 2-3 - Ecclesiarch's Call +]--
 		-- create_template("talent_tree_zea_abil2_003_en", {"loc_talent_zealot_zealot_channel_grants_offensive_buff"}, {"en"}, function(locale, value) return "Ecclesiarch's Call" end),
 	create_template("talent_tree_zea_abil2_003_desc_en", {"loc_talent_zealot_zealot_channel_grants_offensive_buff_desc"}, {"en"}, function(locale, value) return "After channeling {stacks:%s} pulses, grants {damage:%s} "..COLORS_KWords.Damage_rgb.." to you and Allies in Coherency. Lasts {duration:%s} seconds."..TALENTS_Enh_desc.ED_ZEA_Ability_2_3_rgb end), -- stacks: 5, damage: +20%, duration: 10 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_zea_abil2_003_desc_fr", {"loc_talent_zealot_zealot_channel_grants_offensive_buff_desc"}, {"fr"}, function(locale, value) return "Après avoir canalisé {stacks:%s} pulsations, accorde {damage:%s} "..COLORS_KWords_fr.Damage_rgb_fr.." à vous et aux alliés en syntonie. Dure {duration:%s} secondes."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_2_3_rgb_fr end), -- stacks: 5, damage: +20%, duration: 10 -- s->seconds -- colors
+			--[+ Traditional Chinese - 教宗之喚 +]--
 
 	--[+ Ability 2-4 - Martyr's Purpose +]--
 		-- create_template("talent_tree_zea_abil2_004_en", -- {"loc_talent_zealot_damage_taken_restores_cd"}, {"en"}, function(locale, value) return "Martyr's Purpose" end),
 	create_template("talent_tree_zea_abil2_004_desc_en", {"loc_talent_zealot_damage_taken_restores_cd_description"}, {"en"}, function(locale, value) return "{cooldown_restore:%s} of "..COLORS_KWords.Health_rgb.." "..COLORS_KWords.Damage_rgb.." taken is converted to "..COLORS_KWords.Ability_cd_rgb.." Reduction."..TALENTS_Enh_desc.ED_ZEA_Ability_2_4_rgb end), -- stacks: 5, damage: +20%, duration: 10 -- s->seconds -- colors
 	create_template("talent_tree_zea_abil2_004_desc_fr", {"loc_talent_zealot_damage_taken_restores_cd_description"}, {"fr"}, function(locale, value) return "{cooldown_restore:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." "..COLORS_KWords_fr.Health_rgb_fr.." subits est converti en réduction du "..COLORS_KWords_fr.Combat_ability_cd_rgb_fr.."."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_2_4_rgb_fr end), -- stacks: 5, damage: +20%, duration: 10 -- s->seconds -- colors
+			--[+ Traditional Chinese - 殉道者之願 +]--
 
 	--[+ Ability 3 - Shroudfield +]--
 		-- create_template("talent_tree_zea_abil3_000_en", {"loc_ability_zealot_stealth"}, {"en"}, function(locale, value) return "Shroudfield" end),
