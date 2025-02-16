@@ -26,22 +26,9 @@ local red_both_tghns_n_health_dmg = "- 同時減少所受到的韌性與生命�
 local stacks_add_w_oth_dmg = "- 與其他傷害增益做加法疊加，並與武器祝福提供的力量等級加成做乘法疊加。"
 local stacks_mult_w_other_dmg_red_buffs = "- 與其他傷害減免增益做乘法疊加。"
 local succss_dodge_means = "- 「成功閃避」指的是透過適時的閃避或滑行動作，閃避已鎖定玩家的敵方攻擊。"
-local warp_attc_refers_to = "- 「亞空間攻擊」指的是所有傷害類型標示為「亞空間傷害」的攻擊，包括靈能劍的啟動攻擊、靈能法杖的主/副攻擊、感電（「懲戒」、電能法杖的副攻擊、電擊槌的特殊動作）、「靈魂之火」、「顱腦崩裂」/「顱腦爆裂」、「靈能攻擊」以及「刺耳尖嘯」。"
+local warp_attc_refers_to = "- 「亞空間攻擊」指的是所有傷害類型標示為「亞空間傷害」的攻擊，包括靈能劍的啟動攻擊、靈能法杖的主、副攻擊、感電（「懲戒」、電能法杖的副攻擊、電擊槌的特殊動作）、「靈魂之火」、「顱腦崩裂」、「顱腦爆裂」、「靈能攻擊」以及「刺耳尖嘯」。"
 local z_eff_of_this_tougn_rep = "- 此韌性回復的效能會受到某些玩家負面狀態（例如有毒氣體）的影響。"
 local z_ghost_hitnrun_n_stripp = "- 武器祝福「幽靈」、「游擊」和「輕裝」能觸發此天賦（僅限對遠程攻擊）。"
--- local become_invis_drop_all_enemy_aggro = "- Become Invisible dropping all enemy aggro: Melee enemies reaggro immediately to another target if possible, firing Ranged enemies stop shooting, then reaggro if possible."
--- local can_be_refr_dur_active_dur = "- Can be refreshed during active duration."
--- local doesnt_stack_aura_psy = "- Doesn't Stack with the same Aura from another Psyker."
--- local doesnt_interact_w_c_a_r_from_curio = "- Does not interact with Combat Ability Regeneration from Curios which only reduces the Maximum cooldown of a Combat Ability."
--- local dmg_is_incr_by = "- Damage is increased by Rending/Brittleness, \"Skullcrusher\" Blessing (while Staggered) and buffs from \"Empowered Psionics\", \"Empyrean Empowerment\", \"Empyric Shock\", \"Disrupt Destiny\", \"Malefic Momentum\", \"Perfect Timing\", \"Scrier's Gaze\" (including \"Precognition\"), \"Warp Rider\", aura \"Kinetic Presence\" (against Elites), and small Ranged Damage node."
--- local procs_on_succss_dodging = "- Procs on successfully dodging enemy Melee or Ranged attacks (except Gunners, Reaper, Sniper), and disabler attacks (Pox Hound jump, Trapper net, Mutant grab)."
--- local red_both_tghns_n_health_dmg = "- Reduces both Toughness and Health Damage taken."
--- local stacks_add_w_oth_dmg = "- Stacks additively with other Damage buffs, and multiplicatively with Power level buffs from Weapon Blessings."
--- local stacks_mult_w_other_dmg_red_buffs = "- Stacks multiplicatively with other Damage Reduction buffs."
--- local succss_dodge_means = "- \"Successful dodge\" means Dodging an enemy attack that is locked on the player with an accordingly timed Dodge or Sliding action."
--- local warp_attc_refers_to = "- \"Warp attack\" refers to a list of attacks that have their Damage types denoted as \"Warp Damage types\": Force Swords' activated attacks, Force Staves' primary attacks, Force Staves' secondary attacks, Electrocution (\"Smite\", Electrokinetic Staff secondary, Shock Maul special action), \"Soulblaze\", \"Brain Rupture\"/\"Brain Burst\", \"Assail\", and \"Warp Rupture\"."
--- local z_eff_of_this_tougn_rep = "- The effectiveness of this Toughness Replenishment is affected by certain player debuffs like toxic gas."
--- local z_ghost_hitnrun_n_stripp = "- \"The Ghost\", \"Hit and Run\" and \"Stripped Down\" Weapon Blessings can proc this Talent (only against Ranged attacks)."
 
 --[+ ++ENHANCED DESCRIPTIONS++ +]--
 local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not translate this line!
@@ -56,12 +43,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 永遠視為弱點命中。",
 		"- 對狂熱與不屈類型目標造成更高傷害。",
 		"{#color(255, 35, 5)}- 你可能會爆炸！反噬值達到 97% 或以上時請勿使用！{#reset()}",
-		-- ppp___ppp,
-		-- "- Cannot Crit.",
-		-- "- Base Damage: 900.",
-		-- "- Always scores a Weakspot hit.",
-		-- "- Higher Damage against Maniac and Unyielding.",
-		-- "{#color(255, 35, 5)}- You may Explode! Don't use if Peril level is 97% or above!{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 1 - Brain Rupture +]--
@@ -75,15 +56,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 攻擊時，會使除了變種人、巨獸以及具備主動力場護盾（void shield）之敵人外的所有敵人陷入踉蹌。",
 		dmg_is_incr_by,
 		"{#color(255, 35, 5)}- 你可能會爆炸！反噬值達到 97% 或以上時請勿使用！{#reset()}",
-		-- ppp___ppp,
-		-- "- Cannot Crit.",
-		-- "- Base Damage: 1350.",
-		-- "- Always scores a Weakspot hit.",
-		-- "- Higher Damage against Maniac and Unyielding.",
-		-- "- Main attack applies a light Charge Stagger at 50% charge level to the targeted enemy. Cannot Stagger: Bombers, Maulers, Mutants, Ogryns, Poxbursters, Ragers, Scab Shotgunners or Monstrosities.",
-		-- "- On Impact Staggers all enemies except Mutants, Monstrosities and enemies with active void shield.",
-		-- dmg_is_incr_by,
-		-- "{#color(255, 35, 5)}- You may Explode! Don't use if Peril level is 97% or above!{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 1-1 - Kinetic Resonance +]--
@@ -92,10 +64,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 降低顱腦崩裂的主、副攻擊充能時間。",
 		"- 與「靈能強化」增益和敏捷興奮劑的充能時間減少效果相加疊加。",
 		"- 與「骨折後遺症」、「刺耳尖嘯」、「亞空間意志」、「平心靜氣」、「現實錨點」、小型反噬抗性節點、戰鬥興奮劑，以及「閃擊強化」事件（mutator）等相關增益做乘法疊加。",
-		-- ppp___ppp,
-		-- "- Reduces Brain Rupture's charge time for both primary and secondary attacks.",
-		-- "- Charge time reduction Stacks additively with \"Empowered Psionics\" buff and Celerity Stimm.",
-		-- "- Stacks multiplicatively with related buffs from \"By Crack of Bone\", \"Becalming Eruption\", \"Empyric Resolve\", \"Inner Tranquility\", \"Reality Anchor\", small Peril Resistance nodes, Combat Stimm, and the \"Enhanced Blitz\" mutator.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 1-2 - Kinetic Flayer +]--
@@ -103,9 +71,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 由此天賦所觸發的「顱腦崩裂」攻擊，能享有「靈能強化」的傷害增益，而不會消耗其疊加。",
 		"{#color(255, 35, 5)}- 目前存在一個錯誤：當反噬值高於 97% 時，天賦會觸發並進入 15 秒冷卻，但敵人實際上不會受到任何傷害。{#reset()}",
-		-- ppp___ppp,
-		-- "- \"Brain Rupture\" attacks triggered by the Talent benefit from \"Empowered Psionics'\" Damage buff without consuming a Stack.",
-		-- "{#color(255, 35, 5)}- There is currently a bug: When Peril is above 97%, the Talent triggers and a 15-second Cooldown begins, but the enemy does NOT receive Damage at all.{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 2 - Smite +]--
@@ -117,17 +82,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 無法對巨獸以及擁有主動力場護盾（void shield）的敵人造成踉蹌。",
 		"- 整體對各種裝甲傷害係數屬中等，對甲殼裝甲傷害係數偏低。",
 		dmg_is_incr_by,
-		-- "- Forces a short Quelling action when reaching 100% Peril removing ~8.5% Peril. If released below 100% Peril, pushes enemies back (if possible).", -- 原程式碼已註解
 		"{#color(255, 35, 5)}- 只有在以充能攻擊讓反噬值剛好達到 100% 的同時再使用一般攻擊，才可能爆炸！{#reset()}",
-		ppp___ppp,
-		"- Cannot crit.",
-		"- Max range: 15 meters.",
-		"- Targets only torso hitzone.",
-		"- Cannot Stagger Monstrosities and enemies with active void shield.",
-		"- Average armor Damage modifiers across the board, low armor Damage modifier against Carapace.",
-		dmg_is_incr_by,
-		-- "- Forces a short Quelling action when reaching 100% Peril removing ~8.5% Peril. If released below 100% Peril, pushes enemies back (if possible).",
-		"{#color(255, 35, 5)}- You can only Explode if you raise your Peril level to exactly 100% with a charged attack and at same time use a normal attack!{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 2-1 - Lightning Storm +]--
@@ -136,11 +91,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 適用於懲戒的主要與次要攻擊。",
 		"- 將「懲戒」可連鎖到下一個目標的最遠距離由 5 公尺提升至 6 公尺。",
 		"- 同時也讓鎖定目標的最大距離增加 1 公尺，達到 16 公尺。",
-		ppp___ppp,
-		-- "- Increases max jumps from 1 to 2.",
-		"- Applies both to Smite's primary and secondary actions.",
-		"- Increases the Max radius within which \"Smite\" can chain to another target from 5 to 6 meters.",
-		"- This also increases the targeting range by 1 meter, up to 16 meters.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 2-2 - Enfeeble +]--
@@ -150,11 +100,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與「亞空間震波」或歐格林的「削弱敵人」、「重要干擾」或老兵的「鎖定目標!」等傷害承受增幅，及傷害增益，還有武器祝福提供的力量等級加成做乘法疊加。",
 		"- 與另一位靈能者施加的相同減益效果無法疊加。",
 		"- 任何可能對敵人造成感電效果的來源，若不是由「懲戒」或 「蓄力打擊」觸發，都不會啟動「衰弱詛咒」",
-		-- ppp___ppp,
-		-- -- "- The debuff is being applied as long as the enemy is actively affected by \"Smite\".",
-		-- "- Stacks multiplicatively with other Damage taken debuffs like \"Empyric Shock\" or Ogryn's \"Soften Them Up\", \"Valuable Destruction\" or Veteran's \"Focus Target!\", with Damage buffs, and with Power level buffs from Weapon Blessings.",
-		-- "- Doesn't Stack with the same debuff applied by another Psyker.",
-		-- "- Any source that may apply an Electrocution effect to enemies but is not Smite or Charged Strike will not proc Enfeeble.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 2-3 - Charged Strike +]--
@@ -165,12 +110,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 感電狀態會持續到最後一次傷害跳數結束後 2 秒。",
 		"-- 注意：第一次傷害跳數生效前的延遲取決於敵人的順劈傷害，與「懲戒」相同。換言之，順劈傷害越大，造成第一次傷害所需時間越長。因此，對於「巨獸」（20 順劈傷害）而言，在 2 秒的傷害窗口結束前只能觸發 1 次傷害跳數。",
 		"-- 若選擇「衰弱詛咒」，此天賦的感電效果會有更有利的命中率消耗機制，使其對大多數敵人能加倍觸發傷害跳數；同時也能享有 10% 額外承受傷害的減益。從表面上看，每一跳傷害都會加一層減益，使受此減益的敵人在該跳數期間承受更高傷害，且所有攻擊者都能在感電效果正在作用並附加減益時受益（與「懲戒」機制相同）。",
-		-- ppp___ppp,
-		-- "- 8 base Damage per tick.",
-		-- "- The Damage window lasts up to 2 seconds.",
-		-- "- The Electrocuted state lasts until 2 seconds after the last Damage tick.",
-		-- "-- Note that the time before the first Damage tick can happen depends on enemy Hit mass (just like with Smite itself), so the more Hit mass an enemy has the longer it will take this Talent's Electrocution effect to deal Damage. As a result, against Monstrosities (20 Hit mass), only 1 Damage tick can be executed before the Damage window of 2 seconds ends.",
-		-- "-- If Enfeeble is selected, the Electrocution effect receives a more favorable Hit mass cost which effectively doubles its tick rate against most enemies. With Enfeeble, it also benefits from the 10% increased Damage taken debuff. Apparently, each Damage tick adds one debuff Stack increasing the Damage that the debuffed enemy takes accordingly per tick. All attackers can benefit from this only while the Electrocution effect is actively Damaging and applying the debuff (just like with Smite itself).",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 3 - Assail +]--
@@ -178,17 +117,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 可爆擊。最多可同時穿透2 個敵人。",
 		"- 每次投射物消耗 1 發彈藥，並於每 3 秒回復 1 發。",
-		-- "- Very low Damage against Carapace and low against Unyielding.", -- 原程式碼已註解
 		"- 受相應天賦與「戰鬥興奮劑」提供的反噬值消耗減少效果影響。",
 		dmg_is_incr_by,
 		"{#color(255, 35, 5)}- 你可能會爆炸！若反噬值已達 100%，請勿使用！{#reset()}",
-		-- ppp___ppp,
-		-- "- Can Crit. Cleave up to 2 enemies.",
-		-- "- Costs 1 ammo and recharges it every 3 seconds.",
-		-- -- "- Very low Damage against Carapace and low against Unyielding.",
-		-- "- Affected by Peril Cost Reduction buffs from respective Talents and Combat Stimm.",
-		-- dmg_is_incr_by,
-		-- "{#color(255, 35, 5)}- You may Explode! Don't use if Peril level is 100%!{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 3-1 - Ethereal Shards +]--
@@ -196,9 +127,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 若「靈能強化」啟動，則可穿透的敵人數翻倍至最多 6 個。",
 		"- 甲殼裝甲預設無法被穿透。",
-		-- ppp___ppp,
-		-- "- If \"Empowered Psionics\" is active, this is doubled, up to 6 targets.",
-		-- "- Carapace cannot be Cleaved by default.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 3-2 - Quick Shards +]--
@@ -206,9 +134,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 將投射物的回充時間由 3 秒縮短為 2.1 秒。",
 		"- 不會與「閃擊強化」事件（mutator）產生互動。",
-		-- ppp___ppp,
-		-- "- Reduces projectile recharge time from 3 to 2.1 seconds per projectile.",
-		-- "- Does not interact with the \"Enhanced Blitz\" mutator.",
 	}, "\n"), enhdesc_col)
 
 --[+ +AURA+ +]--
@@ -218,9 +143,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與珍品提供的戰鬥技能回復，以及可使技能冷卻縮短 20% 的任務事件（mutators）相加疊加。",
 		"- 這會將「靈能尖嘯」/「靈能學者之怒」的最大冷卻時間減少至 27.75 秒、「占卜者的注視」減少至 23.125 秒、「念力護盾」減少至 37 秒。",
 		doesnt_stack_aura_psy,
-		ppp___ppp,
-		"- Stacks additively with Combat Ability Regeneration from Curios and the mission mutators that reduce Ability Cooldowns by 20%.",
-		"- This Reduces the Max Cooldown of \"Venting Shriek\"/\"Psykinetic's Wrath\" to 27.75 seconds, for \"Scrier's Gaze\" to 23.125 seconds, and for \"Telekine Shield\" to 37 seconds.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Aura 1 - Kinetic Presence +]--
@@ -236,9 +158,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與珍品提供的戰鬥技能回復，以及可使技能冷卻縮短 20% 的任務事件相加疊加。",
 		"- 這會將「靈能尖嘯」/「靈能學者之怒」的最大冷卻時間減少至 27 秒、占卜者的注視」減少至 22.5 秒、「念力護盾」減少至 36 秒。",
 		doesnt_stack_aura_psy,
-		-- ppp___ppp,
-		-- "- Stacks additively with Combat Ability Regeneration from Curios and the mission mutators that reduce Ability Cooldowns by 20%.",
-		-- "- This Reduces the Cooldowns of \"Venting Shriek\"/\"Psykinetic's Wrath\" to 27 seconds, for \"Scrier's Gaze\" to 22.5 seconds, and for \"Telekine Shield\" to 36 seconds.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Aura 3 - Prescience +]--
@@ -247,9 +166,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 適用於所有能夠爆擊的攻擊。",
 		"- 與其他爆擊機率來源相加疊加。",
 		doesnt_stack_aura_psy,
-		-- ppp___ppp,
-		-- "- Applies to all attacks that can Crit.",
-		-- "- Stacks additively with other sources of Crit Chance.",
 	}, "\n"), enhdesc_col)
 
 --[+ +ABILITIES+ +]--
@@ -259,10 +175,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 可以用來防止靈能者自我爆炸。",
 		"- 亞空間震波能穿透物體，範圍最遠可達30公尺，因此你可以透過牆壁將瘟疫獵犬從隊友身上震開。",
 		"- 使正面5公尺範圍內的敵人暈眩（Stun）。",
-		-- ppp___ppp,
-		-- "- Can be used to prevent Psyker's self-explode.",
-		-- "- The Warp wave passes through objects and spreads up to 30 meters. So you can drop the Pox Hound from an Ally through the wall.",
-		-- "- Stuns enemies within a 5 meter radius in front of Psyker.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 1 - Venting Shriek +]--
@@ -274,22 +186,12 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 使正面5公尺範圍內的敵人暈眩（Stun）。",
 		"- 衝擊強度會根據反噬提升，最高在 100% 反噬值時生效；最多可對甲殼造成輕度踉蹌。無法對變種人、巨獸以及有主動力場護盾（void shield）的敵人造成踉蹌。",
 		"- 衝擊強度亦會受到一些武器祝福影響：如「行刑者」、「殺戮者」、「優勢」、「不穩定能量」等等。僅在釋放吶喊時所裝備的武器觸發之增益才會生效。",
-		-- ppp___ppp,
-		-- "- Always targets torso hitzone.",
-		-- "- Can be used while exploding thereby preventing Psyker's self-explode.",
-		-- "- The Warp wave passes through objects and spreads up to 30 meters.",
-		-- "- Stuns enemies within a 5 meter radius in front of Psyker.",
-		-- "- Stagger strength scales with Peril reaching its Maximum strength at 100% Peril. Up to light Staggers against Crushers. Cannot Stagger Mutants, Monstrosities and  and enemies with active void shield.",
-		-- "- Stagger strength decreases with range losing its efficiency almost entirely at 30 meters.",
-		-- "- Stagger strength is additionally affected by some Weapon Blessings: \"Executor\", \"Slaughterer\", \"Superiority\", \"Unstable Power\", etc. Applies only when the respective weapon is equipped when shouting.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 1-1 - Becalming Eruption +]--
 	local ED_PSY_Ability_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 與「骨折後遺症」、「亞空間意志」、「平心靜氣」、「動能共鳴」等天賦、小型 「反噬抗性」 節點以及戰鬥興奮劑所提供的反噬值消耗減少效果做乘法疊加。",
-		-- ppp___ppp,
-		-- "- Stacks multiplicatively with related Peril Cost Reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Inner Tranquility\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 1-2 - Warp Rupture +]--
@@ -306,18 +208,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"-- 來自武器祝福：",
 		"--- 近戰武器，如在啟動「刺耳尖嘯」前就已觸發的「行刑者」、「高壓電」（對感電敵人）、「碎顱者」（對踉蹌敵人）、「殺戮者」、「優勢」，以及「不穩定能量」。",
 		"--- 遠程武器，如在啟動「刺耳尖嘯」前就已觸發的「連續發射」、「持續阻擊」、「死亡噴吐」、「達姆彈」、「處決」（對踉蹌敵人）、「烈火熱焰」、「全孔射擊」、「刻不容緩」（對踉蹌敵人）、「鉗制射擊」、「火藥灼傷」，以及「連跑帶打」（在衝刺時）。",
-		-- ppp___ppp,
-		-- "- Has same armor Damage modifier against all armor types, loses Damage with range.",
-		-- "- Base Damage dealt scales with Peril:",
-		-- "_______________________________",
-		-- "Peril:           0%|  25%|  50%|  75%|  100%",
-		-- "Damage:   100|   125|    150|   175|   200",
-		-- "_______________________________",
-		-- "- Damage is affected by Damage buffs: ",
-		-- "-- from Talents: \"Disrupt Destiny\", \"Empyrean Empowerment\", \"Empyric Shock\" (while debuffed), \"Malefic Momentum\", \"Kinetic Presence\" (vs Elites), \"Perfect Timing\", and \"\".Warp Rider\".",
-		-- "-- from Blessings of the Weapons:",
-		-- "--- Melee, if procced with weapon before Warp Rupture's activation: \"Executor\", \"High Voltage\" (vs Electrocuted), \"Skullcrusher\" (vs Staggered), \"Slaughterer\", \"Superiority\", and \"Unstable Power\".",
-		-- "--- Ranged, if procced with weapon before Warp Rupture's activation: \"Blaze Away\", \"Ceaseless Barrage\", \"Deathspitter\", \"Dumdum\", \"Execution\" (vs Staggered), \"Fire Frenzy\", \"Full Bore\", \"No Respite\" (vs Staggered), \"Pinning Fire\", \"Powderburn\", and \"Run 'n' Gun\" (while Sprinting).",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 1-3 - Warp Creeping Flames +]--
@@ -335,19 +225,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"-- 武器祝福影響：",
 		"--- 近戰武器：「行刑者」、「高壓電」（對感電目標）、「碎顱者」（對被震懾目標）、「殺戮者」、「優勢」、「不穩定能量」、「異常打擊」。",
 		"--- 遠程武器：「連續發射」、「死亡噴吐」、「達姆彈」、「處決」（對被震懾目標）、「烈火熱焰」、「刻不容緩」（對被震懾目標）、「鉗制射擊」、「連跑帶打」（衝刺時）。",
-		-- ppp___ppp,
-		-- "- The amount of Soulblaze Stacks applied to enemies scales with Peril:",
-		-- "_______________________________",
-		-- "Stacks: 1|      2|        3|       4|       5|       6",
-		-- "Peril: 0%|~17%|~34%|~50%|~67%|~84%",
-		-- "_______________________________",
-		-- "- Lasts 8 seconds. Ticks every 0.75 seconds.",
-		-- "- Refreshes duration on Stack application.",
-		-- "- Stacks additively with other sources of Soulblaze.",
-		-- "- Soulblaze damage is increased by Rending and Brittleness, by Perks of currently equipped Weapons, and by Buffs from Talents: \"Disrupt Destiny\", \"Empyrean Empowerment\", \"Malefic Momentum\", \"Kinetic Presence\", \"Perfect Timing\", and \"Warp Rider\".",
-		-- "-- Blessings of the Weapons:",
-		-- "--- Melee: \"Executor\", \"High Voltage\" (vs Electrocuted), \"Skullcrusher\" (vs Staggered), \"Slaughterer\", \"Superiority\", \"Uncanny Strike\", and \"Unstable Power\".",
-		-- "--- Ranged: \"Blaze Away\", \"Deathspitter\", \"Dumdum\", \"Execution\" (vs Staggered), \"Fire Frenzy\", \"No Respite\" (vs Staggered), \"Pinning Fire\", and \"Run 'n' Gun\" (while Sprinting).",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2 - Telekine Shield +]--
@@ -364,18 +241,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 護盾生命機制：",
 		"-- 每次受到遠程攻擊計算為 1 點傷害。受到傷害後的 0.33 秒內不會再受到傷害。",
 		"--- 例如，當護盾放置在一名血痂砲手前方，護盾將在砲手的第二輪掃射期間消失，因為它累計承受了 20 次有效攻擊。",
-		-- ppp___ppp,
-		-- "- Shield Health: 20.",
-		-- "- Dimensions: 6 meters wide, 3.5 meters high.",
-		-- "- Max placement range: 10 meters.",
-		-- "- Total placement time: 0.6 seconds.",
-		-- "- You can hold Ability button to preview location and you can cancel it by blocking.",
-		-- "- Blocks: Ranged hit scan Attacks, projectiles (Bomber grenades), nets (Trappers), and flamethrower direct hits (Flamers)",
-		-- "- Ground fire patches and toxic gas clouds expand through the shield.",
-		-- "- Doesn't block Poxburster explosion.",
-		-- "- How shield health works:",
-		-- "-- Every incoming Ranged attack counts as dealing 1 Damage. After taking Damage, the shield doesn't take any more Damage for the next 0.33 seconds.",
-		-- "--- For example, placed in front of a Dreg Gunner, the shield will eventually disappear during the Gunner's second salvo, after it has taken 20 valid hits total.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2-1 - Bolstered Shield +]--
@@ -397,15 +262,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 每次受到特殊敵人直接命中身體的攻擊時，護盾會受到8點傷害，最多可擋3次「格擋」特殊敵人攻擊。遵守0.33 秒傷害冷卻窗口，這意味著任何在0.33 秒內發生的多次直接命中，均計為1次攻擊傷害。",
 		"",
 		"{#color(255, 35, 5)}- 當前存在一個錯誤：接觸護盾的特殊敵人僅造成 1 點傷害，而非 8 點。{#reset()}",
-		-- ppp___ppp,
-		-- "- Deals no Damage.",
-		-- "- Applies Stagger every 0.55 seconds.",
-		-- "- Electrocution effect lasts for 3 seconds.",
-		-- "- Can Stun all enemies except Monstrosities.",
-		-- "- Always applies the effect to Specials when they get in contact with the shield.",
-		-- "- The shield takes 8 Damage per direct body hit from Specials, disappearing after 3 \"blocked\" Specials. Respects the 0.33 seconds Damage Cooldown window which means that any amount of direct body hits from Specials that happen within 0.33 seconds of each other count as just 1 direct body hit taken.",
-		-- "",
-		-- "{#color(255, 35, 5)}- There is currently a bug: Specials that touch the shield only deal 1 Damage to it instead of 8.{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2-3 - Telekine Dome +]--
@@ -417,13 +273,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 也會以相同方式承受遠程傷害。",
 		"",
 		"{#color(255, 35, 5)}- 當前存在一個錯誤：在圓頂內成功閃避的變種人總是會被震懾。{#reset()}",
-		-- ppp___ppp,
-		-- "- Sphere has a radius of 6 meters.",
-		-- "- Protects from enemy attacks at all degrees.",
-		-- "- Has the same properties as the flat shield.",
-		-- "- Also takes Ranged Damage in the same way.",
-		-- "",
-		-- "{#color(255, 35, 5)}- There is currently a bug: Mutants that are successfully Dodged inside the dome always get Staggered.{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2-4 - Sanctuary +]--
@@ -442,10 +291,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 當技能處於超載階段時，冷卻時間會暫停。然而，其剩餘冷卻時間仍可透過觸發「靈能學者光環」或使用專注興奮劑來主動縮短。",
 		"- 最大冷卻時間可透過「先知之眼」、「亞空間虹吸」、來自珍品的戰鬥技能冷卻，以及降低技能冷卻時間 20% 的任務變異體來縮短。",
 		"- 超載結束後，提供 1.5 秒的緩衝時間，在此期間可執行靈能反噬動作而不會觸發靈能者自我爆炸。",
-		-- ppp___ppp,
-		-- "- While Ability is in overcharging phase Cooldown is paused. However, its remaining cooldown can still be actively reduced by proccing \"Psykinetic's Aura\" or using a Concentration Stimm.",
-		-- "- Its Maximum Cooldown can be Reduced by \"Seer's Presence\", \"Warp Siphon\", Combat Ability Regeneration from Curios, and by the mission mutators that reduce Ability Cooldowns by 20%.",
-		-- "- After overcharging has ended, grants a 1.5 seconds grace period in which Peril-generating actions can be executed without triggering Psyker's self-explosion.",
 	}, "\n"), enhdesc_col)
 
 	-- [+ Ability 3-1 - Endurance +]--
@@ -453,8 +298,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 不會在超載階段結束後持續存在。",
 		stacks_mult_w_other_dmg_red_buffs,
-		-- ppp___ppp,
-		-- "- Does not linger after overcharging phase.",
 	}, "\n"), enhdesc_col)
 
 	-- [+ Ability 3-2 - Precognition +]--
@@ -463,10 +306,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與其他「弱點」與「技巧」增益效果相加計算。",
 		"- 「順劈目標」時，每次攻擊可多次觸發。",
 		"- 這些可疊加的傷害增益會在超載階段立即生效。",
-		-- ppp___ppp,
-		-- "- Stacks additively with other Weakspot and Finesse Damage buffs.",
-		-- "- Can proc multiple times per attack when Cleaving.",
-		-- "- These stacking Damage buffs are active immediately during the overcharging phase.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3-3 - Warp Speed +]--
@@ -474,9 +313,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 不會在超載階段結束後持續存在。",
 		"- 與「擾動命運」、「堅毅」、「移動速度增幅」和武器祝福如「提速」的移動速度增益相加疊加。",
-		-- ppp___ppp,
-		-- "- Does not linger after overcharging phase.",
-		-- "- Stacks additively with movement speed buffs from \"Disrupt Destiny\", \"Mettle\", the small Movement speed node, and Weapon Blessings like \"Rev it Up\".",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3-4 - Reality Anchor +]--
@@ -485,10 +321,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 不會在超載階段結束後持續存在。",
 		"- 與「骨折後遺症」、「亞空間意志」、「動能共鳴」、小型反噬抗性節點和戰鬥興奮劑的反噬值消耗減少效果做乘法疊加。",
 		"- 只有在靈能者在超載期間恢復亞空間充能時，才能與「平心靜氣」疊加。",
-		-- ppp___ppp,
-		-- "- Does not linger after overcharging phase.",
-		-- "- Stacks multiplicatively with Peril cost reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
-		-- "- Can stack with \"Inner Tranquility\" only if Psyker regains Warp charges while overcharging.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3-5 - Warp Unbound +]--
@@ -496,9 +328,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
     	"- 超載結束後，允許靈能者在100%反噬值下執行反噬生成動作10秒而不會觸發自我爆炸。",
     	"- 請注意，當這10秒持續時間結束時，「占卜者的注視」的基本緩衝時間仍然適用，提供額外1.5秒的相同效果。",
-		-- ppp___ppp,
-		-- "- After overcharging has ended, allows Psyker to execute Peril-generating actions while at 100% Peril for 10 seconds without triggering the self-explosion.",
-		-- "- Note that when this 10 seconds duration ends, Scrier's Gaze's base grace period still applies, providing another 1.5 seconds of the same effect.",
 	}, "\n"), enhdesc_col)
 
 --[+ +KEYSTONES+ +]--
@@ -508,10 +337,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		can_be_refr_dur_active_dur,
 		"- 與珍品提供的戰鬥技能冷卻，以及可使技能冷卻縮短20%的任務事件（mutators）相加疊加。",
 		"- 例如，當靈能者擁有「先知之眼」光環（-0.1）、4個亞空間充能和12%珍品提供的戰鬥技能冷卻（-0.12）時使用「念力護盾」，其最大冷卻時間由珍品屬性和光環首先減少至40+40x(-0.1-0.12)=31.2秒。此最大冷卻時間再由亞空間虹吸進一步減少至31.2-31.2x(0.075x4)=21.84 秒（HUD 四捨五入：22 秒）。",
-		-- ppp___ppp,
-		-- "- Interacts with Combat Ability Regeneration from Curios and other Maximum Cooldown Reductions from \"Seer's Presence\" or the mission mutators that reduce Ability cooldowns by 20%.",
-		-- "- For example, when Psyker with \"Seer's Presence\" aura (-0.1), 4 Warp charges and 12% Combat Ability Regeneration (-0.12) from Curios uses \"Telekine Shield\", its Maximum cooldown of 40 seconds is first reduced by Curio stat and aura to 40+40x(-0.1-0.12)=31.2 seconds. This Max Cooldown is then considered by Warp Siphon and further reduced by the Warp charge-based reduction to 31.2-31.2x(0.075x4)=21.84 seconds (HUD rounds: 22 seconds).",
-		-- "- Does not interact with Concentration Stimm's remaining Cooldown Reduction effect which increases a character's base Ability Cooldown rate of 1 second per second by additional 3 seconds per second.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-1 - Inner Tranquility +]--
@@ -519,9 +344,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 與自身線性疊加（1 個亞空間充能=6% 反噬消耗減少，2 個 = 12%，3 個 = 18%，等等），並與「骨折後遺症」、「亞空間意志」、「動能共鳴」、小型反噬抗性節點和戰鬥興奮劑的反噬消耗減少效果做乘法疊加。",
 		"- 因為使用戰鬥技能時所有亞空間充能都會消失，此天賦無法立即與「平心靜氣」和「現實錨點」疊加（除非靈能者在其持續期間內重新獲得亞空間充能）。",
-		-- ppp___ppp,
-		-- "- Stacks linearly with itself (1 Warp charge = 6% Peril Cost Reduction, 2 = 12%, 3 = 18%, etc) and multiplicatively with other Peril Cost Reduction buffs from \"By Crack of Bone\", \"Empyric Resolve\", \"Kinetic Resonance\", small Peril Resistance nodes, and Combat Stimm.",
-		-- "- Because all Warp charges are dropped when using a Combat Ability, the Talent cannot immediately Stack with \"Becalming Eruption\" and \"Reality Anchor\" (unless Psyker regains Warp charges during their active duration).",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-2 - Essence Harvest +]--
@@ -529,8 +351,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 不會增加韌性回復量。",
 		z_eff_of_this_tougn_rep,
-		-- ppp___ppp,
-		-- "- Does not increase the amount of Toughness replenished.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-3 - Empyrean Empowerment +]--
@@ -544,25 +364,18 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 當一個被靈魂之火影響的敵人被靈魂之火、靈能者或盟友擊殺時，你會獲得一個亞空間充能。",
 		"- 此效果無距離限制，並且所有裝備此天賦的靈能者都能受益。",
-		-- ppp___ppp,
-		-- "- You gain a Warp charge when an enemy who is currently affected by Soulblaze is killed either by Soulblaze, by Psyker, or by an ally.",
-		-- "- This effect has no range limit and benefits all Psykers who have this talent equipped.",
 	}, "\n"), enhdesc_col)
 	
 	--[+ Keystone 1-5 - Psychic Vampire +]--
 	local ED_PSY_Keystone_1_5_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 如果多個靈能者在彼此的協同範圍內，當其中一個觸發天賦時，所有靈能者都會獲得一個亞空間充能。",
-		-- ppp___ppp,
-		-- "- If multiple Psykers are in Coherency with each other, all of them get a Warp charge when the Talent procs for one of them.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-6 - Warp Battery +]--
 	local ED_PSY_Keystone_1_6_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 將靈能者可持有的亞空間充能最大數量從4增加到6。",
-		-- ppp___ppp,
-		-- "- Increases the Max amount of Warp charges Psyker can hold from 4 to 6.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2 - Empowered Psionics - Empowered Brain Rupture +]--
@@ -572,10 +385,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與其他適用的傷害增益做加法疊加。",
 		"- 與「動能共鳴」做加法疊加，並與敏捷興奮劑的兩個充能時間減少效果做乘法/加法疊加。",
 		"_______________________________",
-		-- ppp___ppp,
-		-- "- Stacks additively with other applicable Damage buffs.",
-		-- "- Stacking additively with \"Kinetic Resonance\", and multiplicatively/additively with Celerity Stimm's two charge time reductions.",
-		-- "_______________________________",
 	}, "\n"), enhdesc_col)
 	
 
@@ -586,10 +395,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與其他適用的傷害增益做加法疊加。",
 		"- 與敏捷興奮劑的相關增益做乘法疊加。",
 		"_______________________________",
-		-- ppp___ppp,
-		-- "- Stacks additively with other applicable Damage buffs.",
-		-- "- Stacks multiplicatively with related buff from Celerity Stimm.",
-		-- "_______________________________",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2 - Empowered Psionics - Empowered Assail +]--
@@ -598,9 +403,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		-- "- Consumes Stacks per thrown projectile.",
 		"- 允許在100%反噬時施放。",
 		"- 目標數量加倍。",
-		-- ppp___ppp,
-		-- "- Allows casting at 100% Peril.",
-		-- "- Double the number of targets.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2-1 - Bio-Lodestone +]--
@@ -611,9 +413,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 當「顱腦崩裂」命中、當「懲戒」開始施放或充能後，以及當「靈能攻擊」生成投射物時觸發。",
 		z_eff_of_this_tougn_rep,
-		-- ppp___ppp,
-		-- "- Procs when \"Brain Rupture\" hits, when \"Smite\" starts casting or after charging, and when \"Assail\" spawns a projectile.",
-		-- z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2-3 - Overpowering Souls +]--
@@ -630,12 +429,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與「堅毅」、「亞空間騎士」、移動速度節點和武器祝福如「提速」的移動速度增益相加疊加。",
 		"- 精確加成與其他相關的傷害增益做加法疊加。",
 		"- 可以在持續時間內通過擊殺或成功踉蹌標記的敵人，或通過靈魂之火、燃燒和流血對標記目標造成的傷害來刷新。",
-		-- ppp___ppp,
-		-- "- Dealing damage to Marked enemies refreshes the Talent's duration.",
-		-- "- Valid targets are: Dreg/Scab Bruisers, Dreg/Scab Stalkers, Scab Shooters, Ragers, Gunners, Shotgunners and Maulers.",
-		-- "- Stacks additively with Movement Speed buffs from \"Mettle\", \"Warp Speed\", Movement Speed node and Weapon Blessings like \"Rev it Up\".",
-		-- "- Precision bonuses Stacks additively with other related Damage buffs.",
-		-- "- Can be refreshed during active duration either by killing or successfully Staggering the Marked enemy or by Damage ticks from Soulblaze, Burn and Bleed on the Marked target.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 3-1 - Perfectionism +]--
@@ -645,8 +438,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Keystone_3_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 有2%的機率在同一次擊殺中觸發「戰鬥冥想」，總共移除 25% 的反噬。",
-		-- ppp___ppp,
-		-- "- There is a 2% chance that the Talent procs on the same kill alongside \"Battle Meditation\" removing 25% Peril total.",
 	}, "\n"), enhdesc_col)
 	
 
@@ -657,8 +448,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Keystone_3_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 觸發於近戰、遠程、「顱腦崩裂」或「靈能攻擊」攻擊。",
-		-- ppp___ppp,
-		-- "- Procs on Melee, Ranged, \"Brain Rupture\" or \"Assail\" attacks.",
 	}, "\n"), enhdesc_col)
 	
 
@@ -666,13 +455,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Passive 1 - Soulstealer +]--
 	local ED_PSY_Passive_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 如果亞空間攻擊是近戰攻擊，天賦的 7.5% 效果會加到靈能者基礎的 5% 最大韌性獲得量上。",
-		"-- 例如，一個擁有 96 最大韌性的靈能者使用啟動的靈能劍擊殺兩個敵人，會恢復 96x(0.1+0.15)=24 韌性。",
+		"- 如果亞空間攻擊是近戰攻擊，天賦的7.5%效果會加到靈能者基礎的5%最大韌性獲得量上。",
+		"-- 例如，一個擁有 96最大韌性的靈能者使用啟動的靈能劍擊殺兩個敵人，會恢復96x(0.1+0.15)=24韌性。",
 		z_eff_of_this_tougn_rep,
 		warp_attc_refers_to,
-		ppp___ppp,
-		"- If the warp attack is a Melee attack, the Talent's amount of 7.5% is added to Psyker's base 5% of Maximum Toughness gained on Melee kill.",
-		"-- For example, a Psyker with 96 Max Toughness killing two enemies with an activated Force sword attack replenishes 96x(0.1+0.15)=24 Toughness.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 2 - Mettle +]--
@@ -680,66 +466,41 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 每次爆擊攻擊只觸發一次，不論擊中多少敵人。",
 		z_eff_of_this_tougn_rep,
-		"- 每次爆擊攻擊總是生成 1 層，不論擊中多少敵人。",
-		"-- 層數持續 4 秒，並可在持續時間內刷新。",
+		"- 每次爆擊攻擊總是生成1層，不論擊中多少敵人。",
+		"-- 層數持續4秒，並可在持續時間內刷新。",
 		"-- 與「擾動命運」、「亞空間騎士」、小型移動速度節點和武器祝福如「提速」的移動速度增益相加疊加。",
-		ppp___ppp,
-		"- Procs only once per Critical attack regardless of how many enemies have been hit.",
-		z_eff_of_this_tougn_rep,
-		"- Always generates 1 Stack per Critical attack regardless of how many enemies have been hit.",
-		"-- Stacks last for 4 seconds and Can be refreshed during active duration.",
-		"-- Stacks additively with Movement Speed buffs from \"Disrupt Destiny\", \"Warp Speed\", the small Movement Speed node, and Weapon Blessings like \"Rev it Up\".",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 3 - Quietude +]--
 	local ED_PSY_Passive_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 每 1% 反噬平息恢復 0.5% 最大韌性。",
+		"- 每 1% 反噬平息恢復0.5%最大韌性。",
 		"- 觸發於主動或被動平息。",
-		"- 例如，一個擁有 109 最大韌性的靈能者從 59% 真實反噬平息到 0% 反噬，會恢復 59x(109x0.005)=32.15 韌性（HUD 四捨五入：33）。",
+		"- 例如，一個擁有109最大韌性的靈能者從 59% 真實反噬平息到 0% 反噬，會恢復59x(109x0.005)=32.15韌性（HUD 四捨五入：33）。",
 		z_eff_of_this_tougn_rep,
-		ppp___ppp,
-		"- Replenishes 0.5% of Maximum Toughness per 1% Peril Quelled.",
-		"- Procs on both active or passive quelling.",
-		"- For example, a Psyker with 109 Maximum Toughness Quelling down from 59% true Peril to 0% Peril, replenishes 59x(109x0.005)=32.15 Toughness (HUD rounds up: 33).",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 4 - Warp Expenditure +]--
 	local ED_PSY_Passive_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 每 1% 反噬生成恢復 0.25% 最大韌性。",
+		"- 每1%反噬生成恢復0.25%最大韌性。",
 		"- 來自「平心靜氣」、「骨折後遺症」、「動能共鳴」、「現實錨點」和反噬抗性節點的反噬值消耗減少效果會降低此天賦的效能！",
-		"- 例如，一個擁有 90 最大韌性的靈能者生成 44% 反噬，會恢復 44x(90x0.0025)=9.9 韌性。然而，同樣的靈能者在擁有 15% 反噬值消耗減少效果（來自 3 個小型反噬抗性節點）的情況下生成 44% 反噬，僅會恢復 44x(90x0.0025x0.95^3)=8.488 韌性。",
-		ppp___ppp,
-		"- Replenishes 0.25% of maximum Toughness per 1% Peril generated.",
-		"- Peril Cost Reduction buffs from \"Becalming Eruption\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\" and Peril Resistance nodes Reduce this Talent's efficiency!",
-		"- For example, a Psyker with 90 Max Toughness who generates 44% Peril, replenishes 44x(90x0.0025)=9.9 Toughness. However, the same Psyker generating 44% Peril with 15% Peril Cost Reduction from 3 small Peril Resistance nodes, replenishes only 44x(90x0.0025x0.95^3)=8.488 Toughness instead.",
+		"- 例如，一個擁有90最大韌性的靈能者生成44%反噬，會恢復44x(90x0.0025)=9.9韌性。然而，同樣的靈能者在擁有15%反噬值消耗減少效果（來自3個小型反噬抗性節點）的情況下生成44%反噬，僅會恢復44x(90x0.0025x0.95^3)=8.488韌性。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 5 - Perilous Combustion +]--
 	local ED_PSY_Passive_5_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 疊加效果在距離被擊殺敵人最多 4 公尺內生效。",
+		"- 疊加效果在距離被擊殺敵人最多4公尺內生效。",
 		"- 不會對被靈能者的靈魂之火傷害跳數擊殺的精英或特殊敵人生效。",
 		"- 會對燃燒或流血跳數擊殺生效。",
 		"- 靈魂之火：",
-		"-- 持續 8 秒。",
+		"-- 持續8秒。",
 		"-- 與其他靈魂之火來源相同。",
-		"-- 每 0.75 秒觸發一次。",
+		"-- 每0.75秒觸發一次。",
 		"-- 施加疊加時會刷新持續時間。",
 		"-- 對所有裝甲類型的傷害係數都很高，對甲殼裝甲的傷害係數很低。",
 		"{#color(255, 35, 5)}- 疊加效果適用於惡魔宿主！{#reset()}",
-		ppp___ppp,
-		"- Stacks are applied at a distance of up to 4 meters from the killed enemy.",
-		"- Does not proc on Elites or Specials killed by Psyker's Soulblaze Damage ticks.",
-		"- Does proc on Burn or Bleed tick kills.",
-		"- Soulblaze:",
-		"-- Lasts 8s.",
-		"-- Same as other sources of Soulblaze.",
-		"-- Ticks every 0.75 seconds.",
-		"-- Refreshes duration on stack application.",
-		"-- Very high armor Damage modifiers across the board, very low armor Damage modifier against Carapace.",
-		"{#color(255, 35, 5)}- Stacks apply to Daemonhosts!{#reset()}",
 	}, "\n"), enhdesc_col)
 	
 
@@ -751,69 +512,40 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 疊加效果可在持續期間內刷新。",
 		stacks_add_w_oth_dmg,
 		warp_attc_refers_to,
-		ppp___ppp,
-		"- Hitting enemies with a Critical Melee, Ranged, or Assail attack grants Stacks.",
-		"- Generates multiple Stacks per attack when Cleaving.",
-		"- Stacks can be refreshed during active duration.",
-		stacks_add_w_oth_dmg,
-		warp_attc_refers_to,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 7 - Battle Meditation +]--
 	local ED_PSY_Passive_7_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 從當前反噬值中移除 10% 反噬。",
-		"- 當敵人死於靈能者的近戰和遠程攻擊、傷害技能、持續傷害效果，或被靈能者推下懸崖進入地圖殺區時，有 10% 的機率觸發。",
+		"- 從當前反噬值中移除10%反噬。",
+		"- 當敵人死於靈能者的近戰和遠程攻擊、傷害技能、持續傷害效果，或被靈能者推下懸崖進入地圖殺區時，有10%的機率觸發。",
 		"- 與「骨折後遺症」和「屠殺中的平靜」同時觸發。",
-		"- 有 2% 的機率在同一次擊殺中觸發「戰鬥冥想」，總共移除 25% 的反噬。",
-		ppp___ppp,
-		"- Removes 10% Peril from the current Peril amount.",
-		"- Has a 10% chance to proc when enemies die to Psyker's Melee and Ranged attacks, Damaging abilities, DoTs, and when pushed over ledges into map kill boxes by Psyker.",
-		"- Procs additionally to \"By Crack of Bone\" and \"Tranquility Through Slaughter\".",
-		"- There is a 2% chance that the Talent procs on the same kill alongside \"Purloin Providence\" removing 25% Peril total.",
+		"- 有2%的機率在同一次擊殺中觸發「戰鬥冥想」，總共移除25%的反噬。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 8 - Wildfire +]--
 	local ED_PSY_Passive_8_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 每當受到至少 2 層靈魂之火影響的敵人死亡時，靈魂之火會擴散到 5 公尺範圍內的有效目標。",
-		"- 如果目標已經有 4 層或更多靈魂之火，則不會受到此天賦造成的靈魂之火疊加。",
-		"- 有效目標最多可受到此天賦造成的 4 層靈魂之火疊加。",
+		"- 每當受到至少2層靈魂之火影響的敵人死亡時，靈魂之火會擴散到5公尺範圍內的有效目標。",
+		"- 如果目標已經有4層或更多靈魂之火，則不會受到此天賦造成的靈魂之火疊加。",
+		"- 有效目標最多可受到此天賦造成的4層靈魂之火疊加。",
 		"- 擴散的靈魂之火疊加數量取決於死亡敵人的靈魂之火疊加數量：",
 		"_______________________________",
-		"疊加數:       1|        2|       3|       4|      >4",
+		"疊加數:    1|        2|       3|       4|      >4",
 		"擴散數:    0|       2|       3|        4|       4",
 		"_______________________________",
 		"- 擴散的有效目標最多為 4 個：",
 		"-- 如果有 4 層疊加和 4 個目標 - 每個目標獲得 1 層疊加；",
 		"-- 如果有 4 層疊加和 3 個目標 - 1 個目標獲得 2 層疊加，其他 2 個目標各獲得 1 層疊加，等等。",
 		"惡魔宿主不是有效目標！",
-		ppp___ppp,
-		"- Whenever an Enemy who is affected by at least 2 Stacks of Soulblaze dies, it spreads to valid targets within a 5 meters radius.",
-		"- Targets do not receive Soulblaze Stacks caused by the Talent if they already have 4 Stacks or more on them.",
-		"- Valid targets can receive Soulblaze Stacks up to a Maximum of 4 that are caused by the Talent.",
-		"- The amount of Soulblaze Stacks that spread depends on the amount of Soulblaze stacks on the dying enemy:",
-		"_______________________________",
-		"Stacks:       1|        2|       3|       4|      >4",
-		"Spreads:    0|       2|       3|        4|       4",
-		"_______________________________",
-		"- The maximum amount of valid targets to spread is 4:",
-		"-- if 4 Stacks and 4 targets - each target receives 1 Stack;",
-		"-- if 4 Stacks and 3 targets - 1 target receives 2 Stacks while the other 2 targets receive 1 Stack each, etc.",
-		"Daemonhosts are No valid targets!",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 9 - Psykinetic's Aura +]--
 	local ED_PSY_Passive_9_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 對「靈能尖嘯」/「靈能學者之怒」為 1.5 秒，對「占卜者的注視」為 1.25 秒，對「念力護盾」為 2 秒。",
+		"- 對「靈能尖嘯」/「靈能學者之怒」為1.5秒，對「占卜者的注視」為1.25秒，對「念力護盾」為2秒。",
 		"- 不會與另一位靈能者的相同天賦疊加（每位靈能者觸發自己的天賦，分別減少冷卻時間）。",
-		"- 與專注興奮劑剩餘的每秒 3 秒冷卻時間減少效果同時觸發。",
-		doesnt_interact_w_c_a_r_from_curio,
-		ppp___ppp,
-		"- This is 1.5 seconds for \"Venting Shriek\"/\"Psykinetic's Wrath\", 1.25 seconds for \"Scrier's Gaze\", and 2 seconds for \"Telekine Shield\".",
-		"- Does not Stack with the same Talent of another Psyker (each Psyker procs their own Talent spreading the cooldown reduction separately).",
-		"- Procs additionally to Concentration Stimm's remaining cooldown reduction effect of 3 seconds per second.",
+		"- 與專注興奮劑剩餘的每秒3秒冷卻時間減少效果同時觸發。",
 		doesnt_interact_w_c_a_r_from_curio,
 	}, "\n"), enhdesc_col)
 
@@ -821,30 +553,22 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Passive_10_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 不會與移動速度增益效果產生互動。",
-		ppp___ppp,
-		"- Does not interact with Movement Speed buffs.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 11 - Malefic Momentum +]--
 	local ED_PSY_Passive_11_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		stacks_add_w_oth_dmg,
-		"- 每個增益效果的 8 秒持續時間從相應的擊殺開始計算，並可在持續期間內刷新。",
+		"- 每個增益效果的8秒持續時間從相應的擊殺開始計算，並可在持續期間內刷新。",
 		warp_attc_refers_to,
-		ppp___ppp,
-		"- The 8 seconds duration of each buff starts on respective kills and can be refreshed during active duration.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 12 - Channeled Force +]--
 	local ED_PSY_Passive_12_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 在使用任何靈能法杖進行至少 95% 充能的次要攻擊後，增加法杖主要攻擊的傷害。",
+		"- 在使用任何靈能法杖進行至少95%充能的次要攻擊後，增加法杖主要攻擊的傷害。",
 		can_be_refr_dur_active_dur,
 		"- 與其他傷害增益做加法疊加。",
-		ppp___ppp,
-		"- Increases the Damage of staff Primary attacks after executing a charged secondary attack (at least 95% charged) with any Force Staff.",
-		can_be_refr_dur_active_dur,
-		"- Stacks additively with other Damage buffs.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 13 - Perilous Assault +]--
@@ -852,37 +576,24 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 這會減少切換物品槽（武器、閃擊技能、興奮劑、醫療包、彈藥箱、書籍等）時的操作時間：",
 		"_______________________________",
-		"反噬:     0|  20|  40|  50|  60|  80|  100",
+		"反   噬:  0|  20|  40|  50|  60|  80|  100",
 		"WS(%):  0|   10|  20|  25|  30|  40|   50",
 		"_______________________________",
-		"(*WS = 揮舞速度)",
-		"{#color(255, 35, 5)}- 客觀來說，靈能者目前的武器庫中沒有任何一種武器能顯著減少此天賦的揮舞時間。自動步槍和激光步槍在切換到它們並開始從腰部開火時擁有最長的揮舞時間為 0.65 秒。此天賦在 100% 反噬時會將這些時間減少到 0.43 秒。對於所有其他武器，時間減少的意義更小。{#reset()}",
-		ppp___ppp,
-		"- This reduces the time of Wielding actions when swapping item slots (weapons, Blitz abilities, stimms, med packs, ammo crates, books, etc):",
-		"_______________________________",
-		"Peril:     0|  20|  40|  50|  60|  80|  100",
-		"WS(%):  0|   10|  20|  25|  30|  40|   50",
-		"_______________________________",
-		"(*WS = Wield Speed)",
-		"{#color(255, 35, 5)}- Objectively speaking, Psyker's current Weapon arsenal does not include a single Weapon for which this Talent would provide a significant wield time reduction. Autoguns and Lasguns have the 'longest' wield times with 0.65 seconds when switching to them and starting to fire from hip. The Talent, at 100% Peril, would reduce these times to 0.43 seconds. For all other Weapons, the time reductions are even less significant.{#reset()}",
+		"(*WS = 揮舞速度  Wield Speed)",
+		"{#color(255, 35, 5)}- 客觀來說，靈能者目前的武器庫中沒有任何一種武器能顯著減少此天賦的揮舞時間。自動步槍和激光步槍在切換到它們並開始從腰部開火時擁有最長的揮舞時間為0.65秒。此天賦在100%反噬時會將這些時間減少到0.43秒。對於所有其他武器，時間減少的意義更小。{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 14 - Lightning Speed +]--
 	local ED_PSY_Passive_14_rgb = iu_actit(table.concat({
 		ppp___ppp,
     	"- 與敏捷興奮劑的相關攻擊速度增益做加法疊加。",
-		ppp___ppp,
-		"- Stacks additively with related Attack Speed buff from Celerity Stimm.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 15 - Souldrinker +]--
 	local ED_PSY_Passive_15_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 爆擊機率無法在持續期間內刷新。",
-		"- 每次實際擊殺敵人時恢復最大韌性。",
-		ppp___ppp,
-		"- Critical hit chance cannot be refreshed during active duration.",
-		"- Maximum Toughness is replenished with each actual enemy death.",
+		"- 每次擊殺敵人時恢復最大韌性。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 16 - Empyric Shock +]--
@@ -891,18 +602,10 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 對敵人施加一個減益效果，使其受到的亞空間攻擊傷害增加。",
 		can_be_refr_dur_active_dur,
 		"- 可穿透護盾施加。",
-		"- 減益效果與自身做乘法疊加，最高可達 33.8% (1.06⁵=1.338)，並與來自「衰弱詛咒」、歐格林的「削弱敵人」、「重要干擾」、老兵的「鎖定目標！」等其他敵人受到的傷害增益做乘法疊加，並與傷害增益和武器祝福提供的力量等級增益做乘法疊加。",
+		"- 減益效果與自身做乘法疊加，最高可達33.8%(1.06⁵=1.338)，並與來自「衰弱詛咒」、歐格林的「削弱敵人」、「重要干擾」、老兵的「鎖定目標！」等其他敵人受到的傷害增益做乘法疊加，並與傷害增益和武器祝福提供的力量等級增益做乘法疊加。",
 		warp_attc_refers_to,
 		"",
 		"{#color(255, 35, 5)}- 當前存在一個錯誤：地獄火法杖的左鍵攻擊無法施加減益效果。{#reset()}",
-		ppp___ppp,
-		"- Applies a debuff to enemies that increases the Damage they take from Warp attacks.",
-		can_be_refr_dur_active_dur,
-		"- Can be applied through shields.",
-		"- The debuff stacks multiplicatively with itself, up to 33.8% (1.06⁵=1.338), with other Damage taken debuffs on enemies from \"Enfeeble\", Ogryn's \"Soften Them Up\", \"Valuable Destruction\", Veteran's \"Focus Target!\", and multiplicatively with Damage buffs and with Power level buffs from Weapon Blessings.",
-		warp_attc_refers_to,
-		"",
-		"{#color(255, 35, 5)}- There is currently a bug: Inferno Staff left-clicks do not apply the debuff.{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 17 - By Crack of Bone +]--
@@ -910,9 +613,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 移除反噬時，順劈攻擊每次揮擊可多次觸發。與「戰鬥冥想」和「盜竊天命」同時觸發。",
 		"- 與「平心靜氣」、「亞空間意志」、「動能共鳴」、「現實錨點」、小型反噬抗性節點和戰鬥興奮劑的反噬值消耗減少效果做乘法疊加。",
-		ppp___ppp,
-		"- Removing Peril can proc multiple times per swing when Cleaving. Procs additionally to \"Battle Meditation\" and \"Purloin Providence\".",
-		"- Reducing Peril Stacks multiplicatively with Peril Cost Reduction buffs from \"Becalming Eruption\", \"Empyric Resolve\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\", small Peril Resistance nodes, and Combat Stimm.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 18 - Warp Splitting +]--
@@ -923,12 +623,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 與「虛無碎片」和「靈能強化」做加法疊加，並與武器祝福「毀滅打擊」、「野蠻掃擊」和「憤怒」的相關增益做加法疊加。",
 		"- 與武器祝福提供的力量等級增益做乘法疊加。",
 		"- 請注意，甲殼裝甲無法被順劈。",
-		ppp___ppp,
-		"- Scaling proportionally with Peril.",
-		"- Increases the Maximum hit mass limit of attacks (Melee, Ranged, \"Assail\") by up to 100%, thereby allowing attacks to Cleave more enemies.",
-		"- Stacks additively with \"Ethereal Shards\" and \"Empowered Psionics\", and with related buffs from Weapon Blessings \"Devastating Strike\", \"Savage Sweep\", and \"Wrath\".",
-		"- Stacks multiplicatively with Power level buffs from Weapon Blessings.",
-		"- Note that Carapace armor cannot be Cleaved by default.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 19 - Unlucky for Some +]--
@@ -936,9 +630,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 當靈能者倒下時，恢復協同範圍內盟友的韌性。",
 		"- 當盟友或靈能者死亡時不會觸發。",
-		ppp___ppp,
-		"- When Psyker goes down, replenishes Toughness to Allies in Coherency.",
-		"- Does not proc when the Ally or Psyker dies.",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
@@ -951,14 +642,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"反噬:       0|  20|  40|  50|  60|  80|  100",
 		"TDR(%): 10|  14|   19|   21|  23|  28|    33",
 		"_______________________________",
-		"(*TDR = 韌性傷害減免)",
-		ppp___ppp,
-		"- Always grants a minimum of 10% Toughness Damage Reduction regardless of current Peril amount:",
-		"_______________________________",
-		"Peril:       0|  20|  40|  50|  60|  80|  100",
-		"TDR(%): 10|  14|   19|   21|  23|  28|    33",
-		"_______________________________",
-		"(*TDR = Toughness Damage Reduction)",
+		"(*TDR = 韌性傷害減免 Toughness Damage Reduction)",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 21 - Empathic Evasion +]--
@@ -967,24 +651,15 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 用近戰爆擊、遠程或「靈能攻擊」擊中敵人會使靈能者進入 1 秒的「閃避狀態」，對抗遠程攻擊。",
 		can_be_refr_dur_active_dur,
 		"- 此效果在機制上與武器祝福「幽靈」、「游擊」和「輕裝」提供的效果相同。",
-		ppp___ppp,
-		"- Hitting enemies with a Critical Melee, Ranged, or \"Assail\" attack puts Psyker into \"Dodging state\" against Ranged attacks for 1 second.",
-		can_be_refr_dur_active_dur,
-		"- This effect is mechanically the same as the one provided by Weapon Blessings \"Ghost\", \"Hit and Run\", and \"Stripped Down\".",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 22 - Anticipation +]--
 	local ED_PSY_Passive_22_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 將靈能者的基礎閃避停留時間從 0.2 秒增加到 0.3 秒。",
-		"- 「閃避停留時間」指的是在閃避技術結束後，角色仍被視為處於對抗近戰攻擊的「閃避狀態」的時間窗口。這使得閃避窗口在玩家輸入時更具寬容性。",
+		"- 將靈能者的基礎閃避停留時間從0.2秒增加到0.3秒。",
+		"- 「閃避持續時間」指的是在閃避技術結束後，角色仍被視為處於對抗近戰攻擊的「閃避狀態」的時間窗口。這使得閃避窗口在玩家輸入時更具寬容性。",
 		"- 同時增加一次有效閃避。",
 		"- 角色能執行的有效閃避總數因當前裝備的武器或物品的閃避模板而異。",
-		ppp___ppp,
-		"- Increases Psyker's base Dodge linger time from 0.2 seconds to 0.3 seconds.",
-		"- \"Dodge linger time\" refers to the time window in which a character is still considered to be in \"Dodging state\" against a Melee attack after a Dodge has technically ended. This makes the Dodge window more forgiving in regard to player input timing.",
-		"- Also adds one effective Dodge at all times.",
-		"- The overall amount of effective Dodges a character can perform varies depending on the Dodge template of the currently equipped Weapon or Iitem.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 23 - Solidity +]--
@@ -992,17 +667,12 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		ppp___ppp,
 		"- 僅適用於主動平息，對被動平息無效。",
 		"- 在計算過程中與敏捷興奮劑的平息增益做乘法疊加。",
-		ppp___ppp,
-		"- Applies only to active quelling, passive quelling is unaffected.",
-		"- Stacks multiplicatively during calculation with the Quelling buff from Celerity Stimm.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 24 - Puppet Master +]--
 	local ED_PSY_Passive_24_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 將基礎協同範圍從 8 公尺增加到 12 公尺。",
-		ppp___ppp,
-		"- Increases base Coherency radius from 8 to 12 meters.",
+		"- 將基礎協同範圍從8公尺增加到12公尺。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 25 - Warp Rider +]--
@@ -1011,15 +681,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		stacks_add_w_oth_dmg,
 		"_______________________________",
 		"反噬:       0|  20|  40|  50|  60|  80|  100",
-		"傷害(%): 0|     4|    8|   10|   12|   16|   20",
-		"_______________________________",
-		"(*傷害 = 傷害增加)",
-		ppp___ppp,
-		"_______________________________",
-		"Peril:       0|  20|  40|  50|  60|  80|  100",
 		"Dmg(%): 0|     4|    8|   10|   12|   16|   20",
 		"_______________________________",
-		"(*Dmg = Damage Increase)",
+		"(*Dmg = 傷害增加  Damage Increas)",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 26 - Crystalline Will +]--
@@ -1033,15 +697,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"-- 使所有敵人踉蹌，除了破碎者、變種人、巨獸、雙胞胎（僅限沒有虛空護盾的隊長）。",
 		"-- 對所有敵人造成600基礎傷害。",
 		"-- 爆炸傷害從中心到最大範圍逐漸減少，並且可以通過「擾動命運」、「至天高之力」、「惡意攻勢」（常規傷害增益）、「占卜者的注視」和「亞空間騎士」的傷害增益來增加。",
-		ppp___ppp,
-		"- Instead of knocking down Psyker on self-explosion, converts one Health Segment to full Corruption.",
-		"- Always converts one Segment regardless whether the Segment in question is already partially Corrupted or not.",
-		"- Also reduces the overall time of the self-explosion from 3 to 1.13 seconds.",
-		"- Psyker's self-explosion:",
-		"-- Max radius: 10 meters.",
-		"-- Staggers all enemies except for Crusher, Mutants, Monstrosities, Twins (Captains only without void shield).",
-		"-- Deals 600 base Damage against all enemies.",
-		"-- Explosion Damage decreases from center to Max range and can be increased by Damage buffs from \"Disrupt Destiny\", \"Empyrean Empowerment\", \"Malefic Momentum\" (regular Damage buff), \"Scrier's Gaze\", and \"Warp Rider\".",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 27 - Kinetic Deflection +]--
@@ -1050,713 +705,678 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 反噬消耗減少增益（來自「平心靜氣」、「骨折後遺症」、「亞空間意志」、「內在平靜」、「現實錨點」和小型反噬抗性節點）增加了耐力消耗轉換為反噬的效率。",
     	"- 也增加了來自珍品、近戰武器特技和「偏斜」武器祝福（也適用於遠程攻擊）的格擋效率增益，以及來自敏捷興奮劑的耐力消耗減少增益。",
     	"- 所有反噬消耗減少、格擋消耗減少和耐力消耗減少的來源都與自身和彼此乘法疊加。",
-		ppp___ppp,
-		"- The efficiency of the Stamina Cost-to-Peril conversion is increased by Peril Cost Reduction buffs from \"Becalming Eruption\", \"By Crack of Bone\", \"Empyric Resolve\", \"Inner Tranquility\", \"Reality Anchor\" and small Peril Resistance nodes.",
-		"- Also increased by Block Cost Reduction buffs from Block Efficiency from Curios, Melee weapon perks, and \"Deflector\" Weapon Blessing (also against Ranged attacks), and by Stamina Cost Reduction buff from Celerity Stimm.",
-		"- All sources of Peril Cost Reduction, Block Cost Reduction, and Stamina Cost Reduction Stack multiplicatively with themselves and each other.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 28 - Tranquility Through Slaughter +]--
 	local ED_PSY_Passive_28_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 用常規遠程攻擊的爆擊移除當前反噬值的 4%。",
+		"- 用常規遠程攻擊的爆擊移除當前反噬值的4%。",
 		"- 擊中護盾時觸發。",
 		"- 每次射擊僅觸發一次，無論擊中多少敵人。",
 		"- 與「戰鬥冥想」和「盜竊天命」同時觸發。",
-		warp_attc_refers_to,
-		ppp___ppp,
-		"- Critical hits with regular ranged attacks remove 4% Peril from the current Peril amount.",
-		"- Procs when hitting shields.",
-		"- Procs only once per shot regardless of how many enemies have been hit.",
-		"- Procs additionally to \"Battle Meditation\" and \"Purloin Providence\".",
 		warp_attc_refers_to,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 29 - Empyric Resolve +]--
 	local ED_PSY_Passive_29_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 減少 40% 反噬生成量。",
+		"- 減少40%反噬生成量。",
 		"- 與「骨折後遺症」、「平心靜氣」、「動能共鳴」、「現實錨點」、小型反噬抗性節點和戰鬥興奮劑的反噬消耗減少效果做乘法疊加。",
-		"- 也減少近戰擊殺和天賦提供的韌性回復量 30%。",
+		"- 也減少近戰擊殺和天賦提供的韌性回復量30%。",
 		"- 不影響協同韌性再生和武器祝福「榮耀獵手」、「激勵彈幕」和「令人安心的準確性」的韌性回復。",
 		"- 此回復減益效果與其他玩家減益效果（如有毒氣體）做乘法疊加。",
-		ppp___ppp,
-		"- Reduces the amount of peril generated by 40%.",
-		"- Stacks multiplicatively with Peril Cost Reduction buffs from \"Becalming Eruption\", \"By Crack of Bone\", \"Inner Tranquility\", \"Kinetic Resonance\", \"Reality Anchor\", small Peril Resistance nodes, and Combat Stimm.",
-		"- Also reduces the amount of any Toughness replenished from Melee kills and Talents by 30%.",
-		"- Does not affect Toughness replenishments from Coherency Toughness Regeneration and Weapon Blessings \"Gloryhunter\", \"Inspiring Barrage\", and \"Reassuringly Accurate\".",
-		"- This Replenishment debuff Stacks multiplicatively with other player debuffs like toxic gas.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 30 - Penetration of the Soul +]--
 	local ED_PSY_Passive_30_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 當反噬值達到或超過 75% 時，對亞空間攻擊賦予 10% 撕裂效果，提升對甲殼、片甲、狂熱者、不屈敵人的傷害。",
+		"- 當反噬值達到或超過75%時，對亞空間攻擊賦予10%撕裂效果，提升對甲殼、片甲、狂熱者、不屈敵人的傷害。",
 		"- 僅影響靈能者自身的傷害。",
 		"- 與其他撕裂增益和施加於敵人的脆弱減益做加法疊加。",
 		warp_attc_refers_to,
 		"{#color(255, 35, 5)}當前存在一個錯誤：撕裂乘數在傷害計算中未正確應用。\n此天賦無效!!!{#reset()}",
-		ppp___ppp,
-		"- While at or above 75% true Peril, grants 10% Rending to Warp attacks boosting Damage against armor types Carapace, Flak, Maniac, Unyielding.",
-		"- Only affects Psyker's own Damage.",
-		"- Stacks additively with other Rending buffs and with Brittleness debuffs that are applied to enemies.",
-		warp_attc_refers_to,
-		"{#color(255, 35, 5)}There is currently a bug: The Rending multiplier fails to be applied correctly during Damage calculation.\nTHIS TALENT DOES NOTHING!!!{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 31 - True Aim +]--
 	local ED_PSY_Passive_31_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 每次用近戰、遠程、「靈能攻擊」和「顱腦崩裂」/「顱腦爆裂」攻擊命中弱點時生成 1 層弱點疊加。",
-		"- 順劈攻擊（例如虛空打擊法杖的充能射擊進入密集區域）一次最多可累積 5 層弱點疊加，但不會立即消耗保證的爆擊。",
+		"- 每次用近戰、遠程、「靈能攻擊」和「顱腦崩裂」、「顱腦爆裂」攻擊命中弱點時生成1層弱點疊加。",
+		"- 順劈攻擊（例如虛空打擊法杖的充能射擊進入密集區域）一次最多可累積5層弱點疊加，但不會立即消耗保證的爆擊。",
 		"- 弱點疊加持續到被消耗為止。",
-		"- 「顱腦崩裂」/「顱腦爆裂」和「懲戒」不會消耗保證的爆擊。",
-		ppp___ppp,
-		"- Generates 1 Weakspot Stack per Weakspot hit with Melee, Ranged, \"Assail\" and \"Brain Rupture\"/\"Brain Burst\" attacks.",
-		"- Cleaving attacks (e.g. Voidstrike Staff charged shots into density) can accumulate up to 5 Weakspot Stacks at once but do not consume the guaranteed Crit right away.",
-		"- Weakspot Stacks last until consumed.",
-		"- \"Brain Rupture\"/\"Brain Burst\" and \"Smite\" do not consume the guaranteed Crit.",
+		"- 「顱腦崩裂」、「顱腦爆裂」和「懲戒」不會消耗保證的爆擊。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 32 - Surety of Arms +]--
 	local ED_PSY_Passive_32_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"重新裝填時，增加 25% 裝填動畫速度。",
+		"重新裝填時，增加25%裝填動畫速度。",
 		"與武器祝福提供的裝填速度增益做加法疊加。",
-		"重新裝填時，根據彈匣中重新裝填的彈藥百分比，生成最多 25% 的反噬。",
-		"例如，當重新裝填 34 發彈藥，而彈匣容量為 59 發時，靈能者會生成 14.4% 的真實反噬；0.25x(34/59)=0.144。",
-		"重新裝填空彈匣會生成最大 25% 的反噬。",
-		"反噬消耗減少增益會降低此重新裝填彈藥轉換為反噬的效率。例如，重新裝填相同數量的彈藥，但彈匣容量相同，且有三個反噬抗性節點（即 warp_charge_amount 為 0.95³），靈能者只會生成 12.3% 的真實反噬；0.25x(34/59)x0.95³=0.123。",
-		"請注意，此天賦在重新裝填時總是會生成反噬，無論當前反噬量多少，但只有在真實反噬量低於或等於 75% 時才會增加裝填速度。",
-		ppp___ppp,
-		"- Increases Reload animation speed by 25%.",
-		"- Stacks additively with Reload speed buffs from Weapon Blessings.",
-		"- Upon Reload, generates up to 25% Peril based on the percentage of reloaded ammo in clip. ",
-		"- For example, when reloading 34 rounds of a clip that has a size of 59 rounds, Psyker would generate 14.4% true peril; 0.25x(34/59)=0.144.",
-		"- Reloading an empty clip generates the Max amount of 25% Peril. ",
-		"- Peril cost reduction buffs reduce the efficiency of this Reloaded-ammo-to-Peril conversion. For example, reloading the same amount of ammo in a clip of the same size, but with three Peril Resistance nodes (i.e. a warp_charge_amount of 0.95³), Psyker would only generate 12.3% true peril; 0.25x(34/59)x0.95³=0.123.",
-		"Note that the Talent always generates Peril on Reload regardless of current Peril amount but only grants the increased Reload speed when below or at 75% true Peril.",
+		"重新裝填時，根據彈匣中重新裝填的彈藥百分比，生成最25%的反噬。",
+		"例如，當重新裝填34發彈藥，而彈匣容量為59發時，靈能者會生成14.4%的真實反噬；0.25x(34/59)=0.144。",
+		"重新裝填空彈匣會生成最大25%的反噬。",
+		"反噬消耗減少增益會降低此重新裝填彈藥轉換為反噬的效率。例如，重新裝填相同數量的彈藥，但彈匣容量相同，且有三個反噬抗性節點（即亞空間充能量為0.95³），靈能者只會生成12.3%的真實反噬；0.25x(34/59)x0.95³=0.123。",
+		"請注意，此天賦在重新裝填時總是會生成反噬，無論當前反噬量多少，但只有在真實反噬量低於或等於75%時才會增加裝填速度。",
 	}, "\n"), enhdesc_col)
 
 --[+ ++ZEALOT++ +]--
 --[+ +BLITZ+ +]--
-	--[+ Blitz 0 - Stun Grenade +]--
+	--[+ Blitz 0 - Stun Grenade(眩暈手雷) +]--
 	local ED_ZEA_Blitz_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Fuse time: 1.5 seconds.",
-		"- Explosion radius: 8 meters.",
-		"- Electrocution:",
-		"-- Lasts 8 seconds.",
-		"-- Stacks once.",
-		"-- Deals low Damage across the board.",
-		"-- Deals Damage and Stagger every 0.55 seconds.",
-		-- "-- Staggers all enemies in range except Mutants, monstrosities and Captains/Twins.",
-		"-- Ignores Bulwark shields.",
-		"-- Can be refreshed during active duration.",
+		"- 爆炸引信時間：1.5秒。",
+		"- 爆炸半徑：8米。",
+		"- 電擊：",
+		"-- 持續8秒。",
+		"-- 疊加一次。",
+		"-- 對所有敵人造成低傷害。",
+		"-- 每0.55秒造成傷害和踉蹌。",
+		"-- 忽略壁壘。",
+		"-- 可在持續期間內刷新。",
 	}, "\n"), enhdesc_col)
 	
-	--[+ Blitz 1 - Stunstorm Grenade +]--
+	--[+ Blitz 1 - Stunstorm Grenade(眩暈風暴手雷) +]--
 	local ED_ZEA_Blitz_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"-- Explosion radius is increased to 12 meters.",
-		"- Fuse time: 1.5 seconds.",
-		"- Electrocution:",
-		"-- Lasts 8 seconds.",
-		"-- Stacks once.",
-		"-- Deals low Damage across the board.",
-		"-- Deals Damage and Stagger every 0.55 seconds.",
-		"-- Staggers all enemies in range except Mutants, Scab Captain/Twins and Monstrosities.",
-		"-- Ignores Bulwark shields.",
-		"-- Can be refreshed during active duration.",
+		"- 爆炸半徑增加至12米。",
+		"- 爆炸引信時間：1.5秒。",
+		"- 電擊：",
+		"-- 持續8秒。",
+		"-- 疊加一次。",
+		"-- 對所有敵人造成低傷害。",
+		"-- 每0.55秒造成傷害和踉蹌。",
+		"-- 對範圍內所有敵人造成踉蹌，除了變種人、隊長/雙胞胎和巨獸。",
+		"-- 忽略壁壘。",
+		"-- 可在持續期間內刷新。",
 	}, "\n"), enhdesc_col)
 	
-	--[+ Blitz 2 - Immolation Grenade +]--
+	--[+ Blitz 2 - Immolation Grenade(獻祭手雷) +]--
 	local ED_ZEA_Blitz_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Fuse time: 1.7 seconds.",
-		"- Fire patch: Lasts 15 seconds. Radius 5 meters. Enemies avoid it.",
-		"- Burn (inside fire patch): Stacks once. Ticks every 0.875 seconds. Ignores Bulwark and Void shields.",
-		"-- Deals varying Damage per tick per armor type (Very high Damage against Unyielding; High Damage against Unarmoured, Infested, Maniac; Very low Damage against Carapace).",
-		-- "- Burn (leaving Fire patch): Lasts 1 second. Ticks every 1 second. Short burn effect with slightly less Damage.",
-		"- Burn damage is increased by: Rending/Brittleness, Perks of currently equipped Weapons, and the following buffs from:\n-- Talents: \"Anoint in Blood\", \"Purge the Unclean\", \"Ecclesiarch's Call\", and \"Inexorable Judgement\".\n-- Blessings:\n--- Melee: \"Executor\", \"High Voltage\", \"Skullcrusher\", and \"Slaughterer\".\n--- Ranged: \"Blaze Away\", \"Dumdum\", \"Deathspitter\", \"Execution\", \"Fire Frenzy\", \"Full Bore\", \"No Respite\", \"Pinning Fire\", and \"Run 'n' Gun\" (while sprinting).",
+		"- 引信時間：1.7秒。",
+		"- 火焰區域：持續15秒。半徑5米。敵人會避開該範圍。",
+		"- 燃燒（於火焰區域內）：只疊加一次。每0.875秒造成傷害。忽略壁壘與虛空護盾。",
+		"-- 針對不同護甲類型，造成不同傷害（對不屈敵人傷害極高；對無甲、感染者、狂熱者則是高傷害；對甲殼則非常低）。",
+		"--（可視需求）若目標離開火焰區域，可能有短暫殘留燒傷。",
+		"- 燃燒傷害會被以下提升：撕裂/脆弱、當前裝備武器的特性，以及下列天賦與祝福的相關加成：",
+		"-- 天賦: 「鮮血受膏」、「淨化不潔」、「教宗之喚」、「命定審判」。",
+		"-- 祝福：",
+		"--- 近戰：「行刑者」、「高壓電」、「碎顱者」、「殺戮者」。",
+		"--- 遠程：「連續發射」、「達姆彈」、「死亡噴吐」、「處決」、「烈火熱焰」、「全孔射擊」、「刻不容緩」、「鉗制射擊」、「連跑帶打」（衝刺時）。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Blitz 3 - Blades of Faith +]--
+	--[+ Blitz 3 - Blades of Faith(信仰之刃) +]--
 	local ED_ZEA_Blitz_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Quick Throw.",
-		"- Ammo: Replenishes 1 knife per melee Elite or Special kill. 2 knives per small ammo pickup. 6 knives per big ammo pickup. All knives per ammo crate.",
-		"- The knife flies along a curving trajectory.",
-		"- Damage: 585 base Damage.",
-		"-- High armor Damage modifiers against Maniac and Infested.",
-		"-- Extra Finesse boosts against Unarmoured and Flak.",
-		"-- Deals no Damage against Carapace unless weakspot like Mauler head.",
-		"-- Low Crit Chance - 5%.",
-		"-- No Damage falloff.",
-		"- Can Cleave 1 Groaner, Poxwalker, Scab/Dreg Stalker or Scab Shooter.",
-		"- Headshot kills all enemies except Ogryns, Ragers, Maulers and Monstrosities.\n- Knives are affected by Perks of currently equipped Weapons and by the following buffs from:",
-		"-- Talents: \"Anoint in Blood\", \"Purge the Unclean\", \"Ecclesiarch's Call\", and \"Inexorable Judgement\" (damage).",
-		"-- A lot of Melee and Ranged Blessings.",
+		"- 快速投擲。",
+		"- 彈藥補充：每次近戰處決菁英或特殊敵人可補充1把飛刀；小型彈藥補給補充2把飛刀；大型彈藥補給補充6把飛刀；彈藥箱補充全部飛刀。",
+		"- 飛刀沿著彎曲軌道飛行。",
+		"- 傷害：基礎傷害585。",
+		"-- 針對狂熱者與感染者具備高護甲傷害修正。",
+		"-- 額外技巧(Finesse)在對無甲與破片護甲(Flak)時有加成。",
+		"-- 若目標是甲殼(如Mauler頭部以外)，則不造成傷害。",
+		"-- 低爆擊率 - 5%。",
+		"-- 無距離衰減。",
+		"- 可順劈1個血痂槍兵、渣滓槍兵或更小型敵人。",
+		"- 頭部擊殺除了歐格林、狂怒者、重錘兵、巨獸以外的任何敵人。",
+		"- 飛刀會受到當前裝備武器特性的影響，並會受到以下天賦帶來的增益：",
+		"-- 天賦：「鮮血受膏」、「淨化不潔」、「教宗之喚」、「命定審判」（傷害）。",
+		"-- 以及許多近戰與遠程祝福。",
 	}, "\n"), enhdesc_col)
 
 --[+ +AURA+ +]--
-	--[+ Aura 0 - The Emperors's Will +]--
-	--[+ Aura 1 - Benediction +]--
+	--[+ Aura 0 - The Emperors's Will(帝皇之諭) +]--
+	--[+ Aura 1 - Benediction(恩賜) +]--
 	local ED_ZEA_Aura_0_n_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		stacks_mult_w_other_dmg_red_buffs,
-		"- Does not Stack with the same Aura from another Zealot.",
+		"- 不會與另一位狂信徒施放的同一光環效果重複疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Aura 2 - Beacon of Purity +]--
+	--[+ Aura 2 - Beacon of Purity(純潔信標) +]--
 	local ED_ZEA_Aura_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- This rate is strong enough to counter a Grimoire's Corruption Damage tick rate. However, the initial 40 Corruption Damage per book cannot be removed.",
+		"- 恢復速率足以抵銷法術書的腐蝕傷害，不過首次造成的40腐蝕傷害無法消除。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Aura 3 - Loner +]--
+	--[+ Aura 3 - Loner(孤狼) +]--
 	local ED_ZEA_Aura_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with \"Fortitude in Fellowship\", and during calculation multiplicatively with Toughness Regeneration Speed from Curios and related buffs from Veteran's small Talent node \"Inspiring Presence\" or Ogryn's aura \"Stay Close!\".",
-		"- Note that the proc conditions for Coherency Toughness Regeneration still apply.",
+		"- 與「合抱成林」效果疊加時採加法計算，並在計算過程中與老兵小型天賦「鼓舞人心」或歐格林光環「保持靠近!」提供的韌性恢復速度採乘法計算。",
+		"- 需要符合協同韌性再生(Coherency Toughness Regeneration)的前提才能觸發。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 0 - Chastise the Wicked +]--
+	--[+ Ability 1 - Fury of the Faithful(有信者之怒) +]--
 	local ED_ZEA_Ability_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Dash Range:",
-		"-- Base: 7 meters.",
-		"-- Aimed: up to 21 meters.",
-		"- Grants immunity to Toughness Damage and you Dodge all attacks while dashing.",
-		"- Applies a light Stagger on impact in a 3 meters radius.",
+		"- 突進距離：",
+		"-- 基礎：7米。",
+		"-- 瞄準：最遠21米。",
+		"- 突進時獲得韌性傷害免疫並且閃避所有攻擊。",
+		"- 碰撞到敵人時，在3米範圍內造成輕微踉蹌。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 1 - Fury of the Faithful +]--
+	--[+ Ability 1-1 - Redoubled Zeal(倍增狂熱) +]--
 	local ED_ZEA_Ability_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Dash:",
-		"-- Range: Base: 7 meters. Aimed(hold button): up to 21 meters.",
-		"-- Cannot be activated while jumping or falling.",
-		"-- You can't change direction, but you can Cancel the dash with Block or Back buttons.",
-		"-- You Dodge all Attacks and grants Immunity to Toughness Damage.",
-		"-- You can be stopped by Unyielding, Carapace, Monstrosities, as well as the Void shields.",
-		"- Melee armor penetration buff:",
-		"-- Adds a 100% Rending against Carapace, Flak, Maniac, Unyielding armor types to the next Melee Attack within 3 seconds after activation.",
-		"-- The first Melee Attack within the duration consumes this buff.",
-		"-- Ranged attacks do NOT benefit from this buff.",
-		"-- Stacks additively with other Attack Speed buffs from Talents and Celerity Stimm.",
+		"- 突進：",
+		"-- 範圍：基礎7米；（長按瞄準）最遠可達21米。",
+		"-- 無法在跳躍或下落時啟用。",
+		"-- 無法改變方向，但可透過格擋或向後鍵取消突進。",
+		"-- 突進期間閃避所有攻擊並獲得韌性傷害免疫。",
+		"-- 可能會被不屈敵人、甲殼、巨獸以及虛空護盾阻擋。",
+		"- 近戰穿甲加成：",
+		"-- 下次近戰攻擊在啟動後3秒內獲得針對甲殼、破片護甲、狂熱者、不屈敵人的100%撕裂。",
+		"-- 第一次近戰攻擊會消耗此Buff。",
+		"-- 遠程攻擊無法受此Buff加成。",
+		"-- 與其他天賦的攻擊速度Buff以及敏捷興奮劑效果採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 1-1 - Redoubled Zeal +]--
+	--[+ Ability 1-1 - Redoubled Zeal(倍增狂熱) +]--
 	local ED_ZEA_Ability_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- The Cooldown of the Second charge only starts after the First charge finished its Cooldown.",
+		"- 第二段充能的冷卻只有在第一段充能完成冷卻後才會開始。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 1-2 - Invocation of Death +]--
+	--[+ Ability 1-2 - Invocation of Death(死亡禱文) +]--
 	local ED_ZEA_Ability_1_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- This results in a total Cooldown Reduction of 12 seconds per proc (4 seconds from Base rate + 4x2 seconds from Talent)",
+		"- 每次觸發總共減少12秒冷卻（基礎4秒 + 天賦提供4次，每次2秒 = 額外8秒，共計12秒）。",
 		can_be_refr_dur_active_dur,
-		"- Procs additionally to Concentration Stimm's remaining Cooldown Reduction effect of 3 seconds per second.",
+		"- 與「專注興奮劑」的剩餘冷卻縮短效果（每秒3秒）同時生效。",
 		doesnt_interact_w_c_a_r_from_curio,
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2 - Chorus of Spiritual Fortitude +]--
+	--[+ Ability 2 - Chorus of Spiritual Fortitude(不屈靈魂合唱) +]--
 	local ED_ZEA_Ability_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Radius: 10 meters.",
-		"- Immunity to Stuns and Invulnerability can be refreshed during active duration.",
-		"- \"Invulnerability\" means that player Health can't fall below 1. Players can still lose any Health above 1.",
-		"- Yellow Toughness bonus lasts 10 seconds and does not Stack with bonus Toughness from the same Talent of another Zealot. But does Stack additively with Veteran's bonus Toughness from \"Duty and Honour\".",
-		"- Bonus Toughness acts as a 'second' Toughness bar and can be replenished by Melee kills, respective Talents, and Weapon Blessings",
-		-- "- Pulses deal no Damage and do not Stagger.",
-		-- "- Channeling can be canceled by Blocking, Sprinting, or pressing the Ability button again.",
-		-- "- While channeling, cooldown is paused. However, its cooldown can still be reduced by using a Concentration Stimm before activation or by benefitting from Psyker's talent Psykinetic's Aura while channeling; its maximum cooldown can be reduced by Combat Ability Regeneration from curios, by Psyker's aura Seer's Presence, and by the mission mutators that reduce ability cooldowns by 20%.",
+		"- 範圍：10米。",
+		"- 在效果持續期間，可刷新對眩暈或無敵的免疫效果。",
+		"- 「無敵」表示玩家的生命值不會低於1，但多餘的生命值仍可能被削減。",
+		"- 額外的黃色韌性持續10秒，且不會與另一位狂信徒使用相同天賦所提供的韌性重疊。但會與老兵天賦「責任與榮耀」的額外韌性採加法疊加。",
+		"- 額外韌性相當於第二條韌性槽，可藉由近戰擊殺、對應天賦或武器祝福恢復。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2-1 - Holy Cause +]--
+	--[+ Ability 2-1 - Holy Cause(神聖事業) +]--
 	local ED_ZEA_Ability_2_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Allies get the buff as long as they are in Coherency when the buff is triggered.",
+		"- 當Buff觸發時，只要盟友處於協同範圍內，就會獲得此Buff。",
 		stacks_mult_w_other_dmg_red_buffs,
-		"- Does not Stack with the same Talent from another Zealot.",
+		"- 不會與另一位狂信徒使用相同天賦重複疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2-2 - Banishing Light +]--
+	--[+ Ability 2-2 - Banishing Light(放逐之光) +]--
 	local ED_ZEA_Ability_2_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- This talent does three things:",
-		"-- 1. It enables pulses to Stagger non-suppressible enemies within 10 meters. Against Monstrosities and Captains/Twins within 4 meters, a forced Stagger is applied on the 1st, 3rd, 5th, and 7th pulse. Against all other non-Suppressible enemies within 4 meters, a forced Stagger is applied every pulse. Forced Stagger lasts 2 seconds.",
-		"-- 2. It enables each pulse to Suppress all suppressible enemies within 10 meters. Each pulse applies very high Suppression with an increased, randomly chosen Suppression decay delay.",
-		"--- Breeds that can be suppressed: Groaner, Dreg Gunner, Dreg Stalker, Poxwalker (only in this Talent's case), Reaper, Scab Gunner, Scab Shooter, Scab Stalker",
-		"-- 3. It increases the pulse radius of 10 meters by 0.1 meters per second while channeling, up to 10.5 meters. This affects the radius in which enemies get Suppressed or Staggered (does not increase Forced Stagger radius).",
+		"- 這個天賦有三個效果：",
+		"-- 1. 讓脈衝可以對10米內、不可壓制的敵人造成踉蹌。若是巨獸或隊長/雙胞胎且距離小於4米，則在第1、3、5、7次脈衝時施加強制踉蹌，其餘不可壓制的敵人（小於4米）則每次脈衝都會被強制踉蹌。強制踉蹌持續2秒。",
+		"-- 2. 每次脈衝都對10米內可壓制的敵人施加極高的壓制，並提高壓制衰減延遲。",
+		"--- 可壓制的敵人：瘟疫殭屍（本天賦特例）、渣滓砲手、渣滓槍手、血痂砲手、血痂射手、血痂槍手、收割者、砲手。",
+		"-- 3. 在引導期間，每秒將脈衝半徑由10米增加0.1米，最多到10.5米。此範圍內的敵人將受到壓制或踉蹌（但強制踉蹌的固定範圍不變）。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2-3 - Ecclesiarch's Call +]--
+	--[+ Ability 2-3 - Ecclesiarch's Call(教宗之喚) +]--
 	local ED_ZEA_Ability_2_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Allies get the buff as long as they are in Coherency when the buff is triggered.",
+		"- 當Buff觸發時，只要盟友處於協同範圍內，就會獲得此Buff。",
 		stacks_add_w_oth_dmg,
-		"- Does not Stack with the same Talent from another Zealot.",
+		"- 不會與另一位狂信徒使用相同天賦重複疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2-4 - Martyr's Purpose +]--
+	--[+ Ability 2-4 - Martyr's Purpose(殉道者之願) +]--
 	local ED_ZEA_Ability_2_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
+		"- 倒地時不會觸發。",
+		"- 例如，若狂信徒的「不屈靈魂合唱」仍有55秒冷卻，且受到80點生命傷害，則剩餘冷卻55秒會被減少：60 x (80 x 0.01) = 48秒，最後只剩7秒。",
+		"- 與「專注興奮劑」的3秒/秒冷卻縮短效果同時生效。",
+		"- 不會與來自珍品的戰鬥技能再生效果互動，後者僅減少戰鬥技能的最大冷卻時間。",
 		"- Does not proc while downed.",
 		"- For example, if Zealot has 55 seconds of Chorus of Spiritual Fortitude's 60 seconds Cooldown remaining and takes 80 Health Damage, then the remaining 55 seconds are reduced by 60x(80x0.01)=48 to 7 seconds.",
 		"- Procs additionally to Concentration Stimm's Cooldown Reduction effect of 3 seconds per second.",
 		"- Does not interact with Combat Ability Regeneration from Curios which only reduces the Maximum Cooldown of a Combat Ability.",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 3 - Shroudfield +]--
+	--[+ Ability 3 - Shroudfield(隱秘領域) +]--
 	local ED_ZEA_Ability_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		become_invis_drop_all_enemy_aggro,
-		"- You can still take Damage during Invisibility.",
-		"- Stealth breaks on: hitting enemies with a Melee attack, any Ranged attack, throwing a grenade (quickthrow, aimed or underhand), finishing a Rescue/Revive/Pull up/Free from net action, throwing knives only break Stealth when they hit a target.",
-		"- Stealth does not break on: pushing enemies, using Stimms (on self or team mates), exploding grenades that have been thrown before going invisible, active DoT ticks, operating the Auspex device or minigame.",
-		-- "- Stealth grace window: actions that would break Stealth do not if they are executed within 0.5 seconds after going invisible, this allows, if timed accordingly, for one additional Melee or Ranged attack that already benefits from all applicable buffs but does not break Stealth yet.",
-		-- "- Buffs to movement Speed, Backstab Damage, Finesse Damage, and Crit chance last as long as the Invisibility. The Finesse buff Stacks additively with other related buffs; the backstab damage buff stacks additively with related buffs from Backstabber and Perfectionist, and multiplicatively during calculation with other damage buffs and power level buffs from weapon blessings; the movement speed buff stacks additively with related buffs, and multiplicatively with sprinting speed buffs (Swift Certainty).",
-		"{#color(255, 35, 5)}Doesn't hide you from a Daemonhosts!{#reset()}",
+		"- 隱形時仍然可能受傷。",
+		"- 會解除隱形的動作包括：以近戰攻擊命中敵人、任何遠程攻擊、投擲手雷（快速、瞄準或拋擲）、完成救援/復甦/拉起隊友或掙脫束縛的動作；投擲刀只有在命中目標時才會破除隱形。",
+		"- 不會解除隱形的動作包括：推擊敵人、使用興奮劑（自用或給隊友）、在隱形前已丟出去的手雷爆炸、主動的持續傷害效果、操作占卜儀與小遊戲等。",
+		"{#color(255, 35, 5)}無法躲避惡魔宿主!{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3-1 - Master-Crafted Shroudfield +]--
 	-- local ED_ZEA_Ability_3_1_rgb = iu_actit(table.concat({"",}, "\n"), enhdesc_col)
 
-	--[+ Ability 3-2 - Perfectionist +]--
+	--[+ Ability 3-2 - Perfectionist(完美主義者) +]--
 	local ED_ZEA_Ability_3_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- The Finesse buff Stacks additively with other related buffs.",
-		"- The backstab Damage buff Stacks additively with related buffs from \"Backstabber\" and \"Shroudfield\", and multiplicatively during calculation with other Damage buffs and Power level buffs from Weapon Blessings.",
-		"- Also increases Shroudfield's maximum cooldown from 30 to 37.5 seconds.",
-		"- This Max Ccooldown increase can be mitigated by the Max Cooldown Reductions from Psyker's Aura \"Seer's Presence\", Combat Ability Regeneration from Curios, and by the mission mutators that reduce Ability Cooldowns by 20%.",
+		"- 提升的技巧傷害與其他相關Buff採加法疊加。",
+		"- 背刺傷害與「背刺者」、「隱秘領域」的加成採加法疊加，計算時再與其他傷害或武器威力加成採乘法疊加。",
+		"- 同時將「隱秘領域」的最大冷卻由30秒增加至37.5秒。",
+		"- 此額外冷卻可被以下效果部分抵銷：靈能者光環「先知之眼」、珍品的戰鬥技能冷卻、以及任務關卡冷卻減少20%的增益等。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 3-3 - Invigorating Revelation +]--
+	--[+ Ability 3-3 - Invigorating Revelation(振奮啟示) +]--
 	local ED_ZEA_Ability_3_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- When Invisibility ends, replenishes 8% of Maximum Toughness per second for 5 seconds.",
+		"- 當隱形結束時，在接下來5秒內每秒恢復相當於最大韌性的8%。",
 		red_both_tghns_n_health_dmg,
 		stacks_mult_w_other_dmg_red_buffs,
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 3-4 - Pious Cut-Throat +]--
+	--[+ Ability 3-4 - Pious Cut-Throat(虔誠刺客) +]--
 	local ED_ZEA_Ability_3_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Has a 0.2 seconds internal Cooldown.",
-		"- This is 6 seconds for \"Fury of the Faithful\" and \"Shroudfield\" (7.5 seconds with \"Perfectionist\"), and 12 seconds for \"Chorus of Spiritual Fortitude\".",
-		"- \"Backstabbing\" refers to Melee attacks executed from within a specific angle behind an enemy's back.",
-		"- Procs additionally to Concentration Stimm's Cooldown Reduction effect of 3 seconds per second.",
+		"- 有0.2秒的內部冷卻時間。",
+		"- 「有信者之怒」與「隱秘領域」的冷卻因此被縮短至6秒（「完美主義者」下則為7.5秒），而「不屈靈魂合唱」則縮短至12秒。",
+		"- 「背刺」是從敵人背後特定角度進行的近戰攻擊。",
+		"- 與「專注興奮劑」的3秒/秒冷卻縮短效果同時生效。",
 		doesnt_interact_w_c_a_r_from_curio,
-		"- Revved up attacks of Chain Weapons proc this Talent only if the initial backstab hit kills the target right away.",
+		"- 連枷類(Chain Weapon)武器若要觸發此天賦，必須在背刺第一下就立即擊殺目標。",
 	}, "\n"), enhdesc_col)
 
 --[+ +KEYSTONES+ +]--
-	--[+ Keystone 1 - Blazing Piety +]--
+	--[+ Keystone 1 - Blazing Piety(熾熱虔誠) +]--
 	local ED_ZEA_Keystone_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- After 8 seconds without a kill, considers Zealot as being out of combat. While out of combat, drops Stacks of \"Fury\" over time. While out of combat, starts dropping current Stacks of Fury one by one at a decelerating rate.",
-		"- The active Fury duration can be refreshed by killing enemies.",
-		"- Stacks additively with other sources of Crit Chance.",
+		"- 當狂信徒在8秒內未擊殺任何敵人時，系統會視其為脫離戰鬥狀態；脫離戰鬥後，狂怒疊加會隨時間逐漸下降，以愈來愈慢的速度一個一個消耗。",
+		"- 狂怒的持續時間可透過擊殺敵人來刷新。",
+		"- 與其他來源的爆擊機率採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 1-1 - Stalwart +]--
+	--[+ Keystone 1-1 - Stalwart(死忠) +]--
 	local ED_ZEA_Keystone_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- When reaching 25 Stacks of Fury, does two things:",
-		"-- 1. Replenishes 50% of Maximum Toughness immediately. Then, while maintaining 25 Stacks of Fury, also replenishes 2% of Max Toughness per kill.",
-		"--- Stacks additively with Zealot's base 5% Max Toughness gained on melee kill.",
+		"- 當狂怒疊加達到25層時，會有兩個效果：",
+		"-- 1. 立即回復50%最大韌性。同時，只要維持25層狂怒，每擊殺1名敵人就額外回復2%最大韌性。",
+		"--- 與狂信徒原本近戰擊殺可回復5%韌性的效果採加法疊加。",
 		"--"..z_eff_of_this_tougn_rep,
-		"-- 2. Grants 25% Toughness Damage Reduction for as long as 25 Stacks of Fury are maintained.",
+		"-- 2. 只要維持25層狂怒，便可獲得25%的韌性減傷。",
 		"--"..stacks_mult_w_other_dmg_red_buffs,
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 1-2 - Fury Rising +]--
+	--[+ Keystone 1-2 - Fury Rising(怒火升騰) +]--
 	local ED_ZEA_Keystone_1_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Can generate multiple Stacks per Critical Attack when Cleaving.",
-		"- Also procs on Critical Attacks against shields.",
+		"- 順劈攻擊時，若觸發暴擊，可能一次生成多層狂怒。",
+		"- 攻擊護盾若發生暴擊，也能觸發此效果。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 1-3 - Infectious Zeal +]--
+	--[+ Keystone 1-3 - Infectious Zeal(迅疾狂熱) +]--
 	local ED_ZEA_Keystone_1_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		can_be_refr_dur_active_dur,
-		"- Does not Stack with the same Talent from another Zealot.",
+		"- 不會與另一位狂信徒使用相同天賦重複疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 1-4 - Righteous Warrior +]--
+	--[+ Keystone 1-4 - Righteous Warrior(正義勇士) +]--
 	local ED_ZEA_Keystone_1_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases Critical Strike Chance for all attacks that can Crit, additionally to \"Blazing Piety's\" base 15% Crit Chance. (+25% total)",
+		"- 進一步提升所有可暴擊攻擊的爆擊機率，在「熾熱虔誠」原本的15%爆擊率基礎上再增幅（最終可達+25%）。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 2 - Martyrdom +]--
+	--[+ Keystone 2 - Martyrdom(殉道) +]--
 	local ED_ZEA_Keystone_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- A Segment counts as missing if it is fully depleted or fully converted by Corruption.",
-		"- On Heresy/Damnation, Zealot can have up to 7 total Health Segments (2 base, +3 from Curios, +2 from \"Faith's Fortitude\") thereby setting the effective Max Stack count to 6.",
-		"- Per stack, increases the Damage of Melee Attacks by 8% (up to +48% on Heresy/Damnation, up to +56% below)",
+		"- 當血條中的任一段完全耗盡或被腐蝕時，該段即視為缺失。",
+		"- 在難度異端或詛咒下，狂信徒最高可擁有7段血量（基礎2段、來自珍品的+3段、以及「信仰之勇」的+2段），等同於可達成最多6層疊加。",
+		"- 每疊加可使近戰攻擊造成的傷害提升8%（在異端、詛咒下最高可+48%，更低難度最高可+56%）。",
 		stacks_add_w_oth_dmg,
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 2-1 - I Shall Not Fall +]--
+	--[+ Keystone 2-1 - I Shall Not Fall(不滅意志) +]--
 	local ED_ZEA_Keystone_2_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Each missing Health Segment grants 6.5% Toughness Damage Reduction (up to 39% on Heresy/Damnation, up to 45.5% below).",
-		"- Stacks additively with small Toughness Damage Reduction nodes.",
-		"- The sum Stacks multiplicatively with other Damage Reduction buffs.",
+		"- 每缺失一段血量，便獲得6.5%的韌性減傷（在異端、詛咒最高可達39%，更低難度則可達45.5%）。",
+		"- 與小型韌性減傷天賦採加法疊加。",
+		"- 與其他減傷Buff在計算時採乘法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 2-2 - Maniac +]--
+	--[+ Keystone 2-2 - Maniac(狂燥之心) +]--
 	local ED_ZEA_Keystone_2_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Each missing Health Segment increases Melee weapon Attack animation Speed by 4% (up to +24% on Heresy/Damnation, up to +28% below).",
-		"- Stacks additively with other Attack Speed buffs.",
+		"- 每缺失一段血量時，使近戰武器攻擊動畫速度增加4%（在異端、詛咒最高可+24%，更低難度最高可+28%）。",
+		"- 與其他攻擊速度Buff採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 3 - Inexorable Judgement +]--
+	--[+ Keystone 3 - Inexorable Judgement(命定審判) +]--
 	local ED_ZEA_Keystone_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Sprinting generates stacks twice as fast.",
-		"- Hitting an enemy with a Melee or Ranged Attack drops all current Momentum Stacks.",
-		"- Per dropped stack of \"Momentum\", increases Melee and Ranged weapon attack animation speed by 1% and any Damage by 1% for 6 seconds.",
-		"- Also increases Dodge speed and Dodge distance by 0.5%, and Dodge reset time by 1% per dropped Stack.",
-		"- Can generate new \"Momentum\" Stacks while 6 seconds buff duration is active.",
-		"- The Attack Speed buffs Stack additively with other related buffs.",
+		"- 在衝刺(Sprinting)時會以雙倍速度生成「命定審判」疊加。",
+		"- 只要以近戰或遠程攻擊命中敵人，就會清空目前所有「命定審判」疊加。",
+		"- 每清空1層「命定審判」，便在6秒內讓近戰與遠程攻擊動畫速度提升1%，並使所有傷害提升1%。",
+		"- 同時每清空1層，閃避速度與閃避距離增加0.5%，閃避恢復時間增加1%。",
+		"- 在這6秒Buff期間內，仍可繼續累積新的「命定審判」。",
+		"- 與其他攻擊速度相關Buff採加法疊加。",
 		stacks_add_w_oth_dmg,
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 3-1 - Retributor's Stance +]--
+	--[+ Keystone 3-1 - Retributor's Stance(懲戒者姿態) +]--
 	local ED_ZEA_Keystone_3_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Keystone 3-2 - Inebriate's Poise +]--
+	--[+ Keystone 3-2 - Inebriate's Poise(飄忽身形) +]--
 	local ED_ZEA_Keystone_3_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Additionally generates 3 Momentum Stacks on successfully Dodging enemy Melee or Ranged attacks (except Gunners, Reaper, Sniper), and disabler attacks (Pox Hound jump, Trapper net, Mutant grab).",
+		"- 每成功閃避敵方近戰或遠程攻擊（除了砲手、收割者及狙擊手）與特殊束縛攻擊（如瘟疫獵犬撲擊、陷阱兵投網、變種人衝撞抓取）時，額外獲得3層「命定審判」。",
 		succss_dodge_means,
 		z_ghost_hitnrun_n_stripp,
 		"",
 	}, "\n"), enhdesc_col)
 
 --[+ +PASSIVES+ +]--
-	--[+ Passive 1 - Disdain +]--
+	--[+ Passive 1 - Disdain(蔑視) +]--
 	local ED_ZEA_Passive_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Can generate multiple Stacks per swing.",
-		"- Stacks last until consumed.",
+		"- 一次揮擊可能產生多層疊加。",
+		"- 疊加會一直存在，直到被消耗為止。",
 		stacks_add_w_oth_dmg,
-		"- Melee special actions of Ranged Weapons (bashes, etc) can generate and consume Stacks.",
+		"- 遠程武器的近戰特殊動作（如槍托揮擊等）也能產生並消耗這些疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 2 - Backstabber +]--
+	--[+ Passive 2 - Backstabber(背刺者) +]--
 	local ED_ZEA_Passive_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Enables backstabbing.",
-		"- Stacks additively with backstab Damage buffs from \"Shroudfield\" (and \"Perfectionist\").",
-		"- Multiplicatively during calculation with other Damage buffs and Power level buffs from Weapon Blessings.",
-		"- \"Backstabbing\" refers to Melee attacks executed from within a specific angle behind an enemy's back.",
+		"- 解鎖背刺機制。",
+		"- 與「隱秘領域」以及「完美主義者」的背刺傷害加成採加法疊加。",
+		"- 與其他傷害增益、武器威力增幅則是乘法計算。",
+		"- 「背刺」指從敵人背後的特定角度進行近戰攻擊。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 3 - Anoint in Blood +]--
+	--[+ Passive 3 - Anoint in Blood(鮮血受膏) +]--
 	local ED_ZEA_Passive_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- While the Ranged weapon is equipped, increases any Damage by 25% against Enemies within a 12.5 meters radius.",
+		"- 當裝備遠程武器時，對12.5米內的敵人造成的任何傷害提高25%。",
 		stacks_add_w_oth_dmg,
-		"Beyond 12.5 meters, the Damage buff decreases linearly until it loses its effect at 30 meters:",
+		"在12.5米之後，此傷害增益會隨距離遞減，至30米時減至0：",
 		"______________________________",
-		"Distance(m):1-12.5|   13|  15|  20|  25|  30",
-		"Damage(%):       25|~24|~21| ~14|  ~7|    0",
+		"距離(m): 1-12.5|   13|  15|  20|  25|  30",
+		"傷害(%):       25| ~24| ~21| ~14|  ~7|   0",
 		"______________________________",
-		"- This also increases the Damage of \"Blades of Faith\" and DoTs (including Immolation Grenade's burn and Stunstorm Grenade / Stun Grenade's electrocution) as long as Zealot stays within 30 meters to the enemy and has the Ranged weapon equipped.",
-		"- Note that Ranged weapons interact differently with this Talent depending on their individual effective Damage ranges.",
+		"- 只要狂信徒與敵人的距離在30米內且仍裝備遠程武器，這個效果也適用於「信仰之刃」以及各類持續傷害，包含「獻祭手雷」的燃燒、以及「眩暈風暴手雷」、「眩暈手雷」的感電等。",
+		"- 請注意，不同遠程武器的實際傷害範圍各不相同，與此天賦的互動方式也可能不同。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 4 - Scourge +]--
+	--[+ Passive 4 - Scourge(天災) +]--
 	local ED_ZEA_Passive_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Critical hits with Melee attacks (including Melee special actions of Ranged weapons) apply 2 Stacks of Bleed to enemies.",
-		"- Can't apply Bleed through shields.",
-		"- Bleed:",
-		"-- Lasts 1.5 seconds.",
-		"-- Ticks every 0.5 seconds.",
-		"-- Refreshes duration on Stack application.",
-		"-- Same as other sources of Bleed.",
-		"-- Above average armor Damage modifiers across the board, low armor Damage modifier against Carapace.",
+		"- 近戰攻擊的暴擊（包含遠程武器的近戰特殊動作）會對敵人施加2層流血。",
+		"- 無法透過護盾造成流血。",
+		"- 流血：",
+		"-- 持續1.5秒。",
+		"-- 每0.5秒造成傷害。",
+		"-- 有新的流血層數疊加時會刷新流血持續時間。",
+		"-- 與其他來源的流血相同。",
+		"-- 整體對護甲傷害修正略高，對甲殼傷害修正偏低。",
 		can_be_refr_dur_active_dur,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 5 - Enemies Within, Enemies Without +]--
+	--[+ Passive 5 - Enemies Within, Enemies Without(內憂外患) +]--
 	local ED_ZEA_Passive_5_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Proximity check ignores map geometry.",
-		"- The replenishment is inactive while Zealot is hanging from a ledge and while disabled by Mutants, Pox Hounds, Trapper, Daemonhost, Chaos Spawn, or Beast of Nurgle.",
-		"- Does not interact with Coherency Toughness Regeneration.",
+		"- 距離不受地形影響。",
+		"- 當狂信徒掛在懸崖邊或被變種人、瘟疫獵犬、陷阱兵、惡魔宿主、混沌卵或納垢巨獸束縛時，此回復功能會暫停。",
+		"- 不會與協同韌性再生相互影響。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 6 - Fortitude in Fellowship +]--
+	--[+ Passive 6 - Fortitude in Fellowship(合抱成林) +]--
 	local ED_ZEA_Passive_6_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Adds a flat 50% to the Coherency factor that scales the amount of Coherency Toughness Regenerated per ally in Coherency.",
-		"- This buff Stacks additively with \"Loner\", and during calculation multiplicatively with Toughness Regeneration Speed from Curios, Veteran's small Talent node \"Inspiring Presence\", and Ogryn's aura \"Stay Close!\".",
-		"- Increases Zealot's base amount of Coherency Toughness Regenerated:",
+		"- 固定增加50%的協同基準值，提升協同範圍內每位隊友所提供的韌性再生量。",
+		"- 與「孤狼」的效果採加法疊加，最終計算時則與珍品提供的韌性再生速度、老兵的小型天賦「鼓舞人心」、歐格林光環「保持靠近!」等效果乘法相乘。",
+		"- 額外提升狂信徒的基礎協同韌性再生量：",
 		"_______________________________",
-		"Allies: | CTR:                 | After 5 seconds:",
-		"        0 |  0.00 -> 3.75    | 18.75(HUD:~19)",
-		"         1 |  3.75 -> 7.50    | 37.50(HUD:~38)",
-		"        2 |  5.63 -> 9.38   | 46.88(HUD:~47)",
-		"        3 |  7.50 -> 11.25   | 56.25(HUD:~57)",
+		"隊友數: | 協同韌性再生(CTR):  | 5秒後總計:",
+		"        0 |  0.00 -> 3.75       | 18.75(介面顯示約19)",
+		"         1 |  3.75 -> 7.50       | 37.50(介面顯示約38)",
+		"        2 |  5.63 -> 9.38       | 46.88(介面顯示約47)",
+		"        3 |  7.50 -> 11.25      | 56.25(介面顯示約57)",
 		"_______________________________",
 		"(*CTR = Coherency Toughness Regenerated)",
-		"- Note that because of how the Toughness Coherency Regen rate modifier is applied During Calculation, this Talent enables Coherency Toughness Regeneration for Zealot even with no Allies in Coherency.",
+		"- 由於協同韌性再生倍率是在計算過程中套用，此天賦可讓狂信徒即使在沒有隊友進入協同範圍時，仍獲得部分韌性再生。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 7 - Purge the Unclean +]--
+	--[+ Passive 7 - Purge the Unclean(淨化不潔) +]--
 	local ED_ZEA_Passive_7_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with the same Damage buffs from Weapon Perks, and during calculation multiplicatively with other Damage buffs and Power level buffs from Weapon Blessings.",
+		"- 與武器專長中的相同傷害加成採加法疊加，最終再與其他傷害增益或武器威力增幅乘法計算。",
+
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 8 - Blood Redemption +]--
+	--[+ Passive 8 - Blood Redemption(鮮血救贖) +]--
 	local ED_ZEA_Passive_8_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases the Zealot's base Maximum Toughness gained on Melee kill from 5% to 7.5%.",
+		"- 將狂信徒近戰擊殺所回復的韌性，從基礎的5%提升至7.5%。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 9 - Bleed for the Emperor +]--
+	--[+ Passive 9 - Bleed for the Emperor(為了帝皇) +]--
 	local ED_ZEA_Passive_9_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Procs only on Health Damage.",
-		"- If the amount of incoming Health Damage is high enough to deplete one of Zealot's Health segments, the Talent then reduces this Health Damage amount by 40%.",
+		"- 僅在受到生命值傷害時觸發。",
+		"- 若本次傷害足以摧毀狂信徒的一整段血量，該次傷害將降低40%。",
 		stacks_mult_w_other_dmg_red_buffs,
-		"- Does not reduce Toughness Damage taken.",
+		"- 不會減少韌性傷害。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 10 - Vicious Offering +]--
+	--[+ Passive 10 - Vicious Offering(惡毒贈禮) +]--
 	local ED_ZEA_Passive_10_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		z_eff_of_this_tougn_rep,
-		"- For example, with 120 max Toughness, Zealot would replenish 120x(0.05+0.1)=18 Toughness per Heavy Melee kill.",
+		"- 例如，若狂信徒最大韌性為120，則每次使用重擊近戰擊殺敵人時，可回復120x(0.05+0.1)=18點韌性。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 11 - The Voice of Terra +]--
+	--[+ Passive 11 - The Voice of Terra(泰拉之音) +]--
 	local ED_ZEA_Passive_11_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- When killing enemies with Ranged attacks (including \"Blades of Faith\"), replenishes 4% of Maximum Toughness. ",
-		"- Procs additionally to Weapon Blessings like \"Inspiring Barrage\", \"Reassuringly Accurate\", \"Gloryhunter\".",
+		"- 當使用遠程攻擊擊殺敵人時（包含「信仰之刃」），回復4%最大韌性。",
+		"- 與武器祝福「激勵彈幕」、「慰藉精準」、「榮耀獵手」同時生效。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 12 - Restoring Faith +]--
+	--[+ Passive 12 - Restoring Faith(恢復信仰) +]--
 	local ED_ZEA_Passive_12_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Procs only on Health Damage (also while in downed state).",
-		"- Can track up to 10 instances of Damage taken and restores the correct amount of Health when taking Damage while already restoring.",
+		"- 僅在受到生命值傷害時觸發（包含倒地時）。",
+		"- 最多可同時記錄10次受到的傷害，即便在恢復期間再次受到傷害，也會正確恢復。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 13 - Second Wind +]--
+	--[+ Passive 13 - Second Wind(精力復甦) +]--
 	local ED_ZEA_Passive_13_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Has a 0.5 seconds internal Cooldown.",
+		"- 具有0.5秒的內部冷卻。",
 		z_eff_of_this_tougn_rep,
 		procs_on_succss_dodging,
 		succss_dodge_means,
 		z_ghost_hitnrun_n_stripp,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 14 - Enduring Faith +]--
+	--[+ Passive 14 - Enduring Faith(堅韌信仰) +]--
 	local ED_ZEA_Passive_14_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Critical hits with Melee or Ranged attacks (including attacks with weapon special actions) grant 50% Toughness Damage Reduction for 4 seconds.",
+		"- 近戰或遠程攻擊若觸發暴擊（包含武器特殊動作），則在4秒內獲得50%的韌性減傷。",
 		can_be_refr_dur_active_dur,
 		stacks_mult_w_other_dmg_red_buffs,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 15 - The Emperor's Bullet +]--
+	--[+ Passive 15 - The Emperor's Bullet(帝皇之彈) +]--
 	local ED_ZEA_Passive_15_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- When ammo in clip reaches 0, increases Melee Stagger strength by 30% and Melee weapon Attack animation Speed by 10% for 5 seconds. ",
-		"- The Attack Speed buff Stacks additively with related buffs from \"Faithful Frenzy\", \"Fury of the Faithful\", \"Inexorable Judgement\", \"Maniac\", and Celerity Stimm; ",
-		"- The Stagger buff Stacks additively with related buffs from \"Grievous Wounds\", \"Hammer of Faith\", \"Punishment\", and Weapon Blessings , and multiplicatively with Power level buffs from Weapon Blessings.",
+		"- 當彈匣子彈量降至0時，在5秒內使近戰的踉蹌強度提升30%、近戰武器攻擊動作速度提升10%。",
+		"- 攻擊速度加成與「信仰狂亂」、「有信者之怒」、「命定審判」、「狂燥之心」以及敏捷興奮劑等相同類型的Buff以加法疊加。",
+		"- 踉蹌加成與「重傷」、「信仰之錘」、「懲罰」以及其他武器祝福以加法疊加，但與武器威力加成則是乘法相乘。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 16 - Dance of Death +]--
+	--[+ Passive 16 - Dance of Death(死亡之舞) +]--
 	local ED_ZEA_Passive_16_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with related buffs from \"Run 'n' Gun\" and \"Powderburn\" Weapon Blessings.",
+		"- 與武器祝福「連跑帶打」、「火藥灼傷」等相關增益採加法疊加。",
 		procs_on_succss_dodging,
 		succss_dodge_means,
 		z_ghost_hitnrun_n_stripp,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 17 - Duellist +]--
+	--[+ Passive 17 - Duellist(決鬥者) +]--
 	local ED_ZEA_Passive_17_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with other Weakspot and Finesse Damage buffs, and multiplicatively with Power level buffs from Weapon Blessings. ",
+		"- 與其他弱點攻擊或技巧(Finesse)傷害加成採加法疊加，與武器威力增幅等效果則是乘法計算。",
 		procs_on_succss_dodging,
 		succss_dodge_means,
 		z_ghost_hitnrun_n_stripp,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 18 - Until Death +]--
+	--[+ Passive 18 - Until Death(死戰到底) +]--
 	local ED_ZEA_Passive_18_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- If not on cooldown, prevents incoming Damage from lowering Zealot's current Health below 1 HP by granting Invulnerability for 5 seconds. ",
-		"- \"Invulnerability\" means that Zealot's Health cannot be reduced below 1. Zealot can still lose any Health above 1 while Invulnerable (e.g. by taking hits while being healed by a medical crate).",
-		"- Does not prevent death from instakills like when thrown out of bounds into a map killbox.",
+		"- 若此被動不在冷卻中，則在受到傷害時使狂信徒的生命值不會被降至1以下，並提供5秒無敵。",
+		"- 「無敵」意指狂信徒的血量不會低於1，但若血量高於1，依然會正常扣除（例如受到攻擊的同時被醫療箱回復）。",
+		"- 不會防止地形殺(如被摔出邊界)。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 19 - Unremitting +]--
+	--[+ Passive 19 - Unremitting(不斷奮戰) +]--
 	local ED_ZEA_Passive_19_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks multiplicatively with Sprint efficiency Perks from Curios, Ranged and Melee weapons, and Celerity Stimm.",
+		"- 與珍品、遠程與近戰武器、以及敏捷興奮劑提供的衝刺效率採乘法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 20 - Shield of Contempt +]--
+	--[+ Passive 20 - Shield of Contempt(輕蔑之盾) +]--
 	local ED_ZEA_Passive_20_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		red_both_tghns_n_health_dmg,
-		"- Procs only on Health Damage (also while in downed state).",
-		"- Always procs for Zealot if conditions are met.",
-		"- Has no Range limit when proc'ed by Allies or Bots (Coherency is NOT required!).",
-		"- The Talent can apply its Damage Reduction buff only once per proc.",
-		"- It has one Global Cooldown that is shared between all players (and bots).",
-		"- So if the Talent has been procced either by Zealot or by an Ally, it grants its Damage Reduction buff only to the player who triggered it before it goes on Cooldown for 10 seconds.",
-		"- The Cooldown starts immediately during the buff's 4 seconds duration.",
+		"- 僅在受到生命值傷害時觸發（包含倒地時）。",
+		"- 狂信徒自身只要符合條件就能觸發。",
+		"- 與隊友或機器人共用同一個冷卻(Global Cooldown)，不需協同範圍也能觸發。",
+		"- 此天賦觸發後，只會對觸發的那位玩家提供4秒的減傷效果，然後進入10秒冷卻。",
+		"- 冷卻在這4秒Buff期間就已開始計算。",
 		stacks_mult_w_other_dmg_red_buffs,
-		"- Does not have a HUD icon but plays a screen effect during its active duration.",
-		-- "- If there are multiple Zealots who all run \"Shield of Contempt\", the Talent works as follows: The first Zealot to take Health Damage 'claims' the Damage Reduction buff. It lasts for 4 seconds, during which it Stacks multiplicatively with other Zealots' \"Shield of Contempt\" buffs, up to 97.44% Damage Reduction with four Zealots (1-0.4⁴=0.9744), only if the other Zealots also proc their Talents while the duration of the buff that was 'claimed' by the first Zealot is still active. Since the Damage Reduction buff can only be applied once per proc, it does not benefit those Zealots who proc their Talents while the first Zealot still has the Damage Reduction buff. ",
+		"- 無使用者介面圖示，但在持續時間內會有畫面特效。",		
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 21 - Thy Wrath be Swift +]--
+	--[+ Passive 21 - Thy Wrath be Swift(勃然大怒) +]--
 	local ED_ZEA_Passive_21_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Grants immunity to Stuns and Slowdowns from both Melee and Ranged attacks.",
-		"- Also lets Zealot move through Fire patches without hindrance.",
-		"- The Movement Speed buff procs only on Health Damage taken.",
-		"- Stacks additively with related buffs from \"Shroudfield\" and weapon Blessings like \"Rev it Up\".",
-		"- Stacks multiplicatively with the Sprint speed buff from \"Swift Certainty\".",
+		"- 免疫來自近戰與遠程攻擊的眩暈與減速。",
+		"- 能無阻礙地穿越火焰區域。",
+		"- 只有在受到生命值傷害時，才會觸發移動速度加成。",
+		"- 與「隱秘領域」以及武器祝福「提」等相關移動速度加成採加法疊加。",
+		"- 與「堅定迅捷」提供的衝刺速度加成採乘法計算。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 22 - Good Balance +]--
+	--[+ Passive 22 - Good Balance(四平八穩) +]--
 	local ED_ZEA_Passive_22_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		red_both_tghns_n_health_dmg,
-		"- Can be refreshed during active duration.",
+		"- 可在持續時間內刷新。",
 		stacks_mult_w_other_dmg_red_buffs,
 		procs_on_succss_dodging,
 		succss_dodge_means,
 		z_ghost_hitnrun_n_stripp,
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 23 - Desperation +]--
+	--[+ Passive 23 - Desperation(背水一戰) +]--
 	local ED_ZEA_Passive_23_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"When Stamina reaches 0 as a result of Sprinting, Pushing or Blocking enemy Melee attacks, increases the Damage of Melee attacks by 20% for 5 seconds.",
+		"當耐力因衝刺、推擊或阻擋敵方近戰攻擊而降至0時，於接下來5秒內使近戰攻擊的傷害提升20%。",
 		can_be_refr_dur_active_dur,
 		stacks_add_w_oth_dmg,
-		"- If procced by Sprinting, the start of the buff duration is delayed until the Sprinting action stops.",
+		"- 若是因衝刺而觸發，Buff的持續計時會在停止衝刺後才開始。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 24 - Holy Revenant +]--
+	--[+ Passive 24 - Holy Revenant(吊命聖徒) +]--
 	local ED_ZEA_Passive_24_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- During Until Death's 5 second duration, leeches 0.7% of non-Melee Damage and 2.1% of Melee Damage dealt to enemies.",
-		"- When Until Death ends, converts the leeched amount to Health, up to 25% of Zealot's Maximum Health.",
+		"- 在「死戰到底」的5秒期間，造成的非近戰傷害有0.7%轉化為吸血量，近戰傷害則有2.1%轉化為吸血量。",
+		"- 當「死戰到底」結束時，最多可將這些吸血量轉化為相當於25%最大生命值的回復。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 25 - Sainted Gunslinger +]--
+	--[+ Passive 25 - Sainted Gunslinger(封聖神射手) +]--
 	local ED_ZEA_Passive_25_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Melee kills grant Stacks (up to 5).",
-		"- Stacks last until consumed by Reloading or by Loading special ammo (Combat Shotguns).",
-		"- Per Stack, increases Reload animation Speed by 6%.",
-		"- Stacks additively with Reload Speed buffs from Weapon Perks, Weapon Blessings, and Celerity Stimm.",
-		"- This also increases the Loading Speed of the special action of Combat Shotguns.",
+		"- 每次近戰擊殺可獲得一層疊加(最高5層)。",
+		"- 疊加會持續到進行換彈或裝填特殊彈藥(戰鬥霰彈槍)時被消耗。",
+		"- 每層可使換彈動作速度提升6%。",
+		"- 與武器特性、武器祝福、以及敏捷興奮劑的換彈速度增益採加法疊加。",
+		"- 此效果同樣提升戰鬥霰彈槍特殊動作的裝填速度。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 26 - Hammer of Faith +]--
+	--[+ Passive 26 - Hammer of Faith(信仰之錘) +]--
 	local ED_ZEA_Passive_26_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases Stagger strength for both Melee and Ranged attacks.",
-		"- Also applies to Melee special actions of Ranged weapons.",
-		"- Stacks additively with related buffs from \"Grievous Wounds\", \"Punishment\" or \"The Emperor's Bullet\".",
+		"- 提升近戰與遠程攻擊的踉蹌強度。",
+		"- 同時影響遠程武器的近戰特殊動作。",
+		"- 與「重傷」、「懲罰」或「帝皇之彈」等相關增益採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 27 - Grievous Wounds +]--
+	--[+ Passive 27 - Grievous Wounds(重傷) +]--
 	local ED_ZEA_Passive_27_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases the Stagger strength on Weakspot hits with Melee attacks by 50%.",
-		"- Also applies to Melee special actions of Ranged weapons.",
-		"- Stacks additively with related buffs from \"Hammer of Faith\", \"Punishment\" or \"The Emperor's Bullet\".",
+		"- 近戰攻擊若擊中敵人弱點，踉蹌強度提高50%。",
+		"- 也影響遠程武器的近戰特殊動作。",
+		"- 與「信仰之錘」、「懲罰」、「帝皇之彈」的踉蹌加成採加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 28 - Ambuscade +]--
+	--[+ Passive 28 - Ambuscade(伏擊) +]--
 	local ED_ZEA_Passive_28_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Enables Flanking.",
-		"- Increases damage by 30% when flanking.",
-		"- Stacks additively with the \"Raking Fire\" Weapon Blessing, and multiplicatively with other Damage buffs and Power level buffs from Weapon Blessings.",
-		"- \"Flanking\" refers to Ranged attacks executed from within a specific angle behind an enemy's back. It is the Ranged equivalent to Backstabbing.",
+		"- 解鎖「側面射擊(Flanking)」。",
+		"- 當側面射擊時，傷害增加30%。",
+		"- 與武器祝福「掃射」採加法疊加，最終再與其他傷害Buff與武器威力增幅做乘法計算。",
+		"- 「側面射擊」指從敵人背後特定角度執行的遠程攻擊，類似於背刺的遠程版。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 29 - Punishment +]--
+	--[+ Passive 29 - Punishment(懲罰) +]--
 	local ED_ZEA_Passive_29_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Hitting three or more enemies with Melee attacks grants Stacks (up to 5).",
-		"- Stacks last for 5 seconds and can be refreshed during active duration.",
-		"- Per stack, increases the stagger strength of melee and ranged attacks by 5%.",
-		"- Stacks additively with Stagger buffs from \"Grievous Wounds\", \"Hammer of Faith\", \"The Emperor's Bullet\" and Weapon Blessings, and multiplicatively with Power level buffs from Weapon Blessings.",
-		"- At max Stacks, also grants immunity to Stuns from both Melee and Ranged attacks (slowdown effects still apply), and makes Zealot's interact actions (e.g. reviving or object interactions) uninterruptible so that they cannot be canceled as part of hit reactions when taking Health Damage.",
+		"- 每次近戰攻擊擊中3名以上敵人時，會獲得疊加(最多5層)。",
+		"- 疊加持續5秒，可在持續期間內刷新。",
+		"- 每層使近戰與遠程攻擊的踉蹌強度提高5%。",
+		"- 與「重傷」、「信仰之錘」、「帝皇之彈」及其他武器祝福的踉蹌加成採加法疊加，與武器威力加成採乘法計算。",
+		"- 當疊加達到5層時，還能免疫來自近戰與遠程攻擊的眩暈(減速仍有效)，並使狂信徒的互動動作(如復活隊友、操作物件等)不會被血量傷害所中斷。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 30 - Faithful Frenzy +]--
+	--[+ Passive 30 - Faithful Frenzy(信仰狂亂) +]--
 	local ED_ZEA_Passive_30_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with related buffs from \"Fury of the Faithful\", \"Inexorable Judgement\", \"Maniac\", \"The Emperor's Bullet\" and Celerity Stimm.",
+		"- 與「有信者之怒」、「命定審判」、「狂燥之心」、「帝皇之彈」以及敏捷興奮劑等同類型的攻擊速度增益以加法疊加。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Passive 31 - Sustained Assault +]--
+	--[+ Passive 31 - Sustained Assault(持續突擊) +]--
 	local ED_ZEA_Passive_31_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Hitting enemies with Melee attacks (including Melee special actions of Ranged weapons) grants Stacks (up to 5).",
-		"- Stacks additively with Stagger buffs from \"Grievous Wounds\", \"Hammer of Faith\", \"The Emperor's Bullet\" and Weapon Blessings, and multiplicatively with Power level buffs from Weapon Blessings.",
-		"- Per Stack, increases Melee Damage by 4%.",
+		"- 近戰攻擊（包含遠程武器的近戰特殊動作）命中敵人時，會產生疊加(最多5層)。",
+		"- 與「重傷」、「信仰之錘」、「帝皇之彈」以及武器祝福的踉蹌加成採加法疊加，與武器威力加成採乘法計算。",
+		"- 每層可讓近戰攻擊傷害提升4%。",
 		stacks_add_w_oth_dmg,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 32 - The Master's Retribution +]--
 	local ED_ZEA_Passive_32_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- If not on Cooldown, releases a push that Staggers the attacker (if possible) when taking a Melee hit.",
-		"- The push has a range of 2.75 meters and a rather narrow effective push angle (~22°).",
-		"- Always applies to the direct attacker (if possible).",
-		"- Pushes additional targets (if possible) when they are inside the effective push angle.",
-		"- The Push cannot Stagger: Crusher, Mutants, Ragers, Monstrosities, and Captains/Twins.",
-		"- Bulwark's shield bash, despite not dealing any Damage, procs the Talent.",
-		"- Does not proc while Zealot is disabled or downed.",
+		"- 若此技能不在冷卻狀態，當狂信徒遭到近戰攻擊時會立即釋放推擊，使攻擊者踉蹌(若可踉蹌)。",
+		"- 推擊範圍2.75米，且有效推擊角度僅約22°。",
+		"- 只要在此角度內，都會對直接攻擊者及其他敵人施放推擊(若可)。",
+		"- 無法對粉碎者、變種人、狂怒者、巨獸與隊長/雙胞胎造成踉蹌。",
+		"- 即便遭到堡壘的無傷害盾擊，也會觸發此天賦。",
+		"- 狂信徒若處於被束縛或倒地狀態，則無法觸發。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 33 - Faith's Fortitude +]--
 	local ED_ZEA_Passive_33_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with extra Wounds from Curios.",
+		"- 與珍品提供的額外血量段效果以加法疊加。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 34 - Swift Certainty +]--
 	local ED_ZEA_Passive_34_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Always increases Sprinting Speed by 5%. This Sprint Speed buff Stacks multiplicatively with Movement Speed buffs from \"Shroudfield\", \"Thy Wrath be Swift\", the small Movement Speed node, and Weapon Blessings like \"Rev It Up\". ",
-		"- Also allows Zealot to stay in Sprint Dodging state when Stamina is depleted. Usually, when Dodging shooting enemies by Sprinting around them with an angle (the angle between Zealot's look direction and the position of the enemy has to be at least 70°), the enemy will ultimately start hitting the player as soon as Stamina reaches 0. The Talent preserves the Sprint Dodging capability regardless of whether Zealot has Stamina or not. ",
-		"Sprint Dodging does not fulfill proc condition of \"Dance of Death\", \"Duellist\", \"Good Balance\", \"Inebriate's Poise\", and \"Second Wind\".",
+		"- 固定提升5%的衝刺速度，並與「隱秘領域」、「勃然大怒」、小型移動速度天賦、以及武器祝福「提速」等提供的移動速度Buff採乘法相乘。",
+		"- 使狂信徒在耐力(Stamina)耗盡時，仍能維持衝刺躲避的狀態。一般而言，當以一定角度繞圈衝刺躲避射擊敵人(角度需至少70°)，一旦耐力歸0，敵人就能命中玩家；但本天賦可在無耐力的情況下依舊維持衝刺躲避。",
+		"衝刺躲避不會觸發「死亡之舞」、「決鬥者」、「四平八穩」、「飄忽身形(」以及「精力復甦」等天賦。",
 	}, "\n"), enhdesc_col)
 
 -- In the list below, you also need to add a new entry or change an old one.
