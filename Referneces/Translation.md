@@ -4,7 +4,7 @@
 
 - Toughness - 韌性
 - Hit Mass - 順劈傷害
-- Cleave - 順劈目標
+- Cleave - 順劈攻擊
 - Curios - 珍品
 - Weakspot - 弱點
 - Finesse - 技巧
@@ -48,7 +48,7 @@
 - Enhanced Blitz - 閃擊強化
 - Reduce Ability Cooldowns by 20%. - 技能冷卻減少20%
 
-### 天賦相關
+### 天賦相關(小型節點)
 
 - Peril Resistance - 反噬抗性
 - Melee Damage Boost - 近戰增幅
@@ -100,6 +100,7 @@
 
 #### 靈能者天賦
 
+##### 閃擊
 - Brain Burst - 顱腦爆裂
 - Brain Rupture - 顱腦崩裂
 - Kinetic Resonance - 動能共鳴
@@ -110,10 +111,14 @@
 - Assail - 靈能攻擊
 - Ethereal Shards - 乙太碎片
 - Quick Shards - 迅捷碎片
+
+##### 光環
 - Quickening - 加速
 - Kinetic Presence - 動能釋放
 - Seer's Presence - 先知之眼
 - Prescience - 預兆
+
+##### 主動技能
 - Psykinetic's Wrath - 靈能學者之怒
 - Venting Shriek - 靈能尖嘯
 - Becalming Eruption - 平靜进發
@@ -130,6 +135,8 @@
 - Warp Speed - 亞空間加速
 - Reality Anchor - 現實錨點
 - Warp Unbound - 亞空間突破
+
+##### 鑰石
 - Warp Siphon - 亞空間虹吸
 - Inner Tranquility - 平心靜氣
 - Essence Harvest - 吸精奪萃
@@ -148,17 +155,34 @@
 - Lingering Influence - 持久影響
 - Cruel Fortune - 殘忍命運
 
-- Empyric Shock - 亞空間震波
-- Malefic Momentum - 惡意攻勢
-- Perfect Timing - 完美時機
-- Warp Rider - 亞空間騎士
-- Warp Rupture - 刺耳尖嘯
-- By Crack of Bone - 骨折後遺症
-- Empyric Resolve - 亞空間意志
-- Peril Resistance - 反噬抗性
+##### 一般天賦
+- Soulstealer - 靈魂竊賊
 - Mettle - 堅毅
+- Quietude - 心如止水
+- Warp Expenditure - 亞空間耗費
+- Perilous Combustion 險惡燃燒
+- Perfect Timing - 完美時機
 - Battle Meditation - 戰鬥冥想
+- Psykinetic's Aura - 靈能學者光環
+- Malefic Momentum - 惡意攻勢
+- Perilous Assault - 反噬突襲
+- Lightning Speed - 迅雷之勢 
+- Empyric Shock - 亞空間震波
+- By Crack of Bone - 骨折後遺症
+- Warp Splitting - 亞空間分裂
+- Unlucky for Some - 倒楣蛋
+- One with the Warp - 亞空間強化
+- Empathic Evasion - 反射閃避
+- Anticipation - 看破
+- Puppet Master - 傀儡師
+- Crystalline Will - 結晶意志
+- Warp Rider - 亞空間騎士
+- Kinetic Deflection - 動能偏斜
+- Tranquility Through Slaughter - 殺無赦，心祥和
+- Empyric Resolve - 亞空間意志
+- Penetration of the Soul - 靈魂穿透
 
+- Warp Rupture - 刺耳尖嘯
 
 ### Ogryn - 歐格林
 
