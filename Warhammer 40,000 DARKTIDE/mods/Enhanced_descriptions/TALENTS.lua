@@ -1631,14 +1631,15 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_001_desc_fr", {"loc_talent_veteran_snipers_focus_rending_bonus_description"}, {"fr"}, function(locale, value) return "{rending:%s} de "..COLORS_KWords_fr.Rending_rgb_fr.." lorsque à, ou au-dessus de, {stacks:%s} cumuls de "..COLORS_KWords_fr.Focus_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_1_1_rgb_fr end),
 			--[+ Translations Chinese - 滲透盔甲 +]--
-
-
+	create_template("talent_tree_vet_keys1_001_desc_tw", {"loc_talent_veteran_snipers_focus_rending_bonus_description"}, {"zh-tw"}, function(locale, value) return "{rending:%s}的"..COLORS_KWords_tw.Rending_rgb.." 當達到或超過{stacks:%s}層的"..COLORS_KWords_tw.Focus_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_1_1_rgb  end),
+			  
 	--[+ Keystone 1-2 - Tunnel Vision +]--
 		-- create_template("talent_tree_vet_keys1_002_en", {"loc_talent_veteran_snipers_focus_toughness_bonus"}, {"en"}, function(locale, value) return "Tunnel Vision" end),
 	create_template("talent_tree_vet_keys1_002_desc_en", {"loc_talent_veteran_snipers_focus_stamina_bonus_desc"}, {"en"}, function(locale, value) return "{toughness_replenish_multiplier:%s} "..COLORS_KWords.Toughness_rgb.." Replenishment for each Stack of "..COLORS_KWords.Focus_rgb..". In addition, "..COLORS_KWords.Weakspot_rgb.." kills restore {stamina:%s} "..COLORS_KWords.Stamina_rgb.."."..TALENTS_Enh_desc2.ED_VET_Keystone_1_2_rgb end), -- toughness_replenish_multiplier: +5%, stamina: 10% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_002_desc_fr", {"loc_talent_veteran_snipers_focus_stamina_bonus_desc"}, {"fr"}, function(locale, value) return "{toughness_replenish_multiplier:%s} de régénération de "..COLORS_KWords_fr.Toughness_rgb_fr.." pour chaque cumul de "..COLORS_KWords_fr.Focus_rgb_fr..". De plus, les éliminations sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." restaurent {stamina:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_1_2_rgb_fr end),
 			--[+ Translations Chinese - 視野狹窄 +]--
+	create_template("talent_tree_vet_keys1_002_desc_tw", {"loc_talent_veteran_snipers_focus_stamina_bonus_desc"}, {"zh-tw"}, function(locale, value) return "每層"..COLORS_KWords_tw.Focus_rgb.."{toughness_replenish_multiplier:%s}的"..COLORS_KWords_tw.Toughness_rgb.."補充量。\n此外，"..COLORS_KWords_tw.Weakspot_rgb.."擊殺會恢復{stamina:%s}的"..COLORS_KWords_tw.Stamina_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_1_2_rgb end), -- toughness_replenish_multiplier: +5%, stamina: 10% -- colors
 
 	--[+ Keystone 1-3 - Long Range Assassin +]--
 		-- create_template("talent_tree_vet_keys1_003_en", {"loc_talent_veteran_snipers_focus_increased_stacks"}, {"en"}, function(locale, value) return "Long Range Assassin" end),
@@ -1646,6 +1647,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_003_desc_fr", {"loc_talent_veteran_snipers_focus_increased_stacks_description"}, {"fr"}, function(locale, value) return "Augmente les cumuls maximum de "..COLORS_KWords_fr.Focus_rgb_fr.." de {stacks:%s} à {new_stacks:%s}." end),
 			--[+ Translations Chinese - 遠程刺客 +]--
+	create_template("talent_tree_vet_keys1_003_desc_tw", {"loc_talent_veteran_snipers_focus_increased_stacks_description"}, {"zh-tw"}, function(locale, value) return "將"..COLORS_KWords_tw.Focus_rgb.."的最大層數從{stacks:%s}增加到{new_stacks:%s}。" end), -- stacks: 10, new_stacks: 15 -- colors
 
 	--[+ Keystone 1-4 - Camouflage +]--
 		-- create_template("talent_tree_vet_keys1_004_en", {"loc_talent_veteran_snipers_focus_stacks_on_still"}, {"en"}, function(locale, value) return "Camouflage" end),
@@ -1653,6 +1655,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_004_desc_fr", {"loc_talent_veteran_snipers_focus_stacks_on_still_description"}, {"fr"}, function(locale, value) return "Gagnez {stack:%s} cumul de "..COLORS_KWords_fr.Focus_rgb_fr.." toutes les {time:%s} secondes en restant immobile ou en marchant accroupi." end),
 			--[+ Translations Chinese - 偽裝 +]--
+	create_template("talent_tree_vet_keys1_004_desc_tw", {"loc_talent_veteran_snipers_focus_stacks_on_still_description"}, {"zh-tw"}, function(locale, value) return "當站立不動或蹲行時，\n每{time:%s}秒獲得{stack:%s}層"..COLORS_KWords_tw.Focus_rgb.."。" end), -- stack: 1, time: 0.75 -- stack(s)->stacks -- s->seconds -- colors
 
 	--[+ Keystone 2 - Focus Target! +]--
 		-- create_template("talent_tree_vet_keys2_000_en", {"loc_talent_veteran_improved_tag"}, {"en"}, function(locale, value) return "Focus Target!" end),
@@ -1660,6 +1663,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys2_000_desc_fr", {"loc_talent_veteran_improved_tag_description"}, {"fr"}, function(locale, value) return "Gagnez "..COLORS_KWords_fr.Focus_Target_rgb_fr.." toutes les {time:%s} secondes. Cumulable jusqu'à {max_stacks:%s} fois.\nMarquer un ennemi applique les cumuls de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." sur lui, le faisant subir {damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." supplémentaire par cumul, et réinitialise vos cumuls de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." à "..COLORS_Numbers.n_1_rgb.."."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_2_rgb_fr end),
 			--[+ Traditional Chinese - 鎖定目標 +]--
+	create_template("talent_tree_vet_keys2_000_desc_tw", {"loc_talent_veteran_improved_tag_description"}, {"zh-tw"}, function(locale, value) return "每{time:%s}秒獲得一次"..COLORS_KWords_tw.Focus_Target_rgb.."。最多{max_stacks:%s}次。\n標記敵人會將"..COLORS_KWords_tw.Focus_Target_rgb.."的累積應用於他們，使他們每層承受{damage:%s}額外的"..COLORS_KWords_tw.Damage_rgb.."，並將您的"..COLORS_KWords_tw.Focus_Target_rgb.."重置為"..COLORS_Numbers.n_1_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_2_rgb end), -- time: 2, max_stacks: 5, damage: +4% -- -() -- s->seconds -- colors
 
 	--[+ Keystone 2-1 - Target Down! +]--
 		-- create_template("talent_tree_vet_keys2_001_en", {"loc_talent_veteran_improved_tag_dead_bonus"}, {"en"}, function(locale, value) return "Target Down!" end),
@@ -1667,6 +1671,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys2_001_desc_fr", {"loc_talent_veteran_improved_tag_dead_bonus_description"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." et {stamina:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.." sont récuperés  pour chaque cumul de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." appliqué lorsqu'un ennemi marqué meurt, pour vous et vos alliés en syntonie."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_2_1_rgb_fr end),
 			--[+ Traditional Chinese - 目標擊倒! +]--
+	create_template("talent_tree_vet_keys2_001_desc_tw", {"loc_talent_veteran_improved_tag_dead_bonus_description"}, {"zh-tw"}, function(locale, value) return "當您標記的敵人死亡時，為您和共同體中的盟友補充{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."和{stamina:%s}的"..COLORS_KWords_tw.Stamina_rgb.."，每層"..COLORS_KWords_tw.Focus_Target_rgb.."計算一次。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_2_1_rgb end), -- toughness: 5%, stamina: 5% -- colors
 
 	--[+ Keystone 2-2 - Redirect Fire! +]--
 		-- create_template("talent_tree_vet_keys2_002_en", {"loc_talent_veteran_improved_tag_dead_coherency_bonus"}, {"en"}, function(locale, value) return "Redirect Fire!" end),
@@ -1674,6 +1679,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys2_002_desc_fr", {"loc_talent_veteran_improved_tag_dead_coherency_bonus_description"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." est accordé pour chaque cumul de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." appliqué lorsqu'un ennemi marqué meurt, pour vous et vos alliés en syntonie. Dure {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_2_2_rgb_fr end),
 			--[+ Traditional Chinese - 轉移火力! +]--
+	create_template("talent_tree_vet_keys2_002_desc_tw", {"loc_talent_veteran_improved_tag_dead_coherency_bonus_description"}, {"zh-tw"}, function(locale, value) return "當您標記的敵人死亡時，為您和協同中的盟友補充{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."，每層"..COLORS_KWords_tw.Focus_Target_rgb.."計算一次。持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_2_2_rgb end), -- damage: +1.5%, duration: 10 -- s->seconds -- colors
 
 	--[+ Keystone 2-3 - Focused Fire +]--
 		-- create_template("talent_tree_vet_keys2_003_en", {"loc_talent_veteran_improved_tag_more_damage"}, {"en"}, function(locale, value) return "Focused Fire" end),
@@ -1681,6 +1687,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys2_003_desc_fr", {"loc_talent_veteran_improved_tag_more_damage_description"}, {"fr"}, function(locale, value) return "Le nombre maximum de cumul de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." est augmentés de "..COLORS_Numbers.n_5_rgb.." à {max_stacks:%s}." end),
 			--[+ Traditional Chinese - 集中火力 +]--
+	create_template("talent_tree_vet_keys2_003_desc_tw", {"loc_talent_veteran_improved_tag_more_damage_description"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Focus_Target_rgb.."最大層數從"..COLORS_Numbers.n_5_rgb.."增加到{max_stacks:%s}。" end), -- max_stacks: 8 -- colors
 
 	--[+ Keystone 3 - Weapons Specialist +]--
 		-- create_template("talent_tree_vet_keys3_000_en", {"loc_talent_veteran_weapon_switch"}, {"en"}, function(locale, value) return "Weapons Specialist" end),
@@ -1688,6 +1695,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_000_desc_fr", {"loc_talent_veteran_weapon_switch_description"}, {"fr"}, function(locale, value) return "Obtenez "..COLORS_KWords_fr.Rangedspec_rgb_fr.." en éliminant des ennemis en mêlée. Cumule jusqu'à {ranged_stacks:%s} fois.\nObtenez "..COLORS_KWords_fr.Meleespec_rgb_fr.." en éliminant des ennemis à distance. Cumule jusqu'à {melee_stacks:%s} fois.\n\nLorsque vous maniez votre arme à distance, vous activez votre effet "..COLORS_KWords_fr.Rangedspec_rgb_fr..", pour obtenir :\n{ranged_attack_speed:%s} Vitesse d'attaque à distance et\n{ranged_crit_chance:%s} de "..COLORS_KWords_fr.Crit_chance_r_rgb_fr.." à distance lors de votre prochain tir, par cumul. Dure {ranged_duration:%s} secondes.\n\nLorsque vous maniez votre arme de mêlée, vous activez votre effet "..COLORS_KWords_fr.Meleespec_rgb_fr..", pour obtenir :\n{melee_attack_speed:%s} Vitesse d'attaque au corps à corps,\n"..COLORS_Numbers.n_plus_rgb.."{dodge_modifier:%s} Vitesse d'esquive et Distance d'esquive. Dure {melee_duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_rgb_fr end),
 			--[+ Traditional Chinese - 武器專家 +]--
+	create_template("talent_tree_vet_keys3_000_desc_tw", {"loc_talent_veteran_weapon_switch_description"}, {"zh-tw"}, function(locale, value) return "近戰擊殺獲得"..COLORS_KWords_tw.Rangedspec_rgb.."。最多累積{ranged_stacks:%s}次。\n遠程擊殺獲得"..COLORS_KWords_tw.Meleespec_rgb.."。最多累積{melee_stacks:%s}次。\n\n當握持遠程武器時，您會啟動"..COLORS_KWords_tw.Rangedspec_rgb.."效果，獲得：\n{ranged_attack_speed:%s}遠程攻擊速度和\n{ranged_crit_chance:%s}遠程"..COLORS_KWords_tw.Crit_hit_rgb.."機率，每層持續{ranged_duration:%s}秒。\n\n當握持近戰武器時，您會啟動"..COLORS_KWords_tw.Meleespec_rgb.."效果，獲得：\n{melee_attack_speed:%s}近戰攻擊速度，\n"..COLORS_Numbers.n_plus_rgb.."{dodge_modifier:%s}閃避速度和閃避距離。持續{melee_duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_3_rgb end), -- ranged_stacks: 10, melee_stacks: 1, ranged_attack_speed: +2%, ranged_crit_chance: +33%, ranged_duration: 5, melee_attack_speed: +15%, dodge_modifier: 10%, melee_duration: 10 -- -() --  s->seconds -- colors
 
 	--[+ Keystone 3-1 - Always Prepared +]--
 		-- create_template("talent_tree_vet_keys3_001_en", {"loc_talent_veteran_weapon_switch_replenish_ammo"}, {"en"}, function(locale, value) return "Always Prepared" end),
@@ -1695,6 +1703,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_001_desc_fr", {"loc_talent_veteran_weapon_switch_replenish_ammo_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Rangedspec_rgb_fr.." recharge jusqu'à {ammo:%s} de vos munitions manquantes dans votre chargeur à partir de votre réserve, arrondi au supérieur, par cumul."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_1_rgb_fr end),
 			--[+ Traditional Chinese - 有備無患 +]--
+	create_template("talent_tree_vet_keys3_001_desc_tw", {"loc_talent_veteran_weapon_switch_replenish_ammo_description"}, {"zh-tw"}, function(locale, value) return "啟動"..COLORS_KWords_tw.Rangedspec_rgb.."每層會補充您彈夾中缺少的最多{ammo:%s}子彈，從您的備彈中取出，向上取整。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_3_1_rgb end), -- ammo: 3.3% -- colors
 
 	--[+ Keystone 3-2 - Invigorated +]--
 		-- create_template("talent_tree_vet_keys3_002_en", {"loc_talent_veteran_weapon_switch_replenish_stamina"}, {"en"}, function(locale, value) return "Invigorated" end),
@@ -1702,6 +1711,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_002_desc_fr", {"loc_talent_veteran_weapon_switch_replenish_stamina_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Meleespec_rgb_fr.." restaure {stamina:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_2_rgb_fr end),
 			--[+ Traditional Chinese - 活力煥發 +]--
+	create_template("talent_tree_vet_keys3_002_desc_tw", {"loc_talent_veteran_weapon_switch_replenish_stamina_description"}, {"zh-tw"}, function(locale, value) return "啟動"..COLORS_KWords_tw.Meleespec_rgb.."會恢復{stamina:%s}的"..COLORS_KWords_tw.Stamina_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_3_2_rgb end), -- stamina: 20% -- colors
 
 	--[+ Keystone 3-3 - On Your Toes +]--
 		-- create_template("talent_tree_vet_keys3_003_en", {"loc_talent_veteran_weapon_switch_replenish_toughness"}, {"en"}, function(locale, value) return "On Your Toes" end),
@@ -1709,6 +1719,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_003_desc_fr", {"loc_talent_veteran_weapon_switch_replenish_toughness_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Meleespec_rgb_fr.." et "..COLORS_KWords_fr.Rangedspec_rgb_fr.." restaure {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr..". Temps de recharge de {cooldown:%s} secondes pour chacun."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_3_rgb_fr end),
 			--[+ Traditional Chinese - 時刻警覺 +]--
+	create_template("talent_tree_vet_keys3_003_desc_tw", {"loc_talent_veteran_weapon_switch_replenish_toughness_description"}, {"zh-tw"}, function(locale, value) return "啟動"..COLORS_KWords_tw.Meleespec_rgb.."和"..COLORS_KWords_tw.Rangedspec_rgb.."會補充{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."。\n冷卻時間{cooldown:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_3_3_rgb end), -- toughness: 20%, cooldown: 3 -- s->seconds -- colors
 
 	--[+ Keystone 3-4 - Fleeting Fire +]--
 		-- create_template("talent_tree_vet_keys3_004_en", {"loc_talent_veteran_weapon_switch_reload_speed"}, {"en"}, function(locale, value) return "Fleeting Fire" end),
@@ -1716,6 +1727,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_004_desc_fr", {"loc_talent_veteran_weapon_switch_reload_speed_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Rangedspec_rgb_fr.." accorde {reload_speed:%s} vitesse de rechargement pendant {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_4_rgb_fr end),
 			--[+ Traditional Chinese - 集火 +]--
+	create_template("talent_tree_vet_keys3_004_desc_tw", {"loc_talent_veteran_weapon_switch_reload_speed_description"}, {"zh-tw"}, function(locale, value) return "啟動"..COLORS_KWords_tw.Rangedspec_rgb.."獲得{reload_speed:%s}的裝填速度，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_3_4_rgb end), -- reload_speed: 20%, duration: 5 -- s->seconds -- colors
 
 	--[+ Keystone 3-5 - Conditioning +]--
 		-- create_template("talent_tree_vet_keys3_005_en", {"loc_talent_veteran_weapon_switch_stamina_reduction"}, {"en"}, function(locale, value) return "Conditioning" end),
@@ -1723,6 +1735,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_005_desc_fr", {"loc_talent_veteran_weapon_switch_stamina_reduction_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Meleespec_rgb_fr.." accorde {stamina_reduction:%s} réduction du coût d'"..COLORS_KWords_fr.Stamina_rgb_fr.." pendant {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_5_rgb_fr end),
 			--[+ Traditional Chinese - 身體調節 +]--
+	create_template("talent_tree_vet_keys3_005_desc_tw", {"loc_talent_veteran_weapon_switch_stamina_reduction_description"}, {"zh-tw"}, function(locale, value) return "啟動"..COLORS_KWords_tw.Meleespec_rgb.."獲得{stamina_reduction:%s}的"..COLORS_KWords_tw.Stamina_rgb.."消耗減少，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_3_5_rgb end), -- stamina_reduction: 25%, duration: 3 -- s->seconds -- colors
 
 --[+ +PASSIVES+ +]--
 	--[+ Passive 1 - Longshot +]--

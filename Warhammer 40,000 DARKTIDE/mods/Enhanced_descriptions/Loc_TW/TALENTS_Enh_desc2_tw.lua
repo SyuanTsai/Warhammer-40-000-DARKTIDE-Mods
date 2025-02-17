@@ -54,7 +54,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"-- 中心區域基礎傷害：500。",
 		"-- 中心至最大半徑之間基礎傷害：200。",
 		"-- 整體對護甲的傷害修正中等，對甲殼則非常低。",
-		"- 踉蹌：對所有敵人(包含巨獸)造成高踉蹌，但不包含隊長/雙胞胎。",
+		"- 踉蹌：對所有敵人(包含巨獸)造成高踉蹌，但不包含隊長、雙胞胎。",
 		"- 彈藥：每次拾取手雷補給皆恢復所有手雷。",
 		"- 流血：爆炸時施加6層流血。",
 		"-- 與其他流血效果相同：單個目標最高16層，每0.5秒造成傷害，持續1.5秒。",
@@ -73,7 +73,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"-- 在外圍區域，整體傷害修正仍維持不錯。",
 		"- 踉蹌：",
 		"-- 對所有敵人(包含巨獸)造成高踉蹌。",
-		"-- 針對隊長/雙胞胎僅在沒有虛空護盾(Void shield)時生效。",
+		"-- 針對隊長、雙胞胎僅在沒有虛空護盾(Void shield)時生效。",
 		"- 彈藥：每次拾取手雷補給皆恢復所有手雷。",
 	}, "\n"), enhdesc_col)
 
@@ -138,7 +138,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"-- 武器擺動(Sway)降低60%，且視野輕微縮放。",
 		"- 與其他相關傷害增益採加法疊加。",
 		"- 使遠程攻擊的踉蹌強度提升100%。",
-		"- 若老兵遭控場(Disabled)則此效果提前結束。",
+		"- 若老兵遭控場則此效果提前結束。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 1-1 - Enhanced Target Priority(目標引導增強) +]--
@@ -171,8 +171,8 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"-- 範圍內所有敵人都會被踉蹌。",
 		"-- 踉蹌強度隨距離遞減。",
 		"-- 已處於踉蹌的敵人不會再次受到影響。",
-		"-- 針對粉碎者(Crusher)、重錘兵(Mauler)、變種人(Mutants)、收割者(Reaper)、巨獸(Monstrosities)以及沒有虛空護盾的隊長/雙胞胎，可強制施加重踉蹌2.5秒。",
-		"-- 若老兵處於盾兵(Bulwark)面前則不會踉蹌盾兵，除非不是正面。",
+		"-- 針對粉碎者、重錘兵、變種人、收割者、巨獸以及沒有虛空護盾的隊長、雙胞胎，可強制施加重踉蹌2.5秒。",
+		"-- 若老兵處於堡壘面前則不會踉蹌盾兵，除非不是正面。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2-1 - Duty and Honour(責任與榮譽) +]--
@@ -188,7 +188,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"- 此部分額外韌性會像第二條韌性槽，可透過近戰擊殺、相應天賦或武器祝福進行補充。",
 	}, "\n"), enhdesc_col)
 
-	--[+ Ability 2-2 - Only In Death Does Duty End +]--
+	--[+ Ability 2-2 - Only In Death Does Duty End(只有死亡，職責才會終結) +]--
 	local ED_VET_Ability_2_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 復活效果不受地形阻隔。",
@@ -213,8 +213,8 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"- 隱形： "..become_invis_drop_all_enemy_aggro,
 		"-- 進入隱形後仍可能受到傷害。",
 		"-- 下列行為會破除隱形：以近戰攻擊命中敵人、任意遠程攻擊、投擲手雷(快扔、瞄準或拋投)、完成救援/復甦/拉起或解網動作。",
-		"-- 下列行為不會破除隱形：拋投手雷(Underhand)時若未命中敵人、推擊敵人、使用興奮劑(自身或給隊友)、在隱形前丟出的手雷爆炸、已啟動的持續傷害效果(DoT)、操作占卜儀(Auspex)或小遊戲。",
-		"{#color(255, 35, 5)}惡魔宿主(Daemonhosts)不受此效果影響！{#reset()}",
+		"-- 下列行為不會破除隱形：拋投手雷(Underhand)時若未命中敵人、推擊敵人、使用興奮劑(自身或給隊友)、在隱形前丟出的手雷爆炸、已啟動的持續傷害效果(DoT)、操作占卜儀或小遊戲。",
+		"{#color(255, 35, 5)}惡魔宿主不受此效果影響！{#reset()}",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3-1 - Low Profile(低調) +]--
@@ -228,7 +228,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		ppp___ppp,
 		"- 第二段充能的冷卻，只有在第一段充能結束後才會開始。",
 		"- 同時將「滲透」的最大冷卻由45秒增加至59.85秒。",
-		"- 此額外冷卻與靈能者光環「先知之眼」、珍品的戰鬥技能冷卻(Combat Ability Regeneration)以及「技能冷卻減少20%」等效果加法疊加。",
+		"- 此額外冷卻與靈能者光環「先知之眼」、珍品的戰鬥技能冷卻以及「技能冷卻減少20%」等效果加法疊加。",
 		"- 例如，一名老兵在「漩渦(Maelstrom)」(-0.2)關卡中並與具有冷卻光環(-0.1)的靈能者組隊，其「滲透」最大冷卻計算方式為45 + 45 x (0.33 - 0.3) = 46.35秒。",
 	}, "\n"), enhdesc_col)
 
@@ -274,7 +274,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Keystone 1-1 - Chink in their Armour(滲透盔甲) +]--
 	local ED_VET_Keystone_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 當「專注( Focus )」疊加達到10層或以上時，提供10%撕裂(Rending)效果，提升對甲殼、防彈、狂熱者、不屈敵等護甲類型的傷害(包含爆炸與持續傷害DoTs)。",
+		"- 當「專注」疊加達到10層或以上時，提供10%撕裂(Rending)效果，提升對甲殼、防彈、狂熱者、不屈敵等護甲類型的傷害(包含爆炸與持續傷害DoTs)。",
 		"- 僅影響老兵自身的傷害。",
 		stacks_add_w_oth_rend_brit,
 	}, "\n"), enhdesc_col)
@@ -285,7 +285,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"- 此天賦有兩個效果：",
 		"-- 1. 每層「專注」疊加，皆可提升近戰擊殺與天賦所回復的韌性量5%(最高可+50%，若搭配「遠程刺客」則可+75%)。",
 		"--- 不會影響協同韌性再生。",
-		"--- 舉例：若達10層疊加，老兵最大韌性為152，近戰擊殺時可回復152 x (0.05 + 0.05 x 0.5) = 11.4韌性(介面通常四捨五入)。",
+		"--- 舉例：若達10層疊加，老兵最大韌性為152，近戰擊殺時可回復152x(0.05+0.05x0.5)=11.4韌性(介面通常四捨五入)。",
 		"--"..z_eff_of_this_tougn_rep,
 		"-- 2. 遠程弱點擊殺會回復10%最大耐力。",
 		"--- 當順劈(Cleave)時同樣可多次觸發。",
@@ -300,7 +300,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Keystone 2 - Focus Target!(鎖定目標!) +]--
 	local ED_VET_Keystone_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 老兵標記(Tag)敵人時，會將目前的「鎖定目標」疊加層數(至少1層)套用到該敵人身上，並將老兵的此疊加重置為1層。",
+		"- 老兵標記敵人時，會將目前的「鎖定目標」疊加層數(至少1層)套用到該敵人身上，並將老兵的此疊加重置為1層。",
 		"- 每層疊加可使被標記敵人承受的所有傷害額外增加4%。",
 		"- 該Debuff持續與標記相同(25秒)，對同個敵人最多可疊加8層。",
 		"- 被此天賦標記的敵人會以黃色高亮。",
