@@ -721,60 +721,55 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Blitz 0 - Big Box of Hurt +]--
 	local ED_OGR_Blitz_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Impact damage:",
-		"-- 1850 base.",
-		"-- Slightly increased armor Damage modifier against Unyielding and very low armor Damage modifier against Carapace.",
-		"-- Has instakill overrides for: Gunners, Shotgunners, Dreg Rager, Mauler, Mutants, Pox Hounds, Poxburster, Corruptor.",
-		-- "-- Direct impact Damage is increased by Rending/Brittleness, by \"Skullcrusher\" blessing (while Staggered), and by Damage buffs from \"Heavyweight\" (against Ogryns), \"Payback Time\", \"Reload and Ready\", \"Soften Them Up\", \"Valuable Distraction\", and small Ranged Damage nodes",
-		-- "- Stagger:",
-		-- "-- Deals high Stagger against all enemies, except for Monstrosities and Captains/Twins.",
-		-- "- Replenishes all boxes per Grenade pickup.",
+		"- 衝擊傷害：",
+		"-- 基礎傷害為 1850。",
+		"-- 對「不屈」類型護甲的傷害係數略微提升，對「甲殼」類型護甲的傷害係數極低。",
+		"-- 擁有瞬殺覆蓋效果的敵人包含：砲手、霰彈槍手、渣滓狂怒者、重錘兵、變種人、瘟疫獵犬、瘟疫爆者、腐化者。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 1 - Big Friendly Rock +]--
 	local ED_OGR_Blitz_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Impact damage:",
-		"-- 1200 base.",
-		"-- Slightly increased armor Damage modifier against Maniac.",
-		"-- Very low armor Damage modifier against Carapace.",
-		"-- Extra Finesse boost against Unyielding.",
-		"-- Has instakill overrides for: Gunners, Shotgunners, Dreg Ragers, Mutants, Pox Hounds, Poxbursters, Corruptors.",
-		"-- Can't oneshot: Maulers, Ogryns and Monstrosities.",
-		"-- Direct impact Damage is increased by Rending/Brittleness, by \"Skullcrusher\" Blessing (while Staggered), and by Damage buffs from \"Heavyweight\" (against Ogryns), \"Payback Time\", \"Reload and Ready\", \"Soften Them Up\" (if applied by another Ogryn), \"Valuable Distraction\", and small Ranged Damage nodes.",
-		"- Deals high Stagger against all enemies. Requires Weakspot hits to Stagger Monstrosities, and Scab Captain/Twins (only without shield).",
-		"- Ogryn cannot pick up Grenade ammo.",
-		"- Doesn't Cleave but may bounce back a bit and Damage/Kill a second closest enemy.",
+		"- 衝擊傷害：",
+		"-- 基礎傷害為 1200。",
+		"-- 對「狂熱者」類型的護甲傷害係數略微提升。",
+		"-- 對「甲殼」類型的護甲傷害係數極低。",
+		"-- 額外對「不屈」類型護甲有較高的靈巧加成。",
+		"-- 具有瞬殺覆蓋效果的敵人包含：砲手、霰彈槍手、渣滓狂怒者、變種人、瘟疫獵犬、瘟疫爆者、腐化者。",
+		"-- 無法一擊秒殺：重錘兵、歐格林與巨獸。",
+		"-- 衝擊傷害會受到撕裂、脆弱的加成，也會受到以下天賦、增益效果的傷害增幅：",
+		"---「碎顱者」（敵人處於踉蹌時）、「重量級」（針對歐格林）、「報復時間」、「換彈完畢」、「削弱敵人」（若由另一名歐格林施加）、「重要干擾」，以及小型遠程傷害節點。",
+		"- 此攻擊對所有敵人造成高額踉蹌。若要對巨獸及血痂隊長、雙子施加踉蹌，則需命中弱點，且雙子必須在沒有盾的狀態下。",
+		"- 歐格林無法撿取手雷彈藥。",
+		"- 攻擊不具順劈(Cleave)效果，但投擲物可能在碰撞後彈回，並可能對第二個相鄰敵人造成傷害或擊殺。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 2 - Bombs Away! +]--
 	local ED_OGR_Blitz_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Impact damage: 1850 base. Slightly increased armor Damage modifier against Unyielding and very low armor Damage modifier against Carapace. Has instakill overrides for: Gunners, Shotgunners, Dreg Rager, Mauler, Mutants, Pox Hounds, Poxburster, Corruptor. Direct impact Damage is increased by Rending/Brittleness, by \"Skullcrusher\" blessing (while Staggered), and by Damage buffs from \"Heavyweight\" (against Ogryns), \"Payback Time\", \"Reload and Ready\", \"Soften Them Up\", \"Valuable Distraction\", and small Ranged Damage nodes",
-		-- "- Stagger: Deals high Stagger against all enemies, except for Monstrosities and Captains/Twins.",
-		-- "- Replenishes all boxes per Grenade pickup.",
-		"- Frag grenades: Grenade explosions have epicenter radius of 2 meters, Max Radius of 8 meters. Can Stagger all enemies inside epicenter radius, including Monstrosities and Captains/Twins (only without void shield).",
+    	"- 衝擊傷害：基礎傷害為 1850。對「不屈」類型護甲傷害係數略微提升，對「甲殼」類型護甲傷害係數極低。具有瞬殺覆蓋效果的敵人同上。衝擊傷害會受到撕裂、脆弱的加成，也會受到「碎顱者」、「重量級」、「報復時間」、「換彈完畢」、「削弱敵人」、「重要干擾」等天賦或祝福的增幅。",
+    	"- 破片手榴彈：手榴彈爆炸的中心半徑2公尺，最遠波及範圍為8公尺。可在爆心範圍內對所有敵人（包含巨獸與血痂隊長、雙子）造成踉蹌效果（雙子需無盾）。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Blitz 3 - Frag Bomb +]--
 	local ED_OGR_Blitz_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Fuse time: 2 seconds.",
-		"- Explosion radius:",
-		"-- 2 meters (epicenter), 16 meters (max).",
-		"- Explosion damage:",
-		"-- Base Damage: 1500 (epicenter), 1250 (outside epicenter).",
-		"-- Instakill all enemies with an explosion except: Maulers, Crushers, Bulwarks and Monstrosities.",
-		"-- Very high armor Damage modifiers across the board, especially against Flak, Maniac, Unyielding.",
-		"-- Explosion Damage is increased by Rending/Brittleness, by \"Skullcrusher\" Blessing (while Staggered), and by Damage buffs from \"Heavyweight\" (against Ogryns), \"Payback Time\", \"Soften Them Up\", and \"Valuable Distraction\".",
-		"- Deals high Stagger against all enemies including Monstrosities, Captains/Twins (only without void shield).",
+		"- 引信延遲：2秒。",
+		"- 爆炸範圍：",
+		"-- 2公尺（爆心），16公尺（最大範圍）。",
+		"- 爆炸傷害：",
+		"-- 爆心基礎傷害：1500，爆心外區域傷害：1250。",
+		"-- 除重錘兵、粉碎者、堡壘與巨獸外，可瞬殺其餘所有敵人。",
+		"-- 整體對各種護甲類型都有非常高的傷害係數，尤其是對「防彈」、「狂熱者」、「不屈」效果佳。",
+		"-- 爆炸傷害會受到撕裂、脆弱、以及「碎顱者」祝福（敵人處於踉蹌時）增幅，也會受到「重量級」、「報復時間」、「削弱敵人」、「重要干擾」等天賦的傷害加成。",
+		"- 此爆炸對所有敵人皆可造成高額踉蹌，包括巨獸、血痂隊長、雙子（僅在無盾狀態下）。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Aura 0 - Intimidating Presence +]--
 	local ED_OGR_Aura_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		this_also_buffs_melee_sp_act_guns,
-		"- Stacks additively with other related Damage buffs, and multiplicatively with Power level buffs from Weapon Blessings.",
+		"- 可與其他傷害增幅效果疊加（加算），並與武器祝福提供的威能加成乘算。",
 		doesnt_stack_w_z_same_aura_ogr,
 	}, "\n"), enhdesc_col)
 
@@ -789,51 +784,48 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Aura 2 - Stay Close! +]--
 	local ED_OGR_Aura_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases Ogryn's base amount of Coherency Toughness regenerated while in Coherency:",
+		"- 提高歐格林在協同狀態下的基礎韌性回復量：",
 		"_______________________________",
-		"Allies: | CTR:                 | After 5 seconds:",
-		"         1 |  3.75 -> 4.69   | 23.44(HUD:~24)",
-		"         2 |  5.63 -> 7.03   | 35.16(HUD:~36)",
-		"         3 |  7.50 -> 9.38   | 46.88(HUD:~47)",
+		"友軍數量: | CTR:             |  5秒後數值:",
+		"         1 |  3.75 -> 4.69   | 23.44 (HUD顯示約24)",
+		"         2 |  5.63 -> 7.03   | 35.16 (HUD顯示約36)",
+		"         3 |  7.50 -> 9.38   | 46.88 (HUD顯示約47)",
 		"_______________________________",
-		"- Stacks additively with \"Lynchpin\", keystone \"Feel No Pain\" (including \"Toughest!\"), Toughness Regeneration Speed from Curios, and Veteran's small Talent node \"Inspiring Presence\".",
+		"- 與「關鍵人物」、鑰石「麻木」（含「最堅韌!」）、珍品提供的韌性回復速度以及老兵的小天賦「鼓舞人心」皆為加算疊加。",
 		doesnt_stack_w_z_same_aura_ogr,
 	}, "\n"), enhdesc_col)
 
 	--[+ Aura 3 - Coward Culling +]--
 	local ED_OGR_Aura_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- For Ogryn, Stacks additively with the \"Ceaseless Barrage\" Weapon Blessing and other related Damage buffs, and multiplicatively with Power level buffs from Weapon Blessings.",
+		"- 對歐格林自身來說，此光環提供的傷害增幅與「持續阻擊」等其他相關增幅皆為加算關係，與武器祝福提供的威能加成則為乘算。",
 		doesnt_stack_w_z_same_aura_ogr,
-		"- Breeds that can be Suppressed: Groaner, Dreg Gunner, Dreg Stalker, Reaper, Scab Gunner, Scab Shooter, Scab Stalker.",
+		"- 可被壓制(Suppressed)的敵人：低階感染者、渣滓砲手、渣滓伏擊兵、收割者、血痂砲手、血痂射手、血痂伏擊兵。",
 	}, "\n"), enhdesc_col)
 
 --[+ +ABILITIES+ +]--
 	--[+ Ability 0 - Bull Rush +]--
 	local ED_OGR_Ability_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Range: 12 meters.",
-		-- "- Stops at enemies with armor base types Carapace/Unyielding, at Monstrosities, and at Captains/Twins void shield.",
-		"- Deals no Damage on impact.",
-		"- Can be canceled by Backwards movement input.",
-		-- "- On charge end, also Increases Melee weapon attack animation Speed and Movement Speed by 25% for 5 seconds.",
-		-- "-- Stacks additively with other related buffs.",
+		"- 衝刺距離：12 公尺。",
+		"- 衝刺本身不造成傷害。",
+		"- 可透過向後移動鍵取消衝刺。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 1 - Indomitable +]-- 
 	local ED_OGR_Ability_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Range: 24 meters.",
-		"- Charges through Scab Captain/Twins void shield (applies Stagger only without void shield). Stops only at Monstrosities.",
-		"- Charge:",
-		"-- Cannot be activated while jumping or falling.",
-		"-- Can be canceled by Backwards movement input.",
-		"-- Can slightly change direction while charging.",
-		"-- While charging, pushes enemies away, including Monstrosities (unless direct impact).",
-		"-- Deals no damage on impact.",
-		"-- On charge end, Staggers all enemies within a 2.5 meters radius.",
-		"-- On charge end, also Increases Melee weapon attack animation speed and Movement speed by 25% for 5 seconds.",
-		"--- Stacks additively with other related buffs.",
+		"- 衝刺距離：24 公尺。",
+		"- 可穿過血痂隊長、雙子的護盾（若無護盾時還會施加踉蹌），僅在遭遇巨獸時停止。",
+		"- 衝刺機制：",
+		"-- 無法在跳躍或下墜中時使用。",
+		"-- 可透過向後移動鍵取消衝刺。",
+		"-- 衝刺過程中可稍微調整方向。",
+		"-- 衝刺時會推開敵人，包括巨獸（除非直接衝撞）。",
+		"-- 衝刺本身不造成傷害。",
+		"-- 衝刺結束時，對半徑2.5公尺範圍內的所有敵人造成踉蹌效果。",
+		"-- 衝刺結束後，為近戰武器攻擊動畫與移動速度提供+25%增益，持續5秒。",
+		"--- 與其他相關增益效果加成為加算關係。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 1-1 - Stomping Boots +]--
@@ -846,54 +838,52 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	local ED_OGR_Ability_1_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		stacks_add_w_oth_dmg,
-		"- On charge end, Indomitable's Stagger effect also generates Stacks separately for each enemy hit by it.",
+		"- 當「不屈不撓」衝刺結束時，其造成的踉蹌效果會針對被命中的每個敵人個別產生疊層。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 1-3 - Pulverise +]--
 	local ED_OGR_Ability_1_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Can apply Bleed through Bulwark shield and Captains/Twins void shield.",
-		"- The Bleeds Stack additively with other sources of Bleed.",
-		"- Bleed:",
-		"-- Same as other sources of Bleed.",
-		"-- Lasts 1.5 seconds.",
-		"-- Ticks every 0.5 seconds.",
-		"-- Refreshes duration on Stack application.",
-		"-- Above average armor Damage modifiers across the board, low armor Damage modifier against Carapace.",
-		"- Bleed Damage is increased by Rending/Brittleness, by Perks of currently equipped Weapons, and by the following buffs from:",
-		"-- Talents: \"Heavyweight\" (against Ogryns), \"Payback Time\", \"Soften Them Up\", and \"Valuable Distraction\" (if applied by another Ogryn).",
-		"-- Blessings (if procced with Weapon before or during Bleed's active duration):",
-		"--- Melee: \"Skullcrusher\" (while Staggered), \"Slaughterer\", and \"Tenderiser\" (Bleed ticks don't consume Stacks).",
-		"--- Ranged: \"Blaze Away\", \"Deathspitter\", \"Explosive Offensive\", \"Fire Frenzy\", and \"Full Bore\".",
+		"- 可透過盾或血痂隊長、雙子的護盾施加流血(Bleed)。",
+		"- 這個流血效果與其他流血來源加成為加算疊層。",
+		"- 流血：",
+		"-- 與其他流血效果相同，持續1.5秒，每0.5秒跳一次傷害。",
+		"-- 疊層時會刷新持續時間。",
+		"-- 對所有護甲類型都有不錯的傷害係數，唯對「甲殼」類型較低。",
+		"- 流血傷害會受到撕裂、脆弱、武器專長與以下天賦/增益效果的加成：",
+		"-- 「重量級」（對歐格林）、「報復時間」、「削弱敵人」、「重要干擾」（若由其他歐格林施加）。",
+		"-- 若武器祝福在流血期間或之前觸發，也會提供額外傷害：",
+		"--- 近戰：「碎顱者」（敵人踉蹌時）、「殺戮者」與「剁碎者」（流血傷害不會消耗剁碎者的層數）。",
+		"--- 遠程：「連續發射」、「死亡噴吐」、「爆發強化」、「烈火熱焰」、「全孔射擊」。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2 - Loyal Protector +]--
 	local ED_OGR_Ability_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Radius: 8 meters.",
-		"- Holding the Ability button shows taunt Range. Preview can be Block canceled.",
-		"- On activation, forces at least light Stagger on all enemies within radius for 1 second.",
-		"- Taunted enemies are visually highlighted.",
-		"- Monstrosities and aggroed Daemonhosts ignore taunt. Scab Captain/Twins can be taunted.",
-		"- Forces taunted Ranged enemies into Melee combat (except Gunners and Reapers).",
-		"- Taunt duration is not overwritten by \"Attention Seeker\"'s duration.",
-		"- When Ogryn gets Disabled, the taunt effect is removed from any Disabler enemies (Pox Hounds, Mutant, Trapper) that have been taunted by Ogryn before.",
+		"- 範圍：半徑 8 公尺。",
+		"- 長按技能按鍵可顯示嘲諷範圍，可用格擋動作取消顯示。",
+		"- 啟動瞬間可對範圍內所有敵人造成至少輕度的踉蹌，持續1秒。",
+		"- 被嘲諷的敵人會出現高亮提示。",
+		"- 巨獸與已進入戰鬥的惡魔宿主免疫嘲諷；血痂隊長、雙子可被嘲諷。",
+		"- 被嘲諷的遠程敵人（砲手和收割者除外）會轉為進行近戰攻擊。",
+		"- 若敵人被「渴求關注」天賦嘲諷，其嘲諷時間不會被此技能刷新。",
+		"- 當歐格林被捕獲或撲倒(如瘟疫獵犬、變種人、陷阱兵)時，先前被歐格林嘲諷的該控制型敵人會解除嘲諷。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2-1 - Valuable Distraction +]--
 	local ED_OGR_Ability_2_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks multiplicatively with Damage taken debuffs from \"Soften Them Up\" and the Pickaxe special actions (10%), with Damage buffs and with Power level buffs from Weapon Blessings.",
-		"- Does not Stack with the same Talent from another Ogryn.",
-		"- Enemies taunted by the means of \"Attention Seeker\" do not get this debuff.",
+		"- 與「削弱敵人」與鎬子特殊攻擊（10%）產生的敵方承受傷害加成為乘算，與其他傷害增幅或武器祝福提供的威能加成亦可乘算。",
+		"- 與其他歐格林的同名天賦無法堆疊。",
+		"- 若敵人是被「渴求關注」天賦嘲諷，則不會受到本天賦的傷害加成效果。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 2-2 - Go Again +]--
 	local ED_OGR_Ability_2_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Reduces the remaining Ability Cooldown of Loyal Protector by 1.125 seconds per Stagger action.",
-		"- Procs on successful Pushes, Staggering Melee hits, and Staggering Melee special actions from Ripper Gun, Grenadier Gauntlet (Melee part), Rumbler, Heavy Stubbers, and Kickback.",
-		"- Procs once per Stagger action regardless of how many enemies are Staggered.",
+		"- 每次產生踉蹌動作時（如推擊、能使敵人踉蹌的近戰攻擊或特殊近戰攻擊），都會使「忠誠守護者」的剩餘冷卻時間縮短1.125秒。",
+    	"- 適用於推擊、造成踉蹌的近戰攻擊，以及擲彈槍與反衝者等武器的特殊近戰。",
+    	"- 每次踉蹌動作只會觸發一次減少冷卻，不論同時踉蹌多少敵人。",
 		procs_add_conc_stim_rem_cd_red,
 		doesnt_interact_w_c_a_r_from_curio,
 	}, "\n"), enhdesc_col)
@@ -901,146 +891,140 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Ability 2-3 - Big Lungs +]--
 	local ED_OGR_Ability_2_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases taunt base Radius from 8 to 12 meters.",
+		"- 嘲諷基礎半徑從 8 公尺提升至 12 公尺。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3 - Point-Blank Barrage +]--
 	local ED_OGR_Ability_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- The forced Reload always procs \"Reloaded and Ready\".",
-		-- "- Ranged weapon attack animation Speed Stacks additively with \"Just Getting Started\" and Celerity Stimm.",
-		"- Reload animation Speed Stacks additively with Reload Speed buffs from \"Pacemaker\" and the small Reload Speed node.",
-		"- Reduction of Movement Speed penalty stacks multiplicatively with the related buff from the \"Roaring Advance\" Weapon Blessing, and Stacks multiplicatively with Movement Speed buffs from \"Get Stuck In\", \"Unstoppable Momentum\" and Veteran's aura \"Close and Kill\".",
-		-- "-- Beyond 12.5 meters, the Damage buff decreases linearly until it loses its effect at 30 meters:",
-		"-- The Damage buff decreases linearly:",
+		"- 這個技能會強制角色進行裝填(Reload)，並且一定會觸發「換彈完畢」。",
+		"- 裝填速度與「領跑者」小型快速裝填天賦為加算關係。",
+		"- 降低移動速度懲罰效果，與武器祝福「咆哮突進」的減速效果為乘算，並可同時與「全神貫注」、「勢不可擋」、老兵的「抵近殺敵」等移動速度加成乘算。",
 		"______________________________",
-		"Distance(m):  1-12.5|  15|  20|  25|  30",
-		"Damage(%):         15| ~13|  ~9|  ~5|    0",
+		"距離(公尺):   1-12.5 |  15 |  20 |  25 |  30",
+		"傷害(%) :        15 | ~13|  ~9|  ~5|   0",
 		"______________________________",
 		"-"..stacks_add_w_oth_dmg,
-		-- "- This also affects explosion damage and DoTs like bleed (from Flechette weapon blessing) while the ranged weapon is equipped as long as Ogryn stays within 30m to the enemy.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3-1 - Bullet Bravado +]--
 	local ED_OGR_Ability_3_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- If a shooting action entails multiple shots (e.g. Ripper Gun left clicks), each shot fired during this action will trigger the Replenishment.",
-		"- The forced reload upon activating \"Point-Blank Barrage\" always triggers this Replenishment.",
+		"- 若一次射擊動作包含多發子彈（例如使用擲彈兵臂鎧點射），則此段射擊中的每一發子彈都會觸發回復。",
+		"- 使用「貼身火力」時強制裝填也會觸發此回復。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3-2 - Hail of Fire +]--
 	local ED_OGR_Ability_3_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Grants 30% Rending while the Ranged weapon is equipped boosting Damage against armor types Carapace, Flak, Maniac, Unyielding.",
-		"- Only affects Ogryn's own Damage.",
-		"- This also affects Explosion Damage and DoTs like Bleed (from \"Flechette\" Weapon Blessing) while the Ranged weapon is equipped, and the Damage of explosions.",
-		"- Stacks additively with other Rending buffs, including Brittleness debuffs that are applied to enemies.",
+		"- 當持有遠程武器時，可獲得 30% 的撕裂(Rending)加成，提升對「甲殼」、「破片護甲」、「狂熱者」、「不屈」等各類型裝甲的傷害。",
+		"- 僅提升歐格林本身的傷害。",
+		"- 同樣影響爆炸傷害及如「飛鏢彈」武器祝福產生的流血DoT，並影響各種爆炸傷害。",
+		"- 與其他撕裂增幅與「脆弱」等敵人減益效果可加算疊加。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3-3 - Light 'em Up +]--
 	local ED_OGR_Ability_3_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Ranged attacks (including Rock or Grenade projectile direct impact hits) apply 2 Stacks of Burn per hit to enemies, up to 31 Max Burn Stacks on a target.",
-		"- Can apply burn through shields.",
-		-- "- Burn: Same as other sources of Burn. Lasts 4 seconds. Ticks every 0.5 seconds. Refreshes duration on Stack application. High armor Damage modifiers across the board, very low armor Damage modifier against Carapace.",
-		"- Burn Damage is increased by Rending/Brittleness, by Perks of currently equipped Weapons, and by the following buffs from:",
-		"-- Talents: \"Heavyweight\" (against Ogryns), \"Payback Time\", \"Soften Them Up\", and \"Valuable Distraction\" (if applied by another Ogryn).",
-		"-- Blessings (if procced with Weapon before or during Burn's active duration):",
-		"--- Melee: \"Skullcrusher\" (while Staggered), \"Slaughterer\", and \"Tenderiser\" (Burn ticks don't consume Stacks).",
-		"--- Ranged: \"Blaze Away\", \"Explosive Offensive\", \"Deathspitter\", \"Fire Frenzy\", and \"Full Bore\".",
+		"- 遠程攻擊（包含石塊或手榴彈的直擊）每次命中可對敵人施加2層燃燒，最多可累積31層。",
+		"- 可穿透盾牌等防護。",
+		"- 燃燒傷害會受到撕裂、脆弱、武器專長，以及下列天賦、增益的加成：",
+		"-- 「重量級」（針對歐格林）、「報復時間」、「削弱敵人」與「重要干擾」（若由其他歐格林施加）。",
+		"-- 武器祝福（若在燃燒期間或之前觸發）：",
+		"--- 近戰：「碎顱者」（踉蹌時）、「殺戮者」、「剁碎者」（燃燒跳傷害不會消耗層數）。",
+		"--- 遠程：「連續發射」、「爆發強化」、「死亡噴吐」、「烈火熱焰」、「全孔射擊」。",
 	}, "\n"), enhdesc_col)
 
 --[+ +KEYSTONES+ +]--
 	--[+ Keystone 1 - Heavy Hitter +]--
 	local ED_OGR_Keystone_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Always generates 1 Stack per attack regardless of how many enemies have been hit.",
-		"- Stacks last 7.5 seconds and can be refreshed during active duration.",
+		"- 每次攻擊無論命中多少敵人，都只會產生1層疊加。",
+		"- 疊層持續7.5秒，可在有效時間內刷新。",
 		stacks_add_w_oth_dmg,
-		"- Also procs on Melee special actions from Ripper Gun, Grenadier Gauntlet (Melee part), Rumbler, Heavy Stubbers, and Kickback.",
+		"- 同樣適用於擲彈兵臂鎧、全自動霰彈槍(近戰部分)、震盪槍、重型機槍及反衝者等武器的近戰特殊攻擊。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-1 - Just Getting Started +]--
 	local ED_OGR_Keystone_1_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with related buffs from \"Indomitable\"/\"Bull Rush\", \"Point-Blank Barrage\", and Celerity Stimm.",
-		"- Does currently not have a HUD icon.",
+		"- 與「不屈不撓」、「蠻牛衝撞」、「貼身火力」以及敏捷興奮劑等相關射速、速度加成皆為加算關係。",
+		"- 目前在HUD中無圖示顯示。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-2 - Unstoppable +]--
 	local ED_OGR_Keystone_1_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- For example, with 160 Max Toughness and \"Smash 'Em!\" equipped, Ogryn replenishes 160x(0.1+0.2)=48 Toughness on killing a single enemy.",
+		"- 例如，當歐格林最大韌性為160且同時裝備「碾碎它們!」時，殺死一個敵人可回復160×(0.1+0.2)=48點韌性。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 1-3 - Brutish Momentum +]--
 	local ED_OGR_Keystone_1_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Light attacks cannot generate Stacks (this requires Heavy Melee attacks), they can only maintain the current Stack count.",
+		"- 輕攻擊無法產生疊層（僅重攻擊可產生），但可延長現有疊層的持續時間。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2 - Feel No Pain +]--
 	local ED_OGR_Keystone_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Does not regen Stacks while Disabled or Downed.",
-		"- Increases Ogryn's base amount of Coherency Toughness regenerated while in Coherency by up to 25%:",
+		"- 當歐格林處於被撲倒或被捕獲等狀態時無法回復疊層。",
+		"- 在協同狀態下，可使歐格林的韌性回復量提升最多25%：",
 		"_______________________________",
-		"Allies: | CTR:                 | After 5 seconds:",
-		"         1 |  3.75 -> 4.69    | 23.44(HUD:~24)",
-		"         2 |  5.63 -> 7.03   | 35.16(HUD:~36)",
-		"         3 |  7.50 -> 9.38   | 46.88(HUD:~47)",
+		"友軍數量: | CTR:             | 5秒後數值:",
+		"         1 | 3.75 -> 4.69    | 23.44 (HUD約24)",
+		"         2 | 5.63 -> 7.03    | 35.16 (HUD約36)",
+		"         3 | 7.50 -> 9.38    | 46.88 (HUD約47)",
 		"_______________________________",
-		"- Stacks additively with Ogryn's Aura \"Stay Close!\", \"Lynchpin\", the keystone node \"Toughest!\", Toughness Regeneration Speed from Curios, and Veteran's small Talent nodes \"Inspiring Presence\".",
-		"- Also reduces Toughness Damage taken.",
-		"- The buff Stacks multiplicatively with itself, up to ~22.4% Toughness Damage Reduction at Max Stacks (1-0.975¹⁰=0.2236), and with other Damage Reduction buffs.",
+		"- 與歐格林的光環「跟緊我!」、「關鍵人物」、鑰石「最堅韌!」、珍品提供的韌性回復，以及老兵的小天賦「鼓舞人心」皆為加算疊加。",
+		"- 同時也能減少韌性所受的傷害。",
+		"- 此減傷可疊層並彼此乘算，最高可達~22.4%（1-0.975¹⁰=0.2236），也能與其他減傷效果乘算疊加。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2-1 - Pained Outburst +]--
 	local ED_OGR_Keystone_2_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- When Ogryn is Disabled (e.g. Pounced or Netted etc.), losing the last Stack of \"Feel No Pain\" triggers the knockback explosion and the Toughness replenishment.",
-		"- This also allows Ogryn to free himself from Pox Hounds.",
-		"- When Ogryn gets Downed, the current Stack amount is set to 0 which also procs the Staggering explosion, however, does not proc the Toughness replenishment.",
-		"- The explosion has a radius of 2.5 meters and Staggers all enemies except for Mutants, Monstrosities, and Captains/Twins.",
+		"- 若歐格林被捕獲或撲倒（如瘟疫獵犬或陷阱兵等），當「麻木」的最後一層疊層耗盡時，就會觸發擊退爆炸(含小範圍)與韌性回復。",
+		"- 這也使歐格林能自我擺脫瘟疫獵犬。",
+		"- 當歐格林倒地時，現有疊層將歸零，會觸發擊退爆炸但不會觸發韌性回復。",
+		"- 此爆炸半徑為2.5公尺，並對除變種人、巨獸、血痂隊長、雙子以外的敵人施加踉蹌。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2-2 - Strongest! +]--
 	local ED_OGR_Keystone_2_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Always adds 1 Stack per push action regardless of how many enemies are pushed.",
+		"- 每次推擊動作皆會產生1層疊加，不論推擊到多少敵人。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 2-3 - Toughest! +]--
 	local ED_OGR_Keystone_2_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Doubles Feel No Pain's amount of Coherency Toughness Regenerated while in Coherency from 2.5% to 5% per Stack.",
-		"- Stacks additively with Ogryn's Aura \"Stay Close!\", \"Lynchpin\", Toughness Regeneration Speed from Curios, and Veteran's small Talent node \"Inspiring Presence\".",
+		"- 使「麻木」在協同狀態下的韌性回復量加倍，從每層2.5%提升至5%。",
+		"- 與歐格林的光環「跟緊我!」、「關鍵人物」、珍品提供的韌性回復，以及老兵小天賦「鼓舞人心」皆為加算疊加。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 3 - Burst Limiter Override +]--
 	local ED_OGR_Keystone_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- For Ripper Guns, the left click shooting action entails multiple shots fired per action.",
-		"- None of the shots consume Ammo on proc.",
-		"- For the remaining weapons, the Talent procs per single shot fired.",
+		"- 對於Ripper Guns，左鍵射擊動作會一次性發射多發子彈，且在此天賦觸發時，這些子彈都不會消耗彈藥。",
+		"- 對其他武器而言，此天賦則會在每次單發射擊時觸發。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 3-1 - Maximum Firepower +]--
 	local ED_OGR_Keystone_3_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Additionally to Ogryn's base Ability Cooldown rate of 1 second per second, reduces the remaining Ability Cooldown by 2 seconds per second for 2 seconds when Burst Limiter Override procs. This results in a total Cooldown Reduction of 6 seconds per proc (2 seconds from base rate + 2x2 seconds from Talent).",
+		"- 在歐格林基礎的每秒1秒冷卻回復速度之外，當「爆限超載」觸發時，於2秒內再額外每秒減少2秒冷卻，總計每次觸發可縮短6秒冷卻（2秒內共4秒，再加上基礎2秒）。",
 		"-"..can_be_refr_dur_active_dur,
-		"- Procs additionally to Concentration Stimm's Cooldown Reduction effect of 3 seconds per second.",
+		"- 與專注興奮劑提供的每秒3秒冷卻減少效果同時存在。",
 		doesnt_interact_w_c_a_r_from_curio,
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 3-2 - Good Shootin' +]--
 	local ED_OGR_Keystone_3_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- If a shooting action entails multiple shots (Ripper Guns and Heavy Stubbers left-clicks) and if one of these shots Crits, then all subsequent shots of that action will be converted into Crit shots.",
-		"- For Heavy Stubbers' alt fire (full auto), any Crit shot granted by this Talent procs the guaranteed Crit sequence of 6 shots.",
+		"- 若一次射擊動作包含多發子彈（如擲彈兵臂鎧或重型機槍的左鍵連射），只要其中一發子彈觸發爆擊，當前這段射擊動作中後續所有子彈都將變為爆擊。",
+		"- 使用重型機槍的副射擊模式（持續全自動）時，只要此天賦讓某一發子彈觸發爆擊，則後續6發射擊也都會視為爆擊。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Keystone 3-3 - More Burst Limiter Overrides! +]--
@@ -1050,33 +1034,34 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Passive 1 - Furious +]--
 	local ED_OGR_Passive_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks last until next Melee attack and are consumed even if the Melee attack hits nothing.",
-		"- Per Stack, increases Melee Damage by 2.5%.",
+		"- 疊層會持續到下一次近戰攻擊為止，就算該近戰攻擊沒有擊中任何敵人，也會消耗所有疊層。",
+		"- 每層可使近戰傷害提高 2.5%。",
 		stacks_add_w_oth_dmg,
-		"- Melee special actions of Ripper Guns, Grenadier Gauntlet (Melee part), Rumbler, Heavy Stubbers, and Kickback can also proc this Talent.",
+		"- 擲彈兵臂鎧、全自動霰彈槍的近戰部分、震盪槍、重型機槍以及反衝者的近戰特殊攻擊也可觸發此天賦。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 2 - Reloaded and Ready +]--
 	local ED_OGR_Passive_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		stacks_add_w_oth_dmg,
-		"- The forced Reload of \"Point-Blank Barrage\" procs this Talent (even if the weapon's clip is full).",
+		"- 「貼身火力」的強制換彈也會觸發此天賦（即使彈匣已滿）。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 3 - The Best Defence +]--
 	local ED_OGR_Passive_3_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Also procs on melee special actions of Ripper Guns, Grenadier Gauntlet (melee part), Rumbler, Heavy Stubbers, and Kickback.",
-		"- If one of the hit enemies dies, the Toughness amount replenished from the Talent is added to Ogryn's base 5% of Maximum Toughness gained on Melee kill.",
-		"- For example, with 140 Max Toughness and if two of the attacked enemies die, Ogryn would replenish 140x(0.2+0.05+0.05)=42 Toughness.",
+		"- 同樣適用於擲彈兵臂鎧、全自動霰彈槍 (近戰部分)、震盪槍、重型機槍與反衝者的近戰特殊攻擊。",
+		"- 若本次攻擊擊殺其中任意敵人，從此天賦獲得的韌性回復量會額外疊加到歐格林原本的「近戰擊殺回復5%最大韌性」機制中。",
+		"- 例如，當歐格林的最大韌性為 140，且其中兩名敵人死亡時，歐格林能回復 140×(0.2+0.05+0.05)=42 點韌性。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 4 - Heavyweight +]--
 	local ED_OGR_Passive_4_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases all Damage against Bulwark, Crusher, Plague Ogryn, and Reaper.",
+		"- 提高對堡壘、粉碎者、瘟疫歐格林與收割者的所有傷害。",
 		stacks_add_w_oth_dmg,
+		"- 同時減少自身從堡壘兵、粉碎者、瘟疫歐格林與收割者所受到的韌性與生命傷害。",
 		"- Also reduces both Toughness and Health Damage taken from Bulwark, Crusher, Plague Ogryn, and Reaper.",
 		stacks_mult_w_other_dmg_red_buffs,
 	}, "\n"), enhdesc_col)
@@ -1084,77 +1069,79 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Passive 5 - Steady Grip +]--
 	local ED_OGR_Passive_5_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Does not interact with Coherency Toughness Regeneration.",
+		"- 不會影響協同狀態下的韌性回復。",
 		z_eff_of_this_tougn_rep,
-		"- \"Braced\" refers to an action keyword in Ranged Weapon profiles.",
-		"- Using a Weapon's alt fire, like zooming or firing when zoomed in, activates the buff.",
+		"- 「Braced」(架設) 指的是遠程武器設定檔中一個動作關鍵詞。",
+		"- 使用武器的副開火模式（如瞄準或在瞄準時射擊）時會觸發此增益效果。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 6 - Smash 'Em! +]--
 	local ED_OGR_Passive_6_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Replenishes Toughness when hitting exactly ONE enemy with a Heavy Melee attack.",
-		"- Also procs on Melee special actions of Ripper Guns, Grenadier Gauntlet (Melee part), Rumbler, Heavy Stubbers, and Kickback.",
-		"- If the hit enemy dies, the Toughness amount replenished from the Talent is added to Ogryn's base 5% of Maximum Toughness gained on Melee kill.",
-		"- For example, with 90 Max Toughness and if the attacked enemy dies, Ogryn would replenish 90x(0.2+0.05)=22.5 Toughness.",
+		"- 當你以「重攻擊」並且只命中一個敵人時，可回復韌性。",
+		"- 同樣適用於擲彈兵臂鎧、全自動霰彈槍(近戰部分)、震盪槍、重型機槍與反衝者的近戰特殊攻擊。",
+		"- 若擊中的那名敵人死亡，則本天賦回復的韌性會與「近戰擊殺回復5% 最大韌性」疊加。",
+		"- 舉例來說，若歐格林的最大韌性為90、且攻擊讓目標死亡，將回復90×(0.2+0.05)=22.5點韌性。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 7 - Lynchpin +]--
 	local ED_OGR_Passive_7_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases Ogryn's base amount of Coherency Toughness Regenerated (CTR) while in Coherency by 50%:",
+
+		"- 在協同狀態下，可使歐格林的韌性回復量基礎值額外提高50%：",
 		"_______________________________",
-		"Allies: | CTR:                 | After 5 seconds:",
-		"         1 |  3.75 -> 5.63   | 28.13(HUD:~29)",
-		"         2 |  5.63 -> 8.44  | 42.19(HUD:~43)",
-		"         3 |  7.50 -> 11.25  | 56.25(HUD:~57)",
+		"友軍人數: | CTR:             | 5秒後回復:",
+		"         1 |  3.75 -> 5.63   | 28.13 (HUD約29)",
+		"         2 |  5.63 -> 8.44   | 42.19 (HUD約43)",
+		"         3 |  7.50 -> 11.25  | 56.25 (HUD約57)",
 		"_______________________________",
-		"- Stacks additively with Ogryn's Aura \"Stay Close!\", keystone \"Feel No Pain\" (including \"Toughest!\"), Toughness Regeneration Speed from Curios, and Veteran's small Talent node \"Inspiring Presence\".",
+		"- 與歐格林的光環「跟緊我!」、鑰石「麻木」（含「最堅韌!」）、珍品帶來的韌性回復速度、以及老兵的小天賦「鼓舞人心」皆為加算疊加。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 8 - Slam +]--
 	local ED_OGR_Passive_8_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with \"Crunch!\" and other related Stagger buffs from Weapon Blessings, and multiplicatively with Power level buffs from Weapon Blessings.",
+		"- 與「嘎嘎!」以及其他武器祝福的相關踉蹌增幅為加算疊加，與武器祝福提供的威能(Power)加成則為乘算。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 9 - Soften Them Up +]--
 	local ED_OGR_Passive_9_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		can_be_refr_dur_active_dur,
-		"- Can also be applied with Melee special actions of Ripper Guns, Grenadier Gauntlet (Melee part), Rumbler, Heavy Stubbers, and Kickback.",
-		"- Does not Stack with the same Talent from another Ogryn.",
-		"- The debuff Stacks additively with the related Damage taken debuff from Pickaxe special actions (+10%), and multiplicatively with \"Valuable Distraction\".",
-		"- During calculation, Stacks multiplicatively with Damage buffs and Power level buffs from Weapon Blessings.",
+		"- 同樣可透過 Ripper Gun、全自動霰彈槍(近戰部分)、震盪槍、重型機槍、反衝者的近戰特殊攻擊來施加。",
+		"- 不會與其他歐格林的同名天賦效果堆疊。",
+		"- 此debuff與戰鎬特殊攻擊所提供的「敵人受傷害+10%」加成為加算，與「重要干擾」為乘算。",
+		"- 進行最終計算時，會與自身的傷害增幅或武器祝福提供的威能加成呈乘算關係。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 10 - Crunch! +]--
 	local ED_OGR_Passive_10_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with other related Damage buffs and Stagger buffs (from \"Slam\" and Weapon Blessings), and multiplicatively with Power level buffs from Weapon Blessings.",
-		"- \"Fully charged\" means that you have to hold the button until the Heavy attack is executed automatically.",
-		"- Only applies to Heavy attacks of Melee weapons (and Grenadier Gauntlet heavies).",
+		"- 與其他傷害增幅、踉蹌增幅 (如「猛擊」及武器祝福) 為加算疊加，與武器祝福的威能加成為乘算。",
+		"- 「完全續力」指的是必須長按攻擊鍵，直到重攻擊自動釋放。",
+		"- 僅適用於近戰武器的重攻擊 (含擲彈兵臂鎧的重攻擊)。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 11 - Batter +]--
 	local ED_OGR_Passive_11_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Can't apply Bleed through shields.",
-		"- Also procs on Melee special actions from Ripper Gun, Grenadier Gauntlet (Melee part), Rumbler, Heavy Stubbers, and Kickback.",
-		"- Bleed: Same as other sources of Bleed. Lasts 1.5 seconds. Ticks every 0.5 seconds. Refreshes duration on Stack application. Above average armor Damage modifiers across the board, low armor Damage modifier against Carapace.",
-		"- Bleed damage is increased by Rending/Brittleness, by Perks of currently equipped weapons, and by the following buffs from:",
-		"-- Talents: \"Heavyweight\" (against Ogryns), \"Payback Time\", \"Soften Them Up\", and \"Valuable Distraction\" (if applied by another Ogryn).",
-		"-- Blessings (if procced with Weapon before or during Burn's active duration):",
-		"--- Melee: \"Skullcrusher\" (while Staggered), \"Slaughterer\", and \"Tenderiser\" (Bleed ticks don't consume Stacks).",
-		"--- Ranged: \"Blaze Away\", \"Explosive Offensive\", \"Deathspitter\", \"Fire Frenzy\", and \"Full Bore\".",
+
+		"- 無法透過盾牌對目標施加流血。",
+		"- 同樣適用於擲彈兵臂鎧、全自動霰彈槍(近戰部分)、震盪槍、重型機槍與反衝者的近戰特殊攻擊。",
+		"- 流血：與其他流血效果相同，持續1.5秒，每0.5秒結算一次傷害；若流血層數再度疊加則刷新持續時間，對「甲殼」類型護甲傷害較低，其餘護甲類型傷害係數佳。",
+		"- 流血傷害會受到撕裂、脆弱、武器專長的加成，並受到以下天賦、效果的增幅：",
+		"-- 「重量級」（對歐格林）、「報復時間」、「削弱敵人」、「重要干擾」（若由其他歐格林施加）。",
+		"-- 若武器祝福在流血期間或之前觸發，則進一步增傷：",
+		"--- 近戰：「碎顱者」（敵人踉蹌時）、「殺戮者」、「剁碎者」（流血傷害不消耗該疊層）。",
+		"--- 遠程：「連續發射」、「爆發強化」、「死亡噴吐」、「烈火熱焰」、「全孔射擊」。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 12 - Pacemaker +]--
 	local ED_OGR_Passive_12_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with related buffs from \"Point-Blank Barrage\", the small Reload Speed node, Weapon Perks, and Celerity Stimm.",
-		"- Can proc on Melee and Ranged attacks, Pushes, Explosions, and Staggering Abilities (\"Loyal Protector\", \"Pained Outburst\").",
+		"- 與「貼身火力」及小型裝填速度節點、武器專長、敏捷興奮劑 等相關增益為加算疊加。",
+		"- 可透過近戰或遠程攻擊、推擊、爆炸、以及具踉蹌效果的技能（如「忠誠守護者」、「痛楚爆發」）觸發。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 13 - Ammo Stash +]--
@@ -1163,96 +1150,98 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Passive 14 - Hard Knocks +]--
 	local ED_OGR_Passive_14_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Also buffs the melee special actions of Ripper Guns, Grenadier Gauntlet (melee part), Rumbler, Heavy Stubbers, and Kickback.",
+		"- 也可增益擲彈兵臂鎧、全自動霰彈槍(近戰部分)、震盪槍、重型機槍、反衝者的近戰特殊攻擊。",
 		stacks_add_w_oth_dmg,
-		"- Generates Stacks when successfully applying instances of Stagger to enemies by Ogryn's Melee and Ranged attacks, Pushes, Explosions, and Staggering Abilities.",
-		"- The Stack amount generated varies per enemy:",
+
+		"- 當歐格林以近戰、遠程攻擊、推擊、爆炸或帶有踉蹌效果的技能攻擊敵人時，若成功施加踉蹌，則會產生疊層。",
+		"- 不同敵人被踉蹌時，產生的疊層數量不同：",
 		"_______________________________",
-		"Stacks: |Breeds:",
-		"1            |Groaner, Poxwalker, Bruisers,",
-		"              |Stalkers, Scab Shooter, Sniper.",
-		"2            |Gunners, Bombers, Flamers,",
-		"              |Poxburster, Shotgunners,",
-		"              |Trapper, Twins.",
-		"3            |Mauler, Ragers, Pox Hound,",
-		"              |Pox Hound (mutator).",
-		"5            |Bulwark, Crusher, Reaper,",
-		"              |Mutant, Mutant (mutator)",
-		"8            |Daemonhost, Captains",
-		"10           |Plague Ogryn, Chaos Spawn,",
-		"               |Beast of Nurgle.",
+		"疊層數量: |敵人種類:",
+		"1            | 呻吟者,瘟疫行者,Bruisers(打手)),",
+		"              | 追蹤者,血痂射手,狙擊手.",
+		"2            | 砲手,轟炸者,火焰兵,",
+		"              | 瘟疫爆者,霰彈槍手,",
+		"              | 陷阱兵,雙子.",
+		"3            | 輾壓者,狂怒者,瘟疫獵犬,",
+		"              | 瘟疫獵犬(mutator).",
+		"5            | 堡壘, 輾壓者, 收割者,",
+		"              | 變種人, 變種人 (mutator).",
+		"8            | 惡魔宿主, 隊長.",
+		"10           | 瘟疫歐格林,渾沌魔物,",
+		"               | 納垢巨獸.",
 		"_______________________________",
+
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 15 - Too Stubborn to Die +]--
 	local ED_OGR_Passive_15_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- When below 33% of Maximum Health, doubles the amount of any Toughness replenished by Melee kills, Talents, and select Weapon Blessings (only \"Momentum\").",
-		"- Does not apply to Coherency Toughness Regeneration.",
+		"- 當歐格林的生命值低於最大生命的 33% 時，透過近戰擊殺、天賦和特定武器祝福（僅限「Momentum」）獲得的韌性回復量會加倍。",
+		"- 不適用於協同狀態下的韌性回復。",
 		z_eff_of_this_tougn_rep,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 16 - Delight in Destruction +]--
 	local ED_OGR_Passive_16_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Reduces both Toughness and Health Damage taken.",
-		"- Considers Bleed Stacks applied to enemies within 8 meters.",
-		"- Checks for Bleeding enemies every second.",
+		"- 減少歐格林所受到的韌性與生命傷害。",
+		"- 偵測距離8公尺內是否有受流血效果的敵人。",
+		"- 每秒檢查一次周圍的流血敵人。",
 		stacks_mult_w_other_dmg_red_buffs,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 17 - Attention Seeker +]--
 	local ED_OGR_Passive_17_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Pushing enemies, Blocking enemy Melee attacks or Blocking enemy Ranged attacks (shield only) forces enemies to attack Ogryn.",
-		"- Taunting Ranged enemies forces them into Melee combat (except Gunners and Reapers) Affects Captains/Twins, does not affect Monstrosities..",
-		"- Taunted enemies are visually highlighted.",
-		"- The Taunt lasts 8 seconds.",
-		"- Cannot be refreshed during active duration.",
-		"- \"Loyal Protector\" overwrites this Talent's taunt duration applying its own 15 seconds duration.",
-		"- When Ogryn gets Disabled, the taunt effect is removed from any Disabler enemies (Pox Hounds, Mutant, Trapper) that have been taunted by Ogryn before.",
+		"- 推擊敵人、阻擋敵人近戰攻擊或使用盾牌阻擋敵人的遠程攻擊都會迫使目標轉而攻擊歐格林。",
+		"- 嘲諷遠程敵人後，會迫使他們改用近戰攻擊（砲手、收割者除外，可影響血痂隊長、雙子，但對巨獸無效。",
+		"- 被嘲諷的敵人會被高亮顯示。",
+		"- 嘲諷效果持續 8 秒。",
+		"- 持續時間內無法被刷新。",
+		"- 如果使用「忠誠守護者」進行嘲諷，則會把此天賦的 8 秒覆蓋為 15 秒。",
+		"- 當歐格林被捕獲或撲倒時，若先前曾嘲諷到瘟疫獵犬、變種人、陷阱兵等控制型敵人，該嘲諷效果會被移除。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 18 - Get Stuck In +]--
 	local ED_OGR_Passive_18_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with Movement Speed buffs from \"Indomitable\"/\"Bull Rush\" and \"Unstoppable Momentum\", and multiplicatively with Movement Speed penalty reduction while braced from \"Point-Blank Barrage\".",
-		"- Also grants Immunity to Stuns from both Melee and Ranged attacks, and Immunity to Suppression.",
+		"- 與「不屈不撓」、「蠻牛衝撞」及「勢不可擋動能」的移動速度加成為加算，與「貼身火力」架設 (Braced) 狀態時的減速效果則為乘算。",
+		"- 也會讓歐格林免疫來自敵人近戰與遠程攻擊造成的暈眩，並免疫壓制(Suppression)。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 19 - Towering Presence +]--
 	local ED_OGR_Passive_19_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases Ogryn's Base Coherency radius of 8 to 12 meters.",
+		"- 將歐格林的協同基礎半徑從 8 公尺提升至 12 公尺。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 20 - Unstoppable Momentum +]--
 	local ED_OGR_Passive_20_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		can_be_refr_dur_active_dur,
-		"- Stacks additively with Movement Speed buffs from \"Indomitable\"/\"Bull Rush\" and \"Get Stuck In\", and multiplicatively with Movement Speed penalty reductions from \"Point-Blank Barrage\" and the \"Roaring Advance\" Weapon Blessing.",
+		"- 與「不屈不撓」、「蠻牛衝撞」及「跟緊我!」的移動速度加成為加算，並與「貼身火力」及武器祝福「咆哮突進」的移動速度懲罰減少為乘算。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 21 - No Stopping Me! +]--
 	local ED_OGR_Passive_21_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Makes Ogryn's Melee attack actions Uninterruptible during windup phase so that they cannot be canceled as part of hit reactions.",
-		"- \"Windup\" refers to a specific action kind in weapon profiles, it's basically the \"Charging or Ready up movement\" animation before an actual swing is executed.",
+		"- 讓歐格林在進行近戰攻擊的「蓄力階段」時免於被外力打斷，使攻擊不會因受到打擊而被取消。",
+		"- 「Windup」是武器設定檔中的一種類型，指的就是揮擊真正開始前的預備動作。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 22 - Dominate +]--
 	local ED_OGR_Passive_22_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- On Elite kill, grants 10% Rending to all attacks for 10 seconds boosting Damage against armor types Carapace, Flak, Maniac, Unyielding (including Damage of Explosions and DoTs like Bleed and Burn applied by Ogryn).",
+		"- 殺死菁英後，讓歐格林在接下來的10秒內獲得10%的撕裂加成，提高對「甲殼」、「防彈」、「狂熱者」、「不屈」等護甲類型的傷害，包括爆炸或流血、燃燒等持續傷害。",
 		can_be_refr_dur_active_dur,
-		"- Only affects Ogryn's own Damage.",
+		"- 僅影響歐格林自身的傷害。",
 		stacks_add_w_oth_rend_brit,
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 23 - Payback Time +]--
 	local ED_OGR_Passive_23_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Increases any Damage when taking a Damaging Melee hit or Blocking a Melee hit.",
+		"- 當歐格林受到近戰傷害或格擋近戰攻擊後，可使接下來的所有傷害提升。",
 		stacks_add_w_oth_dmg,
 		can_be_refr_dur_active_dur,
 	}, "\n"), enhdesc_col)
@@ -1260,8 +1249,8 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Passive 24 - Bruiser +]--
 	local ED_OGR_Passive_24_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Procs on any Elite kill by Ogryn and Elite kills by Allies who are in Coherency with Ogryn.",
-		"- This is 1.2 seconds for \"Indomitable\"/\"Bull Rush\", 1.8 seconds for \"Loyal Protector\", and 3.2 seconds for \"Point-Blank Barrage\".",
+		"- 若歐格林本人擊殺菁英，或協同範圍內的友軍擊殺菁英，都能觸發本天賦。",
+		"- 對「不屈不撓」、「蠻牛衝撞」的冷卻可減少1.2秒；對「忠誠守護者」可減少1.8秒；對「貼身火力」可減少3.2秒。",
 		procs_add_conc_stim_rem_cd_red,
 		doesnt_interact_w_c_a_r_from_curio,
 	}, "\n"), enhdesc_col)
@@ -1269,52 +1258,52 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Passive 25 - Big Boom +]--
 	local ED_OGR_Passive_25_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Stacks additively with the \"Blast Zone\" Weapon Blessing.",
-		"- This increases the radii of both the inner epicenter and the outer maximum of explosions.",
-		"- Note that this Talent also increases the radius of explosions that are created by Melee attacks (e.g. Power Maul activated attacks). In this case, Stacks additively with the \"Power Surge\" Weapon Blessing.",
+		"- 與武器祝福「狂轟猛炸」的爆炸範圍增幅效果為加算。",
+		"- 可同時增加爆炸的內爆心與外緣最大範圍。",
+		"- 此天賦也會增大近戰攻擊產生的爆炸範圍（例如動力錘在啟動時的衝擊波），並與武器祝福「能量湧動」加算。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 26 - Massacre +]--
 	local ED_OGR_Passive_26_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Generates Stacks when enemies die to Ogryn's Melee and Ranged attacks, Explosions, and DoTs, and when Pushed over ledges into map kill boxes by Ogryn.",
-		"- Stacks last 10 seconds and can be refreshed during active duration.",
-		"- Per Stack, grants 1% additional Crit chance to all attacks that can Crit.",
-		"- Stacks additively with other sources of Crit chance.",
+		"- 當敵人被歐格林的近戰、遠程攻擊、爆炸或持續傷害(DoTs)擊殺，或被歐格林推下高處摔死時，都會產生疊層。",
+		"- 疊層持續10秒，可在有效時間內刷新。",
+		"- 每層可為能夠爆擊的所有攻擊提升 1% 爆擊率。",
+		"- 與其他爆擊率來源為加算疊加。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 27 - Implacable +]--
 	local ED_OGR_Passive_27_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Reduces both Toughness and Health Damage taken while winding up Melee attacks.",
+		"- 在近戰攻擊的「蓄力階段」減少所受的韌性及生命傷害。",
 		stacks_mult_w_other_dmg_red_buffs,
-		"- \"Windup\" refers to a specific action kind in weapon profiles, it's basically the \"Charging or Ready up movement\" animation before an actual swing is executed.",
-		"- Technically, the Talent does indeed proc every time a weapon attack is in its windup phase, light attacks included. But windup windows can be very short (especially for light attacks), so the Talent works most efficiently during the longer windup windows of Heavy Melee attacks.",
-		"- Does currently not have a HUD icon.",
+		"- 「Windup」指揮擊前的預備動作（通常在武器設定檔中標明）。",
+		"- 實際上，所有近戰攻擊（含輕攻擊）在蓄力階段都會啟動本天賦，只是輕攻擊的蓄力時間很短，因而主要於重攻擊時較為明顯。",
+		"- 目前尚無 HUD 圖示顯示。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 28 - No Pushover +]--
 	local ED_OGR_Passive_28_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Allows the Push to Stagger all enemies except for Mutants, Monstrosties, and Twins (Captains only without void shield).",
+		"- 讓歐格林的近戰推擊可以使除變種人、巨獸與雙子外的所有敵人產生踉蹌（血痂隊長若無護盾時也可被推）。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 29 - Won't Give In +]--
 	local ED_OGR_Passive_29_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Reduces both Toughness and Health Damage taken by 20% per Downed or Incapacitated ally within 20 meters.",
-		"- Stacks linearly with itself: 1 incapacitated Ally=20% Damage Reduction, 2 Allies=40%, 3 Allies=60%",
+		"- 當20公尺範圍內每有一名隊友倒地或被捕獲，歐格林受到的韌性與生命傷害都減少 20%。",
+		"- 線性疊加：1名倒地隊友=20%減傷，2名=40%，3名=60%。",
 		stacks_mult_w_other_dmg_red_buffs,
-		"- \"Incapacitated\" includes: Netted (by Trapper), Pounced (by Pox Hounds), Grabbed (by Daemonhost, Chaos Spawn, Mutants), Eaten by Beast of Nurgle, Hanging from ledge, and waiting for Rescue after respawn.",
+		"- 「Incapacitated喪失行動能力」包含：被陷阱兵網住、被瘟疫獵犬撲倒、被變種人擊飛、被惡魔宿主或混沌魔物抓住、被納垢巨獸吞食、或掛在懸崖等待救援、或已重生待救等狀態。",
 	}, "\n"), enhdesc_col)
 
 	--[+ Passive 30 - Mobile Emplacement +]--
 	local ED_OGR_Passive_30_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- Reduces both Toughness and Health Damage taken by 20% while braced.",
+		"- 當歐格林處於架設 (Braced) 狀態時，可減少自身受到的韌性與生命傷害 20%。",
 		stacks_mult_w_other_dmg_red_buffs,
-		"- \"Braced\" refers to an action keyword in Ranged weapon profiles.",
-		"- Using a Ranged weapon's alt fire, like zooming or firing when zoomed in, activates the buff.",
+		"- 「Braced」(架設) 指遠程武器的某一特殊動作模式。",
+		"- 使用遠程武器的副開火模式（例如進入瞄準或在瞄準時射擊）時，即會啟動此增益效果。",
 	}, "\n"), enhdesc_col)
 
 	-- local  = iu_actit(table.concat({

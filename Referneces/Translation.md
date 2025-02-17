@@ -7,7 +7,7 @@
 - Cleave - 順劈攻擊
 - Curios - 珍品
 - Weakspot - 弱點
-- Finesse - 技巧
+- Finesse - 靈巧
 - Staggering - 踉蹌
 - Critical Melee - 近戰爆擊
 - Stacks - 疊加
@@ -111,6 +111,9 @@
 - Supercharge - 超級充能
 - Thunderous - 雷鳴
 - Penetrating Flame - 穿透火焰
+- Roaring Advance - 咆哮突進
+- Flechette - 飛鏢彈
+- Blast Zone - 狂轟猛炸
 
 ### Psyker - 靈能者
 
