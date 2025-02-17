@@ -462,7 +462,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	local ED_VET_Passive_11_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		z_eff_of_this_tougn_rep,
-		"- 鄰近判斷( Proximity check )不受地形影響。",
+		"- 不受地形影響。",
 		"- 不會影響協同韌性。",
 	}, "\n"), enhdesc_col)
 
@@ -595,7 +595,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Passive 28 - Reciprocity(互惠互利) +]--
 	local ED_VET_Passive_28_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 當成功閃避( Dodge )敵方近、遠程攻擊(除砲手、收割者、狙擊手)與特殊束縛攻擊(瘟疫獵犬撲擊、陷阱兵投網、變種人衝撞抓取)時，獲得疊加(最多5層)。",
+		"- 當成功閃避(Dodge)敵方近、遠程攻擊(除砲手、收割者、狙擊手)與特殊束縛攻擊(瘟疫獵犬撲擊、陷阱兵投網、變種人衝撞抓取)時，獲得疊加(最多5層)。",
 		"- 疊加持續8秒，可在期間內刷新。",
 		"-- 「成功閃避」指敵人已鎖定玩家，但玩家以正確時機的閃避或滑行動作來迴避該攻擊。",
 		"-- 武器祝福「幽靈」、「游擊」與「輕裝」可觸發此天賦(僅對遠程攻擊)。",
@@ -605,7 +605,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	local ED_VET_Passive_29_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 具有3秒的內部冷卻。",
-		"- 一般閃避( Dodge )、滑行閃避、以及衝刺閃避皆可觸發。",
+		"- 一般閃避(Dodge)、滑行閃避、以及衝刺閃避皆可觸發。",
 		"- 此天賦需角色擁有>0耐力才能生效。",
 		"- 武器祝福「幽靈」、「游擊」與「輕裝」同樣可觸發。",
 	}, "\n"), enhdesc_col)
@@ -713,7 +713,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		ppp___ppp,
 		"- 提升對擁有「歐格林」標籤（包含堡壘、粉碎者、收割者）與「巨獸」標籤（包含納垢獸、混沌魔物、惡魔宿主、瘟疫歐格林等）的傷害。",
 		stacks_add_w_oth_dmg,
-		"- 不會增幅隊長/雙胞胎傷害，因其不具「巨獸」標籤。",
+		"- 不會增幅隊長、雙胞胎傷害，因其不具「巨獸」標籤。",
 	}, "\n"), enhdesc_col)
 
 --[+ ++OGRYN++ +]--
