@@ -36,6 +36,74 @@
 - Recon Lasgun - 偵查雷射槍
 - Power Maul - 動力錘
 
+### Weapon Blessing - 武器祝福
+
+- Opportunist - 機會主義者
+- Bloodletter - 放血者
+- Bloodthirsty - 嗜血
+- Headtaker - 奪顱者
+- Shock and Awe - 震攝
+- Slaughterer - 殺戮者
+- Rev it Up - 提速
+- Thrust - 推進
+- Thunderous - 雷鳴
+- Wrath - 憤怒
+- Shred - 粉碎
+- Savage Sweep - 野蠻橫掃
+- Rampage - 暴走
+- Devastating Strike - 毀滅打擊
+- Decimator - 屠戮者
+- Brutal Momentum - 野蠻攻勢
+- Limbsplitter - 斷肢者
+- All or Nothing - 孤注一擲
+- Decapitator - 斬首者
+- Agile - 敏捷
+- Slaughter Spree - 殺戮狂潮
+- Relentless Strikes - 持續打擊
+- Flesh Tearer - 血肉撕裂者
+- Lacerate - 撕碎
+- Executor - 行刑者
+- Riposte - 還擊
+- Precognition - 未卜先知
+- Haymaker - 強力一擊
+- Smackdown - 擊倒
+- Mercy Killer - 仁慈殺手
+- Ruthless Backstab - 無情背刺
+- Uncanny Strike - 詭異打擊
+- Trauma - 創傷
+- Vicious Slice - 凶狠切割
+
+- Skullcrusher - 碎顱者
+- Superiority - 優勢
+- Unstable Power - 不穩定能量
+- High Voltage - 高壓電
+- Blaze Away - 連續發射
+- Ceaseless Barrage - 持續阻擊
+- Deathspitter - 死亡噴吐
+- Dumdum - 達姆彈
+- Execution - 處決
+- Fire Frenzy - 烈火熱焰
+- Full Bore - 全孔射擊
+- No Respite - 刻不容緩
+- Pinning Fire - 鉗制射擊
+- Powderburn - 火藥灼傷
+- Run 'n' Gun - 連跑帶打
+- Deflector - 偏轉
+- Gloryhunter - 榮耀獵手
+- Reassuringly Accurate - 慰藉精準
+- Inspiring Barrage - 激勵彈幕
+- Raking Fire - 掃射
+- Armourbane - 護甲之禍
+- Can Opener - 開罐器
+- Rending Shockwave - 撕扯震盪
+- Shattering Impact - 破碎衝擊 
+- Supercharge - 超級充能
+- Penetrating Flame - 穿透火焰
+- Roaring Advance - 咆哮突進
+- Flechette - 飛鏢彈
+- Blast Zone - 狂轟猛炸
+- Power Surge - 能量湧動
+
 ### 怪物相關
 
 - Gunners - 砲手
@@ -80,43 +148,6 @@
 - Toughness Boost - 韌性增幅
 - Toughness Damage Reduction - 韌性減傷
 
-
-### Weapon Blessing - 武器祝福
-
-- Skullcrusher - 碎顱者
-- Executor - 行刑者
-- Slaughterer - 殺戮者
-- Superiority - 優勢
-- Unstable Power - 不穩定能量
-- High Voltage - 高壓電
-- Blaze Away - 連續發射
-- Ceaseless Barrage - 持續阻擊
-- Deathspitter - 死亡噴吐
-- Dumdum - 達姆彈
-- Execution - 處決
-- Fire Frenzy - 烈火熱焰
-- Full Bore - 全孔射擊
-- No Respite - 刻不容緩
-- Pinning Fire - 鉗制射擊
-- Powderburn - 火藥灼傷
-- Run 'n' Gun - 連跑帶打
-- Rev it Up - 提速
-- Deflector - 偏轉
-- Gloryhunter - 榮耀獵手
-- Reassuringly Accurate - 慰藉精準
-- Inspiring Barrage - 激勵彈幕
-- Raking Fire - 掃射
-- Armourbane - 護甲之禍
-- Can Opener - 開罐器
-- Rending Shockwave - 撕扯震盪
-- Shattering Impact - 破碎衝擊 
-- Supercharge - 超級充能
-- Thunderous - 雷鳴
-- Penetrating Flame - 穿透火焰
-- Roaring Advance - 咆哮突進
-- Flechette - 飛鏢彈
-- Blast Zone - 狂轟猛炸
-- Power Surge - 能量湧動
 
 ### Psyker - 靈能者
 
