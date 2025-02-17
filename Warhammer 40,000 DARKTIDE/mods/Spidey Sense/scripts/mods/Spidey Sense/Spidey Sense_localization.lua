@@ -136,13 +136,13 @@ local localizations = {
         en = "Colour for Crusher warning",
         ["zh-cn"] = "粉碎者警告颜色",
         ru = "Цвет предупреждения о Дробителях",
-        ["zh-tw"] = "粉碎者警告顏色",
+        ["zh-tw"] = "碾壓者警告顏色",
     },
     crusher_name = {
         en = "Crusher",
         ["zh-cn"] = "粉碎者",
         ru = "Дробитель",
-        ["zh-tw"] = "粉碎者",
+        ["zh-tw"] = "碾壓者",
     },
     mauler_colour = {
         en = "Colour for Mauler warning",
@@ -254,7 +254,7 @@ local localizations = {
         en = "Crusher/Mauler Text Warnings",
         ["zh-cn"] = "粉碎者/重锤兵文字警告",
         ru = "Текст предупреждения для Дробителей/Палачей",
-        ["zh-tw"] = "粉碎者/重錘兵文字警告",
+        ["zh-tw"] = "碾壓者/重錘兵文字警告",
     },
     trapper_text_warnings = {
         en = "Trapper Text Warnings",
@@ -288,7 +288,7 @@ local localizations = {
         en = "Maximum distance for Crusher warning",
         ["zh-cn"] = "粉碎者最大警告距离",
         ru = "Максимальная дистанция для предупреждения о Дробителях",
-        ["zh-tw"] = "粉碎者最大警告距離",
+        ["zh-tw"] = "碾壓者最大警告距離",
     },
     trapper_range_max = {
         en = "Maximum distance for Trapper warning",
@@ -382,7 +382,7 @@ local localizations = {
         en = "Shows CLEAVE!! indicator when Crusher or Mauler winds up",
         ["zh-cn"] = "当粉碎者或重锤兵发动攻击时，显示“劈砍！！”警告",
         ru = "Показывает индикатор «УДАР СВЕРХУ!!» на экране, когда Дробитель или Палач собирается нанести неотражаемый удар сверху",
-        ["zh-tw"] = "當粉碎者或重錘兵準備攻擊時，顯示「劈砍!!」警告",
+        ["zh-tw"] = "當碾壓者或重錘兵準備攻擊時，顯示「劈砍!!」警告",
     },
     render_pogryn_warning = {
         en = "\"CHARGE!!\" indicator",
