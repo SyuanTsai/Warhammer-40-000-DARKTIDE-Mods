@@ -34,6 +34,7 @@
 - Infantry Lasgun - 步兵雷射槍
 - Laspistol - 重型雷射手槍
 - Recon Lasgun - 偵查雷射槍
+- Power Maul - 動力錘
 
 ### 怪物相關
 
@@ -55,6 +56,7 @@
 - Scab - 血痂
 - Dreg - 渣滓
 - Shotgunners - 霰彈槍手
+- Chaos Spawn - 渾沌魔物
 
 ### 附加屬性
 
@@ -114,6 +116,7 @@
 - Roaring Advance - 咆哮突進
 - Flechette - 飛鏢彈
 - Blast Zone - 狂轟猛炸
+- Power Surge - 能量湧動
 
 ### Psyker - 靈能者
 
