@@ -1,18 +1,19 @@
 
 ## Enhanced_descriptions
 ```
-1.請維持原本的程式語法 
-2.參考翻譯表(Translation.md)幫我翻譯內容 
-3.如果翻譯表有對應到的請用「翻譯內容」 
+
+1.請維持原本的程式語法  
+2.如果有\"English\"請 參考翻譯表(Translation.md)幫我翻譯內容，例如：\"Hit and Run\"請變成「游擊」
+3.如果翻譯表有對應到的請用「翻譯內容」。
 4.請不要「翻譯內容」(原文) ，直接「翻譯內容」 就好 
 5.請增加中文的翻譯並保留原本的英文翻譯
-6. 描述中有數字請用「每0.55秒造成傷害」的格式而非「每 0.55 秒造成傷害」
+6.描述中有數字請用「每0.55秒造成傷害」的格式而非「每 0.55 秒造成傷害」
+7.請整段翻譯不要逐行處理
 範例
 
 local ED_PSY_Passive_21_rgb = iu_actit(table.concat({
 	ppp___ppp,
 	"- Hitting enemies with a Critical Melee, Ranged, or \"Assail\" attack puts Psyker into \"Dodging state\" against Ranged attacks for 1 second.",
-	
 		-- "- If there are multiple Zealots who all run \"Shield of Contempt\", ""
 	can_be_refr_dur_active_dur,
 	"- This effect is mechanically the same as the one provided by Weapon Blessings \"Ghost\", \"Hit and Run\", and \"Stripped Down\".",

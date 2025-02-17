@@ -7,7 +7,7 @@
 - Cleave - 順劈攻擊
 - Curios - 珍品
 - Weakspot - 弱點
-- Finesse - 技巧
+- Finesse - 靈巧
 - Staggering - 踉蹌
 - Critical Melee - 近戰爆擊
 - Stacks - 疊加
@@ -34,6 +34,7 @@
 - Infantry Lasgun - 步兵雷射槍
 - Laspistol - 重型雷射手槍
 - Recon Lasgun - 偵查雷射槍
+- Power Maul - 動力錘
 
 ### 怪物相關
 
@@ -55,6 +56,7 @@
 - Scab - 血痂
 - Dreg - 渣滓
 - Shotgunners - 霰彈槍手
+- Chaos Spawn - 渾沌魔物
 
 ### 附加屬性
 
@@ -111,6 +113,10 @@
 - Supercharge - 超級充能
 - Thunderous - 雷鳴
 - Penetrating Flame - 穿透火焰
+- Roaring Advance - 咆哮突進
+- Flechette - 飛鏢彈
+- Blast Zone - 狂轟猛炸
+- Power Surge - 能量湧動
 
 ### Psyker - 靈能者
 
@@ -210,22 +216,85 @@
 ### Ogryn - 歐格林
 
 #### 歐格林專有名詞
-- Feel No Pain - 麻木
 
 #### 歐格林天賦
 
-- Soften Them Up - 削弱敵人
-- Valuable Destruction - 重要干擾
-
 ##### 閃擊
+
+- Big Box of Hurt - 巨量傷害盒
+- Big Friendly Rock - 投石問路
+- Bombs Away! - 投彈完畢!
+- Frag Bomb - 破片炸彈
 
 ##### 光環
 
+- Intimidating Presence - 威嚇氣場
+- Bonebreaker's Aura - 破骨者之環
+- Stay Close! - 跟緊我!
+- Coward Culling - 優勝劣汰
+
 ##### 主動技能
+
+- Bull Rush - 蠻牛衝撞
+- Indomitable - 不屈不撓
+- Stomping Boots - 跺殺之靴
+- Trample - 踐踏
+- Pulverise - 粉碎
+- Loyal Protector - 忠誠守護者
+- Valuable Destruction - 重要干擾
+- Go Again - 再來
+- Big Lungs - 強力肺活
+- Point-Blank Barrage - 貼身火力
+- Bullet Bravado - 壯膽子彈
+- Hail of Fire - 槍林彈雨
+- Light 'em Up - 集火射擊
 
 ##### 鑰石
 
+- Heavy Hitter - 重拳出擊
+- Just Getting Started - 熱身完畢
+- Unstoppable - 越戰越勇
+- Brutish Momentum - 兇蠻打擊
+- Feel No Pain - 麻木
+- Pained Outburst - 痛楚爆發
+- Strongest! - 最強壯!
+- Toughest! - 最堅韌!
+- Burst Limiter Override - 爆限超載
+- Maximum Firepower - 最大火力
+- Good Shootin - 好槍法
+- More Burst Limiter Overrides! - 爆限大超載!
+
 ##### 一般天賦
+
+- Furious - 怒不可遏
+- Reloaded and Ready - 換彈完畢
+- The Best Defence - 最好的防禦
+- Heavyweight - 重量級
+- Steady Grip - 穩定握持
+- Smash 'Em! - 碾碎它們!
+- Lynchpin - 關鍵人物
+- Slam - 猛擊
+- Soften Them Up - 削弱敵人
+- Crunch! - 嘎嘎!
+- Batter - 重毆
+- Pacemaker - 領跑者
+- Ammo Stash - 彈藥儲存包
+- Hard Knocks - 沉重打擊
+- Too Stubborn to Die - 堅韌不屈
+- Delight in Destruction - 毀滅之樂
+- Attention Seeker - 渴求關注
+- Get Stuck In - 全神貫注
+- Towering Presence - 卓越氣場
+- Unstoppable Momentum - 勢不可擋
+- No Stopping Me! - 誰敢攔我!
+- Dominate - 主宰
+- Payback Time - 報復時間
+- Big Boom - 大爆炸
+- Massacre - 屠殺
+- Implacable - 利刃出鞘
+- No Pushover - 睚眥必報
+- Won't Give In - 絕不屈服
+- Mobile Emplacement - 機動部屬
 
 ### Zealot - 狂信徒
 

@@ -1526,7 +1526,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_abil1_003_desc_fr", {"loc_talent_veteran_combat_ability_ogryn_outlines_description"}, {"fr"}, function(locale, value) return "{talent_name:%s} met désormais en surbrillance les Remparts, Broyeurs et Fauchers, en plus de tous les élites et spécialistes de taille humaine." end), -- talent_name: Executioner's Stance -- rewrite
 			--[+ Traditional Chinese - 敵人越大... +]--
-	create_template("talent_tree_vet_abil1_003_desc_tw", {"loc_talent_veteran_combat_ability_ogryn_outlines_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在除了所有人形大小的精英與專家敵人外，也會將堡壘、粉碎者與收割者一併高亮顯示。" end), -- talent_name: Executioner's Stance, duration: 5 -- rewrite -- &->和 -- s->seconds
+	create_template("talent_tree_vet_abil1_003_desc_tw", {"loc_talent_veteran_combat_ability_ogryn_outlines_description"}, {"zh-tw"}, function(locale, value) return "{talent_name:%s}現在除了所有人形大小的精英與專家敵人外，也會將堡壘、碾壓者與收割者一併高亮顯示。" end), -- talent_name: Executioner's Stance, duration: 5 -- rewrite -- &->和 -- s->seconds
 	
 	--[+ Ability 1-4 - Marksman +]--
 		-- create_template("talent_tree_vet_abil1_004_en", {"loc_talent_veteran_ability_marksman"}, {"en"}, function(locale, value) return "Marksman" end),
@@ -1631,14 +1631,15 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_001_desc_fr", {"loc_talent_veteran_snipers_focus_rending_bonus_description"}, {"fr"}, function(locale, value) return "{rending:%s} de "..COLORS_KWords_fr.Rending_rgb_fr.." lorsque à, ou au-dessus de, {stacks:%s} cumuls de "..COLORS_KWords_fr.Focus_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_1_1_rgb_fr end),
 			--[+ Translations Chinese - 滲透盔甲 +]--
-
-
+	create_template("talent_tree_vet_keys1_001_desc_tw", {"loc_talent_veteran_snipers_focus_rending_bonus_description"}, {"zh-tw"}, function(locale, value) return "{rending:%s}的"..COLORS_KWords_tw.Rending_rgb.." 當達到或超過{stacks:%s}層的"..COLORS_KWords_tw.Focus_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_1_1_rgb  end),
+			  
 	--[+ Keystone 1-2 - Tunnel Vision +]--
 		-- create_template("talent_tree_vet_keys1_002_en", {"loc_talent_veteran_snipers_focus_toughness_bonus"}, {"en"}, function(locale, value) return "Tunnel Vision" end),
 	create_template("talent_tree_vet_keys1_002_desc_en", {"loc_talent_veteran_snipers_focus_stamina_bonus_desc"}, {"en"}, function(locale, value) return "{toughness_replenish_multiplier:%s} "..COLORS_KWords.Toughness_rgb.." Replenishment for each Stack of "..COLORS_KWords.Focus_rgb..". In addition, "..COLORS_KWords.Weakspot_rgb.." kills restore {stamina:%s} "..COLORS_KWords.Stamina_rgb.."."..TALENTS_Enh_desc2.ED_VET_Keystone_1_2_rgb end), -- toughness_replenish_multiplier: +5%, stamina: 10% -- colors
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_002_desc_fr", {"loc_talent_veteran_snipers_focus_stamina_bonus_desc"}, {"fr"}, function(locale, value) return "{toughness_replenish_multiplier:%s} de régénération de "..COLORS_KWords_fr.Toughness_rgb_fr.." pour chaque cumul de "..COLORS_KWords_fr.Focus_rgb_fr..". De plus, les éliminations sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." restaurent {stamina:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_1_2_rgb_fr end),
 			--[+ Translations Chinese - 視野狹窄 +]--
+	create_template("talent_tree_vet_keys1_002_desc_tw", {"loc_talent_veteran_snipers_focus_stamina_bonus_desc"}, {"zh-tw"}, function(locale, value) return "每層"..COLORS_KWords_tw.Focus_rgb.."{toughness_replenish_multiplier:%s}的"..COLORS_KWords_tw.Toughness_rgb.."補充量。\n此外，"..COLORS_KWords_tw.Weakspot_rgb.."擊殺會恢復{stamina:%s}的"..COLORS_KWords_tw.Stamina_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_1_2_rgb end), -- toughness_replenish_multiplier: +5%, stamina: 10% -- colors
 
 	--[+ Keystone 1-3 - Long Range Assassin +]--
 		-- create_template("talent_tree_vet_keys1_003_en", {"loc_talent_veteran_snipers_focus_increased_stacks"}, {"en"}, function(locale, value) return "Long Range Assassin" end),
@@ -1646,6 +1647,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_003_desc_fr", {"loc_talent_veteran_snipers_focus_increased_stacks_description"}, {"fr"}, function(locale, value) return "Augmente les cumuls maximum de "..COLORS_KWords_fr.Focus_rgb_fr.." de {stacks:%s} à {new_stacks:%s}." end),
 			--[+ Translations Chinese - 遠程刺客 +]--
+	create_template("talent_tree_vet_keys1_003_desc_tw", {"loc_talent_veteran_snipers_focus_increased_stacks_description"}, {"zh-tw"}, function(locale, value) return "將"..COLORS_KWords_tw.Focus_rgb.."的最大層數從{stacks:%s}增加到{new_stacks:%s}。" end), -- stacks: 10, new_stacks: 15 -- colors
 
 	--[+ Keystone 1-4 - Camouflage +]--
 		-- create_template("talent_tree_vet_keys1_004_en", {"loc_talent_veteran_snipers_focus_stacks_on_still"}, {"en"}, function(locale, value) return "Camouflage" end),
@@ -1653,6 +1655,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys1_004_desc_fr", {"loc_talent_veteran_snipers_focus_stacks_on_still_description"}, {"fr"}, function(locale, value) return "Gagnez {stack:%s} cumul de "..COLORS_KWords_fr.Focus_rgb_fr.." toutes les {time:%s} secondes en restant immobile ou en marchant accroupi." end),
 			--[+ Translations Chinese - 偽裝 +]--
+	create_template("talent_tree_vet_keys1_004_desc_tw", {"loc_talent_veteran_snipers_focus_stacks_on_still_description"}, {"zh-tw"}, function(locale, value) return "當站立不動或蹲行時，\n每{time:%s}秒獲得{stack:%s}層"..COLORS_KWords_tw.Focus_rgb.."。" end), -- stack: 1, time: 0.75 -- stack(s)->stacks -- s->seconds -- colors
 
 	--[+ Keystone 2 - Focus Target! +]--
 		-- create_template("talent_tree_vet_keys2_000_en", {"loc_talent_veteran_improved_tag"}, {"en"}, function(locale, value) return "Focus Target!" end),
@@ -1660,6 +1663,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys2_000_desc_fr", {"loc_talent_veteran_improved_tag_description"}, {"fr"}, function(locale, value) return "Gagnez "..COLORS_KWords_fr.Focus_Target_rgb_fr.." toutes les {time:%s} secondes. Cumulable jusqu'à {max_stacks:%s} fois.\nMarquer un ennemi applique les cumuls de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." sur lui, le faisant subir {damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." supplémentaire par cumul, et réinitialise vos cumuls de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." à "..COLORS_Numbers.n_1_rgb.."."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_2_rgb_fr end),
 			--[+ Traditional Chinese - 鎖定目標 +]--
+	create_template("talent_tree_vet_keys2_000_desc_tw", {"loc_talent_veteran_improved_tag_description"}, {"zh-tw"}, function(locale, value) return "每{time:%s}秒獲得一次"..COLORS_KWords_tw.Focus_Target_rgb.."。最多{max_stacks:%s}次。\n標記敵人會將"..COLORS_KWords_tw.Focus_Target_rgb.."的累積應用於他們，使他們每層承受{damage:%s}額外的"..COLORS_KWords_tw.Damage_rgb.."，並將您的"..COLORS_KWords_tw.Focus_Target_rgb.."重置為"..COLORS_Numbers.n_1_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_2_rgb end), -- time: 2, max_stacks: 5, damage: +4% -- -() -- s->seconds -- colors
 
 	--[+ Keystone 2-1 - Target Down! +]--
 		-- create_template("talent_tree_vet_keys2_001_en", {"loc_talent_veteran_improved_tag_dead_bonus"}, {"en"}, function(locale, value) return "Target Down!" end),
@@ -1667,6 +1671,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys2_001_desc_fr", {"loc_talent_veteran_improved_tag_dead_bonus_description"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." et {stamina:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.." sont récuperés  pour chaque cumul de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." appliqué lorsqu'un ennemi marqué meurt, pour vous et vos alliés en syntonie."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_2_1_rgb_fr end),
 			--[+ Traditional Chinese - 目標擊倒! +]--
+	create_template("talent_tree_vet_keys2_001_desc_tw", {"loc_talent_veteran_improved_tag_dead_bonus_description"}, {"zh-tw"}, function(locale, value) return "當您標記的敵人死亡時，為您和共同體中的盟友補充{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."和{stamina:%s}的"..COLORS_KWords_tw.Stamina_rgb.."，每層"..COLORS_KWords_tw.Focus_Target_rgb.."計算一次。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_2_1_rgb end), -- toughness: 5%, stamina: 5% -- colors
 
 	--[+ Keystone 2-2 - Redirect Fire! +]--
 		-- create_template("talent_tree_vet_keys2_002_en", {"loc_talent_veteran_improved_tag_dead_coherency_bonus"}, {"en"}, function(locale, value) return "Redirect Fire!" end),
@@ -1674,6 +1679,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys2_002_desc_fr", {"loc_talent_veteran_improved_tag_dead_coherency_bonus_description"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." est accordé pour chaque cumul de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." appliqué lorsqu'un ennemi marqué meurt, pour vous et vos alliés en syntonie. Dure {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_2_2_rgb_fr end),
 			--[+ Traditional Chinese - 轉移火力! +]--
+	create_template("talent_tree_vet_keys2_002_desc_tw", {"loc_talent_veteran_improved_tag_dead_coherency_bonus_description"}, {"zh-tw"}, function(locale, value) return "當您標記的敵人死亡時，為您和協同中的盟友補充{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."，每層"..COLORS_KWords_tw.Focus_Target_rgb.."計算一次。持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_2_2_rgb end), -- damage: +1.5%, duration: 10 -- s->seconds -- colors
 
 	--[+ Keystone 2-3 - Focused Fire +]--
 		-- create_template("talent_tree_vet_keys2_003_en", {"loc_talent_veteran_improved_tag_more_damage"}, {"en"}, function(locale, value) return "Focused Fire" end),
@@ -1681,6 +1687,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys2_003_desc_fr", {"loc_talent_veteran_improved_tag_more_damage_description"}, {"fr"}, function(locale, value) return "Le nombre maximum de cumul de "..COLORS_KWords_fr.Focus_Target_rgb_fr.." est augmentés de "..COLORS_Numbers.n_5_rgb.." à {max_stacks:%s}." end),
 			--[+ Traditional Chinese - 集中火力 +]--
+	create_template("talent_tree_vet_keys2_003_desc_tw", {"loc_talent_veteran_improved_tag_more_damage_description"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Focus_Target_rgb.."最大層數從"..COLORS_Numbers.n_5_rgb.."增加到{max_stacks:%s}。" end), -- max_stacks: 8 -- colors
 
 	--[+ Keystone 3 - Weapons Specialist +]--
 		-- create_template("talent_tree_vet_keys3_000_en", {"loc_talent_veteran_weapon_switch"}, {"en"}, function(locale, value) return "Weapons Specialist" end),
@@ -1688,6 +1695,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_000_desc_fr", {"loc_talent_veteran_weapon_switch_description"}, {"fr"}, function(locale, value) return "Obtenez "..COLORS_KWords_fr.Rangedspec_rgb_fr.." en éliminant des ennemis en mêlée. Cumule jusqu'à {ranged_stacks:%s} fois.\nObtenez "..COLORS_KWords_fr.Meleespec_rgb_fr.." en éliminant des ennemis à distance. Cumule jusqu'à {melee_stacks:%s} fois.\n\nLorsque vous maniez votre arme à distance, vous activez votre effet "..COLORS_KWords_fr.Rangedspec_rgb_fr..", pour obtenir :\n{ranged_attack_speed:%s} Vitesse d'attaque à distance et\n{ranged_crit_chance:%s} de "..COLORS_KWords_fr.Crit_chance_r_rgb_fr.." à distance lors de votre prochain tir, par cumul. Dure {ranged_duration:%s} secondes.\n\nLorsque vous maniez votre arme de mêlée, vous activez votre effet "..COLORS_KWords_fr.Meleespec_rgb_fr..", pour obtenir :\n{melee_attack_speed:%s} Vitesse d'attaque au corps à corps,\n"..COLORS_Numbers.n_plus_rgb.."{dodge_modifier:%s} Vitesse d'esquive et Distance d'esquive. Dure {melee_duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_rgb_fr end),
 			--[+ Traditional Chinese - 武器專家 +]--
+	create_template("talent_tree_vet_keys3_000_desc_tw", {"loc_talent_veteran_weapon_switch_description"}, {"zh-tw"}, function(locale, value) return "近戰擊殺獲得"..COLORS_KWords_tw.Rangedspec_rgb.."。最多累積{ranged_stacks:%s}次。\n遠程擊殺獲得"..COLORS_KWords_tw.Meleespec_rgb.."。最多累積{melee_stacks:%s}次。\n\n當握持遠程武器時，您會啟動"..COLORS_KWords_tw.Rangedspec_rgb.."效果，獲得：\n{ranged_attack_speed:%s}遠程攻擊速度和\n{ranged_crit_chance:%s}遠程"..COLORS_KWords_tw.Crit_hit_rgb.."機率，每層持續{ranged_duration:%s}秒。\n\n當握持近戰武器時，您會啟動"..COLORS_KWords_tw.Meleespec_rgb.."效果，獲得：\n{melee_attack_speed:%s}近戰攻擊速度，\n"..COLORS_Numbers.n_plus_rgb.."{dodge_modifier:%s}閃避速度和閃避距離。持續{melee_duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_3_rgb end), -- ranged_stacks: 10, melee_stacks: 1, ranged_attack_speed: +2%, ranged_crit_chance: +33%, ranged_duration: 5, melee_attack_speed: +15%, dodge_modifier: 10%, melee_duration: 10 -- -() --  s->seconds -- colors
 
 	--[+ Keystone 3-1 - Always Prepared +]--
 		-- create_template("talent_tree_vet_keys3_001_en", {"loc_talent_veteran_weapon_switch_replenish_ammo"}, {"en"}, function(locale, value) return "Always Prepared" end),
@@ -1695,6 +1703,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_001_desc_fr", {"loc_talent_veteran_weapon_switch_replenish_ammo_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Rangedspec_rgb_fr.." recharge jusqu'à {ammo:%s} de vos munitions manquantes dans votre chargeur à partir de votre réserve, arrondi au supérieur, par cumul."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_1_rgb_fr end),
 			--[+ Traditional Chinese - 有備無患 +]--
+	create_template("talent_tree_vet_keys3_001_desc_tw", {"loc_talent_veteran_weapon_switch_replenish_ammo_description"}, {"zh-tw"}, function(locale, value) return "啟動"..COLORS_KWords_tw.Rangedspec_rgb.."每層會補充您彈夾中缺少的最多{ammo:%s}子彈，從您的備彈中取出，向上取整。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_3_1_rgb end), -- ammo: 3.3% -- colors
 
 	--[+ Keystone 3-2 - Invigorated +]--
 		-- create_template("talent_tree_vet_keys3_002_en", {"loc_talent_veteran_weapon_switch_replenish_stamina"}, {"en"}, function(locale, value) return "Invigorated" end),
@@ -1702,6 +1711,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_002_desc_fr", {"loc_talent_veteran_weapon_switch_replenish_stamina_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Meleespec_rgb_fr.." restaure {stamina:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_2_rgb_fr end),
 			--[+ Traditional Chinese - 活力煥發 +]--
+	create_template("talent_tree_vet_keys3_002_desc_tw", {"loc_talent_veteran_weapon_switch_replenish_stamina_description"}, {"zh-tw"}, function(locale, value) return "啟動"..COLORS_KWords_tw.Meleespec_rgb.."會恢復{stamina:%s}的"..COLORS_KWords_tw.Stamina_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_3_2_rgb end), -- stamina: 20% -- colors
 
 	--[+ Keystone 3-3 - On Your Toes +]--
 		-- create_template("talent_tree_vet_keys3_003_en", {"loc_talent_veteran_weapon_switch_replenish_toughness"}, {"en"}, function(locale, value) return "On Your Toes" end),
@@ -1709,6 +1719,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_003_desc_fr", {"loc_talent_veteran_weapon_switch_replenish_toughness_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Meleespec_rgb_fr.." et "..COLORS_KWords_fr.Rangedspec_rgb_fr.." restaure {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr..". Temps de recharge de {cooldown:%s} secondes pour chacun."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_3_rgb_fr end),
 			--[+ Traditional Chinese - 時刻警覺 +]--
+	create_template("talent_tree_vet_keys3_003_desc_tw", {"loc_talent_veteran_weapon_switch_replenish_toughness_description"}, {"zh-tw"}, function(locale, value) return "啟動"..COLORS_KWords_tw.Meleespec_rgb.."和"..COLORS_KWords_tw.Rangedspec_rgb.."會補充{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."。\n冷卻時間{cooldown:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_3_3_rgb end), -- toughness: 20%, cooldown: 3 -- s->seconds -- colors
 
 	--[+ Keystone 3-4 - Fleeting Fire +]--
 		-- create_template("talent_tree_vet_keys3_004_en", {"loc_talent_veteran_weapon_switch_reload_speed"}, {"en"}, function(locale, value) return "Fleeting Fire" end),
@@ -1716,6 +1727,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_004_desc_fr", {"loc_talent_veteran_weapon_switch_reload_speed_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Rangedspec_rgb_fr.." accorde {reload_speed:%s} vitesse de rechargement pendant {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_4_rgb_fr end),
 			--[+ Traditional Chinese - 集火 +]--
+	create_template("talent_tree_vet_keys3_004_desc_tw", {"loc_talent_veteran_weapon_switch_reload_speed_description"}, {"zh-tw"}, function(locale, value) return "啟動"..COLORS_KWords_tw.Rangedspec_rgb.."獲得{reload_speed:%s}的裝填速度，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_3_4_rgb end), -- reload_speed: 20%, duration: 5 -- s->seconds -- colors
 
 	--[+ Keystone 3-5 - Conditioning +]--
 		-- create_template("talent_tree_vet_keys3_005_en", {"loc_talent_veteran_weapon_switch_stamina_reduction"}, {"en"}, function(locale, value) return "Conditioning" end),
@@ -1723,6 +1735,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_keys3_005_desc_fr", {"loc_talent_veteran_weapon_switch_stamina_reduction_description"}, {"fr"}, function(locale, value) return "L'activation de "..COLORS_KWords_fr.Meleespec_rgb_fr.." accorde {stamina_reduction:%s} réduction du coût d'"..COLORS_KWords_fr.Stamina_rgb_fr.." pendant {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Keystone_3_5_rgb_fr end),
 			--[+ Traditional Chinese - 身體調節 +]--
+	create_template("talent_tree_vet_keys3_005_desc_tw", {"loc_talent_veteran_weapon_switch_stamina_reduction_description"}, {"zh-tw"}, function(locale, value) return "啟動"..COLORS_KWords_tw.Meleespec_rgb.."獲得{stamina_reduction:%s}的"..COLORS_KWords_tw.Stamina_rgb.."消耗減少，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Keystone_3_5_rgb end), -- stamina_reduction: 25%, duration: 3 -- s->seconds -- colors
 
 --[+ +PASSIVES+ +]--
 	--[+ Passive 1 - Longshot +]--
@@ -1731,6 +1744,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_001_desc_fr", {"loc_talent_veteran_increased_damage_based_on_range_desc"}, {"fr"}, function(locale, value) return "Inflige jusqu'à {max_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." de base à distance. Le bonus est réduit plus la cible est proche."..TALENTS_Enh_desc2_fr.ED_VET_Passive_1_rgb_fr end),
 			--[+ Traditional Chinese - 遠射 +]--
+	create_template("talent_tree_vet_pas_001_desc_tw", {"loc_talent_veteran_increased_damage_based_on_range_desc"}, {"zh-tw"}, function(locale, value) return "造成最多{max_damage:%s}的遠程基礎"..COLORS_KWords_tw.Damage_rgb.."。\n距離越近，加成越少。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_1_rgb end), -- max_damage: +20% -- colors
 
 	--[+ Passive 2 - Close Order Drill +]--
 		-- create_template("talent_tree_vet_pas_002_en", {"loc_talent_veteran_toughness_damage_reduction_per_ally"}, {"en"}, function(locale, value) return "Close Order Drill" end),
@@ -1738,6 +1752,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_002_desc_fr", {"loc_talent_veteran_toughness_damage_reduction_per_ally_description"}, {"fr"}, function(locale, value) return COLORS_Numbers.n_plus_rgb..COLORS_Numbers.pc_11_rgb.." de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." par allié en syntonie. Jusqu'à {toughness:%s}."..TALENTS_Enh_desc2_fr.ED_VET_Passive_2_rgb_fr end),
 			--[+ Traditional Chinese - 密集隊形訓練 +]--
+	create_template("talent_tree_vet_pas_002_desc_tw", {"loc_talent_veteran_toughness_damage_reduction_per_ally_description"}, {"zh-tw"}, function(locale, value) return "每一個協同中的盟友額外"..COLORS_Numbers.n_plus_rgb..COLORS_Numbers.pc_11_rgb.."的"..COLORS_KWords_tw.Toughness_dmg_red_rgb.."。\n最多{toughness:%s}。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_2_rgb end), -- toughness: +33% -- colors
 
 	--[+ Passive 3 - One Motion +]--
 		-- create_template("talent_tree_vet_pas_003_en", {"loc_talent_veteran_reduce_swap_time"}, {"en"}, function(locale, value) return "One Motion" end),
@@ -1745,6 +1760,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_003_desc_fr", {"loc_talent_veteran_reduce_swap_time_desc"}, {"fr"}, function(locale, value) return "{swap_speed:%s} Vitesse de changement d'arme."..TALENTS_Enh_desc2_fr.ED_VET_Passive_3_rgb_fr end),
 			--[+ Traditional Chinese - 行雲流水 +]--
+	create_template("talent_tree_vet_pas_003_desc_tw", {"loc_talent_veteran_reduce_swap_time_desc"}, {"zh-tw"}, function(locale, value) return "{swap_speed}武器切換速度。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_3_rgb end), -- swap_speed: +25%
 
 	--[+ Passive 4 - Exhilarating Takedown +]--
 		-- create_template("talent_tree_vet_pas_004_en", {"loc_talent_veteran_toughness_on_weakspot_kill"}, {"en"}, function(locale, value) return "Exhilarating Takedown" end),
@@ -1752,6 +1768,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_004_desc_fr", {"loc_talent_veteran_toughness_on_weakspot_kill_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." est récuperés et "..COLORS_Numbers.n_1_rgb.." cumul de {toughness_damage_reduction:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." est gagné pour {duration:%s} secondes lors d'une élimination à distance sur "..COLORS_KWords_fr.Weakspot_rgb_fr..". Cumule jusqu'à {stacks:%s} fois."..TALENTS_Enh_desc2_fr.ED_VET_Passive_4_rgb_fr end),
 			--[+ Traditional Chinese - 振奮擊倒 +]--
+	create_template("talent_tree_vet_pas_004_desc_tw", {"loc_talent_veteran_toughness_on_weakspot_kill_desc"}, {"zh-tw"}, function(locale, value) return "遠程"..COLORS_KWords_tw.Weakspot_rgb.."擊殺敵人時，恢復{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."，並獲得{toughness_damage_reduction:%s}的"..COLORS_KWords_tw.Toughness_dmg_red_rgb.."，持續{duration:%s}秒。最多累積{stacks:%s}次。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_4_rgb end), -- toughness: 15%, toughness_damage_reduction: +10%, duration: 8, stacks: 3 -- rewrite -- s->seconds -- colors
 
 	--[+ Passive 5 - Volley Adept +]--
 		-- create_template("talent_tree_vet_pas_005_en", {"loc_talent_veteran_reload_speed_on_elite_kill"}, {"en"}, function(locale, value) return "Volley Adept" end),
@@ -1759,6 +1776,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_005_desc_fr", {"loc_talent_veteran_reload_speed_on_elite_kill_desc"}, {"fr"}, function(locale, value) return "{reload_speed:%s} vitesse de rechargement lors de l'élimination d'un ennemi d'élite ou spécialiste."..TALENTS_Enh_desc2_fr.ED_VET_Passive_5_rgb_fr end),
 			--[+ Traditional Chinese - 齊射能手 +]--
+	create_template("talent_tree_vet_pas_005_desc_tw", {"loc_talent_veteran_reload_speed_on_elite_kill_desc"}, {"zh-tw"}, function(locale, value) return "擊殺精英和專家敵人時，獲得{reload_speed:%s}的裝填速度。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_5_rgb end), -- reload_speed: +30%
 
 	--[+ Passive 6 - Charismatic +]--
 		-- create_template("talent_tree_vet_pas_006_en", {"loc_talent_veteran_increased_aura_radius"}, {"en"}, function(locale, value) return "Charismatic" end),
@@ -1766,6 +1784,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_006_desc_fr", {"loc_talent_veteran_increased_aura_radius_description"}, {"fr"}, function(locale, value) return "{radius:%s} rayon d'aura."..TALENTS_Enh_desc2_fr.ED_VET_Passive_6_rgb_fr end),
 			--[+ Traditional Chinese - 超凡魅力 +]--
+	create_template("talent_tree_vet_pas_006_desc_tw", {"loc_talent_veteran_increased_aura_radius_description"}, {"zh-tw"}, function(locale, value) return "{radius:%s}的光環半徑。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_6_rgb end), -- radius: +50%
 
 	--[+ Passive 7 - Confirmed Kill +]--
 		-- create_template("talent_tree_vet_pas_007_en", {"loc_talent_veteran_toughness_on_elite_kill"}, {"en"}, function(locale, value) return "Confirmed Kill" end),
@@ -1773,6 +1792,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_007_desc_fr", {"loc_talent_veteran_toughness_on_elite_kill_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." est restauré lors d'une éliminant d'élite ou de spécialiste, et {toughness_over_time:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." supplémentaire pendant {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_7_rgb_fr end),
 			--[+ Traditional Chinese - 擊殺紀錄 +]--
+	create_template("talent_tree_vet_pas_007_desc_tw", {"loc_talent_veteran_toughness_on_elite_kill_desc"}, {"zh-tw"}, function(locale, value) return "擊殺精英或專家敵人時，恢復{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."，並在{duration:%s}秒內額外恢復{toughness_over_time:%s}的"..COLORS_KWords_tw.Toughness_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_7_rgb end), -- toughness: 10%, toughness_over_time: 20%, duration: 10 -- s->seconds -- colors
 
 	--[+ Passive 8 - Tactical Reload +]--
 		-- create_template("talent_tree_vet_pas_008_en", {"loc_talent_ranger_reload_speed_empty_mag"}, {"en"}, function(locale, value) return "Tactical Reload" end),
@@ -1780,6 +1800,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_008_desc_fr", {"loc_talent_veteran_reload_speed_non_empty_mag_desc"}, {"fr"}, function(locale, value) return "{reload_speed:%s} vitesse de rechargement si votre arme contient des munitions."..TALENTS_Enh_desc2_fr.ED_VET_Passive_8_rgb_fr end),
 			--[+ Traditional Chinese - 戰術裝填 +]--
+	create_template("talent_tree_vet_pas_008_desc_tw", {"loc_talent_veteran_reload_speed_non_empty_mag_desc"}, {"zh-tw"}, function(locale, value) return "如果您的武器有彈藥，則獲得{reload_speed:%s}的裝填速度。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_8_rgb end), -- reload_speed: +25%
 
 	--[+ Passive 9 - Out for Blood +]--
 		-- create_template("talent_tree_vet_pas_009_en", {"loc_talent_veteran_all_kills_replenish_toughness"}, {"en"}, function(locale, value) return "Out for Blood" end),
@@ -1787,6 +1808,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_009_desc_fr", {"loc_talent_veteran_all_kills_replenish_toughness_description"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." supplémentaire est restauré avec chaque élimination."..TALENTS_Enh_desc2_fr.ED_VET_Passive_9_rgb_fr end),
 			--[+ Traditional Chinese - 嗜血 +]--
+	create_template("talent_tree_vet_pas_009_desc_tw", {"loc_talent_veteran_all_kills_replenish_toughness_description"}, {"zh-tw"}, function(locale, value) return "每次擊殺都會恢復{toughness:%s}的額外"..COLORS_KWords_tw.Toughness_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_9_rgb end), -- toughness: 5% -- colors
 
 	--[+ Passive 10 - Get Back in the Fight! +]--
 		-- create_template("talent_tree_vet_pas_010_en", {"loc_talent_veteran_movement_speed_on_toughness_broken"}, {"en"}, function(locale, value) return "Get Back in the Fight!" end),
@@ -1794,6 +1816,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_010_desc_fr", {"loc_talent_veteran_movement_bonus_on_toughness_broken_desc"}, {"fr"}, function(locale, value) return "{stamina_percent:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.." est restauré, avec une immunité au "..COLORS_KWords_fr.Stuns_rgb_fr.." et au ralentissement, pendant {duration:%s} secondes lorsque la "..COLORS_KWords_fr.Toughness_rgb_fr.." tombe à "..COLORS_Numbers.n_0_rgb..".\n\n{cooldown:%s} secondes de recharge."..TALENTS_Enh_desc2_fr.ED_VET_Passive_10_rgb_fr end),
 			--[+ Traditional Chinese - 重投戰鬥! +]--
+	create_template("talent_tree_vet_pas_010_desc_tw", {"loc_talent_veteran_movement_bonus_on_toughness_broken_desc"}, {"zh-tw"}, function(locale, value) return "當"..COLORS_KWords_tw.Toughness_rgb.."被擊破時，恢復{stamina_percent:%s}的"..COLORS_KWords_tw.Stamina_rgb.."。\n並獲得"..COLORS_KWords_tw.Stun_rgb.."和減速免疫，持續{duration:%s}秒。\n\n{cooldown:%s}秒冷卻。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_10_rgb end), -- duration: 6, stamina_percent: +50%, cooldown: 30 -- rewrite -- &->and -- s->seconds -- colors
 
 	--[+ Passive 11 - Catch a Breath +]--
 		-- create_template("talent_tree_vet_pas_011_en", {"loc_talent_veteran_replenish_toughness_outside_melee"}, {"en"}, function(locale, value) return "Catch a Breath" end),
@@ -1801,6 +1824,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_011_desc_fr", {"loc_talent_veteran_replenish_toughness_outside_melee_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." régénérés par seconde lorsqu'il n'y a pas d'ennemis dans un rayon de {range:%s} mètres."..TALENTS_Enh_desc2_fr.ED_VET_Passive_11_rgb_fr end),
 			--[+ Traditional Chinese - 喘息片刻 +]--
+	create_template("talent_tree_vet_pas_011_desc_tw", {"loc_talent_veteran_replenish_toughness_outside_melee_desc"}, {"zh-tw"}, function(locale, value) return "當{range:%s}米內沒有敵人時，每秒恢復{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_11_rgb end), -- toughness: 5%, range: 8 -- m->meters -- colors
 
 	--[+ Passive 12 - Grenade Tinkerer +]--
 		-- create_template("talent_tree_vet_pas_012_en", {"loc_talent_veteran_improved_grenades"}, {"en"}, function(locale, value) return "Grenade Tinkerer" end),
@@ -1808,6 +1832,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_012_desc_fr", {"loc_talent_veteran_improved_grenades_desc"}, {"fr"}, function(locale, value) return "Améliorez votre grenade choisie:\n{krak_grenade:%s}: {krak:%s} de "..COLORS_KWords_fr.Damage_rgb_fr..".\n{frag_grenade:%s}: {frag_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." et de rayon.\n{smoke_grenade:%s}: {smoke:%s} durée."..TALENTS_Enh_desc2_fr.ED_VET_Passive_12_rgb_fr end),
 			--[+ Traditional Chinese - 手雷專家 +]--
+	create_template("talent_tree_vet_pas_012_desc_tw", {"loc_talent_veteran_improved_grenades_desc"}, {"zh-tw"}, function(locale, value) return "改善您選擇的手榴彈：\n{krak_grenade:%s}：{krak:%s}的"..COLORS_KWords_tw.Damage_rgb.."。\n{frag_grenade:%s}：{frag_damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."和爆炸範圍。\n{smoke_grenade:%s}：{smoke:%s}的持續時間。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_12_rgb end), -- krak_grenade: Krak Grenade, krak: +50%, frag_grenade: Frag Grenade, frag_damage: +25%, smoke_grenade: Smoke Grenade, smoke: +100% -- &->and -- colors
 
 	--[+ Passive 13 - Covering Fire +]--
 		-- create_template("talent_tree_vet_pas_013_en", {"loc_talent_veteran_replenish_toughness_and_boost_allies"}, {"en"}, function(locale, value) return "Covering Fire" end),
@@ -1815,6 +1840,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_013_desc_fr", {"loc_talent_veteran_replenish_toughness_and_boost_allies_desc"}, {"fr"}, function(locale, value) return "Lorsque d'une élimination à distance, les alliés dans un rayon de {radius:%s} mètres de la cible régénèrent {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." et reçoivent {base_damage:%s} à tous les "..COLORS_KWords_fr.Damage_rgb_fr.." de base pour {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_13_rgb_fr end),
 			--[+ Traditional Chinese - 火力掩護 +]--
+	create_template("talent_tree_vet_pas_013_desc_tw", {"loc_talent_veteran_replenish_toughness_and_boost_allies_desc"}, {"zh-tw"}, function(locale, value) return "當您用遠程攻擊殺死敵人時，目標{radius:%s}米內的盟友恢復{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."，{base_damage:%s}的所有基礎"..COLORS_KWords_tw.Damage_rgb.."、持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_13_rgb end), -- radius: 5, toughness: 15%, base_damage: +10%, duration: 3 -- &->and s->seconds -- colors
 
 	--[+ Passive 14 - Serrated Blade +]--
 		-- create_template("talent_tree_vet_pas_014_en", {"loc_talent_veteran_hits_cause_bleed"}, {"en"}, function(locale, value) return "Serrated Blade" end),
@@ -1822,6 +1848,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_014_desc_fr", {"loc_talent_veteran_hits_cause_bleed_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.n_plus_rgb.."{stacks:%s} cumul de "..COLORS_KWords_fr.Bleed_rgb_fr.." sur la cible lors des coups de mêlée. Jusqu'à "..COLORS_Numbers.n_16_rgb.." cumuls."..TALENTS_Enh_desc2_fr.ED_VET_Passive_14_rgb_fr end),
 			--[+ Traditional Chinese - 鋸齒刀刃 +]--
+	create_template("talent_tree_vet_pas_014_desc_tw", {"loc_talent_veteran_hits_cause_bleed_desc"}, {"zh-tw"}, function(locale, value) return "近戰攻擊的目標"..COLORS_Numbers.n_plus_rgb.."{stacks:%s}層"..COLORS_KWords_tw.Bleed_rgb.."。\n最多"..COLORS_Numbers.n_16_rgb.."層。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_14_rgb end), -- stacks: 1 -- Stack(s)->Stacks -- colors
 
 	--[+ Passive 15 - Agile Engagement +]--
 		-- create_template("talent_tree_vet_pas_015_en", {"loc_talent_veteran_kill_grants_damage_to_other_slot"}, {"en"}, function(locale, value) return "Agile Engagement" end),
@@ -1829,6 +1856,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_015_desc_fr", {"loc_talent_veteran_kill_grants_damage_to_other_slot_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." de distance en tuant un ennemi avec une attaque de mêlée.\n{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." de mêlée lors d'une éliminant à distance.\nDure {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_15_rgb_fr end),
 			--[+ Traditional Chinese - 靈活接敵 +]--
+	create_template("talent_tree_vet_pas_015_desc_tw", {"loc_talent_veteran_kill_grants_damage_to_other_slot_desc"}, {"zh-tw"}, function(locale, value) return "用近戰攻擊擊殺敵人時，獲得{damage:%s}的遠程"..COLORS_KWords_tw.Damage_rgb.."。\n用遠程攻擊擊殺敵人時，獲得{damage:%s}的近戰"..COLORS_KWords_tw.Damage_rgb.."。\n持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_15_rgb end), -- damage: +25%, duration: 5 -- s->seconds -- colors
 
 	--[+ Passive 16 - Kill Zone +]--
 		-- create_template("talent_tree_vet_pas_016_en", {"loc_talent_veteran_ranged_power_out_of_melee"}, {"en"}, function(locale, value) return "Kill Zone" end),
@@ -1836,6 +1864,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_016_desc_fr", {"loc_talent_veteran_ranged_power_out_of_melee_desc"}, {"fr"}, function(locale, value) return "{ranged_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." de base lorsqu'il n'y a pas d'ennemis dans un rayon de {radius:%s} mètres."..TALENTS_Enh_desc2_fr.ED_VET_Passive_16_rgb_fr end),
 			--[+ Traditional Chinese - 殺戮地帶 +]--
+	create_template("talent_tree_vet_pas_016_desc_tw", {"loc_talent_veteran_ranged_power_out_of_melee_desc"}, {"zh-tw"}, function(locale, value) return "當{radius:%s}米內沒有敵人時，增加{ranged_damage:%s}的基礎遠程"..COLORS_KWords_tw.Damage_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_16_rgb end), -- ranged_damage: +20%, radius: 8 -- m->meters -- colors
 
 	--[+ Passive 17 - Opening Salvo +]--
 		-- create_template("talent_tree_vet_pas_017_en", {"loc_talent_veteran_bonus_crit_chance_on_ammo"}, {"en"}, function(locale, value) return "Opening Salvo" end),
@@ -1843,6 +1872,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_017_desc_fr", {"loc_talent_veteran_bonus_crit_chance_on_ammo_desc"}, {"fr"}, function(locale, value) return "Les premières {ammo:%s} munitions après un rechargement ont {crit_chance:%s} de "..COLORS_KWords_fr.Crit_hit_chance_rgb_fr.." à distance."..TALENTS_Enh_desc2_fr.ED_VET_Passive_17_rgb_fr end),
 			--[+ Traditional Chinese - 首輪齊射 +]--
+	create_template("talent_tree_vet_pas_017_desc_tw", {"loc_talent_veteran_bonus_crit_chance_on_ammo_desc"}, {"zh-tw"}, function(locale, value) return "重新裝填後的第一次{ammo:%s}彈藥有{crit_chance:%s}的遠程"..COLORS_KWords_tw.Crit_hit_rgb.."機率。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_17_rgb end), -- ammo: 20%, crit_chance: +10% -- colors
 
 	--[+ Passive 18 - Field Improvisation +]--
 		-- create_template("talent_tree_vet_pas_018_en", {"loc_talent_veteran_better_deployables"}, {"en"}, function(locale, value) return "Field Improvisation" end),
@@ -1850,6 +1880,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_018_desc_fr", {"loc_talent_veteran_better_deployables_description"}, {"fr"}, function(locale, value) return "Caisse médical:\nSoignent {damage_heal:%s} plus rapidement,\nRégénèrent {toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." par seconde,\nPurifie "..COLORS_KWords_fr.Corruption_rgb_fr.." jusqu'à la prochaine "..COLORS_KWords_fr.Wound_rgb_fr..".\n\nLes caisses de munitions restaurent également les grenades."..TALENTS_Enh_desc2_fr.ED_VET_Passive_18_rgb_fr end),
 			--[+ Traditional Chinese - 臨場發揮 +]--
+	create_template("talent_tree_vet_pas_018_desc_tw", {"loc_talent_veteran_better_deployables_description"}, {"zh-tw"}, function(locale, value) return "醫療包：\n治療速度提高{damage_heal:%s}，\n每秒恢復{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."，\n清除"..COLORS_KWords_tw.Corruption_rgb.."直到下一個"..COLORS_KWords_tw.Wound_rgb.."。\n\n彈藥箱也會恢復手榴彈。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_18_rgb end), -- damage_heal: +100%, toughness: 1% -- rewrite -- &->and -- colors
 
 	--[+ Passive 19 - Twinned Blast +]--
 		-- create_template("talent_tree_vet_pas_019_en", {"loc_talent_veteran_extra_grenade_throw_chance"}, {"en"}, function(locale, value) return "Twinned Blast" end),
@@ -1857,6 +1888,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_019_desc_fr", {"loc_talent_veteran_extra_grenade_throw_chance_desc"}, {"fr"}, function(locale, value) return "{chance:%s} de chance de lancer une grenade supplémentaire mais cela ne consomme qu'une seule grenade."..TALENTS_Enh_desc2_fr.ED_VET_Passive_19_rgb_fr end),
 			--[+ Traditional Chinese - 雙響炮 +]--
+	create_template("talent_tree_vet_pas_019_desc_tw", {"loc_talent_veteran_extra_grenade_throw_chance_desc"}, {"zh-tw"}, function(locale, value) return "有{chance:%s}的機率投擲額外的手榴彈，但只消耗一枚手榴彈。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_19_rgb end), -- chance: 20% -- -()
 
 	--[+ Passive 20 - Demolition Stockpile +]--
 		-- create_template("talent_tree_vet_pas_020_en", {"loc_talent_ranger_replenish_grenade"}, {"en"}, function(locale, value) return "Demolition Stockpile" end),
@@ -1864,6 +1896,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_020_desc_fr", {"loc_talent_veteran_replenish_grenade_desc"}, {"fr"}, function(locale, value) return "Vous régénérez {amount:%s} Grenade toutes les {time:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_20_rgb_fr end),
 			--[+ Traditional Chinese - 炸藥儲備 +]--
+	create_template("talent_tree_vet_pas_020_desc_tw", {"loc_talent_veteran_replenish_grenade_desc"}, {"zh-tw"}, function(locale, value) return "每{time:%s}秒補充{amount:%s}顆手榴彈。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_20_rgb end), -- amount: 1, time: 60 -- Grenade(s)->Grenade -- s->seconds
 
 	--[+ Passive 21 - Grenadier +]--
 		-- create_template("talent_tree_vet_pas_021_en", {"loc_talent_veteran_extra_grenade"}, {"en"}, function(locale, value) return "Grenadier" end),
@@ -1871,6 +1904,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_021_desc_fr", {"loc_talent_veteran_extra_grenade_description"}, {"fr"}, function(locale, value) return "Vous pouvez porter {ammo:%s} grenade supplémentaire."..TALENTS_Enh_desc2_fr.ED_VET_Passive_21_rgb_fr end),
 			--[+ Traditional Chinese - 擲彈兵 +]--
+	create_template("talent_tree_vet_pas_021_desc_tw", {"loc_talent_veteran_extra_grenade_description"}, {"zh-tw"}, function(locale, value) return "您可以攜帶{ammo:%s}顆額外的手榴彈。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_21_rgb end), -- ammo: 1 -- Grenade(s)->Grenade
 
 	--[+ Passive 22 - Leave No One Behind +]--
 		-- create_template("talent_tree_vet_pas_022_en", {"loc_talent_veteran_movement_speed_towards_downed"}, {"en"}, function(locale, value) return "Leave No One Behind" end),
@@ -1878,6 +1912,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_022_desc_fr", {"loc_talent_veteran_movement_speed_towards_downed_description"}, {"fr"}, function(locale, value) return "{revive_speed:%s} Vitesse d'assistance et de réanimation. {movement_speed:%s} Vitesse de déplacement et une immunité aux "..COLORS_KWords_fr.Stuns_rgb_fr.." en se dirigeant vers un allié renversé ou incapacité. Chaque fois que vous réanimez un allié renversé, il reçoit {damage_reduction:%s} de réduction de "..COLORS_KWords_fr.Damage_rgb_fr.." pendant {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_22_rgb_fr end),
 			--[+ Traditional Chinese - 不拋棄不放棄 +]--
+	create_template("talent_tree_vet_pas_022_desc_tw", {"loc_talent_veteran_movement_speed_towards_downed_description"}, {"zh-tw"}, function(locale, value) return "{revive_speed:%s}協助速度和復活速度。\n當朝向倒地或無能力的盟友移動時，{movement_speed:%s}移動速度和"..COLORS_KWords_tw.Stun_rgb.."免疫。\n每當您復活一個倒地的盟友時，他們將在{duration:%s}秒內獲得{damage_reduction:%s}的"..COLORS_KWords_tw.Damage_rgb.."減免。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_22_rgb end), -- revive_speed: +20%, movement_speed: +20%, damage_reduction: +33%, duration: 5 -- &->and -- s->seconds -- colors
 
 	--[+ Passive 23 - Precision Strikes +]--
 		-- create_template("talent_tree_vet_pas_023_en", {"loc_talent_veteran_increased_weakspot_damage"}, {"en"}, function(locale, value) return "Precision Strikes" end),
@@ -1885,6 +1920,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_023_desc_fr", {"loc_talent_veteran_increased_weakspot_damage_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Weakspot_dmg_rgb_fr.." des attaques de mêlée et à distance."..TALENTS_Enh_desc2_fr.ED_VET_Passive_23_rgb_fr end),
 			--[+ Traditional Chinese - 精準打擊 +]--
+	create_template("talent_tree_vet_pas_023_desc_tw", {"loc_talent_veteran_increased_weakspot_damage_desc"}, {"zh-tw"}, function(locale, value) return "近戰和遠程攻擊造成{damage:%s}的"..COLORS_KWords_tw.Weakspot_dmg_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_23_rgb end), -- damage: +30% -- colors
 
 	--[+ Passive 24 - Determined +]--
 		-- create_template("talent_tree_vet_pas_024_en", {"loc_talent_veteran_supression_immunity"}, {"en"}, function(locale, value) return "Determined" end),
@@ -1892,6 +1928,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_024_desc_fr", {"loc_talent_veteran_supression_immunity_desc"}, {"fr"}, function(locale, value) return "Confère au vétéran une immunité contre la suppression infligée par les ennemis à distance en tout temps." end),
 			--[+ Traditional Chinese - 堅定不移 +]--
+	create_template("talent_tree_vet_pas_024_desc_tw", {"loc_talent_veteran_supression_immunity_desc"}, {"zh-tw"}, function(locale, value) return "使老兵免疫遠程敵人造成的壓制。" end),
 
 	--[+ Passive 25 - Deadshot +]--
 		-- create_template("talent_tree_vet_pas_025_en", {"loc_talent_ranged_ads_drains_stamina_boost"}, {"en"}, function(locale, value) return "Deadshot" end),
@@ -1899,6 +1936,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_025_desc_fr", {"loc_talent_veteran_ads_drains_stamina_boost_desc"}, {"fr"}, function(locale, value) return "En visant et en étant au-dessus de 0 d'"..COLORS_KWords_fr.Stamina_rgb_fr.." vous gagnez:\n{crit_chance:%s} de "..COLORS_KWords_fr.Crit_chance_rgb_fr..",\n{sway_reduction:%s} Réduction du balancement,\n"..COLORS_Numbers.pc_p19_rgb.." Réduction de la dispersion et\n"..COLORS_Numbers.pc_p12_rgb.." Réduction du recul,\nmais consomme:\n{stamina:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.." par seconde et\n{stamina_per_shot:%s} supplémentaire d'"..COLORS_KWords_fr.Stamina_rgb_fr.." par tir."..TALENTS_Enh_desc2_fr.ED_VET_Passive_25_rgb_fr end),
 			--[+ Traditional Chinese - 死亡射手 +]--
+	create_template("talent_tree_vet_pas_025_desc_tw", {"loc_talent_veteran_ads_drains_stamina_boost_desc"}, {"zh-tw"}, function(locale, value) return "瞄準並且在0以上的"..COLORS_KWords_tw.Stamina_rgb.."時，您獲得：\n{crit_chance:%s}的"..COLORS_KWords_tw.Crit_chance_rgb.."，\n{sway_reduction:%s}的搖晃減少，\n"..COLORS_Numbers.pc_p19_rgb.."的散射減少和\n"..COLORS_Numbers.pc_p12_rgb.."的後座力減少，\n但消耗：\n每秒{stamina:%s}的"..COLORS_KWords_tw.Stamina_rgb.."和\n每發額外{stamina_per_shot:%s}的"..COLORS_KWords_tw.Stamina_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_25_rgb end), -- crit_chance: +25%, sway_reduction: +60%, stamina: 0.75, stamina_per_shot: 0.25 -- rewrite on_Aim! -- &->and -- colors
 
 	--[+ Passive 26 - Born Leader +]--
 		-- create_template("talent_tree_vet_pas_026_en", {"loc_talent_veteran_allies_share_toughness"}, {"en"}, function(locale, value) return "Born Leader" end),
@@ -1906,6 +1944,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_026_desc_fr", {"loc_talent_veteran_allies_share_toughness_description"}, {"fr"}, function(locale, value) return "{toughness:%s} de toute "..COLORS_KWords_fr.Toughness_rgb_fr.." que vous regagnez est restaurée aux Alliés en syntonie."..TALENTS_Enh_desc2_fr.ED_VET_Passive_26_rgb_fr end),
 			--[+ Traditional Chinese - 天生領袖 +]--
+	create_template("talent_tree_vet_pas_026_desc_tw", {"loc_talent_veteran_allies_share_toughness_description"}, {"zh-tw"}, function(locale, value) return "您恢復的任何{toughness:%s}都將恢復給協同中的盟友。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_26_rgb end), -- toughness: 15% -- rewrite -- colors
 
 	--[+ Passive 27 - Keep Their Heads Down! +]--
 		-- create_template("talent_tree_vet_pas_027_en", {"loc_talent_veteran_increase_suppression"}, {"en"}, function(locale, value) return "Keep Their Heads Down!" end),
@@ -1913,6 +1952,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_027_desc_fr", {"loc_talent_veteran_increase_suppression_desc"}, {"fr"}, function(locale, value) return "{suppression:%s} Suppression des attaques à distance."..TALENTS_Enh_desc2_fr.ED_VET_Passive_27_rgb_fr end),
 			--[+ Traditional Chinese - 讓他們全趴下! +]--
+	create_template("talent_tree_vet_pas_027_desc_tw", {"loc_talent_veteran_increase_suppression_desc"}, {"zh-tw"}, function(locale, value) return "增加{suppression:%s}的遠程攻擊壓制。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_27_rgb end), -- suppression: +50%
 
 	--[+ Passive 28 - Reciprocity +]--
 		-- create_template("talent_tree_vet_pas_028_en", {"loc_talent_veteran_dodging_grants_crit"}, {"en"}, function(locale, value) return "Reciprocity" end),
@@ -1920,6 +1960,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_028_desc_fr", {"loc_talent_veteran_dodging_grants_crit_description"}, {"fr"}, function(locale, value) return "{crit_chance:%s} de "..COLORS_KWords_fr.Crit_chance_rgb_fr.." pour {duration:%s} secondes sur une esquive réussie. Se cumuls {stacks:%s} fois."..TALENTS_Enh_desc2_fr.ED_VET_Passive_28_rgb_fr end),
 			--[+ Traditional Chinese - 互惠互利 +]--
+	create_template("talent_tree_vet_pas_028_desc_tw", {"loc_talent_veteran_dodging_grants_crit_description"}, {"zh-tw"}, function(locale, value) return "成功閃避時，{crit_chance:%s}的"..COLORS_KWords_tw.Crit_hit_rgb.."機率持續{duration:%s}秒。\n可疊加{stacks:%s}次。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_28_rgb end), -- crit_chance: +5%, duration: 8, stacks: 5 -- s->seconds -- colors
 
 	--[+ Passive 29 - Duck and Dive +]--
 		-- create_template("talent_tree_vet_pas_029_en", {"loc_talent_ranger_stamina_on_ranged_dodge"}, {"en"}, function(locale, value) return "Duck and Dive" end),
@@ -1927,6 +1968,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_029_desc_fr", {"loc_talent_veteran_stamina_on_ranged_dodge_desc"}, {"fr"}, function(locale, value) return "{stamina:%s} d'"..COLORS_KWords_fr.Stamina_rgb_fr.." maximum en évitant les attaques à distance en esquivant, en courant ou en glissant."..TALENTS_Enh_desc2_fr.ED_VET_Passive_29_rgb_fr end),
 			--[+ Traditional Chinese - 靈活應對 +]--
+	create_template("talent_tree_vet_pas_029_desc_tw", {"loc_talent_veteran_stamina_on_ranged_dodge_desc"}, {"zh-tw"}, function(locale, value) return "閃避、奔跑或滑行以避免遠程攻擊時，最大{stamina:%s}的"..COLORS_KWords_tw.Stamina_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_29_rgb end), -- stamina: +30%
 
 	--[+ Passive 30 - Fully Loaded +]--
 		-- create_template("talent_tree_vet_pas_030_en", {"loc_talent_veteran_ammo_increase"}, {"en"}, function(locale, value) return "Fully Loaded" end),
@@ -1934,6 +1976,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_030_desc_fr", {"loc_talent_veteran_ammo_increase_desc"}, {"fr"}, function(locale, value) return "{ammo:%s} Munitions."..TALENTS_Enh_desc2_fr.ED_VET_Passive_30_rgb_fr end),
 			--[+ Traditional Chinese - 全副武裝 +]--
+	create_template("talent_tree_vet_pas_030_desc_tw", {"loc_talent_veteran_ammo_increase_desc"}, {"zh-tw"}, function(locale, value) return "{ammo:%s}總彈藥。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_30_rgb end), -- ammo: +25%
 
 	--[+ Passive 31 - Tactical Awareness +]--
 		-- create_template("talent_tree_vet_pas_031_en", {"loc_talent_veteran_elite_kills_reduce_cooldown"}, {"en"}, function(locale, value) return "Tactical Awareness" end),
@@ -1941,6 +1984,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_031_desc_fr", {"loc_talent_veteran_elite_kills_reduce_cooldown_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.n_minus_rgb.."{duration:%s} secondes au "..COLORS_KWords_fr.Combat_ability_cd_rgb_fr.." lors d'une élimination de spécialiste."..TALENTS_Enh_desc2_fr.ED_VET_Passive_31_rgb_fr end), -- duration: 6 -- rewrite -- s->seconds -- colors
 			--[+ Traditional Chinese - 戰術意識 +]--
+	create_template("talent_tree_vet_pas_031_desc_tw", {"loc_talent_veteran_elite_kills_reduce_cooldown_desc"}, {"zh-tw"}, function(locale, value) return "消滅專家敵人時，"..COLORS_KWords_tw.Combat_ability_cd_rgb.."減少{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_31_rgb end), -- duration: 6 -- rewrite -- s->seconds -- colors
 
 	--[+ Passive 32 - Desperado +]--
 		-- create_template("talent_tree_vet_pas_032_en", {"loc_talent_veteran_increased_melee_crit_chance_and_melee_finesse"}, {"en"}, function(locale, value) return "Desperado" end),
@@ -1948,6 +1992,8 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_032_desc_fr", {"loc_talent_veteran_increased_melee_crit_chance_and_melee_finesse_desc"}, {"fr"}, function(locale, value) return "{crit_chance:%s} "..COLORS_KWords_fr.Crit_hit_chance_rgb_fr.." de mêlée et\n{finesse:%s} bonus de "..COLORS_KWords_fr.Finesse_rgb_fr.." de mêlée."..TALENTS_Enh_desc2_fr.ED_VET_Passive_32_rgb_fr end),
 			--[+ Traditional Chinese - 亡命之徒 +]--
+	create_template("talent_tree_vet_pas_032_desc_tw", {"loc_talent_veteran_increased_melee_crit_chance_and_melee_finesse_desc"}, {"zh-tw"}, function(locale, value) return "近戰{crit_chance:%s}的"..COLORS_KWords_tw.Crit_hit_chance_rgb.."和{finesse:%s}的"..COLORS_KWords_tw.Finesse_rgb.."加成。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_32_rgb end), -- crit_chance: +10%, finesse: +25%, -- &->and -- colors
+
 
 	--[+ Passive 33 - Shock Trooper +]--
 		-- create_template("talent_tree_vet_pas_033_en", {"loc_talent_veteran_no_ammo_consumption_on_lasweapon_crit"}, {"en"}, function(locale, value) return "Shock Trooper" end),
@@ -1955,6 +2001,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_033_desc_fr", {"loc_talent_veteran_no_ammo_consumption_on_lasweapon_crit_desc"}, {"fr"}, function(locale, value) return "Les "..COLORS_KWords_fr.Crit_hits_rgb_fr.." avec les armes à lasers ne consomment pas de munitions."..TALENTS_Enh_desc2_fr.ED_VET_Passive_33_rgb_fr end),
 			--[+ Traditional Chinese - 突擊隊 +]--
+	create_template("talent_tree_vet_pas_033_desc_tw", {"loc_talent_veteran_no_ammo_consumption_on_lasweapon_crit_desc"}, {"zh-tw"}, function(locale, value) return "使用雷射武器的"..COLORS_KWords_tw.Crit_hits_rgb.."不消耗彈藥。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_33_rgb end), -- colors
 
 	--[+ Passive 34 - Superiority Complex +]--
 		-- create_template("talent_tree_vet_pas_034_en", {"loc_talent_veteran_increase_damage_vs_elites"}, {"en"}, function(locale, value) return "Superiority Complex" end),
@@ -1962,6 +2009,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_034_desc_fr", {"loc_talent_veteran_increase_damage_vs_elites_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." pour les ennemis d'élite."..TALENTS_Enh_desc2_fr.ED_VET_Passive_34_rgb_fr end),
 			--[+ Traditional Chinese - 優越情節 +]--
+	create_template("talent_tree_vet_pas_034_desc_tw", {"loc_talent_veteran_increase_damage_vs_elites_desc"}, {"zh-tw"}, function(locale, value) return "對精英敵人造成{damage:%s}的基礎"..COLORS_KWords_tw.Damage_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_34_rgb end), -- damage: +15% -- -() -- colors
 
 	--[+ Passive 35 - Iron Will +]--
 		-- create_template("talent_tree_vet_pas_035_en", {"loc_talent_veteran_block_break_gives_tdr"}, {"en"}, function(locale, value) return "Iron Will" end),
@@ -1969,6 +2017,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_035_desc_fr", {"loc_talent_veteran_tdr_on_high_toughness_desc"}, {"fr"}, function(locale, value) return "{toughness_damage_reduction:%s} de "..COLORS_KWords_fr.Toughness_dmg_red_rgb_fr.." si au-dessus de {toughness_percent:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_VET_Passive_35_rgb_fr end),
 			--[+ Traditional Chinese - 鐵鐵意志 +]--
+	create_template("talent_tree_vet_pas_035_desc_tw", {"loc_talent_veteran_tdr_on_high_toughness_desc"}, {"zh-tw"}, function(locale, value) return "如果"..COLORS_KWords_tw.Toughness_rgb.."高於{toughness_percent:%s}的{toughness_damage_reduction:%s}"..COLORS_KWords_tw.Toughness_dmg_red_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_35_rgb end), -- toughness_damage_reduction: +50%, toughness_percent: 75% -- colors
 
 	--[+ Passive 36 - Demolition Team +]--
 		-- create_template("talent_tree_vet_pas_036_en", {"loc_talent_ranger_grenade_on_elite_kills_coop"}, {"en"}, function(locale, value) return "Demolition Team" end),
@@ -1976,6 +2025,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_036_desc_fr", {"loc_talent_veteran_grenade_on_elite_kills_coop_desc"}, {"fr"}, function(locale, value) return "{chance:%s} chance de régénérez une grenade lorsque vous ou un allié en syntonie éliminez un ennemi d'élite ou spécialiste."..TALENTS_Enh_desc2_fr.ED_VET_Passive_36_rgb_fr end),
 			--[+ Traditional Chinese - 爆破小隊 +]--
+	create_template("talent_tree_vet_pas_036_desc_tw", {"loc_talent_veteran_grenade_on_elite_kills_coop_desc"}, {"zh-tw"}, function(locale, value) return "當您或協同中的盟友消滅精英或專家敵人時，有{chance:%s}的機會補充一枚手榴彈。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_36_rgb end), -- chance: 5%
 
 	--[+ Passive 37 - Exploit Weakness +]--
 		-- create_template("talent_tree_vet_pas_037_en", {"loc_talent_veteran_crits_rend"}, {"en"}, function(locale, value) return "Exploit Weakness" end),
@@ -1983,6 +2033,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_037_desc_fr", {"loc_talent_veteran_crits_rend_description"}, {"fr"}, function(locale, value) return "{rending_multiplier:%s} de "..COLORS_KWords_fr.Brittleness_rgb_fr.." est appliqué à la cible lors d'un "..COLORS_KWords_fr.Crit_hits_rgb_fr.." de mêlée. Se cumule {max_stacks:%s} fois et dure {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_37_rgb_fr end),
 			--[+ Traditional Chinese - 趁火打劫 +]--
+	create_template("talent_tree_vet_pas_037_desc_tw", {"loc_talent_veteran_crits_rend_description"}, {"zh-tw"}, function(locale, value) return "近戰的"..COLORS_KWords_tw.Crit_hits_rgb.."對目標造成{rending_multiplier:%s}的"..COLORS_KWords_tw.Brittleness_rgb.."。\n可疊加{max_stacks:%s}次，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_37_rgb end), -- rending_multiplier: 10%, max_stacks: 2, duration: 5 -- s->seconds -- colors
 
 	--[+ Passive 38 - Onslaught +]--
 		-- create_template("talent_tree_vet_pas_038_en", --  {"loc_talent_veteran_continous_hits_apply_rending"}, {"en"}, function(locale, value) return "Onslaught" end),
@@ -1990,6 +2041,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_038_desc_fr", {"loc_talent_veteran_continous_hits_apply_rending_description"}, {"fr"}, function(locale, value) return "{rending_multiplier:%s} de "..COLORS_KWords_fr.Brittleness_rgb_fr.." est appliqué à la cible pour {duration:%s} secondes par des coups continus à une seule cible. Se cumule {max_stacks:%s} fois."..TALENTS_Enh_desc2_fr.ED_VET_Passive_38_rgb_fr end),
 			--[+ Traditional Chinese - 猛攻 +]--
+	create_template("talent_tree_vet_pas_038_desc_tw", {"loc_talent_veteran_continous_hits_apply_rending_description"}, {"zh-tw"}, function(locale, value) return "連續攻擊單一目標對目標造成{rending_multiplier:%s}的"..COLORS_KWords_tw.Brittleness_rgb.."，持續{duration:%s}秒。\n可疊加{max_stacks:%s}次。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_38_rgb end), -- rending_multiplier: 2.5%, duration: 5, max_stacks: 16 -- rewrite -- colors
 
 	--[+ Passive 39 - Trench Fighter Drill +]--
 		-- create_template("talent_tree_vet_pas_039_en", {"loc_talent_veteran_attack_speed"}, {"en"}, function(locale, value) return "Trench Fighter Drill" end),
@@ -1997,6 +2049,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_039_desc_fr", {"loc_talent_veteran_attack_speed_description"}, {"fr"}, function(locale, value) return "{melee_attack_speed:%s} Vitesse d'attaque de mêlée."..TALENTS_Enh_desc2_fr.ED_VET_Passive_39_rgb_fr end),
 			--[+ Traditional Chinese - 戰壕兵訓練 +]--
+	create_template("talent_tree_vet_pas_039_desc_tw", {"loc_talent_veteran_attack_speed_description"}, {"zh-tw"}, function(locale, value) return "近戰攻擊速度{melee_attack_speed:%s}。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_39_rgb end), -- melee_attack_speed: +10%
 
 	--[+ Passive 40 - Skirmisher +]--
 		-- create_template("talent_tree_vet_pas_040_en", {"loc_talent_veteran_damage_damage_after_sprinting"}, {"en"}, function(locale, value) return "Skirmisher" end),
@@ -2004,6 +2057,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_040_desc_fr", {"loc_talent_veteran_damage_damage_after_sprinting_desc"}, {"fr"}, function(locale, value) return "{base_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." pendant {duration:%s} secondes après avoir sprinté. Se cumule {stacks:%s} fois."..TALENTS_Enh_desc2_fr.ED_VET_Passive_40_rgb_fr end),
 			--[+ Traditional Chinese - 遊擊者 +]--
+	create_template("talent_tree_vet_pas_040_desc_tw", {"loc_talent_veteran_damage_damage_after_sprinting_desc"}, {"zh-tw"}, function(locale, value) return "奔跑後{duration:%s}秒對所有基礎"..COLORS_KWords_tw.Damage_rgb.."造成{base_damage:%s}。\n可疊加{stacks:%s}次。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_40_rgb end), -- base_damage: +5%, duration: 8, stacks: 5 -- s->seconds -- colors
 
 	--[+ Passive 41 - Competitive Urge +]--
 		-- create_template("talent_tree_vet_pas_041_en", {"loc_talent_veteran_ally_kills_increase_damage"}, {"en"}, function(locale, value) return "Competitive Urge" end),
@@ -2011,6 +2065,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_041_desc_fr", {"loc_talent_veteran_ally_kills_increase_damage_description"}, {"fr"}, function(locale, value) return "Chaque fois qu'un allié tue un ennemi, vous avez {proc_chance:%s} de chance de gagner pendant {duration:%s} secondes:\n{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr..",\n{melee_impact:%s} d'"..COLORS_KWords_fr.Impact_rgb_fr.." de mêlée et\n{suppression:%s} de Suppression."..TALENTS_Enh_desc2_fr.ED_VET_Passive_41_rgb_fr end),
 			--[+ Traditional Chinese - 求勝心 +]--
+	create_template("talent_tree_vet_pas_041_desc_tw", {"loc_talent_veteran_ally_kills_increase_damage_description"}, {"zh-tw"}, function(locale, value) return "每當盟友殺死一個敵人時，您有{proc_chance:%s}的機會獲得{duration:%s}秒的：\n{damage:%s}基礎"..COLORS_KWords_tw.Damage_rgb.."，\n{melee_impact:%s}近戰"..COLORS_KWords_tw.Impact_rgb.."和\n{suppression:%s}壓制。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_41_rgb end), -- proc_chance: 2.5%, damage: +20%, melee_impact: +20%, suppression: +20%, duration: 8 -- rewrite -- &->and -- s->seconds -- colors
 
 	--[+ Passive 42 - Rending Strikes +]--
 		-- create_template("talent_tree_vet_pas_042_en", {"loc_talent_veteran_rending_bonus"}, {"en"}, function(locale, value) return "Rending Strikes" end),
@@ -2018,6 +2073,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_042_desc_fr", {"loc_talent_veteran_rending_bonus_desc"}, {"fr"}, function(locale, value) return "{rending_multiplier:%s} de "..COLORS_KWords_fr.Rending_rgb_fr.." pour toutes les armes."..TALENTS_Enh_desc2_fr.ED_VET_Passive_42_rgb_fr end),
 			--[+ Traditional Chinese - 裂擊 +]--
+	create_template("talent_tree_vet_pas_042_desc_tw", {"loc_talent_veteran_rending_bonus_desc"}, {"zh-tw"}, function(locale, value) return "所有武器的{rending_multiplier:%s} "..COLORS_KWords_tw.Rending_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_42_rgb end), -- rending_multiplier: +10% -- colors
 
 	--[+ Passive 43 - Bring it Down! +]--
 		-- create_template("talent_tree_vet_pas_043_en", {"loc_talent_veteran_big_game_hunter"}, {"en"}, function(locale, value) return "Bring it Down!" end),
@@ -2025,6 +2081,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_vet_pas_043_desc_fr", {"loc_talent_veteran_big_game_hunter_description"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." aux Ogryns et Monstruosités."..TALENTS_Enh_desc2_fr.ED_VET_Passive_43_rgb_fr end),
 			--[+ Traditional Chinese - 幹掉它! +]--
+	create_template("talent_tree_vet_pas_043_desc_tw", {"loc_talent_veteran_big_game_hunter_description"}, {"zh-tw"}, function(locale, value) return "對歐格林和巨獸造成{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."。"..TALENTS_Enh_desc2_tw.ED_VET_Passive_43_rgb end), -- damage: +20% -- &->and -- () -- colors
 
 --[+ ++OGRYN++ +]--
 --[+ +BLITZ+ +]--
@@ -2033,24 +2090,32 @@ local localization_templates = {
 	create_template("talent_tree_ogr_blitz0_000_desc_en", {"loc_ability_ogryn_grenade_box_description"}, {"en"}, function(locale, value) return "Throw a box of Grenades with great strength and enthusiasm for High "..COLORS_KWords.Damage_rgb.." against a Single Enemy."..TALENTS_Enh_desc2.ED_OGR_Blitz_0_rgb end), -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_blitz0_000_desc_fr", {"loc_ability_ogryn_grenade_box_description"}, {"fr"}, function(locale, value) return "Lancer une boîte de grenades avec une grande force et enthousiasme pour des "..COLORS_KWords_fr.Damage_rgb_fr.." élevés  contre un seul ennemi."..TALENTS_Enh_desc2_fr.ED_OGR_Blitz_0_rgb_fr end), -- colors
+			--[+ Traditional Chinese - 巨量傷害盒 +]--
+	create_template("talent_tree_ogr_blitz0_000_desc_tw", {"loc_ability_ogryn_grenade_box_description"}, {"zh-tw"}, function(locale, value) return "對單一敵人投擲一箱高威力的手榴彈。"..TALENTS_Enh_desc2_tw.ED_OGR_Blitz_0_rgb end), -- colors
 
 	--[+ Blitz 1 - Big Friendly Rock +]--
 		-- create_template("talent_tree_ogr_blitz1_000_en", {"loc_ability_ogryn_friend_rock"}, {"en"}, function(locale, value) return "Big Friendly Rock" end),
 	create_template("talent_tree_ogr_blitz1_000_desc_en", {"loc_ability_ogryn_friend_rock_desc"}, {"en"}, function(locale, value) return "Toss a big rock or hunk of junk at a Single Enemy. You pick up a new rock every {recharge:%s} seconds and can hold up to {max_charges:%s} rocks at a time."..TALENTS_Enh_desc2.ED_OGR_Blitz_1_rgb end), -- recharge: 45, max_charges: 4 -- rewrite -- s->seconds
 			--[+ French +]--
 	create_template("talent_tree_ogr_blitz1_000_desc_fr", {"loc_ability_ogryn_friend_rock_desc"}, {"fr"}, function(locale, value) return "Lancer un gros caillou à un seul ennemi. Vous ramassez un nouveau caillou tous les {recharge:%s} secondes et pouvez en tenir jusqu'à {max_charges:%s} à la fois."..TALENTS_Enh_desc2_fr.ED_OGR_Blitz_1_rgb_fr end), -- recharge: 45, max_charges: 4 -- rewrite -- s->seconds
+			--[+ Traditional Chinese - 投石問路 +]--
+	create_template("talent_tree_ogr_blitz1_000_desc_tw", {"loc_ability_ogryn_friend_rock_desc"}, {"zh-tw"}, function(locale, value) return "向單一敵人投擲一塊大石頭或廢鐵。\n{recharge:%s}秒獲得一塊新石頭，最多可同時持有{max_charges:%s}塊。"..TALENTS_Enh_desc2_tw.ED_OGR_Blitz_1_rgb end), -- recharge: 45, max_charges: 4 -- rewrite -- s->seconds				
 
 	--[+ Blitz 2 - Bombs Away! +]--
 		-- create_template("talent_tree_ogr_blitz2_000_en", {"loc_talent_bonebreaker_grenade_super_armor_explosion"}, {"en"}, function(locale, value) return "Bombs Away!" end),
 	create_template("talent_tree_ogr_blitz2_000_desc_en", {"loc_talent_bonebreaker_grenade_super_armor_explosion_desc"}, {"en"}, function(locale, value) return "Throw a box of Grenades with great strength and enthusiasm to deal High "..COLORS_KWords.Damage_rgb.." to a Single Enemy.\nHitting an Enemy causes the box to break open, releasing {num_grenades:%s} grenades around the target.\nThis is an augmented version of {talent_name:%s}."..TALENTS_Enh_desc2.ED_OGR_Blitz_2_rgb end), -- num_grenades: 6, talent_name: Big Box of Hurt -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_blitz2_000_desc_fr", {"loc_talent_bonebreaker_grenade_super_armor_explosion_desc"}, {"fr"}, function(locale, value) return "Lancer une boîte de grenades avec une grande force et enthousiasme pour infliger des "..COLORS_KWords_fr.Damage_rgb_fr.." élevés à un seul ennemi.\nToucher un ennemi provoque l'ouverture de la boîte, libérant {num_grenades:%s} grenades autour de la cible.\nIl s'agit d'une version augmentée de {talent_name:%s}."..TALENTS_Enh_desc2_fr.ED_OGR_Blitz_2_rgb_fr end), -- num_grenades: 6, talent_name: Big Box of Hurt -- colors
+			--[+ Traditional Chinese - 投彈完畢! +]--
+	create_template("talent_tree_ogr_blitz2_000_desc_tw", {"loc_talent_bonebreaker_grenade_super_armor_explosion_desc"}, {"zh-tw"}, function(locale, value) return "向單一敵人投擲一箱高威力的手榴彈。\n擊中敵人會使箱子破裂，釋放{num_grenades:%s}枚手榴彈在目標周圍。\n這是{talent_name:%s}的增強版本。"..TALENTS_Enh_desc2_tw.ED_OGR_Blitz_2_rgb end), -- num_grenades: 6, talent_name: Big Box of Hurt -- colors
 
 	--[+ Blitz 3 - Frag Bomb +]--
 		-- create_template("talent_tree_ogr_blitz3_000_en", {"loc_ability_ogryn_grenade_demolition"}, {"en"}, function(locale, value) return "Frag Bomb" end),
 	create_template("talent_tree_ogr_blitz3_000_desc_en", {"loc_ability_ogryn_grenade_demolition_desc"}, {"en"}, function(locale, value) return "Throw an Ogryn-sized (the only proper kind!) "..COLORS_KWords.Frag_gren_rgb.." with a {radius:%s} meters blast radius, dealing increased "..COLORS_KWords.Damage_rgb.." at the center."..TALENTS_Enh_desc2.ED_OGR_Blitz_3_rgb end), -- radius: 16 -- m->meters -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_blitz3_000_desc_fr", {"loc_ability_ogryn_grenade_demolition_desc"}, {"fr"}, function(locale, value) return "Lancer une "..COLORS_KWords_fr.Frag_gren_rgb_fr.." de taille Ogryn (la seule taille appropriée !) avec un rayon d'explosion de {radius:%s} mètres, infligeant des "..COLORS_KWords_fr.Damage_rgb_fr.." accrus au centre."..TALENTS_Enh_desc2_fr.ED_OGR_Blitz_3_rgb_fr end), -- radius: 16 -- m->meters -- colors
+			--[+ Traditional Chinese - 破片炸彈 +]--
+	create_template("talent_tree_ogr_blitz3_000_desc_tw", {"loc_ability_ogryn_grenade_demolition_desc"}, {"zh-tw"}, function(locale, value) return "投擲一枚歐格林大小（唯一合適的！）的"..COLORS_KWords_tw.Frag_gren_rgb.."，爆炸半徑為{radius:%s}米，中心處造成增加的"..COLORS_KWords_tw.Damage_rgb.."。"..TALENTS_Enh_desc2_tw.ED_OGR_Blitz_3_rgb end), -- radius: 16 -- m->meters -- colors
 
 --[+ +AURA+ +]--
 	--[+ Aura 0 - Intimidating Presence +]--
@@ -2058,24 +2123,32 @@ local localization_templates = {
 	create_template("talent_tree_ogr_aura0_000_desc_en", {"loc_talent_ogryn_2_base_4_description_new"}, {"en"}, function(locale, value) return "{damage:%s} Heavy Melee Attack "..COLORS_KWords.Damage_rgb.." for you and Allies in Coherency."..TALENTS_Enh_desc2.ED_OGR_Aura_0_rgb end), -- damage: +7.5% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_aura0_000_desc_fr", {"loc_talent_ogryn_2_base_4_description_new"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." des attaques de mêlée puissantes pour vous et les alliés en syntonie."..TALENTS_Enh_desc2_fr.ED_OGR_Aura_0_rgb_fr end), -- damage: +7.5% -- colors
+			--[+ Traditional Chinese - 威嚇氣場 +]--
+	create_template("talent_tree_ogr_aura0_000_desc_tw", {"loc_talent_ogryn_2_base_4_description_new"}, {"zh-tw"}, function(locale, value) return "對您和協同中的盟友造成{damage:%s}的重擊傷害。"..TALENTS_Enh_desc2_tw.ED_OGR_Aura_0_rgb end), -- damage: +7.5% -- colors
 
 	--[+ Aura 1 - Bonebreaker's Aura +]--
 		-- create_template("talent_tree_ogr_aura1_000_en", {"loc_talent_damage_aura"}, {"en"}, function(locale, value) return "Bonebreaker's Aura" end),
 	create_template("talent_tree_ogr_aura1_000_desc_en", {"loc_talent_damage_aura_improved"}, {"en"}, function(locale, value) return "{damage:%s} Heavy Melee Attack "..COLORS_KWords.Damage_rgb.." for you and Allies in Coherency.\n\nThis is an augmented version of {talent_name:%s}."..TALENTS_Enh_desc2.ED_OGR_Aura_1_rgb end), -- damage: +10%, talent_name: Intimidating Presence -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_aura1_000_desc_fr", {"loc_talent_damage_aura_improved"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." des attaques de mêlée puissantes pour vous et les alliés en syntonie.\n\nCeci est une version augmentée de {talent_name:%s}."..TALENTS_Enh_desc2_fr.ED_OGR_Aura_1_rgb_fr end), -- damage: +10%, talent_name: Intimidating Presence -- colors
+			--[+ Traditional Chinese - 破骨者之環 +]--
+	create_template("talent_tree_ogr_aura1_000_desc_tw", {"loc_talent_damage_aura_improved"}, {"zh-tw"}, function(locale, value) return "對您和協同中的盟友造成{damage:%s}的重擊傷害。\n\n這是{talent_name:%s}的增強版本。"..TALENTS_Enh_desc2_tw.ED_OGR_Aura_1_rgb end), -- damage: +10%, talent_name: Intimidating Presence -- colors
 
 	--[+ Aura 2 - Stay Close! +]--
 		-- create_template("talent_tree_ogr_aura2_000_en", {"loc_talent_ogryn_toughness_regen_aura"}, {"en"}, function(locale, value) return "Stay Close!" end),
 	create_template("talent_tree_ogr_aura2_000_desc_en", {"loc_talent_ogryn_toughness_regen_aura_desc"}, {"en"}, function(locale, value) return "{toughness_regen_rate_modifier:%s} "..COLORS_KWords.Toughness_rgb.." Replenishment for you and Allies in Coherency."..TALENTS_Enh_desc2.ED_OGR_Aura_2_rgb end), -- toughness_regen_rate_modifier: +25% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_aura2_000_desc_fr", {"loc_talent_ogryn_toughness_regen_aura_desc"}, {"fr"}, function(locale, value) return "{toughness_regen_rate_modifier:%s} de Régénération de la "..COLORS_KWords_fr.Toughness_rgb_fr.." pour vous et les alliés en syntonie."..TALENTS_Enh_desc2_fr.ED_OGR_Aura_2_rgb_fr end), -- toughness_regen_rate_modifier: +25% -- colors
+			--[+ Traditional Chinese - 跟緊我! +]--
+	create_template("talent_tree_ogr_aura2_000_desc_tw", {"loc_talent_ogryn_toughness_regen_aura_desc"}, {"zh-tw"}, function(locale, value) return "對您和協同中的盟友造成{toughness_regen_rate_modifier:%s}的"..COLORS_KWords_tw.Toughness_rgb.."補充。"..TALENTS_Enh_desc2_tw.ED_OGR_Aura_2_rgb end), -- toughness_regen_rate_modifier: +25% -- colors
 
 	--[+ Aura 3 - Coward Culling +]--
 		-- create_template("talent_tree_ogr_aura3_000_en", {"loc_talent_ogryn_damage_vs_suppressed"}, {"en"}, function(locale, value) return "Coward Culling" end),
 	create_template("talent_tree_ogr_aura3_000_desc_en", {"loc_talent_ogryn_damage_vs_suppressed_desc"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Damage_rgb.." against Suppressed Enemies for you and Allies in Coherency."..TALENTS_Enh_desc2.ED_OGR_Aura_3_rgb end), -- damage:+20%. -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_aura3_000_desc_fr", {"loc_talent_ogryn_damage_vs_suppressed_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." contre les ennemis sous suppression pour vous et les alliés en syntonie."..TALENTS_Enh_desc2_fr.ED_OGR_Aura_3_rgb_fr end), -- damage:+20%. -- colors
+			--[+ Traditional Chinese - 優勝劣汰 +]--
+	create_template("talent_tree_ogr_aura3_000_desc_tw", {"loc_talent_ogryn_damage_vs_suppressed_desc"}, {"zh-tw"}, function(locale, value) return "對您和協同中的盟友造成{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."對壓制敵人。"..TALENTS_Enh_desc2_tw.ED_OGR_Aura_3_rgb end), -- damage:+20%. -- colors
 
 --[+ +ABILITIES+ +]--
 	--[+ Ability 0 - Bull Rush +]--
@@ -2083,78 +2156,104 @@ local localization_templates = {
 	create_template("talent_tree_ogr_abil0_000_desc_en", {"loc_ability_ogryn_charge_description_new"}, {"en"}, function(locale, value) return "Charge forward with great force, knocking back enemies and "..COLORS_KWords.Staggering_rgb.." them. Gain {attack_speed:%s} Attack Speed and {move_speed:%s} Movement Speed for {duration:%s} seconds. Charge is stopped on collision with Carapace Armoured Enemies, Unyielding Enemies and Monstrosities.\n\nBase Cooldown: {cooldown:%s} seconds."..TALENTS_Enh_desc2.ED_OGR_Ability_0_rgb end), -- attack_speed: +25%, move_speed: +25%, duration: 5, cooldown: 30 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_abil0_000_desc_fr", {"loc_ability_ogryn_charge_description_new"}, {"fr"}, function(locale, value) return "Chargez vers l'avant avec une grande force, repoussant les ennemis et les faisant "..COLORS_KWords_fr.Staggering_rgb_fr..". Gagnez {attack_speed:%s} de vitesse d'attaque et {move_speed:%s} de vitesse de déplacement pendant {duration:%s} secondes. La charge est arrêtée en cas de collision avec des ennemis en armure carapace, implacables et des monstruosités.\n\nTemps de recharge de base : {cooldown:%s} secondes."..TALENTS_Enh_desc2_fr.ED_OGR_Ability_0_rgb_fr end), 
+			--[+ Traditional Chinese - 蠻牛衝撞 +]--
+	create_template("talent_tree_ogr_abil0_000_desc_tw", {"loc_ability_ogryn_charge_description_new"}, {"zh-tw"}, function(locale, value) return "向前衝撞，用巨大的力量擊退敵人並使其"..COLORS_KWords_tw.Staggering_rgb.."。\n獲得{attack_speed:%s}的攻擊速度和{move_speed:%s}的移動速度，持續{duration:%s}秒。\n與甲殼護甲敵人、不屈不撓敵人和巨獸碰撞時停止衝撞。\n\n基礎冷卻時間：{cooldown:%s}秒。"..TALENTS_Enh_desc2_tw.ED_OGR_Ability_0_rgb end), -- attack_speed: +25%, move_speed: +25%, duration: 5, cooldown: 30 -- s->seconds -- colors
 
 	--[+ Ability 1 - Indomitable +]--
 		-- create_template("talent_tree_ogr_abil1_000_en", {"loc_talent_ogryn_bull_rush_distance"}, {"en"}, function(locale, value) return "Indomitable" end),
 	create_template("talent_tree_ogr_abil1_000_desc_en", {"loc_talent_ogryn_bull_rush_distance_desc"}, {"en"}, function(locale, value) return "Charge forward with great force, knocking back Enemies and "..COLORS_KWords.Staggering_rgb.." them. Gain {attack_speed:%s} Attack Speed and {move_speed:%s} Movement Speed for {duration:%s} seconds. Charge is stopped only on collision with Monstrosities.\nBase Cooldown: {cooldown:%s} seconds.\nThis is an augmented version of {talent_name:%s} with an increased charge distance of {distance:%s}."..TALENTS_Enh_desc2.ED_OGR_Ability_1_rgb end), -- attack_speed: +25%, move_speed: +25%, duration: 5, cooldown: 30, talent_name: Bull Rush, distance: 100% -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_abil1_000_desc_fr", {"loc_talent_ogryn_bull_rush_distance_desc"}, {"fr"}, function(locale, value) return "Chargez vers l'avant avec une grande force, repoussant les ennemis et les faisant "..COLORS_KWords_fr.Staggering_rgb_fr..". Gagnez {attack_speed:%s} de vitesse d'attaque et {move_speed:%s} de vitesse de déplacement pendant {duration:%s} secondes. La charge est arrêtée uniquement en cas de collision avec des monstruosités.\nTemps de recharge de base : {cooldown:%s} secondes.\nCeci est une version augmentée de {talent_name:%s} avec une distance de charge accrue de {distance:%s}."..TALENTS_Enh_desc2_fr.ED_OGR_Ability_1_rgb_fr end),
+			--[+ Traditional Chinese - 不屈不撓 +]--
+	create_template("talent_tree_ogr_abil1_000_desc_tw", {"loc_talent_ogryn_bull_rush_distance_desc"}, {"zh-tw"}, function(locale, value) return "向前衝撞，用巨大的力量擊退敵人並使其"..COLORS_KWords_tw.Staggering_rgb.."。\n獲得{attack_speed:%s}的攻擊速度和{move_speed:%s}的移動速度，持續{duration:%s}秒。\n只有與巨獸碰撞時才會停止衝撞。\n基礎冷卻時間：{cooldown:%s}秒。\n這是{talent_name:%s}的增強版本，具有增加的衝撞距離{distance:%s}。"..TALENTS_Enh_desc2_tw.ED_OGR_Ability_1_rgb end), -- attack_speed: +25%, move_speed: +25%, duration: 5, cooldown: 30, talent_name: Bull Rush, distance: 100% -- s->seconds -- colors
 
 	--[+ Ability 1-1 - Stomping Boots +]--
 		-- create_template("talent_tree_ogr_abil1_001_en", {"loc_talent_ogryn_toughness_on_bull_rush"}, {"en"}, function(locale, value) return "Stomping Boots" end),
 	create_template("talent_tree_ogr_abil1_001_desc_en", {"loc_talent_ogryn_toughness_on_bull_rush_desc"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_rgb.." replenishes per Enemy Hit with {ability:%s}."..TALENTS_Enh_desc2.ED_OGR_Ability_1_1_rgb end), -- toughness: +10%, ability: Indomitable -- rewrite -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_abil1_001_desc_fr", {"loc_talent_ogryn_toughness_on_bull_rush_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} de la "..COLORS_KWords_fr.Toughness_rgb_fr.." se régénère par ennemi touché avec {ability:%s}."..TALENTS_Enh_desc2_fr.ED_OGR_Ability_1_1_rgb_fr end),
+			--[+ Traditional Chinese - 跺殺之靴 +]--
+	create_template("talent_tree_ogr_abil1_001_desc_tw", {"loc_talent_ogryn_toughness_on_bull_rush_desc"}, {"zh-tw"}, function(locale, value) return "每次擊中敵人，{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."補充。"..TALENTS_Enh_desc2_tw.ED_OGR_Ability_1_1_rgb end), -- toughness: +10%, ability: Indomitable -- rewrite -- colors
 
 	--[+ Ability 1-2 - Trample +]--
 		-- create_template("talent_tree_ogr_abil1_002_en", {"loc_talent_ogryn_ability_charge_trample"}, {"en"}, function(locale, value) return "Trample" end),
 	create_template("talent_tree_ogr_abil1_002_desc_en", {"loc_talent_ogryn_ability_charge_trample_desc"}, {"en"}, function(locale, value) return "For each Enemy hit by {talent_name:%s} you gain a Stack of "..COLORS_KWords.Trample_rgb.." which increases Base "..COLORS_KWords.Damage_rgb.." by {damage:%s} for {duration:%s} seconds. Max Stacks {stack:%s}."..TALENTS_Enh_desc2.ED_OGR_Ability_1_2_rgb end), -- talent_name: Bull Rush, damage: +2%, duration: 8, stack: 25 -- rewrite -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_abil1_002_desc_fr", {"loc_talent_ogryn_ability_charge_trample_desc"}, {"fr"}, function(locale, value) return "Pour chaque ennemi touché par {talent_name:%s}, vous gagnez un cumul de "..COLORS_KWords_fr.Trample_rgb_fr.." qui augmente les dégâts de base de {damage:%s} pendant {duration:%s} secondes. Jusqu'à {stack:%s} cumuls."..TALENTS_Enh_desc2_fr.ED_OGR_Ability_1_2_rgb_fr end),
+			--[+ Traditional Chinese - 踐踏 +]--
+	create_template("talent_tree_ogr_abil1_002_desc_tw", {"loc_talent_ogryn_ability_charge_trample_desc"}, {"zh-tw"}, function(locale, value) return "每擊中一個敵人，您獲得一層{talent_name:%s}的"..COLORS_KWords_tw.Trample_rgb.."，使基礎"..COLORS_KWords_tw.Damage_rgb.."增加{damage:%s}，持續{duration:%s}秒。最大層數{stack:%s}。"..TALENTS_Enh_desc2_tw.ED_OGR_Ability_1_2_rgb end), -- talent_name: Bull Rush, damage: +2%, duration: 8, stack: 25 -- rewrite -- s->seconds -- colors
 
 	--[+ Ability 1-3 - Pulverise +]--
 		-- create_template("talent_tree_ogr_abil1_003_en", {"loc_talent_ogryn_bleed_on_bull_rush"}, {"en"}, function(locale, value) return "Pulverise" end),
 	create_template("talent_tree_ogr_abil1_003_desc_en", {"loc_talent_ogryn_bleed_on_bull_rush_desc"}, {"en"}, function(locale, value) return "{stacks:%s} Stacks of "..COLORS_KWords.Bleed_rgb.." are applied to enemies hit by {ability:%s}."..TALENTS_Enh_desc2.ED_OGR_Ability_1_3_rgb end), -- stacks: 5, ability: Indomitable -- rewrite -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_abil1_003_desc_fr", {"loc_talent_ogryn_bleed_on_bull_rush_desc"}, {"fr"}, function(locale, value) return "{stacks:%s} cumuls de "..COLORS_KWords_fr.Bleed_rgb_fr.." sont appliqués aux ennemis touchés par {ability:%s}."..TALENTS_Enh_desc2_fr.ED_OGR_Ability_1_3_rgb_fr end),
+			--[+ Traditional Chinese - 粉碎 +]--
+	create_template("talent_tree_ogr_abil1_003_desc_tw", {"loc_talent_ogryn_bleed_on_bull_rush_desc"}, {"zh-tw"}, function(locale, value) return "每次擊中敵人，{stacks:%s}層"..COLORS_KWords_tw.Bleed_rgb.."。"..TALENTS_Enh_desc2_tw.ED_OGR_Ability_1_3_rgb end), -- stacks: 5, ability: Indomitable -- rewrite -- colors
 
 	--[+ Ability 2 - Loyal Protector +]--
 		-- create_template("talent_tree_ogr_abil2_000_en", {"loc_ability_ogryn_taunt_shout"}, {"en"}, function(locale, value) return "Loyal Protector" end),
 	create_template("talent_tree_ogr_abil2_000_desc_en", {"loc_ability_ogryn_taunt_shout_desc"}, {"en"}, function(locale, value) return "Taunt Enemies within {radius:%s} meters, making them Attack only you for {duration:%s} seconds.\n\nBase Cooldown: {cooldown:%s} seconds."..TALENTS_Enh_desc2.ED_OGR_Ability_2_rgb end), -- radius: 8, duration: 15, cooldown: 45 -- m->meters -- s->seconds
 			--[+ French +]--
 	create_template("talent_tree_ogr_abil2_000_desc_fr", {"loc_ability_ogryn_taunt_shout_desc"}, {"fr"}, function(locale, value) return "Provoque les ennemis dans un rayon de {radius:%s} mètres, les obligeant à ne s'attaquer qu'à vous pendant {duration:%s} secondes.\n\nTemps de recharge de base : {cooldown:%s} secondes."..TALENTS_Enh_desc2_fr.ED_OGR_Ability_2_rgb_fr end),
+			--[+ Traditional Chinese - 忠誠守護者 +]--
+	create_template("talent_tree_ogr_abil2_000_desc_tw", {"loc_ability_ogryn_taunt_shout_desc"}, {"zh-tw"}, function(locale, value) return "在{radius:%s}米內嘲諷敵人，使其在{duration:%s}秒內只攻擊您。\n\n基礎冷卻時間：{cooldown:%s}秒。"..TALENTS_Enh_desc2_tw.ED_OGR_Ability_2_rgb end), -- radius: 8, duration: 15, cooldown: 45 -- m->meters -- s->seconds
 
 	--[+ Ability 2-1 - Valuable Distraction +]--
 		-- create_template("talent_tree_ogr_abil2_001_en", {"loc_talent_ogryn_taunt_damage_taken_increase"}, {"en"}, function(locale, value) return "Valuable Distraction" end),
 	create_template("talent_tree_ogr_abil2_001_desc_en", {"loc_talent_ogryn_taunt_damage_taken_increase_description"}, {"en"}, function(locale, value) return "{base_damage:%s} Base "..COLORS_KWords.Damage_rgb.." taken from all sources by enemies affected by {talent_name:%s} for "..COLORS_Numbers.n_15_rgb.." seconds."..TALENTS_Enh_desc2.ED_OGR_Ability_2_1_rgb end), -- talent_name: Loyal Protector, base_damage: +25% -- rewrite -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_abil2_001_desc_fr", {"loc_talent_ogryn_taunt_damage_taken_increase_description"}, {"fr"}, function(locale, value) return "{base_damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." provenant de toutes les sources pour les ennemis affectés par {talent_name:%s} pendant "..COLORS_Numbers.n_15_rgb.." secondes."..TALENTS_Enh_desc2_fr.ED_OGR_Ability_2_1_rgb_fr end),
+			--[+ Traditional Chinese - 重要干擾 +]--
+	create_template("talent_tree_ogr_abil2_001_desc_tw", {"loc_talent_ogryn_taunt_damage_taken_increase_description"}, {"zh-tw"}, function(locale, value) return "所有受{talent_name:%s}影響的敵人來源的{base_damage:%s}基礎"..COLORS_KWords_tw.Damage_rgb.."，持續"..COLORS_Numbers.n_15_rgb.."秒。"..TALENTS_Enh_desc2_tw.ED_OGR_Ability_2_1_rgb end), -- talent_name: Loyal Protector, base_damage: +25% -- rewrite -- colors
 
 	--[+ Ability 2-2 - Go Again +]--
 		-- create_template("talent_tree_ogr_abil2_002_en", {"loc_talent_ogryn_taunt_stagger_cd"}, {"en"}, function(locale, value) return "Go Again!" end),
 	create_template("talent_tree_ogr_abil2_002_desc_en", {"loc_talent_ogryn_taunt_stagger_cd_description"}, {"en"}, function(locale, value) return "{cooldown_reduction:%s} "..COLORS_KWords.Cd_rgb.." of your {talent_name:%s} is replenished per enemy "..COLORS_KWords.Staggered_rgb.."."..TALENTS_Enh_desc2.ED_OGR_Ability_2_2_rgb end), -- cooldown_reduction: 2.5%, talent_name: Loyal Protector -- rewrite -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_abil2_002_desc_fr", {"loc_talent_ogryn_taunt_stagger_cd_description"}, {"fr"}, function(locale, value) return "{cooldown_reduction:%s} de votre "..COLORS_KWords_fr.Cd_rgb_fr.." de {talent_name:%s} est régénéré par ennemi qui "..COLORS_KWords_fr.Staggers_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_OGR_Ability_2_2_rgb_fr end),
+			--[+ Traditional Chinese - 再來 +]--
+	create_template("talent_tree_ogr_abil2_002_desc_tw", {"loc_talent_ogryn_taunt_stagger_cd_description"}, {"zh-tw"}, function(locale, value) return "每個被{talent_name:%s}影響的敵人，{cooldown_reduction:%s}的"..COLORS_KWords_tw.Cd_rgb.."補充。"..TALENTS_Enh_desc2_tw.ED_OGR_Ability_2_2_rgb end), -- cooldown_reduction: 2.5%, talent_name: Loyal Protector -- rewrite -- colors
 
 	--[+ Ability 2-3 - Big Lungs +]--
 		-- create_template("talent_tree_ogr_abil2_003_en", {"loc_talent_ogryn_taunt_radius_increase"}, {"en"}, function(locale, value) return "Big Lungs" end),
 	create_template("talent_tree_ogr_abil2_003_desc_en", {"loc_talent_ogryn_taunt_radius_increase_desc"}, {"en"}, function(locale, value) return COLORS_Numbers.n_plus_rgb.."{radius:%s} Radius to {talent_name:%s}."..TALENTS_Enh_desc2.ED_OGR_Ability_2_3_rgb end), -- talent_name: Loyal Protector, radius: 50% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_abil2_003_desc_fr", {"loc_talent_ogryn_taunt_radius_increase_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.n_plus_rgb.."{radius:%s} Rayon de {talent_name:%s}."..TALENTS_Enh_desc2_fr.ED_OGR_Ability_2_3_rgb_fr end),
+			--[+ Traditional Chinese - 強力肺活 +]--
+	create_template("talent_tree_ogr_abil2_003_desc_tw", {"loc_talent_ogryn_taunt_radius_increase_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.n_plus_rgb.."{radius:%s}範圍至{talent_name:%s}。"..TALENTS_Enh_desc2_tw.ED_OGR_Ability_2_3_rgb end), -- talent_name: Loyal Protector, radius: 50% -- colors
 
 	--[+ Ability 3 - Point-Blank Barrage +]--
 		-- create_template("talent_tree_ogr_abil3_000_en", {"loc_talent_ogryn_combat_ability_special_ammo"}, {"en"}, function(locale, value) return "Point-Blank Barrage" end),
 	create_template("talent_tree_ogr_abil3_000_desc_en", {"loc_talent_ogryn_combat_ability_special_ammo_new_desc"}, {"en"}, function(locale, value) return "Swaps to and reloads your Ranged Weapon. For the next {duration:%s} seconds you have {ranged_attack_speed:%s} Rate of Fire and {reload_speed:%s} Reload Speed, {reduced_move_penalty:%s} Reduced Braced Movement Speed penalties, and gain {damage:%s} Close Range "..COLORS_KWords.Damage_rgb..". Base Cooldown {cooldown:%s} seconds."..TALENTS_Enh_desc2.ED_OGR_Ability_3_rgb end), -- ranged_attack_speed: +25%, reload_speed: +70%, duration: 10, cooldown: 80 -- s->seconds
 			--[+ French +]--
 	create_template("talent_tree_ogr_abil3_000_desc_fr", {"loc_talent_ogryn_combat_ability_special_ammo_new_desc"}, {"fr"}, function(locale, value) return "Échange et recharge votre arme à distance. Pendant les {duration:%s} secondes suivantes, vous avez une vitesse de tir de {ranged_attack_speed:%s}, une vitesse de recharge de {reload_speed:%s}, des pénalités de vitesse de déplacement réduites de {reduced_move_penalty:%s}, et vous gagnez {damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." à courte portée. Temps de recharge de base {cooldown:%s} secondes."..TALENTS_Enh_desc2_fr.ED_OGR_Ability_3_rgb_fr end),
+			--[+ Traditional Chinese - 貼身火力 +]--
+	create_template("talent_tree_ogr_abil3_000_desc_tw", {"loc_talent_ogryn_combat_ability_special_ammo_new_desc"}, {"zh-tw"}, function(locale, value) return "切換並重新裝填您的遠程武器。在接下來的{duration:%s}秒內，您的射速為{ranged_attack_speed:%s}，重新裝填速度為{reload_speed:%s}，減少{reduced_move_penalty:%s}的支撐移動速度懲罰，並獲得{damage:%s}的近距離"..COLORS_KWords_tw.Damage_rgb.."。\n基礎冷卻時間{cooldown:%s}秒。"..TALENTS_Enh_desc2_tw.ED_OGR_Ability_3_rgb end), -- ranged_attack_speed: +25%, reload_speed: +70%, duration: 10, cooldown: 80 -- s->seconds
 
 	--[+ Ability 3-1 - Bullet Bravado +]--
 		-- create_template("talent_tree_ogr_abil3_001_en", {"loc_talent_ogryn_special_ammo_toughness"}, {"en"}, function(locale, value) return "Bullet Bravado" end),
 	create_template("talent_tree_ogr_abil3_001_desc_en", {"loc_talent_ogryn_special_ammo_toughness_on_shot_and_reload_desc"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_rgb.." replenishes for every Shot Fired and {toughness_reload:%s} "..COLORS_KWords.Toughness_rgb.." on each Reload while {ability:%s} is active."..TALENTS_Enh_desc2.ED_OGR_Ability_3_1_rgb end), -- ability: Point-Blank Barrage, toughness: +2%, toughness_reload: +10% -- rewrite -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_abil3_001_desc_fr", {"loc_talent_ogryn_special_ammo_toughness_on_shot_and_reload_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." se régénère à chaque tir et {toughness_reload:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." à chaque rechargement pendant que {ability:%s} est actif."..TALENTS_Enh_desc2_fr.ED_OGR_Ability_3_1_rgb_fr end), 
+			--[+ Traditional Chinese - 壯膽子彈 +]--
+	create_template("talent_tree_ogr_abil3_001_desc_tw", {"loc_talent_ogryn_special_ammo_toughness_on_shot_and_reload_desc"}, {"zh-tw"}, function(locale, value) return "當{ability:%s}啟動時，每次開火補充{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."，每次重新裝填補充{toughness_reload:%s}的"..COLORS_KWords_tw.Toughness_rgb.."。"..TALENTS_Enh_desc2_tw.ED_OGR_Ability_3_1_rgb end), -- ability: Point-Blank Barrage, toughness: +2%, toughness_reload: +10% -- rewrite -- colors
 
 	--[+ Ability 3-2 - Hail of Fire +]--
 		-- create_template("talent_tree_ogr_abil3_002_en", {"loc_talent_ogryn_special_ammo_armor_pen"}, {"en"}, function(locale, value) return "Hail of Fire" end),
 	create_template("talent_tree_ogr_abil3_002_desc_en", {"loc_talent_ogryn_special_ammo_armor_pen_desc"}, {"en"}, function(locale, value) return "{rending_multiplier:%s} "..COLORS_KWords.Rending_rgb.." to your Ranged Attacks while {ability:%s} is active."..TALENTS_Enh_desc2.ED_OGR_Ability_3_2_rgb end), -- rending_multiplier: +30%, ability: Point-Blank Barrage -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_abil3_002_desc_fr", {"loc_talent_ogryn_special_ammo_armor_pen_desc"}, {"fr"}, function(locale, value) return "{rending_multiplier:%s} de "..COLORS_KWords_fr.Rending_rgb_fr.." à vos attaques à distance pendant que {ability:%s} est actif."..TALENTS_Enh_desc2_fr.ED_OGR_Ability_3_2_rgb_fr end), 
+			--[+ Traditional Chinese - 槍林彈雨 +]--
+	create_template("talent_tree_ogr_abil3_002_desc_tw", {"loc_talent_ogryn_special_ammo_armor_pen_desc"}, {"zh-tw"}, function(locale, value) return "當{ability:%s}啟動時，對您的遠程攻擊增加{rending_multiplier:%s}的"..COLORS_KWords_tw.Rending_rgb.."。"..TALENTS_Enh_desc2_tw.ED_OGR_Ability_3_2_rgb end), -- rending_multiplier: +30%, ability: Point-Blank Barrage -- colors
 
 	--[+ Ability 3-3 - Light 'em Up +]--
 		-- create_template("talent_tree_ogr_abil3_003_en", {"loc_talent_ogryn_special_ammo_fire_shots"}, {"en"}, function(locale, value) return "Light 'em Up" end),
 	create_template("talent_tree_ogr_abil3_003_desc_en", {"loc_talent_ogryn_special_ammo_fire_shots_desc"}, {"en"}, function(locale, value) return "Ranged Attacks apply {stacks:%s} Stacks of "..COLORS_KWords.Burn_rgb.." while {ability:%s} is active."..TALENTS_Enh_desc2.ED_OGR_Ability_3_3_rgb end), -- stacks: 2, ability: Point-Blank Barrage -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_abil3_003_desc_fr", {"loc_talent_ogryn_special_ammo_fire_shots_desc"}, {"fr"}, function(locale, value) return "Les attaques à distance appliquent {stacks:%s} cumuls de "..COLORS_KWords_fr.Burn_rgb_fr.." pendant que {ability:%s} est actif."..TALENTS_Enh_desc2_fr.ED_OGR_Ability_3_3_rgb_fr end),
+			--[+ Traditional Chinese - 火力全開 +]--
+	create_template("talent_tree_ogr_abil3_003_desc_tw", {"loc_talent_ogryn_special_ammo_fire_shots_desc"}, {"zh-tw"}, function(locale, value) return "當{ability:%s}啟動時，遠程攻擊疊加{stacks:%s}層"..COLORS_KWords_tw.Burn_rgb.."。"..TALENTS_Enh_desc2_tw.ED_OGR_Ability_3_3_rgb end), -- stacks: 2, ability: Point-Blank Barrage -- colors
 
 	--[+ +KEYSTONES+ +]--
 	--[+ Keystone 1 - Heavy Hitter +]--
@@ -2162,72 +2261,96 @@ local localization_templates = {
 	create_template("talent_tree_ogr_keys1_000_desc_en", {"loc_talent_ogryn_passive_heavy_hitter_desc"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Damage_rgb.." for {duration:%s} seconds on Heavy Attack Hit. Stacks {stacks:%s} times."..TALENTS_Enh_desc2.ED_OGR_Keystone_1_rgb end), -- damage: +5%, duration: 7.5, stacks: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_keys1_000_desc_fr", {"loc_talent_ogryn_passive_heavy_hitter_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." pendant {duration:%s} secondes lors d'une attaque puissante réussie. Se cumuls {stacks:%s} fois."..TALENTS_Enh_desc2_fr.ED_OGR_Keystone_1_rgb_fr end),
+			--[+ Traditional Chinese - 重拳出擊 +]--
+	create_template("talent_tree_ogr_keys1_000_desc_tw", {"loc_talent_ogryn_passive_heavy_hitter_desc"}, {"zh-tw"}, function(locale, value) return "重擊命中時，{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."，持續{duration:%s}秒。可疊加{stacks:%s}次。"..TALENTS_Enh_desc2_tw.ED_OGR_Keystone_1_rgb end), -- damage: +5%, duration: 7.5, stacks: 5 -- s->seconds -- colors
 
 	--[+ Keystone 1-1 - Just Getting Started +]--
 		-- create_template("talent_tree_ogr_keys1_001_en", {"loc_talent_ogryn_heavy_hitter_max_stacks_improves_attack_speed"}, {"en"}, function(locale, value) return "Just Getting Started" end),
 	create_template("talent_tree_ogr_keys1_001_desc_en", {"loc_talent_ogryn_heavy_hitter_max_stacks_improves_attack_speed_description"}, {"en"}, function(locale, value) return "{attack_speed:%s} Attack Speed while {talent_name:%s} is at {stacks:%s} Stacks."..TALENTS_Enh_desc2.ED_OGR_Keystone_1_1_rgb end), -- talent_name: Heavy Hitter, stacks: 5, attack_speed: +10%
 			--[+ French +]--
 	create_template("talent_tree_ogr_keys1_001_desc_fr", {"loc_talent_ogryn_heavy_hitter_max_stacks_improves_attack_speed_description"}, {"fr"}, function(locale, value) return "{attack_speed:%s} Vitesse d'attaque tant que {talent_name:%s} est à {stacks:%s} cumuls."..TALENTS_Enh_desc2_fr.ED_OGR_Keystone_1_1_rgb_fr end), 
+			--[+ Traditional Chinese - 熱身完畢 +]--
+	create_template("talent_tree_ogr_keys1_001_desc_tw", {"loc_talent_ogryn_heavy_hitter_max_stacks_improves_attack_speed_description"}, {"zh-tw"}, function(locale, value) return "當{talent_name:%s}達到{stacks:%s}層時，{attack_speed:%s}的攻擊速度。"..TALENTS_Enh_desc2_tw.ED_OGR_Keystone_1_1_rgb end), -- talent_name: Heavy Hitter, stacks: 5, attack_speed: +10%
 
 	--[+ Keystone 1-2 - Unstoppable +]--
 		-- create_template("talent_tree_ogr_keys1_002_en", {"loc_talent_ogryn_heavy_hitter_max_stacks_improves_toughness"}, {"en"}, function(locale, value) return "Unstoppable" end),
 	create_template("talent_tree_ogr_keys1_002_desc_en", {"loc_talent_ogryn_heavy_hitter_max_stacks_improves_toughness_description"}, {"en"}, function(locale, value) return "{toughness_melee_replenish:%s} "..COLORS_KWords.Toughness_rgb.." replenished from Melee Kills while {talent_name:%s} is at {stacks:%s} Stacks."..TALENTS_Enh_desc2.ED_OGR_Keystone_1_2_rgb end), -- talent_name: Heavy Hitter, stacks: 5, toughness_melee_replenish: +100% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_keys1_002_desc_fr", {"loc_talent_ogryn_heavy_hitter_max_stacks_improves_toughness_description"}, {"fr"}, function(locale, value) return "{toughness_melee_replenish:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." régénérée par les éliminations en mêlée tant que {talent_name:%s} est à {stacks:%s} cumuls."..TALENTS_Enh_desc2_fr.ED_OGR_Keystone_1_2_rgb_fr end), 
+			--[+ Traditional Chinese - 越戰越勇 +]--
+	create_template("talent_tree_ogr_keys1_002_desc_tw", {"loc_talent_ogryn_heavy_hitter_max_stacks_improves_toughness_description"}, {"zh-tw"}, function(locale, value) return "當{talent_name:%s}達到{stacks:%s}層時，每次近戰擊殺恢復的"..COLORS_KWords_tw.Toughness_rgb.."{toughness_melee_replenish:%s}。不確定"..TALENTS_Enh_desc2_tw.ED_OGR_Keystone_1_2_rgb end), -- talent_name: Heavy Hitter, stacks: 5, toughness_melee_replenish: +100%
 
 	--[+ Keystone 1-3 - Brutish Momentum +]--
 		-- create_template("talent_tree_ogr_keys1_003_en", {"loc_talent_ogryn_heavy_hitter_light_attacks_refresh"}, {"en"}, function(locale, value) return "Brutish Momentum" end),
 	create_template("talent_tree_ogr_keys1_003_desc_en", {"loc_talent_ogryn_heavy_hitter_light_attacks_refresh_description"}, {"en"}, function(locale, value) return "{talent_name:%s} Duration is refreshed by Light Attacks."..TALENTS_Enh_desc2.ED_OGR_Keystone_1_3_rgb end), -- talent_name: Heavy Hitter
 			--[+ French +]--
 	create_template("talent_tree_ogr_keys1_003_desc_fr", {"loc_talent_ogryn_heavy_hitter_light_attacks_refresh_description"}, {"fr"}, function(locale, value) return "La durée de {talent_name:%s} est rafraîchie par les attaques légères."..TALENTS_Enh_desc2_fr.ED_OGR_Keystone_1_3_rgb_fr end),
+			--[+ Traditional Chinese - 兇蠻打擊 +]--
+	create_template("talent_tree_ogr_keys1_003_desc_tw", {"loc_talent_ogryn_heavy_hitter_light_attacks_refresh_description"}, {"zh-tw"}, function(locale, value) return "輕攻擊刷新{talent_name:%s}持續時間。"..TALENTS_Enh_desc2_tw.ED_OGR_Keystone_1_3_rgb end), -- talent_name: Heavy Hitter
 
 	--[+ Keystone 2 - Feel No Pain +]--
 		-- create_template("talent_tree_ogr_keys2_000_en", {"loc_talent_ogryn_carapace_armor"}, {"en"}, function(locale, value) return "Feel No Pain" end),
 	create_template("talent_tree_ogr_keys2_000_desc_en", {"loc_talent_ogryn_carapace_armor_any_damage_desc"}, {"en"}, function(locale, value) return "You are blessed with {stacks:%s} Stacks of "..COLORS_KWords.Feel_no_pain_rgb..". Each Stack grants:\n{toughness_regen:%s} "..COLORS_KWords.Toughness_rgb.." Replenishment and\n{damage_reduction:%s} "..COLORS_KWords.Damage_rgb.." Reduction.\nTaking "..COLORS_KWords.Damage_rgb.." removes one Stack. Stacks are restored every {duration:%s} seconds."..TALENTS_Enh_desc2.ED_OGR_Keystone_2_rgb end), -- stacks: 10, toughness_regen: +2.5%, damage_reduction: +2.5%, duration: 3 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_keys2_000_desc_fr", {"loc_talent_ogryn_carapace_armor_any_damage_desc"}, {"fr"}, function(locale, value) return "Vous recevez {stacks:%s} cumuls de "..COLORS_KWords_fr.Feel_no_pain_rgb_fr..". Chaque cumul accorde :\n{toughness_regen:%s} de régénération de "..COLORS_KWords_fr.Toughness_rgb_fr.." et\n{damage_reduction:%s} de réduction de "..COLORS_KWords_fr.Damage_rgb_fr..".\nPrendre des "..COLORS_KWords_fr.Damage_rgb_fr.." retire un cumul. Les cumuls sont restaurées toutes les {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_OGR_Keystone_2_rgb_fr end),
+			--[+ Traditional Chinese - 麻木 +]--
+	create_template("talent_tree_ogr_keys2_000_desc_tw", {"loc_talent_ogryn_carapace_armor_any_damage_desc"}, {"zh-tw"}, function(locale, value) return "你被賜予{stacks:%s}層"..COLORS_KWords_tw.Feel_no_pain_rgb.."。\n每層提供：\n{toughness_regen:%s}的"..COLORS_KWords_tw.Toughness_rgb.."補充和\n{damage_reduction:%s}的"..COLORS_KWords_tw.Damage_rgb.."減免。\n受到"..COLORS_KWords_tw.Damage_rgb.."會移除一層。每{duration:%s}秒恢復一層。"..TALENTS_Enh_desc2_tw.ED_OGR_Keystone_2_rgb end), -- stacks: 10, toughness_regen: +2.5%, damage_reduction: +2.5%, duration: 3 -- s->seconds -- colors
 
 	--[+ Keystone 2-1 - Pained Outburst +]--
 		-- create_template("talent_tree_ogr_keys2_001_en", {"loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks"}, {"en"}, function(locale, value) return "Pained Outburst" end),
 	create_template("talent_tree_ogr_keys2_001_desc_en", {"loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_desc"}, {"en"}, function(locale, value) return "{toughness_replenish:%s} "..COLORS_KWords.Toughness_rgb.." replenished when {talent_name:%s} reaches "..COLORS_Numbers.n_0_rgb.." Stacks. It also creates an explosion that deals no Damage but "..COLORS_KWords.Staggers_rgb.." surrounding enemies.\n\nThis effect can occur once every {cooldown:%s} seconds."..TALENTS_Enh_desc2.ED_OGR_Keystone_2_1_rgb end), -- talent_name: Feel No Pain, toughness_replenish: +20%, cooldown: 30 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_keys2_001_desc_fr", {"loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_desc"}, {"fr"}, function(locale, value) return "{toughness_replenish:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." régénérée quand {talent_name:%s} atteint "..COLORS_Numbers.n_0_rgb.." cumul. Cela crée aussi une explosion qui ne cause pas de dégâts mais fait "..COLORS_KWords_fr.Staggering_rgb_fr.." les ennemis environnants.\n\nCet effet peut se produire une fois toutes les {cooldown:%s} secondes."..TALENTS_Enh_desc2_fr.ED_OGR_Keystone_2_1_rgb_fr end), 
+			--[+ Traditional Chinese - 痛楚爆發 +]--
+	create_template("talent_tree_ogr_keys2_001_desc_tw", {"loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_desc"}, {"zh-tw"}, function(locale, value) return "當{talent_name:%s}達到"..COLORS_Numbers.n_0_rgb.."層時，補充{toughness_replenish:%s}的"..COLORS_KWords_tw.Toughness_rgb.."。同時創造一個爆炸，不造成傷害但使周圍敵人"..COLORS_KWords_tw.Staggers_rgb.."。\n\n此效果每{cooldown:%s}秒發生一次。"..TALENTS_Enh_desc2_tw.ED_OGR_Keystone_2_1_rgb end), -- talent_name: Feel No Pain, toughness_replenish: +20%, cooldown: 30 -- s->seconds -- colors
 
 	--[+ Keystone 2-2 - Strongest! +]--
 		-- create_template("talent_tree_ogr_keys2_002_en", {"loc_talent_ogryn_carapace_armor_add_stack_on_push"}, {"en"}, function(locale, value) return "Strongest!" end),
 	create_template("talent_tree_ogr_keys2_002_desc_en", {"loc_talent_ogryn_carapace_armor_add_stack_on_push_desc"}, {"en"}, function(locale, value) return COLORS_Numbers.n_1_rgb.." Stack of {talent_name:%s} is restored by Pushing enemies."..TALENTS_Enh_desc2.ED_OGR_Keystone_2_2_rgb end), -- talent_name: Feel No Pain
 			--[+ French +]--
 	create_template("talent_tree_ogr_keys2_002_desc_fr", {"loc_talent_ogryn_carapace_armor_add_stack_on_push_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.n_1_rgb.." cumul de {talent_name:%s} est restaurée en poussant les ennemis."..TALENTS_Enh_desc2_fr.ED_OGR_Keystone_2_2_rgb_fr end),
+			--[+ Traditional Chinese - 最強壯! +]--
+	create_template("talent_tree_ogr_keys2_002_desc_tw", {"loc_talent_ogryn_carapace_armor_add_stack_on_push_desc"}, {"zh-tw"}, function(locale, value) return "推擠敵人可恢復{talent_name:%s}的"..COLORS_Numbers.n_1_rgb.."層。"..TALENTS_Enh_desc2_tw.ED_OGR_Keystone_2_2_rgb end), -- talent_name: Feel No Pain
 
 	--[+ Keystone 2-3 - Toughest! +]--
 		-- create_template("talent_tree_ogr_keys2_003_en", {"loc_talent_ogryn_carapace_armor_more_toughness"}, {"en"}, function(locale, value) return "Toughest!" end),
 	create_template("talent_tree_ogr_keys2_003_desc_en", {"loc_talent_ogryn_carapace_armor_more_toughness_desc"}, {"en"}, function(locale, value) return "{toughness_regen:%s} "..COLORS_KWords.Toughness_rgb.." replenishment per stack is granted by {talent_name:%s}."..TALENTS_Enh_desc2.ED_OGR_Keystone_2_3_rgb end), -- talent_name: Feel No Pain, toughness_regen: +2.5% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_keys2_003_desc_fr", {"loc_talent_ogryn_carapace_armor_more_toughness_desc"}, {"fr"}, function(locale, value) return "{toughness_regen:%s} de régénération de "..COLORS_KWords_fr.Toughness_rgb_fr.." par cumul est accordée par {talent_name:%s}."..TALENTS_Enh_desc2_fr.ED_OGR_Keystone_2_3_rgb_fr end),
+			--[+ Traditional Chinese - 最堅韌! +]--
+	create_template("talent_tree_ogr_keys2_003_desc_tw", {"loc_talent_ogryn_carapace_armor_more_toughness_desc"}, {"zh-tw"}, function(locale, value) return "每層{talent_name:%s}提供{toughness_regen:%s}的"..COLORS_KWords_tw.Toughness_rgb.."補充。"..TALENTS_Enh_desc2_tw.ED_OGR_Keystone_2_3_rgb end), -- talent_name: Feel No Pain, toughness_regen: +2.5% -- colors
 
 	--[+ Keystone 3 - Burst Limiter Override +]--
 		-- create_template("talent_tree_ogr_keys3_000_en", {"loc_talent_ogryn_chance_to_not_consume_ammo"}, {"en"}, function(locale, value) return "Burst Limiter Override" end),
 	create_template("talent_tree_ogr_keys3_000_desc_en", {"loc_talent_ogryn_chance_to_not_consume_ammo_desc"}, {"en"}, function(locale, value) return "{proc_chance:%s} chance of triggering "..COLORS_KWords.Lucky_bullet_rgb.." and not consuming Ammo when making Ranged Attacks."..TALENTS_Enh_desc2.ED_OGR_Keystone_3_rgb end), -- proc_chance: 8% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_keys3_000_desc_fr", {"loc_talent_ogryn_chance_to_not_consume_ammo_desc"}, {"fr"}, function(locale, value) return "{proc_chance:%s} de chance de déclencher "..COLORS_KWords_fr.Lucky_bullet_rgb_fr.." et de ne pas consommer de munitions lors des attaques à distance."..TALENTS_Enh_desc2_fr.ED_OGR_Keystone_3_rgb_fr end),
+			--[+ Traditional Chinese - 爆限超載 +]--
+	create_template("talent_tree_ogr_keys3_000_desc_tw", {"loc_talent_ogryn_chance_to_not_consume_ammo_desc"}, {"zh-tw"}, function(locale, value) return "當進行遠程攻擊時，有{proc_chance:%s}的機率觸發"..COLORS_KWords_tw.Lucky_bullet_rgb.."並不消耗彈藥。"..TALENTS_Enh_desc2_tw.ED_OGR_Keystone_3_rgb end), -- proc_chance: 8% -- colors
 
 	--[+ Keystone 3-1 - Maximum Firepower +]--
 		-- create_template("talent_tree_ogr_keys3_001_en", {"loc_talent_ogryn_leadbelcher_grant_cooldown_reduction"}, {"en"}, function(locale, value) return "Maximum Firepower" end),
 	create_template("talent_tree_ogr_keys3_001_desc_en", {"loc_talent_ogryn_leadbelcher_grant_cooldown_reduction_desc"}, {"en"}, function(locale, value) return "{cooldown_reduction:%s} "..COLORS_KWords.Ability_cd_rgb.." Reduction for {duration:%s} seconds when "..COLORS_KWords.Lucky_bullet_rgb.." triggers."..TALENTS_Enh_desc2.ED_OGR_Keystone_3_1_rgb end), -- cooldown_reduction: +200%, duration: 2 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_keys3_001_desc_fr", {"loc_talent_ogryn_leadbelcher_grant_cooldown_reduction_desc"}, {"fr"}, function(locale, value) return "{cooldown_reduction:%s} de "..COLORS_KWords_fr.Ability_cd_rgb_fr.." pendant {duration:%s} secondes lorsque "..COLORS_KWords_fr.Lucky_bullet_rgb_fr.." est déclenché."..TALENTS_Enh_desc2_fr.ED_OGR_Keystone_3_1_rgb_fr end), -- cooldown_reduction: +200%, duration: 2 -- s->seconds -- colors
+			--[+ Traditional Chinese - 最大火力 +]--
+	create_template("talent_tree_ogr_keys3_001_desc_tw", {"loc_talent_ogryn_leadbelcher_grant_cooldown_reduction_desc"}, {"zh-tw"}, function(locale, value) return "當"..COLORS_KWords_tw.Lucky_bullet_rgb.."觸發時，"..COLORS_KWords_tw.Ability_cd_rgb.."縮減{cooldown_reduction:%s}，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_OGR_Keystone_3_1_rgb end), -- cooldown_reduction: +200%, duration: 2 -- s->seconds -- colors
 
 	--[+ Keystone 3-2 - Good Shootin' +]--
 		-- create_template("talent_tree_ogr_keys3_002_en", {"loc_talent_ogryn_critical_leadbelcher"}, {"en"}, function(locale, value) return "Good Shootin'" end),
 	create_template("talent_tree_ogr_keys3_002_desc_en", {"loc_talent_ogryn_critical_leadbelcher_desc"}, {"en"}, function(locale, value) return "The shot that triggers "..COLORS_KWords.Lucky_bullet_rgb.." is a guaranteed "..COLORS_KWords.Crit_rgb.." (if it Hits)."..TALENTS_Enh_desc2.ED_OGR_Keystone_3_2_rgb end), -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_keys3_002_desc_fr", {"loc_talent_ogryn_critical_leadbelcher_desc"}, {"fr"}, function(locale, value) return "Le tir qui déclenche "..COLORS_KWords_fr.Lucky_bullet_rgb_fr.." est un "..COLORS_KWords_fr.Crit_hit_rgb_fr.." garanti (s'il touche)."..TALENTS_Enh_desc2_fr.ED_OGR_Keystone_3_2_rgb_fr end), -- colors
+			--[+ Traditional Chinese - 好槍法 +]--
+	create_template("talent_tree_ogr_keys3_002_desc_tw", {"loc_talent_ogryn_critical_leadbelcher_desc"}, {"zh-tw"}, function(locale, value) return "觸發"..COLORS_KWords_tw.Lucky_bullet_rgb.."的射擊保證"..COLORS_KWords_tw.Crit_rgb.."（如果命中）。"..TALENTS_Enh_desc2_tw.ED_OGR_Keystone_3_2_rgb end), -- colors
 
 	--[+ Keystone 3-3 - More Burst Limiter Overrides! +]--
 		-- create_template("talent_tree_ogr_keys3_003_en", {"loc_talent_ogryn_increased_leadbelcher_chance"}, {"en"}, function(locale, value) return "More Burst Limiter Overrides!" end),
 	create_template("talent_tree_ogr_keys3_003_desc_en", {"loc_talent_ogryn_increased_leadbelcher_chance_desc"}, {"en"}, function(locale, value) return "Your chance of triggering "..COLORS_KWords.Lucky_bullet_rgb.." is increased to {proc_chance:%s}." end), -- proc_chance: 12% -- rewrite -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_keys3_003_desc_fr", {"loc_talent_ogryn_increased_leadbelcher_chance_desc"}, {"fr"}, function(locale, value) return "Votre chance de déclencher "..COLORS_KWords_fr.Lucky_bullet_rgb_fr.." est augmentée à {proc_chance:%s}." end), -- proc_chance: 12% -- rewrite -- colors
+			--[+ Traditional Chinese - 爆限大超載! +]--
+	create_template("talent_tree_ogr_keys3_003_desc_tw", {"loc_talent_ogryn_increased_leadbelcher_chance_desc"}, {"zh-tw"}, function(locale, value) return "觸發"..COLORS_KWords_tw.Lucky_bullet_rgb.."的機率增加至{proc_chance:%s}。" end), -- proc_chance: 12% -- rewrite -- colors
 
 --[+ +PASSIVES+ +]--
 	--[+ Passive 1 - Furious +]--
@@ -2235,180 +2358,240 @@ local localization_templates = {
 	create_template("talent_tree_ogr_pas_001_desc_en", {"loc_talent_ogryn_damage_per_enemy_hit_previous_desc"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Damage_rgb.." on your next Melee Attack is gained for each Enemy you hit during the same Heavy Melee Attack."..TALENTS_Enh_desc2.ED_OGR_Passive_1_rgb end), -- damage: +2.5% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_001_desc_fr", {"loc_talent_ogryn_damage_per_enemy_hit_previous_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." sur votre prochaine attaque de mêlée est gagné pour chaque ennemi touché lors de la même attaque de mêlée puissante."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_1_rgb_fr end), -- damage: +2.5% -- colors
+			--[+ Traditional Chinese - 怒不可遏 +]--
+	create_template("talent_tree_ogr_pas_001_desc_tw", {"loc_talent_ogryn_damage_per_enemy_hit_previous_desc"}, {"zh-tw"}, function(locale, value) return "在同一次重型近戰攻擊中，每擊中一名敵人，下一次近戰攻擊獲得{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_1_rgb end), -- damage: +2.5% -- colors
 
 	--[+ Passive 2 - Reloaded and Ready +]--
 		-- create_template("talent_tree_ogr_pas_002_en", {"loc_talent_ogryn_ranged_damage_on_reload"}, {"en"}, function(locale, value) return "Reloaded and Ready" end),
 	create_template("talent_tree_ogr_pas_002_desc_en", {"loc_talent_ogryn_ranged_damage_on_reload_desc"}, {"en"}, function(locale, value) return "{damage:%s} Ranged "..COLORS_KWords.Damage_rgb.." for {duration:%s} seconds on Reload."..TALENTS_Enh_desc2.ED_OGR_Passive_2_rgb end), -- damage :+15%, duration: 8 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_002_desc_fr", {"loc_talent_ogryn_ranged_damage_on_reload_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." à distance pendant {duration:%s} secondes lors du rechargement."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_2_rgb_fr end), -- damage :+15%, duration: 8 -- s->seconds -- colors
+			--[+ Traditional Chinese - 換彈完畢 +]--
+	create_template("talent_tree_ogr_pas_002_desc_tw", {"loc_talent_ogryn_ranged_damage_on_reload_desc"}, {"zh-tw"}, function(locale, value) return "在換彈時，遠程攻擊增加{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_2_rgb end), -- damage :+15%, duration: 8 -- s->seconds -- colors
 
 	--[+ Passive 3 - The Best Defence +]--
 		-- create_template("talent_tree_ogr_pas_003_en", {"loc_talent_ogryn_toughness_on_multiple"}, {"en"}, function(locale, value) return "The Best Defence" end),
 	create_template("talent_tree_ogr_pas_003_desc_en", {"loc_talent_ogryn_toughness_on_multiple_desc"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_rgb.." replenishes after hitting multiple Enemies with a single Heavy Melee Attack."..TALENTS_Enh_desc2.ED_OGR_Passive_3_rgb end), -- toughness: 20% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_003_desc_fr", {"loc_talent_ogryn_toughness_on_multiple_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." se régénère après avoir touché plusieurs ennemis avec une seule attaque de mêlée puissante."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_3_rgb_fr end), -- toughness: 20% -- colors
+			--[+ Traditional Chinese - 最好的防禦 +]--
+	create_template("talent_tree_ogr_pas_003_desc_tw", {"loc_talent_ogryn_toughness_on_multiple_desc"}, {"zh-tw"}, function(locale, value) return "在單次重型近戰攻擊中擊中多名敵人後，{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."恢復。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_3_rgb end), -- toughness: 20% -- colors
 
 	--[+ Passive 4 - Heavyweight +]--
 		-- create_template("talent_tree_ogr_pas_004_en", {"loc_talent_ogryn_ogryn_fighter"}, {"en"}, function(locale, value) return "Heavyweight" end),
 	create_template("talent_tree_ogr_pas_004_desc_en", {"loc_talent_ogryn_ogryn_fighter_desc"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Damage_rgb.." against Bulwarks, Crushers, Plague Ogryns and Reapers. Also receive {damage_reduction:%s} "..COLORS_KWords.Damage_rgb.." Reduction against the same."..TALENTS_Enh_desc2.ED_OGR_Passive_4_rgb end), -- damage: +30%, damage_reduction: +30% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_004_desc_fr", {"loc_talent_ogryn_ogryn_fighter_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." contre les Remparts, Broyeurs, Ogryns de la Peste et Fauchers. Vous recevez également {damage_reduction:%s} de réduction de "..COLORS_KWords_fr.Damage_rgb_fr.." contre les mêmes ennemis."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_4_rgb_fr end), -- damage: +30%, damage_reduction: +30% -- colors
+			--[+ Traditional Chinese - 重量級 +]--
+	create_template("talent_tree_ogr_pas_004_desc_tw", {"loc_talent_ogryn_ogryn_fighter_desc"}, {"zh-tw"}, function(locale, value) return "對壁壘、碾壓者、瘟疫食人魔和收割者造成{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."。同時對這些敵人獲得{damage_reduction:%s}的"..COLORS_KWords_tw.Damage_rgb.."減免。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_4_rgb end), -- damage: +30%, damage_reduction: +30% -- colors
 
 	--[+ Passive 5 - Steady Grip +]--
 		-- create_template("talent_tree_ogr_pas_005_en", {"loc_talent_ogryn_toughness_regen_while_bracing"}, {"en"}, function(locale, value) return "Steady Grip" end),
 	create_template("talent_tree_ogr_pas_005_desc_en", {"loc_talent_ogryn_toughness_regen_while_bracing_desc"}, {"en"}, function(locale, value) return "{toughness_regen:%s} "..COLORS_KWords.Toughness_rgb.." Regeneration while bracing your Ranged weapon."..TALENTS_Enh_desc2.ED_OGR_Passive_5_rgb end), -- toughness_regen: +3% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_005_desc_fr", {"loc_talent_ogryn_toughness_regen_while_bracing_desc"}, {"fr"}, function(locale, value) return "{toughness_regen:%s} de régénération de "..COLORS_KWords_fr.Toughness_rgb_fr.." lors de la mis en joue de votre arme à distance."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_5_rgb_fr end), -- toughness_regen: +3% -- colors
+			--[+ Traditional Chinese - 穩定握持 +]--
+	create_template("talent_tree_ogr_pas_005_desc_tw", {"loc_talent_ogryn_toughness_regen_while_bracing_desc"}, {"zh-tw"}, function(locale, value) return "握持遠程武器時，{toughness_regen:%s}的"..COLORS_KWords_tw.Toughness_rgb.."恢復。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_5_rgb end), -- toughness_regen: +3% -- colors
 
 	--[+ Passive 6 - Smash 'Em! +]--
 		-- create_template("talent_tree_ogr_pas_006_en", {"loc_talent_ogryn_toughness_on_single_heavy"}, {"en"}, function(locale, value) return "Smash 'Em!" end),
 	create_template("talent_tree_ogr_pas_006_desc_en", {"loc_talent_ogryn_toughness_on_single_heavy_desc"}, {"en"}, function(locale, value) return "{toughness:%s} "..COLORS_KWords.Toughness_rgb.." replenishes after hitting a single Enemy with a Heavy Melee Attack."..TALENTS_Enh_desc2.ED_OGR_Passive_6_rgb end), -- toughness: 20% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_006_desc_fr", {"loc_talent_ogryn_toughness_on_single_heavy_desc"}, {"fr"}, function(locale, value) return "{toughness:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." se régénère après avoir frappé un seul ennemi avec une attaque de mêlée puissante."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_6_rgb_fr end), -- toughness: 20% -- colors
+			--[+ Traditional Chinese - 碾碎它們! +]--
+	create_template("talent_tree_ogr_pas_006_desc_tw", {"loc_talent_ogryn_toughness_on_single_heavy_desc"}, {"zh-tw"}, function(locale, value) return "在單次重型近戰攻擊中擊中一名敵人後，{toughness:%s}的"..COLORS_KWords_tw.Toughness_rgb.."恢復。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_6_rgb end), -- toughness: 20% -- colors
 
 	--[+ Passive 7 - Lynchpin +]--
 		-- create_template("talent_tree_ogr_pas_007_en", --  {"loc_talent_ogryn_coherency_toughness_increase"}, {"en"}, function(locale, value) return "Lynchpin" end),
 	create_template("talent_tree_ogr_pas_007_desc_en", {"loc_talent_ogryn_coherency_toughness_increase_desc"}, {"en"}, function(locale, value) return "{toughness_multiplier:%s} "..COLORS_KWords.Toughness_rgb.." replenish while in Coherency."..TALENTS_Enh_desc2.ED_OGR_Passive_7_rgb end), -- toughness_multiplier: +50% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_007_desc_fr", {"loc_talent_ogryn_coherency_toughness_increase_desc"}, {"fr"}, function(locale, value) return "{toughness_multiplier:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." se régénère en étant en syntonie."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_7_rgb_fr end), -- toughness_multiplier: +50% -- colors
+			--[+ Traditional Chinese - 關鍵人物 +]--
+	create_template("talent_tree_ogr_pas_007_desc_tw", {"loc_talent_ogryn_coherency_toughness_increase_desc"}, {"zh-tw"}, function(locale, value) return "在協同性中，{toughness_multiplier:%s}的"..COLORS_KWords_tw.Toughness_rgb.."恢復。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_7_rgb end), -- toughness_multiplier: +50% -- colors
 
 	--[+ Passive 8 - Slam +]--
 		-- create_template("talent_tree_ogr_pas_008_en", {"loc_talent_ogryn_melee_stagger"}, {"en"}, function(locale, value) return "Slam" end),
 	create_template("talent_tree_ogr_pas_008_desc_en", {"loc_talent_ogryn_melee_stagger_desc"}, {"en"}, function(locale, value) return "{stagger:%s} "..COLORS_KWords.Impact_rgb.." bonus on Melee Attacks."..TALENTS_Enh_desc2.ED_OGR_Passive_8_rgb end), -- stagger: +25% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_008_desc_fr", {"loc_talent_ogryn_melee_stagger_desc"}, {"fr"}, function(locale, value) return "{stagger:%s} d'"..COLORS_KWords_fr.Impact_rgb_fr.." bonus sur les attaques de mêlée."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_8_rgb_fr end), -- stagger: +25% -- colors
+			--[+ Traditional Chinese - 猛擊 +]--
+	create_template("talent_tree_ogr_pas_008_desc_tw", {"loc_talent_ogryn_melee_stagger_desc"}, {"zh-tw"}, function(locale, value) return "近戰攻擊增加{stagger:%s}的"..COLORS_KWords_tw.Impact_rgb.."。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_8_rgb end), -- stagger: +25% -- colors
 
 	--[+ Passive 9 - Soften Them Up +]--
 		-- create_template("talent_tree_ogr_pas_009_en", {"loc_talent_ogryn_targets_recieve_damage_increase_debuff"}, {"en"}, function(locale, value) return "Soften Them Up" end),
 	create_template("talent_tree_ogr_pas_009_desc_en", {"loc_talent_ogryn_targets_recieve_damage_increase_debuff_desc"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Damage_rgb.." for {duration:%s} seconds is dealt to enemies you hit."..TALENTS_Enh_desc2.ED_OGR_Passive_9_rgb end), -- damage: +15%, duration: 5 -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_009_desc_fr", {"loc_talent_ogryn_targets_recieve_damage_increase_debuff_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." pendant {duration:%s} secondes est subit par les ennemis que vous frappez."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_9_rgb_fr end), -- damage: +15%, duration: 5 -- colors
+			--[+ Traditional Chinese - 削弱敵人 +]--
+	create_template("talent_tree_ogr_pas_009_desc_tw", {"loc_talent_ogryn_targets_recieve_damage_increase_debuff_desc"}, {"zh-tw"}, function(locale, value) return "擊中敵人造成{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_9_rgb end), -- damage: +15%, duration: 5 -- colors
 
 	--[+ Passive 10 - Crunch! +]--
 		-- create_template("talent_tree_ogr_pas_010_en", --   {"loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger"}, {"en"}, function(locale, value) return "Crunch!" end),
 	create_template("talent_tree_ogr_pas_010_desc_en", {"loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger_desc"}, {"en"}, function(locale, value) return "On fully charged Melee Attack:\n{damage:%s} "..COLORS_KWords.Damage_rgb.." bonus and\n{stagger:%s} "..COLORS_KWords.Impact_rgb.." bonus."..TALENTS_Enh_desc2.ED_OGR_Passive_10_rgb end), -- damage: +40%, stagger: +40% -- &->and -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_010_desc_fr", {"loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger_desc"}, {"fr"}, function(locale, value) return "Sur une attaque de mêlée puissante complètement chargée :\n{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." bonus et\n{stagger:%s} d'"..COLORS_KWords_fr.Impact_rgb_fr.." bonus."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_10_rgb_fr end), -- damage: +40%, stagger: +40% -- &->and -- colors
+			--[+ Traditional Chinese - 嘎嘎! +]--
+	create_template("talent_tree_ogr_pas_010_desc_tw", {"loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger_desc"}, {"zh-tw"}, function(locale, value) return "在完全充能的近戰攻擊中：\n{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."和\n{stagger:%s}的"..COLORS_KWords_tw.Impact_rgb.."。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_10_rgb end), -- damage: +40%, stagger: +40% -- &->and -- colors
 
 	--[+ Passive 11 - Batter +]--
 		-- create_template("talent_tree_ogr_pas_011_en", {"loc_talent_ogryn_bleed_on_multiple_hit"}, {"en"}, function(locale, value) return "Batter" end),
 	create_template("talent_tree_ogr_pas_011_desc_en", {"loc_talent_ogryn_bleed_on_multiple_hit_desc"}, {"en"}, function(locale, value) return "Inflict {stacks:%s} Stacks of "..COLORS_KWords.Bleed_rgb.." on Heavy Melee Hit. Up to "..COLORS_Numbers.n_16_rgb.." Max "..COLORS_KWords.Bleed_rgb.." Stacks on a target."..TALENTS_Enh_desc2.ED_OGR_Passive_11_rgb end), -- stacks: +4 -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_011_desc_fr", {"loc_talent_ogryn_bleed_on_multiple_hit_desc"}, {"fr"}, function(locale, value) return "Inflige {stacks:%s} cumuls de "..COLORS_KWords_fr.Bleed_rgb_fr.." sur une attaque de mêlée puissante. Jusqu'à "..COLORS_Numbers.n_16_rgb.." cumuls maximum de "..COLORS_KWords_fr.Bleed_rgb_fr.." sur une cible."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_11_rgb_fr end), -- stacks: +4 -- colors
+			--[+ Traditional Chinese - 重毆 +]--
+	create_template("talent_tree_ogr_pas_011_desc_tw", {"loc_talent_ogryn_bleed_on_multiple_hit_desc"}, {"zh-tw"}, function(locale, value) return "重型近戰攻擊造成{stacks:%s}層的"..COLORS_KWords_tw.Bleed_rgb.."。單一目標最多可達"..COLORS_Numbers.n_16_rgb.."層"..COLORS_KWords_tw.Bleed_rgb.."。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_11_rgb end), -- stacks: +4 -- colors
 
 	--[+ Passive 12 - Pacemaker +]--
 		-- create_template("talent_tree_ogr_pas_012_en", {"loc_talent_ogryn_reload_speed_on_multiple_hits"}, {"en"}, function(locale, value) return "Pacemaker" end),
 	create_template("talent_tree_ogr_pas_012_desc_en", {"loc_talent_ogryn_reload_speed_on_multiple_hits_desc"}, {"en"}, function(locale, value) return "{reload_speed:%s} Reload Speed for {duration:%s} seconds when hitting {multi_hit:%s} or more enemies with a single attack."..TALENTS_Enh_desc2.ED_OGR_Passive_12_rgb end), -- multi_hit: 5, reload_speed: +25%, duration: 5 -- s->seconds
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_012_desc_fr", {"loc_talent_ogryn_reload_speed_on_multiple_hits_desc"}, {"fr"}, function(locale, value) return "{reload_speed:%s} Vitesse de rechargement pendant {duration:%s} secondes en touchant {multi_hit:%s} ennemis ou plus avec une seule attaque."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_12_rgb_fr end), -- multi_hit: 5, reload_speed: +25%, duration: 5 -- s->seconds
+			--[+ Traditional Chinese - 領跑者 +]--
+	create_template("talent_tree_ogr_pas_012_desc_tw", {"loc_talent_ogryn_reload_speed_on_multiple_hits_desc"}, {"zh-tw"}, function(locale, value) return "在單次攻擊中擊中{multi_hit:%s}名或更多敵人時，{reload_speed:%s}的換彈速度，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_12_rgb end), -- multi_hit: 5, reload_speed: +25%, duration: 5 -- s->seconds
 
 	--[+ Passive 13 - Ammo Stash +]--
 		-- create_template("talent_tree_ogr_pas_013_en", {"loc_talent_ogryn_increased_ammo"}, {"en"}, function(locale, value) return "Ammo Stash" end),
 	create_template("talent_tree_ogr_pas_013_desc_en", {"loc_talent_ogryn_increased_ammo_desc"}, {"en"}, function(locale, value) return "Increase your Maximum Ammo reserve by {max_ammo:%s}, rounds down." end), -- max_ammo: +25% -- rewrite
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_013_desc_fr", {"loc_talent_ogryn_increased_ammo_desc"}, {"fr"}, function(locale, value) return "Augmente votre réserve de munitions maximale de {max_ammo:%s}, arrondi à l'inférieur." end), -- max_ammo: +25% -- rewrite
+			--[+ Traditional Chinese - 彈藥儲存包 +]--
+	create_template("talent_tree_ogr_pas_013_desc_tw", {"loc_talent_ogryn_increased_ammo_desc"}, {"zh-tw"}, function(locale, value) return "增加{max_ammo:%s}的最大彈藥儲存量，無條件捨去。" end), -- max_ammo: +25% -- rewrite
 
 	--[+ Passive 14 - Hard Knocks +]--
 		-- create_template("talent_tree_ogr_pas_014_en", {"loc_talent_ogryn_big_bully_heavy_hits"}, {"en"}, function(locale, value) return "Hard Knocks" end),
 	create_template("talent_tree_ogr_pas_014_desc_en", {"loc_talent_ogryn_big_bully_heavy_hits_desc"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Damage_rgb.." to your next Heavy Melee Attack on Enemy "..COLORS_KWords.Stagger_rgb..". Stacks {stacks:%s} times. Lasts {duration:%s} seconds. The larger the Enemy, the more Stacks are earned."..TALENTS_Enh_desc2.ED_OGR_Passive_14_rgb end), -- damage: +1%, stacks: 25, duration: 10 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_014_desc_fr", {"loc_talent_ogryn_big_bully_heavy_hits_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." à votre prochaine attaque de mêlée puissante sur un ennemi qui "..COLORS_KWords_fr.Stagger_rgb_fr..". Se cumul {stacks:%s} fois. Dure {duration:%s} secondes. Plus l'ennemi est grand, plus vous gagnez de cumuls."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_14_rgb_fr end), -- damage: +1%, stacks: 25, duration: 10 -- s->seconds -- colors
+			--[+ Traditional Chinese - 沉重打擊 +]--
+	create_template("talent_tree_ogr_pas_014_desc_tw", {"loc_talent_ogryn_big_bully_heavy_hits_desc"}, {"zh-tw"}, function(locale, value) return "在敵人"..COLORS_KWords_tw.Stagger_rgb.."時，對下一次重型近戰攻擊造成{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."。最多可累積{stacks:%s}次。持續{duration:%s}秒。敵人越大，獲得的累積越多。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_14_rgb end), -- damage: +1%, stacks: 25, duration: 10 -- s->seconds -- colors
 
 	--[+ Passive 15 - Too Stubborn to Die +]--
 		-- create_template("talent_tree_ogr_pas_015_en", {"loc_talent_ogryn_toughness_gain_increase_on_low_health"}, {"en"}, function(locale, value) return "Too Stubborn to Die" end),
 	create_template("talent_tree_ogr_pas_015_desc_en", {"loc_talent_ogryn_toughness_gain_increase_on_low_health_desc"}, {"en"}, function(locale, value) return "{toughness_multiplier:%s} "..COLORS_KWords.Toughness_rgb.." Replenishment while below {health:%s} "..COLORS_KWords.Health_rgb.."."..TALENTS_Enh_desc2.ED_OGR_Passive_15_rgb end), -- toughness_multiplier: +100%, health: 33% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_015_desc_fr", {"loc_talent_ogryn_toughness_gain_increase_on_low_health_desc"}, {"fr"}, function(locale, value) return "{toughness_multiplier:%s} de "..COLORS_KWords_fr.Toughness_rgb_fr.." Récupération en dessous de {health:%s} de "..COLORS_KWords_fr.Health_rgb_fr.."."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_15_rgb_fr end), -- toughness_multiplier: +100%, health: 33% -- colors
+			--[+ Traditional Chinese - 堅韌不屈 +]--
+	create_template("talent_tree_ogr_pas_015_desc_tw", {"loc_talent_ogryn_toughness_gain_increase_on_low_health_desc"}, {"zh-tw"}, function(locale, value) return "在低於{health:%s}的"..COLORS_KWords_tw.Health_rgb.."時，{toughness_multiplier:%s}的"..COLORS_KWords_tw.Toughness_rgb.."恢復。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_15_rgb end), -- toughness_multiplier: +100%, health: 33% -- colors
 
 	--[+ Passive 16 - Delight in Destruction +]--
 		-- create_template("talent_tree_ogr_pas_016_en", {"loc_talent_ogryn_damage_reduction_per_bleed"}, {"en"}, function(locale, value) return "Delight in Destruction" end),
 	create_template("talent_tree_ogr_pas_016_desc_en", {"loc_talent_ogryn_damage_reduction_per_bleed_desc"}, {"en"}, function(locale, value) return "{damage_reduction:%s} "..COLORS_KWords.Damage_rgb.." Resistance per "..COLORS_KWords.Bleeding_rgb.." Enemy in Melee range. Stacks {max_stacks:%s} times. Up to "..COLORS_Numbers.pc_48_rgb.."."..TALENTS_Enh_desc2.ED_OGR_Passive_16_rgb end), -- damage_reduction: +8%, max_stacks: 6 -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_016_desc_fr", {"loc_talent_ogryn_damage_reduction_per_bleed_desc"}, {"fr"}, function(locale, value) return "{damage_reduction:%s} de résistance aux "..COLORS_KWords_fr.Damage_rgb_fr.." par ennemi qui "..COLORS_KWords_fr.Bleeding_rgb_fr.." à portée de mêlée. Se cumule jusqu'à {max_stacks:%s} fois. Jusqu'à "..COLORS_Numbers.pc_48_rgb.."."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_16_rgb_fr end), -- damage_reduction: +8%, max_stacks: 6 -- colors
+			--[+ Traditional Chinese - 毀滅之樂 +]--
+	create_template("talent_tree_ogr_pas_016_desc_tw", {"loc_talent_ogryn_damage_reduction_per_bleed_desc"}, {"zh-tw"}, function(locale, value) return "在近戰範圍內，每有一名流血的敵人，增加{damage_reduction:%s}的"..COLORS_KWords_tw.Damage_rgb.."抗性。最多可累積{max_stacks:%s}次。最多達到"..COLORS_Numbers.pc_48_rgb.."。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_16_rgb end), -- damage_reduction: +8%, max_stacks: 6 -- colors
 
 	--[+ Passive 17 - Attention Seeker +]--
 		-- create_template("talent_tree_ogr_pas_017_en", {"loc_talent_ranged_enemies_taunt"}, {"en"}, function(locale, value) return "Attention Seeker" end),
 	create_template("talent_tree_ogr_pas_017_desc_en", {"loc_talent_ranged_enemies_taunt_description"}, {"en"}, function(locale, value) return "Blocking or Pushing Enemies Taunts them for {duration:%s} seconds."..TALENTS_Enh_desc2.ED_OGR_Passive_17_rgb end), -- duration: 8 -- s->seconds
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_017_desc_fr", {"loc_talent_ranged_enemies_taunt_description"}, {"fr"}, function(locale, value) return "Bloquer ou pousser les ennemis les provoque pendant {duration:%s} secondes."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_17_rgb_fr end), -- duration: 8 -- s->seconds
+			--[+ Traditional Chinese - 渴求關注 +]--
+	create_template("talent_tree_ogr_pas_017_desc_tw", {"loc_talent_ranged_enemies_taunt_description"}, {"zh-tw"}, function(locale, value) return "阻擋或推擠敵人，使其在{duration:%s}秒內被嘲諷。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_17_rgb end), -- duration: 8 -- s->seconds
 
 	--[+ Passive 18 - Get Stuck In +]--
 		-- create_template("talent_tree_ogr_pas_018_en", {"loc_talent_ogryn_bull_rush_movement_speed"}, {"en"}, function(locale, value) return "Get Stuck In" end),
 	create_template("talent_tree_ogr_pas_018_desc_en", {"loc_talent_ogryn_ability_movement_speed_desc"}, {"en"}, function(locale, value) return "On activating your "..COLORS_KWords.Combat_ability_rgb..", you and Allies in Coherency gain {movement_speed:%s} Movement Speed and are also Immune to "..COLORS_KWords.Stuns_rgb.." and Suppression for {time:%s} seconds."..TALENTS_Enh_desc2.ED_OGR_Passive_18_rgb end), -- movement_speed: +20%, time: 4 -- &->and -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_018_desc_fr", {"loc_talent_ogryn_ability_movement_speed_desc"}, {"fr"}, function(locale, value) return "En activant votre "..COLORS_KWords_fr.Combat_ability_rgb_fr..", vous et vos alliés en syntonie gagnez {movement_speed:%s} de vitesse de déplacement et êtes également immunisés contre les "..COLORS_KWords_fr.Stuns_rgb_fr.." et la suppression pendant {time:%s} secondes."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_18_rgb_fr end), -- movement_speed: +20%, time: 4 -- &->and -- s->seconds -- colors
+			--[+ Traditional Chinese - 全神貫注 +]--
+	create_template("talent_tree_ogr_pas_018_desc_tw", {"loc_talent_ogryn_ability_movement_speed_desc"}, {"zh-tw"}, function(locale, value) return "在啟動你的"..COLORS_KWords_tw.Combat_ability_rgb.."時，你和協同性內的盟友獲得{movement_speed:%s}的移動速度，並且在{time:%s}秒內免疫"..COLORS_KWords_tw.Stuns_rgb.."和壓制效果。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_18_rgb end), -- movement_speed: +20%, time: 4 -- &->and -- s->seconds -- colors
 
 	--[+ Passive 19 - Towering Presence +]--
 		-- create_template("talent_tree_ogr_pas_019_en", {"loc_talent_ogryn_bigger_coherency_radius"}, {"en"}, function(locale, value) return "Towering Presence" end),
 	create_template("talent_tree_ogr_pas_019_desc_en", {"loc_talent_ogryn_bigger_coherency_radius_desc"}, {"en"}, function(locale, value) return "{radius:%s} Coherency radius."..TALENTS_Enh_desc2.ED_OGR_Passive_19_rgb end), -- radius: +50%
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_019_desc_fr", {"loc_talent_ogryn_bigger_coherency_radius_desc"}, {"fr"}, function(locale, value) return "{radius:%s} de rayon de syntonie."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_19_rgb_fr end), -- radius: +50%
+			--[+ Traditional Chinese - 卓越氣場 +]--
+	create_template("talent_tree_ogr_pas_019_desc_tw", {"loc_talent_ogryn_bigger_coherency_radius_desc"}, {"zh-tw"}, function(locale, value) return "{radius:%s}的協同性半徑。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_19_rgb end), -- radius: +50%
 
 	--[+ Passive 20 - Unstoppable Momentum +]--
 		-- create_template("talent_tree_ogr_pas_020_en", {"loc_talent_ogryn_ranged_kill_grant_movement_speed"}, {"en"}, function(locale, value) return "Unstoppable Momentum" end),
 	create_template("talent_tree_ogr_pas_020_desc_en", {"loc_talent_ogryn_ranged_kill_grant_movement_speed_desc"}, {"en"}, function(locale, value) return "{movement_speed:%s} Movement Speed for {duration:%s} seconds on Ranged kill."..TALENTS_Enh_desc2.ED_OGR_Passive_20_rgb end), -- movement_speed: +20%, duration: 2 -- s->seconds
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_020_desc_fr", {"loc_talent_ogryn_ranged_kill_grant_movement_speed_desc"}, {"fr"}, function(locale, value) return "{movement_speed:%s} de vitesse de déplacement pendant {duration:%s} secondes sur une élimination à distance."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_20_rgb_fr end), -- movement_speed: +20%, duration: 2 -- s->seconds
+			--[+ Traditional Chinese - 勢不可擋 +]--
+	create_template("talent_tree_ogr_pas_020_desc_tw", {"loc_talent_ogryn_ranged_kill_grant_movement_speed_desc"}, {"zh-tw"}, function(locale, value) return "在遠程擊殺時，獲得{movement_speed:%s}的移動速度，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_20_rgb end), -- movement_speed: +20%, duration: 2 -- s->seconds
 
 	--[+ Passive 21 - No Stopping Me! +]--
 		-- create_template("talent_tree_ogr_pas_021_en", {"loc_talent_ogryn_windup_is_uninterruptible"}, {"en"}, function(locale, value) return "No Stopping Me!" end),
 	create_template("talent_tree_ogr_pas_021_desc_en", {"loc_talent_ogryn_windup_is_uninterruptible_desc"}, {"en"}, function(locale, value) return "Become Uninterruptible while charging Heavy Melee Attacks."..TALENTS_Enh_desc2.ED_OGR_Passive_21_rgb end),
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_021_desc_fr", {"loc_talent_ogryn_windup_is_uninterruptible_desc"}, {"fr"}, function(locale, value) return "Devenez Inarrêtable pendant le chargement des attaques puissantes de mêlée."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_21_rgb_fr end),
+			--[+ Traditional Chinese - 誰敢攔我! +]--
+	create_template("talent_tree_ogr_pas_021_desc_tw", {"loc_talent_ogryn_windup_is_uninterruptible_desc"}, {"zh-tw"}, function(locale, value) return "在充能重型近戰攻擊時，無法被中斷。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_21_rgb end),
 
 	--[+ Passive 22 - Dominate +]--
 		-- create_template("talent_tree_ogr_pas_022_en", {"loc_talent_ogryn_rending_on_elite_kills"}, {"en"}, function(locale, value) return "Dominate" end),
 	create_template("talent_tree_ogr_pas_022_desc_en", {"loc_talent_ogryn_rending_on_elite_kills_desc"}, {"en"}, function(locale, value) return "{rending_multiplier:%s} "..COLORS_KWords.Rending_rgb.." for {duration:%s} seconds on Elite kill."..TALENTS_Enh_desc2.ED_OGR_Passive_22_rgb end), -- rending_multiplier: +10%, duration: 10 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_022_desc_fr", {"loc_talent_ogryn_rending_on_elite_kills_desc"}, {"fr"}, function(locale, value) return "{rending_multiplier:%s} de "..COLORS_KWords_fr.Rending_rgb_fr.." pendant {duration:%s} secondes après une élimination d'élite."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_22_rgb_fr end), -- rending_multiplier: +10%, duration: 10 -- s->seconds -- colors
+			--[+ Traditional Chinese - 主宰 +]--
+	create_template("talent_tree_ogr_pas_022_desc_tw", {"loc_talent_ogryn_rending_on_elite_kills_desc"}, {"zh-tw"}, function(locale, value) return "在擊殺精英時，{rending_multiplier:%s}的"..COLORS_KWords_tw.Rending_rgb.."，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_22_rgb end), -- rending_multiplier: +10%, duration: 10 -- s->seconds
 
 	--[+ Passive 23 - Payback Time +]--
 		-- create_template("talent_tree_ogr_pas_023_en", {"loc_talent_ogryn_revenge_damage"}, {"en"}, function(locale, value) return "Payback Time" end),
 	create_template("talent_tree_ogr_pas_023_desc_en", {"loc_talent_ogryn_revenge_damage_desc"}, {"en"}, function(locale, value) return "{damage:%s} "..COLORS_KWords.Damage_rgb.." for {duration:%s} seconds after being Hit by a Melee Attack."..TALENTS_Enh_desc2.ED_OGR_Passive_23_rgb end), -- damage: +20%, duration: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_023_desc_fr", {"loc_talent_ogryn_revenge_damage_desc"}, {"fr"}, function(locale, value) return "{damage:%s} de "..COLORS_KWords_fr.Damage_rgb_fr.." pendant {duration:%s} secondes après avoir été touché par une attaque de mêlée."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_23_rgb_fr end), -- damage: +20%, duration: 5 -- s->seconds -- colors
+			--[+ Traditional Chinese - 報復時間 +]--
+	create_template("talent_tree_ogr_pas_023_desc_tw", {"loc_talent_ogryn_revenge_damage_desc"}, {"zh-tw"}, function(locale, value) return "在被近戰攻擊擊中後，{damage:%s}的"..COLORS_KWords_tw.Damage_rgb.."，持續{duration:%s}秒。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_23_rgb end), -- damage: +20%, duration: 5 -- s->seconds
 
 	--[+ Passive 24 - Bruiser +]--
 		-- create_template("talent_tree_ogr_pas_024_en", {"loc_talent_ogryn_cooldown_on_elite_kills"}, {"en"}, function(locale, value) return "Bruiser" end),
 	create_template("talent_tree_ogr_pas_024_desc_en", {"loc_talent_ogryn_cooldown_on_elite_kills_desc"}, {"en"}, function(locale, value) return "{cooldown:%s} "..COLORS_KWords.Combat_ability_cd_rgb.." Reduction when you or an Ally in Coherency kill an Elite Enemy."..TALENTS_Enh_desc2.ED_OGR_Passive_24_rgb end), -- cooldown: 4% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_024_desc_fr", {"loc_talent_ogryn_cooldown_on_elite_kills_desc"}, {"fr"}, function(locale, value) return "{cooldown:%s} de réduction de "..COLORS_KWords_fr.Combat_ability_cd_rgb_fr.." quand vous ou un allié en syntonie effectués une élimination d'élite."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_24_rgb_fr end), -- cooldown: 4% -- colors
+			--[+ Traditional Chinese - 格鬥兵 +]--
+	create_template("talent_tree_ogr_pas_024_desc_tw", {"loc_talent_ogryn_cooldown_on_elite_kills_desc"}, {"zh-tw"}, function(locale, value) return "當你或協同性內的盟友擊殺精英敵人時，{cooldown:%s}的"..COLORS_KWords_tw.Combat_ability_cd_rgb.."縮減。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_24_rgb end), -- cooldown: 4% -- colors
 
 	--[+ Passive 25 - Big Boom +]--
 		-- create_template("talent_tree_ogr_pas_025_en", {"loc_talent_ogryn_increase_explosion_radius"}, {"en"}, function(locale, value) return "Big Boom" end),
 	create_template("talent_tree_ogr_pas_025_desc_en", {"loc_talent_ogryn_increase_explosion_radius_desc"}, {"en"}, function(locale, value) return "Increase explosion radius by {explosion_radius:%s}."..TALENTS_Enh_desc2.ED_OGR_Passive_25_rgb end), -- explosion_radius: +22.5%
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_025_desc_fr", {"loc_talent_ogryn_increase_explosion_radius_desc"}, {"fr"}, function(locale, value) return "Augmentez le rayon d'explosion de {explosion_radius:%s}."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_25_rgb_fr end), -- explosion_radius: +22.5%
+			--[+ Traditional Chinese - 大爆炸 +]--
+	create_template("talent_tree_ogr_pas_025_desc_tw", {"loc_talent_ogryn_increase_explosion_radius_desc"}, {"zh-tw"}, function(locale, value) return "增加爆炸範圍{explosion_radius:%s}。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_25_rgb end), -- explosion_radius: +22.5%
 
 	--[+ Passive 26 - Massacre +]--
 		-- create_template("talent_tree_ogr_pas_026_en", {"loc_talent_ogryn_crit_chance_on_kill"}, {"en"}, function(locale, value) return "Massacre" end),
 	create_template("talent_tree_ogr_pas_026_desc_en", {"loc_talent_ogryn_crit_chance_on_kill_desc"}, {"en"}, function(locale, value) return "{crit_chance:%s} "..COLORS_KWords.Crit_chance_rgb.." for {duration:%s} seconds is granted by killing an enemy. Stacks {max_stacks:%s} times."..TALENTS_Enh_desc2.ED_OGR_Passive_26_rgb end), -- crit_chance: +1%, duration: 6, max_stacks: 8 -- rewrite -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_026_desc_fr", {"loc_talent_ogryn_crit_chance_on_kill_desc"}, {"fr"}, function(locale, value) return "{crit_chance:%s} de "..COLORS_KWords_fr.Crit_chance_rgb_fr.." pendant {duration:%s} secondes en tuant un ennemi. Se cumul jusqu'à {max_stacks:%s} fois."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_26_rgb_fr end), -- crit_chance: +1%, duration: 6, max_stacks: 8 -- rewrite -- s->seconds -- colors
+			--[+ Traditional Chinese - 屠殺 +]--
+	create_template("talent_tree_ogr_pas_026_desc_tw", {"loc_talent_ogryn_crit_chance_on_kill_desc"}, {"zh-tw"}, function(locale, value) return "擊殺敵人後，獲得{crit_chance:%s}的"..COLORS_KWords_tw.Crit_chance_rgb.."，持續{duration:%s}秒。最多可累積{max_stacks:%s}次。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_26_rgb end), -- crit_chance: +1%, duration: 6, max_stacks: 8 -- rewrite -- s->seconds -- colors
 
 	--[+ Passive 27 - Implacable +]--
 		-- create_template("talent_tree_ogr_pas_027_en", {"loc_talent_ogryn_windup_reduces_damage_taken"}, {"en"}, function(locale, value) return "Implacable" end),
 	create_template("talent_tree_ogr_pas_027_desc_en", {"loc_talent_ogryn_windup_reduces_damage_taken_desc"}, {"en"}, function(locale, value) return "{damage_taken_multiplier:%s} "..COLORS_KWords.Damage_rgb.." Reduction while charging Melee Attacks."..TALENTS_Enh_desc2.ED_OGR_Passive_27_rgb end), -- damage_taken_multiplier: +15% -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_027_desc_fr", {"loc_talent_ogryn_windup_reduces_damage_taken_desc"}, {"fr"}, function(locale, value) return "{damage_taken_multiplier:%s} de réduction de "..COLORS_KWords_fr.Damage_rgb_fr.." pendant le chargement des attaques de mêlée."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_27_rgb_fr end), -- damage_taken_multiplier: +15% -- colors
+			--[+ Traditional Chinese - 利刃出鞘 +]--
+	create_template("talent_tree_ogr_pas_027_desc_tw", {"loc_talent_ogryn_windup_reduces_damage_taken_desc"}, {"zh-tw"}, function(locale, value) return "在充能近戰攻擊時，{damage_taken_multiplier:%s}的"..COLORS_KWords_tw.Damage_rgb.."減傷。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_27_rgb end), -- damage_taken_multiplier: +15% -- colors
 
 	--[+ Passive 28 - No Pushover +]--
 		-- create_template("talent_tree_ogr_pas_028_en", {"loc_talent_ogryn_blocking_reduces_push_cost"}, {"en"}, function(locale, value) return "No Pushover" end),
 	create_template("talent_tree_ogr_pas_028_desc_en", {"loc_talent_ogryn_empowered_pushes_desc"}, {"en"}, function(locale, value) return "{push_impact_modifier:%s} "..COLORS_KWords.Stagger_rgb.." for your pushes. Can only trigger once every {cooldown:%s} seconds."..TALENTS_Enh_desc2.ED_OGR_Passive_28_rgb end), -- push_impact_modifier: 250%, cooldown: 8 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_028_desc_fr", {"loc_talent_ogryn_empowered_pushes_desc"}, {"fr"}, function(locale, value) return "{push_impact_modifier:%s} de "..COLORS_KWords_fr.Stagger_rgb_fr.." pour vos poussées. Peut se déclencher une fois toutes les {cooldown:%s} secondes."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_28_rgb_fr end), -- push_impact_modifier: 250%, cooldown: 8 -- s->seconds -- colors
+			--[+ Traditional Chinese - 睚眥必報 +]--
+	create_template("talent_tree_ogr_pas_028_desc_tw", {"loc_talent_ogryn_empowered_pushes_desc"}, {"zh-tw"}, function(locale, value) return "對你的推擠造成{push_impact_modifier:%s}的"..COLORS_KWords_tw.Stagger_rgb.."。每{cooldown:%s}秒只能觸發一次。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_28_rgb end), -- push_impact_modifier: 250%, cooldown: 8 -- s->seconds -- colors
 
 	--[+ Passive 29 - Won't Give In +]--
 		-- create_template("talent_tree_ogr_pas_029_en", {"loc_talent_ogryn_tanky_with_downed_allies"}, {"en"}, function(locale, value) return "Won't Give In" end),
 	create_template("talent_tree_ogr_pas_029_desc_en", {"loc_talent_ogryn_tanky_with_downed_allies_desc"}, {"en"}, function(locale, value) return "{damage_taken:%s} "..COLORS_KWords.Damage_rgb.." Reduction for each Knocked Down or Incapacitated Ally within {range:%s} meters."..TALENTS_Enh_desc2.ED_OGR_Passive_29_rgb end), -- damage_taken: +20%, range: 20 -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_029_desc_fr", {"loc_talent_ogryn_tanky_with_downed_allies_desc"}, {"fr"}, function(locale, value) return "{damage_taken:%s} de réduction de "..COLORS_KWords_fr.Damage_rgb_fr.." pour chaque allié à terre ou incapacité dans un rayon de {range:%s} mètres."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_29_rgb_fr end), -- damage_taken: +20%, range: 20 -- colors
+			--[+ Traditional Chinese - 絕不屈服 +]--
+	create_template("talent_tree_ogr_pas_029_desc_tw", {"loc_talent_ogryn_tanky_with_downed_allies_desc"}, {"zh-tw"}, function(locale, value) return "在{range:%s}米內，每有一名被擊倒或無法行動的盟友，減少{damage_taken:%s}的"..COLORS_KWords_tw.Damage_rgb.."。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_29_rgb end), -- damage_taken: +20%, range: 20 -- colors
 
 	--[+ Passive 30 - Mobile Emplacement +]--
 		-- create_template("talent_tree_ogr_pas_030_en", {"loc_talent_ogryn_bracing_reduces_damage_taken"}, {"en"}, function(locale, value) return "Mobile Emplacement" end),
 	create_template("talent_tree_ogr_pas_030_desc_en", {"loc_talent_ogryn_bracing_reduces_damage_taken_desc"}, {"en"}, function(locale, value) return "You take {damage_taken_multiplier:%s} reduced "..COLORS_KWords.Damage_rgb.." while bracing a Ranged Weapon."..TALENTS_Enh_desc2.ED_OGR_Passive_30_rgb end), -- damage_taken_multiplier:-20.00%. -- colors
 			--[+ French +]--
 	create_template("talent_tree_ogr_pas_030_desc_fr", {"loc_talent_ogryn_bracing_reduces_damage_taken_desc"}, {"fr"}, function(locale, value) return "Vous réduisez les "..COLORS_KWords_fr.Damage_rgb_fr.." de {damage_taken_multiplier:%s} en utilisant une arme à distance."..TALENTS_Enh_desc2_fr.ED_OGR_Passive_30_rgb_fr end), -- damage_taken_multiplier:-20.00%. -- colors
+			--[+ Traditional Chinese - 機動部屬 +]--
+	create_template("talent_tree_ogr_pas_030_desc_tw", {"loc_talent_ogryn_bracing_reduces_damage_taken_desc"}, {"zh-tw"}, function(locale, value) return "在使用遠程武器時，你受到的"..COLORS_KWords_tw.Damage_rgb.."減少{damage_taken_multiplier:%s}。"..TALENTS_Enh_desc2_tw.ED_OGR_Passive_30_rgb end), -- damage_taken_multiplier:-20.00%. -- colors
 }
 
 
