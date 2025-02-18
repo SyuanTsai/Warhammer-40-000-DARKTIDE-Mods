@@ -97,7 +97,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
 	local brn_col = Color[mod:get("burn_text_colour")](255, true) -- Do not translate this line!
     local Burn_rgb = iu_actit("燃燒", brn_col)
     local Burning_rgb = iu_actit("燃燒中", brn_col)
-    local Heat_rgb = iu_actit("熱量", brn_col)
+    local Heat_rgb = iu_actit("散熱", brn_col)
 	--[++Corruption++]--
 	local crpt_col = Color[mod:get("corruption_text_colour")](255, true) -- Do not translate this line!
 	local Corruption_rgb = iu_actit("腐敗", crpt_col)
