@@ -36,7 +36,7 @@
 - Recon Lasgun - 偵查雷射槍
 - Power Maul - 動力錘
 
-### Weapon Blessing - 武器祝福
+### Weapon Blessing - 武器祝福(近戰)
 
 - Opportunist - 機會主義者
 - Bloodletter - 放血者
@@ -72,37 +72,127 @@
 - Uncanny Strike - 詭異打擊
 - Trauma - 創傷
 - Vicious Slice - 凶狠切割
-
+- Hammerblow - 錘擊
 - Skullcrusher - 碎顱者
+- Thunderstrike - 雷霆打擊
+- Chained Deathblow - 致命連擊
+- Deathblow - 致命一擊
+- Perfect Strike - 完美一擊
+- Bladed Momentum - 利刃攻勢
+- Deflector - 偏轉
+- Exorcist - 驅魔者
 - Superiority - 優勢
 - Unstable Power - 不穩定能量
+- Lightning Reflexes - 閃電反射
 - High Voltage - 高壓電
-- Blaze Away - 連續發射
-- Ceaseless Barrage - 持續阻擊
-- Deathspitter - 死亡噴吐
-- Dumdum - 達姆彈
-- Execution - 處決
-- Fire Frenzy - 烈火熱焰
-- Full Bore - 全孔射擊
-- No Respite - 刻不容緩
-- Pinning Fire - 鉗制射擊
-- Powderburn - 火藥灼傷
-- Run 'n' Gun - 連跑帶打
-- Deflector - 偏轉
-- Gloryhunter - 榮耀獵手
-- Reassuringly Accurate - 慰藉精準
-- Inspiring Barrage - 激勵彈幕
+- Momentum - 勢頭
+- Take a Swing - 揮拳出擊
+- Power Cycler - 能量循環
+- Sunder - 破甲
+- Confident Strike - 堅定打擊
+- No Guts, No Glory - 不入虎穴，焉得虎子
+- Bash - 猛撞
+- Tenderiser - 肉槌
+- Unstoppable Force - 勢不可擋
+- Torment - 凌遲
+- Slow and Steady - 緩慢而確實
+- Power Surge - 能量湧動
+- Last Guard - 最後防線
+- Offensive Defence - 反守為攻
+- Murderous Tranquility - 兇殘之寧
+- Warp Slice - 亞空間斬擊
+- Counterattack - 反擊
+- Cranial Grounding - 顱骨落地
+- Overload - 超載
+- Energy Leakage - 能量洩漏
+- Heatsink - 散熱器
+- Syphon - 虹吸
+- Energy Transfer - 能量轉換
+
+### Weapon Blessing - 武器祝福(遠程)
 - Raking Fire - 掃射
-- Armourbane - 護甲之禍
-- Can Opener - 開罐器
+- Dumdum - 達姆彈
+- Hit & Run - 游擊
+- Hit and Run - 游擊
+- Sustained Fire - 持續射擊
+- Punishing Salvo - 懲罰齊射
+- Fire Frenzy - 烈火熱焰
+- Deathspitter - 死亡噴吐
+- Stripped Down - 輕裝
+- Speedload - 快速裝彈
+- Terrifying Barrage - 恐怖阻擊
+- Roaring Advance - 咆哮突進
+- Ceaseless Barrage - 持續阻擊
+- Inspiring Barrage - 振奮彈幕
+- Surgical - 精確打擊
+- Crucian Roulette - 克魯錫安輪盤
+- Deadly Accurate - 致命精準
+- No Respite - 刻不容緩
+- Opening Salvo - 開啟齊射
+- Headhunter - 獵頭者
+- Between the Eyes - 正中眉心
+- Blaze Away - 連續發射
+- Powderburn - 火藥灼傷
+- Cavalcade - 接連不斷
+- Pinning Fire - 鉗制射擊
+- Run 'n' Gun - 連跑帶打
+- Puncture - 出血穿透
+- Lethal Proximity - 致命零距離
+- Point Blank - 近身平射
+- Execution - 處決
+- Gloryhunter - 榮耀獵手
+- Surge - 湧動
+- Warp Flurry - 亞空間亂舞
+- Warp Nexus - 亞空間樞紐
 - Rending Shockwave - 撕扯震盪
+- Focused Channelling - 專注引導
+- Blazing Spirit - 燃燒靈魂
+- Penetrating Flame - 穿透火焰
+- Showstopper - 嘆為觀止
+- Infernus - 煉獄
+- Efficiency - 效率
+- Concentrated Fire - 集中火力
+- Desperado - 亡命之徒
+- Reassuringly Accurate - 慰藉精準
+- Flechette - 飛鏢彈
+- Man-Stopper - 大口徑彈藥
+- Scattershot - 散彈
+- Full Bore - 全孔射擊
+- Both Barrels - 雙管齊發
+- Hand-Cannon - 手銃
+- Everlasting Flame - 永燃烈焰
+- Quickflame - 迅捷火焰
+- Fan the Flames - 煽風點火
+- Overpressure - 超壓
+- Hot-Shot - 激射
+- Weight of Fire - 猛攻
+- Armourbane - 護甲之禍
+- Power Blast - 聚能爆發
+- Gets Hot! - 燃起來!
+- Volatile - 熱力震盪
+- Blaze Away - 連續發射
+- Rising Heat - 升溫
+- Optimised Cooling - 優化冷卻
+- Focused Cooling - 專注冷卻
+- Gauntlet Momentum - 交叉動量
+- Pulverise - 粉碎
+- Disruptive - 顛覆性力量
+- Explosive Offensive - 爆炸使我強大
+- Pinpointing target - 精確定位
+- Charmed Reload - 魔力彈藥
+- Overwhelming Fire - 壓倒性火力
+- Can Opener - 開罐器
+- Born in blood - 浴血而生
+- Pierce - 穿透
+- Punishing Fire - 懲罰射擊
+- Inspiring Barrage - 激勵彈幕
+- Expansive - 擴展性
+- Shrapnel - 破片四射
+
+- Raking Fire - 掃射
 - Shattering Impact - 破碎衝擊 
 - Supercharge - 超級充能
-- Penetrating Flame - 穿透火焰
-- Roaring Advance - 咆哮突進
-- Flechette - 飛鏢彈
 - Blast Zone - 狂轟猛炸
-- Power Surge - 能量湧動
 
 ### 怪物相關
 
