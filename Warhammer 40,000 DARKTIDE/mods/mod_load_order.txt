@@ -38,6 +38,7 @@ Enhanced_descriptions
 EmperorsGuidance
 RememberServerLocation
 UngaBunga
+JishuJun
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
