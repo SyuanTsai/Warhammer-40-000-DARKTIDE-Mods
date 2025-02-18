@@ -22,7 +22,6 @@
 - Combat Stimm - 戰鬥興奮劑
 - Concentration Stimm - 專注興奮劑
 
-
 ### 武器
 - Ripper Gun - 擲彈兵臂鎧
 - Grenadier Gauntlet - 全自動霰彈槍
@@ -188,11 +187,6 @@
 - Inspiring Barrage - 激勵彈幕
 - Expansive - 擴展性
 - Shrapnel - 破片四射
-
-- Raking Fire - 掃射
-- Shattering Impact - 破碎衝擊 
-- Supercharge - 超級充能
-- Blast Zone - 狂轟猛炸
 
 ### 怪物相關
 
