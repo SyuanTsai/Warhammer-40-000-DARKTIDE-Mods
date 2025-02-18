@@ -74,8 +74,8 @@ local iu_actit = InputUtils.apply_color_to_input_text
 	local Impact_rgb = iu_actit("衝擊", imp_col)
 	--[++Power++]--
 	local pwr_col = Color[mod:get("power_text_colour")](255, true) -- Do not translate this line!
-	local Power_rgb = iu_actit("力量", pwr_col)
-	local Strength_rgb = iu_actit("力量", pwr_col)
+	local Power_rgb = iu_actit("威力", pwr_col)
+	local Strength_rgb = iu_actit("威力", pwr_col)
 	--[++Rending++]--
 	local rend_col = Color[mod:get("rending_text_colour")](255, true) -- Do not translate this line!
 	local Rending_rgb = iu_actit("撕裂", rend_col)
@@ -97,7 +97,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
 	local brn_col = Color[mod:get("burn_text_colour")](255, true) -- Do not translate this line!
     local Burn_rgb = iu_actit("燃燒", brn_col)
     local Burning_rgb = iu_actit("燃燒中", brn_col)
-    local Heat_rgb = iu_actit("熱量", brn_col)
+    local Heat_rgb = iu_actit("散熱", brn_col)
 	--[++Corruption++]--
 	local crpt_col = Color[mod:get("corruption_text_colour")](255, true) -- Do not translate this line!
 	local Corruption_rgb = iu_actit("腐敗", crpt_col)
@@ -162,7 +162,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
 	--[++Note++]--
 	local note_col = Color[mod:get("note_text_colour")](255, true) -- Do not translate this line!
     local Fns_note_rgb = iu_actit(" 精準會增加弱點與爆擊傷害。", note_col)
-    local Pwr_note_rgb = iu_actit(" 力量會增加傷害、踉蹌與破甲。", note_col)
+    local Pwr_note_rgb = iu_actit(" 威力會增加傷害、踉蹌與破甲。", note_col)
     local Rend_note_rgb = iu_actit(" 撕裂可以增加傷害。", note_col)
     local Brtl_note_rgb = iu_actit(" 脆弱會降低敵人的護甲。", note_col)
     -- local Fire_n_trap_note_rgb = iu_actit(" 不會保護你免於火焰槍與捕獸器。", note_col)
