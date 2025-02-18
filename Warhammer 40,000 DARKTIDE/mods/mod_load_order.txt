@@ -36,6 +36,7 @@ NumericUI
 WhatTheLocalization
 Enhanced_descriptions
 EmperorsGuidance
+RememberServerLocation
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
