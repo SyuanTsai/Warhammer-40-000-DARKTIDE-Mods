@@ -161,7 +161,7 @@ return {
 	},
 	renegade_berzerker0primary = {
 		en = "Scab Rager",
-		["zh-tw"] = "血痂暴徒",
+		["zh-tw"] = "血痂狂暴者",
 	},
 	renegade_shocktrooper0primary = {
 		en = "Scab Shotgunner",
@@ -201,7 +201,7 @@ return {
 	},
 	renegade_grenadier0primary = {
 		en = "Scab Bomber",
-		["zh-tw"] = "血痂炸彈兵",
+		["zh-tw"] = "血痂轟炸者",
 	},
 	renegade_netgunner0primary = {
 		en = "Trapper",
@@ -253,7 +253,7 @@ return {
 	},
 	renegade_rifleman0primary = {
 		en = "Scab Shooter",
-		["zh-tw"] = "血痂痕射手",
+		["zh-tw"] = "血痂射手",
 	},
 	renegade_assault0primary = {
 		en = "Scab Stalker",
@@ -322,7 +322,7 @@ return {
 	},
 	renegade_berzerker0secondary = {
 		en = "Scab Rager",
-		["zh-tw"] = "血痂狂怒者",
+		["zh-tw"] = "血痂狂暴者",
 	},
 	renegade_shocktrooper0secondary = {
 		en = "Scab Shotgunner",
@@ -362,7 +362,7 @@ return {
 	},
 	renegade_grenadier0secondary = {
 		en = "Scab Bomber",
-		["zh-tw"] = "血痂炸彈兵",
+		["zh-tw"] = "血痂轟炸者",
 	},
 	renegade_netgunner0secondary = {
 		en = "Trapper",
@@ -378,7 +378,7 @@ return {
 	},
 	cultist_grenadier0secondary = {
 		en = "Tox Bomber",
-		["zh-tw"] = "劇毒炸彈兵",
+		["zh-tw"] = "劇毒轟炸者",
 	},
 	cultist_mutant0secondary = {
 		en = "Mutant",
