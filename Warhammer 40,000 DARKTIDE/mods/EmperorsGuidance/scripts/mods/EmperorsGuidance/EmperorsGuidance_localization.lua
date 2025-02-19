@@ -149,7 +149,7 @@ return {
 	},
 	chaos_ogryn_executor0primary = {
 		en = "Crusher",
-		["zh-tw"] = "粉碎者",
+		["zh-tw"] = "輾壓者",
 	},
 	chaos_ogryn_gunner0primary = {
 		en = "Reaper",
@@ -310,7 +310,7 @@ return {
 	},
 	chaos_ogryn_executor0secondary = {
 		en = "Crusher",
-		["zh-tw"] = "粉碎者",
+		["zh-tw"] = "輾壓者",
 	},
 	chaos_ogryn_gunner0secondary = {
 		en = "Reaper",
