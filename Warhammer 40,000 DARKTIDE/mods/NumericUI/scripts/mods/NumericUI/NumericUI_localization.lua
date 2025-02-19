@@ -230,7 +230,7 @@ return {
 	peril_text = {
 		en = "Show peril percent text",
 		["zh-cn"] = "显示危机值百分比文本",
-		["zh-tw"] = "顯示反噬擲百分比文字",
+		["zh-tw"] = "顯示反噬值百分比文字",
 		ru = "Показывать проценты угрозы",
 	},
 	pickup_settings = {
