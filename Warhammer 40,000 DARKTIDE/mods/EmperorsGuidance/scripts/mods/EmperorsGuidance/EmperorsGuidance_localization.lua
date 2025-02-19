@@ -169,7 +169,7 @@ return {
 	},
 	renegade_gunner0primary = {
 		en = "Scab Gunner",
-		["zh-tw"] = "血痂槍手",
+		["zh-tw"] = "血痂炮手",
 	},
 	cultist_berzerker0primary = {
 		en = "Dreg Rager",
@@ -181,7 +181,7 @@ return {
 	},
 	cultist_gunner0primary = {
 		en = "Dreg Gunner",
-		["zh-tw"] = "渣滓槍手",
+		["zh-tw"] = "渣滓炮手",
 	},
 	chaos_hound0primary = {
 		en = "Pox Hound",
@@ -330,7 +330,7 @@ return {
 	},
 	renegade_gunner0secondary = {
 		en = "Scab Gunner",
-		["zh-tw"] = "血痂槍手",
+		["zh-tw"] = "血痂炮手",
 	},
 	cultist_berzerker0secondary = {
 		en = "Dreg Rager",
@@ -342,7 +342,7 @@ return {
 	},
 	cultist_gunner0secondary = {
 		en = "Dreg Gunner",
-		["zh-tw"] = "渣滓槍手",
+		["zh-tw"] = "渣滓炮手",
 	},
 	chaos_hound0secondary = {
 		en = "Pox Hound",
