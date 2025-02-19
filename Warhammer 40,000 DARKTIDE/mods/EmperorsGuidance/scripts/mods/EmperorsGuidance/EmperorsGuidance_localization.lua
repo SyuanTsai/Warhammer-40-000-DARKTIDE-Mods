@@ -161,7 +161,7 @@ return {
 	},
 	renegade_berzerker0primary = {
 		en = "Scab Rager",
-		["zh-tw"] = "血痂暴徒",
+		["zh-tw"] = "血痂狂暴者",
 	},
 	renegade_shocktrooper0primary = {
 		en = "Scab Shotgunner",
@@ -253,7 +253,7 @@ return {
 	},
 	renegade_rifleman0primary = {
 		en = "Scab Shooter",
-		["zh-tw"] = "血痂痕射手",
+		["zh-tw"] = "血痂射手",
 	},
 	renegade_assault0primary = {
 		en = "Scab Stalker",
@@ -322,7 +322,7 @@ return {
 	},
 	renegade_berzerker0secondary = {
 		en = "Scab Rager",
-		["zh-tw"] = "血痂狂怒者",
+		["zh-tw"] = "血痂狂暴者",
 	},
 	renegade_shocktrooper0secondary = {
 		en = "Scab Shotgunner",
