@@ -121,7 +121,7 @@ return {
 	},
 	chaos_spawn0primary = {
 		en = "Chaos Spawn",
-		["zh-tw"] = "混沌卵",
+		["zh-tw"] = "混沌魔物",
 	},
 	chaos_daemonhost0primary = {
 		en = "Daemonhost",
@@ -282,7 +282,7 @@ return {
 	},
 	chaos_spawn0secondary = {
 		en = "Chaos Spawn",
-		["zh-tw"] = "混沌卵",
+		["zh-tw"] = "混沌魔物",
 	},
 	chaos_daemonhost0secondary = {
 		en = "Daemonhost",
