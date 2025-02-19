@@ -201,7 +201,7 @@ return {
 	},
 	renegade_grenadier0primary = {
 		en = "Scab Bomber",
-		["zh-tw"] = "血痂炸彈兵",
+		["zh-tw"] = "血痂轟炸者",
 	},
 	renegade_netgunner0primary = {
 		en = "Trapper",
@@ -362,7 +362,7 @@ return {
 	},
 	renegade_grenadier0secondary = {
 		en = "Scab Bomber",
-		["zh-tw"] = "血痂炸彈兵",
+		["zh-tw"] = "血痂轟炸者",
 	},
 	renegade_netgunner0secondary = {
 		en = "Trapper",
@@ -378,7 +378,7 @@ return {
 	},
 	cultist_grenadier0secondary = {
 		en = "Tox Bomber",
-		["zh-tw"] = "劇毒炸彈兵",
+		["zh-tw"] = "劇毒轟炸者",
 	},
 	cultist_mutant0secondary = {
 		en = "Mutant",
