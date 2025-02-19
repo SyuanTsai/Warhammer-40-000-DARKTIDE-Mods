@@ -38,7 +38,7 @@ return {
     ["zh-cn"] = "欢迎使用 Darktide Mod Framework。模组选项已添加到选项菜单。",
     ru = "Добро пожаловать в Darktide Mod Framework. Параметры мода были добавлены в меню параметров.",
     ja = "Darktide Mod Frameworkのご利用ありがとうございます。Modオプションがオプションメニューに追加されました。",
-    ["zh-tw"] = "歡迎使用 Darktide Mod Framework，模組選項已加入至選單。",
+    ["zh-tw"] = "歡迎使用 Darktide Mod Framework，\n模組選項已加入至選單。",
   },
   percent = {
     en = "%%",
