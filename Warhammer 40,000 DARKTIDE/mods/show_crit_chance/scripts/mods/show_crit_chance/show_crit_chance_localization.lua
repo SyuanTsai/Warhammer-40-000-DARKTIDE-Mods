@@ -45,7 +45,7 @@ return {
 		ru = "Machine Medium",
 		pl = "Machine Medium",
 		["zh-cn"] = "Machine Medium",
-
+		["zh-tw"] = "Machine Medium",
 	},
 	font_proxima_nova_medium = {
 		en = "Proxima Nova Medium",
