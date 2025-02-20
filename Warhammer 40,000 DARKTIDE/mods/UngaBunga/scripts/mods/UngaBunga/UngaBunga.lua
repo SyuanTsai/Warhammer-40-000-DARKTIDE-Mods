@@ -5,10 +5,10 @@ local EMPTY_TABLE = {}
 local cave_t = 0
 local holding_primary = false
 local hurty_stick = nil
-local bonehead = {
-	implant =  false,
-	functioning = false
-}
+
+-- Attack Keybind locals
+local attack_bind = {}
+local alt_attack = false
 
 -- Block Cancel locals
 local allowed_to_block = false
@@ -19,23 +19,20 @@ local in_thrust_we_trust = false
 local stacks = 0
 
 -- Mod Settings locals
+local toggle_bind = {}
+local mod_enabled = true
+local verbose = false
 local global = {
-	enabled = true,
 	max_stacks = 0,
 	max_special_stacks = 0,
 	split_specials = false,
-	toggle_bind = {},
 	block_cancel = false,
-	verbose = false
 }
 local settings = {
-	enabled = true,
 	max_stacks = 0,
 	max_special_stacks = 0,
 	split_specials = false,
-	toggle_bind = {},
 	block_cancel = false,
-	verbose = false
 }
 local weapons = {
 	-- Chainaxe
@@ -157,13 +154,9 @@ local debug = nil
 -- │                            │ --
 -- └────────────────────────────┘ --
 
--- Reset bonehead implant on game state change
-mod.on_game_state_changed = function(status, state)
-	bonehead.implant = false
-end
-
--- Get settings and reset bonehead implant on mod load
+-- Get settings on mod load
 mod.on_all_mods_loaded = function()
+	-- Global Group settings
 	for key, value in pairs(global) do
 		if mod:get(key) == nil then
 			mod:set(key, global[key], false)
@@ -171,6 +164,7 @@ mod.on_all_mods_loaded = function()
 			global[key] = mod:get(key)
 		end
 	end
+	-- Weapon Specific Group settings
 	for key, value in pairs(weapons) do
 		if mod:get(key) == nil then
 			mod:set(key, {weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false})
@@ -178,7 +172,11 @@ mod.on_all_mods_loaded = function()
 			weapons[key] = mod:get(key)
 		end
 	end
-	bonehead.implant = false
+	-- Individual Global settings
+	toggle_bind = mod:get("toggle_bind")
+	mod_enabled = mod:get("enabled")
+	verbose = mod:get("verbose")
+	attack_bind = mod:get("attack_bind")
 end
 
 -- Settings handler for our singular setting
@@ -210,14 +208,22 @@ mod.on_setting_changed = function(id)
 		mod:set("weapon_max_stacks", weapons[temp_weapon].weapon_max_stacks, false)
 		mod:set("weapon_max_special_stacks", weapons[temp_weapon].weapon_max_special_stacks, false)
 		mod:set("weapon_split_specials", weapons[temp_weapon].weapon_split_specials, false)
-	else
-		if string.find(id, "weapon_") ~= nil then
+	elseif string.find(id, "weapon_") ~= nil then
 			local temp_weapon = mod:get("weapon_selector")
 			weapons[temp_weapon][id] = mod:get(id)
 			mod:set(temp_weapon, weapons[temp_weapon], false)
+	else
+		-- Individual Global settings
+		if id == "enabled" then
+			mod_enabled = mod:get(id)
+		elseif id == "verbose" then
+			verbose = mod:get(id)
+		elseif id == "toggle_bind" then
+			toggle_bind = mod:get(id)
+		elseif id == "attack_bind" then
+			attack_bind = mod:get(id)
 		end
 	end
-	bonehead.implant = false
 end
 
 -- ┌────────────────────────────┐ --
@@ -228,11 +234,7 @@ end
 
 -- CAN THIS WEAPON HEAVY ATTACK?
 mod.unga = function()
-	-- Short-circuit if we have already checked this context
-	if bonehead.implant then
-		return bonehead.functioning
-	end
-	bonehead.functioning = false
+	local bonehead = false
 	local manager = Managers.player
 	-- If we have a player unit
 	if manager and manager:local_player_safe(1) then
@@ -249,8 +251,7 @@ mod.unga = function()
 				if actions then
 					for key, value in pairs(actions) do
 						if string.find(key, "heavy") then
-							bonehead.implant = true
-							bonehead.functioning = true
+							bonehead = true
 							break
 						end
 					end
@@ -286,15 +287,14 @@ mod.unga = function()
 			end
 		end
 	end
-	bonehead.implant = true
-	return bonehead.functioning
+	return bonehead
 end
 
 -- CAN WE HEAVY ATTACK RIGHT NOW?
-mod.bunga = function()
+mod.bunga = function(club)
 	-- Short-circuit if not attacking
-	if not holding_primary then
-		return holding_primary
+	if not club then
+		return club
 	end
 	local player_unit = Managers.player:local_player(1).player_unit
 	local unit_data = ScriptUnit.has_extension(player_unit, "unit_data_system")
@@ -305,8 +305,6 @@ mod.bunga = function()
 	local combo = component_data and component_data.combo_count
 	local running_action = handler_data.running_action
 	
-	-- Debug
-	--mod:echo("Weapon: %s, Block Cancel: %s, Max Stacks: %s, Max Special Stacks: %s, Split Specials: %s", hurty_stick, block_cancel, max_stacks, max_special_stacks, split_specials)
 	-- Block Cancel
 	local sweep = unit_data:read_component("action_sweep")
 	if sweep then
@@ -379,26 +377,20 @@ mod.bunga = function()
 			return not action_is_validated
 		end
 	end
-	return holding_primary
+	return club
 end
 
 -- Toggles mod functionality and optionally displays a message
 mod.toggle = function()
-	mod:set("enabled", not mod:get("enabled"))
-	settings.enabled = mod:get("enabled")
-	if settings.verbose then
-		mod:echo("Auto-heavy %s.", settings.enabled and "enabled" or "disabled")
+	mod:set("enabled", not mod:get("enabled"), false)
+	mod_enabled = mod:get("enabled")
+	if verbose then
+		mod:echo("Auto-heavy %s.", mod_enabled and "enabled" or "disabled")
 	end
 end
 
--- Nuclear option: periodically check and reset bonehead implant if we cannot access a weapon. This shouldn't be necessary, but people keep reporting the mod is losing track of their weapon.
--- Worst case, this run the full unga() logic every ~166ms (6 times per second) when no weapon is found. It will not run at all if the mod has found a weapon.
-mod.nuclear = function()
-	if cave_t - last_check > 0.166 then
-		bonehead.implant = false
-		mod.unga()
-		last_check = cave_t
-	end
+mod.attack = function()
+	alt_attack = not alt_attack
 end
 
 -- ┌────────────────────────────┐ --
@@ -424,71 +416,6 @@ mod:hook_safe("SteppedStatBuff","update_stat_buffs",function(self, current_stat_
 	end
 end)
 
--- BONEHEAD IMPLANT RESETS: SITUATIONS WHERE THE PLAYER'S WEAPON MAY CHANGE DURING ACTIVE GAMEPLAY
--- THIS RESETS BONEHEAD REGARDLESS OF WHO IS IMPACTED BY THESE EVENTS: THIS IS OVERKILL BUT SHOULDN'T CAUSE ISSUES
-
--- Weapon switch
-mod:hook_safe(CLASS.PlayerUnitWeaponExtension, "on_slot_wielded", function(self, slot_name, ...)
-    bonehead.implant = false
-end)
-
--- Revival from downed 
-mod:hook_safe(CLASS.PlayerCharacterStateKnockedDown, "on_exit", function(self, unit, t, next_state)
-	bonehead.implant = false
-end)
-
--- Rescue from hogtied (Dead)
-mod:hook_safe(CLASS.PlayerCharacterStateHogtied, "on_exit", function(self, unit, t, next_state)
-	bonehead.implant = false
-end)
-
--- Exiting consumed (Beast of Nurgle)
-mod:hook_safe(CLASS.PlayerCharacterStateConsumed, "on_exit", function(self, unit, t, next_state)
-	bonehead.implant = false
-end)
-
--- Exiting netted (Trappers)
-mod:hook_safe(CLASS.PlayerCharacterStateNetted, "on_exit", function(self, unit, t, next_state)
-	bonehead.implant = false
-end)
-
--- Exiting pounced (Pox Hounds)
-mod:hook_safe(CLASS.PlayerCharacterStatePounced, "on_exit", function(self, unit, t, next_state)
-	bonehead.implant = false
-end)
-
--- Exiting grab (Mutant)
-mod:hook_safe(CLASS.PlayerCharacterStateMutantCharged, "on_exit", function(self, unit, t, next_state)
-	bonehead.implant = false
-end)
-
--- Exiting grab (Chaos Spawn)
-mod:hook_safe(CLASS.PlayerCharacterStateWarpGrabbed, "on_exit", function(self, unit, t, next_state)
-	bonehead.implant = false
-end)
-
--- Exiting interactibles
-mod:hook_safe(CLASS.PlayerCharacterStateInteracting, "on_exit", function(self, unit, t, next_state)
-	bonehead.implant = false
-end)
-
--- Exiting minigames
-mod:hook_safe(CLASS.PlayerCharacterStateInMinigame, "on_exit", function(self, unit, t, next_state)
-	bonehead.implant = false
-end)
-
--- Exiting ledge hang
-mod:hook_safe(CLASS.PlayerCharacterStateLedgeHangingPullUp, "on_exit", function(self, unit, t, next_state)
-	bonehead.implant = false
-end)
-
--- Exiting ladder
-mod:hook_safe(CLASS.PlayerCharacterStateLadderTopLeaving, "on_exit", function(self, unit, t, next_state)
-	bonehead.implant = false
-end)
-
-
-
 -- ┌────────────────────────────┐ --
 -- │                            │ --
 -- │       STANDARD HOOKS       │ --
@@ -507,23 +434,31 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
 			worker = combiner(worker, cb())
 		end
         holding_primary = worker
-		if not holding_primary then
-			allowed_to_block = false
-		end
-		local caveman = holding_primary
-		if settings.enabled == true then
-			if mod.unga() then
-				caveman = mod.bunga()
-			else
-				mod.nuclear()
+		
+		if mod_enabled == true then
+			-- Standard input
+			if not attack_bind[1] then
+				if not holding_primary then
+					allowed_to_block = false
+				elseif holding_primary and mod.unga() then
+					local caveman = mod.bunga(holding_primary)
+				if caveman ~= holding_primary then
+					return caveman
+				end
 			end
-		end
-		if caveman ~= holding_primary then
-			return caveman
+			-- Custom input
+			else 
+				if not alt_attack then
+					allowed_to_block = false
+				elseif alt_attack and mod.unga() then
+					local caveman = mod.bunga(alt_attack)
+					return caveman
+				end
+			end
 		end
     end
 	if action_name == "action_two_hold" then
-		if settings.enabled == true then
+		if mod_enabled == true then
 			if mod.unga() and should_block then
 				local player_unit = Managers.player:local_player(1).player_unit
 				local unit_data = ScriptUnit.has_extension(player_unit, "unit_data_system")

@@ -21,64 +21,60 @@ return {
 				type        = "group",
 				sub_widgets = {
 					{
-						setting_id	= "general",
-						type		= "group",
-						sub_widgets = {
-							{
-								setting_id    = "enabled",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "verbose",
-								type          = "checkbox",
-								tooltip       = "verbose_tooltip",
-								default_value = false
-							},
-							{
-								setting_id      = "toggle_bind",
-								type            = "keybind",
-								default_value   = {},
-								keybind_trigger = "pressed",
-								keybind_type    = "function_call",
-								function_name   = "toggle"
-							},
-							{
-								setting_id    = "block_cancel",
-								type          = "checkbox",
-								tooltip       = "block_cancel_tooltip",
-								default_value = false
-							},
-						}
+						setting_id    = "enabled",
+						type          = "checkbox",
+						default_value = true
 					},
 					{
-						setting_id  = "thrust",
-						type        = "group",
-						sub_widgets = {
-							{
-								setting_id    = "max_stacks",
-								type          = "numeric",
-								tooltip       = "thrust_tooltip",
-								default_value = 0,
-								range         = {0, 3},
-								unit_text     = "stacks"
-							},
-							{
-								setting_id    = "split_specials",
-								type          = "checkbox",
-								tooltip       = "split_specials_tooltip",
-								default_value = false
-							},
-							{
-								setting_id    = "max_special_stacks",
-								type          = "numeric",
-								tooltip       = "thrust_special_tooltip",
-								default_value = 0,
-								range         = {0, 3},
-								unit_text     = "special_stacks"
-							}
-						}
+						setting_id    = "verbose",
+						type          = "checkbox",
+						tooltip       = "verbose_tooltip",
+						default_value = false
 					},
+					{
+						setting_id      = "toggle_bind",
+						type            = "keybind",
+						default_value   = {},
+						keybind_trigger = "pressed",
+						keybind_type    = "function_call",
+						function_name   = "toggle"
+					},
+					{
+						setting_id      = "attack_bind",
+						type            = "keybind",
+						default_value   = {},
+						keybind_trigger = "held",
+						keybind_type    = "function_call",
+						function_name   = "attack"
+					},
+					{
+						setting_id    = "block_cancel",
+						type          = "checkbox",
+						tooltip       = "block_cancel_tooltip",
+						default_value = false
+					},
+					{
+						setting_id    = "max_stacks",
+						type          = "numeric",
+						tooltip       = "thrust_tooltip",
+						default_value = 0,
+						range         = {0, 3},
+						unit_text     = "stacks"
+					},
+					{
+						setting_id    = "split_specials",
+						type          = "checkbox",
+						tooltip       = "split_specials_tooltip",
+						default_value = false
+					},
+					{
+						setting_id    = "max_special_stacks",
+						type          = "numeric",
+						tooltip       = "thrust_special_tooltip",
+						default_value = 0,
+						range         = {0, 3},
+						unit_text     = "special_stacks"
+					}
 				}
 			},
 			{
@@ -86,7 +82,6 @@ return {
 				type        = "group",
 				sub_widgets = {
 					{
-						-- testing
 						setting_id    = "weapon_selector",
 						type          = "dropdown",
 						default_value = "chainaxe_p1_m1",
@@ -179,49 +174,37 @@ return {
 						}
 					},
 					{
-						setting_id  = "weapon_general",
-						type        = "group",
-						sub_widgets = {
-							{
-								setting_id    = "weapon_enabled",
-								type          = "checkbox",
-								default_value = false
-							},
-							{
-								setting_id    = "weapon_block_cancel",
-								type          = "checkbox",
-								tooltip       = "block_cancel_tooltip",
-								default_value = false
-							}
-						},
+						setting_id    = "weapon_enabled",
+						type          = "checkbox",
+						default_value = false
 					},
 					{
-						setting_id  = "weapon_thrust",
-						type        = "group",
-						sub_widgets = {
-							{
-								setting_id    = "weapon_max_stacks",
-								type          = "numeric",
-								tooltip       = "thrust_tooltip",
-								default_value = 0,
-								range         = {0, 3},
-								unit_text     = "stacks"
-							},
-							{
-								setting_id    = "weapon_split_specials",
-								type          = "checkbox",
-								tooltip       = "split_specials_tooltip",
-								default_value = false
-							},
-							{
-								setting_id    = "weapon_max_special_stacks",
-								type          = "numeric",
-								tooltip       = "thrust_special_tooltip",
-								default_value = 0,
-								range         = {0, 3},
-								unit_text     = "special_stacks"
-							}
-						}
+						setting_id    = "weapon_block_cancel",
+						type          = "checkbox",
+						tooltip       = "block_cancel_tooltip",
+						default_value = false
+					},
+					{
+						setting_id    = "weapon_max_stacks",
+						type          = "numeric",
+						tooltip       = "thrust_tooltip",
+						default_value = 0,
+						range         = {0, 3},
+						unit_text     = "stacks"
+					},
+					{
+						setting_id    = "weapon_split_specials",
+						type          = "checkbox",
+						tooltip       = "split_specials_tooltip",
+						default_value = false
+					},
+					{
+						setting_id    = "weapon_max_special_stacks",
+						type          = "numeric",
+						tooltip       = "thrust_special_tooltip",
+						default_value = 0,
+						range         = {0, 3},
+						unit_text     = "special_stacks"
 					}
 				}
 			},
