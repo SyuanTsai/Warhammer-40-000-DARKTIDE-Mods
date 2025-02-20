@@ -43,6 +43,10 @@ return {
 		en = "Toggle Keybind",
 		["zh-tw"] = "切換快捷鍵",
 	},
+	attack_bind = {
+		en = "Attack Keybind",
+		["zh-tw"] = "攻擊快捷鍵",
+	},
 	block_cancel = {
 		en = "Block Cancel",
 		["zh-tw"] = "防禦取消",
