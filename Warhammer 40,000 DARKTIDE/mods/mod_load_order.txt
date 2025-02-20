@@ -6,6 +6,9 @@
 -- ################################################################
 -- 遊戲體驗改善
 scoreboard
+WhatTheLocalization
+UngaBunga
+JishuJun
 AutoLoot
 Healthbars
 IME_Enable
@@ -33,12 +36,9 @@ QuickLookCard
 markers_aio
 danger_zone
 NumericUI
-WhatTheLocalization
 Enhanced_descriptions
 EmperorsGuidance
 RememberServerLocation
-UngaBunga
-JishuJun
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint

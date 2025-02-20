@@ -27,6 +27,27 @@
 - MOD 檔案名稱：Scoreboard-22-2-18-1707236330
 - 手動維護最後下載日期：2025-02-11
 
+### [What The Localization](https://www.nexusmods.com/warhammer40kdarktide/mods/163)
+    翻譯修正器，
+- MOD 網站最後更新日期：Last updated 14 October 2023 10:30PM
+- MOD 版本：1.2.1
+- MOD 檔案名稱：WhatTheLocalization-163-1-2-1-1697319036
+- 手動維護最後下載日期：2025-02-13
+
+### [Unga Bunga](https://www.nexusmods.com/warhammer40kdarktide/mods/476)
+    自動重擊
+- MOD 網站最後更新日期：Last updated 20 February 2025 12:45AM
+- MOD 版本：1.3.2
+- MOD 檔案名稱：Unga Bunga 1.3.1-476-1-3-1-1740012346
+- 手動維護最後下載日期：2025-02-20
+
+### JishuJun
+    團隊計分
+- MOD 網站最後更新日期：NA
+- MOD 版本：NA
+- MOD 檔案名稱：NA
+- 手動維護最後下載日期：NA
+
 ### [Auto Loot](https://www.nexusmods.com/warhammer40kdarktide/mods/375)
     自動開啟箱子並撿取物品
 - MOD 網站最後更新日期：Last updated 11 October 2024 9:12AM
@@ -223,13 +244,6 @@
 - MOD 檔案名稱：Spidey Sense-268-5-1-3-1733490299
 - 手動維護最後下載日期：2025-02-13
 
-### [What The Localization](https://www.nexusmods.com/warhammer40kdarktide/mods/163)
-    翻譯修正器，
-- MOD 網站最後更新日期：Last updated 14 October 2023 10:30PM
-- MOD 版本：1.2.1
-- MOD 檔案名稱：WhatTheLocalization-163-1-2-1-1697319036
-- 手動維護最後下載日期：2025-02-13
-
 ### [Enhanced Descriptions](https://www.nexusmods.com/warhammer40kdarktide/mods/210)
     描述改善
 - MOD 網站最後更新日期：Last updated 05 February 2025 2:55PM
@@ -250,20 +264,6 @@
 - MOD 版本：1.1.1
 - MOD 檔案名稱：RememberServerLocation-308-1-1-1-1719684862
 - 手動維護最後下載日期：2025-02-18
-
-### [Unga Bunga](https://www.nexusmods.com/warhammer40kdarktide/mods/476)
-    自動重擊
-- MOD 網站最後更新日期：Last updated 20 February 2025 12:45AM
-- MOD 版本：1.3.2
-- MOD 檔案名稱：Unga Bunga 1.3.1-476-1-3-1-1740012346
-- 手動維護最後下載日期：2025-02-20
-
-### JishuJun
-    團隊計分
-- MOD 網站最後更新日期：NA
-- MOD 版本：NA
-- MOD 檔案名稱：NA
-- 手動維護最後下載日期：NA
 
 ---
 # 遊戲內操作相關MOD
