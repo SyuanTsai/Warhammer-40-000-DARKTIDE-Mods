@@ -67,7 +67,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
     local Finesse_dmg_rgb = iu_actit("靈巧傷害", fns_col)
 	--[++Hit Mass++]--
 	local htms_col = Color[mod:get("hit_mass_text_colour")](255, true) -- Do not translate this line!
-	local Hit_mass_rgb = iu_actit("順劈傷害", htms_col)
+	local Hit_mass_rgb = iu_actit("順劈目標", htms_col)
 	--[++Impact++]--
 	local imp_col = Color[mod:get("impact_text_colour")](255, true) -- Do not translate this line!
 	local Impact_rgb = iu_actit("Impact", imp_col)

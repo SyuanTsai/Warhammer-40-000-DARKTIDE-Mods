@@ -543,7 +543,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Passive 9 - Psykinetic's Aura +]--
 	local ED_PSY_Passive_9_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 對「靈能尖嘯」/「靈能學者之怒」為1.5秒，對「占卜者的注視」為1.25秒，對「念力護盾」為2秒。",
+		"- 對「靈能尖嘯」、「靈能學者之怒」為1.5秒，對「占卜者的注視」為1.25秒，對「念力護盾」為2秒。",
 		"- 不會與另一位靈能者的相同天賦疊加（每位靈能者觸發自己的天賦，分別減少冷卻時間）。",
 		"- 與專注興奮劑剩餘的每秒3秒冷卻時間減少效果同時觸發。",
 		doesnt_interact_w_c_a_r_from_curio,
