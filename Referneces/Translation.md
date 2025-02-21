@@ -22,7 +22,12 @@
 - Combat Stimm - 戰鬥興奮劑
 - Concentration Stimm - 專注興奮劑
 
-### 武器
+### 武器(近戰)
+- Chainswords - 突擊鏈鋸劍
+- Combat Blade - 戰刃
+
+### 武器(遠程)
+- Infantry Autoguns - 步兵自動槍
 - Ripper Gun - 擲彈兵臂鎧
 - Grenadier Gauntlet - 全自動霰彈槍
 - Heavy Stubbers - 雙鏈重型機槍 
