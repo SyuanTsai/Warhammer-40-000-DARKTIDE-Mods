@@ -929,10 +929,6 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 例如，若狂信徒的「不屈靈魂合唱」仍有55秒冷卻，且受到80點生命傷害，則剩餘冷卻55秒會被減少：60 x (80 x 0.01) = 48秒，最後只剩7秒。",
 		"- 與「專注興奮劑」的3秒/秒冷卻縮短效果同時生效。",
 		"- 不會與來自珍品的戰鬥技能再生效果互動，後者僅減少戰鬥技能的最大冷卻時間。",
-		"- Does not proc while downed.",
-		"- For example, if Zealot has 55 seconds of Chorus of Spiritual Fortitude's 60 seconds Cooldown remaining and takes 80 Health Damage, then the remaining 55 seconds are reduced by 60x(80x0.01)=48 to 7 seconds.",
-		"- Procs additionally to Concentration Stimm's Cooldown Reduction effect of 3 seconds per second.",
-		"- Does not interact with Combat Ability Regeneration from Curios which only reduces the Maximum Cooldown of a Combat Ability.",
 	}, "\n"), enhdesc_col)
 
 	--[+ Ability 3 - Shroudfield(隱秘領域) +]--
