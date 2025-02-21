@@ -1,9 +1,10 @@
 # Warhammer 40,000 DARKTIDE - 戰錘40K黑潮
 
+--damage傷害 stagger踉蹌 cleave順劈
 ## 通用名詞
 
 - Toughness - 韌性
-- Hit Mass - 順劈傷害
+- Hit Mass - 順劈目標
 - Cleave - 順劈攻擊
 - Curios - 珍品
 - Weakspot - 弱點
@@ -22,7 +23,17 @@
 - Combat Stimm - 戰鬥興奮劑
 - Concentration Stimm - 專注興奮劑
 
-### 武器
+### 武器(近戰)
+- Chainswords - 突擊鏈鋸劍
+- Chainaxes - 突擊鏈斧
+- Combat Blade - 戰刃
+- Combat Axes - 戰鬥斧
+- Devil's Claw Swords - 「惡魔之爪」劍
+- Crusher - 輾壓者
+
+
+### 武器(遠程)
+- Infantry Autoguns - 步兵自動槍
 - Ripper Gun - 擲彈兵臂鎧
 - Grenadier Gauntlet - 全自動霰彈槍
 - Heavy Stubbers - 雙鏈重型機槍 
