@@ -249,7 +249,7 @@ return {
 		en = "Horde Hit Mass +%d%%\nHorde Health +%d%%",
 		["zh-cn"] = "群怪打击质量 +%d%%\n群怪生命值 +%d%%",
 		ru = "Ударная масса орды: +%d%%\nЗдоровье орды: +%d%%",
-		["zh-tw"] = "群怪打擊質量 +%d%%\n群怪生命值 +%d%%",
+		["zh-tw"] = "群怪順劈目標 +%d%%\n群怪生命值 +%d%%",
 	},
 	havoc_modifier_more_elites = {
 		en = "Elite Amount +%d%%",
