@@ -267,7 +267,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_003_desc_ext_fr", {"loc_trait_bespoke_increase_power_on_hit_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_fr.Strength_rgb_fr.." pour "..COLORS_Numbers.time_var_rgb.." secondes lors d'un coup. Se Cumule "..COLORS_Numbers.stacks_var_rgb.." fois."..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 奪顱者 +]--
-	create_template("trait_bespoke_003_desc_ext_zh", {"loc_trait_bespoke_increase_power_on_hit_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.." 持續 "..COLORS_Numbers.time_var_rgb.." 秒。每次攻擊可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。"..COLORS_KWords_tw.Pwr_note_rgb end),
+	create_template("trait_bespoke_003_desc_ext_zh", {"loc_trait_bespoke_increase_power_on_hit_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.." 持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n每次攻擊可疊加一層，共可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。"..COLORS_KWords_tw.Pwr_note_rgb end),
 
 		--[+ Shock & Awe / Shock and Awe +]--
 			-- Thunder Hammers -- 30% | 40% | 50% | 60%
@@ -300,7 +300,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_006_desc_ext_fr", {"loc_trait_bespoke_power_bonus_based_on_charge_time_desc"}, {"fr"}, function(locale, value) return "Jusqu'à "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_fr.Strength_rgb_fr.." selon le temps de charge de vos attaques puissantes. Se Cumule "..COLORS_Numbers.stacks_var_rgb.." fois."..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 推進 +]--
-	create_template("trait_bespoke_006_desc_ext_zh", {"loc_trait_bespoke_power_bonus_based_on_charge_time_desc"}, {"zh-tw"}, function(locale, value) return "根據重型攻擊的充能時間，最多 "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.."。\n每次攻擊可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。\n"..COLORS_KWords_tw.Pwr_note_rgb end),
+	create_template("trait_bespoke_006_desc_ext_zh", {"loc_trait_bespoke_power_bonus_based_on_charge_time_desc"}, {"zh-tw"}, function(locale, value) return "根據重攻擊的續力時間，\n每層 "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.."，\n可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次(Max 60%)。\n"..COLORS_KWords_tw.Pwr_note_rgb end),
 
 		--[+ Thunderous +]--
 			-- Bully Clubs, Chainaxes, Combat Axes, Crusher, Latrine Shovels, Pickaxes, Thunder Hammers -- 1 | 2 | 3 | 4
@@ -317,7 +317,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_008_desc_ext_fr", {"loc_trait_bespoke_chained_hits_increases_cleave_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_clv_var_rgb.." "..COLORS_KWords_fr.Cleave_rgb_fr.." lors d'un coup pendant "..COLORS_Numbers.n_3_5_rgb.." secondes. Se Cumule "..COLORS_Numbers.stacks_var_rgb.." fois." end),
 			--[+ Traditional Chinese - 憤怒 +]--
-	create_template("trait_bespoke_008_desc_ext_zh", {"loc_trait_bespoke_chained_hits_increases_cleave_desc"}, {"zh-tw"}, function(locale, value) return "擊中敵人時 "..COLORS_Numbers.p_clv_var_rgb.." 順劈，持續 "..COLORS_Numbers.n_3_5_rgb.." 秒。\n每次攻擊可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。" end),
+	create_template("trait_bespoke_008_desc_ext_zh", {"loc_trait_bespoke_chained_hits_increases_cleave_desc"}, {"zh-tw"}, function(locale, value) return "擊中敵人時 "..COLORS_Numbers.p_clv_var_rgb.." "..COLORS_KWords_tw.Cleave_rgb.."，持續 "..COLORS_Numbers.n_3_5_rgb.." 秒。\n每次攻擊可疊加一層，共可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。" end),
 
 		--[+ Shred +]--
 			-- Chainswords, Combat Axes, Devil's Claw Swords, Duelling Swords, Eviscerators, Force Swords, Tactical Axes -- 2.5% | 3% | 3.5% | 4% (up to +20%)
@@ -325,7 +325,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_009_desc_ext_fr", {"loc_trait_bespoke_chained_hits_increases_crit_chance_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_crit_var_rgb.." de "..COLORS_KWords_fr.Crit_chance_rgb_fr.." lors d'un coup en chaîne pendant "..COLORS_Numbers.n_3_5_rgb.." secondes. Se Cumule "..COLORS_Numbers.stacks_var_rgb.." fois." end),
 			--[+ Traditional Chinese - 粉碎 +]--
-	create_template("trait_bespoke_009_desc_ext_zh", {"loc_trait_bespoke_chained_hits_increases_crit_chance_desc"}, {"zh-tw"}, function(locale, value) return "每次攻擊 "..COLORS_Numbers.p_crit_var_rgb.." 暴擊機率，持續 "..COLORS_Numbers.n_3_5_rgb.." 秒。\n必須為連續命中才有疊加效果。\n可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。" end),
+	create_template("trait_bespoke_009_desc_ext_zh", {"loc_trait_bespoke_chained_hits_increases_crit_chance_desc"}, {"zh-tw"}, function(locale, value) return "每次攻擊 "..COLORS_Numbers.p_crit_var_rgb.." "..COLORS_KWords_tw.Crit_chance_rgb.." 機率，持續 "..COLORS_Numbers.n_3_5_rgb.." 秒。\n必須為連續命中才有疊加效果。\n每次攻擊可疊加一層，共疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。" end),
 	
 		--[+ Savage Sweep +]--
 			-- Chainswords, Cleavers, Devil's Claw Swords, Eviscerators, Heavy Swords -- 140% | 160% | 180% | 200%
@@ -357,7 +357,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_013_desc_ext_fr", {"loc_trait_bespoke_chained_hits_increases_power_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." de "..COLORS_KWords_fr.Strength_rgb_fr.." en enchaînant continuellement plus de "..COLORS_Numbers.n_2_rgb.." attaques. Se Cumule "..COLORS_Numbers.stacks_var_rgb.." fois."..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 屠戮者 +]--
-	create_template("trait_bespoke_013_desc_ext_zh", {"loc_trait_bespoke_chained_hits_increases_power_desc"}, {"zh-tw"}, function(locale, value) return "連續攻擊超過 "..COLORS_Numbers.n_2_rgb.." 次時，\n每次攻擊 "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.."，\n可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。" end),
+	create_template("trait_bespoke_013_desc_ext_zh", {"loc_trait_bespoke_chained_hits_increases_power_desc"}, {"zh-tw"}, function(locale, value) return "連續攻擊任意目標超過 "..COLORS_Numbers.n_2_rgb.." 次時，\n每次攻擊可疊加一層 "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.."，\n需連續命中不得揮空，\n可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。" end),
 	
 		--[+ Brutal Momentum +]--
 			-- Battle Maul and Shield, Combat Axes, Heavy Swords, Latrine Shovels, Power Maul, Power Swords, Tactical Axes -- 7.5% | 10% | 12.5% | 15%
@@ -438,7 +438,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_023_desc_ext_fr", {"loc_trait_bespoke_chained_weakspot_hits_increases_power_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." de "..COLORS_KWords_fr.Strength_rgb_fr.." lors d'un coup sur "..COLORS_KWords_fr.Weakspothit_rgb_fr.." répété. Se cumule "..COLORS_Numbers.stacks_var_rgb.." fois. {#color(255, 35, 5)}(bug:+5% sur tout les niveaux de bénédiction){#reset()}"..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 行刑者 +]--
-	create_template("trait_bespoke_023_desc_ext_zh", {"loc_trait_bespoke_chained_weakspot_hits_increases_power_desc"}, {"zh-tw"}, function(locale, value) return "連續 "..COLORS_KWords_tw.Weakspothit_rgb.." 時，\n每次攻擊可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。\n{#color(255, 35, 5)}(bug: 所有等級 +5%){#reset()}"..COLORS_KWords_tw.Pwr_note_rgb end),
+	create_template("trait_bespoke_023_desc_ext_zh", {"loc_trait_bespoke_chained_weakspot_hits_increases_power_desc"}, {"zh-tw"}, function(locale, value) return "連續 "..COLORS_KWords_tw.Weakspothit_rgb.." 時，\n每次攻擊可疊加一層 "..COLORS_KWords_tw.Strength_rgb.." ，\n共可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。\n{#color(255, 35, 5)}(bug: 所有等級 +5%){#reset()}"..COLORS_KWords_tw.Pwr_note_rgb end),
 
 		--[+ Riposte +]--
 			-- Combat Blades, Duelling Swords, Force Swords -- 12.5% | 15% | 17.5% | 20%
@@ -517,7 +517,7 @@ local localization_templates = {
 	create_template("trait_bespoke_033_desc_ext_en", {"loc_trait_bespoke_stacking_increase_impact_on_hit_desc"}, {"en"}, function(locale, value) return COLORS_Numbers.p_imp_var_rgb.." "..COLORS_KWords.Impact_rgb.." for "..COLORS_Numbers.time_var_rgb.." seconds on Hit. Stacks "..COLORS_Numbers.stacks_var_rgb.." times. Up to "..COLORS_Numbers.n_5_rgb.." Stacks per Hit." end), -- impact: +25%, time: 1.5, stacks: 5 -- s->seconds -- colors
 			--[+ French +]--
 	create_template("trait_bespoke_033_desc_ext_fr", {"loc_trait_bespoke_stacking_increase_impact_on_hit_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_imp_var_rgb.." d'"..COLORS_KWords_fr.Impact_rgb_fr.." pendant "..COLORS_Numbers.time_var_rgb.." secondes lors d'un coup. Se cumule "..COLORS_Numbers.stacks_var_rgb.." fois. Jusqu'à "..COLORS_Numbers.n_5_rgb.." cumuls par coup." end),
-			--[+ Traditional Chinese - 重擊 +]--
+			--[+ Traditional Chinese - 錘擊 +]--
 	create_template("trait_bespoke_033_desc_ext_zh", {"loc_trait_bespoke_stacking_increase_impact_on_hit_desc"}, {"zh-tw"}, function(locale, value) return "每次攻擊造成 "..COLORS_Numbers.p_imp_var_rgb.." "..COLORS_KWords_tw.Impact_rgb.."，\n持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n最多疊加 "..COLORS_Numbers.n_5_rgb.." 層" end),
 
 		--[+ Skullcrusher +]--
