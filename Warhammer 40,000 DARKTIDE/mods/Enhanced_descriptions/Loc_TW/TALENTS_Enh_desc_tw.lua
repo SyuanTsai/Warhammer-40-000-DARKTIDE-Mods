@@ -141,7 +141,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Aura_0_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 與珍品提供的戰鬥技能回復，以及可使技能冷卻縮短 20% 的任務事件（mutators）相加疊加。",
-		"- 這會將「靈能尖嘯」/「靈能學者之怒」的最大冷卻時間減少至 27.75 秒、「占卜者的注視」減少至 23.125 秒、「念力護盾」減少至 37 秒。",
+		"- 這會將「靈能尖嘯」、「靈能學者之怒」的最大冷卻時間減少至 27.75 秒、「占卜者的注視」減少至 23.125 秒、「念力護盾」減少至 37 秒。",
 		doesnt_stack_aura_psy,
 	}, "\n"), enhdesc_col)
 
@@ -156,7 +156,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_PSY_Aura_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 與珍品提供的戰鬥技能回復，以及可使技能冷卻縮短 20% 的任務事件相加疊加。",
-		"- 這會將「靈能尖嘯」/「靈能學者之怒」的最大冷卻時間減少至 27 秒、占卜者的注視」減少至 22.5 秒、「念力護盾」減少至 36 秒。",
+		"- 這會將「靈能尖嘯」、「靈能學者之怒」的最大冷卻時間減少至 27 秒、占卜者的注視」減少至 22.5 秒、「念力護盾」減少至 36 秒。",
 		doesnt_stack_aura_psy,
 	}, "\n"), enhdesc_col)
 
