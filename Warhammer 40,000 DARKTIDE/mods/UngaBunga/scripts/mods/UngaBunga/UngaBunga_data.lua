@@ -40,6 +40,14 @@ return {
 						function_name   = "toggle"
 					},
 					{
+						setting_id      = "toggle_bind_held",
+						type            = "keybind",
+						default_value   = {},
+						keybind_trigger = "held",
+						keybind_type    = "function_call",
+						function_name   = "toggle_silent"
+					},
+					{
 						setting_id      = "attack_bind",
 						type            = "keybind",
 						default_value   = {},
