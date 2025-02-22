@@ -258,7 +258,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_002_desc_ext_fr", {"loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_crit_var_rgb.." "..COLORS_KWords_fr.Crit_chance_rgb_fr.." sur votre prochaine attaque de mêlée après une élimination avec une attaque spéciale." end),
 			--[+ Traditional Chinese - 嗜血 +]--
-	create_template("trait_bespoke_002_desc_ext_zh", {"loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill_desc"}, {"zh-tw"}, function(locale, value) return "在特殊攻擊擊殺敵人後，\n下一次近戰攻擊 "..COLORS_Numbers.p_crit_var_rgb..COLORS_KWords_tw.Crit_chance_rgb.."。" end),
+	create_template("trait_bespoke_002_desc_ext_zh", {"loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill_desc"}, {"zh-tw"}, function(locale, value) return "在特殊攻擊擊殺敵人後，\n下一次近戰攻擊 "..COLORS_Numbers.p_crit_var_rgb.." "..COLORS_KWords_tw.Crit_chance_rgb.."。" end),
 
 		--[+ Headtaker +]--
 			-- Chainaxes, Combat Axes, Pickaxes, Tactical Axes, Thunder Hammers -- 3.5% 4% 4.5% 5% (up to +25%)
