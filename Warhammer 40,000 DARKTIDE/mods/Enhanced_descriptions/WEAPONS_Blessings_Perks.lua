@@ -349,7 +349,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_012_desc_ext_fr", {"loc_trait_bespoke_infinite_melee_cleave_on_crit_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_hitmass_var_rgb.." de "..COLORS_KWords_fr.Cleave_rgb_fr.." pendant "..COLORS_Numbers.time_var_rgb.." secondes lors d'un "..COLORS_KWords_fr.Crit_hit_rgb_fr.."." end),
 			--[+ Traditional Chinese - 毀滅打擊 +]--
-	create_template("trait_bespoke_012_desc_ext_zh", {"loc_trait_bespoke_infinite_melee_cleave_on_crit_desc"}, {"zh-tw"}, function(locale, value) return "暴擊時，持續 "..COLORS_Numbers.time_var_rgb.." 秒的 "..COLORS_Numbers.p_hitmass_var_rgb.." "..COLORS_KWords_tw.Cleave_rgb end),
+	create_template("trait_bespoke_012_desc_ext_zh", {"loc_trait_bespoke_infinite_melee_cleave_on_crit_desc"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Crit_hit_rgb.." 時，"..COLORS_Numbers.p_hitmass_var_rgb.." "..COLORS_KWords_tw.Cleave_rgb.."，持續 "..COLORS_Numbers.time_var_rgb.." 秒。" end),
 	
 		--[+ Decimator +]--
 			-- Combat Axes, Sapper Shovels, Tactical Axes -- 2% | 3% | 4% | 5% (up to +50%)
