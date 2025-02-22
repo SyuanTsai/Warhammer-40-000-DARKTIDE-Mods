@@ -292,7 +292,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_005_desc_ext_fr", {"loc_trait_bespoke_movement_speed_on_activation_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_movspd_var_rgb.." de vitesse déplacement pendant "..COLORS_Numbers.time_var_rgb.." secondes lors de l'activation spéciale d'une arme." end),
 			--[+ Traditional Chinese - 提速 +]--
-	create_template("trait_bespoke_005_desc_ext_zh", {"loc_trait_bespoke_movement_speed_on_activation_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.p_movspd_var_rgb.." 在武器特殊技能啟動時。\n移動速度持續 "..COLORS_Numbers.time_var_rgb.." 秒。" end),
+	create_template("trait_bespoke_005_desc_ext_zh", {"loc_trait_bespoke_movement_speed_on_activation_desc"}, {"zh-tw"}, function(locale, value) return "在武器特殊技能啟動時 "..COLORS_Numbers.p_movspd_var_rgb.." 移動速度。\n持續 "..COLORS_Numbers.time_var_rgb.." 秒。" end),
 
 		--[+ Thrust +]--
 			-- Bully Clubs, Chainaxes, Cleavers, Combat Axes, Crusher, Duelling Swords, Heavy Swords, Latrine Shovels, Pickaxes, Power Swords,Sapper Shovels, Shock Mauls, Thunder Hammers -- 5% | 10% | 15% | 20% (up to +60%)
