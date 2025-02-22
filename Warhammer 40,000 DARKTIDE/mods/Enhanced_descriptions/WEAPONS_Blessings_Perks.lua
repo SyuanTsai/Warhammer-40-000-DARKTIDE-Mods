@@ -637,6 +637,8 @@ local localization_templates = {
 	create_template("trait_bespoke_048_desc_ext_en", {"loc_trait_bespoke_staggering_hits_has_chance_to_stun_desc"}, {"en"}, function(locale, value) return COLORS_KWords.Staggering_rgb.." an Enemy has a "..COLORS_Numbers.chnc_var_rgb.." Chance to Stun the enemy. Cooldown "..COLORS_Numbers.cd_var_rgb.."econds." end), -- chance: 25%, cooldown: 3.5s!!! -- colors
 			--[+ French +]--
 	create_template("trait_bespoke_048_desc_ext_fr", {"loc_trait_bespoke_staggering_hits_has_chance_to_stun_desc"}, {"fr"}, function(locale, value) return "Faire "..COLORS_KWords_fr.Staggering_rgb_fr.." un ennemie à "..COLORS_Numbers.chnc_var_rgb.." de chance de l'"..COLORS_KWords_fr.Stun_rgb_fr..". Temps de recharge : "..COLORS_Numbers.cd_var_rgb.."econdes." end),
+			--[+ Traditional Chinese - 壓倒性的武力 +]--
+	create_template("trait_bespoke_048_desc_ext_zh", {"loc_trait_bespoke_staggering_hits_has_chance_to_stun_desc"}, {"zh-tw"}, function(locale, value) return "使敵人 "..COLORS_KWords_tw.Staggering_rgb.." 時，\n有 "..COLORS_Numbers.chnc_var_rgb.." 的機率使敵人暈眩。\n冷卻時間 "..COLORS_Numbers.cd_var_rgb.." 秒" end),
 
 		--[+ Momentum +]--
 			-- Bully Clubs, Cleavers, Eviscerators, Thunder Hammers -- 12% | 13% | 14% | 15%
