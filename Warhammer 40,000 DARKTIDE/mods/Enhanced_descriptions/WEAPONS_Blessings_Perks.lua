@@ -325,7 +325,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_009_desc_ext_fr", {"loc_trait_bespoke_chained_hits_increases_crit_chance_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_crit_var_rgb.." de "..COLORS_KWords_fr.Crit_chance_rgb_fr.." lors d'un coup en chaîne pendant "..COLORS_Numbers.n_3_5_rgb.." secondes. Se Cumule "..COLORS_Numbers.stacks_var_rgb.." fois." end),
 			--[+ Traditional Chinese - 粉碎 +]--
-	create_template("trait_bespoke_009_desc_ext_zh", {"loc_trait_bespoke_chained_hits_increases_crit_chance_desc"}, {"zh-tw"}, function(locale, value) return "每次攻擊 "..COLORS_Numbers.p_crit_var_rgb.." "..COLORS_KWords_tw.Crit_chance_rgb.." 機率，持續 "..COLORS_Numbers.n_3_5_rgb.." 秒。\n必須為連續命中才有疊加效果。\n每次攻擊可疊加一層，共疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。" end),
+	create_template("trait_bespoke_009_desc_ext_zh", {"loc_trait_bespoke_chained_hits_increases_crit_chance_desc"}, {"zh-tw"}, function(locale, value) return "每次攻擊 "..COLORS_Numbers.p_crit_var_rgb.." "..COLORS_KWords_tw.Crit_chance_rgb.."，持續 "..COLORS_Numbers.n_3_5_rgb.." 秒。\n必須為連續命中才有疊加效果。\n每次攻擊可疊加一層，共疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。" end),
 	
 		--[+ Savage Sweep +]--
 			-- Chainswords, Cleavers, Devil's Claw Swords, Eviscerators, Heavy Swords -- 140% | 160% | 180% | 200%
