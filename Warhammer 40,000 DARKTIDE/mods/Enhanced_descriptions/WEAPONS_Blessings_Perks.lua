@@ -899,7 +899,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_071_desc_ext_fr", {"loc_trait_bespoke_increase_power_on_close_kill_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." de "..COLORS_KWords_fr.Strength_rgb_fr.." pendant "..COLORS_Numbers.time_var_rgb.." secondes lors d'une élimination à moins de "..COLORS_Numbers.n_12_5_rgb.." mètres. Se cumule jusqu'à "..COLORS_Numbers.n_5_rgb.." fois."..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 死亡噴吐 +]--
-	create_template("trait_bespoke_071_desc_ext_zh", {"loc_trait_bespoke_increase_power_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在最多 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n在 "..COLORS_Numbers.time_var_rgb.." 秒內，\n增加 "..COLORS_Numbers.p_pwrlvl_var_rgb.." 的 "..COLORS_KWords_tw.Strength_rgb.."。\n最多 "..COLORS_Numbers.n_5_rgb.." 層。" end),
+	create_template("trait_bespoke_071_desc_ext_zh", {"loc_trait_bespoke_increase_power_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n增加 "..COLORS_Numbers.p_pwrlvl_var_rgb.." 的 "..COLORS_KWords_tw.Strength_rgb.." 持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n最多 "..COLORS_Numbers.n_5_rgb.." 層。" end),
 
 		--[+ Stripped Down +]--
 			-- Braced Autoguns, Infantry Autoguns, Recon Lasguns -- 80% | 70% | 60% | 50%
