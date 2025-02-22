@@ -47,13 +47,12 @@
 - MOD 檔案名稱：Power_DI_1.1.7.zip-281-v1-1-7-1734016443
 - 手動維護最後下載日期：2025-02-13
 
-
 ### [Unga Bunga](https://www.nexusmods.com/warhammer40kdarktide/mods/476)
     自動重擊
-- MOD 網站最後更新日期：Last updated 20 February 2025 12:45AM
-- MOD 版本：1.3.2
-- MOD 檔案名稱：Unga Bunga 1.3.1-476-1-3-1-1740012346
-- 手動維護最後下載日期：2025-02-20
+- MOD 網站最後更新日期：Last updated 22 February 2025 3:17PM
+- MOD 版本：1.3.3
+- MOD 檔案名稱：Unga Bunga 1.3.3-476-1-3-3-1740237468
+- 手動維護最後下載日期：2025-02-23
 
 ### JishuJun
     團隊計分
@@ -278,13 +277,6 @@
 - MOD 版本：1.1.1
 - MOD 檔案名稱：RememberServerLocation-308-1-1-1-1719684862
 - 手動維護最後下載日期：2025-02-18
-
-### [Unga Bunga](https://www.nexusmods.com/warhammer40kdarktide/mods/476)
-    自動重擊
-- MOD 網站最後更新日期：Last updated 22 February 2025 3:17PM
-- MOD 版本：1.3.3
-- MOD 檔案名稱：Unga Bunga 1.3.3-476-1-3-3-1740237468
-- 手動維護最後下載日期：2025-02-23
 
 ---
 # 遊戲內操作相關MOD
