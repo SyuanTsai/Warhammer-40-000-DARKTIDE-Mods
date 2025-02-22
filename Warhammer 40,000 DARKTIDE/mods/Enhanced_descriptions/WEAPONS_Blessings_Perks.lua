@@ -1281,6 +1281,8 @@ local localization_templates = {
 	create_template("trait_bespoke_117_desc_ext_en", {"loc_trait_bespoke_armor_rend_on_projectile_hit_desc"}, {"en"}, function(locale, value) return "Target receives "..COLORS_Numbers.stacks_var_rgb.." Stacks of "..COLORS_Numbers.rending2_var_rgb.." "..COLORS_KWords.Brittleness_rgb.." on direct projectile hit. Lasts "..COLORS_Numbers.time_var_rgb.." seconds. Max "..COLORS_Numbers.maxstks_var_rgb.." Stacks, up to "..COLORS_Numbers.pc_40_rgb.."."..COLORS_KWords.Brtl_note_rgb end), -- stacks: 4, rending: 2.5%, time: 5, max_stacks: 16 -- rewrite -- s->seconds -- colors
 			--[+ French +]--
 	create_template("trait_bespoke_117_desc_ext_fr", {"loc_trait_bespoke_armor_rend_on_projectile_hit_desc"}, {"fr"}, function(locale, value) return "La cible reçoit "..COLORS_Numbers.stacks_var_rgb.." cumuls de "..COLORS_Numbers.rending2_var_rgb.." de "..COLORS_KWords_fr.Brittleness_rgb_fr.." si elle est touchée directement par un projectile. Dure "..COLORS_Numbers.time_var_rgb.." secondes."..COLORS_Numbers.maxstks_var_rgb.." cumuls maximum, Jusqu'à "..COLORS_Numbers.pc_40_rgb.."."..COLORS_KWords_fr.Brtl_note_rgb_fr end),
+			--[+ Traditional Chinese - 破碎衝擊 +]--
+	create_template("trait_bespoke_117_desc_ext_zh", {"loc_trait_bespoke_armor_rend_on_projectile_hit_desc"}, {"zh-tw"}, function(locale, value) return "直接命中時，\n目標獲得 "..COLORS_Numbers.stacks_var_rgb.." 層的 "..COLORS_Numbers.rending2_var_rgb.." "..COLORS_KWords_tw.Brittleness_rgb.."，\n持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n最多 "..COLORS_Numbers.maxstks_var_rgb.." 層，最多 "..COLORS_Numbers.pc_40_rgb.."。" end),
 
 		--[+ Everlasting Flame +]--
 			-- Flamer -- 2 | 3 | 4 | 5
