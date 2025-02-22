@@ -558,7 +558,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_038_desc_ext_fr", {"loc_trait_bespoke_pass_past_armor_on_crit_new_desc"}, {"fr"}, function(locale, value) return  COLORS_Numbers.p_critdmg_var_rgb.." de "..COLORS_KWords_fr.Damage_rgb_fr.." de "..COLORS_KWords_fr.Crit_hit_rgb_fr.." en mélée. Les "..COLORS_KWords_fr.Crit_hits_rgb_fr.." ignore le "..COLORS_KWords_fr.Hit_mass_rgb_fr.." de l'armure." end),
 			--[+ Traditional Chinese - 完美一擊 +]--
-	create_template("trait_bespoke_038_desc_ext_zh", {"loc_trait_bespoke_pass_past_armor_on_crit_new_desc"}, {"zh-tw"}, function(locale, value) return "近戰 "..COLORS_KWords_tw.Crit_hit_rgb.." 時，\n增加 "..COLORS_Numbers.p_critdmg_var_rgb.." "..COLORS_KWords_tw.Damage_rgb.."。\n無視 "..COLORS_KWords_tw.Hit_mass_rgb.." 護甲加成" end),
+	create_template("trait_bespoke_038_desc_ext_zh", {"loc_trait_bespoke_pass_past_armor_on_crit_new_desc"}, {"zh-tw"}, function(locale, value) return "近戰 "..COLORS_KWords_tw.Crit_hit_rgb.." 時，增加 "..COLORS_Numbers.p_critdmg_var_rgb.." "..COLORS_KWords_tw.Damage_rgb.."。\n無視 "..COLORS_KWords_tw.Hit_mass_rgb.." 護甲加成" end),
 
 		--[+ Bladed Momentum +]--
 			-- Heavy Swords -- 4% | 6% | 8% | 10% (up to +50%)
