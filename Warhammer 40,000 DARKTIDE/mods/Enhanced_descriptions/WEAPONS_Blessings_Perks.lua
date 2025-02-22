@@ -812,7 +812,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_070m_desc_ext_fr", {"loc_power_bonus_scaled_on_heat_desc"}, {"fr"}, function(locale, value) return "Augmente la "..COLORS_KWords_fr.Strength_rgb_fr.." jusqu'à "..COLORS_Numbers.amount_var_rgb..", en fonction de la "..COLORS_KWords_fr.Heat_rgb_fr.."."..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 能量洩漏 +]--
-	create_template("trait_bespoke_070m_desc_ext_zh", {"loc_power_bonus_scaled_on_heat_desc"}, {"zh-tw"}, function(locale, value) return "根據 "..COLORS_KWords_tw.Heat_rgb.." 調整，\n "..COLORS_KWords_tw.Strength_rgb.." 最多增加 "..COLORS_Numbers.amount_var_rgb end),
+	create_template("trait_bespoke_070m_desc_ext_zh", {"loc_power_bonus_scaled_on_heat_desc"}, {"zh-tw"}, function(locale, value) return "根據 "..COLORS_KWords_tw.Heat_rgb.." 調整，\n"..COLORS_KWords_tw.Strength_rgb.." 最多增加 "..COLORS_Numbers.amount_var_rgb end),
 
 		--[+ Heatsink +]--
 			-- Relic Blade -- 4% | 6% | 8% | 10%
