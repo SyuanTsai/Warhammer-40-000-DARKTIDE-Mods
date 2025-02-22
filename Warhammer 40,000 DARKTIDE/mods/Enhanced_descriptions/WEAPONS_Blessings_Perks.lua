@@ -365,7 +365,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_014_desc_ext_fr", {"loc_trait_bespoke_infinite_cleave_on_weakspot_kill_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_wkspdmg_var_rgb.." "..COLORS_KWords_fr.Weakspot_dmg_rgb_fr..". Les élimination sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." ignore le "..COLORS_KWords_fr.Hit_mass_rgb_fr.." de "..COLORS_Numbers.n_3_rgb.." ennemies." end),
 			--[+ Traditional Chinese - 野蠻攻勢 +]--
-	create_template("trait_bespoke_014_desc_ext_zh", {"loc_trait_bespoke_infinite_cleave_on_weakspot_kill_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.p_wkspdmg_var_rgb.." "..COLORS_KWords_tw.Weakspot_dmg_rgb.."。\n"..COLORS_KWords_tw.Weakspot_rgb.."擊殺也會忽略最多 "..COLORS_Numbers.n_3_rgb.." 個敵人的 "..COLORS_KWords_tw.Hit_mass_rgb end),
+	create_template("trait_bespoke_014_desc_ext_zh", {"loc_trait_bespoke_infinite_cleave_on_weakspot_kill_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.p_wkspdmg_var_rgb.." "..COLORS_KWords_tw.Weakspot_dmg_rgb.."。\n"..COLORS_KWords_tw.Weakspot_rgb.." 擊殺可無視 "..COLORS_Numbers.n_3_rgb.." 個敵人的 "..COLORS_KWords_tw.Hit_mass_rgb end),
 	
 		--[+ Limbsplitter +]--
 			-- Combat Axes, Pickaxes, Sapper Shovels, Tactical Axes -- 5 | 4.5 | 4 | 3.5
