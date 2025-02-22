@@ -267,7 +267,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_003_desc_ext_fr", {"loc_trait_bespoke_increase_power_on_hit_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_fr.Strength_rgb_fr.." pour "..COLORS_Numbers.time_var_rgb.." secondes lors d'un coup. Se Cumule "..COLORS_Numbers.stacks_var_rgb.." fois."..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 奪顱者 +]--
-	create_template("trait_bespoke_003_desc_ext_zh", {"loc_trait_bespoke_increase_power_on_hit_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.." 持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n每次攻擊可疊加一層，共可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。"..COLORS_KWords_tw.Pwr_note_rgb end),
+	create_template("trait_bespoke_003_desc_ext_zh", {"loc_trait_bespoke_increase_power_on_hit_desc"}, {"zh-tw"}, function(locale, value) return "持續 "..COLORS_Numbers.time_var_rgb.." 秒的 "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.."。\n每次攻擊可疊加一層，共可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。"..COLORS_KWords_tw.Pwr_note_rgb end),
 
 		--[+ Shock & Awe / Shock and Awe +]--
 			-- Thunder Hammers -- 30% | 40% | 50% | 60%
