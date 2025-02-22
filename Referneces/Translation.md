@@ -118,6 +118,7 @@
 - Heatsink - 散熱器
 - Syphon - 虹吸
 - Energy Transfer - 能量轉換
+- Falter - 踉蹌
 
 ### Weapon Blessing - 武器祝福(遠程)
 - Raking Fire - 掃射

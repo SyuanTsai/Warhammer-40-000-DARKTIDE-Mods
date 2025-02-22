@@ -629,6 +629,8 @@ local localization_templates = {
 	create_template("trait_bespoke_047_desc_ext_en", {"loc_trait_bespoke_negate_stagger_reduction_on_weakspot_desc"}, {"en"}, function(locale, value) return "Increased "..COLORS_KWords.Stagger_rgb.." on enemies by "..COLORS_Numbers.stgr_var_rgb..", on "..COLORS_KWords.Weakspothit_rgb..". Additionally, increases Ranged "..COLORS_KWords.Stagger_rgb.." strength by "..COLORS_Numbers.stgrrang_var_rgb.."." end), -- stagger: 90%, ranged_stagger: 30% -- colors
 			--[+ French +]--
 	create_template("trait_bespoke_047_desc_ext_fr", {"loc_trait_bespoke_negate_stagger_reduction_on_weakspot_desc"}, {"fr"}, function(locale, value) return "Le "..COLORS_KWords_fr.Stagger_rgb_fr.." des ennemis augmente de "..COLORS_Numbers.stgr_var_rgb..", lors d'un "..COLORS_KWords_fr.Weakspothit_rgb_fr..". De plus augmente la puissance du "..COLORS_KWords_fr.Stagger_rgb_fr.." à distance de "..COLORS_Numbers.stgrrang_var_rgb.."." end),
+			--[+ Traditional Chinese - 踉蹌 +]--
+	create_template("trait_bespoke_047_desc_ext_zh", {"loc_trait_bespoke_negate_stagger_reduction_on_weakspot_desc"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Weakspothit_rgb.." 時，\n增加 "..COLORS_Numbers.stgr_var_rgb.." "..COLORS_KWords_tw.Stagger_rgb.." 與 "..COLORS_Numbers.stgrrang_var_rgb.." 的遠程 "..COLORS_KWords_tw.Stagger_rgb end),
 
 		--[+ Overwhelming Force +]--
 			-- Shock Mauls -- 5s & 10% | 4.5s & 15% | 4s & 20% | 3.5s & 25%
