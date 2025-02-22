@@ -866,7 +866,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_067_desc_ext_fr", {"loc_trait_bespoke_count_as_dodge_vs_ranged_on_close_kill_desc"}, {"fr"}, function(locale, value) return "Immunité contre les attaques à distance pendant "..COLORS_Numbers.time_var_rgb.." secondes lors d'une élimination à moins de "..COLORS_Numbers.n_12_5_rgb.." mètres." end),
 			--[+ Traditional Chinese - 游擊 +]--
-	create_template("trait_bespoke_067_desc_ext_zh", {"loc_trait_bespoke_count_as_dodge_vs_ranged_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在最多 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n對遠程攻擊免疫 "..COLORS_Numbers.time_var_rgb.." 秒" end),
+	create_template("trait_bespoke_067_desc_ext_zh", {"loc_trait_bespoke_count_as_dodge_vs_ranged_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n對遠程攻擊免疫 "..COLORS_Numbers.time_var_rgb.." 秒。" end),
 
 		--[+ Sustained Fire +]--
 			-- Autopistol, Electrokinetic Staff, Helbore Lasguns, Infantry Autoguns, Recon Lasguns, Stub Revolvers, Voidblast Staff, Voidstrike Staff -- 14% | 16% | 18% | 20%
@@ -918,7 +918,7 @@ local localization_templates = {
 			--[+ French +]--
 		create_template("trait_bespoke_073_desc_ext_fr", {"loc_trait_bespoke_reload_speed_on_slide_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_reload_var_rgb.." de vitesse de rechargement pendant "..COLORS_Numbers.time_var_rgb.." secondes lors d'une élimination à moins de "..COLORS_Numbers.n_12_5_rgb.." mètres. Se cumule "..COLORS_Numbers.stacks_var_rgb.." fois." end),
 			--[+ Traditional Chinese - 快速裝彈 +]--
-		create_template("trait_bespoke_073_desc_ext_zh", {"loc_trait_bespoke_reload_speed_on_slide_desc"}, {"zh-tw"}, function(locale, value) return "在最多 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n在 "..COLORS_Numbers.time_var_rgb.." 秒內，增加 "..COLORS_Numbers.p_reload_var_rgb.." 的裝填速度。\n最多 "..COLORS_Numbers.n_5_rgb.." 層。" end),
+		create_template("trait_bespoke_073_desc_ext_zh", {"loc_trait_bespoke_reload_speed_on_slide_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n增加 "..COLORS_Numbers.p_reload_var_rgb.." 的裝填速度，持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n最多 "..COLORS_Numbers.n_5_rgb.." 層。" end),
 
 		--[+ Terrifying Barrage +]--
 			-- Autopistol, Boltgun, Braced Autoguns, Combat Shotguns, Double-Barrel Shotgun, Electrokinetic Staff, Heavy Stubbers, Infantry Autoguns, Inferno Staff, Kickback, Ripper Guns, Stub Revolvers, Voidblast Staff, Voidstrike Staff -- 15 | 20 | 25 | 30
@@ -935,7 +935,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_075_desc_ext_fr", {"loc_trait_bespoke_movement_speed_on_continuous_fire_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.m_movspd_var_rgb.." de réduction de vitesse de déplacement pour chaque "..COLORS_Numbers.ammo_var_rgb.." du chargeur utilisé en tir continu. Se cumule "..COLORS_Numbers.stacks_var_rgb.." fois." end),
 			--[+ Traditional Chinese - 咆哮突進 +]--
-	create_template("trait_bespoke_075_desc_ext_zh", {"loc_trait_bespoke_movement_speed_on_continuous_fire_desc"}, {"zh-tw"}, function(locale, value) return "在連續射擊時，\n每使用 "..COLORS_Numbers.ammo_var_rgb.." 發子彈，\n減少 "..COLORS_Numbers.m_movspd_var_rgb.." 的移動速度。\n最多 "..COLORS_Numbers.stacks_var_rgb.." 層" end),
+	create_template("trait_bespoke_075_desc_ext_zh", {"loc_trait_bespoke_movement_speed_on_continuous_fire_desc"}, {"zh-tw"}, function(locale, value) return "在連續射擊時，\n每使用 "..COLORS_Numbers.ammo_var_rgb.." 發子彈，\n減少 "..COLORS_Numbers.m_movspd_var_rgb.." 的移動速度。\n最多 "..COLORS_Numbers.stacks_var_rgb.." 層。" end),
 
 		--[+ Ceaseless Barrage +]--
 			-- Braced Autoguns, Heavy Stubbers -- 20% & 6% | 20% & 6% | 20% & 6% | 20% & 6% (up to +100% & +30%)
@@ -968,7 +968,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_079_desc_ext_fr", {"loc_trait_bespoke_crit_chance_based_on_aim_time_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_crit_var_rgb.." "..COLORS_KWords_fr.Crit_chance_rgb_fr.." chaque fois de vous passez "..COLORS_Numbers.time_var_rgb.." secondes à viser. Se cumule "..COLORS_Numbers.stacks_var_rgb.." fois. Tous les cumuls sont déchargés lorsque vous tirez." end),
 			--[+ Traditional Chinese - 精確打擊 +]--
-	create_template("trait_bespoke_079_desc_ext_zh", {"loc_trait_bespoke_crit_chance_based_on_aim_time_desc"}, {"zh-tw"}, function(locale, value) return "瞄準 "..COLORS_Numbers.time_var_rgb.." 秒，\n增加 "..COLORS_Numbers.p_crit_var_rgb.." 的 "..COLORS_KWords_tw.Crit_chance_rgb.."。\n最多 "..COLORS_Numbers.stacks_var_rgb.." 層。\n射擊時，所有層數消失。" end),
+	create_template("trait_bespoke_079_desc_ext_zh", {"loc_trait_bespoke_crit_chance_based_on_aim_time_desc"}, {"zh-tw"}, function(locale, value) return "每瞄準 "..COLORS_Numbers.time_var_rgb.." 秒，\n增加 "..COLORS_Numbers.p_crit_var_rgb.." 的 "..COLORS_KWords_tw.Crit_chance_rgb.."。\n最多 "..COLORS_Numbers.stacks_var_rgb.." 層。\n射擊時，所有層數消失。" end),
 
 		--[+ Crucian Roulette +]--
 			-- Stub Revolvers -- 4.5% | 5% | 5.5% | 6%
@@ -1233,7 +1233,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_111_desc_ext_fr", {"loc_trait_bespoke_cleave_on_crit_and_stagger_desc"}, {"fr"}, function(locale, value) return "Augmente le "..COLORS_KWords_fr.Cleave_rgb_fr.." lors d'un "..COLORS_KWords_fr.Crit_hit_rgb_fr.." augmente également de "..COLORS_Numbers.p_stgr_var_rgb.." le "..COLORS_KWords_fr.Stagger_rgb_fr.."." end),
 			--[+ Traditional Chinese - 大口徑彈藥 +]--
-	create_template("trait_bespoke_111_desc_ext_zh", {"loc_trait_bespoke_cleave_on_crit_and_stagger_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_KWords_tw.Crit_hit_rgb.." 時，\n增加 "..COLORS_KWords_tw.Cleave_rgb.."，\n並獲得 "..COLORS_Numbers.p_stgr_var_rgb.." 的遠程攻擊 "..COLORS_KWords_tw.Stagger_rgb.."。" end),
+	create_template("trait_bespoke_111_desc_ext_zh", {"loc_trait_bespoke_cleave_on_crit_and_stagger_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_KWords_tw.Crit_hit_rgb.." 時，增加 "..COLORS_KWords_tw.Cleave_rgb.."，\n並獲得 "..COLORS_Numbers.p_stgr_var_rgb.." 的遠程攻擊 "..COLORS_KWords_tw.Stagger_rgb.."。" end),
 
 		--[+ Scattershot +]--
 			-- Combat Shotguns, Double-Barrel Shotgun -- 6% | 8% | 10% | 12% (up to +60%)
