@@ -373,7 +373,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_015_desc_ext_fr", {"loc_trait_bespoke_power_bonus_on_first_attack_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." de "..COLORS_KWords_fr.Strength_rgb_fr.." sur votre première attaque toute les "..COLORS_Numbers.cd_var_rgb.." secondes."..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 斷肢者 +]--
-	create_template("trait_bespoke_015_desc_ext_zh", {"loc_trait_bespoke_power_bonus_on_first_attack_desc"}, {"zh-tw"}, function(locale, value) return "每 "..COLORS_Numbers.cd_var_rgb.." 秒，第一次攻擊增加 "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb end),
+	create_template("trait_bespoke_015_desc_ext_zh", {"loc_trait_bespoke_power_bonus_on_first_attack_desc"}, {"zh-tw"}, function(locale, value) return "每 "..COLORS_Numbers.cd_var_rgb.." 秒，第一次攻擊增加 "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.."。" end),
 	
 		--[+ All or Nothing +]--
 			-- Combat Axes, Pickaxes -- 5% | 6% | 7% | 8% (up to +40%)
