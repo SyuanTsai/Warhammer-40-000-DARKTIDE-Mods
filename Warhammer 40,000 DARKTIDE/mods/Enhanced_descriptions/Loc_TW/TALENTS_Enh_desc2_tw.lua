@@ -266,8 +266,8 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"-- 走路(Walking)每秒移除1層疊加。",
 		"-- 衝刺(Sprinting)每0.5秒移除1層疊加。",
 		"-- 滑行(Sliding)時，也會依移動速度相應流失。",
-		"- 提供的「技巧(Finesse)」加成與其他弱點(Weakspot)與技巧傷害Buff採加法疊加，與武器祝福提供的威力(Power level)增益則乘法計算。",
-		"- 換彈速度(Reload Speed)加成與「集火」、「戰術裝填」、「齊射能手」、小型換彈速度天賦、武器專長、武器祝福、以及敏捷興奮劑等以加法疊加。",
+		"- 提供的「技巧(Finesse)」加成與其他弱點(Weakspot)與技巧傷害Buff採加法疊加，與武器祝福提供的威力(Power-level)增益則乘法計算。",
+		"- 換彈速度(Reload-Speed)加成與「集火」、「戰術裝填」、「齊射能手」、小型換彈速度天賦、武器專長、武器祝福、以及敏捷興奮劑等以加法疊加。",
 		"- 此換彈速度同樣提升戰鬥霰彈槍特殊裝填動作速度。",
 	}, "\n"), enhdesc_col)
 
