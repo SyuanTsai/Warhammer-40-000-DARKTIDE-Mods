@@ -661,6 +661,9 @@ local localization_templates = {
 	create_template("trait_bespoke_051_desc_ext_en", {"loc_trait_bespoke_armor_rend_on_activated_attacks_desc"}, {"en"}, function(locale, value) return COLORS_Numbers.p_rend_var_rgb.." Stacks of "..COLORS_KWords.Brittleness_rgb.." on Energised Hit."..COLORS_KWords.Brtl_note_rgb end), -- rend: +4 -- colors
 			--[+ French +]--
 	create_template("trait_bespoke_051_desc_ext_fr", {"loc_trait_bespoke_armor_rend_on_activated_attacks_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_rend_var_rgb.." cumuls de "..COLORS_KWords_fr.Brittleness_rgb_fr.." lors d'un coup énergisé."..COLORS_KWords_fr.Brtl_note_rgb_fr end),
+			--[+ Traditional Chinese - 超級充能 +]--
+	create_template("trait_bespoke_051_desc_ext_zh", {"loc_trait_bespoke_armor_rend_on_activated_attacks_desc"}, {"zh-tw"}, function(locale, value) return "充能攻擊時， "..COLORS_Numbers.p_rend_var_rgb.." 層的 "..COLORS_KWords_tw.Brittleness_rgb.."。\n"..COLORS_KWords_tw.Brtl_note_rgb end),
+
 
 		--[+ Power Cycler +]--
 			-- Power Swords -- 2.5% & 1 | 5% & 1 | 7.5% & 2 | 10% & 2
