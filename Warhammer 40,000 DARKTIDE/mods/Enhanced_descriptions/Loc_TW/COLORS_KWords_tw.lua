@@ -115,7 +115,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
 	--[++Stagger++]--
 	local stgr_col = Color[mod:get("stagger_text_colour")](255, true) -- Do not translate this line!
     local Stagger_rgb = iu_actit("踉蹌", stgr_col)
-    local Staggering_rgb = iu_actit("踉蹌中", stgr_col)
+	local Staggering_rgb = iu_actit("眩暈", stgr_col) -- 參考「壓倒性的武力」的武器祝福
     local Staggers_rgb = iu_actit("暈眩", stgr_col)
     local Stun_rgb = iu_actit("暈眩", stgr_col)
     local Stuns_rgb = iu_actit("致眩", stgr_col)

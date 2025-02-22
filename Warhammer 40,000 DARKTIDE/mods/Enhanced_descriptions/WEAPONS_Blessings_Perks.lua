@@ -249,8 +249,8 @@ local localization_templates = {
 	create_template("trait_bespoke_001_desc_ext_en", {"loc_trait_bespoke_bleed_on_activated_hit_desc"}, {"en"}, function(locale, value) return COLORS_Numbers.p_stacks_var_rgb.." "..COLORS_KWords.Bleed_rgb.." Stacks from Special Attacks. Up to "..COLORS_Numbers.n_16_rgb.." Stacks." end), -- stacks: +16 -- +"Up to 16 Stacks." -- colors
 			--[+ French +]--
 	create_template("trait_bespoke_001_desc_ext_fr", {"loc_trait_bespoke_bleed_on_activated_hit_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_stacks_var_rgb.." Cumuls de "..COLORS_KWords_fr.Bleed_rgb_fr.." lors des attaques spéciales. Jusqu'à "..COLORS_Numbers.n_16_rgb.." Cumuls." end),
-			--[+ Traditional Chinese - 流血 +]--
-	create_template("trait_bespoke_001_desc_ext_zh", {"loc_trait_bespoke_bleed_on_activated_hit_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.p_stacks_var_rgb.." "..COLORS_KWords_tw.Bleed_rgb.."疊加於特殊攻擊中。\n最多 "..COLORS_Numbers.n_16_rgb.." 疊。" end),
+			--[+ Traditional Chinese - 放血者 +]--
+	create_template("trait_bespoke_001_desc_ext_zh", {"loc_trait_bespoke_bleed_on_activated_hit_desc"}, {"zh-tw"}, function(locale, value) return "特殊攻擊可以疊加 "..COLORS_Numbers.p_stacks_var_rgb.." 層 "..COLORS_KWords_tw.Bleed_rgb.."。\n最多 "..COLORS_Numbers.n_16_rgb.." 疊。" end),
 
 		--[+ Bloodthirsty +]--
 			-- Chainaxes, Chainswords, Eviscerators, Force Swords -- 40% | 60% | 80% | 100%
@@ -258,7 +258,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_002_desc_ext_fr", {"loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_crit_var_rgb.." "..COLORS_KWords_fr.Crit_chance_rgb_fr.." sur votre prochaine attaque de mêlée après une élimination avec une attaque spéciale." end),
 			--[+ Traditional Chinese - 嗜血 +]--
-	create_template("trait_bespoke_002_desc_ext_zh", {"loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.p_crit_var_rgb.."在特殊攻擊擊殺後，下一次近戰攻擊必暴擊。" end),
+	create_template("trait_bespoke_002_desc_ext_zh", {"loc_trait_bespoke_guaranteed_melee_crit_on_activated_kill_desc"}, {"zh-tw"}, function(locale, value) return "在特殊攻擊擊殺敵人後，\n下一次近戰攻擊 "..COLORS_Numbers.p_crit_var_rgb.." "..COLORS_KWords_tw.Crit_chance_rgb.."。" end),
 
 		--[+ Headtaker +]--
 			-- Chainaxes, Combat Axes, Pickaxes, Tactical Axes, Thunder Hammers -- 3.5% 4% 4.5% 5% (up to +25%)
@@ -267,7 +267,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_003_desc_ext_fr", {"loc_trait_bespoke_increase_power_on_hit_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_fr.Strength_rgb_fr.." pour "..COLORS_Numbers.time_var_rgb.." secondes lors d'un coup. Se Cumule "..COLORS_Numbers.stacks_var_rgb.." fois."..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 奪顱者 +]--
-	create_template("trait_bespoke_003_desc_ext_zh", {"loc_trait_bespoke_increase_power_on_hit_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.." 持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n每次攻擊可疊加一層，共可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。"..COLORS_KWords_tw.Pwr_note_rgb end),
+	create_template("trait_bespoke_003_desc_ext_zh", {"loc_trait_bespoke_increase_power_on_hit_desc"}, {"zh-tw"}, function(locale, value) return "持續 "..COLORS_Numbers.time_var_rgb.." 秒的 "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.."。\n每次攻擊可疊加一層，共可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。"..COLORS_KWords_tw.Pwr_note_rgb end),
 
 		--[+ Shock & Awe / Shock and Awe +]--
 			-- Thunder Hammers -- 30% | 40% | 50% | 60%
@@ -292,7 +292,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_005_desc_ext_fr", {"loc_trait_bespoke_movement_speed_on_activation_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_movspd_var_rgb.." de vitesse déplacement pendant "..COLORS_Numbers.time_var_rgb.." secondes lors de l'activation spéciale d'une arme." end),
 			--[+ Traditional Chinese - 提速 +]--
-	create_template("trait_bespoke_005_desc_ext_zh", {"loc_trait_bespoke_movement_speed_on_activation_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.p_movspd_var_rgb.." 在武器特殊技能啟動時。\n移動速度持續 "..COLORS_Numbers.time_var_rgb.." 秒。" end),
+	create_template("trait_bespoke_005_desc_ext_zh", {"loc_trait_bespoke_movement_speed_on_activation_desc"}, {"zh-tw"}, function(locale, value) return "在武器特殊技能啟動時 "..COLORS_Numbers.p_movspd_var_rgb.." 移動速度。\n持續 "..COLORS_Numbers.time_var_rgb.." 秒。" end),
 
 		--[+ Thrust +]--
 			-- Bully Clubs, Chainaxes, Cleavers, Combat Axes, Crusher, Duelling Swords, Heavy Swords, Latrine Shovels, Pickaxes, Power Swords,Sapper Shovels, Shock Mauls, Thunder Hammers -- 5% | 10% | 15% | 20% (up to +60%)
@@ -300,7 +300,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_006_desc_ext_fr", {"loc_trait_bespoke_power_bonus_based_on_charge_time_desc"}, {"fr"}, function(locale, value) return "Jusqu'à "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_fr.Strength_rgb_fr.." selon le temps de charge de vos attaques puissantes. Se Cumule "..COLORS_Numbers.stacks_var_rgb.." fois."..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 推進 +]--
-	create_template("trait_bespoke_006_desc_ext_zh", {"loc_trait_bespoke_power_bonus_based_on_charge_time_desc"}, {"zh-tw"}, function(locale, value) return "根據重攻擊的續力時間增加 "..COLORS_KWords_tw.Strength_rgb.."，\n每層可以 "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.."，\n最多可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次(Max "..COLORS_Numbers.n_60_rgb.."60%)。\n"..COLORS_KWords_tw.Pwr_note_rgb end),
+	create_template("trait_bespoke_006_desc_ext_zh", {"loc_trait_bespoke_power_bonus_based_on_charge_time_desc"}, {"zh-tw"}, function(locale, value) return "根據重攻擊的續力時間增加 "..COLORS_KWords_tw.Strength_rgb.."，\n每層可以 "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.."，\n最多可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次，最高 "..COLORS_Numbers.pc_60_rgb.." 。\n"..COLORS_KWords_tw.Pwr_note_rgb end),
 
 		--[+ Thunderous +]--
 			-- Bully Clubs, Chainaxes, Combat Axes, Crusher, Latrine Shovels, Pickaxes, Thunder Hammers -- 1 | 2 | 3 | 4
@@ -308,7 +308,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_007_desc_ext_fr", {"loc_trait_bespoke_targets_receive_rending_debuff_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.stacks_var_rgb.." Cumuls de "..COLORS_Numbers.rending2_var_rgb.." "..COLORS_KWords_fr.Brittleness_rgb_fr.." sont appliqué lors d'un coup sur un ennemie. Pendant "..COLORS_Numbers.time_var_rgb.." secondes. Jusqu'à "..COLORS_Numbers.maxstks_var_rgb.." cumuls, pour un total de "..COLORS_Numbers.pc_40_rgb.."."..COLORS_KWords_fr.Brtl_note_rgb_fr end),
 			--[+ Traditional Chinese - 雷鳴 +]--
-	create_template("trait_bespoke_007_desc_ext_zh", {"loc_trait_bespoke_targets_receive_rending_debuff_desc"}, {"zh-tw"}, function(locale, value) return "擊中敵人時，敵人會獲得 "..COLORS_Numbers.stacks_var_rgb.." 疊 "..COLORS_Numbers.rending2_var_rgb.." "..COLORS_KWords_tw.Brittleness_rgb.."。\n持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n最多 "..COLORS_Numbers.maxstks_var_rgb.." 疊，最高 "..COLORS_Numbers.pc_40_rgb.."。\n"..COLORS_KWords_tw.Brtl_note_rgb end),
+	create_template("trait_bespoke_007_desc_ext_zh", {"loc_trait_bespoke_targets_receive_rending_debuff_desc"}, {"zh-tw"}, function(locale, value) return "擊中敵人時，敵人會獲得 "..COLORS_Numbers.stacks_var_rgb.." 層 "..COLORS_Numbers.rending2_var_rgb.." "..COLORS_KWords_tw.Brittleness_rgb.."。\n持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n最多 "..COLORS_Numbers.maxstks_var_rgb.." 層，最高 "..COLORS_Numbers.pc_40_rgb.."。\n"..COLORS_KWords_tw.Brtl_note_rgb end),
 
 		--[+ Wrath +]--
 			-- Chainswords, Devil's Claw Swords, Eviscerators, Heavy Swords, Pickaxes -- 25% | 30% | 35% | 40% (up to +200%)
@@ -325,7 +325,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_009_desc_ext_fr", {"loc_trait_bespoke_chained_hits_increases_crit_chance_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_crit_var_rgb.." de "..COLORS_KWords_fr.Crit_chance_rgb_fr.." lors d'un coup en chaîne pendant "..COLORS_Numbers.n_3_5_rgb.." secondes. Se Cumule "..COLORS_Numbers.stacks_var_rgb.." fois." end),
 			--[+ Traditional Chinese - 粉碎 +]--
-	create_template("trait_bespoke_009_desc_ext_zh", {"loc_trait_bespoke_chained_hits_increases_crit_chance_desc"}, {"zh-tw"}, function(locale, value) return "每次攻擊 "..COLORS_Numbers.p_crit_var_rgb.." "..COLORS_KWords_tw.Crit_chance_rgb.." 機率，持續 "..COLORS_Numbers.n_3_5_rgb.." 秒。\n必須為連續命中才有疊加效果。\n每次攻擊可疊加一層，共疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。" end),
+	create_template("trait_bespoke_009_desc_ext_zh", {"loc_trait_bespoke_chained_hits_increases_crit_chance_desc"}, {"zh-tw"}, function(locale, value) return "每次攻擊 "..COLORS_Numbers.p_crit_var_rgb.." "..COLORS_KWords_tw.Crit_chance_rgb.."，持續 "..COLORS_Numbers.n_3_5_rgb.." 秒。\n必須為連續命中才有疊加效果。\n每次攻擊可疊加一層，共疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。" end),
 	
 		--[+ Savage Sweep +]--
 			-- Chainswords, Cleavers, Devil's Claw Swords, Eviscerators, Heavy Swords -- 140% | 160% | 180% | 200%
@@ -349,7 +349,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_012_desc_ext_fr", {"loc_trait_bespoke_infinite_melee_cleave_on_crit_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_hitmass_var_rgb.." de "..COLORS_KWords_fr.Cleave_rgb_fr.." pendant "..COLORS_Numbers.time_var_rgb.." secondes lors d'un "..COLORS_KWords_fr.Crit_hit_rgb_fr.."." end),
 			--[+ Traditional Chinese - 毀滅打擊 +]--
-	create_template("trait_bespoke_012_desc_ext_zh", {"loc_trait_bespoke_infinite_melee_cleave_on_crit_desc"}, {"zh-tw"}, function(locale, value) return "暴擊時，持續 "..COLORS_Numbers.time_var_rgb.." 秒的 "..COLORS_Numbers.p_hitmass_var_rgb.." "..COLORS_KWords_tw.Cleave_rgb end),
+	create_template("trait_bespoke_012_desc_ext_zh", {"loc_trait_bespoke_infinite_melee_cleave_on_crit_desc"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Crit_hit_rgb.." 時，"..COLORS_Numbers.p_hitmass_var_rgb.." "..COLORS_KWords_tw.Cleave_rgb.."，持續 "..COLORS_Numbers.time_var_rgb.." 秒。" end),
 	
 		--[+ Decimator +]--
 			-- Combat Axes, Sapper Shovels, Tactical Axes -- 2% | 3% | 4% | 5% (up to +50%)
@@ -365,7 +365,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_014_desc_ext_fr", {"loc_trait_bespoke_infinite_cleave_on_weakspot_kill_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_wkspdmg_var_rgb.." "..COLORS_KWords_fr.Weakspot_dmg_rgb_fr..". Les élimination sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." ignore le "..COLORS_KWords_fr.Hit_mass_rgb_fr.." de "..COLORS_Numbers.n_3_rgb.." ennemies." end),
 			--[+ Traditional Chinese - 野蠻攻勢 +]--
-	create_template("trait_bespoke_014_desc_ext_zh", {"loc_trait_bespoke_infinite_cleave_on_weakspot_kill_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.p_wkspdmg_var_rgb.." "..COLORS_KWords_tw.Weakspot_dmg_rgb.."。\n"..COLORS_KWords_tw.Weakspot_rgb.."擊殺也會忽略最多 "..COLORS_Numbers.n_3_rgb.." 個敵人的 "..COLORS_KWords_tw.Hit_mass_rgb end),
+	create_template("trait_bespoke_014_desc_ext_zh", {"loc_trait_bespoke_infinite_cleave_on_weakspot_kill_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.p_wkspdmg_var_rgb.." "..COLORS_KWords_tw.Weakspot_dmg_rgb.."。\n"..COLORS_KWords_tw.Weakspot_rgb.." 擊殺可無視 "..COLORS_Numbers.n_3_rgb.." 個敵人的 "..COLORS_KWords_tw.Hit_mass_rgb end),
 	
 		--[+ Limbsplitter +]--
 			-- Combat Axes, Pickaxes, Sapper Shovels, Tactical Axes -- 5 | 4.5 | 4 | 3.5
@@ -373,7 +373,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_015_desc_ext_fr", {"loc_trait_bespoke_power_bonus_on_first_attack_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." de "..COLORS_KWords_fr.Strength_rgb_fr.." sur votre première attaque toute les "..COLORS_Numbers.cd_var_rgb.." secondes."..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 斷肢者 +]--
-	create_template("trait_bespoke_015_desc_ext_zh", {"loc_trait_bespoke_power_bonus_on_first_attack_desc"}, {"zh-tw"}, function(locale, value) return "每 "..COLORS_Numbers.cd_var_rgb.." 秒，第一次攻擊增加 "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb end),
+	create_template("trait_bespoke_015_desc_ext_zh", {"loc_trait_bespoke_power_bonus_on_first_attack_desc"}, {"zh-tw"}, function(locale, value) return "每 "..COLORS_Numbers.cd_var_rgb.." 秒，第一次攻擊增加 "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.."。" end),
 	
 		--[+ All or Nothing +]--
 			-- Combat Axes, Pickaxes -- 5% | 6% | 7% | 8% (up to +40%)
@@ -406,7 +406,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_019_desc_ext_fr", {"loc_trait_bespoke_guaranteed_melee_crit_after_crit_weakspot_kill_new_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_crit_var_rgb.." de "..COLORS_KWords_fr.Crit_chance_rgb_fr.." pour la prochaine attaque de mélée dans les "..COLORS_Numbers.n_5_rgb.." secondes suivant une élimination sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." et "..COLORS_KWords_fr.Crit_rgb_fr.."." end),
 			--[+ Traditional Chinese - 殺戮狂潮 +]--
-	create_template("trait_bespoke_019_desc_ext_zh", {"loc_trait_bespoke_guaranteed_melee_crit_after_crit_weakspot_kill_new_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_KWords_tw.Weakspot_rgb.." "..COLORS_KWords_tw.Crit_rgb.." 擊殺後的 "..COLORS_Numbers.n_5_rgb.." 秒內，\n下一次近戰攻擊必定暴擊" end),
+	create_template("trait_bespoke_019_desc_ext_zh", {"loc_trait_bespoke_guaranteed_melee_crit_after_crit_weakspot_kill_new_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_KWords_tw.Weakspot_rgb.." "..COLORS_KWords_tw.Crit_rgb.." 擊殺後的 "..COLORS_Numbers.n_5_rgb.." 秒內，\n下一次近戰攻擊必定 "..COLORS_KWords_tw.Crit_rgb.." 。" end),
 
 		--[+ Relentless Strikes +]--
 			-- Duelling Swords, Tactical Axes -- 4% | 6% | 8% | 10% (up to +50%)
@@ -542,7 +542,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_036_desc_ext_fr", {"loc_trait_bespoke_increased_crit_chance_on_weakspot_kill_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_crit_var_rgb.." de "..COLORS_KWords_fr.Crit_chance_rgb_fr.." pendant "..COLORS_Numbers.time_var_rgb.." secondes lors d'une élimination sur "..COLORS_KWords_fr.Weakspot_rgb_fr..". {#color(255, 35, 5)}(bug:+10% de taux de coup critique peu importe le niveau de la bénédiction){#reset()}" end),
 			--[+ Traditional Chinese - 致命連擊 +]--
-	create_template("trait_bespoke_036_desc_ext_zh", {"loc_trait_bespoke_increased_crit_chance_on_weakspot_kill_desc"}, {"zh-tw"}, function(locale, value) return "擊殺 "..COLORS_KWords_tw.Weakspot_rgb.." 時，\n持續 "..COLORS_Numbers.time_var_rgb.." 秒的 "..COLORS_Numbers.p_crit_var_rgb.." "..COLORS_KWords_tw.Crit_chance_rgb.." {#color(255, 35, 5)}\n(bug: 所有等級 +10%){#reset()}" end),
+	create_template("trait_bespoke_036_desc_ext_zh", {"loc_trait_bespoke_increased_crit_chance_on_weakspot_kill_desc"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Weakspot_rgb.." 擊殺時，"..COLORS_Numbers.p_crit_var_rgb.." "..COLORS_KWords_tw.Crit_chance_rgb.."。\n持續 "..COLORS_Numbers.time_var_rgb.." 秒。{#color(255, 35, 5)}\n(bug: 所有等級 +10%){#reset()}" end),
 
 		--[+ Deathblow +]--
 			-- Battle Maul and Shield, Combat Axes, Heavy Swords, Latrine Shovels, Power Maul, Power Swords, Tactical Axes -- 7.5% | 10% | 12.5% | 15%
@@ -629,12 +629,16 @@ local localization_templates = {
 	create_template("trait_bespoke_047_desc_ext_en", {"loc_trait_bespoke_negate_stagger_reduction_on_weakspot_desc"}, {"en"}, function(locale, value) return "Increased "..COLORS_KWords.Stagger_rgb.." on enemies by "..COLORS_Numbers.stgr_var_rgb..", on "..COLORS_KWords.Weakspothit_rgb..". Additionally, increases Ranged "..COLORS_KWords.Stagger_rgb.." strength by "..COLORS_Numbers.stgrrang_var_rgb.."." end), -- stagger: 90%, ranged_stagger: 30% -- colors
 			--[+ French +]--
 	create_template("trait_bespoke_047_desc_ext_fr", {"loc_trait_bespoke_negate_stagger_reduction_on_weakspot_desc"}, {"fr"}, function(locale, value) return "Le "..COLORS_KWords_fr.Stagger_rgb_fr.." des ennemis augmente de "..COLORS_Numbers.stgr_var_rgb..", lors d'un "..COLORS_KWords_fr.Weakspothit_rgb_fr..". De plus augmente la puissance du "..COLORS_KWords_fr.Stagger_rgb_fr.." à distance de "..COLORS_Numbers.stgrrang_var_rgb.."." end),
+			--[+ Traditional Chinese - 踉蹌 +]--
+	create_template("trait_bespoke_047_desc_ext_zh", {"loc_trait_bespoke_negate_stagger_reduction_on_weakspot_desc"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Weakspothit_rgb.." 時，\n增加 "..COLORS_Numbers.stgr_var_rgb.." "..COLORS_KWords_tw.Stagger_rgb.." 與 "..COLORS_Numbers.stgrrang_var_rgb.." 的遠程 "..COLORS_KWords_tw.Stagger_rgb end),
 
 		--[+ Overwhelming Force +]--
 			-- Shock Mauls -- 5s & 10% | 4.5s & 15% | 4s & 20% | 3.5s & 25%
 	create_template("trait_bespoke_048_desc_ext_en", {"loc_trait_bespoke_staggering_hits_has_chance_to_stun_desc"}, {"en"}, function(locale, value) return COLORS_KWords.Staggering_rgb.." an Enemy has a "..COLORS_Numbers.chnc_var_rgb.." Chance to Stun the enemy. Cooldown "..COLORS_Numbers.cd_var_rgb.."econds." end), -- chance: 25%, cooldown: 3.5s!!! -- colors
 			--[+ French +]--
 	create_template("trait_bespoke_048_desc_ext_fr", {"loc_trait_bespoke_staggering_hits_has_chance_to_stun_desc"}, {"fr"}, function(locale, value) return "Faire "..COLORS_KWords_fr.Staggering_rgb_fr.." un ennemie à "..COLORS_Numbers.chnc_var_rgb.." de chance de l'"..COLORS_KWords_fr.Stun_rgb_fr..". Temps de recharge : "..COLORS_Numbers.cd_var_rgb.."econdes." end),
+			--[+ Traditional Chinese - 壓倒性的武力 +]--
+	create_template("trait_bespoke_048_desc_ext_zh", {"loc_trait_bespoke_staggering_hits_has_chance_to_stun_desc"}, {"zh-tw"}, function(locale, value) return "使敵人 "..COLORS_KWords_tw.Staggering_rgb.." 時，\n有 "..COLORS_Numbers.chnc_var_rgb.." 的機率使敵人暈眩。\n冷卻時間 "..COLORS_Numbers.cd_var_rgb.." 秒" end),
 
 		--[+ Momentum +]--
 			-- Bully Clubs, Cleavers, Eviscerators, Thunder Hammers -- 12% | 13% | 14% | 15%
@@ -657,6 +661,9 @@ local localization_templates = {
 	create_template("trait_bespoke_051_desc_ext_en", {"loc_trait_bespoke_armor_rend_on_activated_attacks_desc"}, {"en"}, function(locale, value) return COLORS_Numbers.p_rend_var_rgb.." Stacks of "..COLORS_KWords.Brittleness_rgb.." on Energised Hit."..COLORS_KWords.Brtl_note_rgb end), -- rend: +4 -- colors
 			--[+ French +]--
 	create_template("trait_bespoke_051_desc_ext_fr", {"loc_trait_bespoke_armor_rend_on_activated_attacks_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_rend_var_rgb.." cumuls de "..COLORS_KWords_fr.Brittleness_rgb_fr.." lors d'un coup énergisé."..COLORS_KWords_fr.Brtl_note_rgb_fr end),
+			--[+ Traditional Chinese - 超級充能 +]--
+	create_template("trait_bespoke_051_desc_ext_zh", {"loc_trait_bespoke_armor_rend_on_activated_attacks_desc"}, {"zh-tw"}, function(locale, value) return "充能攻擊時， "..COLORS_Numbers.p_rend_var_rgb.." 層的 "..COLORS_KWords_tw.Brittleness_rgb.."。\n"..COLORS_KWords_tw.Brtl_note_rgb end),
+
 
 		--[+ Power Cycler +]--
 			-- Power Swords -- 2.5% & 1 | 5% & 1 | 7.5% & 2 | 10% & 2
@@ -808,7 +815,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_070m_desc_ext_fr", {"loc_power_bonus_scaled_on_heat_desc"}, {"fr"}, function(locale, value) return "Augmente la "..COLORS_KWords_fr.Strength_rgb_fr.." jusqu'à "..COLORS_Numbers.amount_var_rgb..", en fonction de la "..COLORS_KWords_fr.Heat_rgb_fr.."."..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 能量洩漏 +]--
-	create_template("trait_bespoke_070m_desc_ext_zh", {"loc_power_bonus_scaled_on_heat_desc"}, {"zh-tw"}, function(locale, value) return "根據 "..COLORS_KWords_tw.Heat_rgb.." 調整，\n "..COLORS_KWords_tw.Strength_rgb.." 最多增加 "..COLORS_Numbers.amount_var_rgb end),
+	create_template("trait_bespoke_070m_desc_ext_zh", {"loc_power_bonus_scaled_on_heat_desc"}, {"zh-tw"}, function(locale, value) return "根據 "..COLORS_KWords_tw.Heat_rgb.." 調整，\n"..COLORS_KWords_tw.Strength_rgb.." 最多增加 "..COLORS_Numbers.amount_var_rgb end),
 
 		--[+ Heatsink +]--
 			-- Relic Blade -- 4% | 6% | 8% | 10%
@@ -816,7 +823,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_071m_desc_ext_fr", {"loc_reduce_fixed_overheat_amount_desc"}, {"fr"}, function(locale, value) return "Les éliminations sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." et "..COLORS_KWords_fr.Crit_hits_rgb_fr.." réduisent la "..COLORS_KWords_fr.Heat_rgb_fr.." de "..COLORS_Numbers.amount_var_rgb.." sur "..COLORS_Numbers.time_var_rgb.." secondes." end),
 			--[+ Traditional Chinese - 散熱器 +]--
-	create_template("trait_bespoke_071m_desc_ext_zh", {"loc_reduce_fixed_overheat_amount_desc"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Weakspot_rgb.." 和 "..COLORS_KWords_tw.Crit_strike_rgb.." 擊殺的敵人，\n在 "..COLORS_Numbers.time_var_rgb.." 秒內，\n降低 "..COLORS_KWords_tw.Heat_rgb.." "..COLORS_Numbers.amount_var_rgb end),
+	create_template("trait_bespoke_071m_desc_ext_zh", {"loc_reduce_fixed_overheat_amount_desc"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Weakspot_rgb.." 和 "..COLORS_KWords_tw.Crit_strike_rgb.." 擊殺的敵人，\n在 "..COLORS_Numbers.time_var_rgb.." 秒內，降低 "..COLORS_KWords_tw.Heat_rgb.." "..COLORS_Numbers.amount_var_rgb end),
 
 		--[+ Syphon +]--
 			-- Relic Blade -- 10% | 12% | 14% | 16%
@@ -859,7 +866,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_067_desc_ext_fr", {"loc_trait_bespoke_count_as_dodge_vs_ranged_on_close_kill_desc"}, {"fr"}, function(locale, value) return "Immunité contre les attaques à distance pendant "..COLORS_Numbers.time_var_rgb.." secondes lors d'une élimination à moins de "..COLORS_Numbers.n_12_5_rgb.." mètres." end),
 			--[+ Traditional Chinese - 游擊 +]--
-	create_template("trait_bespoke_067_desc_ext_zh", {"loc_trait_bespoke_count_as_dodge_vs_ranged_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在最多 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n對遠程攻擊免疫 "..COLORS_Numbers.time_var_rgb.." 秒" end),
+	create_template("trait_bespoke_067_desc_ext_zh", {"loc_trait_bespoke_count_as_dodge_vs_ranged_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n對遠程攻擊免疫 "..COLORS_Numbers.time_var_rgb.." 秒。" end),
 
 		--[+ Sustained Fire +]--
 			-- Autopistol, Electrokinetic Staff, Helbore Lasguns, Infantry Autoguns, Recon Lasguns, Stub Revolvers, Voidblast Staff, Voidstrike Staff -- 14% | 16% | 18% | 20%
@@ -883,7 +890,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_070_desc_ext_fr", {"loc_trait_bespoke_increase_close_damage_on_close_kill_desc"}, {"fr"}, function(locale, value) return "Gagnez "..COLORS_Numbers.p_dmgcls_var_rgb.." de "..COLORS_KWords_fr.Damage_rgb_fr.." rapprochés pendant "..COLORS_Numbers.time_var_rgb.." secondes lors d'une élimination à moins de "..COLORS_Numbers.n_12_5_rgb.." mètres. Se cumule "..COLORS_Numbers.stacks_var_rgb.." fois." end),
 			--[+ Traditional Chinese - 烈火熱焰 +]--
-	create_template("trait_bespoke_070_desc_ext_zh", {"loc_trait_bespoke_increase_close_damage_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在最多 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n在 "..COLORS_Numbers.time_var_rgb.." 秒內，\n增加 "..COLORS_Numbers.p_dmgcls_var_rgb.." 的近距離 "..COLORS_KWords_tw.Damage_rgb.."。\n最多"..COLORS_Numbers.n_5_rgb.."層。" end),
+	create_template("trait_bespoke_070_desc_ext_zh", {"loc_trait_bespoke_increase_close_damage_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n增加 "..COLORS_Numbers.p_dmgcls_var_rgb.." 的近距離 "..COLORS_KWords_tw.Damage_rgb.." 持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n最多"..COLORS_Numbers.n_5_rgb.."層。" end),
 
 		--[+ Deathspitter +]--
 			-- Braced Autoguns, Combat Shotguns, Heavy Stubbers, Infantry Autoguns, Recon Lasguns -- 5% | 5.5% | 6% | 6.5% (up to +32.5%) | 3.5s
@@ -892,7 +899,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_071_desc_ext_fr", {"loc_trait_bespoke_increase_power_on_close_kill_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." de "..COLORS_KWords_fr.Strength_rgb_fr.." pendant "..COLORS_Numbers.time_var_rgb.." secondes lors d'une élimination à moins de "..COLORS_Numbers.n_12_5_rgb.." mètres. Se cumule jusqu'à "..COLORS_Numbers.n_5_rgb.." fois."..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 死亡噴吐 +]--
-	create_template("trait_bespoke_071_desc_ext_zh", {"loc_trait_bespoke_increase_power_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在最多 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n在 "..COLORS_Numbers.time_var_rgb.." 秒內，\n增加 "..COLORS_Numbers.p_pwrlvl_var_rgb.." 的 "..COLORS_KWords_tw.Strength_rgb.."。\n最多 "..COLORS_Numbers.n_5_rgb.." 層。" end),
+	create_template("trait_bespoke_071_desc_ext_zh", {"loc_trait_bespoke_increase_power_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n增加 "..COLORS_Numbers.p_pwrlvl_var_rgb.." 的 "..COLORS_KWords_tw.Strength_rgb.." 持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n最多 "..COLORS_Numbers.n_5_rgb.." 層。" end),
 
 		--[+ Stripped Down +]--
 			-- Braced Autoguns, Infantry Autoguns, Recon Lasguns -- 80% | 70% | 60% | 50%
@@ -911,7 +918,7 @@ local localization_templates = {
 			--[+ French +]--
 		create_template("trait_bespoke_073_desc_ext_fr", {"loc_trait_bespoke_reload_speed_on_slide_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_reload_var_rgb.." de vitesse de rechargement pendant "..COLORS_Numbers.time_var_rgb.." secondes lors d'une élimination à moins de "..COLORS_Numbers.n_12_5_rgb.." mètres. Se cumule "..COLORS_Numbers.stacks_var_rgb.." fois." end),
 			--[+ Traditional Chinese - 快速裝彈 +]--
-		create_template("trait_bespoke_073_desc_ext_zh", {"loc_trait_bespoke_reload_speed_on_slide_desc"}, {"zh-tw"}, function(locale, value) return "在最多 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n在 "..COLORS_Numbers.time_var_rgb.." 秒內，增加 "..COLORS_Numbers.p_reload_var_rgb.." 的裝填速度。\n最多 "..COLORS_Numbers.n_5_rgb.." 層。" end),
+		create_template("trait_bespoke_073_desc_ext_zh", {"loc_trait_bespoke_reload_speed_on_slide_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n增加 "..COLORS_Numbers.p_reload_var_rgb.." 的裝填速度，持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n最多 "..COLORS_Numbers.n_5_rgb.." 層。" end),
 
 		--[+ Terrifying Barrage +]--
 			-- Autopistol, Boltgun, Braced Autoguns, Combat Shotguns, Double-Barrel Shotgun, Electrokinetic Staff, Heavy Stubbers, Infantry Autoguns, Inferno Staff, Kickback, Ripper Guns, Stub Revolvers, Voidblast Staff, Voidstrike Staff -- 15 | 20 | 25 | 30
@@ -919,7 +926,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_074_desc_ext_fr", {"loc_trait_bespoke_suppression_on_close_kill_desc"}, {"fr"}, function(locale, value) return "Infligez Suppression aux ennemies lors d'une élimination jusqu'à une distance de "..COLORS_Numbers.n_12_5_rgb.." mètres." end),
 			--[+ Traditional Chinese - 恐怖阻擊 +]--
-	create_template("trait_bespoke_074_desc_ext_zh", {"loc_trait_bespoke_suppression_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在最多 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n對敵人造成壓制" end),
+	create_template("trait_bespoke_074_desc_ext_zh", {"loc_trait_bespoke_suppression_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n對敵人造成壓制效果。" end),
 
 		--[+ Roaring Advance +]--
 			-- Braced Autoguns -- 10% | 15% | 20% | 25% (up to ~76%)
@@ -928,7 +935,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_075_desc_ext_fr", {"loc_trait_bespoke_movement_speed_on_continuous_fire_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.m_movspd_var_rgb.." de réduction de vitesse de déplacement pour chaque "..COLORS_Numbers.ammo_var_rgb.." du chargeur utilisé en tir continu. Se cumule "..COLORS_Numbers.stacks_var_rgb.." fois." end),
 			--[+ Traditional Chinese - 咆哮突進 +]--
-	create_template("trait_bespoke_075_desc_ext_zh", {"loc_trait_bespoke_movement_speed_on_continuous_fire_desc"}, {"zh-tw"}, function(locale, value) return "在連續射擊時，\n每使用 "..COLORS_Numbers.ammo_var_rgb.." 發子彈，\n減少 "..COLORS_Numbers.m_movspd_var_rgb.." 的移動速度。\n最多 "..COLORS_Numbers.stacks_var_rgb.." 層" end),
+	create_template("trait_bespoke_075_desc_ext_zh", {"loc_trait_bespoke_movement_speed_on_continuous_fire_desc"}, {"zh-tw"}, function(locale, value) return "在連續射擊時，\n每使用 "..COLORS_Numbers.ammo_var_rgb.." 發子彈，\n減少 "..COLORS_Numbers.m_movspd_var_rgb.." 的移動速度。\n最多 "..COLORS_Numbers.stacks_var_rgb.." 層。" end),
 
 		--[+ Ceaseless Barrage +]--
 			-- Braced Autoguns, Heavy Stubbers -- 20% & 6% | 20% & 6% | 20% & 6% | 20% & 6% (up to +100% & +30%)
@@ -961,7 +968,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_079_desc_ext_fr", {"loc_trait_bespoke_crit_chance_based_on_aim_time_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_crit_var_rgb.." "..COLORS_KWords_fr.Crit_chance_rgb_fr.." chaque fois de vous passez "..COLORS_Numbers.time_var_rgb.." secondes à viser. Se cumule "..COLORS_Numbers.stacks_var_rgb.." fois. Tous les cumuls sont déchargés lorsque vous tirez." end),
 			--[+ Traditional Chinese - 精確打擊 +]--
-	create_template("trait_bespoke_079_desc_ext_zh", {"loc_trait_bespoke_crit_chance_based_on_aim_time_desc"}, {"zh-tw"}, function(locale, value) return "瞄準 "..COLORS_Numbers.time_var_rgb.." 秒，\n增加 "..COLORS_Numbers.p_crit_var_rgb.." 的 "..COLORS_KWords_tw.Crit_chance_rgb.."。\n最多 "..COLORS_Numbers.stacks_var_rgb.." 層。\n射擊時，所有層數消失。" end),
+	create_template("trait_bespoke_079_desc_ext_zh", {"loc_trait_bespoke_crit_chance_based_on_aim_time_desc"}, {"zh-tw"}, function(locale, value) return "每瞄準 "..COLORS_Numbers.time_var_rgb.." 秒，\n增加 "..COLORS_Numbers.p_crit_var_rgb.." 的 "..COLORS_KWords_tw.Crit_chance_rgb.."。\n最多 "..COLORS_Numbers.stacks_var_rgb.." 層。\n射擊時，所有層數消失。" end),
 
 		--[+ Crucian Roulette +]--
 			-- Stub Revolvers -- 4.5% | 5% | 5.5% | 6%
@@ -978,7 +985,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_081_desc_ext_fr", {"loc_trait_bespoke_crit_weakspot_finesse_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_critwkspdmg_var_rgb.." de "..COLORS_KWords_fr.Crit_dmg_r_rgb_fr.." sur un "..COLORS_KWords_fr.Weakspothit_rgb_fr.."." end),
 			--[+ Traditional Chinese - 致命精準 +]--
-	create_template("trait_bespoke_081_desc_ext_zh", {"loc_trait_bespoke_crit_weakspot_finesse_desc"}, {"zh-tw"}, function(locale, value) return "對 "..COLORS_KWords_tw.Weakspothit_rgb.." 一律 "..COLORS_KWords_tw.Crit_rgb.."。" end),
+	create_template("trait_bespoke_081_desc_ext_zh", {"loc_trait_bespoke_crit_weakspot_finesse_desc"}, {"zh-tw"}, function(locale, value) return "當 "..COLORS_KWords_tw.Weakspothit_rgb.." 且發生 "..COLORS_KWords_tw.Crit_rgb.." 時，\n"..COLORS_KWords_tw.Crit_dmg_r_rgb.." "..COLORS_Numbers.p_critwkspdmg_var_rgb.."。" end),
 
 		--[+ No Respite +]--
 			-- Combat Shotguns, Helbore Lasguns, Infantry Lasguns, Vigilant Autoguns -- 14% | 16% | 18% | 20% (up to +140%)
@@ -1226,7 +1233,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_111_desc_ext_fr", {"loc_trait_bespoke_cleave_on_crit_and_stagger_desc"}, {"fr"}, function(locale, value) return "Augmente le "..COLORS_KWords_fr.Cleave_rgb_fr.." lors d'un "..COLORS_KWords_fr.Crit_hit_rgb_fr.." augmente également de "..COLORS_Numbers.p_stgr_var_rgb.." le "..COLORS_KWords_fr.Stagger_rgb_fr.."." end),
 			--[+ Traditional Chinese - 大口徑彈藥 +]--
-	create_template("trait_bespoke_111_desc_ext_zh", {"loc_trait_bespoke_cleave_on_crit_and_stagger_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_KWords_tw.Crit_hit_rgb.." 時，\n增加 "..COLORS_KWords_tw.Cleave_rgb.."，\n並獲得 "..COLORS_Numbers.p_stgr_var_rgb.." 的遠程攻擊 "..COLORS_KWords_tw.Stagger_rgb.."。" end),
+	create_template("trait_bespoke_111_desc_ext_zh", {"loc_trait_bespoke_cleave_on_crit_and_stagger_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_KWords_tw.Crit_hit_rgb.." 時，增加 "..COLORS_KWords_tw.Cleave_rgb.."，\n並獲得 "..COLORS_Numbers.p_stgr_var_rgb.." 的遠程攻擊 "..COLORS_KWords_tw.Stagger_rgb.."。" end),
 
 		--[+ Scattershot +]--
 			-- Combat Shotguns, Double-Barrel Shotgun -- 6% | 8% | 10% | 12% (up to +60%)
@@ -1274,6 +1281,8 @@ local localization_templates = {
 	create_template("trait_bespoke_117_desc_ext_en", {"loc_trait_bespoke_armor_rend_on_projectile_hit_desc"}, {"en"}, function(locale, value) return "Target receives "..COLORS_Numbers.stacks_var_rgb.." Stacks of "..COLORS_Numbers.rending2_var_rgb.." "..COLORS_KWords.Brittleness_rgb.." on direct projectile hit. Lasts "..COLORS_Numbers.time_var_rgb.." seconds. Max "..COLORS_Numbers.maxstks_var_rgb.." Stacks, up to "..COLORS_Numbers.pc_40_rgb.."."..COLORS_KWords.Brtl_note_rgb end), -- stacks: 4, rending: 2.5%, time: 5, max_stacks: 16 -- rewrite -- s->seconds -- colors
 			--[+ French +]--
 	create_template("trait_bespoke_117_desc_ext_fr", {"loc_trait_bespoke_armor_rend_on_projectile_hit_desc"}, {"fr"}, function(locale, value) return "La cible reçoit "..COLORS_Numbers.stacks_var_rgb.." cumuls de "..COLORS_Numbers.rending2_var_rgb.." de "..COLORS_KWords_fr.Brittleness_rgb_fr.." si elle est touchée directement par un projectile. Dure "..COLORS_Numbers.time_var_rgb.." secondes."..COLORS_Numbers.maxstks_var_rgb.." cumuls maximum, Jusqu'à "..COLORS_Numbers.pc_40_rgb.."."..COLORS_KWords_fr.Brtl_note_rgb_fr end),
+			--[+ Traditional Chinese - 破碎衝擊 +]--
+	create_template("trait_bespoke_117_desc_ext_zh", {"loc_trait_bespoke_armor_rend_on_projectile_hit_desc"}, {"zh-tw"}, function(locale, value) return "直接命中時，\n目標獲得 "..COLORS_Numbers.stacks_var_rgb.." 層的 "..COLORS_Numbers.rending2_var_rgb.." "..COLORS_KWords_tw.Brittleness_rgb.."，\n持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n最多 "..COLORS_Numbers.maxstks_var_rgb.." 層，最多 "..COLORS_Numbers.pc_40_rgb.."。" end),
 
 		--[+ Everlasting Flame +]--
 			-- Flamer -- 2 | 3 | 4 | 5

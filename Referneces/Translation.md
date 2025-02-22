@@ -118,6 +118,8 @@
 - Heatsink - 散熱器
 - Syphon - 虹吸
 - Energy Transfer - 能量轉換
+- Falter - 踉蹌
+- Overwhelming Force - 壓倒性的武力
 
 ### Weapon Blessing - 武器祝福(遠程)
 - Raking Fire - 掃射
@@ -198,6 +200,7 @@
 - Inspiring Barrage - 激勵彈幕
 - Expansive - 擴展性
 - Shrapnel - 破片四射
+- Shattering Impact - 破碎衝擊
 
 ### 怪物相關
 
