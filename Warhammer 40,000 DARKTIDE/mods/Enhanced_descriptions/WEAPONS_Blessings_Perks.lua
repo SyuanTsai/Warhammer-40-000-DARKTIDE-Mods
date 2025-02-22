@@ -249,8 +249,8 @@ local localization_templates = {
 	create_template("trait_bespoke_001_desc_ext_en", {"loc_trait_bespoke_bleed_on_activated_hit_desc"}, {"en"}, function(locale, value) return COLORS_Numbers.p_stacks_var_rgb.." "..COLORS_KWords.Bleed_rgb.." Stacks from Special Attacks. Up to "..COLORS_Numbers.n_16_rgb.." Stacks." end), -- stacks: +16 -- +"Up to 16 Stacks." -- colors
 			--[+ French +]--
 	create_template("trait_bespoke_001_desc_ext_fr", {"loc_trait_bespoke_bleed_on_activated_hit_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_stacks_var_rgb.." Cumuls de "..COLORS_KWords_fr.Bleed_rgb_fr.." lors des attaques spéciales. Jusqu'à "..COLORS_Numbers.n_16_rgb.." Cumuls." end),
-			--[+ Traditional Chinese - 流血 +]--
-	create_template("trait_bespoke_001_desc_ext_zh", {"loc_trait_bespoke_bleed_on_activated_hit_desc"}, {"zh-tw"}, function(locale, value) return COLORS_Numbers.p_stacks_var_rgb.." "..COLORS_KWords_tw.Bleed_rgb.."疊加於特殊攻擊中。\n最多 "..COLORS_Numbers.n_16_rgb.." 疊。" end),
+			--[+ Traditional Chinese - 放血者 +]--
+	create_template("trait_bespoke_001_desc_ext_zh", {"loc_trait_bespoke_bleed_on_activated_hit_desc"}, {"zh-tw"}, function(locale, value) return "特殊攻擊可以疊加 "..COLORS_Numbers.p_stacks_var_rgb.." 層 "..COLORS_KWords_tw.Bleed_rgb.."。\n最多 "..COLORS_Numbers.n_16_rgb.." 疊。" end),
 
 		--[+ Bloodthirsty +]--
 			-- Chainaxes, Chainswords, Eviscerators, Force Swords -- 40% | 60% | 80% | 100%
