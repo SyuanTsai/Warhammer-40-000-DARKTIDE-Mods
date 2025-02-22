@@ -308,7 +308,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_007_desc_ext_fr", {"loc_trait_bespoke_targets_receive_rending_debuff_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.stacks_var_rgb.." Cumuls de "..COLORS_Numbers.rending2_var_rgb.." "..COLORS_KWords_fr.Brittleness_rgb_fr.." sont appliqué lors d'un coup sur un ennemie. Pendant "..COLORS_Numbers.time_var_rgb.." secondes. Jusqu'à "..COLORS_Numbers.maxstks_var_rgb.." cumuls, pour un total de "..COLORS_Numbers.pc_40_rgb.."."..COLORS_KWords_fr.Brtl_note_rgb_fr end),
 			--[+ Traditional Chinese - 雷鳴 +]--
-	create_template("trait_bespoke_007_desc_ext_zh", {"loc_trait_bespoke_targets_receive_rending_debuff_desc"}, {"zh-tw"}, function(locale, value) return "擊中敵人時，敵人會獲得 "..COLORS_Numbers.stacks_var_rgb.." 層 "..COLORS_Numbers.rending2_var_rgb.." "..COLORS_KWords_tw.Brittleness_rgb.."。\n持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n最多 "..COLORS_Numbers.maxstks_var_rgb.." 疊，最高 "..COLORS_Numbers.pc_40_rgb.."。\n"..COLORS_KWords_tw.Brtl_note_rgb end),
+	create_template("trait_bespoke_007_desc_ext_zh", {"loc_trait_bespoke_targets_receive_rending_debuff_desc"}, {"zh-tw"}, function(locale, value) return "擊中敵人時，敵人會獲得 "..COLORS_Numbers.stacks_var_rgb.." 層 "..COLORS_Numbers.rending2_var_rgb.." "..COLORS_KWords_tw.Brittleness_rgb.."。\n持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n最多 "..COLORS_Numbers.maxstks_var_rgb.." 層，最高 "..COLORS_Numbers.pc_40_rgb.."。\n"..COLORS_KWords_tw.Brtl_note_rgb end),
 
 		--[+ Wrath +]--
 			-- Chainswords, Devil's Claw Swords, Eviscerators, Heavy Swords, Pickaxes -- 25% | 30% | 35% | 40% (up to +200%)
