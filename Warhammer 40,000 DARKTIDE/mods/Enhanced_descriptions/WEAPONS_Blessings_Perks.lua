@@ -406,7 +406,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_019_desc_ext_fr", {"loc_trait_bespoke_guaranteed_melee_crit_after_crit_weakspot_kill_new_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_crit_var_rgb.." de "..COLORS_KWords_fr.Crit_chance_rgb_fr.." pour la prochaine attaque de mélée dans les "..COLORS_Numbers.n_5_rgb.." secondes suivant une élimination sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." et "..COLORS_KWords_fr.Crit_rgb_fr.."." end),
 			--[+ Traditional Chinese - 殺戮狂潮 +]--
-	create_template("trait_bespoke_019_desc_ext_zh", {"loc_trait_bespoke_guaranteed_melee_crit_after_crit_weakspot_kill_new_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_KWords_tw.Weakspot_rgb.." "..COLORS_KWords_tw.Crit_rgb.." 擊殺後的 "..COLORS_Numbers.n_5_rgb.." 秒內，\n下一次近戰攻擊必定暴擊" end),
+	create_template("trait_bespoke_019_desc_ext_zh", {"loc_trait_bespoke_guaranteed_melee_crit_after_crit_weakspot_kill_new_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_KWords_tw.Weakspot_rgb.." "..COLORS_KWords_tw.Crit_rgb.." 擊殺後的 "..COLORS_Numbers.n_5_rgb.." 秒內，\n下一次近戰攻擊必定 "..COLORS_KWords_tw.Crit_rgb.." 。" end),
 
 		--[+ Relentless Strikes +]--
 			-- Duelling Swords, Tactical Axes -- 4% | 6% | 8% | 10% (up to +50%)
