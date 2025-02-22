@@ -9,7 +9,6 @@
 - MOD 檔案名稱：Darktide Mod Loader-19-24-11-27-1732738414
 - 手動維護最後下載日期：2025-02-06
 
-
 ### [Darktide Mod Framework](https://www.nexusmods.com/warhammer40kdarktide/mods/8?tab=descriptionn)
     MOD框架 - 想要使用MOD必備，此MOD才能夠讓你開始加入其他的MOD
 - MOD 網站最後更新日期：Last updated 12 July 20247:07AM
@@ -20,6 +19,13 @@
 ---
 # 遊戲體驗改善
 
+### [What The Localization](https://www.nexusmods.com/warhammer40kdarktide/mods/163)
+    翻譯修正器，
+- MOD 網站最後更新日期：Last updated 14 October 2023 10:30PM
+- MOD 版本：1.2.1
+- MOD 檔案名稱：WhatTheLocalization-163-1-2-1-1697319036
+- 手動維護最後下載日期：2025-02-13
+
 ### [Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/22)
     UI改善
 - MOD 網站最後更新日期：Last updated 06 February 2024 4:18PM
@@ -27,12 +33,20 @@
 - MOD 檔案名稱：Scoreboard-22-2-18-1707236330
 - 手動維護最後下載日期：2025-02-11
 
-### [What The Localization](https://www.nexusmods.com/warhammer40kdarktide/mods/163)
-    翻譯修正器，
-- MOD 網站最後更新日期：Last updated 14 October 2023 10:30PM
-- MOD 版本：1.2.1
-- MOD 檔案名稱：WhatTheLocalization-163-1-2-1-1697319036
+### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
+    怪物生成器 - 靈能室可以選擇要生那些怪，並且產生特定波次訓練身法。
+- MOD 網站最後更新日期：Last updated 29 September 2024 8:39AM
+- MOD 版本：Version 24.09.29
+- MOD 檔案名稱：ManyMoreTry-175-1-5-1-1719684577
 - 手動維護最後下載日期：2025-02-13
+
+### [Power DI](https://www.nexusmods.com/warhammer40kdarktide/mods/281)
+    進階記分板
+- MOD 網站最後更新日期：Last updated 12 December 2024 3:14PM
+- MOD 版本：Version 1.1.7
+- MOD 檔案名稱：Power_DI_1.1.7.zip-281-v1-1-7-1734016443
+- 手動維護最後下載日期：2025-02-13
+
 
 ### [Unga Bunga](https://www.nexusmods.com/warhammer40kdarktide/mods/476)
     自動重擊
@@ -296,24 +310,9 @@
 - MOD 檔案名稱：ManyMoreTry-175-1-5-1-1719684577
 - 手動維護最後下載日期：2025-02-13
 
-### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
-    怪物生成器 - 靈能室可以選擇要生那些怪，並且產生特定波次訓練身法。
-- MOD 網站最後更新日期：Last updated 29 September 2024 8:39AM
-- MOD 版本：Version 24.09.29
-- MOD 檔案名稱：ManyMoreTry-175-1-5-1-1719684577
-- 手動維護最後下載日期：2025-02-13
-
 ### [Solo Play (Havoc Update)](https://www.nexusmods.com/warhammer40kdarktide/mods/176)
     單人遊戲 - 支援浩劫模式
 - MOD 網站最後更新日期：Last updated 31 December 2024 12:40PM
 - MOD 版本：Version 2.1.1
 - MOD 檔案名稱：SoloPlay-176-2-1-1-1735648805
 - 手動維護最後下載日期：2025-02-13
-
-### [Power DI](https://www.nexusmods.com/warhammer40kdarktide/mods/281)
-    進階記分板
-- MOD 網站最後更新日期：Last updated 12 December 2024 3:14PM
-- MOD 版本：Version 1.1.7
-- MOD 檔案名稱：Power_DI_1.1.7.zip-281-v1-1-7-1734016443
-- 手動維護最後下載日期：2025-02-13
-

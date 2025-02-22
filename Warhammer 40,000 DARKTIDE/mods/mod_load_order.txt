@@ -5,8 +5,10 @@
 -- You do not need to include 'base' or 'dmf' mod folders.
 -- ################################################################
 -- 遊戲體驗改善
-scoreboard
 WhatTheLocalization
+scoreboard
+creature_spawner
+Power_DI
 UngaBunga
 JishuJun
 AutoLoot
@@ -45,6 +47,4 @@ hybrid_sprint
 Archivum Messelina
 ManyMoreTry
 Spidey Sense
-creature_spawner
 SoloPlay
-Power_DI
