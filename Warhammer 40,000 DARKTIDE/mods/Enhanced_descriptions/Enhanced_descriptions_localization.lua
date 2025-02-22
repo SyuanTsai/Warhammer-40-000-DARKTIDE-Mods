@@ -154,7 +154,7 @@ local localizations = {
 	hit_mass_colour = {
 		en = " Hit Mass",
 		fr = " Coup en masse",
-		["zh-tw"] = " 順劈傷害",
+		["zh-tw"] = " 順劈目標",
 	},
 	impact_colour = {
 		en = " Impact",

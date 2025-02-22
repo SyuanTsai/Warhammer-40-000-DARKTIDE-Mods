@@ -550,7 +550,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_037_desc_ext_fr", {"loc_trait_bespoke_infinite_melee_cleave_on_weakspot_kill_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_wkspdmg_var_rgb.." de "..COLORS_KWords_fr.Weakspot_dmg_rgb_fr..". Les éliminations sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." ignore le "..COLORS_KWords_fr.Hit_mass_rgb_fr.." de "..COLORS_Numbers.n_3_rgb.." ennemis." end),
 			--[+ Traditional Chinese - 致命一擊 +]--
-	create_template("trait_bespoke_037_desc_ext_zh", {"loc_trait_bespoke_infinite_melee_cleave_on_weakspot_kill_desc"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Weakspot_rgb.." 擊殺時，\n無限連擊，並無視 "..COLORS_Numbers.n_3_rgb.." 個敵人的 "..COLORS_KWords_tw.Hit_mass_rgb end),
+	create_template("trait_bespoke_037_desc_ext_zh", {"loc_trait_bespoke_infinite_melee_cleave_on_weakspot_kill_desc"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Weakspot_dmg_rgb.." "..COLORS_Numbers.p_wkspdmg_var_rgb.."。\n"..COLORS_KWords_tw.Weakspot_rgb.." 擊殺時，無視 "..COLORS_Numbers.n_3_rgb.." 個敵人的 "..COLORS_KWords_tw.Hit_mass_rgb end),
 
 		--[+ Perfect Strike +]--
 			-- Battle Maul and Shield, Bully Clubs, Eviscerators, Heavy Swords, Latrine Shovels, Power Maul -- 2.5% | 5% | 7.5% | 10%
