@@ -820,7 +820,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_071m_desc_ext_fr", {"loc_reduce_fixed_overheat_amount_desc"}, {"fr"}, function(locale, value) return "Les éliminations sur "..COLORS_KWords_fr.Weakspot_rgb_fr.." et "..COLORS_KWords_fr.Crit_hits_rgb_fr.." réduisent la "..COLORS_KWords_fr.Heat_rgb_fr.." de "..COLORS_Numbers.amount_var_rgb.." sur "..COLORS_Numbers.time_var_rgb.." secondes." end),
 			--[+ Traditional Chinese - 散熱器 +]--
-	create_template("trait_bespoke_071m_desc_ext_zh", {"loc_reduce_fixed_overheat_amount_desc"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Weakspot_rgb.." 和 "..COLORS_KWords_tw.Crit_strike_rgb.." 擊殺的敵人，\n在 "..COLORS_Numbers.time_var_rgb.." 秒內，\n降低 "..COLORS_KWords_tw.Heat_rgb.." "..COLORS_Numbers.amount_var_rgb end),
+	create_template("trait_bespoke_071m_desc_ext_zh", {"loc_reduce_fixed_overheat_amount_desc"}, {"zh-tw"}, function(locale, value) return COLORS_KWords_tw.Weakspot_rgb.." 和 "..COLORS_KWords_tw.Crit_strike_rgb.." 擊殺的敵人，\n在 "..COLORS_Numbers.time_var_rgb.." 秒內，降低 "..COLORS_KWords_tw.Heat_rgb.." "..COLORS_Numbers.amount_var_rgb end),
 
 		--[+ Syphon +]--
 			-- Relic Blade -- 10% | 12% | 14% | 16%
