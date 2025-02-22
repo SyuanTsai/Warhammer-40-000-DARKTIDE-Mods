@@ -200,6 +200,7 @@
 - Inspiring Barrage - 激勵彈幕
 - Expansive - 擴展性
 - Shrapnel - 破片四射
+- Shattering Impact - 破碎衝擊
 
 ### 怪物相關
 
