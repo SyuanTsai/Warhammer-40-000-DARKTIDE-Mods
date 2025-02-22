@@ -119,6 +119,7 @@
 - Syphon - 虹吸
 - Energy Transfer - 能量轉換
 - Falter - 踉蹌
+- Overwhelming Force - 壓倒性的武力
 
 ### Weapon Blessing - 武器祝福(遠程)
 - Raking Fire - 掃射
