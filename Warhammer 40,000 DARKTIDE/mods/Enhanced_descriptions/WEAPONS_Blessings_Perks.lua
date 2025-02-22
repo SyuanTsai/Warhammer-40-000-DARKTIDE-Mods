@@ -982,7 +982,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_081_desc_ext_fr", {"loc_trait_bespoke_crit_weakspot_finesse_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_critwkspdmg_var_rgb.." de "..COLORS_KWords_fr.Crit_dmg_r_rgb_fr.." sur un "..COLORS_KWords_fr.Weakspothit_rgb_fr.."." end),
 			--[+ Traditional Chinese - 致命精準 +]--
-	create_template("trait_bespoke_081_desc_ext_zh", {"loc_trait_bespoke_crit_weakspot_finesse_desc"}, {"zh-tw"}, function(locale, value) return "對 "..COLORS_KWords_tw.Weakspothit_rgb.." 一律 "..COLORS_KWords_tw.Crit_rgb.."。" end),
+	create_template("trait_bespoke_081_desc_ext_zh", {"loc_trait_bespoke_crit_weakspot_finesse_desc"}, {"zh-tw"}, function(locale, value) return "當 "..COLORS_KWords_tw.Weakspothit_rgb.." 且發生 "..COLORS_KWords_tw.Crit_rgb.." 時，\n"..COLORS_KWords_tw.Crit_dmg_r_rgb.." "..COLORS_Numbers.p_critwkspdmg_var_rgb.."。" end),
 
 		--[+ No Respite +]--
 			-- Combat Shotguns, Helbore Lasguns, Infantry Lasguns, Vigilant Autoguns -- 14% | 16% | 18% | 20% (up to +140%)
