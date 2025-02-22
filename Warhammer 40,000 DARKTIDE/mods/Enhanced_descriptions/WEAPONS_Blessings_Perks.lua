@@ -890,7 +890,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_070_desc_ext_fr", {"loc_trait_bespoke_increase_close_damage_on_close_kill_desc"}, {"fr"}, function(locale, value) return "Gagnez "..COLORS_Numbers.p_dmgcls_var_rgb.." de "..COLORS_KWords_fr.Damage_rgb_fr.." rapprochés pendant "..COLORS_Numbers.time_var_rgb.." secondes lors d'une élimination à moins de "..COLORS_Numbers.n_12_5_rgb.." mètres. Se cumule "..COLORS_Numbers.stacks_var_rgb.." fois." end),
 			--[+ Traditional Chinese - 烈火熱焰 +]--
-	create_template("trait_bespoke_070_desc_ext_zh", {"loc_trait_bespoke_increase_close_damage_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在最多 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n在 "..COLORS_Numbers.time_var_rgb.." 秒內，\n增加 "..COLORS_Numbers.p_dmgcls_var_rgb.." 的近距離 "..COLORS_KWords_tw.Damage_rgb.."。\n最多"..COLORS_Numbers.n_5_rgb.."層。" end),
+	create_template("trait_bespoke_070_desc_ext_zh", {"loc_trait_bespoke_increase_close_damage_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n增加 "..COLORS_Numbers.p_dmgcls_var_rgb.." 的近距離 "..COLORS_KWords_tw.Damage_rgb.." 持續 "..COLORS_Numbers.time_var_rgb.." 秒。\n最多"..COLORS_Numbers.n_5_rgb.."層。" end),
 
 		--[+ Deathspitter +]--
 			-- Braced Autoguns, Combat Shotguns, Heavy Stubbers, Infantry Autoguns, Recon Lasguns -- 5% | 5.5% | 6% | 6.5% (up to +32.5%) | 3.5s
