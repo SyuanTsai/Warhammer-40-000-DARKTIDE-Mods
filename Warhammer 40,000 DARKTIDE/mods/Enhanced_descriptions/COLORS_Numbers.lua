@@ -151,6 +151,7 @@ local iu_actit = InputUtils.apply_color_to_input_text
 	local n_25_rgb = iu_actit("25", var_col)
 	local n_40_rgb = iu_actit("40", var_col)
 	local n_50_rgb = iu_actit("50", var_col)
+	local n_60_rgb = iu_actit("60", var_col)
 	local n_200_rgb = iu_actit("200", var_col)
 	local n_340_rgb = iu_actit("340", var_col)
 		--[+ Percentages +]--
@@ -304,6 +305,7 @@ return {
 	n_25_rgb = n_25_rgb,
 	n_40_rgb = n_40_rgb,
 	n_50_rgb = n_50_rgb,
+	n_60_rgb = n_60_rgb,
 	n_200_rgb = n_200_rgb,
 	n_340_rgb = n_340_rgb,
 
