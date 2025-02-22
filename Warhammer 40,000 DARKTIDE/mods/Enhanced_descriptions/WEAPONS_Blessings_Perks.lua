@@ -926,7 +926,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_074_desc_ext_fr", {"loc_trait_bespoke_suppression_on_close_kill_desc"}, {"fr"}, function(locale, value) return "Infligez Suppression aux ennemies lors d'une élimination jusqu'à une distance de "..COLORS_Numbers.n_12_5_rgb.." mètres." end),
 			--[+ Traditional Chinese - 恐怖阻擊 +]--
-	create_template("trait_bespoke_074_desc_ext_zh", {"loc_trait_bespoke_suppression_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在最多 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n對敵人造成壓制" end),
+	create_template("trait_bespoke_074_desc_ext_zh", {"loc_trait_bespoke_suppression_on_close_kill_desc"}, {"zh-tw"}, function(locale, value) return "在 "..COLORS_Numbers.n_12_5_rgb.." 公尺的距離內擊殺敵人時，\n對敵人造成壓制效果。" end),
 
 		--[+ Roaring Advance +]--
 			-- Braced Autoguns -- 10% | 15% | 20% | 25% (up to ~76%)
