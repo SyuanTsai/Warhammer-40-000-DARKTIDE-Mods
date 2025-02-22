@@ -1,3 +1,8 @@
+local function cf(text, color_name)
+	local color = Color[color_name](255, true)
+	return string.format("{#color(%s,%s,%s)}", color[2], color[3], color[4]) .. text .. "{#color(203,203,203)}"
+end
+
 return {
 	-- Mod Details
 	mod_name = {
@@ -43,6 +48,10 @@ return {
 		en = "Toggle Keybind",
 		["zh-tw"] = "切換快捷鍵",
 	},
+	toggle_bind_held = {
+		en = "Toggle Keybind (Held)",
+		["zh-tw"] = "切換快捷鍵（按住）",
+	},
 	attack_bind = {
 		en = "Attack Keybind",
 		["zh-tw"] = "攻擊快捷鍵",
@@ -65,8 +74,10 @@ return {
 		["zh-tw"] = "推進層數",
 	},
 	thrust_tooltip = {
-		en = "If set to 0 or thrust is not equipped, heavy attacks will initiate as soon as possible. Otherwise, they will be delayed until the specified number of stacks is reached.",
-		["zh-tw"] = "若設為 0 或未裝備武器祝福「推進」，則重擊攻擊會盡快發動。否則會等到達到指定層數後才發動。",
+		en = string.format("If set to 0 or thrust is not equipped, heavy attacks will initiate as soon as possible. Otherwise, they will be delayed until the specified number of stacks is reached.\n%s",
+		cf("Also affects 'Slow and Steady' Blessing.","ui_disabled_text_color")),
+		["zh-tw"] = string.format("若設為 0 或未裝備推進，重型攻擊將盡快啟動。否則，它們將延遲到達到指定的層數為止。\n%s",
+		cf("也影響「緩慢而確實」祝福。","ui_disabled_text_color")),
 	},
 	stacks = {
 		en = "Thrust Stacks",

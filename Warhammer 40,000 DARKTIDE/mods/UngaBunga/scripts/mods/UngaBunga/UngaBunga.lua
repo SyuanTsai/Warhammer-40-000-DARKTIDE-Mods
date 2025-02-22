@@ -139,11 +139,15 @@ local INCORRECT_TIMES = {
 			incorrect = 0.25,
 			correct = 0.3,
 		}
+	},
+	powermaul_2h_p1_m1 = {
+		action_right_heavy = {
+			prev_incorrect = 0.35,
+			prev_action = "action_left_light_pushfollow",
+			prev_correct = 0.45,
+		}
 	}
 }
-
--- Nuclear local for forcibly acquiring player weapon on a schedule when it is lost
-local last_check = 0
 
 -- debug local
 local debug = nil
@@ -179,7 +183,7 @@ mod.on_all_mods_loaded = function()
 	attack_bind = mod:get("attack_bind")
 end
 
--- Settings handler for our singular setting
+-- Settings handler
 mod.on_setting_changed = function(id)
 	-- Normal settings
 	if global[id] ~= nil then
@@ -264,7 +268,7 @@ mod.unga = function()
 					hurty_stick = wielded_weapon.item.__master_item.weapon_template
 					for _, trait_data in ipairs(traits) do
 						local trait = trait_data.id
-						if string.find(trait, "power_bonus_based_on_charge_time") then
+						if string.find(trait, "power_bonus_based_on_charge_time") or string.find(trait, "toughness_on_hit_based_on_charge_time") then
 							in_thrust_we_trust = true
 							break
 						end
@@ -303,6 +307,7 @@ mod.bunga = function(club)
 	local handler_data = handler._registered_components.weapon_action
 	local component_data = handler_data and handler_data.component and handler_data.component.__data and handler_data.component.__data[1]
 	local combo = component_data and component_data.combo_count
+	local previous = component_data and component_data.previous_action_name
 	local running_action = handler_data.running_action
 	
 	-- Block Cancel
@@ -339,21 +344,31 @@ mod.bunga = function(club)
 			local chain_time = chain_action.chain_time
 			-- Manual correction for some wonky chain actions (must be handled prior to accounting for time scale)
 			if INCORRECT_TIMES[hurty_stick] and INCORRECT_TIMES[hurty_stick][chain_action_name] then
-				local incorrect_time = INCORRECT_TIMES[hurty_stick][chain_action_name].incorrect
-				local also_incorrect_time = INCORRECT_TIMES[hurty_stick][chain_action_name].also_incorrect
-				local correct_time = INCORRECT_TIMES[hurty_stick][chain_action_name].correct
-				local also_correct_time = INCORRECT_TIMES[hurty_stick][chain_action_name].also_correct
+				-- Weapons with one incorrect time
+				local incorrect_time = INCORRECT_TIMES[hurty_stick][chain_action_name].incorrect or 0
+				local also_incorrect_time = INCORRECT_TIMES[hurty_stick][chain_action_name].also_incorrect or 0
+				-- Weapons with two incorrect times
+				local correct_time = INCORRECT_TIMES[hurty_stick][chain_action_name].correct or 0
+				local also_correct_time = INCORRECT_TIMES[hurty_stick][chain_action_name].also_correct or 0
+				-- Weapons with conditionally incorrect times based on previous actions
+				local prev_incorrect_time = INCORRECT_TIMES[hurty_stick][chain_action_name].prev_incorrect or 0
+				local prev_correct_time = INCORRECT_TIMES[hurty_stick][chain_action_name].prev_correct or "ignore"
+				local prev_action = INCORRECT_TIMES[hurty_stick][chain_action_name].prev_action or 0
+
+				-- Weapons with one incorrect time: Tac Axe MkVII, Bully Club MkIIIb
 				if chain_time == incorrect_time then
 					chain_time = correct_time
-				-- Yeah, slab shield has TWO incorrect times. I hate this weapon.
+				-- Weapons with two incorrect times: Slab Shield
 				elseif chain_time == also_incorrect_time then
 					chain_time = also_correct_time
+				-- Weapons with conditionally incorrect times: Crusher
+				elseif previous == prev_action and chain_time == prev_incorrect_time then
+					chain_time = prev_correct_time
 				end
 			end				
-
 			--------------------------------------------------------------------------------------------------------------------
 			-- Debug: Print chain action time requirements (useful for finding incorrect times)
-			--mod:echo("Template: %s, Action: %s, Time: %s, Scale: %s", hurty_stick, chain_action_name, chain_time, time_scale)
+			--mod:echo("Template: %s, Action: %s, Time: %s, Previous: %s", hurty_stick, chain_action_name, chain_time, previous)
 			--------------------------------------------------------------------------------------------------------------------
 
 			chain_validated = not chain_time or (chain_time and chain_time < current_action_t or not not chain_until and current_action_t < chain_until) and true
@@ -373,6 +388,7 @@ mod.bunga = function(club)
 					override = true
 				end
 			end
+			-- Release input if ready for a heavy and not waiting for Thrust, otherwise hold
 			local action_is_validated = chain_validated and not override
 			return not action_is_validated
 		end
@@ -387,6 +403,12 @@ mod.toggle = function()
 	if verbose then
 		mod:echo("Auto-heavy %s.", mod_enabled and "enabled" or "disabled")
 	end
+end
+
+-- Toggles with no possibility of a message
+mod.toggle_silent = function()
+	mod:set("enabled", not mod:get("enabled"), false)
+	mod_enabled = mod:get("enabled")
 end
 
 mod.attack = function()
@@ -409,7 +431,7 @@ mod:hook_safe("SteppedStatBuff","update_stat_buffs",function(self, current_stat_
     local buffs = self._template_context.buff_extension._buffs
 	for index, value in ipairs (buffs) do
 		local name = buffs[index]._template.name
-		if string.find(name,"windup_increases_power_child") ~= nil then 
+		if string.find(name,"windup_increases_power_child") ~= nil or string.find(name, "toughness_on_hit_based_on_charge_time") ~= nil then
 			stacks = buffs[index]._template_context.stack_count - 1
 			break
 		end
