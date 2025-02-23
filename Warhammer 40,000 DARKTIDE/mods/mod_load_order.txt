@@ -44,6 +44,7 @@ RememberServerLocation
 DefaultToHighestBlessingTier
 buy_until_rating
 BetterMelk
+ChatBlock
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
