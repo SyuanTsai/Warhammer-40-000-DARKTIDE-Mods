@@ -364,3 +364,10 @@
 - MOD 版本：1.3
 - MOD 檔案名稱：TagKeys-79-1-3-1680937957
 - 手動維護最後下載日期：2025-02-24
+
+### [Weapon Filter](https://www.nexusmods.com/warhammer40kdarktide/mods/373)
+    武器過濾
+- MOD 網站最後更新日期：Last updated 27 January 2025 8:11PM
+- MOD 版本：1.0.3
+- MOD 檔案名稱：TagKeys-79-1-3-1680937957
+- 手動維護最後下載日期：2025-02-24
