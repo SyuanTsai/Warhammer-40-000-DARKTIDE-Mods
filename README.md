@@ -278,13 +278,13 @@
 - MOD 檔案名稱：RememberServerLocation-308-1-1-1-1719684862
 - 手動維護最後下載日期：2025-02-18
 
-
 ### [Default To Highest Blessing Tier](https://www.nexusmods.com/warhammer40kdarktide/mods/364)
     預設天賦在第四層，避免沒注意到用了第一層天賦
 - MOD 網站最後更新日期：Last updated 29 January 2025 4:18AM
-- MOD 版本：1.1.1
+- MOD 版本：1.0.2
 - MOD 檔案名稱：DefaultToHighestBlessingTier-364-1-0-2-1738124336
 - 手動維護最後下載日期：2025-02-23
+
 ---
 # 遊戲內操作相關MOD
 
