@@ -320,6 +320,13 @@
 - MOD 檔案名稱：Inspect from Party Finder-455-1-0-2-1735149372
 - 手動維護最後下載日期：2025-02-24
 
+### [Player Outlines](https://www.nexusmods.com/warhammer40kdarktide/mods/39)
+    顯示玩家框，讓你知道隊友的位置在哪。
+- MOD 網站最後更新日期：Last updated 30 May 2023 5:17PM
+- MOD 版本：1.2.2
+- MOD 檔案名稱：PlayerOutlines-39-1-2-2-1685463446
+- 手動維護最後下載日期：2025-02-24
+
 ---
 # 遊戲內操作相關MOD
 
