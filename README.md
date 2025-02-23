@@ -320,13 +320,6 @@
 - MOD 檔案名稱：Inspect from Party Finder-455-1-0-2-1735149372
 - 手動維護最後下載日期：2025-02-24
 
-### [TagKeys](https://www.nexusmods.com/warhammer40kdarktide/mods/79)
-    使用快捷鍵做遊戲標記
-- MOD 網站最後更新日期：Last updated 08 April 2023 8:12AM
-- MOD 版本：1.3
-- MOD 檔案名稱：TagKeys-79-1-3-1680937957
-- 手動維護最後下載日期：2025-02-24
-
 ---
 # 遊戲內操作相關MOD
 
@@ -364,3 +357,10 @@
 - MOD 版本：Version 2.1.1
 - MOD 檔案名稱：SoloPlay-176-2-1-1-1735648805
 - 手動維護最後下載日期：2025-02-13
+
+### [TagKeys](https://www.nexusmods.com/warhammer40kdarktide/mods/79)
+    使用快捷鍵做遊戲標記
+- MOD 網站最後更新日期：Last updated 08 April 2023 8:12AM
+- MOD 版本：1.3
+- MOD 檔案名稱：TagKeys-79-1-3-1680937957
+- 手動維護最後下載日期：2025-02-24
