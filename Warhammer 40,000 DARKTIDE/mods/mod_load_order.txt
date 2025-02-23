@@ -55,3 +55,4 @@ ManyMoreTry
 Spidey Sense
 SoloPlay
 TagKeys
+WeaponFilter
