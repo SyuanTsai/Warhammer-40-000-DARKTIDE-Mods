@@ -306,6 +306,13 @@
 - MOD 檔案名稱：ChatBlock-68-1-2-2-1733253678
 - 手動維護最後下載日期：2025-02-24
 
+### [Inspect from Social](https://www.nexusmods.com/warhammer40kdarktide/mods/254)
+    查看玩家天賦裝備
+- MOD 網站最後更新日期：Last updated 14 December 2023 4:33PM
+- MOD 版本：1.0.4
+- MOD 檔案名稱：Inspect from Social-254-1-0-4-1702571614
+- 手動維護最後下載日期：2025-02-24
+
 ---
 # 遊戲內操作相關MOD
 
