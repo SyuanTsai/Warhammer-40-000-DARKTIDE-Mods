@@ -299,6 +299,13 @@
 - MOD 檔案名稱：BetterMelk-71-1-11-1719807512
 - 手動維護最後下載日期：2025-02-24
 
+### [Chat Block](https://www.nexusmods.com/warhammer40kdarktide/mods/68)
+    2對話時自動防禦
+- MOD 網站最後更新日期：Last updated 03 December 2024 7:21PM
+- MOD 版本：1.2.2
+- MOD 檔案名稱：ChatBlock-68-1-2-2-1733253678
+- 手動維護最後下載日期：2025-02-24
+
 ---
 # 遊戲內操作相關MOD
 
