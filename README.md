@@ -341,6 +341,13 @@
 - MOD 檔案名稱：LoadoutNames-286-1-5-1727749081
 - 手動維護最後下載日期：2025-02-24
 
+### [Guarantee Ability Activation](https://www.nexusmods.com/warhammer40kdarktide/mods/336)
+    替天賦命名。
+- MOD 網站最後更新日期：Last updated 20 January 2025 2:49PM
+- MOD 版本：1.3.6
+- MOD 檔案名稱：Guarantee Ability Activation-336-1-3-6-1737384551
+- 手動維護最後下載日期：2025-02-24
+
 ---
 # 遊戲內操作相關MOD
 
