@@ -41,6 +41,7 @@ NumericUI
 Enhanced_descriptions
 EmperorsGuidance
 RememberServerLocation
+DefaultToHighestBlessingTier
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
