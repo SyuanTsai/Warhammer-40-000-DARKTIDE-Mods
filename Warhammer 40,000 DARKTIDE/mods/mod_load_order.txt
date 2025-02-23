@@ -46,6 +46,7 @@ buy_until_rating
 BetterMelk
 ChatBlock
 InspectFromSocial
+InspectFromPartyFinder
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
