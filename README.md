@@ -334,6 +334,13 @@
 - MOD 檔案名稱：Name It-181-1-3-5-1728884070
 - 手動維護最後下載日期：2025-02-24
 
+### [LoadoutNames](https://www.nexusmods.com/warhammer40kdarktide/mods/286)
+    替天賦命名。
+- MOD 網站最後更新日期：Last updated 14 October 2024 6:34AM
+- MOD 版本：1.3.5
+- MOD 檔案名稱：LoadoutNames-286-1-5-1727749081
+- 手動維護最後下載日期：2025-02-24
+
 ---
 # 遊戲內操作相關MOD
 
