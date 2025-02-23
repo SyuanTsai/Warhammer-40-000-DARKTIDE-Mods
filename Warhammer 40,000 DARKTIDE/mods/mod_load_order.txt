@@ -47,6 +47,7 @@ BetterMelk
 ChatBlock
 InspectFromSocial
 InspectFromPartyFinder
+PlayerOutlines
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
