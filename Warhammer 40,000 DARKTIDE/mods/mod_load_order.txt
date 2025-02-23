@@ -42,6 +42,7 @@ Enhanced_descriptions
 EmperorsGuidance
 RememberServerLocation
 DefaultToHighestBlessingTier
+buy_until_rating
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint

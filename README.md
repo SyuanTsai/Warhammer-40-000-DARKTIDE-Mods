@@ -285,6 +285,13 @@
 - MOD 檔案名稱：DefaultToHighestBlessingTier-364-1-0-2-1738124336
 - 手動維護最後下載日期：2025-02-23
 
+### [Buy Until Rating](https://www.nexusmods.com/warhammer40kdarktide/mods/100)
+    自動購買你要的武器(五維)
+- MOD 網站最後更新日期：Last updated 27 January 2025 10:00PM
+- MOD 版本：2.3.1
+- MOD 檔案名稱：Buy Until Rating-100-2-3-1-1738015238
+- 手動維護最後下載日期：2025-02-23
+
 ---
 # 遊戲內操作相關MOD
 
