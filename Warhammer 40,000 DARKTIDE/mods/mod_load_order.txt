@@ -49,6 +49,7 @@ InspectFromSocial
 InspectFromPartyFinder
 PlayerOutlines
 name_it
+guarantee_ability_activation
 LoadoutNames
 -- 遊戲內操作相關MOD
 TalentRefundBelow
