@@ -51,6 +51,7 @@ PlayerOutlines
 name_it
 guarantee_ability_activation
 LoadoutNames
+custom_hud
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
