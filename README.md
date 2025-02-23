@@ -348,6 +348,17 @@
 - MOD 檔案名稱：Guarantee Ability Activation-336-1-3-6-1737384551
 - 手動維護最後下載日期：2025-02-24
 
+### [Custom HUD](https://www.nexusmods.com/warhammer40kdarktide/mods/10)
+    客製化UI
+```
+    請先備份user_settings.config!
+    預設位置: C:\Users\[your-user-name-here]\AppData\Roaming\Fatshark\Darktide
+```    
+- MOD 網站最後更新日期：Last updated 11 December 2023 2:56PM
+- MOD 版本：2.0.1
+- MOD 檔案名稱：Custom HUD-10-2-0-1-1702306614
+- 手動維護最後下載日期：2025-02-24
+
 ---
 # 遊戲內操作相關MOD
 
