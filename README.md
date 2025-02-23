@@ -327,6 +327,13 @@
 - MOD 檔案名稱：PlayerOutlines-39-1-2-2-1685463446
 - 手動維護最後下載日期：2025-02-24
 
+### [Name It - Rename Weapons and Curios](https://www.nexusmods.com/warhammer40kdarktide/mods/181)
+    替武器、珍品命名。
+- MOD 網站最後更新日期：Last updated 14 October 2024 6:34AM
+- MOD 版本：1.3.5
+- MOD 檔案名稱：Name It-181-1-3-5-1728884070
+- 手動維護最後下載日期：2025-02-24
+
 ---
 # 遊戲內操作相關MOD
 

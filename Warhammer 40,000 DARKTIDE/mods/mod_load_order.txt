@@ -48,6 +48,7 @@ ChatBlock
 InspectFromSocial
 InspectFromPartyFinder
 PlayerOutlines
+name_it
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
