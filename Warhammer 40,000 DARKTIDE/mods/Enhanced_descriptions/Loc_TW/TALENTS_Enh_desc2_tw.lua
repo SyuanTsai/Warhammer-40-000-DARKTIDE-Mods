@@ -672,7 +672,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Passive 38 - Onslaught(猛攻) +]--
 	local ED_VET_Passive_38_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 重複的近戰與遠程攻擊命中相同目標時，施加脆弱Debuff，提升對甲殼、破片護甲、狂熱者、不屈類型護甲造成的傷害(含爆炸與DoTs)。",
+		"- 重複的近戰與遠程攻擊命中相同目標時，施加脆弱Debuff，提升對甲殼、防彈、狂熱者、不屈類型護甲造成的傷害(含爆炸與DoTs)。",
 		"- 於第二下攻擊起觸發。",
 		"- 與「趁火打劫」的獨特脆弱，以及其他脆弱與只提升自身傷害的撕裂Buff採加法疊加。",
 	}, "\n"), enhdesc_col)
