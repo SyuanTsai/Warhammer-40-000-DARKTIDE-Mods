@@ -919,7 +919,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Ability 3-2 - Hail of Fire +]--
 	local ED_OGR_Ability_3_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 當持有遠程武器時，可獲得 30% 的撕裂(Rending)加成，提升對「甲殼」、「破片護甲」、「狂熱者」、「不屈」等各類型裝甲的傷害。",
+		"- 當持有遠程武器時，可獲得 30% 的撕裂(Rending)加成，提升對「甲殼」、「防彈」、「狂熱者」、「不屈」等各類型裝甲的傷害。",
 		"- 僅提升歐格林本身的傷害。",
 		"- 同樣影響爆炸傷害及如「飛鏢彈」武器祝福產生的流血DoT，並影響各種爆炸傷害。",
 		"- 與其他撕裂增幅與「脆弱」等敵人減益效果可加算疊加。",
