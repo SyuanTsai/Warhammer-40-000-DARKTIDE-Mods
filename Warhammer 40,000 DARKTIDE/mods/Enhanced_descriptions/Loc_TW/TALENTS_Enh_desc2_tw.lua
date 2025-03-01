@@ -16,10 +16,11 @@ local iu_actit = InputUtils.apply_color_to_input_text
 -- If you add a new entry (ex. MyEntry_rgb), just duplicate it in the list below (MyEntry_rgb = MyEntry_rgb,).
 
 local ppp___ppp = "\n+++-------------------------------------------------+++"
+COLORS_KWords_tw = mod:io_dofile("Enhanced_descriptions/Loc_TW/COLORS_KWords_tw") -- Traditional Chinese
 
 local become_invis_drop_all_enemy_aggro = "- 進入隱形狀態並清除所有敵人仇恨：若可能的話，近戰敵人會立刻轉而鎖定其他目標，遠程敵人則會停止射擊，然後在可能時再度鎖定。"
 local can_be_refr_dur_active_dur = "- 可以在效果持續期間刷新。"
-local doesnt_interact_w_c_a_r_from_curio = "- 不會與珍品提供的戰鬥技能冷卻效果互動，因為該效果只會縮短戰鬥技能的最大冷卻時間。"
+local doesnt_interact_w_c_a_r_from_curio = "- 不會與珍品提供的 "..COLORS_KWords_tw.Combat_ability_cd_rgb.." 效果互動，因為該效果只會縮短戰鬥技能的最大冷卻時間。"
 local doesnt_stack_w_z_same_aura_ogr = "- 無法與其他歐格林的相同光環疊加。"
 local doesnt_stack_w_z_same_aura_vet = "- 無法與其他老兵的相同光環疊加。"
 local procs_add_conc_stim_rem_cd_red = "- 此觸發效果會額外疊加在專注興奮劑的每秒縮短3秒冷卻時間效果之上。"
