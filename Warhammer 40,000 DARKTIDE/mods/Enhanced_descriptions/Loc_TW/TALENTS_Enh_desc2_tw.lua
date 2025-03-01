@@ -662,7 +662,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Passive 37 - Exploit Weakness +]--
 	local ED_VET_Passive_37_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 近戰攻擊若發生暴擊，則對敵人施加脆弱Debuff，提升對甲殼、破片護甲、狂熱者、不屈類型護甲造成的傷害(包含爆炸與持續傷害)。",
+		"- 近戰攻擊若發生暴擊，則對敵人施加脆弱Debuff，提升對甲殼、防彈、狂熱者、不屈類型護甲造成的傷害(包含爆炸與持續傷害)。",
 		"- 遠程武器的近戰特殊動作之暴擊同樣可施加此效果。",
 		"- 與只增強自身傷害的「撕裂」類Buff以加法疊加。",
 		"- 本天賦施加的是「rending_debuff_medium」，可疊加2次，每層提供10%的rending_multiplier。",
