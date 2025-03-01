@@ -52,6 +52,7 @@ name_it
 LoadoutNames
 guarantee_ability_activation
 custom_hud
+keep_dodging
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint

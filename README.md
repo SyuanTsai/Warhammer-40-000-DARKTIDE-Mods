@@ -359,6 +359,13 @@
 - MOD 檔案名稱：Custom HUD-10-2-0-1-1702306614
 - 手動維護最後下載日期：2025-02-24
 
+### [Custom HUD](https://www.nexusmods.com/warhammer40kdarktide/mods/182)
+    自動閃避(長按時自動閃避)
+- MOD 網站最後更新日期：Last updated 27 June 2024 2:29PM
+- MOD 版本：1.1.1
+- MOD 檔案名稱：Keep Dodging-182-1-1-1-1719498552
+- 手動維護最後下載日期：2025-03-01
+
 ---
 # 遊戲內操作相關MOD
 
