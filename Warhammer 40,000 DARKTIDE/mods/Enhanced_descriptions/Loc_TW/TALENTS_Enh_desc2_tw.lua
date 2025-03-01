@@ -69,7 +69,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 		"-- 位於中心區域的敵人受到更高傷害，中心至最大半徑的敵人受到距離遞減的較低傷害；若手雷附著在敵人身上，則會造成中心區域傷害。",
 		"-- 中心區域基礎傷害：2400。",
 		"-- 中心至最大半徑之間基礎傷害：500。",
-		"-- 在中心區域時，對所有護甲類型皆有不錯的傷害修正，並對甲殼、破片護甲、不屈敵有特別高的傷害修正。",
+		"-- 在中心區域時，對所有護甲類型皆有不錯的傷害修正，並對甲殼、防彈、不屈敵有特別高的傷害修正。",
 		"-- 在外圍區域，整體傷害修正仍維持不錯。",
 		"- 踉蹌：",
 		"-- 對所有敵人(包含巨獸)造成高踉蹌。",
@@ -662,7 +662,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Passive 37 - Exploit Weakness +]--
 	local ED_VET_Passive_37_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 近戰攻擊若發生暴擊，則對敵人施加脆弱Debuff，提升對甲殼、破片護甲、狂熱者、不屈類型護甲造成的傷害(包含爆炸與持續傷害)。",
+		"- 近戰攻擊若發生暴擊，則對敵人施加脆弱Debuff，提升對甲殼、防彈、狂熱者、不屈類型護甲造成的傷害(包含爆炸與持續傷害)。",
 		"- 遠程武器的近戰特殊動作之暴擊同樣可施加此效果。",
 		"- 與只增強自身傷害的「撕裂」類Buff以加法疊加。",
 		"- 本天賦施加的是「rending_debuff_medium」，可疊加2次，每層提供10%的rending_multiplier。",
@@ -672,7 +672,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Passive 38 - Onslaught(猛攻) +]--
 	local ED_VET_Passive_38_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 重複的近戰與遠程攻擊命中相同目標時，施加脆弱Debuff，提升對甲殼、破片護甲、狂熱者、不屈類型護甲造成的傷害(含爆炸與DoTs)。",
+		"- 重複的近戰與遠程攻擊命中相同目標時，施加脆弱Debuff，提升對甲殼、防彈、狂熱者、不屈類型護甲造成的傷害(含爆炸與DoTs)。",
 		"- 於第二下攻擊起觸發。",
 		"- 與「趁火打劫」的獨特脆弱，以及其他脆弱與只提升自身傷害的撕裂Buff採加法疊加。",
 	}, "\n"), enhdesc_col)
@@ -919,7 +919,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true)
 	--[+ Ability 3-2 - Hail of Fire +]--
 	local ED_OGR_Ability_3_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 當持有遠程武器時，可獲得 30% 的撕裂(Rending)加成，提升對「甲殼」、「破片護甲」、「狂熱者」、「不屈」等各類型裝甲的傷害。",
+		"- 當持有遠程武器時，可獲得 30% 的撕裂(Rending)加成，提升對「甲殼」、「防彈」、「狂熱者」、「不屈」等各類型裝甲的傷害。",
 		"- 僅提升歐格林本身的傷害。",
 		"- 同樣影響爆炸傷害及如「飛鏢彈」武器祝福產生的流血DoT，並影響各種爆炸傷害。",
 		"- 與其他撕裂增幅與「脆弱」等敵人減益效果可加算疊加。",
