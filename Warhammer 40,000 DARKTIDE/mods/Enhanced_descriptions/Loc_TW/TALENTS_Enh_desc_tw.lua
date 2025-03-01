@@ -880,7 +880,9 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	--[+ Ability 1-2 - Invocation of Death(死亡禱文) +]--
 	local ED_ZEA_Ability_1_2_rgb = iu_actit(table.concat({
 		ppp___ppp,
-		"- 每次觸發總共減少12秒冷卻（基礎4秒 + 天賦提供4次，每次2秒 = 額外8秒，共計12秒）。",
+		"- 每次觸發共減少12秒冷卻時間，",
+		"  其中包含基礎4秒加天賦提供4次，",
+		"  每2秒等於額外8秒，共計12秒。",
 		can_be_refr_dur_active_dur,
 		"- 與「專注興奮劑」的剩餘冷卻縮短效果（每秒3秒）同時生效。",
 		doesnt_interact_w_c_a_r_from_curio,

@@ -977,7 +977,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("talent_tree_zea_abil1_002_desc_fr", {"loc_talent_maniac_cooldown_on_melee_crits_buff_desc"}, {"fr"}, function(locale, value) return "{cooldown_regen:%s} de régénération du "..COLORS_KWords_fr.Combat_ability_cd_rgb_fr.." pendant {duration:%s} secondes sur les coups "..COLORS_KWords_fr.Crit_hits_rgb_fr.." de mêlée."..TALENTS_Enh_desc_fr.ED_ZEA_Ability_1_2_rgb_fr end), -- cooldown_regen: +200%, duration: 4 -- s->seconds -- colors
 			--[+ Traditional Chinese - 死亡禱文 +]--
-	create_template("talent_tree_zea_abil1_002_desc_tw", {"loc_talent_maniac_cooldown_on_melee_crits_buff_desc"}, {"zh-tw"}, function(locale, value) return "在近戰暴擊時，{duration:%s}秒內獲得{cooldown_regen:%s}的"..COLORS_KWords_tw.Ability_cd_rgb.."再生。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_1_2_rgb end), -- cooldown_regen: +200%, duration: 4 -- s->seconds -- colors
+	create_template("talent_tree_zea_abil1_002_desc_tw", {"loc_talent_maniac_cooldown_on_melee_crits_buff_desc"}, {"zh-tw"}, function(locale, value) return "在近戰暴擊時，\n獲得 {cooldown_regen:%s} 的 "..COLORS_KWords_tw.Ability_cd_rgb.." 持續 {duration:%s} 秒。"..TALENTS_Enh_desc_tw.ED_ZEA_Ability_1_2_rgb end), -- cooldown_regen: +200%, duration: 4 -- s->seconds -- colors
 
 	--[+ Ability 2 - Chorus of Spiritual Fortitude +]--
 		-- create_template("talent_tree_zea_abil2_000_en", {"loc_talent_zealot_bolstering_prayer"}, {"en"}, function(locale, value) return "Chorus of Spiritual Fortitude" end),
