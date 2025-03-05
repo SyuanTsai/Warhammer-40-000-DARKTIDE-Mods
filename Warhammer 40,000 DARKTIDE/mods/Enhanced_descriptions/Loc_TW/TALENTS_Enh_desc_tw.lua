@@ -15,11 +15,13 @@ local iu_actit = InputUtils.apply_color_to_input_text
 -- For example, you change "ED_PSY_Blitz_0_rgb" to "ED_PSY_Blitz_0_rgb_urlang", then at the bottom you need to find (CTRL+F) the "ED_PSY_Blitz_0_rgb" entries and also rename them from "ED_PSY_Blitz_0_rgb = ED_PSY_Blitz_0_rgb," to "ED_PSY_Blitz_0_rgb_urlang = ED_PSY_Blitz_0_rgb_urlang,".
 -- If you add a new entry (ex. MyEntry_rgb), just duplicate it in the list below (MyEntry_rgb = MyEntry_rgb,).
 
+COLORS_KWords_tw = mod:io_dofile("Enhanced_descriptions/Loc_TW/COLORS_KWords_tw") -- Traditional Chinese
+
 local ppp___ppp = "\n+++-------------------------------------------------+++"
 local become_invis_drop_all_enemy_aggro = "- 進入隱形狀態並解除所有敵人的仇恨：若可能，近戰敵人會立即將仇恨轉移至其他目標；正在射擊的遠程敵人則會停止射擊，隨後若可能會重新鎖定目標。"
 local can_be_refr_dur_active_dur = "- 可在效果持續期間內重新觸發。"
 local doesnt_stack_aura_psy = "- 不會與另一位靈能者的相同光環效果疊加。"
-local doesnt_interact_w_c_a_r_from_curio = "- 不會與只降低戰鬥技能最大冷卻時間的珍品所提供的戰鬥技能回復產生互動。"
+local doesnt_interact_w_c_a_r_from_curio = "- 不會與珍品提供的 "..COLORS_KWords_tw.Combat_ability_cd_rgb.." 效果互動，因為該效果只會縮短戰鬥技能的最大冷卻時間。"
 local dmg_is_incr_by = "- 傷害會受到撕裂、脆弱、「碎顱者」祝福（針對被踉蹌的敵人）以及「靈能強化」、「至天高之力」、「亞空間震波」、「擾動命運」、「惡意攻勢」、「完美時機」、「占卜者的注視」（含「預知未來」）、「亞空間騎士」、光環「動能釋放」（對精英單位）和小型遠程傷害節點的增益所提升。"
 local procs_on_succss_dodging = "- 在成功閃避敵方近戰或遠程攻擊（不含砲手、收割者、狙擊手），以及壓制型攻擊（瘟疫獵犬跳撲、陷阱兵網子、變種人擄抓）時觸發。"
 local red_both_tghns_n_health_dmg = "- 同時減少所受到的韌性與生命值傷害。"
@@ -812,7 +814,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"- 飛刀沿著彎曲軌道飛行。",
 		"- 傷害：基礎傷害585。",
 		"-- 針對狂熱者與感染者具備高護甲傷害修正。",
-		"-- 額外技巧(Finesse)在對無甲與破片護甲(Flak)時有加成。",
+		"-- 額外技巧(Finesse)在對無甲與防彈護甲時有加成。",
 		"-- 若目標是甲殼(如Mauler頭部以外)，則不造成傷害。",
 		"-- 低爆擊率 - 5%。",
 		"-- 無距離衰減。",
@@ -865,7 +867,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 		"-- 突進期間閃避所有攻擊並獲得韌性傷害免疫。",
 		"-- 可能會被不屈敵人、甲殼、巨獸以及虛空護盾阻擋。",
 		"- 近戰穿甲加成：",
-		"-- 下次近戰攻擊在啟動後3秒內獲得針對甲殼、破片護甲、狂熱者、不屈敵人的100%撕裂。",
+		"-- 下次近戰攻擊在啟動後3秒內獲得針對甲殼、防彈、狂熱者、不屈敵人的100%撕裂。",
 		"-- 第一次近戰攻擊會消耗此Buff。",
 		"-- 遠程攻擊無法受此Buff加成。",
 		"-- 與其他天賦的攻擊速度Buff以及敏捷興奮劑效果採加法疊加。",
