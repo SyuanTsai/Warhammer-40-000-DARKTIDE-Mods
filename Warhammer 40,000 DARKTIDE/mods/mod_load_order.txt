@@ -53,6 +53,7 @@ LoadoutNames
 guarantee_ability_activation
 custom_hud
 keep_dodging
+SpecialsTracker
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
