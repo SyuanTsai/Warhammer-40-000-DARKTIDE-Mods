@@ -414,7 +414,7 @@ local localization_templates = {
 			--[+ French +]--
 	create_template("trait_bespoke_020_desc_ext_fr", {"loc_trait_bespoke_power_bonus_on_same_enemy_attacks_desc"}, {"fr"}, function(locale, value) return COLORS_Numbers.p_pwrlvl_var_rgb.." de "..COLORS_KWords_fr.Strength_rgb_fr.." pendant "..COLORS_Numbers.time_var_rgb.." secondes en attaquant le même ennemie. Se Cumule "..COLORS_Numbers.stacks_var_rgb.." fois."..COLORS_KWords_fr.Pwr_note_rgb_fr end),
 			--[+ Traditional Chinese - 持續打擊 +]--
-	create_template("trait_bespoke_020_desc_ext_zh", {"loc_trait_bespoke_power_bonus_on_same_enemy_attacks_desc"}, {"zh-tw"}, function(locale, value) return "攻擊同一敵人時，\n持續 "..COLORS_Numbers.time_var_rgb.." 秒的 "..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb end),
+	create_template("trait_bespoke_020_desc_ext_zh", {"loc_trait_bespoke_power_bonus_on_same_enemy_attacks_desc"}, {"zh-tw"}, function(locale, value) return "攻擊同一敵人時，"..COLORS_Numbers.p_pwrlvl_var_rgb.." "..COLORS_KWords_tw.Strength_rgb.." 持續"..COLORS_Numbers.time_var_rgb.."秒。\n最多可疊加 "..COLORS_Numbers.stacks_var_rgb.." 次。"..COLORS_KWords_tw.Pwr_note_rgb end),
 
 		--[+ Flesh Tearer +]--
 			-- Combat Blades -- 5 | 6 | 7 | 8

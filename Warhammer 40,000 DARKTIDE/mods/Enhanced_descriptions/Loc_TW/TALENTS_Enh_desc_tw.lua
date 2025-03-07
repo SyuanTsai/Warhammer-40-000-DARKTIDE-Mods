@@ -861,7 +861,7 @@ local enhdesc_col = Color[mod:get("enhdesc_text_colour")](255, true) -- Do not t
 	local ED_ZEA_Ability_1_rgb = iu_actit(table.concat({
 		ppp___ppp,
 		"- 突進：",
-		"-- 範圍：基礎7米；（長按瞄準）最遠可達21米。",
+		"-- 範圍：基礎7米；（輔助動作時）最遠可達21米。",
 		"-- 無法在跳躍或下落時啟用。",
 		"-- 無法改變方向，但可透過格擋或向後鍵取消突進。",
 		"-- 突進期間閃避所有攻擊並獲得韌性傷害免疫。",
