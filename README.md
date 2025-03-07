@@ -366,6 +366,13 @@
 - MOD 檔案名稱：Keep Dodging-182-1-1-1-1719498552
 - 手動維護最後下載日期：2025-03-01
 
+### [SpecialsTracker](SpecialsTracker)
+    險市場上所有特感數量
+- MOD 網站最後更新日期：Last updated 29 October 2024 2:20PM
+- MOD 版本：1.4.2
+- MOD 檔案名稱：SpecialsTracker-274-1-4-2-1730211629
+- 手動維護最後下載日期：2025-03-07
+
 ---
 # 遊戲內操作相關MOD
 
