@@ -373,6 +373,12 @@
 - MOD 檔案名稱：SpecialsTracker-274-1-4-2-1730211629
 - 手動維護最後下載日期：2025-03-07
 
+### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
+    自動開火，只要按住就會一直開火
+- MOD 網站最後更新日期：Last updated 07 December 2023 3:46AM
+- MOD 版本：1.15
+- MOD 檔案名稱：FullAuto-87-1-15-1701920784
+- 手動維護最後下載日期：2025-03-09
 ---
 # 遊戲內操作相關MOD
 
