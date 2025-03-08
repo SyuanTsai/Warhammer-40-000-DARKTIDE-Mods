@@ -387,6 +387,13 @@
 - MOD 檔案名稱：show_cjk_glyphs-149-2-0-2-1683521516
 - 手動維護最後下載日期：2025-03-09
 
+### [Ovenproof's Scoreboard Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/241)
+    記分板排版工具
+- MOD 網站最後更新日期：Last updated 22 February 2024 2:22AM
+- MOD 版本：1.4.2
+- MOD 檔案名稱：ovenproof_scoreboard_plugin_v1.4.2.zip-241-v1-4-2-1708568564
+- 手動維護最後下載日期：2025-03-09
+
 ---
 # 遊戲內操作相關MOD
 

@@ -56,6 +56,7 @@ keep_dodging
 SpecialsTracker
 FullAuto
 show_cjk_glyphs
+ovenproof_scoreboard_plugin
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
