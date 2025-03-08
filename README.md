@@ -379,6 +379,14 @@
 - MOD 版本：1.15
 - MOD 檔案名稱：FullAuto-87-1-15-1701920784
 - 手動維護最後下載日期：2025-03-09
+
+### [Show CJK Glyphs](https://www.nexusmods.com/warhammer40kdarktide/mods/149)
+    遊戲內正常顯示韓日
+- MOD 網站最後更新日期：Last updated 08 May 2023 4:51AM
+- MOD 版本：2.0.2
+- MOD 檔案名稱：show_cjk_glyphs-149-2-0-2-1683521516
+- 手動維護最後下載日期：2025-03-09
+
 ---
 # 遊戲內操作相關MOD
 
