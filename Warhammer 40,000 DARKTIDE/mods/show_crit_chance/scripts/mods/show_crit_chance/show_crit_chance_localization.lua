@@ -52,6 +52,7 @@ return {
 		ru = "Proxima Nova Medium",
 		pl = "Proxima Nova Medium",
 		["zh-cn"] = "Proxima Nova Medium",
+		["zh-tw"] = "Proxima Nova Medium",
 		
 	},
 	font_proxima_nova_bold = {
@@ -59,18 +60,21 @@ return {
 		ru = "Proxima Nova Bold",
 		pl = "Proxima Nova Bold",
 		["zh-cn"] = "Proxima Nova Bold",
+		["zh-tw"] = "Proxima Nova Bold",
 	},
 	font_itc_novarese_medium = {
 		en = "ITC Novarese Medium",
 		ru = "ITC Novarese Medium",
 		pl = "ITC Novarese Medium",
-		["zh-cn"] = "ITC Novarese Medium"
+		["zh-cn"] = "ITC Novarese Medium",
+		["zh-tw"] = "ITC Novarese Medium",
 	},
 	font_itc_novarese_bold = {
 		en = "ITC Novarese Bold",
 		ru = "ITC Novarese Bold",
 		pl = "ITC Novarese Bold",
-		["zh-cn"] = "ITC Novarese Bold"
+		["zh-cn"] = "ITC Novarese Bold",
+		["zh-tw"] = "ITC Novarese Bold",
 	},
 	font_size = {
 		en = "Font Size",
