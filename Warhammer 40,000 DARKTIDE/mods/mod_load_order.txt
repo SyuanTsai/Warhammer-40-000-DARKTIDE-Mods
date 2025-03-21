@@ -60,6 +60,7 @@ ovenproof_scoreboard_plugin
 RetainSelection
 InventoryStats
 SimpleSpeedMeter
+Do I Know You
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
