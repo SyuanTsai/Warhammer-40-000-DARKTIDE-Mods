@@ -401,6 +401,13 @@
 - MOD 檔案名稱：Retain Selection-485-1-0-1741951532
 - 手動維護最後下載日期：2025-03-21
 
+
+### [InventoryStats](https://www.nexusmods.com/warhammer40kdarktide/mods/152)
+    玩家Build資訊
+- MOD 網站最後更新日期：Last updated 26 September 2024 5:09AM
+- MOD 版本：1.7
+- MOD 檔案名稱：InventoryStats-152-1-7-1727327350
+- 手動維護最後下載日期：2025-03-21
 ---
 # 遊戲內操作相關MOD
 
