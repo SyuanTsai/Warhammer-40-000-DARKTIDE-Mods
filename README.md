@@ -394,6 +394,13 @@
 - MOD 檔案名稱：ovenproof_scoreboard_plugin_v1.4.2.zip-241-v1-4-2-1708568564
 - 手動維護最後下載日期：2025-03-09
 
+### [Retain Selection](https://www.nexusmods.com/warhammer40kdarktide/mods/485)
+    維持鍛造的預設武器
+- MOD 網站最後更新日期：Last updated 14 March 2025 11:25AM
+- MOD 版本：1.0
+- MOD 檔案名稱：Retain Selection-485-1-0-1741951532
+- 手動維護最後下載日期：2025-03-21
+
 ---
 # 遊戲內操作相關MOD
 
