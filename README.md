@@ -420,6 +420,8 @@
 
 ### [Do I Know You](https://www.nexusmods.com/warhammer40kdarktide/mods/488)
     顯示移動速度
+    廢棄，因為只能計算PowerDI有過的資料
+    而且執行頻率過高，大廳3秒一次，好友瘋狂執行。
 - MOD 網站最後更新日期：Last updated 21 March 2025 2:43PM
 - MOD 版本：1.0.2
 - MOD 檔案名稱：Do I Know You 1.0.1.zip-488-1-0-1-1742568227

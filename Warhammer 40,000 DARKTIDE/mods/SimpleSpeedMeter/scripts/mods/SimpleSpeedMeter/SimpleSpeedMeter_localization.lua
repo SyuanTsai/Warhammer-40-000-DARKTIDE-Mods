@@ -12,6 +12,6 @@ return {
 	speed_title = {
 		en = "SPD",
 		["zh-cn"] = "速度",
-		["zh-tw"] = "速度",
+		["zh-tw"] = "SPD",
 	},
 }
