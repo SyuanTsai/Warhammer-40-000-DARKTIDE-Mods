@@ -418,6 +418,14 @@
 - 手動維護最後下載日期：2025-03-21
 ---
 
+### [Do I Know You](https://www.nexusmods.com/warhammer40kdarktide/mods/488)
+    顯示移動速度
+- MOD 網站最後更新日期：Last updated 21 March 2025 2:43PM
+- MOD 版本：1.0.2
+- MOD 檔案名稱：Do I Know You 1.0.1.zip-488-1-0-1-1742568227
+- 手動維護最後下載日期：2025-03-21
+---
+
 # 遊戲內操作相關MOD
 
 ### [Talent Tree UX Improvements](https://www.nexusmods.com/warhammer40kdarktide/mods/216)
