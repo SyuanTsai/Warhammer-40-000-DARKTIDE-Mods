@@ -115,8 +115,8 @@ mod.add_medkit_marker_and_proximity = function(self, unit)
         end
 
         local decal_unit_name = "content/levels/training_grounds/fx/decal_aoe_indicator"
-        local medical_crate_config = require("scripts/settings/deployables/medical_crate")
-
+        local medical_crate_config = require("scripts/settings/deployables/templates/medical_crate")        
+        
         local world = Unit.world(unit)
         local position = Unit.local_position(unit, 1)
         if world and position then
