@@ -15,7 +15,7 @@ local function update_input_alias()
 	end
 end
 
-mod:hook_require("scripts/settings/input/default_view_input_settings", function(DefaultViewInputSettings)
+mod:hook_require("scripts/settings/input/default_view_input_settings", function (DefaultViewInputSettings)
 	DefaultViewInputSettings.aliases.mmt_save_mission = {
 		"keyboard_r",
 		"xbox_controller_left_shoulder",
@@ -30,11 +30,11 @@ mod:hook_require("scripts/settings/input/default_view_input_settings", function(
 	update_input_alias()
 end)
 
-mod.on_all_mods_loaded = function()
+mod.on_all_mods_loaded = function ()
 	update_input_alias()
 end
 
-mod.on_enabled = function()
+mod.on_enabled = function ()
 	local exist = false
 	for _, value in ipairs(MissionBoardViewDefinitions.legend_inputs) do
 		if value.input_action == "mmt_save_mission" then
@@ -48,7 +48,7 @@ mod.on_enabled = function()
 			input_action = "mmt_save_mission",
 			display_name = "loc_mod_mmt_save",
 			alignment = "right_alignment",
-			visibility_function = function(mission_board_view)
+			visibility_function = function (mission_board_view)
 				if mission_board_view._selected_mission then
 					return true
 				end
@@ -58,13 +58,13 @@ mod.on_enabled = function()
 	end
 end
 
-mod.on_disabled = function()
-	table.array_remove_if(MissionBoardViewDefinitions.legend_inputs, function(v)
+mod.on_disabled = function ()
+	table.array_remove_if(MissionBoardViewDefinitions.legend_inputs, function (v)
 		return v.input_action == "mmt_save_mission"
 	end)
 end
 
-mod.on_game_state_changed = function(status, state_name)
+mod.on_game_state_changed = function (status, state_name)
 	if state_name ~= "StateGameplay" then
 		return
 	end
@@ -109,7 +109,7 @@ local function get_mission_name(mission, name_key, circumstance_key)
 		table.insert(name_parts, category_name)
 	end
 
-	local danger_settings = DangerSettings.by_index[mission.challenge]
+	local danger_settings = DangerSettings[mission.challenge]
 	table.insert(name_parts, Localize(danger_settings.display_name))
 
 	local circumstance_name = nil
@@ -163,8 +163,8 @@ local function get_mission_line(now, index, mission)
 	return "{#color(0,192,255)}" .. tostring(index) .. "{#reset()} " .. mission.display_name
 end
 
-mod:hook_safe("MissionBoardView", "init", function(self, settings)
-	self.__mod_mmt_save_callback = function(self)
+mod:hook_safe("MissionBoardView", "init", function (self, settings)
+	self.__mod_mmt_save_callback = function (self)
 		local saved_mission = mod:get("_saved_mission") or {}
 		local name = get_mission_name(self._selected_mission, "map", "circumstance")
 		local exist = false
@@ -194,13 +194,6 @@ local function all_member_ready()
 		local myself = Managers.party_immaterium:get_myself()
 		if myself:presence_name() ~= "hub" and myself:presence_name() ~= "training_grounds" and myself:presence_name() ~= "main_menu" then
 			return false
-		end
-
-		-- let's just assume other members don't have psych_ward while we can't actually detect that
-		for _, member in ipairs(Managers.party_immaterium._other_members) do
-			if member:presence_name() ~= "hub" and member:presence_name() ~= "training_grounds" then
-				return false
-			end
 		end
 		return true
 	end
@@ -288,7 +281,7 @@ local function mmt_main_command(idx_str)
 		return
 	end
 	locks.match = true
-	Managers.data_service.mission_board:fetch_mission(mission_id):next(function(data)
+	Managers.data_service.mission_board:fetch_mission(mission_id):next(function (data)
 		if not data.mission then
 			mod:echo(mod:localize("msg_unknown_err"))
 			locks.match = nil
@@ -298,7 +291,7 @@ local function mmt_main_command(idx_str)
 		local required_level = data.mission.requiredLevel or 0
 		go_match(mission_id, mission_name, required_level)
 		locks.match = nil
-	end):catch(function(e)
+	end):catch(function (e)
 		mod:dump(e, "mmt_fetch_error", 3)
 		if e and e.code and tonumber(e.code) == 404 then
 			if mission then
@@ -314,11 +307,11 @@ local function mmt_main_command(idx_str)
 end
 
 mod:command("mmt", mod:localize("cmd_main"), mmt_main_command)
-mod:command("lm", mod:localize("cmd_lm"), function()
+mod:command("lm", mod:localize("cmd_lm"), function ()
 	mmt_main_command("last")
 end)
 
-mod:command("mmtdel", mod:localize("cmd_del"), function(idx_str)
+mod:command("mmtdel", mod:localize("cmd_del"), function (idx_str)
 	if not idx_str then
 		mod:echo(mod:localize("msg_help_del"))
 		return
@@ -335,7 +328,7 @@ mod:command("mmtdel", mod:localize("cmd_del"), function(idx_str)
 	mod:echo(mod:localize("msg_removed") .. name)
 end)
 
-mod:command("mmtexport", mod:localize("cmd_export"), function()
+mod:command("mmtexport", mod:localize("cmd_export"), function ()
 	local now = tonumber(os.time())
 	local saved_mission = mod:get("_saved_mission") or {}
 	local text_parts = {}
@@ -361,7 +354,7 @@ mod:command("mmtexport", mod:localize("cmd_export"), function()
 	mod:echo(mod:localize("msg_data_copied"))
 end)
 
-mod:command("mmtimport", mod:localize("cmd_import"), function(id)
+mod:command("mmtimport", mod:localize("cmd_import"), function (id)
 	if not id then
 		mod:echo(mod:localize("msg_help_import"))
 		return
@@ -373,7 +366,7 @@ mod:command("mmtimport", mod:localize("cmd_import"), function(id)
 		return
 	end
 	locks.import = true
-	Managers.data_service.mission_board:fetch_mission(id):next(function(data)
+	Managers.data_service.mission_board:fetch_mission(id):next(function (data)
 		if not data.mission then
 			mod:echo(mod:localize("msg_import_invalid_mission"))
 			locks.import = nil
@@ -400,13 +393,13 @@ mod:command("mmtimport", mod:localize("cmd_import"), function(id)
 		mod:set("_saved_mission", saved_mission, false)
 		mod:echo(mod:localize("msg_saved") .. name)
 		locks.import = nil
-	end):catch(function(e)
+	end):catch(function (e)
 		mod:echo(mod:localize("msg_import_invalid_mission"))
 		locks.import = nil
 	end)
 end)
 
-mod:command("mmtclear", mod:localize("cmd_clear"), function(hour_str)
+mod:command("mmtclear", mod:localize("cmd_clear"), function (hour_str)
 	local hour = tonumber(hour_str)
 	if not hour then
 		mod:echo(mod:localize("msg_help_clear"))
@@ -432,6 +425,7 @@ mod:command("mmtclear", mod:localize("cmd_clear"), function(hour_str)
 	mod:set("_saved_mission", saved_mission_new, false)
 end)
 
-mod:command("mmtget", mod:localize("cmd_get"), function()
-	Application.open_url_in_browser("https://maelstroom.net/")
+mod:command("mmtget", mod:localize("cmd_get"), function ()
+	local lang = Managers.localization and Managers.localization._language
+	Application.open_url_in_browser("https://darktide-mission.otwako.dev/" .. lang)
 end)
