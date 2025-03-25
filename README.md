@@ -162,10 +162,10 @@
 
 ### [Loadout Monitor](https://www.nexusmods.com/warhammer40kdarktide/mods/160)
     載入中顯示隊友武器
-- MOD 網站最後更新日期：Last updated 04 January 2025 8:25AM
-- MOD 版本：1.5.02
-- MOD 檔案名稱：Loadout Monitor-160-1-5-02-1735979140
-- 手動維護最後下載日期：2025-02-10
+- MOD 網站最後更新日期：Last updated 25 March 2025 11:02AM
+- MOD 版本：1.6.01
+- MOD 檔案名稱：Loadout Monitor-160-1-6-01-1742900570
+- 手動維護最後下載日期：2025-03-25
 
 ---
 # 遊戲內操作相關MOD
