@@ -209,13 +209,12 @@
 - MOD 檔案名稱：NumericUI-14-1-16-0-1737224195
 - 手動維護最後下載日期：2025-02-11
 
-
 ### [Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/22)
     UI改善
-- MOD 網站最後更新日期：Last updated 06 February 2024 4:18PM
-- MOD 版本：2.18
-- MOD 檔案名稱：Scoreboard-22-2-18-1707236330
-- 手動維護最後下載日期：2025-02-11
+- MOD 網站最後更新日期：Last updated 26 March 2025 12:22PM
+- MOD 版本：2.2
+- MOD 檔案名稱：Scoreboard-22-2-2-1742991760
+- 手動維護最後下載日期：2025-03-26
 
 ---
 # 遊戲內操作相關MOD
