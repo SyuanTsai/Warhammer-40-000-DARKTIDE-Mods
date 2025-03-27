@@ -197,10 +197,10 @@
 
 ### [Numeric UI](https://www.nexusmods.com/warhammer40kdarktide/mods/14)
     UI改善
-- MOD 網站最後更新日期：Last updated 25 March 2025 10:59PM
-- MOD 版本：1.15.6
-- MOD 檔案名稱：NumericUI-14-1-16-0-1737224195
-- 手動維護最後下載日期：2025-03-26
+- MOD 網站最後更新日期：Last updated 26 March 2025 12:47PM
+- MOD 版本：1.18.0
+- MOD 檔案名稱：NumericUI-14-1-18-0-1743026903
+- 手動維護最後下載日期：2025-03-27
 
 
 ---
