@@ -8,7 +8,7 @@
 WhatTheLocalization
 scoreboard
 creature_spawner
-Power_DI
+-- Power_DI -- Wait fix
 UngaBunga
 JishuJun
 AutoLoot
@@ -38,7 +38,7 @@ QuickLookCard
 markers_aio
 danger_zone
 NumericUI
-Enhanced_descriptions
+-- Enhanced_descriptions  -- Wait fix
 EmperorsGuidance
 RememberServerLocation
 DefaultToHighestBlessingTier
