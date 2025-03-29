@@ -1,4 +1,4 @@
--- Show Crit Chance mod by mroużon. Ver. 1.1.1
+-- Show Crit Chance mod by mroużon. Ver. 1.1.3
 -- Thanks to Zombine, Redbeardt and others for their input into the community. Their work helped me a lot in the process of creating this mod.
 
 local mod = get_mod("show_crit_chance")
@@ -26,12 +26,12 @@ local guaranteed_crit_buffs = {
 }
 
 local _check_for_guaranteed_crit = function(player_unit)
-    if player_unit == nil or player_unit == {} then
+    if not player_unit then
         return
     end
 
     local buff_extension = ScriptUnit.extension(player_unit, "buff_system")
-    if buff_extension == nil or buff_extension == {} then
+    if not buff_extension then
         return
     end
 
@@ -136,12 +136,15 @@ HudElementCrit.update = function(self, dt, t, ui_renderer, render_settings, inpu
 	-- Sadly, this require needs to be here because of NetworkConstants :(
     -- Seems like a game code issue
     local CriticalStrike = require("scripts/utilities/attack/critical_strike")
+    if not CriticalStrike or not CriticalStrike.chance then
+        return
+    end
 
     -- Update widget
 	local crit_chance_widget = self._widgets_by_name.crit_chance_indicator
     if crit_chance_widget then
         -- Prevent profile:profile() from trying to execute if invalid
-        if mod._player.profile == nil or mod._player.profile == {} then
+        if not mod._player.profile then
             crit_chance_widget.content.crit_chance_indicator_text = ""
             return
         end
@@ -166,11 +169,11 @@ HudElementCrit.update = function(self, dt, t, ui_renderer, render_settings, inpu
 			-- Calculate crit chance
 			_check_for_guaranteed_crit(mod._player.player_unit)
 
-			if mod._guaranteed_crit then
-				mod._current_crit_chance = 1.0
-			else
-				mod._current_crit_chance = CriticalStrike.chance(mod._player, mod._weapon_handling_template, mod._is_ranged, mod._is_melee)
-			end
+            if mod._guaranteed_crit then
+                mod._current_crit_chance = 1.0
+            elseif (ScriptUnit.extension(mod._player.player_unit, "buff_system") ~= nil) then
+                mod._current_crit_chance = CriticalStrike.chance(mod._player, mod._weapon_handling_template, mod._is_ranged, mod._is_melee)
+            end
 
 			-- Update indicator text
        		crit_chance_widget.content.crit_chance_indicator_text = _convert_chance_to_text(mod._current_crit_chance)
