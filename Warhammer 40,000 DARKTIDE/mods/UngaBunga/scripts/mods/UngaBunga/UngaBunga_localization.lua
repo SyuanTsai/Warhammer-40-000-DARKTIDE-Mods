@@ -25,81 +25,105 @@ return {
 	},
 	keybinds = {
 		en = "Keybind Settings",
+		["zh-tw"] = "按鍵設定",
 	},
 	per_weapon = {
 		en = "Individual Weapon Settings",
+		["zh-tw"] = "個別武器設定",
 	},
 	-- Keybinds
 	toggle_bind = {
 		en = "Mod Toggle Keybind",
+		["zh-tw"] = "模組開關按鍵",
 	},
 	toggle_bind_tooltip = {
 		en = "When pressed, the mod's status (Enabled/Disabled) is inverted.",
+		["zh-tw"] = "按下後，模組的狀態（啟用/禁用）將被反轉。",
 	},
 	toggle_bind_held = {
 		en = "Mod Toggle Keybind (Held)",
+		["zh-tw"] = "模組開關按鍵（長按）",
 	},
 	toggle_bind_held_tooltip = {
 		en = "When pressed, the mod's status (Enabled/Disabled) is inverted; status is reverted when released.",
+		["zh-tw"] = "按下後，模組的狀態（啟用/禁用）將被反轉；當釋放時，狀態將恢復。",
 	},
 	cancel_toggle_bind = {
 		en = "Block/Special Cancel Keybind",
+		["zh-tw"] = "阻擋/特殊取消按鍵",
 	},
 	cancel_toggle_bind_tooltip = {
 		en = "When pressed, the mod will cancel heavy attack chains using blocks or special attacks.",
+		["zh-tw"] = "按下後，模組將使用阻擋或特殊攻擊取消重型攻擊鏈。",
 	},
 	cancel_toggle_bind_held = {
 		en = "Block/Special Cancel Keybind (Held)",
+		["zh-tw"] = "阻擋/特殊取消按鍵（長按）",
 	},
 	cancel_toggle_bind_held_tooltip = {
 		en = "When pressed, the mod will cancel heavy attack chains using blocks or special attacks; cancel behavior is reverted when released.",
+		["zh-tw"] = "按下後，模組將使用阻擋或特殊攻擊取消重型攻擊鏈；當釋放時，取消行為將恢復。",
 	},
 	attack_bind = {
 		en = "Attack Keybind",
+		["zh-tw"] = "攻擊按鍵",
 	},
 	attack_bind_tooltip = {
 		en = string.format("When pressed, the mod will manage heavy attacks as though the normal primary attack input is being pressed.\nIf this keybind is set, attacks made using the normal primary attack input are not modified by the mod.")
 	},
 	verbose = {
 		en = "Notify on Toggle",
+		["zh-tw"] = "開關通知",
 	},
 	verbose_tooltip = {
-		en = "If enabled, a message will be displayed when non-held toggle keybinds are pressed."
+		en = "If enabled, a message will be displayed when non-held toggle keybinds are pressed.",
+		["zh-tw"] = "若啟用，當非長按開關按鍵被按下時，將顯示一條消息。",
 	},
 	-- Global Settings
 	general = {
 		en = "General",
+		["zh-tw"] = "一般設定",
 	},
 	enabled = {
 		en = "Mod Enabled",
+		["zh-tw"] = "模組啟用",
 	},
 	block_cancel = {
 		en = "Block Cancel",
+		["zh-tw"] = "阻擋取消",
 	},
 	block_cancel_tooltip = {
-		en = "If enabled, the mod will block-cancel after attacks in order to only spam the first attack in the weapon's combo sequence."
+		en = "If enabled, the mod will block-cancel after attacks in order to only spam the first attack in the weapon's combo sequence.",
+		["zh-tw"] = "若啟用，模組將在攻擊後阻擋取消，以便僅在武器的連擊序列中重複第一次攻擊。",
 	},
 	cancel = {
 		en = "Block/Special Cancel",
+		["zh-tw"] = "阻擋/特殊取消",
 	},
 	cancel_tooltip = {
-		en = "If enabled, the mod will cancel heavy attack chains using blocks or special attacks."
+		en = "If enabled, the mod will cancel heavy attack chains using blocks or special attacks.",
+		["zh-tw"] = "若啟用，模組將使用阻擋或特殊攻擊取消重型攻擊鏈。",
 	},
 	cancel_mode = {
 		en = "Cancel Mode",
+		["zh-tw"] = "取消模式",
 	},
 	block = {
 		en = "Block",
+		["zh-tw"] = "阻擋",
 	},
 	special = {
 		en = "Special",
+		["zh-tw"] = "特殊",
 	},
 	-- Thrust Settings
 	thrust = {
-		en = "Thrust"
+		en = "Thrust",
+		["zh-tw"] = "推進",
 	},
 	max_stacks = {
 		en = "Thrust Stacks",
+		["zh-tw"] = "推進層數",
 	},
 	thrust_tooltip = {
 		en = string.format("If set to 0 or thrust is not equipped, heavy attacks will initiate as soon as possible. Otherwise, they will be delayed until the specified number of stacks is reached.\n%s",
@@ -138,18 +162,23 @@ return {
 	},
 	weapon_enabled = {
 		en = "Weapon Override Enabled",
+		["zh-tw"] = "武器覆蓋啟用",
 	},
 	weapon_enabled_tooltip = {
-		en = "If enabled, these settings will be used instead of the global settings for the selected weapon."
+		en = "If enabled, these settings will be used instead of the global settings for the selected weapon.",
+		["zh-tw"] = "若啟用，這些設定將用於所選武器，而不是全域設定。",
 	},
 	weapon_block_cancel = {
 		en = "Block Cancel",
+		["zh-tw"] = "阻擋取消",
 	},
 	weapon_cancel = {
 		en = "Block/Special Cancel",
+		["zh-tw"] = "阻擋/特殊取消",
 	},
 	weapon_cancel_mode = {
 		en = "Cancel Mode",
+		["zh-tw"] = "取消模式",
 	},
 	weapon_thrust = {
 		en = "Thrust",
