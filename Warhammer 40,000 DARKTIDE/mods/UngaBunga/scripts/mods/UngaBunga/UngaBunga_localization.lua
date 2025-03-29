@@ -23,55 +23,83 @@ return {
 		en = "Global Settings",
 		["zh-tw"] = "全域設定",
 	},
+	keybinds = {
+		en = "Keybind Settings",
+	},
 	per_weapon = {
 		en = "Individual Weapon Settings",
-		["zh-tw"] = "個別武器設定",
+	},
+	-- Keybinds
+	toggle_bind = {
+		en = "Mod Toggle Keybind",
+	},
+	toggle_bind_tooltip = {
+		en = "When pressed, the mod's status (Enabled/Disabled) is inverted.",
+	},
+	toggle_bind_held = {
+		en = "Mod Toggle Keybind (Held)",
+	},
+	toggle_bind_held_tooltip = {
+		en = "When pressed, the mod's status (Enabled/Disabled) is inverted; status is reverted when released.",
+	},
+	cancel_toggle_bind = {
+		en = "Block/Special Cancel Keybind",
+	},
+	cancel_toggle_bind_tooltip = {
+		en = "When pressed, the mod will cancel heavy attack chains using blocks or special attacks.",
+	},
+	cancel_toggle_bind_held = {
+		en = "Block/Special Cancel Keybind (Held)",
+	},
+	cancel_toggle_bind_held_tooltip = {
+		en = "When pressed, the mod will cancel heavy attack chains using blocks or special attacks; cancel behavior is reverted when released.",
+	},
+	attack_bind = {
+		en = "Attack Keybind",
+	},
+	attack_bind_tooltip = {
+		en = string.format("When pressed, the mod will manage heavy attacks as though the normal primary attack input is being pressed.\nIf this keybind is set, attacks made using the normal primary attack input are not modified by the mod.")
+	},
+	verbose = {
+		en = "Notify on Toggle",
+	},
+	verbose_tooltip = {
+		en = "If enabled, a message will be displayed when non-held toggle keybinds are pressed."
 	},
 	-- Global Settings
 	general = {
 		en = "General",
-		["zh-tw"] = "一般設定",
 	},
 	enabled = {
 		en = "Mod Enabled",
-		["zh-tw"] = "啟用模組",
-	},
-	verbose = {
-		en = "Notify on Toggle",
-		["zh-tw"] = "切換時通知",
-	},
-	verbose_tooltip = {
-		en = "If enabled, a message will be displayed when toggling indicating the current mod state.",
-		["zh-tw"] = "若啟用，切換模組狀態時會顯示訊息，提示當前模組狀態。",
-	},
-	toggle_bind = {
-		en = "Toggle Keybind",
-		["zh-tw"] = "切換快捷鍵",
-	},
-	toggle_bind_held = {
-		en = "Toggle Keybind (Held)",
-		["zh-tw"] = "切換快捷鍵（按住）",
-	},
-	attack_bind = {
-		en = "Attack Keybind",
-		["zh-tw"] = "攻擊快捷鍵",
 	},
 	block_cancel = {
 		en = "Block Cancel",
-		["zh-tw"] = "防禦取消",
 	},
 	block_cancel_tooltip = {
-		en = "If enabled, the mod will block-cancel after attacks in order to only spam the first attack in the weapon's combo sequence.",
-		["zh-tw"] = "若啟用，模組會在攻擊後執行格擋取消，以便只重複武器連擊序列中的第一擊。",
+		en = "If enabled, the mod will block-cancel after attacks in order to only spam the first attack in the weapon's combo sequence."
+	},
+	cancel = {
+		en = "Block/Special Cancel",
+	},
+	cancel_tooltip = {
+		en = "If enabled, the mod will cancel heavy attack chains using blocks or special attacks."
+	},
+	cancel_mode = {
+		en = "Cancel Mode",
+	},
+	block = {
+		en = "Block",
+	},
+	special = {
+		en = "Special",
 	},
 	-- Thrust Settings
 	thrust = {
-		en = "Thrust",
-		["zh-tw"] = "推進設定",
+		en = "Thrust"
 	},
 	max_stacks = {
 		en = "Thrust Stacks",
-		["zh-tw"] = "推進層數",
 	},
 	thrust_tooltip = {
 		en = string.format("If set to 0 or thrust is not equipped, heavy attacks will initiate as soon as possible. Otherwise, they will be delayed until the specified number of stacks is reached.\n%s",
@@ -109,12 +137,19 @@ return {
 		["zh-tw"] = "一般設定",
 	},
 	weapon_enabled = {
-		en = "Weapon Enabled",
-		["zh-tw"] = "啟用武器",
+		en = "Weapon Override Enabled",
+	},
+	weapon_enabled_tooltip = {
+		en = "If enabled, these settings will be used instead of the global settings for the selected weapon."
 	},
 	weapon_block_cancel = {
 		en = "Block Cancel",
-		["zh-tw"] = "格擋取消",
+	},
+	weapon_cancel = {
+		en = "Block/Special Cancel",
+	},
+	weapon_cancel_mode = {
+		en = "Cancel Mode",
 	},
 	weapon_thrust = {
 		en = "Thrust",
