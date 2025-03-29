@@ -84,10 +84,10 @@
 
 ### [True Level](https://www.nexusmods.com/warhammer40kdarktide/mods/156)
     真實等級 - 顯示真正的等級
-- MOD 網站最後更新日期：Last updated 25 December 20245:54PM
-- MOD 版本：Version 1.8.4
-- MOD 檔案名稱：True Level-156-1-8-4-1735149252
-- 手動維護最後下載日期：2025-02-09
+- MOD 網站最後更新日期：Last updated 29 March 2025 1:36PM
+- MOD 版本：Version 1.9.0
+- MOD 檔案名稱：True Level-156-1-9-0-1743255412
+- 手動維護最後下載日期：2025-03-29
 
 ### [Who Are You - Display account names](https://www.nexusmods.com/warhammer40kdarktide/mods/127)
     你是誰 - 顯示你Steam或者Xbox的帳號名稱
