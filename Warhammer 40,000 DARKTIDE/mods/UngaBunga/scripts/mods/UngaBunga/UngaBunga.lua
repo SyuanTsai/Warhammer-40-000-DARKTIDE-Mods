@@ -10,9 +10,12 @@ local hurty_stick = nil
 local attack_bind = {}
 local alt_attack = false
 
--- Block Cancel locals
-local allowed_to_block = false
-local should_block = false
+-- Cancel Locals
+local cancel_toggle_bind = {}
+local cancel_toggle_bind_held = {}
+local can_cancel = false
+local cancel_mode = "special"
+local cancel_override = false
 
 -- Thrust locals
 local in_thrust_we_trust = false
@@ -26,99 +29,103 @@ local global = {
 	max_stacks = 0,
 	max_special_stacks = 0,
 	split_specials = false,
-	block_cancel = false,
+	block_cancel = false, -- defunct, but kept for compatibility
+	cancel = false,
+	cancel_mode = "block"
 }
 local settings = {
 	max_stacks = 0,
 	max_special_stacks = 0,
 	split_specials = false,
-	block_cancel = false,
+	block_cancel = false, -- defunct, but kept for compatibility
+	cancel = false,
+	cancel_mode = "block"
 }
 local weapons = {
 	-- Chainaxe
-	chainaxe_p1_m1                   = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	chainaxe_p1_m2                   = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	chainaxe_p1_m1                   = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	chainaxe_p1_m2                   = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Chainsword
-	chainsword_p1_m1                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	chainsword_p1_m2                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	chainsword_p1_m1                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	chainsword_p1_m2                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Eviscerator
-	chainsword_2h_p1_m1              = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	chainsword_2h_p1_m2              = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	chainsword_2h_p1_m1              = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	chainsword_2h_p1_m2              = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Combat Axe
-	combataxe_p1_m1                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	combataxe_p1_m2                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	combataxe_p1_m3                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combataxe_p1_m1                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combataxe_p1_m2                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combataxe_p1_m3                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Tactical Axe
-	combataxe_p2_m1                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	combataxe_p2_m2                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	combataxe_p2_m3                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combataxe_p2_m1                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combataxe_p2_m2                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combataxe_p2_m3                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Sapper Shovel
-	combataxe_p3_m1                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	combataxe_p3_m2                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	combataxe_p3_m3                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combataxe_p3_m1                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combataxe_p3_m2                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combataxe_p3_m3                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Cleaver
-	ogryn_combatblade_p1_m1          = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	ogryn_combatblade_p1_m2          = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	ogryn_combatblade_p1_m3          = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_combatblade_p1_m1          = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_combatblade_p1_m2          = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_combatblade_p1_m3          = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Combat Knife
-	combatknife_p1_m1                = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	combatknife_p1_m2                = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combatknife_p1_m1                = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combatknife_p1_m2                = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Devil's Claw
-	combatsword_p1_m1                = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	combatsword_p1_m2                = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	combatsword_p1_m3                = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combatsword_p1_m1                = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combatsword_p1_m2                = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combatsword_p1_m3                = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Heavy Sword
-	combatsword_p2_m1                = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	combatsword_p2_m2                = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	combatsword_p2_m3                = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combatsword_p2_m1                = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combatsword_p2_m2                = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combatsword_p2_m3                = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Duelling Sword
-	combatsword_p3_m1                = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	combatsword_p3_m2                = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	combatsword_p3_m3                = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combatsword_p3_m1                = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combatsword_p3_m2                = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	combatsword_p3_m3                = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Force Sword
-	forcesword_p1_m1                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	forcesword_p1_m2                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	forcesword_p1_m3                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	forcesword_p1_m1                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	forcesword_p1_m2                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	forcesword_p1_m3                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Force Greatsword
-	forcesword_2h_p1_m1              = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	forcesword_2h_p1_m2              = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	forcesword_2h_p1_m1              = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	forcesword_2h_p1_m2              = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Grenadier Gauntlet
-	ogryn_gauntlet_p1_m1             = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_gauntlet_p1_m1             = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Latrine Shovel
-	ogryn_club_p1_m1                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	ogryn_club_p1_m2                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	ogryn_club_p1_m3                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_club_p1_m1                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_club_p1_m2                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_club_p1_m3                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Bully Club
-	ogryn_club_p2_m1                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	ogryn_club_p2_m2                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	ogryn_club_p2_m3                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_club_p2_m1                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_club_p2_m2                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_club_p2_m3                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Pickaxe
-	ogryn_pickaxe_2h_p1_m1           = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	ogryn_pickaxe_2h_p1_m2           = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	ogryn_pickaxe_2h_p1_m3           = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_pickaxe_2h_p1_m1           = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_pickaxe_2h_p1_m2           = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_pickaxe_2h_p1_m3           = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Power Maul
-	ogryn_powermaul_p1_m1            = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	ogryn_powermaul_p1_m2            = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	ogryn_powermaul_p1_m3            = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_powermaul_p1_m1            = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_powermaul_p1_m2            = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_powermaul_p1_m3            = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Slab Shield
-	ogryn_powermaul_slabshield_p1_m1 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	ogryn_powermaul_slabshield_p1_m1 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Shock Maul
-	powermaul_p1_m1                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	powermaul_p1_m2                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	powermaul_p1_m1                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	powermaul_p1_m2                  = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Crusher
-	powermaul_2h_p1_m1               = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	powermaul_2h_p1_m1               = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Power Sword
-	powersword_p1_m1                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	powersword_p1_m2                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	powersword_p1_m1                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	powersword_p1_m2                 = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Relic Sword
-	powersword_2h_p1_m1              = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	powersword_2h_p1_m2              = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	powersword_2h_p1_m1              = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	powersword_2h_p1_m2              = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 	-- Thunder Hammer
-	thunderhammer_2h_p1_m1           = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
-	thunderhammer_2h_p1_m2           = { weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	thunderhammer_2h_p1_m1           = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
+	thunderhammer_2h_p1_m2           = { weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false },
 }
 
--- The cursed local I prayed to the Emperor I would never have to create
+-- Weapons with incorrect chain times
 local INCORRECT_TIMES = {
 	ogryn_powermaul_slabshield_p1_m1 = {
 		action_right_heavy = {
@@ -149,6 +156,91 @@ local INCORRECT_TIMES = {
 	}
 }
 
+-- Weapons with special actions incompatible with cancelling
+local banned = {
+	-- Gauntlet
+	ogryn_gauntlet_p1_m1 = true,
+	-- Shield
+	ogryn_powermaul_slabshield_p1_m1 = true,
+	-- Chain weapons
+	chainaxe_p1_m1 = true,
+	chainaxe_p1_m2 = true,
+	chainsword_p1_m1 = true,
+	chainsword_p1_m2 = true,
+	chainsword_2h_p1_m1 = true,
+	chainsword_2h_p1_m2 = true,
+	-- Relic Blades
+	powersword_2h_p1_m1 = true,
+	powersword_2h_p1_m2 = true,
+	-- Shovels (folding)
+	ogryn_club_p1_m2 = true,
+	ogryn_club_p1_m3 = true,
+	combataxe_p3_m2 = true,
+	combataxe_p3_m3 = true,
+}
+
+-- Weapons with damage window timings that do not align with chain timings
+local broken = {
+	-- Combat Knives
+	combatknife_p1_m1 = true,
+	combatknife_p1_m2 = true,
+	-- Power Swords
+	powersword_p1_m1 = true,
+	powersword_p1_m2 = true,
+	-- Cleaver Mk IV
+	ogryn_combatblade_p1_m1 = true,
+}
+
+local INCORRECT_WINDOWS = {
+	-- Combat Knife
+	combatknife_p1_m1 = {
+		action_left_heavy = {
+			incorrect = 0.46666666666667,
+			special = 0.25,
+		},
+		action_left_heavy_jab_combo = {
+			incorrect = 0.46666666666667,
+			special = 0.42,
+		}
+	},
+	combatknife_p1_m2 = {
+		action_left_heavy = {
+			incorrect = 0.4,
+			special = 0.25,
+		},
+		action_left_heavy_jab_combo = {
+			incorrect = 0.46666666666667,
+			special = 0.32,
+		}
+	},
+	-- Power Sword
+	powersword_p1_m1 = {
+		action_left_heavy = {
+			incorrect = 0.33333333333333,
+			special = 0.25,
+			block = 0.25,
+		},
+		action_right_heavy = {
+			incorrect = 0.33333333333333,
+			special = 0.25,
+		}
+	},
+	powersword_p1_m2 = {
+		action_left_heavy = {
+			incorrect = 0.3,
+			special = 0.20,
+			block = 0.25,
+		},
+	},
+	-- Cleaver Mk IV
+	ogryn_combatblade_p1_m1 = {
+		action_right_heavy = {
+			incorrect = 0.3,
+			special = 0.25,
+		}
+	},
+}
+
 -- debug local
 local debug = nil
 
@@ -171,9 +263,14 @@ mod.on_all_mods_loaded = function()
 	-- Weapon Specific Group settings
 	for key, value in pairs(weapons) do
 		if mod:get(key) == nil then
-			mod:set(key, {weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false})
+			mod:set(key, {weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false})
 		else
 			weapons[key] = mod:get(key)
+		end
+		-- Compatibility check for older versions updating to new cancel settings - might not be necessary but shouldn't cause issues and may prevent crashes
+		if weapons[key].weapon_cancel_mode == nil then
+			weapons[key].weapon_cancel_mode = "block"
+			mod:set(key, weapons[key], false)
 		end
 	end
 	-- Individual Global settings
@@ -181,6 +278,8 @@ mod.on_all_mods_loaded = function()
 	mod_enabled = mod:get("enabled")
 	verbose = mod:get("verbose")
 	attack_bind = mod:get("attack_bind")
+	cancel_toggle_bind = mod:get("cancel_toggle")
+	cancel_toggle_bind_held = mod:get("cancel_toggle_held")
 end
 
 -- Settings handler
@@ -193,12 +292,14 @@ mod.on_setting_changed = function(id)
 		-- Reset if reset is switched to "On"
 		if mod:get(id) then
 			for key, value in pairs(weapons) do
-				weapons[key] = {weapon_enabled = false, weapon_block_cancel = false, weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false}
+				weapons[key] = {weapon_enabled = false, weapon_block_cancel = false, weapon_cancel = false, weapon_cancel_mode = "block", weapon_max_stacks = 0, weapon_max_special_stacks = 0, weapon_split_specials = false}
 				mod:set(key, weapons[key], false)
 			end
 			mod:set("weapon_selector", "chainaxe_p1_m1", false)
 			mod:set("weapon_enabled", false, false)
 			mod:set("weapon_block_cancel", false, false)
+			mod:set("weapon_cancel", false, false)
+			mod:set("weapon_cancel_mode", "block", false)
 			mod:set("weapon_max_stacks", 0, false)
 			mod:set("weapon_max_special_stacks", 0, false)
 			mod:set("weapon_split_specials", false, false)
@@ -209,6 +310,8 @@ mod.on_setting_changed = function(id)
 		local temp_weapon = mod:get("weapon_selector")
 		mod:set("weapon_enabled", weapons[temp_weapon].weapon_enabled, false)
 		mod:set("weapon_block_cancel", weapons[temp_weapon].weapon_block_cancel, false)
+		mod:set("weapon_cancel", weapons[temp_weapon].weapon_cancel, false)
+		mod:set("weapon_cancel_mode", weapons[temp_weapon].weapon_cancel_mode, false)
 		mod:set("weapon_max_stacks", weapons[temp_weapon].weapon_max_stacks, false)
 		mod:set("weapon_max_special_stacks", weapons[temp_weapon].weapon_max_special_stacks, false)
 		mod:set("weapon_split_specials", weapons[temp_weapon].weapon_split_specials, false)
@@ -226,6 +329,10 @@ mod.on_setting_changed = function(id)
 			toggle_bind = mod:get(id)
 		elseif id == "attack_bind" then
 			attack_bind = mod:get(id)
+		elseif id == "cancel_toggle_bind" then
+			cancel_toggle_bind = mod:get(id)
+		elseif id == "cancel_toggle_bind_held" then
+			cancel_toggle_bind_held = mod:get(id)
 		end
 	end
 end
@@ -278,16 +385,25 @@ mod.unga = function()
 				if weapons[hurty_stick] and weapons[hurty_stick].weapon_enabled then
 					-- Use weapon-specific settings
 					settings.block_cancel = weapons[hurty_stick].weapon_block_cancel
+					settings.cancel = weapons[hurty_stick].weapon_cancel
+					settings.cancel_mode = weapons[hurty_stick].weapon_cancel_mode
 					settings.max_stacks = weapons[hurty_stick].weapon_max_stacks
 					settings.max_special_stacks = weapons[hurty_stick].weapon_max_special_stacks
 					settings.split_specials = weapons[hurty_stick].weapon_split_specials
 				else
 					-- Use global settings
 					settings.block_cancel = global.block_cancel
+					settings.cancel = global.cancel
+					settings.cancel_mode = global.cancel_mode
 					settings.max_stacks = global.max_stacks
 					settings.max_special_stacks = global.max_special_stacks
 					settings.split_specials = global.split_specials
 				end
+				-- Cancel override
+				if cancel_override then
+					settings.cancel = not settings.cancel	
+				end
+				debug = {settings, global, weapons[hurty_stick] or "No Weapon"}
 			end
 		end
 	end
@@ -310,21 +426,6 @@ mod.bunga = function(club)
 	local previous = component_data and component_data.previous_action_name
 	local running_action = handler_data.running_action
 	
-	-- Block Cancel
-	local sweep = unit_data:read_component("action_sweep")
-	if sweep then
-		local sweep_state = sweep.sweep_state
-		if sweep_state then
-			-- Block cancel if an attack has finished and setting is enabled
-			if settings.block_cancel and sweep_state == "after_damage_window" and allowed_to_block then
-				should_block = true
-				-- Do not repeat block until the next attack is initiated
-				allowed_to_block = false
-			elseif sweep_state == "before_damage_window" or sweep_state == "during_damage_window" then
-				allowed_to_block = true
-			end
-		end
-	end
 	-- If we are in the middle of an attack windup
 	if running_action then
 		local action_settings = running_action:action_settings()
@@ -365,7 +466,8 @@ mod.bunga = function(club)
 				elseif previous == prev_action and chain_time == prev_incorrect_time then
 					chain_time = prev_correct_time
 				end
-			end				
+			end		
+
 			--------------------------------------------------------------------------------------------------------------------
 			-- Debug: Print chain action time requirements (useful for finding incorrect times)
 			--mod:echo("Template: %s, Action: %s, Time: %s, Previous: %s", hurty_stick, chain_action_name, chain_time, previous)
@@ -396,24 +498,57 @@ mod.bunga = function(club)
 	return club
 end
 
--- Toggles mod functionality and optionally displays a message
+-- Mod Toggle keybind
 mod.toggle = function()
-	mod:set("enabled", not mod:get("enabled"), false)
-	mod_enabled = mod:get("enabled")
-	if verbose then
-		mod:echo("Auto-heavy %s.", mod_enabled and "enabled" or "disabled")
+	if not Managers.ui:using_input() then
+		mod:set("enabled", not mod:get("enabled"), false)
+		mod_enabled = mod:get("enabled")
+		if verbose then
+			mod:echo("Auto-heavy %s.", mod_enabled and "enabled" or "disabled")
+		end
 	end
 end
 
--- Toggles with no possibility of a message
+-- Mod Toggle keybind (held)
 mod.toggle_silent = function()
 	mod:set("enabled", not mod:get("enabled"), false)
 	mod_enabled = mod:get("enabled")
 end
 
+-- Attack keybind
 mod.attack = function()
 	alt_attack = not alt_attack
 end
+
+-- Cancel keybind
+mod.toggle_cancel = function()
+	if not Managers.ui:using_input() then
+		if weapons[hurty_stick] and weapons[hurty_stick].weapon_enabled then
+			weapons[hurty_stick].weapon_cancel = not weapons[hurty_stick].weapon_cancel
+			-- Update UI if weapon is selected
+			if mod:get("weapon_selector") == hurty_stick then
+				mod:set("weapon_cancel", weapons[hurty_stick].weapon_cancel, false)
+				settings.cancel = weapons[hurty_stick].weapon_cancel
+			end
+			if verbose then
+				mod:echo("Heavy-Cancel %s.", weapons[hurty_stick].weapon_cancel and "enabled" or "disabled")
+			end
+		else
+			mod:set("cancel", not mod:get("cancel"), false)
+			global.cancel = mod:get("cancel")
+			settings.cancel = global.cancel
+			if verbose then
+				mod:echo("Heavy-Cancel %s.", mod:get("cancel") and "enabled" or "disabled")
+			end
+		end
+	end
+end
+
+-- Cancel keybind (held)
+mod.toggle_cancel_silent = function()
+	cancel_override = not cancel_override
+end
+
 
 -- ┌────────────────────────────┐ --
 -- │                            │ --
@@ -434,6 +569,85 @@ mod:hook_safe("SteppedStatBuff","update_stat_buffs",function(self, current_stat_
 		if string.find(name,"windup_increases_power_child") ~= nil or string.find(name, "toughness_on_hit_based_on_charge_time") ~= nil then
 			stacks = buffs[index]._template_context.stack_count - 1
 			break
+		end
+	end
+end)
+
+-- Cancellation flag management for heavies and special attacks
+mod:hook_safe(CLASS.ActionSweep, "_exit_damage_window", function (self, t, num_hit_enemies, aborted)
+	local action_settings = self._action_settings
+	local name = action_settings and action_settings.name
+	if name then
+		-- Allow cancellation upon completion of a heavy attack
+		if string.find(name, "heavy") then
+			-- Ignore this cancellation flag for weapons with fucked up window timings
+			if settings.cancel_mode == "block" and settings.cancel then
+				if not broken[hurty_stick] then
+					can_cancel = true
+				end
+			elseif settings.cancel_mode == "special" and settings.cancel then
+				if not broken[hurty_stick] and not banned[hurty_stick] then
+					can_cancel = true
+				end
+			end
+		-- Revert to standard behavior upon completion of a special attack
+		elseif string.find(name, "special") then
+			can_cancel = false
+		end
+	end
+	
+end)
+
+-- Cancellation flag management for special activations
+mod:hook_safe(CLASS.ActionActivateSpecial, "fixed_update", function (self, dt, t, time_in_action)
+	local EPSILON = 1e-05
+	-- Determine time needed to trigger special active state
+	local action_settings = self._action_settings
+	local activation_time = action_settings.activation_time
+	-- Get frame data for time check
+	local fixed_time_step = Managers.state.game_session.fixed_time_step
+	local first_trigger_time_fixed = math.round(activation_time / fixed_time_step) * fixed_time_step
+	local first_trigger_diff = math.abs(time_in_action - first_trigger_time_fixed)
+	-- Determine state
+	local first_trigger_frame = first_trigger_diff < EPSILON
+	local past_first_trigger = not first_trigger_frame and first_trigger_time_fixed < time_in_action
+	-- Revert to standard behavior upon activation
+	if first_trigger_frame or past_first_trigger then
+		can_cancel = false
+	end
+end)
+
+-- Cancellation flag management for broken weapons
+mod:hook_safe(CLASS.ActionSweep, "fixed_update", function (self, dt, t, time_in_action)
+	local action_settings = self._action_settings
+	local name = action_settings and action_settings.name
+	if string.find(name, "heavy") and settings.cancel then
+		if broken[hurty_stick] then
+			local damage_window_start = action_settings.damage_window_start
+			local damage_window_end = action_settings.damage_window_end
+			local action_time_offset = action_settings.action_time_offset or 0
+			local time_scale = self._weapon_action_component.time_scale
+			-- Manual Window Adjustments >:(
+			if settings.cancel_mode == "special" and INCORRECT_WINDOWS[hurty_stick] and INCORRECT_WINDOWS[hurty_stick][name] then
+				damage_window_end = INCORRECT_WINDOWS[hurty_stick][name].special or damage_window_end
+			elseif settings.cancel_mode == "block" and INCORRECT_WINDOWS[hurty_stick] and INCORRECT_WINDOWS[hurty_stick][name] then
+				damage_window_end = INCORRECT_WINDOWS[hurty_stick][name].block or damage_window_end
+			end
+			-- Attack Speed Compensation
+			damage_window_start = damage_window_start / time_scale
+			damage_window_end = damage_window_end / time_scale
+			action_time_offset = action_time_offset / time_scale
+			time_in_action = time_in_action + action_time_offset
+			local ready = time_in_action >= damage_window_end
+
+			---------------------------------------------------------------------------------------------------------
+			-- Debug: Prints damage window timing + attack name (useful for finding incorrect windows)
+			-- mod:echo("Weapon: %s, Attack: %s, End Time: %s", hurty_stick, name, action_settings.damage_window_end)
+			---------------------------------------------------------------------------------------------------------
+
+			if ready then
+				can_cancel = true
+			end
 		end
 	end
 end)
@@ -460,16 +674,30 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
 		if mod_enabled == true then
 			-- Standard input
 			if not attack_bind[1] then
+				-- Reset cancellation flag when not holding attack
 				if not holding_primary then
-					allowed_to_block = false
-				elseif holding_primary and mod.unga() then
-					local caveman = mod.bunga(holding_primary)
-				if caveman ~= holding_primary then
-					return caveman
+					can_cancel = false
 				end
-			end
+				-- Forcibly disable attack input when cancelling to prevent deadlock between attack input and special input
+				if settings.cancel and can_cancel and mod.unga() then
+					return false
+				end
+				if holding_primary and mod.unga() then
+					local caveman = mod.bunga(holding_primary)
+					if caveman ~= holding_primary then
+						return caveman
+					end
+				end
 			-- Custom input
 			else 
+				-- Reset cancellation flag when not holding attack
+				if not alt_attack then
+					can_cancel = false
+				end
+				-- Forcibly disable attack input when cancelling to prevent deadlock between attack input and special input
+				if settings.cancel and can_cancel and mod.unga() then
+					return false
+				end
 				if not alt_attack then
 					allowed_to_block = false
 				elseif alt_attack and mod.unga() then
@@ -480,20 +708,31 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
 		end
     end
 	if action_name == "action_two_hold" then
-		if mod_enabled == true then
-			if mod.unga() and should_block then
-				local player_unit = Managers.player:local_player(1).player_unit
-				local unit_data = ScriptUnit.has_extension(player_unit, "unit_data_system")
-				local block_component = unit_data:read_component("block")
-				local blocking = block_component.is_blocking
-				-- Override block instructions if we are already blocking
-				if blocking then
-					should_block = false
-				end
-				if should_block then
-					return true
-				end
+		if mod_enabled == true and mod.unga() and settings.cancel and holding_primary and can_cancel and settings.cancel_mode == "block" then
+			local player_unit = Managers.player:local_player(1).player_unit
+			local unit_data = ScriptUnit.has_extension(player_unit, "unit_data_system")
+			local block_component = unit_data:read_component("block")
+			local blocking = block_component.is_blocking
+			if not blocking then
+				return true
+			-- Revert to standard behavior once blocking is active for block cancelling
+			else
+				can_cancel = false
 			end
+		end
+	end
+	if action_name == "weapon_extra_pressed" then
+		if mod_enabled == true and mod.unga() and settings.cancel and holding_primary and can_cancel and settings.cancel_mode == "special" then
+			local player_unit = Managers.player:local_player(1).player_unit
+			local unit_data = ScriptUnit.has_extension(player_unit, "unit_data_system")
+			local block_component = unit_data:read_component("block")
+			local blocking = block_component.is_blocking
+			local perfect = block_component.is_perfect_blocking
+			-- Revert to standard behavior after perfect window of parries for special cancelling
+			if blocking and not perfect then
+				can_cancel = false
+			end
+			return true
 		end
 	end
     return func(self, action_name)

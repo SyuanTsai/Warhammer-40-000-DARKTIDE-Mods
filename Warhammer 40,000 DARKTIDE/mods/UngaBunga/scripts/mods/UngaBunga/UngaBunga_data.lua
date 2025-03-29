@@ -6,7 +6,7 @@ return {
 	is_togglable = true,
 	options = {
 		widgets = {
-			--[[]
+			--[[ Debug ]]
 			{
 				setting_id      = "debug",
 				type            = "keybind",
@@ -31,35 +31,28 @@ return {
 						tooltip       = "verbose_tooltip",
 						default_value = false
 					},
-					{
-						setting_id      = "toggle_bind",
-						type            = "keybind",
-						default_value   = {},
-						keybind_trigger = "pressed",
-						keybind_type    = "function_call",
-						function_name   = "toggle"
-					},
-					{
-						setting_id      = "toggle_bind_held",
-						type            = "keybind",
-						default_value   = {},
-						keybind_trigger = "held",
-						keybind_type    = "function_call",
-						function_name   = "toggle_silent"
-					},
-					{
-						setting_id      = "attack_bind",
-						type            = "keybind",
-						default_value   = {},
-						keybind_trigger = "held",
-						keybind_type    = "function_call",
-						function_name   = "attack"
-					},
+					--[[ Deprecated ]
 					{
 						setting_id    = "block_cancel",
 						type          = "checkbox",
 						tooltip       = "block_cancel_tooltip",
 						default_value = false
+					},
+					--]]
+					{
+						setting_id    = "cancel",
+						type          = "checkbox",
+						tooltip       = "cancel_tooltip",
+						default_value = false
+					},
+					{
+						setting_id    = "cancel_mode",
+						type          = "dropdown",
+						default_value = "block",
+						options = {
+							{text = "block", value = "block"},
+							{text = "special", value = "special"}
+						}
 					},
 					{
 						setting_id    = "max_stacks",
@@ -83,6 +76,57 @@ return {
 						range         = {0, 3},
 						unit_text     = "special_stacks"
 					}
+				}
+			},
+			{
+				setting_id  = "keybinds",
+				type	    = "group",
+				sub_widgets = {
+					{
+						setting_id      = "toggle_bind",
+						type            = "keybind",
+						tooltip         = "toggle_bind_tooltip",
+						default_value   = {},
+						keybind_trigger = "pressed",
+						keybind_type    = "function_call",
+						function_name   = "toggle"
+					},
+					{
+						setting_id      = "toggle_bind_held",
+						type            = "keybind",
+						tooltip         = "toggle_bind_held_tooltip",
+						default_value   = {},
+						keybind_trigger = "held",
+						keybind_type    = "function_call",
+						function_name   = "toggle_silent"
+					},
+					{
+						setting_id      = "cancel_toggle_bind",
+						type            = "keybind",
+						tooltip         = "cancel_toggle_bind_tooltip",
+						default_value   = {},
+						keybind_trigger = "pressed",
+						keybind_type    = "function_call",
+						function_name   = "toggle_cancel"
+					},
+					{
+						setting_id      = "cancel_toggle_bind_held",
+						type            = "keybind",
+						tooltip         = "cancel_toggle_bind_held_tooltip",
+						default_value   = {},
+						keybind_trigger = "held",
+						keybind_type    = "function_call",
+						function_name   = "toggle_cancel_silent"
+					},
+					{
+						setting_id      = "attack_bind",
+						type            = "keybind",
+						tooltip		    = "attack_bind_tooltip",
+						default_value   = {},
+						keybind_trigger = "held",
+						keybind_type    = "function_call",
+						function_name   = "attack"
+					},
 				}
 			},
 			{
@@ -184,13 +228,31 @@ return {
 					{
 						setting_id    = "weapon_enabled",
 						type          = "checkbox",
+						tooltip       = "weapon_enabled_tooltip",
 						default_value = false
 					},
+					--[[ Deprecated ]
 					{
 						setting_id    = "weapon_block_cancel",
 						type          = "checkbox",
 						tooltip       = "block_cancel_tooltip",
 						default_value = false
+					},
+					--]]
+					{
+						setting_id    = "weapon_cancel",
+						type          = "checkbox",
+						tooltip       = "cancel_tooltip",
+						default_value = false
+					},
+					{
+						setting_id    = "weapon_cancel_mode",
+						type          = "dropdown",
+						default_value = "block",
+						options = {
+							{text = "block", value = "block"},
+							{text = "special", value = "special"}
+						}
 					},
 					{
 						setting_id    = "weapon_max_stacks",
