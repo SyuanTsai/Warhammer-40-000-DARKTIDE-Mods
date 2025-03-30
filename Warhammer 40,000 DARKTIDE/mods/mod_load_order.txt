@@ -38,6 +38,7 @@ QuickLookCard
 markers_aio
 danger_zone
 NumericUI
+RecolorBossHealthBars
 -- Enhanced_descriptions  -- Wait fix
 EmperorsGuidance
 RememberServerLocation
