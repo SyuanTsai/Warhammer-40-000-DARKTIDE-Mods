@@ -28,10 +28,10 @@
 
 ### [Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/22)
     UI改善
-- MOD 網站最後更新日期：Last updated 26 March 2025 12:22PM
-- MOD 版本：2.2
-- MOD 檔案名稱：Scoreboard-22-2-2-1742991760
-- 手動維護最後下載日期：2025-03-26
+- MOD 網站最後更新日期：Last updated 06 February 2024 4:18PM
+- MOD 版本：2.18
+- MOD 檔案名稱：Scoreboard-22-2-18-1707236330
+- 手動維護最後下載日期：2025-02-11
 
 ### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
     怪物生成器 - 靈能室可以選擇要生那些怪，並且產生特定波次訓練身法。
@@ -42,10 +42,10 @@
 
 ### [Power DI](https://www.nexusmods.com/warhammer40kdarktide/mods/281)
     進階記分板
-- MOD 網站最後更新日期：Last updated 29 March 2025 6:29PM
-- MOD 版本：Version 1.1.8
-- MOD 檔案名稱：Power_DI_1.1.8.zip-281-v1-1-8-1743272944
-- 手動維護最後下載日期：2025-03-30
+- MOD 網站最後更新日期：Last updated 12 December 2024 3:14PM
+- MOD 版本：Version 1.1.7
+- MOD 檔案名稱：Power_DI_1.1.7.zip-281-v1-1-7-1734016443
+- 手動維護最後下載日期：2025-02-13
 
 ### [Unga Bunga](https://www.nexusmods.com/warhammer40kdarktide/mods/476)
     自動重擊
@@ -70,10 +70,10 @@
 
 ### [Healthbars](https://www.nexusmods.com/warhammer40kdarktide/mods/16)
     UI改善
-- MOD 網站最後更新日期：Last updated 29 March 2025 8:36PM
-- MOD 版本：3.0.0
-- MOD 檔案名稱：Healthbars-16-3-0-0-1743280608
-- 手動維護最後下載日期：2025-03-31
+- MOD 網站最後更新日期：Last updated 18 January 2025 6:07PM
+- MOD 版本：2.1.1
+- MOD 檔案名稱：NumericUI-14-1-16-0-1737224195
+- 手動維護最後下載日期：2025-02-11
 
 ### [IME Enable](https://www.nexusmods.com/warhammer40kdarktide/mods/167)
     啟用Windows輸入法 - 適用於中日韓等語言的玩家
@@ -84,17 +84,17 @@
 
 ### [True Level](https://www.nexusmods.com/warhammer40kdarktide/mods/156)
     真實等級 - 顯示真正的等級
-- MOD 網站最後更新日期：Last updated 29 March 2025 1:36PM
-- MOD 版本：Version 1.9.0
-- MOD 檔案名稱：True Level-156-1-9-0-1743255412
-- 手動維護最後下載日期：2025-03-29
+- MOD 網站最後更新日期：Last updated 25 December 20245:54PM
+- MOD 版本：Version 1.8.4
+- MOD 檔案名稱：True Level-156-1-8-4-1735149252
+- 手動維護最後下載日期：2025-02-09
 
 ### [Who Are You - Display account names](https://www.nexusmods.com/warhammer40kdarktide/mods/127)
     你是誰 - 顯示你Steam或者Xbox的帳號名稱
-- MOD 網站最後更新日期：Last updated 30 March 2025 3:55PM
-- MOD 版本：Version 3.7.1
-- MOD 檔案名稱：Who Are You-127-3-7-1-1743350108
-- 手動維護最後下載日期：2025-03-31
+- MOD 網站最後更新日期：Last updated 25 December 20245:55PM
+- MOD 版本：Version 3.6.3
+- MOD 檔案名稱：Who Are You-127-3-6-3-1735149310
+- 手動維護最後下載日期：2025-02-09
 
 ### [MultiBind](https://www.nexusmods.com/warhammer40kdarktide/mods/337)
     多重綁定 - 讓你可以額外綁定按鍵
@@ -217,10 +217,10 @@
 
 ### [Loadout Monitor](https://www.nexusmods.com/warhammer40kdarktide/mods/160)
     載入中顯示隊友武器
-- MOD 網站最後更新日期：Last updated 25 March 2025 11:02AM
-- MOD 版本：1.6.01
-- MOD 檔案名稱：Loadout Monitor-160-1-6-01-1742900570
-- 手動維護最後下載日期：2025-03-25
+- MOD 網站最後更新日期：Last updated 04 January 2025 8:25AM
+- MOD 版本：1.5.02
+- MOD 檔案名稱：Loadout Monitor-160-1-5-02-1735979140
+- 手動維護最後下載日期：2025-02-10
 
 ### [Quick Look Card](https://www.nexusmods.com/warhammer40kdarktide/mods/142)
     快速資訊卡 可以快速取得武器的五維
@@ -231,10 +231,10 @@
 
 ### [Markers Improved All-in-One](https://www.nexusmods.com/warhammer40kdarktide/mods/447)
     標記一體化 整合包
-- MOD 網站最後更新日期：Last updated 28 March 2025 8:51PM
-- MOD 版本：1.1.6
-- MOD 檔案名稱：Markers Improved AIO-447-1-1-6-1743195114
-- 手動維護最後下載日期：2025-03-29
+- MOD 網站最後更新日期：Last updated 03 January 2025 9:05AM
+- MOD 版本：1.1.4
+- MOD 檔案名稱：AutoLoot-375-1-0-2-1728634347
+- 手動維護最後下載日期：2025-02-11
 
 ### [Danger Zone](https://www.nexusmods.com/warhammer40kdarktide/mods/440)
     危險區域 - 顯示危險的範圍 爆桶、惡魔宿主...等
@@ -245,10 +245,10 @@
 
 ### [Numeric UI](https://www.nexusmods.com/warhammer40kdarktide/mods/14)
     UI改善
-- MOD 網站最後更新日期：Last updated 26 March 2025 12:47PM
-- MOD 版本：1.18.0
-- MOD 檔案名稱：NumericUI-14-1-18-0-1743026903
-- 手動維護最後下載日期：2025-03-27
+- MOD 網站最後更新日期：Last updated 18 January 2025 5:13PM
+- MOD 版本：1.16.0
+- MOD 檔案名稱：NumericUI-14-1-16-0-1737224195
+- 手動維護最後下載日期：2025-02-11
 
 ### [Spidey Sense](https://www.nexusmods.com/warhammer40kdarktide/mods/268)
     蜘蛛感應 - 畫面顯示特定敵人位置
@@ -287,10 +287,10 @@
 
 ### [Buy Until Rating](https://www.nexusmods.com/warhammer40kdarktide/mods/100)
     自動購買你要的武器(五維)
-- MOD 網站最後更新日期：Last updated 30 March 2025 3:53PM
-- MOD 版本：2.3.2
-- MOD 檔案名稱：Buy Until Rating-100-2-3-2-1743350019
-- 手動維護最後下載日期：2025-03-31
+- MOD 網站最後更新日期：Last updated 27 January 2025 10:00PM
+- MOD 版本：2.3.1
+- MOD 檔案名稱：Buy Until Rating-100-2-3-1-1738015238
+- 手動維護最後下載日期：2025-02-23
 
 ### [Character Screen Contracts (aka Better Melk)](https://www.nexusmods.com/warhammer40kdarktide/mods/71)
     角色大廳快速顯示週任進度
@@ -308,16 +308,16 @@
 
 ### [Inspect from Social](https://www.nexusmods.com/warhammer40kdarktide/mods/254)
     查看玩家天賦裝備
-- MOD 網站最後更新日期：Last updated 14 December 2023 4:33PM
-- MOD 版本：1.0.4
-- MOD 檔案名稱：Inspect from Social-254-1-0-4-1702571614
-- 手動維護最後下載日期：2025-02-24
+- MOD 網站最後更新日期：Last updated 30 March 2025 3:58PM
+- MOD 版本：1.0.5
+- MOD 檔案名稱：Inspect from Social-254-1-0-5-1743350299
+- 手動維護最後下載日期：2025-03-31
 
 ### [Inspect from Party Finder](https://www.nexusmods.com/warhammer40kdarktide/mods/455)
     組隊大廳查看玩家天賦裝備
-- MOD 網站最後更新日期：Last updated 25 December 2024 5:56PM
-- MOD 版本：1.0.2
-- MOD 檔案名稱：Inspect from Party Finder-455-1-0-2-1735149372
+- MOD 網站最後更新日期：Last updated 30 March 2025 4:02PM
+- MOD 版本：1.0.3
+- MOD 檔案名稱：Inspect from Party Finder-455-1-0-3-1743350532
 - 手動維護最後下載日期：2025-02-24
 
 ### [Player Outlines](https://www.nexusmods.com/warhammer40kdarktide/mods/39)
@@ -359,84 +359,21 @@
 - MOD 檔案名稱：Custom HUD-10-2-0-1-1702306614
 - 手動維護最後下載日期：2025-02-24
 
-### [Custom HUD](https://www.nexusmods.com/warhammer40kdarktide/mods/182)
+### [Keep Dodging](https://www.nexusmods.com/warhammer40kdarktide/mods/182)
     自動閃避(長按時自動閃避)
-- MOD 網站最後更新日期：Last updated 27 June 2024 2:29PM
-- MOD 版本：1.1.1
-- MOD 檔案名稱：Keep Dodging-182-1-1-1-1719498552
-- 手動維護最後下載日期：2025-03-01
-
-### [SpecialsTracker](SpecialsTracker)
-    險市場上所有特感數量
-- MOD 網站最後更新日期：Last updated 29 October 2024 2:20PM
-- MOD 版本：1.4.2
-- MOD 檔案名稱：SpecialsTracker-274-1-4-2-1730211629
-- 手動維護最後下載日期：2025-03-07
-
-### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
-    自動開火，只要按住就會一直開火
-- MOD 網站最後更新日期：Last updated 07 December 2023 3:46AM
-- MOD 版本：1.15
-- MOD 檔案名稱：FullAuto-87-1-15-1701920784
-- 手動維護最後下載日期：2025-03-09
-
-### [Show CJK Glyphs](https://www.nexusmods.com/warhammer40kdarktide/mods/149)
-    遊戲內正常顯示韓日
-- MOD 網站最後更新日期：Last updated 08 May 2023 4:51AM
-- MOD 版本：2.0.2
-- MOD 檔案名稱：show_cjk_glyphs-149-2-0-2-1683521516
-- 手動維護最後下載日期：2025-03-09
-
-### [Ovenproof's Scoreboard Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/241)
-    記分板排版工具
-- MOD 網站最後更新日期：Last updated 22 February 2024 2:22AM
-- MOD 版本：1.4.2
-- MOD 檔案名稱：ovenproof_scoreboard_plugin_v1.4.2.zip-241-v1-4-2-1708568564
-- 手動維護最後下載日期：2025-03-09
-
-### [Retain Selection](https://www.nexusmods.com/warhammer40kdarktide/mods/485)
-    維持鍛造的預設武器
-- MOD 網站最後更新日期：Last updated 14 March 2025 11:25AM
-- MOD 版本：1.0
-- MOD 檔案名稱：Retain Selection-485-1-0-1741951532
-- 手動維護最後下載日期：2025-03-21
-
-
-### [InventoryStats](https://www.nexusmods.com/warhammer40kdarktide/mods/152)
-    玩家Build資訊
-- MOD 網站最後更新日期：Last updated 26 September 2024 5:09AM
-- MOD 版本：1.7
-- MOD 檔案名稱：InventoryStats-152-1-7-1727327350
-- 手動維護最後下載日期：2025-03-21
-
----
-
-### [Simple Speed Meter](https://www.nexusmods.com/warhammer40kdarktide/mods/404)
-    顯示移動速度
-- MOD 網站最後更新日期：Last updated 01 November 2024 3:32AM
-- MOD 版本：1.0.2
-- MOD 檔案名稱：InventoryStats-152-1-7-1727327350
-- 手動維護最後下載日期：2025-03-21
----
+- MOD 網站最後更新日期：Last updated 26 March 20257:59PM
+- MOD 版本：1.1.2
+- MOD 檔案名稱：Keep Dodging-182-1-1-2-1743350245
+- 手動維護最後下載日期：2025-03-31
 
 ### [Do I Know You](https://www.nexusmods.com/warhammer40kdarktide/mods/488)
     顯示移動速度
-    廢棄，因為只能計算PowerDI有過的資料
-    而且執行頻率過高，大廳3秒一次，好友瘋狂執行。
 - MOD 網站最後更新日期：Last updated 21 March 2025 2:43PM
-- MOD 版本：1.0.2
-- MOD 檔案名稱：Do I Know You 1.0.1.zip-488-1-0-1-1742568227
-- 手動維護最後下載日期：2025-03-21
----
+- MOD 版本：1.0.3
+- MOD 檔案名稱：Do I Know You 1.0.3.zip-488-1-0-3-1743019163
+- 手動維護最後下載日期：2025-03-31
 
-### [Recolor Boss Health Bars](https://www.nexusmods.com/warhammer40kdarktide/mods/314)
-    重著色BOSS血條
-- MOD 網站最後更新日期：Last updated 21 March 2025 2:43PM
-- MOD 版本：1.0.1
-- MOD 檔案名稱：Recolor Boss Health Bars-314-1-0-1-1743266997
-- 手動維護最後下載日期：2025-03-30
 ---
-
 # 遊戲內操作相關MOD
 
 ### [Talent Tree UX Improvements](https://www.nexusmods.com/warhammer40kdarktide/mods/216)
@@ -462,17 +399,17 @@
 
 ### [Many More Try](https://www.nexusmods.com/warhammer40kdarktide/mods/175)
     任務管理器 - 可以啟動最近24小時內的任何關卡
-- MOD 網站最後更新日期：Last updated 25 March 2025 2:22PM
-- MOD 版本：Version 1.5.2
-- MOD 檔案名稱：ManyMoreTry-175-1-5-2-1742912575
-- 手動維護最後下載日期：2025-03-25
+- MOD 網站最後更新日期：Last updated 29 June 2024 7:09PM
+- MOD 版本：Version 1.5.1
+- MOD 檔案名稱：ManyMoreTry-175-1-5-1-1719684577
+- 手動維護最後下載日期：2025-02-13
 
 ### [Solo Play (Havoc Update)](https://www.nexusmods.com/warhammer40kdarktide/mods/176)
     單人遊戲 - 支援浩劫模式
-- MOD 網站最後更新日期：Last updated 25 March 2025 2:25PM
-- MOD 版本：Version 2.1.2
-- MOD 檔案名稱：SoloPlay-176-2-1-2-1742912706
-- 手動維護最後下載日期：2025-03-25
+- MOD 網站最後更新日期：Last updated 31 December 2024 12:40PM
+- MOD 版本：Version 2.1.1
+- MOD 檔案名稱：SoloPlay-176-2-1-1-1735648805
+- 手動維護最後下載日期：2025-02-13
 
 ### [TagKeys](https://www.nexusmods.com/warhammer40kdarktide/mods/79)
     使用快捷鍵做遊戲標記
