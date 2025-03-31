@@ -91,10 +91,10 @@
 
 ### [Who Are You - Display account names](https://www.nexusmods.com/warhammer40kdarktide/mods/127)
     你是誰 - 顯示你Steam或者Xbox的帳號名稱
-- MOD 網站最後更新日期：Last updated 29 March 2025 1:36PM
-- MOD 版本：Version 3.7.0
-- MOD 檔案名稱：Who Are You-127-3-7-0-1743255415
-- 手動維護最後下載日期：2025-03-29
+- MOD 網站最後更新日期：Last updated 30 March 2025 3:55PM
+- MOD 版本：Version 3.7.1
+- MOD 檔案名稱：Who Are You-127-3-7-1-1743350108
+- 手動維護最後下載日期：2025-03-31
 
 ### [MultiBind](https://www.nexusmods.com/warhammer40kdarktide/mods/337)
     多重綁定 - 讓你可以額外綁定按鍵
