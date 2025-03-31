@@ -137,188 +137,188 @@ return {
 		["zh-cn"] = "穿透", -- 穿透
 		ja = "貫通", -- 貫通力
 		ru = "ПРОБ", -- Пробивная сила
-		["zh-tw"] = "穿透",
+		["zh-tw"] = "穿透", -- 穿透
 	},
 	stat_loc_stats_display_burn_stat = {
 		en = "BURN", -- Burn
 		["zh-cn"] = "燃烧", -- 燃烧
 		ja = "燃焼", -- 燃焼
 		ru = "ГОРЕ", -- Горение
-		["zh-tw"] = "燃燒",
+		["zh-tw"] = "燃燒", -- 燃燒
 	},
 	stat_loc_stats_display_charge_speed = {
 		en = "CHRG", -- Charge Rate
 		["zh-cn"] = "充能", -- 充能速度
 		ja = "溜率", -- チャージ率
 		ru = "СЗАР", -- Скорость заряжания
-		["zh-tw"] = "充能",
+		["zh-tw"] = "充能", -- 充能速度
 	},
 	stat_loc_stats_display_cleave_damage_stat = {
 		en = "CDMG", -- Cleave Damage
 		["zh-cn"] = "劈伤", -- 劈裂伤害
 		ja = "斬威", -- 斬撃ダメージ
 		ru = "РАСУ", -- Урон рассечением
-		["zh-tw"] = "劈傷",
+		["zh-tw"] = "劈傷", -- 順劈傷害
 	},
 	stat_loc_stats_display_cleave_targets_stat = {
 		en = "CTGT", -- Cleave Targets
 		["zh-cn"] = "劈数", -- 劈裂目标数
 		ja = "斬数", -- 斬撃ターゲット数
 		ru = "РАСЦ", -- Рассечение целей
-		["zh-tw"] = "劈數",
+		["zh-tw"] = "劈數", -- 順劈目標數
 	},
 	stat_loc_stats_display_control_stat_melee = {
 		en = "CC", -- Crowd Control
 		["zh-cn"] = "控场", -- 控场
 		ja = "群管", -- 群衆管理
 		ru = "СДРЖ", -- Сдерживание толпы
-		["zh-tw"] = "控場",
+		["zh-tw"] = "控場", -- 控場
 	},
 	stat_loc_stats_display_control_stat_ranged = {
 		en = "CLTR", -- Collateral
 		["zh-cn"] = "远控", -- 远程控制力
 		ja = "副次", -- コラテラル
 		ru = "СОПУ", -- Сопутствующий
-		["zh-tw"] = "遠控",
+		["zh-tw"] = "遠控", -- 遠程控制力
 	},
 	stat_loc_stats_display_crit_stat = {
 		en = "CRIT", -- Critical Bonus
 		["zh-cn"] = "暴击", -- 暴击加成
 		ja = "致命", -- クリティカルボーナス
 		ru = "КРИТ", -- Критический бонус
-		["zh-tw"] = "爆擊",
+		["zh-tw"] = "暴擊", -- 暴擊加成
 	},
 	stat_loc_stats_display_damage_stat = {
 		en = "DMG", -- Damage
 		["zh-cn"] = "伤害", -- 伤害
 		ja = "威力", -- ダメージ
 		ru = "УРОН", -- Урон
-		["zh-tw"] = "傷害",
+		["zh-tw"] = "傷害", -- 傷害
 	},
 	stat_loc_stats_display_defense_stat = {
 		en = "DEF", -- Defences
 		["zh-cn"] = "防御", -- 防御
 		ja = "守備", -- 守備力
 		ru = "ОБОР", -- Оборона
-		["zh-tw"] = "防禦",
+		["zh-tw"] = "防禦", -- 防禦
 	},
 	stat_loc_stats_display_explosion_ap_stat = {
 		en = "PNTB", -- Penetration (Blast)
 		["zh-cn"] = "爆穿", -- 穿透（爆炸）
 		ja = "爆貫", -- 貫通力 (爆発)
 		ru = "ПВЗР", -- Пробивная сила (Взрыв)
-		["zh-tw"] = "爆穿",
+		["zh-tw"] = "爆穿", -- 穿透（爆炸）
 	},
 	stat_loc_stats_display_explosion_damage_stat = {
 		en = "BLST", -- Blast Damage
 		["zh-cn"] = "爆伤", -- 爆炸伤害
 		ja = "爆威", -- 爆発ダメージ
 		ru = "УВЗР", -- Взрывной урон
-		["zh-tw"] = "爆傷",
+		["zh-tw"] = "爆傷", -- 爆炸傷害
 	},
 	stat_loc_stats_display_explosion_stat = {
 		en = "BLSR", -- Blast Radius
 		["zh-cn"] = "爆距", -- 爆炸范围
 		ja = "爆径", -- 爆破半径
 		ru = "РВЗР", -- Радиус взрыва
-		["zh-tw"] = "爆距",
+		["zh-tw"] = "爆距", -- 爆炸範圍
 	},
 	stat_loc_stats_display_finesse_stat = {
 		en = "FNS", -- Finesse
 		["zh-cn"] = "娴熟", -- 武器娴熟
 		ja = "策謀", -- 策謀
 		ru = "ТОЧН", -- Точность
-		["zh-tw"] = "技巧",
+		["zh-tw"] = "技巧", -- 武器技巧
 	},
 	stat_loc_stats_display_first_saw_damage = {
 		en = "SRD", -- Shredder
 		["zh-cn"] = "撕裂", -- 撕裂
 		ja = "断裂", -- シュレッダー
 		ru = "КРОШ", -- Крошитель
-		["zh-tw"] = "撕裂",
+		["zh-tw"] = "撕裂", -- 撕裂
 	},
 	stat_loc_stats_display_first_target_stat = {
 		en = "FTGT", -- First Target
 		["zh-cn"] = "首个", -- 首个目标
 		ja = "第一", -- 第一ターゲット
 		ru = "ПЕРВ", -- Первоочередная цель
-		["zh-tw"] = "首個",
+		["zh-tw"] = "首個", -- 首個目標
 	},
 	stat_loc_stats_display_flame_size_stat = {
 		en = "CLDR", -- Cloud Radius
 		["zh-cn"] = "火距", -- 火云范围
 		ja = "散布", -- 散布半径
 		ru = "РАДР", -- Радиус распространения
-		["zh-tw"] = "火距",
+		["zh-tw"] = "火距", -- 火焰範圍
 	},
 	stat_loc_stats_display_heat_management = {
 		en = "TRES", -- Thermal Resistance
 		["zh-cn"] = "热阻", -- 热阻
 		ja = "熱耐", -- 熱耐性
 		ru = "ТЕПС", -- Тепловая стойкость
-		["zh-tw"] = "熱阻",
+		["zh-tw"] = "熱阻", -- 熱阻
 	},
 	stat_loc_stats_display_mobility_stat = {
 		en = "MOB", -- Mobility
 		["zh-cn"] = "机动", -- 机动性
 		ja = "機動", -- モビリティ
 		ru = "МОБИ", -- Мобильность
-		["zh-tw"] = "移動",
+		["zh-tw"] = "移動", -- 移動性
 	},
 	stat_loc_stats_display_power_output = {
 		en = "PWR", -- Power Output
 		["zh-cn"] = "能量", -- 能量输出
 		ja = "電力", -- (電力) 出力
 		ru = "ВЫБС", -- Выброс силы
-		["zh-tw"] = "能量",
+		["zh-tw"] = "能量", -- 能量輸出
 	},
 	stat_loc_stats_display_power_stat = {
 		en = "STPW", -- Stopping Power
 		["zh-cn"] = "制动", -- 制动能力
 		ja = "抑止", -- 抑止力
 		ru = "ОСТС", -- Останавливающая сила
-		["zh-tw"] = "制動",
+		["zh-tw"] = "制動", -- 制動能力
 	},
 	stat_loc_stats_display_range_stat = {
 		en = "RNGE", -- Range
 		["zh-cn"] = "范围", -- 攻击范围
 		ja = "範囲", -- 範囲
 		ru = "ДАЛЬ", -- Дальность
-		["zh-tw"] = "範圍",
+		["zh-tw"] = "範圍", -- 攻擊範圍
 	},
 	stat_loc_stats_display_reload_speed_stat = {
 		en = "RLD", -- Reload Speed
 		["zh-cn"] = "装弹", -- 装弹速度
 		ja = "装弾", -- リロード速度
 		ru = "СПЕР", -- Скорость перезарядки
-		["zh-tw"] = "裝彈",
+		["zh-tw"] = "裝彈", -- 裝填速度
 	},
 	stat_loc_stats_display_stability_stat = {
 		en = "STB", -- Stability
 		["zh-cn"] = "稳定", -- 稳定性
 		ja = "安定", -- 安定性
 		ru = "СТАБ", -- Стабильность
-		["zh-tw"] = "穩定",
+		["zh-tw"] = "穩定", -- 穩定性
 	},
 	stat_loc_stats_display_vent_speed = {
 		en = "QUEL", -- Quell Speed
 		["zh-cn"] = "冷却", -- 平息与冷却速度
 		ja = "抑制", -- 速度抑制
 		ru = "СПОД", -- Скорость подавления
-		["zh-tw"] = "平息",
+		["zh-tw"] = "平息", -- 平息與冷卻速度
 	},
 	stat_loc_stats_display_warp_resist_stat = {
 		en = "WRES", -- Warp Resistance
 		["zh-cn"] = "亚抗", -- 亚空间抗性
 		ja = "歪耐", -- ワープ耐性
 		ru = "СВАР", -- Сопротивление варпу
-		["zh-tw"] = "亞抗",
+		["zh-tw"] = "亞抗", -- 亞空間抗性
 	},
 	stat_loc_stats_display_heat_management_powersword_2h = {
 		en = "HTMG", -- Heat Management
 		["zh-cn"] = "热管", -- 热量管理
 		ja = "熱制", -- 熱制御
-		["zh-tw"] = "熱量",
+		["zh-tw"] = "熱量", -- 熱量管理
 	},
 
 	-- Perks or blessings
@@ -468,14 +468,14 @@ return {
 		["zh-cn"] = "体力", -- 体力
 		ja = "活力", -- スタミナ
 		ru = "ВНСЛ", -- Выносливость
-		["zh-tw"] = "耐力",
+		["zh-tw"] = "耐力", -- 耐力
 	},
 	trait_gadget_stamina_regeneration = {
 		en = "STRG", -- Stamina Regeneration
 		["zh-cn"] = "体回", -- 体力恢复
 		ja = "活回", -- スタミナ回復
 		ru = "ВВЫН", -- Восстановление выносливости
-		["zh-tw"] = "體回",
+		["zh-tw"] = "體回", -- 體力恢復
 	},
 	trait_gadget_cooldown_reduction = {
 		en = "ABRG", -- Combat Ability Regeneration
@@ -538,7 +538,7 @@ return {
 		["zh-cn"] = "格挡", -- 格挡效益
 		ja = "防御", -- ブロック効率
 		ru = "ЭБЛК", -- Эффективность блока
-		["zh-tw"] = "格擋",
+		["zh-tw"] = "格擋", -- 格擋效益
 	},
 	trait_weapon_trait_reduced_block_cost = {
 		en = "BLK", -- Block Efficiency
@@ -580,7 +580,7 @@ return {
 		["zh-cn"] = "经验", -- 经验
 		ja = "経験", -- 経験値
 		ru = "ОПЫТ", -- Опыт
-		["zh-tw"] = "經驗",
+		["zh-tw"] = "經驗", -- 經驗
 	},
 	trait_gadget_corruption_resistance = {
 		en = "CRPT", -- Corruption Resistance
@@ -601,7 +601,7 @@ return {
 		["zh-cn"] = "装弹", -- 装弹速度
 		ja = "装弾", -- リロード速度
 		ru = "СПЕР", -- Скорость перезарядки
-		["zh-tw"] = "裝彈",
+		["zh-tw"] = "裝彈", -- 裝填速度
 	},
 	trait_weapon_trait_increase_damage = {
 		en = "DMG", -- Melee Damage
@@ -720,7 +720,7 @@ return {
 		["zh-cn"] = "韧性", -- 韧性
 		ja = "靭性", -- タフネス
 		ru = "СТЙК", -- Стойкость
-		["zh-tw"] = "韌性",
+		["zh-tw"] = "韌性", -- 韌性
 	},
 	trait_gadget_toughness_regen_delay = {
 		en = "TNRG", -- Toughness Regeneration Speed
