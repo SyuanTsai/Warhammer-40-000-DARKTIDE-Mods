@@ -287,10 +287,10 @@
 
 ### [Buy Until Rating](https://www.nexusmods.com/warhammer40kdarktide/mods/100)
     自動購買你要的武器(五維)
-- MOD 網站最後更新日期：Last updated 27 January 2025 10:00PM
-- MOD 版本：2.3.1
-- MOD 檔案名稱：Buy Until Rating-100-2-3-1-1738015238
-- 手動維護最後下載日期：2025-02-23
+- MOD 網站最後更新日期：Last updated 30 March 2025 3:53PM
+- MOD 版本：2.3.2
+- MOD 檔案名稱：Buy Until Rating-100-2-3-2-1743350019
+- 手動維護最後下載日期：2025-03-31
 
 ### [Character Screen Contracts (aka Better Melk)](https://www.nexusmods.com/warhammer40kdarktide/mods/71)
     角色大廳快速顯示週任進度
