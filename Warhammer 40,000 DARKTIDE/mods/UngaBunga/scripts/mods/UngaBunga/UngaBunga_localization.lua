@@ -65,9 +65,15 @@ return {
 		["zh-tw"] = "按下後，模組將使用阻擋或特殊攻擊取消重型攻擊鏈；當釋放時，取消行為將恢復。",
 	},
 	attack_bind = {
+		en = "Attack Keybind (Held)",
+		["zh-tw"] = "攻擊按鍵（長按）",
+	},
+	--[[ WIP ]
+	attack_bind_toggle = {
 		en = "Attack Keybind",
 		["zh-tw"] = "攻擊按鍵",
 	},
+	--]]
 	attack_bind_tooltip = {
 		en = string.format("When pressed, the mod will manage heavy attacks as though the normal primary attack input is being pressed.\nIf this keybind is set, attacks made using the normal primary attack input are not modified by the mod.")
 	},
@@ -208,59 +214,59 @@ return {
 	-- OGRYN ONLY
 	ogryn_combatblade_p1_m1 = {
 		en = "Krourk Mk VI Cleaver",
-		["zh-tw"] = "VI(六)型砍刀",
+		["zh-tw"] = "VI(六)型砍刀(克魯克)",
 	},
 	ogryn_combatblade_p1_m2 = {
 		en = "Bull Butcher Mk III Cleaver",
-		["zh-tw"] = "III(三)型砍刀",
+		["zh-tw"] = "III(三)型砍刀(蠻牛屠夫)",
 	},
 	ogryn_combatblade_p1_m3 = {
 		en = "Krourk Mk IV Cleaver",
-		["zh-tw"] = "IV(四)型砍刀",
+		["zh-tw"] = "IV(四)型砍刀(克魯克)",
 	},
 	ogryn_gauntlet_p1_m1 = {
 		en = "Blastoom Mk III Grenadier Gauntlet",
-		["zh-tw"] = "III(三)型擲彈兵臂鎧",
+		["zh-tw"] = "III(三)型擲彈兵臂鎧(布拉斯托姆)",
 	},
 	ogryn_club_p1_m1 = {
 		en = "Brute-Brainer Mk III Latrine Shovel",
-		["zh-tw"] = "III(三)型廁所鏟",
+		["zh-tw"] = "III(三)型廁所鏟(兇殘)",
 	},
 	ogryn_club_p1_m2 = {
 		en = "Brute-Brainer Mk XIX Latrine Shovel",
-		["zh-tw"] = "XIX(十九)型廁所鏟",
+		["zh-tw"] = "XIX(十九)型廁所鏟(兇殘)",
 	},
 	ogryn_club_p1_m3 = {
 		en = "Brute-Brainer Mk V Latrine Shovel",
-		["zh-tw"] = "V(五)型廁所鏟",
+		["zh-tw"] = "V(五)型廁所鏟(兇殘)",
 	},
 	ogryn_club_p2_m1 = {
 		en = "Brunt Special Mk I Bully Club",
-		["zh-tw"] = "I(一)型惡霸棍棒",
+		["zh-tw"] = "I(一)型惡霸棍棒(布倫特專用)",
 	},
 	ogryn_club_p2_m2 = {
 		en = "Brunt's Pride Mk II Bully Club",
-		["zh-tw"] = "II(二)型惡霸棍棒",
+		["zh-tw"] = "II(二)型惡霸棍棒(布倫特得意之作)",
 	},
 	ogryn_club_p2_m3 = {
 		en = "Brunt's Basher Mk IIIb Bully Club",
-		["zh-tw"] = "IIIb(3B)型惡霸棍棒",
+		["zh-tw"] = "IIIb(3B)型惡霸棍棒(布倫特猛擊)",
 	},
 	ogryn_pickaxe_2h_p1_m1 = {
 		en = "Branx Mk Ia Pickaxe",
-		["zh-tw"] = "Ia(1A)型戴維爾戰鎬",
+		["zh-tw"] = "Ia(1A)型戴維爾戰鎬(布蘭克斯)",
 	},
 	ogryn_pickaxe_2h_p1_m2 = {
 		en = "Borovian Mk III Pickaxe",
-		["zh-tw"] = "III(三)型戴維爾戰鎬",
+		["zh-tw"] = "III(三)型戴維爾戰鎬(博羅維安)",
 	},
 	ogryn_pickaxe_2h_p1_m3 = {
 		en = "Karsolas Mk II Pickaxe",
-		["zh-tw"] = "II(二)型戴維爾戰鎬",
+		["zh-tw"] = "II(二)型戴維爾戰鎬(卡索拉斯)",
 	},
 	ogryn_powermaul_p1_m1 = {
 		en = "Achlys Mk I Power Maul",
-		["zh-tw"] = "I(一)型動力鎚",
+		["zh-tw"] = "I(一)型動力鎚(阿克利斯)",
 	},
 	--[[ THESE WEAPONS AREN'T ACCESSIBLE IN-GAME YET
 	ogryn_powermaul_p1_m2 = {
@@ -277,166 +283,166 @@ return {
 	-- PSYKER ONLY
 	forcesword_p1_m1 = {
 		en = "Obscurus Mk II Blaze Force Sword",
-		["zh-tw"] = "II(二)型烈焰力場劍",
+		["zh-tw"] = "II(二)型烈焰力場劍(朦朧)",
 	},
 	forcesword_p1_m2 = {
 		en = "Deimos Mk IV Blaze Force Sword",
-		["zh-tw"] = "IV(四)型烈焰力場劍",
+		["zh-tw"] = "IV(四)型烈焰力場劍(戴莫斯)",
 	},
 	forcesword_p1_m3 = {
 		en = "Illsi Mk V Blaze Force Sword",
-		["zh-tw"] = "V(五)型烈焰力場劍",
+		["zh-tw"] = "V(五)型烈焰力場劍(伊利斯))",
 	},
 	forcesword_2h_p1_m1 = {
 		en = "Covenant Mk VI Blaze Force Greatsword",
-		["zh-tw"] = "VI(六)型烈焰力場巨劍",
+		["zh-tw"] = "VI(六)型烈焰力場巨劍(誓約)",
 	},
 	forcesword_2h_p1_m2 = {
 		en = "Covenant Mk VIII Blaze Force Greatsword",
-		["zh-tw"] = "VIII(八)型烈焰力場巨劍",
+		["zh-tw"] = "VIII(八)型烈焰力場巨劍(誓約)",
 	},
 	-- VETERAN ONLY
 	powersword_p1_m1 = {
 		en = "Scandar Mk III Power Sword",
-		["zh-tw"] = "III(三)型動力劍",
+		["zh-tw"] = "III(三)型動力劍(斯干達)",
 	},
 	powersword_p1_m2 = {
 		en = "Achlys Mk VI Power Sword",
-		["zh-tw"] = "VI(六)型動力劍",
+		["zh-tw"] = "VI(六)型動力劍(阿克利斯)",
 	},
 	combataxe_p3_m1 = {
 		en = "Munitorum Mk I Sapper Shovel",
-		["zh-tw"] = "I(一)型工兵鏟",
+		["zh-tw"] = "I(一)型工兵鏟(軍務部)",
 	},
 	combataxe_p3_m2 = {
 		en = "Munitorum Mk III Sapper Shovel",
-		["zh-tw"] = "III(三)型工兵鏟",
+		["zh-tw"] = "III(三)型工兵鏟(軍務部)",
 	},
 	combataxe_p3_m3 = {
 		en = "Munitorum Mk VII Sapper Shovel",
-		["zh-tw"] = "VII(七)型工兵鏟",
+		["zh-tw"] = "VII(七)型工兵鏟(軍務部)",
 	},
 	-- ZEALOT ONLY
 	chainsword_2h_p1_m1 = {
 		en = "Tigrus Mk III Heavy Eviscerator",
-		["zh-tw"] = "III(三)型重型開膛劍",
+		["zh-tw"] = "III(三)型重型開膛劍(泰格魯斯)",
 	},
 	chainsword_2h_p1_m2 = {
 		en = "Tigrus Mk XV Heavy Eviscerator",
-		["zh-tw"] = "XV(十五)型重型開膛劍",
+		["zh-tw"] = "XV(十五)型重型開膛劍(泰格魯斯)",
 	},
 	powermaul_2h_p1_m1 = {
 		en = "Indignatus Mk IVe Crusher",
-		["zh-tw"] = "IVe(4E)型碾壓者",
+		["zh-tw"] = "IVe(4E)型碾壓者(憤怒)",
 	},
 	powersword_2h_p1_m1 = {
 		en = "Munitorum Mk X Relic Blade",
-		["zh-tw"] = "X(十)型上古神刃",
+		["zh-tw"] = "X(十)型上古神刃(軍務部)",
 	},
 	powersword_2h_p1_m2 = {
 		en = "Munitorum Mk II Relic Blade",
-		["zh-tw"] = "II(二)型上古神刃",
+		["zh-tw"] = "II(二)型上古神刃(軍務部)",
 	},
 	thunderhammer_2h_p1_m1 = {
 		en = "Crucis Mk II Thunder Hammer",
-		["zh-tw"] = "II(二)型雷鎚",
+		["zh-tw"] = "II(二)型雷鎚(十字星)",
 	},
 	thunderhammer_2h_p1_m2 = {
 		en = "Ironhelm Mk IV Thunder Hammer",
-		["zh-tw"] = "IV(四)型雷鎚",
+		["zh-tw"] = "IV(四)型雷鎚(鐵盔)",
 	},
 	-- SHARED (HUMAN)
 	chainaxe_p1_m1 = {
 		en = "Orestes Mk IV Assault Chainaxe",
-		["zh-tw"] = "IV(四)型突擊鏈斧",
+		["zh-tw"] = "IV(四)型突擊鏈斧(奧瑞斯特斯)",
 	},
 	chainaxe_p1_m2 = {
 		en = "Orestes Mk XII Assault Chainaxe",
-		["zh-tw"] = "XII(十二)型突擊鏈斧",
+		["zh-tw"] = "XII(十二)型突擊鏈斧(奧瑞斯特斯)",
 	},
 	chainsword_p1_m1 = {
 		en = "Cadia Mk IV Assault Chainsword",
-		["zh-tw"] = "IV(四)型突擊鏈鋸劍",
+		["zh-tw"] = "IV(四)型突擊鏈鋸劍(卡迪亞)",
 	},
 	chainsword_p1_m2 = {
 		en = "Cadia Mk XIIIg Assault Chainsword",
-		["zh-tw"] = "XIIIg(13G)型突擊鏈鋸劍",
+		["zh-tw"] = "XIIIg(13G)型突擊鏈鋸劍(卡迪亞)",
 	},
 	combataxe_p1_m1 = {
 		en = "Rashad Mk III Combat Axe",
-		["zh-tw"] = "III(三)型戰鬥斧",
+		["zh-tw"] = "III(三)型戰鬥斧(拉沙德)",
 	},
 	combataxe_p1_m2 = {
 		en = "Antax Mk V Combat Axe",
-		["zh-tw"] = "V(五)型戰鬥斧",
+		["zh-tw"] = "V(五)型戰鬥斧(安塔克斯)",
 	},
 	combataxe_p1_m3 = {
 		en = "Achlys Mk VIII Combat Axe",
-		["zh-tw"] = "VIII(八)型戰鬥斧",
+		["zh-tw"] = "VIII(八)型戰鬥斧(阿克利斯)",
 	},
 	combataxe_p2_m1 = {
 		en = "Atrox Mk II Tactical Axe",
-		["zh-tw"] = "II(二)型戰術斧",
+		["zh-tw"] = "II(二)型戰術斧(埃托克斯)",
 	},
 	combataxe_p2_m2 = {
 		en = "Atrox Mk IV Tactical Axe",
-		["zh-tw"] = "IV(四)型戰術斧",
+		["zh-tw"] = "IV(四)型戰術斧(埃托克斯)",
 	},
 	combataxe_p2_m3 = {
 		en = "Atrox Mk VII Tactical Axe",
-		["zh-tw"] = "VII(七)型戰術斧",
+		["zh-tw"] = "VII(七)型戰術斧(埃托克斯)",
 	},
 	combatknife_p1_m1 = {
 		en = "Catachan Mk III Combat Knife",
-		["zh-tw"] = "III(三)型戰刃",
+		["zh-tw"] = "III(三)型戰刃(卡塔昌)",
 	},
 	combatknife_p1_m2 = {
 		en = "Catachan Mk VI Combat Knife",
-		["zh-tw"] = "VI(六)型戰刃",
+		["zh-tw"] = "VI(六)型戰刃(卡塔昌)",
 	},
 	combatsword_p1_m1 = {
 		en = "Catachan Mk I 'Devil's Claw' Sword",
-		["zh-tw"] = "I(一)型「惡魔之爪」劍",
+		["zh-tw"] = "I(一)型「惡魔之爪」劍(卡塔昌)",
 	},
 	combatsword_p1_m2 = {
 		en = "Catachan Mk IV 'Devil's Claw' Sword",
-		["zh-tw"] = "IV(四)型「惡魔之爪」劍",
+		["zh-tw"] = "IV(四)型「惡魔之爪」劍(卡塔昌)",
 	},
 	combatsword_p1_m3 = {
 		en = "Catachan Mk VII 'Devil's Claw' Sword",
-		["zh-tw"] = "VII(七)型「惡魔之爪」劍",
+		["zh-tw"] = "VII(七)型「惡魔之爪」劍(卡塔昌)",
 	},
 	combatsword_p2_m1 = {
 		en = "Turtolsky Mk VI Heavy Sword",
-		["zh-tw"] = "VI(六)型重劍",
+		["zh-tw"] = "VI(六)型重劍(圖妥斯基)",
 	},
 	combatsword_p2_m2 = {
 		en = "Turtolsky Mk VII Heavy Sword",
-		["zh-tw"] = "VII(七)型重劍",
+		["zh-tw"] = "VII(七)型重劍(圖妥斯基)",
 	},
 	combatsword_p2_m3 = {
 		en = "Turtolsky Mk IX Heavy Sword",
-		["zh-tw"] = "IX(九)型重劍",
+		["zh-tw"] = "IX(九)型重劍(圖妥斯基)",
 	},
 	combatsword_p3_m1 = {
 		en = "Maccabian Mk II Duelling Sword",
-		["zh-tw"] = "II(二)型決鬥劍",
+		["zh-tw"] = "II(二)型決鬥劍(馬卡比安)",
 	},
 	combatsword_p3_m2 = {
 		en = "Maccabian Mk IV Duelling Sword",
-		["zh-tw"] = "IV(四)型決鬥劍",
+		["zh-tw"] = "IV(四)型決鬥劍(馬卡比安)",
 	},
 	combatsword_p3_m3 = {
 		en = "Maccabian Mk V Duelling Sword",
-		["zh-tw"] = "V(五)型決鬥劍",
+		["zh-tw"] = "V(五)型決鬥劍(馬卡比安)",
 	},
 	powermaul_p1_m1 = {
 		en = "Agni Mk Ia Shock Maul",
-		["zh-tw"] = "Ia(1A)型電擊錘",
+		["zh-tw"] = "Ia(1A)型電擊錘(阿格尼)",
 	},
 	powermaul_p1_m2 = {
 		en = "Munitorum Mk III Shock Maul",
-		["zh-tw"] = "III(三)型電擊錘",
+		["zh-tw"] = "III(三)型電擊錘(軍務部)",
 	},
 }
 

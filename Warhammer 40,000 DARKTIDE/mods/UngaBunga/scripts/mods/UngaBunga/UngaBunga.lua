@@ -8,7 +8,9 @@ local hurty_stick = nil
 
 -- Attack Keybind locals
 local attack_bind = {}
+local attack_bind_toggle = {}
 local alt_attack = false
+local alt_attack_toggle = false
 
 -- Cancel Locals
 local cancel_toggle_bind = {}
@@ -278,6 +280,7 @@ mod.on_all_mods_loaded = function()
 	mod_enabled = mod:get("enabled")
 	verbose = mod:get("verbose")
 	attack_bind = mod:get("attack_bind")
+	--attack_bind_toggle = mod:get("attack_bind_toggle")
 	cancel_toggle_bind = mod:get("cancel_toggle")
 	cancel_toggle_bind_held = mod:get("cancel_toggle_held")
 end
@@ -329,6 +332,8 @@ mod.on_setting_changed = function(id)
 			toggle_bind = mod:get(id)
 		elseif id == "attack_bind" then
 			attack_bind = mod:get(id)
+		elseif id == "attack_bind_toggle" then
+			--attack_bind_toggle = mod:get(id)
 		elseif id == "cancel_toggle_bind" then
 			cancel_toggle_bind = mod:get(id)
 		elseif id == "cancel_toggle_bind_held" then
@@ -518,6 +523,18 @@ end
 -- Attack keybind
 mod.attack = function()
 	alt_attack = not alt_attack
+end
+
+-- WIP
+mod.attack_toggle = function()
+	mod:echo("huh")
+	if not Managers.ui:using_input() then
+		alt_attack = not alt_attack
+		mod:echo("Bind: %s, Alt: %s",attack_bind_toggle[1], alt_attack)
+		if verbose then
+			mod:echo("Auto-heavy Toggle %s.", alt_attack and "enabled" or "disabled")
+		end
+	end
 end
 
 -- Cancel keybind

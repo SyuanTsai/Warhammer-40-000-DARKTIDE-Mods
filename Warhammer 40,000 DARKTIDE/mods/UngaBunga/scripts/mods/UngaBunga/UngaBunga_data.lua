@@ -6,7 +6,7 @@ return {
 	is_togglable = true,
 	options = {
 		widgets = {
-			--[[ Debug ]]
+			--[[ Debug ]
 			{
 				setting_id      = "debug",
 				type            = "keybind",
@@ -118,6 +118,16 @@ return {
 						keybind_type    = "function_call",
 						function_name   = "toggle_cancel_silent"
 					},
+					--[[ WIP ]
+					{
+						setting_id      = "attack_bind_toggle",
+						type            = "keybind",
+						default_value   = {},
+						keybind_trigger = "pressed",
+						keybind_type    = "function_call",
+						function_name   = "attack_toggle"
+					},
+					--]]
 					{
 						setting_id      = "attack_bind",
 						type            = "keybind",
@@ -127,6 +137,7 @@ return {
 						keybind_type    = "function_call",
 						function_name   = "attack"
 					},
+					
 				}
 			},
 			{
