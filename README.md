@@ -49,10 +49,10 @@
 
 ### [Unga Bunga](https://www.nexusmods.com/warhammer40kdarktide/mods/476)
     自動重擊
-- MOD 網站最後更新日期：Last updated 22 February 2025 3:17PM
-- MOD 版本：1.3.3
-- MOD 檔案名稱：Unga Bunga 1.3.3-476-1-3-3-1740237468
-- 手動維護最後下載日期：2025-02-23
+- MOD 網站最後更新日期：Last updated 01 April 2025 12:49PM
+- MOD 版本：1.4.1
+- MOD 檔案名稱：UngaBunga 1.4.1-476-1-4-1-1743511746
+- 手動維護最後下載日期：2025-04-01
 
 ### JishuJun
     團隊計分
