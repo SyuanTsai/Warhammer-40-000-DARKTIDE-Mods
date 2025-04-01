@@ -65,9 +65,15 @@ return {
 		["zh-tw"] = "按下後，模組將使用阻擋或特殊攻擊取消重型攻擊鏈；當釋放時，取消行為將恢復。",
 	},
 	attack_bind = {
+		en = "Attack Keybind (Held)",
+		["zh-tw"] = "攻擊按鍵（長按）",
+	},
+	--[[ WIP ]
+	attack_bind_toggle = {
 		en = "Attack Keybind",
 		["zh-tw"] = "攻擊按鍵",
 	},
+	--]]
 	attack_bind_tooltip = {
 		en = string.format("When pressed, the mod will manage heavy attacks as though the normal primary attack input is being pressed.\nIf this keybind is set, attacks made using the normal primary attack input are not modified by the mod.")
 	},
