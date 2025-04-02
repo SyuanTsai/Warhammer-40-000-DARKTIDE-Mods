@@ -263,8 +263,8 @@
 
 ### [Power DI](https://www.nexusmods.com/warhammer40kdarktide/mods/281)
     進階記分板
-- MOD 網站最後更新日期：Last updated 29 March 2025 6:29PM
-- MOD 版本：Version 1.1.8
+- MOD 網站最後更新日期：Last updated 01 April 2025 7:58PM
+- MOD 版本：Version 1.1.10
 - MOD 檔案名稱：Power_DI_1.1.8.zip-281-v1-1-8-1743272944
-- 手動維護最後下載日期：2025-03-30
+- 手動維護最後下載日期：2025-04-01
 

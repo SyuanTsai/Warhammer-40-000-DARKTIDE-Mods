@@ -577,7 +577,7 @@ return {
 	},
 	mloc_chaos_faction = {
 		en = "Chaos",
-		["zh-cn"] = "混沌魔物",
+		["zh-cn"] = "混沌",
 		["zh-tw"] = "混沌魔物",
 	},
 	mloc_imperium_faction = {
