@@ -39,6 +39,8 @@ markers_aio
 danger_zone
 NumericUI
 RecolorBossHealthBars
+-- Do I Know You
+KeepSwinging
 -- Enhanced_descriptions  -- Wait fix
 EmperorsGuidance
 RememberServerLocation
