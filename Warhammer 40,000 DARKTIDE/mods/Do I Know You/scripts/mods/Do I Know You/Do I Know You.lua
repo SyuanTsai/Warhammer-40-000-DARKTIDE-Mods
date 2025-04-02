@@ -41,13 +41,13 @@ end
     end
 end ]]
 
-function verify_save_file()
+function verify_save_file(filename)
     local filepath = nil
     local authenticate_method = Managers.backend:get_auth_method()
     if authenticate_method == 1 then
-        filepath = Mods.lua.os.getenv('APPDATA') .. "\\Fatshark\\Darktide\\do_i_know_you.sav"
+        filepath = Mods.lua.os.getenv('APPDATA') .. "\\Fatshark\\Darktide\\" .. filename .. ".sav"
     elseif authenticate_method == 2 then
-        filepath = Mods.lua.os.getenv('APPDATA') .. "\\Fatshark\\MicrosoftStore\\Darktide\\do_i_know_you.sav"
+        filepath = Mods.lua.os.getenv('APPDATA') .. "\\Fatshark\\MicrosoftStore\\Darktide\\" .. filename .. ".sav"
     end
     local file_exists = Mods.lua.io.open(filepath, "r")
     if file_exists then
@@ -60,7 +60,7 @@ end
 
 function start_loading_diky_data()
     diky_time = os.time()
-    if not diky_save_token and verify_save_file() then
+    if not diky_save_token and verify_save_file("do_i_know_you") then
         diky_data.loaded = false
         diky_save_token = SaveSystem.auto_load("do_i_know_you")
     else
@@ -123,7 +123,7 @@ function poll_pdi_save()
         end
     end
     if os.time() - pdi_save_time > wait_time then
-        mod:notify("Do I Know You: failed to load Power DI data.")
+        --mod:notify("Do I Know You: failed to load Power DI data.")
         SaveSystem.close(pdi_save_token)
         pdi_save_token = nil
     end
@@ -134,9 +134,14 @@ function poll_pdi_session_save()
         local next_session_id = table.remove(session_queue, 1)
         
         local file_name = next_session_id:lower():gsub("-", "_")
-        session_wait_time = os.time()
-        session_save_token = SaveSystem.auto_load(file_name)
-        session_save_status[next_session_id] = {}
+        if verify_save_file(file_name) then
+            session_wait_time = os.time()
+            session_save_token = SaveSystem.auto_load(file_name)
+            session_save_status[next_session_id] = {}
+        else
+            session_save_status[next_session_id] = {}
+            return
+        end
     end
 
     if session_save_token then
@@ -153,6 +158,7 @@ function poll_pdi_session_save()
                 end
 
                 if session_id then
+                    --mod:dump_to_file(progress.data.datasources.PlayerProfiles, "power_di_" .. session_id ..".sav", 99)
                     local outcome = data.info.outcome
                     local player_profiles = data.datasources.PlayerProfiles
                     if player_profiles then
@@ -178,11 +184,24 @@ function poll_pdi_session_save()
             end
         end
         if os.time() - session_wait_time > wait_time then
-            mod:notify("Do I Know You: failed to load Power DI session data.")
+            --mod:notify("Do I Know You: failed to load Power DI session data.")
             SaveSystem.close(session_save_token)
             session_save_token = nil
         end
     end
+end
+
+function check_true_level_settings()
+    return {
+        end_view = mod:get("tls_end_view"),
+        group_finder = mod:get("tls_group_finder"),
+        inspect_player = mod:get("tls_inspect_player"),
+        inventory = mod:get("tls_inventory"),
+        lobby = mod:get("tls_lobby"),
+        nameplate = mod:get("tls_nameplate"),
+        social_menu = mod:get("tls_social_menu"),
+        team_panel = mod:get("tls_team_panel"),
+    }
 end
 
 mod.results_text = function (wins, losses)
@@ -213,8 +232,12 @@ mod.results_text = function (wins, losses)
 end
 
 if true_level then
-    mod:hook(true_level, "replace_level", function(func, text, true_levels, ...)
-        local final_text = func(text, true_levels, ...)
+    mod:hook(true_level, "replace_level", function(func, text, true_levels, reference, ...)
+        local tls = check_true_level_settings()
+        local final_text = func(text, true_levels, reference, ...)
+        if not tls[reference] then
+            return final_text
+        end
         if Managers.presence._current_game_state_name ~= "StateMainMenu" then
             if mod:get("show_self") then
                 local myself = Managers.presence._myself._character_profile.character_id
@@ -254,7 +277,7 @@ end
 
 mod.update = function (dt)
     poll_diky_save()
-    if diky_data.loaded then
+    if diky_data.loaded and Managers.presence._current_game_state_name == "StateLoading" then
         poll_pdi_save()
         if pdi_save_loaded then
             poll_pdi_session_save()
@@ -264,7 +287,9 @@ end
 
 mod.on_game_state_changed = function (status, state_name)
     if status == "enter" and state_name == "StateLoading" then
-        start_loading_pdi_data()
+        if verify_save_file("power_di") then
+            start_loading_pdi_data()
+        end
     end
 --[[     if status == "exit" and state_name == "StateLoading" then
         SaveSystem.close(pdi_save_token)
@@ -286,4 +311,16 @@ end)
 
 mod:command("dikyl", "Do I Know You: load Power DI data", function()
     start_loading_pdi_data()
+end) ]]
+
+--[[ mod:hook_safe(CLASS.GameModeManager, "_set_end_conditions_met", function(self, outcome, ...)
+    --mod:dump_to_file(self, "end_conditions_met", 99)
+	mod:echo("GameModeManager: " .. outcome)
+end)
+
+mod:hook_safe(CLASS.EndView, "on_enter", function(self)
+    mod:echo("Dumping context and players")
+    mod:dump_to_file(self._context, "endview_context", 99)
+    local players = Managers.player:players()
+    mod:dump_to_file(players, "endview_players", 99)
 end) ]]
