@@ -8,7 +8,7 @@
 WhatTheLocalization
 scoreboard
 creature_spawner
--- Power_DI -- Wait fix
+Power_DI
 UngaBunga
 JishuJun
 AutoLoot
@@ -63,6 +63,7 @@ ovenproof_scoreboard_plugin
 RetainSelection
 InventoryStats
 SimpleSpeedMeter
+RickAndMortis
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint

@@ -367,11 +367,19 @@
 - 手動維護最後下載日期：2025-03-31
 
 ### [Do I Know You](https://www.nexusmods.com/warhammer40kdarktide/mods/488)
-    顯示移動速度
+    顯示移動速度(計算方式很難凸顯出真的想跟他玩的玩家)
+    單純看勝敗場，但是也有贏了玩得很悶的情境。
 - MOD 網站最後更新日期：Last updated 21 March 2025 2:43PM
 - MOD 版本：1.0.3
 - MOD 檔案名稱：Do I Know You 1.0.3.zip-488-1-0-3-1743019163
 - 手動維護最後下載日期：2025-03-31
+
+### [RickAndMortis](https://www.nexusmods.com/warhammer40kdarktide/mods/488)
+    顯示移動速度
+- MOD 網站最後更新日期：Last updated 30 March 2025 4:49AM
+- MOD 版本：0.55
+- MOD 檔案名稱：RickAndMortis.zip-491-0-55-1743310031
+- 手動維護最後下載日期：2025-04-03
 
 ---
 # 遊戲內操作相關MOD
