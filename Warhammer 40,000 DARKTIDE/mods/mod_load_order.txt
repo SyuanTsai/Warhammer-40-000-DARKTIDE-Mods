@@ -74,3 +74,4 @@ Spidey Sense
 SoloPlay
 TagKeys
 WeaponFilter
+afk

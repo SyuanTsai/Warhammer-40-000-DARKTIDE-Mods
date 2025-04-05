@@ -432,3 +432,11 @@
 - MOD 版本：1.0.3
 - MOD 檔案名稱：Wea-373-1-0-3-1738008684
 - 手動維護最後下載日期：2025-02-24
+
+### [AFK](https://www.nexusmods.com/warhammer40kdarktide/mods/33)
+    防止AFK
+- MOD 網站最後更新日期：Last updated 05 April 2023 6:21AM
+- MOD 版本：23.04.05
+- MOD 檔案名稱：AFK-33-23-4-05-1680675716
+- 手動維護最後下載日期：2025-04-05
+
