@@ -64,6 +64,7 @@ RetainSelection
 InventoryStats
 SimpleSpeedMeter
 RickAndMortis
+ShareTalents
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
