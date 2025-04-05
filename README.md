@@ -440,3 +440,11 @@
 - MOD 檔案名稱：AFK-33-23-4-05-1680675716
 - 手動維護最後下載日期：2025-04-05
 
+
+### [Remember Difficulty](https://www.nexusmods.com/warhammer40kdarktide/mods/490)
+    記住死神試煉的難度
+- MOD 網站最後更新日期：Last updated 27 March 2025 8:56AM
+- MOD 版本：1.0.0
+- MOD 檔案名稱：Remember Difficulty-490-1-0-0-1743065799
+- 手動維護最後下載日期：2025-04-05
+

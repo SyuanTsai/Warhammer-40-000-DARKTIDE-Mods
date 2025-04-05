@@ -75,3 +75,4 @@ SoloPlay
 TagKeys
 WeaponFilter
 afk
+RememberDifficulty
