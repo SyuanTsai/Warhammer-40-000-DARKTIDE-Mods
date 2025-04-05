@@ -3,18 +3,18 @@ Title: Archivum Messelina
 Author: Wobin
 Date: 04/04/2025
 Repository: https://github.com/Wobin/ArchivumMesselina
-Version: 2.1
+Version: 2.1.1
 --]]
 
 local mod = get_mod("Archivum Messelina")
-mod.version = "2.1"
+mod.version = "2.1.1"
 local UIFontSettings = require("scripts/managers/ui/ui_font_settings")
 local UIWidget = require("scripts/managers/ui/ui_widget")
 local TextInputPassTemplates = require("scripts/ui/pass_templates/text_input_pass_templates")
 local LocalizationManager = require("scripts/managers/localization/localization_manager")
 local MemoiseAchievements = mod:persistent_table("MemoiseAchievements", {})
 local settings = {filter = 0}
-local mt = get_mod("modding_tools")
+--local mt = get_mod("modding_tools")
 
 local cycleFilter = function()
   settings.filter = (settings.filter + 1) % 4
@@ -155,14 +155,14 @@ local search_results = function(view)
   
   if onceOff then
     onceOff = false    
-    mt:inspect("input",  view)    
+    --mt:inspect("input",  view)    
   end
   
   if not visibility() then return end
   if not view or not mod.input_field then return end
   
   local mouse_down = Mouse.any_pressed()
-  if mouse_down and mouse_down ~= 10 and mouse_down ~= 11 then    
+  if mouse_down and is_writing() and mouse_down ~= 10 and mouse_down ~= 11 then    
     set_is_writing(false)
     view._categories_tab_bar:disable_input(false)
     refreshGrid()
