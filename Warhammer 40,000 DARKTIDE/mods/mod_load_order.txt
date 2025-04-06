@@ -76,3 +76,4 @@ TagKeys
 WeaponFilter
 afk
 RememberDifficulty
+AUPM
