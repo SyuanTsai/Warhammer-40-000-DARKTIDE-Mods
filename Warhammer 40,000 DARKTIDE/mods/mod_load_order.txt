@@ -9,3 +9,4 @@ IME_Enable
 scoreboard
 true_level
 who_are_you
+AUPM
