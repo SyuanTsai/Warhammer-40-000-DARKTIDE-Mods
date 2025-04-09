@@ -152,7 +152,7 @@ loc_raw.setting = {
     },
     notif_grouping = {
         en = "Group spawn/death notifs. of a given enemy",
-        ["zh-cn"] = "组合指定敌人的生成/死亡通知",
+        ["zh-cn"] = "合并指定敌人的生成/死亡通知",
         ["zh-tw"] = "合併指定敵人的產生/死亡通知",
     },
     hud_scale = {
@@ -562,12 +562,12 @@ overlay_name_sets.short = {
     },
     chaos_beast_of_nurgle = {
         en = "BST",
-        ["zh-cn"] = "纳兽",
+        ["zh-cn"] = "纳垢",
         ["zh-tw"] = "納垢",
     },
     chaos_beast_of_nurgle_wk = {
         en = "BST*",
-        ["zh-cn"] = "纳兽*",
+        ["zh-cn"] = "纳垢*",
         ["zh-tw"] = "納垢*",
     },
     chaos_plague_ogryn = {
@@ -582,13 +582,33 @@ overlay_name_sets.short = {
     },
     chaos_spawn = {
         en = "SPWN",
-        ["zh-cn"] = "混卵",
+        ["zh-cn"] = "混沌",
         ["zh-tw"] = "混沌",
     },
     chaos_spawn_wk = {
         en = "SPWN*",
-        ["zh-cn"] = "混卵*",
+        ["zh-cn"] = "混沌*",
         ["zh-tw"] = "混沌*",
+    },
+    chaos_daemonhost = {
+        en = "DH",
+        ["zh-cn"] = "宿主",
+        ["zh-tw"] = "宿主",
+    },
+    chaos_mutator_daemonhost = {
+        en = "HEX DH",
+        ["zh-cn"] = "咒缚宿主",
+        ["zh-tw"] = "儀式宿主",
+    },
+    renegade_captain = {
+        en = "CAPN",
+        ["zh-cn"] = "连长",
+        ["zh-tw"] = "隊長",
+    },
+    renegade_twin_captain = {
+        en = "TWINS",
+        ["zh-cn"] = "双子",
+        ["zh-tw"] = "雙子",
     },
 }
 
@@ -663,6 +683,26 @@ overlay_name_sets.long = {
         ["zh-cn"] = "混沌卵*",
         ["zh-tw"] = "混沌魔物*",
     },
+    chaos_daemonhost = {
+        en = "DHOST",
+        ["zh-cn"] = "宿主",
+        ["zh-tw"] = "惡魔宿主",
+    },
+    chaos_mutator_daemonhost = {
+        en = "HEX DHOST",
+        ["zh-cn"] = "咒缚宿主",
+        ["zh-tw"] = "魔缚惡魔宿主",
+    },
+    renegade_captain = {
+        en = "CAPTAIN",
+        ["zh-cn"] = "连长",
+        ["zh-tw"] = "隊長",
+    },
+    renegade_twin_captain = {
+        en = "TWINS",
+        ["zh-cn"] = "双子",
+        ["zh-tw"] = "雙子",
+    },
 }
 
 overlay_name_sets.full = {
@@ -735,6 +775,26 @@ overlay_name_sets.full = {
         en = "Spawn*",
         ["zh-cn"] = "混沌魔物*",
         ["zh-tw"] = "混沌魔物*",
+    },
+    chaos_daemonhost = {
+        en = "Daemonhost",
+        ["zh-cn"] = "恶魔宿主",
+        ["zh-tw"] = "惡魔宿主",
+    },
+    chaos_mutator_daemonhost = {
+        en = "Hex Daemonhost",
+        ["zh-cn"] = "咒缚恶魔宿主",
+        ["zh-tw"] = "魔缚惡魔宿主",
+    },
+    renegade_captain = {
+        en = "Captain",
+        ["zh-cn"] = "连长",
+        ["zh-tw"] = "隊長",
+    },
+    renegade_twin_captain = {
+        en = "Twins",
+        ["zh-cn"] = "双子",
+        ["zh-tw"] = "雙子",
     },
 }
 
@@ -920,6 +980,38 @@ loc_raw.mod_ui["chaos_spawn_wk_notif_name"] = {
     en = "CHAOS SPAWN (Weak)",
     ["zh-cn"] = "混沌魔物（虚弱）",
     ["zh-tw"] = "混沌魔物（虛弱）",
+}
+
+-- Daemonhost - Other locs
+
+loc_raw.mod_ui["chaos_daemonhost_notif_name"] = {
+    en = "DAEMONHOST",
+    ["zh-cn"] = "恶魔宿主",
+    ["zh-tw"] = "惡魔宿主",
+}
+
+-- Hexbound Daemonhost - Other locs
+
+loc_raw.mod_ui["chaos_mutator_daemonhost_notif_name"] = {
+    en = "HEXBOUND DAEMONHOST",
+    ["zh-cn"] = "咒缚恶魔宿主",
+    ["zh-tw"] = "咒缚恶魔宿主",
+}
+
+-- Captain - Other locs
+
+loc_raw.mod_ui["renegade_captain_notif_name"] = {
+    en = "CAPTAIN",
+    ["zh-cn"] = "连长",
+    ["zh-tw"] = "隊長",
+}
+
+-- Twins - Other locs
+
+loc_raw.mod_ui["renegade_twin_captain_notif_name"] = {
+    en = "TWIN CAPTAINS",
+    ["zh-cn"] = "双子连长",
+    ["zh-tw"] = "雙子",
 }
 
 
