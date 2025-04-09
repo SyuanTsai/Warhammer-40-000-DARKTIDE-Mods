@@ -4,16 +4,31 @@ mod.default_color = { 255, 255, 0, 0 }
 
 local unit_type_array = {
 	"daemonhost",
+	"hex_dh",
+	"captain",
+	"twins",
 	"weakened",
 	"others"
 }
 
 local default_colors = function(unit_type)
-    if unit_type == "daemonhost" then
+    if unit_type == "daemonhost" or unit_type == "hex_dh" then
         return({
             r = 202,
             g = 62,
             b = 255,
+        })
+    elseif unit_type == "captain" then
+        return({
+            r = 66,
+            g = 190,
+            b = 66,
+        })
+    elseif unit_type == "twins" then
+        return({
+            r = 212,
+            g = 212,
+            b = 0,
         })
     elseif unit_type == "weakened" then
         return({
@@ -55,11 +70,22 @@ local color_widget = function(unit_type)
     return(res)
 end
 
+local lines_widget = {
+    setting_id = "lines_amount",
+    tooltip = "tooltip_lines_amount",
+    type = "numeric",
+    default_value = 3,
+    range = {1,6},
+}
+
 
 
 
 local widgets = {}
 mod.setting_names = {}
+
+table.insert(widgets, lines_widget)
+table.insert(mod.setting_names, "lines_amount")
 
 for _, unit_type in pairs(unit_type_array) do
     -- Add widget
