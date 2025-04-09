@@ -1,6 +1,9 @@
 local mod = get_mod("RecolorBossHealthBars")
 
+local Definitions = require("scripts/ui/hud/elements/boss_health/hud_element_boss_health_definitions")
+
 require("scripts/foundation/utilities/color")
+
 
 ---------------------
 -- Settings cache-ing
@@ -49,6 +52,12 @@ local color_by_unit = function(unit)
     local is_weakened = boss_extension and boss_extension:is_weakened()
     if breed_name == "chaos_daemonhost" then
         return get_color("daemonhost")
+    elseif breed_name == "chaos_mutator_daemonhost" then
+        return get_color("hex_dh")
+    elseif breed_name == "cultist_captain" or breed_name == "renegade_captain" then
+        return get_color("captain")
+    elseif breed_name == "renegade_twin_captain" or breed_name == "renegade_twin_captain_two" then
+        return get_color("twins")
     elseif is_weakened then
         return get_color("weakened")
     else
@@ -69,10 +78,10 @@ mod:hook_safe(CLASS.HudElementBossHealth, "update", function (self, dt, t, ui_re
 
     local widget_groups = self._widget_groups
 	local active_targets_array = self._active_targets_array
-	--local num_active_targets = #active_targets_array
-    local num_active_targets = math.min(2, #active_targets_array)
+    local num_active_targets = #active_targets_array
+	local num_health_bars_to_update = math.min(num_active_targets, self._max_health_bars)
 
-	for i = 1, num_active_targets do
+	for i = 1, num_health_bars_to_update do
 		local widget_group_index = num_active_targets > 1 and i + 1 or i
 		local widget_group = widget_groups[widget_group_index]
 		local target = active_targets_array[i]
@@ -92,4 +101,65 @@ mod:hook_safe(CLASS.HudElementBossHealth, "update", function (self, dt, t, ui_re
             end
         end
     end
+end)
+
+
+----------------------------------------------------------
+-- Adding more possible displayed boss health bars at once
+
+
+local health_bars_y_offset = 55
+
+local offset = function(index)
+    -- x and y offset to be applied to the "index-th" health bar
+    -- index starts at 1 for the first mod-added bar, i.e. the second left half-bar
+    return 0, math.ceil(index/2) * health_bars_y_offset
+end
+
+mod:hook_safe(CLASS.HudElementBossHealth, "init", function (self, parent, draw_layer, start_scale)
+    self._max_health_bars = mod:get("lines_amount") * 2
+end)
+
+mod:hook_safe(CLASS.HudElementBossHealth, "_setup_widget_groups", function (self)
+    local name_index_prefix = 4
+    -- We start at 4 because the game already added 3 bars
+	local function create_widgets(widget_definitions)
+		local target_widgets = {}
+
+		for name, definition in pairs(widget_definitions) do
+			target_widgets[name] = self:_create_widget(name .. "_" .. name_index_prefix, definition)
+			name_index_prefix = name_index_prefix + 1
+		end
+
+		return target_widgets
+	end
+
+	local definitions = self._definitions
+
+    local definitions_one_line = {
+        table.clone(definitions.left_double_target_widget_definitions),
+        table.clone(definitions.right_double_target_widget_definitions),
+    }
+
+    local definitions_lines_two_plus = {}
+    for i = 2, mod:get("lines_amount") do
+        -- Starting at line 2 because the game already added the first two bars / the first line
+        table.insert(definitions_lines_two_plus, table.clone(definitions_one_line[1]))
+        table.insert(definitions_lines_two_plus, table.clone(definitions_one_line[2]))
+    end
+
+    local widgets_lines_two_plus = {}
+    for _, def in pairs(definitions_lines_two_plus) do
+        table.insert(widgets_lines_two_plus, create_widgets(def))
+    end
+
+    for index, bar in pairs(widgets_lines_two_plus) do
+        for name, widget in pairs(bar) do
+            local offset_x, offset_y = offset(index)
+            widget.offset[1] = offset_x
+            widget.offset[2] = offset_y
+        end
+        table.insert(self._widget_groups, bar)
+    end
+
 end)
