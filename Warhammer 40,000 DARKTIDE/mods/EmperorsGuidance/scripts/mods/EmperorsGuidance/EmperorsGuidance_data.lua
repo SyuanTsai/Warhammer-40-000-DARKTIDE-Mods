@@ -66,6 +66,11 @@ return {
 								default_value = true
 							},
 							{
+								setting_id    = "chaos_mutator_daemonhost0primary",
+								type          = "checkbox",
+								default_value = true
+							},
+							{
 								setting_id    = "chaos_plague_ogryn0primary",
 								type          = "checkbox",
 								default_value = true
@@ -231,6 +236,11 @@ return {
 								setting_id    = "cultist_ritualist0primary",
 								type          = "checkbox",
 								default_value = true
+							},
+							{
+								setting_id    = "chaos_mutator_ritualist0primary",
+								type          = "checkbox",
+								default_value = true
 							}
 						}
 					},
@@ -320,6 +330,11 @@ return {
 							},
 							{
 								setting_id    = "chaos_daemonhost0secondary",
+								type          = "checkbox",
+								default_value = true
+							},
+							{
+								setting_id    = "chaos_mutator_daemonhost0secondary",
 								type          = "checkbox",
 								default_value = true
 							},
@@ -487,6 +502,11 @@ return {
 							},
 							{
 								setting_id    = "cultist_ritualist0secondary",
+								type          = "checkbox",
+								default_value = true
+							},
+							{
+								setting_id    = "chaos_mutator_ritualist0secondary",
 								type          = "checkbox",
 								default_value = true
 							}

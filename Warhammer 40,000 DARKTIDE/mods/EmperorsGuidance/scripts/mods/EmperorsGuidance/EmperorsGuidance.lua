@@ -29,6 +29,8 @@ local BREEDING_TARGETS = {
     chaos_beast_of_nurgle = {true, true},
     chaos_plague_ogryn = {true, true},
     chaos_daemonhost = {true, true},
+    chaos_mutator_daemonhost = {true, true},
+    chaos_mutator_ritualist = {true, true},
     chaos_hound = {true, true},
     chaos_hound_mutator = {true, true},
     chaos_newly_infected = {true, true},
@@ -76,6 +78,7 @@ local BREEDING_GROUPS = {
         "chaos_plague_ogryn",
         "chaos_spawn",
         "chaos_daemonhost",
+        "chaos_mutator_daemonhost",
         "cultist_captain",
         "renegade_captain",
         "renegade_twin_captain",
@@ -106,6 +109,7 @@ local BREEDING_GROUPS = {
         "cultist_mutant",
         "cultist_mutant_mutator",
         "cultist_ritualist",
+        "chaos_mutator_ritualist"
     },
     fodder_enable = {
         "chaos_poxwalker",
@@ -124,6 +128,8 @@ local BREEDING_GROUPS = {
         "chaos_plague_ogryn",
         "chaos_spawn",
         "chaos_daemonhost",
+        "chaos_mutator_daemonhost",
+        "chaos_mutator_ritualist",
         "cultist_captain",
         "renegade_captain",
         "renegade_twin_captain",
@@ -182,6 +188,8 @@ mod.on_all_mods_loaded = function()
     BREEDING_TARGETS.chaos_beast_of_nurgle = {mod:get("chaos_beast_of_nurgle0primary"), mod:get("chaos_beast_of_nurgle0secondary")}
     BREEDING_TARGETS.chaos_plague_ogryn = {mod:get("chaos_plague_ogryn0primary"), mod:get("chaos_plague_ogryn0secondary")}
     BREEDING_TARGETS.chaos_daemonhost = {mod:get("chaos_daemonhost0primary"), mod:get("chaos_daemonhost0secondary")}
+    BREEDING_TARGETS.chaos_mutator_daemonhost = {mod:get("chaos_mutator_daemonhost0primary"), mod:get("chaos_mutator_daemonhost0secondary")}
+    BREEDING_TARGETS.chaos_mutator_ritualist = {mod:get("chaos_mutator_ritualist0primary"), mod:get("chaos_mutator_ritualist0secondary")}
     BREEDING_TARGETS.chaos_hound = {mod:get("chaos_hound0primary"), mod:get("chaos_hound0secondary")}
     BREEDING_TARGETS.chaos_hound_mutator = {mod:get("chaos_hound_mutator0primary"), mod:get("chaos_hound_mutator0secondary")}
     BREEDING_TARGETS.chaos_newly_infected = {mod:get("chaos_newly_infected0primary"), mod:get("chaos_newly_infected0secondary")}
@@ -303,6 +311,9 @@ end
 
 -- Check for breedable status by category (primary/secondary)
 mod.breedable = function(target, category)
+    if not target or not category then
+        return false
+    end
     if BREEDING_TARGETS[target] ~= nil and BREEDING_TARGETS[target][category] ~= nil then
         return BREEDING_TARGETS[target][category]
     else 
@@ -337,7 +348,7 @@ mod:hook_safe(CLASS.PlayerUnitSmartTargetingExtension, "targeting_data", functio
     if current_weapon == "psyker_smite" then
         local smart_unit = self._targeting_data and self._targeting_data.unit
         if smart_unit then
-            server_target = ScriptUnit.has_extension(smart_unit, "unit_data_system"):breed().name
+            server_target = ScriptUnit.has_extension(smart_unit, "unit_data_system"):breed() and ScriptUnit.has_extension(smart_unit, "unit_data_system"):breed().name
         else
             server_target = "none"
         end
@@ -391,7 +402,6 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
         -- Get primary input and set holding_primary flag
         local worker = false
         local action_rule = self._actions[action_name]
-        local out = action_rule.default_func()
 		local action_type = action_rule.type
 		local combiner = InputService.ACTION_TYPES[action_type].combine_func
 		for _, cb in ipairs(action_rule.callbacks) do
@@ -423,7 +433,6 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
         -- Get secondary input and set holding_secondary flag
         local worker = false
         local action_rule = self._actions[action_name]
-        local out = action_rule.default_func()
 		local action_type = action_rule.type
 		local combiner = InputService.ACTION_TYPES[action_type].combine_func
 		for _, cb in ipairs(action_rule.callbacks) do

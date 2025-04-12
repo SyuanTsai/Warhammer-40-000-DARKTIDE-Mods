@@ -127,6 +127,10 @@ return {
 		en = "Daemonhost",
 		["zh-tw"] = "惡魔宿主",
 	},
+	chaos_mutator_daemonhost0primary = {
+		en = "Daemonhost (Havoc)",
+		["zh-tw"] = "惡魔宿主 (浩劫)",
+	},
 	cultist_captain0primary = {
 		en = "Admonition Champion",
 		["zh-tw"] = "告誡冠軍",
@@ -231,6 +235,10 @@ return {
 		en = "Admonition Ritualist",
 		["zh-tw"] = "告誡軍祭儀師",
 	},
+	chaos_mutator_ritualist0primary = {
+		en = "Admonition Ritualist (Havoc)",
+		["zh-tw"] = "告誡軍祭儀師 (浩劫)",
+	},
 	chaos_poxwalker0primary = {
 		en = "Poxwalker",
 		["zh-tw"] = "瘟疫行屍",
@@ -287,6 +295,10 @@ return {
 	chaos_daemonhost0secondary = {
 		en = "Daemonhost",
 		["zh-tw"] = "惡魔宿主",
+	},
+	chaos_mutator_daemonhost0secondary = {
+		en = "Daemonhost (Havoc)",
+		["zh-tw"] = "惡魔宿主 (浩劫)",
 	},
 	cultist_captain0secondary = {
 		en = "Admonition Champion",
@@ -391,6 +403,10 @@ return {
 	cultist_ritualist0secondary = {
 		en = "Admonition Ritualist",
 		["zh-tw"] = "告誡軍祭儀師",
+	},
+	chaos_mutator_ritualist0secondary = {
+		en = "Admonition Ritualist (Havoc)",
+		["zh-tw"] = "告誡軍祭儀師 (浩劫)",
 	},
 	chaos_poxwalker0secondary = {
 		en = "Poxwalker",
