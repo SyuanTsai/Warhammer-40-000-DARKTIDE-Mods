@@ -1,3 +1,177 @@
+# Warhammer 40,000 DARKTIDE 翻譯對照表
+
+## 基本屬性 (Basic Attributes)
+
+- Health - 生命
+- Wound - 傷口
+- Stamina - 耐力
+- Toughness - 韌性
+- Combat Ability - 戰鬥技能
+- Corruption - 腐敗
+- Damage - 傷害
+
+## 屬性修飾詞 (Attribute Modifiers)
+
+- Regeneration - 恢復
+- Maximum - 最大
+- Resistance - 抗性
+- Speed - 速度
+- Cost - 消耗
+
+## 敵人類型 (Enemy Types)
+
+- Flamers - 毒焰噴射者
+- Bombers - 轟炸者
+- Gunners - 砲手
+- Pox Hounds - 瘟疫獵犬
+- Mutants - 變種人
+- Snipers - 狙擊手
+- Poxbursters - 瘟疫爆裂者
+
+## 遊戲機制 (Game Mechanics)
+
+- Experience - 經驗
+- Ordo Dockets - 教團標籤 (任務獎勵)
+- Curio - 珍品
+- Block Cost Reduction - 格擋消耗
+- Ally Revive Speed - 復活速度 (盟友)
+- Grimoires - 法術書
+
+## 祝福和特性說明 (Blessings & Traits Descriptions)
+
+- Maximum Health - 最大生命
+- Wound - 傷口
+- Maximum Stamina - 最大耐力
+- Toughness - 韌性
+- Combat Ability Regeneration - 戰鬥技能冷卻
+- Corruption Resistance - 腐敗抗性
+- Corruption Resistance from Grimoires - 腐敗抗性(法術書)
+- Block Cost Reduction - 格擋消耗
+- Ally Revive Speed - 復活速度 (盟友)
+- Stamina Regeneration - 耐力恢復
+- Toughness Regeneration Speed - 韌性恢復速度
+- Experience - 經驗
+- Damage Resistance vs Flamers - 傷害抗性(毒焰噴射者)
+- Damage Resistance vs Bombers - 傷害抗性(轟炸者)
+- Damage Resistance vs Gunners - 傷害抗性(砲手)
+- Damage Resistance vs Pox Hounds - 傷害抗性(瘟疫獵犬)
+- Damage Resistance vs Mutants - 傷害抗性(變種人)
+- Damage Resistance vs Snipers - 傷害抗性(狙擊手)
+
+## 主要屬性 (MAIN)
+
+- Combat Ability - 戰鬥技能
+- Combat Ability CD - 戰鬥技能冷卻
+- Health - 生命
+- Wound - 傷痕
+- Peril - 反噬
+- Stamina - 耐力
+- Sprint Efficiency - 衝刺效率
+- Toughness - 韌性
+- Toughness Damage Reduction - 韌性傷害減免
+- Coherency - 協同率
+
+## 增益效果 (BUFFS)
+
+- Crit Chance - 暴擊機率
+- Melee Crit Chance - 近戰暴擊機率
+- Ranged Crit Chance - 遠程暴擊機率
+- Crit Hit - 暴擊命中
+- Crit Kill - 暴擊擊殺
+- Crit Damage - 暴擊傷害
+- Melee Crit Damage - 近戰暴擊傷害
+- Ranged Crit Damage - 遠程暴擊傷害
+- Rending - 撕裂
+- Impact - 衝擊
+- Cleave - 順劈攻擊
+- Power - 威力
+- Melee Power - 近戰威力
+- Ranged Power - 遠程威力
+- Finesse - 靈巧
+- Finesse Damage - 靈巧傷害
+- Hit Mass - 順劈目標
+- Hit Mass Resistance - 順劈目標抗性
+- Damage - 傷害
+- Smash Damage - 重擊傷害
+- Damage Resistance - 傷害抗性
+- Melee Damage - 近戰傷害
+- Ranged Damage - 遠程傷害
+- Warp Damage - 亞空間傷害
+- Weakspot - 弱點
+- Weakspot Hit - 弱點命中
+- Weakspot Damage - 弱點傷害
+- Weakspot Kill - 弱點擊殺
+- Melee Weakspot Damage - 近戰弱點傷害
+- Ranged Weakspot Damage - 遠程弱點傷害
+
+## 減益效果 (DEBUFFS)
+
+- Burn - 燃燒
+- Burning - 燃燒中
+- Burn (verb) - 引燃
+- Heat - 熱能
+- Heat Dissipation Efficiency - 散熱效率
+- Soulblaze - 靈火
+- Bleed - 流血
+- Bleeding - 流血中
+- Stagger - 踉蹌
+- Stagger Effect - 踉蹌效果
+- Staggering - 眩暈
+- Stun - 暈眩
+- Stunned - 已暈眩
+- Corruption - 腐敗
+- Corruption Damage - 腐敗傷害
+- Electrocute - 電擊
+- Electrocution - 眩暈
+- Electrocuted - 被電擊
+- Electrocuting - 電擊中
+- Brittleness - 脆弱
+
+## 興奮劑
+
+- Celerity Stimm - 敏捷興奮劑
+- Combat Stimm - 戰鬥興奮劑
+- Concentration Stimm - 專注興奮劑
+
+## 職業特性 (CLASS TRAITS)
+
+### 靈能者 (PSYKER)
+- Precision - 精準加成
+
+### 歐格林 (OGRYN)
+- Feel No Pain - 麻木
+- Lucky Bullet - 幸運子彈
+- Trample - 踐踏
+
+### 狂信徒 (ZEALOT)
+- Momentum - 勢能
+- Stealth - 隱身
+- Fury - 狂怒
+
+### 老兵 (VETERAN)
+- Focus Target - 專注目標
+- Focus - 專注
+- Melee Specialist - 近戰專家
+- Ranged Specialist - 遠程專家
+
+## 難度等級 (DIFFICULTY)
+
+- Sedition - 暴動
+- Uprising - 起義
+- Malice - 惡毒
+- Heresy - 異端
+- Damnation - 詛咒
+
+## 天賦 (TALENTS)
+
+- Scrier's Gaze - 占卜者的凝視
+- Stun Grenade - 眩暈手榴彈
+- Frag Grenade - 破片手榴彈
+- Fragmentation Grenade - 破片手榴彈
+
+
+
+
 # Warhammer 40,000 DARKTIDE - 戰錘40K黑潮
 
 --damage傷害 stagger踉蹌 cleave順劈
@@ -17,11 +191,6 @@
 - Auspex - 占卜儀
 - Fury - 狂怒
 - Weapon Perks - 武器專長
-### 興奮劑
-
-- Celerity Stimm - 敏捷興奮劑
-- Combat Stimm - 戰鬥興奮劑
-- Concentration Stimm - 專注興奮劑
 
 ### 武器(近戰)
 - Chainswords - 突擊鏈鋸劍
