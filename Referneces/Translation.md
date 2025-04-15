@@ -84,11 +84,11 @@
 - Power Swords - 動力劍
 - Bully Clubs - 惡棍棒
 - Duelling Swords - 決鬥劍
-- Latrine Shovels - 工兵鏟
+- Sapper Shovels - 工兵鏟
 - Devil's Claw Swords - 『惡魔之爪』劍
 - Power Maul - 動力鎚
 - Combat Blade - 戰刃
-- Force Greatsword - 烈焰力場巨劍
+- Force Greatsword - 烈焰力場劍
 - Blaze Force Greatsword - 烈焰力場巨劍
 - Relic Blade - 上古神刃
 
@@ -104,7 +104,7 @@
 - Electrokinetic Staff - 電流力場法杖
 - Helbore Lasguns - 冥潮雷射槍
 - Stub Revolvers - 快拔左輪手槍
-- Voidblast Staff - 虛空爆裂力場法杖
+- Voidblast Staff - 虛空爆破力場法杖
 - Voidstrike Staff - 虛空打擊力場法杖
 - Boltgun - 矛頭爆矢槍
 - Heavy Stubbers - 雙鏈重型機槍
@@ -147,7 +147,7 @@
 - Flesh Tearer - 血肉撕裂者
 - Lacerate - 撕碎
 - Executor - 行刑者
-- Riposte - 反擊
+- Riposte - 還擊
 - Precognition - 未卜先知
 - Haymaker - 強力一擊
 - Smackdown - 擊倒
