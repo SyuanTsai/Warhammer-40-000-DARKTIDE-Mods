@@ -1,229 +1,134 @@
-# Warhammer 40,000 DARKTIDE 翻譯對照表
-
-## 基本屬性 (Basic Attributes)
-
-- Health - 生命
-- Wound - 傷口
-- Stamina - 耐力
-- Toughness - 韌性
-- Combat Ability - 戰鬥技能
-- Corruption - 腐敗
-- Damage - 傷害
-
-## 屬性修飾詞 (Attribute Modifiers)
-
-- Regeneration - 恢復
-- Maximum - 最大
-- Resistance - 抗性
-- Speed - 速度
-- Cost - 消耗
-
-## 敵人類型 (Enemy Types)
-
-- Flamers - 毒焰噴射者
-- Bombers - 轟炸者
-- Gunners - 砲手
-- Pox Hounds - 瘟疫獵犬
-- Mutants - 變種人
-- Snipers - 狙擊手
-- Poxbursters - 瘟疫爆裂者
-
-## 遊戲機制 (Game Mechanics)
-
-- Experience - 經驗
-- Ordo Dockets - 教團標籤 (任務獎勵)
-- Curio - 珍品
-- Block Cost Reduction - 格擋消耗
-- Ally Revive Speed - 復活速度 (盟友)
-- Grimoires - 法術書
-
-## 祝福和特性說明 (Blessings & Traits Descriptions)
-
-- Maximum Health - 最大生命
-- Wound - 傷口
-- Maximum Stamina - 最大耐力
-- Toughness - 韌性
-- Combat Ability Regeneration - 戰鬥技能冷卻
-- Corruption Resistance - 腐敗抗性
-- Corruption Resistance from Grimoires - 腐敗抗性(法術書)
-- Block Cost Reduction - 格擋消耗
-- Ally Revive Speed - 復活速度 (盟友)
-- Stamina Regeneration - 耐力恢復
-- Toughness Regeneration Speed - 韌性恢復速度
-- Experience - 經驗
-- Damage Resistance vs Flamers - 傷害抗性(毒焰噴射者)
-- Damage Resistance vs Bombers - 傷害抗性(轟炸者)
-- Damage Resistance vs Gunners - 傷害抗性(砲手)
-- Damage Resistance vs Pox Hounds - 傷害抗性(瘟疫獵犬)
-- Damage Resistance vs Mutants - 傷害抗性(變種人)
-- Damage Resistance vs Snipers - 傷害抗性(狙擊手)
-
-## 主要屬性 (MAIN)
-
-- Combat Ability - 戰鬥技能
-- Combat Ability CD - 戰鬥技能冷卻
-- Health - 生命
-- Wound - 傷痕
-- Peril - 反噬
-- Stamina - 耐力
-- Sprint Efficiency - 衝刺效率
-- Toughness - 韌性
-- Toughness Damage Reduction - 韌性傷害減免
-- Coherency - 協同率
-
-## 增益效果 (BUFFS)
-
-- Crit Chance - 暴擊機率
-- Melee Crit Chance - 近戰暴擊機率
-- Ranged Crit Chance - 遠程暴擊機率
-- Crit Hit - 暴擊命中
-- Crit Kill - 暴擊擊殺
-- Crit Damage - 暴擊傷害
-- Melee Crit Damage - 近戰暴擊傷害
-- Ranged Crit Damage - 遠程暴擊傷害
-- Rending - 撕裂
-- Impact - 衝擊
-- Cleave - 順劈攻擊
-- Power - 威力
-- Melee Power - 近戰威力
-- Ranged Power - 遠程威力
-- Finesse - 靈巧
-- Finesse Damage - 靈巧傷害
-- Hit Mass - 順劈目標
-- Hit Mass Resistance - 順劈目標抗性
-- Damage - 傷害
-- Smash Damage - 重擊傷害
-- Damage Resistance - 傷害抗性
-- Melee Damage - 近戰傷害
-- Ranged Damage - 遠程傷害
-- Warp Damage - 亞空間傷害
-- Weakspot - 弱點
-- Weakspot Hit - 弱點命中
-- Weakspot Damage - 弱點傷害
-- Weakspot Kill - 弱點擊殺
-- Melee Weakspot Damage - 近戰弱點傷害
-- Ranged Weakspot Damage - 遠程弱點傷害
-
-## 減益效果 (DEBUFFS)
-
-- Burn - 燃燒
-- Burning - 燃燒中
-- Burn (verb) - 引燃
-- Heat - 熱能
-- Heat Dissipation Efficiency - 散熱效率
-- Soulblaze - 靈火
-- Bleed - 流血
-- Bleeding - 流血中
-- Stagger - 踉蹌
-- Stagger Effect - 踉蹌效果
-- Staggering - 眩暈
-- Stun - 暈眩
-- Stunned - 已暈眩
-- Corruption - 腐敗
-- Corruption Damage - 腐敗傷害
-- Electrocute - 電擊
-- Electrocution - 眩暈
-- Electrocuted - 被電擊
-- Electrocuting - 電擊中
-- Brittleness - 脆弱
-
-## 興奮劑
-
-- Celerity Stimm - 敏捷興奮劑
-- Combat Stimm - 戰鬥興奮劑
-- Concentration Stimm - 專注興奮劑
-
-## 職業特性 (CLASS TRAITS)
-
-### 靈能者 (PSYKER)
-- Precision - 精準加成
-
-### 歐格林 (OGRYN)
-- Feel No Pain - 麻木
-- Lucky Bullet - 幸運子彈
-- Trample - 踐踏
-
-### 狂信徒 (ZEALOT)
-- Momentum - 勢能
-- Stealth - 隱身
-- Fury - 狂怒
-
-### 老兵 (VETERAN)
-- Focus Target - 專注目標
-- Focus - 專注
-- Melee Specialist - 近戰專家
-- Ranged Specialist - 遠程專家
-
-## 難度等級 (DIFFICULTY)
-
-- Sedition - 暴動
-- Uprising - 起義
-- Malice - 惡毒
-- Heresy - 異端
-- Damnation - 詛咒
-
-## 天賦 (TALENTS)
-
-- Scrier's Gaze - 占卜者的凝視
-- Stun Grenade - 眩暈手榴彈
-- Frag Grenade - 破片手榴彈
-- Fragmentation Grenade - 破片手榴彈
-
-
-
-
 # Warhammer 40,000 DARKTIDE - 戰錘40K黑潮
 
---damage傷害 stagger踉蹌 cleave順劈
-## 通用名詞
+#### 主要(MAIN)
+- Combat Ability CD - 戰鬥能力CD  
+- Health - 健康  
+- Peril - 反噬  
+- Stamina - 耐力  
+- Toughness - 韌性  
+- Coherency - 協同率  
 
-- Toughness - 韌性
-- Hit Mass - 順劈目標
-- Cleave - 順劈攻擊
-- Curios - 珍品
-- Weakspot - 弱點
-- Finesse - 靈巧
-- Staggering - 踉蹌
-- Critical Melee - 近戰爆擊
-- Stacks - 疊加
-- Aura - 光環
-- Coherency - 協同
-- Auspex - 占卜儀
-- Fury - 狂怒
+#### 增益效果(BUFFS)
+- Crit - 致命一擊  
+- Rending - 撕裂  
+- Impact - 衝擊  
+- Cleave - 順批攻擊  
+- Power - 威力  
+- Finesse - 靈巧傷害  
+- Hit Mass - 順劈目標  
+- Damage - 傷害  
+- Weak Spot - 弱點  
+
+#### 減益效果(DEBUFFS)
+- Burn - 燃燒  
+- Heat - 熱能  
+- Soulblaze - 靈魂之火  
+- Bleed - 流血  
+- Stagger - 踉蹌  
+- Corruption - 腐敗  
+- Electrocuted - 電擊  
+- Brittleness - 脆弱  
+
+#### 靈能者(PSYKER)
+- Precision - 精準  
+
+#### 歐格林(OGRYN)
+- Feel No Pain - 麻木  
+- Lucky Bullet - 幸運子彈  
+- Trample - 踐踏  
+
+#### 狂信徒(ZEALOT)
+- Momentum - 勢能  
+- Stealth - 隱身  
+- Fury - 狂怒  
+
+#### 老兵(VETERAN)
+- Focus Target - 專注目標  
+- Focus - 專注  
+- Melee Specialist - 近戰專家  
+- Ranged Specialist - 遠程專家  
+
+#### 其他(MISC)
+- Note - 備註  
+- Talents - 天賦  
 - Weapon Perks - 武器專長
+- Auspex - 占卜儀
+- Aura - 光環
 
-### 武器(近戰)
-- Chainswords - 突擊鏈鋸劍
+#### 難度(DIFFICULTY)
+- Sedition - 暴動  
+- Uprising - 起義  
+- Malice - 惡毒  
+- Heresy - 異端  
+- Damnation - 詛咒  
+
+
+## 武器
+
+### 近戰武器 - Melee WEAPON
+- Battle Maul and Shield - 作戰大槌&板盾
 - Chainaxes - 突擊鏈斧
-- Combat Blade - 戰刃
-- Combat Axes - 戰鬥斧
-- Devil's Claw Swords - 「惡魔之爪」劍
 - Crusher - 輾壓者
-
-
-### 武器(遠程)
-- Infantry Autoguns - 步兵自動槍
-- Ripper Gun - 擲彈兵臂鎧
-- Grenadier Gauntlet - 全自動霰彈槍
-- Heavy Stubbers - 雙鏈重型機槍 
-- Rumbler - 震盪槍
-- Kickback - 反衝者
-- Boltgun - 爆彈槍
-- Helbore Lasgun - 冥潮雷射槍
-- Infantry Lasgun - 步兵雷射槍
-- Laspistol - 重型雷射手槍
-- Recon Lasgun - 偵查雷射槍
+- Eviscerators - 重型開膛劍
+- Latrine Shovels - 廁所鏟
 - Power Maul - 動力錘
+- Shock Mauls - 電擊錘
+- Chainswords - 突擊鏈鋸劍
+- Force Swords - 烈焰力場劍
+- Combat Axes - 戰鬥斧
+- Pickaxes - 十字鎬
+- Tactical Axes - 戰術斧
+- Thunder Hammers - 雷鎚
+- Heavy Swords - 重劍
+- Cleavers - 砍刀
+- Power Swords - 動力劍
+- Bully Clubs - 惡棍棒
+- Duelling Swords - 決鬥劍
+- Latrine Shovels - 工兵鏟
+- Devil's Claw Swords - 『惡魔之爪』劍
+- Power Maul - 動力鎚
+- Combat Blade - 戰刃
+- Force Greatsword - 烈焰力場巨劍
+- Blaze Force Greatsword - 烈焰力場巨劍
+- Relic Blade - 上古神刃
 
-### Weapon Blessing - 武器祝福(近戰)
+### 遠程武器 - Ranged WEAPON
 
-- Opportunist - 機會主義者
+- Autopistol - 撕裂者自動手槍
+- Infantry Autoguns - 步兵自動槍
+- Laspistols - 重型雷射手槍
+- Recon Lasguns - 偵查雷射槍
+- Braced Autoguns - 槍托自動槍
+- Combat Shotguns - 戰鬥霰彈槍
+- Double-Barrel Shotgun - 雙管霰彈槍
+- Electrokinetic Staff - 電流力場法杖
+- Helbore Lasguns - 冥潮雷射槍
+- Stub Revolvers - 快拔左輪手槍
+- Voidblast Staff - 虛空爆裂力場法杖
+- Voidstrike Staff - 虛空打擊力場法杖
+- Boltgun - 矛頭爆矢槍
+- Heavy Stubbers - 雙鏈重型機槍
+- Ripper Guns - 撕裂槍
+- Infantry Lasguns - 步兵雷射槍
+- Flamer - 淨化噴火器
+- Inferno Staff - 烈焰力場法杖
+- Vigilant Autoguns - 機動自動槍
+- Kickback - 反衝者
+- Bolt Pistol - 爆彈手槍
+- Grenadier Gauntlet - 擲彈兵臂鎧
+- Plasma Gun - 電漿槍
+- Rumbler - 震盪槍
+
+## 武器祝福
+
+### 近戰武器祝福
+
+- Opportunist - Оппортунист - 機會主義者
 - Bloodletter - 放血者
 - Bloodthirsty - 嗜血
 - Headtaker - 奪顱者
-- Shock and Awe - 震攝
 - Slaughterer - 殺戮者
-- Rev it Up - 提速
+- Rev it up -提速
 - Thrust - 推進
 - Thunderous - 雷鳴
 - Wrath - 憤怒
@@ -242,7 +147,7 @@
 - Flesh Tearer - 血肉撕裂者
 - Lacerate - 撕碎
 - Executor - 行刑者
-- Riposte - 還擊
+- Riposte - 反擊
 - Precognition - 未卜先知
 - Haymaker - 強力一擊
 - Smackdown - 擊倒
@@ -252,22 +157,37 @@
 - Trauma - 創傷
 - Vicious Slice - 凶狠切割
 - Hammerblow - 錘擊
-- Skullcrusher - 碎顱者
+- Skullcrusher - 粉碎者
 - Thunderstrike - 雷霆打擊
 - Chained Deathblow - 致命連擊
 - Deathblow - 致命一擊
 - Perfect Strike - 完美一擊
 - Bladed Momentum - 利刃攻勢
 - Deflector - 偏轉
+- Momentum - 勢頭
+- Murderous Tranquility - 兇殘之寧
+- Blazing Spirit - 燃燒靈魂
+- Unstable Power - 不穩定能量
+- Warp Slice - 亞空間斬擊
 - Exorcist - 驅魔者
 - Superiority - 優勢
-- Unstable Power - 不穩定能量
 - Lightning Reflexes - 閃電反射
 - High Voltage - 高壓電
-- Momentum - 勢頭
+- Falter - 踉蹌
+- Overwhelming Force - 壓倒性的武力
+- Counterattack - 反擊
+- Cranial Grounding - 顱骨落地
+- Overload - 超載
+- Energy Leakage - 能量洩漏
+- Heatsink - 散熱器
+- Syphon - 虹吸
+- Energy Transfer - 能量轉換
+- Shock & Awe / Shock and Awe - 震懾
 - Take a Swing - 揮拳出擊
+- Supercharge - 超級充能
 - Power Cycler - 能量循環
 - Sunder - 破甲
+- Sucker Punch - 突然襲擊
 - Confident Strike - 堅定打擊
 - No Guts, No Glory - 不入虎穴，焉得虎子
 - Bash - 猛撞
@@ -278,23 +198,13 @@
 - Power Surge - 能量湧動
 - Last Guard - 最後防線
 - Offensive Defence - 反守為攻
-- Murderous Tranquility - 兇殘之寧
-- Warp Slice - 亞空間斬擊
-- Counterattack - 反擊
-- Cranial Grounding - 顱骨落地
-- Overload - 超載
-- Energy Leakage - 能量洩漏
-- Heatsink - 散熱器
-- Syphon - 虹吸
-- Energy Transfer - 能量轉換
-- Falter - 踉蹌
-- Overwhelming Force - 壓倒性的武力
+- Shock & Awe / Shock and Awe - 震懾
 
-### Weapon Blessing - 武器祝福(遠程)
+### 遠程武器祝福
+
 - Raking Fire - 掃射
 - Dumdum - 達姆彈
-- Hit & Run - 游擊
-- Hit and Run - 游擊
+- Hit & Run /  Hit and Run - 游擊
 - Sustained Fire - 持續射擊
 - Punishing Salvo - 懲罰齊射
 - Fire Frenzy - 烈火熱焰
@@ -305,6 +215,7 @@
 - Roaring Advance - 咆哮突進
 - Ceaseless Barrage - 持續阻擊
 - Inspiring Barrage - 振奮彈幕
+- Ghost - 幽靈
 - Surgical - 精確打擊
 - Crucian Roulette - 克魯錫安輪盤
 - Deadly Accurate - 致命精準
@@ -316,7 +227,7 @@
 - Powderburn - 火藥灼傷
 - Cavalcade - 接連不斷
 - Pinning Fire - 鉗制射擊
-- Run 'n' Gun - 連跑帶打
+- Run 'n' Gun - Run and Gun - 連跑帶打
 - Puncture - 出血穿透
 - Lethal Proximity - 致命零距離
 - Point Blank - 近身平射
@@ -325,6 +236,7 @@
 - Surge - 湧動
 - Warp Flurry - 亞空間亂舞
 - Warp Nexus - 亞空間樞紐
+- Transfer Peril - 轉移反噬
 - Rending Shockwave - 撕扯震盪
 - Focused Channelling - 專注引導
 - Blazing Spirit - 燃燒靈魂
@@ -340,7 +252,9 @@
 - Scattershot - 散彈
 - Full Bore - 全孔射擊
 - Both Barrels - 雙管齊發
+- Trickshooter - 狡猾射手
 - Hand-Cannon - 手銃
+- Shattering Impact - 破碎衝擊
 - Everlasting Flame - 永燃烈焰
 - Quickflame - 迅捷火焰
 - Fan the Flames - 煽風點火
@@ -362,14 +276,104 @@
 - Pinpointing target - 精確定位
 - Charmed Reload - 魔力彈藥
 - Overwhelming Fire - 壓倒性火力
-- Can Opener - 開罐器
+- Can opener - 開罐器
 - Born in blood - 浴血而生
 - Pierce - 穿透
 - Punishing Fire - 懲罰射擊
 - Inspiring Barrage - 激勵彈幕
 - Expansive - 擴展性
 - Shrapnel - 破片四射
-- Shattering Impact - 破碎衝擊
+- Blast Zone - 狂轟猛炸
+- Adhesive Charge - 黏著炸藥
+- Marksman's Reflex - 迅雷反射
+
+## 裝備屬性
+
+### 珍品屬性 (CURIOS) 
+- Damage vs Flak - 對防彈護甲的敵人傷害
+- Damage vs Maniacs - 對狂熱者傷害
+- Damage vs Infested - 對被感染的敵人傷害
+- Damage vs Unyielding - 對不屈的敵人傷害
+- Damage vs Carapace - 對甲殼護甲的敵人傷害
+- Damage vs Unarmoured - 對無護甲敵人傷害
+- Crit chance - 暴擊機率
+- Crit damage - 暴擊傷害
+- Damage vs Groaners and Poxwalkers - 對呻吟者、瘟疫行者傷害
+- Damage vs Elites - 對精英傷害
+- Damage vs Specialists - 對專家傷害
+- Stamina - 耐力
+- Weakspot damage - 弱點傷害
+- Block Efficiency - 格檔效率
+- Cost for Sprinting - 衝刺體力消耗
+
+
+### 近戰武器屬性 - Melee WEAPON
+- Damage vs Flak - 防彈護甲的敵人  
+- Damage vs Maniacs - 狂熱者  
+- Damage vs Infested - 被感染的敵人  
+- Damage vs Unyielding - 不屈的敵人  
+- Damage vs Carapace - 甲殼護甲的敵人  
+- Damage vs Unarmoured - 無護甲敵人  
+- Crit chance - 暴擊機率  
+- Crit damage - 暴擊傷害  
+- Damage vs Groaners and Poxwalkers - 呻吟者、瘟疫行者  
+- Damage vs Elites - 精英  
+- Damage vs Specialists - 專家  
+- Stamina - 耐力  
+- Weakspot damage - 弱點傷害  
+- Block Efficiency - 格檔效率  
+- Cost for Sprinting - 衝刺體力消耗  
+
+### 遠程武器屬性 - Ranged WEAPON
+- Damage vs Flak - 防彈護甲的敵人  
+- Damage vs Maniacs - 狂熱者  
+- Damage vs Infested - 被感染的敵人  
+- Damage vs Unyielding - 不屈的敵人  
+- Damage vs Carapace - 甲殼護甲的敵人  
+- Damage vs Unarmoured - 無護甲敵人  
+- Crit chance - 暴擊機率  
+- Crit damage - 暴擊傷害  
+- Damage vs Elites - 精英  
+- Damage vs Groaners and Poxwalkers - 呻吟者、瘟疫行者  
+- Damage vs Specialists - 專家  
+- Stamina - 耐力  
+- Weakspot damage - 弱點傷害  
+- Reload Speed - 裝填速度  
+
+
+
+
+
+
+
+
+
+
+
+
+--damage傷害 stagger踉蹌 cleave順劈
+## 通用名詞
+
+- Toughness - 韌性
+- Hit Mass - 順劈目標
+- Cleave - 順劈攻擊
+- Curios - 珍品
+- Weakspot - 弱點
+- Finesse - 靈巧
+- Staggering - 踉蹌
+- Critical Melee - 近戰爆擊
+- Stacks - 疊加
+- Aura - 光環
+- Coherency - 協同
+- Auspex - 占卜儀
+- Fury - 狂怒
+- Weapon Perks - 武器專長
+
+### 興奮劑
+
+- Celerity Stimm - 敏捷興奮劑
+- Combat Stimm - 戰鬥興奮劑
+- Concentration Stimm - 專注興奮劑
 
 ### 怪物相關
 
@@ -393,9 +397,6 @@
 - Shotgunners - 霰彈槍手
 - Chaos Spawn - 渾沌魔物
 
-### 附加屬性
-
-- Combat Ability Regeneration - 戰鬥技能冷卻
 
 ### 事件相關
 
