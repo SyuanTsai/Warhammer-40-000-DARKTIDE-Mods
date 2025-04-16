@@ -381,6 +381,13 @@
 - MOD 檔案名稱：RickAndMortis.zip-491-0-55-1743310031
 - 手動維護最後下載日期：2025-04-03
 
+### [Perspectives Mod](https://www.nexusmods.com/warhammer40kdarktide/mods/111)
+    第三人稱視角
+- MOD 網站最後更新日期：Last updated 03 December 2024 6:00PM
+- MOD 版本：1.11
+- MOD 檔案名稱：Perspectives-111-1-11-1733248815
+- 手動維護最後下載日期：2025-04-16
+
 ---
 # 遊戲內操作相關MOD
 
