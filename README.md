@@ -22,10 +22,10 @@
 
 ### [IME Enable](https://www.nexusmods.com/warhammer40kdarktide/mods/167)
     啟用Windows輸入法 - 適用於中日韓等語言的玩家
-- MOD 網站最後更新日期：Last updated 09 June 20231:21PM
-- MOD 版本：Version 1.1.0
-- MOD 檔案名稱：IME_Enable-167-1-1-0-1686313314
-- 手動維護最後下載日期：2025-02-09
+- MOD 網站最後更新日期：Last updated 16 April 2025 2:30PM
+- MOD 版本：Version 1.1.1
+- MOD 檔案名稱：IME_Enable-167-1-1-1-1744813800
+- 手動維護最後下載日期：2025-04-18
 
 ### [True Level](https://www.nexusmods.com/warhammer40kdarktide/mods/156)
     真實等級 - 顯示真正的等級
