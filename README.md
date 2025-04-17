@@ -412,10 +412,10 @@
 
 ### [Simple Speed Meter](https://www.nexusmods.com/warhammer40kdarktide/mods/404)
     顯示移動速度
-- MOD 網站最後更新日期：Last updated 01 November 2024 3:32AM
-- MOD 版本：1.0.2
-- MOD 檔案名稱：InventoryStats-152-1-7-1727327350
-- 手動維護最後下載日期：2025-03-21
+- MOD 網站最後更新日期：Last updated 16 April 2025 2:35PM
+- MOD 版本：1.0.3
+- MOD 檔案名稱：SimpleSpeedMeter-404-1-0-3-1744814116
+- 手動維護最後下載日期：2025-04-18
 ---
 
 # 遊戲內操作相關MOD
