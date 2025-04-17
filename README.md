@@ -422,10 +422,10 @@
 
 ### [Many More Try](https://www.nexusmods.com/warhammer40kdarktide/mods/175)
     任務管理器 - 可以啟動最近24小時內的任何關卡
-- MOD 網站最後更新日期：Last updated 29 June 2024 7:09PM
-- MOD 版本：Version 1.5.1
-- MOD 檔案名稱：ManyMoreTry-175-1-5-1-1719684577
-- 手動維護最後下載日期：2025-02-13
+- MOD 網站最後更新日期：Last updated 16 April 2025 2:31PM
+- MOD 版本：Version 1.5.3
+- MOD 檔案名稱：ManyMoreTry-175-1-5-3-1744813880
+- 手動維護最後下載日期：2025-04-18
 
 ### [Solo Play (Havoc Update)](https://www.nexusmods.com/warhammer40kdarktide/mods/176)
     單人遊戲 - 支援浩劫模式
