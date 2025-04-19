@@ -67,6 +67,7 @@ RickAndMortis
 ShareTalents
 Perspectives
 AutoQuell33
+ImprovedHavocTags
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
