@@ -68,6 +68,7 @@ ShareTalents
 Perspectives
 AutoQuell33
 ImprovedHavocTags
+servo_friend
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
