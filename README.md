@@ -402,6 +402,13 @@
 - MOD 檔案名稱：Improved Havoc Tags-500-V1-2-1744209468
 - 手動維護最後下載日期：2025-04-19
 
+### [Servo-Friend](https://www.nexusmods.com/warhammer40kdarktide/mods/504)
+    顱骨支援
+- MOD 網站最後更新日期：Last updated 18 April 2025 3:12PM
+- MOD 版本：2.01
+- MOD 檔案名稱：Servo Friend-504-2-01-1745009706
+- 手動維護最後下載日期：2025-04-19
+
 ---
 # 遊戲內操作相關MOD
 
