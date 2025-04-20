@@ -10,6 +10,7 @@ scoreboard
 creature_spawner
 Power_DI
 UngaBunga
+Skitarius
 JishuJun
 AutoLoot
 Healthbars
