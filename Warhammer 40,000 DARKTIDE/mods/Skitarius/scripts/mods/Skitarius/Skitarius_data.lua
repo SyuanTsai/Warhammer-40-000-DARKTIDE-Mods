@@ -17,9 +17,26 @@ return {
 			},
 			--]]
 			{
+				setting_id      = "hud_element",
+				type            = "checkbox",
+				default_value   = false,
+			},
+			{
+				setting_id 	  = "hud_element_size",
+				type          = "numeric",
+				default_value = 50,
+				range         = {0, 100},
+			},
+			{
 				setting_id = "keybinds",
 				type       = "group",
 				sub_widgets = {
+					{
+						setting_id = "maintain_bind",
+						type = "checkbox",
+						default_value = false,
+						tooltip = "maintain_bind_tooltip",
+					},
 					{
 						setting_id      = "keybind_one_pressed",
 						type            = "keybind",
@@ -90,6 +107,12 @@ return {
 				setting_id = "melee_settings",
 				type       = "group",
 				sub_widgets = {
+					{
+						setting_id = "halt_on_interrupt",
+						type = "checkbox",
+						default_value = false,
+						tooltip = "halt_on_interrupt_tooltip",
+					},
 					{
 						setting_id = "melee_weapon_selection",
 						type = "dropdown",
@@ -341,6 +364,12 @@ return {
 						type = "checkbox",
 						default_value = false,
 						tooltip = "always_charge_tooltip",
+					},
+					{
+						setting_id = "always_charge_threshold",
+						type = "numeric",
+						default_value = 100,
+						range = {0, 100},
 					},
 					{
 						setting_id = "ranged_weapon_selection",
