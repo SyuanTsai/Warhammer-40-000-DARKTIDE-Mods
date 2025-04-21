@@ -10,6 +10,9 @@ local DMF = get_mod("DMF")
 
 local MOD_ENABLED = true
 local DEBUG_TIMESTAMP = os.date("%H:%M:%S")
+local HUD_ACTIVE = false
+local HALT_ON_INTERRUPT = false
+local MAINTAIN_BIND = false
 
 -- SKITARIUS: Game/engine state data for handling desynchronization
 local SKITARIUS = {
@@ -299,6 +302,7 @@ local ENGRAM = {
 -- RANGED_SETTINGS - Container for ranged weapon settings
 local RANGED_SETTINGS = {}
 local ALWAYS_CHARGE = false -- Flag to always release charged attacks when they are ready, regardless of other settings
+local ALWAYS_CHARGE_THRESHOLD = 100
 local IS_AIMING = false        -- Flag to indicate if player is aiming
 
 -- BIND_DATA: Container for storing weapon settings/sequences, per bind
@@ -340,6 +344,37 @@ local RANGED_TEMPLATE = {
 
 local FLICKER_BUFFER = {} -- Buffer storing previous inputs to ensure "flickered" inputs do not remain true or false for too long
 
+-- ┬ ┬┬ ┬┌┬┐  ┌─┐┬  ┌─┐┌┬┐┌─┐┌┐┌┌┬┐ --
+-- ├─┤│ │ ││  ├┤ │  ├┤ │││├┤ │││ │  --
+-- ┴ ┴└─┘─┴┘  └─┘┴─┘└─┘┴ ┴└─┘┘└┘ ┴  --
+
+-- Thank you ItsAlxl for the framework
+local skitarius_hud_element = {
+    package = "packages/ui/views/inventory_background_view/inventory_background_view",
+    use_hud_scale = true,
+    class_name = "HudElementSkitarius",
+    filename = "Skitarius/scripts/mods/Skitarius/HudElementSkitarius",
+    visibility_groups = {
+        "alive",
+        "communication_wheel",
+        "tactical_overlay"
+    }
+}
+
+mod:add_require_path(skitarius_hud_element.filename)
+
+local _add_hud_element = function(element_pool)
+    local found_key, _ = table.find_by_key(element_pool, "class_name", skitarius_hud_element.class_name)
+    if found_key then
+        element_pool[found_key] = skitarius_hud_element
+    else
+        table.insert(element_pool, skitarius_hud_element)
+    end
+end
+
+mod:hook_require("scripts/ui/hud/hud_elements_player_onboarding", _add_hud_element)
+mod:hook_require("scripts/ui/hud/hud_elements_player", _add_hud_element)
+
 --┌───────────────────────────────────┐--
 --│ ╔╦╗╔═╗╔╦╗  ╔═╗╔═╗╔╦╗╔╦╗╦╔╗╔╔═╗╔═╗ │--
 --│ ║║║║ ║ ║║  ╚═╗║╣  ║  ║ ║║║║║ ╦╚═╗ │--
@@ -358,14 +393,16 @@ mod.update = function()
     if MOD_ENABLED then
         mod.perflog()
         mod.update_peril()
-        --------------------------------------------------------------------------------------
+        mod.update_hud()
+        --------------------------------------------------------------------------------------------------------------------
         if (mod.ready_for_intercept() and INTERCEPT.AUTHORIZED) or mod.override_primary() then
-            mod.update_buffer() -- Update rollback frame data
-            mod.execute()       -- Run current command
+            mod.update_engram(mod.override_primary() and "override_primary" or INTERCEPT.AUTHORIZED and INTERCEPT.AUTHORITY)
+            mod.update_buffer()
+            mod.execute()
         else
-            mod.kill_sequence() -- Empty all data used for running commands
+            mod.kill_sequence()
         end
-        --------------------------------------------------------------------------------------
+        --------------------------------------------------------------------------------------------------------------------
     end
 end
 
@@ -503,6 +540,19 @@ mod.on_setting_changed = function(setting_name)
     -- Individual Misc. Settings
     elseif setting_name == "always_charge" then
         ALWAYS_CHARGE = mod:get("always_charge")
+    elseif setting_name == "always_charge_threshold" then
+        ALWAYS_CHARGE_THRESHOLD = mod:get("always_charge_threshold")
+    elseif setting_name == "hud_element" then
+        HUD_ACTIVE = mod:get("hud_element")
+    elseif setting_name == "hud_element_size" then
+        local hud_element = mod.get_hud_element()
+        if hud_element then
+            hud_element:set_size(mod:get("hud_element_size") or 50)
+        end
+    elseif setting_name == "halt_on_interrupt" then
+        HALT_ON_INTERRUPT = mod:get("halt_on_interrupt")
+    elseif setting_name == "maintain_bind" then
+        MAINTAIN_BIND = mod:get("maintain_bind")
     end
 end
 
@@ -550,6 +600,10 @@ mod.on_all_mods_loaded = function()
     mod:set("bind_data", BIND_DATA, false)
     -- Set up defaults if no data
     ALWAYS_CHARGE = mod:get("always_charge") or false
+    ALWAYS_CHARGE_THRESHOLD = mod:get("always_charge_threshold") or 100
+    HUD_ACTIVE = mod:get("hud_element") or false
+    HALT_ON_INTERRUPT = mod:get("halt_on_interrupt") or false
+    MAINTAIN_BIND = mod:get("maintain_bind") or false
 end
 
 --┌─────────────────────────────────────────────┐--
@@ -702,6 +756,22 @@ mod.update_engram = function(data)
             RANGED_SETTINGS = BIND_DATA[data].RANGED[MAGOS.WEAPON_NAME]
         elseif BIND_DATA[data] and BIND_DATA[data].RANGED and BIND_DATA[data].RANGED.global_ranged and BIND_DATA[data].RANGED.global_ranged.automatic_fire then
             RANGED_SETTINGS = BIND_DATA[data].RANGED.global_ranged
+        end
+    end
+end
+
+mod.get_hud_element = function()
+    local hud = Managers.ui:get_hud()
+    return hud and hud:element("HudElementSkitarius")
+end
+
+mod.update_hud = function()
+    local hud_element = mod.get_hud_element()
+    if hud_element then
+        if HUD_ACTIVE and (MAGOS.WEAPON_TYPE == "MELEE" or MAINTAIN_BIND) then
+            hud_element:set_enabled(INTERCEPT.AUTHORIZED or mod.override_primary())
+        else
+            hud_element:set_enabled(false)
         end
     end
 end
@@ -871,6 +941,11 @@ mod.ready_for_intercept = function()
                     end
                 end
             end
+        end
+        -- If HALT_ON_INTERRUPT is enabled, shut down any keybinds when interrupting actions are performed
+        if allowed_to_interrupt and HALT_ON_INTERRUPT then
+            INTERCEPT.AUTHORIZED = false
+            INTERCEPT.AUTHORITY = "none"
         end
         return not allowed_to_interrupt
     else
@@ -1059,7 +1134,7 @@ mod.has_trait_or_talent = function(trait_or_talent)
     local stacking_buffs = buff_extension and buff_extension._stacking_buffs
     if stacking_buffs then
         for buff, buff_data in pairs(stacking_buffs) do
-            if string.find(buff, trait_or_talent) then
+            if buff and string.find(buff, trait_or_talent) then
                 return true
             end
         end
@@ -1303,9 +1378,16 @@ mod.get_current_action = function()
     -- If after checks there is still a valid action, handle it
     if current_action ~= "idle" then
         current_action = MAGOS.ACTION_MAP and MAGOS.ACTION_MAP[current_action]
-        -- This is mostly a hack, but any sequence should be able to return to its intended path from "idle"
+        -- Handle exceptions to the action map
         if not current_action then
-            current_action = "idle"
+            current_action = mod.handle_action_map_exceptions(MAGOS.ACTION_NAME)
+        end
+    end
+    -- Handle special cases
+    -- Knife: Attacks after special action are always treated as heavy, even if they are lights
+    if MAGOS.ACTION_NAME == "action_left_heavy_jab_combo" then
+        if ENGRAM.COMMANDS[ENGRAM.INDEX] == "light_attack" then
+            current_action = "light_attack"
         end
     end
     -- Iterate engram if the current state fulfills the current command
@@ -1314,6 +1396,17 @@ mod.get_current_action = function()
     end
     MAGOS.COMMAND_NAME = current_action
     return current_action
+end
+
+-- Handle exceptions to the action map
+mod.handle_action_map_exceptions = function(action_name)
+    -- Latrine Shovels
+    if action_name == "action_melee_start_left_special" then
+        return "start_attack"
+    else
+    -- Anything else, ignore
+        return "idle"
+    end
 end
 
 -- Execute the next melee action in the engram sequence
@@ -1530,7 +1623,7 @@ end
 local IS_CHARGING = false      -- Flag to indicate if player is charging a ranged attack
 local LAST_SHOT = 0            -- Engine time of last shot when forcing a preferred RoF
 local PREVIOUS_HELBORE = false -- Flag to indicate the held state of inputs when spamming Helbore melees as mod.flicker() is insufficient
-local WEENIE_HUT_JR = false     -- Set true if you a bitch
+local WEENIE_HUT_JR = false    -- Set true if you a bitch
 
 -- CHARGED: Weapons which charge by holding alt fire and shoot by pressing primary fire
 local CHARGED = {
@@ -1681,6 +1774,9 @@ mod.auto_shoot = function(input)
             local charge_level = charge_module and charge_module.charge_level
             local charge_template = weapon_extension:charge_template()
             local fully_charged_charge_level = charge_template and charge_template.fully_charged_charge_level or 1
+            if ALWAYS_CHARGE_THRESHOLD ~= 100 then
+                fully_charged_charge_level = ALWAYS_CHARGE_THRESHOLD / 100
+            end
             local fully_charged_charge_threshold = math.min(fully_charged_charge_level, max_charge)
             local fully_charged = false
             local alt_fully_charged = false
@@ -1908,11 +2004,12 @@ mod:hook_safe(CLASS.ActionHandler, "start_action", function (self, id, action_ob
     else
         IS_AIMING = false
     end
-    if string.find(action_name, "charge") then
+    if action_name and string.find(action_name, "charge") then
         IS_CHARGING = true
     end
     -- retarded hack for helbores not listing charge actions as charge actions
-    if string.find(self._registered_components[id].component.template_name, "lasgun_p2") and (action_name == "action_shoot_hip_start" or action_name == "action_shoot_zoomed_start") then
+    if self._registered_components and self._registered_components[id] and self._registered_components[id].component and self._registered_components[id].component.template_name 
+       and string.find(self._registered_components[id].component.template_name, "lasgun_p2") and (action_name == "action_shoot_hip_start" or action_name == "action_shoot_zoomed_start") then
         IS_CHARGING = true
     end
     -- MELEE FLAGS
@@ -2032,7 +2129,7 @@ mod:hook_safe("SteppedStatBuff","update_stat_buffs",function(self, current_stat_
 	for index, value in ipairs (buffs) do
 		local name = buffs[index]._template.name
         -- Crunch
-        if string.find(name,"ogryn_windup_increases_power_child") ~= nil then
+        if name and string.find(name,"ogryn_windup_increases_power_child") ~= nil then
             BUFF_STACKS.crunch_id_current = buffs[index]._instance_id
             -- Only update the Crunch value if there is fresh data, as the engine does not clear Crunch stacks on its own
             if BUFF_STACKS.crunch_id_current ~= BUFF_STACKS.crunch_id_previous then
@@ -2040,11 +2137,11 @@ mod:hook_safe("SteppedStatBuff","update_stat_buffs",function(self, current_stat_
             end
 		end
         -- Thrust
-		if string.find(name,"windup_increases_power_child") ~= nil and name ~= "ogryn_windup_increases_power_child" then
+		if name and string.find(name,"windup_increases_power_child") ~= nil and name ~= "ogryn_windup_increases_power_child" then
 			BUFF_STACKS.thrust = buffs[index]._template_context.stack_count - 1
 		end
         -- Slow and Steady
-        if string.find(name, "toughness_on_hit_based_on_charge_time") ~= nil then
+        if name and string.find(name, "toughness_on_hit_based_on_charge_time") ~= nil then
             BUFF_STACKS.slow_and_steady = buffs[index]._template_context.stack_count - 1
         end
 	end
@@ -2066,8 +2163,10 @@ end)
 
 -- Forcibly end keybinds on weapon swap to handle lingering toggles
 mod:hook_safe(CLASS.PlayerUnitWeaponExtension, "on_slot_wielded", function(self, slot_name, t, skip_wield_action)
-    INTERCEPT.AUTHORIZED = false
-    INTERCEPT.AUTHORITY = "none"
+    if not MAINTAIN_BIND then
+        INTERCEPT.AUTHORIZED = false
+        INTERCEPT.AUTHORITY = "none"
+    end
 end)
 
 -- ┌─┐┌┬┐┌─┐┌┐┌┌┬┐┌─┐┬─┐┌┬┐  ┬ ┬┌─┐┌─┐┬┌─┌─┐ --

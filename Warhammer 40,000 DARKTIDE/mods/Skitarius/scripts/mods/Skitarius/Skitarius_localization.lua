@@ -13,7 +13,24 @@ return {
 		en = "Debug",
 		["zh-tw"] = "開發模式",
 	},
+	-- HUD Element
+	hud_element = {
+		en = "Enable Mod Indicator",
+		["zh-tw"] = "啟用MOD指示器",
+	},
+	hud_element_size = {
+		en = "Mod Indicator Size",
+		["zh-tw"] = "MOD指示器大小",
+	},
 	-- Keybinds
+	maintain_bind = {
+		en = "Maintain Keybind Status on Weapon Swap",
+		["zh-tw"] = "武器切換時保持按鍵狀態",
+	},
+	maintain_bind_tooltip = {
+		en = "Prevents keybinds from disabling themselves when switching weapons. Be aware of overlapping Ranged and Melee keybinds when using this feature.",
+		["zh-tw"] = "當切換武器時，防止按鍵綁定自動關閉。使用此功能時，請注意近戰和遠程按鍵綁定的重疊。",
+	},
 	override_primary = {
 		en = "Override Primary Attack Input",
 		["zh-tw"] = "取代主要攻擊操作",
@@ -67,6 +84,14 @@ return {
 		en = "Melee Settings",
 		["zh-tw"] = "近戰設定",
 	},
+	halt_on_interrupt = {
+		en = "Halt On Interrupt",
+		["zh-tw"] = "中斷時停止",
+	},
+	halt_on_interrupt_tooltip = {
+		en = "Halts the current sequence and turns off active toggled keybinds when interrupted by user inputs.",
+		["zh-tw"] = "當輸入中斷時，停止當前序列並關閉活動的切換按鍵綁定。",
+	},
 	melee_weapon_selection = {
 		en = "Weapon Selection",
 		["zh-tw"] = "武器選擇",
@@ -86,6 +111,7 @@ return {
 	crunch = {
 		en = "Crunch",
 		["zh-tw"] = "嘎嘎!",
+		en = "Crunch"
 	},
 	heavy_buff_stacks = {
 		en = "Heavy Buff Stacks",
@@ -181,6 +207,10 @@ return {
 	always_charge = {
 		en = "Always Auto-Release Charges",
 		["zh-tw"] = "蓄力將自動釋放，無需手動操作",
+	},
+	always_charge_threshold = {
+		en = "Always Auto-Release Charge Threshold %%",
+		["zh-tw"] = "蓄力將自動釋放，無需手動操作的閾值 %%",
 	},
 	always_charge_tooltip = {
 		en = string.format("Automatically release charged attacks when the charge is full, regardless of other ranged settings."),

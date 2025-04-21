@@ -56,10 +56,10 @@
 
 ### [Skitarius](https://www.nexusmods.com/warhammer40kdarktide/mods/510)
     顱骨支援
-- MOD 網站最後更新日期：Last updated 19 April 2025 11:03PM
-- MOD 版本：1.0.0
-- MOD 檔案名稱：Skitarius 1.0.0-510-1-0-0-1745103570
-- 手動維護最後下載日期：2025-04-20
+- MOD 網站最後更新日期：Last updated 20 April 2025 4:25PM
+- MOD 版本：1.0.2
+- MOD 檔案名稱：Skitarius 1.0.2-510-1-0-2-1745166313
+- 手動維護最後下載日期：2025-04-21
 
 ### JishuJun
     團隊計分
@@ -475,11 +475,9 @@
 - MOD 檔案名稱：AFK-33-23-4-05-1680675716
 - 手動維護最後下載日期：2025-04-05
 
-
 ### [Remember Difficulty](https://www.nexusmods.com/warhammer40kdarktide/mods/490)
     記住死神試煉的難度
 - MOD 網站最後更新日期：Last updated 27 March 2025 8:56AM
 - MOD 版本：1.0.0
 - MOD 檔案名稱：Remember Difficulty-490-1-0-0-1743065799
 - 手動維護最後下載日期：2025-04-05
-
