@@ -70,6 +70,7 @@ Perspectives
 AutoQuell33
 ImprovedHavocTags
 servo_friend
+better_hud_info_view
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
