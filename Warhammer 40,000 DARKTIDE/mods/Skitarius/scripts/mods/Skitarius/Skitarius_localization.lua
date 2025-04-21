@@ -2,192 +2,253 @@ return {
 	-- Mod Details
 	mod_name = {
 		en = "Skitarius",
+		["zh-tw"] = "機械教信徒",
 	},
 	mod_description = {
 		en = "FROM THE MOMENT I UNDERSTOOD THE WEAKNESS OF MY FLESH, IT DISGUSTED ME.",
+		["zh-tw"] = "當我看穿血肉的脆弱，那一刻，我的心靈便被機械的完美所召喚，對這腐朽之軀只剩厭憎。",
 	},
 	-- Debug
 	debug = {
 		en = "Debug",
+		["zh-tw"] = "開發模式",
 	},
 	-- Keybinds
 	override_primary = {
 		en = "Override Primary Attack Input",
+		["zh-tw"] = "取代主要攻擊操作",
 	},
 	keybinds = {
 		en = "Keybinds",
+		["zh-tw"] = "按鍵綁定",
 	},
 	keybind_selection_melee = {
 		en = "Keybind Selection",
+		["zh-tw"] = "按鍵選擇",
 	},
 	keybind_selection_ranged = {
 		en = "Keybind Selection",
+		["zh-tw"] = "按鍵選擇",
 	},
 	keybind_one_pressed = {
 		en = "Keybind One (Toggle)",
+		["zh-tw"] = "按鍵一 (切換)",
 	},
 	keybind_one_held = {
 		en = "Keybind One (Held)",
+		["zh-tw"] = "按鍵一 (長按)",
 	},
 	keybind_two_pressed = {
 		en = "Keybind Two (Toggle)",
+		["zh-tw"] = "按鍵二 (切換)",
 	},
 	keybind_two_held = {
 		en = "Keybind Two (Held)",
+		["zh-tw"] = "按鍵二 (長按)",
 	},
 	keybind_three_pressed = {
 		en = "Keybind Three (Toggle)",
+		["zh-tw"] = "按鍵三 (切換)",
 	},
 	keybind_three_held = {
 		en = "Keybind Three (Held)",
+		["zh-tw"] = "按鍵三 (長按)",
 	},
 	keybind_four_pressed = {
 		en = "Keybind Four (Toggle)",
+		["zh-tw"] = "按鍵四 (切換)",
 	},
 	keybind_four_held = {
 		en = "Keybind Four (Held)",
+		["zh-tw"] = "按鍵四 (長按)",
 	},
 	-- Melee
 	melee_settings = {
 		en = "Melee Settings",
+		["zh-tw"] = "近戰設定",
 	},
 	melee_weapon_selection = {
 		en = "Weapon Selection",
+		["zh-tw"] = "武器選擇",
 	},
 	heavy_buff = {
-		en = "Heavy Buff Modifier"
+		en = "Heavy Buff Modifier",
+		["zh-tw"] = "重擊強化調整",
 	},
 	thrust = {
-		en = "Thrust"
+		en = "Thrust",
+		["zh-tw"] = "推進",
 	},
 	slow_and_steady = {
-		en = "Slow and Steady"
+		en = "Slow and Steady",
+		["zh-tw"] = "緩慢而確實",
 	},
 	crunch = {
-		en = "Crunch"
+		en = "Crunch",
+		["zh-tw"] = "嘎嘎!",
 	},
 	heavy_buff_stacks = {
-		en = "Heavy Buff Stacks"
+		en = "Heavy Buff Stacks",
+		["zh-tw"] = "重擊強化層數",
 	},
 	heavy_buff_special = {
-		en = "Special Required For Heavy Modifier"
+		en = "Special Required For Heavy Modifier",
+		["zh-tw"] = "重擊修飾需要特殊攻擊",
 	},
 	global_melee = {
 		en = "GLOBAL",
+		["zh-tw"] = "全局",
 	},
 	sequence_cycle_point = {
 		en = "Cycle Point",
+		["zh-tw"] = "循環點",
 	},
 	sequence_step_one = {
 		en = "Step One",
+		["zh-tw"] = "步驟一",
 	},
 	sequence_step_two = {
 		en = "Step Two",
+		["zh-tw"] = "步驟二",
 	},
 	sequence_step_three = {
 		en = "Step Three",
+		["zh-tw"] = "步驟三",
 	},
 	sequence_step_four = {
 		en = "Step Four",
+		["zh-tw"] = "步驟四",
 	},
 	sequence_step_five = {
 		en = "Step Five",
+		["zh-tw"] = "步驟五",
 	},
 	sequence_step_six = {
 		en = "Step Six",
+		["zh-tw"] = "步驟六",
 	},
 	-- Sequence steps
 	none = {
 		en = "None",
+		["zh-tw"] = "無",
 	},
 	light_attack = {
 		en = "Light Attack",
+		["zh-tw"] = "輕擊",
 	},
 	heavy_attack = {
 		en = "Heavy Attack",
+		["zh-tw"] = "重擊",
 	},
 	special_action = {
 		en = "Special Action",
+		["zh-tw"] = "特殊動作",
 	},
 	block = {
 		en = "Block",
+		["zh-tw"] = "格擋",
 	},
 	push = {
 		en = "Push",
+		["zh-tw"] = "推擊",
 	},
 	push_attack = {
 		en = "Push Attack",
+		["zh-tw"] = "助推攻擊",
 	},
 	-- Reset
 	reset_weapon_melee = {
 		en = "RESET MELEE WEAPON",
+		["zh-tw"] = "重置近戰武器",
 	},
 	reset_all_melee = {
 		en = "RESET ALL MELEE SETTINGS",
+		["zh-tw"] = "重置所有近戰設定",
 	},
 	reset_weapon_ranged = {
 		en = "RESET RANGED WEAPON",
+		["zh-tw"] = "重置遠程武器",
 	},
 	reset_all_ranged = {
 		en = "RESET ALL RANGED SETTINGS",
+		["zh-tw"] = "重置所有遠程設定",
 	},
 	-- Ranged
 	ranged_settings = {
 		en = "Ranged Settings",
+		["zh-tw"] = "遠程設定",
 	},
 	always_charge = {
 		en = "Always Auto-Release Charges",
+		["zh-tw"] = "蓄力將自動釋放，無需手動操作",
 	},
 	always_charge_tooltip = {
 		en = string.format("Automatically release charged attacks when the charge is full, regardless of other ranged settings."),
+		["zh-tw"] = string.format("無論其他遠程設定如何，在蓄力完成時自動釋放蓄力攻擊。"),
 	},
 	ranged_weapon_selection = {
 		en = "Weapon Selection",
+		["zh-tw"] = "武器選擇",
 	},
 	global_ranged = {
 		en = "GLOBAL",
+		["zh-tw"] = "全局",
 	},
 	automatic_fire = {
 		en = "Automatic Fire",
+		["zh-tw"] = "自動射擊",
 	},
 	standard = {
 		en = "Standard",
+		["zh-tw"] = "標準",
 	},
 	charged = {
 		en = "Charged",
+		["zh-tw"] = "蓄力",
 	},
 	special = {
 		en = "Special",
+		["zh-tw"] = "特殊",
 	},
 	auto_charge_threshold = {
 		en = "Charge Threshold %%",
+		["zh-tw"] = "蓄力閾值 %%",
 	},
 	auto_shoot = {
 		en = "Shoot Without Input",
+		["zh-tw"] = "無輸入自動射擊",
 	},
 	ads_filter = {
 		en = "ADS/Hipfire Filter",
+		["zh-tw"] = "瞄準/腰射過濾器",
 	},
 	ads_only = {
 		en = "ADS Only",
+		["zh-tw"] = "僅瞄準",
 	},
 	ads_hip = {
 		en = "ADS and Hipfire",
+		["zh-tw"] = "瞄準和腰射",
 	},
 	hip_only = {
 		en = "Hipfire Only",
+		["zh-tw"] = "僅腰射",
 	},
 	rate_of_fire = {
 		en = "Rate of Fire",
+		["zh-tw"] = "射速",
 	},
 	rate_of_fire_hip = {
 		en = "Rate of Fire %% (Hipfire)",
+		["zh-tw"] = "射速 %% (腰射)",
 	},
 	rate_of_fire_ads = {
 		en = "Rate of Fire %% (ADS)",
+		["zh-tw"] = "射速 %% (瞄準)",
 	},
 	automatic_special = {
 		en = "Automatic Special",
+		["zh-tw"] = "自動特殊攻擊",
 	},
 	-- WEAPONS
 	-- MELEE
@@ -423,145 +484,192 @@ return {
 	},
 	-- RANGED
 	stubrevolver_p1_m1 = {
-		en = "Zaron Mk IIa Quickdraw Stub Revolver"
+		en = "Zaron Mk IIa Quickdraw Stub Revolver",
+		["zh-tw"] = "IIa(2A)型快拔左輪手槍(扎羅娜)",
 	},
 	stubrevolver_p1_m2 = {
-		en = "Agripinaa Mk XIV Quickdraw Stub Revolver"
+		en = "Agripinaa Mk XIV Quickdraw Stub Revolver",
+		["zh-tw"] = "XIV(十四)型快拔左輪手槍(阿格里皮娜)",
 	},
 	shotgun_p1_m1 = {
-		en = "Zarona Mk VI Combat Shotgun"
+		en = "Zarona Mk VI Combat Shotgun",
+		["zh-tw"] = "VI(六)型戰鬥霰彈槍(扎羅娜)",
 	},
 	shotgun_p1_m2 = {
-		en = "Agripinaa Mk VII Combat Shotgun"
+		en = "Agripinaa Mk VII Combat Shotgun",
+		["zh-tw"] = "VII(七)型戰鬥霰彈槍(阿格里皮娜)",
 	},
 	shotgun_p1_m3 = {
-		en = "Accatran Mk IX Combat Shotgun"
+		en = "Accatran Mk IX Combat Shotgun",
+		["zh-tw"] = "IX(九)型戰鬥霰彈槍(奧克塔蘭)",
 	},
 	shotgun_p2_m1 = {
-		en = "Crucis Mk XI Double-Barrelled Shotgun"
+		en = "Crucis Mk XI Double-Barrelled Shotgun",
+		["zh-tw"] = "XI(11)型雙管霰彈槍(十字星)",
 	},
 	plasmagun_p1_m1 = {
-		en = "M35 Magnacore Mk II Plasma Gun"
+		en = "M35 Magnacore Mk II Plasma Gun",
+		["zh-tw"] = "II(二)型電漿槍(M35熔岩核心)",
 	},
 	ogryn_thumper_p1_m1 = {
-		en = "Lorenz Mk V Kickback"
+		en = "Lorenz Mk V Kickback",
+		["zh-tw"] = "V(五)型反衝者(洛倫茲)",
 	},
 	ogryn_thumper_p1_m2 = {
-		en = "Lorenz Mk VI Rumbler"
+		en = "Lorenz Mk VI Rumbler",
+		["zh-tw"] = "VI(六)型震盪槍(洛倫茲)",
 	},
 	ogryn_rippergun_p1_m1 = {
-		en = "Foe-Rend Mk II Ripper Gun"
+		en = "Foe-Rend Mk II Ripper Gun",
+		["zh-tw"] = "II(二)型撕裂槍(碎敵)",
 	},
 	ogryn_rippergun_p1_m2 = {
-		en = "Foe-Rend Mk V Ripper Gun"
+		en = "Foe-Rend Mk V Ripper Gun",
+		["zh-tw"] = "V(五)型撕裂槍(碎敵)",
 	},
 	ogryn_rippergun_p1_m3 = {
-		en = "Foe-Rend Mk VI Ripper Gun"
+		en = "Foe-Rend Mk VI Ripper Gun",
+		["zh-tw"] = "VI(六)型撕裂槍(碎敵)",
 	},
 	ogryn_heavystubber_p1_m1 = {
-		en = "Krourk Mk V Twin-Linked Heavy Stubber"
+		en = "Krourk Mk V Twin-Linked Heavy Stubber",
+		["zh-tw"] = "V(五)型雙鏈重型機槍(克魯克)",
 	},
 	ogryn_heavystubber_p1_m2 = {
-		en = "Gorgonum Mk IV Twin-Linked Heavy Stubber"
+		en = "Gorgonum Mk IV Twin-Linked Heavy Stubber",
+		["zh-tw"] = "IV(四)型雙鏈重型機槍(戈爾貢努姆)",
 	},
 	ogryn_heavystubber_p1_m3 = {
-		en = "Achlys Mk VII Twin-Linked Heavy Stubber"
+		en = "Achlys Mk VII Twin-Linked Heavy Stubber",
+		["zh-tw"] = "VII(七)型雙鏈重型機槍(阿克利斯)",
 	},
 	ogryn_heavystubber_p2_m1 = {
-		en = "Krourk Mk IIa Heavy Stubber"
+		en = "Krourk Mk IIa Heavy Stubber",
+		["zh-tw"] = "IIa(2A)型重伐木槍(克魯克)",
 	},
 	ogryn_heavystubber_p2_m2 = {
-		en = "Gorgonum Mk IIIa Heavy Stubber"
+		en = "Gorgonum Mk IIIa Heavy Stubber",
+		["zh-tw"] = "IIIa(3A)型重伐木槍(戈爾貢努姆)",
 	},
 	ogryn_heavystubber_p2_m3 = {
-		en = "Achlys Mk II Heavy Stubber"
+		en = "Achlys Mk II Heavy Stubber",
+		["zh-tw"] = "II(二)型重伐木槍(阿克利斯)",
 	},
 	laspistol_p1_m1 = {
-		en = "Accatran MG Mk II Heavy Laspistol"
+		en = "Accatran MG Mk II Heavy Laspistol",
+		["zh-tw"] = "II(二)型重型雷射手槍(卡特雷爾)",
 	},
 	laspistol_p1_m3 = {
-		en = "Kantrael Mk X Heavy Laspistol"
+		en = "Kantrael Mk X Heavy Laspistol",
+		["zh-tw"] = "X(十)型重型雷射手槍(奧克塔蘭MG)",
 	},
 	lasgun_p1_m1 = {
-		en = "Kantrael Mk VII Infantry Lasgun"
+		en = "Kantrael Mk VII Infantry Lasgun",
+		["zh-tw"] = "VII(七)型步兵雷射槍(卡特雷爾)",
 	},
 	lasgun_p1_m2 = {
-		en = "Kantrael Mk IIb Infantry Lasgun"
+		en = "Kantrael Mk IIb Infantry Lasgun",
+		["zh-tw"] = "IIb(2B)型步兵雷射槍(卡特雷爾)",
 	},
 	lasgun_p1_m3 = {
-		en = "Kantrael Mk IX Infantry Lasgun"
+		en = "Kantrael Mk IX Infantry Lasgun",
+		["zh-tw"] = "IX(九)型步兵雷射槍(卡特雷爾)",
 	},
 	lasgun_p2_m1 = {
-		en = "Lucius Mk IIIa Helbore Lasgun"
+		en = "Lucius Mk IIIa Helbore Lasgun",
+		["zh-tw"] = "IIIa(3A)型冥潮雷射槍(盧修斯)",
 	},
 	lasgun_p2_m2 = {
-		en = "Lucius Mk V Helbore Lasgun"
+		en = "Lucius Mk V Helbore Lasgun",
+		["zh-tw"] = "V(五)型冥潮雷射槍(盧修斯)",
 	},
 	lasgun_p2_m3 = {
-		en = "Lucius Mk IV Helbore Lasgun"
+		en = "Lucius Mk IV Helbore Lasgun",
+		["zh-tw"] = "IV(四)型冥潮雷射槍(盧修斯)",
 	},
 	lasgun_p3_m1 = {
-		en = "Accatran Mk VIc Recon Lasgun"
+		en = "Accatran Mk VIc Recon Lasgun",
+		["zh-tw"] = "VIc(6C)型偵察雷射槍(奧克塔蘭)",
 	},
 	lasgun_p3_m2 = {
-		en = "Accatran Mk XII Recon Lasgun"
+		en = "Accatran Mk XII Recon Lasgun",
+		["zh-tw"] = "XII(十二)型偵察雷射槍(奧克塔蘭)",
 	},
 	lasgun_p3_m3 = {
-		en = "Accatran Mk XIV Recon Lasgun"
+		en = "Accatran Mk XIV Recon Lasgun",
+		["zh-tw"] = "XIV(十四)型偵察雷射槍(奧克塔蘭)",
 	},
 	forcestaff_p1_m1 = {
-		en = "Equinox Mk III Voidblast Force Staff"
+		en = "Equinox Mk III Voidblast Force Staff",
+		["zh-tw"] = "III(三)型虛空爆破力場法杖(陰陽)",
 	},
 	forcestaff_p2_m1 = {
-		en = "Rifthaven Mk II Inferno Force Staff"
+		en = "Rifthaven Mk II Inferno Force Staff",
+		["zh-tw"] = "II(二)型烈焰力場法杖(裂隙避難所)",
 	},
 	forcestaff_p3_m1 = {
-		en = "Nomanus Mk VI Electrokinetic Force Staff"
+		en = "Nomanus Mk VI Electrokinetic Force Staff",
+		["zh-tw"] = "VI(六)型電流力場法杖(諾瑪努斯)",
 	},
 	forcestaff_p4_m1 = {
-		en = "Equinox Mk IV Voidstrike Force Staff"
+		en = "Equinox Mk IV Voidstrike Force Staff",
+		["zh-tw"] = "IV(四)型虛空打擊力場法杖(陰陽)",
 	},
 	flamer_p1_m1 = {
-		en = "Artemia Mk III Purgation Flamer"
+		en = "Artemia Mk III Purgation Flamer",
+		["zh-tw"] = "III(三)型淨化火焰噴射器(奧特米亞)",
 	},
 	bolter_p1_m1 = {
-		en = "Locke Mk IIb Spearhead Boltgun"
+		en = "Locke Mk IIb Spearhead Boltgun",
+		["zh-tw"] = "IIb(2B)型矛頭爆矢槍(洛克)",
 	},
 	boltpistol_p1_m1 = {
-		en = "Godwyn-Branx Mk IV Bolt Pistol"
+		en = "Godwyn-Branx Mk IV Bolt Pistol",
+		["zh-tw"] = "IV(四)型爆彈手槍(戈德溫-布蘭克斯)",
 	},
 	autopistol_p1_m1 = {
-		en = "Ius Mk IV Shredder Autopistol"
+		en = "Ius Mk IV Shredder Autopistol",
+		["zh-tw"] = "IV(四)型撕裂者自動手槍(尤斯)",
 	},
 	autogun_p1_m1 = {
-		en = "Agripinaa Mk I Infantry Autogun"
+		en = "Agripinaa Mk I Infantry Autogun",
+		["zh-tw"] = "I(一)型步兵自動槍(阿格里皮娜)",
 	},
 	autogun_p1_m2 = {
-		en = "Vraks Mk V Infantry Autogun"
+		en = "Vraks Mk V Infantry Autogun",
+		["zh-tw"] = "V(五)型步兵自動槍(弗拉克斯)",
 	},
 	autogun_p1_m3 = {
-		en = "Columnus Mk VIII Infantry Autogun"
+		en = "Columnus Mk VIII Infantry Autogun",
+		["zh-tw"] = "VIII(八)型步兵自動槍(哥倫努)",
 	},
 	autogun_p2_m1 = {
-		en = "Vraks Mk II Braced Autogun"
+		en = "Vraks Mk II Braced Autogun",
+		["zh-tw"] = "II(二)型槍托自動槍(弗拉克斯)",
 	},
 	autogun_p2_m2 = {
-		en = "Graia Mk IV Braced Autogun"
+		en = "Graia Mk IV Braced Autogun",
+		["zh-tw"] = "IV(四)型槍托自動槍(格拉亞)",
 	},
 	autogun_p2_m3 = {
-		en = "Agripinaa Mk VIII Braced Autogun"
+		en = "Agripinaa Mk VIII Braced Autogun",
+		["zh-tw"] = "VIII(八)型槍托自動槍(阿格里皮娜)",
 	},
 	autogun_p3_m1 = {
-		en = "Columnus Mk III Heavy Autogun"
+		en = "Columnus Mk III Heavy Autogun",
+		["zh-tw"] = "III(三)型機動自動槍(哥倫努)",
 	},
 	autogun_p3_m2 = {
-		en = "Graia Mk VII Heavy Autogun"
+		en = "Graia Mk VII Heavy Autogun",
+		["zh-tw"] = "VII(七)型機動自動槍(格拉亞)",
 	},
 	autogun_p3_m3 = {
-		en = "Agripinaa Mk IX Heavy Autogun"
+		en = "Agripinaa Mk IX Heavy Autogun",
+		["zh-tw"] = "IX(九)型機動自動槍(阿格里皮娜)",
 	},
 	psyker_throwing_knives = {
-		en = "Assail"
+		en = "Assail",
+		["zh-tw"] = "突襲",
 	},
 }
 
