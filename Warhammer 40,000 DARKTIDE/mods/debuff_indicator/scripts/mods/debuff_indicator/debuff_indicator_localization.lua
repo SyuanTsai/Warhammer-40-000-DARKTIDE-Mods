@@ -35,11 +35,6 @@ mod.display_style_names = {
     "count",
 }
 
-mod.display_group_names = {
-    "debuff",
-    "dot",
-    "stagger",
-    "suppression",
 mod.mutators = {
     chaos_armored_infected = "chaos_newly_infected",
     chaos_hound_mutator = "chaos_hound",
