@@ -189,9 +189,9 @@
 
 ### [Stimms Pickup Icon](https://www.nexusmods.com/warhammer40kdarktide/mods/265)
     強化針顯示改善，讓你可以清楚知道隊友目前的針是甚麼
-- MOD 網站最後更新日期：Last updated 31 December 2024 12:36PM
-- MOD 版本：1.3.1
-- MOD 檔案名稱：StimmsPickupIcon-265-1-3-1-1735648580
+- MOD 網站最後更新日期：Last updated 24 April 2025 4:21PM
+- MOD 版本：1.3.2
+- MOD 檔案名稱：StimmsPickupIcon-265-1-3-2-1745511704
 - 手動維護最後下載日期：2025-02-09
 
 ### [Transparent Shield (Ogryn)](https://www.nexusmods.com/warhammer40kdarktide/mods/439)
@@ -431,7 +431,7 @@
 - MOD 網站最後更新日期：Last updated 28 October 20231:34PM
 - MOD 版本：Version 1.5
 - MOD 檔案名稱：TalentRefundBelow-216-1-5-1698496483
-- 手動維護最後下載日期：2025-02-09
+- 手動維護最後下載日期：2025-04-25
 
 ### [Hybrid Sprint](https://www.nexusmods.com/warhammer40kdarktide/mods/342?tab=description)
     混合衝刺 - 能夠解放雙手不需要一直衝刺
