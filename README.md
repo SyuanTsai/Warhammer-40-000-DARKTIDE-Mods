@@ -56,10 +56,10 @@
 
 ### [Skitarius](https://www.nexusmods.com/warhammer40kdarktide/mods/510)
     顱骨支援
-- MOD 網站最後更新日期：Last updated 20 April 2025 4:25PM
-- MOD 版本：1.0.2
-- MOD 檔案名稱：Skitarius 1.0.2-510-1-0-2-1745166313
-- 手動維護最後下載日期：2025-04-21
+- MOD 網站最後更新日期：Last updated 25 April 2025 1:11AM
+- MOD 版本：1.0.6
+- MOD 檔案名稱：Skitarius 1.0.6-510-1-0-6-1745543466
+- 手動維護最後下載日期：2025-04-25
 
 ### JishuJun
     團隊計分

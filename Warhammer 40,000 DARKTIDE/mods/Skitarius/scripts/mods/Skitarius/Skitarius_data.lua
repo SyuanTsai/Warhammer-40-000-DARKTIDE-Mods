@@ -1,5 +1,26 @@
 local mod = get_mod("Skitarius")
 
+local keybind_selection_options = {
+    { value = "override_primary",      text = "override_primary" },
+    { value = "keybind_one_held",      text = "keybind_one_held" },
+    { value = "keybind_one_pressed",   text = "keybind_one_pressed" },
+    { value = "keybind_two_held",      text = "keybind_two_held" },
+    { value = "keybind_two_pressed",   text = "keybind_two_pressed" },
+    { value = "keybind_three_held",    text = "keybind_three_held" },
+    { value = "keybind_three_pressed", text = "keybind_three_pressed" },
+    { value = "keybind_four_held",     text = "keybind_four_held" },
+    { value = "keybind_four_pressed",  text = "keybind_four_pressed" },
+}
+local melee_sequence_options = {
+    { text = "none",           value = "none" },
+    { text = "light_attack",   value = "light_attack" },
+    { text = "heavy_attack",   value = "heavy_attack" },
+    { text = "special_action", value = "special_action" },
+    { text = "block",          value = "block" },
+    { text = "push",           value = "push" },
+    { text = "push_attack",    value = "push_attack" },
+}
+
 return {
 	name         = mod:localize("mod_name"),
 	description  = mod:localize("mod_description"),
@@ -17,16 +38,45 @@ return {
 			},
 			--]]
 			{
-				setting_id      = "hud_element",
-				type            = "checkbox",
-				default_value   = false,
+				setting_id = "mod_settings",
+				type       = "group",
+				sub_widgets = {
+					{
+						setting_id      = "hud_element",
+						tooltip = "hud_element_tooltip",
+						type            = "checkbox",
+						default_value   = false,
+					},
+					{
+						setting_id 	  = "hud_element_size",
+						type          = "numeric",
+						default_value = 50,
+						range         = {0, 100},
+					},
+					{
+						setting_id = "mod_enable_held",
+						type = "keybind",
+						default_value = {},
+						keybind_trigger = "held",
+						keybind_type = "function_call",
+						function_name = "mod_enable_toggle",
+					},
+					{
+						setting_id = "mod_enable_pressed",
+						type = "keybind",
+						default_value = {},
+						keybind_trigger = "pressed",
+						keybind_type = "function_call",
+						function_name = "mod_enable_toggle",
+					},
+					{
+						setting_id = "mod_enable_verbose",
+						type = "checkbox",
+						default_value = false,
+					},
+				}
 			},
-			{
-				setting_id 	  = "hud_element_size",
-				type          = "numeric",
-				default_value = 50,
-				range         = {0, 100},
-			},
+			
 			{
 				setting_id = "keybinds",
 				type       = "group",
@@ -211,20 +261,11 @@ return {
 						setting_id = "keybind_selection_melee",
 						type = "dropdown",
 						default_value = "override_primary",
-						options = {
-							{value = "override_primary", text = "override_primary"},
-							{value = "keybind_one_held", text = "keybind_one_held"},
-							{value = "keybind_one_pressed", text = "keybind_one_pressed"},
-							{value = "keybind_two_held", text = "keybind_two_held"},
-							{value = "keybind_two_pressed", text = "keybind_two_pressed"},
-							{value = "keybind_three_held", text = "keybind_three_held"},
-							{value = "keybind_three_pressed", text = "keybind_three_pressed"},
-							{value = "keybind_four_held", text = "keybind_four_held"},
-							{value = "keybind_four_pressed", text = "keybind_four_pressed"},
-						}
+						options = table.clone(keybind_selection_options)
 					},
 					{
 						setting_id = "heavy_buff",
+						tooltip = "heavy_buff_tooltip",
 						type = "dropdown",
 						default_value = "none",
 						options = {
@@ -243,105 +284,101 @@ return {
 					},
 					{
 						setting_id = "heavy_buff_special",
+						tooltip = "heavy_buff_special_tooltip",
 						type = "checkbox",
 						default_value = false,
 					},
 					{
 						setting_id = "sequence_cycle_point",
+						tooltip = "sequence_cycle_point_tooltip",
 						type = "dropdown",
 						default_value = "sequence_step_one",
 						options = {
-							{text = "sequence_step_one", value = "sequence_step_one"},
-							{text = "sequence_step_two", value = "sequence_step_two"},
-							{text = "sequence_step_three", value = "sequence_step_three"},
-							{text = "sequence_step_four", value = "sequence_step_four"},
-							{text = "sequence_step_five", value = "sequence_step_five"},
-							{text = "sequence_step_six", value = "sequence_step_six"},
-						}
+                            { text = "sequence_step_one",    value = "sequence_step_one" },
+                            { text = "sequence_step_two",    value = "sequence_step_two" },
+                            { text = "sequence_step_three",  value = "sequence_step_three" },
+                            { text = "sequence_step_four",   value = "sequence_step_four" },
+                            { text = "sequence_step_five",   value = "sequence_step_five" },
+                            { text = "sequence_step_six",    value = "sequence_step_six" },
+                            { text = "sequence_step_seven",  value = "sequence_step_seven" },
+                            { text = "sequence_step_eight",  value = "sequence_step_eight" },
+                            { text = "sequence_step_nine",   value = "sequence_step_nine" },
+                            { text = "sequence_step_ten",    value = "sequence_step_ten" },
+                            { text = "sequence_step_eleven", value = "sequence_step_eleven" },
+                            { text = "sequence_step_twelve", value = "sequence_step_twelve" },
+                        }
 					},
 					{
 						setting_id = "sequence_step_one",
 						type = "dropdown",
 						default_value = "none",
-						options = {
-							{text = "none", value = "none"},
-							{text = "light_attack", value = "light_attack"},
-							{text = "heavy_attack", value = "heavy_attack"},
-							{text = "special_action", value = "special_action"},
-							{text = "block", value = "block"},
-							{text = "push", value = "push"},
-							{text = "push_attack", value = "push_attack"},
-						}
+						options = table.clone(melee_sequence_options)
 					},
 					{
 						setting_id = "sequence_step_two",
 						type = "dropdown",
 						default_value = "none",
-						options = {
-							{text = "none", value = "none"},
-							{text = "light_attack", value = "light_attack"},
-							{text = "heavy_attack", value = "heavy_attack"},
-							{text = "special_action", value = "special_action"},
-							{text = "block", value = "block"},
-							{text = "push", value = "push"},
-							{text = "push_attack", value = "push_attack"},
-						}
+						options = table.clone(melee_sequence_options)
 					},
 					{
 						setting_id = "sequence_step_three",
 						type = "dropdown",
 						default_value = "none",
-						options = {
-							{text = "none", value = "none"},
-							{text = "light_attack", value = "light_attack"},
-							{text = "heavy_attack", value = "heavy_attack"},
-							{text = "special_action", value = "special_action"},
-							{text = "block", value = "block"},
-							{text = "push", value = "push"},
-							{text = "push_attack", value = "push_attack"},
-						}
+						options = table.clone(melee_sequence_options)
 					},
 					{
 						setting_id = "sequence_step_four",
 						type = "dropdown",
 						default_value = "none",
-						options = {
-							{text = "none", value = "none"},
-							{text = "light_attack", value = "light_attack"},
-							{text = "heavy_attack", value = "heavy_attack"},
-							{text = "special_action", value = "special_action"},
-							{text = "block", value = "block"},
-							{text = "push", value = "push"},
-							{text = "push_attack", value = "push_attack"},
-						}
+						options = table.clone(melee_sequence_options)
 					},
 					{
 						setting_id = "sequence_step_five",
 						type = "dropdown",
 						default_value = "none",
-						options = {
-							{text = "none", value = "none"},
-							{text = "light_attack", value = "light_attack"},
-							{text = "heavy_attack", value = "heavy_attack"},
-							{text = "special_action", value = "special_action"},
-							{text = "block", value = "block"},
-							{text = "push", value = "push"},
-							{text = "push_attack", value = "push_attack"},
-						}
+						options = table.clone(melee_sequence_options)
 					},
 					{
 						setting_id = "sequence_step_six",
 						type = "dropdown",
 						default_value = "none",
-						options = {
-							{text = "none", value = "none"},
-							{text = "light_attack", value = "light_attack"},
-							{text = "heavy_attack", value = "heavy_attack"},
-							{text = "special_action", value = "special_action"},
-							{text = "block", value = "block"},
-							{text = "push", value = "push"},
-							{text = "push_attack", value = "push_attack"},
-						}
+						options = table.clone(melee_sequence_options)
+					},
+					{
+						setting_id = "sequence_step_seven",
+						type = "dropdown",
+						default_value = "none",
+						options = table.clone(melee_sequence_options)
+					},
+					{
+						setting_id = "sequence_step_eight",
+						type = "dropdown",
+						default_value = "none",
+						options = table.clone(melee_sequence_options)
+					},
+					{
+						setting_id = "sequence_step_nine",
+						type = "dropdown",
+						default_value = "none",
+						options = table.clone(melee_sequence_options)
+					},
+					{
+						setting_id = "sequence_step_ten",
+						type = "dropdown",
+						default_value = "none",
+						options = table.clone(melee_sequence_options)
+					},
+					{
+						setting_id = "sequence_step_eleven",
+						type = "dropdown",
+						default_value = "none",
+						options = table.clone(melee_sequence_options)
+					},
+					{
+						setting_id = "sequence_step_twelve",
+						type = "dropdown",
+						default_value = "none",
+						options = table.clone(melee_sequence_options)
 					},
 					{
 						setting_id = "reset_weapon_melee",
@@ -458,17 +495,7 @@ return {
 						setting_id = "keybind_selection_ranged",
 						type = "dropdown",
 						default_value = "override_primary",
-						options = {
-							{value = "override_primary", text = "override_primary"},
-							{value = "keybind_one_held", text = "keybind_one_held"},
-							{value = "keybind_one_pressed", text = "keybind_one_pressed"},
-							{value = "keybind_two_held", text = "keybind_two_held"},
-							{value = "keybind_two_pressed", text = "keybind_two_pressed"},
-							{value = "keybind_three_held", text = "keybind_three_held"},
-							{value = "keybind_three_pressed", text = "keybind_three_pressed"},
-							{value = "keybind_four_held", text = "keybind_four_held"},
-							{value = "keybind_four_pressed", text = "keybind_four_pressed"},
-						}
+						options = table.clone(keybind_selection_options)
 					},
 					{
 						setting_id = "automatic_fire",
@@ -479,6 +506,7 @@ return {
 							{text = "standard", value = "standard"},
 							{text = "charged", value = "charged"},
 							{text = "special", value = "special"},
+							{text = "special_standard", value = "special_standard"},
 						}
 					},
 					{

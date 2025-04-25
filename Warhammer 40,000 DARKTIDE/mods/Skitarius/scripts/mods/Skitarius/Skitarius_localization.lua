@@ -15,12 +15,32 @@ return {
 	},
 	-- HUD Element
 	hud_element = {
-		en = "Enable Mod Indicator",
+		en = "Enable Sequence Indicator",
 		["zh-tw"] = "啟用MOD指示器",
 	},
+	hud_element_tooltip = {
+		en = "When enabled, a HUD icon will be displayed whenever a sequence is running."
+	},
 	hud_element_size = {
-		en = "Mod Indicator Size",
+		en = "Sequence Indicator Size",
 		["zh-tw"] = "MOD指示器大小",
+	},
+	-- Mod Settings
+	mod_settings = {
+		en = "Mod Settings",
+		["zh-tw"] = "模組設定",
+	},
+	mod_enable_held = {
+		en = "Enable/Disable Mod (Held)",
+		["zh-tw"] = "啟用/禁用模組 (長按)",
+	},
+	mod_enable_pressed = {
+		en = "Enable/Disable Mod (Toggle)",
+		["zh-tw"] = "啟用/禁用模組 (切換)",
+	},
+	mod_enable_verbose = {
+		en = "Notify on Mod Enabled/Disabled",
+		["zh-tw"] = "啟用/禁用模組時通知",
 	},
 	-- Keybinds
 	maintain_bind = {
@@ -100,6 +120,9 @@ return {
 		en = "Heavy Buff Modifier",
 		["zh-tw"] = "重擊強化調整",
 	},
+	heavy_buff_tooltip = {
+		en = "When selected, Heavy attacks will be charged until this buff reaches the specified number of stacks in the Heavy Buff Stacks setting."
+	},
 	thrust = {
 		en = "Thrust",
 		["zh-tw"] = "推進",
@@ -121,6 +144,9 @@ return {
 		en = "Special Required For Heavy Modifier",
 		["zh-tw"] = "重擊修飾需要特殊攻擊",
 	},
+	heavy_buff_special_tooltip = {
+		en = "When enabled, the Heavy Buff Modifier setting will only take effect while the current weapon's Special Action is active."
+	},
 	global_melee = {
 		en = "GLOBAL",
 		["zh-tw"] = "全局",
@@ -128,6 +154,9 @@ return {
 	sequence_cycle_point = {
 		en = "Cycle Point",
 		["zh-tw"] = "循環點",
+	},
+	sequence_cycle_point_tooltip = {
+		en = "Once the sequence has completed, it will restart from this step.",
 	},
 	sequence_step_one = {
 		en = "Step One",
@@ -152,6 +181,30 @@ return {
 	sequence_step_six = {
 		en = "Step Six",
 		["zh-tw"] = "步驟六",
+	},
+	sequence_step_seven = {
+		en = "Step Seven",
+		["zh-tw"] = "步驟七",
+	},
+	sequence_step_eight = {
+		en = "Step Eight",
+		["zh-tw"] = "步驟八",
+	},
+	sequence_step_nine = {
+		en = "Step Nine",
+		["zh-tw"] = "步驟九",
+	},
+	sequence_step_ten = {
+		en = "Step Ten",
+		["zh-tw"] = "步驟十",
+	},
+	sequence_step_eleven = {
+		en = "Step Eleven",
+		["zh-tw"] = "步驟十一",
+	},
+	sequence_step_twelve = {
+		en = "Step Twelve",
+		["zh-tw"] = "步驟十二",
 	},
 	-- Sequence steps
 	none = {
@@ -239,6 +292,10 @@ return {
 	special = {
 		en = "Special",
 		["zh-tw"] = "特殊",
+	},
+	special_standard = {
+		en = "Special + Standard",
+		["zh-tw"] = "特殊和標準",
 	},
 	auto_charge_threshold = {
 		en = "Charge Threshold %%",
