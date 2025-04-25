@@ -14,6 +14,11 @@ local HUD_ACTIVE = false
 local HALT_ON_INTERRUPT = false
 local MAINTAIN_BIND = false
 
+-- Mod Enable/Disable
+mod_enable_verbose = false
+ENABLE_BIND_HELD = {}
+ENABLE_BIND_PRESSED = {}
+
 -- SKITARIUS: Game/engine state data for handling desynchronization
 local SKITARIUS = {
     T,              -- Current engine time
@@ -30,6 +35,7 @@ local MAGOS = {
     WEAPON_NAME,    -- Weapon name as known to the game internals, matching its weapon template
     WEAPON_TYPE,    -- "MELEE" or "RANGED"
     ACTION_NAME,    -- Action name as known to the game internals
+    PREV_NAME,      -- Previous action name as known to the game internals
     COMMAND_NAME,   -- Action name as known to the mod/sequences
     ACTION_MAP,     -- Active weapon's unique mapping of internal actions to mod/sequence actions
     RUNNING_ACTION, -- Reference to ActionHandler's current handler_data.running_action
@@ -37,6 +43,7 @@ local MAGOS = {
     COMPONENT,      -- Reference to ActionHandler's current handler_data.component
     T,              -- Current engine time from the perspective of the current ActionHandler action, which may disagree with SKITARIUS.T during desync
     ACTION_TIME,    -- Amount of time which has been spent in the current action
+    TIME_IN_SWEEP,  -- Amount of time which has been spent in the ActionSweep corresponding to the action (if one exists)
     SPECIAL,        -- Flag indicating whether or not the current weapon's special action is active
     STALE,          -- Flag indicating whether the mod should treat the current action as finished, regardless of engine state
     CHARGED,        -- Flag indicating whether the current action is a heavy AND has been charged enough to release
@@ -53,6 +60,19 @@ local KEYBINDS = {
     HELD_THREE,
     PRESSED_FOUR,
     HELD_FOUR,
+}
+
+-- ACTIVE_BINDS: List of keybinds which are currently pressed/toggled, even if not actively controlling input
+local ACTIVE_BINDS = {
+    override_primary = false,
+    keybind_one_held = false,
+    keybind_one_pressed = false,
+    keybind_two_held = false,
+    keybind_two_pressed = false,
+    keybind_three_held = false,
+    keybind_three_pressed = false,
+    keybind_four_held = false,
+    keybind_four_pressed = false,
 }
 
 -- VALID: The current state each input should match to continue the sequence
@@ -295,6 +315,7 @@ local SUB_SEQUENCE = {
 -- ENGRAM: Container for melee sequence data
 local ENGRAM = {
     INDEX = 1,
+    BIND = "none",
     SETTINGS = {},
     COMMANDS = {}
 }
@@ -329,7 +350,13 @@ local MELEE_TEMPLATE = {
     sequence_step_three = "none",
     sequence_step_four = "none",
     sequence_step_five = "none",
-    sequence_step_six = "none"
+    sequence_step_six = "none",
+    sequence_step_seven = "none",
+    sequence_step_eight = "none",
+    sequence_step_nine = "none",
+    sequence_step_ten = "none",
+    sequence_step_eleven = "none",
+    sequence_step_twelve = "none",
 }
 
 -- RANGED_TEMPLATE: Template and default settings for ranged weapons
@@ -394,15 +421,43 @@ mod.update = function()
         mod.perflog()
         mod.update_peril()
         mod.update_hud()
+        mod.refresh_weapon()
         --------------------------------------------------------------------------------------------------------------------
-        if (mod.ready_for_intercept() and INTERCEPT.AUTHORIZED) or mod.override_primary() then
-            mod.update_engram(mod.override_primary() and "override_primary" or INTERCEPT.AUTHORIZED and INTERCEPT.AUTHORITY)
-            mod.update_buffer()
-            mod.execute()
-        else
+        if mod.ready_for_intercept() or mod.override_primary() then
+            mod.update_binds()
+            if INTERCEPT.AUTHORIZED or mod.override_primary() then
+                mod.update_buffer()
+                mod.execute()
+            else
+                mod.kill_sequence()
+            end
+        elseif Managers.ui:using_input() then
             mod.kill_sequence()
         end
         --------------------------------------------------------------------------------------------------------------------
+    end
+end
+
+-- Set engram data to that of the most recent valid bind, if not already set
+mod.update_binds = function()
+    local most_recent = 0
+    local most_recent_bind = "none"
+    for key, value in pairs(ACTIVE_BINDS) do
+        if ACTIVE_BINDS[key] then
+            if ACTIVE_BINDS[key] > most_recent and mod.valid_engram(key) then
+                most_recent = ACTIVE_BINDS[key]
+                most_recent_bind = key
+            end
+        end
+    end
+    -- Ensure INTERCEPT.AUTHORIZED is set up, if applicable
+    if most_recent_bind ~= "none" and most_recent_bind ~= "override_primary" and not INTERCEPT.AUTHORIZED then
+        INTERCEPT.AUTHORIZED = true
+        INTERCEPT.AUTHORITY = most_recent_bind
+    end
+    -- Update engram if there is a recent bind which does not match the engram, or the engram is stuck
+    if most_recent_bind ~= ENGRAM.BIND or ENGRAM.COMMANDS[ENGRAM.INDEX] == nil then
+        mod.update_engram(most_recent_bind)
     end
 end
 
@@ -412,19 +467,28 @@ mod.kill_sequence = function()
     for key, value in pairs(VALID) do
         VALID[key] = false
     end
+    -- Clear LAST_BIND
+    for key, value in pairs(ACTIVE_BINDS) do
+        ACTIVE_BINDS[key] = false
+    end
     -- Clear ENGRAM
     ENGRAM = {
         INDEX = 1,
+        BIND = "none",
         SETTINGS = {},
         COMMANDS = {}
     }
     -- Set current action as concluded and current state to "idle"
+    if MAGOS.IDENTIFIER and not MAGOS.STALE then
+        mod.debug_log("STALE FLAG SET BY KILL SEQUENCE", "KILL_SEQUENCE" .. MAGOS.IDENTIFIER)
+    end
     MAGOS.STALE = true
     -- Clear rollback buffer
     for i = 1, #SKITARIUS.BUFFER do
         SKITARIUS.BUFFER[i] = nil
     end
     -- Clear intercept flag
+    INTERCEPT.AUTHORIZED = false
     INTERCEPT.NEW = false
     -- Clear override flag
     INTERCEPT.OVERRIDE = false
@@ -538,6 +602,12 @@ mod.on_setting_changed = function(setting_name)
         BIND_DATA[temp_bind].RANGED[temp_weapon][setting_name] = mod:get(setting_name)
         mod:set("bind_data", BIND_DATA, false)
     -- Individual Misc. Settings
+    elseif setting_name == "mod_enable_verbose" then
+        mod_enable_verbose = mod:get("mod_enable_verbose")
+    elseif setting_name == "mod_enable_held" then
+        ENABLE_BIND_HELD = mod:get("mod_enable_held")
+    elseif setting_name == "mod_enable_pressed" then
+        ENABLE_BIND_PRESSED = mod:get("mod_enable_pressed")
     elseif setting_name == "always_charge" then
         ALWAYS_CHARGE = mod:get("always_charge")
     elseif setting_name == "always_charge_threshold" then
@@ -559,6 +629,8 @@ end
 -- Refresh weapon data and mod settings when mods are loaded
 mod.on_all_mods_loaded = function()
     -- Binds
+    ENABLE_BIND_HELD = mod:get("mod_enable_held")
+    ENABLE_BIND_PRESSED = mod:get("mod_enable_pressed")
     KEYBINDS.PRESSED_ONE = mod:get("keybind_one_pressed")
     KEYBINDS.HELD_ONE = mod:get("keybind_one_held")
     KEYBINDS.PRESSED_TWO = mod:get("keybind_two_pressed")
@@ -612,6 +684,15 @@ end
 --│ ╩ ╩╚═╝ ╩ ╚═╝╩╝╚╝═╩╝  ╚═╝╚═╝ ╩  ╩ ╩╝╚╝╚═╝╚═╝ │--
 --└─────────────────────────────────────────────┘--
 
+mod.mod_enable_toggle = function()
+    if not Managers.ui:using_input() then
+        MOD_ENABLED = not MOD_ENABLED
+        if mod_enable_verbose then
+            mod:echo("Skitarius %s.", MOD_ENABLED and "enabled" or "disabled")
+        end
+    end
+end
+
 mod.pressed_one = function()
     mod.bind_handler("keybind_one_pressed", true)
 end
@@ -638,33 +719,56 @@ mod.held_four = function(first)
 end
 
 mod.bind_handler = function(bind, first)
-    -- Toggle must happen immediately as validation for loading an engram will fail if stunned due to checking for a weapon
-    -- Failure to toggle first will make keybinds get "stuck" if pressed/released during a stun/non-weapon action
-    mod.toggle(bind, first)
-    if INTERCEPT.AUTHORITY == bind and mod.valid_engram(bind) then
-        mod.update_engram(bind)
+    -- Ignore binds if UI is handling input
+    if not Managers.ui:using_input() then
+        -- Toggle bind tracking
+        if string.find(bind, "pressed") then
+            local any_toggle_active = false
+            for key, value in pairs(ACTIVE_BINDS) do
+                if string.find(key, "pressed") and ACTIVE_BINDS[key] then
+                    any_toggle_active = true
+                    break
+                end
+            end
+            -- If any toggle bind is active, pressing any toggle button should be an off switch. Toggles can only initiate sequences if none are active.
+            if any_toggle_active then
+                for key, value in pairs(ACTIVE_BINDS) do
+                    ACTIVE_BINDS[key] = false
+                end
+                -- Instead of sending to toggle, just directly shut it down
+                INTERCEPT.AUTHORIZED = false
+                INTERCEPT.AUTHORITY = "none"
+            else
+                ACTIVE_BINDS[bind] = SKITARIUS.T
+                mod.toggle(bind, first)
+            end
+        -- Held bind tracking
+        else
+            if not ACTIVE_BINDS[bind] and first then
+                ACTIVE_BINDS[bind] = SKITARIUS.T
+                mod.toggle(bind, first)
+            else
+                ACTIVE_BINDS[bind] = false
+                mod.toggle(bind, first)
+            end
+        end
     end
 end
 
 mod.toggle = function(bind, first)
-    -- If a bind is already active when a new one is pressed, swap the authority to the new bind but do not toggle
-    if first and INTERCEPT.AUTHORIZED and INTERCEPT.AUTHORITY ~= "none" and INTERCEPT.AUTHORITY ~= bind then
-        INTERCEPT.AUTHORITY = bind
-        INTERCEPT.NEW = true
-        return
-    end
+    -- If a bind is already active when a new one is pressed, and the new bind IS already active, don't do anything at all
     -- If no bind is active, or this bind already has authority, toggle the bind
     if (INTERCEPT.AUTHORITY == "none" or INTERCEPT.AUTHORITY == bind) then
         -- Held binds send "true" as first param on initial press, toggled binds send it always - do NOT activate from off if this is absent
         if not INTERCEPT.AUTHORIZED and not first then
             return
         end
-        -- If toggle is activating from an inactive state, set flag to indicate startup
+        -- If bind is activating from an inactive state, set flag to indicate startup
         if not INTERCEPT.AUTHORIZED then
             INTERCEPT.NEW = true
         end
         INTERCEPT.AUTHORIZED = not INTERCEPT.AUTHORIZED
-        -- If toggle is deactivating, set authority back to none; otherwise, set to bind
+        -- If bind is deactivating, set authority back to none; otherwise, set to bind
         if INTERCEPT.AUTHORIZED == false then
             INTERCEPT.AUTHORITY = "none"
         else
@@ -686,7 +790,9 @@ end
 
 -- Builds Melee and Ranged settings according to the pressed keybind
 mod.update_engram = function(data)
-    mod.refresh_weapon()
+    if not MAGOS.WEAPON_TYPE then
+        mod.refresh_weapon()
+    end
     -- MELEE ENGRAM
     if MAGOS.WEAPON_TYPE == "MELEE" or (MAGOS.WEAPON_NAME == "ogryn_gauntlet_p1_m1" and not IS_AIMING) then
         if not data or not mod.valid_engram(data) then
@@ -704,7 +810,8 @@ mod.update_engram = function(data)
         local queue = {}
         local settings = {}
         local cycle_index = 1
-        local sequence_stepper = {"sequence_step_one","sequence_step_two","sequence_step_three","sequence_step_four","sequence_step_five","sequence_step_six"}
+        local sequence_stepper = {"sequence_step_one","sequence_step_two","sequence_step_three","sequence_step_four","sequence_step_five","sequence_step_six",
+                                  "sequence_step_seven","sequence_step_eight","sequence_step_nine","sequence_step_ten","sequence_step_eleven","sequence_step_twelve"}
         for i = 1, #sequence_stepper do
             local step = sequence_stepper[i]
             if intermediary_melee[step] and intermediary_melee[step] ~= "none" then
@@ -718,6 +825,12 @@ mod.update_engram = function(data)
             sequence_step_four = 4,
             sequence_step_five = 5,
             sequence_step_six = 6,
+            sequence_step_seven = 7,
+            sequence_step_eight = 8,
+            sequence_step_nine = 9,
+            sequence_step_ten = 10,
+            sequence_step_eleven = 11,
+            sequence_step_twelve = 12,
         }
         if intermediary_melee.sequence_cycle_point then
             local worker = point_map[intermediary_melee.sequence_cycle_point] or 1
@@ -750,6 +863,8 @@ mod.update_engram = function(data)
         ENGRAM.COMMANDS = sub_queue
         ENGRAM.SETTINGS = settings
         ENGRAM.STC = sub_template
+        ENGRAM.BIND = data
+        ENGRAM.INDEX = 1
     else
     -- RANGED "ENGRAM"
         if BIND_DATA[data] and BIND_DATA[data].RANGED and BIND_DATA[data].RANGED[MAGOS.WEAPON_NAME] and BIND_DATA[data].RANGED[MAGOS.WEAPON_NAME].automatic_fire then
@@ -827,6 +942,9 @@ mod.rollback = function(frame)
                 MAGOS = SKITARIUS.BUFFER[i][2]
                 MAGOS.CHARGED = false
                 mod.update_charge_status()
+                if ENGRAM.INDEX ~= SKITARIUS.BUFFER[i][3].INDEX then
+                    mod.debug_log({"ROLLBACK (R1): ", ENGRAM.COMMANDS[ENGRAM.INDEX], " -> ", ENGRAM.COMMANDS[SKITARIUS.BUFFER[i][3].INDEX], " COMPLETE"}, "ROLLBACK_REVERSE_ENGRAM")
+                end
                 ENGRAM = SKITARIUS.BUFFER[i][3]
                 VALID = SKITARIUS.BUFFER[i][4]
                 mod.debug_log({"ROLLBACK (R1): ", SKITARIUS.FRAME," -> ", SKITARIUS.BUFFER[i][1], " COMPLETE"}, "ROLLBACK_REVERSE_SUCCESS_1")
@@ -920,12 +1038,14 @@ mod.ready_for_intercept = function()
     local player_unit = player and player.player_unit
     local weapon = ScriptUnit.has_extension(player_unit, "weapon_system")
     if weapon then
-        mod.refresh_weapon()
+        if not MAGOS.WEAPON_TYPE then
+            mod.refresh_weapon()
+        end
         -- Ranged weapons are not allowed to intercept melee sequences, unless it is the Grenadier Gauntlet
         if MAGOS.WEAPON_TYPE == "RANGED" and MAGOS.WEAPON_NAME ~= "ogryn_gauntlet_p1_m1" then
             return false
         end
-        local allowed_to_interrupt = false
+        local interrupt_forbidden = false
         for k, v in pairs(INPUT) do
             if INPUT[k].key and INPUT[k].value then
                 for _, key in pairs(KEYBINDS) do
@@ -933,9 +1053,9 @@ mod.ready_for_intercept = function()
                         -- If any actual inputs are pressed, allow them to override mod keybinds unless the input is the keybind itself
                         local keybind = INPUT[k].key:match("_(.+)")
                         if keybind ~= key[1] then
-                            allowed_to_interrupt = true
+                            interrupt_forbidden = true
                         else
-                            allowed_to_interrupt = false
+                            interrupt_forbidden = false
                             break
                         end
                     end
@@ -943,11 +1063,14 @@ mod.ready_for_intercept = function()
             end
         end
         -- If HALT_ON_INTERRUPT is enabled, shut down any keybinds when interrupting actions are performed
-        if allowed_to_interrupt and HALT_ON_INTERRUPT then
+        if interrupt_forbidden and HALT_ON_INTERRUPT and not mod.override_primary() then
+            for key, value in pairs(ACTIVE_BINDS) do
+                ACTIVE_BINDS[key] = false
+            end
             INTERCEPT.AUTHORIZED = false
             INTERCEPT.AUTHORITY = "none"
         end
-        return not allowed_to_interrupt
+        return not interrupt_forbidden
     else
         return false
     end
@@ -965,7 +1088,9 @@ mod.override_primary = function()
         return false
     end
     -- Check whether or not, for the current weapon or global melee, there are any sequences set to override the primary action
-    mod.refresh_weapon()
+    if not MAGOS.WEAPON_TYPE then
+        mod.refresh_weapon()
+    end
     -- Do not apply this override if the player is not using a melee weapon (checked separately as refresh_weapon() has other checks to avoid crashes that must happen)
     if MAGOS.WEAPON_TYPE ~= "MELEE" and MAGOS.WEAPON_NAME ~= "ogryn_gauntlet_p1_m1" then
         INTERCEPT.OVERRIDE = false
@@ -977,21 +1102,11 @@ mod.override_primary = function()
         if BIND_DATA.override_primary.MELEE[MAGOS.WEAPON_NAME]
         and BIND_DATA.override_primary.MELEE[MAGOS.WEAPON_NAME].sequence_step_one ~= nil 
         and BIND_DATA.override_primary.MELEE[MAGOS.WEAPON_NAME].sequence_step_one ~= "none" then
-            if not INTERCEPT.OVERRIDE then
-                INTERCEPT.OVERRIDE = true
-                INTERCEPT.NEW = true
-                mod.update_engram("override_primary")
-            end
             return true
         -- But use global data if weapon-specific data is absent/invalid
         elseif BIND_DATA.override_primary.MELEE.global_melee 
         and BIND_DATA.override_primary.MELEE.global_melee.sequence_step_one ~= nil 
         and BIND_DATA.override_primary.MELEE.global_melee.sequence_step_one ~= "none" then
-            if not INTERCEPT.OVERRIDE then
-                INTERCEPT.OVERRIDE = true
-                INTERCEPT.NEW = true
-                mod.update_engram("override_primary")
-            end
             return true
         end
     end
@@ -1348,7 +1463,15 @@ end
 mod.get_current_action = function()
     local current_action = MAGOS.ACTION_NAME or nil
     -- If the current action has ended, or no action has yet been triggered, the player is idle
-    if current_action == nil or MAGOS.STALE then
+    if current_action == nil then
+        if MAGOS.IDENTIFIER then
+            mod.debug_log("SETTING ACTION STATE TO IDLE DUE TO NIL FLAG", "IDLE_NIL_"..MAGOS.IDENTIFIER)
+        end
+        current_action = "idle"
+    elseif MAGOS.STALE then
+        if MAGOS.IDENTIFIER then
+            mod.debug_log("SETTING ACTION STATE TO IDLE DUE TO STALE FLAG", "IDLE_STALE"..MAGOS.IDENTIFIER)
+        end
         current_action = "idle"
     -- Special case handlers, only to be checked if not stale
     else
@@ -1378,21 +1501,38 @@ mod.get_current_action = function()
     -- If after checks there is still a valid action, handle it
     if current_action ~= "idle" then
         current_action = MAGOS.ACTION_MAP and MAGOS.ACTION_MAP[current_action]
-        -- Handle exceptions to the action map
+        -- Handle actions missing from the action map
         if not current_action then
             current_action = mod.handle_action_map_exceptions(MAGOS.ACTION_NAME)
-        end
+        end        
     end
-    -- Handle special cases
-    -- Knife: Attacks after special action are always treated as heavy, even if they are lights
-    if MAGOS.ACTION_NAME == "action_left_heavy_jab_combo" then
-        if ENGRAM.COMMANDS[ENGRAM.INDEX] == "light_attack" then
-            current_action = "light_attack"
+    -- Handle special cases while they are active
+    if not MAGOS.STALE then
+        -- Knife: Attacks after special action are always treated as heavy, even if they are lights
+        if MAGOS.ACTION_NAME == "action_left_heavy_jab_combo" then
+            if ENGRAM.COMMANDS[ENGRAM.INDEX] == "light_attack" then
+                current_action = "light_attack"
+            end
+        -- Thunder Hammer
+        elseif MAGOS.ACTION_NAME == "action_block" then
+            current_action = "block"
+        -- Force Swords
+        elseif MAGOS.ACTION_NAME == "action_find_target" then
+            current_action = "push"
+        elseif MAGOS.ACTION_NAME == "action_fling_target" then
+            current_action = "push_follow_up"
         end
     end
     -- Iterate engram if the current state fulfills the current command
     if current_action == ENGRAM.COMMANDS[ENGRAM.INDEX] then
-        mod.iterate_engram()
+        -- If the current action is a non-special attack, wait for sweep data before considering the command fulfilled
+        if current_action == "light_attack" or current_action == "heavy_attack" then
+            if MAGOS.TIME_IN_SWEEP > 0 then
+                mod.iterate_engram()
+            end
+        else
+            mod.iterate_engram()
+        end
     end
     MAGOS.COMMAND_NAME = current_action
     return current_action
@@ -1400,11 +1540,21 @@ end
 
 -- Handle exceptions to the action map
 mod.handle_action_map_exceptions = function(action_name)
-    -- Latrine Shovels
     if action_name == "action_melee_start_left_special" then
         return "start_attack"
+    -- Pickaxes
+    elseif action_name == "action_melee_start_slide" then
+        return "start_attack"
+    -- Latrine Shovel Mk V pushattack
+    elseif action_name == "action_right_light_pushfollow" then
+        return "push_follow_up"
+    -- Latrine Shovel Mk XIX pushattack
+    elseif action_name == "action_light_pushfollow" then
+        return "push_follow_up"
+    -- Wield fix to keep debug monitor clean
+    elseif action_name == "action_wield" then
+        return "idle"
     else
-    -- Anything else, ignore
         return "idle"
     end
 end
@@ -1417,15 +1567,19 @@ mod.execute = function()
         mod.rollback(SKITARIUS.SERVER_FRAME)
     end
     local current_action = mod.get_current_action()
+    if MAGOS.SETTINGS then
+        local initial_charge = MAGOS.CHARGED
+        mod.update_charge_status()
+        if MAGOS.CHARGED ~= initial_charge then
+            current_action = mod.get_current_action()
+        end
+    end
     local target_action = ENGRAM.COMMANDS[ENGRAM.INDEX] or "UNKNOWN"
     local future_action = ENGRAM.INDEX+1 <= #ENGRAM.COMMANDS and ENGRAM.COMMANDS[ENGRAM.INDEX+1] or ENGRAM.COMMANDS[ENGRAM.CYCLE_INDEX] or ENGRAM.COMMANDS[1] or "UNKNOWN"
     if not future_action then
         future_action = "none"
     end
-    if MAGOS.SETTINGS then
-        mod.update_charge_status()
-    end
-    mod.refresh_weapon()
+    
     if MAGOS.WEAPON_TYPE == "MELEE" or MAGOS.WEAPON_NAME == "ogryn_gauntlet_p1_m1" then
         if not MAGOS.IDENTIFIER then
             MAGOS.IDENTIFIER = SKITARIUS.T
@@ -1439,7 +1593,7 @@ mod.execute = function()
             VALID.action_one_hold = false
         end
         -- SPECIAL OVERRIDE: SKIP TOGGLED/NON-REPEATABLE SPECIALS, SKIP SPECIALS IF OVERHEATED
-        if target_action == "special_action" and ((mod.special_active() and toggled_weapons[MAGOS.WEAPON_NAME]) or mod.in_cooldown()) then
+        if target_action == "special_action" and (mod.special_active() and toggled_weapons[MAGOS.WEAPON_NAME] or mod.in_cooldown()) then
             -- special_action has two sub-actions (special_action + idle), so move ahead two engram indices
             if ENGRAM.INDEX + 2 > #ENGRAM.COMMANDS then
                 if ENGRAM.SETTINGS and ENGRAM.SETTINGS.CYCLE_INDEX then
@@ -1494,23 +1648,31 @@ mod.execute = function()
                 else
                     mod.debug_log("IDLE -> STARTUP ("..future_action..")", "IDLE_UNKNOWN_"..MAGOS.IDENTIFIER)
                 end
-            -- INTO BLOCK: HOLD
-            -- ALSO USED TO PATH TO BLOCK WHEN TARGET IS PUSH/PUSH_FOLLOW_UP FROM IDLE
-            elseif target_action == "block" or target_action == "push" or target_action == "push_follow_up" then
+            -- INTO BLOCK: HOLD 2
+            elseif target_action == "block" then
                 mod.debug_log("IDLE -> BLOCK ("..target_action..")", "IDLE_BLOCK_"..MAGOS.IDENTIFIER)
                 mod.set_valid("action_two_hold", true)
-            -- INTO SPECIAL: PRESSED
+            -- INTO PUSH: HOLD 1 + 2
+            -- 1 IS HELD TO SAFEGUARD PUSH FOLLOW-UP
+            elseif target_action == "push" then
+                mod.debug_log("IDLE -> PUSH", "IDLE_PUSH_"..MAGOS.IDENTIFIER)
+                mod.set_valid("action_one_hold", true, "action_two_hold", true)
+            -- INTO PUSH FOLLOW-UP: HOLD 1 + 2
+            elseif target_action == "push_follow_up" then
+                mod.debug_log("IDLE -> PUSH FOLLOW-UP", "IDLE_PUSH_FOLLOW_UP_"..MAGOS.IDENTIFIER)
+                mod.set_valid("action_one_hold", true, "action_two_hold", true)
+            -- INTO SPECIAL: PRESS SPECIAL
             elseif target_action == "special_action" then
                 mod.debug_log("IDLE -> SPECIAL", "IDLE_SPECIAL_"..MAGOS.IDENTIFIER)
                 mod.set_valid("weapon_extra_pressed", true)
             end
         -- FROM STARTUP
         elseif current_action == "start_attack" then
-            -- INTO LIGHT ATTACK: RELEASE
+            -- INTO LIGHT ATTACK: RELEASE 1
             if target_action == "light_attack" then
                 mod.debug_log("STARTUP -> LIGHT", "STARTUP_LIGHT_"..MAGOS.IDENTIFIER)
                 mod.set_valid("action_one_hold", false)
-            -- INTO HEAVY ATTACK: HOLD
+            -- INTO HEAVY ATTACK: HOLD 1
             elseif target_action == "heavy_attack" then
                 if MAGOS.CHARGED then
                     mod.debug_log("STARTUP -> HEAVY (CHARGED)", "STARTUP_HEAVY_CHARGED_"..MAGOS.IDENTIFIER)
@@ -1519,15 +1681,24 @@ mod.execute = function()
                     mod.debug_log("STARTUP -> HEAVY (CHARGING)", "STARTUP_HEAVY_CHARGING_"..MAGOS.IDENTIFIER)
                     mod.set_valid("action_one_hold", true)
                 end
-            -- INTO BLOCK/PUSH/PUSH_FOLLOW_UP: HOLD 2
-            elseif target_action == "block" or target_action == "push" or target_action == "push_follow_up" then
-                mod.debug_log("STARTUP -> PUSH", "STARTUP_PUSH_"..MAGOS.IDENTIFIER)
+            -- INTO BLOCK/PUSH: HOLD 2
+            elseif target_action == "block" then
+                mod.debug_log("STARTUP -> PUSH", "STARTUP_BLOCK_"..MAGOS.IDENTIFIER)
                 mod.set_valid("action_two_hold", true)
-            -- INTO SPECIAL: PRESSED
+            -- INTO PUSH: HOLD 1 + 2
+            -- 1 IS HELD TO SAFEGUARD PUSH FOLLOW-UP
+            elseif target_action == "push" then
+                mod.debug_log("STARTUP -> PUSH", "STARTUP_PUSH_"..MAGOS.IDENTIFIER)
+                mod.set_valid("action_one_hold", true, "action_two_hold", true)
+            -- INTO PUSH FOLLOW-UP : HOLD 1 + 2
+            elseif target_action == "push_follow_up" then
+                mod.debug_log("STARTUP -> PUSH FOLLOW-UP", "STARTUP_PUSH_FOLLOW_UP_"..MAGOS.IDENTIFIER)
+                mod.set_valid("action_one_hold", true, "action_two_hold", true)
+            -- INTO SPECIAL: PRESS SPECIAL
             elseif target_action == "special_action" then
                 mod.debug_log("STARTUP -> SPECIAL", "STARTUP_SPECIAL_"..MAGOS.IDENTIFIER)
                 mod.set_valid("weapon_extra_pressed", true)
-            -- OTHERWISE: RELEASE
+            -- OTHERWISE: RELEASE ALL
             else
                 mod.debug_log("STARTUP -> ??? ("..target_action..")", "STARTUP_UNKNOWN_"..MAGOS.IDENTIFIER)
                 mod.set_valid("action_one_hold", false)
@@ -1558,15 +1729,21 @@ mod.execute = function()
             if target_action == "push_follow_up" then
                 mod.debug_log("PUSH -> PUSH_FOLLOW_UP", "PUSH_PUSH_FOLLOW_UP_"..MAGOS.IDENTIFIER)
                 mod.set_valid("action_one_hold", true, "action_two_hold", true)
+            -- INTO BLOCK: HOLD 2
+            elseif target_action == "block" then
+                mod.debug_log("PUSH -> BLOCK", "PUSH_BLOCK_"..MAGOS.IDENTIFIER)
+                mod.set_valid("action_two_hold", true)
             -- OTHERWISE: RELEASE
             else
                 mod.debug_log("PUSH -> ??? ("..target_action..")", "PUSH_UNKNOWN_"..MAGOS.IDENTIFIER)
                 mod.set_valid("action_one_hold", false)
             end
         elseif current_action == "push_follow_up" then
-            -- INTO ANY ACTION: RELEASE
-            mod.debug_log("PUSH_FOLLOW_UP -> ANY ("..future_action..")", "PUSH_FOLLOW_UP_UNKNOWN_"..MAGOS.IDENTIFIER)
-            mod.set_valid("action_one_hold", false)
+            -- INTO ANY OTHER ACTION: RELEASE
+            
+                mod.debug_log("PUSH_FOLLOW_UP -> ANY ("..target_action..")", "PUSH_FOLLOW_UP_UNKNOWN_"..MAGOS.IDENTIFIER)
+                mod.set_valid("action_one_hold", false)
+            
         elseif current_action == "special_action" then
             -- INTO ANY ACTION: RELEASE
             mod.debug_log("SPECIAL_ACTION -> ANY ("..future_action..")", "SPECIAL_ACTION_UNKNOWN_"..MAGOS.IDENTIFIER)
@@ -1589,10 +1766,11 @@ mod.quickstart = function(bind, input)
         source = "global_melee"
     end
     local action_input_map = {light_attack="action_one_hold", heavy_attack="action_one_hold", block="action_two_hold", push="action_two_hold", push_follow_up="action_two_hold", special_action="weapon_extra_pressed"}
-    local sequence_map = {"sequence_step_one","sequence_step_two","sequence_step_three","sequence_step_four","sequence_step_five","sequence_step_six"}
+    local sequence_map = {"sequence_step_one","sequence_step_two","sequence_step_three","sequence_step_four","sequence_step_five","sequence_step_six",
+                          "sequence_step_seven","sequence_step_eight","sequence_step_nine","sequence_step_ten","sequence_step_eleven","sequence_step_twelve"}
     if quick_action then
         -- If special is active and can't be reactivated, find the next available quick action to execute
-        if quick_action == "special_action" and ((mod.special_active() and toggled_weapons[MAGOS.WEAPON_NAME]) or mod.in_cooldown()) then
+        if quick_action == "special_action" and (mod.special_active() or mod.in_cooldown()) then
             for i = 2, #sequence_map do
                 if BIND_DATA[bind].MELEE[source][sequence_map[i]] and BIND_DATA[bind].MELEE[source][sequence_map[i]] ~= "none" and BIND_DATA[bind].MELEE[source][sequence_map[i]] ~= "special_action" then
                     quick_action = BIND_DATA[bind].MELEE[source][sequence_map[i]]
@@ -1622,8 +1800,9 @@ end
 
 local IS_CHARGING = false      -- Flag to indicate if player is charging a ranged attack
 local LAST_SHOT = 0            -- Engine time of last shot when forcing a preferred RoF
+local FORCE_SPECIAL = false    -- Flag to ensure special actions take place
 local PREVIOUS_HELBORE = false -- Flag to indicate the held state of inputs when spamming Helbore melees as mod.flicker() is insufficient
-local WEENIE_HUT_JR = false    -- Set true if you a bitch
+local WEENIE_HUT_JR = false    -- Peril debug - set true if you a bitch
 
 -- CHARGED: Weapons which charge by holding alt fire and shoot by pressing primary fire
 local CHARGED = {
@@ -1639,6 +1818,31 @@ local HELBORE = {
     lasgun_p2_m1 = true,
     lasgun_p2_m2 = true,
     lasgun_p2_m3 = true,
+}
+-- SPECIAL_GUNS: Guns which have activated special actions - unfortunately no good way to check this programmatically so this is a list
+local SPECIAL_GUNS = {
+    -- Combat Shotguns
+    shotgun_p1_m1 = true,
+    shotgun_p1_m2 = true,
+    shotgun_p1_m3 = true,
+    -- Infantry Autoguns
+    autogun_p1_m1 = true,
+    autogun_p1_m2 = true,
+    autogun_p1_m3 = true,
+    -- Autopistol
+    autopistol_p1_m1 = true,
+    -- Infantry Lasguns
+    lasgun_p1_m1 = true,
+    lasgun_p1_m2 = true,
+    lasgun_p1_m3 = true,
+    -- Recon Lasguns
+    lasgun_p3_m1 = true,
+    lasgun_p3_m2 = true,
+    lasgun_p3_m3 = true,
+    -- Heavy Stubbers
+    ogryn_heavystubber_p2_m1 = true,
+    ogryn_heavystubber_p2_m2 = true,
+    ogryn_heavystubber_p2_m3 = true,
 }
 
 -- Determines if primary inputs should be overridden; returns false if not allowed, otherwise returns ranged settings for overriding primary input
@@ -1748,7 +1952,9 @@ mod.auto_shoot = function(input)
     local player = player_manager:local_player_safe(1)
     local player_unit = player and player.player_unit
     local weapon = ScriptUnit.has_extension(player_unit, "weapon_system")
-    mod.refresh_weapon()
+    if not MAGOS.WEAPON_TYPE then
+        mod.refresh_weapon()
+    end
     if not weapon or (WEENIE_HUT_JR and mod.suicidal()) or Managers.ui:using_input() or MAGOS.WEAPON_TYPE ~= "RANGED" then
         PREVIOUS_HELBORE = false
         return nil
@@ -1814,8 +2020,8 @@ mod.auto_shoot = function(input)
                     end
                 end
             end
-            -- Custom RoF: Prevent fire until an appropriate delay has passed if RoF settings are enabled (ignore if automatic fire is set to special attacks)
-            if ranged_template and not (ranged_template.automatic_fire and ranged_template.automatic_fire == "special") then
+            -- Custom RoF: Prevent fire until an appropriate delay has passed if RoF settings are enabled (ignore if attempting special action)
+            if ranged_template and not (ranged_template.automatic_fire and (ranged_template.automatic_fire == "special" or ranged_template.automatic_fire == "special_standard" and SPECIAL_GUNS[MAGOS.WEAPON_NAME] and not mod.special_active())) then
                 local delay = 0
                 -- Aimed RoF
                 if not IS_AIMING and ranged_template.rate_of_fire_hip and ranged_template.rate_of_fire_hip < 100 then
@@ -1843,8 +2049,8 @@ mod.auto_shoot = function(input)
                     -- Short circuit rather than setting value, no need to check any further logic
                     return nil
                 end
-                -- Standard fire
-                if ranged_template.automatic_fire == "standard" then
+                -- Standard fire (or Special + Standard while special is active)
+                if ranged_template.automatic_fire == "standard" or (ranged_template.automatic_fire == "special_standard" and SPECIAL_GUNS[MAGOS.WEAPON_NAME] and mod.special_active()) then
                     -- Normally automatic weapons fire on action_one_hold, not action_one_pressed
                     -- Helbores are unique because of course they are
                     if HELBORE[MAGOS.WEAPON_NAME] then
@@ -1916,16 +2122,19 @@ mod.auto_shoot = function(input)
                             end
                         end
                     end
-                -- Special actions: weapon_extra_pressed only
-                elseif ranged_template.automatic_fire == "special" then
+                -- Special actions (or Special + Standard when special is not active): weapon_extra_pressed only
+                elseif ranged_template.automatic_fire == "special" or (ranged_template.automatic_fire == "special_standard" and SPECIAL_GUNS[MAGOS.WEAPON_NAME] and not mod.special_active()) then
+                    -- Set flag to force weapon_extra_pressed as extremely brief inputs can "miss" the cue to trigger it through this function
+                    FORCE_SPECIAL = true
                     -- Plasma Gun: requires weapon_extra_hold held constantly
                     if MAGOS.WEAPON_NAME == "plasmagun_p1_m1" then
                         if input == "weapon_extra_hold" then
                             return true
                         -- Prevent user input passthrough only if this is being triggered by the primary fire input
-                        elseif input == "action_one_pressed" and mod.override_primary_ranged("special") then
+                        elseif input == "action_one_pressed" and (mod.override_primary_ranged("special") or mod.override_primary_ranged("special_standard")) then
+                            FORCE_SPECIAL = false
                             return false
-                        elseif input == "action_one_hold" and mod.override_primary_ranged("special") then
+                        elseif input == "action_one_hold" and (mod.override_primary_ranged("special") or mod.override_primary_ranged("special_standard")) then
                             return false
                         else
                             return nil
@@ -1935,9 +2144,10 @@ mod.auto_shoot = function(input)
                         if input == "weapon_extra_hold" then
                             return mod.flicker()
                         -- Prevent user input passthrough only if this is being triggered by the primary fire input
-                        elseif input == "action_one_pressed" and mod.override_primary_ranged("special") then
+                        elseif input == "action_one_pressed" and (mod.override_primary_ranged("special") or mod.override_primary_ranged("special_standard")) then
+                            FORCE_SPECIAL = false
                             return false
-                        elseif input == "action_one_hold" and mod.override_primary_ranged("special") then
+                        elseif input == "action_one_hold" and (mod.override_primary_ranged("special") or mod.override_primary_ranged("special_standard")) then
                             return false
                         else
                             return nil
@@ -1948,9 +2158,10 @@ mod.auto_shoot = function(input)
                         elseif input == "weapon_extra_hold" then
                             return true
                         -- Prevent user input passthrough only if this is being triggered by the primary fire input
-                        elseif input == "action_one_pressed" and mod.override_primary_ranged("special") then
+                        elseif input == "action_one_pressed" and (mod.override_primary_ranged("special") or mod.override_primary_ranged("special_standard")) then
+                            FORCE_SPECIAL = false
                             return false
-                        elseif input == "action_one_hold" and mod.override_primary_ranged("special") then
+                        elseif input == "action_one_hold" and (mod.override_primary_ranged("special") or mod.override_primary_ranged("special_standard")) then
                             return false
                         else
                             return nil
@@ -1965,7 +2176,9 @@ end
 
 mod.auto_shoot_eligible = function()
     local eligible = false
-    mod.refresh_weapon()
+    if not MAGOS.WEAPON_TYPE then
+        mod.refresh_weapon()
+    end
     -- Player must have a ranged weapon in order to begin evaluation
     if not MAGOS.WEAPON_TYPE or MAGOS.WEAPON_TYPE ~= "RANGED" then
         return false
@@ -2012,6 +2225,20 @@ mod:hook_safe(CLASS.ActionHandler, "start_action", function (self, id, action_ob
        and string.find(self._registered_components[id].component.template_name, "lasgun_p2") and (action_name == "action_shoot_hip_start" or action_name == "action_shoot_zoomed_start") then
         IS_CHARGING = true
     end
+
+    -- Ignore ability actions
+    if 
+        -- Shout abilities
+        action_name == "action_shout" or action_name == "action_aim" or 
+        -- Charge abilities
+        action_name == "action_state_change" or
+        -- Stance abilities
+        action_name == "action_stance_change" or
+        -- Vet ability
+        action_name == "action_veteran_combat_ability" or action_name == "action_immediate_use" then
+        return
+    end
+
     -- MELEE FLAGS
     self.SKITARIUS = t
     if self.SKITARIUS ~= MAGOS.IDENTIFIER then
@@ -2019,24 +2246,6 @@ mod:hook_safe(CLASS.ActionHandler, "start_action", function (self, id, action_ob
         local handler_data = self._registered_components[id]
         local component = handler_data.component
         local running_action = handler_data.running_action
-        MAGOS.RUNNING_ACTION = running_action
-        local weapon_template = MAGOS.RUNNING_ACTION._weapon_template
-        MAGOS.COMPONENT = component
-        MAGOS.START = component.start_t
-        MAGOS.SPECIAL = component.special_active_at_start
-        MAGOS.WEAPON_NAME = component.template_name
-        local keywords = weapon_template and weapon_template.keywords
-        if keywords then
-            if table.array_contains(keywords, "melee") then
-                MAGOS.WEAPON_TYPE = "MELEE"
-            elseif table.array_contains(keywords, "ranged") then
-                MAGOS.WEAPON_TYPE = "RANGED"
-            end
-        end
-        MAGOS.RUNNING_ACTION = handler_data.running_action
-        MAGOS.SETTINGS = action_settings
-        MAGOS.ACTION_NAME = action_name
-        MAGOS.STALE = false
         local action_map = {}
         local all_actions = handler_data.running_action and handler_data.running_action._weapon_template and handler_data.running_action._weapon_template.actions
         if all_actions then
@@ -2054,8 +2263,27 @@ mod:hook_safe(CLASS.ActionHandler, "start_action", function (self, id, action_ob
                 end
             end
         end
+        MAGOS.STALE = false
+        MAGOS.TIME_IN_SWEEP = 0
         MAGOS.ACTION_MAP = action_map
+        MAGOS.ACTION_NAME = action_name
         MAGOS.COMMAND_NAME = mod.get_current_action()
+        MAGOS.RUNNING_ACTION = running_action
+        local weapon_template = MAGOS.RUNNING_ACTION._weapon_template
+        MAGOS.COMPONENT = component
+        MAGOS.START = component.start_t
+        MAGOS.SPECIAL = component.special_active_at_start
+        MAGOS.WEAPON_NAME = component.template_name
+        local keywords = weapon_template and weapon_template.keywords
+        if keywords then
+            if table.array_contains(keywords, "melee") then
+                MAGOS.WEAPON_TYPE = "MELEE"
+            elseif table.array_contains(keywords, "ranged") then
+                MAGOS.WEAPON_TYPE = "RANGED"
+            end
+        end
+        MAGOS.RUNNING_ACTION = handler_data.running_action
+        MAGOS.SETTINGS = action_settings
         MAGOS.CHARGED = false
     end
 end)
@@ -2066,6 +2294,7 @@ mod:hook_safe(CLASS.ActionHandler, "_finish_action", function (self, handler_dat
     IS_CHARGING = false
     -- MELEE FLAGS
     if self.SKITARIUS == MAGOS.IDENTIFIER then
+        mod.debug_log("STALE FLAG SET BY ACTIONHANDLER: FINISH ACTION", "ACTIONHANDLER_"..MAGOS.IDENTIFIER)
         MAGOS.STALE = true
         MAGOS.COMMAND_NAME = mod.get_current_action()
     end
@@ -2073,6 +2302,7 @@ end)
 
 -- Mark heavy attacks as complete at the end of their sweep - this is done to handle some special cases that cannot rely on _exit_damage_window
 mod:hook_safe(CLASS.ActionSweep, "fixed_update", function (self, dt, t, time_in_action)
+    MAGOS.TIME_IN_SWEEP = time_in_action
     local current_action = mod.get_current_action()
     if current_action == "heavy_attack" or current_action == "light_attack" then
         if INCORRECT_TIMES.FINISH[MAGOS.WEAPON_NAME] or true then
@@ -2120,7 +2350,6 @@ end)
 -- Handle stuns/combo interruptions: Reset sequence
 mod:hook_safe(CLASS.PlayerCharacterStateStunned, "on_enter", function (self, unit, dt, t, previous_state, params)
     MAGOS.STALE = true
-    mod.reset_engram()
 end)
 
 -- Update buff stacks
@@ -2192,6 +2421,11 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
     if MOD_ENABLED then
         if action_name == "action_one_hold" then
             INPUT.action_one_hold.value = out
+            if out and not ACTIVE_BINDS.override_primary then
+                ACTIVE_BINDS.override_primary = SKITARIUS.T
+            elseif not out then
+                ACTIVE_BINDS.override_primary = false
+            end
             INPUT.action_one_hold.key = self:get_keys_from_alias(self:get_alias_key(action_name))[1]
             if ((mod.ready_for_intercept() and INTERCEPT.AUTHORIZED) or mod.override_primary()) and (not WEENIE_HUT_JR or not mod.suicidal("action_one_hold")) then
                 if INTERCEPT.NEW and mod.quickstart(INTERCEPT.AUTHORITY ~= "none" and INTERCEPT.AUTHORITY or "override_primary", "action_one_hold") then
@@ -2260,7 +2494,10 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
                     return VALID.weapon_extra_pressed
                 end
             elseif mod.auto_shoot_eligible() then
-                local auto = mod.auto_shoot("weapon_extra_pressed")
+                local auto = mod.auto_shoot("weapon_extra_pressed") or FORCE_SPECIAL
+                if FORCE_SPECIAL then
+                    FORCE_SPECIAL = false
+                end
                 if auto ~= nil then
                     return auto
                 end
@@ -2290,7 +2527,7 @@ mod:hook(CLASS.ActionHandler, "server_correction_occurred", function (func, self
         local current_action_name = component.current_action_name
         if current_action_name == "none" then
             handler_data.running_action = nil
-            MAGOS.STALE = true
+            --mod.debug_log("NON-CORRECTION DESYNC DETECTED", "SERVER_CORRECTION_EMPTY")
         else
             -- Handle server corrections
             local action = action_objects[current_action_name]
