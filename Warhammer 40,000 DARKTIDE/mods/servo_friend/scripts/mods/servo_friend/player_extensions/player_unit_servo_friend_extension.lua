@@ -76,7 +76,6 @@ local packages_to_load = {
 
 local PlayerUnitServoFriendExtension = class("PlayerUnitServoFriendExtension", "ServoFriendBaseExtension")
 
-mod:register_extension("PlayerUnitServoFriendExtension", "player_unit_servo_friend_system")
 mod:register_packages(packages_to_load)
 
 -- ##### ┬┌┐┌┬┌┬┐       ┌┬┐┌─┐┌─┐┌┬┐┬─┐┌─┐┬ ┬ #########################################################################
@@ -86,38 +85,70 @@ mod:register_packages(packages_to_load)
 PlayerUnitServoFriendExtension.init = function(self, extension_init_context, unit, extension_init_data)
     -- Base class
     PlayerUnitServoFriendExtension.super.init(self, extension_init_context, unit, extension_init_data)
-    -- Data
+    -- References
+    self.world_manager = managers.world
+    self.package_manager = managers.package
+    self.time_manager = managers.time
     self.event_manager = managers.event
-    self.init_context = extension_init_context
-    self.init_data = extension_init_data
-    self.unit = unit
+    -- Extensions
+    self.first_person_extension = script_unit_extension(self.unit, "first_person_system")
     self.unit_data = script_unit_extension(self.unit, "unit_data_system")
     self.alternate_fire_component = self.unit_data and self.unit_data:read_component("alternate_fire")
-    self.first_person_extension = script_unit_extension(self.unit, "first_person_system")
-    self.first_person_unit = self.first_person_extension:first_person_unit()
-    self.weapon_action_component = self.unit_data:read_component("weapon_action")
+    self.weapon_action_component = self.unit_data and self.unit_data:read_component("weapon_action")
+    -- Units
+    self.unit = unit
     self.servo_friend_unit = nil
-    self.found_something_valid = false
-    self.busy = false
+    self.first_person_unit = self.first_person_extension:first_person_unit()
+    -- Position
     self.current_position = vector3_box(vector3_zero())
     self.last_position = vector3_box(vector3_zero())
     self.target_position = vector3_box(vector3_zero())
+    self.aim_position = vector3_box(vector3_zero())
+    -- Daemonhost
+    self.avoid_daemonhost_position = vector3_box(vector3_zero())
+    self.check_daemonhosts_timer = 0
+    self.check_daemonhosts_time = 5
+    self.daemonhosts = {}
+    -- Leaning
+    self.lean = 0
+    self.prev_direction = vector3_box(vector3_zero())
+    -- Aim
+    self.current_rotation = quaternion_box(quaternion_identity())
+    self.target_rotation = quaternion_box(quaternion_identity())
+    self.last_rotation = quaternion_box(quaternion_identity())
+    -- Data
+    self.init_context = extension_init_context
+    self.init_data = extension_init_data
+    self.is_local_unit = extension_init_data.is_local_unit
+    self.found_something_valid = false
+    self.busy = false
     self.is_aim_locked = false
+    self.max_distance = 20
+    self.min_distance = 10
+    -- Packages
+    self.all_packages_loaded = false
+    self.loading_packages = {}
+    self.loaded_packages = {}
+    self:load_packages()
     -- Events
     self.event_manager:register(self, "servo_friend_settings_changed", "on_settings_changed")
     self.event_manager:register(self, "servo_friend_set_target_position", "on_servo_friend_set_target_position")
-    -- self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
-    -- self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
     -- Settings
     self:on_settings_changed()
+    -- Spawn
+    self:spawn_servo_friend()
+    -- Init
+    self.initialized = true
 end
 
 PlayerUnitServoFriendExtension.destroy = function(self)
+    -- Deinit
+    self.initialized = true
     -- Events
     self.event_manager:unregister(self, "servo_friend_settings_changed")
     self.event_manager:unregister(self, "servo_friend_set_target_position")
-    -- self.event_manager:unregister(self, "servo_friend_spawned")
-    -- self.event_manager:unregister(self, "servo_friend_destroyed")
+    -- Destroy
+    self:destroy_servo_friend()
     -- Base class
     PlayerUnitServoFriendExtension.super.destroy(self)
 end
@@ -214,7 +245,7 @@ PlayerUnitServoFriendExtension.spawn_servo_friend = function(self, dt, t)
         self:set_target_position(self:new_target_position())
 
         -- Talk
-        self.event_manager:trigger("servo_friend_talk", dt, t)
+        self.event_manager:trigger("servo_friend_talk", dt, t, "spawned")
 
         -- Spawned
         self.event_manager:trigger("servo_friend_spawned")
@@ -438,7 +469,7 @@ end
 -- ##### └─┐├┤ ├┬┘└┐┌┘│ │  ├┤ ├┬┘│├┤ │││ ││  ├┤ └┐┌┘├┤ │││ │ └─┐ ######################################################
 -- ##### └─┘└─┘┴└─ └┘ └─┘  └  ┴└─┴└─┘┘└┘─┴┘  └─┘ └┘ └─┘┘└┘ ┴ └─┘ ######################################################
 
-PlayerUnitServoFriendExtension.on_settings_changed = function(self)
+PlayerUnitServoFriendExtension.on_settings_changed = function(self, setting_id)
     -- Base class
     PlayerUnitServoFriendExtension.super.on_settings_changed(self)
     -- Settings
@@ -451,6 +482,15 @@ PlayerUnitServoFriendExtension.on_settings_changed = function(self)
     self.debug = mod:get("mod_option_debug")
     self.use_roaming_area = mod:get("mod_option_use_roaming_area")
     self.roaming_area = mod:get("mod_option_roaming_area")
+    -- Reset
+    self.busy = false
+    -- Events
+    self.event_manager:trigger("servo_friend_settings_changed")
+    -- Respawn servo friend when appearance is changed
+    if setting_id == "mod_option_appearance" then
+        local dt, t = mod:delta_time(), mod:time()
+        mod:respawn_servo_friend(dt, t)
+    end
 end
 
 PlayerUnitServoFriendExtension.on_servo_friend_set_target_position = function(self, target_position, aim_position, something_valid, busy)

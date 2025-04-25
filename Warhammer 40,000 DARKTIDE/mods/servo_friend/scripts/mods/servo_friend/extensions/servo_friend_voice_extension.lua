@@ -1,18 +1,37 @@
 local mod = get_mod("servo_friend")
 
+-- ##### ┬─┐┌─┐┌─┐ ┬ ┬┬┬─┐┌─┐ #########################################################################################
+-- ##### ├┬┘├┤ │─┼┐│ ││├┬┘├┤  #########################################################################################
+-- ##### ┴└─└─┘└─┘└└─┘┴┴└─└─┘ #########################################################################################
+
+local AttackSettings = mod:original_require("scripts/settings/damage/attack_settings")
+local Breeds = mod:original_require("scripts/settings/breed/breeds")
+
 -- ##### ┌─┐┌─┐┬─┐┌─┐┌─┐┬─┐┌┬┐┌─┐┌┐┌┌─┐┌─┐ ############################################################################
 -- ##### ├─┘├┤ ├┬┘├┤ │ │├┬┘│││├─┤││││  ├┤  ############################################################################
 -- ##### ┴  └─┘┴└─└  └─┘┴└─┴ ┴┴ ┴┘└┘└─┘└─┘ ############################################################################
 
+local type = type
 local math = math
 local pairs = pairs
 local table = table
 local class = class
 local CLASS = CLASS
+local get_mod = get_mod
 local tostring = tostring
 local managers = Managers
+local math_huge = math.huge
+local script_unit = ScriptUnit
 local math_random = math.random
 local table_clear = table.clear
+local network_lookup = NetworkLookup
+local script_unit_has_extension = script_unit.has_extension
+
+-- ##### ┌┬┐┌─┐┌┬┐┌─┐ #################################################################################################
+-- #####  ││├─┤ │ ├─┤ #################################################################################################
+-- ##### ─┴┘┴ ┴ ┴ ┴ ┴ #################################################################################################
+
+local attack_results = AttackSettings.attack_results
 
 -- ##### ┌─┐┬  ┌─┐┌─┐┌─┐ ##############################################################################################
 -- ##### │  │  ├─┤└─┐└─┐ ##############################################################################################
@@ -24,12 +43,19 @@ mod:register_extension("ServoFriendVoiceExtension", "servo_friend_voice_system")
 mod:register_sounds({
     fail                  = "wwise/events/player/play_device_auspex_bio_minigame_fail",
     progress_last         = "wwise/events/player/play_device_auspex_bio_minigame_progress_last",
+    objective_canceled    = "wwise/events/player/play_device_auspex_bio_minigame_progress_last",
     progress              = "wwise/events/player/play_device_auspex_scanner_minigame_progress",
     wrong                 = "wwise/events/player/play_device_auspex_bio_minigame_selection_wrong",
+    avoid_daemonhost      = "wwise/events/player/play_device_auspex_scanner_minigame_fail",
     right                 = "wwise/events/player/play_device_auspex_bio_minigame_selection_right",
+    spawned               = "wwise/events/player/play_device_auspex_bio_minigame_selection_right",
+    tagged_item           = "wwise/events/player/play_device_auspex_scanner_minigame_progress_last",
     selection             = "wwise/events/player/play_device_auspex_bio_minigame_selection",
+    victory               = "wwise/events/player/play_device_auspex_bio_minigame_selection",
+    tagged_enemy          = "wwise/events/player/play_device_auspex_scanner_minigame_progress",
     scanner_fail          = "wwise/events/player/play_device_auspex_scanner_minigame_fail",
     scanner_progress      = "wwise/events/player/play_device_auspex_scanner_minigame_progress",
+    marker                = "wwise/events/player/play_device_auspex_scanner_minigame_progress",
     scanner_progress_last = "wwise/events/player/play_device_auspex_scanner_minigame_progress_last",
 })
 
@@ -41,19 +67,21 @@ ServoFriendVoiceExtension.init = function(self, extension_init_context, unit, ex
     -- Base class
     ServoFriendVoiceExtension.super.init(self, extension_init_context, unit, extension_init_data)
     -- Data
+    self.unit = unit
     self.event_manager = managers.event
     self.talk_timer = 0
-    self.talk_cooldown = 4
+    self.talk_cooldown = 2
+    self.victory_speech_points = 0
     self.voice_lines = {}
+    self.audio_plugin = get_mod("servo_friend_audio_server_plugin")
     -- Events
     self.event_manager:register(self, "servo_friend_settings_changed", "on_settings_changed")
     self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
     self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
     self.event_manager:register(self, "servo_friend_talk", "talk")
+    self.event_manager:register(self, "servo_friend_victory_speech_accumulation", "victory_speech_accumulation")
     -- Settings
     self:on_settings_changed()
-    -- Init
-    self:load_voice_lines()
     -- Debug
     self:print("ServoFriendVoiceExtension initialized")
 end
@@ -64,6 +92,7 @@ ServoFriendVoiceExtension.destroy = function(self)
     self.event_manager:unregister(self, "servo_friend_spawned")
     self.event_manager:unregister(self, "servo_friend_destroyed")
     self.event_manager:unregister(self, "servo_friend_talk")
+    self.event_manager:unregister(self, "servo_friend_victory_speech_accumulation")
     -- Debug
     self:print("ServoFriendVoiceExtension destroyed")
     -- Base class
@@ -88,6 +117,10 @@ ServoFriendVoiceExtension.on_settings_changed = function(self)
     ServoFriendVoiceExtension.super.on_settings_changed(self)
     -- Settings
     self.voice = mod:get("mod_option_voice")
+    self.use_audio_mod = mod:get("mod_option_use_audio_mod")
+    self.victory_speech_frequency = mod:get("mod_option_victory_speech_frequency")
+    self.victory_speech_max = (1 - self.victory_speech_frequency) * 100
+    -- Load
     self:load_voice_lines(true)
 end
 
@@ -115,10 +148,13 @@ end
 -- ##### ┴ ┴└─┘ ┴ ┴ ┴└─┘─┴┘└─┘ ########################################################################################
 
 ServoFriendVoiceExtension.talk = function(self, dt, t, optional_sound_event)
-    if t > self.talk_timer then
+    local pt = self:pt()
+    if self.use_audio_mod and self.audio_plugin and self:servo_friend_alive() then
+        self.audio_plugin:talk(dt, t, optional_sound_event, pt.servo_friend_unit)
+
+    elseif t > self.talk_timer or optional_sound_event == "spawned" then
         if self.voice ~= "off" then
             if self:servo_friend_alive() and #self.voice_lines > 0 then
-                local pt = self:pt()
                 local random = math_random(1, #self.voice_lines)
                 local sound_event = self.voice_lines[random]
                 local vo_file_path = "wwise/externals/"..sound_event
@@ -132,8 +168,27 @@ ServoFriendVoiceExtension.talk = function(self, dt, t, optional_sound_event)
         else
             self:play_sound("progress")
         end
+
         self.talk_timer = t + self.talk_cooldown
     end
+end
+
+ServoFriendVoiceExtension.victory_speech_accumulation = function(self, point_cost, is_boss)
+
+    if is_boss then point_cost = self.victory_speech_max end
+    if point_cost == math_huge or point_cost ~= point_cost then point_cost = 6 end
+
+    self.victory_speech_points = self.victory_speech_points + point_cost
+
+    if self.victory_speech_points > self.victory_speech_max then
+
+        local dt, t = mod:delta_time(), mod:time()
+        mod.event_manager:trigger("servo_friend_talk", dt, t, "victory")
+
+        self.victory_speech_points = 0
+
+    end
+
 end
 
 ServoFriendVoiceExtension.load_voice_lines = function(self, clear)
@@ -173,5 +228,59 @@ ServoFriendVoiceExtension.load_voice_lines = function(self, clear)
         self:talk(dt, t, "selection")
     end
 end
+
+mod:hook(CLASS.AttackReportManager, "rpc_add_attack_result", function(func, self, channel_id, damage_profile_id, attacked_unit_id, attacked_unit_is_level_unit,
+        attacking_unit_id, attack_direction, hit_world_position, hit_weakspot, damage, attack_result_id, attack_type_id, damage_efficiency_id, is_critical_strike, ...)
+
+    -- Original function
+    func(self, channel_id, damage_profile_id, attacked_unit_id, attacked_unit_is_level_unit,
+        attacking_unit_id, attack_direction, hit_world_position, hit_weakspot, damage, attack_result_id, attack_type_id, damage_efficiency_id, is_critical_strike, ...)
+
+    -- local attacked_unit = buffer_data.attacked_unit
+    local unit_spawner_manager = managers.state.unit_spawner
+    local attacked_unit = attacked_unit_id and unit_spawner_manager:unit(attacked_unit_id, attacked_unit_is_level_unit)
+    local unit_data_extension = script_unit_has_extension(attacked_unit, "unit_data_system")
+	local breed_or_nil = unit_data_extension and unit_data_extension:breed()
+
+    if not breed_or_nil then
+		return
+	end
+
+    local attack_result = network_lookup.attack_results[attack_result_id]
+    local tags = breed_or_nil and breed_or_nil.tags
+    local allowed_breed = tags and (tags.monster or tags.special or tags.elite)
+    if allowed_breed and attack_result == attack_results.died then
+
+        local point_cost = breed_or_nil.point_cost or 0
+        mod.event_manager:trigger("servo_friend_victory_speech_accumulation", point_cost, breed_or_nil.is_boss)
+
+    end
+
+end)
+
+mod:hook(CLASS.AttackReportManager, "_process_attack_result", function(func, self, buffer_data, ...)
+
+    -- Original function
+    func(self, buffer_data, ...)
+
+    local attacked_unit = buffer_data.attacked_unit
+    local unit_data_extension = script_unit_has_extension(attacked_unit, "unit_data_system")
+	local breed_or_nil = unit_data_extension and unit_data_extension:breed()
+
+    if not breed_or_nil then
+		return
+	end
+
+    local attack_result = buffer_data.attack_result
+    local tags = breed_or_nil and breed_or_nil.tags
+    local allowed_breed = tags and (tags.monster or tags.special or tags.elite)
+    if allowed_breed and attack_result == attack_results.died then
+
+        local point_cost = breed_or_nil.point_cost or 0
+        mod.event_manager:trigger("servo_friend_victory_speech_accumulation", point_cost, breed_or_nil.is_boss)
+
+    end
+
+end)
 
 return ServoFriendVoiceExtension

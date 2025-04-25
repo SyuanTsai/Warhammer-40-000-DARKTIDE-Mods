@@ -17,6 +17,7 @@ local math_huge = math.huge
 local unit_alive = unit.alive
 local vector3_box = Vector3Box
 local table_clear = table.clear
+local table_remove = table.remove
 local physics_world = PhysicsWorld
 local vector3_unbox = vector3_box.unbox
 local vector3_distance = vector3.distance
@@ -85,6 +86,7 @@ ServoFriendPointOfInterestExtension.update = function(self, dt, t)
     ServoFriendPointOfInterestExtension.super.update(self, dt, t)
     -- Update
     local closest = math_huge
+    local was_valid = self.valid
     self.valid = false
     local target_position = vector3_unbox(self.current_position)
     local found_position = nil
@@ -111,20 +113,17 @@ ServoFriendPointOfInterestExtension.update = function(self, dt, t)
                     local enemy_height = self:enemy_height(object)
                     if enemy then tag_position = tag_position + vector3(0, 0, enemy_height) end
                     found_position = tag_position
-                    found_object = object
-                    found_type = interest_type
                 end
             end
         elseif interest_type == "marker" then
             if object.world_position then
                 local position = vector3_unbox(object.world_position)
                 found_position = position
-                found_object = object
-                found_type = interest_type
             end
         end
         -- Check found position
-        if found_position then
+        local position_los = self:is_in_line_of_sight(current_position, found_position)
+        if found_position and position_los then
             -- Check maximum distance
             local distance = vector3_distance(current_position, found_position)
             local player_distance = vector3_distance(player_position, found_position)
@@ -140,19 +139,29 @@ ServoFriendPointOfInterestExtension.update = function(self, dt, t)
                         local direction = vector3_normalize(from_target)
                         target_position = found_position + (direction * self.min_distance)
                     end
+                    -- Set interest
+                    found_object = object
+                    found_type = interest_type
                 end
             end
         end
     end
-    if self.valid and found_position then
+    if self.valid and found_position and found_object and found_type then
         -- Talk if different interest
         if not self:is_current(found_object) then
-            self.event_manager:trigger("servo_friend_talk", dt, t)
+            local event_name = found_type == "tag_enemy" and "tagged_enemy" or found_type == "tag" and "tagged_item" or "marker"
+            self.event_manager:trigger("servo_friend_talk", dt, t, event_name)
         end
         -- Set new interest
         self:set(found_object, found_type)
         -- Set position
         self.event_manager:trigger("servo_friend_set_target_position", target_position, found_position, self.valid)
+    elseif was_valid then
+        self.event_manager:trigger("servo_friend_talk", dt, t, "objective_canceled")
+        -- Set new interest
+        self:set(nil, nil)
+        -- Set position
+        self.event_manager:trigger("servo_friend_set_target_position", nil, nil)
     end
 end
 
@@ -211,21 +220,22 @@ ServoFriendPointOfInterestExtension.set = function(self, object, interest_type)
 end
 
 ServoFriendPointOfInterestExtension.clear_current = function(self)
-    if self.closest.object then
-        local dt, t = self:delta_time(), self:time()
-        self.event_manager:trigger("servo_friend_talk", dt, t, "progress_last")
-    end
+    -- if self.closest.object then
+    --     local dt, t = self:delta_time(), self:time()
+    --     self.event_manager:trigger("servo_friend_talk", dt, t, "objective_canceled")
+    -- end
     self:set(nil, nil)
     self.event_manager:trigger("servo_friend_set_target_position", nil, nil)
 end
 
 ServoFriendPointOfInterestExtension.validate = function(self, object)
-    if self.closest.object == object then
+    if self:is_current(object) then
         self:clear_current()
     end
 end
 
 ServoFriendPointOfInterestExtension.clear = function(self)
+    self:clear_current()
     table_clear(self.points)
 end
 
@@ -234,8 +244,13 @@ ServoFriendPointOfInterestExtension.add = function(self, object, interest_type)
 end
 
 ServoFriendPointOfInterestExtension.remove = function(self, object)
+    -- if self:is_current(object) then
+    --     local dt, t = self:delta_time(), self:time()
+    --     self.event_manager:trigger("servo_friend_talk", dt, t, "objective_canceled")
+    -- end
     self:validate(object)
     self.points[object] = nil
+    -- table_remove(self.points, object)
 end
 
 return ServoFriendPointOfInterestExtension
