@@ -16,7 +16,9 @@ local managers = Managers
 local quaternion = Quaternion
 local unit_light = unit.light
 local unit_alive = unit.alive
+local vector3_box = Vector3Box
 local vector3_zero = vector3.zero
+local vector3_unbox = vector3_box.unbox
 local world_link_unit = world.link_unit
 local light_set_enabled = light.set_enabled
 local world_unlink_unit = world.unlink_unit
@@ -60,6 +62,7 @@ local flashlight_profiles = {
         falloff_start = 0,
         falloff_end = 70,
         volumetric_intensity = 0.6,
+        offset = vector3_box(vector3(.05, 0, 0)),
     },
     large = {
         unit = flashlight_unit_large,
@@ -72,6 +75,7 @@ local flashlight_profiles = {
         falloff_start = 0,
         falloff_end = 40,
         volumetric_intensity = 0.3,
+        offset = vector3_box(vector3(.075, 0, 0)),
     },
 }
 
@@ -99,6 +103,10 @@ ServoFriendFlashlightExtension.init = function(self, extension_init_context, uni
     self.event_manager:register(self, "servo_friend_settings_changed", "on_settings_changed")
     self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
     self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
+    self.event_manager:register(self, "servo_friend_overwrite_color", "on_servo_friend_overwrite_color")
+    self.event_manager:register(self, "servo_friend_reset_color", "on_servo_friend_reset_color")
+    self.event_manager:register(self, "servo_friend_overwrite_volumetric_intensity", "on_servo_friend_overwrite_volumetric_intensity")
+    self.event_manager:register(self, "servo_friend_reset_volumetric_intensity", "on_servo_friend_reset_volumetric_intensity")
     -- Settings
     self:on_settings_changed()
     -- Debug
@@ -110,6 +118,9 @@ ServoFriendFlashlightExtension.destroy = function(self)
     self.event_manager:unregister(self, "servo_friend_settings_changed")
     self.event_manager:unregister(self, "servo_friend_spawned")
     self.event_manager:unregister(self, "servo_friend_destroyed")
+    self.event_manager:unregister(self, "servo_friend_overwrite_color")
+    self.event_manager:unregister(self, "servo_friend_overwrite_volumetric_intensity")
+    self.event_manager:unregister(self, "servo_friend_reset_color")
     -- Destroy
     self:destroy_flashlight()
     -- Debug
@@ -139,6 +150,7 @@ ServoFriendFlashlightExtension.on_settings_changed = function(self)
     self.flashlight_shadows = mod:get("mod_option_flashlight_shadows")
     self.flashlight_no_hub = mod:get("mod_option_flashlight_no_hub")
     self.flashlight_type = mod:get("mod_option_flashlight_type")
+    self.flashlight_template = flashlight_profiles[self.flashlight_type]
     self.r = mod:get("mod_option_flashlight_color_red")
     self.g = mod:get("mod_option_flashlight_color_green")
     self.b = mod:get("mod_option_flashlight_color_blue")
@@ -158,6 +170,22 @@ ServoFriendFlashlightExtension.on_servo_friend_destroyed = function(self)
     ServoFriendFlashlightExtension.super.on_servo_friend_destroyed(self)
     -- Destroy
     self:destroy_flashlight()
+end
+
+ServoFriendFlashlightExtension.on_servo_friend_overwrite_color = function(self, r, g, b)
+    self:set_color(r, g, b)
+end
+
+ServoFriendFlashlightExtension.on_servo_friend_reset_color = function(self)
+    self:set_color(self.r, self.g, self.b)
+end
+
+ServoFriendFlashlightExtension.on_servo_friend_overwrite_volumetric_intensity = function(self, value)
+    self:set_volumetric_intensity(value)
+end
+
+ServoFriendFlashlightExtension.servo_friend_reset_volumetric_intensity = function(self)
+    self:set_volumetric_intensity()
 end
 
 -- ##### ┌─┐┬ ┬┌┐┌┌─┐┌┬┐┬┌─┐┌┐┌┌─┐ ####################################################################################
@@ -187,7 +215,8 @@ ServoFriendFlashlightExtension.spawn_flashlight = function(self)
             -- Link
             world_link_unit(self.world, pt.flashlight_unit, 1, pt.servo_friend_unit, 1)
             -- Offset
-            unit_set_local_position(pt.flashlight_unit, 1, vector3(.05, 0, 0))
+            local offset = self.flashlight_template.offset and vector3_unbox(self.flashlight_template.offset) or vector3_zero()
+            unit_set_local_position(pt.flashlight_unit, 1, offset)
             -- Light
             pt.light = unit_light(pt.flashlight_unit, 1)
             self:set_light()
@@ -208,26 +237,51 @@ ServoFriendFlashlightExtension.respawn_flashlight = function(self)
     self:spawn_flashlight()
 end
 
+ServoFriendFlashlightExtension.set_color = function(self, r, g, b)
+    local pt = self:pt()
+    if pt.light then
+        light_set_color_filter(pt.light, vector3(r, g, b))
+        local color = light_color_with_intensity(pt.light) or vector3_zero()
+        unit_set_vector3_for_materials(pt.flashlight_unit, "light_color", color)
+    end
+end
+
+ServoFriendFlashlightExtension.set_volumetric_intensity = function(self, volumetric_intensity)
+    local pt = self:pt()
+    if pt.light then
+        -- if not volumetric_intensity then
+        --     if self.flashlight_template then
+        --         volumetric_intensity = self.flashlight_template.volumetric_intensity
+        --     end
+        -- end
+        -- if volumetric_intensity then
+            light_set_volumetric_intensity(pt.light, volumetric_intensity or self.flashlight_template.volumetric_intensity)
+        -- end
+    end
+end
+
 ServoFriendFlashlightExtension.set_light = function(self)
     local pt = self:pt()
     if pt.light then
         light_set_enabled(pt.light, self:wants_flashlight_on())
         light_set_casts_shadows(pt.light, self.flashlight_shadows)
-        local template = flashlight_profiles[self.flashlight_type]
-        if template then
-            light_set_ies_profile(pt.light, template.ies_profile)
-            light_set_correlated_color_temperature(pt.light, template.color_temperature)
-            light_set_spot_reflector(pt.light, template.spot_reflector)
-            light_set_intensity(pt.light, template.intensity)
-            light_set_spot_angle_start(pt.light, template.spot_angle_start)
-            light_set_spot_angle_end(pt.light, template.spot_angle_end)
-            light_set_falloff_start(pt.light, template.falloff_start)
-            light_set_falloff_end(pt.light, template.falloff_end)
-            light_set_volumetric_intensity(pt.light, template.volumetric_intensity)
-            light_set_color_filter(pt.light, vector3(self.r, self.g, self.b))
-            local color = light_color_with_intensity(pt.light) or vector3_zero()
-            unit_set_vector3_for_materials(pt.flashlight_unit, "light_color", color)
-        end
+        -- local template = flashlight_profiles[self.flashlight_type]
+        -- if template then
+        light_set_ies_profile(pt.light, self.flashlight_template.ies_profile)
+        light_set_correlated_color_temperature(pt.light, self.flashlight_template.color_temperature)
+        light_set_spot_reflector(pt.light, self.flashlight_template.spot_reflector)
+        light_set_intensity(pt.light, self.flashlight_template.intensity)
+        light_set_spot_angle_start(pt.light, self.flashlight_template.spot_angle_start)
+        light_set_spot_angle_end(pt.light, self.flashlight_template.spot_angle_end)
+        light_set_falloff_start(pt.light, self.flashlight_template.falloff_start)
+        light_set_falloff_end(pt.light, self.flashlight_template.falloff_end)
+        -- light_set_volumetric_intensity(pt.light, template.volumetric_intensity)
+        self:set_volumetric_intensity(self.flashlight_template.volumetric_intensity)
+        -- light_set_color_filter(pt.light, vector3(self.r, self.g, self.b))
+        -- local color = light_color_with_intensity(pt.light) or vector3_zero()
+        -- unit_set_vector3_for_materials(pt.flashlight_unit, "light_color", color)
+        self:set_color(self.r, self.g, self.b)
+        -- end
     end
 end
 

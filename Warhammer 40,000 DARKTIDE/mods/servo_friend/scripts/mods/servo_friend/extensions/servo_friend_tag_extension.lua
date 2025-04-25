@@ -91,7 +91,8 @@ ServoFriendTagExtension.event_smart_tag_created = function(self, tag)
     local enemy = self.focus_tagged_enemies and self:is_enemy(tag)
     local item = self.focus_tagged_items and self:is_item(tag)
     local own = not self.only_own_tags or self:is_owned(tag)
-    if own and (enemy or item) then
+    local daemonhost = not self:is_daemonhost(tag)
+    if own and (enemy or item) and daemonhost then
         local tag_type = self:type(tag)
         self.event_manager:trigger("servo_friend_point_of_interest_created", tag, tag_type)
     end
@@ -109,6 +110,10 @@ end
 ServoFriendTagExtension.type = function(self, tag)
     if self:is_enemy(tag) then return "tag_enemy" end
     return "tag"
+end
+
+ServoFriendTagExtension.is_daemonhost = function(self, tag)
+    return tag and tag._breed and tag._breed.name == "chaos_daemonhost"
 end
 
 ServoFriendTagExtension.is_enemy = function(self, tag)

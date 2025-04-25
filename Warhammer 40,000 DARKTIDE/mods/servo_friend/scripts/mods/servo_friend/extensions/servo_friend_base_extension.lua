@@ -139,19 +139,8 @@ end
 -- ##### ├┬┘├─┤└┬┘│  ├─┤└─┐ │  ########################################################################################
 -- ##### ┴└─┴ ┴ ┴ └─┘┴ ┴└─┘ ┴  ########################################################################################
 
-ServoFriendBaseExtension.do_ray_cast = function(self, target_position)
-    local pt = self:pt()
-    local from = vector3_unbox(self.current_position)
-    local distance = vector3_distance(from, target_position) * .95
-	local to_target = target_position - from
-	local direction = vector3_normalize(to_target)
-	local _, hit_position, _, _, hit_actor = physics_world_raycast(pt.physics_world, from, direction, self.max_distance, "closest", "types", "both", "collision_filter", "filter_minion_line_of_sight_check")
-    if hit_position then
-        if vector3_distance(from, hit_position) < distance then
-            return false
-        end
-    end
-    return true
+ServoFriendBaseExtension.is_in_line_of_sight = function(self, from, to)
+    return mod:is_in_line_of_sight(from, to)
 end
 
 ServoFriendBaseExtension.play_sound = function(self, sound_event, optional_source_id)
@@ -216,7 +205,7 @@ ServoFriendBaseExtension.main_time = function(self)
 end
 
 ServoFriendBaseExtension.game_time = function(self)
-	return self.time_manager and self.time_manager:time("gameplay")
+	return self.time_manager and self.time_manager:has_timer("gameplay") and self.time_manager:time("gameplay")
 end
 
 ServoFriendBaseExtension.time = function(self)
@@ -228,7 +217,7 @@ ServoFriendBaseExtension.main_delta_time = function(self)
 end
 
 ServoFriendBaseExtension.game_delta_time = function(self)
-    return self.time_manager and self.time_manager:delta_time("gameplay")
+    return self.time_manager and self.time_manager:has_timer("gameplay") and self.time_manager:delta_time("gameplay")
 end
 
 ServoFriendBaseExtension.delta_time = function(self)

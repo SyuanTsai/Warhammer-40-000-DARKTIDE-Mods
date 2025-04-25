@@ -10,10 +10,18 @@ local table = table
 local pairs = pairs
 local CLASS = CLASS
 local world = World
+local actor = Actor
 local vector3 = Vector3
+local tostring = tostring
 local callback = callback
 local managers = Managers
+local math_abs = math.abs
+local math_lerp = math.lerp
+local math_sign = math.sign
+local math_acos = math.acos
 local matrix4x4 = Matrix4x4
+local vector3_up = vector3.up
+local actor_unit = actor.unit
 local unit_alive = unit.alive
 local table_size = table.size
 local math_clamp = math.clamp
@@ -21,10 +29,17 @@ local quaternion = Quaternion
 local wwise_world = WwiseWorld
 local script_unit = ScriptUnit
 local vector3_box = Vector3Box
+local vector3_dot = vector3.dot
+local table_clear = table.clear
+local world_units = world.units
 local vector3_zero = vector3.zero
 local vector3_lerp = vector3.lerp
+local HEALTH_ALIVE = HEALTH_ALIVE
+local table_remove = table.remove
 local physics_world = PhysicsWorld
+local vector3_cross = vector3.cross
 local quaternion_box = QuaternionBox
+local vector3_length = vector3.length
 local quaternion_lerp = quaternion.lerp
 local quaternion_look = quaternion.look
 local vector3_unbox = vector3_box.unbox
@@ -58,6 +73,8 @@ local wwise_world_trigger_resource_event = wwise_world.trigger_resource_event
 -- ##### ─┴┘┴ ┴ ┴ ┴ ┴ #################################################################################################
 
 local REFERENCE = "servo_friend"
+local WALK = "walk"
+local SPRINT = "sprint"
 local spineless_servo_friend_unit = "content/environment/cinematic/servo_skull_scanning_static"
 local dominant_servo_friend_unit = "content/weapons/player/pickups/pup_servo_skull_scanning/pup_servo_skull_scanning"
 local decoder_servo_friend_unit = "content/weapons/player/pickups/pup_skull_decoder/pup_skull_decoder"
@@ -127,6 +144,7 @@ mod.on_setting_changed = function(setting_id)
     mod.debug = mod:get("mod_option_debug")
     mod.use_roaming_area = mod:get("mod_option_use_roaming_area")
     mod.roaming_area = mod:get("mod_option_roaming_area")
+    mod.avoid_daemonhost = mod:get("mod_option_avoid_daemonhost")
     -- Reset
     mod.busy = false
     -- Events
@@ -151,17 +169,23 @@ mod.init = function(self)
     -- Packages
     self.all_packages_loaded = false
     local pt = self:pt()
-    pt.loaded_packages = {}
+    table_clear(pt.loaded_packages)
+    table_clear(pt.finished_loading)
+    -- pt.loaded_packages = {}
+    -- pt.finished_loading = {}
     self:load_packages()
     -- Data
     self.max_distance = 20
     self.min_distance = 10
-    self.roam_distance = 30
     -- Position
     self.aim_position = vector3_box(vector3_zero())
     self.current_position = vector3_box(vector3_zero())
     self.target_position = vector3_box(vector3_zero())
     self.last_position = vector3_box(vector3_zero())
+    self.avoid_daemonhost_position = vector3_box(vector3_zero())
+    self.check_daemonhosts_timer = 0
+    self.check_daemonhosts_time = 5
+    self.daemonhosts = {}
     -- Leaning
     self.lean = 0
     self.prev_direction = vector3_box(vector3_zero())
@@ -203,6 +227,10 @@ mod.get_player_extensions = function(self)
         self.first_person_extension = script_unit_extension(pt.player_unit, "first_person_system")
         self.first_person_unit = self.first_person_extension:first_person_unit()
         self.weapon_action_component = self.unit_data:read_component("weapon_action")
+        self.sprint_character_state_component = self.unit_data and self.unit_data:read_component("sprint_character_state")
+        self.hub_jog_character_state = self.unit_data and self.unit_data:read_component("hub_jog_character_state")
+        self.movement_state_component = self.unit_data and self.unit_data:read_component("movement_state")
+        self.player_unit_locomotion_extension = script_unit_extension(pt.player_unit, "locomotion_system")
     end
 end
 
@@ -221,6 +249,7 @@ mod.set_player_spawned = function(self, unit)
     -- Reset
     self.is_aim_locked = false
     self.position_was_corrected = false
+    self.check_daemonhosts_timer = 0
 end
 
 mod.set_player_destroyed = function(self)
@@ -230,17 +259,23 @@ mod.set_player_destroyed = function(self)
     -- Reset
     pt.player_spawned = false
     pt.player_unit = nil
+    self.check_daemonhosts_timer = 0
 end
 
-mod.player_aim_target = function(self)
+mod.player_aim_target = function(self, optional_offset, optional_unit, optional_length, optional_collision_filter)
     local pt = self:pt()
-    local from = unit_world_position(self.first_person_unit, 1)
-    local camera_forward = quaternion_forward(unit_local_rotation(self.first_person_unit, 1))
-    local to = from + camera_forward * 1000
+    optional_offset = optional_offset or vector3_zero()
+    optional_unit = optional_unit  or self.first_person_unit
+    optional_length = optional_length or 1000
+    optional_collision_filter = optional_collision_filter or "filter_player_character_shooting_projectile"
+    local from = unit_world_position(optional_unit, 1) + optional_offset
+    local camera_forward = quaternion_forward(unit_local_rotation(optional_unit, 1))
+    local to = from + camera_forward * optional_length + optional_offset
 	local to_target = to - from
 	local direction = vector3_normalize(to_target)
-	local _, hit_position, _, _, hit_actor = physics_world_raycast(pt.physics_world, from, direction, 1000, "closest", "types", "both", "collision_filter", "filter_player_character_shooting_projectile")
-    return hit_position
+	local _, hit_position, _, _, hit_actor = physics_world_raycast(pt.physics_world, from, direction, optional_length, "closest", "types", "both", "collision_filter", optional_collision_filter)
+    local hit_unit = hit_actor and actor_unit(hit_actor)
+    return hit_position, hit_unit
 end
 
 mod.character_height = function(self)
@@ -282,7 +317,23 @@ end
 
 mod.current_positioning_height = function(self)
     local pt = self:pt()
-    return self:is_in_first_person() and pt.character_height * 1.5 or pt.character_height * 2
+    local crouch_multiplier = self:is_crouching() and .75 or 1
+    local hub_multiplier = self:is_in_hub() and .75 or 1
+    local base_height = self:is_in_first_person() and pt.character_height * 1.5 or pt.character_height * 2
+    return (base_height * crouch_multiplier) * hub_multiplier
+end
+
+mod.is_crouching = function(self)
+    return self.movement_state_component and self.movement_state_component.is_crouching
+end
+
+mod.is_walking = function(self)
+    return self.player_unit_locomotion_extension and self.player_unit_locomotion_extension:move_speed_squared() > 0.01 and not self:is_sprinting()
+end
+
+mod.is_sprinting = function(self)
+    local is_sprinting = self.sprint_character_state_component and self.sprint_character_state_component.is_sprinting
+    return self.is_in_hub and self.hub_jog_character_state and self.hub_jog_character_state.move_state == SPRINT or is_sprinting
 end
 
 mod.new_target_position = function(self, position)
@@ -295,6 +346,24 @@ mod.is_in_hub = function(self)
 	local game_mode_name = managers.state.game_mode:game_mode_name()
 	local is_in_hub = game_mode_name == "hub"
 	return is_in_hub
+end
+
+mod.is_in_psykanium = function(self)
+    local game_mode_name = managers.state.game_mode:game_mode_name()
+	return game_mode_name == "training_grounds" or game_mode_name == "shooting_range"
+end
+
+mod.vector3_equal = function(self, v1, v2)
+	return v1[1] == v2[1] and v1[2] == v2[2] and v1[3] == v2[3]
+end
+
+mod.get_vectors_almost_same = function(self, v1, v2, tolerance)
+    local tolerance = tolerance or .5
+    local v1 = v1 or vector3_zero()
+    local v2 = v2 or vector3_zero()
+    if math_abs(v1[1] - v2[1]) < tolerance and math_abs(v1[2] - v2[2]) < tolerance and math_abs(v1[3] - v2[3]) < tolerance then
+        return true
+    end
 end
 
 -- ##### ┌─┐┌─┐┌─┐┬ ┬┌┐┌ ##############################################################################################
@@ -315,15 +384,18 @@ mod.spawn_servo_friend = function(self, dt, t)
         local rotation = quaternion_identity()
         pt.servo_friend_unit = world_spawn_unit_ex(pt.world, servo_friend_unit, nil, player_position, rotation)
         -- Add extensions
-        self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_tag_system")
-        self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_marker_system")
-        self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_point_of_interest_system")
-        self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_hover_particle_system")
-        self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_hover_sound_system")
-        self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_flashlight_system")
-        self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_voice_system")
-        self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_roaming_system")
-        self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_transparency_system")
+        -- self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_tag_system")
+        -- self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_marker_system")
+        -- self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_point_of_interest_system")
+        -- self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_hover_particle_system")
+        -- self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_hover_sound_system")
+        -- self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_flashlight_system")
+        -- self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_voice_system")
+        -- self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_roaming_system")
+        -- self:servo_friend_add_extension(pt.servo_friend_unit, "servo_friend_transparency_system")
+        for extension_name, system_name in pairs(pt.systems) do
+            self:servo_friend_add_extension(pt.servo_friend_unit, system_name)
+        end
         -- Rotate decoder variants
         if self.appearance == "decoder" or self.appearance == "decoder_2" then
             unit_set_local_rotation(pt.servo_friend_unit, 3, quaternion_from_euler_angles_xyz(0, 0, 90))
@@ -332,7 +404,7 @@ mod.spawn_servo_friend = function(self, dt, t)
         self.current_position:store(player_position)
         self:set_target_position(self:new_target_position())
         -- Talk
-        self.event_manager:trigger("servo_friend_talk", dt, t)
+        self.event_manager:trigger("servo_friend_talk", dt, t, "spawned")
         -- Events
         self.event_manager:trigger("servo_friend_spawned")
     end
@@ -347,8 +419,10 @@ mod:hook(CLASS.PlayerUnitFirstPersonExtension, "extensions_ready", function(func
     -- Original function
     func(self, world, unit, ...)
     -- Player spawned
-    mod:print("Player spawned")
-    mod:set_player_spawned(self._unit)
+    if self._is_local_unit then
+        mod:print("Player spawned")
+        mod:set_player_spawned(self._unit)
+    end
 end)
 
 -- ##### ┌┬┐┌─┐┌─┐┌┬┐┬─┐┌─┐┬ ┬ ########################################################################################
@@ -385,7 +459,9 @@ end
 
 mod:hook(CLASS.PlayerUnitFirstPersonExtension, "destroy", function(func, self, ...)
     -- Player destroyed
-    mod:set_player_destroyed()
+    if self._is_local_unit then
+        mod:set_player_destroyed()
+    end
     -- Original function
     func(self, ...)
 end)
@@ -405,6 +481,7 @@ mod.update_servo_friend = function(self, dt, t)
         end
         self:update_movement(dt, t)
         self:update_aim(dt, t)
+        self:check_for_daemonhosts(dt, t)
     end
 end
 
@@ -425,8 +502,37 @@ mod:hook(CLASS.PlayerUnitFirstPersonExtension, "update", function(func, self, un
     -- Original function
     func(self, unit, dt, t, ...)
     -- Update servo friend
-    mod:update_servo_friend(dt, t)
+    if self._is_local_unit then
+        mod:update_servo_friend(dt, t)
+    end
 end)
+
+
+
+mod.check_for_daemonhosts = function(self, dt, t)
+    -- Check timer for daemonhosts
+    -- if t > self.check_daemonhosts_timer then
+        local side_system = managers.state.extension:system("side_system")
+        local side = side_system:get_side_from_name("villains")
+        local allies = side:alive_units_by_tag("allied", "witch")
+
+        local side_system = managers.state.extension:system("side_system")
+        local side = side_system:get_side_from_name("heroes")
+        local enemies = side:alive_units_by_tag("enemy", "witch")
+
+        if #allies ~= #enemies then
+            self:print("different daemonhost counts")
+        end
+
+        if #allies > #enemies then
+            self.daemonhosts = allies
+        else
+            self.daemonhosts = enemies
+        end
+        -- Reset timer
+        -- self.check_daemonhosts_timer = t + self.check_daemonhosts_time
+    -- end
+end
 
 -- ##### ┌┬┐┌─┐┬  ┬┌─┐┌┬┐┌─┐┌┐┌┌┬┐ ####################################################################################
 -- ##### ││││ │└┐┌┘├┤ │││├┤ │││ │  ####################################################################################
@@ -450,7 +556,7 @@ mod.set_target_position = function(self, position)
 end
 
 mod.movement_speed = function(self)
-    return self.is_aim_locked and 12 or 2
+    return (self:is_sprinting() and 8) or (self:is_walking() and 6) or (self.is_aim_locked and 12) or 4
 end
 
 mod.update_movement = function(self, dt, t)
@@ -532,10 +638,12 @@ mod.update_movement = function(self, dt, t)
         local currDir = vector3_normalize(quaternion_forward(current_rotation))
         local prevDir = self.prev_direction and vector3_unbox(self.prev_direction) or currDir
         self.prev_direction:store(currDir)
-        local curveAxis = vector3.cross(prevDir, currDir)
-        local angleBetween = math.acos(math.clamp(vector3.dot(prevDir, currDir), -1.0, 1.0))
-        local turnDirection = math.sign(vector3.dot(curveAxis, vector3.up()))
-        self.lean = -turnDirection * math.clamp(angleBetween * 100, 0, 45)
+        local curveAxis = vector3_cross(prevDir, currDir)
+        local angleBetween = math_acos(math_clamp(vector3_dot(prevDir, currDir), -1.0, 1.0))
+        local turnDirection = math_sign(vector3_dot(curveAxis, vector3_up()))
+        local new_lean = -turnDirection * math_clamp(angleBetween * 1500, 0, 45)
+        -- self.lean = -turnDirection * math_clamp(angleBetween * 1000, 0, 45)
+        self.lean = math_lerp(self.lean, new_lean, dt * self:rotation_speed())
         -- Correct nan
         if new_position[1] ~= new_position[1] then
             new_position = player_position
@@ -608,35 +716,139 @@ mod.update_aim = function(self, dt, t)
             self.target_rotation:store(rotation)
         end
         -- Rotate towards aim target
-        local current_rotation = unit_local_rotation(pt.servo_friend_unit, 1)
+        -- local current_rotation = unit_local_rotation(pt.servo_friend_unit, 1)
+        local current_rotation = self.current_rotation and quaternion_unbox(self.current_rotation) or unit_local_rotation(pt.servo_friend_unit, 1)
         local target_rotation = self.target_rotation and quaternion_unbox(self.target_rotation) or quaternion_identity()
         local new_rotation = quaternion_lerp(current_rotation, target_rotation, dt * self:rotation_speed())
         -- Lean
         local lean_rotation = quaternion_from_euler_angles_xyz(0, self.lean, 0)
         -- Store current rotation without lean!
         self.current_rotation:store(new_rotation)
+        -- Daemonhost
+        if self.avoid_daemonhost then
+            new_rotation = self:daemonhosts_change_aim(dt, t, new_rotation) or new_rotation
+        end
         -- Set unit rotation with lean!
         unit_set_local_rotation(pt.servo_friend_unit, 1, quaternion_multiply(new_rotation, lean_rotation))
     end
+end
+
+-- Checks if a point is inside a cone
+mod.is_point_in_cone = function(self, target_position, position, direction, depth, radius)
+    local axis = vector3_normalize(direction)
+    local tip_to_point = target_position - position
+    local projection_length = vector3_dot(tip_to_point, axis)
+
+    -- Is the point outside the depth of the cone?
+    if projection_length < 0 or projection_length > depth then
+        return false
+    end
+
+    -- Distance from the cone axis
+    local closest_point_on_axis = position + axis * projection_length
+    local radial_vector = target_position - closest_point_on_axis
+    local radial_distance = vector3_length(radial_vector)
+
+    -- Calculate maximum allowed radius at this depth (linear)
+    local max_radius_at_projection = (projection_length / depth) * radius
+
+    return radial_distance <= max_radius_at_projection
+end
+
+mod.daemonhosts_change_aim = function(self, dt, t, new_rotation, aim_target)
+    local pt = self:pt()
+
+    local was_in_cone = self.is_in_cone
+
+    local from = unit_local_position(pt.servo_friend_unit, 1)
+    local direction = quaternion_forward(new_rotation)
+
+    -- local daemonhost_units = self:daemonhosts(dt, t)
+    if self.daemonhosts and #self.daemonhosts > 0 then
+
+        for _, daemonhost_unit in pairs(self.daemonhosts) do
+        -- for i = #self.daemonhosts, 1, -1 do
+            if daemonhost_unit and unit_alive(daemonhost_unit) then
+                local from = unit_local_position(pt.servo_friend_unit, 1)
+                local daemonhost_position = unit_local_position(daemonhost_unit, 1)
+                local daemonhost_los = self:is_in_line_of_sight(from, daemonhost_position)
+
+                self.is_in_cone = self:is_point_in_cone(daemonhost_position, from, direction, 15, 10)
+
+                if self.is_in_cone and daemonhost_los then
+
+                    if not was_in_cone then
+                        self.event_manager:trigger("servo_friend_overwrite_color", 1, 0, 0)
+                        self.event_manager:trigger("servo_friend_overwrite_volumetric_intensity", 3)
+                        self.event_manager:trigger("servo_friend_talk", dt, t, "avoid_daemonhost")
+                    end
+
+                    local player_position = unit_local_position(pt.player_unit, 1)
+                    local vector_to_position = vector3_normalize(daemonhost_position - player_position)
+                    local avoid_position = daemonhost_position - vector_to_position * 10
+                    -- local avoid_position = from - vector3(0, 0, 1) + vector_to_position
+
+                    local current_avoid_daemonhost_position = self.avoid_daemonhost_position and vector3_unbox(self.avoid_daemonhost_position) or vector3_zero()
+                    local lerp_position = vector3_lerp(current_avoid_daemonhost_position, avoid_position, dt * self:rotation_speed())
+                    self.avoid_daemonhost_position:store(lerp_position)
+
+                    local new_direction = vector3_normalize(lerp_position - from)
+                    local new_rotation = quaternion_look(new_direction)
+                    return new_rotation
+                end
+            end
+        end
+    end
+
+    self.is_in_cone = false
+
+    if was_in_cone then
+        self.event_manager:trigger("servo_friend_reset_color")
+        self.event_manager:trigger("servo_friend_overwrite_volumetric_intensity")
+    end
+
+    local _, hit_position, _, _, hit_actor = physics_world_raycast(pt.physics_world, from, direction, 1000,
+        "closest", "types", "both", "collision_filter", "filter_minion_line_of_sight_check")
+
+    if hit_position and not self:get_vectors_almost_same(self.avoid_daemonhost_position, vector3_zero(), .1) then
+
+        local current_avoid_daemonhost_position = self.avoid_daemonhost_position and vector3_unbox(self.avoid_daemonhost_position)
+        local lerp_position = vector3_lerp(current_avoid_daemonhost_position, hit_position, dt * self:rotation_speed())
+        self.avoid_daemonhost_position:store(lerp_position)
+
+        local new_direction = vector3_normalize(lerp_position - from)
+        local new_rotation = quaternion_lerp(new_rotation, quaternion_look(new_direction), dt * self:rotation_speed())
+
+        return new_rotation
+    else
+        self.avoid_daemonhost_position:store(vector3_zero())
+    end
+
 end
 
 -- ##### ┬  ┬┌┐┌┌─┐  ┌─┐┌─┐  ┌─┐┬┌─┐┬ ┬┌┬┐ ############################################################################
 -- ##### │  ││││├┤   │ │├┤   └─┐││ ┬├─┤ │  ############################################################################
 -- ##### ┴─┘┴┘└┘└─┘  └─┘└    └─┘┴└─┘┴ ┴ ┴  ############################################################################
 
-mod.do_ray_cast = function(self, target_position)
+mod.is_in_line_of_sight = function(self, from, to)
     local pt = self:pt()
-    local from = vector3_unbox(self.current_position)
-    local distance = vector3_distance(from, target_position) * .95
-	local to_target = target_position - from
-	local direction = vector3_normalize(to_target)
-	local _, hit_position, _, _, hit_actor = physics_world_raycast(pt.physics_world, from, direction, self.max_distance, "closest", "types", "both", "collision_filter", "filter_minion_line_of_sight_check")
-    if hit_position then
-        if vector3_distance(from, hit_position) < distance then
-            return false
+    if to and from then
+        local to_target = to - from
+        local distance = vector3_length(to_target)
+        local direction = vector3_normalize(to_target)
+        local hits, hits_n = physics_world_raycast(pt.physics_world, from, direction, distance, "all", "types", "both", "collision_filter", "filter_minion_line_of_sight_check")
+        if hits then
+            local INDEX_DISTANCE = 2
+            for i = 1, hits_n do
+                local hit = hits[i]
+                local hit_distance = hit[INDEX_DISTANCE]
+                if hit_distance and hit_distance < distance * .95 then
+                    return false
+                end
+            end
         end
+        return true
     end
-    return true
 end
 
 -- ##### ┬ ┬┌─┐┬─┐┬  ┌┬┐ ##############################################################################################
@@ -661,7 +873,7 @@ mod.main_time = function(self)
 end
 
 mod.game_time = function(self)
-	return self.time_manager and self.time_manager:time("gameplay")
+	return self.time_manager and self.time_manager:has_timer("gameplay") and self.time_manager:time("gameplay")
 end
 
 mod.time = function(self)
@@ -673,7 +885,7 @@ mod.main_delta_time = function(self)
 end
 
 mod.game_delta_time = function(self)
-    return self.time_manager and self.time_manager:delta_time("gameplay")
+    return self.time_manager and self.time_manager:has_timer("gameplay") and self.time_manager:delta_time("gameplay")
 end
 
 mod.delta_time = function(self)
@@ -717,6 +929,12 @@ end
 -- ##### └─┐├┤ ├┬┘└┐┌┘│ │  ├┤ ├┬┘│├┤ │││ ││  ├┤ ┌┴┬┘ │ ├┤ │││└─┐││ ││││└─┐ ############################################
 -- ##### └─┘└─┘┴└─ └┘ └─┘  └  ┴└─┴└─┘┘└┘─┴┘  └─┘┴ └─ ┴ └─┘┘└┘└─┘┴└─┘┘└┘└─┘ ############################################
 
+mod.servo_friend_extension = function(self, unit, system_or_extension)
+    local pt = self:pt()
+    local system = pt.systems[system_or_extension] or system_or_extension
+    return script_unit_has_extension(unit, system)
+end
+
 mod.servo_friend_add_extension = function(self, unit, system, extension_init_context, extension_init_data)
     if self:add_extension(unit, system, extension_init_context, extension_init_data) then
         local pt = self:pt()
@@ -752,13 +970,13 @@ mod.register_sounds = function(self, sounds)
     end
 end
 
-mod.play_sound = function(self, sound_event, optional_source_id)
+mod.play_sound = function(self, sound_event, optional_source_id, position)
     local pt = self:pt()
     if pt.wwise_world then
         local sound_effect = pt.sound_events[sound_event]
         if sound_effect then
-            local current_position = vector3_unbox(self.current_position)
-            local source_id = optional_source_id or wwise_world_make_auto_source(pt.wwise_world, current_position)
+            position = position or vector3_unbox(self.current_position)
+            local source_id = optional_source_id or wwise_world_make_auto_source(pt.wwise_world, position)
             wwise_world_trigger_resource_event(pt.wwise_world, sound_effect, source_id)
             return source_id
         end
@@ -815,3 +1033,4 @@ mod:io_dofile("servo_friend/scripts/mods/servo_friend/extensions/servo_friend_fl
 mod:io_dofile("servo_friend/scripts/mods/servo_friend/extensions/servo_friend_voice_extension")
 mod:io_dofile("servo_friend/scripts/mods/servo_friend/extensions/servo_friend_roaming_extension")
 mod:io_dofile("servo_friend/scripts/mods/servo_friend/extensions/servo_friend_transparency_extension")
+mod:io_dofile("servo_friend/scripts/mods/servo_friend/extensions/servo_friend_out_of_bounds_extension")
