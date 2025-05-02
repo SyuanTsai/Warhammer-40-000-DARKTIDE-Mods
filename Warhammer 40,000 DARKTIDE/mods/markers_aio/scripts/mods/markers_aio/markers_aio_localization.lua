@@ -14,6 +14,28 @@ return {
 		["zh-cn"] = "集成我的全部‘图标’模组为一个简单的安装包",
 	},
 
+	-- General Settings
+	aio_settings = {
+		en = "MARKERS IMPROVED AIO SETTINGS",
+		fr = "MARKERS IMPROVED AIO SETTINGS",
+		ru = "MARKERS IMPROVED AIO SETTINGS",
+		["zh-tw"] = "標記一體化設置",
+		["zh-cn"] = "图标改进集成设置",
+	},
+	los_fade_enable = {
+		en = "Fade out icons out of line of sight",
+		fr = "Fade out icons out of line of sight",
+		ru = "Fade out icons out of line of sight",
+		["zh-tw"] = "視野外淡出效果",
+		["zh-cn"] = "视野外图标淡出",
+	},
+	los_opacity = {
+		en = "Line of sight alpha (percentage)",
+		fr = "Line of sight alpha (percentage)",
+		ru = "Line of sight alpha (percentage)",
+		["zh-tw"] = "視野外透明度",
+		["zh-cn"] = "视野外图标透明度",
+	},
 	-- AMMO MED MARKERS
 	ammo_med_markers_settings = {
 		en = "AMMO & MED MARKERS",
@@ -77,6 +99,13 @@ return {
 		ru = "Минимальный размер метки",
 		["zh-tw"] = "標記的最小尺寸",
 		["zh-cn"] = "图标最小尺寸",
+	},
+	ammo_med_scale = {
+		en = "Scale",
+		fr = "Scale",
+		ru = "Scale",
+		["zh-tw"] = "圖標比例",
+		["zh-cn"] = "图标缩放比例",
 	},
 	ammo_med_alpha = {
 		en = "Alpha Multiplier",
@@ -372,6 +401,13 @@ return {
         ["zh-tw"] = "標記的最小尺寸",
 		["zh-cn"] = "图标最小尺寸",
 	},
+	chest_scale = {
+		en = "Scale",
+		fr = "Scale",
+		ru = "Scale",
+		["zh-tw"] = "Scale",
+		["zh-cn"] = "图标缩放比例",
+	},
 	chest_alpha = {
 		en = "Alpha Multiplier",
 		fr = "Multiplicateur d'alpha",
@@ -474,6 +510,13 @@ return {
         ["zh-tw"] = "標記的最小尺寸",
 		["zh-cn"] = "图标最小尺寸",
 	},
+	heretical_idol_scale = {
+		en = "Scale",
+		fr = "Scale",
+		ru = "Scale",
+		["zh-tw"] = "Scale",
+		["zh-cn"] = "图标缩放比例",
+	},
 	heretical_idol_alpha = {
 		en = "Alpha Multiplier",
 		fr = "Multiplicateur d'alpha",
@@ -575,6 +618,13 @@ return {
 		ru = "Минимальный размер метки",
         ["zh-tw"] = "標記的最小尺寸",
 		["zh-cn"] = "图标最小尺寸",
+	},
+	material_scale = {
+		en = "Scale",
+		fr = "Scale",
+		ru = "Scale",
+		["zh-tw"] = "Scale",
+		["zh-cn"] = "图标缩放比例",
 	},
 	material_alpha = {
 		en = "Alpha Multiplier",
@@ -746,6 +796,13 @@ return {
 		ru = "Минимальный размер метки",
         ["zh-tw"] = "標記的最小尺寸",
 		["zh-cn"] = "图标最小尺寸",
+	},
+	stimm_scale = {
+		en = "Scale",
+		fr = "Scale",
+		ru = "Scale",
+		["zh-tw"] = "Scale",
+		["zh-cn"] = "图标缩放比例",
 	},
 	stimm_alpha = {
 		en = "Alpha Multiplier",
@@ -957,6 +1014,13 @@ return {
         ["zh-tw"] = "標記的最小尺寸",
 		["zh-cn"] = "图标最小尺寸",
 	},
+	tome_scale = {
+		en = "Scale",
+		fr = "Scale",
+		ru = "Scale",
+		["zh-tw"] = "Scale",
+		["zh-cn"] = "图标缩放比例",
+	},
 	tome_alpha = {
 		en = "Alpha Multiplier",
 		fr = "Multiplicateur d'alpha",
@@ -1033,7 +1097,8 @@ return {
 
 	-- Tainted Communication Device Markers
 	tainted_markers_settings = {
-		en = "TAINTED COMMUNICATION DEVICE MARKERS"
+		en = "TAINTED COMMUNICATION DEVICE MARKERS",
+		["zh-cn"] = "腐化通讯装置图标",
 	},
 	tainted_enable = {
 		en = "Enable Markers",
@@ -1085,6 +1150,13 @@ return {
         ["zh-tw"] = "標記的最小尺寸",
 		["zh-cn"] = "图标最小尺寸",
 	},
+	tainted_scale = {
+		en = "Scale",
+		fr = "Scale",
+		ru = "Scale",
+		["zh-tw"] = "Scale",
+		["zh-cn"] = "图标缩放比例",
+	},
 	tainted_alpha = {
 		en = "Alpha Multiplier",
 		fr = "Multiplicateur d'alpha",
@@ -1100,16 +1172,29 @@ return {
 		["zh-cn"] = "边框颜色",
 	},
 	tainted_colour = {
-		en = "Tainted Communications Device Colour"
+		en = "Tainted Communications Device Colour",
+		["zh-cn"] = "腐化通讯装置",
 	},
 	tainted_colour_R = {
-		en = "R"
+		en = "R",
+		fr = "R",
+		ru = "К",
+        ["zh-tw"] = "紅",
+		["zh-cn"] = "红",
 	},
 	tainted_colour_G = {
-		en = "G"
+		en = "G",
+		fr = "V",
+		ru = "З",
+        ["zh-tw"] = "綠",
+		["zh-cn"] = "绿",
 	},
 	tainted_colour_B = {
-		en = "B"
+		en = "B",
+		fr = "B",
+		ru = "С",
+        ["zh-tw"] = "藍",
+		["zh-cn"] = "蓝",
 	},
 	
 	Gold = {
