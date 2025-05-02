@@ -19,7 +19,36 @@ return {
 		["zh-tw"] = "啟用MOD指示器",
 	},
 	hud_element_tooltip = {
-		en = "When enabled, a HUD icon will be displayed whenever a sequence is running."
+		en = "When enabled, a HUD icon will be displayed indicating mod and sequence status.",
+		["zh-tw"] = "啟用後，將顯示一個HUD圖標，指示模組和序列狀態。",
+	},
+	hud_element_type = {
+		en = "Sequence Indicator Style",
+		["zh-tw"] = "MOD指示器樣式",
+	},
+	hud_element_type_tooltip = {
+		en = string.format("Color: HUD element will be colored when a sequence is active, black-and-white when inactive.\n"
+		.."Icon: HUD element will change icons depending on sequence activity status.\n"
+		.."Icon + Color: HUD element will change icons and color depending on sequence activity status.\n"),
+		["zh-tw"] = string.format("顏色: 當序列啟用時，HUD元素將顯示顏色，當序列禁用時，將顯示黑白。\n"
+		.."圖標: 根據序列活動狀態，HUD元素將更改圖標。\n"
+		.."圖標 + 顏色: 根據序列活動狀態，HUD元素將更改圖標和顏色。\n"),
+	},
+	hud_element_type_color = {
+		en = "Color",
+		["zh-tw"] = "顏色",
+	},
+	hud_element_type_icon = {
+		en = "Icon",
+		["zh-tw"] = "圖標",
+	},
+	hud_element_type_opacity = {
+		en = "Opacity",
+		["zh-tw"] = "不透明度",
+	},
+	hud_element_type_icon_color = {
+		en = "Icon + Color",
+		["zh-tw"] = "圖標 + 顏色",
 	},
 	hud_element_size = {
 		en = "Sequence Indicator Size",
@@ -121,7 +150,8 @@ return {
 		["zh-tw"] = "重擊強化調整",
 	},
 	heavy_buff_tooltip = {
-		en = "When selected, Heavy attacks will be charged until this buff reaches the specified number of stacks in the Heavy Buff Stacks setting."
+		en = "When selected, Heavy attacks will be charged until this buff reaches the specified number of stacks in the Heavy Buff Stacks setting.",
+		["zh-tw"] = "當選擇時，重擊將充能直到這個強化達到指定的層數。",
 	},
 	thrust = {
 		en = "Thrust",
@@ -134,7 +164,6 @@ return {
 	crunch = {
 		en = "Crunch",
 		["zh-tw"] = "嘎嘎!",
-		en = "Crunch"
 	},
 	heavy_buff_stacks = {
 		en = "Heavy Buff Stacks",
@@ -144,8 +173,17 @@ return {
 		en = "Special Required For Heavy Modifier",
 		["zh-tw"] = "重擊修飾需要特殊攻擊",
 	},
+	always_special = {
+		en = "Always Activate Special Actions",
+		["zh-tw"] = "始終啟用特殊攻擊",
+	},
+	always_special_tooltip = {
+		en = "When enabled, the mod will always execute Special actions, regardless of weapon state.",
+		["zh-tw"] = "啟用後，無論武器狀態如何，模組都將始終執行特殊攻擊。",
+	},
 	heavy_buff_special_tooltip = {
-		en = "When enabled, the Heavy Buff Modifier setting will only take effect while the current weapon's Special Action is active."
+		en = "When enabled, the Heavy Buff Modifier setting will only take effect while the current weapon's Special Action is active.",
+		["zh-tw"] = "啟用後，重擊強化調整設定僅在當前武器的特殊攻擊啟用時生效。",
 	},
 	global_melee = {
 		en = "GLOBAL",
@@ -157,6 +195,7 @@ return {
 	},
 	sequence_cycle_point_tooltip = {
 		en = "Once the sequence has completed, it will restart from this step.",
+		["zh-tw"] = "序列完成後，將從此步驟重新開始。",
 	},
 	sequence_step_one = {
 		en = "Step One",
@@ -296,6 +335,9 @@ return {
 	special_standard = {
 		en = "Special + Standard",
 		["zh-tw"] = "特殊和標準",
+	},
+	special_charged = {
+		en = "Special (Charged)",
 	},
 	auto_charge_threshold = {
 		en = "Charge Threshold %%",
@@ -743,15 +785,15 @@ return {
 		["zh-tw"] = "VIII(八)型槍托自動槍(阿格里皮娜)",
 	},
 	autogun_p3_m1 = {
-		en = "Columnus Mk III Heavy Autogun",
+		en = "Columnus Mk III Vigilant Autogun",
 		["zh-tw"] = "III(三)型機動自動槍(哥倫努)",
 	},
 	autogun_p3_m2 = {
-		en = "Graia Mk VII Heavy Autogun",
+		en = "Graia Mk VII Vigilant Autogun",
 		["zh-tw"] = "VII(七)型機動自動槍(格拉亞)",
 	},
 	autogun_p3_m3 = {
-		en = "Agripinaa Mk IX Heavy Autogun",
+		en = "Agripinaa Mk IX Vigilant Autogun",
 		["zh-tw"] = "IX(九)型機動自動槍(阿格里皮娜)",
 	},
 	psyker_throwing_knives = {
