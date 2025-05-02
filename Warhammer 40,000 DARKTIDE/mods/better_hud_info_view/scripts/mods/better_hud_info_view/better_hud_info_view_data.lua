@@ -224,6 +224,29 @@ return {
             unit_text = "右侧任务板 Y 偏移"
           },
         }
+      },
+      -- 计分板
+      {
+        setting_id = "scoreboard",
+        type = "group",
+        sub_widgets = {
+          {
+            setting_id = "scoreboard_offset_x",
+            type = "numeric",
+            default_value = -260,
+            range = { -1000, 1000 },
+            step_size = 10,
+            unit_text = "计分板 X 偏移"
+          },
+          {
+            setting_id = "scoreboard_offset_y",
+            type = "numeric",
+            default_value = -100,
+            range = { -1000, 1000 },
+            step_size = 10,
+            unit_text = "计分板 Y 偏移"
+          },
+        }
       }
 	}
   }
