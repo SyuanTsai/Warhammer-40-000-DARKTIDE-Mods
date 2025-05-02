@@ -27,7 +27,7 @@ local ui_definitions = {
                 style_id = "icon",
                 value_id = "icon",
                 pass_type = "texture",
-                value = "content/ui/materials/icons/circumstances/maelstrom_01",--"content/ui/materials/icons/presets/preset_01",
+                value = "content/ui/materials/icons/circumstances/maelstrom_01",
                 style = {
                     size = { nil, nil },
                 }
@@ -36,20 +36,21 @@ local ui_definitions = {
     }
 }
 
--- "content/ui/materials/icons/circumstances/live_event_01" Inquisitorial I surrounded by hexagon
--- "content/ui/materials/icons/circumstances/more_resistance_01" /\
--- "content/ui/materials/icons/circumstances/less_resistance_01" \/
-
 local HudElementSkitarius = class("HudElementSkitarius", "HudElementBase")
 
 HudElementSkitarius.init = function(self, parent, draw_layer, start_scale)
     HudElementSkitarius.super.init(self, parent, draw_layer, start_scale, ui_definitions)
     self:set_size(mod:get("hud_element_size"))
-    self:set_enabled(false)
+    self:set_icon("circumstances/maelstrom_01")
+    self:set_visible(false)
 end
 
-HudElementSkitarius.set_enabled = function(self, vis)
+HudElementSkitarius.set_visible = function(self, vis)
     self._widgets_by_name.skitarius.style.icon.visible = vis
+end
+
+HudElementSkitarius.set_color = function(self, a, r, g, b)
+    self._widgets_by_name.skitarius.style.icon.color = { a, r, g, b }
 end
 
 HudElementSkitarius.set_size = function(self, side_length)
@@ -57,5 +58,16 @@ HudElementSkitarius.set_size = function(self, side_length)
     widget_size[1] = side_length
     widget_size[2] = side_length
 end
+
+HudElementSkitarius.set_icon = function(self, icon)
+    local icon_path = "content/ui/materials/icons/" .. icon
+    self._widgets_by_name.skitarius.content.icon = icon_path
+end
+
+--[[ Icon References ]
+    circumstances/maelstrom_01 : Skull with normal eyes
+    circumstances/maelstrom_02 : Skull with red eyes
+
+--]]
 
 return HudElementSkitarius

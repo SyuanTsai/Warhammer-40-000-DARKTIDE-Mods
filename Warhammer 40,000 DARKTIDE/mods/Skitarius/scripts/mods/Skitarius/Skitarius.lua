@@ -14,6 +14,12 @@ local HUD_ACTIVE = false
 local HALT_ON_INTERRUPT = false
 local MAINTAIN_BIND = false
 
+local HUD = {
+    ACTIVE = false,
+    TYPE = "color",
+    SIZE = 50,
+}
+
 -- Mod Enable/Disable
 mod_enable_verbose = false
 ENABLE_BIND_HELD = {}
@@ -52,14 +58,14 @@ local MAGOS = {
 
 -- KEYBINDS: List of binds to allow functions to iterate through them
 local KEYBINDS = {
-    PRESSED_ONE,
-    HELD_ONE,
-    PRESSED_TWO,
-    HELD_TWO,
-    PRESSED_THREE,
-    HELD_THREE,
-    PRESSED_FOUR,
-    HELD_FOUR,
+    keybind_one_pressed,
+    keybind_one_held,
+    keybind_two_pressed,
+    keybind_two_held,
+    keybind_three_pressed,
+    keybind_three_held,
+    keybind_four_pressed,
+    keybind_four_held,
 }
 
 -- ACTIVE_BINDS: List of keybinds which are currently pressed/toggled, even if not actively controlling input
@@ -90,6 +96,7 @@ local INPUT = {
     action_two_hold = {key,value},
     weapon_extra_pressed = {key,value},
     weapon_extra_hold = {key,value},
+    weapon_reload_hold = {key,value},
 }
 
 -- INTERCEPT: Permission state data for determining when and how keybinds can override player input
@@ -320,8 +327,7 @@ local ENGRAM = {
     COMMANDS = {}
 }
 
--- RANGED_SETTINGS - Container for ranged weapon settings
-local RANGED_SETTINGS = {}
+-- RANGED SETTINGS
 local ALWAYS_CHARGE = false -- Flag to always release charged attacks when they are ready, regardless of other settings
 local ALWAYS_CHARGE_THRESHOLD = 100
 local IS_AIMING = false        -- Flag to indicate if player is aiming
@@ -344,6 +350,7 @@ local MELEE_TEMPLATE = {
     heavy_buff = "none",
     heavy_buff_stacks = 0,
     heavy_buff_special = false,
+    always_special = false,
     sequence_cycle_point = "sequence_step_one",
     sequence_step_one = "none",
     sequence_step_two = "none",
@@ -416,48 +423,207 @@ mod.on_disabled = function()
     MOD_ENABLED = false
 end
 
+mod.on_game_state_changed = function()
+    mod.kill_sequence()
+end
+
 mod.update = function()
+    mod.update_hud()
     if MOD_ENABLED then
         mod.perflog()
         mod.update_peril()
-        mod.update_hud()
         mod.refresh_weapon()
+        mod.update_binds()
         --------------------------------------------------------------------------------------------------------------------
         if mod.ready_for_intercept() or mod.override_primary() then
-            mod.update_binds()
+            
             if INTERCEPT.AUTHORIZED or mod.override_primary() then
                 mod.update_buffer()
                 mod.execute()
             else
                 mod.kill_sequence()
             end
-        elseif Managers.ui:using_input() then
-            mod.kill_sequence()
         end
         --------------------------------------------------------------------------------------------------------------------
     end
 end
 
--- Set engram data to that of the most recent valid bind, if not already set
-mod.update_binds = function()
+-- Returns true if a non-keybind input which generates weapon actions is being held
+mod.keybind_conflict = function(ranged_check)
+    local conflict = false
+    local conflicts = {}
+    for k, v in pairs(INPUT) do
+        if INPUT[k].key and INPUT[k].value then
+            for bind, key in pairs(KEYBINDS) do
+                if key and key[1] then
+                    -- If any actual inputs are pressed, allow them to override mod keybinds unless the input is the keybind itself
+                    local keybind = INPUT[k].key:match("_(.+)")
+                    if keybind ~= key[1] then
+                        conflict = k
+                        conflicts[k] = true
+                    else
+                        -- Melee
+                        if (MAGOS.WEAPON_TYPE == "MELEE" or MAGOS.WEAPON_NAME == "ogryn_gauntlet_p1_m1") and mod.valid_engram(bind) then
+                            conflict = false
+                            break
+                        end
+                        -- Ranged
+                        if (MAGOS.WEAPON_TYPE == "RANGED" or MAGOS.WEAPON_NAME == "psyker_throwing_knives") and mod.valid_ranged(bind) then
+                            conflict = false
+                            break
+                        end
+                    end
+                end
+            end
+        end
+    end
+    return conflict and conflicts or false
+end
+
+-- Melee Gatekeeper: Mod is allowed to engage with sequences only if the player is spawned with a melee weapon, and there is not an active view (e.g. menus/chat)
+mod.ready_for_intercept = function()
+    if not MOD_ENABLED or Managers.ui:using_input() then
+        return false
+    end
+    local player_manager = Managers and Managers.player
+    local player = player_manager:local_player_safe(1)
+    local player_unit = player and player.player_unit
+    local weapon = ScriptUnit.has_extension(player_unit, "weapon_system")
+    local data_system = ScriptUnit.has_extension(player_unit, "unit_data_system")
+    local inventory_comp = data_system and data_system:read_component("inventory")
+	local wielded_slot = inventory_comp and inventory_comp.wielded_slot
+    -- if wielded_slot is not primary or secondary, return false
+    if wielded_slot ~= "slot_primary" and wielded_slot ~= "slot_secondary" then
+        -- override for assail
+        if not (wielded_slot == "slot_grenade_ability" and MAGOS.WEAPON_NAME == "psyker_throwing_knives") then
+            return false
+        end
+    end
+    if weapon then
+        if not MAGOS.WEAPON_TYPE then
+            mod.refresh_weapon()
+        end
+        -- Ranged weapons are not allowed to intercept melee sequences, unless it is the Grenadier Gauntlet
+        if MAGOS.WEAPON_TYPE == "RANGED" and MAGOS.WEAPON_NAME ~= "ogryn_gauntlet_p1_m1" then
+            return false
+        end
+        local interrupt_forbidden = mod.keybind_conflict()
+        if interrupt_forbidden and interrupt_forbidden.weapon_extra_pressed then
+            FORCE_SPECIAL = true
+        end
+        -- If HALT_ON_INTERRUPT is enabled, shut down any keybinds when interrupting actions are performed
+        if interrupt_forbidden and HALT_ON_INTERRUPT and not mod.override_primary() then
+            for key, value in pairs(ACTIVE_BINDS) do
+                ACTIVE_BINDS[key] = false
+            end
+            INTERCEPT.AUTHORIZED = false
+            INTERCEPT.AUTHORITY = "none"
+        end
+        return not interrupt_forbidden
+    else
+        return false
+    end
+end
+
+-- Determines whether or not melee sequences should override the primary action input
+mod.override_primary = function()
+    local player_manager = Managers and Managers.player
+    local player = player_manager:local_player_safe(1)
+    local player_unit = player and player.player_unit
+    local data_system = ScriptUnit.has_extension(player_unit, "unit_data_system")
+    local inventory_comp = data_system and data_system:read_component("inventory")
+	local wielded_slot = inventory_comp and inventory_comp.wielded_slot
+    -- if wielded_slot is not primary or secondary, return false
+    if wielded_slot ~= "slot_primary" and wielded_slot ~= "slot_secondary" then
+        -- override for assail
+        if not (wielded_slot == "slot_grenade_ability" and MAGOS.WEAPON_NAME == "psyker_throwing_knives") then
+            return false
+        end
+    end
+    -- Do NOT use override sequences if:
+    if not MOD_ENABLED -- The mod is disabled
+       or Managers.ui:using_input() -- The UI is controlled by the UI Manager (i.e. in a menu/chat)
+       or INPUT.action_two_hold.value or INPUT.weapon_extra_pressed.value or INPUT.weapon_extra_hold.value -- A priority input is held (block/special)
+       or not INPUT.action_one_hold.value -- The primary input is NOT being held
+    then
+        INTERCEPT.OVERRIDE = false
+        return false
+    end
+    -- Check whether or not, for the current weapon or global melee, there are any sequences set to override the primary action
+    if not MAGOS.WEAPON_TYPE then
+        mod.refresh_weapon()
+    end
+    -- Do not apply this override if the player is not using a melee weapon (checked separately as refresh_weapon() has other checks to avoid crashes that must happen)
+    if MAGOS.WEAPON_TYPE ~= "MELEE" and MAGOS.WEAPON_NAME ~= "ogryn_gauntlet_p1_m1" then
+        INTERCEPT.OVERRIDE = false
+        return false
+    end
+    -- Ensure there is actually override data to use
+    if BIND_DATA.override_primary and BIND_DATA.override_primary.MELEE then
+        -- Prefer weapon-specific data
+        if BIND_DATA.override_primary.MELEE[MAGOS.WEAPON_NAME]
+        and BIND_DATA.override_primary.MELEE[MAGOS.WEAPON_NAME].sequence_step_one ~= nil 
+        and BIND_DATA.override_primary.MELEE[MAGOS.WEAPON_NAME].sequence_step_one ~= "none" then
+            return true
+        -- But use global data if weapon-specific data is absent/invalid
+        elseif BIND_DATA.override_primary.MELEE.global_melee 
+        and BIND_DATA.override_primary.MELEE.global_melee.sequence_step_one ~= nil 
+        and BIND_DATA.override_primary.MELEE.global_melee.sequence_step_one ~= "none" then
+            return true
+        end
+    end
+    INTERCEPT.OVERRIDE = false
+    return false
+end
+
+mod.is_melee = function()
+    if not MAGOS.WEAPON_NAME or not MAGOS.WEAPON_TYPE then
+        mod.refresh_weapon()
+    end
+    if MAGOS.WEAPON_TYPE == "MELEE" or MAGOS.WEAPON_NAME == "ogryn_gauntlet_p1_m1" then
+        return true
+    else
+        return false
+    end
+end
+
+mod.is_ranged = function()
+    if not MAGOS.WEAPON_NAME or not MAGOS.WEAPON_TYPE then
+        mod.refresh_weapon()
+    end
+    if MAGOS.WEAPON_TYPE == "RANGED" or MAGOS.WEAPON_NAME == "psyker_throwing_knives" then
+        return true
+    else
+        return false
+    end
+end
+
+-- Set engram data to that of the most recent valid bind, if not already set (held binds only)
+mod.update_binds = function(optional_ranged)
     local most_recent = 0
     local most_recent_bind = "none"
     for key, value in pairs(ACTIVE_BINDS) do
         if ACTIVE_BINDS[key] then
-            if ACTIVE_BINDS[key] > most_recent and mod.valid_engram(key) then
+            if ACTIVE_BINDS[key] > most_recent and ((mod.is_melee() and mod.valid_engram(key)) or (mod.is_ranged() and mod.valid_ranged(key))) then
                 most_recent = ACTIVE_BINDS[key]
                 most_recent_bind = key
             end
         end
     end
     -- Ensure INTERCEPT.AUTHORIZED is set up, if applicable
-    if most_recent_bind ~= "none" and most_recent_bind ~= "override_primary" and not INTERCEPT.AUTHORIZED then
+    if most_recent_bind ~= "none" and most_recent_bind ~= "override_primary" then
         INTERCEPT.AUTHORIZED = true
         INTERCEPT.AUTHORITY = most_recent_bind
+    elseif most_recent_bind == "none" then
+        INTERCEPT.AUTHORIZED = false
+        INTERCEPT.AUTHORITY = "none"
     end
     -- Update engram if there is a recent bind which does not match the engram, or the engram is stuck
     if most_recent_bind ~= ENGRAM.BIND or ENGRAM.COMMANDS[ENGRAM.INDEX] == nil then
         mod.update_engram(most_recent_bind)
+    end
+    if optional_ranged and most_recent_bind then
+        return most_recent_bind
     end
 end
 
@@ -493,7 +659,7 @@ mod.kill_sequence = function()
     -- Clear override flag
     INTERCEPT.OVERRIDE = false
     -- Clear ranged settings
-    RANGED_SETTINGS = {}
+    LAST_SHOT = 0
     -- Clear Flicker Buffer, but only if not actively in use by ranged override
     if not mod.auto_shoot_eligible() then
         for i = 1, #FLICKER_BUFFER do
@@ -503,6 +669,8 @@ mod.kill_sequence = function()
 end
 
 mod.on_setting_changed = function(setting_name)
+    -- clear input data
+    mod.kill_sequence()
     -- Reset Melee Weapon
     if setting_name == "reset_weapon_melee" then
         local temp_weapon = mod:get("melee_weapon_selection")
@@ -613,11 +781,14 @@ mod.on_setting_changed = function(setting_name)
     elseif setting_name == "always_charge_threshold" then
         ALWAYS_CHARGE_THRESHOLD = mod:get("always_charge_threshold")
     elseif setting_name == "hud_element" then
-        HUD_ACTIVE = mod:get("hud_element")
+        HUD.ACTIVE = mod:get("hud_element")
+    elseif setting_name == "hud_element_type" then
+        HUD.TYPE = mod:get("hud_element_type")
     elseif setting_name == "hud_element_size" then
+        HUD.SIZE = mod:get("hud_element_size")
         local hud_element = mod.get_hud_element()
         if hud_element then
-            hud_element:set_size(mod:get("hud_element_size") or 50)
+            hud_element:set_size(HUD.SIZE or 50)
         end
     elseif setting_name == "halt_on_interrupt" then
         HALT_ON_INTERRUPT = mod:get("halt_on_interrupt")
@@ -631,14 +802,14 @@ mod.on_all_mods_loaded = function()
     -- Binds
     ENABLE_BIND_HELD = mod:get("mod_enable_held")
     ENABLE_BIND_PRESSED = mod:get("mod_enable_pressed")
-    KEYBINDS.PRESSED_ONE = mod:get("keybind_one_pressed")
-    KEYBINDS.HELD_ONE = mod:get("keybind_one_held")
-    KEYBINDS.PRESSED_TWO = mod:get("keybind_two_pressed")
-    KEYBINDS.HELD_TWO = mod:get("keybind_two_held")
-    KEYBINDS.PRESSED_THREE = mod:get("keybind_three_pressed")
-    KEYBINDS.HELD_THREE = mod:get("keybind_three_held")
-    KEYBINDS.PRESSED_FOUR = mod:get("keybind_four_pressed")
-    KEYBINDS.HELD_FOUR = mod:get("keybind_four_held")
+    KEYBINDS.keybind_one_pressed = mod:get("keybind_one_pressed")
+    KEYBINDS.keybind_one_held = mod:get("keybind_one_held")
+    KEYBINDS.keybind_two_pressed = mod:get("keybind_two_pressed")
+    KEYBINDS.keybind_two_held = mod:get("keybind_two_held")
+    KEYBINDS.keybind_three_pressed = mod:get("keybind_three_pressed")
+    KEYBINDS.keybind_three_held = mod:get("keybind_three_held")
+    KEYBINDS.keybind_four_pressed = mod:get("keybind_four_pressed")
+    KEYBINDS.keybind_four_held = mod:get("keybind_four_held")
     -- Data
     BIND_DATA = mod:get("bind_data") ~= nil and mod:get("bind_data") or BIND_DATA
     -- Ensure all binds/weapons with any data do not have any nil data
@@ -673,7 +844,9 @@ mod.on_all_mods_loaded = function()
     -- Set up defaults if no data
     ALWAYS_CHARGE = mod:get("always_charge") or false
     ALWAYS_CHARGE_THRESHOLD = mod:get("always_charge_threshold") or 100
-    HUD_ACTIVE = mod:get("hud_element") or false
+    HUD.ACTIVE = mod:get("hud_element") or false
+    HUD.SIZE = mod:get("hud_element_size") or 50
+    HUD.TYPE = mod:get("hud_element_type") or "color"
     HALT_ON_INTERRUPT = mod:get("halt_on_interrupt") or false
     MAINTAIN_BIND = mod:get("maintain_bind") or false
 end
@@ -687,9 +860,6 @@ end
 mod.mod_enable_toggle = function()
     if not Managers.ui:using_input() then
         MOD_ENABLED = not MOD_ENABLED
-        if mod_enable_verbose then
-            mod:echo("Skitarius %s.", MOD_ENABLED and "enabled" or "disabled")
-        end
     end
 end
 
@@ -719,34 +889,54 @@ mod.held_four = function(first)
 end
 
 mod.bind_handler = function(bind, first)
-    -- Ignore binds if UI is handling input
-    if not Managers.ui:using_input() then
+    -- Do not allow bind handling while chat is open
+    if not Managers.ui:chat_using_input() then
         -- Toggle bind tracking
         if string.find(bind, "pressed") then
             local any_toggle_active = false
             for key, value in pairs(ACTIVE_BINDS) do
-                if string.find(key, "pressed") and ACTIVE_BINDS[key] then
+                if key and string.find(key, "pressed") and ACTIVE_BINDS[key] then
                     any_toggle_active = true
                     break
                 end
             end
-            -- If any toggle bind is active, pressing any toggle button should be an off switch. Toggles can only initiate sequences if none are active.
+            -- If any toggle bind is active, pressing any toggle button should turn off the old one and turn on the new one.
             if any_toggle_active then
-                for key, value in pairs(ACTIVE_BINDS) do
-                    ACTIVE_BINDS[key] = false
+                -- If the bind which is being pressed is active, shut down all binds including this one
+                if ACTIVE_BINDS[bind] then
+                    for key, value in pairs(ACTIVE_BINDS) do
+                        if key and string.find(key, "pressed") and ACTIVE_BINDS[key] then
+                            ACTIVE_BINDS[key] = false
+                        end
+                    end
+                    INTERCEPT.AUTHORIZED = false
+                    INTERCEPT.AUTHORITY = "none"
+                -- If this bind is not active, shut down all other binds and activate this one
+                else
+                    for key, value in pairs(ACTIVE_BINDS) do
+                        if key and string.find(key, "pressed") and ACTIVE_BINDS[key] then
+                            ACTIVE_BINDS[key] = false
+                        end
+                    end
+                    ACTIVE_BINDS[bind] = SKITARIUS.T
+                    if INTERCEPT.AUTHORIZED and INTERCEPT.AUTHORITY ~= bind then
+                        INTERCEPT.AUTHORITY = bind
+                    else
+                        mod.toggle(bind, first)
+                    end
                 end
-                -- Instead of sending to toggle, just directly shut it down
-                INTERCEPT.AUTHORIZED = false
-                INTERCEPT.AUTHORITY = "none"
+            -- If no binds are active, activate this one
             else
                 ACTIVE_BINDS[bind] = SKITARIUS.T
                 mod.toggle(bind, first)
             end
         -- Held bind tracking
         else
+            -- Activation
             if not ACTIVE_BINDS[bind] and first then
                 ACTIVE_BINDS[bind] = SKITARIUS.T
                 mod.toggle(bind, first)
+            -- Deactivation
             else
                 ACTIVE_BINDS[bind] = false
                 mod.toggle(bind, first)
@@ -779,6 +969,22 @@ end
 
 -- Checks whether or not the bind has any engram data were it allowed to intercept input
 mod.valid_engram = function(bind)
+    if not MOD_ENABLED or Managers.ui:using_input() then
+        return false
+    end
+    local player_manager = Managers and Managers.player
+    local player = player_manager:local_player_safe(1)
+    local player_unit = player and player.player_unit
+    local data_system = ScriptUnit.has_extension(player_unit, "unit_data_system")
+    local inventory_comp = data_system and data_system:read_component("inventory")
+	local wielded_slot = inventory_comp and inventory_comp.wielded_slot
+    -- If wielded_slot is not primary or secondary, return false
+    if wielded_slot ~= "slot_primary" and wielded_slot ~= "slot_secondary" then
+        -- override for assail
+        if not (wielded_slot == "slot_grenade_ability" and MAGOS.WEAPON_NAME == "psyker_throwing_knives") then
+            return false
+        end
+    end
     if BIND_DATA and BIND_DATA[bind] and BIND_DATA[bind].MELEE and BIND_DATA[bind].MELEE[MAGOS.WEAPON_NAME] and BIND_DATA[bind].MELEE[MAGOS.WEAPON_NAME].sequence_step_one ~= "none" then
         return true
     elseif BIND_DATA and BIND_DATA[bind] and BIND_DATA[bind].MELEE and BIND_DATA[bind].MELEE.global_melee and BIND_DATA[bind].MELEE.global_melee.sequence_step_one ~= "none" then
@@ -795,7 +1001,7 @@ mod.update_engram = function(data)
     end
     -- MELEE ENGRAM
     if MAGOS.WEAPON_TYPE == "MELEE" or (MAGOS.WEAPON_NAME == "ogryn_gauntlet_p1_m1" and not IS_AIMING) then
-        if not data or not mod.valid_engram(data) then
+        if not data or (data and not mod.valid_engram(data)) then
             return
         end
         local intermediary_melee = BIND_DATA[data] and BIND_DATA[data].MELEE and BIND_DATA[data].MELEE[MAGOS.WEAPON_NAME]
@@ -847,6 +1053,7 @@ mod.update_engram = function(data)
             HEAVY_BUFF = intermediary_melee.heavy_buff or "none",
             HEAVY_BUFF_STACKS = intermediary_melee.heavy_buff_stacks or 0,
             HEAVY_BUFF_SPECIAL = intermediary_melee.heavy_buff_special or false,
+            ALWAYS_SPECIAL = intermediary_melee.always_special or false,
         }
         local sub_template = {}
         local sub_queue = {}
@@ -865,13 +1072,6 @@ mod.update_engram = function(data)
         ENGRAM.STC = sub_template
         ENGRAM.BIND = data
         ENGRAM.INDEX = 1
-    else
-    -- RANGED "ENGRAM"
-        if BIND_DATA[data] and BIND_DATA[data].RANGED and BIND_DATA[data].RANGED[MAGOS.WEAPON_NAME] and BIND_DATA[data].RANGED[MAGOS.WEAPON_NAME].automatic_fire then
-            RANGED_SETTINGS = BIND_DATA[data].RANGED[MAGOS.WEAPON_NAME]
-        elseif BIND_DATA[data] and BIND_DATA[data].RANGED and BIND_DATA[data].RANGED.global_ranged and BIND_DATA[data].RANGED.global_ranged.automatic_fire then
-            RANGED_SETTINGS = BIND_DATA[data].RANGED.global_ranged
-        end
     end
 end
 
@@ -883,10 +1083,45 @@ end
 mod.update_hud = function()
     local hud_element = mod.get_hud_element()
     if hud_element then
-        if HUD_ACTIVE and (MAGOS.WEAPON_TYPE == "MELEE" or MAINTAIN_BIND) then
-            hud_element:set_enabled(INTERCEPT.AUTHORIZED or mod.override_primary())
+        if HUD.ACTIVE then
+            -- If HUD setting is enabled and mod is enabled, make the icon visible
+            if MOD_ENABLED then
+                -- If a keybind is actively intercepting input, show red icon
+                if (INTERCEPT.AUTHORIZED and INTERCEPT.AUTHORITY ~= "none") or (mod.override_primary() or mod.override_primary_ranged()) then
+                    -- Change active icon based on HUD type
+                    if HUD.TYPE == "icon" then
+                        hud_element:set_icon("circumstances/special_waves_01")
+                        hud_element:set_color(255,255,255,255)
+                    elseif HUD.TYPE == "color" then
+                        hud_element:set_icon("circumstances/maelstrom_02")
+                        hud_element:set_color(255,255,255,255)
+                    elseif HUD.TYPE == "icon_color" then
+                        hud_element:set_icon("circumstances/special_waves_01")
+                        hud_element:set_color(255,255,195,0)
+                    else
+                        hud_element:set_icon("circumstances/maelstrom_02")
+                        hud_element:set_color(255,255,255,255)
+                    end
+                    hud_element:set_visible(true)
+                -- If no keybind is pressed, show normal icon
+                else
+                    -- Change inactive icon based on HUD type
+                    if HUD.TYPE == "icon" then
+                        hud_element:set_icon("circumstances/maelstrom_01")
+                        hud_element:set_color(255,255,255,255)
+                    else
+                        hud_element:set_icon("circumstances/maelstrom_01")
+                        hud_element:set_color(255,255,255,255)
+                    end
+                    hud_element:set_visible(true)
+                end
+            -- Hide element when mod is disabled
+            else
+                hud_element:set_visible(false)
+            end
+        -- Hide element when HUD setting is disabled
         else
-            hud_element:set_enabled(false)
+            hud_element:set_visible(false)
         end
     end
 end
@@ -1028,91 +1263,7 @@ mod.set_valid = function(input, value, optional_input, optional_value, optional_
     end
 end
 
--- Melee Gatekeeper: Mod is allowed to engage with sequences only if the player is spawned with a melee weapon, and there is not an active view (e.g. menus/chat)
-mod.ready_for_intercept = function()
-    if not MOD_ENABLED or Managers.ui:using_input() then
-        return false
-    end
-    local player_manager = Managers and Managers.player
-    local player = player_manager:local_player_safe(1)
-    local player_unit = player and player.player_unit
-    local weapon = ScriptUnit.has_extension(player_unit, "weapon_system")
-    if weapon then
-        if not MAGOS.WEAPON_TYPE then
-            mod.refresh_weapon()
-        end
-        -- Ranged weapons are not allowed to intercept melee sequences, unless it is the Grenadier Gauntlet
-        if MAGOS.WEAPON_TYPE == "RANGED" and MAGOS.WEAPON_NAME ~= "ogryn_gauntlet_p1_m1" then
-            return false
-        end
-        local interrupt_forbidden = false
-        for k, v in pairs(INPUT) do
-            if INPUT[k].key and INPUT[k].value then
-                for _, key in pairs(KEYBINDS) do
-                    if key and key[1] then
-                        -- If any actual inputs are pressed, allow them to override mod keybinds unless the input is the keybind itself
-                        local keybind = INPUT[k].key:match("_(.+)")
-                        if keybind ~= key[1] then
-                            interrupt_forbidden = true
-                        else
-                            interrupt_forbidden = false
-                            break
-                        end
-                    end
-                end
-            end
-        end
-        -- If HALT_ON_INTERRUPT is enabled, shut down any keybinds when interrupting actions are performed
-        if interrupt_forbidden and HALT_ON_INTERRUPT and not mod.override_primary() then
-            for key, value in pairs(ACTIVE_BINDS) do
-                ACTIVE_BINDS[key] = false
-            end
-            INTERCEPT.AUTHORIZED = false
-            INTERCEPT.AUTHORITY = "none"
-        end
-        return not interrupt_forbidden
-    else
-        return false
-    end
-end
 
--- Determines whether or not melee sequences should override the primary action input
-mod.override_primary = function()
-    -- Do NOT use override sequences if:
-    if not MOD_ENABLED -- The mod is disabled
-       or Managers.ui:using_input() -- The UI is controlled by the UI Manager (i.e. in a menu/chat)
-       or INPUT.action_two_hold.value or INPUT.weapon_extra_pressed.value or INPUT.weapon_extra_hold.value -- A priority input is held (block/special)
-       or not INPUT.action_one_hold.value -- The primary input is NOT being held
-    then
-        INTERCEPT.OVERRIDE = false
-        return false
-    end
-    -- Check whether or not, for the current weapon or global melee, there are any sequences set to override the primary action
-    if not MAGOS.WEAPON_TYPE then
-        mod.refresh_weapon()
-    end
-    -- Do not apply this override if the player is not using a melee weapon (checked separately as refresh_weapon() has other checks to avoid crashes that must happen)
-    if MAGOS.WEAPON_TYPE ~= "MELEE" and MAGOS.WEAPON_NAME ~= "ogryn_gauntlet_p1_m1" then
-        INTERCEPT.OVERRIDE = false
-        return false
-    end
-    -- Ensure there is actually override data to use
-    if BIND_DATA.override_primary and BIND_DATA.override_primary.MELEE then
-        -- Prefer weapon-specific data
-        if BIND_DATA.override_primary.MELEE[MAGOS.WEAPON_NAME]
-        and BIND_DATA.override_primary.MELEE[MAGOS.WEAPON_NAME].sequence_step_one ~= nil 
-        and BIND_DATA.override_primary.MELEE[MAGOS.WEAPON_NAME].sequence_step_one ~= "none" then
-            return true
-        -- But use global data if weapon-specific data is absent/invalid
-        elseif BIND_DATA.override_primary.MELEE.global_melee 
-        and BIND_DATA.override_primary.MELEE.global_melee.sequence_step_one ~= nil 
-        and BIND_DATA.override_primary.MELEE.global_melee.sequence_step_one ~= "none" then
-            return true
-        end
-    end
-    INTERCEPT.OVERRIDE = false
-    return false
-end
 
 -- Fetch the player's current weapon
 mod.refresh_weapon = function()
@@ -1170,12 +1321,29 @@ end
 -- Determine whether start_attack actions have been charged enough to be released as a heavy attack
 -- Sets MAGOS.CHARGED to true if the action is valid. All actions begin with MAGOS.CHARGED = false.
 mod.update_charge_status = function(target_action)
+    -- Only update charge status if holding a weapon
+    local player_manager = Managers and Managers.player
+    local player = player_manager:local_player_safe(1)
+    local player_unit = player and player.player_unit
+    local weapon = ScriptUnit.has_extension(player_unit, "weapon_system")
+    local data_system = ScriptUnit.has_extension(player_unit, "unit_data_system")
+    local inventory_comp = data_system and data_system:read_component("inventory")
+	local wielded_slot = inventory_comp and inventory_comp.wielded_slot
+    -- if wielded_slot is not primary or secondary, return false
+    if wielded_slot ~= "slot_primary" and wielded_slot ~= "slot_secondary" or Managers.ui:using_input() then
+        MAGOS.CHARGED = false
+        return
+    end
     local component = MAGOS.COMPONENT
     local action_settings = MAGOS.SETTINGS
+    if not action_settings then
+        MAGOS.CHARGED = false
+        return
+    end
     local component_data = component and component.__data and component.__data[1]
     local previous = component_data and component_data.previous_action_name
 	local allowed_chain_actions = action_settings.allowed_chain_actions or {}
-    local chain_action = allowed_chain_actions.heavy_attack
+    local chain_action = allowed_chain_actions.heavy_attack or allowed_chain_actions.special_action_heavy
     local chain_action_name = chain_action and chain_action.action_name
     if chain_action then
         local start_t = component.start_t
@@ -1551,10 +1719,13 @@ mod.handle_action_map_exceptions = function(action_name)
     -- Latrine Shovel Mk XIX pushattack
     elseif action_name == "action_light_pushfollow" then
         return "push_follow_up"
+    elseif action_name == "action_melee_start_push_follow_combo" then
+        return "start_attack"
     -- Wield fix to keep debug monitor clean
     elseif action_name == "action_wield" then
         return "idle"
     else
+        mod.debug_log("UNKNOWN ACTION: " .. action_name, "ACTION_MAP_EXCEPTION_" .. action_name)
         return "idle"
     end
 end
@@ -1593,7 +1764,7 @@ mod.execute = function()
             VALID.action_one_hold = false
         end
         -- SPECIAL OVERRIDE: SKIP TOGGLED/NON-REPEATABLE SPECIALS, SKIP SPECIALS IF OVERHEATED
-        if target_action == "special_action" and (mod.special_active() and toggled_weapons[MAGOS.WEAPON_NAME] or mod.in_cooldown()) then
+        if target_action == "special_action" and (mod.special_active() or mod.in_cooldown()) and not (ENGRAM.SETTINGS and ENGRAM.SETTINGS.ALWAYS_SPECIAL) then
             -- special_action has two sub-actions (special_action + idle), so move ahead two engram indices
             if ENGRAM.INDEX + 2 > #ENGRAM.COMMANDS then
                 if ENGRAM.SETTINGS and ENGRAM.SETTINGS.CYCLE_INDEX then
@@ -1739,10 +1910,15 @@ mod.execute = function()
                 mod.set_valid("action_one_hold", false)
             end
         elseif current_action == "push_follow_up" then
+            -- INTO FUTURE STARTUP: HOLD 1
+            if future_action == "start_attack" then
+                mod.debug_log("PUSH_FOLLOW_UP -> STARTUP", "PUSH_FOLLOW_UP_STARTUP_"..MAGOS.IDENTIFIER)
+                mod.set_valid("action_one_hold", true)
             -- INTO ANY OTHER ACTION: RELEASE
-            
+            else
                 mod.debug_log("PUSH_FOLLOW_UP -> ANY ("..target_action..")", "PUSH_FOLLOW_UP_UNKNOWN_"..MAGOS.IDENTIFIER)
                 mod.set_valid("action_one_hold", false)
+            end
             
         elseif current_action == "special_action" then
             -- INTO ANY ACTION: RELEASE
@@ -1770,7 +1946,7 @@ mod.quickstart = function(bind, input)
                           "sequence_step_seven","sequence_step_eight","sequence_step_nine","sequence_step_ten","sequence_step_eleven","sequence_step_twelve"}
     if quick_action then
         -- If special is active and can't be reactivated, find the next available quick action to execute
-        if quick_action == "special_action" and (mod.special_active() or mod.in_cooldown()) then
+        if quick_action == "special_action" and (mod.special_active() or mod.in_cooldown()) and not (ENGRAM.SETTINGS and ENGRAM.SETTINGS.ALWAYS_SPECIAL) then
             for i = 2, #sequence_map do
                 if BIND_DATA[bind].MELEE[source][sequence_map[i]] and BIND_DATA[bind].MELEE[source][sequence_map[i]] ~= "none" and BIND_DATA[bind].MELEE[source][sequence_map[i]] ~= "special_action" then
                     quick_action = BIND_DATA[bind].MELEE[source][sequence_map[i]]
@@ -1811,6 +1987,27 @@ local CHARGED = {
     forcestaff_p3_m1 = true,
     forcestaff_p4_m1 = true,
     plasmagun_p1_m1 = true,
+}
+-- HELD_SPECIAL: Weapons which require a constant held input for special fire
+local HELD_SPECIAL = { plasmagun_p1_m1 = true }
+
+-- CHARGED_SPECIAL: Weapons which can charge their special fire for extra damage
+local CHARGED_SPECIAL = {
+    -- Helbores
+    lasgun_p2_m1 = true,
+    lasgun_p2_m2 = true,
+    lasgun_p2_m3 = true,
+    -- Force Staffs
+    forcestaff_p1_m1 = true,
+    forcestaff_p2_m1 = true,
+    forcestaff_p3_m1 = true,
+    forcestaff_p4_m1 = true,
+    -- Double-barrel Shotgun
+    shotgun_p2_m1 = true,
+    -- Vigilant Autoguns
+    autogun_p3_m1 = true,
+    autogun_p3_m2 = true,
+    autogun_p3_m3 = true,
 }
 
 -- HELBORE: Helbores, which charge by holding primary fire and shoot by releasing primary fire
@@ -1931,6 +2128,22 @@ end
 
 -- Returns the settings and the settings source if there is a valid set of ranged settings for the current bind
 mod.valid_ranged = function(bind)
+    if not MOD_ENABLED or Managers.ui:using_input() then
+        return false
+    end
+    local player_manager = Managers and Managers.player
+    local player = player_manager:local_player_safe(1)
+    local player_unit = player and player.player_unit
+    local data_system = ScriptUnit.has_extension(player_unit, "unit_data_system")
+    local inventory_comp = data_system and data_system:read_component("inventory")
+	local wielded_slot = inventory_comp and inventory_comp.wielded_slot
+    -- If wielded_slot is not primary or secondary, return false
+    if wielded_slot ~= "slot_secondary" then
+        -- override for assail
+        if not (wielded_slot == "slot_grenade_ability" and MAGOS.WEAPON_NAME == "psyker_throwing_knives") then
+            return false
+        end
+    end
     local ranged_template
     local source
     -- Ranged template is considered valid if there are modified "automatic fire" settings
@@ -1946,24 +2159,28 @@ mod.valid_ranged = function(bind)
     return ranged_template, source
 end
 
--- Mildly abhorrent behemoth function to handle ranged settings and inputs
+-- Returns output specific to specified input - TRUE forces the input, FALSE prevents it, NIL passes user input
 mod.auto_shoot = function(input)
     local player_manager = Managers and Managers.player
     local player = player_manager:local_player_safe(1)
     local player_unit = player and player.player_unit
     local weapon = ScriptUnit.has_extension(player_unit, "weapon_system")
-    if not MAGOS.WEAPON_TYPE then
+    if not MAGOS.WEAPON_TYPE or not MAGOS.WEAPON_NAME then
         mod.refresh_weapon()
     end
-    if not weapon or (WEENIE_HUT_JR and mod.suicidal()) or Managers.ui:using_input() or MAGOS.WEAPON_TYPE ~= "RANGED" then
+    if not weapon or (WEENIE_HUT_JR and mod.suicidal()) or Managers.ui:using_input() or not (MAGOS.WEAPON_TYPE == "RANGED" or MAGOS.WEAPON_NAME == "psyker_throwing_knives") then
         PREVIOUS_HELBORE = false
         return nil
     end
     -- Final check: ensure there is a non-empty bind-specific template for either the equipped weapon or a global weapon, OR "auto-release charge" setting is enabled
-    local bind = INTERCEPT.AUTHORITY ~= "none" and INTERCEPT.AUTHORITY or mod.override_primary_ranged() and "override_primary"
+    local auth = mod.update_binds("ranged")
+    local bind = auth ~= "none" and auth 
+              or INTERCEPT.AUTHORITY ~= "none" and mod.valid_ranged(INTERCEPT.AUTHORITY) and INTERCEPT.AUTHORITY 
+              or mod.override_primary_ranged() and "override_primary"
     local ranged_template, source = mod.valid_ranged(bind)
-    local should_shoot = false
     local player_manager = Managers and Managers.player
+
+
     if player_manager then
         local player = player_manager and player_manager:local_player_safe(1)
         local player_unit = player and player.player_unit
@@ -1978,9 +2195,10 @@ mod.auto_shoot = function(input)
             -- Determine charge status
             local max_charge = charge_module and charge_module.max_charge or 1
             local charge_level = charge_module and charge_module.charge_level
+            
             local charge_template = weapon_extension:charge_template()
             local fully_charged_charge_level = charge_template and charge_template.fully_charged_charge_level or 1
-            if ALWAYS_CHARGE_THRESHOLD ~= 100 then
+            if ALWAYS_CHARGE and ALWAYS_CHARGE_THRESHOLD < 100 and ALWAYS_CHARGE_THRESHOLD > 0 then
                 fully_charged_charge_level = ALWAYS_CHARGE_THRESHOLD / 100
             end
             local fully_charged_charge_threshold = math.min(fully_charged_charge_level, max_charge)
@@ -1989,19 +2207,20 @@ mod.auto_shoot = function(input)
             local generates_peril = mod.generates_peril()
             local warp_charge_component = unit_data_extension:read_component("warp_charge")
             -- Fully charged if reached max threshold/level
-            if (charge_level and ((charge_level >= fully_charged_charge_threshold) or (charge_level >= fully_charged_charge_level))) then
+            if (charge_level and charge_level ~= 0 and ((charge_level >= fully_charged_charge_threshold) or (charge_level >= fully_charged_charge_level))) then
                 fully_charged = true
             -- Otherwise fully charged if holding it further would be lethal
             elseif WEENIE_HUT_JR and generates_peril and (MAGOS.WARP >= 0.940 and MAGOS.WARP < 0.950) then
                 fully_charged = true
             end
             -- Alternative override if a custom threshold was set
-            if ranged_template and ranged_template.auto_charge_threshold and ranged_template.auto_charge_threshold < 100 then
+            if ranged_template and ranged_template.auto_charge_threshold and ranged_template.auto_charge_threshold < 100 and ranged_template.auto_charge_threshold > 0 then
                 if (charge_level and charge_level >= ranged_template.auto_charge_threshold / 100) then
                     alt_fully_charged = true
                 end
             end
             local can_charge = CHARGED[MAGOS.WEAPON_NAME] or HELBORE[MAGOS.WEAPON_NAME]
+
             -- Because auto-release charge is a global setting, check it first
             if can_charge and ALWAYS_CHARGE and fully_charged then
                 if HELBORE[MAGOS.WEAPON_NAME] then
@@ -2015,11 +2234,38 @@ mod.auto_shoot = function(input)
                         return true
                     elseif input == "action_two_hold" then
                         return true
+                    elseif input == "action_one_hold" then
+                        return false
                     else
                         return nil
                     end
                 end
             end
+
+            -- Exit early if a non-keybind input which can generate weapon actions is pressed
+            local conflicting_input = mod.keybind_conflict()
+            if conflicting_input then
+                -- If user is pressing LMB, consider it an interrupt unless they are using primary override
+                if (conflicting_input.action_one_hold or conflicting_input.action_one_pressed) and not mod.override_primary_ranged() then
+                    return nil
+                end
+                -- If user is pressing RMB, consider it an interrupt only if the following conditions apply:
+                if conflicting_input.action_two_hold then
+                    -- Interrupt if this is a charged weapon (cannot aim, so RMB will interrupt to begin charge)
+                    if CHARGED[MAGOS.WEAPON_NAME] or (ranged_template and ranged_template.automatic_fire and 
+                    -- Or if the template is special-only (cannot be performed while aiming)
+                    ((ranged_template.automatic_fire == "special" or ranged_template.automatic_fire == "special_charged") 
+                    -- Or if the template is special + standard but is currently attempting a special (cannot be performed while aiming)
+                    or ranged_template.automatic_fire == "special_standard" and SPECIAL_GUNS[MAGOS.WEAPON_NAME] and not mod.special_active())) then
+                        return nil
+                    end
+                end
+                -- If user is pressing special action or quell, always consider it an interrupt
+                if conflicting_input.weapon_extra_pressed or conflicting_input.weapon_reload_hold then
+                    return nil
+                end
+            end
+            
             -- Custom RoF: Prevent fire until an appropriate delay has passed if RoF settings are enabled (ignore if attempting special action)
             if ranged_template and not (ranged_template.automatic_fire and (ranged_template.automatic_fire == "special" or ranged_template.automatic_fire == "special_standard" and SPECIAL_GUNS[MAGOS.WEAPON_NAME] and not mod.special_active())) then
                 local delay = 0
@@ -2032,146 +2278,131 @@ mod.auto_shoot = function(input)
                     local rate_of_fire = mod.get_rof("hip")
                     delay = rate_of_fire / ( ranged_template.rate_of_fire_ads / 100 )
                 end
+                -- Handle engine timer resets between missions interfering with first shot
+                if SKITARIUS.T - LAST_SHOT < 0 then
+                    LAST_SHOT = SKITARIUS.T - delay
+                end
                 -- Wait for delay after previous shot before allowing another
-                if delay ~= 0 and SKITARIUS.T - LAST_SHOT < delay then
+                if LAST_SHOT ~= 0 and delay ~= 0 and SKITARIUS.T - LAST_SHOT < delay then
                     -- Prevent firing if triggered via primary override and exit function with passthrough (manual firing is allowed)
-                    if mod.override_primary_ranged() and (input == "action_one_pressed" or input == "action_one_hold") then
+                    if input == "action_one_pressed" or input == "action_one_hold" then
                         return false
-                    else
-                        return nil
                     end
                 end
             end
+
             -- Ranged Template handling
             if ranged_template then
                 -- Do nothing if an ADS filter is set and current state does not match
                 if ranged_template.ads_filter == "ads_only" and not IS_AIMING or ranged_template.ads_filter == "hip_only" and IS_AIMING then
-                    -- Short circuit rather than setting value, no need to check any further logic
                     return nil
                 end
                 -- Standard fire (or Special + Standard while special is active)
-                if ranged_template.automatic_fire == "standard" or (ranged_template.automatic_fire == "special_standard" and SPECIAL_GUNS[MAGOS.WEAPON_NAME] and mod.special_active()) then
-                    -- Normally automatic weapons fire on action_one_hold, not action_one_pressed
-                    -- Helbores are unique because of course they are
-                    if HELBORE[MAGOS.WEAPON_NAME] then
-                        if input == "action_one_hold" then
-                            PREVIOUS_HELBORE = not PREVIOUS_HELBORE
-                            if PREVIOUS_HELBORE == false then
-                                LAST_SHOT = SKITARIUS.T
-                            end
-                            return PREVIOUS_HELBORE
-                        elseif input == "action_one_pressed" then
-                            return PREVIOUS_HELBORE and PREVIOUS_HELBORE or false
-                        else
-                            return nil
-                        end
-                    else
-                        if input == "action_one_pressed" then
-                            if not mod.hold_fire(IS_AIMING) then
-                                LAST_SHOT = SKITARIUS.T
-                            end
-                            return true
-                        elseif input == "action_one_hold" then
-                            if mod.hold_fire(IS_AIMING) then
-                                LAST_SHOT = SKITARIUS.T
-                            end
-                            return true
-                        else
-                            return nil
-                        end
-                    end
-                -- Charged fire: Dependent on weapon
+                if ranged_template.automatic_fire == "standard" 
+                or (ranged_template.automatic_fire == "special_standard" and SPECIAL_GUNS[MAGOS.WEAPON_NAME] and mod.special_active()) then
+                    return mod.standard_fire(input, MAGOS.WEAPON_NAME)
+                -- Charged fire
                 elseif ranged_template.automatic_fire == "charged" and can_charge then
-                    -- Helbore: Hold action_one_hold until charged, then release action_one_hold
-                    if HELBORE[MAGOS.WEAPON_NAME] then
-                        if fully_charged or alt_fully_charged then
-                            if input == "action_one_hold" then
-                                LAST_SHOT = SKITARIUS.T
-                                return false
-                            else
-                                return nil
-                            end
-                        elseif not fully_charged or not alt_fully_charged then
-                            if input == "action_one_hold" then
-                                return true
-                            else
-                                return nil
-                            end 
-                        end
-                    -- Others: Hold action_two_hold until charged, then trigger action_one_pressed
-                    else
-                        if fully_charged or alt_fully_charged then
-                            if input == "action_one_pressed" then
-                                LAST_SHOT = SKITARIUS.T
-                                return true
-                            elseif input == "action_two_hold" then
-                                return true
-                            else
-                                return nil
-                            end
-                        else
-                            if input == "action_two_hold" then
-                                return true
-                            -- Prevent user input passthrough only if this is being triggered by the primary fire input
-                            elseif input == "action_one_pressed" and mod.override_primary_ranged("charged") then
-                                return false
-                            elseif input == "action_one_hold" and mod.override_primary_ranged("charged") then
-                                return false
-                            else
-                                return nil
-                            end
-                        end
-                    end
-                -- Special actions (or Special + Standard when special is not active): weapon_extra_pressed only
-                elseif ranged_template.automatic_fire == "special" or (ranged_template.automatic_fire == "special_standard" and SPECIAL_GUNS[MAGOS.WEAPON_NAME] and not mod.special_active()) then
-                    -- Set flag to force weapon_extra_pressed as extremely brief inputs can "miss" the cue to trigger it through this function
-                    FORCE_SPECIAL = true
-                    -- Plasma Gun: requires weapon_extra_hold held constantly
-                    if MAGOS.WEAPON_NAME == "plasmagun_p1_m1" then
-                        if input == "weapon_extra_hold" then
-                            return true
-                        -- Prevent user input passthrough only if this is being triggered by the primary fire input
-                        elseif input == "action_one_pressed" and (mod.override_primary_ranged("special") or mod.override_primary_ranged("special_standard")) then
-                            FORCE_SPECIAL = false
-                            return false
-                        elseif input == "action_one_hold" and (mod.override_primary_ranged("special") or mod.override_primary_ranged("special_standard")) then
-                            return false
-                        else
-                            return nil
-                        end
-                    -- Force Staffs, Helbores, or Double-Barrel Shotgun: Requires staggered hold inputs WITHOUT weapon_extra_pressed
-                    elseif CHARGED[MAGOS.WEAPON_NAME] or HELBORE[MAGOS.WEAPON_NAME] or MAGOS.WEAPON_NAME == "shotgun_p2_m1" then
-                        if input == "weapon_extra_hold" then
-                            return mod.flicker()
-                        -- Prevent user input passthrough only if this is being triggered by the primary fire input
-                        elseif input == "action_one_pressed" and (mod.override_primary_ranged("special") or mod.override_primary_ranged("special_standard")) then
-                            FORCE_SPECIAL = false
-                            return false
-                        elseif input == "action_one_hold" and (mod.override_primary_ranged("special") or mod.override_primary_ranged("special_standard")) then
-                            return false
-                        else
-                            return nil
-                        end
-                    else
-                        if input == "weapon_extra_pressed" then
-                            return mod.flicker(10) -- Tiny forced delay to give an easier window for single toggling, without stopping spam
-                        elseif input == "weapon_extra_hold" then
-                            return true
-                        -- Prevent user input passthrough only if this is being triggered by the primary fire input
-                        elseif input == "action_one_pressed" and (mod.override_primary_ranged("special") or mod.override_primary_ranged("special_standard")) then
-                            FORCE_SPECIAL = false
-                            return false
-                        elseif input == "action_one_hold" and (mod.override_primary_ranged("special") or mod.override_primary_ranged("special_standard")) then
-                            return false
-                        else
-                            return nil
-                        end
-                    end
+                    return mod.charged_fire(input, MAGOS.WEAPON_NAME, fully_charged or alt_fully_charged)
+                -- Special fire (or Special + Standard when special is not active)
+                elseif ranged_template.automatic_fire == "special"
+                or ranged_template.automatic_fire == "special_charged"
+                or (ranged_template.automatic_fire == "special_standard" and SPECIAL_GUNS[MAGOS.WEAPON_NAME] and not mod.special_active()) then
+                    return mod.special_fire(input, MAGOS.WEAPON_NAME, ranged_template.automatic_fire == "special_charged" and "charged" or nil)
                 end
             end
         end
     end
     return nil
+end
+
+-- Fire mode handlers
+
+mod.standard_fire = function(input, weapon)
+    local output
+    local standard_map = {
+        action_one_hold = true,
+        action_one_pressed = true,
+    }
+    if HELBORE[weapon] then
+        -- Alternate inputs, toggling on hold to ensure attacks are uncharged
+        if input == "action_one_hold" then
+            PREVIOUS_HELBORE = not PREVIOUS_HELBORE
+            output = PREVIOUS_HELBORE
+        elseif input == "action_one_pressed" then
+            output = PREVIOUS_HELBORE
+        end
+    else
+        -- Use either pressed or hold depending on weapon template via mod.hold_fire()
+        if input == "action_one_pressed" then
+            output = standard_map[input] and not mod.hold_fire(IS_AIMING)
+        elseif input == "action_one_hold" then
+            output = standard_map[input] and mod.hold_fire(IS_AIMING)
+        end
+    end
+    -- Record last shot if output triggers an attack
+    if output then
+        LAST_SHOT = SKITARIUS.T
+    end
+    return output
+end
+
+mod.charged_fire = function(input, weapon, charged)
+    local output
+    local charged_map = {
+        action_one_pressed = true,
+        action_one_hold = false,
+        action_two_hold = true,
+    }
+    if HELBORE[weapon] then
+        -- Helbores must hold action_one to charge and release to fire
+        if charged then
+            output = (input == "action_one_hold" and false) or nil
+        else
+            output = (input == "action_one_hold" and true) or nil
+        end
+    else
+        output = charged_map[input]
+        -- Ensure standard attacks are suppressed when uncharged
+        if input == "action_one_pressed" and not charged then
+            if mod.override_primary_ranged("charged") then
+                output = false
+            else
+                output = nil
+            end
+        end
+    end
+    -- Record last shot if output triggers an attack
+    if output then
+        LAST_SHOT = SKITARIUS.T
+    end
+    return output
+end
+
+local LAST_SPECIAL = 0
+mod.special_fire = function(input, weapon, charged)
+    local output
+    local coinflip = SKITARIUS.FRAME % 2 == 0 or nil
+    -- Set special flag if the current input being polled is not a special action input
+    FORCE_SPECIAL = input ~= "weapon_extra_hold" and input ~= "weapon_extra_pressed"
+    if HELD_SPECIAL[weapon] then
+        output = input == "weapon_extra_hold" and true or nil
+    elseif CHARGED_SPECIAL[weapon] and charged then
+        mod.update_charge_status()
+        output = input == "weapon_extra_hold" and not MAGOS.CHARGED and true or nil
+    elseif CHARGED_SPECIAL[weapon] then
+        output = coinflip and input == "weapon_extra_hold" and true or nil
+    else
+        if (SKITARIUS.FRAME - LAST_SPECIAL > 10 or SKITARIUS.FRAME - LAST_SPECIAL < 0) and input == "weapon_extra_pressed" then
+            LAST_SPECIAL = SKITARIUS.FRAME
+            output = true
+        end
+    end
+    -- Ensure standard attacks are suppressed when using primary override
+    if input == "action_one_pressed" or input == "action_one_hold" then
+        output = false
+    end
+    return output
 end
 
 mod.auto_shoot_eligible = function()
@@ -2244,18 +2475,18 @@ mod:hook_safe(CLASS.ActionHandler, "start_action", function (self, id, action_ob
     if self.SKITARIUS ~= MAGOS.IDENTIFIER then
         MAGOS.IDENTIFIER = self.SKITARIUS
         local handler_data = self._registered_components[id]
-        local component = handler_data.component
-        local running_action = handler_data.running_action
+        local component = handler_data and handler_data.component
+        local running_action = handler_data and handler_data.running_action
         local action_map = {}
         local all_actions = handler_data.running_action and handler_data.running_action._weapon_template and handler_data.running_action._weapon_template.actions
         if all_actions then
             for _, action in pairs(all_actions) do
                 if action then
-                    local selected_chains = action.allowed_chain_actions
+                    local selected_chains = action and action.allowed_chain_actions
                     if selected_chains then
                         for chain_action, data in pairs(selected_chains) do
-                            local mapped_name = data.action_name
-                            if type(mapped_name) == "string" then
+                            local mapped_name = data and data.action_name
+                            if mapped_name and type(mapped_name) == "string" then
                                 action_map[mapped_name] = chain_action
                             end
                         end
@@ -2269,11 +2500,11 @@ mod:hook_safe(CLASS.ActionHandler, "start_action", function (self, id, action_ob
         MAGOS.ACTION_NAME = action_name
         MAGOS.COMMAND_NAME = mod.get_current_action()
         MAGOS.RUNNING_ACTION = running_action
-        local weapon_template = MAGOS.RUNNING_ACTION._weapon_template
+        local weapon_template = MAGOS.RUNNING_ACTION and MAGOS.RUNNING_ACTION._weapon_template
         MAGOS.COMPONENT = component
-        MAGOS.START = component.start_t
-        MAGOS.SPECIAL = component.special_active_at_start
-        MAGOS.WEAPON_NAME = component.template_name
+        MAGOS.START = component and component.start_t
+        MAGOS.SPECIAL = component and component.special_active_at_start
+        MAGOS.WEAPON_NAME = component and component.template_name
         local keywords = weapon_template and weapon_template.keywords
         if keywords then
             if table.array_contains(keywords, "melee") then
@@ -2282,7 +2513,7 @@ mod:hook_safe(CLASS.ActionHandler, "start_action", function (self, id, action_ob
                 MAGOS.WEAPON_TYPE = "RANGED"
             end
         end
-        MAGOS.RUNNING_ACTION = handler_data.running_action
+        MAGOS.RUNNING_ACTION = handler_data and handler_data.running_action
         MAGOS.SETTINGS = action_settings
         MAGOS.CHARGED = false
     end
@@ -2347,9 +2578,23 @@ mod:hook_safe(CLASS.PlayerUnitWeaponExtension, "set_wielded_weapon_weapon_specia
     end
 end)
 
+-- from scripts/settings/damage/disorientation_settings.lua
+local SELF_INFLICTED_STUNS = {
+    thunder_hammer_light = true,
+    thunder_hammer_heavy = true,
+    thunder_hammer_m2_light = true,
+    thunder_hammer_m2_heavy = true,
+}
+
 -- Handle stuns/combo interruptions: Reset sequence
 mod:hook_safe(CLASS.PlayerCharacterStateStunned, "on_enter", function (self, unit, dt, t, previous_state, params)
     MAGOS.STALE = true
+    MAGOS.CHARGED = false
+    MAGOS.SETTINGS = nil
+    -- Reset sequence if stunned by a non-self-inflicted source
+    if params and params.disorientation_type and not SELF_INFLICTED_STUNS[params.disorientation_type] then
+        mod.reset_engram()
+    end
 end)
 
 -- Update buff stacks
@@ -2390,12 +2635,25 @@ mod:hook_safe(CLASS.ExtensionSystemHolder, "fixed_update", function (self, dt, t
     SKITARIUS.DT = dt
 end)
 
--- Forcibly end keybinds on weapon swap to handle lingering toggles
+local LAST_SLOT = "none"
+-- Forcibly end keybinds on weapon swap to handle lingering toggles, unless MAINTAIN_BIND is enabled
 mod:hook_safe(CLASS.PlayerUnitWeaponExtension, "on_slot_wielded", function(self, slot_name, t, skip_wield_action)
-    if not MAINTAIN_BIND then
+    -- Clear input data and reset engram
+    mod.reset_engram()
+    for key, value in pairs(VALID) do
+        VALID[key] = false
+    end
+    -- Wipe data if not maintaining binds, unless a combat ability caused the swap; otherwise do nothing
+    if not MAINTAIN_BIND and not (slot_name == "slot_combat_ability" or slot_name == "slot_unarmed" or LAST_SLOT == "slot_unarmed" or LAST_SLOT == "slot_combat_ability") then
+        for key, value in pairs(ACTIVE_BINDS) do
+            if value then
+                ACTIVE_BINDS[key] = false
+            end
+        end
         INTERCEPT.AUTHORIZED = false
         INTERCEPT.AUTHORITY = "none"
     end
+    LAST_SLOT = slot_name
 end)
 
 -- ┌─┐┌┬┐┌─┐┌┐┌┌┬┐┌─┐┬─┐┌┬┐  ┬ ┬┌─┐┌─┐┬┌─┌─┐ --
@@ -2494,10 +2752,7 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
                     return VALID.weapon_extra_pressed
                 end
             elseif mod.auto_shoot_eligible() then
-                local auto = mod.auto_shoot("weapon_extra_pressed") or FORCE_SPECIAL
-                if FORCE_SPECIAL then
-                    FORCE_SPECIAL = false
-                end
+                local auto = mod.auto_shoot("weapon_extra_pressed")
                 if auto ~= nil then
                     return auto
                 end
@@ -2509,11 +2764,21 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
             INPUT.weapon_extra_hold.value = out
             INPUT.weapon_extra_hold.key = self:get_keys_from_alias(self:get_alias_key(action_name))[1]
             if mod.auto_shoot_eligible() then
-                local auto = mod.auto_shoot("weapon_extra_hold")
+                local auto = mod.auto_shoot("weapon_extra_hold") or FORCE_SPECIAL
+                if FORCE_SPECIAL then
+                    FORCE_SPECIAL = false
+                    return true
+                end
                 if auto ~= nil then
                     return auto
                 end
+            else
+                FORCE_SPECIAL = false
             end
+        end
+        if action_name == "weapon_reload_hold" then
+            INPUT.weapon_reload_hold.value = out
+            INPUT.weapon_reload_hold.key = self:get_keys_from_alias(self:get_alias_key(action_name))[1]
         end
     end
     return func(self, action_name)
@@ -2521,26 +2786,24 @@ end)
 
 -- Handle desyncs: Mark any action which was desynchronized as complete
 mod:hook(CLASS.ActionHandler, "server_correction_occurred", function (func, self, id, action_objects, action_params, actions)
-    if MOD_ENABLED and INTERCEPT.AUTHORIZED then
-        local handler_data = self._registered_components[id]
-        local component = handler_data.component
-        local current_action_name = component.current_action_name
-        if current_action_name == "none" then
-            handler_data.running_action = nil
-            --mod.debug_log("NON-CORRECTION DESYNC DETECTED", "SERVER_CORRECTION_EMPTY")
-        else
-            -- Handle server corrections
-            local action = action_objects[current_action_name]
-            if action then
-                action:server_correction_occurred()
-                SKITARIUS.DESYNC = true
-                handler_data.running_action = action
-            end
-        end
-    else
-        return func(self, id, action_objects, action_params, actions)
-    end
-    
+    local handler_data = self._registered_components[id]
+	local component = handler_data.component
+	local current_action_name = component.current_action_name
+	if current_action_name == "none" then
+		handler_data.running_action = nil
+	else
+		local action = action_objects[current_action_name]
+		if not action then
+			local action_context = self._action_context
+			local action_settings = actions[current_action_name]
+
+			action = self:_create_action(action_context, action_params, action_settings)
+			action_objects[current_action_name] = action
+		end
+		action:server_correction_occurred()
+        SKITARIUS.DESYNC = true
+		handler_data.running_action = action
+	end    
 end)
 
 --┌────────────────────────────────────────────┐--

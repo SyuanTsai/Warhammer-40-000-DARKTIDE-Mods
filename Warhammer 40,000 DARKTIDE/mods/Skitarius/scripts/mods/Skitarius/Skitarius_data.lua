@@ -43,9 +43,20 @@ return {
 				sub_widgets = {
 					{
 						setting_id      = "hud_element",
-						tooltip = "hud_element_tooltip",
+						tooltip         = "hud_element_tooltip",
 						type            = "checkbox",
 						default_value   = false,
+					},
+					{
+						setting_id    = "hud_element_type",
+						tooltip       = "hud_element_type_tooltip",
+						type          = "dropdown",
+						default_value = "color",
+						options = {
+							{text = "hud_element_type_color", value = "color"},
+							{text = "hud_element_type_icon",  value = "icon"},
+							{text = "hud_element_type_icon_color",  value = "icon_color"},
+						}
 					},
 					{
 						setting_id 	  = "hud_element_size",
@@ -54,38 +65,33 @@ return {
 						range         = {0, 100},
 					},
 					{
-						setting_id = "mod_enable_held",
-						type = "keybind",
-						default_value = {},
+						setting_id      = "mod_enable_held",
+						type            = "keybind",
+						default_value   = {},
 						keybind_trigger = "held",
-						keybind_type = "function_call",
-						function_name = "mod_enable_toggle",
+						keybind_type    = "function_call",
+						function_name   = "mod_enable_toggle",
 					},
 					{
-						setting_id = "mod_enable_pressed",
-						type = "keybind",
-						default_value = {},
+						setting_id      = "mod_enable_pressed",
+						type            = "keybind",
+						default_value   = {},
 						keybind_trigger = "pressed",
-						keybind_type = "function_call",
-						function_name = "mod_enable_toggle",
-					},
-					{
-						setting_id = "mod_enable_verbose",
-						type = "checkbox",
-						default_value = false,
+						keybind_type    = "function_call",
+						function_name   = "mod_enable_toggle",
 					},
 				}
 			},
 			
 			{
-				setting_id = "keybinds",
-				type       = "group",
+				setting_id  = "keybinds",
+				type        = "group",
 				sub_widgets = {
 					{
-						setting_id = "maintain_bind",
-						type = "checkbox",
+						setting_id    = "maintain_bind",
+						type          = "checkbox",
 						default_value = false,
-						tooltip = "maintain_bind_tooltip",
+						tooltip       = "maintain_bind_tooltip",
 					},
 					{
 						setting_id      = "keybind_one_pressed",
@@ -285,6 +291,12 @@ return {
 					{
 						setting_id = "heavy_buff_special",
 						tooltip = "heavy_buff_special_tooltip",
+						type = "checkbox",
+						default_value = false,
+					},
+					{
+						setting_id = "always_special",
+						tooltip = "always_special_tooltip",
 						type = "checkbox",
 						default_value = false,
 					},
@@ -506,6 +518,7 @@ return {
 							{text = "standard", value = "standard"},
 							{text = "charged", value = "charged"},
 							{text = "special", value = "special"},
+							{text = "special_charged", value = "special_charged"},
 							{text = "special_standard", value = "special_standard"},
 						}
 					},
