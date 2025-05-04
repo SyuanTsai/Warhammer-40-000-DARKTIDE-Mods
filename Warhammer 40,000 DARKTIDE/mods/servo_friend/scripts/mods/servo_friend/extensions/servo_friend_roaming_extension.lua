@@ -6,6 +6,7 @@ local mod = get_mod("servo_friend")
 
 local math = math
 local unit = Unit
+local class = class
 local pairs = pairs
 local vector3 = Vector3
 local managers = Managers
@@ -14,6 +15,7 @@ local quaternion = Quaternion
 local math_clamp = math.clamp
 local script_unit = ScriptUnit
 local vector3_box = Vector3Box
+local math_random = math.random
 local vector3_zero = vector3.zero
 local vector3_lerp = vector3.lerp
 local quaternion_box = QuaternionBox
@@ -40,11 +42,17 @@ local quaternion_from_euler_angles_xyz = quaternion.from_euler_angles_xyz
 -- ##### ─┴┘┴ ┴ ┴ ┴ ┴ #################################################################################################
 
 local close_proximity_checks = {
+    {offset = vector3_box(1, 0, 0),  move = vector3_box(-.75, 0, 0), side = 0},
+    {offset = vector3_box(-1, 0, 0), move = vector3_box(.75, 0, 0),  side = 1},
+    -- {offset = vector3_box(.5, 0, 0),  move = vector3_box(-.5, 0, 0), side = 0},
+    -- {offset = vector3_box(-.5, 0, 0), move = vector3_box(.5, 0, 0),  side = 1},
+    -- {offset = vector3_box(.25, 0, 0),  move = vector3_box(-.25, 0, 0), side = 0},
+    -- {offset = vector3_box(-.25, 0, 0), move = vector3_box(.25, 0, 0),  side = 1},
+    -- {offset = vector3_box(0, 0, .25),  move = vector3_box(0, 0, -.25)},
+    -- {offset = vector3_box(0, 0, -.25), move = vector3_box(0, 0, .25)},
+    -- {offset = vector3_box(0, 0, .5),  move = vector3_box(0, 0, -.25)},
+    -- {offset = vector3_box(0, 0, -.5), move = vector3_box(0, 0, .25)},
     {offset = vector3_box(0, 0, 0)},
-    {offset = vector3_box(1, 0, 0),  move = vector3_box(-.5, 0, 0)},
-    {offset = vector3_box(-1, 0, 0), move = vector3_box(.5, 0, 0)},
-    {offset = vector3_box(0, 0, 1),  move = vector3_box(0, 0, -.5)},
-    {offset = vector3_box(0, 0, -1), move = vector3_box(0, 0, .5)},
 }
 
 -- ##### ┌─┐┬  ┌─┐┌─┐┌─┐ ##############################################################################################
@@ -65,12 +73,16 @@ ServoFriendRoamingExtension.init = function(self, extension_init_context, unit, 
     -- Data
     self.event_manager = managers.event
     self.roaming = false
+    self.enabled = true
     self.current_roam_side = 0
     self.roam_position = vector3_box(vector3_zero())
+    self.character_height = self.servo_friend_extension.character_height
+    self.initialized = true
     -- Events
-    self.event_manager:register(self, "servo_friend_settings_changed", "on_settings_changed")
     self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
     self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
+    self.event_manager:register(self, "servo_friend_roaming_enabled", "on_servo_friend_roaming_enabled")
+    self.event_manager:register(self, "servo_friend_roaming_disabled", "on_servo_friend_roaming_disabled")
     -- Settings
     self:on_settings_changed()
     -- Debug
@@ -78,10 +90,13 @@ ServoFriendRoamingExtension.init = function(self, extension_init_context, unit, 
 end
 
 ServoFriendRoamingExtension.destroy = function(self)
+    -- Data
+    self.initialized = false
     -- Events
-    self.event_manager:unregister(self, "servo_friend_settings_changed")
     self.event_manager:unregister(self, "servo_friend_spawned")
     self.event_manager:unregister(self, "servo_friend_destroyed")
+    self.event_manager:unregister(self, "servo_friend_roaming_enabled")
+    self.event_manager:unregister(self, "servo_friend_roaming_disabled")
     -- Debug
     self:print("ServoFriendRoamingExtension destroyed")
     -- Base class
@@ -96,18 +111,20 @@ ServoFriendRoamingExtension.update = function(self, dt, t)
     -- Base class
     ServoFriendRoamingExtension.super.update(self, dt, t)
     -- Idle
-    local pt = self:pt()
-    if self.use_free_roaming then
-        if mod.found_something_valid and self.roaming then
+    -- local pt = self:pt()
+    if self.initialized and self.enabled and self.use_free_roaming then
+        local found_something_valid = self:found_something_valid()
+
+        if not self.enabled or (found_something_valid and self.roaming) then
             self.roaming = false
 
-        elseif self.roaming then
+        elseif self.roaming and self.enabled then
 
             -- Player data
-            local player_position = mod:player_position()
-            local player_rotation = mod:player_rotation()
+            local player_position = self:player_position()
+            local player_rotation = self:player_rotation()
             local current_position = vector3_unbox(self.current_position)
-            local first_person_position = unit_world_position(mod.first_person_unit, 1)
+            local first_person_position = unit_world_position(self.first_person_unit, 1)
 
             -- Roam position
             local direction = quaternion_forward(player_rotation)
@@ -124,12 +141,12 @@ ServoFriendRoamingExtension.update = function(self, dt, t)
                 rotated_pos = rotated_pos_2
                 self.current_roam_side = 1
             end
-            local positioning_height = mod:current_positioning_height()
+            local positioning_height = self:current_positioning_height()
             local current_roam_position = self.roam_position and vector3_unbox(self.roam_position) or player_position
             local new_roam_position = player_position + vector3(0, 0, positioning_height) + rotated_pos + direction * 3
 
             local move_distance = vector3_distance(current_roam_position, new_roam_position)
-            local dynamic_speed = mod:movement_speed() * math_clamp(move_distance, 0, 1)
+            local dynamic_speed = self:movement_speed() * math_clamp(move_distance, 0, 1)
             local final_roam_position = vector3_lerp(current_roam_position, new_roam_position, dt * dynamic_speed)
 
             -- Correct nan
@@ -140,7 +157,7 @@ ServoFriendRoamingExtension.update = function(self, dt, t)
             self.roam_position:store(final_roam_position)
 
             -- Aim target
-            local aim_target = mod:player_aim_target() or final_roam_position
+            local aim_target = self:aim_target() or final_roam_position
 
             -- Close proximity
             local new_aim_target = nil
@@ -149,10 +166,9 @@ ServoFriendRoamingExtension.update = function(self, dt, t)
             end
 
             -- Set position
-            -- self.event_manager:trigger("servo_friend_set_target_position", final_roam_position, aim_target, false, true)
-            mod:servo_friend_set_target_position(final_roam_position, new_aim_target or aim_target, false, true)
+            self.servo_friend_extension:on_servo_friend_set_target_position(final_roam_position, new_aim_target or aim_target, false, true)
 
-        elseif not mod.found_something_valid then
+        elseif self.enabled and not found_something_valid then
             self.roaming = true
 
         end
@@ -171,34 +187,37 @@ ServoFriendRoamingExtension.enemy_height = function(self, enemy_unit)
 end
 
 ServoFriendRoamingExtension.close_proximity_change_position = function(self, dt, t, roam_position)
-    local pt = self:pt()
-    local current_rotation = unit_local_rotation(pt.servo_friend_unit, 1)
-    local player_position = mod:player_position() + vector3(0, 0, pt.character_height)
-    local player_rotation = mod:player_rotation()
+    -- local pt = self:pt()
+    -- local servo_friend_unit = self:servo_friend_unit()
+    local current_rotation = unit_local_rotation(self.servo_friend_unit, 1)
+    local player_position = self:player_position() + vector3(0, 0, self.character_height)
+    local player_rotation = self:player_rotation()
+    local player_forward = vector3_normalize(quaternion_forward(player_rotation))
+    local player_mat = quaternion_matrix4x4(player_rotation)
     local new_aim_target = nil
     for _, check in pairs(close_proximity_checks) do
         local mat = quaternion_matrix4x4(current_rotation)
         local offset = check.offset and vector3_unbox(check.offset)
         local rotated_offset = matrix4x4_transform(mat, offset)
-        local aim_target, hit_unit = mod:player_aim_target(rotated_offset)
-        local enemy_offset = vector3_zero()
-        if hit_unit then
-            local enemy_height = self:enemy_height(hit_unit)
-            if enemy_height then
-                local enemy_offset = vector3(0, 0, enemy_height)
-                enemy_offset = matrix4x4_transform(mat, enemy_offset)
-            end
-        end
-        local side = check.side and check.side == self.current_roam_side or true
+        local aim_target, hit_unit = self:aim_target(rotated_offset) --, nil, 1)
+        -- local enemy_offset = vector3_zero()
+        -- if hit_unit then
+        --     local enemy_height = self:enemy_height(hit_unit)
+        --     if enemy_height then
+        --         local enemy_offset = vector3(0, 0, enemy_height)
+        --         enemy_offset = matrix4x4_transform(mat, enemy_offset)
+        --     end
+        -- end
+        local side = true --check.side and check.side == self.current_roam_side or false
         local additional_move = check.move and vector3_unbox(check.move) or vector3_zero()
-        local rotated_additional_move = matrix4x4_transform(mat, additional_move)
+        local rotated_additional_move = matrix4x4_transform(player_mat, additional_move)
         if side and aim_target then
             local aim_distance = vector3_distance(player_position, aim_target)
             local friend_distance = vector3_distance(player_position, roam_position)
             if aim_distance < friend_distance then
                 local from_player = vector3_normalize(roam_position - player_position)
-                roam_position = player_position + from_player * (aim_distance * .85)
-                new_aim_target = player_position + from_player * aim_distance + rotated_additional_move + enemy_offset
+                roam_position = player_position + from_player * (aim_distance * .85) + rotated_additional_move --+ enemy_offset
+                new_aim_target = player_position + from_player * aim_distance
             end
         end
     end
@@ -214,18 +233,34 @@ ServoFriendRoamingExtension.on_settings_changed = function(self)
     -- Base class
     ServoFriendRoamingExtension.super.on_settings_changed(self)
     -- Settings
-    self.use_free_roaming = mod:get("mod_option_use_free_roaming")
-    self.avoid_going_into_walls = mod:get("mod_option_avoid_going_into_walls")
+    self.use_free_roaming       = self.servo_friend_extension.use_free_roaming
+    self.avoid_going_into_walls = self.servo_friend_extension.avoid_going_into_walls
 end
 
-ServoFriendRoamingExtension.on_servo_friend_spawned = function(self)
-    -- Base class
-    ServoFriendRoamingExtension.super.on_servo_friend_spawned(self)
+ServoFriendRoamingExtension.on_servo_friend_spawned = function(self, servo_friend_unit, player_unit)
+    if self:is_me(servo_friend_unit) then
+        -- Base class
+        ServoFriendRoamingExtension.super.on_servo_friend_spawned(self)
+    end
 end
 
-ServoFriendRoamingExtension.on_servo_friend_destroyed = function(self)
-    -- Base class
-    ServoFriendRoamingExtension.super.on_servo_friend_destroyed(self)
+ServoFriendRoamingExtension.on_servo_friend_destroyed = function(self, servo_friend_unit, player_unit)
+    if self:is_me(servo_friend_unit) then
+        -- Base class
+        ServoFriendRoamingExtension.super.on_servo_friend_destroyed(self)
+    end
+end
+
+ServoFriendRoamingExtension.on_servo_friend_roaming_enabled = function(self, servo_friend_unit, player_unit)
+    if self:is_me(servo_friend_unit) then
+        self.enabled = true
+    end
+end
+
+ServoFriendRoamingExtension.on_servo_friend_roaming_disabled = function(self, servo_friend_unit, player_unit)
+    if self:is_me(servo_friend_unit) then
+        self.enabled = false
+    end
 end
 
 return ServoFriendRoamingExtension

@@ -24,7 +24,6 @@ ServoFriendTemplateExtension.init = function(self, extension_init_context, unit,
     -- Data
     self.event_manager = managers.event
     -- Events
-    self.event_manager:register(self, "servo_friend_settings_changed", "on_settings_changed")
     self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
     self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
     -- Settings
@@ -33,7 +32,6 @@ end
 
 ServoFriendTemplateExtension.destroy = function(self)
     -- Events
-    self.event_manager:unregister(self, "servo_friend_settings_changed")
     self.event_manager:unregister(self, "servo_friend_spawned")
     self.event_manager:unregister(self, "servo_friend_destroyed")
     -- Base class
