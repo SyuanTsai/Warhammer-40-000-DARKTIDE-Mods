@@ -9,4 +9,9 @@ return {
 		})
 	end,
 	packages = {},
+	load_before = {
+		"servo_friend_audio_server_plugin",
+		"servo_friend_example_addon",
+		"servo_friend_tag_cannon",
+	},
 }

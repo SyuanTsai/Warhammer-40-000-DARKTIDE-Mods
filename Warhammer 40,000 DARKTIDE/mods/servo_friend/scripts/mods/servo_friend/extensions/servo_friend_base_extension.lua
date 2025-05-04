@@ -5,36 +5,20 @@ local mod = get_mod("servo_friend")
 -- ##### ┴  └─┘┴└─└  └─┘┴└─┴ ┴┴ ┴┘└┘└─┘└─┘ ############################################################################
 
 local unit = Unit
+local math = math
 local pairs = pairs
 local class = class
 local world = World
 local table = table
 local vector3 = Vector3
 local managers = Managers
-local unit_alive = unit.alive
-local table_size = table.size
-local wwise_world = WwiseWorld
 local script_unit = ScriptUnit
 local vector3_box = Vector3Box
 local vector3_zero = vector3.zero
 local physics_world = PhysicsWorld
-local vector3_unbox = vector3_box.unbox
-local vector3_distance = vector3.distance
-local vector3_normalize = vector3.normalize
 local world_physics_world = world.physics_world
-local physics_world_raycast = physics_world.raycast
 local script_unit_extension = script_unit.extension
 local script_unit_has_extension = script_unit.has_extension
-local script_unit_add_extension = script_unit.add_extension
-local script_unit_remove_extension = script_unit.remove_extension
-local wwise_world_make_auto_source = wwise_world.make_auto_source
-local wwise_world_trigger_resource_event = wwise_world.trigger_resource_event
-
--- ##### ┌┬┐┌─┐┌┬┐┌─┐ #################################################################################################
--- #####  ││├─┤ │ ├─┤ #################################################################################################
--- ##### ─┴┘┴ ┴ ┴ ┴ ┴ #################################################################################################
-
-local REFERENCE = "servo_friend"
 
 -- ##### ┌─┐┬  ┌─┐┌─┐┌─┐ ##############################################################################################
 -- ##### │  │  ├─┤└─┐└─┐ ##############################################################################################
@@ -49,10 +33,16 @@ ServoFriendBaseExtension.init = function(self, extension_init_context, unit, ext
     self.package_manager = managers.package
     self.time_manager = managers.time
     -- World
-    self.world = self:world()
-    self.physics_world = self:physics_world()
-    self.wwise_world = self:wwise_world()
+    self._world = self:world()
+    self._physics_world = self:physics_world()
+    self._wwise_world = self:wwise_world()
     -- Data
+    self.player_unit = extension_init_data.player_unit
+    self.is_local_unit = extension_init_data.is_local_unit
+    self.servo_friend_extension = script_unit_has_extension(self.player_unit, "player_unit_servo_friend_system")
+    self.servo_friend_unit = self:servo_friend_unit()
+    self.first_person_extension = script_unit_extension(self.player_unit, "first_person_system")
+    self.first_person_unit = self.first_person_extension:first_person_unit()
     self.init_context = extension_init_context
     self.init_data = extension_init_data
     self.unit = unit
@@ -60,7 +50,6 @@ ServoFriendBaseExtension.init = function(self, extension_init_context, unit, ext
     self.min_distance = 10
     self.current_position = vector3_box(vector3_zero())
     -- Events
-    self.event_manager:register(self, "servo_friend_settings_changed", "on_settings_changed")
     self.event_manager:register(self, "servo_friend_sync_current_position", "on_sync_current_position")
     self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
     self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
@@ -72,15 +61,9 @@ end
 
 ServoFriendBaseExtension.destroy = function(self)
     -- Events
-    self.event_manager:unregister(self, "servo_friend_settings_changed")
     self.event_manager:unregister(self, "servo_friend_sync_current_position")
     self.event_manager:unregister(self, "servo_friend_spawned")
     self.event_manager:unregister(self, "servo_friend_destroyed")
-    -- Data
-    self.world = nil
-    self.physics_world = nil
-    self.wwise_world = nil
-    self.debug_mode = nil
     -- Debug
     self:print("ServoFriendBaseExtension destroyed")
 end
@@ -96,66 +79,112 @@ end
 -- ##### └─┐├┤ ├┬┘└┐┌┘│ │  ├┤ ├┬┘│├┤ │││ ││  ├┤ └┐┌┘├┤ │││ │ └─┐ ######################################################
 -- ##### └─┘└─┘┴└─ └┘ └─┘  └  ┴└─┴└─┘┘└┘─┴┘  └─┘ └┘ └─┘┘└┘ ┴ └─┘ ######################################################
 
-ServoFriendBaseExtension.on_settings_changed = function(self)
-    self.debug_mode = mod:get("mod_option_debug")
+ServoFriendBaseExtension.is_me = function(self, unit)
+    return unit == self.servo_friend_unit
 end
 
-ServoFriendBaseExtension.on_sync_current_position = function(self, current_position_box)
-    self.current_position = current_position_box
+ServoFriendBaseExtension.on_settings_changed = function(self, servo_friend_unit, player_unit)
+    self.debug_mode = self:extension_valid(self.servo_friend_extension) and self.servo_friend_extension.debug --mod:get("mod_option_debug")
 end
 
-ServoFriendBaseExtension.on_servo_friend_spawned = function(self)
+ServoFriendBaseExtension.on_sync_current_position = function(self, current_position_box, servo_friend_unit, player_unit)
+    if self:is_me(servo_friend_unit) then
+        self.current_position = current_position_box
+    end
 end
 
-ServoFriendBaseExtension.on_servo_friend_destroyed = function(self)
+ServoFriendBaseExtension.on_servo_friend_spawned = function(self, servo_friend_unit, player_unit)
+end
+
+ServoFriendBaseExtension.on_servo_friend_destroyed = function(self, servo_friend_unit, player_unit)
 end
 
 -- ##### ┌─┐┌─┐┌┬┐┌┬┐┌─┐┌┐┌ ###########################################################################################
 -- ##### │  │ ││││││││ ││││ ###########################################################################################
 -- ##### └─┘└─┘┴ ┴┴ ┴└─┘┘└┘ ###########################################################################################
 
+ServoFriendBaseExtension.random_option = function(self, values)
+    return mod:random_option(values)
+end
+
 ServoFriendBaseExtension.pt = function(self)
-    return mod:persistent_table(REFERENCE)
+    return mod:persistent_table(mod.REFERENCE)
+end
+
+ServoFriendBaseExtension.extension_valid = function(self, extension)
+    return mod:extension_valid(extension)
 end
 
 ServoFriendBaseExtension.servo_friend_alive = function(self)
-    local pt = self:pt()
-    return pt.servo_friend_unit and unit_alive(pt.servo_friend_unit)
+    return self:extension_valid(self.servo_friend_extension) and self.servo_friend_extension:servo_friend_alive()
+end
+
+ServoFriendBaseExtension.servo_friend_unit = function(self)
+    return self:extension_valid(self.servo_friend_extension) and self.servo_friend_extension.servo_friend_unit
+end
+
+ServoFriendBaseExtension.player_position = function(self)
+    return self:extension_valid(self.servo_friend_extension) and self.servo_friend_extension:player_position()
+end
+
+ServoFriendBaseExtension.player_rotation = function(self)
+    return self:extension_valid(self.servo_friend_extension) and self.servo_friend_extension:player_rotation()
+end
+
+ServoFriendBaseExtension.found_something_valid = function(self)
+    return self:extension_valid(self.servo_friend_extension) and self.servo_friend_extension:has_found_something_valid()
+end
+
+ServoFriendBaseExtension.current_positioning_height = function(self)
+    return self:extension_valid(self.servo_friend_extension) and self.servo_friend_extension:current_positioning_height()
+end
+
+ServoFriendBaseExtension.movement_speed = function(self)
+    return self:extension_valid(self.servo_friend_extension) and self.servo_friend_extension:movement_speed()
+end
+
+ServoFriendBaseExtension.aim_target = function(self, optional_offset, optional_unit, optional_length, optional_collision_filter)
+    return self:extension_valid(self.servo_friend_extension) and self.servo_friend_extension:aim_target(optional_offset, optional_unit or self.first_person_unit, optional_length, optional_collision_filter)
 end
 
 -- ##### ┌┬┐┌─┐┌┐ ┬ ┬┌─┐ ##############################################################################################
 -- #####  ││├┤ ├┴┐│ ││ ┬ ##############################################################################################
 -- ##### ─┴┘└─┘└─┘└─┘└─┘ ##############################################################################################
 
-ServoFriendBaseExtension.debug = function(self)
-    return self.debug_mode
-end
-
 ServoFriendBaseExtension.print = function(self, message)
-    if self:debug() then mod:echo(message) else mod:info(message) end
+    mod:print(message)
 end
 
 -- ##### ┬─┐┌─┐┬ ┬┌─┐┌─┐┌─┐┌┬┐ ########################################################################################
 -- ##### ├┬┘├─┤└┬┘│  ├─┤└─┐ │  ########################################################################################
 -- ##### ┴└─┴ ┴ ┴ └─┘┴ ┴└─┘ ┴  ########################################################################################
 
-ServoFriendBaseExtension.do_ray_cast = function(self, target_position)
-    local pt = self:pt()
-    local from = vector3_unbox(self.current_position)
-    local distance = vector3_distance(from, target_position) * .95
-	local to_target = target_position - from
-	local direction = vector3_normalize(to_target)
-	local _, hit_position, _, _, hit_actor = physics_world_raycast(pt.physics_world, from, direction, self.max_distance, "closest", "types", "both", "collision_filter", "filter_minion_line_of_sight_check")
-    if hit_position then
-        if vector3_distance(from, hit_position) < distance then
-            return false
-        end
-    end
-    return true
+ServoFriendBaseExtension.is_in_line_of_sight = function(self, from, to)
+    return mod:is_in_line_of_sight(from, to, self._physics_world)
 end
+
+-- ##### ┬ ┬┬ ┬┌┐  ####################################################################################################
+-- ##### ├─┤│ │├┴┐ ####################################################################################################
+-- ##### ┴ ┴└─┘└─┘ ####################################################################################################
+
+ServoFriendBaseExtension.is_in_hub = function(self)
+    return mod:is_in_hub()
+end
+
+-- ##### ┌─┐┌─┐┬ ┬┌┐┌┌┬┐┌─┐ ###########################################################################################
+-- ##### └─┐│ ││ ││││ ││└─┐ ###########################################################################################
+-- ##### └─┘└─┘└─┘┘└┘─┴┘└─┘ ###########################################################################################
 
 ServoFriendBaseExtension.play_sound = function(self, sound_event, optional_source_id)
     return mod:play_sound(sound_event, optional_source_id)
+end
+
+ServoFriendBaseExtension.start_repeating_sound = function(self, sound_event, optional_source_id)
+    return mod:start_repeating_sound(sound_event, optional_source_id)
+end
+
+ServoFriendBaseExtension.stop_repeating_sound = function(self, repeating_id)
+    return mod:stop_repeating_sound(repeating_id)
 end
 
 -- ##### ┌┬┐┌─┐┬─┐┬┌─  ┌┬┐┬┌─┐┌─┐┬┌─┐┌┐┌ ##############################################################################
@@ -163,16 +192,7 @@ end
 -- ##### ─┴┘┴ ┴┴└─┴ ┴  ┴ ┴┴└─┘└─┘┴└─┘┘└┘ ##############################################################################
 
 ServoFriendBaseExtension.is_dark_mission = function(self)
-    local template = managers.state.circumstance and managers.state.circumstance:template()
-    if template and template.mutators then
-        for _, mutator in pairs(template.mutators) do
-            if mutator == "mutator_darkness_los" then
-                self:print("dark mission!")
-                return true
-            end
-        end
-    end
-    self:print("no dark mission")
+    return mod:is_dark_mission()
 end
 
 -- ##### ┌─┐─┐ ┬┌┬┐┌─┐┌┐┌┌─┐┬┌─┐┌┐┌┌─┐ ################################################################################
@@ -200,80 +220,23 @@ ServoFriendBaseExtension.world = function(self)
 end
 
 ServoFriendBaseExtension.wwise_world = function(self)
-    return self.world and self.world_manager and self.world_manager:wwise_world(self.world)
+    return self._world and self.world_manager and self.world_manager:wwise_world(self._world)
 end
 
 ServoFriendBaseExtension.physics_world = function(self)
-    return self.world and world_physics_world(self.world)
+    return self._world and world_physics_world(self._world)
 end
 
 -- ##### ┌┬┐┬┌┬┐┌─┐ ###################################################################################################
 -- #####  │ ││││├┤  ###################################################################################################
 -- #####  ┴ ┴┴ ┴└─┘ ###################################################################################################
 
-ServoFriendBaseExtension.main_time = function(self)
-	return self.time_manager and self.time_manager:time("main")
-end
-
-ServoFriendBaseExtension.game_time = function(self)
-	return self.time_manager and self.time_manager:time("gameplay")
-end
-
 ServoFriendBaseExtension.time = function(self)
-    return self:game_time() or self:main_time()
-end
-
-ServoFriendBaseExtension.main_delta_time = function(self)
-    return self.time_manager and self.time_manager:delta_time("main")
-end
-
-ServoFriendBaseExtension.game_delta_time = function(self)
-    return self.time_manager and self.time_manager:delta_time("gameplay")
+    return mod:game_time() or mod:main_time()
 end
 
 ServoFriendBaseExtension.delta_time = function(self)
-    return self:game_delta_time() or self:main_delta_time()
+    return mod:game_delta_time() or mod:main_delta_time()
 end
-
--- ##### ┌─┐┌─┐┌─┐┬┌─┌─┐┌─┐┌─┐┌─┐ #####################################################################################
--- ##### ├─┘├─┤│  ├┴┐├─┤│ ┬├┤ └─┐ #####################################################################################
--- ##### ┴  ┴ ┴└─┘┴ ┴┴ ┴└─┘└─┘└─┘ #####################################################################################
-
--- ServoFriendBaseExtension.load_packages = function(self, packages_to_load, callback)
---     local pt = self:pt()
---     pt.loaded_packages[#pt.loaded_packages+1] = {
---         packages = packages_to_load,
---         callback = callback,
---     }
---     pt.finished_loading[packages_to_load] = {}
---     for _, package_name in pairs(packages_to_load) do
---         local callback = callback(self, "cb_on_package_loaded", package_name, packages_to_load, #pt.loaded_packages)
---         pt.loaded_packages[package_name] = self.package_manager:load(package_name, REFERENCE, callback)
---     end
--- end
-
--- ServoFriendBaseExtension.cb_on_package_loaded = function(self, package_name, packages_to_load, loading_id)
---     local pt = self:pt()
---     self:print("Package loaded: " .. package_name)
---     pt.finished_loading[packages_to_load][package_name] = true
---     if table_size(pt.finished_loading[packages_to_load]) == #packages_to_load then
---         self:print("All packages loaded")
---         pt.all_packages_loaded = true
---         local callback = pt.loaded_packages[loading_id].callback
---         if callback then
---             callback()
---         end
---     end
--- end
-
--- ServoFriendBaseExtension.release_packages = function(self)
---     local pt = self:pt()
---     for loading_id, loading in pairs(pt.loaded_packages) do
---         for package_name, package_id in pairs(loading.packages) do
---             self:print("Release package: " .. package_name)
---             self.package_manager:release(package_id)
---         end
---     end
--- end
 
 return ServoFriendBaseExtension
