@@ -4,10 +4,12 @@ local mod = get_mod("servo_friend")
 -- ##### ├─┘├┤ ├┬┘├┤ │ │├┬┘│││├─┤││││  ├┤  ############################################################################
 -- ##### ┴  └─┘┴└─└  └─┘┴└─┴ ┴┴ ┴┘└┘└─┘└─┘ ############################################################################
 
+local math = math
 local class = class
 local CLASS = CLASS
 local tostring = tostring
 local managers = Managers
+local math_random = math.random
 
 -- ##### ┌─┐┬  ┌─┐┌─┐┌─┐ ##############################################################################################
 -- ##### │  │  ├─┤└─┐└─┐ ##############################################################################################
@@ -27,7 +29,6 @@ ServoFriendMarkerExtension.init = function(self, extension_init_context, unit, e
     -- Data
     self.event_manager = managers.event
     -- Events
-    self.event_manager:register(self, "servo_friend_settings_changed", "on_settings_changed")
     self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
     self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
     self.event_manager:register(self, "servo_friend_world_marker_created", "on_servo_friend_world_marker_created")
@@ -40,7 +41,6 @@ end
 
 ServoFriendMarkerExtension.destroy = function(self)
     -- Events
-    self.event_manager:unregister(self, "servo_friend_settings_changed")
     self.event_manager:unregister(self, "servo_friend_spawned")
     self.event_manager:unregister(self, "servo_friend_destroyed")
     self.event_manager:unregister(self, "servo_friend_world_marker_created")
@@ -68,19 +68,27 @@ ServoFriendMarkerExtension.on_settings_changed = function(self)
     -- Base class
     ServoFriendMarkerExtension.super.on_settings_changed(self)
     -- Settings
-    self.focus_world_markers = mod:get("mod_option_focus_world_markers")
-    self.only_own_tags = mod:get("mod_option_only_own_tags")
+    self.focus_world_markers = self.servo_friend_extension.focus_world_markers
+    self.only_own_tags       = self.servo_friend_extension.only_own_tags
 end
 
-ServoFriendMarkerExtension.on_servo_friend_spawned = function(self)
-    -- Base class
-    ServoFriendMarkerExtension.super.on_servo_friend_spawned(self)
+ServoFriendMarkerExtension.on_servo_friend_spawned = function(self, servo_friend_unit, player_unit)
+    if self:is_me(servo_friend_unit) then
+        -- Base class
+        ServoFriendMarkerExtension.super.on_servo_friend_spawned(self)
+    end
 end
 
-ServoFriendMarkerExtension.on_servo_friend_destroyed = function(self)
-    -- Base class
-    ServoFriendMarkerExtension.super.on_servo_friend_destroyed(self)
+ServoFriendMarkerExtension.on_servo_friend_destroyed = function(self, servo_friend_unit, player_unit)
+    if self:is_me(servo_friend_unit) then
+        -- Base class
+        ServoFriendMarkerExtension.super.on_servo_friend_destroyed(self)
+    end
 end
+
+-- ##### ┌─┐┬  ┬┌─┐┌┐┌┌┬┐┌─┐ ##########################################################################################
+-- ##### ├┤ └┐┌┘├┤ │││ │ └─┐ ##########################################################################################
+-- ##### └─┘ └┘ └─┘┘└┘ ┴ └─┘ ##########################################################################################
 
 ServoFriendMarkerExtension.on_servo_friend_world_marker_created = function(self, marker)
     local own = not self.only_own_tags or self:is_owned(marker)
@@ -98,7 +106,6 @@ end
 -- ##### └  └─┘┘└┘└─┘ ┴ ┴└─┘┘└┘└─┘ ####################################################################################
 
 ServoFriendMarkerExtension.is_owned = function(self, marker)
-    local pt = self:pt()
     return marker and marker.data and marker.data.is_my_tag
 end
 
@@ -113,7 +120,7 @@ mod:hook(CLASS.HudElementWorldMarkers, "event_add_world_marker_position", functi
     local marker = self._markers[#self._markers]
     if marker then
         mod:print("add marker "..tostring(marker.id))
-        mod.event_manager:trigger("servo_friend_world_marker_created", marker, "marker")
+        managers.event:trigger("servo_friend_world_marker_created", marker, "marker")
     end
 end)
 
@@ -122,7 +129,7 @@ mod:hook(CLASS.HudElementWorldMarkers, "event_remove_world_marker", function(fun
     local marker = self._markers_by_id[id]
     if marker then
         mod:print("remove marker "..tostring(id))
-        mod.event_manager:trigger("servo_friend_world_marker_destroyed", marker)
+        managers.event:trigger("servo_friend_world_marker_destroyed", marker)
     end
     -- Original function
     func(self, id, ...)
