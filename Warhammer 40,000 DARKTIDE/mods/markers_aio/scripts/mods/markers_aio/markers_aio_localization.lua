@@ -19,21 +19,18 @@ return {
 		en = "MARKERS IMPROVED AIO SETTINGS",
 		fr = "MARKERS IMPROVED AIO SETTINGS",
 		ru = "MARKERS IMPROVED AIO SETTINGS",
-		["zh-tw"] = "標記一體化設置",
 		["zh-cn"] = "图标改进集成设置",
 	},
 	los_fade_enable = {
 		en = "Fade out icons out of line of sight",
 		fr = "Fade out icons out of line of sight",
 		ru = "Fade out icons out of line of sight",
-		["zh-tw"] = "視野外淡出效果",
 		["zh-cn"] = "视野外图标淡出",
 	},
 	los_opacity = {
 		en = "Line of sight alpha (percentage)",
 		fr = "Line of sight alpha (percentage)",
 		ru = "Line of sight alpha (percentage)",
-		["zh-tw"] = "視野外透明度",
 		["zh-cn"] = "视野外图标透明度",
 	},
 	-- AMMO MED MARKERS
@@ -104,7 +101,6 @@ return {
 		en = "Scale",
 		fr = "Scale",
 		ru = "Scale",
-		["zh-tw"] = "圖標比例",
 		["zh-cn"] = "图标缩放比例",
 	},
 	ammo_med_alpha = {
@@ -358,6 +354,22 @@ return {
 		ru = "Включить альтернативный значок",
         ["zh-tw"] = "使用替代圖示",
 		["zh-cn"] = "使用替代图标",
+	},
+	chest_icon = {
+		en = "Use Alternative Icon",
+		fr = "Utiliser une icône alternative",
+		ru = "Включить альтернативный значок",
+        ["zh-tw"] = "使用替代圖示",
+		["zh-cn"] = "使用替代图标",
+	},
+	Default = {
+		en = "Default"
+	},
+	Video = {
+		en = "Video"
+	},
+	Loot = {
+		en = "Loot"
 	},
 	chest_general_settings = {
 		en = "General Settings",

@@ -417,7 +417,6 @@ HudElementWorldMarkers._calculate_markers = function(self, dt, t, input_service,
                 end
             end
         end
-
     else
         self._camera = self._parent:player_camera()
     end
