@@ -1,11 +1,11 @@
 ---@diagnostic disable: undefined-global
 -- Thanks to deluxghost, Ovenproof, Fracticality, Wobin and others!
 
+
+			-- ============ DO NOT DO ANYTHING BELOW! ============ --
 local mod = get_mod("Enhanced_descriptions")
 local WTL = get_mod("WhatTheLocalization")
 
-
-			-- ============ GO TO LINE 50 TO START TRANSLATION! ============ --
 
 --[+ Elements offset +]--
 	--[+ Buttons offset +]--
@@ -44,114 +44,112 @@ local NAMES_File = mod:get("enable_names_file") and mod:io_dofile("Enhanced_desc
 local NAMES_Talents_Blessings_File = mod:get("enable_names_tal_bless_file") and mod:io_dofile("Enhanced_descriptions/NAMES_Talents_Blessings") or {}
 
 
-
-			-- ============ DO NOT DO ANYTHING ABOVE! ============ --
-
 -- TRANSLATOR: Duplicate and rename lines to enable Enhanced Descriptions for your language
 
+-- MOVED TO TALENTS!!!
 --[+ Toggle ENHANCED DESCRIPTIONS - Main +]--
-local enhanced_descriptions_enabled = mod:get("enhanced_descriptions_enabled")
-if enhanced_descriptions_enabled then
-	TALENTS_Enh_desc = mod:io_dofile("Enhanced_descriptions/Loc_EN/TALENTS_Enh_desc")
+-- local enhanced_descriptions_enabled = mod:get("enhanced_descriptions_enabled")
+-- if enhanced_descriptions_enabled then
+	-- TALENTS_Enh_desc = mod:io_dofile("Enhanced_descriptions/Loc_EN/TALENTS_Enh_desc")
 --[+ Translations +]-- The line below is for the Psyker and Zealot Extended Descriptions and after "else" "null" files with lines that "hide" Extended Descriptions.
 	--[+ French +]--
-	TALENTS_Enh_desc_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/TALENTS_Enh_desc_fr")
+	-- TALENTS_Enh_desc_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/TALENTS_Enh_desc_fr")
 	--[+ Russian +]--
-	TALENTS_Enh_desc_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/TALENTS_Enh_desc_ru")
+	-- TALENTS_Enh_desc_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/TALENTS_Enh_desc_ru")
 	--[+ Traditional Chinese +]--
 	-- TALENTS_Enh_desc_tw = mod:io_dofile("Enhanced_descriptions/Loc_TW/TALENTS_Enh_desc_tw")
 	--[+ Simplified Chinese +]--
 	-- TALENTS_Enh_desc_zh_cn = mod:io_dofile("Enhanced_descriptions/Loc_ZH_CN/TALENTS_Enh_desc_zh_cn")
-else
-	TALENTS_Enh_desc = mod:io_dofile("Enhanced_descriptions/Loc_EN/NULL/TALENTS_Enh_desc_null")
+-- else
+	-- TALENTS_Enh_desc = mod:io_dofile("Enhanced_descriptions/Loc_EN/NULL/TALENTS_Enh_desc_null")
 	--[+ French +]--
-	TALENTS_Enh_desc_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/NULL/TALENTS_Enh_desc_fr_null")
+	-- TALENTS_Enh_desc_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/NULL/TALENTS_Enh_desc_fr_null")
 	--[+ Russian +]--
-	TALENTS_Enh_desc_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/NULL/TALENTS_Enh_desc_ru_null")
+	-- TALENTS_Enh_desc_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/NULL/TALENTS_Enh_desc_ru_null")
 	--[+ Traditional Chinese +]--
 	-- TALENTS_Enh_desc_tw = mod:io_dofile("Enhanced_descriptions/Loc_TW/NULL/TALENTS_Enh_desc_tw_null")
 	--[+ Simplified Chinese +]--
 	-- TALENTS_Enh_desc_zh_cn = mod:io_dofile("Enhanced_descriptions/Loc_ZH_CN/NULL/TALENTS_Enh_desc_zh_cn_null")
-end
+-- end
 
 --[+ Toggle ENHANCED DESCRIPTIONS - Main 2 +]--
-local enhanced_descriptions_enabled2 = mod:get("enhanced_descriptions_enabled2")
-if enhanced_descriptions_enabled2 then
-	TALENTS_Enh_desc2 = mod:io_dofile("Enhanced_descriptions/Loc_EN/TALENTS_Enh_desc2")
+-- local enhanced_descriptions_enabled2 = mod:get("enhanced_descriptions_enabled2")
+-- if enhanced_descriptions_enabled2 then
+	-- TALENTS_Enh_desc2 = mod:io_dofile("Enhanced_descriptions/Loc_EN/TALENTS_Enh_desc2")
 --[+ Translations +]-- The line below is for the Veteran and Ogryn Extended Descriptions and after "else" "null" files with lines that "hide" Extended Descriptions.
 	--[+ French +]--
-	TALENTS_Enh_desc2_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/TALENTS_Enh_desc2_fr")
+	-- TALENTS_Enh_desc2_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/TALENTS_Enh_desc2_fr")
 	--[+ Russian +]--
-	TALENTS_Enh_desc2_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/TALENTS_Enh_desc2_ru")
+	-- TALENTS_Enh_desc2_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/TALENTS_Enh_desc2_ru")
 	--[+ Traditional Chinese +]--
 	-- TALENTS_Enh_desc2_tw = mod:io_dofile("Enhanced_descriptions/Loc_TW/TALENTS_Enh_desc2_tw")
 	--[+ Simplified Chinese +]--
 	-- TALENTS_Enh_desc2_zh_cn = mod:io_dofile("Enhanced_descriptions/Loc_ZH_CN/TALENTS_Enh_desc2_zh_cn")
-else
-	TALENTS_Enh_desc2 = mod:io_dofile("Enhanced_descriptions/Loc_EN/NULL/TALENTS_Enh_desc2_null")
+-- else
+	-- TALENTS_Enh_desc2 = mod:io_dofile("Enhanced_descriptions/Loc_EN/NULL/TALENTS_Enh_desc2_null")
 	--[+ French +]--
-	TALENTS_Enh_desc2_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/NULL/TALENTS_Enh_desc2_fr_null")
+	-- TALENTS_Enh_desc2_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/NULL/TALENTS_Enh_desc2_fr_null")
 	--[+ Russian +]--
-	TALENTS_Enh_desc2_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/NULL/TALENTS_Enh_desc2_ru_null")
+	-- TALENTS_Enh_desc2_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/NULL/TALENTS_Enh_desc2_ru_null")
 	--[+ Traditional Chinese +]--
 	-- TALENTS_Enh_desc2_tw = mod:io_dofile("Enhanced_descriptions/Loc_TW/NULL/TALENTS_Enh_desc2_tw_null")
 	--[+ Simplified Chinese +]--
 	-- TALENTS_Enh_desc2_zh_cn = mod:io_dofile("Enhanced_descriptions/Loc_ZH_CN/NULL/TALENTS_Enh_desc2_zh_cn_null")
-end
+-- end
 
 --[+ Toggle ENHANCED DESCRIPTIONS - Nodes +]--
-local enhanced_descriptions_nodes_enabled = mod:get("enhanced_descriptions_nodes_enabled")
-if enhanced_descriptions_nodes_enabled then
-	TALENTS_Enh_desc_nodes = mod:io_dofile("Enhanced_descriptions/Loc_EN/TALENTS_Enh_desc_nodes")
+-- local enhanced_descriptions_nodes_enabled = mod:get("enhanced_descriptions_nodes_enabled")
+-- if enhanced_descriptions_nodes_enabled then
+	-- TALENTS_Enh_desc_nodes = mod:io_dofile("Enhanced_descriptions/Loc_EN/TALENTS_Enh_desc_nodes")
 --[+ Translations +]-- The line below is for the Extended Node Descriptions and after "else" "null" files with lines that "hide" Extended Descriptions.
 	--[+ French +]--
-	TALENTS_Enh_desc_nodes_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/TALENTS_Enh_desc_nodes_fr")
+	-- TALENTS_Enh_desc_nodes_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/TALENTS_Enh_desc_nodes_fr")
 	--[+ Russian +]--
-	TALENTS_Enh_desc_nodes_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/TALENTS_Enh_desc_nodes_ru")
+	-- TALENTS_Enh_desc_nodes_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/TALENTS_Enh_desc_nodes_ru")
 	--[+ Traditional Chinese +]--
 	-- TALENTS_Enh_desc_nodes_tw = mod:io_dofile("Enhanced_descriptions/Loc_TW/TALENTS_Enh_desc_nodes_tw")
 	--[+ Simplified Chinese +]--
 	-- TALENTS_Enh_desc_nodes_zh_cn = mod:io_dofile("Enhanced_descriptions/Loc_ZH_CN/TALENTS_Enh_desc_nodes_zh_cn")
-else
-	TALENTS_Enh_desc_nodes = mod:io_dofile("Enhanced_descriptions/Loc_EN/NULL/TALENTS_Enh_desc_nodes_null")
+-- else
+	-- TALENTS_Enh_desc_nodes = mod:io_dofile("Enhanced_descriptions/Loc_EN/NULL/TALENTS_Enh_desc_nodes_null")
 	--[+ French +]--
-	TALENTS_Enh_desc_nodes_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/NULL/TALENTS_Enh_desc_nodes_fr_null")
+	-- TALENTS_Enh_desc_nodes_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/NULL/TALENTS_Enh_desc_nodes_fr_null")
 	--[+ Russian +]--
-	TALENTS_Enh_desc_nodes_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/NULL/TALENTS_Enh_desc_nodes_ru_null")
+	-- TALENTS_Enh_desc_nodes_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/NULL/TALENTS_Enh_desc_nodes_ru_null")
 	--[+ Traditional Chinese +]--
 	-- TALENTS_Enh_desc_nodes_tw = mod:io_dofile("Enhanced_descriptions/Loc_TW/NULL/TALENTS_Enh_desc_nodes_tw_null")
 	--[+ Simplified Chinese +]--
 	-- TALENTS_Enh_desc_nodes_zh_cn = mod:io_dofile("Enhanced_descriptions/Loc_ZH_CN/NULL/TALENTS_Enh_desc_nodes_zh_cn_null")
-end
+-- end
+-- /MOVED TO TALENTS!!!
 
+-- MOVED TO PENANCES!!!
 --[+ Toggle ENHANCED DESCRIPTIONS - Penances +]--
-local enhanced_descriptions_penances_enabled = mod:get("enhanced_descriptions_penances_enabled")
-if enhanced_descriptions_penances_enabled then
-	TALENTS_Enh_desc_penances = mod:io_dofile("Enhanced_descriptions/Loc_EN/TALENTS_Enh_desc_penances")
+-- local enhanced_descriptions_penances_enabled = mod:get("enhanced_descriptions_penances_enabled")
+-- if enhanced_descriptions_penances_enabled then
+	-- TALENTS_Enh_desc_penances = mod:io_dofile("Enhanced_descriptions/Loc_EN/TALENTS_Enh_desc_penances")
 --[+ Translations +]-- The line below is for the Extended Penance Descriptions and after "else" "null" files with lines that "hide" Extended Descriptions.
 	--[+ French +]--
 	-- TALENTS_Enh_desc_penances_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/TALENTS_Enh_desc_penances_fr")
 	--[+ Russian +]--
-	TALENTS_Enh_desc_penances_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/TALENTS_Enh_desc_penances_ru")
+	-- TALENTS_Enh_desc_penances_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/TALENTS_Enh_desc_penances_ru")
 	--[+ Traditional Chinese +]--
 	-- TALENTS_Enh_desc_penances_tw = mod:io_dofile("Enhanced_descriptions/Loc_TW/TALENTS_Enh_desc_penances_tw")
 	--[+ Simplified Chinese +]--
 	-- TALENTS_Enh_desc_penances_zh_cn = mod:io_dofile("Enhanced_descriptions/Loc_ZH_CN/TALENTS_Enh_desc_penances_zh_cn")
-else
-	TALENTS_Enh_desc_penances = mod:io_dofile("Enhanced_descriptions/Loc_EN/NULL/TALENTS_Enh_desc_penances_null")
+-- else
+	-- TALENTS_Enh_desc_penances = mod:io_dofile("Enhanced_descriptions/Loc_EN/NULL/TALENTS_Enh_desc_penances_null")
 	--[+ French +]--
 	-- TALENTS_Enh_desc_penances_fr = mod:io_dofile("Enhanced_descriptions/Loc_FR/NULL/TALENTS_Enh_desc_penances_fr_null")
 	--[+ Russian +]--
-	TALENTS_Enh_desc_penances_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/NULL/TALENTS_Enh_desc_penances_ru_null")
+	-- TALENTS_Enh_desc_penances_ru = mod:io_dofile("Enhanced_descriptions/Loc_RU/NULL/TALENTS_Enh_desc_penances_ru_null")
 	--[+ Traditional Chinese +]--
 	-- TALENTS_Enh_desc_penances_tw = mod:io_dofile("Enhanced_descriptions/Loc_TW/NULL/TALENTS_Enh_desc_penances_tw_null")
 	--[+ Simplified Chinese +]--
 	-- TALENTS_Enh_desc_penances_zh_cn = mod:io_dofile("Enhanced_descriptions/Loc_ZH_CN/NULL/TALENTS_Enh_desc_penances_zh_cn_null")
-end
+-- end
+-- /MOVED TO PENANCES!!!
 
-
-
-			-- ============ DO NOT DO ANYTHING BELOW! ============ --
 
 --[+ Custom unpack function +]--
 	local function custom_unpack(...)
@@ -167,9 +165,9 @@ end
 
 -- FOR TESTS ONLY!!!
 --[+ Function to create a localization template +]--
-local function create_template(id, loc_keys, locales, handle_func)
-	return { id = id, loc_keys = loc_keys, locales = locales, handle_func = handle_func }
-end
+-- local function create_template(id, loc_keys, locales, handle_func)
+	-- return { id = id, loc_keys = loc_keys, locales = locales, handle_func = handle_func }
+-- end
 -- FOR TESTS ONLY!!!
 
 mod.localization_templates = {
@@ -185,13 +183,13 @@ mod.localization_templates = {
 --[+ ++DEBUG++ +]--
 -- mod.debugging = true
 -- mod:command("debug_scenegraph", "", function()
-    -- mod.debugging = not mod.debugging
+	-- mod.debugging = not mod.debugging
 -- end)
 -- local UIRenderer = mod:original_require("scripts/managers/ui/ui_renderer")
 -- mod:hook_safe(UIRenderer, "begin_pass", function(self, ui_scenegraph, input_service, dt, render_settings)
-    -- if mod.debugging then
-        -- UIRenderer.debug_render_scenegraph(self, ui_scenegraph)
-    -- end
+	-- if mod.debugging then
+		-- UIRenderer.debug_render_scenegraph(self, ui_scenegraph)
+	-- end
 -- end)
 
 --[+ Reload localization templates when the mod is enabled or disabled +]--
