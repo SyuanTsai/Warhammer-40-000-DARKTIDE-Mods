@@ -273,10 +273,10 @@
 
 ### [Emperor's Guidance](https://www.nexusmods.com/warhammer40kdarktide/mods/468)
     靈能捏頭過濾器 - 能夠依照你要的順序捏頭
-- MOD 網站最後更新日期：Last updated 09 April 2025 4:55PM
-- MOD 版本：1.2.3
+- MOD 網站最後更新日期：Last updated 25 April 2025, 9:04PM
+- MOD 版本：1.2.4
 - MOD 檔案名稱：Emperor's Guidance 1.2.3-468-1-2-3-1744217717
-- 手動維護最後下載日期：2025-04-16
+- 手動維護最後下載日期：2025-05-20
 
 ### [Remember Server Location](https://www.nexusmods.com/warhammer40kdarktide/mods/308)
     能夠固定預設的伺服器避免都是香港
