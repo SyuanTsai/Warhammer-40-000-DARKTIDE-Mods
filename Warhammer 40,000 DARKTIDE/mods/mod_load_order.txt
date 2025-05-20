@@ -40,9 +40,8 @@ markers_aio
 danger_zone
 NumericUI
 RecolorBossHealthBars
--- Do I Know You
 KeepSwinging
--- Enhanced_descriptions  -- Wait fix
+Enhanced_descriptions
 EmperorsGuidance
 RememberServerLocation
 DefaultToHighestBlessingTier
