@@ -233,6 +233,11 @@ return {
 								default_value = true
 							},
 							{
+								setting_id = "renegade_radio_operator0primary",
+								type       = "checkbox",
+								default_value = true
+							},
+							{
 								setting_id    = "cultist_ritualist0primary",
 								type          = "checkbox",
 								default_value = true
@@ -498,6 +503,11 @@ return {
 							{
 								setting_id    = "cultist_mutant_mutator0secondary",
 								type          = "checkbox",
+								default_value = true
+							},
+							{
+								setting_id = "renegade_radio_operator0secondary",
+								type       = "checkbox",
 								default_value = true
 							},
 							{

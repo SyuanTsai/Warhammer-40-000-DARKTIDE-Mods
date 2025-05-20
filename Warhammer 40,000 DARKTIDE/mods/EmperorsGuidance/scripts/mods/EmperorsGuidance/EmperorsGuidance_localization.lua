@@ -211,6 +211,9 @@ return {
 		en = "Trapper",
 		["zh-tw"] = "陷阱手",
 	},
+	renegade_radio_operator0primary = {
+		en = "Radio Operator",
+	},
 	renegade_sniper0primary = {
 		en = "Sniper",
 		["zh-tw"] = "狙擊手",
@@ -379,6 +382,9 @@ return {
 	renegade_netgunner0secondary = {
 		en = "Trapper",
 		["zh-tw"] = "陷阱手",
+	},
+	renegade_radio_operator0secondary = {
+		en = "Radio Operator",
 	},
 	renegade_sniper0secondary = {
 		en = "Sniper",

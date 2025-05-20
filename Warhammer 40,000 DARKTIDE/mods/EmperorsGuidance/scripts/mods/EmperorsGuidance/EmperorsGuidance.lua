@@ -63,6 +63,7 @@ local BREEDING_TARGETS = {
     renegade_gunner = {true, true},
     renegade_melee = {true, true},
     renegade_netgunner = {true, true},
+    renegade_radio_operator = {true, true},
     renegade_twin_captain = {true, true},
     renegade_twin_captain_two = {true, true},
     renegade_rifleman = {true, true},
@@ -103,6 +104,7 @@ local BREEDING_GROUPS = {
         "renegade_flamer",
         "renegade_grenadier",
         "renegade_netgunner",
+        "renegade_radio_operator",
         "renegade_sniper",
         "cultist_flamer",
         "cultist_grenadier", 
@@ -150,6 +152,7 @@ local BREEDING_GROUPS = {
         "renegade_flamer",
         "renegade_grenadier",
         "renegade_netgunner",
+        "renegade_radio_operator",
         "renegade_sniper",
         "cultist_flamer",
         "cultist_grenadier",
@@ -222,6 +225,7 @@ mod.on_all_mods_loaded = function()
     BREEDING_TARGETS.renegade_gunner = {mod:get("renegade_gunner0primary"), mod:get("renegade_gunner0secondary")}
     BREEDING_TARGETS.renegade_melee = {mod:get("renegade_melee0primary"), mod:get("renegade_melee0secondary")}
     BREEDING_TARGETS.renegade_netgunner = {mod:get("renegade_netgunner0primary"), mod:get("renegade_netgunner0secondary")}
+    BREEDING_TARGETS.renegade_radio_operator = {mod:get("renegade_radio_operator0primary"), mod:get("renegade_radio_operator0secondary")}
     BREEDING_TARGETS.renegade_twin_captain = {mod:get("renegade_twin_captain0primary"), mod:get("renegade_twin_captain0secondary")}
     BREEDING_TARGETS.renegade_twin_captain_two = {mod:get("renegade_twin_captain_two0primary"), mod:get("renegade_twin_captain_two0secondary")}
     BREEDING_TARGETS.renegade_rifleman = {mod:get("renegade_rifleman0primary"), mod:get("renegade_rifleman0secondary")}
@@ -348,7 +352,7 @@ mod:hook_safe(CLASS.PlayerUnitSmartTargetingExtension, "targeting_data", functio
     if current_weapon == "psyker_smite" then
         local smart_unit = self._targeting_data and self._targeting_data.unit
         if smart_unit then
-            server_target = ScriptUnit.has_extension(smart_unit, "unit_data_system"):breed() and ScriptUnit.has_extension(smart_unit, "unit_data_system"):breed().name
+            server_target = ScriptUnit.has_extension(smart_unit, "unit_data_system") and ScriptUnit.has_extension(smart_unit, "unit_data_system"):breed() and ScriptUnit.has_extension(smart_unit, "unit_data_system"):breed().name
         else
             server_target = "none"
         end
