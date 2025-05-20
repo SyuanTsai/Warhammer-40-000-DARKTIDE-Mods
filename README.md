@@ -397,10 +397,10 @@
 
 ### [Improved Havoc Tags](https://www.nexusmods.com/warhammer40kdarktide/mods/500)
     自動平息
-- MOD 網站最後更新日期：Last updated 20 April 2025 4:15PM
-- MOD 版本：1.3
-- MOD 檔案名稱：Improved Havoc Tags-500-1-3-1745165717
-- 手動維護最後下載日期：2025-04-25
+- MOD 網站最後更新日期：Last updated 06 May 2025, 11:38AM
+- MOD 版本：2.0.1
+- MOD 檔案名稱：Improved Havoc Tags-500-2-0-1-1746502737
+- 手動維護最後下載日期：2025-05-20
 
 ---
 # 遊戲內操作相關MOD
