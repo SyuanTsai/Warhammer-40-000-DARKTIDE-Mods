@@ -19,6 +19,7 @@ local melee_sequence_options = {
     { text = "block",          value = "block" },
     { text = "push",           value = "push" },
     { text = "push_attack",    value = "push_attack" },
+	{ text = "wield",          value = "wield" },
 }
 
 return {
@@ -80,6 +81,12 @@ return {
 						keybind_type    = "function_call",
 						function_name   = "mod_enable_toggle",
 					},
+					{
+						setting_id      = "overload_protection",
+						type            = "checkbox",
+						default_value   = false,
+						tooltip         = "overload_protection_tooltip",
+					}
 				}
 			},
 			
@@ -168,6 +175,22 @@ return {
 						type = "checkbox",
 						default_value = false,
 						tooltip = "halt_on_interrupt_tooltip",
+					},
+					{
+						setting_id = "interrupt",
+						type = "dropdown",
+						default_value = "none",
+						tooltip = "interrupt_tooltip",
+						options = {
+							{text = "none", value = "none"},
+							{text = "reset", value = "reset"},
+							{text = "halt", value = "halt"},
+						}
+					},
+					{
+						setting_id = "current_melee",
+						type = "checkbox",
+						default_value = false,
 					},
 					{
 						setting_id = "melee_weapon_selection",
@@ -278,14 +301,14 @@ return {
 							{text = "none", value = "none"},
 							{text = "thrust", value = "thrust"},
 							{text = "slow_and_steady", value = "slow_and_steady"},
-							{text = "crunch", value = "crunch"},
+							--{text = "crunch", value = "crunch"},
 						}
 					},
 					{
 						setting_id = "heavy_buff_stacks",
 						type = "numeric",
 						default_value = 0,
-						range = {0, 4},
+						range = {0, 3},
 						unit_text = "buff_stacks",
 					},
 					{
@@ -301,11 +324,18 @@ return {
 						default_value = false,
 					},
 					{
+						setting_id = "force_heavy_when_special",
+						type = "checkbox",
+						default_value = false,
+						tooltip = "force_heavy_when_special_tooltip",
+					},
+					{
 						setting_id = "sequence_cycle_point",
 						tooltip = "sequence_cycle_point_tooltip",
 						type = "dropdown",
 						default_value = "sequence_step_one",
 						options = {
+							{ text = "no_repeat",            value = "no_repeat" },
                             { text = "sequence_step_one",    value = "sequence_step_one" },
                             { text = "sequence_step_two",    value = "sequence_step_two" },
                             { text = "sequence_step_three",  value = "sequence_step_three" },
@@ -419,6 +449,12 @@ return {
 						type = "numeric",
 						default_value = 100,
 						range = {0, 100},
+						tooltip = "always_charge_threshold_tooltip",
+					},
+					{
+						setting_id = "current_ranged",
+						type = "checkbox",
+						default_value = false,
 					},
 					{
 						setting_id = "ranged_weapon_selection",
@@ -542,18 +578,18 @@ return {
 					{
 						setting_id = "rate_of_fire_ads",
 						type = "numeric",
-						default_value = 100,
-						range = {0, 100},
+						default_value = 0,
+						range = {0, 4000},
 						unit_text = "rate_of_fire",
-						decimals_number = 2
+						decimals_number = 0
 					},
 					{
 						setting_id = "rate_of_fire_hip",
 						type = "numeric",
-						default_value = 100,
-						range = {0, 100},
+						default_value = 0,
+						range = {0, 4000},
 						unit_text = "rate_of_fire",
-						decimals_number = 2
+						decimals_number = 0
 					},
 					{
 						setting_id = "reset_weapon_ranged",
