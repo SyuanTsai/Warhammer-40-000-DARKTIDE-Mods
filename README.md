@@ -404,10 +404,10 @@
 
 ### [Improved Havoc Tags](https://www.nexusmods.com/warhammer40kdarktide/mods/500)
     自動平息
-- MOD 網站最後更新日期：Last updated 06 May 2025, 11:38AM
-- MOD 版本：2.0.1
-- MOD 檔案名稱：Improved Havoc Tags-500-2-0-1-1746502737
-- 手動維護最後下載日期：2025-05-20
+- MOD 網站最後更新日期：Last updated 24 May 2025, 5:21AM
+- MOD 版本：2.2
+- MOD 檔案名稱：Improved Havoc Tags-500-2-2-1748035306
+- 手動維護最後下載日期：2025-06-07
 
 ### [Servo-Friend](https://www.nexusmods.com/warhammer40kdarktide/mods/504)
     顱骨支援

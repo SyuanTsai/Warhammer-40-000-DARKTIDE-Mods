@@ -85,6 +85,18 @@ return {
                 default_value = "olive",
                 options = get_color_options()
             },
+			{
+                setting_id = "enemies_parasite_headshot",
+                type = "dropdown",
+                default_value = "light_salmon",
+                options = get_color_options()
+            },
+			{
+                setting_id = "tougher_skin",
+                type = "dropdown",
+                default_value = "citadel_ogryn_camo",
+                options = get_color_options()
+            },
             {
                 setting_id = "toxic_gas",
                 type = "dropdown",
