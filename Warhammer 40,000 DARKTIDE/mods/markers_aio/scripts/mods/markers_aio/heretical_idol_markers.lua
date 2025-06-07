@@ -19,7 +19,7 @@ local get_max_distance = function()
 
     -- foundya Compatibility
     if FoundYa ~= nil then
-        max_distance = FoundYa:get("max_distance_penance") or mod:get("heretical_idol_max_distance") or 30
+        -- max_distance = FoundYa:get("max_distance_penance") or mod:get("heretical_idol_max_distance") or 30
     end
 
     if max_distance == nil then
@@ -29,11 +29,14 @@ local get_max_distance = function()
     return max_distance
 end
 
+
 mod:hook_safe(
     CLASS.DestructibleExtension, "set_collectible_data", function(self, data)
         mod.add_heretical_idol_marker(self, data.unit, data.section_id)
         self._owner_system:enable_update_function(self.__class_name, "update", data.unit, self)
     end
+
+
 )
 
 DestructibleExtension.update = function(self, unit, dt, t)
@@ -49,9 +52,11 @@ DestructibleExtension.update = function(self, unit, dt, t)
     end
 end
 
+
 DestructibleExtension._cb_world_markers_list_request = function(self, world_markers)
     self._world_markers_list = world_markers
 end
+
 
 mod:hook_safe(
     CLASS.DestructibleExtension, "update", function(self, unit, dt, t)
@@ -61,6 +66,8 @@ mod:hook_safe(
             end
         end
     end
+
+
 )
 
 DestructibleExtension._add_damage = function(self, damage_amount, attack_direction, force_destruction, attacking_unit)
@@ -83,9 +90,17 @@ DestructibleExtension._add_damage = function(self, damage_amount, attack_directi
         destruction_info.health = math.max(0, health_after_damage)
 
         if health_after_damage <= 0 then
+
+            for i, unit in pairs(totem_units) do
+                if self._unit == unit then
+                    table.remove(totem_units, i)
+                end
+            end
+
             if self._collectible_data then
                 if self._collectible_data.unit and self._collectible_data.section_id then
                     mod.remove_heretical_idol_marker(self, self._collectible_data.unit, self._collectible_data.section_id)
+
                 end
             end
 
@@ -106,10 +121,18 @@ DestructibleExtension._add_damage = function(self, damage_amount, attack_directi
     end
 end
 
+
 DestructibleExtension.rpc_destructible_last_destruction = function(self)
     Managers.event:trigger("request_world_markers_list", callback(self, "_cb_world_markers_list_request"))
 
     Unit.flow_event(self._unit, "lua_last_destruction")
+
+    for i, unit in pairs(totem_units) do
+        if self._unit == unit then
+            table.remove(totem_units, i)
+        end
+    end
+
     if self._collectible_data then
         if self._collectible_data.unit and self._collectible_data.section_id then
             mod.remove_heretical_idol_marker(self, self._collectible_data.unit, self._collectible_data.section_id)
@@ -117,12 +140,14 @@ DestructibleExtension.rpc_destructible_last_destruction = function(self)
     end
 end
 
+
 mod.get_marker_pickup_type_by_unit = function(marker_unit)
     if not marker_unit then
         return
     end
     return Unit.get_data(marker_unit, "pickup_type")
 end
+
 
 mod.current_heretical_idol_markers = {}
 
@@ -145,6 +170,7 @@ mod.add_heretical_idol_marker = function(self, unit, section_id)
     end
 end
 
+
 mod.remove_heretical_idol_marker = function(self, unit, section_id)
     if self and self._world_markers_list and unit then
         for _, marker in pairs(self._world_markers_list) do
@@ -161,6 +187,7 @@ mod.remove_heretical_idol_marker = function(self, unit, section_id)
     end
 end
 
+
 mod.update_marker_icon = function(self, marker)
 
     if marker then
@@ -174,16 +201,16 @@ mod.update_marker_icon = function(self, marker)
             marker.draw = false
 
             marker.widget.content.icon = "content/ui/materials/hud/interactions/icons/enemy"
-            marker.widget.style.icon.color = {255, mod:get("icon_colour_R"), mod:get("icon_colour_G"), mod:get("icon_colour_B")}
-            marker.widget.style.ring.color = mod.lookup_border_color(mod:get("idol_border_colour"))
-            marker.widget.style.background.color = Color.citadel_abaddon_black(nil, true)
+            marker.widget.style.icon.color = {
+                255,
+                mod:get("icon_colour_R"),
+                mod:get("icon_colour_G"),
+                mod:get("icon_colour_B")
+            }
+            marker.widget.style.ring.color = mod.lookup_colour(mod:get("idol_border_colour"))
+            marker.widget.style.background.color = mod.lookup_colour(mod:get("marker_background_colour"))
             marker.template.screen_clamp = mod:get("heretical_idol_keep_on_screen")
             marker.block_screen_clamp = false
-
-            -- foundya Compatibility
-            if FoundYa ~= nil then
-                marker.__foundya_marker_category = "penance"
-            end
 
             local max_spawn_distance_sq = max_distance * max_distance
             HUDElementInteractionSettings.max_spawn_distance_sq = max_spawn_distance_sq
@@ -202,3 +229,5 @@ mod.update_marker_icon = function(self, marker)
         end
     end
 end
+
+
