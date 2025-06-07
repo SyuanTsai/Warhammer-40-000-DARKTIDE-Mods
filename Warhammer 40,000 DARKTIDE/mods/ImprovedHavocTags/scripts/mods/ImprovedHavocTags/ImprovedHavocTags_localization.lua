@@ -16,7 +16,7 @@ local localizations = {
         en = " Improved Havoc Tags",
         ru = " Хавок - Улучшенные теги",
         ["zh-cn"] = " 更好的浩劫词条显示",
-        ["zh-tw"] = "改善浩劫詞條顯示方式",
+        ["zh-tw"] = " 改善浩劫詞條顯示方式",
     },
     mod_description = {
         en = "Recolors certain Havoc modifiers to make them easier to identify at a glance in Party Finder. Please reload your mods or restart your game after changing colors!",
@@ -28,13 +28,13 @@ local localizations = {
         en = "The Emperor's Fading light (I)",
         ru = "Угасающий свет Императора (I)",
         ["zh-cn"] = "帝皇之光渐衰 (I)",
-        ["zh-tw"] = "帝皇的微光 I",
+        ["zh-tw"] = "帝皇的微光 (I)",
     },
 	highest_difficulty = {
         en = "The Emperor's Fading light (II)",
         ru = "Угасающий свет Императора (II)",
         ["zh-cn"] = "帝皇之光渐衰 (I)",
-        ["zh-tw"] = "帝皇的微光 II",
+        ["zh-tw"] = "帝皇的微光 (II)",
     },
     bolstering_enemies = {
         en = "Rampaging Enemies",
@@ -71,6 +71,18 @@ local localizations = {
         ru = "Скверна разрастается",
         ["zh-cn"] = "疫病蔓延",
         ["zh-tw"] = "疫病蔓延(腐化)",
+    },
+	enemies_parasite_headshot = {
+        en = "Cranial Corruption",
+        ru = "Внутричерепная инфекция",
+        ["zh-cn"] = "颅部腐坏",
+        ["zh-tw"] = "顱骨腐敗",
+    },
+	tougher_skin = {
+        en = "Pus-hardened Skin",
+        ru = "Гнойная броня",
+        ["zh-cn"] = "硬化皮肤",
+        ["zh-tw"] = "硬膿皮膚",
     },
     toxic_gas = {
         en = "Pox Gas",
