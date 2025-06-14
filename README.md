@@ -61,14 +61,6 @@
 - MOD 檔案名稱：Skitarius 2.0.4-510-2-0-4-1748954369
 - 手動維護最後下載日期：2025-06-07
 
-### JishuJun
-    團隊計分
-- MOD 網站最後更新日期：NA
-- MOD 版本：NA
-- MOD 檔案名稱：NA
-- 手動維護最後下載日期：NA
-- 移除原因：使用新版KPM替代。
-
 ### [Auto Loot](https://www.nexusmods.com/warhammer40kdarktide/mods/375)
     自動開啟箱子並撿取物品
 - MOD 網站最後更新日期：Last updated 11 October 2024 9:12AM
@@ -374,15 +366,6 @@
 - MOD 檔案名稱：Keep Dodging-182-1-1-2-1743350245
 - 手動維護最後下載日期：2025-03-31
 
-### [Do I Know You](https://www.nexusmods.com/warhammer40kdarktide/mods/488)
-    顯示移動速度(計算方式很難凸顯出真的想跟他玩的玩家)
-    單純看勝敗場，但是也有贏了玩得很悶的情境。
-- MOD 網站最後更新日期：Last updated 21 March 2025 2:43PM
-- MOD 版本：1.0.3
-- MOD 檔案名稱：Do I Know You 1.0.3.zip-488-1-0-3-1743019163
-- 手動維護最後下載日期：2025-03-31
-- 移除原因：只計算勝敗場，沒有計算其他數據。
-
 ### [RickAndMortis](https://www.nexusmods.com/warhammer40kdarktide/mods/488)
     顯示移動速度
 - MOD 網站最後更新日期：Last updated 30 March 2025 4:49AM
@@ -424,15 +407,6 @@
 - MOD 版本：1.4.1
 - MOD 檔案名稱：better_hud_info_view-511-1-4-1-1745974107
 - 手動維護最後下載日期：2025-05-02
-
-### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
-    自動開火，只要按住就會一直開火
-- MOD 網站最後更新日期：Last updated 07 December 2023 3:46AM
-- MOD 版本：1.15
-- MOD 檔案名稱：FullAuto-87-1-15-1701920784
-- 手動維護最後下載日期：2025-03-09
-- 移除原因：使用機械神教MOD替代。
-
 ---
 # 遊戲內操作相關MOD
 
@@ -498,3 +472,30 @@
 - MOD 版本：1.0.0
 - MOD 檔案名稱：Remember Difficulty-490-1-0-0-1743065799
 - 手動維護最後下載日期：2025-04-05
+
+# 移除的MOD
+
+### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
+    自動開火，只要按住就會一直開火
+- MOD 網站最後更新日期：Last updated 07 December 2023 3:46AM
+- MOD 版本：1.15
+- MOD 檔案名稱：FullAuto-87-1-15-1701920784
+- 手動維護最後下載日期：2025-03-09
+- 移除原因：使用機械神教MOD替代。
+
+### [Do I Know You](https://www.nexusmods.com/warhammer40kdarktide/mods/488)
+    顯示移動速度(計算方式很難凸顯出真的想跟他玩的玩家)
+    單純看勝敗場，但是也有贏了玩得很悶的情境。
+- MOD 網站最後更新日期：Last updated 21 March 2025 2:43PM
+- MOD 版本：1.0.3
+- MOD 檔案名稱：Do I Know You 1.0.3.zip-488-1-0-3-1743019163
+- 手動維護最後下載日期：2025-03-31
+- 移除原因：只計算勝敗場，沒有計算其他數據。
+
+### JishuJun
+    團隊計分
+- MOD 網站最後更新日期：NA
+- MOD 版本：NA
+- MOD 檔案名稱：NA
+- 手動維護最後下載日期：NA
+- 移除原因：使用新版KPM替代。
