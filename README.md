@@ -417,13 +417,6 @@
 - MOD 檔案名稱：TalentRefundBelow-216-1-5-1698496483
 - 手動維護最後下載日期：2025-04-25
 
-### [Hybrid Sprint](https://www.nexusmods.com/warhammer40kdarktide/mods/342?tab=description)
-    混合衝刺 - 能夠解放雙手不需要一直衝刺
-- MOD 網站最後更新日期：Last updated 17 October 20241:44PM
-- MOD 版本：Version 1.3.1
-- MOD 檔案名稱：Hybrid Sprint-342-1-3-1-1729169092
-- 手動維護最後下載日期：2025-02-09
-
 ### [Archivum Messelina](https://www.nexusmods.com/warhammer40kdarktide/mods/307)
     梅塞利納檔案館 - 改善苦修搜尋
 - MOD 網站最後更新日期：Last updated 06 May 2024 3:22PM
@@ -499,3 +492,11 @@
 - MOD 檔案名稱：NA
 - 手動維護最後下載日期：NA
 - 移除原因：使用新版KPM替代。
+
+### [Hybrid Sprint](https://www.nexusmods.com/warhammer40kdarktide/mods/342?tab=description)
+    混合衝刺 - 能夠解放雙手不需要一直衝刺
+- MOD 網站最後更新日期：Last updated 17 October 20241:44PM
+- MOD 版本：Version 1.3.1
+- MOD 檔案名稱：Hybrid Sprint-342-1-3-1-1729169092
+- 手動維護最後下載日期：2025-02-09
+- 移除原因：個人操作問題不會去使用。
