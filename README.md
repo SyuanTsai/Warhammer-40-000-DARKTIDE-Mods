@@ -67,6 +67,7 @@
 - MOD 版本：NA
 - MOD 檔案名稱：NA
 - 手動維護最後下載日期：NA
+- 移除原因：使用新版KPM替代。
 
 ### [Auto Loot](https://www.nexusmods.com/warhammer40kdarktide/mods/375)
     自動開啟箱子並撿取物品
