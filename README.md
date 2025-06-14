@@ -381,6 +381,7 @@
 - MOD 版本：1.0.3
 - MOD 檔案名稱：Do I Know You 1.0.3.zip-488-1-0-3-1743019163
 - 手動維護最後下載日期：2025-03-31
+- 移除原因：只計算勝敗場，沒有計算其他數據。
 
 ### [RickAndMortis](https://www.nexusmods.com/warhammer40kdarktide/mods/488)
     顯示移動速度
