@@ -56,7 +56,6 @@ guarantee_ability_activation
 custom_hud
 keep_dodging
 SpecialsTracker
-FullAuto
 show_cjk_glyphs
 ovenproof_scoreboard_plugin
 RetainSelection
