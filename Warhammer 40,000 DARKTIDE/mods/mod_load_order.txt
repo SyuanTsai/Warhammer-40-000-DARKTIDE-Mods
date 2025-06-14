@@ -83,3 +83,4 @@ WeaponFilter
 afk
 RememberDifficulty
 AUPM
+KPM
