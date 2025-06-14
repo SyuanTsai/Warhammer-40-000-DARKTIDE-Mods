@@ -423,6 +423,14 @@
 - MOD 檔案名稱：better_hud_info_view-511-1-4-1-1745974107
 - 手動維護最後下載日期：2025-05-02
 
+### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
+    自動開火，只要按住就會一直開火
+- MOD 網站最後更新日期：Last updated 07 December 2023 3:46AM
+- MOD 版本：1.15
+- MOD 檔案名稱：FullAuto-87-1-15-1701920784
+- 手動維護最後下載日期：2025-03-09
+- 移除原因：使用機械神教MOD替代。
+
 ---
 # 遊戲內操作相關MOD
 
