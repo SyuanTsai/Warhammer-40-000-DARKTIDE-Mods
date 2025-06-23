@@ -224,10 +224,10 @@
 
 ### [Quick Look Card](https://www.nexusmods.com/warhammer40kdarktide/mods/142)
     快速資訊卡 可以快速取得武器的五維
-- MOD 網站最後更新日期：Last updated 16 April 2025 2:33PM
-- MOD 版本：1.8.3
-- MOD 檔案名稱：QuickLookCard-142-1-8-3-1744814031
-- 手動維護最後下載日期：2025-04-18
+- MOD 網站最後更新日期：Last updated 23 June 2025, 4:44PM
+- MOD 版本：1.8.4
+- MOD 檔案名稱：QuickLookCard-142-1-8-4-1750668290
+- 手動維護最後下載日期：2025-06-23
 
 ### [Markers Improved All-in-One](https://www.nexusmods.com/warhammer40kdarktide/mods/447)
     標記一體化 整合包
