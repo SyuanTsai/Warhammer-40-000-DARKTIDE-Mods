@@ -1,19 +1,13 @@
 local mod = get_mod("LoadoutMonitor")
-local locr = {
-	--[[
-	 = {
-		en = "",
-		["zh-cn"] = "",
-	},
-	--]]	
+local locr = {	
 	mod_name = {
 		en = "Loadout Monitor",
-		["zh-cn"] = "配置监控器",
+        ["zh-cn"] = "配置监控器",
 		["zh-tw"] = "大廳顯示裝備",
 	},
 	lobby_exhibition = {
 		en = "In lobby",
-		["zh-cn"] = "在准备大厅中",
+        ["zh-cn"] = "在准备大厅中",
 		["zh-tw"] = "在大廳中",
 	},
 	lobby_exhibition_weapons = {
@@ -174,12 +168,11 @@ local locr = {
 	user_weapon_name_multiplier = {
 		en = "Over-lenghth name size multiplier(%%)",
 		["zh-cn"] = "过长名称缩放（%%）",
-		["zh-tw"] = "過長名稱縮放(%%)",
 	},
 	setting_perk_blessing_group = {
 		en = "Perk & Blessing",
 		["zh-cn"] = "专长与祝福",
-		["zh-tw"] = "專長與祝福",
+		["zh-tw"] = "過長名稱縮放(%%)",
 	},
 	blessing_level_rule = {
 		en = "Display blessing level by",
@@ -201,6 +194,11 @@ local locr = {
 		["zh-cn"] = "颜色",
 		["zh-tw"] = "顏色",
 	},
+	by_character = {
+		en = "Character",
+        ["zh-cn"] = "字符",
+		["zh-tw"] = "字元",
+	},
 	setting_other_group = {
 		en = "Other",
 		["zh-cn"] = "其它",
@@ -213,7 +211,7 @@ local locr = {
 	},
 	left_panel_lift_tip = {
 		en = "Lift mission name & danger level panel to work better with mods such as contracts overlay",
-		["zh-cn"] = "抬升任务名&危险等级区域，以适配如Contracts Overlay一类的MOD",
+        ["zh-cn"] = "抬升任务名&危险等级区域，以适配如Contracts Overlay一类的MOD",
 		["zh-tw"] = "提昇任務名稱與危險等級面板，以更好地與如Contracts Overlay等模組搭配使用",
 	},
 	echo_team_loadout_brief = {
@@ -226,7 +224,7 @@ local locr = {
 	trait_weapon_trait_increase_power = {
 		en = "PWR ", -- Power
 		["zh-cn"] = "能量", -- 伤害与踉跄效果
-		["zh-tw"] = "能量", -- 傷害與踉跄效果
+		["zh-tw"] = "威力", -- 傷害與踉跄效果
 	},
 	trait_gadget_damage_reduction_vs_flamers = {
 		en = "FLAM", -- Damage Resistance (Tox Flamers)
@@ -364,7 +362,6 @@ local locr = {
 		ja = "活力", -- 最大スタミナ
 		ru = "ВНСЛ", -- Выносливость
 		["zh-tw"] = "體力", -- 最大體力
-		["zh-tw"] = "生命", -- 最大生命值
 	},
 	trait_gadget_inate_health_increase = {
 		en = "HP", -- Max Health
@@ -376,7 +373,7 @@ local locr = {
 	trait_gadget_health_increase = {
 		en = "HP", -- Max Health
 		["zh-cn"] = "生命", -- 最大生命值
-		["zh-tw"] = "格擋", -- 格擋效益
+		["zh-tw"] = "生命", -- 最大生命值
 	},
 	trait_gadget_block_cost_reduction = {
 		en = "BLK ", -- Block Efficiency
@@ -391,7 +388,7 @@ local locr = {
 	trait_weapon_trait_increase_finesse = {
 		en = "FNS ", -- Finesse
 		["zh-cn"] = "娴熟", -- 武器娴熟
-		["zh-tw"] = "熟練", -- 武器熟練
+		["zh-tw"] = "靈巧", -- 武器熟練
 	},
 	trait_gadget_inate_max_wounds_increase = {
 		en = "WND ", -- Wound(s)
@@ -633,11 +630,361 @@ local locr = {
 		["zh-cn"] = "基石",
 		["zh-tw"] = "基石",
 	},
+	player_feats_display_type = {
+		en = "Display type",
+        ["zh-cn"] = "显示方式",
+		["zh-tw"] = "顯示方式",
+	},
+	
+	def_veteran_combat_ability_elite_and_special_outlines = {
+		en = "ES",
+        ["zh-cn"] = "刽",
+		["zh-tw"] = "處",
+	},
+	def_veteran_combat_ability_stagger_nearby_enemies = {
+		en = "VoC",
+        ["zh-cn"] = "令",
+		["zh-tw"] = "吼",
+	},
+	def_veteran_invisibility_on_combat_ability = {
+		en = "Inf",
+        ["zh-cn"] = "渗",
+		["zh-tw"] = "滲",
+	},
+	
+	def_veteran_grenade_apply_bleed = {
+		en = "F",
+        ["zh-cn"] = "碎",
+		["zh-tw"] = "破",
+	},
+	def_veteran_krak_grenade = {
+		en = "K",
+        ["zh-cn"] = "穿",
+		["zh-tw"] = "穿",
+	},
+	def_veteran_smoke_grenade = {
+		en = "S",
+        ["zh-cn"] = "烟",
+		["zh-tw"] = "煙",
+	},
+	
+	def_veteran_aura_gain_ammo_on_elite_kill_improved = {
+		en = "Amo",
+        ["zh-cn"] = "回",
+		["zh-tw"] = "回",
+	},
+	def_veteran_increased_damage_coherency = {
+		en = "Dmg",
+        ["zh-cn"] = "伤",
+		["zh-tw"] = "傷",
+	},
+	def_veteran_movement_speed_coherency = {
+		en = "Spe",
+        ["zh-cn"] = "速",
+		["zh-tw"] = "速",
+	},
+	
+	def_veteran_snipers_focus = {
+		en = "MF",
+        ["zh-cn"] = "专",
+		["zh-tw"] = "專",
+	},
+	def_veteran_improved_tag = {
+		en = "FT",
+        ["zh-cn"] = "聚",
+		["zh-tw"] = "標",
+	},
+	def_veteran_weapon_switch_passive = {
+		en = "WS",
+        ["zh-cn"] = "武",
+		["zh-tw"] = "武",
+	},
+	
+	def_zealot_attack_speed_post_ability = {
+		en = "FF",
+        ["zh-cn"] = "冲",
+		["zh-tw"] = "衝",
+	},
+	def_zealot_bolstering_prayer = {
+		en = "CSF",
+        ["zh-cn"] = "祷",
+		["zh-tw"] = "禱",
+	},
+	def_zealot_stealth = {
+		en = "Sf",
+        ["zh-cn"] = "隐",
+		["zh-tw"] = "隱",
+	},
+	
+	def_zealot_improved_stun_grenade = {
+		en = "S",
+        ["zh-cn"] = "晕",
+		["zh-tw"] = "暈",
+	},
+	def_zealot_flame_grenade = {
+		en = "I",
+        ["zh-cn"] = "燃",
+		["zh-tw"] = "燃",
+	},
+	def_zealot_throwing_knives = {
+		en = "B",
+        ["zh-cn"] = "刃",
+		["zh-tw"] = "刃",
+	},
+	
+	def_zealot_toughness_damage_reduction_coherency_improved = {
+		en = "Bene",
+        ["zh-cn"] = "赐",
+		["zh-tw"] = "賜",
+	},
+	def_zealot_corruption_healing_coherency_improved = {
+		en = "Bea",
+        ["zh-cn"] = "纯",
+		["zh-tw"] = "淨",
+	},
+	def_zealot_always_in_coherency = {
+		en = "L",
+        ["zh-cn"] = "孤",
+		["zh-tw"] = "孤",
+	},
+	
+	def_zealot_fanatic_rage = {
+		en = "BP",
+        ["zh-cn"] = "炽",
+		["zh-tw"] = "熾",
+	},
+	def_zealot_martyrdom = {
+		en = "M",
+        ["zh-cn"] = "殉",
+		["zh-tw"] = "殉",
+	},
+	def_zealot_quickness_passive = {
+		en = "IJ",
+        ["zh-cn"] = "审",
+		["zh-tw"] = "命",
+	},
+	
+	def_psyker_shout_vent_warp_charge = {
+		en = "VS",
+        ["zh-cn"] = "啸",
+		["zh-tw"] = "推",
+	},
+	def_psyker_combat_ability_force_field = {
+		en = "TS",
+        ["zh-cn"] = "盾",
+		["zh-tw"] = "盾",
+	},
+	def_psyker_combat_ability_stance = {
+		en = "SG",
+        ["zh-cn"] = "凝",
+		["zh-tw"] = "凝",
+	},
+	
+	def_psyker_brain_burst_improved = {
+		en = "B",
+        ["zh-cn"] = "脑",
+		["zh-tw"] = "腦",
+	},
+	def_psyker_grenade_chain_lightning = {
+		en = "S",
+        ["zh-cn"] = "电",
+		["zh-tw"] = "電",
+	},
+	def_psyker_grenade_throwing_knives = {
+		en = "A",
+        ["zh-cn"] = "袭",
+		["zh-tw"] = "襲",
+	},
+	
+	def_psyker_aura_damage_vs_elites = {
+		en = "KP",
+        ["zh-cn"] = "伤",
+		["zh-tw"] = "傷",
+	},
+	def_psyker_cooldown_aura_improved = {
+		en = "SP",
+        ["zh-cn"] = "回",
+		["zh-tw"] = "技",
+	},
+	def_psyker_aura_crit_chance_aura = {
+		en = "Pr",
+        ["zh-cn"] = "暴",
+		["zh-tw"] = "暴",
+	},
+	
+	def_psyker_passive_souls_from_elite_kills = {
+		en = "WP",
+        ["zh-cn"] = "虹",
+		["zh-tw"] = "虹",
+	},
+	def_psyker_empowered_ability = {
+		en = "EP",
+        ["zh-cn"] = "强",
+		["zh-tw"] = "強",
+	},
+	def_psyker_new_mark_passive = {
+		en = "DD",
+        ["zh-cn"] = "命",
+		["zh-tw"] = "命",
+	},
+	
+	def_ogryn_longer_charge = {
+		en = "I",
+        ["zh-cn"] = "冲",
+		["zh-tw"] = "衝",
+	},
+	def_ogryn_taunt_shout = {
+		en = "L",
+        ["zh-cn"] = "护",
+		["zh-tw"] = "忠",
+	},
+	def_ogryn_special_ammo = {
+		en = "P",
+        ["zh-cn"] = "弹",
+		["zh-tw"] = "彈",
+	},
+	
+	def_ogryn_grenade_friend_rock = {
+		en = "BR",
+        ["zh-cn"] = "石",
+		["zh-tw"] = "石",
+	},
+	def_ogryn_grenade_frag = {
+		en = "FG",
+        ["zh-cn"] = "雷",
+		["zh-tw"] = "雷",
+	},
+	def_ogryn_box_explodes = {
+		en = "BA",
+        ["zh-cn"] = "盒",
+		["zh-tw"] = "盒",
+	},
+	
+	def_ogryn_melee_damage_coherency_improved = {
+		en = "B",
+        ["zh-cn"] = "伤",
+		["zh-tw"] = "傷",
+	},
+	def_ogryn_toughness_regen_aura = {
+		en = "S",
+        ["zh-cn"] = "韧",
+		["zh-tw"] = "韌",
+	},
+	def_ogryn_damage_vs_suppressed_coherency = {
+		en = "C",
+        ["zh-cn"] = "压",
+		["zh-tw"] = "壓",
+	},
+	
+	def_ogryn_passive_heavy_hitter = {
+		en = "HH",
+        ["zh-cn"] = "重",
+		["zh-tw"] = "重",
+	},
+	def_ogryn_carapace_armor = {
+		en = "FNP",
+        ["zh-cn"] = "痛",
+		["zh-tw"] = "痛",
+	},
+	def_ogryn_leadbelcher_no_ammo_chance = {
+		en = "BLO",
+        ["zh-cn"] = "覆",
+		["zh-tw"] = "覆",
+	},
+	def_adamant_stance = {
+		en = "CS",
+        ["zh-cn"] = "惩",
+		["zh-tw"] = "懲",
+	},
+	def_adamant_area_buff_drone_improved = {
+		en = "NA",
+        ["zh-cn"] = "谕",
+		["zh-tw"] = "諭",
+	},
+	def_adamant_charge = {
+		en = "BL",
+        ["zh-cn"] = "突",
+		["zh-tw"] = "突",
+	},
+	def_adamant_whistle = {
+		en = "RD",
+        ["zh-cn"] = "引",
+		["zh-tw"] = "引",
+	},
+	def_adamant_shock_mine = {
+		en = "SM",
+        ["zh-cn"] = "电",
+		["zh-tw"] = "電",
+	},
+	def_adamant_grenade_improved = {
+		en = "AG",
+        ["zh-cn"] = "雷",
+		["zh-tw"] = "雷",
+	},
+	def_adamant_companion_coherency = {
+		en = "PoS",
+        ["zh-cn"] = "协",
+		["zh-tw"] = "協",
+	},
+	def_adamant_reload_speed_aura = {
+		en = "RE",
+        ["zh-cn"] = "效",
+		["zh-tw"] = "效",
+	},
+	def_adamant_damage_vs_staggered_aura = {
+		en = "BD",
+        ["zh-cn"] = "压",
+		["zh-tw"] = "壓",
+	},
+	def_adamant_execution_order = {
+		en = "EO",
+        ["zh-cn"] = "处",
+		["zh-tw"] = "處",
+	},
+	def_adamant_terminus_warrant = {
+		en = "TW",
+        ["zh-cn"] = "终",
+		["zh-tw"] = "終",
+	},
+	def_adamant_forceful = {
+		en = "F",
+        ["zh-cn"] = "力",
+		["zh-tw"] = "力",
+	},
+	def_adamant_companion_focus_elite = {
+		en = "UB",
+        ["zh-cn"] = "野",
+		["zh-tw"] = "野",
+	},
+	def_adamant_disable_companion = {
+		en = "LW",
+        ["zh-cn"] = "独",
+		["zh-tw"] = "獨",
+	},
+	def_adamant_companion_focus_ranged = {
+		en = "GGM",
+        ["zh-cn"] = "追",
+		["zh-tw"] = "追",
+	},
+	user_custom_feats_abbreviation_description = {
+		en = "1:Ability   2:Blitz   3:Aura   4:Keystone",
+		["zh-cn"] = "1：技能   2：闪击   3：光环   4：基石",	
+		["zh-tw"] = "1：技能   2：閃擊   3：光環   4：基石",
+	},
 }
 for i = 1,4 do
 	locr[string.format("player_Feats_order_%s",i)] = {
 		en = "Slot: "..tostring(i),
-		["zh-cn"] = "槽位："..tostring(i),
+        ["zh-cn"] = "槽位：" .. tostring(i),
+		["zh-tw"] = "槽位：" .. tostring(i),
 	}
 end
 return locr
+
+
+--[[
+ = {
+	en = "",
+	["zh-cn"] = "",
+},
+--]]
