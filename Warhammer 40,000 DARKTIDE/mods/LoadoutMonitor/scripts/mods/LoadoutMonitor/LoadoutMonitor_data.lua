@@ -130,6 +130,16 @@ return {
 						default_value = true,
 					},
 					{
+						setting_id = "player_feats_display_type",
+						title = "player_feats_display_type",
+						type = "dropdown",
+						default_value = "number",
+						options = {
+							{text = "by_number", value = "number"},
+							{text = "by_character", value = "character"},
+						},
+					},
+					{
 						setting_id = "player_feats_font_size",
 						title = "setting_font_size",
 						type = "numeric",
