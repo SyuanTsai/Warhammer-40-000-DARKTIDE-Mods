@@ -18,15 +18,15 @@ return {
     ["zh-tw"] = "靈能室",
   },
   psych_ward_description = {
-    en = "Enables logging in straight to the Psykhanium, bypassing the Hub.",
+    en = "Provides access to many Hub features from the Character Select menu.",
     ["zh-cn"] = "启用直接进入灵能室功能，无需进入大厅。",
     ru = "Psych Ward - Позволяет войти прямо на стрельбище в Псайканиум, минуя Хаб.",
     ja = "ハブを介さず、サイカニウムへと直接入場できるようになります。",
     ["zh-tw"] = "啟用直接進入靈能室功能，無需進入大廳。",
   },
-  psykhanium_button = {
-    en = "Shooting Range",
-    ["zh-cn"] = "训练场",
+  horde_button = {
+    en = "Mortis Trials",
+    ["zh-cn"] = "灵能室",
     ru = "Стрельбище",
     ja = "演習場",
     ["zh-tw"] = "訓練場",
@@ -80,6 +80,16 @@ return {
     ja = "インベントリ",
     ["zh-tw"] = "裝備",
   },
+  havoc_button = {
+    en = "Havoc Mission",
+    ["zh-cn"] = "浩劫任务",
+    ["zh-tw"] = "浩劫任務",
+  },
+  meatgrinder_button = {
+    en = "Meat Grinder",
+    ["zh-cn"] = "绞肉机",
+    ["zh-tw"] = "絞肉機",
+  },
   exit_text = {
     en = "Press %s to quit",
     ja = "%sで終了",
@@ -92,5 +102,15 @@ return {
     ["zh-cn"] = "仅可在大厅内查看",
     ru = "Можно посмотреть только в Хабе",
     ["zh-tw"] = "僅可在大廳內查看",
+  },
+  enter_hub = {
+    en = "Enter Hub",
+    ["zh-cn"] = "进入大厅",
+    ["zh-tw"] = "進入大廳",
+  },
+  allow_chat_main_menu = {
+    en = "Allow Chat in Character Select screen",
+    ["zh-cn"] = "允许在角色选择界面使用聊天框",
+    ["zh-tw"] = "允許在角色選擇界面使用聊天框",
   },
 }
