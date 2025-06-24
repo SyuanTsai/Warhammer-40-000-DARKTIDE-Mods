@@ -389,10 +389,10 @@
 
 ### [Ovenproof's Scoreboard Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/241)
     記分板排版工具
-- MOD 網站最後更新日期：Last updated 22 February 2024 2:22AM
+- MOD 網站最後更新日期：Last updated 24 June 2025, 4:07PM
 - MOD 版本：1.4.2
-- MOD 檔案名稱：ovenproof_scoreboard_plugin_v1.4.2.zip-241-v1-4-2-1708568564
-- 手動維護最後下載日期：2025-03-09
+- MOD 檔案名稱：Ovenproof's Scoreboard Plugin Patch-514-1-0-4-1750752405
+- 手動維護最後下載日期：2025-06-24
 
 ---
 # 遊戲內操作相關MOD
