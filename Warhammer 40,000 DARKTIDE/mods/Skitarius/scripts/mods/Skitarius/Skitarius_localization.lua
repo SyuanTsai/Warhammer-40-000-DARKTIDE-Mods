@@ -1,4 +1,7 @@
- return {
+local WeaponTemplates = require("scripts/settings/equipment/weapon_templates/weapon_templates")
+local mod = get_mod("Skitarius")
+
+local localizations = {
     -- Mod Details
     mod_name = {
         en = "Skitarius",
@@ -40,7 +43,7 @@
         ["zh-tw"] = string.format("顏色: 當序列啟用時，HUD元素將顯示顏色，當序列禁用時，將顯示黑白。\n"
             .. "圖標: 根據序列活動狀態，HUD元素將更改圖標。\n"
             .. "圖標 + 顏色: 根據序列活動狀態，HUD元素將更改圖標和顏色。\n"),
-            ["zh-cn"] = string.format("颜色：当序列处于活动状态时，HUD元素将着色，当序列处于非活动状态时将为黑白.\n".."图标：HUD元素将根据序列活动状态更改图标.\n".."颜色+图标：HUD元素将根据序列活动状态更改图标和颜色.\n"),
+        ["zh-cn"] = string.format("颜色：当序列处于活动状态时，HUD元素将着色，当序列处于非活动状态时将为黑白.\n".."图标：HUD元素将根据序列活动状态更改图标.\n".."颜色+图标：HUD元素将根据序列活动状态更改图标和颜色.\n"),
     },
     hud_element_type_color = {
         en = "Color",
@@ -207,7 +210,7 @@
     },
     halt = {
         en = "Halt Sequence",
-        ["zh-tw"] = "停止序列",        
+        ["zh-tw"] = "停止序列",
     },
     melee_weapon_selection = {
         en = "Weapon Selection",
@@ -222,6 +225,7 @@
     heavy_buff_tooltip = {
         en = "When selected, Heavy attacks will be charged until this buff reaches the specified number of stacks in the Heavy Buff Stacks setting.",
         ["zh-cn"] = "启动神圣充能协议后，战术重击将维持相位蓄能状态，直至机魂增幅矩阵达到预设充能阶位（参见『重击增幅协议阶位配置』）。",
+        ["zh-tw"] = "當選擇時，重擊將蓄力，直到此增益達到「重擊強化層數」設定中指定的層數。",
     },
     thrust = {
         en = "Thrust",
@@ -251,14 +255,17 @@
     always_special = {
         en = "Always Activate Special Actions",
         ["zh-cn"] = "始终激活武器特殊技能",
+        ["zh-tw"] = "始終啟用特殊動作",
     },
     always_special_tooltip = {
         en = "When enabled, the mod will always execute Special actions, regardless of weapon state.",
         ["zh-cn"] = "启用后，无论武器状态如何，mod都将始终执行特殊动作",
+        ["zh-tw"] = "啟用後，模組將始終執行特殊動作，無論武器狀態如何。",
     },
     heavy_buff_special_tooltip = {
         en = "When enabled, the Heavy Buff Modifier setting will only take effect while the current weapon's Special Action is active.",
         ["zh-cn"] = "启用后，「蓄力buff修正器」设置将仅在当前武器的特殊动作激活期间生效",
+        ["zh-tw"] = "啟用後，「重擊強化修飾器」設定將僅在當前武器的特殊動作啟用期間生效。",
     },
     global_melee = {
         en = "GLOBAL",
@@ -432,6 +439,7 @@
     always_charge_threshold_tooltip = {
         en = string.format("When enabled, this threshold will be used to determine when to auto-release charged attacks. \nThis will be overridden by the Weapon Charge Threshold setting if that setting is lower."),
         ["zh-tw"] = string.format("啟用後，將使用此閾值來確定何時自動釋放蓄力攻擊。\n如果武器蓄力閾值設定較低，則將覆蓋此設定。"),
+        
     },
     ranged_weapon_selection = {
         en = "Weapon Selection",
@@ -522,529 +530,36 @@
         ["zh-tw"] = "自動特殊攻擊",
         ["zh-cn"] = "自动特殊攻击",
     },
-    -- WEAPONS
-    -- MELEE
-    ogryn_combatblade_p1_m1 = {
-        en = "Krourk Mk VI Cleaver",
-        ["zh-tw"] = "VI(六)型砍刀(克魯克)",
-        ["zh-cn"] = "克鲁克砍刀MK.6",
-    },
-    ogryn_combatblade_p1_m2 = {
-        en = "Bull Butcher Mk III Cleaver",
-        ["zh-tw"] = "III(三)型砍刀(蠻牛屠夫)",
-        ["zh-cn"] = "蛮牛屠夫砍刀MK.3",
-    },
-    ogryn_combatblade_p1_m3 = {
-        en = "Krourk Mk IV Cleaver",
-        ["zh-tw"] = "IV(四)型砍刀(克魯克)",
-        ["zh-cn"] = "克鲁克砍刀MK.4",
-    },
-    ogryn_gauntlet_p1_m1 = {
-        en = "Blastoom Mk III Grenadier Gauntlet",
-        ["zh-tw"] = "III(三)型擲彈兵臂鎧(布拉斯托姆)",
-        ["zh-cn"] = "布拉斯图姆掷弹兵臂铠MK.3",
-    },
-    ogryn_club_p1_m1 = {
-        en = "Brute-Brainer Mk III Latrine Shovel",
-        ["zh-tw"] = "III(三)型廁所鏟(兇殘)",
-        ["zh-cn"] = "蛮脑子公厕铲MK.3",
-    },
-    ogryn_club_p1_m2 = {
-        en = "Brute-Brainer Mk XIX Latrine Shovel",
-        ["zh-tw"] = "XIX(十九)型廁所鏟(兇殘)",
-        ["zh-cn"] = "蛮脑子公厕铲MK.19",
-    },
-    ogryn_club_p1_m3 = {
-        en = "Brute-Brainer Mk V Latrine Shovel",
-        ["zh-tw"] = "V(五)型廁所鏟(兇殘)",
-        ["zh-cn"] = "蛮脑子公厕铲MK.5",
-    },
-    ogryn_club_p2_m1 = {
-        en = "Brunt Special Mk I Bully Club",
-        ["zh-tw"] = "I(一)型惡霸棍棒(布倫特專用)",
-        ["zh-cn"] = "布伦特精品恶霸棍棒MK.1",
-    },
-    ogryn_club_p2_m2 = {
-        en = "Brunt's Pride Mk II Bully Club",
-        ["zh-tw"] = "II(二)型惡霸棍棒(布倫特得意之作)",
-        ["zh-cn"] = "布伦特之傲恶霸棍棒MK.2",
-    },
-    ogryn_club_p2_m3 = {
-        en = "Brunt's Basher Mk IIIb Bully Club",
-        ["zh-tw"] = "IIIb(3B)型惡霸棍棒(布倫特猛擊)",
-        ["zh-cn"] = "布伦特的痛击者恶霸棍棒MK.3B",
-    },
-    ogryn_pickaxe_2h_p1_m1 = {
-        en = "Branx Mk Ia Pickaxe",
-        ["zh-tw"] = "Ia(1A)型戴維爾戰鎬(布蘭克斯)",
-        ["zh-cn"] = "布兰克斯鹤嘴锄MK.1A",
-    },
-    ogryn_pickaxe_2h_p1_m2 = {
-        en = "Borovian Mk III Pickaxe",
-        ["zh-tw"] = "III(三)型戴維爾戰鎬(博羅維安)",
-        ["zh-cn"] = "博罗维亚鹤嘴锄MK.3",
-    },
-    ogryn_pickaxe_2h_p1_m3 = {
-        en = "Karsolas Mk II Pickaxe",
-        ["zh-tw"] = "II(二)型戴維爾戰鎬(卡索拉斯)",
-        ["zh-cn"] = "卡拉索斯鹤嘴锄MK.2",
-    },
-    ogryn_powermaul_p1_m1 = {
-        en = "Achlys Mk I Power Maul",
-        ["zh-tw"] = "I(一)型動力鎚(阿克利斯)",
-        ["zh-cn"] = "阿喀琉斯动力锤MK.1",
-    },
-    --[[ THESE WEAPONS AREN'T ACCESSIBLE IN-GAME YET
-    ogryn_powermaul_p1_m2 = {
-        en = "Ogrys Mk IIc Power Maul",
-    },
-    ogryn_powermaul_p1_m3 = {
-        en = "??? Mk ??? Power Maul",
-    },
-    --]]
-    ogryn_powermaul_slabshield_p1_m1 = {
-        en = "Orox Mk II & Mk III Battle Maul & Slab Shield",
-        ["zh-tw"] = "Orox 第II(二)型 與 第III(三)型作戰大鎚與板盾",
-        ["zh-cn"] = "奥罗克斯作战大锤与板砖大盾MK.2&MK.3",
-    },
-    forcesword_p1_m1 = {
-        en = "Obscurus Mk II Blaze Force Sword",
-        ["zh-tw"] = "II(二)型烈焰力場劍(朦朧)",
-        ["zh-cn"] = "朦胧力场剑MK.2",
-    },
-    forcesword_p1_m2 = {
-        en = "Deimos Mk IV Blaze Force Sword",
-        ["zh-tw"] = "IV(四)型烈焰力場劍(戴莫斯)",
-        ["zh-cn"] = "得摩斯力场剑MK.4",
-    },
-    forcesword_p1_m3 = {
-        en = "Illsi Mk V Blaze Force Sword",
-        ["zh-tw"] = "V(五)型烈焰力場劍(伊利斯)",
-        ["zh-cn"] = "伊利西斯力场剑MK.5",
-    },
-    forcesword_2h_p1_m1 = {
-        en = "Covenant Mk VI Blaze Force Greatsword",
-        ["zh-tw"] = "VI(六)型烈焰力場巨劍(誓約)",
-        ["zh-cn"] = "圣约炙焰力场巨剑MK.6",
-    },
-    forcesword_2h_p1_m2 = {
-        en = "Covenant Mk VIII Blaze Force Greatsword",
-        ["zh-tw"] = "VIII(八)型烈焰力場巨劍(誓約)",
-        ["zh-cn"] = "圣约炙焰力场巨剑MK.8",
-    },
-    -- VETERAN ONLY
-    powersword_p1_m1 = {
-        en = "Scandar Mk III Power Sword",
-        ["zh-tw"] = "III(三)型動力劍(斯干達)",
-        ["zh-cn"] = "丑闻动力剑MK.3",
-    },
-    powersword_p1_m2 = {
-        en = "Achlys Mk VI Power Sword",
-        ["zh-tw"] = "VI(六)型動力劍(阿克利斯)",
-        ["zh-cn"] = "阿喀琉斯动力剑MK.6",
-    },
-    combataxe_p3_m1 = {
-        en = "Munitorum Mk I Sapper Shovel",
-        ["zh-tw"] = "I(一)型工兵鏟(軍務部)",
-        ["zh-cn"] = "军务部工兵铲MK.1",
-    },
-    combataxe_p3_m2 = {
-        en = "Munitorum Mk III Sapper Shovel",
-        ["zh-tw"] = "III(三)型工兵鏟(軍務部)",
-        ["zh-cn"] = "军务部工兵铲MK.3",
-    },
-    combataxe_p3_m3 = {
-        en = "Munitorum Mk VII Sapper Shovel",
-        ["zh-tw"] = "VII(七)型工兵鏟(軍務部)",
-        ["zh-cn"] = "军务部工兵铲MK.7",
-    },
-    -- ZEALOT ONLY
-    chainsword_2h_p1_m1 = {
-        en = "Tigrus Mk III Heavy Eviscerator",
-        ["zh-tw"] = "III(三)型重型開膛劍(泰格魯斯)",
-        ["zh-cn"] = "泰格鲁斯重型开膛剑MK.3",
-    },
-    chainsword_2h_p1_m2 = {
-        en = "Tigrus Mk XV Heavy Eviscerator",
-        ["zh-tw"] = "XV(十五)型重型開膛劍(泰格魯斯)",
-        ["zh-cn"] = "泰格鲁斯重型开膛剑MK.15",
-    },
-    powermaul_2h_p1_m1 = {
-        en = "Indignatus Mk IVe Crusher",
-        ["zh-tw"] = "IVe(4E)型碾壓者(憤怒)",
-        ["zh-cn"] = "激愤粉碎者MK.4E",
-    },
-    powersword_2h_p1_m1 = {
-        en = "Munitorum Mk X Relic Blade",
-        ["zh-tw"] = "X(十)型上古神刃(軍務部)",
-        ["zh-cn"] = "军务部圣物剑MK.10",
-    },
-    powersword_2h_p1_m2 = {
-        en = "Munitorum Mk II Relic Blade",
-        ["zh-tw"] = "II(二)型上古神刃(軍務部)",
-        ["zh-cn"] = "军务部圣物剑MK.2",
-    },
-    thunderhammer_2h_p1_m1 = {
-        en = "Crucis Mk II Thunder Hammer",
-        ["zh-tw"] = "II(二)型雷鎚(十字星)",
-        ["zh-cn"] = "十字星雷霆锤MK.2",
-    },
-    thunderhammer_2h_p1_m2 = {
-        en = "Ironhelm Mk IV Thunder Hammer",
-        ["zh-tw"] = "IV(四)型雷鎚(鐵盔)",
-        ["zh-cn"] = "铁盔雷霆锤MK.4",
-    },
-    chainaxe_p1_m1 = {
-        en = "Orestes Mk IV Assault Chainaxe",
-        ["zh-tw"] = "IV(四)型突擊鏈斧(奧瑞斯特斯)",
-        ["zh-cn"] = "俄瑞斯蒂斯突击链锯斧MK.4",
-    },
-    chainaxe_p1_m2 = {
-        en = "Orestes Mk XII Assault Chainaxe",
-        ["zh-tw"] = "XII(十二)型突擊鏈斧(奧瑞斯特斯)",
-        ["zh-cn"] = "铁盔雷霆锤MK.4",
-    },
-    chainsword_p1_m1 = {
-        en = "Cadia Mk IV Assault Chainsword",
-        ["zh-tw"] = "IV(四)型突擊鏈鋸劍(卡迪亞)",
-        ["zh-cn"] = "卡迪亚突击链锯剑MK.4",
-        
-    },
-    chainsword_p1_m2 = {
-        en = "Cadia Mk XIIIg Assault Chainsword",
-        ["zh-tw"] = "XIIIg(13G)型突擊鏈鋸劍(卡迪亞)",
-        ["zh-cn"] = "卡迪亚突击链锯剑MK.13G",
-    },
-    combataxe_p1_m1 = {
-        en = "Rashad Mk III Combat Axe",
-        ["zh-tw"] = "III(三)型戰鬥斧(拉沙德)",
-        ["zh-cn"] = "拉沙德战斧MK.3",
-    },
-    combataxe_p1_m2 = {
-        en = "Antax Mk V Combat Axe",
-        ["zh-tw"] = "V(五)型戰鬥斧(安塔克斯)",
-        ["zh-cn"] = "安塔克斯战斧MK.5",
-    },
-    combataxe_p1_m3 = {
-        en = "Achlys Mk VIII Combat Axe",
-        ["zh-tw"] = "VIII(八)型戰鬥斧(阿克利斯)",
-        ["zh-cn"] = "阿喀琉斯战斧MK.8",
-    },
-    combataxe_p2_m1 = {
-        en = "Atrox Mk II Tactical Axe",
-        ["zh-tw"] = "II(二)型戰術斧(埃托克斯)",
-        ["zh-cn"] = "亚托克斯战术斧MK.2",
-    },
-    combataxe_p2_m2 = {
-        en = "Atrox Mk IV Tactical Axe",
-        ["zh-tw"] = "IV(四)型戰術斧(埃托克斯)",
-        ["zh-cn"] = "亚托克斯战术斧MK.4",
-    },
-    combataxe_p2_m3 = {
-        en = "Atrox Mk VII Tactical Axe",
-        ["zh-tw"] = "VII(七)型戰術斧(埃托克斯)",
-        ["zh-cn"] = "亚托克斯战术斧MK.7",
-    },
-    combatknife_p1_m1 = {
-        en = "Catachan Mk III Combat Knife",
-        ["zh-tw"] = "III(三)型戰刃(卡塔昌)",
-        ["zh-cn"] = "卡塔昌战斗利刃MK.3",
-    },
-    combatknife_p1_m2 = {
-        en = "Catachan Mk VI Combat Knife",
-        ["zh-tw"] = "VI(六)型戰刃(卡塔昌)",
-        ["zh-cn"] = "卡塔昌战斗利刃MK.6",
-    },
-    combatsword_p1_m1 = {
-        en = "Catachan Mk I 'Devil's Claw' Sword",
-        ["zh-tw"] = "I(一)型「惡魔之爪」劍(卡塔昌)",
-        ["zh-cn"] = "恶魔之爪卡塔昌剑MK.1",
-    },
-    combatsword_p1_m2 = {
-        en = "Catachan Mk IV 'Devil's Claw' Sword",
-        ["zh-tw"] = "IV(四)型「惡魔之爪」劍(卡塔昌)",
-        ["zh-cn"] = "恶魔之爪卡塔昌剑MK.4",
-    },
-    combatsword_p1_m3 = {
-        en = "Catachan Mk VII 'Devil's Claw' Sword",
-        ["zh-tw"] = "VII(七)型「惡魔之爪」劍(卡塔昌)",
-         ["zh-cn"] = "恶魔之爪卡塔昌剑MK.7",
-    },
-    combatsword_p2_m1 = {
-        en = "Turtolsky Mk VI Heavy Sword",
-        ["zh-tw"] = "VI(六)型重劍(圖妥斯基)",
-        ["zh-cn"] = "特托尔斯基重剑MK.6",
-    },
-    combatsword_p2_m2 = {
-        en = "Turtolsky Mk VII Heavy Sword",
-        ["zh-tw"] = "VII(七)型重劍(圖妥斯基)",
-        ["zh-cn"] = "特托尔斯基重剑MK.7",
-    },
-    combatsword_p2_m3 = {
-        en = "Turtolsky Mk IX Heavy Sword",
-        ["zh-tw"] = "IX(九)型重劍(圖妥斯基)",
-        ["zh-cn"] = "特托尔斯基重剑MK.9",
-    },
-    combatsword_p3_m1 = {
-        en = "Maccabian Mk II Duelling Sword",
-        ["zh-tw"] = "II(二)型決鬥劍(馬卡比安)",
-        ["zh-cn"] = "马克贝恩决斗剑MK.2",
-    },
-    combatsword_p3_m2 = {
-        en = "Maccabian Mk IV Duelling Sword",
-        ["zh-tw"] = "IV(四)型決鬥劍(馬卡比安)",
-        ["zh-cn"] = "马克贝恩决斗剑MK.4",
-    },
-    combatsword_p3_m3 = {
-        en = "Maccabian Mk V Duelling Sword",
-        ["zh-tw"] = "V(五)型決鬥劍(馬卡比安)",
-        ["zh-cn"] = "马克贝恩决斗剑MK.5",
-    },
-    powermaul_p1_m1 = {
-        en = "Agni Mk Ia Shock Maul",
-        ["zh-tw"] = "Ia(1A)型電擊錘(阿格尼)",
-        ["zh-cn"] = "阿格尼震慑锤MK.1A",
-    },
-    powermaul_p1_m2 = {
-        en = "Munitorum Mk III Shock Maul",
-        ["zh-tw"] = "III(三)型電擊錘(軍務部)",
-        ["zh-cn"] = "军务部震慑锤MK.3",
-    },
-    -- RANGED
-    stubrevolver_p1_m1 = {
-        en = "Zaron Mk IIa Quickdraw Stub Revolver",
-        ["zh-tw"] = "IIa(2A)型快拔左輪手槍(扎羅娜)",
-        ["zh-cn"] = "速发左轮枪萨罗纳Mk.2a",
-    },
-    stubrevolver_p1_m2 = {
-        en = "Agripinaa Mk XIV Quickdraw Stub Revolver",
-        ["zh-tw"] = "XIV(十四)型快拔左輪手槍(阿格里皮娜)",
-        ["zh-cn"] = "速发左轮枪阿格里皮娜Mk.14",
-    },
-    shotgun_p1_m1 = {
-        en = "Zarona Mk VI Combat Shotgun",
-        ["zh-tw"] = "VI(六)型戰鬥霰彈槍(扎羅娜)",
-        ["zh-cn"] = "战斗霰弹枪萨罗纳Mk.6",
-    },
-    shotgun_p1_m2 = {
-        en = "Agripinaa Mk VII Combat Shotgun",
-        ["zh-tw"] = "VII(七)型戰鬥霰彈槍(阿格里皮娜)",
-        ["zh-cn"] = "战斗霰弹枪阿格里皮娜Mk.7",
-    },
-    shotgun_p1_m3 = {
-        en = "Accatran Mk IX Combat Shotgun",
-        ["zh-tw"] = "IX(九)型戰鬥霰彈槍(奧克塔蘭)",
-        ["zh-cn"] = "战斗霰弹枪阿卡特兰Mk.9",
-    },
-    shotgun_p2_m1 = {
-        en = "Crucis Mk XI Double-Barrelled Shotgun",
-        ["zh-tw"] = "XI(11)型雙管霰彈槍(十字星)",
-        ["zh-cn"] = "双管猎枪十字星Mk.11",
-    },
-    plasmagun_p1_m1 = {
-        en = "M35 Magnacore Mk II Plasma Gun",
-        ["zh-tw"] = "II(二)型電漿槍(M35熔岩核心)",
-        ["zh-cn"] = "等离子枪M35麦格纳Mk.2",
-    },
-    ogryn_thumper_p1_m1 = {
-        en = "Lorenz Mk V Kickback",
-        ["zh-tw"] = "V(五)型反衝者(洛倫茲)",
-        ["zh-cn"] = "击退者洛伦兹Mk.5",
-    },
-    ogryn_thumper_p1_m2 = {
-        en = "Lorenz Mk VI Rumbler",
-        ["zh-tw"] = "VI(六)型震盪槍(洛倫茲)",
-        ["zh-cn"] = "低吼者洛伦兹Mk.6",
-    },
-    ogryn_rippergun_p1_m1 = {
-        en = "Foe-Rend Mk II Ripper Gun",
-        ["zh-tw"] = "II(二)型撕裂槍(碎敵)",
-        ["zh-cn"] = "开膛枪裂敌Mk.2",
-    },
-    ogryn_rippergun_p1_m2 = {
-        en = "Foe-Rend Mk V Ripper Gun",
-        ["zh-tw"] = "V(五)型撕裂槍(碎敵)",
-        ["zh-cn"] = "开膛枪裂敌Mk.5",
-    },
-    ogryn_rippergun_p1_m3 = {
-        en = "Foe-Rend Mk VI Ripper Gun",
-        ["zh-tw"] = "VI(六)型撕裂槍(碎敵)",
-        ["zh-cn"] = "开膛枪裂敌Mk.6",
-    },
-    ogryn_heavystubber_p1_m1 = {
-        en = "Krourk Mk V Twin-Linked Heavy Stubber",
-        ["zh-tw"] = "V(五)型雙鏈重型機槍(克魯克)",
-        ["zh-cn"] = "双联重机枪克鲁克Mk.5",
-        
-    },
-    ogryn_heavystubber_p1_m2 = {
-        en = "Gorgonum Mk IV Twin-Linked Heavy Stubber",
-        ["zh-tw"] = "IV(四)型雙鏈重型機槍(戈爾貢努姆)",
-        ["zh-cn"] = "双联重机枪格尔格诺姆Mk.4",
-    },
-    ogryn_heavystubber_p1_m3 = {
-        en = "Achlys Mk VII Twin-Linked Heavy Stubber",
-        ["zh-tw"] = "VII(七)型雙鏈重型機槍(阿克利斯)",
-        ["zh-cn"] = "双联重机枪阿喀琉斯Mk.7",
-    },
-    ogryn_heavystubber_p2_m1 = {
-        en = "Krourk Mk IIa Heavy Stubber",
-        ["zh-tw"] = "IIa(2A)型重伐木槍(克魯克)",
-        ["zh-cn"] = "型重机枪克鲁克Mk.2a",
-    },
-    ogryn_heavystubber_p2_m2 = {
-        en = "Gorgonum Mk IIIa Heavy Stubber",
-        ["zh-tw"] = "IIIa(3A)型重伐木槍(戈爾貢努姆)",
-        ["zh-cn"] = "重机枪格尔格诺姆Mk.3a",
-    },
-    ogryn_heavystubber_p2_m3 = {
-        en = "Achlys Mk II Heavy Stubber",
-        ["zh-tw"] = "II(二)型重伐木槍(阿克利斯)",
-        ["zh-cn"] = "重机枪阿喀琉斯Mk.2",
-    },
-    laspistol_p1_m1 = {
-        en = "Accatran MG Mk II Heavy Laspistol",
-        ["zh-tw"] = "II(二)型重型雷射手槍(卡特雷爾)",
-        ["zh-cn"] = "重型激光手枪阿卡特兰MG·Mk.2",
-    },
-    laspistol_p1_m3 = {
-        en = "Kantrael Mk X Heavy Laspistol",
-        ["zh-tw"] = "X(十)型重型雷射手槍(奧克塔蘭MG)",
-        ["zh-cn"] = "重型激光手枪卡特雷尔Mk.10",
-    },
-    lasgun_p1_m1 = {
-        en = "Kantrael Mk VII Infantry Lasgun",
-        ["zh-tw"] = "VII(七)型步兵雷射槍(卡特雷爾)",
-        ["zh-cn"] = "步兵激光枪卡特雷尔Mk.7",
-    },
-    lasgun_p1_m2 = {
-        en = "Kantrael Mk IIb Infantry Lasgun",
-        ["zh-tw"] = "IIb(2B)型步兵雷射槍(卡特雷爾)",
-        ["zh-cn"] = "步兵激光枪卡特雷尔Mk.2b",
-    },
-    lasgun_p1_m3 = {
-        en = "Kantrael Mk IX Infantry Lasgun",
-        ["zh-tw"] = "IX(九)型步兵雷射槍(卡特雷爾)",
-        ["zh-cn"] = "步兵激光枪卡特雷尔Mk.9",
-    },
-    lasgun_p2_m1 = {
-        en = "Lucius Mk IIIa Helbore Lasgun",
-        ["zh-tw"] = "IIIa(3A)型冥潮雷射槍(盧修斯)",
-        ["zh-cn"] = "地狱钻激光枪卢修斯3A",
-    },
-    lasgun_p2_m2 = {
-        en = "Lucius Mk V Helbore Lasgun",
-        ["zh-tw"] = "V(五)型冥潮雷射槍(盧修斯)",
-        ["zh-cn"] = "地狱钻激光枪卢修斯Mk.5",
-    },
-    lasgun_p2_m3 = {
-        en = "Lucius Mk IV Helbore Lasgun",
-        ["zh-tw"] = "IV(四)型冥潮雷射槍(盧修斯)",
-        ["zh-cn"] = "地狱钻激光枪卢修斯Mk.4",
-    },
-    lasgun_p3_m1 = {
-        en = "Accatran Mk VIc Recon Lasgun",
-        ["zh-tw"] = "VIc(6C)型偵察雷射槍(奧克塔蘭)",
-        ["zh-cn"] = "侦察激光枪阿卡特兰Mk.6C",
-    },
-    lasgun_p3_m2 = {
-        en = "Accatran Mk XII Recon Lasgun",
-        ["zh-tw"] = "XII(十二)型偵察雷射槍(奧克塔蘭)",
-        ["zh-cn"] = "侦察激光枪阿卡特兰Mk.12",
-    },
-    lasgun_p3_m3 = {
-        en = "Accatran Mk XIV Recon Lasgun",
-        ["zh-tw"] = "XIV(十四)型偵察雷射槍(奧克塔蘭)",
-        ["zh-cn"] = "侦察激光枪阿卡特兰Mk.14",
-    },
-    forcestaff_p1_m1 = {
-        en = "Equinox Mk III Voidblast Force Staff",
-        ["zh-tw"] = "III(三)型虛空爆破力場法杖(陰陽)",
-        ["zh-cn"] = "虚空爆破力场杖阴阳Mk.3",
-    },
-    forcestaff_p2_m1 = {
-        en = "Rifthaven Mk II Inferno Force Staff",
-        ["zh-tw"] = "II(二)型烈焰力場法杖(裂隙避難所)",
-        ["zh-cn"] = "地狱力场杖裂隙港Mk.2",
-    },
-    forcestaff_p3_m1 = {
-        en = "Nomanus Mk VI Electrokinetic Force Staff",
-        ["zh-tw"] = "VI(六)型電流力場法杖(諾瑪努斯)",
-        ["zh-cn"] = "电动力场杖诺曼纽斯Mk.6",
-    },
-    forcestaff_p4_m1 = {
-        en = "Equinox Mk IV Voidstrike Force Staff",
-        ["zh-tw"] = "IV(四)型虛空打擊力場法杖(陰陽)",
-        ["zh-cn"] = "虚空打击力场杖阴阳Mk.4",
-    },
-    flamer_p1_m1 = {
-        en = "Artemia Mk III Purgation Flamer",
-        ["zh-tw"] = "III(三)型淨化火焰噴射器(奧特米亞)",
-        ["zh-cn"] = "涤罪火焰喷射器阿提米亚Mk.3",
-    },
-    bolter_p1_m1 = {
-        en = "Locke Mk IIb Spearhead Boltgun",
-        ["zh-tw"] = "IIb(2B)型矛頭爆矢槍(洛克)",
-        ["zh-cn"] = "先锋爆矢枪洛克Mk.2b",
-    },
-    boltpistol_p1_m1 = {
-        en = "Godwyn-Branx Mk IV Bolt Pistol",
-        ["zh-tw"] = "IV(四)型爆彈手槍(戈德溫-布蘭克斯)",
-        ["zh-cn"] = "爆矢手枪古德温-布兰克斯Mk.4",
-    },
-    autopistol_p1_m1 = {
-        en = "Ius Mk IV Shredder Autopistol",
-        ["zh-tw"] = "IV(四)型撕裂者自動手槍(尤斯)",
-        ["zh-cn"] = "粉碎者自动手枪尤斯Mk.4",
-    },
-    autogun_p1_m1 = {
-        en = "Agripinaa Mk I Infantry Autogun",
-        ["zh-tw"] = "I(一)型步兵自動槍(阿格里皮娜)",
-        ["zh-cn"] = "步兵自动枪阿格里皮娜Mk.1",
-    },
-    autogun_p1_m2 = {
-        en = "Vraks Mk V Infantry Autogun",
-        ["zh-tw"] = "V(五)型步兵自動槍(弗拉克斯)",
-        ["zh-cn"] = "步兵自动枪弗拉克斯Mk.5",
-    },
-    autogun_p1_m3 = {
-        en = "Columnus Mk VIII Infantry Autogun",
-        ["zh-tw"] = "VIII(八)型步兵自動槍(哥倫努)",
-        ["zh-cn"] = "步兵自动枪科伦努斯Mk.8",
-    },
-    autogun_p2_m1 = {
-        en = "Vraks Mk II Braced Autogun",
-        ["zh-tw"] = "II(二)型槍托自動槍(弗拉克斯)",
-        ["zh-cn"] = "步兵自动枪弗拉克斯Mk.2",
-    },
-    autogun_p2_m2 = {
-        en = "Graia Mk IV Braced Autogun",
-        ["zh-tw"] = "IV(四)型槍托自動槍(格拉亞)",
-        ["zh-cn"] = "支架式自动枪格拉亚Mk.4",
-    },
-    autogun_p2_m3 = {
-        en = "Agripinaa Mk VIII Braced Autogun",
-        ["zh-tw"] = "VIII(八)型槍托自動槍(阿格里皮娜)",
-        ["zh-cn"] = "支架式自动枪阿格里皮娜Mk.8",
-    },
-    autogun_p3_m1 = {
-        en = "Columnus Mk III Vigilant Autogun",
-        ["zh-tw"] = "III(三)型機動自動槍(哥倫努)",
-        ["zh-cn"] = "警觉自动枪科伦努斯Mk.3",
-    },
-    autogun_p3_m2 = {
-        en = "Graia Mk VII Vigilant Autogun",
-        ["zh-tw"] = "VII(七)型機動自動槍(格拉亞)",
-        ["zh-cn"] = "警觉自动枪格拉亚Mk.7",
-    },
-    autogun_p3_m3 = {
-        en = "Agripinaa Mk IX Vigilant Autogun",
-        ["zh-tw"] = "IX(九)型機動自動槍(阿格里皮娜)",
-        ["zh-cn"] = "警觉自动枪阿格里皮娜Mk.9",
-    },
     psyker_throwing_knives = {
         en = "Assail",
         ["zh-tw"] = "突襲",
         ["zh-cn"] = "强袭",
     },
-} 
+}
+
+--------------------------------------------------------------------------
+-- PLEASE DO NOT EDIT BEYOND THIS POINT IF YOU ARE ADDING LOCALIZATIONS --
+--------------------------------------------------------------------------
+
+local family_prefix = "loc_weapon_family_"
+local pattern_prefix = "loc_weapon_pattern_"
+local mark_prefix = "loc_weapon_mark_"
+for weapon, _ in pairs(WeaponTemplates) do
+    local localized_family = Localize(family_prefix .. weapon)
+    local localized_pattern = Localize(pattern_prefix .. weapon)
+    if not localized_pattern or string.find(localized_pattern, "unlocalized") then
+        -- Some weapons use the WRONG WEAPON NAME for localization because whoever changed how data is stored in this update is a moron
+        local alt_pattern = weapon:gsub("_m%d+", "_m1") -- fallback to first mark
+        localized_pattern = Localize(pattern_prefix .. alt_pattern)
+    end
+    local localized_mark = Localize(mark_prefix .. weapon)
+    local localized = localized_family and localized_pattern and localized_mark and string.format("%s %s %s", localized_pattern, localized_mark, localized_family)
+    if localized and not string.find(localized, "unlocalized") then
+        localizations[weapon] = {
+            en = localized
+        }
+    end
+end
+
+
+return localizations
