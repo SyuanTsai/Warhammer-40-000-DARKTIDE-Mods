@@ -233,6 +233,8 @@ local SPECIAL_ATTACK = {
     autogun_p3_m1 = true,
     autogun_p3_m2 = true,
     autogun_p3_m3 = true,
+    -- Shotpistol
+    shotpistol_shield_p1_m1 = true
 }
 
 -- Ranged weapons which can be charged
@@ -256,6 +258,9 @@ local ACTIVE_SPECIAL_RANGED = {
     shotgun_p1_m1 = true,
     shotgun_p1_m2 = true,
     shotgun_p1_m3 = true,
+    -- Executor Shotguns
+    shotgun_p4_m1 = true,
+    shotgun_p4_m2 = true,
     -- Infantry Autoguns
     autogun_p1_m1 = true,
     autogun_p1_m2 = true,
@@ -1231,7 +1236,6 @@ mod.update_engram = function(data)
                 end
             end
         end
-        
         settings = {
             CYCLE_INDEX              = cycle_index,
             HEAVY_BUFF               = intermediary.heavy_buff or "none",
@@ -1415,7 +1419,6 @@ mod.omnissiah = function(queried_input, user_value)
     mod.maybe_force_interrupt()
     -- STAGE 1, 2, & 3 : GET_ACTION
     local current_action = mod.get_action()
-
     local desired_action = ENGRAM.COMMANDS[ENGRAM.INDEX]
     -- Halt automatic firing inputs without altering engram or actions if pausing for RoF etc.
     if mod.pause() then return DO_NOT_PAUSE[queried_input] and user_value or false end
@@ -1665,6 +1668,7 @@ end
 -- ////////////////////////////////////////////////////////////////////////////////--
 
 mod.maybe_convert_desire = function(current_action, desired_action)
+    if not desired_action then return desired_action end
     if desired_action == "shoot" or desired_action == "charge"  then
         if ALT_WEAPONS[MAGOS.WEAPON_NAME] then
             desired_action = desired_action .. "_alt"
@@ -1681,7 +1685,7 @@ mod.maybe_convert_desire = function(current_action, desired_action)
         end
     end
     -- Do not allow engram to continue while charging until max charge is reached
-    if string.find(current_action, "charge") and string.find(desired_action, "shoot") then
+    if current_action and type(current_action) == "string" and string.find(current_action, "charge") and (not desired_action or string.find(desired_action, "shoot")) then
         -- Ignore this logic for other standard fire modes
         if ENGRAM.SETTINGS.MODE ~= "charged" then
             return desired_action
@@ -2065,8 +2069,30 @@ mod.in_cooldown = function()
             local wielded_weapon = weapon and weapon:_wielded_weapon(inventory, weapon._weapons)
             local inventory_slot_component = wielded_weapon and wielded_weapon.inventory_slot_component
             local overheat_state = inventory_slot_component and inventory_slot_component.overheat_state
+            local special_charges = inventory_slot_component and inventory_slot_component.num_special_charges
+            -- Relic Blades
             if overheat_state and overheat_state ~= "idle" then
                 return true
+            end
+            -- Riot Shields
+            if special_charges then
+                local weapon_template = wielded_weapon and wielded_weapon.weapon_template
+                local tweaker = weapon_template and weapon_template.weapon_special_tweak_data
+                
+                if tweaker then
+                    local thresholds = tweaker.thresholds
+                    if thresholds then
+                        local above_threshold = false
+                        for threshold_index = #thresholds, 2, -1 do
+                            local threshold = thresholds[threshold_index].threshold
+                            if threshold <= special_charges then
+                                above_threshold = true
+                                break
+                            end
+                        end
+                        return not above_threshold
+                    end
+                end
             end
         end
     end

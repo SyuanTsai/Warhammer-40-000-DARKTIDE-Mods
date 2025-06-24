@@ -272,6 +272,11 @@ return {
 							-- Shock Maul
 							{text = "powermaul_p1_m1", value = "powermaul_p1_m1"},
 							{text = "powermaul_p1_m2", value = "powermaul_p1_m2"},
+							-- Suppression shields
+							{text = "powermaul_shield_p1_m1", value = "powermaul_shield_p1_m1"},
+							{text = "powermaul_shield_p1_m2", value = "powermaul_shield_p1_m2"},
+							-- Arbites Maul
+							{text = "powermaul_p2_m1", value = "powermaul_p2_m1"},
 							-- Crusher
 							{text = "powermaul_2h_p1_m1", value = "powermaul_2h_p1_m1"},
 							-- Power Sword
@@ -472,6 +477,11 @@ return {
 							{text = "shotgun_p1_m3", value = "shotgun_p1_m3"},
 							-- Double Barrel Shotgun
 							{text = "shotgun_p2_m1", value = "shotgun_p2_m1"},
+							-- Executor Shotgun
+							{text = "shotgun_p4_m1", value = "shotgun_p4_m1"},
+							{text = "shotgun_p4_m2", value = "shotgun_p4_m2"},
+							-- Shotpistol
+							{text = "shotpistol_shield_p1_m1", value = "shotpistol_shield_p1_m1"},
 							-- Plasma Gun
 							{text = "plasmagun_p1_m1", value = "plasmagun_p1_m1"},
 							-- Ogryn Thumper
@@ -535,6 +545,7 @@ return {
 							{text = "autogun_p3_m1", value = "autogun_p3_m1"},
 							{text = "autogun_p3_m2", value = "autogun_p3_m2"},
 							{text = "autogun_p3_m3", value = "autogun_p3_m3"},
+							
 							-- Assail
 							{text = "psyker_throwing_knives", value = "psyker_throwing_knives"},
 						},
