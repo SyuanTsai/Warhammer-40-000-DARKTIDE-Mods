@@ -50,6 +50,10 @@ return {
 		["zh-tw"] = "對靈能者法杖隱藏彈藥圖示",
 	},
 	-- Classes
+	widget_arbites = {
+        en = "Arbites",
+		["zh-tw"] = "法務官",
+	},
 	widget_ogryn = {
 		en = "Ogryn",
 		["zh-tw"] = "歐格林",
@@ -67,6 +71,16 @@ return {
 		["zh-tw"] = "狂信徒",
 	},
 	-- Grenades
+	-- Arbites
+	adamant_whistle = {
+		en = "Remote detonation",
+	},
+	adamant_shock_mine = {
+		en = "Shock mine",
+	},
+	adamant_grenade_improved = {
+		en = "Arbites grenade",
+	},
 	-- Ogryn
 	ogryn_grenade_friend_rock = {
 		en = "Rock",
