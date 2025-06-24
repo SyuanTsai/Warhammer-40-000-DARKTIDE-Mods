@@ -1,65 +1,52 @@
 return {
 	mod_name = {
-		en = "BetterMelk",
-		ru = "Лучший Мелк",
+		en = "Character Screen Contracts",
 		["zh-cn"] = "梅尔克协议优化",
-		["zh-tw"] = "梅爾克協議改善",
+		ru = "Индикатор контрактов",
 	},
 	mod_description = {
-		en = "Automatically accept new contracts and collect the weekly completion bonus.",
-		["zh-cn"] = "自动接受新协议并收集每周协议额外奖励。",
-        ru = "Автоматически принимайте новые контракты и получайте еженедельный бонус за их выполнение.",
-		["zh-tw"] = "自動接受新協議並收集每週完成獎勵。",
+		en = "Displays contract progress on character select.",
+		["zh-cn"] = "在角色选择界面显示每周协议进度。",
+		ru = "Character Screen Contracts - Показывает индикатор контрактов на экране выбора персонажей.",
 	},
-	notify_new = {
-		en = "New Contracts Message",
-		["zh-cn"] = "新协议消息",
-        ru = "Сообщение о новых контрактах",
-		["zh-tw"] = "新協議消息",
+	corner = {
+		en = "Corner",
+		["zh-cn"] = "对齐角",
+		ru = "Угол",
 	},
-	msg_new = {
-		en = "You have new contracts with Sire Melk.",
-		["zh-cn"] = "你有梅尔克大人的新协议。",
-        ru = "Вы получили новые контракты от сира Мелка.",
-		["zh-tw"] = "你有梅爾克大人的新協議。",
+	corner_tl = {
+		en = "Top-Left",
+		["zh-cn"] = "左上角",
+		ru = "Сверху слева",
 	},
-	notify_done = {
-		en = "All Finished Message",
-		["zh-cn"] = "全部完成消息",
-		ru = "Сообщение о готовности",
+	corner_tr = {
+		en = "Top-Right",
+		["zh-cn"] = "右上角",
+		ru = "Сверху справа",
 	},
-	msg_done = {
-		en = "Congratulations! You have finished your weekly contracts.",
-		["zh-cn"] = "恭喜！你完成了每周协议。",
-        ru = "Поздравляем! Вы закончили свои еженедельные контракты.",
-		["zh-tw"] = "恭喜！你完成了每週協議。",
+	corner_bl = {
+		en = "Bottom-Left",
+		["zh-cn"] = "左下角",
+		ru = "Снизу слева",
 	},
-	notif_mode = {
-		en = "Notification Mode",
-		["zh-cn"] = "通知模式",
-        ru = "Режим уведомлений",
-		["zh-tw"] = "通知模式",
+	corner_br = {
+		en = "Bottom-Right",
+		["zh-cn"] = "右下角",
+		ru = "Снизу справа",
 	},
-	channel_chat = {
-		en = "Chat",
-		["zh-cn"] = "聊天",
-        ru = "Чат",
-		["zh-tw"] = "聊天",
+	offset_x = {
+		en = "Horizontal Offset",
+		["zh-cn"] = "水平偏移量",
+		ru = "Горизонтальное смещение",
 	},
-	channel_notifs = {
-		en = "Notification",
-		["zh-cn"] = "通知",
-		ru = "Уведомление",
-		["zh-tw"] = "通知",
-	},
-	channel_both = {
-		en = "Chat + Notification",
-		["zh-cn"] = "聊天和通知",
-        ru = "Чат + Уведомление",
-		["zh-tw"] = "聊天和通知",
+	offset_y = {
+		en = "Vertical Offset",
+		["zh-cn"] = "垂直偏移量",
+		ru = "Вертикальное смещение",
 	},
 	msg_error = {
-        en = "Unable to fetch weekly contracts",
-		["zh-cn"] = "无法获取每周协议",
+		en = "Unable to fetch weekly contracts",
+		["zh-cn"] = "无法拉取每周协议",
+		ru = "Не удалось получить еженедельные контракты",
 	},
 }
