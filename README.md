@@ -414,6 +414,14 @@
 - MOD 版本：1.4.1
 - MOD 檔案名稱：better_hud_info_view-511-1-4-1-1745974107
 - 手動維護最後下載日期：2025-05-02
+
+### [Dog Whistle](https://www.nexusmods.com/warhammer40kdarktide/mods/539)
+    狗哨 - 自動抓特感
+- MOD 網站最後更新日期：Last updated 23 June 2025, 11:08PM
+- MOD 版本：1.0.1
+- MOD 檔案名稱：Dog Whistle 1.0.1-539-1-0-1-1750691286
+- 手動維護最後下載日期：2025-06-24
+
 ---
 # 遊戲內操作相關MOD
 
