@@ -87,17 +87,23 @@ mod.melee_attack_types ={
 }
 mod.melee_damage_profiles ={
 	"shockmaul_stun_interval_damage",
+	"powermaul_p2_stun_interval",
+	"powermaul_p2_stun_interval_basic",
 }
 mod.ranged_attack_types ={
 	"ranged",
 	"explosion",
 	"shout",
+	"companion_dog",
 }
 mod.ranged_damage_profiles ={
 	"shock_grenade_stun_interval",
 	"psyker_protectorate_spread_chain_lightning_interval",
 	"default_chain_lighting_interval",
 	"psyker_smite_kill",
+	"adamant_companion_human_pounce",
+	"adamant_companion_ogryn_pounce",
+	"adamant_companion_monster_pounce",
 }
 mod.bleeding_damage_profiles ={
 	"bleeding",
@@ -495,9 +501,9 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 						--self._environmental_rate[account_id].cr = self._environmental_rate[account_id].crits / self._environmental_rate[account_id].hits * 100
 						
 						--mod:replace_row_value("environmental_cr", account_id, self._environmental_rate[account_id].cr)
-					else
-						--Print damage profile and attack type of out of scope attacks
-						mod:echo("Player: "..player:name()..", Damage profile: " .. damage_profile.name .. ", attack type: " .. tostring(attack_type)..", damage: "..actual_damage)
+					-- else
+						-- Print damage profile and attack type of out of scope attacks
+						-- mod:echo("Player: "..player:name()..", Damage profile: " .. damage_profile.name .. ", attack type: " .. tostring(attack_type)..", damage: "..actual_damage)
 					end	
 
 					if table.array_contains(mod.melee_lessers, breed_or_nil.name) then
