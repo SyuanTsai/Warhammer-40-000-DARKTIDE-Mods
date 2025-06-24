@@ -69,6 +69,7 @@ ImprovedHavocTags
 servo_friend
 better_hud_info_view
 clear_smoke
+DogWhistle
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 Archivum Messelina
