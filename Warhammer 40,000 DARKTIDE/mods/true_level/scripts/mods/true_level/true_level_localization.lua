@@ -37,15 +37,15 @@ local loc = {
     mod_name = {
         en = "True Level",
         ["zh-cn"] = "真实等级",
-        ru = "Настоящий уровень",
         ["zh-tw"] = "真實等級",
+        ru = "Настоящий уровень",
     },
     mod_description = {
         en = "Reads recorded exp earned after you hit the max level, and displays the actual level you can reach.",
         ja = "最大レベル到達後に獲得し記録された経験値を読み取り、実際に到達できるであろうレベルを表示します。",
         ["zh-cn"] = "读取玩家达到最高等级后获取的经验值，显示玩家的真实等级。",
-        ru = "True Level - Считывает опыт, полученный после достижения максимального уровня, и отображает ваш фактический уровень, которого вы достигли.",
         ["zh-tw"] = "讀取達到最高等級後獲取的經驗值，並顯示可達到的真實等級。",
+        ru = "True Level - Считывает опыт, полученный после достижения максимального уровня, и отображает ваш фактический уровень, которого вы достигли.",
     },
     enable_level_up_notif = {
         en = "Enable Level Up Notification",
