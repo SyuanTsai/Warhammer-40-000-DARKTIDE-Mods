@@ -7,27 +7,24 @@ return {
 	options = {
 		widgets = {
 			{
-				setting_id = "corner",
-				type = "dropdown",
-				default_value = "tr",
-				options = {
-					{ text = "corner_tl", value = "tl" },
-					{ text = "corner_tr", value = "tr" },
-					{ text = "corner_bl", value = "bl" },
-					{ text = "corner_br", value = "br" },
+				setting_id    = "notify_new",
+				type          = "checkbox",
+				default_value = false,
+			},
+			{
+				setting_id    = "notify_done",
+				type          = "checkbox",
+				default_value = true,
+			},
+			{
+				setting_id    = "notif_mode",
+				type          = "dropdown",
+				default_value = 1,
+				options       = {
+					{ text = "channel_both",   value = 0 },
+					{ text = "channel_chat",   value = 1 },
+					{ text = "channel_notifs", value = 2 },
 				},
-			},
-			{
-				setting_id    = "offset_x",
-				type          = "numeric",
-				default_value = 0,
-				range         = { -20, 500 },
-			},
-			{
-				setting_id    = "offset_y",
-				type          = "numeric",
-				default_value = 0,
-				range         = { -10, 80 },
 			},
 		}
 	}
