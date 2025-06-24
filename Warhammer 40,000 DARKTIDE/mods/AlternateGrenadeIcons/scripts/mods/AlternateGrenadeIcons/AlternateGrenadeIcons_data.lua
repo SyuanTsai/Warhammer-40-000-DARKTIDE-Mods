@@ -4,6 +4,13 @@ local mod = get_mod("AlternateGrenadeIcons")
 -- Listing grenades
 
 local grenades = {
+	---[[
+	arbites = {
+		"adamant_whistle",
+		"adamant_shock_mine",
+		"adamant_grenade_improved",
+	},
+	--]]
 	ogryn = {
 		"ogryn_grenade_friend_rock",
 		"ogryn_grenade_box_cluster",
@@ -53,7 +60,7 @@ end
 local default_grenade_setting = function(grenade)
 	if grenade == "psyker_smite" or grenade == "psyker_chain_lightning" then
 		return "hidden"
-	elseif grenade == "ogryn_grenade_friend_rock" or grenade == "psyker_throwing_knives" or grenade == "zealot_throwing_knives" then
+	elseif grenade == "ogryn_grenade_friend_rock" or grenade == "psyker_throwing_knives" or grenade == "zealot_throwing_knives" or grenade == "adamant_whistle" then
 		return "lightning_bolt"
 	else
 		return "default"

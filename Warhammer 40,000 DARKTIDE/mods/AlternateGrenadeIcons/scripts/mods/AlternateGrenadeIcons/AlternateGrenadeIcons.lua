@@ -46,14 +46,17 @@ mod.on_all_mods_loaded = function()
 	for _, v in ipairs(mod.setting_names) do
 		settings_cache[v] = mod:get(v)
 	end
-    -- Copy (upgraded) ogryn box setting for the unupgraded version
+    -- Copy (upgraded) ogryn box & improved arbites grenade setting for the unupgraded versions
     settings_cache.ogryn_grenade_box = mod:get("ogryn_grenade_box_cluster")
+    settings_cache.adamant_grenade = mod:get("adamant_grenade_improved")
 end
 
 mod.on_setting_changed = function(id)
 	settings_cache[id] = mod:get(id)
     if id == "ogryn_grenade_box_cluster" then
         settings_cache.ogryn_grenade_box = mod:get(id)
+    elseif id == "adamant_grenade_improved" then
+        settings_cache.adamant_grenade = mod:get(id)
     end
 end
 
@@ -75,6 +78,8 @@ mod:hook(CLASS.HudElementTeamPlayerPanel, "_get_grenade_ability_status", functio
     local change = equipped_abilities and grenade_change(equipped_abilities.grenade_ability)
     local icon = icon_paths[change]
     if not equipped_abilities then
+        return status, visible, base_icon
+    elseif equipped_abilities.grenade_ability and not grenade_change(equipped_abilities.grenade_ability) then
         return status, visible, base_icon
     elseif grenade_change(equipped_abilities.grenade_ability) == "hidden" then
         return status, false, base_icon
@@ -102,3 +107,20 @@ mod:hook(CLASS.HudElementTeamPlayerPanel,"_get_weapon_ammo_status", function (fu
     end
     return ammo_status, ammo_visible, ammo_hud_icon
 end)
+
+-------------------
+-- Debugging
+
+--[[
+mod.update = function(dt)
+    local player = Managers.player:local_player(1)
+    local player_unit = player and player.player_unit
+    local ability_extension = player_unit and ScriptUnit.extension(player_unit, "ability_system")
+    local equipped_abilities = ability_extension and ability_extension:equipped_abilities()
+    local grenades = equipped_abilities.grenade_ability
+    local grenades_name = grenades.name
+    if grenades_name then
+        mod:echo(get_cached(grenades_name))
+    end
+end
+--]]
