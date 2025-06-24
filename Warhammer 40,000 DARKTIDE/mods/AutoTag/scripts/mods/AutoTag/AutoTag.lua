@@ -58,6 +58,7 @@ end)
 
 
 mod:hook_safe("SmartTag", "validate_target_unit", function(target_unit)
+    if not Unit.is_valid(target_unit) then return end
     -- if taggedTarget then 
     --     if not HEALTH_ALIVE[taggedTarget] then 
     --         if mod:get("refresh") then cooldown = 0 end

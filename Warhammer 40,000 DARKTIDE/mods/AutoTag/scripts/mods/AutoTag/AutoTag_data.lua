@@ -11,7 +11,7 @@ return {
 			setting_id = "cd",
 			type = "numeric",
 			default_value = 10,
-			range = {2, 10},
+			range = {2, 30},
 			decimals_number = 1,  
 		},
 		{
