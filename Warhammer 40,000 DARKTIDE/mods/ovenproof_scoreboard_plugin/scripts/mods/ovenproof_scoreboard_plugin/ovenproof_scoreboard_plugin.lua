@@ -1,4 +1,4 @@
-local mod = get_mod("ovenproof_scoreboard_plugin")
+mod.warpfire_damage_profileslocal mod = get_mod("ovenproof_scoreboard_plugin")
 local PlayerUnitStatus = mod:original_require("scripts/utilities/attack/player_unit_status")
 local InteractionSettings = mod:original_require("scripts/settings/interaction/interaction_settings")
 local interaction_results = InteractionSettings.results
@@ -117,6 +117,11 @@ mod.burning_damage_profiles ={
 }
 mod.warpfire_damage_profiles ={
 	"warpfire",
+}
+mod.companion_damage_profiles ={
+	"adamant_companion_human_pounce",
+	"adamant_companion_ogryn_pounce",
+	"adamant_companion_monster_pounce",
 }
 mod.environmental_damage_profiles = {
 	"barrel_explosion",
@@ -484,6 +489,23 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 						--self._warpfire_rate[account_id].cr = self._warpfire_rate[account_id].crits / self._warpfire_rate[account_id].hits * 100
 						
 						--mod:replace_row_value("warpfire_cr", account_id, self._warpfire_rate[account_id].cr)
+					elseif table.array_contains(mod.companion_damage_profiles, damage_profile.name) then
+						self._companion_rate = (self._companion_rate or {})
+						self._companion_rate[account_id] = (self._companion_rate[account_id] or {})
+						self._companion_rate[account_id].hits = (self._companion_rate[account_id].hits or 0) + 1
+						self._companion_rate[account_id].crits = (self._companion_rate[account_id].crits or 0)
+
+						scoreboard:update_stat("total_companion_damage", account_id, actual_damage)
+						--if is_critical_strike then
+						--	self._companion_rate[account_id].crits = self._companion_rate[account_id].crits + 1
+						--end
+						if attack_result == "died" then
+							scoreboard:update_stat("total_companion_kills", account_id, 1)
+						end
+
+						--self._companion_rate[account_id].cr = self._companion_rate[account_id].crits / self._companion_rate[account_id].hits * 100
+
+						--mod:replace_row_value("companion_cr", account_id, self._companion_rate[account_id].cr)
 					elseif table.array_contains(mod.environmental_damage_profiles, damage_profile.name) then
 						self._environmental_rate = (self._environmental_rate or {})
 						self._environmental_rate[account_id] = (self._environmental_rate[account_id] or {})
@@ -501,9 +523,9 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 						--self._environmental_rate[account_id].cr = self._environmental_rate[account_id].crits / self._environmental_rate[account_id].hits * 100
 						
 						--mod:replace_row_value("environmental_cr", account_id, self._environmental_rate[account_id].cr)
-					-- else
-						-- Print damage profile and attack type of out of scope attacks
-						-- mod:echo("Player: "..player:name()..", Damage profile: " .. damage_profile.name .. ", attack type: " .. tostring(attack_type)..", damage: "..actual_damage)
+					else
+						--Print damage profile and attack type of out of scope attacks
+						mod:echo("Player: "..player:name()..", Damage profile: " .. damage_profile.name .. ", attack type: " .. tostring(attack_type)..", damage: "..actual_damage)
 					end	
 
 					if table.array_contains(mod.melee_lessers, breed_or_nil.name) then
@@ -1173,6 +1195,33 @@ mod.scoreboard_rows = {
 		iteration = "ADD",
 		group = "group_1",
 		parent = "total_warpfire",
+		setting = "offense_tier_1",
+	},
+	{name = "total_companion",
+		text = "row_total_companion",
+		validation = "ASC",
+		iteration = "ADD",
+		summary = {
+			"total_companion_kills",
+			"total_companion_damage",
+		},
+		group = "group_1",
+		setting = "offense_tier_1",
+	},
+	{name = "total_companion_kills",
+		text = "row_kills",
+		validation = "ASC",
+		iteration = "ADD",
+		group = "group_1",
+		parent = "total_companion",
+		setting = "offense_tier_1",
+	},
+	{name = "total_companion_damage",
+		text = "row_damage",
+		validation = "ASC",
+		iteration = "ADD",
+		group = "group_1",
+		parent = "total_companion",
 		setting = "offense_tier_1",
 	},
 	{name = "total_environmental",
