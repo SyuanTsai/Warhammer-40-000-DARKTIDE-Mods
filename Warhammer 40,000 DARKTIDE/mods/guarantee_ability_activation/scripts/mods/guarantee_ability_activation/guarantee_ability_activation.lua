@@ -1,4 +1,4 @@
--- Guarantee Ability Activation by KamiUnitY. Ver. 1.3.7
+-- Guarantee Ability Activation by KamiUnitY. Ver. 1.3.8
 
 local mod = get_mod("guarantee_ability_activation")
 local modding_tools = get_mod("modding_tools")
@@ -30,19 +30,25 @@ local IS_DASH_ABILITY = {
     zealot_targeted_dash_improved_double = true,
     ogryn_charge                         = true,
     ogryn_charge_increased_distance      = true,
+    adamant_charge                       = true,
 }
 
 local IS_WEAPON_ABILITY = {
     zealot_relic            = true,
     psyker_force_field      = true,
     psyker_force_field_dome = true,
+    adamant_area_buff_drone = true,
 }
+
+local INTERVAL_DO_PROMISE = 0.05
 
 ---------------
 -- VARIABLES --
 ---------------
 
 mod.promise_ability = false
+
+mod.last_do_promise = 0
 
 local is_in_hub = false
 
@@ -53,9 +59,9 @@ local current_slot = ""
 local combat_ability = ""
 local grenade_ability = ""
 
-local weapon_template_name = ""
-
 local last_set_promise = 0
+
+local last_slot_combat_ability = 0
 
 ---------------
 -- UTILITIES --
@@ -164,6 +170,9 @@ local function isPromised()
     local promise = mod.promise_ability
 
     if promise then
+        if elapsed(mod.last_do_promise) < INTERVAL_DO_PROMISE then
+            return false
+        end
         if not _is_available_ability_charges() then
             clearPromise("empty_ability_charges")
             return false
@@ -173,6 +182,7 @@ local function isPromised()
                 return false
             end
         end
+        mod.last_do_promise = time_now()
         if modding_tools then debug:print_mod("Attempting to activate combat ability for you !!!") end
     end
 
@@ -311,16 +321,15 @@ local function _on_slot_wielded(self)
 
     if wielded_slot ~= current_slot then
         current_slot = wielded_slot
-        local slot_weapon = self._weapons[current_slot]
-        weapon_template_name = (slot_weapon and slot_weapon.weapon_template and slot_weapon.weapon_template.name) or ""
         if current_slot == "slot_combat_ability" then
+            last_slot_combat_ability = time_now()
             clearPromise("on " .. current_slot)
         end
     end
 end
 
 mod:hook_safe("PlayerUnitWeaponExtension", "fixed_update", function(self, unit, dt, t, fixed_frame)
-    if current_slot ~= "" and weapon_template_name ~= "" then
+    if current_slot ~= "" then
         mod:hook_disable("PlayerUnitWeaponExtension", "fixed_update")
     end
     if self._player.viewport_name == "player1" then
@@ -379,6 +388,27 @@ local _input_hook = function(func, self, action_name)
 
     if is_in_hub then
         return out
+    end
+
+    if combat_ability == "adamant_area_buff_drone" then
+        -- While sprinting if press ability too short the drone will be cancel, This should prevent it
+        if action_name == "combat_ability_hold" then
+            if current_slot == "slot_combat_ability" and elapsed(last_slot_combat_ability) < 0.1 then
+                return true
+            end
+        -- Using movement key while in mid air after sprinting jump will block drone, This should prevent it
+        elseif action_name == "move_forward" or action_name == "move_left" or action_name == "move_right" then
+            if current_slot == "slot_combat_ability" or mod.promise_ability then
+                if character_state == "jumping" or character_state == "falling" then
+                    return false
+                end
+            end
+        -- Sprint while releasing drone will cancel ability, This should prevent it
+        elseif action_name == "sprinting" then
+            if current_slot == "slot_combat_ability" or mod.promise_ability then
+                return false
+            end
+        end
     end
 
     if action_name == "combat_ability_pressed" then
