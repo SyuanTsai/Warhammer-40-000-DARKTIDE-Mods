@@ -13,12 +13,19 @@ local DOG = {
     OWNER   = nil,                -- Player archetype
     SHARED  = false,              -- Flag indicating whether or not non-Arbites classes are allowed to use the mod functionality
     WHISTLE = false,              -- Flag indicating whether or not the player is currently holding the whistle keybind
+    IGNORE  = false,              -- Flag indicating whether or not the mod should ignore enemies which are already targeted by another player
     AUTO = {
         ENABLED    = false,       -- Flag indicating whether or not auto-tagging is enabled
         UNTILDEATH = false,       -- Flag indicating whether or not auto-tagging should wait for the current tag to expire before retagging (true = wait for expiration)
     },
     SERVER = nil,                 -- Current target according to the server which would be selected if the player were to tag
-    TAGS = {},                    -- List of all tags currently available to and owned by the player. Contains other player's tags only for Focus Target.
+    TAGS = {
+        SELF = {},
+        ALLY = {
+            TAG = nil,               -- Tag ID of the last successful tag made by another player
+            UNIT = nil,               -- Unit of the last successful tag made by another player
+        }
+    },                    -- List of all tags currently available to and owned by the player. Contains other player's tags only for Focus Target.
     LAST = {
         TAG  = nil,               -- Tag ID of the last successful tag made by the player
         TIME = 0,                 -- Timestamp of the last successful tag made by the player
@@ -84,6 +91,7 @@ mod.on_all_mods_loaded = function()
     DOG.FOCUS.THRESHOLD = mod:get("focus_target_stacks")
     -- Dog Settings
     DOG.AUTO.ENABLED = mod:get("auto_target")
+    DOG.IGNORE = mod:get("ignore_marked")
     DOG.INPUT.COOLDOWN.DOG = mod:get("dog_cooldown")
     DOG.AUTO.UNTILDEATH = mod:get("no_retarget")
     DOG.VERBOSE = mod:get("mod_enable_verbose")
@@ -123,9 +131,11 @@ mod.on_setting_changed = function(setting_id)
     elseif setting_id == "focus_target_retarget" then
         DOG.FOCUS.RETARGET = mod:get(setting_id)
     end
-    -- Auto setting
+    -- Tagging settings
     if setting_id == "mod_enable" then
         DOG.ENABLED = mod:get(setting_id)
+    elseif setting_id == "ignore_marked" then
+        DOG.IGNORE = mod:get(setting_id)
     elseif setting_id == "auto_target" then
         DOG.AUTO.ENABLED = mod:get(setting_id)
     elseif setting_id == "dog_cooldown" then
@@ -279,7 +289,7 @@ mod.held_stacks = function()
     local buffs = buff_extension and buff_extension._buffs
     if buffs then
         for index, _ in ipairs (buffs) do
-            local name = buffs[index]._template.name
+            local name = buffs[index] and buffs[index]._template and buffs[index]._template.name
             if name and string.find(name, focus_target) ~= nil then
                 template_data = buffs[index]._template_data
                 if template_data then
@@ -301,9 +311,9 @@ mod.applied_stacks = function(target_unit)
         local buffs = buff_extension and buff_extension._buffs
         if buffs then
             for index, _ in ipairs (buffs) do
-                local name = buffs[index]._template.name
+                local name = buffs[index] and buffs[index]._template and buffs[index]._template.name
                 if name and string.find(name, focus_target) ~= nil then
-                    stacks = buffs[index]._template_context.stack_count
+                    stacks = buffs[index] and buffs[index]._template_context and buffs[index]._template_context.stack_count
                     break
                 end
             end
@@ -413,6 +423,10 @@ mod.allowed_target = function()
     local target_data = server_target and ScriptUnit.has_extension(server_target, "unit_data_system")
     local target_breed = target_data and target_data:breed()
     local target_name = target_breed and target_breed.name
+    -- Ignore check
+    if mod.ignore_tag(server_target, target_breed) then
+        return false
+    end
     -- Treat mutator breeds as their base breed
     if target_name and string.find(target_name, "_mutator") then
         target_name = string.gsub(target_name, "_mutator", "") 
@@ -461,6 +475,35 @@ mod.on_cooldown = function(type)
     return false
 end
 
+-- returns true if the current tag or tag target should be ignored
+mod.ignore_tag = function(unit, breed)
+    local ignore = false
+    if DOG.IGNORE then
+        for _, ally_tag in pairs(DOG.TAGS.ALLY) do
+            local tag_unit = ally_tag and ally_tag.UNIT
+            if tag_unit and tag_unit == unit then
+                -- Arbites with dog active: skip non-boss enemies
+                if DOG.OWNER == "adamant" and not mod.dog_hater() then
+                    local not_big = breed and breed.tags and not (breed.tags.monster or breed.tags.captain or breed.tags.ogryn)
+                    local not_mutant = breed and breed.name and type(breed.name) == "string" and string.find(breed.name, "mutant") == nil
+                    if not_big and not_mutant then
+                        ignore = true
+                    end
+                end
+                -- Focus Target: skip if target has less stacks than the player
+                if DOG.OWNER == "veteran" and mod.focus_target_equipped() then
+                    local stacks = mod.applied_stacks(tag_unit)
+                    if stacks >= DOG.FOCUS.STACKS then
+                        ignore = true
+                    end
+                end
+                break
+            end
+        end
+    end
+    return ignore
+end
+
 -- Returns true if the player is allowed to tag regardless of the UNTILDEATH setting
 mod.allowed_to_bypass_until_death = function()
     -- Only Focus Target Veteran can bypass the until death restriction
@@ -487,14 +530,34 @@ mod:hook_safe(CLASS.SmartTagSystem, "update", function(self, context, dt, t, ...
         local desired_tag = mod.get_tag_type()
         -- Fetch all current tags
         for tag_id, tag in pairs(self._all_tags) do
-            local template = tag:template()
-            if template and template.marker_type == desired_tag then
+            local template = tag and tag._template
+            if template and template.marker_type and template.marker_type == desired_tag then
                 local tagger_player = tag:tagger_player()
+                -- Add new tags which belong to other players to DOG.TAGS.ALLY
+                if tagger_player and tagger_player ~= player then
+                    if not DOG.TAGS.ALLY[tag_id] then
+                        DOG.TAGS.ALLY[tag_id] = {
+                            TAG = tag_id,
+                            UNIT = tag:target_unit(),
+                        }
+                    end
+                end
                 -- Add new tags which belong to the player to DOG.TAGS
                 if tagger_player and tagger_player == player then
-                    if not DOG.TAGS[tag_id] then
+                    -- Check if we are currently whistling, or auto-targeting
+                    local mode = DOG.WHISTLE and "MANUAL" or DOG.AUTO.ENABLED and "AUTO" or "MANUAL"
+                    local unit = tag:target_unit()
+                    local data = ScriptUnit.has_extension(unit, "unit_data_system")
+                    local breed = data and data:breed()
+                    local enemy = breed and breed.name
+                    local valid_target = enemy and DOG.TARGETS[mode] and DOG.TARGETS[mode][enemy]
+                    -- Ignore check
+                    if mod.ignore_tag(unit, breed) then
+                        valid_target = false
+                    end
+                    if valid_target and not DOG.TAGS.SELF[tag_id] then
                         DOG.LAST.TAG = tag_id
-                        DOG.LAST.UNIT = tag:target_unit()
+                        DOG.LAST.UNIT = unit
                         -- Track the number of Focus Target stacks applied to the target unit if the Focus Target keystone is equipped
                         if mod.focus_target_equipped() then
                             DOG.FOCUS.APPLIED = mod.applied_stacks(DOG.LAST.UNIT)
@@ -503,21 +566,23 @@ mod:hook_safe(CLASS.SmartTagSystem, "update", function(self, context, dt, t, ...
                         -- Update cooldown to operate off of most recent new tag timestamp
                         DOG.LAST.TIME = Managers.time:time("main") -- not using t to ensure all comparisons operate off "main" time rather than "game" time
                     end
-                    DOG.TAGS[tag_id] = tag
+                    DOG.TAGS.SELF[tag_id] = tag
                 end
             end
         end
         -- Remove any tags which exist in DOG.TAGS but not in self._all_tags (i.e. tags which have expired from server perspective)
-        for tag_id, _ in pairs(DOG.TAGS) do
-            if not self._all_tags[tag_id] then
-                DOG.TAGS[tag_id] = nil
-                -- Reset cooldown and remove LAST data if the last tag was removed
-                if DOG.LAST.TAG == tag_id then
-                    DOG.LAST.TAG = nil
-                    DOG.LAST.TIME = 0
-                    DOG.LAST.UNIT = nil
-                    -- Also reset applied Focus Target stacks when removing last tag
-                    DOG.FOCUS.APPLIED = 0
+        for _, list in pairs(DOG.TAGS) do
+            for tag_id, _ in pairs(list) do
+                if not self._all_tags[tag_id] then
+                    list[tag_id] = nil
+                    -- Reset cooldown and remove LAST data if the last tag was removed
+                    if DOG.LAST.TAG == tag_id then
+                        DOG.LAST.TAG = nil
+                        DOG.LAST.TIME = 0
+                        DOG.LAST.UNIT = nil
+                        -- Also reset applied Focus Target stacks when removing last tag
+                        DOG.FOCUS.APPLIED = 0
+                    end
                 end
             end
         end

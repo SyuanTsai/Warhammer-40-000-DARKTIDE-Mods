@@ -94,6 +94,12 @@ local widgets = {
                 keybind_type    = "function_call",
                 function_name   = "dog_whistle",
             },
+            {
+                setting_id      = "ignore_marked",
+                type            = "checkbox",
+                default_value   = false,
+                tooltip         = "ignore_marked_tooltip",
+            },
 			{
 				setting_id    = "auto_target",
 				type          = "checkbox",
@@ -153,7 +159,9 @@ local widgets = {
                 default_value = "MANUAL",
                 options       = {
                     { value = "MANUAL", text = "dog_manual" },
+                    --{ value = "MANUAL_STANDARD", text = "dog_manual_standard" },
                     { value = "AUTO", text = "dog_auto" },
+                    --{ value = "AUTO_STANDARD", text = "dog_auto_standard" },
                 },
             },
             {
