@@ -42,10 +42,10 @@
 
 ### [Power DI](https://www.nexusmods.com/warhammer40kdarktide/mods/281)
     進階記分板
-- MOD 網站最後更新日期：Last updated 01 April 2025 7:58PM
-- MOD 版本：Version 1.1.10
+- MOD 網站最後更新日期：Last updated 25 June 2025, 9:27AM
+- MOD 版本：Version 1.1.12
 - MOD 檔案名稱：Power_DI_1.1.8.zip-281-v1-1-8-1743272944
-- 手動維護最後下載日期：2025-04-01
+- 手動維護最後下載日期：2025-06-25
 
 ### [Unga Bunga](https://www.nexusmods.com/warhammer40kdarktide/mods/476)
     自動重擊
