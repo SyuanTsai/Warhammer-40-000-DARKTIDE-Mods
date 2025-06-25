@@ -104,7 +104,7 @@ mod.on_setting_changed = function(setting_id)
     end
     if DOG.LOOKUP[setting_id] then
         local filter = mod:get("filter_target") or "MANUAL"
-        DOG.TARGETS[filter][setting_id] = mod:get(setting_id)
+        DOG.TARGETS[filter][setting_id] = mod:get(setting_id) or false
         mod:set("targets", DOG.TARGETS, false)
     end
     -- Toggle all
@@ -167,6 +167,10 @@ mod.populate_breeds = function()
         mod:set(breed_name, data, false)
     end
     mod:set("targets", DOG.TARGETS, false)
+    if DOG.LOOKUP[setting_id] then
+        DOG.TARGETS[filter][setting_id] = mod:get(setting_id) or false
+        mod:set("targets", DOG.TARGETS, false)
+    end
 end
 
 -- Toggles all enemies based on the current settings (toggles on if majority off, toggles off if majority on)
@@ -251,6 +255,18 @@ mod.focus_target_equipped = function()
         end
     end
     return false
+end
+
+-- Returns true if the player has disabled the dog while playing as Arbites
+mod.dog_hater = function()
+    if DOG.OWNER  == "adamant" then
+        local player = Managers.player:local_player_safe(1)
+        local player_unit = player and player.player_unit
+        local buff_extension = ScriptUnit.has_extension(player_unit, "buff_system")
+        if buff_extension and buff_extension:has_buff_using_buff_template("adamant_disable_companion_buff") then
+            return true
+        end
+    end
 end
 
 -- Returns the number of Focus Target stacks held by the player
@@ -366,6 +382,10 @@ mod.get_tag_type = function()
     if DOG.OWNER then
         -- Arbites
         if DOG.OWNER == "adamant" then
+            -- Lone Wolf
+            if mod.dog_hater() then
+                return "unit_threat"
+            end
             return "unit_threat_adamant"
         elseif mod.service_animal() then
             -- Focus Target Veteran

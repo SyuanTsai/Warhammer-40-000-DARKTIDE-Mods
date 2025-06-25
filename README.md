@@ -417,10 +417,10 @@
 
 ### [Dog Whistle](https://www.nexusmods.com/warhammer40kdarktide/mods/539)
     狗哨 - 自動抓特感
-- MOD 網站最後更新日期：Last updated 23 June 2025, 11:08PM
+- MOD 網站最後更新日期：Last updated 24 June 2025, 8:56PM
 - MOD 版本：1.0.1
-- MOD 檔案名稱：Dog Whistle 1.0.1-539-1-0-1-1750691286
-- 手動維護最後下載日期：2025-06-24
+- MOD 檔案名稱：Dog Whistle 1.0.2-539-1-0-2-1750769771
+- 手動維護最後下載日期：2025-06-25
 
 ---
 # 遊戲內操作相關MOD
