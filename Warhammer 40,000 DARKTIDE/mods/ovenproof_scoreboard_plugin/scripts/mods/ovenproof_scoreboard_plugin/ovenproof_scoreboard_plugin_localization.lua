@@ -2,6 +2,7 @@ local mod = get_mod("ovenproof_scoreboard_plugin")
 local UIRenderer = mod:original_require("scripts/managers/ui/ui_renderer")
 local ui_renderer_instance = Managers.ui:ui_constant_elements():ui_renderer()
 local languages = {"en","ru","zh-cn","zh-tw"}
+local languages = {"en","ru","zh-cn"}
 
 mod.get_text_size = function(self, input_text)
 
@@ -415,7 +416,13 @@ local localization = {
 		en = {left = "Total Warpfire", right = "[ Kills | Damage ]",},
 		ru = {left = "Всего от Варпогня", right = "[Убийств/Урона]",},
 		["zh-cn"] = {left = "总灵魂之火", right = "[ 击杀 | 伤害 ]",},
-		["zh-tw"] = {left = "總靈能之火", right = "[ 擊殺 | 傷害 ]"},
+	},
+
+	row_total_companion = {
+		en = {left = "Total Companion", right = "[ Kills | Damage ]",},
+		ru = {left = "Всего от компаньон", right = "[Убийств/Урона]",},
+        ["zh-cn"] = { left = "全程陪伴", right = "[ 击杀 | 伤害 ]" },
+		["zh-tw"] = {left = "全程陪伴", right = "[ 擊殺 | 傷害 ]"},
 	},
 	row_total_environmental = {
 		en = {left = "Total Environmental", right = "[ Kills | Damage ]",},
