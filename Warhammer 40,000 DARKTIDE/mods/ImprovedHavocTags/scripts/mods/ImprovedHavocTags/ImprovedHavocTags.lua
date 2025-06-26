@@ -1,5 +1,13 @@
 local mod = get_mod("ImprovedHavocTags")
 
+--[[
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Mod Name: Improved Havoc Tags                                                                                                    │
+│ Mod Author: Brunin (brufgsilva on Nexus)																						   │
+│ Version: 2.3																													   │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+--]]
+
 local function get_color_string(color_name)
     local color = Color[color_name](255, true)
     return string.format("%d,%d,%d", color[2], color[3], color[4])
@@ -65,6 +73,12 @@ mod:add_global_localize_strings({
         ru = "{#color(" .. get_color_string(mod:get("tougher_skin")) .. ")}Гнойная броня{#reset()}",
         ["zh-cn"] = "{#color(" .. get_color_string(mod:get("tougher_skin")) .. ")}硬化皮肤{#reset()}",
 		["zh-tw"] = "{#color(" .. get_color_string(mod:get("tougher_skin")) .. ")}硬膿皮膚{#reset()}",
+    },
+	loc_circumstance_ember_title = {
+        en = "{#color(" .. get_color_string(mod:get("ember")) .. ")}Inferno{#reset()}",
+        ru = "{#color(" .. get_color_string(mod:get("ember")) .. ")}Инферно{#reset()}",
+        ["zh-cn"] = "{#color(" .. get_color_string(mod:get("ember")) .. ")}烈焰地狱{#reset()}",
+		["zh-tw"] = "{#color(" .. get_color_string(mod:get("ember")) .. ")}煉獄{#reset()}",
     },
     loc_circumstance_toxic_gas_title = {
         en = "{#color(" .. get_color_string(mod:get("toxic_gas")) .. ")}Pox Gas{#reset()}",

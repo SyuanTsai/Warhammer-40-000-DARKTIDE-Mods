@@ -97,6 +97,12 @@ return {
                 default_value = "citadel_ogryn_camo",
                 options = get_color_options()
             },
+			{
+                setting_id = "ember",
+                type = "dropdown",
+                default_value = "sienna",
+                options = get_color_options()
+            },
             {
                 setting_id = "toxic_gas",
                 type = "dropdown",
