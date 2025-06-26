@@ -84,6 +84,12 @@ local localizations = {
         ["zh-cn"] = "硬化皮肤",
         ["zh-tw"] = "硬膿皮膚",
     },
+	ember = {
+        en = "Inferno",
+        ru = "Инферно",
+        ["zh-cn"] = "烈焰地狱",
+        ["zh-tw"] = "煉獄",
+    },
     toxic_gas = {
         en = "Pox Gas",
         ru = "Чумной газ",
