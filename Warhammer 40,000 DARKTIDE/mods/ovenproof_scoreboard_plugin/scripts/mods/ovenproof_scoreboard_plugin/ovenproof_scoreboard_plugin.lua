@@ -1,4 +1,4 @@
-mod.warpfire_damage_profileslocal mod = get_mod("ovenproof_scoreboard_plugin")
+local mod = get_mod("ovenproof_scoreboard_plugin")
 local PlayerUnitStatus = mod:original_require("scripts/utilities/attack/player_unit_status")
 local InteractionSettings = mod:original_require("scripts/settings/interaction/interaction_settings")
 local interaction_results = InteractionSettings.results
@@ -7,7 +7,12 @@ local in_match
 
 --mod:echo(os.date('%H:%M:%S'))
 
---Data tables
+-- ########################
+-- Data tables
+-- ########################
+-- ------------
+-- Enemy Breeds
+-- ------------
 mod.melee_lessers = {
 	"chaos_newly_infected",
 	"chaos_poxwalker",
@@ -65,42 +70,32 @@ mod.bosses = {
 	"cultist_captain",
 	"chaos_mutator_daemonhost",
 }
-mod.states_disabled = {
-	 -- NB: Disabled some of these due to personal preference
-	"ledge_hanging",
-	-- "warp_grabbed",
-	"grabbed",
-	"consumed",
-	"netted",
-	--"mutant_charged",
-	"pounced"
-}
-mod.forge_material = {
-	loc_pickup_small_metal = "small_metal",
-	loc_pickup_large_metal = "large_metal",
-	loc_pickup_small_platinum = "small_platinum",
-	loc_pickup_large_platinum = "large_platinum",
-}
+-- ------------
+-- Damage Types
+-- ------------
 mod.melee_attack_types ={
 	"melee",
 	"push",
+	"buff", -- Arbites power maul stun intervals
 }
 mod.melee_damage_profiles ={
 	"shockmaul_stun_interval_damage",
 	"powermaul_p2_stun_interval",
 	"powermaul_p2_stun_interval_basic",
+	"powermaul_shield_block_special",
 }
 mod.ranged_attack_types ={
 	"ranged",
 	"explosion",
 	"shout",
-	"companion_dog",
+	--"companion_dog", -- technically not melee/ranged, but should still count to total if it's disabled
 }
 mod.ranged_damage_profiles ={
 	"shock_grenade_stun_interval",
 	"psyker_protectorate_spread_chain_lightning_interval",
 	"default_chain_lighting_interval",
 	"psyker_smite_kill",
+	-- "adamant_companion_initial_pounce", -- never seen it come up but it's in the code
 	"adamant_companion_human_pounce",
 	"adamant_companion_ogryn_pounce",
 	"adamant_companion_monster_pounce",
@@ -118,11 +113,6 @@ mod.burning_damage_profiles ={
 mod.warpfire_damage_profiles ={
 	"warpfire",
 }
-mod.companion_damage_profiles ={
-	"adamant_companion_human_pounce",
-	"adamant_companion_ogryn_pounce",
-	"adamant_companion_monster_pounce",
-}
 mod.environmental_damage_profiles = {
 	"barrel_explosion",
 	"barrel_explosion_close",
@@ -133,6 +123,25 @@ mod.environmental_damage_profiles = {
 	"default",
 	"poxwalker_explosion",
 	"poxwalker_explosion_close",
+}
+-- ------------
+-- Other Stats
+-- ------------
+mod.states_disabled = {
+	 -- NB: Disabled some of these due to personal preference
+	"ledge_hanging",
+	-- "warp_grabbed",
+	"grabbed",
+	"consumed",
+	"netted",
+	--"mutant_charged",
+	"pounced"
+}
+mod.forge_material = {
+	loc_pickup_small_metal = "small_metal",
+	loc_pickup_large_metal = "large_metal",
+	loc_pickup_small_platinum = "small_platinum",
+	loc_pickup_large_platinum = "large_platinum",
 }
 mod.ammunition = {
 	loc_pickup_consumable_small_clip_01 = "small_clip",
@@ -146,6 +155,9 @@ mod.ammunition_percentage = {
 }
 mod.disabled_players = {}
 
+-- ########################
+-- Functions
+-- ########################
 local function player_from_unit(unit)
 	local players = Managers.player:players()
 	for _, player in pairs(players) do
@@ -489,23 +501,6 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 						--self._warpfire_rate[account_id].cr = self._warpfire_rate[account_id].crits / self._warpfire_rate[account_id].hits * 100
 						
 						--mod:replace_row_value("warpfire_cr", account_id, self._warpfire_rate[account_id].cr)
-					elseif table.array_contains(mod.companion_damage_profiles, damage_profile.name) then
-						self._companion_rate = (self._companion_rate or {})
-						self._companion_rate[account_id] = (self._companion_rate[account_id] or {})
-						self._companion_rate[account_id].hits = (self._companion_rate[account_id].hits or 0) + 1
-						self._companion_rate[account_id].crits = (self._companion_rate[account_id].crits or 0)
-
-						scoreboard:update_stat("total_companion_damage", account_id, actual_damage)
-						--if is_critical_strike then
-						--	self._companion_rate[account_id].crits = self._companion_rate[account_id].crits + 1
-						--end
-						if attack_result == "died" then
-							scoreboard:update_stat("total_companion_kills", account_id, 1)
-						end
-
-						--self._companion_rate[account_id].cr = self._companion_rate[account_id].crits / self._companion_rate[account_id].hits * 100
-
-						--mod:replace_row_value("companion_cr", account_id, self._companion_rate[account_id].cr)
 					elseif table.array_contains(mod.environmental_damage_profiles, damage_profile.name) then
 						self._environmental_rate = (self._environmental_rate or {})
 						self._environmental_rate[account_id] = (self._environmental_rate[account_id] or {})
@@ -1195,33 +1190,6 @@ mod.scoreboard_rows = {
 		iteration = "ADD",
 		group = "group_1",
 		parent = "total_warpfire",
-		setting = "offense_tier_1",
-	},
-	{name = "total_companion",
-		text = "row_total_companion",
-		validation = "ASC",
-		iteration = "ADD",
-		summary = {
-			"total_companion_kills",
-			"total_companion_damage",
-		},
-		group = "group_1",
-		setting = "offense_tier_1",
-	},
-	{name = "total_companion_kills",
-		text = "row_kills",
-		validation = "ASC",
-		iteration = "ADD",
-		group = "group_1",
-		parent = "total_companion",
-		setting = "offense_tier_1",
-	},
-	{name = "total_companion_damage",
-		text = "row_damage",
-		validation = "ASC",
-		iteration = "ADD",
-		group = "group_1",
-		parent = "total_companion",
 		setting = "offense_tier_1",
 	},
 	{name = "total_environmental",

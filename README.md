@@ -398,8 +398,9 @@
     記分板排版工具
 - MOD 網站最後更新日期：Last updated 24 June 2025, 4:07PM
 - MOD 版本：1.4.2
-- MOD 檔案名稱：Ovenproof's Scoreboard Plugin Patch-514-1-0-4-1750752405
-- 手動維護最後下載日期：2025-06-24
+- Patch 版本：1.0.6v
+- MOD 檔案名稱：Ovenproof's Scoreboard Plugin Patch-514-1-0-6-v-1750903028
+- 手動維護最後下載日期：2025-06-26
 
 ### [Servo-Friend](https://www.nexusmods.com/warhammer40kdarktide/mods/504)
     顱骨支援
