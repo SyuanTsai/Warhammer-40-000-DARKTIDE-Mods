@@ -13,22 +13,22 @@ mod:add_global_localize_strings({
 return {
   psych_ward = {
     en = "Psych Ward",
-    ["zh-cn"] = "快速灵能室",
+    ["zh-cn"] = "快捷访问",
     ru = "Психушка",
     ["zh-tw"] = "靈能室",
   },
   psych_ward_description = {
     en = "Provides access to many Hub features from the Character Select menu.",
-    ["zh-cn"] = "启用直接进入灵能室功能，无需进入大厅。",
+    ["zh-cn"] = "直接在角色选择页面使用各种大厅功能。",
     ru = "Psych Ward - Позволяет войти прямо на стрельбище в Псайканиум, минуя Хаб.",
-    ja = "ハブを介さず、サイカニウムへと直接入場できるようになります。",
+    ja = "キャラクター選択画面から様々なハブ機能へとアクセスできるようになります。",
     ["zh-tw"] = "啟用直接進入靈能室功能，無需進入大廳。",
   },
   horde_button = {
     en = "Mortis Trials",
-    ["zh-cn"] = "灵能室",
+    ["zh-cn"] = "死灵试炼",
     ru = "Стрельбище",
-    ja = "演習場",
+    ja = "モーティスの試練",
     ["zh-tw"] = "死神試煉",
   },
   mission_button = {
@@ -38,7 +38,7 @@ return {
     ru = "Меню выбора миссий",
     ["zh-tw"] = "任務面板",
   },
-  vendor_button= {
+  vendor_button = {
     en = "Armoury",
     ["zh-cn"] = "军械交易所",
     ru = "Оружейная",
@@ -83,11 +83,13 @@ return {
   havoc_button = {
     en = "Havoc Mission",
     ["zh-cn"] = "浩劫任务",
+    ja = "ハヴォック任務",
     ["zh-tw"] = "浩劫任務",
   },
   meatgrinder_button = {
     en = "Meat Grinder",
     ["zh-cn"] = "绞肉机",
+    ja = "肉挽き機"
     ["zh-tw"] = "絞肉機",
   },
   exit_text = {
@@ -101,16 +103,19 @@ return {
     en = "Only Viewable from the Hub",
     ["zh-cn"] = "仅可在大厅内查看",
     ru = "Можно посмотреть только в Хабе",
+    ja = "ハブでのみ閲覧可能",
     ["zh-tw"] = "僅可在大廳內查看",
   },
   enter_hub = {
     en = "Enter Hub",
     ["zh-cn"] = "进入大厅",
+    ja = "ハブに行く",
     ["zh-tw"] = "進入大廳",
   },
   allow_chat_main_menu = {
     en = "Allow Chat in Character Select screen",
     ["zh-cn"] = "允许在角色选择界面使用聊天框",
+    ja = "キャラクター選択画面でのチャットを許可",
     ["zh-tw"] = "允許在角色選擇界面使用聊天框",
   },
 }
