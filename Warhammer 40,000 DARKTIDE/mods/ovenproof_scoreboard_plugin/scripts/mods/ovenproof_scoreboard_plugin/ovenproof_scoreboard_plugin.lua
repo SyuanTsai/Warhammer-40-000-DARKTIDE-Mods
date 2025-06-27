@@ -7,12 +7,20 @@ local in_match
 
 --mod:echo(os.date('%H:%M:%S'))
 
---Data tables
+-- ########################
+-- Data tables
+-- ########################
+-- ------------
+-- Enemy Breeds
+-- ------------
 mod.melee_lessers = {
 	"chaos_newly_infected",
 	"chaos_poxwalker",
 	"cultist_melee",
 	"renegade_melee",
+	"chaos_armored_infected",
+	"chaos_mutated_poxwalker",
+	"chaos_lesser_mutated_poxwalker",
 }
 mod.ranged_lessers = {
 	"cultist_assault",
@@ -25,6 +33,7 @@ mod.melee_elites = {
 	"renegade_executor",
 	"chaos_ogryn_bulwark",
 	"chaos_ogryn_executor",
+	"renegade_radio_operator",
 }
 mod.ranged_elites = {
 	"cultist_gunner",
@@ -40,6 +49,8 @@ mod.specials = {
 	"renegade_sniper",
 	"renegade_flamer",
 	"cultist_flamer",
+	"cultist_mutant_mutator",
+	"chaos_hound_mutator",
 }
 mod.disablers = {
 	"chaos_hound",
@@ -56,7 +67,66 @@ mod.bosses = {
 	"renegade_captain",
 	"renegade_twin_captain",
 	"renegade_twin_captain_two",
+	"cultist_captain",
+	"chaos_mutator_daemonhost",
 }
+-- ------------
+-- Damage Types
+-- ------------
+mod.melee_attack_types ={
+	"melee",
+	"push",
+	"buff", -- Arbites power maul stun intervals
+}
+mod.melee_damage_profiles ={
+	"shockmaul_stun_interval_damage",
+	"powermaul_p2_stun_interval",
+	"powermaul_p2_stun_interval_basic",
+	"powermaul_shield_block_special",
+}
+mod.ranged_attack_types ={
+	"ranged",
+	"explosion",
+	"shout",
+	--"companion_dog", -- technically not melee/ranged, but should still count to total if it's disabled
+}
+mod.ranged_damage_profiles ={
+	"shock_grenade_stun_interval",
+	"psyker_protectorate_spread_chain_lightning_interval",
+	"default_chain_lighting_interval",
+	"psyker_smite_kill",
+	-- "adamant_companion_initial_pounce", -- never seen it come up but it's in the code
+	"adamant_companion_human_pounce",
+	"adamant_companion_ogryn_pounce",
+	"adamant_companion_monster_pounce",
+}
+mod.bleeding_damage_profiles ={
+	"bleeding",
+	"psyker_stun",
+}
+mod.burning_damage_profiles ={
+	"burning",
+	"flame_grenade_liquid_area_fire_burning",
+	"liquid_area_fire_burning_barrel",
+	"liquid_area_fire_burning",
+}
+mod.warpfire_damage_profiles ={
+	"warpfire",
+}
+mod.environmental_damage_profiles = {
+	"barrel_explosion",
+	"barrel_explosion_close",
+	"fire_barrel_explosion",
+	"fire_barrel_explosion_close",
+	"kill_volume_and_off_navmesh",
+	"kill_volume_with_gibbing",
+	"default",
+	"poxwalker_explosion",
+	"poxwalker_explosion_close",
+}
+-- ------------
+-- Other Stats
+-- ------------
 mod.states_disabled = {
 	 -- NB: Disabled some of these due to personal preference
 	"ledge_hanging",
@@ -73,44 +143,6 @@ mod.forge_material = {
 	loc_pickup_small_platinum = "small_platinum",
 	loc_pickup_large_platinum = "large_platinum",
 }
-mod.melee_attack_types ={
-"melee",
-"push",
-}
-mod.melee_damage_profiles ={
-}
-mod.ranged_attack_types ={
-"ranged",
-"explosion",
-"shout",
-}
-mod.ranged_damage_profiles ={
-"shock_grenade_stun_interval",
-"psyker_protectorate_spread_chain_lightning_interval",
-"default_chain_lighting_interval",
-}
-mod.bleeding_damage_profiles ={
-"bleeding",
-}
-mod.burning_damage_profiles ={
-"burning",
-"flame_grenade_liquid_area_fire_burning",
-"liquid_area_fire_burning_barrel",
-"liquid_area_fire_burning",
-}
-mod.warpfire_damage_profiles ={
-"warpfire",
-}
-mod.environmental_damage_profiles = {
-"barrel_explosion",
-"barrel_explosion_close",
-"fire_barrel_explosion",
-"fire_barrel_explosion_close",
-"kill_volume_and_off_navmesh",
-"default",
-"poxwalker_explosion",
-"poxwalker_explosion_close"
-}
 mod.ammunition = {
 	loc_pickup_consumable_small_clip_01 = "small_clip",
 	loc_pickup_consumable_large_clip_01 = "large_clip",
@@ -123,6 +155,9 @@ mod.ammunition_percentage = {
 }
 mod.disabled_players = {}
 
+-- ########################
+-- Functions
+-- ########################
 local function player_from_unit(unit)
 	local players = Managers.player:players()
 	for _, player in pairs(players) do
