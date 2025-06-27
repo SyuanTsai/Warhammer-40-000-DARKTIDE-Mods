@@ -277,6 +277,7 @@ local loc = {
         en = "Captains",
         ja = "キャプテン",
         ["zh-tw"] = "隊長",
+        ["zh-cn"] = "连长",
     },
     bleed = {
         en = "Bleeding",
