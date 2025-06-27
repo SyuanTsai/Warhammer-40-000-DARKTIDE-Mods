@@ -36,144 +36,174 @@ local localization = {
 		en = "OvenProof's scoreboard",
 		ru = "Таблица результатов - плагин OvenProof'а",
 		["zh-cn"] = "OvenProof 的记分板",
+		["zh-tw"] = "OvenProof 的記分板",
 	},
 	mod_description = {
 		en = "OvenProof's custom scoreboard",
 		ru = "Ovenproof's Scoreboard Plugin - Плагин для Таблицы результатов с более подробными данными.",
 		["zh-cn"] = "OvenProof 的自定义记分板",
+		["zh-tw"] = "OvenProof 的自訂記分板",
 	},
 --Groups
 	group_1 = {
 		en = "Group 1",
 		ru = "Группа 1",
 		["zh-cn"] = "分组 1",
+		["zh-tw"] = "分組 1",
 	},
 	row_group_1_score = {
 		en = "Score",
 		ru = "Счёт",
 		["zh-cn"] = "分数",
+		["zh-tw"] = "分數",
 	},
 --Settings
 	exploration_tier_0 = {
 		en = "Exploration",
 		ru = "Исследование",
 		["zh-cn"] = "探索",
+		["zh-tw"] = "探索",
 	},
 	defense_tier_0 = {
 		en = "Defense",
 		ru = "Защита",
 		["zh-cn"] = "防御",
+		["zh-tw"] = "防禦",
 	},
 	offense_rates = {
 		en = "Weakspot and critical rates",
 		ru = "Уязвимые места и критические показатели",
 		["zh-cn"] = "弱点和暴击率",
+		["zh-tw"] = "弱點與爆擊率",
 	},
 	offense_tier_0 = {
 		en = "Offense (tier 0)",
 		ru = "Нападение (ряд 0)",
 		["zh-cn"] = "进攻（T0）",
+		["zh-tw"] = "進攻 (T0)",
 	},
 	offense_tier_1 = {
 		en = "Offense (tier 1)",
 		ru = "Нападение (ряд 1)",
 		["zh-cn"] = "进攻（T1）",
+		["zh-tw"] = "進攻 (T1)",
 	},
 	offense_tier_2 = {
 		en = "Offense (tier 2)",
 		ru = "Нападение (ряд 2)",
 		["zh-cn"] = "进攻（T2）",
+		["zh-tw"] = "進攻 (T2)",
 	},
 	offense_tier_3 = {
 		en = "Offense (tier 3)",
 		ru = "Нападение (ряд 3)",
 		["zh-cn"] = "进攻（T3）",
+		["zh-tw"] = "進攻 (T3)",
 	},
 	fun_stuff_01 = {
 		en = "Fun stuff",
 		ru = "Интересные счётчики",
 		["zh-cn"] = "娱乐数据",
+		["zh-tw"] = "趣味數據",
 	},
 	bottom_padding = {
 		en = "Bottom padding",
 		ru = "Нижний отступ",
 		["zh-cn"] = "底部间距",
+		["zh-tw"] = "底部邊距",
 	},
 	ammo_messages = {
 		en = "Messages - Ammo/grenade pickups",
 		["zh-cn"] = "消息 - 弹药/手雷拾取",
+		["zh-tw"] = "訊息 - 彈藥/手雷拾取",
 	},
 --Reusable labels
 	row_kills = {
 		en = "Kills",
 		ru = "Убийств",
 		["zh-cn"] = "击杀",
+		["zh-tw"] = "擊殺",
 	},
 	row_damage = {
 		en = "Damage",
 		ru = "Урона",
 		["zh-cn"] = "伤害",
+		["zh-tw"] = "傷害",
 	},
 --Ammo messages
 	message_grenades = {
 		en = "grenades",
-		["zh-cn"] = "手雷"
+		["zh-cn"] = "手雷",
+		["zh-tw"] = "手雷",
 	},
 	message_small_clip = {
 		en = "ammo box",
-		["zh-cn"] = "小弹药罐"
+		["zh-cn"] = "小弹药罐",
+		["zh-tw"] = "小彈藥罐",
 	},
 	message_large_clip = {
 		en = "ammo bag",
-		["zh-cn"] = "大弹药包"
+		["zh-cn"] = "大弹药包",
+		["zh-tw"] = "大彈藥包",
 	},
 	message_ammo_no_waste = {
 		--en = " picked up %s ammo",
 		en = " picked up an %s",
-		["zh-cn"] = "拾取了%s"
+		["zh-cn"] = "拾取了%s",
+		["zh-tw"] = "拾取了 %s",
 	},
 	message_ammo_waste = {
 		--en = " picked up %s ammo, wasted %s",
 		en = " picked up an %s, wasted %s ammo",
-		["zh-cn"] = "拾取了%s，浪费了%s弹药"
+		["zh-cn"] = "拾取了%s，浪费了%s弹药",
+		["zh-tw"] = "拾取了 %s，浪費了 %s 彈藥",
 	},
 	message_ammo_crate = {
 		en = " picked up %s ammo from an %s",
-		["zh-cn"] = "拾取了%s弹药，来自%s"
+		["zh-cn"] = "拾取了%s弹药，来自%s",
+		["zh-tw"] = "拾取了 %s 彈藥，來自 %s",
 	},
 	message_ammo_crate_text = {
 		en = "ammo crate",
-		["zh-cn"] = "弹药箱"
+		["zh-cn"] = "弹药箱",
+		["zh-tw"] = "彈藥箱",
 	},
 	message_grenades_body = {
 		en = " picked up %s",
-		["zh-cn"] = "拾取了%s"
+		["zh-cn"] = "拾取了%s",
+		["zh-tw"] = "拾取了 %s",
 	},
 	message_grenades_text = {
 		en = "grenades",
-		["zh-cn"] = "手雷"
+		["zh-cn"] = "手雷",
+		["zh-tw"] = "手雷",
 	},
 --Rows exploration_tier_0
 	row_total_material_pickups = {
 		en = "Total Material Pickups",
 		ru = "Всего поднято Ресурсов",
 		["zh-cn"] = "总材料拾取",
+		["zh-tw"] = "總材料拾取",
 	},
 	row_ammo_1 = {
 		en = {left = "Total Ammo", right = "[ Taken | Wasted ]",},
-		["zh-cn"] = {left = "总弹药", right = "[ 拾取 | 浪费 ]",},
+		["zh-cn"] = { left = "总弹药", right = "[ 拾取 | 浪费 ]", },
+		["zh-tw"] = { left = "總彈藥", right = "[ 拾取 | 浪費 ]" },
 	},
 	row_ammo_percent = {
 		en = "Taken",
-		["zh-cn"] = "拾取"
+		["zh-cn"] = "拾取",
+		["zh-tw"] = "拾取",
 	},
 	row_ammo_wasted = {
 		en = "Wasted",
-		["zh-cn"] = "浪费"
+		["zh-cn"] = "浪费",
+		["zh-tw"] = "浪費",
 	},
 	row_ammo_2 = {
 		en = {left = "Total", right = "[ Grenades Taken | Crates Used ]",},
 		["zh-cn"] = {left = "总", right = "[ 手雷拾取 | 弹药箱使用 ]",},
+		["zh-tw"] = {left = "總", right = "[ 手雷拾取 | 彈藥箱使用 ]"},
 	},
 	row_ammo_grenades = {
 		en = "Grenades Taken",
