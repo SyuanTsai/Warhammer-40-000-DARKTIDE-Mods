@@ -87,6 +87,29 @@ local widgets = {
                 default_value = true,
             },
             {
+                setting_id      = "ignore_marked",
+                type            = "checkbox",
+                default_value   = false,
+                tooltip         = "ignore_marked_tooltip",
+            },
+            {
+                setting_id      = "type_priority",
+                type            = "dropdown",
+                default_value   = "unit_threat_adamant",
+                tooltip         = "type_priority_tooltip",
+                options         = {
+                    { value = "unit_threat_adamant", text = "dog_tag" },
+                    { value = "unit_threat", text = "standard_tag" },
+                    { value = "none", text = "none" }
+                }
+            },
+		},
+	},
+    {
+        setting_id = "whistle_settings",
+        type = "group",
+        sub_widgets = {
+            {
                 setting_id      = "dog_keybind",
                 type            = "keybind",
                 default_value   = {},
@@ -95,16 +118,36 @@ local widgets = {
                 function_name   = "dog_whistle",
             },
             {
-                setting_id      = "ignore_marked",
-                type            = "checkbox",
-                default_value   = false,
-                tooltip         = "ignore_marked_tooltip",
+                setting_id      = "whistle_type",
+                type            = "dropdown",
+                default_value   = "unit_threat_adamant",
+                tooltip         = "type_tooltip",
+                options         = {
+                    { value = "unit_threat_adamant", text = "dog_tag" },
+                    { value = "unit_threat", text = "standard_tag" }
+                }
             },
-			{
+        }
+    },
+    {
+        setting_id = "auto_target_settings",
+        type = "group",
+        sub_widgets = {
+            {
 				setting_id    = "auto_target",
 				type          = "checkbox",
 				default_value = false,
 			},
+            {
+                setting_id      = "auto_target_type",
+                type            = "dropdown",
+                default_value   = "unit_threat_adamant",
+                tooltip         = "type_tooltip",
+                options         = {
+                    { value = "unit_threat_adamant", text = "dog_tag" },
+                    { value = "unit_threat", text = "standard_tag" }
+                }
+            },
             {
                 setting_id    = "dog_cooldown",
                 type          = "numeric",
@@ -117,12 +160,13 @@ local widgets = {
                 tooltip       = "no_retarget_tooltip",
                 default_value = false,
             }
-		},
-	},
+        }
+    },
     {
-        setting_id  = "other_archetype_group",
+        setting_id  = "focus_settings",
         type        = "group",
         sub_widgets = {
+            --[[
             {
                 setting_id    = "other_archetype",
                 type          = "dropdown",
@@ -134,6 +178,7 @@ local widgets = {
                     { value = "FOCUS_TARGET", text = "other_focus" },
                 },
             },
+            --]]
             {
                 setting_id    = "focus_target_stacks",
                 type          = "numeric",
@@ -150,18 +195,28 @@ local widgets = {
         },
     },
     {
-        setting_id  = "filter_group",
+        setting_id  = "filter_settings",
         type        = "group",
         sub_widgets = {
+            {
+                setting_id    = "filter_archetype",
+                type          = "dropdown",
+                default_value = "adamant",
+                options       = {
+                    { value = "adamant", text = "adamant" },
+                    { value = "ogryn", text = "ogryn" },
+                    { value = "psyker", text = "psyker" },
+                    { value = "veteran", text = "veteran" },
+                    { value = "zealot", text = "zealot" },
+                }
+            },
             {
                 setting_id    = "filter_target",
                 type          = "dropdown",
                 default_value = "MANUAL",
                 options       = {
                     { value = "MANUAL", text = "dog_manual" },
-                    --{ value = "MANUAL_STANDARD", text = "dog_manual_standard" },
                     { value = "AUTO", text = "dog_auto" },
-                    --{ value = "AUTO_STANDARD", text = "dog_auto_standard" },
                 },
             },
             {
