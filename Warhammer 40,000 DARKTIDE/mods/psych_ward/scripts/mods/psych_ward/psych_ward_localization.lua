@@ -29,7 +29,7 @@ return {
     ["zh-cn"] = "灵能室",
     ru = "Стрельбище",
     ja = "演習場",
-    ["zh-tw"] = "訓練場",
+    ["zh-tw"] = "死神試煉",
   },
   mission_button = {
     en = "Mission Board",
