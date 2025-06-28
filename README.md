@@ -57,10 +57,10 @@
 
 ### [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89)
     在角色畫面快速開始
-- MOD 網站最後更新日期：Last updated 27 June 2025, 6:54PM
-- MOD 版本：1.6.6
-- MOD 檔案名稱：Psych Ward-89-1-6-6-1751021649
-- 手動維護最後下載日期：2025-06-27
+- MOD 網站最後更新日期：Last updated 27 June 2025, 9:37PM
+- MOD 版本：1.6.7
+- MOD 檔案名稱：Psych Ward-89-1-6-7-1751031435
+- 手動維護最後下載日期：2025-06-28
 
 ---
 # 遊戲內操作相關MOD
