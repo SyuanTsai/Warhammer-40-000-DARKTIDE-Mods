@@ -4,81 +4,94 @@
 -- Do not rename a mod's folders.
 -- You do not need to include 'base' or 'dmf' mod folders.
 -- ################################################################
--- 遊戲體驗改善
+-- 具有順序性，必須在最前面
 WhatTheLocalization
-scoreboard
-creature_spawner
-Power_DI
+
+-- 一般
 UngaBunga
+creature_spawner
 Skitarius
 AutoLoot
-Healthbars
-IME_Enable
-true_level
-who_are_you
-MultiBind
 more_characters_and_loadouts
-psych_ward
+AutoTag
+Enhanced_descriptions
+servo_friend
+DogWhistle
+
+-- 記分板(有順序性依賴)
+scoreboard
+ovenproof_scoreboard_plugin
+Power_DI
+
+-- 只會設定一次，但需要詳細設定
+SpecialsTracker
+EmperorsGuidance
+debuff_indicator
+markers_aio
+NumericUI
+ImprovedHavocTags
+better_hud_info_view
+Spidey Sense
+custom_hud
+
+-- 小遊戲自動化
 Decode_Helper
 DecodeMinigameSolver
 TrainSolver
 Tree_Helper
 ScanHelper
+
+-- 只會設定一次的MOD
+true_level
+who_are_you
+MultiBind
 show_crit_chance
-debuff_indicator
 SuperImpact
-AutoTag
 StimmsPickupIcon
 KillfeedImprovements
-GasOutline
-AlternateGrenadeIcons
 LoadoutMonitor
 QuickLookCard
-markers_aio
 danger_zone
-NumericUI
 RecolorBossHealthBars
 KeepSwinging
-Enhanced_descriptions
-EmperorsGuidance
-RememberServerLocation
-DefaultToHighestBlessingTier
 buy_until_rating
 BetterMelk
-ChatBlock
-InspectFromSocial
-InspectFromPartyFinder
 PlayerOutlines
 name_it
-LoadoutNames
 guarantee_ability_activation
-custom_hud
 keep_dodging
-SpecialsTracker
 show_cjk_glyphs
-ovenproof_scoreboard_plugin
-RetainSelection
+Healthbars
+AlternateGrenadeIcons
 InventoryStats
-SimpleSpeedMeter
 RickAndMortis
-ShareTalents
 Perspectives
 AutoQuell33
-ImprovedHavocTags
-servo_friend
-better_hud_info_view
 clear_smoke
-DogWhistle
-red_weapons_at_home
--- 遊戲內操作相關MOD
-TalentRefundBelow
-Archivum Messelina
-ManyMoreTry
-Spidey Sense
 SoloPlay
 TagKeys
 WeaponFilter
 afk
-RememberDifficulty
+red_weapons_at_home
+
+-- 基本上不需設定
+psych_ward
+InspectFromSocial
+TalentRefundBelow
 AUPM
 KPM
+Archivum Messelina
+
+-- 不會顯示在模組管理的MOD
+IME_Enable
+RememberServerLocation
+DefaultToHighestBlessingTier
+ChatBlock
+InspectFromPartyFinder
+GasOutline
+SimpleSpeedMeter
+RetainSelection
+ShareTalents
+ManyMoreTry
+RememberDifficulty
+LoadoutNames
