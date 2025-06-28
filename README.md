@@ -132,12 +132,6 @@
 - MOD 檔案名稱：StimmsPickupIcon-265-1-3-1-1735648580
 - 手動維護最後下載日期：2025-02-09
 
-### [Transparent Shield (Ogryn)](https://www.nexusmods.com/warhammer40kdarktide/mods/439)
-    歐格林盾牌半透明畫
-- MOD 網站最後更新日期：Last updated 30 November 2024 7:37PM
-- MOD 版本：1.2.0
-- MOD 檔案名稱：TransparentShield-439-1-2-0-1732995433
-- 手動維護最後下載日期：2025-02-09
 
 ---
 # 遊戲內操作相關MOD
@@ -154,4 +148,11 @@
 - MOD 網站最後更新日期：Last updated 17 October 20241:44PM
 - MOD 版本：Version 1.3.1
 - MOD 檔案名稱：Hybrid Sprint-342-1-3-1-1729169092
+- 手動維護最後下載日期：2025-02-09
+
+### [Transparent Shield (Ogryn)](https://www.nexusmods.com/warhammer40kdarktide/mods/439)
+    歐格林盾牌半透明畫
+- MOD 網站最後更新日期：Last updated 30 November 2024 7:37PM
+- MOD 版本：1.2.0
+- MOD 檔案名稱：TransparentShield-439-1-2-0-1732995433
 - 手動維護最後下載日期：2025-02-09
