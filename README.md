@@ -423,6 +423,13 @@
 - MOD 檔案名稱：Dog Whistle 1.0.5-539-1-0-5-1750970905
 - 手動維護最後下載日期：2025-06-27
 
+### [Red Weapons at Home](https://www.nexusmods.com/warhammer40kdarktide/mods/380)
+    武器顏色顯示
+- MOD 網站最後更新日期：Last updated 25 June 2025, 8:16PM
+- MOD 版本：1.2.4
+- MOD 檔案名稱：Red Weapons at Home-380-1-2-4-1750853802
+- 手動維護最後下載日期：2025-06-28
+
 ---
 # 遊戲內操作相關MOD
 

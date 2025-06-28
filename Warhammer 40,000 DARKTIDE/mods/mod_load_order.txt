@@ -70,6 +70,7 @@ servo_friend
 better_hud_info_view
 clear_smoke
 DogWhistle
+red_weapons_at_home
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 Archivum Messelina
