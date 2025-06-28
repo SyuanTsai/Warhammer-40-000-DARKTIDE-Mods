@@ -106,10 +106,10 @@
 
 ### [Debuff Indicator](https://www.nexusmods.com/warhammer40kdarktide/mods/137)
     效果顯示
-- MOD 網站最後更新日期：Last updated 24 June 2025, 4:14PM
-- MOD 版本：1.7.0
-- MOD 檔案名稱：Debuff Indicator-137-1-6-1-1745540245
-- 手動維護最後下載日期：2025-06-24
+- MOD 網站最後更新日期：Last updated 27 June 2025, 10:33PM
+- MOD 版本：1.7.2
+- MOD 檔案名稱：Debuff Indicator-137-1-7-2-1751034821
+- 手動維護最後下載日期：2025-06-28
 
 ---
 # 遊戲內操作相關MOD
