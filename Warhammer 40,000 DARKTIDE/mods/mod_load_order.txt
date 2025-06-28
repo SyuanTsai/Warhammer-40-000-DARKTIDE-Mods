@@ -29,7 +29,6 @@ debuff_indicator
 SuperImpact
 AutoTag
 StimmsPickupIcon
-TransparentShield
 KillfeedImprovements
 GasOutline
 AlternateGrenadeIcons
