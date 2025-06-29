@@ -19,6 +19,30 @@ local localizations = {
 		ru = "Показывать в ленте убийств",
 		["zh-tw"] = "在擊殺面板中顯示",
 	},
+	merge_kills = {
+        en = "Merge kills",
+		["zh-tw"] = "合併擊殺",
+	},
+	enable_in_psykanium = {
+        en = "Enable in Psykanium",
+		["zh-tw"] = "靈能室中啟用",
+	},
+	alignment = {
+        en = "Alignment",
+		["zh-tw"] = "對齊方式",
+	},
+	left = {
+        en = "Left",
+		["zh-tw"] = "左側",
+	},
+	center = {
+        en = "Center",
+		["zh-tw"] = "中間",
+	},
+	right = {
+        en = "Right",
+		["zh-tw"] = "右側",
+	},
 }
 
 for name, breed in pairs(Breeds) do
