@@ -203,19 +203,19 @@ local localization = {
     elite_breeds = {
         en = "Elites",
         ["zh-cn"] = "精英",
-        ["zh-tw"] = "精英",
+        ["zh-tw"] = "精英(開啟代表不攻擊)",
         ru = "элита",
     },
     special_breeds = {
         en = "Specialists",
         ["zh-cn"] = "专家",
-        ["zh-tw"] = "專家",
+        ["zh-tw"] = "專家(開啟代表不攻擊)",
         ru = "специалист",
     },
     monster_breeds = {
         en = "Monsters/Captains",
         ["zh-cn"] = "怪物/连长",
-        ["zh-tw"] = "巨獸/隊長",
+        ["zh-tw"] = "巨獸/隊長(開啟代表不攻擊)",
         ru = "монстр/капитан",
     },
     toggle_all = {
