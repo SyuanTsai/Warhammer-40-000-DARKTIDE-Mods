@@ -12,7 +12,7 @@ local localizations = {
     },
     mod_description = {
       en = "FROM THE MOMENT I UNDERSTOOD THE WEAKNESS OF MY FLESH, IT DISGUSTED ME.",
-      ["zh-tw"] = "當我看穿血肉的脆弱，那一刻，我的心靈便被機械的完美所召喚，對這腐朽之軀只剩厭憎。",
+        ["zh-tw"] = "當我看穿血肉的脆弱，那一刻，我的心靈便被機械的完美所召喚，對這腐朽之軀只剩厭憎。", --  Traditional Chinese Maintained by SyuanTsai.
       ["zh-cn"] = "设置一个独属于你的连招，按键自动作出相应动作——————B站 独一无二的小真寻 汉化维护",
     },
     -- Debug
