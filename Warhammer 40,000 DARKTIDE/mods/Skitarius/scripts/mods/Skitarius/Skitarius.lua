@@ -169,13 +169,14 @@ local INCORRECT_TIMES = {
                 correct = 0.3,
             }
         },
+        --[[]]
         powermaul_2h_p1_m1 = {
             action_right_heavy = {
-                prev_incorrect = 0.35,
-                prev_action = "action_left_light_pushfollow",
-                prev_correct = 0.45,
+                incorrect = 0.35,
+                correct = 0.45,
             }
         },
+        --]]
         combataxe_p2_m1 = {
             action_left_heavy = {
                 incorrect = 0.25,
@@ -322,6 +323,7 @@ local MELEE_TEMPLATE = {
     heavy_buff = "none",
     heavy_buff_stacks = 0,
     heavy_buff_special = false,
+    special_buff_stacks = 0,
     always_special = false,
     force_heavy_when_special = false,
     sequence_cycle_point = "sequence_step_one",
@@ -1240,6 +1242,7 @@ mod.update_engram = function(data)
             CYCLE_INDEX              = cycle_index,
             HEAVY_BUFF               = intermediary.heavy_buff or "none",
             HEAVY_BUFF_STACKS        = intermediary.heavy_buff_stacks or 0,
+            SPECIAL_BUFF_STACKS      = intermediary.special_buff_stacks or 0,
             HEAVY_BUFF_SPECIAL       = intermediary.heavy_buff_special or false,
             ALWAYS_SPECIAL           = intermediary.always_special or false,
             FORCE_HEAVY_WHEN_SPECIAL = intermediary.force_heavy_when_special or false,
@@ -1441,7 +1444,7 @@ mod.omnissiah = function(queried_input, user_value)
                 return false
             end
         end
-        return nil
+        return mod.resolve_conflicts(queried_input, user_value, divine_outcome)
     end
     --mod:echo("%s, %s", current_action, desired_action)
     local divine_outcome = PRAY[current_action][desired_action][queried_input]
@@ -1603,7 +1606,7 @@ mod.maybe_convert_action = function(player_unit, running_action, handler_data, a
     if action_settings.kind == "sweep" then
         if SWEEP == "after_damage_window" then
             return "idle"
-        elseif action_name == "light_attack" then
+        elseif action_name == "light_attack" or action_name == "heavy_attack" then
             if mod.is_light_complete(running_action, handler_data.component, action_settings) then
                 return "idle"
             end
@@ -1705,15 +1708,27 @@ end
 
 mod.resolve_conflicts = function(input, user, omnissiah)
     local outcome = omnissiah
+    -- Actions taken when no engram is active
+    if not omnissiah then
+        if mod.weapon_type() == "RANGED" and ALWAYS_CHARGE and mod.is_ranged_charged() then
+            if CHARGED_RANGED[MAGOS.WEAPON_NAME] then
+                if ALT_WEAPONS[MAGOS.WEAPON_NAME] then
+                    if INPUT.action_one_hold.value and input == "action_one_hold" then
+                        return false
+                    end
+                elseif INPUT.action_two_hold.value and input == "action_one_pressed" then
+                    return true
+                end
+            end
+        end
+    end
     -- Side with the user if they are attempting to block or quell/reload
     if INPUT.weapon_reload_hold.value and mod.can_reload() then
         mod.reset_engram()
         return nil
     end
-    if INPUT.action_two_hold.value then
-        if mod.weapon_type() == "MELEE" then
-            return nil
-        end
+    if INPUT.action_two_hold.value and mod.weapon_type() == "MELEE" then
+        return nil
     end
     -- More aggressive method for staff weapons not respecting action_two_hold
     if (INPUT.action_two_hold.value) and mod.weapon_type() == "RANGED" and FORCE_STAFF[MAGOS.WEAPON_NAME] then
@@ -2179,7 +2194,9 @@ mod.is_charged = function(running_action, component, action_settings)
                 chain_time = prev_correct_time
             end
         end
-        --mod:echo("WEAPON: %s, ACTION: %s, CHAIN: %s", MAGOS.WEAPON_NAME, chain_action_name, chain_time)
+        --if ENGRAM.COMMANDS[ENGRAM.INDEX] == "heavy_attack" then
+            --mod:echo("WEAPON: %s, ACTION: %s, CHAIN: %s", MAGOS.WEAPON_NAME, chain_action_name, chain_time)
+        --end
         chain_validated = (chain_time and chain_time < current_action_t or not not chain_until and current_action_t < chain_until) and true
         local running_action_state_requirement = chain_action.running_action_state_requirement
         if running_action_state_requirement and (not running_action_state or not running_action_state_requirement[running_action_state]) then
@@ -2190,6 +2207,10 @@ mod.is_charged = function(running_action, component, action_settings)
         local required_buff_stacks = ENGRAM.SETTINGS and ENGRAM.SETTINGS.HEAVY_BUFF_STACKS
         local required_buff_special = ENGRAM.SETTINGS and ENGRAM.SETTINGS.HEAVY_BUFF_SPECIAL
         local is_special = component.special_active_at_start
+        if is_special and ENGRAM.SETTINGS and ENGRAM.SETTINGS.SPECIAL_BUFF_STACKS and ENGRAM.SETTINGS.SPECIAL_BUFF_STACKS ~= required_buff_stacks then
+            -- If the action is special and special stacks are set, use them instead of the heavy stacks
+            required_buff_stacks = ENGRAM.SETTINGS.SPECIAL_BUFF_STACKS
+        end
         -- Heavy attack buff handling
         if required_buff and required_buff ~= "none" then
             if not required_buff_special or (required_buff_special and is_special) then
@@ -2247,6 +2268,7 @@ end
 --└────────────────────┘--
 
 mod.is_ranged_charged = function()
+    if not mod.weapon_type() == "RANGED" then return false end
     local player = Managers.player:local_player_safe(1)
     local player_unit = player and player.player_unit
     local weapon_extension = player_unit and ScriptUnit.has_extension(player_unit, "weapon_system")
