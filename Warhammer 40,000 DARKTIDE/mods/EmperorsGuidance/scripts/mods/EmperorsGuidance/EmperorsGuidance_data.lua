@@ -1,4 +1,95 @@
 local mod = get_mod("EmperorsGuidance")
+local Breeds = require("scripts/settings/breed/breeds")
+
+-- Filter widget template structure
+local filter = {
+	setting_id   = "filter_settings",
+	type		 = "group",
+	sub_widgets  = {
+		{
+			setting_id = "filter_select",
+			type       = "dropdown",
+			default_value = "primary",
+			options = {
+				{ value = "primary", text = "filter_select_primary" },
+				{ value = "secondary", text = "filter_select_secondary" },
+			}
+		},
+		{
+			setting_id = "global_group_toggle",
+			type       = "checkbox",
+			default_value = false,
+		}
+	}
+}
+
+-- Give each breed a toggle within its respective group, placed inside filter widget
+local function add(tbl, breed_name, group)
+	local group_nonexistent = true
+	for _, widget in ipairs(tbl.sub_widgets) do
+		if widget.setting_id == group then
+			group_nonexistent = false
+			widget.sub_widgets[#widget.sub_widgets + 1] = {
+				setting_id = breed_name,
+				type = "checkbox",
+				default_value = false,
+			}
+		end
+		if not group_nonexistent then
+			break
+		end
+	end
+	if group_nonexistent then
+		tbl.sub_widgets[#tbl.sub_widgets + 1] = {
+			setting_id = group,
+			type       = "group",
+			sub_widgets = {
+				{
+					setting_id = breed_name,
+					type       = "checkbox",
+					default_value = false,
+				}
+			}
+		}
+	end
+end
+
+for breed_name, breed in pairs(Breeds) do
+    if breed.tags.minion and not breed.tags.companion then
+		if breed.tags.elite then
+			add(filter, breed_name, "elite_group")
+		elseif breed.tags.special or breed.tags.ritualist then
+			add(filter, breed_name, "special_group")
+		elseif breed.tags.monster or breed.tags.captain or breed.tags.cultist_captain then
+			add(filter, breed_name, "boss_group")
+		else
+			add(filter, breed_name, "fodder_group")
+		end
+	end
+end
+
+-- Sort each group by setting_id (breed_name)
+local function sort_group_subwidgets(tbl)
+	for _, group in ipairs(tbl.sub_widgets) do
+		if group.type == "group" and group.sub_widgets then
+			table.sort(group.sub_widgets, function(a, b)
+				return a.setting_id < b.setting_id
+			end)
+		end
+	end
+end
+sort_group_subwidgets(filter)
+
+-- Add group toggles
+for _, group in ipairs(filter.sub_widgets) do
+	if group.type == "group" and group.sub_widgets then
+		table.insert(group.sub_widgets, 1, {
+			setting_id = group.setting_id .. "_toggle",
+			type = "checkbox",
+			default_value = false,
+		})
+	end
+end
 
 return {
 	name = mod:localize("mod_name"),
@@ -12,6 +103,24 @@ return {
 				setting_id  = "global_settings",
 				type        = "group",
 				sub_widgets = {
+					{
+						setting_id    = "mod_enabled",
+						type          = "checkbox",
+						default_value = false,
+					},
+					{
+						setting_id    = "mod_enable_toggle",
+						type          = "keybind",
+						default_value = {},
+						keybind_trigger = "pressed",
+						keybind_type    = "function_call",
+						function_name   = "toggle_mod",
+					},
+					{
+						setting_id    = "mod_enable_verbose",
+						type          = "checkbox",
+						default_value = false,
+					},
 					{
 						setting_id    = "filter_primary",
 						type          = "checkbox",
@@ -40,553 +149,7 @@ return {
 					--]]
 				}
 			},
-			-- Primary Filter
-			{
-				setting_id = "primary_filter",
-				type       = "group",
-				sub_widgets = {
-					{
-						setting_id   = "boss_group0primary",
-						type		 = "group",
-						sub_widgets  = {
-							{
-								setting_id	  = "boss_enable0primary",
-								type		  = "checkbox",
-								tooltip       = "enable_tooltip",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_beast_of_nurgle0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_daemonhost0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_mutator_daemonhost0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_plague_ogryn0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_spawn0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_captain0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_captain0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_twin_captain0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_twin_captain_two0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-						}
-					},
-					-- ELITES
-					{
-						setting_id   = "elite_group0primary",
-						type		 = "group",
-						sub_widgets = {
-							{
-								setting_id	  = "elite_enable0primary",
-								type		  = "checkbox",
-								tooltip       = "enable_tooltip",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_ogryn_bulwark0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_ogryn_executor0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_ogryn_gunner0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_gunner0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_gunner0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_berzerker0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_berzerker0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_executor0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_shocktrooper0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_shocktrooper0primary",
-								type          = "checkbox",
-								default_value = true
-							}
-						}
-					},
-					
-					-- SPECIALS
-					{
-						setting_id  = "special_group0primary",
-						type		= "group",
-						sub_widgets = {
-							{
-								setting_id	  = "special_enable0primary",
-								type		  = "checkbox",
-								tooltip       = "enable_tooltip",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_netgunner0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_sniper0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_flamer0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_flamer0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_grenadier0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_grenadier0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_poxwalker_bomber0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_hound0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_hound_mutator0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_mutant0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_mutant_mutator0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id = "renegade_radio_operator0primary",
-								type       = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_ritualist0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_mutator_ritualist0primary",
-								type          = "checkbox",
-								default_value = true
-							}
-						}
-					},
-					-- FODDER
-					{
-						setting_id  = "fodder_group0primary",
-						type		= "group",
-						sub_widgets = {
-							{
-								setting_id	  = "fodder_enable0primary",
-								type		  = "checkbox",
-								tooltip       = "enable_tooltip",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_newly_infected0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_poxwalker0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_lesser_mutated_poxwalker0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_mutated_poxwalker0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_armored_infected0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_rifleman0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_assault0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_assault0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_melee0primary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_melee0primary",
-								type          = "checkbox",
-								default_value = true
-							}
-						}
-					}
-				}
-			},
-			{
-				setting_id = "secondary_filter",
-				type       = "group",
-				sub_widgets = {
-					{
-						setting_id   = "boss_group0secondary",
-						type		 = "group",
-						sub_widgets  = {
-							{
-								setting_id	  = "boss_enable0secondary",
-								type		  = "checkbox",
-								tooltip       = "enable_tooltip",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_beast_of_nurgle0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_daemonhost0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_mutator_daemonhost0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_plague_ogryn0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_spawn0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_captain0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_captain0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_twin_captain0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_twin_captain_two0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-						}
-					},
-					-- ELITES
-					{
-						setting_id   = "elite_group0secondary",
-						type		 = "group",
-						sub_widgets = {
-							{
-								setting_id	  = "elite_enable0secondary",
-								type		  = "checkbox",
-								tooltip       = "enable_tooltip",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_ogryn_bulwark0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_ogryn_executor0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_ogryn_gunner0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_gunner0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_gunner0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_berzerker0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_berzerker0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_executor0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_shocktrooper0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_shocktrooper0secondary",
-								type          = "checkbox",
-								default_value = true
-							}
-						}
-					},
-					
-					-- SPECIALS
-					{
-						setting_id  = "special_group0secondary",
-						type		= "group",
-						sub_widgets = {
-							{
-								setting_id	  = "special_enable0secondary",
-								type		  = "checkbox",
-								tooltip       = "enable_tooltip",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_netgunner0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_sniper0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_flamer0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_flamer0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_grenadier0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_grenadier0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_poxwalker_bomber0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_hound0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_hound_mutator0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_mutant0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_mutant_mutator0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id = "renegade_radio_operator0secondary",
-								type       = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_ritualist0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_mutator_ritualist0secondary",
-								type          = "checkbox",
-								default_value = true
-							}
-						}
-					},
-					-- FODDER
-					{
-						setting_id  = "fodder_group0secondary",
-						type		= "group",
-						sub_widgets = {
-							{
-								setting_id	  = "fodder_enable0secondary",
-								type		  = "checkbox",
-								tooltip       = "enable_tooltip",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_newly_infected0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_poxwalker0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_lesser_mutated_poxwalker0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_mutated_poxwalker0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "chaos_armored_infected0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_rifleman0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_assault0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_assault0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "renegade_melee0secondary",
-								type          = "checkbox",
-								default_value = true
-							},
-							{
-								setting_id    = "cultist_melee0secondary",
-								type          = "checkbox",
-								default_value = true
-							}
-						}
-					}
-				}
-			}
+			filter,
 		}
 	}
 }

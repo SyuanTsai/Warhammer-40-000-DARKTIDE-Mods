@@ -1,458 +1,224 @@
-return {
-	-- Mod Info
-	mod_description = {
-		en = "For my Beloved!",
-		["zh-tw"] = "獻給我摯愛的人！",
-	},
-	mod_name = {
-		en = "Emperor's Guidance",
-		["zh-tw"] = "皇帝的指引",
-	},
-	enable_tooltip = {
-		en = "Enable/Disable all enemies in this group.",
-		["zh-tw"] = "啟用/停用此組所有敵人。",
-	},
-	visibility_tooltip = {
-		en = "Show/hide this group. Does not impact settings.",
-		["zh-tw"] = "顯示/隱藏此組，不影響設定。",
-	},
-	-- Global Settings
-	global_settings = {
-		en = "Global Settings",
-		["zh-tw"] = "全域設定",
-	},
-	filter_primary = {
-		en = "Apply Filter to Primary",
-		["zh-tw"] = "將過濾器應用於主篩選",
-	},
-	filter_secondary = {
-		en = "Apply Filter to Secondary",
-		["zh-tw"] = "將過濾器應用於次篩選",
-	},
-	copy_primary_to_secondary = {
-		en = "Use Primary Filter for Secondary",
-		["zh-tw"] = "次篩選使用主篩選設定",
-	},
-	copy_primary_to_secondary_tooltip = {
-		en = "If enabled, secondary fire will use the filter list defined for primary fire, rather than its own unique filter.",
-		["zh-tw"] = "若啟用，次篩選將使用主篩選設定，而非獨立的篩選。",
-	},
-	-- Breed Categories/Toggles
-	primary_filter = {
-		en = "Primary Filter",
-		["zh-tw"] = "主篩選",
-	},
-	secondary_filter = {
-		en = "Secondary Filter",
-		["zh-tw"] = "次篩選",
-	},
-	boss_group0primary = {
-		en = "Bosses",
-		["zh-tw"] = "首領",
-	},
-	elite_group0primary = {
-		en = "Elites",
-		["zh-tw"] = "精英",
-	},
-	special_group0primary = {
-		en = "Specials",
-		["zh-tw"] = "特殊",
-	},
-	fodder_group0primary = {
-		en = "Fodder",
-		["zh-tw"] = "雜兵",
-	},
-	boss_group0secondary = {
-		en = "Bosses",
-		["zh-tw"] = "首領",
-	},
-	elite_group0secondary = {
-		en = "Elites",
-		["zh-tw"] = "精英",
-	},
-	special_group0secondary = {
-		en = "Specials",
-		["zh-tw"] = "專家",
-	},
-	fodder_group0secondary = {
-		en = "Fodder",
-		["zh-tw"] = "雜兵",
-	},
-	boss_enable0primary = {
-		en = "Enable/Disable Bosses",
-		["zh-tw"] = "啟用/停用首領",
-	},
-	elite_enable0primary = {
-		en = "Enable/Disable Elites",
-		["zh-tw"] = "啟用/停用精英",
-	},
-	special_enable0primary = {
-		en = "Enable/Disable Specials",
-		["zh-tw"] = "啟用/停用專家敵人",
-	},
-	fodder_enable0primary = {
-		en = "Enable/Disable Fodder",
-		["zh-tw"] = "啟用/停用雜兵",
-	},
-	boss_enable0secondary = {
-		en = "Enable/Disable Bosses",
-		["zh-tw"] = "啟用/停用首領",
-	},
-	elite_enable0secondary = {
-		en = "Enable/Disable Elites",
-		["zh-tw"] = "啟用/停用精英",
-	},
-	special_enable0secondary = {
-		en = "Enable/Disable Specials",
-		["zh-tw"] = "啟用/停用專家敵人",
-	},
-	fodder_enable0secondary = {
-		en = "Enable/Disable Fodder",
-		["zh-tw"] = "啟用/停用雜兵",
-	},
-	-- PRIMARY FILTER
-	chaos_beast_of_nurgle0primary = {
-		en = "Beast of Nurgle",
-		["zh-tw"] = "納垢巨獸",
-	},
-	chaos_plague_ogryn0primary = {
-		en = "Plague Ogryn",
-		["zh-tw"] = "瘟疫歐格林",
-	},
-	chaos_spawn0primary = {
-		en = "Chaos Spawn",
-		["zh-tw"] = "混沌魔物",
-	},
-	chaos_daemonhost0primary = {
-		en = "Daemonhost",
-		["zh-tw"] = "惡魔宿主",
-	},
-	chaos_mutator_daemonhost0primary = {
-		en = "Daemonhost (Havoc)",
-		["zh-tw"] = "惡魔宿主 (浩劫)",
-	},
-	cultist_captain0primary = {
-		en = "Admonition Champion",
-		["zh-tw"] = "告誡冠軍",
-	},
-	renegade_captain0primary = {
-		en = "Scab Captain",
-		["zh-tw"] = "血痂隊長",
-	},
-	renegade_twin_captain0primary = {
-		en = "Twin Captain (Rinda)",
-		["zh-tw"] = "雙子隊長（琳達）",
-	},
-	renegade_twin_captain_two0primary = {
-		en = "Twin Captain (Rodin)",
-		["zh-tw"] = "雙子隊長（羅丁）",
-	},
-	chaos_ogryn_bulwark0primary = {
-		en = "Bulwark",
-		["zh-tw"] = "堡壘",
-	},
-	chaos_ogryn_executor0primary = {
-		en = "Crusher",
-		["zh-tw"] = "輾壓者",
-	},
-	chaos_ogryn_gunner0primary = {
-		en = "Reaper",
-		["zh-tw"] = "收割者",
-	},
-	renegade_executor0primary = {
-		en = "Mauler",
-		["zh-tw"] = "重錘兵",
-	},
-	renegade_berzerker0primary = {
-		en = "Scab Rager",
-		["zh-tw"] = "血痂狂暴者",
-	},
-	renegade_shocktrooper0primary = {
-		en = "Scab Shotgunner",
-		["zh-tw"] = "血痂霰彈兵",
-	},
-	renegade_gunner0primary = {
-		en = "Scab Gunner",
-		["zh-tw"] = "血痂炮手",
-	},
-	cultist_berzerker0primary = {
-		en = "Dreg Rager",
-		["zh-tw"] = "渣滓狂怒者",
-	},
-	cultist_shocktrooper0primary = {
-		en = "Dreg Shotgunner",
-		["zh-tw"] = "渣滓霰彈兵",
-	},
-	cultist_gunner0primary = {
-		en = "Dreg Gunner",
-		["zh-tw"] = "渣滓炮手",
-	},
-	chaos_hound0primary = {
-		en = "Pox Hound",
-		["zh-tw"] = "瘟疫獵犬",
-	},
-	chaos_hound_mutator0primary = {
-		en = "Pox Hound (Swarm Variant)",
-		["zh-tw"] = "瘟疫獵犬（群體變異型）",
-	},
-	chaos_poxwalker_bomber0primary = {
-		en = "Poxburster",
-		["zh-tw"] = "瘟疫爆者",
-	},
-	renegade_flamer0primary = {
-		en = "Scab Flamer",
-		["zh-tw"] = "血痂噴火兵",
-	},
-	renegade_grenadier0primary = {
-		en = "Scab Bomber",
-		["zh-tw"] = "血痂轟炸者",
-	},
-	renegade_netgunner0primary = {
-		en = "Trapper",
-		["zh-tw"] = "陷阱手",
-	},
-	renegade_radio_operator0primary = {
-		en = "Radio Operator",
-	},
-	renegade_sniper0primary = {
-		en = "Sniper",
-		["zh-tw"] = "狙擊手",
-	},
-	cultist_flamer0primary = {
-		en = "Dreg Flamer",
-		["zh-tw"] = "渣滓噴火兵",
-	},
-	cultist_grenadier0primary = {
-		en = "Tox Bomber",
-		["zh-tw"] = "劇毒擲彈兵",
-	},
-	cultist_mutant0primary = {
-		en = "Mutant",
-		["zh-tw"] = "變種人",
-	},
-	cultist_mutant_mutator0primary = {
-		en = "Mutant (Swarm Variant)",
-		["zh-tw"] = "變種人",
-	},
-	cultist_ritualist0primary = {
-		en = "Admonition Ritualist",
-		["zh-tw"] = "告誡軍祭儀師",
-	},
-	chaos_mutator_ritualist0primary = {
-		en = "Admonition Ritualist (Havoc)",
-		["zh-tw"] = "告誡軍祭儀師 (浩劫)",
-	},
-	chaos_poxwalker0primary = {
-		en = "Poxwalker",
-		["zh-tw"] = "瘟疫行屍",
-	},
-	chaos_newly_infected0primary = {
-		en = "Groaner",
-		["zh-tw"] = "呻吟者",
-	},
-	chaos_armored_infected0primary = {
-		en = "Mobian 21st",
-		["zh-tw"] = "莫比安第21團",
-	},
-	chaos_mutated_poxwalker0primary = {
-		en = "Mutated Poxwalker",
-		["zh-tw"] = "變異瘟疫行屍",
-	},
-	chaos_lesser_mutated_poxwalker0primary = {
-		en = "Lesser Mutated Poxwalker",
-		["zh-tw"] = "次級變異瘟疫行屍",
-	},
-	renegade_rifleman0primary = {
-		en = "Scab Shooter",
-		["zh-tw"] = "血痂射手",
-	},
-	renegade_assault0primary = {
-		en = "Scab Stalker",
-		["zh-tw"] = "血痂潛行者",
-	},
-	renegade_melee0primary = {
-		en = "Scab Bruiser",
-		["zh-tw"] = "血痂暴徒",
-	},
-	cultist_assault0primary = {
-		en = "Dreg Stalker",
-		["zh-tw"] = "渣滓潛行者",
-	},
-	cultist_melee0primary = {
-		en = "Dreg Bruiser",
-		["zh-tw"] = "渣滓暴徒",
-	},
-	-- SECONDARY FILTER
-	chaos_beast_of_nurgle0secondary = {
-		en = "Beast of Nurgle",
-		["zh-tw"] = "納垢巨獸",
-	},
-	chaos_plague_ogryn0secondary = {
-		en = "Plague Ogryn",
-		["zh-tw"] = "瘟疫歐格林",
-	},
-	chaos_spawn0secondary = {
-		en = "Chaos Spawn",
-		["zh-tw"] = "混沌魔物",
-	},
-	chaos_daemonhost0secondary = {
-		en = "Daemonhost",
-		["zh-tw"] = "惡魔宿主",
-	},
-	chaos_mutator_daemonhost0secondary = {
-		en = "Daemonhost (Havoc)",
-		["zh-tw"] = "惡魔宿主 (浩劫)",
-	},
-	cultist_captain0secondary = {
-		en = "Admonition Champion",
-		["zh-tw"] = "告誡冠軍",
-	},
-	renegade_captain0secondary = {
-		en = "Scab Captain",
-		["zh-tw"] = "血痂隊長",
-	},
-	renegade_twin_captain0secondary = {
-		en = "Twin Captain (Rinda)",
-		["zh-tw"] = "雙子隊長（琳達）",
-	},
-	renegade_twin_captain_two0secondary = {
-		en = "Twin Captain (Rodin)",
-		["zh-tw"] = "雙子隊長（羅丁）",
-	},
-	chaos_ogryn_bulwark0secondary = {
-		en = "Bulwark",
-		["zh-tw"] = "堡壘",
-	},
-	chaos_ogryn_executor0secondary = {
-		en = "Crusher",
-		["zh-tw"] = "輾壓者",
-	},
-	chaos_ogryn_gunner0secondary = {
-		en = "Reaper",
-		["zh-tw"] = "收割者",
-	},
-	renegade_executor0secondary = {
-		en = "Mauler",
-		["zh-tw"] = "重錘兵",
-	},
-	renegade_berzerker0secondary = {
-		en = "Scab Rager",
-		["zh-tw"] = "血痂狂暴者",
-	},
-	renegade_shocktrooper0secondary = {
-		en = "Scab Shotgunner",
-		["zh-tw"] = "血痂霰彈兵",
-	},
-	renegade_gunner0secondary = {
-		en = "Scab Gunner",
-		["zh-tw"] = "血痂炮手",
-	},
-	cultist_berzerker0secondary = {
-		en = "Dreg Rager",
-		["zh-tw"] = "渣滓狂怒者",
-	},
-	cultist_shocktrooper0secondary = {
-		en = "Dreg Shotgunner",
-		["zh-tw"] = "渣滓霰彈兵",
-	},
-	cultist_gunner0secondary = {
-		en = "Dreg Gunner",
-		["zh-tw"] = "渣滓炮手",
-	},
-	chaos_hound0secondary = {
-		en = "Pox Hound",
-		["zh-tw"] = "瘟疫獵犬",
-	},
-	chaos_hound_mutator0secondary = {
-		en = "Pox Hound (Swarm Variant)",
-		["zh-tw"] = "瘟疫獵犬（群體變異型）",
-	},
-	chaos_poxwalker_bomber0secondary = {
-		en = "Poxburster",
-		["zh-tw"] = "瘟疫爆者",
-	},
-	renegade_flamer0secondary = {
-		en = "Scab Flamer",
-		["zh-tw"] = "渣滓噴火兵",
-	},
-	renegade_grenadier0secondary = {
-		en = "Scab Bomber",
-		["zh-tw"] = "血痂轟炸者",
-	},
-	renegade_netgunner0secondary = {
-		en = "Trapper",
-		["zh-tw"] = "陷阱手",
-	},
-	renegade_radio_operator0secondary = {
-		en = "Radio Operator",
-	},
-	renegade_sniper0secondary = {
-		en = "Sniper",
-		["zh-tw"] = "狙擊手",
-	},
-	cultist_flamer0secondary = {
-		en = "Dreg Flamer",
-		["zh-tw"] = "渣滓噴火兵",
-	},
-	cultist_grenadier0secondary = {
-		en = "Tox Bomber",
-		["zh-tw"] = "劇毒轟炸者",
-	},
-	cultist_mutant0secondary = {
-		en = "Mutant",
-		["zh-tw"] = "變種人",
-	},
-	cultist_mutant_mutator0secondary = {
-		en = "Mutant (Swarm Variant)",
-		["zh-tw"] = "變種人",
-	},
-	cultist_ritualist0secondary = {
-		en = "Admonition Ritualist",
-		["zh-tw"] = "告誡軍祭儀師",
-	},
-	chaos_mutator_ritualist0secondary = {
-		en = "Admonition Ritualist (Havoc)",
-		["zh-tw"] = "告誡軍祭儀師 (浩劫)",
-	},
-	chaos_poxwalker0secondary = {
-		en = "Poxwalker",
-		["zh-tw"] = "瘟疫行屍",
-	},
-	chaos_newly_infected0secondary = {
-		en = "Groaner",
-		["zh-tw"] = "呻吟者",
-	},
-	chaos_armored_infected0secondary = {
-		en = "Mobian 21st",
-		["zh-tw"] = "莫比安第21團",
-	},
-	chaos_mutated_poxwalker0secondary = {
-		en = "Mutated Poxwalker",
-		["zh-tw"] = "變異瘟疫行屍",
-	},
-	chaos_lesser_mutated_poxwalker0secondary = {
-		en = "Lesser Mutated Poxwalker",
-		["zh-tw"] = "次級變異瘟疫行屍",
-	},
-	renegade_rifleman0secondary = {
-		en = "Scab Shooter",
-		["zh-tw"] = "血痂痕射手",
-	},
-	renegade_assault0secondary = {
-		en = "Scab Stalker",
-		["zh-tw"] = "血痂潛行者",
-	},
-	renegade_melee0secondary = {
-		en = "Scab Bruiser",
-		["zh-tw"] = "血痂暴徒",
-	},
-	cultist_assault0secondary = {
-		en = "Dreg Stalker",
-		["zh-tw"] = "渣滓潛行者",
-	},
-	cultist_melee0secondary = {
-		en = "Dreg Bruiser",
-		["zh-tw"] = "渣滓暴徒",
-	}
+local Breeds = require("scripts/settings/breed/breeds")
+
+localization = {
+    -- Mod Info
+    mod_description = {
+        en = "For my Beloved!",
+        ["zh-tw"] = "獻給我摯愛的人！",
+        ["zh-cn"] = "独一无二的小真寻",
+    },
+    mod_name = {
+        en = "Emperor's Guidance",
+        ["zh-tw"] = "帝皇的指引",
+        ["zh-cn"] = "捏头目标过滤",
+    },
+    enable_tooltip = {
+        en = "Enable/Disable all enemies in this group.",
+        ["zh-tw"] = "啟用/停用此組所有敵人。",
+        ["zh-cn"] = "启用/停用此组敌人",
+    },
+    visibility_tooltip = {
+        en = "Show/hide this group. Does not impact settings.",
+        ["zh-tw"] = "顯示/隱藏此組，不影響設定。",
+        ["zh-cn"] = "显示/隐藏此组，不影响设定",
+    },
+    -- Global Settings
+    global_settings = {
+        en = "Global Settings",
+        ["zh-tw"] = "全域設定",
+        ["zh-cn"] = "全局设定",
+    },
+    mod_enabled = {
+        en = "Enable/Disable Mod",
+        ["zh-tw"] = "啟用/停用模組",
+        ["zh-cn"] = "模组启停",
+    },
+	mod_enable_toggle = {
+        en = "Enable/Disable Mod (Toggle)",
+        ["zh-tw"] = "啟用/停用模組 (切換)",
+        ["zh-cn"] = "切换式模组启停",
+    },
+    mod_enable_verbose = {
+        en = "Notify on Mod Enabled/Disabled",
+        ["zh-tw"] = "模組狀態通知",
+        ["zh-cn"] = "模组状态通知",
+    },
+    -- Filter Settings
+    filter_settings = {
+        en = "Filter Settings",
+        ["zh-tw"] = "篩選設定",
+        ["zh-cn"] = "筛选设定",
+    },
+    filter_primary = {
+        en = "Filter Primary Fire",
+        ["zh-tw"] = "主要篩選(最高優先)",
+        ["zh-cn"] = "过滤器优先级 高",
+    },
+    filter_secondary = {
+        en = "Filter Secondary Fire",
+        ["zh-tw"] = "次要篩選(低優先)",
+        ["zh-cn"] = "过滤器优先级 低",
+    },
+    copy_primary_to_secondary = {
+        en = "Use Primary Filter for Secondary",
+        ["zh-tw"] = "次要篩選套用主要篩選設定",
+        ["zh-cn"] = "低优先级沿用高优先级筛选设定",
+    },
+    copy_primary_to_secondary_tooltip = {
+        en = "If enabled, secondary fire will use the filter list defined for primary fire, rather than its own unique filter.",
+        ["zh-tw"] = "啟用時，次篩選將套用主篩選設定，而非獨立的篩選。",
+        ["zh-cn"] = "次级筛选沿用主级筛选配置———高优先级",
+    },
+    -- Filter Selection
+    filter_select = {
+        en = "Filter Selection",
+        ["zh-tw"] = "篩選器設定",
+        ["zh-cn"] = "筛选器设置",
+    },
+    filter_select_primary = {
+        en = "Primary Fire",
+        ["zh-tw"] = "主要目標",
+        ["zh-cn"] = "主开火",
+    },
+    filter_select_secondary = {
+        en = "Secondary Fire",
+        ["zh-tw"] = "次要目標",
+        ["zh-cn"] = "副开火",
+    },
+    -- Group Names
+    boss_group = {
+        en = "Bosses",
+        ["zh-tw"] = "Boss",
+        ["zh-cn"] = "Boss",
+    },
+    elite_group = {
+        en = "Elites",
+        ["zh-tw"] = "精英",
+        ["zh-cn"] = "精英",
+    },
+    special_group = {
+        en = "Specials",
+        ["zh-tw"] = "專家",
+        ["zh-cn"] = "特殊",
+    },
+    fodder_group = {
+        en = "Fodder",
+        ["zh-tw"] = "雜兵",
+        ["zh-cn"] = "炮灰",
+    },
+    -- Group Toggles
+    global_group_toggle = {
+        en = "ENABLE/DISABLE ALL",
+        ["zh-tw"] = "啟用/停用全部！",
+        ["zh-cn"] = "启用/禁用全部！",
+    },
+    boss_group_toggle = {
+        en = "ENABLE/DISABLE BOSSES",
+        ["zh-tw"] = "啟用/停用Boss！",
+        ["zh-cn"] = "启用/禁用Boss！",
+    },
+    elite_group_toggle = {
+        en = "ENABLE/DISABLE ELITES",
+        ["zh-tw"] = "啟用/停用精英！",
+        ["zh-cn"] = "启用/禁用精英！",
+    },
+    special_group_toggle = {
+        en = "ENABLE/DISABLE SPECIALS",
+        ["zh-tw"] = "啟用/停用專家敵人！",
+        ["zh-cn"] = "启用/禁用专家敌人！",
+    },
+    fodder_group_toggle = {
+        en = "ENABLE/DISABLE FODDER",
+        ["zh-tw"] = "啟用/停用雜兵！",
+        ["zh-cn"] = "启用/禁用炮灰！",
+    }
 }
 
+-- MANUAL LOCALIZATION FOR ENEMIES THE GAME LACKS NAMES FOR
+local manual = {
+    chaos_mutated_poxwalker = {
+        en = "Mutated Poxwalker",
+        ["zh-tw"] = "變異瘟疫行屍",
+        ["zh-cn"] = "变异瘟疫行者（炮灰）"
+    },
+    chaos_lesser_mutated_poxwalker = {
+        en = "Lesser Mutated Poxwalker",
+        ["zh-tw"] = "次級變異瘟疫行屍",
+        ["zh-cn"] = "次级变异瘟疫行者（炮灰）"
+    }
+}
+
+-- SEMI-AUTOMATED SUFFIX LOCALIZATION FOR "MUTATOR" ENEMIES
+local en_suffix    = " (Variant)"
+local zh_tw_suffix = "（變體）"
+local zh_cn_suffix = "（变体）"
+
+--------------------------------------------------------------------------
+-- PLEASE DO NOT EDIT BEYOND THIS POINT IF YOU ARE ADDING LOCALIZATIONS --
+--------------------------------------------------------------------------
+
+local manual_localization = {
+    chaos_mutated_poxwalker = true,
+    chaos_lesser_mutated_poxwalker = true
+}
+
+-- Automated localization for enemy names
+for breed_name, breed in pairs(Breeds) do
+	if breed.tags.minion and not breed.tags.companion then
+		local display_name = Localize(breed.display_name)
+        local skip = false         -- Unlocalized, do not add to localization
+        local special_case = false -- Unlocalized, add manual localization
+        if not display_name or string.find(display_name, "unlocalized") then
+            -- Locate closest match for mutator enemies
+            if string.find(breed_name, "mutator") then
+                for alt_breed_name, _ in pairs(Breeds) do
+                    if not string.find(alt_breed_name, "mutator") then
+                        local base_name = breed_name:gsub("mutator_", "")
+                        if string.find(alt_breed_name, base_name, 1, true) then
+                            display_name = Localize(Breeds[alt_breed_name].display_name)
+                            break
+                        end
+                    end
+                end
+            end
+            -- Skip items that cannot be localized
+            if not display_name or string.find(display_name, "unlocalized") then
+                if manual_localization[breed_name] then
+                    special_case = true
+                end
+                skip = true
+            end
+        end
+        if special_case or not skip then
+            local primary = breed_name
+            --local secondary = breed_name .. "0secondary"
+            -- Unlocalized enemies
+            if manual_localization[breed_name] then
+                localization[primary]   = manual[breed_name]
+                --localization[secondary] = manual[breed_name]
+            -- Mutator enemies
+            elseif string.find(breed_name, "mutator") then
+                localization[primary] = {
+			        en        = display_name .. en_suffix,
+                    ["zh-tw"] = display_name .. zh_tw_suffix,
+                    ["zh-cn"] = display_name .. zh_cn_suffix
+                }
+                --localization[secondary] = {
+                --    en        = display_name .. en_suffix,
+                --    ["zh-tw"] = display_name .. zh_tw_suffix,
+                --    ["zh-cn"] = display_name .. zh_cn_suffix
+                --}
+            -- Standard enemies
+            else
+                localization[primary] = {
+                    en = display_name
+                }
+                --localization[secondary] = {
+                --    en = display_name
+                --}
+            end
+        end
+	end
+end
+
+return localization
