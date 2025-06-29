@@ -323,6 +323,13 @@ return {
 						default_value = false,
 					},
 					{
+						setting_id = "special_buff_stacks",
+						type = "numeric",
+						default_value = 0,
+						range = {0, 3},
+						unit_text = "buff_stacks",
+					},
+					{
 						setting_id = "always_special",
 						tooltip = "always_special_tooltip",
 						type = "checkbox",
