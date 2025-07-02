@@ -4,47 +4,101 @@ local UIFontSettings = require("scripts/managers/ui/ui_font_settings")
 local UIWidget = require("scripts/managers/ui/ui_widget")
 local template = {}
 
-local max_size_value = 128
+local max_size_value = 98
 
-local size = {max_size_value, max_size_value}
-local ping_size = {max_size_value, max_size_value}
-local arrow_size = {max_size_value, max_size_value}
-local icon_size = {max_size_value / 4, max_size_value / 4}
-local background_size = {max_size_value, max_size_value}
-local line_size = {250, 5}
-local bar_size = {210, 10}
+local size = {
+    max_size_value,
+    max_size_value
+}
+local ping_size = {
+    max_size_value,
+    max_size_value
+}
+local arrow_size = {
+    max_size_value,
+    max_size_value
+}
+local icon_size = {
+    max_size_value / 2,
+    max_size_value / 2
+}
+local background_size = {
+    max_size_value,
+    max_size_value
+}
+local line_size = {
+    250,
+    5
+}
+local bar_size = {
+    210,
+    10
+}
 local scale_fraction = 0.75
 
 template.size = size
-template.name = "med_marker"
+template.name = "martyrs_skull_guide"
 template.unit_node = "ui_marker"
+template.min_distance = 0
 template.size = size
 template.unit_node = "ui_interaction_marker"
 template.icon_size = icon_size
 template.ping_size = ping_size
 
-template.check_line_of_sight = mod:get("ammo_med_require_line_of_sight") or false
-template.screen_clamp = mod:get("ammo_med_keep_on_screen") or false
+template.check_line_of_sight = mod:get("martyrs_skull_require_line_of_sight") or false
+template.screen_clamp = mod:get("martyrs_skull_keep_on_screen") or false
 
 template.evolve_distance = 1
-template.max_distance = mod:get("ammo_med_max_distance") or 30
-
-template.data = {type = "medical_crate_deployable"}
+template.max_distance = mod:get("martyrs_skull_max_distance") or 50
+template.data = {}
 
 template.scale = 1
 
 template.line_of_sight_speed = 15
 
-template.min_size = {size[1] * scale_fraction, size[2] * scale_fraction}
-template.max_size = {size[1], size[2]}
-template.icon_min_size = {icon_size[1] * scale_fraction, icon_size[2] * scale_fraction}
-template.icon_max_size = {icon_size[1], icon_size[2]}
-template.background_min_size = {background_size[1] * scale_fraction, background_size[2] * scale_fraction}
-template.background_max_size = {background_size[1], background_size[2]}
-template.ping_min_size = {ping_size[1] * scale_fraction, ping_size[2] * scale_fraction}
-template.ping_max_size = {ping_size[1], ping_size[2]}
-template.position_offset = {0, 0, 1}
-template.screen_margins = {down = 0.23148148148148148, left = 0.234375, right = 0.234375, up = 0.23148148148148148}
+template.min_size = {
+    size[1] * scale_fraction,
+    size[2] * scale_fraction
+}
+template.max_size = {
+    size[1],
+    size[2]
+}
+template.icon_min_size = {
+    icon_size[1] * scale_fraction,
+    icon_size[2] * scale_fraction
+}
+template.icon_max_size = {
+    icon_size[1],
+    icon_size[2]
+}
+template.background_min_size = {
+    background_size[1] * scale_fraction,
+    background_size[2] * scale_fraction
+}
+template.background_max_size = {
+    background_size[1],
+    background_size[2]
+}
+template.ping_min_size = {
+    ping_size[1] * scale_fraction,
+    ping_size[2] * scale_fraction
+}
+template.ping_max_size = {
+    ping_size[1],
+    ping_size[2]
+}
+template.position_offset = {
+    0,
+    0,
+    1
+}
+template.screen_margins = {
+    down = 0.23148148148148148,
+    left = 0.234375,
+    right = 0.234375,
+    up = 0.23148148148148148
+}
 
 template.scale_settings = {
     scale_from = 0.4,
@@ -66,67 +120,85 @@ template.fade_settings = {
 template.create_widget_defintion = function(template, scenegraph_id)
     local size = template.size
 
-    local title_text_style = table.clone(UIFontSettings.header_2)
-
-    title_text_style.horizontal_alignment = "center"
-    title_text_style.vertical_alignment = "center"
-    title_text_style.size = icon_size
-    title_text_style.color = Color.ui_hud_green_super_light(255, true)
-    title_text_style.font_size = 14
-    title_text_style.offset = {0, 0, 900}
-    title_text_style.text_color = Color.ui_hud_green_super_light(255, true)
-    title_text_style.text_horizontal_alignment = "center"
-    title_text_style.text_vertical_alignment = "center"
-
     return UIWidget.create_definition(
         {
             {
                 pass_type = "texture",
                 style_id = "background",
-                value = "content/ui/materials/hud/interactions/frames/mission_back",
+                value = "content/ui/materials/hud/interactions/frames/point_of_interest_back",
                 value_id = "background",
                 style = {
                     horizontal_alignment = "center",
                     vertical_alignment = "center",
                     size = background_size,
-                    offset = {0, 0, 1},
-                    color = {150, 80, 80, 80}
+                    offset = {
+                        0,
+                        0,
+                        1
+                    },
+                    color = {
+                        150,
+                        80,
+                        80,
+                        80
+                    }
                 },
                 visibility_function = function(content, style)
                     return content.background ~= nil
                 end
+
             },
             {
                 pass_type = "texture",
                 style_id = "ring",
-                value = "content/ui/materials/hud/interactions/frames/mission_top",
+                value = "content/ui/materials/hud/interactions/frames/point_of_interest_top",
                 value_id = "ring",
                 style = {
                     horizontal_alignment = "center",
                     vertical_alignment = "center",
                     size = size,
-                    offset = {0, 0, 5},
-                    color = {255, 255, 255, 255}
+                    offset = {
+                        0,
+                        0,
+                        5
+                    },
+                    color = {
+                        255,
+                        255,
+                        255,
+                        255
+                    }
                 },
                 visibility_function = function(content, style)
                     return content.ring ~= nil
                 end
+
             },
             {
                 pass_type = "rotated_texture",
                 style_id = "ping",
-                value = "content/ui/materials/hud/interactions/frames/mission_tag",
+                value = "content/ui/materials/hud/interactions/frames/point_of_interest_tag",
                 value_id = "ping",
                 style = {
                     horizontal_alignment = "center",
                     vertical_alignment = "center",
                     size = ping_size,
-                    offset = {0, 0, 0},
-                    color = {255, 255, 255, 255}
+                    offset = {
+                        0,
+                        0,
+                        0
+                    },
+                    color = {
+                        255,
+                        255,
+                        255,
+                        255
+                    }
                 },
                 visibility_function = function(content, style)
                     return content.tagged
                 end
+
             },
             {
                 pass_type = "texture",
@@ -137,22 +209,22 @@ template.create_widget_defintion = function(template, scenegraph_id)
                     horizontal_alignment = "center",
                     vertical_alignment = "center",
                     size = icon_size,
-                    offset = {0, 0, 3},
-                    color = {255, 200, 175, 0}
+                    offset = {
+                        0,
+                        0,
+                        3
+                    },
+                    color = {
+                        0,
+                        200,
+                        175,
+                        0
+                    }
                 },
                 visibility_function = function(content, style)
                     return content.icon ~= nil
                 end
-            },
-            {
-                pass_type = "text",
-                style_id = "marker_text",
-                value = "",
-                value_id = "marker_text",
-                style = title_text_style,
-                visibility_function = function(content, style)
-                    return content.marker_text ~= nil
-                end
+
             },
             {
                 pass_type = "rotated_texture",
@@ -163,26 +235,33 @@ template.create_widget_defintion = function(template, scenegraph_id)
                     horizontal_alignment = "center",
                     vertical_alignment = "center",
                     size = arrow_size,
-                    offset = {0, 0, 2},
+                    offset = {
+                        0,
+                        0,
+                        2
+                    },
                     color = Color.ui_hud_green_super_light(255, true)
                 },
                 visibility_function = function(content, style)
                     return content.is_clamped and content.arrow ~= nil
-                end,
+                end
+,
                 change_function = function(content, style)
                     style.angle = content.angle
                 end
+
             }
-        },
-        scenegraph_id
+        }, scenegraph_id
     )
 end
+
 
 template.on_enter = function(widget)
     local content = widget.content
 
     content.spawn_progress_timer = 0
 end
+
 
 template.update_function = function(parent, ui_renderer, widget, marker, template, dt, t)
     local content = widget.content
@@ -205,7 +284,7 @@ template.update_function = function(parent, ui_renderer, widget, marker, templat
     end
 
     marker.ignore_scale = false
-    marker.scale = 1
+
     local global_scale = marker.ignore_scale and 1 or marker.scale
 
     if marker.raycast_initialized then
@@ -236,12 +315,8 @@ template.update_function = function(parent, ui_renderer, widget, marker, templat
     local ping_anim_progress = 0.5 + math.sin(Application.time_since_launch() * ping_speed) * 0.5
     local ping_pulse_size_increase = ping_anim_progress * 15
 
-    ping_size[1] =
-        (ping_min_size[1] + (ping_max_size[1] - ping_min_size[1]) * scale_progress + ping_pulse_size_increase) *
-        global_scale
-    ping_size[2] =
-        (ping_min_size[2] + (ping_max_size[2] - ping_min_size[2]) * scale_progress + ping_pulse_size_increase) *
-        global_scale
+    ping_size[1] = (ping_min_size[1] + (ping_max_size[1] - ping_min_size[1]) * scale_progress + ping_pulse_size_increase) * global_scale
+    ping_size[2] = (ping_min_size[2] + (ping_max_size[2] - ping_min_size[2]) * scale_progress + ping_pulse_size_increase) * global_scale
 
     local ping_pivot = ping_style.pivot
 
@@ -259,10 +334,8 @@ template.update_function = function(parent, ui_renderer, widget, marker, templat
 
     local background_size = style.background.size
 
-    background_size[1] =
-        (background_min_size[1] + (background_max_size[1] - background_min_size[1]) * scale_progress) * global_scale
-    background_size[2] =
-        (background_min_size[2] + (background_max_size[2] - background_min_size[2]) * scale_progress) * global_scale
+    background_size[1] = (background_min_size[1] + (background_max_size[1] - background_min_size[1]) * scale_progress) * global_scale
+    background_size[2] = (background_min_size[2] + (background_max_size[2] - background_min_size[2]) * scale_progress) * global_scale
 
     local animating = scale_progress ~= content.scale_progress
 
@@ -277,5 +350,6 @@ template.update_function = function(parent, ui_renderer, widget, marker, templat
 
     return animating
 end
+
 
 return template
