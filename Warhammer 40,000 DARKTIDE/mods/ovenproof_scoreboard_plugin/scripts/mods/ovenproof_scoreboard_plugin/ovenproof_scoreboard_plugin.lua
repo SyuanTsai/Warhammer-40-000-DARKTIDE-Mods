@@ -1,11 +1,26 @@
 local mod = get_mod("ovenproof_scoreboard_plugin")
+
+-- ########################
+-- REQUIRES
+-- ########################
 local PlayerUnitStatus = mod:original_require("scripts/utilities/attack/player_unit_status")
 local InteractionSettings = mod:original_require("scripts/settings/interaction/interaction_settings")
 local interaction_results = InteractionSettings.results
 local TextUtilities = mod:original_require("scripts/utilities/ui/text")
-local in_match
+--local SmallClipPickup = require("scripts/settings/pickup/pickups/consumable/small_clip_pickup")
+--local LargeClipPickup = require("scripts/settings/pickup/pickups/consumable/large_clip_pickup")
 
---mod:echo(os.date('%H:%M:%S'))
+-- #######
+-- Mod Locals
+-- #######
+local mod_version = "1.2.0-beta-branch"
+local debug_messages_enabled = mod:get("enable_debug_messages")
+
+local in_match
+local is_playing_havoc
+local havoc_manager
+-- ammo pickup given as a percentage, such as 0.85
+mod.ammunition_pickup_modifier = 1
 
 -- ########################
 -- Data tables
@@ -33,7 +48,6 @@ mod.melee_elites = {
 	"renegade_executor",
 	"chaos_ogryn_bulwark",
 	"chaos_ogryn_executor",
-	"renegade_radio_operator",
 }
 mod.ranged_elites = {
 	"cultist_gunner",
@@ -41,6 +55,7 @@ mod.ranged_elites = {
 	"cultist_shocktrooper",
 	"renegade_shocktrooper",
 	"chaos_ogryn_gunner",
+	"renegade_radio_operator",
 }
 mod.specials = {
 	"chaos_poxwalker_bomber",
@@ -49,13 +64,12 @@ mod.specials = {
 	"renegade_sniper",
 	"renegade_flamer",
 	"cultist_flamer",
-	"cultist_mutant_mutator",
-	"chaos_hound_mutator",
 }
 mod.disablers = {
 	"chaos_hound",
 	"chaos_hound_mutator",
 	"cultist_mutant",
+	"cultist_mutant_mutator",
 	"renegade_netgunner",
 }
 mod.bosses = {
@@ -76,10 +90,10 @@ mod.bosses = {
 mod.melee_attack_types ={
 	"melee",
 	"push",
-	"buff", -- Arbites power maul stun intervals
+	-- "buff", -- regular Shock Maul and Arbites power maul stun intervals. also covers warp
 }
 mod.melee_damage_profiles ={
-	"shockmaul_stun_interval_damage",
+	--"shockmaul_stun_interval_damage",
 	"powermaul_p2_stun_interval",
 	"powermaul_p2_stun_interval_basic",
 	"powermaul_shield_block_special",
@@ -88,21 +102,27 @@ mod.ranged_attack_types ={
 	"ranged",
 	"explosion",
 	"shout",
-	--"companion_dog", -- technically not melee/ranged, but should still count to total if it's disabled
 }
 mod.ranged_damage_profiles ={
 	"shock_grenade_stun_interval",
 	"psyker_protectorate_spread_chain_lightning_interval",
 	"default_chain_lighting_interval",
 	"psyker_smite_kill",
-	-- "adamant_companion_initial_pounce", -- never seen it come up but it's in the code
-	"adamant_companion_human_pounce",
-	"adamant_companion_ogryn_pounce",
-	"adamant_companion_monster_pounce",
 }
+mod.companion_attack_types ={
+	"companion_dog", -- covers the breed_pounce types
+}
+mod.companion_damage_profiles ={
+	"adamant_companion_initial_pounce", -- never seen it come up but it's in the code
+	-- "adamant_companion_human_pounce",
+	-- "adamant_companion_ogryn_pounce",
+	-- "adamant_companion_monster_pounce",
+	"shockmaul_stun_interval_damage",
+}
+
 mod.bleeding_damage_profiles ={
 	"bleeding",
-	"psyker_stun",
+	"psyker_stun", -- Mortis Trials psyker bleed
 }
 mod.burning_damage_profiles ={
 	"burning",
@@ -149,9 +169,12 @@ mod.ammunition = {
 	loc_pickup_deployable_ammo_crate_01 = "crate",
 	loc_pickup_consumable_small_grenade_01 = "grenades",
 }
+-- scripts/settings/pickup/pickups/consumable large_clip_pickup and small_clip_pickup
 mod.ammunition_percentage = {
 	small_clip = 0.15,
+	-- small_clip = SmallClipPickup.ammunition_percentage,
 	large_clip = 0.5,
+	-- large_clip = LargeClipPickup.ammunition_percentage,
 }
 mod.disabled_players = {}
 
@@ -189,7 +212,11 @@ mod:hook(CLASS.InteracteeExtension, "started", function(func, self, interactor_u
 	func(self, interactor_unit, ...)
 end)
 
---Hook to track materials picked up, health stations used, and ammo picked up
+-- ############
+-- Exploration: Equipment Use and Pickups
+--	Track materials picked up, health stations used, and ammo picked up
+--	Interactions
+-- ############
 mod:hook(CLASS.InteracteeExtension, "stopped", function(func, self, result, ...)
 	local scoreboard = get_mod("scoreboard")
 	if scoreboard then
@@ -227,8 +254,11 @@ mod:hook(CLASS.InteracteeExtension, "stopped", function(func, self, result, ...)
 						local current_ammo_combined = current_ammo_clip + current_ammo_reserve
 						local max_ammo_combined = max_ammo_clip + max_ammo_reserve
 						local ammo_missing = max_ammo_combined - current_ammo_combined
+						
+						-- Small boxes and Big bags
 						if ammo == "small_clip" or ammo == "large_clip" then
-							local pickup = math.ceil(mod.ammunition_percentage[ammo] * max_ammo_reserve)
+							-- ammunition_pickup_modifier to account for Havoc modifiers. set by state change check
+							local pickup = math.ceil(mod.ammunition_percentage[ammo] * mod.ammunition_pickup_modifier * max_ammo_reserve)
 							-- ^ Ammo pickups are rounded up by the game
 							local wasted = math.max(pickup - ammo_missing, 0)
 							--local pickup_pct = 100 * pickup / max_ammo_combined
@@ -248,10 +278,11 @@ mod:hook(CLASS.InteracteeExtension, "stopped", function(func, self, result, ...)
 								end
 								Managers.event:trigger("event_combat_feed_kill", unit, message)
 							end
+						-- Deployabla Ammo Crates
 						elseif ammo == "crate" then
 							scoreboard:update_stat("ammo_crates", account_id, 1)
 							if mod:get("ammo_messages") then
-								local missing_pct = 100 * ammo_missing / max_ammo_combined
+								local missing_pct = 100 * ((ammo_missing * mod.ammunition_pickup_modifier) / max_ammo_combined)
 								local ammo_taken = TextUtilities.apply_color_to_text(tostring(math.round(missing_pct)).."%", color)
 								local text_crate = TextUtilities.apply_color_to_text(mod:localize("message_ammo_crate_text"), color)
 								local message = mod:localize("message_ammo_crate", ammo_taken, text_crate)
@@ -266,7 +297,11 @@ mod:hook(CLASS.InteracteeExtension, "stopped", function(func, self, result, ...)
 	func(self, result, ...)
 end)
 
---Hook to track damage taken and number of times disabled/downed/killed
+-- ############
+-- Defense
+--	Track damage taken and times disabled/downed/killed
+--	Player State
+-- ############
 mod:hook(CLASS.PlayerHuskHealthExtension, "fixed_update", function(func, self, unit, dt, t, ...)
 	local scoreboard = get_mod("scoreboard")
 	if scoreboard then
@@ -315,7 +350,11 @@ mod:hook(CLASS.PlayerHuskHealthExtension, "fixed_update", function(func, self, u
 	func(self, unit, dt, t, ...)
 end)
 
---Hook to track number of times a player helped/revived/rescued an other player
+-- ############
+-- Defense: Helping Allies
+-- 	Tracks allies undisabled/revived/rescued
+--	Player Interactions
+-- ############
 mod:hook(CLASS.PlayerInteracteeExtension, "stopped", function(func, self, result, ...)
 	local scoreboard = get_mod("scoreboard")
 	if scoreboard then
@@ -341,7 +380,11 @@ mod:hook(CLASS.PlayerInteracteeExtension, "stopped", function(func, self, result
 	func(self, result, ...)
 end)
 
---Hook to track damage/kills/rates
+-- ############
+-- Offense
+--	Damage, kills, and crit/weakspot rate
+--	Attack reports
+-- ############
 mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, damage_profile, attacked_unit, attacking_unit, attack_direction, hit_world_position, hit_weakspot, damage, attack_result, attack_type, damage_efficiency, is_critical_strike, ...)
 	local scoreboard = get_mod("scoreboard")
 	if scoreboard then
@@ -350,6 +393,7 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 		local target_is_player = attacked_unit and player_from_unit(attacked_unit)
 		local actual_damage
 		
+		-- only add damage if done by a player. could there be a check for companion that can be associated with the player?
 		if player then
 			local account_id = player:account_id() or player:name()
 			
@@ -358,6 +402,7 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 				local breed_or_nil = unit_data_extension and unit_data_extension:breed()
 				local target_is_minion = breed_or_nil and Breed.is_minion(breed_or_nil)
 
+				-- only when hitting an npc (only enemies can be damaged by you)
 				if target_is_minion then
 					local unit_health_extension = ScriptUnit.has_extension(attacked_unit, "health_system")
 					local damage_taken = unit_health_extension and unit_health_extension:damage_taken()
@@ -371,6 +416,7 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 						end
 						scoreboard:update_stat("total_kills", account_id, 1)
 
+						-- killed a disabler while an ally was disabled
 						if table.array_contains(mod.disablers, breed_or_nil.name) then
 							for k,v in pairs(mod.disabled_players) do
 								if v == attacked_unit then
@@ -386,6 +432,9 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 					
 					scoreboard:update_stat("total_damage", account_id, actual_damage)
 					
+					-- ------------------------
+					-- Updating Fun Stuff
+					-- ------------------------
 					self._attack_report_tracker = self._attack_report_tracker or {}
 					self._attack_report_tracker[account_id] = self._attack_report_tracker[account_id] or {}
 					self._attack_report_tracker[account_id].highest_single_hit = self._attack_report_tracker[account_id].highest_single_hit or 0
@@ -400,6 +449,12 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 						scoreboard:update_stat("one_shots", account_id, 1)
 					end	
 
+					-- ------------------------
+					-- Splitting damage into subtypes (melee, ranged, etc.)
+					-- ------------------------
+					-- ------------
+					--	Melee
+					-- ------------
 					if table.array_contains(mod.melee_attack_types, attack_type) or table.array_contains(mod.melee_damage_profiles, damage_profile.name) then
 						self._melee_rate = (self._melee_rate or {})
 						self._melee_rate[account_id] = self._melee_rate[account_id] or {}
@@ -424,7 +479,9 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 						
 						mod:replace_row_value("melee_cr", account_id, self._melee_rate[account_id].cr)
 						mod:replace_row_value("melee_wr", account_id, self._melee_rate[account_id].wr)
-						
+					-- ------------
+					--	Ranged
+					-- ------------
 					elseif table.array_contains(mod.ranged_attack_types, attack_type) or table.array_contains(mod.ranged_damage_profiles, damage_profile.name) then
 						self._ranged_rate = self._ranged_rate or {}
 						self._ranged_rate[account_id] = self._ranged_rate[account_id] or {}
@@ -449,6 +506,45 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 						
 						mod:replace_row_value("ranged_cr", account_id, self._ranged_rate[account_id].cr)
 						mod:replace_row_value("ranged_wr", account_id, self._ranged_rate[account_id].wr)
+					-- ------------
+					--	Companion
+					-- ------------
+					elseif table.array_contains(mod.companion_attack_types, attack_type) or table.array_contains(mod.companion_damage_profiles, damage_profile.name) then
+						-- Crit and Weakspot rates don't matter
+						--[[
+						self._companion_rate = self._companion_rate or {}
+						self._companion_rate[account_id] = self._companion_rate[account_id] or {}
+						self._companion_rate[account_id].hits = self._companion_rate[account_id].hits or 0
+						self._companion_rate[account_id].hits = self._companion_rate[account_id].hits +1
+						self._companion_rate[account_id].weakspots = self._companion_rate[account_id].weakspots or 0
+						self._companion_rate[account_id].crits = self._companion_rate[account_id].crits or 0
+						]]
+						
+						scoreboard:update_stat("total_companion_damage", account_id, actual_damage)
+						--[[
+						if hit_weakspot then
+							self._companion_rate[account_id].weakspots = self._companion_rate[account_id].weakspots + 1
+						end
+						]]
+						--[[
+						if is_critical_strike then
+							self._companion_rate[account_id].crits = self._companion_rate[account_id].crits + 1
+						end
+						]]
+						if attack_result == "died" then
+							scoreboard:update_stat("total_companion_kills", account_id, 1)
+						end
+						
+						--[[
+						self._companion_rate[account_id].cr = self._companion_rate[account_id].crits / self._companion_rate[account_id].hits * 100
+						self._companion_rate[account_id].wr = self._companion_rate[account_id].weakspots / self._companion_rate[account_id].hits * 100
+						
+						mod:replace_row_value("companion_cr", account_id, self._companion_rate[account_id].cr)
+						mod:replace_row_value("companion_wr", account_id, self._companion_rate[account_id].wr)
+						]]
+					-- ------------
+					--	Bleed
+					-- ------------
 					elseif table.array_contains(mod.bleeding_damage_profiles, damage_profile.name) then
 						self._bleeding_rate = self._bleeding_rate or {}
 						self._bleeding_rate[account_id] = self._bleeding_rate[account_id] or {}
@@ -467,6 +563,9 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 						--self._bleeding_rate[account_id].cr = self._bleeding_rate[account_id].crits / self._bleeding_rate[account_id].hits * 100
 						
 						--mod:replace_row_value("bleeding_cr", account_id, self._bleeding_rate[account_id].cr)
+					-- ------------
+					--	Burning
+					-- ------------
 					elseif table.array_contains(mod.burning_damage_profiles, damage_profile.name) then
 						self._burning_rate = (self._burning_rate or {})
 						self._burning_rate[account_id] = (self._burning_rate[account_id] or {})
@@ -484,6 +583,9 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 						--self._burning_rate[account_id].cr = self._burning_rate[account_id].crits / self._burning_rate[account_id].hits * 100
 						
 						--mod:replace_row_value("burning_cr", account_id, self._burning_rate[account_id].cr)
+					-- ------------
+					--	Warp
+					-- ------------
 					elseif table.array_contains(mod.warpfire_damage_profiles, damage_profile.name) then
 						self._warpfire_rate = (self._warpfire_rate or {})
 						self._warpfire_rate[account_id] = (self._warpfire_rate[account_id] or {})
@@ -501,6 +603,9 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 						--self._warpfire_rate[account_id].cr = self._warpfire_rate[account_id].crits / self._warpfire_rate[account_id].hits * 100
 						
 						--mod:replace_row_value("warpfire_cr", account_id, self._warpfire_rate[account_id].cr)
+					-- ------------
+					-- 	Environmental
+					-- ------------
 					elseif table.array_contains(mod.environmental_damage_profiles, damage_profile.name) then
 						self._environmental_rate = (self._environmental_rate or {})
 						self._environmental_rate[account_id] = (self._environmental_rate[account_id] or {})
@@ -518,11 +623,18 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 						--self._environmental_rate[account_id].cr = self._environmental_rate[account_id].crits / self._environmental_rate[account_id].hits * 100
 						
 						--mod:replace_row_value("environmental_cr", account_id, self._environmental_rate[account_id].cr)
+					-- ------------
+					-- 	Error Catching
+					-- ------------
 					else
 						--Print damage profile and attack type of out of scope attacks
 						mod:echo("Player: "..player:name()..", Damage profile: " .. damage_profile.name .. ", attack type: " .. tostring(attack_type)..", damage: "..actual_damage)
 					end	
 
+					-- ------------------------
+					-- Categorizing which enemy was damaged
+					-- TODO maybe this could be a switch
+					-- ------------------------
 					if table.array_contains(mod.melee_lessers, breed_or_nil.name) then
 						scoreboard:update_stat("total_lesser_damage", account_id, actual_damage)
 						scoreboard:update_stat("melee_lesser_damage", account_id, actual_damage)
@@ -591,16 +703,46 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 	return func(self, damage_profile, attacked_unit, attacking_unit, attack_direction, hit_world_position, hit_weakspot, damage, attack_result, attack_type, damage_efficiency, is_critical_strike, ...)
 end)
 
---Function to check states
+-- ############
+-- Check Setting Changes
+-- ############
+function mod.on_setting_changed()
+	debug_messages_enabled = mod:get("enable_debug_messages")
+end
+
+-- ############
+-- Mod Startup Messages
+-- ############
+function mod.on_all_mods_loaded()
+	debug_messages_enabled = mod:get("enable_debug_messages")
+	--mod:echo(os.date('%H:%M:%S'))
+	mod:info("Version "..mod_version.." loaded uwu nya :3")
+end
+
+-- ############
+-- Check State Changes
+-- 	Entering a match
+-- ############
 function mod.on_game_state_changed(status, state_name)
+	-- think this means "entering gameplay" from "hub"
 	if state_name == "GameplayStateRun" and status == "enter" and Managers.state.mission:mission().name ~= "hub_ship" then
 		in_match = true
+		havoc_manager = Managers.state.havoc
+		is_playing_havoc = havoc_manager:is_havoc()
+		if is_playing_havoc then
+			mod.ammunition_pickup_modifier = havoc_manager:get_modifier_value("ammo_pickup_modifier")
+		else
+			mod.ammunition_pickup_modifier = 1 
+		end
 	else
 		in_match = false
+		is_playing_havoc = false
 	end
 end
 
---Function to manage blank rows
+-- ############
+-- Manage Blank Rows
+-- ############
 mod.manage_blank_rows = function()
 local scoreboard = get_mod("scoreboard")
 	if scoreboard and in_match then
@@ -623,15 +765,20 @@ local scoreboard = get_mod("scoreboard")
 	end
 end
 
---Function to set all blank rows
+-- ############
+-- Set All Blank Rows
+-- ############
 mod.set_blank_rows = function (self, account_id)
+	-- for i in range (1, 13), increment of 1
 	for i = 1,13,1 do
 		mod:replace_row_value("blank_"..i, account_id, "\u{200A}")
 	end
 	mod:replace_row_value("highest_single_hit", account_id, "\u{200A}0\u{200A}")
 end
 
+-- ############
 --Function to replace entire value in scoreboard
+-- ############
 mod.replace_row_value = function(self, row_name, account_id, value)
 local scoreboard = get_mod("scoreboard")
 	if scoreboard then
@@ -656,7 +803,9 @@ local scoreboard = get_mod("scoreboard")
 	end
 end
 
+-- ############
 --Function to force replacement of text value in scoreboard
+-- ############
 mod.replace_row_text = function(self, row_name, account_id, value)
 local scoreboard = get_mod("scoreboard")
 	if scoreboard then
@@ -671,7 +820,9 @@ local scoreboard = get_mod("scoreboard")
 	end
 end
 
+-- ############
 --Function to get a row value from scoreboard
+-- ############
 mod.get_row_value = function(self, row_name, account_id)
 	local scoreboard = get_mod("scoreboard")
 	if scoreboard then
@@ -680,6 +831,9 @@ mod.get_row_value = function(self, row_name, account_id)
 	end
 end
 
+-- ########################
+-- Row Categorization
+-- ########################
 mod.scoreboard_rows = {
 --Rows exploration_tier_0
 	{name = "total_material_pickups",
@@ -911,6 +1065,7 @@ mod.scoreboard_rows = {
 		summary = {
 			"melee_wr",
 			"ranged_wr",
+			-- "companion_wr", -- Don't think dogs can headshot
 		},
 		group = "group_1",
 		setting = "offense_rates",
@@ -923,6 +1078,24 @@ mod.scoreboard_rows = {
 		parent = "total_weakspot_rates",
 		setting = "offense_rates",
 	},
+	{name = "ranged_wr",
+		text = "row_ranged_weakspot_rate",
+		validation = "ASC",
+		iteration = "ADD",
+		group = "group_1",
+		parent = "total_weakspot_rates",
+		setting = "offense_rates",
+	},
+	--[[
+	{name = "companion_wr",
+		text = "row_companion_weakspot_rate",
+		validation = "ASC",
+		iteration = "ADD",
+		group = "group_1",
+		parent = "total_weakspot_rates",
+		setting = "offense_rates",
+	},
+	]]
 	{name = "total_critical_rates",
 		text = "row_total_critical_rates",
 		validation = "ASC",
@@ -930,6 +1103,7 @@ mod.scoreboard_rows = {
 		summary = {
 			"melee_cr",
 			"ranged_cr",
+			-- "companion_cr", -- Don't think dogs can crit
 		},
 		group = "group_1",
 		setting = "offense_rates",
@@ -942,14 +1116,6 @@ mod.scoreboard_rows = {
 		parent = "total_critical_rates",
 		setting = "offense_rates",
 	},
-	{name = "ranged_wr",
-		text = "row_ranged_weakspot_rate",
-		validation = "ASC",
-		iteration = "ADD",
-		group = "group_1",
-		parent = "total_weakspot_rates",
-		setting = "offense_rates",
-	},
 	{name = "ranged_cr",
 		text = "row_ranged_critical_rate",
 		validation = "ASC",
@@ -958,6 +1124,16 @@ mod.scoreboard_rows = {
 		parent = "total_critical_rates",
 		setting = "offense_rates",
 	},
+	--[[
+	{name = "companion_cr",
+		text = "row_companion_critical_rate",
+		validation = "ASC",
+		iteration = "ADD",
+		group = "group_1",
+		parent = "total_critical_rates",
+		setting = "offense_rates",
+	},
+	]]
 	--[[{name = "total_dot_rates_1",
 		text = "row_total_dot_rates_1",
 		validation = "ASC",
@@ -1057,6 +1233,7 @@ mod.scoreboard_rows = {
 		is_text = true,
 	},
 --Rows offense_tier_1
+	-- Melee Totals
 	{name = "total_melee",
 		text = "row_total_melee",
 		validation = "ASC",
@@ -1084,6 +1261,7 @@ mod.scoreboard_rows = {
 		parent = "total_melee",
 		setting = "offense_tier_1",
 	},
+	-- Ranged Totals
 	{name = "total_ranged",
 		text = "row_total_ranged",
 		validation = "ASC",
@@ -1111,6 +1289,35 @@ mod.scoreboard_rows = {
 		parent = "total_ranged",
 		setting = "offense_tier_1",
 	},
+	-- Companion Totals
+	{name = "total_companion",
+		text = "row_total_companion",
+		validation = "ASC",
+		iteration = "ADD",
+		summary = {
+			"total_companion_kills",
+			"total_companion_damage",
+		},
+		group = "group_1",
+		setting = "offense_tier_1",
+	},
+	{name = "total_companion_kills",
+		text = "row_kills",
+		validation = "ASC",
+		iteration = "ADD",
+		group = "group_1",
+		parent = "total_companion",
+		setting = "offense_tier_1",
+	},
+	{name = "total_companion_damage",
+		text = "row_damage",
+		validation = "ASC",
+		iteration = "ADD",
+		group = "group_1",
+		parent = "total_companion",
+		setting = "offense_tier_1",
+	},
+	-- Bleeding Totals
 	{name = "total_bleeding",
 		text = "row_total_bleeding",
 		validation = "ASC",
