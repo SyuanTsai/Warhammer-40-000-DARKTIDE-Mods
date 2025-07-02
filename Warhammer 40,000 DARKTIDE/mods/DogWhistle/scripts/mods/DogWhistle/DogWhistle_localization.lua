@@ -1,9 +1,6 @@
 local Breeds = require("scripts/settings/breed/breeds")
 local Archetypes = require("scripts/settings/archetype/archetypes")
 
--- Color quick ref:
--- dark: terminal_text_body_dark
-
 -- Text coloring function
 local crayon = function(text, color_name)
     local color = Color[color_name](255, true)
@@ -14,6 +11,8 @@ local crayon = function(text, color_name)
     end
 end
 
+-- Simplified Chinese localization provided by jcyl2023
+-- Traditional Chinese localization provided by SyuanTsai
 local localization = {
     --  ┌─┐┬ ┬┌─┐┬─┐┌─┐┌┬┐                        
     --  └─┐├─┤├─┤├┬┘├┤  ││                        
@@ -22,27 +21,34 @@ local localization = {
         en = string.format(
             crayon("This setting only applies to the Arbitrator class.", "terminal_text_header_disabled").."\n"..
             "Determines the type of tag applied to enemies for this tagging method."
-        )
+        ),
+        ["zh-cn"] = string.format(
+            crayon("仅适用于法务官", "terminal_text_header_disabled").."\n"..
+            "决定标记的类型"
+        ),
     },
     dog_tag = {
         en = "Cyber-Mastiff Attack Command",
-        ["zh-tw"] = "電子獒犬攻擊指令",
+        ["zh-cn"] = "智能獒犬 攻击命令",
+	    ["zh-tw"] = "電子獒犬攻擊指令",
     },
     standard_tag = {
         en = "Standard Tag",
-        ["zh-tw"] = "一般標記",
+        ["zh-cn"] = "普通标记",
+	    ["zh-tw"] = "一般標記",
     },
     none = {
         en = "None",
-        ["zh-tw"] = "無",
+        ["zh-cn"] = "无",
+	    ["zh-tw"] = "無",
     },
     --  ┌┬┐┌─┐┌┬┐                                 
     --  ││││ │ ││                                 
     --  ┴ ┴└─┘─┴┘  
     mod_name = {
         en = "Dog Whistle",
-        ["zh-cn"] = "狗哨",
-        ["zh-tw"] = "狗哨",
+        ["zh-cn"] = "狗哨 / 自动标记",
+	    ["zh-tw"] = "狗哨",
     },
     mod_settings = {
         en = "Mod Settings",
@@ -66,16 +72,20 @@ local localization = {
     },
     ignore_marked = {
         en = "Ignore Already Targeted Enemies",
+	    ["zh-cn"] = "忽略已标记目标",
         ["zh-tw"] = "忽略已標記敵人",
     },
     ignore_marked_tooltip = {
         en = string.format("If enabled, the mod will not target enemies which already have been marked by another Arbitrator's Cyber-Mastiff.\n"..
                            "When using Focus Target, this will ignore enemies with stacks of Focus Target from any other player.\n"),
+	    ["zh-cn"] = string.format("启用后，狗哨模组不会锁定已被另一个法务官的智能獒犬标记的敌人\n"..
+                                  "老兵基石聚焦目标（金标）已被其他玩家标记，也会忽略）\n"),
         ["zh-tw"] = string.format("若啟用，模組將不會標記已被其他法務官的電子獒犬標記的敵人。\n"..
                                   "使用聚焦目標時，這將忽略任何其他玩家施加的聚焦目標層數的敵人。\n"),
     },
     type_priority = {
         en = "Tag Prioritization",
+        ["zh-cn"] = "标记优先级",
         ["zh-tw"] = "標記優先等級",
     },
     type_priority_tooltip = {
@@ -85,6 +95,12 @@ local localization = {
             crayon("Standard Tag","terminal_text_body_sub_header")..": The mod will allow Standard Tags to override Cyber-Mastiff Attack Commands, regardless of other settings.\n"..
             crayon("None","terminal_text_body_sub_header")..": The mod will not prioritize either tag type over the other."
         ),
+        ["zh-cn"] = string.format(
+            crayon("仅适用于法务官", "terminal_text_header_disabled").."\n"..
+            crayon("智能獒犬 攻击命令","terminal_text_body_sub_header")..": 模组始终允许【智能獒犬攻击命令覆盖标准标签】，不论其他设置\n"..
+            crayon("标准标记","terminal_text_body_sub_header")..": 模组始终允许【标准标记覆盖智能獒犬攻击命令】，不管其他设置\n"..
+            crayon("无","terminal_text_body_sub_header")..": 模组不运行任何一种标签类型"
+	    ),
         ["zh-tw"] = string.format(
             crayon("此設定僅適用於法務官職業。", "terminal_text_header_disabled").."\n"..
             crayon("電子獒犬攻擊指令","terminal_text_body_sub_header").."：模組將始終允許電子獒犬攻擊指令覆蓋一般標記，無論其他設置如何。\n"..
@@ -97,6 +113,7 @@ local localization = {
     --  └┴┘┴ ┴┴└─┘ ┴ ┴─┘└─┘ 
     whistle_settings = {
         en = "Whistle Settings",
+	    ["zh-cn"] = "哨子设置",
         ["zh-tw"] = "哨兵設定",
     },
     dog_keybind = {
@@ -106,6 +123,7 @@ local localization = {
     },
     whistle_type = {
         en = "Whistle Tag Type",
+	    ["zh-cn"] = "哨子模式类型",
         ["zh-tw"] = "哨兵標記類型",
     },
     --  ┌─┐┬ ┬┌┬┐┌─┐  ┌┬┐┌─┐┬─┐┌─┐┌─┐┌┬┐          
@@ -113,6 +131,7 @@ local localization = {
     --  ┴ ┴└─┘ ┴ └─┘   ┴ ┴ ┴┴└─└─┘└─┘ ┴  
     auto_target_settings = {
         en = "Auto-Target Settings",
+	    ["zh-cn"] = "自动标记设置",
         ["zh-tw"] = "自動標記設定",
     },
     auto_target = {
@@ -122,6 +141,7 @@ local localization = {
     },
     auto_target_type = {
         en = "Auto-Target Tag Type",
+	["zh-cn"] = "自动标记模式类型",
         ["zh-tw"] = "自動標記類型",
     },
     dog_cooldown = {
@@ -131,7 +151,7 @@ local localization = {
     },
     no_retarget = {
         en = "Do not Auto-Retarget",
-        ["zh-cn"] = "禁止重新锁定",
+        ["zh-cn"] = "禁止重复锁定",
         ["zh-tw"] = "禁止重新鎖定",
     },
     no_retarget_tooltip = {
@@ -149,7 +169,7 @@ local localization = {
     },
     focus_target_stacks = {
         en = "Focus Target Stacks",
-        ["zh-cn"] = "聚焦目标（金标）层数",
+        ["zh-cn"] = "聚焦目标层数（金标）",
         ["zh-tw"] = "專注目標（金標）層數",
     },
     focus_target_stacks_tooltip = {
@@ -159,7 +179,7 @@ local localization = {
     },
     focus_target_retarget = {
         en = "Focus Target Retargeting",
-        ["zh-cn"] = "专注目标重标记规则",
+        ["zh-cn"] = "禁止重复锁定",
         ["zh-tw"] = "專注目標重標記規則",
     },
     focus_target_retarget_tooltip = {
@@ -167,8 +187,8 @@ local localization = {
         crayon("Disabled","terminal_text_body_sub_header")..": The mod will not reapply Focus Target tagging to enemies with an existing Focus Target tag.\n"..
         crayon("Enabled","terminal_text_body_sub_header")..": The mod will reapply Focus Target tagging to enemies with existing Focus Target tags, if current Focus Target stacks are higher than the amount applied to the target."),
         ["zh-cn"] = string.format(
-        crayon("禁用状态","terminal_text_body_sub_header").."：该模组不会对已存在聚焦目标标记的敌人重新施加标记，无论叠加层数如何变化。\n"..
-        crayon("启用状态", "terminal_text_body_sub_header") .. "：若当前聚焦目标的叠加层数高于目标现有标记的层数，模组将对已存在标记的敌人强制更新层数标记。"),
+        crayon("禁用状态","terminal_text_body_sub_header").."：模组不会对已经金标敌人再次重新标记，不论聚焦目标层数是多少\n"..
+        crayon("启用状态","terminal_text_body_sub_header").."：聚焦目标层数高于设定层数阈值，无论是否已被标记，都会重新锁定"),
         ["zh-tw"] = string.format(
         crayon("停用狀態","terminal_text_body_sub_header").."：模組不會對已存在專注目標標記的敵人重新施加標記，無論疊加層數如何變化。\n"..
         crayon("啟用狀態", "terminal_text_body_sub_header") .. "：若當前專注目標的疊加層數高於目標現有標記的層數，模組將對已存在標記的敵人強制更新層數標記。")
@@ -178,12 +198,12 @@ local localization = {
     --  ┴ ┴┴─┘┴─┘└─┘└┴┘└─┘─┴┘  └─┘┘└┘└─┘┴ ┴┴└─┘└─┘
     filter_settings = {
         en = "Allowed Enemies",
-        ["zh-cn"] = "自动目标设置",
+        ["zh-cn"] = "职业设置",
         ["zh-tw"] = "允許選定的敵人",
     },
     filter_target = {
         en = "Apply Filter To",
-        ["zh-cn"] = "将筛选器应用于",
+        ["zh-cn"] = "标记模式",
         ["zh-tw"] = "將篩選器應用於",
     },
     dog_manual = {
@@ -198,6 +218,7 @@ local localization = {
     },
     filter_archetype = {
         en = "Class Selection",
+	    ["zh-cn"] = "职业选择",
         ["zh-tw"] = "職業選擇",
     },
     elite_breeds = {
@@ -248,7 +269,7 @@ local localization = {
     },
     other_archetype_tooltip = {
         en = "When enabled, the mod's functionality will also be applied to standard tagging for non-Arbitrator classes.",
-        ["zh-cn"] = "开启后，模组功能将同时作用于非仲裁者职业的标准标记",
+        ["zh-cn"] = "开启后，模组功能将同时作用于非法务官职业的标准标记",
         ["zh-tw"] = "開啟後，模組功能將同時作用於非仲裁者職業的一般標記",
     },
     other_disabled = {

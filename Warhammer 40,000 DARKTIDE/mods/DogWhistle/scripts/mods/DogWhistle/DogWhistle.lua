@@ -14,6 +14,7 @@ local DOG = {
     ENABLED = true,               -- Flag indicating whether or not the mod is enabled
     OWNER   = nil,                -- Player archetype
     SHARED  = false,              -- Flag indicating whether or not non-Arbites classes are allowed to use the mod functionality
+    MANUAL  = 0,                  -- Flag indicating whether or not the player has pressed the manual (unmodded) tag keybind. If pressed, this is its timestamp.
     WHISTLE = false,              -- Flag indicating whether or not the player is currently holding the whistle keybind
     IGNORE  = false,              -- Flag indicating whether or not the mod should ignore enemies which are already targeted by another player
     AUTO = {
@@ -453,11 +454,11 @@ mod.get_tag_type = function()
             if mod.dog_hater() then
                 return "unit_threat"
             end
-            -- Whistle type check
+            -- If Whistle is active then use that tag type
             if DOG.WHISTLE then
                 return DOG.MODE.WHISTLE
             end
-            -- Auto type check
+            -- If Auto-Target is enabled while not using the Whistle keybind, then use Auto-Target tag type
             if DOG.AUTO.ENABLED then
                 return DOG.MODE.AUTO
             end
@@ -670,12 +671,15 @@ mod:hook_safe(CLASS.SmartTagSystem, "update", function(self, context, dt, t, ...
                     local data = ScriptUnit.has_extension(unit, "unit_data_system")
                     local breed = data and data:breed()
                     local enemy = breed and breed.name
-                    local valid_target = (marker == desired_tag) and enemy and DOG.TARGETS[DOG.OWNER] and DOG.TARGETS[DOG.OWNER][mode] and DOG.TARGETS[DOG.OWNER][mode][enemy]
+                    local valid_target = DOG.MANUAL > 0 or (marker == desired_tag) and enemy and DOG.TARGETS[DOG.OWNER] and DOG.TARGETS[DOG.OWNER][mode] and DOG.TARGETS[DOG.OWNER][mode][enemy]
                     -- Ignore check
                     if mod.ignore_tag(unit, breed) then
                         valid_target = false
                     end
                     if valid_target and DOG.LAST.TAG ~= tag_id then
+                        if DOG.MANUAL ~= 0 then
+                            DOG.MANUAL = 0 -- Reset manual tag flag after a successful tag
+                        end
                         DOG.LAST.TAG = tag_id
                         DOG.LAST.TYPE = marker
                         DOG.LAST.UNIT = unit
@@ -735,8 +739,13 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
         end
         -- Non-mod tagging (i.e. player pressed the vanilla tagging input)
         if out then
+            DOG.MANUAL = Managers.time:time("main")
             DOG.INPUT.SNAPSHOT = Managers.time:time("main")
             return out
+        end
+        -- Reset MANUAL flag after 0.2 seconds (DOG.INPUT.COOLDOWN.VETERAN for convenience) - enough time to register a tag, but short enough to avoid false positives
+        if DOG.MANUAL and (DOG.MANUAL + DOG.INPUT.COOLDOWN.VETERAN) < Managers.time:time("main") then
+            DOG.MANUAL = 0
         end
         -- Mod-driven tagging
         -- Disable whistle after successful tag
