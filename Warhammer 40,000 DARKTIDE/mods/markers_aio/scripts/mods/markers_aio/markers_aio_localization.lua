@@ -1402,6 +1402,14 @@ local loc = {
         ["zh-tw"] = "啟用標記",
         ["zh-cn"] = "启用图标"
     },
+    martyrs_skull_guide_enable = {
+        en = "Enable Skull Collection Guide?",
+        ["zh-tw"] = "啟用顱骨收集指南？",
+    },
+    martyrs_skull_guide_disable_if_collected = {
+        en = "Only show guide if not collected?",
+        ["zh-tw"] = "僅在未收集時顯示指南？",
+    },
     martyrs_skull_general_settings = {
         en = "General Settings",
         fr = "Paramètres généraux",
@@ -1476,15 +1484,17 @@ local loc = {
         ["zh-cn"] = "蓝"
     },
 
-
     Exclamation = {
-        en = "Exclamation"
+        en = "Exclamation",
+        ["zh-tw"] = "驚嘆號",
     },
     Hands = {
-        en = "Hands"
+        en = "Hands",
+        ["zh-tw"] = "手",
     },
     Fist = {
-        en = "Fist"
+        en = "Fist",
+        ["zh-tw"] = "拳頭",
     },
     Gold = {
         en = "Gold",
@@ -1516,35 +1526,366 @@ local loc = {
 
     -- new toggle LOS settings
     martyrs_skull_toggle_los = {
-        en = "Toggle 'Require Line of Sight'"
+        en = "Toggle 'Require Line of Sight'",
+        ["zh-tw"] = "切換「需要視線範圍」",
     },
     ammo_med_toggle_los = {
-        en = "Toggle 'Require Line of Sight'"
+        en = "Toggle 'Require Line of Sight'",
+        ["zh-tw"] = "切換「需要視線範圍」",
     },
     chest_toggle_los = {
-        en = "Toggle 'Require Line of Sight'"
+        en = "Toggle 'Require Line of Sight'",
+        ["zh-tw"] = "切換「需要視線範圍」",
     },
     heretical_idol_toggle_los = {
-        en = "Toggle 'Require Line of Sight'"
+        en = "Toggle 'Require Line of Sight'",
+        ["zh-tw"] = "切換「需要視線範圍」",
     },
     material_toggle_los = {
-        en = "Toggle 'Require Line of Sight'"
+        en = "Toggle 'Require Line of Sight'",
+        ["zh-tw"] = "切換「需要視線範圍」",
     },
     stimm_toggle_los = {
-        en = "Toggle 'Require Line of Sight'"
+        en = "Toggle 'Require Line of Sight'",
+        ["zh-tw"] = "切換「需要視線範圍」",
     },
     tome_toggle_los = {
-        en = "Toggle 'Require Line of Sight'"
+        en = "Toggle 'Require Line of Sight'",
+        ["zh-tw"] = "切換「需要視線範圍」",
     },
     tainted_toggle_los = {
-        en = "Toggle 'Require Line of Sight'"
+        en = "Toggle 'Require Line of Sight'",
+        ["zh-tw"] = "切換「需要視線範圍」",
     },
     tainted_skull_toggle_los = {
-        en = "Toggle 'Require Line of Sight'"
+        en = "Toggle 'Require Line of Sight'",
+        ["zh-tw"] = "切換「需要視線範圍」",
     },
     luggable_toggle_los = {
-        en = "Toggle 'Require Line of Sight'"
-    }
+        en = "Toggle 'Require Line of Sight'",
+        ["zh-tw"] = "切換「需要視線範圍」",
+    },
+
+    -- MARTYRS SKULL GUIDE LOCALIZATIONS... THERE'S LOTS x) 
+    martyrs_skull_objective_hm_cartel_1 = {
+        en = "Follow number sequence",
+        ["zh-tw"] = "跟隨數字順序",        
+    },
+    martyrs_skull_objective_km_enforcer_A = {
+        en = "First player, press button to start sequence",
+        ["zh-tw"] = "第一位玩家，按下按鈕開始序列",
+    },
+    martyrs_skull_objective_km_enforcer_B = {
+        en = "Second player, head through this door",
+        ["zh-tw"] = "第二位玩家，通過這扇門",
+    },
+    martyrs_skull_objective_km_enforcer_A1 = {
+        en = "Press once to open first door",
+        ["zh-tw"] = "按一下以打開第一扇門",
+    },
+    martyrs_skull_objective_km_enforcer_A2 = {
+        en = "Press once to open second door",
+        ["zh-tw"] = "按一下以打開第二扇門",
+    },
+    martyrs_skull_objective_km_enforcer_A3 = {
+        en = "Press once to open third door",
+        ["zh-tw"] = "按一下以打開第三扇門",
+    },
+    martyrs_skull_objective_km_enforcer_B1 = {
+        en = "Press first button to light up corresponding button in control room for player one for the fourth door",
+        ["zh-tw"] = "按下第一個按鈕以點亮控制室中對應玩家一的第四扇門按鈕",
+    },
+    martyrs_skull_objective_km_enforcer_B2 = {
+        en = "Press second button to light up corresponding button in control room for player one for the final door",
+        ["zh-tw"] = "按下第二個按鈕以點亮控制室中對應玩家一的最後一扇門按鈕",
+    },
+    martyrs_skull_objective_km_enforcer_A4 = {
+        en = "Press button that lights up when player two completes B1 or B2",
+        ["zh-tw"] = "按下當玩家二完成 B1 或 B2 時亮起的按鈕",
+    },
+    martyrs_skull_objective_km_enforcer_B3 = {
+        en = "Open door for other players",
+        ["zh-tw"] = "為其他玩家打開門",
+    },
+    martyrs_skull_objective_dm_stockpile_A = {
+        en = "Climb up",
+        ["zh-tw"] = "爬上去",
+    },
+    martyrs_skull_objective_dm_stockpile_B = {
+        en = "Head to the control panel and try move the platform along the rails infront of you. The default pattern in the following order: \nDOWN, RIGHT, RIGHT, DOWN, LEFT",
+        ["zh-tw"] = "前往控制面板，嘗試沿著你面前的軌道移動平台。默認模式按以下順序：\n下、右、右、下、左",
+    },
+    martyrs_skull_objective_fm_cargo_1 = {
+        en = "Turn on all showers with the red inquisition symbol quickly.",
+        ["zh-tw"] = "快速打開所有帶有紅色異端審判符號的淋浴器。",
+    },
+    martyrs_skull_objective_dm_forge_1 = {
+        en = "Follow number sequence",
+        ["zh-tw"] = "跟隨數字順序",
+    },
+    martyrs_skull_objective_dm_forge_9 = {
+        en = "Destroy all nurgle growths holding the door shut.",
+        ["zh-tw"] = "摧毀所有阻止門打開的瘟疫生長物。",
+    },
+    martyrs_skull_objective_dm_forge_10 = {
+        en = "Open door",
+        ["zh-tw"] = "打開門",
+    },
+    martyrs_skull_objective_lm_cooling_1 = {
+        en = "Climb up boxes to reach the top",
+        ["zh-tw"] = "爬上箱子到達頂部",
+    },
+    martyrs_skull_objective_lm_cooling_2 = {
+        en = "Pick up the key in the body's hand",
+        ["zh-tw"] = "從屍體的手中拿起鑰匙",
+    },
+    martyrs_skull_objective_lm_cooling_3 = {
+        en = "Head back over the bridge and use the key on the locked locker.",
+        ["zh-tw"] = "回到橋頭的房間，使用鑰匙打開鎖住的儲物櫃。",
+    },
+    martyrs_skull_objective_lm_scavenge_1 = {
+        en = "Head into room across the bridge",
+        ["zh-tw"] = "前往橋對面的房間",
+    },
+    martyrs_skull_objective_lm_scavenge_B1 = {
+        en = "Player one, climb into the right elevator",
+        ["zh-tw"] = "玩家一，爬進右側電梯",
+    },
+    martyrs_skull_objective_lm_scavenge_A1 = {
+        en = "Player two, climb into the left elevator to send player one upwards",
+        ["zh-tw"] = "玩家二，爬進左側電梯以將玩家一送上去",
+    },
+    martyrs_skull_objective_lm_scavenge_B2 = {
+        en = "Player one, grab the battery cell on the crate, and bring it back down in the elevator",
+        ["zh-tw"] = "玩家一，從箱子上拿起電池，並將其帶回電梯下來",
+    },
+    martyrs_skull_objective_lm_scavenge_B3 = {
+        en = "Place the battery cell into the socket on the wall",
+        ["zh-tw"] = "將電池放入牆上的插座中",
+    },
+    martyrs_skull_objective_fm_armoury_1 = {
+        en = "Enter the building",
+        ["zh-tw"] = "進入建築物"
+    },
+    martyrs_skull_objective_fm_armoury_2 = {
+        en = "Turn the valve",
+        ["zh-tw"] = "轉動閥門",
+    },
+    martyrs_skull_objective_fm_armoury_3 = {
+        en = "Climb up to begin parkour, continue up the stairs",
+        ["zh-tw"] = "爬上去開始跑酷，繼續上樓梯",
+    },
+    martyrs_skull_objective_fm_armoury_5 = {
+        en = "Grab the power cell",
+        ["zh-tw"] = "拿起電池",
+    },
+    martyrs_skull_objective_fm_armoury_6 = {
+        en = "Place the power cell into the socket, and pull the lever",
+        ["zh-tw"] = "將電池放入插座中，然後拉動杠杆",
+    },
+    martyrs_skull_objective_fm_armoury_7 = {
+        en = "Head back inside and press the button to open the gate to the skull",
+        ["zh-tw"] = "回到裡面，按下按鈕打開通往顱骨的門",
+    },
+    martyrs_skull_objective_cm_raid_1 = {
+        en = "Head into alleyway",
+        ["zh-tw"] = "前往小巷",
+    },
+    martyrs_skull_objective_cm_raid_2 = {
+        en = "Grab the key on the dead body",
+        ["zh-tw"] = "從屍體身上拿起鑰匙",
+    },
+    martyrs_skull_objective_cm_raid_3 = {
+        en = "Head into the bar, and use the key to open the locked gate",
+        ["zh-tw"] = "前往酒吧，使用鑰匙打開鎖住的門",
+    },
+    martyrs_skull_objective_cm_raid_4 = {
+        en = "Go up the stairs, climb over the boxes and plant the breaching charge",
+        ["zh-tw"] = "上樓梯，爬過箱子並安裝爆破裝置"
+    },
+    martyrs_skull_objective_cm_raid_5 = {
+        en = "Pickup the key, then head back out to the bar",
+        ["zh-tw"] = "拿起鑰匙，然後回到酒吧"
+    },
+    martyrs_skull_objective_cm_raid_6 = {
+        en = "Use the key to open the gate behind the bar",
+        ["zh-tw"] = "使用鑰匙打開酒吧後面的門",
+    },
+    martyrs_skull_objective_km_heresy_1 = {
+        en = "Follow number sequence",
+        ["zh-tw"] = "跟隨數字順序",
+    },
+    martyrs_skull_objective_template_1 = {
+        en = "Input code: 213\nPress middle button",
+        ["zh-tw"] = "輸入代碼：213\n按下中間按鈕",
+    },
+    martyrs_skull_objective_dm_propaganda_1 = {
+        en = "Interact with the dumpster and pick up the 'skull weight' from the ground",
+        ["zh-tw"] = "與垃圾桶互動，從地上撿起「顱骨殘骸」",
+    },
+    martyrs_skull_objective_dm_propaganda_2 = {
+        en = "Head to the Martyr's Skull door and place the skull weight on the chain",
+        ["zh-tw"] = "前往 Martyr's Skull 門，將顱骨重物放在鏈條上",
+    },
+    martyrs_skull_objective_fm_resurgence_1 = {
+        en = "Head to control panel, you need to line up the pipes on the wall opposite, using the valves infront of you.\nThe default number of times you will need to turn the valves from left to right are as follows:\nx3,x1,x2,x3",
+        ["zh-tw"] = "前往控制面板，您需要使用面前的閥門對面牆上的管道進行對齊。\n從左到右轉動閥門的次數默認為：\nx3,x1,x2,x3",
+    },
+    martyrs_skull_objective_hm_complex_1 = {
+        en = "Remember the two symbols in the bottom right corner on the back of the panel",
+        ["zh-tw"] = "記住面板背面右下角的兩個符號",
+    },
+    martyrs_skull_objective_hm_complex_2 = {
+        en = "Head to the chaos rune circle, and light the candles around the edge that match the two symbols from step 1",
+        ["zh-tw"] = "前往混沌符文圓圈，點燃與步驟1中的兩個符號相匹配的邊緣蠟燭",
+    },
+    martyrs_skull_objective_cm_archives_1 = {
+        en = "This puzzle involves player one pulling the levers on the ground, whilst player two completes a parkour puzzle.",
+        ["zh-tw"] = "這個苦修需要玩家一拉動地上的杠杆，而玩家二完成跑酷謎題。",
+    },
+    martyrs_skull_objective_cm_archives_2 = {
+        en = "Player one, begin by pulling this lever to bring the chandelier to the ground, player two jump on, and player one pull the lever again to raise player two back up, then follow the 'B' sequence of markers.",
+        ["zh-tw"] = "玩家一，首先拉動這個杠杆將吊燈降到地面，玩家二跳上去，然後玩家一再次拉動杠杆將玩家二抬起，然後跟隨 'B' 序列的標記。",
+    },
+    martyrs_skull_objective_cm_archives_A1 = {
+        en = "Raise",
+        ["zh-tw"] = "升起",
+    },
+    martyrs_skull_objective_cm_archives_A2 = {
+        en = "Lower then raise",
+        ["zh-tw"] = "降低然後升起",
+    },
+    martyrs_skull_objective_cm_archives_A3 = {
+        en = "Lower then raise",
+            ["zh-tw"] = "降低然後升起",
+    },
+    martyrs_skull_objective_cm_archives_A4 = {
+        en = "Climb up boxes and jump over to chandelier to grab martyr's skull, once player two has completed the puzzle",
+        ["zh-tw"] = "爬上箱子，跳到吊燈上拿到 Martyr's Skull，等玩家二完成謎題後",
+    },
+    martyrs_skull_objective_collect_skull = {
+        en = "Collect Martyr's Skull!",
+        ["zh-tw"] = "收集 Martyr's Skull！",
+    },
+    martyrs_skull_guide_title = {
+        en = "MARTYR'S SKULL GUIDE",
+        ["zh-tw"] = "MARTYR'S SKULL 指南",
+    },
+    martyrs_skull_guide_players_required = {
+        en = "Player 1 = A, Player 2 = B",
+        ["zh-tw"] = "玩家 1 = A，玩家 2 = B",
+    },
+    martyrs_skull_guide_players_required_solo = {
+        en = "Solo",
+        ["zh-tw"] = "單人",
+    },
+    martyrs_skull_guide_players_required_solo_parkour = {
+        en = "Solo (Parkour)",
+        ["zh-tw"] = "單人（跑酷）",
+    },
+    martyrs_skull_objective_cm_habs_A1 = {
+        en = "Input code: 213\nPress middle button",
+        ["zh-tw"] = "輸入代碼：213\n按下中間按鈕",
+    },
+    martyrs_skull_objective_cm_habs_A2 = {
+        en = "Press left button",
+        ["zh-tw"] = "按下左側按鈕",
+    },
+    martyrs_skull_objective_cm_habs_A3 = {
+        en = "Press right button",
+        ["zh-tw"] = "按下右側按鈕",
+    },
+    martyrs_skull_objective_cm_habs_A4 = {
+        en = "Hold lever for second player to complete B1",
+        ["zh-tw"] = "為第二位玩家完成 B1 持續按住杠杆",
+    },
+    martyrs_skull_objective_cm_habs_B1 = {
+        en = "Second player, press button whilst first player holds A4",
+        ["zh-tw"] = "第二位玩家，在第一位玩家按住 A4 時按下按鈕",
+    },
+
+    martyrs_skull_objective_km_station_1 = {
+        en = "Turn first valve",
+        ["zh-tw"] = "轉動第一個閥門",
+    },
+    martyrs_skull_objective_km_station_2 = {
+        en = "Turn second valve",
+        ["zh-tw"] = "轉動第二個閥門",
+    },
+    martyrs_skull_objective_km_station_3 = {
+        en = "Turn third valve",
+        ["zh-tw"] = "轉動第三個閥門",
+    },
+    martyrs_skull_objective_km_station_4 = {
+        en = "Turn fourth valve",
+        ["zh-tw"] = "轉動第四個閥門",
+    },
+    martyrs_skull_objective_km_station_5 = {
+        en = "Turn final valve",
+        ["zh-tw"] = "轉動最後一個閥門",
+    },
+
+    martyrs_skull_objective_lm_rails_1 = {
+        en = "Follow number sequence",
+        ["zh-tw"] = "跟隨數字順序",
+    },
+
+    martyrs_skull_objective_dm_rise_A1 = {
+        en = "Grab the power cell",
+        ["zh-tw"] = "拿起電池",
+    },
+    martyrs_skull_objective_dm_rise_A2 = {
+        en = "Insert the power cell",
+        ["zh-tw"] = "插入電池",
+    },
+    martyrs_skull_objective_dm_rise_B1 = {
+        en = "Player two, enter elevator",
+        ["zh-tw"] = "玩家二，進入電梯",
+    },
+    martyrs_skull_objective_dm_rise_A3 = {
+        en = "Player one, hold the power switch once player 2 is in the elevator",
+        ["zh-tw"] = "玩家一，當玩家二在電梯裡時，按住電源開關",
+    },
+    martyrs_skull_objective_dm_rise_B2 = {
+        en = "Grab the next power cell",
+        ["zh-tw"] = "拿起下一個電池",
+    },
+    martyrs_skull_objective_dm_rise_B3 = {
+        en = "Throw power cell down to player one",
+        ["zh-tw"] = "將電池扔給玩家一",
+    },
+    martyrs_skull_objective_dm_rise_A4 = {
+        en = "Player one, insert second power cell",
+        ["zh-tw"] = "玩家一，插入第二個電池",
+    },
+    martyrs_skull_objective_dm_rise_A5 = {
+        en = "Hold the next lever for player two",
+        ["zh-tw"] = "為玩家二按住下一個杠杆",
+    },
+    martyrs_skull_objective_dm_rise_B4 = {
+        en = "Player two, press the elevator button",
+        ["zh-tw"] = "玩家二，按下電梯按鈕",
+    },
+    martyrs_skull_objective_hm_strain_1 = {
+        en = "Head to control room, and open the door",
+        ["zh-tw"] = "前往控制室，打開門",
+    },
+    martyrs_skull_objective_hm_strain_2 = {
+        en = "Look above the door for the symbols, remember these",
+        ["zh-tw"] = "查看門上方的符號，記住這些",
+    },
+    martyrs_skull_objective_hm_strain_3A = {
+        en = "Press the button until you see the right hand symbol from step 2 on the door through the window",
+        ["zh-tw"] = "按下按鈕，直到你在窗戶上看到步驟2中門上的右手符號",
+    },
+    martyrs_skull_objective_hm_strain_3B = {
+        en = "Press the button until you see the left hand symbol from step 2 on the door through the window",
+        ["zh-tw"] = "按下按鈕，直到你在窗戶上看到步驟2中門上的左手符號",
+    },
+    martyrs_skull_objective_hm_strain_4 = {
+        en = "Once the symbols match, press the final button",
+        ["zh-tw"] = "當符號匹配時，按下最後一個按鈕",
+    },
 }
 
 local apply_color_to_text = function(text, r, g, b)
