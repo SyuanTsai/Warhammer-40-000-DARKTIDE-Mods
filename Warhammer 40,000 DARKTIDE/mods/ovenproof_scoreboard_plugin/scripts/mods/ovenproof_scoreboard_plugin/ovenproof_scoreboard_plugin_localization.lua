@@ -60,12 +60,15 @@ local localization = {
 	-- Settings
 	enable_debug_messages = {
 		en = "Enable error messages",
+		["zh-tw"] = "啟用錯誤訊息",
 	},
 	enable_debug_messages_description = {
 		en = "Show messages in chat whenever an uncategorized damage type is used. Please report these!",
+		["zh-tw"] = "當使用未分類的傷害類型時，在聊天中顯示訊息。請向作者回報！",
 	},
 	row_categories_group = {
 		en = "Scoreboard Row Categories",
+		["zh-tw"] = "記分板行類別",
 	},
 	exploration_tier_0 = {
 		en = "Exploration",
