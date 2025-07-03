@@ -426,7 +426,7 @@ local localization = {
 		en = {left = "Total Companion", right = "[ Kills | Damage ]",},
 		ru = {left = "Полный компаньон", right = "[Убийств/Урона]",},
 		["zh-cn"] = {left = "完全伴侣", right = "[ 击杀 | 伤害 ]",},
-		["zh-tw"] = { left = "完全伴侶", right = "[ 擊殺 | 傷害 ]",},
+		["zh-tw"] = { left = "墊子獒犬", right = "[ 擊殺 | 傷害 ]",},
 	},
 	row_total_bleeding = {
 		en = {left = "Total Bleeding", right = "[ Kills | Damage ]",},
