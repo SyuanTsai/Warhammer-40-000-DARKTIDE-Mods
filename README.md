@@ -409,6 +409,13 @@
 - MOD 檔案名稱：better_hud_info_view-511-1-4-1-1745974107
 - 手動維護最後下載日期：2025-05-02
 
+### [Recolor Boss Health Bars](https://www.nexusmods.com/warhammer40kdarktide/mods/314)
+    重著色BOSS血條
+- MOD 網站最後更新日期：Last updated 04 July 2025, 1:38AM
+- MOD 版本：2.1
+- MOD 檔案名稱：Recolor Boss Health Bars-314-2-1-1751564337
+- 手動維護最後下載日期：2025-07-04
+
 ### [Dog Whistle](https://www.nexusmods.com/warhammer40kdarktide/mods/539)
     狗哨 - 自動抓特感
 - MOD 網站最後更新日期：Last updated 01 July 2025, 11:57PM
