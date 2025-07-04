@@ -42,14 +42,55 @@ local get_color = function(unit_type)
     return #res == 4 and res or mod.default_color
 end
 
+---[[
+local is_weakened = function(unit)
+    local unit_data_ext = ScriptUnit.extension(unit, "unit_data_system")
+    local breed = unit_data_ext and unit_data_ext:breed()
+    local is_weakened = false
+
+    if not breed then
+        mod:echo("Error: breed = nil")
+        return is_weakened
+    end
+
+    if not breed.is_boss or breed.ignore_weakened_boss_name then
+        return is_weakened
+    end
+
+    local health_extension = ScriptUnit.extension(unit, "health_system")
+    local max_health = health_extension:max_health()
+    local initial_max_health = math.floor(Managers.state.difficulty:get_minion_max_health(breed.name))
+
+    if max_health < initial_max_health then
+        is_weakened = true
+    else
+        local havoc_mananger = Managers.state.havoc
+
+        if havoc_mananger:is_havoc() then
+            local havoc_health_override_value = havoc_mananger:get_modifier_value("modify_monster_health")
+
+            if havoc_health_override_value then
+                local multiplied_max_health = initial_max_health + initial_max_health * havoc_health_override_value
+
+                if max_health < multiplied_max_health then
+                    is_weakened = true
+                end
+            end
+        end
+    end
+
+    return is_weakened
+end
+--]]
+
 local color_by_unit = function(unit)
     local breed = ScriptUnit.extension(unit, "unit_data_system"):breed()
     if not breed.is_boss then
         return
     end
 	local breed_name = breed.name
-    local boss_extension = ScriptUnit.has_extension(unit, "boss_system")
-    local is_weakened = boss_extension and boss_extension:is_weakened()
+    --local boss_extension = ScriptUnit.has_extension(unit, "boss_system")
+    --local is_weakened = boss_extension and boss_extension:is_weakened()
     if breed_name == "chaos_daemonhost" then
         return get_color("daemonhost")
     elseif breed_name == "chaos_mutator_daemonhost" then
@@ -58,7 +99,7 @@ local color_by_unit = function(unit)
         return get_color("captain")
     elseif breed_name == "renegade_twin_captain" or breed_name == "renegade_twin_captain_two" then
         return get_color("twins")
-    elseif is_weakened then
+    elseif is_weakened(unit) then
         return get_color("weakened")
     else
         return get_color("others")
