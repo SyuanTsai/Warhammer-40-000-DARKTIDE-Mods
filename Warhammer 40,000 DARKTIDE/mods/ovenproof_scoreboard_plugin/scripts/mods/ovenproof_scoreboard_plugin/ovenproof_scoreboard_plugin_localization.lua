@@ -1,7 +1,7 @@
 local mod = get_mod("ovenproof_scoreboard_plugin")
 local UIRenderer = mod:original_require("scripts/managers/ui/ui_renderer")
 local ui_renderer_instance = Managers.ui:ui_constant_elements():ui_renderer()
-local languages = {"en","ru","zh-cn", "zh-tw"}
+local languages = {"en","ru","zh-cn","zh-tw"}
 
 mod.get_text_size = function(self, input_text)
 
@@ -60,14 +60,20 @@ local localization = {
 	-- Settings
 	enable_debug_messages = {
 		en = "Enable error messages",
+		ru = "Включить сообщения об ошибках",
+		["zh-cn"] = "启用错误消息",
 		["zh-tw"] = "啟用錯誤訊息",
 	},
 	enable_debug_messages_description = {
 		en = "Show messages in chat whenever an uncategorized damage type is used. Please report these!",
+		ru = "Показывать сообщения в чате всякий раз, когда используется некатегоризированный тип повреждения. Пожалуйста, сообщите об этом!",
+		["zh-cn"] = "每当使用未分类的伤害类型时，聊天中都会显示消息。请举报！",
 		["zh-tw"] = "當使用未分類的傷害類型時，在聊天中顯示訊息。請向作者回報！",
 	},
 	row_categories_group = {
 		en = "Scoreboard Row Categories",
+		ru = "Категории строк табло",
+		["zh-cn"] = "记分板行类别",
 		["zh-tw"] = "記分板行類別",
 	},
 	exploration_tier_0 = {
@@ -426,7 +432,7 @@ local localization = {
 		en = {left = "Total Companion", right = "[ Kills | Damage ]",},
 		ru = {left = "Полный компаньон", right = "[Убийств/Урона]",},
 		["zh-cn"] = {left = "完全伴侣", right = "[ 击杀 | 伤害 ]",},
-		["zh-tw"] = { left = "墊子獒犬", right = "[ 擊殺 | 傷害 ]",},
+		["zh-tw"] = { left = "電子獒犬", right = "[ 擊殺 | 傷害 ]",},
 	},
 	row_total_bleeding = {
 		en = {left = "Total Bleeding", right = "[ Kills | Damage ]",},
