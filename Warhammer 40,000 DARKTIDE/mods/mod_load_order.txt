@@ -20,6 +20,7 @@ DogWhistle
 
 -- 記分板(有順序性依賴)
 scoreboard
+ScoreboardExplosive
 ovenproof_scoreboard_plugin
 Power_DI
 
