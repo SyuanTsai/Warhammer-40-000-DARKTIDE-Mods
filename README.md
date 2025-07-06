@@ -403,6 +403,13 @@
 - MOD 檔案名稱：Servo Friend-504-3-1746235485
 - 手動維護最後下載日期：2025-05-20
 
+### [Scoreboard Explosive](https://www.nexusmods.com/warhammer40kdarktide/mods/113)
+    爆桶爆炸
+- MOD 網站最後更新日期：Last updated 02 December 2023, 1:33AM
+- MOD 版本：1.1.3
+- MOD 檔案名稱：ScoreboardExplosive-113-1-1-3-1701451982
+- 手動維護最後下載日期：2025-07-05
+
 ### [Better Hud Info View](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
     浩劫HUD資訊
 - MOD 網站最後更新日期：Last updated 30 April 2025 12:48AM
