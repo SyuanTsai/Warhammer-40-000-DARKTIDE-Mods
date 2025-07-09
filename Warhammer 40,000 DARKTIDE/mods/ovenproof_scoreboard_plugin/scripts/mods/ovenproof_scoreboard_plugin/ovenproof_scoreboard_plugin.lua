@@ -11,9 +11,14 @@ local TextUtilities = mod:original_require("scripts/utilities/ui/text")
 --local LargeClipPickup = require("scripts/settings/pickup/pickups/consumable/large_clip_pickup")
 
 -- #######
+-- Optimizations for globals
+-- #######
+local tostring = tostring
+
+-- #######
 -- Mod Locals
 -- #######
-local mod_version = "1.2.0-beta-branch"
+local mod_version = "1.2.4"
 local debug_messages_enabled = mod:get("enable_debug_messages")
 
 local in_match
@@ -90,13 +95,14 @@ mod.bosses = {
 mod.melee_attack_types ={
 	"melee",
 	"push",
-	-- "buff", -- regular Shock Maul and Arbites power maul stun intervals. also covers warp
+	-- "buff", -- regular Shock Maul and Arbites power maul stun intervals. also covers warp and bleed
 }
 mod.melee_damage_profiles ={
-	--"shockmaul_stun_interval_damage",
+	-- "shockmaul_stun_interval_damage", -- shock maul electrocution and Arbites dog shocks
 	"powermaul_p2_stun_interval",
 	"powermaul_p2_stun_interval_basic",
 	"powermaul_shield_block_special",
+	
 }
 mod.ranged_attack_types ={
 	"ranged",
@@ -108,7 +114,10 @@ mod.ranged_damage_profiles ={
 	"psyker_protectorate_spread_chain_lightning_interval",
 	"default_chain_lighting_interval",
 	"psyker_smite_kill",
+	"psyker_heavy_swings_shock", -- Psyker Smite on heavies and Remote Detonation on dog?
 }
+-- Dog damage doesn't count as melee/ranged for penances
+--	but the shock bomb collar counts for puncture, which is covered by "explosion" being in ranged_attack_types
 mod.companion_attack_types ={
 	"companion_dog", -- covers the breed_pounce types
 }
@@ -117,7 +126,7 @@ mod.companion_damage_profiles ={
 	-- "adamant_companion_human_pounce",
 	-- "adamant_companion_ogryn_pounce",
 	-- "adamant_companion_monster_pounce",
-	"shockmaul_stun_interval_damage",
+	"shockmaul_stun_interval_damage", -- shock maul electrocution and Arbites dog shocks
 }
 
 mod.bleeding_damage_profiles ={
@@ -133,6 +142,18 @@ mod.burning_damage_profiles ={
 mod.warpfire_damage_profiles ={
 	"warpfire",
 }
+--[[
+mod.electrocution_damage_profiles = {
+	"shockmaul_stun_interval_damage",
+	"powermaul_p2_stun_interval",
+	"powermaul_p2_stun_interval_basic",
+	"powermaul_shield_block_special",
+	"shock_grenade_stun_interval",
+	"psyker_protectorate_spread_chain_lightning_interval",
+	"default_chain_lighting_interval",
+	"psyker_smite_kill",
+}
+]]
 mod.environmental_damage_profiles = {
 	"barrel_explosion",
 	"barrel_explosion_close",
@@ -261,10 +282,12 @@ mod:hook(CLASS.InteracteeExtension, "stopped", function(func, self, result, ...)
 							local pickup = math.ceil(mod.ammunition_percentage[ammo] * mod.ammunition_pickup_modifier * max_ammo_reserve)
 							-- ^ Ammo pickups are rounded up by the game
 							local wasted = math.max(pickup - ammo_missing, 0)
-							--local pickup_pct = 100 * pickup / max_ammo_combined
+							local pickup_pct = 100 * pickup / max_ammo_combined
 							local wasted_pct = 100 * wasted / max_ammo_reserve
-							local base_pickup_pct = 100 * mod.ammunition_percentage[ammo]
-							scoreboard:update_stat("ammo_percent", account_id, base_pickup_pct)
+							--local base_pickup_pct = 100 * mod.ammunition_percentage[ammo]
+							--scoreboard:update_stat("ammo_percent", account_id, base_pickup_pct)
+							-- Using pickup percentage to account for Havoc modifiers
+							scoreboard:update_stat("ammo_percent", account_id, pickup_pct)
 							scoreboard:update_stat("ammo_wasted_percent", account_id, wasted_pct)
 							if mod:get("ammo_messages") then
 								local pickup_text = TextUtilities.apply_color_to_text(mod:localize("message_"..ammo), color)
@@ -455,7 +478,8 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 					-- ------------
 					--	Melee
 					-- ------------
-					if table.array_contains(mod.melee_attack_types, attack_type) or table.array_contains(mod.melee_damage_profiles, damage_profile.name) then
+					-- manual exception for companion, due to shared damage profile
+					if table.array_contains(mod.melee_attack_types, attack_type) or (table.array_contains(mod.melee_damage_profiles, damage_profile.name) and not table.array_contains(mod.companion_attack_types, attack_type)) then
 						self._melee_rate = (self._melee_rate or {})
 						self._melee_rate[account_id] = self._melee_rate[account_id] or {}
 						self._melee_rate[account_id].hits = self._melee_rate[account_id].hits or 0
@@ -628,7 +652,12 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 					-- ------------
 					else
 						--Print damage profile and attack type of out of scope attacks
-						mod:echo("Player: "..player:name()..", Damage profile: " .. damage_profile.name .. ", attack type: " .. tostring(attack_type)..", damage: "..actual_damage)
+						local error_string = "Player: "..player:name()..", Damage profile: " .. damage_profile.name .. ", attack type: " .. tostring(attack_type)..", damage: "..actual_damage
+						if debug_messages_enabled then
+							mod:echo(error_string)
+						else
+							mod:info(error_string)
+						end
 					end	
 
 					-- ------------------------
@@ -730,7 +759,10 @@ function mod.on_game_state_changed(status, state_name)
 		havoc_manager = Managers.state.havoc
 		is_playing_havoc = havoc_manager:is_havoc()
 		if is_playing_havoc then
-			mod.ammunition_pickup_modifier = havoc_manager:get_modifier_value("ammo_pickup_modifier")
+			-- adding fallback 
+			-- havoc modifier goes from 0.85-0.4, but lower ranks just use 1
+			mod.ammunition_pickup_modifier = havoc_manager:get_modifier_value("ammo_pickup_modifier") or 1
+			mod:info("Havoc ammo modifier: "..tostring(mod.ammunition_pickup_modifier))
 		else
 			mod.ammunition_pickup_modifier = 1 
 		end
