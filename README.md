@@ -71,10 +71,10 @@
 
 ### [Decode Minigame Solver](https://www.nexusmods.com/warhammer40kdarktide/mods/426)
     自動解碼器
-- MOD 網站最後更新日期：Last updated 20 November 2024 10:21PM
-- MOD 版本：1.2.0
-- MOD 檔案名稱：DecodeMinigameSolver-426-1-2-0-1732141309
-- 手動維護最後下載日期：2025-02-09
+- MOD 網站最後更新日期：Last updated 08 July 2025, 5:40AM
+- MOD 版本：1.2.1
+- MOD 檔案名稱：DecodeMinigameSolver-426-1-2-1-1751924444
+- 手動維護最後下載日期：2025-07-09
 
 
 ---
