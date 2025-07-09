@@ -218,10 +218,10 @@
 
 ### [What The Localization](https://www.nexusmods.com/warhammer40kdarktide/mods/163)
     翻譯修正器，
-- MOD 網站最後更新日期：Last updated 16 April 2025 2:38PM
-- MOD 版本：1.2.2
-- MOD 檔案名稱：WhatTheLocalization-163-1-2-2-1744814306
-- 手動維護最後下載日期：2025-04-18
+- MOD 網站最後更新日期：Last updated 08 July 2025, 2:01AM
+- MOD 版本：1.2.3
+- MOD 檔案名稱：WhatTheLocalization-163-1-2-3-1751911304
+- 手動維護最後下載日期：2025-07-09
 
 ---
 # 遊戲內操作相關MOD
