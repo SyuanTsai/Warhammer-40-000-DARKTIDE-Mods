@@ -256,8 +256,8 @@
 
 ### [Solo Play (Havoc Update)](https://www.nexusmods.com/warhammer40kdarktide/mods/176)
     單人遊戲 - 支援浩劫模式
-- MOD 網站最後更新日期：Last updated 25 June 2025, 11:38AM
-- MOD 版本：Version 2.2.2
-- MOD 檔案名稱：SoloPlay-176-2-2-2-1750822713
-- 手動維護最後下載日期：2025-06-25
+- MOD 網站最後更新日期：Last updated 08 July 2025, 1:59AM
+- MOD 版本：Version 2.2.3
+- MOD 檔案名稱：SoloPlay-176-2-2-3-1751911153
+- 手動維護最後下載日期：2025-07-09
 

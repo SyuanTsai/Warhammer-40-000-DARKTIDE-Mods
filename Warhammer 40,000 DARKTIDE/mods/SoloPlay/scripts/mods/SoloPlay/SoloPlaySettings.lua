@@ -24,6 +24,7 @@ local circumstance_prefer_list = {
 	loc_circumstance_dummy_less_resistance_title = "less_resistance_01",
 	loc_circumstance_nurgle_manifestation_title = "heretical_disruption_01",
 	loc_circumstance_waves_of_specials_more_resistance_title = "waves_of_specials_more_resistance_01",
+	loc_havoc_enemies_corrupted_name = "mutator_havoc_enemies_corrupted",
 }
 local circumstance_format_group = {
 	high_flash_mission = "format_auric"
@@ -42,9 +43,7 @@ local settings = {
 			},
 		},
 	},
-	pacing_override = {
-		psykhanium = "terror_events_only",
-	},
+	pacing_override = {},
 	loc = {
 		missions = {},
 		side_missions = {},
@@ -101,6 +100,10 @@ for name, mission in pairs(MissionTemplates) do
 			for mission_giver, _ in pairs(mission_brief_vo.mission_giver_packs) do
 				settings.lookup.mission_givers_of_missions[name][mission_giver] = true
 			end
+		end
+
+		if mission.pacing_template then
+			settings.pacing_override[name] = mission.pacing_template
 		end
 	end
 end
