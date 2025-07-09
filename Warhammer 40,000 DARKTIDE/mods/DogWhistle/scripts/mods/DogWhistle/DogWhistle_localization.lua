@@ -13,6 +13,7 @@ end
 
 -- Simplified Chinese localization provided by jcyl2023
 -- Traditional Chinese localization provided by SyuanTsai
+
 local localization = {
     --  ┌─┐┬ ┬┌─┐┬─┐┌─┐┌┬┐                        
     --  └─┐├─┤├─┤├┬┘├┤  ││                        
@@ -224,19 +225,19 @@ local localization = {
     elite_breeds = {
         en = "Elites",
         ["zh-cn"] = "精英",
-        ["zh-tw"] = "精英(開啟代表不攻擊)",
+        ["zh-tw"] = "精英",
         ru = "элита",
     },
     special_breeds = {
         en = "Specialists",
         ["zh-cn"] = "专家",
-        ["zh-tw"] = "專家(開啟代表不攻擊)",
+        ["zh-tw"] = "專家",
         ru = "специалист",
     },
     monster_breeds = {
         en = "Monsters/Captains",
         ["zh-cn"] = "怪物/连长",
-        ["zh-tw"] = "巨獸/隊長(開啟代表不攻擊)",
+        ["zh-tw"] = "巨獸/隊長",
         ru = "монстр/капитан",
     },
     toggle_all = {
@@ -305,7 +306,7 @@ end
 
 -- Automated localization for archetypes
 for class, template in pairs(Archetypes) do
-    local id = string.match(class, "([^_]+)") -- zealot_archetype -> zealot
+    local id = string.match(class, "([^_]+)") -- zealot_archetype -> zealot, etc.
     local loc = template.archetype_name
     localization[id] = {
         en = Localize(loc)
