@@ -343,10 +343,10 @@
 
 ### [Guarantee Ability Activation](https://www.nexusmods.com/warhammer40kdarktide/mods/336)
     防止取消大絕
-- MOD 網站最後更新日期：Last updated 25 June 2025, 8:10PM
-- MOD 版本：1.3.8
-- MOD 檔案名稱：Guarantee Ability Activation-336-1-3-6-1737384551
-- 手動維護最後下載日期：2025-06-25
+- MOD 網站最後更新日期：Last updated 10 July 2025, 7:12PM
+- MOD 版本：1.3.9
+- MOD 檔案名稱：Guarantee Ability Activation-336-1-3-9-1752145928
+- 手動維護最後下載日期：2025-07-12
 
 ---
 # 遊戲內操作相關MOD
