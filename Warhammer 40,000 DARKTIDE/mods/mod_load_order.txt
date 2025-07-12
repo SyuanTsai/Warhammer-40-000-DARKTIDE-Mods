@@ -74,6 +74,7 @@ TagKeys
 WeaponFilter
 afk
 red_weapons_at_home
+AutoBlitz
 
 -- 基本上不需設定
 psych_ward
