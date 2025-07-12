@@ -1,3 +1,7 @@
+-- ru localization by xsSplater
+-- zh-cn localization by deluxghost
+-- zh-tw localization by SyuanTsai
+
 return {
 	mod_name = {
 		en = "Red Weapons at Home",
@@ -13,10 +17,14 @@ return {
 	},
 	gadget_settings = {
 		en = "Curios",
+		ru = "Реликвии",
+		["zh-cn"] = "珍品",
 		["zh-tw"] = "珍品",
 	},
 	gadget_wound_required_expertise = {
 		en = "Wound Required Rating",
+		ru = "Требуемый рейтинг ранения",
+		["zh-cn"] = "伤口评分",
 		["zh-tw"] = "傷痕評分",
 	},
 	rarity_color_6 = {
