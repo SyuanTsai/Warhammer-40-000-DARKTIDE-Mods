@@ -78,6 +78,20 @@ local lines_widget = {
     range = {1,6},
 }
 
+local columns_dropdown = { }
+for _, i in pairs({
+    "two",
+    "four"
+}) do
+    table.insert(columns_dropdown, {text = i, value = i})
+end
+local columns_widget = {
+    setting_id = "columns_amount",
+    --tooltip = "tooltip_columns_amount",
+    type = "dropdown",
+    default_value = "four",
+    options = table.clone(columns_dropdown),
+}
 
 
 
@@ -86,6 +100,9 @@ mod.setting_names = {}
 
 table.insert(widgets, lines_widget)
 table.insert(mod.setting_names, "lines_amount")
+
+table.insert(widgets, columns_widget)
+table.insert(mod.setting_names, "columns_amount")
 
 for _, unit_type in pairs(unit_type_array) do
     -- Add widget

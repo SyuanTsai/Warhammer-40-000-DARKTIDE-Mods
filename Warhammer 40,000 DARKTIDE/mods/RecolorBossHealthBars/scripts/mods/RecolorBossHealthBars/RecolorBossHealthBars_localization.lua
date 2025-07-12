@@ -43,10 +43,22 @@ local loc = {
 		en = "Max. number of lines of boss health bars",
 		["zh-tw"] = "最大Boss血條行數",
 	},
+	columns_amount = {
+        en = "Number of boss health bars per line",
+		["zh-tw"] = "每行Boss血條數量",
+	},
 	tooltip_lines_amount = {
 		en = "\nMaximum number of lines of boss health bars that can be shown on screen at once.\n\nEach line contains two boss health bars.",
 		["zh-tw"] = "\n一次可以在螢幕上顯示的最大Boss血條行數。\n\n每行包含兩個Boss血條。\n\n行數的最大值受螢幕高度限制。",
 
+	},
+	two = {
+		en = "2",
+		["zh-tw"] = "2",
+	},
+	four = {
+		en = "4",
+		["zh-tw"] = "4",
 	},
 }
 
