@@ -1,4 +1,4 @@
--- Guarantee Ability Activation by KamiUnitY. Ver. 1.3.8
+-- Guarantee Ability Activation by KamiUnitY. Ver. 1.3.9
 
 local mod = get_mod("guarantee_ability_activation")
 local modding_tools = get_mod("modding_tools")
@@ -61,8 +61,6 @@ local grenade_ability = ""
 
 local last_set_promise = 0
 
-local last_slot_combat_ability = 0
-
 ---------------
 -- UTILITIES --
 ---------------
@@ -81,17 +79,7 @@ local debug = {
     end,
 }
 
-local _is_available_ability_charges = function()
-    local unit = Managers.player:local_player(1).player_unit
-    if unit then
-        if ScriptUnit.extension(unit, "ability_system"):remaining_ability_charges("combat_ability") > 0 then
-            return true
-        end
-    end
-    return false
-end
-
-local _is_in_hub = function()
+local check_is_in_hub = function()
     local game_mode_manager = Managers.state.game_mode
     local game_mode_name = game_mode_manager and game_mode_manager:game_mode_name()
     return game_mode_name == "hub"
@@ -105,12 +93,21 @@ local elapsed = function(time)
     return time_now() - time
 end
 
+local is_available_ability_charges = function()
+    local unit = Managers.player:local_player(1).player_unit
+    if unit then
+        if ScriptUnit.extension(unit, "ability_system"):remaining_ability_charges("combat_ability") > 0 then
+            return true
+        end
+    end
+    return false
+end
+
 --------------------------
 -- MOD SETTINGS CACHING --
 --------------------------
 
 mod.settings = {
-    enable_prevent_double_dashing = mod:get("enable_prevent_double_dashing"),
     enable_prevent_relic_cancel   = mod:get("enable_prevent_relic_cancel"),
     enable_prevent_ability_aiming = mod:get("enable_prevent_ability_aiming"),
     enable_debug_modding_tools    = mod:get("enable_debug_modding_tools"),
@@ -126,7 +123,7 @@ end
 
 mod.on_all_mods_loaded = function()
     -- Update is_in_hub
-    is_in_hub = _is_in_hub()
+    is_in_hub = check_is_in_hub()
 
     -- WATCHER
     -- modding_tools:watch("promise_ability",mod,"promise_ability")
@@ -139,7 +136,7 @@ end
 
 mod.on_game_state_changed = function(status, state_name)
     -- Update is_in_hub
-    is_in_hub = _is_in_hub()
+    is_in_hub = check_is_in_hub()
 end
 
 -----------------------
@@ -147,7 +144,7 @@ end
 -----------------------
 
 local function setPromise(from)
-    if not _is_available_ability_charges() then
+    if not is_available_ability_charges() then
         return
     end
     if not mod.promise_ability then
@@ -173,7 +170,7 @@ local function isPromised()
         if elapsed(mod.last_do_promise) < INTERVAL_DO_PROMISE then
             return false
         end
-        if not _is_available_ability_charges() then
+        if not is_available_ability_charges() then
             clearPromise("empty_ability_charges")
             return false
         end
@@ -322,7 +319,6 @@ local function _on_slot_wielded(self)
     if wielded_slot ~= current_slot then
         current_slot = wielded_slot
         if current_slot == "slot_combat_ability" then
-            last_slot_combat_ability = time_now()
             clearPromise("on " .. current_slot)
         end
     end
@@ -390,33 +386,12 @@ local _input_hook = function(func, self, action_name)
         return out
     end
 
-    if combat_ability == "adamant_area_buff_drone" then
-        -- While sprinting if press ability too short the drone will be cancel, This should prevent it
-        if action_name == "combat_ability_hold" then
-            if current_slot == "slot_combat_ability" and elapsed(last_slot_combat_ability) < 0.1 then
-                return true
-            end
-        -- Using movement key while in mid air after sprinting jump will block drone, This should prevent it
-        elseif action_name == "move_forward" or action_name == "move_left" or action_name == "move_right" then
-            if current_slot == "slot_combat_ability" or mod.promise_ability then
-                if character_state == "jumping" or character_state == "falling" then
-                    return false
-                end
-            end
-        -- Sprint while releasing drone will cancel ability, This should prevent it
-        elseif action_name == "sprinting" then
-            if current_slot == "slot_combat_ability" or mod.promise_ability then
-                return false
-            end
-        end
-    end
-
     if action_name == "combat_ability_pressed" then
         if pressed then
             if mod.settings["enable_prevent_relic_cancel"] and combat_ability == "zealot_relic" and current_slot == "slot_combat_ability" then
                 return false
             end
-            if mod.settings["enable_prevent_double_dashing"] and IS_DASH_ABILITY[combat_ability] and character_state == "lunging" then
+            if IS_DASH_ABILITY[combat_ability] and character_state == "lunging" then
                 return false
             end
             setPromise("pressed")
@@ -434,14 +409,6 @@ local _input_hook = function(func, self, action_name)
 
     if action_name == "combat_ability_hold" then
         if pressed and mod.settings["enable_prevent_ability_aiming"] then
-            return false
-        end
-        return out
-    end
-
-    if action_name == "sprinting" then
-        -- Vanilla workaround bugfix for 2nd dash ability not seemlessly continues
-        if character_state == "lunging" then
             return false
         end
         return out
