@@ -431,10 +431,10 @@
 
 ### [Recolor Boss Health Bars](https://www.nexusmods.com/warhammer40kdarktide/mods/314)
     重著色BOSS血條
-- MOD 網站最後更新日期：Last updated 04 July 2025, 1:38AM
-- MOD 版本：2.1
-- MOD 檔案名稱：Recolor Boss Health Bars-314-2-1-1751564337
-- 手動維護最後下載日期：2025-07-04
+- MOD 網站最後更新日期：Last updated 12 July 2025, 5:03AM
+- MOD 版本：2.2.1
+- MOD 檔案名稱：Recolor Boss Health Bars-314-2-2-1-1752267812
+- 手動維護最後下載日期：2025-07-12
 ---
 
 # 遊戲內操作相關MOD
