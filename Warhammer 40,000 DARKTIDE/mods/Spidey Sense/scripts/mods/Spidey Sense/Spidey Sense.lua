@@ -1,15 +1,15 @@
 --[[
 Title: Spidey Sense
 Author: Wobin
-Date: 03/12/2024
+Date: 13/07/2025
 Repository: https://github.com/Wobin/SpideySense
-Version: 5.1.3
+Version: 5.1.4
 --]]
 
 local mod = get_mod("Spidey Sense")
 local FontManager = require("scripts/managers/ui/ui_font_manager")
 
-mod.version = "5.1.3"
+mod.version = "5.1.4"
 
 mod.showCleave = false
 mod.showNet = false
@@ -211,7 +211,7 @@ mod.hook_monster = function(sound_name, unit_or_position, check_unit)
         indicate_warning(unit_or_position, "pounce") 
   end
   if mod:get("render_sniper_warning")
-    and sound_name:match("play_special_sniper_flash") then
+    and sound_name:match("play_special_sniper_flasheer") or sound_name:match("play_weapon_longlas_minion") then
       indicate_warning(unit_or_position, "sniper")
   end
   

@@ -175,18 +175,33 @@ end)
 local arrowpng =  "https://wobin.github.io/SpideySense/images/arrow.png"
 local arrow2png = "https://wobin.github.io/SpideySense/images/arrow2.png"
 
+local texture_dir
 local load_arrow = function(indicator)
-  if DLS then
-    local texture_dir = DLS.absolute_path("images")
-    local arrowpromise =  DLS.get_image(texture_dir .."/arrow.png"):next(function(data) indicator.style.arrow.material_values.texture_map = data.texture end)
-    local arrow2promise = DLS.get_image(texture_dir .."/arrow2.png"):next(function(data) indicator.style.arrow2.material_values.texture_map = data.texture end)
+  if mod.arrow1_texture then indicator.style.arrow.material_values.texture_map = mod.arrow1_texture end
+  if mod.arrow2_texture then indicator.style.arrow2.material_values.texture_map = mod.arrow2_texture end
+
+  if mod.arrow1_texture and mod.arrow2_texture then return end
+
+  if DLS then    
+    texture_dir = texture_dir or DLS.absolute_path("images")
+    local arrowpromise =  DLS.get_image(texture_dir .."/arrow.png"):next(function(data) 
+        mod.arrow1_texture = data.texture
+        indicator.style.arrow.material_values.texture_map = data.texture 
+      end) 
+    
+    local arrow2promise = DLS.get_image(texture_dir .."/arrow2.png"):next(function(data) 
+        mod.arrow2_texture = data.texture
+        indicator.style.arrow2.material_values.texture_map = data.texture 
+      end)
     return Promise.all(arrowpromise, arrow2promise)
   else  
    return Managers.backend:authenticate():next(function()
       Managers.url_loader:load_texture(arrowpng):next(function(data)                  
+        mod.arrow1_texture = data.texture
         indicator.style.arrow.material_values.texture_map = data.texture
       end)
       Managers.url_loader:load_texture(arrow2png):next(function(data)          
+        mod.arrow2_texture = data.texture
         indicator.style.arrow2.material_values.texture_map = data.texture              
       end)
     end)
