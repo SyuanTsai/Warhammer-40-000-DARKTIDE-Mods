@@ -219,7 +219,7 @@ return {
             setting_id = "right_board_offset_y",
             type = "numeric",
             default_value = 0,
-            range = { -1000, 1000 },
+            range = { -500, 500 },
             step_size = 10,
             unit_text = "右侧任务板 Y 偏移"
           },
