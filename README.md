@@ -418,10 +418,10 @@
 
 ### [Better Hud Info View](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
     浩劫HUD資訊
-- MOD 網站最後更新日期：Last updated 30 April 2025 12:48AM
-- MOD 版本：1.4.1
-- MOD 檔案名稱：better_hud_info_view-511-1-4-1-1745974107
-- 手動維護最後下載日期：2025-05-02
+- MOD 網站最後更新日期：Last updated 19 July 2025, 9:22PM
+- MOD 版本：1.5
+- MOD 檔案名稱：better_hud_info_view-511-1-5-1752931365
+- 手動維護最後下載日期：2025-07-20
 
 ---
 # 遊戲內操作相關MOD
