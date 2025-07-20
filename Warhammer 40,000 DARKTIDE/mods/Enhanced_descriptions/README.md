@@ -1,3 +1,5 @@
+[![Darktide](https://global-uploads.webflow.com/6346a2e14dce674426be40ac/637f9b5a8de2a3c4122f0291_6346ea11b9acfa58c8f5a014_Darktide_Logo_2022-2.png)](https://www.playdarktide.com)
+
 # ENHANCED DESCRIPTIONS
 [![Enhanced Descriptions](https://staticdelivery.nexusmods.com/mods/4943/images/headers/210_1703189302.jpg)](https://www.nexusmods.com/warhammer40kdarktide/mods/210)
 
@@ -15,11 +17,10 @@ __*Let us know if you spot any issues!*__
 ***
 
 ## Manual Installation:
-1. Extract the mod into your **Mods** folder.
-   
-	*For example: `..\Steam\steamapps\common\Warhammer 40,000 DARKTIDE\mods\Enhanced_descriptions\`*
-2. Add **Enhanced_descriptions** to **mod_load_order.txt** manually or with my [Mod Load Order File Maker](https://www.nexusmods.com/warhammer40kdarktide/mods/139).
-3. Launch the game and enjoy!
+### ﻿ ﻿1. Extract the mod into your **Mods** folder.
+   *For example: `..\Steam\steamapps\common\Warhammer 40,000 DARKTIDE\mods\Enhanced_descriptions\`*
+### ﻿ ﻿2. Add **Enhanced_descriptions** to **mod_load_order.txt** manually or with my [Mod Load Order File Maker](https://www.nexusmods.com/warhammer40kdarktide/mods/139).
+### ﻿ ﻿3. Launch the game and enjoy!
 ***
 
 ## TODO:
@@ -40,33 +41,33 @@ __*Let us know if you spot any issues!*__
 ***
 
 ## Versions:
-- *Version: __3.5b__*
-	- *Added Traditional Chinese localization.*
-	- *Added Simplified Chinese localization.*
-	- *Updated Blessings, Talents, Penances, Menus, Curios, etc.*
-	- *Refactored code structure to reduce character count and improve localization handling.*
-	- *Various fixes.*
+### ﻿ ﻿*Version: __3.5b__*
+- *Added Traditional Chinese localization.*
+- *Added Simplified Chinese localization.*
+- *Updated Blessings, Talents, Penances, Menus, Curios, etc.*
+- *Refactored code structure to reduce character count and improve localization handling.*
+- *Various fixes.*
 
-- *Version: __3.402b__*
-	- *Updated English and Russian localizations for the new patch (core content only; extended descriptions will follow in a later updates).*
+### ﻿ ﻿*Version: __3.402b__*
+   - *Updated English and Russian localizations for the new patch (core content only; extended descriptions will follow in a later updates).*
 
-- *Version: __3.2b__*
-	- *Fixed COLORS_Numbers, CURIOS_Blessings_Perks, WEAPONS_Blessings_Perks.*
+### ﻿ ﻿*Version: __3.2b__*
+   - *Fixed COLORS_Numbers, CURIOS_Blessings_Perks, WEAPONS_Blessings_Perks.*
 
-- *Version: __3.1b__*
-	- *Added Russian localization.*
-	- *Added Russian and some English Penances.*
-	- *Refactored the structure to enable multilingual support.*
+### ﻿ ﻿*Version: __3.1b__*
+   - *Added Russian localization.*
+   - *Added Russian and some English Penances.*
+   - *Refactored the structure to enable multilingual support.*
 
-- *Version: __3.0b__*
-	- *Added French localization.*
-	- *Added missing Blessings for Relic Blade.*
+### ﻿ ﻿*Version: __3.0b__*
+   - *Added French localization.*
+   - *Added missing Blessings for Relic Blade.*
 ***
 
 Download from: [Nexus](https://www.nexusmods.com/warhammer40kdarktide/mods/210)
 ***
 
-![Example](https://staticdelivery.nexusmods.com/mods/4943/images/thumbnails/210/210-1730378286-1772147929.png)
+![Картинка 1](https://staticdelivery.nexusmods.com/mods/4943/images/thumbnails/210/210-1730378286-1772147929.png)
 ![Example](https://staticdelivery.nexusmods.com/mods/4943/images/thumbnails/210/210-1730378278-971187626.png)
 ![Example](https://staticdelivery.nexusmods.com/mods/4943/images/thumbnails/210/210-1730378291-1161133628.png)
 ![Example](https://staticdelivery.nexusmods.com/mods/4943/images/thumbnails/210/210-1730378293-1914590128.png)
