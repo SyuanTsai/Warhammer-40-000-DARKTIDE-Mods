@@ -88,6 +88,7 @@ mod.utilities = {
     sort_breed_names = nil,
     clean_breed_name = nil,
     is_monster = nil,
+    is_weakened = nil,
 }
 local util = mod.utilities
 
@@ -128,6 +129,49 @@ util.monster_then_alphabetical_order = function(a,b)
     else
         return(mod:localize(a) < mod:localize(b))
     end
+end
+
+util.is_weakened = function(unit)
+    local unit_data_ext = ScriptUnit.extension(unit, "unit_data_system")
+    local breed = unit_data_ext and unit_data_ext:breed()
+    local is_weakened = false
+
+    if not breed then
+        --mod:echo("Error: breed = nil")
+        return is_weakened
+    end
+
+    if not breed.is_boss or breed.ignore_weakened_boss_name then
+        return is_weakened
+    end
+
+    local health_extension = ScriptUnit.extension(unit, "health_system")
+    local max_health = health_extension and health_extension:max_health()
+    local initial_max_health = max_health and math.floor(Managers.state.difficulty:get_minion_max_health(breed.name))
+
+    if not initial_max_health then
+        return is_weakened
+    end
+
+    if max_health < initial_max_health then
+        is_weakened = true
+    else
+        local havoc_mananger = Managers.state.havoc
+
+        if havoc_mananger:is_havoc() then
+            local havoc_health_override_value = havoc_mananger:get_modifier_value("modify_monster_health")
+
+            if havoc_health_override_value then
+                local multiplied_max_health = initial_max_health + initial_max_health * havoc_health_override_value
+
+                if max_health < multiplied_max_health then
+                    is_weakened = true
+                end
+            end
+        end
+    end
+
+    return is_weakened
 end
 
 
