@@ -80,6 +80,7 @@ DisplayPing
 Reconnect
 valkyrie
 DarkCache
+BornReady
 
 -- 基本上不需設定
 psych_ward
