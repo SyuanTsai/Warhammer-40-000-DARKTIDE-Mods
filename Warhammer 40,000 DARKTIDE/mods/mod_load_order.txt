@@ -79,7 +79,6 @@ TeammateHealthbars
 DisplayPing
 Reconnect
 valkyrie
-DarkCache
 BornReady
 MissionBrief
 
