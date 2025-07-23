@@ -469,6 +469,13 @@
 - MOD 檔案名稱：DisplayPing-460-1-6-2-1744573670
 - 手動維護最後下載日期：2025-07-23
 
+### [Reconnect](https://www.nexusmods.com/warhammer40kdarktide/mods/132)
+    
+- MOD 網站最後更新日期：Last updated 26 April 2023, 9:51AM
+- MOD 版本：1.2.2
+- MOD 檔案名稱：Reconnect-132-1-2-2-1682473888
+- 手動維護最後下載日期：2025-07-23
+
 ---
 # 遊戲內操作相關MOD
 
