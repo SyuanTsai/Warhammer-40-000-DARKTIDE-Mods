@@ -476,6 +476,14 @@
 - MOD 檔案名稱：Reconnect-132-1-2-2-1682473888
 - 手動維護最後下載日期：2025-07-23
 
+### [Valkyrie Blitz-Ingress](https://www.nexusmods.com/warhammer40kdarktide/mods/544)
+    省略開場任務介紹(浩劫斷線時加速回歸)
+- MOD 網站最後更新日期：Last updated 23 July 2025, 9:38AM
+- MOD 版本：0.3
+- MOD 檔案名稱：Reconnect-132-1-2-2-1682473888
+- 手動維護最後下載日期：2025-07-23
+
+
 ---
 # 遊戲內操作相關MOD
 
