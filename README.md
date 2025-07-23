@@ -483,6 +483,13 @@
 - MOD 檔案名稱：Reconnect-132-1-2-2-1682473888
 - 手動維護最後下載日期：2025-07-23
 
+### [DarkCache](https://www.nexusmods.com/warhammer40kdarktide/mods/114)
+    預先載入
+- MOD 網站最後更新日期：Last updated 29 June 2023, 6:49PM
+- MOD 版本：1.4
+- MOD 檔案名稱：DarkCache-114-1-4-1688035784
+- 手動維護最後下載日期：2025-07-23
+
 
 ---
 # 遊戲內操作相關MOD
