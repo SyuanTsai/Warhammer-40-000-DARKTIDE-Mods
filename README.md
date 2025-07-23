@@ -490,6 +490,13 @@
 - MOD 檔案名稱：DarkCache-114-1-4-1688035784
 - 手動維護最後下載日期：2025-07-23
 
+### [BornReady](https://www.nexusmods.com/warhammer40kdarktide/mods/96)
+    預先載入
+- MOD 網站最後更新日期：Last updated 26 August 2024, 8:39AM
+- MOD 版本：1.6
+- MOD 檔案名稱：BornReady-96-1-6-1724632773
+- 手動維護最後下載日期：2025-07-23
+
 
 ---
 # 遊戲內操作相關MOD
