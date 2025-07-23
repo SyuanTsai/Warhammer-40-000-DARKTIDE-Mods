@@ -78,6 +78,7 @@ AutoBlitz
 TeammateHealthbars
 DisplayPing
 Reconnect
+valkyrie
 
 -- 基本上不需設定
 psych_ward
