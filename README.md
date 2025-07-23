@@ -497,6 +497,12 @@
 - MOD 檔案名稱：BornReady-96-1-6-1724632773
 - 手動維護最後下載日期：2025-07-23
 
+### [MissionBrief](https://www.nexusmods.com/warhammer40kdarktide/mods/387)
+    預先載入
+- MOD 網站最後更新日期：Last updated 24 June 2025, 12:50AM
+- MOD 版本：1.4
+- MOD 檔案名稱：MissionBrief-387-1-4-1750697422
+- 手動維護最後下載日期：2025-07-23
 
 ---
 # 遊戲內操作相關MOD
