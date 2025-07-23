@@ -76,6 +76,7 @@ afk
 red_weapons_at_home
 AutoBlitz
 TeammateHealthbars
+DisplayPing
 
 -- 基本上不需設定
 psych_ward

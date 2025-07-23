@@ -456,11 +456,18 @@
 - 手動維護最後下載日期：2025-07-12
 
 ### [SpecialsTracker](https://www.nexusmods.com/warhammer40kdarktide/mods/274)
-    險市場上所有特感數量
+    顯示場上所有特感數量
 - MOD 網站最後更新日期：Last updated 08 April 2025 3:34PM
 - MOD 版本：1.5.1
 - MOD 檔案名稱：SpecialsTracker-274-1-5-1744126486
 - 手動維護最後下載日期：2025-07-20
+
+### [Display Ping (Latency)](https://www.nexusmods.com/warhammer40kdarktide/mods/460)
+    顯示延遲
+- MOD 網站最後更新日期：Last updated 14 April 2025, 3:47AM
+- MOD 版本：1.5.1
+- MOD 檔案名稱：DisplayPing-460-1-6-2-1744573670
+- 手動維護最後下載日期：2025-07-23
 
 ---
 # 遊戲內操作相關MOD
