@@ -1,0 +1,75 @@
+local mod = get_mod("uptime")
+
+mod.mission_tracking = {
+    start_time = nil,
+    end_time = nil,
+    combats = {}
+}
+
+function mod:tracking_in_progress()
+    local has_started = mod.mission_tracking.start_time ~= nil
+    local has_ended = mod.mission_tracking.end_time ~= nil
+    return has_started and (not has_ended)
+end
+
+function mod:start_mission_tracking()
+    mod.mission_tracking.start_time = mod:now()
+    mod.mission_tracking.end_time = nil
+    mod.combats = {}
+end
+
+function mod:end_mission_tracking()
+    local end_time = mod:now()
+    mod.mission_tracking.end_time = end_time
+
+    local combats = mod.mission_tracking.combats
+    if #combats > 0 then
+        local last_combat = combats[#combats]
+        if last_combat.end_time > end_time then
+            last_combat.end_time = end_time
+        end
+    end
+    return mod.mission_tracking
+end
+
+function mod:now()
+    if not Managers.time:has_timer("gameplay") then
+        return 0
+    end
+    return Managers.time:time("gameplay")
+end
+
+mod:hook_safe(CLASS.AttackReportManager, "add_attack_result", function(func, self, damage_profile, attacked_unit, attacking_unit, attack_direction, hit_world_position, hit_weakspot, damage,
+                                                                       attack_result, attack_type, damage_efficiency, ...)
+    if player_from_unit(attacking_unit) or player_from_unit(attacked_unit) then
+        local now = mod:now()
+        local combats = mod.mission_tracking.combats
+        local combat_duration = 10 -- Duration to extend combat in seconds
+
+        if #combats > 0 then
+            local last_combat = combats[#combats]
+
+            if now >= last_combat.start_time and now <= last_combat.end_time then
+                -- Current time is within the last combat window, extend the end time
+                last_combat.end_time = now + combat_duration
+            elseif now > last_combat.end_time then
+                -- Current time is past the last combat window, create a new entry
+                table.insert(combats, {
+                    start_time = now,
+                    end_time = now + combat_duration
+                })
+            end
+        else
+            -- No combat entries yet, create the first one
+            table.insert(combats, {
+                start_time = now,
+                end_time = now + combat_duration
+            })
+        end
+    end
+end)
+
+function player_from_unit(unit)
+    local player = Managers.player:local_player(1)
+    return unit == player.player_unit
+end
