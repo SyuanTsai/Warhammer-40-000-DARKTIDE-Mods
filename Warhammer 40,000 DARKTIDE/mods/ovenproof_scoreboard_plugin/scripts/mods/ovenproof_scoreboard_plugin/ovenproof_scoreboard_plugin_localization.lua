@@ -29,7 +29,9 @@ mod.create_string = function(string_left, string_right)
 end
 
 local localization = {
+    -- ----------------
     -- Core
+    -- ----------------
     mod_title = {
         en = "OvenProof's scoreboard",
         ru = "Таблица результатов - плагин OvenProof'а",
@@ -44,7 +46,9 @@ local localization = {
         ["zh-tw"] = "OvenProof 的自訂記分板",
         ["pt-br"] = "scoreboard Personalizado do OvenProof",
     },
+    -- ----------------
     -- Groups
+    -- ----------------
     group_1 = {
         en = "Group 1",
         ru = "Группа 1",
@@ -59,27 +63,31 @@ local localization = {
         ["zh-tw"] = "分數",
         ["pt-br"] = "Pontuação",
     },
+    -- ----------------
     -- Settings
+    -- ----------------
+    error_scoreboard_missing = {
+        en = "Scoreboard required! This is an add-on plugin to it!",
+        ["zh-tw"] = "需要記分板！這是它的附加插件！",
+    },
     enable_debug_messages = {
         en = "Enable error messages",
-        ru = "Включить сообщения об ошибках",
-        ["zh-cn"] = "启用错误消息",
         ["zh-tw"] = "啟用錯誤訊息",
         ["pt-br"] = "Ativar Mensagens de Erro",
     },
     enable_debug_messages_description = {
         en = "Show messages in chat whenever an uncategorized damage type is used. Please report these!",
-        ru = "Показывать сообщения в чате всякий раз, когда используется некатегоризированный тип повреждения. Пожалуйста, сообщите об этом!",
-        ["zh-cn"] = "每当使用未分类的伤害类型时，聊天中都会显示消息。请举报！",
         ["zh-tw"] = "每當使用未分類的傷害類型時，聊天中都會顯示訊息。請檢舉！",
         ["pt-br"] = "Exibir mensagens no chat quando um tipo de dano não categorizado for usado. Por favor, reporte esses casos!",
     },
     row_categories_group = {
         en = "Scoreboard Row Categories",
-        ru = "Категории строк табло",
-        ["zh-cn"] = "记分板行类别",
         ["zh-tw"] = "記分板行類別",
         ["pt-br"] = "Categorias de Linhas do scoreboard",
+    },
+    ammo_tracking_group = {
+        en = "Ammo Tracking",
+        ["zh-tw"] = "彈藥追蹤",
     },
     exploration_tier_0 = {
         en = "Exploration",
@@ -150,7 +158,27 @@ local localization = {
         ["zh-tw"] = "訊息 - 彈藥/手雷拾取",
         ["pt-br"] = "Mensagens - Coleta de Munição/Granadas",
     },
+    track_ammo_crate_waste = {
+        en = "Track Ammo Crate waste",
+        ["zh-tw"] = "追蹤彈藥箱浪費",
+    },
+    track_ammo_crate_waste = {
+        en = "Track Ammo Crate waste",
+        ["zh-tw"] = "追蹤彈藥箱浪費",
+    },
+    track_ammo_crate_in_percentage = {
+        en = "Include Ammo Crates in total percentage of Ammo picked up",
+        ["zh-tw"] = "將彈藥箱計入總拾取彈藥的百分比",
+    },
+    -- ----------------
     -- Reusable labels
+    -- ----------------
+    -- Settings
+    setting_only_in_havoc = {
+        en = "Only when playing Havoc",
+        ["zh-tw"] = "僅在浩劫模式下",
+    },
+    -- Scoreboard Row Text
     row_kills = {
         en = "Kills",
         ru = "Убийств",
@@ -204,6 +232,9 @@ local localization = {
         ["zh-tw"] = "拾取了 %s 彈藥，來自 %s",
         ["pt-br"] = " coletou %s munição de %s",
     },
+    message_ammo_crate_waste = {
+        en = " picked up %s ammo from an %s, wasting %s",
+    },
     message_ammo_crate_text = {
         en = "ammo crate",
         ["zh-cn"] = "弹药箱",
@@ -222,7 +253,9 @@ local localization = {
         ["zh-tw"] = "手雷",
         ["pt-br"] = "Granadas",
     },
+    -- ----------------
     -- Rows: exploration_tier_0
+    -- ----------------
     row_total_material_pickups = {
         en = "Total Material Pickups",
         ru = "Всего поднято Ресурсов",
@@ -266,7 +299,9 @@ local localization = {
         ["zh-tw"] = "彈藥箱使用",
         ["pt-br"] = "Caixas Usadas",
     },
+    -- ----------------
     -- Rows: defense_tier_0
+    -- ----------------
     row_total_health = {
         en = {left = "Total", right = "[ Damage Taken | HP Stations Used ]",},
         ru = {left = "Всего", right = "[Урона получено/Исп.медстанций]",},
@@ -372,7 +407,9 @@ local localization = {
         ["zh-tw"] = "營救玩家數",
         ["pt-br"] = "Aliados Resgatados",
     },
+    -- ----------------
     -- Rows: offense_rates
+    -- ----------------
     row_total_weakspot_rates = {
         en = {left = "Weakspot Rate", right = "[ Melee | Ranged ]",},
         ru = {left = "Уязвимые места", right = "[Ближний/Дальний]",},
@@ -467,7 +504,9 @@ local localization = {
         ["zh-tw"] = "環境",
         ["pt-br"] = "Ambiente",
     },
+    -- ----------------
     -- Rows: offense_tier_0
+    -- ----------------
     row_total = {
         en = {left = "Total", right = "[ Kills | Damage ]",},
         ru = {left = "Всего", right = "[Убийств/Урона]",},
@@ -475,7 +514,9 @@ local localization = {
         ["zh-tw"] = { left = "總數", right = "[ 擊殺 | 傷害 ]",},
         ["pt-br"] = {left = "Total", right = "[Abates | Dano]",},
     },
+    -- ----------------
     -- Rows: offense_tier_1
+    -- ----------------
     row_total_melee = {
         en = {left = "Total Melee", right = "[ Kills | Damage ]",},
         ru = {left = "Всего в Ближнем бою", right = "[Убийств/Урона]",},
@@ -526,7 +567,9 @@ local localization = {
         ["zh-tw"] = { left = "總環境", right = "[ 擊殺 | 傷害 ]",},
         ["pt-br"] = {left = "Total Ambiental", right = "[Abates | Dano]",},
     },
+    -- ----------------
     -- Rows: offense_tier_2
+    -- ----------------
     row_total_lesser = {
         en = {left = "Total Lesser", right = "[ Kills | Damage ]",},
         ru = {left = "Всего Слабые враги", right = "[Убийств/Урона]",},
@@ -555,7 +598,9 @@ local localization = {
         ["zh-tw"] = { left = "全部的 Boss", right = "[ 擊殺 | 傷害 ]",},
         ["pt-br"] = {left = "Total Chefes", right = "[Abates | Dano]",},
     },
+    -- ----------------
     -- Rows: offense_tier_3
+    -- ----------------
     row_melee_lesser = {
         en = {left = "Melee Lesser", right = "[ Kills | Damage ]",},
         ru = {left = "Слабые - Ближний бой", right = "[Убийств/Урона]",},
@@ -605,7 +650,9 @@ local localization = {
         ["zh-tw"] = { left = "Boss", right = "[ 擊殺 | 傷害 ]",},
         ["pt-br"] = {left = "Chefes", right = "[Abates | Dano]",},
     },
+    -- ----------------
     -- Rows: fun_stuff_01
+    -- ----------------
     row_one_shots = {
         en = "Number of one shots",
         ru = "Убийств одним ударом",

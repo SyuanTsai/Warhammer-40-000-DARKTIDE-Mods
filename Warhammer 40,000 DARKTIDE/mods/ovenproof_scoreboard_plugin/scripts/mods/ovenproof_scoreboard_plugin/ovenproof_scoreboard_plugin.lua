@@ -18,12 +18,13 @@ local tostring = tostring
 -- #######
 -- Mod Locals
 -- #######
-local mod_version = "1.2.4"
+mod.version = "1.4.0"
 local debug_messages_enabled = mod:get("enable_debug_messages")
 
 local in_match
 local is_playing_havoc
 local havoc_manager
+local scoreboard
 -- ammo pickup given as a percentage, such as 0.85
 mod.ammunition_pickup_modifier = 1
 
@@ -33,174 +34,183 @@ mod.ammunition_pickup_modifier = 1
 -- ------------
 -- Enemy Breeds
 -- ------------
-mod.melee_lessers = {
-	"chaos_newly_infected",
-	"chaos_poxwalker",
-	"cultist_melee",
-	"renegade_melee",
-	"chaos_armored_infected",
-	"chaos_mutated_poxwalker",
-	"chaos_lesser_mutated_poxwalker",
-}
-mod.ranged_lessers = {
-	"cultist_assault",
-	"renegade_assault",
-	"renegade_rifleman",
-}
-mod.melee_elites = {
-	"cultist_berzerker",
-	"renegade_berzerker",
-	"renegade_executor",
-	"chaos_ogryn_bulwark",
-	"chaos_ogryn_executor",
-}
-mod.ranged_elites = {
-	"cultist_gunner",
-	"renegade_gunner",
-	"cultist_shocktrooper",
-	"renegade_shocktrooper",
-	"chaos_ogryn_gunner",
-	"renegade_radio_operator",
-}
-mod.specials = {
-	"chaos_poxwalker_bomber",
-	"renegade_grenadier",
-	"cultist_grenadier",
-	"renegade_sniper",
-	"renegade_flamer",
-	"cultist_flamer",
-}
-mod.disablers = {
-	"chaos_hound",
-	"chaos_hound_mutator",
-	"cultist_mutant",
-	"cultist_mutant_mutator",
-	"renegade_netgunner",
-}
-mod.bosses = {
-	"chaos_beast_of_nurgle",
-	"chaos_daemonhost",
-	"chaos_spawn",
-	"chaos_plague_ogryn",
-	"chaos_plague_ogryn_sprayer",
-	"renegade_captain",
-	"renegade_twin_captain",
-	"renegade_twin_captain_two",
-	"cultist_captain",
-	"chaos_mutator_daemonhost",
-}
+	mod.melee_lessers = {
+		"chaos_newly_infected",
+		"chaos_poxwalker",
+		"cultist_melee",
+		"renegade_melee",
+		"chaos_armored_infected",
+		"chaos_mutated_poxwalker",
+		"chaos_lesser_mutated_poxwalker",
+	}
+	mod.ranged_lessers = {
+		"cultist_assault",
+		"renegade_assault",
+		"renegade_rifleman",
+	}
+	mod.melee_elites = {
+		"cultist_berzerker",
+		"renegade_berzerker",
+		"renegade_executor",
+		"chaos_ogryn_bulwark",
+		"chaos_ogryn_executor",
+	}
+	mod.ranged_elites = {
+		"cultist_gunner",
+		"renegade_gunner",
+		"cultist_shocktrooper",
+		"renegade_shocktrooper",
+		"chaos_ogryn_gunner",
+		"renegade_radio_operator",
+	}
+	mod.specials = {
+		"chaos_poxwalker_bomber",
+		"renegade_grenadier",
+		"cultist_grenadier",
+		"renegade_sniper",
+		"renegade_flamer",
+		"cultist_flamer",
+	}
+	mod.disablers = {
+		"chaos_hound",
+		"chaos_hound_mutator",
+		"cultist_mutant",
+		"cultist_mutant_mutator",
+		"renegade_netgunner",
+	}
+	mod.bosses = {
+		"chaos_beast_of_nurgle",
+		"chaos_daemonhost",
+		"chaos_spawn",
+		"chaos_plague_ogryn",
+		"chaos_plague_ogryn_sprayer",
+		"renegade_captain",
+		"renegade_twin_captain",
+		"renegade_twin_captain_two",
+		"cultist_captain",
+		"chaos_mutator_daemonhost",
+	}
 -- ------------
 -- Damage Types
 -- ------------
-mod.melee_attack_types ={
-	"melee",
-	"push",
-	-- "buff", -- regular Shock Maul and Arbites power maul stun intervals. also covers warp and bleed
-}
-mod.melee_damage_profiles ={
-	-- "shockmaul_stun_interval_damage", -- shock maul electrocution and Arbites dog shocks
-	"powermaul_p2_stun_interval",
-	"powermaul_p2_stun_interval_basic",
-	"powermaul_shield_block_special",
-	
-}
-mod.ranged_attack_types ={
-	"ranged",
-	"explosion",
-	"shout",
-}
-mod.ranged_damage_profiles ={
-	"shock_grenade_stun_interval",
-	"psyker_protectorate_spread_chain_lightning_interval",
-	"default_chain_lighting_interval",
-	"psyker_smite_kill",
-	"psyker_heavy_swings_shock", -- Psyker Smite on heavies and Remote Detonation on dog?
-}
--- Dog damage doesn't count as melee/ranged for penances
---	but the shock bomb collar counts for puncture, which is covered by "explosion" being in ranged_attack_types
-mod.companion_attack_types ={
-	"companion_dog", -- covers the breed_pounce types
-}
-mod.companion_damage_profiles ={
-	"adamant_companion_initial_pounce", -- never seen it come up but it's in the code
-	-- "adamant_companion_human_pounce",
-	-- "adamant_companion_ogryn_pounce",
-	-- "adamant_companion_monster_pounce",
-	"shockmaul_stun_interval_damage", -- shock maul electrocution and Arbites dog shocks
-}
+	mod.melee_attack_types ={
+		"melee",
+		"push",
+		-- "buff", -- regular Shock Maul and Arbites power maul stun intervals. also covers warp and bleed
+	}
+	mod.melee_damage_profiles ={
+		-- "shockmaul_stun_interval_damage", -- shock maul electrocution and Arbites dog shocks
+		"powermaul_p2_stun_interval",
+		"powermaul_p2_stun_interval_basic",
+		"powermaul_shield_block_special",
+		
+	}
+	mod.ranged_attack_types ={
+		"ranged",
+		"explosion",
+		"shout",
+	}
+	mod.ranged_damage_profiles ={
+		"shock_grenade_stun_interval",
+		"psyker_protectorate_spread_chain_lightning_interval",
+		"default_chain_lighting_interval",
+		"psyker_smite_kill",
+		"psyker_heavy_swings_shock", -- Psyker Smite on heavies and Remote Detonation on dog?
+	}
+	-- Dog damage doesn't count as melee/ranged for penances
+	--	but the shock bomb collar counts for puncture, which is covered by "explosion" being in ranged_attack_types
+	mod.companion_attack_types ={
+		"companion_dog", -- covers the breed_pounce types
+	}
+	mod.companion_damage_profiles ={
+		"adamant_companion_initial_pounce", -- never seen it come up but it's in the code
+		-- "adamant_companion_human_pounce",
+		-- "adamant_companion_ogryn_pounce",
+		-- "adamant_companion_monster_pounce",
+		"shockmaul_stun_interval_damage", -- shock maul electrocution and Arbites dog shocks
+	}
 
-mod.bleeding_damage_profiles ={
-	"bleeding",
-	"psyker_stun", -- Mortis Trials psyker bleed
-}
-mod.burning_damage_profiles ={
-	"burning",
-	"flame_grenade_liquid_area_fire_burning",
-	"liquid_area_fire_burning_barrel",
-	"liquid_area_fire_burning",
-}
-mod.warpfire_damage_profiles ={
-	"warpfire",
-}
---[[
-mod.electrocution_damage_profiles = {
-	"shockmaul_stun_interval_damage",
-	"powermaul_p2_stun_interval",
-	"powermaul_p2_stun_interval_basic",
-	"powermaul_shield_block_special",
-	"shock_grenade_stun_interval",
-	"psyker_protectorate_spread_chain_lightning_interval",
-	"default_chain_lighting_interval",
-	"psyker_smite_kill",
-}
-]]
-mod.environmental_damage_profiles = {
-	"barrel_explosion",
-	"barrel_explosion_close",
-	"fire_barrel_explosion",
-	"fire_barrel_explosion_close",
-	"kill_volume_and_off_navmesh",
-	"kill_volume_with_gibbing",
-	"default",
-	"poxwalker_explosion",
-	"poxwalker_explosion_close",
-}
+	mod.bleeding_damage_profiles ={
+		"bleeding",
+		"psyker_stun", -- Mortis Trials psyker bleed
+	}
+	mod.burning_damage_profiles ={
+		"burning",
+		"flame_grenade_liquid_area_fire_burning",
+		"liquid_area_fire_burning_barrel",
+		"liquid_area_fire_burning",
+		--"flamer_assault", -- Flaming shots from PBB. this just uses "burning"
+	}
+	mod.warpfire_damage_profiles ={
+		"warpfire",
+	}
+	--[[
+	mod.electrocution_damage_profiles = {
+		"shockmaul_stun_interval_damage",
+		"powermaul_p2_stun_interval",
+		"powermaul_p2_stun_interval_basic",
+		"powermaul_shield_block_special",
+		"shock_grenade_stun_interval",
+		"psyker_protectorate_spread_chain_lightning_interval",
+		"default_chain_lighting_interval",
+		"psyker_smite_kill",
+	}
+	]]
+	mod.environmental_damage_profiles = {
+		"barrel_explosion",
+		"barrel_explosion_close",
+		"fire_barrel_explosion",
+		"fire_barrel_explosion_close",
+		"kill_volume_and_off_navmesh",
+		"kill_volume_with_gibbing",
+		"default",
+		"poxwalker_explosion",
+		"poxwalker_explosion_close",
+	}
 -- ------------
 -- Other Stats
 -- ------------
-mod.states_disabled = {
-	 -- NB: Disabled some of these due to personal preference
-	"ledge_hanging",
-	-- "warp_grabbed",
-	"grabbed",
-	"consumed",
-	"netted",
-	--"mutant_charged",
-	"pounced"
-}
-mod.forge_material = {
-	loc_pickup_small_metal = "small_metal",
-	loc_pickup_large_metal = "large_metal",
-	loc_pickup_small_platinum = "small_platinum",
-	loc_pickup_large_platinum = "large_platinum",
-}
-mod.ammunition = {
-	loc_pickup_consumable_small_clip_01 = "small_clip",
-	loc_pickup_consumable_large_clip_01 = "large_clip",
-	loc_pickup_deployable_ammo_crate_01 = "crate",
-	loc_pickup_consumable_small_grenade_01 = "grenades",
-}
--- scripts/settings/pickup/pickups/consumable large_clip_pickup and small_clip_pickup
-mod.ammunition_percentage = {
-	small_clip = 0.15,
-	-- small_clip = SmallClipPickup.ammunition_percentage,
-	large_clip = 0.5,
-	-- large_clip = LargeClipPickup.ammunition_percentage,
-}
+	mod.states_disabled = {
+		-- NB: Disabled some of these due to personal preference
+		"ledge_hanging",
+		-- "warp_grabbed",
+		"grabbed",
+		"consumed",
+		"netted",
+		--"mutant_charged",
+		"pounced"
+	}
+	mod.forge_material = {
+		loc_pickup_small_metal = "small_metal",
+		loc_pickup_large_metal = "large_metal",
+		loc_pickup_small_platinum = "small_platinum",
+		loc_pickup_large_platinum = "large_platinum",
+	}
+	mod.ammunition = {
+		loc_pickup_consumable_small_clip_01 = "small_clip",
+		loc_pickup_consumable_large_clip_01 = "large_clip",
+		loc_pickup_deployable_ammo_crate_01 = "crate",
+		loc_pickup_consumable_small_grenade_01 = "grenades",
+	}
+	-- scripts/settings/pickup/pickups/consumable large_clip_pickup and small_clip_pickup
+	mod.ammunition_percentage = {
+		small_clip = 0.15,
+		-- small_clip = SmallClipPickup.ammunition_percentage,
+		large_clip = 0.5,
+		-- large_clip = LargeClipPickup.ammunition_percentage,
+		crate = 1,
+	}
+
+-- Setup tables for tracking later
+-- 		to count ammo wasted
+mod.current_ammo = {}
+-- 		to see who's interacting
+mod.interaction_units = {}
+--		to see who's disabled (and for when they get freed)
 mod.disabled_players = {}
 
 -- ########################
--- Functions
+-- Helper Functions
 -- ########################
 local function player_from_unit(unit)
 	local players = Managers.player:players()
@@ -212,35 +222,165 @@ local function player_from_unit(unit)
 	return nil
 end
 
---Manage blank rows on update
+-- ############
+-- Manage Blank Rows
+-- ############
+mod.manage_blank_rows = function()
+	if in_match then
+		local row = scoreboard:get_scoreboard_row("blank_1")
+		local players = Managers.player:players() or {}
+
+		if row and players then
+			if row["data"] then
+				for _, player in pairs (players) do
+					local account_id = player:account_id() or player:name()
+					if account_id then
+						row["data"][account_id] = row["data"][account_id] or {}
+						if not row["data"][account_id]["text"] then
+							mod:set_blank_rows(account_id)
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+-- ############
+-- Set All Blank Rows
+-- ############
+mod.set_blank_rows = function (self, account_id)
+	-- for i in range (1, 13), increment of 1
+	for i = 1,13,1 do
+		mod:replace_row_value("blank_"..i, account_id, "\u{200A}")
+	end
+	mod:replace_row_value("highest_single_hit", account_id, "\u{200A}0\u{200A}")
+end
+
+-- ############
+-- Replace entire value in scoreboard
+-- ############
+mod.replace_row_value = function(self, row_name, account_id, value)
+	local row = scoreboard:get_scoreboard_row(row_name)
+	if row then
+		local validation = row.validation
+		if tonumber(value) then
+			local value = value and math.max(0, value) or 0
+			row.data = row.data or {}
+			row.data[account_id] = row.data[account_id] or {}			
+			row.data[account_id].value = value
+			row.data[account_id].score = value
+			row.data[account_id].text = nil
+		else
+			row.data = row.data or {}
+			row.data[account_id] = row.data[account_id] or {}
+			row.data[account_id].text = value
+			row.data[account_id].value = 0
+			row.data[account_id].score = 0
+		end
+	end
+end
+
+-- ############
+-- Force replacement of text value in scoreboard
+-- ############
+mod.replace_row_text = function(self, row_name, account_id, value)
+	local row = scoreboard:get_scoreboard_row(row_name)
+	if row then
+		row.data = row.data or {}
+		row.data[account_id] = row.data[account_id] or {}
+		row.data[account_id].text = value
+		--row.data[account_id].value = value
+		--row.data[account_id].score = value
+	end
+end
+
+-- ############
+-- Get a row value from scoreboard
+-- ############
+mod.get_row_value = function(self, row_name, account_id)
+	local row = scoreboard:get_scoreboard_row(row_name)
+	return row.data[account_id] and row.data[account_id].score or 0
+end
+
+-- ############
+-- Check Setting and If It's Only for Havoc
+--	The idea is I have a setting to toggle x, with a suboptions to only check x if playing Havoc
+--	This chain of checks will tell if that condition is met
+--	Do not track this: return False at check 1
+--	Track this
+--		and don't care if havoc: return True at check 2.2
+--		and cares if havoc
+--			not currently playing havoc: return False at check 2.2.2
+--			is playing havoc: return True at check 2.2.2
+-- ############
+local function setting_is_enabled_and_check_if_havoc_only(main_setting, is_playing_havoc)
+	local only_in_havoc = mod:get(main_setting.."_only_in_havoc")
+	return mod:get(main_setting) and ((not only_in_havoc) or (only_in_havoc and is_playing_havoc))
+end
+
+-- ########################
+-- Executions on Game States
+-- ########################
+
+-- Manage blank rows on update
+--	WAIT WHAT THE FUCK THIS RUNS ON EVERY SINGLE GAME TICK???
 function mod.update(main_dt)
 	mod:manage_blank_rows()
 end
 
---Setup tables required to count ammo wasted
-mod.current_ammo = {}
-mod.interaction_units = {}
-
-mod:hook(CLASS.InteracteeExtension, "started", function(func, self, interactor_unit, ...)
-
-	mod.interaction_units[self._unit] = interactor_unit
-
-	-- Ammunition
-	local unit_data_extension = ScriptUnit.extension(interactor_unit, "unit_data_system")
-	local wieldable_component = unit_data_extension:read_component("slot_secondary")
-	mod.current_ammo[interactor_unit] = wieldable_component.current_ammunition_reserve
-
-	func(self, interactor_unit, ...)
-end)
+-- ############
+-- Check Setting Changes
+-- ############
+function mod.on_setting_changed(setting_id)
+	debug_messages_enabled = mod:get("enable_debug_messages")
+	--[[
+	-- Scoreboard can't be disabled mid-game
+	scoreboard = get_mod("scoreboard")
+	if not scoreboard then
+		mod:error(mod:localize("error_scoreboard_missing"))
+		return
+	end
+	]]
+end
 
 -- ############
--- Exploration: Equipment Use and Pickups
---	Track materials picked up, health stations used, and ammo picked up
---	Interactions
+-- ** Mod Startup **
 -- ############
-mod:hook(CLASS.InteracteeExtension, "stopped", function(func, self, result, ...)
-	local scoreboard = get_mod("scoreboard")
-	if scoreboard then
+function mod.on_all_mods_loaded()
+	debug_messages_enabled = mod:get("enable_debug_messages")
+	scoreboard = get_mod("scoreboard")
+	if not scoreboard then
+		mod:error(mod:localize("error_scoreboard_missing"))
+		return
+	end
+	mod:info("Version "..mod.version.." loaded uwu nya :3")
+
+	-- ################################################
+	-- HOOKS
+	-- ################################################
+
+	-- ############
+	-- Interactions Started?
+	-- ############
+	mod:hook(CLASS.InteracteeExtension, "started", function(func, self, interactor_unit, ...)
+
+		mod.interaction_units[self._unit] = interactor_unit
+
+		-- Ammunition
+		local unit_data_extension = ScriptUnit.extension(interactor_unit, "unit_data_system")
+		local wieldable_component = unit_data_extension:read_component("slot_secondary")
+		mod.current_ammo[interactor_unit] = wieldable_component.current_ammunition_reserve
+
+		func(self, interactor_unit, ...)
+	end)
+
+	-- ############
+	-- Exploration: Equipment Use and Pickups
+	--	Track materials picked up, health stations used, and ammo picked up
+	--	Interactions stopped
+	-- ############
+	mod:hook(CLASS.InteracteeExtension, "stopped", function(func, self, result, ...)
 		if result == interaction_results.success then
 			local type = self:interaction_type() or ""
 			local unit = self._interactor_unit
@@ -276,17 +416,19 @@ mod:hook(CLASS.InteracteeExtension, "stopped", function(func, self, result, ...)
 						local max_ammo_combined = max_ammo_clip + max_ammo_reserve
 						local ammo_missing = max_ammo_combined - current_ammo_combined
 						
+						-- Base pickup rate (decimal). Defaults to crate as a failsafe
+						local base_pickup_from_source = mod.ammunition_percentage[ammo] or 1
+						-- Calculating amount picked up
+						--		Ammo pickups are rounded up by the game
+						-- 		mod.mmunition_pickup_modifier to account for Havoc modifiers. set by state change check
+						local pickup = math.ceil(base_pickup_from_source * mod.ammunition_pickup_modifier * max_ammo_reserve)
+
+						local wasted = math.max(pickup - ammo_missing, 0)
+						local pickup_pct = 100 * (pickup / max_ammo_combined)
+						local wasted_pct = 100 * (wasted / max_ammo_reserve)
+						
 						-- Small boxes and Big bags
 						if ammo == "small_clip" or ammo == "large_clip" then
-							-- ammunition_pickup_modifier to account for Havoc modifiers. set by state change check
-							local pickup = math.ceil(mod.ammunition_percentage[ammo] * mod.ammunition_pickup_modifier * max_ammo_reserve)
-							-- ^ Ammo pickups are rounded up by the game
-							local wasted = math.max(pickup - ammo_missing, 0)
-							local pickup_pct = 100 * pickup / max_ammo_combined
-							local wasted_pct = 100 * wasted / max_ammo_reserve
-							--local base_pickup_pct = 100 * mod.ammunition_percentage[ammo]
-							--scoreboard:update_stat("ammo_percent", account_id, base_pickup_pct)
-							-- Using pickup percentage to account for Havoc modifiers
 							scoreboard:update_stat("ammo_percent", account_id, pickup_pct)
 							scoreboard:update_stat("ammo_wasted_percent", account_id, wasted_pct)
 							if mod:get("ammo_messages") then
@@ -303,31 +445,53 @@ mod:hook(CLASS.InteracteeExtension, "stopped", function(func, self, result, ...)
 							end
 						-- Deployabla Ammo Crates
 						elseif ammo == "crate" then
+							-- Amount of Ammo Crate uses
 							scoreboard:update_stat("ammo_crates", account_id, 1)
+							-- Adding to total percentage of ammo
+							local count_crates_to_total_ammo = setting_is_enabled_and_check_if_havoc_only("track_ammo_crate_in_percentage", is_playing_havoc)
+							if count_crates_to_total_ammo then
+								scoreboard:update_stat("ammo_percent", account_id, pickup_pct)
+							end
 							if mod:get("ammo_messages") then
-								local missing_pct = 100 * ((ammo_missing * mod.ammunition_pickup_modifier) / max_ammo_combined)
-								local ammo_taken = TextUtilities.apply_color_to_text(tostring(math.round(missing_pct)).."%", color)
+								-- Text formatting
+								-- 		Formatting for percentage of ammo picked up
+								local text_ammo_taken = TextUtilities.apply_color_to_text(tostring(math.round(pickup_pct)).."%", color)
+								-- 		Formatting for Ammo Crate name
 								local text_crate = TextUtilities.apply_color_to_text(mod:localize("message_ammo_crate_text"), color)
-								local message = mod:localize("message_ammo_crate", ammo_taken, text_crate)
+								local message = ""
+								-- Only prints waste message if that's enabled, and if there was actually waste found
+								local count_waste_for_crates = setting_is_enabled_and_check_if_havoc_only("track_ammo_crate_waste", is_playing_havoc)
+								if count_waste_for_crates and (not (wasted == 0)) then
+									local displayed_waste = math.max(1, math.round(wasted_pct))
+									local wasted_text = TextUtilities.apply_color_to_text(tostring(displayed_waste).."%", color)
+									message = mod:localize("message_ammo_crate_waste", text_ammo_taken, text_crate, wasted_text)
+								else
+									message = mod:localize("message_ammo_crate", text_ammo_taken, text_crate)
+								end
+								-- Puts message into combat feed
 								Managers.event:trigger("event_combat_feed_kill", unit, message)
+							end
+						else
+							local uncategorized_ammo_pickup_message = "Uncategorized ammo pickup! It is: "..tostring(ammo)
+							if debug_messages_enabled then
+								mod:echo(uncategorized_ammo_pickup_message)
+							else
+								mod:info(uncategorized_ammo_pickup_message)
 							end
 						end
 					end
 				end
 			end
 		end
-	end
-	func(self, result, ...)
-end)
+		func(self, result, ...)
+	end)
 
--- ############
--- Defense
---	Track damage taken and times disabled/downed/killed
---	Player State
--- ############
-mod:hook(CLASS.PlayerHuskHealthExtension, "fixed_update", function(func, self, unit, dt, t, ...)
-	local scoreboard = get_mod("scoreboard")
-	if scoreboard then
+	-- ############
+	-- Defense
+	--	Track damage taken and times disabled/downed/killed
+	--	Player State
+	-- ############
+	mod:hook(CLASS.PlayerHuskHealthExtension, "fixed_update", function(func, self, unit, dt, t, ...)
 		local Breed = scoreboard:original_require("scripts/utilities/breed")
 		if unit then
 			local player = Managers.player:player_by_unit(unit)
@@ -369,18 +533,15 @@ mod:hook(CLASS.PlayerHuskHealthExtension, "fixed_update", function(func, self, u
 				end
 			end
 		end
-	end
-	func(self, unit, dt, t, ...)
-end)
+		func(self, unit, dt, t, ...)
+	end)
 
--- ############
--- Defense: Helping Allies
--- 	Tracks allies undisabled/revived/rescued
---	Player Interactions
--- ############
-mod:hook(CLASS.PlayerInteracteeExtension, "stopped", function(func, self, result, ...)
-	local scoreboard = get_mod("scoreboard")
-	if scoreboard then
+	-- ############
+	-- Defense: Helping Allies
+	-- 	Tracks allies undisabled/revived/rescued
+	--	Player Interactions
+	-- ############
+	mod:hook(CLASS.PlayerInteracteeExtension, "stopped", function(func, self, result, ...)
 		local type = self:interaction_type() or ""
 		if result == interaction_results.success then
 			local unit = self._interactor_unit
@@ -399,18 +560,15 @@ mod:hook(CLASS.PlayerInteracteeExtension, "stopped", function(func, self, result
 				end
 			end
 		end
-	end
-	func(self, result, ...)
-end)
+		func(self, result, ...)
+	end)
 
--- ############
--- Offense
---	Damage, kills, and crit/weakspot rate
---	Attack reports
--- ############
-mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, damage_profile, attacked_unit, attacking_unit, attack_direction, hit_world_position, hit_weakspot, damage, attack_result, attack_type, damage_efficiency, is_critical_strike, ...)
-	local scoreboard = get_mod("scoreboard")
-	if scoreboard then
+	-- ############
+	-- Offense
+	--	Damage, kills, and crit/weakspot rate
+	--	Attack reports
+	-- ############
+	mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, damage_profile, attacked_unit, attacking_unit, attack_direction, hit_world_position, hit_weakspot, damage, attack_result, attack_type, damage_efficiency, is_critical_strike, ...)
 		local Breed = scoreboard:original_require("scripts/utilities/breed")
 		local player = attacking_unit and player_from_unit(attacking_unit)
 		local target_is_player = attacked_unit and player_from_unit(attacked_unit)
@@ -728,28 +886,12 @@ mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, da
 				end
 			end
 		end
-	end
-	return func(self, damage_profile, attacked_unit, attacking_unit, attack_direction, hit_world_position, hit_weakspot, damage, attack_result, attack_type, damage_efficiency, is_critical_strike, ...)
-end)
-
--- ############
--- Check Setting Changes
--- ############
-function mod.on_setting_changed()
-	debug_messages_enabled = mod:get("enable_debug_messages")
+		return func(self, damage_profile, attacked_unit, attacking_unit, attack_direction, hit_world_position, hit_weakspot, damage, attack_result, attack_type, damage_efficiency, is_critical_strike, ...)
+	end)
 end
 
 -- ############
--- Mod Startup Messages
--- ############
-function mod.on_all_mods_loaded()
-	debug_messages_enabled = mod:get("enable_debug_messages")
-	--mod:echo(os.date('%H:%M:%S'))
-	mod:info("Version "..mod_version.." loaded uwu nya :3")
-end
-
--- ############
--- Check State Changes
+-- Check Game State Changes
 -- 	Entering a match
 -- ############
 function mod.on_game_state_changed(status, state_name)
@@ -769,97 +911,6 @@ function mod.on_game_state_changed(status, state_name)
 	else
 		in_match = false
 		is_playing_havoc = false
-	end
-end
-
--- ############
--- Manage Blank Rows
--- ############
-mod.manage_blank_rows = function()
-local scoreboard = get_mod("scoreboard")
-	if scoreboard and in_match then
-		local row = scoreboard:get_scoreboard_row("blank_1")
-		local players = Managers.player:players() or {}
-
-		if row and players then
-			if row["data"] then
-				for _, player in pairs (players) do
-					local account_id = player:account_id() or player:name()
-					if account_id then
-						row["data"][account_id] = row["data"][account_id] or {}
-						if not row["data"][account_id]["text"] then
-							mod:set_blank_rows(account_id)
-						end
-					end
-				end
-			end
-		end
-	end
-end
-
--- ############
--- Set All Blank Rows
--- ############
-mod.set_blank_rows = function (self, account_id)
-	-- for i in range (1, 13), increment of 1
-	for i = 1,13,1 do
-		mod:replace_row_value("blank_"..i, account_id, "\u{200A}")
-	end
-	mod:replace_row_value("highest_single_hit", account_id, "\u{200A}0\u{200A}")
-end
-
--- ############
---Function to replace entire value in scoreboard
--- ############
-mod.replace_row_value = function(self, row_name, account_id, value)
-local scoreboard = get_mod("scoreboard")
-	if scoreboard then
-		local row = scoreboard:get_scoreboard_row(row_name)
-		if row then
-			local validation = row.validation
-			if tonumber(value) then
-				local value = value and math.max(0, value) or 0
-				row.data = row.data or {}
-				row.data[account_id] = row.data[account_id] or {}			
-				row.data[account_id].value = value
-				row.data[account_id].score = value
-				row.data[account_id].text = nil
-			else
-				row.data = row.data or {}
-				row.data[account_id] = row.data[account_id] or {}
-				row.data[account_id].text = value
-				row.data[account_id].value = 0
-				row.data[account_id].score = 0
-			end
-		end
-	end
-end
-
--- ############
---Function to force replacement of text value in scoreboard
--- ############
-mod.replace_row_text = function(self, row_name, account_id, value)
-local scoreboard = get_mod("scoreboard")
-	if scoreboard then
-		local row = scoreboard:get_scoreboard_row(row_name)
-		if row then
-			row.data = row.data or {}
-			row.data[account_id] = row.data[account_id] or {}
-			row.data[account_id].text = value
-			--row.data[account_id].value = value
-			--row.data[account_id].score = value
-		end
-	end
-end
-
--- ############
---Function to get a row value from scoreboard
--- ############
-mod.get_row_value = function(self, row_name, account_id)
-	local scoreboard = get_mod("scoreboard")
-	if scoreboard then
-		local row = scoreboard:get_scoreboard_row(row_name)
-		return row.data[account_id] and row.data[account_id].score or 0
 	end
 end
 
