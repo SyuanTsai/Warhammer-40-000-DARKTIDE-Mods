@@ -251,13 +251,6 @@
 - MOD 檔案名稱：RememberServerLocation-308-1-1-1-1719684862
 - 手動維護最後下載日期：2025-02-18
 
-### [Unga Bunga](https://www.nexusmods.com/warhammer40kdarktide/mods/476)
-    自動重擊
-- MOD 網站最後更新日期：Last updated 01 April 2025 12:49PM
-- MOD 版本：1.4.1
-- MOD 檔案名稱：UngaBunga 1.4.1-476-1-4-1-1743511746
-- 手動維護最後下載日期：2025-04-01
-
 ---
 # 遊戲內操作相關MOD
 
@@ -310,3 +303,10 @@
 - MOD 檔案名稱：Power_DI_1.1.7.zip-281-v1-1-7-1734016443
 - 手動維護最後下載日期：2025-02-13
 
+
+### [Unga Bunga](https://www.nexusmods.com/warhammer40kdarktide/mods/476)
+    自動重擊
+- MOD 網站最後更新日期：Last updated 01 April 2025 12:49PM
+- MOD 版本：1.4.1
+- MOD 檔案名稱：UngaBunga 1.4.1-476-1-4-1-1743511746
+- 手動維護最後下載日期：2025-04-01

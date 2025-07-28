@@ -37,7 +37,6 @@ WhatTheLocalization
 Enhanced_descriptions
 EmperorsGuidance
 RememberServerLocation
-UngaBunga
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
