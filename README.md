@@ -47,13 +47,6 @@
 - MOD 檔案名稱：Power_DI_1.1.8.zip-281-v1-1-8-1743272944
 - 手動維護最後下載日期：2025-06-25
 
-### [Unga Bunga](https://www.nexusmods.com/warhammer40kdarktide/mods/476)
-    自動重擊
-- MOD 網站最後更新日期：Last updated 01 April 2025 12:49PM
-- MOD 版本：1.4.1
-- MOD 檔案名稱：UngaBunga 1.4.1-476-1-4-1-1743511746
-- 手動維護最後下載日期：2025-04-01
-
 ### [Skitarius](https://www.nexusmods.com/warhammer40kdarktide/mods/510)
     顱骨支援
 - MOD 網站最後更新日期：Last updated 28 June 2025, 10:06PM
@@ -612,3 +605,11 @@
 - MOD 檔案名稱：DarkCache-114-1-4-1688035784
 - 手動維護最後下載日期：2025-07-23
 - 移除原因：久未更新會有錯誤。
+
+### [Unga Bunga](https://www.nexusmods.com/warhammer40kdarktide/mods/476)
+    自動重擊
+- MOD 網站最後更新日期：Last updated 01 April 2025 12:49PM
+- MOD 版本：1.4.1
+- MOD 檔案名稱：UngaBunga 1.4.1-476-1-4-1-1743511746
+- 手動維護最後下載日期：2025-04-01
+- 移除原因：機械神教取代

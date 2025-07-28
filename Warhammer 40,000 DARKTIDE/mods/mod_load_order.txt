@@ -8,7 +8,6 @@
 WhatTheLocalization
 
 -- 一般
-UngaBunga
 creature_spawner
 Skitarius
 AutoLoot
