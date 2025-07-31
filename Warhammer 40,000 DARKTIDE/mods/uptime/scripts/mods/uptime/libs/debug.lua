@@ -1,11 +1,21 @@
 local mod = get_mod("uptime")
 
-function print_keys(table)
+function DEBUG()
+    return false
+end
+
+function mod:debug(msg)
+    if DEBUG() then
+        mod:echo(msg)
+    end
+end
+
+function mod.print_keys(table)
     for key, _ in pairs(table) do
         mod:echo(key)
     end
 end
 
 return {
-    print_keys = print_keys
+    print_keys = mod.print_keys
 }

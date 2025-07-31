@@ -1,52 +1,42 @@
 local mod = get_mod("uptime")
 local UIWidget = mod:original_require("scripts/managers/ui/ui_widget")
 
-function get_widget(uptime_view, scene_graph_id, width, height, percentage_per_stack)
+function get_widget(uptime_view, scene_graph_id, width, height, segments, mission_length)
     local template = {
         {
             pass_type = "rect",
             style = {
-                color = Color.ui_grey_medium(120, true),
+                color = Color.black(120, true),
                 size = { width, height }
             },
         } }
 
-    local offset = 0
-    local max_stacks = #percentage_per_stack
-    local show_text = max_stacks > 1
-    for stack, percentage in pairs(percentage_per_stack) do
-        local section_width = (percentage / 100) * width
+    for _, segment in pairs(segments) do
+        -- some files have combat segments past the mission end. Root cause unkown
+        local start = math.min(segment.start_time, mission_length)
+        local endtime = math.min(segment.end_time, mission_length)
+
+        --local start = segment.start_time
+        --local endtime = segment.end_time
+        local segment_width = ((endtime - start) / mission_length) * width
+        local offset = (start / mission_length) * width
         template[#template + 1] = {
             pass_type = "rect",
             style = {
-                size = { section_width, height },
+                size = { segment_width, height },
                 offset = { offset, 0 },
-                color = Color.steel_blue(stack % 2 == 1 and 255 or 180, true),
+                color = {
+                    255,
+                    255,
+                    83,
+                    44,
+                },
             },
         }
-
-        local num_of_char = math.log(stack, 10) + 1
-        local width_per_char = 15 -- just a rough estimate
-        local text_width = num_of_char * width_per_char
-
-        if show_text and text_width < section_width then
-            template[#template + 1] = {
-                pass_type = "text",
-                value = stack,
-                style = {
-                    text_horizontal_alignment = "center",
-                    size = { section_width, height },
-                    offset = { offset, 0 },
-                    text_color = Color.black(255, true),
-                },
-            }
-        end
-
-        offset = offset + section_width
     end
 
     local widget_def = UIWidget.create_definition(template, scene_graph_id)
-    local widget = uptime_view:_create_widget("bar", widget_def)
+    local widget = uptime_view:_create_widget("mission_timeline", widget_def)
     return widget
 end
 

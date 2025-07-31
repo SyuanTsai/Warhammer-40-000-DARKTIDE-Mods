@@ -1,5 +1,8 @@
 local mod = get_mod("uptime")
 
+local talent_lib = mod:io_dofile("uptime/scripts/mods/uptime/libs/talents")
+local TalentLayoutParser = mod:original_require("scripts/ui/views/talent_builder_view/utilities/talent_layout_parser")
+
 function mod:generate_display_values(entry)
     local mission = entry.mission
     local mission_display_values = generate_display_values_for_mission(mission)
@@ -27,7 +30,8 @@ function generate_display_values_for_mission(mission)
     return {
         time = total_time,
         combat_time = combat_time,
-        combat_percentage = combat_percentage
+        combat_percentage = combat_percentage,
+        combats_segments = combats
     }
 end
 
@@ -66,16 +70,8 @@ function generate_display_values_for_buff(mission, buff)
 
     -- Calculate combat time per stack
     local combat_time_per_stack = calculate_combat_time_per_stack(buff.events, mission, max_stacks)
-    local combat_percentage_per_stack = calculate_combat_percentage_per_stack(combat_time_per_stack, combat_time)
 
-    -- Calculate time at max stack
-    local time_at_max_stack = time_per_stack[max_stacks] or 0
     local combat_time_at_max_stack = combat_time_per_stack[max_stacks] or 0
-    local combat_percentage_at_max_stack = combat_time_at_max_stack / uptime_combat * 100
-
-    -- Calculate average stacks
-    local average_stacks = calculate_average_stacks(time_per_stack, total_uptime, max_stacks)
-    local average_stacks_combat = calculate_average_stacks(combat_time_per_stack, uptime_combat, max_stacks)
 
     return {
         uptime = total_uptime,
@@ -88,19 +84,19 @@ function generate_display_values_for_buff(mission, buff)
 
         time_per_stack = time_per_stack,
         combat_time_per_stack = combat_time_per_stack,
-        combat_percentage_per_stack = combat_percentage_per_stack,
+        combat_percentage_per_stack = calculate_combat_percentage_per_stack(combat_time_per_stack, combat_time),
 
-        time_at_max_stack = time_at_max_stack,
+        time_at_max_stack = time_per_stack[max_stacks] or 0,
         combat_time_at_max_stack = combat_time_at_max_stack,
-        combat_percentage_at_max_stack = combat_percentage_at_max_stack,
+        combat_percentage_at_max_stack = combat_time_at_max_stack / uptime_combat * 100,
 
-        average_stacks = average_stacks,
-        average_stacks_combat = average_stacks_combat,
+        average_stacks = calculate_average_stacks(time_per_stack, total_uptime, max_stacks),
+        average_stacks_combat = calculate_average_stacks(combat_time_per_stack, uptime_combat, max_stacks),
 
         icon = buff.icon,
         gradient_map = buff.gradient_map,
 
-        talents = buff.related_talents
+        tooltip = generate_tooltip(buff)
     }
 end
 
@@ -201,9 +197,9 @@ function calculate_time_per_stack(buff_events, max_stacks)
 
         for _, event in ipairs(buff_events) do
             -- If we have a previous event, calculate time at that stack level
-            if last_time and current_stack > 0 and current_stack <= max_stacks then
+            if last_time and current_stack > 0 then
                 local duration = event.time - last_time
-                time_per_stack[current_stack] = time_per_stack[current_stack] + duration
+                time_per_stack[current_stack] = (time_per_stack[current_stack] or 0) + duration
             end
 
             -- Update stack count and time for next calculation
@@ -232,7 +228,7 @@ function calculate_combat_time_per_stack(buff_events, mission, max_stacks)
 
         for _, event in ipairs(buff_events) do
             -- If we have a previous event and valid stack, calculate combat time for that stack
-            if last_time and current_stack > 0 and current_stack <= max_stacks then
+            if last_time and current_stack > 0 then
                 -- For each period between events, check overlap with combat
                 for _, combat in ipairs(mission.combats) do
                     local period_start = last_time
@@ -242,7 +238,7 @@ function calculate_combat_time_per_stack(buff_events, mission, max_stacks)
                     local overlap_end = math.min(period_end, combat.end_time)
 
                     if overlap_end > overlap_start then
-                        combat_time_per_stack[current_stack] = combat_time_per_stack[current_stack] + (overlap_end - overlap_start)
+                        combat_time_per_stack[current_stack] = (combat_time_per_stack[current_stack] or 0) + (overlap_end - overlap_start)
                     end
                 end
             end
@@ -281,4 +277,27 @@ function calculate_average_stacks(time_per_stack, total_uptime, max_stacks)
     end
 
     return average_stacks
+end
+
+function generate_tooltip(buff)
+    local title, description
+    local item = buff.related_item
+    local talent = talent_lib.get_talent_for_buff(buff)
+    if talent then
+        title = Localize(talent.display_name)
+        description = TalentLayoutParser.talent_description(talent, 1, Color.ui_terminal(255, true))
+    elseif item then
+        title = item.name
+        description = ""
+        if item.blessing then
+            title = title .. "\n" .. item.blessing.name or ""
+            description = item.blessing.description or Localize("loc_unknown_blessing")
+        end
+    else
+        return nil
+    end
+    return {
+        title = title,
+        description = description
+    }
 end
