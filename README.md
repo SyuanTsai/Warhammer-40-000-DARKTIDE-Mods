@@ -491,10 +491,10 @@
 
 ### [Uptime](https://www.nexusmods.com/warhammer40kdarktide/mods/387)
     觀察天賦的運作狀況
-- MOD 網站最後更新日期：Last updated 25 July 2025, 10:59PM
-- MOD 版本：1.0
-- MOD 檔案名稱：uptime-573-1-0-1753455556
-- 手動維護最後下載日期：2025-07-28
+- MOD 網站最後更新日期：Last updated 28 July 2025, 2:15AM
+- MOD 版本：1.1
+- MOD 檔案名稱：uptime-573-1-1-1753640106
+- 手動維護最後下載日期：2025-07-31
 
 ---
 # 遊戲內操作相關MOD

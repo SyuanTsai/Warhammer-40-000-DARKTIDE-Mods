@@ -1,6 +1,7 @@
 local mod = get_mod("uptime")
 local DMF = get_mod("DMF")
 local json = mod:io_dofile("uptime/scripts/mods/uptime/libs/json")
+local v1_migration = mod:io_dofile("uptime/scripts/mods/uptime/data/v1_to_v2")
 
 -- ##### IO and OS functions #####
 local _io = DMF:persistent_table("_io")
@@ -9,17 +10,17 @@ if not _io.initialized then
     _io = DMF.deepcopy(Mods.lua.io)
 end
 
-local _os = DMF:persistent_table("_os")
-_os.initialized = _os.initialized or false
-if not _os.initialized then
-    _os = DMF.deepcopy(Mods.lua.os)
+-- ##### Helper functions #####
+local file_does_not_exist = {}
+
+function path(file_name)
+    return mod:appdata_path() .. file_name
 end
 
--- ##### Helper functions #####
 
 -- Check if a file or directory exists in this path
 local function exists(file)
-    local ok, err, code = _os.rename(file, file)
+    local ok, err, code = mod.lib.os.rename(file, file)
     if not ok then
         if code == 13 then
             -- Permission denied, but it exists
@@ -46,19 +47,9 @@ local function file_exists(name)
     end
 end
 
--- Split a string by a separator
-local function split(str, sep)
-    local result = {}
-    local regex = ("([^%s]+)"):format(sep)
-    for each in str:gmatch(regex) do
-        table.insert(result, #result + 1, each)
-    end
-    return result
-end
-
 -- Get the path to the uptime history directory
 mod.appdata_path = function(self)
-    local appdata = _os.getenv('APPDATA')
+    local appdata = mod.lib.os.getenv('APPDATA')
     return appdata .. "/Fatshark/Darktide/uptime_history/"
 end
 
@@ -66,9 +57,9 @@ end
 mod.create_uptime_history_directory = function(self)
     local path = self:appdata_path()
     if not isdir(path) then
-        _os.execute('mkdir ' .. path) -- ?
-        _os.execute("mkdir '" .. path .. "'") -- ?
-        _os.execute('mkdir "' .. path .. '"') -- Windows
+        mod.lib.os.execute('mkdir ' .. path) -- ?
+        mod.lib.os.execute("mkdir '" .. path .. "'") -- ?
+        mod.lib.os.execute('mkdir "' .. path .. '"') -- Windows
     end
 end
 
@@ -80,7 +71,7 @@ end
 
 -- Get the current date/time as a timestamp
 mod.current_date = function(self)
-    return _os.time(_os.date("*t"))
+    return mod.lib.os.time(mod.lib.os.date("*t"))
 end
 
 -- Save the uptime data to a file
@@ -95,6 +86,11 @@ mod.save_entry = function(self, entry)
     -- Open file
     local file = assert(_io.open(path, "w+"))
 
+    for _, buff in pairs(entry.buffs) do
+        -- this field is just for debuggin, don't save it
+        buff.instance = nil
+    end
+
     local entry_json = json.encode(entry)
     file:write(entry_json)
 
@@ -107,22 +103,34 @@ mod.save_entry = function(self, entry)
 end
 
 -- Load uptime data from a file
-mod.load_entry = function(self, path)
+function mod:load_entry(file_name)
+    local path = path(file_name)
+
     if not file_exists(path) then
         mod:echo("Error: File not found: " .. path)
-        return nil
+        return file_does_not_exist
     end
 
     local entry = nil
     for entry_json in _io.lines(path) do
         if entry then
-            mod:echo("Received more than 1 line when loading file!")
+            mod:echo("Received more than 1 line when loading file! Save file might be corrupted")
         else
             entry = json.decode(entry_json)
         end
     end
 
-    entry.file_path = path
+    if entry then
+        entry.file = file_name
+        entry.file_path = path
+    else
+        return nil
+    end
+
+    if not entry.version then
+        local date_str = string.sub(file_name, 1, string.len(file_name) - 4)
+        entry.date = v1_migration(entry, tonumber(date_str))
+    end
 
     return entry
 end
@@ -140,37 +148,24 @@ local function scandir(directory)
 end
 
 -- Get all uptime history entries
-mod.get_history_entries = function(self, scan_dir)
+function mod:get_history_entries(scan_dir)
     local entries = {}
     local appdata = self:appdata_path()
-    local cache = self:get_history_entries_cache()
-    local file_names = cache
+    local file_names = self:get_history_entries_cache()
 
-    if scan_dir or not cache then
+    if scan_dir or not file_names then
         file_names = scandir(appdata)
         self:set_history_entries_cache(file_names)
     end
 
-    local missing_file = false
     for _, file in pairs(file_names) do
-        local file_path = appdata .. file
-        if file_exists(file_path) then
-            local date_str = string.sub(file, 1, string.len(file) - 4)
-            local entry = self:load_entry(file_path)
-
-            if entry then
-                entry.file = file
-                entry.file_path = file_path
-                entry.date = _os.date("%Y-%m-%d %H:%M:%S", tonumber(date_str))
-                entries[#entries + 1] = entry
-            end
-        else
-            missing_file = true
+        local result = self:load_entry(file)
+        if result == file_does_not_exist then
+            return self:get_history_entries(true)
         end
-    end
-
-    if missing_file then
-        entries = self:get_history_entries(true)
+        if result then
+            entries[#entries + 1] = result
+        end
     end
 
     return entries
@@ -197,7 +192,7 @@ mod.delete_entry = function(self, entry)
     end
 
     -- Try to remove the file
-    if _os.remove(entry.file_path) then
+    if mod.lib.os.remove(entry.file_path) then
         -- Update the cache to remove the deleted entry
         local cache = mod:get_history_entries_cache()
         local new_cache = {}

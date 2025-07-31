@@ -2,7 +2,6 @@ local mod = get_mod("uptime")
 local DMF = get_mod("DMF")
 
 local ScriptWorld = mod:original_require("scripts/foundation/utilities/script_world")
-local InputUtils = mod:original_require("scripts/managers/input/input_utils")
 local UIRenderer = mod:original_require("scripts/managers/ui/ui_renderer")
 local UIWidget = mod:original_require("scripts/managers/ui/ui_widget")
 local UIWidgetGrid = mod:original_require("scripts/ui/widget_logic/ui_widget_grid")
@@ -60,7 +59,7 @@ UptimeHistoryView._setup_input_legend = function(self)
         local legend_input = legend_inputs[i]
         local on_pressed_callback = legend_input.on_pressed_callback and callback(self, legend_input.on_pressed_callback)
         local visibility_function = legend_input.visibility_function
-        if legend_input.display_name == "loc_scoreboard_delete" then
+        if legend_input.display_name == "loc_delete_entry" then
             visibility_function = function()
                 return self.entry
             end
@@ -75,7 +74,7 @@ UptimeHistoryView._enable_settings_overlay = function(self, enable)
     settings_overlay_widget.content.visible = enable
 end
 
-UptimeHistoryView.present_entry_widgets = function(self, entry_title)
+UptimeHistoryView.present_entry_widgets = function(self)
     if self.entry then
         local context = {
             entry = self.entry
@@ -111,7 +110,7 @@ UptimeHistoryView._setup_entries_config = function(self, scan_dir)
     end
 
     -- Get all uptime history entries from the data handler
-    local entries, entries_by_title, default_entry = self._data_handler:get_entries(scan_dir)
+    local entries, entries_by_title, default_entry = self._data_handler:get_list_entries(scan_dir)
 
     -- Set default entry if available
     self._default_entry = default_entry
@@ -119,7 +118,7 @@ UptimeHistoryView._setup_entries_config = function(self, scan_dir)
     -- Set up the grid and widgets
     local scenegraph_id = "grid_content_pivot"
     local callback_name = "cb_on_entry_pressed"
-    self._entry_content_widgets, self._entry_alignment_list = self:_setup_content_widgets(entries, scenegraph_id, callback_name)
+    self._entry_content_widgets, self._entry_alignment_list = self:_setup_list_entry_widgets(entries, scenegraph_id, callback_name)
 
     -- Configure grid and scrollbar
     local scrollbar_widget_id = "scrollbar"
@@ -147,15 +146,15 @@ UptimeHistoryView._setup_grid = function(self, widgets, alignment_list, grid_sce
 end
 
 -- Create widgets from content entries and set up their alignment
-UptimeHistoryView._setup_content_widgets = function(self, content, scenegraph_id, callback_name)
+UptimeHistoryView._setup_list_entry_widgets = function(self, entries, scenegraph_id, callback_name)
     local widget_definitions = {}
     local widgets = {}
     local alignment_list = {}
-    local amount = #content
+    local amount = #entries
 
     -- Process entries in reverse order (newest first)
     for i = amount, 1, -1 do
-        local entry = content[i]
+        local entry = entries[i]
         local widget_type = entry.widget_type
         local template = self._blueprints[widget_type]
         local size = template.size
@@ -177,18 +176,9 @@ UptimeHistoryView._setup_content_widgets = function(self, content, scenegraph_id
             local name = scenegraph_id .. "_widget_" .. i
             widget = self:_create_widget(name, widget_definition)
 
-            -- Copy file information to widget
-            widget.file = entry.file
-            widget.file_path = entry.file_path
-
             -- Initialize widget with template
             if template.init then
                 template.init(self, widget, entry, callback_name)
-            end
-
-            -- Set focus group if specified
-            if entry.focus_group then
-                widget.content.focus_group = entry.focus_group
             end
 
             widgets[#widgets + 1] = widget
@@ -408,13 +398,8 @@ end
 -- Callback for when an entry is pressed in the history view
 UptimeHistoryView.cb_on_entry_pressed = function(self, widget, entry)
     -- Load the uptime history entry from file
-    self.entry = self._data_handler:load_entry(widget.file_path)
+    self.entry = entry.history_entry
     self:present_entry_widgets()
-
-    -- Call the entry's pressed function if it exists
-    if entry.pressed_function then
-        entry.pressed_function(self, widget, entry)
-    end
 end
 
 -- Callback for when the back button is pressed
@@ -426,7 +411,6 @@ end
 -- Callback for when the delete button is pressed
 UptimeHistoryView.cb_delete_pressed = function(self)
     if self._data_handler:delete_entry(self.entry) then
-        mod:echo("History entry deleted")
         self.entry = nil
         mod:close_view()
         self:_setup_entries_config()
@@ -485,12 +469,6 @@ UptimeHistoryView.update = function(self, dt, t, input_service, view_data)
 
     -- Update entry widgets
     self:_update_entry_content_widgets(dt, t)
-
-    -- Hide tooltip if widget is no longer hovered
-    if self._tooltip_data and self._tooltip_data.widget and not self._tooltip_data.widget.content.hotspot.is_hover then
-        self._tooltip_data = {}
-        self._widgets_by_name.tooltip.content.visible = false
-    end
 
     -- Call parent update
     return UptimeHistoryView.super.update(self, dt, t, input_service)
@@ -590,118 +568,6 @@ UptimeHistoryView.close_keybind_popup = function(self, force_close)
     self._active_keybind_widget = nil
 end
 
--- Set the position of a scenegraph node
-UptimeHistoryView._set_scenegraph_position = function(self, scenegraph_id, position)
-    local ui_scenegraph = self._ui_scenegraph
-    local scenegraph_node = ui_scenegraph[scenegraph_id]
-
-    -- Only update if the node exists
-    if scenegraph_node then
-        scenegraph_node.position[1] = position[1]
-        scenegraph_node.position[2] = position[2]
-    end
-end
-
--- Set the size of a scenegraph node
-UptimeHistoryView._set_scenegraph_size = function(self, scenegraph_id, size)
-    local ui_scenegraph = self._ui_scenegraph
-    local scenegraph_node = ui_scenegraph[scenegraph_id]
-
-    -- Only update if the node exists
-    if scenegraph_node then
-        scenegraph_node.size[1] = size[1]
-        scenegraph_node.size[2] = size[2]
-    end
-end
-
--- Set tooltip data for a widget
-UptimeHistoryView._set_tooltip_data = function(self, widget)
-    local tooltip_widget = self._widgets_by_name.tooltip
-    local entry = widget.content.entry
-
-    -- Get tooltip text based on entry properties
-    local tooltip_text = self:_get_tooltip_text(entry)
-
-    -- Only proceed if we have tooltip text
-    if tooltip_text == "" then
-        return
-    end
-
-    -- Set tooltip text
-    local content = tooltip_widget.content
-    content.text = tooltip_text
-
-    -- Calculate tooltip size based on text dimensions
-    local size = self:_calculate_tooltip_size(tooltip_text)
-
-    -- Calculate tooltip position
-    local position = {
-        widget.offset[1] + widget.content.hotspot.anim_hover_progress * 10,
-        widget.offset[2]
-    }
-
-    -- Update tooltip position and size
-    self:_set_scenegraph_position("tooltip", position)
-    self:_set_scenegraph_size("tooltip", size)
-
-    -- Show tooltip
-    tooltip_widget.content.visible = true
-    self._tooltip_data = {
-        widget = widget
-    }
-end
-
--- Get tooltip text based on entry properties
-UptimeHistoryView._get_tooltip_text = function(self, entry)
-    if not entry then
-        return ""
-    end
-
-    -- Use tooltip text if available
-    if entry.tooltip_text then
-        return Managers.localization:localize(entry.tooltip_text)
-    end
-
-    -- Show disabled by information if available
-    if entry.disabled_by and not table.is_empty(entry.disabled_by) then
-        local tooltip_text = "Disabled by: "
-
-        for i, disabled_by in ipairs(entry.disabled_by) do
-            if i > 1 then
-                tooltip_text = tooltip_text .. ", "
-            end
-
-            tooltip_text = tooltip_text .. Managers.localization:localize(disabled_by)
-        end
-
-        return tooltip_text
-    end
-
-    return ""
-end
-
--- Calculate tooltip size based on text dimensions
-UptimeHistoryView._calculate_tooltip_size = function(self, tooltip_text)
-    local tooltip_widget = self._widgets_by_name.tooltip
-    local style = tooltip_widget.style
-    local ui_renderer = self._ui_renderer
-    local text_style = style.text
-
-    -- Measure text size
-    UIRenderer.begin_pass(ui_renderer, self._ui_scenegraph, nil, 0, nil)
-    local min, max = UIRenderer.text_size(ui_renderer, tooltip_text, text_style.font_type, text_style.font_size)
-    UIRenderer.end_pass(ui_renderer)
-
-    -- Calculate dimensions with padding
-    local text_width = max[1] - min[1]
-    local text_height = max[3] - min[3]
-
-    return {
-        text_width + 40,
-        text_height + 40
-    }
-end
-
 -- Main draw function for the view
 UptimeHistoryView.draw = function(self, dt, t, input_service, layer)
     -- Draw main UI elements
@@ -723,17 +589,8 @@ UptimeHistoryView.draw = function(self, dt, t, input_service, layer)
     UptimeHistoryView.super.draw(self, dt, t, input_service, layer)
 end
 
--- Draw UI elements
-UptimeHistoryView._draw_elements = function(self, dt, t, ui_renderer, render_settings, input_service)
-    -- Just call parent method as we don't need to add anything
-    UptimeHistoryView.super._draw_elements(self, dt, t, ui_renderer, render_settings, input_service)
-end
-
 -- Draw grid widgets with proper interaction handling
 UptimeHistoryView._draw_grid = function(self, grid, widgets, interaction_widget, dt, t, input_service)
-    -- Determine if grid is hovered (either using cursor or via interaction widget)
-    local is_grid_hovered = not self._using_cursor_navigation or interaction_widget.content.hotspot.is_hover or false
-
     -- Create null input service for non-interactive elements
     local null_input_service = input_service:null_service()
 
@@ -755,27 +612,7 @@ UptimeHistoryView._draw_grid = function(self, grid, widgets, interaction_widget,
             if self._selected_settings_widget then
                 ui_renderer.input_service = null_input_service
             end
-
-            -- Only draw visible widgets
             if grid:is_widget_visible(widget) then
-                local hotspot = widget.content.hotspot
-
-                if hotspot then
-                    -- Disable hotspot if grid is not hovered
-                    hotspot.force_disabled = not is_grid_hovered
-
-                    -- Check if widget is active (focused or hovered)
-                    local is_active = hotspot.is_focused or hotspot.is_hover
-
-                    -- Show tooltip for active widgets with tooltip data
-                    if is_active and widget.content.entry and
-                            (widget.content.entry.tooltip_text or
-                                    (widget.content.entry.disabled_by and not table.is_empty(widget.content.entry.disabled_by))) then
-                        self:_set_tooltip_data(widget)
-                    end
-                end
-
-                -- Draw the widget
                 UIWidget.draw(widget, ui_renderer)
             end
         end
