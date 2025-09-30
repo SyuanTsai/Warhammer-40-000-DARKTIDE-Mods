@@ -1,4 +1,18 @@
-return {
+local InputUtils = require("scripts/managers/input/input_utils")
+
+local function readable(text)
+  local readable_string = ""
+  local tokens = string.split(text, "_")
+  for _, token in ipairs(tokens) do
+    local first_letter = string.sub(token, 1, 1)
+    token = string.format("%s%s", string.upper(first_letter), string.sub(token, 2))
+    readable_string = string.trim(string.format("%s %s", readable_string, token))
+  end
+
+  return readable_string
+end
+
+local loc = {
 	mod_name = {
 		en = "Numeric UI",
 		ru = "Числовой интерфейс",
@@ -33,6 +47,12 @@ return {
 		["zh-tw"] = "閃避計數 HUD",
 		ru = "Интерфейс счётчика уклонений",
 		fr = "ATH pour le nombre d'esquive",
+	},
+	dodge_count_timer_items = {
+		-- Needs loc
+		en = "Dodge Count Reset Timer HUD",
+		fr = "ATH pour le temps de réinitialisation du nombre d'esquive",
+		["zh-tw"] = "閃避重置計時 HUD",
 	},
 	team_hud_items = {
 		en = "Team HUD",
@@ -131,6 +151,78 @@ return {
 		["zh-tw"] = "顯示閃避計數",
 		ru = "Показывать количество уклонений",
 		fr = "Affiche la quantité d'esquive",
+	},
+	dodge_timer = {
+		-- Needs loc
+		en = "Show dodge count reset timer",
+		fr = "Affiche une barre de progrès pour la réinitialisation du nombre d'esquive",
+		["zh-tw"] = "顯示閃避重置計時",
+	},
+	color_start = {
+		-- Needs loc
+		en = "Timer color - Start",
+		fr = "Couleur de la barre - Début",
+		["zh-tw"] = "計時顏色 - 開始",
+	},
+	color_start_description = {
+		-- Needs loc
+		en = "\nDefault value: UI Orange Light",
+		fr = "\nValeur par défaut : UI Orange Light",
+		["zh-tw"] = "\n預設：UI Orange Light",
+	},
+	color_end = {
+		-- Needs loc
+		en = "Timer color - End",
+		fr = "Couleur de la barre - Fin",
+		["zh-tw"] = "計時顏色 - 結束",
+	},
+	color_end_description = {
+		-- Needs loc
+		en = "\nDefault value: UI Red Light",
+		fr = "\nValeur par défaut : UI Red Light",
+		["zh-tw"] = "\n預設：UI Red Light",
+	},
+	dodge_timer_y_offset = {
+		-- Needs loc
+		en = "Vertical offset",
+		fr = "Décalage vertical",
+		["zh-tw"] = "垂直偏移",
+	},
+	dodge_timer_y_offset_description = {
+		-- Needs loc
+		en = "\nDefault value: 30\n\nA higher vertical offset value moves the timer bar down",
+		fr = "\nValeur par défaut : 30\n\nUn décalage plus grand déplace la barre vers le bas",
+		["zh-tw"] = "\n預設：30\n\n較高的垂直偏移值會使計時條向下移動",
+	},
+	dodge_timer_width = {
+		-- Needs loc
+		en = "Width",
+		fr = "Largeur",
+		["zh-tw"] = "寬度",
+	},
+	dodge_timer_width_description = {
+		-- Needs loc
+		en = "\nDefault value: 208",
+		fr = "\nValeur par défaut : 208",
+		["zh-tw"] = "\n預設：208",
+	},
+	dodge_timer_height = {
+		-- Needs loc
+		en = "Height",
+		fr = "Hauteur",
+		["zh-tw"] = "高度",
+	},
+	dodge_timer_height_description = {
+		-- Needs loc
+		en = "\nDefault value: 9",
+		fr = "\nValeur par défaut : 9",
+		["zh-tw"] = "\n預設：9",
+	},
+	dodge_timer_hide_full = {
+		-- Needs loc
+		en = "Hide dodge count reset timer when full",
+		fr = "Cacher la barre elle est au maximum",
+		["zh-tw"] = "閃避次數全滿時隱藏計時",
 	},
 	debug_dodge_count = {
 		en = "Show debug dodge info",
@@ -315,8 +407,8 @@ return {
 		fr = 'Affiche le marqueur de crâne au dessus des ennemis de la clé de voûte "Ciblage" du Vétéran',
 	},
 	show_arb_ping_skull = {
-        en = "Show Arbites tag skull",
-		["zh-tw"] = "顯示執法官標記骷髏圖示",
+		en = "Show Arbites tag skull",
+		["zh-tw"] = "顯示法務官標記骷髏圖示",
 	},
 	ammo_text_font_size = {
 		en = "Ammo text font size",
@@ -343,15 +435,26 @@ return {
 		["zh-tw"] = "技能文字字體大小",
 	},
 	companion_nameplates_icon = {
-        en = "Show companion icon",
+		en = "Show companion icon",
 		["zh-tw"] = "顯示電子獒犬圖示",
 	},
 	companion_nameplates_name = {
-        en = "Show companion name",
+		en = "Show companion name",
 		["zh-tw"] = "顯示電子獒犬名稱",
 	},
 	companion_nameplates_screen_clamp = {
-        en = "Clamp companion nameplates to screen",
-		["zh-tw"] = "將電子獒犬名稱標籤限制在螢幕內",
+		en = "Clamp companion nameplates to screen",
+		["zh-tw"] = "將電子獒犬名稱標籤固定在螢幕內",
 	},
 }
+
+local color_names = Color.list
+for _, color_name in ipairs(color_names) do
+  local color_values = Color[color_name](255, true)
+  local text = InputUtils.apply_color_to_input_text(readable(color_name), color_values)
+  loc[color_name] = {
+    en = text
+  }
+end
+
+return loc
