@@ -7,10 +7,10 @@
 
 ### [Darktide Mod Loader](https://www.nexusmods.com/warhammer40kdarktide/mods/19?tab=description)
 
-- MOD 網站最後更新日期：Last updated 28 November 2024
-- MOD 版本：Version 24.11.27
-- MOD 檔案名稱：Darktide Mod Loader-19-24-11-27-1732738414
-- 手動維護最後下載日期：2025-02-06
+- MOD 網站最後更新日期：Last updated 23 September 2025, 6:39PM
+- MOD 版本：Version 25.09.23
+- MOD 檔案名稱：Darktide Mod Loader-19-25-09-23-1758623959
+- 手動維護最後下載日期：2025-09-30
 
 
 ### [Darktide Mod Framework](https://www.nexusmods.com/warhammer40kdarktide/mods/8?tab=descriptionn)
