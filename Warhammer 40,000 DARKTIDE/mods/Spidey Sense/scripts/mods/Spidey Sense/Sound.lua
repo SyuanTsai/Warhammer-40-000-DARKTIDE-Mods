@@ -44,7 +44,12 @@ mod.sound.hooked_sounds = {
   "wwise/events/minions/play_chaos_hound_mutator_vce_leap",
   "wwise/events/weapon/play_special_sniper_flash",  
   "wwise/events/weapon/play_weapon_longlas_minion",
-  "spawn"
+  "spawn",
+  "wwise/events/weapon/stop_minion_plasmapistol_charge",
+  "wwise/events/weapon/play_minion_plasmapistol_charge",
+  "wwise/events/weapon/play_minion_plasmapistol",
+  "wwise/events/minions/play_shared_foley_traitor_guard_heavy_run_type_2",
+  "wwise/events/minions//play_footstep_boots_medium_enemy"
  }
 
 mod.sound.hooked_external_sounds = {

@@ -1,11 +1,15 @@
 local HudElementDamageIndicatorSettings =	require("scripts/ui/hud/elements/damage_indicator/hud_element_damage_indicator_settings")
 local UIHudSettings = require("scripts/settings/ui/ui_hud_settings")
 local UIWidget = require("scripts/managers/ui/ui_widget")
-
+--local mt = get_mod("modding_tools")
 local mod = get_mod("Spidey Sense")
 local DLS = get_mod("DarktideLocalServer")
 local Color = Color
 mod.ui = {}
+
+mod.loadingarrow = false
+mod.arrow1_texture = false
+mod.arrow2_texture = false
 
 local warnings = {}
 warnings["cleave"] = { "crusher", "Cleave", 2 }
@@ -117,7 +121,7 @@ mod:hook_require("scripts/ui/hud/elements/damage_indicator/hud_element_damage_in
 			},
 			color = Color["black"](255,true),
       material_values = {
-            texture_map = nil
+            texture_map = mod.arrow1_texture or nil
           },
 			offset = {
 					0,
@@ -151,7 +155,7 @@ mod:hook_require("scripts/ui/hud/elements/damage_indicator/hud_element_damage_in
 			},
 			color = UIHudSettings.ui_hud_green_super_light,
        material_values = {
-            texture_map = nil
+            texture_map = mod.arrow1_texture or nil
           },  
 			offset = {
 					0,
@@ -207,7 +211,7 @@ local load_arrow = function(indicator)
         indicator.style.arrow2.material_values.texture_map = data.texture              
       end)
     end)
-  end
+  end  
 end
 
 local function get_player_direction_angle()
@@ -277,7 +281,7 @@ end
 
 
 mod:hook_safe("HudElementDamageIndicator", "init", function(self)
-  mod.hudElement = self._indicator_widget 
+  mod.hudElement = self._indicator_widget   
 end)
 
 local colour_check = {}
@@ -408,7 +412,10 @@ local show_indicator = mod.ui.show_indicator
 local spawn_indicator = mod.ui.spawn_indicator
 
 mod.ui.create_indicator = function(unit_or_position, target_type, extra_duration)	
-	local position = get_position(unit_or_position)
+	
+  if not mod.hudElement then return end
+  
+  local position = get_position(unit_or_position)
   
   if mod:get(target_type .."_nurgle_blessed") then
     local buff_ext = ScriptUnit.extension(unit_or_position, "buff_system")    
@@ -443,7 +450,7 @@ mod.ui.create_indicator = function(unit_or_position, target_type, extra_duration
         ( mod:get(target_type .."_arrow_distance") and not arrow2_map) and 
         not mod.loadingarrow 
       then     
-        mod.loadingarrow = true
+        mod.loadingarrow = true        
         load_arrow(mod.hudElement):next(function() mod.loadingarrow = false end)
       else
         spawn_indicator(angle, target_type, extra_duration, active_distance, distance, nurgled[unit_or_position])
