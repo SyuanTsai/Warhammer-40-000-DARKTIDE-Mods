@@ -58,12 +58,14 @@ return {
             {
                 setting_id = "encroaching_garden",
                 type = "dropdown",
+				tooltip = "encroaching_garden_tooltip",
                 default_value = "blue_violet",
                 options = get_color_options()
             },
             {
                 setting_id = "enraged",
                 type = "dropdown",
+				tooltip = "enraged_tooltip",
                 default_value = "ui_red_light",
                 options = get_color_options()
             },
@@ -95,6 +97,18 @@ return {
                 setting_id = "tougher_skin",
                 type = "dropdown",
                 default_value = "citadel_ogryn_camo",
+                options = get_color_options()
+            },
+			{
+                setting_id = "rotten_armor",
+                type = "dropdown",
+                default_value = "citadel_nurgling_green",
+                options = get_color_options()
+            },
+			{
+                setting_id = "stimmed_minions",
+                type = "dropdown",
+                default_value = "citadel_dorn_yellow",
                 options = get_color_options()
             },
 			{
