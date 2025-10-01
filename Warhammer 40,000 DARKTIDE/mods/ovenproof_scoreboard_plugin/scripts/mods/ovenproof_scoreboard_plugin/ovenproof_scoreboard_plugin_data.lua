@@ -83,6 +83,19 @@ return {
 					create_setting_with_havoc_toggle("track_ammo_crate_in_percentage"),
 				},
 			},
+			{	setting_id 		= "attack_tracking_group",
+				type 			= "group",
+				sub_widgets		= {
+					{	setting_id 		= "explosions_affect_ranged_hitrate",
+						type 			= "checkbox",
+						default_value 	= true,
+					},
+					{	setting_id 		= "explosions_affect_melee_hitrate",
+						type 			= "checkbox",
+						default_value 	= true,
+					},
+				},
+			},
 		}, -- closes all widgets
 	}, -- closes all mod options
 }
