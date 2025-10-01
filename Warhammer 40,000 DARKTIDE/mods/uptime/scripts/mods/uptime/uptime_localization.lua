@@ -34,7 +34,7 @@ return {
     loc_avg_stacks_header = {
         en = "Avg Stacks",
         ["zh-cn"] = "平均层数",
-        ["zh-tw"] = "平均層數"
+        ["zh-tw"] = "平均層數",
     },
     loc_percentage_at_max_stacks_header = {
         en = "Max stacks",
