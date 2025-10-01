@@ -68,38 +68,30 @@ local localization = {
     -- ----------------
     error_scoreboard_missing = {
         en = "Scoreboard required! This is an add-on plugin to it!",
-        ru = "Scoreboard табло! Это плагин для него!",
-        ["zh-cn"] = "需要记分牌！这是一个附加插件！",
-        ["zh-tw"] = "需要記分板！這是它的附加插件！",
-        ["pt-br"] = "Scoreboard necessário! Este é um plugin adicional para ele!",
+        ["zh-tw"] = "需要記分板！這是它的一個附加插件！",
     },
     enable_debug_messages = {
         en = "Enable error messages",
-        ru = "Включить сообщения об ошибках",
-        ["zh-cn"] = "启用错误消息",
-        ["zh-tw"] = "啟用錯誤訊息",
         ["pt-br"] = "Ativar Mensagens de Erro",
+        ["zh-tw"] = "啟用錯誤訊息",
     },
     enable_debug_messages_description = {
         en = "Show messages in chat whenever an uncategorized damage type is used. Please report these!",
-        ru = "Показывать сообщения в чате при использовании некатегоризированного типа повреждения. Пожалуйста, сообщайте о таких случаях!",
-        ["zh-cn"] = "每当使用未分类的伤害类型时，聊天中都会显示消息。请举报！",
-        ["zh-tw"] = "每當使用未分類的傷害類型時，聊天中都會顯示訊息。請檢舉！",
         ["pt-br"] = "Exibir mensagens no chat quando um tipo de dano não categorizado for usado. Por favor, reporte esses casos!",
+        ["zh-tw"] = "每當使用未分類的傷害類型時，請在聊天中顯示消息。請報告這些！",
     },
     row_categories_group = {
         en = "Scoreboard Row Categories",
-        ru = "Scoreboard строк табло",
-        ["zh-cn"] = "记分板行类别",
-        ["zh-tw"] = "記分板行類別",
-        ["pt-br"] = "Categorias de Linhas do Scoreboard",
+        ["pt-br"] = "Categorias de Linhas do scoreboard",
+        ["zh-tw"] = "記分板行分類",
     },
     ammo_tracking_group = {
         en = "Ammo Tracking",
-        ru = "Отслеживание боеприпасов",
-        ["zh-cn"] = "弹药追踪",
         ["zh-tw"] = "彈藥追蹤",
-        ["pt-br"] = "Rastreamento de munição",
+    },
+    attack_tracking_group = {
+        en = "Attack Report Tracking",
+        ["zh-tw"] = "攻擊報告追蹤",
     },
     exploration_tier_0 = {
         en = "Exploration",
@@ -166,30 +158,29 @@ local localization = {
     },
     ammo_messages = {
         en = "Messages - Ammo/grenade pickups",
-        ru = "Сообщения - Подбор боеприпасов/гранат",
         ["zh-cn"] = "消息 - 弹药/手雷拾取",
         ["zh-tw"] = "訊息 - 彈藥/手雷拾取",
         ["pt-br"] = "Mensagens - Coleta de Munição/Granadas",
     },
     track_ammo_crate_waste = {
         en = "Track Ammo Crate waste",
-        ru = "Отходы ящиков с боеприпасами для треков",
-        ["zh-cn"] = "追踪弹药箱废弃物",
         ["zh-tw"] = "追蹤彈藥箱浪費",
-        ["pt-br"] = "Rastrear desperdício de caixa de munição",		
     },
     track_ammo_crate_waste = {
         en = "Track Ammo Crate waste",
-        ru = "Отходы ящиков с боеприпасами для треков",
-        ["zh-cn"] = "追踪弹药箱废弃物",
         ["zh-tw"] = "追蹤彈藥箱浪費",
-        ["pt-br"] = "Rastrear desperdício de caixa de munição",	
     },
     track_ammo_crate_in_percentage = {
         en = "Include Ammo Crates in total percentage of Ammo picked up",
-        ["zh-tw"] = "將彈藥箱計入總拾取彈藥的百分比",
-        ru = "Включить ящики с боеприпасами в общий процент подобранных боеприпасов.",
-        ["pt-br"] = "Incluir caixas de munição na porcentagem total de munição coletada",
+        ["zh-tw"] = "將彈藥箱納入總彈藥拾取百分比",
+    },
+    explosions_affect_ranged_hitrate = {
+        en = "Explosions affect Ranged Hitrate",
+        ["zh-tw"] = "爆炸影響遠程命中率",
+    },
+    explosions_affect_melee_hitrate = {
+        en = "Explosions affect Manged Hitrate",
+        ["zh-tw"] = "爆炸影響近戰命中率",
     },
     -- ----------------
     -- Reusable labels
@@ -197,10 +188,7 @@ local localization = {
     -- Settings
     setting_only_in_havoc = {
         en = "Only when playing Havoc",
-        ru = "Только при игре в Havoc",
-        ["zh-cn"] = "仅在玩 Havoc 时",
-        ["zh-tw"] = "僅在浩劫模式下",
-        ["pt-br"] = "Somente ao jogar Havoc",
+        ["zh-tw"] = "僅在浩劫模式時",
     },
     -- Scoreboard Row Text
     row_kills = {
@@ -258,6 +246,7 @@ local localization = {
     },
     message_ammo_crate_waste = {
         en = " picked up %s ammo from an %s, wasting %s",
+        ["zh-tw"] = "拾取了 %s 彈藥，來自 %s，浪費了 %s",
     },
     message_ammo_crate_text = {
         en = "ammo crate",

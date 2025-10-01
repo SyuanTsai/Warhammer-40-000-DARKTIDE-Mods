@@ -14,16 +14,20 @@ local TextUtilities = mod:original_require("scripts/utilities/ui/text")
 -- Optimizations for globals
 -- #######
 local tostring = tostring
+local string = string
+local string_len = string.len
+local string_sub = string.sub
 
 -- #######
 -- Mod Locals
 -- #######
-mod.version = "1.4.0"
-local debug_messages_enabled = mod:get("enable_debug_messages")
+mod.version = "1.6.0"
+local debug_messages_enabled
+local explosions_affect_ranged_hitrate
+local explosions_affect_melee_hitrate
 
 local in_match
 local is_playing_havoc
-local havoc_manager
 local scoreboard
 -- ammo pickup given as a percentage, such as 0.85
 mod.ammunition_pickup_modifier = 1
@@ -62,6 +66,7 @@ mod.ammunition_pickup_modifier = 1
 		"renegade_shocktrooper",
 		"chaos_ogryn_gunner",
 		"renegade_radio_operator",
+		"renegade_plasma_gunner",
 	}
 	mod.specials = {
 		"chaos_poxwalker_bomber",
@@ -212,6 +217,9 @@ mod.disabled_players = {}
 -- ########################
 -- Helper Functions
 -- ########################
+-- ############
+-- Player from Unit
+-- ############
 local function player_from_unit(unit)
 	local players = Managers.player:players()
 	for _, player in pairs(players) do
@@ -220,6 +228,20 @@ local function player_from_unit(unit)
 		end
 	end
 	return nil
+end
+
+-- ############
+-- Need to Revert Explosion Hitrate?
+-- DESCRIPTION: Checks if user does not want explosions to affect hitrate, and if the given damage type is an explosion
+-- PARAMETERS:
+--	is_damage_type_affecting_hitrate; boolean; if user wants explosions to affect hitrate
+--	damage_name; string; name of the damage type, such as "bolter_m2_stop_explosion"
+-- RETURN: true if both conditions in description are true
+-- ############
+local function need_to_revert_explosion_hitrate(is_damage_type_affecting_hitrate, damage_name)
+	return not is_damage_type_affecting_hitrate 
+			and string_len(damage_name) > 8 -- make sure name is long enough to get a substring without crashing
+			and string_sub(damage_name, -9) == "explosion" -- if it ends in "explosion" such as "bolter_m2_stop_explosion" (there's 2 each)
 end
 
 -- ############
@@ -256,6 +278,15 @@ mod.set_blank_rows = function (self, account_id)
 	end
 	mod:replace_row_value("highest_single_hit", account_id, "\u{200A}0\u{200A}")
 end
+
+-- ############
+-- Add Damage Taken/Done Ratio
+-- ############
+--[[
+mod.add_damage_taken_done_ratio = function(self, account_id)
+
+end
+]]
 
 -- ############
 -- Replace entire value in scoreboard
@@ -329,11 +360,17 @@ function mod.update(main_dt)
 	mod:manage_blank_rows()
 end
 
+local function set_locals_for_settings()
+	debug_messages_enabled = mod:get("enable_debug_messages")
+	explosions_affect_ranged_hitrate = mod:get("explosions_affect_ranged_hitrate")
+	explosions_affect_melee_hitrate = mod:get("explosions_affect_melee_hitrate")
+end
+
 -- ############
 -- Check Setting Changes
 -- ############
 function mod.on_setting_changed(setting_id)
-	debug_messages_enabled = mod:get("enable_debug_messages")
+	set_locals_for_settings()
 	--[[
 	-- Scoreboard can't be disabled mid-game
 	scoreboard = get_mod("scoreboard")
@@ -348,7 +385,7 @@ end
 -- ** Mod Startup **
 -- ############
 function mod.on_all_mods_loaded()
-	debug_messages_enabled = mod:get("enable_debug_messages")
+	set_locals_for_settings()
 	scoreboard = get_mod("scoreboard")
 	if not scoreboard then
 		mod:error(mod:localize("error_scoreboard_missing"))
@@ -359,6 +396,33 @@ function mod.on_all_mods_loaded()
 	-- ################################################
 	-- HOOKS
 	-- ################################################
+	--[[
+	-- ############
+	-- Calculate Ratio
+	--	Needs to be done:
+	--		mid game when opening tactical overlay
+	--		at least once before the post match view
+	-- ############
+	-- ######
+	-- When opening tactical overlay
+	-- 	Runs on opening and every tick while it's open
+	-- ######
+	mod:hook(CLASS.HudElementTacticalOverlay, "_draw_widgets", function(func, self, dt, t, input_service, ui_renderer, render_settings, ...)
+		mod:add_damage_taken_done_ratio()
+		--mod:echo("IF YOU SEE THIS YELL AT ME: tactical overlay widgets")
+		func(self, dt, t, input_service, ui_renderer, render_settings, ...)
+		-- base mod hooks onto this first, but executes after the original function
+	end)
+	-- ######
+	-- Before game end
+	-- ######
+	mod:hook(CLASS.EndView, "on_enter", function(func, self)
+		mod:add_damage_taken_done_ratio()
+		--mod:echo("IF YOU SEE THIS YELL AT ME: entering end view")
+		func(self)
+		-- base mod hooks onto this first, but executes after the original function
+	end)
+	]]
 
 	-- ############
 	-- Interactions Started?
@@ -642,6 +706,11 @@ function mod.on_all_mods_loaded()
 						self._melee_rate[account_id] = self._melee_rate[account_id] or {}
 						self._melee_rate[account_id].hits = self._melee_rate[account_id].hits or 0
 						self._melee_rate[account_id].hits = self._melee_rate[account_id].hits +1
+						-- Reverting the hit added if it's an explosion and we set that to not happen
+						--	I'm pretty sure explosions don't crit so this should be fine
+						if need_to_revert_explosion_hitrate(explosions_affect_melee_hitrate, damage_profile.name) then
+							self._melee_rate[account_id].hits = self._melee_rate[account_id].hits - 1
+						end
 						self._melee_rate[account_id].weakspots = self._melee_rate[account_id].weakspots or 0
 						self._melee_rate[account_id].crits = self._melee_rate[account_id].crits or 0
 											
@@ -669,6 +738,14 @@ function mod.on_all_mods_loaded()
 						self._ranged_rate[account_id] = self._ranged_rate[account_id] or {}
 						self._ranged_rate[account_id].hits = self._ranged_rate[account_id].hits or 0
 						self._ranged_rate[account_id].hits = self._ranged_rate[account_id].hits +1
+						-- Reverting the hit added if it's an explosion and we set that to not happen
+						--	I'm pretty sure explosions don't crit so this should be fine
+						if need_to_revert_explosion_hitrate(explosions_affect_ranged_hitrate, damage_profile.name) then
+							self._ranged_rate[account_id].hits = self._ranged_rate[account_id].hits - 1
+							--mod:echo(damage_profile.name.." is an explosion and hitrate was reverted")
+							--mod:echo("weakspot: "..tostring(hit_weakspot))
+							--mod:echo("crit: "..tostring(is_critical_strike))
+						end
 						self._ranged_rate[account_id].weakspots = self._ranged_rate[account_id].weakspots or 0
 						self._ranged_rate[account_id].crits = self._ranged_rate[account_id].crits or 0
 						
@@ -898,12 +975,13 @@ function mod.on_game_state_changed(status, state_name)
 	-- think this means "entering gameplay" from "hub"
 	if state_name == "GameplayStateRun" and status == "enter" and Managers.state.mission:mission().name ~= "hub_ship" then
 		in_match = true
-		havoc_manager = Managers.state.havoc
-		is_playing_havoc = havoc_manager:is_havoc()
-		if is_playing_havoc then
+		local havoc_extension = Managers.state.game_mode:game_mode():extension("havoc")
+		-- is_playing_havoc = Managers.state.difficulty:get_parsed_havoc_data()
+		if havoc_extension then
+			is_playing_havoc = true
 			-- adding fallback 
 			-- havoc modifier goes from 0.85-0.4, but lower ranks just use 1
-			mod.ammunition_pickup_modifier = havoc_manager:get_modifier_value("ammo_pickup_modifier") or 1
+			mod.ammunition_pickup_modifier = havoc_extension:get_modifier_value("ammo_pickup_modifier") or 1
 			mod:info("Havoc ammo modifier: "..tostring(mod.ammunition_pickup_modifier))
 		else
 			mod.ammunition_pickup_modifier = 1 
