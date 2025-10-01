@@ -3,9 +3,6 @@ local mod = get_mod("Skitarius")
 local UIWorkspaceSettings = require("scripts/settings/ui/ui_workspace_settings")
 local UIWidget = require("scripts/managers/ui/ui_widget")
 
-local color_enabled = { 255, 255, 255, 255 }
-local color_disabled = { 100, 255, 255, 255 }
-
 local ui_definitions = {
     scenegraph_definition = {
         screen = UIWorkspaceSettings.screen,

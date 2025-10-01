@@ -1,7 +1,7 @@
 local WeaponTemplates = require("scripts/settings/equipment/weapon_templates/weapon_templates")
-local mod = get_mod("Skitarius")
 local Mark9 = get_mod("Mark9") -- compatibility check
 
+-- Chinese localization provided by jcyl2023 and SyuanTsai
 local localizations = {
     -- Mod Details
     mod_name = {
@@ -12,7 +12,7 @@ local localizations = {
     },
     mod_description = {
       en = "FROM THE MOMENT I UNDERSTOOD THE WEAKNESS OF MY FLESH, IT DISGUSTED ME.",
-        ["zh-tw"] = "當我看穿血肉的脆弱，那一刻，我的心靈便被機械的完美所召喚，對這腐朽之軀只剩厭憎。", --  Traditional Chinese Maintained by SyuanTsai.
+      ["zh-tw"] = "當我看穿血肉的脆弱，那一刻，我的心靈便被機械的完美所召喚，對這腐朽之軀只剩厭憎。（繁體中文已由簡體漢化者維護，可能用詞差異和遊戲詞彙不同的不准確）",
       ["zh-cn"] = "设置一个独属于你的连招，按键自动作出相应动作——————B站 独一无二的小真寻 汉化维护",
     },
     -- Debug
@@ -29,45 +29,45 @@ local localizations = {
     },
     hud_element_tooltip = {
         en = "When enabled, a HUD icon will be displayed indicating mod and sequence status.",
-        ["zh-tw"] = "啟用後，將顯示一個HUD圖標，顯示模組和序列狀態。",
       ["zh-cn"] = "启用后，将显示一个HUD图标，指示模块和序列状态。",
+      ["zh-tw"] = "啟用後，將顯示一個HUD圖標，訓示模塊和序列狀態。",
     },
     hud_element_type = {
       en = "Sequence Indicator Style",
-      ["zh-tw"] = "MOD指示器風格",
       ["zh-cn"] = "显像模式",
+      ["zh-tw"] = "顯像模式",
  
     },
     hud_element_type_tooltip = {
       en = string.format("Color: HUD element will be colored when a sequence is active, black-and-white when inactive.\n"..
         "Icon: HUD element will change icons depending on sequence activity status.\n"..
         "Icon + Color: HUD element will change icons and color depending on sequence activity status.\n"),
-        ["zh-tw"] = string.format("顏色：當MOD運作時，將會改變指示器顏色，非運作狀態時為黑白.\n"..
-          "圖標：HUD元素會依照運作狀態更改圖標.\n"..
-          "圖標 + 顏色：HUD元素將依據運作狀態更改圖標和顏色. \n"),
       ["zh-cn"] = string.format("颜色：当序列处于活动状态时，HUD元素将着色，当序列处于非活动状态时将为黑白.\n"..
         "图标：HUD元素将根据序列活动状态更改图标.\n"..
         "颜色+图标：HUD元素将根据序列活动状态更改图标和颜色.\n"),
+      ["zh-tw"] = string.format("顏色：當序列處於活動狀態時，HUD元素將著色，當序列處於非活動狀態時將為黑白.\n"..
+        "圖標：HUD元素將根據序列活動狀態更改圖標.\n"..
+        "顏色+圖標：HUD元素將根據序列活動狀態更改圖標和顏色. \n"),
     },
     hud_element_type_color = {
       en = "Color",
-      ["zh-tw"] = "顏色",
       ["zh-cn"] = "颜色",
+      ["zh-tw"] = "顏色",
     },
     hud_element_type_icon = {
       en = "Icon",
-      ["zh-tw"] = "圖標",
       ["zh-cn"] = "图标",
+      ["zh-tw"] = "圖標",
     },
     hud_element_type_opacity = {
       en = "Opacity",
-      ["zh-tw"] = "透明度",
       ["zh-cn"] = "透明度",
+      ["zh-tw"] = "透明度",
     },
     hud_element_type_icon_color = {
       en = "Icon + Color",
-      ["zh-tw"] = "圖標 + 顏色",
       ["zh-cn"] = "图标+颜色",
+      ["zh-tw"] = "圖標+顏色",
     },
     hud_element_size = {
         en = "Sequence Indicator Size",
@@ -77,44 +77,45 @@ local localizations = {
     -- Mod Settings
     mod_settings = {
       en = "Mod Settings",
-      ["zh-tw"] = "模組設定",
       ["zh-cn"] = "MOD设置",
+      ["zh-tw"] = "MOD指設置",
+ 
     },
     mod_enable_held = {
       en = "Enable/Disable Mod (Held)",
-      ["zh-tw"] = "啟用/禁用模組 (長按)",
       ["zh-cn"] = "长按式模组启停",
+      ["zh-tw"] = "長按式模組啟停",
     },
     mod_enable_pressed = {
       en = "Enable/Disable Mod (Toggle)",
-      ["zh-tw"] = "啟用/禁用模組 (切換)",
       ["zh-cn"] = "切换式模组启停",
+      ["zh-tw"] = "切換模組啟停",
     },
     mod_enable_verbose = {
       en = "Notify on Mod Enabled/Disabled",
-      ["zh-tw"] = "啟用/禁用模組時通知",
       ["zh-cn"] = "模组状态通知",
+      ["zh-tw"] = "模組狀態通知",
     },
     overload_protection = {
       en = "Overload Protection",
-      ["zh-tw"] = "鍵位綁定",
       ["zh-cn"] = "武器切换时保持键位绑定",
+      ["zh-tw"] = "武器切換時保持按鍵綁定",
     },
     overload_protection_tooltip = {
       en = string.format("When enabled, the mod will prevent sequence input which would lead to death from Perils of the Warp. \nThis will NOT prevent deaths caused by manual player inputs."),
-      ["zh-tw"] = string.format("啟用後，模組將防止靈能反噬造成的MOD失效問題。\n這不會防止因玩家手動輸入而導致的死亡。"),
       ["zh-cn"] = "切换武器时防止键位绑定自动失效。启用后请注意远程与近战键位可能产生的冲突。",
+      ["zh-tw"] = "切換武器時防止按鍵綁定自動失效。 啟用後注意遠程與近戰鍵位可能產生的衝突",
     },
     -- Keybinds
     maintain_bind = {
       en = "Maintain Keybind Status on Weapon Swap",
-      ["zh-tw"] = "武器切換時保持按鍵狀態",
       ["zh-cn"] = "武器切换时保持键位绑定",
+      ["zh-tw"] = "武器切換時保持按鍵狀態",
     },
     maintain_bind_tooltip = {
       en = "Prevents keybinds from disabling themselves when switching weapons. Be aware of overlapping Ranged and Melee keybinds when using this feature.",
-      ["zh-tw"] = "當切換武器時，防止按鍵綁定自動關閉。使用此功能時，請注意近戰和遠程按鍵綁定的重疊。",
       ["zh-cn"] = "切换武器时防止键位绑定自动失效。启用后请注意远程与近战键位可能产生的冲突。",
+      ["zh-tw"] = "當切換武器時，防止按鍵綁定自動關閉。使用此功能時，請注意近戰和遠程按鍵綁定的重疊。",
     },
     override_primary = {
         en = "Override Primary Attack Input",
@@ -194,33 +195,34 @@ local localizations = {
     },
     current_melee = {
       en = "JUMP TO CURRENT/GLOBAL",
-      ["zh-tw"] = "近戰武器選擇",
       ["zh-cn"] = "近战武器选择",
+      ["zh-tw"] = "近戰武器選擇",
     },
     current_ranged = {
       en = "JUMP TO CURRENT/GLOBAL",
-      ["zh-tw"] = "跳轉到當前 或 全域",
       ["zh-cn"] = "跳转到当前 或 全局",
+      ["zh-tw"] = "跳轉到當前 或 全域",
     },
     interrupt = {
       en = "Action On Stun",
-      ["zh-tw"] = "當玩家被暈眩時",
       ["zh-cn"] = "当玩家被打晕时",
+      ["zh-tw"] = "當玩家被打暈時",
     },
     interrupt_tooltip = {
       en = "Determines the action taken by sequences when the player is stunned/interrupted by external sources.",
-      ["zh-tw"] = "決定當玩家被外部來源打斷/眩暈時，序列採取的動作。",
       ["zh-cn"] = "确定当玩家被外部来源击晕/打断时，序列所采取的动作",
+      ["zh-tw"] = "確定當玩家被外部來源擊暈/打斷時，序列所採取的動作",
     },
     reset = {
       en = "Reset Sequence",
-      ["zh-tw"] = "重置序列",
       ["zh-cn"] = "重置序列",
+      ["zh-tw"] = "重置序列",
     },
     halt = {
       en = "Halt Sequence",
-      ["zh-tw"] = "停止序列",
+      ["zh-tw"] = "暂停序列",
       ["zh-cn"] = "中断序列",
+ 
     },
     melee_weapon_selection = {
         en = "Weapon Selection",
@@ -235,7 +237,7 @@ local localizations = {
     heavy_buff_tooltip = {
       en = "When selected, Heavy attacks will be charged until this buff reaches the specified number of stacks in the Heavy Buff Stacks setting.",
       ["zh-cn"] = "启动神圣充能协议后，战术重击将维持相位蓄能状态，直至机魂增幅矩阵达到预设充能阶位（参见『重击增幅协议阶位配置』）。",
-      ["zh-tw"] = "當選擇時，重擊將蓄力，直到此增益達到「重擊強化層數」設定中指定的層數。",
+      ["zh-tw"] = "啟動神聖充能協定後，戰術重擊將維持相位蓄能狀態，直至機魂增幅矩陣達到預設充能階比特（參見『重擊增幅協定階比特配寘』）。",
     },
     thrust = {
         en = "Thrust",
@@ -249,38 +251,38 @@ local localizations = {
     },
     crunch = {
       en = "Crunch",
-      ["zh-tw"] = "嘎嘎!",
+      ["zh-tw"] = "嘎嘎！欧格林满蓄增伤",
       ["zh-cn"] = " 暴力粉碎！欧格林满蓄力增伤天赋",
     },
     heavy_buff_stacks = {
         en = "Heavy Buff Stacks",
-        ["zh-tw"] = "重擊蓄力層數",
+        ["zh-tw"] = "重擊強化層數",
         ["zh-cn"] = "蓄力buff层数",
     },
     heavy_buff_special = {
         en = "Special Required For Heavy Modifier",
-        ["zh-tw"] = "特殊攻擊蓄力層數",
+        ["zh-tw"] = "重擊修飾需要特殊攻擊",
         ["zh-cn"] = "蓄力buff特殊条件层数",
     },
     special_buff_stacks = {
 		en = "Heavy Buff Stacks (Special Attacks)",
-		["zh-tw"] = "重擊蓄力層數(特殊攻擊)",
+		["zh-tw"] = "重擊強化層數 （特殊攻擊）",
 		["zh-cn"] = "蓄力buff层数 （特殊攻击）",
 	},
     always_special = {
       en = "Always Activate Special Actions",
       ["zh-cn"] = "始终激活武器特殊技能",
-      ["zh-tw"] = "始終啟用特殊動作",
+      ["zh-tw"] = "始终激活武器特殊技能",
     },
     always_special_tooltip = {
       en = "When enabled, the mod will always execute Special actions, regardless of weapon state.",
       ["zh-cn"] = "启用后，无论武器状态如何，mod都将始终执行特殊动作",
-      ["zh-tw"] = "啟動後，無論武器狀態如何，Mod都將始終執行特殊動作。",
+      ["zh-tw"] = "啟用後，無論武器狀態如何，mod都將始終執行特殊動作",
     },
     heavy_buff_special_tooltip = {
       en = "When enabled, the Heavy Buff Modifier setting will only take effect while the current weapon's Special Action is active.",
       ["zh-cn"] = "启用后，「蓄力buff修正器」设置将仅在当前武器的特殊动作激活期间生效",
-      ["zh-tw"] = "啟動後，「蓄力buff修正器」設定將僅在當前武器的特殊動作啟動期間生效",
+      ["zh-tw"] = "啟用後，「蓄力buff修正器」設定將僅在當前武器的特殊動作啟動期間生效",
     },
     global_melee = {
       en = "GLOBAL",
@@ -304,12 +306,13 @@ local localizations = {
     },
     sequence_cycle_point_tooltip = {
       en = "Once the sequence has completed, it will restart from this step.",
-      ["zh-tw"] = "當技能序列完整執行後，將從此步驟重新開始循環",
       ["zh-cn"] = "当技能序列完整执行后，将从本步骤重新开始循环",
+      ["zh-tw"] = "當技能序列完整執行後，將從本步驟重新開始迴圈",
+ 
     },
     no_repeat = {
       en = "Halt Sequence on Completion",
-      ["zh-tw"] = "完成後停止序列(不重複)",
+      ["zh-tw"] = "步驟一",
       ["zh-cn"] = "步骤1",
     },
     sequence_step_one = {
@@ -457,8 +460,8 @@ local localizations = {
     },
     always_charge_threshold_tooltip = {
       en = string.format("When enabled, this threshold will be used to determine when to auto-release charged attacks. \nThis will be overridden by the Weapon Charge Threshold setting if that setting is lower."),
-      ["zh-tw"] = string.format("將依據設定值决定何時釋放閃擊\n 如果充能設定值過低（蓄力會自動釋放，無需手動操作），此設定將被覆蓋"),
       ["zh-cn"] = string.format("该阈值决定何时释放闪击\n 如果充能阈值设置过低，此设置将被覆盖"),
+      ["zh-tw"] = string.format("該閾值决定何時釋放閃擊\n 如果充能閾值設定過低（蓄力將自動釋放，無需手動操作），此設定將被覆蓋"),
     },
     ranged_weapon_selection = {
       en = "Weapon Selection",
@@ -467,7 +470,7 @@ local localizations = {
     },
     global_ranged = {
       en = "GLOBAL",
-      ["zh-tw"] = "遠程 - 全域",
+      ["zh-tw"] = "全局遠程",
       ["zh-cn"] = "全局远程",
     },
     automatic_fire = {
