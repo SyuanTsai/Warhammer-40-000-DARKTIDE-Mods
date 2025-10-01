@@ -260,10 +260,10 @@
 
 ### [Remember Server Location](https://www.nexusmods.com/warhammer40kdarktide/mods/308)
     能夠固定預設的伺服器避免都是香港
-- MOD 網站最後更新日期：Last updated 23 June 2025, 4:46PM
-- MOD 版本：1.1.3
-- MOD 檔案名稱：RememberServerLocation-308-1-1-3-1750668369
-- 手動維護最後下載日期：2025-06-23
+- MOD 網站最後更新日期：Last updated 25 September 2025, 2:45AM
+- MOD 版本：1.1.5
+- MOD 檔案名稱：RememberServerLocation-308-1-1-5-1758739500
+- 手動維護最後下載日期：2025-10-01
 
 ### [Default To Highest Blessing Tier](https://www.nexusmods.com/warhammer40kdarktide/mods/364)
     預設天賦在第四層，避免沒注意到用了第一層天賦
