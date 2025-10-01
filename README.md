@@ -404,10 +404,10 @@
 
 ### [InventoryStats](https://www.nexusmods.com/warhammer40kdarktide/mods/152)
     玩家Build資訊
-- MOD 網站最後更新日期：Last updated 26 September 2024 5:09AM
-- MOD 版本：1.7
-- MOD 檔案名稱：InventoryStats-152-1-7-1727327350
-- 手動維護最後下載日期：2025-03-21
+- MOD 網站最後更新日期：Last updated 24 September 2025, 5:37AM
+- MOD 版本：1.8
+- MOD 檔案名稱：InventoryStats-152-1-8-1758663470
+- 手動維護最後下載日期：2025-10-01
 ---
 # 遊戲內操作相關MOD
 
