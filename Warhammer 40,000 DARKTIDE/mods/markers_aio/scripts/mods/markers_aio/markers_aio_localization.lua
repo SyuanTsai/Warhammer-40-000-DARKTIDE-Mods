@@ -38,7 +38,8 @@ local loc = {
         ["zh-cn"] = "视野外图标透明度"
     },
     marker_background_colour = {
-        en = "Marker background colour"
+        en = "Marker background colour",
+        ["zh-tw"] = "標記背景顏色",
     },
 
     -- AMMO MED MARKERS
@@ -367,13 +368,16 @@ local loc = {
         ["zh-cn"] = "使用替代图标"
     },
     Default = {
-        en = "Default"
+        en = "Default",
+        ["zh-tw"] = "預設",
     },
     Video = {
-        en = "Video"
+        en = "Video",
+        ["zh-tw"] = "影片",
     },
     Loot = {
-        en = "Loot"
+        en = "Loot",
+        ["zh-tw"] = "戰利品",
     },
     chest_general_settings = {
         en = "General Settings",
@@ -1102,7 +1106,8 @@ local loc = {
     -- Tainted Communication Device Markers
     tainted_markers_settings = {
         en = "TAINTED COMMUNICATION DEVICE MARKERS",
-        ["zh-cn"] = "腐化通讯装置图标"
+        ["zh-cn"] = "腐化通讯装置图标",
+        ["zh-tw"] = "腐化通訊裝置圖示"
     },
     tainted_enable = {
         en = "Enable Markers",
@@ -1518,10 +1523,12 @@ local loc = {
         ["zh-cn"] = "钢"
     },
     Black = {
-        en = "Black"
+        en = "Black",
+        ["zh-tw"] = "黑",
     },
     Terminal = {
-        en = "Terminal"
+        en = "Terminal",
+        ["zh-tw"] = "終端",
     },
 
     -- new toggle LOS settings
