@@ -94,6 +94,9 @@ mod.on_all_mods_loaded = function()
     local filter = filter_map[mod:get("filter_select") or 1]
     if filter then
         for _, breed in pairs(BREEDING_GROUPS.global_group_toggle) do
+            if not BREEDING_TARGETS[breed] then
+                BREEDING_TARGETS[breed] = {}
+            end
             mod:set(breed, BREEDING_TARGETS[breed][filter], false)
         end
     end
@@ -116,6 +119,7 @@ mod.on_setting_changed = function(id)
         local filter = filter_map[mod:get("filter_select") or 1]
         if filter then
             for _, breed in pairs(BREEDING_GROUPS.global_group_toggle) do
+                
                 mod:set(breed, BREEDING_TARGETS[breed][filter], false)
             end
         end
@@ -277,7 +281,7 @@ end)
 
 -- When Brain Burst attempts a lock, check if we should also consider it a lock
 mod:hook_safe(CLASS.ActionSmiteTargeting, "fixed_update", function (self, dt, t, time_in_action)
-    local heretic = self._targeting_component.target_unit_1
+    local heretic = self._action_module_target_finder.target_unit_1
     if heretic then
         local heretic_data = ScriptUnit.has_extension(heretic, "unit_data_system")
         if heretic_data then
