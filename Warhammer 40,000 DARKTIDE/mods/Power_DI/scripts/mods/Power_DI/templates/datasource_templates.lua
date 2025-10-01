@@ -364,36 +364,41 @@ local rpc_player_collected_materials = function(self, channel_id, peer_id, mater
     output_table[#output_table+1] = temp_table
 end
 local add_network_unit = function(self, unit, game_object_id, is_husk)
+    local go_field = GameSession.game_object_field
+    local has_go_field = GameSession.has_game_object_field
     local output_table = data_locations.UnitSpawnerManager()
     local game_session = managers_state.game_session:game_session()
     local unit_spawner_manager = managers_state.unit_spawner
-    local unit_template_name = self._unit_template_network_lookup[GameSession.game_object_field(game_session, game_object_id, "unit_template")]
+    local unit_template_name = self._unit_template_network_lookup[go_field(game_session, game_object_id, "unit_template")]
     local unit_uuid = utilities.get_address(unit)
     local unit_name, max_health, owner_unit
     
     if unit_template_name == "player_character" then
-        local package_synchronizer_client = Managers.package_synchronization:synchronizer_client()
-        local player_peer_id = GameSession.game_object_field(game_session, game_object_id, "owner_peer_id")
-        local player_profile = player_peer_id and package_synchronizer_client:cached_profile(player_peer_id, 1)
-        local players_table = data_locations.PlayerProfiles()
-        players_table[unit_uuid] = utilities.copy(player_profile)
-        unit_name = player_profile and player_profile.name
-        utilities.clean_table_for_saving(players_table[unit_uuid])
-    elseif GameSession.has_game_object_field(game_session, game_object_id, "breed_id") then
-        local breed_id = GameSession.game_object_field(game_session, game_object_id, "breed_id")
+        local owner_peer_id = go_field(game_session, game_object_id, "owner_peer_id")     
+        local local_player_id = go_field(game_session, game_object_id, "local_player_id")
+        local player_target = owner_peer_id and Managers.player:player(owner_peer_id, local_player_id)
+        if player_target:is_human_controlled() then
+            local player_profile = player_target:profile()
+            local players_table = data_locations.PlayerProfiles()
+            players_table[unit_uuid] = utilities.copy(player_profile)
+            unit_name = player_profile and player_profile.name
+            utilities.clean_table_for_saving(players_table[unit_uuid])
+        end
+    elseif has_go_field(game_session, game_object_id, "breed_id") then
+        local breed_id = go_field(game_session, game_object_id, "breed_id")
         unit_name = NetworkLookup.breed_names[breed_id]
-    elseif GameSession.has_game_object_field(game_session, game_object_id, "pickup_id") then
-        local pickup_id = GameSession.game_object_field(game_session, game_object_id, "pickup_id")
+    elseif has_go_field(game_session, game_object_id, "pickup_id") then
+        local pickup_id = go_field(game_session, game_object_id, "pickup_id")
         unit_name = NetworkLookup.pickup_names[pickup_id]
-    elseif GameSession.has_game_object_field(game_session, game_object_id, "prop_id") then
-        local prop_id = GameSession.game_object_field(game_session, game_object_id, "prop_id")
+    elseif has_go_field(game_session, game_object_id, "prop_id") then
+        local prop_id = go_field(game_session, game_object_id, "prop_id")
 		unit_name = NetworkLookup.level_props_names[prop_id]
     end
-    if GameSession.has_game_object_field(game_session, game_object_id, "health") then
-        max_health = GameSession.game_object_field(game_session, game_object_id, "health")
+    if has_go_field(game_session, game_object_id, "health") then
+        max_health = go_field(game_session, game_object_id, "health")
     end
-    if GameSession.has_game_object_field(game_session, game_object_id, "owner_unit_id") then
-        local owner_unit_id = GameSession.game_object_field(game_session, game_object_id, "owner_unit_id")
+    if has_go_field(game_session, game_object_id, "owner_unit_id") then
+        local owner_unit_id = go_field(game_session, game_object_id, "owner_unit_id")
         owner_unit = unit_spawner_manager:unit(owner_unit_id)
     end
 
@@ -645,24 +650,24 @@ local rpc_health_station_on_socket_spawned = function(self, channel_id, level_un
 
     output_table[#output_table+1] = temp_table
 end
-local rpc_health_station_on_battery_spawned = function(self, channel_id, level_unit_id, battery_id, battery_is_level_unit)
-    local output_table = data_locations.HealthStationSystem()
-    local unit_spawner_manager = managers_state.unit_spawner
-    local health_station_unit = unit_spawner_manager:unit(level_unit_id, true)
-    local battery_unit = unit_spawner_manager:unit(battery_id, battery_is_level_unit)
+-- local rpc_health_station_on_battery_spawned = function(self, channel_id, level_unit_id, battery_id, battery_is_level_unit)
+--     local output_table = data_locations.HealthStationSystem()
+--     local unit_spawner_manager = managers_state.unit_spawner
+--     local health_station_unit = unit_spawner_manager:unit(level_unit_id, true)
+--     local battery_unit = unit_spawner_manager:unit(battery_id, battery_is_level_unit)
    
-    local temp_table ={}
+--     local temp_table ={}
 
-    temp_table.time = get_gameplay_time()
-    temp_table.event = "health_station_on_battery_spawned"
-    temp_table.health_station_unit_uuid = get_unit_uuid(health_station_unit)
-    temp_table.health_station_unit_position = get_position(health_station_unit)
-    temp_table.battery_unit_uuid = get_unit_uuid(battery_unit)
-    temp_table.battery_unit_position = get_position(battery_unit)
+--     temp_table.time = get_gameplay_time()
+--     temp_table.event = "health_station_on_battery_spawned"
+--     temp_table.health_station_unit_uuid = get_unit_uuid(health_station_unit)
+--     temp_table.health_station_unit_position = get_position(health_station_unit)
+--     temp_table.battery_unit_uuid = get_unit_uuid(battery_unit)
+--     temp_table.battery_unit_position = get_position(battery_unit)
 
-    output_table[#output_table+1] = temp_table
+--     output_table[#output_table+1] = temp_table
 
-end
+-- end
 local rpc_health_station_sync_charges = function(self, channel_id, level_unit_id, charge_amount)
     local output_table = data_locations.HealthStationSystem()
     local unit_spawner_manager = managers_state.unit_spawner
@@ -760,20 +765,20 @@ local rpc_servo_skull_set_scanning_active = function (self, channel_id, game_obj
 
     output_table[#output_table+1] = temp_table
 end
-local rpc_minigame_hot_join = function (self, channel_id, unit_id, is_level_unit, state_id)
-    local output_table = data_locations.ServoSkullEvents()
-    local unit_spawner_manager = managers_state.unit_spawner
-	local interactee_unit = unit_spawner_manager:unit(unit_id, is_level_unit)
-    local temp_table = {}
+-- local rpc_minigame_hot_join = function (self, channel_id, unit_id, is_level_unit, state_id)
+--     local output_table = data_locations.ServoSkullEvents()
+--     local unit_spawner_manager = managers_state.unit_spawner
+-- 	local interactee_unit = unit_spawner_manager:unit(unit_id, is_level_unit)
+--     local temp_table = {}
 
-    temp_table.time = get_gameplay_time()
-    temp_table.event = "minigame_hot_join"
-    temp_table.interactee_unit = get_unit_uuid(interactee_unit)
-    temp_table.interactee_unit_position = get_position(interactee_unit)
-    temp_table.state = NetworkLookup.minigame_states[state_id]
+--     temp_table.time = get_gameplay_time()
+--     temp_table.event = "minigame_hot_join"
+--     temp_table.interactee_unit = get_unit_uuid(interactee_unit)
+--     temp_table.interactee_unit_position = get_position(interactee_unit)
+--     temp_table.state = NetworkLookup.minigame_states[state_id]
 
-    output_table[#output_table+1] = temp_table
-end
+--     output_table[#output_table+1] = temp_table
+-- end
 local rpc_minigame_sync_start = function (self, channel_id, unit_id, is_level_unit)
     local output_table = data_locations.ServoSkullEvents()
     local active_interactions = mod.cache.active_interactions
@@ -1414,7 +1419,7 @@ datasource_templates = {
                 hook_functions = {
                     rpc_health_station_use = rpc_health_station_use,
                     rpc_health_station_on_socket_spawned = rpc_health_station_on_socket_spawned,
-                    rpc_health_station_on_battery_spawned = rpc_health_station_on_battery_spawned,
+                    --rpc_health_station_on_battery_spawned = rpc_health_station_on_battery_spawned,
                     rpc_health_station_sync_charges = rpc_health_station_sync_charges,
                     rpc_health_station_hot_join = rpc_health_station_hot_join,
                 },
@@ -1435,7 +1440,7 @@ datasource_templates = {
             {
                 hook_class = CLASS.MinigameSystem,
                 hook_functions = {
-                    rpc_minigame_hot_join = rpc_minigame_hot_join,
+                    --rpc_minigame_hot_join = rpc_minigame_hot_join,
                     rpc_minigame_sync_start = rpc_minigame_sync_start,
                     rpc_minigame_sync_stop = rpc_minigame_sync_stop,
                     rpc_minigame_sync_completed = rpc_minigame_sync_completed,
