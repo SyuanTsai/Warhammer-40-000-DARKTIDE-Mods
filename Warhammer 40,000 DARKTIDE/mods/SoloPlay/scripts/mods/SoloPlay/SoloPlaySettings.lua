@@ -6,9 +6,12 @@ local MissionObjectiveTemplates = require("scripts/settings/mission_objective/mi
 local MissionGiverVoSettings = require("scripts/settings/dialogue/mission_giver_vo_settings")
 local DialogueSpeakerVoiceSettings = require("scripts/settings/dialogue/dialogue_speaker_voice_settings")
 local HavocSettings = require("scripts/settings/havoc_settings")
+local HordesModeSettings = require("scripts/settings/hordes_mode_settings")
 local havoc_modifier_template = mod:io_dofile("SoloPlay/scripts/mods/SoloPlay/havoc_modifier_template")
 
 local TRAINING_GROUND = "tg_shooting_range"
+local MORTIS_TRIALS = "psykhanium"
+local CAMPAIGN_LOC = Localize("loc_player_journey_campaign")
 
 local objectives_denylist = {
 	"hub",
@@ -29,12 +32,31 @@ local circumstance_prefer_list = {
 local circumstance_format_group = {
 	high_flash_mission = "format_auric"
 }
+local campaign_circumstances = {
+	player_journey_01 = 1,
+	player_journey_02 = 2,
+	player_journey_03 = 3,
+	player_journey_04 = 4,
+	player_journey_05 = 5,
+	player_journey_06_B = 6,
+	player_journey_06_A = 7,
+	player_journey_07_B = 8,
+	player_journey_07_A = 9,
+	player_journey_08 = 10,
+	player_journey_09 = 11,
+	player_journey_010 = 12,
+	player_journey_011_A = 13,
+	player_journey_012_A = 14,
+	player_journey_011_B = 15,
+	player_journey_013_A = 16,
+	player_journey_014 = 17,
+}
 
 local settings = {
 	context_override = {
 		km_enforcer_twins = {
 			circumstance_name = {
-				value = "toxic_gas_twins_01",
+				value = "player_journey_010",
 			},
 			pacing_control = {
 				value = {
@@ -75,24 +97,42 @@ local settings = {
 		theme_of_circumstances = {},
 		theme_circumstances_of_havoc_missions = {},
 		havoc_modifiers_max_level = havoc_modifier_template.max_level,
+		havoc_circumstances = {}
+	},
+	custom_params_handlers = {
+		[MORTIS_TRIALS] = function (mission_name, params)
+			mod:set("_horde_selected_island", params)
+		end,
 	},
 }
 
 -- missions
 local missions_loc_array = {}
+local produce_mission_loc_entries = function (name, mission)
+	local display = Localize(mission.mission_name)
+	if string.starts_with(display, "<") then
+		display = name
+	end
+	if name == MORTIS_TRIALS then
+		for _, island_name in ipairs(HordesModeSettings.island_names) do
+			local sub_name = name .. "|" .. island_name
+			local sub_display = display .. " • " .. Localize(string.format("loc_horde_%s_name", island_name))
+			missions_loc_array[#missions_loc_array+1] = {
+				data = sub_name,
+				localized = sub_display,
+			}
+		end
+	elseif name == TRAINING_GROUND then
+		display = " " .. Localize("loc_training_grounds_view_display_name") .. " • " .. Localize("loc_training_grounds_view_shooting_range_text")
+	end
+	missions_loc_array[#missions_loc_array+1] = {
+		data = name,
+		localized = display,
+	}
+end
 for name, mission in pairs(MissionTemplates) do
 	if (not mission.objectives) or (not table.array_contains(objectives_denylist, mission.objectives)) or name == TRAINING_GROUND then
-		local display = Localize(mission.mission_name)
-		if string.starts_with(display, "<") then
-			display = name
-		end
-		if name == TRAINING_GROUND then
-			display = " " .. Localize("loc_training_grounds_view_display_name") .. " - " .. Localize("loc_training_grounds_view_shooting_range_text")
-		end
-		missions_loc_array[#missions_loc_array+1] = {
-			data = name,
-			localized = display,
-		}
+		produce_mission_loc_entries(name, mission)
 
 		local mission_brief_vo = mission.mission_brief_vo
 		if mission_brief_vo and mission_brief_vo.mission_giver_packs then
@@ -142,12 +182,19 @@ for index, side_mission_loc in ipairs(side_missions_loc_array) do
 end
 
 -- pre-process havoc circumstances
-local havoc_circumstances_loc = {}
+local havoc_circumstances_loc_fallback = {}
+local havoc_circumstances_lookup_unfiltered = {}
 for circumstance_name in pairs(HavocCircumstanceTemplate) do
 	local loc_data = HavocSettings.ui_settings.circumstances[circumstance_name]
 	if loc_data then
-		havoc_circumstances_loc[circumstance_name] = loc_data.title
+		havoc_circumstances_loc_fallback[circumstance_name] = loc_data.title
 	end
+end
+for _, circumstance_name in ipairs(HavocSettings.circumstances) do
+	havoc_circumstances_lookup_unfiltered[circumstance_name] = true
+end
+for circumstance_name in pairs(HavocCircumstanceTemplate) do
+	havoc_circumstances_lookup_unfiltered[circumstance_name] = true
 end
 
 -- circumstances
@@ -170,8 +217,16 @@ for name, circumstance in pairs(CircumstanceTemplates) do
 			end
 		end
 		local display_name = circumstance.ui.display_name
-		if havoc_circumstances_loc[name] then
-			display_name = havoc_circumstances_loc[name]
+		if havoc_circumstances_loc_fallback[name] then
+			display_name = havoc_circumstances_loc_fallback[name]
+		elseif string.starts_with(name, "player_journey_") then
+			local campaign_order = campaign_circumstances[name] or 0
+			display_name = Localize(display_name)
+			if campaign_order > 0 then
+				display_name = string.format("%s %02d: %s", CAMPAIGN_LOC, campaign_order, display_name)
+			else
+				display_name = string.format("%s: %s", CAMPAIGN_LOC, display_name)
+			end
 		end
 		if not deny and not format_key then
 			circumstance_reverse_map[display_name] = circumstance_reverse_map[display_name] or {}
@@ -215,10 +270,22 @@ for name, circumstance in pairs(CircumstanceTemplates) do
 		end
 	end
 end
-table.sort(circumstances_loc_array, mod.sort_function_localized)
+local function sort_function_cirsumstances(a, b)
+	local a_havoc, b_havoc = havoc_circumstances_lookup_unfiltered[a.data], havoc_circumstances_lookup_unfiltered[b.data]
+	if a_havoc and not b_havoc then
+		return false
+	elseif not a_havoc and b_havoc then
+		return true
+	end
+	return a.localized < b.localized
+end
+table.sort(circumstances_loc_array, sort_function_cirsumstances)
 for index, circumstance_loc in ipairs(circumstances_loc_array) do
 	settings.loc.circumstances[circumstance_loc.data] = circumstance_loc.localized
 	settings.order.circumstances[index] = circumstance_loc.data
+	if havoc_circumstances_lookup_unfiltered[circumstance_loc.data] then
+		settings.lookup.havoc_circumstances[circumstance_loc.data] = true
+	end
 end
 
 -- mission_givers
