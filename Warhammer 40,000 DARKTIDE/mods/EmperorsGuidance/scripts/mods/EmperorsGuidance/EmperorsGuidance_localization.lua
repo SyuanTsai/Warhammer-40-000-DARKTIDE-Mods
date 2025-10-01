@@ -1,5 +1,6 @@
 local Breeds = require("scripts/settings/breed/breeds")
 
+-- Chinese localization provided by jcyl2023
 localization = {
     -- Mod Info
     mod_description = {

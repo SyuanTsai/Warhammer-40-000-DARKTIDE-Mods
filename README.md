@@ -225,10 +225,10 @@
 
 ### [Emperor's Guidance](https://www.nexusmods.com/warhammer40kdarktide/mods/468)
     靈能捏頭過濾器 - 能夠依照你要的順序捏頭
-- MOD 網站最後更新日期：Last updated 29 June 2025, 1:31AM
-- MOD 版本：1.2.7
+- MOD 網站最後更新日期：Last updated 27 September 2025, 11:21PM
+- MOD 版本：1.2.8
 - MOD 檔案名稱：Emperor's Guidance 1.2.7-468-1-2-7-1751131867
-- 手動維護最後下載日期：2025-06-29
+- 手動維護最後下載日期：2025-10-01
 
 ---
 # 遊戲內操作相關MOD
