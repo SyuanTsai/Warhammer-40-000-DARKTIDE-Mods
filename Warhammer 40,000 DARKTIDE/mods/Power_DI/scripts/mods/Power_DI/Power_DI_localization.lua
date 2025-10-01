@@ -578,7 +578,7 @@ return {
 	mloc_9_companion = {
 		en = "Companion",
 		--["zh-cn"] = "",
-		["zh-tw"] = "隊長",
+		--["zh-tw"] = "",
 	},
 	mloc_chaos_faction = {
 		en = "Chaos",
