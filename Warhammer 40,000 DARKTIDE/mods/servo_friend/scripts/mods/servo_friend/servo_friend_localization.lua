@@ -149,6 +149,16 @@ return {
 		["zh-tw"] = "照明系統",
 		ru = "Фонарик",
 	},
+	mod_option_flashlight_toggle = {
+		en = "Toggle Flashlight",
+		de = "Lichtquelle umschalten",
+		["zh-tw"] = "切換照明裝置",
+	},
+	mod_option_flashlight_toggle_tooltip = {
+		en = "Toggle flashlight on and off.",
+		de = "Lichtquelle ein- / ausschalten.",
+		["zh-tw"] = "開啟或關閉照明裝置",
+	},
 	mod_option_flashlight = {
 		en = "Flashlight",
 		de = "Lichtquelle",
@@ -283,13 +293,74 @@ return {
 		ru = "Фонарик будет выключен в Моунингстар.",
 	},
 
-	group_misc = {
-		en = "Miscellaneous",
-		de = "Sonstiges",
-		["zh-cn"] = "综合设置",
-		["zh-tw"] = "其他設定",
-        ru = "Разное",
+	group_distribution = {
+		en = "Distribution",
+		de = "Verteilung",
+		["zh-cn"] = "伺服颅骨分配协议",
+		["zh-tw"] = "伺服器顱骨分配協議",
 	},
+	mod_option_distribution = {
+		en = "Distribution",
+		de = "Verteilung",
+		["zh-cn"] = "伺服颅骨分配协议",
+		["zh-tw"] = "伺服器顱骨分配協議",
+	},
+	mod_option_distribution_tooltip = {
+		en = "Select the distribution among other players.",
+		de = "Verteilung unter anderen Spielern auswahlen.",
+		["zh-cn"] = "设定伺服颅骨的配备数量",
+		["zh-tw"] = "選擇伺服器顱骨在其他玩家之間的分配",
+	},
+	mod_option_distribution_flashlight = {
+		en = "Flashlight",
+		de = "Lichtquelle",
+		["zh-cn"] = "战术手电",
+		ru = "Фонарик",
+		["zh-tw"] = "照明裝置",
+	},
+	mod_option_distribution_flashlight_tooltip = {
+		en = "Select the distribution of flashlights among other players.",
+		de = "Verteilung von Lichtquellen unter anderen Spielern auswahlen.",
+		["zh-cn"] = "其他玩家的伺服颅骨是否有手电筒功能？",
+		["zh-tw"] = "其他玩家的伺服器顱骨是否有照明裝置？",
+	},
+	mod_option_distribution_alert = {
+		en = "Alert Mode",
+		de = "Alarmmodus",
+		["zh-cn"] = "机魂预警",
+		["zh-tw"] = "機魂預警",
+	},
+	mod_option_distribution_alert_tooltip = {
+		en = "Select the distribution of alert mode among other players.",
+		de = "Verteilung von Alarmmodus unter anderen Spielern auswahlen.",
+		["zh-cn"] = "其他玩家的伺服颅骨是否有手电筒功能？",
+		["zh-tw"] = "其他玩家的伺服器顱骨是否有機魂預警？",
+	},
+	mod_option_distribution_everyone = {
+		en = "Everyone",
+		de = "Jeder",
+		["zh-cn"] = "全员配备伺服颅骨",
+		["zh-tw"] = "全隊配備伺服器顱骨",
+	},
+	mod_option_distribution_only_me = {
+		en = "Only Me",
+		de = "Nur ich",
+		["zh-cn"] = "仅本人配备",
+		["zh-tw"] = "僅本人配備",
+	},
+	mod_option_distribution_one = {
+		en = "One more player",
+		de = "Ein anderer Spieler",
+		["zh-cn"] = "一名队友配备",
+		["zh-tw"] = "一名隊友配備",
+	},
+	mod_option_distribution_two = {
+		en = "Two more players",
+		de = "Zwei andere Spieler",
+		["zh-cn"] = "两名队友配备",
+		["zh-tw"] = "兩名隊友配備",
+	},
+
 	group_appearance = {
 		en = "Appearance",
 		de = "Aussehen",
@@ -575,11 +646,15 @@ return {
 		en = "Keep Packages Loaded",
         de = "Pakete im Speicher behalten",
 		["zh-tw"] = "保持模組載入",
+		de = "Pakete im Speicher behalten",
+		["zh-cn"] = "机魂永驻协议",
 	},
 	mod_option_keep_packages_tooltip = {
 		en = "Keep the packages for servo friend and addons loaded on mod reload.",
         de = "Pakete fürs Servo Freund und Addons im Speicher halten, wenn die Mod neu geladen wird.",
 		["zh-tw"] = "保持伺服器顱骨和附加模組載入",
+		de = "Pakete fürs Servo Freund und Addons im Speicher halten, wenn die Mod neu geladen wird.",
+		["zh-cn"] = "重新加载mod后，在内存中维持伺服颅骨及其圣约插件的数据",
 	},
 	group_aiming = {
 		en = "Aiming",

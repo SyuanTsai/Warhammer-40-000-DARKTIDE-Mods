@@ -30,12 +30,9 @@ mod:register_sounds({
 ServoFriendHoverSoundExtension.init = function(self, extension_init_context, unit, extension_init_data)
     -- Base class
     ServoFriendHoverSoundExtension.super.init(self, extension_init_context, unit, extension_init_data)
-    -- Data
-    self.event_manager = managers.event
-    self.initialized = true
     -- Events
-    self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
-    self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
+    -- managers.event:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
+    -- managers.event:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
     -- Settings
     self:on_settings_changed()
     -- Debug
@@ -43,11 +40,9 @@ ServoFriendHoverSoundExtension.init = function(self, extension_init_context, uni
 end
 
 ServoFriendHoverSoundExtension.destroy = function(self)
-    -- Data
-    self.initialized = false
     -- Events
-    self.event_manager:unregister(self, "servo_friend_spawned")
-    self.event_manager:unregister(self, "servo_friend_destroyed")
+    -- managers.event:unregister(self, "servo_friend_spawned")
+    -- managers.event:unregister(self, "servo_friend_destroyed")
     -- Destroy
     self:destroy_hover_sound()
     -- Debug
@@ -105,7 +100,7 @@ end
 -- ##### ┴ ┴└─┘ ┴ ┴ ┴└─┘─┴┘└─┘ ########################################################################################
 
 ServoFriendHoverSoundExtension.spawn_hover_sound = function(self)
-    if self.initialized and self.hover_sound_effect and not self.thruster_source_id then
+    if self:is_initialized() and self.hover_sound_effect and not self.thruster_source_id then
         self.thruster_source_id = self:play_sound("start_thruster")
     end
 end

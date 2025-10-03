@@ -97,6 +97,10 @@ PlayerUnitServoFriendExtension.pt = function(self)
     return mod:pt()
 end
 
+PlayerUnitServoFriendExtension.is_initialized = function(self)
+    return mod.initialized and self.initialized
+end
+
 -- ##### ┬┌┐┌┬┌┬┐       ┌┬┐┌─┐┌─┐┌┬┐┬─┐┌─┐┬ ┬ #########################################################################
 -- ##### │││││ │   ───   ││├┤ └─┐ │ ├┬┘│ │└┬┘ #########################################################################
 -- ##### ┴┘└┘┴ ┴        ─┴┘└─┘└─┘ ┴ ┴└─└─┘ ┴  #########################################################################
@@ -106,7 +110,7 @@ PlayerUnitServoFriendExtension.init = function(self, extension_init_context, uni
     self.world_manager = managers.world
     self.package_manager = managers.package
     self.time_manager = managers.time
-    self.event_manager = managers.event
+    -- self.event_manager = managers.event
     -- Worlds
     self.hub = self:is_in_hub()
     self._world = self:world()
@@ -155,23 +159,24 @@ PlayerUnitServoFriendExtension.init = function(self, extension_init_context, uni
     self.position_was_corrected = false
     self.character_height = self.first_person_extension:extrapolated_character_height()
     -- Events
-    self.event_manager:register(self, "servo_friend_set_target_position", "on_servo_friend_set_target_position")
+    managers.event:register(self, "servo_friend_set_target_position", "on_servo_friend_set_target_position")
     -- Init
     self.initialized = true
     -- Settings
     self:on_settings_changed()
-    -- Attempt to spawn servo friend
-    -- local dt, t = self:delta_time(), self:time()
-    -- self:spawn_servo_friend(dt, t)
     -- Debug
     self:print("PlayerUnitServoFriendExtension initialized")
+end
+
+PlayerUnitServoFriendExtension.p2p_command = function(self, command, target, data)
+    return mod:p2p_command(command, target, data)
 end
 
 PlayerUnitServoFriendExtension.destroy = function(self)
     -- Deinit
     self.initialized = false
     -- Events
-    self.event_manager:unregister(self, "servo_friend_set_target_position")
+    managers.event:unregister(self, "servo_friend_set_target_position")
     -- Destroy
     self:destroy_servo_friend()
     -- Debug
@@ -190,7 +195,7 @@ end
 PlayerUnitServoFriendExtension.update = function(self, dt, t)
 
     -- Check if initialized and all packages are loaded
-    if mod.initialized and self.initialized and self:all_packages_loaded() and not self.appearance_changed then
+    if self:is_initialized() and self:all_packages_loaded() and not self.appearance_changed then
         -- Spawn servo friend
         self:spawn_servo_friend(dt, t)
     else
@@ -211,6 +216,7 @@ PlayerUnitServoFriendExtension.update = function(self, dt, t)
 end
 
 PlayerUnitServoFriendExtension.extensions_settings_changed = function(self, setting_id)
+    -- self:execute_extensions("on_settings_changed", setting_id)
     if self:servo_friend_alive() then
         local pt = self:pt()
         if pt.loaded_extensions[self.servo_friend_unit] and table_size(pt.loaded_extensions[self.servo_friend_unit]) > 0 then
@@ -224,6 +230,7 @@ PlayerUnitServoFriendExtension.extensions_settings_changed = function(self, sett
 end
 
 PlayerUnitServoFriendExtension.update_extensions = function(self, dt, t)
+    -- self:execute_extensions("update", dt, t)
     if self:servo_friend_alive() then
         local pt = self:pt()
         if pt.loaded_extensions[self.servo_friend_unit] and table_size(pt.loaded_extensions[self.servo_friend_unit]) > 0 then
@@ -236,15 +243,42 @@ PlayerUnitServoFriendExtension.update_extensions = function(self, dt, t)
     end
 end
 
+PlayerUnitServoFriendExtension.execute_extensions = function(self, function_name, ...)
+    if self:servo_friend_alive() then
+        local pt = self:pt()
+        if pt.loaded_extensions[self.servo_friend_unit] and table_size(pt.loaded_extensions[self.servo_friend_unit]) > 0 then
+            for system, extension in pairs(pt.loaded_extensions[self.servo_friend_unit]) do
+                if self:extension_valid(extension) and type(extension[function_name]) == "function" then
+                    return extension[function_name](extension, ...)
+                end
+            end
+        end
+    end
+end
+
 PlayerUnitServoFriendExtension.remove_extensions = function(self)
     if self:servo_friend_alive() then
         local pt = self:pt()
         if pt.loaded_extensions[self.servo_friend_unit] and table_size(pt.loaded_extensions[self.servo_friend_unit]) > 0 then
             for system, extension in pairs(pt.loaded_extensions[self.servo_friend_unit]) do
                 mod:execute_extension(self.servo_friend_unit, system, "destroy")
-                mod:servo_friend_remove_extension(self.servo_friend_unit, system)
+                self:servo_friend_remove_extension(self.servo_friend_unit, system)
             end
             pt.loaded_extensions[self.servo_friend_unit] = nil
+        end
+    end
+end
+
+PlayerUnitServoFriendExtension.add_extensions = function(self)
+    if self:servo_friend_alive() then
+        local pt = self:pt()
+        for extension_name, system_name in pairs(pt.systems) do
+            if not self:servo_friend_extension(self.servo_friend_unit, system_name) then
+                self:servo_friend_add_extension(self.servo_friend_unit, system_name, nil, {
+                    player_unit = self.unit,
+                    is_local_unit = self.is_local_unit,
+                })
+            end
         end
     end
 end
@@ -264,7 +298,7 @@ end
 
 PlayerUnitServoFriendExtension.spawn_servo_friend = function(self, dt, t)
     
-    if mod.initialized and self.initialized and self:all_packages_loaded() and not self:servo_friend_alive() then
+    if self:is_initialized() and self:all_packages_loaded() and not self:servo_friend_alive() then
 
         self:print("Spawning servo friend")
 
@@ -275,13 +309,19 @@ PlayerUnitServoFriendExtension.spawn_servo_friend = function(self, dt, t)
         self.servo_friend_unit = world_spawn_unit_ex(self._world, servo_friend_unit, nil, player_position, rotation)
 
         -- Add extensions
-        local pt = self:pt()
-        for extension_name, system_name in pairs(pt.systems) do
-            self:servo_friend_add_extension(self.servo_friend_unit, system_name, nil, {
-                player_unit = self.unit,
-                is_local_unit = self.is_local_unit,
-            })
-        end
+        self:add_extensions()
+        -- local pt = self:pt()
+        -- for extension_name, system_name in pairs(pt.systems) do
+        --     if not self:servo_friend_extension(self.servo_friend_unit, system_name) then
+        --         self:servo_friend_add_extension(self.servo_friend_unit, system_name, nil, {
+        --             player_unit = self.unit,
+        --             is_local_unit = self.is_local_unit,
+        --         })
+        --     end
+        -- end
+
+        -- Settings changed
+        self:extensions_settings_changed()
 
         -- Rotate decoder variants
         if self.appearance == "decoder" or self.appearance == "decoder_2" then
@@ -293,10 +333,10 @@ PlayerUnitServoFriendExtension.spawn_servo_friend = function(self, dt, t)
         self:set_target_position(self:new_target_position())
 
         -- Talk
-        self.event_manager:trigger("servo_friend_talk", dt, t, "spawned", self.servo_friend_unit, self.player_unit)
+        managers.event:trigger("servo_friend_talk", dt, t, "spawned", self.servo_friend_unit, self.player_unit)
 
         -- Events
-        self.event_manager:trigger("servo_friend_spawned", self.servo_friend_unit, self.player_unit)
+        managers.event:trigger("servo_friend_spawned", self.servo_friend_unit, self.player_unit)
     end
 
 end
@@ -312,7 +352,7 @@ PlayerUnitServoFriendExtension.destroy_servo_friend = function(self)
     if self:servo_friend_alive() then
 
         -- Events
-        self.event_manager:trigger("servo_friend_destroyed", self.servo_friend_unit, self.player_unit)
+        managers.event:trigger("servo_friend_destroyed", self.servo_friend_unit, self.player_unit)
 
         -- Remove extensions
         self:remove_extensions()
@@ -414,6 +454,10 @@ PlayerUnitServoFriendExtension.movement_speed = function(self)
     return (self.found_something_valid and 4) or (self:is_sprinting() and 8) or (self:is_walking() and 6) or (self.is_aim_locked and 12) or 4
 end
 
+PlayerUnitServoFriendExtension.clamped_dt = function(self, dt, multiplier)
+    return math_clamp(dt, 0, 1) * multiplier
+end
+
 PlayerUnitServoFriendExtension.update_movement = function(self, dt, t)
     -- Check servo friend unit
     if self:servo_friend_alive() then
@@ -465,26 +509,32 @@ PlayerUnitServoFriendExtension.update_movement = function(self, dt, t)
         local target_position = self.target_position and vector3_unbox(self.target_position) or vector3_zero()
         local movement_speed = self:movement_speed()
         local player_position = self:player_position()
-        local new_position = vector3_lerp(current_position, target_position, dt * movement_speed)
+
+        -- local new_position = vector3_lerp(current_position, target_position, dt * movement_speed)
+        local new_position = vector3_lerp(current_position, target_position, self:clamped_dt(dt, movement_speed))
         local current_distance = vector3_distance(current_position, player_position)
         local target_distance = vector3_distance(current_position, target_position)
         local new_distance = vector3_distance(new_position, player_position)
         -- Impose roaming area restrictions
         if self.found_something_valid and self.use_roaming_area and current_distance > self.roaming_area then
             local dynamic_speed = movement_speed * ((current_distance / self.roaming_area) - 1)
-            new_position = vector3_lerp(current_position, self:new_target_position(), dt * dynamic_speed)
+            -- new_position = vector3_lerp(current_position, self:new_target_position(), dt * dynamic_speed)
+            new_position = vector3_lerp(current_position, self:new_target_position(), self:clamped_dt(dt, dynamic_speed))
         else
             if self.found_something_valid and self.use_roaming_area and new_distance > self.roaming_area then
                 -- new_position = current_position
                 local dynamic_speed = movement_speed * ((current_distance / self.roaming_area) - 1)
-                new_position = vector3_lerp(new_position, current_position, dt * dynamic_speed)
+                -- new_position = vector3_lerp(new_position, current_position, dt * dynamic_speed)
+                new_position = vector3_lerp(new_position, current_position, self:clamped_dt(dt, dynamic_speed))
             else
                 if self.use_roaming_area then
                     local dynamic_speed = movement_speed * ((current_distance / self.roaming_area) - 1)
-                    new_position = vector3_lerp(new_position, current_position, dt * dynamic_speed)
+                    -- new_position = vector3_lerp(new_position, current_position, dt * dynamic_speed)
+                    new_position = vector3_lerp(new_position, current_position, self:clamped_dt(dt, dynamic_speed))
                 else
                     local dynamic_speed = movement_speed * math_clamp(target_distance, 0, 1)
-                    new_position = vector3_lerp(current_position, target_position, dt * dynamic_speed)
+                    -- new_position = vector3_lerp(current_position, target_position, dt * dynamic_speed)
+                    new_position = vector3_lerp(current_position, target_position, self:clamped_dt(dt, dynamic_speed))
                 end
             end
         end
@@ -498,7 +548,8 @@ PlayerUnitServoFriendExtension.update_movement = function(self, dt, t)
         local turnDirection = math_sign(vector3_dot(curveAxis, vector3_up()))
         local new_lean = -turnDirection * math_clamp(angleBetween * 1500, 0, 45)
         -- self.lean = -turnDirection * math_clamp(angleBetween * 1000, 0, 45)
-        self.lean = math_lerp(self.lean, new_lean, dt * self:rotation_speed())
+        -- self.lean = math_lerp(self.lean, new_lean, dt * self:rotation_speed())
+        self.lean = math_lerp(self.lean, new_lean, self:clamped_dt(dt, self:rotation_speed()))
         -- new_position = new_position + vector3(0, 0, self.lean)
         -- Correct nan
         if new_position[1] ~= new_position[1] then
@@ -507,7 +558,7 @@ PlayerUnitServoFriendExtension.update_movement = function(self, dt, t)
         -- Set current position
         self.current_position:store(new_position)
         -- Sync position
-        self.event_manager:trigger("servo_friend_sync_current_position", self.current_position, self.servo_friend_unit, self.player_unit)
+        managers.event:trigger("servo_friend_sync_current_position", self.current_position, self.servo_friend_unit, self.player_unit)
         -- Set new position
         if not self.disable_lean_altitude then
             new_position = new_position - vector3(0, 0, math_abs(self.lean) * 0.005)
@@ -516,7 +567,7 @@ PlayerUnitServoFriendExtension.update_movement = function(self, dt, t)
         -- Recall when distance > max distance
         local player_distance = vector3_distance(player_position, current_position)
         if not self.use_roaming_area and player_distance > self.max_distance then
-            -- self.event_manager:trigger("servo_friend_clear_current_point_of_interest")
+            -- managers.event:trigger("servo_friend_clear_current_point_of_interest")
             self:execute_extension(self.servo_friend_unit, "servo_friend_point_of_interest_system", "clear_current")
             self:set_target_position(self:new_target_position())
         end
@@ -562,7 +613,7 @@ PlayerUnitServoFriendExtension.update_aim = function(self, dt, t)
                     self.target_rotation:store(rotation)
                 else
                     -- Clear current interest
-                    -- self.event_manager:trigger("servo_friend_clear_current_point_of_interest")
+                    -- managers.event:trigger("servo_friend_clear_current_point_of_interest")
                     self:execute_extension(self.servo_friend_unit, "servo_friend_point_of_interest_system", "clear_current")
                 end
             end
@@ -585,7 +636,8 @@ PlayerUnitServoFriendExtension.update_aim = function(self, dt, t)
         -- local current_rotation = unit_local_rotation(self.servo_friend_unit, 1)
         local current_rotation = self.current_rotation and quaternion_unbox(self.current_rotation) or unit_local_rotation(self.servo_friend_unit, 1)
         local target_rotation = self.target_rotation and quaternion_unbox(self.target_rotation) or quaternion_identity()
-        local new_rotation = quaternion_lerp(current_rotation, target_rotation, dt * self:rotation_speed())
+        -- local new_rotation = quaternion_lerp(current_rotation, target_rotation, dt * self:rotation_speed())
+        local new_rotation = quaternion_lerp(current_rotation, target_rotation, self:clamped_dt(dt, self:rotation_speed()))
         -- Lean
         local lean_rotation = quaternion_from_euler_angles_xyz(0, self.lean, 0)
         -- Store current rotation without lean!
@@ -666,9 +718,9 @@ PlayerUnitServoFriendExtension.daemonhosts_change_aim = function(self, dt, t, ne
                 if self.is_in_cone and daemonhost_los then
 
                     if not was_in_cone then
-                        self.event_manager:trigger("servo_friend_overwrite_color", 1, 0, 0, self.servo_friend_unit, self.player_unit)
-                        self.event_manager:trigger("servo_friend_overwrite_volumetric_intensity", 3, self.servo_friend_unit, self.player_unit)
-                        self.event_manager:trigger("servo_friend_talk", dt, t, "avoid_daemonhost", self.servo_friend_unit, self.player_unit)
+                        managers.event:trigger("servo_friend_overwrite_color", 1, 0, 0, self.servo_friend_unit, self.player_unit)
+                        managers.event:trigger("servo_friend_overwrite_volumetric_intensity", 3, self.servo_friend_unit, self.player_unit)
+                        managers.event:trigger("servo_friend_talk", dt, t, "avoid_daemonhost", self.servo_friend_unit, self.player_unit)
                     end
 
                     local player_position = unit_local_position(self.player_unit, 1)
@@ -677,7 +729,8 @@ PlayerUnitServoFriendExtension.daemonhosts_change_aim = function(self, dt, t, ne
                     -- local avoid_position = from - vector3(0, 0, 1) + vector_to_position
 
                     local current_avoid_daemonhost_position = self.avoid_daemonhost_position and vector3_unbox(self.avoid_daemonhost_position) or vector3_zero()
-                    local lerp_position = vector3_lerp(current_avoid_daemonhost_position, avoid_position, dt * self:rotation_speed())
+                    -- local lerp_position = vector3_lerp(current_avoid_daemonhost_position, avoid_position, dt * self:rotation_speed())
+                    local lerp_position = vector3_lerp(current_avoid_daemonhost_position, avoid_position, self:clamped_dt(dt, self:rotation_speed()))
                     self.avoid_daemonhost_position:store(lerp_position)
 
                     local new_direction = vector3_normalize(lerp_position - from)
@@ -691,8 +744,8 @@ PlayerUnitServoFriendExtension.daemonhosts_change_aim = function(self, dt, t, ne
     self.is_in_cone = false
 
     if was_in_cone then
-        self.event_manager:trigger("servo_friend_reset_color", self.servo_friend_unit, self.player_unit)
-        self.event_manager:trigger("servo_friend_overwrite_volumetric_intensity", self.servo_friend_unit, self.player_unit)
+        managers.event:trigger("servo_friend_reset_color", self.servo_friend_unit, self.player_unit)
+        managers.event:trigger("servo_friend_overwrite_volumetric_intensity", self.servo_friend_unit, self.player_unit)
     end
 
     local _, hit_position, _, _, hit_actor = physics_world_raycast(self._physics_world, from, direction, 1000,
@@ -701,11 +754,13 @@ PlayerUnitServoFriendExtension.daemonhosts_change_aim = function(self, dt, t, ne
     if hit_position and not self:get_vectors_almost_same(self.avoid_daemonhost_position, vector3_zero(), .1) then
 
         local current_avoid_daemonhost_position = self.avoid_daemonhost_position and vector3_unbox(self.avoid_daemonhost_position)
-        local lerp_position = vector3_lerp(current_avoid_daemonhost_position, hit_position, dt * self:rotation_speed())
+        -- local lerp_position = vector3_lerp(current_avoid_daemonhost_position, hit_position, dt * self:rotation_speed())
+        local lerp_position = vector3_lerp(current_avoid_daemonhost_position, hit_position, self:clamped_dt(dt, self:rotation_speed()))
         self.avoid_daemonhost_position:store(lerp_position)
 
         local new_direction = vector3_normalize(lerp_position - from)
-        local new_rotation = quaternion_lerp(new_rotation, quaternion_look(new_direction), dt * self:rotation_speed())
+        -- local new_rotation = quaternion_lerp(new_rotation, quaternion_look(new_direction), dt * self:rotation_speed())
+        local new_rotation = quaternion_lerp(new_rotation, quaternion_look(new_direction), self:clamped_dt(dt, self:rotation_speed()))
 
         return new_rotation
     else

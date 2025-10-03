@@ -47,7 +47,6 @@ ServoFriendInspectExtension.init = function(self, extension_init_context, unit, 
     -- Base class
     ServoFriendInspectExtension.super.init(self, extension_init_context, unit, extension_init_data)
     -- Data
-    self.event_manager = managers.event
     self.inspecting = false
     self.was_inspecting = false
     self.look_delta_x = 0
@@ -59,24 +58,21 @@ ServoFriendInspectExtension.init = function(self, extension_init_context, unit, 
     self.aim_target_unit = nil
     self.aim_target_timer = 0
     self.aim_target_time = 1
-    self.initialized = true
     -- Events
-    self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
-    self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
-    self.event_manager:register(self, "servo_friend_inspect_started", "on_servo_friend_inspect_started")
-    self.event_manager:register(self, "servo_friend_inspect_finished", "on_servo_friend_inspect_finished")
+    -- managers.event:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
+    -- managers.event:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
+    managers.event:register(self, "servo_friend_inspect_started", "on_servo_friend_inspect_started")
+    managers.event:register(self, "servo_friend_inspect_finished", "on_servo_friend_inspect_finished")
     -- Settings
     self:on_settings_changed()
 end
 
 ServoFriendInspectExtension.destroy = function(self)
-    -- Data
-    self.initialized = false
     -- Events
-    self.event_manager:unregister(self, "servo_friend_spawned")
-    self.event_manager:unregister(self, "servo_friend_destroyed")
-    self.event_manager:unregister(self, "servo_friend_inspect_started")
-    self.event_manager:unregister(self, "servo_friend_inspect_finished")
+    -- managers.event:unregister(self, "servo_friend_spawned")
+    -- managers.event:unregister(self, "servo_friend_destroyed")
+    managers.event:unregister(self, "servo_friend_inspect_started")
+    managers.event:unregister(self, "servo_friend_inspect_finished")
     -- Base class
     ServoFriendInspectExtension.super.destroy(self)
 end
@@ -107,7 +103,7 @@ ServoFriendInspectExtension.update = function(self, dt, t)
     -- Base class
     ServoFriendInspectExtension.super.update(self, dt, t)
     -- Inspect
-    if self.initialized and self:servo_friend_alive() then
+    if self:is_initialized() and self:servo_friend_alive() then
 
         if self.inspecting then
             self.was_inspecting = true
@@ -187,8 +183,8 @@ ServoFriendInspectExtension.on_servo_friend_inspect_started = function(self, ser
     if player_unit == self.player_unit then
         self.inspecting = true
         -- Disable transparency
-        self.event_manager:trigger("servo_friend_transparency_disabled", self.servo_friend_unit, self.player_unit)
-        self.event_manager:trigger("servo_friend_roaming_disabled", self.servo_friend_unit, self.player_unit)
+        managers.event:trigger("servo_friend_transparency_disabled", self.servo_friend_unit, self.player_unit)
+        managers.event:trigger("servo_friend_roaming_disabled", self.servo_friend_unit, self.player_unit)
         -- Get visual loadout extension
         local visual_loadout_extension = script_unit_has_extension(self.player_unit, "visual_loadout_system")
         -- Check visual loadout extension
@@ -218,8 +214,8 @@ ServoFriendInspectExtension.on_servo_friend_inspect_finished = function(self, se
     if player_unit == self.player_unit then
         self.inspecting = false
         -- Enable transparency
-        self.event_manager:trigger("servo_friend_transparency_enabled", self.servo_friend_unit, self.player_unit)
-        self.event_manager:trigger("servo_friend_roaming_enabled", self.servo_friend_unit, self.player_unit)
+        managers.event:trigger("servo_friend_transparency_enabled", self.servo_friend_unit, self.player_unit)
+        managers.event:trigger("servo_friend_roaming_enabled", self.servo_friend_unit, self.player_unit)
         -- Get servo friend inspect extension
         local servo_friend_inspect_extension = mod:servo_friend_extension(self.servo_friend_unit, "servo_friend_inspect_system")
         -- Check servo friend inspect extension
@@ -241,14 +237,14 @@ mod:hook(CLASS.ActionInspect, "start", function(func, self, action_settings, t, 
     -- Original function
     func(self, action_settings, t, ...)
     -- Inspect started
-    mod.event_manager:trigger("servo_friend_inspect_started", nil, self._player_unit)
+    managers.event:trigger("servo_friend_inspect_started", nil, self._player_unit)
 end)
 
 mod:hook(CLASS.ActionInspect, "finish", function(func, self, reason, data, t, time_in_action, ...)
     -- Original function
     func(self, reason, data, t, time_in_action, ...)
     -- Inspect finished
-    mod.event_manager:trigger("servo_friend_inspect_finished", nil, self._player_unit)
+    managers.event:trigger("servo_friend_inspect_finished", nil, self._player_unit)
 end)
 
 mod:hook(CLASS.ThirdPersonLookDeltaAnimationControl, "update", function(func, self, dt, t, game_object_id, ...)

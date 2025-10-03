@@ -28,24 +28,32 @@ local ServoFriendPointOfInterestManager = class("ServoFriendPointOfInterestManag
 -- ##### ┴┘└┘┴ ┴        ─┴┘└─┘└─┘ ┴ ┴└─└─┘ ┴  #########################################################################
 
 ServoFriendPointOfInterestManager.init = function(self)
-    -- Initialize
-    self.event_manager = managers.event
-    self.initialized = true
+    -- Data
     self.points = {}
     self.assigned = {}
     self.previous_distance = {}
     self.min_reassign_distance = 5
     -- Events
-    self.event_manager:register(self, "servo_friend_point_of_interest_created", "on_servo_friend_point_of_interest_created")
-    self.event_manager:register(self, "servo_friend_point_of_interest_removed", "on_servo_friend_point_of_interest_removed")
+    managers.event:register(self, "servo_friend_point_of_interest_created", "on_servo_friend_point_of_interest_created")
+    managers.event:register(self, "servo_friend_point_of_interest_removed", "on_servo_friend_point_of_interest_removed")
+    -- Initialize
+    self.initialized = true
+    -- Debug
+    self:print("ServoFriendPointOfInterestManager initialized")
+end
+
+ServoFriendPointOfInterestManager.p2p_command = function(self, command, target, data)
+    return mod:p2p_command(command, target, data)
 end
 
 ServoFriendPointOfInterestManager.destroy = function(self)
-    -- Data
+    -- Initialize
     self.initialized = false
     -- Events
-    self.event_manager:unregister(self, "servo_friend_point_of_interest_created")
-    self.event_manager:unregister(self, "servo_friend_point_of_interest_removed")
+    managers.event:unregister(self, "servo_friend_point_of_interest_created")
+    managers.event:unregister(self, "servo_friend_point_of_interest_removed")
+    -- Debug
+    self:print("ServoFriendPointOfInterestManager destroyed")
 end
 
 -- ##### ┬ ┬┌─┐┌┬┐┌─┐┌┬┐┌─┐ ###########################################################################################
@@ -54,6 +62,14 @@ end
 
 ServoFriendPointOfInterestManager.pt = function(self)
     return mod:pt()
+end
+
+ServoFriendPointOfInterestManager.print = function(self, message)
+    return mod:print(message)
+end
+
+ServoFriendPointOfInterestManager.is_initialized = function(self)
+    return mod.initialized and self.initialized
 end
 
 ServoFriendPointOfInterestManager.is_unit_alive = function(self, unit)
@@ -66,7 +82,7 @@ end
 
 ServoFriendPointOfInterestManager.update = function(self, dt, t)
     
-    if self.initialized then
+    if self:is_initialized() then
 
         local pt = self:pt()
 

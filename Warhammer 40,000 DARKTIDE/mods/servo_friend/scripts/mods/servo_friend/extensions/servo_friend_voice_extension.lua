@@ -75,19 +75,17 @@ ServoFriendVoiceExtension.init = function(self, extension_init_context, unit, ex
     ServoFriendVoiceExtension.super.init(self, extension_init_context, unit, extension_init_data)
     -- Data
     self.unit = unit
-    self.event_manager = managers.event
     self.talk_timer = 0
     self.talk_cooldown = 2
     self.victory_speech_points = 0
     self.voice_lines = {}
     self.audio_plugin = get_mod("servo_friend_audio_server_plugin")
     self.alert_playing = nil
-    self.initialized = true
     -- Events
-    self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
-    self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
-    self.event_manager:register(self, "servo_friend_talk", "talk")
-    self.event_manager:register(self, "servo_friend_victory_speech_accumulation", "victory_speech_accumulation")
+    -- managers.event:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
+    -- managers.event:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
+    managers.event:register(self, "servo_friend_talk", "talk")
+    managers.event:register(self, "servo_friend_victory_speech_accumulation", "victory_speech_accumulation")
     -- Settings
     self:on_settings_changed()
     -- Debug
@@ -95,13 +93,15 @@ ServoFriendVoiceExtension.init = function(self, extension_init_context, unit, ex
 end
 
 ServoFriendVoiceExtension.destroy = function(self)
-    -- Data
-    self.initialized = false
+    if self.alert_playing then
+        self:stop_repeating_sound()
+        self.alert_playing = nil
+    end
     -- Events
-    self.event_manager:unregister(self, "servo_friend_spawned")
-    self.event_manager:unregister(self, "servo_friend_destroyed")
-    self.event_manager:unregister(self, "servo_friend_talk")
-    self.event_manager:unregister(self, "servo_friend_victory_speech_accumulation")
+    -- managers.event:unregister(self, "servo_friend_spawned")
+    -- managers.event:unregister(self, "servo_friend_destroyed")
+    managers.event:unregister(self, "servo_friend_talk")
+    managers.event:unregister(self, "servo_friend_victory_speech_accumulation")
     -- Debug
     self:print("ServoFriendVoiceExtension destroyed")
     -- Base class
@@ -161,7 +161,7 @@ end
 
 ServoFriendVoiceExtension.talk = function(self, dt, t, optional_sound_event, servo_friend_unit, player_unit)
     -- local pt = self:pt()
-    if self.initialized and self.is_local_unit and self:is_me(servo_friend_unit) then
+    if self:is_initialized() and self.is_local_unit and self:is_me(servo_friend_unit) then
         if self.use_audio_mod and self.audio_plugin and self:servo_friend_alive() then
             self.audio_plugin:talk(dt, t, optional_sound_event, self.servo_friend_unit)
 
@@ -197,7 +197,7 @@ end
 
 ServoFriendVoiceExtension.victory_speech_accumulation = function(self, point_cost, is_boss, servo_friend_unit, player_unit)
 
-    if self.initialized and self.is_local_unit and player_unit == self.player_unit then
+    if self:is_initialized() and self.is_local_unit and player_unit == self.player_unit then
         if is_boss then point_cost = self.victory_speech_max end
         if point_cost == math_huge or point_cost ~= point_cost then point_cost = 6 end
 
@@ -206,7 +206,7 @@ ServoFriendVoiceExtension.victory_speech_accumulation = function(self, point_cos
         if self.victory_speech_points > self.victory_speech_max then
 
             local dt, t = self:delta_time(), self:time()
-            mod.event_manager:trigger("servo_friend_talk", dt, t, "victory", self.servo_friend_unit, self.player_unit)
+            managers.event:trigger("servo_friend_talk", dt, t, "victory", self.servo_friend_unit, self.player_unit)
 
             self.victory_speech_points = 0
 
@@ -281,7 +281,7 @@ mod:hook(CLASS.AttackReportManager, "rpc_add_attack_result", function(func, self
     if allowed_breed and attack_result == attack_results.died then
 
         local point_cost = breed_or_nil.point_cost or 0
-        mod.event_manager:trigger("servo_friend_victory_speech_accumulation", point_cost, breed_or_nil.is_boss, nil, attacking_unit)
+        managers.event:trigger("servo_friend_victory_speech_accumulation", point_cost, breed_or_nil.is_boss, nil, attacking_unit)
 
     end
 
@@ -307,7 +307,7 @@ mod:hook(CLASS.AttackReportManager, "_process_attack_result", function(func, sel
     if allowed_breed and attack_result == attack_results.died then
 
         local point_cost = breed_or_nil.point_cost or 0
-        mod.event_manager:trigger("servo_friend_victory_speech_accumulation", point_cost, breed_or_nil.is_boss, nil, attacking_unit)
+        managers.event:trigger("servo_friend_victory_speech_accumulation", point_cost, breed_or_nil.is_boss, nil, attacking_unit)
 
     end
 

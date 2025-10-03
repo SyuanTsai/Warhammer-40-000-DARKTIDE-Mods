@@ -45,12 +45,10 @@ ServoFriendHoverParticleExtension.init = function(self, extension_init_context, 
     -- Base class
     ServoFriendHoverParticleExtension.super.init(self, extension_init_context, unit, extension_init_data)
     -- Data
-    self.event_manager = managers.event
     self.hover_particle_effect_id = nil
-    self.initialized = true
     -- Events
-    self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
-    self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
+    -- managers.event:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
+    -- managers.event:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
     -- Settings
     self:on_settings_changed()
     -- Debug
@@ -58,11 +56,9 @@ ServoFriendHoverParticleExtension.init = function(self, extension_init_context, 
 end
 
 ServoFriendHoverParticleExtension.destroy = function(self)
-    -- Data
-    self.initialized = false
     -- Events
-    self.event_manager:unregister(self, "servo_friend_spawned")
-    self.event_manager:unregister(self, "servo_friend_destroyed")
+    -- managers.event:unregister(self, "servo_friend_spawned")
+    -- managers.event:unregister(self, "servo_friend_destroyed")
     -- Destroy
     self:destroy_hover_particle_effect()
     -- Debug
@@ -123,7 +119,7 @@ ServoFriendHoverParticleExtension.respawn_hover_particle_effect = function(self)
 end
 
 ServoFriendHoverParticleExtension.destroy_hover_particle_effect = function(self)
-    if self.hover_particle_effect_id ~= nil then
+    if self.hover_particle_effect_id then
         if world_are_particles_playing(self._world, self.hover_particle_effect_id) then
             world_stop_spawning_particles(self._world, self.hover_particle_effect_id)
         end
@@ -133,7 +129,7 @@ ServoFriendHoverParticleExtension.destroy_hover_particle_effect = function(self)
 end
 
 ServoFriendHoverParticleExtension.spawn_hover_particle_effect = function(self)
-    if self.initialized and self.hover_particle_effect and self:servo_friend_alive() and self.hover_particle_effect_id == nil then
+    if self:is_initialized() and self.hover_particle_effect and self:servo_friend_alive() and not self.hover_particle_effect_id then
         local player_position = self:player_position()
         local unit_world_pose = matrix4x4_identity()
         local rotation = quaternion_identity()

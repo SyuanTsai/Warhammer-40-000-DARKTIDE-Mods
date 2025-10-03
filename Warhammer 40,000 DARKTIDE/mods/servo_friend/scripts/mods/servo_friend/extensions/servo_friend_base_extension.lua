@@ -28,7 +28,6 @@ local ServoFriendBaseExtension = class("ServoFriendBaseExtension")
 
 ServoFriendBaseExtension.init = function(self, extension_init_context, unit, extension_init_data)
     -- References
-    self.event_manager = managers.event
     self.world_manager = managers.world
     self.package_manager = managers.package
     self.time_manager = managers.time
@@ -50,20 +49,28 @@ ServoFriendBaseExtension.init = function(self, extension_init_context, unit, ext
     self.min_distance = 10
     self.current_position = vector3_box(vector3_zero())
     -- Events
-    self.event_manager:register(self, "servo_friend_sync_current_position", "on_sync_current_position")
-    self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
-    self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
+    managers.event:register(self, "servo_friend_sync_current_position", "on_sync_current_position")
+    managers.event:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
+    managers.event:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
+    -- Initialize
+    self.initialized = true
     -- Settings
-    self:on_settings_changed()
+    -- self:on_settings_changed()
     -- Debug
     self:print("ServoFriendBaseExtension initialized")
 end
 
+ServoFriendBaseExtension.p2p_command = function(self, command, target, data)
+    return mod:p2p_command(command, target, data)
+end
+
 ServoFriendBaseExtension.destroy = function(self)
+    -- Initialize
+    self.initialized = false
     -- Events
-    self.event_manager:unregister(self, "servo_friend_sync_current_position")
-    self.event_manager:unregister(self, "servo_friend_spawned")
-    self.event_manager:unregister(self, "servo_friend_destroyed")
+    managers.event:unregister(self, "servo_friend_sync_current_position")
+    managers.event:unregister(self, "servo_friend_spawned")
+    managers.event:unregister(self, "servo_friend_destroyed")
     -- Debug
     self:print("ServoFriendBaseExtension destroyed")
 end
@@ -91,6 +98,10 @@ ServoFriendBaseExtension.on_sync_current_position = function(self, current_posit
     if self:is_me(servo_friend_unit) then
         self.current_position = current_position_box
     end
+end
+
+ServoFriendBaseExtension.is_initialized = function(self, servo_friend_unit, player_unit)
+    return self:extension_valid(self.servo_friend_extension) and self.servo_friend_extension:is_initialized() and self.initialized
 end
 
 ServoFriendBaseExtension.on_servo_friend_spawned = function(self, servo_friend_unit, player_unit)
@@ -129,6 +140,10 @@ end
 
 ServoFriendBaseExtension.player_rotation = function(self)
     return self:extension_valid(self.servo_friend_extension) and self.servo_friend_extension:player_rotation()
+end
+
+ServoFriendBaseExtension.player_unit_alive = function(self)
+    return self.player_unit and self:is_unit_alive(self.player_unit)
 end
 
 ServoFriendBaseExtension.found_something_valid = function(self)
