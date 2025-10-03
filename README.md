@@ -404,10 +404,10 @@
 
 ### [Servo-Friend](https://www.nexusmods.com/warhammer40kdarktide/mods/504)
     顱骨支援
-- MOD 網站最後更新日期：Last updated 03 May 2025, 9:32AM
-- MOD 版本：3.0
+- MOD 網站最後更新日期：Last updated 02 October 2025, 9:29PM
+- MOD 版本：3.0.1
 - MOD 檔案名稱：Servo Friend-504-3-1746235485
-- 手動維護最後下載日期：2025-05-20
+- 手動維護最後下載日期：2025-10-03
 
 ---
 # 遊戲內操作相關MOD
