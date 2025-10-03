@@ -515,10 +515,10 @@
 
 ### [Archivum Messelina](https://www.nexusmods.com/warhammer40kdarktide/mods/307)
     梅塞利納檔案館 - 改善苦修搜尋
-- MOD 網站最後更新日期：Last updated 26 September 2025, 1:30AM
-- MOD 版本：Version 2.3
-- MOD 檔案名稱：Archivum Messelina-307-2-3-1758821445
-- 手動維護最後下載日期：2025-10-01
+- MOD 網站最後更新日期：Last updated 02 October 2025, 12:07PM
+- MOD 版本：Version 2.4.1
+- MOD 檔案名稱：Archivum Messelina.zip-307-v2-4-1-1759378043
+- 手動維護最後下載日期：2025-10-03
 
 ### [Many More Try](https://www.nexusmods.com/warhammer40kdarktide/mods/175)
     任務管理器 - 可以啟動最近24小時內的任何關卡
