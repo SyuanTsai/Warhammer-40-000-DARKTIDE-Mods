@@ -55,7 +55,7 @@ mod.initialize_player_unit = function(self, first_person_extension)
     -- Get first person extension
     first_person_extension = self:unit_to_first_person_extension_wrapper(first_person_extension)
     -- Check if first person extension is valid and unit is not already initialized
-    if self:extension_valid(first_person_extension) and not pt.player_unit_extensions[first_person_extension._unit] then
+    if self:extension_valid(first_person_extension) and not pt.player_unit_extensions[first_person_extension._unit] and not script_unit_has_extension(first_person_extension._unit, "player_unit_servo_friend_system") then
         -- Check if distribution is satisfied
         if self:distribution_satisfied(first_person_extension._unit) then
             -- Add player unit extension
@@ -76,9 +76,9 @@ mod.destroy_player_unit = function(self, unit)
     -- Check if first person extension is valid and unit is initialized
     if pt.player_unit_extensions[unit] then
         -- Destroy player unit extension
-        -- if self:extension_valid(pt.player_unit_extensions[unit]) then
-        pt.player_unit_extensions[unit]:destroy()
-        -- end
+        if self:extension_valid(pt.player_unit_extensions[unit]) then
+            pt.player_unit_extensions[unit]:destroy()
+        end
         script_unit_remove_extension(unit, "player_unit_servo_friend_system")
         -- Remove player unit extension
         pt.player_unit_extensions[unit] = nil

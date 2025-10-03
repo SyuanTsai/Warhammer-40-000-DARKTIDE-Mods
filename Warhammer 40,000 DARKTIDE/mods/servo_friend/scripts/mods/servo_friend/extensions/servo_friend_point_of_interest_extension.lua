@@ -43,7 +43,6 @@ ServoFriendPointOfInterestExtension.init = function(self, extension_init_context
     -- Base class
     ServoFriendPointOfInterestExtension.super.init(self, extension_init_context, unit, extension_init_data)
     -- Initialize
-    self.event_manager = managers.event
     self.points = {}
     self.closest = {
         object = nil,
@@ -51,14 +50,13 @@ ServoFriendPointOfInterestExtension.init = function(self, extension_init_context
     }
     self.previous = nil
     self.valid = false
-    self.initialized = true
     -- Events
-    -- self.event_manager:register(self, "servo_friend_point_of_interest_created", "add")
-    self.event_manager:register(self, "servo_friend_point_of_interest_removed", "remove")
-    self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
-    self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
-    self.event_manager:register(self, "servo_friend_clear_current_point_of_interest", "on_servo_friend_clear_current_point_of_interest")
-    self.event_manager:register(self, "servo_friend_clear_points_of_interest", "on_servo_friend_clear_points_of_interest")
+    -- managers.event:register(self, "servo_friend_point_of_interest_created", "add")
+    managers.event:register(self, "servo_friend_point_of_interest_removed", "remove")
+    -- managers.event:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
+    -- managers.event:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
+    managers.event:register(self, "servo_friend_clear_current_point_of_interest", "on_servo_friend_clear_current_point_of_interest")
+    managers.event:register(self, "servo_friend_clear_points_of_interest", "on_servo_friend_clear_points_of_interest")
     -- Settings
     self:on_settings_changed()
     -- Debug
@@ -66,15 +64,13 @@ ServoFriendPointOfInterestExtension.init = function(self, extension_init_context
 end
 
 ServoFriendPointOfInterestExtension.destroy = function(self)
-    -- Data
-    self.initialized = false
     -- Events
-    -- self.event_manager:unregister(self, "servo_friend_point_of_interest_created")
-    self.event_manager:unregister(self, "servo_friend_point_of_interest_removed")
-    self.event_manager:unregister(self, "servo_friend_spawned")
-    self.event_manager:unregister(self, "servo_friend_destroyed")
-    self.event_manager:unregister(self, "servo_friend_clear_current_point_of_interest")
-    self.event_manager:unregister(self, "servo_friend_clear_points_of_interest")
+    -- managers.event:unregister(self, "servo_friend_point_of_interest_created")
+    managers.event:unregister(self, "servo_friend_point_of_interest_removed")
+    -- managers.event:unregister(self, "servo_friend_spawned")
+    -- managers.event:unregister(self, "servo_friend_destroyed")
+    managers.event:unregister(self, "servo_friend_clear_current_point_of_interest")
+    managers.event:unregister(self, "servo_friend_clear_points_of_interest")
     -- Debug
     self:print("ServoFriendPointOfInterestExtension destroyed")
     -- Base class
@@ -88,7 +84,7 @@ end
 ServoFriendPointOfInterestExtension.update = function(self, dt, t)
     -- Base class
     ServoFriendPointOfInterestExtension.super.update(self, dt, t)
-    if self.initialized then
+    if self:is_initialized() then
         -- Update
         local closest = math_huge
         local was_valid = self.valid
@@ -163,14 +159,14 @@ ServoFriendPointOfInterestExtension.update = function(self, dt, t)
             -- Talk if different interest
             if not self:is_current(found_object) then
                 local event_name = found_type == "tag_enemy" and "tagged_enemy" or found_type == "tag" and "tagged_item" or "marker"
-                self.event_manager:trigger("servo_friend_talk", dt, t, event_name, self.servo_friend_unit, self.player_unit)
+                managers.event:trigger("servo_friend_talk", dt, t, event_name, self.servo_friend_unit, self.player_unit)
             end
             -- Set new interest
             self:set(found_object, found_type)
             -- Set position
             self.servo_friend_extension:on_servo_friend_set_target_position(target_position, found_position, self.valid)
         elseif was_valid then
-            self.event_manager:trigger("servo_friend_talk", dt, t, "objective_canceled", self.servo_friend_unit, self.player_unit)
+            managers.event:trigger("servo_friend_talk", dt, t, "objective_canceled", self.servo_friend_unit, self.player_unit)
             -- Set new interest
             self:set(nil, nil)
             -- Set position

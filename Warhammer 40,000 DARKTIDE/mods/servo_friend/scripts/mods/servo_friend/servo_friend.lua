@@ -15,6 +15,7 @@ local unit = Unit
 local table = table
 local pairs = pairs
 local actor = Actor
+local get_mod = get_mod
 local vector3 = Vector3
 local managers = Managers
 local math_abs = math.abs
@@ -46,6 +47,7 @@ mod.debug_mode = false
 mod:persistent_table(mod.REFERENCE, {
     player_unit_extensions = {},
     all_packages_loaded = false,
+    permanent_packages = {},
     loaded_extensions = {},
     finished_loading = {},
     loaded_packages = {},
@@ -83,6 +85,11 @@ mod.update = function()
     mod:update_repeating_sounds(dt, t)
 end
 
+mod.on_game_state_changed = function(status, state_name)
+    -- Destroy players
+    -- mod:destroy_existing_players()
+end
+
 -- ##### ┌─┐┌─┐┌┬┐┌┬┐┬┌┐┌┌─┐┌─┐  ┌─┐┬ ┬┌─┐┌┐┌┌─┐┌─┐┌┬┐ ################################################################
 -- ##### └─┐├┤  │  │ │││││ ┬└─┐  │  ├─┤├─┤││││ ┬├┤  ││ ################################################################
 -- ##### └─┘└─┘ ┴  ┴ ┴┘└┘└─┘└─┘  └─┘┴ ┴┴ ┴┘└┘└─┘└─┘─┴┘ ################################################################
@@ -99,7 +106,7 @@ mod.on_settings_changed = function(self, setting_id)
             self:initialize_existing_players()
         end
         -- Events
-        self.event_manager:trigger("servo_friend_settings_changed")
+        managers.event:trigger("servo_friend_settings_changed")
         self:settings_changed_existing_players(setting_id)
     end
 end
@@ -123,11 +130,13 @@ mod.init = function(self)
     self.world_manager = managers.world
     self.package_manager = managers.package
     self.time_manager = managers.time
-    self.event_manager = managers.event
+    -- self.event_manager = managers.event
     self.point_of_interest_manager = PointOfInterestManager:new()
     -- Packages
     self:load_packages()
     -- end
+    -- P2P
+    self.p2p = get_mod("rtc")
     -- Init
     self.initialized = true
     -- Init players
@@ -137,13 +146,14 @@ mod.init = function(self)
 end
 
 mod.deinit = function(self)
-    self.initialized = false
     -- Destroy point of interest manager
     self.point_of_interest_manager:destroy()
     -- Stop repeating sounds
     self:stop_all_repeating_sounds()
     -- Destroy units
     self:destroy_existing_players()
+    -- Initialize
+    self.initialized = false
     -- Release packages
     self:release_packages()
 end
@@ -241,7 +251,7 @@ mod.is_in_line_of_sight = function(self, from, to, optional_physics_world, optio
     end
 end
 
-mod.aim_target = function(self, optional_offset, optional_unit, optional_length, optional_collision_filter, optional_physics_world)
+mod.aim_target = function(self, optional_offset, optional_unit, optional_length, optional_collision_filter, optional_physics_world, optional_direction)
     optional_physics_world = optional_physics_world or self:physics_world()
     optional_offset = optional_offset or vector3_zero()
     optional_unit = optional_unit  or self:local_player_unit()
@@ -249,14 +259,24 @@ mod.aim_target = function(self, optional_offset, optional_unit, optional_length,
     optional_collision_filter = optional_collision_filter or "filter_player_character_shooting_projectile"
 
     local from = unit_world_position(optional_unit, 1) + optional_offset
-    local camera_forward = quaternion_forward(unit_local_rotation(optional_unit, 1))
-    local to = from + camera_forward * optional_length + optional_offset
-	local to_target = to - from
-	local direction = vector3_normalize(to_target)
 
-	local _, hit_position, _, _, hit_actor = physics_world_raycast(optional_physics_world, from, direction, optional_length, "closest", "types", "both", "collision_filter", optional_collision_filter)
+    if not optional_direction then
+        local camera_forward = quaternion_forward(unit_local_rotation(optional_unit, 1))
+        local to = from + camera_forward * optional_length + optional_offset
+        local to_target = to - from
+        optional_direction = vector3_normalize(to_target)
+    end
+
+	local _, hit_position, _, _, hit_actor = physics_world_raycast(optional_physics_world, from, optional_direction, optional_length, "closest", "types", "both", "collision_filter", optional_collision_filter)
     local hit_unit = hit_actor and actor_unit(hit_actor)
     return hit_position, hit_unit
+end
+
+mod.p2p_command = function(self, command, target, data)
+    if self.p2p then
+        target = target or "all"
+        return self.p2p.send(self, command, target, data)
+    end
 end
 
 -- ##### ┬  ┌─┐┌─┐┌┬┐  ┌─┐┌─┐┌┬┐┌─┐┌─┐┌┐┌┌─┐┌┐┌┌┬┐┌─┐ #################################################################

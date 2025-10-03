@@ -94,17 +94,15 @@ ServoFriendAlertExtension.init = function(self, extension_init_context, unit, ex
     -- Base class
     ServoFriendAlertExtension.super.init(self, extension_init_context, unit, extension_init_data)
     -- Data
-    self.event_manager = managers.event
     self.units = {}
     self.lights = {}
     self.active = false
-    self.initialized = true
     self.music_parameter_extension = script_unit_has_extension(self.player_unit, "music_parameter_system")
     -- Events
-    self.event_manager:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
-    self.event_manager:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
-    self.event_manager:register(self, "servo_friend_alert_started", "on_servo_friend_alert_started")
-    self.event_manager:register(self, "servo_friend_alert_finished", "on_servo_friend_alert_finished")
+    -- managers.event:register(self, "servo_friend_spawned", "on_servo_friend_spawned")
+    -- managers.event:register(self, "servo_friend_destroyed", "on_servo_friend_destroyed")
+    managers.event:register(self, "servo_friend_alert_started", "on_servo_friend_alert_started")
+    managers.event:register(self, "servo_friend_alert_finished", "on_servo_friend_alert_finished")
     -- Settings
     self:on_settings_changed()
     -- Lights
@@ -114,13 +112,11 @@ ServoFriendAlertExtension.init = function(self, extension_init_context, unit, ex
 end
 
 ServoFriendAlertExtension.destroy = function(self)
-    -- Data
-    self.initialized = false
     -- Events
-    self.event_manager:unregister(self, "servo_friend_spawned")
-    self.event_manager:unregister(self, "servo_friend_destroyed")
-    self.event_manager:unregister(self, "servo_friend_alert_started")
-    self.event_manager:unregister(self, "servo_friend_alert_finished")
+    -- managers.event:unregister(self, "servo_friend_spawned")
+    -- managers.event:unregister(self, "servo_friend_destroyed")
+    managers.event:unregister(self, "servo_friend_alert_started")
+    managers.event:unregister(self, "servo_friend_alert_finished")
     -- Destroy
     self:stop_alert()
     self:destroy_lights()
@@ -138,13 +134,13 @@ ServoFriendAlertExtension.update = function(self, dt, t)
     -- Base class
     ServoFriendAlertExtension.super.update(self, dt, t)
     -- Lights
-    if self.initialized and self:light_units_alive() then
+    if self:is_initialized() and self:light_units_alive() then
         self:update_lights(dt, t)
     end
     -- Activation
     local has_found_something_valid = self.servo_friend_extension:has_found_something_valid()
     local only_when_idle = not self.alert_mode_only_when_idle or not has_found_something_valid
-    if self.initialized and self:wants_alert_active() and only_when_idle then
+    if self:is_initialized() and self:wants_alert_active() and only_when_idle then
         self:start_alert()
     else
         self:stop_alert()
@@ -185,7 +181,7 @@ end
 -- ##### ┴ ┴└─┘ ┴ ┴ ┴└─┘─┴┘└─┘ ########################################################################################
 
 ServoFriendAlertExtension.start_alert = function(self)
-    if self.initialized and self.alert_mode and not self.active then
+    if self:is_initialized() and self.alert_mode and not self.active then
         -- Active
         self.active = true
         -- Lights
@@ -220,15 +216,15 @@ ServoFriendAlertExtension.respawn_alert_sound = function(self)
 end
 
 ServoFriendAlertExtension.play_alert_sound = function(self)
-    if self.initialized and self.alert_mode_sound and self:wants_alert_active() then
+    if self:is_initialized() and self.alert_mode_sound and self:wants_alert_active() then
         local dt, t = self:delta_time(), self:time()
-        self.event_manager:trigger("servo_friend_talk", dt, t, "start_alert", self.servo_friend_unit, self.player_unit)
+        managers.event:trigger("servo_friend_talk", dt, t, "start_alert", self.servo_friend_unit, self.player_unit)
     end
 end
 
 ServoFriendAlertExtension.stop_alert_sound = function(self)
     local dt, t = self:delta_time(), self:time()
-    self.event_manager:trigger("servo_friend_talk", dt, t, "stop_alert", self.servo_friend_unit, self.player_unit)
+    managers.event:trigger("servo_friend_talk", dt, t, "stop_alert", self.servo_friend_unit, self.player_unit)
 end
 
 ServoFriendAlertExtension.respawn_lights = function(self)
@@ -238,7 +234,7 @@ end
 
 ServoFriendAlertExtension.spawn_lights = function(self)
 
-    if self.initialized and not self:light_units_alive() then
+    if self:is_initialized() and not self:light_units_alive() then
 
         local player_position = self:player_position()
         local rotation_per_unit = self:light_rotation()
@@ -309,8 +305,6 @@ ServoFriendAlertExtension.on_settings_changed = function(self)
     self.alert_mode_sound = self.servo_friend_extension.alert_mode_sound
     self.alert_mode_only_when_idle = self.servo_friend_extension.alert_mode_only_when_idle
     -- Respawn
-    -- self:respawn_lights()
-    -- self:respawn_alert_sound()
     self:stop_alert()
 end
 

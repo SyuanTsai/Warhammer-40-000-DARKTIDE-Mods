@@ -120,17 +120,19 @@ end
 -- ##### ├─┤│ ││ │├┴┐└─┐ ##############################################################################################
 -- ##### ┴ ┴└─┘└─┘┴ ┴└─┘ ##############################################################################################
 
-mod:hook(CLASS.OutOfBoundsManager, "pre_update", function(func, self, shared_state, ...)
-    -- Out of bounds check
-    mod:servo_friend_out_of_bounds_check()
-    -- Original function
-    func(self, shared_state, ...)
-end)
+-- Old hooks
+-- mod:hook(CLASS.OutOfBoundsManager, "pre_update", function(func, self, shared_state, ...)
+--     mod:servo_friend_out_of_bounds_check()
+--     func(self, shared_state, ...)
+-- end)
 
-mod:hook(CLASS.OutOfBoundsManager, "update", function(func, self, shared_state, ...)
-    -- Out of bounds check
+-- mod:hook(CLASS.OutOfBoundsManager, "update", function(func, self, shared_state, ...)
+--     mod:servo_friend_out_of_bounds_check()
+--     func(self, shared_state, ...)
+-- end)
+
+mod:hook(CLASS.OutOfBoundsManager, "post_update", function(func, self, shared_state, ...)
     mod:servo_friend_out_of_bounds_check()
-    -- Original function
     func(self, shared_state, ...)
 end)
 
