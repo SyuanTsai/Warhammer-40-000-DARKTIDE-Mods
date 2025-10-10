@@ -37,6 +37,10 @@ end
 
 
 local function spawn_radius_decal(unit, world, duration)
+	if not unit then
+        return
+    end
+
     local position = Unit.local_position(unit, 1)
     local decal_unit = World.spawn_unit_ex(world, DECAL_UNIT_NAME, nil, position + Vector3(0, 0, 0.1))
     local diameter = BASE_RADIUS
