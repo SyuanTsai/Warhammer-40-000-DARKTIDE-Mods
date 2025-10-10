@@ -58,6 +58,18 @@ return {
         ["zh-cn"] = "打开持续时间记录",
         ["zh-tw"] = "打開持續時間記錄",
     },
+    track_meat_grinder = {
+        en = "Track Uptime in Meat Grinder / Psykanium"
+    },
+    save_files_options = {
+        en = "Save Files",
+    },
+    delete_old_entries = {
+        en = "Automatically delete old files",
+    },
+    number_of_save_files = {
+        en = "Number of save files to keep"
+    },
     data_display_settings = {
         en = "Data columns",
         ["zh-cn"] = "数据列设置",
