@@ -74,7 +74,10 @@ SkitariusEngram.new_engram = function(self, bind_name_or_temp_data, temp_or_nil)
     local weapon_type = weapon_manager:weapon_type()
     local weapon_name = weapon_manager:weapon_name()
     local intermediary = self:valid_engram(bind_name_or_temp_data, temp_or_nil)
-    if not bind_name_or_temp_data or not intermediary or not weapon_name or not weapon_type then self:kill_engram() return end
+    if not bind_name_or_temp_data or not intermediary or not weapon_name or not weapon_type then
+        self:kill_engram()
+        return
+    end
     if temp_or_nil then
         return self:build_temp_engram(bind_name_or_temp_data, weapon_name)
     end
@@ -245,8 +248,7 @@ SkitariusEngram.iterate_engram = function(self)
             self.TEMP = false
             self.COMMANDS = {}
             -- If this temp engram was created due to an interruption and HALT_ON_INTERRUPT is enabled, clear keybinds upon its completion
-            local parent = get_mod("Skitarius")
-            local halt_on_interrupt = parent and parent.recall_setting("halt_on_interrupt")
+            local halt_on_interrupt = self.mod.settings.halt_on_interrupt
             if halt_on_interrupt and self.BIND == "INTERRUPT" then
                 self.mod:kill_sequence()
             end
