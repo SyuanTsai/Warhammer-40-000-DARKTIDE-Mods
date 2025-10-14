@@ -50,6 +50,8 @@ local CHARGED_RANGED = {
     forcestaff_p4_m1 = true,
     -- Plasma Gun
     plasmagun_p1_m1 = true,
+    -- Smite
+    psyker_chain_lightning = true,
 }
 
 -- Ranged weapons with activated specials
@@ -213,7 +215,21 @@ local INCORRECT_TIMES = {
             incorrect = 0.25,
             correct = 0.3,
         }
+    },
+    --[[ MAYBE DELETE THESE LATER ]]
+    combatknife_p1_m1 = {
+        action_left_heavy = {
+            incorrect = 0.3,
+            correct = 0.35,
+        }
+    },
+    combatknife_p1_m2 = {
+        action_left_heavy = {
+            incorrect = 0.3,
+            correct = 0.35,
+        }
     }
+    --]]
 }
 
 SkitariusArmoury.shoot_actions = SHOOT_ACTIONS

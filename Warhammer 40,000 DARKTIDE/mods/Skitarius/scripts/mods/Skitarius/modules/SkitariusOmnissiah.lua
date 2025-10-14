@@ -93,7 +93,7 @@ local PRAY = {
         push                 = { action_two_hold = true },
         push_follow_up       = { action_two_hold = true },
         block                = { action_two_hold = true },
-        special_action       = { weapon_extra_pressed = true },
+        special_action       = { weapon_extra_pressed = true, action_one_hold = false },
         quick_wield          = { quick_wield = true },
         weapon_reload        = { weapon_reload_hold = true },
         shoot                = { action_one_hold = false }
@@ -106,7 +106,7 @@ local PRAY = {
         push                 = { action_one_hold = false },
         push_follow_up       = { action_one_hold = false },
         block                = { action_one_hold = false },
-        special_action       = { weapon_extra_pressed = true },
+        special_action       = { weapon_extra_pressed = true, action_one_hold = false },
         quick_wield          = { quick_wield = true },
         weapon_reload        = { weapon_reload_hold = true },
     },
@@ -118,7 +118,7 @@ local PRAY = {
         push                 = { action_one_hold = false },
         push_follow_up       = { action_one_hold = false },
         block                = { action_one_hold = false },
-        special_action       = { weapon_extra_pressed = true },
+        special_action       = { weapon_extra_pressed = true, action_one_hold = false },
         quick_wield          = { quick_wield = true },
         weapon_reload        = { weapon_reload_hold = true },
     },
@@ -277,9 +277,9 @@ local INTERRUPTING_ACTIONS = {
 
 local SWAP = {
     OCCURRED = false,
-    LIMITER = false,
+    LIMITER = true,
     SNAPSHOT = 0,
-    COOLDOWN = 0.25
+    COOLDOWN = 0.2
 }
 
 SkitariusOmnissiah.init = function(self, mod)
@@ -307,10 +307,10 @@ SkitariusOmnissiah.omnissiah = function(self, queried_input, user_value)
     -- Halt automatic firing inputs without altering engram or actions if pausing for RoF etc.
     if self:pause() then return DO_NOT_PAUSE[queried_input] and user_value or false end
     -- Iterate engram and recollect data for new state if the current action satisfies the engram's command, or if should_skip evaluates true
-    --self.mod:echo("%s, %s", current_action, desired_action)
+    --self.mod:echo("%s, %s", current_action, desired_action) -- DEBUG: View current action and next desired engram action
     if (current_action == desired_action or (desired_action and current_action == desired_action .. "_alt")) or self:should_skip(current_action, desired_action) then
-        -- Weapon swaps are handled within on_slot_wielded hook to avoid an infinite loop
-        if desired_action ~= "quick_wield" then
+        -- Weapon swaps are handled within on_slot_wielded hook to avoid an infinite loop, UNLESS via override_primary as that involves player input we need to handle
+        if desired_action ~= "quick_wield" or self.bind_manager:override_primary() then
             self.engram:iterate_engram()
             current_action = self:get_action()
             desired_action = self.engram:current_command()
@@ -328,7 +328,7 @@ SkitariusOmnissiah.omnissiah = function(self, queried_input, user_value)
         end
         return self:resolve_conflicts(queried_input, user_value, divine_outcome)
     end
-    --self.mod:echo("%s, %s", current_action, desired_action)
+    --self.mod:echo("%s, %s", current_action, desired_action) -- DEBUG: View current action and final desired engram action after potential modifications
     local divine_outcome = PRAY[current_action][desired_action][queried_input]
     
     -- STAGE 5 : RESOLVE_CONFLICTS
@@ -342,8 +342,6 @@ end
 --//////////////////////////////////////////////////////////////////////////////--
 
 SkitariusOmnissiah.maybe_force_interrupt = function(self)
-    local parent = get_mod("Skitarius")
-    local halt_on_interrupt = parent and parent.recall_setting("halt_on_interrupt")
     local engram = self.engram
     local current_command = engram:current_command()
     local input_table = self.bind_manager:get_input_table()
@@ -352,7 +350,7 @@ SkitariusOmnissiah.maybe_force_interrupt = function(self)
     if engram.BIND == "TEMP" or engram.BIND == "INTERRUPT" or string.find(current_command, "wield") or not self.bind_manager:any_binds() then return end
     -- WeaponManager's interruption check is used for manual player actions which immediately halt any existing activity
     local kill_interruption = self.weapon_manager:interruption()
-    if halt_on_interrupt and kill_interruption then
+    if kill_interruption then
         self.mod:kill_sequence()
         return
     end
@@ -362,6 +360,7 @@ SkitariusOmnissiah.maybe_force_interrupt = function(self)
             local interruption = INTERRUPTING_ACTIONS[input]
             -- Trigger interruption if not already either in an interruption or about to execute the same action organically
             if interruption and not current_command ~= interruption and engram.TYPE ~= interruption then
+                if self.weapon_manager:in_cooldown() and (interruption == "special_action") then return end -- Skip if unable to complete interrupting action
                 engram:build_temp_engram(interruption, "INTERRUPT")
                 return
             end
@@ -514,6 +513,8 @@ SkitariusOmnissiah.maybe_convert_action = function(self, player_unit, running_ac
     -- Convert to idle if this is a shooting action which has fired
     if action_name == "shoot" or type(action_settings.kind) == "string" and (string.find(action_settings.kind, "shoot") or string.find(action_settings.kind, "projectile") 
     or string.find(action_settings.kind, "burst") or string.find(action_settings.kind, "chain") or string.find(action_settings.kind, "spawn")) then
+        -- If this is smite, the game will automatically return to idle for us, so keep firing until either the game forcibly stops the action or the sequence is released by the player
+        if weapon_name == "psyker_chain_lightning" then return "shoot" end
         if current_action_t > 0.05 then
             -- Track time of last shoot action for RoF
             if weapon_manager:is_aiming() then
@@ -580,8 +581,7 @@ SkitariusOmnissiah.maybe_convert_desire = function(self, current_action, desired
     end
     -- If not running an engram but charging and set to auto-release charges, release the charge
     if not desired_action then
-        local parent = get_mod("Skitarius")
-        local always_charge = parent and parent.recall_setting("always_charge") -- only fetch as necessary
+        local always_charge = self.mod.settings.always_charge
         if current_action == "charge" and always_charge and weapon_manager:is_charged_ranged() then
             return "shoot"
         elseif current_action == "charge_alt" and always_charge and weapon_manager:is_charged_ranged() then
@@ -616,10 +616,10 @@ SkitariusOmnissiah.resolve_conflicts = function(self, input, user, omnissiah)
     local weapon_manager = self.weapon_manager
     local bind_manager = self.bind_manager
     local weapon_name = weapon_manager:weapon_name()
-    local parent = get_mod("Skitarius")
+
     -- Actions taken when no engram is active
     if not omnissiah then
-        local always_charge = parent and parent.recall_setting("always_charge") -- only fetch as necessary
+        local always_charge = self.mod.settings.always_charge
         if weapon_manager:weapon_type() == "RANGED" and always_charge and weapon_manager:is_charged_ranged() then
             if armoury.charged_ranged[weapon_name] then
                 if armoury.alt_weapons[weapon_name] then
@@ -653,8 +653,8 @@ SkitariusOmnissiah.resolve_conflicts = function(self, input, user, omnissiah)
         outcome = user
     end
     -- Fix for charge actions not maintaining action_two_hold due to overlap of the "shoot" action with actions that must not hold it
-    if input == "action_two_hold" and weapon_manager:weapon_type() == "RANGED" and engram:get_setting("MODE") == "charged" and self.engram:current_command() == "idle" and weapon_manager:current_charge() > 0 then
-        if armoury.force_staff[weapon_name] then
+    if input == "action_two_hold" and weapon_manager:weapon_type() == "RANGED" and engram:get_setting("MODE") == "charged" and self.engram:current_command() == "idle" then
+        if (armoury.force_staff[weapon_name] and weapon_manager:current_charge() > 0) or weapon_name == "psyker_chain_lightning" then
             return true
         end
     end
