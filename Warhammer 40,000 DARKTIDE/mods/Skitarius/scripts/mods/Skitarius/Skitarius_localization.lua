@@ -344,7 +344,7 @@ local localizations = {
     },
     no_repeat = {
       en = "Halt Sequence on Completion",
-      ["zh-tw"] = "完成后停止",
+      ["zh-tw"] = "完成序列後停止。",
       ["zh-cn"] = "完成后停止",
     },
     sequence_step_one = {
