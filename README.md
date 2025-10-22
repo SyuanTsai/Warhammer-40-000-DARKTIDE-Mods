@@ -569,6 +569,13 @@
 - MOD 檔案名稱：Remember Difficulty-490-1-0-0-1743065799
 - 手動維護最後下載日期：2025-04-05
 
+### [Auto Rations - Recover or Destroy](https://www.nexusmods.com/warhammer40kdarktide/mods/625)
+    自動撿拾糧食(活動用)
+- MOD 網站最後更新日期：Last updated 22 October 2025, 7:31AM
+- MOD 版本：Version 1.0
+- MOD 檔案名稱：auto_rations-625-1-0-1761089417
+- 手動維護最後下載日期：2025-10-22
+
 # 移除的MOD
 
 ### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
