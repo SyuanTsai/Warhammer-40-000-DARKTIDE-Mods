@@ -42,6 +42,7 @@ Tree_Helper
 ScanHelper
 
 -- 只會設定一次的MOD
+auto_rations
 true_level
 who_are_you
 MultiBind
