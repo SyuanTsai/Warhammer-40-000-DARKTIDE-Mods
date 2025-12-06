@@ -365,6 +365,9 @@
 - MOD 版本：1.1.3
 - MOD 檔案名稱：Keep Dodging-182-1-1-3-1764702136
 - 手動維護最後下載日期：2025-12-06
+- GitHub :
+- Source=>  https://github.com/zombine04/darktide-mods
+- Fork  =>  https://github.com/SyuanTsai/darktide-mods
 
 ---
 # 遊戲內操作相關MOD
