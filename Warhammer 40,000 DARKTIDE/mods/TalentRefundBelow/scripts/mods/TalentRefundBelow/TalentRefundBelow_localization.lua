@@ -29,13 +29,13 @@ return {
         ["zh-tw"] = "連點",
 		ru = "Двойное нажатие",
 	},
-	mode_remove_below = {
+	remove_dependents = {
 		en = "Remove Dependent Talents on Right-Click",
 		["zh-cn"] = "右键点击时解除后续天赋",
         ["zh-tw"] = "右鍵點擊時解除後續天賦",
 		ru = "Удалить все зависимые таланты по нажатию Правой кнопки мыши",
 	},
-	mode_exclusive_swap = {
+	swap_exclusives = {
 		en = "Swap Exclusive Talents on Left-Click",
 		["zh-cn"] = "左键点击时切换互斥天赋",
         ["zh-tw"] = "左鍵點擊時切換互斥天賦",
