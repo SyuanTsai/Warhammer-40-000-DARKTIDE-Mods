@@ -62,7 +62,7 @@ return {
 	err_argument = {
 		en = "Error: command argument invalid",
 		["zh-cn"] = "错误：命令参数无效",
-		ru = "Ошибка: неверный аргумент команды"
+		ru = "Ошибка: неверный аргумент команды",
 		["zh-tw"] = "錯誤：指令參數無效",
 	},
 	err_clipboard_notfound = {
