@@ -436,7 +436,6 @@
 - MOD 檔案名稱：Red Weapons at Home-380-1-2-5-1752145450
 - 手動維護最後下載日期：2025-07-12
 
-
 ### [AutoBlitz](https://www.nexusmods.com/warhammer40kdarktide/mods/480)
     自動手榴彈(一鍵投出、獒犬自爆)
 - MOD 網站最後更新日期：Last updated 09 July 2025, 3:33AM
@@ -478,6 +477,7 @@
 - MOD 版本：0.3
 - MOD 檔案名稱：Reconnect-132-1-2-2-1682473888
 - 手動維護最後下載日期：2025-07-23
+
 ### [BornReady](https://www.nexusmods.com/warhammer40kdarktide/mods/96)
     預先載入
 - MOD 網站最後更新日期：Last updated 26 August 2024, 8:39AM
@@ -501,8 +501,8 @@
 
 ### [InventoryStats](https://www.nexusmods.com/warhammer40kdarktide/mods/152)
     玩家Build資訊
-- MOD 網站最後更新日期：Last updated 24 September 2025, 5:37AM
-- MOD 版本：1.8
+- MOD 網站最後更新日期：Last updated 17 November 2025, 8:09PM
+- MOD 版本：1.9
 - MOD 檔案名稱：InventoryStats-152-1-8-1758663470
 - 手動維護最後下載日期：2025-10-01
 
@@ -512,6 +512,7 @@
 - MOD 版本：1.1
 - MOD 檔案名稱：better_hud_info_view-511-1-3-1745541635
 - 手動維護最後下載日期：2025-10-10
+- 手動維護最後下載日期：2025-12-06
 
 ---
 # 遊戲內操作相關MOD
