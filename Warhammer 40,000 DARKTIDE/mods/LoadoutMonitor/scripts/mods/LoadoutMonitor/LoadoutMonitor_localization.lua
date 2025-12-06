@@ -2,12 +2,12 @@ local mod = get_mod("LoadoutMonitor")
 local locr = {	
 	mod_name = {
 		en = "Loadout Monitor",
-        ["zh-cn"] = "配置监控器",
+		["zh-cn"] = "配置监控器",
 		["zh-tw"] = "大廳顯示裝備",
 	},
 	lobby_exhibition = {
 		en = "In lobby",
-        ["zh-cn"] = "在准备大厅中",
+		["zh-cn"] = "在准备大厅中",
 		["zh-tw"] = "在大廳中",
 	},
 	lobby_exhibition_weapons = {
@@ -49,6 +49,11 @@ local locr = {
 		en = "Player Name",
 		["zh-cn"] = "玩家名",
 		["zh-tw"] = "玩家名",
+	},
+	display_companion_name = {
+		en = "Dog Name",
+		["zh-cn"] = "伙伴名",
+		["zh-tw"] = "電子獒犬",
 	},
 	setting_offset_x = {
 		en = "Offset X",
@@ -743,14 +748,19 @@ local locr = {
 		["zh-tw"] = "淨",
 	},
 	def_zealot_always_in_coherency = {
-		en = "L",
-        ["zh-cn"] = "孤",
+		en = "Z",
+		["zh-cn"] = "孤",
 		["zh-tw"] = "孤",
+	},
+	def_zealot_stamina_cost_multiplier_aura = {
+		en = "L",
+		["zh-cn"] = "狂",
+		["zh-tw"] = "狂",
 	},
 	
 	def_zealot_fanatic_rage = {
 		en = "BP",
-        ["zh-cn"] = "炽",
+		["zh-cn"] = "炽",
 		["zh-tw"] = "熾",
 	},
 	def_zealot_martyrdom = {
@@ -963,20 +973,82 @@ local locr = {
 	},
 	def_adamant_companion_focus_ranged = {
 		en = "GGM",
-        ["zh-cn"] = "追",
-		["zh-tw"] = "追",
+		["zh-cn"] = "追",
 	},
+	
+	def_broker_ability_focus_improved = {
+		en = "Desp",
+		["zh-cn"] = "亡",
+		["zh-tw"] = "亡",
+	},
+	def_broker_ability_punk_rage = {
+		en = "Ram",
+		["zh-cn"] = "怒",
+		["zh-tw"] = "橫",
+	},
+	def_broker_ability_stimm_field = {
+		en = "Sup",
+		["zh-cn"] = "箱",
+		["zh-tw"] = "興",
+	},
+	
+	def_broker_blitz_flash_grenade_improved = {
+		en = "BO",
+		["zh-cn"] = "震",
+		["zh-tw"] = "暈",
+	},
+	def_broker_blitz_missile_launcher = {
+		en = "RPG",
+		["zh-cn"] = "爆",
+		["zh-tw"] = "炸",
+	},
+	def_broker_blitz_tox_grenade = {
+		en = "CG",
+		["zh-cn"] = "化",
+		["zh-tw"] = "化",
+	},
+		
+	def_broker_aura_gunslinger_improved = {
+		en = "Gun",
+		["zh-cn"] = "枪",
+		["zh-tw"] = "射",
+	},
+	def_broker_coherency_melee_damage = {
+		en = "Ruf",
+		["zh-cn"] = "硬",
+		["zh-tw"] = "惡",
+	},
+	def_broker_coherency_anarchist = {
+		en = "Anar",
+		["zh-cn"] = "叛",
+		["zh-tw"] = "無",
+	},
+	
+	def_broker_keystone_vultures_mark_on_kill = {
+		en = "VM",
+		["zh-cn"] = "掠",
+		["zh-tw"] = "兀",
+	},
+	def_broker_keystone_adrenaline_junkie = {
+		en = "AF",
+		["zh-cn"] = "肾",
+		["zh-tw"] = "腎",
+	},
+	def_broker_keystone_chemical_dependency = {
+		en = "CD",
+		["zh-cn"] = "化",
+		["zh-tw"] = "化",
+	},
+	
 	user_custom_feats_abbreviation_description = {
 		en = "1:Ability   2:Blitz   3:Aura   4:Keystone",
-		["zh-cn"] = "1：技能   2：闪击   3：光环   4：基石",	
-		["zh-tw"] = "1：技能   2：閃擊   3：光環   4：基石",
+		["zh-cn"] = "1：技能   2：闪击   3：光环   4：基石",		
 	},
 }
 for i = 1,4 do
 	locr[string.format("player_Feats_order_%s",i)] = {
 		en = "Slot: "..tostring(i),
-        ["zh-cn"] = "槽位：" .. tostring(i),
-		["zh-tw"] = "槽位：" .. tostring(i),
+		["zh-cn"] = "槽位："..tostring(i),
 	}
 end
 return locr
