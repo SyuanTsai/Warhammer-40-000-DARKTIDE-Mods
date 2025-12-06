@@ -225,10 +225,13 @@
 
 ### [Enhanced Descriptions](https://www.nexusmods.com/warhammer40kdarktide/mods/210)
     描述改善
-- MOD 網站最後更新日期：Last updated 17 July 2025, 6:17PM
-- MOD 版本：3.696b
+- MOD 網站最後更新日期：Last updated 24 November 2025, 3:35AM
+- MOD 版本：4.76b
 - MOD 檔案名稱：Enhanced Descriptions-210-3-696b-1752747432
-- 手動維護最後下載日期：2025-07-20
+- 手動維護最後下載日期：2025-12-06
+- GitHub :
+- Source=>  https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA
+- Fork  =>  https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Enhanced_Descriptions
 
 ---
 # 遊戲內操作相關MOD
