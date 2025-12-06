@@ -328,10 +328,10 @@
 
 ### [Name It - Rename Weapons and Curios](https://www.nexusmods.com/warhammer40kdarktide/mods/181)
     替武器、珍品命名。
-- MOD 網站最後更新日期：Last updated 14 October 2024 6:34AM
-- MOD 版本：1.3.5
-- MOD 檔案名稱：Name It-181-1-3-5-1728884070
-- 手動維護最後下載日期：2025-02-24
+- MOD 網站最後更新日期：Last updated 03 December 2025, 3:03AM
+- MOD 版本：1.3.6
+- MOD 檔案名稱：Name It-181-1-3-6-1764702188
+- 手動維護最後下載日期：2025-12-06
 
 ### [LoadoutNames](https://www.nexusmods.com/warhammer40kdarktide/mods/286)
     替天賦命名。
