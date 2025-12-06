@@ -16,6 +16,8 @@ local shock = 3
 local mine = 2
 local arbites = 4
 local dogsplosion = 3
+local flask = 3
+local launcher = 2
 -- grenade increases 手榴弹增加
 local enhanced = 2
 local grenadier = 1
@@ -362,4 +364,35 @@ return {
         en = string.format("Must have at least this many charges to auto-trigger.\n\nMaximum %s: \nStandard: %d\nEnhanced Blitz: %d", Localize("loc_talent_ability_detonate"), dogsplosion, dogsplosion + enhanced),
         ["zh-tw"] = string.format("必須至少有這麼多充能才能自動觸發。\n\n最大%s: \n標準: %d\n強化閃擊: %d", Localize("loc_talent_ability_detonate"), dogsplosion, dogsplosion + enhanced),
     },
+    -- Hive Scum
+    broker = {
+        en = cf(Localize("loc_class_broker_name"), "ui_toughness_default"), -- should be localized for all languages without further modification
+    },
+    flask_enabled = {
+        en = cf(Localize("loc_talent_broker_blitz_tox_grenade"), "ui_toughness_medium"),  -- should be localized for all languages without further modification
+    },
+    flask_minimum = {
+        en = "Minimum Grenades",
+        ["zh-cn"] = "最小手榴弹数量阈值",
+        ["zh-tw"] = "最少保留的手榴彈數量",
+    },
+    flask_throw_type = {
+        en = "Throw Type",
+        ["zh-cn"] = "投掷类型",
+    },
+    flask_tooltip = {
+        en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum %s: \nStandard: %d\nEnhanced Blitz: %d", Localize("loc_talent_broker_blitz_tox_grenade"), flask, flask + enhanced),
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n最大%s: \n標準: %d\n閃擊強化: %d", Localize("loc_talent_broker_blitz_tox_grenade"), flask, flask + enhanced),
+    },
+    launcher_enabled = {
+        en = cf(Localize("loc_talent_broker_blitz_missile_launcher"), "ui_toughness_medium"),  -- should be localized for all languages without further modification
+    },
+    launcher_minimum = {
+        en = "Minimum Missiles",
+        ["zh-tw"] = "最少保留的飛彈數量",
+    },
+    launcher_tooltip = {
+        en = string.format("Must have at least this many missiles to auto-launch.\n\nMaximum %s: \nStandard: %d\nEnhanced Blitz: %d", Localize("loc_talent_broker_blitz_missile_launcher"), launcher, launcher + enhanced),
+        ["zh-tw"] = string.format("Mod會保留設定的飛彈數量，只有超過時才會自動發射。\n\n最大%s: \n標準: %d\n閃擊強化: %d", Localize("loc_talent_broker_blitz_missile_launcher"), launcher, launcher + enhanced),
+    }
 }

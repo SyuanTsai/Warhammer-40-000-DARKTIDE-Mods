@@ -27,6 +27,8 @@ local grenades = {
 		require_tag = false,
 		cooldown = 5
 	},
+	flask = { enabled = false, minimum = 1, throw_type = "overhand" },
+	launcher = { enabled = false, minimum = 1, throw_type = "overhand" },
 }
 
 -- Grenade Map
@@ -43,6 +45,8 @@ local gmap = {
 	shock_mine = "mine",
 	adamant_grenade = "arbites",
 	adamant_whistle = "dogsplosion",
+	tox_grenade = "flask",
+	missile_launcher = "launcher"
 }
 
 -- Interruptions
@@ -123,7 +127,7 @@ mod.on_all_mods_loaded = function()
 	for k, v in pairs(grenades) do
 		grenades[k].enabled = mod:get(k .. "_enabled")
 		grenades[k].minimum = mod:get(k .. "_minimum")
-		grenades[k].throw_type = mod:get(k .. "_throw_type")
+		grenades[k].throw_type = mod:get(k .. "_throw_type") or "overhand"
 	end
 	-- Dogsplosion
 	grenades.dogsplosion.use_threshold = mod:get("dogsplosion_use_threshold")
@@ -145,6 +149,12 @@ mod.on_game_state_changed = function()
 end
 
 mod.update = function()
+	-- Reset dog upon despawn
+	if DOG.UNIT then
+		if not Unit.alive(DOG.UNIT) then
+			DOG.UNIT = nil
+		end
+	end
 	-- Only try to fetch the dog for arbitrators
 	-- This will still mean fetch_dog() is running every frame for Lone Wolf users, which is pretty bad but should be negligible performance-wise
 	-- Everyone else should only have it run for <1sec max
@@ -175,6 +185,34 @@ mod.check_archetype = function()
         end
     end
     return archetype
+end
+
+mod.quick_throw = function()
+	local archetype = mod.check_archetype()
+	if archetype == "zealot" then
+		local grenade = mod.check_grenade()
+		if grenade and grenade == "zealot_throwing_knives" then
+			return true
+		end
+	elseif archetype == "broker" then
+		local grenade = mod.check_grenade()
+		if grenade and grenade == "quick_flash_grenade" then
+			return true
+		end
+	end
+	return false
+end
+
+mod.check_grenade = function()
+	local player = Managers and Managers.player and Managers.player:local_player_safe(1)
+    if not player then return nil end
+    local player_unit = player and player.player_unit
+    local weapon_extension = player_unit and ScriptUnit.has_extension(player_unit, "weapon_system")
+    local weapons = weapon_extension and weapon_extension._weapons
+    local weapon = weapons.slot_grenade_ability
+    local weapon_template = weapon and weapon.weapon_template
+    local name = weapon_template and weapon_template.name
+    return name
 end
 
 -- Check if the player is using a weapon this mod should care about - returns true if a valid grenade is currently wielded
@@ -425,8 +463,8 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
 		-- Force this action when the throw keybind is pressed
 		if KEYBIND.using_keybind and KEYBIND.throw_keybind_pressed then
 			-- Reset immediately if using dogsplosion as it cannot be "equipped"
-			if dogsplosion then
-				KEYBIND.throw_keybind_pressed = false -- this doesn't seem to be working properly
+			if dogsplosion or mod.quick_throw() then
+				KEYBIND.throw_keybind_pressed = false
 			end
 			return true
 		end
@@ -461,7 +499,7 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
 				}
 				-- Allow explosion if any of the thresholds are met/exceeded
 				for _, value in pairs(thresholds) do
-					if value.threshold and value.count >= value.threshold then
+					if value.threshold and value.threshold > 0 and value.count >= value.threshold then
 						threshold_met = true
 						break
 					end

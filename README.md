@@ -447,10 +447,11 @@
 
 ### [AutoBlitz](https://www.nexusmods.com/warhammer40kdarktide/mods/480)
     自動手榴彈(一鍵投出、獒犬自爆)
-- MOD 網站最後更新日期：Last updated 09 July 2025, 3:33AM
-- MOD 版本：1.0.4
-- MOD 檔案名稱：AutoBlitz 1.0.4-480-1-0-4-1752003231
-- 手動維護最後下載日期：2025-07-12
+- MOD 網站最後更新日期：Last updated 03 December 2025, 12:54AM
+- MOD 版本：1.0.6
+- MOD 檔案名稱：AutoBlitz 1.0.6-480-1-0-6-1764694490
+- 手動維護最後下載日期：2025-12-06
+- Google Drive
 
 ### [Teammate Health Bars](https://www.nexusmods.com/warhammer40kdarktide/mods/560)
     自動手榴彈(一鍵投出、獒犬自爆)
