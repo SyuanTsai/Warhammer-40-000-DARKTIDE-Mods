@@ -9,7 +9,7 @@ local widgets = {
     {
         setting_id = "ration_action",
         type = "dropdown",
-        default_value = "pickup",
+        default_value = "destroy",
         options = {
             {text = "pickup", value = "pickup"},
             {text = "destroy", value = "destroy"},
