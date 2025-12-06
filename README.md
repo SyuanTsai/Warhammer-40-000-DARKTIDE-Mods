@@ -360,10 +360,13 @@
 
 ### [Keep Dodging](https://www.nexusmods.com/warhammer40kdarktide/mods/182)
     自動閃避(長按時自動閃避)
-- MOD 網站最後更新日期：Last updated 26 March 20257:59PM
-- MOD 版本：1.1.2
-- MOD 檔案名稱：Keep Dodging-182-1-1-2-1743350245
-- 手動維護最後下載日期：2025-03-31
+- MOD 網站最後更新日期：Last updated 03 December 2025, 3:02AM
+- MOD 版本：1.1.3
+- MOD 檔案名稱：Keep Dodging-182-1-1-3-1764702136
+- 手動維護最後下載日期：2025-12-06
+- GitHub :
+- Source=>  https://github.com/zombine04/darktide-mods
+- Fork  =>  https://github.com/SyuanTsai/darktide-mods
 
 ### [RickAndMortis](https://www.nexusmods.com/warhammer40kdarktide/mods/488)
     顯示移動速度
