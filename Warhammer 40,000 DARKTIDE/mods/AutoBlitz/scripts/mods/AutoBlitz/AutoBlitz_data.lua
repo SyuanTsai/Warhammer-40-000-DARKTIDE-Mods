@@ -93,26 +93,26 @@ return {
 					{
 						setting_id = "dogsplosion_enemy_threshold",
 						type = "numeric",
-						default_value = 1,
-						range         = {1, 40},
+						default_value = 0,
+						range         = {0, 40},
 					},
 					{
 						setting_id = "dogsplosion_elite_threshold",
 						type = "numeric",
-						default_value = 1,
-						range         = {1, 20},
+						default_value = 0,
+						range         = {0, 20},
 					},
 					{
 						setting_id = "dogsplosion_special_threshold",
 						type = "numeric",
-						default_value = 1,
-						range         = {1, 20},
+						default_value = 0,
+						range         = {0, 20},
 					},
 					{
 						setting_id = "dogsplosion_boss_threshold",
 						type = "numeric",
-						default_value = 1,
-						range         = {1, 10},
+						default_value = 0,
+						range         = {0, 10},
 					},
 					{
 						setting_id = "dogsplosion_allow_daemonhost",
@@ -338,6 +338,49 @@ return {
 						range         = {1, 5},
 						unit_text     = "stacks"
 					},
+				}
+			},
+			{
+				setting_id = "broker",
+				type = "group",
+				sub_widgets = {
+					{
+						setting_id = "flask_enabled",
+						type = "checkbox",
+						default_value = false
+					},
+					{
+						setting_id = "flask_throw_type",
+						type = "dropdown",
+						default_value = "overhand",
+						options = {
+							{ text = "overhand", value = "overhand" },
+							{ text = "underhand", value = "underhand" },
+						}
+					},
+					{
+						setting_id = "flask_minimum",
+						tooltip = "flask_tooltip",
+						type = "numeric",
+						default_value = 1,
+						range         = {1, 5},
+						unit_text     = "stacks"
+					},
+					--[[]]
+					{
+						setting_id = "launcher_enabled",
+						type = "checkbox",
+						default_value = false
+					},
+					{
+						setting_id = "launcher_minimum",
+						tooltip = "launcher_tooltip",
+						type = "numeric",
+						default_value = 1,
+						range         = {1, 5},
+						unit_text     = "stacks"
+					},
+					--]]
 				}
 			},
 		}
