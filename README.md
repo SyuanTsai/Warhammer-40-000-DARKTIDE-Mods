@@ -585,6 +585,9 @@
 - MOD 版本：1.2.1
 - MOD 檔案名稱：ShareTalents-215-1-2-1-1764627463
 - 手動維護最後下載日期：2025-12-06
+- GitHub :
+- Source=>  https://github.com/deluxghost/darktide-mods
+- Fork  =>  https://github.com/SyuanTsai/darktide-mods-1
 
 ### [Auto Rations - Recover or Destroy](https://www.nexusmods.com/warhammer40kdarktide/mods/625)
     自動撿拾糧食(活動用)
