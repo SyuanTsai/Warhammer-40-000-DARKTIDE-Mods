@@ -22,10 +22,13 @@
 
 ### [Who Are You - Display account names](https://www.nexusmods.com/warhammer40kdarktide/mods/127)
     你是誰 - 顯示你Steam或者Xbox的帳號名稱
-- MOD 網站最後更新日期：Last updated 30 March 2025 3:55PM
-- MOD 版本：Version 3.7.1
-- MOD 檔案名稱：Who Are You-127-3-7-1-1743350108
-- 手動維護最後下載日期：2025-03-31
+- MOD 網站最後更新日期：Last updated 03 December 2025, 3:15AM
+- MOD 版本：Version 3.7.4
+- MOD 檔案名稱：Who Are You-127-3-7-4-1764702919
+- 手動維護最後下載日期：2025-12-06
+- GitHub :
+- Source=>  https://github.com/zombine04/darktide-mods
+- Fork  =>  https://github.com/SyuanTsai/darktide-mods
 
 ### [Hybrid Sprint](https://www.nexusmods.com/warhammer40kdarktide/mods/342?tab=description)
     混合衝刺 - 能夠解放雙手不需要一直衝刺
