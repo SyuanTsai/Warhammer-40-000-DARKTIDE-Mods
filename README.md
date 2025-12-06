@@ -425,10 +425,11 @@
 
 ### [Clear Smoke](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
     煙霧輔助
-- MOD 網站最後更新日期：Last updated 09 October 2025, 6:11AM
-- MOD 版本：1.1
-- MOD 檔案名稱：better_hud_info_view-511-1-3-1745541635
-- 手動維護最後下載日期：2025-10-10
+- MOD 網站最後更新日期：Last updated 21 November 2025, 7:21AM
+- MOD 版本：1.2
+- MOD 檔案名稱：clear_smoke-517-1-2-1763680914
+- 手動維護最後下載日期：2025-12-06
+- Use Google driver.
 
 ---
 # 遊戲內操作相關MOD
