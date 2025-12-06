@@ -579,6 +579,16 @@
 - MOD 檔案名稱：Remember Difficulty-490-1-0-0-1743065799
 - 手動維護最後下載日期：2025-04-05
 
+### [Share Talents](https://www.nexusmods.com/warhammer40kdarktide/mods/215)
+    天賦分享
+- MOD 網站最後更新日期：Last updated 02 December 2025, 6:17AM
+- MOD 版本：1.2.1
+- MOD 檔案名稱：ShareTalents-215-1-2-1-1764627463
+- 手動維護最後下載日期：2025-12-06
+- GitHub :
+- Source=>  https://github.com/deluxghost/darktide-mods
+- Fork  =>  https://github.com/SyuanTsai/darktide-mods-1
+
 ### [Auto Rations - Recover or Destroy](https://www.nexusmods.com/warhammer40kdarktide/mods/625)
     自動撿拾糧食(活動用)
 - MOD 網站最後更新日期：Last updated 22 October 2025, 11:58PM
