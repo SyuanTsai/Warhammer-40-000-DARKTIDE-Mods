@@ -442,10 +442,10 @@
 
 ### [Dog Whistle](https://www.nexusmods.com/warhammer40kdarktide/mods/539)
     狗哨 - 自動抓特感
-- MOD 網站最後更新日期：Last updated 01 July 2025, 11:57PM
-- MOD 版本：1.0.6
-- MOD 檔案名稱：Dog Whistle 1.0.6-539-1-0-6-1751385472
-- 手動維護最後下載日期：2025-07-02
+- MOD 網站最後更新日期：Last updated 04 December 2025, 12:31AM
+- MOD 版本：1.0.8
+- MOD 檔案名稱：Dog Whistle 1.0.8-539-1-0-8-1764779496
+- 手動維護最後下載日期：2025-12-06
 
 ### [Red Weapons at Home](https://www.nexusmods.com/warhammer40kdarktide/mods/380)
     武器顏色顯示
