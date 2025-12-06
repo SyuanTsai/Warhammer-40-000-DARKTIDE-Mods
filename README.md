@@ -155,10 +155,13 @@
 
 ### [Debuff Indicator](https://www.nexusmods.com/warhammer40kdarktide/mods/137)
     效果顯示
-- MOD 網站最後更新日期：Last updated 27 June 2025, 10:33PM
-- MOD 版本：1.7.2
-- MOD 檔案名稱：Debuff Indicator-137-1-7-2-1751034821
-- 手動維護最後下載日期：2025-06-28
+- MOD 網站最後更新日期：Last updated 03 December 2025, 12:29AM
+- MOD 版本：1.7.3
+- MOD 檔案名稱：Debuff Indicator-137-1-7-3-1764692993
+- 手動維護最後下載日期：2025-12-06
+- GitHub :
+- Source=>  https://github.com/zombine04/darktide-mods
+- Fork  =>  https://github.com/SyuanTsai/darktide-mods
 
 ### [Super Impact](https://www.nexusmods.com/warhammer40kdarktide/mods/319)
     超級衝擊 - 可以避免場地上一堆屍體擋住視線，但是會吃GPU
