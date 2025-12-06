@@ -53,7 +53,7 @@ mod:hook_safe("HudElementInteraction", "update", function(self)
 					ammo_reserve = wieldable_component.current_ammunition_reserve
 					max_ammo_reserve = wieldable_component.max_ammunition_reserve
 					ammo_clip = wieldable_component.current_ammunition_clip
-					max_ammo_clip = wieldable_component.max_ammunition_clip
+					max_ammo_clip = wieldable_component.max_ammunition_clip[1]
 					break
 				end
 			end
