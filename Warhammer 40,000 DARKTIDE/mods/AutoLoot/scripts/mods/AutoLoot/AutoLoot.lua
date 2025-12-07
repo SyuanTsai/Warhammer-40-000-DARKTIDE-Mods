@@ -76,10 +76,10 @@ mod:hook_safe("HudElementInteraction", "update", function(self)
         for slot in pairs(weapon_slot_configuration) do
             local wieldable_component = unit_data_extension:write_component(slot)
             if wieldable_component.max_ammunition_reserve > 0 then
-                curr_ammo_res = wieldable_component.current_ammunition_reserve
-                curr_ammo_clip = wieldable_component.current_ammunition_clip[1]
-                max_ammo_res = wieldable_component.max_ammunition_reserve
-                max_ammo_clip = wieldable_component.max_ammunition_clip[1]
+                curr_ammo_res = Ammo.current_ammo_in_reserve(wieldable_component)
+                curr_ammo_clip = Ammo.current_ammo_in_clips(wieldable_component)
+                max_ammo_res = Ammo.max_ammo_in_reserve(wieldable_component)
+                max_ammo_clip = Ammo.max_ammo_in_clips(wieldable_component)
                 break
             end
         end
