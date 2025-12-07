@@ -554,9 +554,9 @@ mod:hook(CLASS.InteracteeExtension, "stopped", function(func, self, result, ...)
 					local unit_data_extension = ScriptUnit.extension(unit, "unit_data_system")
 					local wieldable_component = unit_data_extension:read_component("slot_secondary")
 					-- Get ammo numbers
-					local ammo_clip = wieldable_component.current_ammunition_clip
-					local max_ammo_clip = wieldable_component.max_ammunition_clip
-					local max_ammo_reserve = wieldable_component.max_ammunition_reserve
+					local ammo_clip = Ammo.current_ammo_in_clips(wieldable_component)
+					local max_ammo_clip = Ammo.max_ammo_in_clips(wieldable_component)
+					local max_ammo_reserve = Ammo.max_ammo_in_reserve(wieldable_component)
 					local current_ammo_reserve = mod.current_ammo[unit]
 					local max_ammo = max_ammo_reserve + max_ammo_clip
 					local current_ammo = current_ammo_reserve + ammo_clip
