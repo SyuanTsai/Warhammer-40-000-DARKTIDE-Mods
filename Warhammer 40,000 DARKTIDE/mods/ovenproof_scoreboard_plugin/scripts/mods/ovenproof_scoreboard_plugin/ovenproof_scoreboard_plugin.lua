@@ -471,8 +471,8 @@ function mod.on_all_mods_loaded()
 						local unit_data_extension = ScriptUnit.extension(unit, "unit_data_system")
 						local wieldable_component = unit_data_extension:read_component("slot_secondary")
 						-- Get ammo numbers
-						local current_ammo_clip = wieldable_component.current_ammunition_clip[1]
-						local max_ammo_clip = wieldable_component.max_ammunition_clip[1]
+						local current_ammo_clip = Ammo.current_ammo_in_clips(wieldable_component)
+						local max_ammo_clip = Ammo.max_ammo_in_clips(wieldable_component)
 						--[[
 						if type(current_ammo_clip) == "table" then
 							mod:echo("uwu current_ammo_clip is a table")
