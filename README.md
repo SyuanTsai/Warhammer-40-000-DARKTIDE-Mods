@@ -315,7 +315,7 @@
 
 ### [Inspect from Party Finder](https://www.nexusmods.com/warhammer40kdarktide/mods/455)
     組隊大廳查看玩家天賦裝備
-- MOD 網站最後更新日期：Last updated 25 December 2024 5:56PM
+- MOD 網站最後更新日期：Last updated 07 December 2025, 1:29PM
 - MOD 版本：1.0.2
 - MOD 檔案名稱：Inspect from Party Finder-455-1-0-2-1735149372
 - 手動維護最後下載日期：2025-02-24
