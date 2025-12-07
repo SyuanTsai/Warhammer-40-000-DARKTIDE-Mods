@@ -8,5 +8,11 @@ return {
 			mod_localization = "ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization",
 		})
 	end,
+
+	require = {
+		"scoreboard"
+	},
+	version = "1.8.1",
+
 	packages = {},
 }

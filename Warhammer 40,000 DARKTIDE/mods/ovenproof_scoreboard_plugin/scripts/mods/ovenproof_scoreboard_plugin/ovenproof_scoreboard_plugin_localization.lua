@@ -1,12 +1,33 @@
 local mod = get_mod("ovenproof_scoreboard_plugin")
+
+-- ###############################################################################################################
+-- IF ADDING A NEW LOCALIZATION LANGUAGE, CHECK HERE
+-- ###############################################################################################################
+local languages = {"en","ru","zh-cn","zh-tw","pt-br",}
+-- ###############################################################################################################
+
+-- ########################
+-- Data
+-- ########################
 local UIRenderer = mod:original_require("scripts/managers/ui/ui_renderer")
 local ui_renderer_instance = Managers.ui:ui_constant_elements():ui_renderer()
-local languages = {"en","ru","zh-cn","zh-tw","pt-br",}
 
+-- ############
+-- Performance
+-- ############
+local table = table
+local table_clone = table.clone
+
+-- ########################
+-- Helper Functions
+-- ########################
+-- @backup158: I don't know why this needs the self reference nor why these are globals
+--  but on the very off chance that some other mod uses these globals, I'll just make the local reference below 
 mod.get_text_size = function(self, input_text)
     return UIRenderer.text_size(ui_renderer_instance, input_text, "proxima_nova_bold", 0.1)
 end
-local max_length = mod:get_text_size("AAAAAAAAAAAAAAAAAAAAAAAAAA  \u{200A}A")
+local get_text_size = mod.get_text_size
+local max_length = get_text_size(self, "AAAAAAAAAAAAAAAAAAAAAAAAAA  \u{200A}A")
 
 mod.create_string = function(string_left, string_right)
     local spacer_symbol = "\u{200A}"
@@ -15,19 +36,23 @@ mod.create_string = function(string_left, string_right)
     local tab_string = ""
     local total_length = 0
 
-    if mod:get_text_size(string_left.."\t "..string_right) < max_length then
+    if get_text_size(self, string_left.."\t "..string_right) < max_length then
         tab_string = "\t "
     end
 
     while total_length < max_length do
         padding_string = padding_string..spacer_symbol
         temp_string = string_left..tab_string..padding_string..string_right
-        total_length = mod:get_text_size(temp_string)
+        total_length = get_text_size(self, temp_string)
     end
 
     return string_left..tab_string..padding_string..string_right
 end
+local create_string = mod.create_string
 
+-- ########################
+-- Localizations
+-- ########################
 local right_hand_localizations = {
     kill_damage = {
         en = "[ Kills | Damage ]",
@@ -98,9 +123,114 @@ local localization = {
         en = "Ammo Tracking",
         ["zh-tw"] = "彈藥追蹤",
     },
+    track_ammo_crate_waste = {
+        en = "Track Ammo Crate waste",
+        ["zh-tw"] = "追蹤彈藥箱浪費",
+    },
+    track_ammo_crate_waste = {
+        en = "Track Ammo Crate waste",
+        ["zh-tw"] = "追蹤彈藥箱浪費",
+    },
+    track_ammo_crate_in_percentage = {
+        en = "Include Ammo Crates in total percentage of Ammo picked up",
+        ["zh-tw"] = "將彈藥箱納入撿取彈藥總百分比", 
+    },
     attack_tracking_group = {
         en = "Attack Report Tracking",
         ["zh-tw"] = "攻擊報告追蹤",
+    },
+    attack_tracking_separate_rows = {
+        en = "Use Separate Rows",
+        ["zh-tw"] = "使用獨立行",
+    },
+    attack_tracking_separate_rows_description = {
+        en = "ROW VISIBILITY CHANGES WILL NOT TAKE EFFECT UNTIL THE MAP CHANGES (such as by going from Mourningstar to Psykhanium)\nCreates a separate row to track these values.",
+        ["zh-tw"] = "ROW VISIBILITY 的變更要在地圖更換後才會生效（例如，從Mourningstar到靈能室）\n此選項會建立一個獨立的列，用來追蹤相關的數值。",
+    },
+    separate_companion_damage = {
+        en = "Companion Damage",
+        ["zh-tw"] = "機械戰犬傷害",
+    },
+    separate_companion_damage_description = {
+        en = "Choose which row Companion Damage counts towards. \"Companion\" is its own row, which will be hidden if one of the other options is chosen.",
+        zh = "選擇「機械戰犬傷害」要計入哪一個列。「機械戰犬」本身是一個獨立的列；若選擇其他選項，該列將會被隱藏。",
+    },
+    warning_companion_blitz = {
+        en = "You have set Companion Damage to be tracked under Blitz Damage, but you have not enabled the Blitz Damage row. This means Companion Damage will not be visible! It will still count towards total damage.\nIf that is intentional, you can disable this warning in the Mod Options.",
+        zh = "您已將機械戰犬傷害設定為統計在爆發傷害（Blitz Damage）中，但您尚未啟用爆發傷害列。這表示機械戰犬傷害將無法顯示！但仍會計入總傷害。\n如果這是您預期的行為，您可以在模組選項中停用此警告。",
+    },
+    enable_companion_blitz_warning = {
+        en = "Enable warning for untracked Companion Damage",
+        zh = "啟用未追蹤機械戰犬傷害的警告",
+    },
+    enable_companion_blitz_warning_description = {
+        en = "Shows warning when counting Companion Damage as Blitz Damage if there is no row displayed for Blitz Damage.",
+        zh = "當機械戰犬傷害被計為爆發傷害、但未顯示爆發傷害列時，顯示警告。",
+    },
+    separate_companion_damage_hide_regardless = {
+        en = "Always Hide Companion Damage Row",
+        zh = "永遠隱藏機械戰犬傷害列",
+    },
+    -- @backup158: idk if these localizations are accurate
+    option_companion_companion = {
+        en = "Companion", 
+        ru = "компаньон", 
+        ["zh-cn"] = "伴侣", 
+        ["zh-tw"] = "機械戰犬", 
+        ["pt-br"] = "Companheiro", 
+    },
+    track_blitz_damage = {
+        en = "Blitz Damage",
+        zh = "閃擊傷害",
+    },
+    track_blitz_damage_description = {
+        en = "If disabled, Blitz Damage counts as Ranged Damage.",
+        zh = "若停用，閃擊傷害將被視為遠程傷害。",
+    },
+    track_blitz_wr = {
+        en = "Track Blitz Weakspot Rate",
+        zh = "追蹤閃擊弱點命中率",
+    },
+    track_blitz_cr = {
+        en = "Track Blitz Critical Strike Rate",
+        zh = "追蹤閃擊暴擊率",
+    },
+    attack_tracking_hitrate = {
+        en = "Hitrate Calculations",
+        zh = "命中率計算",
+    },
+    explosions_affect_ranged_hitrate = {
+        en = "Explosions affect Ranged Hitrate",
+        zh = "爆炸影響遠程命中率",
+    },
+    explosions_affect_melee_hitrate = {
+        en = "Explosions affect Melee Hitrate",
+        zh = "爆炸影響近戰命中率",
+    },
+    defense_tracking_group = {
+        en = "Defense Report Tracking",
+        zh = "防禦報告追蹤",
+    },
+    disabled_tracking_group = {
+        en = "Track Events as a Disabled State",
+        zh = "將事件視為癱瘓狀態",
+    },
+    disabled_tracking_group_description = {
+        en = "When enabled, entering the described state will count as getting Disabled",
+        zh = "啟用後，進入描述的狀態將被視為遭受癱瘓。",
+    },
+    track_catapulted = {
+        en = "Catapulted by Knockback",
+        zh = "被擊退彈飛",
+    },
+    track_mutant_charged = {
+        en = "Charged by a Mutant",
+        zh = "被變種衝撞",
+    },
+    track_warp_grabbed = {
+        --en = "Grabbed by a Daemonhost",
+        en = "Warp Grabbed",
+        zh = "惡魔抓取",
     },
     exploration_tier_0 = {
         en = "Exploration",
@@ -171,33 +301,12 @@ local localization = {
         ["zh-tw"] = "訊息 - 彈藥/手雷拾取",
         ["pt-br"] = "Mensagens - Coleta de Munição/Granadas",
     },
-    track_ammo_crate_waste = {
-        en = "Track Ammo Crate waste",
-        ["zh-tw"] = "追蹤彈藥箱浪費",
-    },
-    track_ammo_crate_waste = {
-        en = "Track Ammo Crate waste",
-        ["zh-tw"] = "追蹤彈藥箱浪費",
-    },
-    track_ammo_crate_in_percentage = {
-        en = "Include Ammo Crates in total percentage of Ammo picked up",
-        ["zh-tw"] = "將彈藥箱納入總彈藥拾取百分比",
-    },
-    explosions_affect_ranged_hitrate = {
-        en = "Explosions affect Ranged Hitrate",
-        ["zh-tw"] = "爆炸影響遠程命中率",
-    },
-    explosions_affect_melee_hitrate = {
-        en = "Explosions affect Melee Hitrate",
-        ["zh-tw"] = "爆炸影響近戰命中率",
-    },
     -- ----------------
     -- Reusable labels
     -- ----------------
     -- Settings
     setting_only_in_havoc = {
         en = "Only when playing Havoc",
-        ["zh-tw"] = "僅在浩劫模式時",
     },
     -- Scoreboard Row Text
     row_kills = {
@@ -255,7 +364,6 @@ local localization = {
     },
     message_ammo_crate_waste = {
         en = " picked up %s ammo from an %s, wasting %s",
-        ["zh-tw"] = "拾取了 %s 彈藥，來自 %s，浪費了 %s",
     },
     message_ammo_crate_text = {
         en = "ammo crate",
@@ -439,6 +547,13 @@ local localization = {
         ["zh-tw"] = { left = "弱點命中率", right = "[ 近戰 | 遠程 ]",},
         ["pt-br"] = {left = "Ponto Fracos", right = "[Corpo a Corpo | Distância]",},
     },
+    row_total_weakspot_rates_with_blitz = {
+        en = {left = "Weakspot Rate", right = "[ Melee | Ranged | Blitz ]",},
+        --ru = {left = "Уязвимые места", right = "[Ближний/Дальний/]",},
+        --["zh-cn"] = {left = "弱点命中率", right = "[ 近战 | 远程 | ]",},
+        --["zh-tw"] = { left = "弱點命中率", right = "[ 近戰 | 遠程 | ]",},
+        --["pt-br"] = {left = "Ponto Fracos", right = "[Corpo a Corpo | Distância | ]",},
+    },
     row_melee_weakspot_rate = {
         en = "Melee",
         ru = "Ближний",
@@ -453,6 +568,14 @@ local localization = {
         ["zh-tw"] = "遠程",
         ["pt-br"] = "Distância",
     },
+    row_blitz_weakspot_rate = {
+        en = "Blitz",
+        ["zh-tw"] = "閃擊",
+        --ru = "",
+        --["zh-cn"] = "",
+        --["zh-tw"] = "",
+        --["pt-br"] = "",
+    },
     --[[
     row_companion_weakspot_rate = {
         en = "Companion",
@@ -464,6 +587,13 @@ local localization = {
         ["zh-cn"] = {left = "暴击率", right = "[ 近战 | 远程 ]",},
         ["zh-tw"] = { left = "爆擊率", right = "[ 近戰 | 遠程 ]",},
         ["pt-br"] = {left = "Taxa Crítica", right = "[Corpo a Corpo | Distância]",},
+    },
+    row_total_critical_rates_with_blitz = {
+        en = {left = "Critical Rate", right = "[ Melee | Ranged | Blitz ]",},
+        ["zh-tw"] = { left = "爆擊率", right = "[ 近戰  |  遠程  |  閃擊 ]",},
+        -- ru = {left = "Крит. удары", right = "[Ближний/Дальний/]",},
+        -- ["zh-cn"] = {left = "暴击率", right = "[ 近战 | 远程 | ]",},
+        -- ["pt-br"] = {left = "Taxa Crítica", right = "[Corpo a Corpo | Distância | ]",},
     },
     row_melee_critical_rate = {
         en = "Melee",
@@ -479,12 +609,16 @@ local localization = {
         ["zh-tw"] = "遠程",
         ["pt-br"] = "Distância",
     },
-    --[[
-    row_companion_critical_rate = {
-        en = "Companion",
+    row_blitz_critical_rate = {
+        en = "Blitz",
+        ["zh-tw"] = "閃擊",
+        --ru = "",
+        --["zh-cn"] = "",
+        --["zh-tw"] = "",
+        --["pt-br"] = "",
     },
-    ]]
     -- @backup158: do toxins even crit? i dont think i need to count this
+    --  I'm pretty sure dogs don't crit so I skipped them
     row_total_dot_rates_1 = {
         en = {left = "Critical Rate", right = "[ Bleeding | Burning ]",},
         ru = {left = "Крит. удары", right = "[Кровотечение/Горение]",},
@@ -553,6 +687,14 @@ local localization = {
         ["zh-cn"] = {left = "总远程", right = right_hand_localizations.kill_damage["zh-cn"],},
         ["zh-tw"] = { left = "總遠程", right = right_hand_localizations.kill_damage["zh-tw"],},
         ["pt-br"] = {left = "Total Distância", right = right_hand_localizations.kill_damage["pt-br"]},
+    },
+    row_total_blitz = {
+        en = {left = "Total Blitz", right = right_hand_localizations.kill_damage["en"],},
+        ["zh-tw"] = { left = "總閃擊", right = right_hand_localizations.kill_damage["zh-tw"],},
+        --ru = {left = "Всего", right = right_hand_localizations.kill_damage["ru"],},
+        --["zh-cn"] = {left = "总", right = right_hand_localizations.kill_damage["zh-cn"],},
+        --["zh-tw"] = { left = "總", right = right_hand_localizations.kill_damage["zh-tw"],},
+        --["pt-br"] = {left = "Total", right = right_hand_localizations.kill_damage["pt-br"]},
     },
     -- @backup158: idk if these localizations are accurate
     row_total_companion = {
@@ -713,7 +855,7 @@ for k_loc, v_loc in pairs(localization) do
     for k_lang, v_lang in pairs(languages) do
         if v_loc[v_lang] then
             if v_loc[v_lang].left and v_loc[v_lang].right then
-                v_loc[v_lang] = mod.create_string(v_loc[v_lang].left, v_loc[v_lang].right)
+                v_loc[v_lang] = create_string(v_loc[v_lang].left, v_loc[v_lang].right)
             end
         end
     end
