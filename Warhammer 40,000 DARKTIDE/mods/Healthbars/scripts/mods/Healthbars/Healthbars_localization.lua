@@ -101,6 +101,7 @@ local localization = {
 	},
 	toxin = {
 		en = "Show toxin stacks",
+		["zh-tw"] = "顯示毒素層數",
 	},
 }
 
@@ -108,12 +109,14 @@ local unlocalized_breeds = {
 	chaos_lesser_mutated_poxwalker = {
 		en = "Show Lesser mutated poxwalker health",
 		["zh-cn"] = "显示变异瘟疫行者的血量",
+		["zh-tw"] = "顯示變異瘟疫行者的血量",
 		ru = "Показывать здоровье малого мутировавшего чумного ходока",
 		fr = "Affiche la santé des scrofuleux inférieures muté",
 	},
 	chaos_mutated_poxwalker = {
 		en = "Show Mutated poxwalker health",
 		["zh-cn"] = "显示完全变异瘟疫行者的血量",
+		["zh-tw"] = "顯示瘟疫行者的血量",
 		ru = "Показывать здоровье мутировавшего чумного ходока",
 		fr = "Affiche la santé des scrofuleux muté",
 	},
