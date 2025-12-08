@@ -22,10 +22,13 @@
 
 ### [Healthbars](https://www.nexusmods.com/warhammer40kdarktide/mods/16)
     UI改善
-- MOD 網站最後更新日期：Last updated 03 April 2025 8:49PM
-- MOD 版本：4.0.1
-- MOD 檔案名稱：Healthbars-16-4-0-1-1743716626
-- 手動維護最後下載日期：2025-04-4
+- MOD 網站最後更新日期：Last updated 08 December 2025, 5:31AM
+- MOD 版本：4.1.1
+- MOD 檔案名稱：Healthbars-16-4-1-1-1765143089
+- 手動維護最後下載日期：2025-12-08
+- GitHub :
+- Source=>  https://github.com/danreeves/darktide-mods
+- Fork  =>  https://github.com/SyuanTsai/Darktide-Mods-Danreeves
 
 ### [IME Enable](https://www.nexusmods.com/warhammer40kdarktide/mods/167)
     啟用Windows輸入法 - 適用於中日韓等語言的玩家
