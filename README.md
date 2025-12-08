@@ -391,10 +391,12 @@
     記分板排版工具
 - MOD 網站最後更新日期：Last updated 07 December 2025, 4:56PM
 - MOD 版本：1.4.2
-- Patch 版本：1.7.0
-- MOD 檔案名稱：OvenProof's Scoreboard Plugin Patch-514-1-7-0-1764873084
-- 手動維護最後下載日期：2025-12-06
-- Google Drive
+- Patch 版本：1.9.1
+- MOD 檔案名稱：Ovenproof's Scoreboard Plugin - Community Patch-514-1-9-1-1765185077
+- 手動維護最後下載日期：2025-12-08
+- GitHub :
+- Source=>  https://github.com/Backup158/DarktideOvenproofScoreboardPluginPatch
+- Fork  =>  https://github.com/SyuanTsai/Darktide-Mods-OvenproofScoreboardPluginPatch
 
 ---
 # 遊戲內操作相關MOD
