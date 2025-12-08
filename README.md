@@ -540,6 +540,13 @@
 - 手動維護最後下載日期：2025-12-06
 - Use Google driver.
 
+### [Quick Level Mastery](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
+    自動升級裝備(含自動買)
+- MOD 網站最後更新日期：Last updated 02 November 2024, 9:29PM
+- MOD 版本：0.1.0
+- MOD 檔案名稱：Quick Level Mastery-395-0-1-0-1730554189
+- 手動維護最後下載日期：2025-12-08
+
 ---
 # 遊戲內操作相關MOD
 

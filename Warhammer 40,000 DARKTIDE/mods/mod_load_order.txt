@@ -33,6 +33,7 @@ ImprovedHavocTags
 better_hud_info_view
 Spidey Sense
 custom_hud
+quick_level_mastery
 
 -- 小遊戲自動化
 Decode_Helper
