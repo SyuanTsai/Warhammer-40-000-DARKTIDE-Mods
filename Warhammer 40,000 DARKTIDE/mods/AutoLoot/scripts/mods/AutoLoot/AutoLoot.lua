@@ -2,6 +2,7 @@ local mod = get_mod("AutoLoot")
 
 local pickup = false
 local cooldown = 0.0
+local Ammo = require("scripts/utilities/ammo")
 
 mod:hook("InputService", "_get", function(func, self, action_name)
     if cooldown <= 0 and pickup and action_name == "interact_pressed" then
