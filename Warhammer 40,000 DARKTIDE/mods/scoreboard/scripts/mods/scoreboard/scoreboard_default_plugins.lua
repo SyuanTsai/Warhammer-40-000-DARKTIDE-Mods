@@ -14,6 +14,7 @@ local TextUtilities = mod:original_require("scripts/utilities/ui/text")
 local UISettings = mod:original_require("scripts/settings/ui/ui_settings")
 local Breed = mod:original_require("scripts/utilities/breed")
 local WalletSettings = mod:original_require("scripts/settings/wallet_settings")
+local Ammo = require("scripts/utilities/ammo")
 
 -- #####  █████╗ ███╗   ██╗██╗███╗   ███╗    ███████╗██╗   ██╗███████╗███╗   ██╗████████╗███████╗ #####################
 -- ##### ██╔══██╗████╗  ██║██║████╗ ████║    ██╔════╝██║   ██║██╔════╝████╗  ██║╚══██╔══╝██╔════╝ #####################
