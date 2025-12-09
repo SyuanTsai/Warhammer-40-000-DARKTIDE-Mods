@@ -971,7 +971,7 @@ local loc = {
 		en = "Hive Scum Stimm Icon Colour",
 		fr = "Hive Scum Stimm Icon Colour",
 		ru = "Hive Scum Stimm Icon Colour",
-		["zh-tw"] = "Hive Scum Stimm Icon Colour",
+		["zh-tw"] = "潮都敗類興奮劑圖示顏色",
 		["zh-cn"] = "Hive Scum Stimm Icon Colour",
 	},
 	broker_stimm_icon_colour_R = {
