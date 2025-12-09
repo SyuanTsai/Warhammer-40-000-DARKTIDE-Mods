@@ -635,6 +635,13 @@
 - MOD 檔案名稱：auto_rations-625-1-1-1761148704
 - 手動維護最後下載日期：2025-12-08
 
+### [StimmCountdown](https://www.nexusmods.com/warhammer40kdarktide/mods/653)
+    巢都敗類興奮劑CD
+- MOD 網站最後更新日期：Last updated 09 December 2025, 6:49AM
+- MOD 版本：1.2.1
+- MOD 檔案名稱：StimmCountdown-653-1-2-1-1765234136
+- 手動維護最後下載日期：2025-12-08
+
 # 移除的MOD
 
 ### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
