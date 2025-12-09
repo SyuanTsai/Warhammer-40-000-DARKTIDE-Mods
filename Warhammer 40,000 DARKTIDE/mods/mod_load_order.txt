@@ -84,6 +84,7 @@ BornReady
 MissionBrief
 uptime
 EmpowerUntilLimit
+StimmCountdown
 
 -- 基本上不需設定
 psych_ward
