@@ -627,6 +627,14 @@
 - MOD 檔案名稱：auto_rations-625-1-1-1761148704
 - 手動維護最後下載日期：2025-12-06
 
+
+### [Empower Until Limit](https://www.nexusmods.com/warhammer40kdarktide/mods/365)
+    自動升級裝備
+- MOD 網站最後更新日期：Last updated05 October 2024, 10:30AM
+- MOD 版本：1.0.2
+- MOD 檔案名稱：auto_rations-625-1-1-1761148704
+- 手動維護最後下載日期：2025-12-08
+
 # 移除的MOD
 
 ### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
