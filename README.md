@@ -183,10 +183,10 @@
 
 ### [Markers Improved All-in-One](https://www.nexusmods.com/warhammer40kdarktide/mods/447)
     標記一體化 整合包
-- MOD 網站最後更新日期：Last updated 09 December 2025, 7:36AM
-- MOD 版本：2.8.01
-- MOD 檔案名稱：Markers Improved AIO-447-2-8-01-1765237018
-- 手動維護最後下載日期：2025-12-08
+- MOD 網站最後更新日期：Last updated 10 December 2025, 12:50AM
+- MOD 版本：2.8.02
+- MOD 檔案名稱：Markers Improved AIO-447-2-8-02-1765299053
+- 手動維護最後下載日期：2025-12-09
 
 ---
 # 遊戲內操作相關MOD
