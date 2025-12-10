@@ -637,10 +637,10 @@
 
 ### [StimmCountdown](https://www.nexusmods.com/warhammer40kdarktide/mods/653)
     巢都敗類興奮劑CD
-- MOD 網站最後更新日期：Last updated 09 December 2025, 6:49AM
-- MOD 版本：1.2.1
-- MOD 檔案名稱：StimmCountdown-653-1-2-1-1765234136
-- 手動維護最後下載日期：2025-12-08
+- MOD 網站最後更新日期：Last updated 10 December 2025, 5:52AM
+- MOD 版本：1.2.2
+- MOD 檔案名稱：StimmCountdown-653-1-2-2-1765317161
+- 手動維護最後下載日期：2025-12-10
 
 # 移除的MOD
 
