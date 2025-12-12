@@ -4,18 +4,18 @@ local UIWidget = require("scripts/managers/ui/ui_widget")
 local UIHudSettings = require("scripts/settings/ui/ui_hud_settings")
 local UIFontSettings = require("scripts/managers/ui/ui_font_settings")
 
--- Константы
 local STIMM_BUFF_NAME = "syringe_broker_buff"
 local STIMM_SLOT_NAME = "slot_pocketable_small"
 local STIMM_ABILITY_TYPE = "pocketable_ability"
 local STIMM_ICON_MATERIAL = "content/ui/materials/icons/pocketables/hud/syringe_broker"
 
--- Цвета из игры
-local ACTIVE_COLOR = UIHudSettings.color_tint_main_1  -- Светлый (как кол-во гранат)
-local COOLDOWN_COLOR = UIHudSettings.color_tint_alert_2  -- Красный
-local READY_ICON_COLOR = UIHudSettings.color_tint_main_2
-local DEFAULT_SLOT_LINE_COLOR = Color.terminal_corner(nil, true)
-local DEFAULT_SLOT_BACKGROUND_COLOR = Color.terminal_background_gradient(255, true)
+local ACTIVE_COLOR = UIHudSettings.color_tint_main_1
+local COOLDOWN_COLOR = UIHudSettings.color_tint_alert_2
+local READY_COLOR = UIHudSettings.color_tint_main_2
+local NOTIFICATION_LINE_DEFAULT = UIHudSettings.color_tint_main_2
+local NOTIFICATION_ICON_DEFAULT = UIHudSettings.color_tint_main_2
+local NOTIFICATION_TEXT_DEFAULT = UIHudSettings.color_tint_main_1
+local NOTIFICATION_BACKGROUND_DEFAULT = Color.terminal_grid_background(180, true)
 
 local function get_color_from_setting(setting_id, fallback)
 	local name = mod:get(setting_id)
@@ -51,7 +51,6 @@ local function apply_icon_and_background_colors(icon_widget, background_widget, 
 
 	local function clone_color_table(style_table, key)
 		if style_table and style_table[key] then
-			-- Клонируем таблицу цвета, чтобы не трогать общие ссылки в дефолтных стилях
 			style_table[key] = table.clone(style_table[key])
 		end
 	end
@@ -121,7 +120,6 @@ local function apply_icon_and_background_colors(icon_widget, background_widget, 
 	end
 end
 
--- Добавляем виджет в определения родителя
 local add_definitions = function(definitions)
 	if not definitions then
 		return
@@ -130,7 +128,6 @@ local add_definitions = function(definitions)
 	definitions.scenegraph_definition = definitions.scenegraph_definition or {}
 	definitions.widget_definitions = definitions.widget_definitions or {}
 
-	-- Стиль текста таймера (как гранаты)
 	local stimm_timer_text_style = table.clone(UIFontSettings.hud_body)
 	stimm_timer_text_style.font_type = "machine_medium"
 	stimm_timer_text_style.font_size = 30
@@ -140,7 +137,6 @@ local add_definitions = function(definitions)
 	stimm_timer_text_style.text_color = table.clone(COOLDOWN_COLOR)
 	stimm_timer_text_style.offset = { -60, 0, 10 }
 
-	-- Виджет таймера (использует существующий scenegraph "background")
 	definitions.widget_definitions.stimm_timer = UIWidget.create_definition({
 		{
 			visible = false,
@@ -153,7 +149,6 @@ local add_definitions = function(definitions)
 	}, "background")
 end
 
--- Хук для добавления виджета в определения
 mod:hook_require(
 	"scripts/ui/hud/elements/player_weapon/hud_element_player_weapon_definitions",
 	function(definitions)
@@ -161,7 +156,6 @@ mod:hook_require(
 	end
 )
 
--- Проверка, является ли игрок классом Broker (Hive Scum)
 local function is_broker_class(player)
 	if not player then
 		return false
@@ -171,7 +165,6 @@ local function is_broker_class(player)
 	return archetype_name == "broker"
 end
 
--- Найти баф и получить оставшееся время
 local function get_buff_remaining_time(buff_extension, buff_template_name)
 	if not buff_extension then
 		return 0
@@ -195,14 +188,11 @@ local function get_buff_remaining_time(buff_extension, buff_template_name)
 	return timer
 end
 
--- Обновляем таймер
 mod:hook_safe("HudElementPlayerWeapon", "update", function(self, dt, t, ui_renderer, render_settings, input_service)
-	-- Проверяем что это слот стима
 	if self._slot_name ~= STIMM_SLOT_NAME then
 		return
 	end
 
-	-- Получаем виджет из _widgets_by_name
 	local widget = self._widgets_by_name and self._widgets_by_name.stimm_timer
 	if not widget then
 		return
@@ -237,7 +227,6 @@ mod:hook_safe("HudElementPlayerWeapon", "update", function(self, dt, t, ui_rende
 	local display_color = COOLDOWN_COLOR
 	local should_show = false
 
-	-- Формат вывода
 	local show_decimals = mod:get("show_decimals") ~= false
 	local show_active = mod:get("show_active") ~= false
 	local show_cooldown = mod:get("show_cooldown") ~= false
@@ -247,24 +236,23 @@ mod:hook_safe("HudElementPlayerWeapon", "update", function(self, dt, t, ui_rende
 	local enable_active_override = mod:get("enable_active_color_override") == true
 	local enable_cooldown_override = mod:get("enable_cooldown_color_override") == true
 
-	local ready_countdown_color = get_color_from_setting("ready_countdown_color", Color.terminal_corner_selected(255, true))
-	local ready_icon_color = get_color_from_setting("ready_icon_color", READY_ICON_COLOR)
+	local ready_countdown_color = get_color_from_setting("ready_countdown_color", READY_COLOR)
+	local ready_icon_color = get_color_from_setting("ready_icon_color", READY_COLOR)
 	local active_countdown_color = get_color_from_setting("active_countdown_color", ACTIVE_COLOR)
 	local active_icon_color = get_color_from_setting("active_icon_color", ACTIVE_COLOR)
 	local cooldown_countdown_color = get_color_from_setting("cooldown_countdown_color", COOLDOWN_COLOR)
 	local cooldown_icon_color = get_color_from_setting("cooldown_icon_color", COOLDOWN_COLOR)
 	local enable_notification_override = mod:get("enable_notification_color_override") == true
-	local notification_line_color = get_color_from_setting("notification_line_color", Color.terminal_corner_selected(255, true))
-	local notification_icon_color = get_color_from_setting("notification_icon_color", READY_ICON_COLOR)
-	local notification_background_color = get_color_from_setting("notification_background_color", Color.terminal_grid_background(180, true))
-	local notification_text_color = get_color_from_setting("notification_text_color", Color.terminal_corner_selected(255, true))
+	local notification_line_color = get_color_from_setting("notification_line_color", NOTIFICATION_LINE_DEFAULT)
+	local notification_icon_color = get_color_from_setting("notification_icon_color", NOTIFICATION_ICON_DEFAULT)
+	local notification_background_color = get_color_from_setting("notification_background_color", NOTIFICATION_BACKGROUND_DEFAULT)
+	local notification_text_color = get_color_from_setting("notification_text_color", NOTIFICATION_TEXT_DEFAULT)
 	local icon_color_to_apply = nil
 	local line_color_to_apply = nil
 	local bg_color_to_apply = nil
 	local icon_widget = self._widgets_by_name and self._widgets_by_name.icon
 	local background_widget = self._widgets_by_name and self._widgets_by_name.background
 
-	-- Предварительно получаем данные по способностям
 	local ability_extension = self._ability_extension
 	local equipped_abilities = ability_extension and ability_extension:equipped_abilities()
 	local pocketable_ability = equipped_abilities and equipped_abilities[STIMM_ABILITY_TYPE]
@@ -272,14 +260,11 @@ mod:hook_safe("HudElementPlayerWeapon", "update", function(self, dt, t, ui_rende
 	local remaining_cooldown = has_broker_syringe and ability_extension and ability_extension:remaining_ability_cooldown(STIMM_ABILITY_TYPE)
 	local has_cooldown = remaining_cooldown and remaining_cooldown >= 0.05
 
-	-- Проверяем активный баф стима
 	local remaining_buff_time = get_buff_remaining_time(buff_extension, STIMM_BUFF_NAME)
 	local has_active_buff = remaining_buff_time and remaining_buff_time >= 0.05
-	-- Ready: нет активного бафа и нет кулдауна (nil или <= 0)
 	local is_ready = has_broker_syringe and not has_active_buff and not has_cooldown
 
 	if show_active and has_active_buff then
-		-- Стим активен
 		if show_decimals then
 			display_text = string.format("%.1f", remaining_buff_time)
 		else
@@ -293,15 +278,13 @@ mod:hook_safe("HudElementPlayerWeapon", "update", function(self, dt, t, ui_rende
 		end
 		should_show = true
 	elseif is_ready then
-		-- Нет бафа и кулдауна — готов
 		if enable_ready_override then
 			icon_color_to_apply = ready_icon_color
-			line_color_to_apply = ready_countdown_color
-			bg_color_to_apply = ready_countdown_color
+			line_color_to_apply = ready_icon_color
+			bg_color_to_apply = ready_icon_color
 		end
 		should_show = false
 	elseif show_cooldown then
-		-- Проверяем кулдаун только для брокер-сиренги
 		if not has_broker_syringe then
 			widget.content.text = ""
 			widget.content.visible = false
@@ -319,16 +302,14 @@ mod:hook_safe("HudElementPlayerWeapon", "update", function(self, dt, t, ui_rende
 			display_color = enable_cooldown_override and cooldown_countdown_color or COOLDOWN_COLOR
 			if enable_cooldown_override then
 				icon_color_to_apply = cooldown_icon_color
-				line_color_to_apply = cooldown_countdown_color
-				bg_color_to_apply = cooldown_countdown_color
+				line_color_to_apply = cooldown_icon_color
+				bg_color_to_apply = cooldown_icon_color
 			end
 			should_show = true
 		end
 	end
 
-	-- Уведомление о готовности стима (одноразово на переход из кулдауна в готовность)
 	if show_ready_notification then
-		-- Первое обновление: запоминаем состояние и выходим
 		if self._stimm_ready_prev == nil then
 			self._stimm_ready_prev = is_ready
 			self._stimm_prev_has_cooldown = has_cooldown
@@ -336,26 +317,22 @@ mod:hook_safe("HudElementPlayerWeapon", "update", function(self, dt, t, ui_rende
 			local became_ready_after_cooldown = is_ready and not self._stimm_ready_prev and (self._stimm_prev_has_cooldown or has_cooldown)
 
 			if became_ready_after_cooldown then
-				local line_color = enable_notification_override and notification_line_color
-					or Color.terminal_corner_selected(255, true)
-				local icon_color = enable_notification_override and notification_icon_color
-					or READY_ICON_COLOR
-				local background_color = enable_notification_override and notification_background_color
-					or Color.terminal_grid_background(180, true)
-				local text_color = enable_notification_override and notification_text_color
-					or Color.terminal_corner_selected(255, true)
+				local line_color = enable_notification_override and notification_line_color or NOTIFICATION_LINE_DEFAULT
+				local icon_color = enable_notification_override and notification_icon_color or NOTIFICATION_ICON_DEFAULT
+				local background_color = enable_notification_override and notification_background_color or NOTIFICATION_BACKGROUND_DEFAULT
+				local text_color = enable_notification_override and notification_text_color or NOTIFICATION_TEXT_DEFAULT
 				local line_1_text = mod:localize("stimm_ready_notification")
-				if enable_notification_override and text_color then
+				-- if enable_notification_override and text_color then
 					line_1_text = string.format("{#color(%d,%d,%d)}%s{#reset()}", text_color[2], text_color[3], text_color[4], line_1_text)
-				end
+				-- end
 
 				Managers.event:trigger("event_add_notification_message", "custom", {
 					icon = STIMM_ICON_MATERIAL,
 					icon_size = "currency",
 					color = clone_color(background_color),
 					line_color = clone_color(line_color),
-					line_1 = line_1_text,
 					icon_color = clone_color(icon_color),
+					line_1 = line_1_text,
 					show_shine = true,
 				})
 			end
@@ -365,14 +342,13 @@ mod:hook_safe("HudElementPlayerWeapon", "update", function(self, dt, t, ui_rende
 		end
 	end
 
-	if icon_color_to_apply then
-		local icon_set = clone_color(icon_color_to_apply)
+	if icon_color_to_apply or line_color_to_apply or bg_color_to_apply then
+		local icon_set = icon_color_to_apply and clone_color(icon_color_to_apply) or nil
 		local line_set = line_color_to_apply and clone_color(line_color_to_apply) or nil
 		local bg_set = bg_color_to_apply and clone_color(bg_color_to_apply) or nil
 		apply_icon_and_background_colors(icon_widget, background_widget, icon_set, line_set, bg_set)
 	end
 
-	-- Скрываем виджет если не должно показываться
 	if not should_show then
 		widget.content.text = ""
 		widget.content.visible = false
@@ -381,19 +357,15 @@ mod:hook_safe("HudElementPlayerWeapon", "update", function(self, dt, t, ui_rende
 		return
 	end
 
-	-- Обновляем виджет
 	widget.content.text = display_text
 	widget.content.visible = true
 	widget.visible = true
-	-- Устанавливаем цвет
 	widget.style.text.text_color[1] = display_color[1]
 	widget.style.text.text_color[2] = display_color[2]
 	widget.style.text.text_color[3] = display_color[3]
 	widget.style.text.text_color[4] = display_color[4]
 
-	-- Синхронизируем позицию с height_offset слота (как другие виджеты)
 	local height_offset = self._height_offset or 0
-	-- Обновляем только Y offset для синхронизации с позицией слота
 	widget.style.text.offset[2] = height_offset
 
 	widget.dirty = true
