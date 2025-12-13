@@ -547,6 +547,13 @@
 - MOD 檔案名稱：Quick Level Mastery-395-0-1-0-1730554189
 - 手動維護最後下載日期：2025-12-08
 
+### [PlasmaGunLagFix](https://www.nexusmods.com/warhammer40kdarktide/mods/666)
+    修正當前版本電漿槍會Lag的問題
+- MOD 網站最後更新日期：Last updated 13 December 2025, 12:51PM
+- MOD 版本：1.01
+- MOD 檔案名稱：Quick Level Mastery-395-0-1-0-1730554189
+- 手動維護最後下載日期：2025-12-13
+
 ---
 # 遊戲內操作相關MOD
 
