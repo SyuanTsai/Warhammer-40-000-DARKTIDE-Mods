@@ -297,6 +297,8 @@ local loc = {
     breed_misc = {
         en = "Miscellaneous",
         ja = "その他",
+		["zh-cn"] = "其他",
+        ["zh-tw"] = "其他",
     },
     bleed = {
         en = "Bleeding",
@@ -335,6 +337,9 @@ local loc = {
     },
     neurotoxin_interval_buff = {
         en = "Chem Toxin",
+        ja = "ケム毒",
+		["zh-cn"] = "化学毒素",
+        ["zh-tw"] = "化學毒素",
 	},
     power_maul_sticky_tick = {
         en = "Shock",
@@ -455,3 +460,4 @@ for i, name in ipairs(Color.list) do
 end
 
 return loc
+
