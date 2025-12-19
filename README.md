@@ -129,10 +129,10 @@
 
 ### [Decode Minigame Solver](https://www.nexusmods.com/warhammer40kdarktide/mods/426)
     自動解碼器
-- MOD 網站最後更新日期：Last updated 08 July 2025, 5:40AM
-- MOD 版本：1.2.1
-- MOD 檔案名稱：DecodeMinigameSolver-426-1-2-1-1751924444
-- 手動維護最後下載日期：2025-07-09
+- MOD 網站最後更新日期：Last updated 17 December 2025, 8:51PM
+- MOD 版本：1.2.2
+- MOD 檔案名稱：DecodeMinigameSolver-426-1-2-2-1765975915
+- 手動維護最後下載日期：2025-12-19
 
 ### [Train Solver](https://www.nexusmods.com/warhammer40kdarktide/mods/420)
     火車自動解碼器
