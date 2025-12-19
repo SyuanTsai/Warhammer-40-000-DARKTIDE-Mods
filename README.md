@@ -644,9 +644,16 @@
 
 ### [Mauler Attack Indicator](https://www.nexusmods.com/warhammer40kdarktide/mods/638)
     重錘兵的攻擊範圍顯示
-- MOD 網站最後更新日期：Last updated 20 November 2025, 7:47AM
+- MOD 網站最後更新日期：Last updated 20 November 2025, 7:54AM
 - MOD 版本：1.0.0
 - MOD 檔案名稱：Mauler Attack Indicator-638-1-0-0-1763596007
+- 手動維護最後下載日期：2025-12-19
+
+### [Crusher Attack Indicator](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
+    輾壓者的攻擊範圍顯示
+- MOD 網站最後更新日期：Last updated 30 October 2025, 6:17AM
+- MOD 版本：1.0.0
+- MOD 檔案名稱：Crusher Attack Indicator-639-1-0-0-1763596452
 - 手動維護最後下載日期：2025-12-19
 
 ### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
