@@ -547,12 +547,6 @@
 - MOD 檔案名稱：Quick Level Mastery-395-0-1-0-1730554189
 - 手動維護最後下載日期：2025-12-08
 
-### [PlasmaGunLagFix](https://www.nexusmods.com/warhammer40kdarktide/mods/666)
-    修正當前版本電漿槍會Lag的問題
-- MOD 網站最後更新日期：Last updated 13 December 2025, 12:51PM
-- MOD 版本：1.01
-- MOD 檔案名稱：Quick Level Mastery-395-0-1-0-1730554189
-- 手動維護最後下載日期：2025-12-13
 
 ---
 # 遊戲內操作相關MOD
@@ -649,6 +643,13 @@
 - MOD 檔案名稱：StimmCountdown-653-1-2-2-1765317161
 - 手動維護最後下載日期：2025-12-10
 
+### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
+    怪物生成器 - 靈能室可以選擇要生那些怪，並且產生特定波次訓練身法。
+- MOD 網站最後更新日期：Last updated 30 October 2025, 6:17AM
+- MOD 版本：Version 25.10.29
+- MOD 檔案名稱：Creature Spawner-25-25-10-29-1761776237
+- 手動維護最後下載日期：2025-12-06
+
 # 移除的MOD
 
 ### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
@@ -708,9 +709,10 @@
 - 手動維護最後下載日期：2025-04-01
 - 移除原因：機械神教取代
 
-### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
-    怪物生成器 - 靈能室可以選擇要生那些怪，並且產生特定波次訓練身法。
-- MOD 網站最後更新日期：Last updated 30 October 2025, 6:17AM
-- MOD 版本：Version 25.10.29
-- MOD 檔案名稱：Creature Spawner-25-25-10-29-1761776237
-- 手動維護最後下載日期：2025-12-06
+### [PlasmaGunLagFix](https://www.nexusmods.com/warhammer40kdarktide/mods/666)
+    修正當前版本電漿槍會Lag的問題
+- MOD 網站最後更新日期：Last updated 13 December 2025, 12:51PM
+- MOD 版本：1.01
+- MOD 檔案名稱：Quick Level Mastery-395-0-1-0-1730554189
+- 手動維護最後下載日期：2025-12-13
+- 移除原因：官方已修復
