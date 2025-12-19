@@ -352,10 +352,10 @@
 
 ### [Guarantee Ability Activation](https://www.nexusmods.com/warhammer40kdarktide/mods/336)
     防止取消大絕
-- MOD 網站最後更新日期：Last updated 10 July 2025, 7:12PM
-- MOD 版本：1.3.9
-- MOD 檔案名稱：Guarantee Ability Activation-336-1-3-9-1752145928
-- 手動維護最後下載日期：2025-07-12
+- MOD 網站最後更新日期：Last updated 17 December 2025, 6:36PM
+- MOD 版本：1.3.10
+- MOD 檔案名稱：Guarantee Ability Activation-336-1-3-10-1765967817
+- 手動維護最後下載日期：2025-12-19
 
 ### [Custom HUD](https://www.nexusmods.com/warhammer40kdarktide/mods/10)
     客製化UI
