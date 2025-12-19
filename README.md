@@ -605,11 +605,11 @@
 - 手動維護最後下載日期：2025-04-05
 
 ### [Remember Difficulty](https://www.nexusmods.com/warhammer40kdarktide/mods/490)
-    記住死神試煉的難度
-- MOD 網站最後更新日期：Last updated 27 March 2025 8:56AM
-- MOD 版本：1.0.0
-- MOD 檔案名稱：Remember Difficulty-490-1-0-0-1743065799
-- 手動維護最後下載日期：2025-04-05
+    記住最後的的難度
+- MOD 網站最後更新日期：Last updated 17 December 2025, 10:32AM
+- MOD 版本：1.0.1
+- MOD 檔案名稱：Remember Difficulty-490-1-0-1-1765938766
+- 手動維護最後下載日期：2025-12-19
 
 ### [Share Talents](https://www.nexusmods.com/warhammer40kdarktide/mods/215)
     天賦分享
