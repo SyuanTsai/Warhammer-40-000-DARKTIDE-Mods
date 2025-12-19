@@ -37,6 +37,10 @@ local loc = {
 		["zh-tw"] = "視線外圖標透明度",
 		["zh-cn"] = "视野外图标透明度",
 	},
+	ads_los_opacity = {
+		en = "ADS Line of sight alpha (percentage)",
+		["zh-tw"] = "瞄準視線外的圖標透明度",
+	},
 	marker_background_colour = {
 		en = "Marker background colour",
 		["zh-tw"] = "標記背景顏色",
@@ -91,6 +95,10 @@ local loc = {
 		ru = "Максимальное расстояние",
 		["zh-tw"] = "最遠距離",
 		["zh-cn"] = "最大距离",
+	},
+	med_station_max_distance = {
+		en = "Medicae Station marker max distance",
+		["zh-tw"] = "醫療站標記最大距離",
 	},
 	ammo_med_max_size = {
 		en = "Maximum size of marker",
@@ -772,7 +780,8 @@ local loc = {
 		["zh-cn"] = "启用图标",
 	},
 	broker_stimm_enable = {
-		en = "Enable Hive Scum Stimm Markers"
+		en = "Enable Hive Scum Stimm Markers",
+		["zh-tw"] = "啟用巢都敗類興奮劑標記",
 	},
 	stimm_general_settings = {
 		en = "General Settings",
