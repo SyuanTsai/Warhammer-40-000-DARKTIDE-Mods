@@ -93,7 +93,6 @@ TalentRefundBelow
 AUPM
 KPM
 Archivum Messelina
-PlasmaGunLagFix
 
 -- 不會顯示在模組管理的MOD
 IME_Enable
