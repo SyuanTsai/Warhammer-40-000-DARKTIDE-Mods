@@ -5,13 +5,13 @@ local localizations = {
 	mod_name = {
 		["en"] = "Mauler Attack Indicator",
 		["zh-cn"] = "屠杀者攻击指示器",
-        ["zh-tw"] = "輾壓者攻擊範圍顯示",
+        ["zh-tw"] = "重錘兵攻擊範圍顯示",
 		["ru"] = "Индикатор атаки Молотителя",
 	},
 	mod_description = {
 		["en"] = "Shows colored rings for Mauler overhead attacks. Yellow for warning, Red for the actual attack. Optional persistent yellow ring. Version: " .. version,
 		["zh-cn"] = "显示屠杀者重击攻击的彩色指示环 - 黄色为警告，红色为实际攻击。可选常驻黄色环。版本：" .. version,
-        ["zh-tw"] = "顯示輾壓者頭頂攻擊的攻擊區域 - 黃色為警戒，紅色為實際攻擊。可選常駐警戒區域。版本：" .. version,
+        ["zh-tw"] = "顯示重錘兵頭頂攻擊的攻擊區域 - 黃色為警戒，紅色為實際攻擊。可選常駐警戒區域。版本：" .. version,
 		["ru"] = "Показывает цветные кольца для атак Молотителя - Жёлтый для предупреждения, Красный для самой атаки. Опциональное постоянное жёлтое кольцо. Версия: " .. version,
 	},
     enabled = {
@@ -29,7 +29,7 @@ local localizations = {
     persistent_yellow_tooltip = {
         ["en"] = "Show yellow ring around maulers at all times (not just during attacks)",
         ["zh-cn"] = "始终在屠杀者周围显示黄色环（不仅限于攻击期间）",
-        ["zh-tw"] = "始終在輾壓者周圍顯示警戒區域（不僅限於攻擊期間）",
+        ["zh-tw"] = "始終在重錘兵周圍顯示警戒區域（不僅限於攻擊期間）",
         ["ru"] = "Показывать жёлтое кольцо вокруг молотителей постоянно (не только во время атак)",
     },
     ring_radius = {
