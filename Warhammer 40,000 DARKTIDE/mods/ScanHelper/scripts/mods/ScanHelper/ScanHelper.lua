@@ -1,10 +1,9 @@
-local mod = get_mod("ScanHelper")
+﻿local mod = get_mod("ScanHelper")
 
 local scannable_units = {}
 
 local _set_outline_and_highlight = function(active)
-    for i = 1, #scannable_units do
-        local scannable_unit = scannable_units[i]
+    for scannable_unit, _ in pairs(scannable_units) do
         local scannable_extension = ScriptUnit.has_extension(scannable_unit, "mission_objective_zone_scannable_system")
 
         if scannable_extension then
@@ -20,14 +19,10 @@ end
 
 mod:hook_safe(CLASS.AuspexScanningEffects, "init", function (...)
     local mission_objective_zone_system = Managers.state.extension:system("mission_objective_zone_system")
-    local current_scan_mission_zone = mission_objective_zone_system:current_active_zone()
+    
+    scannable_units = mission_objective_zone_system:scannable_units()
 
-    if not current_scan_mission_zone then
-        return
+    if scannable_units then
+        _set_outline_and_highlight(true)
     end
-
-    scannable_units = current_scan_mission_zone:scannable_units()
-
-    _set_outline_and_highlight(true)
 end)
-

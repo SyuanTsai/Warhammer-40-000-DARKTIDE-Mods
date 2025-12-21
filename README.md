@@ -148,12 +148,13 @@
 - MOD 檔案名稱：Tree_Helper-369-1-0-0-1727816343
 - 手動維護最後下載日期：2025-02-09
 
-### [Scan Helper](https://www.nexusmods.com/warhammer40kdarktide/mods/352)
+### [Scan Helper](https://www.nexusmods.com/warhammer40kdarktide/mods/657)
     掃描助手
-- MOD 網站最後更新日期：Last updated 25 August 2024 9:54AM
-- MOD 版本：1.0.1
-- MOD 檔案名稱：ScanHelper-352-1-0-1-1724576075
-- 手動維護最後下載日期：2025-02-09
+    [Old Scan Helper](https://www.nexusmods.com/warhammer40kdarktide/mods/352)
+- MOD 網站最後更新日期：Last updated 07 December 2025, 6:35PM
+- MOD 版本：1.0
+- MOD 檔案名稱：ScanHelper-657-1-0-1765103745
+- 手動維護最後下載日期：2025-12-21
 
 ### [Show Crit Chance](https://www.nexusmods.com/warhammer40kdarktide/mods/279)
     顯示爆擊率 - 顯示當前爆擊率
