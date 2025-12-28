@@ -521,10 +521,10 @@
 
 ### [Uptime](https://www.nexusmods.com/warhammer40kdarktide/mods/387)
     觀察天賦的運作狀況
-- MOD 網站最後更新日期：Last updated 11 December 2025, 1:06AM
-- MOD 版本：1.3.4
-- MOD 檔案名稱：uptime-573-1-1-1753640106
-- 手動維護最後下載日期：2025-12-12
+- MOD 網站最後更新日期：Last updated 21 December 2025, 10:34PM
+- MOD 版本：1.3.5
+- MOD 檔案名稱：uptime-573-1-3-5-1766327649
+- 手動維護最後下載日期：2025-12-28
 
 ### [InventoryStats](https://www.nexusmods.com/warhammer40kdarktide/mods/152)
     玩家Build資訊
