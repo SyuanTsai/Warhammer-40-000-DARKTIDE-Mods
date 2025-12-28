@@ -576,6 +576,14 @@
 - MOD 檔案名稱：CombatStats-661-0-3-9-1766745002
 - 手動維護最後下載日期：2025-12-28
 
+### [CharacterGrid](https://www.nexusmods.com/warhammer40kdarktide/mods/649)
+    角色顯示
+- MOD 網站最後更新日期：Last updated 26 December 2025, 6:30PM
+- MOD 版本：1.0.1
+- MOD 檔案名稱：CharacterGrid-649-1-0-1-1765318330
+- 手動維護最後下載日期：2025-12-28
+
+
 ---
 # 遊戲內操作相關MOD
 
