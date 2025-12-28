@@ -32,7 +32,7 @@ return {
 	replace_cultist_flamer_vfx = {
 		en = "Replace Cultist Flamer VFX",
 		["zh-cn"] = "替换狂信火焰喷射器特效",
-		["zh-tw"] = "替換渣梓火焰噴射器特效",
+		["zh-tw"] = "替換渣滓火焰噴射器特效",
 	},
 	replace_blight_vfx = {
 		en = "Replace Havoc's Blight Spreads (ground) VFX",
@@ -42,7 +42,7 @@ return {
 	replace_immolation_vfx = {
 		en = "Replace Immolation Grenade VFX (Lingering Fire)",
 		["zh-cn"] = "替换狂信火雷特效（火焰）",
-		["zh-tw"] = "替換狂信火雷特效（火焰）",
+		["zh-tw"] = "替換渣滓火焰特效（火焰）",
 	},
 	replace_rotten_vfx = {
 		en = "Replace Rotten Armor's Lingering Gas (after kill) VFX",
