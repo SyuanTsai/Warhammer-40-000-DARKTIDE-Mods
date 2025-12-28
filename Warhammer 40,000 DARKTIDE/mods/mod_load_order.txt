@@ -87,6 +87,7 @@ EmpowerUntilLimit
 StimmCountdown
 i_wanna_see
 vfx_swapper
+MemLeakFix
 
 -- 基本上不需設定
 psych_ward
