@@ -85,6 +85,7 @@ MissionBrief
 uptime
 EmpowerUntilLimit
 StimmCountdown
+i_wanna_see
 
 -- 基本上不需設定
 psych_ward
