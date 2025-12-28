@@ -17,7 +17,7 @@ return {
 	replace_gas_vfx = {
 		en = "Replace Grenadier's Gas Bombs VFX",
 		["zh-cn"] = "替换毒气炸弹特效",
-		["zh-tw"] = "替換爆破手毒氣彈特效",
+		["zh-tw"] = "替換劇毒轟炸者毒氣彈特效",
 	},
 	replace_renegade_grenade_vfx = {
 		en = "Replace Renegade Grenadier's Fire Grenade VFX",
