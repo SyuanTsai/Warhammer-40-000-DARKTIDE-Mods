@@ -22,6 +22,7 @@ scoreboard
 ScoreboardExplosive
 ovenproof_scoreboard_plugin
 Power_DI
+CombatStats
 
 -- 只會設定一次，但需要詳細設定
 SpecialsTracker
