@@ -555,6 +555,14 @@
 - MOD 檔案名稱：I Wanna See-371-1-1-2-1753845943
 - 手動維護最後下載日期：2025-12-28
 
+### [VFX Swapper](https://www.nexusmods.com/warhammer40kdarktide/mods/678)
+    修改特效的顯示方式
+- MOD 網站最後更新日期：Last updated 26 December 2025, 2:50PM
+- MOD 版本：1.0.0
+- MOD 檔案名稱：VFX Swapper-678-1-0-0-1766731563
+- 手動維護最後下載日期：2025-12-28
+
+
 ---
 # 遊戲內操作相關MOD
 
