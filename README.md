@@ -561,6 +561,13 @@
 - MOD 檔案名稱：TeamKills-577-2-2-1-1767136133
 - 手動維護最後下載日期：2026-01-01
 
+### [BrokerAutoStim](https://www.nexusmods.com/warhammer40kdarktide/mods/655)
+    顯示隊伍擊殺資訊
+- MOD 網站最後更新日期：Last updated 22 December 2025, 8:28AM
+- MOD 版本：2.5
+- MOD 檔案名稱：BrokerAutoStim-655-2-5-1766363294
+- 手動維護最後下載日期：2026-01-01
+
 ---
 # 遊戲內操作相關MOD
 
