@@ -394,7 +394,7 @@
 - 手動維護最後下載日期：2025-04-16
 
 ### [Improved Havoc Tags](https://www.nexusmods.com/warhammer40kdarktide/mods/500)
-    自動平息
+    浩劫詞條說明改善
 - MOD 網站最後更新日期：Last updated 24 September 2025, 11:37AM
 - MOD 版本：3.1
 - MOD 檔案名稱：Improved Havoc Tags-500-2-3-1750873657
