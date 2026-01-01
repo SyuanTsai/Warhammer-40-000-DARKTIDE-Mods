@@ -447,7 +447,7 @@
 - 手動維護最後下載日期：2025-07-12
 
 ### [Teammate Health Bars](https://www.nexusmods.com/warhammer40kdarktide/mods/560)
-    自動手榴彈(一鍵投出、獒犬自爆)
+    隊友血條顯示
 - MOD 網站最後更新日期：Last updated 09 July 2025, 4:26AM
 - MOD 版本：2.4
 - MOD 檔案名稱：Team health bars-560-2-4-1752006409
