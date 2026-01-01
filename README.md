@@ -463,13 +463,6 @@
 - 手動維護最後下載日期：2025-12-06
 - Google Drive
 
-### [Teammate Health Bars](https://www.nexusmods.com/warhammer40kdarktide/mods/560)
-    隊友血條顯示
-- MOD 網站最後更新日期：Last updated 09 July 2025, 4:26AM
-- MOD 版本：2.4
-- MOD 檔案名稱：Team health bars-560-2-4-1752006409
-- 手動維護最後下載日期：2025-07-12
-
 ### [SpecialsTracker](https://www.nexusmods.com/warhammer40kdarktide/mods/274)
     顯示場上所有特感數量
 - MOD 網站最後更新日期：Last updated 24 September 2025, 8:12PM
@@ -766,3 +759,11 @@
 - MOD 檔案名稱：
 - 手動維護最後下載日期
 - 移除原因：總會在你不想要冷卻的時候自己冷卻
+
+### [Teammate Health Bars](https://www.nexusmods.com/warhammer40kdarktide/mods/560)
+    隊友血條顯示
+- MOD 網站最後更新日期：Last updated 09 July 2025, 4:26AM
+- MOD 版本：2.4
+- MOD 檔案名稱：Team health bars-560-2-4-1752006409
+- 手動維護最後下載日期：2025-07-12
+- 移除原因：知道隊友血條後能做的是有限，反而會扣招。

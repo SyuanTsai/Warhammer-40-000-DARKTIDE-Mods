@@ -76,7 +76,6 @@ WeaponFilter
 afk
 red_weapons_at_home
 AutoBlitz
-TeammateHealthbars
 DisplayPing
 Reconnect
 valkyrie
