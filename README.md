@@ -118,14 +118,6 @@
 - MOD 檔案名稱：SuperImpact.zip-319-V1-1-1718836296
 - 手動維護最後下載日期：2025-02-09
 
-
-### [AutoTag](https://www.nexusmods.com/warhammer40kdarktide/mods/374)
-    自動標記 - 只要準心有對到菁英以上都會自動標記
-- MOD 網站最後更新日期：Last updated 24 June 2025, 12:16PM
-- MOD 版本：1.7
-- MOD 檔案名稱：AutoTag.zip-374-v-1-7-1750738584
-- 手動維護最後下載日期：2025-06-24
-
 ---
 # 遊戲內操作相關MOD
 
