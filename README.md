@@ -371,13 +371,6 @@
 - Source=>  https://github.com/zombine04/darktide-mods
 - Fork  =>  https://github.com/SyuanTsai/darktide-mods
 
-### [RickAndMortis](https://www.nexusmods.com/warhammer40kdarktide/mods/488)
-    顯示移動速度
-- MOD 網站最後更新日期：Last updated 30 March 2025 4:49AM
-- MOD 版本：0.55
-- MOD 檔案名稱：RickAndMortis.zip-491-0-55-1743310031
-- 手動維護最後下載日期：2025-04-03
-
 ### [Perspectives Mod](https://www.nexusmods.com/warhammer40kdarktide/mods/111)
     第三人稱視角
 - MOD 網站最後更新日期：Last updated 03 December 2024 6:00PM
@@ -767,3 +760,11 @@
 - MOD 檔案名稱：AutoTag.zip-374-v-1-7-1750738584
 - 手動維護最後下載日期：2025-06-24
 - 移除原因：與狗哨(DogWhistle)功能重複
+
+### [RickAndMortis](https://www.nexusmods.com/warhammer40kdarktide/mods/488)
+    靈能室測試死神試煉的技能
+- MOD 網站最後更新日期：Last updated 30 March 2025 4:49AM
+- MOD 版本：0.55
+- MOD 檔案名稱：RickAndMortis.zip-491-0-55-1743310031
+- 手動維護最後下載日期：2025-04-03
+- 移除原因：開發者已經停止維護，啟用功能會導致遊戲崩潰。
