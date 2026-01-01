@@ -57,7 +57,6 @@ danger_zone
 RecolorBossHealthBars
 KeepSwinging
 buy_until_rating
-BetterMelk
 PlayerOutlines
 name_it
 guarantee_ability_activation
@@ -86,6 +85,7 @@ i_wanna_see
 vfx_swapper
 MemLeakFix
 CharacterGrid
+BetterMelk
 
 -- 基本上不需設定
 psych_ward
