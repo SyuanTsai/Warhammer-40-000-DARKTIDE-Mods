@@ -86,6 +86,7 @@ vfx_swapper
 MemLeakFix
 CharacterGrid
 BetterMelk
+TeamKills
 
 -- 基本上不需設定
 psych_ward

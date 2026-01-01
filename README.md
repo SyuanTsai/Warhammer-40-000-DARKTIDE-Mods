@@ -554,6 +554,12 @@
 - MOD 檔案名稱：CharacterGrid-649-1-0-1-1765318330
 - 手動維護最後下載日期：2025-12-28
 
+### [TeamKills](https://www.nexusmods.com/warhammer40kdarktide/mods/577)
+    顯示隊伍擊殺資訊
+- MOD 網站最後更新日期：Last updated 26 December 2025, 6:30PM
+- MOD 版本：2.2.1
+- MOD 檔案名稱：TeamKills-577-2-2-1-1767136133
+- 手動維護最後下載日期：2026-01-01
 
 ---
 # 遊戲內操作相關MOD
