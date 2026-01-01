@@ -374,13 +374,6 @@
 - MOD 檔案名稱：Do I Know You 1.0.3.zip-488-1-0-3-1743019163
 - 手動維護最後下載日期：2025-03-31
 
-### [RickAndMortis](https://www.nexusmods.com/warhammer40kdarktide/mods/491)
-    靈能室測試死神試煉的技能
-- MOD 網站最後更新日期：Last updated 30 March 2025 4:49AM
-- MOD 版本：0.55
-- MOD 檔案名稱：RickAndMortis.zip-491-0-55-1743310031
-- 手動維護最後下載日期：2025-04-03
-
 ---
 # 遊戲內操作相關MOD
 
