@@ -232,12 +232,12 @@
 		cancel_during_ability = {
 			en = "Cancel Injection During Combat Ability",
 			["zh-cn"] = "战斗技能激活时取消注射",
-			["zh-tw"] = "戰技啟動時取消注射",
+			["zh-tw"] = "戰鬥技能啟動時取消注射",
 		},
 		cancel_during_ability_description = {
 			en = "Cancel injection attempt while combat ability is active. Useful for cooldown reduction stims. Note: This does not block injections in 'Before Ability' trigger mode to prevent conflicts",
 			["zh-cn"] = "战斗技能激活时取消注射尝试。适用于冷却缩减兴奋剂。注意：这不会在'使用技能前'触发模式下阻止注射，以防止冲突。",
-			["zh-tw"] = "戰技啟動期間取消注射嘗試。適用於冷卻縮減型興奮劑。注意：為避免衝突，在「使用技能前」觸發模式下不會阻止注射。",
+			["zh-tw"] = "戰鬥技能啟動期間取消注射嘗試。適用於冷卻縮減型興奮劑。注意：為避免衝突，在「使用技能前」觸發模式下不會阻止注射。",
 		},
 		block_nearby_dog = {
 			en = "Block Injection Near Dog",
@@ -247,7 +247,7 @@
 		block_nearby_dog_description = {
 			en = "Prevent injection when Chaos Hounds (Dogs) are nearby.",
 			["zh-cn"] = "混沌猎犬附近时阻止注射。",
-			["zh-tw"] = "混沌獵犬在附近時阻止注射。",
+			["zh-tw"] = "瘟疫獵犬在附近時阻止注射。",
 		},
 		dog_detection_range = {
 			en = "Dog Detection Range",
@@ -257,67 +257,67 @@
 		dog_detection_range_description = {
 			en = "Distance to scan for chaos hounds.",
 			["zh-cn"] = "扫描混沌猎犬的距离。",
-			["zh-tw"] = "掃描混沌獵犬的距離。",
+			["zh-tw"] = "掃描瘟疫獵犬的距離。",
 		},
 		block_nearby_trapper = {
 			en = "Block Injection Near Trapper",
 			["zh-cn"] = "网枪兵附近阻止注射",
-			["zh-tw"] = "網槍兵附近阻止注射",
+			["zh-tw"] = "陷阱兵附近阻止注射",
 		},
 		block_nearby_trapper_description = {
 			en = "Prevent injection when Renegade Netgunners (Trappers) are nearby.",
 			["zh-cn"] = "血痂网枪兵附近时阻止注射。",
-			["zh-tw"] = "血痂網槍兵在附近時阻止注射。",
+			["zh-tw"] = "陷阱兵在附近時阻止注射。",
 		},
 		trapper_detection_range = {
 			en = "Trapper Detection Range",
 			["zh-cn"] = "网枪兵侦测范围",
-			["zh-tw"] = "網槍兵偵測範圍",
+			["zh-tw"] = "陷阱兵偵測範圍",
 		},
 		trapper_detection_range_description = {
 			en = "Distance to scan for trappers.",
 			["zh-cn"] = "扫描网枪兵的距离。",
-			["zh-tw"] = "掃描網槍兵的距離。",
+			["zh-tw"] = "掃描陷阱兵的距離。",
 		},
 		block_nearby_burster = {
 			en = "Block Injection Near Burster",
 			["zh-cn"] = "爆裂体附近阻止注射",
-			["zh-tw"] = "爆裂體附近阻止注射",
+			["zh-tw"] = "瘟疫暴者附近阻止注射",
 		},
 		block_nearby_burster_description = {
 			en = "Prevent injection when Chaos Poxwalker Bombers (Bursters) are nearby.",
 			["zh-cn"] = "瘟疫自爆人附近时阻止注射。",
-			["zh-tw"] = "瘟疫自爆者在附近時阻止注射。",
+			["zh-tw"] = "瘟疫爆者在附近時阻止注射。",
 		},
 		burster_detection_range = {
 			en = "Pox Burster Detection Range",
 			["zh-cn"] = "瘟疫自爆人侦测范围",
-			["zh-tw"] = "瘟疫自爆者偵測範圍",
+			["zh-tw"] = "瘟疫爆者偵測範圍",
 		},
 		burster_detection_range_description = {
 			en = "Distance to scan for pox bursters.",
 			["zh-cn"] = "扫描瘟疫自爆人的距离。",
-			["zh-tw"] = "掃描瘟疫自爆者的距離。",
+			["zh-tw"] = "掃描瘟疫爆者的距離。",
 		},
 		block_nearby_crusher = {
 			en = "Block Injection Near Crusher/Mauler",
 			["zh-cn"] = "粉碎者/血痂重锤兵附近阻止注射",
-			["zh-tw"] = "粉碎者／血痂重鎚兵附近阻止注射",
+			["zh-tw"] = "輾壓者／重鎚兵附近阻止注射",
 		},
 		block_nearby_crusher_description = {
 			en = "Prevent injection when Chaos Ogryn Executors (Crushers) or Renegade Executors (Maulers) are nearby.",
 			["zh-cn"] = "混沌欧格林处决者或血痂处决者附近时阻止注射。",
-			["zh-tw"] = "混沌歐格林處決者或血痂處決者在附近時阻止注射。",
+			["zh-tw"] = "輾壓者／重鎚兵在處決動畫時阻止注射。",
 		},
 		crusher_detection_range = {
 			en = "Crusher/Mauler Detection Range",
 			["zh-cn"] = "粉碎者/血痂重锤兵侦测范围",
-			["zh-tw"] = "粉碎者／血痂重鎚兵偵測範圍",
+			["zh-tw"] = "輾壓者／重鎚兵偵測範圍",
 		},
 		crusher_detection_range_description = {
 			en = "Distance to scan for crushers and maulers",
 			["zh-cn"] = "扫描粉碎者和血痂重锤兵的距离。",
-			["zh-tw"] = "掃描粉碎者與血痂重鎚兵的距離。",
+			["zh-tw"] = "掃描輾壓者與重鎚兵的距離。",
 		},
 		block_nearby_rager = {
 			en = "Block Injection Near Rager",
