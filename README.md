@@ -393,13 +393,6 @@
 - MOD 檔案名稱：Perspectives-111-1-11-1733248815
 - 手動維護最後下載日期：2025-04-16
 
-### [AutoQuell]
-    自動平息
-- MOD 網站最後更新日期：
-- MOD 版本：
-- MOD 檔案名稱：
-- 手動維護最後下載日期
-
 ### [Improved Havoc Tags](https://www.nexusmods.com/warhammer40kdarktide/mods/500)
     自動平息
 - MOD 網站最後更新日期：Last updated 24 September 2025, 11:37AM
@@ -765,3 +758,11 @@
 - MOD 檔案名稱：Quick Level Mastery-395-0-1-0-1730554189
 - 手動維護最後下載日期：2025-12-13
 - 移除原因：官方已修復
+
+### [AutoQuell]
+    自動平息
+- MOD 網站最後更新日期：
+- MOD 版本：
+- MOD 檔案名稱：
+- 手動維護最後下載日期
+- 移除原因：總會在你不想要冷卻的時候自己冷卻

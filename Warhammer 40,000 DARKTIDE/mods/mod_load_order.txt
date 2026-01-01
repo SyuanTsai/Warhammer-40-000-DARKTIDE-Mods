@@ -69,7 +69,6 @@ AlternateGrenadeIcons
 InventoryStats
 RickAndMortis
 Perspectives
-AutoQuell33
 clear_smoke
 SoloPlay
 TagKeys
