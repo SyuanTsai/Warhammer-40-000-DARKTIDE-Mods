@@ -446,13 +446,6 @@
 - MOD 檔案名稱：AutoBlitz 1.0.4-480-1-0-4-1752003231
 - 手動維護最後下載日期：2025-07-12
 
-### [Teammate Health Bars](https://www.nexusmods.com/warhammer40kdarktide/mods/560)
-    隊友血條顯示
-- MOD 網站最後更新日期：Last updated 09 July 2025, 4:26AM
-- MOD 版本：2.4
-- MOD 檔案名稱：Team health bars-560-2-4-1752006409
-- 手動維護最後下載日期：2025-07-12
-
 ---
 # 遊戲內操作相關MOD
 
@@ -554,3 +547,11 @@
 - MOD 檔案名稱：TransparentShield-439-1-2-0-1732995433
 - 手動維護最後下載日期：2025-02-09
 - 移除原因：終止支援。
+
+### [Teammate Health Bars](https://www.nexusmods.com/warhammer40kdarktide/mods/560)
+    隊友血條顯示
+- MOD 網站最後更新日期：Last updated 09 July 2025, 4:26AM
+- MOD 版本：2.4
+- MOD 檔案名稱：Team health bars-560-2-4-1752006409
+- 手動維護最後下載日期：2025-07-12
+- 移除原因：無效資訊，知道隊友血條後並不能做甚麼，反而會變成扣招不放技能。
