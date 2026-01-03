@@ -32,7 +32,7 @@ return {
 	i18n_stats_disablers = {
 		en = "DISABLERS",
 		ru = "ОБЕЗДВИЖИВАЮЩИЕ",
-		["zh-tw"] = "致癱敵人",
+		["zh-tw"] = "控制型敵人",
 	},
 	i18n_killsboard_total = {
 		en = "TOTAL",
