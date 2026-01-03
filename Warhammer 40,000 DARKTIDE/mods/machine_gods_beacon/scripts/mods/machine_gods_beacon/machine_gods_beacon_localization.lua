@@ -2,6 +2,7 @@ return {
 	mod_name = {
 		en = "Machine God's Beacon",
 		["zh-cn"] = "万机之神灯火管制",
+		["zh-tw"] = "萬機之神燈火管制",
 		ru = "Маяк Бога-Машины",
 		de = "Leuchtfeuer des Maschinengottes",
 		fr = "Balise du Dieu-Machine",
@@ -10,6 +11,7 @@ return {
 	mod_description = {
 		en = "By invocation of the Machine God, the lumen-spirits of the habitat are awakened.",
 		["zh-cn"] = "藉由万机神的召唤，栖息地的光魂已然苏醒。",
+		["zh-tw"] = "呼喚萬機之神後，棲居地的流明之靈甦醒了。",
 		ru = "По призыву Бога-Машины пробуждаются люмен-духи обители.",
 		de = "Durch die Anrufung des Maschinengottes erwachen die Lumen-Geister der Behausung.",
 		fr = "Par l’invocation du Dieu-Machine, les esprits-lumen de l’habitat s’éveillent.",
@@ -19,6 +21,7 @@ return {
 	general_group = {
 		en = "General Settings",
 		["zh-cn"] = "常规设置",
+		["zh-tw"] = "一般設定",
 		ru = "Общие настройки",
 		de = "Allgemeine Einstellungen",
 		fr = "Paramètres généraux",
@@ -27,6 +30,7 @@ return {
 	enable_light_control_title = {
 		en = "Enable Light Control",
 		["zh-cn"] = "启用灯光控制",
+		["zh-tw"] = "啟用燈光控制",
 		ru = "Включить контроль света",
 		de = "Lichtkontrolle aktivieren",
 		fr = "Activer le contrôle des lumières",
@@ -35,6 +39,7 @@ return {
 	enable_light_control_tooltip = {
 		en = "Take control of mission lighting.",
 		["zh-cn"] = "接管任务中的照明控制权。",
+		["zh-tw"] = "接管任務中的照明控制。",
 		ru = "Взять освещение миссии под свой надзор.",
 		de = "Übernimm die Herrschaft über die Beleuchtung der Mission.",
 		fr = "Prendre la maîtrise de l’éclairage en mission.",
@@ -44,6 +49,7 @@ return {
 	opt_in_special_missions_title = {
 		en = "Include Special Missions",
 		["zh-cn"] = "涵盖特殊任务",
+		["zh-tw"] = "包含特殊任務",
 		ru = "Включить особые миссии",
 		de = "Spezialmissionen einbeziehen",
 		fr = "Inclure les missions spéciales",
@@ -52,6 +58,7 @@ return {
 	opt_in_special_missions_tooltip = {
 		en = "Also apply to Lights Out and Ventilation Purge missions.",
 		["zh-cn"] = "亦应用于熄灯与通风净化任务。",
+		["zh-tw"] = "也套用到熄燈與通風淨化任務。",
 		ru = "Также действует в миссиях «Lights Out» и «Ventilation Purge».",
 		de = "Gilt auch für „Lights Out“- und „Ventilation Purge“-Missionen.",
 		fr = "S’applique aussi aux missions « Lights Out » et « Ventilation Purge ».",
@@ -61,6 +68,7 @@ return {
 	light_percentage_title = {
 		en = "Lights On",
 		["zh-cn"] = "亮灯比例",
+		["zh-tw"] = "亮燈比例",
 		ru = "Свет включён",
 		de = "Lichter an",
 		fr = "Lumières allumées",
@@ -69,6 +77,7 @@ return {
 	light_percentage_tooltip = {
 		en = "Percent of lights to keep on per group.",
 		["zh-cn"] = "每组中保持亮起的灯光百分比。",
+		["zh-tw"] = "每一組要維持亮著的燈光百分比。",
 		ru = "Процент огней, что останутся гореть в каждой группе.",
 		de = "Anteil der Lichter, die pro Gruppe an bleiben.",
 		fr = "Pourcentage de lumières maintenues allumées par groupe.",
@@ -78,6 +87,7 @@ return {
 	light_selection_title = {
 		en = "Selection Mode",
 		["zh-cn"] = "选择模式",
+		["zh-tw"] = "選擇模式",
 		ru = "Способ выбора",
 		de = "Auswahlmodus",
 		fr = "Mode de sélection",
@@ -86,6 +96,7 @@ return {
 	light_selection_tooltip = {
 		en = "How to choose which lights stay on.",
 		["zh-cn"] = "选择哪些灯保持亮起的方式。",
+		["zh-tw"] = "決定哪些燈要保持亮著。",
 		ru = "Как выбираются огни, что останутся гореть.",
 		de = "Wie gewählt wird, welche Lichter an bleiben.",
 		fr = "Comment sont choisies les lumières qui restent allumées.",
@@ -94,6 +105,7 @@ return {
 	light_selection_incremental = {
 		en = "Incremental",
 		["zh-cn"] = "递增",
+		["zh-tw"] = "依序",
 		ru = "По порядку",
 		de = "Fortlaufend",
 		fr = "Progressif",
@@ -102,6 +114,7 @@ return {
 	light_selection_alternating = {
 		en = "Alternating",
 		["zh-cn"] = "交替",
+		["zh-tw"] = "交替",
 		ru = "Через одну",
 		de = "Abwechselnd",
 		fr = "Alterné",
@@ -110,6 +123,7 @@ return {
 	light_selection_spread = {
 		en = "Spread",
 		["zh-cn"] = "分散",
+		["zh-tw"] = "分散",
 		ru = "Равномерно",
 		de = "Verteilt",
 		fr = "Réparti",
@@ -118,6 +132,7 @@ return {
 	light_selection_random = {
 		en = "Random",
 		["zh-cn"] = "随机",
+		["zh-tw"] = "隨機",
 		ru = "Случайно",
 		de = "Zufällig",
 		fr = "Aléatoire",
@@ -127,6 +142,7 @@ return {
 	flicker_group = {
 		en = "Flicker Settings",
 		["zh-cn"] = "闪烁设置",
+		["zh-tw"] = "閃爍設定",
 		ru = "Настройки мерцания",
 		de = "Flacker-Einstellungen",
 		fr = "Paramètres de scintillement",
@@ -135,6 +151,7 @@ return {
 	light_state_title = {
 		en = "Light Behavior",
 		["zh-cn"] = "灯光行为",
+		["zh-tw"] = "燈光行為",
 		ru = "Поведение света",
 		de = "Lichtverhalten",
 		fr = "Comportement des lumières",
@@ -143,6 +160,7 @@ return {
 	light_state_tooltip = {
 		en = "Static: fixed. All: together. Cascade: a wave. Random: a chosen few each cycle.",
 		["zh-cn"] = "静态：固定。全部：同闪。层叠：波浪闪烁。随机：每周期择其一隅。",
+		["zh-tw"] = "靜態：固定。全部：一起。層疊：像波浪。隨機：每個週期挑幾盞。",
 		ru = "Статично: неизменно. Все: вместе. Каскад: волной. Случайно: избранные каждый цикл.",
 		de = "Statisch: fest. Alle: gemeinsam. Kaskade: als Welle. Zufällig: einige pro Zyklus.",
 		fr = "Statique : fixe. Tous : ensemble. Cascade : en vague. Aléatoire : quelques élus par cycle.",
@@ -151,6 +169,7 @@ return {
 	light_state_static = {
 		en = "Static",
 		["zh-cn"] = "静态",
+		["zh-tw"] = "靜態",
 		ru = "Статично",
 		de = "Statisch",
 		fr = "Statique",
@@ -159,6 +178,7 @@ return {
 	light_state_flicker = {
 		en = "Flicker (All)",
 		["zh-cn"] = "闪烁（全部）",
+		["zh-tw"] = "閃爍（全部）",
 		ru = "Мерцать (все)",
 		de = "Flackern (alle)",
 		fr = "Scintiller (tous)",
@@ -167,6 +187,7 @@ return {
 	light_state_flicker_cascade = {
 		en = "Flicker (Cascade)",
 		["zh-cn"] = "闪烁（层叠）",
+		["zh-tw"] = "閃爍（層疊）",
 		ru = "Мерцать (каскад)",
 		de = "Flackern (Kaskade)",
 		fr = "Scintiller (cascade)",
@@ -175,6 +196,7 @@ return {
 	light_state_flicker_random = {
 		en = "Flicker (Random)",
 		["zh-cn"] = "闪烁（随机）",
+		["zh-tw"] = "閃爍（隨機）",
 		ru = "Мерцать (случайно)",
 		de = "Flackern (zufällig)",
 		fr = "Scintiller (aléatoire)",
@@ -184,6 +206,7 @@ return {
 	flicker_default_title = {
 		en = "Flicker Target",
 		["zh-cn"] = "闪烁目标",
+		["zh-tw"] = "閃爍目標",
 		ru = "Цель мерцания",
 		de = "Flackerziel",
 		fr = "Cible du scintillement",
@@ -192,6 +215,7 @@ return {
 	flicker_default_tooltip = {
 		en = "Choose the faithful or the fallen: lights set on briefly dim; lights set off briefly ignite.",
 		["zh-cn"] = "择其所试：设为亮者短暂熄灭；设为灭者短暂亮起。",
+		["zh-tw"] = "選擇要試煉忠誠者或墮落者：設定為亮的燈會短暫變暗；設定為關的燈會短暫點亮。",
 		ru = "Выбери, кого испытать: включённые огни кратко гаснут; выключенные — вспыхивают.",
 		de = "Wähle, wen die Prüfung trifft: An-Lichter dimmen kurz; Aus-Lichter entflammen kurz.",
 		fr = "Choisis qui sera éprouvé : les allumées s’éteignent brièvement ; les éteintes s’embrasent.",
@@ -200,6 +224,7 @@ return {
 	flicker_default_on = {
 		en = "Enabled Lights",
 		["zh-cn"] = "启用的灯",
+		["zh-tw"] = "已啟用的燈",
 		ru = "Включённые огни",
 		de = "Aktive Lichter",
 		fr = "Lumières activées",
@@ -208,6 +233,7 @@ return {
 	flicker_default_off = {
 		en = "Disabled Lights",
 		["zh-cn"] = "禁用的灯",
+		["zh-tw"] = "已停用的燈",
 		ru = "Выключенные огни",
 		de = "Deaktivierte Lichter",
 		fr = "Lumières désactivées",
@@ -217,6 +243,7 @@ return {
 	flicker_interval_title = {
 		en = "Interval (s)",
 		["zh-cn"] = "间隔（秒）",
+		["zh-tw"] = "間隔（秒）",
 		ru = "Интервал (с)",
 		de = "Intervall (s)",
 		fr = "Intervalle (s)",
@@ -225,6 +252,7 @@ return {
 	flicker_interval_tooltip = {
 		en = "Seconds between flicker cycles.",
 		["zh-cn"] = "闪烁周期之间的秒数。",
+		["zh-tw"] = "兩次閃爍週期之間的秒數。",
 		ru = "Секунды между циклами мерцания.",
 		de = "Sekunden zwischen Flackerzyklen.",
 		fr = "Secondes entre les cycles de scintillement.",
@@ -233,6 +261,7 @@ return {
 	flicker_percentage_title = {
 		en = "Flicker Amount",
 		["zh-cn"] = "闪烁比例",
+		["zh-tw"] = "閃爍比例",
 		ru = "Доля мерцания",
 		de = "Flackeranteil",
 		fr = "Quantité de scintillement",
@@ -241,6 +270,7 @@ return {
 	flicker_percentage_tooltip = {
 		en = "Percent of eligible lights to flicker each cycle.",
 		["zh-cn"] = "每周期闪烁符合条件灯光的百分比。",
+		["zh-tw"] = "每個週期要讓符合條件的燈閃爍的百分比。",
 		ru = "Процент подходящих огней, что мерцают в каждом цикле.",
 		de = "Anteil geeigneter Lichter, die pro Zyklus flackern.",
 		fr = "Pourcentage de lumières éligibles qui scintillent à chaque cycle.",
@@ -249,6 +279,7 @@ return {
 	flicker_duration_title = {
 		en = "Duration (s)",
 		["zh-cn"] = "持续时长（秒）",
+		["zh-tw"] = "持續時間（秒）",
 		ru = "Длительность (с)",
 		de = "Dauer (s)",
 		fr = "Durée (s)",
@@ -257,6 +288,7 @@ return {
 	flicker_duration_tooltip = {
 		en = "Seconds a light stays in flicker state.",
 		["zh-cn"] = "灯光保持闪烁状态的秒数。",
+		["zh-tw"] = "燈光維持在閃爍狀態的秒數。",
 		ru = "Сколько секунд свет держится в состоянии мерцания.",
 		de = "Wie viele Sekunden ein Licht im Flackerzustand bleibt.",
 		fr = "Nombre de secondes qu’une lumière reste en état de scintillement.",
@@ -265,6 +297,7 @@ return {
 	flicker_cooldown_title = {
 		en = "Cooldown (s)",
 		["zh-cn"] = "冷却时间（秒）",
+		["zh-tw"] = "冷卻時間（秒）",
 		ru = "Откат (с)",
 		de = "Abklingzeit (s)",
 		fr = "Recharge (s)",
@@ -273,6 +306,7 @@ return {
 	flicker_cooldown_tooltip = {
 		en = "Seconds before a light can flicker again.",
 		["zh-cn"] = "同一盏灯再次闪烁前需要等待的秒数。",
+		["zh-tw"] = "同一盞燈再次閃爍前需要等待的秒數。",
 		ru = "Сколько секунд должно пройти, прежде чем свет сможет мерцать снова.",
 		de = "Sekunden, bevor ein Licht erneut flackern darf.",
 		fr = "Secondes avant qu’une lumière puisse scintiller à nouveau.",
@@ -282,6 +316,7 @@ return {
 	enable_stutter_title = {
 		en = "Enable Stutter",
 		["zh-cn"] = "启用卡顿效果",
+		["zh-tw"] = "啟用斷續",
 		ru = "Включить дрожание",
 		de = "Stottern aktivieren",
 		fr = "Activer le bégaiement",
@@ -290,6 +325,7 @@ return {
 	enable_stutter_tooltip = {
 		en = "Rapid on/off cycling instead of a single toggle.",
 		["zh-cn"] = "使用快速的开关循环，而非单一的切换。",
+		["zh-tw"] = "改為快速反覆開/關循環，而不是只切換一次。",
 		ru = "Быстрые циклы вкл/выкл вместо одного переключения.",
 		de = "Schnelles An/Aus statt eines einzelnen Umschaltens.",
 		fr = "Cycles rapides on/off au lieu d’un seul basculement.",
@@ -298,6 +334,7 @@ return {
 	stutter_count_title = {
 		en = "Stutter Count",
 		["zh-cn"] = "卡顿次数",
+		["zh-tw"] = "斷續次數",
 		ru = "Число циклов",
 		de = "Stotter-Zyklen",
 		fr = "Nombre de cycles",
@@ -306,6 +343,7 @@ return {
 	stutter_count_tooltip = {
 		en = "Base cycles per stutter (with variation).",
 		["zh-cn"] = "每次卡顿的基础循环次数（含随机变化）。",
+		["zh-tw"] = "每次斷續的基礎循環次數（含變化）。",
 		ru = "Базовое число циклов на дрожание (с вариацией).",
 		de = "Grundzyklen pro Stottern (mit Abweichung).",
 		fr = "Cycles de base par bégaiement (avec variation).",
@@ -315,6 +353,7 @@ return {
 	debug_group = {
 		en = "Debug Settings",
 		["zh-cn"] = "调试设置",
+		["zh-tw"] = "除錯設定",
 		ru = "Отладка",
 		de = "Debug-Einstellungen",
 		fr = "Paramètres de débogage",
@@ -323,6 +362,7 @@ return {
 	disable_darkness_title = {
 		en = "Disable Darkness",
 		["zh-cn"] = "禁用黑暗效果",
+		["zh-tw"] = "停用黑暗效果",
 		ru = "Отключить тьму",
 		de = "Dunkelheit deaktivieren",
 		fr = "Désactiver l’obscurité",
@@ -331,6 +371,7 @@ return {
 	disable_darkness_tooltip = {
 		en = "Remove darkness visual effect in Lights Out missions.",
 		["zh-cn"] = "移除熄灯任务中的黑暗视觉效果。",
+		["zh-tw"] = "移除熄燈任務中的黑暗視覺效果。",
 		ru = "Убрать визуальный эффект тьмы в миссиях «Lights Out».",
 		de = "Entfernt den Dunkelheits-Effekt in „Lights Out“-Missionen.",
 		fr = "Supprime l’effet visuel d’obscurité dans les missions « Lights Out ».",
@@ -339,6 +380,7 @@ return {
 	disable_fog_title = {
 		en = "Disable Fog",
 		["zh-cn"] = "禁用迷雾效果",
+		["zh-tw"] = "停用霧氣效果",
 		ru = "Отключить туман",
 		de = "Nebel deaktivieren",
 		fr = "Désactiver le brouillard",
@@ -347,6 +389,7 @@ return {
 	disable_fog_tooltip = {
 		en = "Remove fog visual effect in Ventilation Purge missions.",
 		["zh-cn"] = "移除通风净化任务中的迷雾视觉效果。",
+		["zh-tw"] = "移除通風淨化任務中的霧氣視覺效果。",
 		ru = "Убрать визуальный эффект тумана в миссиях «Ventilation Purge».",
 		de = "Entfernt den Nebel-Effekt in „Ventilation Purge“-Missionen.",
 		fr = "Supprime l’effet visuel de brouillard dans les missions « Ventilation Purge ».",
@@ -355,6 +398,7 @@ return {
 	debug_mode_title = {
 		en = "Debug Mode",
 		["zh-cn"] = "调试模式",
+		["zh-tw"] = "除錯模式",
 		ru = "Режим отладки",
 		de = "Debug-Modus",
 		fr = "Mode débogage",
@@ -363,6 +407,7 @@ return {
 	debug_mode_tooltip = {
 		en = "Show debug messages in chat.",
 		["zh-cn"] = "在聊天中显示调试信息。",
+		["zh-tw"] = "在聊天中顯示除錯訊息。",
 		ru = "Показывать отладочные сообщения в чате.",
 		de = "Debug-Meldungen im Chat anzeigen.",
 		fr = "Afficher les messages de débogage dans le chat.",
