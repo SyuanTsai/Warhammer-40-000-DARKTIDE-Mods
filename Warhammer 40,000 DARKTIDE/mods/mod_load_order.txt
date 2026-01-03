@@ -63,7 +63,6 @@ guarantee_ability_activation
 keep_dodging
 show_cjk_glyphs
 Healthbars
-AlternateGrenadeIcons
 InventoryStats
 Perspectives
 clear_smoke

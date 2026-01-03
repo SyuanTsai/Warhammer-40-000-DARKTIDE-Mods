@@ -200,13 +200,6 @@
 - MOD 檔案名稱：GasOutline.zip-398-V1-0-1729931327
 - 手動維護最後下載日期：2025-02-10
 
-### [Alternate Grenade Icons](https://www.nexusmods.com/warhammer40kdarktide/mods/322)
-    替代手雷圖案 - 讓你可以快速辨識隊友帶甚麼手雷
-- MOD 網站最後更新日期：Last updated 08 June 2024 8:30PM
-- MOD 版本：1.0
-- MOD 檔案名稱：AlternateGrenadeIcons-322-1-0-1717874669
-- 手動維護最後下載日期：2025-02-10
-
 ### [Loadout Monitor](https://www.nexusmods.com/warhammer40kdarktide/mods/160)
     載入中顯示隊友武器
 - MOD 網站最後更新日期：Last updated 05 December 2025, 10:26PM
@@ -788,3 +781,11 @@
 - MOD 檔案名稱：RickAndMortis.zip-491-0-55-1743310031
 - 手動維護最後下載日期：2025-04-03
 - 移除原因：開發者已經停止維護，啟用功能會導致遊戲崩潰。
+
+### [Alternate Grenade Icons](https://www.nexusmods.com/warhammer40kdarktide/mods/322)
+    替代手雷圖案 - 讓你可以快速辨識隊友帶甚麼手雷
+- MOD 網站最後更新日期：Last updated 08 June 2024 8:30PM
+- MOD 版本：1.0
+- MOD 檔案名稱：AlternateGrenadeIcons-322-1-0-1717874669
+- 手動維護最後下載日期：2025-02-10
+- 移除原因：TalentUI取代此MOD
