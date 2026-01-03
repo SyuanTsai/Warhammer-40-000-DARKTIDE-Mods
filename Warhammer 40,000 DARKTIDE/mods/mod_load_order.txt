@@ -24,7 +24,6 @@ StimmsPickupIcon
 TransparentShield
 KillfeedImprovements
 GasOutline
-AlternateGrenadeIcons
 -- 遊戲內操作相關MOD
 TalentRefundBelow
 hybrid_sprint
