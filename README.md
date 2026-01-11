@@ -570,10 +570,10 @@
 
 ### [TalentUI](https://www.nexusmods.com/warhammer40kdarktide/mods/683)
     天賦UI
-- MOD 網站最後更新日期：Last updated 02 January 2026, 1:28AM
-- MOD 版本：1.0.0
-- MOD 檔案名稱：TalentUI-683-1-0-0-1767288502
-- 手動維護最後下載日期：2026-01-03
+- MOD 網站最後更新日期：Last updated 07 January 2026, 11:11PM
+- MOD 版本：1.1.1
+- MOD 檔案名稱：TalentUI-683-1-1-1-1767798662
+- 手動維護最後下載日期：2026-01-11
 
 ---
 # 遊戲內操作相關MOD
