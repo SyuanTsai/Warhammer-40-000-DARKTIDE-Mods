@@ -1,32 +1,5 @@
 local mod = get_mod("vfx_swapper")
-
-local DEBUG_VFX_LOGGING = false
-
-local BLOCKED_VFX = {
-    ["content/fx/particles/impacts/flesh/nurgle_corruption_death"] = true,
-    ["content/fx/particles/enemies/rotten_armor_death"] = true,
-    -- ["content/fx/particles/enemies/rotten_armor_leak"] = true,
-    -- ["content/fx/particles/enemies/rotten_armor_ambient"] = true,
-	-- ["content/fx/particles/enemies/rotten_armor_ambient_lvl2"] = true,
-	-- ["content/fx/particles/enemies/rotten_armor_ambient_lvl3"] = true,
-	-- ["content/fx/particles/enemies/rotten_armor_ambient_lvl4"] = true
-}
-
-mod:hook("FxSystem", "trigger_vfx", function(func, self, vfx_name, position, optional_rotation, ...)
-    -- Debug: log all VFX being triggered
-    if DEBUG_VFX_LOGGING and vfx_name then
-        -- mod:echo("[VFX] " .. tostring(vfx_name))
-    end
-    
-    -- Skip blocked VFX entirely
-    if BLOCKED_VFX[vfx_name] then
-        -- mod:echo("[VFX BLOCKED] " .. tostring(vfx_name))
-        return
-    end
-    
-    -- Call original for all other VFX
-    return func(self, vfx_name, position, optional_rotation, ...)
-end)
+mod:io_dofile("vfx_swapper/scripts/mods/vfx_swapper/additionalvfx")
 
 -- ============================================================================
 -- VFX Duration Sync
@@ -36,6 +9,8 @@ local REFRESH_INTERVAL = 8  -- Seconds before refreshing short-lived VFX
 
 local FORCE_DESTROY_VFX = {
     ["content/fx/particles/enemies/renegade_psyker/renegade_psyker_summoning_circle"] = true,
+    ["content/fx/particles/abilities/ability_radius_aoe"] = true,
+    ["content/fx/particles/enemies/chaos_mutator_daemonhost_shield"] = true,
 }
 
 local EXTEND_DURATION_PAIRS = {
@@ -60,6 +35,7 @@ mod._decals = mod:persistent_table("vfx_swapper_decals")
 local CIRCLE_TEMPLATES = {
     rotten_armor = "rotten_circle",
     havoc_enemy_corruption_liquid = "blight_circle",
+    broker_tox_grenade = "chemnade_circle",
 }
 
 local function get_circle_setting(setting_id)
@@ -79,7 +55,15 @@ local function is_circle_enabled(template_name)
     return get_circle_setting(circle_type .. "_enabled")
 end
 
--- Create a decal for a liquid area unit
+-- Check if circle-only mode is enabled
+local function is_circle_only_mode(template_name)
+    if template_name == "broker_tox_grenade" then
+        return mod:get("replace_chemnade_vfx") == "CIRCLE_ONLY"
+    end
+    return false
+end
+
+-- Create a decal
 local function create_decal(unit, world, radius, template_name)
     if not is_circle_enabled(template_name) then return nil end
     
@@ -95,45 +79,77 @@ local function create_decal(unit, world, radius, template_name)
     local unit_position = POSITION_LOOKUP[unit]
     if not unit_position then return nil end
     
-    local decal_unit = World.spawn_unit_ex(world, decal_path, nil, unit_position)
+    local circle_only = is_circle_only_mode(template_name)
+    local decal_units = {}
     
+    -- Main outer circle
+    local decal_unit = World.spawn_unit_ex(world, decal_path, nil, unit_position)
     World.link_unit(world, decal_unit, 1, unit, 1)
+    table.insert(decal_units, decal_unit)
+    
+    -- Additional concentric circles for circle-only
+    if circle_only then
+        -- 2 is enough
+        local mid_decal = World.spawn_unit_ex(world, decal_path, nil, unit_position)
+        World.link_unit(world, mid_decal, 1, unit, 1)
+        table.insert(decal_units, mid_decal)
+        
+        -- Inner circle at 33% radius
+        -- local inner_decal = World.spawn_unit_ex(world, decal_path, nil, unit_position)
+        -- World.link_unit(world, inner_decal, 1, unit, 1)
+        -- table.insert(decal_units, inner_decal)
+    end
     
     mod._decals[unit] = {
-        unit = decal_unit,
+        unit = decal_unit,  -- Keep for backwards compatibility
+        units = decal_units,
         radius = radius,
         template_name = template_name,
+        circle_only = circle_only,
     }
     
     return mod._decals[unit]
 end
 
--- Update decal appearance (color and size)
+-- Update decal appearance
 local function update_decal(decal, radius, template_name)
-    if not decal or not decal.unit or not Unit.is_valid(decal.unit) then 
-        return 
-    end
+    if not decal then return end
     
     local circle_type = CIRCLE_TEMPLATES[template_name]
-    if not circle_type then 
-        return 
-    end
+    if not circle_type then return end
     
     local red, green, blue, alpha = get_circle_rgba(circle_type)
     local colour = Quaternion.identity()
     Quaternion.set_xyzw(colour, red, green, blue, 0)
-    Unit.set_vector4_for_material(decal.unit, "projector", "particle_color", colour, true)
-    Unit.set_scalar_for_material(decal.unit, "projector", "color_multiplier", alpha)
-    local diameter = radius * 2
-    Unit.set_local_scale(decal.unit, 1, Vector3(diameter, diameter, 1))
+    
+    -- Handle multiple concentric circles for circle-only
+    local units = decal.units or {decal.unit}
+    local num_circles = #units
+    
+    for i, decal_unit in ipairs(units) do
+        if decal_unit and Unit.is_valid(decal_unit) then
+            Unit.set_vector4_for_material(decal_unit, "projector", "particle_color", colour, true)
+            Unit.set_scalar_for_material(decal_unit, "projector", "color_multiplier", alpha)
+            
+            -- Scale each circle
+            local scale_factor = 1 - ((i - 1) / num_circles)
+            local diameter = radius * 2 * scale_factor
+            Unit.set_local_scale(decal_unit, 1, Vector3(diameter, diameter, 1))
+        end
+    end
+    
     decal.radius = radius
 end
 
 local function destroy_decal(unit)
     local decal = mod._decals[unit]
     if decal then
-        if decal.unit and Unit.is_valid(decal.unit) then
-            World.destroy_unit(Unit.world(decal.unit), decal.unit)
+        -- Handle multiple circles
+        local units = decal.units or {decal.unit}
+        for _, decal_unit in ipairs(units) do
+            if decal_unit and Unit.is_valid(decal_unit) then
+                World.destroy_unit(Unit.world(decal_unit), decal_unit)
+            end
         end
         mod._decals[unit] = nil
     end
@@ -187,12 +203,17 @@ local function process_pending_destroys()
         if t >= entry.destroy_time then
             -- Time to destroy this particle
             if entry.drawer then
-                entry.drawer:remove_cell(entry.particle_id)
-            else
-                World.destroy_particles(entry.world, entry.particle_id)
+                -- For drawer-based particles, just try to remove (no validation available)
+                pcall(function() entry.drawer:remove_cell(entry.particle_id) end)
+            elseif entry.world and entry.particle_id then
+                -- Wrap entire particle check/destroy in pcall - crash prevention
+                pcall(function()
+                    if World.are_particles_playing(entry.world, entry.particle_id) then
+                        World.destroy_particles(entry.world, entry.particle_id)
+                    end
+                end)
             end
             table.remove(mod._pending_destroys, i)
-            -- debug_log("Destroyed old particle after delay")
         else
             i = i + 1
         end
@@ -234,7 +255,6 @@ local function refresh_extension_particles(extension, world, drawer, vfx_name, i
     end
     
     if refreshed_count > 0 then
-        -- debug_log("Refreshed " .. refreshed_count .. " particles for " .. (extension._area_template_name or "unknown"))
     end
 end
 
@@ -280,7 +300,6 @@ mod:hook("LiquidAreaExtension", "destroy", function(func, self)
     local vfx_name = self._vfx_name_filled
     local template_name = self._area_template_name
     
-    -- If this liquid area uses a swapped VFX that needs force-destroy
     if vfx_name and needs_force_destroy(vfx_name, template_name) then
         local world = self._world
         local drawer = self._drawer
@@ -300,7 +319,6 @@ mod:hook("LiquidAreaExtension", "destroy", function(func, self)
         end
         
         if destroyed_count > 0 then
-            -- debug_log("Force-destroyed " .. destroyed_count .. " particles for " .. (self._area_template_name or "unknown"))
         end
     end
     
@@ -330,13 +348,8 @@ mod:hook("HuskLiquidAreaExtension", "destroy", function(func, self)
                 liquid.filled_particle_id = nil
             end
         end
-        
-        if destroyed_count > 0 then
-            -- debug_log("Force-destroyed " .. destroyed_count .. " Husk particles for " .. (self._area_template_name or "unknown"))
-        end
     end
     
-    -- Clean up refresh tracking and decals
     cleanup_refresh_tracking(self)
     destroy_decal(self._unit)
     
@@ -378,6 +391,13 @@ mod:hook("HuskLiquidAreaExtension", "_set_liquid_filled", function(func, self, r
 		self._vfx_name_filled = mod:get("replace_cultist_flamer_vfx")
 	elseif self._area_template_name == "havoc_enemy_corruption_liquid" then
 		self._vfx_name_filled = mod:get("replace_blight_vfx")
+    elseif self._area_template_name == "broker_tox_grenade" then
+		local chemnade_setting = mod:get("replace_chemnade_vfx")
+		if chemnade_setting == "CIRCLE_ONLY" then
+			self._vfx_name_filled = nil
+		else
+			self._vfx_name_filled = chemnade_setting
+		end
 	end
 	
 	return func(self, real_index)
@@ -398,6 +418,13 @@ mod:hook("LiquidAreaExtension", "_set_filled", function(func, self, real_index)
 		self._vfx_name_filled = mod:get("replace_cultist_flamer_vfx")
 	elseif self._area_template_name == "havoc_enemy_corruption_liquid" then
 		self._vfx_name_filled = mod:get("replace_blight_vfx")
+    elseif self._area_template_name == "broker_tox_grenade" then
+		local chemnade_setting = mod:get("replace_chemnade_vfx")
+		if chemnade_setting == "CIRCLE_ONLY" then
+			self._vfx_name_filled = nil
+		else
+			self._vfx_name_filled = chemnade_setting
+		end
 	end
 	
 	return func(self, real_index)
@@ -407,17 +434,30 @@ end)
 -- set_drawer hooks (needed for renegade grenade VFX)
 -- ============================================================================
 
-mod:hook_safe("LiquidAreaExtension", "set_drawer", function(self, drawers)
-	if not mod:get("replace_renegade_grenade_vfx") == "grenade_vfx_default" then
+mod:hook("LiquidAreaExtension", "set_drawer", function(func, self, drawers)
+	if mod:get("replace_renegade_grenade_vfx") ~= "grenade_vfx_default" then
 		if self._use_liquid_drawer == true and self._area_template_name == "renegade_grenadier_fire_grenade" then
 		self._use_liquid_drawer = false
 		end
 	end
+    if mod:get("replace_chemnade_vfx") ~= "chemnade_vfx_default" then
+		if self._use_liquid_drawer == true and self._area_template_name == "broker_tox_grenade" then
+		self._use_liquid_drawer = false
+		end
+	end 
+	return func(self, drawers)
 end)
 
 mod:hook("HuskLiquidAreaExtension", "set_drawer", function(func, self, drawers)
-	if self._use_liquid_drawer == true and self._area_template_name == "renegade_grenadier_fire_grenade" then
+	if mod:get("replace_renegade_grenade_vfx") ~= "grenade_vfx_default" then
+		if self._use_liquid_drawer == true and self._area_template_name == "renegade_grenadier_fire_grenade" then
 		self._use_liquid_drawer = false
+		end
+	end
+    if mod:get("replace_chemnade_vfx") ~= "chemnade_vfx_default" then
+		if self._use_liquid_drawer == true and self._area_template_name == "broker_tox_grenade" then
+		self._use_liquid_drawer = false
+		end
 	end
 	return func(self, drawers)
 end)
@@ -435,7 +475,7 @@ mod:hook_safe("HuskLiquidAreaExtension", "init", function(self, _, _, extension_
     self._template_name = extension_init_data.template.name
 end)
 
--- Create decal when liquid area size is calculated (server-side)
+-- Create decal (server-side)
 mod:hook_safe("LiquidAreaExtension", "_calculate_broadphase_size", function(self)
     local template_name = self._template_name or self._area_template_name
     if CIRCLE_TEMPLATES[template_name] then
@@ -446,7 +486,7 @@ mod:hook_safe("LiquidAreaExtension", "_calculate_broadphase_size", function(self
     end
 end)
 
--- Create decal when liquid area size is calculated (client-side)
+-- Create decal (client-side)
 mod:hook_safe("HuskLiquidAreaExtension", "_calculate_liquid_size", function(self)
     local template_name = self._template_name or self._area_template_name
     if CIRCLE_TEMPLATES[template_name] then
@@ -475,7 +515,6 @@ mod.on_enabled = function(_)
     if not Managers.package:has_loaded(package_path) then
         Managers.package:load(package_path, "vfx_swapper")
     end
-    -- Note: Corrupted death VFX is blocked via hook on FxSystem.trigger_vfx (always active)
 end
 
 mod.on_disabled = function()
