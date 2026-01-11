@@ -88,6 +88,7 @@ BetterMelk
 TeamKills
 BrokerAutoStim
 TalentUI
+machine_gods_beacon
 
 -- 基本上不需設定
 psych_ward
