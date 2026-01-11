@@ -11,22 +11,18 @@ if not success_require or not CharacterSheet then
 	CharacterSheet.class_loadout = function() end
 end
 
-local TEAM_HUD_DEF_PATH = "scripts/ui/hud/elements/team_player_panel/hud_element_team_player_panel_definitions"
-
-local UIWidget = require("scripts/managers/ui/ui_widget")
 local UIHudSettings = require("scripts/settings/ui/ui_hud_settings")
-local HudElementTeamPlayerPanelSettings = require("scripts/ui/hud/elements/team_player_panel/hud_element_team_player_panel_settings")
 local HudElementPlayerAbilitySettings = require("scripts/ui/hud/elements/player_ability/hud_element_player_ability_settings")
 local FixedFrame = require("scripts/utilities/fixed_frame")
-local UIFontSettings = require("scripts/managers/ui/ui_font_settings")
-
-local hud_body_font_settings = UIFontSettings.hud_body
 
 local TalentUISettings = mod:io_dofile("TalentUI/scripts/mods/TalentUI/TalentUI_settings")
 
 local teammate_abilities_data = {}
 
+mod.teammate_abilities_data = teammate_abilities_data
+
 local player_previous_human_state = {}
+
 
 local function get_talent_from_character_sheet(player, ability_key)
 	local profile = player and player:profile()
@@ -56,32 +52,7 @@ local function get_talent_from_character_sheet(player, ability_key)
 	return nil
 end
 
-local TALENT_ABILITY_METADATA = {
-	{
-		id = "ability",
-		slot = "slot_combat_ability",
-		type = "combat_ability",
-		name = "talent_ui_all_ability",
-		frame = "hex_frame",
-		mask = "hex_frame_mask",
-	},
-	{
-		id = "blitz",
-		slot = "slot_grenade_ability",
-		type = "grenade_ability",
-		name = "talent_ui_all_blitz",
-		frame = "square_frame",
-		mask = "square_frame_mask",
-	},
-	{
-		id = "aura",
-		slot = "slot_coherency_ability",
-		type = "coherency_ability",
-		name = "talent_ui_all_aura",
-		frame = "circular_frame",
-		mask = "circular_frame_mask",
-	},
-}
+local TALENT_ABILITY_METADATA = mod.TALENT_ABILITY_METADATA
 
 local function get_player_ability_by_type(player, extensions, slot_type)
 	if slot_type == "slot_coherency_ability" then
@@ -96,53 +67,7 @@ local function get_player_ability_by_type(player, extensions, slot_type)
 			}
 		end
 
-		local success, result = pcall(function()
-			local profile = player:profile()
-			if profile then
-				local loadout_data = {
-					ability = {},
-					blitz = {},
-					aura = {},
-				}
-				local loadout_success = pcall(function()
-					CharacterSheet.class_loadout(profile, loadout_data, false, profile.talents or {})
-				end)
-				if loadout_success and loadout_data and loadout_data.aura then
-					local icon = loadout_data.aura.icon
-					
-					if icon then
-						return {
-							ability_id = "aura",
-							ability_type = "coherency_ability",
-							icon = icon,
-							name = loadout_data.aura.talent and loadout_data.aura.talent.display_name or "Aura",
-						}
-					end
-				end
-			end
-			return nil
-		end)
-		
-		if success and result then
-			return result
-		end
-
 		return nil
-	end
-	
-	if slot_type == "slot_grenade_ability" then
-		local blitz_entry = get_talent_from_character_sheet(player, "blitz")
-
-		if blitz_entry and blitz_entry.talent then
-			return {
-				ability_id = "blitz",
-				ability_type = "grenade_ability",
-				icon = blitz_entry.icon,
-				name = blitz_entry.talent.display_name or "Blitz",
-			}
-		else
-			return nil
-		end
 	end
 	
 	if not extensions or not extensions.ability then
@@ -214,17 +139,17 @@ end
 
 local function get_ability_state(player, extensions, ability_type)
 	if ability_type == "coherency_ability" then
-		return 1, false, 1, true, 1
+		return 1, false, nil, false, nil
 	end
 	
 	if not extensions or not extensions.ability then
-		return 1, false, 1, true, 1
+		return 1, false, nil, false, nil
 	end
 	
 	local ability_extension = extensions.ability
 	
 	if not ability_extension:ability_is_equipped(ability_type) then
-		return 1, false, 1, true, 1
+		return 1, false, nil, false, nil
 	end
 	
 	local remaining_cooldown = ability_extension:remaining_ability_cooldown(ability_type)
@@ -233,7 +158,7 @@ local function get_ability_state(player, extensions, ability_type)
 	local max_charges = ability_extension:max_ability_charges(ability_type)
 	
 	local uses_charges = max_charges and max_charges > 1
-	local has_charges_left = remaining_charges > 0
+	local has_charges_left = remaining_charges and remaining_charges > 0 or false
 	
 	local cooldown_progress = 1
 	
@@ -248,7 +173,7 @@ local function get_ability_state(player, extensions, ability_type)
 	
 	local on_cooldown = cooldown_progress ~= 1
 	
-	return cooldown_progress, on_cooldown, remaining_charges or 1, has_charges_left, max_charges or 1
+	return cooldown_progress, on_cooldown, remaining_charges, has_charges_left, max_charges
 end
 
 local function get_ability_state_colors(on_cooldown, uses_charges, has_charges_left)
@@ -286,11 +211,11 @@ local function get_ability_gradient_map(ability_id)
 end
 
 local function get_ability_material_settings(ability_id, on_cooldown, uses_charges, has_charges_left, max_charges)
-	if not TalentUISettings or not TalentUISettings.icon_material_settings then
+	if not TalentUISettings or not TalentUISettings.teammate_ability_icon_material_settings then
 		return {intensity = 0, saturation = 1}
 	end
 	
-	local icon_settings = TalentUISettings.icon_material_settings
+	local icon_settings = TalentUISettings.teammate_ability_icon_material_settings
 	if not icon_settings[ability_id] then
 		return {intensity = 0, saturation = 1}
 	end
@@ -351,111 +276,72 @@ local function get_ability_material_settings(ability_id, on_cooldown, uses_charg
 	return {intensity = 0, saturation = 1}
 end
 
-mod:hook_require(TEAM_HUD_DEF_PATH, function(instance)
-	local bar_size = HudElementTeamPlayerPanelSettings.size
-	local icon_size = TalentUISettings.ability_icon_size
-	local coherency_icon_offset_x = 34
-	local coherency_icon_size = 24
-	local ability_spacing = TalentUISettings.ability_spacing or 50
-	local vertical_offset = TalentUISettings.icon_position_vertical_offset or 0
-
-	for i = 1, #TALENT_ABILITY_METADATA do
-		local ability_type = TALENT_ABILITY_METADATA[i]
-		local offset_x = coherency_icon_offset_x + coherency_icon_size + ability_spacing + (i - 1) * ability_spacing
-		
-		instance.widget_definitions[ability_type.name .. "_icon"] = UIWidget.create_definition({
-			{
-				pass_type = "texture",
-				style_id = "icon",
-				value = "content/ui/materials/frames/talents/talent_icon_container",
-				style = {
-					horizontal_alignment = "right",
-					vertical_alignment = "center",
-					scale_to_material = true,
-					material_values = {
-						frame = "content/ui/textures/frames/talents/" .. ability_type.frame,
-						icon_mask = "content/ui/textures/frames/talents/" .. ability_type.mask,
-						icon = nil,
-						gradient_map = nil,
-						intensity = 0,
-						saturation = 1,
-					},
-					offset = {
-						offset_x,
-						vertical_offset,
-						1,
-					},
-					size = {
-						icon_size,
-						icon_size,
-					},
-					color = UIHudSettings.color_tint_main_2,
-				},
-			},
-		}, "bar")
-		
-		instance.widget_definitions[ability_type.name .. "_text"] = UIWidget.create_definition({
-			{
-				pass_type = "text",
-				style_id = "text",
-				value_id = "text",
-				value = "",
-				style = {
-					horizontal_alignment = "right",
-					vertical_alignment = "center",
-					text_horizontal_alignment = "center",
-					text_vertical_alignment = "center",
-					font_type = hud_body_font_settings.font_type or "machine_medium",
-					font_size = TalentUISettings.cooldown_font_size,
-					line_spacing = 1.2,
-					text_color = UIHudSettings.color_tint_main_1,
-					drop_shadow = true,
-					offset = {
-						offset_x,
-						vertical_offset,
-						3,
-					},
-					size = {
-						icon_size,
-						icon_size,
-					},
-				},
-			},
-		}, "bar")
+local function hide_all_ability_widgets(self)
+	for _, ability_type in ipairs(TALENT_ABILITY_METADATA) do
+		local icon_widget = self._widgets_by_name["talent_ui_all_" .. ability_type.id .. "_icon"]
+		local text_widget = self._widgets_by_name["talent_ui_all_" .. ability_type.id .. "_text"]
+		if icon_widget then
+			icon_widget.visible = false
+			icon_widget.dirty = true
+		end
+		if text_widget then
+			text_widget.visible = false
+			text_widget.dirty = true
+		end
 	end
-end)
+end
+
+local function format_cooldown_text(ability_ext, ability_type_name, format_type, uses_charges, remaining_charges)
+	local charges_text = ""
+	local cooldown_text = ""
+	
+	if uses_charges and remaining_charges ~= nil and remaining_charges > 0 then
+		charges_text = tostring(remaining_charges)
+	end
+	
+	local remaining_cooldown = ability_ext:remaining_ability_cooldown(ability_type_name)
+	if remaining_cooldown and remaining_cooldown > 0 then
+		if format_type == "time" then
+			cooldown_text = string.format("%d", math.ceil(remaining_cooldown))
+		elseif format_type == "percent" then
+			local max_cooldown = ability_ext:max_ability_cooldown(ability_type_name)
+			if max_cooldown and max_cooldown > 0 then
+				local percent = (1 - remaining_cooldown / max_cooldown) * 100
+				if percent < 99 then
+					cooldown_text = string.format("%d%%", math.floor(percent))
+				end
+			end
+		end
+	end
+	
+	if charges_text ~= "" and cooldown_text ~= "" then
+		return string.format("%s (%s)", charges_text, cooldown_text)
+	elseif charges_text ~= "" then
+		return charges_text
+	elseif cooldown_text ~= "" then
+		return cooldown_text
+	end
+	
+	return ""
+end
 
 local function update_teammate_all_abilities(self, player, dt)
 	local player_name = player:name()
 
-	local player_peer_id = player:peer_id()
-	if not player_peer_id then
-		for _, ability_type in ipairs(TALENT_ABILITY_METADATA) do
-			local icon_widget = self._widgets_by_name["talent_ui_all_" .. ability_type.id .. "_icon"]
-			local text_widget = self._widgets_by_name["talent_ui_all_" .. ability_type.id .. "_text"]
-			if icon_widget then
-				icon_widget.visible = false
-			end
-			if text_widget then
-				text_widget.visible = false
-			end
-		end
+	-- if self._show_as_dead or self._dead or self._hogtied then
+	-- 	hide_all_ability_widgets(self)
+	-- 	return
+	-- end
+
+	if not player_name then
+		hide_all_ability_widgets(self)
 		return
 	end
 
 	local extensions = self:_player_extensions(player)
 
 	if not extensions then
-		for _, ability_type in ipairs(TALENT_ABILITY_METADATA) do
-			local icon_widget = self._widgets_by_name["talent_ui_all_" .. ability_type.id .. "_icon"]
-			local text_widget = self._widgets_by_name["talent_ui_all_" .. ability_type.id .. "_text"]
-			if icon_widget then
-				icon_widget.visible = false
-			end
-			if text_widget then
-				text_widget.visible = false
-			end
-		end
+		hide_all_ability_widgets(self)
 		return
 	end
 
@@ -468,61 +354,31 @@ local function update_teammate_all_abilities(self, player, dt)
 
 	player_previous_human_state[player_name] = is_human_controlled
 
-	if self._show_as_dead or self._dead or self._hogtied then
-		for _, ability_type in ipairs(TALENT_ABILITY_METADATA) do
-			local icon_widget = self._widgets_by_name["talent_ui_all_" .. ability_type.id .. "_icon"]
-			local text_widget = self._widgets_by_name["talent_ui_all_" .. ability_type.id .. "_text"]
-			if icon_widget then
-				icon_widget.visible = false
-			end
-			if text_widget then
-				text_widget.visible = false
-			end
-		end
-		return
-	end
-
 	local show_for_bots = TalentUISettings and TalentUISettings.show_abilities_for_bots ~= false
-	if not show_for_bots and not player:is_human_controlled() then
-		for _, ability_type in ipairs(TALENT_ABILITY_METADATA) do
-			local icon_widget = self._widgets_by_name["talent_ui_all_" .. ability_type.id .. "_icon"]
-			local text_widget = self._widgets_by_name["talent_ui_all_" .. ability_type.id .. "_text"]
-			if icon_widget then
-				icon_widget.visible = false
-			end
-			if text_widget then
-				text_widget.visible = false
-			end
-		end
+	if (not show_for_bots and not player:is_human_controlled()) or self._show_as_dead or self._dead or self._hogtied then
+		hide_all_ability_widgets(self)
 		return
 	end
 	
-	local coherency_widget = self._widgets_by_name.coherency_indicator
-	local coherency_icon_offset_x = 34
-	local coherency_icon_size = 24
-	
-	if coherency_widget and coherency_widget.style and coherency_widget.style.texture and coherency_widget.style.texture.offset then
-		coherency_icon_offset_x = coherency_widget.style.texture.offset[1] - 15
-		if coherency_widget.style.texture.size then
-			coherency_icon_size = coherency_widget.style.texture.size[1]
-		end
-	end
-	
-	local ability_spacing = TalentUISettings.ability_spacing or 60
-	local vertical_offset = TalentUISettings.icon_position_vertical_offset or 0
-	
-	local abilities_to_show = {}
+	local icon_size = mod:get("teammate_ability_icon_size") or TalentUISettings.teammate_ability_icon_size
 	
 	for i = 1, #TALENT_ABILITY_METADATA do
+		-- if self._show_as_dead or self._dead or self._hogtied then
+		-- 	hide_all_ability_widgets(self)
+		-- 	return
+		-- end
+		
 		local ability_info = TALENT_ABILITY_METADATA[i]
 		local icon_widget = self._widgets_by_name["talent_ui_all_" .. ability_info.id .. "_icon"]
+		local text_widget = self._widgets_by_name["talent_ui_all_" .. ability_info.id .. "_text"]
 		
 		if icon_widget then
 			local data_key = player_name .. "_" .. ability_info.id
 			
-			if not teammate_abilities_data[data_key] or not teammate_abilities_data[data_key].ability_type then
-				local ability_data = get_player_ability_by_type(player, extensions, ability_info.slot)
-				if ability_data then
+			local ability_data = get_player_ability_by_type(player, extensions, ability_info.slot)
+			if ability_data and ability_data.ability_type and ability_data.icon then
+				local cached_data = teammate_abilities_data[data_key]
+				if not cached_data or cached_data.ability_type ~= ability_data.ability_type or cached_data.icon ~= ability_data.icon then
 					teammate_abilities_data[data_key] = {
 						ability_id = ability_data.ability_id,
 						ability_type = ability_data.ability_type,
@@ -530,8 +386,8 @@ local function update_teammate_all_abilities(self, player, dt)
 					}
 				end
 			end
-			
-			local has_ability = teammate_abilities_data[data_key] and teammate_abilities_data[data_key].ability_type ~= nil
+
+			local has_ability = teammate_abilities_data[data_key] and teammate_abilities_data[data_key].ability_type
 			local show_icon = true
 			if ability_info.id == "ability" then
 				show_icon = mod:get("show_teammate_ability_icon")
@@ -541,178 +397,124 @@ local function update_teammate_all_abilities(self, player, dt)
 				show_icon = mod:get("show_teammate_aura_icon")
 			end
 			
-			if has_ability and show_icon then
-				table.insert(abilities_to_show, {
-					ability_info = ability_info,
-					data_key = data_key,
-				})
-			end
-		end
-	end
-	
-	local enabled_abilities = {}
-	local total_abilities = #abilities_to_show
-	for position_index = 1, total_abilities do
-		local ability_data = abilities_to_show[position_index]
-		local offset_x = coherency_icon_offset_x + coherency_icon_size + ability_spacing + (total_abilities - position_index) * ability_spacing
-		enabled_abilities[ability_data.ability_info.id] = {
-			ability_info = ability_data.ability_info,
-			position = position_index,
-			offset_x = offset_x,
-		}
-	end
-	
-	for i = 1, #TALENT_ABILITY_METADATA do
-		local ability_info = TALENT_ABILITY_METADATA[i]
-		local icon_widget = self._widgets_by_name["talent_ui_all_" .. ability_info.id .. "_icon"]
-		local text_widget = self._widgets_by_name["talent_ui_all_" .. ability_info.id .. "_text"]
-		
-		if icon_widget then
-			local data_key = player_name .. "_" .. ability_info.id
-			
-			if icon_widget and teammate_abilities_data[data_key] and teammate_abilities_data[data_key].ability_type then
+			if has_ability and show_icon and not self._show_as_dead and not self._dead and not self._hogtied then
 				local ability_type = teammate_abilities_data[data_key].ability_type
 				local icon = teammate_abilities_data[data_key].icon
 				
-				local show_icon = true
-				if ability_info.id == "ability" then
-					show_icon = mod:get("show_teammate_ability_icon")
-				elseif ability_info.id == "blitz" then
-					show_icon = mod:get("show_teammate_blitz_icon")
-				elseif ability_info.id == "aura" then
-					show_icon = mod:get("show_teammate_aura_icon")
+				if text_widget and text_widget.style and text_widget.style.text then
+					if text_widget.style.text.size then
+						if text_widget.style.text.size[1] ~= icon_size or text_widget.style.text.size[2] ~= icon_size then
+							text_widget.style.text.size[1] = icon_size
+							text_widget.style.text.size[2] = icon_size
+							text_widget.dirty = true
+						end
+					end
 				end
 				
-				local ability_position = enabled_abilities[ability_info.id]
+				local cooldown_progress, on_cooldown, remaining_charges, has_charges_left, max_charges = get_ability_state(player, extensions, ability_type)
+				local uses_charges = max_charges and max_charges > 1
 				
-				if not show_icon or not ability_position then
-					icon_widget.visible = false
-					if text_widget then
-						text_widget.visible = false
+				local gradient_map = get_ability_gradient_map(ability_info.id)
+				if gradient_map and icon_widget.style and icon_widget.style.icon and icon_widget.style.icon.material_values and icon_widget.style.icon.material_values.gradient_map ~= gradient_map then
+					icon_widget.style.icon.material_values.gradient_map = gradient_map
+					icon_widget.dirty = true
+				end
+				
+				local material_settings = get_ability_material_settings(ability_info.id, on_cooldown, uses_charges, has_charges_left, max_charges)
+				
+				if icon_widget.style and icon_widget.style.icon and icon_widget.style.icon.material_values then
+					local material_values = icon_widget.style.icon.material_values
+					local needs_update = false
+					
+					if material_values.intensity ~= material_settings.intensity then
+						material_values.intensity = material_settings.intensity
+						needs_update = true
 					end
-				else
-					local new_offset_x = ability_position.offset_x
-					if icon_widget.style and icon_widget.style.icon and icon_widget.style.icon.offset and icon_widget.style.icon.offset[1] ~= new_offset_x then
-						icon_widget.style.icon.offset[1] = new_offset_x
+					
+					if material_values.saturation ~= material_settings.saturation then
+						material_values.saturation = material_settings.saturation
+						needs_update = true
+					end
+					
+					if needs_update then
 						icon_widget.dirty = true
 					end
-					if text_widget and text_widget.style and text_widget.style.text and text_widget.style.text.offset and text_widget.style.text.offset[1] ~= new_offset_x then
-						text_widget.style.text.offset[1] = new_offset_x
-						text_widget.dirty = true
-					end
-					
-					local cooldown_progress, on_cooldown, remaining_charges, has_charges_left, max_charges = get_ability_state(player, extensions, ability_type)
-					local uses_charges = max_charges > 1
-					
-					local gradient_map = get_ability_gradient_map(ability_info.id)
-					if gradient_map and icon_widget.style and icon_widget.style.icon and icon_widget.style.icon.material_values and icon_widget.style.icon.material_values.gradient_map ~= gradient_map then
-						icon_widget.style.icon.material_values.gradient_map = gradient_map
+				end
+				
+				if icon and icon_widget.style and icon_widget.style.icon and icon_widget.style.icon.material_values then
+					local material_values = icon_widget.style.icon.material_values
+					if material_values.icon ~= icon then
+						material_values.icon = icon
 						icon_widget.dirty = true
 					end
-					
-					local material_settings = get_ability_material_settings(ability_info.id, on_cooldown, uses_charges, has_charges_left, max_charges)
-					
-					if icon_widget.style and icon_widget.style.icon and icon_widget.style.icon.material_values then
-						icon_widget.style.icon.material_values.intensity = material_settings.intensity
-						icon_widget.style.icon.material_values.saturation = material_settings.saturation
-						icon_widget.dirty = true
-					end
-					
-					if icon and icon_widget.style and icon_widget.style.icon and icon_widget.style.icon.material_values then
-						icon_widget.style.icon.material_values.icon = icon
-						icon_widget.dirty = true
-					end
-					
+				end
+				
+				local needs_icon_update = false
+				if icon_widget.visible ~= true then
 					icon_widget.visible = true
-					
-					if text_widget then
+					needs_icon_update = true
+				end
+				
+				if needs_icon_update then
+					icon_widget.dirty = true
+				end
+				
+				if text_widget then
 					local display_text = ""
 					local show_text = true
 					
 					if ability_info.id == "ability" then
 						show_text = mod:get("show_teammate_ability_cooldown")
 						
-						if show_text then
-							local charges_text = ""
-							local cooldown_text = ""
-							
-							if uses_charges and remaining_charges >= 1 then
-								charges_text = tostring(remaining_charges)
-							end
-							
-							if on_cooldown then
-								local format_type = mod:get("cooldown_format")
-								if format_type == "time" then
-									local unit_data_extension = extensions.unit_data
-									if unit_data_extension then
-										local ability_component = unit_data_extension:read_component("combat_ability")
-										if ability_component and ability_component.cooldown then
-											local fixed_frame_t = FixedFrame.get_latest_fixed_time()
-											local time_remaining = math.max(ability_component.cooldown - fixed_frame_t, 0)
-											if time_remaining > 0 then
-												cooldown_text = string.format("%d", math.ceil(time_remaining))
-											end
-										end
-									end
-								elseif format_type == "percent" then
-									local percent = (1 - cooldown_progress) * 100
-									if percent < 99 then
-										cooldown_text = string.format("%d%%", math.floor(percent))
-									end
-								end
-							end
-							
-							if charges_text ~= "" and cooldown_text ~= "" then
-								display_text = string.format("%s (%s)", charges_text, cooldown_text)
-							elseif charges_text ~= "" then
-								display_text = charges_text
-							elseif cooldown_text ~= "" then
-								display_text = cooldown_text
-							end
+						if show_text and extensions and extensions.ability then
+							local ability_ext = extensions.ability
+							local format_type = mod:get("cooldown_format")
+							display_text = format_cooldown_text(ability_ext, "combat_ability", format_type, uses_charges, remaining_charges)
 						end
 					elseif ability_info.id == "blitz" then
 						show_text = mod:get("show_teammate_blitz_charges")
 						
-						if show_text then
+						if show_text and extensions and extensions.ability then
+							local ability_ext = extensions.ability
 							if uses_charges then
-								if remaining_charges >= 1 then
-									display_text = tostring(remaining_charges)
+								local charges = ability_ext:remaining_ability_charges("grenade_ability")
+								if charges ~= nil and charges >= 0 then
+									display_text = tostring(charges)
 								end
 							else
-								if on_cooldown then
-									local format_type = mod:get("cooldown_format")
-									if format_type == "time" then
-										local unit_data_extension = extensions.unit_data
-										if unit_data_extension then
-											local grenade_ability_component = unit_data_extension:read_component("grenade_ability")
-											if grenade_ability_component and grenade_ability_component.cooldown then
-												local fixed_frame_t = FixedFrame.get_latest_fixed_time()
-												local time_remaining = math.max(grenade_ability_component.cooldown - fixed_frame_t, 0)
-												if time_remaining > 0 then
-													display_text = string.format("%d", math.ceil(time_remaining))
-												end
-											end
-										end
-									elseif format_type == "percent" then
-										local percent = (1 - cooldown_progress) * 100
-										if percent < 99 then
-											display_text = string.format("%d%%", math.floor(percent))
-										end
-									end
-								end
+								local format_type = mod:get("cooldown_format")
+								display_text = format_cooldown_text(ability_ext, "grenade_ability", format_type, uses_charges, remaining_charges)
 							end
 						end
 					end
 					
+					local needs_text_update = false
+					local new_visible = show_text and display_text ~= ""
+					
+					if text_widget.content.text ~= display_text then
 						text_widget.content.text = display_text
-						text_widget.visible = show_text and display_text ~= ""
+						needs_text_update = true
+					end
+					
+					if text_widget.visible ~= new_visible then
+						text_widget.visible = new_visible
+						needs_text_update = true
+					end
+					
+					if needs_text_update then
 						text_widget.dirty = true
 					end
 				end
 			else
-				icon_widget.visible = false
+				if icon_widget.visible ~= false then
+					icon_widget.visible = false
+					icon_widget.dirty = true
+				end
 				if text_widget then
-					text_widget.visible = false
+					if text_widget.visible ~= false then
+						text_widget.visible = false
+						text_widget.dirty = true
+					end
 				end
 			end
 		end
@@ -736,25 +538,3 @@ mod.clear_teammate_all_abilities_data = function(player_name)
 	
 	player_previous_human_state[player_name] = nil
 end
-
-local function update_player_features_hook(func, self, dt, t, player, ui_renderer)
-	func(self, dt, t, player, ui_renderer)
-	
-	update_teammate_all_abilities(self, player, dt)
-end
-
-mod:hook("HudElementTeamPlayerPanel", "_update_player_features", update_player_features_hook)
-
-mod:hook_safe("HudElementTeamPlayerPanel", "destroy", function(self)
-	local player = self._data.player
-	if player then
-		local success, player_name = pcall(function()
-			return player:name()
-		end)
-		if success and player_name then
-			mod.clear_teammate_all_abilities_data(player_name)
-		end
-	end
-end)
-
-
