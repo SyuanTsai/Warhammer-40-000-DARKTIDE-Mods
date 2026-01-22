@@ -568,9 +568,9 @@
 - MOD 檔案名稱：TalentUI-683-1-1-1-1767798662
 - 手動維護最後下載日期：2026-01-11
 
-### [TalentMachine God's BeaconUI](https://www.nexusmods.com/warhammer40kdarktide/mods/684)
+### [Machine God's BeaconUI](https://www.nexusmods.com/warhammer40kdarktide/mods/684)
     地圖燈效控制
-- MOD 網站最後更新日期：Last updated 03 January 2026, 10:43AM
+- MOD 網站最後更新日期：Last updated 20 January 2026, 4:04AM
 - MOD 版本：2026.01.03
 - MOD 檔案名稱：Machine God's Beacon-684-2026-01-03-1767408227
 - 手動維護最後下載日期：2026-01-03
