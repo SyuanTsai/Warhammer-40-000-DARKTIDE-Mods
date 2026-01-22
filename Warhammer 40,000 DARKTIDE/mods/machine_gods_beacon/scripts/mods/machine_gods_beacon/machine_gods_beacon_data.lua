@@ -7,22 +7,41 @@ return {
 	options = {
 		widgets = {
 			{
-				setting_id = "general_group",
+				setting_id = "environment_group",
 				type = "group",
 				sub_widgets = {
 					{
-						setting_id = "enable_light_control",
-						type = "checkbox",
-						default_value = true,
-						title = "enable_light_control_title",
-						tooltip = "enable_light_control_tooltip",
+						setting_id = "environment_control_mode",
+						type = "dropdown",
+						default_value = "all",
+						options = {
+							{text = "mode_none", value = "none"},
+							{text = "mode_all", value = "all"},
+							{text = "mode_normal", value = "normal"},
+							{text = "mode_modified", value = "modified"},
+						},
+						title = "environment_control_mode_title",
+						tooltip = "environment_control_mode_tooltip",
 					},
+				},
+
+			},
+			{
+				setting_id = "light_group",
+				type = "group",
+				sub_widgets = {
 					{
-						setting_id = "opt_in_special_missions",
-						type = "checkbox",
-						default_value = false,
-						title = "opt_in_special_missions_title",
-						tooltip = "opt_in_special_missions_tooltip",
+						setting_id = "light_control_mode",
+						type = "dropdown",
+						default_value = "all",
+						options = {
+							{text = "mode_none", value = "none"},
+							{text = "mode_all", value = "all"},
+							{text = "mode_normal", value = "normal"},
+							{text = "mode_modified", value = "modified"},
+						},
+						title = "light_control_mode_title",
+						tooltip = "light_control_mode_tooltip",
 					},
 					{
 						setting_id = "light_percentage",
@@ -128,20 +147,6 @@ return {
 				setting_id = "debug_group",
 				type = "group",
 				sub_widgets = {
-					{
-						setting_id = "disable_darkness",
-						type = "checkbox",
-						default_value = false,
-						title = "disable_darkness_title",
-						tooltip = "disable_darkness_tooltip",
-					},
-					{
-						setting_id = "disable_fog",
-						type = "checkbox",
-						default_value = false,
-						title = "disable_fog_title",
-						tooltip = "disable_fog_tooltip",
-					},
 					{
 						setting_id = "debug_mode",
 						type = "checkbox",
