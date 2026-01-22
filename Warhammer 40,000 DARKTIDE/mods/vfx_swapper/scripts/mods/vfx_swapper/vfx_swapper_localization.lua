@@ -62,7 +62,7 @@ return {
 	chemnade_vfx_circle_only = {
 		en = "Circle Indicator Only (No VFX)",
 		["zh-cn"] = "仅圆圈指示器（无特效）",
-		["zh-tw"] = "僅圓形指示器（無特效）",
+		["zh-tw"] = "僅範圍顯示（無特效）",
 	},
 	gas_vfx_default = {
 		en = "Default",
@@ -82,7 +82,7 @@ return {
 	gas_vfx_beast_goo = {
 		en = "Beast Goo",
 		["zh-cn"] = "绿色纳垢兽粘液（冒泡）",
-		["zh-tw"] = "納垢獸黏液（綠色，冒泡）",
+		["zh-tw"] = "納垢獸黏液",
 	},
 	fire_vfx_default = {
 		en = "Default",
@@ -97,7 +97,7 @@ return {
 	fire_vfx_beast_goo = {
 		en = "Beast Goo",
 		["zh-cn"] = "绿色纳垢兽粘液（冒泡）",
-		["zh-tw"] = "納垢獸黏液（綠色，冒泡）",
+		["zh-tw"] = "納垢獸腐液",
 	},
 	fire_short = {
 		en = "Short Red Fire",
@@ -142,12 +142,12 @@ return {
 	circle_indicators_group = {
 		en = "Circle Indicators",
 		["zh-cn"] = "圆形范围指示器",
-		["zh-tw"] = "圓形指示器",
+		["zh-tw"] = "範圍顯示",
 	},
 	rotten_circle_enabled = {
 		en = "Rotten Armor Circle",
 		["zh-cn"] = "腐化装甲圆形范围指示器",
-		["zh-tw"] = "腐敗護甲圓形指示器",
+		["zh-tw"] = "腐敗護甲範圍顯示",
 	},
 	rotten_circle_red = {
 		en = "Rotten - Red",
@@ -172,7 +172,7 @@ return {
 	blight_circle_enabled = {
 		en = "Blight Spreads Circle",
 		["zh-cn"] = "瘟疫扩散圆形范围指示器",
-		["zh-tw"] = "瘟疫蔓延圓形指示器",
+		["zh-tw"] = "瘟疫蔓延範圍顯示",
 	},
 	blight_circle_red = {
 		en = "Blight - Red",
@@ -197,7 +197,7 @@ return {
 	chemnade_circle_enabled = {
 		en = "Chem Grenade Circle",
 		["zh-cn"] = "兴奋剂炸弹圆形范围指示器",
-		["zh-tw"] = "化學手雷圓形指示器",
+		["zh-tw"] = "化學手雷範圍顯示",
 	},
 	chemnade_circle_red = {
 		en = "Chem - Red",
@@ -227,12 +227,12 @@ return {
 	disable_rotten_armor_stages = {
 		en = "Disable Rotten Armor 'Leaking' VFX (and flies)",
 		["zh-cn"] = "禁用腐化装甲 '泄漏' 特效（和飞虫）",
-		["zh-tw"] = "停用腐敗護甲「滲漏」特效（以及蒼蠅）",
+		["zh-tw"] = "停用腐敗護甲死亡時「釋放毒液」的特效（以及蒼蠅）",
 	},
 	disable_corrupted_enemies_vfx = {
 		en = "Disable Blight Spreads Enemy VFX (mostly flies)",
 		["zh-cn"] = "禁用瘟疫扩散敌人特效（主要是飞虫）",
-		["zh-tw"] = "停用瘟疫蔓延敵人特效（多為蒼蠅）",
+		["zh-tw"] = "停用瘟疫蔓延敵人死亡特效（多為蒼蠅）",
 	},
 	disable_corrupted_enemies_color = {
 		en = "Disable Blight Spreads Enemy Color (green)",
