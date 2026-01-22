@@ -9,21 +9,56 @@ local localizations = {
 	mod_description = {
 		en = "Shows stimm duration and cooldown timer for Hive Scum (Broker) class.",
 		ru = "Показывает таймер действия и перезарядки стимма для класса Hive Scum (Broker).",
-		["zh-tw"] = "為蜂巢流氓（經紀人）職業顯示興奮劑持續時間和冷卻計時器。",
+		["zh-tw"] = "為巢都敗類（經紀人）職業顯示興奮劑持續時間和冷卻計時器。",
 	},
 
 	display_group = {
-		en = "Display",
-		ru = "Отображение",
-		["zh-tw"] = "顯示",
+		en = " DISPLAY",
+		ru = " ОТОБРАЖЕНИЕ",
+		["zh-tw"] = " 顯示",
 	},
 	colors_group = {
-		en = "Colors",
-		ru = "Цвета",
-		["zh-tw"] = "顏色",
+		en = " COLORS",
+		ru = " ЦВЕТА",
+		["zh-tw"] = " 顏色",
+	},
+	ready_timer_color_group = {
+		en = "Ready Timer Color",
+		ru = "Цвет таймера готовности",
+		["zh-tw"] = "準備就緒計時器顏色",
+	},
+	active_timer_color_group = {
+		en = "Active Timer Color",
+		ru = "Цвет таймера активности",
+		["zh-tw"] = "作用中計時器顏色",
+	},
+	cooldown_timer_color_group = {
+		en = "Cooldown Timer Color",
+		ru = "Цвет таймера перезарядки",
+		["zh-tw"] = "冷卻計時器顏色",
+	},
+	notification_color_group = {
+		en = "Notification Color",
+		ru = "Цвет уведомления",
+		["zh-tw"] = "通知顏色",
+	},
+	fonts_group = {
+		en = " FONTS",
+		ru = " ШРИФТЫ",
+		["zh-tw"] = " 字型",
+	},
+	sounds_group = {
+		en = " SOUNDS",
+		ru = " ЗВУКИ",
+		["zh-tw"] = " 音效",
 	},
 
-	-- Настройки
+	system_settings_group = {
+		en = " SYSTEM SETTINGS",
+		ru = " СИСТЕМНЫЕ НАСТРОЙКИ",
+		["zh-tw"] = " 系統設定",
+	},
+
 	show_active = {
 		en = "Show Active Timer",
 		ru = "Показывать таймер действия",
@@ -204,7 +239,147 @@ local localizations = {
 		ru = "По умолчанию (фон уведомления)",
 		["zh-tw"] = "預設（通知背景）",
 	},
-}
+	font_type = {
+		en = "Font type",
+		ru = "Тип шрифта",
+		["zh-tw"] = "字型類型",
+	},
+	font_size = {
+		en = "Font size",
+		ru = "Размер шрифта",
+		["zh-tw"] = "字型大小",
+	},
+	font_option_machine_medium = {
+		en = "Machine Medium",
+		ru = "Machine Medium",
+		["zh-tw"] = "Machine Medium",
+	},
+	font_option_proxima_nova_bold = {
+		en = "Proxima Nova Bold",
+		ru = "Proxima Nova Bold",
+		["zh-tw"] = "Proxima Nova Bold",
+	},
+	font_option_proxima_nova_medium = {
+		en = "Proxima Nova Medium",
+		ru = "Proxima Nova Medium",
+		["zh-tw"] = "Proxima Nova Medium",
+	},
+	font_option_itc_novarese_medium = {
+		en = "ITC Novarese Medium",
+		ru = "ITC Novarese Medium",
+		["zh-tw"] = "ITC Novarese Medium",
+	},
+	font_option_itc_novarese_bold = {
+		en = "ITC Novarese Bold",
+		ru = "ITC Novarese Bold",
+		["zh-tw"] = "ITC Novarese Bold",
+	},
+	enable_ready_sound = {
+		en = "Enable ready sound",
+		ru = "Включить звук готовности",
+		["zh-tw"] = "啟用準備就緒音效",
+	},
+	enable_ready_sound_tooltip = {
+		en = "Play a sound when the stimm syringe becomes ready to use.",
+		ru = "Воспроизводить звук когда стим становится готовым к использованию.",
+		["zh-tw"] = "當興奮劑注射器準備好使用時播放音效。",
+	},
+	ready_sound_event = {
+		en = "Ready sound",
+		ru = "Звук готовности",
+		["zh-tw"] = "準備就緒音效",
+	},
+	sound_option_hud_coherency_on = {
+		en = "HUD coherency on",
+		ru = "HUD когерентность включена",
+		["zh-tw"] = "HUD 凝聚力開啟",
+	},
+	sound_option_hud_coherency_off = {
+		en = "HUD coherency off",
+		ru = "HUD когерентность выключена",
+		["zh-tw"] = "HUD 凝聚力關閉",
+	},
+
+	sound_option_hud_heal = {
+		en = "HUD heal",
+		ru = "HUD лечение",
+		["zh-tw"] = "HUD 治療",
+	},
+	sound_option_hud_health_station = {
+		en = "HUD health station",
+		ru = "HUD станция здоровья",
+		["zh-tw"] = "HUD 醫療站",
+	},
+	sound_option_ammo_refill = {
+		en = "Ammo refill",
+		ru = "Пополнение боеприпасов",
+		["zh-tw"] = "彈藥補充",
+	},
+	sound_option_grenade_refill = {
+		en = "Grenade refill",
+		ru = "Пополнение гранат",
+		["zh-tw"] = "手雷補充",
+	},
+	sound_option_pick_up_ammo = {
+		en = "Pick up ammo",
+		ru = "Подобрать боеприпасы",
+		["zh-tw"] = "拾取彈藥",
+	},
+	sound_option_dodge_melee_success = {
+		en = "Dodge melee success",
+		ru = "Успешное уклонение от ближнего боя",
+		["zh-tw"] = "近戰閃避成功",
+	},
+	sound_option_dodge_ranged_success = {
+		en = "Dodge ranged success",
+		ru = "Успешное уклонение от дальнего боя",
+		["zh-tw"] = "遠程閃避成功",
+	},
+	sound_option_backstab_indicator_melee = {
+		en = "Backstab indicator melee",
+		ru = "Индикатор удара в спину (ближний бой)",
+		["zh-tw"] = "背刺指示器（近戰）",
+	},
+	sound_option_backstab_indicator_ranged = {
+		en = "Backstab indicator ranged",
+		ru = "Индикатор удара в спину (дальний бой)",
+		["zh-tw"] = "背刺指示器（遠程）",
+	},
+	sound_option_indicator_crit = {
+		en = "Indicator crit",
+		ru = "Индикатор крита",
+		["zh-tw"] = "爆擊指示器",
+	},
+	sound_option_indicator_weakspot = {
+		en = "Indicator weakspot",
+		ru = "Индикатор слабого места",
+		["zh-tw"] = "弱點指示器",
+	},
+	sound_option_heal_self_confirmation = {
+		en = "Heal self confirmation",
+		ru = "Подтверждение самолечения",
+		["zh-tw"] = "自我治療確認",
+	},
+	sound_option_syringe_healed_by_ally = {
+		en = "Syringe healed by ally",
+		ru = "Лечение стимулятором союзника",
+		["zh-tw"] = "被盟友使用注射器治療",
+	},
+	reset_color_settings = {
+		en = "Reset color settings",
+		ru = "Сбросить настройки цвета",
+		["zh-tw"] = "重置顏色設定",
+	},
+	reset_font_settings = {
+		en = "Reset font settings",
+		ru = "Сбросить настройки шрифта",
+		["zh-tw"] = "重置字型設定",
+	},
+	reset_sound_settings = {
+		en = "Reset sound settings",
+		ru = "Сбросить настройки звука",
+		["zh-tw"] = "重置音效設定",
+	},}
 
 local function readable(text)
 	local readable_string = ""
