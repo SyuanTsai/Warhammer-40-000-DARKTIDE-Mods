@@ -582,7 +582,12 @@
 - MOD 檔案名稱：Machine God's Beacon-684-2026-01-26-1769450266
 - 手動維護最後下載日期：2026-02-02
 
-
+### [Modular Menu Buttons](https://www.nexusmods.com/warhammer40kdarktide/mods/166)
+    盾牌透明化
+- MOD 網站最後更新日期：Last updated 31 January 2026, 11:20AM
+- MOD 版本：1.2.3
+- MOD 檔案名稱：Modular Menu Buttons-166-1-2-7-1769829624
+- 手動維護最後下載日期：2026-02-02
 ---
 # 遊戲內操作相關MOD
 
