@@ -570,10 +570,10 @@
 
 ### [Machine God's BeaconUI](https://www.nexusmods.com/warhammer40kdarktide/mods/684)
     地圖燈效控制
-- MOD 網站最後更新日期：Last updated 20 January 2026, 4:04AM
-- MOD 版本：2026.01.03
-- MOD 檔案名稱：Machine God's Beacon-684-2026-01-03-1767408227
-- 手動維護最後下載日期：2026-01-03
+- MOD 網站最後更新日期：Last updated 27 January 2026, 1:57AM
+- MOD 版本：2026.01.26
+- MOD 檔案名稱：Machine God's Beacon-684-2026-01-26-1769450266
+- 手動維護最後下載日期：2026-02-02
 
 ---
 # 遊戲內操作相關MOD

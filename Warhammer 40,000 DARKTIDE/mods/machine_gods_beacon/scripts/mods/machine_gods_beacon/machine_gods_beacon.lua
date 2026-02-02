@@ -1,5 +1,5 @@
 local mod = get_mod("machine_gods_beacon")
-local VERSION = "v2026.01.18.0200"
+local VERSION = "v2026.01.23.0258"
 
 local DARKNESS_MUTATOR = "mutator_darkness_los"
 local VENTILATION_MUTATOR = "mutator_ventilation_purge_los"
@@ -12,6 +12,9 @@ local _state = mod:persistent_table("state", {
 	is_darkness_mission = false,
 	is_ventilation_mission = false,
 	is_toxic_gas_mission = false,
+	preserved_is_darkness = false,
+	preserved_is_ventilation = false,
+	preserved_is_toxic_gas = false,
 	in_mission = false,
 	hooks_called = {},
 	original_themes = nil,
@@ -23,6 +26,8 @@ local _state = mod:persistent_table("state", {
 	light_groups_cache = {},
 	original_extension_weights = {},
 	intended_light_states = {},
+	original_light_states = {},
+	original_light_states_captured = false,
 })
 
 if not _state.flicker then
@@ -122,7 +127,7 @@ local function update_mission_state()
 end
 
 local function is_special_mission()
-	return _state.is_darkness_mission or _state.is_ventilation_mission or _state.is_toxic_gas_mission
+	return _state.is_darkness_mission or _state.is_ventilation_mission or _state.is_toxic_gas_mission or _state.preserved_is_darkness or _state.preserved_is_ventilation or _state.preserved_is_toxic_gas
 end
 
 local function should_block_environment()
@@ -203,6 +208,9 @@ local function get_intended_light_states_count()
 end
 
 local function should_block_in_hook()
+	if not mod:is_enabled() then
+		return false
+	end
 	if _state.bypass_hook then
 		return false
 	end
@@ -320,6 +328,8 @@ local function reset_state()
 	_state.hooks_called = {}
 	_state.original_extension_weights = {}
 	_state.intended_light_states = {}
+	_state.original_light_states = {}
+	_state.original_light_states_captured = false
 
 	_state.flicker.active_flickers = {}
 	_state.flicker.cooldowns = {}
@@ -337,6 +347,10 @@ mod:hook_safe(CLASS.GameModeManager, "init", function(self)
 	_state.in_mission = true
 	update_mission_state()
 	log("GameModeManager.init dark=%s vent=%s toxic=%s", tostring(_state.is_darkness_mission), tostring(_state.is_ventilation_mission), tostring(_state.is_toxic_gas_mission))
+
+	if not mod:is_enabled() then
+		return
+	end
 
 	if should_block_environment() then
 		log("auto-applying environment settings")
@@ -450,6 +464,9 @@ end
 -- end)
 
 local function on_setting_changed(id)
+	if not mod:is_enabled() then
+		return
+	end
 	if not _state.in_mission then
 		return
 	end
@@ -464,11 +481,17 @@ local function on_setting_changed(id)
 		end
 	end
 
-	if id == "light_control_mode" or id == "light_percentage" or id == "light_selection" or id == "light_state" then
+	if id == "light_control_mode" then
 		if should_apply_lighting() then
 			mgb_lights.apply_settings()
 		else
 			mgb_lights.revert_settings()
+		end
+	end
+
+	if id == "light_percentage" or id == "light_selection" or id == "light_state" then
+		if should_apply_lighting() then
+			mgb_lights.apply_settings()
 		end
 	end
 end
@@ -476,6 +499,9 @@ end
 mod.on_setting_changed = on_setting_changed
 
 local function update(dt)
+	if not mod:is_enabled() then
+		return
+	end
 	if not _state.in_mission then
 		return
 	end
@@ -502,3 +528,29 @@ local function update(dt)
 end
 
 mod.update = update
+
+mod.on_disabled = function(initial_call)
+	if initial_call then
+		return
+	end
+	log("mod disabled, reverting settings")
+	if _state.in_mission then
+		mgb_environment.revert_settings()
+		mgb_lights.revert_settings()
+	end
+end
+
+mod.on_enabled = function(initial_call)
+	if initial_call then
+		return
+	end
+	log("mod enabled")
+	if _state.in_mission then
+		if should_block_environment() then
+			mgb_environment.apply_settings()
+		end
+		if should_apply_lighting() then
+			mgb_lights.apply_settings()
+		end
+	end
+end
