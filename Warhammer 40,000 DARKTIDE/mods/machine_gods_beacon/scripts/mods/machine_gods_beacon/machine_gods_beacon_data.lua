@@ -24,7 +24,6 @@ return {
 						tooltip = "environment_control_mode_tooltip",
 					},
 				},
-
 			},
 			{
 				setting_id = "light_group",
@@ -41,16 +40,8 @@ return {
 							{text = "mode_modified", value = "modified"},
 						},
 						title = "light_control_mode_title",
-						tooltip = "light_control_mode_tooltip",
 					},
-					{
-						setting_id = "light_percentage",
-						type = "numeric",
-						default_value = 33,
-						range = {0, 100},
-						title = "light_percentage_title",
-						tooltip = "light_percentage_tooltip",
-					},
+					{setting_id = "light_percentage", type = "numeric", default_value = 33, range = {0, 100}, title = "light_percentage_title"},
 					{
 						setting_id = "light_selection",
 						type = "dropdown",
@@ -62,7 +53,6 @@ return {
 							{text = "light_selection_random", value = "random"},
 						},
 						title = "light_selection_title",
-						tooltip = "light_selection_tooltip",
 					},
 				},
 			},
@@ -81,7 +71,6 @@ return {
 							{text = "light_state_flicker_random", value = "flicker_random"},
 						},
 						title = "light_state_title",
-						tooltip = "light_state_tooltip",
 					},
 					{
 						setting_id = "flicker_default",
@@ -89,7 +78,6 @@ return {
 						default_value = "on",
 						options = {{text = "flicker_default_on", value = "on"}, {text = "flicker_default_off", value = "off"}},
 						title = "flicker_default_title",
-						tooltip = "flicker_default_tooltip",
 					},
 					{
 						setting_id = "flicker_interval",
@@ -98,7 +86,6 @@ return {
 						range = {0.5, 30.0},
 						decimals_number = 1,
 						title = "flicker_interval_title",
-						tooltip = "flicker_interval_tooltip",
 					},
 					{
 						setting_id = "flicker_percentage",
@@ -106,7 +93,6 @@ return {
 						default_value = 33,
 						range = {1, 100},
 						title = "flicker_percentage_title",
-						tooltip = "flicker_percentage_tooltip",
 					},
 					{
 						setting_id = "flicker_duration",
@@ -115,7 +101,6 @@ return {
 						range = {0.5, 3.0},
 						decimals_number = 2,
 						title = "flicker_duration_title",
-						tooltip = "flicker_duration_tooltip",
 					},
 					{
 						setting_id = "flicker_cooldown",
@@ -124,37 +109,15 @@ return {
 						range = {0.5, 30.0},
 						decimals_number = 1,
 						title = "flicker_cooldown_title",
-						tooltip = "flicker_cooldown_tooltip",
 					},
-					{
-						setting_id = "enable_stutter",
-						type = "checkbox",
-						default_value = false,
-						title = "enable_stutter_title",
-						tooltip = "enable_stutter_tooltip",
-					},
-					{
-						setting_id = "stutter_count",
-						type = "numeric",
-						default_value = 3,
-						range = {2, 10},
-						title = "stutter_count_title",
-						tooltip = "stutter_count_tooltip",
-					},
+					{setting_id = "enable_stutter", type = "checkbox", default_value = false, title = "enable_stutter_title"},
+					{setting_id = "stutter_count", type = "numeric", default_value = 3, range = {2, 10}, title = "stutter_count_title"},
 				},
 			},
 			{
 				setting_id = "debug_group",
 				type = "group",
-				sub_widgets = {
-					{
-						setting_id = "debug_mode",
-						type = "checkbox",
-						default_value = false,
-						title = "debug_mode_title",
-						tooltip = "debug_mode_tooltip",
-					},
-				},
+				sub_widgets = {{setting_id = "debug_mode", type = "checkbox", default_value = false, title = "debug_mode_title"}},
 			},
 		},
 	},

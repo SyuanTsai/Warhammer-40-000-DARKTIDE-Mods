@@ -1,5 +1,5 @@
 local mod = get_mod("machine_gods_beacon")
-local VERSION = "v2026.01.19"
+local VERSION = "v2026.01.26.0100"
 
 local mgb_environment = {}
 mgb_environment._version = VERSION
@@ -13,12 +13,6 @@ local _current_level_name = nil
 local _current_theme_tag = nil
 local _capturing_defaults = false
 
-local _preserved_mission_flags = {
-	is_darkness_mission = false,
-	is_ventilation_mission = false,
-	is_toxic_gas_mission = false,
-}
-
 local function get_MGB()
 	return mod._mgb
 end
@@ -27,44 +21,15 @@ local function is_special_theme_tag(theme_tag)
 	return theme_tag == "darkness" or theme_tag == "ventilation_purge" or theme_tag == "toxic_gas"
 end
 
-local function preserve_mission_flags()
-	local MGB = get_MGB()
-	if not MGB or not MGB.state then
-		return
-	end
-	local state = MGB.state
-	if state.is_darkness_mission then
-		_preserved_mission_flags.is_darkness_mission = true
-	end
-	if state.is_ventilation_mission then
-		_preserved_mission_flags.is_ventilation_mission = true
-	end
-	if state.is_toxic_gas_mission then
-		_preserved_mission_flags.is_toxic_gas_mission = true
-	end
-end
-
-local function restore_mission_flags()
-	local MGB = get_MGB()
-	if not MGB or not MGB.state then
-		return
-	end
-	local state = MGB.state
-	if _preserved_mission_flags.is_darkness_mission then
-		state.is_darkness_mission = true
-	end
-	if _preserved_mission_flags.is_ventilation_mission then
-		state.is_ventilation_mission = true
-	end
-	if _preserved_mission_flags.is_toxic_gas_mission then
-		state.is_toxic_gas_mission = true
-	end
-end
-
 local function clear_preserved_flags()
-	_preserved_mission_flags.is_darkness_mission = false
-	_preserved_mission_flags.is_ventilation_mission = false
-	_preserved_mission_flags.is_toxic_gas_mission = false
+	local MGB = get_MGB()
+	if not MGB or not MGB.state then
+		return
+	end
+	local state = MGB.state
+	state.preserved_is_darkness = false
+	state.preserved_is_ventilation = false
+	state.preserved_is_toxic_gas = false
 end
 
 local function store_extension_state(unit, ext)
@@ -236,7 +201,7 @@ function mgb_environment.kill_by_classification(classification)
 			elseif classification == "lights_out" then
 				match = string.find(n, "dark")
 			elseif classification == "toxic_gas" then
-				match = string.find(n, "fog") or string.find(n, "toxic") or string.find(n, "gas")
+				-- match = string.find(n, "fog") or string.find(n, "toxic") or string.find(n, "gas")
 			end
 			if match then
 				store_extension_state(unit, ext)
@@ -440,7 +405,7 @@ local function should_block_themes()
 	end
 
 	local is_special = state.is_darkness_mission or state.is_ventilation_mission or state.is_toxic_gas_mission
-	local is_preserved = _preserved_mission_flags.is_darkness_mission or _preserved_mission_flags.is_ventilation_mission or _preserved_mission_flags.is_toxic_gas_mission
+	local is_preserved = state.preserved_is_darkness or state.preserved_is_ventilation or state.preserved_is_toxic_gas
 
 	if not is_special and not is_preserved then
 		return false
@@ -450,8 +415,8 @@ local function should_block_themes()
 		return false
 	end
 
-	local block_darkness = (state.is_darkness_mission or _preserved_mission_flags.is_darkness_mission) and MGB.should_block_darkness and MGB.should_block_darkness()
-	local block_fog = (state.is_ventilation_mission or state.is_toxic_gas_mission or _preserved_mission_flags.is_ventilation_mission or _preserved_mission_flags.is_toxic_gas_mission) and MGB.should_block_fog and MGB.should_block_fog()
+	local block_darkness = (state.is_darkness_mission or state.preserved_is_darkness) and MGB.should_block_darkness and MGB.should_block_darkness()
+	local block_fog = (state.is_ventilation_mission or state.is_toxic_gas_mission or state.preserved_is_ventilation or state.preserved_is_toxic_gas) and MGB.should_block_fog and MGB.should_block_fog()
 
 	return block_darkness or block_fog
 end
@@ -481,7 +446,6 @@ function mgb_environment.apply_settings()
 	end
 	local state = MGB.state
 
-	restore_mission_flags()
 	MGB.update_mission_state()
 	mgb_environment.force_capture_all_slots()
 
@@ -628,9 +592,9 @@ function mgb_environment.get_status()
 		is_darkness = state.is_darkness_mission,
 		is_ventilation = state.is_ventilation_mission,
 		is_toxic_gas = state.is_toxic_gas_mission,
-		preserved_darkness = _preserved_mission_flags.is_darkness_mission,
-		preserved_ventilation = _preserved_mission_flags.is_ventilation_mission,
-		preserved_toxic_gas = _preserved_mission_flags.is_toxic_gas_mission,
+		preserved_darkness = state.preserved_is_darkness,
+		preserved_ventilation = state.preserved_is_ventilation,
+		preserved_toxic_gas = state.preserved_is_toxic_gas,
 		current_level = _current_level_name,
 		current_theme_tag = _current_theme_tag,
 		extension_count = ext_count,
@@ -654,21 +618,6 @@ function mgb_environment.clear_cache()
 	end
 end
 
-mod:hook_safe(CLASS.ShadingEnvironmentSystem, "on_gameplay_post_init", function(self, level, themes)
-	local MGB = get_MGB()
-	local state = MGB and MGB.state
-
-	if state then
-		state.hooks_called["ShadingEnvironmentSystem.on_gameplay_post_init"] = true
-	end
-
-	restore_mission_flags()
-
-	if MGB then
-		MGB.log("ShadingEnvironmentSystem.on_gameplay_post_init: themes=%d", themes and #themes or 0)
-	end
-end)
-
 mod:hook_safe(CLASS.ShadingEnvironmentSystem, "on_theme_changed", function(self, themes, force_reset)
 	local MGB = get_MGB()
 	local state = MGB and MGB.state
@@ -676,8 +625,6 @@ mod:hook_safe(CLASS.ShadingEnvironmentSystem, "on_theme_changed", function(self,
 	if state then
 		state.hooks_called["ShadingEnvironmentSystem.on_theme_changed"] = true
 	end
-
-	restore_mission_flags()
 
 	if not MGB or not MGB.is_in_mission_or_training() then
 		return
@@ -699,8 +646,6 @@ mod:hook(CLASS.ShadingEnvironmentSystem, "_fetch_theme_shading_environments", fu
 	if state then
 		state.hooks_called["ShadingEnvironmentSystem._fetch_theme_shading_environments"] = true
 	end
-
-	restore_mission_flags()
 
 	if not MGB or not MGB.is_in_mission_or_training() then
 		return func(self, themes, ...)
@@ -859,6 +804,10 @@ mod:hook(CLASS.LevelLoader, "start_loading", function(func, self, context, ...)
 
 	clear_preserved_flags()
 
+	if not mod:is_enabled() then
+		return func(self, context, ...)
+	end
+
 	local circumstance_name = context and context.circumstance_name
 	local level_name = context and context.level_name
 
@@ -869,8 +818,8 @@ mod:hook(CLASS.LevelLoader, "start_loading", function(func, self, context, ...)
 		if string.find(c, "darkness") then
 			if state then
 				state.is_darkness_mission = true
+				state.preserved_is_darkness = true
 			end
-			_preserved_mission_flags.is_darkness_mission = true
 			_current_theme_tag = "darkness"
 			if MGB then
 				MGB.log("LevelLoader: detected darkness from circumstance %s", circumstance_name)
@@ -879,8 +828,8 @@ mod:hook(CLASS.LevelLoader, "start_loading", function(func, self, context, ...)
 		if string.find(c, "ventilation") or string.find(c, "purge") then
 			if state then
 				state.is_ventilation_mission = true
+				state.preserved_is_ventilation = true
 			end
-			_preserved_mission_flags.is_ventilation_mission = true
 			_current_theme_tag = "ventilation_purge"
 			if MGB then
 				MGB.log("LevelLoader: detected ventilation from circumstance %s", circumstance_name)
@@ -889,8 +838,8 @@ mod:hook(CLASS.LevelLoader, "start_loading", function(func, self, context, ...)
 		if string.find(c, "toxic") or string.find(c, "gas") then
 			if state then
 				state.is_toxic_gas_mission = true
+				state.preserved_is_toxic_gas = true
 			end
-			_preserved_mission_flags.is_toxic_gas_mission = true
 			_current_theme_tag = "toxic_gas"
 			if MGB then
 				MGB.log("LevelLoader: detected toxic_gas from circumstance %s", circumstance_name)
@@ -909,6 +858,10 @@ mod:hook(CLASS.LocalThemeState, "init", function(func, self, state_machine, shar
 		state.hooks_called["LocalThemeState.init"] = true
 	end
 
+	if not mod:is_enabled() then
+		return func(self, state_machine, shared_state, ...)
+	end
+
 	local circumstance_name = shared_state and shared_state.circumstance_name
 	local level_name = shared_state and shared_state.level_name
 
@@ -922,15 +875,15 @@ mod:hook(CLASS.LocalThemeState, "init", function(func, self, state_machine, shar
 			_current_theme_tag = theme_tag
 			if theme_tag == "darkness" then
 				state.is_darkness_mission = true
-				_preserved_mission_flags.is_darkness_mission = true
+				state.preserved_is_darkness = true
 				MGB.log("LocalThemeState: darkness theme detected")
 			elseif theme_tag == "ventilation_purge" then
 				state.is_ventilation_mission = true
-				_preserved_mission_flags.is_ventilation_mission = true
+				state.preserved_is_ventilation = true
 				MGB.log("LocalThemeState: ventilation theme detected")
 			elseif theme_tag == "toxic_gas" then
 				state.is_toxic_gas_mission = true
-				_preserved_mission_flags.is_toxic_gas_mission = true
+				state.preserved_is_toxic_gas = true
 				MGB.log("LocalThemeState: toxic_gas theme detected")
 			end
 		end
@@ -947,6 +900,10 @@ mod:hook(CLASS.HostThemeState, "init", function(func, self, state_machine, share
 		state.hooks_called["HostThemeState.init"] = true
 	end
 
+	if not mod:is_enabled() then
+		return func(self, state_machine, shared_state, ...)
+	end
+
 	local circumstance_name = shared_state and shared_state.circumstance_name
 	local level_name = shared_state and shared_state.level_name
 
@@ -960,15 +917,15 @@ mod:hook(CLASS.HostThemeState, "init", function(func, self, state_machine, share
 			_current_theme_tag = theme_tag
 			if theme_tag == "darkness" then
 				state.is_darkness_mission = true
-				_preserved_mission_flags.is_darkness_mission = true
+				state.preserved_is_darkness = true
 				MGB.log("HostThemeState: darkness theme detected")
 			elseif theme_tag == "ventilation_purge" then
 				state.is_ventilation_mission = true
-				_preserved_mission_flags.is_ventilation_mission = true
+				state.preserved_is_ventilation = true
 				MGB.log("HostThemeState: ventilation theme detected")
 			elseif theme_tag == "toxic_gas" then
 				state.is_toxic_gas_mission = true
-				_preserved_mission_flags.is_toxic_gas_mission = true
+				state.preserved_is_toxic_gas = true
 				MGB.log("HostThemeState: toxic_gas theme detected")
 			end
 		end
@@ -990,6 +947,10 @@ if rawget(_G, "Theme") and Theme.shading_environment_slots then
 
 		local result = _original_shading_environment_slots(theme, ...)
 
+		if not mod:is_enabled() then
+			return result
+		end
+
 		if _capturing_defaults then
 			return result
 		end
@@ -1000,7 +961,7 @@ if rawget(_G, "Theme") and Theme.shading_environment_slots then
 
 		if MGB then
 			MGB.log("Theme.shading_environment_slots: blocking - returning empty (vent=%s dark=%s preserved_vent=%s)", tostring(state and state.is_ventilation_mission), tostring(state and state.is_darkness_mission),
-			        tostring(_preserved_mission_flags.is_ventilation_mission))
+			        tostring(state and state.preserved_is_ventilation))
 		end
 
 		return {}
@@ -1018,26 +979,6 @@ if rawget(_G, "Theme") and Theme.light_groups then
 			state.hooks_called["Theme.light_groups"] = true
 		end
 
-		if _capturing_defaults then
-			return _original_light_groups(theme, ...)
-		end
-
-		if not should_block_themes() then
-			return _original_light_groups(theme, ...)
-		end
-
-		if not MGB.is_in_mission_or_training() then
-			return _original_light_groups(theme, ...)
-		end
-
-		local dominated_by_darkness = (state and state.is_darkness_mission) or _preserved_mission_flags.is_darkness_mission
-		dominated_by_darkness = dominated_by_darkness and MGB.should_block_darkness and MGB.should_block_darkness()
-
-		if dominated_by_darkness then
-			MGB.log("Theme.light_groups: returning empty (blocking light groups)")
-			return {}
-		end
-
 		return _original_light_groups(theme, ...)
 	end
 end
@@ -1052,14 +993,18 @@ if ThemePackage and ThemePackage.level_resource_dependency_packages then
 		local state = MGB and MGB.state
 
 		if state then
-			state.hooks_called["ThemePackage.level_resource_dependency_packages"] = true
+			state.hooks_called["ThemePackage.level_resfource_dependency_packages"] = true
+		end
+
+		if not mod:is_enabled() then
+			return _original_level_resource_dependency_packages(level_name, theme_tag, ...)
 		end
 
 		if theme_tag == "darkness" then
 			if state then
 				state.is_darkness_mission = true
+				state.preserved_is_darkness = true
 			end
-			_preserved_mission_flags.is_darkness_mission = true
 			_current_theme_tag = "darkness"
 			if MGB then
 				MGB.log("ThemePackage: darkness mission detected for %s", level_name)
@@ -1067,8 +1012,8 @@ if ThemePackage and ThemePackage.level_resource_dependency_packages then
 		elseif theme_tag == "ventilation_purge" then
 			if state then
 				state.is_ventilation_mission = true
+				state.preserved_is_ventilation = true
 			end
-			_preserved_mission_flags.is_ventilation_mission = true
 			_current_theme_tag = "ventilation_purge"
 			if MGB then
 				MGB.log("ThemePackage: ventilation mission detected for %s", level_name)
@@ -1076,8 +1021,8 @@ if ThemePackage and ThemePackage.level_resource_dependency_packages then
 		elseif theme_tag == "toxic_gas" then
 			if state then
 				state.is_toxic_gas_mission = true
+				state.preserved_is_toxic_gas = true
 			end
-			_preserved_mission_flags.is_toxic_gas_mission = true
 			_current_theme_tag = "toxic_gas"
 			if MGB then
 				MGB.log("ThemePackage: toxic_gas mission detected for %s", level_name)

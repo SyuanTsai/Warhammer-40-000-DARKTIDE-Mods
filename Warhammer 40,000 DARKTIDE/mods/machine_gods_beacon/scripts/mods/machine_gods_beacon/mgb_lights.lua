@@ -1,5 +1,5 @@
 local mod = get_mod("machine_gods_beacon")
-local VERSION = "v2026.01.17.0415"
+local VERSION = "v2026.01.23.0258"
 
 local mgb_lights = {}
 mgb_lights._version = VERSION
@@ -30,6 +30,53 @@ end
 
 local function get_cascade_delay()
 	return 0.03
+end
+
+local function capture_original_light_state(light_group_name, ext)
+	local state = get_state()
+	if not state then
+		return
+	end
+	if state.original_light_states[light_group_name] ~= nil then
+		return
+	end
+	local is_enabled = ext._enabled
+	if is_enabled == nil then
+		is_enabled = true
+	end
+	state.original_light_states[light_group_name] = is_enabled
+	local MGB = get_MGB()
+	if MGB then
+		MGB.log("captured original light state: %s = %s", light_group_name, tostring(is_enabled))
+	end
+end
+
+local function capture_all_original_light_states()
+	local MGB = get_MGB()
+	if not MGB then
+		return
+	end
+	local state = MGB.state
+	if state.original_light_states_captured then
+		return
+	end
+	local light_sys = MGB.get_system("light_controller_system")
+	if not light_sys or not light_sys._light_group_extensions then
+		return
+	end
+	for group_name, extensions in pairs(light_sys._light_group_extensions) do
+		if state.original_light_states[group_name] == nil and #extensions > 0 then
+			local ext = extensions[1]
+			local is_enabled = ext._enabled
+			if is_enabled == nil then
+				is_enabled = true
+			end
+			state.original_light_states[group_name] = is_enabled
+			MGB.log("captured original light state: %s = %s", group_name, tostring(is_enabled))
+		end
+	end
+	state.original_light_states_captured = true
+	MGB.log("captured all original light states: %d groups", table.size(state.original_light_states))
 end
 
 local function record_intended_group_state(light_group_name, is_enabled)
@@ -110,6 +157,7 @@ function mgb_lights.apply_settings()
 		return
 	end
 
+	capture_all_original_light_states()
 	mgb_lights.clear_flicker_caches()
 
 	local percentage = MGB.get_light_percentage()
@@ -242,11 +290,11 @@ local function restore_light_states()
 		return
 	end
 
-	local intended_count = MGB.get_intended_light_states_count()
-	MGB.log("restore: intended_states=%d persisted=%s", intended_count, tostring(intended_count > 0))
+	local intended_count = table.size(state.intended_light_states or {})
+	MGB.log("restore: intended_states=%d", intended_count)
 
 	if intended_count == 0 then
-		MGB.log("restore: no intended states recorded, turning all lights ON")
+		MGB.log("restore: no intended states captured, turning all lights ON")
 		mgb_lights.reset_all_lights(true)
 		return
 	end
@@ -274,7 +322,7 @@ local function restore_light_states()
 			end
 		end
 	end
-	MGB.log("restore: %d on %d off", on_count, off_count)
+	MGB.log("restore: %d on %d off (from intended states)", on_count, off_count)
 end
 
 function mgb_lights.revert_settings()
@@ -689,6 +737,9 @@ function mgb_lights.stop_all_flickers()
 end
 
 local function should_control_lights_in_hook()
+	if not mod:is_enabled() then
+		return false
+	end
 	local MGB = get_MGB()
 	if not MGB then
 		return false
@@ -706,6 +757,9 @@ mod:hook(CLASS.LightControllerSystem, "init", function(func, self, extension_ini
 	if state then
 		state.hooks_called["LightControllerSystem.init"] = true
 	end
+	if not mod:is_enabled() then
+		return func(self, extension_init_context, system_init_data, ...)
+	end
 	local themes = system_init_data and system_init_data.themes
 	if themes and state then
 		for _, theme in ipairs(themes) do
@@ -717,17 +771,6 @@ mod:hook(CLASS.LightControllerSystem, "init", function(func, self, extension_ini
 			end
 		end
 	end
-	if should_control_lights_in_hook() then
-		if MGB then
-			MGB.log("hook: light_init blocking themes")
-		end
-		local modified_init_data = {}
-		for k, v in pairs(system_init_data or {}) do
-			modified_init_data[k] = v
-		end
-		modified_init_data.themes = {}
-		return func(self, extension_init_context, modified_init_data, ...)
-	end
 	return func(self, extension_init_context, system_init_data, ...)
 end)
 
@@ -736,9 +779,6 @@ mod:hook(CLASS.LightControllerSystem, "on_theme_changed", function(func, self, t
 	local state = MGB and MGB.state
 	if state then
 		state.hooks_called["LightControllerSystem.on_theme_changed"] = true
-	end
-	if should_control_lights_in_hook() then
-		return
 	end
 	return func(self, themes, ...)
 end)
@@ -749,9 +789,6 @@ mod:hook(CLASS.LightControllerSystem, "setup_light_groups", function(func, self,
 	if state then
 		state.hooks_called["LightControllerSystem.setup_light_groups"] = true
 	end
-	if should_control_lights_in_hook() then
-		return func(self, {}, ...)
-	end
 	return func(self, themes, ...)
 end)
 
@@ -760,6 +797,20 @@ mod:hook(CLASS.LightControllerSystem, "_set_light_group_enabled", function(func,
 	local state = MGB and MGB.state
 	if state then
 		state.hooks_called["LightControllerSystem._set_light_group_enabled"] = true
+	end
+	if state and state.original_light_states[light_group_name] == nil then
+		local extensions = self._light_group_extensions and self._light_group_extensions[light_group_name]
+		if extensions and #extensions > 0 then
+			local ext = extensions[1]
+			local current_enabled = ext._enabled
+			if current_enabled == nil then
+				current_enabled = true
+			end
+			state.original_light_states[light_group_name] = current_enabled
+			if MGB then
+				MGB.log("captured original light state (hook): %s = %s", light_group_name, tostring(current_enabled))
+			end
+		end
 	end
 	record_intended_group_state(light_group_name, is_enabled)
 	if should_control_lights_in_hook() and not is_enabled then
