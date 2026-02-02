@@ -43,6 +43,7 @@ Tree_Helper
 ScanHelper
 
 -- 只會設定一次的MOD
+modular_menu_buttons
 auto_rations
 true_level
 who_are_you
