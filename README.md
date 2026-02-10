@@ -478,10 +478,10 @@
 
 ### [MissionBrief](https://www.nexusmods.com/warhammer40kdarktide/mods/387)
     預先載入
-- MOD 網站最後更新日期：Last updated 28 July 2025, 3:20AM
-- MOD 版本：1.5
-- MOD 檔案名稱：MissionBrief-387-1-5-1753644029
-- 手動維護最後下載日期：2025-07-31
+- MOD 網站最後更新日期：Last updated 03 February 2026, 9:06PM
+- MOD 版本：1.6
+- MOD 檔案名稱：MissionBrief-387-1-6-1770124005
+- 手動維護最後下載日期：2026-02-10
 
 ### [Uptime](https://www.nexusmods.com/warhammer40kdarktide/mods/387)
     觀察天賦的運作狀況
