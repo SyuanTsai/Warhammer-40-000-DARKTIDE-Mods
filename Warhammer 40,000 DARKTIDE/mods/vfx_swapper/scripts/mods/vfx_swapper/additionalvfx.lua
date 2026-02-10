@@ -1,24 +1,73 @@
 local mod = get_mod("vfx_swapper")
 
 local DEBUG_VFX_LOGGING = false
+local DEBUG_TWIN_MINE = false  
+local DEBUG_TOXIN_DEATH = false
+
+local DEBUG_LOGGING = false
 
 local BLOCKED_VFX = {
     ["content/fx/particles/impacts/flesh/nurgle_corruption_death"] = true,
     ["content/fx/particles/enemies/rotten_armor_death"] = true,
+    ["content/fx/particles/enemies/bolstering_shockwave"] = true,
 }
+local BLOCKED_VFX_RPC = {
+    ["primer_explosion"] = true,
+    ["primer_gas"] = true,
+    ["primer_stun"] = true,
+}
+local function debug_log(message)
+    if DEBUG_LOGGING then
+        mod:echo("[AdditionalVFX] " .. message)
+    end
+end
+
+
+
+-- ============================================================================
+-- Block Toxin Death Explosion VFX (From Chem-grenade and Explosive Needler)
+-- ============================================================================
+
+mod:hook("WeaponSystem", "rpc_trigger_husk_explosion", function(func, self, channel_id, explosion_template_id, position, rotation, radius_variable_value, weapon_charge_level, optional_attacking_owner_unit_id)
+        -- Lookup explosion template name from network ID
+    local explosion_template_name = NetworkLookup.explosion_templates[explosion_template_id]
+    if mod:get("disable_toxin_death_vfx") and BLOCKED_VFX_RPC[explosion_template_name] then
+        return
+    end
+        
+        -- Not a primer explosion, call original
+    return func(self, channel_id, explosion_template_id, position, rotation, radius_variable_value, weapon_charge_level, optional_attacking_owner_unit_id)
+end)
+    
+    -- hook create_husk_explosion for solo/psykhanium (not working because reasons ¯\_(ツ)_/¯)
+-- mod:hook("Explosion", "create_husk_explosion", function(func, world, physics_world, wwise_world, attacking_owner_unit_or_nil, explosion_template, position, rotation, radius_variables, charge_level)
+--         -- Check explosion template name
+--     if explosion_template then
+--         mod:echo("[BLOCKING HUSK] " .. tostring(explosion_template))
+--             -- Don't play VFX
+--         return
+--     end
+        
+--         -- Not blocked, call original
+--     return func(world, physics_world, wwise_world, attacking_owner_unit_or_nil, explosion_template, position, rotation, radius_variables, charge_level)
+-- end)
+
+-- ============================================================================
+-- Havoc VFX Blocking Hooks
+-- ============================================================================
 
 mod:hook("FxSystem", "trigger_vfx", function(func, self, vfx_name, position, optional_rotation, ...)
-    -- Debug: log all VFX being triggered
     -- if DEBUG_VFX_LOGGING and vfx_name then
-    --     mod:echo("[VFX] " .. tostring(vfx_name))
+    --     debug_log("[VFX] " .. tostring(vfx_name))
     -- end
     
-    -- Skip blocked VFX entirely
-    if BLOCKED_VFX[vfx_name] then
-        -- if DEBUG_VFX_LOGGING then
-        --     mod:echo("[VFX BLOCKED] " .. tostring(vfx_name))
-        -- end
-        return
+    if mod:get("disable_death_vfx") then
+        if BLOCKED_VFX[vfx_name] then
+            -- if DEBUG_VFX_LOGGING then
+            --     debug_log("[FxSystem BLOCKED] " .. tostring(vfx_name))
+            -- end
+            return
+        end
     end
     
     -- Call original for all other VFX
@@ -31,25 +80,23 @@ mod:hook("FxSystem", "rpc_trigger_vfx", function(func, self, channel_id, vfx_id,
     local vfx_name = NetworkLookup.vfx[vfx_id]
     
     -- Skip blocked VFX
-    if vfx_name and BLOCKED_VFX[vfx_name] then
-        -- if DEBUG_VFX_LOGGING then
-        --     mod:echo("[VFX RPC BLOCKED] " .. tostring(vfx_name))
-        -- end
-        return
+    if mod:get("disable_death_vfx") then
+        if vfx_name and BLOCKED_VFX[vfx_name] then
+            -- if DEBUG_VFX_LOGGING then
+            --     debug_log("[FxSystem RPC BLOCKED] " .. tostring(vfx_name))
+            -- end
+            return
+        end
     end
     
     return func(self, channel_id, vfx_id, position, optional_rotation)
 end)
 
-
--- ============================================================================
--- Havoc VFX Blocking Hooks
--- ============================================================================
-
 -- block rotten_armor_stages effect template
 mod:hook("FxSystem", "start_template_effect", function(func, self, template, optional_unit, optional_node, optional_position)
+    local template_name = template and template.name
+
     if mod:get("disable_rotten_armor_stages") then
-        local template_name = template and template.name
         if template_name == "mutator_rotten_armor_stages" then
             return
         end
@@ -59,144 +106,189 @@ end)
 
 -- block rotten_armor_stages as client 
 mod:hook("FxSystem", "rpc_start_template_effect", function(func, self, channel_id, buffer_index, template_id, optional_unit_id, optional_node, optional_position)
+    local template_name = NetworkLookup.effect_templates[template_id]
+
     if mod:get("disable_rotten_armor_stages") then
-        -- Lookup the template name from the network ID
-        local template_name = NetworkLookup.effect_templates[template_id]
         if template_name == "mutator_rotten_armor_stages" then
             return
         end
     end
-    
     return func(self, channel_id, buffer_index, template_id, optional_unit_id, optional_node, optional_position)
 end)
 
--- block corrupted enemies node effects (particles)
-mod:hook("MinionBuffExtension", "_start_fx", function(func, self, index, template)
+--  rampaging and corrupted enemies
+
+local BOLSTERING_COLOR = {
+	0.98,
+	0.27,
+	0,
+}
+local BOLSTER_1_COLOR = {
+	BOLSTERING_COLOR[1] * 0.25,
+	BOLSTERING_COLOR[2] * 0.25,
+	BOLSTERING_COLOR[3] * 0.25,
+}
+local BOLSTER_2_COLOR = {
+	BOLSTERING_COLOR[1] * 0.35,
+	BOLSTERING_COLOR[2] * 0.35,
+	BOLSTERING_COLOR[3] * 0.35,
+}
+local BOLSTER_3_COLOR = {
+	BOLSTERING_COLOR[1] * 0.65,
+	BOLSTERING_COLOR[2] * 0.65,
+	BOLSTERING_COLOR[3] * 0.65,
+}
+local BOLSTER_4_COLOR = {
+	BOLSTERING_COLOR[1] * 0.85,
+	BOLSTERING_COLOR[2] * 0.85,
+	BOLSTERING_COLOR[3] * 0.85,
+}
+local HavocTemplates = require("scripts/settings/buff/havoc_buff_templates")
+local BuffSettings = require("scripts/settings/buff/buff_settings")
+local minion_effects_priorities = BuffSettings.minion_effects_priorities
+mod.havoc_enemy_vfx = function(self)
+    if mod:get("disable_rampaging_vfx") then
+        HavocTemplates.havoc_bolstering.minion_effects.node_effects_priotity = nil
+        HavocTemplates.havoc_bolstering.minion_effects.stack_material_vectors = nil
+        HavocTemplates.havoc_bolstering.minion_effects.stack_node_effects = nil
+        HavocTemplates.havoc_bolstering.minion_effects.material_vector = nil
+    else 
+        HavocTemplates.havoc_bolstering.minion_effects = {
+		node_effects_priotity = minion_effects_priorities.mutators,
+		stack_material_vectors = {
+			material_vector = {
+				name = "stimmed_color",
+				value = BOLSTER_1_COLOR,
+				priority = minion_effects_priorities.mutators,
+			},
+			material_vector = {
+				name = "stimmed_color",
+				value = BOLSTER_2_COLOR,
+				priority = minion_effects_priorities.mutators,
+			},
+			material_vector = {
+				name = "stimmed_color",
+				value = BOLSTER_3_COLOR,
+				priority = minion_effects_priorities.mutators,
+			},
+			material_vector = {
+				name = "stimmed_color",
+				value = BOLSTER_4_COLOR,
+				priority = minion_effects_priorities.mutators,
+			},
+			material_vector = {
+				name = "stimmed_color",
+				value = BOLSTERING_COLOR,
+				priority = minion_effects_priorities.mutators,
+			},
+		},
+		stack_node_effects = {
+			[5] = {
+				    node_name = "j_lefteye",
+				    vfx = {
+					    orphaned_policy = "stop",
+					    particle_effect = "content/fx/particles/enemies/red_glowing_eyes",
+					    stop_type = "destroy",
+				        material_variables = {
+					    {
+						    material_name = "eye_socket",
+						    variable_name = "material_variable_21872256",
+						    value = BOLSTERING_COLOR,
+					    },
+					    {
+						    material_name = "eye_glow",
+						    variable_name = "trail_color",
+						    value = BOLSTERING_COLOR,
+					    },
+					    {
+						    material_name = "eye_glow",
+						    variable_name = "material_variable_21872256_69bf7e2a",
+						    value = BOLSTER_1_COLOR,
+					    },
+				    },
+			    },
+		    },
+		    {
+			        node_name = "j_righteye",
+			        vfx = {
+				        orphaned_policy = "stop",
+				        particle_effect = "content/fx/particles/enemies/red_glowing_eyes",
+				        stop_type = "destroy",
+				        material_variables = {
+				        {
+					        material_name = "eye_socket",
+					        variable_name = "material_variable_21872256",
+					        value = BOLSTERING_COLOR,
+					    },
+					    {
+					        material_name = "eye_glow",
+					        variable_name = "trail_color",
+					        value = BOLSTERING_COLOR,
+					    },
+					    {
+					        material_name = "eye_glow",
+					        variable_name = "material_variable_21872256_69bf7e2a",
+						value = BOLSTERING_COLOR,
+					    },
+				    },
+			    },
+		    },
+		},
+		material_vector = {
+				name = "stimmed_color",
+				value = BOLSTER_1_COLOR,
+				priority = minion_effects_priorities.mutators,
+			},
+	    }
+    end
+    
     if mod:get("disable_corrupted_enemies_vfx") then
-        local template_name = template and template.name
-        if template_name == "havoc_corrupted_enemies" then
-            -- Temporarily remove node_effects so they don't spawn
-            local minion_effects = template.minion_effects
-            local original_node_effects = nil
-            
-            if minion_effects and minion_effects.node_effects then
-                original_node_effects = minion_effects.node_effects
-                minion_effects.node_effects = nil
-            end
-            
-            -- Call original function without node_effects
-            local result = func(self, index, template)
-            
-            -- Restore node_effects for other uses
-            if original_node_effects then
-                minion_effects.node_effects = original_node_effects
-            end
-            
-            return
-        end
+        HavocTemplates.havoc_corrupted_enemies.minion_effects.node_effects = nil
     end
-    
-    return func(self, index, template)
-end)
+end
 
--- Hook MinionBuffExtension._stop_fx to skip stopping node effects for havoc_corrupted_enemies
--- ALWAYS skip regardless of setting - handles case where user changes setting mid-fight (crashes)
-mod:hook("MinionBuffExtension", "_stop_fx", function(func, self, index, template)
-    local template_name = template and template.name
-    if template_name == "havoc_corrupted_enemies" then
-        -- Always remove node_effects for this buff to prevent crashes from setting changes
-        local minion_effects = template.minion_effects
-        local original_node_effects = nil
-        
-        if minion_effects and minion_effects.node_effects then
-            original_node_effects = minion_effects.node_effects
-            minion_effects.node_effects = nil
-        end
-        
-        -- Call original function without node_effects
-        local result = func(self, index, template)
-        
-        -- Restore node_effects
-        if original_node_effects then
-            minion_effects.node_effects = original_node_effects
-        end
-        
-        return result
-    end
-    
-    return func(self, index, template)
-end)
-
--- block the green shader glow on corrupted enemies
+--  corrupted enemies color
 mod:hook("Unit", "set_vector3_for_materials", function(func, unit, material_name, color, ...)
     if mod:get("disable_corrupted_enemies_color") then
         if material_name == "stimmed_color" and color then
+            -- debug_log(material_name .. " " .. tostring(color)) --[[ TODO: remove ]]
             local r, g, b = Vector3.to_elements(color)
-            if r > 0.37 and g > 0.68 and b == 0 then
-                return
+            local tolerance = 0.001
+            if (math.approximately_equal(r, 0.3725, tolerance) and math.approximately_equal(g, 0.6823, tolerance) and math.approximately_equal(b, 0.0, tolerance)) then
+                return 
             end
         end
     end
-    
     return func(unit, material_name, color, ...)
 end)
 
-
-local DEBUG_LOGGING = false
-
--- local function debug_log(message)
---     if DEBUG_LOGGING then
---         mod:echo("[VFX Limiter] " .. message)
---     end
--- end
-
--- ============================================================================
--- Block Rotten Armor Impact FX
--- ============================================================================
-
-
-mod:hook("FxSystem", "play_impact_fx", function(func, self, impact_fx, position, ...)
-    local fx_name = impact_fx and impact_fx.name or "unknown"
-    
-    -- if DEBUG_LOGGING then
-    --     debug_log("[IMPACT FX] " .. fx_name)
-    -- end
-
-    -- Only block VFX for rotten_armor, keep SFX playing
-    if impact_fx and impact_fx.name and impact_fx.name:find("rotten_armor") then
-        -- Temporarily remove VFX entries but keep SFX
-        local saved_vfx = impact_fx.vfx
-        local saved_vfx_1p = impact_fx.vfx_1p
-        local saved_vfx_3p = impact_fx.vfx_3p
-        local saved_decal = impact_fx.decal
-        local saved_linked_decal = impact_fx.linked_decal
-        local saved_blood_ball = impact_fx.blood_ball
-        local saved_unit = impact_fx.unit
-        
-        -- Nil out the VFX entries
-        impact_fx.vfx = nil
-        impact_fx.vfx_1p = nil
-        impact_fx.vfx_3p = nil
-        impact_fx.decal = nil
-        impact_fx.linked_decal = nil
-        impact_fx.blood_ball = nil
-        impact_fx.unit = nil
-        
-        -- Call original function (will play SFX but no VFX)
-        local result = func(self, impact_fx, position, ...)
-        
-        -- Restore VFX entries
-        impact_fx.vfx = saved_vfx
-        impact_fx.vfx_1p = saved_vfx_1p
-        impact_fx.vfx_3p = saved_vfx_3p
-        impact_fx.decal = saved_decal
-        impact_fx.linked_decal = saved_linked_decal
-        impact_fx.blood_ball = saved_blood_ball
-        impact_fx.unit = saved_unit
-        
-        return result
+--  rotten armor impact vfx (leak)
+mod:hook("MinionBuffExtension", "has_keyword", function(func, self, keyword)
+    if mod:get("disable_rotten_armor_impact") and keyword == "rotten_armor" then
+        return false
     end
-    
-    return func(self, impact_fx, position, ...)
+    return func(self, keyword)
 end)
 
+
+-- ============================================================================
+-- Rotten Armor Impact FX (For TEAMMATE'S attacks on rotten armor - potentially hurt performance?)
+-- ============================================================================
+
+--
+-- Only runs for NETWORKED impacts (teammate attacks)
+-- if mod:get("disable_rotten_armor_impact") then
+--     mod:hook("FxSystem", "rpc_play_impact_fx", function(func, self, channel_id, impact_fx_name_id, position, ...)
+--         -- Lookup the impact fx name from network ID
+--         local impact_fx_name = NetworkLookup.impact_fx_names[impact_fx_name_id]
+        
+--         -- Check if it's rotten armor (simple string check)
+--         if impact_fx_name and impact_fx_name:find("rotten_armor") then
+--             -- early return
+--             return
+--         end
+        
+--         -- Not rotten armor, call original
+--         return func(self, channel_id, impact_fx_name_id, position, ...)
+--     end)
+-- end
