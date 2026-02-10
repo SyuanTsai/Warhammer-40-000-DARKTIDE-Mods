@@ -1,4 +1,5 @@
 local mod = get_mod("SoloPlay")
+local MutatorTemplates = require("scripts/settings/mutator/mutator_templates")
 local MissionTemplates = require("scripts/settings/mission/mission_templates")
 local CircumstanceTemplates = require("scripts/settings/circumstance/circumstance_templates")
 local HavocCircumstanceTemplate = require("scripts/settings/circumstance/templates/havoc_circumstance_template")
@@ -6,12 +7,13 @@ local MissionObjectiveTemplates = require("scripts/settings/mission_objective/mi
 local MissionGiverVoSettings = require("scripts/settings/dialogue/mission_giver_vo_settings")
 local DialogueSpeakerVoiceSettings = require("scripts/settings/dialogue/dialogue_speaker_voice_settings")
 local HavocSettings = require("scripts/settings/havoc_settings")
+local CampaignSettings = require("scripts/settings/campaign/campaign_settings")
 local HordesModeSettings = require("scripts/settings/hordes_mode_settings")
 local havoc_modifier_template = mod:io_dofile("SoloPlay/scripts/mods/SoloPlay/havoc_modifier_template")
 
 local TRAINING_GROUND = "tg_shooting_range"
 local MORTIS_TRIALS = "psykhanium"
-local CAMPAIGN_LOC = Localize("loc_player_journey_campaign")
+local TWINS_MISSION = "km_enforcer_twins"
 
 local objectives_denylist = {
 	"hub",
@@ -20,6 +22,9 @@ local objectives_denylist = {
 }
 local circumstance_denylist = {
 	"dummy",
+}
+local havoc_mission_denylist = {
+	TWINS_MISSION,
 }
 local circumstance_prefer_list = {
 	loc_circumstance_hunting_grounds_title = "hunting_grounds_01",
@@ -33,28 +38,43 @@ local circumstance_format_group = {
 	high_flash_mission = "format_auric"
 }
 local campaign_circumstances = {
-	player_journey_01 = 1,
-	player_journey_02 = 2,
-	player_journey_03 = 3,
-	player_journey_04 = 4,
-	player_journey_05 = 5,
-	player_journey_06_B = 6,
-	player_journey_06_A = 7,
-	player_journey_07_B = 8,
-	player_journey_07_A = 9,
-	player_journey_08 = 10,
-	player_journey_09 = 11,
-	player_journey_010 = 12,
-	player_journey_011_A = 13,
-	player_journey_012_A = 14,
-	player_journey_011_B = 15,
-	player_journey_013_A = 16,
-	player_journey_014 = 17,
+	["player-journey"] = {
+		player_journey_01 = 1,
+		player_journey_02 = 2,
+		player_journey_03 = 3,
+		player_journey_04 = 4,
+		player_journey_05 = 5,
+		player_journey_06_B = 6,
+		player_journey_06_A = 7,
+		player_journey_07_B = 8,
+		player_journey_07_A = 9,
+		player_journey_08 = 10,
+		player_journey_09 = 11,
+		player_journey_010 = 12,
+		player_journey_011_A = 13,
+		player_journey_012_A = 14,
+		player_journey_011_B = 15,
+		player_journey_013_A = 16,
+		player_journey_014 = 17,
+	},
+	["no-mans-land"] = {
+		story_nomansland_01 = 1,
+		story_nomansland_02 = 2,
+		story_nomansland_03 = 3,
+	},
 }
+local function get_campaign(name)
+	for campaign, names in pairs(campaign_circumstances) do
+		if names[name] ~= nil then
+			return campaign
+		end
+	end
+	return nil
+end
 
 local settings = {
 	context_override = {
-		km_enforcer_twins = {
+		[TWINS_MISSION] = {
 			circumstance_name = {
 				value = "player_journey_010",
 			},
@@ -78,6 +98,7 @@ local settings = {
 		side_missions = {},
 		circumstances = {},
 		mission_givers = {},
+		havoc_missions = {},
 		havoc_factions = {},
 		havoc_circumstances = {},
 		havoc_theme_circumstances = {},
@@ -90,7 +111,7 @@ local settings = {
 	lookup = {
 		-- use all circumstances if nil
 		circumstances_of_missions = {
-			km_enforcer_twins = {},
+			[TWINS_MISSION] = {},
 		},
 		-- use all mission givers if nil
 		mission_givers_of_missions = {},
@@ -104,10 +125,12 @@ local settings = {
 			mod:set("_horde_selected_island", params)
 		end,
 	},
+	invalid_circumstances = {}
 }
 
 -- missions
 local missions_loc_array = {}
+local havoc_missions_loc_array = {}
 local produce_mission_loc_entries = function (name, mission)
 	local display = Localize(mission.mission_name)
 	if string.starts_with(display, "<") then
@@ -129,6 +152,13 @@ local produce_mission_loc_entries = function (name, mission)
 		data = name,
 		localized = display,
 	}
+	local is_adventure = mission.mechanism_name == "adventure" and mission.game_mode_name == "coop_complete_objective" and mission.mission_type ~= "operations"
+	if name == TRAINING_GROUND or (is_adventure and not table.array_contains(havoc_mission_denylist, name)) then
+		havoc_missions_loc_array[#havoc_missions_loc_array+1] = {
+			data = name,
+			localized = display,
+		}
+	end
 end
 for name, mission in pairs(MissionTemplates) do
 	if (not mission.objectives) or (not table.array_contains(objectives_denylist, mission.objectives)) or name == TRAINING_GROUND then
@@ -156,9 +186,13 @@ local mission_sort_function = function (a, b)
 	return mod.sort_function_localized(a, b)
 end
 table.sort(missions_loc_array, mission_sort_function)
+table.sort(havoc_missions_loc_array, mission_sort_function)
 for index, mission_loc in ipairs(missions_loc_array) do
 	settings.loc.missions[mission_loc.data] = mission_loc.localized
 	settings.order.missions[index] = mission_loc.data
+end
+for index, mission_loc in ipairs(havoc_missions_loc_array) do
+	settings.order.havoc_missions[index] = mission_loc.data
 end
 
 -- side_missions
@@ -181,10 +215,22 @@ for index, side_mission_loc in ipairs(side_missions_loc_array) do
 	settings.order.side_missions[index] = side_mission_loc.data
 end
 
+-- circumstance validation
+for name, circumstance in pairs(CircumstanceTemplates) do
+	local mutators = circumstance.mutators
+	if mutators then
+		for _, mutator_name in ipairs(mutators) do
+			if not MutatorTemplates[mutator_name] then
+				settings.invalid_circumstances[name] = true
+			end
+		end
+	end
+end
+
 -- pre-process havoc circumstances
 local havoc_circumstances_loc_fallback = {}
 local havoc_circumstances_lookup_unfiltered = {}
-for circumstance_name in pairs(HavocCircumstanceTemplate) do
+for circumstance_name, circumstance in pairs(HavocCircumstanceTemplate) do
 	local loc_data = HavocSettings.ui_settings.circumstances[circumstance_name]
 	if loc_data then
 		havoc_circumstances_loc_fallback[circumstance_name] = loc_data.title
@@ -209,6 +255,9 @@ for name, circumstance in pairs(CircumstanceTemplates) do
 				break
 			end
 		end
+		if settings.invalid_circumstances[name] then
+			deny = true
+		end
 		local format_key = nil
 		for pattern, loc_key in pairs(circumstance_format_group) do
 			if string.find(name, pattern, 1, true) ~= nil then
@@ -217,15 +266,17 @@ for name, circumstance in pairs(CircumstanceTemplates) do
 			end
 		end
 		local display_name = circumstance.ui.display_name
+		local campaign = get_campaign(name)
 		if havoc_circumstances_loc_fallback[name] then
 			display_name = havoc_circumstances_loc_fallback[name]
-		elseif string.starts_with(name, "player_journey_") then
-			local campaign_order = campaign_circumstances[name] or 0
+		elseif campaign ~= nil then
+			local campaign_display = Localize(CampaignSettings[campaign].display_name)
+			local campaign_order = campaign_circumstances[campaign][name] or 0
 			display_name = Localize(display_name)
 			if campaign_order > 0 then
-				display_name = string.format("%s %02d: %s", CAMPAIGN_LOC, campaign_order, display_name)
+				display_name = string.format("%s %02d: %s", campaign_display, campaign_order, display_name)
 			else
-				display_name = string.format("%s: %s", CAMPAIGN_LOC, display_name)
+				display_name = string.format("%s: %s", campaign_display, display_name)
 			end
 		end
 		if not deny and not format_key then
@@ -344,14 +395,6 @@ for _, circumstances in pairs(HavocSettings.circumstances_per_theme) do
 end
 
 -- theme_circumstances_of_havoc_missions
-settings.lookup.theme_circumstances_of_havoc_missions[TRAINING_GROUND] = {}
-for theme in pairs(HavocSettings.missions) do
-	if theme ~= "default" then
-		for _, theme_circumstance in ipairs(HavocSettings.circumstances_per_theme[theme]) do
-			settings.lookup.theme_circumstances_of_havoc_missions[TRAINING_GROUND][theme_circumstance] = true
-		end
-	end
-end
 for theme, missions in pairs(HavocSettings.missions) do
 	for _, mission_name in ipairs(missions) do
 		settings.lookup.theme_circumstances_of_havoc_missions[mission_name] = settings.lookup.theme_circumstances_of_havoc_missions[mission_name] or {}
