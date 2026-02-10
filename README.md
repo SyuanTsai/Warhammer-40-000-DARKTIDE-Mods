@@ -230,10 +230,10 @@
 
 ### [Numeric UI](https://www.nexusmods.com/warhammer40kdarktide/mods/14)
     UI改善
-- MOD 網站最後更新日期：Last updated 08 December 2025, 12:53AM
-- MOD 版本：1.23.0
-- MOD 檔案名稱：NumericUI-14-1-23-0-1765126418
-- 手動維護最後下載日期：2025-12-08
+- MOD 網站最後更新日期：Last updated 09 February 2026, 2:28AM
+- MOD 版本：26.02.08-1
+- MOD 檔案名稱：NumericUI-14-26-02-08-1-1770575286
+- 手動維護最後下載日期：2026-02-10
 
 ### [Spidey Sense](https://www.nexusmods.com/warhammer40kdarktide/mods/268)
     蜘蛛感應 - 畫面顯示特定敵人位置
