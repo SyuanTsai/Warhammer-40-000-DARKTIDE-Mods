@@ -379,7 +379,8 @@ local localizations = {
 		en = "Reset sound settings",
 		ru = "Сбросить настройки звука",
 		["zh-tw"] = "重置音效設定",
-	},}
+	},
+}
 
 local function readable(text)
 	local readable_string = ""
