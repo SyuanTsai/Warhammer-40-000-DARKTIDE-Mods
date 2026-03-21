@@ -301,10 +301,10 @@
 
 ### [Chat Block](https://www.nexusmods.com/warhammer40kdarktide/mods/68)
     2對話時自動防禦
-- MOD 網站最後更新日期：Last updated 29 June 2025, 11:06PM
-- MOD 版本：1.2.3
-- MOD 檔案名稱：ChatBlock-68-1-2-3-1751209583
-- 手動維護最後下載日期：2025-06-30
+- MOD 網站最後更新日期：Last updated 09 February 2026, 2:27AM
+- MOD 版本：2026-02-08-1
+- MOD 檔案名稱：ChatBlock-68-26-02-08-1-1770575237
+- 手動維護最後下載日期：2026-03-21
 
 ---
 # 遊戲內操作相關MOD
