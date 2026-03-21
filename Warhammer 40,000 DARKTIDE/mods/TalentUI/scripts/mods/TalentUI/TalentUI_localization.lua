@@ -254,6 +254,11 @@ return {
 		ru = "Под здоровьем",
 		["zh-tw"] = "生命值下方",
 	},
+	weapon_preset_numeric_ui = {
+		en = "NumericUI",
+		ru = "NumericUI",
+		["zh-tw"] = "NumericUI",
+	},
 	teammate_weapon_orientation = {
 		en = "Orientation",
 		ru = "Ориентация",
