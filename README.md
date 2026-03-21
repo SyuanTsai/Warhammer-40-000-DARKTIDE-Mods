@@ -510,7 +510,7 @@
 - MOD 網站最後更新日期：Last updated 23 January 2026, 3:18AM
 - MOD 版本：0.1.1
 - MOD 檔案名稱：Quick Level Mastery-395-0-1-1-1769109536
-- 手動維護最後下載日期：2026-02-02
+- 手動維護最後下載日期：2026-03-21
 
 ### [I Wanna See](https://www.nexusmods.com/warhammer40kdarktide/mods/371)
     修改火焰特效的顯示方式
