@@ -22,10 +22,10 @@
 
 ### [Healthbars](https://www.nexusmods.com/warhammer40kdarktide/mods/16)
     UI改善
-- MOD 網站最後更新日期：Last updated 08 December 2025, 5:31AM
-- MOD 版本：4.1.1
-- MOD 檔案名稱：Healthbars-16-4-1-1-1765143089
-- 手動維護最後下載日期：2025-12-08
+- MOD 網站最後更新日期：Last updated 09 February 2026, 2:27AM
+- MOD 版本：26.02.08-1
+- MOD 檔案名稱：Healthbars-16-26-02-08-1-1770575262
+- 手動維護最後下載日期：2025-03-21
 - GitHub :
 - Source=>  https://github.com/danreeves/darktide-mods
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mods-Danreeves
