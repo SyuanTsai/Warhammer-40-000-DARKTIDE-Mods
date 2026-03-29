@@ -2,7 +2,6 @@ local mod = get_mod("AutoLoot")
 
 local pickup = false
 local cooldown = 0.0
-local Ammo = require("scripts/utilities/ammo")
 
 mod:hook("InputService", "_get", function(func, self, action_name)
     if cooldown <= 0 and pickup and action_name == "interact_pressed" then
@@ -52,6 +51,11 @@ mod:hook_safe("HudElementInteraction", "update", function(self)
             return
         end
 
+        if mod:get("pickup_expedition_materials") and (hud_description:find("loc_expeditions_pickup_loot_quality_", 1, true) or hud_description:find("loc_expeditions_pickup_currency_quality_", 1, true) or hud_description == "loc_expeditions_pickup_loot_player_drop") then
+            pickup = true
+            return
+        end
+
         if mod:get("pickup_crates") and (hud_description == "loc_pickup_pocketable_medical_crate_01" and not pocketable_template) then
             pickup = true
             return
@@ -77,10 +81,10 @@ mod:hook_safe("HudElementInteraction", "update", function(self)
         for slot in pairs(weapon_slot_configuration) do
             local wieldable_component = unit_data_extension:write_component(slot)
             if wieldable_component.max_ammunition_reserve > 0 then
-                curr_ammo_res = Ammo.current_ammo_in_reserve(wieldable_component)
-                curr_ammo_clip = Ammo.current_ammo_in_clips(wieldable_component)
-                max_ammo_res = Ammo.max_ammo_in_reserve(wieldable_component)
-                max_ammo_clip = Ammo.max_ammo_in_clips(wieldable_component)
+                curr_ammo_res = wieldable_component.current_ammunition_reserve
+                curr_ammo_clip = wieldable_component.current_ammunition_clip[1]
+                max_ammo_res = wieldable_component.max_ammunition_reserve
+                max_ammo_clip = wieldable_component.max_ammunition_clip[1]
                 break
             end
         end

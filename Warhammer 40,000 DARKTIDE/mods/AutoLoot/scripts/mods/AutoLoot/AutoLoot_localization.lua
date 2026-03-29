@@ -31,6 +31,10 @@ return {
 		en = "Automatically pick up crafting materials",
 		["zh-tw"] = "自動拾取製作材料",
 	},
+	pickup_expedition_materials = {
+		en = "Automatically pick up expedition materials",
+		["zh-tw"] = "自動拾取遠征材料",
+	},
 	open_chests = {
 		en = "Automatically open chests",
 		["zh-tw"] = "自動打開箱子",
