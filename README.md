@@ -35,10 +35,10 @@
 
 ### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
     怪物生成器 - 靈能室可以選擇要生那些怪，並且產生特定波次訓練身法。
-- MOD 網站最後更新日期：Last updated 11 October 2025, 1:38AM
-- MOD 版本：Version 25.10.10
-- MOD 檔案名稱：ManyMoreTry-175-1-5-1-1719684577
-- 手動維護最後下載日期：2025-10-14
+- MOD 網站最後更新日期：Last updated 20 March 2026, 3:26AM
+- MOD 版本：26.03.19
+- MOD 檔案名稱：Creature Spawner-25-26-03-19-1773948379
+- 手動維護最後下載日期：2026-03-29
 
 ### [Power DI](https://www.nexusmods.com/warhammer40kdarktide/mods/281)
     進階記分板
