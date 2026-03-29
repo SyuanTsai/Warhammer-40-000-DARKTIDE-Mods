@@ -593,10 +593,10 @@
 
 ### [Talent Tree UX Improvements](https://www.nexusmods.com/warhammer40kdarktide/mods/216)
    技能修改助手 - 能夠讓你快速地更換天賦支線
-- MOD 網站最後更新日期：Last updated 28 October 20231:34PM
-- MOD 版本：Version 1.5
-- MOD 檔案名稱：TalentRefundBelow-216-1-5-1698496483
-- 手動維護最後下載日期：2025-04-25
+- MOD 網站最後更新日期：Last updated 19 March 2026, 1:51AM
+- MOD 版本：1.9b
+- MOD 檔案名稱：TalentRefundBelow-216-1-9b-1773856273
+- 手動維護最後下載日期：2025-03-29
 
 ### [Archivum Messelina](https://www.nexusmods.com/warhammer40kdarktide/mods/307)
     梅塞利納檔案館 - 改善苦修搜尋
