@@ -280,14 +280,14 @@ return {
 		["zh-tw"] = "包括來自手榴彈和針刺器替代射擊模式的爆炸。",
 	},
 	rampaging_tip = {
-		en = "*Turning this setting off requires restart. Includes orange glow FX and shockwave on death. Enemies will still grow.",
+		en = "{#color(255, 35, 5)}*Turning this setting off requires restart. {#color(208, 208, 208)}\nIncludes orange glow FX and shockwave on death. Enemies will still grow.",
 		["zh-cn"] = "包括死亡时的橙色光辉特效和冲击波。敌人仍然会变大。",
-		["zh-tw"] = "*關閉此選項需要重啟。包括死亡時的橙色光輝特效和衝擊波。敵人仍然會變大。",
+		["zh-tw"] = "{#color(255, 35, 5)}*關閉此選項需要重啟。 {#color(208, 208, 208)}\n包括死亡時的橙色光輝特效和衝擊波。敵人仍然會變大。",
 	},
 	corrupted_vfx_tip = {
-		en = "*Turning this setting off requires restart. Disables Green Flies effect on Blight Spreads enemies.",
+		en = "{#color(255, 35, 5)}*Turning this setting off requires restart. {#color(208, 208, 208)}\nDisables Green Flies effect on Blight Spreads enemies.",
 		["zh-cn"] = "禁用瘟疫扩散敌人的绿色苍蝇特效。关闭此选项需要重启。",
-		["zh-tw"] = "*關閉此選項需要重啟。禁用瘟疫蔓延敵人的綠色蒼蠅特效。",
+		["zh-tw"] = "{#color(255, 35, 5)}*關閉此選項需要重啟。 {#color(208, 208, 208)}\n禁用瘟疫蔓延敵人的綠色蒼蠅特效。",
 	},
 	disable_death_vfx = {
 		en = "Disable Haovc Death-splosions",
@@ -333,5 +333,75 @@ return {
 		en = "Disables the toxic gas spewing out from geysers/corals.",
 		["zh-cn"] = "禁用喷泉/珊瑚喷出的毒气。",
 		["zh-tw"] = "禁用噴泉/珊瑚噴出的毒氣。",
+	},
+	vfx_limiter_group = {
+		en = "OG VFX Limiter Options",
+		["zh-cn"] = "原版特效限制器选项",
+		["zh-tw"] = "原版特效限制器選項",
+	},
+	frag_grenade_vfx = {
+		en = "Disable Shredder Frag/Rumbler/Arbites Grenades VFX",
+		["zh-cn"] = "禁用老兵手雷/榴弹发射器/法务手雷特效",
+		["zh-tw"] = "停用老兵手雷/榴彈發射器/法務手雷特效",
+	},
+	krak_grenade_vfx = {
+		en = "Disable Krak Grenade VFX",
+		["zh-cn"] = "禁用穿甲手雷特效",
+		["zh-tw"] = "停用穿甲手雷特效",
+	},
+	box_grenade_ogryn_vfx = {
+		en = "Disable Box Grenade VFX",
+		["zh-cn"] = "禁用欧格林盒子雷特效",
+		["zh-tw"] = "停用歐格林盒子雷特效",
+	},
+	frag_bomb_ogryn_vfx = {
+		en = "Disable Frag Bomb VFX",
+		["zh-cn"] = "禁用欧格林胖男孩特效",
+		["zh-tw"] = "停用歐格林胖男孩特效",
+	},
+	stumm_grenade_vfx = {
+		en = "Disable Stun Grenade VFX",
+		["zh-cn"] = "禁用晕眩手雷特效",
+		["zh-tw"] = "停用眩暈手雷特效",
+	},
+	fire_grenade_vfx = {
+		en = "Disable Immolation Grenade VFX (Explosion)",
+		["zh-cn"] = "禁用狂信火雷爆炸特效",
+		["zh-tw"] = "停用狂信徒火焰手雷爆炸特效",
+	},
+	net_electric_vfx = {
+		en = "Disable Trapper's net lightning effect",
+		["zh-cn"] = "禁用陷阱兵的電網效果",
+		["zh-tw"] = "停用陷阱兵的電網效果",
+	},
+	netgunner_vfx = {
+		en = "Disable Netgunner muzzle flash",
+		["zh-cn"] = "禁用网枪开火特效",
+		["zh-tw"] = "停用陷阱兵開火特效",
+	},
+	voidstrike_explosion_vfx = {
+		en = "Disable Voidstrike Staff explosion effect",
+		["zh-cn"] = "禁用虚空打击法杖爆炸特效",
+		["zh-tw"] = "停用虛空打擊法杖爆炸特效",
+	},
+	ritual_vfx = {
+		en = "Disable Heinous Ritual effects",
+		["zh-cn"] = "禁用邪恶仪式特效",
+		["zh-tw"] = "停用魔缚儀式特效",
+	},
+	scum_stimm_screen = {
+		en = "Disable Scum's Stimm Smoke screen effect",
+		["zh-cn"] = "禁用兴奋剂烟雾屏幕特效",
+		["zh-tw"] = "停用興奮劑煙霧屏幕特效",
+	},
+	scum_rampage_screen = {
+		en = "Disable Scum's Rampage screen effect",
+		["zh-cn"] = "禁用狂暴状态屏幕特效",
+		["zh-tw"] = "停用狂暴狀態屏幕特效",
+	},
+	lasgun_vfx = {
+		en = "Disable Hellbore Lasgun VFX",
+		["zh-cn"] = "禁用地狱管激光枪特效",
+		["zh-tw"] = "停用地獄激光槍特效",
 	},
 }
