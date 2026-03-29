@@ -56,10 +56,10 @@
 
 ### [Auto Loot](https://www.nexusmods.com/warhammer40kdarktide/mods/375)
     自動開啟箱子並撿取物品
-- MOD 網站最後更新日期：Last updated 03 December 2025, 1:54AM
-- MOD 版本：1.0.3
-- MOD 檔案名稱：AutoLoot-375-1-0-3-1764698094
-- 手動維護最後下載日期：2025-12-06
+- MOD 網站最後更新日期：Last updated 19 March 2026, 1:04AM
+- MOD 版本：1.1.0
+- MOD 檔案名稱：AutoLoot-375-1-1-0-1773853450
+- 手動維護最後下載日期：2026-03-29
 
 ### [Healthbars](https://www.nexusmods.com/warhammer40kdarktide/mods/16)
     UI改善
