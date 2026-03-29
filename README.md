@@ -114,10 +114,10 @@
 
 ### [Psych Ward](https://www.nexusmods.com/warhammer40kdarktide/mods/89)
     在角色畫面快速開始
-- MOD 網站最後更新日期：Last updated 02 October 2025, 1:51AM
-- MOD 版本：1.6.8
-- MOD 檔案名稱：Psych Ward-89-1-6-8-1759341074
-- 手動維護最後下載日期：2025-10-03
+- MOD 網站最後更新日期：Last updated 28 March 2026, 8:06PM
+- MOD 版本：1.7.0
+- MOD 檔案名稱：Psych Ward-89-1-7-0-1774699607
+- 手動維護最後下載日期：2026-03-29
 
 ### [Decode Helper](https://www.nexusmods.com/warhammer40kdarktide/mods/252)
     解碼助手 - 在解碼時顯示即將出現的目標符號。

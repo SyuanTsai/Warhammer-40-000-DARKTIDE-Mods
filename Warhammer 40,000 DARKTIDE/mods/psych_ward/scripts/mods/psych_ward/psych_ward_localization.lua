@@ -98,6 +98,9 @@ return {
     ["zh-tw"] = "浩劫任務",
     ko = "하복 임무",
   },
+  expedition_button = {
+    en = "Expedition",
+  },
   meatgrinder_button = {
     en = "Meat Grinder",
     ["zh-cn"] = "绞肉机",
@@ -134,5 +137,25 @@ return {
     ja = "キャラクター選択画面でのチャットを許可",
     ["zh-tw"] = "允許在角色選擇界面使用聊天框",
     ko = "캐릭터 선택 화면에서 채팅 허용",
+  },
+  button_placement = {
+    en = "Button Placement",
+    ["zh-tw"] = "按鈕位置",
+  },
+  x_offset = {
+    en = "X Offset",
+    ["zh-tw"] = "X偏移",
+  },
+  y_offset = {
+    en = "Y Offset",
+    ["zh-tw"] = "Y偏移",
+  },
+  height = {
+    en = "Height",
+    ["zh-tw"] = "高度",
+  },
+  width = {
+    en = "Width",
+    ["zh-tw"] = "寬度",
   },
 }
