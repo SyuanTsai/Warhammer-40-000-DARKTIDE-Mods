@@ -583,11 +583,11 @@
 - 手動維護最後下載日期：2026-02-02
 
 ### [Modular Menu Buttons](https://www.nexusmods.com/warhammer40kdarktide/mods/166)
-    盾牌透明化
-- MOD 網站最後更新日期：Last updated 31 January 2026, 11:20AM
-- MOD 版本：1.2.3
-- MOD 檔案名稱：Modular Menu Buttons-166-1-2-7-1769829624
-- 手動維護最後下載日期：2026-02-02
+    快速選單
+- MOD 網站最後更新日期：Last updated 23 March 2026, 4:49PM
+- MOD 版本：1.2.9
+- MOD 檔案名稱：Modular Menu Buttons-166-1-2-9-1774255754
+- 手動維護最後下載日期：2026-03-29
 ---
 # 遊戲內操作相關MOD
 
