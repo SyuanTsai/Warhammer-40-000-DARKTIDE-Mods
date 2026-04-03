@@ -194,7 +194,8 @@ mod.quick_throw = function()
 		if grenade and grenade == "zealot_throwing_knives" then
 			return true
 		end
-	elseif archetype == "broker" then
+	end
+	if archetype == "broker" then
 		local grenade = mod.check_grenade()
 		if grenade and grenade == "quick_flash_grenade" then
 			return true
@@ -259,13 +260,11 @@ mod.fetch_dog = function()
 	-- If we have a player unit
 	if manager and manager:local_player_safe(1) then
 		local player = manager:local_player_safe(1)
-		local player_unit = player and player.player_unit
 		local profile = player and player:profile()
 		-- And that unit should have a dog
 		local should_dog = profile and ProfileUtils.has_companion(profile)
 		if should_dog then
-			local dog_spawner = player_unit and ScriptUnit.has_extension(player_unit, "companion_spawner_system")
-			local dog = dog_spawner and dog_spawner:companion_unit()
+			local dog = mod:dog_finder()
 			-- And there is in fact a dog
 			if dog then
 				return dog
@@ -358,6 +357,48 @@ mod.daemon_radar = function(dog)
 	end
 	return daemonhost_in_range
 end
+
+-- An incredibly stupid but not terribly inefficient way to get the dog due to dog spawn logic being server-side as of 1.11.0
+mod.dog_finder = function()
+	local player = Managers.player:local_player_safe(1)
+	local player_unit = player and player.player_unit
+	if not player_unit then return nil end
+	local game_mode_manager = Managers.state.game_mode
+    local game_mode_name = game_mode_manager and game_mode_manager:game_mode_name()
+	if game_mode_name == "hub" then return nil end -- Ignore dog in mourningstar
+	local radius = 30 -- Big range to ensure hits as this should only run once or twice per mission
+	local results = {}
+	local broadphase_system = Managers.state.extension:system("broadphase_system")
+	local broadphase = broadphase_system.broadphase
+	local side_system = Managers.state.extension:system("side_system")
+	local side = side_system.side_by_unit[player_unit]
+	local has_outline_system = Managers.state and Managers.state.extension and Managers.state.extension:has_system("outline_system")
+	local outline_system = has_outline_system and Managers.state.extension:system("outline_system")
+	local safe_to_check = Unit.alive(player_unit) and Unit.world(player_unit)
+	local from_position
+	if safe_to_check then
+		from_position = Unit.world_position(player_unit, 1)
+	end
+	local my_dog = nil
+	-- Find all allies
+	if broadphase and side and from_position and outline_system then
+		local ally_side_names = side:relation_side_names("allied")
+		local allies_in_radius = broadphase.query(broadphase, from_position, radius, results, ally_side_names)
+		for index = 1, allies_in_radius do
+			local ally_unit = results[index]
+			if ally_unit and Unit.alive(ally_unit) then
+				-- Find dog based on unique outline flag
+				if outline_system:has_outline(ally_unit, "owned_companion") then
+					my_dog = ally_unit
+					break
+				end
+			end
+		end
+	end
+	return my_dog
+end
+
+
 
 mod.get_dogsplosion_charges = function()
 	if not DOG.UNIT then return false end
