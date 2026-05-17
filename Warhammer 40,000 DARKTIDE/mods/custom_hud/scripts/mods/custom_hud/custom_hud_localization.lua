@@ -49,7 +49,6 @@ return {
             .. "{#color(" .. colours.key .. ")}  Shift+Up/Down{#color(" .. colours.text .. ")} = Z-order\n"
             .. "{#color(" .. colours.key .. ")}  Right-click{#color(" .. colours.text .. ")} = Toggle hidden\n"
             .. "{#color(" .. colours.key .. ")}  Double-click{#color(" .. colours.text .. ")} = Reset to default\n"
-            .. "{#color(" .. colours.key .. ")}  Tab{#color(" .. colours.text .. ")} = Reset selected{#reset()}",
             .. "{#color(" .. colours.key .. ")}  Tab{#color(" .. colours.text .. ")} = Reset selected\n"
             .. "{#color(" .. colours.key .. ")}  Ctrl+Shift+C{#color(" .. colours.text .. ")} = Center on screen{#reset()}",
         ["zh-cn"] = "切换 HUD 自定义功能的开关。",
