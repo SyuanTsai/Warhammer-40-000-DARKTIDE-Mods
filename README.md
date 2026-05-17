@@ -141,10 +141,10 @@
 
 ### [Killfeed Improvements](https://www.nexusmods.com/warhammer40kdarktide/mods/70)
     擊殺名稱顯示改進
-- MOD 網站最後更新日期：Last updated 09 February 2026, 2:27AM
-- MOD 版本：26.02.08-1
-- MOD 檔案名稱：KillfeedImprovements-70-26-02-08-1-1770575266
-- 手動維護最後下載日期：2026-03-21
+- MOD 網站最後更新日期：Last updated 13 April 2026, 7:43AM
+- MOD 版本：26.04.12
+- MOD 檔案名稱：KillfeedImprovements
+- 手動維護最後下載日期：2026-05-17
 
 ---
 # 遊戲內操作相關MOD
