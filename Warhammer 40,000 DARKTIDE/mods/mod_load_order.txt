@@ -35,15 +35,16 @@ Spidey Sense
 custom_hud
 quick_level_mastery
 Radar
+SprintRelicHeavy
 AutoMark
 
 -- 小遊戲自動化
 AuspexHelper
--- Decode_Helper
+-- Decode_Helper -- OK 
 -- DecodeMinigameSolver
--- TrainSolver
+-- TrainSolver   -- OK 
 -- Tree_Helper
--- ScanHelper
+-- ScanHelper    -- OK 
 
 -- 只會設定一次的MOD
 modular_menu_buttons
