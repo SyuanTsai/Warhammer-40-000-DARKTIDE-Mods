@@ -52,6 +52,20 @@ return {
             .. "{#color(" .. colours.key .. ")}  Tab{#color(" .. colours.text .. ")} = Reset selected\n"
             .. "{#color(" .. colours.key .. ")}  Ctrl+Shift+C{#color(" .. colours.text .. ")} = Center on screen{#reset()}",
         ["zh-cn"] = "切换 HUD 自定义功能的开关。",
+        ["zh-tw"] = "{#color(" .. colours.text .. ")}切換 HUD 自訂功能的開關。{#reset()}\n\n"
+            .. "{#color(" .. colours.title .. ")}控制（在編輯模式下）：{#reset()}\n"
+            .. "{#color(" .. colours.key .. ")}  點擊{#color(" .. colours.text .. ")} = 選擇元素\n"
+            .. "{#color(" .. colours.key .. ")}  Ctrl+點擊{#color(" .. colours.text .. ")} = 多選\n"
+            .. "{#color(" .. colours.key .. ")}  Shift+拖動{#color(" .. colours.text .. ")} = 移動元素\n"
+            .. "{#color(" .. colours.key .. ")}  滾輪{#color(" .. colours.text .. ")} = 縮放元素\n"
+            .. "{#color(" .. colours.key .. ")}  Alt+拖動邊緣/角落{#color(" .. colours.text .. ")} = 調整大小\n"
+            .. "{#color(" .. colours.key .. ")}  Alt+箭頭鍵{#color(" .. colours.text .. ")} = 調整大小 ±1px\n"
+            .. "{#color(" .. colours.key .. ")}  箭頭鍵{#color(" .. colours.text .. ")} = 移動 ±1px\n"
+            .. "{#color(" .. colours.key .. ")}  Shift+上/下{#color(" .. colours.text .. ")} = 層級\n"
+            .. "{#color(" .. colours.key .. ")}  右鍵{#color("..colours.text..")} = 切換隱藏\n"
+            .. "{#color("..colours.key..")}  雙擊{#color("..colours.text..")} = 重置為默認\n"
+            .. "{#color("..colours.key..")}  Tab{#color("..colours.text..")} = 重置選中項\n"
+            .. "{#color("..colours.key..")}  Ctrl+Shift+C{#color("..colours.text..")} = 居中於屏幕{#reset()}",
         ru = "Включение/отключение оверлея настройки интерфейса.",
     },
     toggle_hud_hidden_key = {
