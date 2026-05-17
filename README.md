@@ -731,6 +731,13 @@
 - MOD 檔案名稱：PlasmaBFG-834-1-0-9-1777978588
 - 手動維護最後下載日期：2026-05-17
 
+### [SprintRelicHeavy](https://www.nexusmods.com/warhammer40kdarktide/mods/804)
+    聖物劍操作強化
+- MOD 網站最後更新日期：Last updated 04 April 2026, 4:35PM
+- MOD 版本：1.0.2
+- MOD 檔案名稱：SprintRelicHeavy-804-1-0-2-1775291723
+- 手動維護最後下載日期：2026-05-17
+
 # 移除的MOD
 
 ### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
