@@ -18,7 +18,10 @@ return {
             .. "{#color(" .. colours.key .. ")}Arrows{#color(" .. colours.text .. ")} move ±1px, {#color(" .. colours.key .. ")}Alt+Arrows{#color(" .. colours.text .. ")} resize ±1px, {#color(" .. colours.key .. ")}Shift+Up/Down{#color(" .. colours.text .. ")} z-order\n"
             .. "{#color(" .. colours.key .. ")}Right-click{#color(" .. colours.text .. ")} hide, {#color(" .. colours.key .. ")}Double-click{#color(" .. colours.text .. ")} reset, {#color(" .. colours.key .. ")}Tab{#color(" .. colours.text .. ")} reset selected, {#color(" .. colours.key .. ")}Ctrl+Shift+C{#color(" .. colours.text .. ")} center{#reset()}",
         ["zh-cn"] = "允许自定义排列和调整 HUD 元素大小。",
-        ["zh-tw"] = "允許自訂排列和調整 HUD 元素大小。",
+        ["zh-tw"] = "{#color(" .. colours.text .. ")}允許自訂排列和調整 HUD 元素大小。按 {#color(" .. colours.key .. ")}[F3]{#color(" .. colours.text .. ")} 進入編輯模式。{#reset()}\n\n"
+            .. "{#color(" .. colours.key .. ")}點擊{#color(" .. colours.text .. ")} 選擇, {#color(" .. colours.key .. ")}Ctrl+點擊{#color(" .. colours.text .. ")} 多選, {#color(" .. colours.key .. ")}Shift+拖動{#color(" .. colours.text .. ")} 移動, {#color(" .. colours.key .. ")}滾輪{#color(" .. colours.text .. ")} 縮放, {#color(" .. colours.key .. ")}Alt+拖動{#color(" .. colours.text .. ")} 調整大小\n"
+            .. "{#color(" .. colours.key .. ")}箭頭鍵{#color(" .. colours.text .. ")} 移動 ±1px, {#color(" .. colours.key .. ")}Alt+箭頭鍵{#color(" .. colours.text .. ")} 調整大小 ±1px, {#color(" .. colours.key .. ")}Shift+上/下{#color(" .. colours.text .. ")} 層級\n"
+            .. "{#color(" .. colours.key .. ")}右鍵{#color(" .. colours.text .. ")} 隐藏, {#color(" .. colours.key .. ")}雙擊{#color(" .. colours.text .. ")} 重置, {#color(" .. colours.key .. ")}Tab{#color(" .. colours.text .. ")} 重置選中項, {#color(" .. colours.key .. ")}Ctrl+Shift+C{#color("..colours.text..")} 居中{#reset()}",
         ru = "Позволяет перемещать и изменять размер элементов интерфейса.",
     },
     settings_header = {
