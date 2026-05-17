@@ -415,13 +415,6 @@
 - MOD 檔案名稱：better_hud_info_view-511-1-4-1-1745974107
 - 手動維護最後下載日期：2025-05-02
 
-### [Dog Whistle](https://www.nexusmods.com/warhammer40kdarktide/mods/539)
-    狗哨 - 自動抓特感
-- MOD 網站最後更新日期：Last updated 04 December 2025, 12:31AM
-- MOD 版本：1.0.8
-- MOD 檔案名稱：Dog Whistle 1.0.8-539-1-0-8-1764779496
-- 手動維護最後下載日期：2025-12-06
-
 ---
 # 遊戲內操作相關MOD
 
@@ -515,3 +508,11 @@
 - MOD 檔案名稱：Hybrid Sprint-342-1-3-1-1729169092
 - 手動維護最後下載日期：2025-02-09
 - 移除原因：個人操作問題不會去使用。
+
+### [Dog Whistle](https://www.nexusmods.com/warhammer40kdarktide/mods/539)
+    狗哨 - 自動抓特感
+- MOD 網站最後更新日期：Last updated 04 December 2025, 12:31AM
+- MOD 版本：1.0.8
+- MOD 檔案名稱：Dog Whistle 1.0.8-539-1-0-8-1764779496
+- 手動維護最後下載日期：2025-12-06
+- 移除原因：使用更進階的AutoMark，不用指道怪就可以標記
