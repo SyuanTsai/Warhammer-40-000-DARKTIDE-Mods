@@ -521,10 +521,10 @@
 
 ### [VFX Swapper](https://www.nexusmods.com/warhammer40kdarktide/mods/678)
     修改特效的顯示方式
-- MOD 網站最後更新日期：Last updated 03 February 2026, 12:50AM
-- MOD 版本：1.1.0
-- MOD 檔案名稱：VFX Swapper-678-1-1-0-1770051011
-- 手動維護最後下載日期：2026-02-10
+- MOD 網站最後更新日期：Last updated 19 March 2026, 10:53PM
+- MOD 版本：1.1.1
+- MOD 檔案名稱：Quick fix for volumetric crash on load-in-678-1-1-1-1773931987
+- 手動維護最後下載日期：2026-05-17
 
 ### [MemoryLeakFix](https://www.nexusmods.com/warhammer40kdarktide/mods/406)
     減緩記憶體崩潰
