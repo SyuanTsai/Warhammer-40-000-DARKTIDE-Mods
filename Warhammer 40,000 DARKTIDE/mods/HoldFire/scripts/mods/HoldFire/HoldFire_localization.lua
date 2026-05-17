@@ -1,7 +1,7 @@
 return {
 	mod_name = {
 		en = "HoldFire",
-		["zh-tw"] = "抑制射擊",
+		["zh-tw"] = "火力控管",
 	},
 	mod_description = {
 		en = "Blocks ranged fire unless an allowed enemy target is under your crosshair, with optional destructible support.",
