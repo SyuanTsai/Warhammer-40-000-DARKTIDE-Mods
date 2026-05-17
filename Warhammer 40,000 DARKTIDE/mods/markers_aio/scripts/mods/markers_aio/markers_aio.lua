@@ -32,18 +32,6 @@ local HudElementSmartTagging = require("scripts/ui/hud/elements/smart_tagging/hu
 -- Per-frame computed settings
 mod.frame_settings = {}
 
--- Global colour lookup (no per-call table allocs)
-local COLOUR_LOOKUP = {
-	Gold = { 255, 232, 188, 109 },
-	Silver = { 255, 187, 198, 201 },
-	Steel = { 255, 161, 166, 169 },
-	Black = { 255, 35, 31, 32 },
-	Brass = { 255, 226, 199, 126 },
-	Terminal = Color.terminal_background(200, true),
-	Default = { 255, 161, 166, 169 },
-	Tarnished = { 255, 130, 115, 102 },
-}
-
 mod:hook_safe(CLASS.HudElementWorldMarkers, "init", function(self)
 	-- add new marker templates to templates table
 	self._marker_templates[HereticalIdolTemplate.name] = HereticalIdolTemplate
@@ -137,8 +125,49 @@ mod.get_marker_pickup_type = function(marker)
 	return Unit.get_data(marker.unit, "pickup_type")
 end
 
+mod.set_colour = function(dst, src)
+	if not dst or not src then
+		return
+	end
+
+	dst[1] = src[1]
+	dst[2] = src[2]
+	dst[3] = src[3]
+	dst[4] = src[4]
+end
+
+mod.set_colour_argb = function(dst, a, r, g, b)
+	if not dst then
+		return
+	end
+
+	dst[1] = a
+	dst[2] = r
+	dst[3] = g
+	dst[4] = b
+end
+
+local LOOKUP_COLOUR_DEFAULT = { 255, 255, 255, 255 }
+
+local COLOUR_LOOKUP = {
+	Gold = { 255, 232, 188, 109 },
+	Silver = { 255, 187, 198, 201 },
+	Steel = { 255, 161, 166, 169 },
+	Black = { 255, 35, 31, 32 },
+	Brass = { 255, 226, 199, 126 },
+	Terminal = Color.terminal_background(225, true),
+	Default = { 255, 161, 166, 169 },
+	Tarnished = { 255, 130, 115, 102 },
+}
+
 mod.lookup_colour = function(colour_string)
-	return COLOUR_LOOKUP[colour_string] or COLOUR_LOOKUP.Default
+	local color = LOOKUP_COLOUR_DEFAULT
+
+	if colour_string then
+		color = COLOUR_LOOKUP[colour_string]
+	end
+
+	return color
 end
 
 mod.get_marker_by_id = function(id)
@@ -310,15 +339,6 @@ local function compute_distance_alpha(marker, max_distance)
 end
 
 HudElementWorldMarkers._calculate_markers = function(self, dt, t, input_service, ui_renderer, render_settings)
-	-- Global throttle for marker updates...
-	--local update_interval = 0.02
-	--update_time = (update_time or 0) + dt
-
-	--if update_time < update_interval then
-	--	return
-	--end
-	--update_time = 0
-
 	-- Build frame state
 	build_frame_settings(mod)
 
@@ -356,204 +376,212 @@ HudElementWorldMarkers._calculate_markers = function(self, dt, t, input_service,
 				local update = markers_by_id[id] ~= nil
 				local remove = marker.remove
 				local widget = marker.widget
-				local content = widget.content
-				local screen_clamp = template.screen_clamp and not marker.block_screen_clamp
-				local screen_margins = template.screen_margins
 
-				local max_distance = template.max_distance
-				if marker.markers_aio_type then
-					max_distance = mod:get(marker.markers_aio_type .. "_max_distance")
-				end
+				if widget then
+					local content = widget.content
+					local screen_clamp = template.screen_clamp and not marker.block_screen_clamp
+					local screen_margins = template.screen_margins
 
-				-- Never distance-cull base game objective markers
-				if marker.type == "objective" or (template and template.name == "objective") then
-					max_distance = nil
-				end
+					local max_distance = template.max_distance
+					if marker.markers_aio_type then
+						max_distance = mod:get(marker.markers_aio_type .. "_max_distance")
+					end
 
-				if marker.block_max_distance then
-					max_distance = math.huge
-				end
+					-- Never distance-cull base game objective markers
+					if marker.type == "objective" or (template and template.name == "objective") then
+						max_distance = nil
+					end
 
-				local life_time = template.life_time
-				local check_line_of_sight = template.check_line_of_sight
-				local marker_position
+					if marker.block_max_distance then
+						max_distance = math.huge
+					end
 
-				if update then
-					local world_position = marker.world_position
+					local life_time = template.life_time
+					local check_line_of_sight = template.check_line_of_sight
+					local marker_position
 
-					if world_position then
-						marker_position = world_position:unbox()
-					else
-						local unit = marker.unit
+					if update then
+						local world_position = marker.world_position
 
-						if ALIVE[unit] then
-							local unit_node = template.unit_node
-							local node = unit_node and Unit.has_node(unit, unit_node) and Unit.node(unit, unit_node)
-								or 1
-							marker_position = Unit.world_position(unit, node)
+						if world_position then
+							marker_position = world_position:unbox()
 						else
-							remove = true
-						end
-					end
+							local unit = marker.unit
 
-					if life_time then
-						local duration = marker.duration or 0
-						duration = math.min(duration + dt, life_time)
-
-						if life_time <= duration then
-							remove = true
-						else
-							marker.duration = duration
-						end
-					end
-				end
-
-				if remove then
-					update = false
-					temp_array_markers_to_remove[#temp_array_markers_to_remove + 1] = marker
-				end
-
-				if update then
-					local position_offset = template.position_offset
-
-					if position_offset then
-						marker_position.x = marker_position.x + position_offset[1]
-						marker_position.y = marker_position.y + position_offset[2]
-						marker_position.z = marker_position.z + position_offset[3]
-					end
-
-					Vector3Box.store(marker.position, marker_position)
-
-					local distance = Vector3.distance(marker_position, camera_position)
-
-					content.distance = distance
-					marker.distance = distance
-
-					local out_of_reach = max_distance and max_distance < distance
-					local draw = not out_of_reach
-
-					if not out_of_reach then
-						local marker_direction = Vector3.normalize(marker_position - camera_position)
-						marker_direction = Vector3.normalize(marker_direction)
-
-						local forward_dot_dir = Vector3.dot(camera_direction, marker_direction)
-						local is_inside_frustum = Camera.inside_frustum(camera, marker_position) > 0
-						local camera_left = Vector3.cross(camera_direction, Vector3.up())
-						local left_dot_dir = Vector3.dot(camera_left, marker_direction)
-						local angle = math.atan2(left_dot_dir, forward_dot_dir)
-						local is_behind = forward_dot_dir < 0 and true or false
-						local is_under = marker_position.z < camera_position.z
-						local x, y = self:_convert_world_to_screen_position(camera, marker_position)
-						local pixel_offset = template.pixel_offset
-
-						if pixel_offset then
-							x = x + pixel_offset[1]
-							y = y + pixel_offset[2]
-						end
-
-						local screen_x, screen_y = self:_get_screen_offset(scale)
-
-						x = x - screen_x
-						y = y - screen_y
-
-						local is_clamped, is_clamped_left, is_clamped_right, is_clamped_up, is_clamped_down =
-							false, false, false, false, false
-
-						if screen_clamp then
-							local clamped_x, clamped_y
-
-							clamped_x, clamped_y, is_clamped_left, is_clamped_right, is_clamped_up, is_clamped_down =
-								self:_clamp_to_screen(
-									x,
-									y,
-									screen_margins,
-									is_behind,
-									is_under,
-									marker_position,
-									camera_position_center,
-									camera_position_left,
-									camera_position_right,
-									camera_position_up,
-									camera_position_down
-								)
-							is_clamped = is_clamped_left or is_clamped_right or is_clamped_up or is_clamped_down
-							x = clamped_x
-							y = clamped_y
-						end
-
-						if not is_clamped then
-							if is_behind then
-								draw = false
-							elseif not is_inside_frustum then
-								local vertical_pixel_overlap, horizontal_pixel_overlap
-
-								if x < 0 then
-									horizontal_pixel_overlap = math.abs(x)
-								elseif x > root_size[1] then
-									horizontal_pixel_overlap = x - root_size[1]
-								end
-
-								if y < 0 then
-									vertical_pixel_overlap = math.abs(y)
-								elseif y > root_size[2] then
-									vertical_pixel_overlap = y - root_size[2]
-								end
-
-								if vertical_pixel_overlap or horizontal_pixel_overlap then
-									draw = false
-
-									local check_widget_visible = template.check_widget_visible
-
-									if check_widget_visible then
-										draw = check_widget_visible(
-											widget,
-											vertical_pixel_overlap,
-											horizontal_pixel_overlap
-										)
-									end
-								else
-									draw = false
-								end
+							if ALIVE[unit] then
+								local unit_node = template.unit_node
+								local node = unit_node and Unit.has_node(unit, unit_node) and Unit.node(unit, unit_node)
+									or 1
+								marker_position = Unit.world_position(unit, node)
+							else
+								remove = true
 							end
-						elseif is_clamped_left or is_clamped_right then
-							if is_clamped_left then
-								angle = 0
-							elseif is_clamped_right then
-								angle = math.pi
-							end
-						elseif is_clamped_up then
-							angle = math.pi * 0.5
-						elseif is_clamped_down then
-							angle = -math.pi * 0.5
 						end
 
-						content.is_inside_frustum = is_inside_frustum
-						content.is_clamped = is_clamped
-						content.is_under = is_under
+						if life_time then
+							local duration = marker.duration or 0
+							duration = math.min(duration + dt, life_time)
+
+							if life_time <= duration then
+								remove = true
+							else
+								marker.duration = duration
+							end
+						end
+					end
+
+					if remove then
+						update = false
+						temp_array_markers_to_remove[#temp_array_markers_to_remove + 1] = marker
+					end
+
+					if update then
+						local position_offset = template.position_offset
+
+						if position_offset then
+							marker_position.x = marker_position.x + position_offset[1]
+							marker_position.y = marker_position.y + position_offset[2]
+							marker_position.z = marker_position.z + position_offset[3]
+						end
+
+						-- Health station: push marker up so it's not inside the mesh
+						if marker.data and marker.data._active_interaction_type == "health_station" then
+							marker_position.z = marker_position.z
+						end
+
+						Vector3Box.store(marker.position, marker_position)
+
+						local distance = Vector3.distance(marker_position, camera_position)
+
 						content.distance = distance
-						content.angle = angle
-						marker.is_inside_frustum = is_inside_frustum
-						marker.is_clamped = is_clamped
-						marker.is_under = is_under
 						marker.distance = distance
-						marker.angle = angle
 
-						local offset = widget.offset
+						local out_of_reach = max_distance and max_distance < distance
+						local draw = not out_of_reach
 
-						offset[1] = x * inverse_scale
-						offset[2] = y * inverse_scale
+						if not out_of_reach then
+							local marker_direction = Vector3.normalize(marker_position - camera_position)
+							marker_direction = Vector3.normalize(marker_direction)
 
-						marker.raycast_frame_count = (marker.raycast_frame_count or 0) + 1
+							local forward_dot_dir = Vector3.dot(camera_direction, marker_direction)
+							local is_inside_frustum = Camera.inside_frustum(camera, marker_position) > 0
+							local camera_left = Vector3.cross(camera_direction, Vector3.up())
+							local left_dot_dir = Vector3.dot(camera_left, marker_direction)
+							local angle = math.atan2(left_dot_dir, forward_dot_dir)
+							local is_behind = forward_dot_dir < 0 and true or false
+							local is_under = marker_position.z < camera_position.z
+							local x, y = self:_convert_world_to_screen_position(camera, marker_position)
+							local pixel_offset = template.pixel_offset
 
-						if raycasts_allowed then
-							temp_marker_raycast_queue[#temp_marker_raycast_queue + 1] = marker
+							if pixel_offset then
+								x = x + pixel_offset[1]
+								y = y + pixel_offset[2]
+							end
+
+							local screen_x, screen_y = self:_get_screen_offset(scale)
+
+							x = x - screen_x
+							y = y - screen_y
+
+							local is_clamped, is_clamped_left, is_clamped_right, is_clamped_up, is_clamped_down =
+								false, false, false, false, false
+
+							if screen_clamp then
+								local clamped_x, clamped_y
+
+								clamped_x, clamped_y, is_clamped_left, is_clamped_right, is_clamped_up, is_clamped_down =
+									self:_clamp_to_screen(
+										x,
+										y,
+										screen_margins,
+										is_behind,
+										is_under,
+										marker_position,
+										camera_position_center,
+										camera_position_left,
+										camera_position_right,
+										camera_position_up,
+										camera_position_down
+									)
+								is_clamped = is_clamped_left or is_clamped_right or is_clamped_up or is_clamped_down
+								x = clamped_x
+								y = clamped_y
+							end
+
+							if not is_clamped then
+								if is_behind then
+									draw = false
+								elseif not is_inside_frustum then
+									local vertical_pixel_overlap, horizontal_pixel_overlap
+
+									if x < 0 then
+										horizontal_pixel_overlap = math.abs(x)
+									elseif x > root_size[1] then
+										horizontal_pixel_overlap = x - root_size[1]
+									end
+
+									if y < 0 then
+										vertical_pixel_overlap = math.abs(y)
+									elseif y > root_size[2] then
+										vertical_pixel_overlap = y - root_size[2]
+									end
+
+									if vertical_pixel_overlap or horizontal_pixel_overlap then
+										draw = false
+
+										local check_widget_visible = template.check_widget_visible
+
+										if check_widget_visible then
+											draw = check_widget_visible(
+												widget,
+												vertical_pixel_overlap,
+												horizontal_pixel_overlap
+											)
+										end
+									else
+										draw = false
+									end
+								end
+							elseif is_clamped_left or is_clamped_right then
+								if is_clamped_left then
+									angle = 0
+								elseif is_clamped_right then
+									angle = math.pi
+								end
+							elseif is_clamped_up then
+								angle = math.pi * 0.5
+							elseif is_clamped_down then
+								angle = -math.pi * 0.5
+							end
+
+							content.is_inside_frustum = is_inside_frustum
+							content.is_clamped = is_clamped
+							content.is_under = is_under
+							content.distance = distance
+							content.angle = angle
+							marker.is_inside_frustum = is_inside_frustum
+							marker.is_clamped = is_clamped
+							marker.is_under = is_under
+							marker.distance = distance
+							marker.angle = angle
+
+							local offset = widget.offset
+
+							offset[1] = x * inverse_scale
+							offset[2] = y * inverse_scale
+
+							marker.raycast_frame_count = (marker.raycast_frame_count or 0) + 1
+
+							if raycasts_allowed then
+								temp_marker_raycast_queue[#temp_marker_raycast_queue + 1] = marker
+							end
 						end
+
+						marker.draw = draw
 					end
 
-					marker.draw = draw
+					marker.update = update
 				end
-
-				marker.update = update
 			end
 		end
 
@@ -623,6 +651,7 @@ HudElementWorldMarkers._calculate_markers = function(self, dt, t, input_service,
 						mod.update_unknown_markers(self, marker)
 					end
 
+					--[[
 					if marker.widget and marker.distance and not marker.markers_aio_type then
 						local template = marker.template
 						local max_distance = template and template.max_distance
@@ -633,7 +662,7 @@ HudElementWorldMarkers._calculate_markers = function(self, dt, t, input_service,
 
 							marker.widget.alpha_multiplier = (marker.widget.alpha_multiplier or 1) * dist_alpha
 						end
-					end
+					end]]
 
 					if marker.markers_aio_type then
 						mod.adjust_los_requirement(marker)
@@ -785,12 +814,6 @@ mod.fade_icon_not_in_los = function(marker, ui_renderer)
 		return widget.alpha_multiplier
 	end
 
-	-- Health station exception
-	if marker.data and marker.data._active_interaction_type == "health_station" then
-		widget.alpha_multiplier = mod_alpha
-		return widget.alpha_multiplier
-	end
-
 	-- No raycast yet = assume blocked LOS
 	local has_raycast = marker.raycast_result ~= nil
 
@@ -899,16 +922,6 @@ mod.adjust_los_requirement = function(marker)
 	local mod_require_los = mod:get(marker.markers_aio_type .. "_require_line_of_sight")
 	local mod_keep_on_screen = mod:get(marker.markers_aio_type .. "_keep_on_screen")
 
-	-- Absolute health station override
-	if marker.data and marker.data._active_interaction_type == "health_station" then
-		if marker.is_inside_frustum then
-			do_draw(marker)
-		else
-			dont_draw(marker)
-		end
-		return
-	end
-
 	if mod_require_los then
 		if marker.is_inside_frustum then
 			if marker.raycast_result == false then
@@ -923,15 +936,6 @@ mod.adjust_los_requirement = function(marker)
 		end
 	else
 		if marker.is_inside_frustum or mod_keep_on_screen then
-			do_draw(marker)
-		else
-			dont_draw(marker)
-		end
-	end
-
-	-- Health station exception (cached distance)
-	if marker.data and marker.data._active_interaction_type == "health_station" then
-		if marker.is_inside_frustum and marker.distance and marker.distance < (fs.med_station_max_distance or 20) then
 			do_draw(marker)
 		else
 			dont_draw(marker)
@@ -1218,3 +1222,47 @@ mod.on_setting_changed = function(setting_id)
 		end
 	end
 end
+
+-- save scroll position
+-- Author: Alfthebigheaded
+local last_scroll_amount = 0
+local last_category = nil
+
+local function is_my_category(self)
+	return self._selected_category == mod:localize("mod_name")
+		or self._selected_category == mod:localize("mod_name_pizazz")
+end
+
+mod:hook_safe(CLASS.BaseView, "on_exit", function(self)
+	last_category = nil
+end)
+
+mod:hook_safe(CLASS.BaseView, "update", function(self)
+	if self.view_name ~= "dmf_options_view" then
+		return
+	end
+
+	local grid = self._navigation_grids
+	if not (grid and grid[2] and grid[2]._scrollbar_widget) then
+		return
+	end
+
+	local scrollbar_widget = grid[2]._scrollbar_widget
+	local current_category = self._selected_category
+	local in_my_category = is_my_category(self)
+
+	--  Detect category switch into my mod
+	if in_my_category and (last_category ~= current_category or last_category == nil) then
+		scrollbar_widget.content.scroll_value = last_scroll_amount
+		scrollbar_widget.content.value = last_scroll_amount
+	end
+
+	--  Always track scroll while inside my mod
+	if in_my_category then
+		if grid[2]._scroll_progress and last_scroll_amount ~= grid[2]._scroll_progress then
+			last_scroll_amount = grid[2]._scroll_progress
+		end
+	end
+
+	last_category = current_category
+end)

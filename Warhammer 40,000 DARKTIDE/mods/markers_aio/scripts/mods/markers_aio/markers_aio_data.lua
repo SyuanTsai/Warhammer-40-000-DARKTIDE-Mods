@@ -58,6 +58,10 @@ local luggable_icons = {
 		text = "Fist",
 		value = "content/ui/materials/icons/presets/preset_18",
 	},
+	{
+		text = "Luggable",
+		value = "content/ui/materials/icons/player_states/lugged",
+	},
 }
 
 local background_colours = {
@@ -194,6 +198,12 @@ return {
 				setting_id = "aio_settings",
 				type = "group",
 				sub_widgets = {
+					{
+						setting_id = "mod_name_pizazz_toggle",
+						type = "checkbox",
+						default_value = true,
+						tooltip = "mod_name_pizazz_tooltip",
+					},
 					{
 						setting_id = "los_fade_enable",
 						type = "checkbox",
@@ -485,7 +495,32 @@ return {
 							percent_slider("material_max_distance", 50),
 							scale_slider("material_scale", 100),
 							alpha_slider("material_alpha", 1),
-
+							{
+								setting_id = "marker_toggles",
+								type = "group",
+								sub_widgets = {
+									{
+										setting_id = "toggle_large_plasteel",
+										type = "checkbox",
+										default_value = true,
+									},
+									{
+										setting_id = "toggle_small_plasteel",
+										type = "checkbox",
+										default_value = true,
+									},
+									{
+										setting_id = "toggle_large_diamantine",
+										type = "checkbox",
+										default_value = true,
+									},
+									{
+										setting_id = "toggle_small_diamantine",
+										type = "checkbox",
+										default_value = true,
+									},
+								},
+							},
 							border_dropdown("material_small_border_colour", "Silver"),
 							border_dropdown("material_large_border_colour", "Gold"),
 						},
@@ -509,6 +544,18 @@ return {
 								type = "checkbox",
 								default_value = true,
 								tooltip = "enable_tooltip",
+							},
+							{
+								setting_id = "recolor_stimm_compat_enable",
+								type = "checkbox",
+								default_value = true,
+								tooltip = "recolor_stimm_compat_enable_tooltip",
+							},
+							{
+								setting_id = "toggle_background_colour",
+								type = "checkbox",
+								default_value = false,
+								tooltip = "toggle_background_colour_tooltip",
 							},
 							{
 								setting_id = "broker_stimm_enable",
