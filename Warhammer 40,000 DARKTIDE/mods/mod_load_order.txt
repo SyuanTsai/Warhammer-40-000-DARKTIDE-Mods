@@ -13,6 +13,8 @@ Skitarius
 AutoLoot
 more_characters_and_loadouts
 Enhanced_descriptions
+PlasmaBFG
+HoldFire
 
 -- 記分板(有順序性依賴)
 scoreboard
@@ -37,11 +39,11 @@ AutoMark
 
 -- 小遊戲自動化
 AuspexHelper
-Decode_Helper
-DecodeMinigameSolver
-TrainSolver
-Tree_Helper
-ScanHelper
+-- Decode_Helper
+-- DecodeMinigameSolver
+-- TrainSolver
+-- Tree_Helper
+-- ScanHelper
 
 -- 只會設定一次的MOD
 modular_menu_buttons
@@ -92,8 +94,6 @@ BrokerAutoStim
 TalentUI
 machine_gods_beacon
 veil_shield
-HoldFire
-PlasmaBFG
 
 -- 基本上不需設定
 psych_ward
