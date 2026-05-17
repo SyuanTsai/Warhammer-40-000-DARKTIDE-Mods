@@ -333,14 +333,14 @@ local localization = {
 	empyric_shock = {
 		en = "Show Empyric Shock debuff",
 		["zh-cn"] = "显示亚空间震击减益",
-		["zh-tw"] = "顯示亞空間震擊減益",
+		["zh-tw"] = "顯示亞空間震波減益",
 		ru = "Показывать ослабление Empyric Shock",
 		fr = "Afficher l'affaiblissement Empyric Shock",
 	},
 	empyric_shock_display = {
 		en = "Empyric Shock display",
 		["zh-cn"] = "亚空间震击显示方式",
-		["zh-tw"] = "亞空間震擊顯示方式",
+		["zh-tw"] = "亞空間震波顯示方式",
 		ru = "Отображение Empyric Shock",
 		fr = "Affichage d'Empyric Shock",
 	},
