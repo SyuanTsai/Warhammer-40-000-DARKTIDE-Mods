@@ -211,10 +211,10 @@
 
 ### [Scoreboard](https://www.nexusmods.com/warhammer40kdarktide/mods/22)
     UI改善
-- MOD 網站最後更新日期：Last updated 26 March 2025 12:22PM
-- MOD 版本：2.2
-- MOD 檔案名稱：Scoreboard-22-2-2-1742991760
-- 手動維護最後下載日期：2025-03-26
+- MOD 網站最後更新日期：Last updated 02 May 2026, 1:49AM
+- MOD 版本：2.5
+- MOD 檔案名稱：Scoreboard-22-2-5-1777657786
+- 手動維護最後下載日期：2025-05-17
 
 ---
 # 遊戲內操作相關MOD
