@@ -717,6 +717,13 @@
 - MOD 檔案名稱：Radar-790-2-2-5-1778534034
 - 手動維護最後下載日期：2026-05-17
 
+### [AuspexHelper](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
+    遠征模式的小弟圖
+- MOD 網站最後更新日期：Last updated 20 March 2026, 12:54PM
+- MOD 版本：1.01
+- MOD 檔案名稱：AuspexHelper-757-1-0-1-1773955593
+- 手動維護最後下載日期：2026-05-17
+
 # 移除的MOD
 
 ### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
