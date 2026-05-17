@@ -35,6 +35,7 @@ Spidey Sense
 custom_hud
 quick_level_mastery
 Radar
+SprintRelicHeavy
 
 -- 小遊戲自動化
 Decode_Helper
