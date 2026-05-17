@@ -2,22 +2,22 @@ return {
 	mod_name = {
 		en = "VFX Swapper",
 		["zh-cn"] = "视觉特效替换器",
-		["zh-tw"] = "視覺特效替換器",
+		["zh-tw"] = "視覺特效調整器",
 	},
 	mod_description = {
 		en = "Replaces specific visual effects to improve visibility and performance.",
 		["zh-cn"] = "替换特定视觉特效以提升画面清晰度和游戏性能。",
-		["zh-tw"] = "替換特定視覺特效以改善可視性與效能。",
+		["zh-tw"] = "替換特定的視覺特效，改善視野與效能。",
 	},
 	vfx_replacement_group = {
 		en = "VFX Replacements",
 		["zh-cn"] = "特效替换",
-		["zh-tw"] = "特效替換",
+		["zh-tw"] = "特效更改",
 	},
 	replace_gas_vfx = {
 		en = "Replace Grenadier's Gas Bombs",
 		["zh-cn"] = "替换渣滓剧毒轰炸者特效",
-		["zh-tw"] = "替換渣滓毒彈兵毒氣彈特效",
+		["zh-tw"] = "替換渣滓劇毒轟炸者毒氣彈特效",
 	},
 	replace_renegade_grenade_vfx = {
 		en = "Replace Renegade Grenadier's Fire Grenade",
@@ -27,12 +27,12 @@ return {
 	replace_renegade_flamer_vfx = {
 		en = "Replace Renegade Flamer",
 		["zh-cn"] = "替换血痂火焰兵燃烧地板特效",
-		["zh-tw"] = "替換血痂火焰兵特效",
+		["zh-tw"] = "替換血痂噴火者地板燃燒特效",
 	},
 	replace_cultist_flamer_vfx = {
 		en = "Replace Cultist Flamer VFX",
 		["zh-cn"] = "替换渣滓火焰兵燃烧地板特效",
-		["zh-tw"] = "替換渣滓火焰兵特效",
+		["zh-tw"] = "替換渣滓毒焰噴射者地板燃燒特效",
 	},
 	replace_havoc_enemy_corruption_liquid = {
 		en = "Replace Havoc's Blight Spreads (ground effect)",
@@ -42,7 +42,7 @@ return {
 	replace_immolation_vfx = {
 		en = "Replace Zealot's Immolation Grenade",
 		["zh-cn"] = "替换狂信火雷特效（火焰）",
-		["zh-tw"] = "替換狂信徒火焰手雷特效（殘留火焰）",
+		["zh-tw"] = "替換狂信徒獻祭手雷特效（火焰）",
 	},
 	replace_rotten_armor = {
 		en = "Replace Rotten Armor's Lingering Gas (after kill)",
@@ -52,22 +52,22 @@ return {
 	replace_broker_tox_grenade = {
 		en = "Replace Chem Grenade",
 		["zh-cn"] = "替换兴奋剂炸弹特效",
-		["zh-tw"] = "替換化學手雷特效",
+		["zh-tw"] = "替換化學手榴彈特效",
 	},
 	replace_fire_barrel_vfx = {
 		en = "Replace Fire Barrel",
 		["zh-cn"] = "替换油桶燃烧特效",
-		["zh-tw"] = "替換油桶燃燒特效",
+		["zh-tw"] = "替換火焰桶燃燒特效",
 	},
 	fire_barrel_vfx_default = {
 		en = "Default",
-		["zh-cn"] = "默认", 
+		["zh-cn"] = "默认",
 		["zh-tw"] = "預設",
 	},
 	zealot_grenade = {
 		en = "Zealot Grenade",
 		["zh-cn"] = "狂信火雷",
-		["zh-tw"] = "狂信徒火焰手雷",
+		["zh-tw"] = "狂信徒獻祭手雷",
 	},
 	chemnade_vfx_default = {
 		en = "Default",
@@ -127,7 +127,7 @@ return {
 	druglab_tank_goo = {
 		en = "Druglab Tank Goo",
 		["zh-cn"] = "兴奋剂实验室罐子腐液",
-		["zh-tw"] = "藥劑實驗室槽罐黏液",
+		["zh-tw"] = "興奮劑實驗室槽罐黏液",
 	},
 	summoning_circle = {
 		en = "Flat Black Cicles",
@@ -212,7 +212,7 @@ return {
 	chemnade_circle_enabled = {
 		en = "Chem Grenade Circle",
 		["zh-cn"] = "兴奋剂炸弹圆形范围指示器",
-		["zh-tw"] = "化學手雷範圍顯示",
+		["zh-tw"] = "化學手榴彈範圍顯示",
 	},
 	chemnade_circle_red = {
 		en = "Chem - Red",
@@ -342,7 +342,7 @@ return {
 	frag_grenade_vfx = {
 		en = "Disable Shredder Frag/Rumbler/Arbites Grenades VFX",
 		["zh-cn"] = "禁用老兵手雷/榴弹发射器/法务手雷特效",
-		["zh-tw"] = "停用老兵手雷/榴彈發射器/法務手雷特效",
+		["zh-tw"] = "停用老兵手雷/震盪槍/法務手雷特效",
 	},
 	krak_grenade_vfx = {
 		en = "Disable Krak Grenade VFX",
@@ -352,22 +352,22 @@ return {
 	box_grenade_ogryn_vfx = {
 		en = "Disable Box Grenade VFX",
 		["zh-cn"] = "禁用欧格林盒子雷特效",
-		["zh-tw"] = "停用歐格林盒子雷特效",
+		["zh-tw"] = "停用巨量傷害盒子雷特效",
 	},
 	frag_bomb_ogryn_vfx = {
 		en = "Disable Frag Bomb VFX",
 		["zh-cn"] = "禁用欧格林胖男孩特效",
-		["zh-tw"] = "停用歐格林胖男孩特效",
+		["zh-tw"] = "停用歐格林破片炸彈特效",
 	},
 	stumm_grenade_vfx = {
 		en = "Disable Stun Grenade VFX",
 		["zh-cn"] = "禁用晕眩手雷特效",
-		["zh-tw"] = "停用眩暈手雷特效",
+		["zh-tw"] = "停用眩暈風暴手雷特效",
 	},
 	fire_grenade_vfx = {
 		en = "Disable Immolation Grenade VFX (Explosion)",
 		["zh-cn"] = "禁用狂信火雷爆炸特效",
-		["zh-tw"] = "停用狂信徒火焰手雷爆炸特效",
+		["zh-tw"] = "停用狂信徒獻祭手雷爆炸特效",
 	},
 	net_electric_vfx = {
 		en = "Disable Trapper's net lightning effect",
@@ -382,7 +382,7 @@ return {
 	voidstrike_explosion_vfx = {
 		en = "Disable Voidstrike Staff explosion effect",
 		["zh-cn"] = "禁用虚空打击法杖爆炸特效",
-		["zh-tw"] = "停用虛空打擊法杖爆炸特效",
+		["zh-tw"] = "停用虛空打擊力場法杖爆炸特效",
 	},
 	ritual_vfx = {
 		en = "Disable Heinous Ritual effects",
@@ -392,7 +392,7 @@ return {
 	scum_stimm_screen = {
 		en = "Disable Scum's Stimm Smoke screen effect",
 		["zh-cn"] = "禁用兴奋剂烟雾屏幕特效",
-		["zh-tw"] = "停用興奮劑煙霧屏幕特效",
+		["zh-tw"] = "停用興奮劑藥霧屏幕特效",
 	},
 	scum_rampage_screen = {
 		en = "Disable Scum's Rampage screen effect",
@@ -402,6 +402,6 @@ return {
 	lasgun_vfx = {
 		en = "Disable Hellbore Lasgun VFX",
 		["zh-cn"] = "禁用地狱管激光枪特效",
-		["zh-tw"] = "停用地獄激光槍特效",
+		["zh-tw"] = "停用冥潮雷射槍特效",
 	},
 }
