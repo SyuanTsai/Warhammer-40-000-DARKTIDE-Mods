@@ -37,6 +37,7 @@ quick_level_mastery
 Radar
 
 -- 小遊戲自動化
+AuspexHelper
 Decode_Helper
 DecodeMinigameSolver
 TrainSolver
