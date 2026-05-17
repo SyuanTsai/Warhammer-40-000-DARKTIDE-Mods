@@ -13,7 +13,6 @@ Skitarius
 AutoLoot
 more_characters_and_loadouts
 Enhanced_descriptions
-DogWhistle
 
 -- 記分板(有順序性依賴)
 scoreboard

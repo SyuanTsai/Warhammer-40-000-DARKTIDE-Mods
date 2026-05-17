@@ -412,13 +412,6 @@
 ---
 - 手動維護最後下載日期：2025-07-12
 
-### [Dog Whistle](https://www.nexusmods.com/warhammer40kdarktide/mods/539)
-    狗哨 - 自動抓特感
-- MOD 網站最後更新日期：Last updated 04 December 2025, 12:31AM
-- MOD 版本：1.0.8
-- MOD 檔案名稱：Dog Whistle 1.0.8-539-1-0-8-1764779496
-- 手動維護最後下載日期：2025-12-06
-
 ### [Red Weapons at Home](https://www.nexusmods.com/warhammer40kdarktide/mods/380)
     武器顏色顯示
 - MOD 網站最後更新日期：Last updated 10 July 2025, 7:04PM
@@ -852,3 +845,11 @@
 - MOD 檔案名稱：Servo Friend-504-3-1746235485
 - 手動維護最後下載日期：2025-10-03
 - 移除原因：原本是為了在黑暗地圖中開燈，但因為失去維護2025/10，且有Machine God's BeaconUI取代，故移除。
+
+### [Dog Whistle](https://www.nexusmods.com/warhammer40kdarktide/mods/539)
+    狗哨 - 自動抓特感
+- MOD 網站最後更新日期：Last updated 04 December 2025, 12:31AM
+- MOD 版本：1.0.8
+- MOD 檔案名稱：Dog Whistle 1.0.8-539-1-0-8-1764779496
+- 手動維護最後下載日期：2025-12-06
+- 移除原因：AutoMark取代此MOD，該MOD不用準心對到怪
