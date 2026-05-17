@@ -738,6 +738,13 @@
 - MOD 檔案名稱：SprintRelicHeavy-804-1-0-2-1775291723
 - 手動維護最後下載日期：2026-05-17
 
+### [Auto Mark](https://www.nexusmods.com/warhammer40kdarktide/mods/736)
+    自動標記 (非狗哨)
+- MOD 網站最後更新日期：Last updated 03 May 2026, 2:54PM
+- MOD 版本：2.1.2
+- MOD 檔案名稱：AutoMark-736-2-1-2-1777791282
+- 手動維護最後下載日期：2026-05-17
+
 # 移除的MOD
 
 ### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
