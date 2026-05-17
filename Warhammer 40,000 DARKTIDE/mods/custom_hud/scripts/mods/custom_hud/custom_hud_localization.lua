@@ -17,6 +17,7 @@ return {
             .. "{#color(" .. colours.key .. ")}Click{#color(" .. colours.text .. ")} select, {#color(" .. colours.key .. ")}Ctrl+Click{#color(" .. colours.text .. ")} multi-select, {#color(" .. colours.key .. ")}Shift+Drag{#color(" .. colours.text .. ")} move, {#color(" .. colours.key .. ")}Scroll{#color(" .. colours.text .. ")} scale, {#color(" .. colours.key .. ")}Alt+Drag{#color(" .. colours.text .. ")} resize\n"
             .. "{#color(" .. colours.key .. ")}Arrows{#color(" .. colours.text .. ")} move ±1px, {#color(" .. colours.key .. ")}Alt+Arrows{#color(" .. colours.text .. ")} resize ±1px, {#color(" .. colours.key .. ")}Shift+Up/Down{#color(" .. colours.text .. ")} z-order\n"
             .. "{#color(" .. colours.key .. ")}Right-click{#color(" .. colours.text .. ")} hide, {#color(" .. colours.key .. ")}Double-click{#color(" .. colours.text .. ")} reset, {#color(" .. colours.key .. ")}Tab{#color(" .. colours.text .. ")} reset selected{#reset()}",
+            .. "{#color(" .. colours.key .. ")}Right-click{#color(" .. colours.text .. ")} hide, {#color(" .. colours.key .. ")}Double-click{#color(" .. colours.text .. ")} reset, {#color(" .. colours.key .. ")}Tab{#color(" .. colours.text .. ")} reset selected, {#color(" .. colours.key .. ")}Ctrl+Shift+C{#color(" .. colours.text .. ")} center{#reset()}",
         ["zh-cn"] = "允许自定义排列和调整 HUD 元素大小。",
         ["zh-tw"] = "允許自訂排列和調整 HUD 元素大小。",
         ru = "Позволяет перемещать и изменять размер элементов интерфейса.",
@@ -47,21 +48,10 @@ return {
             .. "{#color(" .. colours.key .. ")}  Right-click{#color(" .. colours.text .. ")} = Toggle hidden\n"
             .. "{#color(" .. colours.key .. ")}  Double-click{#color(" .. colours.text .. ")} = Reset to default\n"
             .. "{#color(" .. colours.key .. ")}  Tab{#color(" .. colours.text .. ")} = Reset selected{#reset()}",
+            .. "{#color(" .. colours.key .. ")}  Tab{#color(" .. colours.text .. ")} = Reset selected\n"
+            .. "{#color(" .. colours.key .. ")}  Ctrl+Shift+C{#color(" .. colours.text .. ")} = Center on screen{#reset()}",
         ["zh-cn"] = "切换 HUD 自定义功能的开关。",
         ru = "Включение/отключение оверлея настройки интерфейса.",
-        ["zh-tw"] = "{#color(" .. colours.text .. ")}切換 HUD 自訂功能的開關。{#reset()}\n\n"
-            .. "{#color(" .. colours.title .. ")}控制方式（編輯模式下）：{#reset()}\n"
-            .. "{#color(" .. colours.key .. ")}  點擊{#color(" .. colours.text .. ")} = 選取元素\n"
-            .. "{#color(" .. colours.key .. ")}  Ctrl+點擊{#color(" .. colours.text .. ")} = 多選\n"
-            .. "{#color(" .. colours.key .. ")}  Shift+拖曳{#color(" .. colours.text .. ")} = 移動元素\n"
-            .. "{#color(" .. colours.key .. ")}  滾輪{#color(" .. colours.text .. ")} = 縮放元素\n"
-            .. "{#color(" .. colours.key .. ")}  Alt+拖曳邊緣/角落{#color(" .. colours.text .. ")} = 調整大小\n"
-            .. "{#color(" .. colours.key .. ")}  Alt+方向鍵{#color(" .. colours.text .. ")} = 調整大小 ±1px\n"
-            .. "{#color(" .. colours.key .. ")}  方向鍵{#color(" .. colours.text .. ")} = 移動 ±1px\n"
-            .. "{#color(" .. colours.key .. ")}  Shift+上/下{#color(" .. colours.text .. ")} = Z 順序\n"
-            .. "{#color(" .. colours.key .. ")}  右鍵點擊{#color(" .. colours.text .. ")} = 切換隱藏\n"
-            .. "{#color(" .. colours.key .. ")}  雙擊{#color(" .. colours.text .. ")} = 重設為預設值\n"
-            .. "{#color(" .. colours.key .. ")}  Tab{#color("..colours.text..")} = 重設選取{#reset()}",
     },
     toggle_hud_hidden_key = {
         en = "Toggle HUD",
@@ -86,6 +76,67 @@ return {
         ["zh-cn"] = "在编辑模式下显示所有 HUD 元素的位置、大小和状态面板。",
         ru = "Показывает панель со списком всех элементов интерфейса в режиме редактирования.",
         ["zh-tw"] = "在編輯模式下顯示所有 HUD 元素的位置、大小和狀態面板。",
+    },
+    panel_font = {
+        en = "Panel Font",
+        ["zh-cn"] = "面板字体",
+        ru = "Шрифт панели",
+        ["zh-tw"] = "字體",
+    },
+    panel_font_description = {
+        en = "Choose the font used in the info panel overlay.",
+        ["zh-cn"] = "选择信息面板中使用的字体。",
+        ru = "Выберите шрифт для информационной панели.",
+        ["zh-tw"] = "選擇資訊面板中使用的字體。",
+    },
+    font_proxima_nova_bold = {
+        en = "Proxima Nova Bold",
+    },
+    font_proxima_nova_light = {
+        en = "Proxima Nova Light",
+    },
+    font_proxima_nova_medium = {
+        en = "Proxima Nova Medium",
+    },
+    font_machine_medium = {
+        en = "Machine Medium",
+    },
+    font_itc_novarese = {
+        en = "ITC Novarese",
+    },
+    font_friz_quadrata = {
+        en = "Friz Quadrata",
+    },
+    font_rexlia = {
+        en = "Rexlia",
+    },
+    panel_font_size = {
+        en = "Panel Font Size",
+        ["zh-cn"] = "面板字体大小",
+        ru = "Размер шрифта панели",
+        ["zh-tw"] = "字體大小",
+    },
+    panel_font_size_description = {
+        en = "Adjust the font size used in the info panel. Detail text is 3pt smaller.",
+        ["zh-cn"] = "调整信息面板中使用的字体大小。",
+        ru = "Настройте размер шрифта информационной панели.",
+        ["zh-tw"] = "調整資訊面板中使用的字體大小。",
+    },
+    panel_scale = {
+        en = "Panel Scale",
+        ["zh-cn"] = "缩放",
+    },
+    panel_scale_description = {
+        en = "Scale the floating info panel, including row spacing and detail area sizing.",
+        ["zh-tw"] = "縮放資訊面板，包括行距和細節區域大小。",
+    },
+    panel_list_rows = {
+        en = "Panel List Rows",
+        ["zh-tw"] = "面板列表行数",
+    },
+    panel_list_rows_description = {
+        en = "Limit how many list entries are shown before the panel starts scrolling.",
+        ["zh-tw"] = "限制在面板開始滾動之前顯示多少列表條目。",
     },
     reset_hud = {
         en = "Reset HUD",
@@ -134,6 +185,14 @@ return {
         ["zh-cn"] = "开关是否将元素吸附到网格线上。",
         ru = "Переключение привязки элементов к видимым линиям сетки.",
         ["zh-tw"] = "切換元素是否吸附到可見網格線。",
+    },
+    snap_to_elements = {
+        en = "Snap to Elements",
+        ["zh-tw"] = "吸附到元素",
+    },
+    snap_to_elements_description = {
+        en = "Toggles snapping to nearby HUD element edges and centers while dragging a single element.",
+        ["zh-tw"] = "切換在拖動單個元素時吸附到附近 HUD 元素的邊緣和中心。",
     },
     grid_cols = {
         en = "Columns",
