@@ -514,10 +514,10 @@
 
 ### [I Wanna See](https://www.nexusmods.com/warhammer40kdarktide/mods/371)
     修改火焰特效的顯示方式
-- MOD 網站最後更新日期：Last updated 30 July 2025, 11:25AM
-- MOD 版本：1.1.2
-- MOD 檔案名稱：I Wanna See-371-1-1-2-1753845943
-- 手動維護最後下載日期：2025-12-28
+- MOD 網站最後更新日期：Last updated 19 March 2026, 12:50AM
+- MOD 版本：1.1.4
+- MOD 檔案名稱：I Wanna See-371-1-1-4-1773852624
+- 手動維護最後下載日期：2026-05-17
 
 ### [VFX Swapper](https://www.nexusmods.com/warhammer40kdarktide/mods/678)
     修改特效的顯示方式
