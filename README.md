@@ -724,6 +724,13 @@
 - MOD 檔案名稱：AuspexHelper-757-1-0-1-1773955593
 - 手動維護最後下載日期：2026-05-17
 
+### [PlasmaBFG](https://www.nexusmods.com/warhammer40kdarktide/mods/834)
+    電漿槍 優化
+- MOD 網站最後更新日期：Last updated 05 May 2026, 6:56PM
+- MOD 版本：1.0.9
+- MOD 檔案名稱：PlasmaBFG-834-1-0-9-1777978588
+- 手動維護最後下載日期：2026-05-17
+
 # 移除的MOD
 
 ### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
