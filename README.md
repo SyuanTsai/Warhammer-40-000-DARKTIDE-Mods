@@ -389,13 +389,6 @@
 - Source=>  https://github.com/Backup158/DarktideOvenproofScoreboardPluginPatch
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mods-OvenproofScoreboardPluginPatch
 
-### [Servo-Friend](https://www.nexusmods.com/warhammer40kdarktide/mods/504)
-    顱骨支援
-- MOD 網站最後更新日期：Last updated 02 October 2025, 9:29PM
-- MOD 版本：3.0.1
-- MOD 檔案名稱：Servo Friend-504-3-1746235485
-- 手動維護最後下載日期：2025-10-03
-
 ### [Scoreboard Explosive](https://www.nexusmods.com/warhammer40kdarktide/mods/113)
     爆桶爆炸
 - MOD 網站最後更新日期：Last updated 02 December 2023, 1:33AM
@@ -851,3 +844,11 @@
 - MOD 檔案名稱：AlternateGrenadeIcons-322-1-0-1717874669
 - 手動維護最後下載日期：2025-02-10
 - 移除原因：TalentUI取代此MOD
+
+### [Servo-Friend](https://www.nexusmods.com/warhammer40kdarktide/mods/504)
+    顱骨支援
+- MOD 網站最後更新日期：Last updated 02 October 2025, 9:29PM
+- MOD 版本：3.0.1
+- MOD 檔案名稱：Servo Friend-504-3-1746235485
+- 手動維護最後下載日期：2025-10-03
+- 移除原因：原本是為了在黑暗地圖中開燈，但因為失去維護2025/10，且有Machine God's BeaconUI取代，故移除。
