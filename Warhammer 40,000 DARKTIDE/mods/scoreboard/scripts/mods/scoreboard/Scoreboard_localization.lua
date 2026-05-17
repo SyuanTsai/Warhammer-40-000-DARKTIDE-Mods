@@ -1109,7 +1109,7 @@ return {
 		--fr = "",
 		ru = "Подбор предметов в экспедиции",
 		--["zh-cn"] = "",
-		[]"zh-tw"] = "拾取遠征小物",
+		["zh-tw"] = "拾取遠征小物",
 	},
 	message_expedition_pocketable_pickup_description = {
 		en = "Shows message when a player picks up a pocketable from the Expeditions game mode",
