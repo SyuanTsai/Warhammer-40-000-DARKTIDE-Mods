@@ -354,10 +354,10 @@
     請先備份user_settings.config!
     預設位置: C:\Users\[your-user-name-here]\AppData\Roaming\Fatshark\Darktide
 ```    
-- MOD 網站最後更新日期：Last updated 31 March 2026, 8:45PM
-- MOD 版本：2.1.0
-- MOD 檔案名稱：Custom HUD-10-2-1-0-1774961137
-- 手動維護最後下載日期：2026-04-03
+- MOD 網站最後更新日期：Last updated 07 April 2026, 11:01PM
+- MOD 版本：2.1.3
+- MOD 檔案名稱：Custom HUD-10-2-1-3-1775574086
+- 手動維護最後下載日期：2026-05-17
 
 ---
 # 遊戲內操作相關MOD
