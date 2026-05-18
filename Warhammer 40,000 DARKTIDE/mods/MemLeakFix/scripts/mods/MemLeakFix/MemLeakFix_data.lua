@@ -20,7 +20,7 @@ return {
 			{
 				setting_id = "step_mul",
 				type = "numeric",
-				default_value = 5,
+				default_value = 2,
 				range = { 2, 5 },
 				decimals_number = 1,
 			},
