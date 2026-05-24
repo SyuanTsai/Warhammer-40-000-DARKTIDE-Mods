@@ -1178,13 +1178,36 @@ local localization = {
     },
 }
 
+-- Store raw left/right pairs so localizations can be reprocessed after CJK fonts load.
+-- Background: proxima_nova_bold has no CJK glyphs, so UIRenderer.text_size() measures
+-- CJK characters as ~0 width at load time. This causes create_string() to insert
+-- excessive hair-space padding that overflows the column once show_cjk_glyphs
+-- enables proper CJK rendering. Reprocessing after font setup fixes the alignment.
+local left_right_pairs = {}
+
 for k_loc, v_loc in pairs(localization) do
     for k_lang, v_lang in pairs(languages) do
         if v_loc[v_lang] then
-            if v_loc[v_lang].left and v_loc[v_lang].right then
+            if type(v_loc[v_lang]) == "table" and v_loc[v_lang].left and v_loc[v_lang].right then
+                left_right_pairs[#left_right_pairs + 1] = {
+                    entry = v_loc,
+                    lang  = v_lang,
+                    left  = v_loc[v_lang].left,
+                    right = v_loc[v_lang].right,
+                }
                 v_loc[v_lang] = create_string(v_loc[v_lang].left, v_loc[v_lang].right)
             end
         end
+    end
+end
+
+-- Reprocess all left|right localization pairs using the current font metrics.
+-- Call this after CJK fonts have been loaded (e.g. from show_cjk_glyphs) so
+-- UIRenderer.text_size() returns accurate widths for CJK characters.
+mod.reprocess_create_string_localizations = function()
+    max_length = get_text_size(nil, "AAAAAAAAAAAAAAAAAAAAAAAAAA  \u{200A}A")
+    for _, item in ipairs(left_right_pairs) do
+        item.entry[item.lang] = create_string(item.left, item.right)
     end
 end
 
