@@ -215,7 +215,6 @@ function mod:find_target_unit_custom(type, min_range, max_range, tag_name, tag_c
         best_unit_marked_by_execution_order = not not execution_order_units[best_unit]
     end
 
-
     for i = 1, num_hits do
         local hit = hits[i]
         local hit_position = hit[INDEX_POSITION]

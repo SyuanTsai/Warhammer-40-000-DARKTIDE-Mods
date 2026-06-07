@@ -1,10 +1,7 @@
 local mod            = get_mod("AutoMark")
 local Breed          = require("scripts/utilities/breed")
-local breeds         = require("scripts/settings/breed/breeds")
-local archetypes     = require("scripts/settings/archetype/archetypes")
-
-local Localize       = Localize
-local string         = string
+local Breeds         = require("scripts/settings/breed/breeds")
+local Archetypes     = require("scripts/settings/archetype/archetypes")
 
 local elite_widget   = {
     setting_id    = "toggle_elite",
@@ -57,7 +54,7 @@ local special_priorities = {}
 local boss_priorities    = {}
 local other_priorities   = {}
 
-for breed_name, breed_data in pairs(breeds) do
+for breed_name, breed_data in pairs(Breeds) do
     if Breed.is_minion(breed_data) then
         if breed_data.tags.elite then
             elite_priorities[#elite_priorities + 1] = create_breed_priority_dropdown(breed_name, 3)
@@ -72,7 +69,7 @@ for breed_name, breed_data in pairs(breeds) do
 end
 
 local get_breed_localization = function(breed_name)
-    local breed_data = breeds[breed_name]
+    local breed_data = Breeds[breed_name]
     if breed_data.is_boss then
         return Localize(
             type(breed_data.boss_display_name) == "string"
@@ -108,7 +105,7 @@ local class_options = {
     { text = "veteran_focus_target", value = "veteran_focus_target" },
 }
 
-for class_name, _ in pairs(archetypes) do
+for class_name, _ in pairs(Archetypes) do
     class_options[#class_options + 1] = { text = class_name, value = class_name }
 end
 
@@ -174,6 +171,16 @@ local widgets = {
                 default_value = false,
                 sub_widgets   = {
                     {
+                        setting_id    = "companion_cancel_mark_human",
+                        type          = "checkbox",
+                        default_value = false,
+                    },
+                    {
+                        setting_id    = "companion_cancel_mark_non_human",
+                        type          = "checkbox",
+                        default_value = false,
+                    },
+                    {
                         setting_id      = "companion_health_threshold",
                         type            = "numeric",
                         default_value   = 0,
@@ -181,10 +188,11 @@ local widgets = {
                         decimals_number = 2
                     },
                     {
-                        setting_id    = "companion_time_threshold",
-                        type          = "numeric",
-                        default_value = 0,
-                        range         = { 0, 25 },
+                        setting_id      = "companion_time_threshold",
+                        type            = "numeric",
+                        default_value   = 0,
+                        range           = { 0, 25 },
+                        decimals_number = 1
                     },
                 }
             },

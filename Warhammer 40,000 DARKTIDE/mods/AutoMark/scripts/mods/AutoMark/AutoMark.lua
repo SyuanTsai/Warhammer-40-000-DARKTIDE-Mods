@@ -16,21 +16,23 @@ mod.TAG_NAMES                = TAG_NAMES
 
 -- Mod Settings
 local mod_settings           = {
-    toggle_mod                   = mod:get("toggle_mod") or false,
-    toggle_mod_keybind           = mod:get("toggle_mod_keybind") or {},
-    toggle_mod_notify            = mod:get("toggle_mod_notify") or false,
-    debug_mode                   = mod:get("debug_mode") or false,
-    companion_mark_keybind       = mod:get("companion_mark_keybind") or {},
-    execution_order_priority     = mod:get("execution_order_priority") or false,
-    companion_range_limitation   = mod:get("companion_range_limitation") or 0,
-    companion_cancel_mark        = mod:get("companion_cancel_mark") or false,
-    companion_health_threshold   = mod:get("companion_health_threshold") or 0,
-    companion_time_threshold     = mod:get("companion_time_threshold") or 0,
-    focus_target_overwrite       = mod:get("focus_target_overwrite") or false,
-    focus_target_overwrite_delta = mod:get("focus_target_overwrite_delta") or 5,
-    focus_target_switch          = mod:get("focus_target_switch") or false,
-    focus_target_switch_melee    = mod:get("focus_target_switch_melee") or false,
-    focus_target_switch_range    = mod:get("focus_target_switch_range") or false,
+    toggle_mod                      = mod:get("toggle_mod") or false,
+    toggle_mod_keybind              = mod:get("toggle_mod_keybind") or {},
+    toggle_mod_notify               = mod:get("toggle_mod_notify") or false,
+    debug_mode                      = mod:get("debug_mode") or false,
+    companion_mark_keybind          = mod:get("companion_mark_keybind") or {},
+    execution_order_priority        = mod:get("execution_order_priority") or false,
+    companion_range_limitation      = mod:get("companion_range_limitation") or 0,
+    companion_cancel_mark           = mod:get("companion_cancel_mark") or false,
+    companion_cancel_mark_human     = mod:get("companion_cancel_mark_human") or false,
+    companion_cancel_mark_non_human = mod:get("companion_cancel_mark_non_human") or false,
+    companion_health_threshold      = mod:get("companion_health_threshold") or 0,
+    companion_time_threshold        = mod:get("companion_time_threshold") or 0,
+    focus_target_overwrite          = mod:get("focus_target_overwrite") or false,
+    focus_target_overwrite_delta    = mod:get("focus_target_overwrite_delta") or 5,
+    focus_target_switch             = mod:get("focus_target_switch") or false,
+    focus_target_switch_melee       = mod:get("focus_target_switch_melee") or false,
+    focus_target_switch_range       = mod:get("focus_target_switch_range") or false,
 }
 mod.settings                 = mod_settings
 
@@ -150,12 +152,12 @@ end
 mod:io_dofile("AutoMark/scripts/mods/AutoMark/utils/utils")
 mod:io_dofile("AutoMark/scripts/mods/AutoMark/context/context")
 mod:io_dofile("AutoMark/scripts/mods/AutoMark/setting/class_setting")
+mod:io_dofile("AutoMark/scripts/mods/AutoMark/setting/option_setting")
 mod:io_dofile("AutoMark/scripts/mods/AutoMark/targeting/targeting")
 mod:io_dofile("AutoMark/scripts/mods/AutoMark/targeting/custom_targeting")
 mod:io_dofile("AutoMark/scripts/mods/AutoMark/mark/base_mark")
 mod:io_dofile("AutoMark/scripts/mods/AutoMark/mark/companion_mark")
 mod:io_dofile("AutoMark/scripts/mods/AutoMark/mark/focus_target_mark")
-mod:io_dofile("AutoMark/scripts/mods/AutoMark/setting/option_setting")
 
 --  Mod Enabled
 mod.on_enabled            = function(initial_call)
@@ -259,10 +261,8 @@ local function auto_mark_by_tag(tag_name)
 
     local tag_context = mark_context[tag_name]
     local class_settings = mod:get_class_settings(tag_name)
-    local smart_tag_system = context.smart_tag_system
     if not class_settings.toggle_class
         or (tag_context.is_manual and not class_settings.override_manual)
-        or not smart_tag_system
     then
         return false
     end
@@ -273,19 +273,14 @@ local function auto_mark_by_tag(tag_name)
     -- mark when priority switch is on
     local is_priority_switch = marked_tag and class_settings.priority_switch
     -- mark when execution order priority is on
-    local is_execution_order_priority = marked_tag
-        and tag_name == TAG_NAMES.COMPANION_TAG
-        and mod_settings.execution_order_priority
+    local is_execution_order_priority = tag_name == TAG_NAMES.COMPANION_TAG and mod_settings.execution_order_priority
     -- mark when focus target overwrite is on
     local is_focus_target_overwrite = marked_tag
         and tag_name == TAG_NAMES.VETERAN_TAG
         and mod_settings.focus_target_overwrite
 
     local target_unit, target_tag
-    if is_cooldown_ready then
-        target_unit, target_tag = mod:find_target_unit_custom("auto", class_settings.min_range, class_settings.max_range,
-            tag_name, tag_context, class_settings, true, is_execution_order_priority)
-    elseif is_priority_switch or is_execution_order_priority then
+    if is_cooldown_ready or is_priority_switch or marked_tag and is_execution_order_priority then
         target_unit, target_tag = mod:find_target_unit_custom("auto", class_settings.min_range, class_settings.max_range,
             tag_name, tag_context, class_settings, true, is_execution_order_priority, marked_tag)
     end
@@ -369,7 +364,7 @@ local function cancel_companion_mark_on_condition(t)
         local marked_unit = marked_tag._target_unit
         local health_percent = Health.current_health_percent(marked_unit)
         if health_percent < mod_settings.companion_health_threshold then
-            mod:print_debug("cancel mark due to health threshold")
+            mod:print_debug("cancel mark due to health threshold, health_percent:", health_percent)
             tag_context.canceled_unit = marked_unit
             mod:cancel_mark(marked_tag._id)
             return
@@ -377,8 +372,9 @@ local function cancel_companion_mark_on_condition(t)
     end
 
     if mod_settings.companion_time_threshold > 0 and tag_context.pounce_start_time then
-        if t - tag_context.pounce_start_time > mod_settings.companion_time_threshold then
-            mod:print_debug("cancel mark due to time threshold")
+        local elapsed_time = t - tag_context.pounce_start_time
+        if elapsed_time > mod_settings.companion_time_threshold then
+            mod:print_debug("cancel mark due to time threshold, elapsed_time:", elapsed_time)
             tag_context.canceled_unit = marked_tag._target_unit
             mod:cancel_mark(marked_tag._id)
             return

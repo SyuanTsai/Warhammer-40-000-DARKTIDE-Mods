@@ -2,6 +2,7 @@ local mod                = get_mod("AutoMark")
 local context            = mod.context
 local mark_context       = mod.mark_context
 local TAG_NAMES          = mod.TAG_NAMES
+local mod_settings       = mod.settings
 
 -- Global Cache
 local CLASS              = CLASS
@@ -152,15 +153,14 @@ mod:hook_safe(CLASS.SmartTag, "init",
 
         if tag_name == TAG_NAMES.COMPANION_TAG then
             tag_context.pounce_start_time = nil
-            tag_context.canceled_unit = nil
             local target_data_extension = ScriptUnit.extension(target_unit, "unit_data_system")
             local target_breed_data = target_data_extension and target_data_extension._breed
             local pounce_setting = target_breed_data and target_breed_data.companion_pounce_setting
             local pounce_action = pounce_setting and pounce_setting.companion_pounce_action
             if pounce_action == "human" then
-                tag_context.is_cancelable = true
+                tag_context.is_cancelable = mod_settings.companion_cancel_mark_human
             else
-                tag_context.is_cancelable = false
+                tag_context.is_cancelable = mod_settings.companion_cancel_mark_non_human
             end
         end
     end)
