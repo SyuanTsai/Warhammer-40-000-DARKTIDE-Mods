@@ -10,6 +10,9 @@ return function(env)
     local rawget = rawget
     local string_format = string.format
     local string_sub = string.sub
+    local RadarColorSettings = mod:io_dofile("Radar/scripts/mods/Radar/Radar_color_settings")
+
+    RadarColorSettings.install_runtime(mod)
 
     SCAN_INTERVAL = 0.25
 
@@ -60,6 +63,8 @@ return function(env)
         luggable_socket = { 255, 255, 245, 80 },
         pickup_heretic_idol = { 255, 150, 190, 60 },
         pickup_tainted_skull = { 255, 150, 190, 60 },
+        dark_rites_totem = { 255, 150, 190, 60 },
+        dark_rites_servo_skull = { 255, 150, 190, 60 },
         pocketable_corrupted_auspex_scanner = { 255, 255, 120, 0 },
         pickup_saints = { 255, 192, 160, 0 },
         pickup_stolen_rations = { 255, 150, 190, 60 },
@@ -75,6 +80,10 @@ return function(env)
     mod._last_update_t = nil
     mod._last_scan_signature = nil
     mod._last_block_signature = nil
+    mod._dark_rites_marker_scan_cache_valid = false
+    mod._dark_rites_marker_scan_allowed = true
+    mod._dark_rites_marker_cached_circumstance_name = nil
+    mod._dark_rites_marker_cached_mission_name = nil
     mod._screen_highlight_targets = {}
     mod._unclustered_radar_targets = {}
     mod._highlight_source_radar_targets = {}
@@ -114,6 +123,9 @@ return function(env)
         medicae_station = "show_medicae_station",
         luggable_socket = "show_luggable_socket",
         pickup_heretic_idol = "show_heretic_idol",
+        pickup_tainted_skull = "show_tainted_skull",
+        dark_rites_totem = "show_dark_rites_totem",
+        dark_rites_servo_skull = "show_dark_rites_servo_skull",
         crate_unknown = "show_crates",
         enemy_daemonhost = "show_monstrosities",
         enemy_monstrosity = "show_monstrosities",
@@ -142,6 +154,7 @@ return function(env)
         pocketable_breach_charge = "show_pocketable_breach_charge",
         pocketable_corrupted_auspex_scanner = "show_pocketable_corrupted_auspex_scanner",
         pocketable_expedition_loot_crate = "show_pocketable_expedition_loot_crate",
+        pickup_saints = "show_saints",
         pocketable_airstrike = "show_pocketable_airstrike",
         pocketable_artillery_strike = "show_pocketable_artillery_strike",
         pocketable_big_grenade = "show_pocketable_big_grenade",
@@ -211,6 +224,13 @@ return function(env)
         pocketable_landmine_fire = "show_pocketable_landmine_fire",
         pocketable_landmine_shock = "show_pocketable_landmine_shock",
         pocketable_void_shield = "show_pocketable_void_shield",
+        pickup_tainted_skull = "show_tainted_skull",
+        pickup_saints = "show_saints",
+    }
+
+    local ARTWORK_MODE_DEFAULT_BY_SETTING = {
+        show_tainted_skull = "artwork",
+        show_saints = "artwork",
     }
 
     local MARKER_SCALE_GROUP_BY_KIND = {
@@ -272,6 +292,8 @@ return function(env)
         location_ping = "players_group",
         location_threat = "players_group",
         pickup_tainted_skull = "event_group",
+        dark_rites_totem = "event_group",
+        dark_rites_servo_skull = "event_group",
         pocketable_corrupted_auspex_scanner = "event_group",
         pickup_saints = "event_group",
         pickup_stolen_rations = "event_group",
@@ -361,6 +383,8 @@ return function(env)
     }
     local PLAYER_SMART_TAG_SELECTION_PRIORITY = 300
     local PLAYER_SMART_TAG_RENDER_LAYER = 3
+    local EVENT_MARKER_SELECTION_PRIORITY = 600
+    local EVENT_MARKER_RENDER_LAYER = 7
     local EXPEDITION_PLAYER_DROP_SELECTION_PRIORITY = 650
     local EXPEDITION_PLAYER_DROP_RENDER_LAYER = 6
 
@@ -477,7 +501,6 @@ return function(env)
             ENEMY_RADAR_DEFAULT_COLOR,
             "show_enemy_renegade_gunner",
             {
-                toggle_with = "renegade_gunner",
                 icon_size = 8,
                 background_size = 30,
                 bracket_size = 13,
@@ -526,7 +549,6 @@ return function(env)
             ENEMY_RADAR_DEFAULT_COLOR,
             "show_enemy_chaos_hound",
             {
-                toggle_with = "chaos_hound",
                 icon_size = 10,
                 background_size = 36,
                 bracket_size = 15,
@@ -575,8 +597,6 @@ return function(env)
             ENEMY_RADAR_DEFAULT_COLOR,
             "show_enemy_renegade_executor",
             {
-                toggle_with = "renegade_executor",
-                alias_only = true,
                 icon_size = 10,
                 background_size = 30,
                 bracket_size = 13,
@@ -613,8 +633,6 @@ return function(env)
             ENEMY_RADAR_DEFAULT_COLOR,
             "show_enemy_renegade_berzerker",
             {
-                toggle_with = "renegade_berzerker",
-                alias_only = true,
                 icon_size = 10,
                 background_size = 30,
                 bracket_size = 13,
@@ -625,7 +643,7 @@ return function(env)
             "content/ui/materials/icons/item_types/weapons",
             ENEMY_RADAR_DEFAULT_DREG_COLOR,
             ENEMY_RADAR_DEFAULT_COLOR,
-            "show_enemy_shooter",
+            "show_enemy_cultist_assault",
             {
                 icon_size = 7,
                 background_size = 24,
@@ -649,7 +667,7 @@ return function(env)
             "content/ui/materials/icons/item_types/weapons",
             ENEMY_RADAR_DEFAULT_SCAB_COLOR,
             ENEMY_RADAR_DEFAULT_COLOR,
-            "show_enemy_shooter",
+            "show_enemy_renegade_assault",
             {
                 icon_size = 7,
                 background_size = 24,
@@ -661,7 +679,7 @@ return function(env)
             "content/ui/materials/icons/item_types/ranged_weapons",
             ENEMY_RADAR_DEFAULT_SCAB_COLOR,
             ENEMY_RADAR_DEFAULT_COLOR,
-            "show_enemy_shooter",
+            "show_enemy_renegade_rifleman",
             {
                 icon_size = 7,
                 background_size = 24,
@@ -723,7 +741,6 @@ return function(env)
             ENEMY_RADAR_DEFAULT_COLOR,
             "show_enemy_renegade_flamer",
             {
-                toggle_with = "renegade_flamer",
                 icon_size = 12,
                 background_size = 36,
                 bracket_size = 15,
@@ -748,7 +765,6 @@ return function(env)
             ENEMY_RADAR_DEFAULT_COLOR,
             "show_enemy_cultist_mutant",
             {
-                toggle_with = "cultist_mutant",
                 icon_size = 10,
                 background_size = 36,
                 bracket_size = 15,
@@ -773,8 +789,6 @@ return function(env)
             ENEMY_RADAR_DEFAULT_COLOR,
             "show_enemy_chaos_ogryn_executor",
             {
-                toggle_with = "chaos_ogryn_executor",
-                alias_only = true,
                 icon_size = 12,
                 background_size = 36,
                 bracket_size = 15,
@@ -831,7 +845,6 @@ return function(env)
             ENEMY_RADAR_DEFAULT_COLOR,
             "show_enemy_cultist_ritualist",
             {
-                toggle_with = "cultist_ritualist",
                 priority_group = "misc",
                 icon_size = 10,
                 background_size = 30,
@@ -876,7 +889,7 @@ return function(env)
             "content/ui/materials/hud/interactions/icons/default",
             ENEMY_RADAR_DEFAULT_DREG_COLOR,
             ENEMY_RADAR_DEFAULT_COLOR,
-            "show_enemy_common",
+            "show_enemy_cultist_melee",
             {
                 icon_size = 8,
                 background_size = 16,
@@ -888,7 +901,7 @@ return function(env)
             "content/ui/materials/hud/interactions/icons/default",
             ENEMY_RADAR_DEFAULT_SCAB_COLOR,
             ENEMY_RADAR_DEFAULT_COLOR,
-            "show_enemy_common",
+            "show_enemy_renegade_melee",
             {
                 icon_size = 8,
                 background_size = 16,
@@ -944,6 +957,8 @@ return function(env)
         "show_pocketable_landmine_fire",
         "show_pocketable_landmine_shock",
         "show_pocketable_void_shield",
+        "show_tainted_skull",
+        "show_saints",
     }
 
     EXPEDITION_MARKER_DISPLAY_MODE_SETTING_IDS = {
@@ -1048,13 +1063,21 @@ return function(env)
         consumable = true,
     }
 
-    local function _normalize_marker_display_mode(value)
+    local function _normalize_marker_display_mode(value, default_value)
+        if value == nil then
+            return default_value or "artwork"
+        end
+
         if value == false or value == "off" then
             return "off"
         end
 
         if value == "icon" then
             return "icon"
+        end
+
+        if value == true then
+            return default_value or "artwork"
         end
 
         return "artwork"
@@ -1076,6 +1099,26 @@ return function(env)
         return default_value or "icon_only"
     end
 
+    local function _normalize_enemy_marker_display_mode(value)
+        if value == false or value == "off" then
+            return "off"
+        end
+
+        if value == "marked_icon" then
+            return "marked_icon"
+        end
+
+        return "icon_only"
+    end
+
+    local function _normalize_player_display_style(value)
+        if value == "icon_only" or value == "marked_icon" or value == "dot_only" or value == "marked_dot" then
+            return value
+        end
+
+        return "marked_icon"
+    end
+
     function mod:get_marker_scale_group(kind)
         if not kind then
             return nil
@@ -1086,6 +1129,10 @@ return function(env)
         end
 
         return MARKER_SCALE_GROUP_BY_KIND[kind]
+    end
+
+    function mod:is_event_marker_kind(kind)
+        return kind ~= nil and MARKER_SCALE_GROUP_BY_KIND[kind] == "event_group"
     end
 
     local function _percent_scale_from_setting(self, setting_id)
@@ -1147,20 +1194,14 @@ return function(env)
         local value = self:get(setting_id)
 
         if setting_id == "show_enemy_horde" then
-            if value == true or value == "icon_only" or value == "marked_icon" then
+            if value == true or value == "icon" or value == "icon_only" or value == "marked_icon" then
                 return "icon_only"
             end
 
             return "off"
         end
 
-        value = tostring(value or "icon_only")
-
-        if value ~= "icon_only" and value ~= "marked_icon" and value ~= "off" then
-            value = "icon_only"
-        end
-
-        return value
+        return _normalize_enemy_marker_display_mode(value)
     end
 
     function mod:get_enemy_category_scale_factor(kind_or_breed)
@@ -1182,22 +1223,11 @@ return function(env)
         return _percent_scale_from_setting(self, setting_id)
     end
 
-    function mod:get_target_icon_scale_factor(kind)
-        local scale = 1.0
-        local group_name = self:get_marker_scale_group(kind)
-
-        if group_name then
-            scale = scale * self:get_marker_scale_factor(group_name)
-        end
-
-        if kind and string_sub(tostring(kind), 1, 6) == "enemy_" then
-            scale = scale * self:get_enemy_category_scale_factor(kind)
-        end
-
-        return scale
-    end
-
     function mod:get_target_selection_priority(kind)
+        if self:is_event_marker_kind(kind) then
+            return EVENT_MARKER_SELECTION_PRIORITY
+        end
+
         if kind == "material_expeditions_loot_player_drop" then
             return EXPEDITION_PLAYER_DROP_SELECTION_PRIORITY
         end
@@ -1223,6 +1253,10 @@ return function(env)
     end
 
     function mod:get_target_render_layer(kind)
+        if self:is_event_marker_kind(kind) then
+            return EVENT_MARKER_RENDER_LAYER
+        end
+
         if kind == "material_expeditions_loot_player_drop" then
             return EXPEDITION_PLAYER_DROP_RENDER_LAYER
         end
@@ -1253,7 +1287,7 @@ return function(env)
             return nil
         end
 
-        return _normalize_marker_display_mode(mod:get(setting_id))
+        return _normalize_marker_display_mode(mod:get(setting_id), ARTWORK_MODE_DEFAULT_BY_SETTING[setting_id])
     end
 
     function mod:get_expedition_marker_display_mode(kind)
@@ -1277,7 +1311,7 @@ return function(env)
             local value = mod_get(mod, setting_id)
 
             if value == true then
-                mod_set(mod, setting_id, "artwork")
+                mod_set(mod, setting_id, ARTWORK_MODE_DEFAULT_BY_SETTING[setting_id] or "artwork")
             elseif value == false then
                 mod_set(mod, setting_id, "off")
             end
@@ -1300,6 +1334,46 @@ return function(env)
         end
     end
 
+    local function _migrate_split_enemy_category_settings()
+        local mod_get = mod.get
+        local mod_set = mod.set
+        local migrations = {
+            {
+                legacy_setting_id = "show_enemy_common",
+                setting_ids = {
+                    "show_enemy_cultist_melee",
+                    "show_enemy_renegade_melee",
+                },
+            },
+            {
+                legacy_setting_id = "show_enemy_shooter",
+                setting_ids = {
+                    "show_enemy_cultist_assault",
+                    "show_enemy_renegade_assault",
+                    "show_enemy_renegade_rifleman",
+                },
+            },
+        }
+
+        for i = 1, #migrations do
+            local migration = migrations[i]
+            local legacy_value = mod_get(mod, migration.legacy_setting_id)
+
+            if legacy_value ~= nil then
+                local migrated_value = _normalize_enemy_marker_display_mode(legacy_value)
+                local setting_ids = migration.setting_ids
+
+                for j = 1, #setting_ids do
+                    local setting_id = setting_ids[j]
+
+                    if mod_get(mod, setting_id) == nil then
+                        mod_set(mod, setting_id, migrated_value)
+                    end
+                end
+            end
+        end
+    end
+
     local function _migrate_player_visibility_settings()
         if mod:get("show_players") ~= nil then
             return
@@ -1307,14 +1381,23 @@ return function(env)
 
         local legacy_value = mod:get("show_teammates")
         if legacy_value ~= nil then
-            mod:set("show_players", legacy_value ~= false)
+            mod:set("show_players", legacy_value == false and "off" or
+                _normalize_player_display_style(mod:get("player_display_style")))
         end
     end
 
     function mod.on_all_mods_loaded()
+        if mod.migrate_marker_enabled_dropdown_settings then
+            mod:migrate_marker_enabled_dropdown_settings()
+        end
+
         _migrate_marker_display_mode_settings()
         _migrate_expedition_marker_display_mode_settings()
+        _migrate_split_enemy_category_settings()
         _migrate_player_visibility_settings()
+        if mod.migrate_radar_color_settings then
+            mod:migrate_radar_color_settings()
+        end
 
         local debug_mode = mod:get("debug_mode") == true
 
@@ -1355,11 +1438,15 @@ return function(env)
         load_package("packages/ui/views/player_character_options_view/player_character_options_view")
         load_package("packages/ui/views/talent_builder_view/talent_builder_view")
         load_package("packages/ui/views/live_events_view/live_events_view")
+        load_package("packages/content/live_events/saints/live_event_saints_ui_assets")
+        load_package("packages/content/live_events/skulls/live_event_skulls_ui_assets")
         load_package("packages/ui/views/group_finder_view/group_finder_view")
         load_package("packages/ui/views/mission_board_view/mission_board_view")
         load_package("packages/ui/views/scanner_display_view/scanner_display_view")
         load_package("packages/ui/material_sets/circumstances")
         load_package("packages/ui/views/crafting_view/crafting_view")
+        load_package("packages/ui/views/penance_overview_view/penance_overview_view")
+        load_package("packages/ui/views/expedition_play_view/expedition_play_view")
 
         if debug_mode then
             mod:info("Packages loaded")
