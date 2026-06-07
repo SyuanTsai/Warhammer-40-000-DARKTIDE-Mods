@@ -186,7 +186,7 @@ mod.add_medkit_marker_and_proximity = function(self, unit)
 end
 
 mod.check_players_talents_for_Field_Improvisation = function()
-	alive_players = Managers.state.player_unit_spawn:alive_players()
+	local alive_players = Managers.state.player_unit_spawn:alive_players()
 
 	if alive_players then
 		for _, player in pairs(alive_players) do
@@ -199,17 +199,6 @@ mod.check_players_talents_for_Field_Improvisation = function()
 			end
 		end
 	end
-end
-
-pickup_types = {}
-local function add_to_list_if_not_present(list, value)
-	for _, v in ipairs(list) do
-		if v == value then
-			return false -- Already present, do not add
-		end
-	end
-	table.insert(list, value)
-	return true -- Added successfully
 end
 
 mod.update_ammo_med_markers = function(self, marker)
@@ -239,10 +228,6 @@ mod.update_ammo_med_markers = function(self, marker)
 		local unit = marker.unit
 
 		local pickup_type = mod.get_marker_pickup_type(marker)
-
-		if pickup_type then
-			add_to_list_if_not_present(pickup_types, pickup_type)
-		end
 
 		if
 			pickup_type and pickup_type == "small_clip"
@@ -292,6 +277,8 @@ mod.update_ammo_med_markers = function(self, marker)
 			local med_crate_pos = POSITION_LOOKUP[marker.unit]
 
 			if marker.data and marker.data._active_interaction_type == "health_station" then
+				marker.aio_check_line_of_sight = mod:get("med_station_require_line_of_sight")
+
 				local health_station_extension = ScriptUnit.fetch_component_extension(unit, "health_station_system")
 
 				local remaining_charges = health_station_extension._charge_amount

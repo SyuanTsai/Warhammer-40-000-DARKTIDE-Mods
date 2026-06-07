@@ -1,5 +1,5 @@
 local mod = get_mod("markers_aio")
-mod.version = "2.12.08"
+mod.version = "2.13.6"
 mod:info("Markers Improved AIO Improved is installed, using version: " .. tostring(mod.version))
 
 mod.lookup_border_color = function(colour_string)
@@ -184,6 +184,88 @@ local loc = {
 		["zh-cn"] = "为各类可收集物品添加全新标记，支持距离、颜色、视野显示等设置，内置殉道者颅骨收集攻略等功能。",
 	},
 
+	-- Hover Tag Display Names
+	mod_marker_chest_name = {
+		en = "Chest",
+		["zh-cn"] = "宝箱",
+		["zh-tw"] = "寶箱",
+	},
+	mod_marker_item_name = {
+		en = "Item",
+		["zh-cn"] = "物品",
+		["zh-tw"] = "物品",
+	},
+	mod_marker_heretical_idol_name = {
+		en = "Heretical Idol",
+		["zh-cn"] = "异端雕像",
+		["zh-tw"] = "異端雕像",
+	},
+	mod_marker_medicae_station_name = {
+		en = "Medicae Station",
+		["zh-cn"] = "医疗站",
+		["zh-tw"] = "醫療站",
+	},
+	mod_marker_stimm_name = {
+		en = "Stimm",
+		["zh-cn"] = "兴奋剂",
+		["zh-tw"] = "興奮劑",
+	},
+	mod_marker_power_stimm_name = {
+		en = "Power Stimm",
+		["zh-cn"] = "作战兴奋剂",
+		["zh-tw"] = "戰鬥興奮劑",
+	},
+	mod_marker_speed_stimm_name = {
+		en = "Speed Stimm",
+		["zh-cn"] = "敏捷兴奋剂",
+		["zh-tw"] = "速度興奮劑",
+	},
+	mod_marker_boost_stimm_name = {
+		en = "Boost Stimm",
+		["zh-cn"] = "专注兴奋剂",
+		["zh-tw"] = "增強興奮劑",
+	},
+	mod_marker_medic_stimm_name = {
+		en = "Medic Stimm",
+		["zh-cn"] = "医疗兴奋剂",
+		["zh-tw"] = "治療針",
+	},
+	mod_marker_broker_stimm_name = {
+		en = "Hive Scum Stimm",
+		["zh-cn"] = "巢都兴奋剂",
+		["zh-tw"] = "巢都敗類興奮劑",
+	},
+	mod_marker_tome_name = {
+		en = "Tome",
+		["zh-cn"] = "经文",
+		["zh-tw"] = "經文",
+	},
+	mod_marker_material_name = {
+		en = "Material",
+		["zh-cn"] = "材料",
+		["zh-tw"] = "材料",
+	},
+	mod_marker_luggable_name = {
+		en = "Carry Item",
+		["zh-cn"] = "搬运物品",
+		["zh-tw"] = "搬運物品",
+	},
+	mod_marker_expedition_name = {
+		en = "Expedition",
+		["zh-cn"] = "远征目标",
+		["zh-tw"] = "遠征目標",
+	},
+	mod_marker_event_name = {
+		en = "Event Pickup",
+		["zh-cn"] = "事件物品",
+		["zh-tw"] = "事件物品",
+	},
+	mod_marker_unknown_name = {
+		en = "Unknown",
+		["zh-cn"] = "未知",
+		["zh-tw"] = "未知",
+	},
+
 	-- General Settings
 	aio_settings = {
 		en = "{#color(" .. colours.title .. ")}" .. "Global Marker Settings" .. "{#reset()}",
@@ -333,6 +415,13 @@ local loc = {
 		en = "Medicae Station marker max distance",
 		["zh-tw"] = "醫療站標記最大距離",
 		["zh-cn"] = "医疗站标记最大显示距离",
+	},
+	med_station_require_line_of_sight = {
+		en = "Require line of sight (Medicae Station)",
+		fr = "Nécessite une ligne de vue (Station Medicae)",
+		ru = "Должно быть в зоне видимости (Медицинская станция)",
+		["zh-tw"] = "需要視線範圍（醫療站）",
+		["zh-cn"] = "仅视野内显示（医疗站）",
 	},
 	ammo_med_max_size = {
 		en = "Maximum size of marker",
@@ -1284,6 +1373,58 @@ local loc = {
 		["zh-tw"] = "邊框顏色",
 		["zh-cn"] = "边框颜色",
 	},
+	boost_stimm_require_line_of_sight = {
+		en = "Require line of sight (Boost Stimm)",
+		["zh-cn"] = "专注兴奋剂仅视野内显示",
+		["zh-tw"] = "增強興奮劑需要視線範圍",
+	},
+	corruption_stimm_require_line_of_sight = {
+		en = "Require line of sight (Medic Stimm)",
+		["zh-cn"] = "医疗兴奋剂仅视野内显示",
+		["zh-tw"] = "醫療興奮劑需要視線範圍",
+	},
+	power_stimm_require_line_of_sight = {
+		en = "Require line of sight (Power Stimm)",
+		["zh-cn"] = "作战兴奋剂仅视野内显示",
+		["zh-tw"] = "戰鬥興奮劑需要視線範圍",
+	},
+	speed_stimm_require_line_of_sight = {
+		en = "Require line of sight (Speed Stimm)",
+		["zh-cn"] = "敏捷兴奋剂仅视野内显示",
+		["zh-tw"] = "速度興奮劑需要視線範圍",
+	},
+	broker_stimm_require_line_of_sight = {
+		en = "Require line of sight (Hive Scum Stimm)",
+		["zh-cn"] = "巢都兴奋剂仅视野内显示",
+		["zh-tw"] = "巢都敗類興奮劑需要視線範圍",
+	},
+
+	-- Per-stimm-type require line of sight tooltips
+	boost_stimm_require_line_of_sight_tooltip = {
+		en = "Require line of sight for Boost Stimm markers?",
+		["zh-cn"] = "专注兴奋剂标记是否需要视野？",
+		["zh-tw"] = "增強興奮劑標記是否需要視線？",
+	},
+	corruption_stimm_require_line_of_sight_tooltip = {
+		en = "Require line of sight for Medic Stimm markers?",
+		["zh-cn"] = "医疗兴奋剂标记是否需要视野？",
+		["zh-tw"] = "醫療興奮劑標記是否需要視線？",
+	},
+	power_stimm_require_line_of_sight_tooltip = {
+		en = "Require line of sight for Power Stimm markers?",
+		["zh-cn"] = "作战兴奋剂标记是否需要视野？",
+		["zh-tw"] = "戰鬥興奮劑標記是否需要視線？",
+	},
+	speed_stimm_require_line_of_sight_tooltip = {
+		en = "Require line of sight for Speed Stimm markers?",
+		["zh-cn"] = "敏捷兴奋剂标记是否需要视野？",
+		["zh-tw"] = "速度興奮劑標記是否需要視線？",
+	},
+	broker_stimm_require_line_of_sight_tooltip = {
+		en = "Require line of sight for Hive Scum Stimm markers?",
+		["zh-cn"] = "巢都兴奋剂标记是否需要视野？",
+		["zh-tw"] = "巢都敗類興奮劑標記是否需要視線？",
+	},
 
 	-- TOME MARKERS
 	tome_markers_settings = {
@@ -1730,9 +1871,22 @@ local loc = {
 		["zh-cn"] = "启用标记",
 	},
 	martyrs_skull_guide_enable = {
-		en = "Enable Skull Collection Guide?",
-		["zh-tw"] = "啟用顱骨收集指南？",
-		["zh-cn"] = "启用颅骨收集攻略",
+		en = "Enable Skull Guide Widget?",
+		["zh-tw"] = "啟用顱骨收集指南小工具？",
+		["zh-cn"] = "启用颅骨收集攻略小工具",
+	},
+	martyrs_skull_guide_markers_enable = {
+		en = "Enable Skull Guide Markers?",
+		["zh-tw"] = "啟用顱骨收集指南標記？",
+		["zh-cn"] = "启用颅骨收集攻略标记",
+	},
+	martyrs_skull_guide_x_offset = {
+		en = "Guide Widget X Position",
+		["zh-cn"] = "指南小工具X位置",
+	},
+	martyrs_skull_guide_y_offset = {
+		en = "Guide Widget Y Position",
+		["zh-cn"] = "指南小工具Y位置",
 	},
 	martyrs_skull_guide_disable_if_collected = {
 		en = "Only show guide if not collected?",
@@ -1828,6 +1982,9 @@ local loc = {
 		en = "Fist",
 		["zh-tw"] = "拳頭",
 		["zh-cn"] = "拳头",
+	},
+	Luggable = {
+		en = "Luggable",
 	},
 	Gold = {
 		en = "Gold",
@@ -2794,7 +2951,6 @@ local loc = {
 		en = "Blue RGB value.",
 		["zh-cn"] = "蓝色RGB数值。",
 		["zh-tw"] = "藍色RGB數值。",
-
 	},
 	max_distance_tooltip = {
 		en = "Maximum distance to find, update and draw markers.",
@@ -2907,14 +3063,39 @@ local loc = {
 		["zh-tw"] = "為巢都藥劑UI元素啟用顏色調整。",
 	},
 	martyrs_skull_guide_enable_tooltip = {
-		en = "Enable an in-mission guide to collecting Martyr's Skulls.\nIncludes written text (Inside the objective window) and in-world markers for positional reference.",
-		["zh-cn"] = "启用任务内殉道者颅骨收集指引。\n包含任务窗口文字提示与场景位置标记。",
-		["zh-tw"] = "啟用任務內殉道者顱骨收集指引。\n包含任務窗口文字提示與場景位置標記。",
+		en = "Enable an on-screen guide widget with step-by-step text for collecting Martyr's Skulls.",
+		["zh-cn"] = "启用屏幕上的步骤文字指引，指导收集殉道者颅骨。",
+		["zh-tw"] = "啟用螢幕上的步驟文字指引，指導收集殉道者顱骨。",
+	},
+	martyrs_skull_guide_markers_enable_tooltip = {
+		en = "Enable in-world positional markers for Martyr's Skull guide steps.",
+		["zh-cn"] = "启用任务内殉道者颅骨收集步骤的场景位置标记。",
+		["zh-tw"] = "啟用任務內殉道者顱骨收集步驟的場景位置標記。",
 	},
 	martyrs_skull_guide_disable_if_collected_tooltip = {
 		en = "Disable the Martyr's Skull guide if you have already collected this skull and have the penance unlocked?",
 		["zh-cn"] = "已收集颅骨并解锁苦修后，关闭殉道者颅骨指引。",
 		["zh-tw"] = "已收集顱骨並解鎖苦修後，關閉殉道者顱骨指引。",
+	},
+	martyrs_skull_guide_x_offset_tooltip = {
+		en = "Horizontal position of the guide widget (in pixels). 0 = left edge of screen.",
+		["zh-cn"] = "指南小工具的水平位置像素值。0 = 屏幕左边缘。",
+		["zh-tw"] = "指南小工具的水平位置像素值。0 = 螢幕左邊緣。",
+	},
+	martyrs_skull_guide_y_offset_tooltip = {
+		en = "Vertical position of the guide widget (in pixels). 0 = top edge of screen.",
+		["zh-cn"] = "指南小工具的垂直位置像素值。0 = 屏幕顶部边缘。",
+		["zh-tw"] = "指南小工具的垂直位置像素值。0 = 螢幕頂部邊緣。",
+	},
+	martyrs_skull_collected = {
+		en = "You have already collected this skull.",
+		["zh-cn"] = "你已经收集过这个颅骨了。",
+		["zh-tw"] = "你已經收集過這個顱骨了。",
+	},
+	martyrs_skull_not_collected = {
+		en = "You haven't collected this skull before.",
+		["zh-cn"] = "你还没有收集过这个颅骨。",
+		["zh-tw"] = "你還沒有收集過這個顱骨。",
 	},
 }
 
