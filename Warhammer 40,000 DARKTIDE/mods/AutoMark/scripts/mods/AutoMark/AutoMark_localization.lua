@@ -1,11 +1,7 @@
-local breeds     = require("scripts/settings/breed/breeds")
-local archetypes = require("scripts/settings/archetype/archetypes")
 local Breed      = require("scripts/utilities/breed")
+local Breeds     = require("scripts/settings/breed/breeds")
+local Archetypes = require("scripts/settings/archetype/archetypes")
 local InputUtils = require("scripts/managers/input/input_utils")
-
-local Color      = Color
-local Localize   = Localize
-local string     = string
 
 local function color_text(text, color_name)
     local color = Color[color_name](255, true)
@@ -112,6 +108,22 @@ local localization = {
         en = "Cancel Mark on Condition",
         ["zh-cn"] = "根据条件取消标记",
         ["zh-tw"] = "依條件取消標記",
+    },
+    companion_cancel_mark_human = {
+        en = "Human",
+        ["zh-cn"] = "人类",
+    },
+    companion_cancel_mark_human_description = {
+        en = "Enable for human-sized enemies that can be pounced by your Cyber-Mastiff.",
+        ["zh-cn"] = "在人类体型的敌人上启用，这些敌人可以被你的机械战犬扑倒。",
+    },
+    companion_cancel_mark_non_human = {
+        en = "Non-Human",
+        ["zh-cn"] = "非人类",
+    },
+    companion_cancel_mark_non_human_description = {
+        en = "Enable for non-human-sized enemies that cannot be pounced by your Cyber-Mastiff.",
+        ["zh-cn"] = "在非人类体型的敌人上启用，这些敌人不能被你的机械战犬扑倒。",
     },
     companion_health_threshold = {
         en = "Health Threshold",
@@ -424,7 +436,7 @@ local function is_localization_valid(text)
     return true
 end
 
-for breed_name, breed_data in pairs(breeds) do
+for breed_name, breed_data in pairs(Breeds) do
     if Breed.is_minion(breed_data) then
         local text = Localize(
             breed_data.is_boss
@@ -433,7 +445,7 @@ for breed_name, breed_data in pairs(breeds) do
             or breed_data.display_name
         )
         text = is_localization_valid(text) and text or breed_name
-        if string.find(breed_name, "mutator") then
+        if breed_name ~= "chaos_mutator_daemonhost" and string.find(breed_name, "mutator") then
             localization[breed_name] = {
                 en = text .. " (Mutator)",
                 ["zh-cn"] = text .. "（变异体）",
@@ -444,7 +456,7 @@ for breed_name, breed_data in pairs(breeds) do
     end
 end
 
-for class_name, archetype in pairs(archetypes) do
+for class_name, archetype in pairs(Archetypes) do
     local text = Localize(archetype.archetype_name)
     localization[class_name] = {
         en = text
