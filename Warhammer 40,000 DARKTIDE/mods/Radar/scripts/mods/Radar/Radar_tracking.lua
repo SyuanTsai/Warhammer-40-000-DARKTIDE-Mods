@@ -946,14 +946,10 @@ return function(env)
                         if kind and _is_trackable_unit_alive(unit, kind) then
                             local ability_marker_names = nil
                             local ability_marker_bracket_color = nil
-                            local ability_marker_primary_name = nil
-                            local ability_marker_priority = nil
 
                             if show_ability_marked_enemies then
                                 ability_marker_names,
-                                ability_marker_bracket_color,
-                                ability_marker_primary_name,
-                                ability_marker_priority = _supported_ability_marker_state_for_unit(
+                                ability_marker_bracket_color = _supported_ability_marker_state_for_unit(
                                         unit,
                                         outline_extension_map,
                                         local_player_unit,
@@ -963,12 +959,8 @@ return function(env)
 
                             _track_unit(unit, kind, "unit_data_system", {
                                 breed_name = breed_name,
-                                resolved_breed_name = resolved_breed_name,
                                 marked_by_player_slot = track_enemy_tags and _marked_by_player_slot_for_unit(unit) or nil,
                                 ability_marked = ability_marker_names ~= nil,
-                                ability_outline_names = ability_marker_names,
-                                ability_outline_primary_name = ability_marker_primary_name,
-                                ability_outline_priority = ability_marker_priority,
                                 ability_outline_bracket_color = ability_marker_bracket_color,
                             })
                         end
@@ -987,6 +979,7 @@ return function(env)
         local tracked_units = mod._tracked_units
         local seen_destructibles = _scratch_seen_destructibles
         local track_item_tags = mod:get_show_only_tagged_items()
+        local dark_rites_scan_allowed = _is_dark_rites_marker_scan_allowed()
         table_clear(seen_destructibles)
 
         for unit, extension in pairs(destructible_map) do
@@ -997,8 +990,10 @@ return function(env)
                 local collectible_data = _safe_destructible_collectible_data(extension)
                 local collectible_id = collectible_data and collectible_data.id or nil
                 local collectible_section_id = collectible_data and collectible_data.section_id or nil
-                local collectible_name = collectible_data and collectible_data.name or nil
                 local collectible_key = _idol_collectible_key(collectible_section_id, collectible_id)
+                local prop_data_name = nil
+                local unit_data_breed_name = nil
+                local is_live_event_skulls_totem = false
                 local extension_visible = _safe_destructible_visible(extension)
                 local unit_visible = _safe_unit_main_visible(unit)
                 local health_alive = _safe_health_alive(unit)
@@ -1006,15 +1001,27 @@ return function(env)
                 local destroyed_by_event = mod._idol_destroyed_units[unit] ~= nil
                     or (collectible_key ~= nil and mod._idol_destroyed_collectible_keys[collectible_key] ~= nil)
 
-                if not destroyed_by_event and has_active_collectible and extension_visible == true and health_alive ~= false and unit_visible ~= false then
-                    _track_unit(unit, "pickup_heretic_idol", "destructible_system", {
+                if dark_rites_scan_allowed then
+                    if collectible_type == "nurgle_totem" then
+                        is_live_event_skulls_totem = true
+                    elseif collectible_type ~= "heretic_idol" or not has_active_collectible then
+                        prop_data_name = _safe_unit_prop_data_name(unit)
+                        unit_data_breed_name = _safe_unit_data_breed_name(unit)
+                        is_live_event_skulls_totem = _is_live_event_skulls_totem_unit(collectible_type, unit_data_breed_name,
+                            prop_data_name)
+                    end
+                end
+
+                if not destroyed_by_event
+                    and (has_active_collectible or is_live_event_skulls_totem)
+                    and extension_visible == true
+                    and health_alive ~= false
+                    and unit_visible ~= false then
+                    local kind = is_live_event_skulls_totem and "dark_rites_totem" or "pickup_heretic_idol"
+
+                    _track_unit(unit, kind, "destructible_system", {
                         collectible_type = collectible_type,
-                        unit_name = _safe_lower_string(_safe_unit_name(unit)),
-                        extension_visible = extension_visible,
-                        unit_visible = unit_visible,
-                        health_alive = health_alive,
                         collectible_id = collectible_id,
-                        collectible_name = collectible_name,
                         collectible_section_id = collectible_section_id,
                         marked_by_player_slot = track_item_tags and _marked_by_player_slot_for_unit(unit) or nil,
                     })
@@ -1276,14 +1283,12 @@ return function(env)
         end
 
         local total_value = 0
-        local cluster_count = 0
         local marked_by_player_slot = nil
 
         for i = 1, #cluster_members do
             local member = cluster_members[i]
             local meta = member and member.meta or nil
 
-            cluster_count = cluster_count + 1
             total_value = total_value + _expedition_loot_target_value(member)
 
             if meta and meta.marked_by_player_slot ~= nil and marked_by_player_slot == nil then
@@ -1305,11 +1310,8 @@ return function(env)
             source = "expedition_loot_cluster",
             meta = {
                 is_tech_remnant_cluster = true,
-                remnant_cluster_count = cluster_count,
                 remnant_cluster_value = total_value,
                 remnant_value = total_value,
-                remnant_show_value_text = cluster_count > 1,
-                remnant_value_text = tostring(total_value),
                 marked_by_player_slot = marked_by_player_slot,
             },
             distance_sq = _distance_squared_horizontal(player_pos, position),
@@ -1459,6 +1461,7 @@ return function(env)
         local priority_target_cache = _scratch_priority_target_cache
         local get_target_render_layer = mod.get_target_render_layer
         local get_target_selection_priority = mod.get_target_selection_priority
+        local is_event_marker_kind = mod.is_event_marker_kind
 
         local function _cached_kind_enabled(kind)
             local enabled = kind_enabled_cache[kind]
@@ -1510,6 +1513,7 @@ return function(env)
             if is_priority_target == nil then
                 is_priority_target = kind == "enemy_daemonhost" or _is_boss_marker_kind(kind) or
                     ENEMY_RADAR_DEFINITION_BY_KIND[kind] ~= nil or
+                    (is_event_marker_kind and is_event_marker_kind(mod, kind) == true) or
                     kind == "material_expeditions_loot_player_drop" or
                     kind == "location_attention" or
                     kind == "location_ping" or
@@ -1800,6 +1804,7 @@ return function(env)
         mod._last_scan_signature = nil
         mod._last_block_signature = nil
         mod._last_state_gameplay = nil
+        _reset_dark_rites_marker_scan_cache()
         mod._idol_destroyed_collectible_keys = {}
         mod._idol_destroyed_units = {}
         mod._last_safe_zone_section_index = nil
@@ -2256,7 +2261,16 @@ return function(env)
     end
 
     function mod:get_player_display_style()
-        local value = tostring(self:get("player_display_style") or "marked_icon")
+        local value = self:get("show_players")
+
+        if value ~= "icon_only"
+            and value ~= "marked_icon"
+            and value ~= "dot_only"
+            and value ~= "marked_dot" then
+            value = self:get("player_display_style")
+        end
+
+        value = tostring(value or "marked_icon")
 
         if value ~= "icon_only"
             and value ~= "marked_icon"
@@ -2275,11 +2289,13 @@ return function(env)
             value = self:get("show_teammates")
         end
 
-        return value ~= false
+        return value ~= false and value ~= "off"
     end
 
     function mod:get_show_player_center_dot()
-        return self:get("show_player_center_dot") ~= false
+        local value = self:get("show_player_center_dot")
+
+        return value ~= false and value ~= "off"
     end
 
     function mod:get_player_marker_range_mode()
@@ -2294,10 +2310,6 @@ return function(env)
 
     function mod:get_radar_snapshot()
         return self._radar_snapshot
-    end
-
-    function mod:get_screen_highlight_targets()
-        return self._screen_highlight_targets or {}
     end
 
     function mod:get_show_only_tagged_enemies()
@@ -2504,18 +2516,6 @@ return function(env)
             value = 100
         elseif value > OVERVIEW_RADAR_MARKER_LIMIT then
             value = OVERVIEW_RADAR_MARKER_LIMIT
-        end
-
-        return math_floor(value)
-    end
-
-    function mod:get_background_opacity()
-        local value = tonumber(self:get("background_opacity")) or 90
-
-        if value < 0 then
-            value = 0
-        elseif value > 255 then
-            value = 255
         end
 
         return math_floor(value)
@@ -2744,49 +2744,12 @@ return function(env)
         return math_floor(value + 0.5)
     end
 
-    function mod:get_nearby_highlight_opacity()
-        local value = tonumber(self:get("nearby_highlight_opacity")) or 255
-
-        if value < 25 then
-            value = 25
-        elseif value > 255 then
-            value = 255
-        end
-
-        return math_floor(value + 0.5)
-    end
-
-    function mod:get_nearby_highlight_custom_color()
-        if self:get("nearby_highlight_use_custom_color") ~= true then
-            return nil
-        end
-
-        local red = tonumber(self:get("nearby_highlight_color_red")) or 255
-        local green = tonumber(self:get("nearby_highlight_color_green")) or 255
-        local blue = tonumber(self:get("nearby_highlight_color_blue")) or 255
-
-        return {
-            255,
-            math_floor(_clamp(red, 0, 255) + 0.5),
-            math_floor(_clamp(green, 0, 255) + 0.5),
-            math_floor(_clamp(blue, 0, 255) + 0.5),
-        }
-    end
-
     function mod:get_nearby_highlight_color(kind)
-        local fallback_white = DEFAULT_COLOR_ARRAY_WHITE or { 255, 255, 255, 255 }
-        local custom_color = self:get_nearby_highlight_custom_color()
-        local color = _copy_color_array(custom_color) or
-            _copy_color_array(NEARBY_OUTLINE_COLOR_BY_KIND[kind]) or
-            _copy_color_array(fallback_white)
-
-        if not color then
-            return nil
+        if self.get_highlight_color then
+            return self:get_highlight_color(kind)
         end
 
-        color[1] = self:get_nearby_highlight_opacity()
-
-        return color
+        return _copy_color_array(NEARBY_OUTLINE_COLOR_BY_KIND[kind]) or DEFAULT_COLOR_ARRAY_WHITE
     end
 
     function mod:is_nearby_highlight_distance_text_enabled_for_kind(kind)
