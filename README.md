@@ -698,10 +698,10 @@
 
 ### [Radar](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
     遠征模式的小弟圖
-- MOD 網站最後更新日期：Last updated 31 May 2026, 6:02PM
-- MOD 版本：2.3.3
-- MOD 檔案名稱：Radar-790-2-3-3-1780221765
-- 手動維護最後下載日期：2026-06-07
+- MOD 網站最後更新日期：Last updated 25 June 2026, 2:17AM
+- MOD 版本：2.4.0
+- MOD 檔案名稱：Radar_2.4.0_Z1K0I1w6C
+- 手動維護最後下載日期：2026-06-26
 
 ### [AuspexHelper](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
     遠征模式的小弟圖
