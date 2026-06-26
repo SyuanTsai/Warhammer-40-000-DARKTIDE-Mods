@@ -1,3 +1,4 @@
+---@class AutoMarkMod:DMFMod
 local mod                      = get_mod("AutoMark")
 local context                  = mod.context
 
