@@ -1510,67 +1510,87 @@ end
 mod:hook(CLASS.InputService, "_get", _input_action_hook)
 mod:hook(CLASS.InputService, "_get_simulate", _input_action_hook)
 
-mod:hook("InteracteeSystem", "rpc_interaction_started", function(func, self, channel_id, unit_id, is_level_unit, game_object_id, interaction_input_type)
-    func(self, channel_id, unit_id, is_level_unit, game_object_id, interaction_input_type)
+mod:hook("InteracteeSystem", "rpc_interaction_started", function(func, self, ...)
+    func(self, ...)
     
-    local interactor_unit = Managers.state.unit_spawner:unit(game_object_id)
-    local interactee_unit = Managers.state.unit_spawner:unit(unit_id, is_level_unit)
-    
-    if interactor_unit and interactee_unit then
-        local extension = self._unit_to_extension_map[interactee_unit]
-        if extension then
-            local interaction_type = extension._active_interaction_type
-            if not interaction_type or interaction_type == "none" then
-                interaction_type = extension:interaction_type()
-            end
-            
-            if interaction_type and interaction_type ~= "none" then
-                local interaction_templates = require("scripts/settings/interaction/interaction_templates")
-                local template = interaction_templates[interaction_type]
-                if template and template.duration and template.duration > 0 then
-                    interaction_active_units[interactor_unit] = {
-                        type = interaction_type,
-                        interactee_unit = interactee_unit
-                    }
+    -- Extract parameters safely - they may vary depending on RPC context
+    local arg_count = select('#', ...)
+    if arg_count >= 5 then
+        local channel_id = select(1, ...)
+        local unit_id = select(2, ...)
+        local is_level_unit = select(3, ...)
+        local game_object_id = select(4, ...)
+        local interaction_input_type = select(5, ...)
+        
+        local interactor_unit = Managers.state.unit_spawner:unit(game_object_id)
+        local interactee_unit = Managers.state.unit_spawner:unit(unit_id, is_level_unit)
+        
+        if interactor_unit and interactee_unit then
+            local extension = self._unit_to_extension_map[interactee_unit]
+            if extension then
+                local interaction_type = extension._active_interaction_type
+                if not interaction_type or interaction_type == "none" then
+                    interaction_type = extension:interaction_type()
+                end
+                
+                if interaction_type and interaction_type ~= "none" then
+                    local interaction_templates = require("scripts/settings/interaction/interaction_templates")
+                    local template = interaction_templates[interaction_type]
+                    if template and template.duration and template.duration > 0 then
+                        if interactor_unit ~= nil then
+                            interaction_active_units[interactor_unit] = {
+                                type = interaction_type,
+                                interactee_unit = interactee_unit
+                            }
+                        end
+                    end
                 end
             end
         end
     end
 end)
 
-mod:hook("InteracteeSystem", "rpc_interaction_stopped", function(func, self, channel_id, unit_id, is_level_unit, result)
-    func(self, channel_id, unit_id, is_level_unit, result)
+mod:hook("InteracteeSystem", "rpc_interaction_stopped", function(func, self, ...)
+    func(self, ...)
     
-    local interactee_unit = Managers.state.unit_spawner:unit(unit_id, is_level_unit)
-    if interactee_unit then
-        local extension = self._unit_to_extension_map[interactee_unit]
+    -- Extract parameters safely - they may vary depending on RPC context
+    local arg_count = select('#', ...)
+    if arg_count >= 4 then
+        local channel_id = select(1, ...)
+        local unit_id = select(2, ...)
+        local is_level_unit = select(3, ...)
         
-        local interactor_unit = nil
-        if extension then
-            interactor_unit = extension._interactor_unit
+        local interactee_unit = Managers.state.unit_spawner:unit(unit_id, is_level_unit)
+        if interactee_unit then
+            local extension = self._unit_to_extension_map[interactee_unit]
             
-            if not interactor_unit then
-                local uds = ScriptUnit.has_extension(interactee_unit, "unit_data_system") and ScriptUnit.extension(interactee_unit, "unit_data_system")
-                if uds then
-                    local interactee_component = uds:read_component("interactee")
-                    if interactee_component then
-                        interactor_unit = interactee_component.interactor_unit
+            local interactor_unit = nil
+            if extension then
+                interactor_unit = extension._interactor_unit
+                
+                if not interactor_unit then
+                    local uds = ScriptUnit.has_extension(interactee_unit, "unit_data_system") and ScriptUnit.extension(interactee_unit, "unit_data_system")
+                    if uds then
+                        local interactee_component = uds:read_component("interactee")
+                        if interactee_component then
+                            interactor_unit = interactee_component.interactor_unit
+                        end
+                    end
+                end
+                
+                if not interactor_unit then
+                    for tracked_unit, data in pairs(interaction_active_units) do
+                        if data and data.interactee_unit == interactee_unit then
+                            interactor_unit = tracked_unit
+                            break
+                        end
                     end
                 end
             end
             
-            if not interactor_unit then
-                for tracked_unit, data in pairs(interaction_active_units) do
-                    if data.interactee_unit == interactee_unit then
-                        interactor_unit = tracked_unit
-                        break
-                    end
-                end
+            if interactor_unit ~= nil and interaction_active_units[interactor_unit] ~= nil then
+                interaction_active_units[interactor_unit] = nil
             end
-        end
-        
-        if interactor_unit and interaction_active_units[interactor_unit] then
-            interaction_active_units[interactor_unit] = nil
         end
     end
 end)
@@ -1601,7 +1621,7 @@ mod:hook("InteracteeExtension", "stopped", function(func, self, result)
     local interactor_unit = self._interactor_unit
     func(self, result)
     
-    if interactor_unit and interaction_active_units[interactor_unit] then
+    if interactor_unit ~= nil and interaction_active_units[interactor_unit] ~= nil then
         interaction_active_units[interactor_unit] = nil
     end
 end)
@@ -1628,7 +1648,7 @@ mod:hook("PlayerInteracteeExtension", "stopped", function(func, self, result)
     local interactor_unit = self._interactor_unit
     func(self, result)
     
-    if interactor_unit and interaction_active_units[interactor_unit] then
+    if interactor_unit ~= nil and interaction_active_units[interactor_unit] ~= nil then
         interaction_active_units[interactor_unit] = nil
     end
 end)
@@ -1636,7 +1656,7 @@ end)
 mod:hook("InteractorExtension", "cancel_interaction", function(func, self, t)
     local interactor_unit = self._unit
     
-    if interactor_unit and interaction_active_units[interactor_unit] then
+    if interactor_unit ~= nil and interaction_active_units[interactor_unit] ~= nil then
         interaction_active_units[interactor_unit] = nil
     end
     
@@ -1646,7 +1666,7 @@ end)
 mod:hook("InteractorExtension", "reset_interaction", function(func, self, reset_focus_unit)
     local interactor_unit = self._unit
     
-    if interactor_unit and interaction_active_units[interactor_unit] then
+    if interactor_unit ~= nil and interaction_active_units[interactor_unit] ~= nil then
         interaction_active_units[interactor_unit] = nil
     end
     
