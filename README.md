@@ -169,10 +169,10 @@
 
 ### [Quick Look Card](https://www.nexusmods.com/warhammer40kdarktide/mods/142)
     快速資訊卡 可以快速取得武器的五維
-- MOD 網站最後更新日期：Last updated 15 August 2025, 11:44PM
-- MOD 版本：1.8.5
-- MOD 檔案名稱：QuickLookCard-142-1-8-5-1755272684
-- 手動維護最後下載日期：2025-09-30
+- MOD 網站最後更新日期：Last updated 23 June 2026, 5:14PM
+- MOD 版本：1.8.6
+- MOD 檔案名稱：QuickLookCard
+- 手動維護最後下載日期：2026-06-26
 ---
 # 遊戲內操作相關MOD
 
