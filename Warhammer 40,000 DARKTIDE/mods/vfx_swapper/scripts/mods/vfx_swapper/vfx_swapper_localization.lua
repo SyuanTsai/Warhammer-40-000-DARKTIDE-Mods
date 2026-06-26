@@ -2,37 +2,30 @@ return {
 	mod_name = {
 		en = "VFX Swapper",
 		["zh-cn"] = "视觉特效替换器",
-		["zh-tw"] = "視覺特效調整器",
 	},
 	mod_description = {
 		en = "Replaces specific visual effects to improve visibility and performance.",
 		["zh-cn"] = "替换特定视觉特效以提升画面清晰度和游戏性能。",
-		["zh-tw"] = "替換特定的視覺特效，改善視野與效能。",
 	},
 	vfx_replacement_group = {
 		en = "VFX Replacements",
 		["zh-cn"] = "特效替换",
-		["zh-tw"] = "特效更改",
 	},
 	replace_gas_vfx = {
 		en = "Replace Grenadier's Gas Bombs",
 		["zh-cn"] = "替换渣滓剧毒轰炸者特效",
-		["zh-tw"] = "替換渣滓劇毒轟炸者毒氣彈特效",
 	},
 	replace_renegade_grenade_vfx = {
 		en = "Replace Renegade Grenadier's Fire Grenade",
 		["zh-cn"] = "替换血痂轰炸者特效",
-		["zh-tw"] = "替換血痂轟炸者燃燒手雷特效",
 	},
 	replace_renegade_flamer_vfx = {
 		en = "Replace Renegade Flamer",
 		["zh-cn"] = "替换血痂火焰兵燃烧地板特效",
-		["zh-tw"] = "替換血痂噴火者地板燃燒特效",
 	},
 	replace_cultist_flamer_vfx = {
 		en = "Replace Cultist Flamer VFX",
 		["zh-cn"] = "替换渣滓火焰兵燃烧地板特效",
-		["zh-tw"] = "替換渣滓毒焰噴射者地板燃燒特效",
 	},
 	replace_havoc_enemy_corruption_liquid = {
 		en = "Replace Havoc's Blight Spreads (ground effect)",

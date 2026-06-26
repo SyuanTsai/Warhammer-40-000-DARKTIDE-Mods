@@ -44,14 +44,11 @@ mod._refresh_additionalvfx_cache = refresh_additionalvfx_cache
 
 -- Initialize cache
 refresh_additionalvfx_cache()
-
-
-
 -- ============================================================================
 -- Block Toxin Death Explosion VFX (From Chem-grenade and Explosive Needler)
 -- ============================================================================
 
-mod:hook("WeaponSystem", "rpc_trigger_husk_explosion", function(func, self, channel_id, explosion_template_id, position, rotation, radius_variable_value, weapon_charge_level, optional_attacking_owner_unit_id)
+mod:hook("WeaponSystem", "rpc_trigger_husk_explosion", function(func, self, channel_id, explosion_template_id, ...)
         -- Lookup explosion template name from network ID
     local explosion_template_name = NetworkLookup.explosion_templates[explosion_template_id]
     if _cached_disable_toxin_death_vfx and BLOCKED_VFX_RPC[explosion_template_name] then
@@ -59,7 +56,7 @@ mod:hook("WeaponSystem", "rpc_trigger_husk_explosion", function(func, self, chan
     end
         
         -- Not a primer explosion, call original
-    return func(self, channel_id, explosion_template_id, position, rotation, radius_variable_value, weapon_charge_level, optional_attacking_owner_unit_id)
+    return func(self, channel_id, explosion_template_id, ...)
 end)
     
     -- hook create_husk_explosion for solo/psykhanium (not working because reasons ¯\_(ツ)_/¯)
@@ -98,7 +95,7 @@ mod:hook("FxSystem", "trigger_vfx", function(func, self, vfx_name, position, opt
 end)
 
 -- Hook RPC handler to block VFX sent from server in multiplayer
-mod:hook("FxSystem", "rpc_trigger_vfx", function(func, self, channel_id, vfx_id, position, optional_rotation)
+mod:hook("FxSystem", "rpc_trigger_vfx", function(func, self, channel_id, vfx_id, ...)
     -- Lookup the vfx_name from the network ID
     local vfx_name = NetworkLookup.vfx[vfx_id]
     
@@ -112,11 +109,11 @@ mod:hook("FxSystem", "rpc_trigger_vfx", function(func, self, channel_id, vfx_id,
         end
     end
     
-    return func(self, channel_id, vfx_id, position, optional_rotation)
+    return func(self, channel_id, vfx_id, ...)
 end)
 
 -- block rotten_armor_stages effect template
-mod:hook("FxSystem", "start_template_effect", function(func, self, template, optional_unit, optional_node, optional_position)
+mod:hook("FxSystem", "start_template_effect", function(func, self, template, ...)
     local template_name = template and template.name
 
     if _cached_disable_rotten_armor_stages then
@@ -127,11 +124,11 @@ mod:hook("FxSystem", "start_template_effect", function(func, self, template, opt
 	-- if template_name == "chaos_mutator_ritualist_chanting" then
 	-- 	return
 	-- end
-    return func(self, template, optional_unit, optional_node, optional_position)
+    return func(self, template, ...)
 end)
 
 -- block rotten_armor_stages as client 
-mod:hook("FxSystem", "rpc_start_template_effect", function(func, self, channel_id, buffer_index, template_id, optional_unit_id, optional_node, optional_position)
+mod:hook("FxSystem", "rpc_start_template_effect", function(func, self, channel_id, buffer_index, template_id, ...)
     local template_name = NetworkLookup.effect_templates[template_id]
 
     if _cached_disable_rotten_armor_stages then
@@ -142,7 +139,7 @@ mod:hook("FxSystem", "rpc_start_template_effect", function(func, self, channel_i
 	-- if template_name == "chaos_mutator_ritualist_chanting" then
 	-- 	return
 	-- end
-    return func(self, channel_id, buffer_index, template_id, optional_unit_id, optional_node, optional_position)
+    return func(self, channel_id, buffer_index, template_id, ...)
 end)
 
 --  rampaging and corrupted enemies
@@ -176,92 +173,6 @@ local HavocTemplates = require("scripts/settings/buff/havoc_buff_templates")
 local BuffSettings = require("scripts/settings/buff/buff_settings")
 local minion_effects_priorities = BuffSettings.minion_effects_priorities
 mod._original_bolstering_minion_effects = {}
-		-- node_effects_priotity = minion_effects_priorities.mutators,
-		-- stack_material_vectors = {
-		-- 	material_vector = {
-		-- 		name = "stimmed_color",
-		-- 		value = BOLSTER_1_COLOR,
-		-- 		priority = minion_effects_priorities.mutators,
-		-- 	},
-		-- 	material_vector = {
-		-- 		name = "stimmed_color",
-		-- 		value = BOLSTER_2_COLOR,
-		-- 		priority = minion_effects_priorities.mutators,
-		-- 	},
-		-- 	material_vector = {
-		-- 		name = "stimmed_color",
-		-- 		value = BOLSTER_3_COLOR,
-		-- 		priority = minion_effects_priorities.mutators,
-		-- 	},
-		-- 	material_vector = {
-		-- 		name = "stimmed_color",
-		-- 		value = BOLSTER_4_COLOR,
-		-- 		priority = minion_effects_priorities.mutators,
-		-- 	},
-		-- 	material_vector = {
-		-- 		name = "stimmed_color",
-		-- 		value = BOLSTERING_COLOR,
-		-- 		priority = minion_effects_priorities.mutators,
-		-- 	},
-		-- },
-		-- stack_node_effects = {
-		-- 	[5] = {
-		-- 		    node_name = "j_lefteye",
-		-- 		    vfx = {
-		-- 			    orphaned_policy = "stop",
-		-- 			    particle_effect = "content/fx/particles/enemies/red_glowing_eyes",
-		-- 			    stop_type = "destroy",
-		-- 		        material_variables = {
-		-- 			    {
-		-- 				    material_name = "eye_socket",
-		-- 				    variable_name = "material_variable_21872256",
-		-- 				    value = BOLSTERING_COLOR,
-		-- 			    },
-		-- 			    {
-		-- 				    material_name = "eye_glow",
-		-- 				    variable_name = "trail_color",
-		-- 				    value = BOLSTERING_COLOR,
-		-- 			    },
-		-- 			    {
-		-- 				    material_name = "eye_glow",
-		-- 				    variable_name = "material_variable_21872256_69bf7e2a",
-		-- 				    value = BOLSTER_1_COLOR,
-		-- 			    },
-		-- 		    },
-		-- 	    },
-		--     },
-		--     {
-		-- 	        node_name = "j_righteye",
-		-- 	        vfx = {
-		-- 		        orphaned_policy = "stop",
-		-- 		        particle_effect = "content/fx/particles/enemies/red_glowing_eyes",
-		-- 		        stop_type = "destroy",
-		-- 		        material_variables = {
-		-- 		        {
-		-- 			        material_name = "eye_socket",
-		-- 			        variable_name = "material_variable_21872256",
-		-- 			        value = BOLSTERING_COLOR,
-		-- 			    },
-		-- 			    {
-		-- 			        material_name = "eye_glow",
-		-- 			        variable_name = "trail_color",
-		-- 			        value = BOLSTERING_COLOR,
-		-- 			    },
-		-- 			    {
-		-- 			        material_name = "eye_glow",
-		-- 			        variable_name = "material_variable_21872256_69bf7e2a",
-		-- 				value = BOLSTERING_COLOR,
-		-- 			    },
-		-- 		    },
-		-- 	    },
-		--     },
-		-- },
-		-- material_vector = {
-		-- 		name = "stimmed_color",
-		-- 		value = BOLSTER_1_COLOR,
-		-- 		priority = minion_effects_priorities.mutators,
-		-- 	},
-	    -- }
 
 mod.havoc_enemy_vfx = function(self)
 	mod._original_bolstering_minion_effects = HavocTemplates.havoc_bolstering.minion_effects
@@ -272,93 +183,6 @@ mod.havoc_enemy_vfx = function(self)
         HavocTemplates.havoc_bolstering.minion_effects.material_vector = nil
     else 
         HavocTemplates.havoc_bolstering.minion_effects = mod._original_bolstering_minion_effects
-		-- {
-		-- node_effects_priotity = minion_effects_priorities.mutators,
-		-- stack_material_vectors = {
-		-- 	material_vector = {
-		-- 		name = "stimmed_color",
-		-- 		value = BOLSTER_1_COLOR,
-		-- 		priority = minion_effects_priorities.mutators,
-		-- 	},
-		-- 	material_vector = {
-		-- 		name = "stimmed_color",
-		-- 		value = BOLSTER_2_COLOR,
-		-- 		priority = minion_effects_priorities.mutators,
-		-- 	},
-		-- 	material_vector = {
-		-- 		name = "stimmed_color",
-		-- 		value = BOLSTER_3_COLOR,
-		-- 		priority = minion_effects_priorities.mutators,
-		-- 	},
-		-- 	material_vector = {
-		-- 		name = "stimmed_color",
-		-- 		value = BOLSTER_4_COLOR,
-		-- 		priority = minion_effects_priorities.mutators,
-		-- 	},
-		-- 	material_vector = {
-		-- 		name = "stimmed_color",
-		-- 		value = BOLSTERING_COLOR,
-		-- 		priority = minion_effects_priorities.mutators,
-		-- 	},
-		-- },
-		-- stack_node_effects = {
-		-- 	[5] = {
-		-- 		    node_name = "j_lefteye",
-		-- 		    vfx = {
-		-- 			    orphaned_policy = "stop",
-		-- 			    particle_effect = "content/fx/particles/enemies/red_glowing_eyes",
-		-- 			    stop_type = "destroy",
-		-- 		        material_variables = {
-		-- 			    {
-		-- 				    material_name = "eye_socket",
-		-- 				    variable_name = "material_variable_21872256",
-		-- 				    value = BOLSTERING_COLOR,
-		-- 			    },
-		-- 			    {
-		-- 				    material_name = "eye_glow",
-		-- 				    variable_name = "trail_color",
-		-- 				    value = BOLSTERING_COLOR,
-		-- 			    },
-		-- 			    {
-		-- 				    material_name = "eye_glow",
-		-- 				    variable_name = "material_variable_21872256_69bf7e2a",
-		-- 				    value = BOLSTER_1_COLOR,
-		-- 			    },
-		-- 		    },
-		-- 	    },
-		--     },
-		--     {
-		-- 	        node_name = "j_righteye",
-		-- 	        vfx = {
-		-- 		        orphaned_policy = "stop",
-		-- 		        particle_effect = "content/fx/particles/enemies/red_glowing_eyes",
-		-- 		        stop_type = "destroy",
-		-- 		        material_variables = {
-		-- 		        {
-		-- 			        material_name = "eye_socket",
-		-- 			        variable_name = "material_variable_21872256",
-		-- 			        value = BOLSTERING_COLOR,
-		-- 			    },
-		-- 			    {
-		-- 			        material_name = "eye_glow",
-		-- 			        variable_name = "trail_color",
-		-- 			        value = BOLSTERING_COLOR,
-		-- 			    },
-		-- 			    {
-		-- 			        material_name = "eye_glow",
-		-- 			        variable_name = "material_variable_21872256_69bf7e2a",
-		-- 				value = BOLSTERING_COLOR,
-		-- 			    },
-		-- 		    },
-		-- 	    },
-		--     },
-		-- },
-		-- material_vector = {
-		-- 		name = "stimmed_color",
-		-- 		value = BOLSTER_1_COLOR,
-		-- 		priority = minion_effects_priorities.mutators,
-		-- 	},
-	    -- }
     end
     
     if mod:get("disable_corrupted_enemies_vfx") then
@@ -371,15 +195,6 @@ mod.havoc_enemy_vfx = function(self)
     end
 end
 
--- mod.bolstered_settings = function()
--- 	if HavocTemplates.havoc_bolstering.minion_effects.node_effects_priotity = nil then
--- 		return false
--- 	end
--- 	local old_minion_effects = HavocTemplates.havoc_bolstering.minion_effects
--- 	-- HavocTemplates.havoc_bolstering.minion_effects = nil
--- 	return old_minion_effects
--- end
---  corrupted enemies color
 mod:hook("Unit", "set_vector3_for_materials", function(func, unit, material_name, color, ...)
     if _cached_disable_corrupted_enemies_color then
         if material_name == "stimmed_color" and color then
