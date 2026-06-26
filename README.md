@@ -499,10 +499,10 @@
 
 ### [MissionBrief](https://www.nexusmods.com/warhammer40kdarktide/mods/387)
     預先載入
-- MOD 網站最後更新日期：Last updated 07 June 2026, 9:57AM
-- MOD 版本：1.10
-- MOD 檔案名稱：MissionBrief-387-1-10-1780797460
-- 手動維護最後下載日期：2026-06-07
+- MOD 網站最後更新日期：Last updated 25 June 2026, 9:55AM
+- MOD 版本：1.11
+- MOD 檔案名稱：MissionBrief_1.11_l24cL2nS8
+- 手動維護最後下載日期：2026-06-26
 
 ---
 # 遊戲內操作相關MOD
