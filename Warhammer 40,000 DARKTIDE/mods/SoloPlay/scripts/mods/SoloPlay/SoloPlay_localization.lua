@@ -28,6 +28,9 @@ return {
 		["zh-cn"] = Localize("loc_group_finder_difficulty_auric") .. "%s",
 		["zh-tw"] = Localize("loc_group_finder_difficulty_auric") .. "%s",
 	},
+	format_expedition = {
+		en = Localize("loc_zone_expeditions") .. ": %s",
+	},
 
 	group_keybinds = {
 		en = "Keybinds",
@@ -54,6 +57,11 @@ return {
 		["zh-cn"] = "修改项",
 		ru = "Модификаторы",
 		["zh-tw"] = "修改項",
+	},
+	mission_brief_enabled = {
+		en = "Mission Brief",
+		["zh-cn"] = "任务简报",
+		["zh-tw"] = "任務報告",
 	},
 	friendly_fire_enabled = {
 		en = "Friendly fire",
