@@ -493,10 +493,10 @@
 
 ### [Quick Level Mastery](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
     自動升級裝備(含自動買)
-- MOD 網站最後更新日期：Last updated 23 January 2026, 3:18AM
-- MOD 版本：0.1.1
-- MOD 檔案名稱：Quick Level Mastery-395-0-1-1-1769109536
-- 手動維護最後下載日期：2026-03-21
+- MOD 網站最後更新日期：Last updated 24 June 2026, 5:32AM
+- MOD 版本：0.1.1-hotfix-1
+- MOD 檔案名稱：Quick_Level_Mastery_0.1.1-hotfix-1_iYOupYqSQ
+- 手動維護最後下載日期：2026-06-26
 
 ### [I Wanna See](https://www.nexusmods.com/warhammer40kdarktide/mods/371)
     修改火焰特效的顯示方式
