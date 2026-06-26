@@ -689,13 +689,6 @@
 - MOD 檔案名稱：Creature Spawner-25-25-10-29-1761776237
 - 手動維護最後下載日期：2025-12-06
 
-### [HoldFire](https://www.nexusmods.com/warhammer40kdarktide/mods/797)
-    火力管控 - 防止無效開火
-- MOD 網站最後更新日期：Last updated 07 May 2026, 3:08PM
-- MOD 版本：1.1.4
-- MOD 檔案名稱：HoldFire-797-1-1-4-1778137707
-- 手動維護最後下載日期：2026-05-17
-
 ### [Radar](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
     遠征模式的小弟圖
 - MOD 網站最後更新日期：Last updated 25 June 2026, 2:17AM
@@ -853,3 +846,11 @@
 - MOD 檔案名稱：Dog Whistle 1.0.8-539-1-0-8-1764779496
 - 手動維護最後下載日期：2025-12-06
 - 移除原因：AutoMark取代此MOD，該MOD不用準心對到怪
+
+### [HoldFire](https://www.nexusmods.com/warhammer40kdarktide/mods/797)
+    火力管控 - 防止無效開火
+- MOD 網站最後更新日期：Last updated 07 May 2026, 3:08PM
+- MOD 版本：1.1.4
+- MOD 檔案名稱：HoldFire-797-1-1-4-1778137707
+- 手動維護最後下載日期：2026-05-17
+- 移除原因：作者停止維護，且某些情境下對電將槍造成阻礙。
