@@ -127,10 +127,10 @@
 
 ### [Stimms Pickup Icon](https://www.nexusmods.com/warhammer40kdarktide/mods/265)
     強化針顯示改善，讓你可以清楚知道隊友目前的針是甚麼
-- MOD 網站最後更新日期：Last updated 07 December 2025, 1:30AM
-- MOD 版本：1.4.0
-- MOD 檔案名稱：StimmsPickupIcon-265-1-4-0-1765042230
-- 手動維護最後下載日期：2025-12-07
+- MOD 網站最後更新日期：Last updated 21 June 2026, 12:55AM
+- MOD 版本：1.5.1
+- MOD 檔案名稱：StimmsPickupIcon
+- 手動維護最後下載日期：2026-06-26
 
 
 ---
