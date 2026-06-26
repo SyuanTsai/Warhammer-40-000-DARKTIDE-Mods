@@ -2,10 +2,10 @@
 
 local mod = get_mod("Enhanced_descriptions")
 
--- USING CACHED UTILITIES - ИСПОЛЬЗУЕМ КЭШИРОВАННЫЕ УТИЛИТЫ
+-- Using cached utilities - Используем кэшированные утилиты
 local Utils = mod.get_utils()
 
--- IMPORTING ALL NECESSARY FUNCTIONS AND CONSTANTS - ИМПОРТ ВСЕХ НУЖНЫХ ФУНКЦИЙ И КОНСТАНТ
+-- Importing all necessary functions and constants - Импорт всех нужных функций и констант
 local create_template = Utils.create_template
 local loc_text = Utils.loc_text
 local CKWord = Utils.CKWord
@@ -477,33 +477,33 @@ local weapon_localizations = {
 
 --[+ ++WEAPON BLESSINGS - БЛАГОСЛОВЕНИЯ ОРУЖИЯ - 武器祝福++ +]--
 	--[+ MELEE - БЛИЖНИЙ БОЙ - 近戰 +]--
-		--[+ OPPORTUNIST +]-- ruof Приспособленец	20.04.2026
+		--[+ OPPORTUNIST +]-- ruof Приспособленец	09.06.2026
 		--Rending vs Staggered (per tier)
 		-- Battle Maul and Shield, Chainaxes, Crowbar, Crusher, Eviscerators, Latrine Shovels, Power Maul, Shock Mauls, Shock Mauls and Shield -- 10% | 15% | 20% | 25%
-		["loc_trait_bespoke_armor_penetration_against_staggered_desc"] = { -- rending: +25%, +colors, +note
-			en = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Rending", "Rending_rgb").." vs "..CKWord("Staggered", "Staggered_rgb").." Enemies.\n"
+		["loc_trait_bespoke_melee_rending_vs_staggered_desc"] = { -- rending: +25%, +colors, +note
+			en = CNumb("{rending:%s}", "rending_var_rgb").." Melee "..CKWord("Rending", "Rending_rgb").." vs "..CKWord("Staggered", "Staggered_rgb").." Enemies.\n"
 				..CNote("Rend_note"),
-			ru = CNumb("{rending:%s}", "rending_var_rgb").." к "..CKWord("пробиванию", "probivaniu_rgb_ru").." брони "..CKWord("ошеломлённых", "oshelomlennyh_rgb_ru").." врагов.\n"
+			ru = CNumb("{rending:%s}", "rending_var_rgb").." к "..CKWord("пробиванию", "probivaniu_rgb_ru").." брони "..CKWord("ошеломлённых", "oshelomlennyh_rgb_ru").." врагов в ближнем бою.\n"
 				..CNote("Rend_note"), -- Оппортунист
-			fr = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Déchirure", "Rending_rgb_fr").." vs les Ennemis "..CKWord("Étourdies", "Staggered_rgb_fr")..".\n"
+			fr = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Déchirure", "Rending_rgb_fr").." de mêlée contre les ennemis "..CKWord("Étourdies", "Staggered_rgb_fr")..".\n"
 				..CNote("Rend_note"),
-			["zh-tw"] = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("撕裂", "Rending_rgb_tw").." vs "..CKWord("硬直中", "Staggered_rgb_tw").." 的敵人。\n"
+			["zh-tw"] = CNumb("{rending:%s}", "rending_var_rgb").." 近戰"..CKWord("撕裂", "Rending_rgb_tw").." vs "..CKWord("硬直中", "Staggered_rgb_tw").." 的敵人。\n"
 				..CNote("Rend_note"),
-			["zh-cn"] = "对抗"..CKWord("踉跄", "Staggered_rgb_zh_cn").."敌人时 "..CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("撕裂", "Rending_rgb_zh_cn").."。\n"
+			["zh-cn"] = "对抗"..CKWord("踉跄", "Staggered_rgb_zh_cn").."敌人时，"..CNumb("{rending:%s}", "rending_var_rgb").." 近战"..CKWord("撕裂", "Rending_rgb_zh_cn").."。\n"
 				..CNote("Rend_note"),
-			de = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Durchschlag", "Rending_rgb_de").." vs "..CKWord("Getaumelt", "Staggered_rgb_de").." Gegner.\n"
+			de = CNumb("{rending:%s}", "rending_var_rgb").." Nahkampf-"..CKWord("Durchschlag", "Rending_rgb_de").." vs "..CKWord("Getaumelt", "Staggered_rgb_de").." Gegner.\n"
 				..CNote("Rend_note"),
-			es = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Penetración", "Rending_rgb_es").." contra Enemigos "..CKWord("Tambaleantes", "Staggered_rgb_es")..".\n"
+			es = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Penetración", "Rending_rgb_es").." cuerpo a cuerpo contra enemigos "..CKWord("Tambaleantes", "Staggered_rgb_es")..".\n"
 				..CNote("Rend_note"),
-			it = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Penetrazione", "Rending_rgb_it").." contro Nemici "..CKWord("Barcollanti", "Staggered_rgb_it")..".\n"
+			it = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Penetrazione", "Rending_rgb_it").." corpo a corpo contro nemici "..CKWord("Barcollanti", "Staggered_rgb_it")..".\n"
 				..CNote("Rend_note"),
-			ja = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("貫通", "Rending_rgb_ja").." vs "..CKWord("スタッガー状態", "Staggered_rgb_ja").." の敵。\n"
+			ja = CNumb("{rending:%s}", "rending_var_rgb").." 近接"..CKWord("貫通", "Rending_rgb_ja").." vs "..CKWord("スタッガー状態", "Staggered_rgb_ja").." の敵。\n"
 				..CNote("Rend_note"),
-			ko = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("관통", "Rending_rgb_ko").." vs "..CKWord("스태거 상태", "Staggered_rgb_ko").." 적.\n"
+			ko = CNumb("{rending:%s}", "rending_var_rgb").." 근접 "..CKWord("관통", "Rending_rgb_ko").." vs "..CKWord("스태거 상태", "Staggered_rgb_ko").." 적.\n"
 				..CNote("Rend_note"),
-			pl = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Rozrywanie", "Rending_rgb_pl").." przeciwko "..CKWord("Oślepionym", "Staggered_rgb_pl").." wrogom.\n"
+			pl = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Rozrywanie", "Rending_rgb_pl").." w walce wręcz przeciwko "..CKWord("Oślepionym", "Staggered_rgb_pl").." wrogom.\n"
 				..CNote("Rend_note"),
-			["pt-br"] = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Penetração", "Rending_rgb_pt_br").." contra Inimigos "..CKWord("Cambaleantes", "Staggered_rgb_pt_br")..".\n"
+			["pt-br"] = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Penetração", "Rending_rgb_pt_br").." corpo a corpo contra inimigos "..CKWord("Cambaleantes", "Staggered_rgb_pt_br")..".\n"
 				..CNote("Rend_note"),
 		},
 		--[+ BLOODLETTER +]-- ruof Кровопускание	20.04.2026
@@ -1257,25 +1257,25 @@ local weapon_localizations = {
 			["pt-br"] = CNumb("{crit_damage:%s}", "critdmg_var_rgb").." "..CKWord("Dano de golpe crítico", "Crt_strk_dmg_rgb_pt_br").." Corpo a Corpo. "..CKWord("Acertos Críticos", "Crit_hits_rgb_pt_br").." ignoram o bônus de "..CKWord("Massa de Impacto", "Hit_mass_rgb_pt_br").." da armadura.",
 			es = CNumb("{crit_damage:%s}", "critdmg_var_rgb").." "..CKWord("Daño de golpe crítico", "Crt_strk_dmg_rgb_es").." Cuerpo a Cuerpo. Los "..CKWord("Golpes Críticos", "Crit_hits_rgb_es").." ignoran el bono de "..CKWord("Masa de Golpe", "Hit_mass_rgb_es").." de la armadura.",
 		},
-		--[+ BLADED MOMENTUM +]-- ruof Моментум лезвия	07.04.2026
+		--[+ BLADED MOMENTUM +]-- ruof Моментум лезвия	09.06.2026
 		-- Rending per stack (per tier)
 		-- Heavy Swords -- 5% & 2.5s | 6% & 3s | 7% & 3.5s | 8% & 4s (up to +32%)
-		["loc_trait_bespoke_stacking_rending_on_cleave_desc"] = { -- rending: +8%, time: 4, stacks: 4, +colors, +note
-			en = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Rending", "Rending_rgb").." for "..CNumb("{time:%s}", "time_var_rgb").." seconds when hitting "..CNumb("2", "n_2_rgb").." or more enemies with a melee attack. Stacks "..CNumb("{stacks:%s}", "stacks_var_rgb").." times. "
+		["loc_trait_bespoke_stacking_melee_rending_on_cleave_desc"] = { -- rending: +8%, time: 4, stacks: 4, +colors, +note
+			en = CNumb("{rending:%s}", "rending_var_rgb").." Melee "..CKWord("Rending", "Rending_rgb").." for "..CNumb("{time:%s}", "time_var_rgb").." seconds when hitting "..CNumb("2", "n_2_rgb").." or more enemies with a Melee attack. Stacks "..CNumb("{stacks:%s}", "stacks_var_rgb").." times. "
 				..CPhrs("Can_be_refr")..CNote("Rend_note"),
-			ru = CNumb("{rending:%s}", "rending_var_rgb").." к "..CKWord("пробиванию", "probivaniu_rgb_ru").." брони на "..CNumb("{time:%s}", "time_var_rgb").." секунды при ударе по "..CNumb("2", "n_2_rgb").." или более врагам за раз. Суммируется "..CNumb("{stacks:%s}", "stacks_var_rgb").." раз.\n"
+			ru = CNumb("{rending:%s}", "rending_var_rgb").." к "..CKWord("пробиванию", "probivaniu_rgb_ru").." брони в ближнем бою на "..CNumb("{time:%s}", "time_var_rgb").." секунды при ударе по "..CNumb("2", "n_2_rgb").." или более врагам за раз. Суммируется "..CNumb("{stacks:%s}", "stacks_var_rgb").." раз.\n"
 				..CPhrs("Can_be_refr").."\n"
 				..CNote("Rend_note"), -- Инерция клинка
-			fr = CNumb("{rending:%s}", "rending_var_rgb").." de "..CKWord("Déchirure", "Rending_rgb_fr").." pendant "..CNumb("{time:%s}", "time_var_rgb").." secondes lors d'un coup en mélée multiple. Se cumule "..CNumb("{stacks:%s}", "stacks_var_rgb").." fois."..CNote("Rend_note"),
-			["zh-tw"] = "在一次攻擊命中多名敵人 "..CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("撕裂", "Rending_rgb_tw").." ，\n持續 "..CNumb("{time:%s}", "time_var_rgb").." 秒，上限 "..CNumb("{stacks:%s}", "stacks_var_rgb").." 層。" .. CNote("Rend_note"),
-			["zh-cn"] = "命中多名敌人时"..CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("撕裂", "Rending_rgb_zh_cn").."，\n持续 "..CNumb("{time:%s}", "time_var_rgb").." 秒。最多叠加 "..CNumb("{stacks:%s}", "stacks_var_rgb").." 层。"..CNote("Rend_note"),
-			de = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Durchschlag", "Rending_rgb_de").." für "..CNumb("{time:%s}", "time_var_rgb").." Sekunden, wenn mit einem Nahkampfangriff mindestens "..CNumb("2", "n_2_rgb").." Gegner getroffen werden. Stapelt "..CNumb("{stacks:%s}", "stacks_var_rgb").." Mal."..CNote("Rend_note"),
-			it = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Penetrazione", "Rending_rgb_it").." per "..CNumb("{time:%s}", "time_var_rgb").." secondi colpendo almeno "..CNumb("2", "n_2_rgb").." nemici con un attacco in Corpo a Corpo. Cumulabile "..CNumb("{stacks:%s}", "stacks_var_rgb").." volte."..CNote("Rend_note"),
-			ja = "一度の攻撃で "..CNumb("2", "n_2_rgb").." 体以上の敵に命中すると、"..CNumb("{time:%s}", "time_var_rgb").."秒間"..CKWord("貫通", "Rending_rgb_ja").."が "..CNumb("{rending:%s}", "rending_var_rgb").." 増加。最大 "..CNumb("{stacks:%s}", "stacks_var_rgb").." 回スタック。"..CNote("Rend_note"),
-			ko = "한 번의 공격으로 "..CNumb("2", "n_2_rgb").."명 이상의 적을 적중시키면 "..CNumb("{time:%s}", "time_var_rgb").."초 동안 "..CKWord("관통", "Rending_rgb_ko").."이 "..CNumb("{rending:%s}", "rending_var_rgb").." 증가합니다. 최대 "..CNumb("{stacks:%s}", "stacks_var_rgb").."회 중첩."..CNote("Rend_note"),
-			pl = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Rozrywanie", "Rending_rgb_pl").." na "..CNumb("{time:%s}", "time_var_rgb").." sek. przy trafieniu co najmniej "..CNumb("2", "n_2_rgb").." wrogów jednym atakiem. Kumuluje się "..CNumb("{stacks:%s}", "stacks_var_rgb").." razy."..CNote("Rend_note"),
-			["pt-br"] = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Penetração", "Rending_rgb_pt_br").." por "..CNumb("{time:%s}", "time_var_rgb").." segundos ao atingir "..CNumb("2", "n_2_rgb").." ou mais inimigos com um ataque Corpo a Corpo. Acumula "..CNumb("{stacks:%s}", "stacks_var_rgb").." vezes."..CNote("Rend_note"),
-			es = CNumb("{rending:%s}", "rending_var_rgb").." "..CKWord("Penetración", "Rending_rgb_es").." durante "..CNumb("{time:%s}", "time_var_rgb").." segundos al golpear a "..CNumb("2", "n_2_rgb").." o más enemigos con un ataque Cuerpo a Cuerpo. Se acumula "..CNumb("{stacks:%s}", "stacks_var_rgb").." veces."..CNote("Rend_note"),
+			fr = CNumb("{rending:%s}", "rending_var_rgb").." de mêlée "..CKWord("Déchirure", "Rending_rgb_fr").." pendant "..CNumb("{time:%s}", "time_var_rgb").." secondes lors d'un coup en mélée multiple. Se cumule "..CNumb("{stacks:%s}", "stacks_var_rgb").." fois. "..CNote("Rend_note"),
+			["zh-tw"] = "在一次攻擊命中多名敵人 "..CNumb("{rending:%s}", "rending_var_rgb").."近戰"..CKWord("撕裂", "Rending_rgb_tw").." ，\n持續 "..CNumb("{time:%s}", "time_var_rgb").." 秒，上限 "..CNumb("{stacks:%s}", "stacks_var_rgb").." 層。 " .. CNote("Rend_note"),
+			["zh-cn"] = "命中多名敌人时"..CNumb("{rending:%s}", "rending_var_rgb").."近战"..CKWord("撕裂", "Rending_rgb_zh_cn").."，\n持续 "..CNumb("{time:%s}", "time_var_rgb").." 秒。最多叠加 "..CNumb("{stacks:%s}", "stacks_var_rgb").." 层。 "..CNote("Rend_note"),
+			de = CNumb("{rending:%s}", "rending_var_rgb").." Nahkampf "..CKWord("Durchschlag", "Rending_rgb_de").." für "..CNumb("{time:%s}", "time_var_rgb").." Sekunden, wenn mit einem Nahkampfangriff mindestens "..CNumb("2", "n_2_rgb").." Gegner getroffen werden. Stapelt "..CNumb("{stacks:%s}", "stacks_var_rgb").." Mal. "..CNote("Rend_note"),
+			it = CNumb("{rending:%s}", "rending_var_rgb").." corpo a corpo "..CKWord("Penetrazione", "Rending_rgb_it").." per "..CNumb("{time:%s}", "time_var_rgb").." secondi colpendo almeno "..CNumb("2", "n_2_rgb").." nemici con un attacco in Corpo a Corpo. Cumulabile "..CNumb("{stacks:%s}", "stacks_var_rgb").." volte. "..CNote("Rend_note"),
+			ja = "一度の攻撃で "..CNumb("2", "n_2_rgb").." 体以上の敵に命中すると、"..CNumb("{time:%s}", "time_var_rgb").."秒間".."近接"..CKWord("貫通", "Rending_rgb_ja").."が "..CNumb("{rending:%s}", "rending_var_rgb").." 増加。最大 "..CNumb("{stacks:%s}", "stacks_var_rgb").." 回スタック。 "..CNote("Rend_note"),
+			ko = "한 번의 공격으로 "..CNumb("2", "n_2_rgb").."명 이상의 적을 적중시키면 "..CNumb("{time:%s}", "time_var_rgb").."초 동안 ".."근접"..CKWord("관통", "Rending_rgb_ko").."이 "..CNumb("{rending:%s}", "rending_var_rgb").." 증가합니다. 최대 "..CNumb("{stacks:%s}", "stacks_var_rgb").."회 중첩. "..CNote("Rend_note"),
+			pl = CNumb("{rending:%s}", "rending_var_rgb").." w walce wręcz "..CKWord("Rozrywanie", "Rending_rgb_pl").." na "..CNumb("{time:%s}", "time_var_rgb").." sek. przy trafieniu co najmniej "..CNumb("2", "n_2_rgb").." wrogów jednym atakiem. Kumuluje się "..CNumb("{stacks:%s}", "stacks_var_rgb").." razy. "..CNote("Rend_note"),
+			["pt-br"] = CNumb("{rending:%s}", "rending_var_rgb").." corpo a corpo "..CKWord("Penetração", "Rending_rgb_pt_br").." por "..CNumb("{time:%s}", "time_var_rgb").." segundos ao atingir "..CNumb("2", "n_2_rgb").." ou mais inimigos com um ataque Corpo a Corpo. Acumula "..CNumb("{stacks:%s}", "stacks_var_rgb").." vezes. "..CNote("Rend_note"),
+			es = CNumb("{rending:%s}", "rending_var_rgb").." cuerpo a cuerpo "..CKWord("Penetración", "Rending_rgb_es").." durante "..CNumb("{time:%s}", "time_var_rgb").." segundos al golpear a "..CNumb("2", "n_2_rgb").." o más enemigos con un ataque Cuerpo a Cuerpo. Se acumula "..CNumb("{stacks:%s}", "stacks_var_rgb").." veces. "..CNote("Rend_note"),
 		},
 		--[+ DEFLECTOR +]-- ruof Отражатель	07.04.2026
 		-- Block Cost Reduction (per tier)

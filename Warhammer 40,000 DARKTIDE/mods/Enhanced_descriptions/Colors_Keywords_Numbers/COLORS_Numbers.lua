@@ -264,6 +264,8 @@ local CONFIG = {
 	},
 
 	PERCENTAGES = {
+		pc_0_5 =	"0.5%",
+
 		pc_1 =		"1%",
 
 		pc_2 =		"2%",

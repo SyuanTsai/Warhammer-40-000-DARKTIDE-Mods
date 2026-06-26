@@ -2,8 +2,11 @@
 -- HIVE SCUM TALENT MODULE -- МОДУЛЬ ТАЛАНТОВ ОТРЕБЬЯ УЛЬЯ
 
 local mod = get_mod("Enhanced_descriptions")
+
+-- Using cached utilities - Используем кэшированные утилиты
 local Utils = mod.get_utils()
 
+-- Importing all necessary functions and constants - Импорт всех нужных функций и констант
 local create_template = Utils.create_template
 local loc_text = Utils.loc_text
 local CKWord = Utils.CKWord
@@ -14,7 +17,7 @@ local Dot_nc = Utils.DOT_NC or "•"
 local Dot_red = Utils.DOT_RED or "•"
 local Dot_green = Utils.DOT_GREEN or "•"
 
--- LOCALIZATION OF HIVE SCUM TALENTS -- ЛОКАЛИЗАЦИИ ТАЛАНТОВ ОТРЕБЬЯ УЛЬЯ
+-- Localization of hive Scum talents -- Локализации талантов отребья улья
 local scum_localizations = {
 --[+ ++HIVE SCUM - ОТРЕБЬЕ УЛЬЯ++ +]--
 --[+ +BLITZ - БЛИЦ+ +]--
@@ -1326,7 +1329,7 @@ local scum_localizations = {
 		},
 }
 
--- CREATING TEMPLATES -- СОЗДАЁМ ШАБЛОНЫ
+-- Creating templates -- Создаём шаблоны
 local scum_templates = {}
 
 for loc_key, locales in pairs(scum_localizations) do
