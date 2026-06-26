@@ -14,6 +14,26 @@ local localizations = {
         ["zh-tw"] = "為某些特殊單位的音效提供彩色的方向弧形指示器。",
         ru = "Spidey Sense - Добавляет цветной дуговой индикатор, показывающий направление звуковых сигналов для определённых врагов.",
     },
+    arc_side = {
+        en = "Show Arcs On Side",
+        ["zh-tw"] = "在側面顯示弧形",
+    },
+    arc_side_tooltip = {
+        en = "Limit directional arcs to threats on one side of you. Both shows every arc (default); Left shows only arcs for threats to your left; Right shows only arcs for threats to your right. Threats directly ahead or behind still show on either side.",
+        ["zh-tw"] = "將方向弧形限制為你一側的威脅。兩側顯示所有弧形（預設）；左側僅顯示你左側威脅的弧形；右側僅顯示你右側威脅的弧形。直接在前方或後方的威脅仍然會在任一側顯示。",
+    },
+    arc_side_both = {
+        en = "Both",
+        ["zh-tw"] = "兩側",
+    },
+    arc_side_left = {
+        en = "Left",
+        ["zh-tw"] = "左側",
+    },
+    arc_side_right = {
+        en = "Right",
+        ["zh-tw"] = "右側",
+    },
     invalid_colour_setting = {
         en = " has an invalid color. Please update the arc or text settings",
         ["zh-cn"] = "颜色设置无效，请更新圆弧或文字设置",
@@ -521,7 +541,7 @@ local localizations = {
     proxima_nova_light = {en = "Proxima Nova Light"},
     proxima_nova_medium = {en = "Proxima Nova Medium"},
     proxima_nova_bold = {en = "Proxima Nova Bold"},
-    friz_quadrata = {en = "Fritz Quadrata"}, -- this is also default Russian font
+    friz_quadrata = {en = "Fritz Quadrata"},
     rexlia = {en = "Rexila"},
     machine_medium = {en = "Machine Medium"},
     noto_sans_sc_black = {["zh-cn"] = "Noto Sans SC Black"},
@@ -687,7 +707,6 @@ addLocalisation(localizations, "sniper")
 addLocalisation(localizations, "trapper")
 addLocalisation(localizations, "toxbomber")
 
--- Text warning display names
 localizations.text_warning_crusher_cleave = {
     en = "Crusher (Cleave)",
     ["zh-cn"] = "粉碎者（横扫）",

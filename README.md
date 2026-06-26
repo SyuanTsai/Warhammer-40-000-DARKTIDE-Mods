@@ -211,10 +211,10 @@
 
 ### [Spidey Sense](https://www.nexusmods.com/warhammer40kdarktide/mods/268)
     蜘蛛感應 - 畫面顯示特定敵人位置
-- MOD 網站最後更新日期：Last updated 17 May 2026, 2:03PM
-- MOD 版本：v7.1
-- MOD 檔案名稱：Spidey Sense.zip-268-v7-1-1778997806
-- 手動維護最後下載日期：2026-05-17
+- MOD 網站最後更新日期：Last updated 21 June 2026, 1:54PM
+- MOD 版本：v7.3
+- MOD 檔案名稱：Spidey Sense.zip-268-v7-3-1782021284
+- 手動維護最後下載日期：2026-06-26
 - GitHub :
 - Source=>  https://github.com/Wobin/SpideySense
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mod-SpideySense
