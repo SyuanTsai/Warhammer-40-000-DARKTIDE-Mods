@@ -117,7 +117,7 @@ local localization = {
     companion_cancel_mark_human_description = {
         en = "Enable for human-sized enemies that can be pounced by your Cyber-Mastiff.",
         ["zh-cn"] = "在人类体型的敌人上启用，这些敌人可以被你的智能獒犬扑倒。",
-        ["zh-tw"] = "在可被你的電子獒犬撲倒的人型敵人上啟用。",
+        ["zh-tw"] = "對可被你的電子獒犬撲倒的人型敵人啟用。",
     },
     companion_cancel_mark_non_human = {
         en = "Non-Human",
@@ -127,7 +127,7 @@ local localization = {
     companion_cancel_mark_non_human_description = {
         en = "Enable for non-human-sized enemies that cannot be pounced by your Cyber-Mastiff.",
         ["zh-cn"] = "在非人类体型的敌人上启用，这些敌人不能被你的智能獒犬扑倒。",
-        ["zh-tw"] = "在無法被你的電子獒犬撲倒的非人型敵人上啟用。",
+        ["zh-tw"] = "對無法被你的電子獒犬撲倒的非人型敵人啟用。",
     },
     companion_health_threshold = {
         en = "Health Threshold",
@@ -142,7 +142,7 @@ local localization = {
         ["zh-cn"] = "当你的智能獒犬的攻击目标的血量低于你所选的百分比时，取消该目标的智能獒犬标记。\n" ..
             "设置为" .. highlight("0") .. "禁用。\n" ..
             "对" .. highlight("手动") .. "标记无效。",
-        ["zh-tw"] = "當你的電子獒犬目前攻擊目標的生命值低於你設定的百分比時，取消該目標的電子獒犬標記。\n" ..
+        ["zh-tw"] = "目前攻擊目標的生命值低於設定百分比時，取消電子獒犬標記。\n" ..
             "設為" .. highlight("0") .. "可停用。\n" ..
             "不影響" .. highlight("手動") .. "標記。",
     },
@@ -159,7 +159,7 @@ local localization = {
         ["zh-cn"] = "当你的智能獒犬攻击当前目标的持续时间超过你所选的时长（单位：秒）时，取消该目标的智能獒犬标记。\n" ..
             "设置为" .. highlight("0") .. "禁用。\n" ..
             "对" .. highlight("手动") .. "标记无效。",
-        ["zh-tw"] = "當你的電子獒犬攻擊目前目標的時間超過你設定的持續秒數時，取消該目標的電子獒犬標記。\n" ..
+        ["zh-tw"] = "當你的電子獒犬攻擊目前目標超過設定秒數時，取消該目標的電子獒犬標記。\n" ..
             "設為" .. highlight("0") .. "可停用。\n" ..
             "不影響" .. highlight("手動") .. "標記。",
     },
@@ -167,12 +167,12 @@ local localization = {
     cryptic_settings = {
         en = "Skitarii Settings",
         ["zh-cn"] = "护教军设置",
-        ["zh-tw"] = "機僕軍設定",
+        ["zh-tw"] = "護教軍設定",
     },
     servo_skull_mark_keybind = {
         en = "Servo-Skull Mark Keybind",
         ["zh-cn"] = "伺服颅骨标记按键",
-        ["zh-tw"] = "伺服顱骨標記按鍵",
+        ["zh-tw"] = "伺服頭骨標記按鍵",
     },
     servo_skull_mark_keybind_description = {
         en =
@@ -184,7 +184,7 @@ local localization = {
             "当" .. highlight("伙伴目标标记") ..
             "设置为" .. highlight("按一次") ..
             "时，此功能变为普通敌人标记。",
-        ["zh-tw"] = "伺服顱骨標記專用按鍵。身為機僕軍，你現在可同時使用一般敵人標記與伺服顱骨標記。\n" ..
+        ["zh-tw"] = "伺服頭骨標記專用按鍵。身為護教軍，你現在可同時使用一般敵人標記與伺服頭骨標記。\n" ..
             "當" .. highlight("夥伴目標標記") ..
             "設為" .. highlight("按一下") ..
             "時，此功能會變為一般敵人標記。",
@@ -192,7 +192,7 @@ local localization = {
     hack_mark_keybind = {
         en = "Servo-Skull Data Interrogation Keybind",
         ["zh-cn"] = "伺服颅骨数据查询按键",
-        ["zh-tw"] = "伺服顱骨資料審訊按鍵",
+        ["zh-tw"] = "伺服頭骨資料審訊按鍵",
     },
     capacitance_retention = {
         en = "Capacitance Retention",
@@ -202,7 +202,7 @@ local localization = {
     capacitance_retention_description = {
         en = "While the Noospheric Command talent is active, all Servo-Skull auto-marking features (including Noospheric Command Boost) will be disabled when remaining capacitance falls below the selected threshold. Remaining capacitance is calculated as ability charge count plus current capacitance percentage.",
         ["zh-cn"] = "当装备星语指令天赋时，如果剩余电容小于所选数值，禁用伺服颅骨相关的自动标记功能，包括星语指令增强。剩余电容等于技能充能次数+当前电容百分比。",
-        ["zh-tw"] = "當啟用 Noospheric Command 天賦時，若剩餘電容量低於所選門檻，將停用所有伺服顱骨自動標記功能（包含 Noospheric Command Boost）。剩餘電容量 = 技能充能次數 + 當前電容量百分比。",
+        ["zh-tw"] = "當啟用心智網指令時，若剩餘電容量低於所選門檻，將停用所有伺服頭骨自動標記功能（包含心智網指令強化）。剩餘電容量 = 技能充能次數 + 當前電容量百分比。",
     },
     capacitance_retention_elite_threshold = {
         en = "Elite",
@@ -212,7 +212,7 @@ local localization = {
     capacitance_retention_elite_threshold_description = {
         en = "Set Capacitance Retention Threshold for elites.",
         ["zh-cn"] = "为精英敌人设置电容保留阈值。",
-        ["zh-tw"] = "設定精英敵人的電容量保留門檻。",
+        ["zh-tw"] = "設定精英敵人的電容保留門檻。",
     },
     capacitance_retention_special_threshold = {
         en = "Specialist",
@@ -242,17 +242,17 @@ local localization = {
     capacitance_retention_breed_threshold_description = {
         en = "Set Capacitance Retention Threshold for this enemy.",
         ["zh-cn"] = "为所选敌人设置电容保留阈值。",
-        ["zh-tw"] = "設定此敵人的電容量保留門檻。",
+        ["zh-tw"] = "設定此敵人的電容保留門檻。",
     },
     noospheric_command_boost = {
         en = "Noospheric Command Boost",
         ["zh-cn"] = "星语指令增强",
-        ["zh-tw"] = "Noospheric Command 強化",
+        ["zh-tw"] = "心智網指令強化",
     },
     noospheric_command_boost_description = {
         en = "Automatically re-marks marked targets to extend the Noospheric Command effect. Re-marking occurs at intervals equal to the effect's duration, and only triggers when the target is within the Servo-Skull's line of sight.",
         ["zh-cn"] = "自动对已标记目标进行重复标记，以延长星语指令的效果。重复标记间隔为星语指令的持续时间，只有当目标在伺服颅骨视野内时才会进行标记。",
-        ["zh-tw"] = "自動重新標記已標記目標，以延長 Noospheric Command 效果。重新標記間隔等同於效果持續時間，且僅在目標位於伺服顱骨視線內時觸發。",
+        ["zh-tw"] = "自動重新標記已標記目標，以延長心智網指令效果。重新標記間隔等同於效果持續時間，且僅在目標位於伺服頭骨視線內時觸發。",
     },
     noospheric_command_boost_elite = {
         en = "Elite",
@@ -262,7 +262,7 @@ local localization = {
     noospheric_command_boost_elite_description = {
         en = "Enable Noospheric Command Boost for elites.",
         ["zh-cn"] = "为精英敌人启用星语指令增强",
-        ["zh-tw"] = "為精英敵人啟用 Noospheric Command 強化。",
+        ["zh-tw"] = "為精英敵人啟用心智網指令強化。",
     },
     noospheric_command_boost_special = {
         en = "Specialist",
@@ -272,7 +272,7 @@ local localization = {
     noospheric_command_boost_special_description = {
         en = "Enable Noospheric Command Boost for specialists.",
         ["zh-cn"] = "为专家敌人启用星语指令增强",
-        ["zh-tw"] = "為專家敵人啟用 Noospheric Command 強化。",
+        ["zh-tw"] = "為專家敵人啟用心智網指令強化。",
     },
     noospheric_command_boost_boss = {
         en = "Boss",
@@ -282,7 +282,7 @@ local localization = {
     noospheric_command_boost_boss_description = {
         en = "Enable Noospheric Command Boost for bosses.",
         ["zh-cn"] = "为Boss启用星语指令增强",
-        ["zh-tw"] = "為Boss啟用 Noospheric Command 強化。",
+        ["zh-tw"] = "為Boss啟用心智網指令強化。",
     },
     noospheric_command_boost_breed_name = {
         en = "Selected Enemy",
@@ -292,7 +292,7 @@ local localization = {
     noospheric_command_boost_breed_name_description = {
         en = "Select an enemy to configure its individual settings, which override the settings above, except for the master toggle.",
         ["zh-cn"] = "选择一种敌人，为其配置其独立的设置，这些设置将覆盖上方的设置，除了总开关。",
-        ["zh-tw"] = "選擇一種敵人以設定其個別選項。除了總開關外，個別設定會覆蓋上方的一般設定。",
+        ["zh-tw"] = "選擇一種敵人以設定其個別設定。除了總開關外，個別設定會覆蓋上方的一般設定。",
     },
     noospheric_command_boost_reset = {
         en = "Reset to Defaults",
@@ -317,12 +317,12 @@ local localization = {
     noospheric_command_boost_breed_toggle = {
         en = "Toggle Boost",
         ["zh-cn"] = "星语指令增强",
-        ["zh-tw"] = "強化開關",
+        ["zh-tw"] = "心智網指令強化開關",
     },
     noospheric_command_boost_breed_toggle_description = {
         en = "Enable/Disable Noospheric Command Boost for this enemy.",
         ["zh-cn"] = "为这种敌人启用/禁用星语指令增强。",
-        ["zh-tw"] = "為此敵人啟用/停用 Noospheric Command 強化。",
+        ["zh-tw"] = "為此敵人啟用/停用心智網指令強化。",
     },
     -- veteran settings
     veteran_settings = {
@@ -333,7 +333,7 @@ local localization = {
     focus_target_overwrite = {
         en = "Focus Target Overwrite",
         ["zh-cn"] = "聚焦目标覆盖",
-        ["zh-tw"] = "聚焦目標覆蓋",
+        ["zh-tw"] = "專注目標覆蓋",
     },
     focus_target_overwrite_description = {
         en = string.format(
@@ -348,14 +348,14 @@ local localization = {
             "：当玩家自身聚焦目标层数高于敌人已被施加的层数，且层数差大于等于下方选项「聚焦目标覆盖最小层数差」或自身层数已满时，将重新施加聚焦目标标记。"),
         ["zh-tw"] = string.format(
             highlight("關閉") ..
-            "：已被聚焦目標標記的敵人，不會再次被標記。\n" ..
+            "：已被專注目標標記的敵人，不會再次被標記。\n" ..
             highlight("開啟") ..
-            "：當玩家自身聚焦目標層數高於敵人已被施加的層數，且層數差大於等於下方選項「聚焦目標覆蓋最小層數差」或自身層數已滿時，將重新施加聚焦目標標記。"),
+            "：當玩家自身專注目標層數高於敵人已被施加的層數，且層數差大於等於下方選項「專注目標覆蓋最小層數差」或自身層數已滿時，將重新施加專注目標標記。"),
     },
     focus_target_overwrite_delta = {
         en = "Focus Target Overwrite Delta",
         ["zh-cn"] = "聚焦目标覆盖最小层数差",
-        ["zh-tw"] = "聚焦目標覆蓋最小層數差",
+        ["zh-tw"] = "專注目標覆蓋最小層數差",
     },
     focus_target_switch = {
         en = "Switch Target on Attack",
@@ -365,7 +365,7 @@ local localization = {
     focus_target_switch_description = {
         en = "When the player is attacking, the focus target mark will switch to the aimed target.",
         ["zh-cn"] = "当进行攻击时，聚焦目标将标记当前瞄准的敌人。",
-        ["zh-tw"] = "進行攻擊時，聚焦目標將標記當前瞄準的敵人。",
+        ["zh-tw"] = "進行攻擊時，專注目標將標記當前瞄準的敵人。",
     },
     focus_target_switch_melee = {
         en = "Melee Weapon",
@@ -391,7 +391,7 @@ local localization = {
     class_selection_description = {
         en = "Normal enemy marks for all classes, plus special marks for certain classes (Cyber-Mastiff, Servo-Skull, Focus Target).",
         ["zh-cn"] = "所有职业的普通敌人标记，以及某些职业的特殊标记（智能獒犬、伺服颅骨、聚焦目标）。",
-        ["zh-tw"] = "所有職業的一般敵人標記，以及特定職業的特殊標記（電子獒犬、伺服顱骨、鎖定目標）。",
+        ["zh-tw"] = "所有職業的一般敵人標記，以及特定職業的特殊標記（電子獒犬、伺服頭骨、專注目標）。",
     },
     toggle_class = {
         en = "Toggle",
@@ -489,7 +489,7 @@ local localization = {
     toggle_elite_description = {
         en = "Enable/Disable auto-mark for elites.",
         ["zh-cn"] = "为精英敌人启用/禁用自动标记功能。",
-        ["zh-tw"] = "為精英敵人啟用或停用自動標記功能。",
+        ["zh-tw"] = "啟用或停用精英敵人的自動標記功能。",
     },
     toggle_special = {
         en = "Toggle Specialist",
@@ -499,17 +499,17 @@ local localization = {
     toggle_special_description = {
         en = "Enable/Disable auto-mark for specialists.",
         ["zh-cn"] = "为专家敌人启用/禁用自动标记功能。",
-        ["zh-tw"] = "為專家敵人啟用或停用自動標記功能。",
+        ["zh-tw"] = "啟用或停用專家敵人的自動標記功能。",
     },
     toggle_boss = {
         en = "Toggle Boss",
         ["zh-cn"] = "Boss开关",
-        ["zh-tw"] = "首領開關",
+        ["zh-tw"] = "Boss開關",
     },
     toggle_boss_description = {
         en = "Enable/Disable auto-mark for bosses.",
         ["zh-cn"] = "为Boss启用/禁用自动标记功能。",
-        ["zh-tw"] = "為首領敵人啟用或停用自動標記功能。",
+        ["zh-tw"] = "為Boss啟用或停用自動標記功能。",
     },
     toggle_other = {
         en = "Toggle Other",
@@ -519,7 +519,7 @@ local localization = {
     toggle_other_description = {
         en = "Enable/Disable auto-mark for other enemies.",
         ["zh-cn"] = "为其他敌人启用/禁用自动标记功能。",
-        ["zh-tw"] = "為其他敵人啟用或停用自動標記功能。",
+        ["zh-tw"] = "啟用或停用其他敵人的自動標記功能。",
     },
     priority_off = {
         en = "Off",
@@ -554,17 +554,17 @@ local localization = {
     adamant_companion = {
         en = "Arbitrator Cyber-Mastiff",
         ["zh-cn"] = "法务官 智能獒犬",
-        ["zh-tw"] = "仲裁官 電子獒犬",
+        ["zh-tw"] = "法務官 電子獒犬",
     },
     veteran_focus_target = {
         en = "Veteran Focus Target",
         ["zh-cn"] = "老兵聚焦目标",
-        ["zh-tw"] = "老兵聚焦目標",
+        ["zh-tw"] = "老兵專注目標",
     },
     cryptic_servo_skull = {
         en = "Skitarius Servo-Skull",
         ["zh-cn"] = "护教军士兵 伺服颅骨",
-        ["zh-tw"] = "機僕軍 伺服顱骨",
+        ["zh-tw"] = "護教軍 伺服頭骨",
     },
     apply_to_all_classes = {
         en = "Apply to All Classes",
