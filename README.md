@@ -563,10 +563,10 @@
 
 ### [BrokerAutoStim](https://www.nexusmods.com/warhammer40kdarktide/mods/655)
     顯示隊伍擊殺資訊
-- MOD 網站最後更新日期：Last updated 22 December 2025, 8:28AM
-- MOD 版本：2.5
-- MOD 檔案名稱：BrokerAutoStim-655-2-5-1766363294
-- 手動維護最後下載日期：2026-01-01
+- MOD 網站最後更新日期：Last updated 25 June 2026, 12:21PM
+- MOD 版本：2.6
+- MOD 檔案名稱：BrokerAutoStim_2.6_zjyhQjToX
+- 手動維護最後下載日期：2026-06-26
 
 ---
 # 遊戲內操作相關MOD
