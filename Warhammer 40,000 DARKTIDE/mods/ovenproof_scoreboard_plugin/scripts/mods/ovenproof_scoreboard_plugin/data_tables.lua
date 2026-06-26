@@ -11,6 +11,8 @@ mod.melee_lessers = {
     "chaos_armored_infected",
     "chaos_mutated_poxwalker",
     "chaos_lesser_mutated_poxwalker",
+    "cultist_vanguard",
+    "renegade_vanguard",
 }
 mod.ranged_lessers = {
     "cultist_assault",
@@ -80,6 +82,8 @@ mod.melee_damage_profiles ={
     "powermaul_p2_stun_interval",
     "powermaul_p2_stun_interval_basic",
     "powermaul_shield_block_special",
+    "powermaul_p3_arc_chain_lightning_link_damage", -- Skitarii arc maul jumps
+    "chain_lightning_killing_blow",
 }
 mod.ranged_attack_types ={
     "ranged",
@@ -93,6 +97,11 @@ mod.ranged_damage_profiles ={
     "psyker_smite_kill",
     "psyker_heavy_swings_shock", -- Psyker Smite on heavies and Remote Detonation on dog?
     "missile_launcher_knockback", -- Hives Cum backblast
+    "arc_rifle_arc_chain_lightning_link_damage", -- Skitarii arc rifle jumps
+    "cryptic_discharge_shock_damage", -- Skitarii voltage overload thing. Putting it here as a fallback for if not tracking blitz
+    "cryptic_discharge_weapon_shock", 
+    "discharge_chain_jump_damage",
+    "arc_grenade_chain_jump_damage", -- Skitarii Arc Grenade. Putting it here as a fallback for if not tracking blitz
 }
 mod.blitz_attack_types ={
 	"psyker_test",
@@ -138,6 +147,10 @@ mod.blitz_damage_profiles ={
 	"broker_missile_launcher_explosion",
 	"broker_missile_launcher_impact",
 	"missile_launcher_knockback",
+    "cryptic_discharge_shock_damage", -- Skitarii voltage overload thing
+    "cryptic_discharge_weapon_shock", -- Skitussy overload arc
+    "discharge_chain_jump_damage",
+    "arc_grenade_chain_jump_damage", -- Skitarii Arc Grenade
 }
 -- Dog damage doesn't count as melee/ranged for penances
 --	but the shock bomb collar counts for puncture, which is covered by "explosion" being in ranged_attack_types
@@ -150,6 +163,10 @@ mod.companion_damage_profiles ={
     -- "adamant_companion_ogryn_pounce",
     -- "adamant_companion_monster_pounce",
     "shockmaul_stun_interval_damage", -- shock maul electrocution and Arbites dog shocks
+    -- Skitussy Skull
+    "default_companion_servo_skull_lasgun_killshot",
+    "improved_companion_servo_skull_lasgun_killshot",
+    "companion_servo_skull_flamer",
 }
 
 mod.bleeding_damage_profiles ={
@@ -162,6 +179,7 @@ mod.burning_damage_profiles ={
     "liquid_area_fire_burning_barrel",
     "liquid_area_fire_burning",
     --"flamer_assault", -- Flaming shots from PBB. False bug report: this just uses "burning"
+    "phosphor_burning", -- phosphor burns from pistol and servo skull blitz. can't distinguish between the two so here it goes.
 }
 mod.warpfire_damage_profiles ={
     "warpfire",
@@ -175,6 +193,11 @@ mod.electrocution_damage_profiles = {
     "psyker_protectorate_spread_chain_lightning_interval",
     "default_chain_lighting_interval",
     "psyker_smite_kill",
+    -- skitussy
+    "powermaul_p3_arc_chain_lightning_link_damage",
+    "cryptic_discharge_shock_damage",
+    "arc_rifle_arc_chain_lightning_link_damage",
+    "chain_lightning_killing_blow",
 }
 mod.toxin_damage_profiles = {
     "toxin_variant_1",	
@@ -193,6 +216,7 @@ mod.environmental_damage_profiles = {
     "default",
     "poxwalker_explosion",
     "poxwalker_explosion_close",
+    "poxwalker_bomber_instakill",
 }
 
 -- ------------

@@ -36,7 +36,7 @@ local table_array_contains = table.array_contains
 -- #######
 -- Mod Locals
 -- #######
-mod.version = "1.11.1"
+mod.version = "1.13.5"
 local debug_messages_enabled
 local separate_companion_damage = {}
 local track_blitz_damage
@@ -401,6 +401,21 @@ local function update_all_scoreboard_row_visibilities()
 	--replace_registered_scoreboard_value("total_melee_kills", "setting", replace_row_with_value, "offense_tier_3")
 
 	-- ------------
+	-- Defense
+	-- ------------
+	-- Hiding friendly fire damage
+	if mod:get("option_hide_friendly_fire") then
+		change_scoreboard_row_visibility("total_friendly", false)
+		change_scoreboard_row_visibility("friendly_damage", false)
+		change_scoreboard_row_visibility("friendly_shots_blocked", false)
+	else
+		-- this is the default, but I need this here to work without a restart/reload
+		change_scoreboard_row_visibility("total_friendly", true)
+		change_scoreboard_row_visibility("friendly_damage", true)
+		change_scoreboard_row_visibility("friendly_shots_blocked", true)
+	end
+
+	-- ------------
 	-- Expeditions Pickup Classification
 	-- ------------
 	local currency_only_in_expeditions = mod:get("exploration_show_currency_only_in_expeditions")
@@ -479,22 +494,6 @@ function mod.on_all_mods_loaded()
 
 	set_locals_for_settings()
 	mod:info("Version "..mod.version.." loaded uwu nya :3")
-
-	-- ################################################
-	-- CJK Font Alignment Fix
-	-- Reprocess left|right localization strings once fonts are ready.
-	-- show_cjk_glyphs loads CJK font packages asynchronously, then calls
-	-- Managers.font:_setup_font_definitions(). We hook that call so
-	-- create_string() can remeasure text widths with correct CJK metrics.
-	-- ################################################
-	if mod.reprocess_create_string_localizations then
-		mod.reprocess_create_string_localizations()
-		if Managers.font and Managers.font._setup_font_definitions then
-			mod:hook_safe(Managers.font, "_setup_font_definitions", function()
-				mod.reprocess_create_string_localizations()
-			end)
-		end
-	end
 
 	-- ################################################
 	-- HOOKS
@@ -783,7 +782,6 @@ function mod.on_all_mods_loaded()
 			if unit then
 				local player = Managers.player:player_by_unit(unit)
 				if player then
-					--mod:echo("interaction - player "..player:name()..", type: "..type)
 					local account_id = player:account_id() or player:name()
 					if type == "pull_up" or type == "remove_net" then
 						scoreboard:update_stat("total_operatives_helped", account_id, 1)
@@ -939,6 +937,19 @@ function mod.on_all_mods_loaded()
 							mod:replace_key_to_edit("blitz_cr", account_id, self._blitz_rate[account_id].cr)
 						end
 					-- ------------
+					--	Companion
+					--  After Skitarii released, companion overlaps with ranged too
+					-- ------------
+					elseif table_array_contains(mod_companion_attack_types, attack_type) or table_array_contains(mod_companion_damage_profiles, damage_profile.name) then
+						-- Crit and Weakspot rates don't matter
+		
+						-- By default, uses its own companion row, which reads: total_companion_damage and total_companion_kills
+						scoreboard:update_stat(separate_companion_damage.damage, account_id, actual_damage)
+
+						if attack_result == "died" then
+							scoreboard:update_stat(separate_companion_damage.kills, account_id, 1)
+						end
+					-- ------------
 					--	Ranged
 					-- ------------
 					elseif table_array_contains(mod_ranged_attack_types, attack_type) or table_array_contains(mod_ranged_damage_profiles, damage_profile.name) then
@@ -973,18 +984,6 @@ function mod.on_all_mods_loaded()
 						
 						mod:replace_key_to_edit("ranged_cr", account_id, self._ranged_rate[account_id].cr)
 						mod:replace_key_to_edit("ranged_wr", account_id, self._ranged_rate[account_id].wr)
-					-- ------------
-					--	Companion
-					-- ------------
-					elseif table_array_contains(mod_companion_attack_types, attack_type) or table_array_contains(mod_companion_damage_profiles, damage_profile.name) then
-						-- Crit and Weakspot rates don't matter
-		
-						-- By default, uses its own companion row, which reads: total_companion_damage and total_companion_kills
-						scoreboard:update_stat(separate_companion_damage.damage, account_id, actual_damage)
-
-						if attack_result == "died" then
-							scoreboard:update_stat(separate_companion_damage.kills, account_id, 1)
-						end
 					-- ------------
 					--	Bleed
 					-- ------------
