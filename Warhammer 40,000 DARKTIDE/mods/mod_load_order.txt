@@ -14,7 +14,6 @@ AutoLoot
 more_characters_and_loadouts
 Enhanced_descriptions
 PlasmaBFG
-HoldFire
 
 -- 記分板(有順序性依賴)
 scoreboard
