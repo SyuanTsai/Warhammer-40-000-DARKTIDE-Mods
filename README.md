@@ -22,10 +22,10 @@
 
 ### [True Level](https://www.nexusmods.com/warhammer40kdarktide/mods/156)
     真實等級 - 顯示真正的等級
-- MOD 網站最後更新日期：Last updated 29 April 2026, 9:35PM
-- MOD 版本：Version 1.10.0
-- MOD 檔案名稱：True Level-156-1-10-0-1777469719
-- 手動維護最後下載日期：2026-05-17
+- MOD 網站最後更新日期：Last updated 24 June 2026, 2:35AM
+- MOD 版本：Version 1.10.1
+- MOD 檔案名稱：True_Level_1.10.1_3OsdoOGHb
+- 手動維護最後下載日期：2026-06-26
 - GitHub :
 - Source=>  https://github.com/zombine04/darktide-mods
 - Fork  =>  https://github.com/SyuanTsai/darktide-mods
