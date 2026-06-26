@@ -557,10 +557,10 @@
 
 ### [VFX Swapper](https://www.nexusmods.com/warhammer40kdarktide/mods/678)
     修改特效的顯示方式
-- MOD 網站最後更新日期：Last updated 21 May 2026, 10:44PM
-- MOD 版本：1.1.2
-- MOD 檔案名稱：VFX Swapper-678-1-1-2-1779374691
-- 手動維護最後下載日期：2026-06-06
+- MOD 網站最後更新日期：Last updated 24 June 2026, 2:31PM
+- MOD 版本：1.1.3
+- MOD 檔案名稱：VFX_Swapper_1.1.3_xc7NGcZy3
+- 手動維護最後下載日期：2026-06-26
 
 
 ---
