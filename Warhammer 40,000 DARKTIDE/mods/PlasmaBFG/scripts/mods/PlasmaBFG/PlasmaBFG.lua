@@ -3,7 +3,14 @@
 local mod = get_mod("PlasmaBFG")
 local Ammo = require("scripts/utilities/ammo")
 
-local PLASMA_TEMPLATE_NAME = "plasmagun_p1_m1"
+local PLASMA_TEMPLATE_NAMES = {
+	plasmagun_p1_m1 = true,
+	plasmagun_p1_m2 = true,
+}
+local PLASMA_TEMPLATE_PATHS = {
+	"scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1",
+	"scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2",
+}
 local PRIMARY_CHARGE_ACTION = "action_charge_direct"
 local PRIMARY_SHOT_ACTION = "action_shoot"
 local SECONDARY_CHARGE_ACTION = "action_charge"
@@ -39,13 +46,12 @@ local SPREAD_MULTIPLIER_SETTING = "spread_multiplier"
 local DISABLE_OVERHEAT_EXPLOSION_SETTING = "disable_overheat_explosion"
 local VENT_DAMAGE_MULTIPLIER_SETTING = "vent_damage_multiplier"
 local VENT_SPEED_MULTIPLIER_SETTING = "vent_speed_multiplier"
-local MACHINE_GUN_ENGAGE_DELAY = 0.1
 local OVERHEAT_GUARD_MARGIN = 0.01
 local SETTING_DEFINITIONS = {
 	[HIPFIRE_RELEASE_FACTOR_SETTING] = {
 		default = 1.0,
 		max = 1.0,
-		min = 0.7,
+		min = 0.5,
 		value_type = "number",
 	},
 	[PRIMARY_SHOT_TOTAL_TIME_SETTING] = {
@@ -236,7 +242,6 @@ local state = {
 	ads_held = false,
 	auto_venting = false,
 	inventory_slot_component = nil,
-	post_ads_shot_vent = false,
 	player_unit = nil,
 	queued_press = false,
 	resume_after_reload = false,
@@ -255,7 +260,7 @@ local loaded_templates = {
 	hitscan_templates = nil,
 	recoil_templates = nil,
 	spread_templates = nil,
-	weapon_template = nil,
+	weapon_templates = {},
 }
 
 local original_template_values = {
@@ -265,7 +270,7 @@ local original_template_values = {
 	hitscan_templates = nil,
 	recoil_templates = nil,
 	spread_templates = nil,
-	weapon_template = nil,
+	weapon_templates = {},
 }
 
 local function deep_copy(value)
@@ -354,6 +359,18 @@ local function scaled_value(value, multiplier)
 	return value and value * multiplier or value
 end
 
+local function template_number(value, fallback)
+	if type(value) == "table" then
+		return math.max(value.lerp_basic or fallback or 0, value.lerp_perfect or fallback or 0)
+	end
+
+	if type(value) == "number" then
+		return value
+	end
+
+	return fallback or 0
+end
+
 local function scaled_range_entry(target_range, original_range, multiplier)
 	if not target_range or not original_range then
 		return
@@ -368,21 +385,27 @@ local function capture_charge_template_defaults(charge_templates)
 		return
 	end
 
-	local primary_charge = charge_templates and charge_templates.plasmagun_p1_m1_charge_direct
-	local primary_shot = charge_templates and charge_templates.plasmagun_p1_m1_shoot
-	local charge_duration = primary_charge and primary_charge.charge_duration
-	local charge_overheat = primary_charge and primary_charge.overheat_percent
-	local shot_overheat = primary_shot and primary_shot.overheat_percent
+	local values = {}
 
-	original_template_values.charge_templates = {
-		primary_charge_duration_basic = charge_duration and charge_duration.lerp_basic,
-		primary_charge_duration_perfect = charge_duration and charge_duration.lerp_perfect,
-		primary_charge_full_overheat = primary_charge and primary_charge.full_charge_overheat_percent,
-		primary_charge_overheat_basic = charge_overheat and charge_overheat.lerp_basic,
-		primary_charge_overheat_perfect = charge_overheat and charge_overheat.lerp_perfect,
-		primary_shot_overheat_basic = shot_overheat and shot_overheat.lerp_basic,
-		primary_shot_overheat_perfect = shot_overheat and shot_overheat.lerp_perfect,
-	}
+	for template_name in pairs(PLASMA_TEMPLATE_NAMES) do
+		local primary_charge = charge_templates and charge_templates[template_name .. "_charge_direct"]
+		local primary_shot = charge_templates and charge_templates[template_name .. "_shoot"]
+		local charge_duration = primary_charge and primary_charge.charge_duration
+		local charge_overheat = primary_charge and primary_charge.overheat_percent
+		local shot_overheat = primary_shot and primary_shot.overheat_percent
+
+		values[template_name] = {
+			primary_charge_duration_basic = type(charge_duration) == "table" and charge_duration.lerp_basic or charge_duration,
+			primary_charge_duration_perfect = type(charge_duration) == "table" and charge_duration.lerp_perfect or charge_duration,
+			primary_charge_full_overheat = primary_charge and primary_charge.full_charge_overheat_percent,
+			primary_charge_overheat_basic = type(charge_overheat) == "table" and charge_overheat.lerp_basic or charge_overheat,
+			primary_charge_overheat_perfect = type(charge_overheat) == "table" and charge_overheat.lerp_perfect or charge_overheat,
+			primary_shot_overheat_basic = type(shot_overheat) == "table" and shot_overheat.lerp_basic or shot_overheat,
+			primary_shot_overheat_perfect = type(shot_overheat) == "table" and shot_overheat.lerp_perfect or shot_overheat,
+		}
+	end
+
+	original_template_values.charge_templates = values
 end
 
 local function capture_ammo_template_defaults(ammo_templates)
@@ -390,11 +413,15 @@ local function capture_ammo_template_defaults(ammo_templates)
 		return
 	end
 
-	local plasma_ammo_template = ammo_templates and ammo_templates.plasmagun_p1_m1
+	local values = {}
 
-	original_template_values.ammo_templates = {
-		plasma_ammo_template = plasma_ammo_template and deep_copy(plasma_ammo_template) or nil,
-	}
+	for template_name in pairs(PLASMA_TEMPLATE_NAMES) do
+		local plasma_ammo_template = ammo_templates and ammo_templates[template_name]
+
+		values[template_name] = plasma_ammo_template and deep_copy(plasma_ammo_template) or nil
+	end
+
+	original_template_values.ammo_templates = values
 end
 
 local function capture_explosion_template_defaults(templates)
@@ -463,7 +490,9 @@ local function capture_spread_template_defaults(templates)
 end
 
 local function capture_weapon_template_defaults(weapon_template)
-	if original_template_values.weapon_template then
+	local template_name = weapon_template and weapon_template.name
+
+	if not template_name or original_template_values.weapon_templates[template_name] then
 		return
 	end
 
@@ -481,7 +510,7 @@ local function capture_weapon_template_defaults(weapon_template)
 	local vent_damage_profile = overheat_configuration and overheat_configuration.vent_damage_profile
 	local proficiency_vent_damage_profile = overheat_configuration and overheat_configuration.proficiency_vent_damage_profile
 
-	original_template_values.weapon_template = {
+	original_template_values.weapon_templates[template_name] = {
 		action_charge_direct_sprint_ready_up_time = action_charge_direct and action_charge_direct.sprint_ready_up_time,
 		action_charge_running_action_state_to_action_input = action_charge and deep_copy(action_charge.running_action_state_to_action_input) or nil,
 		action_overheat_explode_death_on_explosion = action_overheat_explode and action_overheat_explode.death_on_explosion,
@@ -516,32 +545,40 @@ local function apply_charge_template_settings()
 		return
 	end
 
-	local primary_charge = charge_templates.plasmagun_p1_m1_charge_direct
-	local primary_shot = charge_templates.plasmagun_p1_m1_shoot
+	for template_name, template_original_values in pairs(original_values) do
+		local primary_charge = charge_templates[template_name .. "_charge_direct"]
+		local primary_shot = charge_templates[template_name .. "_shoot"]
 
-	if primary_charge then
-		local charge_duration = primary_charge.charge_duration
-		local charge_overheat = primary_charge.overheat_percent
+		if primary_charge then
+			local charge_duration = primary_charge.charge_duration
+			local charge_overheat = primary_charge.overheat_percent
 
-		if charge_duration then
-			charge_duration.lerp_basic = configured_or_original(PRIMARY_CHARGE_DURATION_BASIC_SETTING, original_values.primary_charge_duration_basic)
-			charge_duration.lerp_perfect = configured_or_original(PRIMARY_CHARGE_DURATION_PERFECT_SETTING, original_values.primary_charge_duration_perfect)
+			if type(charge_duration) == "table" then
+				charge_duration.lerp_basic = configured_or_original(PRIMARY_CHARGE_DURATION_BASIC_SETTING, template_original_values.primary_charge_duration_basic)
+				charge_duration.lerp_perfect = configured_or_original(PRIMARY_CHARGE_DURATION_PERFECT_SETTING, template_original_values.primary_charge_duration_perfect)
+			elseif charge_duration ~= nil then
+				primary_charge.charge_duration = configured_or_original(PRIMARY_CHARGE_DURATION_BASIC_SETTING, template_original_values.primary_charge_duration_basic)
+			end
+
+			if type(charge_overheat) == "table" then
+				charge_overheat.lerp_basic = configured_or_original(PRIMARY_CHARGE_OVERHEAT_BASIC_SETTING, template_original_values.primary_charge_overheat_basic)
+				charge_overheat.lerp_perfect = configured_or_original(PRIMARY_CHARGE_OVERHEAT_PERFECT_SETTING, template_original_values.primary_charge_overheat_perfect)
+			elseif charge_overheat ~= nil then
+				primary_charge.overheat_percent = configured_or_original(PRIMARY_CHARGE_OVERHEAT_BASIC_SETTING, template_original_values.primary_charge_overheat_basic)
+			end
+
+			primary_charge.full_charge_overheat_percent = configured_or_original(PRIMARY_CHARGE_FULL_OVERHEAT_SETTING, template_original_values.primary_charge_full_overheat)
 		end
 
-		if charge_overheat then
-			charge_overheat.lerp_basic = configured_or_original(PRIMARY_CHARGE_OVERHEAT_BASIC_SETTING, original_values.primary_charge_overheat_basic)
-			charge_overheat.lerp_perfect = configured_or_original(PRIMARY_CHARGE_OVERHEAT_PERFECT_SETTING, original_values.primary_charge_overheat_perfect)
-		end
+		if primary_shot then
+			local shot_overheat = primary_shot.overheat_percent
 
-		primary_charge.full_charge_overheat_percent = configured_or_original(PRIMARY_CHARGE_FULL_OVERHEAT_SETTING, original_values.primary_charge_full_overheat)
-	end
-
-	if primary_shot then
-		local shot_overheat = primary_shot.overheat_percent
-
-		if shot_overheat then
-			shot_overheat.lerp_basic = configured_or_original(PRIMARY_SHOT_OVERHEAT_BASIC_SETTING, original_values.primary_shot_overheat_basic)
-			shot_overheat.lerp_perfect = configured_or_original(PRIMARY_SHOT_OVERHEAT_PERFECT_SETTING, original_values.primary_shot_overheat_perfect)
+			if type(shot_overheat) == "table" then
+				shot_overheat.lerp_basic = configured_or_original(PRIMARY_SHOT_OVERHEAT_BASIC_SETTING, template_original_values.primary_shot_overheat_basic)
+				shot_overheat.lerp_perfect = configured_or_original(PRIMARY_SHOT_OVERHEAT_PERFECT_SETTING, template_original_values.primary_shot_overheat_perfect)
+			elseif shot_overheat ~= nil then
+				primary_shot.overheat_percent = configured_or_original(PRIMARY_SHOT_OVERHEAT_BASIC_SETTING, template_original_values.primary_shot_overheat_basic)
+			end
 		end
 	end
 end
@@ -550,38 +587,37 @@ local function apply_ammo_template_settings()
 	local ammo_templates = loaded_templates.ammo_templates
 	local original_values = original_template_values.ammo_templates
 
-	if not ammo_templates or not original_values or not original_values.plasma_ammo_template then
+	if not ammo_templates or not original_values then
 		return
 	end
 
-	local plasma_ammo_template = ammo_templates.plasmagun_p1_m1
-	local original_template = original_values.plasma_ammo_template
+	for template_name, original_template in pairs(original_values) do
+		local plasma_ammo_template = ammo_templates[template_name]
 
-	if not plasma_ammo_template or not original_template then
-		return
-	end
+		if plasma_ammo_template and original_template then
+			local ammo_pool_multiplier = mod_enabled and get_setting_value(AMMO_POOL_MULTIPLIER_SETTING) or 1
+			local ammunition_clips = plasma_ammo_template.ammunition_clips
+			local original_clips = original_template.ammunition_clips
 
-	local ammo_pool_multiplier = mod_enabled and get_setting_value(AMMO_POOL_MULTIPLIER_SETTING) or 1
-	local ammunition_clips = plasma_ammo_template.ammunition_clips
-	local original_clips = original_template.ammunition_clips
+			if ammunition_clips and original_clips then
+				for index, original_clip in ipairs(original_clips) do
+					local clip = ammunition_clips[index]
 
-	if ammunition_clips and original_clips then
-		for index, original_clip in ipairs(original_clips) do
-			local clip = ammunition_clips[index]
+					if clip and original_clip then
+						clip.lerp_basic = to_whole_number(original_clip.lerp_basic * ammo_pool_multiplier)
+						clip.lerp_perfect = to_whole_number(original_clip.lerp_perfect * ammo_pool_multiplier)
+					end
+				end
+			end
 
-			if clip and original_clip then
-				clip.lerp_basic = to_whole_number(original_clip.lerp_basic * ammo_pool_multiplier)
-				clip.lerp_perfect = to_whole_number(original_clip.lerp_perfect * ammo_pool_multiplier)
+			local ammunition_reserve = plasma_ammo_template.ammunition_reserve
+			local original_reserve = original_template.ammunition_reserve
+
+			if ammunition_reserve and original_reserve then
+				ammunition_reserve.lerp_basic = to_whole_number(original_reserve.lerp_basic * ammo_pool_multiplier)
+				ammunition_reserve.lerp_perfect = to_whole_number(original_reserve.lerp_perfect * ammo_pool_multiplier)
 			end
 		end
-	end
-
-	local ammunition_reserve = plasma_ammo_template.ammunition_reserve
-	local original_reserve = original_template.ammunition_reserve
-
-	if ammunition_reserve and original_reserve then
-		ammunition_reserve.lerp_basic = to_whole_number(original_reserve.lerp_basic * ammo_pool_multiplier)
-		ammunition_reserve.lerp_perfect = to_whole_number(original_reserve.lerp_perfect * ammo_pool_multiplier)
 	end
 end
 
@@ -806,9 +842,9 @@ local function apply_hitscan_template_settings()
 	end
 end
 
-local function apply_weapon_template_settings()
-	local weapon_template = loaded_templates.weapon_template
-	local original_values = original_template_values.weapon_template
+local function apply_weapon_template_settings(weapon_template, original_values)
+	weapon_template = weapon_template or loaded_templates.weapon_templates.plasmagun_p1_m1
+	original_values = original_values or original_template_values.weapon_templates.plasmagun_p1_m1
 
 	if not weapon_template or not original_values then
 		return
@@ -852,13 +888,13 @@ local function apply_weapon_template_settings()
 
 	if action_vent then
 		action_vent.hold_combo = mod_enabled and true or original_values.action_vent_hold_combo
-		action_vent.keep_combo_on_start = mod_enabled and true or original_values.action_vent_keep_combo_on_start
+		action_vent.keep_combo_on_start = mod_enabled and false or original_values.action_vent_keep_combo_on_start
 		action_vent.minimum_hold_time = scaled_value(original_values.action_vent_minimum_hold_time, mod_enabled and vent_speed_multiplier() or 1)
 	end
 
 	if action_vent_override then
 		action_vent_override.hold_combo = mod_enabled and true or original_values.action_vent_override_hold_combo
-		action_vent_override.keep_combo_on_start = mod_enabled and true or original_values.action_vent_override_keep_combo_on_start
+		action_vent_override.keep_combo_on_start = mod_enabled and false or original_values.action_vent_override_keep_combo_on_start
 		action_vent_override.minimum_hold_time = scaled_value(original_values.action_vent_override_minimum_hold_time, mod_enabled and vent_speed_multiplier() or 1)
 	end
 
@@ -873,7 +909,7 @@ local function apply_weapon_template_settings()
 	if overheat_configuration then
 		overheat_configuration.vent_duration = scaled_value(original_values.overheat_vent_duration, mod_enabled and vent_speed_multiplier() or 1)
 		overheat_configuration.vent_interval = scaled_value(original_values.overheat_vent_interval, mod_enabled and vent_speed_multiplier() or 1)
-		overheat_configuration.explode_action = mod_enabled and disable_overheat_explosion_enabled() and "action_vent_override" or original_values.overheat_explode_action
+		overheat_configuration.explode_action = original_values.overheat_explode_action
 
 		local vent_damage_profile = overheat_configuration.vent_damage_profile
 
@@ -891,22 +927,16 @@ local function apply_weapon_template_settings()
 	end
 
 	if action_charge then
-		if mod_enabled then
-			local running_action_state_to_action_input = action_charge.running_action_state_to_action_input
+		local running_action_state_to_action_input = deep_copy(original_values.action_charge_running_action_state_to_action_input)
 
-			if not running_action_state_to_action_input then
-				running_action_state_to_action_input = {}
-				action_charge.running_action_state_to_action_input = running_action_state_to_action_input
-			end
-
-			-- ADS charge stays manual, but when the gun actually reaches the danger cap we give it
-			-- the same automatic vent escape hatch the primary charge path already uses.
-			running_action_state_to_action_input.overheating = {
-				input_name = "vent",
+		if mod_enabled and action_charge.allowed_chain_actions and action_charge.allowed_chain_actions.shoot_braced then
+			running_action_state_to_action_input = running_action_state_to_action_input or {}
+			running_action_state_to_action_input.fully_charged = {
+				input_name = "shoot_braced",
 			}
-		else
-			action_charge.running_action_state_to_action_input = deep_copy(original_values.action_charge_running_action_state_to_action_input)
 		end
+
+		action_charge.running_action_state_to_action_input = running_action_state_to_action_input
 	end
 end
 
@@ -917,7 +947,20 @@ local function apply_loaded_plasma_settings()
 	apply_hitscan_template_settings()
 	apply_recoil_template_settings()
 	apply_spread_template_settings()
-	apply_weapon_template_settings()
+
+	for template_name, weapon_template in pairs(loaded_templates.weapon_templates) do
+		apply_weapon_template_settings(weapon_template, original_template_values.weapon_templates[template_name])
+	end
+end
+
+local function apply_common_mod_compatibility()
+	local full_auto = rawget(_G, "get_mod") and get_mod("FullAuto")
+
+	if full_auto and full_auto.set_weapon_default then
+		for template_name in pairs(PLASMA_TEMPLATE_NAMES) do
+			full_auto.set_weapon_default(template_name, false)
+		end
+	end
 end
 
 local function local_player()
@@ -947,7 +990,6 @@ end
 local function clear_weapon_state()
 	state.auto_venting = false
 	state.inventory_slot_component = nil
-	state.post_ads_shot_vent = false
 	state.player_unit = nil
 	state.queued_press = false
 	state.resume_after_reload = false
@@ -993,7 +1035,7 @@ local function refresh_plasma_state(optional_weapon_extension)
 	local weapon = weapons and weapons[wielded_slot]
 	local weapon_template = weapon and weapon.weapon_template
 
-	if not weapon_template or weapon_template.name ~= PLASMA_TEMPLATE_NAME then
+	if not weapon_template or not PLASMA_TEMPLATE_NAMES[weapon_template.name] then
 		clear_weapon_state()
 
 		return false
@@ -1061,12 +1103,15 @@ local function queue_primary_resume_after_reload()
 	return false
 end
 
+local function should_auto_release_ads_charge()
+	return state.ads_held and state.trigger_held
+end
+
 local function reset_action_cycle_state(clear_auto_vent)
 	if clear_auto_vent ~= false then
 		state.auto_venting = false
 	end
 
-	state.post_ads_shot_vent = false
 	state.queued_press = false
 	cancel_resume_after_reload()
 	cancel_resume_after_vent()
@@ -1097,15 +1142,6 @@ local function primary_charge_templates()
 	return current_charge_template(charge_direct_name), current_charge_template(shoot_name)
 end
 
-local function secondary_charge_templates()
-	local weapon_template = state.weapon_template
-	local actions = weapon_template and weapon_template.actions
-	local charge_name = actions and actions[SECONDARY_CHARGE_ACTION] and actions[SECONDARY_CHARGE_ACTION].charge_template
-	local shoot_name = actions and actions[SECONDARY_SHOT_ACTION] and actions[SECONDARY_SHOT_ACTION].charge_template
-
-	return current_charge_template(charge_name), current_charge_template(shoot_name)
-end
-
 local function hipfire_release_factor()
 	return get_setting_value(HIPFIRE_RELEASE_FACTOR_SETTING)
 end
@@ -1121,11 +1157,22 @@ local function hipfire_release_charge_level(charge_direct_template, max_charge)
 	return math.max(min_charge, full_charge * hipfire_release_factor())
 end
 
+local function full_charge_level(charge_template, max_charge)
+	local min_charge = charge_template and charge_template.min_charge or 0
+	local full_charge = charge_template and charge_template.fully_charged_charge_level or max_charge or 0.525
+
+	if max_charge and max_charge > 0 then
+		full_charge = math.min(full_charge, max_charge)
+	end
+
+	return math.max(min_charge, full_charge)
+end
+
 local function primary_shot_heat_for_release_charge(charge_direct_template, shoot_template, release_charge, remaining_charge)
 	local charge_direct_heat = 0
 
 	if charge_direct_template then
-		local charge_direct_overheat = charge_direct_template.overheat_percent or 0
+		local charge_direct_overheat = template_number(charge_direct_template.overheat_percent)
 
 		charge_direct_heat = charge_direct_overheat * (remaining_charge or release_charge)
 	end
@@ -1133,7 +1180,7 @@ local function primary_shot_heat_for_release_charge(charge_direct_template, shoo
 	local shot_heat = 0
 
 	if shoot_template then
-		local shoot_overheat = shoot_template.overheat_percent or 0
+		local shoot_overheat = template_number(shoot_template.overheat_percent)
 
 		shot_heat = shoot_template.use_charge and shoot_overheat * release_charge or shoot_overheat
 	end
@@ -1159,12 +1206,11 @@ local function auto_vent_start_threshold()
 end
 
 local function auto_vent_resume_threshold()
-	-- Stay as hot as possible for blessing uptime, but always leave enough room for
-	-- one more fast primary shot before the cap guard needs to vent again.
-	local heat_buffer = math.max(estimated_primary_shot_heat() + OVERHEAT_GUARD_MARGIN, 0.05)
 	local start_threshold = auto_vent_start_threshold()
 
-	return math.clamp(start_threshold - heat_buffer, 0.78, start_threshold - 0.01)
+	-- Treat auto-vent as a pressure valve: dip just under the danger threshold
+	-- instead of cooling far enough to erase high-heat blessing uptime.
+	return math.clamp(start_threshold - OVERHEAT_GUARD_MARGIN, 0, start_threshold)
 end
 
 local function should_auto_vent_for_heat(current_heat)
@@ -1201,84 +1247,6 @@ local function should_auto_reload_empty_mag(current_action)
 	return max_clip_ammo > 0 and current_clip_ammo <= 0 and current_reserve_ammo > 0
 end
 
-local function current_charge_component()
-	local player_unit = state.player_unit
-	local unit_data_extension = player_unit and ScriptUnit.has_extension(player_unit, "unit_data_system")
-
-	return unit_data_extension and unit_data_extension:read_component("action_module_charge") or nil
-end
-
-local function current_charge_values()
-	local charge_component = current_charge_component()
-
-	return charge_component and charge_component.charge_level or 0, charge_component and charge_component.max_charge or 0
-end
-
-local function estimated_secondary_shot_heat(charge_level)
-	local _, shoot_template = secondary_charge_templates()
-
-	if not shoot_template then
-		return 0
-	end
-
-	local shoot_overheat = shoot_template.overheat_percent or 0
-
-	return shoot_template.use_charge and shoot_overheat * math.max(charge_level or 0, 0) or shoot_overheat
-end
-
-local function capture_ads_snapshot()
-	local charge_template = secondary_charge_templates()
-	local charge_level, max_charge = current_charge_values()
-	local full_charge_level = charge_template and (charge_template.fully_charged_charge_level or max_charge) or max_charge
-	local current_heat = current_overheat()
-	local shot_heat = estimated_secondary_shot_heat(charge_level)
-	local snapshot = {
-		action = current_action_name(),
-		ads_held = state.ads_held,
-		auto_venting = state.auto_venting,
-		charge_level = charge_level,
-		charge_ratio = max_charge > 0 and charge_level / max_charge or 0,
-		current_heat = current_heat,
-		full_charge_level = full_charge_level or 0,
-		is_full_charge = full_charge_level and full_charge_level > 0 and charge_level >= full_charge_level or false,
-		predicted_after_shot = current_heat + shot_heat,
-		shot_heat = shot_heat,
-		trigger_held = state.trigger_held,
-	}
-
-	return snapshot
-end
-
-local function should_block_manual_ads_shot(snapshot)
-	if not snapshot then
-		return false
-	end
-
-	-- Keep the dual-hold "machine gun" interaction untouched. Only guard the classic
-	-- manual ADS charged release path where action_one is no longer being held.
-	if snapshot.trigger_held then
-		return false
-	end
-
-	return should_auto_vent_for_heat(snapshot.predicted_after_shot or 0)
-end
-
-local function should_force_machine_gun_brace()
-	if not held_primary_assist_enabled() or state.ads_held or state.auto_venting or not state.trigger_held or not state.weapon_template then
-		return false
-	end
-
-	local held_time = gameplay_time() - (state.trigger_hold_started_t or 0)
-
-	if held_time < MACHINE_GUN_ENGAGE_DELAY then
-		return false
-	end
-
-	local current_action = current_action_name()
-
-	return not RESET_ACTIONS[current_action]
-end
-
 local function begin_auto_vent(can_resume_after_vent)
 	if not auto_vent_enabled() then
 		return false
@@ -1300,8 +1268,7 @@ local function start_forced_vent_action(func, self, id, action_objects, action_p
 		return false
 	end
 
-	begin_auto_vent(false)
-	state.post_ads_shot_vent = false
+	begin_auto_vent(true)
 	state.queued_press = false
 
 	return true, func(self, id, action_objects, "action_vent", action_params, vent_settings, nil, t, "chain", condition_func_params, "vent", nil)
@@ -1310,7 +1277,6 @@ end
 local function update_auto_vent_state()
 	if not state.inventory_slot_component then
 		state.auto_venting = false
-		state.post_ads_shot_vent = false
 		cancel_resume_after_vent()
 
 		return false
@@ -1322,9 +1288,15 @@ local function update_auto_vent_state()
 	local protect_ads_shot = current_action == SECONDARY_SHOT_ACTION
 	local vent_action_active = VENT_ACTIONS[current_action]
 
+	if state.ads_held then
+		state.auto_venting = false
+		cancel_resume_after_vent()
+
+		return false
+	end
+
 	if should_auto_reload_empty_mag(current_action) then
 		state.auto_venting = false
-		state.post_ads_shot_vent = false
 		state.queued_press = false
 		state.resume_after_reload = state.trigger_held and not state.ads_held or false
 		cancel_resume_after_vent()
@@ -1332,21 +1304,9 @@ local function update_auto_vent_state()
 		return false
 	end
 
-	if state.post_ads_shot_vent and not protect_ads_charge and not protect_ads_shot then
-		state.post_ads_shot_vent = false
-
-		if should_auto_vent_for_heat(current_heat) then
-			return begin_auto_vent(false)
-		end
-	end
-
 	if state.auto_venting then
 		if protect_ads_charge or protect_ads_shot then
 			return false
-		end
-
-		if vent_action_active then
-			return true
 		end
 
 		if current_heat <= auto_vent_resume_threshold() then
@@ -1354,6 +1314,10 @@ local function update_auto_vent_state()
 			queue_primary_resume_after_vent()
 
 			return false
+		end
+
+		if vent_action_active then
+			return true
 		end
 
 		return true
@@ -1457,7 +1421,7 @@ local function controlled_input(action_name, raw_value)
 			return raw_value
 		end
 
-		return raw_value or should_force_machine_gun_brace()
+		return raw_value
 	end
 
 	if is_auto_venting then
@@ -1486,7 +1450,6 @@ end
 mod.on_setting_changed = function(setting_id)
 	if setting_id == AUTO_VENT_ENABLED_SETTING and not auto_vent_enabled() then
 		state.auto_venting = false
-		state.post_ads_shot_vent = false
 		state.queued_press = false
 		cancel_resume_after_vent()
 	end
@@ -1510,6 +1473,10 @@ mod.on_game_state_changed = function()
 	reset_runtime()
 end
 
+mod.on_all_mods_loaded = function()
+	apply_common_mod_compatibility()
+end
+
 mod:hook_safe(CLASS.PlayerUnitWeaponExtension, "on_slot_wielded", function(self)
 	if is_local_unit(self._unit) then
 		clear_weapon_state()
@@ -1519,9 +1486,14 @@ end)
 
 mod:hook(CLASS.ActionHandler, "start_action", function(func, self, id, action_objects, action_name, action_params, action_settings, used_input, t, transition_type, condition_func_params, automatic_input, reset_combo_override)
 	local should_handle = id == "weapon_action" and is_local_unit(self._unit) and refresh_plasma_state()
-	local ads_shot_snapshot
 
 	if should_handle and action_name == "action_overheat_explode" and disable_overheat_explosion_enabled() then
+		if state.ads_held then
+			reset_action_cycle_state()
+
+			return func(self, id, action_objects, action_name, action_params, action_settings, used_input, t, transition_type, condition_func_params, automatic_input, reset_combo_override)
+		end
+
 		local started_forced_vent, vent_result = start_forced_vent_action(func, self, id, action_objects, action_params, condition_func_params, t)
 
 		if started_forced_vent then
@@ -1529,23 +1501,6 @@ mod:hook(CLASS.ActionHandler, "start_action", function(func, self, id, action_ob
 		end
 
 		return false
-	end
-
-	if should_handle and action_name == SECONDARY_SHOT_ACTION then
-		ads_shot_snapshot = capture_ads_snapshot()
-
-		if state.auto_venting or should_block_manual_ads_shot(ads_shot_snapshot) then
-			local started_forced_vent, vent_result = start_forced_vent_action(func, self, id, action_objects, action_params, condition_func_params, t)
-
-			if started_forced_vent then
-				return vent_result
-			end
-
-			state.post_ads_shot_vent = false
-			begin_auto_vent(false)
-
-			return false
-		end
 	end
 
 	local result = func(self, id, action_objects, action_name, action_params, action_settings, used_input, t, transition_type, condition_func_params, automatic_input, reset_combo_override)
@@ -1563,9 +1518,7 @@ mod:hook(CLASS.ActionHandler, "start_action", function(func, self, id, action_ob
 		state.queued_press = false
 		cancel_resume_after_vent()
 	elseif action_name == SECONDARY_SHOT_ACTION then
-		-- Preserve the charged ADS shot, then vent right after if the resulting heat ends up unsafe.
 		state.auto_venting = false
-		state.post_ads_shot_vent = true
 		state.queued_press = false
 		cancel_resume_after_vent()
 	elseif action_name == SECONDARY_CHARGE_ACTION then
@@ -1579,7 +1532,6 @@ mod:hook(CLASS.ActionHandler, "start_action", function(func, self, id, action_ob
 	elseif RESET_ACTIONS[action_name] then
 		reset_action_cycle_state()
 	elseif VENT_ACTIONS[action_name] then
-		state.post_ads_shot_vent = false
 		state.queued_press = false
 	end
 
@@ -1649,11 +1601,15 @@ mod:hook_require("scripts/settings/equipment/weapon_templates/plasma_rifles/sett
 	apply_spread_template_settings()
 end)
 
-mod:hook_require("scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1", function(weapon_template)
-	loaded_templates.weapon_template = weapon_template
-	capture_weapon_template_defaults(weapon_template)
-	apply_weapon_template_settings()
-end)
+for _, template_path in ipairs(PLASMA_TEMPLATE_PATHS) do
+	mod:hook_require(template_path, function(weapon_template)
+		if weapon_template and weapon_template.name then
+			loaded_templates.weapon_templates[weapon_template.name] = weapon_template
+			capture_weapon_template_defaults(weapon_template)
+			apply_weapon_template_settings(weapon_template, original_template_values.weapon_templates[weapon_template.name])
+		end
+	end)
+end
 
 mod:hook_require("scripts/extension_systems/weapon/actions/modules/overheat_action_module", function(OverheatActionModule)
 	mod:hook(OverheatActionModule, "running_action_state", function(func, self, t, time_in_action)
@@ -1669,14 +1625,23 @@ mod:hook_require("scripts/extension_systems/weapon/actions/modules/overheat_acti
 		end
 
 		if current_action == SECONDARY_CHARGE_ACTION then
-			if state.auto_venting then
-				return "overheating"
+			if not should_auto_release_ads_charge() then
+				return func(self, t, time_in_action)
 			end
 
-			if should_auto_vent_for_heat(current_heat) then
-				begin_auto_vent(false)
+			local charge_component = self._charge_component
+			local charge_level = charge_component and charge_component.charge_level or 0
+			local max_charge = charge_component and charge_component.max_charge or 0
 
-				return "overheating"
+			if max_charge <= 0 then
+				return func(self, t, time_in_action)
+			end
+
+			local charge_template = self._weapon_extension and self._weapon_extension:charge_template()
+			local release_threshold = full_charge_level(charge_template, max_charge)
+
+			if charge_level >= release_threshold then
+				return "fully_charged"
 			end
 
 			return func(self, t, time_in_action)
@@ -1704,20 +1669,6 @@ mod:hook_require("scripts/extension_systems/weapon/actions/modules/overheat_acti
 
 		if charge_level >= release_threshold then
 			return "fully_charged"
-		end
-
-		return func(self, t, time_in_action)
-	end)
-end)
-
-mod:hook_require("scripts/extension_systems/weapon/actions/action_vent_overheat", function(ActionVentOverheat)
-	mod:hook(ActionVentOverheat, "running_action_state", function(func, self, t, time_in_action)
-		if not mod_enabled or not is_local_unit(self._player_unit) or not refresh_plasma_state(self._weapon_extension) then
-			return func(self, t, time_in_action)
-		end
-
-		if state.auto_venting and current_overheat() <= auto_vent_resume_threshold() then
-			return "fully_vented"
 		end
 
 		return func(self, t, time_in_action)
