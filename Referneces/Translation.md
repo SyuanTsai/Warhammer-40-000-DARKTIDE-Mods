@@ -783,3 +783,18 @@
 - Competitive Urge - 求勝心
 - Rending Strikes - 裂擊
 - Bring it Down! - 幹掉它!
+
+##### 敵人 / 單位
+
+- Dreg Vanguard - 渣滓先鋒
+- Scab Vanguard - 血痂先鋒
+
+##### 狀態 / 效果
+
+- Toxin - 毒素
+- Phosphor Burn - 磷火灼燒
+- Weapon Malfunction - 武器故障
+
+##### 戰錘世界觀術語
+
+- Heretical Artifacts - 異端聖物
