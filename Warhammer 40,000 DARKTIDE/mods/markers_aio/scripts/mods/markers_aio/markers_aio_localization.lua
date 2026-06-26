@@ -1,5 +1,5 @@
 local mod = get_mod("markers_aio")
-mod.version = "2.13.6"
+mod.version = "2.13.9"
 mod:info("Markers Improved AIO Improved is installed, using version: " .. tostring(mod.version))
 
 mod.lookup_border_color = function(colour_string)
@@ -1373,6 +1373,7 @@ local loc = {
 		["zh-tw"] = "邊框顏色",
 		["zh-cn"] = "边框颜色",
 	},
+
 	boost_stimm_require_line_of_sight = {
 		en = "Require line of sight (Boost Stimm)",
 		["zh-cn"] = "专注兴奋剂仅视野内显示",
@@ -3096,6 +3097,14 @@ local loc = {
 		en = "You haven't collected this skull before.",
 		["zh-cn"] = "你还没有收集过这个颅骨。",
 		["zh-tw"] = "你還沒有收集過這個顱骨。",
+	},
+	unknown_markers_extra_allowed = {
+		en = "Enable adjustments for buttons & misc markers?",
+		["zh-tw"] = "啟用按鈕與其他標記的調整？",
+	},
+	unknown_markers_extra_allowed_tooltip = {
+		en = "If enabled, allows buttons and a few other misc unknown markers to be effected by the Unknown Marker settings. Including distance, fading, alpha etc. If disabled, these misc markers will only be effected by the colour choices.",
+		["zh-tw"] = "啟用後，按鈕與部分雜項未知標記會套用未知標記設定，例如距離、淡出、透明度等。若停用，這些標記只會套用顏色設定。",
 	},
 }
 
