@@ -1,16 +1,22 @@
-local mod                = get_mod("AutoMark")
-local context            = mod.context
-local mark_context       = mod.mark_context
-local TAG_NAMES          = mod.TAG_NAMES
-local mod_settings       = mod.settings
+---@class AutoMarkMod:DMFMod
+local mod                         = get_mod("AutoMark")
+local context                     = mod.context
+local mark_context                = mod.mark_context
+local TAG_NAMES                   = mod.TAG_NAMES
+local mod_settings                = mod.settings
+
+-- Imports
+local TalentSettings              = require("scripts/settings/talent/talent_settings")
+local cryptic_talent_settings     = TalentSettings.cryptic
+local noospheric_command_duration = cryptic_talent_settings.servo_skull_shooting_tagging.duration
 
 -- Global Cache
-local CLASS              = CLASS
-local ScriptUnit         = ScriptUnit
+local CLASS                       = CLASS
+local ScriptUnit                  = ScriptUnit
 
 -- Delay for Server Latency, Interval for Auto Mark
-local AUTO_MARK_DELAY    = 0.5
-local AUTO_MARK_INTERVAL = 0.2
+local AUTO_MARK_DELAY             = 0.5
+local AUTO_MARK_INTERVAL          = 0.333
 
 -- set delay and interval for auto mark
 local function on_set_tag(tag_context)
@@ -64,7 +70,7 @@ function mod:mark(tag_name, target_unit, target_tag)
     if target_tag then
         if tag_name == TAG_NAMES.ENEMY_TAG then
             return
-        elseif tag_name == TAG_NAMES.COMPANION_TAG or tag_name == TAG_NAMES.VETERAN_TAG then
+        elseif tag_name == TAG_NAMES.COMPANION_TAG or tag_name == TAG_NAMES.VETERAN_TAG or tag_name == TAG_NAMES.SERVO_SKULL_TAG then
             local template = target_tag._template
             local is_enemy_mark = template and template.name == TAG_NAMES.ENEMY_TAG
             if is_enemy_mark then
@@ -107,8 +113,7 @@ mod:hook(CLASS.SmartTagSystem, "trigger_tag_interaction",
         local player = context.player
         if player and interactor_unit == player.player_unit then
             local target_extension = self._unit_extension_data[target_unit]
-            local template = target_extension
-                and target_extension:contextual_tag_template(interactor_unit, optional_alternate)
+            local template = target_extension and target_extension:contextual_tag_template(interactor_unit, optional_alternate)
             local can_override = template and template.can_override
             if can_override then
                 local tag_name = template and template.name
@@ -162,6 +167,10 @@ mod:hook_safe(CLASS.SmartTag, "init",
             else
                 tag_context.is_cancelable = mod_settings.companion_cancel_mark_non_human
             end
+        elseif tag_name == TAG_NAMES.SERVO_SKULL_TAG then
+            if context.has_noospheric_command then
+                tag_context.noospheric_command_next_time = mod:get_latest_fixed_time() + noospheric_command_duration
+            end
         end
     end)
 
@@ -179,7 +188,12 @@ mod:hook(CLASS.SmartTag, "destroy",
             end
             tag_context.tag = nil
             tag_context.is_manual = false
-            tag_context.pounce_start_time = nil
+            if tag_name == TAG_NAMES.COMPANION_TAG then
+                tag_context.pounce_start_time = nil
+                tag_context.is_cancelable = false
+            elseif tag_name == TAG_NAMES.SERVO_SKULL_TAG then
+                tag_context.noospheric_command_next_time = math.huge
+            end
         end
 
         return func(self)

@@ -1,5 +1,7 @@
+---@class AutoMarkMod:DMFMod
 local mod          = get_mod("AutoMark")
 local mod_settings = mod.settings
+local FixedFrame = require("scripts/utilities/fixed_frame")
 
 -- Global Cache
 local Managers     = Managers
@@ -27,4 +29,8 @@ end
 
 function mod:gameplay_time()
     return Managers.time:time("gameplay")
+end
+
+function mod:get_latest_fixed_time()
+    return FixedFrame.get_latest_fixed_time()
 end

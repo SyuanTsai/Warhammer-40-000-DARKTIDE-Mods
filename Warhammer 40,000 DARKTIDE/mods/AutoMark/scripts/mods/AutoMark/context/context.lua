@@ -1,3 +1,4 @@
+---@class AutoMarkMod:DMFMod
 local mod        = get_mod("AutoMark")
 local context    = mod.context
 
@@ -25,6 +26,11 @@ end
 local function get_companion_spawner_extension()
     local player = Managers.player:local_player_safe(1)
     return player and ScriptUnit.extension(player.player_unit, "companion_spawner_system")
+end
+
+local function get_player_ability_extension()
+    local player = Managers.player:local_player_safe(1)
+    return player and ScriptUnit.extension(player.player_unit, "ability_system")
 end
 
 -- Track Player
@@ -64,14 +70,29 @@ local function init_player_extensions()
     if companion_spawner_extension then
         context.companion_spawner_extension = companion_spawner_extension
     end
+    local player_ability_extension = get_player_ability_extension()
+    if player_ability_extension then
+        context.player_ability_extension = player_ability_extension
+    end
+end
+
+local function init_hud_elements()
+    local hud = Managers.ui:get_hud()
+    local hud_element_smart_tagging = hud and hud:element("HudElementSmartTagging")
+    if hud_element_smart_tagging then
+        context.hud_element_smart_tagging = hud_element_smart_tagging
+    end
 end
 
 -- Talent Names
 local TALENT_NAMES                  = {
-    LONE_WOLF       = "adamant_disable_companion",
-    EXECUTION_ORDER = "adamant_execution_order",
-    FOCUS_TARGET    = "veteran_improved_tag",
-    FOCUSED_FIRE    = "veteran_improved_tag_more_damage",
+    LONE_WOLF          = "adamant_disable_companion",
+    EXECUTION_ORDER    = "adamant_execution_order",
+    FOCUS_TARGET       = "veteran_improved_tag",
+    FOCUSED_FIRE       = "veteran_improved_tag_more_damage",
+    FORCE_FIELD        = "cryptic_grenade_ability_force_field",
+    ARC_GRENADE        = "cryptic_grenade_ability_arc_grenade",
+    NOOSPHERIC_COMMAND = "cryptic_servo_skull_improved_tagging",
 }
 -- Talent Settings
 local talent_settings               = require("scripts/settings/talent/talent_settings")
@@ -89,22 +110,24 @@ local function init_player_talent_status(player_talent_extension)
     -- has companion
     context.has_companion = context.class_name == "adamant" and not talents[TALENT_NAMES.LONE_WOLF]
     -- has execution order
-    context.has_execution_order = context.class_name == "adamant"
-        and not not talents[TALENT_NAMES.EXECUTION_ORDER]
+    context.has_execution_order = context.class_name == "adamant" and not not talents[TALENT_NAMES.EXECUTION_ORDER]
     -- has focus target
-    context.has_focus_target = context.class_name == "veteran"
-        and not not talents[TALENT_NAMES.FOCUS_TARGET]
+    context.has_focus_target = context.class_name == "veteran" and not not talents[TALENT_NAMES.FOCUS_TARGET]
     -- has focused fire
     local has_focused_fire = not not talents[TALENT_NAMES.FOCUSED_FIRE]
     -- focus target max stacks
-    context.focus_target_max_stacks = context.class_name == "veteran" and context.has_focus_target
-        and (has_focused_fire and veteran_tag_max_stacks_talent or veteran_tag_max_stacks)
-        or 0
+    context.focus_target_max_stacks = context.class_name == "veteran" and context.has_focus_target and (has_focused_fire and veteran_tag_max_stacks_talent or veteran_tag_max_stacks) or 0
+
+    context.has_servo_skull = context.class_name == "cryptic" and not talents[TALENT_NAMES.FORCE_FIELD] and not talents[TALENT_NAMES.ARC_GRENADE]
+
+    context.has_noospheric_command = context.class_name == "cryptic" and not not talents[TALENT_NAMES.NOOSPHERIC_COMMAND]
 
     mod:print_debug("has companion", context.has_companion)
     mod:print_debug("has execution order", context.has_execution_order)
     mod:print_debug("has focus target", context.has_focus_target)
     mod:print_debug("focus target max stacks", context.focus_target_max_stacks)
+    mod:print_debug("has servo skull", context.has_servo_skull)
+    mod:print_debug("has noospheric command", context.has_noospheric_command)
 end
 
 -- Track Systems
@@ -129,7 +152,7 @@ function mod:init_game_settings()
 end
 
 -- Check if player is in hub
-function mod:check_is_in_hub()
+function mod:check_game_mode()
     local game_mode_manager = Managers.state.game_mode
     if game_mode_manager and not game_mode_manager:is_social_hub() and not game_mode_manager:is_prologue_hub() then
         context.game_mode_valid = true
@@ -144,6 +167,8 @@ function mod:init_context()
     init_player_components()
     -- Init Extensions
     init_player_extensions()
+    -- Init HUD Elements
+    init_hud_elements()
     -- Init Talents Status
     init_player_talent_status()
     -- Init Systems
@@ -228,6 +253,38 @@ mod:hook_safe(CLASS.CompanionSpawnerExtension, "destroy",
         end
     end)
 
+mod:hook_safe(CLASS.PlayerUnitAbilityExtension, "init",
+    function(self)
+        if self._player.viewport_name == "player1" then
+            mod:print_debug("Init PlayerUnitAbilityExtension")
+            context.player_ability_extension = self
+        end
+    end)
+
+mod:hook_safe(CLASS.PlayerUnitAbilityExtension, "delete",
+    function(self)
+        if self._player.viewport_name == "player1" then
+            mod:print_debug("Delete PlayerUnitAbilityExtension")
+            context.player_ability_extension = nil
+        end
+    end)
+
+-- Cache HUD Elements
+mod:hook_safe(CLASS.HudElementSmartTagging, "init",
+    function(self, parent, draw_layer, start_scale)
+        if self._parent._player_viewport_name == "player1" then
+            mod:print_debug("Init HudElementSmartTagging")
+            context.hud_element_smart_tagging = self
+        end
+    end)
+
+mod:hook_safe(CLASS.HudElementSmartTagging, "destroy",
+    function(self, ui_renderer)
+        if self._parent._player_viewport_name == "player1" then
+            mod:print_debug("Destroy HudElementSmartTagging")
+            context.hud_element_smart_tagging = nil
+        end
+    end)
 
 -- Update Talent Status
 mod:hook_safe(CLASS.PlayerUnitTalentExtension, "_apply_talents",

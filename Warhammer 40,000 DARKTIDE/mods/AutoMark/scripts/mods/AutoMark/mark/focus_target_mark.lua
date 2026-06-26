@@ -1,3 +1,4 @@
+---@class AutoMarkMod:DMFMod
 local mod          = get_mod("AutoMark")
 local context      = mod.context
 local mod_settings = mod.settings
@@ -58,8 +59,7 @@ local RANGED_ACTION_KINDS = {
     charge_ammo = true,
 }
 mod:hook_safe(CLASS.ActionHandler, "start_action",
-    function(self, id, action_objects, action_name, action_params, action_settings, used_input, t, transition_type,
-             condition_func_params, automatic_input, reset_combo_override)
+    function(self, id, action_objects, action_name, action_params, action_settings, used_input, t, transition_type, condition_func_params, automatic_input, reset_combo_override)
         if not mod_settings.focus_target_switch
             or self._unit_data_extension._player.viewport_name ~= 'player1'
             or id ~= "weapon_action"

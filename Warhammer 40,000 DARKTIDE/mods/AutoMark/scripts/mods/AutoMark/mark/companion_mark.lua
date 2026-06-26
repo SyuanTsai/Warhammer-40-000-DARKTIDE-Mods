@@ -1,3 +1,4 @@
+---@class AutoMarkMod:DMFMod
 local mod                          = get_mod("AutoMark")
 local context                      = mod.context
 local mod_settings                 = mod.settings
@@ -89,6 +90,10 @@ end
 
 -- Cache All Units Marked by Execution Order
 function mod:init_execution_order_units()
+    if not context.has_execution_order then
+        return
+    end
+
     local smart_tag_system = context.smart_tag_system
     if not smart_tag_system then
         return
@@ -134,8 +139,7 @@ mod:hook_safe(CLASS.OutlineSystem, "on_remove_extension",
 
 -- Hook for Companion Dog Attack Info
 mod:hook_safe(CLASS.AttackReportManager, "add_attack_result",
-    function(self, damage_profile, attacked_unit, attacking_unit, attack_direction, hit_world_position, hit_weakspot,
-             damage, attack_result, attack_type, damage_efficiency, is_critical_strike)
+    function(self, damage_profile, attacked_unit, attacking_unit, attack_direction, hit_world_position, hit_weakspot, damage, attack_result, attack_type, damage_efficiency, is_critical_strike)
         local player = context.player
         local player_unit = player and player.player_unit
         if not mod_settings.companion_cancel_mark
@@ -151,6 +155,6 @@ mod:hook_safe(CLASS.AttackReportManager, "add_attack_result",
             and marked_tag._target_unit == attacked_unit
             and tag_context.pounce_start_time == nil
         then
-            tag_context.pounce_start_time = mod:gameplay_time()
+            tag_context.pounce_start_time = mod:get_latest_fixed_time()
         end
     end)
