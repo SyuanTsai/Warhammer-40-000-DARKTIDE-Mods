@@ -496,6 +496,22 @@ function mod.on_all_mods_loaded()
 	mod:info("Version "..mod.version.." loaded uwu nya :3")
 
 	-- ################################################
+	-- CJK Font Alignment Fix
+	-- Reprocess left|right localization strings once fonts are ready.
+	-- show_cjk_glyphs loads CJK font packages asynchronously, then calls
+	-- Managers.font:_setup_font_definitions(). We hook that call so
+	-- create_string() can remeasure text widths with correct CJK metrics.
+	-- ################################################
+	if mod.reprocess_create_string_localizations then
+		mod.reprocess_create_string_localizations()
+		if Managers.font and Managers.font._setup_font_definitions then
+			mod:hook_safe(Managers.font, "_setup_font_definitions", function()
+				mod.reprocess_create_string_localizations()
+			end)
+		end
+	end
+
+	-- ################################################
 	-- HOOKS
 	-- ################################################
 	--[[
