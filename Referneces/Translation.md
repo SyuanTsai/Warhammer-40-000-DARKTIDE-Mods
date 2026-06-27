@@ -43,7 +43,7 @@
 - Fury - 狂怒  
 
 #### 老兵(VETERAN)
-- Focus Target - 專注目標  
+- Focus Target - 鎖定目標
 - Focus - 專注  
 - Melee Specialist - 近戰專家  
 - Ranged Specialist - 遠程專家  
