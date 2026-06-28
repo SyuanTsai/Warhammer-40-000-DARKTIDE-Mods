@@ -42,10 +42,10 @@
 
 ### [Power DI](https://www.nexusmods.com/warhammer40kdarktide/mods/281)
     進階記分板
-- MOD 網站最後更新日期：Last updated 23 March 2026, 12:43AM
-- MOD 版本：Version 1.1.19
-- MOD 檔案名稱：Power_DI_1.1.19.zip-281-v1-1-19-1774197819
-- 手動維護最後下載日期：2026-03-29
+- MOD 網站最後更新日期：Last updated 27 June 2026, 7:54PM
+- MOD 版本：Version 1.1.21
+- MOD 檔案名稱：Power_DI_1.1.21.zip_v1.1.21_sXjHdXNKg
+- 手動維護最後下載日期：2026-06-28
 
 ### [Skitarius](https://www.nexusmods.com/warhammer40kdarktide/mods/510)
     顱骨支援
