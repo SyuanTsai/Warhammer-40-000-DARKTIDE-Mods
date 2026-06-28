@@ -344,6 +344,9 @@ SkitariusOmnissiah.init = function(self, mod)
     self.weapon_manager = mod.weapon_manager
     self.armoury = mod.armoury
     self.sweep = ""
+    self.current_action_raw = ""
+    self.current_action = ""
+    self.current_action_time = 0
 end
 
 SkitariusOmnissiah.set_bind_manager = function(self, bind_manager)
@@ -358,6 +361,7 @@ SkitariusOmnissiah.omnissiah = function(self, queried_input, user_value)
     local is_interrupted = self:maybe_force_interrupt()
 
     local current_action = self:get_action()
+    self.current_action = current_action
     local desired_action = self.engram:current_command()
 
     if is_interrupted and not desired_action then
@@ -369,11 +373,11 @@ SkitariusOmnissiah.omnissiah = function(self, queried_input, user_value)
         return user_value
     end
 
-    --if desired_action then self.mod:echo("CURRENT: %s | DESIRED: %s", current_action, desired_action) end
     if self:pause() then
         return DO_NOT_PAUSE[queried_input] and user_value or false
     end
 
+    --if desired_action then self.mod:echo("CURRENT: %s | DESIRED: %s", current_action, desired_action) end
     if (current_action == desired_action or (desired_action and current_action == desired_action .. "_alt")) or self:should_skip(current_action, desired_action) then
         -- Don't iterate if we're in a quick_wield and override_primary is active (prevents early iteration during swap)
         if desired_action ~= "quick_wield" then
@@ -384,7 +388,7 @@ SkitariusOmnissiah.omnissiah = function(self, queried_input, user_value)
     end
 
     desired_action = self:maybe_convert_desire(current_action, desired_action)
-
+    
     if not current_action or not PRAY[current_action] or not PRAY[current_action][desired_action] then
         if self.bind_manager:override_primary() and self.engram:valid_engram("override_primary") and not self.weapon_manager:is_blocking() then
             if queried_input == "action_one_pressed" or queried_input == "action_one_hold" then
@@ -396,7 +400,6 @@ SkitariusOmnissiah.omnissiah = function(self, queried_input, user_value)
     end
 
     local divine_outcome = PRAY[current_action][desired_action][queried_input]
-
     local raw_mode = self.engram:get_setting("RAW_MODE")
     local resolved_mode = self.engram:get_setting("MODE")
 
@@ -491,9 +494,11 @@ SkitariusOmnissiah.get_action = function(self)
             local component = handler_data.component
             local start_time = component and component.start_t
             if running_action then
+                running = true
                 local action_settings = running_action:action_settings()
                 local action_name = action_settings.name
-
+                self.current_action_raw = action_name
+                self.current_action_time = Managers.time:time("gameplay") - start_time
                 self:maybe_update_aim(action_name)
                 self:maybe_update_shooting(start_time, action_name, action_settings)
                 local temp_step_name = self:action_to_step(action_name)
@@ -606,11 +611,20 @@ SkitariusOmnissiah.maybe_convert_action = function(self, player_unit, running_ac
            ( mechanicus_strings[original_name] or (string.find(original_name, "stab") or string.find(original_name, "bash"))) then
             if weapon_manager:is_charged_melee(running_action, handler_data.component, action_settings) then
                 if engram:current_command() == "special_heavy_execute" then
+                    if weapon_manager:in_cooldown() then
+                        return "heavy_attack"
+                    end
                     return "special_heavy_execute"
                 else
                     return "special_heavy_attack"
                 end
             else
+                if engram:current_command() == "special_action" then
+                    if weapon_manager:in_cooldown() then
+                        return "start_attack"
+                    end
+                    return "special_action"
+                end
                 return "special_start_attack"
             end
         end
@@ -754,8 +768,27 @@ SkitariusOmnissiah.maybe_convert_desire = function(self, current_action, desired
     end
 
     -- Fix for Mechanicus Power Sword needing to trigger light special attacks via special_action
-    if desired_action == "special_action" and weapon_name == "powersword_p3_m1" then
-        return "special_start_attack"
+    if weapon_name == "powersword_p3_m1" then
+        if weapon_manager:in_cooldown() then
+            if desired_action == "special_start_attack" then
+                desired_action = "start_attack"
+            elseif desired_action == "special_action" then
+                desired_action = "start_attack"
+            elseif desired_action == "special_heavy_execute" then
+                desired_action = "heavy_attack"
+            end
+        else
+            if desired_action == "special_action" and current_action == "idle" then
+                desired_action = "special_start_attack"
+            elseif desired_action == "special_action" and current_action == "special_start_attack" then
+                desired_action = "special_light_attack"
+            end
+        end
+        
+        -- SUPER fucking jank
+        if current_action == desired_action then
+            self.engram:iterate_engram()
+        end
     end
 
     return desired_action
@@ -845,24 +878,12 @@ SkitariusOmnissiah.should_skip = function(self, current_action, desired_action)
         -- Skip special actions if special is already active and mod is not set to always activate special actions
         if desired_action == "special_action" or desired_action == "special_start_attack" then
             if weapon_manager:in_cooldown() or (weapon_manager:special_active() and not engram:get_setting("ALWAYS_SPECIAL")) then
-                if not string.find(weapon_name, "powermaul_p2") then
+                if not (string.find(weapon_name, "powermaul_p2") or string.find(weapon_name, "powersword_p3")) then
                     return true
                 end
             end
         end
 
-        -- Failsafe to avoid getting stuck trying to execute a heavy when low on charges with the Mechanicus Power Sword
-        if desired_action == "special_heavy_execute" and weapon_manager:in_cooldown() then
-            return true
-        end
-
-        --[[]
-        if not engram:get_setting("ALWAYS_SPECIAL") and (weapon_manager:in_cooldown() or weapon_manager:special_active()) and (desired_action == "special_action" or desired_action == "special_start_attack") then
-            if not string.find(weapon_name, "powermaul_p2") then
-                return true
-            end
-        end
-        --]]
         -- Skip invert special actions if special is NOT active and mod is not set to always activate special actions
         if desired_action == "special_invert" and not (engram:get_setting("ALWAYS_SPECIAL") or weapon_manager:special_active())then
             return true

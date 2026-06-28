@@ -472,7 +472,7 @@ return {
                         setting_id = "special_buff_stacks",
                         type = "numeric",
                         default_value = 0,
-                        range = { 0, 6 },
+                        range = { 0, 8 },
                         unit_text = "buff_stacks",
                     },
                     {
