@@ -110,6 +110,10 @@ SkitariusWeaponManager.set_bind_manager = function(self, binds)
     self.binds = binds
 end
 
+SkitariusWeaponManager.set_omnissiah = function(self, omnissiah)
+    self.omnissiah = omnissiah
+end
+
 --  ╦ ╦╔═╗╔═╗╔═╗╔═╗╔╗╔  ╔╦╗╔═╗╔╦╗╔═╗
 --  ║║║║╣ ╠═╣╠═╝║ ║║║║   ║║╠═╣ ║ ╠═╣
 --  ╚╩╝╚═╝╩ ╩╩  ╚═╝╝╚╝  ═╩╝╩ ╩ ╩ ╩ ╩
@@ -455,16 +459,41 @@ SkitariusWeaponManager.in_cooldown = function(self)
             local special_class = weapon_template and weapon_template.weapon_special_class
             local special_active = inventory_slot_component and inventory_slot_component.special_active
 
-            -- Dual Shivs/Mechanicus Power Sword: treat special as unavailable when remaining charges are below SPECIAL_BUFF_STACK
-            if weapon_template_name and (string.find(weapon_template_name, "^dual_shivs_p1") or string.find(weapon_template_name, "^powersword_p3")) and special_charges then
+            -- Dual Shivs/Mechanicus Power Sword/Arc Maul: treat special as unavailable when remaining charges are below SPECIAL_BUFF_STACK
+            local special_charge_weapons = {
+                dual_shivs_p1_m1 = true,
+                dual_shivs_p1_m2 = true,
+                powersword_p3_m1 = true,
+                powermaul_p3_m1 = true
+            }
+            if weapon_template_name and special_charge_weapons[weapon_template_name] and special_charges then
                 local reserve = 0
                 local engram = self.engram
                 if engram then
                     reserve = engram:get_setting("SPECIAL_BUFF_STACKS") or 0
                 end
-                -- Allow Mechanicus Sword to attempt a heavy if there are enough charges, even if we should consider the weapon in cooldown
-                if special_active then special_charges = special_charges + 1 end
-                if special_charges <= reserve then
+                -- Arc Maul has 40 max charges, uses 5 per attack, so 8 reserve "charges"
+                if weapon_template_name == "powermaul_p3_m1" then
+                    reserve = reserve * 5
+                end
+                -- Mechanicus Power Sword edge-cases
+                if weapon_template_name == "powersword_p3_m1" and special_active then
+                    local current_action_time = self.omnissiah.current_action_time or 0
+                    local current_command = engram:current_command()
+
+                    if current_command == "special_heavy_execute" then
+                        return false
+                    end
+                    if current_command == "special_start_attack" then
+                        -- jank detection of post-final-charge state
+                        if current_action_time > 0.5 then
+                            return true
+                        end
+                        return false
+                    end
+                end
+
+                if special_charges < reserve then
                     return true
                 end
             end
@@ -756,8 +785,8 @@ SkitariusWeaponManager.interruption = function(self)
     if not halt_on_interrupt then return false end
     local interruption_type = self.mod.settings.halt_on_interrupt_types
     local sprinting = self:is_sprinting() -- Sprinting
-    local blocking = self.binds:input_value("action_two_hold") and self.binds:any_binds()      -- Manual blocking/aiming/charging
-    local attacking = self.binds:input_value("action_one_hold") and self.binds:any_binds()      -- Manual attacking outside of primary override sequence
+    local blocking = self.binds:input_value("action_two_hold") and self.binds:waiting_toggles()      -- Manual blocking/aiming/charging
+    local attacking = self.binds:input_value("action_one_hold") and self.binds:waiting_toggles()      -- Manual attacking outside of primary override sequence
     -- Double-check to ensure it doesn't mess with intended actions (primarily ranged weaponry)
     local aim_or_charge = self:is_aiming() or self:is_charging()
     if attacking and aim_or_charge then
