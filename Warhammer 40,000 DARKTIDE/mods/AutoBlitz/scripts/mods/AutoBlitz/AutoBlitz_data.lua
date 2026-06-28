@@ -147,6 +147,49 @@ return {
 				}
 			},
 			{
+				setting_id = "broker",
+				type = "group",
+				sub_widgets = {
+					{
+						setting_id = "flask_enabled",
+						type = "checkbox",
+						default_value = false
+					},
+					{
+						setting_id = "flask_throw_type",
+						type = "dropdown",
+						default_value = "overhand",
+						options = {
+							{ text = "overhand", value = "overhand" },
+							{ text = "underhand", value = "underhand" },
+						}
+					},
+					{
+						setting_id = "flask_minimum",
+						tooltip = "flask_tooltip",
+						type = "numeric",
+						default_value = 1,
+						range         = {1, 5},
+						unit_text     = "stacks"
+					},
+					--[[]]
+					{
+						setting_id = "launcher_enabled",
+						type = "checkbox",
+						default_value = false
+					},
+					{
+						setting_id = "launcher_minimum",
+						tooltip = "launcher_tooltip",
+						type = "numeric",
+						default_value = 1,
+						range         = {1, 5},
+						unit_text     = "stacks"
+					},
+					--]]
+				}
+			},
+			{
 				setting_id = "ogryn",
 				type = "group",
 				sub_widgets = {
@@ -216,6 +259,104 @@ return {
 						range         = {1, 3},
 						unit_text     = "stacks"
 					},
+				}
+			},
+			{
+				setting_id = "cryptic",
+				type = "group",
+				sub_widgets = {
+					--[[]
+					{
+						setting_id = "medic_enabled",
+						type = "checkbox",
+						default_value = false
+					},
+					{
+						setting_id = "help_downed",
+						type = "checkbox",
+						default_value = false
+					},
+					{
+						setting_id = "help_hogtied",
+						type = "checkbox",
+						default_value = false
+					},
+					{
+						setting_id = "help_netted",
+						type = "checkbox",
+						default_value = false
+					},
+					{
+						setting_id = "medic_minimum",
+						tooltip = "medic_tooltip",
+						type = "numeric",
+						default_value = 1,
+						range         = {1, 6},
+						unit_text     = "stacks"
+					},
+					--]]
+					--[[]]
+					{
+						setting_id = "arc_enabled",
+						type = "checkbox",
+						default_value = false
+					},
+					{
+						setting_id = "arc_throw_type",
+						type = "dropdown",
+						default_value = "overhand",
+						options = {
+							{ text = "overhand", value = "overhand" },
+							{ text = "underhand", value = "underhand" },
+						}
+					},
+					{
+						setting_id = "arc_minimum",
+						tooltip = "arc_tooltip",
+						type = "numeric",
+						default_value = 1,
+						range         = {1, 6},
+						unit_text     = "stacks"
+					},
+					{
+						setting_id = "shield_enabled",
+						type = "checkbox",
+						default_value = false
+					},
+					--[[]
+					{
+						setting_id = "shield_ignore_toughness",
+						type = "checkbox",
+						tooltip = "shield_ignore_toughness_tooltip",
+						default_value = false
+					},
+					--]]
+					{
+						setting_id = "shield_type",
+						tooltip = "shield_type_tooltip",
+						type = "dropdown",
+						default_value = "current_health",
+						options = {
+							{ text = "current_health", value = "current_health" },
+							{ text = "damage_taken", value = "damage_taken" },
+						}
+					},
+					{
+						setting_id = "shield_threshold",
+						tooltip = "shield_threshold_tooltip",
+						type = "numeric",
+						default_value = 0,
+						range         = {0, 100},
+					},
+					{
+						setting_id = "shield_minimum",
+						tooltip = "shield_tooltip",
+						type = "numeric",
+						default_value = 1,
+						range         = {1, 6},
+						unit_text     = "stacks"
+					}
+					--]]
 				}
 			},
 			{
@@ -338,49 +479,6 @@ return {
 						range         = {1, 5},
 						unit_text     = "stacks"
 					},
-				}
-			},
-			{
-				setting_id = "broker",
-				type = "group",
-				sub_widgets = {
-					{
-						setting_id = "flask_enabled",
-						type = "checkbox",
-						default_value = false
-					},
-					{
-						setting_id = "flask_throw_type",
-						type = "dropdown",
-						default_value = "overhand",
-						options = {
-							{ text = "overhand", value = "overhand" },
-							{ text = "underhand", value = "underhand" },
-						}
-					},
-					{
-						setting_id = "flask_minimum",
-						tooltip = "flask_tooltip",
-						type = "numeric",
-						default_value = 1,
-						range         = {1, 5},
-						unit_text     = "stacks"
-					},
-					--[[]]
-					{
-						setting_id = "launcher_enabled",
-						type = "checkbox",
-						default_value = false
-					},
-					{
-						setting_id = "launcher_minimum",
-						tooltip = "launcher_tooltip",
-						type = "numeric",
-						default_value = 1,
-						range         = {1, 5},
-						unit_text     = "stacks"
-					},
-					--]]
 				}
 			},
 		}

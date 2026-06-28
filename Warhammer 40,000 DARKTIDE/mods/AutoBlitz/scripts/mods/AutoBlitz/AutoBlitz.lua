@@ -29,7 +29,20 @@ local grenades = {
 	},
 	flask = { enabled = false, minimum = 1, throw_type = "overhand" },
 	launcher = { enabled = false, minimum = 1, throw_type = "overhand" },
+	arc = { enabled = false, minimum = 1, throw_type = "overhand" },
+	medic = { enabled = false, minimum = 1, help_downed = false, help_hogtied = false, help_netted = false },
+	shield = { enabled = false, minimum = 1, shield_threshold = 0, shield_type = "current_health" },
 }
+
+local BUFFER = {
+	attacks = 0, -- Number of attacks in the buffer
+	delta = 0, -- Time since last attack
+	last = 0, -- Time of last attack
+	health = 0, -- Total health damage from buffer
+	toughness = 0, -- Total toughness damage from buffer
+	max = 0 -- Highest single damage taken in buffer
+}
+
 
 -- Grenade Map
 local gmap = {
@@ -46,7 +59,8 @@ local gmap = {
 	adamant_grenade = "arbites",
 	adamant_whistle = "dogsplosion",
 	tox_grenade = "flask",
-	missile_launcher = "launcher"
+	missile_launcher = "launcher",
+	arc_grenade = "arc",
 }
 
 -- Interruptions
@@ -140,12 +154,21 @@ mod.on_all_mods_loaded = function()
 	grenades.dogsplosion.allow_daemonhost = mod:get("dogsplosion_allow_daemonhost")
 	grenades.dogsplosion.require_tag = mod:get("dogsplosion_require_tag")
 	grenades.dogsplosion.cooldown = mod:get("dogsplosion_cooldown")
+	-- Skull (Medic)
+	grenades.medic.help_downed = mod:get("medic_help_downed")
+	grenades.medic.help_hogtied = mod:get("medic_help_hogtied")
+	grenades.medic.help_netted = mod:get("medic_help_netted")
+	-- Shield
+	grenades.shield.shield_threshold = mod:get("shield_threshold")
+	grenades.shield.shield_type = mod:get("shield_type")
+	mod.clear_buffer()
 end
 
 mod.on_game_state_changed = function()
 	local archetype = mod.check_archetype()
 	DOG.ELIGIBLE = archetype and archetype == "adamant" or false
 	DOG.UNIT = nil
+	mod.clear_buffer()
 end
 
 mod.update = function()
@@ -161,6 +184,7 @@ mod.update = function()
 	if DOG.UNIT == nil and DOG.ELIGIBLE then
 		DOG.UNIT = mod.fetch_dog()
 	end
+	mod.update_buffer()
 end
 
 -- ┌────────────────────────────┐ --
@@ -168,6 +192,28 @@ end
 -- │      CUSTOM FUNCTIONS      │ --
 -- │                            │ --
 -- └────────────────────────────┘ --
+
+mod.update_buffer = function()
+	if BUFFER.attacks == 0 then return end
+	local limit = 2
+	local time = Managers.time:time("gameplay")
+	BUFFER.delta = time - BUFFER.last
+	if BUFFER.delta > limit then
+		BUFFER.attacks = 0
+		BUFFER.health = 0
+		BUFFER.toughness = 0
+		BUFFER.max = 0
+	end
+end
+
+mod.clear_buffer = function()
+	BUFFER.last = 0
+	BUFFER.delta = 0
+	BUFFER.attacks = 0
+	BUFFER.health = 0
+	BUFFER.toughness = 0
+	BUFFER.max = 0
+end
 
 -- Tells the mod that the throw keybind has been pressed (and in turn should throw a grenade)
 mod.throw_grenade = function()
@@ -201,6 +247,12 @@ mod.quick_throw = function()
 			return true
 		end
 	end
+	if archetype == "cryptic" then
+		local grenade = mod.check_grenade()
+		if not grenade or grenade ~= "arc_grenade" then
+			return true
+		end
+	end
 	return false
 end
 
@@ -210,7 +262,7 @@ mod.check_grenade = function()
     local player_unit = player and player.player_unit
     local weapon_extension = player_unit and ScriptUnit.has_extension(player_unit, "weapon_system")
     local weapons = weapon_extension and weapon_extension._weapons
-    local weapon = weapons.slot_grenade_ability
+    local weapon = weapons and weapons.slot_grenade_ability
     local weapon_template = weapon and weapon.weapon_template
     local name = weapon_template and weapon_template.name
     return name
@@ -409,6 +461,97 @@ mod.get_dogsplosion_charges = function()
 	return charges
 end
 
+mod.check_shield = function()
+	local player_manager = Managers and Managers.player
+	if player_manager then
+		local player = player_manager:local_player_safe(1)
+		local player_unit = player and player.player_unit
+		local ability_extension = ScriptUnit.has_extension(player_unit, "ability_system")
+		if ability_extension and ability_extension._equipped_abilities.grenade_ability then
+			blitz = ability_extension._equipped_abilities.grenade_ability.ability_template
+			if blitz and blitz == "cryptic_force_field" then
+				return true
+			end
+		end
+	end
+	return false
+end
+
+mod.panic = function()
+	if not grenades.shield.enabled then return false end
+	-- Ignore if downed/disabled
+	local DISABLED_STATES = {
+		catapulted = true,
+		consumed = true,
+		dead = true,
+		grabbed = true,
+		hogtied = true,
+		knocked_down = true,
+		ledge_hanging = true,
+		mutant_charged = true,
+		netted = true,
+		pounced = true,
+		vortex_grabbed = true,
+		warp_grabbed = true,
+	}
+	local player = Managers.player:local_player_safe(1)
+	local player_unit = player and player.player_unit
+	local unit_data_extension = player_unit and ScriptUnit.has_extension(player_unit, "unit_data_system")
+	local character_state_component = unit_data_extension and unit_data_extension:read_component("character_state")
+	if character_state_component and DISABLED_STATES[character_state_component.state_name] then
+		return false
+	end
+
+	local shield_type = grenades.shield.shield_type
+	local threshold = grenades.shield.shield_threshold
+
+	-- Damage check
+	if threshold > 0 and shield_type == "damage_taken" then
+		local total_damage = 0
+		total_damage = BUFFER.health
+		if total_damage >= threshold then
+			return true
+		end
+	end
+
+	local toughness = player_unit and ScriptUnit.has_extension(player_unit, "toughness_system")
+	local current_toughness = toughness and toughness:current_toughness_percent_visual() * 100
+	local shield_broken = (current_toughness and current_toughness == 0) and true or false
+	local health = player_unit and ScriptUnit.has_extension(player_unit, "health_system")
+	local current_health = health and health:current_health_percent() * 100
+	local current_health_raw = health and health:current_health()
+
+	-- Health check
+	if threshold > 0 and shield_type == "current_health" then
+		local health_below_threshold = (current_health and current_health <= threshold) and true or false
+		local any_ranged_damage_taken = BUFFER.health + BUFFER.toughness
+		if shield_broken and health_below_threshold and any_ranged_damage_taken then
+			return true
+		end
+	end
+
+	-- Emergency check
+	if shield_broken and BUFFER.max > 0 and BUFFER.max > current_health_raw then
+		return true
+	end
+	return false
+end
+
+-- TO DO
+--[[]
+mod.find_medic_target = function()
+	local player = Managers.player:local_player_safe(1)
+	local unit_data_extension = player and player.player_unit and ScriptUnit.has_extension(player.player_unit, "unit_data_system")
+	local target_finder = unit_data_extension and unit_data_extension:read_component("action_module_ability_target_finder")
+	if target_finder then
+		mod:echo(target_finder)
+		if target_finder.target_unit_1 then
+			mod:echo(target_finder.target_unit_1)
+		end
+	end
+end
+--]]
+
 -- ┌────────────────────────────┐ --
 -- │                            │ --
 -- │         SAFE HOOKS         │ --
@@ -501,10 +644,12 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
 	-- Dogsplosion
 	if action_name == "grenade_ability_pressed" then
 		local dogsplosion = mod.check_dogsplosion()
+		local shield = mod.check_shield()
 		-- Force this action when the throw keybind is pressed
 		if KEYBIND.using_keybind and KEYBIND.throw_keybind_pressed then
+			
 			-- Reset immediately if using dogsplosion as it cannot be "equipped"
-			if dogsplosion or mod.quick_throw() then
+			if dogsplosion or shield or mod.quick_throw() then
 				KEYBIND.throw_keybind_pressed = false
 			end
 			return true
@@ -572,6 +717,19 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
 				DOG.LAST_EXPLOSION = Managers.time:time("main")
 				DOG.POUNCING = false
 				return true
+			end
+		end
+		-- Medicae Servo Skull
+		if grenades.medic.enabled then
+		end
+		-- Integrated Refraction Emitter
+		if shield and grenades.shield.enabled then
+			local player = Managers.player:local_player(1)
+			local player_unit = player and player.player_unit
+			local ability_system = player_unit and ScriptUnit.extension(player_unit, "ability_system")
+			local charges = ability_system and ability_system:remaining_ability_charges("grenade_ability") or 0
+			if charges >= grenades.shield.minimum then
+				return mod.panic()
 			end
 		end
 	end
@@ -670,6 +828,33 @@ mod:hook(CLASS.PlayerUnitWeaponExtension, "on_slot_wielded", function(func, self
 		thrown = false
 	end
 	return func(self, slot_name, t, skip_wield_action)
+end)
+
+-- Toughness monitoring
+mod:hook(CLASS.PlayerUnitToughnessExtension, "add_damage", function(func, self, damage_amount, attack_result, hit_actor, damage_profile, attack_type, attack_direction, hit_world_position_or_nil)
+    local actual_damage = func(self, damage_amount, attack_result, hit_actor, damage_profile, attack_type, attack_direction, hit_world_position_or_nil)
+	if attack_type and attack_type == "ranged" then
+		BUFFER.toughness = BUFFER.toughness + actual_damage
+		BUFFER.attacks = BUFFER.attacks + 1
+		BUFFER.last = Managers.time:time("gameplay")
+		if BUFFER.max < actual_damage then
+			BUFFER.max = actual_damage
+		end
+	end
+    return actual_damage
+end)
+-- Health monitoring
+mod:hook(CLASS.PlayerUnitHealthExtension, "add_damage", function(func, self, damage_amount, permanent_damage, hit_actor, damage_profile, attack_type, attack_direction, attacking_unit)
+	local actual_damage = func(self, damage_amount, permanent_damage, hit_actor, damage_profile, attack_type, attack_direction, attacking_unit)
+	if attack_type and attack_type == "ranged" then
+		BUFFER.health = BUFFER.health + actual_damage
+		BUFFER.attacks = BUFFER.attacks + 1
+		BUFFER.last = Managers.time:time("gameplay")
+		if BUFFER.max < actual_damage then
+			BUFFER.max = actual_damage
+		end
+	end
+	return actual_damage
 end)
 
 -- ┌───────────────────┐ --
