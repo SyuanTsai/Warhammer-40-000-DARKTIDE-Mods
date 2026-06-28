@@ -726,10 +726,10 @@
 
 ### [PlasmaBFG](https://www.nexusmods.com/warhammer40kdarktide/mods/834)
     電漿槍 優化
-- MOD 網站最後更新日期：Last updated 24 June 2026, 3:44PM
-- MOD 版本：1.0.11
-- MOD 檔案名稱：PlasmaBFG_1.0.11_GAN5MAIhz
-- 手動維護最後下載日期：2026-06-26
+- MOD 網站最後更新日期：Last updated 28 June 2026, 2:50AM
+- MOD 版本：1.0.13
+- MOD 檔案名稱：PlasmaBFG_1.0.13_IP0ifPVyL
+- 手動維護最後下載日期：2026-06-28
 
 # 移除的MOD
 
