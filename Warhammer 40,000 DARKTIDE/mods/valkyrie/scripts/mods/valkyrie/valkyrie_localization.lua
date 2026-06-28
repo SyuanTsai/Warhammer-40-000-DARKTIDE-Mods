@@ -75,15 +75,25 @@ return {
 		["zh-cn"] = "只显示我",
 		["zh-tw"] = "只顯示我",
 	},
+	BusinessCardsTitle = {
+		en = "Business cards",
+		["zh-cn"] = "Business cards",
+		["zh-tw"] = "名片",
+	},
+	BusinessCardsIncludeMeTitle = {
+		en = "Include my card",
+		["zh-cn"] = "Include my card",
+		["zh-tw"] = "包含我的名片",
+	},
 	ExperimentalTitle = {
 		en = "Experimental:",
 		["zh-cn"] = "实验性：",
 		["zh-tw"] = "實驗性功能：",
 	},
 	ExperimentalTooltip = {
-		en = "{#color(93,101,50)}Extra bots only works with Default above, and fills blank seats. No uniforms and Weapon presentation are limited to Default or Only me.{#reset()}",
-		["zh-cn"] = "{#color(93,101,50)}Extra bots only works with Default above, and fills blank seats. No uniforms and Weapon presentation are limited to Default or Only me.{#reset()}",
-		["zh-tw"] = "{#color(93,101,50)}額外機器人僅適用於上方的「預設」模式並填補空位。無制服及武器展示功能僅限「預設」或「只顯示我」模式。{#reset()}",
+		en = "{#color(93,101,50)}Extra bots only works with Default above, and fills blank seats. No uniforms, Weapon presentation and Babooshka are limited to Default or Only me.{#reset()}",
+		["zh-cn"] = "{#color(93,101,50)}Extra bots only works with Default above, and fills blank seats. No uniforms, Weapon presentation and Babooshka are limited to Default or Only me.{#reset()}",
+		["zh-tw"] = "{#color(93,101,50)}額外機器人僅適用於上方的「預設」模式並填補空位。無制服、武器展示及 Babooshka 功能僅限「預設」或「只顯示我」模式。{#reset()}",
 	},
 	ExperimentalNone = {
 		en = "None",
@@ -104,5 +114,10 @@ return {
 		en = "Weapon presentation",
 		["zh-cn"] = "武器展示",
 		["zh-tw"] = "武器展示",
+	},
+	ExperimentalBabooshka = {
+		en = "Babooshka",
+		["zh-cn"] = "Babooshka",
+		["zh-tw"] = "Babooshka",
 	},
 }
