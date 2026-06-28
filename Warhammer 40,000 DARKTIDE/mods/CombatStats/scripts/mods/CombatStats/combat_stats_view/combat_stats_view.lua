@@ -7,12 +7,12 @@ local ViewElementInputLegend =
     mod:original_require('scripts/ui/view_elements/view_element_input_legend/view_element_input_legend')
 
 local CombatStatsTracker = mod:io_dofile('CombatStats/scripts/mods/CombatStats/combat_stats_tracker')
-local CombatStatsUtils = mod:io_dofile('CombatStats/scripts/mods/CombatStats/combat_stats_utils')
 
 local COLOR_MELEE = Color.gray(255, true)
 local COLOR_RANGED = { 255, 139, 101, 69 }
 local COLOR_EXPLOSION = { 255, 255, 100, 0 }
 local COLOR_COMPANION = { 255, 100, 149, 237 }
+local COLOR_ARC = { 255, 186, 85, 211 }
 
 local GRID_SPACING = { 10, 10 }
 local DETAIL_GRID_SPACING = { 0, 0 }
@@ -134,8 +134,8 @@ function CombatStatsView:_setup_entries()
         local history_entries = mod.history:get_history_entries()
 
         for _, history_entry in ipairs(history_entries) do
-            local mission_display = CombatStatsUtils.get_mission_display_name(history_entry.mission_name)
-            local class_display = CombatStatsUtils.get_archetype_display_name(history_entry.class_name)
+            local mission_display = mod.utils:get_mission_display_name(history_entry.mission_name)
+            local class_display = mod.utils:get_archetype_display_name(history_entry.class_name)
             local display_name = class_display .. ' | ' .. mission_display
 
             if
@@ -167,8 +167,8 @@ function CombatStatsView:_setup_entries()
         local session = tracker:get_session_stats()
 
         -- Add session stats with mission name from tracker
-        local mission_display = CombatStatsUtils.get_mission_display_name(tracker:get_mission_name())
-        local class_display = CombatStatsUtils.get_archetype_display_name(tracker:get_class_name())
+        local mission_display = mod.utils:get_mission_display_name(tracker:get_mission_name())
+        local class_display = mod.utils:get_archetype_display_name(tracker:get_class_name())
         local session_name = class_display .. ' | ' .. mission_display
 
         local session_entry = {
@@ -192,7 +192,7 @@ function CombatStatsView:_setup_entries()
             local engagement = engagements[i]
             local duration = (engagement.end_time or current_time) - engagement.start_time
             local breed_name = engagement.name or (mod:localize('enemy') .. ' ' .. i)
-            local display_name = CombatStatsUtils.get_breed_display_name(breed_name)
+            local display_name = mod.utils:get_breed_display_name(breed_name)
 
             if
                 search_text == ''
@@ -607,6 +607,16 @@ function CombatStatsView:_rebuild_detail_widgets(entry)
                 COLOR_COMPANION
             )
         end
+
+        -- Arc damage
+        if stats.arc_damage and stats.arc_damage > 0 then
+            create_progress_bar(
+                string.format('%s: %d', mod:localize('arc'), stats.arc_damage),
+                stats.arc_damage,
+                stats.total_damage,
+                COLOR_ARC
+            )
+        end
     end
 
     -- Hit Stats Header
@@ -649,8 +659,8 @@ function CombatStatsView:_rebuild_detail_widgets(entry)
         -- Convert raw buff data to sorted array for display
         local buff_array = {}
         for buff_template_name, uptime in pairs(buffs) do
-            local display_name = CombatStatsUtils.get_buff_display_name(buff_template_name)
-            local icon, gradient_map = CombatStatsUtils.get_buff_icon(buff_template_name)
+            local display_name = mod.utils:get_buff_display_name(buff_template_name)
+            local icon, gradient_map = mod.utils:get_buff_icon(buff_template_name)
 
             buff_array[#buff_array + 1] = {
                 name = display_name,
