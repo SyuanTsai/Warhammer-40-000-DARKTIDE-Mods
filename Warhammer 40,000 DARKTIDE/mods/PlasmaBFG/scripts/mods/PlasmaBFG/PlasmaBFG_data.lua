@@ -17,7 +17,7 @@ return {
 						type = "numeric",
 						tooltip = "hipfire_release_factor_description",
 						default_value = 1.00,
-						range = { 0.50, 1.00 },
+						range = { 0.70, 1.00 },
 						decimals_number = 2,
 					},
 					{
