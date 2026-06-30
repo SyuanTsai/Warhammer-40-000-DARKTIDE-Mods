@@ -380,11 +380,11 @@
 
 ### [Ovenproof's Scoreboard Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/241)
     記分板排版工具
-- MOD 網站最後更新日期：Last updated 25 June 2026, 11:49PM
+- MOD 網站最後更新日期：Last updated 28 June 2026, 9:18PM
 - MOD 版本：1.4.2
-- Patch 版本：1.13.5
-- MOD 檔案名稱：Ovenproof's_Scoreboard_Plugin_-_Community_Patch_1.13.5_GAN5MAIBc
-- 手動維護最後下載日期：2026-06-26
+- Patch 版本：1.13.6
+- MOD 檔案名稱：Ovenproof's_Scoreboard_Plugin_-_Community_Patch_1.13.6_YFIfRF4zN
+- 手動維護最後下載日期：2026-06-30
 - GitHub :
 - Source=>  https://github.com/Backup158/DarktideOvenproofScoreboardPluginPatch
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mods-OvenproofScoreboardPluginPatch
