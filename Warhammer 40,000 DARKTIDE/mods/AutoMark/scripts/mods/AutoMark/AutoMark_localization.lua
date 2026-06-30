@@ -12,6 +12,13 @@ local function highlight(text)
     return color_text(text, "terminal_text_warning_light")
 end
 
+-- ###############################################################################################################
+-- zh-tw Localization maintenance note:
+-- For zh-tw updates, use the latest translation glossary as the source of truth:
+-- https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/main/Referneces/Translation.md
+-- Preserve existing context-specific translations when the glossary contains multiple valid terms.
+-- ###############################################################################################################
+
 local localization = {
     -- mod_name
     mod_name = {
