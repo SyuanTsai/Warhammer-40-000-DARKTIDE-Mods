@@ -190,9 +190,29 @@ local localization = {
             "時，此功能會變為一般敵人標記。",
     },
     hack_mark_keybind = {
-        en = "Servo-Skull Data Interrogation Keybind",
-        ["zh-cn"] = "伺服颅骨数据查询按键",
-        ["zh-tw"] = "伺服頭骨資料審訊按鍵",
+        en = "Data Interrogation Keybind",
+        ["zh-cn"] = "数据查询按键",
+        ["zh-tw"] = "資料查詢按鍵",
+    },
+    hack_mark_keybind_description = {
+        en = "Dedicated key for Sending the Servo-Skull to hack the minigame.",
+        ["zh-cn"] = "用于指派伺服颅骨黑入数据查询小游戏的专用按键。",
+        ["zh-tw"] = "用於指派伺服顱骨黑入資料查詢小遊戲的專用按鍵。",
+    },
+    auto_hack = {
+        en = "Auto Data Interrogation",
+        ["zh-cn"] = "自动数据查询",
+        ["zh-tw"] = "自動資料查詢",
+    },
+    auto_hack_description = {
+        en = "Automatically sends your Servo-Skull to hack the minigame when you aim at a hackable objective",
+        ["zh-cn"] = "当你瞄准一个数据查询小游戏时，自动派遣伺服颅骨前去黑入。",
+        ["zh-tw"] = "當你瞄準一個資料查詢小遊戲時，自動派遣伺服顱骨前去黑入。",
+    },
+    disable_auto_hack_for_noospheric_command = {
+        en = "Disable Auto Data Interrogation When Noospheric Command Talent is Equiped",
+        ["zh-cn"] = "当装备星语指令时禁用自动数据查询",
+        ["zh-tw"] = "當裝備心智網指令時停用自動資料查詢",
     },
     capacitance_retention = {
         en = "Capacitance Retention",
@@ -235,7 +255,7 @@ local localization = {
         ["zh-tw"] = "針對Boss的電容量，設定保留門檻。",
     },
     capacitance_retention_breed_threshold = {
-        en = "CR Threshold",
+        en = "Capacitance Retention",
         ["zh-cn"] = "电容保留",
         ["zh-tw"] = "電容量門檻",
     },
@@ -285,9 +305,8 @@ local localization = {
         ["zh-tw"] = "為Boss啟用心智網指令強化。",
     },
     noospheric_command_boost_breed_name = {
-        en = "Selected Enemy",
-        ["zh-cn"] = "所选敌人",
-        ["zh-tw"] = "已選敵人",
+        en = "Enemy Settings Override",
+        ["zh-cn"] = "敌人设置覆盖",
     },
     noospheric_command_boost_breed_name_description = {
         en = "Select an enemy to configure its individual settings, which override the settings above, except for the master toggle.",
@@ -306,8 +325,7 @@ local localization = {
     },
     noospheric_command_boost_breed_override = {
         en = "Override",
-        ["zh-cn"] = "覆盖",
-        ["zh-tw"] = "覆蓋",
+        ["zh-cn"] = "启用覆盖",
     },
     noospheric_command_boost_breed_override_description = {
         en = "Apply dedicated settings for this enemy, which take priority over the general settings above, except for the master toggle.",
@@ -315,14 +333,14 @@ local localization = {
         ["zh-tw"] = "為此敵人套用專用設定。除了總開關外，專用設定優先於上方的一般設定。",
     },
     noospheric_command_boost_breed_toggle = {
-        en = "Toggle Boost",
-        ["zh-cn"] = "星语指令增强",
-        ["zh-tw"] = "心智網指令強化開關",
+        en = "Noospheric Command",
+        ["zh-cn"] = "星语指令",
+        ["zh-tw"] = "心智網指令",
     },
     noospheric_command_boost_breed_toggle_description = {
         en = "Enable/Disable Noospheric Command Boost for this enemy.",
-        ["zh-cn"] = "为这种敌人启用/禁用星语指令增强。",
-        ["zh-tw"] = "為此敵人啟用/停用心智網指令強化。",
+        ["zh-cn"] = "为所选敌人启用/禁用星语指令增强。",
+        ["zh-tw"] = "為所選敵人啟用/停用心智網指令強化。",
     },
     -- veteran settings
     veteran_settings = {
