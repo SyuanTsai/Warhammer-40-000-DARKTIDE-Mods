@@ -1194,28 +1194,14 @@ local localization = {
     },
 }
 
-local alignment_templates = {}
 for k_loc, v_loc in pairs(localization) do
     for k_lang, v_lang in pairs(languages) do
-        if v_loc[v_lang] and v_loc[v_lang].left and v_loc[v_lang].right then
-            alignment_templates[k_loc] = alignment_templates[k_loc] or {}
-            alignment_templates[k_loc][v_lang] = table_clone(v_loc[v_lang])
-        end
-    end
-end
-
-mod.reprocess_create_string_localizations = function()
-    max_length = get_text_size(mod, "AAAAAAAAAAAAAAAAAAAAAAAAAA  \u{200A}A")
-
-    for k_loc, v_loc in pairs(alignment_templates) do
-        for k_lang, v_lang in pairs(languages) do
-            if v_loc[v_lang] then
-                localization[k_loc][v_lang] = create_string(v_loc[v_lang].left, v_loc[v_lang].right)
+        if v_loc[v_lang] then
+            if v_loc[v_lang].left and v_loc[v_lang].right then
+                v_loc[v_lang] = create_string(v_loc[v_lang].left, v_loc[v_lang].right)
             end
         end
     end
 end
-
-mod.reprocess_create_string_localizations()
 
 return localization
