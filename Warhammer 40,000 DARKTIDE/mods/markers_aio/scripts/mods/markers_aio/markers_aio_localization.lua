@@ -1,5 +1,5 @@
 local mod = get_mod("markers_aio")
-mod.version = "2.13.9"
+mod.version = "2.14.1"
 mod:info("Markers Improved AIO Improved is installed, using version: " .. tostring(mod.version))
 
 mod.lookup_border_color = function(colour_string)
@@ -122,6 +122,13 @@ local colours = {
 	text = "169,191,153",
 	faded_text = "84,95,76",
 }
+
+-- ###############################################################################################################
+-- zh-tw Localization maintenance note:
+-- For zh-tw updates, use the latest translation glossary as the source of truth:
+-- https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/main/Referneces/Translation.md
+-- Preserve existing context-specific translations when the glossary contains multiple valid terms.
+-- ###############################################################################################################
 
 -- rainbow
 -- en = "{#color(255,0,0)}M{#color(255,85,0)}a{#color(255,170,0)}r{#color(255,255,0)}k{#color(170,255,0)}e{#color(85,255,0)}r{#color(0,255,0)}s {#color(0,255,85)}I{#color(0,255,170)}m{#color(0,255,255)}p{#color(0,170,255)}r{#color(0,85,255)}o{#color(0,0,255)}v{#color(85,0,255)}e{#color(170,0,255)}d {#color(255,0,255)}A{#color(255,0,170)}I{#color(255,0,85)}O{#reset()}",
@@ -2832,9 +2839,187 @@ local loc = {
 		["zh-cn"] = "切换「仅视野内显示」",
 	},
 
+	mod_marker_servo_skull_name = {
+		en = "Hackable Terminal",
+		["zh-cn"] = "可破解终端",
+		["zh-tw"] = "可操作終端",
+	},
+	-- Servo Skull Markers
+	servo_skull_settings = {
+		en = "ASSISTANCE & SERVO SKULL MARKERS",
+		["zh-cn"] = "伺服颅骨标记（可破解终端）",
+		["zh-tw"] = "伺服顱骨標記（可操作終端）",
+	},
+	Investigation = {
+		en = "Investigation",
+	},
+	servo_skull_enable = {
+		en = "Enable Markers",
+		fr = "Activer les marqueurs",
+		ru = "Включить метки",
+		["zh-tw"] = "啟用標記",
+		["zh-cn"] = "启用标记",
+	},
+	servo_skull_enable_assistance_module = {
+		en = "Enable Assistance Module",
+		["zh-tw"] = "啟用輔助模式",
+	},
+	servo_skull_enable_assistance_module_tooltip = {
+		en = "Toggle the 'assistance' features, including recolouring downed players' markers and showing their downed states.",
+		["zh-tw"] = "切換「輔助」功能，包括重新著色倒下玩家的標記並顯示他們的倒下狀態。",
+	},
+	servo_skull_icon = {
+		en = "Servo Skull Icon",
+		["zh-cn"] = "图标",
+		["zh-tw"] = "顱骨圖標",
+	},
+	decoding_icon = {
+		en = "Decoding Icon (No Servo Skull Equipped)",
+		["zh-tw"] = "破解中圖標（未裝備伺服顱骨）",
+	},
+	servo_skull_keep_on_screen = {
+		en = "Keep on screen",
+		ru = "Держать на экране",
+		fr = "Rester à l'écran",
+		["zh-tw"] = "保持顯示於螢幕",
+		["zh-cn"] = "在画面中持续显示",
+	},
+	servo_skull_require_line_of_sight = {
+		en = "Require line of sight",
+		fr = "Nécessite une ligne de vue",
+		ru = "Должно быть в зоне видимости",
+		["zh-tw"] = "需要視線範圍",
+		["zh-cn"] = "仅视野内显示",
+	},
+	servo_skull_max_distance = {
+		en = "Max distance",
+		fr = "Distance maximale",
+		ru = "Максимальное расстояние",
+		["zh-tw"] = "最遠距離",
+		["zh-cn"] = "最大显示距离",
+	},
+	servo_skull_scale = {
+		en = "Scale",
+		fr = "Scale",
+		ru = "Scale",
+		["zh-tw"] = "圖標縮放大小",
+		["zh-cn"] = "标记缩放比例",
+	},
+	servo_skull_alpha = {
+		en = "Alpha Multiplier",
+		fr = "Multiplicateur d'alpha",
+		ru = "Прозрачность",
+		["zh-tw"] = "透明度倍增器",
+		["zh-cn"] = "透明度系数",
+	},
+	servo_skull_default_colour = {
+		en = "Inactive Colour",
+		["zh-cn"] = "未激活颜色",
+		["zh-tw"] = "未激活顏色",
+	},
+	servo_skull_default_colour_R = {
+		en = "R",
+		fr = "R",
+		ru = "К",
+		["zh-tw"] = "紅",
+		["zh-cn"] = "红",
+	},
+	servo_skull_default_colour_G = {
+		en = "G",
+		fr = "V",
+		ru = "З",
+		["zh-tw"] = "綠",
+		["zh-cn"] = "绿",
+	},
+	servo_skull_default_colour_B = {
+		en = "B",
+		fr = "B",
+		ru = "С",
+		["zh-tw"] = "藍",
+		["zh-cn"] = "蓝",
+	},
+	servo_skull_stalled_colour = {
+		en = "Stalled (Can Deploy/Alert) Colour",
+		["zh-cn"] = "待命（可部署）颜色",
+	},
+	servo_skull_stalled_colour_R = {
+		en = "R",
+		fr = "R",
+		ru = "К",
+		["zh-tw"] = "紅",
+		["zh-cn"] = "红",
+	},
+	servo_skull_stalled_colour_G = {
+		en = "G",
+		fr = "V",
+		ru = "З",
+		["zh-tw"] = "綠",
+		["zh-cn"] = "绿",
+	},
+	servo_skull_stalled_colour_B = {
+		en = "B",
+		fr = "B",
+		ru = "С",
+		["zh-tw"] = "藍",
+		["zh-cn"] = "蓝",
+	},
+	servo_skull_active_colour = {
+		en = "Active (Decoding/Helping) Colour",
+		["zh-cn"] = "激活（破解中）颜色",
+	},
+	servo_skull_active_colour_R = {
+		en = "R",
+		fr = "R",
+		ru = "К",
+		["zh-tw"] = "紅",
+		["zh-cn"] = "红",
+	},
+	servo_skull_active_colour_G = {
+		en = "G",
+		fr = "V",
+		ru = "З",
+		["zh-tw"] = "綠",
+		["zh-cn"] = "绿",
+	},
+	servo_skull_active_colour_B = {
+		en = "B",
+		fr = "B",
+		ru = "С",
+		["zh-tw"] = "藍",
+		["zh-cn"] = "蓝",
+	},
+	servo_skull_border_colour = {
+		en = "Inactive Border Colour",
+		["zh-cn"] = "未激活边框颜色",
+		["zh-tw"] = "未啟用邊框顏色",
+	},
+	servo_skull_stalled_border_colour = {
+		en = "Stalled Border Colour",
+		["zh-cn"] = "待命边框颜色",
+		["zh-tw"] = "停滯邊框顏色",
+	},
+	servo_skull_active_border_colour = {
+		en = "Active Border Colour",
+		["zh-cn"] = "激活边框颜色",
+		["zh-tw"] = "啟用邊框顏色",
+	},
+	servo_skull_toggle_los = {
+		en = "Toggle 'Require Line of Sight'",
+		["zh-tw"] = "切換「需要視線範圍」",
+		["zh-cn"] = "切换「仅视野内显示」",
+	},
+	servo_skull_pulse_when_stalled = {
+		en = "Pulse When Stalled",
+		["zh-tw"] = "停滯時閃爍",
+	},
+	pulse_when_stalled_tooltip = {
+		en = "Gently pulse the marker size when the servo skull is stalled (1x to 1.2x)",
+		["zh-tw"] = "當伺服顱骨停滯時，輕輕脈衝標記大小（1x 到 1.2x）",
+	},
 	-- Unknown Markers
 	unknown_markers_settings = {
 		en = "UNKNOWN MARKERS (Those not covered elsewhere!)",
+		["zh-tw"] = "未知物品標記（未歸類物品）",
 		["zh-cn"] = "未知物品标记（未归类物品）",
 	},
 	unknown_enable = {
@@ -2909,6 +3094,7 @@ local loc = {
 	},
 	unknown_colour = {
 		en = "Unknown Markers Colour",
+		["zh-tw"] = "未知物品標記顏色",
 		["zh-cn"] = "未知物品标记颜色",
 	},
 	unknown_colour_R = {
@@ -3105,6 +3291,18 @@ local loc = {
 	unknown_markers_extra_allowed_tooltip = {
 		en = "If enabled, allows buttons and a few other misc unknown markers to be effected by the Unknown Marker settings. Including distance, fading, alpha etc. If disabled, these misc markers will only be effected by the colour choices.",
 		["zh-tw"] = "啟用後，按鈕與部分雜項未知標記會套用未知標記設定，例如距離、淡出、透明度等。若停用，這些標記只會套用顏色設定。",
+	},
+	Skull = {
+		en = "Skull",
+		["zh-tw"] = "顱骨",
+	},
+	ScannerSkull = {
+		en = "Scanner Skull",
+		["zh-tw"] = "掃描器顱骨",
+	},
+	Scanner = {
+		en = "Scanner",
+		["zh-tw"] = "掃描器",
 	},
 }
 

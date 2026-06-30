@@ -14,6 +14,7 @@ mod:io_dofile("markers_aio/scripts/mods/markers_aio/stolen_rations_markers")
 mod:io_dofile("markers_aio/scripts/mods/markers_aio/atonement_markers")
 mod:io_dofile("markers_aio/scripts/mods/markers_aio/unknown_markers")
 mod:io_dofile("markers_aio/scripts/mods/markers_aio/expedition_markers")
+mod:io_dofile("markers_aio/scripts/mods/markers_aio/servo_skull_markers")
 
 mod:io_dofile("markers_aio/scripts/mods/markers_aio/markers_aio_localization")
 
@@ -28,6 +29,8 @@ local HudElementWorldMarkers = require("scripts/ui/hud/elements/world_markers/hu
 local UIWidget = require("scripts/managers/ui/ui_widget")
 local UIScenegraph = require("scripts/managers/ui/ui_scenegraph")
 local HudElementSmartTagging = require("scripts/ui/hud/elements/smart_tagging/hud_element_smart_tagging")
+local SpecialRulesSettings = require("scripts/settings/ability/special_rules_settings")
+local CompanionServoSkullSettings = require("scripts/settings/companion/companion_servo_skull_settings")
 
 -- Guide widget element registration
 local GUIDE_WIDGET_PATH = "markers_aio/scripts/mods/markers_aio/martyrs_skull_guide_widget"
@@ -98,6 +101,7 @@ mod:hook_safe(CLASS.HudElementWorldMarkers, "init", function(self)
 	-- reset runtime state on (re)init to avoid growth across missions/hot-joins
 	mod.active_chests = {}
 	mod.current_heretical_idol_markers = {}
+	mod.totem_units = {}
 	mod.medical_crate_charges = {}
 	mod.reset_martyrs_skull_guides()
 
@@ -126,6 +130,7 @@ mod:hook_safe(CLASS.HudElementWorldMarkers, "init", function(self)
 			"mod_marker_luggable_name",
 			"mod_marker_expedition_name",
 			"mod_marker_event_name",
+			"mod_marker_servo_skull_name",
 			"mod_marker_unknown_name",
 		}
 		for _, key in ipairs(mod_names) do
@@ -280,7 +285,7 @@ local function build_frame_settings(mod)
 
 	fs.med_station_max_distance = mod:get("med_station_max_distance")
 
-	-- Feature toggles (reuse table to avoid per-frame GC allocation)
+	-- Feature toggles
 	fs.enable = fs.enable or {}
 	fs.enable.tome = mod:get("tome_enable")
 	fs.enable.material = mod:get("material_enable")
@@ -294,7 +299,66 @@ local function build_frame_settings(mod)
 	fs.enable.rations = mod:get("event_enable")
 	fs.enable.atonement = mod:get("event_enable")
 	fs.enable.expedition = mod:get("expedition_enable")
+	fs.enable.servo_skull = mod:get("servo_skull_enable")
 	fs.enable.unknown = mod:get("unknown_enable")
+	fs.enable.servo_skull_enable_assistance_module = mod:get("servo_skull_enable_assistance_module")
+	-- Check if local player has the Cryptic servo skull blitz equipped
+	fs.servo_skull_equipped = false
+	local p_check = Managers.player:local_player(1)
+	if p_check and p_check.player_unit and Unit.alive(p_check.player_unit) then
+		local talent_ext = ScriptUnit.has_extension(p_check.player_unit, "talent_system")
+		if talent_ext then
+			local sr = SpecialRulesSettings.special_rules
+			fs.servo_skull_equipped = talent_ext:has_special_rule(sr.cryptic_servo_skull_hack)
+				or talent_ext:has_special_rule(sr.cryptic_servo_skull_inject_ally)
+				or talent_ext:has_special_rule(sr.cryptic_servo_skull_flamethrower)
+		end
+	end
+
+	-- Inject ally servo skull state
+	fs.inject_ally = nil
+	local p = Managers.player:local_player(1)
+	if p and p.player_unit and Unit.alive(p.player_unit) then
+		local talent_ext = ScriptUnit.has_extension(p.player_unit, "talent_system")
+		if
+			talent_ext
+			and talent_ext:has_special_rule(SpecialRulesSettings.special_rules.cryptic_servo_skull_inject_ally)
+		then
+			local spawner_ext = ScriptUnit.has_extension(p.player_unit, "companion_spawner_system")
+			if spawner_ext then
+				local comp_unit =
+					spawner_ext:spawned_unit_lookup(SpecialRulesSettings.special_rules.cryptic_servo_skull_inject_ally)
+				if comp_unit and Unit.alive(comp_unit) then
+					local ability_ext = ScriptUnit.has_extension(p.player_unit, "ability_system")
+					if
+						ability_ext
+						and ability_ext:remaining_ability_charges("grenade_ability")
+							>= CompanionServoSkullSettings.ability_charges.inject_ally
+					then
+						fs.inject_ally = {
+							companion_unit = comp_unit,
+						}
+					end
+				end
+			end
+		end
+	end
+
+	-- Check if the inject_ally skull is actively performing an injection
+	fs.servo_skull_injecting = false
+	if fs.inject_ally then
+		local comp_unit = fs.inject_ally.companion_unit
+		if comp_unit and Unit.alive(comp_unit) then
+			local game_session = Managers.state.game_session:game_session()
+			local go_id = Managers.state.unit_spawner:game_object_id(comp_unit)
+			if game_session and go_id then
+				local state = GameSession.game_object_field(game_session, go_id, "state")
+				if state == "inject_ally" then
+					fs.servo_skull_injecting = true
+				end
+			end
+		end
+	end
 end
 
 mod.get_marker_pickup_type = function(marker)
@@ -418,6 +482,8 @@ HudElementWorldMarkers._get_fade = function(self, fade_settings, distance)
 	end
 end
 
+local temp_drawable_markers = {}
+
 local HudElementWorldMarkersSettings =
 	require("scripts/ui/hud/elements/world_markers/hud_element_world_markers_settings")
 
@@ -428,7 +494,8 @@ HudElementWorldMarkers._draw_markers = function(self, dt, t, input_service, ui_r
 	end
 
 	local markers_by_type = self._markers_by_type
-	local drawable_markers = {}
+	local drawable_markers = temp_drawable_markers
+	table.clear(drawable_markers)
 
 	for _, markers in pairs(markers_by_type) do
 		for i = 1, #markers do
@@ -559,6 +626,8 @@ HudElementWorldMarkers._calculate_markers = function(self, dt, t, input_service,
 		local markers_by_id = self._markers_by_id
 		local markers_by_type = self._markers_by_type
 		local ALIVE = ALIVE
+
+		table.clear(temp_marker_raycast_queue)
 
 		for marker_type, markers in pairs(markers_by_type) do
 			for i = 1, #markers do
@@ -780,6 +849,7 @@ HudElementWorldMarkers._calculate_markers = function(self, dt, t, input_service,
 
 		if raycasts_allowed then
 			self:_raycast_markers(temp_marker_raycast_queue)
+			table.clear(temp_marker_raycast_queue)
 		end
 
 		-- MARKERS AIO
@@ -795,6 +865,17 @@ HudElementWorldMarkers._calculate_markers = function(self, dt, t, input_service,
 
 					if update_function then
 						update_function(self, ui_renderer, marker.widget, marker, template, dt, t)
+					end
+
+					-- Hide distance text on objective markers for decoder devices
+					if marker.type == "objective" and marker.widget then
+						local unit = marker.unit
+						if unit and Unit.alive(unit) then
+							local decoder_ext = ScriptUnit.has_extension(unit, "decoder_device_system")
+							if decoder_ext and decoder_ext:unit_is_enabled() and not decoder_ext:is_finished() then
+								marker.widget.content.text = ""
+							end
+						end
 					end
 
 					local fs = mod.frame_settings
@@ -824,6 +905,9 @@ HudElementWorldMarkers._calculate_markers = function(self, dt, t, input_service,
 					end
 					if fs.enable.expedition then
 						mod.update_expedition_markers(self, marker)
+					end
+					if fs.enable.servo_skull and marker.type ~= "objective" and marker.type ~= "player_assistance" then
+						mod.update_servo_skull_markers(self, marker)
 					end
 					if fs.enable.event then
 						mod.update_tainted_skull_markers(self, marker)
@@ -855,7 +939,7 @@ HudElementWorldMarkers._calculate_markers = function(self, dt, t, input_service,
 						mod.fade_icon_not_in_los(marker, ui_renderer)
 					end
 
-					mod.adjust_scale(self, marker, ui_renderer)
+					mod.adjust_scale(self, marker, ui_renderer, t)
 
 					-- apply marker distance text if enabled
 					local widget = marker.widget
@@ -944,9 +1028,17 @@ HudElementInteraction._update_interactee_data = function(self, interactee_unit, 
 	local marker = nil
 
 	-- MARKERS AIO OVERRIDE
+	-- Keep markers alive for decoder devices as long as the device is enabled
+	-- and not finished, even while the skull is actively hacking (show_marker
+	-- returns false when the minigame is active). Use the decoder extension
+	-- directly instead of interaction_type since the interaction may change or
+	-- deactivate during the skull's hacking cycle.
+	local decoder_ext = ScriptUnit.has_extension(interactee_unit, "decoder_device_system")
+	local is_decoder_device = decoder_ext and decoder_ext:unit_is_enabled() and not decoder_ext:is_finished()
+
 	local max_spawn_distance_sq = 10000 -- 100m
 
-	if render_marker and camera_position then
+	if interactee_unit ~= player_unit and render_marker and camera_position then
 		local interactee_position = Unit.world_position(interactee_unit, 1)
 		local distance_sq = Vector3.distance_squared(interactee_position, camera_position)
 
@@ -968,7 +1060,7 @@ HudElementInteraction._update_interactee_data = function(self, interactee_unit, 
 
 			Managers.event:trigger("add_world_marker_unit", marker_type, interactee_unit, marker_callback, extension)
 		end
-	elseif interaction_units[interactee_unit] then
+	elseif interaction_units[interactee_unit] and not is_decoder_device then
 		local marker_id = interaction_units[interactee_unit].marker_id
 
 		if marker_id then
@@ -977,6 +1069,19 @@ HudElementInteraction._update_interactee_data = function(self, interactee_unit, 
 		end
 	end
 end
+mod.auspex_active = false
+mod:hook_safe(CLASS.AuspexEffects, "wield", function(self)
+	if self._is_husk then
+		return
+	end
+	mod.auspex_active = true
+end)
+mod:hook_safe(CLASS.AuspexEffects, "unwield", function(self)
+	if self._is_husk then
+		return
+	end
+	mod.auspex_active = false
+end)
 
 -- Fade out markers that are behind objects, depending on the set "los_opacity"
 mod.fade_icon_not_in_los = function(marker, ui_renderer)
@@ -1057,6 +1162,10 @@ mod.fade_icon_not_in_los = function(marker, ui_renderer)
 		end
 	end
 
+	if mod.auspex_active then
+		target_alpha = 0.05
+	end
+
 	------------------------------------------------
 	-- Init + smoothing
 	------------------------------------------------
@@ -1127,7 +1236,7 @@ mod.adjust_los_requirement = function(marker)
 end
 
 -- Adjust the scale of markers, according to their percentage scale setting.
-mod.adjust_scale = function(self, marker, ui_renderer)
+mod.adjust_scale = function(self, marker, ui_renderer, t)
 	marker.scale_original = marker.scale
 
 	local widget = marker.widget
@@ -1151,6 +1260,14 @@ mod.adjust_scale = function(self, marker, ui_renderer)
 
 	marker.scale = self:_get_scale(scale_settings, distance)
 	local new_scale = marker.ignore_scale and 1 or marker.scale * scale
+
+	if marker.servo_skull_pulse and t then
+		local pulse_speed = 2
+		local pulse_amplitude = 0.2
+		local pulse = (math.sin(t * pulse_speed * math.pi * 2) + 1) / 2
+		new_scale = new_scale * (1 + pulse * pulse_amplitude)
+	end
+
 	marker.scale = new_scale
 
 	self:_apply_scale(widget, new_scale)
@@ -1233,20 +1350,36 @@ end
 HudElementSmartTagging._is_marker_valid_for_tagging = function(self, player_unit, marker, distance)
 	local template = marker.template
 
-	if not template.using_smart_tag_system then
+	if template.using_smart_tag_system and not template.get_smart_tag_id then
 		return false
+	end
+
+	if not template.using_smart_tag_system then
+		local unit = marker.unit
+		if unit and Unit.alive(unit) then
+			local ie = ScriptUnit.has_extension(unit, "interactee_system")
+			if not (ie and ie:interaction_type() == "decoding") then
+				return false
+			end
+		else
+			return false
+		end
 	end
 
 	local marker_unit = marker.unit
 	local smart_tag_extension = marker_unit and ScriptUnit.has_extension(marker_unit, "smart_tag_system")
 	local tag_id = template.get_smart_tag_id and template.get_smart_tag_id(marker)
 
-	-- Allow AIO custom markers (chest, heretical idol, ammo/med) without smart_tag_extension or tag_id
+	-- Allow AIO custom markers (chest, heretical idol, ammo/med, servo skull) without smart_tag_extension or tag_id
 	if marker_unit and not smart_tag_extension and not tag_id then
 		if marker.markers_aio_type then
 			-- AIO marker without native smart tag support: allow through, tag_id stays nil
 		else
-			return false
+			-- Also allow hackable terminals (servo skull targets) even before markers_aio_type is set
+			local ie = ScriptUnit.has_extension(marker_unit, "interactee_system")
+			if not (ie and ie:interaction_type() == "decoding") then
+				return false
+			end
 		end
 	end
 
@@ -1264,7 +1397,10 @@ HudElementSmartTagging._is_marker_valid_for_tagging = function(self, player_unit
 				return false
 			end
 		else
-			return false
+			local ie = ScriptUnit.has_extension(marker_unit, "interactee_system")
+			if not (ie and ie:interaction_type() == "decoding") then
+				return false
+			end
 		end
 	end
 
@@ -1285,6 +1421,19 @@ HudElementSmartTagging._is_marker_valid_for_tagging = function(self, player_unit
 	end
 
 	return true
+end
+
+HudElementSmartTagging._handle_selected_marker = function(self, marker)
+	local marker_template = marker.template
+	local tag_id = marker_template.get_smart_tag_id and marker_template.get_smart_tag_id(marker)
+	if tag_id then
+		self:_trigger_smart_tag_interaction(tag_id)
+	else
+		local marker_unit = marker.unit
+		if marker_unit then
+			self:_trigger_smart_tag_unit_contextual(marker_unit)
+		end
+	end
 end
 
 HudElementSmartTagging._handle_interaction_draw = function(self, dt, t, input_service, ui_renderer, render_settings)
@@ -1385,6 +1534,8 @@ HudElementSmartTagging._handle_interaction_draw = function(self, dt, t, input_se
 							display_name = mod:localize("mod_marker_expedition_name")
 						elseif aio_type == "event" then
 							display_name = mod:localize("mod_marker_event_name")
+						elseif aio_type == "servo_skull" then
+							display_name = mod:localize("mod_marker_servo_skull_name")
 						elseif aio_type == "unknown" then
 							display_name = mod:localize("mod_marker_unknown_name")
 						else
@@ -1543,6 +1694,10 @@ mod.martyrs_skull_toggle_los = function()
 	mod.toggle_los("martyrs_skull")
 end
 
+mod.servo_skull_toggle_los = function()
+	mod.toggle_los("servo_skull")
+end
+
 mod.toggle_los = function(marker_type)
 	if marker_type then
 		if mod:get(marker_type .. "_require_line_of_sight") == false then
@@ -1551,6 +1706,11 @@ mod.toggle_los = function(marker_type)
 			mod:set(marker_type .. "_require_line_of_sight", false)
 		end
 	end
+end
+
+mod:io_dofile("markers_aio/scripts/mods/markers_aio/icon_package_loader")
+mod.on_all_mods_loaded = function()
+	mod._ensure_icon_packages_loaded()
 end
 
 -- UPDATE COLOURS IN SETTINGS PAGE IN REAL TIME (OH YES)
