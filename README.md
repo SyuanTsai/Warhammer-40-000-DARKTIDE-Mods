@@ -712,10 +712,13 @@
 
 ### [Radar](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
     遠征模式的小弟圖
-- MOD 網站最後更新日期：Last updated 25 June 2026, 2:17AM
-- MOD 版本：2.4.0
-- MOD 檔案名稱：Radar_2.4.0_Z1K0I1w6C
-- 手動維護最後下載日期：2026-06-26
+- MOD 網站最後更新日期：Last updated 29 June 2026, 11:41PM
+- MOD 版本：2.4.1
+- MOD 檔案名稱：Radar_2.4.1_bTkWSTjHE
+- 手動維護最後下載日期：2026-06-30
+- GitHub :
+- Source=>  https://github.com/LucLeto/darktide-mods-radar
+- Fork  =>  https://github.com/SyuanTsai/Darktide-Mod-radar
 
 # 移除的MOD
 
