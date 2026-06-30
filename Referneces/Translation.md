@@ -36,6 +36,7 @@
 - Scripture - 聖書
 - Heretical Idol - 異端神像
 - Martyr's Skull - 殉道者之顱
+- Psykhanium - 靈能室
 
 ### 增益效果 (BUFFS)
 
@@ -138,6 +139,7 @@
 - Twins - 雙子
 - Flamer - 火焰兵
 - Corruptor - 腐蝕者
+- Pack Master - 獸群領主
 
 ### 遊戲詞條相關
 
