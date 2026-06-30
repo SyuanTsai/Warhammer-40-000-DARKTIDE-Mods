@@ -172,7 +172,7 @@ local localization = {
 	ritualist_breeds = {
 		en = "Ritualist",
 		["zh-cn"] = "仪式师",
-		["zh-tw"] = "儀式師",
+		["zh-tw"] = "渣滓祭司",
 		ru = "Ритуалист",
 		fr = "Ritualiste",
 	},
@@ -368,7 +368,7 @@ local localization = {
 	display_stacks = {
 		en = "Stacks",
 		["zh-cn"] = "层数",
-		["zh-tw"] = "層數",
+		["zh-tw"] = "疊加",
 		ru = "Стаки",
 		fr = "Cumuls",
 	},
