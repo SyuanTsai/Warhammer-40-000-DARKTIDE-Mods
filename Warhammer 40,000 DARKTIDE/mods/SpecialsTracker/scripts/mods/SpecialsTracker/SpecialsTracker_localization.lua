@@ -734,7 +734,7 @@ overlay_name_sets.full = {
     renegade_netgunner = {
         en = "Trapper",
         ["zh-cn"] = "陷阱手",
-        ["zh-tw"] = "陷阱手",
+        ["zh-tw"] = "陷阱兵",
     },
     renegade_sniper = {
         en = "Sniper",
@@ -784,7 +784,7 @@ overlay_name_sets.full = {
     chaos_mutator_daemonhost = {
         en = "Hex Daemonhost",
         ["zh-cn"] = "咒缚恶魔宿主",
-        ["zh-tw"] = "魔缚惡魔宿主",
+        ["zh-tw"] = "魔縛惡魔宿主",
     },
     renegade_captain = {
         en = "Captain",
