@@ -198,7 +198,7 @@ local loc = {
 	mod_marker_heretical_idol_name = {
 		en = "Heretical Idol",
 		["zh-cn"] = "异端雕像",
-		["zh-tw"] = "異端雕像",
+		["zh-tw"] = "異端神像",
 	},
 	mod_marker_medicae_station_name = {
 		en = "Medicae Station",
@@ -218,17 +218,17 @@ local loc = {
 	mod_marker_speed_stimm_name = {
 		en = "Speed Stimm",
 		["zh-cn"] = "敏捷兴奋剂",
-		["zh-tw"] = "速度興奮劑",
+		["zh-tw"] = "敏捷興奮劑",
 	},
 	mod_marker_boost_stimm_name = {
 		en = "Boost Stimm",
 		["zh-cn"] = "专注兴奋剂",
-		["zh-tw"] = "增強興奮劑",
+		["zh-tw"] = "專注興奮劑",
 	},
 	mod_marker_medic_stimm_name = {
 		en = "Medic Stimm",
 		["zh-cn"] = "医疗兴奋剂",
-		["zh-tw"] = "治療針",
+		["zh-tw"] = "醫療興奮劑",
 	},
 	mod_marker_broker_stimm_name = {
 		en = "Hive Scum Stimm",
@@ -2272,7 +2272,7 @@ local loc = {
 	},
 	martyrs_skull_objective_dm_propaganda_2 = {
 		en = "Head to the Martyr's Skull door and place the skull weight on the chain",
-		["zh-tw"] = "前往 Martyr's Skull 門，將顱骨重物放在鏈條上",
+		["zh-tw"] = "前往殉道者之顱門，將顱骨重物放在鏈條上",
 		["zh-cn"] = "前往殉道者颅骨大门，将颅骨配重挂在链条上",
 	},
 	martyrs_skull_objective_fm_resurgence_1 = {
@@ -2317,17 +2317,17 @@ local loc = {
 	},
 	martyrs_skull_objective_cm_archives_A4 = {
 		en = "Climb up boxes and jump over to chandelier to grab martyr's skull, once player two has completed the puzzle",
-		["zh-tw"] = "爬上箱子，跳到吊燈上拿到 Martyr's Skull，等玩家二完成謎題後",
+		["zh-tw"] = "爬上箱子，跳到吊燈上拿到殉道者之顱，等玩家二完成謎題後",
 		["zh-cn"] = "2号玩家解谜完成后，爬上箱子跳上吊灯拾取殉道者颅骨",
 	},
 	martyrs_skull_objective_collect_skull = {
 		en = "Collect Martyr's Skull!",
-		["zh-tw"] = "收集 Martyr's Skull！",
+		["zh-tw"] = "收集殉道者之顱！",
 		["zh-cn"] = "拾取殉道者颅骨！",
 	},
 	martyrs_skull_guide_title = {
 		en = "MARTYR'S SKULL GUIDE",
-		["zh-tw"] = "MARTYR'S SKULL 指南",
+		["zh-tw"] = "殉道者之顱指南",
 		["zh-cn"] = "殉道者颅骨攻略",
 	},
 	martyrs_skull_guide_players_required = {
