@@ -716,7 +716,7 @@ local _color_label_texts = {
         ja = "Scab フレイマー色",
         ko = "Scab 화염방사병 색상",
         ["zh-cn"] = "Scab 火焰兵颜色",
-        ["zh-tw"] = "Scab 火焰兵顏色",
+        ["zh-tw"] = "血痂火焰兵顏色",
     },
     enemy_horde = {
         en = "Horde enemy color",
