@@ -130,13 +130,14 @@
 - Pox Burster - 瘟疫爆者
 - Chaos Poxwalker Bomber - 瘟疫爆者
 - Renegade Netgunner - 陷阱兵
-- Renegade Berzerker - 血痂狂戰士
-- Cultist Berzerker - 渣滓狂戰士
+- Renegade Berzerker - 血痂狂暴者
+- Cultist Berzerker - 渣滓狂怒者
 - Mutated Poxwalker - 變異瘟疫行者
 - Lesser Mutated Poxwalker - 低階變異瘟疫行者
 - Ritualist - 渣滓祭司
 - Twins - 雙子
 - Flamer - 火焰兵
+- Corruptor - 腐蝕者
 
 ### 遊戲詞條相關
 
