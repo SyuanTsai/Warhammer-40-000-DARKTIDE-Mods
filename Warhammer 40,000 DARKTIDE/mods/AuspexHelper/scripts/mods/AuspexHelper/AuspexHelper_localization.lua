@@ -13,7 +13,7 @@ local mod = get_mod("AuspexHelper")
 return {
 	mod_name = {
 		en = "{#color(80,255,160)}\xEE\x80\xAA Auspex Helper \xEE\x80\xAA{#reset()}",
-		["zh-tw"] = "{#color(80,255,160)}\xEE\x80\xAA Auspex 探測儀助手 \xEE\x80\xAA{#reset()}",
+		["zh-tw"] = "{#color(80,255,160)}\xEE\x80\xAA Auspex 占卜儀助手 \xEE\x80\xAA{#reset()}",
 	},
 	mod_description = {
 		en = "{#color(120,255,180)}Release 1.0.0{#reset()} | Author: LAUREHTE\n{#color(90,220,150)}Scanner helpers, world-scan overlays, practice mode, and minigame assists.{#reset()}",
@@ -25,7 +25,7 @@ return {
 	},
 	enable_group_desc = {
 		en = "Master on or off controls for Auspex Helper and each supported minigame path.",
-		["zh-tw"] = "Auspex 助手與各支援小遊戲路徑的總開關。",
+		["zh-tw"] = "占卜儀助手與各支援小遊戲路徑的總開關。",
 	},
 	enable_mod_override = {
 		en = "Enable mod",
@@ -245,7 +245,7 @@ return {
 	},
 	enable_decode_minigame_desc = {
 		en = "Enable the decode-symbol minigame path in Auspex Helper.",
-		["zh-tw"] = "在 Auspex 助手中啟用解碼符號小遊戲路徑。",
+		["zh-tw"] = "在占卜儀助手中啟用解碼符號小遊戲路徑。",
 	},
 	enable_decode_helper = {
 		en = "Highlight decode targets",
@@ -357,7 +357,7 @@ return {
 	},
 	enable_expedition_map_minigame_desc = {
 		en = "Enable Auspex Helper display overrides for the expedition map minigame.",
-		["zh-tw"] = "為遠征地圖小遊戲啟用 Auspex 助手顯示覆蓋。",
+		["zh-tw"] = "為遠征地圖小遊戲啟用占卜儀助手顯示覆蓋。",
 	},
 	expedition_map_display_mode = {
 		en = "Map display mode",
@@ -365,7 +365,7 @@ return {
 	},
 	expedition_map_display_mode_desc = {
 		en = "Show the expedition map on the auspex item or as a centered overlay.",
-		["zh-tw"] = "在探測儀物品或居中疊加層中顯示遠征地圖。",
+		["zh-tw"] = "在占卜儀物品或居中疊加層中顯示遠征地圖。",
 	},
 	expedition_map_always_minimap = {
 		en = "Minimap",
@@ -397,7 +397,7 @@ return {
 	},
 	expedition_map_color_opportunity_icons_desc = {
 		en = "Use Auspex Helper custom colors for expedition opportunity icons. Turn this off to keep the stock icon coloring and stock player-color highlight behavior.",
-		["zh-tw"] = "為遠征機會圖示使用 Auspex 助手自訂顏色。關閉此選項可保留原版圖示顏色和原版玩家顏色高亮行為。",
+		["zh-tw"] = "為遠征機會圖示使用占卜儀助手自訂顏色。關閉此選項可保留原版圖示顏色和原版玩家顏色高亮行為。",
 	},
 	expedition_map_marker_size = {
 		en = "Marker size",
@@ -457,19 +457,19 @@ return {
 	},
 	drill_group = {
 		en = "{#color(80,255,160)}Drill and Tree (Hab Drayko) --------------------------------------------------{#reset()}",
-		["zh-tw"] = "{#color(80,255,160)}鑽孔與樹木（Hab Drayko）--------------------------------------------------{#reset()}",
+		["zh-tw"] = "{#color(80,255,160)}瘟疫樹鑽孔--------------------------------------------------{#reset()}",
 	},
 	drill_group_desc = {
 		en = "Assist the drill minigame and the Hab Drayko tree interaction path.",
-		["zh-tw"] = "輔助鑽孔小遊戲與 Hab Drayko 樹木互動路徑。",
+		["zh-tw"] = "輔助瘟疫樹鑽孔小遊戲與樹木互動路徑。",
 	},
 	enable_drill_minigame = {
 		en = "Drill and Tree (Hab Drayko)",
-		["zh-tw"] = "鑽孔與樹木（Hab Drayko）",
+		["zh-tw"] = "瘟疫樹鑽孔",
 	},
 	enable_drill_minigame_desc = {
 		en = "Enable the drill and tree minigame path in Auspex Helper.",
-		["zh-tw"] = "在 Auspex 助手中啟用鑽孔和樹木小遊戲路徑。",
+		["zh-tw"] = "在占卜儀助手中啟用鑽孔和樹木小遊戲路徑。",
 	},
 	enable_drill_helper = {
 		en = "Highlight drill targets",
@@ -525,7 +525,7 @@ return {
 	},
 	enable_frequency_minigame_desc = {
 		en = "Enable the frequency minigame path in Auspex Helper.",
-		["zh-tw"] = "在 Auspex 助手中啟用頻率小遊戲路徑。",
+		["zh-tw"] = "在占卜儀助手中啟用頻率小遊戲路徑。",
 	},
 	enable_frequency_direction_arrows = {
 		en = "Show direction arrows",
@@ -565,7 +565,7 @@ return {
 	},
 	enable_balance_minigame_desc = {
 		en = "Enable the balance minigame path in Auspex Helper.",
-		["zh-tw"] = "在 Auspex 助手中啟用平衡小遊戲路徑。",
+		["zh-tw"] = "在占卜儀助手中啟用平衡小遊戲路徑。",
 	},
 	enable_expedition_minigame = {
 		en = "Decode Match (Expeditions)",
@@ -637,7 +637,7 @@ return {
 	},
 	debug_group_desc = {
 		en = "Toggle developer-facing Auspex Helper debug messages used for troubleshooting.",
-		["zh-tw"] = "切換用於疑難排解的 Auspex 助手面向開發者的除錯訊息。",
+		["zh-tw"] = "切換用於疑難排解的占卜儀助手面向開發者的除錯訊息。",
 	},
 	debug_echoes = {
 		en = "Debug echoes",
@@ -645,7 +645,7 @@ return {
 	},
 	debug_echoes_desc = {
 		en = "Enable Auspex Helper debug echo messages in chat/console.",
-		["zh-tw"] = "在聊天/主控台中啟用 Auspex 助手除錯回顯訊息。",
+		["zh-tw"] = "在聊天/主控台中啟用占卜儀助手除錯回顯訊息。",
 	},
 	debug_expedition_state = {
 		en = "Expedition state traces",
@@ -685,7 +685,7 @@ return {
 	},
 	debug_silence_messages_desc = {
 		en = "Suppress all Auspex Helper mod:echo, mod:notify, and mod:warn messages.",
-		["zh-tw"] = "隱藏所有 Auspex 助手的 mod:echo、mod:notify 和 mod:warn 訊息。",
+		["zh-tw"] = "隱藏所有占卜儀助手的 mod:echo、mod:notify 和 mod:warn 訊息。",
 	},
 	preview_group = {
 		en = "{#color(80,255,160)}Practice -------------------------------------------------------------------------------{#reset()}",
@@ -769,7 +769,7 @@ return {
 	},
 	preview_unavailable = {
 		en = "Auspex practice could not build the selected scanner minigame.",
-		["zh-tw"] = "Auspex 練習無法建立所選的掃描小遊戲。",
+		["zh-tw"] = "占卜儀練習無法建立所選的掃描小遊戲。",
 	},
 	practice_complete_time = {
 		en = "%s practice complete in %.2fs.",
@@ -777,7 +777,7 @@ return {
 	},
 	preview_type_disabled = {
 		en = "That practice minigame path is disabled in Auspex Helper settings.",
-		["zh-tw"] = "該練習小遊戲路徑在 Auspex 助手設定中已停用。",
+		["zh-tw"] = "該練習小遊戲路徑在占卜儀助手設定中已停用。",
 	},
 	preview_type_expedition_placeholder = {
 		en = "The expedition scanner minigame could not be initialized on this build.",
