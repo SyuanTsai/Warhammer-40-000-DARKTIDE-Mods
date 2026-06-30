@@ -5,7 +5,7 @@
 ### 主要 (MAIN)
 
 - Combat Ability - 戰鬥技能
-- Health - 健康
+- Health - 健康/生命值
 - Peril - 反噬
 - Stamina - 耐力
 - Toughness - 韌性
@@ -28,7 +28,7 @@
 - Auspex - 占卜儀
 - Fury - 狂怒
 - Weapon Perks - 武器專長
-- Specialist - 專家敵人
+- Specialist - 專家敵人（簡稱：專家）
 - Plasteel - 塑鋼
 - Diamantine - 金剛晶石
 - Medicae Station - 醫療站
@@ -115,14 +115,14 @@
 - Carapace - 甲殼
 - Monstrosity - 巨獸
 - Poxbringer - 瘟疫爆者
-- Bomber - 轟炸者
+- Bomber - 轟炸者/火焰轟炸者
 - Mauler - 重錘兵
 - Ogryn - 歐格林
 - Ragers - 狂怒者
 - Scab - 血痂
 - Dreg - 渣滓
 - Shotgunners - 霰彈槍手
-- Chaos Spawn - 渾沌魔物
+- Chaos Spawn - 混沌魔物
 - Daemonhost - 惡魔宿主
 - Hex Daemonhost - 魔縛惡魔宿主
 - Tox Grenadier - 劇毒轟炸者
@@ -162,7 +162,7 @@
 
 - Battle Maul and Shield - 作戰大槌&板盾
 - Chainaxes - 突擊鏈斧
-- Crusher - 輾壓者
+- Crusher - 碾壓者
 - Eviscerators - 重型開膛劍
 - Latrine Shovels - 廁所鏟
 - Power Maul - 動力錘
@@ -822,7 +822,7 @@
 - Field Improvisation - 臨場發揮
 - Twinned Blast - 雙響炮
 - Demolition Stockpile - 炸藥儲備
-- Grenadier - 擲彈兵
+- Grenadier - 擲彈兵/轟炸者
 - Leave No One Behind - 不拋棄不放棄
 - Precision Strikes - 堅定不移
 - Deadshot - 死亡射手
