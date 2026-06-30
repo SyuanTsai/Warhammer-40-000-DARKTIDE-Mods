@@ -1,79 +1,165 @@
 # Warhammer 40,000 DARKTIDE - 戰錘40K黑潮
 
-#### 主要(MAIN)
+## 基礎名詞
+
+### 主要 (MAIN)
+
 - Combat Ability - 戰鬥技能
-- Health - 健康  
-- Peril - 反噬  
-- Stamina - 耐力  
-- Toughness - 韌性  
-- Coherency - 協同  
+- Health - 健康
+- Peril - 反噬
+- Stamina - 耐力
+- Toughness - 韌性
+- Coherency - 協同
 - Blitz - 閃擊
 
-#### 增益效果(BUFFS)
-- Crit - 致命一擊  
-- Rending - 撕裂  
-- Impact - 衝擊  
-- Cleave - 順批攻擊  
-- Power - 威力  
-- Finesse - 靈巧傷害  
-- Hit Mass - 順劈目標  
-- Damage - 傷害  
-- Weak Spot - 弱點  
+### 通用名詞
 
-#### 減益效果(DEBUFFS)
-- Burn - 燃燒  
-- Heat - 熱能  
-- Soulblaze - 靈魂之火  
-- Bleed - 流血  
-- Stagger - 踉蹌  
-- Corruption - 腐敗  
-- Electrocuted - 電擊  
-- Brittleness - 脆弱  
+- Toughness - 韌性
+- Hit Mass - 順劈目標
+- Cleave - 順劈攻擊
+- Curios - 珍品
+- Weakspot - 弱點
+- Finesse - 靈巧
+- Staggering - 踉蹌
+- Critical Melee - 近戰爆擊
+- Stacks - 疊加
+- Aura - 光環
+- Coherency - 協同
+- Auspex - 占卜儀
+- Fury - 狂怒
+- Weapon Perks - 武器專長
+- Specialist - 專家敵人
+- Plasteel - 塑鋼
+- Diamantine - 金剛晶石
+- Medicae Station - 醫療站
+- Grimoire - 法術書
+- Scripture - 聖書
+- Heretical Idol - 異端神像
+- Martyr's Skull - 殉道者之顱
+
+### 增益效果 (BUFFS)
+
+- Crit - 致命一擊
+- Rending - 撕裂
+- Impact - 衝擊
+- Cleave - 順劈攻擊
+- Power - 威力
+- Finesse - 靈巧傷害
+- Hit Mass - 順劈目標
+- Damage - 傷害
+- Weak Spot - 弱點
+
+### 減益效果 (DEBUFFS)
+
+- Burn - 燃燒
+- Heat - 熱能
+- Soulblaze - 靈魂之火
+- Bleed - 流血
+- Stagger - 踉蹌
+- Corruption - 腐敗
+- Electrocuted - 電擊
+- Brittleness - 脆弱
 - Stun - 眩暈
 - Soulblaze -  靈能之火
 
-#### 遊戲活動專用詞
-- Heretical Artifacts - 異端聖物
-- Tainted Skull - 腐化顱骨
-  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/
+### 難度 (DIFFICULTY)
 
-#### 靈能者(PSYKER)
-- Precision - 精準  
+- Sedition - 暴動
+- Uprising - 起義
+- Malice - 惡毒
+- Heresy - 異端
+- Damnation - 詛咒
 
-#### 歐格林(OGRYN)
-- Feel No Pain - 麻木  
-- Lucky Bullet - 幸運子彈  
-- Trample - 踐踏  
+### 其他 (MISC)
 
-#### 狂信徒(ZEALOT)
-- Momentum - 勢能  
-- Stealth - 隱身  
-- Fury - 狂怒  
-
-#### 老兵(VETERAN)
-- Focus Target - 鎖定目標
-- Focus - 專注  
-- Melee Specialist - 近戰專家  
-- Ranged Specialist - 遠程專家  
-
-#### 其他(MISC)
-- Note - 備註  
-- Talents - 天賦  
+- Note - 備註
+- Talents - 天賦
 - Weapon Perks - 武器專長
 - Auspex - 占卜儀
 - Aura - 光環
 
-#### 難度(DIFFICULTY)
-- Sedition - 暴動  
-- Uprising - 起義  
-- Malice - 惡毒  
-- Heresy - 異端  
-- Damnation - 詛咒  
+## 遊戲內容與任務詞
 
+### 遊戲活動專用詞
+
+- Heretical Artifacts - 異端聖物
+- Tainted Skull - 腐化顱骨
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/
+
+### 興奮劑
+
+- Medic Stimm - 醫療興奮劑
+- Concentration Stimm - 專注興奮劑
+- Combat Stimm - 戰鬥興奮劑
+- Celerity Stimm - 敏捷興奮劑
+- Stimm - 興奮劑
+- Hive Scum Stimm - 巢都敗類興奮劑
+
+- Boost Stimm - 專注興奮劑
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua
+- Power Stimm - 戰鬥興奮劑
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua
+- Speed Stimm - 敏捷興奮劑
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua
+
+### 怪物相關
+
+- Gunners - 砲手
+- Reaper - 收割者
+- Sniper - 狙擊手
+- Pox Hound - 瘟疫獵犬
+- Trapper - 陷阱兵
+- Mutant - 變種人
+- Maniac - 狂熱者
+- Unyielding - 不屈敵人
+- Carapace - 甲殼
+- Monstrosity - 巨獸
+- Poxbringer - 瘟疫爆者
+- Bomber - 轟炸者
+- Mauler - 重錘兵
+- Ogryn - 歐格林
+- Ragers - 狂怒者
+- Scab - 血痂
+- Dreg - 渣滓
+- Shotgunners - 霰彈槍手
+- Chaos Spawn - 渾沌魔物
+- Daemonhost - 惡魔宿主
+- Hex Daemonhost - 魔縛惡魔宿主
+- Tox Grenadier - 劇毒轟炸者
+- Plasma Gunner - 電漿槍手
+- Pox Burster - 瘟疫爆者
+- Chaos Poxwalker Bomber - 瘟疫爆者
+- Renegade Netgunner - 陷阱兵
+- Renegade Berzerker - 血痂狂戰士
+- Cultist Berzerker - 渣滓狂戰士
+- Mutated Poxwalker - 變異瘟疫行者
+- Lesser Mutated Poxwalker - 低階變異瘟疫行者
+- Ritualist - 渣滓祭司
+- Twins - 雙子
+- Flamer - 火焰兵
+
+### 遊戲詞條相關
+
+- Enhanced Blitz - 閃擊強化
+- Reduce Ability Cooldowns by 20%. - 技能冷卻減少20%
+
+### 浩劫
+
+- Havoc - 浩劫
+- Havoc Modifier - 浩劫詞條
+- Havoc Rank - 浩劫等級
+- Blight Spreads - 瘟疫蔓延
+- Enraging Elites - 背水一戰(狂暴)
+
+- Marked Healers - 蔓生花園(回血)
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/ImprovedHavocTags/scripts/mods/ImprovedHavocTags/ImprovedHavocTags_localization.lua
+- The Encroaching Garden - 蔓生花園(回血)
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/ImprovedHavocTags/scripts/mods/ImprovedHavocTags/ImprovedHavocTags_localization.lua
 
 ## 武器
 
-### 近戰武器 - Melee WEAPON
+### 近戰武器 - Melee Weapon
+
 - Battle Maul and Shield - 作戰大槌&板盾
 - Chainaxes - 突擊鏈斧
 - Crusher - 輾壓者
@@ -100,7 +186,7 @@
 - Blaze Force Greatsword - 烈焰力場巨劍
 - Relic Blade - 上古神刃
 
-### 遠程武器 - Ranged WEAPON
+### 遠程武器 - Ranged Weapon
 
 - Autopistol - 撕裂者自動手槍
 - Infantry Autoguns - 步兵自動槍
@@ -297,7 +383,8 @@
 
 ## 裝備屬性
 
-### 珍品屬性 (CURIOS) 
+### 珍品屬性 (CURIOS)
+
 - Damage vs Flak - 對防彈護甲的敵人傷害
 - Damage vs Maniacs - 對狂熱者傷害
 - Damage vs Infested - 對被感染的敵人傷害
@@ -314,150 +401,69 @@
 - Block Efficiency - 格檔效率
 - Cost for Sprinting - 衝刺體力消耗
 
+### 近戰武器屬性 - Melee Weapon
 
-### 近戰武器屬性 - Melee WEAPON
-- Damage vs Flak - 防彈護甲的敵人  
-- Damage vs Maniacs - 狂熱者  
-- Damage vs Infested - 被感染的敵人  
-- Damage vs Unyielding - 不屈的敵人  
-- Damage vs Carapace - 甲殼護甲的敵人  
-- Damage vs Unarmoured - 無護甲敵人  
-- Crit chance - 暴擊機率  
-- Crit damage - 暴擊傷害  
-- Damage vs Groaners and Poxwalkers - 呻吟者、瘟疫行者  
-- Damage vs Elites - 精英  
-- Damage vs Specialists - 專家  
-- Stamina - 耐力  
-- Weakspot damage - 弱點傷害  
-- Block Efficiency - 格檔效率  
-- Cost for Sprinting - 衝刺體力消耗  
+- Damage vs Flak - 防彈護甲的敵人
+- Damage vs Maniacs - 狂熱者
+- Damage vs Infested - 被感染的敵人
+- Damage vs Unyielding - 不屈的敵人
+- Damage vs Carapace - 甲殼護甲的敵人
+- Damage vs Unarmoured - 無護甲敵人
+- Crit chance - 暴擊機率
+- Crit damage - 暴擊傷害
+- Damage vs Groaners and Poxwalkers - 呻吟者、瘟疫行者
+- Damage vs Elites - 精英
+- Damage vs Specialists - 專家
+- Stamina - 耐力
+- Weakspot damage - 弱點傷害
+- Block Efficiency - 格檔效率
+- Cost for Sprinting - 衝刺體力消耗
 
-### 遠程武器屬性 - Ranged WEAPON
-- Damage vs Flak - 防彈護甲的敵人  
-- Damage vs Maniacs - 狂熱者  
-- Damage vs Infested - 被感染的敵人  
-- Damage vs Unyielding - 不屈的敵人  
-- Damage vs Carapace - 甲殼護甲的敵人  
-- Damage vs Unarmoured - 無護甲敵人  
-- Crit chance - 暴擊機率  
-- Crit damage - 暴擊傷害  
-- Damage vs Elites - 精英  
-- Damage vs Groaners and Poxwalkers - 呻吟者、瘟疫行者  
-- Damage vs Specialists - 專家  
-- Stamina - 耐力  
-- Weakspot damage - 弱點傷害  
-- Reload Speed - 裝填速度  
+### 遠程武器屬性 - Ranged Weapon
 
+- Damage vs Flak - 防彈護甲的敵人
+- Damage vs Maniacs - 狂熱者
+- Damage vs Infested - 被感染的敵人
+- Damage vs Unyielding - 不屈的敵人
+- Damage vs Carapace - 甲殼護甲的敵人
+- Damage vs Unarmoured - 無護甲敵人
+- Crit chance - 暴擊機率
+- Crit damage - 暴擊傷害
+- Damage vs Elites - 精英
+- Damage vs Groaners and Poxwalkers - 呻吟者、瘟疫行者
+- Damage vs Specialists - 專家
+- Stamina - 耐力
+- Weakspot damage - 弱點傷害
+- Reload Speed - 裝填速度
 
+## 職業與天賦
 
+### 職業核心詞
 
+#### 靈能者 (PSYKER)
 
+- Precision - 精準
 
+#### 歐格林 (OGRYN)
 
+- Feel No Pain - 麻木
+- Lucky Bullet - 幸運子彈
+- Trample - 踐踏
 
+#### 狂信徒 (ZEALOT)
 
-
-
-
---damage傷害 stagger踉蹌 cleave順劈
-## 通用名詞
-
-- Toughness - 韌性
-- Hit Mass - 順劈目標
-- Cleave - 順劈攻擊
-- Curios - 珍品
-- Weakspot - 弱點
-- Finesse - 靈巧
-- Staggering - 踉蹌
-- Critical Melee - 近戰爆擊
-- Stacks - 疊加
-- Aura - 光環
-- Coherency - 協同
-- Auspex - 占卜儀
+- Momentum - 勢能
+- Stealth - 隱身
 - Fury - 狂怒
-- Weapon Perks - 武器專長
-- Specialist - 專家敵人
-- Plasteel - 塑鋼
-- Diamantine - 金剛晶石
-- Medicae Station - 醫療站
-- Grimoire - 法術書
-- Scripture - 聖書
-- Heretical Idol - 異端神像
-- Martyr's Skull - 殉道者之顱
 
-### 興奮劑
+#### 老兵 (VETERAN)
 
-- Medic Stimm - 醫療興奮劑
-- Concentration Stimm - 專注興奮劑
-- Combat Stimm - 戰鬥興奮劑
-- Celerity Stimm - 敏捷興奮劑
-- Stimm - 興奮劑
-- Hive Scum Stimm - 巢都敗類興奮劑
+- Focus Target - 鎖定目標
+- Focus - 專注
+- Melee Specialist - 近戰專家
+- Ranged Specialist - 遠程專家
 
-- Boost Stimm - 專注興奮劑
-  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua
-- Power Stimm - 戰鬥興奮劑
-  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua
-- Speed Stimm - 敏捷興奮劑
-  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua
-  
-### 怪物相關
-
-- Gunners - 砲手
-- Reaper - 收割者
-- Sniper - 狙擊手
-- Pox Hound - 瘟疫獵犬
-- Trapper - 陷阱兵
-- Mutant - 變種人
-- Maniac - 狂熱者
-- Unyielding - 不屈敵人
-- Carapace - 甲殼
-- Monstrosity - 巨獸
-- Poxbringer - 瘟疫爆者
-- Bomber - 轟炸者
-- Mauler - 重錘兵
-- Ogryn - 歐格林
-- Ragers - 狂怒者
-- Scab - 血痂
-- Dreg - 渣滓
-- Shotgunners - 霰彈槍手
-- Chaos Spawn - 渾沌魔物
-- Daemonhost - 惡魔宿主
-- Hex Daemonhost - 魔縛惡魔宿主
-- Tox Grenadier - 劇毒轟炸者
-- Plasma Gunner - 電漿槍手
-- Pox Burster - 瘟疫爆者
-- Chaos Poxwalker Bomber - 瘟疫爆者
-- Renegade Netgunner - 陷阱兵
-- Renegade Berzerker - 血痂狂戰士
-- Cultist Berzerker - 渣滓狂戰士
-- Mutated Poxwalker - 變異瘟疫行者
-- Lesser Mutated Poxwalker - 低階變異瘟疫行者
-- Ritualist - 渣滓祭司
-- Twins - 雙子
-- Flamer - 火焰兵
-
-
-### 遊戲詞條相關
-
-- Enhanced Blitz - 閃擊強化
-- Reduce Ability Cooldowns by 20%. - 技能冷卻減少20%
-
-### 浩劫
-- Havoc - 浩劫
-- Havoc Modifier - 浩劫詞條
-- Havoc Rank - 浩劫等級
-- Blight Spreads - 瘟疫蔓延
-- Enraging Elites - 背水一戰(狂暴)
-
-
-- Marked Healers - 蔓生花園(回血)
-  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/ImprovedHavocTags/scripts/mods/ImprovedHavocTags/ImprovedHavocTags_localization.lua
-- The Encroaching Garden - 蔓生花園(回血) 
-  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/ImprovedHavocTags/scripts/mods/ImprovedHavocTags/ImprovedHavocTags_localization.lua
-
-
-### 天賦相關(小型節點)
+### 天賦相關 (小型節點)
 
 - Peril Resistance - 反噬抗性
 - Melee Damage Boost - 近戰增幅
@@ -469,7 +475,6 @@
 - Suppression Boost - 壓制增幅
 - Toughness Boost - 韌性增幅
 - Toughness Damage Reduction - 韌性減傷
-
 
 ### Psyker - 靈能者
 
@@ -551,7 +556,7 @@
 - Psykinetic's Aura - 靈能學者光環
 - Malefic Momentum - 惡意攻勢
 - Perilous Assault - 反噬突襲
-- Lightning Speed - 迅雷之勢 
+- Lightning Speed - 迅雷之勢
 - Empyric Shock - 亞空間震波
 - By Crack of Bone - 骨折後遺症
 - Warp Splitting - 亞空間分裂
@@ -663,7 +668,7 @@
 - Stun Grenade - 眩暈手雷
 - Stunstorm Grenade - 眩暈風暴手雷
 - Immolation Grenade - 獻祭手雷
-- Blades of Faith  - 信仰之刃 
+- Blades of Faith  - 信仰之刃
 
 ##### 光環
 
@@ -742,7 +747,6 @@
 ### Veteran - 老兵
 
 #### 老兵專有名詞
-
 
 #### 老兵天賦
 
@@ -925,4 +929,3 @@
 - Chordclaw Bleed - 弦爪流血
 
 ##### 戰錘世界觀術語
-
