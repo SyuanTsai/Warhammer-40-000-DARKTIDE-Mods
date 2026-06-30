@@ -356,7 +356,7 @@ local loc = {
         ja = "感電",
         ["zh-cn"] = "触电",
         ru = "Наэлектризован",
-        ["zh-tw"] = "觸電",
+        ["zh-tw"] = "電擊",
     },
     neurotoxin_interval_buff = {
         en = "Chem Toxin",
