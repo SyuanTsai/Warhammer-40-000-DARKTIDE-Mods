@@ -1,12 +1,13 @@
 # Warhammer 40,000 DARKTIDE - 戰錘40K黑潮
 
 #### 主要(MAIN)
-- Combat Ability CD - 戰鬥能力CD  
+- Combat Ability - 戰鬥技能
 - Health - 健康  
 - Peril - 反噬  
 - Stamina - 耐力  
 - Toughness - 韌性  
-- Coherency - 協同率  
+- Coherency - 協同  
+- Blitz - 閃擊
 
 #### 增益效果(BUFFS)
 - Crit - 致命一擊  
@@ -28,6 +29,13 @@
 - Corruption - 腐敗  
 - Electrocuted - 電擊  
 - Brittleness - 脆弱  
+- Stun - 眩暈
+- Soulblaze -  靈能之火
+
+#### 遊戲活動專用詞
+- Heretical Artifacts - 異端聖物
+- Tainted Skull - 腐化顱骨
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/
 
 #### 靈能者(PSYKER)
 - Precision - 精準  
@@ -368,13 +376,31 @@
 - Auspex - 占卜儀
 - Fury - 狂怒
 - Weapon Perks - 武器專長
+- Specialist - 專家敵人
+- Plasteel - 塑鋼
+- Diamantine - 金剛晶石
+- Medicae Station - 醫療站
+- Grimoire - 法術書
+- Scripture - 聖書
+- Heretical Idol - 異端神像
+- Martyr's Skull - 殉道者之顱
 
 ### 興奮劑
 
-- Celerity Stimm - 敏捷興奮劑
-- Combat Stimm - 戰鬥興奮劑
+- Medic Stimm - 醫療興奮劑
 - Concentration Stimm - 專注興奮劑
+- Combat Stimm - 戰鬥興奮劑
+- Celerity Stimm - 敏捷興奮劑
+- Stimm - 興奮劑
+- Hive Scum Stimm - 巢都敗類興奮劑
 
+- Boost Stimm - 專注興奮劑
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua
+- Power Stimm - 戰鬥興奮劑
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua
+- Speed Stimm - 敏捷興奮劑
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua
+  
 ### 怪物相關
 
 - Gunners - 砲手
@@ -396,12 +422,40 @@
 - Dreg - 渣滓
 - Shotgunners - 霰彈槍手
 - Chaos Spawn - 渾沌魔物
+- Daemonhost - 惡魔宿主
+- Hex Daemonhost - 魔縛惡魔宿主
+- Tox Grenadier - 劇毒轟炸者
+- Plasma Gunner - 電漿槍手
+- Pox Burster - 瘟疫爆者
+- Chaos Poxwalker Bomber - 瘟疫爆者
+- Renegade Netgunner - 陷阱兵
+- Renegade Berzerker - 血痂狂戰士
+- Cultist Berzerker - 渣滓狂戰士
+- Mutated Poxwalker - 變異瘟疫行者
+- Lesser Mutated Poxwalker - 低階變異瘟疫行者
+- Ritualist - 渣滓祭司
+- Twins - 雙子
+- Flamer - 火焰兵
 
 
-### 事件相關
+### 遊戲詞條相關
 
 - Enhanced Blitz - 閃擊強化
 - Reduce Ability Cooldowns by 20%. - 技能冷卻減少20%
+
+### 浩劫
+- Havoc - 浩劫
+- Havoc Modifier - 浩劫詞條
+- Havoc Rank - 浩劫等級
+- Blight Spreads - 瘟疫蔓延
+- Enraging Elites - 背水一戰(狂暴)
+
+
+- Marked Healers - 蔓生花園(回血)
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/ImprovedHavocTags/scripts/mods/ImprovedHavocTags/ImprovedHavocTags_localization.lua
+- The Encroaching Garden - 蔓生花園(回血) 
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/ImprovedHavocTags/scripts/mods/ImprovedHavocTags/ImprovedHavocTags_localization.lua
+
 
 ### 天賦相關(小型節點)
 
@@ -427,6 +481,7 @@
 - Damage wrap - 靈能傷害
 - Warp attack - 亞空間攻擊
 - Soulblaze - 靈魂之火
+- Warp Charge - 亞空間充能
 
 #### 靈能者天賦
 
@@ -598,6 +653,8 @@
 ### Zealot - 狂信徒
 
 #### 狂信徒專有名詞
+- Holy Relic - 聖物
+- Fury Faithful - 有信者之怒
 
 #### 狂信徒天賦
 
@@ -784,17 +841,88 @@
 - Rending Strikes - 裂擊
 - Bring it Down! - 幹掉它!
 
+### Arbites - 法務官
+
+#### 法務官專有名詞
+
+- Arbites - 法務官
+- Cyber-Mastiff - 電子獒犬
+
+#### 法務官天賦
+
+##### 閃擊
+- Arbites Grenade - 法務官手榴彈
+
+##### 光環
+
+##### 主動技能
+
+##### 鑰石
+
+##### 一般天賦
+
+### Hive Scum - 巢都渣子
+
+#### 巢都渣子專有名詞
+
+- Hive Scum - 巢都渣子
+- Stimm Field - 化學性依賴
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/BrokerAutoStim/scripts/mods/BrokerAutoStim/
+- Stimm Supply - 化學性依賴
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/BrokerAutoStim/scripts/mods/BrokerAutoStim/
+- Broker - 代理
+  - 來源檔案：Warhammer 40,000 DARKTIDE/mods/BrokerAutoStim/scripts/mods/BrokerAutoStim/
+
+#### 巢都渣子天賦
+
+##### 閃擊
+
+##### 光環
+
+##### 主動技能
+
+##### 鑰石
+- Chemical Dependency - 化學性依賴
+
+##### 一般天賦
+
+### Skitarius - 護教軍
+
+#### 護教軍專有名詞
+
+- Skitarius / Skitarii - 護教軍
+- Servo-Skull - 伺服頭骨
+- Noospheric Command - 心智網指令
+
+#### 護教軍天賦
+
+##### 閃擊
+
+##### 光環
+
+##### 主動技能
+
+##### 鑰石
+
+##### 一般天賦
+
 ##### 敵人 / 單位
 
 - Dreg Vanguard - 渣滓先鋒
 - Scab Vanguard - 血痂先鋒
+- Monster - 巨獸
+- Captain 連長
+- Horde/Roamer - 群怪/遊蕩
 
 ##### 狀態 / 效果
 
 - Toxin - 毒素
 - Phosphor Burn - 磷火灼燒
 - Weapon Malfunction - 武器故障
+- Suppression - 壓制
+- Damage over Time - 持續傷害
+- Chem Toxin - 化學毒素
+- Chordclaw Bleed - 弦爪流血
 
 ##### 戰錘世界觀術語
 
-- Heretical Artifacts - 異端聖物
