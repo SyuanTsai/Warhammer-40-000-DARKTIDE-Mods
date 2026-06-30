@@ -613,7 +613,7 @@ return {
 	mloc_monstrosity = {
 		en = "Monstrosity",
 		["zh-cn"] = "怪物",
-		["zh-tw"] = "巨獸 / 怪物",
+		["zh-tw"] = "巨獸",
 	},
 	mloc_horde = {
 		en = "Horde",
@@ -638,7 +638,7 @@ return {
 	mloc_trapper = {
 		en = "Trapper",
 		["zh-cn"] = "陷阱手",
-		["zh-tw"] = "陷阱手",
+		["zh-tw"] = "陷阱兵",
 	},
 	mloc_sniper = {
 		en = "Sniper",
