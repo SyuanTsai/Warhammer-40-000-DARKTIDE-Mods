@@ -13,7 +13,7 @@ local mod = get_mod("AuspexHelper")
 return {
 	mod_name = {
 		en = "{#color(80,255,160)}\xEE\x80\xAA Auspex Helper \xEE\x80\xAA{#reset()}",
-		["zh-tw"] = "{#color(80,255,160)}\xEE\x80\xAA Auspex 占卜儀助手 \xEE\x80\xAA{#reset()}",
+		["zh-tw"] = "{#color(80,255,160)}\xEE\x80\xAA 占卜儀助手 \xEE\x80\xAA{#reset()}",
 	},
 	mod_description = {
 		en = "{#color(120,255,180)}Release 1.0.0{#reset()} | Author: LAUREHTE\n{#color(90,220,150)}Scanner helpers, world-scan overlays, practice mode, and minigame assists.{#reset()}",
@@ -41,7 +41,7 @@ return {
 	},
 	world_scan_group_desc = {
 		en = "Choose how roaming scan objectives are highlighted, tinted, and optionally shown in a centered scanner-search overlay while using the auspex.",
-		["zh-tw"] = "選擇漫遊掃描目標的高亮、染色方式，以及使用探測儀時是否在中央掃描搜尋疊加層中顯示。",
+		["zh-tw"] = "選擇漫遊掃描目標的高亮、染色方式，以及使用占卜儀時是否在中央掃描搜尋疊加層中顯示。",
 	},
 	enable_world_scans = {
 		en = "Scan Outlines",
@@ -49,7 +49,7 @@ return {
 	},
 	enable_world_scans_desc = {
 		en = "Enable assistance for roaming auspex scan objects.",
-		["zh-tw"] = "啟用漫遊探測儀掃描物件的輔助功能。",
+		["zh-tw"] = "啟用漫遊占卜儀掃描物件的輔助功能。",
 	},
 	world_scan_display_mode = {
 		en = "Display mode",
@@ -65,7 +65,7 @@ return {
 	},
 	world_scan_always_show_desc = {
 		en = "Keep scan-object outlines or icons visible whenever active scannables exist, even without the auspex equipped.",
-		["zh-tw"] = "只要存在可掃描物件，即使未裝備探測儀也保持掃描物件輪廓或圖示可見。",
+		["zh-tw"] = "只要存在可掃描物件，即使未裝備占卜儀也保持掃描物件輪廓或圖示可見。",
 	},
 	world_scan_through_walls = {
 		en = "See through walls",
@@ -81,7 +81,7 @@ return {
 	},
 	world_scan_item_overlay_desc = {
 		en = "While actively searching with the auspex, show a centered scanner-style overlay with sonar rings and relative scannable positions instead of relying only on the auspex screen.",
-		["zh-tw"] = "主動使用探測儀搜尋時，顯示帶有聲納環和相對可掃描位置的中央掃描風格疊加層，而非僅依賴探測儀螢幕。",
+		["zh-tw"] = "主動使用占卜儀搜尋時，顯示帶有聲納環和相對可掃描位置的中央掃描風格疊加層，而非僅依賴占卜儀螢幕。",
 	},
 	world_scan_display_mode_highlight = {
 		en = "Highlight",
@@ -149,7 +149,7 @@ return {
 	},
 	live_display_mode_desc = {
 		en = "Show live scanner minigames and practice mode in the auspex item or as a centered overlay.",
-		["zh-tw"] = "在探測儀物品或居中疊加層中顯示即時掃描小遊戲與練習模式。",
+		["zh-tw"] = "在占卜儀物品或居中疊加層中顯示即時掃描小遊戲與練習模式。",
 	},
 	overlay_display_scale = {
 		en = "Overlay scale",
@@ -349,7 +349,7 @@ return {
 	},
 	expedition_map_group_desc = {
 		en = "Control whether the new expedition map stays on the auspex item or opens as a centered overlay.",
-		["zh-tw"] = "控制新的遠征地圖是停在探測儀物品上，還是開啟為居中疊加層。",
+		["zh-tw"] = "控制新的遠征地圖是停在占卜儀物品上，還是開啟為居中疊加層。",
 	},
 	enable_expedition_map_minigame = {
 		en = "Expedition Map",
