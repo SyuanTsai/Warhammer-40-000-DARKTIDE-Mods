@@ -104,7 +104,7 @@ return {
     box_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum Boxes: \nStandard: %d\nEnhanced Blitz: %d", box, box + enhanced),
         ["zh-cn"] = string.format("至少有这么多手雷才能这么做 \n\n最大盒子雷: \n标准: %d\n强化闪击: %d", box, box + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n巨量傷害盒上限: \n標準: %d\n閃擊強化: %d", box, box + enhanced),
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n盒子上限: \n標準: %d\n閃擊強化: %d", box, box + enhanced),
     },
 
     -- Rock 扔石头
@@ -126,7 +126,7 @@ return {
     rock_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum Rocks: \nStandard: %d\nEnhanced Blitz: %d", rock, rock + enhanced),
         ["zh-cn"] = string.format("至少有这么多手雷才能这么做\n\n最大手雷: \n标准: %d\n强化闪击: %d", rock, rock + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n投石問路上限: \n標準: %d\n閃擊強化: %d", rock, rock + enhanced),
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n石頭上限: \n標準: %d\n閃擊強化: %d", rock, rock + enhanced),
     },
     -- Nuke 核弹
     nuke_enabled = {
@@ -147,7 +147,7 @@ return {
     nuke_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum Frag Bombs: \nStandard: %d\nEnhanced Blitz: %d", nuke, nuke + enhanced),
         ["zh-cn"] = string.format("至少有这么多手雷才能这么做.\n\n最大手雷: \n标准: %d\n强化闪击: %d", nuke, nuke + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n破片炸彈上限: \n標準: %d\n閃擊強化: %d", nuke, nuke + enhanced),
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n炸彈上限: \n標準: %d\n閃擊強化: %d", nuke, nuke + enhanced),
     },
     -- 老兵
     -- Frag 流血雷
@@ -171,7 +171,7 @@ return {
         cf("Grenadier", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
         ["zh-cn"] = string.format("必须有这么多手榴弹才能自动投掷\n\n最大手雷数量: \n标准/%s: %d/%s\n强化闪击: %d/%s\n",
         cf("掷弹兵", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n粉碎者破片手雷上限: \n標準/%s: %d/%s\n閃擊強化: %d/%s\n",
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n手雷上限: \n標準/%s: %d/%s\n閃擊強化: %d/%s\n",
         cf("擲彈兵", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
     },
     -- Krak 穿甲雷
@@ -195,7 +195,7 @@ return {
         cf("Grenadier", "ui_veteran_text"), frag, cf(krak + grenadier, "ui_veteran_text"), krak + enhanced, cf(krak + grenadier + enhanced, "ui_veteran_text")),
         ["zh-cn"] = string.format("必须有这么多手榴弹才能自动投掷\n\n最大手雷数量: \n标准/%s: %d/%s\n强化闪击: %d/%s\n",
         cf("掷弹兵", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n穿甲手雷上限: \n標準/%s: %d/%s\n閃擊強化: %d/%s\n",
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n手雷上限: \n標準/%s: %d/%s\n閃擊強化: %d/%s\n",
         cf("擲彈兵", "ui_veteran_text"), frag, cf(krak + grenadier, "ui_veteran_text"), krak + enhanced, cf(krak + grenadier + enhanced, "ui_veteran_text")),
     },
     smoke_enabled = {
@@ -218,7 +218,7 @@ return {
         cf("Grenadier", "ui_veteran_text"), frag, cf(smoke + grenadier, "ui_veteran_text"), smoke + enhanced, cf(smoke + grenadier + enhanced, "ui_veteran_text")),
         ["zh-cn"] = string.format("必须有这么多手榴弹才能自动投掷\n\n最大手雷数量: \n标准/%s: %d/%s\n强化闪击: %d/%s\n",
         cf("掷弹兵", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n煙霧手雷上限: \n標準/%s: %d/%s\n閃擊強化: %d/%s\n",
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n煙霧上限: \n標準/%s: %d/%s\n閃擊強化: %d/%s\n",
         cf("擲彈兵", "ui_veteran_text"), frag, cf(smoke + grenadier, "ui_veteran_text"), smoke + enhanced, cf(smoke + grenadier + enhanced, "ui_veteran_text")),    },
     -- Flame 火雷
     flame_enabled = {
@@ -239,7 +239,7 @@ return {
     flame_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum Immolation Grenades: \nStandard: %d\nEnhanced Blitz: %d", flame, flame + enhanced),
         ["zh-cn"] = string.format("至少有这么多手雷才能自动投掷\n\n最大手榴弹: \n标准: %d\n强化闪击: %d", flame, flame + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n獻祭手雷上限: \n標準: %d\n閃擊強化: %d", flame, flame + enhanced),    },
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n手雷上限: \n標準: %d\n閃擊強化: %d", flame, flame + enhanced),    },
     -- Shock 眩晕手雷
     shock_enabled = {
         en = cf("Stunstorm Grenade","ui_zealot_text"),
@@ -258,7 +258,7 @@ return {
     shock_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum Stunstorm Grenades: \nStandard: %d\nEnhanced Blitz: %d", shock, shock + enhanced),
         ["zh-cn"] = string.format("至少有这么多手雷才能自动投掷\n\n最大手榴弹: \n标准: %d\n强化闪击: %d", shock, shock + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n眩暈風暴手雷上限: \n標準: %d\n閃擊強化: %d", shock, shock + enhanced),    },
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n手雷上限: \n標準: %d\n閃擊強化: %d", shock, shock + enhanced),    },
     -- Mine
     mine_enabled = {
         en = cf(Localize("loc_talent_ability_shock_mine"), "pale_violet_red"), -- should be localized for all languages without further modification
