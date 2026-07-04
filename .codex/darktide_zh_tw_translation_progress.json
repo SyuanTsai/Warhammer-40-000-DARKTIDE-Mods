@@ -1,11 +1,11 @@
 {
   "current": {
-    "directory": "AUPM",
-    "base_branch": "origin/feature/Add-AUPM",
-    "work_branch": "origin/feature/Add-AUPM/codex",
-    "file": "Warhammer 40,000 DARKTIDE/mods/AUPM/scripts/mods/AUPM/AUPM_localization.lua",
+    "directory": "AuspexHelper",
+    "base_branch": "origin/feature/Add-AuspexHelper",
+    "work_branch": "origin/feature/Add-AuspexHelper/codex",
+    "file": null,
     "key": null,
-    "status": "file_completed"
+    "status": "pending"
   },
   "directories": {
     "afk": {
@@ -59,7 +59,7 @@
       "pr_number": 4
     },
     "AUPM": {
-      "status": "translated",
+      "status": "pr_opened",
       "base_branch": "origin/feature/Add-AUPM",
       "work_branch": "origin/feature/Add-AUPM/codex",
       "completed_files": [
@@ -78,14 +78,15 @@
       "blocked_keys": {},
       "last_file": "Warhammer 40,000 DARKTIDE/mods/AUPM/scripts/mods/AUPM/AUPM_localization.lua",
       "last_key": "team_y_offset",
-      "commit": null,
-      "pushed": false,
-      "pr_url": null,
-      "pr_number": null
+      "commit": "04ad2d5b4eaa5fc7442192d5ebe01a6746612d27",
+      "pushed": true,
+      "pr_url": "https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/5",
+      "pr_number": 5
     }
   },
   "completed_directories": [
     "afk",
-    "Archivum Messelina"
+    "Archivum Messelina",
+    "AUPM"
   ]
 }
