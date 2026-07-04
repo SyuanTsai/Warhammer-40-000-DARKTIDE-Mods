@@ -1,0 +1,36 @@
+{
+  "current": {
+    "directory": "afk",
+    "base_branch": "origin/feature/Add-AFK",
+    "work_branch": "origin/feature/Add-AFK/codex",
+    "file": "Warhammer 40,000 DARKTIDE/mods/afk/scripts/mods/afk/afk_localization.lua",
+    "key": null,
+    "status": "file_completed"
+  },
+  "directories": {
+    "afk": {
+      "status": "translated",
+      "base_branch": "origin/feature/Add-AFK",
+      "work_branch": "origin/feature/Add-AFK/codex",
+      "completed_files": [
+        "Warhammer 40,000 DARKTIDE/mods/afk/scripts/mods/afk/afk_localization.lua"
+      ],
+      "completed_keys": {
+        "Warhammer 40,000 DARKTIDE/mods/afk/scripts/mods/afk/afk_localization.lua": [
+          "mod_name",
+          "mod_description",
+          "block_check_limit",
+          "block_check_limit_description"
+        ]
+      },
+      "blocked_keys": {},
+      "last_file": "Warhammer 40,000 DARKTIDE/mods/afk/scripts/mods/afk/afk_localization.lua",
+      "last_key": "block_check_limit_description",
+      "commit": null,
+      "pushed": false,
+      "pr_url": null,
+      "pr_number": null
+    }
+  },
+  "completed_directories": []
+}
