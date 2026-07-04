@@ -2,12 +2,12 @@
 		mod_name = {
 			en = "Broker Auto Stim",
 			["zh-cn"] = "自动注射兴奋剂",
-			["zh-tw"] = "自動注射興奮劑",
+			["zh-tw"] = "代理自動興奮劑",
 		},
 		mod_description = {
 			en = "Automatically injects broker stim after being in combat for a set duration.",
 			["zh-cn"] = "在进入战斗一定时间后自动注射自制兴奋剂。",
-			["zh-tw"] = "在進入戰鬥一段時間後自動使用興奮劑。",
+			["zh-tw"] = "進入戰鬥達指定時間後，自動注射代理興奮劑。",
 		},
 		profile_settings = {
 			en = "Profile Settings",
@@ -142,22 +142,22 @@
 		only_with_chemical_dependency = {
 			en = "Only With Chemical Dependency",
 			["zh-cn"] = "仅在有化学依赖时",
-			["zh-tw"] = "僅在有化學依賴時",
+			["zh-tw"] = "僅在有化學性依賴時",
 		},
 		only_with_chemical_dependency_description = {
 			en = "Only auto-stim if you have the Chemical Dependency keystone.",
 			["zh-cn"] = "只有当你拥有化学依赖关键技能时才自动注射兴奋剂。",
-			["zh-tw"] = "只有當你擁有「化學依賴」關鍵天賦時才會自動注射興奮劑。",
+			["zh-tw"] = "只有當你擁有「化學性依賴」關鍵天賦時才會自動注射興奮劑。",
 		},
 		not_with_stimm_supply = {
             en = "Not with Stimm Supply",
             ["zh-cn"] = "选择兴奋剂补给时禁用自动化",
-			["zh-tw"] = "選擇興奮劑補給時停用自動化",
+			["zh-tw"] = "擁有化學性依賴時停用",
         },
         not_with_stimm_supply_description = {
             en = "Disable auto-stim if you have the Stimm Field combat ability.",
             ["zh-cn"] = "若玩家选择了右线兴奋剂补给大招，则禁用自动注射兴奋剂的功能。",
-			["zh-tw"] = "若玩家選擇了右線興奮劑補給戰技，則停用自動注射興奮劑功能。",
+			["zh-tw"] = "如果你擁有化學性依賴戰鬥技能，停用自動注射興奮劑。",
         },
 		auto_inject_prevention = {
 			en = "Auto Inject Prevention",
@@ -232,12 +232,12 @@
 		cancel_during_ability = {
 			en = "Cancel Injection During Combat Ability",
 			["zh-cn"] = "战斗技能激活时取消注射",
-			["zh-tw"] = "戰鬥技能啟動時取消注射",
+			["zh-tw"] = "戰鬥技能期間取消注射",
 		},
 		cancel_during_ability_description = {
 			en = "Cancel injection attempt while combat ability is active. Useful for cooldown reduction stims. Note: This does not block injections in 'Before Ability' trigger mode to prevent conflicts",
 			["zh-cn"] = "战斗技能激活时取消注射尝试。适用于冷却缩减兴奋剂。注意：这不会在'使用技能前'触发模式下阻止注射，以防止冲突。",
-			["zh-tw"] = "戰鬥技能啟動期間取消注射嘗試。適用於冷卻縮減型興奮劑。注意：為避免衝突，在「使用技能前」觸發模式下不會阻止注射。",
+			["zh-tw"] = "戰鬥技能啟用期間取消注射嘗試。適用於縮短冷卻時間的興奮劑。注意：為避免衝突，在「使用技能前」觸發模式下不會阻止注射。",
 		},
 		block_nearby_dog = {
 			en = "Block Injection Near Dog",
@@ -282,7 +282,7 @@
 		block_nearby_burster = {
 			en = "Block Injection Near Burster",
 			["zh-cn"] = "爆裂体附近阻止注射",
-			["zh-tw"] = "瘟疫暴者附近阻止注射",
+			["zh-tw"] = "瘟疫爆者附近阻止注射",
 		},
 		block_nearby_burster_description = {
 			en = "Prevent injection when Chaos Poxwalker Bombers (Bursters) are nearby.",
@@ -302,42 +302,42 @@
 		block_nearby_crusher = {
 			en = "Block Injection Near Crusher/Mauler",
 			["zh-cn"] = "粉碎者/血痂重锤兵附近阻止注射",
-			["zh-tw"] = "輾壓者／重鎚兵附近阻止注射",
+			["zh-tw"] = "碾壓者／重錘兵附近阻止注射",
 		},
 		block_nearby_crusher_description = {
 			en = "Prevent injection when Chaos Ogryn Executors (Crushers) or Renegade Executors (Maulers) are nearby.",
 			["zh-cn"] = "混沌欧格林处决者或血痂处决者附近时阻止注射。",
-			["zh-tw"] = "輾壓者／重鎚兵在處決動畫時阻止注射。",
+			["zh-tw"] = "碾壓者或重錘兵在附近時阻止注射。",
 		},
 		crusher_detection_range = {
 			en = "Crusher/Mauler Detection Range",
 			["zh-cn"] = "粉碎者/血痂重锤兵侦测范围",
-			["zh-tw"] = "輾壓者／重鎚兵偵測範圍",
+			["zh-tw"] = "碾壓者／重錘兵偵測範圍",
 		},
 		crusher_detection_range_description = {
 			en = "Distance to scan for crushers and maulers",
 			["zh-cn"] = "扫描粉碎者和血痂重锤兵的距离。",
-			["zh-tw"] = "掃描輾壓者與重鎚兵的距離。",
+			["zh-tw"] = "掃描碾壓者與重錘兵的距離。",
 		},
 		block_nearby_rager = {
 			en = "Block Injection Near Rager",
 			["zh-cn"] = "狂战士附近阻止注射",
-			["zh-tw"] = "狂戰士附近阻止注射",
+			["zh-tw"] = "狂怒者附近阻止注射",
 		},
 		block_nearby_rager_description = {
 			en = "Prevent injection when Renegade Berzerkers or Cultist Berzerkers (Ragers) are nearby.",
 			["zh-cn"] = "血痂狂战士或渣滓狂战士附近时阻止注射。",
-			["zh-tw"] = "血痂狂戰士或渣滓狂戰士在附近時阻止注射。",
+			["zh-tw"] = "血痂狂暴者或渣滓狂怒者在附近時阻止注射。",
 		},
 		rager_detection_range = {
 			en = "Rager Detection Range",
 			["zh-cn"] = "狂战士侦测范围",
-			["zh-tw"] = "狂戰士偵測範圍",
+			["zh-tw"] = "狂怒者偵測範圍",
 		},
 		rager_detection_range_description = {
 			en = "Distance to scan for ragers",
 			["zh-cn"] = "扫描狂战士的距离。",
-			["zh-tw"] = "掃描狂戰士的距離。",
+			["zh-tw"] = "掃描狂怒者的距離。",
 		},
 		stim_trigger_mode = {
 			en = "Stim Trigger Mode",
