@@ -29,7 +29,7 @@ local localization = {
     mod_description = {
         en = "Enhance your marking experience",
         ["zh-cn"] = "增强你的标记体验",
-        ["zh-tw"] = "增強你的標記體驗",
+        ["zh-tw"] = "強化標記操作體驗",
     },
     -- mod_settings
     mod_settings = {
@@ -78,10 +78,10 @@ local localization = {
             "当" .. highlight("伙伴目标标记") ..
             "设置为" .. highlight("按一次") ..
             "时，此功能变为普通敌人标记。",
-        ["zh-tw"] = "電子獒犬標記專用按鍵，現在你可以作為法務官，同時使用普通敵人標記和電子獒犬標記了。\n" ..
+        ["zh-tw"] = "電子獒犬標記專用按鍵。身為法務官，你現在可同時使用一般敵人標記與電子獒犬標記。\n" ..
             "當" .. highlight("電子獒犬目標標記") ..
-            "設置為" .. highlight("按一次") ..
-            "時，此功能變為普通敵人標記。",
+            "設定為" .. highlight("按一下") ..
+            "時，此功能會變為一般敵人標記。",
     },
     execution_order_priority = {
         en = "Execution Order Priority",
@@ -107,9 +107,9 @@ local localization = {
         ["zh-cn"] = "限制自动标记系统可标记的目标与你的" ..
             highlight("智能獒犬") .. "之间的最大距离。\n" ..
             "设置为" .. highlight("0") .. "禁用。",
-        ["zh-tw"] = "限制自動標記系統可標記的目標與你的" ..
+        ["zh-tw"] = "限制自動標記系統可標記的目標與" ..
             highlight("電子獒犬") .. "之間的最大距離。\n" ..
-            "設置為" .. highlight("0") .. "禁用。",
+            "設為" .. highlight("0") .. "可停用。",
     },
     companion_cancel_mark = {
         en = "Auto Cancel Cyber-Mastiff Mark",
@@ -204,7 +204,7 @@ local localization = {
     hack_mark_keybind_description = {
         en = "Dedicated key for Sending the Servo-Skull to hack the minigame.",
         ["zh-cn"] = "用于指派伺服颅骨黑入数据查询小游戏的专用按键。",
-        ["zh-tw"] = "用於指派伺服顱骨黑入資料查詢小遊戲的專用按鍵。",
+        ["zh-tw"] = "用於指派伺服頭骨駭入資料查詢小遊戲的專用按鍵。",
     },
     auto_hack = {
         en = "Auto Data Interrogation",
@@ -214,7 +214,7 @@ local localization = {
     auto_hack_description = {
         en = "Automatically sends your Servo-Skull to hack the minigame when you aim at a hackable objective",
         ["zh-cn"] = "当你瞄准一个数据查询小游戏时，自动派遣伺服颅骨前去黑入。",
-        ["zh-tw"] = "當你瞄準一個資料查詢小遊戲時，自動派遣伺服顱骨前去黑入。",
+        ["zh-tw"] = "瞄準可駭入的資料查詢目標時，自動派遣伺服頭骨前去駭入。",
     },
     disable_auto_hack_for_noospheric_command = {
         en = "Disable Auto Data Interrogation When Noospheric Command Talent is Equiped",
@@ -314,11 +314,12 @@ local localization = {
     noospheric_command_boost_breed_name = {
         en = "Enemy Settings Override",
         ["zh-cn"] = "敌人设置覆盖",
+        ["zh-tw"] = "敵人設定覆蓋",
     },
     noospheric_command_boost_breed_name_description = {
         en = "Select an enemy to configure its individual settings, which override the settings above, except for the master toggle.",
         ["zh-cn"] = "选择一种敌人，为其配置其独立的设置，这些设置将覆盖上方的设置，除了总开关。",
-        ["zh-tw"] = "選擇一種敵人以設定其個別設定。除了總開關外，個別設定會覆蓋上方的一般設定。",
+        ["zh-tw"] = "選擇一種敵人以設定其個別設定。除了主開關外，個別設定會覆蓋上方的一般設定。",
     },
     noospheric_command_boost_reset = {
         en = "Reset to Defaults",
@@ -333,11 +334,12 @@ local localization = {
     noospheric_command_boost_breed_override = {
         en = "Override",
         ["zh-cn"] = "启用覆盖",
+        ["zh-tw"] = "啟用覆蓋",
     },
     noospheric_command_boost_breed_override_description = {
         en = "Apply dedicated settings for this enemy, which take priority over the general settings above, except for the master toggle.",
         ["zh-cn"] = "为这种敌人应用专用设置，这些设置将优先于上方的设置，除了总开关。",
-        ["zh-tw"] = "為此敵人套用專用設定。除了總開關外，專用設定優先於上方的一般設定。",
+        ["zh-tw"] = "為此敵人套用專用設定。除了主開關外，專用設定優先於上方的一般設定。",
     },
     noospheric_command_boost_breed_toggle = {
         en = "Noospheric Command",
@@ -390,7 +392,7 @@ local localization = {
     focus_target_switch_description = {
         en = "When the player is attacking, the focus target mark will switch to the aimed target.",
         ["zh-cn"] = "当进行攻击时，聚焦目标将标记当前瞄准的敌人。",
-        ["zh-tw"] = "進行攻擊時，專注目標將標記當前瞄準的敵人。",
+        ["zh-tw"] = "進行攻擊時，專注目標會標記目前瞄準的敵人。",
     },
     focus_target_switch_melee = {
         en = "Melee Weapon",
@@ -554,27 +556,27 @@ local localization = {
     priority_lowest = {
         en = "Priority Lowest",
         ["zh-cn"] = "最低优先级",
-        ["zh-tw"] = "最低優先",
+        ["zh-tw"] = "最低優先順序",
     },
     priority_low = {
         en = "Priority Low",
         ["zh-cn"] = "低优先级",
-        ["zh-tw"] = "低優先",
+        ["zh-tw"] = "低優先順序",
     },
     priority_medium = {
         en = "Priority Medium",
         ["zh-cn"] = "中优先级",
-        ["zh-tw"] = "中優先",
+        ["zh-tw"] = "中優先順序",
     },
     priority_high = {
         en = "Priority High",
         ["zh-cn"] = "高优先级",
-        ["zh-tw"] = "高優先",
+        ["zh-tw"] = "高優先順序",
     },
     priority_highest = {
         en = "Priority Highest",
         ["zh-cn"] = "最高优先级",
-        ["zh-tw"] = "最高優先",
+        ["zh-tw"] = "最高優先順序",
     },
     adamant_companion = {
         en = "Arbitrator Cyber-Mastiff",
@@ -682,10 +684,10 @@ local function add_breed_localization(breed_name, breed_data, is_passive)
                 ["zh-tw"] = text .. "（變異體）",
             }
         else
-            localization[breed_name] = { en = text }
+            localization[breed_name] = { en = text, ["zh-tw"] = text }
         end
     else
-        localization[breed_name] = { en = breed_name }
+        localization[breed_name] = { en = breed_name, ["zh-tw"] = breed_name }
     end
 end
 
@@ -701,7 +703,8 @@ end
 for class_name, archetype in pairs(Archetypes) do
     local text = Localize(archetype.archetype_name)
     localization[class_name] = {
-        en = text
+        en = text,
+        ["zh-tw"] = text,
     }
 end
 
