@@ -86,7 +86,7 @@ local localization = {
     execution_order_priority = {
         en = "Execution Order Priority",
         ["zh-cn"] = "遵从处决指令",
-        ["zh-tw"] = "遵從處決指令",
+        ["zh-tw"] = "處決指令優先順序",
     },
     execution_order_priority_description = {
         en =
@@ -97,7 +97,7 @@ local localization = {
     companion_range_limitation = {
         en = "Range Limitation",
         ["zh-cn"] = "范围限制",
-        ["zh-tw"] = "範圍限制",
+        ["zh-tw"] = "距離限制",
     },
     companion_range_limitation_description = {
         en =
@@ -264,7 +264,7 @@ local localization = {
     capacitance_retention_breed_threshold = {
         en = "Capacitance Retention",
         ["zh-cn"] = "电容保留",
-        ["zh-tw"] = "電容量門檻",
+        ["zh-tw"] = "電容量保留",
     },
     capacitance_retention_breed_threshold_description = {
         en = "Set Capacitance Retention Threshold for this enemy.",
@@ -360,7 +360,7 @@ local localization = {
     focus_target_overwrite = {
         en = "Focus Target Overwrite",
         ["zh-cn"] = "聚焦目标覆盖",
-        ["zh-tw"] = "專注目標覆蓋",
+        ["zh-tw"] = "鎖定目標覆蓋",
     },
     focus_target_overwrite_description = {
         en = string.format(
@@ -375,14 +375,14 @@ local localization = {
             "：当玩家自身聚焦目标层数高于敌人已被施加的层数，且层数差大于等于下方选项「聚焦目标覆盖最小层数差」或自身层数已满时，将重新施加聚焦目标标记。"),
         ["zh-tw"] = string.format(
             highlight("關閉") ..
-            "：已被專注目標標記的敵人，不會再次被標記。\n" ..
+            "：已被鎖定目標標記的敵人，不會再次被標記。\n" ..
             highlight("開啟") ..
-            "：當玩家自身專注目標層數高於敵人已被施加的層數，且層數差大於等於下方選項「專注目標覆蓋最小層數差」或自身層數已滿時，將重新施加專注目標標記。"),
+            "：當玩家自身鎖定目標層數高於敵人已被施加的層數，且層數差大於等於下方選項「鎖定目標覆蓋最小層數差」或自身層數已滿時，將重新施加鎖定目標標記。"),
     },
     focus_target_overwrite_delta = {
         en = "Focus Target Overwrite Delta",
         ["zh-cn"] = "聚焦目标覆盖最小层数差",
-        ["zh-tw"] = "專注目標覆蓋最小層數差",
+        ["zh-tw"] = "鎖定目標覆蓋最小層數差",
     },
     focus_target_switch = {
         en = "Switch Target on Attack",
@@ -392,7 +392,7 @@ local localization = {
     focus_target_switch_description = {
         en = "When the player is attacking, the focus target mark will switch to the aimed target.",
         ["zh-cn"] = "当进行攻击时，聚焦目标将标记当前瞄准的敌人。",
-        ["zh-tw"] = "進行攻擊時，專注目標會標記目前瞄準的敵人。",
+        ["zh-tw"] = "進行攻擊時，鎖定目標會標記目前瞄準的敵人。",
     },
     focus_target_switch_melee = {
         en = "Melee Weapon",
@@ -418,7 +418,7 @@ local localization = {
     class_selection_description = {
         en = "Normal enemy marks for all classes, plus special marks for certain classes (Cyber-Mastiff, Servo-Skull, Focus Target).",
         ["zh-cn"] = "所有职业的普通敌人标记，以及某些职业的特殊标记（智能獒犬、伺服颅骨、聚焦目标）。",
-        ["zh-tw"] = "所有職業的一般敵人標記，以及特定職業的特殊標記（電子獒犬、伺服頭骨、專注目標）。",
+        ["zh-tw"] = "所有職業的一般敵人標記，以及特定職業的特殊標記（電子獒犬、伺服頭骨、鎖定目標）。",
     },
     toggle_class = {
         en = "Toggle",
@@ -463,7 +463,7 @@ local localization = {
     min_range = {
         en = "Min Range",
         ["zh-cn"] = "最小范围",
-        ["zh-tw"] = "最小範圍",
+        ["zh-tw"] = "最小距離",
     },
     min_range_description = {
         en = "Unit: Meters",
@@ -473,7 +473,7 @@ local localization = {
     max_range = {
         en = "Max Range",
         ["zh-cn"] = "最大范围",
-        ["zh-tw"] = "最大範圍",
+        ["zh-tw"] = "最大距離",
     },
     max_range_description = {
         en = "Unit: Meters",
@@ -586,7 +586,7 @@ local localization = {
     veteran_focus_target = {
         en = "Veteran Focus Target",
         ["zh-cn"] = "老兵聚焦目标",
-        ["zh-tw"] = "老兵專注目標",
+        ["zh-tw"] = "老兵鎖定目標",
     },
     cryptic_servo_skull = {
         en = "Skitarius Servo-Skull",
