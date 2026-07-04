@@ -1,11 +1,11 @@
 {
   "current": {
-    "directory": "AuspexHelper",
-    "base_branch": "origin/feature/Add-AuspexHelper",
-    "work_branch": "origin/feature/Add-AuspexHelper/codex",
-    "file": "Warhammer 40,000 DARKTIDE/mods/AuspexHelper/scripts/mods/AuspexHelper/AuspexHelper_localization.lua",
+    "directory": "auto_rations",
+    "base_branch": "origin/feature/Add-Auto-Rations---Recover-or-Destroy",
+    "work_branch": "origin/feature/Add-Auto-Rations---Recover-or-Destroy/codex",
+    "file": null,
     "key": null,
-    "status": "file_completed"
+    "status": "pending"
   },
   "directories": {
     "afk": {
@@ -84,7 +84,7 @@
       "pr_number": 5
     },
     "AuspexHelper": {
-      "status": "translated",
+            "status": "pr_opened",
       "base_branch": "origin/feature/Add-AuspexHelper",
       "work_branch": "origin/feature/Add-AuspexHelper/codex",
       "completed_files": [
@@ -293,15 +293,16 @@
       "blocked_keys": {},
       "last_file": "Warhammer 40,000 DARKTIDE/mods/AuspexHelper/scripts/mods/AuspexHelper/AuspexHelper_localization.lua",
       "last_key": "live_item_online_unavailable",
-      "commit": null,
-      "pushed": false,
-      "pr_url": null,
-      "pr_number": null
+            "commit": "54e9d5baa28c5f0bed1ef2b5066a5a8ddb3b0fc4",
+            "pushed": true,
+            "pr_url": "https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/6",
+            "pr_number": 6
     }
   },
   "completed_directories": [
     "afk",
     "Archivum Messelina",
-    "AUPM"
-  ]
+        "AUPM",
+        "AuspexHelper"
+    ]
 }
