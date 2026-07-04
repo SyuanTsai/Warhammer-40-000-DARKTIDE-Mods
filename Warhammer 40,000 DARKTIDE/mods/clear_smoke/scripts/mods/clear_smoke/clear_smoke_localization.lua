@@ -5,7 +5,7 @@ return {
 	},
 	mod_description = {
 		en = "Disables smoke VFX and adds a radius indicator for smoke grenades.",
-		["zh-tw"] = "禁用煙霧視覺效果並為煙霧手榴彈添加半徑指示器。",
+		["zh-tw"] = "停用煙霧視覺效果，並為煙霧手雷新增半徑指示器。",
 	},
 	remove_smoke = {
 		en = "Remove Smoke Visual Effect",
@@ -17,7 +17,7 @@ return {
 	},
 	pulse_effect = {
 		en = "Pulse Effect in Last 5 Seconds",
-		["zh-tw"] = "最後5秒的脈衝效果",
+		["zh-tw"] = "最後 5 秒的脈衝效果",
 	},
 	color_r = {
 		en = "Radius Indicator Red",
