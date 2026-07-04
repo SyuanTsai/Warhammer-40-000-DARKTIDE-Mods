@@ -1,0 +1,106 @@
+{
+  "maintenance_mods_root": "Warhammer 40,000 DARKTIDE/mods",
+  "main_branch": "main",
+  "feature_branch": "feature/Add-zh-tw",
+  "commit_subject": "local: update zh-tw localization",
+  "targets": [
+    {
+      "id": "ovenproof_scoreboard_plugin",
+      "mod": "ovenproof_scoreboard_plugin",
+      "repo_name": "ovenproof-scoreboard-plugin-patch",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mods-OvenproofScoreboardPluginPatch.git",
+      "upstream": "https://github.com/Backup158/DarktideOvenproofScoreboardPluginPatch.git"
+    },
+    {
+      "id": "Radar",
+      "mod": "Radar",
+      "repo_name": "radar",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mod-radar.git",
+      "upstream": "https://github.com/LucLeto/darktide-mods-radar.git"
+    },
+    {
+      "id": "DefaultToHighestBlessingTier",
+      "mod": "DefaultToHighestBlessingTier",
+      "repo_name": "deluxghost-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
+      "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "IME_Enable",
+      "mod": "IME_Enable",
+      "repo_name": "deluxghost-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
+      "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "ManyMoreTry",
+      "mod": "ManyMoreTry",
+      "repo_name": "deluxghost-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
+      "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "QuickLookCard",
+      "mod": "QuickLookCard",
+      "repo_name": "deluxghost-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
+      "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "Reconnect",
+      "mod": "Reconnect",
+      "repo_name": "deluxghost-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
+      "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "RememberServerLocation",
+      "mod": "RememberServerLocation",
+      "repo_name": "deluxghost-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
+      "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "ScoreboardExplosive",
+      "mod": "ScoreboardExplosive",
+      "repo_name": "deluxghost-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
+      "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "ShareTalents",
+      "mod": "ShareTalents",
+      "repo_name": "deluxghost-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
+      "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "SimpleSpeedMeter",
+      "mod": "SimpleSpeedMeter",
+      "repo_name": "deluxghost-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
+      "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "SoloPlay",
+      "mod": "SoloPlay",
+      "repo_name": "deluxghost-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
+      "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "StimmsPickupIcon",
+      "mod": "StimmsPickupIcon",
+      "repo_name": "deluxghost-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
+      "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "WhatTheLocalization",
+      "mod": "WhatTheLocalization",
+      "repo_name": "deluxghost-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
+      "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    }
+  ]
+}

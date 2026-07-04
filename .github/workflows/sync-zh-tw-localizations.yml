@@ -1,0 +1,82 @@
+name: Sync zh-tw localizations
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "MOD target to sync"
+        required: true
+        type: choice
+        default: "ovenproof_scoreboard_plugin"
+        options:
+          - "ovenproof_scoreboard_plugin"
+          - "Radar"
+          - "DefaultToHighestBlessingTier"
+          - "IME_Enable"
+          - "ManyMoreTry"
+          - "QuickLookCard"
+          - "Reconnect"
+          - "RememberServerLocation"
+          - "ScoreboardExplosive"
+          - "ShareTalents"
+          - "SimpleSpeedMeter"
+          - "SoloPlay"
+          - "StimmsPickupIcon"
+          - "WhatTheLocalization"
+      dry_run:
+        description: "Run without committing or pushing"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-zh-tw-localizations
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      TARGET_MOD: ${{ github.event.inputs.target }}
+      DRY_RUN: ${{ github.event.inputs.dry_run || 'false' }}
+      GENERATED_BY: "GitHub Actions via sync-zh-tw-localizations workflow"
+
+    steps:
+      - name: Checkout maintenance repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Configure git identity
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Configure cross-repo push access
+        env:
+          SYNC_PAT: ${{ secrets.SYNC_PAT }}
+        run: |
+          if [ "$DRY_RUN" != "true" ] && [ -z "$SYNC_PAT" ]; then
+            echo "SYNC_PAT is required for non-dry-run cross-repo pushes."
+            exit 1
+          fi
+
+          if [ -n "$SYNC_PAT" ]; then
+            git config --global url."https://x-access-token:${SYNC_PAT}@github.com/".insteadOf "https://github.com/"
+          fi
+
+      - name: Sync selected MOD target
+        run: |
+          args=(
+            "--config" ".github/zh-tw-sync-config.json"
+            "--target" "$TARGET_MOD"
+          )
+
+          if [ "$DRY_RUN" = "true" ]; then
+            args+=("--dry-run")
+          fi
+
+          python3 scripts/sync_zh_tw_localizations.py "${args[@]}"
