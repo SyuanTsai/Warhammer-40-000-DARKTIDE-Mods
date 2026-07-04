@@ -5,15 +5,15 @@ return {
 	},
 	mod_description = {
 		en = "Automatically picks up crafting materials and other loot.",
-		["zh-tw"] = "自動拾取製作材料和其他戰利品。",
+		["zh-tw"] = "自動拾取製作材料與其他戰利品。",
 	},
 	ammo_threshold = {
 		en = "Ammo pickup threshold",
-		["zh-tw"] = "彈藥拾取閾值",
+		["zh-tw"] = "彈藥拾取門檻",
 	},
 	ammo_threshold_description = {
 		en = "Percent threshold of remaining ammo to auto-loot ammo boxes",
-		["zh-tw"] = "剩餘彈藥的百分比閾值，用於自動拾取彈藥箱",
+		["zh-tw"] = "剩餘彈藥低於此百分比時，自動拾取彈藥箱",
 	},
 	pickup_stimms = {
 		en = "Automatically pick up stimms",
@@ -21,7 +21,7 @@ return {
 	},
 	pickup_stimms_description = {
 		en = "Only picks up stimms if you don't already have one",
-		["zh-tw"] = "只有在你沒有興奮劑時才自動拾取",
+		["zh-tw"] = "只有未持有興奮劑時才會拾取",
 	},
 	pickup_ammo = {
 		en = "Automatically pick up ammo",
@@ -37,15 +37,15 @@ return {
 	},
 	open_chests = {
 		en = "Automatically open chests",
-		["zh-tw"] = "自動打開箱子",
+		["zh-tw"] = "自動開啟寶箱",
 	},
 	pickup_crates = {
 		en = "Automatically pick up deployable crates",
-		["zh-tw"] = "自動拾取可部署的箱子",
+		["zh-tw"] = "自動拾取可部署箱",
 	},
 	pickup_crates_description = {
 		en = "Only picks up crates if you don't already have one",
-		["zh-tw"] = "只有在你沒有箱子時才自動拾取",
+		["zh-tw"] = "只有未持有可部署箱時才會拾取",
 	},
 	pickup_grenades = {
 		en = "Automatically pick up grenades",
@@ -53,11 +53,11 @@ return {
 	},
 	grenades_threshold = {
 		en = "Grenade pickup threshold",
-		["zh-tw"] = "手榴彈拾取閾值",
+		["zh-tw"] = "手榴彈拾取門檻",
 	},
 	grenades_threshold_description = {
 		en = "Threshold of minimum remaining grenades to auto-loot grenades",
-		["zh-tw"] = "剩餘手榴彈的最低閾值，用於自動拾取手榴彈",
+		["zh-tw"] = "剩餘手榴彈低於此數量時，自動拾取手榴彈",
 	},
 	grenadesammo_group = {
 		en = "Grenades/Ammo",
