@@ -29,7 +29,7 @@ local localization = {
     mod_description = {
         en = "Enhance your marking experience",
         ["zh-cn"] = "增强你的标记体验",
-        ["zh-tw"] = "強化標記操作體驗",
+        ["zh-tw"] = "強化標記操作",
     },
     -- mod_settings
     mod_settings = {
