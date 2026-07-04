@@ -1,15 +1,15 @@
 {
   "current": {
-    "directory": "afk",
-    "base_branch": "origin/feature/Add-AFK",
-    "work_branch": "origin/feature/Add-AFK/codex",
-    "file": "Warhammer 40,000 DARKTIDE/mods/afk/scripts/mods/afk/afk_localization.lua",
+    "directory": "Archivum Messelina",
+    "base_branch": "origin/feature/Add-Archivum-Messelina",
+    "work_branch": "origin/feature/Add-Archivum-Messelina/codex",
+    "file": null,
     "key": null,
-    "status": "file_completed"
+    "status": "pending"
   },
   "directories": {
     "afk": {
-      "status": "translated",
+      "status": "pr_opened",
       "base_branch": "origin/feature/Add-AFK",
       "work_branch": "origin/feature/Add-AFK/codex",
       "completed_files": [
@@ -26,11 +26,13 @@
       "blocked_keys": {},
       "last_file": "Warhammer 40,000 DARKTIDE/mods/afk/scripts/mods/afk/afk_localization.lua",
       "last_key": "block_check_limit_description",
-      "commit": null,
-      "pushed": false,
-      "pr_url": null,
-      "pr_number": null
+      "commit": "0d6fd497d75e28e517911249a66fb5965dfb373b",
+      "pushed": true,
+      "pr_url": "https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/3",
+      "pr_number": 3
     }
   },
-  "completed_directories": []
+  "completed_directories": [
+    "afk"
+  ]
 }
