@@ -16,13 +16,13 @@ return {
     en = "Creature Spawner",
     ["zh-cn"] = "生物生成",
     ru = "Спавнер существ",
-    ["zh-tw"] = "怪物生成器",
+    ["zh-tw"] = "單位生成器",
   },
   mod_description = {
     en = "Allows you to spawn various units in self-hosted maps that support them.",
     ["zh-cn"] = "允许你在自己主办的游戏中生成各种单位。",
     ru = "Creature Spawner - Позволяет создавать на картах в частных играх различных существ, которые поддерживаются этими картами.",
-    ["zh-tw"] = "允許你在私人遊戲的地圖中生成各種單位。",
+    ["zh-tw"] = "允許你在自行主持且支援此功能的地圖中生成各種單位。",
   },
   cs_unit_list = {
     en = "Available Unit List",
@@ -54,9 +54,9 @@ return {
     "-- ВСЕ --\nВсе известные существа.",
     ["zh-tw"] = "允許選擇可生成的單位。\n" ..
     "-- 常規 --\n所有「普通」單位類型。\n" ..
-    "-- 菁英 --\n僅限普通菁英單位。\n" ..
+    "-- 精英 --\n僅限普通精英單位。\n" ..
     "-- 專家 --\n僅限普通專家單位。\n" ..
-    "-- Boss --\n所有 Boss 和怪物。\n" ..
+    "-- Boss --\n所有 Boss 和巨獸。\n" ..
     "-- 雜項 --\n未使用、不穩定或除錯用的單位。\n" ..
     "-- 全部 --\n所有已知單位。",
   },
@@ -106,7 +106,7 @@ return {
     en = "All bosses and monstrosities",
     ["zh-cn"] = "所有 Boss 和怪物。",
     ru = "Все боссы и монстры",
-    ["zh-tw"] = "所有 Boss 和怪物。",
+    ["zh-tw"] = "所有 Boss 和巨獸。",
   },
   cs_unit_list_header_misc = {
     en = "Misc",
@@ -124,6 +124,7 @@ return {
     en = "All",
     ["zh-cn"] = "所有",
     ru = "Все",
+    ["zh-tw"] = "全部",
   },
   cs_unit_list_header_all_description = {
     en = "All known units",
@@ -135,7 +136,7 @@ return {
     en = "Unit Team / Side",
     ["zh-cn"] = "单位团队 / 阵营",
     ru = "Команда/сторона существа",
-    ["zh-tw"] = "單位隊伍 / 陣營",
+    ["zh-tw"] = "單位隊伍 / 所屬方",
   },
   cs_unit_side_description = {
     en = "Allows choosing the side that units spawn on.\n" ..
@@ -147,33 +148,33 @@ return {
     ru = "Позволяет выбрать сторону, на которой появляется существо.\n" ..
     "-- ГЕРОИ --\nНа стороне игроков.\n" ..
     "-- ЗЛОДЕИ --\nНа стороне врага.",
-    ["zh-tw"] = "允許選擇生成單位的陣營。\n" ..
-    "-- 英雄 --\n玩家一方陣營。\n" ..
-    "-- 反派 --\n敵人一方陣營。",
+    ["zh-tw"] = "允許選擇生成單位的所屬方。\n" ..
+    "-- 玩家方 --\n玩家一方。\n" ..
+    "-- 敵方 --\n敵人一方。",
   },
   cs_unit_side_header_heroes = {
     en = "Heroes",
     ["zh-cn"] = "特工",
     ru = "Герои",
-    ["zh-tw"] = "特工",
+    ["zh-tw"] = "玩家方",
   },
   cs_unit_side_header_heroes_description = {
     en = "The side of the players.",
     ["zh-cn"] = "玩家一方阵营。",
     ru = "На стороне игроков.",
-    ["zh-tw"] = "玩家陣營。",
+    ["zh-tw"] = "玩家一方。",
   },
   cs_unit_side_header_villains = {
     en = "Villains",
     ["zh-cn"] = "反派",
     ru = "Злодеи",
-    ["zh-tw"] = "反派",
+    ["zh-tw"] = "敵方",
   },
   cs_unit_side_header_villains_description = {
     en = "The side of the enemy.",
     ["zh-cn"] = "敌人一方阵营。",
     ru = "На стороне врага.",
-    ["zh-tw"] = "敵方陣營。",
+    ["zh-tw"] = "敵人一方。",
   },
   cs_spawn_keybind = {
     en = "Keybind: Spawn Unit",
@@ -215,13 +216,13 @@ return {
     en = "Keybind: Destroy All Units",
     ["zh-cn"] = "快捷键：删除所有单位",
     ru = "Клавиша: Удалить всех существ",
-    ["zh-tw"] = "快捷鍵：刪除所有單位",
+    ["zh-tw"] = "快捷鍵：摧毀所有單位",
   },
   cs_destroy_keybind_description = {
     en = "Choose the keybinding that destroys all units in the Training Grounds.",
     ["zh-cn"] = "选择用于删除训练场内所有单位的按键。",
     ru = "Выберите комбинацию клавиш или клавишу для удаления всех существ на Стрельбище.",
-    ["zh-tw"] = "選擇用於刪除訓練場內所有單位的快捷鍵。",
+    ["zh-tw"] = "選擇用於摧毀訓練場內所有單位的快捷鍵。",
   },
   cs_spawn_saved_unit_one_keybind = {
     en = "Keybind: Spawn Saved Unit One",
@@ -293,7 +294,7 @@ return {
     en = "Toggle vanilla sound muffler in the Training Grounds on / off.",
     ["zh-cn"] = "开关训练场内的自带消音。",
     ru = "Включить/выключить стандартный глушитель звука существ на Стрельбище.",
-    ["zh-tw"] = "切換訓練場中的原生消音功能。",
+    ["zh-tw"] = "切換訓練場中的原版消音功能。",
   },
   cs_enable_training_grounds_invulnerability = {
     en = "Enable Invulnerability in Training Grounds",
@@ -383,13 +384,13 @@ return {
     en = "Current Trial",
     ["zh-cn"] = "当前试炼",
     ru = "Текущее испытание",
-    ["zh-tw"] = "當前試煉",
+    ["zh-tw"] = "目前試煉",
   },
   cs_active_trial_description = {
     en = "Choose the current Training Grounds trial. None will result in regular Training Grounds spawns.",
     ["zh-cn"] = "选择当前的训练场试炼。选择 None 则会生成标准怪物。",
     ru = "Выберите текущее испытание на Стрельбище. Ни одно из них не приведёт к периодическому спавну врагов на Стрельбище.",
-    ["zh-tw"] = "選擇當前的訓練場試煉。選擇 None 則會生成標準怪物。",
+    ["zh-tw"] = "選擇目前的訓練場試煉。選擇「無」則使用一般訓練場生成。",
   },
   cs_previous_trial_keybind = {
     en = "Keybind: Previous Trial",
