@@ -1,0 +1,91 @@
+{
+  "current": {
+    "directory": "AUPM",
+    "base_branch": "origin/feature/Add-AUPM",
+    "work_branch": "origin/feature/Add-AUPM/codex",
+    "file": "Warhammer 40,000 DARKTIDE/mods/AUPM/scripts/mods/AUPM/AUPM_localization.lua",
+    "key": null,
+    "status": "file_completed"
+  },
+  "directories": {
+    "afk": {
+      "status": "pr_opened",
+      "base_branch": "origin/feature/Add-AFK",
+      "work_branch": "origin/feature/Add-AFK/codex",
+      "completed_files": [
+        "Warhammer 40,000 DARKTIDE/mods/afk/scripts/mods/afk/afk_localization.lua"
+      ],
+      "completed_keys": {
+        "Warhammer 40,000 DARKTIDE/mods/afk/scripts/mods/afk/afk_localization.lua": [
+          "mod_name",
+          "mod_description",
+          "block_check_limit",
+          "block_check_limit_description"
+        ]
+      },
+      "blocked_keys": {},
+      "last_file": "Warhammer 40,000 DARKTIDE/mods/afk/scripts/mods/afk/afk_localization.lua",
+      "last_key": "block_check_limit_description",
+      "commit": "0d6fd497d75e28e517911249a66fb5965dfb373b",
+      "pushed": true,
+      "pr_url": "https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/3",
+      "pr_number": 3
+    },
+    "Archivum Messelina": {
+      "status": "pr_opened",
+      "base_branch": "origin/feature/Add-Archivum-Messelina",
+      "work_branch": "origin/feature/Add-Archivum-Messelina/codex",
+      "completed_files": [
+        "Warhammer 40,000 DARKTIDE/mods/Archivum Messelina/scripts/mods/Archivum Messelina/Archivum Messelina_localization.lua"
+      ],
+      "completed_keys": {
+        "Warhammer 40,000 DARKTIDE/mods/Archivum Messelina/scripts/mods/Archivum Messelina/Archivum Messelina_localization.lua": [
+          "loc_AM_filter_unearnt",
+          "loc_AM_filter_completed",
+          "loc_AM_filter_unclaimed",
+          "loc_AM_no_filter",
+          "mod_name",
+          "mod_description",
+          "max_favourites",
+          "search"
+        ]
+      },
+      "blocked_keys": {},
+      "last_file": "Warhammer 40,000 DARKTIDE/mods/Archivum Messelina/scripts/mods/Archivum Messelina/Archivum Messelina_localization.lua",
+      "last_key": "search",
+      "commit": "cfbd9e010bbd2bf5de8396d78496b61a584c4d30",
+      "pushed": true,
+      "pr_url": "https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/4",
+      "pr_number": 4
+    },
+    "AUPM": {
+      "status": "translated",
+      "base_branch": "origin/feature/Add-AUPM",
+      "work_branch": "origin/feature/Add-AUPM/codex",
+      "completed_files": [
+        "Warhammer 40,000 DARKTIDE/mods/AUPM/scripts/mods/AUPM/AUPM_localization.lua"
+      ],
+      "completed_keys": {
+        "Warhammer 40,000 DARKTIDE/mods/AUPM/scripts/mods/AUPM/AUPM_localization.lua": [
+          "mod_name",
+          "mod_description",
+          "personal_x_offset",
+          "personal_y_offset",
+          "team_x_offset",
+          "team_y_offset"
+        ]
+      },
+      "blocked_keys": {},
+      "last_file": "Warhammer 40,000 DARKTIDE/mods/AUPM/scripts/mods/AUPM/AUPM_localization.lua",
+      "last_key": "team_y_offset",
+      "commit": null,
+      "pushed": false,
+      "pr_url": null,
+      "pr_number": null
+    }
+  },
+  "completed_directories": [
+    "afk",
+    "Archivum Messelina"
+  ]
+}

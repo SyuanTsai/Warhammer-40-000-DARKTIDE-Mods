@@ -5,7 +5,7 @@ return {
 	},
 	mod_description = {
 		en = "玩家技能次数数据显示 - 定制开发：deluxghost",
-		["zh-tw"] = "玩家技能次數數據顯示 - 定制開發：deluxghost",
+		["zh-tw"] = "玩家技能次數資料顯示 - 客製開發：deluxghost",
 	},
 	personal_x_offset = {
 		en = "个人面板水平偏移（左负右正）",
