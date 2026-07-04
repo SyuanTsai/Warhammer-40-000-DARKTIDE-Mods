@@ -12,6 +12,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from urllib.parse import urlsplit
 from pathlib import Path
 
 
@@ -317,8 +318,31 @@ def select_targets(config: dict, requested: str) -> list[dict]:
 
 def ensure_remote(repo_dir: Path, remote: str, expected_url: str) -> None:
     current = git_text(repo_dir, "remote", "get-url", remote)
-    if current != expected_url:
-        raise SystemExit(f"{repo_dir.name}: {remote} URL mismatch: {current} != {expected_url}")
+    if normalized_github_url(current) != normalized_github_url(expected_url):
+        raise SystemExit(
+            f"{repo_dir.name}: {remote} URL mismatch: "
+            f"{redacted_url(current)} != {redacted_url(expected_url)}"
+        )
+
+
+def normalized_github_url(url: str) -> str:
+    if url.startswith("git@github.com:"):
+        return "https://github.com/" + url.removeprefix("git@github.com:")
+
+    parsed = urlsplit(url)
+    if parsed.scheme in {"http", "https"} and parsed.hostname == "github.com":
+        path = parsed.path.lstrip("/")
+        return f"https://github.com/{path}"
+
+    return url
+
+
+def redacted_url(url: str) -> str:
+    parsed = urlsplit(url)
+    if parsed.password or parsed.username:
+        path = parsed.path.lstrip("/")
+        return f"{parsed.scheme}://github.com/{path}"
+    return url
 
 
 def safe_dir_name(value: str) -> str:
