@@ -45,19 +45,15 @@ return {
     -- Groups 角色
     adamant = {
         en = cf(Localize("loc_class_adamant_name"),"medium_violet_red"), -- 
-        ["zh-tw"] = cf(Localize("loc_class_adamant_name"),"medium_violet_red"), -- 
     },
     ogryn = {
         en = cf(Localize("loc_class_ogryn_name"),"ui_ogryn"),
-        ["zh-tw"] = cf(Localize("loc_class_ogryn_name"),"ui_ogryn"),
     },
     veteran = {
         en =cf(Localize("loc_class_veteran_name"),"ui_veteran"),
-        ["zh-tw"] =cf(Localize("loc_class_veteran_name"),"ui_veteran"),
     },
     zealot = {
         en = cf(Localize("loc_class_zealot_name"),"ui_zealot"),
-        ["zh-tw"] = cf(Localize("loc_class_zealot_name"),"ui_zealot"),
     },
     -- Global Settings 全局设置
     allow_override = {
