@@ -1,11 +1,11 @@
 {
   "current": {
-    "directory": "auto_rations",
-    "base_branch": "origin/feature/Add-Auto-Rations---Recover-or-Destroy",
-    "work_branch": "origin/feature/Add-Auto-Rations---Recover-or-Destroy/codex",
-    "file": "Warhammer 40,000 DARKTIDE/mods/auto_rations/scripts/mods/auto_rations/auto_rations_localization.lua",
+    "directory": "AutoBlitz",
+    "base_branch": "origin/feature/Add-AutoBlitz",
+    "work_branch": "origin/feature/Add-AutoBlitz/codex",
+    "file": null,
     "key": null,
-    "status": "file_completed"
+    "status": "pending"
   },
   "directories": {
     "afk": {
@@ -104,7 +104,7 @@
       "pr_number": 6
     },
     "auto_rations": {
-      "status": "translated",
+      "status": "pr_opened",
       "base_branch": "origin/feature/Add-Auto-Rations---Recover-or-Destroy",
       "work_branch": "origin/feature/Add-Auto-Rations---Recover-or-Destroy/codex",
       "completed_files": [
@@ -123,16 +123,17 @@
       "blocked_keys": {},
       "last_file": "Warhammer 40,000 DARKTIDE/mods/auto_rations/scripts/mods/auto_rations/auto_rations_localization.lua",
       "last_key": "enable_ration_mod",
-      "commit": null,
-      "pushed": false,
-      "pr_url": null,
-      "pr_number": null
+      "commit": "8c73cda68f93400008ee24aec2fb3c31aa0b6c14",
+      "pushed": true,
+      "pr_url": "https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/7",
+      "pr_number": 7
     }
   },
   "completed_directories": [
     "afk",
     "Archivum Messelina",
     "AUPM",
-    "AuspexHelper"
+    "AuspexHelper",
+    "auto_rations"
   ]
 }
