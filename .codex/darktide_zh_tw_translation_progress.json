@@ -1,11 +1,11 @@
 {
   "current": {
-    "directory": "Archivum Messelina",
-    "base_branch": "origin/feature/Add-Archivum-Messelina",
-    "work_branch": "origin/feature/Add-Archivum-Messelina/codex",
-    "file": "Warhammer 40,000 DARKTIDE/mods/Archivum Messelina/scripts/mods/Archivum Messelina/Archivum Messelina_localization.lua",
+    "directory": "AUPM",
+    "base_branch": "origin/feature/Add-AUPM",
+    "work_branch": "origin/feature/Add-AUPM/codex",
+    "file": null,
     "key": null,
-    "status": "file_completed"
+    "status": "pending"
   },
   "directories": {
     "afk": {
@@ -32,7 +32,7 @@
       "pr_number": 3
     },
     "Archivum Messelina": {
-      "status": "translated",
+      "status": "pr_opened",
       "base_branch": "origin/feature/Add-Archivum-Messelina",
       "work_branch": "origin/feature/Add-Archivum-Messelina/codex",
       "completed_files": [
@@ -53,13 +53,14 @@
       "blocked_keys": {},
       "last_file": "Warhammer 40,000 DARKTIDE/mods/Archivum Messelina/scripts/mods/Archivum Messelina/Archivum Messelina_localization.lua",
       "last_key": "search",
-      "commit": null,
-      "pushed": false,
-      "pr_url": null,
-      "pr_number": null
+      "commit": "cfbd9e010bbd2bf5de8396d78496b61a584c4d30",
+      "pushed": true,
+      "pr_url": "https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/4",
+      "pr_number": 4
     }
   },
   "completed_directories": [
-    "afk"
+    "afk",
+    "Archivum Messelina"
   ]
 }
