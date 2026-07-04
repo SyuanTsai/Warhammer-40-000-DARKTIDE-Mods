@@ -1,0 +1,24 @@
+{
+  "terms": {
+    "AFK": "AFK",
+    "Archivum Messelina": "Archivum Messelina",
+    "Penance": "苦修",
+    "penances": "苦修",
+    "filter": "篩選",
+    "search": "搜尋",
+    "favourites": "收藏",
+    "check": "檢查",
+    "Block Check Limit": "阻擋檢查上限"
+  },
+  "style": {
+    "locale": "zh-tw",
+    "ui_tone": "natural, concise Traditional Chinese for Darktide mod settings",
+    "spacing": "Use spaces around retained Latin abbreviations such as AFK when embedded in Chinese sentences.",
+    "punctuation": "Use Traditional Chinese punctuation for full UI descriptions."
+  },
+  "source_priority": [
+    "Referneces/Translation.md",
+    "en localization strings"
+  ],
+  "last_updated": "2026-07-04T00:00:00+08:00"
+}
