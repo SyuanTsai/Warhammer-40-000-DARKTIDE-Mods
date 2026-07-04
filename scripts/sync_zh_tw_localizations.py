@@ -362,11 +362,55 @@ def branch_exists(repo_dir: Path, ref: str) -> bool:
     return git(repo_dir, "rev-parse", "--verify", ref, check=False, capture=True).returncode == 0
 
 
+def path_for_git(path: Path) -> str:
+    return path.as_posix()
+
+
+def merge_main_into_feature(repo_dir: Path, main_branch: str, allowed_conflicts: set[str]) -> bool:
+    result = git(
+        repo_dir,
+        "merge",
+        "--no-ff",
+        main_branch,
+        "-m",
+        "Merge main into zh-tw localization branch",
+        check=False,
+        capture=True,
+    )
+    if result.returncode == 0:
+        return True
+
+    if result.stdout:
+        print(result.stdout, end="")
+    if result.stderr:
+        print(result.stderr, end="", file=sys.stderr)
+
+    conflicted = set(git_text(repo_dir, "diff", "--name-only", "--diff-filter=U").splitlines())
+    unexpected = sorted(conflicted - allowed_conflicts)
+    if unexpected:
+        raise SystemExit(
+            "Merge main into feature branch has conflicts outside the selected MOD localization files: "
+            + ", ".join(unexpected)
+        )
+
+    if not conflicted:
+        raise SystemExit("Merge main into feature branch failed without reported conflicted files")
+
+    print("Auto-resolving selected MOD localization conflicts from main: " + ", ".join(sorted(conflicted)))
+    git(repo_dir, "checkout", "--theirs", "--", *sorted(conflicted))
+    git(repo_dir, "add", "--", *sorted(conflicted))
+    git(repo_dir, "commit", "--no-edit")
+    return True
+
+
 def sync_target(target: dict, config: dict, maintenance_root: Path, work_root: Path, dry_run: bool) -> None:
     print(f"::group::{target['id']}")
     main_branch = target.get("main_branch", config.get("main_branch", "main"))
     feature_branch = target.get("feature_branch", config.get("feature_branch", "feature/Add-zh-tw"))
     repo_dir = clone_repo(target, work_root, main_branch)
+    mods_root = maintenance_root / config["maintenance_mods_root"]
+    selected_localization_files = localization_files(mods_root, target["mod"])
+    allowed_merge_conflicts = {path_for_git(path.relative_to(mods_root)) for path in selected_localization_files}
 
     git(repo_dir, "fetch", "upstream")
     git(repo_dir, "fetch", "origin")
@@ -395,14 +439,13 @@ def sync_target(target: dict, config: dict, maintenance_root: Path, work_root: P
     else:
         raise SystemExit(f"{target['id']}: missing {feature_branch} locally and on origin")
 
-    git(repo_dir, "merge", "--no-ff", main_branch, "-m", "Merge main into zh-tw localization branch")
+    merge_main_into_feature(repo_dir, main_branch, allowed_merge_conflicts)
 
-    mods_root = maintenance_root / config["maintenance_mods_root"]
     changed_files: list[Path] = []
     total_updated = 0
     total_added = 0
 
-    for source_path in localization_files(mods_root, target["mod"]):
+    for source_path in selected_localization_files:
         relative_path = source_path.relative_to(mods_root)
         target_path = repo_dir / relative_path
         if not target_path.is_file():
