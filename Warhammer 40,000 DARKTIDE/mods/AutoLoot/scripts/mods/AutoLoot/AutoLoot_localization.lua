@@ -13,7 +13,7 @@ return {
 	},
 	ammo_threshold_description = {
 		en = "Percent threshold of remaining ammo to auto-loot ammo boxes",
-		["zh-tw"] = "剩餘彈藥低於此百分比時，自動拾取彈藥箱",
+		["zh-tw"] = "剩餘彈藥百分比低於此門檻時，自動拾取彈藥箱",
 	},
 	pickup_stimms = {
 		en = "Automatically pick up stimms",
@@ -21,7 +21,7 @@ return {
 	},
 	pickup_stimms_description = {
 		en = "Only picks up stimms if you don't already have one",
-		["zh-tw"] = "只有未持有興奮劑時才會拾取",
+		["zh-tw"] = "只有你尚未持有興奮劑時才會拾取",
 	},
 	pickup_ammo = {
 		en = "Automatically pick up ammo",
@@ -45,7 +45,7 @@ return {
 	},
 	pickup_crates_description = {
 		en = "Only picks up crates if you don't already have one",
-		["zh-tw"] = "只有未持有可部署箱時才會拾取",
+		["zh-tw"] = "只有你尚未持有可部署箱時才會拾取",
 	},
 	pickup_grenades = {
 		en = "Automatically pick up grenades",
@@ -57,7 +57,7 @@ return {
 	},
 	grenades_threshold_description = {
 		en = "Threshold of minimum remaining grenades to auto-loot grenades",
-		["zh-tw"] = "剩餘手榴彈低於此數量時，自動拾取手榴彈",
+		["zh-tw"] = "剩餘手榴彈數量低於此門檻時，自動拾取手榴彈",
 	},
 	grenadesammo_group = {
 		en = "Grenades/Ammo",
