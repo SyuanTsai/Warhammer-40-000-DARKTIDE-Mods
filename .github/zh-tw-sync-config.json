@@ -5,18 +5,42 @@
   "commit_subject": "local: update zh-tw localization",
   "targets": [
     {
-      "id": "ovenproof_scoreboard_plugin",
-      "mod": "ovenproof_scoreboard_plugin",
-      "repo_name": "ovenproof-scoreboard-plugin-patch",
-      "origin": "https://github.com/SyuanTsai/Darktide-Mods-OvenproofScoreboardPluginPatch.git",
-      "upstream": "https://github.com/Backup158/DarktideOvenproofScoreboardPluginPatch.git"
+      "id": "Archivum_Messelina",
+      "mod": "Archivum Messelina",
+      "repo_name": "archivum-messelina",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mod-ArchivumMesselina.git",
+      "upstream": "https://github.com/Wobin/ArchivumMesselina.git",
+      "create_feature_branch": true,
+      "files": [
+        {
+          "source": "Archivum Messelina/scripts/mods/Archivum Messelina/Archivum Messelina_localization.lua",
+          "target": "scripts/mods/Archivum Messelina/Archivum Messelina_localization.lua"
+        }
+      ]
     },
     {
-      "id": "Radar",
-      "mod": "Radar",
-      "repo_name": "radar",
-      "origin": "https://github.com/SyuanTsai/Darktide-Mod-radar.git",
-      "upstream": "https://github.com/LucLeto/darktide-mods-radar.git"
+      "id": "ChatBlock",
+      "mod": "ChatBlock",
+      "repo_name": "danreeves-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mods-Danreeves.git",
+      "upstream": "https://github.com/danreeves/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
+      "id": "DecodeMinigameSolver",
+      "mod": "DecodeMinigameSolver",
+      "repo_name": "decode-minigame-solver",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mods-igromanru.git",
+      "upstream": "https://github.com/igromanru/DarkTide-DecodeMinigameSolver.git",
+      "main_branch": "master",
+      "upstream_branch": "master",
+      "create_feature_branch": true,
+      "files": [
+        {
+          "source": "DecodeMinigameSolver/scripts/DecodeMinigameSolver_localization.lua",
+          "target": "scripts/DecodeMinigameSolver_localization.lua"
+        }
+      ]
     },
     {
       "id": "DefaultToHighestBlessingTier",
@@ -26,11 +50,51 @@
       "upstream": "https://github.com/deluxghost/darktide-mods.git"
     },
     {
+      "id": "EmpowerUntilLimit",
+      "mod": "EmpowerUntilLimit",
+      "repo_name": "zombine04-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods.git",
+      "upstream": "https://github.com/zombine04/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
+      "id": "Healthbars",
+      "mod": "Healthbars",
+      "repo_name": "danreeves-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mods-Danreeves.git",
+      "upstream": "https://github.com/danreeves/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
       "id": "IME_Enable",
       "mod": "IME_Enable",
       "repo_name": "deluxghost-darktide-mods",
       "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
       "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "InspectFromPartyFinder",
+      "mod": "InspectFromPartyFinder",
+      "repo_name": "zombine04-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods.git",
+      "upstream": "https://github.com/zombine04/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
+      "id": "InspectFromSocial",
+      "mod": "InspectFromSocial",
+      "repo_name": "zombine04-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods.git",
+      "upstream": "https://github.com/zombine04/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
+      "id": "KillfeedImprovements",
+      "mod": "KillfeedImprovements",
+      "repo_name": "danreeves-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mods-Danreeves.git",
+      "upstream": "https://github.com/danreeves/darktide-mods.git",
+      "create_feature_branch": true
     },
     {
       "id": "ManyMoreTry",
@@ -40,6 +104,14 @@
       "upstream": "https://github.com/deluxghost/darktide-mods.git"
     },
     {
+      "id": "NumericUI",
+      "mod": "NumericUI",
+      "repo_name": "danreeves-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mods-Danreeves.git",
+      "upstream": "https://github.com/danreeves/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
       "id": "QuickLookCard",
       "mod": "QuickLookCard",
       "repo_name": "deluxghost-darktide-mods",
@@ -47,11 +119,26 @@
       "upstream": "https://github.com/deluxghost/darktide-mods.git"
     },
     {
+      "id": "Radar",
+      "mod": "Radar",
+      "repo_name": "radar",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mod-radar.git",
+      "upstream": "https://github.com/LucLeto/darktide-mods-radar.git"
+    },
+    {
       "id": "Reconnect",
       "mod": "Reconnect",
       "repo_name": "deluxghost-darktide-mods",
       "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
       "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "RememberDifficulty",
+      "mod": "RememberDifficulty",
+      "repo_name": "zombine04-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods.git",
+      "upstream": "https://github.com/zombine04/darktide-mods.git",
+      "create_feature_branch": true
     },
     {
       "id": "RememberServerLocation",
@@ -82,11 +169,39 @@
       "upstream": "https://github.com/deluxghost/darktide-mods.git"
     },
     {
+      "id": "Skitarius",
+      "mod": "Skitarius",
+      "repo_name": "skitarius",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mod-Skitarius.git",
+      "upstream": "https://github.com/CATBIRDS/Skitarius.git",
+      "create_feature_branch": true,
+      "files": [
+        {
+          "source": "Skitarius/scripts/mods/Skitarius/Skitarius_localization.lua",
+          "target": "scripts/mods/Skitarius/Skitarius_localization.lua"
+        }
+      ]
+    },
+    {
       "id": "SoloPlay",
       "mod": "SoloPlay",
       "repo_name": "deluxghost-darktide-mods",
       "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
       "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "Spidey_Sense",
+      "mod": "Spidey Sense",
+      "repo_name": "spidey-sense",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mod-SpideySense.git",
+      "upstream": "https://github.com/Wobin/SpideySense.git",
+      "create_feature_branch": true,
+      "files": [
+        {
+          "source": "Spidey Sense/scripts/mods/Spidey Sense/Spidey Sense_localization.lua",
+          "target": "scripts/mods/Spidey Sense/Spidey Sense_localization.lua"
+        }
+      ]
     },
     {
       "id": "StimmsPickupIcon",
@@ -101,6 +216,147 @@
       "repo_name": "deluxghost-darktide-mods",
       "origin": "https://github.com/SyuanTsai/Deluxghost-Darktide-Mods.git",
       "upstream": "https://github.com/deluxghost/darktide-mods.git"
+    },
+    {
+      "id": "WeaponFilter",
+      "mod": "WeaponFilter",
+      "repo_name": "zombine04-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods.git",
+      "upstream": "https://github.com/zombine04/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
+      "id": "afk",
+      "mod": "afk",
+      "repo_name": "aussiemon-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mods-Aussiemon.git",
+      "upstream": "https://github.com/Aussiemon/Darktide-Mods.git",
+      "main_branch": "master",
+      "upstream_branch": "master",
+      "create_feature_branch": true
+    },
+    {
+      "id": "buy_until_rating",
+      "mod": "buy_until_rating",
+      "repo_name": "zombine04-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods.git",
+      "upstream": "https://github.com/zombine04/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
+      "id": "creature_spawner",
+      "mod": "creature_spawner",
+      "repo_name": "aussiemon-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mods-Aussiemon.git",
+      "upstream": "https://github.com/Aussiemon/Darktide-Mods.git",
+      "main_branch": "master",
+      "upstream_branch": "master",
+      "create_feature_branch": true
+    },
+    {
+      "id": "custom_hud",
+      "mod": "custom_hud",
+      "repo_name": "sanctionedpsyker-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods-SanctionedPsyker.git",
+      "upstream": "https://github.com/fracticality/darktide-mods.git",
+      "main_branch": "master",
+      "upstream_branch": "master",
+      "create_feature_branch": true
+    },
+    {
+      "id": "debuff_indicator",
+      "mod": "debuff_indicator",
+      "repo_name": "zombine04-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods.git",
+      "upstream": "https://github.com/zombine04/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
+      "id": "guarantee_ability_activation",
+      "mod": "guarantee_ability_activation",
+      "repo_name": "kamiunity-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mods-KamiUnitY.git",
+      "upstream": "https://github.com/KamiUnitY/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
+      "id": "keep_dodging",
+      "mod": "keep_dodging",
+      "repo_name": "zombine04-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods.git",
+      "upstream": "https://github.com/zombine04/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
+      "id": "modular_menu_buttons",
+      "mod": "modular_menu_buttons",
+      "repo_name": "zombine04-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods.git",
+      "upstream": "https://github.com/zombine04/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
+      "id": "name_it",
+      "mod": "name_it",
+      "repo_name": "zombine04-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods.git",
+      "upstream": "https://github.com/zombine04/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
+      "id": "ovenproof_scoreboard_plugin",
+      "mod": "ovenproof_scoreboard_plugin",
+      "repo_name": "ovenproof-scoreboard-plugin-patch",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mods-OvenproofScoreboardPluginPatch.git",
+      "upstream": "https://github.com/Backup158/DarktideOvenproofScoreboardPluginPatch.git"
+    },
+    {
+      "id": "psych_ward",
+      "mod": "psych_ward",
+      "repo_name": "sanctionedpsyker-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods-SanctionedPsyker.git",
+      "upstream": "https://github.com/fracticality/darktide-mods.git",
+      "main_branch": "master",
+      "upstream_branch": "master",
+      "create_feature_branch": true
+    },
+    {
+      "id": "red_weapons_at_home",
+      "mod": "red_weapons_at_home",
+      "repo_name": "kamiunity-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mods-KamiUnitY.git",
+      "upstream": "https://github.com/KamiUnitY/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
+      "id": "true_level",
+      "mod": "true_level",
+      "repo_name": "zombine04-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods.git",
+      "upstream": "https://github.com/zombine04/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
+      "id": "uptime",
+      "mod": "uptime",
+      "repo_name": "uptime",
+      "origin": "https://github.com/SyuanTsai/Darktide-Mod-Uptime.git",
+      "upstream": "https://github.com/manuelhuber/uptime.git",
+      "create_feature_branch": true,
+      "files": [
+        {
+          "source": "uptime/scripts/mods/uptime/uptime_localization.lua",
+          "target": "scripts/mods/uptime/uptime_localization.lua"
+        }
+      ]
+    },
+    {
+      "id": "who_are_you",
+      "mod": "who_are_you",
+      "repo_name": "zombine04-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/darktide-mods.git",
+      "upstream": "https://github.com/zombine04/darktide-mods.git",
+      "create_feature_branch": true
     }
   ]
 }

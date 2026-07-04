@@ -4,25 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       target:
-        description: "MOD target to sync"
+        description: "MOD target id from .github/zh-tw-sync-config.json"
         required: true
-        type: choice
         default: "ovenproof_scoreboard_plugin"
-        options:
-          - "ovenproof_scoreboard_plugin"
-          - "Radar"
-          - "DefaultToHighestBlessingTier"
-          - "IME_Enable"
-          - "ManyMoreTry"
-          - "QuickLookCard"
-          - "Reconnect"
-          - "RememberServerLocation"
-          - "ScoreboardExplosive"
-          - "ShareTalents"
-          - "SimpleSpeedMeter"
-          - "SoloPlay"
-          - "StimmsPickupIcon"
-          - "WhatTheLocalization"
       dry_run:
         description: "Run without committing or pushing"
         required: false

@@ -18,7 +18,7 @@ from pathlib import Path
 
 LANG = '["zh-tw"]'
 FIELD_RE = re.compile(r'^(?P<indent>[ \t]*)\["zh-tw"\]\s*=\s*(?P<value>.*),(?P<trail>[ \t]*(?:--.*)?)$')
-ASSIGNMENT_RE = re.compile(r'(?m)^(?P<indent>[ \t]*)(?P<key>[A-Za-z_][A-Za-z0-9_]*|\["[^"\n]+"\])\s*=\s*\{')
+ASSIGNMENT_RE = re.compile(r'(?m)^(?P<indent>[ \t]*)(?P<key>[A-Za-z_][A-Za-z0-9_]*|\[[^\]\n]+\])\s*=\s*\{')
 
 
 @dataclasses.dataclass(frozen=True)
@@ -305,6 +305,12 @@ def localization_files(mods_root: Path, mod_id: str) -> list[Path]:
     return files
 
 
+def target_file_pairs(mods_root: Path, target: dict) -> list[tuple[Path, Path]]:
+    if "files" in target:
+        return [(mods_root / item["source"], Path(item["target"])) for item in target["files"]]
+    return [(source_path, source_path.relative_to(mods_root)) for source_path in localization_files(mods_root, target["mod"])]
+
+
 def select_targets(config: dict, requested: str) -> list[dict]:
     targets = config["targets"]
     if requested == "all":
@@ -409,20 +415,22 @@ def merge_main_into_feature(repo_dir: Path, main_branch: str, allowed_conflicts:
 def sync_target(target: dict, config: dict, maintenance_root: Path, work_root: Path, dry_run: bool) -> None:
     print(f"::group::{target['id']}")
     main_branch = target.get("main_branch", config.get("main_branch", "main"))
+    upstream_branch = target.get("upstream_branch", main_branch)
     feature_branch = target.get("feature_branch", config.get("feature_branch", "feature/Add-zh-tw"))
     repo_dir = clone_repo(target, work_root, main_branch)
     mods_root = maintenance_root / config["maintenance_mods_root"]
-    selected_localization_files = localization_files(mods_root, target["mod"])
-    allowed_merge_conflicts = {path_for_git(path.relative_to(mods_root)) for path in selected_localization_files}
+    selected_file_pairs = target_file_pairs(mods_root, target)
+    allowed_merge_conflicts = {path_for_git(relative_path) for _, relative_path in selected_file_pairs}
 
     git(repo_dir, "fetch", "upstream")
     git(repo_dir, "fetch", "origin")
-    if not branch_exists(repo_dir, "refs/remotes/upstream/main"):
-        raise SystemExit(f"{target['id']}: upstream/main does not exist")
+    upstream_ref = f"upstream/{upstream_branch}"
+    if not branch_exists(repo_dir, f"refs/remotes/{upstream_ref}"):
+        raise SystemExit(f"{target['id']}: {upstream_ref} does not exist")
 
     git(repo_dir, "checkout", main_branch)
-    git(repo_dir, "merge", "--no-ff", "upstream/main", "-m", "Merge upstream main into fork main")
-    upstream_commit = git_text(repo_dir, "rev-parse", "upstream/main")
+    git(repo_dir, "merge", "--no-ff", upstream_ref, "-m", f"Merge upstream {upstream_branch} into fork {main_branch}")
+    upstream_commit = git_text(repo_dir, "rev-parse", upstream_ref)
 
     if dry_run:
         print(f"{target['id']}: dry-run skips pushing {main_branch}")
@@ -439,6 +447,8 @@ def sync_target(target: dict, config: dict, maintenance_root: Path, work_root: P
         git(repo_dir, "checkout", feature_branch)
     elif branch_exists(repo_dir, f"refs/remotes/origin/{feature_branch}"):
         git(repo_dir, "checkout", "-b", feature_branch, f"origin/{feature_branch}")
+    elif target.get("create_feature_branch", False):
+        git(repo_dir, "checkout", "-b", feature_branch, main_branch)
     else:
         raise SystemExit(f"{target['id']}: missing {feature_branch} locally and on origin")
 
@@ -448,8 +458,9 @@ def sync_target(target: dict, config: dict, maintenance_root: Path, work_root: P
     total_updated = 0
     total_added = 0
 
-    for source_path in selected_localization_files:
-        relative_path = source_path.relative_to(mods_root)
+    for source_path, relative_path in selected_file_pairs:
+        if not source_path.is_file():
+            raise FileNotFoundError(f"{target['id']}: missing source localization file: {source_path}")
         target_path = repo_dir / relative_path
         if not target_path.is_file():
             raise FileNotFoundError(f"{target['id']}: missing target localization file: {relative_path}")
