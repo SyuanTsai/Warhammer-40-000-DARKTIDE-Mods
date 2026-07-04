@@ -45,15 +45,19 @@ return {
     -- Groups 角色
     adamant = {
         en = cf(Localize("loc_class_adamant_name"),"medium_violet_red"), -- 
+        ["zh-tw"] = cf(Localize("loc_class_adamant_name"),"medium_violet_red"), -- 
     },
     ogryn = {
         en = cf(Localize("loc_class_ogryn_name"),"ui_ogryn"),
+        ["zh-tw"] = cf(Localize("loc_class_ogryn_name"),"ui_ogryn"),
     },
     veteran = {
         en =cf(Localize("loc_class_veteran_name"),"ui_veteran"),
+        ["zh-tw"] =cf(Localize("loc_class_veteran_name"),"ui_veteran"),
     },
     zealot = {
         en = cf(Localize("loc_class_zealot_name"),"ui_zealot"),
+        ["zh-tw"] = cf(Localize("loc_class_zealot_name"),"ui_zealot"),
     },
     -- Global Settings 全局设置
     allow_override = {
@@ -89,7 +93,7 @@ return {
     box_enabled = {
         en = cf("Big Box of Hurt","ui_ogryn_text"),
         ["zh-cn"] = cf("盒子雷（欧格林）","ui_ogryn_text"),
-        ["zh-tw"] = cf("盒子雷（歐格林）", "ui_ogryn_text"),
+        ["zh-tw"] = cf("巨量傷害盒（歐格林）", "ui_ogryn_text"),
     },
     box_minimum = {
         en = "Minimum Grenades",
@@ -104,14 +108,14 @@ return {
     box_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum Boxes: \nStandard: %d\nEnhanced Blitz: %d", box, box + enhanced),
         ["zh-cn"] = string.format("至少有这么多手雷才能这么做 \n\n最大盒子雷: \n标准: %d\n强化闪击: %d", box, box + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n最大盒子雷: \n標準: %d\n強化閃擊: %d", box, box + enhanced),
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n巨量傷害盒上限: \n標準: %d\n閃擊強化: %d", box, box + enhanced),
     },
 
     -- Rock 扔石头
     rock_enabled = {
         en = cf("Big Friendly Rock","ui_ogryn_text"),
         ["zh-cn"] = cf("投石头（欧格林）","ui_ogryn_text"),
-        ["zh-tw"] = cf("投石頭（歐格林）", "ui_ogryn_text"),
+        ["zh-tw"] = cf("投石問路（歐格林）", "ui_ogryn_text"),
     },
     rock_throw_type = {
         en = "Throw Type",
@@ -126,7 +130,7 @@ return {
     rock_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum Rocks: \nStandard: %d\nEnhanced Blitz: %d", rock, rock + enhanced),
         ["zh-cn"] = string.format("至少有这么多手雷才能这么做\n\n最大手雷: \n标准: %d\n强化闪击: %d", rock, rock + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n最大石頭: \n標準: %d\n強化閃擊: %d", rock, rock + enhanced),
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n投石問路上限: \n標準: %d\n閃擊強化: %d", rock, rock + enhanced),
     },
     -- Nuke 核弹
     nuke_enabled = {
@@ -147,14 +151,14 @@ return {
     nuke_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum Frag Bombs: \nStandard: %d\nEnhanced Blitz: %d", nuke, nuke + enhanced),
         ["zh-cn"] = string.format("至少有这么多手雷才能这么做.\n\n最大手雷: \n标准: %d\n强化闪击: %d", nuke, nuke + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n破片炸彈（歐格林）: \n標準: %d\n強化閃擊: %d", nuke, nuke + enhanced),
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n破片炸彈上限: \n標準: %d\n閃擊強化: %d", nuke, nuke + enhanced),
     },
     -- 老兵
     -- Frag 流血雷
     frag_enabled = {
         en = cf("Shredder Frag Grenade","ui_veteran_text"),
         ["zh-cn"] = cf("流血雷（老兵）","ui_veteran_text"),
-        ["zh-tw"] = cf("破片雷（老兵流血）", "ui_veteran_text"),
+        ["zh-tw"] = cf("粉碎者破片手雷（老兵）", "ui_veteran_text"),
     },
     frag_throw_type = {
         en = "Throw Type",
@@ -171,14 +175,14 @@ return {
         cf("Grenadier", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
         ["zh-cn"] = string.format("必须有这么多手榴弹才能自动投掷\n\n最大手雷数量: \n标准/%s: %d/%s\n强化闪击: %d/%s\n",
         cf("掷弹兵", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n最大破片雷: \n標準/%s: %d/%s\n強化閃擊: %d/%s\n",
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n粉碎者破片手雷上限: \n標準/%s: %d/%s\n閃擊強化: %d/%s\n",
         cf("擲彈兵", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
     },
     -- Krak 穿甲雷
     krak_enabled = {
         en = cf("Krak Grenade","ui_veteran_text"),
         ["zh-cn"] = cf("穿甲雷（老兵）","ui_veteran_text"),
-        ["zh-tw"] = cf("穿甲雷（老兵）", "ui_veteran_text"),
+        ["zh-tw"] = cf("穿甲手雷（老兵）", "ui_veteran_text"),
     },
     krak_throw_type = {
         en = "Throw Type",
@@ -195,13 +199,13 @@ return {
         cf("Grenadier", "ui_veteran_text"), frag, cf(krak + grenadier, "ui_veteran_text"), krak + enhanced, cf(krak + grenadier + enhanced, "ui_veteran_text")),
         ["zh-cn"] = string.format("必须有这么多手榴弹才能自动投掷\n\n最大手雷数量: \n标准/%s: %d/%s\n强化闪击: %d/%s\n",
         cf("掷弹兵", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n最大穿甲雷: \n標準/%s: %d/%s\n強化閃擊: %d/%s\n",
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n穿甲手雷上限: \n標準/%s: %d/%s\n閃擊強化: %d/%s\n",
         cf("擲彈兵", "ui_veteran_text"), frag, cf(krak + grenadier, "ui_veteran_text"), krak + enhanced, cf(krak + grenadier + enhanced, "ui_veteran_text")),
     },
     smoke_enabled = {
         en = cf("Smoke Grenade","ui_veteran_text"),
         ["zh-cn"] = cf("烟雾弹（老兵）","ui_veteran_text"),
-        ["zh-tw"] = cf("煙霧彈（老兵）", "ui_veteran_text"),
+        ["zh-tw"] = cf("煙霧手雷（老兵）", "ui_veteran_text"),
     },
     smoke_throw_type = {
         en = "Throw Type",
@@ -218,7 +222,7 @@ return {
         cf("Grenadier", "ui_veteran_text"), frag, cf(smoke + grenadier, "ui_veteran_text"), smoke + enhanced, cf(smoke + grenadier + enhanced, "ui_veteran_text")),
         ["zh-cn"] = string.format("必须有这么多手榴弹才能自动投掷\n\n最大手雷数量: \n标准/%s: %d/%s\n强化闪击: %d/%s\n",
         cf("掷弹兵", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n最大煙霧彈: \n標準/%s: %d/%s\n強化閃擊: %d/%s\n",
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n煙霧手雷上限: \n標準/%s: %d/%s\n閃擊強化: %d/%s\n",
         cf("擲彈兵", "ui_veteran_text"), frag, cf(smoke + grenadier, "ui_veteran_text"), smoke + enhanced, cf(smoke + grenadier + enhanced, "ui_veteran_text")),    },
     -- Flame 火雷
     flame_enabled = {
@@ -239,12 +243,12 @@ return {
     flame_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum Immolation Grenades: \nStandard: %d\nEnhanced Blitz: %d", flame, flame + enhanced),
         ["zh-cn"] = string.format("至少有这么多手雷才能自动投掷\n\n最大手榴弹: \n标准: %d\n强化闪击: %d", flame, flame + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n最大獻祭手雷: \n標準: %d\n強化閃擊: %d", flame, flame + enhanced),    },
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n獻祭手雷上限: \n標準: %d\n閃擊強化: %d", flame, flame + enhanced),    },
     -- Shock 眩晕手雷
     shock_enabled = {
         en = cf("Stunstorm Grenade","ui_zealot_text"),
         ["zh-cn"] = cf("眩晕手雷（狂信）","ui_zealot_text"),
-        ["zh-tw"] = cf("眩暈手雷（狂信）", "ui_zealot_text"),    },
+        ["zh-tw"] = cf("眩暈風暴手雷（狂信）", "ui_zealot_text"),    },
     shock_throw_type = {
         en = "Throw Type",
         ["zh-cn"] = "投掷类型",
@@ -258,10 +262,11 @@ return {
     shock_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum Stunstorm Grenades: \nStandard: %d\nEnhanced Blitz: %d", shock, shock + enhanced),
         ["zh-cn"] = string.format("至少有这么多手雷才能自动投掷\n\n最大手榴弹: \n标准: %d\n强化闪击: %d", shock, shock + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n最大眩暈手雷: \n標準: %d\n強化閃擊: %d", shock, shock + enhanced),    },
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n眩暈風暴手雷上限: \n標準: %d\n閃擊強化: %d", shock, shock + enhanced),    },
     -- Mine
     mine_enabled = {
-        en = cf(Localize("loc_talent_ability_shock_mine"), "pale_violet_red") -- should be localized for all languages without further modification
+        en = cf(Localize("loc_talent_ability_shock_mine"), "pale_violet_red"), -- should be localized for all languages without further modification
+        ["zh-tw"] = cf(Localize("loc_talent_ability_shock_mine"), "pale_violet_red"), -- should be localized for all languages without further modification
     },
     mine_throw_type = {
         en = "Throw Type",
@@ -276,11 +281,12 @@ return {
     mine_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum %s: \nStandard: %d\nEnhanced Blitz: %d", Localize("loc_talent_ability_shock_mine"), mine, mine + enhanced),
         ["zh-cn"] = string.format("至少有这么多手雷才能自动投掷\n\n最大手榴弹: \n标准: %d\n强化闪击: %d", mine, mine + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n最大%s: \n標準: %d\n強化閃擊: %d", Localize("loc_talent_ability_shock_mine"), mine, mine + enhanced),
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n%s上限: \n標準: %d\n閃擊強化: %d", Localize("loc_talent_ability_shock_mine"), mine, mine + enhanced),
         },
     -- Arbites Grenade
     arbites_enabled = {
-        en = cf(Localize("loc_talent_ability_adamant_grenade"), "pale_violet_red") -- should be localized for all languages without further modification
+        en = cf(Localize("loc_talent_ability_adamant_grenade"), "pale_violet_red"), -- should be localized for all languages without further modification
+        ["zh-tw"] = cf(Localize("loc_talent_ability_adamant_grenade"), "pale_violet_red"), -- should be localized for all languages without further modification
     },
     arbites_throw_type = {
         en = "Throw Type",
@@ -295,19 +301,20 @@ return {
     arbites_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum %s: \nStandard: %d\nEnhanced Blitz: %d", Localize("loc_talent_ability_adamant_grenade"), arbites, arbites + enhanced),
         ["zh-cn"] = string.format("至少有这么多手雷才能自动投掷\n\n最大手榴弹: \n标准: %d\n强化闪击: %d", arbites, arbites + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n最大%s: \n標準: %d\n強化閃擊: %d", Localize("loc_talent_ability_adamant_grenade"), arbites, arbites + enhanced),
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n%s上限: \n標準: %d\n閃擊強化: %d", Localize("loc_talent_ability_adamant_grenade"), arbites, arbites + enhanced),
     },
     -- Dogsplosion
     dogsplosion_enabled = {
-        en = cf(Localize("loc_talent_ability_detonate"), "pale_violet_red") -- should be localized for all languages without further modification
+        en = cf(Localize("loc_talent_ability_detonate"), "pale_violet_red"), -- should be localized for all languages without further modification
+        ["zh-tw"] = cf(Localize("loc_talent_ability_detonate"), "pale_violet_red"), -- should be localized for all languages without further modification
     },
     dogsplosion_enabled_tooltip = {
         en = string.format("Automatically triggers %s when the conditions below are met. \n\nAt least one of the following settings must be enabled to use this feature: \nRequire Minimum Enemy Count \nRequire Pounce",cf(Localize("loc_talent_ability_detonate"), "pale_violet_red")),
-        ["zh-tw"] = string.format("當满足以下條件時自動觸發%s。\n\n至少啟用以下設置之一才能使用此功能：\n需要最小敵人數量\n需要蹲躊", cf(Localize("loc_talent_ability_detonate"), "pale_violet_red")),
+        ["zh-tw"] = string.format("符合以下條件時自動觸發%s。\n\n至少必須啟用下列其中一項設定才能使用此功能：\n需要最低敵人數量\n需要撲擊", cf(Localize("loc_talent_ability_detonate"), "pale_violet_red")),
     },
     dogsplosion_use_threshold = {
         en = "Require Minimum Enemy Count",
-        ["zh-tw"] = "需要最小敵人數量",
+        ["zh-tw"] = "需要最低敵人數量",
     },
     dogsplosion_use_threshold_tooltip = {
         en = string.format("When enabled, detonation will only take place if ANY of the enemy counts below are met. \nOnly enemies within the detonation radius are counted."),
@@ -327,15 +334,15 @@ return {
     },
     dogsplosion_boss_threshold = {
         en = "Total Bosses",
-        ["zh-tw"] = "Boss總數",
+        ["zh-tw"] = "首領總數",
     },
     dogsplosion_allow_daemonhost = {
         en = "Allow Detonation Near Sleeping Daemonhosts",
-        ["zh-tw"] = "允許在睡眠中的惡魔宿主附近引爆",
+        ["zh-tw"] = "允許在沉睡中的惡魔宿主附近引爆",
     },
     dogsplosion_pounce_only = {
         en = "Require Pounce",
-        ["zh-tw"] = "需要蹲躊",
+        ["zh-tw"] = "需要撲擊",
     },
     dogsplosion_require_tag = {
         en = "Require Tag",
@@ -343,7 +350,7 @@ return {
     },
     dogsplosion_require_tag_tooltip = {
         en = string.format("This setting only applies when Require Pounce is enabled. \nIf enabled, a command tag must also be present when the pounce occurs."),
-        ["zh-tw"] = string.format("此設置僅在啟用「需要蹲躊」時適用。\n如果啟用，則在蹲躊發生時必須同時存在指令標記。"),
+        ["zh-tw"] = string.format("此設定僅在啟用「需要撲擊」時適用。\n啟用後，撲擊發生時也必須有指令標記。"),
     },
     dogsplosion_cooldown = {
         en = "Cooldown",
@@ -355,14 +362,16 @@ return {
     },
     dogsplosion_minimum_tooltip = {
         en = string.format("Must have at least this many charges to auto-trigger.\n\nMaximum %s: \nStandard: %d\nEnhanced Blitz: %d", Localize("loc_talent_ability_detonate"), dogsplosion, dogsplosion + enhanced),
-        ["zh-tw"] = string.format("必須至少有這麼多充能才能自動觸發。\n\n最大%s: \n標準: %d\n強化閃擊: %d", Localize("loc_talent_ability_detonate"), dogsplosion, dogsplosion + enhanced),
+        ["zh-tw"] = string.format("必須至少有這麼多充能才能自動觸發。\n\n%s上限: \n標準: %d\n閃擊強化: %d", Localize("loc_talent_ability_detonate"), dogsplosion, dogsplosion + enhanced),
     },
     -- Hive Scum
     broker = {
         en = cf(Localize("loc_class_broker_name"), "ui_toughness_default"), -- should be localized for all languages without further modification
+        ["zh-tw"] = cf(Localize("loc_class_broker_name"), "ui_toughness_default"), -- should be localized for all languages without further modification
     },
     flask_enabled = {
         en = cf(Localize("loc_talent_broker_blitz_tox_grenade"), "ui_toughness_medium"),  -- should be localized for all languages without further modification
+        ["zh-tw"] = cf(Localize("loc_talent_broker_blitz_tox_grenade"), "ui_toughness_medium"),  -- should be localized for all languages without further modification
     },
     flask_minimum = {
         en = "Minimum Grenades",
@@ -372,13 +381,15 @@ return {
     flask_throw_type = {
         en = "Throw Type",
         ["zh-cn"] = "投掷类型",
+        ["zh-tw"] = "投擲類型",
     },
     flask_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum %s: \nStandard: %d\nEnhanced Blitz: %d", Localize("loc_talent_broker_blitz_tox_grenade"), flask, flask + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n最大%s: \n標準: %d\n閃擊強化: %d", Localize("loc_talent_broker_blitz_tox_grenade"), flask, flask + enhanced),
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n%s上限: \n標準: %d\n閃擊強化: %d", Localize("loc_talent_broker_blitz_tox_grenade"), flask, flask + enhanced),
     },
     launcher_enabled = {
         en = cf(Localize("loc_talent_broker_blitz_missile_launcher"), "ui_toughness_medium"),  -- should be localized for all languages without further modification
+        ["zh-tw"] = cf(Localize("loc_talent_broker_blitz_missile_launcher"), "ui_toughness_medium"),  -- should be localized for all languages without further modification
     },
     launcher_minimum = {
         en = "Minimum Missiles",
@@ -386,29 +397,32 @@ return {
     },
     launcher_tooltip = {
         en = string.format("Must have at least this many missiles to auto-launch.\n\nMaximum %s: \nStandard: %d\nEnhanced Blitz: %d", Localize("loc_talent_broker_blitz_missile_launcher"), launcher, launcher + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的飛彈數量，只有超過時才會自動發射。\n\n最大%s: \n標準: %d\n閃擊強化: %d", Localize("loc_talent_broker_blitz_missile_launcher"), launcher, launcher + enhanced),
+        ["zh-tw"] = string.format("Mod會保留設定的飛彈數量，只有超過時才會自動發射。\n\n%s上限: \n標準: %d\n閃擊強化: %d", Localize("loc_talent_broker_blitz_missile_launcher"), launcher, launcher + enhanced),
     },
     -- Skitarius
     cryptic = {
         en = cf(Localize("loc_class_cryptic_name"), "ui_toughness_buffed"),
+        ["zh-tw"] = cf(Localize("loc_class_cryptic_name"), "ui_toughness_buffed"),
     },
     purg_enabled = {
         en = cf(Localize("loc_talent_cryptic_servo_skull_flamethrower"), "citadel_golden_griffon"),
+        ["zh-tw"] = cf(Localize("loc_talent_cryptic_servo_skull_flamethrower"), "citadel_golden_griffon"),
     },
     medic_enabled = {
         en = cf(Localize("loc_talent_cryptic_servo_skull_inject_ally"), "citadel_golden_griffon"),
+        ["zh-tw"] = cf(Localize("loc_talent_cryptic_servo_skull_inject_ally"), "citadel_golden_griffon"),
     },
     help_hogtied = {
         en = "Automatically Rescue Hogtied Allies",
-        ["zh-tw"] = "自動救援被捆綁的隊友",
+        ["zh-tw"] = "自動救援被綁住的隊友",
     },
     help_netted = {
         en = "Automatically Rescue Netted Allies",
-        ["zh-tw"] = "自動救援被困網的隊友",
+        ["zh-tw"] = "自動救援被網住的隊友",
     },
     help_downed = {
         en = "Automatically Rescue Downed Allies",
-        ["zh-tw"] = "自動救援倒地的隊友",
+        ["zh-tw"] = "自動救援倒地隊友",
     },
     medic_minimum = {
         en = "Minimum Charges",
@@ -416,10 +430,11 @@ return {
     },
     medic_tooltip = {
         en = string.format("Must have at least this many charges to auto-deploy.\n\nMaximum %s Charges: \nStandard: %d\nEnhanced Blitz: %d", Localize("loc_talent_cryptic_servo_skull_inject_ally"), medic, medic + enhanced),
-        ["zh-tw"] = string.format("必須至少有這麼多充能才能自動部署。\n\n最大%s充能次數: \n標準: %d\n強化閃擊: %d", Localize("loc_talent_cryptic_servo_skull_inject_ally"), medic, medic + enhanced),
+        ["zh-tw"] = string.format("必須至少有這麼多充能才能自動部署。\n\n%s充能次數上限: \n標準: %d\n閃擊強化: %d", Localize("loc_talent_cryptic_servo_skull_inject_ally"), medic, medic + enhanced),
     },
     arc_enabled = {
         en = cf(Localize("loc_talent_cryptic_arc_grenades"), "citadel_golden_griffon"),
+        ["zh-tw"] = cf(Localize("loc_talent_cryptic_arc_grenades"), "citadel_golden_griffon"),
     },
     arc_throw_type = {
         en = "Throw Type",
@@ -433,10 +448,11 @@ return {
     },
     arc_tooltip = {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum %s: \nStandard: %d\nEnhanced Blitz: %d", Localize("loc_talent_cryptic_arc_grenades"), arc, arc + enhanced),
-        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n最大%s: \n標準: %d\n強化閃擊: %d", Localize("loc_talent_cryptic_arc_grenades"), arc, arc + enhanced),
+        ["zh-tw"] = string.format("Mod會保留設定的手榴彈數量，只有超過時才會自動投擲。\n\n%s上限: \n標準: %d\n閃擊強化: %d", Localize("loc_talent_cryptic_arc_grenades"), arc, arc + enhanced),
     },
     shield_enabled = {
         en = cf(Localize("loc_talent_cryptic_grenade_ability_force_field"), "citadel_golden_griffon"),
+        ["zh-tw"] = cf(Localize("loc_talent_cryptic_grenade_ability_force_field"), "citadel_golden_griffon"),
     },
     shield_type = {
         en = "Auto-Deploy Trigger",
@@ -444,7 +460,7 @@ return {
     },
     current_health = {
         en = "Current Health %%",
-        ["zh-tw"] = "當前生命値 %%",
+        ["zh-tw"] = "目前生命值 %%",
     },
     damage_taken = {
         en = "Damage Taken",
@@ -452,15 +468,15 @@ return {
     },
     shield_type_tooltip = {
         en = Localize("loc_talent_cryptic_grenade_ability_force_field") .. " will be automatically deployed when the trigger condition is met, as dictated by the Trigger Threshold setting.",
-        ["zh-tw"] = Localize("loc_talent_cryptic_grenade_ability_force_field") .. " 將在觸發條件符合時自動部署，條件由「觸發閾値」設定決定。",
+        ["zh-tw"] = Localize("loc_talent_cryptic_grenade_ability_force_field") .. " 會在符合觸發條件時自動部署，條件由「觸發閾值」設定決定。",
     },
     shield_threshold = {
         en = "Trigger Threshold",
-        ["zh-tw"] = "觸發閾値",
+        ["zh-tw"] = "觸發閾值",
     },
     shield_threshold_tooltip = {
         en = string.format("%s: Refraction Emitter will deploy when health drops below this percentage due to Ranged damage.\n%s: Refraction Emitter will deploy when this much health damage has been received from Ranged sources within the past 2 seconds.\n\nRegardless of Threshold, Refraction Emitter will auto-deploy if the next instance of incoming Ranged damage would plausibly result in death.",cf("Current Health %%", "citadel_golden_griffon"),cf("Damage Taken", "citadel_golden_griffon")),
-        ["zh-tw"] = string.format("%s：當生命値因遠程傷害降至此百分比以下時，折射放射器將自動部署。\n%s：當過去2秒內從遠程來源受到此數値的生命傷害時，折射放射器將自動部署。\n\n無論閾値設定為何，若下一次遠程傷害可能導致死亡，折射放射器將自動部署。", cf("當前生命値 %%", "citadel_golden_griffon"), cf("所受傷害", "citadel_golden_griffon")),
+        ["zh-tw"] = string.format("%s：當生命值因遠程傷害降至此百分比以下時，折射放射器會自動部署。\n%s：當過去2秒內從遠程來源受到此數值的生命傷害時，折射放射器會自動部署。\n\n無論閾值設定為何，若下一次遠程傷害可能導致死亡，折射放射器都會自動部署。", cf("目前生命值 %%", "citadel_golden_griffon"), cf("所受傷害", "citadel_golden_griffon")),
     },
     shield_minimum = {
         en = "Minimum Charges",
@@ -468,6 +484,6 @@ return {
     },
     shield_tooltip = {
         en = string.format("Must have at least this many charges to auto-deploy.\n\nMaximum %s Charges: \nStandard: %d\nEnhanced Blitz: %d", Localize("loc_talent_cryptic_grenade_ability_force_field"), shield, shield + enhanced),
-        ["zh-tw"] = string.format("必須至少有這麼多充能才能自動部署。\n\n最大%s充能次數: \n標準: %d\n強化閃擊: %d", Localize("loc_talent_cryptic_grenade_ability_force_field"), shield, shield + enhanced),
+        ["zh-tw"] = string.format("必須至少有這麼多充能才能自動部署。\n\n%s充能次數上限: \n標準: %d\n閃擊強化: %d", Localize("loc_talent_cryptic_grenade_ability_force_field"), shield, shield + enhanced),
     },
 }
