@@ -367,6 +367,7 @@ def path_for_git(path: Path) -> str:
 
 
 def merge_main_into_feature(repo_dir: Path, main_branch: str, allowed_conflicts: set[str]) -> bool:
+    before_merge = git_text(repo_dir, "rev-parse", "HEAD")
     result = git(
         repo_dir,
         "merge",
@@ -378,7 +379,8 @@ def merge_main_into_feature(repo_dir: Path, main_branch: str, allowed_conflicts:
         capture=True,
     )
     if result.returncode == 0:
-        return True
+        after_merge = git_text(repo_dir, "rev-parse", "HEAD")
+        return before_merge != after_merge
 
     if result.stdout:
         print(result.stdout, end="")
@@ -400,7 +402,8 @@ def merge_main_into_feature(repo_dir: Path, main_branch: str, allowed_conflicts:
     git(repo_dir, "checkout", "--theirs", "--", *sorted(conflicted))
     git(repo_dir, "add", "--", *sorted(conflicted))
     git(repo_dir, "commit", "--no-edit")
-    return True
+    after_merge = git_text(repo_dir, "rev-parse", "HEAD")
+    return before_merge != after_merge
 
 
 def sync_target(target: dict, config: dict, maintenance_root: Path, work_root: Path, dry_run: bool) -> None:
@@ -439,7 +442,7 @@ def sync_target(target: dict, config: dict, maintenance_root: Path, work_root: P
     else:
         raise SystemExit(f"{target['id']}: missing {feature_branch} locally and on origin")
 
-    merge_main_into_feature(repo_dir, main_branch, allowed_merge_conflicts)
+    merge_changed_feature = merge_main_into_feature(repo_dir, main_branch, allowed_merge_conflicts)
 
     changed_files: list[Path] = []
     total_updated = 0
@@ -464,7 +467,15 @@ def sync_target(target: dict, config: dict, maintenance_root: Path, work_root: P
         raise SystemExit(f"{target['id']}: unexpected working tree changes: {', '.join(unexpected)}")
 
     if not diff_names:
-        print(f"{target['id']}: no zh-tw localization changes; feature branch push skipped")
+        if merge_changed_feature:
+            if dry_run:
+                print(f"{target['id']}: dry-run skips pushing {feature_branch} after main merge")
+            else:
+                git(repo_dir, "push", "origin", f"{feature_branch}:{feature_branch}")
+                commit_hash = git_text(repo_dir, "rev-parse", "HEAD")
+                print(f"{target['id']}: pushed {feature_branch} after main merge at {commit_hash}")
+        else:
+            print(f"{target['id']}: no zh-tw localization changes; feature branch push skipped")
         print("::endgroup::")
         return
 
