@@ -7,34 +7,35 @@ return {
 	},
 	mod_description = {
 		en = "Options to auto-accept matchmaking, lobbies, and party invites.",
-		["zh-tw"] = "提供選項自動接受配對、任務準備和小隊邀請。",
+		["zh-tw"] = "提供自動接受配對、大廳和小隊邀請的選項。",
 		ru = "Born Ready - Опции автовыбора в подборе, лобби и при приглашениях в группу.",
 	},
 	leave_party = {
 		en = Localize("loc_social_menu_leave_party"),
+		["zh-tw"] = "離開小隊",
 	},
 	autoready = {
 		en = "Ready up in lobby",
 		["zh-cn"] = "在任务中准备",
-		["zh-tw"] = "在任務中準備",
+		["zh-tw"] = "在大廳中準備",
 		ru = "Автоготовность в лобби",
 	},
 	autoskip = {
 		en = "Automatically skip",
 		["zh-cn"] = "跳过任务结束界面",
-		["zh-tw"] = "跳過任務結束介面",
+		["zh-tw"] = "自動跳過",
 		ru = "Пропустить экран окончания миссии",
 	},
 	end_skip_time = {
 		en = "Delay (seconds)",
 		["zh-cn"] = "跳过任务结束延迟（秒）",
-		["zh-tw"] = "跳過任務結束延遲（秒）",
+		["zh-tw"] = "延遲（秒）",
 		ru = "Задержка перед пропуском экрана окончания миссии (сек)",
 	},
 	automatch = {
 		en = "Accept mission prompt",
 		["zh-cn"] = "接受任务请求",
-		["zh-tw"] = "接受任務請求",
+		["zh-tw"] = "接受任務提示",
 		ru = "Подтвердить приглашение на миссию",
 	},
 	autojoin = {
@@ -52,7 +53,7 @@ return {
 	none = {
 		en = "Prompt",
 		["zh-cn"] = "提示",
-		["zh-tw"] = "提示",
+		["zh-tw"] = "詢問",
 		ru = "Спрашивать",
 	},
 	auto_yes = {
@@ -69,6 +70,7 @@ return {
 	},
 	eom_skip = {
 		en = Localize("loc_item_type_end_of_round"),
+		["zh-tw"] = "回合結束",
 	},
 	eom_skip_now_kb = {
 		en = "Skip Now",
@@ -76,11 +78,11 @@ return {
 	},
 	eom_cancel_chat = {
 		en = "Chat cancels skip",
-		["zh-tw"] = "聊天取消跳過",
+		["zh-tw"] = "聊天時取消跳過",
 	},
 	eom_cancel_kb = {
 		en = "Cancel Current Skip",
-		["zh-tw"] = "取消當前跳過",
+		["zh-tw"] = "取消目前的跳過",
 	},
 	msg_eom_cancel = {
 		en = "End-of-mission autoskip cancelled",
