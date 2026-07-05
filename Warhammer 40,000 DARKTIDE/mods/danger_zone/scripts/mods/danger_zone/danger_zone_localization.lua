@@ -73,13 +73,13 @@ local init_loc = {
 		["en"] = "Tox Flamer Explosion",
 		["zh-cn"] = "剧毒火焰兵爆炸",
 		["ru"] = "Взрыв Токс-огнемётчика",
-		["zh-tw"] = "渣滓火焰兵爆炸",
+		["zh-tw"] = "渣滓毒焰噴射者爆炸",
 	},
 	tox_flamer_explosion_outline_enabled_tooltip = {
 		["en"] = "Show outline around the fire left by a Tox Flamer explosion",
 		["zh-cn"] = "在剧毒火焰兵爆炸留下的火焰周围显示轮廓",
 		["ru"] = "Показывает контур вокруг огня, оставшегося от взрыва Токс-огнемётчика",
-		["zh-tw"] = "顯示渣滓火焰兵爆炸留下火焰周圍的輪廓",
+		["zh-tw"] = "顯示渣滓毒焰噴射者爆炸留下火焰周圍的輪廓",
 	},
 
 	explosive_barrel_effects_group = {
@@ -229,7 +229,7 @@ local init_loc = {
 		["en"] = "Tox Flamer Explosion Radius",
 		["zh-cn"] = "剧毒火焰兵爆炸半径",
 		["ru"] = "Радиус взрыва Токс-огнемётчика",
-		["zh-tw"] = "渣滓火焰兵爆炸半徑",
+		["zh-tw"] = "渣滓毒焰噴射者爆炸半徑",
 	},
 	tox_flamer_spawn_outline_enabled = {
 		["en"] = "Show when spawned",
@@ -241,7 +241,7 @@ local init_loc = {
 		["en"] = "Show Tox Flamer explosion radius when they spawn",
 		["zh-cn"] = "在剧毒火焰兵被生成时显示爆炸半径",
 		["ru"] = "Показывает радиус взрыва Токс-огнемётчика при появлении",
-		["zh-tw"] = "渣滓火焰兵生成時顯示爆炸半徑",
+		["zh-tw"] = "渣滓毒焰噴射者生成時顯示爆炸半徑",
 	},
 	tox_flamer_fuse_outline_enabled = {
 		["en"] = "Show when set to explode",
@@ -253,7 +253,7 @@ local init_loc = {
 		["en"] = "Show Tox Flamer explosion radius when Tox Flamer is set to explode upon death",
 		["zh-cn"] = "在剧毒火焰兵即将爆炸死亡时显示爆炸半径",
 		["ru"] = "Показывает радиус взрыва Токс-огнемётчика, когда он готов взорваться при смерти",
-		["zh-tw"] = "渣滓火焰兵被設定為死亡後爆炸時，顯示爆炸半徑",
+		["zh-tw"] = "渣滓毒焰噴射者被設定為死亡後爆炸時，顯示爆炸半徑",
 	},
 }
 
