@@ -12,14 +12,14 @@ local init_loc = {
 		["en"] = "Shows the range for area of effect hazards like fire and explosions. Version: " .. version,
 		["zh-cn"] = "显示火焰、爆炸等危险区域的范围。版本：" .. version,
 		["ru"] = "Danger Zone - Показывает радиусы опасных зон, таких как огонь и взрывы. Версия:" .. version,
-		["zh-tw"] = "顯示火焰、爆炸等危險區域的範圍。版本：" .. version,
+		["zh-tw"] = "顯示火焰、爆炸等範圍型危害的作用範圍。版本：" .. version,
 	},
 
 	area_effects_group = {
 		["en"] = "Area Effect Outlines",
 		["zh-cn"] = "区域效果轮廓",
 		["ru"] = "Контуры области эффекта",
-		["zh-tw"] = "區域效果輪廓",
+		["zh-tw"] = "範圍效果輪廓",
 	},
 	fire_barrel_explosion_outline_enabled = {
 		["en"] = "Barrel Fire",
@@ -31,7 +31,7 @@ local init_loc = {
 		["en"] = "Show outline around barrel fire",
 		["zh-cn"] = "在燃料桶火焰周围显示轮廓",
 		["ru"] = "Показывает контур вокруг огня от бочки",
-		["zh-tw"] = "在燃料桶火焰周圍顯示輪廓",
+		["zh-tw"] = "顯示燃料桶火焰周圍的輪廓",
 	},
 	scab_bomber_grenade_outline_enabled = {
 		["en"] = "Scab Bomber Grenade",
@@ -43,7 +43,7 @@ local init_loc = {
 		["en"] = "Show outline around the fire left by a Scab Bomber's grenade",
 		["zh-cn"] = "在血痂轰炸者手雷留下的火焰周围显示轮廓",
 		["ru"] = "Показывает контур вокруг огня от гранаты Скаба-гренадёра",
-		["zh-tw"] = "在血痂轟炸者手雷留下的火焰周圍顯示輪廓",
+		["zh-tw"] = "顯示血痂轟炸者手雷留下火焰周圍的輪廓",
 	},
 	tox_bomber_gas_outline_enabled = {
 		["en"] = "Tox Bomber Gas",
@@ -55,7 +55,7 @@ local init_loc = {
 		["en"] = "Show outline around the gas left by a Tox Bomber's grenade",
 		["zh-cn"] = "在剧毒轰炸者手雷留下的毒气周围显示轮廓",
 		["ru"] = "Показывает контур вокруг газа, оставшегося от гранаты Токс-гренадёра",
-		["zh-tw"] = "在劇毒轟炸者手雷留下的毒氣周圍顯示輪廓",
+		["zh-tw"] = "顯示劇毒轟炸者手雷留下毒氣周圍的輪廓",
 	},
 	scab_flamer_explosion_outline_enabled = {
 		["en"] = "Scab Flamer Explosion",
@@ -67,19 +67,19 @@ local init_loc = {
 		["en"] = "Show outline around the fire left by a Scab Flamer explosion",
 		["zh-cn"] = "在血痂火焰兵爆炸留下的火焰周围显示轮廓",
 		["ru"] = "Показывает контур вокруг огня, оставшегося от взрыва Скаба-огнемётчика",
-		["zh-tw"] = "在血痂火焰兵爆炸留下的火焰周圍顯示輪廓",
+		["zh-tw"] = "顯示血痂火焰兵爆炸留下火焰周圍的輪廓",
 	},
 	tox_flamer_explosion_outline_enabled = {
 		["en"] = "Tox Flamer Explosion",
 		["zh-cn"] = "剧毒火焰兵爆炸",
 		["ru"] = "Взрыв Токс-огнемётчика",
-		["zh-tw"] = "劇毒火焰兵爆炸",
+		["zh-tw"] = "渣滓毒焰噴射者爆炸",
 	},
 	tox_flamer_explosion_outline_enabled_tooltip = {
 		["en"] = "Show outline around the fire left by a Tox Flamer explosion",
 		["zh-cn"] = "在剧毒火焰兵爆炸留下的火焰周围显示轮廓",
 		["ru"] = "Показывает контур вокруг огня, оставшегося от взрыва Токс-огнемётчика",
-		["zh-tw"] = "在劇毒火焰兵爆炸留下的火焰周圍顯示輪廓",
+		["zh-tw"] = "顯示渣滓毒焰噴射者爆炸留下火焰周圍的輪廓",
 	},
 
 	explosive_barrel_effects_group = {
@@ -98,19 +98,19 @@ local init_loc = {
 		["en"] = "Show barrel explosion radius when barrel spawns in",
 		["zh-cn"] = "在桶被生成时显示爆炸半径",
 		["ru"] = "Показывает радиус взрыва, когда бочка появляется",
-		["zh-tw"] = "在桶被生成時顯示爆炸半徑",
+		["zh-tw"] = "桶生成時顯示爆炸半徑",
 	},
 	explosive_barrel_fuse_outline_enabled = {
 		["en"] = "Show when hit",
 		["zh-cn"] = "点燃后显示",
 		["ru"] = "Показывать при ударе",
-		["zh-tw"] = "點燃後顯示",
+		["zh-tw"] = "被擊中時顯示",
 	},
 	explosive_barrel_fuse_outline_enabled_tooltip = {
 		["en"] = "Show barrel explosion radius when barrel is about to explode",
 		["zh-cn"] = "在桶将要爆炸时显示爆炸半径",
 		["ru"] = "Показывает радиус взрыва, когда бочка почти готова взорваться",
-		["zh-tw"] = "在桶將要爆炸時顯示爆炸半徑",
+		["zh-tw"] = "桶即將爆炸時顯示爆炸半徑",
 	},
 
 	fire_barrel_effects_group = {
@@ -129,26 +129,26 @@ local init_loc = {
 		["en"] = "Show barrel explosion radius when barrel spawns in",
 		["zh-cn"] = "在桶被生成时显示爆炸半径",
 		["ru"] = "Показывает радиус взрыва, когда бочка появляется",
-		["zh-tw"] = "在桶被生成時顯示爆炸半徑",
+		["zh-tw"] = "桶生成時顯示爆炸半徑",
 	},
 	fire_barrel_fuse_outline_enabled = {
 		["en"] = "Show when hit",
 		["zh-cn"] = "点燃后显示",
 		["ru"] = "Показывать при ударе",
-		["zh-tw"] = "點燃後顯示",
+		["zh-tw"] = "被擊中時顯示",
 	},
 	fire_barrel_fuse_outline_enabled_tooltip = {
 		["en"] = "Show barrel explosion radius when barrel is about to explode",
 		["zh-cn"] = "在桶将要爆炸时显示爆炸半径",
 		["ru"] = "Показывает радиус взрыва, когда бочка почти готова взорваться",
-		["zh-tw"] = "在桶將要爆炸時顯示爆炸半徑",
+		["zh-tw"] = "桶即將爆炸時顯示爆炸半徑",
 	},
 
 	daemonhost_effects_group = {
 		["en"] = "Daemonhost Proximity Radius",
 		["zh-cn"] = "恶魔宿主接近半径",
 		["ru"] = "Радиус приближения к демонхосту",
-		["zh-tw"] = "惡魔宿主接近半徑",
+		["zh-tw"] = "惡魔宿主靠近半徑",
 	},
 	daemonhost_spawn_outline_enabled = {
 		["en"] = "Show aggro radius",
@@ -160,19 +160,19 @@ local init_loc = {
 		["en"] = "Show area where player movement will start to wake a sleeping Daemonhost",
 		["zh-cn"] = "显示玩家移动会唤醒恶魔宿主的区域",
 		["ru"] = "Показывает область, в которой движение игрока начнёт пробуждать спящего демонхоста.",
-		["zh-tw"] = "顯示玩家移動會喚醒惡魔宿主的區域",
+		["zh-tw"] = "顯示玩家移動會開始喚醒沉睡惡魔宿主的區域",
 	},
 	daemonhost_aura_outline_enabled = {
 		["en"] = "Show corruption aura radius",
 		["zh-cn"] = "显示腐化光环半径",
 		["ru"] = "Показывать радиус ауры порчи",
-		["zh-tw"] = "顯示腐化光環半徑",
+		["zh-tw"] = "顯示腐敗光環半徑",
 	},
 	daemonhost_aura_outline_enabled_tooltip = {
 		["en"] = "Show area where players near aggressive Daemonhost will take corruption damage over time",
 		["zh-cn"] = "显示被激怒的恶魔宿主会对附近的玩家持续造成腐化伤害的区域",
 		["ru"] = "Показывает область рядом с разозлённым демонхостом, в которой игрок будет получать урон от порчи.",
-		["zh-tw"] = "顯示被激怒的惡魔宿主會對附近的玩家持續造成腐化傷害的區域",
+		["zh-tw"] = "顯示被激怒的惡魔宿主會對附近玩家持續造成腐敗傷害的區域",
 	},
 
 	poxburster_effects_group = {
@@ -210,26 +210,26 @@ local init_loc = {
 		["en"] = "Show Scab Flamer explosion radius when they spawn",
 		["zh-cn"] = "在血痂火焰兵被生成时显示爆炸半径",
 		["ru"] = "Показывает радиус взрыва Скаба-огнемётчика при появлении",
-		["zh-tw"] = "在血痂火焰兵被生成時顯示爆炸半徑",
+		["zh-tw"] = "血痂火焰兵生成時顯示爆炸半徑",
 	},
 	scab_flamer_fuse_outline_enabled = {
 		["en"] = "Show when set to explode",
 		["zh-cn"] = "将要爆炸时显示",
 		["ru"] = "Показывать, когда готов взорваться",
-		["zh-tw"] = "將要爆炸時顯示",
+		["zh-tw"] = "死亡爆炸時顯示",
 	},
 	scab_flamer_fuse_outline_enabled_tooltip = {
 		["en"] = "Show Scab Flamer explosion radius when Scab Flamer is set to explode upon death",
 		["zh-cn"] = "在血痂火焰兵即将爆炸死亡时显示爆炸半径",
 		["ru"] = "Показывает радиус взрыва Скаба-огнемётчика, когда он готов взорваться при смерти",
-		["zh-tw"] = "在血痂火焰兵即將爆炸死亡時顯示爆炸半徑",
+		["zh-tw"] = "血痂火焰兵被設定為死亡後爆炸時，顯示爆炸半徑",
 	},
 
 	tox_flamer_effects_group = {
 		["en"] = "Tox Flamer Explosion Radius",
 		["zh-cn"] = "剧毒火焰兵爆炸半径",
 		["ru"] = "Радиус взрыва Токс-огнемётчика",
-		["zh-tw"] = "劇毒火焰兵爆炸半徑",
+		["zh-tw"] = "渣滓毒焰噴射者爆炸半徑",
 	},
 	tox_flamer_spawn_outline_enabled = {
 		["en"] = "Show when spawned",
@@ -241,19 +241,19 @@ local init_loc = {
 		["en"] = "Show Tox Flamer explosion radius when they spawn",
 		["zh-cn"] = "在剧毒火焰兵被生成时显示爆炸半径",
 		["ru"] = "Показывает радиус взрыва Токс-огнемётчика при появлении",
-		["zh-tw"] = "在劇毒火焰兵被生成時顯示爆炸半徑",
+		["zh-tw"] = "渣滓毒焰噴射者生成時顯示爆炸半徑",
 	},
 	tox_flamer_fuse_outline_enabled = {
 		["en"] = "Show when set to explode",
 		["zh-cn"] = "将要爆炸时显示",
 		["ru"] = "Показывать, когда готов взорваться",
-		["zh-tw"] = "將要爆炸時顯示",
+		["zh-tw"] = "死亡爆炸時顯示",
 	},
 	tox_flamer_fuse_outline_enabled_tooltip = {
 		["en"] = "Show Tox Flamer explosion radius when Tox Flamer is set to explode upon death",
 		["zh-cn"] = "在剧毒火焰兵即将爆炸死亡时显示爆炸半径",
 		["ru"] = "Показывает радиус взрыва Токс-огнемётчика, когда он готов взорваться при смерти",
-		["zh-tw"] = "在劇毒火焰兵即將爆炸死亡時顯示爆炸半徑",
+		["zh-tw"] = "渣滓毒焰噴射者被設定為死亡後爆炸時，顯示爆炸半徑",
 	},
 }
 
@@ -274,7 +274,7 @@ local subheaders_loc = {
 				["en"] = "Stage: Alert 1",
 				["zh-cn"] = "阶段：警告 1",
 				["ru"] = "Стадия: Встревожен 1",
-				["zh-tw"] = "階段：警告 1",
+				["zh-tw"] = "階段：警戒 1",
 			},
 		},
 		{
@@ -283,7 +283,7 @@ local subheaders_loc = {
 				["en"] = "Stage: Alert 2",
 				["zh-cn"] = "阶段：警告 2",
 				["ru"] = "Стадия: Встревожен 2",
-				["zh-tw"] = "階段：警告 2",
+				["zh-tw"] = "階段：警戒 2",
 			},
 		},
 		{
@@ -292,7 +292,7 @@ local subheaders_loc = {
 				["en"] = "Stage: Alert 3 (about to attack)",
 				["zh-cn"] = "阶段：警告 3",
 				["ru"] = "Стадия: Встревожен 3 (готов напасть)",
-				["zh-tw"] = "階段：警告 3（即將攻擊）",
+				["zh-tw"] = "階段：警戒 3（即將攻擊）",
 			},
 		},
 	},
