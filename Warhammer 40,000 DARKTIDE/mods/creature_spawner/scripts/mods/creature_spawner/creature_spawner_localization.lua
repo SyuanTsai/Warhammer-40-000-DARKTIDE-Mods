@@ -348,13 +348,13 @@ return {
     en = "Keybind: Reset Combat Ability Cooldown",
     ["zh-cn"] = "快捷键：重置主动技能冷却",
     ru = "Клавиша: Cброс времени восстановления боевых способностей",
-    ["zh-tw"] = "快捷鍵：重置戰鬥技能冷卻時間",
+    ["zh-tw"] = "快捷鍵：重置戰鬥能力 CD",
   },
   cs_reset_combat_ability_cooldown_keybind_description = {
     en = "Choose the keybinding that resets the Combat Ability Cooldown in the Training Grounds.",
     ["zh-cn"] = "选择用于在训练场内重置主动技能冷却的快捷键。",
     ru = "Выберите комбинацию клавиш, которая сбрасывает время восстановления боевых способностей на Стрельбище.",
-    ["zh-tw"] = "選擇用於在訓練場中重置戰鬥技能冷卻時間的快捷鍵。",
+    ["zh-tw"] = "選擇用於在訓練場中重置戰鬥能力 CD 的快捷鍵。",
   },
   cs_enable_training_grounds_invisibility_keybind = {
     en = "Keybind: Toggle Player Invisibility",
