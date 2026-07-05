@@ -2,30 +2,42 @@ return {
 	mod_name = {
 		en = "VFX Swapper",
 		["zh-cn"] = "视觉特效替换器",
+		["zh-tw"] = "VFX 替換器",
 	},
 	mod_description = {
 		en = "Replaces specific visual effects to improve visibility and performance.",
 		["zh-cn"] = "替换特定视觉特效以提升画面清晰度和游戏性能。",
+		["zh-tw"] = "替換特定視覺特效，以提升可視度與效能。",
+	},
+	skit_group = {
+		en = "Skitarius Specific Toggles",
+		["zh-cn"] = "机械教特定切换",
+		["zh-tw"] = "護教軍專用開關",
 	},
 	vfx_replacement_group = {
 		en = "VFX Replacements",
 		["zh-cn"] = "特效替换",
+		["zh-tw"] = "特效替換",
 	},
 	replace_gas_vfx = {
 		en = "Replace Grenadier's Gas Bombs",
 		["zh-cn"] = "替换渣滓剧毒轰炸者特效",
+		["zh-tw"] = "替換劇毒轟炸者毒氣炸彈特效",
 	},
 	replace_renegade_grenade_vfx = {
 		en = "Replace Renegade Grenadier's Fire Grenade",
 		["zh-cn"] = "替换血痂轰炸者特效",
+		["zh-tw"] = "替換血痂轟炸者燃燒手雷特效",
 	},
 	replace_renegade_flamer_vfx = {
 		en = "Replace Renegade Flamer",
 		["zh-cn"] = "替换血痂火焰兵燃烧地板特效",
+		["zh-tw"] = "替換血痂火焰兵特效",
 	},
 	replace_cultist_flamer_vfx = {
 		en = "Replace Cultist Flamer VFX",
 		["zh-cn"] = "替换渣滓火焰兵燃烧地板特效",
+		["zh-tw"] = "替換渣滓毒焰噴射者地板特效",
 	},
 	replace_havoc_enemy_corruption_liquid = {
 		en = "Replace Havoc's Blight Spreads (ground effect)",
@@ -45,7 +57,7 @@ return {
 	replace_broker_tox_grenade = {
 		en = "Replace Chem Grenade",
 		["zh-cn"] = "替换兴奋剂炸弹特效",
-		["zh-tw"] = "替換化學手榴彈特效",
+		["zh-tw"] = "替換化學手雷特效",
 	},
 	replace_fire_barrel_vfx = {
 		en = "Replace Fire Barrel",
@@ -230,12 +242,12 @@ return {
 	chemnade_indicators_group = {
 		en = "Chem Grenade Indicators",
 		["zh-cn"] = "兴奋剂炸弹指示器",
-		["zh-tw"] = "化學手榴彈顯示",
+		["zh-tw"] = "化學手雷顯示",
 	},
 	chemnade_circle_enabled = {
 		en = "Chem Grenade Circle",
 		["zh-cn"] = "兴奋剂炸弹圆形范围指示器",
-		["zh-tw"] = "化學手榴彈範圍顯示",
+		["zh-tw"] = "化學手雷範圍顯示",
 	},
 	chemnade_circle_red = {
 		en = "Red",
@@ -287,15 +299,35 @@ return {
 		["zh-cn"] = "透明度",
 		["zh-tw"] = "不透明度",
 	},
+	gasnade_indicators_group = {
+		en = "Tox Bomber Grenade Indicators",
+		["zh-cn"] = "毒爆弹指示器",
+		["zh-tw"] = "劇毒轟炸者手雷顯示",
+	},
+	gas_grenade_circle_enabled = {
+		en = "Tox Bomber Grenade Circle",
+		["zh-cn"] = "毒爆弹圆形范围指示器",
+		["zh-tw"] = "劇毒轟炸者手雷範圍顯示",
+	},
 	circle_count_group = {
 		en = "'Circle Only' Count",
 		["zh-cn"] = "'仅圆形' 数量",
 		["zh-tw"] = "'僅範圍顯示' 數量",
 	},
 	havoc_toggle_group = {
-		en = "Havoc Specific Toggles",
-		["zh-cn"] = "浩劫特定切换",
-		["zh-tw"] = "浩劫專用開關",
+		en = "Havoc Specific Toggles - {#color(255, 35, 5)}RESTART after changing these.",
+		["zh-cn"] = "浩劫特定切换 - {#color(255, 35, 5)}重启。",
+		["zh-tw"] = "浩劫專用開關 - {#color(255, 35, 5)}變更後請重啟。",
+	},
+	havoc_tt = {
+		en = "DO NOT CHANGE THIS IN THE MIDDLE OF A MISSION. Restart required. This is done for performance reasons and also author laziness.",
+		["zh-cn"] = "不要在任务中途修改！需要重启。此举是为了性能考虑，也是作者偷懒。",
+		["zh-tw"] = "不要在任務途中修改此選項。需要重啟。這是基於效能考量，也因為作者偷懶。",
+	},
+	disable_toughened_skin = {
+		en = "Disable Pus-Hardened Skin",
+		["zh-cn"] = "脓硬化的皮肤",
+		["zh-tw"] = "停用膿液硬化皮膚",
 	},
 	disable_rotten_armor_stages = {
 		en = "Disable Rotten Armor Passive VFX",
@@ -305,27 +337,27 @@ return {
 	disable_corrupted_enemies_vfx = {
 		en = "Disable Blight Spreads Passive VFX*",
 		["zh-cn"] = "禁用瘟疫扩散敌人特效",
-		["zh-tw"] = "禁用瘟疫蔓延敵人特效*",
+		["zh-tw"] = "停用疫病蔓延敵人被動特效*",
 	},
 	disable_corrupted_enemies_color = {
 		en = "Disable Blight Spreads Enemy Color (green)",
 		["zh-cn"] = "禁用瘟疫扩散敌人颜色（绿色）",
-		["zh-tw"] = "禁用瘟疫蔓延敵人顏色（綠色）",
+		["zh-tw"] = "停用疫病蔓延敵人顏色（綠色）",
 	},
 	disable_rotten_armor_impact = {
 		en = "Disable Rotten Armor Impact VFX",
 		["zh-cn"] = "禁用腐化装甲打击特效",
-		["zh-tw"] = "禁用腐敗護甲衝擊特效",
+		["zh-tw"] = "停用腐敗護甲打擊特效",
 	},
 	disable_toxin_death_vfx = {
 		en = "Disable Chem-Toxin Death VFX",
 		["zh-cn"] = "禁用毒素死亡特效（气体和爆炸）",
-		["zh-tw"] = "禁用化學毒素死亡特效（氣體和爆炸）",
+		["zh-tw"] = "停用化學毒素死亡特效（氣體和爆炸）",
 	},
 	disable_rampaging_vfx = {
 		en = "Disable Rampaging Enemies VFX*",
 		["zh-cn"] = "禁用暴走特效。需要重启。",
-		["zh-tw"] = "禁用暴走特效*（需要重啟）",
+		["zh-tw"] = "停用憤怒敵人特效*",
 	},
 	curroptor_goo = {
 		en = "Curroptor Goo",
@@ -335,17 +367,17 @@ return {
 	charge_tip = {
 		en = "{#color(255, 35, 5)}EXPERIMENTAL!{#color(208, 208, 208)}\nAdds the 'lightning charge' ground effect (from Expeditions) as an additional indicator to show remaining duration of the effect.",
 		["zh-cn"] = "{#color(255, 35, 5)}*实验性质！{#color(208, 208, 208)}\n添加了“闪电充能”地面特效（来自远征任务），作为显示效果剩余持续时间的附加指示器。",
-		["zh-tw"] = "{#color(255, 35, 5)}*實驗性質！{#color(208, 208, 208)}\n添加了“閃電充能”地面特效（來自遠征任務），作為顯示效果剩餘持續時間的附加指示器。",
+		["zh-tw"] = "{#color(255, 35, 5)}實驗性質！{#color(208, 208, 208)}\n加入「閃電充能」地面特效（來自遠征任務），作為顯示效果剩餘時間的額外指示器。",
 	},
 	staff_circle_tip = {
 		en = "{#color(255, 35, 5)}EXPERIMENTAL!{#color(208, 208, 208)}\nAdds the ground targeting indicator from Trauma Staff to show remaining duration of the effect.",
 		["zh-cn"] = "{#color(255, 35, 5)}*实验性质！{#color(208, 208, 208)}\n添加了“震荡杖目标指示器”，作为显示效果剩余持续时间的附加指示器。",
-		["zh-tw"] = "{#color(255, 35, 5)}*實驗性質！{#color(208, 208, 208)}\n添加了“震盪杖目標指示器”，作為顯示效果剩餘持續時間的附加指示器。",
+		["zh-tw"] = "{#color(255, 35, 5)}實驗性質！{#color(208, 208, 208)}\n加入震盪杖的地面瞄準指示器，用來顯示效果剩餘時間。",
 	},
 	toxin_death_tip = {
 		en = "Includes explosions from grenades, and certain needler alt fire modes.",
 		["zh-cn"] = "包括来自手榴弹和某些针刺器替代射击模式的爆炸。",
-		["zh-tw"] = "包括來自手榴彈和針刺器替代射擊模式的爆炸。",
+		["zh-tw"] = "包括來自手雷和針彈手槍替代射擊模式的爆炸。",
 	},
 	rampaging_tip = {
 		en = "{#color(255, 35, 5)}*Turning this setting off requires restart. {#color(208, 208, 208)}\nIncludes orange glow FX and shockwave on death. Enemies will still grow.",
