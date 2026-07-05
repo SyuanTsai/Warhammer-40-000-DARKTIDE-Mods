@@ -2,35 +2,47 @@ return {
 	mod_name = {
 		en = "VFX Swapper",
 		["zh-cn"] = "视觉特效替换器",
+		["zh-tw"] = "VFX 替換器",
 	},
 	mod_description = {
 		en = "Replaces specific visual effects to improve visibility and performance.",
 		["zh-cn"] = "替换特定视觉特效以提升画面清晰度和游戏性能。",
+		["zh-tw"] = "替換特定視覺特效，以提升可視度與效能。",
+	},
+	skit_group = {
+		en = "Skitarius Specific Toggles",
+		["zh-cn"] = "机械教特定切换",
+		["zh-tw"] = "護教軍專用開關",
 	},
 	vfx_replacement_group = {
 		en = "VFX Replacements",
 		["zh-cn"] = "特效替换",
+		["zh-tw"] = "特效替換",
 	},
 	replace_gas_vfx = {
 		en = "Replace Grenadier's Gas Bombs",
 		["zh-cn"] = "替换渣滓剧毒轰炸者特效",
+		["zh-tw"] = "替換劇毒轟炸者毒氣炸彈特效",
 	},
 	replace_renegade_grenade_vfx = {
 		en = "Replace Renegade Grenadier's Fire Grenade",
 		["zh-cn"] = "替换血痂轰炸者特效",
+		["zh-tw"] = "替換血痂轟炸者燃燒手雷特效",
 	},
 	replace_renegade_flamer_vfx = {
 		en = "Replace Renegade Flamer",
 		["zh-cn"] = "替换血痂火焰兵燃烧地板特效",
+		["zh-tw"] = "替換血痂火焰兵特效",
 	},
 	replace_cultist_flamer_vfx = {
 		en = "Replace Cultist Flamer VFX",
 		["zh-cn"] = "替换渣滓火焰兵燃烧地板特效",
+		["zh-tw"] = "替換渣滓毒焰噴射者地板特效",
 	},
 	replace_havoc_enemy_corruption_liquid = {
 		en = "Replace Havoc's Blight Spreads (ground effect)",
 		["zh-cn"] = "替换浩劫腐化扩散（地面效果）特效",
-		["zh-tw"] = "替換浩劫的瘟疫蔓延（地面）特效",
+		["zh-tw"] = "替換浩劫的瘟疫散播（地面）特效",
 	},
 	replace_fire_grenade = {
 		en = "Replace Zealot's Immolation Grenade",
@@ -45,7 +57,7 @@ return {
 	replace_broker_tox_grenade = {
 		en = "Replace Chem Grenade",
 		["zh-cn"] = "替换兴奋剂炸弹特效",
-		["zh-tw"] = "替換化學手榴彈特效",
+		["zh-tw"] = "替換化學手雷特效",
 	},
 	replace_fire_barrel_vfx = {
 		en = "Replace Fire Barrel",
@@ -200,12 +212,12 @@ return {
 	blight_indicators_group = {
 		en = "Blight Spreads Indicators",
 		["zh-cn"] = "瘟疫扩散指示器",
-		["zh-tw"] = "瘟疫蔓延顯示",
+		["zh-tw"] = "瘟疫散播顯示",
 	},
 	blight_circle_enabled = {
 		en = "Blight Spreads Circle",
 		["zh-cn"] = "瘟疫扩散圆形范围指示器",
-		["zh-tw"] = "瘟疫蔓延範圍顯示",
+		["zh-tw"] = "瘟疫散播範圍顯示",
 	},
 	blight_circle_red = {
 		en = "Red",
@@ -230,12 +242,12 @@ return {
 	chemnade_indicators_group = {
 		en = "Chem Grenade Indicators",
 		["zh-cn"] = "兴奋剂炸弹指示器",
-		["zh-tw"] = "化學手榴彈顯示",
+		["zh-tw"] = "化學手雷顯示",
 	},
 	chemnade_circle_enabled = {
 		en = "Chem Grenade Circle",
 		["zh-cn"] = "兴奋剂炸弹圆形范围指示器",
-		["zh-tw"] = "化學手榴彈範圍顯示",
+		["zh-tw"] = "化學手雷範圍顯示",
 	},
 	chemnade_circle_red = {
 		en = "Red",
@@ -287,15 +299,35 @@ return {
 		["zh-cn"] = "透明度",
 		["zh-tw"] = "不透明度",
 	},
+	gasnade_indicators_group = {
+		en = "Tox Bomber Grenade Indicators",
+		["zh-cn"] = "毒爆弹指示器",
+		["zh-tw"] = "劇毒轟炸者手雷顯示",
+	},
+	gas_grenade_circle_enabled = {
+		en = "Tox Bomber Grenade Circle",
+		["zh-cn"] = "毒爆弹圆形范围指示器",
+		["zh-tw"] = "劇毒轟炸者手雷範圍顯示",
+	},
 	circle_count_group = {
 		en = "'Circle Only' Count",
 		["zh-cn"] = "'仅圆形' 数量",
 		["zh-tw"] = "'僅範圍顯示' 數量",
 	},
 	havoc_toggle_group = {
-		en = "Havoc Specific Toggles",
-		["zh-cn"] = "浩劫特定切换",
-		["zh-tw"] = "浩劫專用開關",
+		en = "Havoc Specific Toggles - {#color(255, 35, 5)}RESTART after changing these.",
+		["zh-cn"] = "浩劫特定切换 - {#color(255, 35, 5)}重启。",
+		["zh-tw"] = "浩劫專用開關 - {#color(255, 35, 5)}變更後請重啟。",
+	},
+	havoc_tt = {
+		en = "DO NOT CHANGE THIS IN THE MIDDLE OF A MISSION. Restart required. This is done for performance reasons and also author laziness.",
+		["zh-cn"] = "不要在任务中途修改！需要重启。此举是为了性能考虑，也是作者偷懒。",
+		["zh-tw"] = "不要在任務途中修改此選項。需要重啟。這是基於效能考量，也因為作者偷懶。",
+	},
+	disable_toughened_skin = {
+		en = "Disable Pus-Hardened Skin",
+		["zh-cn"] = "脓硬化的皮肤",
+		["zh-tw"] = "停用膿液硬化皮膚",
 	},
 	disable_rotten_armor_stages = {
 		en = "Disable Rotten Armor Passive VFX",
@@ -305,27 +337,27 @@ return {
 	disable_corrupted_enemies_vfx = {
 		en = "Disable Blight Spreads Passive VFX*",
 		["zh-cn"] = "禁用瘟疫扩散敌人特效",
-		["zh-tw"] = "禁用瘟疫蔓延敵人特效*",
+		["zh-tw"] = "停用疫病蔓延敵人被動特效*",
 	},
 	disable_corrupted_enemies_color = {
 		en = "Disable Blight Spreads Enemy Color (green)",
 		["zh-cn"] = "禁用瘟疫扩散敌人颜色（绿色）",
-		["zh-tw"] = "禁用瘟疫蔓延敵人顏色（綠色）",
+		["zh-tw"] = "停用疫病蔓延敵人顏色（綠色）",
 	},
 	disable_rotten_armor_impact = {
 		en = "Disable Rotten Armor Impact VFX",
 		["zh-cn"] = "禁用腐化装甲打击特效",
-		["zh-tw"] = "禁用腐敗護甲衝擊特效",
+		["zh-tw"] = "停用腐敗護甲打擊特效",
 	},
 	disable_toxin_death_vfx = {
 		en = "Disable Chem-Toxin Death VFX",
 		["zh-cn"] = "禁用毒素死亡特效（气体和爆炸）",
-		["zh-tw"] = "禁用化學毒素死亡特效（氣體和爆炸）",
+		["zh-tw"] = "停用化學毒素死亡特效（氣體和爆炸）",
 	},
 	disable_rampaging_vfx = {
 		en = "Disable Rampaging Enemies VFX*",
 		["zh-cn"] = "禁用暴走特效。需要重启。",
-		["zh-tw"] = "禁用暴走特效*（需要重啟）",
+		["zh-tw"] = "停用憤怒敵人特效*",
 	},
 	curroptor_goo = {
 		en = "Curroptor Goo",
@@ -335,17 +367,17 @@ return {
 	charge_tip = {
 		en = "{#color(255, 35, 5)}EXPERIMENTAL!{#color(208, 208, 208)}\nAdds the 'lightning charge' ground effect (from Expeditions) as an additional indicator to show remaining duration of the effect.",
 		["zh-cn"] = "{#color(255, 35, 5)}*实验性质！{#color(208, 208, 208)}\n添加了“闪电充能”地面特效（来自远征任务），作为显示效果剩余持续时间的附加指示器。",
-		["zh-tw"] = "{#color(255, 35, 5)}*實驗性質！{#color(208, 208, 208)}\n添加了“閃電充能”地面特效（來自遠征任務），作為顯示效果剩餘持續時間的附加指示器。",
+		["zh-tw"] = "{#color(255, 35, 5)}實驗性質！{#color(208, 208, 208)}\n加入「閃電充能」地面特效（來自遠征任務），作為顯示效果剩餘時間的額外指示器。",
 	},
 	staff_circle_tip = {
 		en = "{#color(255, 35, 5)}EXPERIMENTAL!{#color(208, 208, 208)}\nAdds the ground targeting indicator from Trauma Staff to show remaining duration of the effect.",
 		["zh-cn"] = "{#color(255, 35, 5)}*实验性质！{#color(208, 208, 208)}\n添加了“震荡杖目标指示器”，作为显示效果剩余持续时间的附加指示器。",
-		["zh-tw"] = "{#color(255, 35, 5)}*實驗性質！{#color(208, 208, 208)}\n添加了“震盪杖目標指示器”，作為顯示效果剩餘持續時間的附加指示器。",
+		["zh-tw"] = "{#color(255, 35, 5)}實驗性質！{#color(208, 208, 208)}\n加入震盪杖的地面瞄準指示器，用來顯示效果剩餘時間。",
 	},
 	toxin_death_tip = {
 		en = "Includes explosions from grenades, and certain needler alt fire modes.",
 		["zh-cn"] = "包括来自手榴弹和某些针刺器替代射击模式的爆炸。",
-		["zh-tw"] = "包括來自手榴彈和針刺器替代射擊模式的爆炸。",
+		["zh-tw"] = "包括來自手雷和針彈手槍替代射擊模式的爆炸。",
 	},
 	rampaging_tip = {
 		en = "{#color(255, 35, 5)}*Turning this setting off requires restart. {#color(208, 208, 208)}\nIncludes orange glow FX and shockwave on death. Enemies will still grow.",
@@ -355,12 +387,12 @@ return {
 	corrupted_vfx_tip = {
 		en = "{#color(255, 35, 5)}*Turning this setting off requires restart. {#color(208, 208, 208)}\nDisables Green Flies effect on Blight Spreads enemies.",
 		["zh-cn"] = "禁用瘟疫扩散敌人的绿色苍蝇特效。关闭此选项需要重启。",
-		["zh-tw"] = "{#color(255, 35, 5)}*關閉此選項需要重啟。 {#color(208, 208, 208)}\n禁用瘟疫蔓延敵人的綠色蒼蠅特效。",
+		["zh-tw"] = "{#color(255, 35, 5)}*關閉此選項需要重啟。 {#color(208, 208, 208)}\n停用瘟疫散播敵人的綠色蒼蠅特效。",
 	},
 	disable_death_vfx = {
 		en = "Disable Havoc Death-splosions",
 		["zh-cn"] = "禁用某些浩劫死亡特效（暴走冲击波，瘟疫扩散/腐化装甲死亡爆炸）",
-		["zh-tw"] = "禁用某些浩劫死亡特效（暴走衝擊波，瘟疫蔓延/腐化護甲死亡爆炸）",
+		["zh-tw"] = "停用浩劫死亡爆炸特效(衝擊波、瘟疫散播、腐敗之鎧)",
 	},
 	circle_count = {
 		en = "Number of Circles (circles only mode!)",
@@ -375,32 +407,32 @@ return {
 	disable_toxic_gas = {
 		en = "Disable Toxic Gas (particles)",
 		["zh-cn"] = "禁用毒气（粒子）",
-		["zh-tw"] = "禁用毒氣（粒子）",
+		["zh-tw"] = "停用毒氣（粒子）",
 	},
 	disable_toxic_fog = {
 		en = "Disable Toxic Gas (volumetric fog)",
 		["zh-cn"] = "禁用毒气（体积烟雾）",
-		["zh-tw"] = "禁用毒氣（體積煙霧）",
+		["zh-tw"] = "停用毒氣（體積煙霧）",
 	},
 	disable_coral_vfx = {
 		en = "Disable Toxic Gas (geysers/'corals')",
 		["zh-cn"] = "禁用毒气（喷泉/珊瑚）",
-		["zh-tw"] = "禁用毒氣（噴泉/珊瑚）",
+		["zh-tw"] = "停用毒氣（噴泉/珊瑚）",
 	},
 	disable_toxic_gas_tip = {
 		en = "Disables the green cloud particles (looks like cultist gas grenade).",
 		["zh-cn"] = "禁用绿色云雾粒子（看起来像邪教徒毒气手雷）。",
-		["zh-tw"] = "禁用綠色雲霧粒子（看起來像邪教徒毒氣手榴彈）。",
+		["zh-tw"] = "停用綠色煙霧粒子（劇毒轟炸者毒氣手雷）。",
 	},
 	disable_toxic_fog_tip = {
 		en = "Disables the volumetric fog (green haze effect).",
 		["zh-cn"] = "禁用体积烟雾（绿色薄雾效果）。",
-		["zh-tw"] = "禁用體積煙霧（綠色薄霧效果）。",
+		["zh-tw"] = "停用體積煙霧（綠色煙霧效果）。",
 	},
 	disable_coral_vfx_tip = {
 		en = "Disables the toxic gas spewing out from geysers/corals.",
 		["zh-cn"] = "禁用喷泉/珊瑚喷出的毒气。",
-		["zh-tw"] = "禁用噴泉/珊瑚噴出的毒氣。",
+		["zh-tw"] = "停用噴泉/珊瑚噴出的毒氣。",
 	},
 	vfx_limiter_group = {
 		en = "OG VFX Limiter Options",
@@ -455,21 +487,76 @@ return {
 	ritual_vfx = {
 		en = "Disable Heinous Ritual effects",
 		["zh-cn"] = "禁用邪恶仪式特效",
-		["zh-tw"] = "停用魔缚儀式特效",
+		["zh-tw"] = "停用魔縛儀式特效",
 	},
 	scum_stimm_screen = {
 		en = "Disable Scum's Stimm Smoke screen effect",
 		["zh-cn"] = "禁用兴奋剂烟雾屏幕特效",
-		["zh-tw"] = "停用興奮劑藥霧屏幕特效",
+		["zh-tw"] = "停用巢都敗類興奮劑煙霧螢幕特效",
 	},
 	scum_rampage_screen = {
 		en = "Disable Scum's Rampage screen effect",
 		["zh-cn"] = "禁用狂暴状态屏幕特效",
-		["zh-tw"] = "停用狂暴狀態屏幕特效",
+		["zh-tw"] = "停用巢都敗類暴走螢幕特效",
+	},
+	galvanic_vfx = {
+		en = "Disable Galvanic Rifle Muzzle VFX",
+		["zh-cn"] = "禁用加尔文步枪开火特效",
+		["zh-tw"] = "停用電能步槍開火特效",
 	},
 	lasgun_vfx = {
-		en = "Disable Hellbore Lasgun VFX",
-		["zh-cn"] = "禁用地狱管激光枪特效",
-		["zh-tw"] = "停用冥潮雷射槍特效",
+		en = "Disable Lasgun Muzzle VFX",
+		["zh-cn"] = "禁用激光枪特效",
+		["zh-tw"] = "停用雷射槍開火特效",
+	},
+	arc_vfx = {
+		en = "Disable Arc Rifle Lightning VFX",
+		["zh-cn"] = "禁用电击枪闪电特效",
+		["zh-tw"] = "停用電弧步槍閃電特效",
+	},
+	purgator_vfx = {
+		en = "Simple Purgator VFX",
+		["zh-cn"] = "简单教长特效",
+		["zh-tw"] = "簡化伺服器顱骨特效",
+	},
+	purg_tt = {
+		en = "Replaces Purgator flamer with a mild, hazeless flamer effect",
+		["zh-cn"] = "用一种温和、无烟雾的火焰特效替换教长的火焰特效",
+		["zh-tw"] = "將伺服器顱骨火焰替換為較溫和、無煙霧的火焰特效",
+	},
+	arc_tt = {
+		en = "Removes the lightning and black smoke effects",
+		["zh-cn"] = "",
+		["zh-tw"] = "移除閃電與黑煙特效",
+	},
+	gal_vfx = {
+		en = "Disable Galvanic Rifle Muzzle Flash",
+		["zh-cn"] = "禁用加尔文步枪开火特效",
+		["zh-tw"] = "停用電能步槍開火特效",
+	},
+	poxwalker_vfx = {
+		en = "Disable minion death effects",
+		["zh-cn"] = "禁用杂兵死亡特效",
+		["zh-tw"] = "停用雜兵死亡特效",
+	},
+	disable_bon_death = {
+		en = "Disable Beast of Nurgle death explosion",
+		["zh-cn"] = "禁用污秽兽死亡特效",
+		["zh-tw"] = "停用納垢獸死亡爆炸",
+	},
+	disable_burster_death = {
+		en = "Disable Burster explosions",
+		["zh-cn"] = "禁用爆弹虫爆炸",
+		["zh-tw"] = "停用瘟疫爆者爆炸",
+	},
+	simple_havoc_color_vfx = {
+		en = "Simple Havoc Color VFX",
+		["zh-cn"] = "简单浩劫颜色特效",
+		["zh-tw"] = "簡化浩劫顏色 VFX",
+	},
+	simple_hav_tt = {
+		en = "Removes particle effects from Final Toll and Encroaching Garden while maintaining color. Requires restart.",
+		["zh-cn"] = "在保持颜色的同时移除Final Toll和Encroaching Garden的粒子特效。需要重启。",
+		["zh-tw"] = "移除背水一戰和蔓生花園的粒子特效，同時保留顏色。需要重啟。",
 	},
 }
