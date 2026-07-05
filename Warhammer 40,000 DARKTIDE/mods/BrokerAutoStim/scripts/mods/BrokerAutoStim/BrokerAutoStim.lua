@@ -81,6 +81,9 @@ local last_attack_time = nil
 local interaction_active_units = {}
 local interaction_in_progress = false
 local injection_retry_after_interaction = false
+local auspex_in_progress = false
+local injection_retry_after_auspex = false
+local auspex_active_units = {}
 
 local profiles = {}
 local is_loading_profile = false
@@ -569,6 +572,7 @@ local function _reset_auto_stimm_state()
     injection_retry_after_enemies = false
     injection_retry_after_interaction = false
     injection_retry_after_ability = false
+    injection_retry_after_auspex = false
 end
 
 local function _reset_all_state()
@@ -592,7 +596,9 @@ local function _reset_all_state()
     holding_attack = false
     last_attack_time = nil
     table.clear(interaction_active_units)
+    table.clear(auspex_active_units)
     interaction_in_progress = false
+    auspex_in_progress = false
 end
 
 local function _check_stage_timeout()
@@ -637,7 +643,7 @@ local function _is_weapon_switching()
     end
     
     local unit_data_extension = ScriptUnit.has_extension(player_unit, "unit_data_system")
-    if not unit_data_extension then
+    if not unit_data_extension or type(unit_data_extension) ~= "table" or not unit_data_extension.read_component then
         return false
     end
     
@@ -719,7 +725,7 @@ local function _is_currently_blocking()
     end
     
     local unit_data_extension = ScriptUnit.has_extension(player_unit, "unit_data_system")
-    if not unit_data_extension then
+    if not unit_data_extension or type(unit_data_extension) ~= "table" or not unit_data_extension.read_component then
         return false
     end
     
@@ -785,7 +791,7 @@ local function _is_carrying_luggable()
     end
     
     local unit_data_extension = ScriptUnit.has_extension(player_unit, "unit_data_system")
-    if not unit_data_extension then
+    if not unit_data_extension or type(unit_data_extension) ~= "table" or not unit_data_extension.read_component then
         return false
     end
     
@@ -796,6 +802,43 @@ local function _is_carrying_luggable()
     
     local held_luggable = inventory_component.slot_luggable
     return held_luggable and held_luggable ~= "not_equipped"
+end
+
+local function _is_using_auspex()
+    if not mod:get("cancel_on_auspex") then
+        return false
+    end
+    
+    local player_unit = _get_player_unit()
+    if not player_unit then
+        return false
+    end
+    
+    if auspex_active_units[player_unit] then
+        return true
+    end
+    
+    local unit_data_extension = ScriptUnit.has_extension(player_unit, "unit_data_system")
+    if not unit_data_extension or type(unit_data_extension) ~= "table" or not unit_data_extension.read_component then
+        return false
+    end
+    
+    local scanning_component = unit_data_extension:read_component("scanning")
+    if scanning_component and scanning_component.is_active then
+        return true
+    end
+    
+    local character_state_component = unit_data_extension:read_component("character_state")
+    if character_state_component and character_state_component.state_name == "minigame" then
+        return true
+    end
+    
+    local minigame_state = unit_data_extension:read_component("minigame_character_state")
+    if minigame_state and minigame_state.pocketable_device_active then
+        return true
+    end
+    
+    return false
 end
 
 local function _is_interacting()
@@ -813,7 +856,7 @@ local function _is_interacting()
     end
     
     local unit_data_extension = ScriptUnit.has_extension(player_unit, "unit_data_system")
-    if not unit_data_extension then
+    if not unit_data_extension or type(unit_data_extension) ~= "table" or not unit_data_extension.read_component then
         return false
     end
     
@@ -970,6 +1013,13 @@ local function _start_auto_inject()
         _debug("Currently interacting, preventing injection")
         interaction_in_progress = true
         injection_retry_after_interaction = true
+        return false
+    end
+    
+    if _is_using_auspex() then
+        _debug("Currently using auspex, preventing injection")
+        auspex_in_progress = true
+        injection_retry_after_auspex = true
         return false
     end
     
@@ -1154,6 +1204,20 @@ mod.update = function(dt)
         end
     end
     
+    if auspex_in_progress then
+        if not _is_using_auspex() then
+            auspex_in_progress = false
+            if injection_retry_after_auspex then
+                _debug("Auspex finished, retrying injection")
+                injection_retry_after_auspex = false
+                local current_time = _get_gameplay_time()
+                if current_time then
+                    last_injection_time = nil
+                end
+            end
+        end
+    end
+    
     if combat_ability_active then
         local current_combat_ability_cooldown = _get_combat_ability_cooldown()
         if current_combat_ability_cooldown and current_combat_ability_cooldown > 0 then
@@ -1202,6 +1266,13 @@ mod.update = function(dt)
                 _debug("Interaction detected during injection countdown, canceling")
                 interaction_in_progress = true
                 injection_retry_after_interaction = true
+                _reset_auto_stimm_state()
+                return
+            end
+            if _is_using_auspex() then
+                _debug("Auspex detected during injection countdown, canceling")
+                auspex_in_progress = true
+                injection_retry_after_auspex = true
                 _reset_auto_stimm_state()
                 return
             end
@@ -1570,7 +1641,7 @@ mod:hook("InteracteeSystem", "rpc_interaction_stopped", function(func, self, ...
                 
                 if not interactor_unit then
                     local uds = ScriptUnit.has_extension(interactee_unit, "unit_data_system") and ScriptUnit.extension(interactee_unit, "unit_data_system")
-                    if uds then
+                    if type(uds) == "table" and uds.read_component then
                         local interactee_component = uds:read_component("interactee")
                         if interactee_component then
                             interactor_unit = interactee_component.interactor_unit
@@ -1671,6 +1742,36 @@ mod:hook("InteractorExtension", "reset_interaction", function(func, self, reset_
     end
     
     func(self, reset_focus_unit)
+end)
+
+mod:hook_safe(CLASS.AuspexScanningEffects, "_run_searching_sfx_loop", function(self)
+    if self and self._owner_unit then
+        auspex_active_units[self._owner_unit] = true
+    end
+end)
+
+mod:hook_safe(CLASS.AuspexScanningEffects, "_stop_scan_units_effects", function(self)
+    if self and self._owner_unit then
+        auspex_active_units[self._owner_unit] = false
+    end
+end)
+
+mod:hook_safe(CLASS.AuspexScanningEffects, "unwield", function(self)
+    if self and self._owner_unit then
+        auspex_active_units[self._owner_unit] = false
+    end
+end)
+
+mod:hook_safe(CLASS.AuspexEffects, "wield", function(self)
+    if self and self._fx_extension and self._fx_extension._unit then
+        auspex_active_units[self._fx_extension._unit] = true
+    end
+end)
+
+mod:hook_safe(CLASS.AuspexEffects, "unwield", function(self)
+    if self and self._fx_extension and self._fx_extension._unit then
+        auspex_active_units[self._fx_extension._unit] = false
+    end
 end)
 
 mod.on_game_state_changed = function(status, state_name)
