@@ -22,13 +22,13 @@ return {
 	mortis_toggle = {
 		en = "Only show Buff in Mortis Trials",
 		["zh-cn"] = "仅在死灵试炼中显示 Buff",
-		["zh-tw"] = "只在 Mortis Trials 中顯示增益",
+		["zh-tw"] = "只在死神試煉中顯示增益",
 		ru = "Показывать усиления только в Испытаниях Мортис",
 	},
 	mortis_toggle_description = {
 		en = "If enabled, the buff panel will only be shown in Mortis Trials. If disabled, the buff panel will be hidden in all game modes. Note: Buff panel height cannot be adjusted while this setting is enabled",
 		["zh-cn"] = "启用后，仅在死灵试炼中显示 Buff 面板；禁用后，所有模式下都隐藏 Buff 面板。注：启用时无法调节Buff面板高度",
-		["zh-tw"] = "啟用後，增益面板只會在 Mortis Trials 中顯示。停用後，所有遊戲模式都會隱藏增益面板。注意：啟用此設定時無法調整增益面板高度",
+		["zh-tw"] = "啟用後，增益面板只會在死神試煉中顯示。停用後，所有遊戲模式都會隱藏增益面板。注意：啟用此設定時無法調整增益面板高度",
 		ru = "- Если включено, панель баффов будет отображаться только в Испытаниях Мортис.\n- Если отключено, панель баффов будет скрыта во всех режимах игры.\n\nПримечание: высота панели баффов не может быть изменена, пока эта настройка включена!",
 	},
 	left_buff_offset_y = {
