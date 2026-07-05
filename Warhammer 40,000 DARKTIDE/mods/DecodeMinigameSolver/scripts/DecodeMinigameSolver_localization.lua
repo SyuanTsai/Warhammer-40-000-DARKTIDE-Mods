@@ -11,7 +11,7 @@ return {
   mod_name =
   {
     en = "Decode Minigame Solver",
-    ["zh-tw"] = "解碼小遊戲解題器",
+    ["zh-tw"] = "解碼小遊戲助手",
   },
   mod_description =
   {
