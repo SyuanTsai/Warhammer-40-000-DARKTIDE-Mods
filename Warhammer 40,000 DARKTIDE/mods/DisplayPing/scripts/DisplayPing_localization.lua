@@ -26,7 +26,7 @@ local localizations = {
   [SettingNames.TacticalOverlayOnly] = {
     en = "Show only in tactical overlay",
     ["zh-cn"] = "仅在Tab页面显示",
-    ["zh-tw"] = "僅在戰術覆蓋介面顯示",
+    ["zh-tw"] = "僅在戰術畫面中顯示",
     ru = "Показывать только в тактическом оверлее",
   },
   [SettingNames.HideInLobby] = {
@@ -38,7 +38,7 @@ local localizations = {
   [SettingNames.HideInLobbyTooltip] = {
     en = "Shows Ping only in tactical overlay while in Mourningstar",
     ["zh-cn"] = "当处于大厅时，仅在Tab页面显示延迟信息",
-    ["zh-tw"] = "位於哀星號時，僅在戰術覆蓋介面顯示延遲資訊",
+    ["zh-tw"] = "位於哀星號時，僅在戰術畫面中顯示延遲資訊",
     ru = "Показывает пинг только в тактическом оверлее пока в лобби",
   },
   [SettingNames.ShowAveragePing] = {
@@ -298,7 +298,7 @@ local localizations = {
     de = "Mitte",
     ru = "Центр",
     ["zh-cn"] = "中部",
-    ["zh-tw"] = "中央",
+    ["zh-tw"] = "中間",
   },
   left = {
     en = "Left",
@@ -348,7 +348,6 @@ for i, color_name in ipairs(Color.list) do
   local text = InputUtils.apply_color_to_input_text(color_name_to_readable_text(color_name), color_values)
   localizations[color_name] = {
     en = text,
-    ["zh-tw"] = text,
   }
 end
 
