@@ -708,10 +708,10 @@
 
 ### [PlasmaBFG](https://www.nexusmods.com/warhammer40kdarktide/mods/834)
     電漿槍 優化
-- MOD 網站最後更新日期：Last updated 28 June 2026, 2:50AM
-- MOD 版本：1.0.13
-- MOD 檔案名稱：PlasmaBFG_1.0.13_IP0ifPVyL
-- 手動維護最後下載日期：2026-06-28
+- MOD 網站最後更新日期：Last updated 04 July 2026, 10:29AM
+- MOD 版本：1.0.17
+- MOD 檔案名稱：PlasmaBFG 834 1.0.17 Z1K0I1wZo
+- 手動維護最後下載日期：2026-07-06
 
 ### [SprintRelicHeavy](https://www.nexusmods.com/warhammer40kdarktide/mods/804)
     聖物劍操作強化
