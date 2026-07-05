@@ -21,6 +21,8 @@ local table_clear = table.clear
 local table_clone = table.clone
 local table_remove = table.remove
 local tostring = tostring
+local rawget = rawget
+local type = type
 local Color = Color
 local Localize = Localize
 local Managers = Managers
@@ -64,14 +66,14 @@ template.damage_number_settings = {
 	expand_bonus_scale = 30,
 	default_color = "white",
 	has_taken_damage_timer_y_offset = 34,
-	weakspot_color = "orange",
+	weakspot_color = "yellow",
 	fade_delay = 0.35,
 	add_numbers_together_timer = 0.2,
 	shrink_duration = 1,
 	duration = 3,
 	x_offset_between_numbers = 38,
 	expand_duration = 0.2,
-	crit_color = "yellow",
+	crit_color = "orange",
 	hundreds_font_size = 14.4,
 	default_font_size = 17,
 	has_taken_damage_timer_remove_after_time = 5,
@@ -105,13 +107,8 @@ local DEFAULT_HIT_ZONE_NAME = "center_mass"
 local LABEL_DISPLAY_MODE_ARMOUR_TYPE = "armour_type"
 local LABEL_DISPLAY_MODE_ENEMY_NAME = "enemy_name"
 local DEFAULT_POST_KILL_DISPLAY_DURATION = 1
-local MIN_POST_KILL_DISPLAY_DURATION = 0.2
+local MIN_POST_KILL_DISPLAY_DURATION = 0
 local MAX_POST_KILL_DISPLAY_DURATION = 10
-
-local BREED_NAME_LOCALIZATION_FALLBACKS = {
-	cultist_vanguard = "breed_display_name_cultist_vanguard",
-	renegade_vanguard = "breed_display_name_renegade_vanguard",
-}
 
 local function _feature_enabled(setting_id)
 	return mod._psykhanium_full_debug_display == true or mod:get(setting_id) == true
@@ -152,10 +149,7 @@ local function _localized_breed_name(breed)
 		return ""
 	end
 
-	local fallback_loc_key = BREED_NAME_LOCALIZATION_FALLBACKS[breed.name]
-	local fallback = fallback_loc_key and mod:localize(fallback_loc_key) or ""
-
-	return _localize_or_fallback(breed.display_name, fallback)
+	return _localize_or_fallback(breed.display_name, "")
 end
 
 local function _damage_label_enabled()
@@ -223,6 +217,7 @@ local COLOR_YELLOW = { 255, 255, 255, 0 }
 local COLOR_ORANGE = { 255, 255, 165, 0 }
 local COLOR_RED = { 255, 255, 0, 0 }
 local COLOR_MAGENTA = { 255, 255, 0, 255 }
+local COLOR_STAGGER = { 255, 95, 152, 180 }
 local DEFAULT_STATUS_TEXT_COLOR = COLOR_YELLOW
 local SHIELD_BAR_HEIGHT = 2
 
@@ -459,10 +454,11 @@ local ICON_DEFAULT_COLORS = {
 }
 
 local DOT_ORDER = { "bleed", "chordclaw_bleed", "burn", "phosphor_burn", "warpfire", "toxin" }
-local DEBUFF_ORDER = { "brittleness", "damage_taken", "melee_damage_taken", "skullcrusher", "thunderstrike",
+local DEBUFF_ORDER = { "stagger", "brittleness", "damage_taken", "melee_damage_taken", "skullcrusher", "thunderstrike",
 	"empyric_shock", "electrocuted", "weapon_malfunction" }
 
 local DEBUFF_RULES = {
+	stagger = { setting = "stagger_display", default = "time" },
 	brittleness = { setting = "brittleness_indicator_display", default = "icon_text", center_on = "icon_text" },
 	skullcrusher = { setting = "skullcrusher_display", default = "stacks", center_on = "percent" },
 	thunderstrike = { setting = "thunderstrike_display", default = "stacks", center_on = "percent" },
@@ -486,6 +482,11 @@ local function _set_style_color(style_color, src_color)
 	style_color[2] = src_color[2]
 	style_color[3] = src_color[3]
 	style_color[4] = src_color[4]
+end
+
+-- hook_require definitions remain injected while DMF disables the mod's normal hooks.
+local function _transparent_color(color)
+	return { 0, color[2], color[3], color[4] }
 end
 
 template.create_vanilla_boss_indicator_definition = function(bar_width, center_x)
@@ -512,10 +513,10 @@ template.create_vanilla_boss_indicator_definition = function(bar_width, center_x
 				horizontal_alignment = "center",
 				offset = { x, y, BOSS_INDICATOR_Z },
 				size = { ICON_SIZE, ICON_SIZE },
-				color = ICON_DEFAULT_COLORS[i] or COLOR_WHITE,
+				color = _transparent_color(ICON_DEFAULT_COLORS[i] or COLOR_WHITE),
 			},
 			visibility_function = function(content, style)
-				return content[icon_id] ~= nil
+				return content.healthbars_indicator_active == true and content[icon_id] ~= nil
 			end,
 		}
 
@@ -534,12 +535,16 @@ template.create_vanilla_boss_indicator_definition = function(bar_width, center_x
 				font_type = header_font_settings.font_type,
 				font_size = DEFAULT_DOT_TEXT_FONT_SIZE,
 				text_color = {
-					DEFAULT_STATUS_TEXT_COLOR[1],
+					0,
 					DEFAULT_STATUS_TEXT_COLOR[2],
 					DEFAULT_STATUS_TEXT_COLOR[3],
 					DEFAULT_STATUS_TEXT_COLOR[4],
 				},
-			}
+			},
+			visibility_function = function(content, style)
+				return content.healthbars_indicator_active == true and content[stacks_id] ~= nil and
+					content[stacks_id] ~= ""
+			end,
 		}
 	end
 
@@ -1230,11 +1235,144 @@ local function _compute_brittleness_percent(buff_extension)
 	return percent, equivalent_stacks
 end
 
+local function _stagger_color()
+	return COLOR_STAGGER
+end
+
+local ESTIMATED_STAGGER_CAPTURE_DELAY = 0.05
+local ESTIMATED_STAGGER_MAX_DURATION = 5
+
+local function _clear_estimated_stagger(unit)
+	local start_times = mod._estimated_stagger_start_times
+
+	if start_times then
+		start_times[unit] = nil
+	end
+
+	local states = mod._estimated_stagger_states
+
+	if states then
+		states[unit] = nil
+	end
+end
+
+local function _estimated_stagger_status(unit, t)
+	if mod._animation_events_available ~= true then
+		return nil
+	end
+
+	local start_times = mod._estimated_stagger_start_times
+	local started_at = start_times and start_times[unit]
+
+	if not started_at then
+		return nil
+	end
+
+	if type(started_at) ~= "number" or not t then
+		_clear_estimated_stagger(unit)
+
+		return nil
+	end
+
+	local elapsed = t - started_at
+
+	if elapsed >= ESTIMATED_STAGGER_MAX_DURATION then
+		_clear_estimated_stagger(unit)
+
+		return nil
+	elseif elapsed < ESTIMATED_STAGGER_CAPTURE_DELAY then
+		return {}
+	end
+
+	if not Unit.has_animation_state_machine(unit) then
+		_clear_estimated_stagger(unit)
+
+		return nil
+	end
+
+	local animation_states, num_layers = Unit.animation_get_state(unit)
+	local current_state = num_layers and num_layers > 0 and animation_states[1]
+
+	if current_state == nil then
+		_clear_estimated_stagger(unit)
+
+		return nil
+	end
+
+	local estimated_states = mod._estimated_stagger_states
+	local initial_state = estimated_states and estimated_states[unit]
+
+	if initial_state == nil then
+		estimated_states[unit] = current_state
+
+		return {}
+	elseif initial_state ~= current_state then
+		_clear_estimated_stagger(unit)
+
+		return nil
+	end
+
+	return {}
+end
+
+local function _stagger_status(unit)
+	if not unit or mod:get("stagger") ~= true then
+		return nil
+	end
+
+	local stagger_end_times = mod._stagger_end_times
+	local stagger_end_time = stagger_end_times and stagger_end_times[unit]
+	local time_manager = Managers.time
+	local t = time_manager and time_manager:time("gameplay")
+
+	if stagger_end_time then
+		if t and stagger_end_time > t then
+			local mode = mod:get("stagger_display") or "time"
+			local time_left = mode == "time" and stagger_end_time - t or nil
+
+			return { time_left = time_left }
+		elseif t then
+			stagger_end_times[unit] = nil
+			_clear_estimated_stagger(unit)
+		end
+	end
+
+	local blackboards = rawget(_G, "BLACKBOARDS")
+	local blackboard = blackboards and blackboards[unit]
+	local stagger_component = blackboard and blackboard.stagger
+	local num_triggered_staggers = stagger_component and stagger_component.num_triggered_staggers
+
+	if num_triggered_staggers and num_triggered_staggers > 0 then
+		return {}
+	end
+
+	-- Public clients do not receive authoritative stagger state. Animation Events
+	-- provides the start; a base-layer state change or a short cap ends the estimate.
+	return _estimated_stagger_status(unit, t)
+end
+
 -- ---------------------------------------------------------------------------
 -- Debuff definitions
 -- ---------------------------------------------------------------------------
 
 local DEBUFF_DEFS = {
+	{
+		id = "stagger",
+		setting = "stagger",
+		icon = function() return mod.textures and mod.textures.stagger end,
+		color = _stagger_color,
+		poll = function(_buff_extension, _content, unit)
+			return _stagger_status(unit)
+		end,
+		text = function(data)
+			if (mod:get("stagger_display") or "time") ~= "time" or data.time_left == nil then
+				return ""
+			end
+
+			local secs = math_ceil(data.time_left)
+			return secs > 0 and tostring(secs) or "0"
+		end,
+	},
 	{
 		id = "bleed",
 		setting = "bleed",
@@ -1629,12 +1767,24 @@ local function _is_vanilla_boss_indicator_breed(breed)
 	return breed.trigger_boss_health_bar_on_aggro == true or breed.trigger_boss_health_bar_on_damaged == true
 end
 
-local function _clear_boss_indicator_slots(content)
+local function _clear_boss_indicator_slots(content, style)
 	for i = 1, MAX_DEBUFF_SLOTS_ALLOC do
 		local slot = BOSS_INDICATOR_SLOT_CACHE[i]
+		local icon_style = style and style[slot.icon_id]
+		local icon_color = icon_style and icon_style.color
+		local stacks_style = style and style[slot.stacks_id]
+		local text_color = stacks_style and stacks_style.text_color
 
 		content[slot.icon_id] = nil
 		content[slot.stacks_id] = ""
+
+		if icon_color then
+			icon_color[1] = 0
+		end
+
+		if text_color then
+			text_color[1] = 0
+		end
 	end
 end
 
@@ -1647,9 +1797,12 @@ local function _hide_boss_indicator_widget(widget)
 
 	local content = widget.content
 	if content then
-		_clear_boss_indicator_slots(content)
+		content.healthbars_indicator_active = false
+		_clear_boss_indicator_slots(content, widget.style)
 	end
 end
+
+template.hide_vanilla_boss_indicator = _hide_boss_indicator_widget
 
 local function _new_boss_indicator_state(breed)
 	return {
@@ -1667,17 +1820,16 @@ local function _new_boss_indicator_state(breed)
 	}
 end
 
-local function _poll_status_indicators(state, buff_extension)
-	local debuffs = state.debuffs
-
+local function _poll_status_indicators(debuffs, poll_content, buff_extension, unit, show_dots, show_debuffs)
 	table_clear(debuffs)
 
 	for i = 1, #DEBUFF_DEFS do
 		local def = DEBUFF_DEFS[i]
-		local enabled = (def.setting == nil) or _feature_enabled(def.setting)
+		local category_enabled = def.is_dot == true and show_dots or def.is_dot ~= true and show_debuffs
+		local enabled = category_enabled and ((def.setting == nil) or _feature_enabled(def.setting))
 
 		if enabled then
-			local data = def.poll(buff_extension, state.content)
+			local data = def.poll(buff_extension, poll_content, unit)
 
 			if data then
 				debuffs[#debuffs + 1] = {
@@ -1767,7 +1919,8 @@ local function _apply_boss_indicator_placements(widget, state)
 	local debuff_text_font_size = mod:get("debuff_text_font_size") or DEFAULT_DEBUFF_TEXT_FONT_SIZE
 	local dot_numbers_only = mod:get("dot_numbers_only") == true
 
-	_clear_boss_indicator_slots(content)
+	content.healthbars_indicator_active = true
+	_clear_boss_indicator_slots(content, style)
 
 	for p = 1, #placement_slots do
 		local slot = placement_slots[p]
@@ -1839,8 +1992,8 @@ local function _apply_boss_indicator_placements(widget, state)
 end
 
 template.update_vanilla_boss_indicator = function(widget, target, dt)
-	if not widget or not target or mod._psykhanium_vanilla_only or
-		not _feature_enabled("show_vanilla_boss_bar_indicators") then
+	if not widget or not target or mod._inactive_outside_psykhanium or mod._psykhanium_vanilla_only or
+		mod:get("show_vanilla_boss_bar_indicators") ~= true then
 		_hide_boss_indicator_widget(widget)
 
 		return
@@ -1850,6 +2003,18 @@ template.update_vanilla_boss_indicator = function(widget, target, dt)
 	local breed = target.breed
 
 	if not unit or not ALIVE[unit] or not _is_vanilla_boss_indicator_breed(breed) then
+		_hide_boss_indicator_widget(widget)
+
+		return
+	end
+
+	local display_modes = mod._healthbar_breed_display_modes
+	local display_mode = display_modes and display_modes[breed.name]
+	local full_debug_display = mod._psykhanium_full_debug_display == true
+	local show_dots = full_debug_display or display_mode == nil or display_mode.show_dots == true
+	local show_debuffs = full_debug_display or display_mode == nil or display_mode.show_debuffs == true
+
+	if not show_dots and not show_debuffs then
 		_hide_boss_indicator_widget(widget)
 
 		return
@@ -1874,7 +2039,7 @@ template.update_vanilla_boss_indicator = function(widget, target, dt)
 
 	if state.debuff_check_timer >= 0.1 then
 		state.debuff_check_timer = 0
-		_poll_status_indicators(state, buff_extension)
+		_poll_status_indicators(state.debuffs, state.content, buff_extension, unit, show_dots, show_debuffs)
 	end
 
 	_pack_indicator_placements(state)
@@ -1891,11 +2056,13 @@ template.update_function = function(parent, ui_renderer, widget, marker, templat
 	local style = widget.style
 	local unit = marker.unit
 	local psykhanium_behavior = mod._active_psykhanium_healthbar_behavior
-	local breed_toggles = mod._healthbar_breed_toggles
+	local display_modes = mod._healthbar_breed_display_modes
 	local breed = content.breed
+	local display_mode = display_modes and breed and display_modes[breed.name]
 
-	if mod._psykhanium_vanilla_only or
-		(psykhanium_behavior == "normal" and breed_toggles and breed and breed_toggles[breed.name] ~= true) then
+	if mod._inactive_outside_psykhanium or mod._psykhanium_vanilla_only or
+		(psykhanium_behavior == "normal" and
+			(not display_mode or display_mode.show_healthbar ~= true)) then
 		local custom_marker_units = mod._custom_marker_units
 		if custom_marker_units then
 			custom_marker_units[unit] = nil
@@ -1906,6 +2073,9 @@ template.update_function = function(parent, ui_renderer, widget, marker, templat
 		return
 	end
 
+	local full_debug_display = mod._psykhanium_full_debug_display == true
+	local show_dots = full_debug_display or display_mode and display_mode.show_dots == true
+	local show_debuffs = full_debug_display or display_mode and display_mode.show_debuffs == true
 	local show_damage_numbers = _feature_enabled("show_damage_numbers")
 	local use_armour_slot_offset = _damage_label_enabled()
 	local needs_last_hit_zone = show_damage_numbers or _damage_label_uses_hit_zone()
@@ -1940,35 +2110,22 @@ template.update_function = function(parent, ui_renderer, widget, marker, templat
 	if marker.debuff_check_timer >= 0.1 then
 		marker.debuff_check_timer = 0
 
-		local buff_extension = ScriptUnit_extension(unit, "buff_system")
-		if buff_extension then
-			table_clear(marker.debuffs)
+		if show_dots or show_debuffs then
+			local buff_extension = ScriptUnit_extension(unit, "buff_system")
 
-			for i = 1, #DEBUFF_DEFS do
-				local def = DEBUFF_DEFS[i]
-				local enabled = (def.setting == nil) or _feature_enabled(def.setting)
-				if enabled then
-					local data = def.poll(buff_extension, content)
-					if data then
-						marker.debuffs[#marker.debuffs + 1] = {
-							type = def.id,
-							def = def,
-							stacks = data.stacks,
-							percent = data.percent,
-							time_left = data.time_left,
-							template_name = data.template_name,
-						}
-					end
+			if buff_extension then
+				_poll_status_indicators(marker.debuffs, content, buff_extension, unit, show_dots, show_debuffs)
+
+				-- Detect debuff changes (for “show when applied” even without damage)
+				local sig = _debuff_signature(marker.debuffs)
+				if sig ~= marker._debuff_sig then
+					marker._debuff_sig = sig
+					-- “Applied/changed”: force visibility window (like damage does)
+					content.visibility_delay = template.damage_number_settings.visibility_delay
 				end
 			end
-
-			-- Detect debuff changes (for “show when applied” even without damage)
-			local sig = _debuff_signature(marker.debuffs)
-			if sig ~= marker._debuff_sig then
-				marker._debuff_sig = sig
-				-- “Applied/changed”: force visibility window (like damage does)
-				content.visibility_delay = template.damage_number_settings.visibility_delay
-			end
+		else
+			table_clear(marker.debuffs)
 		end
 	end
 
@@ -2141,15 +2298,27 @@ template.update_function = function(parent, ui_renderer, widget, marker, templat
 
 	if health_extension and (needs_last_hit_zone or needs_hit_reaction_data) then
 		local last_damaging_unit = health_extension:last_damaging_unit()
-		if last_damaging_unit then
+		local replicated_critical_hit = mod._last_hit_was_critical[unit]
+
+		if needs_hit_reaction_data then
+			content.hit_weakspot = false
+			content.was_critical = false
+		end
+
+		if last_damaging_unit or replicated_critical_hit ~= nil then
 			if needs_last_hit_zone then
 				content.last_hit_zone_name = health_extension:last_hit_zone_name() or "center_mass"
 			end
 
 			if needs_hit_reaction_data then
-				local weakspots = content.weakspots
-				content.hit_weakspot = weakspots and weakspots[content.last_hit_zone_name] and true or false
-				content.was_critical = health_extension:was_hit_by_critical_hit_this_render_frame()
+				if last_damaging_unit then
+					local weakspots = content.weakspots
+					content.hit_weakspot = weakspots and weakspots[content.last_hit_zone_name] and true or false
+					content.was_critical = health_extension:was_hit_by_critical_hit_this_render_frame()
+				else
+					content.hit_weakspot = mod._last_hit_weakspot[unit] == true
+					content.was_critical = replicated_critical_hit
+				end
 			end
 		end
 	end
@@ -2168,7 +2337,7 @@ template.update_function = function(parent, ui_renderer, widget, marker, templat
 			local damage_numbers = content.damage_numbers
 			local damage_diff = math_ceil(damage_taken - old_damage_taken)
 			local latest = damage_numbers[#damage_numbers]
-			local was_critical = health_extension and health_extension:was_hit_by_critical_hit_this_render_frame()
+			local was_critical = content.was_critical
 
 			local should_add = true
 			if latest and (t - latest.start_time) < dns.add_numbers_together_timer then
@@ -2185,8 +2354,7 @@ template.update_function = function(parent, ui_renderer, widget, marker, templat
 					expand_duration = dns.expand_duration,
 				}
 
-				local weakspots = content.weakspots
-				dn.hit_weakspot = weakspots and weakspots[content.last_hit_zone_name] and true or false
+				dn.hit_weakspot = content.hit_weakspot
 				dn.was_critical = was_critical
 
 				damage_numbers[#damage_numbers + 1] = dn
@@ -2203,14 +2371,16 @@ template.update_function = function(parent, ui_renderer, widget, marker, templat
 				latest.y_position = nil
 				latest.start_time = t
 
-				local weakspots = content.weakspots
-				latest.hit_weakspot = weakspots and weakspots[content.last_hit_zone_name] and true or false
+				latest.hit_weakspot = content.hit_weakspot
 				latest.was_critical = was_critical
 			end
 		end
 
 		content.damage_has_started = content.damage_has_started or true
 		content.last_damage_taken_time = t
+		mod._last_hit_time[unit] = nil
+		mod._last_hit_weakspot[unit] = nil
+		mod._last_hit_was_critical[unit] = nil
 	end
 
 	-- ----------------------------
