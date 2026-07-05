@@ -3,21 +3,21 @@ return {
         en = "Buy Until Rating",
         ["zh-cn"] = "自动购买指定评级物品",
         ru = "Закупка до рейтинга",
-        ["zh-tw"] = "購買至指定評分",
+        ["zh-tw"] = "買到指定評分",
     },
     mod_description = {
         en = "Automatically buying selected weapon from Brunt's Armoury until the weapon rating reaches you desired or higher (or reaches quantity limit) .",
         ja = "ブラントの武器庫から、選択した武器が希望の評価を超えるまで（もしくは個数制限に到達するまで）購入し続けます。",
         ["zh-cn"] = "在布伦特的军备库中自动购买选中的武器，直到武器达到或超过指定评级（或者达到购买上限）。",
         ru = "Buy Until Rating - выбранное оружие будет автоматически закупаться в Оружейной Бранта до тех пор, пока не будет получен желаемый рейтинг оружия или лучший (либо не будет достигнут лимит количества покупок).",
-        ["zh-tw"] = "自動從布倫特軍械庫購買所選武器，直到武器評分達到指定值或更高（或達到數量限制）。",
+        ["zh-tw"] = "自動從布倫特的軍械交易所購買所選武器，直到武器評分達到目標或更高（或達到數量限制）。",
     },
     desired_rating = {
         en = "Desired Rating",
         ja = "評価の最低値",
         ["zh-cn"] = "指定评级",
         ru = "Желаемый рейтинг",
-        ["zh-tw"] = "目標評分",
+        ["zh-tw"] = "指定評分",
     },
     additional_limit = {
         en = "Additional Limitations",
@@ -108,7 +108,7 @@ return {
         ja = "中止用キーバインド",
         ["zh-cn"] = "取消购买快捷键",
         ru = "Клавиша для отмены",
-        ["zh-tw"] = "取消快捷鍵",
+        ["zh-tw"] = "取消用快捷鍵",
     },
     canceled = {
         en = "Auto Buy Canceled",
