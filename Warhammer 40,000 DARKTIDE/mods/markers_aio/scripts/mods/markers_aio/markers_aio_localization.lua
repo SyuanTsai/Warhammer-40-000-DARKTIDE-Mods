@@ -1,5 +1,5 @@
 local mod = get_mod("markers_aio")
-mod.version = "2.14.1"
+mod.version = "2.14.2"
 mod:info("Markers Improved AIO Improved is installed, using version: " .. tostring(mod.version))
 
 mod.lookup_border_color = function(colour_string)
@@ -123,13 +123,6 @@ local colours = {
 	faded_text = "84,95,76",
 }
 
--- ###############################################################################################################
--- zh-tw Localization maintenance note:
--- For zh-tw updates, use the latest translation glossary as the source of truth:
--- https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/blob/main/Referneces/Translation.md
--- Preserve existing context-specific translations when the glossary contains multiple valid terms.
--- ###############################################################################################################
-
 -- rainbow
 -- en = "{#color(255,0,0)}M{#color(255,85,0)}a{#color(255,170,0)}r{#color(255,255,0)}k{#color(170,255,0)}e{#color(85,255,0)}r{#color(0,255,0)}s {#color(0,255,85)}I{#color(0,255,170)}m{#color(0,255,255)}p{#color(0,170,255)}r{#color(0,85,255)}o{#color(0,0,255)}v{#color(85,0,255)}e{#color(170,0,255)}d {#color(255,0,255)}A{#color(255,0,170)}I{#color(255,0,85)}O{#reset()}",
 -- fire
@@ -143,11 +136,17 @@ local colours = {
 local loc = {
 	mod_name_pizazz_toggle = {
 		en = "Enable Name Pizazz",
+		fr = "Activer le nom stylisé",
+		ru = "Включить стилизацию названия",
 		["zh-tw"] = "啟用名稱顏色效果",
+		["zh-cn"] = "启用名称特效",
 	},
 	mod_name_pizazz_tooltip = {
 		en = "Toggles the rainbow colours effect on the mod name text. Requires a reload.\nIf enabled, you will get a small euphoric experience everytime you scroll through the mod menu, \nIf disabled - you will be a John Darktide and have no rainbow sprinkles (but I'll love you anyway).",
-		["zh-tw"] = "切換模組名稱文字的彩虹顏色效果。需要重新載入。",
+		fr = "Active l'effet arc-en-ciel sur le nom du mod. Nécessite un rechargement.\nSi activé, vous aurez une petite expérience euphorique à chaque fois que vous ferez défiler le menu du mod.\nSi désactivé, vous serez un John Darktide sans paillettes (mais je vous aimerai quand même).",
+		ru = "Включает радужный эффект для названия мода. Требуется перезагрузка.\nЕсли включено, вы будете испытывать небольшую эйфорию каждый раз при прокрутке меню мода.\nЕсли выключено - вы будете обычным Джоном Дарктайдом без радужных блёсток (но я всё равно буду вас любить).",
+		["zh-tw"] = "切換模組名稱文字的彩虹顏色效果。需要重新載入。。\n啟用後，每次滾動模組選單時你都會獲得小小的愉悅體驗。\n停用後，你將成為一般的黑潮，失去顏色輔助（但我仍然愛你）。",
+		["zh-cn"] = "切换模组名称的彩虹颜色效果。需要重新加载。\n启用后，每次滚动模组菜单时你都会获得小小的愉悦体验。\n禁用后，你将失去彩虹点缀（但我仍然爱你）。",
 	},
 	mod_name = {
 		en = "{#color("
@@ -167,7 +166,112 @@ local loc = {
 	},
 	mod_name_boring = {
 		en = "Markers Improved AIO",
+		fr = "Marqueurs Améliorés AIO",
+		ru = "Markers Improved AIO",
+		["zh-tw"] = "標記改進整合版",
+		["zh-cn"] = "全功能标记集成",
 	},
+
+	-- Tab names (used in settings UI)
+	tab_general = {
+		en = "General",
+		fr = "Général",
+		ru = "Общие",
+		["zh-tw"] = "一般",
+		["zh-cn"] = "通用",
+	},
+	tab_ammo_med = {
+		en = "Ammo & Med",
+		fr = "Munitions & Médical",
+		ru = "Боеприпасы и Медицина",
+		["zh-tw"] = "彈藥與醫療",
+		["zh-cn"] = "弹药与医疗",
+	},
+	tab_chests = {
+		en = "Chests",
+		fr = "Coffres",
+		ru = "Ящики",
+		["zh-tw"] = "寶箱",
+		["zh-cn"] = "宝箱",
+	},
+	tab_heretical_idol = {
+		en = "Heretical Idol",
+		fr = "Idole Hérétique",
+		ru = "Еретический идол",
+		["zh-tw"] = "異端雕像",
+		["zh-cn"] = "异端神龛",
+	},
+	tab_materials = {
+		en = "Materials",
+		fr = "Matériaux",
+		ru = "Ресурсы",
+		["zh-tw"] = "材料",
+		["zh-cn"] = "材料",
+	},
+	tab_stimms = {
+		en = "Stimms",
+		fr = "Stimms",
+		ru = "Стимуляторы",
+		["zh-tw"] = "興奮劑",
+		["zh-cn"] = "兴奋剂",
+	},
+	tab_tomes = {
+		en = "Tomes",
+		fr = "Livres",
+		ru = "Книги",
+		["zh-tw"] = "經文",
+		["zh-cn"] = "圣经",
+	},
+	tab_luggables = {
+		en = "Luggables",
+		fr = "Transportables",
+		ru = "Переносимые",
+		["zh-tw"] = "搬運物品",
+		["zh-cn"] = "搬运物",
+	},
+	tab_martyrs_skull = {
+		en = "Martyr's Skull",
+		fr = "Crâne du Martyr",
+		ru = "Череп мученика",
+		["zh-tw"] = "殉道者顱骨",
+		["zh-cn"] = "殉道者颅骨",
+	},
+	tab_expedition = {
+		en = "Expedition",
+		fr = "Expédition",
+		ru = "Экспедиция",
+		["zh-tw"] = "遠征",
+		["zh-cn"] = "远征",
+	},
+	tab_event = {
+		en = "Event",
+		fr = "Événement",
+		ru = "Событие",
+		["zh-tw"] = "活動",
+		["zh-cn"] = "活动",
+	},
+	tab_decoding = {
+		en = "Decoding",
+		fr = "Décodage",
+		ru = "Декодирование",
+		["zh-tw"] = "解密",
+		["zh-cn"] = "解码",
+	},
+	tab_player_assistance = {
+		en = "Player Assistance",
+		fr = "Assistance Joueur",
+		ru = "Помощь игрокам",
+		["zh-tw"] = "玩家支援",
+		["zh-cn"] = "玩家辅助",
+	},
+	tab_unknown = {
+		en = "Unknown",
+		fr = "Inconnu",
+		ru = "Неизвестные",
+		["zh-tw"] = "未知",
+		["zh-cn"] = "未知",
+	},
+
 	mod_description = {
 		en = "{#color("
 			.. colours.text
@@ -194,81 +298,112 @@ local loc = {
 	-- Hover Tag Display Names
 	mod_marker_chest_name = {
 		en = "Chest",
+		fr = "Coffre",
+		ru = "Сундук",
 		["zh-cn"] = "宝箱",
 		["zh-tw"] = "寶箱",
 	},
 	mod_marker_item_name = {
 		en = "Item",
+		fr = "Objet",
+		ru = "Предмет",
 		["zh-cn"] = "物品",
 		["zh-tw"] = "物品",
 	},
 	mod_marker_heretical_idol_name = {
 		en = "Heretical Idol",
+		fr = "Idole Hérétique",
+		ru = "Еретический идол",
 		["zh-cn"] = "异端雕像",
 		["zh-tw"] = "異端神像",
 	},
 	mod_marker_medicae_station_name = {
 		en = "Medicae Station",
+		fr = "Station Medicae",
+		ru = "Медицинская станция",
 		["zh-cn"] = "医疗站",
 		["zh-tw"] = "醫療站",
 	},
 	mod_marker_stimm_name = {
 		en = "Stimm",
+		fr = "Stimm",
+		ru = "Стим",
 		["zh-cn"] = "兴奋剂",
 		["zh-tw"] = "興奮劑",
 	},
 	mod_marker_power_stimm_name = {
 		en = "Power Stimm",
+		fr = "Stimm de puissance",
+		ru = "Стим силы",
 		["zh-cn"] = "作战兴奋剂",
 		["zh-tw"] = "戰鬥興奮劑",
 	},
 	mod_marker_speed_stimm_name = {
 		en = "Speed Stimm",
+		fr = "Stimm de vitesse",
+		ru = "Стим скорости",
 		["zh-cn"] = "敏捷兴奋剂",
-		["zh-tw"] = "敏捷興奮劑",
 	},
 	mod_marker_boost_stimm_name = {
 		en = "Boost Stimm",
+		fr = "Stimm de boost",
+		ru = "Стим ускорения",
 		["zh-cn"] = "专注兴奋剂",
-		["zh-tw"] = "專注興奮劑",
+		["zh-tw"] = "增強興奮劑",
 	},
 	mod_marker_medic_stimm_name = {
 		en = "Medic Stimm",
+		fr = "Stimm médical",
+		ru = "Медицинский стим",
 		["zh-cn"] = "医疗兴奋剂",
-		["zh-tw"] = "醫療興奮劑",
+		["zh-tw"] = "治療針",
 	},
 	mod_marker_broker_stimm_name = {
 		en = "Hive Scum Stimm",
+		fr = "Stimm de la lie du hive",
+		ru = "Стим отбросов улья",
 		["zh-cn"] = "巢都兴奋剂",
 		["zh-tw"] = "巢都敗類興奮劑",
 	},
 	mod_marker_tome_name = {
 		en = "Tome",
+		fr = "Livre",
+		ru = "Книга",
 		["zh-cn"] = "经文",
 		["zh-tw"] = "經文",
 	},
 	mod_marker_material_name = {
 		en = "Material",
+		fr = "Matériau",
+		ru = "Ресурс",
 		["zh-cn"] = "材料",
 		["zh-tw"] = "材料",
 	},
 	mod_marker_luggable_name = {
 		en = "Carry Item",
+		fr = "Objet à transporter",
+		ru = "Переносимый предмет",
 		["zh-cn"] = "搬运物品",
 		["zh-tw"] = "搬運物品",
 	},
 	mod_marker_expedition_name = {
 		en = "Expedition",
+		fr = "Expédition",
+		ru = "Экспедиция",
 		["zh-cn"] = "远征目标",
 		["zh-tw"] = "遠征目標",
 	},
 	mod_marker_event_name = {
 		en = "Event Pickup",
+		fr = "Objet d'événement",
+		ru = "Событийный предмет",
 		["zh-cn"] = "事件物品",
 		["zh-tw"] = "事件物品",
 	},
 	mod_marker_unknown_name = {
 		en = "Unknown",
+		fr = "Inconnu",
+		ru = "Неизвестно",
 		["zh-cn"] = "未知",
 		["zh-tw"] = "未知",
 	},
@@ -297,73 +432,101 @@ local loc = {
 	},
 	ads_los_opacity = {
 		en = "ADS Line of sight marker opacity (percentage)",
+		fr = "Opacité du marqueur en visée (pourcentage)",
+		ru = "Прозрачность маркера при прицеливании (проценты)",
 		["zh-tw"] = "瞄準視線外的圖標透明度",
 		["zh-cn"] = "开镜视野外图标透明度（百分比）",
 	},
 	marker_background_colour = {
 		en = "Marker background colour",
+		fr = "Couleur de fond du marqueur",
+		ru = "Цвет фона маркера",
 		["zh-tw"] = "標記背景顏色",
 		["zh-cn"] = "标记背景颜色",
 	},
 	font_type = {
 		en = "Choose a font style (Global)",
+		fr = "Choisir un style de police (Global)",
+		ru = "Выберите стиль шрифта (Глобальный)",
 		["zh-cn"] = "选择字体样式（全局）",
-		["zh-tw"] = "選擇字體樣式（全域）",
+		["zh-tw"] = "選擇字型（所有區域）",
 	},
 	font_type_tooltip = {
 		en = "The global font style to use. This will apply to all text elements from Markers AIO Improved.",
+		fr = "Le style de police global à utiliser. S'appliquera à tous les éléments textuels de Markers AIO Improved.",
+		ru = "Глобальный стиль шрифта. Будет применён ко всем текстовым элементам Markers AIO Improved.",
 		["zh-cn"] = "设置使用的全局字体样式，将应用于「标记整合增强版」的所有文本元素。",
-		["zh-tw"] = "設置使用的全域字體樣式，將應用於「標記整合增強版」的所有文本元素。",
+		["zh-tw"] = "設定使用的字型樣式，將套用於「標記改善整合版」的所有文字元素。",
 	},
 
 	distance_text_enable = {
 		en = "Toggle distance indicator",
-		["zh-tw"] = "切換距離指示器",
+		fr = "Activer l'indicateur de distance",
+		ru = "Включить индикатор расстояния",
 		["zh-cn"] = "开启距离指示器",
+		["zh-tw"] = "切換距離指示器",
 	},
 	distance_text_enable_tooltip = {
 		en = "Adds a text-based indicator near the markers that shows their distance from you in meters.",
-		["zh-tw"] = "在標記附近添加基於文本的指示器，顯示它們與你的距離（以公尺為單位）。",
+		fr = "Ajoute un indicateur textuel près des marqueurs indiquant la distance en mètres.",
+		ru = "Добавляет текстовый индикатор рядом с маркером, показывающий расстояние до него в метрах.",
 		["zh-cn"] = "在标记旁显示文字指示器，以米为单位显示与你的距离。",
+		["zh-tw"] = "在標記旁顯示文字指示器，以公尺為單位顯示與你的距離。",
 	},
 	distance_text_position = {
 		en = "Distance indicator position",
-		["zh-tw"] = "距離指示器位置",
+		fr = "Position de l'indicateur de distance",
+		ru = "Позиция индикатора расстояния",
 		["zh-cn"] = "距离指示器位置",
+		["zh-tw"] = "距離指示器位置",
 	},
 	distance_text_position_tooltip = {
 		en = "Pick where to place the distance indicator in relation to the marker.\nNote: Center positioning will make the icon fade a little so you can always read the text.",
-		["zh-tw"] = "選擇距離指示器相對於標記的位置。\n注意：中心位置會讓圖標稍微淡化，以便你始終可以閱讀文本。",
+		fr = "Choisissez où placer l'indicateur de distance par rapport au marqueur.\nNote : Le centrage atténuera légèrement l'icône pour une meilleure lisibilité du texte.",
+		ru = "Выберите расположение индикатора расстояния относительно маркера.\nПримечание: при центрировании иконка будет слегка затемнена для лучшей читаемости текста.",
 		["zh-cn"] = "选择距离指示器相对于标记的显示位置。\n注意：选择居中时图标会略微淡化，确保文字清晰可见。",
+		["zh-tw"] = "選擇距離指示器相對於標記的位置。\n注意：選擇居中時圖標會略微淡化，確保文字清晰可見。",	
 	},
 	distance_text_scale = {
 		en = "Distance indicator text scale",
-		["zh-tw"] = "距離指示器文字縮放",
+		fr = "Échelle du texte de l'indicateur de distance",
+		ru = "Масштаб текста индикатора расстояния",
 		["zh-cn"] = "距离指示器文字大小",
+		["zh-tw"] = "距離指示器文字大小",
 	},
 
 	Top = {
 		en = "Top",
+		fr = "Haut",
+		ru = "Сверху",
 		["zh-tw"] = "上方",
 		["zh-cn"] = "顶部",
 	},
 	Bottom = {
 		en = "Bottom",
+		fr = "Bas",
+		ru = "Снизу",
 		["zh-tw"] = "下方",
 		["zh-cn"] = "底部",
 	},
 	Left = {
 		en = "Left",
+		fr = "Gauche",
+		ru = "Слева",
 		["zh-tw"] = "左方",
 		["zh-cn"] = "左侧",
 	},
 	Right = {
 		en = "Right",
+		fr = "Droite",
+		ru = "Справа",
 		["zh-tw"] = "右方",
 		["zh-cn"] = "右侧",
 	},
 	Center = {
 		en = "Center",
+		fr = "Centre",
+		ru = "По центру",
 		["zh-tw"] = "中心",
 		["zh-cn"] = "居中",
 	},
@@ -420,6 +583,8 @@ local loc = {
 	},
 	med_station_max_distance = {
 		en = "Medicae Station marker max distance",
+		fr = "Distance max du marqueur de la station Medicae",
+		ru = "Макс. дистанция маркера медстанции",
 		["zh-tw"] = "醫療站標記最大距離",
 		["zh-cn"] = "医疗站标记最大显示距离",
 	},
@@ -509,6 +674,8 @@ local loc = {
 	},
 	field_improv_colour = {
 		en = "Field Improvisation Talent Proximity Radius Colour",
+		fr = "Couleur du rayon de proximité du talent Improvisation sur le terrain",
+		ru = "Цвет радиуса действия таланта «Полевая импровизация»",
 		["zh-cn"] = "如果有老兵装备临场发挥天赋时的邻近范围颜色",
 	},
 	field_improv_colour_R = {
@@ -732,16 +899,22 @@ local loc = {
 	},
 	Default = {
 		en = "Default",
+		fr = "Défaut",
+		ru = "По умолчанию",
 		["zh-tw"] = "預設",
 		["zh-cn"] = "默认",
 	},
 	Video = {
 		en = "Video",
+		fr = "Vidéo",
+		ru = "Видео",
 		["zh-tw"] = "影片",
 		["zh-cn"] = "录像",
 	},
 	Loot = {
 		en = "Loot",
+		fr = "Butin",
+		ru = "Добыча",
 		["zh-tw"] = "戰利品",
 		["zh-cn"] = "战利品",
 	},
@@ -1139,23 +1312,37 @@ local loc = {
 	},
 	recolor_stimm_compat_enable = {
 		en = "RecolorStimm mod support?",
+		fr = "Support du mod RecolorStimm ?",
+		ru = "Поддержка мода RecolorStimm?",
 		["zh-tw"] = "啟用RecolorStimm模組支援？",
+		["zh-cn"] = "支持 RecolorStimm 模组？",
 	},
 	recolor_stimm_compat_enable_tooltip = {
 		en = "Toggles recolour stimm mod support, where if enabled - will adjust the colours of the stimms to the colours from RecolorStimms mod - and ignore the markers AIO stimm colours.",
+		fr = "Active la compatibilité avec le mod RecolorStimm. Si activé, ajuste les couleurs des stimms selon le mod RecolorStimm et ignore les couleurs de Markers AIO.",
+		ru = "Включает поддержку мода RecolorStimm. Если включено - цвета стимуляторов будут взяты из мода RecolorStimm, игнорируя цвета Markers AIO.",
 		["zh-tw"] = "切換RecolorStimm模組支援，如果啟用 - 將把興奮劑的顏色調整為RecolorStimms模組的顏色 - 並忽略AIO標記的興奮劑顏色。",
+		["zh-cn"] = "切换 RecolorStimm 模组支持。启用后将使用 RecolorStimm 的颜色，忽略标记整合版的兴奋剂颜色设置。",
 	},
 	toggle_background_colour = {
 		en = "Colour Background Instead of Icon?",
+		fr = "Colorer l'arrière-plan au lieu de l'icône ?",
+		ru = "Окрашивать фон вместо значка?",
 		["zh-tw"] = "著色背景而不是圖示？",
+		["zh-cn"] = "给背景上色而非图标？",
 	},
 	toggle_background_colour_tooltip = {
 		en = "If enabled, will colour the background instead of the icon. If disabled, will colour the icon instead of the background. Uses the 'Background Colour' setting, as it essentially inverts the colours.",
+		fr = "Si activé, colorera l'arrière-plan au lieu de l'icône. Si désactivé, colorera l'icône. Utilise le paramètre 'Couleur de fond' en inversant les couleurs.",
+		ru = "Если включено, будет окрашивать фон вместо значка. Если выключено - значок вместо фона. По сути инвертирует цвета.",
 		["zh-tw"] = "如果啟用，將著色背景而不是圖示。如果禁用，將著色圖示而不是背景。使用「背景顏色」設置，因為它本質上是顛倒顏色。",
+		["zh-cn"] = "启用后将为背景上色而非图标。禁用后则为图标上色。使用「背景颜色」设置，本质上是反转颜色。",
 	},
 
 	broker_stimm_enable = {
 		en = "Enable Hive Scum Stimm Markers",
+		fr = "Activer les marqueurs de stimm de la lie du hive",
+		ru = "Включить маркеры стимов отбросов улья",
 		["zh-tw"] = "啟用巢都敗類興奮劑標記",
 		["zh-cn"] = "启用巢都混混兴奋剂标记",
 	},
@@ -1357,52 +1544,72 @@ local loc = {
 	},
 	broker_stimm_icon_colour = {
 		en = "Hive Scum Stimm Icon Colour",
-		["zh-tw"] = "Hive Scum Stimm Icon Colour",
+		fr = "Couleur de l'icône de stimm de la lie du hive",
+		ru = "Цвет значка стима отбросов улья",
+		["zh-tw"] = "巢都敗類興奮劑圖示顏色",
 		["zh-cn"] = "巢都渣滓兴奋剂图标颜色",
 	},
 	broker_stimm_icon_colour_R = {
 		en = "R",
+		fr = "R",
+		ru = "К",
 		["zh-tw"] = "紅",
 		["zh-cn"] = "红",
 	},
 	broker_stimm_icon_colour_G = {
 		en = "G",
+		fr = "V",
+		ru = "З",
 		["zh-tw"] = "綠",
 		["zh-cn"] = "绿",
 	},
 	broker_stimm_icon_colour_B = {
 		en = "B",
+		fr = "B",
+		ru = "С",
 		["zh-tw"] = "藍",
 		["zh-cn"] = "蓝",
 	},
 	broker_stimm_border_colour = {
 		en = "Border Colour",
+		fr = "Couleur de la bordure",
+		ru = "Цвет границы",
 		["zh-tw"] = "邊框顏色",
 		["zh-cn"] = "边框颜色",
 	},
 
 	boost_stimm_require_line_of_sight = {
 		en = "Require line of sight (Boost Stimm)",
+		fr = "Nécessite une ligne de vue (Stimm de boost)",
+		ru = "Требуется прямая видимость (стим ускорения)",
 		["zh-cn"] = "专注兴奋剂仅视野内显示",
 		["zh-tw"] = "增強興奮劑需要視線範圍",
 	},
 	corruption_stimm_require_line_of_sight = {
 		en = "Require line of sight (Medic Stimm)",
+		fr = "Nécessite une ligne de vue (Stimm médical)",
+		ru = "Требуется прямая видимость (медицинский стим)",
 		["zh-cn"] = "医疗兴奋剂仅视野内显示",
 		["zh-tw"] = "醫療興奮劑需要視線範圍",
 	},
 	power_stimm_require_line_of_sight = {
 		en = "Require line of sight (Power Stimm)",
+		fr = "Nécessite une ligne de vue (Stimm de puissance)",
+		ru = "Требуется прямая видимость (стим силы)",
 		["zh-cn"] = "作战兴奋剂仅视野内显示",
 		["zh-tw"] = "戰鬥興奮劑需要視線範圍",
 	},
 	speed_stimm_require_line_of_sight = {
 		en = "Require line of sight (Speed Stimm)",
+		fr = "Nécessite une ligne de vue (Stimm de vitesse)",
+		ru = "Требуется прямая видимость (стим скорости)",
 		["zh-cn"] = "敏捷兴奋剂仅视野内显示",
 		["zh-tw"] = "速度興奮劑需要視線範圍",
 	},
 	broker_stimm_require_line_of_sight = {
 		en = "Require line of sight (Hive Scum Stimm)",
+		fr = "Nécessite une ligne de vue (Stimm de la lie du hive)",
+		ru = "Требуется прямая видимость (стим отбросов улья)",
 		["zh-cn"] = "巢都兴奋剂仅视野内显示",
 		["zh-tw"] = "巢都敗類興奮劑需要視線範圍",
 	},
@@ -1410,26 +1617,36 @@ local loc = {
 	-- Per-stimm-type require line of sight tooltips
 	boost_stimm_require_line_of_sight_tooltip = {
 		en = "Require line of sight for Boost Stimm markers?",
+		fr = "Les marqueurs de stimm de boost nécessitent-ils une ligne de vue ?",
+		ru = "Требуется ли прямая видимость для маркеров стима ускорения?",
 		["zh-cn"] = "专注兴奋剂标记是否需要视野？",
 		["zh-tw"] = "增強興奮劑標記是否需要視線？",
 	},
 	corruption_stimm_require_line_of_sight_tooltip = {
 		en = "Require line of sight for Medic Stimm markers?",
+		fr = "Les marqueurs de stimm médical nécessitent-ils une ligne de vue ?",
+		ru = "Требуется ли прямая видимость для маркеров медицинского стима?",
 		["zh-cn"] = "医疗兴奋剂标记是否需要视野？",
 		["zh-tw"] = "醫療興奮劑標記是否需要視線？",
 	},
 	power_stimm_require_line_of_sight_tooltip = {
 		en = "Require line of sight for Power Stimm markers?",
+		fr = "Les marqueurs de stimm de puissance nécessitent-ils une ligne de vue ?",
+		ru = "Требуется ли прямая видимость для маркеров стима силы?",
 		["zh-cn"] = "作战兴奋剂标记是否需要视野？",
 		["zh-tw"] = "戰鬥興奮劑標記是否需要視線？",
 	},
 	speed_stimm_require_line_of_sight_tooltip = {
 		en = "Require line of sight for Speed Stimm markers?",
+		fr = "Les marqueurs de stimm de vitesse nécessitent-ils une ligne de vue ?",
+		ru = "Требуется ли прямая видимость для маркеров стима скорости?",
 		["zh-cn"] = "敏捷兴奋剂标记是否需要视野？",
 		["zh-tw"] = "速度興奮劑標記是否需要視線？",
 	},
 	broker_stimm_require_line_of_sight_tooltip = {
 		en = "Require line of sight for Hive Scum Stimm markers?",
+		fr = "Les marqueurs de stimm de la lie du hive nécessitent-ils une ligne de vue ?",
+		ru = "Требуется ли прямая видимость для маркеров стима отбросов улья?",
 		["zh-cn"] = "巢都兴奋剂标记是否需要视野？",
 		["zh-tw"] = "巢都敗類興奮劑標記是否需要視線？",
 	},
@@ -1978,21 +2195,31 @@ local loc = {
 
 	Exclamation = {
 		en = "Exclamation",
+		fr = "Exclamation",
+		ru = "Восклицание",
 		["zh-tw"] = "驚嘆號",
 		["zh-cn"] = "感叹号",
 	},
 	Hands = {
 		en = "Hands",
+		fr = "Mains",
+		ru = "Руки",
 		["zh-tw"] = "手",
 		["zh-cn"] = "手掌",
 	},
 	Fist = {
 		en = "Fist",
+		fr = "Poing",
+		ru = "Кулак",
 		["zh-tw"] = "拳頭",
 		["zh-cn"] = "拳头",
 	},
 	Luggable = {
 		en = "Luggable",
+		fr = "Transportable",
+		ru = "Переносимый",
+		["zh-tw"] = "可搬運",
+		["zh-cn"] = "可搬运",
 	},
 	Gold = {
 		en = "Gold",
@@ -2017,16 +2244,23 @@ local loc = {
 	},
 	Black = {
 		en = "Black",
+		fr = "Noir",
+		ru = "Чёрный",
 		["zh-tw"] = "黑",
 		["zh-cn"] = "黑色",
 	},
 	Terminal = {
 		en = "Terminal",
+		fr = "Terminal",
+		ru = "Терминал",
 		["zh-tw"] = "終端",
 		["zh-cn"] = "终端",
 	},
 	Tarnished = {
 		en = "Tarnished",
+		fr = "Termi",
+		ru = "Потускневший",
+		["zh-tw"] = "銹蝕",
 		["zh-cn"] = "暗铜色",
 	},
 	-- new toggle LOS settings
@@ -2846,7 +3080,7 @@ local loc = {
 	},
 	-- Servo Skull Markers
 	servo_skull_settings = {
-		en = "ASSISTANCE & SERVO SKULL MARKERS",
+		en = "DECODING MARKERS",
 		["zh-cn"] = "伺服颅骨标记（可破解终端）",
 		["zh-tw"] = "伺服顱骨標記（可操作終端）",
 	},
@@ -2862,20 +3096,31 @@ local loc = {
 	},
 	servo_skull_enable_assistance_module = {
 		en = "Enable Assistance Module",
+		fr = "Activer le module d'assistance",
+		ru = "Включить модуль помощи",
 		["zh-tw"] = "啟用輔助模式",
+		["zh-cn"] = "启用辅助模块",
 	},
 	servo_skull_enable_assistance_module_tooltip = {
 		en = "Toggle the 'assistance' features, including recolouring downed players' markers and showing their downed states.",
+		fr = "Active les fonctionnalités d'assistance, y compris le recoloriage des marqueurs des joueurs à terre et l'affichage de leur état.",
+		ru = "Включает функции помощи, включая перекраску маркеров упавших игроков и отображение их состояния.",
 		["zh-tw"] = "切換「輔助」功能，包括重新著色倒下玩家的標記並顯示他們的倒下狀態。",
+		["zh-cn"] = "切换「辅助」功能，包括重新着色倒地队友标记并显示其倒地状态。",
 	},
 	servo_skull_icon = {
 		en = "Servo Skull Icon",
-		["zh-cn"] = "图标",
+		fr = "Icône du Crâne Serviteur",
+		ru = "Значок сервочерепа",
 		["zh-tw"] = "顱骨圖標",
+		["zh-cn"] = "伺服颅骨图标",
 	},
 	decoding_icon = {
 		en = "Decoding Icon (No Servo Skull Equipped)",
-		["zh-tw"] = "破解中圖標（未裝備伺服顱骨）",
+		fr = "Icône de décodage (aucun Crâne Serviteur équipé)",
+		ru = "Значок декодирования (сервочереп не экипирован)",
+		["zh-tw"] = "破解中圖標（未裝備伺服顱骨",
+		["zh-cn"] = "解码图标（未装备伺服颅骨）",
 	},
 	servo_skull_keep_on_screen = {
 		en = "Keep on screen",
@@ -2915,7 +3160,6 @@ local loc = {
 	servo_skull_default_colour = {
 		en = "Inactive Colour",
 		["zh-cn"] = "未激活颜色",
-		["zh-tw"] = "未激活顏色",
 	},
 	servo_skull_default_colour_R = {
 		en = "R",
@@ -2939,7 +3183,7 @@ local loc = {
 		["zh-cn"] = "蓝",
 	},
 	servo_skull_stalled_colour = {
-		en = "Stalled (Can Deploy/Alert) Colour",
+		en = "Stalled (Can Deploy) Colour",
 		["zh-cn"] = "待命（可部署）颜色",
 	},
 	servo_skull_stalled_colour_R = {
@@ -2964,7 +3208,7 @@ local loc = {
 		["zh-cn"] = "蓝",
 	},
 	servo_skull_active_colour = {
-		en = "Active (Decoding/Helping) Colour",
+		en = "Active (Decoding) Colour",
 		["zh-cn"] = "激活（破解中）颜色",
 	},
 	servo_skull_active_colour_R = {
@@ -3010,17 +3254,243 @@ local loc = {
 	},
 	servo_skull_pulse_when_stalled = {
 		en = "Pulse When Stalled",
+		fr = "Pulser quand bloqué",
+		ru = "Пульсировать при ожидании",
 		["zh-tw"] = "停滯時閃爍",
+		["zh-cn"] = "卡住时脉冲闪烁",
 	},
 	pulse_when_stalled_tooltip = {
 		en = "Gently pulse the marker size when the servo skull is stalled (1x to 1.2x)",
-		["zh-tw"] = "當伺服顱骨停滯時，輕輕脈衝標記大小（1x 到 1.2x）",
+		fr = "Fait doucement pulser la taille du marqueur lorsque le Crâne Serviteur est bloqué (1x à 1,2x)",
+		ru = "Мягко пульсирует размер маркера, когда сервочереп ожидает (от 1x до 1,2x)",
+		["zh-tw"] = "當伺服顱骨停滯時，標記大小會輕微閃爍（1倍至1.2倍）",
+		["zh-cn"] = "当伺服颅骨卡住时，标记大小会轻微脉冲（1倍至1.2倍）",
+	},
+	-- Player Assistance Markers
+	player_assistance_settings = {
+		en = "PLAYER ASSISTANCE MARKERS",
+		fr = "MARQUEURS D'ASSISTANCE AU JOUEUR",
+		ru = "МАРКЕРЫ ПОМОЩИ ИГРОКАМ",
+		["zh-tw"] = "玩家輔助標記",
+		["zh-cn"] = "玩家辅助标记",
+	},
+	Investigation = {
+		en = "Investigation",
+		fr = "Investigation",
+		ru = "Расследование",
+		["zh-tw"] = "調查",
+		["zh-cn"] = "调查",
+	},
+	player_assistance_enable = {
+		en = "Enable Markers",
+		fr = "Activer les marqueurs",
+		ru = "Включить метки",
+		["zh-tw"] = "啟用標記",
+		["zh-cn"] = "启用标记",
+	},
+	player_assistance_enable_assistance_module = {
+		en = "Enable Assistance Module",
+		fr = "Activer le module d'assistance",
+		ru = "Включить модуль помощи",
+		["zh-tw"] = "啟用輔助模組",
+		["zh-cn"] = "启用辅助模块",
+	},
+	player_assistance_enable_assistance_module_tooltip = {
+		en = "Toggle the 'assistance' features, including recolouring downed players' markers and showing their downed states.",
+		fr = "Active les fonctionnalités d'assistance, y compris le recoloriage des marqueurs des joueurs à terre et l'affichage de leur état.",
+		ru = "Включает функции помощи, включая перекраску маркеров упавших игроков и отображение их состояния.",
+		["zh-tw"] = "切換「輔助」功能，包括重新著色倒地玩家標記並顯示其倒地狀態。",
+		["zh-cn"] = "切换「辅助」功能，包括重新着色倒地队友标记并显示其倒地状态。",
+	},
+	player_assistance_servo_skull_icon = {
+		en = "Servo Skull Icon",
+		fr = "Icône du Crâne Serviteur",
+		ru = "Значок сервочерепа",
+		["zh-tw"] = "伺服顱骨圖示",
+		["zh-cn"] = "伺服颅骨图标",
+	},
+	player_assistance_icon = {
+		en = "Assistance Icon (No Servo Skull Equipped)",
+		fr = "Icône d'assistance (aucun Crâne Serviteur équipé)",
+		ru = "Значок помощи (сервочереп не экипирован)",
+		["zh-tw"] = "支援圖示（未裝備伺服顱骨）",
+		["zh-cn"] = "辅助图标（未装备伺服颅骨）",
+	},
+	player_assistance_keep_on_screen = {
+		en = "Keep on screen",
+		ru = "Держать на экране",
+		fr = "Rester à l'écran",
+		["zh-tw"] = "保持顯示於螢幕",
+		["zh-cn"] = "在画面中持续显示",
+	},
+	player_assistance_require_line_of_sight = {
+		en = "Require line of sight",
+		fr = "Nécessite une ligne de vue",
+		ru = "Должно быть в зоне видимости",
+		["zh-tw"] = "需要視線範圍",
+		["zh-cn"] = "仅视野内显示",
+	},
+	player_assistance_max_distance = {
+		en = "Max distance",
+		fr = "Distance maximale",
+		ru = "Максимальное расстояние",
+		["zh-tw"] = "最遠距離",
+		["zh-cn"] = "最大显示距离",
+	},
+	player_assistance_scale = {
+		en = "Scale",
+		fr = "Scale",
+		ru = "Scale",
+		["zh-tw"] = "圖標縮放大小",
+		["zh-cn"] = "标记缩放比例",
+	},
+	player_assistance_alpha = {
+		en = "Alpha Multiplier",
+		fr = "Multiplicateur d'alpha",
+		ru = "Прозрачность",
+		["zh-tw"] = "不透明度",
+		["zh-cn"] = "透明度系数",
+	},
+	player_assistance_default_colour = {
+		en = "Inactive Colour",
+		["zh-cn"] = "未激活颜色",
+		["zh-tw"] = "未啟用顏色",
+	},
+	player_assistance_default_colour_R = {
+		en = "R",
+		fr = "R",
+		ru = "К",
+		["zh-tw"] = "紅",
+		["zh-cn"] = "红",
+	},
+	player_assistance_default_colour_G = {
+		en = "G",
+		fr = "V",
+		ru = "З",
+		["zh-tw"] = "綠",
+		["zh-cn"] = "绿",
+	},
+	player_assistance_default_colour_B = {
+		en = "B",
+		fr = "B",
+		ru = "С",
+		["zh-tw"] = "藍",
+		["zh-cn"] = "蓝",
+	},
+	player_assistance_stalled_colour = {
+		en = "Stalled (Alert) Colour",
+		["zh-cn"] = "待命（可部署）颜色",
+	},
+	player_assistance_stalled_colour_R = {
+		en = "R",
+		fr = "R",
+		ru = "К",
+		["zh-tw"] = "紅",
+		["zh-cn"] = "红",
+	},
+	player_assistance_stalled_colour_G = {
+		en = "G",
+		fr = "V",
+		ru = "З",
+		["zh-tw"] = "綠",
+		["zh-cn"] = "绿",
+	},
+	player_assistance_stalled_colour_B = {
+		en = "B",
+		fr = "B",
+		ru = "С",
+		["zh-tw"] = "藍",
+		["zh-cn"] = "蓝",
+	},
+	player_assistance_active_colour = {
+		en = "Active (Helping) Colour",
+		["zh-cn"] = "激活（破解中）颜色",
+	},
+	player_assistance_active_colour_R = {
+		en = "R",
+		fr = "R",
+		ru = "К",
+		["zh-tw"] = "紅",
+		["zh-cn"] = "红",
+	},
+	player_assistance_active_colour_G = {
+		en = "G",
+		fr = "V",
+		ru = "З",
+		["zh-tw"] = "綠",
+		["zh-cn"] = "绿",
+	},
+	player_assistance_active_colour_B = {
+		en = "B",
+		fr = "B",
+		ru = "С",
+		["zh-tw"] = "藍",
+		["zh-cn"] = "蓝",
+	},
+	player_assistance_border_colour = {
+		en = "Inactive Border Colour",
+		["zh-cn"] = "未激活边框颜色",
+	},
+	player_assistance_stalled_border_colour = {
+		en = "Stalled Border Colour",
+		["zh-cn"] = "待命边框颜色",
+	},
+	player_assistance_active_border_colour = {
+		en = "Active Border Colour",
+		["zh-cn"] = "激活边框颜色",
+	},
+	player_assistance_toggle_los = {
+		en = "Toggle 'Require Line of Sight'",
+		["zh-tw"] = "切換「需要視線範圍」",
+		["zh-cn"] = "切换「仅视野内显示」",
+	},
+	player_assistance_pulse_when_stalled = {
+		en = "Pulse When Stalled",
+		fr = "Pulser quand bloqué",
+		ru = "Пульсировать при ожидании",
+		["zh-tw"] = "停滯時閃爍",
+		["zh-cn"] = "卡住时脉冲闪烁",
+	},
+	pulse_when_stalled_tooltip = {
+		en = "Gently pulse the marker size when the servo skull is stalled (1x to 1.2x)",
+		fr = "Fait doucement pulser la taille du marqueur lorsque le Crâne Serviteur est bloqué (1x à 1,2x)",
+		ru = "Мягко пульсирует размер маркера, когда сервочереп ожидает (от 1x до 1,2x)",
+		["zh-tw"] = "當伺服顱骨停滯時，標記大小會輕微閃爍（1倍至1.2倍）",
+		["zh-cn"] = "当伺服颅骨卡住时，标记大小会轻微脉冲（1倍至1.2倍）",
 	},
 	-- Unknown Markers
 	unknown_markers_settings = {
 		en = "UNKNOWN MARKERS (Those not covered elsewhere!)",
 		["zh-tw"] = "未知物品標記（未歸類物品）",
 		["zh-cn"] = "未知物品标记（未归类物品）",
+	},
+	Help = {
+		en = "Help",
+		fr = "Aide",
+		ru = "Помощь",
+		["zh-tw"] = "求助",
+		["zh-cn"] = "求助",
+	},
+	Medkit = {
+		en = "Medkit",
+		fr = "Kit médical",
+		ru = "Медпакет",
+		["zh-tw"] = "醫療箱",
+		["zh-cn"] = "医疗包",
+	},
+	Respawn = {
+		en = "Respawn",
+		fr = "Réapparition",
+		ru = "Возрождение",
+		["zh-tw"] = "復活",
+		["zh-cn"] = "复活",
+	},
+	Stimm = {
+		en = "Stimm",
+		fr = "Stimm",
+		ru = "Стим",
+		["zh-tw"] = "興奮劑",
+		["zh-cn"] = "兴奋剂",
 	},
 	unknown_enable = {
 		en = "Enable Markers",
@@ -3094,7 +3564,6 @@ local loc = {
 	},
 	unknown_colour = {
 		en = "Unknown Markers Colour",
-		["zh-tw"] = "未知物品標記顏色",
 		["zh-cn"] = "未知物品标记颜色",
 	},
 	unknown_colour_R = {
@@ -3157,22 +3626,22 @@ local loc = {
 	los_opacity_tooltip = {
 		en = "Opacity to apply to markers if line of sight fading is enabled.",
 		["zh-cn"] = "启用视线淡化后，标记的不透明度。",
-		["zh-tw"] = "啟用淡化後，標記的不透明度。",
+		["zh-tw"] = "啟用視線淡化後，標記的不透明度。",
 	},
 	ads_los_opacity_tooltip = {
 		en = "Opacity to apply to markers when you aim down sights of your weapon.",
 		["zh-cn"] = "开镜瞄准状态下标记的不透明度。",
-		["zh-tw"] = "開鏡瞄準狀態下標記的透明度。",
+		["zh-tw"] = "開鏡瞄準狀態下標記的不透明度。",
 	},
 	alpha_tooltip = {
 		en = "General opacity to apply to this marker type.",
 		["zh-cn"] = "此类标记的整体不透明度。",
-		["zh-tw"] = "此類標記的整體透明度。",
+		["zh-tw"] = "此類標記的整體不透明度。",
 	},
 	border_colour_tooltip = {
 		en = "Select a colour to apply to the 'border' or outer decorative ring of this marker type.",
 		["zh-cn"] = "设置此类标记边框或外侧装饰环的颜色。",
-		["zh-tw"] = "設置此類標記邊框或外側裝飾環的顏色。",
+		["zh-tw"] = "設定此類標記邊框或外側裝飾環的顏色。",
 	},
 	marker_background_colour_tooltip = {
 		en = "Background colour to apply to all markers.",
@@ -3202,12 +3671,12 @@ local loc = {
 	require_line_of_sight_tooltip = {
 		en = "Require direct line of sight to this marker type?\nIf enabled, markers behind world objects like walls will be hidden. \nIf disabled, you will be able to see markers through world objects.",
 		["zh-cn"] = "此类标记是否需要直接视线？\n启用后，墙体等障碍物后的标记会隐藏。\n关闭后可穿墙看到标记。",
-		["zh-tw"] = "此類標記是否需要直視？\n啟用後，牆體等障礙物後的標記會隱藏。\n關閉後可穿牆看到標記。",
+		["zh-tw"] = "此類標記是否需要直接視線？\n啟用後，牆體等障礙物後的標記會隱藏。\n關閉後可穿牆看到標記。",
 	},
 	toggle_los_tooltip = {
 		en = "Optional: Enter a keybind to toggle the 'Require Line of Sight' functionality for this marker type.",
 		["zh-cn"] = "可选：设置快捷键切换此类标记的「需要视线」功能。",
-		["zh-tw"] = "可選：設置快捷鍵切換此類標記的「需要視線」功能。",
+		["zh-tw"] = "可選：設定快捷鍵切換此類標記的「需要視線」功能。",
 	},
 	display_ammo_charges_tooltip = {
 		en = "Display a text-based numerical counter indicating how many uses an ammo crate has left before it runs out.",
@@ -3232,7 +3701,7 @@ local loc = {
 	display_field_improv_icon_tooltip = {
 		en = "Add an icon to ammo crates and medical markers depicting whether a Veteran with the Field Improvisation talent is present in your party.",
 		["zh-cn"] = "在弹药箱与医疗标记上显示图标，提示队伍中是否有携带临场发挥天赋的老兵。",
-		["zh-tw"] = "在彈藥箱與醫療標記上顯示圖標，提示隊伍中是否有攜帶臨場發揮天賦的老兵。",
+		["zh-tw"] = "在彈藥箱與醫療標記上顯示圖示，提示隊伍中是否有攜帶臨場發揮天賦的老兵。",
 	},
 	display_med_ring_tooltip = {
 		en = "Display a radius circle around deployed medcrates to indicate the range of the buff.",
@@ -3242,7 +3711,7 @@ local loc = {
 	icon_tooltip = {
 		en = "Adjust the icon for this marker type.",
 		["zh-cn"] = "调整此类标记的图标。",
-		["zh-tw"] = "調整此類標記的圖標。",
+		["zh-tw"] = "調整此類標記的圖示。",
 	},
 	stimm_enable_tooltip = {
 		en = "Enable colour adjustments for the Hive Scum stimms on the UI elements?",
@@ -3252,7 +3721,7 @@ local loc = {
 	martyrs_skull_guide_enable_tooltip = {
 		en = "Enable an on-screen guide widget with step-by-step text for collecting Martyr's Skulls.",
 		["zh-cn"] = "启用屏幕上的步骤文字指引，指导收集殉道者颅骨。",
-		["zh-tw"] = "啟用螢幕上的步驟文字指引，指導收集殉道者顱骨。",
+		["zh-tw"] = "啟用螢幕上的步驟文字指引，指導收集殉道者顱骨。",		
 	},
 	martyrs_skull_guide_markers_enable_tooltip = {
 		en = "Enable in-world positional markers for Martyr's Skull guide steps.",
@@ -3286,23 +3755,38 @@ local loc = {
 	},
 	unknown_markers_extra_allowed = {
 		en = "Enable adjustments for buttons & misc markers?",
-		["zh-tw"] = "啟用按鈕與其他標記的調整？",
+		fr = "Activer les ajustements pour les boutons et autres marqueurs divers ?",
+		ru = "Включить настройки для кнопок и прочих маркеров?",
+		["zh-tw"] = "啟用按鈕與其他雜項標記的調整？",
+		["zh-cn"] = "启用按钮及其他杂项标记的调整？",
 	},
 	unknown_markers_extra_allowed_tooltip = {
 		en = "If enabled, allows buttons and a few other misc unknown markers to be effected by the Unknown Marker settings. Including distance, fading, alpha etc. If disabled, these misc markers will only be effected by the colour choices.",
-		["zh-tw"] = "啟用後，按鈕與部分雜項未知標記會套用未知標記設定，例如距離、淡出、透明度等。若停用，這些標記只會套用顏色設定。",
+		fr = "Si activé, permet aux boutons et autres marqueurs inconnus d'être affectés par les paramètres des marqueurs inconnus (distance, fondu, alpha...). Si désactivé, seuls les choix de couleurs s'appliqueront.",
+		ru = "Если включено, кнопки и другие неизвестные маркеры будут подвержены настройкам неизвестных маркеров (расстояние, затухание, прозрачность и т.д.). Если выключено - только выбор цвета.",
+		["zh-tw"] = "啟用後，按鈕與其他雜項未知標記將受未知標記設定影響（距離、淡出、透明度等）。停用後僅受顏色選擇影響。",
+		["zh-cn"] = "启用后，按钮及其他杂项未知标记将受未知标记设置影响（距离、淡出、透明度等）。禁用后仅受颜色选择影响。",
 	},
 	Skull = {
 		en = "Skull",
+		fr = "Crâne",
+		ru = "Череп",
 		["zh-tw"] = "顱骨",
+		["zh-cn"] = "颅骨",
 	},
 	ScannerSkull = {
 		en = "Scanner Skull",
-		["zh-tw"] = "掃描器顱骨",
+		fr = "Crâne Scanner",
+		ru = "Череп сканера",
+		["zh-tw"] = "掃描顱骨",
+		["zh-cn"] = "扫描颅骨",
 	},
 	Scanner = {
 		en = "Scanner",
+		fr = "Scanner",
+		ru = "Сканер",
 		["zh-tw"] = "掃描器",
+		["zh-cn"] = "扫描器",
 	},
 }
 

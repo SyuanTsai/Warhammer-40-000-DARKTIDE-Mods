@@ -216,10 +216,10 @@
 
 ### [Markers Improved All-in-One](https://www.nexusmods.com/warhammer40kdarktide/mods/447)
     標記一體化 整合包
-- MOD 網站最後更新日期：Last updated 30 June 2026, 7:39AM
-- MOD 版本：2.14.1
-- MOD 檔案名稱：Markers_Improved_All-in-One_2.14.1_L8cAq8mFj
-- 手動維護最後下載日期：2026-06-30
+- MOD 網站最後更新日期：Last updated 30 June 2026, 7:36PM
+- MOD 版本：2.14.2
+- MOD 檔案名稱：Markers Improved All-in-One 447 2.14.2 sXjHdXNQV
+- 手動維護最後下載日期：2026-07-05
 
 ### [Danger Zone](https://www.nexusmods.com/warhammer40kdarktide/mods/440)
     危險區域 - 顯示危險的範圍 爆桶、惡魔宿主...等
