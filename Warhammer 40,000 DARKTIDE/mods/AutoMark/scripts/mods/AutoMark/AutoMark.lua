@@ -1,30 +1,30 @@
 ---@class AutoMarkMod:DMFMod
-local mod                               = get_mod("AutoMark")
-local Health                            = require("scripts/utilities/health")
-local breeds                            = require("scripts/settings/breed/breeds")
-local Breed                             = require("scripts/utilities/breed")
+local mod          = get_mod("AutoMark")
+local breeds       = require("scripts/settings/breed/breeds")
+local Breed        = require("scripts/utilities/breed")
 
 -- Global Cache
-local CLASS                             = CLASS
-local table_clear                       = table.clear
+local CLASS        = CLASS
+local table_clear  = table.clear
 
 -- Smart Tag Names
-local TAG_NAMES                         = {
+local TAG_NAMES    = {
     ENEMY_TAG       = "enemy_over_here",
     VETERAN_TAG     = "enemy_over_here_veteran",
     COMPANION_TAG   = "enemy_companion_target",
     SERVO_SKULL_TAG = "servo_skull_enemy_companion_target",
 }
-mod.TAG_NAMES                           = TAG_NAMES
+mod.TAG_NAMES      = TAG_NAMES
 
 -- Mod Settings
 ---@class AutoMarkModSettings
-local mod_settings                      = {
+local mod_settings = {
     toggle_mod                               = mod:get("toggle_mod") or false,
     toggle_mod_keybind                       = mod:get("toggle_mod_keybind") or {},
     toggle_mod_notify                        = mod:get("toggle_mod_notify") or false,
     debug_mode                               = mod:get("debug_mode") or false,
     companion_mark_keybind                   = mod:get("companion_mark_keybind") or {},
+    companion_mark_ignore_unaggroed          = mod:get("companion_mark_ignore_unaggroed") or false,
     execution_order_priority                 = mod:get("execution_order_priority") or false,
     companion_range_limitation               = mod:get("companion_range_limitation") or 0,
     companion_cancel_mark                    = mod:get("companion_cancel_mark") or false,
@@ -32,7 +32,10 @@ local mod_settings                      = {
     companion_cancel_mark_non_human          = mod:get("companion_cancel_mark_non_human") or false,
     companion_health_threshold               = mod:get("companion_health_threshold") or 0,
     companion_time_threshold                 = mod:get("companion_time_threshold") or 0,
+    companion_distance_threshold             = mod:get("companion_distance_threshold") or 0,
     servo_skull_mark_keybind                 = mod:get("servo_skull_mark_keybind") or {},
+    servo_skull_mark_ignore_unaggroed        = mod:get("servo_skull_mark_ignore_unaggroed") or false,
+    servo_skull_cancel_mark_time_threshold   = mod:get("servo_skull_cancel_mark_time_threshold") or 0,
     hack_mark_keybind                        = mod:get("hack_mark_keybind") or {},
     auto_hack                                = mod:get("auto_hack") or false,
     disable_auto_hack_for_noospheric_command = mod:get("disable_auto_hack_for_noospheric_command") or false,
@@ -50,13 +53,41 @@ local mod_settings                      = {
     focus_target_switch_melee                = mod:get("focus_target_switch_melee") or false,
     focus_target_switch_range                = mod:get("focus_target_switch_range") or false,
 }
-mod.settings                            = mod_settings
+mod.settings       = mod_settings
+if mod:get("capacitance_retention_elite_threshold_negative_zero") then
+    mod_settings.capacitance_retention_elite_threshold = -0
+    mod:set("capacitance_retention_elite_threshold", -0, false)
+end
+if mod:get("capacitance_retention_special_threshold_negative_zero") then
+    mod_settings.capacitance_retention_special_threshold = -0
+    mod:set("capacitance_retention_special_threshold", -0, false)
+end
+if mod:get("capacitance_retention_boss_threshold_negative_zero") then
+    mod_settings.capacitance_retention_boss_threshold = -0
+    mod:set("capacitance_retention_boss_threshold", -0, false)
+end
 
 local noospheric_command_breed_settings = mod:get("noospheric_command_breed_settings") or {}
 mod.noospheric_command_breed_settings   = noospheric_command_breed_settings
+for _, breed_settings in pairs(noospheric_command_breed_settings) do
+    if breed_settings.threshold_negative_zero then
+        breed_settings.threshold = -0
+    end
+end
+
+do
+    local breed_name = mod:get("noospheric_command_boost_breed_name")
+    local breed_settings = noospheric_command_breed_settings[breed_name]
+    mod:set("noospheric_command_boost_breed_override", breed_settings and breed_settings.override or false, false)
+    mod:set("noospheric_command_boost_breed_toggle", breed_settings and breed_settings.toggle or false, false)
+    mod:set("capacitance_retention_breed_threshold", breed_settings and breed_settings.threshold or 0, false)
+end
+
+local companion_cancel_mark_breed_settings = mod:get("companion_cancel_mark_breed_settings") or {}
+mod.companion_cancel_mark_breed_settings = companion_cancel_mark_breed_settings
 
 -- Default Class Settings
-local DEFAULT_CLASS_SETTINGS            = {
+local DEFAULT_CLASS_SETTINGS = {
     toggle_class     = true,
     cooldown         = 25,
     reset_cooldown   = true,
@@ -108,6 +139,7 @@ local context                            = {
     player_ability_extension    = nil,
     smart_tag_system            = nil,
     outline_system              = nil,
+    smoke_fog_system            = nil,
     hud_element_smart_tagging   = nil,
     companion_command_tap       = "double"
 }
@@ -121,49 +153,62 @@ mod.auto_mark_settings                   = auto_mark_settings
 ---@class AutoMarkMarkContext
 local mark_context                       = {
     auto_mark_interval          = 0,
-    execution_order_units       = {},
-    [TAG_NAMES.ENEMY_TAG]       = {
-        tag         = nil,
-        cooldown    = 0,
-        delay       = 0,
-        manual_unit = nil,
-        is_manual   = false,
-    },
-    [TAG_NAMES.VETERAN_TAG]     = {
-        tag         = nil,
-        cooldown    = 0,
-        delay       = 0,
-        manual_unit = nil,
-        is_manual   = false,
-    },
-    [TAG_NAMES.COMPANION_TAG]   = {
-        tag               = nil,
-        cooldown          = 0,
-        delay             = 0,
-        manual_unit       = nil,
-        is_manual         = false,
-        pounce_start_time = nil,
-        is_cancelable     = false,
-        canceled_unit     = nil,
-    },
-    [TAG_NAMES.SERVO_SKULL_TAG] = {
-        tag                          = nil,
-        cooldown                     = 0,
-        delay                        = 0,
-        manual_unit                  = nil,
-        is_manual                    = false,
-        noospheric_command_next_time = math.huge,
-    },
+    execution_order_units       = setmetatable({}, { __mode = "k" }),
+    [TAG_NAMES.ENEMY_TAG]       = setmetatable(
+        {
+            tag         = nil,
+            cooldown    = 0,
+            delay       = 0,
+            manual_unit = nil,
+            is_manual   = false,
+        },
+        { __mode = "v" }
+    ),
+    [TAG_NAMES.VETERAN_TAG]     = setmetatable(
+        {
+            tag         = nil,
+            cooldown    = 0,
+            delay       = 0,
+            manual_unit = nil,
+            is_manual   = false,
+        },
+        { __mode = "v" }
+    ),
+    [TAG_NAMES.COMPANION_TAG]   = setmetatable(
+        {
+            tag               = nil,
+            cooldown          = 0,
+            delay             = 0,
+            manual_unit       = nil,
+            is_manual         = false,
+            pounce_start_time = nil,
+            is_cancelable     = false,
+            canceled_unit     = nil,
+        },
+        { __mode = "v" }
+    ),
+    [TAG_NAMES.SERVO_SKULL_TAG] = setmetatable(
+        {
+            tag                          = nil,
+            cooldown                     = 0,
+            delay                        = 0,
+            manual_unit                  = nil,
+            is_manual                    = false,
+            noospheric_command_next_time = math.huge,
+            servo_skull_lose_sight_time  = nil,
+        },
+        { __mode = "v" }
+    ),
 }
 mod.mark_context                         = mark_context
 
 -- Enemy Visbility Check
-local visibility_cache                   = {}
-local visibility_check_frame             = {}
+local visibility_cache                   = setmetatable({}, { __mode = "k" })
+local visibility_check_frame             = setmetatable({}, { __mode = "k" })
 mod.visibility_cache                     = visibility_cache
 mod.visibility_check_frame               = visibility_check_frame
-local servo_skull_visibility_cache       = {}
-local servo_skull_visibility_check_frame = {}
+local servo_skull_visibility_cache       = setmetatable({}, { __mode = "k" })
+local servo_skull_visibility_check_frame = setmetatable({}, { __mode = "k" })
 mod.servo_skull_visibility_cache         = servo_skull_visibility_cache
 mod.servo_skull_visibility_check_frame   = servo_skull_visibility_check_frame
 
@@ -190,6 +235,7 @@ local function reset_context()
     companion_tag_context.canceled_unit = nil
     local servo_skull_tag_context = mark_context[TAG_NAMES.SERVO_SKULL_TAG]
     servo_skull_tag_context.noospheric_command_next_time = math.huge
+    servo_skull_tag_context.servo_skull_lose_sight_time = nil
 end
 
 local function destroy_references()
@@ -200,6 +246,7 @@ local function destroy_references()
     context.player_ability_extension    = nil
     context.smart_tag_system            = nil
     context.outline_system              = nil
+    context.smoke_fog_system            = nil
     context.hud_element_smart_tagging   = nil
     mod:destroy_visibility_raycast_objects()
 end
@@ -255,10 +302,19 @@ end
 
 -- Mod Setting Change
 mod.on_setting_changed    = function(setting_id)
-    local class_name = mod:get("class_selection")
     local result = mod:get(setting_id)
+    local class_name = mod:get("class_selection")
+    -- Normal Mod Settings
     if mod_settings[setting_id] ~= nil then
         mod_settings[setting_id] = result
+        if setting_id == "capacitance_retention_elite_threshold" or setting_id == "capacitance_retention_special_threshold" or setting_id == "capacitance_retention_boss_threshold" then
+            if result == -0 and 1 / result < 0 then
+                mod:set(setting_id .. "_negative_zero", true, false)
+            else
+                mod:set(setting_id .. "_negative_zero", false, false)
+            end
+        end
+        -- Apply Class Settings to Other Classes
     elseif setting_id == "apply_button" then
         if result == "apply_to_all" then
             mod:apply_to_all_classes(class_name)
@@ -266,6 +322,7 @@ mod.on_setting_changed    = function(setting_id)
             mod:apply_to_normal_tag(class_name)
         end
         mod:set("apply_button", "blank", false)
+        -- Reset Class Settings
     elseif setting_id == "reset_button" then
         if result == "reset_all" then
             mod:reset_auto_mark_settings()
@@ -274,6 +331,7 @@ mod.on_setting_changed    = function(setting_id)
         end
         mod:set_menu_settings(class_name)
         mod:set("reset_button", "blank", false)
+        -- Reset Noospheric Command Breed Settings
     elseif setting_id == "noospheric_command_boost_reset" then
         if result == "reset" then
             table_clear(noospheric_command_breed_settings)
@@ -281,15 +339,17 @@ mod.on_setting_changed    = function(setting_id)
             mod:set("noospheric_command_boost_breed_name", mod:get("noospheric_command_boost_breed_name"), true)
         end
         mod:set("noospheric_command_boost_reset", "blank", false)
+        -- Select Noospheric Command Breed Name
     elseif setting_id == "noospheric_command_boost_breed_name" then
         local breed_settings = noospheric_command_breed_settings[result]
         mod:set("noospheric_command_boost_breed_override", breed_settings and breed_settings.override or false, false)
         mod:set("noospheric_command_boost_breed_toggle", breed_settings and breed_settings.toggle or false, false)
         mod:set("capacitance_retention_breed_threshold", breed_settings and breed_settings.threshold or 0, false)
+        -- Set Noospheric Command Breed Settings
     elseif setting_id == "noospheric_command_boost_breed_override" or setting_id == "noospheric_command_boost_breed_toggle" or setting_id == "capacitance_retention_breed_threshold" then
         local breed_name = mod:get("noospheric_command_boost_breed_name")
         if noospheric_command_breed_settings[breed_name] == nil then
-            noospheric_command_breed_settings[breed_name] = { override = false, toggle = false, threshold = 0 }
+            noospheric_command_breed_settings[breed_name] = { override = false, toggle = false, threshold = 0, threshold_negative_zero = false }
         end
         if setting_id == "noospheric_command_boost_breed_override" then
             noospheric_command_breed_settings[breed_name].override = result
@@ -297,10 +357,48 @@ mod.on_setting_changed    = function(setting_id)
             noospheric_command_breed_settings[breed_name].toggle = result
         elseif setting_id == "capacitance_retention_breed_threshold" then
             noospheric_command_breed_settings[breed_name].threshold = result
+            if result == -0 and 1 / result < 0 then
+                noospheric_command_breed_settings[breed_name].threshold_negative_zero = true
+            else
+                noospheric_command_breed_settings[breed_name].threshold_negative_zero = false
+            end
         end
         mod:set("noospheric_command_breed_settings", noospheric_command_breed_settings, false)
+        -- Reset Companion Cancel Mark Breed Settings
+    elseif setting_id == "companion_cancel_mark_reset" then
+        if result == "reset" then
+            table_clear(companion_cancel_mark_breed_settings)
+            mod:set("companion_cancel_mark_breed_settings", companion_cancel_mark_breed_settings, false)
+            mod:set("companion_cancel_mark_breed_name", mod:get("companion_cancel_mark_breed_name"), true)
+        end
+        mod:set("companion_cancel_mark_reset", "blank", false)
+        -- Select Companion Cancel Mark Breed Name
+    elseif setting_id == "companion_cancel_mark_breed_name" then
+        local breed_settings = companion_cancel_mark_breed_settings[result]
+        mod:set("companion_cancel_mark_breed_override", breed_settings and breed_settings.override or false, false)
+        mod:set("companion_cancel_mark_breed_health_threshold", breed_settings and breed_settings.health_threshold or 0, false)
+        mod:set("companion_cancel_mark_breed_time_threshold", breed_settings and breed_settings.time_threshold or 0, false)
+        mod:set("companion_cancel_mark_breed_distance_threshold", breed_settings and breed_settings.distance_threshold or 0, false)
+        -- Set Companion Cancel Mark Breed Settings
+    elseif setting_id == "companion_cancel_mark_breed_override" or setting_id == "companion_cancel_mark_breed_health_threshold" or setting_id == "companion_cancel_mark_breed_time_threshold" or setting_id == "companion_cancel_mark_breed_distance_threshold" then
+        local breed_name = mod:get("companion_cancel_mark_breed_name")
+        if companion_cancel_mark_breed_settings[breed_name] == nil then
+            companion_cancel_mark_breed_settings[breed_name] = { override = false, health_threshold = 0, time_threshold = 0, distance_threshold = 0 }
+        end
+        if setting_id == "companion_cancel_mark_breed_override" then
+            companion_cancel_mark_breed_settings[breed_name].override = result
+        elseif setting_id == "companion_cancel_mark_breed_health_threshold" then
+            companion_cancel_mark_breed_settings[breed_name].health_threshold = result
+        elseif setting_id == "companion_cancel_mark_breed_time_threshold" then
+            companion_cancel_mark_breed_settings[breed_name].time_threshold = result
+        elseif setting_id == "companion_cancel_mark_breed_distance_threshold" then
+            companion_cancel_mark_breed_settings[breed_name].distance_threshold = result
+        end
+        mod:set("companion_cancel_mark_breed_settings", companion_cancel_mark_breed_settings, false)
+        -- Set Class Name
     elseif setting_id == "class_selection" then
         mod:set_menu_settings(class_name)
+        -- Set Class Settings
     else
         local class_settings = auto_mark_settings[class_name]
         if DEFAULT_CLASS_SETTINGS[setting_id] ~= nil then
@@ -342,10 +440,6 @@ local function auto_mark_by_tag(tag_name, t, fixed_frame)
 
     local tag_context = mark_context[tag_name]
     local class_settings = mod:get_class_settings(tag_name)
-    if not class_settings.toggle_class then
-        return false
-    end
-
     local marked_tag = tag_context.tag
     local marked_tag_is_manual = tag_context.is_manual
     -- mark when cooldown is zero
@@ -356,18 +450,19 @@ local function auto_mark_by_tag(tag_name, t, fixed_frame)
     local is_execution_order_priority = mod_settings.execution_order_priority and tag_name == TAG_NAMES.COMPANION_TAG and context.has_execution_order
 
     local target_unit, target_tag
-    if class_settings.override_manual or not marked_tag_is_manual then
+    if class_settings.toggle_class and (class_settings.override_manual or not marked_tag_is_manual) then
         if is_cooldown_ready then
             target_unit, target_tag = mod:find_target_unit_custom("auto", class_settings.min_range, class_settings.max_range, tag_name, tag_context, class_settings, true, is_execution_order_priority, nil)
         elseif is_priority_switch or is_execution_order_priority and marked_tag then
             target_unit, target_tag = mod:find_target_unit_custom("auto", class_settings.min_range, class_settings.max_range, tag_name, tag_context, class_settings, true, is_execution_order_priority, marked_tag)
         end
     end
+
     -- mark when focus target overwrite is on
     if not target_unit and mod_settings.focus_target_overwrite and tag_name == TAG_NAMES.VETERAN_TAG and marked_tag then
         local marked_unit = marked_tag._target_unit
         if mod:is_target_valid(tag_name, marked_tag, marked_unit) then
-            mod:print_debug("Focus target overwrite")
+            mod:print_debug("Focus Target Overwrite")
             target_unit = marked_unit
             if marked_tag_is_manual then
                 mod:on_manual_mark(tag_context, target_unit)
@@ -377,8 +472,8 @@ local function auto_mark_by_tag(tag_name, t, fixed_frame)
 
     if not target_unit and mod_settings.noospheric_command_boost and context.has_noospheric_command and tag_name == TAG_NAMES.SERVO_SKULL_TAG and marked_tag and t >= tag_context.noospheric_command_next_time then
         local marked_unit = marked_tag._target_unit
-        if mod:is_target_valid(tag_name, nil, marked_unit) and mod:is_noospheric_command_boost_breed_valid(marked_unit) and mod:is_servo_skull_target_visible(marked_unit, fixed_frame) then
-            mod:print_debug("Noospheric command boost")
+        if mod:is_noospheric_command_boost_breed_valid(marked_unit) and mod:is_target_valid(tag_name, nil, marked_unit) and mod:is_servo_skull_target_visible(marked_unit, fixed_frame) then
+            mod:print_debug("Noospheric Command Boost")
             target_unit = marked_unit
             if marked_tag_is_manual then
                 mod:on_manual_mark(tag_context, target_unit)
@@ -390,7 +485,7 @@ local function auto_mark_by_tag(tag_name, t, fixed_frame)
         return false
     end
 
-    mod:print_debug("Auot Mark", tag_name, target_unit)
+    mod:print_debug("Auto Mark", tag_name, target_unit)
     mod:mark(tag_name, target_unit, target_tag)
     return true
 end
@@ -444,53 +539,17 @@ local function auto_mark(dt, t, fixed_frame)
     end
 end
 
-local function cancel_companion_mark_on_condition(t)
-    if not mod_settings.companion_cancel_mark or context.class_name ~= "adamant" or not context.has_companion then
-        return
-    end
-
-    local tag_context = mark_context[TAG_NAMES.COMPANION_TAG]
-    if tag_context.is_manual then
-        return
-    end
-
-    local marked_tag = tag_context.tag
-    if not marked_tag or not tag_context.is_cancelable then
-        return
-    end
-
-    if mod_settings.companion_health_threshold > 0 and tag_context.pounce_start_time then
-        local marked_unit = marked_tag._target_unit
-        local health_percent = Health.current_health_percent(marked_unit)
-        if health_percent < mod_settings.companion_health_threshold then
-            mod:print_debug("cancel mark due to health threshold, health_percent:", health_percent)
-            tag_context.canceled_unit = marked_unit
-            mod:cancel_mark(marked_tag._id)
-            return
-        end
-    end
-
-    if mod_settings.companion_time_threshold > 0 and tag_context.pounce_start_time then
-        local elapsed_time = t - tag_context.pounce_start_time
-        if elapsed_time > mod_settings.companion_time_threshold then
-            mod:print_debug("cancel mark due to time threshold, elapsed_time:", elapsed_time)
-            tag_context.canceled_unit = marked_tag._target_unit
-            mod:cancel_mark(marked_tag._id)
-            return
-        end
-    end
-end
-
 local function clean_visibility_cache(fixed_frame)
-    if fixed_frame % 20 == 0 then
+    if fixed_frame % 3120 == 0 then
+        local frame_threshold = fixed_frame - 5
         for cached_unit, check_frame in pairs(visibility_check_frame) do
-            if fixed_frame - check_frame > 5 then
+            if check_frame < frame_threshold then
                 visibility_cache[cached_unit] = nil
                 visibility_check_frame[cached_unit] = nil
             end
         end
         for cached_unit, check_frame in pairs(servo_skull_visibility_check_frame) do
-            if fixed_frame - check_frame > 5 then
+            if check_frame < frame_threshold then
                 servo_skull_visibility_cache[cached_unit] = nil
                 servo_skull_visibility_check_frame[cached_unit] = nil
             end
@@ -507,8 +566,9 @@ mod:hook_safe(CLASS.PlayerUnitSmartTargetingExtension, "fixed_update",
 
         if context.game_mode_valid then
             clean_visibility_cache(fixed_frame)
-            cancel_companion_mark_on_condition(t)
-            auto_mark(dt, t, fixed_frame)
+            mod:auto_cancel_companion_mark(t)
+            mod:auto_cancel_servo_skull_mark(t, fixed_frame)
             mod:auto_hack(dt, t, fixed_frame)
+            auto_mark(dt, t, fixed_frame)
         end
     end)

@@ -740,10 +740,10 @@
 
 ### [Auto Mark](https://www.nexusmods.com/warhammer40kdarktide/mods/736)
     自動標記 (非狗哨)
-- MOD 網站最後更新日期：Last updated 26 June 2026, 1:27PM
-- MOD 版本：2.2.
-- MOD 檔案名稱：AutoMark_2.2.2_L8cAq8mf3
-- 手動維護最後下載日期：2026-06-27
+- MOD 網站最後更新日期：Last updated 05 July 2026, 5:25PM
+- MOD 版本：2.2.6
+- MOD 檔案名稱：AutoMark 736 2.2.6 29Sw89d2x
+- 手動維護最後下載日期：2026-07-06
 
 # 移除的MOD
 
