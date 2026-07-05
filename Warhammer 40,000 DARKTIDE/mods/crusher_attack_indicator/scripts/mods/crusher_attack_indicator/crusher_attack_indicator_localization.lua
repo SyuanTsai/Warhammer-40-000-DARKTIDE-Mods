@@ -11,7 +11,7 @@ local localizations = {
 	mod_description = {
 		["en"] = "Shows colored rings for Crusher cleave attacks. Yellow for warning, Red for the actual attack. Optional persistent yellow ring. Version: " .. version,
 		["zh-cn"] = "显示粉碎者横扫攻击的彩色指示环 - 黄色为警告，红色为实际攻击。可选常驻黄色环。版本：" .. version,
-        ["zh-tw"] = "顯示碾壓者順劈攻擊的彩色圓環。黃色代表警告，紅色代表實際攻擊。可選擇常駐黃色圓環。版本：" .. version,
+        ["zh-tw"] = "顯示碾壓者順劈攻擊的彩色圓環。黃色代表警告，紅色代表實際攻擊。可選擇讓黃色圓環常駐顯示。版本：" .. version,
 		["ru"] = "Показывает цветные кольца для атак Крушителя - Жёлтый для предупреждения, Красный для самой атаки. Опциональное постоянное жёлтое кольцо. Версия: " .. version,
 	},
     enabled = {
@@ -23,13 +23,13 @@ local localizations = {
     persistent_yellow = {
         ["en"] = "Always Show Yellow Ring", 
         ["zh-cn"] = "始终显示黄色环",
-        ["zh-tw"] = "永遠顯示黃色圓環",
+        ["zh-tw"] = "一律顯示黃色圓環",
         ["ru"] = "Всегда показывать жёлтое кольцо",
     },
     persistent_yellow_tooltip = {
         ["en"] = "Show yellow ring around crushers at all times (not just during attacks)",
         ["zh-cn"] = "始终在粉碎者周围显示黄色环（不仅限于攻击期间）",
-        ["zh-tw"] = "永遠在碾壓者周圍顯示黃色圓環（不只限於攻擊期間）",
+        ["zh-tw"] = "一律在碾壓者周圍顯示黃色圓環（不只限於攻擊期間）",
         ["ru"] = "Показывать жёлтое кольцо вокруг крушителей постоянно (не только во время атак)",
     },
     ring_radius = {
