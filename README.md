@@ -368,10 +368,10 @@
 
 ### [SpecialsTracker](https://www.nexusmods.com/warhammer40kdarktide/mods/274)
     顯示場上所有特感數量
-- MOD 網站最後更新日期：Last updated 24 September 2025, 8:12PM
-- MOD 版本：1.6
-- MOD 檔案名稱：SpecialsTracker-274-1-6-1758715953
-- 手動維護最後下載日期：2025-10-01
+- MOD 網站最後更新日期：Last updated 02 July 2026, 2:24AM
+- MOD 版本：1.7
+- MOD 檔案名稱：SpecialsTracker 274 1.7 RZfXOZcsk
+- 手動維護最後下載日期：2026-07-05
 
 ---
 # 遊戲內操作相關MOD
