@@ -425,10 +425,10 @@
 
 ### [Clear Smoke](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
     煙霧輔助
-- MOD 網站最後更新日期：Last updated 21 November 2025, 7:21AM
-- MOD 版本：1.2
-- MOD 檔案名稱：clear_smoke-517-1-2-1763680914
-- 手動維護最後下載日期：2025-12-06
+- MOD 網站最後更新日期：Last updated 04 July 2026, 4:25PM
+- MOD 版本：1.4
+- MOD 檔案名稱：clear_smoke 517 1.4 L8cAq8mL7
+- 手動維護最後下載日期：2026-07-06
 - Use Google driver.
 
 ---

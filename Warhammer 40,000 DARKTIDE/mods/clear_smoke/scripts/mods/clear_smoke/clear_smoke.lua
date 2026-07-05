@@ -162,8 +162,9 @@ mod:hook("SmokeFogSystem", "update", function(func, self, context, dt, t, ...)
             extension.is_expired = false
         end
 
-        if is_server and remaining_duration <= -DELETE_AFTER_DURATION_TIMER then
+        if is_server and remaining_duration <= -DELETE_AFTER_DURATION_TIMER and not extension.marked_for_deletion then
             Managers.state.unit_spawner:mark_for_deletion(unit)
+			extension.marked_for_deletion = true
         end
     end
 
