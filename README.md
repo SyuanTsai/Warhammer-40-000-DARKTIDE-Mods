@@ -49,10 +49,10 @@
 
 ### [Skitarius](https://www.nexusmods.com/warhammer40kdarktide/mods/510)
     顱骨支援
-- MOD 網站最後更新日期：Last updated 25 June 2026, 4:18AM
-- MOD 版本：2.1.9
-- MOD 檔案名稱：Skitarius_2.1.9_2.1.9_IP0ifPVaG
-- 手動維護最後下載日期：2026-06-26
+- MOD 網站最後更新日期：Last updated 04 July 2026, 5:17AM
+- MOD 版本：2.2.4
+- MOD 檔案名稱：Skitarius 2.2.4 510 2.2.4 oudzUuMof
+- 手動維護最後下載日期：2026-07-06
 
 ### [Auto Loot](https://www.nexusmods.com/warhammer40kdarktide/mods/375)
     自動開啟箱子並撿取物品
