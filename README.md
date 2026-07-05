@@ -249,7 +249,7 @@
 
 ### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
     怪物生成器 - 靈能室可以選擇要生那些怪，並且產生特定波次訓練身法。
-- MOD 網站最後更新日期：Last updated 20 March 2026, 3:26AM
-- MOD 版本：26.03.19
-- MOD 檔案名稱：Creature Spawner-25-26-03-19-1773948379
-- 手動維護最後下載日期：2026-03-29
+- MOD 網站最後更新日期：Last updated 02 July 2026, 5:50PM
+- MOD 版本：26.07.02
+- MOD 檔案名稱：Creature Spawner 25 26.07.02 QHh61HD5Z
+- 手動維護最後下載日期：2026-07-05
