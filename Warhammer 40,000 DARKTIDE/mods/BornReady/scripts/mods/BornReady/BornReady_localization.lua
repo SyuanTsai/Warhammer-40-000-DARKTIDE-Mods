@@ -12,7 +12,6 @@ return {
 	},
 	leave_party = {
 		en = Localize("loc_social_menu_leave_party"),
-		["zh-tw"] = "離開小隊",
 	},
 	autoready = {
 		en = "Ready up in lobby",
@@ -23,7 +22,7 @@ return {
 	autoskip = {
 		en = "Automatically skip",
 		["zh-cn"] = "跳过任务结束界面",
-		["zh-tw"] = "自動跳過",
+		["zh-tw"] = "自動跳過任務結算",
 		ru = "Пропустить экран окончания миссии",
 	},
 	end_skip_time = {
