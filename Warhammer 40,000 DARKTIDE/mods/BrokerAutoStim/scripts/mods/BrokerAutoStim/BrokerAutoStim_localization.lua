@@ -2,12 +2,12 @@
 		mod_name = {
 			en = "Broker Auto Stim",
 			["zh-cn"] = "自动注射兴奋剂",
-			["zh-tw"] = "Broker 自動注射興奮劑",
+			["zh-tw"] = "代理自動注射興奮劑",
 		},
 		mod_description = {
 			en = "Automatically injects broker stim after being in combat for a set duration.",
 			["zh-cn"] = "在进入战斗一定时间后自动注射自制兴奋剂。",
-			["zh-tw"] = "進入戰鬥達指定時間後，自動注射 Broker 興奮劑。",
+			["zh-tw"] = "進入戰鬥達指定時間後，自動注射代理興奮劑。",
 		},
 		profile_settings = {
 			en = "Profile Settings",
@@ -142,22 +142,22 @@
 		only_with_chemical_dependency = {
 			en = "Only With Chemical Dependency",
 			["zh-cn"] = "仅在有化学依赖时",
-			["zh-tw"] = "僅限化學依賴",
+			["zh-tw"] = "僅限化學性依賴",
 		},
 		only_with_chemical_dependency_description = {
 			en = "Only auto-stim if you have the Chemical Dependency keystone.",
 			["zh-cn"] = "只有当你拥有化学依赖关键技能时才自动注射兴奋剂。",
-			["zh-tw"] = "只有當你擁有「化學依賴」關鍵天賦時，才會自動注射興奮劑。",
+			["zh-tw"] = "只有當你擁有「化學性依賴」關鍵天賦時，才會自動注射興奮劑。",
 		},
 		not_with_stimm_supply = {
             en = "Not with Stimm Supply",
             ["zh-cn"] = "选择兴奋剂补给时禁用自动化",
-			["zh-tw"] = "不與興奮劑補給同時使用",
+			["zh-tw"] = "不與化學性依賴同時使用",
         },
         not_with_stimm_supply_description = {
             en = "Disable auto-stim if you have the Stimm Field combat ability.",
             ["zh-cn"] = "若玩家选择了右线兴奋剂补给大招，则禁用自动注射兴奋剂的功能。",
-			["zh-tw"] = "如果你擁有「興奮劑力場」戰鬥技能，停用自動注射興奮劑。",
+			["zh-tw"] = "如果你擁有「化學性依賴」戰鬥技能，停用自動注射興奮劑。",
         },
 		auto_inject_prevention = {
 			en = "Auto Inject Prevention",
