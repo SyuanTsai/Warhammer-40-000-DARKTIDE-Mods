@@ -11,19 +11,13 @@ setting_id = "mute_lobby_mission",
 type = "checkbox",
 default_value = true,
 title = "MuteLobbyTitle",
-},
-{
-setting_id = "silence_expeditions",
-type = "checkbox",
-default_value = true,
-title = "SilenceExpeditionsTitle",
+tooltip = "MuteLobbyTooltip",
 },
 {
 setting_id = "report_timing",
 type = "dropdown",
-default_value = "valkyrie_start",
+default_value = "mission_start",
 title = "ReportTimingTitle",
-tooltip = "ReportTimingTooltip",
 options = {
 {text = "ReportTimingNone", value = "none"},
 {text = "ReportTimingValkyrieStart", value = "valkyrie_start"},
@@ -39,7 +33,7 @@ title = "MissionHologramTitle",
 {
 setting_id = "steady_camera",
 type = "checkbox",
-default_value = false,
+default_value = true,
 title = "SteadyCameraTitle",
 },
 {
@@ -56,7 +50,7 @@ options = {
 {
 setting_id = "business_cards",
 type = "checkbox",
-default_value = false,
+default_value = true,
 title = "BusinessCardsTitle",
 sub_widgets = {
 {
