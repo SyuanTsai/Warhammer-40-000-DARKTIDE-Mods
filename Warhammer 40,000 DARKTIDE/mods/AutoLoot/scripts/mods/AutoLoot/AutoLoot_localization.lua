@@ -41,11 +41,11 @@ return {
 	},
 	pickup_crates = {
 		en = "Automatically pick up deployable crates",
-		["zh-tw"] = "自動拾取可部署箱",
+		["zh-tw"] = "自動拾取可部署物品",
 	},
 	pickup_crates_description = {
 		en = "Only picks up crates if you don't already have one",
-		["zh-tw"] = "只有你尚未持有可部署箱時才會拾取",
+		["zh-tw"] = "只有你尚未持有可部署物品時才會拾取",
 	},
 	pickup_grenades = {
 		en = "Automatically pick up grenades",
