@@ -521,10 +521,10 @@
 
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
     減緩記憶體崩潰
-- MOD 網站最後更新日期：Last updated 27 June 2026, 4:08AM
-- MOD 版本：0.4.0
-- MOD 檔案名稱：CombatStats_0.4.0_VWLqrWhRE
-- 手動維護最後下載日期：2026-06-28
+- MOD 網站最後更新日期：Last updated 05 July 2026, 10:51AM
+- MOD 版本：0.4.4
+- MOD 檔案名稱：CombatStats 661 0.4.4 5gEeTgi55
+- 手動維護最後下載日期：2026-07-06
 
 ### [CharacterGrid](https://www.nexusmods.com/warhammer40kdarktide/mods/649)
     角色顯示
