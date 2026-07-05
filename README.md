@@ -611,10 +611,10 @@
 
 ### [TagKeys](https://www.nexusmods.com/warhammer40kdarktide/mods/79)
     使用快捷鍵做遊戲標記
-- MOD 網站最後更新日期：Last updated 08 April 2023 8:12AM
-- MOD 版本：1.3
-- MOD 檔案名稱：TagKeys-79-1-3-1680937957
-- 手動維護最後下載日期：2025-02-24
+- MOD 網站最後更新日期：Last updated 01 July 2026, 8:35PM
+- MOD 版本：1.4
+- MOD 檔案名稱：TagKeys 79 1.4 ufCjsf7zO
+- 手動維護最後下載日期：2026-07-05
 
 ### [Weapon Filter](https://www.nexusmods.com/warhammer40kdarktide/mods/373)
     武器過濾
