@@ -16,13 +16,13 @@ return {
     en = "Creature Spawner",
     ["zh-cn"] = "生物生成",
     ru = "Спавнер существ",
-    ["zh-tw"] = "怪物生成器",
+    ["zh-tw"] = "生物生成器",
   },
   mod_description = {
     en = "Allows you to spawn various units in self-hosted maps that support them.",
     ["zh-cn"] = "允许你在自己主办的游戏中生成各种单位。",
     ru = "Creature Spawner - Позволяет создавать на картах в частных играх различных существ, которые поддерживаются этими картами.",
-    ["zh-tw"] = "允許你在私人遊戲的地圖中生成各種單位。",
+    ["zh-tw"] = "允許你在支援的自架地圖中生成各種單位。",
   },
   cs_unit_list = {
     en = "Available Unit List",
@@ -54,9 +54,9 @@ return {
     "-- ВСЕ --\nВсе известные существа.",
     ["zh-tw"] = "允許選擇可生成的單位。\n" ..
     "-- 常規 --\n所有「普通」單位類型。\n" ..
-    "-- 菁英 --\n僅限普通菁英單位。\n" ..
+    "-- 精英 --\n僅限普通精英單位。\n" ..
     "-- 專家 --\n僅限普通專家單位。\n" ..
-    "-- Boss --\n所有 Boss 和怪物。\n" ..
+    "-- Boss --\n所有 Boss 和巨獸。\n" ..
     "-- 雜項 --\n未使用、不穩定或除錯用的單位。\n" ..
     "-- 全部 --\n所有已知單位。",
   },
@@ -106,7 +106,7 @@ return {
     en = "All bosses and monstrosities",
     ["zh-cn"] = "所有 Boss 和怪物。",
     ru = "Все боссы и монстры",
-    ["zh-tw"] = "所有 Boss 和怪物。",
+    ["zh-tw"] = "所有 Boss 和巨獸。",
   },
   cs_unit_list_header_misc = {
     en = "Misc",
@@ -124,6 +124,7 @@ return {
     en = "All",
     ["zh-cn"] = "所有",
     ru = "Все",
+    ["zh-tw"] = "全部",
   },
   cs_unit_list_header_all_description = {
     en = "All known units",
@@ -148,14 +149,14 @@ return {
     "-- ГЕРОИ --\nНа стороне игроков.\n" ..
     "-- ЗЛОДЕИ --\nНа стороне врага.",
     ["zh-tw"] = "允許選擇生成單位的陣營。\n" ..
-    "-- 英雄 --\n玩家一方陣營。\n" ..
-    "-- 反派 --\n敵人一方陣營。",
+    "-- 英雄 --\n玩家方陣營。\n" ..
+    "-- 反派 --\n敵方陣營。",
   },
   cs_unit_side_header_heroes = {
     en = "Heroes",
     ["zh-cn"] = "特工",
     ru = "Герои",
-    ["zh-tw"] = "特工",
+    ["zh-tw"] = "英雄",
   },
   cs_unit_side_header_heroes_description = {
     en = "The side of the players.",
@@ -347,13 +348,13 @@ return {
     en = "Keybind: Reset Combat Ability Cooldown",
     ["zh-cn"] = "快捷键：重置主动技能冷却",
     ru = "Клавиша: Cброс времени восстановления боевых способностей",
-    ["zh-tw"] = "快捷鍵：重置戰鬥技能冷卻時間",
+    ["zh-tw"] = "快捷鍵：重置戰鬥能力CD",
   },
   cs_reset_combat_ability_cooldown_keybind_description = {
     en = "Choose the keybinding that resets the Combat Ability Cooldown in the Training Grounds.",
     ["zh-cn"] = "选择用于在训练场内重置主动技能冷却的快捷键。",
     ru = "Выберите комбинацию клавиш, которая сбрасывает время восстановления боевых способностей на Стрельбище.",
-    ["zh-tw"] = "選擇用於在訓練場中重置戰鬥技能冷卻時間的快捷鍵。",
+    ["zh-tw"] = "選擇用於在訓練場中重置戰鬥能力CD的快捷鍵。",
   },
   cs_enable_training_grounds_invisibility_keybind = {
     en = "Keybind: Toggle Player Invisibility",
@@ -383,13 +384,13 @@ return {
     en = "Current Trial",
     ["zh-cn"] = "当前试炼",
     ru = "Текущее испытание",
-    ["zh-tw"] = "當前試煉",
+    ["zh-tw"] = "目前試煉",
   },
   cs_active_trial_description = {
     en = "Choose the current Training Grounds trial. None will result in regular Training Grounds spawns.",
     ["zh-cn"] = "选择当前的训练场试炼。选择 None 则会生成标准怪物。",
     ru = "Выберите текущее испытание на Стрельбище. Ни одно из них не приведёт к периодическому спавну врагов на Стрельбище.",
-    ["zh-tw"] = "選擇當前的訓練場試煉。選擇 None 則會生成標準怪物。",
+    ["zh-tw"] = "選擇目前的訓練場試煉。選擇「無」則會生成標準單位。",
   },
   cs_previous_trial_keybind = {
     en = "Keybind: Previous Trial",
@@ -414,5 +415,194 @@ return {
     ["zh-cn"] = "切换到下一个可用的试炼",
     ru = "Переключает на следующее испытание.",
     ["zh-tw"] = "切換到下一個可用的試煉。",
+  },
+  -- Training Grounds Trials
+  cs_hero_trial_none = {
+    en = "None",
+    ["zh-tw"] = "無",
+  },
+  cs_hero_trial_50_groaners = {
+    en = "50 Groaners",
+    ["zh-tw"] = "50 名呻吟者",
+  },
+  cs_hero_trial_50_poxwalkers = {
+    en = "50 Poxwalkers",
+    ["zh-tw"] = "50 名瘟疫行者",
+  },
+  cs_hero_trial_20_scab_bruisers = {
+    en = "20 Scab Bruisers",
+    ["zh-tw"] = "20 名血痂打手",
+  },
+  cs_hero_trial_20_dreg_bruisers = {
+    en = "20 Dreg Bruisers",
+    ["zh-tw"] = "20 名渣滓打手",
+  },
+  cs_hero_trial_20_scab_shooters_mix = {
+    en = "20 Scab Shooters Mix",
+    ["zh-tw"] = "20 名血痂射手混合",
+  },
+  cs_hero_trial_20_scab_stalkers_mix = {
+    en = "20 Scab Stalkers Mix",
+    ["zh-tw"] = "20 名血痂潛行者混合",
+  },
+  cs_hero_trial_20_dreg_stalkers_mix = {
+    en = "20 Dreg Stalkers Mix",
+    ["zh-tw"] = "20 名渣滓潛行者混合",
+  },
+  cs_hero_trial_10_scab_shotgunners = {
+    en = "10 Scab Shotgunners",
+    ["zh-tw"] = "10 名血痂霰彈槍手",
+  },
+  cs_hero_trial_10_dreg_shotgunners = {
+    en = "10 Dreg Shotgunners",
+    ["zh-tw"] = "10 名渣滓霰彈槍手",
+  },
+  cs_hero_trial_8_scab_gunners = {
+    en = "8 Scab Gunners",
+    ["zh-tw"] = "8 名血痂砲手",
+  },
+  cs_hero_trial_8_dreg_gunners = {
+    en = "8 Dreg Gunners",
+    ["zh-tw"] = "8 名渣滓砲手",
+  },
+  cs_hero_trial_6_maulers = {
+    en = "6 Maulers",
+    ["zh-tw"] = "6 名重錘兵",
+  },
+  cs_hero_trial_6_scab_ragers = {
+    en = "6 Scab Ragers",
+    ["zh-tw"] = "6 名血痂狂怒者",
+  },
+  cs_hero_trial_6_dreg_ragers = {
+    en = "6 Dreg Ragers",
+    ["zh-tw"] = "6 名渣滓狂怒者",
+  },
+  cs_hero_trial_4_bulwarks = {
+    en = "4 Bulwarks",
+    ["zh-tw"] = "4 名堡壘兵",
+  },
+  cs_hero_trial_4_reapers = {
+    en = "4 Reapers",
+    ["zh-tw"] = "4 名收割者",
+  },
+  cs_hero_trial_4_crushers = {
+    en = "4 Crushers",
+    ["zh-tw"] = "4 名輾壓者",
+  },
+  cs_hero_trial_melee_pressure_easy = {
+    en = "Melee Pressure - Easy",
+    ["zh-tw"] = "近戰壓力 - 簡單",
+  },
+  cs_hero_trial_melee_pressure_normal = {
+    en = "Melee Pressure - Normal",
+    ["zh-tw"] = "近戰壓力 - 普通",
+  },
+  cs_hero_trial_melee_pressure_hard = {
+    en = "Melee Pressure - Hard",
+    ["zh-tw"] = "近戰壓力 - 困難",
+  },
+  cs_hero_trial_melee_pressure_insane = {
+    en = "Melee Pressure - Insane",
+    ["zh-tw"] = "近戰壓力 - 瘋狂",
+  },
+  cs_hero_trial_ranged_pressure_easy = {
+    en = "Ranged Pressure - Easy",
+    ["zh-tw"] = "遠程壓力 - 簡單",
+  },
+  cs_hero_trial_ranged_pressure_normal = {
+    en = "Ranged Pressure - Normal",
+    ["zh-tw"] = "遠程壓力 - 普通",
+  },
+  cs_hero_trial_ranged_pressure_hard = {
+    en = "Ranged Pressure - Hard",
+    ["zh-tw"] = "遠程壓力 - 困難",
+  },
+  cs_hero_trial_ranged_pressure_insane = {
+    en = "Ranged Pressure - Insane",
+    ["zh-tw"] = "遠程壓力 - 瘋狂",
+  },
+  cs_hero_trial_mixed_pressure_easy = {
+    en = "Mixed Pressure - Easy",
+    ["zh-tw"] = "混合壓力 - 簡單",
+  },
+  cs_hero_trial_mixed_pressure_normal = {
+    en = "Mixed Pressure - Normal",
+    ["zh-tw"] = "混合壓力 - 普通",
+  },
+  cs_hero_trial_mixed_pressure_hard = {
+    en = "Mixed Pressure - Hard",
+    ["zh-tw"] = "混合壓力 - 困難",
+  },
+  cs_hero_trial_mixed_pressure_insane = {
+    en = "Mixed Pressure - Insane",
+    ["zh-tw"] = "混合壓力 - 瘋狂",
+  },
+  cs_hero_trial_boss_rush_chaos_spawn = {
+    en = "Boss Rush - Chaos Spawn",
+    ["zh-tw"] = "Boss Rush - 渾沌魔物",
+  },
+  cs_hero_trial_boss_rush_beast_of_nurgle = {
+    en = "Boss Rush - Beast of Nurgle",
+    ["zh-tw"] = "Boss Rush - 納垢巨獸",
+  },
+  cs_hero_trial_boss_rush_ogryn_pack_master = {
+    en = "Boss Rush - Ogryn Pack Master",
+    ["zh-tw"] = "Boss Rush - 歐格林馴犬師",
+  },
+  cs_hero_trial_hunting_grounds = {
+    en = "Hunting Grounds",
+    ["zh-tw"] = "狩獵場",
+  },
+  cs_hero_trial_poxburster_detonator = {
+    en = "Poxburster Detonator",
+    ["zh-tw"] = "瘟疫爆者引爆者",
+  },
+  cs_hero_trial_laser_tag = {
+    en = "Laser Tag",
+    ["zh-tw"] = "雷射鬼抓人",
+  },
+  cs_hero_trial_2_minutes_specials_panic_easy = {
+    en = "2 Minutes Specials Panic - Easy",
+    ["zh-tw"] = "2 分鐘專家恐慌 - 簡單",
+  },
+  cs_hero_trial_2_minutes_specials_panic_normal = {
+    en = "2 Minutes Specials Panic - Normal",
+    ["zh-tw"] = "2 分鐘專家恐慌 - 普通",
+  },
+  cs_hero_trial_2_minutes_specials_panic_hard = {
+    en = "2 Minutes Specials Panic - Hard",
+    ["zh-tw"] = "2 分鐘專家恐慌 - 困難",
+  },
+  cs_hero_trial_2_minutes_specials_panic_very_hard = {
+    en = "2 Minutes Specials Panic - Very Hard",
+    ["zh-tw"] = "2 分鐘專家恐慌 - 非常困難",
+  },
+  cs_hero_trial_2_minutes_specials_panic_insane = {
+    en = "2 Minutes Specials Panic - Insane",
+    ["zh-tw"] = "2 分鐘專家恐慌 - 瘋狂",
+  },
+  cs_hero_trial_endless_specials_beginner = {
+    en = "Endless Specials - Beginner",
+    ["zh-tw"] = "無盡專家 - 入門",
+  },
+  cs_hero_trial_endless_specials_easy = {
+    en = "Endless Specials - Easy",
+    ["zh-tw"] = "無盡專家 - 簡單",
+  },
+  cs_hero_trial_endless_specials_normal = {
+    en = "Endless Specials - Normal",
+    ["zh-tw"] = "無盡專家 - 普通",
+  },
+  cs_hero_trial_endless_specials_hard = {
+    en = "Endless Specials - Hard",
+    ["zh-tw"] = "無盡專家 - 困難",
+  },
+  cs_hero_trial_endless_specials_very_hard = {
+    en = "Endless Specials - Very Hard",
+    ["zh-tw"] = "無盡專家 - 非常困難",
+  },
+  cs_hero_trial_endless_specials_insane = {
+    en = "Endless Specials - Insane",
+    ["zh-tw"] = "無盡專家 - 瘋狂",
   },
 }
