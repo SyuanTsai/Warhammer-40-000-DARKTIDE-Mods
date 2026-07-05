@@ -37,6 +37,7 @@
 - Heretical Idol - 異端神像
 - Martyr's Skull - 殉道者之顱
 - Psykhanium - 靈能室
+- Mortis Trials - 死神試煉
 
 ### 增益效果 (BUFFS)
 
