@@ -22,6 +22,13 @@ local DETAIL_ICON_SPACING = 5
 local DETAIL_TEXT_FONT_SIZE = 18
 local DETAIL_TEXT_PADDING = 10
 
+-- Stripe bleed so the row background reaches the pane edges (grid doesn't clip).
+local STRIPE_BLEED_LEFT = 20
+local STRIPE_BLEED_RIGHT = 30
+
+-- Darktide's terminal-background greenish-gray, a touch brighter than the pane background.
+local COLOR_STRIPE = { 120, 49, 56, 49 }
+
 local CombatStatsView = class('CombatStatsView', 'BaseView')
 
 function CombatStatsView:init(settings, context)
@@ -36,6 +43,8 @@ function CombatStatsView:init(settings, context)
     self._using_cursor_navigation = Managers.ui:using_cursor_navigation()
     self._viewing_history = false
     self._viewing_history_entry = false
+    self._history_loading = false
+    self._history_entry_loading = false
     self._tracker = mod.tracker
 end
 
@@ -66,8 +75,9 @@ end
 
 function CombatStatsView:_format_entry_subtext(entry)
     if entry.is_history then
-        -- History entries show timestamp
-        return entry.history_data.date, Color.terminal_text_body_sub_header(255, true)
+        -- Placeholders (e.g. "Loading...") have no history_data
+        local date = entry.history_data and entry.history_data.date
+        return date or '', Color.terminal_text_body_sub_header(255, true)
     end
 
     local dps = 0
@@ -130,8 +140,26 @@ function CombatStatsView:_setup_entries()
     search_text = search_text:lower()
 
     if self._viewing_history then
-        -- Load history entries
+        -- Load history entries. If the index is still loading asynchronously,
+        -- show a placeholder entry so the player knows to wait.
         local history_entries = mod.history:get_history_entries()
+
+        -- Placeholder until the index loads or if there are no entries
+        if #history_entries == 0 then
+            local label = self._history_loading and 'Loading history...' or 'No history entries'
+            local placeholder = {
+                widget_type = 'stats_entry',
+                name = label,
+                duration = 0,
+                stats = {},
+                buffs = {},
+                is_session = true,
+                is_history = true,
+                disabled = true,
+            }
+            placeholder.subtext, placeholder.subtext_color = self:_format_entry_subtext(placeholder)
+            entries[#entries + 1] = placeholder
+        end
 
         for _, history_entry in ipairs(history_entries) do
             local mission_display = mod.utils:get_mission_display_name(history_entry.mission_name)
@@ -161,7 +189,26 @@ function CombatStatsView:_setup_entries()
             end
         end
     else
+        -- Show a placeholder while a history entry loads
+        if self._history_entry_loading then
+            local placeholder = {
+                widget_type = 'stats_entry',
+                name = 'Loading entry...',
+                duration = 0,
+                stats = {},
+                buffs = {},
+                is_session = true,
+                disabled = true,
+            }
+            placeholder.subtext, placeholder.subtext_color = self:_format_entry_subtext(placeholder)
+            entries[#entries + 1] = placeholder
+            return entries
+        end
+
         local tracker = self._tracker
+        if not tracker then
+            return entries
+        end
         local current_time = tracker:get_time()
         local engagements = tracker:get_engagement_stats()
         local session = tracker:get_session_stats()
@@ -331,28 +378,50 @@ function CombatStatsView:_rebuild_detail_widgets(entry)
     local detail_content_width = detail_scenegraph.size[1]
     local text_width = detail_content_width
 
+    -- Alternating-row stripe state. Data rows auto-stripe; headers skip and reset
+    -- the counter so each section reads as its own striped table.
+    local stripe_state = { count = 0 }
+
     -- Helper to create text widget
-    local function create_text(text, color, font_size)
+    local function create_text(text, color, font_size, is_header)
         font_size = font_size or DETAIL_TEXT_FONT_SIZE
         -- Calculate height based on font size with some padding
         local height = font_size + DETAIL_TEXT_PADDING
 
-        local widget_def = UIWidget.create_definition({
-            {
-                pass_type = 'text',
-                value_id = 'text',
-                value = text,
+        local passes = {}
+        local stripe = false
+        if is_header then
+            stripe_state.count = 0
+        else
+            stripe = stripe_state.count % 2 == 1
+            stripe_state.count = stripe_state.count + 1
+        end
+        if stripe then
+            passes[#passes + 1] = {
+                pass_type = 'rect',
                 style = {
-                    font_type = 'proxima_nova_bold',
-                    font_size = font_size,
-                    text_horizontal_alignment = 'left',
-                    text_vertical_alignment = 'top',
-                    text_color = color or Color.terminal_text_body(255, true),
-                    offset = { 0, 0, 2 },
-                    size = { text_width, height },
+                    color = COLOR_STRIPE,
+                    offset = { -STRIPE_BLEED_LEFT, 0, 0 },
+                    size = { text_width + STRIPE_BLEED_LEFT + STRIPE_BLEED_RIGHT, height },
                 },
+            }
+        end
+        passes[#passes + 1] = {
+            pass_type = 'text',
+            value_id = 'text',
+            value = text,
+            style = {
+                font_type = 'proxima_nova_bold',
+                font_size = font_size,
+                text_horizontal_alignment = 'left',
+                text_vertical_alignment = 'top',
+                text_color = color or Color.terminal_text_body(255, true),
+                offset = { 0, 0, 2 },
+                size = { text_width, height },
             },
-        }, 'combat_stats_detail_pivot', nil, { text_width, height })
+        }
+
+        local widget_def = UIWidget.create_definition(passes, 'combat_stats_detail_pivot', nil, { text_width, height })
 
         local widget = self:_create_widget('detail_text_' .. #self._detail_widgets, widget_def)
         self._detail_widgets[#self._detail_widgets + 1] = widget
@@ -373,6 +442,18 @@ function CombatStatsView:_rebuild_detail_widgets(entry)
 
         local passes = {}
 
+        local stripe = stripe_state.count % 2 == 1
+        stripe_state.count = stripe_state.count + 1
+        if stripe then
+            passes[#passes + 1] = {
+                pass_type = 'rect',
+                style = {
+                    color = COLOR_STRIPE,
+                    offset = { -STRIPE_BLEED_LEFT, 0, 0 },
+                    size = { text_width + STRIPE_BLEED_LEFT + STRIPE_BLEED_RIGHT, widget_height },
+                },
+            }
+        end
         -- Icon pass (if icon exists)
         if icon then
             passes[#passes + 1] = {
@@ -476,20 +557,20 @@ function CombatStatsView:_rebuild_detail_widgets(entry)
         for _, substat in ipairs(substats) do
             if substat.value and substat.value > 0 then
                 local pct = (substat.value / total * 100)
-                create_text(string.format('  %s: %d (%.1f%%)', mod:localize(substat.key), substat.value, pct))
+                create_text(string.format('  %s: %d (%.1f%%)', mod:localize(substat.key), substat.value, pct), nil, nil)
             end
         end
     end
 
-    -- Title
+    -- Title (skips striping, resets the counter for the data rows below)
     create_spacer(10)
-    create_text(entry.name, Color.terminal_text_header(255, true), 26)
-    create_text(entry.subtext, entry.subtext_color, 18)
+    create_text(entry.name, Color.terminal_text_header(255, true), 26, true)
+    create_text(entry.subtext, entry.subtext_color, 18, true)
 
     -- Enemy Stats (only for session stats)
     if entry.is_session and stats.damage_by_type and next(stats.damage_by_type) then
         create_spacer(10)
-        create_text(mod:localize('enemy_stats'), Color.terminal_text_header(255, true), 20)
+        create_text(mod:localize('enemy_stats'), Color.terminal_text_header(255, true), 20, true)
 
         -- Sort by damage (highest first)
         local sorted_types = {}
@@ -535,7 +616,7 @@ function CombatStatsView:_rebuild_detail_widgets(entry)
     -- Damage Stats Header
     if stats.total_damage > 0 then
         create_spacer(10)
-        create_text(mod:localize('damage_stats'), Color.terminal_text_header(255, true), 20)
+        create_text(mod:localize('damage_stats'), Color.terminal_text_header(255, true), 20, true)
 
         if stats.total_damage > 0 then
             create_text(string.format('%s: %d', mod:localize('total'), stats.total_damage))
@@ -622,7 +703,7 @@ function CombatStatsView:_rebuild_detail_widgets(entry)
     -- Hit Stats Header
     if stats.total_hits > 0 then
         create_spacer(10)
-        create_text(mod:localize('hit_stats'), Color.terminal_text_header(255, true), 20)
+        create_text(mod:localize('hit_stats'), Color.terminal_text_header(255, true), 20, true)
         create_text(string.format('%s: %d', mod:localize('total'), stats.total_hits))
 
         -- Melee hits
@@ -680,7 +761,7 @@ function CombatStatsView:_rebuild_detail_widgets(entry)
 
         if #buff_array > 0 then
             create_spacer(10)
-            create_text(mod:localize('buff_uptime'), Color.terminal_text_header(255, true), 20)
+            create_text(mod:localize('buff_uptime'), Color.terminal_text_header(255, true), 20, true)
 
             for i = 1, #buff_array do
                 local buff = buff_array[i]
@@ -740,11 +821,19 @@ function CombatStatsView:cb_on_history_pressed()
         -- Already in history list, toggle back to current
         self:cb_on_back_to_current_pressed()
     else
-        -- Go to history list
+        -- Go to history list (index loads async)
         self._viewing_history = true
         self._viewing_history_entry = false
+        self._history_loading = true
         self._selected_entry = nil
         self:_setup_entries()
+
+        mod.history:load_index(function()
+            self._history_loading = false
+            if self._viewing_history and not self._viewing_history_entry then
+                self:_setup_entries()
+            end
+        end)
     end
 end
 
@@ -758,6 +847,9 @@ function CombatStatsView:cb_on_back_to_current_pressed()
         -- Go back to history list from loaded history entry
         self._viewing_history = true
         self._viewing_history_entry = false
+        self._history_entry_loading = false
+        self._history_loading = false
+        self._current_history_file = nil
         self._selected_entry = nil
         self._tracker = mod.tracker
         self:_setup_entries()
@@ -765,6 +857,9 @@ function CombatStatsView:cb_on_back_to_current_pressed()
         -- Go back to current from history list
         self._viewing_history = false
         self._viewing_history_entry = false
+        self._history_entry_loading = false
+        self._history_loading = false
+        self._current_history_file = nil
         self._selected_entry = nil
         self._tracker = mod.tracker
         self:_setup_entries()
@@ -794,26 +889,35 @@ function CombatStatsView:_load_history_entry(entry)
         return
     end
 
-    -- Load full history data from file
-    local full_data = mod.history:load_history_entry(entry.history_data.file)
-    if not full_data then
-        return
-    end
+    -- Token guards against a stale callback if the user navigates away
+    local file_name = entry.history_data.file
+    self._current_history_file = file_name
+    self._history_entry_loading = true
 
-    -- Create a temporary tracker for history viewing
-    self._tracker = CombatStatsTracker:new()
-    self._tracker:load_from_history(full_data)
-
-    -- Store the file name for deletion
-    self._current_history_file = full_data.file
-
-    -- Switch to history entry view (not history list, not current)
+    self._tracker = nil
     self._viewing_history = false
     self._viewing_history_entry = true
     self._selected_entry = nil
-
-    -- Refresh entries - will now show the loaded history data
     self:_setup_entries()
+
+    mod.history:load_history_entry(file_name, function(full_data)
+        self._history_entry_loading = false
+
+        -- Bail out if the user navigated away or selected a different entry.
+        if self._current_history_file ~= file_name then
+            return
+        end
+
+        if not full_data then
+            self:cb_on_back_to_current_pressed()
+            return
+        end
+
+        self._tracker = CombatStatsTracker:new()
+        self._tracker:load_from_history(full_data)
+
+        self:_setup_entries()
+    end)
 end
 
 function CombatStatsView:update(dt, t, input_service)
