@@ -33,6 +33,7 @@ local PRIMARY_SHOT_OVERHEAT_BASIC_SETTING = "primary_shot_overheat_basic"
 local PRIMARY_SHOT_OVERHEAT_PERFECT_SETTING = "primary_shot_overheat_perfect"
 local PRIMARY_BFG_IMPACT_SETTING = "primary_bfg_impact"
 local PRIMARY_DEMOLITION_EXPLOSION_SETTING = "primary_demolition_explosion"
+local FORCE_FULL_CHARGE_DAMAGE_SETTING = "force_full_charge_damage"
 local PRIMARY_PENETRATION_DEPTH_SETTING = "primary_penetration_depth"
 local CHARGED_PENETRATION_DEPTH_SETTING = "charged_penetration_depth"
 local PENETRATION_TARGET_COUNT_SETTING = "penetration_target_count"
@@ -43,10 +44,8 @@ local AMMO_POOL_MULTIPLIER_SETTING = "ammo_pool_multiplier"
 local AUTO_RELOAD_EMPTY_ENABLED_SETTING = "auto_reload_empty_enabled"
 local RECOIL_MULTIPLIER_SETTING = "recoil_multiplier"
 local SPREAD_MULTIPLIER_SETTING = "spread_multiplier"
-local DISABLE_OVERHEAT_EXPLOSION_SETTING = "disable_overheat_explosion"
 local VENT_DAMAGE_MULTIPLIER_SETTING = "vent_damage_multiplier"
 local VENT_SPEED_MULTIPLIER_SETTING = "vent_speed_multiplier"
-local MACHINE_GUN_ENGAGE_DELAY = 0.1
 local OVERHEAT_GUARD_MARGIN = 0.01
 local EXPLOSION_TEMPLATE_NAMES = {
 	"plasma_rifle",
@@ -161,6 +160,10 @@ local SETTING_DEFINITIONS = {
 		default = true,
 		value_type = "boolean",
 	},
+	[FORCE_FULL_CHARGE_DAMAGE_SETTING] = {
+		default = true,
+		value_type = "boolean",
+	},
 	[PRIMARY_PENETRATION_DEPTH_SETTING] = {
 		default = 1.25,
 		max = 6.0,
@@ -219,10 +222,6 @@ local SETTING_DEFINITIONS = {
 		min = 0.05,
 		value_type = "number",
 	},
-	[DISABLE_OVERHEAT_EXPLOSION_SETTING] = {
-		default = true,
-		value_type = "boolean",
-	},
 	[VENT_DAMAGE_MULTIPLIER_SETTING] = {
 		default = 1.0,
 		max = 1.0,
@@ -235,6 +234,15 @@ local SETTING_DEFINITIONS = {
 		min = 0.25,
 		value_type = "number",
 	},
+}
+local FORCED_SAFETY_SETTING_IDS = {
+	[AUTO_VENT_ENABLED_SETTING] = true,
+	[AUTO_VENT_START_PERCENT_SETTING] = true,
+	[PRIMARY_CHARGE_OVERHEAT_BASIC_SETTING] = true,
+	[PRIMARY_CHARGE_OVERHEAT_PERFECT_SETTING] = true,
+	[PRIMARY_CHARGE_FULL_OVERHEAT_SETTING] = true,
+	[PRIMARY_SHOT_OVERHEAT_BASIC_SETTING] = true,
+	[PRIMARY_SHOT_OVERHEAT_PERFECT_SETTING] = true,
 }
 local RESET_ACTIONS = {
 	action_overheat_explode = true,
@@ -314,6 +322,10 @@ local function get_setting_value(setting_id)
 		return mod:get(setting_id)
 	end
 
+	if FORCED_SAFETY_SETTING_IDS[setting_id] then
+		return definition.default
+	end
+
 	local configured_value = mod:get(setting_id)
 
 	if definition.value_type == "boolean" then
@@ -359,8 +371,12 @@ local function primary_demolition_explosion_enabled()
 	return get_setting_value(PRIMARY_DEMOLITION_EXPLOSION_SETTING)
 end
 
+local function force_full_charge_damage_enabled()
+	return get_setting_value(FORCE_FULL_CHARGE_DAMAGE_SETTING)
+end
+
 local function disable_overheat_explosion_enabled()
-	return get_setting_value(DISABLE_OVERHEAT_EXPLOSION_SETTING)
+	return auto_vent_enabled()
 end
 
 local function vent_speed_multiplier()
@@ -1009,8 +1025,9 @@ end
 
 local function gameplay_time()
 	local time_manager = Managers and Managers.time
+	local ok, time = time_manager and pcall(time_manager.time, time_manager, "gameplay")
 
-	return time_manager and time_manager:time("gameplay") or 0
+	return ok and time or 0
 end
 
 local function is_local_unit(unit)
@@ -1020,6 +1037,7 @@ local function is_local_unit(unit)
 end
 
 local function clear_weapon_state()
+	state.ads_held = false
 	state.auto_venting = false
 	state.inventory_slot_component = nil
 	state.post_ads_shot_vent = false
@@ -1028,6 +1046,7 @@ local function clear_weapon_state()
 	state.resume_after_reload = false
 	state.resume_after_vent = false
 	state.trigger_hold_started_t = 0
+	state.trigger_held = false
 	state.weapon_extension = nil
 	state.weapon_template = nil
 	state.wielded_slot = nil
@@ -1035,9 +1054,6 @@ end
 
 local function reset_runtime()
 	clear_weapon_state()
-
-	state.ads_held = false
-	state.trigger_held = false
 end
 
 local function refresh_plasma_state(optional_weapon_extension)
@@ -1099,7 +1115,7 @@ local function cancel_resume_after_reload()
 end
 
 local function queue_primary_press_if_held()
-	if state.trigger_held and not state.ads_held then
+	if held_primary_assist_enabled() and state.trigger_held and not state.ads_held then
 		state.queued_press = true
 
 		return true
@@ -1114,9 +1130,7 @@ local function queue_primary_resume_after_vent()
 	cancel_resume_after_vent()
 
 	if should_resume then
-		state.queued_press = true
-
-		return true
+		return queue_primary_press_if_held()
 	end
 
 	return false
@@ -1128,12 +1142,35 @@ local function queue_primary_resume_after_reload()
 	cancel_resume_after_reload()
 
 	if should_resume then
-		state.queued_press = true
-
-		return true
+		return queue_primary_press_if_held()
 	end
 
 	return false
+end
+
+local function can_resume_primary_after_reload(current_action, should_auto_reload)
+	return state.resume_after_reload
+		and state.trigger_held
+		and not state.ads_held
+		and not should_auto_reload
+		and current_action ~= RELOAD_ACTION
+		and current_action ~= PRIMARY_CHARGE_ACTION
+		and current_action ~= PRIMARY_SHOT_ACTION
+		and not VENT_ACTIONS[current_action]
+end
+
+local function can_start_primary_from_held(current_action, should_auto_reload)
+	return held_primary_assist_enabled()
+		and state.trigger_held
+		and not state.ads_held
+		and not state.auto_venting
+		and not should_auto_reload
+		and current_action ~= PRIMARY_CHARGE_ACTION
+		and current_action ~= PRIMARY_SHOT_ACTION
+		and current_action ~= SECONDARY_CHARGE_ACTION
+		and current_action ~= SECONDARY_SHOT_ACTION
+		and current_action ~= RELOAD_ACTION
+		and not VENT_ACTIONS[current_action]
 end
 
 local function reset_action_cycle_state(clear_auto_vent)
@@ -1226,7 +1263,8 @@ local function estimated_primary_shot_heat()
 	local release_charge = hipfire_release_charge_level(charge_direct_template)
 	local total_heat = primary_shot_heat_for_release_charge(charge_direct_template, shoot_template, release_charge)
 
-	return math.clamp(total_heat, 0.01, 0.2)
+	-- Settings can raise heat above vanilla, so the guard should never under-estimate a shot.
+	return math.clamp(total_heat, 0.01, 1)
 end
 
 local function auto_vent_start_threshold()
@@ -1244,6 +1282,14 @@ end
 
 local function should_auto_vent_for_heat(current_heat)
 	return auto_vent_enabled() and current_heat >= auto_vent_start_threshold()
+end
+
+local function should_auto_vent_before_primary_shot(current_heat)
+	if not auto_vent_enabled() or current_heat <= auto_vent_resume_threshold() then
+		return false
+	end
+
+	return current_heat + estimated_primary_shot_heat() >= auto_vent_start_threshold()
 end
 
 local function current_overheat()
@@ -1329,29 +1375,13 @@ local function should_block_manual_ads_shot(snapshot)
 		return false
 	end
 
-	-- Keep the dual-hold "machine gun" interaction untouched. Only guard the classic
-	-- manual ADS charged release path where action_one is no longer being held.
+	-- Keep manual dual-hold firing untouched. Only guard the classic ADS charged
+	-- release path where action_one is no longer being held.
 	if snapshot.trigger_held then
 		return false
 	end
 
 	return should_auto_vent_for_heat(snapshot.predicted_after_shot or 0)
-end
-
-local function should_force_machine_gun_brace()
-	if not held_primary_assist_enabled() or state.ads_held or state.auto_venting or not state.trigger_held or not state.weapon_template then
-		return false
-	end
-
-	local held_time = gameplay_time() - (state.trigger_hold_started_t or 0)
-
-	if held_time < MACHINE_GUN_ENGAGE_DELAY then
-		return false
-	end
-
-	local current_action = current_action_name()
-
-	return not RESET_ACTIONS[current_action]
 end
 
 local function begin_auto_vent(can_resume_after_vent)
@@ -1375,7 +1405,7 @@ local function start_forced_vent_action(func, self, id, action_objects, action_p
 		return false
 	end
 
-	begin_auto_vent(false)
+	begin_auto_vent(true)
 	state.post_ads_shot_vent = false
 	state.queued_press = false
 
@@ -1472,28 +1502,51 @@ local function get_raw_input(input_service, action_name)
 	return out
 end
 
+local function mark_primary_trigger_held()
+	if not state.trigger_held then
+		state.trigger_hold_started_t = gameplay_time()
+	end
+
+	state.trigger_held = true
+end
+
+local function clear_primary_trigger_hold()
+	state.trigger_held = false
+	state.queued_press = false
+	state.trigger_hold_started_t = 0
+	cancel_resume_after_reload()
+	cancel_resume_after_vent()
+end
+
+local function should_preserve_primary_hold_on_false()
+	local current_action = current_action_name()
+
+	return state.auto_venting
+		or state.resume_after_reload
+		or state.resume_after_vent
+		or current_action == PRIMARY_CHARGE_ACTION
+		or current_action == PRIMARY_SHOT_ACTION
+		or current_action == RELOAD_ACTION
+		or VENT_ACTIONS[current_action]
+end
+
+local function refresh_primary_hold_watchdog(input_service, action_name)
+	if action_name ~= "action_one_hold" and get_raw_input(input_service, "action_one_hold") then
+		mark_primary_trigger_held()
+	end
+end
+
 local function update_manual_input_state(action_name, raw_value)
 	if action_name == "action_one_hold" then
-		local was_trigger_held = state.trigger_held
-
-		state.trigger_held = raw_value and true or false
-
-		if raw_value and not was_trigger_held then
-			state.trigger_hold_started_t = gameplay_time()
+		if raw_value then
+			mark_primary_trigger_held()
+		elseif not should_preserve_primary_hold_on_false() then
+			clear_primary_trigger_hold()
 		end
-
-		if not raw_value then
-			state.queued_press = false
-			state.trigger_hold_started_t = 0
-			cancel_resume_after_reload()
-			cancel_resume_after_vent()
-		end
+	elseif action_name == "action_one_pressed" and raw_value then
+		mark_primary_trigger_held()
 	elseif action_name == "action_one_release" and raw_value then
-		state.trigger_held = false
-		state.queued_press = false
-		state.trigger_hold_started_t = 0
-		cancel_resume_after_reload()
-		cancel_resume_after_vent()
+		clear_primary_trigger_hold()
 	elseif action_name == "action_two_hold" then
 		state.ads_held = raw_value and true or false
 
@@ -1528,22 +1581,34 @@ local function controlled_input(action_name, raw_value)
 	end
 
 	if action_name == "action_two_hold" then
-		if should_auto_reload then
-			return raw_value
-		end
-
-		return raw_value or should_force_machine_gun_brace()
+		return raw_value
 	end
 
 	if is_auto_venting then
 		return raw_value and action_name == "action_one_release" or false
 	end
 
-	if action_name == "action_one_hold" or action_name == "action_one_release" then
+	if action_name == "action_one_hold" then
+		if raw_value and can_start_primary_from_held(current_action, should_auto_reload) then
+			queue_primary_press_if_held()
+		end
+
+		return raw_value
+	end
+
+	if action_name == "action_one_release" then
 		return raw_value
 	end
 
 	if action_name == "action_one_pressed" then
+		if not raw_value and can_start_primary_from_held(current_action, should_auto_reload) then
+			queue_primary_press_if_held()
+		end
+
+		if can_resume_primary_after_reload(current_action, should_auto_reload) then
+			queue_primary_resume_after_reload()
+		end
+
 		if state.resume_after_vent and not is_auto_venting and not vent_action_active and not state.ads_held then
 			queue_primary_resume_after_vent()
 		end
@@ -1559,10 +1624,9 @@ local function controlled_input(action_name, raw_value)
 end
 
 mod.on_setting_changed = function(setting_id)
-	if setting_id == AUTO_VENT_ENABLED_SETTING and not auto_vent_enabled() then
-		state.auto_venting = false
-		state.post_ads_shot_vent = false
+	if setting_id == HELD_PRIMARY_ASSIST_ENABLED_SETTING and not held_primary_assist_enabled() then
 		state.queued_press = false
+		cancel_resume_after_reload()
 		cancel_resume_after_vent()
 	end
 
@@ -1630,12 +1694,15 @@ mod:hook(CLASS.ActionHandler, "start_action", function(func, self, id, action_ob
 	end
 
 	if action_name == PRIMARY_SHOT_ACTION then
+		cancel_resume_after_reload()
+
 		if state.trigger_held and not state.ads_held and not state.auto_venting then
-			-- Queue one new press and let the game's own input buffer handle the re-chain timing.
+			-- Queue the next primary shot from the weapon hook and let Darktide's chain window validate it.
 			queue_primary_press_if_held()
 		end
 	elseif action_name == PRIMARY_CHARGE_ACTION then
 		state.queued_press = false
+		cancel_resume_after_reload()
 		cancel_resume_after_vent()
 	elseif action_name == SECONDARY_SHOT_ACTION then
 		-- Preserve the charged ADS shot, then vent right after if the resulting heat ends up unsafe.
@@ -1662,10 +1729,6 @@ mod:hook(CLASS.ActionHandler, "start_action", function(func, self, id, action_ob
 end)
 
 local function input_hook(func, self, action_name)
-	local raw_value = get_raw_input(self, action_name)
-
-	update_manual_input_state(action_name, raw_value)
-
 	if not mod_enabled or not OVERRIDDEN_INPUTS[action_name] then
 		return func(self, action_name)
 	end
@@ -1679,6 +1742,11 @@ local function input_hook(func, self, action_name)
 	if not refresh_plasma_state() then
 		return func(self, action_name)
 	end
+
+	local raw_value = get_raw_input(self, action_name)
+
+	refresh_primary_hold_watchdog(self, action_name)
+	update_manual_input_state(action_name, raw_value)
 
 	-- Plasma uses raw game input plus PlasmaBFG's own hook state, so other autofire hooks are bypassed
 	-- without taking any dependency on whether those mods are installed.
@@ -1724,6 +1792,23 @@ mod:hook_require("scripts/settings/equipment/weapon_templates/plasma_rifles/sett
 	apply_spread_template_settings()
 end)
 
+mod:hook_require("scripts/extension_systems/weapon/actions/action_shoot_hit_scan", function(ActionShootHitScan)
+	mod:hook(ActionShootHitScan, "_shoot", function(func, self, position, rotation, power_level, charge_level, t, fire_config)
+		local should_force_full_charge = mod_enabled
+			and force_full_charge_damage_enabled()
+			and fire_config
+			and fire_config.use_charge
+			and is_local_unit(self._player_unit)
+			and refresh_plasma_state(self._weapon_extension)
+
+		if should_force_full_charge then
+			charge_level = 1
+		end
+
+		return func(self, position, rotation, power_level, charge_level, t, fire_config)
+	end)
+end)
+
 for _, template_path in ipairs(PLASMA_TEMPLATE_PATHS) do
 	mod:hook_require(template_path, function(weapon_template)
 		if weapon_template and weapon_template.name then
@@ -1765,7 +1850,7 @@ mod:hook_require("scripts/extension_systems/weapon/actions/modules/overheat_acti
 			return func(self, t, time_in_action)
 		end
 
-		if should_auto_vent_for_heat(current_heat) then
+		if should_auto_vent_for_heat(current_heat) or should_auto_vent_before_primary_shot(current_heat) then
 			begin_auto_vent(true)
 			return "overheating"
 		end
@@ -1809,11 +1894,19 @@ mod:hook(CLASS.ActionHandler, "_finish_action", function(func, self, handler_dat
 	local result = func(self, handler_data, reason, data, t, next_action_params, condition_func_params)
 
 	if should_handle then
-		if finishing_action == RELOAD_ACTION and reason == "action_complete" then
+		if finishing_action == PRIMARY_SHOT_ACTION and reason == "action_complete" then
+			queue_primary_press_if_held()
+		elseif finishing_action == RELOAD_ACTION and reason ~= "new_interrupting_action" then
 			queue_primary_resume_after_reload()
-		elseif VENT_ACTIONS[finishing_action] and state.auto_venting and reason ~= "new_interrupting_action" then
+		elseif VENT_ACTIONS[finishing_action] and reason ~= "new_interrupting_action" then
+			local should_resume = state.resume_after_vent or state.trigger_held and not state.ads_held
+
 			state.auto_venting = false
-			queue_primary_resume_after_vent()
+			cancel_resume_after_vent()
+
+			if should_resume then
+				queue_primary_press_if_held()
+			end
 		end
 	end
 
@@ -1827,21 +1920,31 @@ mod:hook(CLASS.ActionHandler, "_update_stop_input", function(func, self, id, han
 
 	local action_before = current_action_name()
 	local vent_action_was_active = VENT_ACTIONS[action_before]
-	local should_resume = vent_action_was_active and state.auto_venting and state.resume_after_vent and state.trigger_held and not state.ads_held
+	local reload_action_was_active = action_before == RELOAD_ACTION
+	local should_resume_after_vent = vent_action_was_active and (state.resume_after_vent or state.trigger_held and not state.ads_held)
+	local should_resume_after_reload = reload_action_was_active and (state.resume_after_reload or state.trigger_held and not state.ads_held)
 	local automatic_input = func(self, id, handler_data, t, condition_func_params, action_params)
-	local vent_stopped = vent_action_was_active and current_action_name() == "none"
+	local current_action = current_action_name()
+	local vent_stopped = vent_action_was_active and current_action == "none"
+	local reload_stopped = reload_action_was_active and current_action == "none"
 
-	if not vent_stopped then
-		return automatic_input
+	if vent_stopped then
+		state.auto_venting = false
+
+		if should_resume_after_vent then
+			queue_primary_press_if_held()
+		end
+
+		cancel_resume_after_vent()
 	end
 
-	state.auto_venting = false
-
-	if should_resume then
-		state.queued_press = true
-		cancel_resume_after_vent()
-	else
-		cancel_resume_after_vent()
+	if reload_stopped then
+		if should_resume_after_reload then
+			state.resume_after_reload = true
+			queue_primary_resume_after_reload()
+		else
+			cancel_resume_after_reload()
+		end
 	end
 
 	return automatic_input
