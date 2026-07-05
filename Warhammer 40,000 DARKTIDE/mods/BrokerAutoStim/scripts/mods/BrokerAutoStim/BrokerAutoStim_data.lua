@@ -170,6 +170,11 @@ local mod = get_mod("BrokerAutoStim")
 									default_value = false
 								},
 								{
+									setting_id    = "cancel_on_auspex",
+									type          = "checkbox",
+									default_value = false
+								},
+								{
 									setting_id    = "cancel_during_ability",
 									type          = "checkbox",
 									default_value = false
