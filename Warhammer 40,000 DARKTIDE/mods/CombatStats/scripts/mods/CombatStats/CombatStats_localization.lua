@@ -5,27 +5,27 @@ mod:add_global_localize_strings({
     loc_combat_stats_reset_stats = {
         en = 'Reset Stats',
         ['zh-cn'] = '重置统计', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '重設統計',
+        ['zh-tw'] = '重設統計資料',
     },
     loc_combat_stats_view_history = {
         en = 'View History',
         ['zh-cn'] = '查看历史', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '查看歷史',
+        ['zh-tw'] = '查看歷史紀錄',
     },
     loc_combat_stats_back_to_current = {
         en = 'Back to Current',
         ['zh-cn'] = '返回当前', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '返回目前',
+        ['zh-tw'] = '返回目前統計',
     },
     loc_combat_stats_back_to_history = {
         en = 'Back to History',
         ['zh-cn'] = '返回历史', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '返回歷史',
+        ['zh-tw'] = '返回歷史紀錄',
     },
     loc_combat_stats_delete_entry = {
         en = 'Delete Entry',
         ['zh-cn'] = '删除条目', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '刪除項目',
+        ['zh-tw'] = '刪除紀錄',
     },
 })
 
@@ -38,24 +38,24 @@ return {
     mod_description = {
         en = 'Track detailed combat statistics including damage, kills, buff uptime, and more.',
         ['zh-cn'] = '追踪详细的战斗统计数据，包括伤害、击杀、增益持续时间等。',
-        ['zh-tw'] = '追蹤詳細的戰鬥統計資料，包括傷害、擊殺、增益持續時間等。',
+        ['zh-tw'] = '追蹤詳細的戰鬥統計資料，包括傷害、擊殺、增益覆蓋時間等。',
     },
 
     -- Config
     save_history = {
         en = 'Save History',
         ['zh-cn'] = '保存历史', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '儲存歷史',
+        ['zh-tw'] = '儲存歷史紀錄',
     },
     save_history_tooltip = {
         en = 'Save combat statistics from previous missions for later viewing.',
         ['zh-cn'] = '保存先前任务的战斗统计数据以供以后查看。', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '儲存先前任務的戰鬥統計，方便稍後查看。',
+        ['zh-tw'] = '儲存先前任務的戰鬥統計資料，方便稍後查看。',
     },
     toggle_view_keybind = {
         en = 'Toggle Stats View',
         ['zh-cn'] = '切换统计视图',
-        ['zh-tw'] = '切換統計檢視',
+        ['zh-tw'] = '切換統計視圖',
     },
     only_in_psykhanium = {
         en = 'Only In Psykhanium',
@@ -65,7 +65,7 @@ return {
     only_in_psykhanium_tooltip = {
         en = 'Only track and show combat stats when in the Psykhanium.',
         ['zh-cn'] = '仅在灵能室中追踪和显示战斗统计数据。', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '只在靈能室中追蹤並顯示戰鬥統計。',
+        ['zh-tw'] = '只在靈能室中追蹤並顯示戰鬥統計資料。',
     },
     hud = {
         en = 'HUD',
@@ -80,7 +80,7 @@ return {
     show_hud_in_hub = {
         en = 'Show Overlay In Hub',
         ['zh-cn'] = '在集结区显示覆盖层', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '在樞紐中顯示覆蓋資訊',
+        ['zh-tw'] = '在大廳中顯示覆蓋資訊',
     },
     hud_pos_x = {
         en = 'X Position',
@@ -115,7 +115,7 @@ return {
     engagement_timeout_tooltip = {
         en = 'Time in seconds before ending an enemy engagement due to inactivity.',
         ['zh-cn'] = '由于不活动而结束敌人交战的时间（秒）。', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '沒有活動後，結束敵人交戰所需的秒數。',
+        ['zh-tw'] = '因沒有活動而結束敵人交戰前的等待秒數。',
     },
     enemy_types_to_track = {
         en = 'Enemy Types to Track',
@@ -239,22 +239,22 @@ return {
     enemy_stats = {
         en = 'Enemy Stats',
         ['zh-cn'] = '敌人统计',
-        ['zh-tw'] = '敵人統計',
+        ['zh-tw'] = '敵人統計資料',
     },
     damage_stats = {
         en = 'Damage Stats',
         ['zh-cn'] = '伤害统计',
-        ['zh-tw'] = '傷害統計',
+        ['zh-tw'] = '傷害統計資料',
     },
     hit_stats = {
         en = 'Hit Stats',
         ['zh-cn'] = '命中统计',
-        ['zh-tw'] = '命中統計',
+        ['zh-tw'] = '命中統計資料',
     },
     buff_uptime = {
         en = 'Buff Uptime',
         ['zh-cn'] = '增益持续时间',
-        ['zh-tw'] = '增益持續時間',
+        ['zh-tw'] = '增益覆蓋時間',
     },
 
     -- Breed Types
@@ -266,7 +266,7 @@ return {
     breed_ritualist = {
         en = 'ritualist',
         ['zh-cn'] = '仪式术士',
-        ['zh-tw'] = '渣滓祭司',
+        ['zh-tw'] = '儀式術士',
     },
     breed_disabler = {
         en = 'disabler',
