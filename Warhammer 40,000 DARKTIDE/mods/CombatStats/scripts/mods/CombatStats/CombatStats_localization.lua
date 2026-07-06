@@ -9,17 +9,17 @@ mod:add_global_localize_strings({
     loc_combat_stats_view_history = {
         en = 'View History',
         ['zh-cn'] = '查看历史', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '查看歷史',
+        ['zh-tw'] = '查看歷史紀錄',
     },
     loc_combat_stats_back_to_current = {
         en = 'Back to Current',
         ['zh-cn'] = '返回当前', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '返回目前',
+        ['zh-tw'] = '返回目前統計',
     },
     loc_combat_stats_back_to_history = {
         en = 'Back to History',
         ['zh-cn'] = '返回历史', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '返回歷史',
+        ['zh-tw'] = '返回歷史紀錄',
     },
     loc_combat_stats_delete_entry = {
         en = 'Delete Entry',
@@ -84,7 +84,7 @@ return {
     show_hud_in_hub = {
         en = 'Show Overlay In Hub',
         ['zh-cn'] = '在集结区显示覆盖层', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '在集結區顯示疊加介面',
+        ['zh-tw'] = '在大廳顯示疊加介面',
     },
     hud_pos_x = {
         en = 'X Position',
@@ -243,22 +243,22 @@ return {
     enemy_stats = {
         en = 'Enemy Stats',
         ['zh-cn'] = '敌人统计',
-        ['zh-tw'] = '敵人統計',
+        ['zh-tw'] = '敵人統計資料',
     },
     damage_stats = {
         en = 'Damage Stats',
         ['zh-cn'] = '伤害统计',
-        ['zh-tw'] = '傷害統計',
+        ['zh-tw'] = '傷害統計資料',
     },
     hit_stats = {
         en = 'Hit Stats',
         ['zh-cn'] = '命中统计',
-        ['zh-tw'] = '命中統計',
+        ['zh-tw'] = '命中統計資料',
     },
     buff_uptime = {
         en = 'Buff Uptime',
         ['zh-cn'] = '增益持续时间',
-        ['zh-tw'] = '增益持續時間',
+        ['zh-tw'] = '增益覆蓋時間',
     },
 
     -- Breed Types
@@ -270,7 +270,7 @@ return {
     breed_ritualist = {
         en = 'ritualist',
         ['zh-cn'] = '仪式术士',
-        ['zh-tw'] = '渣滓祭師',
+        ['zh-tw'] = '渣滓祭司',
     },
     breed_disabler = {
         en = 'disabler',
@@ -290,7 +290,7 @@ return {
     breed_horde = {
         en = 'horde',
         ['zh-cn'] = '尸潮',
-        ['zh-tw'] = '屍潮',
+        ['zh-tw'] = '群怪',
     },
     breed_unknown = {
         en = 'unknown',
