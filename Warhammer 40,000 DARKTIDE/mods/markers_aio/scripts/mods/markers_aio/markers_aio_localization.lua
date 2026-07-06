@@ -198,7 +198,7 @@ local loc = {
 		en = "Heretical Idol",
 		fr = "Idole Hérétique",
 		ru = "Еретический идол",
-		["zh-tw"] = "異端雕像",
+		["zh-tw"] = "異端神像",
 		["zh-cn"] = "异端神龛",
 	},
 	tab_materials = {
@@ -233,7 +233,7 @@ local loc = {
 		en = "Martyr's Skull",
 		fr = "Crâne du Martyr",
 		ru = "Череп мученика",
-		["zh-tw"] = "殉道者顱骨",
+		["zh-tw"] = "殉道者之顱",
 		["zh-cn"] = "殉道者颅骨",
 	},
 	tab_expedition = {
@@ -343,20 +343,21 @@ local loc = {
 		fr = "Stimm de vitesse",
 		ru = "Стим скорости",
 		["zh-cn"] = "敏捷兴奋剂",
+		["zh-tw"] = "敏捷興奮劑",
 	},
 	mod_marker_boost_stimm_name = {
 		en = "Boost Stimm",
 		fr = "Stimm de boost",
 		ru = "Стим ускорения",
 		["zh-cn"] = "专注兴奋剂",
-		["zh-tw"] = "增強興奮劑",
+		["zh-tw"] = "專注興奮劑",
 	},
 	mod_marker_medic_stimm_name = {
 		en = "Medic Stimm",
 		fr = "Stimm médical",
 		ru = "Медицинский стим",
 		["zh-cn"] = "医疗兴奋剂",
-		["zh-tw"] = "治療針",
+		["zh-tw"] = "醫療興奮劑",
 	},
 	mod_marker_broker_stimm_name = {
 		en = "Hive Scum Stimm",
@@ -677,6 +678,7 @@ local loc = {
 		fr = "Couleur du rayon de proximité du talent Improvisation sur le terrain",
 		ru = "Цвет радиуса действия таланта «Полевая импровизация»",
 		["zh-cn"] = "如果有老兵装备临场发挥天赋时的邻近范围颜色",
+		["zh-tw"] = "臨場發揮天賦接近範圍顏色",
 	},
 	field_improv_colour_R = {
 		en = "R",
@@ -1015,7 +1017,7 @@ local loc = {
 		en = "HERETICAL IDOL MARKERS",
 		fr = "MARQUEURS D'IDÔLES HÉRÉTIQUES",
 		ru = "МЕТКИ ЕРЕТИЧЕСКИХ ИДОЛОВ",
-		["zh-tw"] = "異端雕像圖標",
+		["zh-tw"] = "異端神像標記",
 		["zh-cn"] = "异端雕像图标",
 	},
 	heretical_idol_enable = {
@@ -1406,7 +1408,7 @@ local loc = {
 		en = "Boost Stimm Icon Colour",
 		fr = "Couleur de l'icône de boost Stimm",
 		ru = "Цвет значка стимулятора усиления",
-		["zh-tw"] = "增強興奮劑圖示顏色",
+		["zh-tw"] = "專注興奮劑圖示顏色",
 		["zh-cn"] = "专注兴奋剂图标颜色",
 	},
 	boost_stimm_icon_colour_R = {
@@ -1441,7 +1443,7 @@ local loc = {
 		en = "Corruption Stimm Icon Colour",
 		fr = "Couleur de l'icône de corruption Stimm",
 		ru = "Цвет значка стимулятора лечения",
-		["zh-tw"] = "治療針圖示顏色",
+		["zh-tw"] = "醫療興奮劑圖示顏色",
 		["zh-cn"] = "医疗兴奋剂图标颜色",
 	},
 	corruption_stimm_icon_colour_R = {
@@ -1583,7 +1585,7 @@ local loc = {
 		fr = "Nécessite une ligne de vue (Stimm de boost)",
 		ru = "Требуется прямая видимость (стим ускорения)",
 		["zh-cn"] = "专注兴奋剂仅视野内显示",
-		["zh-tw"] = "增強興奮劑需要視線範圍",
+		["zh-tw"] = "專注興奮劑需要視線範圍",
 	},
 	corruption_stimm_require_line_of_sight = {
 		en = "Require line of sight (Medic Stimm)",
@@ -1620,7 +1622,7 @@ local loc = {
 		fr = "Les marqueurs de stimm de boost nécessitent-ils une ligne de vue ?",
 		ru = "Требуется ли прямая видимость для маркеров стима ускорения?",
 		["zh-cn"] = "专注兴奋剂标记是否需要视野？",
-		["zh-tw"] = "增強興奮劑標記是否需要視線？",
+		["zh-tw"] = "專注興奮劑標記是否需要視線？",
 	},
 	corruption_stimm_require_line_of_sight_tooltip = {
 		en = "Require line of sight for Medic Stimm markers?",
@@ -1726,7 +1728,7 @@ local loc = {
 		en = "Grimoire Colour",
 		fr = "Couleur du grimoire",
 		ru = "Цвет гримуара",
-		["zh-tw"] = "魔術書顏色",
+		["zh-tw"] = "法術書顏色",
 		["zh-cn"] = "魔法书颜色",
 	},
 	grim_colour_R = {
@@ -1754,7 +1756,7 @@ local loc = {
 		en = "Scripture Colour",
 		fr = "Couleur des textes sacrés",
 		ru = "Цвет писания",
-		["zh-tw"] = "經典顏色",
+		["zh-tw"] = "聖書顏色",
 		["zh-cn"] = "圣经颜色",
 	},
 	script_colour_R = {
@@ -1865,6 +1867,7 @@ local loc = {
 	tainted_colour = {
 		en = "Tainted Communications Device Colour",
 		["zh-cn"] = "腐化通讯器颜色",
+		["zh-tw"] = "腐化通訊裝置顏色",
 	},
 	tainted_colour_R = {
 		en = "R",
@@ -1892,6 +1895,7 @@ local loc = {
 	tainted_skull_markers_settings = {
 		en = "TAINTED SKULL MARKERS",
 		["zh-cn"] = "腐化颅骨标记",
+		["zh-tw"] = "腐化顱骨標記",
 	},
 	tainted_skull_enable = {
 		en = "Enable Markers",
@@ -1966,6 +1970,7 @@ local loc = {
 	tainted_skull_colour = {
 		en = "Tainted Skull Colour",
 		["zh-cn"] = "腐化颅骨颜色",
+		["zh-tw"] = "腐化顱骨顏色",
 	},
 	tainted_skull_colour_R = {
 		en = "R",
@@ -1993,6 +1998,7 @@ local loc = {
 	luggable_markers_settings = {
 		en = "LUGGABLE MARKERS",
 		["zh-cn"] = "可搬运物品标记",
+		["zh-tw"] = "可搬運物品標記",
 	},
 	luggable_enable = {
 		en = "Enable Markers",
@@ -2053,6 +2059,7 @@ local loc = {
 	luggable_colour = {
 		en = "Luggable Colour",
 		["zh-cn"] = "可搬运物品颜色",
+		["zh-tw"] = "可搬運物品顏色",
 	},
 	luggable_colour_R = {
 		en = "R",
@@ -2087,6 +2094,7 @@ local loc = {
 	martyrs_skull_markers_settings = {
 		en = "MARTYRS SKULL MARKERS",
 		["zh-cn"] = "殉道者颅骨标记",
+		["zh-tw"] = "殉道者之顱標記",
 	},
 	martyrs_skull_enable = {
 		en = "Enable Markers",
@@ -2108,10 +2116,12 @@ local loc = {
 	martyrs_skull_guide_x_offset = {
 		en = "Guide Widget X Position",
 		["zh-cn"] = "指南小工具X位置",
+		["zh-tw"] = "指南小工具X位置",
 	},
 	martyrs_skull_guide_y_offset = {
 		en = "Guide Widget Y Position",
 		["zh-cn"] = "指南小工具Y位置",
+		["zh-tw"] = "指南小工具Y位置",
 	},
 	martyrs_skull_guide_disable_if_collected = {
 		en = "Only show guide if not collected?",
@@ -2170,6 +2180,7 @@ local loc = {
 	martyrs_skull_colour = {
 		en = "Martyrs Skull Colour",
 		["zh-cn"] = "殉道者颅骨颜色",
+		["zh-tw"] = "殉道者之顱顏色",
 	},
 	martyrs_skull_colour_R = {
 		en = "R",
@@ -2719,6 +2730,7 @@ local loc = {
 	event_markers_settings = {
 		en = "LIVE EVENT MARKERS",
 		["zh-cn"] = "活动物品标记",
+		["zh-tw"] = "活動物品標記",
 	},
 	event_enable = {
 		en = "Enable Markers",
@@ -2793,6 +2805,7 @@ local loc = {
 	event_colour = {
 		en = "Live Event Markers Colour",
 		["zh-cn"] = "活动物品标记颜色",
+		["zh-tw"] = "活動物品標記顏色",
 	},
 	event_colour_R = {
 		en = "R",
@@ -2825,6 +2838,7 @@ local loc = {
 	expedition_markers_settings = {
 		en = "EXPEDITION MARKERS",
 		["zh-cn"] = "远征物资标记",
+		["zh-tw"] = "遠征標記",
 	},
 	expedition_enable = {
 		en = "Enable Markers",
@@ -2920,26 +2934,32 @@ local loc = {
 	expedition_colour = {
 		en = "Expedition Markers Colour (General)",
 		["zh-cn"] = "远征标记颜色（通用）",
+		["zh-tw"] = "遠征標記顏色（通用）",
 	},
 	expedition_pickups_colour = {
 		en = "Expedition Pickup Markers Colour",
 		["zh-cn"] = "远征拾取物颜色",
+		["zh-tw"] = "遠征拾取物標記顏色",
 	},
 	expedition_currency_colour = {
 		en = "Expedition Salvage Markers Colour",
 		["zh-cn"] = "远征废料颜色",
+		["zh-tw"] = "遠征廢料標記顏色",
 	},
 	expedition_reliquary_colour = {
 		en = "Expedition Reliquary Markers Colour",
 		["zh-cn"] = "远征圣骸箱颜色",
+		["zh-tw"] = "遠征聖骸箱標記顏色",
 	},
 	expedition_remnants_colour = {
 		en = "Expedition Tech-Remnant Markers Colour",
 		["zh-cn"] = "远征科技残片颜色",
+		["zh-tw"] = "遠征科技殘片標記顏色",
 	},
 	expedition_crate_colour = {
 		en = "Expedition Loot Crate Markers Colour",
 		["zh-cn"] = "远征战利品箱颜色",
+		["zh-tw"] = "遠征戰利品箱標記顏色",
 	},
 	expedition_colour_R = {
 		en = "R",
@@ -3086,6 +3106,7 @@ local loc = {
 	},
 	Investigation = {
 		en = "Investigation",
+		["zh-tw"] = "調查",
 	},
 	servo_skull_enable = {
 		en = "Enable Markers",
@@ -3119,7 +3140,7 @@ local loc = {
 		en = "Decoding Icon (No Servo Skull Equipped)",
 		fr = "Icône de décodage (aucun Crâne Serviteur équipé)",
 		ru = "Значок декодирования (сервочереп не экипирован)",
-		["zh-tw"] = "破解中圖標（未裝備伺服顱骨",
+		["zh-tw"] = "破解中圖標（未裝備伺服顱骨）",
 		["zh-cn"] = "解码图标（未装备伺服颅骨）",
 	},
 	servo_skull_keep_on_screen = {
@@ -3160,6 +3181,7 @@ local loc = {
 	servo_skull_default_colour = {
 		en = "Inactive Colour",
 		["zh-cn"] = "未激活颜色",
+		["zh-tw"] = "未啟動顏色",
 	},
 	servo_skull_default_colour_R = {
 		en = "R",
@@ -3185,6 +3207,7 @@ local loc = {
 	servo_skull_stalled_colour = {
 		en = "Stalled (Can Deploy) Colour",
 		["zh-cn"] = "待命（可部署）颜色",
+		["zh-tw"] = "待命（可部署）顏色",
 	},
 	servo_skull_stalled_colour_R = {
 		en = "R",
@@ -3210,6 +3233,7 @@ local loc = {
 	servo_skull_active_colour = {
 		en = "Active (Decoding) Colour",
 		["zh-cn"] = "激活（破解中）颜色",
+		["zh-tw"] = "啟動（解碼中）顏色",
 	},
 	servo_skull_active_colour_R = {
 		en = "R",
@@ -3380,6 +3404,7 @@ local loc = {
 	player_assistance_stalled_colour = {
 		en = "Stalled (Alert) Colour",
 		["zh-cn"] = "待命（可部署）颜色",
+		["zh-tw"] = "待命（警示）顏色",
 	},
 	player_assistance_stalled_colour_R = {
 		en = "R",
@@ -3405,6 +3430,7 @@ local loc = {
 	player_assistance_active_colour = {
 		en = "Active (Helping) Colour",
 		["zh-cn"] = "激活（破解中）颜色",
+		["zh-tw"] = "啟動（協助中）顏色",
 	},
 	player_assistance_active_colour_R = {
 		en = "R",
@@ -3430,14 +3456,17 @@ local loc = {
 	player_assistance_border_colour = {
 		en = "Inactive Border Colour",
 		["zh-cn"] = "未激活边框颜色",
+		["zh-tw"] = "未啟動邊框顏色",
 	},
 	player_assistance_stalled_border_colour = {
 		en = "Stalled Border Colour",
 		["zh-cn"] = "待命边框颜色",
+		["zh-tw"] = "待命邊框顏色",
 	},
 	player_assistance_active_border_colour = {
 		en = "Active Border Colour",
 		["zh-cn"] = "激活边框颜色",
+		["zh-tw"] = "啟動邊框顏色",
 	},
 	player_assistance_toggle_los = {
 		en = "Toggle 'Require Line of Sight'",
@@ -3565,6 +3594,7 @@ local loc = {
 	unknown_colour = {
 		en = "Unknown Markers Colour",
 		["zh-cn"] = "未知物品标记颜色",
+		["zh-tw"] = "未知物品標記顏色",
 	},
 	unknown_colour_R = {
 		en = "R",
