@@ -17,7 +17,7 @@
 
 | Owner | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | dmf | Darktide Mod Framework | main | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | tooltip_append_mutator | 2026-07-06 23:13:46 +08:00 | 3af7b7c | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/31 | WhatTheLocalization/*localization.lua -> first key | dmf 完成，PR 已建立為 ready for review。 |
+| copilot | in_progress | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | WhatTheLocalization | What The Localization | main | Codex/Feature/WhatTheLocalization/Add-zh-tw | Darktide Translation Workspace/Log/WhatTheLocalization.md | Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | mod_name | 2026-07-06 23:14:55 +08:00 |  | no |  | WhatTheLocalization_localization.lua -> display_localized_strings | 開始處理 zh-tw 翻譯與校正 |
 
 ## 工作鎖定
 
@@ -26,6 +26,7 @@
 | MOD | File | Key | Owner | Status | Work branch | Branch log | Locked at | Last updated | Release condition | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | tooltip_append_mutator | copilot | released | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | 2026-07-06 22:35:51 +08:00 | 2026-07-06 23:13:46 +08:00 | PR #31 已建立且為 ready | 任務完成，釋放鎖定 |
+| WhatTheLocalization | Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | mod_name | copilot | in_progress | Codex/Feature/WhatTheLocalization/Add-zh-tw | Darktide Translation Workspace/Log/WhatTheLocalization.md | 2026-07-06 23:14:55 +08:00 | 2026-07-06 23:14:55 +08:00 | 完成 WhatTheLocalization localization 並更新 PR 狀態 | 由 main 開始鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -124,6 +125,25 @@
 | 2026-07-06 23:13:46 +08:00 | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | output_mode_echo | completed | Section: Key Progress | 補齊缺失 zh-tw |
 | 2026-07-06 23:13:46 +08:00 | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | chat_history_enable | completed | Section: Key Progress | 補齊缺失 zh-tw |
 | 2026-07-06 23:13:46 +08:00 | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | tooltip_append_mutator | completed | Section: Key Progress | 校正現有 zh-tw 用語 |
+
+### MOD-LOG-0003 - WhatTheLocalization
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | What The Localization |
+| Repo directory | WhatTheLocalization |
+| Owner | copilot |
+| Status | in_progress |
+| Base branch | main |
+| Work branch | Codex/Feature/WhatTheLocalization/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/WhatTheLocalization.md |
+| Started at | 2026-07-06 23:14:55 +08:00 |
+| Last updated | 2026-07-06 23:14:55 +08:00 |
+| Completed at |  |
+| Commit |  |
+| PR URL / number |  |
+| Next position | WhatTheLocalization_localization.lua:mod_name |
+| Notes | 已完成檔案盤點，開始校正 zh-tw。 |
 
 ## 協作交接紀錄
 
