@@ -15,9 +15,9 @@
 
 此表可同時記錄多個代理。若同一 MOD 或同一檔案已有 `in_progress` 鎖定，其他代理不得接手，除非該列標記為 `stale`、`blocked`，或「協作交接紀錄」明確交接。
 
-| Owner | Status | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| copilot | in_progress | dmf | Darktide Mod Framework | main | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | mods_options | 2026-07-06 22:35:51 +08:00 |  | no |  | dmf/localization/dmf.lua -> output_mode_echo | 開始處理 zh-tw 翻譯與校正 |
+| Owner | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| copilot | in_progress | not_recorded |  | dmf | Darktide Mod Framework | main | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | mods_options | 2026-07-06 22:35:51 +08:00 |  | no |  | dmf/localization/dmf.lua -> output_mode_echo | 開始處理 zh-tw 翻譯與校正 |
 
 ## 工作鎖定
 

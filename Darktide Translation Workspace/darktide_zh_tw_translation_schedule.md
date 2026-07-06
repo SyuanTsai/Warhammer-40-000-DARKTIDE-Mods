@@ -4,8 +4,9 @@
 
 ## 開工前權限申請
 
-- 每輪開始前，Codex 或 Copilot 必須先檢查本輪會用到的命令與外部服務，並一次性向使用者申請必要權限。
-- 不要等到執行到某個 git、GitHub、push 或 PR 命令時才臨時要求權限。
+- 每輪開始前，Codex 或 Copilot 必須先停止作業，檢查本輪會用到的命令與外部服務，並在對話中一次性向使用者申請必要權限。
+- 未取得使用者明確回覆授權前，不得開始翻譯、切換分支、建立分支、修改檔案、commit、push、建立 PR 或呼叫 GitHub API。
+- 不要等到執行到某個 git、GitHub、push 或 PR 命令時才臨時要求權限；權限申請是本流程的第 0 步。
 - 至少需要事先確認以下權限：
   1. 讀取與切換 git 分支。
   2. 執行 `git fetch`、`git checkout`、`git branch`、`git status`、`git diff`。
@@ -16,6 +17,30 @@
   7. 在必要時切回 `main` 並更新 `Darktide Translation Workspace/Workspace Status.md`、`Darktide Translation Workspace/MOD Directory Map.md` 與 `Darktide Translation Workspace/Term Candidates.md`。
 - 如果環境需要逐項授權，開始前先明確列出本輪預計會執行的權限類型，並請使用者一次批准；若工具仍要求逐命令授權，照工具限制處理，但不得省略事前權限確認。
 - 若缺少 push 或 PR 權限，本輪仍可先完成本地翻譯與進度保存，但結束回報必須明確標出哪些 GitHub 動作尚未完成。
+
+### 權限申請固定格式
+
+每輪第一則回覆必須使用下列格式，並等待使用者回覆同意後才繼續：
+
+```text
+本輪開始前需要先取得權限。
+
+預計執行：
+1. 讀取 main 與 Darktide Translation Workspace 文件。
+2. 掃描 Warhammer 40,000 DARKTIDE/mods 資料夾。
+3. 執行 git status / checkout main / branch / diff。
+4. 建立或切換工作分支 Codex/Feature/{資料夾名稱}/Add-zh-tw。
+5. 修改目標 MOD 的 *localization.lua。
+6. 更新 Darktide Translation Workspace 的工作紀錄與詞彙候選。
+7. commit 本地變更。
+8. 若授權，push 分支並建立或更新 ready PR。
+
+請回覆「同意」後我才開始。
+```
+
+- 若使用者只授權本地作業，禁止 push 與 PR。
+- 若使用者已在同一輪明確授權，才可繼續後續步驟。
+- 若工具平台仍跳出逐命令權限提示，必須正常使用平台提示；但這不取代上述對話中的事前授權請求。
 
 ## 執行環境訊息規則
 
@@ -266,6 +291,7 @@
 
 ## 每輪執行流程
 
+0. 先依「開工前權限申請」送出固定格式的權限申請，等待使用者明確回覆同意。未同意前不得執行第 1 步。
 1. 檢查 `git status`，確認切換分支不會覆蓋既有變更。
 2. 切換到 `main`。
 3. 從 `main` 讀取本檔 `Darktide Translation Workspace/darktide_zh_tw_translation_schedule.md`。
