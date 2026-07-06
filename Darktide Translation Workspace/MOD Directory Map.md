@@ -25,7 +25,7 @@
 | --- | --- | --- | --- | --- |
 | completed | 2026-07-06 22:35:51 +08:00 | Darktide Mod Loader | base | 已檢查完成，未找到 localization 檔案。 |
 | completed | 2026-07-06 23:13:46 +08:00 | Darktide Mod Framework | dmf | 已完成 zh-tw 校正與缺漏補齊（PR #31）。 |
-| in_progress | 2026-07-06 23:14:55 +08:00 | What The Localization | WhatTheLocalization | 由 copilot 接手翻譯 zh-tw。 |
+| completed | 2026-07-06 23:16:11 +08:00 | What The Localization | WhatTheLocalization | 已檢查完成，所有 en key 均有 zh-tw，無需修改。 |
 | ready | not checked | Scoreboard | scoreboard |  |
 | ready | not checked | Creature Spawner | creature_spawner |  |
 | ready | not checked | Power DI | Power_DI |  |
@@ -91,7 +91,7 @@
 | ready | not checked | I Wanna See | i_wanna_see |  |
 | ready | not checked | VFX Swapper | vfx_swapper |  |
 | ready | not checked | MemoryLeakFix | MemLeakFix |  |
-| ready | not checked | CombatStats | CombatStats |  |
+| in_progress | 2026-07-06 23:16:11 +08:00 | CombatStats | CombatStats | 由 copilot 接手翻譯 zh-tw。 |
 | ready | not checked | CharacterGrid | CharacterGrid |  |
 | ready | not checked | TeamKills | TeamKills |  |
 | ready | not checked | BrokerAutoStim | BrokerAutoStim |  |

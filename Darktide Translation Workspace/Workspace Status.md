@@ -17,7 +17,7 @@
 
 | Owner | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| copilot | in_progress | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | WhatTheLocalization | What The Localization | main | Codex/Feature/WhatTheLocalization/Add-zh-tw | Darktide Translation Workspace/Log/WhatTheLocalization.md | Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | mod_name | 2026-07-06 23:14:55 +08:00 |  | no |  | WhatTheLocalization_localization.lua -> display_localized_strings | 開始處理 zh-tw 翻譯與校正 |
+| copilot | in_progress | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | CombatStats | CombatStats | main | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | mod_name | 2026-07-06 23:16:11 +08:00 |  | no |  | CombatStats_localization.lua -> first missing zh-tw key | WhatTheLocalization 已檢查完成（無需修改），改接手 CombatStats。 |
 
 ## 工作鎖定
 
@@ -26,7 +26,8 @@
 | MOD | File | Key | Owner | Status | Work branch | Branch log | Locked at | Last updated | Release condition | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | tooltip_append_mutator | copilot | released | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | 2026-07-06 22:35:51 +08:00 | 2026-07-06 23:13:46 +08:00 | PR #31 已建立且為 ready | 任務完成，釋放鎖定 |
-| WhatTheLocalization | Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | mod_name | copilot | in_progress | Codex/Feature/WhatTheLocalization/Add-zh-tw | Darktide Translation Workspace/Log/WhatTheLocalization.md | 2026-07-06 23:14:55 +08:00 | 2026-07-06 23:14:55 +08:00 | 完成 WhatTheLocalization localization 並更新 PR 狀態 | 由 main 開始鎖定 |
+| WhatTheLocalization | Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | loc_command_output_visualize_description | copilot | released | Codex/Feature/WhatTheLocalization/Add-zh-tw | Darktide Translation Workspace/Log/WhatTheLocalization.md | 2026-07-06 23:14:55 +08:00 | 2026-07-06 23:16:11 +08:00 | 已完成檢查並釋放 | 所有 en key 均已有 zh-tw，無需修改 |
+| CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | mod_name | copilot | in_progress | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | 2026-07-06 23:16:11 +08:00 | 2026-07-06 23:16:11 +08:00 | 完成 CombatStats localization 並更新 PR 狀態 | 由 main 開始鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -133,17 +134,48 @@
 | README MOD | What The Localization |
 | Repo directory | WhatTheLocalization |
 | Owner | copilot |
-| Status | in_progress |
+| Status | completed |
 | Base branch | main |
 | Work branch | Codex/Feature/WhatTheLocalization/Add-zh-tw |
 | Branch log | Darktide Translation Workspace/Log/WhatTheLocalization.md |
 | Started at | 2026-07-06 23:14:55 +08:00 |
-| Last updated | 2026-07-06 23:14:55 +08:00 |
+| Last updated | 2026-07-06 23:16:11 +08:00 |
+| Completed at | 2026-07-06 23:16:11 +08:00 |
+| Commit | none |
+| PR URL / number | none |
+| Next position | CombatStats/CombatStats_localization.lua:mod_name |
+| Notes | 檢查完成，所有 en key 均已有 zh-tw，無需修改。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | completed | 12 | loc_command_output_visualize_description | Section: Key Progress | 全數已具備 zh-tw，無需修改 |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-06 23:16:11 +08:00 | Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | all en keys | completed | Section: Key Progress | 缺漏檢查為 0 |
+
+### MOD-LOG-0004 - CombatStats
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | CombatStats |
+| Repo directory | CombatStats |
+| Owner | copilot |
+| Status | in_progress |
+| Base branch | main |
+| Work branch | Codex/Feature/CombatStats/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/CombatStats.md |
+| Started at | 2026-07-06 23:16:11 +08:00 |
+| Last updated | 2026-07-06 23:16:11 +08:00 |
 | Completed at |  |
 | Commit |  |
 | PR URL / number |  |
-| Next position | WhatTheLocalization_localization.lua:mod_name |
-| Notes | 已完成檔案盤點，開始校正 zh-tw。 |
+| Next position | CombatStats_localization.lua:mod_name |
+| Notes | 掃描顯示約 57 個 en key 缺少 zh-tw，開始處理。 |
 
 ## 協作交接紀錄
 
