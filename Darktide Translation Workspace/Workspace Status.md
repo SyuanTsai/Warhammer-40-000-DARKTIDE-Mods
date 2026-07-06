@@ -17,7 +17,7 @@
 
 | Owner | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| copilot | in_progress | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | scoreboard | Scoreboard | main | Codex/Feature/scoreboard/Add-zh-tw | Darktide Translation Workspace/Log/scoreboard.md | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | mod_name | 2026-07-06 23:30:50 +08:00 |  | no |  | Scoreboard_localization.lua -> first missing/low-quality zh-tw key | 開始處理 zh-tw 翻譯與校正。 |
+| copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | scoreboard | Scoreboard | main | Codex/Feature/scoreboard/Add-zh-tw | Darktide Translation Workspace/Log/scoreboard.md | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | row_boss_damage_dealt | 2026-07-06 23:32:20 +08:00 | b30b231 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/34 | creature_spawner/creature_spawner_localization.lua -> first key | scoreboard 完成，PR 已建立為 ready for review。 |
 
 ## 工作鎖定
 
@@ -29,7 +29,7 @@
 | WhatTheLocalization | Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | loc_command_output_visualize_description | copilot | released | Codex/Feature/WhatTheLocalization/Add-zh-tw | Darktide Translation Workspace/Log/WhatTheLocalization.md | 2026-07-06 23:14:55 +08:00 | 2026-07-06 23:16:11 +08:00 | 已完成檢查並釋放 | 所有 en key 均已有 zh-tw，無需修改 |
 | CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | breed_horde | copilot | released | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | 2026-07-06 23:16:11 +08:00 | 2026-07-06 23:20:47 +08:00 | PR #32 已建立且為 ready | 任務完成，釋放鎖定 |
 | markers_aio | Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua | unknown_colour | copilot | released | Codex/Feature/markers_aio/Add-zh-tw | Darktide Translation Workspace/Log/markers_aio.md | 2026-07-06 23:24:32 +08:00 | 2026-07-06 23:29:53 +08:00 | PR #33 已建立且為 ready | 任務完成，釋放鎖定 |
-| scoreboard | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | mod_name | copilot | in_progress | Codex/Feature/scoreboard/Add-zh-tw | Darktide Translation Workspace/Log/scoreboard.md | 2026-07-06 23:30:50 +08:00 | 2026-07-06 23:30:50 +08:00 | 完成 scoreboard localization 並更新 PR 狀態 | 由 main 開始鎖定 |
+| scoreboard | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | row_boss_damage_dealt | copilot | released | Codex/Feature/scoreboard/Add-zh-tw | Darktide Translation Workspace/Log/scoreboard.md | 2026-07-06 23:30:50 +08:00 | 2026-07-06 23:32:20 +08:00 | PR #34 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -235,17 +235,31 @@
 | README MOD | Scoreboard |
 | Repo directory | scoreboard |
 | Owner | copilot |
-| Status | in_progress |
+| Status | completed |
 | Base branch | main |
 | Work branch | Codex/Feature/scoreboard/Add-zh-tw |
 | Branch log | Darktide Translation Workspace/Log/scoreboard.md |
 | Started at | 2026-07-06 23:30:50 +08:00 |
-| Last updated | 2026-07-06 23:30:50 +08:00 |
-| Completed at |  |
-| Commit |  |
-| PR URL / number |  |
-| Next position | Scoreboard_localization.lua:mod_name |
-| Notes | 開始處理 zh-tw 翻譯與校正。 |
+| Last updated | 2026-07-06 23:32:20 +08:00 |
+| Completed at | 2026-07-06 23:32:20 +08:00 |
+| Commit | b30b231 |
+| PR URL / number | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/34 |
+| Next position | creature_spawner/creature_spawner_localization.lua:first key |
+| Notes | 已完成 zh-tw 缺漏補齊，PR ready。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | completed | 3 | row_boss_damage_dealt | Section: Key Progress | 補齊缺漏 zh-tw |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-06 23:32:20 +08:00 | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | scoreboard_tactical_overlay_x | completed | Section: Key Progress | 補齊缺漏 zh-tw |
+| 2026-07-06 23:32:20 +08:00 | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | scoreboard_tactical_overlay_y | completed | Section: Key Progress | 補齊缺漏 zh-tw |
+| 2026-07-06 23:32:20 +08:00 | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | row_boss_damage_dealt | completed | Section: Key Progress | 補齊缺漏 zh-tw |
 
 ## 協作交接紀錄
 
@@ -285,6 +299,7 @@
 | dmf | main | Codex/Feature/dmf/Add-zh-tw | 3af7b7c | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/31 | yes | yes | 僅包含 dmf/localization/dmf.lua |
 | CombatStats | main | Codex/Feature/CombatStats/Add-zh-tw | 68ef157 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 | yes | yes | 僅包含 CombatStats_localization.lua |
 | markers_aio | main | Codex/Feature/markers_aio/Add-zh-tw | 4f67414 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/33 | yes | yes | 僅包含 markers_aio_localization.lua |
+| scoreboard | main | Codex/Feature/scoreboard/Add-zh-tw | b30b231 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/34 | yes | yes | 僅包含 Scoreboard_localization.lua |
 
 ## Completed Files
 
@@ -293,3 +308,4 @@
 | dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | 40 | 3af7b7c | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/31 | 2026-07-06 23:13:46 +08:00 | Darktide Translation Workspace/Log/dmf.md | 已完成 zh-tw 校正與缺漏補齊 |
 | CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | 7 | 68ef157 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 | 2026-07-06 23:20:47 +08:00 | Darktide Translation Workspace/Log/CombatStats.md | 已完成 zh-tw 術語一致性校正 |
 | markers_aio | Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua | 33 | 4f67414 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/33 | 2026-07-06 23:29:53 +08:00 | Darktide Translation Workspace/Log/markers_aio.md | 已完成 zh-tw 缺漏補齊與術語校正 |
+| scoreboard | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | 3 | b30b231 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/34 | 2026-07-06 23:32:20 +08:00 | Darktide Translation Workspace/Log/scoreboard.md | 已完成 zh-tw 缺漏補齊 |
