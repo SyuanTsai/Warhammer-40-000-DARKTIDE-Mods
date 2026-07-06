@@ -95,7 +95,7 @@ local localization = {
     execution_order_priority = {
         en = "Execution Order Priority",
         ["zh-cn"] = "遵从处决指令",
-        ["zh-tw"] = "遵從處決指令",
+        ["zh-tw"] = "處決指令優先順序",
     },
     execution_order_priority_description = {
         en = "Arbites Cyber-Mastiff Auto-Mark prioritizes enemies chosen by Execution Order.\n\n" ..
@@ -108,7 +108,7 @@ local localization = {
     companion_range_limitation = {
         en = "Range Limitation",
         ["zh-cn"] = "范围限制",
-        ["zh-tw"] = "範圍限制",
+        ["zh-tw"] = "距離限制",
     },
     companion_range_limitation_description = {
         en = "Restrict the maximum distance between your " .. highlight("Cyber-Mastiff") .. " and a target that can be marked by the Auto-Mark.\n\n" ..
@@ -394,7 +394,7 @@ local localization = {
     capacitance_retention_breed_threshold = {
         en = "Capacitance Retention",
         ["zh-cn"] = "电容保留",
-        ["zh-tw"] = "電容量門檻",
+        ["zh-tw"] = "電容量保留",
     },
     capacitance_retention_breed_threshold_description = {
         en = "Set Capacitance Retention Threshold for this enemy.",
@@ -493,7 +493,7 @@ local localization = {
     focus_target_overwrite = {
         en = "Focus Target Overwrite",
         ["zh-cn"] = "聚焦目标覆盖",
-        ["zh-tw"] = "專注目標覆蓋",
+        ["zh-tw"] = "鎖定目標覆蓋",
     },
     focus_target_overwrite_description = {
         en = highlight("Off") .. ": Enemie marked by Focus Target will not be re-marked.\n" ..
@@ -506,7 +506,7 @@ local localization = {
     focus_target_overwrite_delta = {
         en = "Focus Target Overwrite Delta",
         ["zh-cn"] = "聚焦目标覆盖最小层数差",
-        ["zh-tw"] = "專注目標覆蓋最小層數差",
+        ["zh-tw"] = "鎖定目標覆蓋最小層數差",
     },
     focus_target_switch = {
         en = "Switch Target on Attack",
@@ -587,7 +587,7 @@ local localization = {
     min_range = {
         en = "Min Range",
         ["zh-cn"] = "最小范围",
-        ["zh-tw"] = "最小範圍",
+        ["zh-tw"] = "最小距離",
     },
     min_range_description = {
         en = "Unit: Meters",
@@ -597,7 +597,7 @@ local localization = {
     max_range = {
         en = "Max Range",
         ["zh-cn"] = "最大范围",
-        ["zh-tw"] = "最大範圍",
+        ["zh-tw"] = "最大距離",
     },
     max_range_description = {
         en = "Unit: Meters",
@@ -705,7 +705,7 @@ local localization = {
     veteran_focus_target = {
         en = "Veteran Focus Target",
         ["zh-cn"] = "老兵聚焦目标",
-        ["zh-tw"] = "老兵專注目標",
+        ["zh-tw"] = "老兵鎖定目標",
     },
     cryptic_servo_skull = {
         en = "Skitarius Servo-Skull",
