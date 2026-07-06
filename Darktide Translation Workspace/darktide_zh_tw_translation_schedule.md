@@ -44,7 +44,7 @@
   6. 從 `main` 讀取 `Darktide Translation Workspace/Term Candidates.md`。
   7. 從 `main` 讀取 `Referneces\Translation.md`。
   8. 從 `main` 分支的 `Warhammer 40,000 DARKTIDE/mods` 資料夾取得實際 MOD 目錄清單。
-  9. 對照 `Darktide Translation Workspace/MOD Directory Map.md`，只選擇 `Status` 為 `ready` 或 `original_mod_updated`，且 `Scope` 為 `scheduled` 的 MOD。
+  9. 對照 `Darktide Translation Workspace/MOD Directory Map.md`，只選擇 `Status` 為 `ready` 或 `original_mod_updated` 的 MOD。
   10. 確認下一個要處理的目錄後，才建立或切換該目錄的工作分支。
 - 一般目錄：
   - base 分支固定使用 `main`。
@@ -59,7 +59,7 @@
 - 若工作分支已存在，重用它。
 - 若 PR 已存在，更新同一個 PR，不要重複建立。
 - PR 必須是 ready for review 狀態，不得建立或保留為 Draft。
-- 不要處理不在 `main` 的 MOD 資料夾清單內，或在 `MOD Directory Map.md` 中標記為 `paused`、`blocked`、`completed`、`not_scheduled`、`removed` 的目錄。
+- 不要處理不在 `main` 的 MOD 資料夾清單內，或在 `MOD Directory Map.md` 中標記為 `in_progress`、`paused`、`blocked`、`completed`、`not_scheduled`、`removed` 的目錄。`stale` 可接手，但接手前必須記錄原因與接手位置。
 
 ## GitHub PR 規則
 
@@ -72,7 +72,7 @@
   - 完成檔案
   - 完成 key 數
   - 是否有 blocked 項目
-  - 是否有詞彙總表更新已同步回 `main`
+  - 是否有 `Term Candidates.md` 候選詞彙更新已同步回 `main`
 - 不要啟用 GitHub auto-merge。
 - PR 建立後保留為直接可檢視、可手動合併的 ready PR。
 - 後續本地修改只要 push 到同一個工作分支，就更新同一個 ready PR。
@@ -89,10 +89,12 @@
   - `status`: `"in_progress"`
   - `work_branch`
   - `last_updated`
+- `owner` 欄位只接受小寫固定值：Copilot 一律填 `copilot`，Codex 一律填 `codex`。
 - 同一時間 Codex 與 Copilot 不得修改同一個 `*localization.lua` 檔案。
 - 若發現目錄已由另一個代理標記為 `in_progress`，除非該目錄明確標記為 `stale` 或 `blocked`，否則跳到下一個未處理目錄。
+- `stale` 表示先前的 `in_progress` 已失效或逾時；接手前必須在 `Workspace Status.md` 記錄接手原因、接手者、原工作分支與下一個可繼續位置。
 - 若需要交接，交接方必須先更新 `Darktide Translation Workspace/Workspace Status.md`，寫清楚下一個可繼續的位置。
-- PR 描述需註明處理者、完成檔案、完成 key 數、是否更新詞彙總表，以及是否有 blocked 項目。
+- PR 描述需註明處理者、完成檔案、完成 key 數、是否更新 `Term Candidates.md` 候選詞彙，以及是否有 blocked 項目。
 - PR 必須建立為 ready PR；若 Copilot 或 Codex 建成 Draft，必須先轉為 ready for review，但不要啟用 auto-merge。
 - Copilot 可以處理與 Codex 不同的目錄或 PR；Codex 與 Copilot 不應在同一工作分支上交錯提交，除非 `Darktide Translation Workspace/Workspace Status.md` 已明確交接。
 
@@ -121,18 +123,30 @@
   1. `Darktide Translation Workspace/Workspace Status.md`
   2. `Darktide Translation Workspace/MOD Directory Map.md`
   3. `Darktide Translation Workspace/Term Candidates.md`
+  4. `Darktide Translation Workspace/Log/<Repo directory>.md`
 - 這些檔案固定保存在 `main` 分支，不使用獨立 git worktree，也不保留在各功能工作分支作為最終狀態。
 - `Darktide Translation Workspace/Workspace Status.md` 是 Codex 與 Copilot 的共同工作狀態入口，必須包含：
-  1. 目前工作狀態
-  2. 文件索引
-  3. blocked 項目
-  4. PR 與交接紀錄
+  1. 目前狀態摘要
+  2. 逐 MOD append-only 工作紀錄
+  3. 文件索引
+  4. blocked 項目
+  5. PR 與交接紀錄
+- `Darktide Translation Workspace/Log/` 保存每個 MOD 的工作分支 LOG。LOG 是 `main` 上的持久工作文件，用來記錄該 MOD 的工作分支、目前位置、逐檔與逐 key 草稿進度、blocked 摘要與同步狀態。
+- 每個 MOD 開始前，必須先在 `main` 建立或更新 `Darktide Translation Workspace/Log/<Repo directory>.md`，記錄 owner、base branch、work branch、開始位置與本輪開始時間，並 commit 到 `main`。分支 LOG 指的是記錄工作分支狀態的文件，不代表要把 LOG commit 到功能工作分支。
+- 功能工作分支不得把 `Darktide Translation Workspace/` 內任何文件作為 PR 最終變更。工作期間若需要草稿紀錄，先保存在本地工作副本；每個 MOD 完成、交接或停止前，切回 `main` 同步到 `Workspace Status.md`、`Log/<Repo directory>.md`、`MOD Directory Map.md` 與 `Term Candidates.md`。
 - `Darktide Translation Workspace/MOD Directory Map.md` 必須依 `README.md` 維護狀態與 `main` 分支實際 MOD 資料夾清單整理；`# 移除的MOD` 區塊下的 MOD 不維護、不處理。
-- `Darktide Translation Workspace/MOD Directory Map.md` 的第一欄必須是 `Status`，使用者可以隨時手動修改此欄，讓下一輪作業知道該 MOD 是否可處理、暫停、已完成、或原始 MOD 已更新。
+- `README.md` 是 MOD 維護狀態的最終準則。若 `README.md`、`Warhammer 40,000 DARKTIDE/mods` 實際資料夾、`MOD Directory Map.md` 三者不一致，先以 `README.md` 判斷是否維護、是否移除、是否需要使用者確認。
+- 不一致處理規則：
+  - README 在維護區且資料夾存在：可依 `MOD Directory Map.md` 狀態處理。
+  - README 在維護區但資料夾不存在：標記 `blocked`，Notes 寫明缺少本地資料夾。
+  - README 在 `# 移除的MOD` 下：即使本地資料夾存在，也標記 `removed` 並跳過。
+  - 本地資料夾存在但 README 沒有列出：標記 `not_scheduled`，Notes 寫明需要使用者確認 README。
+- `Darktide Translation Workspace/MOD Directory Map.md` 的第一欄必須是 `Status`，也是唯一的排程狀態來源。使用者可以隨時手動修改此欄，讓下一輪作業知道該 MOD 是否可處理、暫停、已完成、或原始 MOD 已更新。
 - `Status` 判讀規則：
   - `ready`: 可正常選取處理。
-  - `original_mod_updated`: 使用者表示原始 MOD 已更新；下一輪必須先比對 `README.md`、原始來源資訊、本地 MOD 目錄與目前分支，再決定是否繼續翻譯。
+  - `original_mod_updated`: 使用者表示原始 MOD 已更新；下一輪只比對本地資訊：`README.md`、`main` 的實際資料夾與本地內容。
   - `in_progress`: 其他代理正在處理；除非 `Workspace Status.md` 明確交接，否則跳過。
+  - `stale`: 先前處理中但已失效或逾時；可接手，接手前必須記錄原因與接手位置。
   - `paused`: 使用者暫停；跳過。
   - `blocked`: 先查看 `Workspace Status.md` 的 Blocked Items。
   - `completed`: 已完成；除非使用者改成 `original_mod_updated` 或 `ready`，否則跳過。
@@ -141,14 +155,16 @@
 - `Last compared at` 是給使用者參考的比對時間。每次因 `original_mod_updated`、例行檢查、或每處理 10 個目錄後重新檢查 `main` 資料夾清單時，必須在 `main` 更新該欄，使用 ISO 8601 或明確時區格式。
 - `Darktide Translation Workspace/Term Candidates.md` 用來記錄 `Referneces/Translation.md` 尚未收錄的特殊名詞與新詞彙候選。
 - 每處理新 key 前，先檢查 `Referneces\Translation.md` 與 `Darktide Translation Workspace/Term Candidates.md`。
-- 讀取或翻譯過程中，只要看到 `Referneces\Translation.md` 沒有的特殊名詞、專有名詞、職業/敵人/武器/系統詞或 UI 固定用語，必須記錄到 `Darktide Translation Workspace/Term Candidates.md`。
-- 每次在功能分支處理期間整理出新的固定譯法後，只能暫存在 `Darktide Translation Workspace/Term Candidates.md` 的候選表草稿或本輪紀錄，不得把工作文件 commit 到功能工作分支作為最終狀態。
-- 每輪結束前，必須把本輪整理出的工作狀態與詞彙候選帶回 `main` 更新：
-  1. 先在目前工作分支完成 localization 檔案的品質檢查。
-  2. commit 或暫存目前工作分支上的 localization 變更，確保切分支不會覆蓋內容。
-  3. 記錄本輪新增詞彙候選、blocked 項目、PR 狀態與下一個繼續位置。
-  4. 切換回 `main`。
-  5. 更新 `Darktide Translation Workspace/Workspace Status.md` 與 `Darktide Translation Workspace/Term Candidates.md`。
+- 讀取或翻譯過程中，只要看到 `Referneces\Translation.md` 沒有的特殊名詞、專有名詞、職業/敵人/武器/系統詞或 UI 固定用語，必須先記錄到本輪草稿，並在 MOD 完成、交接或停止前同步回 `Darktide Translation Workspace/Term Candidates.md`。
+- 每次在功能分支處理期間整理出新的固定譯法後，只能暫存在本輪草稿紀錄；不得把工作文件 commit 到功能工作分支作為 PR 最終狀態。每個 MOD 完成、交接或停止前，必須切回 `main` 同步到 `Term Candidates.md` 與該 MOD 的 `Log/<Repo directory>.md`。
+- 工作文件同步單位為 MOD。每個 MOD 使用 `Workspace Status.md` 的一個 `MOD-LOG` 摘要段落，並使用 `Darktide Translation Workspace/Log/<Repo directory>.md` 保存較完整的逐檔與逐 key 進度。
+- 不要求每完成一個 key 就 commit 到 `main`；中途可以先保存在目前工作副本或暫存區，但不得讓這些工作文件變更進入一般功能 PR。
+- 工作文件只保存在 `main`。正常流程如下：
+  1. 在 `main` 選定 MOD 後，先建立或更新 `Darktide Translation Workspace/Log/<Repo directory>.md` 與 `Workspace Status.md` 的目前狀態，commit 至 `main`，commit message 使用 `Update AI work documents`。
+  2. 切換到 `Codex/Feature/<Repo directory>/Add-zh-tw` 工作分支，只修改目標目錄內的 `*localization.lua`。
+  3. 工作期間可在本地草稿記錄逐檔、逐 key、詞彙候選與 blocked 項目；不得讓這些工作文件成為功能 PR 的最終變更。
+  4. 每個 MOD 完成、交接或停止前，先在工作分支完成 localization 檔案品質檢查，並 commit 或暫存 localization 變更，確保切分支不會覆蓋內容。
+  5. 切換回 `main`，更新 `Workspace Status.md`、`Log/<Repo directory>.md`、`MOD Directory Map.md` 與 `Term Candidates.md`。
   6. commit 至 `main`，commit message 使用 `Update AI work documents`。
   7. 回到原工作分支，確認該分支與 PR 沒有保留 `Darktide Translation Workspace/` 內任何檔案的變更。
 - 若 `Referneces\Translation.md` 與新詞彙候選衝突，以 `Referneces\Translation.md` 為準；新詞彙候選只供使用者判讀是否加入正式翻譯表。
@@ -157,7 +173,7 @@
 
 ## 續跑與工作狀態
 
-- 使用 `Darktide Translation Workspace/Workspace Status.md` 作為主要工作狀態檔。
+- 使用 `Darktide Translation Workspace/Workspace Status.md` 作為主要工作狀態檔；其中「目前狀態摘要」供快速判讀，「逐 MOD 工作紀錄」供續跑追蹤。
 - 使用 `Darktide Translation Workspace/MOD Directory Map.md` 作為 MOD 目錄、狀態與比對時間來源；不得在此檔保存 base branch 或 work branch 對應。
 - 使用 `Darktide Translation Workspace/Term Candidates.md` 作為新詞彙候選表。
 - 不再以 `.codex/darktide_zh_tw_translation_progress.json` 作為主要進度來源；若既有 JSON 存在，只能作為一次性遷移參考。
@@ -167,19 +183,20 @@
   3. 工作分支，固定格式為 `Codex/Feature/{資料夾名稱}/Add-zh-tw`
   4. owner
   5. last_updated
-  6. 目前檔案路徑
-  7. 目前 localization key
-  8. key 狀態
-  9. 已完成檔案
-  10. 已完成 key
-  11. 新詞彙候選
-  12. commit hash
-  13. push 狀態
-  14. PR URL / PR number
-  15. blocked 項目
-- 每完成一筆 localization key 的 `zh-tw` 翻譯或校正後，立即更新 `Darktide Translation Workspace/Workspace Status.md` 的目前工作狀態。
-- 若該 key 的英文來源出現 `Referneces\Translation.md` 未收錄的特殊名詞，立即更新 `Darktide Translation Workspace/Term Candidates.md`。
-- 每完成一個檔案後，也立即更新 `Darktide Translation Workspace/Workspace Status.md`。
+  6. branch log path
+  7. 目前檔案路徑
+  8. 目前 localization key
+  9. key 狀態
+  10. 已完成檔案
+  11. 已完成 key
+  12. 新詞彙候選
+  13. commit hash
+  14. push 狀態
+  15. PR URL / PR number
+  16. blocked 項目
+- 每完成一筆 localization key 的 `zh-tw` 翻譯或校正後，可先記錄在目前工作副本的 LOG 草稿；同步回 `main` 的單位是整個 MOD，不是每個 key 單獨 commit。
+- 若該 key 的英文來源出現 `Referneces\Translation.md` 未收錄的特殊名詞，可先整理到本輪候選清單，並在該 MOD 完成後一併更新 `Darktide Translation Workspace/Term Candidates.md`。
+- 每完成一個檔案後，更新目前工作副本中的 LOG 草稿，並在該 MOD 完成、交接或停止前同步回 `main` 的 `Darktide Translation Workspace/Log/<Repo directory>.md`。
 - 每次停止前，必須確保 `Darktide Translation Workspace/Workspace Status.md` 已記錄下一次應繼續的位置。
 - 若工作文件與實際檔案內容不一致，先檢查檔案中的 `["zh-tw"]` 是否已依 `en` 完成，再修正 `Darktide Translation Workspace/Workspace Status.md`。
 - 不可留下無法判斷是否完成的 key。
@@ -261,19 +278,19 @@
 10. 若有非本任務造成的未提交變更，不要覆蓋，記錄並避開衝突檔案。
 11. 掃描 `main` 分支的 `Warhammer 40,000 DARKTIDE/mods` 資料夾清單，與 `Darktide Translation Workspace/MOD Directory Map.md` 對照。
 12. 若 `main` 新增資料夾，先在 `MOD Directory Map.md` 新增對應列，`Status` 預設為 `ready` 或依 README 判斷為 `not_scheduled`，`Last compared at` 填入本次比對時間。
-13. 依 `MOD Directory Map.md` 找到下一個 `Status` 為 `ready` 或 `original_mod_updated`、`Scope` 為 `scheduled`、存在於 `main` 資料夾清單、未被另一代理占用的目錄 / 檔案 / localization key。
-14. 若 `Status` 為 `original_mod_updated`，先比對 `README.md`、原始來源資訊、`main` 資料夾與本地內容；完成後在 `MOD Directory Map.md` 更新 `Last compared at`，並依結果把 `Status` 改為 `ready`、`blocked` 或保持 `original_mod_updated` 並寫明 Notes。
+13. 依 `MOD Directory Map.md` 找到下一個 `Status` 為 `ready` 或 `original_mod_updated`、存在於 `main` 資料夾清單、未被另一代理占用的目錄 / 檔案 / localization key。
+14. 若 `Status` 為 `original_mod_updated`，只比對本地資訊：`README.md`、`main` 資料夾與本地內容；完成後在 `MOD Directory Map.md` 更新 `Last compared at`，並依結果把 `Status` 改為 `ready`、`blocked` 或保持 `original_mod_updated` 並寫明 Notes。
 15. 以 `main` 作為 base，建立或切換到 `Codex/Feature/{資料夾名稱}/Add-zh-tw` 工作分支。
-16. 在 `Darktide Translation Workspace/Workspace Status.md` 記錄 owner、`main` base、工作分支與目前位置。
+16. 在切換到工作分支前，先在 `main` 更新 `Darktide Translation Workspace/Workspace Status.md` 與 `Darktide Translation Workspace/Log/<Repo directory>.md`，記錄 owner、`main` base、工作分支與目前位置，並 commit 到 `main`。
 17. 找出該目錄下所有 `*localization.lua`。
 18. 從 `Darktide Translation Workspace/Workspace Status.md` 記錄的位置開始處理。
-19. 每完成一個 key，立即更新 `Darktide Translation Workspace/Workspace Status.md`。
-20. 若讀取或翻譯時發現 `Referneces\Translation.md` 未收錄的特殊名詞，立即記錄到 `Darktide Translation Workspace/Term Candidates.md`。
+19. 每完成一個 key，追加到目前 MOD 的 `Key Progress`；不要求每個 key 立即同步 commit 到 `main`。
+20. 若讀取或翻譯時發現 `Referneces\Translation.md` 未收錄的特殊名詞，先記錄到本輪草稿，並在該 MOD 段落同步回 `main` 時一起提交到 `Darktide Translation Workspace/Term Candidates.md`。
 21. 每完成一個檔案，執行品質檢查。
 22. 每完成 10 個目錄後，必須切回 `main`，重新掃描 `Warhammer 40,000 DARKTIDE/mods` 是否新增資料夾，並更新 `MOD Directory Map.md` 的新資料夾與 `Last compared at`。
 23. 不得直接修改 `Referneces\Translation.md`，除非使用者明確要求。
 24. 適時 commit，commit message 使用 `Translate zh-tw localization for <目錄名>`。
-25. 每輪結束前切回 `main`，把本輪整理出的工作狀態更新到 `Darktide Translation Workspace/Workspace Status.md`，把 MOD 狀態與比對時間更新到 `Darktide Translation Workspace/MOD Directory Map.md`，把新詞彙候選更新到 `Darktide Translation Workspace/Term Candidates.md`。
+25. 每個 MOD 完成、交接或停止前切回 `main`，把該 MOD 的 `MOD-LOG` 摘要與目前狀態摘要更新到 `Darktide Translation Workspace/Workspace Status.md`，把完整逐檔與逐 key 紀錄更新到 `Darktide Translation Workspace/Log/<Repo directory>.md`，把 MOD 狀態與比對時間更新到 `Darktide Translation Workspace/MOD Directory Map.md`，把新詞彙候選更新到 `Darktide Translation Workspace/Term Candidates.md`。
 26. 在 `main` commit 工作文件，commit message 使用 `Update AI work documents`。
 27. 回到工作分支，確認工作分支與 PR 不包含 `Darktide Translation Workspace/` 內任何檔案。
 28. push 工作分支。
@@ -295,9 +312,10 @@
 
 - 不再維護固定的「目錄與分支清單」。
 - 每輪開始時，必須從 `main` 分支的 `Warhammer 40,000 DARKTIDE/mods` 取得實際資料夾清單。
-- `Darktide Translation Workspace/MOD Directory Map.md` 只保存狀態、比對時間、README MOD 名稱、Repo directory、Scope 與 Notes，不保存 base branch 或 work branch 對應。
+- `Darktide Translation Workspace/MOD Directory Map.md` 只保存狀態、比對時間、README MOD 名稱、Repo directory 與 Notes，不保存 base branch 或 work branch 對應。
 - 工作分支一律使用：
   `Codex/Feature/{資料夾名稱}/Add-zh-tw`
+- 工作分支前綴固定為 `Codex`，與 `owner` 欄位使用 `copilot` 或 `codex` 無關。
 - PR base 一律使用 `main`。
 - 每完成 10 個目錄後，必須切回 `main` 重新掃描 `Warhammer 40,000 DARKTIDE/mods`，檢查是否有新增資料夾，並更新 `MOD Directory Map.md`。
 - 若新增資料夾在 README 的維護區塊中，新增為 `ready` 或依使用者狀態設定。
