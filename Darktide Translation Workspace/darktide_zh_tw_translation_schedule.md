@@ -58,12 +58,13 @@
 6. 在 `main` 更新 `Workspace Status.md` 與 `Log/<Repo directory>.md`，記錄 owner、工作分支、開始位置與時間，commit message 用 `Update AI work documents`。
 7. 建立或切到 `Codex/Feature/<Repo directory>/Add-zh-tw`。
 8. 只處理該 MOD 目錄內的 `*localization.lua`。
-9. 翻譯或校正完成後執行品質檢查。
-10. 在工作分支 commit，commit message 用 `Translate zh-tw localization for <Repo directory>`。
-11. 回到 `main`，同步 `Workspace Status.md`、`Log/<Repo directory>.md`、`MOD Directory Map.md` 與 `Term Candidates.md`，commit message 用 `Update AI work documents`。
-12. 回到工作分支，確認 PR diff 不含 `Darktide Translation Workspace/`。
-13. 若有權限，push 工作分支並建立或更新 ready PR。
-14. 回報完成項目、PR、blocked、以及下一輪續跑位置。
+9. 處理每個 localization key 前，先檢查該 key 的整個 table 是否已存在 `["zh-tw"]`。
+10. 翻譯或校正完成後執行品質檢查。
+11. 在工作分支 commit，commit message 用 `Translate zh-tw localization for <Repo directory>`。
+12. 回到 `main`，同步 `Workspace Status.md`、`Log/<Repo directory>.md`、`MOD Directory Map.md` 與 `Term Candidates.md`，commit message 用 `Update AI work documents`。
+13. 回到工作分支，確認 PR diff 不含 `Darktide Translation Workspace/`。
+14. 若有權限，push 工作分支並建立或更新 ready PR。
+15. 回報完成項目、PR、blocked、以及下一輪續跑位置。
 
 每完成 10 個 MOD 後，回到 `main` 重新掃描 MOD 目錄與 `README.md`，並更新 `MOD Directory Map.md` 的比對時間與狀態。
 
@@ -88,9 +89,12 @@
 9. 不翻譯程式碼、設定 key、檔名、mod id、函式名。
 10. 不改 Lua 結構、key、縮排風格、逗號與其他語系內容。
 11. 只新增或修改 `["zh-tw"]` 欄位。
-12. 若 `["zh-tw"]` 缺失，依 `en` 新增。
-13. 若 `["zh-tw"]` 品質差，依 `en` 校正。
-14. 純符號、純數字、純 placeholder 或無語意 UI 文字可以沒有 `["zh-tw"]`；不要為這類項目補上與 `en` 相同的值。
+12. 每個 localization key 的 table 內最多只能有一個 `["zh-tw"]`。
+13. 若 `["zh-tw"]` 已存在，只能修改該既有欄位；不得在同一 table 內新增第二個 `["zh-tw"]`。
+14. 若 `["zh-tw"]` 缺失，才可依 `en` 新增。
+15. 新增 `["zh-tw"]` 時，不得以 `zh-cn` 或其他語系所在位置判斷是否缺失；必須先掃描該 key 的完整 table。
+16. 若 `["zh-tw"]` 品質差，依 `en` 校正。
+17. 純符號、純數字、純 placeholder 或無語意 UI 文字可以沒有 `["zh-tw"]`；不要為這類項目補上與 `en` 相同的值。
 
 ## 6. 詞彙表比對
 
@@ -110,6 +114,7 @@
 commit 前至少確認：
 
 - Lua 結構未破壞。
+- 每個 localization key 的 table 內沒有重複的 `["zh-tw"]`。
 - `["zh-tw"]` 沒有空字串。
 - placeholder 完整保留。
 - 同一目錄內同一英文短語翻譯一致。
