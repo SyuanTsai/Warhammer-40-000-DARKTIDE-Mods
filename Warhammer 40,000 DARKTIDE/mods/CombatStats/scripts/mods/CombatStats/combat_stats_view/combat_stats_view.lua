@@ -22,12 +22,59 @@ local DETAIL_ICON_SPACING = 5
 local DETAIL_TEXT_FONT_SIZE = 18
 local DETAIL_TEXT_PADDING = 10
 
--- Stripe bleed so the row background reaches the pane edges (grid doesn't clip).
-local STRIPE_BLEED_LEFT = 20
-local STRIPE_BLEED_RIGHT = 30
+local ICON_PACKAGES = {
+    'packages/ui/hud/player_weapon/player_weapon',
+    'packages/ui/hud/player_buffs/player_buffs',
+    'packages/ui/hud/wield_info/wield_info',
+    'packages/ui/views/talent_builder_view/talent_builder_view',
+    'packages/ui/material_sets/circumstances',
+}
 
--- Darktide's terminal-background greenish-gray, a touch brighter than the pane background.
-local COLOR_STRIPE = { 120, 49, 56, 49 }
+local function _package_is_available(package_name)
+    local application = Application and Application.can_get_resource
+    if not application then
+        return false
+    end
+    local ok, exists = pcall(application, 'package', package_name)
+    return ok and exists or false
+end
+
+local function _package_is_loaded(package_name)
+    local package_manager = Managers and Managers.package
+    if not package_manager or not package_manager.has_loaded then
+        return false
+    end
+    local ok, is_loaded = pcall(package_manager.has_loaded, package_manager, package_name)
+    return ok and is_loaded or false
+end
+
+local function _load_icon_packages()
+    local package_manager = Managers and Managers.package
+    if not package_manager then
+        return {}
+    end
+
+    local load_ids = {}
+    for _, pkg in ipairs(ICON_PACKAGES) do
+        if _package_is_available(pkg) and not _package_is_loaded(pkg) then
+            local ok, id = pcall(package_manager.load, package_manager, pkg, 'CombatStatsIcons', nil, true)
+            if ok and id then
+                load_ids[#load_ids + 1] = id
+            end
+        end
+    end
+    return load_ids
+end
+
+local function _release_icon_packages(load_ids)
+    local package_manager = Managers and Managers.package
+    if not package_manager or not package_manager.release then
+        return
+    end
+    for i = 1, #load_ids do
+        pcall(package_manager.release, package_manager, load_ids[i])
+    end
+end
 
 local CombatStatsView = class('CombatStatsView', 'BaseView')
 
@@ -50,6 +97,7 @@ end
 
 function CombatStatsView:on_enter()
     CombatStatsView.super.on_enter(self)
+    self._icon_package_ids = _load_icon_packages()
 
     self:_setup_input_legend()
     self:_setup_search()
@@ -130,6 +178,7 @@ function CombatStatsView:_setup_entries()
             self:_unregister_widget_name(widget.name)
         end
         self._entry_widgets = {}
+        self._selected_widget = nil
     end
 
     local entries = {}
@@ -237,33 +286,36 @@ function CombatStatsView:_setup_entries()
         -- Add all engagements in reverse order (newest first) if they match search
         for i = #engagements, 1, -1 do
             local engagement = engagements[i]
-            local duration = (engagement.end_time or current_time) - engagement.start_time
-            local breed_name = engagement.name or (mod:localize('enemy') .. ' ' .. i)
-            local display_name = mod.utils:get_breed_display_name(breed_name)
+            -- Skip enemies the player dealt no damage to (teammate kills, aggro-only).
+            if engagement.stats.total_damage ~= 0 or engagement.stats.total_hits ~= 0 then
+                local duration = (engagement.end_time or current_time) - engagement.start_time
+                local breed_name = engagement.name or (mod:localize('enemy') .. ' ' .. i)
+                local display_name = mod.utils:get_breed_display_name(breed_name)
 
-            if
-                search_text == ''
-                or display_name:lower():find(search_text, 1, true)
-                or breed_name:lower():find(search_text, 1, true)
-                or engagement.type:lower():find(search_text, 1, true)
-            then
-                local enemy_entry = {
-                    widget_type = 'stats_entry',
-                    name = display_name,
-                    breed_name = breed_name,
-                    type = engagement.type,
-                    start_time = engagement.start_time,
-                    end_time = engagement.end_time,
-                    duration = duration,
-                    stats = engagement.stats,
-                    buffs = engagement.buffs,
-                    is_session = false,
-                    pressed_function = function(parent, widget, entry)
-                        parent:_select_entry(widget, entry)
-                    end,
-                }
-                enemy_entry.subtext, enemy_entry.subtext_color = self:_format_entry_subtext(enemy_entry)
-                entries[#entries + 1] = enemy_entry
+                if
+                    search_text == ''
+                    or display_name:lower():find(search_text, 1, true)
+                    or breed_name:lower():find(search_text, 1, true)
+                    or engagement.type:lower():find(search_text, 1, true)
+                then
+                    local enemy_entry = {
+                        widget_type = 'stats_entry',
+                        name = display_name,
+                        breed_name = breed_name,
+                        type = engagement.type,
+                        start_time = engagement.start_time,
+                        end_time = engagement.end_time,
+                        duration = duration,
+                        stats = engagement.stats,
+                        buffs = engagement.buffs,
+                        is_session = false,
+                        pressed_function = function(parent, widget, entry)
+                            parent:_select_entry(widget, entry)
+                        end,
+                    }
+                    enemy_entry.subtext, enemy_entry.subtext_color = self:_format_entry_subtext(enemy_entry)
+                    entries[#entries + 1] = enemy_entry
+                end
             end
         end
     end
@@ -351,6 +403,7 @@ end
 
 function CombatStatsView:_select_entry(widget, entry)
     self._selected_entry = entry
+    self._selected_widget = widget
     self:_rebuild_detail_widgets(entry)
 end
 
@@ -374,13 +427,13 @@ function CombatStatsView:_rebuild_detail_widgets(entry)
     local duration = entry.duration
     local buffs = entry.buffs or {}
 
-    local detail_scenegraph = self._ui_scenegraph.combat_stats_detail_content
+    local detail_scenegraph = self._ui_scenegraph and self._ui_scenegraph.combat_stats_detail_content
+    if not detail_scenegraph or not detail_scenegraph.size then
+        -- View is tearing down (on_exit ran) or scenegraph isn't ready yet
+        return
+    end
     local detail_content_width = detail_scenegraph.size[1]
     local text_width = detail_content_width
-
-    -- Alternating-row stripe state. Data rows auto-stripe; headers skip and reset
-    -- the counter so each section reads as its own striped table.
-    local stripe_state = { count = 0 }
 
     -- Helper to create text widget
     local function create_text(text, color, font_size, is_header)
@@ -389,23 +442,6 @@ function CombatStatsView:_rebuild_detail_widgets(entry)
         local height = font_size + DETAIL_TEXT_PADDING
 
         local passes = {}
-        local stripe = false
-        if is_header then
-            stripe_state.count = 0
-        else
-            stripe = stripe_state.count % 2 == 1
-            stripe_state.count = stripe_state.count + 1
-        end
-        if stripe then
-            passes[#passes + 1] = {
-                pass_type = 'rect',
-                style = {
-                    color = COLOR_STRIPE,
-                    offset = { -STRIPE_BLEED_LEFT, 0, 0 },
-                    size = { text_width + STRIPE_BLEED_LEFT + STRIPE_BLEED_RIGHT, height },
-                },
-            }
-        end
         passes[#passes + 1] = {
             pass_type = 'text',
             value_id = 'text',
@@ -442,19 +478,6 @@ function CombatStatsView:_rebuild_detail_widgets(entry)
 
         local passes = {}
 
-        local stripe = stripe_state.count % 2 == 1
-        stripe_state.count = stripe_state.count + 1
-        if stripe then
-            passes[#passes + 1] = {
-                pass_type = 'rect',
-                style = {
-                    color = COLOR_STRIPE,
-                    offset = { -STRIPE_BLEED_LEFT, 0, 0 },
-                    size = { text_width + STRIPE_BLEED_LEFT + STRIPE_BLEED_RIGHT, widget_height },
-                },
-            }
-        end
-        -- Icon pass (if icon exists)
         if icon then
             passes[#passes + 1] = {
                 pass_type = 'texture',
@@ -829,6 +852,10 @@ function CombatStatsView:cb_on_history_pressed()
         self:_setup_entries()
 
         mod.history:load_index(function()
+            -- View may have been closed (ESC / mission transition) while the load was in flight
+            if self._destroyed then
+                return
+            end
             self._history_loading = false
             if self._viewing_history and not self._viewing_history_entry then
                 self:_setup_entries()
@@ -901,6 +928,10 @@ function CombatStatsView:_load_history_entry(entry)
     self:_setup_entries()
 
     mod.history:load_history_entry(file_name, function(full_data)
+        -- Bail out if the view was closed while the load was in flight
+        if self._destroyed then
+            return
+        end
         self._history_entry_loading = false
 
         -- Bail out if the user navigated away or selected a different entry.
@@ -964,6 +995,7 @@ function CombatStatsView:_draw_grid(grid, widgets, interaction_widget, ui_render
             local hotspot = widget.content.hotspot
             if hotspot then
                 hotspot.force_disabled = not is_grid_hovered
+                hotspot.is_selected = widget == self._selected_widget or nil
             end
             UIWidget.draw(widget, ui_renderer)
         end
@@ -1016,6 +1048,9 @@ function CombatStatsView:on_exit()
         self._input_legend_element = nil
         self:_remove_element('input_legend')
     end
+
+    _release_icon_packages(self._icon_package_ids)
+    self._icon_package_ids = nil
 
     CombatStatsView.super.on_exit(self)
 end
