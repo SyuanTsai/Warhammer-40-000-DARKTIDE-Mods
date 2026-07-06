@@ -17,7 +17,7 @@
 
 | Owner | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| copilot | in_progress | not_recorded |  | dmf | Darktide Mod Framework | main | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | mods_options | 2026-07-06 22:35:51 +08:00 |  | no |  | dmf/localization/dmf.lua -> output_mode_echo | 開始處理 zh-tw 翻譯與校正 |
+| copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | dmf | Darktide Mod Framework | main | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | tooltip_append_mutator | 2026-07-06 23:13:46 +08:00 | 3af7b7c | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/31 | WhatTheLocalization/*localization.lua -> first key | dmf 完成，PR 已建立為 ready for review。 |
 
 ## 工作鎖定
 
@@ -25,7 +25,7 @@
 
 | MOD | File | Key | Owner | Status | Work branch | Branch log | Locked at | Last updated | Release condition | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | mods_options | copilot | in_progress | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | 2026-07-06 22:35:51 +08:00 | 2026-07-06 22:35:51 +08:00 | 完成 dmf localization 並更新 PR 狀態 | 由 main 開始鎖定 |
+| dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | tooltip_append_mutator | copilot | released | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | 2026-07-06 22:35:51 +08:00 | 2026-07-06 23:13:46 +08:00 | PR #31 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -98,17 +98,32 @@
 | README MOD | Darktide Mod Framework |
 | Repo directory | dmf |
 | Owner | copilot |
-| Status | in_progress |
+| Status | completed |
 | Base branch | main |
 | Work branch | Codex/Feature/dmf/Add-zh-tw |
 | Branch log | Darktide Translation Workspace/Log/dmf.md |
 | Started at | 2026-07-06 22:35:51 +08:00 |
-| Last updated | 2026-07-06 22:35:51 +08:00 |
-| Completed at |  |
-| Commit |  |
-| PR URL / number |  |
-| Next position | dmf/localization/dmf.lua:mods_options |
-| Notes | 已完成檔案盤點，開始校正 zh-tw。 |
+| Last updated | 2026-07-06 23:13:46 +08:00 |
+| Completed at | 2026-07-06 23:13:46 +08:00 |
+| Commit | 3af7b7c |
+| PR URL / number | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/31 |
+| Next position | WhatTheLocalization/*localization.lua:first key |
+| Notes | 已完成 dmf zh-tw 校正與缺漏補齊，PR ready。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | completed | 40 | tooltip_append_mutator | Section: Key Progress | 僅修改/新增 zh-tw 欄位，未改 Lua 結構 |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-06 23:13:46 +08:00 | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | percent | completed | Section: Key Progress | 補齊缺失 zh-tw |
+| 2026-07-06 23:13:46 +08:00 | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | output_mode_echo | completed | Section: Key Progress | 補齊缺失 zh-tw |
+| 2026-07-06 23:13:46 +08:00 | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | chat_history_enable | completed | Section: Key Progress | 補齊缺失 zh-tw |
+| 2026-07-06 23:13:46 +08:00 | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | tooltip_append_mutator | completed | Section: Key Progress | 校正現有 zh-tw 用語 |
 
 ## 協作交接紀錄
 
@@ -145,8 +160,10 @@
 
 | MOD | Base branch | Work branch | Commit | Pushed | PR URL / number | Ready for review | Workspace files excluded | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| dmf | main | Codex/Feature/dmf/Add-zh-tw | 3af7b7c | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/31 | yes | yes | 僅包含 dmf/localization/dmf.lua |
 
 ## Completed Files
 
 | MOD | File | Completed keys | Commit | PR | Completed at | Branch log | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | 40 | 3af7b7c | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/31 | 2026-07-06 23:13:46 +08:00 | Darktide Translation Workspace/Log/dmf.md | 已完成 zh-tw 校正與缺漏補齊 |
