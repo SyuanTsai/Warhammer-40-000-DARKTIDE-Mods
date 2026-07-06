@@ -17,6 +17,7 @@
 
 | Owner | Status | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| copilot | in_progress | dmf | Darktide Mod Framework | main | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | mods_options | 2026-07-06 22:35:51 +08:00 |  | no |  | dmf/localization/dmf.lua -> output_mode_echo | 開始處理 zh-tw 翻譯與校正 |
 
 ## 工作鎖定
 
@@ -24,6 +25,7 @@
 
 | MOD | File | Key | Owner | Status | Work branch | Branch log | Locked at | Last updated | Release condition | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | mods_options | copilot | in_progress | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | 2026-07-06 22:35:51 +08:00 | 2026-07-06 22:35:51 +08:00 | 完成 dmf localization 並更新 PR 狀態 | 由 main 開始鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -57,6 +59,56 @@
 
 | Time | File | Key | Status | Branch log section | Notes |
 | --- | --- | --- | --- | --- | --- |
+
+### MOD-LOG-0001 - base
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | Darktide Mod Loader |
+| Repo directory | base |
+| Owner | copilot |
+| Status | completed |
+| Base branch | main |
+| Work branch | Codex/Feature/base/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/base.md |
+| Started at | 2026-07-06 22:00:39 +08:00 |
+| Last updated | 2026-07-06 22:35:51 +08:00 |
+| Completed at | 2026-07-06 22:35:51 +08:00 |
+| Commit |  |
+| PR URL / number |  |
+| Next position | dmf/localization/dmf.lua:mods_options |
+| Notes | base 目錄未包含任何 localization 檔案，無需翻譯。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| (none) | completed | 0 |  | Section: File Scan | 未找到 *localization.lua 或翻譯表檔案 |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-06 22:35:51 +08:00 | (none) | (none) | completed | Section: Key Progress | 無可翻譯 key |
+
+### MOD-LOG-0002 - dmf
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | Darktide Mod Framework |
+| Repo directory | dmf |
+| Owner | copilot |
+| Status | in_progress |
+| Base branch | main |
+| Work branch | Codex/Feature/dmf/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/dmf.md |
+| Started at | 2026-07-06 22:35:51 +08:00 |
+| Last updated | 2026-07-06 22:35:51 +08:00 |
+| Completed at |  |
+| Commit |  |
+| PR URL / number |  |
+| Next position | dmf/localization/dmf.lua:mods_options |
+| Notes | 已完成檔案盤點，開始校正 zh-tw。 |
 
 ## 協作交接紀錄
 
