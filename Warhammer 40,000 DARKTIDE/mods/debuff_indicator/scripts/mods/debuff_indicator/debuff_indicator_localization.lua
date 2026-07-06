@@ -95,21 +95,21 @@ local loc = {
         en = "Debuff Indicator",
         ["zh-cn"] = "负面效果指示器",
         ru = "Индикатор дебаффов",
-        ["zh-tw"] = "Debuff效果顯示器",
+        ["zh-tw"] = "減益效果顯示器",
     },
     mod_description = {
         en = "Display debuffs applied to each enemy and their stacks.",
         ja = "敵に付与されたデバフとそのスタック数を表示します。",
         ["zh-cn"] = "显示敌人受到的负面效果和层数",
         ru = "Debuff Indicator - Отображает дебаффы и количество их зарядов, применённых к каждому врагу.",
-        ["zh-tw"] = "顯示敵人受到的負面效果和層數。",
+        ["zh-tw"] = "顯示每個敵人身上的減益效果及其層數。",
     },
     display_style = {
         en = "Display style",
         ja = "表示スタイル",
         ["zh-cn"] = "显示样式",
         ru = "Стиль отображения",
-        ["zh-tw"] = "顯示方式",
+        ["zh-tw"] = "顯示樣式",
     },
     display_style_options = {
         en = "\nBoth:\nShow debuff name and stack count." ..
@@ -124,8 +124,8 @@ local loc = {
         ru = "\nВсё:\nПоказывать название дебаффа и счётчик стаков." ..
              "\n\nНазвание:\nПоказывать только название дебаффа." ..
              "\n\nСчётчик:\nПоказывать только счётчик стаков (рекомендуется использовать с пользовательскими цветами).",
-        ["zh-tw"] = "\n全部：\n顯示負面效果名稱和層數。" ..
-             "\n\n名稱：\n只顯示負面效果名稱。" ..
+        ["zh-tw"] = "\n兩者：\n顯示減益效果名稱和層數。" ..
+             "\n\n標籤：\n只顯示減益效果名稱。" ..
              "\n\n層數：\n只顯示層數（建議同時設定自訂顏色）。",
     },
     display_style_both = {
@@ -133,14 +133,14 @@ local loc = {
         ja = "両方",
         ["zh-cn"] = "全部",
         ru = "Всё",
-        ["zh-tw"] = "全部",
+        ["zh-tw"] = "兩者",
     },
     display_style_label = {
         en = "Label",
         ja = "ラベル",
         ["zh-cn"] = "名称",
         ru = "Название",
-        ["zh-tw"] = "名稱",
+        ["zh-tw"] = "標籤",
     },
     display_style_count = {
         en = "Count",
@@ -154,21 +154,21 @@ local loc = {
         ja = "キーバインド：次のスタイル",
         ["zh-cn"] = "快捷键：下一个样式",
         ru = "Клавиша: Переключение стилей",
-        ["zh-tw"] = "快捷鍵：下一個樣式",
+        ["zh-tw"] = "快捷鍵：循環切換樣式",
     },
     enable_filter = {
         en = "Display major debuffs only",
         ja = "主要なデバフのみ表示する",
         ["zh-cn"] = "仅显示主要负面效果",
         ru = "Отображать только главные дебаффы",
-        ["zh-tw"] = "僅顯示主要負面效果",
+        ["zh-tw"] = "僅顯示主要減益效果",
     },
     filter_disabled = {
         en = "Display all internal buff and debuff if disabled.",
         ja = "無効にした場合、すべての内部的なバフやデバフが表示されます。",
         ["zh-cn"] = "如果禁用，则会显示所有内部增益和减益。",
         ru = "Отображает все внутренние баффы и дебаффы, если отключено.",
-        ["zh-tw"] = "若停用，則會顯示所有內部增益與減益。",
+        ["zh-tw"] = "停用時，顯示所有內部增益與減益效果。",
     },
     distance = {
         en = "Max distance",
@@ -189,7 +189,7 @@ local loc = {
         ja = "デバフ",
         ["zh-cn"] = "负面效果",
         ru = "Дебафф",
-        ["zh-tw"] = "負面效果",
+        ["zh-tw"] = "減益效果",
     },
     dot = {
         en = "Damage over Time",
@@ -217,7 +217,7 @@ local loc = {
         ja = "フォントスタイル",
         ["zh-cn"] = "字体样式",
         ru = "Стиль шрифта",
-        ["zh-tw"] = "字體樣式",
+        ["zh-tw"] = "字型樣式",
     },
     font_size = {
         en = "Size",
@@ -245,7 +245,7 @@ local loc = {
         ja = "切り替え",
         ["zh-cn"] = "开关",
         ru = "Переключатели",
-        ["zh-tw"] = "開關",
+        ["zh-tw"] = "切換",
     },
     custom_color = {
         en = "Custom color",
@@ -284,14 +284,14 @@ local loc = {
         ja = "通常敵",
         ["zh-cn"] = "普通敌人",
         ru = "Бродяги",
-        ["zh-tw"] = "普通敵人",
+        ["zh-tw"] = "遊蕩敵人",
     },
     breed_elite = {
         en = "Elites",
         ja = "上位者",
         ["zh-cn"] = "精英",
         ru = "Элита",
-        ["zh-tw"] = "菁英",
+        ["zh-tw"] = "精英",
     },
     breed_specialist = {
         en = "Specialists",
@@ -305,7 +305,7 @@ local loc = {
         ja = "バケモノ",
         ["zh-cn"] = "怪物",
         ru = "Монстры",
-        ["zh-tw"] = "怪物",
+        ["zh-tw"] = "巨獸",
     },
     breed_captain = {
         en = "Captains",
@@ -317,6 +317,7 @@ local loc = {
         en = "Miscellaneous",
         ja = "その他",
 		["zh-cn"] = "其他",
+        ["zh-tw"] = "雜項",
     },
     bleed = {
         en = "Bleeding",
@@ -328,7 +329,7 @@ local loc = {
     bleed_long = {
         en = "Bleeding (long)",
         ja = "出血（大）",
-        ["zh-tw"] = "流血（大）",
+        ["zh-tw"] = "撕裂流血（護教軍的爪）",
     },
     flamer_assault = {
         en = "Burning",
@@ -377,82 +378,82 @@ local loc = {
         ["zh-tw"] = "電擊",
     },
     increase_damage_taken = {
-        en = Localize("loc_weapon_special_hook_pull")
+        en = Localize("loc_weapon_special_hook_pull"),
     },
     increase_impact_received_while_staggered = {
-        en = Localize("loc_trait_bespoke_staggered_targets_receive_increased_stagger_debuff")
+        en = Localize("loc_trait_bespoke_staggered_targets_receive_increased_stagger_debuff"),
     },
     increase_damage_received_while_staggered = {
-        en = Localize("loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff")
+        en = Localize("loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff"),
     },
     psyker_biomancer_smite_vulnerable_debuff = {
-        en = Localize("loc_talent_biomancer_smite_increases_non_warp_damage")
+        en = Localize("loc_talent_biomancer_smite_increases_non_warp_damage"),
     },
 	psyker_discharge_damage_debuff = {
-		en = Localize("loc_talent_psyker_shout_damage_per_warp_charge")
+		en = Localize("loc_talent_psyker_shout_damage_per_warp_charge"),
 	},
     psyker_protectorate_spread_chain_lightning_interval_improved = {
-        en = Localize("loc_talent_psyker_chain_lightning_improved_target_buff")
+        en = Localize("loc_talent_psyker_chain_lightning_improved_target_buff"),
     },
     psyker_protectorate_spread_charged_chain_lightning_interval_improved = {
-        en = Localize("loc_talent_psyker_chain_lightning_improved_target_buff")
+        en = Localize("loc_talent_psyker_chain_lightning_improved_target_buff"),
     },
     psyker_force_staff_quick_attack_debuff = {
-        en = Localize("loc_talent_psyker_force_staff_quick_attack_bonus")
+        en = Localize("loc_talent_psyker_force_staff_quick_attack_bonus"),
     },
     ogryn_recieve_damage_taken_increase_debuff = {
-        en = Localize("loc_talent_ogryn_targets_recieve_damage_increase_debuff")
+        en = Localize("loc_talent_ogryn_targets_recieve_damage_increase_debuff"),
     },
     ogryn_taunt_increased_damage_taken_buff = {
-        en = Localize("loc_talent_ogryn_taunt_damage_taken_increase")
+        en = Localize("loc_talent_ogryn_taunt_damage_taken_increase"),
     },
     ogryn_staggering_damage_taken_increase = {
-        en = Localize("loc_talent_ogryn_big_bully_heavy_hits")
+        en = Localize("loc_talent_ogryn_big_bully_heavy_hits"),
     },
     veteran_improved_tag_debuff = {
-        en = Localize("loc_talent_veteran_improved_tag")
+        en = Localize("loc_talent_veteran_improved_tag"),
     },
     zealot_bled_enemies_take_more_damage_effect = {
-        en = Localize("loc_talent_zealot_bled_enemies_take_more_damage")
+        en = Localize("loc_talent_zealot_bled_enemies_take_more_damage"),
     },
     adamant_drone_enemy_debuff = {
-        en = Localize("loc_talent_ability_area_buff_drone")
+        en = Localize("loc_talent_ability_area_buff_drone"),
     },
     adamant_drone_talent_debuff = {
-        en = Localize("loc_talent_adamant_drone_debuff_talent")
+        en = Localize("loc_talent_adamant_drone_debuff_talent"),
     },
     adamant_melee_weakspot_hits_count_as_stagger_debuff = {
-        en = Localize("loc_talent_adamant_melee_weakspot_hits_count_as_stagger")
+        en = Localize("loc_talent_adamant_melee_weakspot_hits_count_as_stagger"),
     },
     adamant_staggered_enemies_deal_less_damage_debuff = {
-        en = Localize("loc_talent_adamant_staggered_enemies_deal_less_damage")
+        en = Localize("loc_talent_adamant_staggered_enemies_deal_less_damage"),
     },
     adamant_staggering_enemies_take_more_damage = {
-        en = Localize("loc_talent_adamant_staggered_enemies_take_more_damage")
+        en = Localize("loc_talent_adamant_staggered_enemies_take_more_damage"),
     },
     toxin_damage_debuff = {
-        en = Localize("loc_talent_broker_passive_reduced_damage_by_toxined")
+        en = Localize("loc_talent_broker_passive_reduced_damage_by_toxined"),
     },
     toxin_damage_debuff_monster = {
-        en = Localize("loc_talent_broker_passive_reduced_damage_by_toxined")
+        en = Localize("loc_talent_broker_passive_reduced_damage_by_toxined"),
     },
     broker_punk_rage_improved_shout_debuff = {
-        en = Localize("loc_talent_broker_ability_punk_rage_sub_3")
+        en = Localize("loc_talent_broker_ability_punk_rage_sub_3"),
     },
     broker_passive_toxin_infected_enemies_take_increased_damage_debuff = {
-        en = Localize("loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage")
+        en = Localize("loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage"),
     },
 	cryptic_servo_skull_debuff = {
-		en = Localize("loc_talent_cryptic_servo_skull")
+		en = Localize("loc_talent_cryptic_servo_skull"),
 	},
 	cryptic_overload_keystone_increase_damage_taken_debuff = {
-		en = Localize("loc_talent_cryptic_overload_keystone_bigger_explosion")
+		en = Localize("loc_talent_cryptic_overload_keystone_bigger_explosion"),
 	},
     stagger = {
-        en = Localize("loc_stagger")
+        en = Localize("loc_stagger"),
     },
     suppression = {
-        en = Localize("loc_weapon_stats_display_suppression")
+        en = Localize("loc_weapon_stats_display_suppression"),
     }
 
 }
@@ -489,7 +490,7 @@ for breed_name, breed in pairs(Breeds) do
         end
 
         loc[breed_name] = {
-            en = display_name
+            en = display_name,
         }
     end
 end
