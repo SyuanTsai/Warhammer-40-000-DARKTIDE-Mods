@@ -7,7 +7,7 @@
 		mod_description = {
 			en = "Automatically injects broker stim after being in combat for a set duration.",
 			["zh-cn"] = "在进入战斗一定时间后自动注射自制兴奋剂。",
-			["zh-tw"] = "在進入戰鬥一段時間後自動使用興奮劑。",
+			["zh-tw"] = "進入戰鬥達指定時間後，自動注射興奮劑。",
 		},
 		profile_settings = {
 			en = "Profile Settings",
@@ -17,12 +17,12 @@
 		keybind_settings = {
 			en = "Keybinds",
 			["zh-cn"] = "快捷键绑定",
-			["zh-tw"] = "快捷鍵綁定",
+			["zh-tw"] = "快捷鍵",
 		},
 		auto_stim_settings = {
 			en = "Auto-Stim Settings",
 			["zh-cn"] = "自动注射设置",
-			["zh-tw"] = "自動注射設定",
+			["zh-tw"] = "自動注射興奮劑設定",
 		},
 		hud_settings = {
 			en = "HUD Settings",
@@ -72,12 +72,12 @@
 		cycle_profile_hotkey = {
 			en = "Cycle Profile",
 			["zh-cn"] = "循环切换配置文件",
-			["zh-tw"] = "循環切換設定檔",
+			["zh-tw"] = "輪換設定檔",
 		},
 		cycle_profile_hotkey_description = {
 			en = "Hotkey to cycle through settings profiles.",
 			["zh-cn"] = "循环切换配置文件的热键。",
-			["zh-tw"] = "用於循環切換設定檔的快捷鍵。",
+			["zh-tw"] = "用於輪換設定檔的快捷鍵。",
 		},
 		show_settings_on_switch = {
 			en = "Show Settings on Profile Switch",
@@ -102,7 +102,7 @@
 		toggle_hotkey = {
 			en = "Toggle Auto-Stim",
 			["zh-cn"] = "切换自动注射",
-			["zh-tw"] = "切換自動注射",
+			["zh-tw"] = "切換自動注射興奮劑",
 		},
 		toggle_hotkey_description = {
 			en = "Hotkey to toggle auto-stim on/off.",
@@ -117,7 +117,7 @@
 		combat_duration_description = {
 			en = "How long to be in combat before auto-stimming.",
 			["zh-cn"] = "进入战斗后多久自动注射兴奋剂。",
-			["zh-tw"] = "進入戰鬥後經過多久會自動注射興奮劑。",
+			["zh-tw"] = "自動注射興奮劑前，需要處於戰鬥多久。",
 		},
 		out_of_combat_timeout = {
 			en = "Out of Combat Timeout (seconds)",
@@ -132,37 +132,37 @@
 		animation_cancel_stim = {
 			en = "Animation Cancel Stim",
 			["zh-cn"] = "兴奋剂动画取消",
-			["zh-tw"] = "興奮劑動畫取消",
+			["zh-tw"] = "取消興奮劑動畫",
 		},
 		animation_cancel_stim_description = {
 			en = "Immediately swap weapons when stim injection starts to cancel the long animation.",
 			["zh-cn"] = "兴奋剂注射开始时，立即切换武器以取消冗长动画。",
-			["zh-tw"] = "興奮劑注射開始時立刻切換武器以取消冗長動畫。",
+			["zh-tw"] = "興奮劑注射開始時立即切換武器，以取消冗長動畫。",
 		},
 		only_with_chemical_dependency = {
 			en = "Only With Chemical Dependency",
 			["zh-cn"] = "仅在有化学依赖时",
-			["zh-tw"] = "僅在有化學依賴時",
+			["zh-tw"] = "僅限化學性依賴時",
 		},
 		only_with_chemical_dependency_description = {
 			en = "Only auto-stim if you have the Chemical Dependency keystone.",
 			["zh-cn"] = "只有当你拥有化学依赖关键技能时才自动注射兴奋剂。",
-			["zh-tw"] = "只有當你擁有「化學依賴」關鍵天賦時才會自動注射興奮劑。",
+			["zh-tw"] = "只有當你擁有「化學性依賴」關鍵天賦時，才會自動注射興奮劑。",
 		},
 		not_with_stimm_supply = {
             en = "Not with Stimm Supply",
             ["zh-cn"] = "选择兴奋剂补给时禁用自动化",
-			["zh-tw"] = "選擇興奮劑補給時停用自動化",
+			["zh-tw"] = "不與化學性依賴同時使用",
         },
         not_with_stimm_supply_description = {
             en = "Disable auto-stim if you have the Stimm Field combat ability.",
             ["zh-cn"] = "若玩家选择了右线兴奋剂补给大招，则禁用自动注射兴奋剂的功能。",
-			["zh-tw"] = "若玩家選擇了右線興奮劑補給戰技，則停用自動注射興奮劑功能。",
+			["zh-tw"] = "如果你擁有「化學性依賴」戰鬥技能，停用自動注射興奮劑。",
         },
 		auto_inject_prevention = {
 			en = "Auto Inject Prevention",
 			["zh-cn"] = "自动注射保护",
-			["zh-tw"] = "自動注射保護",
+			["zh-tw"] = "自動注射防護",
 		},
 		dangerous_enemy_detection = {
 			en = "Dangerous Enemy Detection",
@@ -172,12 +172,12 @@
 		cancel_on_push_block = {
 			en = "Cancel Injection on Push/Block",
 			["zh-cn"] = "格挡推击/格挡时取消注射",
-			["zh-tw"] = "格擋推擊／格擋時取消注射",
+			["zh-tw"] = "推擊／格擋時取消注射",
 		},
 		cancel_on_push_block_description = {
 			en = "Cancel injection attempt when pushing or blocking.",
 			["zh-cn"] = "触发格挡推击或格挡时取消注射尝试。",
-			["zh-tw"] = "觸發格擋推擊或格擋時，取消注射嘗試。",
+			["zh-tw"] = "推擊或格擋時，取消注射嘗試。",
 		},
 		cancel_on_attack = {
 			en = "Cancel Injection While Attacking",
@@ -192,7 +192,7 @@
 		attack_cooldown = {
 			en = "Attack Cooldown (seconds)",
 			["zh-cn"] = "攻击冷却时间（秒）",
-			["zh-tw"] = "攻擊冷卻時間（秒）",
+			["zh-tw"] = "攻擊冷卻（秒）",
 		},
 		attack_cooldown_description = {
 			en = "Time to wait after last attack before allowing injection.",
@@ -202,12 +202,12 @@
 		cancel_on_carrying = {
 			en = "Cancel Injection While Carrying Luggable",
 			["zh-cn"] = "搬运货物时取消注射",
-			["zh-tw"] = "搬運貨物時取消注射",
+			["zh-tw"] = "搬運可搬運物時取消注射",
 		},
 		cancel_on_carrying_description = {
 			en = "Cancel injection attempt when carrying luggable.",
 			["zh-cn"] = "搬运货物时取消注射尝试。",
-			["zh-tw"] = "搬運貨物時取消注射嘗試。",
+			["zh-tw"] = "搬運可搬運物時取消注射嘗試。",
 		},
 		cancel_on_reload = {
 			en = "Cancel Injection on Reload",
@@ -222,7 +222,7 @@
 		cancel_on_interaction = {
 			en = "Cancel Injection During Interactions",
 			["zh-cn"] = "交互时取消注射",
-			["zh-tw"] = "互動時取消注射",
+			["zh-tw"] = "互動期間取消注射",
 		},
 		cancel_on_interaction_description = {
 			en = "Cancel injection attempt when performing interactions (minigames, long-press interactions, etc.)",
@@ -242,12 +242,12 @@
 		cancel_during_ability = {
 			en = "Cancel Injection During Combat Ability",
 			["zh-cn"] = "战斗技能激活时取消注射",
-			["zh-tw"] = "戰鬥技能啟動時取消注射",
+			["zh-tw"] = "戰鬥技能期間取消注射",
 		},
 		cancel_during_ability_description = {
 			en = "Cancel injection attempt while combat ability is active. Useful for cooldown reduction stims. Note: This does not block injections in 'Before Ability' trigger mode to prevent conflicts",
 			["zh-cn"] = "战斗技能激活时取消注射尝试。适用于冷却缩减兴奋剂。注意：这不会在'使用技能前'触发模式下阻止注射，以防止冲突。",
-			["zh-tw"] = "戰鬥技能啟動期間取消注射嘗試。適用於冷卻縮減型興奮劑。注意：為避免衝突，在「使用技能前」觸發模式下不會阻止注射。",
+			["zh-tw"] = "戰鬥技能啟用期間取消注射嘗試。適用於縮短冷卻時間的興奮劑。注意：為避免衝突，在「使用技能前」觸發模式下不會阻止注射。",
 		},
 		block_nearby_dog = {
 			en = "Block Injection Near Dog",
@@ -292,7 +292,7 @@
 		block_nearby_burster = {
 			en = "Block Injection Near Burster",
 			["zh-cn"] = "爆裂体附近阻止注射",
-			["zh-tw"] = "瘟疫暴者附近阻止注射",
+			["zh-tw"] = "瘟疫爆者附近阻止注射",
 		},
 		block_nearby_burster_description = {
 			en = "Prevent injection when Chaos Poxwalker Bombers (Bursters) are nearby.",
@@ -312,42 +312,42 @@
 		block_nearby_crusher = {
 			en = "Block Injection Near Crusher/Mauler",
 			["zh-cn"] = "粉碎者/血痂重锤兵附近阻止注射",
-			["zh-tw"] = "輾壓者／重鎚兵附近阻止注射",
+			["zh-tw"] = "輾壓者／重錘兵附近阻止注射",
 		},
 		block_nearby_crusher_description = {
 			en = "Prevent injection when Chaos Ogryn Executors (Crushers) or Renegade Executors (Maulers) are nearby.",
 			["zh-cn"] = "混沌欧格林处决者或血痂处决者附近时阻止注射。",
-			["zh-tw"] = "輾壓者／重鎚兵在處決動畫時阻止注射。",
+			["zh-tw"] = "輾壓者或重錘兵在附近時阻止注射。",
 		},
 		crusher_detection_range = {
 			en = "Crusher/Mauler Detection Range",
 			["zh-cn"] = "粉碎者/血痂重锤兵侦测范围",
-			["zh-tw"] = "輾壓者／重鎚兵偵測範圍",
+			["zh-tw"] = "輾壓者／重錘兵偵測範圍",
 		},
 		crusher_detection_range_description = {
 			en = "Distance to scan for crushers and maulers",
 			["zh-cn"] = "扫描粉碎者和血痂重锤兵的距离。",
-			["zh-tw"] = "掃描輾壓者與重鎚兵的距離。",
+			["zh-tw"] = "掃描輾壓者與重錘兵的距離。",
 		},
 		block_nearby_rager = {
 			en = "Block Injection Near Rager",
 			["zh-cn"] = "狂战士附近阻止注射",
-			["zh-tw"] = "狂戰士附近阻止注射",
+			["zh-tw"] = "狂怒者附近阻止注射",
 		},
 		block_nearby_rager_description = {
 			en = "Prevent injection when Renegade Berzerkers or Cultist Berzerkers (Ragers) are nearby.",
 			["zh-cn"] = "血痂狂战士或渣滓狂战士附近时阻止注射。",
-			["zh-tw"] = "血痂狂戰士或渣滓狂戰士在附近時阻止注射。",
+			["zh-tw"] = "叛軍狂戰士或邪教徒狂戰士（狂怒者）在附近時阻止注射。",
 		},
 		rager_detection_range = {
 			en = "Rager Detection Range",
 			["zh-cn"] = "狂战士侦测范围",
-			["zh-tw"] = "狂戰士偵測範圍",
+			["zh-tw"] = "狂怒者偵測範圍",
 		},
 		rager_detection_range_description = {
 			en = "Distance to scan for ragers",
 			["zh-cn"] = "扫描狂战士的距离。",
-			["zh-tw"] = "掃描狂戰士的距離。",
+			["zh-tw"] = "掃描狂怒者的距離。",
 		},
 		stim_trigger_mode = {
 			en = "Stim Trigger Mode",
@@ -382,7 +382,7 @@
 		stim_trigger_mode_always_stim = {
 			en = "Always Stim",
 			["zh-cn"] = "总是注射",
-			["zh-tw"] = "總是注射",
+			["zh-tw"] = "一律注射興奮劑",
 		},
 		enable_debug = {
 			en = "Enable Debug Messages",
@@ -402,7 +402,7 @@
 		show_hud_icon_description = {
 			en = "Display an icon on the HUD indicating whether auto-stim is enabled or disabled.",
 			["zh-cn"] = "在HUD上显示一个图标，指示自动注射是否启用。",
-			["zh-tw"] = "在 HUD 上顯示圖示，標示自動注射是否啟用。",
+			["zh-tw"] = "在 HUD 上顯示圖示，標示自動注射興奮劑是否啟用。",
 		},
 		hud_icon_size = {
 			en = "HUD Icon Size",
