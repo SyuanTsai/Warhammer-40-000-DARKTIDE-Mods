@@ -4,11 +4,15 @@
 - Base branch: main
 - Work branch: Codex/Feature/CombatStats/Add-zh-tw
 - Started at: 2026-07-06 23:16:11 +08:00
-- Last updated: 2026-07-06 23:20:47 +08:00
-- Status: completed
-- Commit: 68ef157
-- Push: done
-- PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 (ready)
+- Last updated: 2026-07-07 +08:00
+- Status: in_progress (reprocessing)
+- Commit: (pending)
+- Push: pending (force push needed)
+- PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32
+
+## Reprocess Note (2026-07-07)
+
+依使用者要求重新處理。前次 `toggle_view_keybind` 被錯誤加上「快捷鍵：」前綴（英文原文為 "Toggle Stats View"，不含 keybind 語意）。本次從 main 重置分支，重新套用正確翻譯。
 
 ## Scope
 
