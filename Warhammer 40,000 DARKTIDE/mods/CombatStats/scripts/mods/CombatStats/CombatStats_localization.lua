@@ -1,11 +1,10 @@
 local mod = get_mod('CombatStats')
 
--- Register global localization strings (for input legend, etc.)
 mod:add_global_localize_strings({
     loc_combat_stats_reset_stats = {
         en = 'Reset Stats',
         ['zh-cn'] = '重置统计', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '重設統計資料',
+        ['zh-tw'] = '重置統計',
     },
     loc_combat_stats_view_history = {
         en = 'View History',
@@ -25,7 +24,12 @@ mod:add_global_localize_strings({
     loc_combat_stats_delete_entry = {
         en = 'Delete Entry',
         ['zh-cn'] = '删除条目', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '刪除紀錄',
+        ['zh-tw'] = '刪除項目',
+    },
+    loc_combat_stats_menu_button = {
+        en = 'Combat Stats',
+        ['zh-cn'] = '战斗统计',
+        ['zh-tw'] = '戰鬥統計',
     },
 })
 
@@ -38,34 +42,34 @@ return {
     mod_description = {
         en = 'Track detailed combat statistics including damage, kills, buff uptime, and more.',
         ['zh-cn'] = '追踪详细的战斗统计数据，包括伤害、击杀、增益持续时间等。',
-        ['zh-tw'] = '追蹤詳細的戰鬥統計資料，包括傷害、擊殺、增益覆蓋時間等。',
+        ['zh-tw'] = '追蹤詳細戰鬥統計，包括傷害、擊殺、增益持續時間等。',
     },
 
     -- Config
     save_history = {
         en = 'Save History',
         ['zh-cn'] = '保存历史', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '儲存歷史紀錄',
+        ['zh-tw'] = '儲存歷史',
     },
     save_history_tooltip = {
         en = 'Save combat statistics from previous missions for later viewing.',
         ['zh-cn'] = '保存先前任务的战斗统计数据以供以后查看。', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '儲存先前任務的戰鬥統計資料，方便稍後查看。',
+        ['zh-tw'] = '儲存先前任務的戰鬥統計，以便稍後查看。',
     },
     toggle_view_keybind = {
         en = 'Toggle Stats View',
         ['zh-cn'] = '切换统计视图',
-        ['zh-tw'] = '切換統計視圖',
+        ['zh-tw'] = '切換統計檢視',
     },
     only_in_psykhanium = {
         en = 'Only In Psykhanium',
         ['zh-cn'] = '仅在灵能室', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '僅在靈能室',
+        ['zh-tw'] = '僅限靈能室',
     },
     only_in_psykhanium_tooltip = {
         en = 'Only track and show combat stats when in the Psykhanium.',
         ['zh-cn'] = '仅在灵能室中追踪和显示战斗统计数据。', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '只在靈能室中追蹤並顯示戰鬥統計資料。',
+        ['zh-tw'] = '只有在靈能室中才追蹤並顯示戰鬥統計。',
     },
     hud = {
         en = 'HUD',
@@ -75,12 +79,12 @@ return {
     show_hud_in_missions = {
         en = 'Show Overlay In Missions',
         ['zh-cn'] = '在任务中显示覆盖层', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '在任務中顯示覆蓋資訊',
+        ['zh-tw'] = '在任務中顯示疊加介面',
     },
     show_hud_in_hub = {
         en = 'Show Overlay In Hub',
         ['zh-cn'] = '在集结区显示覆盖层', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '在大廳中顯示覆蓋資訊',
+        ['zh-tw'] = '在大廳顯示疊加介面',
     },
     hud_pos_x = {
         en = 'X Position',
@@ -100,12 +104,12 @@ return {
     track_incoming_attacks = {
         en = 'Track Incoming Attacks',
         ['zh-cn'] = '追踪传入攻击', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '追蹤來襲攻擊',
+        ['zh-tw'] = '追蹤受到的攻擊',
     },
     track_incoming_attacks_tooltip = {
         en = 'Start combat when enemies attack you (even if blocked/dodged).',
         ['zh-cn'] = '当敌人攻击你时开始战斗（即使被格挡/闪避）。', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '敵人攻擊你時開始計入戰鬥（即使被格擋或閃避）。',
+        ['zh-tw'] = '當敵人攻擊你時開始戰鬥（即使被格擋或閃避）。',
     },
     engagement_timeout = {
         en = 'Engagement Timeout (seconds)',
@@ -115,12 +119,12 @@ return {
     engagement_timeout_tooltip = {
         en = 'Time in seconds before ending an enemy engagement due to inactivity.',
         ['zh-cn'] = '由于不活动而结束敌人交战的时间（秒）。', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '因沒有活動而結束敵人交戰前的等待秒數。',
+        ['zh-tw'] = '因未活動而結束敵人交戰前的等待時間（秒）。',
     },
     enemy_types_to_track = {
         en = 'Enemy Types to Track',
         ['zh-cn'] = '追踪的敌人类型',
-        ['zh-tw'] = '追蹤的敵人類型',
+        ['zh-tw'] = '要追蹤的敵人類型',
     },
 
     -- Common Stats
@@ -162,7 +166,7 @@ return {
     overkill = {
         en = 'Overkill',
         ['zh-cn'] = '过量伤害', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '過量傷害',
+        ['zh-tw'] = '溢出傷害',
     },
     melee = {
         en = 'Melee',
@@ -197,7 +201,7 @@ return {
     crit = {
         en = 'Crit',
         ['zh-cn'] = '暴击',
-        ['zh-tw'] = '致命一擊',
+        ['zh-tw'] = '爆擊',
     },
     weakspot = {
         en = 'Weakspot',

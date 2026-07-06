@@ -49,6 +49,36 @@ mod:register_view({
     },
 })
 
+-- Add a button to the ESC menu that opens the view
+local COMBAT_STATS_MENU_BUTTON = {
+    text = 'loc_combat_stats_menu_button',
+    type = 'button',
+    icon = 'content/ui/materials/icons/system/escape/settings',
+    trigger_function = function()
+        Managers.ui:open_view('combat_stats_view')
+    end,
+}
+
+mod:hook(CLASS.SystemView, '_setup_content_widgets', function(func, self, content, ...)
+    local patched = content
+    if content then
+        patched = {}
+        for state_key, list in pairs(content) do
+            local cloned = table.clone(list)
+            local insert_at = #cloned + 1
+            for i = 1, #cloned do
+                if cloned[i].type == 'spacing_vertical' then
+                    insert_at = i
+                    break
+                end
+            end
+            table.insert(cloned, insert_at, COMBAT_STATS_MENU_BUTTON)
+            patched[state_key] = cloned
+        end
+    end
+    return func(self, patched, ...)
+end)
+
 -- Initialize tracker and history
 mod.tracker = CombatStatsTracker:new()
 mod.history = CombatStatsHistory:new()
@@ -58,8 +88,6 @@ function mod.update(dt)
     if mod.tracker:is_tracking() then
         mod.tracker:update(dt)
     end
-
-    mod.history:update()
 end
 
 function mod.on_all_mods_loaded()
@@ -73,6 +101,10 @@ function mod.on_all_mods_loaded()
     load_package('packages/ui/views/inventory_view/inventory_view')
     load_package('packages/ui/views/inventory_weapons_view/inventory_weapons_view')
     load_package('packages/ui/hud/player_weapon/player_weapon')
+    -- Warm the history index so the stats view opens instantly
+    if mod.history then
+        mod.history:load_index()
+    end
 end
 
 mod:hook(CLASS.StateGameplay, 'on_enter', function(func, self, parent, params, ...)
