@@ -51,7 +51,7 @@
 | ready | not checked | Gas Outline | GasOutline |  |
 | ready | not checked | Loadout Monitor | LoadoutMonitor |  |
 | ready | not checked | Quick Look Card | QuickLookCard |  |
-| completed | 2026-07-07 00:37:29 +08:00 | Markers Improved All-in-One | markers_aio | 依使用者要求重處理，已補齊缺漏並更新詞彙一致性（PR #33）。 |
+| in_progress | 2026-07-07 +08:00 | Markers Improved All-in-One | markers_aio | 依使用者要求重新處理中（重置分支從頭翻譯）。 |
 | ready | not checked | Danger Zone | danger_zone |  |
 | ready | not checked | Numeric UI | NumericUI |  |
 | ready | not checked | Spidey Sense | Spidey Sense |  |
