@@ -112,8 +112,7 @@ return {
     ru = "Открыть/закрыть консоль разработчика",
     ["zh-cn"] = "开关开发者控制台",
     ja = "開発者コンソールの表示/非表示",
-    ["zh-tw"] = "切換開發者控制台",
-
+    ["zh-tw"] = "啟用開發者控制台",
   },
   show_network_debug_info = {
     en = "Log Network Calls",
@@ -121,7 +120,7 @@ return {
     ru = "Логирование сетевых вызовов",
     ["zh-cn"] = "记录网络调用日志",
     ja = "ネットワーク呼び出しの記録",
-    ["zh-tw"] = "記錄網路呼叫日誌",
+    ["zh-tw"] = "記錄網路連線日誌",
   },
   show_network_debug_info_description = {
     en = "Log all the DMF network calls and all the data transfered with them.\n\n" ..
@@ -134,7 +133,7 @@ return {
          "记录日志时会使用 'info' 方法。",
     ja = "すべてのDMFのネットワーク呼び出しと通信データをログに記録します。\n\n" ..
          "記録には 'info' メソッドが使用されます。",
-        ["zh-tw"] = "記錄所有 DMF 網路呼叫以及其傳輸資料。\n\n" ..
+    ["zh-tw"] = "記錄所有 DMF 網路連線以及其傳輸資料。\n\n" ..
           "日誌記錄會使用 'info' 方法。",
   },
   log_ui_renderers_info = {
@@ -156,7 +155,7 @@ return {
          "记录日志时会使用 'info' 方法。",
     ja = "UIレンダラー生成元の名称と、引数として渡されたすべてのマテリアルをログに記録します。\n\n" ..
          "記録には 'info' メソッドが使用されます。",
-        ["zh-tw"] = "記錄 UI 渲染器建立者名稱，以及作為參數傳入的所有材質。\n\n" ..
+    ["zh-tw"] = "記錄 UI 渲染器建立者名稱，以及作為參數傳入的所有材質。\n\n" ..
           "日誌記錄會使用 'info' 方法。",
   },
   logging_mode = {
@@ -188,7 +187,7 @@ return {
     ["zh-cn"] = "'Notification' 通知输出",
     ru = "Вывод 'Notification'",
     ja = "'Notification' の出力",
-    ["zh-tw"] = "'Notification' 訊息輸出",
+    ["zh-tw"] = "'Notification' Log 訊息輸出",
   },
   output_mode_echo = {
     en = "'Echo' Output",
@@ -196,7 +195,7 @@ return {
     ru = "Вывод 'Echo'",
     ["zh-cn"] = "'Echo' 回显输出",
     ja = "'Echo' の出力",
-    ["zh-tw"] = "'Echo' 訊息輸出",
+    ["zh-tw"] = "'Echo' Log 訊息輸出",
   },
   output_mode_error = {
     en = "'Error' Output",
@@ -204,7 +203,7 @@ return {
     ru = "Вывод 'Error'",
     ["zh-cn"] = "'Error' 错误输出",
     ja = "'Error' の出力",
-    ["zh-tw"] = "'Error' 訊息輸出",
+    ["zh-tw"] = "'Error' Log 訊息輸出",
   },
   output_mode_warning = {
     en = "'Warning' Output",
@@ -212,7 +211,7 @@ return {
     ru = "Вывод 'Warning'",
     ["zh-cn"] = "'Warning' 警告输出",
     ja = "'Warning' の出力",
-    ["zh-tw"] = "'Warning' 訊息輸出",
+    ["zh-tw"] = "'Warning' Log 訊息輸出",
   },
   output_mode_info = {
     en = "'Info' Output",
@@ -220,7 +219,7 @@ return {
     ru = "Вывод 'Info'",
     ["zh-cn"] = "'Info' 信息输出",
     ja = "'Info' の出力",
-    ["zh-tw"] = "'Info' 訊息輸出",
+    ["zh-tw"] = "'Info' Log 訊息輸出",
   },
   output_mode_debug = {
     en = "'Debug' Output",
@@ -228,7 +227,7 @@ return {
     ru = "Вывод 'Debug'",
     ["zh-cn"] = "'Debug' 调试输出",
     ja = "'Debug' の出力",
-    ["zh-tw"] = "'Debug' 訊息輸出",
+    ["zh-tw"] = "'Debug' Log 訊息輸出",
   },
   output_disabled = {
     en = "Disabled",
@@ -309,7 +308,7 @@ return {
          "你可以打开聊天窗口，按“上下方向键”浏览输入历史记录。",
     ja = "チャット欄に記入したすべてのメッセージとコマンドを保存します。\n\n" ..
          "入力履歴はチャットを開いて「上矢印」と「下矢印」キーで表示できます。",
-        ["zh-tw"] = "儲存你在聊天視窗輸入的所有訊息與命令。\n\n" ..
+    ["zh-tw"] = "儲存你在聊天視窗輸入的所有訊息與命令。\n\n" ..
           "你可以開啟聊天視窗後，按「向上鍵」與「向下鍵」瀏覽輸入歷史紀錄。",
   },
   chat_history_save = {
@@ -347,7 +346,7 @@ return {
          "警告：更改此设置会删除所有聊天历史记录。",
     ja = "履歴の最大保存数。\n\n" ..
          "警告：この設定を変更するとチャット履歴が消去されます。",
-        ["zh-tw"] = "可儲存的最大紀錄筆數。\n\n" ..
+    ["zh-tw"] = "可儲存的最大紀錄筆數。\n\n" ..
           "警告：變更此設定會刪除所有聊天歷史紀錄。",
   },
   chat_history_remove_dups = {
@@ -382,7 +381,7 @@ return {
     ja = "重複した際にどの履歴を削除するか。\n\n" ..
          "-- 直前 --\n直前の履歴が重複する場合、それを削除します。\n\n" ..
          "-- すべて --\n重複するすべての履歴を削除します。",
-        ["zh-tw"] = "要刪除哪些重複紀錄。\n\n" ..
+    ["zh-tw"] = "要刪除哪些重複紀錄。\n\n" ..
           "-- 最新 --\n若與最新一筆相同，刪除前一筆紀錄。\n\n" ..
           "-- 全部 --\n若與最新一筆相同，刪除所有相同紀錄。",
   },
@@ -421,7 +420,7 @@ return {
          "警告：更改此设置会删除所有聊天历史记录。",
     ja = "実行できたコマンドのみをチャット履歴に保存します。\n\n" ..
          "警告：この設定を変更するとチャット履歴が消去されます。",
-        ["zh-tw"] = "只有成功執行的命令會儲存在聊天歷史紀錄中。\n\n" ..
+    ["zh-tw"] = "只有成功執行的命令會儲存在聊天歷史紀錄中。\n\n" ..
           "警告：變更此設定會刪除所有聊天歷史紀錄。",
   },
 
@@ -453,7 +452,7 @@ return {
     ru = "Консоль разработчика открыта.",
     ["zh-cn"] = "已打开开发者控制台。",
     ja = "開発者コンソールを開きました。",
-    ["zh-tw"] = "已開啟開發者控制台。",
+    ["zh-tw"] = "已啟用開發者控制台。",
   },
   dev_console_closed = {
     en = "Developer console closed.",
@@ -461,7 +460,7 @@ return {
     ru = "Консоль разработчика закрыта.",
     ["zh-cn"] = "已关闭开发者控制台。",
     ja = "開発者コンソールを閉じました。",
-    ["zh-tw"] = "已關閉開發者控制台。",
+    ["zh-tw"] = "已停用開發者控制台。",
   },
   dev_console_close_warning = {
     en = "The developer console is disabled, but must be closed manually.",
@@ -527,7 +526,7 @@ return {
     ["zh-cn"] = "启用突变器",
     ru = "МУТАТОРЫ ВКЛЮЧЕНЫ",
     ja = "ミューテーターが有効化されました",
-    ["zh-tw"] = "啟用突變器",
+    ["zh-tw"] = "啟用修改器",
   },
   broadcast_all_disabled = {
     en = "ALL MUTATORS DISABLED",
@@ -535,7 +534,7 @@ return {
     ["zh-cn"] = "禁用所有突变器",
     ru = "ВСЕ МУТАТОРЫ ОТКЛЮЧЕНЫ",
     ja = "すべてのミューテーターが無効化されました",
-    ["zh-tw"] = "停用所有突變器",
+    ["zh-tw"] = "停用所有修改器",
   },
   broadcast_disabled_mutators = {
     en = "MUTATORS DISABLED",
@@ -543,7 +542,7 @@ return {
     ["zh-cn"] = "禁用突变器",
     ru = "МУТАТОРЫ ОТКЛЮЧЕНЫ",
     ja = "ミューテーターが無効化されました",
-    ["zh-tw"] ="禁用突變器",
+    ["zh-tw"] ="停用修改器",
   },
   local_disabled_mutators = {
     en = "Mutators disabled",
@@ -551,7 +550,7 @@ return {
     ["zh-cn"] = "突变器已禁用",
     ru = "Мутаторы отключены",
     ja = "ミューテーターが無効化されました",
-    ["zh-tw"] ="突變器已禁用",
+    ["zh-tw"] ="修改器已停用",
   },
   whisper_enabled_mutators = {
     en = "[Automated message] This lobby has the following mutators active",
@@ -559,7 +558,7 @@ return {
     ["zh-cn"] = "[自动消息] 此大厅激活了以下突变器",
     ru = "[Автоматическое сообщение] В этом лобби активны следующие мутаторы",
     ja = "[自動メッセージ] このロビーでは以下のミューテーターが有効になっています",
-    ["zh-tw"] = "[自動訊息] 此大廳已啟用以下突變器",
+    ["zh-tw"] = "[自動訊息] 此大廳已啟用以下修改器",
   },
 
   disabled_reason_not_server = {
@@ -586,7 +585,7 @@ return {
     ["zh-cn"] = "突变器",
     ru = "Мутаторы",
     ja = "ミューテーター",
-    ["zh-tw"] ="突變器",
+    ["zh-tw"] ="修改器",
   },
   mutators_banner_description = {
     en = "Enable and disable mutators",
@@ -594,7 +593,7 @@ return {
     ["zh-cn"] = "启用和禁用突变器",
     ru = "Включить и отключить мутаторы",
     ja = "ミューテーターのオン/オフ",
-    ["zh-tw"] = "啟用與停用突變器",
+    ["zh-tw"] = "啟用與停用修改器",
   },
   no_mutators = {
     en = "No mutators installed",
@@ -602,7 +601,7 @@ return {
     ["zh-cn"] = "未安装突变器",
     ru = "Нет установленных мутаторов",
     ja = "ミューテーターがインストールされていません",
-    ["zh-tw"] ="未安裝突變器",
+    ["zh-tw"] ="未安裝修改器",
   },
   no_mutators_description = {
     en = "Subscribe to mods and mutators on the workshop",
@@ -610,7 +609,7 @@ return {
     ["zh-cn"] = "在创意工坊订阅模组和突变器",
     ru = "Подпишитесь на моды и мутаторы в мастерской Steam",
     ja = "ワークショップでModやミューテーターをサブスクライブしてください",
-    ["zh-tw"] ="在創意工房訂閱模組與突變器",
+    ["zh-tw"] ="在創意工房訂閱模組與修改器",
   },
 
   -- Mutator widgets' tooltips
@@ -620,7 +619,7 @@ return {
     ["zh-cn"] = "\n\n-- 不兼容突变器 --\n",
     ru = "\n\n-- НЕСОВМЕСТИМО С МУТАТОРАМИ --\n",
     ja = "\n\n-- ミューテーターと互換性なし --\n",
-    ["zh-tw"] ="\n\n-- 不兼容突變器 --\n",
+    ["zh-tw"] ="\n\n-- 不兼容修改器 --\n",
   },
   tooltip_compatible_mutators = {
     en = "\n\n-- COMPATIBLE ONLY WITH MUTATORS --\n",
@@ -628,7 +627,7 @@ return {
     ["zh-cn"] = "\n\n-- 仅兼容突变器 --\n",
     ru = "\n\n-- СОВМЕСТИМО ТОЛЬКО С МУТАТОРАМИ --\n",
     ja = "\n\n-- ミューテーターとのみ互換性あり",
-    ["zh-tw"] ="\n\n-- 僅兼容突變器 --\n",
+    ["zh-tw"] ="\n\n-- 僅兼容修改器 --\n",
   },
   tooltip_compatible_with_all_mutators = {
     en = "\n\n-- COMPATIBLE WITH ALL MUTATORS --",
@@ -636,7 +635,7 @@ return {
     ["zh-cn"] = "\n\n-- 兼容所有突变器 --\n",
     ru = "\n\n-- СОВМЕСТИМО СО ВСЕМИ МУТАТОРАМИ --\n",
     ja = "\n\n-- すべてのミューテーターと互換性あり --\n",
-    ["zh-tw"] ="\n\n-- 兼容所有突變器 --",
+    ["zh-tw"] ="\n\n-- 兼容所有修改器 --",
   },
   tooltip_incompatible_with_all_mutators = {
     en = "\n\n-- INCOMPATIBLE WITH ALL MUTATORS --",
@@ -644,7 +643,7 @@ return {
     ["zh-cn"] = "\n\n-- 不兼容所有突变器 --\n",
     ru = "\n\n-- НЕСОВМЕСТИМО СО ВСЕМИ МУТАТОРАМИ --\n",
     ja = "\n\n-- すべてのミューテーターと互換性なし --\n",
-    ["zh-tw"] ="\n\n-- 不兼容所有突變器 --",
+    ["zh-tw"] ="\n\n-- 不兼容所有修改器 --",
   },
 
   tooltip_incompatible_diffs = {
@@ -687,7 +686,7 @@ return {
     ["zh-cn"] = "（突变）",
     ru = " (мутатор)",
     ja = " (ミューテーター)",
-    ["zh-tw"] = " (突變器)",
+    ["zh-tw"] = " (修改器)",
   },
   tooltip_append_difficulty = {
     en = " (difficulty)",
