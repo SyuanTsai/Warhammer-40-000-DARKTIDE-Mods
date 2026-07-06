@@ -91,7 +91,7 @@
 | ready | not checked | I Wanna See | i_wanna_see |  |
 | ready | not checked | VFX Swapper | vfx_swapper |  |
 | ready | not checked | MemoryLeakFix | MemLeakFix |  |
-| in_progress | 2026-07-06 23:16:11 +08:00 | CombatStats | CombatStats | 由 copilot 接手翻譯 zh-tw。 |
+| completed | 2026-07-06 23:20:47 +08:00 | CombatStats | CombatStats | 已完成 zh-tw 術語一致性校正（PR #32）。 |
 | ready | not checked | CharacterGrid | CharacterGrid |  |
 | ready | not checked | TeamKills | TeamKills |  |
 | ready | not checked | BrokerAutoStim | BrokerAutoStim |  |

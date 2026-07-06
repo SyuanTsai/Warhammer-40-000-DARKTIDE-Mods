@@ -17,7 +17,7 @@
 
 | Owner | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| copilot | in_progress | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | CombatStats | CombatStats | main | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | mod_name | 2026-07-06 23:16:11 +08:00 |  | no |  | CombatStats_localization.lua -> first missing zh-tw key | WhatTheLocalization 已檢查完成（無需修改），改接手 CombatStats。 |
+| copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | CombatStats | CombatStats | main | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | breed_horde | 2026-07-06 23:20:47 +08:00 | 68ef157 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 | markers_aio/markers_aio_localization.lua -> first key | CombatStats 完成，PR 已建立為 ready for review。 |
 
 ## 工作鎖定
 
@@ -27,7 +27,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | tooltip_append_mutator | copilot | released | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | 2026-07-06 22:35:51 +08:00 | 2026-07-06 23:13:46 +08:00 | PR #31 已建立且為 ready | 任務完成，釋放鎖定 |
 | WhatTheLocalization | Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | loc_command_output_visualize_description | copilot | released | Codex/Feature/WhatTheLocalization/Add-zh-tw | Darktide Translation Workspace/Log/WhatTheLocalization.md | 2026-07-06 23:14:55 +08:00 | 2026-07-06 23:16:11 +08:00 | 已完成檢查並釋放 | 所有 en key 均已有 zh-tw，無需修改 |
-| CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | mod_name | copilot | in_progress | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | 2026-07-06 23:16:11 +08:00 | 2026-07-06 23:16:11 +08:00 | 完成 CombatStats localization 並更新 PR 狀態 | 由 main 開始鎖定 |
+| CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | breed_horde | copilot | released | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | 2026-07-06 23:16:11 +08:00 | 2026-07-06 23:20:47 +08:00 | PR #32 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -165,17 +165,32 @@
 | README MOD | CombatStats |
 | Repo directory | CombatStats |
 | Owner | copilot |
-| Status | in_progress |
+| Status | completed |
 | Base branch | main |
 | Work branch | Codex/Feature/CombatStats/Add-zh-tw |
 | Branch log | Darktide Translation Workspace/Log/CombatStats.md |
 | Started at | 2026-07-06 23:16:11 +08:00 |
-| Last updated | 2026-07-06 23:16:11 +08:00 |
-| Completed at |  |
-| Commit |  |
-| PR URL / number |  |
-| Next position | CombatStats_localization.lua:mod_name |
-| Notes | 掃描顯示約 57 個 en key 缺少 zh-tw，開始處理。 |
+| Last updated | 2026-07-06 23:20:47 +08:00 |
+| Completed at | 2026-07-06 23:20:47 +08:00 |
+| Commit | 68ef157 |
+| PR URL / number | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 |
+| Next position | markers_aio/markers_aio_localization.lua:first key |
+| Notes | 已完成 zh-tw 術語一致性校正，PR ready。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | completed | 7 | breed_horde | Section: Key Progress | 僅修正 zh-tw 詞彙一致性 |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-06 23:20:47 +08:00 | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | toggle_view_keybind | completed | Section: Key Progress | 強化 UI 語意 |
+| 2026-07-06 23:20:47 +08:00 | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | crit | completed | Section: Key Progress | 依翻譯表改為「致命一擊」 |
+| 2026-07-06 23:20:47 +08:00 | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | enemy_stats/damage_stats/hit_stats | completed | Section: Key Progress | UI 縮短為統計欄位名稱 |
+| 2026-07-06 23:20:47 +08:00 | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | buff_uptime/breed_horde | completed | Section: Key Progress | 用詞統一與在地化 |
 
 ## 協作交接紀錄
 
@@ -213,9 +228,11 @@
 | MOD | Base branch | Work branch | Commit | Pushed | PR URL / number | Ready for review | Workspace files excluded | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | dmf | main | Codex/Feature/dmf/Add-zh-tw | 3af7b7c | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/31 | yes | yes | 僅包含 dmf/localization/dmf.lua |
+| CombatStats | main | Codex/Feature/CombatStats/Add-zh-tw | 68ef157 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 | yes | yes | 僅包含 CombatStats_localization.lua |
 
 ## Completed Files
 
 | MOD | File | Completed keys | Commit | PR | Completed at | Branch log | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | 40 | 3af7b7c | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/31 | 2026-07-06 23:13:46 +08:00 | Darktide Translation Workspace/Log/dmf.md | 已完成 zh-tw 校正與缺漏補齊 |
+| CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | 7 | 68ef157 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 | 2026-07-06 23:20:47 +08:00 | Darktide Translation Workspace/Log/CombatStats.md | 已完成 zh-tw 術語一致性校正 |
