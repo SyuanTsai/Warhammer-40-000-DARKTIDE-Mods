@@ -30,13 +30,13 @@
 | completed | 2026-07-07 +08:00 | Creature Spawner | creature_spawner | 修正 Combat Ability 詞彙表不一致（PR #35）。 |
 | completed | 2026-07-07 +08:00 | Power DI | Power_DI | 補齊缺失 zh-tw、修正 Curios/Crit 詞彙表（PR #36）。 |
 | completed | 2026-07-07 +08:00 | Skitarius | Skitarius | 修正簡體字混入、錯誤撰考問題（PR #37）。 |
-| ready | not checked | Auto Loot | AutoLoot |  |
-| ready | not checked | Healthbars | Healthbars |  |
-| ready | not checked | IME Enable | IME_Enable |  |
-| ready | not checked | True Level | true_level |  |
-| ready | not checked | Who Are You - Display account names | who_are_you |  |
-| ready | not checked | MultiBind | MultiBind |  |
-| ready | not checked | More Characters and Loadouts | more_characters_and_loadouts |  |
+| completed | 2026-07-07 +08:00 | Auto Loot | AutoLoot | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Healthbars | Healthbars | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | IME Enable | IME_Enable | 所有 zh-tw 已完整正確，無需修改。 |
+| in_progress | 2026-07-07 +08:00 | True Level | true_level |  |
+| completed | 2026-07-07 +08:00 | Who Are You - Display account names | who_are_you | 所有 zh-tw 已完整正確，無需修改。 |
+| in_progress | 2026-07-07 +08:00 | MultiBind | MultiBind |  |
+| completed | 2026-07-07 +08:00 | More Characters and Loadouts | more_characters_and_loadouts | 所有 zh-tw 已完整正確，無需修改。 |
 | ready | not checked | Psych Ward | psych_ward |  |
 | ready | not checked | Decode Helper | Decode_Helper |  |
 | ready | not checked | Decode Minigame Solver | DecodeMinigameSolver |  |
