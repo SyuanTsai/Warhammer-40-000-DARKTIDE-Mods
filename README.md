@@ -752,6 +752,13 @@
 - MOD 檔案名稱：SMOG 847 1.1 cwrBAw1N3
 - 手動維護最後下載日期：2026-07-06
 
+### [ErrorTracker](https://www.nexusmods.com/warhammer40kdarktide/mods/824)
+    錯誤追蹤
+- MOD 網站最後更新日期：Last updated 13 April 2026, 2:22AM
+- MOD 版本：1.1
+- MOD 檔案名稱：ErrorTracker-824-1-1-1776018123
+- 手動維護最後下載日期：2026-07-06
+
 # 移除的MOD
 
 ### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
