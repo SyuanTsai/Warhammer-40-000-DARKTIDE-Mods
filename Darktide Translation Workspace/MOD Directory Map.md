@@ -28,7 +28,7 @@
 | completed | 2026-07-06 23:16:11 +08:00 | What The Localization | WhatTheLocalization | 已檢查完成，所有 en key 均有 zh-tw，無需修改。 |
 | completed | 2026-07-06 23:32:20 +08:00 | Scoreboard | scoreboard | 已完成 zh-tw 缺漏補齊（PR #34）。 |
 | completed | 2026-07-07 +08:00 | Creature Spawner | creature_spawner | 修正 Combat Ability 詞彙表不一致（PR #35）。 |
-| ready | not checked | Power DI | Power_DI |  |
+| in_progress | 2026-07-07 +08:00 | Power DI | Power_DI |  |
 | ready | not checked | Skitarius | Skitarius |  |
 | ready | not checked | Auto Loot | AutoLoot |  |
 | ready | not checked | Healthbars | Healthbars |  |

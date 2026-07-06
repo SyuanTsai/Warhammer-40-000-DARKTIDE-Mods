@@ -24,3 +24,4 @@
 
 | Term / English | Proposed zh-tw | Source MOD | File | Localization key | Reason | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| Horde (enemy type) | 屍潮 | Power_DI | Power_DI_localization.lua | mloc_horde | 現有 "成群小怪"，CombatStats 同一概念用 "屍潮"，不一致 | candidate | 兩者皆未違反 Translation.md，待使用者決定是否統一 |
