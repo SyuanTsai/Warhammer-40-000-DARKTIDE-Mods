@@ -56,7 +56,7 @@ return {
 	},	
 	replace_broker_tox_grenade = {
 		en = "Replace Chem Grenade",
-		["zh-cn"] = "替换兴奋剂炸弹特效",
+		["zh-cn"] = "替换化学手雷特效",
 		["zh-tw"] = "替換化學手雷特效",
 	},
 	replace_fire_barrel_vfx = {
@@ -151,7 +151,7 @@ return {
 	},
 	flamer_vfx_default = {
 		en = "Default",
-		["zh-cn"] = "默认（不要选会崩溃）",
+		["zh-cn"] = "默认",
 		["zh-tw"] = "預設",
 	},
 	grenade_vfx_default = {
@@ -241,12 +241,12 @@ return {
 	},	
 	chemnade_indicators_group = {
 		en = "Chem Grenade Indicators",
-		["zh-cn"] = "兴奋剂炸弹指示器",
+		["zh-cn"] = "化学手雷指示器",
 		["zh-tw"] = "化學手雷顯示",
 	},
 	chemnade_circle_enabled = {
 		en = "Chem Grenade Circle",
-		["zh-cn"] = "兴奋剂炸弹圆形范围指示器",
+		["zh-cn"] = "化学手雷圆形范围指示器",
 		["zh-tw"] = "化學手雷範圍顯示",
 	},
 	chemnade_circle_red = {
@@ -326,12 +326,12 @@ return {
 	},
 	disable_toughened_skin = {
 		en = "Disable Pus-Hardened Skin",
-		["zh-cn"] = "脓硬化的皮肤",
+		["zh-cn"] = "禁用硬化皮肤特效",
 		["zh-tw"] = "停用膿液硬化皮膚",
 	},
 	disable_rotten_armor_stages = {
 		en = "Disable Rotten Armor Passive VFX",
-		["zh-cn"] = "禁用腐化装甲 '泄漏' 特效",
+		["zh-cn"] = "禁用腐化装甲被动特效",
 		["zh-tw"] = "停用腐敗護甲死亡時「釋放毒液」的特效",
 	},
 	disable_corrupted_enemies_vfx = {
@@ -361,8 +361,8 @@ return {
 	},
 	curroptor_goo = {
 		en = "Curroptor Goo",
-		["zh-cn"] = "腐化者粘液",
-		["zh-tw"] = "腐化者黏液",
+		["zh-cn"] = "腐化粘液",
+		["zh-tw"] = "腐蝕者黏液",
 	},	
 	charge_tip = {
 		en = "{#color(255, 35, 5)}EXPERIMENTAL!{#color(208, 208, 208)}\nAdds the 'lightning charge' ground effect (from Expeditions) as an additional indicator to show remaining duration of the effect.",
@@ -371,22 +371,22 @@ return {
 	},
 	staff_circle_tip = {
 		en = "{#color(255, 35, 5)}EXPERIMENTAL!{#color(208, 208, 208)}\nAdds the ground targeting indicator from Trauma Staff to show remaining duration of the effect.",
-		["zh-cn"] = "{#color(255, 35, 5)}*实验性质！{#color(208, 208, 208)}\n添加了“震荡杖目标指示器”，作为显示效果剩余持续时间的附加指示器。",
+		["zh-cn"] = "{#color(255, 35, 5)}*实验性质！{#color(208, 208, 208)}\n添加了“虚空爆破立场杖目标指示器”，作为显示效果剩余持续时间的附加指示器。",
 		["zh-tw"] = "{#color(255, 35, 5)}實驗性質！{#color(208, 208, 208)}\n加入震盪杖的地面瞄準指示器，用來顯示效果剩餘時間。",
 	},
 	toxin_death_tip = {
 		en = "Includes explosions from grenades, and certain needler alt fire modes.",
-		["zh-cn"] = "包括来自手榴弹和某些针刺器替代射击模式的爆炸。",
+		["zh-cn"] = "包括来自手榴弹和某些针刺手枪附属射击模式的爆炸。",
 		["zh-tw"] = "包括來自手雷和針彈手槍替代射擊模式的爆炸。",
 	},
 	rampaging_tip = {
 		en = "{#color(255, 35, 5)}*Turning this setting off requires restart. {#color(208, 208, 208)}\nIncludes orange glow FX and shockwave on death. Enemies will still grow.",
-		["zh-cn"] = "包括死亡时的橙色光辉特效和冲击波。敌人仍然会变大。",
+		["zh-cn"] = "{#color(255, 35, 5)}*关闭此选项需要重启。{#color(208, 208, 208)}\n包括死亡时的橙色光辉特效和冲击波。敌人仍然会变大。",
 		["zh-tw"] = "{#color(255, 35, 5)}*關閉此選項需要重啟。 {#color(208, 208, 208)}\n包括死亡時的橙色光輝特效和衝擊波。敵人仍然會變大。",
 	},
 	corrupted_vfx_tip = {
 		en = "{#color(255, 35, 5)}*Turning this setting off requires restart. {#color(208, 208, 208)}\nDisables Green Flies effect on Blight Spreads enemies.",
-		["zh-cn"] = "禁用瘟疫扩散敌人的绿色苍蝇特效。关闭此选项需要重启。",
+		["zh-cn"] = "{#color(255, 35, 5)}*关闭此选项需要重启。{#color(208, 208, 208)}\n禁用瘟疫扩散敌人的绿色苍蝇特效。",
 		["zh-tw"] = "{#color(255, 35, 5)}*關閉此選項需要重啟。 {#color(208, 208, 208)}\n停用瘟疫散播敵人的綠色蒼蠅特效。",
 	},
 	disable_death_vfx = {
@@ -421,7 +421,7 @@ return {
 	},
 	disable_toxic_gas_tip = {
 		en = "Disables the green cloud particles (looks like cultist gas grenade).",
-		["zh-cn"] = "禁用绿色云雾粒子（看起来像邪教徒毒气手雷）。",
+		["zh-cn"] = "禁用绿色云雾粒子（看起来像渣滓毒雷）。",
 		["zh-tw"] = "停用綠色煙霧粒子（劇毒轟炸者毒氣手雷）。",
 	},
 	disable_toxic_fog_tip = {
@@ -471,12 +471,12 @@ return {
 	},
 	net_electric_vfx = {
 		en = "Disable Trapper's net lightning effect",
-		["zh-cn"] = "禁用陷阱兵的電網效果",
+		["zh-cn"] = "禁用血痂陷阱手的电网效果",
 		["zh-tw"] = "停用陷阱兵的電網效果",
 	},
 	netgunner_vfx = {
 		en = "Disable Netgunner muzzle flash",
-		["zh-cn"] = "禁用网枪开火特效",
+		["zh-cn"] = "禁用血痂陷阱手的开火特效",
 		["zh-tw"] = "停用陷阱兵開火特效",
 	},
 	voidstrike_explosion_vfx = {
@@ -501,7 +501,7 @@ return {
 	},
 	galvanic_vfx = {
 		en = "Disable Galvanic Rifle Muzzle VFX",
-		["zh-cn"] = "禁用加尔文步枪开火特效",
+		["zh-cn"] = "禁用流电步枪开火特效",
 		["zh-tw"] = "停用電能步槍開火特效",
 	},
 	lasgun_vfx = {
@@ -511,27 +511,27 @@ return {
 	},
 	arc_vfx = {
 		en = "Disable Arc Rifle Lightning VFX",
-		["zh-cn"] = "禁用电击枪闪电特效",
+		["zh-cn"] = "禁用电弧步枪闪电特效",
 		["zh-tw"] = "停用電弧步槍閃電特效",
 	},
 	purgator_vfx = {
 		en = "Simple Purgator VFX",
-		["zh-cn"] = "简单教长特效",
+		["zh-cn"] = "简化洗罪者火焰特效",
 		["zh-tw"] = "簡化伺服器顱骨特效",
 	},
 	purg_tt = {
 		en = "Replaces Purgator flamer with a mild, hazeless flamer effect",
-		["zh-cn"] = "用一种温和、无烟雾的火焰特效替换教长的火焰特效",
+		["zh-cn"] = "用一种温和、无烟雾的火焰特效替换洗罪者伺服头骨的火焰特效",
 		["zh-tw"] = "將伺服器顱骨火焰替換為較溫和、無煙霧的火焰特效",
 	},
 	arc_tt = {
 		en = "Removes the lightning and black smoke effects",
-		["zh-cn"] = "",
+		["zh-cn"] = "移除电弧闪电与黑烟特效",
 		["zh-tw"] = "移除閃電與黑煙特效",
 	},
 	gal_vfx = {
 		en = "Disable Galvanic Rifle Muzzle Flash",
-		["zh-cn"] = "禁用加尔文步枪开火特效",
+		["zh-cn"] = "禁用流电步枪开火特效",
 		["zh-tw"] = "停用電能步槍開火特效",
 	},
 	poxwalker_vfx = {
@@ -541,22 +541,22 @@ return {
 	},
 	disable_bon_death = {
 		en = "Disable Beast of Nurgle death explosion",
-		["zh-cn"] = "禁用污秽兽死亡特效",
+		["zh-cn"] = "禁用纳垢兽死亡特效",
 		["zh-tw"] = "停用納垢獸死亡爆炸",
 	},
 	disable_burster_death = {
 		en = "Disable Burster explosions",
-		["zh-cn"] = "禁用爆弹虫爆炸",
+		["zh-cn"] = "禁用瘟疫爆破手爆炸",
 		["zh-tw"] = "停用瘟疫爆者爆炸",
 	},
 	simple_havoc_color_vfx = {
 		en = "Simple Havoc Color VFX",
-		["zh-cn"] = "简单浩劫颜色特效",
-		["zh-tw"] = "簡化浩劫顏色 VFX",
+		["zh-cn"] = "简化浩劫颜色特效",
+		["zh-tw"] = "簡化浩劫顏色特效",
 	},
 	simple_hav_tt = {
 		en = "Removes particle effects from Final Toll and Encroaching Garden while maintaining color. Requires restart.",
-		["zh-cn"] = "在保持颜色的同时移除Final Toll和Encroaching Garden的粒子特效。需要重启。",
+		["zh-cn"] = "在保持颜色的同时移除最后的钟声和花园蔓生的粒子特效。需要重启。",
 		["zh-tw"] = "移除背水一戰和蔓生花園的粒子特效，同時保留顏色。需要重啟。",
 	},
 }
