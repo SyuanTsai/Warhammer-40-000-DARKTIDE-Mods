@@ -33,9 +33,9 @@
 | completed | 2026-07-07 +08:00 | Auto Loot | AutoLoot | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Healthbars | Healthbars | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | IME Enable | IME_Enable | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-07 +08:00 | True Level | true_level |  |
+| completed | 2026-07-07 +08:00 | True Level | true_level | 修正 player_salvage_style_text 簡體字（PR #38）。 |
 | completed | 2026-07-07 +08:00 | Who Are You - Display account names | who_are_you | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-07 +08:00 | MultiBind | MultiBind |  |
+| completed | 2026-07-07 +08:00 | MultiBind | MultiBind | 補齊 wield_1 缺失 zh-tw（PR #39）。 |
 | completed | 2026-07-07 +08:00 | More Characters and Loadouts | more_characters_and_loadouts | 所有 zh-tw 已完整正確，無需修改。 |
 | ready | not checked | Psych Ward | psych_ward |  |
 | ready | not checked | Decode Helper | Decode_Helper |  |
