@@ -201,7 +201,7 @@ return {
     crit = {
         en = 'Crit',
         ['zh-cn'] = '暴击',
-        ['zh-tw'] = '爆擊',
+        ['zh-tw'] = '致命一擊',
     },
     weakspot = {
         en = 'Weakspot',
@@ -243,22 +243,22 @@ return {
     enemy_stats = {
         en = 'Enemy Stats',
         ['zh-cn'] = '敌人统计',
-        ['zh-tw'] = '敵人統計資料',
+        ['zh-tw'] = '敵人統計',
     },
     damage_stats = {
         en = 'Damage Stats',
         ['zh-cn'] = '伤害统计',
-        ['zh-tw'] = '傷害統計資料',
+        ['zh-tw'] = '傷害統計',
     },
     hit_stats = {
         en = 'Hit Stats',
         ['zh-cn'] = '命中统计',
-        ['zh-tw'] = '命中統計資料',
+        ['zh-tw'] = '命中統計',
     },
     buff_uptime = {
         en = 'Buff Uptime',
         ['zh-cn'] = '增益持续时间',
-        ['zh-tw'] = '增益覆蓋時間',
+        ['zh-tw'] = '增益持續時間',
     },
 
     -- Breed Types
@@ -290,7 +290,7 @@ return {
     breed_horde = {
         en = 'horde',
         ['zh-cn'] = '尸潮',
-        ['zh-tw'] = '群怪',
+        ['zh-tw'] = '屍潮',
     },
     breed_unknown = {
         en = 'unknown',
