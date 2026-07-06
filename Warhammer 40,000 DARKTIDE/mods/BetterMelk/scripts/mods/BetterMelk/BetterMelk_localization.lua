@@ -3,7 +3,7 @@ return {
 		en = "Character Screen Contracts",
 		["zh-cn"] = "梅尔克协议优化",
 		ru = "Индикатор контрактов",
-		["zh-tw"] = "角色畫面契約",
+		["zh-tw"] = "改善梅爾克契約",
 	},
 	mod_description = {
 		en = "Displays contract progress on character select.",
