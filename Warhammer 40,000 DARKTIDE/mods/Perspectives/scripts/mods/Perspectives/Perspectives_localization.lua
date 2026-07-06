@@ -4,17 +4,7 @@ local loc = {
 	mod_description = {
 		en = "Switch between first and third person perspectives.",
 		["zh-cn"] = "在第一人称和第三人称视角之间切换。",
-		["zh-tw"] = "在第一人稱與第三人稱視角之間切換。"
-	},
-	allow_switching = {
-		en = "Allow Perspective Switching",
-		["zh-cn"] = "允许视角切换",
-		["zh-tw"] = "允許視角切換"
-	},
-	allow_switching_description = {
-		en = "Turn off to effectively disable the mod.",
-		["zh-cn"] = "关闭此选项实际禁用此模组。",
-		["zh-tw"] = "關閉此選項實際上會禁用此模組。"
+		["zh-tw"] = "在第一人稱和第三人稱視角之間切換。"
 	},
 	third_person_toggle = {
 		en = "Switch Perspective (Toggle)",
@@ -234,7 +224,7 @@ local loc = {
 		["zh-tw"] = "衝鋒（歐格林）"
 	},
 	autoswitch_lunge_human = {
-		en = "Charge (Zealot)",
+		en = "Charge (Human)",
 		["zh-cn"] = "冲锋（狂信徒）",
 		["zh-tw"] = "衝鋒（狂信徒）"
 	},
@@ -249,15 +239,29 @@ local loc = {
 		["zh-cn"] = "不切换",
 		["zh-tw"] = "不切換"
 	},
-	autoswitch_to_first = {
-		en = "1st Person",
-		["zh-cn"] = "第一人称",
-		["zh-tw"] = "第一人稱"
+	autoswitch_to_first_revert = {
+		en = "1st Person, During",
+		["zh-cn"] = "第一人称 During",
+		["zh-tw"] = "第一人稱視角時"
 	},
-	autoswitch_to_third = {
-		en = "3rd Person",
-		["zh-cn"] = "第三人称",
-		["zh-tw"] = "第三人稱"
+	autoswitch_to_third_revert = {
+		en = "3rd Person, During",
+		["zh-cn"] = "第三人称 During",
+		["zh-tw"] = "第三人稱視角時"
+	},
+	autoswitch_to_first_stay = {
+		en = "1st Person, During & After",
+		["zh-cn"] = "第一人称 During & After",
+		["zh-tw"] = "第一人稱視角期間與之後"
+	},
+	autoswitch_to_third_stay = {
+		en = "3rd Person, During & After",
+		["zh-cn"] = "第三人称 During & After",
+		["zh-tw"] = "第三人稱視角期間與之後"
+	},
+	autoswitch_slab_block = {
+		en = Localize("loc_weapon_special_defensive_stance")
+			.. " - " .. Localize("loc_weapon_family_ogryn_powermaul_slabshield_p1_m1"),
 	},
 }
 
@@ -273,7 +277,10 @@ else
 	mod._xhair_types = { "none", "cross", "assault", "bfg", "shotgun", "spray_n_pray", "dot" }
 	for _, type in ipairs(mod._xhair_types) do
 		loc["xhair_" .. type] = {
-			en = Localize(type == "none" and "loc_setting_notification_type_none" or ("loc_setting_crosshair_type_override_" .. (type ~= "cross" and type or "killshot"))),
+			en = Localize(
+				type == "none" and "loc_setting_notification_type_none"
+				or ("loc_setting_crosshair_type_override_" .. (type ~= "cross" and type or "killshot"))
+			),
 		}
 	end
 end
