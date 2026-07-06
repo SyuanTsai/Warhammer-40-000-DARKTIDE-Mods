@@ -87,6 +87,7 @@ StimmCountdown
 i_wanna_see
 vfx_swapper
 MemLeakFix
+SMOG
 CharacterGrid
 BetterMelk
 TeamKills

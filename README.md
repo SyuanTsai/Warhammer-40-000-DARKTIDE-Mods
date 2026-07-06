@@ -4,17 +4,17 @@
 
 ### [Darktide Mod Loader](https://www.nexusmods.com/warhammer40kdarktide/mods/19?tab=description)
     MOD載入器 - 使用MOD必備
-- MOD 網站最後更新日期：Last updated 24 June 2026, 2:07PM
-- MOD 版本：Version 26.06.24
-- MOD 檔案名稱：(Update_Only)_Darktide_Mod_Loader_26.06.24_95Dkb5CYv
-- 手動維護最後下載日期：2026-06-26
+- MOD 網站最後更新日期：Last updated 23 September 2025, 6:39PM
+- MOD 版本：Version 25.09.23
+- MOD 檔案名稱：Darktide Mod Loader-19-25-09-23-1758623959
+- 手動維護最後下載日期：2025-09-30
 
 ### [Darktide Mod Framework](https://www.nexusmods.com/warhammer40kdarktide/mods/8?tab=descriptionn)
     MOD框架 - 想要使用MOD必備，此MOD才能夠讓你開始加入其他的MOD
-- MOD 網站最後更新日期：Last updated 25 June 2026, 2:31AM
-- MOD 版本：Version 26.06.24
-- MOD 檔案名稱：Darktide_Mod_Framework_26.06.24_SDWlwDHJj
-- 手動維護最後下載日期：2026-06-26
+- MOD 網站最後更新日期：Last updated 03 December 2025, 8:21AM
+- MOD 版本：Version 25.12.02
+- MOD 檔案名稱：Darktide Mod Framework-8-25-12-02-1764721271
+- 手動維護最後下載日期：2025-12-06
 
 ---
 # 遊戲體驗改善
@@ -42,17 +42,17 @@
 
 ### [Power DI](https://www.nexusmods.com/warhammer40kdarktide/mods/281)
     進階記分板
-- MOD 網站最後更新日期：Last updated 27 June 2026, 7:54PM
-- MOD 版本：Version 1.1.21
-- MOD 檔案名稱：Power_DI_1.1.21.zip_v1.1.21_sXjHdXNKg
-- 手動維護最後下載日期：2026-06-28
+- MOD 網站最後更新日期：Last updated 23 March 2026, 12:43AM
+- MOD 版本：Version 1.1.19
+- MOD 檔案名稱：Power_DI_1.1.19.zip-281-v1-1-19-1774197819
+- 手動維護最後下載日期：2026-03-29
 
 ### [Skitarius](https://www.nexusmods.com/warhammer40kdarktide/mods/510)
     顱骨支援
-- MOD 網站最後更新日期：Last updated 04 July 2026, 5:17AM
-- MOD 版本：2.2.4
-- MOD 檔案名稱：Skitarius 2.2.4 510 2.2.4 oudzUuMof
-- 手動維護最後下載日期：2026-07-06
+- MOD 網站最後更新日期：Last updated 16 April 2026, 6:09AM
+- MOD 版本：2.1.8
+- MOD 檔案名稱：Skitarius 2.1.8-510-2-1-8-1776290966
+- 手動維護最後下載日期：2026-05-17
 
 ### [Auto Loot](https://www.nexusmods.com/warhammer40kdarktide/mods/375)
     自動開啟箱子並撿取物品
@@ -63,10 +63,10 @@
 
 ### [Healthbars](https://www.nexusmods.com/warhammer40kdarktide/mods/16)
     UI改善
-- MOD 網站最後更新日期：Last updated 04 July 2026, 1:18AM
-- MOD 版本：26.07.05
-- MOD 檔案名稱：Healthbars 16 26.07.05 YFIfRF4Y2
-- 手動維護最後下載日期：2026-07-06
+- MOD 網站最後更新日期：Last updated 12 May 2026, 8:05PM
+- MOD 版本：26.05.12
+- MOD 檔案名稱：Healthbars
+- 手動維護最後下載日期：2026-05-17
 - GitHub :
 - Source=>  https://github.com/danreeves/darktide-mods
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mods-Danreeves
@@ -80,10 +80,10 @@
 
 ### [True Level](https://www.nexusmods.com/warhammer40kdarktide/mods/156)
     真實等級 - 顯示真正的等級
-- MOD 網站最後更新日期：Last updated 24 June 2026, 2:35AM
-- MOD 版本：Version 1.10.1
-- MOD 檔案名稱：True_Level_1.10.1_3OsdoOGHb
-- 手動維護最後下載日期：2026-06-26
+- MOD 網站最後更新日期：Last updated 29 April 2026, 9:35PM
+- MOD 版本：Version 1.10.0
+- MOD 檔案名稱：True Level-156-1-10-0-1777469719
+- 手動維護最後下載日期：2026-05-17
 - GitHub :
 - Source=>  https://github.com/zombine04/darktide-mods
 - Fork  =>  https://github.com/SyuanTsai/darktide-mods
@@ -164,10 +164,10 @@
 
 ### [Debuff Indicator](https://www.nexusmods.com/warhammer40kdarktide/mods/137)
     效果顯示
-- MOD 網站最後更新日期：Last updated 24 June 2026, 2:40AM
-- MOD 版本：1.7.5
-- MOD 檔案名稱：Debuff_Indicator_1.7.5_DEJ2kE3Sx
-- 手動維護最後下載日期：2026-06-26
+- MOD 網站最後更新日期：Last updated 17 December 2025, 10:37AM
+- MOD 版本：1.7.4
+- MOD 檔案名稱：Debuff Indicator-137-1-7-4-1765939029
+- 手動維護最後下載日期：2025-12-19
 - GitHub :
 - Source=>  https://github.com/zombine04/darktide-mods
 - Fork  =>  https://github.com/SyuanTsai/darktide-mods
@@ -181,10 +181,10 @@
 
 ### [Stimms Pickup Icon](https://www.nexusmods.com/warhammer40kdarktide/mods/265)
     強化針顯示改善，讓你可以清楚知道隊友目前的針是甚麼
-- MOD 網站最後更新日期：Last updated 21 June 2026, 12:55AM
-- MOD 版本：1.5.1
-- MOD 檔案名稱：StimmsPickupIcon
-- 手動維護最後下載日期：2026-06-26
+- MOD 網站最後更新日期：Last updated 07 December 2025, 1:30AM
+- MOD 版本：1.4.0
+- MOD 檔案名稱：StimmsPickupIcon-265-1-4-0-1765042230
+- 手動維護最後下載日期：2025-12-07
 
 ### [Killfeed Improvements](https://www.nexusmods.com/warhammer40kdarktide/mods/70)
     擊殺名稱顯示改進
@@ -209,17 +209,17 @@
 
 ### [Quick Look Card](https://www.nexusmods.com/warhammer40kdarktide/mods/142)
     快速資訊卡 可以快速取得武器的五維
-- MOD 網站最後更新日期：Last updated 23 June 2026, 5:14PM
-- MOD 版本：1.8.6
-- MOD 檔案名稱：QuickLookCard
-- 手動維護最後下載日期：2026-06-26
+- MOD 網站最後更新日期：Last updated 15 August 2025, 11:44PM
+- MOD 版本：1.8.5
+- MOD 檔案名稱：QuickLookCard-142-1-8-5-1755272684
+- 手動維護最後下載日期：2025-09-30
 
 ### [Markers Improved All-in-One](https://www.nexusmods.com/warhammer40kdarktide/mods/447)
     標記一體化 整合包
-- MOD 網站最後更新日期：Last updated 30 June 2026, 7:36PM
-- MOD 版本：2.14.2
-- MOD 檔案名稱：Markers Improved All-in-One 447 2.14.2 sXjHdXNQV
-- 手動維護最後下載日期：2026-07-05
+- MOD 網站最後更新日期：Last updated 22 April 2026, 11:50PM
+- MOD 版本：2.12.08
+- MOD 檔案名稱：Markers Aio-447-2-12-08-1776873052
+- 手動維護最後下載日期：2026-05-17
 
 ### [Danger Zone](https://www.nexusmods.com/warhammer40kdarktide/mods/440)
     危險區域 - 顯示危險的範圍 爆桶、惡魔宿主...等
@@ -237,10 +237,10 @@
 
 ### [Spidey Sense](https://www.nexusmods.com/warhammer40kdarktide/mods/268)
     蜘蛛感應 - 畫面顯示特定敵人位置
-- MOD 網站最後更新日期：Last updated 21 June 2026, 1:54PM
-- MOD 版本：v7.3
-- MOD 檔案名稱：Spidey Sense.zip-268-v7-3-1782021284
-- 手動維護最後下載日期：2026-06-26
+- MOD 網站最後更新日期：Last updated 17 May 2026, 2:03PM
+- MOD 版本：v7.1
+- MOD 檔案名稱：Spidey Sense.zip-268-v7-1-1778997806
+- 手動維護最後下載日期：2026-05-17
 - GitHub :
 - Source=>  https://github.com/Wobin/SpideySense
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mod-SpideySense
@@ -338,10 +338,10 @@
 
 ### [Guarantee Ability Activation](https://www.nexusmods.com/warhammer40kdarktide/mods/336)
     防止取消大絕
-- MOD 網站最後更新日期：Last updated 04 July 2026, 1:42AM
-- MOD 版本：1.4.0
-- MOD 檔案名稱：Guarantee Ability Activation 336 1.4.0 rlqxBl6rD
-- 手動維護最後下載日期：2026-07-06
+- MOD 網站最後更新日期：Last updated 11 May 2026, 7:53PM
+- MOD 版本：1.3.13
+- MOD 檔案名稱：Guarantee Ability Activation-336-1-3-13-1778500424
+- 手動維護最後下載日期：2026-05-17
 
 ### [Custom HUD](https://www.nexusmods.com/warhammer40kdarktide/mods/10)
     客製化UI
@@ -366,10 +366,10 @@
 
 ### [Perspectives Mod](https://www.nexusmods.com/warhammer40kdarktide/mods/111)
     第三人稱視角
-- MOD 網站最後更新日期：Last updated 06 July 2026, 2:17AM
-- MOD 版本：1.12
-- MOD 檔案名稱：Perspectives 111 1.12 pRus3RoKe
-- 手動維護最後下載日期：2026-07-06
+- MOD 網站最後更新日期：Last updated 03 December 2024 6:00PM
+- MOD 版本：1.11
+- MOD 檔案名稱：Perspectives-111-1-11-1733248815
+- 手動維護最後下載日期：2025-04-16
 
 ### [Improved Havoc Tags](https://www.nexusmods.com/warhammer40kdarktide/mods/500)
     浩劫詞條說明改善
@@ -380,14 +380,21 @@
 
 ### [Ovenproof's Scoreboard Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/241)
     記分板排版工具
-- MOD 網站最後更新日期：Last updated 28 June 2026, 9:18PM
+- MOD 網站最後更新日期：Last updated 11 April 2026, 4:45PM
 - MOD 版本：1.4.2
-- Patch 版本：1.13.6
-- MOD 檔案名稱：Ovenproof's_Scoreboard_Plugin_-_Community_Patch_1.13.6_YFIfRF4zN
-- 手動維護最後下載日期：2026-06-30
+- Patch 版本：1.11.1
+- MOD 檔案名稱：Ovenproof's Scoreboard Plugin - Community Patch-514-1-11-1-1775897120
+- 手動維護最後下載日期：2026-05-17
 - GitHub :
 - Source=>  https://github.com/Backup158/DarktideOvenproofScoreboardPluginPatch
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mods-OvenproofScoreboardPluginPatch
+
+### [Servo-Friend](https://www.nexusmods.com/warhammer40kdarktide/mods/504)
+    顱骨支援
+- MOD 網站最後更新日期：Last updated 02 October 2025, 9:29PM
+- MOD 版本：3.0.1
+- MOD 檔案名稱：Servo Friend-504-3-1746235485
+- 手動維護最後下載日期：2025-10-03
 
 ### [Scoreboard Explosive](https://www.nexusmods.com/warhammer40kdarktide/mods/113)
     爆桶爆炸
@@ -412,6 +419,13 @@
 ---
 - 手動維護最後下載日期：2025-07-12
 
+### [Dog Whistle](https://www.nexusmods.com/warhammer40kdarktide/mods/539)
+    狗哨 - 自動抓特感
+- MOD 網站最後更新日期：Last updated 04 December 2025, 12:31AM
+- MOD 版本：1.0.8
+- MOD 檔案名稱：Dog Whistle 1.0.8-539-1-0-8-1764779496
+- 手動維護最後下載日期：2025-12-06
+
 ### [Red Weapons at Home](https://www.nexusmods.com/warhammer40kdarktide/mods/380)
     武器顏色顯示
 - MOD 網站最後更新日期：Last updated 10 July 2025, 7:04PM
@@ -421,18 +435,18 @@
 
 ### [AutoBlitz](https://www.nexusmods.com/warhammer40kdarktide/mods/480)
     自動手榴彈(一鍵投出、獒犬自爆)
-- MOD 網站最後更新日期：Last updated 27 June 2026, 4:56AM
-- MOD 版本：1.0.9
-- MOD 檔案名稱：AutoBlitz_1.0.9_1.0.9_ufCjsf7D7
-- 手動維護最後下載日期：2026-06-28
+- MOD 網站最後更新日期：Last updated 31 March 2026, 4:49AM
+- MOD 版本：1.0.8
+- MOD 檔案名稱：AutoBlitz 1.0.8-480-1-0-8-1774903783
+- 手動維護最後下載日期：2026-04-03
 - Google Drive
 
 ### [SpecialsTracker](https://www.nexusmods.com/warhammer40kdarktide/mods/274)
     顯示場上所有特感數量
-- MOD 網站最後更新日期：Last updated 02 July 2026, 2:24AM
-- MOD 版本：1.7
-- MOD 檔案名稱：SpecialsTracker 274 1.7 RZfXOZcsk
-- 手動維護最後下載日期：2026-07-05
+- MOD 網站最後更新日期：Last updated 24 September 2025, 8:12PM
+- MOD 版本：1.6
+- MOD 檔案名稱：SpecialsTracker-274-1-6-1758715953
+- 手動維護最後下載日期：2025-10-01
 
 ### [Display Ping (Latency)](https://www.nexusmods.com/warhammer40kdarktide/mods/460)
     顯示延遲
@@ -450,10 +464,10 @@
 
 ### [Valkyrie Blitz-Ingress](https://www.nexusmods.com/warhammer40kdarktide/mods/544)
     省略開場任務介紹(浩劫斷線時加速回歸)
-- MOD 網站最後更新日期：Last updated 04 July 2026, 7:53AM
-- MOD 版本：0.10
-- MOD 檔案名稱：Valkyrie 544 0.10 GAN5MAIGB
-- 手動維護最後下載日期：2026-07-06
+- MOD 網站最後更新日期：Last updated 01 April 2026, 9:12PM
+- MOD 版本：0.4
+- MOD 檔案名稱：Valkyrie Blitz-Ingress-544-0-4-1775048992
+- 手動維護最後下載日期：2026-04-03
 
 ### [BornReady](https://www.nexusmods.com/warhammer40kdarktide/mods/96)
     預先載入
@@ -464,10 +478,10 @@
 
 ### [MissionBrief](https://www.nexusmods.com/warhammer40kdarktide/mods/387)
     預先載入
-- MOD 網站最後更新日期：Last updated 25 June 2026, 9:55AM
-- MOD 版本：1.11
-- MOD 檔案名稱：MissionBrief_1.11_l24cL2nS8
-- 手動維護最後下載日期：2026-06-26
+- MOD 網站最後更新日期：Last updated 24 March 2026, 6:59AM
+- MOD 版本：1.9
+- MOD 檔案名稱：MissionBrief-387-1-9-1774306770
+- 手動維護最後下載日期：2026-03-29
 
 ### [Uptime](https://www.nexusmods.com/warhammer40kdarktide/mods/387)
     觀察天賦的運作狀況
@@ -485,32 +499,32 @@
 
 ### [Clear Smoke](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
     煙霧輔助
-- MOD 網站最後更新日期：Last updated 04 July 2026, 4:25PM
-- MOD 版本：1.4
-- MOD 檔案名稱：clear_smoke 517 1.4 L8cAq8mL7
-- 手動維護最後下載日期：2026-07-06
+- MOD 網站最後更新日期：Last updated 21 November 2025, 7:21AM
+- MOD 版本：1.2
+- MOD 檔案名稱：clear_smoke-517-1-2-1763680914
+- 手動維護最後下載日期：2025-12-06
 - Use Google driver.
 
 ### [Quick Level Mastery](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
     自動升級裝備(含自動買)
-- MOD 網站最後更新日期：Last updated 24 June 2026, 5:32AM
-- MOD 版本：0.1.1-hotfix-1
-- MOD 檔案名稱：Quick_Level_Mastery_0.1.1-hotfix-1_iYOupYqSQ
-- 手動維護最後下載日期：2026-06-26
+- MOD 網站最後更新日期：Last updated 23 January 2026, 3:18AM
+- MOD 版本：0.1.1
+- MOD 檔案名稱：Quick Level Mastery-395-0-1-1-1769109536
+- 手動維護最後下載日期：2026-03-21
 
 ### [I Wanna See](https://www.nexusmods.com/warhammer40kdarktide/mods/371)
     修改火焰特效的顯示方式
-- MOD 網站最後更新日期：Last updated 19 March 2026, 12:50AM
-- MOD 版本：1.1.4
-- MOD 檔案名稱：I Wanna See-371-1-1-4-1773852624
-- 手動維護最後下載日期：2026-05-17
+- MOD 網站最後更新日期：Last updated 30 July 2025, 11:25AM
+- MOD 版本：1.1.2
+- MOD 檔案名稱：I Wanna See-371-1-1-2-1753845943
+- 手動維護最後下載日期：2025-12-28
 
 ### [VFX Swapper](https://www.nexusmods.com/warhammer40kdarktide/mods/678)
     修改特效的顯示方式
-- MOD 網站最後更新日期：Last updated 06 July 2026, 10:42AM
-- MOD 版本：1.2.2
-- MOD 檔案名稱：VFX Swapper 678 1.2.2 txMvExerh
-- 手動維護最後下載日期：2026-07-06
+- MOD 網站最後更新日期：Last updated 19 March 2026, 10:53PM
+- MOD 版本：1.1.1
+- MOD 檔案名稱：Quick fix for volumetric crash on load-in-678-1-1-1-1773931987
+- 手動維護最後下載日期：2026-05-17
 
 ### [MemoryLeakFix](https://www.nexusmods.com/warhammer40kdarktide/mods/406)
     減緩記憶體崩潰
@@ -520,11 +534,11 @@
 - 手動維護最後下載日期：2025-12-28
 
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
-    戰鬥資訊(記分板)
-- MOD 網站最後更新日期：Last updated 06 July 2026, 7:01PM
-- MOD 版本：0.4.9
-- MOD 檔案名稱：CombatStats 661 0.4.9 K6YR06iQr
-- 手動維護最後下載日期：2026-07-06
+    減緩記憶體崩潰
+- MOD 網站最後更新日期：Last updated 26 December 2025, 6:30PM
+- MOD 版本：0.3.9
+- MOD 檔案名稱：CombatStats-661-0-3-9-1766745002
+- 手動維護最後下載日期：2025-12-28
 
 ### [CharacterGrid](https://www.nexusmods.com/warhammer40kdarktide/mods/649)
     角色顯示
@@ -542,10 +556,10 @@
 
 ### [BrokerAutoStim](https://www.nexusmods.com/warhammer40kdarktide/mods/655)
     顯示隊伍擊殺資訊
-- MOD 網站最後更新日期：Last updated 02 July 2026, 2:48AM
-- MOD 版本：2.7
-- MOD 檔案名稱：BrokerAutoStim 655 2.7 K6YR06lp4
-- 手動維護最後下載日期：2026-07-05
+- MOD 網站最後更新日期：Last updated 22 December 2025, 8:28AM
+- MOD 版本：2.5
+- MOD 檔案名稱：BrokerAutoStim-655-2-5-1766363294
+- 手動維護最後下載日期：2026-01-01
 
 ### [TalentUI](https://www.nexusmods.com/warhammer40kdarktide/mods/683)
     天賦UI
@@ -604,17 +618,17 @@
 
 ### [Solo Play (Havoc Update)](https://www.nexusmods.com/warhammer40kdarktide/mods/176)
     單人遊戲 - 支援浩劫模式
-- MOD 網站最後更新日期：Last updated 23 June 2026, 9:49PM
-- MOD 版本：Version 2.5.3
-- MOD 檔案名稱：SoloPlay_2.5.3_gqGMtqY5P
-- 手動維護最後下載日期：2026-06-26
+- MOD 網站最後更新日期：Last updated 09 February 2026, 12:29AM
+- MOD 版本：Version 2.3.6
+- MOD 檔案名稱：SoloPlay-176-2-3-6-1770568165
+- 手動維護最後下載日期：2026-02-10
 
 ### [TagKeys](https://www.nexusmods.com/warhammer40kdarktide/mods/79)
     使用快捷鍵做遊戲標記
-- MOD 網站最後更新日期：Last updated 01 July 2026, 8:35PM
-- MOD 版本：1.4
-- MOD 檔案名稱：TagKeys 79 1.4 ufCjsf7zO
-- 手動維護最後下載日期：2026-07-05
+- MOD 網站最後更新日期：Last updated 08 April 2023 8:12AM
+- MOD 版本：1.3
+- MOD 檔案名稱：TagKeys-79-1-3-1680937957
+- 手動維護最後下載日期：2025-02-24
 
 ### [Weapon Filter](https://www.nexusmods.com/warhammer40kdarktide/mods/373)
     武器過濾
@@ -684,20 +698,24 @@
 
 ### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
     怪物生成器 - 靈能室可以選擇要生那些怪，並且產生特定波次訓練身法。
-- MOD 網站最後更新日期：Last updated 02 July 2026, 5:50PM
-- MOD 版本：26.07.02
-- MOD 檔案名稱：Creature Spawner 25 26.07.02 QHh61HD5Z
-- 手動維護最後下載日期：2026-07-05
+- MOD 網站最後更新日期：Last updated 30 October 2025, 6:17AM
+- MOD 版本：Version 25.10.29
+- MOD 檔案名稱：Creature Spawner-25-25-10-29-1761776237
+- 手動維護最後下載日期：2025-12-06
+
+### [HoldFire](https://www.nexusmods.com/warhammer40kdarktide/mods/797)
+    火力管控 - 防止無效開火
+- MOD 網站最後更新日期：Last updated 07 May 2026, 3:08PM
+- MOD 版本：1.1.4
+- MOD 檔案名稱：HoldFire-797-1-1-4-1778137707
+- 手動維護最後下載日期：2026-05-17
 
 ### [Radar](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
     遠征模式的小弟圖
-- MOD 網站最後更新日期：Last updated 29 June 2026, 11:41PM
-- MOD 版本：2.4.1
-- MOD 檔案名稱：Radar_2.4.1_bTkWSTjHE
-- 手動維護最後下載日期：2026-06-30
-- GitHub :
-- Source=>  https://github.com/LucLeto/darktide-mods-radar
-- Fork  =>  https://github.com/SyuanTsai/Darktide-Mod-radar
+- MOD 網站最後更新日期：Last updated 12 May 2026, 5:13AM
+- MOD 版本：2.2.5
+- MOD 檔案名稱：Radar-790-2-2-5-1778534034
+- 手動維護最後下載日期：2026-05-17
 
 ### [AuspexHelper](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
     遠征模式的小弟圖
@@ -708,10 +726,10 @@
 
 ### [PlasmaBFG](https://www.nexusmods.com/warhammer40kdarktide/mods/834)
     電漿槍 優化
-- MOD 網站最後更新日期：Last updated 04 July 2026, 10:29AM
-- MOD 版本：1.0.17
-- MOD 檔案名稱：PlasmaBFG 834 1.0.17 Z1K0I1wZo
-- 手動維護最後下載日期：2026-07-06
+- MOD 網站最後更新日期：Last updated 05 May 2026, 6:56PM
+- MOD 版本：1.0.9
+- MOD 檔案名稱：PlasmaBFG-834-1-0-9-1777978588
+- 手動維護最後下載日期：2026-05-17
 
 ### [SprintRelicHeavy](https://www.nexusmods.com/warhammer40kdarktide/mods/804)
     聖物劍操作強化
@@ -727,11 +745,11 @@
 - MOD 檔案名稱：AutoMark 736 2.2.6 29Sw89d2x
 - 手動維護最後下載日期：2026-07-06
 
-### [KeepSwinging](https://www.nexusmods.com/warhammer40kdarktide/mods/88)
-    自動平A
-- MOD 網站最後更新日期：Last updated 06 July 2026, 2:12AM
-- MOD 版本：1.12
-- MOD 檔案名稱：KeepSwinging 88 1.12 5gEeTgDA6
+### [SMOG Cleaner](https://www.nexusmods.com/warhammer40kdarktide/mods/847)
+    記憶體管理
+- MOD 網站最後更新日期：Last updated 01 July 2026, 4:29PM
+- MOD 版本：1.1
+- MOD 檔案名稱：SMOG 847 1.1 cwrBAw1N3
 - 手動維護最後下載日期：2026-07-06
 
 # 移除的MOD
@@ -840,27 +858,3 @@
 - MOD 檔案名稱：AlternateGrenadeIcons-322-1-0-1717874669
 - 手動維護最後下載日期：2025-02-10
 - 移除原因：TalentUI取代此MOD
-
-### [Servo-Friend](https://www.nexusmods.com/warhammer40kdarktide/mods/504)
-    顱骨支援
-- MOD 網站最後更新日期：Last updated 02 October 2025, 9:29PM
-- MOD 版本：3.0.1
-- MOD 檔案名稱：Servo Friend-504-3-1746235485
-- 手動維護最後下載日期：2025-10-03
-- 移除原因：原本是為了在黑暗地圖中開燈，但因為失去維護2025/10，且有Machine God's BeaconUI取代，故移除。
-
-### [Dog Whistle](https://www.nexusmods.com/warhammer40kdarktide/mods/539)
-    狗哨 - 自動抓特感
-- MOD 網站最後更新日期：Last updated 04 December 2025, 12:31AM
-- MOD 版本：1.0.8
-- MOD 檔案名稱：Dog Whistle 1.0.8-539-1-0-8-1764779496
-- 手動維護最後下載日期：2025-12-06
-- 移除原因：AutoMark取代此MOD，該MOD不用準心對到怪
-
-### [HoldFire](https://www.nexusmods.com/warhammer40kdarktide/mods/797)
-    火力管控 - 防止無效開火
-- MOD 網站最後更新日期：Last updated 07 May 2026, 3:08PM
-- MOD 版本：1.1.4
-- MOD 檔案名稱：HoldFire-797-1-1-4-1778137707
-- 手動維護最後下載日期：2026-05-17
-- 移除原因：作者停止維護，且某些情境下對電將槍造成阻礙。
