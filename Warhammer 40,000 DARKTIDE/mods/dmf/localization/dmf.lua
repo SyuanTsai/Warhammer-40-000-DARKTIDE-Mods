@@ -42,7 +42,6 @@ return {
   },
   percent = {
     en = "%%",
-    ["zh-tw"] = "%%",
   },
   toggle_mods = {
     en = "Toggle Mods",
