@@ -95,7 +95,7 @@ local loc = {
         en = "Debuff Indicator",
         ["zh-cn"] = "负面效果指示器",
         ru = "Индикатор дебаффов",
-        ["zh-tw"] = "減益效果指示器",
+        ["zh-tw"] = "減益效果顯示器",
     },
     mod_description = {
         en = "Display debuffs applied to each enemy and their stacks.",
@@ -329,7 +329,7 @@ local loc = {
     bleed_long = {
         en = "Bleeding (long)",
         ja = "出血（大）",
-        ["zh-tw"] = "流血（長時間）",
+        ["zh-tw"] = "撕裂流血（護教軍的爪）",
     },
     flamer_assault = {
         en = "Burning",
@@ -379,107 +379,81 @@ local loc = {
     },
     increase_damage_taken = {
         en = Localize("loc_weapon_special_hook_pull"),
-        ["zh-tw"] = Localize("loc_weapon_special_hook_pull"),
     },
     increase_impact_received_while_staggered = {
         en = Localize("loc_trait_bespoke_staggered_targets_receive_increased_stagger_debuff"),
-        ["zh-tw"] = Localize("loc_trait_bespoke_staggered_targets_receive_increased_stagger_debuff"),
     },
     increase_damage_received_while_staggered = {
         en = Localize("loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff"),
-        ["zh-tw"] = Localize("loc_trait_bespoke_staggered_targets_receive_increased_damage_debuff"),
     },
     psyker_biomancer_smite_vulnerable_debuff = {
         en = Localize("loc_talent_biomancer_smite_increases_non_warp_damage"),
-        ["zh-tw"] = Localize("loc_talent_biomancer_smite_increases_non_warp_damage"),
     },
 	psyker_discharge_damage_debuff = {
 		en = Localize("loc_talent_psyker_shout_damage_per_warp_charge"),
-		["zh-tw"] = Localize("loc_talent_psyker_shout_damage_per_warp_charge"),
 	},
     psyker_protectorate_spread_chain_lightning_interval_improved = {
         en = Localize("loc_talent_psyker_chain_lightning_improved_target_buff"),
-        ["zh-tw"] = Localize("loc_talent_psyker_chain_lightning_improved_target_buff"),
     },
     psyker_protectorate_spread_charged_chain_lightning_interval_improved = {
         en = Localize("loc_talent_psyker_chain_lightning_improved_target_buff"),
-        ["zh-tw"] = Localize("loc_talent_psyker_chain_lightning_improved_target_buff"),
     },
     psyker_force_staff_quick_attack_debuff = {
         en = Localize("loc_talent_psyker_force_staff_quick_attack_bonus"),
-        ["zh-tw"] = Localize("loc_talent_psyker_force_staff_quick_attack_bonus"),
     },
     ogryn_recieve_damage_taken_increase_debuff = {
         en = Localize("loc_talent_ogryn_targets_recieve_damage_increase_debuff"),
-        ["zh-tw"] = Localize("loc_talent_ogryn_targets_recieve_damage_increase_debuff"),
     },
     ogryn_taunt_increased_damage_taken_buff = {
         en = Localize("loc_talent_ogryn_taunt_damage_taken_increase"),
-        ["zh-tw"] = Localize("loc_talent_ogryn_taunt_damage_taken_increase"),
     },
     ogryn_staggering_damage_taken_increase = {
         en = Localize("loc_talent_ogryn_big_bully_heavy_hits"),
-        ["zh-tw"] = Localize("loc_talent_ogryn_big_bully_heavy_hits"),
     },
     veteran_improved_tag_debuff = {
         en = Localize("loc_talent_veteran_improved_tag"),
-        ["zh-tw"] = Localize("loc_talent_veteran_improved_tag"),
     },
     zealot_bled_enemies_take_more_damage_effect = {
         en = Localize("loc_talent_zealot_bled_enemies_take_more_damage"),
-        ["zh-tw"] = Localize("loc_talent_zealot_bled_enemies_take_more_damage"),
     },
     adamant_drone_enemy_debuff = {
         en = Localize("loc_talent_ability_area_buff_drone"),
-        ["zh-tw"] = Localize("loc_talent_ability_area_buff_drone"),
     },
     adamant_drone_talent_debuff = {
         en = Localize("loc_talent_adamant_drone_debuff_talent"),
-        ["zh-tw"] = Localize("loc_talent_adamant_drone_debuff_talent"),
     },
     adamant_melee_weakspot_hits_count_as_stagger_debuff = {
         en = Localize("loc_talent_adamant_melee_weakspot_hits_count_as_stagger"),
-        ["zh-tw"] = Localize("loc_talent_adamant_melee_weakspot_hits_count_as_stagger"),
     },
     adamant_staggered_enemies_deal_less_damage_debuff = {
         en = Localize("loc_talent_adamant_staggered_enemies_deal_less_damage"),
-        ["zh-tw"] = Localize("loc_talent_adamant_staggered_enemies_deal_less_damage"),
     },
     adamant_staggering_enemies_take_more_damage = {
         en = Localize("loc_talent_adamant_staggered_enemies_take_more_damage"),
-        ["zh-tw"] = Localize("loc_talent_adamant_staggered_enemies_take_more_damage"),
     },
     toxin_damage_debuff = {
         en = Localize("loc_talent_broker_passive_reduced_damage_by_toxined"),
-        ["zh-tw"] = Localize("loc_talent_broker_passive_reduced_damage_by_toxined"),
     },
     toxin_damage_debuff_monster = {
         en = Localize("loc_talent_broker_passive_reduced_damage_by_toxined"),
-        ["zh-tw"] = Localize("loc_talent_broker_passive_reduced_damage_by_toxined"),
     },
     broker_punk_rage_improved_shout_debuff = {
         en = Localize("loc_talent_broker_ability_punk_rage_sub_3"),
-        ["zh-tw"] = Localize("loc_talent_broker_ability_punk_rage_sub_3"),
     },
     broker_passive_toxin_infected_enemies_take_increased_damage_debuff = {
         en = Localize("loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage"),
-        ["zh-tw"] = Localize("loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage"),
     },
 	cryptic_servo_skull_debuff = {
 		en = Localize("loc_talent_cryptic_servo_skull"),
-		["zh-tw"] = Localize("loc_talent_cryptic_servo_skull"),
 	},
 	cryptic_overload_keystone_increase_damage_taken_debuff = {
 		en = Localize("loc_talent_cryptic_overload_keystone_bigger_explosion"),
-		["zh-tw"] = Localize("loc_talent_cryptic_overload_keystone_bigger_explosion"),
 	},
     stagger = {
         en = Localize("loc_stagger"),
-        ["zh-tw"] = Localize("loc_stagger"),
     },
     suppression = {
         en = Localize("loc_weapon_stats_display_suppression"),
-        ["zh-tw"] = Localize("loc_weapon_stats_display_suppression"),
     }
 
 }
@@ -517,7 +491,6 @@ for breed_name, breed in pairs(Breeds) do
 
         loc[breed_name] = {
             en = display_name,
-            ["zh-tw"] = display_name,
         }
     end
 end
@@ -528,7 +501,6 @@ for i, name in ipairs(Color.list) do
 
     loc[name] = {}
     loc[name].en = text
-    loc[name]["zh-tw"] = text
 end
 
 return loc
