@@ -2,12 +2,12 @@
 		mod_name = {
 			en = "Broker Auto Stim",
 			["zh-cn"] = "自动注射兴奋剂",
-			["zh-tw"] = "代理自動注射興奮劑",
+			["zh-tw"] = "自動注射興奮劑",
 		},
 		mod_description = {
 			en = "Automatically injects broker stim after being in combat for a set duration.",
 			["zh-cn"] = "在进入战斗一定时间后自动注射自制兴奋剂。",
-			["zh-tw"] = "進入戰鬥達指定時間後，自動注射代理興奮劑。",
+			["zh-tw"] = "進入戰鬥達指定時間後，自動注射興奮劑。",
 		},
 		profile_settings = {
 			en = "Profile Settings",
@@ -142,7 +142,7 @@
 		only_with_chemical_dependency = {
 			en = "Only With Chemical Dependency",
 			["zh-cn"] = "仅在有化学依赖时",
-			["zh-tw"] = "僅限化學性依賴",
+			["zh-tw"] = "僅限化學性依賴時",
 		},
 		only_with_chemical_dependency_description = {
 			en = "Only auto-stim if you have the Chemical Dependency keystone.",
