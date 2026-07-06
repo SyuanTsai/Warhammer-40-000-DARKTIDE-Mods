@@ -42,6 +42,7 @@ return {
   },
   percent = {
     en = "%%",
+    ["zh-tw"] = "%%",
   },
   toggle_mods = {
     en = "Toggle Mods",
@@ -111,7 +112,7 @@ return {
     ru = "Открыть/закрыть консоль разработчика",
     ["zh-cn"] = "开关开发者控制台",
     ja = "開発者コンソールの表示/非表示",
-    ["zh-tw"] ="開關開發者控制台",
+    ["zh-tw"] = "切換開發者控制台",
 
   },
   show_network_debug_info = {
@@ -120,7 +121,7 @@ return {
     ru = "Логирование сетевых вызовов",
     ["zh-cn"] = "记录网络调用日志",
     ja = "ネットワーク呼び出しの記録",
-    ["zh-tw"] ="紀錄網路連線日誌",
+    ["zh-tw"] = "記錄網路呼叫日誌",
   },
   show_network_debug_info_description = {
     en = "Log all the DMF network calls and all the data transfered with them.\n\n" ..
@@ -133,8 +134,8 @@ return {
          "记录日志时会使用 'info' 方法。",
     ja = "すべてのDMFのネットワーク呼び出しと通信データをログに記録します。\n\n" ..
          "記録には 'info' メソッドが使用されます。",
-    ["zh-tw"] ="紀錄所以DMF網路連線與傳輸數據讀日誌 \n\n" ..
-         "紀錄日誌會使用'info'的方法",
+        ["zh-tw"] = "記錄所有 DMF 網路呼叫以及其傳輸資料。\n\n" ..
+          "日誌記錄會使用 'info' 方法。",
   },
   log_ui_renderers_info = {
     en = "Log UI Renderers Creation Info",
@@ -142,7 +143,7 @@ return {
     ru = "Логирование информации при создании UI Renderer",
     ["zh-cn"] = "记录 UI 渲染器创建信息",
     ja = "UIレンダラー生成情報の記録",
-    ["zh-tw"] ="記錄UI渲染器啟動訊息",
+    ["zh-tw"] = "記錄 UI 渲染器建立資訊",
   },
   log_ui_renderers_info_description = {
     en = "Log the UI Renderer's creator name and all the materials passed as the arguments.\n\n" ..
@@ -155,8 +156,8 @@ return {
          "记录日志时会使用 'info' 方法。",
     ja = "UIレンダラー生成元の名称と、引数として渡されたすべてのマテリアルをログに記録します。\n\n" ..
          "記録には 'info' メソッドが使用されます。",
-    ["zh-tw"] ="紀錄UI渲染器創建者名稱與參數導入的所有材質\n\n" ..
-         "紀錄日誌會使用'info'的方法",
+        ["zh-tw"] = "記錄 UI 渲染器建立者名稱，以及作為參數傳入的所有材質。\n\n" ..
+          "日誌記錄會使用 'info' 方法。",
   },
   logging_mode = {
     en = "Logging Settings",
@@ -180,14 +181,14 @@ return {
     ru = "Пользовательские",
     ["zh-cn"] = "自定义",
     ja = "カスタム",
-    ["zh-tw"] ="自定",
+    ["zh-tw"] = "自訂",
   },
   output_mode_notification = {
     en = "'Notification' Output",
     ["zh-cn"] = "'Notification' 通知输出",
     ru = "Вывод 'Notification'",
     ja = "'Notification' の出力",
-    ["zh-tw"] ="通知訊息輸出",
+    ["zh-tw"] = "'Notification' 訊息輸出",
   },
   output_mode_echo = {
     en = "'Echo' Output",
@@ -195,6 +196,7 @@ return {
     ru = "Вывод 'Echo'",
     ["zh-cn"] = "'Echo' 回显输出",
     ja = "'Echo' の出力",
+    ["zh-tw"] = "'Echo' 訊息輸出",
   },
   output_mode_error = {
     en = "'Error' Output",
@@ -202,7 +204,7 @@ return {
     ru = "Вывод 'Error'",
     ["zh-cn"] = "'Error' 错误输出",
     ja = "'Error' の出力",
-    ["zh-tw"] ="Error 訊息輸出",
+    ["zh-tw"] = "'Error' 訊息輸出",
   },
   output_mode_warning = {
     en = "'Warning' Output",
@@ -210,7 +212,7 @@ return {
     ru = "Вывод 'Warning'",
     ["zh-cn"] = "'Warning' 警告输出",
     ja = "'Warning' の出力",
-    ["zh-tw"] ="Warning 訊息輸出",
+    ["zh-tw"] = "'Warning' 訊息輸出",
   },
   output_mode_info = {
     en = "'Info' Output",
@@ -218,7 +220,7 @@ return {
     ru = "Вывод 'Info'",
     ["zh-cn"] = "'Info' 信息输出",
     ja = "'Info' の出力",
-    ["zh-tw"] ="Info 訊息輸出",
+    ["zh-tw"] = "'Info' 訊息輸出",
   },
   output_mode_debug = {
     en = "'Debug' Output",
@@ -226,7 +228,7 @@ return {
     ru = "Вывод 'Debug'",
     ["zh-cn"] = "'Debug' 调试输出",
     ja = "'Debug' の出力",
-    ["zh-tw"] ="Debug 輸出",
+    ["zh-tw"] = "'Debug' 訊息輸出",
   },
   output_disabled = {
     en = "Disabled",
@@ -234,7 +236,7 @@ return {
     ru = "Выключен",
     ["zh-cn"] = "禁用",
     ja = "無効",
-    ["zh-tw"] ="禁用",
+    ["zh-tw"] = "停用",
   },
   output_log = {
     en = "Log",
@@ -286,7 +288,7 @@ return {
     ["zh-cn"] = "聊天与通知",
     ru = "Чат и Уведомление",
     ja = "チャットと通知",
-    ["zh-tw"] ="在聊天輸入歷史紀錄",
+    ["zh-tw"] = "聊天與通知",
   },
   chat_history_enable = {
     en = "Chat Input History",
@@ -294,6 +296,7 @@ return {
     ru = "История ввода чата",
     ["zh-cn"] = "聊天输入历史记录",
     ja = "チャット入力の履歴",
+    ["zh-tw"] = "聊天輸入歷史紀錄",
   },
   chat_history_enable_description = {
     en = "Saves all the messages and commands you typed in the chat window.\n\n" ..
@@ -306,8 +309,8 @@ return {
          "你可以打开聊天窗口，按“上下方向键”浏览输入历史记录。",
     ja = "チャット欄に記入したすべてのメッセージとコマンドを保存します。\n\n" ..
          "入力履歴はチャットを開いて「上矢印」と「下矢印」キーで表示できます。",
-    ["zh-tw"] ="保存所有在聊天窗口輸入的消息與命令\n\n" ..
-         "你可以在聊天窗口按上下方向鍵瀏覽輸入歷史紀錄",
+        ["zh-tw"] = "儲存你在聊天視窗輸入的所有訊息與命令。\n\n" ..
+          "你可以開啟聊天視窗後，按「向上鍵」與「向下鍵」瀏覽輸入歷史紀錄。",
   },
   chat_history_save = {
     en = "Save Input History Between Game Sessions",
@@ -315,7 +318,7 @@ return {
     ru = "Сохранять историю ввода между сеансами игры",
     ["zh-cn"] = "重启游戏仍保留输入历史",
     ja = "ゲームセッション間での入力履歴の保存",
-    ["zh-tw"] ="重啟遊戲仍保留輸入歷史",
+    ["zh-tw"] = "重啟遊戲後仍保留輸入歷史",
   },
   chat_history_save_description = {
     en = "Your chat input history will be saved even after reloading your game (or just DMF).",
@@ -323,7 +326,7 @@ return {
     ru = "Когда игрок выключает игру (или перезагружает DMF), DMF cохраняет историю ввода в файл настроек, чтобы загрузить её при следующем запуске игры.",
     ["zh-cn"] = "即使重新启动游戏（或者重新加载 DMF），仍然保存聊天输入历史记录。",
     ja = "ゲームの再起動 (またはDMFのリロード) 後もチャットの入力履歴が保持されます。",
-    ["zh-tw"] ="重新啟動遊戲或重新載入DMF 仍然保留歷史輸入紀錄",
+    ["zh-tw"] = "重新啟動遊戲或重新載入 DMF 後，仍會保留聊天輸入歷史紀錄。",
   },
   chat_history_buffer_size = {
     en = "Input History Buffer Size",
@@ -331,7 +334,7 @@ return {
     ru = "Размер буфера истории ввода",
     ["zh-cn"] = "输入历史记录大小",
     ja = "入力履歴のバッファサイズ",
-    ["zh-tw"] ="輸入歷史紀錄大小",
+    ["zh-tw"] = "輸入歷史緩衝區大小",
   },
   chat_history_buffer_size_description = {
     en = "Maximum number of saved entries.\n\n" ..
@@ -344,8 +347,8 @@ return {
          "警告：更改此设置会删除所有聊天历史记录。",
     ja = "履歴の最大保存数。\n\n" ..
          "警告：この設定を変更するとチャット履歴が消去されます。",
-    ["zh-tw"] ="最大保存紀錄筆數\n\n" ..
-         "警告 此改動會刪除所有聊天紀錄",
+        ["zh-tw"] = "可儲存的最大紀錄筆數。\n\n" ..
+          "警告：變更此設定會刪除所有聊天歷史紀錄。",
   },
   chat_history_remove_dups = {
     en = "Remove Duplicate Entries",
@@ -353,7 +356,7 @@ return {
     ru = "Удалять повторяющиеся записи",
     ["zh-cn"] = "删除重复记录",
     ja = "重複する履歴の削除",
-    ["zh-tw"] ="刪除重復紀錄",
+    ["zh-tw"] = "刪除重複紀錄",
   },
   chat_history_remove_dups_mode = {
     en = "Removal Mode",
@@ -379,9 +382,9 @@ return {
     ja = "重複した際にどの履歴を削除するか。\n\n" ..
          "-- 直前 --\n直前の履歴が重複する場合、それを削除します。\n\n" ..
          "-- すべて --\n重複するすべての履歴を削除します。",
-    ["zh-tw"] ="應該刪除那些重復紀錄\n\n" ..
-         "-- 最新 --\n如果和最新一條匹配 就刪除上一筆紀錄\n\n" ..
-         "-- 全部 --\n如果和最新一條匹配 就刪除所有匹配的紀錄",
+        ["zh-tw"] = "要刪除哪些重複紀錄。\n\n" ..
+          "-- 最新 --\n若與最新一筆相同，刪除前一筆紀錄。\n\n" ..
+          "-- 全部 --\n若與最新一筆相同，刪除所有相同紀錄。",
   },
   settings_last = {
     en = "Last",
@@ -418,8 +421,8 @@ return {
          "警告：更改此设置会删除所有聊天历史记录。",
     ja = "実行できたコマンドのみをチャット履歴に保存します。\n\n" ..
          "警告：この設定を変更するとチャット履歴が消去されます。",
-    ["zh-tw"] ="只有成功執行的命令才會保存在聊天紀錄裡\n\n" ..
-         "警告 修改此設定會刪除所以聊天紀錄",
+        ["zh-tw"] = "只有成功執行的命令會儲存在聊天歷史紀錄中。\n\n" ..
+          "警告：變更此設定會刪除所有聊天歷史紀錄。",
   },
 
   chat_command_not_recognized = {
@@ -450,7 +453,7 @@ return {
     ru = "Консоль разработчика открыта.",
     ["zh-cn"] = "已打开开发者控制台。",
     ja = "開発者コンソールを開きました。",
-    ["zh-tw"] ="以啟動開發者控制台",
+    ["zh-tw"] = "已開啟開發者控制台。",
   },
   dev_console_closed = {
     en = "Developer console closed.",
@@ -458,14 +461,14 @@ return {
     ru = "Консоль разработчика закрыта.",
     ["zh-cn"] = "已关闭开发者控制台。",
     ja = "開発者コンソールを閉じました。",
-    ["zh-tw"] ="以關閉開發者控制台",
+    ["zh-tw"] = "已關閉開發者控制台。",
   },
   dev_console_close_warning = {
     en = "The developer console is disabled, but must be closed manually.",
     ["zh-cn"] = "开发者控制台已禁用，但必须手动关闭。",
     ru = "Консоль разработчика отключена, но ее необходимо закрыть вручную.",
     ja = "開発者コンソールが無効になっていますが、手動で閉じる必要があります。",
-    ["zh-tw"] ="開發者控制台以禁用 但需要手動關閉",
+    ["zh-tw"] = "開發者控制台已停用，但仍需手動關閉。",
   },
 
 
@@ -477,7 +480,7 @@ return {
     ["zh-cn"] = "未提供描述。",
     ru = "Описание не предоставлено.",
     ja = "説明がありません。",
-    ["zh-tw"] ="未提供描述",
+    ["zh-tw"] = "未提供描述。",
   },
 
   -- Difficulties' names
@@ -524,7 +527,7 @@ return {
     ["zh-cn"] = "启用突变器",
     ru = "МУТАТОРЫ ВКЛЮЧЕНЫ",
     ja = "ミューテーターが有効化されました",
-    ["zh-tw"] ="啟動突變器",
+    ["zh-tw"] = "啟用突變器",
   },
   broadcast_all_disabled = {
     en = "ALL MUTATORS DISABLED",
@@ -532,7 +535,7 @@ return {
     ["zh-cn"] = "禁用所有突变器",
     ru = "ВСЕ МУТАТОРЫ ОТКЛЮЧЕНЫ",
     ja = "すべてのミューテーターが無効化されました",
-    ["zh-tw"] ="關閉所有突變器",
+    ["zh-tw"] = "停用所有突變器",
   },
   broadcast_disabled_mutators = {
     en = "MUTATORS DISABLED",
@@ -556,7 +559,7 @@ return {
     ["zh-cn"] = "[自动消息] 此大厅激活了以下突变器",
     ru = "[Автоматическое сообщение] В этом лобби активны следующие мутаторы",
     ja = "[自動メッセージ] このロビーでは以下のミューテーターが有効になっています",
-    ["zh-tw"] ="[自動訊息]此大廳啟動了以下突變器",
+    ["zh-tw"] = "[自動訊息] 此大廳已啟用以下突變器",
   },
 
   disabled_reason_not_server = {
@@ -591,7 +594,7 @@ return {
     ["zh-cn"] = "启用和禁用突变器",
     ru = "Включить и отключить мутаторы",
     ja = "ミューテーターのオン/オフ",
-    ["zh-tw"] ="啟動與禁用突變器",
+    ["zh-tw"] = "啟用與停用突變器",
   },
   no_mutators = {
     en = "No mutators installed",
@@ -684,7 +687,7 @@ return {
     ["zh-cn"] = "（突变）",
     ru = " (мутатор)",
     ja = " (ミューテーター)",
-    ["zh-tw"] =" (突變)",
+    ["zh-tw"] = " (突變器)",
   },
   tooltip_append_difficulty = {
     en = " (difficulty)",
