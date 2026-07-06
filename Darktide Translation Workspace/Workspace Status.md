@@ -17,7 +17,7 @@
 
 | Owner | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| copilot | in_progress | granted | git checkout/fetch/branch/status/diff, commit, push, force push, create ready PR | CombatStats | CombatStats | main | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | CombatStats_localization.lua | all keys | 2026-07-07 +08:00 | - | - | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 | 處理中 | 重新處理：修正 toggle_view_keybind 錯誤及詞彙表不一致問題 |
+| copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, force push, create ready PR | CombatStats | CombatStats | main | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | CombatStats_localization.lua | all keys | 2026-07-07 +08:00 | f011907 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 | 完成 | 重新處理完成：修正 toggle_view_keybind 錯誤及詞彙表不一致，釋放鎖定 |
 
 ## 工作鎖定
 
@@ -28,7 +28,7 @@
 | dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | tooltip_append_mutator | copilot | released | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | 2026-07-06 22:35:51 +08:00 | 2026-07-06 23:13:46 +08:00 | PR #31 已建立且為 ready | 任務完成，釋放鎖定 |
 | WhatTheLocalization | Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | loc_command_output_visualize_description | copilot | released | Codex/Feature/WhatTheLocalization/Add-zh-tw | Darktide Translation Workspace/Log/WhatTheLocalization.md | 2026-07-06 23:14:55 +08:00 | 2026-07-06 23:16:11 +08:00 | 已完成檢查並釋放 | 所有 en key 均已有 zh-tw，無需修改 |
 | CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | breed_horde | copilot | released | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | 2026-07-06 23:16:11 +08:00 | 2026-07-06 23:20:47 +08:00 | PR #32 已建立且為 ready | 任務完成，釋放鎖定 |
-| CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | all keys | copilot | in_progress | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | 2026-07-07 +08:00 | 2026-07-07 +08:00 | 完成後釋放 | 重新處理中 |
+| CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | all keys | copilot | released | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | 2026-07-07 +08:00 | 2026-07-07 +08:00 | 完成 | 重新處理完成，釋放鎖定 |
 | scoreboard | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | row_boss_damage_dealt | copilot | released | Codex/Feature/scoreboard/Add-zh-tw | Darktide Translation Workspace/Log/scoreboard.md | 2026-07-06 23:30:50 +08:00 | 2026-07-06 23:32:20 +08:00 | PR #34 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄

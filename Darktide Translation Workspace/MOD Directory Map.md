@@ -91,7 +91,7 @@
 | ready | not checked | I Wanna See | i_wanna_see |  |
 | ready | not checked | VFX Swapper | vfx_swapper |  |
 | ready | not checked | MemoryLeakFix | MemLeakFix |  |
-| in_progress | 2026-07-07 +08:00 | CombatStats | CombatStats | 重新處理中：修正 toggle_view_keybind 錯誤及詞彙表不一致。 |
+| completed | 2026-07-07 +08:00 | CombatStats | CombatStats | 第二次重新處理：修正 toggle_view_keybind 錯誤及詞彙表不一致（PR #32）。 |
 | ready | not checked | CharacterGrid | CharacterGrid |  |
 | ready | not checked | TeamKills | TeamKills |  |
 | ready | not checked | BrokerAutoStim | BrokerAutoStim |  |

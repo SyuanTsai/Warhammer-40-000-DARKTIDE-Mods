@@ -5,14 +5,31 @@
 - Work branch: Codex/Feature/CombatStats/Add-zh-tw
 - Started at: 2026-07-06 23:16:11 +08:00
 - Last updated: 2026-07-07 +08:00
-- Status: in_progress (reprocessing)
-- Commit: (pending)
-- Push: pending (force push needed)
-- PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32
+- Status: completed (reprocessed)
+- Commit: f011907
+- Push: done (force push)
+- PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 (ready)
 
 ## Reprocess Note (2026-07-07)
 
 依使用者要求重新處理。前次 `toggle_view_keybind` 被錯誤加上「快捷鍵：」前綴（英文原文為 "Toggle Stats View"，不含 keybind 語意）。本次從 main 重置分支，重新套用正確翻譯。
+
+## Scope
+
+- Target file: Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua
+- Translation source: en
+- Target locale: zh-tw
+
+## Completed Updates (6 corrections)
+
+| Key | Before | After | Reason |
+| --- | --- | --- | --- |
+| crit | 爆擊 | 致命一擊 | Translation.md: Crit -> 致命一擊 |
+| enemy_stats | 敵人統計資料 | 敵人統計 | 精簡，符合 UI 慣用語 |
+| damage_stats | 傷害統計資料 | 傷害統計 | 精簡 |
+| hit_stats | 命中統計資料 | 命中統計 | 精簡 |
+| buff_uptime | 增益覆蓋時間 | 增益持續時間 | Uptime = 持續時間，更準確 |
+| breed_horde | 群怪 | 屍潮 | Darktide 常用譯名 |
 
 ## Scope
 
