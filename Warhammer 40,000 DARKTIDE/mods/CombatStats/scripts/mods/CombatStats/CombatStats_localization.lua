@@ -266,7 +266,7 @@ return {
     breed_ritualist = {
         en = 'ritualist',
         ['zh-cn'] = '仪式术士',
-        ['zh-tw'] = '儀式術士',
+        ['zh-tw'] = '渣滓祭司',
     },
     breed_disabler = {
         en = 'disabler',
