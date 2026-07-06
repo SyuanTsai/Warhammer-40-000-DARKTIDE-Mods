@@ -66,6 +66,7 @@ return {
 	wield_1 = {
 		en = "Wield Primary Weapon",
 		["zh-cn"] = "使用主要武器",
+		["zh-tw"] = "使用主要武器",
 		de = "Primärwaffe führen",
 		fr = "Manier l'arme principale",
 		ru = "Использовать основное оружие",
