@@ -17,7 +17,7 @@
 
 | Owner | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | markers_aio | Markers Improved All-in-One | main | Codex/Feature/markers_aio/Add-zh-tw | Darktide Translation Workspace/Log/markers_aio.md | Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua | unknown_colour | 2026-07-06 23:29:53 +08:00 | 4f67414 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/33 | scoreboard/Scoreboard_localization.lua -> first key | markers_aio 完成，PR 已建立為 ready for review。 |
+| copilot | in_progress | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | scoreboard | Scoreboard | main | Codex/Feature/scoreboard/Add-zh-tw | Darktide Translation Workspace/Log/scoreboard.md | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | mod_name | 2026-07-06 23:30:50 +08:00 |  | no |  | Scoreboard_localization.lua -> first missing/low-quality zh-tw key | 開始處理 zh-tw 翻譯與校正。 |
 
 ## 工作鎖定
 
@@ -29,6 +29,7 @@
 | WhatTheLocalization | Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | loc_command_output_visualize_description | copilot | released | Codex/Feature/WhatTheLocalization/Add-zh-tw | Darktide Translation Workspace/Log/WhatTheLocalization.md | 2026-07-06 23:14:55 +08:00 | 2026-07-06 23:16:11 +08:00 | 已完成檢查並釋放 | 所有 en key 均已有 zh-tw，無需修改 |
 | CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | breed_horde | copilot | released | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | 2026-07-06 23:16:11 +08:00 | 2026-07-06 23:20:47 +08:00 | PR #32 已建立且為 ready | 任務完成，釋放鎖定 |
 | markers_aio | Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua | unknown_colour | copilot | released | Codex/Feature/markers_aio/Add-zh-tw | Darktide Translation Workspace/Log/markers_aio.md | 2026-07-06 23:24:32 +08:00 | 2026-07-06 23:29:53 +08:00 | PR #33 已建立且為 ready | 任務完成，釋放鎖定 |
+| scoreboard | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | mod_name | copilot | in_progress | Codex/Feature/scoreboard/Add-zh-tw | Darktide Translation Workspace/Log/scoreboard.md | 2026-07-06 23:30:50 +08:00 | 2026-07-06 23:30:50 +08:00 | 完成 scoreboard localization 並更新 PR 狀態 | 由 main 開始鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -226,6 +227,25 @@
 | 2026-07-06 23:29:53 +08:00 | Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua | field_improv_colour | completed | Section: Key Progress | 補齊缺漏 zh-tw |
 | 2026-07-06 23:29:53 +08:00 | Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua | expedition_*_colour | completed | Section: Key Progress | 補齊遠征標記顏色系列 zh-tw |
 | 2026-07-06 23:29:53 +08:00 | Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua | mod_marker_boost_stimm_name/mod_marker_medic_stimm_name/tab_heretical_idol | completed | Section: Key Progress | 詞彙對齊翻譯表 |
+
+### MOD-LOG-0006 - scoreboard
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | Scoreboard |
+| Repo directory | scoreboard |
+| Owner | copilot |
+| Status | in_progress |
+| Base branch | main |
+| Work branch | Codex/Feature/scoreboard/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/scoreboard.md |
+| Started at | 2026-07-06 23:30:50 +08:00 |
+| Last updated | 2026-07-06 23:30:50 +08:00 |
+| Completed at |  |
+| Commit |  |
+| PR URL / number |  |
+| Next position | Scoreboard_localization.lua:mod_name |
+| Notes | 開始處理 zh-tw 翻譯與校正。 |
 
 ## 協作交接紀錄
 

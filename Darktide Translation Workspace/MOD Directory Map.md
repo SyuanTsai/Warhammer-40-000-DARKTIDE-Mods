@@ -26,7 +26,7 @@
 | completed | 2026-07-06 22:35:51 +08:00 | Darktide Mod Loader | base | 已檢查完成，未找到 localization 檔案。 |
 | completed | 2026-07-06 23:13:46 +08:00 | Darktide Mod Framework | dmf | 已完成 zh-tw 校正與缺漏補齊（PR #31）。 |
 | completed | 2026-07-06 23:16:11 +08:00 | What The Localization | WhatTheLocalization | 已檢查完成，所有 en key 均有 zh-tw，無需修改。 |
-| ready | not checked | Scoreboard | scoreboard |  |
+| in_progress | 2026-07-06 23:30:50 +08:00 | Scoreboard | scoreboard | 由 copilot 接手翻譯 zh-tw。 |
 | ready | not checked | Creature Spawner | creature_spawner |  |
 | ready | not checked | Power DI | Power_DI |  |
 | ready | not checked | Skitarius | Skitarius |  |
