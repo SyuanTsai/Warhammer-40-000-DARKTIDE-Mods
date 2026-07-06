@@ -5,10 +5,10 @@
 - Work branch: Codex/Feature/Power_DI/Add-zh-tw
 - Started at: 2026-07-07 +08:00
 - Last updated: 2026-07-07 +08:00
-- Status: in_progress
-- Commit: (pending)
-- Push: pending
-- PR: (pending)
+- Status: completed
+- Commit: b7aa01b
+- Push: done
+- PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/36 (ready)
 
 ## Scope
 
