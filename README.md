@@ -727,6 +727,13 @@
 - MOD 檔案名稱：AutoMark 736 2.2.6 29Sw89d2x
 - 手動維護最後下載日期：2026-07-06
 
+### [KeepSwinging](https://www.nexusmods.com/warhammer40kdarktide/mods/88)
+    自動平A
+- MOD 網站最後更新日期：Last updated 06 July 2026, 2:12AM
+- MOD 版本：1.12
+- MOD 檔案名稱：KeepSwinging 88 1.12 5gEeTgDA6
+- 手動維護最後下載日期：2026-07-06
+
 # 移除的MOD
 
 ### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
