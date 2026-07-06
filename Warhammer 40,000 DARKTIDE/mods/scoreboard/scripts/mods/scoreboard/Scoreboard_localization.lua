@@ -107,6 +107,7 @@ return {
 		-- de = "Maximale Scoreboardgröße",
 		-- fr = "Taille maximale du tableau de bord", -- ?
 		ru = "Позиция таблицы по горизонтали",
+		["zh-tw"] = "戰術概覽計分板水平位置",
 		-- ["zh-cn"] = "最大记分板高度",
 	},
 	scoreboard_tactical_overlay_y = {
@@ -114,6 +115,7 @@ return {
 		-- de = "Maximale Scoreboardgröße",
 		-- fr = "Taille maximale du tableau de bord", -- ?
 		ru = "Позиция таблицы по вертикали",
+		["zh-tw"] = "戰術概覽計分板垂直位置",
 		-- ["zh-cn"] = "最大记分板高度",
 	},
 	scoreboard_panel_height = {
@@ -792,6 +794,7 @@ return {
 		fr = "Dégâts infligés aux Boss",
 		ru = "Урона нанесено Боссу",
 		["zh-cn"] = "Boss 伤害",
+		["zh-tw"] = "首領傷害",
 	},
 	-- Enemies staggered
 	plugin_enemies_staggerd = {
