@@ -17,7 +17,7 @@
 
 | Owner | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | CombatStats | CombatStats | main | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | breed_horde | 2026-07-06 23:20:47 +08:00 | 68ef157 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 | markers_aio/markers_aio_localization.lua -> first key | CombatStats 完成，PR 已建立為 ready for review。 |
+| copilot | in_progress | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | markers_aio | Markers Improved All-in-One | main | Codex/Feature/markers_aio/Add-zh-tw | Darktide Translation Workspace/Log/markers_aio.md | Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua | mod_name | 2026-07-06 23:24:32 +08:00 |  | no |  | markers_aio_localization.lua -> first missing/low-quality zh-tw key | 開始處理 zh-tw 翻譯與校正。 |
 
 ## 工作鎖定
 
@@ -28,6 +28,7 @@
 | dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | tooltip_append_mutator | copilot | released | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | 2026-07-06 22:35:51 +08:00 | 2026-07-06 23:13:46 +08:00 | PR #31 已建立且為 ready | 任務完成，釋放鎖定 |
 | WhatTheLocalization | Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | loc_command_output_visualize_description | copilot | released | Codex/Feature/WhatTheLocalization/Add-zh-tw | Darktide Translation Workspace/Log/WhatTheLocalization.md | 2026-07-06 23:14:55 +08:00 | 2026-07-06 23:16:11 +08:00 | 已完成檢查並釋放 | 所有 en key 均已有 zh-tw，無需修改 |
 | CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | breed_horde | copilot | released | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | 2026-07-06 23:16:11 +08:00 | 2026-07-06 23:20:47 +08:00 | PR #32 已建立且為 ready | 任務完成，釋放鎖定 |
+| markers_aio | Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua | mod_name | copilot | in_progress | Codex/Feature/markers_aio/Add-zh-tw | Darktide Translation Workspace/Log/markers_aio.md | 2026-07-06 23:24:32 +08:00 | 2026-07-06 23:24:32 +08:00 | 完成 markers_aio localization 並更新 PR 狀態 | 由 main 開始鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -191,6 +192,25 @@
 | 2026-07-06 23:20:47 +08:00 | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | crit | completed | Section: Key Progress | 依翻譯表改為「致命一擊」 |
 | 2026-07-06 23:20:47 +08:00 | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | enemy_stats/damage_stats/hit_stats | completed | Section: Key Progress | UI 縮短為統計欄位名稱 |
 | 2026-07-06 23:20:47 +08:00 | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | buff_uptime/breed_horde | completed | Section: Key Progress | 用詞統一與在地化 |
+
+### MOD-LOG-0005 - markers_aio
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | Markers Improved All-in-One |
+| Repo directory | markers_aio |
+| Owner | copilot |
+| Status | in_progress |
+| Base branch | main |
+| Work branch | Codex/Feature/markers_aio/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/markers_aio.md |
+| Started at | 2026-07-06 23:24:32 +08:00 |
+| Last updated | 2026-07-06 23:24:32 +08:00 |
+| Completed at |  |
+| Commit |  |
+| PR URL / number |  |
+| Next position | markers_aio_localization.lua:mod_name |
+| Notes | 開始處理 zh-tw 翻譯與校正。 |
 
 ## 協作交接紀錄
 
