@@ -145,6 +145,23 @@
 18. 若純符號項目已經存在 `["zh-tw"]`，除非它破壞 Lua 結構或 placeholder，否則不要為了「翻譯一致性」修改它。
 19. 續跑或品質檢查時，純符號項目缺少 `["zh-tw"]` 應記錄為 `skipped_symbol_only`，不得視為未完成或 blocked。
 
+## 詞彙表強制比對規則
+
+- 每個 localization key 翻譯前，必須先用 `en` 文字比對 `Referneces\Translation.md`。
+- `Referneces\Translation.md` 中已存在的詞條是強制譯名，不是建議譯名。
+- 比對時必須做基本正規化：
+  - 忽略大小寫差異。
+  - 將彎引號與直引號視為相同。
+  - 將缺少撇號的所有格視為同一詞，例如 `Martyrs Skull` 必須視為 `Martyr's Skull`。
+  - 允許詞條出現在較長 UI 文字中，例如 `Martyrs Skull Colour` 必須命中 `Martyr's Skull`。
+- 若 `en` 命中詞彙表詞條，`zh-tw` 必須包含詞彙表指定譯名；不得用自行翻譯、簡中轉換、音譯或近義詞替代。
+- 範例：
+  - 詞彙表：`Martyr's Skull - 殉道者之顱`
+  - `en = "Martyrs Skull Colour"` 時，`zh-tw` 必須使用 `殉道者之顱顏色`。
+  - 不可使用 `殉道者顱骨顏色`、`殉道者頭骨顏色` 或由 `zh-cn` 轉出的譯法。
+- 若無法確認某個英文片段是否命中詞彙表，先記錄到 `Darktide Translation Workspace/Term Candidates.md` 或 Blocked Items，不得自行送出可能違反詞彙表的翻譯。
+- PR 前必須檢查本輪所有 `zh-tw` 是否符合詞彙表；凡命中詞彙表但 `zh-tw` 未包含指定譯名者，必須修正後才能 commit / push / 建 PR。
+
 ## 工作文件與詞彙候選保存規則
 
 - 使用或建立下列文件：
@@ -287,6 +304,7 @@
 - 純符號、純數字、純 placeholder 或無語意 UI 文字可以沒有 `["zh-tw"]`；不要為這類項目補上與 `en` 相同的值。
 - 確認 placeholder 沒有遺失。
 - 確認同一英文短語在同一目錄內翻譯一致。
+- 確認所有命中 `Referneces\Translation.md` 的詞條都使用指定譯名；不得出現同義改寫、簡中轉換譯名或自行翻譯。
 - 確認沒有不必要的英文殘留。
 - commit 前使用 `git diff` 檢查，一般目錄 PR 只包含：
   - 目標目錄內的 `*localization.lua`
