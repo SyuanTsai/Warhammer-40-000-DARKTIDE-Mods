@@ -4,9 +4,9 @@
 - Base branch: main
 - Work branch: Codex/Feature/markers_aio/Add-zh-tw
 - Started at: 2026-07-06 23:24:32 +08:00
-- Last updated: 2026-07-06 23:29:53 +08:00
+- Last updated: 2026-07-07 00:37:29 +08:00
 - Status: completed
-- Commit: 4f67414
+- Commit: 3ac85f9
 - Push: done
 - PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/33 (ready)
 
@@ -23,7 +23,7 @@
 ## Key Progress
 
 - Current key: unknown_colour
-- Completed keys: 33
+- Completed keys: 39
 - Blocked: none
 
 ## Candidate Terms Draft
@@ -37,6 +37,9 @@
 	- Boost Stimm -> 專注興奮劑
 	- Medic Stimm -> 醫療興奮劑
 	- Heretical Idol -> 異端神像
+	- Martyr's Skull -> 殉道者之顱
+
+- Reprocessed markers_aio at user request; preserved Lua structure and only updated zh-tw entries/wording.
 
 ## Handoff
 
