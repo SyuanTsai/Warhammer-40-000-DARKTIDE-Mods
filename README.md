@@ -759,6 +759,13 @@
 - MOD 檔案名稱：ErrorTracker-824-1-1-1776018123
 - 手動維護最後下載日期：2026-07-06
 
+### [NoBrainer](https://www.nexusmods.com/warhammer40kdarktide/mods/896)
+    最新的小遊戲助手
+- MOD 網站最後更新日期：Last updated 05 July 2026, 3:14AM
+- MOD 版本：2.0.4
+- MOD 檔案名稱：NoBrainer 896 2.0.4 UszQnsvUI
+- 手動維護最後下載日期：2026-07-06
+
 # 移除的MOD
 
 ### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
