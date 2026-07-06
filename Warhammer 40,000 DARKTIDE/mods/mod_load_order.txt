@@ -38,12 +38,13 @@ SprintRelicHeavy
 AutoMark
 
 -- 小遊戲自動化
+NoBrainer
 -- AuspexHelper
-Decode_Helper -- OK 
-DecodeMinigameSolver
-TrainSolver   -- OK 
-Tree_Helper
-ScanHelper    -- OK 
+--Decode_Helper -- OK 
+--DecodeMinigameSolver
+--TrainSolver   -- OK 
+--Tree_Helper
+--ScanHelper    -- OK 
 
 -- 只會設定一次的MOD
 modular_menu_buttons
