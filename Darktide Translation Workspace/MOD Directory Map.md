@@ -56,18 +56,18 @@
 | completed | 2026-07-07 +08:00 | Numeric UI | NumericUI | 修正 peril_icon 詞彙表不一致（PR #43）。 |
 | ready | not checked | Spidey Sense | Spidey Sense |  |
 | not_scheduled | not checked | Enhanced Descriptions | Enhanced_descriptions |  |
-| ready | not checked | Emperor's Guidance | EmperorsGuidance |  |
-| ready | not checked | Remember Server Location | RememberServerLocation |  |
-| ready | not checked | Default To Highest Blessing Tier | DefaultToHighestBlessingTier |  |
-| ready | not checked | Buy Until Rating | buy_until_rating |  |
-| ready | not checked | Character Screen Contracts (aka Better Melk) | BetterMelk |  |
-| ready | not checked | Chat Block | ChatBlock |  |
-| ready | not checked | Inspect from Social | InspectFromSocial |  |
-| ready | not checked | Inspect from Party Finder | InspectFromPartyFinder |  |
-| ready | not checked | Player Outlines | PlayerOutlines |  |
-| ready | not checked | Name It - Rename Weapons and Curios | name_it |  |
-| ready | not checked | LoadoutNames | LoadoutNames |  |
-| ready | not checked | Guarantee Ability Activation | guarantee_ability_activation |  |
+| completed | 2026-07-07 +08:00 | Emperor's Guidance | EmperorsGuidance | 所有靜態 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Remember Server Location | RememberServerLocation | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Default To Highest Blessing Tier | DefaultToHighestBlessingTier | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Buy Until Rating | buy_until_rating | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Character Screen Contracts (aka Better Melk) | BetterMelk | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Chat Block | ChatBlock | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Inspect from Social | InspectFromSocial | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Inspect from Party Finder | InspectFromPartyFinder | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Player Outlines | PlayerOutlines | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Name It - Rename Weapons and Curios | name_it | 所有靜態 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | LoadoutNames | LoadoutNames | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Guarantee Ability Activation | guarantee_ability_activation | 所有 zh-tw 已完整正確，無需修改。 |
 | ready | not checked | Custom HUD | custom_hud |  |
 | ready | not checked | Keep Dodging | keep_dodging |  |
 | ready | not checked | Perspectives Mod | Perspectives |  |
