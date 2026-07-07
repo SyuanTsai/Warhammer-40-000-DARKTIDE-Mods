@@ -2,6 +2,7 @@ return {
 	mod_name = {
 		en = "I Wanna See",
 		["zh-cn"] = "我想看清楚",
+		["zh-tw"] = "我想看清楚",
 	},
 	mod_description = {
 		en = "Remove sources of VFX that block vision",
