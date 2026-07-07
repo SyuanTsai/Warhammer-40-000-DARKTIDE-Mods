@@ -41,13 +41,13 @@
 | completed | 2026-07-07 +08:00 | Decode Helper | Decode_Helper | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Decode Minigame Solver | DecodeMinigameSolver | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Train Solver | TrainSolver | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-07 +08:00 | Tree Helper | Tree_Helper |  |
+| completed | 2026-07-07 +08:00 | Tree Helper | Tree_Helper | 修正 mod_name 結構錯誤，補齊 zh-tw（PR #40）。 |
 | completed | 2026-07-07 +08:00 | Scan Helper | ScanHelper | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-07 +08:00 | Show Crit Chance | show_crit_chance |  |
-| in_progress | 2026-07-07 +08:00 | Debuff Indicator | debuff_indicator |  |
+| completed | 2026-07-07 +08:00 | Show Crit Chance | show_crit_chance | 修正暴擊→致命一擊詞彙表不一致（PR #42）。 |
+| completed | 2026-07-07 +08:00 | Debuff Indicator | debuff_indicator | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | completed | 2026-07-07 +08:00 | Super Impact | SuperImpact | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Stimms Pickup Icon | StimmsPickupIcon | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-07 +08:00 | Killfeed Improvements | KillfeedImprovements |  |
+| completed | 2026-07-07 +08:00 | Killfeed Improvements | KillfeedImprovements | 修正 Psykhanium 詞彙表不一致（PR #41）。 |
 | ready | not checked | Gas Outline | GasOutline |  |
 | ready | not checked | Loadout Monitor | LoadoutMonitor |  |
 | ready | not checked | Quick Look Card | QuickLookCard |  |
