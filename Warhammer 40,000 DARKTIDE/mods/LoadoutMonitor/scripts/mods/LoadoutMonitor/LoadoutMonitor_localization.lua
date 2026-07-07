@@ -873,17 +873,17 @@ local locr = {
 	def_ogryn_melee_damage_coherency_improved = {
 		en = "B",
         ["zh-cn"] = "伤",
-		["zh-tw"] = "傷",
+		["zh-tw"] = "碎",
 	},
 	def_ogryn_toughness_regen_aura = {
 		en = "S",
         ["zh-cn"] = "韧",
-		["zh-tw"] = "韌",
+		["zh-tw"] = "跟",
 	},
 	def_ogryn_damage_vs_suppressed_coherency = {
 		en = "C",
         ["zh-cn"] = "压",
-		["zh-tw"] = "壓",
+		["zh-tw"] = "優",
 	},
 	
 	def_ogryn_passive_heavy_hitter = {
@@ -894,12 +894,12 @@ local locr = {
 	def_ogryn_carapace_armor = {
 		en = "FNP",
         ["zh-cn"] = "痛",
-		["zh-tw"] = "痛",
+		["zh-tw"] = "麻",
 	},
 	def_ogryn_leadbelcher_no_ammo_chance = {
 		en = "BLO",
         ["zh-cn"] = "覆",
-		["zh-tw"] = "覆",
+		["zh-tw"] = "爆",
 	},
 	def_adamant_stance = {
 		en = "CS",
@@ -909,7 +909,7 @@ local locr = {
 	def_adamant_area_buff_drone_improved = {
 		en = "NA",
         ["zh-cn"] = "谕",
-		["zh-tw"] = "諭",
+		["zh-tw"] = "天",
 	},
 	def_adamant_charge = {
 		en = "BL",
@@ -919,7 +919,7 @@ local locr = {
 	def_adamant_whistle = {
 		en = "RD",
         ["zh-cn"] = "引",
-		["zh-tw"] = "引",
+		["zh-tw"] = "爆",
 	},
 	def_adamant_shock_mine = {
 		en = "SM",
@@ -934,17 +934,17 @@ local locr = {
 	def_adamant_companion_coherency = {
 		en = "PoS",
         ["zh-cn"] = "协",
-		["zh-tw"] = "協",
+		["zh-tw"] = "隊",
 	},
 	def_adamant_reload_speed_aura = {
 		en = "RE",
         ["zh-cn"] = "效",
-		["zh-tw"] = "效",
+		["zh-tw"] = "雷",
 	},
 	def_adamant_damage_vs_staggered_aura = {
 		en = "BD",
         ["zh-cn"] = "压",
-		["zh-tw"] = "壓",
+		["zh-tw"] = "鎮",
 	},
 	def_adamant_execution_order = {
 		en = "EO",
@@ -959,12 +959,12 @@ local locr = {
 	def_adamant_forceful = {
 		en = "F",
         ["zh-cn"] = "力",
-		["zh-tw"] = "力",
+		["zh-tw"] = "堅",
 	},
 	def_adamant_companion_focus_elite = {
 		en = "UB",
         ["zh-cn"] = "野",
-		["zh-tw"] = "野",
+		["zh-tw"] = "猛",
 	},
 	def_adamant_disable_companion = {
 		en = "LW",
@@ -974,7 +974,7 @@ local locr = {
 	def_adamant_companion_focus_ranged = {
 		en = "GGM",
 		["zh-cn"] = "追",
-		["zh-tw"] = "追",
+		["zh-tw"] = "前",
 	},
 	
 	def_broker_ability_focus_improved = {
@@ -1044,7 +1044,7 @@ local locr = {
 	user_custom_feats_abbreviation_description = {
 		en = "1:Ability   2:Blitz   3:Aura   4:Keystone",
 		["zh-cn"] = "1：技能   2：闪击   3：光环   4：基石",		
-		["zh-tw"] = "1：戰鬥技能   2：閃擊   3：光環   4：基石",
+		["zh-tw"] = "1：戰鬥技能   2：閃擊   3：光環   4：鑰石",
 	},
 }
 for i = 1,4 do
