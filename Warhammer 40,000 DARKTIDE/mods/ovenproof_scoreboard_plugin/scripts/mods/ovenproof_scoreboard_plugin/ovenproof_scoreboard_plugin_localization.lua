@@ -546,7 +546,7 @@ local localization = {
         en = "Weakspot and critical rates",
         ru = "Уязвимые места и критические показатели",
         ["zh-cn"] = "弱点和暴击率",
-        ["zh-tw"] = "弱點與爆擊率",
+        ["zh-tw"] = "弱點與致命一擊率",
         ["pt-br"] = "Taxas de Pontos Fracos e Críticos",
     },
     offense_tier_0 = {
@@ -930,14 +930,14 @@ local localization = {
         en = {left = "Critical Rate", right = "[ Melee | Ranged ]",},
         ru = {left = "Крит. удары", right = "[Ближний/Дальний]",},
         ["zh-cn"] = {left = "暴击率", right = "[ 近战 | 远程 ]",},
-        ["zh-tw"] = { left = "爆擊率", right = "[ 近戰 | 遠程 ]",},
+        ["zh-tw"] = { left = "致命一擊率", right = "[ 近戰 | 遠程 ]",},
         ["pt-br"] = {left = "Taxa Crítica", right = "[Corpo a Corpo | Distância]",},
     },
     row_total_critical_rates_with_blitz = {
         en = {left = "Critical Rate", right = "[ Melee | Ranged | Blitz ]",},
         -- ru = {left = "Крит. удары", right = "[Ближний/Дальний/]",},
         -- ["zh-cn"] = {left = "暴击率", right = "[ 近战 | 远程 | ]",},
-        ["zh-tw"] = { left = "爆擊率", right = "[ 近戰  |  遠程  |  閃擊 ]",},
+        ["zh-tw"] = { left = "致命一擊率", right = "[ 近戰  |  遠程  |  閃擊 ]",},
         -- ["pt-br"] = {left = "Taxa Crítica", right = "[Corpo a Corpo | Distância | ]",},
     },
     row_melee_critical_rate = {
@@ -967,7 +967,7 @@ local localization = {
         en = {left = "Critical Rate", right = "[ Bleeding | Burning ]",},
         ru = {left = "Крит. удары", right = "[Кровотечение/Горение]",},
         ["zh-cn"] = {left = "暴击率", right = "[ 流血 | 燃烧 ]",},
-        ["zh-tw"] = { left = "爆擊率", right = "[ 流血 | 燃燒 ]",},
+        ["zh-tw"] = { left = "致命一擊率", right = "[ 流血 | 燃燒 ]",},
         ["pt-br"] = {left = "Taxa Crítica", right = "[Sangramento | Queima]",},
     },
     row_bleeding_critical_rate = {
@@ -988,7 +988,7 @@ local localization = {
         en = {left = "Critical Rate", right = "[ Warpfire | Environment ]",},
         ru = {left = "Крит. удары", right = "[Варпогонь/Окружение]",},
         ["zh-cn"] = {left = "暴击率", right = "[ 灵魂之火 | 环境 ]",},
-        ["zh-tw"] = { left = "爆擊率", right = "[ 靈魂之火 | 環境 ]",},
+        ["zh-tw"] = { left = "致命一擊率", right = "[ 靈魂之火 | 環境 ]",},
         ["pt-br"] = {left = "Taxa Crítica", right = "[Warpfire | Ambiente]",},
     },
     row_warpfire_critical_rate = {
