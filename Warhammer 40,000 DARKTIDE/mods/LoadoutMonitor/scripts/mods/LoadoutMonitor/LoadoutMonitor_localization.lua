@@ -974,6 +974,7 @@ local locr = {
 	def_adamant_companion_focus_ranged = {
 		en = "GGM",
 		["zh-cn"] = "追",
+		["zh-tw"] = "追",
 	},
 	
 	def_broker_ability_focus_improved = {
@@ -1043,6 +1044,7 @@ local locr = {
 	user_custom_feats_abbreviation_description = {
 		en = "1:Ability   2:Blitz   3:Aura   4:Keystone",
 		["zh-cn"] = "1：技能   2：闪击   3：光环   4：基石",		
+		["zh-tw"] = "1：戰鬥技能   2：閃擊   3：光環   4：基石",
 	},
 }
 for i = 1,4 do
