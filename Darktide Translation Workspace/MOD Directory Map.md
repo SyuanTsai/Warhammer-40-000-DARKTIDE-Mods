@@ -37,17 +37,17 @@
 | completed | 2026-07-07 +08:00 | Who Are You - Display account names | who_are_you | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | MultiBind | MultiBind | 補齊 wield_1 缺失 zh-tw（PR #39）。 |
 | completed | 2026-07-07 +08:00 | More Characters and Loadouts | more_characters_and_loadouts | 所有 zh-tw 已完整正確，無需修改。 |
-| ready | not checked | Psych Ward | psych_ward |  |
-| ready | not checked | Decode Helper | Decode_Helper |  |
-| ready | not checked | Decode Minigame Solver | DecodeMinigameSolver |  |
-| ready | not checked | Train Solver | TrainSolver |  |
-| ready | not checked | Tree Helper | Tree_Helper |  |
-| ready | not checked | Scan Helper | ScanHelper |  |
-| ready | not checked | Show Crit Chance | show_crit_chance |  |
-| ready | not checked | Debuff Indicator | debuff_indicator |  |
-| ready | not checked | Super Impact | SuperImpact |  |
-| ready | not checked | Stimms Pickup Icon | StimmsPickupIcon |  |
-| ready | not checked | Killfeed Improvements | KillfeedImprovements |  |
+| completed | 2026-07-07 +08:00 | Psych Ward | psych_ward | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Decode Helper | Decode_Helper | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Decode Minigame Solver | DecodeMinigameSolver | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Train Solver | TrainSolver | 所有 zh-tw 已完整正確，無需修改。 |
+| in_progress | 2026-07-07 +08:00 | Tree Helper | Tree_Helper |  |
+| completed | 2026-07-07 +08:00 | Scan Helper | ScanHelper | 所有 zh-tw 已完整正確，無需修改。 |
+| in_progress | 2026-07-07 +08:00 | Show Crit Chance | show_crit_chance |  |
+| in_progress | 2026-07-07 +08:00 | Debuff Indicator | debuff_indicator |  |
+| completed | 2026-07-07 +08:00 | Super Impact | SuperImpact | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Stimms Pickup Icon | StimmsPickupIcon | 所有 zh-tw 已完整正確，無需修改。 |
+| in_progress | 2026-07-07 +08:00 | Killfeed Improvements | KillfeedImprovements |  |
 | ready | not checked | Gas Outline | GasOutline |  |
 | ready | not checked | Loadout Monitor | LoadoutMonitor |  |
 | ready | not checked | Quick Look Card | QuickLookCard |  |
