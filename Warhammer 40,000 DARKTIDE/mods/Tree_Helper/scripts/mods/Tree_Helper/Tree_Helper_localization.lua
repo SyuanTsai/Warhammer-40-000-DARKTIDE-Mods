@@ -1,7 +1,7 @@
 return {
 	mod_name = {
 		en = "Tree Helper",
-		en = "毒樹助手",
+		["zh-tw"] = "樹木助手",
 	},
 	mod_description = {
 		en = "Show upcoming target symbols when decoding Tree Scans",
