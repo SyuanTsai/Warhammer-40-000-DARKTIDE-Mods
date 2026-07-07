@@ -33,7 +33,7 @@ local localizations = {
     hud_element_tooltip = {
         en = "When enabled, a HUD icon will be displayed indicating mod and sequence status.",
         ["zh-cn"] = "启用后，将显示一个HUD图标，指示模块和序列状态。",
-        ["zh-tw"] = "啟用後，將顯示一個HUD圖標，訓示模塊和序列狀態。",
+        ["zh-tw"] = "啟用後，將顯示一個HUD圖標，用於指示模組和序列狀態。",
     },
     hud_element_type = {
         en = "Sequence Indicator Style",
@@ -82,7 +82,7 @@ local localizations = {
     mod_settings = {
         en = "Mod Settings", -- [ ] Localize
         ["zh-cn"] = "MOD设置",
-        ["zh-tw"] = "MOD指設置",
+        ["zh-tw"] = "模組設定",
 
     },
     mod_enable_held = {
@@ -123,7 +123,7 @@ local localizations = {
     },
     halt_on_interrupt_types = {
         en = "Manual Interruptions",
-        ["zh-tw"] = "中断应急终止 ",
+        ["zh-tw"] = "手動中斷類型",
         ["zh-cn"] = "手动中断",
     },
     halt_on_interrupt_types_tooltip = {
@@ -145,11 +145,12 @@ local localizations = {
     },
     interruption_action_both = {
         en = "Attacking / " .. Localize("loc_block"), -- [ ] Localize
-        ["zh-tw"] = "攻擊 / 格擋中",
+        ["zh-tw"] = "攻擊 / " .. Localize("loc_block"),
         ["zh-cn"] = "攻击 / 格挡中",
     },
     interruption_all = {
-        en = Localize("loc_ingame_sprint") .. " / Attacking / Blocking", -- [ ] Localize
+        en = Localize("loc_ingame_sprint") .. " / Attacking / " .. Localize("loc_block"), -- [ ] Localize
+        ["zh-tw"] = Localize("loc_ingame_sprint") .. " / 攻擊 / " .. Localize("loc_block"),
     },
     -- Keybinds
     maintain_bind = {
@@ -247,7 +248,7 @@ local localizations = {
     },
     halt = {
         en = "Halt Sequence",
-        ["zh-tw"] = "暂停序列",
+        ["zh-tw"] = "暫停序列",
         ["zh-cn"] = "中断序列",
     },
     melee_weapon_selection = {
@@ -303,18 +304,18 @@ local localizations = {
     always_special = {
         en = "Always Activate Special Actions",
         ["zh-cn"] = "始终激活武器特殊技能",
-        ["zh-tw"] = "始终激活武器特殊技能",
+        ["zh-tw"] = "始終啟動武器特殊攻擊",
     },
     always_special_tooltip = {
         en = "When enabled, the mod will always execute Special actions, regardless of weapon state.",
         ["zh-cn"] = "启用后，无论武器状态如何，mod都将始终执行特殊动作",
-        ["zh-tw"] = "啟用後，無論武器狀態如何，mod都將始終執行特殊動作",
+        ["zh-tw"] = "啟用後，無論武器狀態如何，mod都將啟動特殊攻擊",
     },
     heavy_buff_special_tooltip = {
         en =
         "When enabled, the Heavy Buff Modifier setting will only take effect while the current weapon's Special Action is active.",
         ["zh-cn"] = "启用后，「蓄力buff修正器」设置将仅在当前武器的特殊动作激活期间生效",
-        ["zh-tw"] = "啟用後，「蓄力buff修正器」設定將僅在當前武器的特殊動作啟動期間生效",
+        ["zh-tw"] = "啟用後，「蓄力buff修正器」設定將僅在當前武器的特殊攻擊啟動期間生效",
     },
     global_melee = {
         en = "GLOBAL", -- [ ] Localize
@@ -324,13 +325,13 @@ local localizations = {
     force_heavy_when_special = {
         en = "Force Heavies When Special Active",
         ["zh-cn"] = "全局近战",
-        ["zh-tw"] = "全局近戰",
+        ["zh-tw"] = "特殊攻擊啟動時強制重擊",
     },
     force_heavy_when_special_tooltip = {
         en =
         "When enabled, Heavy attacks will be executed when the weapon's Special action is active, regardless of the standard sequence.",
         ["zh-cn"] = "启用后，无论标准顺序如何，当武器的特殊动作处于活动状态时，都将执行重型攻击",
-        ["zh-tw"] = "啟用後，無論標準順序如何，當武器的特殊動作處於活動狀態時，都將執行重型攻擊",
+        ["zh-tw"] = "啟用後，無論標準順序如何，當武器的特殊攻擊處於啟動狀態時，都將執行重型攻擊",
     },
     hold_heavy_when_sprinting = {
         en = "Hold Heavies During Sprint/Slide",
@@ -355,7 +356,7 @@ local localizations = {
     },
     no_repeat = {
         en = "Halt Sequence on Completion",
-        ["zh-tw"] = "完成后停止",
+        ["zh-tw"] = "完成後停止",
         ["zh-cn"] = "完成后停止",
     },
     sequence_step_one = {
