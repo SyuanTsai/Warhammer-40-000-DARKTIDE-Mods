@@ -29,7 +29,7 @@ local localizations = {
 	},
 	enable_in_psykanium = {
 		en = "Enable in Psykanium",
-		["zh-tw"] = "在心能靶場中啟用",
+		["zh-tw"] = "在靈能室中啟用",
 	},
 	alignment = {
 		en = "Alignment",
