@@ -1,4 +1,4 @@
--- Show Crit Chance mod by mroużon. Ver. 1.1
+﻿-- Show Crit Chance mod by mroużon. Ver. 1.1
 -- Thanks to Zombine, Redbeardt and others for their input into the community. Their work helped me a lot in the process of creating this mod.
 
 -- Russian translation by xsSplater
@@ -10,14 +10,14 @@ return {
 		ru = "Индикатор Шанса Критического Удара",
 		pl = "Wskaźnik Szansy Na Trafienie Krytyczne",
 		["zh-cn"] = "显示暴击率",
-        ["zh-tw"] = "顯示暴擊率",
+        ["zh-tw"] = "顯示致命一擊機率",
 	},
 	mod_description = {
 		en = "Adds an in-game widget showing current critical strike chance.\n\nAuthor: mroużon",
 		ru = "Добавляет внутриигровой виджет, показывающий текущий шанс критического удара.\n\nАвтор: mroużon",
 		pl = "Dodaje widżet wyświetlający aktualną szansę na trafienie krytyczne.\n\nAutor: mroużon",
 		["zh-cn"] = "添加一个游戏内组件，显示当前的暴击率。\n\n作者：mroużon",
-		["zh-tw"] = "添加一個遊戲內小工具，顯示當前的暴擊率。\n\n作者：mroużon",
+		["zh-tw"] = "添加一個遂戲內小工具，顯示當前的致命一擊機率。\n\n作者：mroużon",
 	},
 	crit_chance_indicator_settings_text = {
 		en = "Indicator Text",
@@ -102,7 +102,7 @@ return {
 		ru = "Представлять вероятность критического удара как число с плавающей запятой, а не целое число.",
 		pl = "Wyświetl szansę na trafienie krytyczne jako liczbę zmiennoprzecinkową, nie całkowitą.",
 		["zh-cn"] = "以浮点数而非整数形式表示暴击率。",
-        ["zh-tw"] = "以浮點數而非整數形式顯示暴擊率。",
+        ["zh-tw"] = "以浮點數而非整數形式顯示致命一擊機率。",
 	},
 	only_in_training_grounds = {
 		en = "Only In Psykhanium",
@@ -123,7 +123,7 @@ return {
 		ru = "Значок Шанса Критического Удара",
 		pl = "Ikona Trafienia Krytycznego",
 		["zh-cn"] = "暴击率图标",
-        ["zh-tw"] = "暴擊率圖示",
+        ["zh-tw"] = "致命一擊機率圖示",
 	},
 	crit_chance_indicator_icon_desc = {
 		en = "Icon shown to the left of the in-game widget.",
@@ -173,7 +173,7 @@ return {
 		ru = "Прозрачность индикатора шанса критического удара на экране.",
 		pl = "Przezroczystość wskaźnika szansy na trafienie krytyczne na ekranie.",
 		["zh-cn"] = "屏幕上暴击率指示器的不透明度。",
-        ["zh-tw"] = "螢幕上暴擊率指示器的不透明度。",
+        ["zh-tw"] = "螢幕上致命一擊機率指示器的不透明度。",
 	},
 	crit_chance_indicator_R = {
 		en = "Red",
@@ -187,7 +187,7 @@ return {
 		ru = "Интенсивность Красного цвета индикатора вероятности критического удара на экране.",
 		pl = "Intensywność koloru czerwonego we wskaźniku szansy na trafienie krytyczne na ekranie.",
 		["zh-cn"] = "屏幕上暴击率指示器的红色强度。",
-		["zh-tw"] = "螢幕上暴擊率指示器的紅色強度。",
+		["zh-tw"] = "螢幕上致命一擊機率指示器的紅色強度。",
 	},
 	crit_chance_indicator_G = {
 		en = "Green",
@@ -201,7 +201,7 @@ return {
 		ru = "Интенсивность Зелёного цвета индикатора вероятности критического удара на экране.",
 		pl = "Intensywność koloru zielonego we wskaźniku szansy na trafienie krytyczne na ekranie.",
 		["zh-cn"] = "屏幕上暴击率指示器的绿色强度。",
-		["zh-tw"] = "螢幕上暴擊率指示器的綠色強度。",
+		["zh-tw"] = "螢幕上致命一擊機率指示器的綠色強度。",
 	},
 	crit_chance_indicator_B = {
 		en = "Blue",
@@ -215,7 +215,7 @@ return {
 		ru = "Интенсивность Синего цвета индикатора вероятности критического удара на экране.",
 		pl = "Intensywność koloru niebieskiego we wskaźniku szansy na trafienie krytyczne na ekranie.",
 		["zh-cn"] = "屏幕上暴击率指示器的蓝色强度。",
-		["zh-tw"] = "螢幕上暴擊率指示器的藍色強度。",
+		["zh-tw"] = "螢幕上致命一擊機率指示器的藍色強度。",
 	},
 	crit_chance_indicator_settings_position = {
 		en = "Indicator Position",
