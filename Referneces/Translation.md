@@ -76,6 +76,7 @@
 
 - Note - 備註
 - Talents - 天賦
+- Keystone - 鑰石
 - Weapon Perks - 武器專長
 - Auspex - 占卜儀
 - Aura - 光環
