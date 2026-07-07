@@ -1,6 +1,6 @@
 # Darktide zh-tw Localization Schedule
 
-本文件是 Codex / Copilot 處理 Warhammer 40,000: Darktide MOD `zh-tw` 翻譯的執行入口。它只保留可操作規則；細部進度、歷史紀錄與詞彙候選放在同目錄工作文件中。
+本文件是 Codex / GitHub Copilot 處理 Warhammer 40,000: Darktide MOD `zh-tw` 翻譯的執行入口。它只保留可操作規則；細部進度、歷史紀錄與詞彙候選放在同目錄工作文件中。
 
 ## 0. 執行原則
 
@@ -55,7 +55,7 @@
 3. 掃描 `Warhammer 40,000 DARKTIDE/mods`，比對 `README.md` 與 `MOD Directory Map.md`。
 4. 若發現新增、移除或狀態不一致的 MOD，先在 `main` 更新 `MOD Directory Map.md`。
 5. 選擇下一個 `ready` 或 `original_mod_updated`，且未被其他代理鎖定的 MOD。
-6. 在 `main` 更新 `Workspace Status.md` 與 `Log/<Repo directory>.md`，記錄 owner、工作分支、開始位置與時間，commit message 用 `Update AI work documents`。
+6. 在 `main` 更新 `Workspace Status.md` 與 `Log/<Repo directory>.md`，記錄 AI handler、工作分支、開始位置與時間，commit message 用 `Update AI work documents`。
 7. 建立或切到 `Codex/Feature/<Repo directory>/Add-zh-tw`。
 8. 只處理該 MOD 目錄內的 `*localization.lua`。
 9. 處理每個 localization key 前，先檢查該 key 的整個 table 是否已存在 `["zh-tw"]`。
@@ -68,10 +68,15 @@
 
 每完成 10 個 MOD 後，回到 `main` 重新掃描 MOD 目錄與 `README.md`，並更新 `MOD Directory Map.md` 的比對時間與狀態。
 
-## 4. 協作與鎖定
+## 4. AI 處理者、協作與鎖定
 
-- `owner` 只使用 `codex` 或 `copilot`。
-- 開始處理 MOD 前，必須在 `Workspace Status.md` 的工作鎖定區記錄 MOD、檔案、key、owner、work branch、branch log 與時間。
+- 所有工作紀錄都必須記錄 `AI handler`，用來表示該項目由哪一個 AI 實際處理。
+- `AI handler` 只使用下列固定值：
+  - `codex`
+  - `github-copilot`
+- 既有已完成項目若原本標為 `copilot`，統一視為 `github-copilot`。
+- 開始處理 MOD 前，必須在 `Workspace Status.md` 的工作鎖定區記錄 MOD、檔案、key、AI handler、work branch、branch log 與時間。
+- `Workspace Status.md` 的目前狀態、工作鎖定、逐 MOD 記錄、PR Records、Completed Files 與 Blocked Items 都必須保留 AI handler 欄位。
 - 同一時間不得有兩個代理修改同一個 `*localization.lua`。
 - 若目標 MOD 或檔案已被另一代理標記 `in_progress`，跳過；只有 `stale`、`blocked` 或明確交接時可接手。
 - 完成、停止或交接前，必須在 `Workspace Status.md` 和對應 `Log/<Repo directory>.md` 記錄下一個可續跑位置。
@@ -138,7 +143,7 @@ Blocked Items 至少包含：
 | 欄位 | 內容 |
 | --- | --- |
 | Time | 發生時間 |
-| Owner | `codex` 或 `copilot` |
+| AI handler | `codex` 或 `github-copilot` |
 | MOD | 目前 MOD |
 | File | 目前檔案 |
 | Key | 目前 localization key |
@@ -157,7 +162,7 @@ Blocked Items 至少包含：
 - PR head：`Codex/Feature/<Repo directory>/Add-zh-tw`
 - PR 必須 ready for review。
 - PR 不得包含 `Darktide Translation Workspace/`。
-- PR description 包含：base、head、處理者、完成檔案、完成 key 數、blocked 項目、是否更新詞彙候選。
+- PR description 包含：base、head、AI handler、完成檔案、完成 key 數、blocked 項目、是否更新詞彙候選。
 - 若 PR 已存在，更新同一個 PR，不重複建立。
 
 ## 10. 結束回報
@@ -165,6 +170,7 @@ Blocked Items 至少包含：
 每輪結束回報：
 
 - 完成的 MOD
+- AI handler
 - 完成的檔案
 - 完成或校正的 key 數
 - commit

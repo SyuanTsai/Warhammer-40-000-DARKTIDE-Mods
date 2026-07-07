@@ -1,6 +1,6 @@
 # Power_DI Branch Log
 
-- Owner: copilot
+- AI handler: github-copilot
 - Base branch: main
 - Work branch: Codex/Feature/Power_DI/Add-zh-tw
 - Started at: 2026-07-07 +08:00

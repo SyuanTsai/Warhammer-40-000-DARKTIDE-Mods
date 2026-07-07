@@ -1,6 +1,6 @@
 # base Branch Log
 
-- Owner: copilot
+- AI handler: github-copilot
 - Base branch: main
 - Work branch: Codex/Feature/base/Add-zh-tw
 - Started at: 2026-07-06 22:00:39 +08:00

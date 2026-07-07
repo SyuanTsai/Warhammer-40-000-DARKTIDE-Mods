@@ -1,6 +1,6 @@
 # WhatTheLocalization Branch Log
 
-- Owner: copilot
+- AI handler: github-copilot
 - Base branch: main
 - Work branch: Codex/Feature/WhatTheLocalization/Add-zh-tw
 - Started at: 2026-07-06 23:14:55 +08:00

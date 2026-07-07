@@ -1,6 +1,6 @@
 # CombatStats Branch Log
 
-- Owner: copilot
+- AI handler: github-copilot
 - Base branch: main
 - Work branch: Codex/Feature/CombatStats/Add-zh-tw
 - Started at: 2026-07-06 23:16:11 +08:00

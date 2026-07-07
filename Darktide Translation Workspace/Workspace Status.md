@@ -1,6 +1,6 @@
 # Darktide Translation Workspace
 
-此文件是 Codex / Copilot 共同使用的工作狀態入口。每輪開始前必須先從 `main` 讀取此檔與同目錄下的拆分文件。工作文件只保存在 `main`；功能工作分支不得把 `Darktide Translation Workspace/` 內任何文件作為 PR 最終變更。
+此文件是 Codex / GitHub Copilot 共同使用的工作狀態入口。每輪開始前必須先從 `main` 讀取此檔與同目錄下的拆分文件。工作文件只保存在 `main`；功能工作分支不得把 `Darktide Translation Workspace/` 內任何文件作為 PR 最終變更。
 
 ## 文件索引
 
@@ -15,21 +15,21 @@
 
 此表可同時記錄多個代理。若同一 MOD 或同一檔案已有 `in_progress` 鎖定，其他代理不得接手，除非該列標記為 `stale`、`blocked`，或「協作交接紀錄」明確交接。
 
-| Owner | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
+| AI handler | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | Skitarius | Skitarius | main | Codex/Feature/Skitarius/Add-zh-tw | Darktide Translation Workspace/Log/Skitarius.md | Skitarius_localization.lua | all keys | 2026-07-07 +08:00 | 29c2960 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/37 | 完成 | 修正簡體字/錯誤撰考問題，釋放鎖定 |
+| github-copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | Skitarius | Skitarius | main | Codex/Feature/Skitarius/Add-zh-tw | Darktide Translation Workspace/Log/Skitarius.md | Skitarius_localization.lua | all keys | 2026-07-07 +08:00 | 29c2960 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/37 | 完成 | 修正簡體字/錯誤撰考問題，釋放鎖定 |
 
 ## 工作鎖定
 
 開始處理 MOD 前，先在 `main` 新增或更新對應鎖定列並 commit。完成、交接、停止或標記 stale / blocked 時，必須更新此表。
 
-| MOD | File | Key | Owner | Status | Work branch | Branch log | Locked at | Last updated | Release condition | Notes |
+| MOD | File | Key | AI handler | Status | Work branch | Branch log | Locked at | Last updated | Release condition | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | tooltip_append_mutator | copilot | released | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | 2026-07-06 22:35:51 +08:00 | 2026-07-06 23:13:46 +08:00 | PR #31 已建立且為 ready | 任務完成，釋放鎖定 |
-| WhatTheLocalization | Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | loc_command_output_visualize_description | copilot | released | Codex/Feature/WhatTheLocalization/Add-zh-tw | Darktide Translation Workspace/Log/WhatTheLocalization.md | 2026-07-06 23:14:55 +08:00 | 2026-07-06 23:16:11 +08:00 | 已完成檢查並釋放 | 所有 en key 均已有 zh-tw，無需修改 |
-| CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | breed_horde | copilot | released | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | 2026-07-06 23:16:11 +08:00 | 2026-07-06 23:20:47 +08:00 | PR #32 已建立且為 ready | 任務完成，釋放鎖定 |
-| Skitarius | Warhammer 40,000 DARKTIDE/mods/Skitarius/scripts/mods/Skitarius/Skitarius_localization.lua | mod_settings | copilot | released | Codex/Feature/Skitarius/Add-zh-tw | Darktide Translation Workspace/Log/Skitarius.md | 2026-07-07 +08:00 | 2026-07-07 +08:00 | 完成 | 釋放鎖定 |
-| scoreboard | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | row_boss_damage_dealt | copilot | released | Codex/Feature/scoreboard/Add-zh-tw | Darktide Translation Workspace/Log/scoreboard.md | 2026-07-06 23:30:50 +08:00 | 2026-07-06 23:32:20 +08:00 | PR #34 已建立且為 ready | 任務完成，釋放鎖定 |
+| dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | tooltip_append_mutator | github-copilot | released | Codex/Feature/dmf/Add-zh-tw | Darktide Translation Workspace/Log/dmf.md | 2026-07-06 22:35:51 +08:00 | 2026-07-06 23:13:46 +08:00 | PR #31 已建立且為 ready | 任務完成，釋放鎖定 |
+| WhatTheLocalization | Warhammer 40,000 DARKTIDE/mods/WhatTheLocalization/scripts/mods/WhatTheLocalization/WhatTheLocalization_localization.lua | loc_command_output_visualize_description | github-copilot | released | Codex/Feature/WhatTheLocalization/Add-zh-tw | Darktide Translation Workspace/Log/WhatTheLocalization.md | 2026-07-06 23:14:55 +08:00 | 2026-07-06 23:16:11 +08:00 | 已完成檢查並釋放 | 所有 en key 均已有 zh-tw，無需修改 |
+| CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | breed_horde | github-copilot | released | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | 2026-07-06 23:16:11 +08:00 | 2026-07-06 23:20:47 +08:00 | PR #32 已建立且為 ready | 任務完成，釋放鎖定 |
+| Skitarius | Warhammer 40,000 DARKTIDE/mods/Skitarius/scripts/mods/Skitarius/Skitarius_localization.lua | mod_settings | github-copilot | released | Codex/Feature/Skitarius/Add-zh-tw | Darktide Translation Workspace/Log/Skitarius.md | 2026-07-07 +08:00 | 2026-07-07 +08:00 | 完成 | 釋放鎖定 |
+| scoreboard | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | row_boss_damage_dealt | github-copilot | released | Codex/Feature/scoreboard/Add-zh-tw | Darktide Translation Workspace/Log/scoreboard.md | 2026-07-06 23:30:50 +08:00 | 2026-07-06 23:32:20 +08:00 | PR #34 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -41,7 +41,7 @@
 | --- | --- |
 | README MOD |  |
 | Repo directory |  |
-| Owner |  |
+| AI handler |  |
 | Status | not_started |
 | Base branch | main |
 | Work branch | Codex/Feature/<Repo directory>/Add-zh-tw |
@@ -70,7 +70,7 @@
 | --- | --- |
 | README MOD | Darktide Mod Loader |
 | Repo directory | base |
-| Owner | copilot |
+| AI handler | github-copilot |
 | Status | completed |
 | Base branch | main |
 | Work branch | Codex/Feature/base/Add-zh-tw |
@@ -101,7 +101,7 @@
 | --- | --- |
 | README MOD | Darktide Mod Framework |
 | Repo directory | dmf |
-| Owner | copilot |
+| AI handler | github-copilot |
 | Status | completed |
 | Base branch | main |
 | Work branch | Codex/Feature/dmf/Add-zh-tw |
@@ -135,7 +135,7 @@
 | --- | --- |
 | README MOD | What The Localization |
 | Repo directory | WhatTheLocalization |
-| Owner | copilot |
+| AI handler | github-copilot |
 | Status | completed |
 | Base branch | main |
 | Work branch | Codex/Feature/WhatTheLocalization/Add-zh-tw |
@@ -166,7 +166,7 @@
 | --- | --- |
 | README MOD | CombatStats |
 | Repo directory | CombatStats |
-| Owner | copilot |
+| AI handler | github-copilot |
 | Status | completed |
 | Base branch | main |
 | Work branch | Codex/Feature/CombatStats/Add-zh-tw |
@@ -200,7 +200,7 @@
 | --- | --- |
 | README MOD | Markers Improved All-in-One |
 | Repo directory | markers_aio |
-| Owner | copilot |
+| AI handler | github-copilot |
 | Status | completed |
 | Base branch | main |
 | Work branch | Codex/Feature/markers_aio/Add-zh-tw |
@@ -232,7 +232,7 @@
 | --- | --- |
 | README MOD | Scoreboard |
 | Repo directory | scoreboard |
-| Owner | copilot |
+| AI handler | github-copilot |
 | Status | completed |
 | Base branch | main |
 | Work branch | Codex/Feature/scoreboard/Add-zh-tw |
@@ -268,13 +268,13 @@
 
 表格放摘要；完整細節放在下方 `BLOCKER-####` 段落，並同步到對應 `Darktide Translation Workspace/Log/<Repo directory>.md`。
 
-| Blocker ID | Time | Owner | MOD | File | Key | Base branch | Work branch | English source | Current zh-tw | Reason | Tried | Decision needed | Suggested options | Safe next position | Status |
+| Blocker ID | Time | AI handler | MOD | File | Key | Base branch | Work branch | English source | Current zh-tw | Reason | Tried | Decision needed | Suggested options | Safe next position | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 
 ### BLOCKER-0000 - <MOD>/<File>/<Key>
 
 - Time:
-- Owner:
+- AI handler:
 - Directory:
 - Base branch: main
 - Work branch:
@@ -292,18 +292,18 @@
 
 ## PR Records
 
-| MOD | Base branch | Work branch | Commit | Pushed | PR URL / number | Ready for review | Workspace files excluded | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| dmf | main | Codex/Feature/dmf/Add-zh-tw | 3af7b7c | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/31 | yes | yes | 僅包含 dmf/localization/dmf.lua |
-| CombatStats | main | Codex/Feature/CombatStats/Add-zh-tw | 68ef157 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 | yes | yes | 僅包含 CombatStats_localization.lua |
-| markers_aio | main | Codex/Feature/markers_aio/Add-zh-tw | 3ac85f9 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/33 | yes | yes | 僅包含 markers_aio_localization.lua |
-| scoreboard | main | Codex/Feature/scoreboard/Add-zh-tw | b30b231 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/34 | yes | yes | 僅包含 Scoreboard_localization.lua |
+| MOD | AI handler | Base branch | Work branch | Commit | Pushed | PR URL / number | Ready for review | Workspace files excluded | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| dmf | github-copilot | main | Codex/Feature/dmf/Add-zh-tw | 3af7b7c | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/31 | yes | yes | 僅包含 dmf/localization/dmf.lua |
+| CombatStats | github-copilot | main | Codex/Feature/CombatStats/Add-zh-tw | 68ef157 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 | yes | yes | 僅包含 CombatStats_localization.lua |
+| markers_aio | github-copilot | main | Codex/Feature/markers_aio/Add-zh-tw | 3ac85f9 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/33 | yes | yes | 僅包含 markers_aio_localization.lua |
+| scoreboard | github-copilot | main | Codex/Feature/scoreboard/Add-zh-tw | b30b231 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/34 | yes | yes | 僅包含 Scoreboard_localization.lua |
 
 ## Completed Files
 
-| MOD | File | Completed keys | Commit | PR | Completed at | Branch log | Notes |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| dmf | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | 40 | 3af7b7c | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/31 | 2026-07-06 23:13:46 +08:00 | Darktide Translation Workspace/Log/dmf.md | 已完成 zh-tw 校正與缺漏補齊 |
-| CombatStats | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | 7 | 68ef157 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 | 2026-07-06 23:20:47 +08:00 | Darktide Translation Workspace/Log/CombatStats.md | 已完成 zh-tw 術語一致性校正 |
-| markers_aio | Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua | 39 | 3ac85f9 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/33 | 2026-07-07 00:37:29 +08:00 | Darktide Translation Workspace/Log/markers_aio.md | 依使用者要求重處理，已補齊缺漏並校正詞彙一致性 |
-| scoreboard | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | 3 | b30b231 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/34 | 2026-07-06 23:32:20 +08:00 | Darktide Translation Workspace/Log/scoreboard.md | 已完成 zh-tw 缺漏補齊 |
+| MOD | AI handler | File | Completed keys | Commit | PR | Completed at | Branch log | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| dmf | github-copilot | Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua | 40 | 3af7b7c | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/31 | 2026-07-06 23:13:46 +08:00 | Darktide Translation Workspace/Log/dmf.md | 已完成 zh-tw 校正與缺漏補齊 |
+| CombatStats | github-copilot | Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua | 7 | 68ef157 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 | 2026-07-06 23:20:47 +08:00 | Darktide Translation Workspace/Log/CombatStats.md | 已完成 zh-tw 術語一致性校正 |
+| markers_aio | github-copilot | Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua | 39 | 3ac85f9 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/33 | 2026-07-07 00:37:29 +08:00 | Darktide Translation Workspace/Log/markers_aio.md | 依使用者要求重處理，已補齊缺漏並校正詞彙一致性 |
+| scoreboard | github-copilot | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | 3 | b30b231 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/34 | 2026-07-06 23:32:20 +08:00 | Darktide Translation Workspace/Log/scoreboard.md | 已完成 zh-tw 缺漏補齊 |

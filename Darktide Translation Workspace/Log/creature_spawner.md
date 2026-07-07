@@ -1,6 +1,6 @@
 # creature_spawner Branch Log
 
-- Owner: copilot
+- AI handler: github-copilot
 - Base branch: main
 - Work branch: Codex/Feature/creature_spawner/Add-zh-tw
 - Started at: 2026-07-07 +08:00

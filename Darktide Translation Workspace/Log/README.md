@@ -34,7 +34,7 @@ Darktide Translation Workspace/Log/ScoreboardExplosive.md
 | --- | --- |
 | README MOD |  |
 | Repo directory |  |
-| Owner |  |
+| AI handler |  |
 | Status | in_progress |
 | Base branch | main |
 | Work branch | Codex/Feature/<Repo directory>/Add-zh-tw |

@@ -1,6 +1,6 @@
 # dmf Branch Log
 
-- Owner: copilot
+- AI handler: github-copilot
 - Base branch: main
 - Work branch: Codex/Feature/dmf/Add-zh-tw
 - Started at: 2026-07-06 22:35:51 +08:00

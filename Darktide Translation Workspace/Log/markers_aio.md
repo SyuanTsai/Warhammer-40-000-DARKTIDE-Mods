@@ -1,6 +1,6 @@
 # markers_aio Branch Log
 
-- Owner: copilot
+- AI handler: github-copilot
 - Base branch: main
 - Work branch: Codex/Feature/markers_aio/Add-zh-tw
 - Started at: 2026-07-06 23:24:32 +08:00

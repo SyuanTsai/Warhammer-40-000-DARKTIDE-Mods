@@ -6,7 +6,7 @@
 
 | Status | 用途 | 下一輪作業規則 |
 | --- | --- | --- |
-| ready | 可正常處理 | 可由 Codex / Copilot 選取處理 |
+| ready | 可正常處理 | 可由 Codex / GitHub Copilot 選取處理 |
 | original_mod_updated | 使用者確認原始 MOD 有更新 | 下一輪只比對本地資訊：README、main 分支實際資料夾與本地內容，再決定是否翻譯 |
 | in_progress | 正在處理 | 其他代理不得接手，除非 Workspace Status 明確交接 |
 | stale | 先前處理中但已失效或逾時 | 可由下一輪代理接手；接手前必須在 Workspace Status 記錄原因 |
