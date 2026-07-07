@@ -49,11 +49,11 @@
 | completed | 2026-07-07 +08:00 | Stimms Pickup Icon | StimmsPickupIcon | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Killfeed Improvements | KillfeedImprovements | 修正 Psykhanium 詞彙表不一致（PR #41）。 |
 | completed | 2026-07-07 +08:00 | Gas Outline | GasOutline | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-07 +08:00 | Loadout Monitor | LoadoutMonitor |  |
+| completed | 2026-07-07 +08:00 | Loadout Monitor | LoadoutMonitor | 補齊 2 個缺失 zh-tw（PR #44）。 |
 | completed | 2026-07-07 +08:00 | Quick Look Card | QuickLookCard | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | completed | 2026-07-07 +08:00 | Markers Improved All-in-One | markers_aio | 第二次重新處理：修正錢詞表不一致、補齊缺失 key、修正重複問題（PR #33）。 |
 | completed | 2026-07-07 +08:00 | Danger Zone | danger_zone | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-07 +08:00 | Numeric UI | NumericUI |  |
+| completed | 2026-07-07 +08:00 | Numeric UI | NumericUI | 修正 peril_icon 詞彙表不一致（PR #43）。 |
 | ready | not checked | Spidey Sense | Spidey Sense |  |
 | not_scheduled | not checked | Enhanced Descriptions | Enhanced_descriptions |  |
 | ready | not checked | Emperor's Guidance | EmperorsGuidance |  |
