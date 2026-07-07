@@ -349,13 +349,13 @@ return {
 		en = "Player Grenade Amount +%d\nBrain Burst Peril -%d%%",
 		["zh-cn"] = "玩家手雷 +%d\n大脑爆裂危机值 -%d%%",
 		ru = "Количество гранат у игрока: +%d\nОпасность от Разрыва мозга: -%d%%",
-		["zh-tw"] = "玩家手榴彈數量 +%d\n大腦爆裂危險值 -%d%%",
+		["zh-tw"] = "玩家手榴彈數量 +%d\n 顱腦爆裂反噬 -%d%%",
 	},
 	havoc_modifier_positive_stamina_modifier = {
 		en = "Player Stamina +%d",
 		["zh-cn"] = "玩家体力 +%d",
 		ru = "Выносливость игрока: +%d",
-		["zh-tw"] = "玩家體力 +%d",
+		["zh-tw"] = "玩家耐力 +%d",
 	},
 	havoc_modifier_positive_weakspot_damage_bonus = {
 		en = "Player Weakspot Damage +%d%%",
@@ -379,7 +379,7 @@ return {
 		en = "Player Crit Chance +%d%%",
 		["zh-cn"] = "玩家暴击率 +%d%%",
 		ru = "Шанс критического удара игрока: +%d%%",
-		["zh-tw"] = "玩家暴擊率 +%d%%",
+		["zh-tw"] = "玩家致命一擊率 +%d%%",
 	},
 	havoc_modifier_positive_movement_speed = {
 		en = "Player Movement Speed +%d%%",
