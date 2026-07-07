@@ -33,7 +33,7 @@ local localizations = {
     hud_element_tooltip = {
         en = "When enabled, a HUD icon will be displayed indicating mod and sequence status.",
         ["zh-cn"] = "启用后，将显示一个HUD图标，指示模块和序列状态。",
-        ["zh-tw"] = "啟用後，將顯示一個HUD圖標，顯示模組和序列狀態。",
+        ["zh-tw"] = "啟用後，將顯示一個HUD圖標，用於指示模組和序列狀態。",
     },
     hud_element_type = {
         en = "Sequence Indicator Style",
