@@ -578,7 +578,7 @@ return {
 	mloc_9_companion = {
 		en = "Companion",
 		--["zh-cn"] = "",
-		--["zh-tw"] = "",
+		["zh-tw"] = "電子獒犬",
 	},
 	mloc_chaos_faction = {
 		en = "Chaos",
@@ -728,7 +728,7 @@ return {
 	mloc_curio = {
 		en = "Curio",
 		["zh-cn"] = "附件",
-		["zh-tw"] = "飾品",
+		["zh-tw"] = "珍品",
 	},
 
 	--Report template value labels
@@ -745,7 +745,7 @@ return {
 	mloc_crit_percent = {
 		en = "Crit percent",
 		["zh-cn"] = "暴击百分比",
-		["zh-tw"] = "暴擊百分比",
+		["zh-tw"] = "致命一擊百分比",
 	},
 	mloc_weakspot_percent = {
 		en = "Weakspot percent",
@@ -881,7 +881,7 @@ return {
 	critical_hit = {
 		en = "Critical hit",
 		["zh-cn"] = "暴击命中",
-		["zh-tw"] = "暴擊命中",
+		["zh-tw"] = "致命一擊",
 	},
 	attacker_faction = {
 		en = "Attacker faction",
