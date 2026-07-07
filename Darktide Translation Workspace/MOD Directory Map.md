@@ -54,7 +54,7 @@
 | completed | 2026-07-07 +08:00 | Markers Improved All-in-One | markers_aio | 第二次重新處理：修正錢詞表不一致、補齊缺失 key、修正重複問題（PR #33）。 |
 | completed | 2026-07-07 +08:00 | Danger Zone | danger_zone | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Numeric UI | NumericUI | 修正 peril_icon 詞彙表不一致（PR #43）。 |
-| ready | not checked | Spidey Sense | Spidey Sense |  |
+| completed | 2026-07-07 +08:00 | Spidey Sense | Spidey Sense |  |
 | not_scheduled | not checked | Enhanced Descriptions | Enhanced_descriptions |  |
 | completed | 2026-07-07 +08:00 | Emperor's Guidance | EmperorsGuidance | 所有靜態 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Remember Server Location | RememberServerLocation | 所有 zh-tw 已完整正確，無需修改。 |
@@ -68,46 +68,46 @@
 | completed | 2026-07-07 +08:00 | Name It - Rename Weapons and Curios | name_it | 所有靜態 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | LoadoutNames | LoadoutNames | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Guarantee Ability Activation | guarantee_ability_activation | 所有 zh-tw 已完整正確，無需修改。 |
-| ready | not checked | Custom HUD | custom_hud |  |
-| ready | not checked | Keep Dodging | keep_dodging |  |
-| ready | not checked | Perspectives Mod | Perspectives |  |
-| ready | not checked | Improved Havoc Tags | ImprovedHavocTags |  |
-| ready | not checked | Ovenproof's Scoreboard Plugin | ovenproof_scoreboard_plugin |  |
-| ready | not checked | Scoreboard Explosive | ScoreboardExplosive |  |
-| ready | not checked | Better Hud Info View | better_hud_info_view |  |
-| ready | not checked | Recolor Boss Health Bars | RecolorBossHealthBars |  |
-| ready | not checked | Red Weapons at Home | red_weapons_at_home |  |
-| ready | not checked | AutoBlitz | AutoBlitz |  |
-| ready | not checked | SpecialsTracker | SpecialsTracker |  |
-| ready | not checked | Display Ping (Latency) | DisplayPing |  |
-| ready | not checked | Reconnect | Reconnect |  |
-| ready | not checked | Valkyrie Blitz-Ingress | valkyrie |  |
-| ready | not checked | BornReady | BornReady |  |
-| ready | not checked | MissionBrief | MissionBrief |  |
-| ready | not checked | Uptime | uptime |  |
-| ready | not checked | InventoryStats | InventoryStats |  |
-| ready | not checked | Clear Smoke | clear_smoke |  |
-| ready | not checked | Quick Level Mastery | quick_level_mastery |  |
-| ready | not checked | I Wanna See | i_wanna_see |  |
-| ready | not checked | VFX Swapper | vfx_swapper |  |
-| ready | not checked | MemoryLeakFix | MemLeakFix |  |
+| in_progress | 2026-07-07 +08:00 | Custom HUD | custom_hud |  |
+| completed | 2026-07-07 +08:00 | Keep Dodging | keep_dodging | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
+| in_progress | 2026-07-07 +08:00 | Perspectives Mod | Perspectives |  |
+| completed | 2026-07-07 +08:00 | Improved Havoc Tags | ImprovedHavocTags | 所有 zh-tw 已完整正確，無需修改。 |
+| in_progress | 2026-07-07 +08:00 | Ovenproof's Scoreboard Plugin | ovenproof_scoreboard_plugin |  |
+| in_progress | 2026-07-07 +08:00 | Scoreboard Explosive | ScoreboardExplosive |  |
+| completed | 2026-07-07 +08:00 | Better Hud Info View | better_hud_info_view | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Recolor Boss Health Bars | RecolorBossHealthBars | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Red Weapons at Home | red_weapons_at_home | 所有 zh-tw 已完整正確，無需修改。 |
+| in_progress | 2026-07-07 +08:00 | AutoBlitz | AutoBlitz |  |
+| in_progress | 2026-07-07 +08:00 | SpecialsTracker | SpecialsTracker |  |
+| completed | 2026-07-07 +08:00 | Display Ping (Latency) | DisplayPing | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
+| in_progress | 2026-07-07 +08:00 | Reconnect | Reconnect |  |
+| completed | 2026-07-07 +08:00 | Valkyrie Blitz-Ingress | valkyrie | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | BornReady | BornReady | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
+| completed | 2026-07-07 +08:00 | MissionBrief | MissionBrief | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
+| completed | 2026-07-07 +08:00 | Uptime | uptime | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | InventoryStats | InventoryStats | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Clear Smoke | clear_smoke | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Quick Level Mastery | quick_level_mastery | 所有 zh-tw 已完整正確，無需修改。 |
+| in_progress | 2026-07-07 +08:00 | I Wanna See | i_wanna_see |  |
+| completed | 2026-07-07 +08:00 | VFX Swapper | vfx_swapper | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | MemoryLeakFix | MemLeakFix | 所有靜態 zh-tw 已完整，注解項目無需補翻譯。 |
 | completed | 2026-07-07 +08:00 | CombatStats | CombatStats | 第二次重新處理：修正 toggle_view_keybind 錯誤及詞彙表不一致（PR #32）。 |
-| ready | not checked | CharacterGrid | CharacterGrid |  |
-| ready | not checked | TeamKills | TeamKills |  |
-| ready | not checked | BrokerAutoStim | BrokerAutoStim |  |
-| ready | not checked | TalentUI | TalentUI |  |
-| ready | not checked | Machine God's BeaconUI | machine_gods_beacon |  |
-| ready | not checked | VeilShield | veil_shield |  |
-| ready | not checked | Modular Menu Buttons | modular_menu_buttons |  |
-| ready | not checked | Talent Tree UX Improvements | TalentRefundBelow |  |
-| ready | not checked | Archivum Messelina | Archivum Messelina |  |
-| ready | not checked | Many More Try | ManyMoreTry |  |
-| ready | not checked | Solo Play (Havoc Update) | SoloPlay |  |
-| ready | not checked | TagKeys | TagKeys |  |
-| ready | not checked | Weapon Filter | WeaponFilter |  |
-| ready | not checked | AFK | afk |  |
-| ready | not checked | Remember Difficulty | RememberDifficulty |  |
-| ready | not checked | Share Talents | ShareTalents |  |
+| completed | 2026-07-07 +08:00 | CharacterGrid | CharacterGrid | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | TeamKills | TeamKills | 無可翻譯內容（無静態中文項目）。 |
+| completed | 2026-07-07 +08:00 | BrokerAutoStim | BrokerAutoStim | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | TalentUI | TalentUI | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Machine God's BeaconUI | machine_gods_beacon | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | VeilShield | veil_shield | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Modular Menu Buttons | modular_menu_buttons | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
+| completed | 2026-07-07 +08:00 | Talent Tree UX Improvements | TalentRefundBelow | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Archivum Messelina | Archivum Messelina | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Many More Try | ManyMoreTry | 所有 zh-tw 已完整正確，無需修改。 |
+| in_progress | 2026-07-07 +08:00 | Solo Play (Havoc Update) | SoloPlay |  |
+| completed | 2026-07-07 +08:00 | TagKeys | TagKeys | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
+| completed | 2026-07-07 +08:00 | Weapon Filter | WeaponFilter | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
+| completed | 2026-07-07 +08:00 | AFK | afk | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Remember Difficulty | RememberDifficulty | 所有 zh-tw 已完整正確，無需修改。 |
+| completed | 2026-07-07 +08:00 | Share Talents | ShareTalents | 所有 zh-tw 已完整正確，無需修改。 |
 | ready | not checked | Auto Rations - Recover or Destroy | auto_rations |  |
 | ready | not checked | Empower Until Limit | EmpowerUntilLimit |  |
 | ready | not checked | StimmCountdown | StimmCountdown |  |
