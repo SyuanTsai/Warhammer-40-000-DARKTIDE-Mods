@@ -44,7 +44,7 @@ return {
 	handle_rejoin_popup_description = {
 		en = "If you have kept auto joining an invalid session, try to open Mod Options and disable this option temporarily.",
 		["zh-cn"] = "如果你遇到连续重连已失效的会话，请尝试打开模组选项再临时禁用此选项。",
-		["zh-tw"] = "如果你遇到連續重連已失效的會話，請嘗試打開模组选項再臨時禁用此選項。",
+		["zh-tw"] = "如果你遇到連續重連已失效的會話，請嘗試打開模組選項再臨時禁用此選項。",
 		ru = "Если вы продолжаете автоматически присоединяться к недействительному сеансу, попробуйте открыть параметры мода и временно отключить эту опцию.",
 	},
 	opt_do_nothing = {
