@@ -19,6 +19,7 @@ from pathlib import Path
 LANG = '["zh-tw"]'
 FIELD_RE = re.compile(r'^(?P<indent>[ \t]*)\["zh-tw"\]\s*=\s*(?P<value>.*),(?P<trail>[ \t]*(?:--.*)?)$')
 ASSIGNMENT_RE = re.compile(r'(?m)^(?P<indent>[ \t]*)(?P<key>[A-Za-z_][A-Za-z0-9_]*|\[[^\]\n]+\])\s*=\s*\{')
+PROTECTED_WORKFLOW_PATH = ".github/workflows"
 
 
 @dataclasses.dataclass(frozen=True)
@@ -368,6 +369,44 @@ def branch_exists(repo_dir: Path, ref: str) -> bool:
     return git(repo_dir, "rev-parse", "--verify", ref, check=False, capture=True).returncode == 0
 
 
+def path_exists_in_ref(repo_dir: Path, ref: str, path: str) -> bool:
+    return git(repo_dir, "cat-file", "-e", f"{ref}:{path}", check=False, capture=True).returncode == 0
+
+
+def changed_paths(repo_dir: Path, before_ref: str, after_ref: str, pathspec: str) -> list[str]:
+    output = git_text(repo_dir, "diff", "--name-only", before_ref, after_ref, "--", pathspec)
+    return [line for line in output.splitlines() if line]
+
+
+def staged_changes_exist(repo_dir: Path) -> bool:
+    return git(repo_dir, "diff", "--cached", "--quiet", check=False).returncode != 0
+
+
+def restore_paths_from_ref(repo_dir: Path, ref: str, paths: list[str]) -> None:
+    for path in paths:
+        if path_exists_in_ref(repo_dir, ref, path):
+            git(repo_dir, "restore", "--source", ref, "--staged", "--worktree", "--", path)
+        else:
+            git(repo_dir, "rm", "-r", "--ignore-unmatch", "--", path)
+
+
+def remove_protected_workflow_changes(repo_dir: Path, before_ref: str, after_ref: str, target_id: str) -> bool:
+    paths = changed_paths(repo_dir, before_ref, after_ref, PROTECTED_WORKFLOW_PATH)
+    if not paths:
+        return False
+
+    print(
+        f"{target_id}: excluding upstream GitHub workflow changes because SYNC_PAT "
+        "does not require workflow scope: "
+        + ", ".join(paths)
+    )
+    restore_paths_from_ref(repo_dir, before_ref, paths)
+    if staged_changes_exist(repo_dir):
+        git(repo_dir, "commit", "--amend", "--no-edit")
+        return True
+    return False
+
+
 def path_for_git(path: Path) -> str:
     return path.as_posix()
 
@@ -429,7 +468,11 @@ def sync_target(target: dict, config: dict, maintenance_root: Path, work_root: P
         raise SystemExit(f"{target['id']}: {upstream_ref} does not exist")
 
     git(repo_dir, "checkout", main_branch)
+    before_main_merge = git_text(repo_dir, "rev-parse", "HEAD")
     git(repo_dir, "merge", "--no-ff", upstream_ref, "-m", f"Merge upstream {upstream_branch} into fork {main_branch}")
+    after_main_merge = git_text(repo_dir, "rev-parse", "HEAD")
+    if before_main_merge != after_main_merge:
+        remove_protected_workflow_changes(repo_dir, before_main_merge, after_main_merge, target["id"])
     upstream_commit = git_text(repo_dir, "rev-parse", upstream_ref)
 
     if dry_run:
