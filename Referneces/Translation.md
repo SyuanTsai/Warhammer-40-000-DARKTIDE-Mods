@@ -14,6 +14,8 @@
 
 ### 通用名詞
 
+- Countdown - 冷卻
+- Empower - 強化
 - Toughness - 韌性
 - Hit Mass - 順劈目標
 - Cleave - 順劈攻擊
@@ -85,6 +87,7 @@
 
 ### 遊戲活動專用詞
 
+- Rations - 口糧
 - Heretical Artifacts - 異端聖物
 - Tainted Skull - 腐化顱骨
   - 來源檔案：Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/
@@ -107,6 +110,7 @@
 
 ### 怪物相關
 
+- Horde - 群怪
 - Gunners - 砲手
 - Reaper - 收割者
 - Sniper - 狙擊手
