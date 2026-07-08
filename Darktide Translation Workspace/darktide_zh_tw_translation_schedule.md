@@ -60,11 +60,13 @@
 8. 只處理該 MOD 目錄內的 `*localization.lua`。
 9. 處理每個 localization key 前，先檢查該 key 的整個 table 是否已存在 `["zh-tw"]`。
 10. 翻譯或校正完成後執行品質檢查。
-11. 在工作分支 commit，commit message 用 `Translate zh-tw localization for <Repo directory>`。
-12. 回到 `main`，同步 `Workspace Status.md`、`Log/<Repo directory>.md`、`MOD Directory Map.md` 與 `Term Candidates.md`，commit message 用 `Update AI work documents`。
-13. 回到工作分支，確認 PR diff 不含 `Darktide Translation Workspace/`。
-14. 若有權限，push 工作分支並建立或更新 ready PR。
-15. 回報完成項目、PR、blocked、以及下一輪續跑位置。
+11. commit 前確認本 repo 的 Git 身份：`git config user.name` 必須是 `SyuanTsai`，`git config user.email` 必須是 `carsun00@gmail.com`；若不符，先修正後再 commit。
+12. 在工作分支 commit，commit message 用 `Translate zh-tw localization for <Repo directory>`。
+13. 回到 `main`，同步 `Workspace Status.md`、`Log/<Repo directory>.md`、`MOD Directory Map.md` 與 `Term Candidates.md`，commit message 用 `Update AI work documents`。
+14. 回到工作分支，確認 PR diff 不含 `Darktide Translation Workspace/`。
+15. push 或建立/更新 PR 前，確認 GitHub / PR 送交者顯示名稱為 `SyuanTsai`；若會顯示為 `Syuan` 或其他名稱，停止送 PR，記錄 Blocked Items 並回報需要修正 GitHub 帳號顯示名稱或 CLI 認證身份。
+16. 若有權限且送交者顯示名稱確認為 `SyuanTsai`，push 工作分支並建立或更新 ready PR。
+17. 回報完成項目、PR、blocked、以及下一輪續跑位置。
 
 每完成 10 個 MOD 後，回到 `main` 重新掃描 MOD 目錄與 `README.md`，並更新 `MOD Directory Map.md` 的比對時間與狀態。
 
@@ -160,9 +162,10 @@ Blocked Items 至少包含：
 - PR title：`Translate zh-tw localization for <Repo directory>`
 - PR base：`main`
 - PR head：`Codex/Feature/<Repo directory>/Add-zh-tw`
+- PR 建立者 / 送交者顯示名稱必須是 `SyuanTsai`。若 GitHub、GitHub CLI、Connector 或其他送 PR 工具顯示目前身份會是 `Syuan` 或任何非 `SyuanTsai` 名稱，不得建立、更新或送出 PR；必須改列 Blocked Items。
 - PR 必須 ready for review。
 - PR 不得包含 `Darktide Translation Workspace/`。
-- PR description 包含：base、head、AI handler、完成檔案、完成 key 數、blocked 項目、是否更新詞彙候選。
+- PR description 包含：base、head、AI handler、送交者顯示名稱（固定填 `SyuanTsai`）、完成檔案、完成 key 數、blocked 項目、是否更新詞彙候選。
 - 若 PR 已存在，更新同一個 PR，不重複建立。
 
 ## 10. 結束回報
