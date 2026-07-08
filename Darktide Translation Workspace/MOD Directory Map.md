@@ -111,7 +111,7 @@
 | completed | 2026-07-08 17:37:38 +08:00 | Auto Rations - Recover or Destroy | auto_rations | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-08 18:15:16 +08:00 | Empower Until Limit | EmpowerUntilLimit | 補齊 mod_name zh-tw，校正 mod_description zh-tw（PR #49）。 |
 | completed | 2026-07-09 01:15:43 +08:00 | StimmCountdown | StimmCountdown | 所有 zh-tw 已完整正確，無需修改。 |
-| ready | not checked | Mauler Attack Indicator | mauler_attack_indicator |  |
+| completed | 2026-07-09 01:24:11 +08:00 | Mauler Attack Indicator | mauler_attack_indicator | 校正 zh-tw ring / warning / attack 用語（PR #50）。 |
 | ready | not checked | Crusher Attack Indicator | crusher_attack_indicator |  |
 | ready | not checked | Radar | Radar |  |
 | ready | not checked | AuspexHelper | AuspexHelper |  |
