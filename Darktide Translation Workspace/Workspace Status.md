@@ -18,7 +18,7 @@
 | AI handler | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | github-copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | Skitarius | Skitarius | main | Codex/Feature/Skitarius/Add-zh-tw | Darktide Translation Workspace/Log/Skitarius.md | Skitarius_localization.lua | all keys | 2026-07-07 +08:00 | 29c2960 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/37 | 完成 | 修正簡體字/錯誤撰考問題，釋放鎖定 |
-| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push/create ready PR pending | EmpowerUntilLimit | Empower Until Limit | main | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | Darktide Translation Workspace/Log/EmpowerUntilLimit.md | EmpowerUntilLimit_localization.lua | all keys | 2026-07-08 18:06:43 +08:00 | 6ef0bae | pending | pending | StimmCountdown/*localization.lua:first key | 已補齊 mod_name zh-tw 並校正 mod_description |
+| codex | blocked | granted | read/status/diff, workspace docs commit, branch, localization commit; push/PR blocked by GitHub display name | EmpowerUntilLimit | Empower Until Limit | main | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | Darktide Translation Workspace/Log/EmpowerUntilLimit.md | EmpowerUntilLimit_localization.lua | all keys | 2026-07-08 18:08:51 +08:00 | 6ef0bae | no | blocked | StimmCountdown/*localization.lua:first key after PR identity is fixed | 本地翻譯完成；GitHub CLI display name 為 Syuan，不符合 SyuanTsai 要求 |
 
 ## 工作鎖定
 
@@ -32,7 +32,7 @@
 | Skitarius | Warhammer 40,000 DARKTIDE/mods/Skitarius/scripts/mods/Skitarius/Skitarius_localization.lua | mod_settings | github-copilot | released | Codex/Feature/Skitarius/Add-zh-tw | Darktide Translation Workspace/Log/Skitarius.md | 2026-07-07 +08:00 | 2026-07-07 +08:00 | 完成 | 釋放鎖定 |
 | scoreboard | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | row_boss_damage_dealt | github-copilot | released | Codex/Feature/scoreboard/Add-zh-tw | Darktide Translation Workspace/Log/scoreboard.md | 2026-07-06 23:30:50 +08:00 | 2026-07-06 23:32:20 +08:00 | PR #34 已建立且為 ready | 任務完成，釋放鎖定 |
 | auto_rations | Warhammer 40,000 DARKTIDE/mods/auto_rations/scripts/mods/auto_rations/auto_rations_localization.lua | enable_ration_mod | codex | released | Codex/Feature/auto_rations/Add-zh-tw | Darktide Translation Workspace/Log/auto_rations.md | 2026-07-08 17:37:38 +08:00 | 2026-07-08 17:37:38 +08:00 | 檢查完成，無需 PR | 所有 en key 均已有 zh-tw，釋放鎖定 |
-| EmpowerUntilLimit | Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | mod_description | codex | released | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | Darktide Translation Workspace/Log/EmpowerUntilLimit.md | 2026-07-08 18:03:23 +08:00 | 2026-07-08 18:06:43 +08:00 | localization commit 6ef0bae；等待 push/PR | 任務完成，釋放鎖定 |
+| EmpowerUntilLimit | Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | mod_description | codex | blocked | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | Darktide Translation Workspace/Log/EmpowerUntilLimit.md | 2026-07-08 18:03:23 +08:00 | 2026-07-08 18:08:51 +08:00 | GitHub display name 修正為 SyuanTsai 後可 push/PR | 本地翻譯完成；PR 送交身份阻塞 |
 
 ## 逐 MOD 工作紀錄
 
@@ -336,6 +336,7 @@
 
 | Blocker ID | Time | AI handler | MOD | File | Key | Base branch | Work branch | English source | Current zh-tw | Reason | Tried | Decision needed | Suggested options | Safe next position | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| BLOCKER-0001 | 2026-07-08 18:08:51 +08:00 | codex | EmpowerUntilLimit | Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | all keys | main | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | n/a | n/a | GitHub CLI display name is `Syuan`, but schedule requires `SyuanTsai` before push/PR. | Checked `gh api user --jq .name` and `.login`; login is SyuanTsai, display name is Syuan. | Fix GitHub account display name or CLI/connector identity so PR submitter displays as SyuanTsai. | Update GitHub profile display name to SyuanTsai, then push branch and create ready PR. | StimmCountdown/*localization.lua:first key after EmpowerUntilLimit PR is created | open |
 
 ### BLOCKER-0000 - <MOD>/<File>/<Key>
 
@@ -356,6 +357,25 @@
 - Safe next position:
 - Status: open
 
+### BLOCKER-0001 - EmpowerUntilLimit/EmpowerUntilLimit_localization.lua/all keys
+
+- Time: 2026-07-08 18:08:51 +08:00
+- AI handler: codex
+- Directory: EmpowerUntilLimit
+- Base branch: main
+- Work branch: Codex/Feature/EmpowerUntilLimit/Add-zh-tw
+- Branch log: Darktide Translation Workspace/Log/EmpowerUntilLimit.md
+- File: Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua
+- Localization key: all keys
+- English source: n/a
+- Current zh-tw: n/a
+- Reason: GitHub CLI display name is `Syuan`, but schedule requires `SyuanTsai` before push/PR.
+- Tried: Checked `gh api user --jq .name` and `.login`; login is SyuanTsai, display name is Syuan.
+- Decision needed: Fix GitHub account display name or CLI/connector identity so PR submitter displays as SyuanTsai.
+- Suggested options: Update GitHub profile display name to SyuanTsai, then push branch and create ready PR.
+- Safe next position: StimmCountdown/*localization.lua:first key after EmpowerUntilLimit PR is created
+- Status: open
+
 ## PR Records
 
 | MOD | AI handler | Base branch | Work branch | Commit | Pushed | PR URL / number | Ready for review | Workspace files excluded | Notes |
@@ -364,7 +384,7 @@
 | CombatStats | github-copilot | main | Codex/Feature/CombatStats/Add-zh-tw | 68ef157 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/32 | yes | yes | 僅包含 CombatStats_localization.lua |
 | markers_aio | github-copilot | main | Codex/Feature/markers_aio/Add-zh-tw | 3ac85f9 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/33 | yes | yes | 僅包含 markers_aio_localization.lua |
 | scoreboard | github-copilot | main | Codex/Feature/scoreboard/Add-zh-tw | b30b231 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/34 | yes | yes | 僅包含 Scoreboard_localization.lua |
-| EmpowerUntilLimit | codex | main | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | 6ef0bae | pending | pending | pending | yes | 僅包含 EmpowerUntilLimit_localization.lua；等待 push/PR |
+| EmpowerUntilLimit | codex | main | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | 6ef0bae | no | blocked by BLOCKER-0001 | no | yes | 僅包含 EmpowerUntilLimit_localization.lua；GitHub display name 需先修正為 SyuanTsai |
 
 ## Completed Files
 
@@ -375,4 +395,4 @@
 | markers_aio | github-copilot | Warhammer 40,000 DARKTIDE/mods/markers_aio/scripts/mods/markers_aio/markers_aio_localization.lua | 39 | 3ac85f9 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/33 | 2026-07-07 00:37:29 +08:00 | Darktide Translation Workspace/Log/markers_aio.md | 依使用者要求重處理，已補齊缺漏並校正詞彙一致性 |
 | scoreboard | github-copilot | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | 3 | b30b231 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/34 | 2026-07-06 23:32:20 +08:00 | Darktide Translation Workspace/Log/scoreboard.md | 已完成 zh-tw 缺漏補齊 |
 | auto_rations | codex | Warhammer 40,000 DARKTIDE/mods/auto_rations/scripts/mods/auto_rations/auto_rations_localization.lua | 6 | none | none | 2026-07-08 17:37:38 +08:00 | Darktide Translation Workspace/Log/auto_rations.md | 所有 zh-tw 已完整正確，無需修改 |
-| EmpowerUntilLimit | codex | Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | 2 | 6ef0bae | pending | 2026-07-08 18:06:43 +08:00 | Darktide Translation Workspace/Log/EmpowerUntilLimit.md | 補齊 mod_name zh-tw，校正 mod_description zh-tw |
+| EmpowerUntilLimit | codex | Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | 2 | 6ef0bae | blocked by BLOCKER-0001 | 2026-07-08 18:06:43 +08:00 | Darktide Translation Workspace/Log/EmpowerUntilLimit.md | 補齊 mod_name zh-tw，校正 mod_description zh-tw；等待 PR 身份修正 |

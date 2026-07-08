@@ -13,7 +13,7 @@
 | Last updated | 2026-07-08 18:06:43 +08:00 |
 | Status | completed |
 | Commit | 6ef0bae |
-| PR URL / number | pending |
+| PR URL / number | blocked by BLOCKER-0001 |
 
 ## File Scan
 
@@ -32,8 +32,10 @@
 
 ## Blocked Items
 
-None.
+| Blocker ID | Time | Key | Reason | Tried | Decision needed | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| BLOCKER-0001 | 2026-07-08 18:08:51 +08:00 | all keys | GitHub CLI display name is `Syuan`, but schedule requires `SyuanTsai` before push/PR. | Checked `gh api user --jq .name` and `.login`; login is SyuanTsai, display name is Syuan. | Fix GitHub account display name or CLI/connector identity so PR submitter displays as SyuanTsai. | open |
 
 ## Next Position
 
-StimmCountdown/*localization.lua:first key
+StimmCountdown/*localization.lua:first key after EmpowerUntilLimit PR is created
