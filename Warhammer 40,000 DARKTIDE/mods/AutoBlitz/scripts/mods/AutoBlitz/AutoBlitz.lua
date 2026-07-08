@@ -30,6 +30,7 @@ local grenades = {
 	flask = { enabled = false, minimum = 1, throw_type = "overhand" },
 	launcher = { enabled = false, minimum = 1, throw_type = "overhand" },
 	arc = { enabled = false, minimum = 1, throw_type = "overhand" },
+	skull = { enabled = false },
 	medic = { enabled = false, minimum = 1, help_downed = false, help_hogtied = false, help_netted = false },
 	shield = { enabled = false, minimum = 1, shield_threshold = 0, shield_type = "current_health" },
 }
@@ -132,7 +133,7 @@ end
 -- Load handler
 mod.on_all_mods_loaded = function()
 	local archetype = mod.check_archetype()
-	DOG.ELIGIBLE = archetype and archetype == "adamant" or false
+	DOG.ELIGIBLE = archetype and (archetype == "adamant" or archetype == "cryptic") or false
 	allow_override = mod:get("allow_override")
 	local keybind = mod:get("auto_throw_keybind")
 	if keybind[1] ~= nil then
@@ -154,6 +155,8 @@ mod.on_all_mods_loaded = function()
 	grenades.dogsplosion.allow_daemonhost = mod:get("dogsplosion_allow_daemonhost")
 	grenades.dogsplosion.require_tag = mod:get("dogsplosion_require_tag")
 	grenades.dogsplosion.cooldown = mod:get("dogsplosion_cooldown")
+	-- Skull (Base)
+	grenades.skull.enabled = mod:get("base_skull_enabled")
 	-- Skull (Medic)
 	grenades.medic.help_downed = mod:get("medic_help_downed")
 	grenades.medic.help_hogtied = mod:get("medic_help_hogtied")
@@ -166,7 +169,7 @@ end
 
 mod.on_game_state_changed = function()
 	local archetype = mod.check_archetype()
-	DOG.ELIGIBLE = archetype and archetype == "adamant" or false
+	DOG.ELIGIBLE = archetype and (archetype == "adamant" or archetype == "cryptic") or false
 	DOG.UNIT = nil
 	mod.clear_buffer()
 end
@@ -217,7 +220,12 @@ end
 
 -- Tells the mod that the throw keybind has been pressed (and in turn should throw a grenade)
 mod.throw_grenade = function()
-	KEYBIND.throw_keybind_pressed = true
+	-- Exit if already queued up or wielding a grenade
+	if KEYBIND.throw_keybind_pressed or mod.wielding_grenade_slot() then return end
+	-- Do not queue up a throw when in menus or out of grenades
+	if not Managers.ui:using_input() and mod.has_grenades() then
+		KEYBIND.throw_keybind_pressed = true
+	end
 end
 
 -- Returns the player archetype, or nil if the player has not spawned
@@ -294,6 +302,15 @@ mod.check_weapon = function()
 	return false
 end
 
+-- Returns true if currently wielding a grenade, regardless of kind
+mod.wielding_grenade_slot = function()
+	local player = Managers.player:local_player_safe(1)
+	local player_unit = player and player.player_unit
+	local visual_loadout = player_unit and ScriptUnit.has_extension(player_unit, "visual_loadout_system")
+	local wielded_slot = visual_loadout and visual_loadout._inventory_component and visual_loadout._inventory_component.wielded_slot
+	return wielded_slot and wielded_slot == "slot_grenade_ability"
+end
+
 -- Returns true if the player has the dogsplosion equipped
 mod.check_dogsplosion = function()
 	if not DOG.UNIT then return false end
@@ -306,23 +323,66 @@ mod.check_dogsplosion = function()
 	return false
 end
 
+-- thank you to andrelizzz123 for getting a better method of finding the dog
+mod.get_dog_from_spawner = function(player_unit)
+	if not player_unit then return nil end
+	local dog_spawner = player_unit and ScriptUnit.has_extension(player_unit, "companion_spawner_system")
+	if not dog_spawner then return nil end
+	-- I am just assuming this is efficient enough rather than messing with it
+	if type(dog_spawner.companion_unit) == "function" then
+		return dog_spawner:companion_unit()
+	end
+	if type(dog_spawner.companion_units) == "function" then
+		local companions = dog_spawner:companion_units()
+		if type(companions) == "table" then
+			for _, companion in pairs(companions) do
+				if companion and Unit.alive(companion) then
+					return companion
+				end
+			end
+		end
+	end
+	local companion = rawget(dog_spawner, "_companion_unit") or rawget(dog_spawner, "companion_unit")
+	if companion and Unit.alive(companion) then
+		return companion
+	end
+	local companions = rawget(dog_spawner, "_companion_units") or rawget(dog_spawner, "companion_units")
+	if type(companions) == "table" then
+		for _, unit in pairs(companions) do
+			if unit and Unit.alive(unit) then
+				return unit
+			end
+		end
+	end
+	return nil
+end
+
 -- Returns the player's dog unit if it exists, otherwise nil
 mod.fetch_dog = function()
 	local manager = Managers.player
 	-- If we have a player unit
 	if manager and manager:local_player_safe(1) then
 		local player = manager:local_player_safe(1)
+		local player_unit = player and player.player_unit
 		local profile = player and player:profile()
 		-- And that unit should have a dog
 		local should_dog = profile and ProfileUtils.has_companion(profile)
 		if should_dog then
-			local dog = mod:dog_finder()
+			local dog = mod.get_dog_from_spawner(player_unit)
 			-- And there is in fact a dog
 			if dog then
 				return dog
 			end
 		end
 	end
+end
+
+mod.has_grenades = function()
+	local player = Managers.player:local_player(1)
+    local player_unit = player and player.player_unit
+    local ability_system = player_unit and ScriptUnit.extension(player_unit, "ability_system")
+	local charges = ability_system and ability_system:remaining_ability_charges("grenade_ability") or 0
+	return charges > 0
 end
 
 -- Returns the number of enemies in range of the dog, as well as counts of elites, specialists, bosses, and whether a sleeping daemonhost is in range
@@ -410,51 +470,9 @@ mod.daemon_radar = function(dog)
 	return daemonhost_in_range
 end
 
--- An incredibly stupid but not terribly inefficient way to get the dog due to dog spawn logic being server-side as of 1.11.0
-mod.dog_finder = function()
-	local player = Managers.player:local_player_safe(1)
-	local player_unit = player and player.player_unit
-	if not player_unit then return nil end
-	local game_mode_manager = Managers.state.game_mode
-    local game_mode_name = game_mode_manager and game_mode_manager:game_mode_name()
-	if game_mode_name == "hub" then return nil end -- Ignore dog in mourningstar
-	local radius = 30 -- Big range to ensure hits as this should only run once or twice per mission
-	local results = {}
-	local broadphase_system = Managers.state.extension:system("broadphase_system")
-	local broadphase = broadphase_system.broadphase
-	local side_system = Managers.state.extension:system("side_system")
-	local side = side_system.side_by_unit[player_unit]
-	local has_outline_system = Managers.state and Managers.state.extension and Managers.state.extension:has_system("outline_system")
-	local outline_system = has_outline_system and Managers.state.extension:system("outline_system")
-	local safe_to_check = Unit.alive(player_unit) and Unit.world(player_unit)
-	local from_position
-	if safe_to_check then
-		from_position = Unit.world_position(player_unit, 1)
-	end
-	local my_dog = nil
-	-- Find all allies
-	if broadphase and side and from_position and outline_system then
-		local ally_side_names = side:relation_side_names("allied")
-		local allies_in_radius = broadphase.query(broadphase, from_position, radius, results, ally_side_names)
-		for index = 1, allies_in_radius do
-			local ally_unit = results[index]
-			if ally_unit and Unit.alive(ally_unit) then
-				-- Find dog based on unique outline flag
-				if outline_system:has_outline(ally_unit, "owned_companion") then
-					my_dog = ally_unit
-					break
-				end
-			end
-		end
-	end
-	return my_dog
-end
-
-
-
 mod.get_dogsplosion_charges = function()
 	if not DOG.UNIT then return false end
-	local player = Managers.player:local_player(1)
+	local player = Managers.player:local_player_safe(1)
     local player_unit = player and player.player_unit
     local ability_system = player_unit and ScriptUnit.extension(player_unit, "ability_system")
 	local charges = ability_system and ability_system:remaining_ability_charges("grenade_ability") or 0
@@ -535,6 +553,21 @@ mod.panic = function()
 		return true
 	end
 	return false
+end
+
+-- Checks if the BASE skull ability is on cooldown. TRUE = ready to use / FALSE = on cooldown
+mod.base_skull_ready = function()
+	if not DOG.UNIT or not grenades.skull.enabled then return false end
+	local player = Managers.player:local_player_safe(1)
+	local player_unit = player and player.player_unit
+	local talent_extension = player_unit and ScriptUnit.has_extension(player_unit, "talent_system")
+	if not talent_extension then return false end
+	local base_skull = talent_extension:has_special_rule("cryptic_servo_skull_hack") and not talent_extension:has_special_rule("cryptic_servo_skull_improved")
+	if base_skull then
+		return mod.has_grenades()
+	else
+		return false
+	end
 end
 
 -- TO DO
@@ -645,9 +678,9 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
 	if action_name == "grenade_ability_pressed" then
 		local dogsplosion = mod.check_dogsplosion()
 		local shield = mod.check_shield()
+		local skull = mod.base_skull_ready()
 		-- Force this action when the throw keybind is pressed
 		if KEYBIND.using_keybind and KEYBIND.throw_keybind_pressed then
-			
 			-- Reset immediately if using dogsplosion as it cannot be "equipped"
 			if dogsplosion or shield or mod.quick_throw() then
 				KEYBIND.throw_keybind_pressed = false
@@ -718,6 +751,10 @@ mod:hook(CLASS.InputService, "_get", function(func, self, action_name)
 				DOG.POUNCING = false
 				return true
 			end
+		end
+		-- Base Servo Skull
+		if skull and grenades.skull.enabled then
+			return true
 		end
 		-- Medicae Servo Skull
 		if grenades.medic.enabled then
@@ -821,7 +858,6 @@ mod:hook(CLASS.PlayerUnitWeaponExtension, "on_slot_wielded", function(func, self
 				thrown = false
 			end
 		end
-		skip_wield_action = true
 		return func(self, slot_name, t, skip_wield_action)
 	else
 		ready_to_throw = false

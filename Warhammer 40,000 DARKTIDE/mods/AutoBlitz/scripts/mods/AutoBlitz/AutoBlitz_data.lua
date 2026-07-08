@@ -265,6 +265,13 @@ return {
 				setting_id = "cryptic",
 				type = "group",
 				sub_widgets = {
+					{
+						setting_id = "skull_enabled",
+						type = "checkbox",
+						default_value = false,
+						tooltip = "skull_enabled_tooltip"
+					},
+
 					--[[]
 					{
 						setting_id = "medic_enabled",
