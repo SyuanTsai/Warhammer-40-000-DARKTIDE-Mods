@@ -18,7 +18,7 @@
 | AI handler | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | github-copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | Skitarius | Skitarius | main | Codex/Feature/Skitarius/Add-zh-tw | Darktide Translation Workspace/Log/Skitarius.md | Skitarius_localization.lua | all keys | 2026-07-07 +08:00 | 29c2960 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/37 | 完成 | 修正簡體字/錯誤撰考問題，釋放鎖定 |
-| codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | StimmCountdown | StimmCountdown | main | Codex/Feature/StimmCountdown/Add-zh-tw | Darktide Translation Workspace/Log/StimmCountdown.md | StimmCountdown_localization.lua | mod_description | 2026-07-08 18:18:20 +08:00 | pending | no | none | StimmCountdown_localization.lua:mod_description | 開始校正詞彙表不一致 |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | StimmCountdown | StimmCountdown | main | Codex/Feature/StimmCountdown/Add-zh-tw | Darktide Translation Workspace/Log/StimmCountdown.md | StimmCountdown_localization.lua | all keys | 2026-07-09 01:15:43 +08:00 | none | no | none | mauler_attack_indicator/*localization.lua:first key | 已完成檢查；localization 無 diff，無需 PR |
 
 ## 工作鎖定
 
@@ -33,7 +33,7 @@
 | scoreboard | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | row_boss_damage_dealt | github-copilot | released | Codex/Feature/scoreboard/Add-zh-tw | Darktide Translation Workspace/Log/scoreboard.md | 2026-07-06 23:30:50 +08:00 | 2026-07-06 23:32:20 +08:00 | PR #34 已建立且為 ready | 任務完成，釋放鎖定 |
 | auto_rations | Warhammer 40,000 DARKTIDE/mods/auto_rations/scripts/mods/auto_rations/auto_rations_localization.lua | enable_ration_mod | codex | released | Codex/Feature/auto_rations/Add-zh-tw | Darktide Translation Workspace/Log/auto_rations.md | 2026-07-08 17:37:38 +08:00 | 2026-07-08 17:37:38 +08:00 | 檢查完成，無需 PR | 所有 en key 均已有 zh-tw，釋放鎖定 |
 | EmpowerUntilLimit | Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | mod_description | codex | released | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | Darktide Translation Workspace/Log/EmpowerUntilLimit.md | 2026-07-08 18:03:23 +08:00 | 2026-07-08 18:15:16 +08:00 | PR #49 已建立且為 ready | 任務完成，釋放鎖定 |
-| StimmCountdown | Warhammer 40,000 DARKTIDE/mods/StimmCountdown/scripts/mods/StimmCountdown/StimmCountdown_localization.lua | mod_description | codex | in_progress | Codex/Feature/StimmCountdown/Add-zh-tw | Darktide Translation Workspace/Log/StimmCountdown.md | 2026-07-08 18:18:20 +08:00 | 2026-07-08 18:18:20 +08:00 | 完成 localization 檢查並建立 PR 或確認無需修改 | 準備校正 Hive Scum/Broker/Coherency/Crit 詞彙 |
+| StimmCountdown | Warhammer 40,000 DARKTIDE/mods/StimmCountdown/scripts/mods/StimmCountdown/StimmCountdown_localization.lua | all keys | codex | released | Codex/Feature/StimmCountdown/Add-zh-tw | Darktide Translation Workspace/Log/StimmCountdown.md | 2026-07-08 18:18:20 +08:00 | 2026-07-09 01:15:43 +08:00 | 檢查完成，無需 PR | 所有靜態 en key 均已有正確 zh-tw，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -333,29 +333,30 @@
 | README MOD | StimmCountdown |
 | Repo directory | StimmCountdown |
 | AI handler | codex |
-| Status | in_progress |
+| Status | completed |
 | Base branch | main |
 | Work branch | Codex/Feature/StimmCountdown/Add-zh-tw |
 | Branch log | Darktide Translation Workspace/Log/StimmCountdown.md |
 | Started at | 2026-07-08 18:18:20 +08:00 |
-| Last updated | 2026-07-08 18:18:20 +08:00 |
-| Completed at |  |
-| Commit | pending |
+| Last updated | 2026-07-09 01:15:43 +08:00 |
+| Completed at | 2026-07-09 01:15:43 +08:00 |
+| Commit | none |
 | PR URL / number | none |
-| Next position | StimmCountdown_localization.lua:mod_description |
-| Notes | 開始校正詞彙表不一致；一般 MOD PR 僅允許包含目標 localization 檔。 |
+| Next position | mauler_attack_indicator/*localization.lua:first key |
+| Notes | 檢查完成；所有靜態 en key 均已有正確 zh-tw，localization 無 diff，無需 PR。 |
 
 #### File Summary
 
 | File | Status | Completed keys | Last key | Branch log section | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Warhammer 40,000 DARKTIDE/mods/StimmCountdown/scripts/mods/StimmCountdown/StimmCountdown_localization.lua | in_progress | 0 | mod_description | Section: Key Progress | 檢查中 |
+| Warhammer 40,000 DARKTIDE/mods/StimmCountdown/scripts/mods/StimmCountdown/StimmCountdown_localization.lua | completed | 75 | reset_sound_settings | Section: Key Progress | 所有靜態 en key 均已有 zh-tw；詞彙表命中項已正確 |
 
 #### Key Summary
 
 | Time | File | Key | Status | Branch log section | Notes |
 | --- | --- | --- | --- | --- | --- |
-| 2026-07-08 18:18:20 +08:00 | Warhammer 40,000 DARKTIDE/mods/StimmCountdown/scripts/mods/StimmCountdown/StimmCountdown_localization.lua | mod_description | in_progress | Section: Key Progress | 命中 Hive Scum/Broker 詞彙表 |
+| 2026-07-08 18:18:20 +08:00 | Warhammer 40,000 DARKTIDE/mods/StimmCountdown/scripts/mods/StimmCountdown/StimmCountdown_localization.lua | mod_description | completed | Section: Key Progress | 命中 Hive Scum/Broker 詞彙表，已確認 localization 使用正確譯名 |
+| 2026-07-09 01:15:43 +08:00 | Warhammer 40,000 DARKTIDE/mods/StimmCountdown/scripts/mods/StimmCountdown/StimmCountdown_localization.lua | all en keys | completed | Section: Key Progress | 75 個靜態 en key 均已有 zh-tw；無重複或空白 zh-tw，無需修改 |
 
 ## 協作交接紀錄
 
@@ -417,6 +418,7 @@
 | markers_aio | github-copilot | main | Codex/Feature/markers_aio/Add-zh-tw | 3ac85f9 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/33 | yes | yes | 僅包含 markers_aio_localization.lua |
 | scoreboard | github-copilot | main | Codex/Feature/scoreboard/Add-zh-tw | b30b231 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/34 | yes | yes | 僅包含 Scoreboard_localization.lua |
 | EmpowerUntilLimit | codex | main | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | 6ef0bae | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/49 | yes | yes | 僅包含 EmpowerUntilLimit_localization.lua；PR ready |
+| StimmCountdown | codex | main | Codex/Feature/StimmCountdown/Add-zh-tw | none | no | none | n/a | yes | localization 已正確，無 diff，無需 PR |
 
 ## Completed Files
 
@@ -428,3 +430,4 @@
 | scoreboard | github-copilot | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | 3 | b30b231 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/34 | 2026-07-06 23:32:20 +08:00 | Darktide Translation Workspace/Log/scoreboard.md | 已完成 zh-tw 缺漏補齊 |
 | auto_rations | codex | Warhammer 40,000 DARKTIDE/mods/auto_rations/scripts/mods/auto_rations/auto_rations_localization.lua | 6 | none | none | 2026-07-08 17:37:38 +08:00 | Darktide Translation Workspace/Log/auto_rations.md | 所有 zh-tw 已完整正確，無需修改 |
 | EmpowerUntilLimit | codex | Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | 2 | 6ef0bae | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/49 | 2026-07-08 18:06:43 +08:00 | Darktide Translation Workspace/Log/EmpowerUntilLimit.md | 補齊 mod_name zh-tw，校正 mod_description zh-tw；PR ready |
+| StimmCountdown | codex | Warhammer 40,000 DARKTIDE/mods/StimmCountdown/scripts/mods/StimmCountdown/StimmCountdown_localization.lua | 75 | none | none | 2026-07-09 01:15:43 +08:00 | Darktide Translation Workspace/Log/StimmCountdown.md | 所有靜態 en key 均已有正確 zh-tw，無需修改 |

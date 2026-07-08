@@ -110,7 +110,7 @@
 | completed | 2026-07-07 +08:00 | Share Talents | ShareTalents | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-08 17:37:38 +08:00 | Auto Rations - Recover or Destroy | auto_rations | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-08 18:15:16 +08:00 | Empower Until Limit | EmpowerUntilLimit | 補齊 mod_name zh-tw，校正 mod_description zh-tw（PR #49）。 |
-| in_progress | 2026-07-08 18:18:20 +08:00 | StimmCountdown | StimmCountdown | codex 正在校正 zh-tw 詞彙表不一致。 |
+| completed | 2026-07-09 01:15:43 +08:00 | StimmCountdown | StimmCountdown | 所有 zh-tw 已完整正確，無需修改。 |
 | ready | not checked | Mauler Attack Indicator | mauler_attack_indicator |  |
 | ready | not checked | Crusher Attack Indicator | crusher_attack_indicator |  |
 | ready | not checked | Radar | Radar |  |
