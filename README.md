@@ -338,10 +338,10 @@
 
 ### [Guarantee Ability Activation](https://www.nexusmods.com/warhammer40kdarktide/mods/336)
     防止取消大絕
-- MOD 網站最後更新日期：Last updated 11 May 2026, 7:53PM
-- MOD 版本：1.3.13
-- MOD 檔案名稱：Guarantee Ability Activation-336-1-3-13-1778500424
-- 手動維護最後下載日期：2026-05-17
+- MOD 網站最後更新日期：Last updated 08 July 2026, 11:57PM
+- MOD 版本：1.4.1
+- MOD 檔案名稱：Guarantee Ability Activation 336 1.4.1 2026-07-08T15-57Z cwrBAw7Y1
+- 手動維護最後下載日期：2026-07-08
 
 ### [Custom HUD](https://www.nexusmods.com/warhammer40kdarktide/mods/10)
     客製化UI
@@ -366,10 +366,10 @@
 
 ### [Perspectives Mod](https://www.nexusmods.com/warhammer40kdarktide/mods/111)
     第三人稱視角
-- MOD 網站最後更新日期：Last updated 03 December 2024 6:00PM
-- MOD 版本：1.11
+- MOD 網站最後更新日期：Last updated 08 July 2026, 7:54PM
+- MOD 版本：1.13
 - MOD 檔案名稱：Perspectives-111-1-11-1733248815
-- 手動維護最後下載日期：2025-04-16
+- 手動維護最後下載日期：2026-07-09
 
 ### [Improved Havoc Tags](https://www.nexusmods.com/warhammer40kdarktide/mods/500)
     浩劫詞條說明改善
