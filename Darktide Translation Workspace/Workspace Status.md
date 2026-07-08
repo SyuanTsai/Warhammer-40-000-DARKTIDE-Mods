@@ -18,7 +18,7 @@
 | AI handler | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | github-copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | Skitarius | Skitarius | main | Codex/Feature/Skitarius/Add-zh-tw | Darktide Translation Workspace/Log/Skitarius.md | Skitarius_localization.lua | all keys | 2026-07-07 +08:00 | 29c2960 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/37 | 完成 | 修正簡體字/錯誤撰考問題，釋放鎖定 |
-| codex | completed | granted | read/status/diff, workspace docs commit | auto_rations | Auto Rations - Recover or Destroy | main | Codex/Feature/auto_rations/Add-zh-tw | Darktide Translation Workspace/Log/auto_rations.md | auto_rations_localization.lua | all keys | 2026-07-08 17:37:38 +08:00 | none | no | none | EmpowerUntilLimit/*localization.lua:first key | 所有 zh-tw 已完整正確，無需修改 |
+| codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit | EmpowerUntilLimit | Empower Until Limit | main | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | Darktide Translation Workspace/Log/EmpowerUntilLimit.md | EmpowerUntilLimit_localization.lua | mod_name | 2026-07-08 18:03:23 +08:00 | pending | no | none | EmpowerUntilLimit_localization.lua:mod_name | 開始處理缺失 zh-tw |
 
 ## 工作鎖定
 
@@ -32,6 +32,7 @@
 | Skitarius | Warhammer 40,000 DARKTIDE/mods/Skitarius/scripts/mods/Skitarius/Skitarius_localization.lua | mod_settings | github-copilot | released | Codex/Feature/Skitarius/Add-zh-tw | Darktide Translation Workspace/Log/Skitarius.md | 2026-07-07 +08:00 | 2026-07-07 +08:00 | 完成 | 釋放鎖定 |
 | scoreboard | Warhammer 40,000 DARKTIDE/mods/scoreboard/scripts/mods/scoreboard/Scoreboard_localization.lua | row_boss_damage_dealt | github-copilot | released | Codex/Feature/scoreboard/Add-zh-tw | Darktide Translation Workspace/Log/scoreboard.md | 2026-07-06 23:30:50 +08:00 | 2026-07-06 23:32:20 +08:00 | PR #34 已建立且為 ready | 任務完成，釋放鎖定 |
 | auto_rations | Warhammer 40,000 DARKTIDE/mods/auto_rations/scripts/mods/auto_rations/auto_rations_localization.lua | enable_ration_mod | codex | released | Codex/Feature/auto_rations/Add-zh-tw | Darktide Translation Workspace/Log/auto_rations.md | 2026-07-08 17:37:38 +08:00 | 2026-07-08 17:37:38 +08:00 | 檢查完成，無需 PR | 所有 en key 均已有 zh-tw，釋放鎖定 |
+| EmpowerUntilLimit | Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | mod_name | codex | in_progress | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | Darktide Translation Workspace/Log/EmpowerUntilLimit.md | 2026-07-08 18:03:23 +08:00 | 2026-07-08 18:03:23 +08:00 | 完成 localization 檢查並建立 PR 或確認無需修改 | 開始於第一個 key |
 
 ## 逐 MOD 工作紀錄
 
@@ -291,6 +292,37 @@
 | Time | File | Key | Status | Branch log section | Notes |
 | --- | --- | --- | --- | --- | --- |
 | 2026-07-08 17:37:38 +08:00 | Warhammer 40,000 DARKTIDE/mods/auto_rations/scripts/mods/auto_rations/auto_rations_localization.lua | all en keys | completed | Section: Key Progress | 缺漏檢查為 0 |
+
+### MOD-LOG-0008 - EmpowerUntilLimit
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | Empower Until Limit |
+| Repo directory | EmpowerUntilLimit |
+| AI handler | codex |
+| Status | in_progress |
+| Base branch | main |
+| Work branch | Codex/Feature/EmpowerUntilLimit/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/EmpowerUntilLimit.md |
+| Started at | 2026-07-08 18:03:23 +08:00 |
+| Last updated | 2026-07-08 18:03:23 +08:00 |
+| Completed at |  |
+| Commit | pending |
+| PR URL / number | none |
+| Next position | EmpowerUntilLimit_localization.lua:mod_name |
+| Notes | 開始處理缺失 zh-tw；一般 MOD PR 僅允許包含目標 localization 檔。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | in_progress | 0 | mod_name | Section: Key Progress | 檢查中 |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-08 18:03:23 +08:00 | Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | mod_name | in_progress | Section: Key Progress | mod_name 缺失 zh-tw |
 
 ## 協作交接紀錄
 
