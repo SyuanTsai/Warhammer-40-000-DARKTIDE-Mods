@@ -26,3 +26,4 @@
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Horde (enemy type) | 屍潮 | Power_DI | Power_DI_localization.lua | mloc_horde | 現有 "成群小怪"，CombatStats 同一概念用 "屍潮"，不一致 | candidate | 兩者皆未違反 Translation.md，待使用者決定是否統一 |
 | Rations | 口糧 | auto_rations | auto_rations_localization.lua | mod_name / mod_description | 活動互動物品名稱，正式詞彙表尚未收錄 | candidate | auto_rations 既有 zh-tw 使用「口糧」，本輪未修改 |
+| Empower | 強化 | EmpowerUntilLimit | EmpowerUntilLimit_localization.lua | mod_name / mod_description | 裝備升級動作用語，正式詞彙表尚未收錄 | candidate | 本輪用於「強化至上限」與描述句 |
