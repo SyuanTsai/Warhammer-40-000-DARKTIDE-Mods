@@ -117,7 +117,7 @@ local localizations = {
 	ready_countdown_color = {
 		en = "Ready countdown color",
 		ru = "Цвет таймера (готов)",
-		["zh-tw"] = "就緒倒數計時顏色",
+		["zh-tw"] = "就緒冷卻計時顏色",
 	},
 	ready_icon_color = {
 		en = "Ready icon color",
