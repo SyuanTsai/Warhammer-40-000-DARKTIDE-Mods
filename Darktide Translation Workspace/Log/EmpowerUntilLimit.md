@@ -10,10 +10,10 @@
 | Base branch | main |
 | Work branch | Codex/Feature/EmpowerUntilLimit/Add-zh-tw |
 | Started at | 2026-07-08 18:03:23 +08:00 |
-| Last updated | 2026-07-08 18:06:43 +08:00 |
+| Last updated | 2026-07-08 18:15:16 +08:00 |
 | Status | completed |
 | Commit | 6ef0bae |
-| PR URL / number | blocked by BLOCKER-0001 |
+| PR URL / number | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/49 |
 
 ## File Scan
 
@@ -34,8 +34,8 @@
 
 | Blocker ID | Time | Key | Reason | Tried | Decision needed | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| BLOCKER-0001 | 2026-07-08 18:08:51 +08:00 | all keys | GitHub CLI display name is `Syuan`, but schedule requires `SyuanTsai` before push/PR. | Checked `gh api user --jq .name` and `.login`; login is SyuanTsai, display name is Syuan. | Fix GitHub account display name or CLI/connector identity so PR submitter displays as SyuanTsai. | open |
+| BLOCKER-0001 | 2026-07-08 18:08:51 +08:00 | all keys | GitHub CLI display name was `Syuan`, but schedule requires `SyuanTsai` before push/PR. | Rechecked after user update: `gh api user --jq .name` and `.login` both return SyuanTsai; pushed branches and created PR #49. | none | resolved |
 
 ## Next Position
 
-StimmCountdown/*localization.lua:first key after EmpowerUntilLimit PR is created
+StimmCountdown/*localization.lua:first key
