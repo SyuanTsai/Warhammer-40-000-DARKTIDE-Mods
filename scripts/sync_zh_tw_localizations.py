@@ -19,7 +19,6 @@ from pathlib import Path
 LANG = '["zh-tw"]'
 FIELD_RE = re.compile(r'^(?P<indent>[ \t]*)\["zh-tw"\]\s*=\s*(?P<value>.*),(?P<trail>[ \t]*(?:--.*)?)$')
 ASSIGNMENT_RE = re.compile(r'(?m)^(?P<indent>[ \t]*)(?P<key>[A-Za-z_][A-Za-z0-9_]*|\[[^\]\n]+\])\s*=\s*\{')
-PROTECTED_WORKFLOW_PATH = ".github/workflows"
 
 
 @dataclasses.dataclass(frozen=True)
@@ -356,9 +355,9 @@ def safe_dir_name(value: str) -> str:
     return re.sub(r"[^A-Za-z0-9_.-]+", "-", value).strip("-")
 
 
-def clone_repo(target: dict, work_root: Path, main_branch: str) -> Path:
+def clone_repo(target: dict, work_root: Path) -> Path:
     repo_dir = work_root / f"{safe_dir_name(target['repo_name'])}-{safe_dir_name(target['id'])}"
-    git(work_root, "clone", "--branch", main_branch, target["origin"], str(repo_dir))
+    git(work_root, "clone", target["origin"], str(repo_dir))
     ensure_remote(repo_dir, "origin", target["origin"])
     git(repo_dir, "remote", "add", "upstream", target["upstream"])
     ensure_remote(repo_dir, "upstream", target["upstream"])
@@ -369,57 +368,19 @@ def branch_exists(repo_dir: Path, ref: str) -> bool:
     return git(repo_dir, "rev-parse", "--verify", ref, check=False, capture=True).returncode == 0
 
 
-def path_exists_in_ref(repo_dir: Path, ref: str, path: str) -> bool:
-    return git(repo_dir, "cat-file", "-e", f"{ref}:{path}", check=False, capture=True).returncode == 0
-
-
-def changed_paths(repo_dir: Path, before_ref: str, after_ref: str, pathspec: str) -> list[str]:
-    output = git_text(repo_dir, "diff", "--name-only", before_ref, after_ref, "--", pathspec)
-    return [line for line in output.splitlines() if line]
-
-
-def staged_changes_exist(repo_dir: Path) -> bool:
-    return git(repo_dir, "diff", "--cached", "--quiet", check=False).returncode != 0
-
-
-def restore_paths_from_ref(repo_dir: Path, ref: str, paths: list[str]) -> None:
-    for path in paths:
-        if path_exists_in_ref(repo_dir, ref, path):
-            git(repo_dir, "restore", "--source", ref, "--staged", "--worktree", "--", path)
-        else:
-            git(repo_dir, "rm", "-r", "--ignore-unmatch", "--", path)
-
-
-def remove_protected_workflow_changes(repo_dir: Path, before_ref: str, after_ref: str, target_id: str) -> bool:
-    paths = changed_paths(repo_dir, before_ref, after_ref, PROTECTED_WORKFLOW_PATH)
-    if not paths:
-        return False
-
-    print(
-        f"{target_id}: excluding upstream GitHub workflow changes because SYNC_PAT "
-        "does not require workflow scope: "
-        + ", ".join(paths)
-    )
-    restore_paths_from_ref(repo_dir, before_ref, paths)
-    if staged_changes_exist(repo_dir):
-        git(repo_dir, "commit", "--amend", "--no-edit")
-        return True
-    return False
-
-
 def path_for_git(path: Path) -> str:
     return path.as_posix()
 
 
-def merge_main_into_feature(repo_dir: Path, main_branch: str, allowed_conflicts: set[str]) -> bool:
+def merge_ref_into_feature(repo_dir: Path, merge_ref: str, merge_label: str, allowed_conflicts: set[str]) -> bool:
     before_merge = git_text(repo_dir, "rev-parse", "HEAD")
     result = git(
         repo_dir,
         "merge",
         "--no-ff",
-        main_branch,
+        merge_ref,
         "-m",
-        "Merge main into zh-tw localization branch",
+        f"Merge {merge_label} into zh-tw localization branch",
         check=False,
         capture=True,
     )
@@ -436,14 +397,14 @@ def merge_main_into_feature(repo_dir: Path, main_branch: str, allowed_conflicts:
     unexpected = sorted(conflicted - allowed_conflicts)
     if unexpected:
         raise SystemExit(
-            "Merge main into feature branch has conflicts outside the selected MOD localization files: "
+            f"Merge {merge_label} into feature branch has conflicts outside the selected MOD localization files: "
             + ", ".join(unexpected)
         )
 
     if not conflicted:
         raise SystemExit("Merge main into feature branch failed without reported conflicted files")
 
-    print("Auto-resolving selected MOD localization conflicts from main: " + ", ".join(sorted(conflicted)))
+    print(f"Auto-resolving selected MOD localization conflicts from {merge_label}: " + ", ".join(sorted(conflicted)))
     git(repo_dir, "checkout", "--theirs", "--", *sorted(conflicted))
     git(repo_dir, "add", "--", *sorted(conflicted))
     git(repo_dir, "commit", "--no-edit")
@@ -456,7 +417,7 @@ def sync_target(target: dict, config: dict, maintenance_root: Path, work_root: P
     main_branch = target.get("main_branch", config.get("main_branch", "main"))
     upstream_branch = target.get("upstream_branch", main_branch)
     feature_branch = target.get("feature_branch", config.get("feature_branch", "feature/Add-zh-tw"))
-    repo_dir = clone_repo(target, work_root, main_branch)
+    repo_dir = clone_repo(target, work_root)
     mods_root = maintenance_root / config["maintenance_mods_root"]
     selected_file_pairs = target_file_pairs(mods_root, target)
     allowed_merge_conflicts = {path_for_git(relative_path) for _, relative_path in selected_file_pairs}
@@ -466,36 +427,26 @@ def sync_target(target: dict, config: dict, maintenance_root: Path, work_root: P
     upstream_ref = f"upstream/{upstream_branch}"
     if not branch_exists(repo_dir, f"refs/remotes/{upstream_ref}"):
         raise SystemExit(f"{target['id']}: {upstream_ref} does not exist")
-
-    git(repo_dir, "checkout", main_branch)
-    before_main_merge = git_text(repo_dir, "rev-parse", "HEAD")
-    git(repo_dir, "merge", "--no-ff", upstream_ref, "-m", f"Merge upstream {upstream_branch} into fork {main_branch}")
-    after_main_merge = git_text(repo_dir, "rev-parse", "HEAD")
-    if before_main_merge != after_main_merge:
-        remove_protected_workflow_changes(repo_dir, before_main_merge, after_main_merge, target["id"])
     upstream_commit = git_text(repo_dir, "rev-parse", upstream_ref)
-
-    if dry_run:
-        print(f"{target['id']}: dry-run skips pushing {main_branch}")
-    else:
-        git(repo_dir, "push", "origin", f"{main_branch}:{main_branch}")
-
-    git(repo_dir, "fetch", "origin")
-    local_main = git_text(repo_dir, "rev-parse", main_branch)
-    origin_main = git_text(repo_dir, "rev-parse", f"origin/{main_branch}")
-    if not dry_run and local_main != origin_main:
-        raise SystemExit(f"{target['id']}: {main_branch} and origin/{main_branch} differ after push")
 
     if branch_exists(repo_dir, feature_branch):
         git(repo_dir, "checkout", feature_branch)
     elif branch_exists(repo_dir, f"refs/remotes/origin/{feature_branch}"):
         git(repo_dir, "checkout", "-b", feature_branch, f"origin/{feature_branch}")
     elif target.get("create_feature_branch", config.get("create_feature_branch", False)):
-        git(repo_dir, "checkout", "-b", feature_branch, main_branch)
+        git(repo_dir, "checkout", "-b", feature_branch, upstream_ref)
     else:
         raise SystemExit(f"{target['id']}: missing {feature_branch} locally and on origin")
 
-    merge_changed_feature = merge_main_into_feature(repo_dir, main_branch, allowed_merge_conflicts)
+    if git(repo_dir, "merge-base", "--is-ancestor", upstream_ref, "HEAD", check=False).returncode == 0:
+        merge_changed_feature = False
+    else:
+        merge_changed_feature = merge_ref_into_feature(
+            repo_dir,
+            upstream_ref,
+            f"upstream/{upstream_branch}",
+            allowed_merge_conflicts,
+        )
 
     changed_files: list[Path] = []
     total_updated = 0

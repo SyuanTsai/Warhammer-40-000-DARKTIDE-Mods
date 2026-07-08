@@ -28,6 +28,14 @@
       "create_feature_branch": true
     },
     {
+      "id": "CombatStats",
+      "mod": "CombatStats",
+      "repo_name": "deathbeam-darktide-mods",
+      "origin": "https://github.com/SyuanTsai/Darktide-mods-Thedeathbeam.git",
+      "upstream": "https://github.com/deathbeam/darktide-mods.git",
+      "create_feature_branch": true
+    },
+    {
       "id": "DecodeMinigameSolver",
       "mod": "DecodeMinigameSolver",
       "repo_name": "decode-minigame-solver",
