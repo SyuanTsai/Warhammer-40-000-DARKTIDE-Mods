@@ -874,11 +874,11 @@
 
 ##### 一般天賦
 
-### Hive Scum - 巢都渣子
+### Hive Scum - 巢都渣滓
 
-#### 巢都渣子專有名詞
+#### 巢都渣滓專有名詞
 
-- Hive Scum - 巢都渣子
+- Hive Scum - 巢都渣滓
 - Stimm Field - 化學性依賴
   - 來源檔案：Warhammer 40,000 DARKTIDE/mods/BrokerAutoStim/scripts/mods/BrokerAutoStim/
 - Stimm Supply - 化學性依賴
@@ -886,7 +886,7 @@
 - Broker - 代理
   - 來源檔案：Warhammer 40,000 DARKTIDE/mods/BrokerAutoStim/scripts/mods/BrokerAutoStim/
 
-#### 巢都渣子天賦
+#### 巢都渣滓天賦
 
 ##### 閃擊
 
