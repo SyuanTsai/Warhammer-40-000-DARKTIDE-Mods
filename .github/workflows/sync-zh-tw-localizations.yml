@@ -12,6 +12,7 @@ on:
           - "all"
           - "Archivum_Messelina"
           - "ChatBlock"
+          - "CombatStats"
           - "DecodeMinigameSolver"
           - "DefaultToHighestBlessingTier"
           - "EmpowerUntilLimit"
