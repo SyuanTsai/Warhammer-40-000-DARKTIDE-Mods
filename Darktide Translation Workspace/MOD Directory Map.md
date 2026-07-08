@@ -108,7 +108,7 @@
 | completed | 2026-07-07 +08:00 | AFK | afk | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Remember Difficulty | RememberDifficulty | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Share Talents | ShareTalents | 所有 zh-tw 已完整正確，無需修改。 |
-| ready | not checked | Auto Rations - Recover or Destroy | auto_rations |  |
+| completed | 2026-07-08 17:37:38 +08:00 | Auto Rations - Recover or Destroy | auto_rations | 所有 zh-tw 已完整正確，無需修改。 |
 | ready | not checked | Empower Until Limit | EmpowerUntilLimit |  |
 | ready | not checked | StimmCountdown | StimmCountdown |  |
 | ready | not checked | Mauler Attack Indicator | mauler_attack_indicator |  |
