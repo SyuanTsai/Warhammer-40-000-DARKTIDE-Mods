@@ -2,6 +2,7 @@
   "maintenance_mods_root": "Warhammer 40,000 DARKTIDE/mods",
   "main_branch": "main",
   "feature_branch": "feature/Add-zh-tw",
+  "create_feature_branch": true,
   "commit_subject": "local: update zh-tw localization",
   "targets": [
     {

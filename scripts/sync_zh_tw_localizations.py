@@ -490,7 +490,7 @@ def sync_target(target: dict, config: dict, maintenance_root: Path, work_root: P
         git(repo_dir, "checkout", feature_branch)
     elif branch_exists(repo_dir, f"refs/remotes/origin/{feature_branch}"):
         git(repo_dir, "checkout", "-b", feature_branch, f"origin/{feature_branch}")
-    elif target.get("create_feature_branch", False):
+    elif target.get("create_feature_branch", config.get("create_feature_branch", False)):
         git(repo_dir, "checkout", "-b", feature_branch, main_branch)
     else:
         raise SystemExit(f"{target['id']}: missing {feature_branch} locally and on origin")
