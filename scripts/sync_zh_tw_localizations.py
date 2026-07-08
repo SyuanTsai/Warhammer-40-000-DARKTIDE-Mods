@@ -213,6 +213,94 @@ def depth_before_lines(text: str) -> dict[int, int]:
     return depths
 
 
+def find_field_value_end(text: str, start: int, limit: int) -> int | None:
+    depth = 0
+    quote: str | None = None
+    escaped = False
+    line_comment = False
+    block_comment = False
+    i = start
+
+    while i < limit:
+        ch = text[i]
+        nxt = text[i + 1] if i + 1 < limit else ""
+
+        if line_comment:
+            if ch == "\n":
+                line_comment = False
+            i += 1
+            continue
+
+        if block_comment:
+            if ch == "]" and nxt == "]":
+                block_comment = False
+                i += 2
+            else:
+                i += 1
+            continue
+
+        if quote:
+            if escaped:
+                escaped = False
+            elif ch == "\\":
+                escaped = True
+            elif ch == quote:
+                quote = None
+            i += 1
+            continue
+
+        if ch == "-" and nxt == "-":
+            if text[i + 2 : i + 4] == "[[":
+                block_comment = True
+                i += 4
+            else:
+                line_comment = True
+                i += 2
+            continue
+
+        if ch in ("'", '"'):
+            quote = ch
+        elif ch in "({[":
+            depth += 1
+        elif ch in ")}]":
+            depth -= 1
+        elif ch == "," and depth == 0:
+            return i
+        i += 1
+
+    return None
+
+
+def parse_language_field(body: str, block_start: int, offset: int, stripped_line: str, lang: str) -> Field:
+    indent = re.match(r"^[ \t]*", stripped_line).group(0)
+    if lang != '["zh-tw"]':
+        return Field(
+            indent=indent,
+            value="",
+            line_start=block_start + offset,
+            line_end=block_start + line_end(body, offset),
+            line=stripped_line,
+        )
+
+    line_start = offset
+    assignment = re.match(r'^[ \t]*\["zh-tw"\]\s*=\s*', stripped_line)
+    if not assignment:
+        raise ValueError(f"invalid zh-tw assignment: {stripped_line}")
+
+    value_start = line_start + assignment.end()
+    value_end = find_field_value_end(body, value_start, len(body))
+    if value_end is None:
+        raise ValueError(f"cannot find terminating comma for zh-tw assignment: {stripped_line}")
+
+    return Field(
+        indent=indent,
+        value=body[value_start:value_end].rstrip(),
+        line_start=block_start + line_start,
+        line_end=block_start + line_end(body, value_end),
+        line=body[line_start:line_end(body, value_end)].rstrip("\r\n"),
+    )
+
+
 def direct_language_fields(text: str, block_start: int, block_end: int) -> dict[str, Field]:
     body = text[block_start:block_end]
     depths = depth_before_lines(body)
@@ -225,15 +313,7 @@ def direct_language_fields(text: str, block_start: int, block_end: int) -> dict[
             for lang in ("en", '["zh-cn"]', '["zh-tw"]'):
                 pattern = re.escape(lang) if lang.startswith("[") else rf"\b{lang}\b"
                 if re.match(rf"^[ \t]*{pattern}\s*=", stripped_newline):
-                    match = FIELD_RE.match(stripped_newline) if lang == '["zh-tw"]' else None
-                    value = match.group("value").rstrip() if match else ""
-                    fields[lang] = Field(
-                        indent=(match.group("indent") if match else re.match(r"^[ \t]*", stripped_newline).group(0)),
-                        value=value,
-                        line_start=block_start + offset,
-                        line_end=block_start + offset + len(raw_line),
-                        line=stripped_newline,
-                    )
+                    fields[lang] = parse_language_field(body, block_start, offset, stripped_newline, lang)
         offset += len(raw_line)
 
     return fields
