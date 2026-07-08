@@ -4,12 +4,12 @@ local localizations = {
 	mod_name = {
 		en = "Stimm Countdown",
 		ru = "Счётчик Стимма",
-		["zh-tw"] = "興奮劑CD顯示",
+		["zh-tw"] = "興奮劑倒數",
 	},
 	mod_description = {
 		en = "Shows stimm duration and cooldown timer for Hive Scum (Broker) class.",
 		ru = "Показывает таймер действия и перезарядки стимма для класса Hive Scum (Broker).",
-		["zh-tw"] = "為巢都敗類（經紀人）職業顯示興奮劑持續時間和冷卻計時器。",
+		["zh-tw"] = "顯示巢都渣子（代理）職業的興奮劑持續時間與冷卻計時器。",
 	},
 
 	display_group = {
@@ -25,7 +25,7 @@ local localizations = {
 	ready_timer_color_group = {
 		en = "Ready Timer Color",
 		ru = "Цвет таймера готовности",
-		["zh-tw"] = "準備就緒計時器顏色",
+		["zh-tw"] = "就緒計時器顏色",
 	},
 	active_timer_color_group = {
 		en = "Active Timer Color",
@@ -82,47 +82,47 @@ local localizations = {
 	show_decimals = {
 		en = "Show Decimals",
 		ru = "Показывать десятичные",
-		["zh-tw"] = "顯示小數點",
+		["zh-tw"] = "顯示小數",
 	},
 	show_decimals_tooltip = {
 		en = "Show time with decimal point (e.g. 12.5 instead of 13).",
 		ru = "Показывать время с десятичной точкой (например 12.5 вместо 13).",
-		["zh-tw"] = "顯示帶小數點的時間（例如12.5而不是13）。",
+		["zh-tw"] = "顯示含小數的時間（例如 12.5 而非 13）。",
 	},
 	show_ready_notification = {
 		en = "Notify when stimm is ready",
 		ru = "Уведомлять когда стим готов",
-		["zh-tw"] = "興奮劑準備好時通知",
+		["zh-tw"] = "興奮劑就緒時通知",
 	},
 	show_ready_notification_tooltip = {
 		en = "Show a notification when the stimm syringe is ready to use.",
 		ru = "Показывать уведомление когда стим готов к использованию.",
-		["zh-tw"] = "當興奮劑注射器準備好使用時顯示通知。",
+		["zh-tw"] = "當興奮劑注射器就緒可用時顯示通知。",
 	},
 	stimm_ready_notification = {
 		en = "Stimm ready",
 		ru = "Стим готов",
-		["zh-tw"] = "興奮劑已準備好",
+		["zh-tw"] = "興奮劑已就緒",
 	},
 	enable_ready_color_override = {
 		en = "Enable ready colors",
 		ru = "Включить цвета готовности",
-		["zh-tw"] = "啟用準備好顏色",
+		["zh-tw"] = "啟用就緒顏色",
 	},
 	enable_ready_color_override_tooltip = {
 		en = "Use custom colors for ready state timer and icon.",
 		ru = "Использовать свои цвета таймера и иконки в состоянии готовности.",
-		["zh-tw"] = "為準備好狀態計時器和圖標使用自定義顏色。",
+		["zh-tw"] = "為就緒狀態的計時器與圖示使用自訂顏色。",
 	},
 	ready_countdown_color = {
 		en = "Ready countdown color",
 		ru = "Цвет таймера (готов)",
-		["zh-tw"] = "準備好倒數計時顏色",
+		["zh-tw"] = "就緒倒數計時顏色",
 	},
 	ready_icon_color = {
 		en = "Ready icon color",
 		ru = "Цвет иконки (готов)",
-		["zh-tw"] = "準備好圖標顏色",
+		["zh-tw"] = "就緒圖示顏色",
 	},
 	enable_active_color_override = {
 		en = "Enable active colors",
@@ -132,7 +132,7 @@ local localizations = {
 	enable_active_color_override_tooltip = {
 		en = "Use custom colors for active timer and icon.",
 		ru = "Использовать свои цвета таймера и иконки в активности.",
-		["zh-tw"] = "為作用中計時器和圖標使用自定義顏色。",
+		["zh-tw"] = "為作用中計時器與圖示使用自訂顏色。",
 	},
 	active_countdown_color = {
 		en = "Active countdown color",
@@ -142,7 +142,7 @@ local localizations = {
 	active_icon_color = {
 		en = "Active icon color",
 		ru = "Цвет иконки (активен)",
-		["zh-tw"] = "作用中圖標顏色",
+		["zh-tw"] = "作用中圖示顏色",
 	},
 	enable_cooldown_color_override = {
 		en = "Enable cooldown colors",
@@ -152,7 +152,7 @@ local localizations = {
 	enable_cooldown_color_override_tooltip = {
 		en = "Use custom colors for cooldown timer and icon.",
 		ru = "Использовать свои цвета таймера и иконки в перезарядке.",
-		["zh-tw"] = "為冷卻計時器和圖標使用自定義顏色。",
+		["zh-tw"] = "為冷卻計時器與圖示使用自訂顏色。",
 	},
 	cooldown_countdown_color = {
 		en = "Cooldown countdown color",
@@ -162,7 +162,7 @@ local localizations = {
 	cooldown_icon_color = {
 		en = "Cooldown icon color",
 		ru = "Цвет иконки (перезарядка)",
-		["zh-tw"] = "冷卻圖標顏色",
+		["zh-tw"] = "冷卻圖示顏色",
 	},
 	enable_notification_color_override = {
 		en = "Enable notification colors",
@@ -172,7 +172,7 @@ local localizations = {
 	enable_notification_color_override_tooltip = {
 		en = "Use custom colors for ready notification.",
 		ru = "Использовать свои цвета для уведомления о готовности.",
-		["zh-tw"] = "為準備好通知使用自定義顏色。",
+		["zh-tw"] = "為就緒通知使用自訂顏色。",
 	},
 	notification_line_color = {
 		en = "Notification border color",
@@ -182,7 +182,7 @@ local localizations = {
 	notification_icon_color = {
 		en = "Notification icon color",
 		ru = "Цвет иконки уведомления",
-		["zh-tw"] = "通知圖標顏色",
+		["zh-tw"] = "通知圖示顏色",
 	},
 	notification_background_color = {
 		en = "Notification background color",
@@ -197,12 +197,12 @@ local localizations = {
 	default_ready_color_option = {
 		en = "Default (ready timer)",
 		ru = "По умолчанию (таймер готовности)",
-		["zh-tw"] = "預設（準備好計時器）",
+		["zh-tw"] = "預設（就緒計時器）",
 	},
 	default_ready_icon_option = {
 		en = "Default (ready icon)",
 		ru = "По умолчанию (иконка готовности)",
-		["zh-tw"] = "預設（準備好圖標）",
+		["zh-tw"] = "預設（就緒圖示）",
 	},
 	default_active_color_option = {
 		en = "Default (active timer)",
@@ -212,7 +212,7 @@ local localizations = {
 	default_active_icon_option = {
 		en = "Default (active icon)",
 		ru = "По умолчанию (иконка активности)",
-		["zh-tw"] = "預設（作用中圖標）",
+		["zh-tw"] = "預設（作用中圖示）",
 	},
 	default_cooldown_color_option = {
 		en = "Default (cooldown timer)",
@@ -222,7 +222,7 @@ local localizations = {
 	default_cooldown_icon_option = {
 		en = "Default (cooldown icon)",
 		ru = "По умолчанию (иконка перезарядки)",
-		["zh-tw"] = "預設（冷卻圖標）",
+		["zh-tw"] = "預設（冷卻圖示）",
 	},
 	default_notification_line_option = {
 		en = "Default (notification border)",
@@ -232,7 +232,7 @@ local localizations = {
 	default_notification_icon_option = {
 		en = "Default (notification icon)",
 		ru = "По умолчанию (иконка уведомления)",
-		["zh-tw"] = "預設（通知圖標）",
+		["zh-tw"] = "預設（通知圖示）",
 	},
 	default_notification_background_option = {
 		en = "Default (notification background)",
@@ -277,27 +277,27 @@ local localizations = {
 	enable_ready_sound = {
 		en = "Enable ready sound",
 		ru = "Включить звук готовности",
-		["zh-tw"] = "啟用準備就緒音效",
+		["zh-tw"] = "啟用就緒音效",
 	},
 	enable_ready_sound_tooltip = {
 		en = "Play a sound when the stimm syringe becomes ready to use.",
 		ru = "Воспроизводить звук когда стим становится готовым к использованию.",
-		["zh-tw"] = "當興奮劑注射器準備好使用時播放音效。",
+		["zh-tw"] = "當興奮劑注射器就緒可用時播放音效。",
 	},
 	ready_sound_event = {
 		en = "Ready sound",
 		ru = "Звук готовности",
-		["zh-tw"] = "準備就緒音效",
+		["zh-tw"] = "就緒音效",
 	},
 	sound_option_hud_coherency_on = {
 		en = "HUD coherency on",
 		ru = "HUD когерентность включена",
-		["zh-tw"] = "HUD 凝聚力開啟",
+		["zh-tw"] = "HUD 協同開啟",
 	},
 	sound_option_hud_coherency_off = {
 		en = "HUD coherency off",
 		ru = "HUD когерентность выключена",
-		["zh-tw"] = "HUD 凝聚力關閉",
+		["zh-tw"] = "HUD 協同關閉",
 	},
 
 	sound_option_hud_heal = {
@@ -348,7 +348,7 @@ local localizations = {
 	sound_option_indicator_crit = {
 		en = "Indicator crit",
 		ru = "Индикатор крита",
-		["zh-tw"] = "爆擊指示器",
+		["zh-tw"] = "致命一擊指示器",
 	},
 	sound_option_indicator_weakspot = {
 		en = "Indicator weakspot",
