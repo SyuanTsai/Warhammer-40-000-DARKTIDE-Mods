@@ -11,7 +11,7 @@ local localizations = {
 	mod_description = {
 		["en"] = "Shows colored rings for Mauler overhead attacks. Yellow for warning, Red for the actual attack. Optional persistent yellow ring. Version: " .. version,
 		["zh-cn"] = "显示屠杀者重击攻击的彩色指示环 - 黄色为警告，红色为实际攻击。可选常驻黄色环。版本：" .. version,
-        ["zh-tw"] = "顯示重錘兵頭頂攻擊的攻擊區域 - 黃色為警戒，紅色為實際攻擊。可選常駐警戒區域。版本：" .. version,
+        ["zh-tw"] = "顯示重錘兵過頂攻擊的攻擊區域。黃色代表警告，紅色代表實際攻擊。可選擇常駐黃色指示環。版本：" .. version,
 		["ru"] = "Показывает цветные кольца для атак Молотителя - Жёлтый для предупреждения, Красный для самой атаки. Опциональное постоянное жёлтое кольцо. Версия: " .. version,
 	},
     enabled = {
@@ -23,31 +23,31 @@ local localizations = {
     persistent_yellow = {
         ["en"] = "Always Show Yellow Ring", 
         ["zh-cn"] = "始终显示黄色环",
-        ["zh-tw"] = "始終顯示警戒區域",
+        ["zh-tw"] = "永遠顯示黃色範圍",
         ["ru"] = "Всегда показывать жёлтое кольцо",
     },
     persistent_yellow_tooltip = {
         ["en"] = "Show yellow ring around maulers at all times (not just during attacks)",
         ["zh-cn"] = "始终在屠杀者周围显示黄色环（不仅限于攻击期间）",
-        ["zh-tw"] = "始終在重錘兵周圍顯示警戒區域（不僅限於攻擊期間）",
+        ["zh-tw"] = "永遠在重錘兵周圍顯示黃色範圍（不僅限於攻擊期間）",
         ["ru"] = "Показывать жёлтое кольцо вокруг молотителей постоянно (не только во время атак)",
     },
     ring_radius = {
         ["en"] = "Ring Radius",
         ["zh-cn"] = "指示环半径", 
-        ["zh-tw"] = "攻擊半徑",
+        ["zh-tw"] = "指示環半徑",
         ["ru"] = "Радиус кольца",
     },
     ring_radius_tooltip = {
         ["en"] = "Radius of the indicator rings",
         ["zh-cn"] = "指示环的半径大小",
-        ["zh-tw"] = "攻擊區域的半徑大小",
+        ["zh-tw"] = "指示環的半徑大小",
         ["ru"] = "Радиус индикаторных колец",
     },
     warning_settings = {
         ["en"] = "Yellow Warning Ring Settings",
         ["zh-cn"] = "黄色警告环设置",
-        ["zh-tw"] = "警戒區域設定",
+        ["zh-tw"] = "黃色警告範圍設定",
         ["ru"] = "Настройки жёлтого предупреждающего кольца",
     },
     warning_color_red = {
@@ -59,7 +59,7 @@ local localizations = {
     warning_color_red_tooltip = {
         ["en"] = "Yellow Warning - Red Component",
         ["zh-cn"] = "黄色警告 - 红色分量",
-        ["zh-tw"] = "警戒區域 - 紅色分量",
+        ["zh-tw"] = "黃色警告 - 紅色分量",
         ["ru"] = "Жёлтое предупреждение - Красная составляющая",
     },
     warning_color_green = {
@@ -71,7 +71,7 @@ local localizations = {
     warning_color_green_tooltip = {
         ["en"] = "Yellow Warning - Green Component",
         ["zh-cn"] = "黄色警告 - 绿色分量", 
-        ["zh-tw"] = "警戒區域 - 綠色分量",
+        ["zh-tw"] = "黃色警告 - 綠色分量",
         ["ru"] = "Жёлтое предупреждение - Зелёная составляющая",
     },
     warning_color_blue = {
@@ -83,7 +83,7 @@ local localizations = {
     warning_color_blue_tooltip = {
         ["en"] = "Yellow Warning - Blue Component",
         ["zh-cn"] = "黄色警告 - 蓝色分量",
-        ["zh-tw"] = "警戒區域 - 藍色分量",
+        ["zh-tw"] = "黃色警告 - 藍色分量",
         ["ru"] = "Жёлтое предупреждение - Синяя составляющая",
     },
     warning_color_alpha = {
@@ -95,13 +95,13 @@ local localizations = {
     warning_color_alpha_tooltip = {
         ["en"] = "Yellow Warning - Opacity",
         ["zh-cn"] = "黄色警告 - 不透明度",
-        ["zh-tw"] = "警戒區域 - 不透明度",
+        ["zh-tw"] = "黃色警告 - 不透明度",
         ["ru"] = "Жёлтое предупреждение - Прозрачность",
     },
     attack_settings = {
         ["en"] = "Red Attack Ring Settings", 
         ["zh-cn"] = "红色攻击环设置",
-        ["zh-tw"] = "攻擊區域設定",
+        ["zh-tw"] = "紅色攻擊範圍設定",
         ["ru"] = "Настройки красного атакующего кольца",
     },
     attack_color_red = {
@@ -113,7 +113,7 @@ local localizations = {
     attack_color_red_tooltip = {
         ["en"] = "Red Attack - Red Component",
         ["zh-cn"] = "红色攻击 - 红色分量",
-        ["zh-tw"] = "攻擊區域 - 紅色分量",
+        ["zh-tw"] = "紅色攻擊 - 紅色分量",
         ["ru"] = "Красная атака - Красная составляющая",
     },
     attack_color_green = {
@@ -125,7 +125,7 @@ local localizations = {
     attack_color_green_tooltip = {
         ["en"] = "Red Attack - Green Component", 
         ["zh-cn"] = "红色攻击 - 绿色分量",
-        ["zh-tw"] = "攻擊區域 - 綠色分量",
+        ["zh-tw"] = "紅色攻擊 - 綠色分量",
         ["ru"] = "Красная атака - Зелёная составляющая",
     },
     attack_color_blue = {
@@ -137,7 +137,7 @@ local localizations = {
     attack_color_blue_tooltip = {
         ["en"] = "Red Attack - Blue Component",
         ["zh-cn"] = "红色攻击 - 蓝色分量", 
-        ["zh-tw"] = "攻擊區域 - 藍色分量",
+        ["zh-tw"] = "紅色攻擊 - 藍色分量",
         ["ru"] = "Красная атака - Синяя составляющая",
     },
     attack_color_alpha = {
@@ -149,7 +149,7 @@ local localizations = {
     attack_color_alpha_tooltip = {
         ["en"] = "Red Attack - Opacity",
         ["zh-cn"] = "红色攻击 - 不透明度",
-        ["zh-tw"] = "攻擊區域 - 不透明度",
+        ["zh-tw"] = "紅色攻擊 - 不透明度",
         ["ru"] = "Красная атака - Прозрачность",
     },
 }
