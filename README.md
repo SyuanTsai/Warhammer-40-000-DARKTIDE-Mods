@@ -203,9 +203,9 @@
 ### [Loadout Monitor](https://www.nexusmods.com/warhammer40kdarktide/mods/160)
     載入中顯示隊友武器
 - MOD 網站最後更新日期：Last updated 09 July 2026, 5:36PM
-- MOD 版本：1.8.01
+- MOD 版本：1.9.1
 - MOD 檔案名稱：Loadout Monitor-160-1-8-01-1764944780
-- 手動維護最後下載日期：2025-12-06
+- 手動維護最後下載日期：2026-07-09
 
 ### [Quick Look Card](https://www.nexusmods.com/warhammer40kdarktide/mods/142)
     快速資訊卡 可以快速取得武器的五維
@@ -535,10 +535,10 @@
 
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
     記分板
-- MOD 網站最後更新日期：Last updated 09 July 2026, 12:04AM
-- MOD 版本：0.4.12
-- MOD 檔案名稱：CombatStats 661 0.4.12 2026-07-08T16-04Z UszQnsmkm
-- 手動維護最後下載日期：2026-07-09
+- MOD 網站最後更新日期：Last updated 09 July 2026, 9:00PM
+- MOD 版本：0.4.13
+- MOD 檔案名稱：CombatStats 661 0.4.13 2026-07-09T13-00Z 5gEeTgD8H
+- 手動維護最後下載日期：2026-07-10
 
 ### [CharacterGrid](https://www.nexusmods.com/warhammer40kdarktide/mods/649)
     角色顯示
