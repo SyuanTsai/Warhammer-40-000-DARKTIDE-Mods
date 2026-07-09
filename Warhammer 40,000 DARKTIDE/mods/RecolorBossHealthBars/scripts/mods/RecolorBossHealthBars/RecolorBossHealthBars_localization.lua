@@ -17,7 +17,7 @@ local loc = {
 	color_hex_dh = {
 		en = "Hexbound Daemonhost",
 		["zh-cn"] = "咒缚恶魔宿主",
-		["zh-tw"] = "魔咒惡魔宿主",
+		["zh-tw"] = "魔縛惡魔宿主",
 	},
 	color_captain = {
 		en = "Captains",

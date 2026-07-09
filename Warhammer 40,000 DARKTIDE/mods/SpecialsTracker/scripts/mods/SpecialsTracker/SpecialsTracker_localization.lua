@@ -581,12 +581,12 @@ overlay_name_sets.short = {
     chaos_ogryn_houndmaster = {
         en = "PACK",
         -- Need loc
-        ["zh-tw"] = "馴犬",
+        ["zh-tw"] = "獸領",
     },
     chaos_ogryn_houndmaster_wk = {
         en = "PACK*",
         -- Need loc
-        ["zh-tw"] = "馴犬*",
+        ["zh-tw"] = "獸領*",
     },
     chaos_armored_hound = {
         en = "A-HND",
@@ -625,8 +625,8 @@ overlay_name_sets.short = {
     },
     chaos_mutator_daemonhost = {
         en = "HEX DH",
-        ["zh-cn"] = "咒缚宿主",
-        ["zh-tw"] = "咒縛宿主",
+        ["zh-cn"] = "魔缚宿主",
+        ["zh-tw"] = "魔縛",
     },
     renegade_captain = {
         en = "CAPN",
@@ -699,12 +699,12 @@ overlay_name_sets.long = {
     chaos_ogryn_houndmaster = {
         en = "PACKMST",
         -- Need loc
-        ["zh-tw"] = "馴犬師",
+        ["zh-tw"] = "獸群領主",
     },
     chaos_ogryn_houndmaster_wk = {
         en = "PACKMST*",
         -- Need loc
-        ["zh-tw"] = "馴犬師*",
+        ["zh-tw"] = "獸群領主*",
     },
     chaos_armored_hound = {
         en = "ARM-HND",
@@ -719,12 +719,12 @@ overlay_name_sets.long = {
     chaos_plague_ogryn = {
         en = "OGRYN",
         ["zh-cn"] = "瘟疫欧",
-        ["zh-tw"] = "瘟疫歐格林",
+        ["zh-tw"] = "歐格林",
     },
     chaos_plague_ogryn_wk = {
         en = "OGRYN*",
         ["zh-cn"] = "瘟疫欧*",
-        ["zh-tw"] = "瘟疫歐格林*",
+        ["zh-tw"] = "歐格林*",
     },
     chaos_spawn = {
         en = "SPAWN",
@@ -743,8 +743,8 @@ overlay_name_sets.long = {
     },
     chaos_mutator_daemonhost = {
         en = "HEX DHOST",
-        ["zh-cn"] = "咒缚宿主",
-        ["zh-tw"] = "魔缚惡魔宿主",
+        ["zh-cn"] = "魔缚宿主",
+        ["zh-tw"] = "魔縛惡魔宿主",
     },
     renegade_captain = {
         en = "CAPTAIN",
@@ -754,7 +754,7 @@ overlay_name_sets.long = {
     renegade_twin_captain = {
         en = "TWINS",
         ["zh-cn"] = "双子",
-        ["zh-tw"] = "雙子隊長",
+        ["zh-tw"] = "雙子",
     },
 }
 
@@ -817,12 +817,12 @@ overlay_name_sets.full = {
     chaos_ogryn_houndmaster = {
         en = "PackMaster",
         -- Need loc
-        ["zh-tw"] = "馴犬師",
+        ["zh-tw"] = "獸群領主",
     },
     chaos_ogryn_houndmaster_wk = {
         en = "PackMaster*",
         -- Need loc
-        ["zh-tw"] = "馴犬師*",
+        ["zh-tw"] = "獸群領主*",
     },
     chaos_armored_hound = {
         en = "Arm. Hound",
@@ -861,7 +861,7 @@ overlay_name_sets.full = {
     },
     chaos_mutator_daemonhost = {
         en = "Hex Daemonhost",
-        ["zh-cn"] = "咒缚恶魔宿主",
+        ["zh-cn"] = "魔缚恶魔宿主",
         ["zh-tw"] = "魔縛惡魔宿主",
     },
     renegade_captain = {
@@ -1065,13 +1065,13 @@ loc_raw.mod_ui["chaos_beast_of_nurgle_wk_notif_name"] = {
 loc_raw.mod_ui["chaos_ogryn_houndmaster_notif_name"] = {
     en = "PACKMASTER",
         -- Need loc
-    ["zh-tw"] = "馴犬師",
+    ["zh-tw"] = "獸群領主",
 }
 
 loc_raw.mod_ui["chaos_ogryn_houndmaster_wk_notif_name"] = {
     en = "PACKMASTER (Weak)",
         -- Need loc
-    ["zh-tw"] = "馴犬師（虛弱）",
+    ["zh-tw"] = "獸群領主*",
 }
 
 -- Armored Hound - Other locs
@@ -1128,7 +1128,7 @@ loc_raw.mod_ui["chaos_daemonhost_notif_name"] = {
 
 loc_raw.mod_ui["chaos_mutator_daemonhost_notif_name"] = {
     en = "HEXBOUND DAEMONHOST",
-    ["zh-cn"] = "咒缚恶魔宿主",
+    ["zh-cn"] = "魔缚恶魔宿主",
     ["zh-tw"] = "魔縛惡魔宿主",
 }
 
