@@ -8,9 +8,9 @@ return {
 
 	decode_symbols_group      = { en = "Decode Symbols", ["zh-tw"] = "符號解碼" },
 	enable_decode_highlight   = { en = "Highlight Solution", ["zh-tw"] = "標示解答" },
-	enable_decode_highlight_tooltip = { en = "Highlights the correct columns for upcoming rows.", ["zh-tw"] = "標示接下來列數的正確欄位。" },
+	enable_decode_highlight_tooltip = { en = "Highlights the correct columns for upcoming rows.", ["zh-tw"] = "標示接下來列的正確欄位。" },
 	enable_decode_auto        = { en = "Auto-Solve", ["zh-tw"] = "自動解題" },
-	enable_decode_auto_tooltip = { en = "Automatically press interact when the cursor is on target. Reliable in testing up to ~265ms ping.", ["zh-tw"] = "游標在目標上時自動按下互動鍵。測試中在最高約 265ms ping 時仍可靠。" },
+	enable_decode_auto_tooltip = { en = "Automatically press interact when the cursor is on target. Reliable in testing up to ~265ms ping.", ["zh-tw"] = "游標位於目標上時自動按下互動鍵。測試中在最高約 265ms ping 時仍可靠。" },
 
 	matching_group            = { en = "Decode Search (Matching)", ["zh-tw"] = "搜尋解碼（配對）" },
 	enable_matching              = { en = "Highlight Match", ["zh-tw"] = "標示配對" },
@@ -24,7 +24,7 @@ return {
 	enable_scan               = { en = "Mark Scannable Objects", ["zh-tw"] = "標記可掃描物件" },
 	enable_scan_tooltip       = { en = "Applies outline and highlight to scannable objects during auspex scanning.", ["zh-tw"] = "使用占卜儀掃描時，為可掃描物件套用輪廓與標示。" },
 	enable_auto_scan          = { en = "Auto-Scan", ["zh-tw"] = "自動掃描" },
-	enable_auto_scan_tooltip  = { en = "Automatically holds the scan action when close enough for the 1 second scan.", ["zh-tw"] = "距離足以進行 1 秒掃描時，自動按住掃描動作。" },
+	enable_auto_scan_tooltip  = { en = "Automatically holds the scan action when close enough for the 1 second scan.", ["zh-tw"] = "距離足以完成 1 秒掃描時，自動按住掃描動作。" },
 
 	balance_group             = { en = "Train (Balance)", ["zh-tw"] = "列車（平衡）" },
 	enable_balance            = { en = "Auto-Balance", ["zh-tw"] = "自動平衡" },
@@ -42,7 +42,7 @@ return {
 
 	drill_group               = { en = "Tree (Drill)", ["zh-tw"] = "樹狀圖（鑽探）" },
 	enable_drill              = { en = "Highlight Correct Target", ["zh-tw"] = "標示正確目標" },
-	enable_drill_tooltip      = { en = "Shows which node is the correct one by highlighting it white.", ["zh-tw"] = "將正確節點標示為白色來顯示目標。" },
+	enable_drill_tooltip      = { en = "Shows which node is the correct one by highlighting it white.", ["zh-tw"] = "將正確節點標示為白色。" },
 	enable_drill_auto         = { en = "Auto-Solve", ["zh-tw"] = "自動解題" },
 	enable_drill_auto_tooltip = { en = "Automatically moves to the correct node and submits.", ["zh-tw"] = "自動移至正確節點並提交。" },
 	drill_solve_speed         = { en = "Auto-Solve Speed", ["zh-tw"] = "自動解題速度" },
@@ -55,6 +55,8 @@ return {
 	expedition_automark_silent_tooltip = { en = "Suppress chat messages when a POI is auto-marked.", ["zh-tw"] = "自動標記 POI 時隱藏聊天訊息。" },
 	enable_expedition_automark_vault     = { en = "Always mark the Vault automatically when all POI are finished", ["zh-tw"] = "所有 POI 完成後一律自動標記寶庫" },
 	enable_expedition_automark_vault_tooltip = { en = "When all opportunities are completed, automatically mark the nearest exit/vault.", ["zh-tw"] = "所有機會點完成後，自動標記最近的出口/寶庫。" },
+	enable_expedition_automark_extraction     = { en = "Mark extraction when no Vault exists", ["zh-tw"] = "沒有寶庫時標記撤離點" },
+	enable_expedition_automark_extraction_tooltip = { en = "When all opportunities are completed and there is no exit/vault to mark, automatically mark the extraction point instead.", ["zh-tw"] = "所有機會點完成且沒有可標記的出口/寶庫時，改為自動標記撤離點。" },
 
 	practice_group                    = { en = "Practice Mode", ["zh-tw"] = "練習模式" },
 	enable_practice                   = { en = "Enable Practice Mode", ["zh-tw"] = "啟用練習模式" },

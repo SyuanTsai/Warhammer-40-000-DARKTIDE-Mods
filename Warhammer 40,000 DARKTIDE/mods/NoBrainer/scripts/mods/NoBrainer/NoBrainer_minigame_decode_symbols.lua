@@ -72,21 +72,26 @@ end
 mod:hook_require("scripts/ui/views/scanner_display_view/minigame_decode_symbols_view", function(View)
 	mod:hook_safe(View, "draw_widgets", function(self, dt, t, input_service, ui_renderer)
 		if not S("enable_decode_highlight") then return end
-		if mod._practice_active and mod._practice_active() then return end
-		_deps()
-		local ext = self._minigame_extension; if not ext then return end
-		local mg = ext:minigame(MinigameSettings.types.decode_symbols); if not mg then return end
-		local targets = mg._decode_targets
+			if mod._practice_active and mod._practice_active() then return end
+			_deps()
+			local ext = self._minigame_extension
+			if not ext then return end
+
+			local mg = ext:minigame(MinigameSettings.types.decode_symbols)
+			if not mg then return end
+
+			local targets = mg._decode_targets
 		if not targets or #targets == 0 then return end
 
 		local stage = mg:current_stage()
 		if not stage then return end
 		local limit = math.min(#targets, stage + 3)
-		local count = limit - stage
-		if count <= 0 then
-			self._nb_dh = nil; self._nb_dh_size = nil
-			return
-		end
+			local count = limit - stage
+			if count <= 0 then
+				self._nb_dh = nil
+                self._nb_dh_size = nil
+				return
+			end
 
 		local layout = _decode_layout(mg)
 		local ws = layout.widget_size
@@ -117,24 +122,72 @@ local PRIMARY_HOLD_ACTIONS = {
 	jump_held = true,
 }
 
-mod._ds_mg = nil
-mod._ds_state_mg = nil
 mod._ds_submitted_stage = nil
 mod._ds_submitted_until = 0
 mod._ds_press_until = 0
 mod._ds_release_until = 0
 local decode_active = false
 local decode_completed = false
+local looks_like_decode_symbols
+
+local function reset_snapshot()
+	local ds = mod._ds
+	ds.timer = 0
+	ds.active = false
+	ds.completed = false
+	ds.server = false
+	ds.stage = nil
+	ds.start_time = nil
+	ds.target = nil
+	ds.items_per_stage = nil
+	ds.sweep_duration = nil
+	ds.key = nil
+end
+
+local function sample_decode_symbols(minigame)
+	local ds = mod._ds
+	if not ds then return end
+	local key = minigame and tostring(minigame) or nil
+
+	if key and ds.key and ds.key ~= key then
+		mod._ds_submitted_stage = nil
+		mod._ds_submitted_until = 0
+		mod._ds_press_until = 0
+		mod._ds_release_until = 0
+	end
+
+	if not looks_like_decode_symbols(minigame) then
+		reset_snapshot()
+		return
+	end
+
+	local stage = minigame.current_stage and minigame:current_stage() or minigame._current_stage
+	local targets = minigame._decode_targets
+	ds.timer = 0.075
+	ds.active = true
+	ds.completed = minigame.is_completed and minigame:is_completed() == true or false
+	ds.server = minigame._is_server == true
+	ds.stage = stage
+	ds.start_time = minigame.start_time and minigame:start_time() or minigame._decode_start_time
+	ds.target = targets and stage and targets[stage] or nil
+	ds.items_per_stage = minigame._decode_symbols_items_per_stage
+	ds.sweep_duration = minigame._decode_symbols_sweep_duration
+	ds.key = key
+end
+
+local function is_active_decode_symbols(minigame)
+	local ds = mod._ds
+	return decode_active and ds and ds.key == tostring(minigame)
+end
 
 local function ds_reset(reason)
 	if decode_active and reason then
-		mod._debug_event("decode", reason, { stage = mod._ds_state_mg and mod._ds_state_mg._current_stage or mod._ds_submitted_stage })
+		mod._debug_event("decode", reason, { stage = mod._ds and mod._ds.stage or mod._ds_submitted_stage })
 	end
 
 	decode_active = false
 	decode_completed = reason == "complete"
-	mod._ds_mg = nil
-	mod._ds_state_mg = nil
+	reset_snapshot()
 	mod._ds_submitted_stage = nil
 	mod._ds_submitted_until = 0
 	mod._ds_press_until = 0
@@ -168,22 +221,21 @@ local function next_center_delta(mg, now, start_time, target, margin)
 end
 
 local function should_press_decode(now)
-	local mg = mod._ds_mg
-	if not mg then
+	local ds = mod._ds
+	if not ds or ds.timer <= 0 or not ds.active then
 		mod._debug_event_throttle("decode_no_mg_event", 1.5, "decode", "wait", { reason = "no_minigame" })
 		return false
 	end
-	if mg:is_completed() then
-		mod._debug_event_change("decode_completed", true, "decode", "wait", { reason = "completed", stage = mg._current_stage })
+	if ds.completed then
+		mod._debug_event_change("decode_completed", true, "decode", "wait", { reason = "completed", stage = ds.stage })
 		return false
 	end
 
-	local stage = mg:current_stage()
-	local start_time = mg:start_time()
-	local targets = mg._decode_targets
-	local target = targets and targets[stage]
-	local items_per_stage = mg._decode_symbols_items_per_stage
-	local sweep_duration = mg._decode_symbols_sweep_duration
+	local stage = ds.stage
+	local start_time = ds.start_time
+	local target = ds.target
+	local items_per_stage = ds.items_per_stage
+	local sweep_duration = ds.sweep_duration
 
 	if not stage or not start_time or not target
 		or not items_per_stage or items_per_stage <= 1
@@ -191,7 +243,7 @@ local function should_press_decode(now)
 		mod._debug_event_throttle("decode_missing_fields_event", 1.5, "decode", "wait", {
 			items = debug_value(items_per_stage),
 			reason = "missing_fields",
-			server = mg._is_server,
+			server = ds.server,
 			stage = debug_value(stage),
 			start = debug_value(start_time),
 			sweep = debug_value(sweep_duration),
@@ -213,19 +265,19 @@ local function should_press_decode(now)
 	end
 
 	local margin = sweep_duration / (items_per_stage - 1)
-	local delta = next_center_delta(mg, now, start_time, target, margin)
+	local delta = next_center_delta({ _decode_symbols_sweep_duration = sweep_duration }, now, start_time, target, margin)
 
 	if not delta or delta > PRESS_LEAD or delta < -PRESS_GRACE then
 		mod._debug_event_throttle("decode_delta_event", 1.0, "decode", "wait", { delta = debug_value(delta), max = PRESS_LEAD, min = -PRESS_GRACE, reason = "outside_window", stage = stage, target = target })
 		return false
 	end
 
-	mod._debug_event("decode", "press_window", { delta = delta, max = PRESS_LEAD, min = -PRESS_GRACE, server = mg._is_server, stage = stage, target = target, window = "synthetic_press" })
+	mod._debug_event("decode", "press_window", { delta = delta, max = PRESS_LEAD, min = -PRESS_GRACE, server = ds.server, stage = stage, target = target, window = "synthetic_press" })
 	return true
 end
 
 local function submit_decode(now)
-	local stage = mod._ds_mg and mod._ds_mg:current_stage()
+	local stage = mod._ds and mod._ds.stage
 	mod._ds_submitted_stage = stage
 	mod._ds_submitted_until = now + SUBMIT_TIMEOUT
 	mod._ds_press_until = now + PRESS_DURATION
@@ -233,7 +285,7 @@ local function submit_decode(now)
 	mod._debug_event("decode", "submit_state", { press_until = mod._ds_press_until, release_until = mod._ds_release_until, stage = stage, submitted_until = mod._ds_submitted_until })
 end
 
-local function looks_like_decode_symbols(minigame)
+looks_like_decode_symbols = function(minigame)
 	return minigame
 		and minigame._decode_symbols_sweep_duration ~= nil
 		and minigame._decode_symbols_items_per_stage ~= nil
@@ -242,7 +294,8 @@ end
 
 function mod._ds_input(action, result)
 	if not S("enable_decode_auto") then return result end
-	if not mod._ds_state_mg then return result end
+	local ds = mod._ds
+	if not ds or ds.timer <= 0 or not ds.active then return result end
 	if not PRIMARY_HOLD_ACTIONS[action] then return result end
 
 	local now = game_time()
@@ -273,20 +326,24 @@ mod:hook_safe("MinigameDecodeSymbols", "start", function(self, player)
 		mod._debug_event("decode", "start", { items = debug_value(self._decode_symbols_items_per_stage), server = self._is_server, stage = debug_value(self._current_stage), start = debug_value(self._decode_start_time), sweep = debug_value(self._decode_symbols_sweep_duration) })
 	end
 end)
-mod:hook_safe("MinigameDecodeSymbols", "stop",  function(self) if S("enable_decode_auto") and self == mod._ds_state_mg then ds_reset(decode_active and not decode_completed and "stop" or nil) end end)
-mod:hook_safe("MinigameDecodeSymbols", "complete", function(self) if S("enable_decode_auto") and self == mod._ds_state_mg then ds_reset("complete") end end)
+mod:hook_safe("MinigameDecodeSymbols", "stop", function(self)
+    if S("enable_decode_auto") and is_active_decode_symbols(self) then
+        ds_reset(not decode_completed and "stop" or nil)
+    end
+end)
+
+mod:hook_safe("MinigameDecodeSymbols", "complete", function(self)
+    if S("enable_decode_auto") and is_active_decode_symbols(self) then
+        ds_reset("complete")
+    end
+end)
 
 local function on_update(dt)
-	if not mod._ds_state_mg and mod._ds_submitted_until <= 0 then return end
+	local ds = mod._ds
+	if ds and ds.timer > 0 then ds.timer = math.max(ds.timer - dt, 0) end
+	if (not ds or ds.timer <= 0) and mod._ds_submitted_until <= 0 then return end
 
 	local now = game_time()
-	local mg = mod._ds_state_mg
-
-	if now and mg and mg._is_server and should_press_decode(now) then
-		submit_decode(now)
-		mod._debug_event("decode", "server_fallback", { stage = mg._current_stage })
-		mg:on_action_pressed(now)
-	end
 
 	if now and mod._ds_submitted_until > 0 and now >= mod._ds_submitted_until then
 		mod._debug_event("decode", "submit_timeout", { stage = mod._ds_submitted_stage })
@@ -324,14 +381,10 @@ local function hook_decode_state_input(PlayerCharacterStateMinigame)
 			return func(self, t, fixed_frame, input_extension)
 		end
 
-		if mod._ds_state_mg and mod._ds_state_mg ~= minigame then
-			ds_reset(decode_active and "minigame_changed" or nil)
-		end
-
-		decode_active = true
-		mod._ds_mg = minigame
-		mod._ds_state_mg = minigame
-		mod._debug_event_throttle("decode_state_hook_event", 1.5, "decode", "state", { held = debug_value(minigame._action_held), server = minigame._is_server, stage = debug_value(minigame._current_stage) })
+			decode_active = true
+			decode_completed = false
+			sample_decode_symbols(minigame)
+			mod._debug_event_throttle("decode_state_hook_event", 1.5, "decode", "state", { held = debug_value(minigame._action_held), server = minigame._is_server, stage = debug_value(minigame._current_stage) })
 
 		local action_one_hold = input_extension:get("action_one_hold")
 		local interact_hold = input_extension:get("interact_hold")

@@ -86,10 +86,18 @@ mod:hook_safe("MinigameBalanceView", "_update_cursor", function(self)
 	if not S("enable_balance") then return end
 	local ext = self._minigame_extension
 	local mg = ext and ext:minigame(MinigameSettings.types.balance)
-	if not mg then mod._debug_event_throttle("balance_no_mg_event", 1.5, "balance", "wait", { reason = "no_minigame" }); return end
+	if not mg then
+        mod._debug_event_throttle("balance_no_mg_event", 1.5, "balance", "wait", { reason = "no_minigame" })
+        return
+    end
+
 	if mg.is_completed and mg:is_completed() then return end
 	local state = mg.state and mg:state()
-	if state and state ~= MinigameSettings.game_states.gameplay then mod._debug_event_throttle("balance_not_gameplay_event", 1.5, "balance", "wait", { reason = "not_gameplay", state = state }); return end
+	if state and state ~= MinigameSettings.game_states.gameplay then
+        mod._debug_event_throttle("balance_not_gameplay_event", 1.5, "balance", "wait", { reason = "not_gameplay", state = state })
+        return
+    end
+
 	local p = mg:position()
 	st.x, st.y = p.x, p.y
 	st.dist = math.sqrt(p.x * p.x + p.y * p.y)
@@ -160,9 +168,21 @@ local function on_setting(id)
 	if id == "balance_solve_speed" then _apply_balance_profile() end
 	if id == "enable_balance" and not S("enable_balance") then _reset_balance_tracking() end
 end
-local function on_enabled() st.enabled = true; _apply_balance_profile() end
-local function on_disabled() balance_active = false; balance_completed = false; st.enabled = false; _reset_balance_tracking() end
-local function on_round_end() balance_active = false; balance_completed = false; _reset_balance_tracking() end
+local function on_enabled()
+	st.enabled = true
+	_apply_balance_profile()
+end
+local function on_disabled()
+	balance_active = false
+	balance_completed = false
+	st.enabled = false
+	_reset_balance_tracking()
+end
+local function on_round_end()
+	balance_active = false
+	balance_completed = false
+	_reset_balance_tracking()
+end
 
 mod._reg("update", on_update)
 mod._reg("setting_changed", on_setting)

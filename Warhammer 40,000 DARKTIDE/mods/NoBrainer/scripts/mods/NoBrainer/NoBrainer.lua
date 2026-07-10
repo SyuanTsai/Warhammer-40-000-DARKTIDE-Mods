@@ -4,12 +4,27 @@ local DEBUG_RATE_LIMIT = 100
 local DEBUG_RATE_WINDOW = 30
 
 local cache = {}
-mod._S = function(k) if cache[k] == nil then cache[k] = mod:get(k) end return cache[k] end
-mod._clear_cache = function() for k in pairs(cache) do cache[k] = nil end end
+
+mod._S = function(k)
+    if cache[k] == nil then
+        cache[k] = mod:get(k)
+    end
+
+    return cache[k]
+end
+
+mod._clear_cache = function()
+    for k in pairs(cache) do
+        cache[k] = nil
+    end
+end
+
 mod._debug_state = { throttle = {}, changes = {}, rate = { window_start = 0, count = 0, suppressed = false } }
 mod._time = function(clock)
 	local time_manager = Managers.time
-	if not time_manager then return nil end
+	if not time_manager then
+        return nil
+    end
 
 	local ok, value = pcall(time_manager.time, time_manager, clock or "gameplay")
 	return ok and value or nil
@@ -50,13 +65,21 @@ local function debug_rate_allows()
 end
 
 local function format_debug_value(value)
-	if value == nil then return "nil" end
-	if type(value) == "number" then return string.format("%.3f", value) end
+	if value == nil then
+        return "nil"
+    end
+
+	if type(value) == "number" then
+        return string.format("%.3f", value)
+    end
+
 	return tostring(value)
 end
 
 local function format_debug_fields(fields)
-	if type(fields) ~= "table" then return "" end
+	if type(fields) ~= "table" then
+        return ""
+    end
 
 	local keys = {}
 	for key in pairs(fields) do
@@ -74,13 +97,24 @@ local function format_debug_fields(fields)
 end
 
 mod._debug = function(tag, message)
-	if not mod._debug_enabled() then return end
-	if not debug_rate_allows() then return end
+	if not mod._debug_enabled() then
+        return
+    end
+
+	if not debug_rate_allows() then
+        return
+    end
+
 	mod:echo(string.format("[NB debug][%s] %s", tostring(tag or "general"), tostring(message or "")))
 end
 mod._debug_event = function(tag, event, fields)
-	if not mod._debug_enabled() then return end
-	if not debug_rate_allows() then return end
+	if not mod._debug_enabled() then
+        return
+    end
+
+	if not debug_rate_allows() then
+        return
+    end
 
 	local formatted = format_debug_fields(fields)
 	if formatted ~= "" then
@@ -90,47 +124,63 @@ mod._debug_event = function(tag, event, fields)
 	end
 end
 mod._debug_throttle = function(key, seconds, tag, message)
-	if not mod._debug_enabled() then return end
+	if not mod._debug_enabled() then
+        return
+    end
 
 	local now = debug_now()
 	local throttle = mod._debug_state.throttle
 	local next_at = throttle[key] or 0
 
-	if now < next_at then return end
+	if now < next_at then
+        return
+    end
 
 	throttle[key] = now + (seconds or 1)
 	mod._debug(tag, message)
 end
 mod._debug_event_throttle = function(key, seconds, tag, event, fields)
-	if not mod._debug_enabled() then return end
+	if not mod._debug_enabled() then
+        return
+    end
 
 	local now = debug_now()
 	local throttle = mod._debug_state.throttle
 	local next_at = throttle[key] or 0
 
-	if now < next_at then return end
+	if now < next_at then
+        return
+    end
 
 	throttle[key] = now + (seconds or 1)
 	mod._debug_event(tag, event, fields)
 end
 mod._debug_change = function(key, value, tag, message)
-	if not mod._debug_enabled() then return end
+	if not mod._debug_enabled() then
+        return
+    end
 
 	local changes = mod._debug_state.changes
 	local value_text = tostring(value)
 
-	if changes[key] == value_text then return end
+	if changes[key] == value_text then
+        return
+    end
 
 	changes[key] = value_text
 	mod._debug(tag, message or value_text)
 end
 mod._debug_event_change = function(key, value, tag, event, fields)
-	if not mod._debug_enabled() then return end
+	if not mod._debug_enabled() then
+        return
+    end
 
 	local changes = mod._debug_state.changes
 	local value_text = tostring(value)
 
-	if changes[key] == value_text then return end
+	if changes[key] == value_text then
+        return
+    end
 
 	changes[key] = value_text
 	mod._debug_event(tag, event, fields)
@@ -151,8 +201,13 @@ mod._N = function(k, fallback, min, max)
 		val = fallback or 0
 	end
 
-	if min and val < min then val = min end
-	if max and val > max then val = max end
+	if min and val < min then
+        val = min
+    end
+
+	if max and val > max then
+        val = max
+    end
 
 	return val
 end
@@ -179,7 +234,10 @@ end
 
 local callback_errors = {}
 local function _fire(list, ...)
-	if type(list) ~= "table" then return end
+	if type(list) ~= "table" then
+        return
+    end
+
 	for _, cb in ipairs(list) do
 		local ok, err = pcall(cb, ...)
 
@@ -190,7 +248,12 @@ local function _fire(list, ...)
 		end
 	end
 end
-mod._reg = function(ev, cb) mod["_on_" .. ev] = mod["_on_" .. ev] or {}; mod["_on_" .. ev][#mod["_on_" .. ev] + 1] = cb end
+
+mod._reg = function(ev, cb)
+    mod["_on_" .. ev] = mod["_on_" .. ev] or {}
+    mod["_on_" .. ev][#mod["_on_" .. ev] + 1] = cb
+end
+
 mod._is_local_minigame_player = function(player)
 	local player_manager = Managers.player
 	local local_player = player_manager and player_manager:local_player_safe(1)
@@ -203,24 +266,28 @@ local function _reset_runtime(reason)
 	_fire(mod._on_round_end, reason)
 end
 
-mod._exp_mg            = nil
-mod._exp_move_mg       = nil
+mod._exp = { timer = 0, active = false, gameplay = false, completed = false,
+	cursor_x = nil, cursor_y = nil, target_x = nil, target_y = nil,
+	dir_x = 0, dir_y = 0, on_target = false, stage = nil, key = nil }
 mod._exp_press_until   = 0
 mod._exp_release_until = 0
 mod._exp_move_cooldown = 0
 mod._exp_startup_delay = 0
 mod._exp_submitted_stage = nil
 mod._exp_submitted_until = 0
-mod._exp_press_cooldown = 0
 mod._exp_prev_cursor = nil
-mod._drill_mg            = nil
+mod._drill = { timer = 0, active = false, gameplay = false, searching = false,
+	cursor_x = nil, cursor_y = nil, target_x = nil, target_y = nil,
+	dir_x = 0, dir_y = 0, search = 0, on_target = false, stage = nil, target_index = nil, key = nil }
 mod._drill_cooldown      = 0
 mod._drill_press_until   = 0
 mod._drill_release_until = 0
 mod._drill_move_cooldown = 0
 mod._drill_startup_delay = 0
 mod._freq_startup_delay = 0
-mod._freq_mg            = nil
+mod._freq = { timer = 0, active = false, gameplay = false, completed = false,
+	current_x = nil, current_y = nil, target_x = nil, target_y = nil,
+	dir_x = 0, dir_y = 0, on_target = false, stage = nil, key = nil }
 mod._freq_cooldown      = 0
 mod._freq_last_stage    = 0
 mod._freq_reaction_until = 0
@@ -234,6 +301,8 @@ mod._scan_hold_until     = 0
 mod._scan_cooldown       = 0
 mod._scan_refresh_timer  = nil
 mod._current_action      = ""
+mod._ds = { timer = 0, active = false, completed = false, server = false,
+	stage = nil, start_time = nil, target = nil, items_per_stage = nil, sweep_duration = nil, key = nil }
 mod._bal = { timer = 0, enabled = false,
 	x = 0, y = 0, vx = 0, vy = 0, dist = 0,
 	prev_x = 0, prev_y = 0,
@@ -249,18 +318,48 @@ end
 
 for _, m in ipairs({
 	"decode_symbols", "decode_search", "expedition_map", "drill", "scan", "balance", "frequency",
-}) do _load("NoBrainer_minigame_" .. m) end
+}) do
+    _load("NoBrainer_minigame_" .. m)
+end
 
 _load("NoBrainer_input")
 _load("NoBrainer_practice_minigames")
 _load("NoBrainer_practice")
 
-mod.update                = function(dt) if mod:is_enabled() then _fire(mod._on_update, dt) end end
-mod.on_setting_changed     = function(id) mod._clear_cache(); if id == "enable_debug_messages" then mod._clear_debug_state() end; _fire(mod._on_setting_changed, id) end
-mod.on_enabled             = function() mod._clear_cache(); mod._clear_debug_state(); _fire(mod._on_enabled) end
-mod.on_disabled            = function() mod._clear_cache(); mod._clear_debug_state(); _fire(mod._on_disabled); _reset_runtime("disabled") end
+mod.update = function(dt)
+    if mod:is_enabled() then
+        _fire(mod._on_update, dt)
+    end
+end
+
+mod.on_setting_changed = function(id)
+    mod._clear_cache()
+
+    if id == "enable_debug_messages" then
+        mod._clear_debug_state()
+    end
+
+    _fire(mod._on_setting_changed, id)
+end
+
+mod.on_enabled = function()
+    mod._clear_cache()
+    mod._clear_debug_state()
+    _fire(mod._on_enabled)
+end
+
+mod.on_disabled = function()
+    mod._clear_cache()
+    mod._clear_debug_state()
+    _fire(mod._on_disabled)
+    _reset_runtime("disabled")
+end
+
 mod.on_game_state_changed = function(st, name)
-	if st == "exit" and name == "StateGameplay" then mod._clear_debug_state(); _reset_runtime("gameplay_exit") end
+	if st == "exit" and name == "StateGameplay" then
+        mod._clear_debug_state()
+        _reset_runtime("gameplay_exit")
+    end
 end
 mod.on_unload = function(exit_game)
 	_reset_runtime("unload")

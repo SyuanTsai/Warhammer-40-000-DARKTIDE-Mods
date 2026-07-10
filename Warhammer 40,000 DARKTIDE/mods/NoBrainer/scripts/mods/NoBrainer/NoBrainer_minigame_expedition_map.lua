@@ -58,6 +58,7 @@ end
 local function _registry_signature(handler)
 	return _registry_part(_call(handler, "get_registered_opportunities"), "o")
 		.. "|" .. _registry_part(_call(handler, "get_registered_exits"), "e")
+		.. "|" .. _registry_part(_call(handler, "get_registered_extractions"), "x")
 end
 
 local function _reset_readiness(reason)
@@ -75,8 +76,9 @@ end
 local function _target_exists(handler, level_index)
 	local opportunities = _call(handler, "get_registered_opportunities") or {}
 	local exits = _call(handler, "get_registered_exits") or {}
+	local extractions = _call(handler, "get_registered_extractions") or {}
 
-	return opportunities[level_index] ~= nil or exits[level_index] ~= nil
+	return opportunities[level_index] ~= nil or exits[level_index] ~= nil or extractions[level_index] ~= nil
 end
 
 local function _find_best(list, handler, player_pos)
@@ -208,9 +210,16 @@ local function _tick()
 
 	local nearest = _find_best(_call(handler, "get_registered_opportunities"), handler, pos)
 	local mark_reason = "nearest_poi"
-	if not nearest and S("enable_expedition_automark_vault") and _all_opps_done(handler) then
-		nearest = _find_best(_call(handler, "get_registered_exits"), handler, pos)
-		mark_reason = "vault"
+	if not nearest and _all_opps_done(handler) then
+		local exit = _find_best(_call(handler, "get_registered_exits"), handler, pos)
+
+		if exit and S("enable_expedition_automark_vault") then
+			nearest = exit
+			mark_reason = "vault"
+		elseif not exit and S("enable_expedition_automark_extraction") then
+			nearest = _find_best(_call(handler, "get_registered_extractions"), handler, pos)
+			mark_reason = "extraction"
+		end
 	end
 	if nearest then
 		if not _target_exists(handler, nearest) then
@@ -236,19 +245,18 @@ local function _tick()
 			return
 		end
 
-		local reason = mark_reason
-		mod._debug_event("expedition", "mark_attempt", { cooldown = MARK_COOLDOWN, reason = reason, slot = slot, target = nearest })
+		mod._debug_event("expedition", "mark_attempt", { cooldown = MARK_COOLDOWN, reason = mark_reason, slot = slot, target = nearest })
 		next_mark_at = now + MARK_COOLDOWN
 		cooldown_logged_until = 0
 		local impacted, assigned = _call(handler, "mark_level_by_player", nearest, player)
 		if impacted and assigned then
-			mod._debug_event("expedition", "mark_success", { assigned = assigned, impacted = impacted, reason = reason, target = nearest })
+			mod._debug_event("expedition", "mark_success", { assigned = assigned, impacted = impacted, reason = mark_reason, target = nearest })
 			mod._exp_auto_mark = nearest
 			if not S("expedition_automark_silent") then
-				mod:echo("NoBrainer: auto-marked nearest expedition POI")
+				mod:echo("NoBrainer: auto-marked nearest expedition " .. mark_reason)
 			end
 		else
-			mod._debug_event("expedition", "mark_failed", { assigned = assigned, impacted = impacted, reason = reason, target = nearest })
+			mod._debug_event("expedition", "mark_failed", { assigned = assigned, impacted = impacted, reason = mark_reason, target = nearest })
 		end
 	end
 end
