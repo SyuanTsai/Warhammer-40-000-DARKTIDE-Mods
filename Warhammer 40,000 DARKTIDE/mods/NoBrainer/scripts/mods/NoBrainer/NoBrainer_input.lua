@@ -40,8 +40,8 @@ end
 
 local function _exp_move(action, result, source)
 	if not S("enable_expedition_auto_solve") then return result end
-	local mg = mod._exp_move_mg
-	if not mg or not mg.cursor_position then return result end
+	local exp = mod._exp
+	if not exp or exp.timer <= 0 or not exp.active or not exp.gameplay then return result end
 	if (mod._exp_startup_delay or 0) > 0 then return result end
 	if not _minigame_view_active() then return result end
 
@@ -51,8 +51,8 @@ local function _exp_move(action, result, source)
 		if not now then return result end
 		if mod._exp_move_blocked and mod._exp_move_blocked(now) then return result end
 
-		local dir = source == "player_unit_input" and mod._exp_take_move_dir and mod._exp_take_move_dir(mg, now)
-			or mod._exp_find_move_dir and mod._exp_find_move_dir(mg)
+		local dir = source == "player_unit_input" and mod._exp_take_move_dir and mod._exp_take_move_dir(now)
+			or mod._exp_find_move_dir and mod._exp_find_move_dir()
 		if not dir then return result end
 
 		return Vector3(dir.x or 0, dir.y or 0, 0)
@@ -65,7 +65,7 @@ local function _exp_move(action, result, source)
 		end
 	end
 
-	local dir = mod._exp_find_move_dir and mod._exp_find_move_dir(mg)
+	local dir = mod._exp_find_move_dir and mod._exp_find_move_dir()
 	if not dir then return result end
 
 	if action == "move_left"      and dir.x < -0.15 then return math_max(type(result) == "number" and result or 0, math_abs(dir.x)) end
@@ -78,14 +78,14 @@ end
 
 local function _expedition(action, result)
 	if not S("enable_expedition_auto_solve") then return result end
-	local mg = mod._exp_mg
-	if not mg or not mg.cursor_position then return result end
+	local exp = mod._exp
+	if not exp or exp.timer <= 0 or not exp.active or not exp.gameplay then return result end
 	if (mod._exp_startup_delay or 0) > 0 then return result end
 
 	local now = mod._time("gameplay")
 	if not now then return result end
 	local is_submit_action = _is_primary_hold_action(action)
-	local stage = mg._current_stage
+	local stage = exp.stage
 
 	if mod._exp_press_until > now and is_submit_action then
 		mod._debug_event_throttle("search_input_press_event", 1.0, "search", "synthetic_hold", { action = action, stage = stage, until_t = mod._exp_press_until })
@@ -119,7 +119,7 @@ local function _expedition(action, result)
 		return result
 	end
 
-	if mod._exp_ready_to_submit and mod._exp_ready_to_submit(mg, now) then
+	if mod._exp_ready_to_submit and mod._exp_ready_to_submit(now) then
 		mod._exp_press_until = now + 0.08
 		mod._exp_release_until = mod._exp_press_until + 0.12
 		mod._exp_submitted_stage = stage
@@ -133,8 +133,8 @@ end
 
 local function _drill(action, result)
 	if not S("enable_drill_auto") then return result end
-	local mg = mod._drill_active_mg and mod._drill_active_mg() or mod._drill_mg
-	if not mg then return result end
+	local drill = mod._drill
+	if not drill or drill.timer <= 0 or not drill.active or not drill.gameplay then return result end
 	if (mod._drill_startup_delay or 0) > 0 then return result end
 	if not _minigame_view_active() then
 		return result
@@ -143,7 +143,7 @@ local function _drill(action, result)
 	if _is_primary_hold_action(action) then
 		local now = mod._time("gameplay")
 		if not now then return result end
-		local stage = mg.current_stage and mg:current_stage() or mg._current_stage
+		local stage = drill.stage
 		if mod._drill_release_until > now then
 			mod._debug_event_throttle("drill_input_release_event", 1.0, "drill", "synthetic_release", { action = action, stage = stage, until_t = mod._drill_release_until })
 			return false
@@ -154,7 +154,7 @@ local function _drill(action, result)
 		end
 		if result then return result end
 		if mod._drill_cooldown > 0 then return result end
-		if not mod._drill_should_submit(mg, now) then return result end
+		if not mod._drill_should_submit(now) then return result end
 
 		mod._drill_cooldown = 0.15
 		mod._drill_press_until = now + 0.08
@@ -166,7 +166,7 @@ local function _drill(action, result)
 	if MOVE_ACTIONS[action] then
 		if mod._drill_move_cooldown > 0 then return result end
 
-		local dir = mod._drill_move_vec(mg)
+		local dir = mod._drill_move_vec()
 		if not dir then return result end
 
 		return Vector3(dir.x or 0, dir.y or 0, 0)
@@ -179,7 +179,7 @@ local function _drill(action, result)
 		end
 	end
 
-	local dir = mod._drill_move_vec(mg)
+	local dir = mod._drill_move_vec()
 	if not dir then return result end
 
 	if action == "move_left"      and dir.x < -0.15 then return math_max(type(result) == "number" and result or 0, math_abs(dir.x)) end
@@ -192,8 +192,8 @@ end
 
 local function _frequency(action, result)
 	if not S("enable_frequency_auto") then return result end
-	local mg = mod._freq_mg
-	if not mg then return result end
+	local freq = mod._freq
+	if not freq or freq.timer <= 0 or not freq.active or not freq.gameplay or freq.completed then return result end
 	if (mod._freq_startup_delay or 0) > 0 then return result end
 	if not _minigame_view_active() then return result end
 
@@ -201,7 +201,7 @@ local function _frequency(action, result)
 	if not now then return result end
 
 	if _is_primary_hold_action(action) then
-		local stage = mg.current_stage and mg:current_stage() or mg._current_stage
+		local stage = freq.stage
 		if mod._freq_release_until > now then
 			mod._debug_event_throttle("frequency_input_release_event", 1.0, "frequency", "synthetic_release", { action = action, stage = stage, until_t = mod._freq_release_until })
 			return false
@@ -212,7 +212,7 @@ local function _frequency(action, result)
 		end
 		if result then return result end
 
-		if mod._freq_try_submit and mod._freq_try_submit(mg, now) then
+		if mod._freq_try_submit and mod._freq_try_submit(now) then
 			mod._debug_event("frequency", "synthetic_press", { action = action, press_until = mod._freq_press_until, release_until = mod._freq_release_until, stage = stage })
 			return true
 		end
@@ -221,13 +221,13 @@ local function _frequency(action, result)
 	end
 
 	if MOVE_ACTIONS[action] then
-		local dir = mod._freq_move_vec and mod._freq_move_vec(mg)
+		local dir = mod._freq_move_vec and mod._freq_move_vec()
 		if not dir then return result end
 
 		return Vector3(dir.x or 0, dir.y or 0, 0)
 	end
 
-	local dir = mod._freq_move_vec and mod._freq_move_vec(mg)
+	local dir = mod._freq_move_vec and mod._freq_move_vec()
 	if not dir then return result end
 
 	if action == "move_left"      and dir.x < -0.15 then return math_max(type(result) == "number" and result or 0, math_abs(dir.x)) end
@@ -403,12 +403,15 @@ end
 
 local function _any_minigame_active()
 	local bal = mod._bal
+	local exp = mod._exp
+	local freq = mod._freq
+	local drill = mod._drill
+	local ds = mod._ds
 
-	return mod._exp_mg ~= nil
-		or mod._exp_move_mg ~= nil
-		or mod._freq_mg ~= nil
-		or mod._drill_mg ~= nil
-		or mod._ds_mg ~= nil
+	return (exp and exp.active and (exp.timer or 0) > 0)
+		or (freq and freq.active and (freq.timer or 0) > 0)
+		or (drill and drill.active and (drill.timer or 0) > 0)
+		or (ds and ds.active and (ds.timer or 0) > 0)
 		or mod._scan_holding
 		or mod._scan_auto_pending
 		or (bal and bal.enabled and (bal.timer or 0) > 0)
@@ -450,10 +453,12 @@ function mod._route_input(action, result, source)
 		return r
 	end
 
-	if not _any_minigame_active() then return r end
-	r = _apply_route(_decode, action, r)
-	r = _apply_route(function(a, value) return _exp_move(a, value, source) end, action, r)
-	r = _apply_route(_expedition, action, r)
+		if not _any_minigame_active() then return r end
+		r = _apply_route(_decode, action, r)
+		r = _apply_route(function(a, value)
+            return _exp_move(a, value, source)
+        end, action, r)
+		r = _apply_route(_expedition, action, r)
 	r = _apply_route(_drill, action, r)
 	r = _apply_route(_frequency, action, r)
 	r = _apply_route(_scan, action, r)

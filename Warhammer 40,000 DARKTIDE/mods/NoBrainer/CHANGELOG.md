@@ -1,4 +1,17 @@
 
+## [2.0.5] - 2026-07-04
+### Added
+- **Expedition auto-mark extraction fallback**: Added an optional setting to mark the extraction point after all opportunities are complete when there is no exit/vault target available.
+
+### Changed
+- **Expedition auto-mark**: Restored automatic Expedition Map POI/vault marking as an optional feature. It remains disabled by default and respects manual marks.
+- **Minigame auto-solvers**: Matching, Drill, Frequency, and Decode Symbols now use short-lived fresh snapshots instead of long-lived live minigame references for input routing, matching the Balance solver's stale-safe model.
+- **Decode Search auto-submit timing**: Reduced the fresh on-target settle window from 0.20s to 0.10s and the post-move submit guard from 0.30s to 0.20s so Matching submits sooner after the cursor reaches the correct solution.
+
+### Fixed
+- **Decode Search stop crash**: Guarded Matching cleanup against a destroyed `MinigameExtension` teardown race that could crash when closing or restarting an Expedition Matching minigame.
+- **Stale minigame state**: Drill auto-solve now keeps sampling even when Drill highlighting is disabled, and Matching/Decode Symbols cleanup only clears state for the active sampled minigame instance.
+
 ## [2.0.4] - 2026-07-03
 ### Fixed
 - **Remote minigame interference**: Decode Search (Matching) and Decode Symbols now ignore remote/stale minigame instances that do not belong to the local player. Matching `stop` / `complete` cleanup is also limited to the active solver instance, preventing other players' expedition minigames from clearing NoBrainer state mid-solve.

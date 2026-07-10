@@ -759,11 +759,21 @@ function PracticeMinigameExtension:minigame_type()
 end
 
 local PRACTICE_FACTORIES = {
-	decode_symbols = function() return PracticeDecode:new() end,
-	decode_search  = function() return PracticeSearch:new() end,
-	drill          = function() return PracticeDrill:new() end,
-	frequency      = function() return PracticeFreq:new() end,
-	balance        = function() return PracticeBalance:new() end,
+	decode_symbols = function()
+        return PracticeDecode:new()
+    end,
+    decode_search = function()
+        return PracticeSearch:new()
+    end,
+    drill = function()
+        return PracticeDrill:new()
+    end,
+    frequency = function()
+        return PracticeFreq:new()
+    end,
+    balance = function()
+        return PracticeBalance:new()
+    end,
 }
 
 mod._practice_create = function(minigame_type)

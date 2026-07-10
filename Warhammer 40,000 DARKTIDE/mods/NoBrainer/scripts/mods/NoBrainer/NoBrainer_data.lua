@@ -5,7 +5,7 @@ return {
 	description = mod:localize("mod_description"),
 	is_togglable    = true,
 	allow_rehooking = true,
-		options = {
+	options = {
 		widgets = {
 			{
 				setting_id    = "enable_debug_messages",
@@ -182,6 +182,12 @@ return {
 						type          = "checkbox",
 						default_value = false,
 						tooltip       = "enable_expedition_automark_vault_tooltip",
+					},
+					{
+						setting_id    = "enable_expedition_automark_extraction",
+						type          = "checkbox",
+						default_value = false,
+						tooltip       = "enable_expedition_automark_extraction_tooltip",
 					},
 				},
 			},

@@ -25,7 +25,9 @@ local function _register_view()
 			class = "NoBrainerPracticeView",
 			close_on_hotkey_pressed = false,
 			disable_game_world = false,
-			init_view_function = function() return true end,
+			init_view_function = function()
+                return true
+            end,
 			load_always = true,
 			load_in_hub = true,
 			package = "packages/ui/views/scanner_display_view/scanner_display_view",
@@ -83,7 +85,10 @@ local function _open_practice()
 	if type(create) ~= "function" then return end
 
 	local ext, mg = create(minigame_type)
-	if not ext or not mg then mod._debug_event("practice", "open_failed", { ext = tostring(ext), mg = tostring(mg), type = minigame_type }); return end
+	if not ext or not mg then
+        mod._debug_event("practice", "open_failed", { ext = tostring(ext), mg = tostring(mg), type = minigame_type })
+        return
+    end
 
 	local player_manager = Managers.player
 	local player = player_manager and player_manager:local_player_safe(1)

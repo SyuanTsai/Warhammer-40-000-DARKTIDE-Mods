@@ -222,8 +222,16 @@ mod._reg("setting_changed", function(id)
     end
 end)
 
-mod._reg("disabled", function() _reset_scan_state("disabled") end)
-mod._reg("round_end", function() _reset_scan_state("round_end") end)
-mod._reg("unload", function() _reset_scan_state("unload") end)
+mod._reg("disabled", function()
+    _reset_scan_state("disabled")
+end)
+
+mod._reg("round_end", function()
+    _reset_scan_state("round_end")
+end)
+
+mod._reg("unload", function()
+    _reset_scan_state("unload")
+end)
 
 return true
