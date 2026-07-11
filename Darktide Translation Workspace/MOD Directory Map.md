@@ -117,7 +117,7 @@
 | completed | 2026-07-11 13:11:01 +08:00 | SprintRelicHeavy | SprintRelicHeavy | 校正 Relic Blade 詞彙表與輔助功能描述（PR #54）。 |
 | completed | 2026-07-11 18:28:41 +08:00 | Auto Mark | AutoMark | 校正 Servo-Skull/Focus Target 詞彙表一致性（PR #55）。 |
 | completed | 2026-07-11 19:30:50 +08:00 | SMOG Cleaner | SMOG | 校正 SMOG 品牌名、Lua heap 與手動清理描述（PR #56）。 |
-| ready | not checked | ErrorTracker | ErrorTracker | README active MOD，新增至排程。 |
+| in_progress | 2026-07-11 19:57:19 +08:00 | ErrorTracker | ErrorTracker | codex 正在校正 zh-tw 描述用語。 |
 | ready | not checked | NoBrainer | NoBrainer | README active MOD，新增至排程。 |
 | ready | 2026-07-11 11:44:36 +08:00 | AUPM | AUPM | 本地 mods 目錄存在，但 README active 區未列出 |
 | ready | 2026-07-11 11:44:36 +08:00 | DPM | DPM | 本地 mods 目錄存在，但 README active 區未列出 |
