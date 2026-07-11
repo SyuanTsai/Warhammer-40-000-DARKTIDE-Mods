@@ -39,7 +39,6 @@ AutoMark
 
 -- 小遊戲自動化
 NoBrainer
--- AuspexHelper
 --Decode_Helper -- OK 
 --DecodeMinigameSolver
 --TrainSolver   -- OK 
@@ -87,7 +86,6 @@ EmpowerUntilLimit
 StimmCountdown
 i_wanna_see
 vfx_swapper
---MemLeakFix
 ErrorTracker
 SMOG
 CharacterGrid

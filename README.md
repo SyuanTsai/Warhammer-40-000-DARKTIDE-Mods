@@ -703,13 +703,6 @@
 - MOD 檔案名稱：Radar 790 2.5.0 2026-07-10T11-43Z OIXCuIsyX
 - 手動維護最後下載日期：2026-07-11
 
-### [AuspexHelper](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
-    遠征模式的小弟圖
-- MOD 網站最後更新日期：Last updated 20 March 2026, 12:54PM
-- MOD 版本：1.01
-- MOD 檔案名稱：AuspexHelper-757-1-0-1-1773955593
-- 手動維護最後下載日期：2026-05-17
-
 ### [PlasmaBFG](https://www.nexusmods.com/warhammer40kdarktide/mods/834)
     電漿槍 優化
 - MOD 網站最後更新日期：Last updated 05 May 2026, 6:56PM
@@ -874,3 +867,11 @@
 - MOD 檔案名稱：MemLeakFix-406-1-1-2-1730373955
 - 手動維護最後下載日期：2025-12-28
 - 移除原因：SMOG Cleaner取代此功能。
+
+### [AuspexHelper](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
+    遠征模式的小弟圖
+- MOD 網站最後更新日期：Last updated 20 March 2026, 12:54PM
+- MOD 版本：1.01
+- MOD 檔案名稱：AuspexHelper-757-1-0-1-1773955593
+- 手動維護最後下載日期：2026-05-17
+- 移除原因：NoBrainer取代此功能。
