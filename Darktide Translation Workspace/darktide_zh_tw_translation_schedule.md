@@ -11,6 +11,8 @@
 - PR 必須是 ready for review，不建立 Draft，不啟用 auto-merge。
 - 不自動合併 PR；除非使用者另行明確要求。
 - 不修改 `Referneces/Translation.md`，除非使用者明確要求。
+- 若使用額外 worktree 處理 `Codex/Feature/<Repo directory>/Add-zh-tw`，IDE 必須開啟該 worktree 目錄修改檔案；不要強迫主工作樹從 `main` 切到已被 worktree checkout 的 Codex 分支。
+- 每輪工作結束後必須清理本輪建立的額外 worktree，避免 Codex 分支被佔用而導致 IDE 無法切換。
 
 ## 1. 必讀文件
 
@@ -56,7 +58,7 @@
 4. 若發現新增、移除或狀態不一致的 MOD，先在 `main` 更新 `MOD Directory Map.md`。
 5. 選擇下一個 `ready` 或 `original_mod_updated`，且未被其他代理鎖定的 MOD。
 6. 在 `main` 更新 `Workspace Status.md` 與 `Log/<Repo directory>.md`，記錄 AI handler、工作分支、開始位置與時間，commit message 用 `Update AI work documents`。
-7. 建立或切到 `Codex/Feature/<Repo directory>/Add-zh-tw`。
+7. 建立或切到 `Codex/Feature/<Repo directory>/Add-zh-tw`；若需要保留主工作樹在 `main`，使用額外 worktree，例如 `git worktree add ../<Repo directory>-work -b Codex/Feature/<Repo directory>/Add-zh-tw main`，並在該 worktree 內修改 MOD 檔案。
 8. 只處理該 MOD 目錄內的 `*localization.lua`。
 9. 處理每個 localization key 前，先檢查該 key 的整個 table 是否已存在 `["zh-tw"]`。
 10. 翻譯或校正完成後執行品質檢查。
@@ -65,7 +67,9 @@
 13. 回到 `main`，同步 `Workspace Status.md`、`Log/<Repo directory>.md`、`MOD Directory Map.md` 與 `Term Candidates.md`，commit message 用 `Update AI work documents`。
 14. 回到工作分支，確認 PR diff 不含 `Darktide Translation Workspace/`。
 15. 若有權限，push 工作分支並建立或更新 ready PR。
-16. 回報完成項目、PR、blocked、以及下一輪續跑位置。
+16. 清理本輪建立的額外 worktree：先確認 worktree 內 `git status --short` 為空、commit/push/PR 與 `main` 工作文件同步都已完成，再從主 repo 執行 `git worktree remove ../<Repo directory>-work`；若只剩 stale 記錄，執行 `git worktree prune`。
+17. 用 `git worktree list` 確認沒有本輪遺留的額外 worktree 佔用 `Codex/Feature/<Repo directory>/Add-zh-tw`。
+18. 回報完成項目、PR、blocked、worktree 清理狀態、以及下一輪續跑位置。
 
 每完成 10 個 MOD 後，回到 `main` 重新掃描 MOD 目錄與 `README.md`，並更新 `MOD Directory Map.md` 的比對時間與狀態。
 
@@ -180,5 +184,6 @@ Blocked Items 至少包含：
 - 更新到 `main` 的工作文件
 - 新增詞彙候選
 - blocked 項目
+- worktree 清理狀態
 - 下一輪續跑位置
 
