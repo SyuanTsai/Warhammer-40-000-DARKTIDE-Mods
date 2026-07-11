@@ -2,15 +2,15 @@
 return {
 mod_name = {
 en = "{#color(93,101,50)}SMOG Cleaner{#reset()}",
-["zh-tw"] = "{#color(93,101,50)}系統資源清理器{#reset()}",
+["zh-tw"] = "{#color(93,101,50)}SMOG 清理器{#reset()}",
 },
 mod_description_start = {
 en = "Simple Mod Object Garbage Cleaner",
-["zh-tw"] = "簡易模組物件垃圾清理器",
+["zh-tw"] = "簡易 MOD 物件垃圾清理器",
 },
 mod_description_manual = {
 en = "Type {#color(255,191,0)}/smog{#reset()} or use the keybind to perform manually",
-["zh-tw"] = "輸入 {#color(255,191,0)}/smog{#reset()} 或使用按鍵綁定手動執行",
+["zh-tw"] = "輸入 {#color(255,191,0)}/smog{#reset()} 或使用快捷鍵手動執行",
 },
 cleaning_permitted = {
 en = "Cleaning permitted",
@@ -26,7 +26,7 @@ en = "Clean at convenient moments",
 },
 auto_clean_on_start_desc = {
 en = "{#color(93,101,50)}Routinely cleans at useful moments like shortly after entering the Mourningstar or on mission starts.{#reset()}",
-["zh-tw"] = "{#color(93,101,50)}會在實用時機定期清理，例如進入 Mourningstar 後不久或任務開始時。{#reset()}",
+["zh-tw"] = "{#color(93,101,50)}會在合適時機定期清理，例如剛進入 Mourningstar 後或任務開始時。{#reset()}",
 },
 auto_clean_every_ten_minutes = {
 en = "Auto clean every 10 minutes",
@@ -54,11 +54,11 @@ en = "HUD Y Axis",
 },
 manual_clear_key = {
 en = "Choose key to clean Lua heap",
-["zh-tw"] = "選擇清理 Lua 記憶體堆的按鍵",
+["zh-tw"] = "選擇清理 Lua 堆積記憶體的按鍵",
 },
 manual_clear_key_desc = {
 en = "{#color(93,101,50)}Manually trigger a full garbage clean.{#reset()}",
-["zh-tw"] = "{#color(93,101,50)}手動觸發完整垃圾清理。{#reset()}",
+["zh-tw"] = "{#color(93,101,50)}手動觸發完整垃圾回收清理。{#reset()}",
 },
 notification_y_axis = {
 en = "Notification Y Axis",
@@ -66,6 +66,6 @@ en = "Notification Y Axis",
 },
 command_clear_desc = {
 en = "Clean Lua heap",
-["zh-tw"] = "清理 Lua 記憶體堆",
+["zh-tw"] = "清理 Lua 堆積記憶體",
 },
 }
