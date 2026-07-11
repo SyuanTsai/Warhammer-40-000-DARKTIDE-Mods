@@ -10,7 +10,7 @@
 | Base branch | main |
 | Work branch | Codex/Feature/crusher_attack_indicator/Add-zh-tw |
 | Started at | 2026-07-11 10:57:08 +08:00 |
-| Last updated | 2026-07-11 11:01:35 +08:00 |
+| Last updated | 2026-07-11 11:05:15 +08:00 |
 | Status | completed |
 
 ## File Scan
@@ -48,6 +48,6 @@ Completed at: 2026-07-11 11:01:35 +08:00.
 
 Commit: 8efc54c.
 
-PR: pending.
+PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/51.
 
 Next position: Radar/*localization.lua:first key.
