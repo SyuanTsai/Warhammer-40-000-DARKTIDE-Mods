@@ -48,6 +48,8 @@ return function(env)
         luggable_data_reliquary = { 255, 192, 160, 0 },
         pickup_large_ammunition_crate = { 255, 240, 210, 80 },
         luggable_promethium_barrel = { 255, 255, 110, 0 },
+        hazard_explosive_barrel = { 255, 205, 156, 77 },
+        hazard_fire_barrel = { 255, 255, 110, 0 },
         pocketable_anti_rad_stimm = DEFAULT_COLOR_ARRAY_WHITE,
         pocketable_airstrike = { 255, 95, 125, 70 },
         pocketable_artillery_strike = { 255, 95, 125, 70 },
@@ -133,6 +135,8 @@ return function(env)
         enemy_captain = "show_captains",
         enemy_karnak_twin = "show_karnak_twins",
         player_teammate = "show_players",
+        player_companion_dog = "show_cyber_mastiff",
+        player_companion_servo_skull = "show_servo_skulls",
         location_attention = "show_player_tags",
         location_ping = "show_player_tags",
         location_threat = "show_player_tags",
@@ -150,6 +154,8 @@ return function(env)
         luggable_data_reliquary = "show_data_reliquaries",
         pickup_large_ammunition_crate = "show_large_ammunition_crate",
         luggable_promethium_barrel = "show_promethium_barrel",
+        hazard_explosive_barrel = "show_explosive_barrels",
+        hazard_fire_barrel = "show_fire_barrels",
         pocketable_anti_rad_stimm = "show_anti_rad_stimm",
         pocketable_ammo_crate = "show_pocketable_ammo_crate",
         pocketable_breach_charge = "show_pocketable_breach_charge",
@@ -201,6 +207,16 @@ return function(env)
         show_expedition_objective_extraction = "icon_only",
         show_expedition_objective_arrival = "icon_only",
         show_expedition_loot_converter = "icon_only",
+    }
+
+    local ICON_DISTANCE_MARKER_DISPLAY_MODE_KIND_TO_SETTING = {
+        hazard_explosive_barrel = "show_explosive_barrels",
+        hazard_fire_barrel = "show_fire_barrels",
+    }
+
+    local ICON_DISTANCE_MARKER_DISPLAY_MODE_DEFAULT_BY_SETTING = {
+        show_explosive_barrels = "icon_only",
+        show_fire_barrels = "icon_only",
     }
 
     EXPEDITION_OBJECTIVE_ICON_DEFAULTS = {
@@ -289,9 +305,13 @@ return function(env)
         medicae_station = "environment_group",
         luggable_socket = "environment_group",
         pickup_heretic_idol = "environment_group",
+        hazard_explosive_barrel = "environment_group",
+        hazard_fire_barrel = "environment_group",
         pickup_ammo_cache_deployable = "deployables_group",
         medical_crate_deployable = "deployables_group",
         player_teammate = "players_group",
+        player_companion_dog = "player_companions_group",
+        player_companion_servo_skull = "player_companions_group",
         location_attention = "players_group",
         location_ping = "players_group",
         location_threat = "players_group",
@@ -317,6 +337,7 @@ return function(env)
         deployables_group = "deployables_icon_scale",
         enemies_group = "enemies_icon_scale",
         players_group = "players_icon_scale",
+        player_companions_group = "player_companions_icon_scale",
         event_group = "event_icon_scale",
         debug_group = "debug_icon_scale",
     }
@@ -388,6 +409,7 @@ return function(env)
     }
     local PLAYER_SMART_TAG_SELECTION_PRIORITY = 300
     local PLAYER_SMART_TAG_RENDER_LAYER = 3
+    local PLAYER_TEAMMATE_RENDER_LAYER = 1
     local EVENT_MARKER_SELECTION_PRIORITY = 600
     local EVENT_MARKER_RENDER_LAYER = 7
     local EXPEDITION_PLAYER_DROP_SELECTION_PRIORITY = 650
@@ -1026,6 +1048,7 @@ return function(env)
         expeditions_specific_group = "nearby_highlight_distance_text_expeditions_specific",
         martyr_s_skull_group = "nearby_highlight_distance_text_martyr_s_skull",
         environment_group = "nearby_highlight_distance_text_environment",
+        deployables_group = "nearby_highlight_distance_text_deployables",
         event_group = "nearby_highlight_distance_text_event",
     }
 
@@ -1119,6 +1142,10 @@ return function(env)
     local function _normalize_expedition_marker_display_mode(value, default_value)
         if value == "icon_only" or value == "icon_distance" or value == "off" then
             return value
+        end
+
+        if value == "icon" then
+            return "icon_only"
         end
 
         if value == false then
@@ -1290,6 +1317,10 @@ return function(env)
             return EVENT_MARKER_RENDER_LAYER
         end
 
+        if kind == "player_teammate" then
+            return PLAYER_TEAMMATE_RENDER_LAYER
+        end
+
         if kind == "material_expeditions_loot_player_drop" then
             return EXPEDITION_PLAYER_DROP_RENDER_LAYER
         end
@@ -1321,6 +1352,18 @@ return function(env)
         end
 
         return _normalize_marker_display_mode(mod:get(setting_id), ARTWORK_MODE_DEFAULT_BY_SETTING[setting_id])
+    end
+
+    function mod:get_icon_distance_marker_display_mode(kind)
+        local setting_id = ICON_DISTANCE_MARKER_DISPLAY_MODE_KIND_TO_SETTING[kind]
+        if not setting_id then
+            return nil
+        end
+
+        return _normalize_expedition_marker_display_mode(
+            mod:get(setting_id),
+            ICON_DISTANCE_MARKER_DISPLAY_MODE_DEFAULT_BY_SETTING[setting_id]
+        )
     end
 
     function mod:get_expedition_marker_display_mode(kind)
