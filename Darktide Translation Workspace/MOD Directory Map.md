@@ -116,7 +116,7 @@
 | completed | 2026-07-09 01:24:11 +08:00 | Mauler Attack Indicator | mauler_attack_indicator | 校正 zh-tw ring / warning / attack 用語（PR #50）。 |
 | completed | 2026-07-11 11:05:15 +08:00 | Crusher Attack Indicator | crusher_attack_indicator | 校正 Cleave/順劈語意（PR #51）。 |
 | blocked | 2026-07-11 11:37:27 +08:00 | HoldFire | HoldFire | README active MOD，但 main 的 mods 目錄缺少 HoldFire 資料夾，待補本地檔案後再處理。 |
-| ready | not checked | Radar | Radar |  |
+| completed | 2026-07-11 11:50:22 +08:00 | Radar | Radar | 校正 Horde/遠征物品 tooltip 詞彙一致性（PR #52）。 |
 | ready | not checked | AuspexHelper | AuspexHelper |  |
 | in_progress | 2026-07-11 11:50:27 +08:00 | PlasmaBFG | PlasmaBFG | 使用者指定優先處理；codex 已建立工作鎖定。 |
 | ready | not checked | SprintRelicHeavy | SprintRelicHeavy |  |
