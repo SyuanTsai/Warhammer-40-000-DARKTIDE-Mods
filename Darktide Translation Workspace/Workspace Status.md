@@ -21,7 +21,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | mauler_attack_indicator | Mauler Attack Indicator | main | Codex/Feature/mauler_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/mauler_attack_indicator.md | mauler_attack_indicator_localization.lua | all keys | 2026-07-09 01:24:11 +08:00 | 02eae73 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/50 | crusher_attack_indicator/*localization.lua:first key | 已完成 zh-tw 校正並建立 ready PR |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | crusher_attack_indicator | Crusher Attack Indicator | main | Codex/Feature/crusher_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/crusher_attack_indicator.md | crusher_attack_indicator_localization.lua | all keys | 2026-07-11 11:05:15 +08:00 | 8efc54c | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/51 | Radar/*localization.lua:first key | 已校正 Cleave/順劈語意並建立 ready PR |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | Radar | Radar | main | Codex/Feature/Radar/Add-zh-tw | Darktide Translation Workspace/Log/Radar.md | Radar_localization.lua | all keys | 2026-07-11 11:50:22 +08:00 | 6eeaaf8 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/52 | AuspexHelper/*localization.lua:first key | 已校正 Horde/遠征物品 tooltip 詞彙一致性並建立 ready PR |
-| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | PlasmaBFG | PlasmaBFG | main | Codex/Feature/PlasmaBFG/Add-zh-tw | Darktide Translation Workspace/Log/PlasmaBFG.md | PlasmaBFG_localization.lua | all keys | 2026-07-11 12:24:13 +08:00 | 4c85538 | no |  | SprintRelicHeavy/*localization.lua:first key | 已校正 Heat/Plasma/hook 相關 zh-tw 用語；PR 待建立 |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | PlasmaBFG | PlasmaBFG | main | Codex/Feature/PlasmaBFG/Add-zh-tw | Darktide Translation Workspace/Log/PlasmaBFG.md | PlasmaBFG_localization.lua | all keys | 2026-07-11 12:28:46 +08:00 | 4c85538 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/53 | SprintRelicHeavy/*localization.lua:first key | 已校正 Heat/Plasma/hook 相關 zh-tw 用語並建立 ready PR |
 
 ## 工作鎖定
 
@@ -41,7 +41,7 @@
 | crusher_attack_indicator | Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | all keys | codex | released | Codex/Feature/crusher_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/crusher_attack_indicator.md | 2026-07-11 10:57:08 +08:00 | 2026-07-11 11:05:15 +08:00 | PR #51 已建立且為 ready | 任務完成，釋放鎖定 |
 | HoldFire | Warhammer 40,000 DARKTIDE/mods/HoldFire | (none) | codex | blocked | Codex/Feature/HoldFire/Add-zh-tw | Darktide Translation Workspace/Log/HoldFire.md | 2026-07-11 11:37:27 +08:00 | 2026-07-11 11:37:27 +08:00 | 待本地補上 HoldFire 目錄 | README 與排程均列為 active/ready，但 main 的 mods 目錄缺少 HoldFire |
 | Radar | Warhammer 40,000 DARKTIDE/mods/Radar/scripts/mods/Radar/Radar_localization.lua | all keys | codex | released | Codex/Feature/Radar/Add-zh-tw | Darktide Translation Workspace/Log/Radar.md | 2026-07-11 11:37:27 +08:00 | 2026-07-11 11:50:22 +08:00 | PR #52 已建立且為 ready | 任務完成，釋放鎖定 |
-| PlasmaBFG | Warhammer 40,000 DARKTIDE/mods/PlasmaBFG/scripts/mods/PlasmaBFG/PlasmaBFG_localization.lua | all keys | codex | released | Codex/Feature/PlasmaBFG/Add-zh-tw | Darktide Translation Workspace/Log/PlasmaBFG.md | 2026-07-11 11:50:27 +08:00 | 2026-07-11 12:24:13 +08:00 | localization commit 4c85538；PR 待建立 | 任務完成，釋放鎖定 |
+| PlasmaBFG | Warhammer 40,000 DARKTIDE/mods/PlasmaBFG/scripts/mods/PlasmaBFG/PlasmaBFG_localization.lua | all keys | codex | released | Codex/Feature/PlasmaBFG/Add-zh-tw | Darktide Translation Workspace/Log/PlasmaBFG.md | 2026-07-11 11:50:27 +08:00 | 2026-07-11 12:28:46 +08:00 | PR #53 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -504,12 +504,12 @@
 | Work branch | Codex/Feature/PlasmaBFG/Add-zh-tw |
 | Branch log | Darktide Translation Workspace/Log/PlasmaBFG.md |
 | Started at | 2026-07-11 11:50:27 +08:00 |
-| Last updated | 2026-07-11 12:24:13 +08:00 |
+| Last updated | 2026-07-11 12:28:46 +08:00 |
 | Completed at | 2026-07-11 12:24:13 +08:00 |
 | Commit | 4c85538 |
-| PR URL / number |  |
+| PR URL / number | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/53 |
 | Next position | SprintRelicHeavy/*localization.lua:first key |
-| Notes | 已校正 Heat/Plasma/hook 相關 zh-tw 用語；PR 待建立。 |
+| Notes | 已校正 Heat/Plasma/hook 相關 zh-tw 用語；PR #53 ready。 |
 
 #### File Summary
 
@@ -607,7 +607,7 @@
 | StimmCountdown | codex | main | Codex/Feature/StimmCountdown/Add-zh-tw | none | no | none | n/a | yes | localization 已正確，無 diff，無需 PR |
 | mauler_attack_indicator | codex | main | Codex/Feature/mauler_attack_indicator/Add-zh-tw | 02eae73 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/50 | yes | yes | 僅包含 mauler_attack_indicator_localization.lua；PR ready |
 | crusher_attack_indicator | codex | main | Codex/Feature/crusher_attack_indicator/Add-zh-tw | 8efc54c | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/51 | yes | yes | 僅包含 crusher_attack_indicator_localization.lua；PR ready |
-| PlasmaBFG | codex | main | Codex/Feature/PlasmaBFG/Add-zh-tw | 4c85538 | no |  | pending | yes | 僅包含 PlasmaBFG_localization.lua；PR 待建立 |
+| PlasmaBFG | codex | main | Codex/Feature/PlasmaBFG/Add-zh-tw | 4c85538 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/53 | yes | yes | 僅包含 PlasmaBFG_localization.lua；PR ready |
 | Radar | codex | main | Codex/Feature/Radar/Add-zh-tw | 6eeaaf8 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/52 | yes | yes | 僅包含 Radar_localization.lua；PR ready |
 
 ## Completed Files
@@ -623,5 +623,5 @@
 | StimmCountdown | codex | Warhammer 40,000 DARKTIDE/mods/StimmCountdown/scripts/mods/StimmCountdown/StimmCountdown_localization.lua | 75 | none | none | 2026-07-09 01:15:43 +08:00 | Darktide Translation Workspace/Log/StimmCountdown.md | 所有靜態 en key 均已有正確 zh-tw，無需修改 |
 | mauler_attack_indicator | codex | Warhammer 40,000 DARKTIDE/mods/mauler_attack_indicator/scripts/mods/mauler_attack_indicator/mauler_attack_indicator_localization.lua | 25 | 02eae73 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/50 | 2026-07-09 01:24:11 +08:00 | Darktide Translation Workspace/Log/mauler_attack_indicator.md | 校正 zh-tw ring / warning / attack 用語；PR ready |
 | crusher_attack_indicator | codex | Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | 2 | 8efc54c | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/51 | 2026-07-11 11:01:35 +08:00 | Darktide Translation Workspace/Log/crusher_attack_indicator.md | 校正 Cleave/順劈語意；PR ready |
-| PlasmaBFG | codex | Warhammer 40,000 DARKTIDE/mods/PlasmaBFG/scripts/mods/PlasmaBFG/PlasmaBFG_localization.lua | 3 | 4c85538 | pending | 2026-07-11 12:24:13 +08:00 | Darktide Translation Workspace/Log/PlasmaBFG.md | 校正 Heat/Plasma/hook 相關 zh-tw 用語；PR 待建立 |
+| PlasmaBFG | codex | Warhammer 40,000 DARKTIDE/mods/PlasmaBFG/scripts/mods/PlasmaBFG/PlasmaBFG_localization.lua | 3 | 4c85538 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/53 | 2026-07-11 12:24:13 +08:00 | Darktide Translation Workspace/Log/PlasmaBFG.md | 校正 Heat/Plasma/hook 相關 zh-tw 用語；PR ready |
 | Radar | codex | Warhammer 40,000 DARKTIDE/mods/Radar/scripts/mods/Radar/Radar_localization.lua | 13 | 6eeaaf8 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/52 | 2026-07-11 11:50:22 +08:00 | Darktide Translation Workspace/Log/Radar.md | 校正 Horde/遠征物品 tooltip 詞彙一致性；PR ready |

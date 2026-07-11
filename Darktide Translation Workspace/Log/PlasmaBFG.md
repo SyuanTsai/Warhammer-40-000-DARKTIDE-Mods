@@ -11,10 +11,10 @@
 | Work branch | Codex/Feature/PlasmaBFG/Add-zh-tw |
 | Status | completed |
 | Started at | 2026-07-11 11:50:27 +08:00 |
-| Last updated | 2026-07-11 12:24:13 +08:00 |
+| Last updated | 2026-07-11 12:28:46 +08:00 |
 | Completed at | 2026-07-11 12:24:13 +08:00 |
 | Commit | 4c85538 |
-| PR URL / number |  |
+| PR URL / number | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/53 |
 | Next position | SprintRelicHeavy/*localization.lua:first key |
 
 ## File Scan

@@ -113,7 +113,7 @@
 | completed | 2026-07-09 01:24:11 +08:00 | Mauler Attack Indicator | mauler_attack_indicator | 校正 zh-tw ring / warning / attack 用語（PR #50）。 |
 | completed | 2026-07-11 11:05:15 +08:00 | Crusher Attack Indicator | crusher_attack_indicator | 校正 Cleave/順劈語意（PR #51）。 |
 | completed | 2026-07-11 11:50:22 +08:00 | Radar | Radar | 校正 Horde/遠征物品 tooltip 詞彙一致性（PR #52）。 |
-| completed | 2026-07-11 12:24:13 +08:00 | PlasmaBFG | PlasmaBFG | 校正 Heat/Plasma/hook 相關 zh-tw 用語（commit 4c85538）。 |
+| completed | 2026-07-11 12:28:46 +08:00 | PlasmaBFG | PlasmaBFG | 校正 Heat/Plasma/hook 相關 zh-tw 用語（PR #53）。 |
 | ready | not checked | SprintRelicHeavy | SprintRelicHeavy |  |
 | ready | not checked | Auto Mark | AutoMark |  |
 | ready | not checked | SMOG Cleaner | SMOG | README active MOD，新增至排程。 |
