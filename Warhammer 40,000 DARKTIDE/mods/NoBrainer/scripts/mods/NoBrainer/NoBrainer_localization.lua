@@ -40,7 +40,7 @@ return {
 	frequency_solve_speed                 = { en = "Auto-Solve Speed", ["zh-tw"] = "自動解題速度" },
 	frequency_solve_speed_tooltip         = { en = "Waveform steering speed (1=slow with wobble, 10=instant precise corrections).", ["zh-tw"] = "波形導引速度（1=慢且會晃動，10=瞬間精準修正）。" },
 
-	drill_group               = { en = "Tree (Drill)", ["zh-tw"] = "樹狀圖（鑽探）" },
+	drill_group               = { en = "Tree (Drill)", ["zh-tw"] = "樹狀鑽探" },
 	enable_drill              = { en = "Highlight Correct Target", ["zh-tw"] = "標示正確目標" },
 	enable_drill_tooltip      = { en = "Shows which node is the correct one by highlighting it white.", ["zh-tw"] = "將正確節點標示為白色。" },
 	enable_drill_auto         = { en = "Auto-Solve", ["zh-tw"] = "自動解題" },
@@ -60,7 +60,7 @@ return {
 
 	practice_group                    = { en = "Practice Mode", ["zh-tw"] = "練習模式" },
 	enable_practice                   = { en = "Enable Practice Mode", ["zh-tw"] = "啟用練習模式" },
-	enable_practice_tooltip           = { en = "Opens a standalone minigame overlay for practice. Only available in the Mourningstar and Psykanium. Auto-solvers are enabled if the corresponding settings are active above.", ["zh-tw"] = "開啟獨立小遊戲覆蓋介面進行練習。僅可在 Mourningstar 和靈能室使用。若上方對應設定已啟用，自動解題也會啟用。" },
+	enable_practice_tooltip           = { en = "Opens a standalone minigame overlay for practice. Only available in the Mourningstar and Psykanium. Auto-solvers are enabled if the corresponding settings are active above.", ["zh-tw"] = "開啟獨立小遊戲覆蓋介面進行練習。僅可在哀星號和靈能室使用。若上方對應設定已啟用，自動解題也會啟用。" },
 	practice_type                     = { en = "Minigame Type", ["zh-tw"] = "小遊戲類型" },
 	practice_type_tooltip             = { en = "Which minigame to practice.", ["zh-tw"] = "要練習的小遊戲。" },
 	practice_type_decode_symbols      = { en = "Decode Symbols", ["zh-tw"] = "符號解碼" },
@@ -72,6 +72,6 @@ return {
 	practice_toggle_key_tooltip       = { en = "Hotkey to open/close the practice minigame overlay.", ["zh-tw"] = "開啟/關閉練習小遊戲覆蓋介面的快捷鍵。" },
 	practice_opened                   = { en = "Practice mode: %s", ["zh-tw"] = "練習模式：%s" },
 	practice_completed                = { en = "Practice completed!", ["zh-tw"] = "練習完成！" },
-	practice_not_allowed              = { en = "Practice mode can only be used in the Mourningstar or Psykanium.", ["zh-tw"] = "練習模式只能在 Mourningstar 或靈能室使用。" },
+	practice_not_allowed              = { en = "Practice mode can only be used in the Mourningstar or Psykanium.", ["zh-tw"] = "練習模式只能在哀星號或靈能室使用。" },
 
 }
