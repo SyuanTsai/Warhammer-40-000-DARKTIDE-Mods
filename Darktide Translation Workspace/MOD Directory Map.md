@@ -119,7 +119,7 @@
 | completed | 2026-07-11 19:30:50 +08:00 | SMOG Cleaner | SMOG | 校正 SMOG 品牌名、Lua heap 與手動清理描述（PR #56）。 |
 | completed | 2026-07-11 20:00:16 +08:00 | ErrorTracker | ErrorTracker | 校正 MOD 崩潰報告描述（PR #57）。 |
 | completed | 2026-07-11 20:23:26 +08:00 | NoBrainer | NoBrainer | 校正 Darktide/Mourningstar/Tree Drill 詞彙；使用者手動合併至 main。 |
-| in_progress | 2026-07-11 20:23:26 +08:00 | AUPM | AUPM | codex 正在校正 zh-tw 技能次數統計與繁體用語。 |
+| completed | 2026-07-11 20:35:47 +08:00 | AUPM | AUPM | 校正戰鬥技能使用統計與客製化開發用語（PR #58）。 |
 | ready | 2026-07-11 11:44:36 +08:00 | DPM | DPM | 本地 mods 目錄存在，但 README active 區未列出 |
 | ready | 2026-07-11 11:44:36 +08:00 | KeepSwinging | KeepSwinging | 本地 mods 目錄存在，但 README active 區未列出 |
 | ready | 2026-07-11 11:44:36 +08:00 | KPM | KPM | 本地 mods 目錄存在，但 README active 區未列出 |
