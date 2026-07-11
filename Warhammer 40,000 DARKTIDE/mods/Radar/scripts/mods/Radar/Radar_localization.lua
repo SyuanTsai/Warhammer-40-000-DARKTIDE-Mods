@@ -1577,7 +1577,7 @@ return {
         ja = "プレイヤーのコンパニオン",
         ko = "플레이어 동료",
         ["zh-cn"] = "玩家伙伴",
-        ["zh-tw"] = "電子獒犬",
+        ["zh-tw"] = "支援單位",
     },
     player_companions_icon_scale_tooltip = {
         en = "Adjust the icon size for player companion markers as a percentage.",
@@ -1591,7 +1591,7 @@ return {
         ja = "プレイヤーのコンパニオンマーカーのアイコンサイズをパーセントで調整します。",
         ko = "플레이어 동료 마커의 아이콘 크기를 백분율로 조정합니다.",
         ["zh-cn"] = "按百分比调整玩家伙伴标记的图标大小。",
-        ["zh-tw"] = "以百分比調整電子獒犬標記的圖示大小。",
+        ["zh-tw"] = "以百分比調整支援單位標記的圖示大小。",
     },
     show_cyber_mastiff = {
         en = "Show Cyber Mastiff",
@@ -5699,7 +5699,7 @@ return {
         ja = "配置された弾薬箱の残り補給チャージをレーダーマーカーの横に表示します。",
         ko = "배치된 탄약 상자의 남은 재보급 충전 횟수를 레이더 표시 옆에 표시합니다.",
         ["zh-cn"] = "在雷达标记旁显示已部署弹药箱剩余的补给充能次数。",
-        ["zh-tw"] = "在雷達標記旁顯示已部署彈藥箱剩餘補給次數。"
+        ["zh-tw"] = "在雷達標記旁顯示已部署彈藥箱剩餘補給次數。",
     },
     show_medical_crate_deployable_tooltip = {
         en = "Show Medical Crate on the radar.",
