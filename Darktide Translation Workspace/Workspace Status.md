@@ -22,7 +22,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | crusher_attack_indicator | Crusher Attack Indicator | main | Codex/Feature/crusher_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/crusher_attack_indicator.md | crusher_attack_indicator_localization.lua | all keys | 2026-07-11 11:05:15 +08:00 | 8efc54c | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/51 | Radar/*localization.lua:first key | 已校正 Cleave/順劈語意並建立 ready PR |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | Radar | Radar | main | Codex/Feature/Radar/Add-zh-tw | Darktide Translation Workspace/Log/Radar.md | Radar_localization.lua | all keys | 2026-07-11 11:50:22 +08:00 | 6eeaaf8 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/52 | AuspexHelper/*localization.lua:first key | 已校正 Horde/遠征物品 tooltip 詞彙一致性並建立 ready PR |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | PlasmaBFG | PlasmaBFG | main | Codex/Feature/PlasmaBFG/Add-zh-tw | Darktide Translation Workspace/Log/PlasmaBFG.md | PlasmaBFG_localization.lua | all keys | 2026-07-11 12:28:46 +08:00 | 4c85538 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/53 | SprintRelicHeavy/*localization.lua:first key | 已校正 Heat/Plasma/hook 相關 zh-tw 用語並建立 ready PR |
-| codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | SprintRelicHeavy | SprintRelicHeavy | main | Codex/Feature/SprintRelicHeavy/Add-zh-tw | Darktide Translation Workspace/Log/SprintRelicHeavy.md | SprintRelicHeavy_localization.lua | first key | 2026-07-11 13:05:47 +08:00 |  | no |  | SprintRelicHeavy/*localization.lua:first key | 開始校正 zh-tw，優先對齊 Relic Blade 詞彙表 |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | SprintRelicHeavy | SprintRelicHeavy | main | Codex/Feature/SprintRelicHeavy/Add-zh-tw | Darktide Translation Workspace/Log/SprintRelicHeavy.md | SprintRelicHeavy_localization.lua | all keys | 2026-07-11 13:11:01 +08:00 | 96a518f | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/54 | AutoMark/*localization.lua:first key | 已校正 Relic Blade/輔助功能描述並建立 ready PR |
 
 ## 工作鎖定
 
@@ -43,7 +43,7 @@
 | HoldFire | Warhammer 40,000 DARKTIDE/mods/HoldFire | (none) | codex | blocked | Codex/Feature/HoldFire/Add-zh-tw | Darktide Translation Workspace/Log/HoldFire.md | 2026-07-11 11:37:27 +08:00 | 2026-07-11 11:37:27 +08:00 | 待本地補上 HoldFire 目錄 | README 與排程均列為 active/ready，但 main 的 mods 目錄缺少 HoldFire |
 | Radar | Warhammer 40,000 DARKTIDE/mods/Radar/scripts/mods/Radar/Radar_localization.lua | all keys | codex | released | Codex/Feature/Radar/Add-zh-tw | Darktide Translation Workspace/Log/Radar.md | 2026-07-11 11:37:27 +08:00 | 2026-07-11 11:50:22 +08:00 | PR #52 已建立且為 ready | 任務完成，釋放鎖定 |
 | PlasmaBFG | Warhammer 40,000 DARKTIDE/mods/PlasmaBFG/scripts/mods/PlasmaBFG/PlasmaBFG_localization.lua | all keys | codex | released | Codex/Feature/PlasmaBFG/Add-zh-tw | Darktide Translation Workspace/Log/PlasmaBFG.md | 2026-07-11 11:50:27 +08:00 | 2026-07-11 12:28:46 +08:00 | PR #53 已建立且為 ready | 任務完成，釋放鎖定 |
-| SprintRelicHeavy | Warhammer 40,000 DARKTIDE/mods/SprintRelicHeavy/scripts/mods/SprintRelicHeavy/SprintRelicHeavy_localization.lua | first key | codex | in_progress | Codex/Feature/SprintRelicHeavy/Add-zh-tw | Darktide Translation Workspace/Log/SprintRelicHeavy.md | 2026-07-11 13:05:47 +08:00 | 2026-07-11 13:05:47 +08:00 | PR 建立且工作文件同步後釋放 | 開始校正 zh-tw；Relic Blade 需使用詞彙表譯名「上古神刃」 |
+| SprintRelicHeavy | Warhammer 40,000 DARKTIDE/mods/SprintRelicHeavy/scripts/mods/SprintRelicHeavy/SprintRelicHeavy_localization.lua | all keys | codex | released | Codex/Feature/SprintRelicHeavy/Add-zh-tw | Darktide Translation Workspace/Log/SprintRelicHeavy.md | 2026-07-11 13:05:47 +08:00 | 2026-07-11 13:11:01 +08:00 | PR #54 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -526,6 +526,38 @@
 | 2026-07-11 11:50:27 +08:00 | Warhammer 40,000 DARKTIDE/mods/PlasmaBFG/scripts/mods/PlasmaBFG/PlasmaBFG_localization.lua | first key | in_progress | Section: Key Progress | 開始檢查 zh-tw |
 | 2026-07-11 12:24:13 +08:00 | Warhammer 40,000 DARKTIDE/mods/PlasmaBFG/scripts/mods/PlasmaBFG/PlasmaBFG_localization.lua | group_venting_description / held_primary_assist_enabled_description / force_full_charge_damage_description | completed | Section: Key Progress | 校正 Heat→熱能、Plasma→電漿槍、hook→掛鉤 |
 
+### MOD-LOG-0015 - SprintRelicHeavy
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | SprintRelicHeavy |
+| Repo directory | SprintRelicHeavy |
+| AI handler | codex |
+| Status | completed |
+| Base branch | main |
+| Work branch | Codex/Feature/SprintRelicHeavy/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/SprintRelicHeavy.md |
+| Started at | 2026-07-11 13:05:47 +08:00 |
+| Last updated | 2026-07-11 13:11:01 +08:00 |
+| Completed at | 2026-07-11 13:11:01 +08:00 |
+| Commit | 96a518f |
+| PR URL / number | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/54 |
+| Next position | AutoMark/*localization.lua:first key |
+| Notes | 已校正 Relic Blade 為「上古神刃」，並調整輔助功能/快捷鍵描述；PR #54 ready。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/SprintRelicHeavy/scripts/mods/SprintRelicHeavy/SprintRelicHeavy_localization.lua | completed | 4 | helper_hotkey_description | Section: Key Progress | 僅修改 zh-tw 欄位；無缺失/重複/空白 zh-tw |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-11 13:05:47 +08:00 | Warhammer 40,000 DARKTIDE/mods/SprintRelicHeavy/scripts/mods/SprintRelicHeavy/SprintRelicHeavy_localization.lua | first key | in_progress | Section: Key Progress | 開始檢查 zh-tw；Relic Blade 命中詞彙表 |
+| 2026-07-11 13:11:01 +08:00 | Warhammer 40,000 DARKTIDE/mods/SprintRelicHeavy/scripts/mods/SprintRelicHeavy/SprintRelicHeavy_localization.lua | mod_name / mod_description / override_sprint_description / helper_hotkey_description | completed | Section: Key Progress | 校正 Relic Blade→上古神刃，並調整 helper/idle 描述 |
+
 ## 協作交接紀錄
 
 | Time | From | To | MOD | File | Key | From status | To status | Branch log | Note |
@@ -611,6 +643,7 @@
 | crusher_attack_indicator | codex | main | Codex/Feature/crusher_attack_indicator/Add-zh-tw | 8efc54c | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/51 | yes | yes | 僅包含 crusher_attack_indicator_localization.lua；PR ready |
 | PlasmaBFG | codex | main | Codex/Feature/PlasmaBFG/Add-zh-tw | 4c85538 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/53 | yes | yes | 僅包含 PlasmaBFG_localization.lua；PR ready |
 | Radar | codex | main | Codex/Feature/Radar/Add-zh-tw | 6eeaaf8 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/52 | yes | yes | 僅包含 Radar_localization.lua；PR ready |
+| SprintRelicHeavy | codex | main | Codex/Feature/SprintRelicHeavy/Add-zh-tw | 96a518f | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/54 | yes | yes | 僅包含 SprintRelicHeavy_localization.lua；PR ready |
 
 ## Completed Files
 
@@ -627,3 +660,4 @@
 | crusher_attack_indicator | codex | Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | 2 | 8efc54c | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/51 | 2026-07-11 11:01:35 +08:00 | Darktide Translation Workspace/Log/crusher_attack_indicator.md | 校正 Cleave/順劈語意；PR ready |
 | PlasmaBFG | codex | Warhammer 40,000 DARKTIDE/mods/PlasmaBFG/scripts/mods/PlasmaBFG/PlasmaBFG_localization.lua | 3 | 4c85538 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/53 | 2026-07-11 12:24:13 +08:00 | Darktide Translation Workspace/Log/PlasmaBFG.md | 校正 Heat/Plasma/hook 相關 zh-tw 用語；PR ready |
 | Radar | codex | Warhammer 40,000 DARKTIDE/mods/Radar/scripts/mods/Radar/Radar_localization.lua | 13 | 6eeaaf8 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/52 | 2026-07-11 11:50:22 +08:00 | Darktide Translation Workspace/Log/Radar.md | 校正 Horde/遠征物品 tooltip 詞彙一致性；PR ready |
+| SprintRelicHeavy | codex | Warhammer 40,000 DARKTIDE/mods/SprintRelicHeavy/scripts/mods/SprintRelicHeavy/SprintRelicHeavy_localization.lua | 4 | 96a518f | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/54 | 2026-07-11 13:11:01 +08:00 | Darktide Translation Workspace/Log/SprintRelicHeavy.md | 校正 Relic Blade 詞彙表與輔助功能描述；PR ready |
