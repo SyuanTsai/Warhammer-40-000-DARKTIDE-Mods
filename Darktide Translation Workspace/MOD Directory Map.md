@@ -92,7 +92,6 @@
 | completed | 2026-07-07 +08:00 | Quick Level Mastery | quick_level_mastery | 所有 zh-tw 已完整正確，無需修改。 |
 | in_progress | 2026-07-07 +08:00 | I Wanna See | i_wanna_see |  |
 | completed | 2026-07-07 +08:00 | VFX Swapper | vfx_swapper | 所有 zh-tw 已完整正確，無需修改。 |
-| completed | 2026-07-07 +08:00 | MemoryLeakFix | MemLeakFix | 所有靜態 zh-tw 已完整，注解項目無需補翻譯。 |
 | original_mod_updated | 2026-07-11 11:44:36 +08:00 | CombatStats | CombatStats | README 更新至 Last updated 09 July 2026 / 0.4.13；需重新比對本地 localization。 |
 | completed | 2026-07-07 +08:00 | CharacterGrid | CharacterGrid | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | TeamKills | TeamKills | 無可翻譯內容（無静態中文項目）。 |
@@ -151,3 +150,4 @@
 | removed | not checked | AutoTag | removed |  |
 | removed | not checked | RickAndMortis | removed |  |
 | removed | not checked | Alternate Grenade Icons | removed |  |
+| removed | 2026-07-07 +08:00 | MemoryLeakFix | MemLeakFix | removed : 2026/07/11 |

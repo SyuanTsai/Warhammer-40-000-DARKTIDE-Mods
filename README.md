@@ -526,13 +526,6 @@
 - MOD 檔案名稱：Quick fix for volumetric crash on load-in-678-1-1-1-1773931987
 - 手動維護最後下載日期：2026-05-17
 
-### [MemoryLeakFix](https://www.nexusmods.com/warhammer40kdarktide/mods/406)
-    減緩記憶體崩潰
-- MOD 網站最後更新日期：Last updated 31 October 2024, 7:25PM
-- MOD 版本：1.1.2
-- MOD 檔案名稱：MemLeakFix-406-1-1-2-1730373955
-- 手動維護最後下載日期：2025-12-28
-
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
     記分板
 - MOD 網站最後更新日期：Last updated 09 July 2026, 9:00PM
@@ -873,3 +866,11 @@
 - MOD 檔案名稱：HoldFire-797-1-1-4-1778137707
 - 手動維護最後下載日期：2026-05-17
 - 移除原因：作者停止維護，且某些情境下對電將槍造成阻礙。
+
+### [MemoryLeakFix](https://www.nexusmods.com/warhammer40kdarktide/mods/406)
+    減緩記憶體崩潰
+- MOD 網站最後更新日期：Last updated 31 October 2024, 7:25PM
+- MOD 版本：1.1.2
+- MOD 檔案名稱：MemLeakFix-406-1-1-2-1730373955
+- 手動維護最後下載日期：2025-12-28
+- 移除原因：SMOG Cleaner取代此功能。
