@@ -54,7 +54,7 @@ en = "HUD Y Axis",
 },
 manual_clear_key = {
 en = "Choose key to clean Lua heap",
-["zh-tw"] = "選擇清理 Lua 堆積記憶體的按鍵",
+["zh-tw"] = "選擇清理Lua程式記憶體的按鍵",
 },
 manual_clear_key_desc = {
 en = "{#color(93,101,50)}Manually trigger a full garbage clean.{#reset()}",
@@ -66,6 +66,6 @@ en = "Notification Y Axis",
 },
 command_clear_desc = {
 en = "Clean Lua heap",
-["zh-tw"] = "清理 Lua 堆積記憶體",
+["zh-tw"] = "清理Lua程式的記憶體",
 },
 }
