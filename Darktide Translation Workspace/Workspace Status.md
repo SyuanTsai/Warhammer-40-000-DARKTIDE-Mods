@@ -30,7 +30,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | AUPM | AUPM | main | Codex/Feature/AUPM/Add-zh-tw | Darktide Translation Workspace/Log/AUPM.md | AUPM_localization.lua | all keys | 2026-07-11 20:35:47 +08:00 | f9afe06 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/58 | DPM/*localization.lua:first key | 已校正戰鬥技能使用統計與客製化開發用語；PR #58 已合併 |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | DPM | DPM | main | Codex/Feature/DPM/Add-zh-tw | Darktide Translation Workspace/Log/DPM.md | DPM_localization.lua | all keys | 2026-07-12 01:30:04 +08:00 | 035eb98 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/59 | KeepSwinging/*localization.lua:first key | 已校正 DPM 每分鐘傷害資料顯示描述；PR #59 已合併 |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | KeepSwinging | KeepSwinging | main | Codex/Feature/KeepSwinging/Add-zh-tw | Darktide Translation Workspace/Log/KeepSwinging.md | KeepSwinging_localization.lua | all keys | 2026-07-12 02:22:26 +08:00 | a3fc6f6 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/60 | KPM/*localization.lua:first key | 已校正自動揮擊、攻擊鍵修飾模式與 HUD 用語；PR #60 已合併 |
-| codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | KPM | KPM | main | Codex/Feature/KPM/Add-zh-tw | Darktide Translation Workspace/Log/KPM.md | KPM_localization.lua | first key | 2026-07-12 02:22:26 +08:00 |  | no |  | KPM/*localization.lua:first key | 開始校正 zh-tw KPM 擊殺率與精英/專家用語 |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | KPM | KPM | main | Codex/Feature/KPM/Add-zh-tw | Darktide Translation Workspace/Log/KPM.md | KPM_localization.lua | all keys | 2026-07-12 02:57:52 +08:00 | 9a92cf3 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/61 | RetainSelection/*localization.lua:first key | 已校正 KPM 描述、近戰/遠程類精英與專家敵人用語；PR #61 ready |
 
 ## 工作鎖定
 
@@ -59,7 +59,7 @@
 | AUPM | Warhammer 40,000 DARKTIDE/mods/AUPM/scripts/mods/AUPM/AUPM_localization.lua | all keys | codex | released | Codex/Feature/AUPM/Add-zh-tw | Darktide Translation Workspace/Log/AUPM.md | 2026-07-11 20:23:26 +08:00 | 2026-07-11 20:35:47 +08:00 | PR #58 已合併 | 任務完成，釋放鎖定 |
 | DPM | Warhammer 40,000 DARKTIDE/mods/DPM/scripts/mods/DPM/DPM_localization.lua | all keys | codex | released | Codex/Feature/DPM/Add-zh-tw | Darktide Translation Workspace/Log/DPM.md | 2026-07-12 00:58:13 +08:00 | 2026-07-12 01:30:04 +08:00 | PR #59 已合併 | 任務完成，釋放鎖定 |
 | KeepSwinging | Warhammer 40,000 DARKTIDE/mods/KeepSwinging/scripts/mods/KeepSwinging/KeepSwinging_localization.lua | all keys | codex | released | Codex/Feature/KeepSwinging/Add-zh-tw | Darktide Translation Workspace/Log/KeepSwinging.md | 2026-07-12 01:40:46 +08:00 | 2026-07-12 02:22:26 +08:00 | PR #60 已合併 | 任務完成，釋放鎖定 |
-| KPM | Warhammer 40,000 DARKTIDE/mods/KPM/scripts/mods/KPM/KPM_localization.lua | first key | codex | in_progress | Codex/Feature/KPM/Add-zh-tw | Darktide Translation Workspace/Log/KPM.md | 2026-07-12 02:22:26 +08:00 | 2026-07-12 02:22:26 +08:00 | PR 建立且工作文件同步後釋放 | 開始校正 zh-tw KPM 擊殺率與精英/專家用語 |
+| KPM | Warhammer 40,000 DARKTIDE/mods/KPM/scripts/mods/KPM/KPM_localization.lua | all keys | codex | released | Codex/Feature/KPM/Add-zh-tw | Darktide Translation Workspace/Log/KPM.md | 2026-07-12 02:22:26 +08:00 | 2026-07-12 02:57:52 +08:00 | PR #61 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -798,6 +798,38 @@
 | 2026-07-12 01:40:46 +08:00 | Warhammer 40,000 DARKTIDE/mods/KeepSwinging/scripts/mods/KeepSwinging/KeepSwinging_localization.lua | first key | in_progress | Section: Key Progress | 開始校正 zh-tw 自動揮擊與攻擊鍵模式用語 |
 | 2026-07-12 02:03:14 +08:00 | Warhammer 40,000 DARKTIDE/mods/KeepSwinging/scripts/mods/KeepSwinging/KeepSwinging_localization.lua | group_extra | completed | Section: Key Progress | 校正 7 個 zh-tw UI 值，包含 mod_description、as_modifier、HUD 與雜項 |
 
+### MOD-LOG-0023 - KPM
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | KPM |
+| Repo directory | KPM |
+| AI handler | codex |
+| Status | completed |
+| Base branch | main |
+| Work branch | Codex/Feature/KPM/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/KPM.md |
+| Started at | 2026-07-12 02:22:26 +08:00 |
+| Last updated | 2026-07-12 02:57:52 +08:00 |
+| Completed at | 2026-07-12 02:57:52 +08:00 |
+| Commit | 9a92cf3 |
+| PR URL / number | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/61 |
+| Next position | RetainSelection/*localization.lua:first key |
+| Notes | 已校正 KPM 描述、近戰/遠程類精英與專家敵人用語；PR #61 ready。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/KPM/scripts/mods/KPM/KPM_localization.lua | completed | 4 | show_skpm | Section: Key Progress | 僅修改 zh-tw 欄位；en=5、zh-tw=5、無空白 zh-tw |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-12 02:22:26 +08:00 | Warhammer 40,000 DARKTIDE/mods/KPM/scripts/mods/KPM/KPM_localization.lua | first key | in_progress | Section: Key Progress | 開始校正 zh-tw KPM 擊殺率與精英/專家用語 |
+| 2026-07-12 02:57:52 +08:00 | Warhammer 40,000 DARKTIDE/mods/KPM/scripts/mods/KPM/KPM_localization.lua | show_skpm | completed | Section: Key Progress | 校正 4 個 zh-tw 值，包含 Darktide/黑潮、KPM 資料、近戰/遠程類精英與專家敵人 |
+
 ## 協作交接紀錄
 
 | Time | From | To | MOD | File | Key | From status | To status | Branch log | Note |
@@ -891,6 +923,7 @@
 | AUPM | codex | main | Codex/Feature/AUPM/Add-zh-tw | f9afe06 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/58 | yes | yes | 僅包含 AUPM_localization.lua；PR #58 已合併 |
 | DPM | codex | main | Codex/Feature/DPM/Add-zh-tw | 035eb98 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/59 | yes | yes | 僅包含 DPM_localization.lua；PR #59 已合併 |
 | KeepSwinging | codex | main | Codex/Feature/KeepSwinging/Add-zh-tw | a3fc6f6 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/60 | yes | yes | 僅包含 KeepSwinging_localization.lua；PR #60 已合併 |
+| KPM | codex | main | Codex/Feature/KPM/Add-zh-tw | 9a92cf3 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/61 | yes | yes | 僅包含 KPM_localization.lua；PR ready |
 
 ## Completed Files
 
@@ -915,3 +948,4 @@
 | AUPM | codex | Warhammer 40,000 DARKTIDE/mods/AUPM/scripts/mods/AUPM/AUPM_localization.lua | 2 | f9afe06 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/58 | 2026-07-11 20:35:47 +08:00 | Darktide Translation Workspace/Log/AUPM.md | 校正戰鬥技能使用統計與客製化開發用語；PR #58 已合併 |
 | DPM | codex | Warhammer 40,000 DARKTIDE/mods/DPM/scripts/mods/DPM/DPM_localization.lua | 1 | 035eb98 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/59 | 2026-07-12 01:21:20 +08:00 | Darktide Translation Workspace/Log/DPM.md | 校正 DPM 每分鐘傷害資料顯示描述；PR #59 已合併 |
 | KeepSwinging | codex | Warhammer 40,000 DARKTIDE/mods/KeepSwinging/scripts/mods/KeepSwinging/KeepSwinging_localization.lua | 7 | a3fc6f6 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/60 | 2026-07-12 02:03:14 +08:00 | Darktide Translation Workspace/Log/KeepSwinging.md | 校正自動揮擊、攻擊鍵修飾模式與 HUD 用語；PR #60 已合併 |
+| KPM | codex | Warhammer 40,000 DARKTIDE/mods/KPM/scripts/mods/KPM/KPM_localization.lua | 4 | 9a92cf3 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/61 | 2026-07-12 02:57:52 +08:00 | Darktide Translation Workspace/Log/KPM.md | 校正 KPM 描述、近戰/遠程類精英與專家敵人用語；PR ready |
