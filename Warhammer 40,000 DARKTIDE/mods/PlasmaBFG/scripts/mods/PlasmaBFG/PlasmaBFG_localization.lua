@@ -29,7 +29,7 @@ return {
 	},
 	group_venting_description = {
 		en = "Vent speed and self-damage settings. Heat safety timing stays automatic.",
-		["zh-tw"] = "散熱速度與自傷設定。熱量安全時機會維持自動判定。",
+		["zh-tw"] = "散熱速度與自傷設定。熱能安全時機會維持自動判定。",
 	},
 	group_damage = {
 		en = "Damage",
@@ -85,7 +85,7 @@ return {
 	},
 	held_primary_assist_enabled_description = {
 		en = "Hold primary to keep firing. Preserves held-fire intent through reloads and vents using weapon action hooks instead of a rate timer.",
-		["zh-tw"] = "按住主要射擊以持續開火。透過武器動作 hook 保留換彈與散熱期間的持續開火意圖，而不是使用射速計時器。",
+		["zh-tw"] = "按住主要射擊以持續開火。透過武器動作掛鉤保留換彈與散熱期間的持續開火意圖，而不是使用射速計時器。",
 	},
 	recoil_multiplier = {
 		en = "Recoil Scale",
@@ -189,7 +189,7 @@ return {
 	},
 	force_full_charge_damage_description = {
 		en = "Treats Plasma hit damage as fully charged while keeping normal charge, heat, and ammo behavior.",
-		["zh-tw"] = "將 Plasma 命中傷害視為滿充能，同時保留正常充能、熱量與彈藥行為。",
+		["zh-tw"] = "將電漿槍命中傷害視為滿充能，同時保留正常充能、熱能與彈藥行為。",
 	},
 	primary_penetration_depth = {
 		en = "Primary Penetration",
