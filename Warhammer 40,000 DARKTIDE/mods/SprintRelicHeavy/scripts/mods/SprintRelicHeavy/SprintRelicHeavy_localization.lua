@@ -1,11 +1,11 @@
 return {
 	mod_name = {
 		en = "SprintRelicHeavy",
-		["zh-tw"] = "聖物刃衝刺重擊",
+		["zh-tw"] = "上古神刃衝刺重擊",
 	},
 	mod_description = {
 		en = "Performs a Relic Blade heavy windup while sprinting.",
-		["zh-tw"] = "在衝刺時自動執行聖物刃重擊蓄力動作。",
+		["zh-tw"] = "衝刺時執行上古神刃重攻擊蓄力。",
 	},
 	override_sprint = {
 		en = "Override Sprint",
@@ -13,7 +13,7 @@ return {
 	},
 	override_sprint_description = {
 		en = "When on, holding sprint also drives the helper. When off, the mod stays idle unless you hold Helper Hotkey.",
-		["zh-tw"] = "開啟時，長按衝刺鍵也會驅動輔助功能。關閉時，只有按住輔助快捷鍵才會啟動。",
+		["zh-tw"] = "開啟時，按住衝刺鍵也會啟動輔助功能。關閉時，除非按住輔助快捷鍵，否則 MOD 會保持閒置。",
 	},
 	helper_hotkey = {
 		en = "Helper Hotkey",
@@ -21,7 +21,7 @@ return {
 	},
 	helper_hotkey_description = {
 		en = "Hold to trigger the sprint-heavy helper. This is the only trigger when Override Sprint is off.",
-		["zh-tw"] = "按住以觸發衝刺重擊輔助。當覆蓋衝刺鍵關閉時，這是唯一的觸發方式。",
+		["zh-tw"] = "按住即可觸發衝刺重攻擊輔助。覆蓋衝刺鍵關閉時，這是唯一的觸發方式。",
 	},
 	use_block_cancel = {
 		en = "Use Block-Cancel Fallback",
