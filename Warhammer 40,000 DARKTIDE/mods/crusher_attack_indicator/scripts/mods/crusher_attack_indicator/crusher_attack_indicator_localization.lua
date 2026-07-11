@@ -5,13 +5,13 @@ local localizations = {
 	mod_name = {
 		["en"] = "Crusher Cleave Indicator",
 		["zh-cn"] = "粉碎者横扫指示器",
-        ["zh-tw"] = "碾壓者順劈指示器",
+        ["zh-tw"] = "碾壓者攻擊範圍顯示",
 		["ru"] = "Индикатор замаха Крушителя",
 	},
 	mod_description = {
 		["en"] = "Shows colored rings for Crusher cleave attacks. Yellow for warning, Red for the actual attack. Optional persistent yellow ring. Version: " .. version,
 		["zh-cn"] = "显示粉碎者横扫攻击的彩色指示环 - 黄色为警告，红色为实际攻击。可选常驻黄色环。版本：" .. version,
-        ["zh-tw"] = "顯示碾壓者順劈攻擊的彩色圓環。黃色代表警告，紅色代表實際攻擊。可選擇讓黃色圓環常駐顯示。版本：" .. version,
+        ["zh-tw"] = "顯示碾壓者重鎚的攻擊區域。黃色代表警告，紅色代表實際攻擊。可選擇讓黃色圓環常駐顯示。版本：" .. version,
 		["ru"] = "Показывает цветные кольца для атак Крушителя - Жёлтый для предупреждения, Красный для самой атаки. Опциональное постоянное жёлтое кольцо. Версия: " .. version,
 	},
     enabled = {
