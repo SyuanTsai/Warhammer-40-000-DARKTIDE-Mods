@@ -23,7 +23,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | Radar | Radar | main | Codex/Feature/Radar/Add-zh-tw | Darktide Translation Workspace/Log/Radar.md | Radar_localization.lua | all keys | 2026-07-11 11:50:22 +08:00 | 6eeaaf8 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/52 | AuspexHelper/*localization.lua:first key | 已校正 Horde/遠征物品 tooltip 詞彙一致性並建立 ready PR |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | PlasmaBFG | PlasmaBFG | main | Codex/Feature/PlasmaBFG/Add-zh-tw | Darktide Translation Workspace/Log/PlasmaBFG.md | PlasmaBFG_localization.lua | all keys | 2026-07-11 12:28:46 +08:00 | 4c85538 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/53 | SprintRelicHeavy/*localization.lua:first key | 已校正 Heat/Plasma/hook 相關 zh-tw 用語並建立 ready PR |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | SprintRelicHeavy | SprintRelicHeavy | main | Codex/Feature/SprintRelicHeavy/Add-zh-tw | Darktide Translation Workspace/Log/SprintRelicHeavy.md | SprintRelicHeavy_localization.lua | all keys | 2026-07-11 13:11:01 +08:00 | 96a518f | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/54 | AutoMark/*localization.lua:first key | 已校正 Relic Blade/輔助功能描述並建立 ready PR |
-| codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | AutoMark | Auto Mark | main | Codex/Feature/AutoMark/Add-zh-tw | Darktide Translation Workspace/Log/AutoMark.md | AutoMark_localization.lua | first key | 2026-07-11 13:20:16 +08:00 |  | no |  | AutoMark/*localization.lua:first key | 開始掃描 zh-tw 缺漏與詞彙表一致性 |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | AutoMark | Auto Mark | main | Codex/Feature/AutoMark/Add-zh-tw | Darktide Translation Workspace/Log/AutoMark.md | AutoMark_localization.lua | all keys | 2026-07-11 18:28:41 +08:00 | 45066e9 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/55 | SMOG/*localization.lua:first key | 已校正 Servo-Skull/Focus Target 詞彙表一致性；PR #55 已合併 |
 
 ## 工作鎖定
 
@@ -45,7 +45,7 @@
 | Radar | Warhammer 40,000 DARKTIDE/mods/Radar/scripts/mods/Radar/Radar_localization.lua | all keys | codex | released | Codex/Feature/Radar/Add-zh-tw | Darktide Translation Workspace/Log/Radar.md | 2026-07-11 11:37:27 +08:00 | 2026-07-11 11:50:22 +08:00 | PR #52 已建立且為 ready | 任務完成，釋放鎖定 |
 | PlasmaBFG | Warhammer 40,000 DARKTIDE/mods/PlasmaBFG/scripts/mods/PlasmaBFG/PlasmaBFG_localization.lua | all keys | codex | released | Codex/Feature/PlasmaBFG/Add-zh-tw | Darktide Translation Workspace/Log/PlasmaBFG.md | 2026-07-11 11:50:27 +08:00 | 2026-07-11 12:28:46 +08:00 | PR #53 已建立且為 ready | 任務完成，釋放鎖定 |
 | SprintRelicHeavy | Warhammer 40,000 DARKTIDE/mods/SprintRelicHeavy/scripts/mods/SprintRelicHeavy/SprintRelicHeavy_localization.lua | all keys | codex | released | Codex/Feature/SprintRelicHeavy/Add-zh-tw | Darktide Translation Workspace/Log/SprintRelicHeavy.md | 2026-07-11 13:05:47 +08:00 | 2026-07-11 13:11:01 +08:00 | PR #54 已建立且為 ready | 任務完成，釋放鎖定 |
-| AutoMark | Warhammer 40,000 DARKTIDE/mods/AutoMark/scripts/mods/AutoMark/AutoMark_localization.lua | first key | codex | in_progress | Codex/Feature/AutoMark/Add-zh-tw | Darktide Translation Workspace/Log/AutoMark.md | 2026-07-11 13:20:16 +08:00 | 2026-07-11 13:20:16 +08:00 | PR 建立且工作文件同步後釋放 | 開始掃描 zh-tw 缺漏與詞彙表一致性 |
+| AutoMark | Warhammer 40,000 DARKTIDE/mods/AutoMark/scripts/mods/AutoMark/AutoMark_localization.lua | all keys | codex | released | Codex/Feature/AutoMark/Add-zh-tw | Darktide Translation Workspace/Log/AutoMark.md | 2026-07-11 13:20:16 +08:00 | 2026-07-11 18:28:41 +08:00 | PR #55 已建立並合併 | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -560,6 +560,38 @@
 | 2026-07-11 13:05:47 +08:00 | Warhammer 40,000 DARKTIDE/mods/SprintRelicHeavy/scripts/mods/SprintRelicHeavy/SprintRelicHeavy_localization.lua | first key | in_progress | Section: Key Progress | 開始檢查 zh-tw；Relic Blade 命中詞彙表 |
 | 2026-07-11 13:11:01 +08:00 | Warhammer 40,000 DARKTIDE/mods/SprintRelicHeavy/scripts/mods/SprintRelicHeavy/SprintRelicHeavy_localization.lua | mod_name / mod_description / override_sprint_description / helper_hotkey_description | completed | Section: Key Progress | 校正 Relic Blade→上古神刃，並調整 helper/idle 描述 |
 
+### MOD-LOG-0016 - AutoMark
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | Auto Mark |
+| Repo directory | AutoMark |
+| AI handler | codex |
+| Status | completed |
+| Base branch | main |
+| Work branch | Codex/Feature/AutoMark/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/AutoMark.md |
+| Started at | 2026-07-11 13:20:16 +08:00 |
+| Last updated | 2026-07-11 18:28:41 +08:00 |
+| Completed at | 2026-07-11 18:28:41 +08:00 |
+| Commit | 45066e9 |
+| PR URL / number | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/55 |
+| Next position | SMOG/*localization.lua:first key |
+| Notes | 已校正 Servo-Skull→伺服頭骨與 Focus Target→鎖定目標；PR #55 已合併。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/AutoMark/scripts/mods/AutoMark/AutoMark_localization.lua | completed | 13 | class_selection_description / cryptic_servo_skull | Section: Key Progress | 僅修改 zh-tw 欄位；靜態表 133，無缺失/重複/空白 zh-tw |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-11 13:20:16 +08:00 | Warhammer 40,000 DARKTIDE/mods/AutoMark/scripts/mods/AutoMark/AutoMark_localization.lua | first key | in_progress | Section: Key Progress | 開始檢查 zh-tw 缺漏與詞彙表一致性 |
+| 2026-07-11 18:28:41 +08:00 | Warhammer 40,000 DARKTIDE/mods/AutoMark/scripts/mods/AutoMark/AutoMark_localization.lua | 13 zh-tw corrections | completed | Section: Key Progress | 校正 Servo-Skull→伺服頭骨、Focus Target→鎖定目標 |
+
 ## 協作交接紀錄
 
 | Time | From | To | MOD | File | Key | From status | To status | Branch log | Note |
@@ -646,6 +678,7 @@
 | PlasmaBFG | codex | main | Codex/Feature/PlasmaBFG/Add-zh-tw | 4c85538 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/53 | yes | yes | 僅包含 PlasmaBFG_localization.lua；PR ready |
 | Radar | codex | main | Codex/Feature/Radar/Add-zh-tw | 6eeaaf8 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/52 | yes | yes | 僅包含 Radar_localization.lua；PR ready |
 | SprintRelicHeavy | codex | main | Codex/Feature/SprintRelicHeavy/Add-zh-tw | 96a518f | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/54 | yes | yes | 僅包含 SprintRelicHeavy_localization.lua；PR ready |
+| AutoMark | codex | main | Codex/Feature/AutoMark/Add-zh-tw | 45066e9 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/55 | yes | yes | 僅包含 AutoMark_localization.lua；PR #55 已合併 |
 
 ## Completed Files
 
@@ -663,3 +696,4 @@
 | PlasmaBFG | codex | Warhammer 40,000 DARKTIDE/mods/PlasmaBFG/scripts/mods/PlasmaBFG/PlasmaBFG_localization.lua | 3 | 4c85538 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/53 | 2026-07-11 12:24:13 +08:00 | Darktide Translation Workspace/Log/PlasmaBFG.md | 校正 Heat/Plasma/hook 相關 zh-tw 用語；PR ready |
 | Radar | codex | Warhammer 40,000 DARKTIDE/mods/Radar/scripts/mods/Radar/Radar_localization.lua | 13 | 6eeaaf8 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/52 | 2026-07-11 11:50:22 +08:00 | Darktide Translation Workspace/Log/Radar.md | 校正 Horde/遠征物品 tooltip 詞彙一致性；PR ready |
 | SprintRelicHeavy | codex | Warhammer 40,000 DARKTIDE/mods/SprintRelicHeavy/scripts/mods/SprintRelicHeavy/SprintRelicHeavy_localization.lua | 4 | 96a518f | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/54 | 2026-07-11 13:11:01 +08:00 | Darktide Translation Workspace/Log/SprintRelicHeavy.md | 校正 Relic Blade 詞彙表與輔助功能描述；PR ready |
+| AutoMark | codex | Warhammer 40,000 DARKTIDE/mods/AutoMark/scripts/mods/AutoMark/AutoMark_localization.lua | 13 | 45066e9 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/55 | 2026-07-11 18:28:41 +08:00 | Darktide Translation Workspace/Log/AutoMark.md | 校正 Servo-Skull/Focus Target 詞彙表一致性；PR #55 已合併 |

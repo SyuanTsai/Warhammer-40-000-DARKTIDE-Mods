@@ -115,7 +115,7 @@
 | completed | 2026-07-11 11:50:22 +08:00 | Radar | Radar | 校正 Horde/遠征物品 tooltip 詞彙一致性（PR #52）。 |
 | completed | 2026-07-11 12:28:46 +08:00 | PlasmaBFG | PlasmaBFG | 校正 Heat/Plasma/hook 相關 zh-tw 用語（PR #53）。 |
 | completed | 2026-07-11 13:11:01 +08:00 | SprintRelicHeavy | SprintRelicHeavy | 校正 Relic Blade 詞彙表與輔助功能描述（PR #54）。 |
-| in_progress | 2026-07-11 13:20:16 +08:00 | Auto Mark | AutoMark | codex 正在掃描 zh-tw 缺漏與詞彙表一致性。 |
+| completed | 2026-07-11 18:28:41 +08:00 | Auto Mark | AutoMark | 校正 Servo-Skull/Focus Target 詞彙表一致性（PR #55）。 |
 | ready | not checked | SMOG Cleaner | SMOG | README active MOD，新增至排程。 |
 | ready | not checked | ErrorTracker | ErrorTracker | README active MOD，新增至排程。 |
 | ready | not checked | NoBrainer | NoBrainer | README active MOD，新增至排程。 |
