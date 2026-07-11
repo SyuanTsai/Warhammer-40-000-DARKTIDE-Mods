@@ -24,11 +24,7 @@
 
 | Term / English | Proposed zh-tw | Source MOD | File | Localization key | Reason | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Horde (enemy type) | 屍潮 | Power_DI | Power_DI_localization.lua | mloc_horde | 現有 "成群小怪"，CombatStats 同一概念用 "屍潮"，不一致 | candidate | 兩者皆未違反 Translation.md，待使用者決定是否統一 |
-| Rations | 口糧 | auto_rations | auto_rations_localization.lua | mod_name / mod_description | 活動互動物品名稱，正式詞彙表尚未收錄 | candidate | auto_rations 既有 zh-tw 使用「口糧」，本輪未修改 |
-| Empower | 強化 | EmpowerUntilLimit | EmpowerUntilLimit_localization.lua | mod_name / mod_description | 裝備升級動作用語，正式詞彙表尚未收錄 | candidate | 本輪用於「強化至上限」與描述句 |
 | Radar | 雷達 | Radar | Radar_localization.lua | mod_name / multiple settings | MOD 主要 UI 名稱，正式詞彙表尚未收錄 | candidate | 本輪沿用「雷達」；mod_name 使用「雷達（小地圖）」 |
 | Tech-Remnants | 科技殘骸 | Radar | Radar_localization.lua | tech_remnants_group / show_expedition_tech_remnant | 遠征拾取物名稱，正式詞彙表尚未收錄 | candidate | 本輪未修改既有譯法，僅記錄候選 |
 | Data Reliquary / Data Reliquary Harvester | 資料聖骨匣 / 資料聖骨匣採集器 | Radar | Radar_localization.lua | show_data_reliquaries / show_expedition_loot_converter | 遠征目標/互動物名稱，正式詞彙表尚未收錄 | candidate | 本輪統一 label 與 tooltip 用語 |
-| Valkyrie | 瓦爾基里 | Radar | Radar_localization.lua | show_expedition_objective_extraction / show_expedition_objective_arrival | 遠征撤離/抵達區名稱，正式詞彙表尚未收錄 | candidate | 本輪統一 label 與 tooltip 用語 |
 | Deadsider Sanctuaries | 亡行者聖所 | Radar | Radar_localization.lua | show_expedition_objective_transition | 遠征興趣點名稱，正式詞彙表尚未收錄 | candidate | 本輪統一 label 與 tooltip 用語 |
