@@ -29,6 +29,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | NoBrainer | NoBrainer | main | Codex/Feature/NoBrainer/Add-zh-tw | Darktide Translation Workspace/Log/NoBrainer.md | NoBrainer_localization.lua | all keys | 2026-07-11 20:23:26 +08:00 | 0b32532 | yes | manual merge to main | AUPM/*localization.lua:first key | 已校正 Darktide/Mourningstar/Tree Drill 詞彙；使用者手動合併至 main |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | AUPM | AUPM | main | Codex/Feature/AUPM/Add-zh-tw | Darktide Translation Workspace/Log/AUPM.md | AUPM_localization.lua | all keys | 2026-07-11 20:35:47 +08:00 | f9afe06 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/58 | DPM/*localization.lua:first key | 已校正戰鬥技能使用統計與客製化開發用語；PR #58 已合併 |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | DPM | DPM | main | Codex/Feature/DPM/Add-zh-tw | Darktide Translation Workspace/Log/DPM.md | DPM_localization.lua | all keys | 2026-07-12 01:30:04 +08:00 | 035eb98 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/59 | KeepSwinging/*localization.lua:first key | 已校正 DPM 每分鐘傷害資料顯示描述；PR #59 已合併 |
+| codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | KeepSwinging | KeepSwinging | main | Codex/Feature/KeepSwinging/Add-zh-tw | Darktide Translation Workspace/Log/KeepSwinging.md | KeepSwinging_localization.lua | first key | 2026-07-12 01:40:46 +08:00 |  | no |  | KeepSwinging/*localization.lua:first key | 開始校正 zh-tw 自動揮擊與攻擊鍵模式用語 |
 
 ## 工作鎖定
 
@@ -56,6 +57,7 @@
 | NoBrainer | Warhammer 40,000 DARKTIDE/mods/NoBrainer/scripts/mods/NoBrainer/NoBrainer_localization.lua | all keys | codex | released | Codex/Feature/NoBrainer/Add-zh-tw | Darktide Translation Workspace/Log/NoBrainer.md | 2026-07-11 20:05:37 +08:00 | 2026-07-11 20:23:26 +08:00 | 使用者手動合併至 main | 任務完成，釋放鎖定 |
 | AUPM | Warhammer 40,000 DARKTIDE/mods/AUPM/scripts/mods/AUPM/AUPM_localization.lua | all keys | codex | released | Codex/Feature/AUPM/Add-zh-tw | Darktide Translation Workspace/Log/AUPM.md | 2026-07-11 20:23:26 +08:00 | 2026-07-11 20:35:47 +08:00 | PR #58 已合併 | 任務完成，釋放鎖定 |
 | DPM | Warhammer 40,000 DARKTIDE/mods/DPM/scripts/mods/DPM/DPM_localization.lua | all keys | codex | released | Codex/Feature/DPM/Add-zh-tw | Darktide Translation Workspace/Log/DPM.md | 2026-07-12 00:58:13 +08:00 | 2026-07-12 01:30:04 +08:00 | PR #59 已合併 | 任務完成，釋放鎖定 |
+| KeepSwinging | Warhammer 40,000 DARKTIDE/mods/KeepSwinging/scripts/mods/KeepSwinging/KeepSwinging_localization.lua | first key | codex | in_progress | Codex/Feature/KeepSwinging/Add-zh-tw | Darktide Translation Workspace/Log/KeepSwinging.md | 2026-07-12 01:40:46 +08:00 | 2026-07-12 01:40:46 +08:00 | PR 建立且工作文件同步後釋放 | 開始校正 zh-tw 自動揮擊與攻擊鍵模式用語 |
 
 ## 逐 MOD 工作紀錄
 
