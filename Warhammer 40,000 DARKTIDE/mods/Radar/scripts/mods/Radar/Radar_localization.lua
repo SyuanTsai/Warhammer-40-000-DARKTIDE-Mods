@@ -5167,7 +5167,7 @@ return {
         ja = "レーダーにヴァルキリー脱出地点を表示します。",
         ko = "레이더에 발키리 탈출 구역을 표시합니다.",
         ["zh-cn"] = "在雷达上显示女武神撤离区。",
-        ["zh-tw"] = "在雷達上顯示瓦爾基里撤離區。",
+        ["zh-tw"] = "在雷達上顯示女武神撤離區。",
     },
     show_expedition_objective_arrival_tooltip = {
         en = "Show Valkyrie Arrival Zone on the radar.",
@@ -5181,7 +5181,7 @@ return {
         ja = "レーダーにヴァルキリー到着地点を表示します。",
         ko = "레이더에 발키리 도착 구역을 표시합니다.",
         ["zh-cn"] = "在雷达上显示女武神到达区。",
-        ["zh-tw"] = "在雷達上顯示瓦爾基里抵達區。",
+        ["zh-tw"] = "在雷達上顯示女武神抵達區。",
     },
     show_expedition_loot_converter_tooltip = {
         en = "Show Data Reliquary Harvesters on the radar.",
