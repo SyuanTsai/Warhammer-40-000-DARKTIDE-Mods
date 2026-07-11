@@ -118,7 +118,7 @@
 | blocked | 2026-07-11 11:37:27 +08:00 | HoldFire | HoldFire | README active MOD，但 main 的 mods 目錄缺少 HoldFire 資料夾，待補本地檔案後再處理。 |
 | ready | not checked | Radar | Radar |  |
 | ready | not checked | AuspexHelper | AuspexHelper |  |
-| ready | not checked | PlasmaBFG | PlasmaBFG |  |
+| in_progress | 2026-07-11 11:50:27 +08:00 | PlasmaBFG | PlasmaBFG | 使用者指定優先處理；codex 已建立工作鎖定。 |
 | ready | not checked | SprintRelicHeavy | SprintRelicHeavy |  |
 | ready | not checked | Auto Mark | AutoMark |  |
 | ready | not checked | SMOG Cleaner | SMOG | README active MOD，新增至排程。 |

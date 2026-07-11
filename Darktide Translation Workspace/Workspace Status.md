@@ -21,6 +21,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | mauler_attack_indicator | Mauler Attack Indicator | main | Codex/Feature/mauler_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/mauler_attack_indicator.md | mauler_attack_indicator_localization.lua | all keys | 2026-07-09 01:24:11 +08:00 | 02eae73 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/50 | crusher_attack_indicator/*localization.lua:first key | 已完成 zh-tw 校正並建立 ready PR |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | crusher_attack_indicator | Crusher Attack Indicator | main | Codex/Feature/crusher_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/crusher_attack_indicator.md | crusher_attack_indicator_localization.lua | all keys | 2026-07-11 11:05:15 +08:00 | 8efc54c | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/51 | Radar/*localization.lua:first key | 已校正 Cleave/順劈語意並建立 ready PR |
 | codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | Radar | Radar | main | Codex/Feature/Radar/Add-zh-tw | Darktide Translation Workspace/Log/Radar.md | Radar_localization.lua | first key | 2026-07-11 11:37:27 +08:00 |  | no |  | Radar/Radar_localization.lua:first key | HoldFire 缺少本地目錄已記為 blocked；接續處理 Radar |
+| codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | PlasmaBFG | PlasmaBFG | main | Codex/Feature/PlasmaBFG/Add-zh-tw | Darktide Translation Workspace/Log/PlasmaBFG.md | PlasmaBFG_localization.lua | first key | 2026-07-11 11:50:27 +08:00 |  | no |  | PlasmaBFG/PlasmaBFG_localization.lua:first key | 使用者指定優先處理 PlasmaBFG |
 
 ## 工作鎖定
 
@@ -40,6 +41,7 @@
 | crusher_attack_indicator | Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | all keys | codex | released | Codex/Feature/crusher_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/crusher_attack_indicator.md | 2026-07-11 10:57:08 +08:00 | 2026-07-11 11:05:15 +08:00 | PR #51 已建立且為 ready | 任務完成，釋放鎖定 |
 | HoldFire | Warhammer 40,000 DARKTIDE/mods/HoldFire | (none) | codex | blocked | Codex/Feature/HoldFire/Add-zh-tw | Darktide Translation Workspace/Log/HoldFire.md | 2026-07-11 11:37:27 +08:00 | 2026-07-11 11:37:27 +08:00 | 待本地補上 HoldFire 目錄 | README 與排程均列為 active/ready，但 main 的 mods 目錄缺少 HoldFire |
 | Radar | Warhammer 40,000 DARKTIDE/mods/Radar/scripts/mods/Radar/Radar_localization.lua | first key | codex | in_progress | Codex/Feature/Radar/Add-zh-tw | Darktide Translation Workspace/Log/Radar.md | 2026-07-11 11:37:27 +08:00 | 2026-07-11 11:37:27 +08:00 | 完成 Radar localization 檢查與 PR 後釋放 | 接續處理下一個 ready MOD |
+| PlasmaBFG | Warhammer 40,000 DARKTIDE/mods/PlasmaBFG/scripts/mods/PlasmaBFG/PlasmaBFG_localization.lua | first key | codex | in_progress | Codex/Feature/PlasmaBFG/Add-zh-tw | Darktide Translation Workspace/Log/PlasmaBFG.md | 2026-07-11 11:50:27 +08:00 | 2026-07-11 11:50:27 +08:00 | 完成 PlasmaBFG localization 檢查與 PR 後釋放 | 使用者指定優先處理 PlasmaBFG |
 
 ## 逐 MOD 工作紀錄
 
@@ -488,6 +490,37 @@
 | Time | File | Key | Status | Branch log section | Notes |
 | --- | --- | --- | --- | --- | --- |
 | 2026-07-11 11:37:27 +08:00 | Warhammer 40,000 DARKTIDE/mods/Radar/scripts/mods/Radar/Radar_localization.lua | first key | in_progress | Section: Key Progress | 開始檢查 zh-tw |
+
+### MOD-LOG-0014 - PlasmaBFG
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | PlasmaBFG |
+| Repo directory | PlasmaBFG |
+| AI handler | codex |
+| Status | in_progress |
+| Base branch | main |
+| Work branch | Codex/Feature/PlasmaBFG/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/PlasmaBFG.md |
+| Started at | 2026-07-11 11:50:27 +08:00 |
+| Last updated | 2026-07-11 11:50:27 +08:00 |
+| Completed at |  |
+| Commit |  |
+| PR URL / number |  |
+| Next position | PlasmaBFG/PlasmaBFG_localization.lua:first key |
+| Notes | 使用者指定優先處理 PlasmaBFG。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/PlasmaBFG/scripts/mods/PlasmaBFG/PlasmaBFG_localization.lua | in_progress | 0 | first key | Section: File Scan | 開始檢查 zh-tw |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-11 11:50:27 +08:00 | Warhammer 40,000 DARKTIDE/mods/PlasmaBFG/scripts/mods/PlasmaBFG/PlasmaBFG_localization.lua | first key | in_progress | Section: Key Progress | 開始檢查 zh-tw |
 
 ## 協作交接紀錄
 
