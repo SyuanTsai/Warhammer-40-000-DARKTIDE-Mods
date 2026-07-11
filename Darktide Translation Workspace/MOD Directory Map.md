@@ -31,8 +31,8 @@
 | completed | 2026-07-07 +08:00 | Power DI | Power_DI | 補齊缺失 zh-tw、修正 Curios/Crit 詞彙表（PR #36）。 |
 | completed | 2026-07-07 +08:00 | Skitarius | Skitarius | 修正簡體字混入、錯誤撰考問題（PR #37）。 |
 | completed | 2026-07-07 +08:00 | Auto Loot | AutoLoot | 所有 zh-tw 已完整正確，無需修改。 |
-| completed | 2026-07-07 +08:00 | Healthbars | Healthbars | 所有 zh-tw 已完整正確，無需修改。 |
-| completed | 2026-07-07 +08:00 | IME Enable | IME_Enable | 所有 zh-tw 已完整正確，無需修改。 |
+| original_mod_updated | 2026-07-11 11:44:36 +08:00 | Healthbars | Healthbars | README 更新至 Last updated 07 July 2026 / 26.07.07；需重新比對本地 localization。 |
+| original_mod_updated | 2026-07-11 11:44:36 +08:00 | IME Enable | IME_Enable | README 更新至 Last updated 10 July 2026 / Version 1.2.0；需重新比對本地 localization。 |
 | completed | 2026-07-07 +08:00 | True Level | true_level | 修正 player_salvage_style_text 簡體字（PR #38）。 |
 | completed | 2026-07-07 +08:00 | Who Are You - Display account names | who_are_you | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | MultiBind | MultiBind | 補齊 wield_1 缺失 zh-tw（PR #39）。 |
@@ -49,12 +49,12 @@
 | completed | 2026-07-07 +08:00 | Stimms Pickup Icon | StimmsPickupIcon | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Killfeed Improvements | KillfeedImprovements | 修正 Psykhanium 詞彙表不一致（PR #41）。 |
 | completed | 2026-07-07 +08:00 | Gas Outline | GasOutline | 所有 zh-tw 已完整正確，無需修改。 |
-| completed | 2026-07-07 +08:00 | Loadout Monitor | LoadoutMonitor | 補齊 2 個缺失 zh-tw（PR #44）。 |
+| original_mod_updated | 2026-07-11 11:44:36 +08:00 | Loadout Monitor | LoadoutMonitor | README 更新至 Last updated 09 July 2026；需重新比對本地 localization。 |
 | completed | 2026-07-07 +08:00 | Quick Look Card | QuickLookCard | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | completed | 2026-07-07 +08:00 | Markers Improved All-in-One | markers_aio | 第二次重新處理：修正錢詞表不一致、補齊缺失 key、修正重複問題（PR #33）。 |
 | completed | 2026-07-07 +08:00 | Danger Zone | danger_zone | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Numeric UI | NumericUI | 修正 peril_icon 詞彙表不一致（PR #43）。 |
-| completed | 2026-07-07 +08:00 | Spidey Sense | Spidey Sense |  |
+| original_mod_updated | 2026-07-11 11:44:36 +08:00 | Spidey Sense | Spidey Sense | README 更新至 Last updated 10 July 2026 / v7.6；需重新比對本地 localization。 |
 | not_scheduled | not checked | Enhanced Descriptions | Enhanced_descriptions |  |
 | completed | 2026-07-07 +08:00 | Emperor's Guidance | EmperorsGuidance | 所有靜態 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Remember Server Location | RememberServerLocation | 所有 zh-tw 已完整正確，無需修改。 |
@@ -67,17 +67,19 @@
 | completed | 2026-07-07 +08:00 | Player Outlines | PlayerOutlines | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Name It - Rename Weapons and Curios | name_it | 所有靜態 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | LoadoutNames | LoadoutNames | 所有 zh-tw 已完整正確，無需修改。 |
-| completed | 2026-07-07 +08:00 | Guarantee Ability Activation | guarantee_ability_activation | 所有 zh-tw 已完整正確，無需修改。 |
+| original_mod_updated | 2026-07-11 11:44:36 +08:00 | Guarantee Ability Activation | guarantee_ability_activation | README 更新至 Last updated 08 July 2026 / 1.4.1；需重新比對本地 localization。 |
 | in_progress | 2026-07-07 +08:00 | Custom HUD | custom_hud |  |
 | completed | 2026-07-07 +08:00 | Keep Dodging | keep_dodging | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
-| in_progress | 2026-07-07 +08:00 | Perspectives Mod | Perspectives |  |
+| in_progress | 2026-07-11 11:44:36 +08:00 | Perspectives Mod | Perspectives | README 更新至 Last updated 08 July 2026 / 1.13；保留既有 in_progress 狀態，待原 handler 確認。 |
 | completed | 2026-07-07 +08:00 | Improved Havoc Tags | ImprovedHavocTags | 所有 zh-tw 已完整正確，無需修改。 |
 | in_progress | 2026-07-07 +08:00 | Ovenproof's Scoreboard Plugin | ovenproof_scoreboard_plugin |  |
+| blocked | 2026-07-11 11:44:36 +08:00 | Servo-Friend | Servo-Friend | README active MOD，但 main 的 mods 目錄缺少 Servo-Friend 資料夾，待補本地檔案後再處理。 |
 | in_progress | 2026-07-07 +08:00 | Scoreboard Explosive | ScoreboardExplosive |  |
 | completed | 2026-07-07 +08:00 | Better Hud Info View | better_hud_info_view | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Recolor Boss Health Bars | RecolorBossHealthBars | 所有 zh-tw 已完整正確，無需修改。 |
+| blocked | 2026-07-11 11:44:36 +08:00 | Dog Whistle | DogWhistle | README active MOD，但 main 的 mods 目錄缺少 DogWhistle 資料夾，待補本地檔案後再處理。 |
 | completed | 2026-07-07 +08:00 | Red Weapons at Home | red_weapons_at_home | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-07 +08:00 | AutoBlitz | AutoBlitz |  |
+| in_progress | 2026-07-11 11:44:36 +08:00 | AutoBlitz | AutoBlitz | README 更新至 Last updated 07 July 2026 / 1.1.0；保留既有 in_progress 狀態，待原 handler 確認。 |
 | in_progress | 2026-07-07 +08:00 | SpecialsTracker | SpecialsTracker |  |
 | completed | 2026-07-07 +08:00 | Display Ping (Latency) | DisplayPing | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | in_progress | 2026-07-07 +08:00 | Reconnect | Reconnect |  |
@@ -91,7 +93,7 @@
 | in_progress | 2026-07-07 +08:00 | I Wanna See | i_wanna_see |  |
 | completed | 2026-07-07 +08:00 | VFX Swapper | vfx_swapper | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | MemoryLeakFix | MemLeakFix | 所有靜態 zh-tw 已完整，注解項目無需補翻譯。 |
-| completed | 2026-07-07 +08:00 | CombatStats | CombatStats | 第二次重新處理：修正 toggle_view_keybind 錯誤及詞彙表不一致（PR #32）。 |
+| original_mod_updated | 2026-07-11 11:44:36 +08:00 | CombatStats | CombatStats | README 更新至 Last updated 09 July 2026 / 0.4.13；需重新比對本地 localization。 |
 | completed | 2026-07-07 +08:00 | CharacterGrid | CharacterGrid | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | TeamKills | TeamKills | 無可翻譯內容（無静態中文項目）。 |
 | completed | 2026-07-07 +08:00 | BrokerAutoStim | BrokerAutoStim | 所有 zh-tw 已完整正確，無需修改。 |
@@ -122,6 +124,13 @@
 | ready | not checked | SMOG Cleaner | SMOG | README active MOD，新增至排程。 |
 | ready | not checked | ErrorTracker | ErrorTracker | README active MOD，新增至排程。 |
 | ready | not checked | NoBrainer | NoBrainer | README active MOD，新增至排程。 |
+| not_scheduled | 2026-07-11 11:44:36 +08:00 | AUPM | AUPM | 本地 mods 目錄存在，但 README active 區未列出；不自動處理。 |
+| not_scheduled | 2026-07-11 11:44:36 +08:00 | DPM | DPM | 本地 mods 目錄存在，但 README active 區未列出；不自動處理。 |
+| not_scheduled | 2026-07-11 11:44:36 +08:00 | KeepSwinging | KeepSwinging | 本地 mods 目錄存在，但 README active 區未列出；不自動處理。 |
+| not_scheduled | 2026-07-11 11:44:36 +08:00 | KPM | KPM | 本地 mods 目錄存在，但 README active 區未列出；不自動處理。 |
+| not_scheduled | 2026-07-11 11:44:36 +08:00 | RetainSelection | RetainSelection | 本地 mods 目錄存在，但 README active 區未列出；不自動處理。 |
+| not_scheduled | 2026-07-11 11:44:36 +08:00 | Show CJK Glyphs | show_cjk_glyphs | 本地 mods 目錄存在，但 README active 區未列出；不自動處理。 |
+| not_scheduled | 2026-07-11 11:44:36 +08:00 | SimpleSpeedMeter | SimpleSpeedMeter | 本地 mods 目錄存在，但 README active 區未列出；不自動處理。 |
 
 ## 已從 README 排除的 MOD
 
@@ -142,5 +151,3 @@
 | removed | not checked | AutoTag | removed |  |
 | removed | not checked | RickAndMortis | removed |  |
 | removed | not checked | Alternate Grenade Icons | removed |  |
-| removed | not checked | Servo-Friend | removed |  |
-| removed | not checked | Dog Whistle | removed |  |
