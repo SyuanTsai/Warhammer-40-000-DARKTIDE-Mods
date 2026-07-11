@@ -9,4 +9,9 @@ return {
 		})
 	end,
 	packages = {},
+	load_after = {
+		"Alfs_DMF_Extensions",
+	},
+	version = "2.5.0",
+	mod_id = "790",
 }
