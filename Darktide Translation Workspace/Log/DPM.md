@@ -13,6 +13,7 @@
 - Status: completed
 - Commit: `035eb98`
 - PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/59
+- Merge status: PR #59 merged at 2026-07-12 01:22:06 +08:00.
 - Completed keys: 1
 - Changed zh-tw wording for `mod_description`.
 - Notes: clarified DPM as damage per minute data display while keeping the DPM acronym unchanged.

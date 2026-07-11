@@ -28,7 +28,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | ErrorTracker | ErrorTracker | main | Codex/Feature/ErrorTracker/Add-zh-tw | Darktide Translation Workspace/Log/ErrorTracker.md | ErrorTracker_localization.lua | all keys | 2026-07-11 20:00:16 +08:00 | 35e2a72 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/57 | NoBrainer/*localization.lua:first key | 已校正 MOD 崩潰報告描述；PR #57 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | NoBrainer | NoBrainer | main | Codex/Feature/NoBrainer/Add-zh-tw | Darktide Translation Workspace/Log/NoBrainer.md | NoBrainer_localization.lua | all keys | 2026-07-11 20:23:26 +08:00 | 0b32532 | yes | manual merge to main | AUPM/*localization.lua:first key | 已校正 Darktide/Mourningstar/Tree Drill 詞彙；使用者手動合併至 main |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | AUPM | AUPM | main | Codex/Feature/AUPM/Add-zh-tw | Darktide Translation Workspace/Log/AUPM.md | AUPM_localization.lua | all keys | 2026-07-11 20:35:47 +08:00 | f9afe06 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/58 | DPM/*localization.lua:first key | 已校正戰鬥技能使用統計與客製化開發用語；PR #58 已合併 |
-| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | DPM | DPM | main | Codex/Feature/DPM/Add-zh-tw | Darktide Translation Workspace/Log/DPM.md | DPM_localization.lua | all keys | 2026-07-12 01:21:20 +08:00 | 035eb98 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/59 | KeepSwinging/*localization.lua:first key | 已校正 DPM 每分鐘傷害資料顯示描述；PR #59 ready |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | DPM | DPM | main | Codex/Feature/DPM/Add-zh-tw | Darktide Translation Workspace/Log/DPM.md | DPM_localization.lua | all keys | 2026-07-12 01:30:04 +08:00 | 035eb98 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/59 | KeepSwinging/*localization.lua:first key | 已校正 DPM 每分鐘傷害資料顯示描述；PR #59 已合併 |
 
 ## 工作鎖定
 
@@ -55,7 +55,7 @@
 | ErrorTracker | Warhammer 40,000 DARKTIDE/mods/ErrorTracker/scripts/mods/ErrorTracker/ErrorTracker_localization.lua | all keys | codex | released | Codex/Feature/ErrorTracker/Add-zh-tw | Darktide Translation Workspace/Log/ErrorTracker.md | 2026-07-11 19:57:19 +08:00 | 2026-07-11 20:00:16 +08:00 | PR #57 已建立且為 ready | 任務完成，釋放鎖定 |
 | NoBrainer | Warhammer 40,000 DARKTIDE/mods/NoBrainer/scripts/mods/NoBrainer/NoBrainer_localization.lua | all keys | codex | released | Codex/Feature/NoBrainer/Add-zh-tw | Darktide Translation Workspace/Log/NoBrainer.md | 2026-07-11 20:05:37 +08:00 | 2026-07-11 20:23:26 +08:00 | 使用者手動合併至 main | 任務完成，釋放鎖定 |
 | AUPM | Warhammer 40,000 DARKTIDE/mods/AUPM/scripts/mods/AUPM/AUPM_localization.lua | all keys | codex | released | Codex/Feature/AUPM/Add-zh-tw | Darktide Translation Workspace/Log/AUPM.md | 2026-07-11 20:23:26 +08:00 | 2026-07-11 20:35:47 +08:00 | PR #58 已合併 | 任務完成，釋放鎖定 |
-| DPM | Warhammer 40,000 DARKTIDE/mods/DPM/scripts/mods/DPM/DPM_localization.lua | all keys | codex | released | Codex/Feature/DPM/Add-zh-tw | Darktide Translation Workspace/Log/DPM.md | 2026-07-12 00:58:13 +08:00 | 2026-07-12 01:21:20 +08:00 | PR #59 已建立且為 ready | 任務完成，釋放鎖定 |
+| DPM | Warhammer 40,000 DARKTIDE/mods/DPM/scripts/mods/DPM/DPM_localization.lua | all keys | codex | released | Codex/Feature/DPM/Add-zh-tw | Darktide Translation Workspace/Log/DPM.md | 2026-07-12 00:58:13 +08:00 | 2026-07-12 01:30:04 +08:00 | PR #59 已合併 | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -742,12 +742,12 @@
 | Work branch | Codex/Feature/DPM/Add-zh-tw |
 | Branch log | Darktide Translation Workspace/Log/DPM.md |
 | Started at | 2026-07-12 00:58:13 +08:00 |
-| Last updated | 2026-07-12 01:21:20 +08:00 |
+| Last updated | 2026-07-12 01:30:04 +08:00 |
 | Completed at | 2026-07-12 01:21:20 +08:00 |
 | Commit | 035eb98 |
 | PR URL / number | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/59 |
 | Next position | KeepSwinging/*localization.lua:first key |
-| Notes | 已校正 DPM 每分鐘傷害資料顯示描述；PR #59 ready。 |
+| Notes | 已校正 DPM 每分鐘傷害資料顯示描述；PR #59 已合併。 |
 
 #### File Summary
 
@@ -853,7 +853,7 @@
 | ErrorTracker | codex | main | Codex/Feature/ErrorTracker/Add-zh-tw | 35e2a72 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/57 | yes | yes | 僅包含 ErrorTracker_localization.lua；PR ready |
 | NoBrainer | codex | main | Codex/Feature/NoBrainer/Add-zh-tw | 0b32532 | yes | manual merge to main | n/a | n/a | 包含 NoBrainer_localization.lua 與詞彙表更新；使用者手動合併 |
 | AUPM | codex | main | Codex/Feature/AUPM/Add-zh-tw | f9afe06 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/58 | yes | yes | 僅包含 AUPM_localization.lua；PR #58 已合併 |
-| DPM | codex | main | Codex/Feature/DPM/Add-zh-tw | 035eb98 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/59 | yes | yes | 僅包含 DPM_localization.lua；PR ready |
+| DPM | codex | main | Codex/Feature/DPM/Add-zh-tw | 035eb98 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/59 | yes | yes | 僅包含 DPM_localization.lua；PR #59 已合併 |
 
 ## Completed Files
 
@@ -876,4 +876,4 @@
 | ErrorTracker | codex | Warhammer 40,000 DARKTIDE/mods/ErrorTracker/scripts/mods/ErrorTracker/ErrorTracker_localization.lua | 1 | 35e2a72 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/57 | 2026-07-11 20:00:16 +08:00 | Darktide Translation Workspace/Log/ErrorTracker.md | 校正 MOD 崩潰報告描述；PR ready |
 | NoBrainer | codex | Warhammer 40,000 DARKTIDE/mods/NoBrainer/scripts/mods/NoBrainer/NoBrainer_localization.lua | 5 | 0b32532 | manual merge to main | 2026-07-11 20:23:26 +08:00 | Darktide Translation Workspace/Log/NoBrainer.md | 校正 Darktide/Mourningstar/Tree Drill 詞彙；使用者手動合併 |
 | AUPM | codex | Warhammer 40,000 DARKTIDE/mods/AUPM/scripts/mods/AUPM/AUPM_localization.lua | 2 | f9afe06 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/58 | 2026-07-11 20:35:47 +08:00 | Darktide Translation Workspace/Log/AUPM.md | 校正戰鬥技能使用統計與客製化開發用語；PR #58 已合併 |
-| DPM | codex | Warhammer 40,000 DARKTIDE/mods/DPM/scripts/mods/DPM/DPM_localization.lua | 1 | 035eb98 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/59 | 2026-07-12 01:21:20 +08:00 | Darktide Translation Workspace/Log/DPM.md | 校正 DPM 每分鐘傷害資料顯示描述；PR ready |
+| DPM | codex | Warhammer 40,000 DARKTIDE/mods/DPM/scripts/mods/DPM/DPM_localization.lua | 1 | 035eb98 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/59 | 2026-07-12 01:21:20 +08:00 | Darktide Translation Workspace/Log/DPM.md | 校正 DPM 每分鐘傷害資料顯示描述；PR #59 已合併 |
