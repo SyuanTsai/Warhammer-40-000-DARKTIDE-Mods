@@ -26,7 +26,8 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | AutoMark | Auto Mark | main | Codex/Feature/AutoMark/Add-zh-tw | Darktide Translation Workspace/Log/AutoMark.md | AutoMark_localization.lua | all keys | 2026-07-11 18:28:41 +08:00 | 45066e9 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/55 | SMOG/*localization.lua:first key | 已校正 Servo-Skull/Focus Target 詞彙表一致性；PR #55 已合併 |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | SMOG | SMOG Cleaner | main | Codex/Feature/SMOG/Add-zh-tw | Darktide Translation Workspace/Log/SMOG.md | SMOG_localization.lua | all keys | 2026-07-11 19:30:50 +08:00 | a0e875e | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/56 | ErrorTracker/*localization.lua:first key | 已校正 SMOG 品牌名、Lua heap 與手動清理描述；PR #56 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | ErrorTracker | ErrorTracker | main | Codex/Feature/ErrorTracker/Add-zh-tw | Darktide Translation Workspace/Log/ErrorTracker.md | ErrorTracker_localization.lua | all keys | 2026-07-11 20:00:16 +08:00 | 35e2a72 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/57 | NoBrainer/*localization.lua:first key | 已校正 MOD 崩潰報告描述；PR #57 ready |
-| codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | NoBrainer | NoBrainer | main | Codex/Feature/NoBrainer/Add-zh-tw | Darktide Translation Workspace/Log/NoBrainer.md | NoBrainer_localization.lua | first key | 2026-07-11 20:05:37 +08:00 |  | no |  | NoBrainer/*localization.lua:first key | 開始校正 zh-tw 小遊戲與地名詞彙一致性 |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | NoBrainer | NoBrainer | main | Codex/Feature/NoBrainer/Add-zh-tw | Darktide Translation Workspace/Log/NoBrainer.md | NoBrainer_localization.lua | all keys | 2026-07-11 20:23:26 +08:00 | 0b32532 | yes | manual merge to main | AUPM/*localization.lua:first key | 已校正 Darktide/Mourningstar/Tree Drill 詞彙；使用者手動合併至 main |
+| codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | AUPM | AUPM | main | Codex/Feature/AUPM/Add-zh-tw | Darktide Translation Workspace/Log/AUPM.md | AUPM_localization.lua | first key | 2026-07-11 20:23:26 +08:00 |  | no |  | AUPM/*localization.lua:first key | 開始校正 zh-tw 技能次數統計與繁體用語 |
 
 ## 工作鎖定
 
@@ -51,7 +52,8 @@
 | AutoMark | Warhammer 40,000 DARKTIDE/mods/AutoMark/scripts/mods/AutoMark/AutoMark_localization.lua | all keys | codex | released | Codex/Feature/AutoMark/Add-zh-tw | Darktide Translation Workspace/Log/AutoMark.md | 2026-07-11 13:20:16 +08:00 | 2026-07-11 18:28:41 +08:00 | PR #55 已建立並合併 | 任務完成，釋放鎖定 |
 | SMOG | Warhammer 40,000 DARKTIDE/mods/SMOG/scripts/mods/SMOG/SMOG_localization.lua | all keys | codex | released | Codex/Feature/SMOG/Add-zh-tw | Darktide Translation Workspace/Log/SMOG.md | 2026-07-11 19:26:29 +08:00 | 2026-07-11 19:30:50 +08:00 | PR #56 已建立且為 ready | 任務完成，釋放鎖定 |
 | ErrorTracker | Warhammer 40,000 DARKTIDE/mods/ErrorTracker/scripts/mods/ErrorTracker/ErrorTracker_localization.lua | all keys | codex | released | Codex/Feature/ErrorTracker/Add-zh-tw | Darktide Translation Workspace/Log/ErrorTracker.md | 2026-07-11 19:57:19 +08:00 | 2026-07-11 20:00:16 +08:00 | PR #57 已建立且為 ready | 任務完成，釋放鎖定 |
-| NoBrainer | Warhammer 40,000 DARKTIDE/mods/NoBrainer/scripts/mods/NoBrainer/NoBrainer_localization.lua | first key | codex | in_progress | Codex/Feature/NoBrainer/Add-zh-tw | Darktide Translation Workspace/Log/NoBrainer.md | 2026-07-11 20:05:37 +08:00 | 2026-07-11 20:05:37 +08:00 | PR 建立且工作文件同步後釋放 | 開始校正 zh-tw 小遊戲與地名詞彙一致性 |
+| NoBrainer | Warhammer 40,000 DARKTIDE/mods/NoBrainer/scripts/mods/NoBrainer/NoBrainer_localization.lua | all keys | codex | released | Codex/Feature/NoBrainer/Add-zh-tw | Darktide Translation Workspace/Log/NoBrainer.md | 2026-07-11 20:05:37 +08:00 | 2026-07-11 20:23:26 +08:00 | 使用者手動合併至 main | 任務完成，釋放鎖定 |
+| AUPM | Warhammer 40,000 DARKTIDE/mods/AUPM/scripts/mods/AUPM/AUPM_localization.lua | first key | codex | in_progress | Codex/Feature/AUPM/Add-zh-tw | Darktide Translation Workspace/Log/AUPM.md | 2026-07-11 20:23:26 +08:00 | 2026-07-11 20:23:26 +08:00 | PR 建立且工作文件同步後釋放 | 開始校正 zh-tw 技能次數統計與繁體用語 |
 
 ## 逐 MOD 工作紀錄
 
@@ -662,6 +664,38 @@
 | 2026-07-11 19:57:19 +08:00 | Warhammer 40,000 DARKTIDE/mods/ErrorTracker/scripts/mods/ErrorTracker/ErrorTracker_localization.lua | first key | in_progress | Section: Key Progress | 開始校正 zh-tw 描述用語 |
 | 2026-07-11 20:00:16 +08:00 | Warhammer 40,000 DARKTIDE/mods/ErrorTracker/scripts/mods/ErrorTracker/ErrorTracker_localization.lua | mod_description | completed | Section: Key Progress | 校正 MOD 崩潰報告描述 |
 
+### MOD-LOG-0019 - NoBrainer
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | NoBrainer |
+| Repo directory | NoBrainer |
+| AI handler | codex |
+| Status | completed |
+| Base branch | main |
+| Work branch | Codex/Feature/NoBrainer/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/NoBrainer.md |
+| Started at | 2026-07-11 20:05:37 +08:00 |
+| Last updated | 2026-07-11 20:23:26 +08:00 |
+| Completed at | 2026-07-11 20:23:26 +08:00 |
+| Commit | 0b32532 |
+| PR URL / number | manual merge to main |
+| Next position | AUPM/*localization.lua:first key |
+| Notes | 已校正 Darktide/Mourningstar/Tree Drill 詞彙；使用者手動合併至 main。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/NoBrainer/scripts/mods/NoBrainer/NoBrainer_localization.lua | completed | 5 | practice_not_allowed | Section: Key Progress | 僅修改 zh-tw 欄位；en=64、zh-tw=64、無空白 zh-tw |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-11 20:05:37 +08:00 | Warhammer 40,000 DARKTIDE/mods/NoBrainer/scripts/mods/NoBrainer/NoBrainer_localization.lua | first key | in_progress | Section: Key Progress | 開始校正 zh-tw 小遊戲與地名詞彙一致性 |
+| 2026-07-11 20:23:26 +08:00 | Warhammer 40,000 DARKTIDE/mods/NoBrainer/scripts/mods/NoBrainer/NoBrainer_localization.lua | practice_not_allowed | completed | Section: Key Progress | 校正 Darktide/Mourningstar/Tree Drill 詞彙；使用者手動合併至 main |
+
 ## 協作交接紀錄
 
 | Time | From | To | MOD | File | Key | From status | To status | Branch log | Note |
@@ -751,6 +785,7 @@
 | AutoMark | codex | main | Codex/Feature/AutoMark/Add-zh-tw | 45066e9 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/55 | yes | yes | 僅包含 AutoMark_localization.lua；PR #55 已合併 |
 | SMOG | codex | main | Codex/Feature/SMOG/Add-zh-tw | a0e875e | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/56 | yes | yes | 僅包含 SMOG_localization.lua；PR ready |
 | ErrorTracker | codex | main | Codex/Feature/ErrorTracker/Add-zh-tw | 35e2a72 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/57 | yes | yes | 僅包含 ErrorTracker_localization.lua；PR ready |
+| NoBrainer | codex | main | Codex/Feature/NoBrainer/Add-zh-tw | 0b32532 | yes | manual merge to main | n/a | n/a | 包含 NoBrainer_localization.lua 與詞彙表更新；使用者手動合併 |
 
 ## Completed Files
 
@@ -771,3 +806,4 @@
 | AutoMark | codex | Warhammer 40,000 DARKTIDE/mods/AutoMark/scripts/mods/AutoMark/AutoMark_localization.lua | 13 | 45066e9 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/55 | 2026-07-11 18:28:41 +08:00 | Darktide Translation Workspace/Log/AutoMark.md | 校正 Servo-Skull/Focus Target 詞彙表一致性；PR #55 已合併 |
 | SMOG | codex | Warhammer 40,000 DARKTIDE/mods/SMOG/scripts/mods/SMOG/SMOG_localization.lua | 7 | a0e875e | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/56 | 2026-07-11 19:30:50 +08:00 | Darktide Translation Workspace/Log/SMOG.md | 校正 SMOG 品牌名、Lua heap 與手動清理描述；PR ready |
 | ErrorTracker | codex | Warhammer 40,000 DARKTIDE/mods/ErrorTracker/scripts/mods/ErrorTracker/ErrorTracker_localization.lua | 1 | 35e2a72 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/57 | 2026-07-11 20:00:16 +08:00 | Darktide Translation Workspace/Log/ErrorTracker.md | 校正 MOD 崩潰報告描述；PR ready |
+| NoBrainer | codex | Warhammer 40,000 DARKTIDE/mods/NoBrainer/scripts/mods/NoBrainer/NoBrainer_localization.lua | 5 | 0b32532 | manual merge to main | 2026-07-11 20:23:26 +08:00 | Darktide Translation Workspace/Log/NoBrainer.md | 校正 Darktide/Mourningstar/Tree Drill 詞彙；使用者手動合併 |
