@@ -26,6 +26,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | AutoMark | Auto Mark | main | Codex/Feature/AutoMark/Add-zh-tw | Darktide Translation Workspace/Log/AutoMark.md | AutoMark_localization.lua | all keys | 2026-07-11 18:28:41 +08:00 | 45066e9 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/55 | SMOG/*localization.lua:first key | 已校正 Servo-Skull/Focus Target 詞彙表一致性；PR #55 已合併 |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | SMOG | SMOG Cleaner | main | Codex/Feature/SMOG/Add-zh-tw | Darktide Translation Workspace/Log/SMOG.md | SMOG_localization.lua | all keys | 2026-07-11 19:30:50 +08:00 | a0e875e | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/56 | ErrorTracker/*localization.lua:first key | 已校正 SMOG 品牌名、Lua heap 與手動清理描述；PR #56 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | ErrorTracker | ErrorTracker | main | Codex/Feature/ErrorTracker/Add-zh-tw | Darktide Translation Workspace/Log/ErrorTracker.md | ErrorTracker_localization.lua | all keys | 2026-07-11 20:00:16 +08:00 | 35e2a72 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/57 | NoBrainer/*localization.lua:first key | 已校正 MOD 崩潰報告描述；PR #57 ready |
+| codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | NoBrainer | NoBrainer | main | Codex/Feature/NoBrainer/Add-zh-tw | Darktide Translation Workspace/Log/NoBrainer.md | NoBrainer_localization.lua | first key | 2026-07-11 20:05:37 +08:00 |  | no |  | NoBrainer/*localization.lua:first key | 開始校正 zh-tw 小遊戲與地名詞彙一致性 |
 
 ## 工作鎖定
 
@@ -50,6 +51,7 @@
 | AutoMark | Warhammer 40,000 DARKTIDE/mods/AutoMark/scripts/mods/AutoMark/AutoMark_localization.lua | all keys | codex | released | Codex/Feature/AutoMark/Add-zh-tw | Darktide Translation Workspace/Log/AutoMark.md | 2026-07-11 13:20:16 +08:00 | 2026-07-11 18:28:41 +08:00 | PR #55 已建立並合併 | 任務完成，釋放鎖定 |
 | SMOG | Warhammer 40,000 DARKTIDE/mods/SMOG/scripts/mods/SMOG/SMOG_localization.lua | all keys | codex | released | Codex/Feature/SMOG/Add-zh-tw | Darktide Translation Workspace/Log/SMOG.md | 2026-07-11 19:26:29 +08:00 | 2026-07-11 19:30:50 +08:00 | PR #56 已建立且為 ready | 任務完成，釋放鎖定 |
 | ErrorTracker | Warhammer 40,000 DARKTIDE/mods/ErrorTracker/scripts/mods/ErrorTracker/ErrorTracker_localization.lua | all keys | codex | released | Codex/Feature/ErrorTracker/Add-zh-tw | Darktide Translation Workspace/Log/ErrorTracker.md | 2026-07-11 19:57:19 +08:00 | 2026-07-11 20:00:16 +08:00 | PR #57 已建立且為 ready | 任務完成，釋放鎖定 |
+| NoBrainer | Warhammer 40,000 DARKTIDE/mods/NoBrainer/scripts/mods/NoBrainer/NoBrainer_localization.lua | first key | codex | in_progress | Codex/Feature/NoBrainer/Add-zh-tw | Darktide Translation Workspace/Log/NoBrainer.md | 2026-07-11 20:05:37 +08:00 | 2026-07-11 20:05:37 +08:00 | PR 建立且工作文件同步後釋放 | 開始校正 zh-tw 小遊戲與地名詞彙一致性 |
 
 ## 逐 MOD 工作紀錄
 
