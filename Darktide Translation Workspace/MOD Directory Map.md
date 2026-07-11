@@ -113,11 +113,15 @@
 | completed | 2026-07-09 01:15:43 +08:00 | StimmCountdown | StimmCountdown | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-09 01:24:11 +08:00 | Mauler Attack Indicator | mauler_attack_indicator | 校正 zh-tw ring / warning / attack 用語（PR #50）。 |
 | ready | not checked | Crusher Attack Indicator | crusher_attack_indicator |  |
+| ready | not checked | HoldFire | HoldFire | README active MOD，從 removed 修正回待處理。 |
 | ready | not checked | Radar | Radar |  |
 | ready | not checked | AuspexHelper | AuspexHelper |  |
 | ready | not checked | PlasmaBFG | PlasmaBFG |  |
 | ready | not checked | SprintRelicHeavy | SprintRelicHeavy |  |
 | ready | not checked | Auto Mark | AutoMark |  |
+| ready | not checked | SMOG Cleaner | SMOG | README active MOD，新增至排程。 |
+| ready | not checked | ErrorTracker | ErrorTracker | README active MOD，新增至排程。 |
+| ready | not checked | NoBrainer | NoBrainer | README active MOD，新增至排程。 |
 
 ## 已從 README 排除的 MOD
 
@@ -140,4 +144,3 @@
 | removed | not checked | Alternate Grenade Icons | removed |  |
 | removed | not checked | Servo-Friend | removed |  |
 | removed | not checked | Dog Whistle | removed |  |
-| removed | not checked | HoldFire | removed |  |
