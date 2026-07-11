@@ -113,7 +113,7 @@
 | completed | 2026-07-09 01:15:43 +08:00 | StimmCountdown | StimmCountdown | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-09 01:24:11 +08:00 | Mauler Attack Indicator | mauler_attack_indicator | 校正 zh-tw ring / warning / attack 用語（PR #50）。 |
 | completed | 2026-07-11 11:05:15 +08:00 | Crusher Attack Indicator | crusher_attack_indicator | 校正 Cleave/順劈語意（PR #51）。 |
-| ready | not checked | HoldFire | HoldFire | README active MOD，從 removed 修正回待處理。 |
+| blocked | 2026-07-11 11:37:27 +08:00 | HoldFire | HoldFire | README active MOD，但 main 的 mods 目錄缺少 HoldFire 資料夾，待補本地檔案後再處理。 |
 | ready | not checked | Radar | Radar |  |
 | ready | not checked | AuspexHelper | AuspexHelper |  |
 | ready | not checked | PlasmaBFG | PlasmaBFG |  |

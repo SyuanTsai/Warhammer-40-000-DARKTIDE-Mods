@@ -20,6 +20,7 @@
 | github-copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | Skitarius | Skitarius | main | Codex/Feature/Skitarius/Add-zh-tw | Darktide Translation Workspace/Log/Skitarius.md | Skitarius_localization.lua | all keys | 2026-07-07 +08:00 | 29c2960 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/37 | 完成 | 修正簡體字/錯誤撰考問題，釋放鎖定 |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | mauler_attack_indicator | Mauler Attack Indicator | main | Codex/Feature/mauler_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/mauler_attack_indicator.md | mauler_attack_indicator_localization.lua | all keys | 2026-07-09 01:24:11 +08:00 | 02eae73 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/50 | crusher_attack_indicator/*localization.lua:first key | 已完成 zh-tw 校正並建立 ready PR |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | crusher_attack_indicator | Crusher Attack Indicator | main | Codex/Feature/crusher_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/crusher_attack_indicator.md | crusher_attack_indicator_localization.lua | all keys | 2026-07-11 11:05:15 +08:00 | 8efc54c | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/51 | Radar/*localization.lua:first key | 已校正 Cleave/順劈語意並建立 ready PR |
+| codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | Radar | Radar | main | Codex/Feature/Radar/Add-zh-tw | Darktide Translation Workspace/Log/Radar.md | Radar_localization.lua | first key | 2026-07-11 11:37:27 +08:00 |  | no |  | Radar/Radar_localization.lua:first key | HoldFire 缺少本地目錄已記為 blocked；接續處理 Radar |
 
 ## 工作鎖定
 
@@ -37,6 +38,8 @@
 | StimmCountdown | Warhammer 40,000 DARKTIDE/mods/StimmCountdown/scripts/mods/StimmCountdown/StimmCountdown_localization.lua | all keys | codex | released | Codex/Feature/StimmCountdown/Add-zh-tw | Darktide Translation Workspace/Log/StimmCountdown.md | 2026-07-08 18:18:20 +08:00 | 2026-07-09 01:15:43 +08:00 | 檢查完成，無需 PR | 所有靜態 en key 均已有正確 zh-tw，釋放鎖定 |
 | mauler_attack_indicator | Warhammer 40,000 DARKTIDE/mods/mauler_attack_indicator/scripts/mods/mauler_attack_indicator/mauler_attack_indicator_localization.lua | all keys | codex | released | Codex/Feature/mauler_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/mauler_attack_indicator.md | 2026-07-09 01:22:49 +08:00 | 2026-07-09 01:24:11 +08:00 | PR #50 已建立且為 ready | 任務完成，釋放鎖定 |
 | crusher_attack_indicator | Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | all keys | codex | released | Codex/Feature/crusher_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/crusher_attack_indicator.md | 2026-07-11 10:57:08 +08:00 | 2026-07-11 11:05:15 +08:00 | PR #51 已建立且為 ready | 任務完成，釋放鎖定 |
+| HoldFire | Warhammer 40,000 DARKTIDE/mods/HoldFire | (none) | codex | blocked | Codex/Feature/HoldFire/Add-zh-tw | Darktide Translation Workspace/Log/HoldFire.md | 2026-07-11 11:37:27 +08:00 | 2026-07-11 11:37:27 +08:00 | 待本地補上 HoldFire 目錄 | README 與排程均列為 active/ready，但 main 的 mods 目錄缺少 HoldFire |
+| Radar | Warhammer 40,000 DARKTIDE/mods/Radar/scripts/mods/Radar/Radar_localization.lua | first key | codex | in_progress | Codex/Feature/Radar/Add-zh-tw | Darktide Translation Workspace/Log/Radar.md | 2026-07-11 11:37:27 +08:00 | 2026-07-11 11:37:27 +08:00 | 完成 Radar localization 檢查與 PR 後釋放 | 接續處理下一個 ready MOD |
 
 ## 逐 MOD 工作紀錄
 
@@ -424,6 +427,68 @@
 | 2026-07-11 10:57:08 +08:00 | Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | mod_name | in_progress | Section: Key Progress | 開始檢查 zh-tw |
 | 2026-07-11 11:01:35 +08:00 | Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | mod_name / mod_description | completed | Section: Key Progress | 校正 Cleave/順劈語意；25 個 en key 均有 zh-tw |
 
+### MOD-LOG-0012 - HoldFire
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | HoldFire |
+| Repo directory | HoldFire |
+| AI handler | codex |
+| Status | blocked |
+| Base branch | main |
+| Work branch | Codex/Feature/HoldFire/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/HoldFire.md |
+| Started at | 2026-07-11 11:37:27 +08:00 |
+| Last updated | 2026-07-11 11:37:27 +08:00 |
+| Completed at |  |
+| Commit |  |
+| PR URL / number |  |
+| Next position | Radar/*localization.lua:first key |
+| Notes | README 與排程列為 active/ready，但 main 的 mods 目錄缺少 HoldFire 資料夾，先記為 blocked 並跳到 Radar。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/HoldFire | blocked | 0 | (none) | Section: File Scan | 本地目錄不存在，無法掃描 localization |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-11 11:37:27 +08:00 | Warhammer 40,000 DARKTIDE/mods/HoldFire | (none) | blocked | Section: Key Progress | 缺少本地 MOD 目錄 |
+
+### MOD-LOG-0013 - Radar
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | Radar |
+| Repo directory | Radar |
+| AI handler | codex |
+| Status | in_progress |
+| Base branch | main |
+| Work branch | Codex/Feature/Radar/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/Radar.md |
+| Started at | 2026-07-11 11:37:27 +08:00 |
+| Last updated | 2026-07-11 11:37:27 +08:00 |
+| Completed at |  |
+| Commit |  |
+| PR URL / number |  |
+| Next position | Radar/Radar_localization.lua:first key |
+| Notes | 接續處理 Radar localization。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/Radar/scripts/mods/Radar/Radar_localization.lua | in_progress | 0 | first key | Section: File Scan | 開始檢查 zh-tw |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-11 11:37:27 +08:00 | Warhammer 40,000 DARKTIDE/mods/Radar/scripts/mods/Radar/Radar_localization.lua | first key | in_progress | Section: Key Progress | 開始檢查 zh-tw |
+
 ## 協作交接紀錄
 
 | Time | From | To | MOD | File | Key | From status | To status | Branch log | Note |
@@ -436,6 +501,7 @@
 | Blocker ID | Time | AI handler | MOD | File | Key | Base branch | Work branch | English source | Current zh-tw | Reason | Tried | Decision needed | Suggested options | Safe next position | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BLOCKER-0001 | 2026-07-08 18:08:51 +08:00 | codex | EmpowerUntilLimit | Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | all keys | main | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | n/a | n/a | GitHub CLI display name was `Syuan`, but schedule requires `SyuanTsai` before push/PR. | Rechecked after user update: `gh api user --jq .name` and `.login` both return SyuanTsai; pushed branches and created PR #49. | none | resolved by GitHub display name update | StimmCountdown/*localization.lua:first key | resolved |
+| BLOCKER-0002 | 2026-07-11 11:37:27 +08:00 | codex | HoldFire | Warhammer 40,000 DARKTIDE/mods/HoldFire | (none) | main | Codex/Feature/HoldFire/Add-zh-tw | n/a | n/a | README 與 MOD Directory Map 將 HoldFire 列為 active/ready，但 main 的 mods 目錄缺少 HoldFire 資料夾。 | 檢查 main worktree 的 `Warhammer 40,000 DARKTIDE/mods`，確認沒有 HoldFire 目錄；跳到下一個 ready MOD Radar。 | 補上 HoldFire 本地 MOD 目錄後再改回 ready | 可先處理 Radar | Radar/*localization.lua:first key | open |
 
 ### BLOCKER-0000 - <MOD>/<File>/<Key>
 
@@ -474,6 +540,25 @@
 - Suggested options: resolved by GitHub display name update
 - Safe next position: StimmCountdown/*localization.lua:first key
 - Status: resolved
+
+### BLOCKER-0002 - HoldFire/(missing directory)/(none)
+
+- Time: 2026-07-11 11:37:27 +08:00
+- AI handler: codex
+- Directory: HoldFire
+- Base branch: main
+- Work branch: Codex/Feature/HoldFire/Add-zh-tw
+- Branch log: Darktide Translation Workspace/Log/HoldFire.md
+- File: Warhammer 40,000 DARKTIDE/mods/HoldFire
+- Localization key: (none)
+- English source: n/a
+- Current zh-tw: n/a
+- Reason: README 與 MOD Directory Map 將 HoldFire 列為 active/ready，但 main 的 mods 目錄缺少 HoldFire 資料夾。
+- Tried: 檢查 main worktree 的 `Warhammer 40,000 DARKTIDE/mods`，確認沒有 HoldFire 目錄；跳到下一個 ready MOD Radar。
+- Decision needed: 補上 HoldFire 本地 MOD 目錄後再改回 ready。
+- Suggested options: 可先處理 Radar。
+- Safe next position: Radar/*localization.lua:first key
+- Status: open
 
 ## PR Records
 
