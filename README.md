@@ -703,13 +703,6 @@
 - MOD 檔案名稱：Creature Spawner-25-25-10-29-1761776237
 - 手動維護最後下載日期：2025-12-06
 
-### [HoldFire](https://www.nexusmods.com/warhammer40kdarktide/mods/797)
-    火力管控 - 防止無效開火
-- MOD 網站最後更新日期：Last updated 07 May 2026, 3:08PM
-- MOD 版本：1.1.4
-- MOD 檔案名稱：HoldFire-797-1-1-4-1778137707
-- 手動維護最後下載日期：2026-05-17
-
 ### [Radar](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
     遠征模式的小弟圖
 - MOD 網站最後更新日期：Last updated 10 July 2026, 7:43PM
@@ -872,3 +865,11 @@
 - MOD 檔案名稱：AlternateGrenadeIcons-322-1-0-1717874669
 - 手動維護最後下載日期：2025-02-10
 - 移除原因：TalentUI取代此MOD
+
+### [HoldFire](https://www.nexusmods.com/warhammer40kdarktide/mods/797)
+    火力管控 - 防止無效開火
+- MOD 網站最後更新日期：Last updated 07 May 2026, 3:08PM
+- MOD 版本：1.1.4
+- MOD 檔案名稱：HoldFire-797-1-1-4-1778137707
+- 手動維護最後下載日期：2026-05-17
+- 移除原因：作者停止維護，且某些情境下對電將槍造成阻礙。
