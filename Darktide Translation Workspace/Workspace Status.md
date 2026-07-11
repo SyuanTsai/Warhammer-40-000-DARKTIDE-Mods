@@ -25,7 +25,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | SprintRelicHeavy | SprintRelicHeavy | main | Codex/Feature/SprintRelicHeavy/Add-zh-tw | Darktide Translation Workspace/Log/SprintRelicHeavy.md | SprintRelicHeavy_localization.lua | all keys | 2026-07-11 13:11:01 +08:00 | 96a518f | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/54 | AutoMark/*localization.lua:first key | 已校正 Relic Blade/輔助功能描述並建立 ready PR |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | AutoMark | Auto Mark | main | Codex/Feature/AutoMark/Add-zh-tw | Darktide Translation Workspace/Log/AutoMark.md | AutoMark_localization.lua | all keys | 2026-07-11 18:28:41 +08:00 | 45066e9 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/55 | SMOG/*localization.lua:first key | 已校正 Servo-Skull/Focus Target 詞彙表一致性；PR #55 已合併 |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | SMOG | SMOG Cleaner | main | Codex/Feature/SMOG/Add-zh-tw | Darktide Translation Workspace/Log/SMOG.md | SMOG_localization.lua | all keys | 2026-07-11 19:30:50 +08:00 | a0e875e | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/56 | ErrorTracker/*localization.lua:first key | 已校正 SMOG 品牌名、Lua heap 與手動清理描述；PR #56 ready |
-| codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | ErrorTracker | ErrorTracker | main | Codex/Feature/ErrorTracker/Add-zh-tw | Darktide Translation Workspace/Log/ErrorTracker.md | ErrorTracker_localization.lua | first key | 2026-07-11 19:57:19 +08:00 |  | no |  | ErrorTracker/*localization.lua:first key | 開始校正 zh-tw 描述用語 |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | ErrorTracker | ErrorTracker | main | Codex/Feature/ErrorTracker/Add-zh-tw | Darktide Translation Workspace/Log/ErrorTracker.md | ErrorTracker_localization.lua | all keys | 2026-07-11 20:00:16 +08:00 | 35e2a72 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/57 | NoBrainer/*localization.lua:first key | 已校正 MOD 崩潰報告描述；PR #57 ready |
 
 ## 工作鎖定
 
@@ -49,7 +49,7 @@
 | SprintRelicHeavy | Warhammer 40,000 DARKTIDE/mods/SprintRelicHeavy/scripts/mods/SprintRelicHeavy/SprintRelicHeavy_localization.lua | all keys | codex | released | Codex/Feature/SprintRelicHeavy/Add-zh-tw | Darktide Translation Workspace/Log/SprintRelicHeavy.md | 2026-07-11 13:05:47 +08:00 | 2026-07-11 13:11:01 +08:00 | PR #54 已建立且為 ready | 任務完成，釋放鎖定 |
 | AutoMark | Warhammer 40,000 DARKTIDE/mods/AutoMark/scripts/mods/AutoMark/AutoMark_localization.lua | all keys | codex | released | Codex/Feature/AutoMark/Add-zh-tw | Darktide Translation Workspace/Log/AutoMark.md | 2026-07-11 13:20:16 +08:00 | 2026-07-11 18:28:41 +08:00 | PR #55 已建立並合併 | 任務完成，釋放鎖定 |
 | SMOG | Warhammer 40,000 DARKTIDE/mods/SMOG/scripts/mods/SMOG/SMOG_localization.lua | all keys | codex | released | Codex/Feature/SMOG/Add-zh-tw | Darktide Translation Workspace/Log/SMOG.md | 2026-07-11 19:26:29 +08:00 | 2026-07-11 19:30:50 +08:00 | PR #56 已建立且為 ready | 任務完成，釋放鎖定 |
-| ErrorTracker | Warhammer 40,000 DARKTIDE/mods/ErrorTracker/scripts/mods/ErrorTracker/ErrorTracker_localization.lua | first key | codex | in_progress | Codex/Feature/ErrorTracker/Add-zh-tw | Darktide Translation Workspace/Log/ErrorTracker.md | 2026-07-11 19:57:19 +08:00 | 2026-07-11 19:57:19 +08:00 | PR 建立且工作文件同步後釋放 | 開始校正 zh-tw 描述用語 |
+| ErrorTracker | Warhammer 40,000 DARKTIDE/mods/ErrorTracker/scripts/mods/ErrorTracker/ErrorTracker_localization.lua | all keys | codex | released | Codex/Feature/ErrorTracker/Add-zh-tw | Darktide Translation Workspace/Log/ErrorTracker.md | 2026-07-11 19:57:19 +08:00 | 2026-07-11 20:00:16 +08:00 | PR #57 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -628,6 +628,38 @@
 | 2026-07-11 19:26:29 +08:00 | Warhammer 40,000 DARKTIDE/mods/SMOG/scripts/mods/SMOG/SMOG_localization.lua | first key | in_progress | Section: Key Progress | 開始校正 zh-tw UI 與技術詞一致性 |
 | 2026-07-11 19:30:50 +08:00 | Warhammer 40,000 DARKTIDE/mods/SMOG/scripts/mods/SMOG/SMOG_localization.lua | 7 zh-tw corrections | completed | Section: Key Progress | 保留 SMOG 品牌名，校正 Lua heap 與手動清理描述 |
 
+### MOD-LOG-0018 - ErrorTracker
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | ErrorTracker |
+| Repo directory | ErrorTracker |
+| AI handler | codex |
+| Status | completed |
+| Base branch | main |
+| Work branch | Codex/Feature/ErrorTracker/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/ErrorTracker.md |
+| Started at | 2026-07-11 19:57:19 +08:00 |
+| Last updated | 2026-07-11 20:00:16 +08:00 |
+| Completed at | 2026-07-11 20:00:16 +08:00 |
+| Commit | 35e2a72 |
+| PR URL / number | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/57 |
+| Next position | NoBrainer/*localization.lua:first key |
+| Notes | 已校正 MOD 崩潰報告描述；PR #57 ready。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/ErrorTracker/scripts/mods/ErrorTracker/ErrorTracker_localization.lua | completed | 1 | mod_description | Section: Key Progress | 僅修改 zh-tw 欄位；en=2、zh-tw=2、無空白 zh-tw |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-11 19:57:19 +08:00 | Warhammer 40,000 DARKTIDE/mods/ErrorTracker/scripts/mods/ErrorTracker/ErrorTracker_localization.lua | first key | in_progress | Section: Key Progress | 開始校正 zh-tw 描述用語 |
+| 2026-07-11 20:00:16 +08:00 | Warhammer 40,000 DARKTIDE/mods/ErrorTracker/scripts/mods/ErrorTracker/ErrorTracker_localization.lua | mod_description | completed | Section: Key Progress | 校正 MOD 崩潰報告描述 |
+
 ## 協作交接紀錄
 
 | Time | From | To | MOD | File | Key | From status | To status | Branch log | Note |
@@ -716,6 +748,7 @@
 | SprintRelicHeavy | codex | main | Codex/Feature/SprintRelicHeavy/Add-zh-tw | 96a518f | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/54 | yes | yes | 僅包含 SprintRelicHeavy_localization.lua；PR ready |
 | AutoMark | codex | main | Codex/Feature/AutoMark/Add-zh-tw | 45066e9 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/55 | yes | yes | 僅包含 AutoMark_localization.lua；PR #55 已合併 |
 | SMOG | codex | main | Codex/Feature/SMOG/Add-zh-tw | a0e875e | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/56 | yes | yes | 僅包含 SMOG_localization.lua；PR ready |
+| ErrorTracker | codex | main | Codex/Feature/ErrorTracker/Add-zh-tw | 35e2a72 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/57 | yes | yes | 僅包含 ErrorTracker_localization.lua；PR ready |
 
 ## Completed Files
 
@@ -735,3 +768,4 @@
 | SprintRelicHeavy | codex | Warhammer 40,000 DARKTIDE/mods/SprintRelicHeavy/scripts/mods/SprintRelicHeavy/SprintRelicHeavy_localization.lua | 4 | 96a518f | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/54 | 2026-07-11 13:11:01 +08:00 | Darktide Translation Workspace/Log/SprintRelicHeavy.md | 校正 Relic Blade 詞彙表與輔助功能描述；PR ready |
 | AutoMark | codex | Warhammer 40,000 DARKTIDE/mods/AutoMark/scripts/mods/AutoMark/AutoMark_localization.lua | 13 | 45066e9 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/55 | 2026-07-11 18:28:41 +08:00 | Darktide Translation Workspace/Log/AutoMark.md | 校正 Servo-Skull/Focus Target 詞彙表一致性；PR #55 已合併 |
 | SMOG | codex | Warhammer 40,000 DARKTIDE/mods/SMOG/scripts/mods/SMOG/SMOG_localization.lua | 7 | a0e875e | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/56 | 2026-07-11 19:30:50 +08:00 | Darktide Translation Workspace/Log/SMOG.md | 校正 SMOG 品牌名、Lua heap 與手動清理描述；PR ready |
+| ErrorTracker | codex | Warhammer 40,000 DARKTIDE/mods/ErrorTracker/scripts/mods/ErrorTracker/ErrorTracker_localization.lua | 1 | 35e2a72 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/57 | 2026-07-11 20:00:16 +08:00 | Darktide Translation Workspace/Log/ErrorTracker.md | 校正 MOD 崩潰報告描述；PR ready |
