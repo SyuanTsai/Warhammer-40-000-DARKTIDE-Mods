@@ -13,6 +13,7 @@
 - Status: completed
 - Commit: `a3fc6f6`
 - PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/60
+- Merge status: PR #60 merged at 2026-07-12 02:31:50 +08:00.
 - Completed keys: 7
 - Changed zh-tw wording for `mod_description`, `as_modifier`, `as_modifier_description`, `disable_weapon_extra_hold`, `default_mode`, `hud_element`, and `group_extra`.
 - Notes: clarified Auto-Swing/light attack wording and kept dynamic `Localize(...)` entries without hard-coded zh-tw.
