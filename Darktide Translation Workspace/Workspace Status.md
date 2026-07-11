@@ -19,7 +19,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | github-copilot | completed | granted | git checkout/fetch/branch/status/diff, commit, push, create ready PR | Skitarius | Skitarius | main | Codex/Feature/Skitarius/Add-zh-tw | Darktide Translation Workspace/Log/Skitarius.md | Skitarius_localization.lua | all keys | 2026-07-07 +08:00 | 29c2960 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/37 | 完成 | 修正簡體字/錯誤撰考問題，釋放鎖定 |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | mauler_attack_indicator | Mauler Attack Indicator | main | Codex/Feature/mauler_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/mauler_attack_indicator.md | mauler_attack_indicator_localization.lua | all keys | 2026-07-09 01:24:11 +08:00 | 02eae73 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/50 | crusher_attack_indicator/*localization.lua:first key | 已完成 zh-tw 校正並建立 ready PR |
-| codex | in_progress | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | crusher_attack_indicator | Crusher Attack Indicator | main | Codex/Feature/crusher_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/crusher_attack_indicator.md | crusher_attack_indicator_localization.lua | mod_name | 2026-07-11 10:57:08 +08:00 |  | no |  | crusher_attack_indicator/*localization.lua:mod_name | 本輪接續 mauler_attack_indicator 之後處理 |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | crusher_attack_indicator | Crusher Attack Indicator | main | Codex/Feature/crusher_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/crusher_attack_indicator.md | crusher_attack_indicator_localization.lua | all keys | 2026-07-11 11:01:35 +08:00 | 8efc54c | no | pending | Radar/*localization.lua:first key | 已校正 Cleave/順劈語意；待 push 與 ready PR |
 
 ## 工作鎖定
 
@@ -36,7 +36,7 @@
 | EmpowerUntilLimit | Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | mod_description | codex | released | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | Darktide Translation Workspace/Log/EmpowerUntilLimit.md | 2026-07-08 18:03:23 +08:00 | 2026-07-08 18:15:16 +08:00 | PR #49 已建立且為 ready | 任務完成，釋放鎖定 |
 | StimmCountdown | Warhammer 40,000 DARKTIDE/mods/StimmCountdown/scripts/mods/StimmCountdown/StimmCountdown_localization.lua | all keys | codex | released | Codex/Feature/StimmCountdown/Add-zh-tw | Darktide Translation Workspace/Log/StimmCountdown.md | 2026-07-08 18:18:20 +08:00 | 2026-07-09 01:15:43 +08:00 | 檢查完成，無需 PR | 所有靜態 en key 均已有正確 zh-tw，釋放鎖定 |
 | mauler_attack_indicator | Warhammer 40,000 DARKTIDE/mods/mauler_attack_indicator/scripts/mods/mauler_attack_indicator/mauler_attack_indicator_localization.lua | all keys | codex | released | Codex/Feature/mauler_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/mauler_attack_indicator.md | 2026-07-09 01:22:49 +08:00 | 2026-07-09 01:24:11 +08:00 | PR #50 已建立且為 ready | 任務完成，釋放鎖定 |
-| crusher_attack_indicator | Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | mod_name | codex | in_progress | Codex/Feature/crusher_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/crusher_attack_indicator.md | 2026-07-11 10:57:08 +08:00 | 2026-07-11 10:57:08 +08:00 | 完成或停止時釋放 | 本輪開始處理 |
+| crusher_attack_indicator | Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | all keys | codex | released | Codex/Feature/crusher_attack_indicator/Add-zh-tw | Darktide Translation Workspace/Log/crusher_attack_indicator.md | 2026-07-11 10:57:08 +08:00 | 2026-07-11 11:01:35 +08:00 | localization commit 8efc54c 已建立；PR pending | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -399,29 +399,30 @@
 | README MOD | Crusher Attack Indicator |
 | Repo directory | crusher_attack_indicator |
 | AI handler | codex |
-| Status | in_progress |
+| Status | completed |
 | Base branch | main |
 | Work branch | Codex/Feature/crusher_attack_indicator/Add-zh-tw |
 | Branch log | Darktide Translation Workspace/Log/crusher_attack_indicator.md |
 | Started at | 2026-07-11 10:57:08 +08:00 |
-| Last updated | 2026-07-11 10:57:08 +08:00 |
-| Completed at |  |
-| Commit |  |
-| PR URL / number |  |
-| Next position | crusher_attack_indicator/*localization.lua:mod_name |
-| Notes | 本輪接續 mauler_attack_indicator 之後處理。 |
+| Last updated | 2026-07-11 11:01:35 +08:00 |
+| Completed at | 2026-07-11 11:01:35 +08:00 |
+| Commit | 8efc54c |
+| PR URL / number | pending |
+| Next position | Radar/*localization.lua:first key |
+| Notes | 已校正 Cleave/順劈語意；待 push 與 ready PR。 |
 
 #### File Summary
 
 | File | Status | Completed keys | Last key | Branch log section | Notes |
 | --- | --- | --- | --- | --- | --- |
-| Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | in_progress | 0 | mod_name | Section: Key Progress | 開始檢查 zh-tw |
+| Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | completed | 2 | mod_description | Section: Key Progress | 校正 mod_name 與 mod_description 的 Cleave/順劈語意 |
 
 #### Key Summary
 
 | Time | File | Key | Status | Branch log section | Notes |
 | --- | --- | --- | --- | --- | --- |
 | 2026-07-11 10:57:08 +08:00 | Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | mod_name | in_progress | Section: Key Progress | 開始檢查 zh-tw |
+| 2026-07-11 11:01:35 +08:00 | Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | mod_name / mod_description | completed | Section: Key Progress | 校正 Cleave/順劈語意；25 個 en key 均有 zh-tw |
 
 ## 協作交接紀錄
 
@@ -498,3 +499,4 @@
 | EmpowerUntilLimit | codex | Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | 2 | 6ef0bae | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/49 | 2026-07-08 18:06:43 +08:00 | Darktide Translation Workspace/Log/EmpowerUntilLimit.md | 補齊 mod_name zh-tw，校正 mod_description zh-tw；PR ready |
 | StimmCountdown | codex | Warhammer 40,000 DARKTIDE/mods/StimmCountdown/scripts/mods/StimmCountdown/StimmCountdown_localization.lua | 75 | none | none | 2026-07-09 01:15:43 +08:00 | Darktide Translation Workspace/Log/StimmCountdown.md | 所有靜態 en key 均已有正確 zh-tw，無需修改 |
 | mauler_attack_indicator | codex | Warhammer 40,000 DARKTIDE/mods/mauler_attack_indicator/scripts/mods/mauler_attack_indicator/mauler_attack_indicator_localization.lua | 25 | 02eae73 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/50 | 2026-07-09 01:24:11 +08:00 | Darktide Translation Workspace/Log/mauler_attack_indicator.md | 校正 zh-tw ring / warning / attack 用語；PR ready |
+| crusher_attack_indicator | codex | Warhammer 40,000 DARKTIDE/mods/crusher_attack_indicator/scripts/mods/crusher_attack_indicator/crusher_attack_indicator_localization.lua | 2 | 8efc54c | pending | 2026-07-11 11:01:35 +08:00 | Darktide Translation Workspace/Log/crusher_attack_indicator.md | 校正 Cleave/順劈語意；待 push 與 ready PR |
