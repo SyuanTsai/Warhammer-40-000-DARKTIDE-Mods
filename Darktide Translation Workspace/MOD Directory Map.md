@@ -116,7 +116,6 @@
 | completed | 2026-07-11 11:05:15 +08:00 | Crusher Attack Indicator | crusher_attack_indicator | 校正 Cleave/順劈語意（PR #51）。 |
 | blocked | 2026-07-11 11:37:27 +08:00 | HoldFire | HoldFire | README active MOD，但 main 的 mods 目錄缺少 HoldFire 資料夾，待補本地檔案後再處理。 |
 | completed | 2026-07-11 11:50:22 +08:00 | Radar | Radar | 校正 Horde/遠征物品 tooltip 詞彙一致性（PR #52）。 |
-| ready | not checked | AuspexHelper | AuspexHelper |  |
 | in_progress | 2026-07-11 11:50:27 +08:00 | PlasmaBFG | PlasmaBFG | 使用者指定優先處理；codex 已建立工作鎖定。 |
 | ready | not checked | SprintRelicHeavy | SprintRelicHeavy |  |
 | ready | not checked | Auto Mark | AutoMark |  |
@@ -151,3 +150,4 @@
 | removed | not checked | RickAndMortis | removed |  |
 | removed | not checked | Alternate Grenade Icons | removed |  |
 | removed | 2026-07-07 +08:00 | MemoryLeakFix | MemLeakFix | removed : 2026/07/11 |
+| removed | not checked | AuspexHelper | AuspexHelper | removed : 2026/07/11 |
