@@ -5,6 +5,6 @@ return {
     },
     mod_description = {
         en = "{#color(255,0,0)}Detects mod crashes, prints clear reports, and saves them to files.{#reset()}",
-        ["zh-tw"] = "{#color(255,0,0)}偵測 MOD 崩潰，輸出清楚報告並儲存成檔案。{#reset()}",
+        ["zh-tw"] = "{#color(255,0,0)}偵測 MOD 崩潰，輸出清楚的報告並儲存成檔案。{#reset()}",
     },
 }
