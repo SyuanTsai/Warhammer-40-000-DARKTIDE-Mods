@@ -55,7 +55,7 @@
 | completed | 2026-07-07 +08:00 | Danger Zone | danger_zone | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Numeric UI | NumericUI | 修正 peril_icon 詞彙表不一致（PR #43）。 |
 | mod_updated | 2026-07-11 11:44:36 +08:00 | Spidey Sense | Spidey Sense | README 更新至 Last updated 10 July 2026 / v7.6；需重新比對本地 localization。 |
-| not_scheduled | not checked | Enhanced Descriptions | Enhanced_descriptions |  |
+| not_scheduled | not checked | Enhanced Descriptions | Enhanced_descriptions | 範圍特殊另外規劃 |
 | completed | 2026-07-07 +08:00 | Emperor's Guidance | EmperorsGuidance | 所有靜態 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Remember Server Location | RememberServerLocation | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Default To Highest Blessing Tier | DefaultToHighestBlessingTier | 所有 zh-tw 已完整正確，無需修改。 |
@@ -68,20 +68,19 @@
 | completed | 2026-07-07 +08:00 | Name It - Rename Weapons and Curios | name_it | 所有靜態 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | LoadoutNames | LoadoutNames | 所有 zh-tw 已完整正確，無需修改。 |
 | mod_updated | 2026-07-11 11:44:36 +08:00 | Guarantee Ability Activation | guarantee_ability_activation | README 更新至 Last updated 08 July 2026 / 1.4.1；需重新比對本地 localization。 |
-| in_progress | 2026-07-07 +08:00 | Custom HUD | custom_hud |  |
+| ready | 2026-07-07 +08:00 | Custom HUD | custom_hud |  |
 | completed | 2026-07-07 +08:00 | Keep Dodging | keep_dodging | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
-| in_progress | 2026-07-11 11:44:36 +08:00 | Perspectives Mod | Perspectives | README 更新至 Last updated 08 July 2026 / 1.13；保留既有 in_progress 狀態，待原 handler 確認。 |
+| ready | 2026-07-11 11:44:36 +08:00 | Perspectives Mod | Perspectives | README 更新至 Last updated 08 July 2026 / 1.13|
 | completed | 2026-07-07 +08:00 | Improved Havoc Tags | ImprovedHavocTags | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-07 +08:00 | Ovenproof's Scoreboard Plugin | ovenproof_scoreboard_plugin |  |
-| in_progress | 2026-07-07 +08:00 | Scoreboard Explosive | ScoreboardExplosive |  |
+| ready | 2026-07-07 +08:00 | Ovenproof's Scoreboard Plugin | ovenproof_scoreboard_plugin |  |
+| ready | 2026-07-07 +08:00 | Scoreboard Explosive | ScoreboardExplosive |  |
 | completed | 2026-07-07 +08:00 | Better Hud Info View | better_hud_info_view | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Recolor Boss Health Bars | RecolorBossHealthBars | 所有 zh-tw 已完整正確，無需修改。 |
-| blocked | 2026-07-11 11:44:36 +08:00 | Dog Whistle | DogWhistle | README active MOD，但 main 的 mods 目錄缺少 DogWhistle 資料夾，待補本地檔案後再處理。 |
 | completed | 2026-07-07 +08:00 | Red Weapons at Home | red_weapons_at_home | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-11 11:44:36 +08:00 | AutoBlitz | AutoBlitz | README 更新至 Last updated 07 July 2026 / 1.1.0；保留既有 in_progress 狀態，待原 handler 確認。 |
-| in_progress | 2026-07-07 +08:00 | SpecialsTracker | SpecialsTracker |  |
+| ready | 2026-07-11 11:44:36 +08:00 | AutoBlitz | AutoBlitz | README 更新至 Last updated 07 July 2026 / 1.1.0|
+| ready | 2026-07-07 +08:00 | SpecialsTracker | SpecialsTracker |  |
 | completed | 2026-07-07 +08:00 | Display Ping (Latency) | DisplayPing | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
-| in_progress | 2026-07-07 +08:00 | Reconnect | Reconnect |  |
+| ready | 2026-07-07 +08:00 | Reconnect | Reconnect |  |
 | completed | 2026-07-07 +08:00 | Valkyrie Blitz-Ingress | valkyrie | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | BornReady | BornReady | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | completed | 2026-07-07 +08:00 | MissionBrief | MissionBrief | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
@@ -89,7 +88,7 @@
 | completed | 2026-07-07 +08:00 | InventoryStats | InventoryStats | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Clear Smoke | clear_smoke | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Quick Level Mastery | quick_level_mastery | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-07 +08:00 | I Wanna See | i_wanna_see |  |
+| ready | 2026-07-07 +08:00 | I Wanna See | i_wanna_see |  |
 | completed | 2026-07-07 +08:00 | VFX Swapper | vfx_swapper | 所有 zh-tw 已完整正確，無需修改。 |
 | mod_updated | 2026-07-11 11:44:36 +08:00 | CombatStats | CombatStats | README 更新至 Last updated 09 July 2026 / 0.4.13；需重新比對本地 localization。 |
 | completed | 2026-07-07 +08:00 | CharacterGrid | CharacterGrid | 所有 zh-tw 已完整正確，無需修改。 |
@@ -102,7 +101,7 @@
 | completed | 2026-07-07 +08:00 | Talent Tree UX Improvements | TalentRefundBelow | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Archivum Messelina | Archivum Messelina | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Many More Try | ManyMoreTry | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-07 +08:00 | Solo Play (Havoc Update) | SoloPlay |  |
+| ready | 2026-07-07 +08:00 | Solo Play (Havoc Update) | SoloPlay |  |
 | completed | 2026-07-07 +08:00 | TagKeys | TagKeys | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | completed | 2026-07-07 +08:00 | Weapon Filter | WeaponFilter | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | completed | 2026-07-07 +08:00 | AFK | afk | 所有 zh-tw 已完整正確，無需修改。 |
@@ -113,7 +112,6 @@
 | completed | 2026-07-09 01:15:43 +08:00 | StimmCountdown | StimmCountdown | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-09 01:24:11 +08:00 | Mauler Attack Indicator | mauler_attack_indicator | 校正 zh-tw ring / warning / attack 用語（PR #50）。 |
 | completed | 2026-07-11 11:05:15 +08:00 | Crusher Attack Indicator | crusher_attack_indicator | 校正 Cleave/順劈語意（PR #51）。 |
-| blocked | 2026-07-11 11:37:27 +08:00 | HoldFire | HoldFire | README active MOD，但 main 的 mods 目錄缺少 HoldFire 資料夾，待補本地檔案後再處理。 |
 | completed | 2026-07-11 11:50:22 +08:00 | Radar | Radar | 校正 Horde/遠征物品 tooltip 詞彙一致性（PR #52）。 |
 | in_progress | 2026-07-11 11:50:27 +08:00 | PlasmaBFG | PlasmaBFG | 使用者指定優先處理；codex 已建立工作鎖定。 |
 | ready | not checked | SprintRelicHeavy | SprintRelicHeavy |  |
@@ -150,3 +148,5 @@
 | removed | not checked | Alternate Grenade Icons | removed |  |
 | removed | 2026-07-07 +08:00 | MemoryLeakFix | MemLeakFix | removed : 2026/07/11 |
 | removed | not checked | AuspexHelper | AuspexHelper | removed : 2026/07/11 |
+| removed | 2026-07-11 11:44:36 +08:00 | Dog Whistle | DogWhistle | removed : 2026/05/17 |
+| removed | 2026-07-11 11:37:27 +08:00 | HoldFire | HoldFire | removed : 2026/06/26 |
