@@ -120,7 +120,7 @@
 | completed | 2026-07-11 20:00:16 +08:00 | ErrorTracker | ErrorTracker | 校正 MOD 崩潰報告描述（PR #57）。 |
 | completed | 2026-07-11 20:23:26 +08:00 | NoBrainer | NoBrainer | 校正 Darktide/Mourningstar/Tree Drill 詞彙；使用者手動合併至 main。 |
 | completed | 2026-07-11 20:35:47 +08:00 | AUPM | AUPM | 校正戰鬥技能使用統計與客製化開發用語（PR #58）。 |
-| in_progress | 2026-07-12 00:58:13 +08:00 | DPM | DPM | codex 正在校正 zh-tw DPM 傷害資料顯示用語。 |
+| completed | 2026-07-12 01:21:20 +08:00 | DPM | DPM | 校正 DPM 每分鐘傷害資料顯示描述（PR #59）。 |
 | ready | 2026-07-11 11:44:36 +08:00 | KeepSwinging | KeepSwinging | 本地 mods 目錄存在，但 README active 區未列出 |
 | ready | 2026-07-11 11:44:36 +08:00 | KPM | KPM | 本地 mods 目錄存在，但 README active 區未列出 |
 | ready | 2026-07-11 11:44:36 +08:00 | RetainSelection | RetainSelection | 本地 mods 目錄存在，但 README active 區未列出 |
