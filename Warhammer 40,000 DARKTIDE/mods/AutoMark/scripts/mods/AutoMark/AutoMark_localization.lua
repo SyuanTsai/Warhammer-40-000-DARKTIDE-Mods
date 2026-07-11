@@ -278,14 +278,14 @@ local localization = {
     servo_skull_mark_keybind = {
         en = "Servo-Skull Mark Keybind",
         ["zh-cn"] = "伺服颅骨标记按键",
-        ["zh-tw"] = "伺服顱骨標記按鍵",
+        ["zh-tw"] = "伺服頭骨標記按鍵",
     },
     servo_skull_mark_keybind_description = {
         en = "Dedicated key for Servo-Skull Mark. As Skitarii, you can now use both normal enemy mark and Servo-Skull mark at the same time.\n\n" ..
             "When " .. highlight("Companion Target Tag") .. " is set to " .. highlight("Press Once") .. ", this function becomes a normal enemy mark.",
         ["zh-cn"] = "伺服颅骨标记专用按键，现在你可以作为护教军，同时使用普通敌人标记和伺服颅骨标记了。\n\n" ..
             "当" .. highlight("伙伴目标标记") .. "设置为" .. highlight("按一次") .. "时，此功能变为普通敌人标记。",
-        ["zh-tw"] = "伺服顱骨標記專用按鍵。身為護教軍，你現在可同時使用一般敵人標記與伺服顱骨標記。\n\n" ..
+        ["zh-tw"] = "伺服頭骨標記專用按鍵。身為護教軍，你現在可同時使用一般敵人標記與伺服頭骨標記。\n\n" ..
             "當" .. highlight("同伴目標標記方式") .. "設為" .. highlight("按一次") .. "時，此功能會變為一般敵人標記。",
     },
     servo_skull_mark_ignore_unaggroed = {
@@ -296,7 +296,7 @@ local localization = {
     servo_skull_mark_ignore_unaggroed_description = {
         en = "When enabled, Servo-Skull Auto-Mark will not mark enemies that are not alerted.",
         ["zh-cn"] = "当启用时，伺服颅骨自动标记将不会标记未警觉的敌人。",
-        ["zh-tw"] = "當啟用時，伺服顱骨自動標記將不會標記未觸發警戒的敵人。",
+        ["zh-tw"] = "當啟用時，伺服頭骨自動標記將不會標記未觸發警戒的敵人。",
     },
     servo_skull_cancel_mark_time_threshold = {
         en = "Out of Sight Tolerance",
@@ -310,7 +310,7 @@ local localization = {
         ["zh-cn"] = "当你的伺服颅骨失去目标视野超过所选时间（单位：秒）时，取消伺服颅骨标记。\n\n" ..
             "设置为" .. highlight("0") .. "以禁用。\n" ..
             "对" .. highlight("手动") .. "标记无效。",
-        ["zh-tw"] = "當你的伺服顱骨失去目標視野超過設定秒數時，取消伺服顱骨標記。\n\n" ..
+        ["zh-tw"] = "當你的伺服頭骨失去目標視野超過設定秒數時，取消伺服頭骨標記。\n\n" ..
             "設為" .. highlight("0") .. "可停用。\n" ..
             "不影響" .. highlight("手動") .. "標記。",
     },
@@ -322,7 +322,7 @@ local localization = {
     hack_mark_keybind_description = {
         en = "Dedicated key for Sending the Servo-Skull to hack the minigame.",
         ["zh-cn"] = "用于指派伺服颅骨黑入数据查询小游戏的专用按键。",
-        ["zh-tw"] = "用於指派伺服顱骨黑入資料查詢小遊戲的專用按鍵。",
+        ["zh-tw"] = "用於指派伺服頭骨黑入資料查詢小遊戲的專用按鍵。",
     },
     auto_hack = {
         en = "Auto Data Interrogation",
@@ -332,7 +332,7 @@ local localization = {
     auto_hack_description = {
         en = "Automatically sends your Servo-Skull to hack the minigame when you aim at a hackable objective",
         ["zh-cn"] = "当你瞄准一个数据查询小游戏时，自动派遣伺服颅骨前去黑入。",
-        ["zh-tw"] = "當你瞄準一個資料查詢小遊戲時，自動派遣伺服顱骨前去黑入。",
+        ["zh-tw"] = "當你瞄準一個資料查詢小遊戲時，自動派遣伺服頭骨前去黑入。",
     },
     disable_auto_hack_for_noospheric_command = {
         en = "Disable Auto Data Interrogation When Noospheric Command Talent is Equiped",
@@ -355,7 +355,7 @@ local localization = {
             "阈值为非负数时，直接以剩余电容数值判定。\n" ..
             "阈值为负数时，实际阈值等于技能最大充能次数加上设定值。\n\n" ..
             "剩余电容等于技能充能次数加上当前电容百分比。",
-        ["zh-tw"] = "當啟用心智網指令時，若剩餘電容量低於所選門檻，將停用所有伺服顱骨自動標記功能，包含心智網指令強化。\n\n" ..
+        ["zh-tw"] = "當啟用心智網指令時，若剩餘電容量低於所選門檻，將停用所有伺服頭骨自動標記功能，包含心智網指令強化。\n\n" ..
             "本門檻支援設定為負值（含-0）：\n" ..
             "門檻為非負數時，直接以剩餘電容量數值判定。\n" ..
             "門檻為負數時，實際門檻等於技能最大充能次數加上設定值。\n\n" ..
@@ -412,7 +412,7 @@ local localization = {
         ["zh-cn"] = "自动对已标记目标进行重复标记，以延长星语指令的效果。\n\n" ..
             "重复标记间隔为星语指令的持续时间，只有当目标在伺服颅骨视野内时才会进行标记。",
         ["zh-tw"] = "自動重新標記已標記目標，以延長心智網指令效果。\n\n" ..
-            "重新標記間隔等同於效果持續時間，且僅在目標位於伺服顱骨視線內時觸發。",
+            "重新標記間隔等同於效果持續時間，且僅在目標位於伺服頭骨視線內時觸發。",
     },
     noospheric_command_boost_elite = {
         en = "Elite",
@@ -500,8 +500,8 @@ local localization = {
             highlight("On") .. ": If the player's Focus Target stacks exceed those applied to the enemy, and the stack difference is greater than or equal to the option 'Focus Target Overwrite Delta' or the stacks are at max, the Focus Target mark will be reapplied.",
         ["zh-cn"] = highlight("关闭") .. "：已被聚焦目标标记的敌人，不会再次被标记。\n" ..
             highlight("开启") .. "：当玩家自身聚焦目标层数高于敌人已被施加的层数，且层数差大于等于下方选项「聚焦目标覆盖最小层数差」或自身层数已满时，将重新施加聚焦目标标记。",
-        ["zh-tw"] = highlight("關閉") .. "：已被專注目標標記的敵人，不會再次被標記。\n" ..
-            highlight("開啟") .. "：當玩家自身專注目標層數高於敵人已被施加的層數，且層數差大於等於下方選項「專注目標覆蓋最小層數差」或自身層數已滿時，將重新施加專注目標標記。",
+        ["zh-tw"] = highlight("關閉") .. "：已被鎖定目標標記的敵人，不會再次被標記。\n" ..
+            highlight("開啟") .. "：當玩家自身鎖定目標層數高於敵人已被施加的層數，且層數差大於等於下方選項「鎖定目標覆蓋最小層數差」或自身層數已滿時，將重新施加鎖定目標標記。",
     },
     focus_target_overwrite_delta = {
         en = "Focus Target Overwrite Delta",
@@ -516,7 +516,7 @@ local localization = {
     focus_target_switch_description = {
         en = "When the player is attacking, the focus target mark will switch to the aimed target.",
         ["zh-cn"] = "当进行攻击时，聚焦目标将标记当前瞄准的敌人。",
-        ["zh-tw"] = "進行攻擊時，專注目標將標記當前瞄準的敵人。",
+        ["zh-tw"] = "進行攻擊時，鎖定目標將標記當前瞄準的敵人。",
     },
     focus_target_switch_melee = {
         en = "Melee Weapon",
@@ -542,7 +542,7 @@ local localization = {
     class_selection_description = {
         en = "Normal enemy marks for all classes, plus special marks for certain classes (Cyber-Mastiff, Servo-Skull, Focus Target).",
         ["zh-cn"] = "所有职业的普通敌人标记，以及某些职业的特殊标记（智能獒犬、伺服颅骨、聚焦目标）。",
-        ["zh-tw"] = "所有職業的一般敵人標記，以及特定職業的特殊標記（電子獒犬、伺服顱骨、專注目標）。",
+        ["zh-tw"] = "所有職業的一般敵人標記，以及特定職業的特殊標記（電子獒犬、伺服頭骨、鎖定目標）。",
     },
     toggle_class = {
         en = "Toggle",
@@ -710,7 +710,7 @@ local localization = {
     cryptic_servo_skull = {
         en = "Skitarius Servo-Skull",
         ["zh-cn"] = "护教军士兵 伺服颅骨",
-        ["zh-tw"] = "護教軍 伺服顱骨",
+        ["zh-tw"] = "護教軍 伺服頭骨",
     },
     apply_to_all_classes = {
         en = "Apply to All Classes",
