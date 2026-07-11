@@ -5,7 +5,7 @@ return {
 	},
 	mod_description = {
 		en = "Performs a Relic Blade heavy windup while sprinting.",
-		["zh-tw"] = "衝刺時執行上古神刃重攻擊蓄力。",
+		["zh-tw"] = "衝刺時進入上古神刃的重攻擊蓄力。",
 	},
 	override_sprint = {
 		en = "Override Sprint",
@@ -13,7 +13,7 @@ return {
 	},
 	override_sprint_description = {
 		en = "When on, holding sprint also drives the helper. When off, the mod stays idle unless you hold Helper Hotkey.",
-		["zh-tw"] = "開啟時，按住衝刺鍵也會啟動輔助功能。關閉時，除非按住輔助快捷鍵，否則 MOD 會保持閒置。",
+		["zh-tw"] = "開啟時，按住衝刺鍵也會啟動輔助功能。關閉時，除非按住輔助快捷鍵，否則MOD會保持閒置。",
 	},
 	helper_hotkey = {
 		en = "Helper Hotkey",
