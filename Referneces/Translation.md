@@ -42,6 +42,7 @@
 - Mortis Trials - 死神試煉
 - Valkyrie - 女武神
 - Mourningstar - 哀星號
+- Darktide - 黑潮
 
 ### 增益效果 (BUFFS)
 
