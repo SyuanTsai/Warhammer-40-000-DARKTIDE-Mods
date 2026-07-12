@@ -125,7 +125,7 @@
 | completed | 2026-07-12 02:57:52 +08:00 | KPM | KPM | 校正 KPM 描述、近戰/遠程類精英與專家敵人用語（PR #61）。 |
 | completed | 2026-07-12 07:04:18 +08:00 | RetainSelection | RetainSelection | 校正保留選取狀態描述（PR #62）。 |
 | completed | 2026-07-12 11:37:24 +08:00 | Show CJK Glyphs | show_cjk_glyphs | 校正 Language Priority 繁中用語（PR #63）。 |
-| ready | 2026-07-11 11:44:36 +08:00 | SimpleSpeedMeter | SimpleSpeedMeter | 本地 mods 目錄存在，但 README active 區未列出 |
+| completed | 2026-07-12 11:46:20 +08:00 | SimpleSpeedMeter | SimpleSpeedMeter | 校正速度計描述繁中用語（PR #64）。 |
 
 ## 已從 README 排除的 MOD
 
