@@ -22,6 +22,8 @@
 - Underhand - 低拋投擲
 - Cycled Viewpoint - 循環視角
 - Center - 中心(用於表達畫面位置時)/中央(用於表達遊戲區域)
+- explosive - 爆炸桶(用於描述遊戲中的爆裂物)
+- Fire Barrel - 燃燒桶(用於描述遊戲中的燃燒爆裂物)
 
 ### 通用名詞
 
