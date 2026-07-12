@@ -12,7 +12,7 @@ return {
     lang_priority = {
         en = "Language Priority",
         ["zh-cn"] = "语言优先级",
-        ["zh-tw"] = "語言優先級",
+        ["zh-tw"] = "語言優先順序",
     },
     q_zh_hans = {
         en = "Chinese (Simplified)",
