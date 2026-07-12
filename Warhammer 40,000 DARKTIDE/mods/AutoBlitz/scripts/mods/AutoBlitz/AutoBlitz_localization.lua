@@ -33,7 +33,7 @@ return {
     },
     mod_description = {
         en = "GRENADE OUT",
-        ["zh-tw"] = "自動投擲手雷或使用閃擊",
+        ["zh-tw"] = "自動投擲手雷或使用閃擊。",
         ["zh-cn"] = "自动投掷各类手雷与职业技能道具",
     },
     -- Debug
@@ -71,12 +71,12 @@ return {
     },
     auto_throw_keybind = {
         en = "Auto-Throw Keybind",
-        ["zh-tw"] = "自動投擲按鍵",
+        ["zh-tw"] = "自動投擲快捷鍵",
         ["zh-cn"] = "自动投掷触发按键",
     },
     auto_throw_keybind_tooltip = {
         en = "Swaps to and throws grenades. When set, AutoBlitz will not automatically throw grenades unless the keybind is pressed.",
-        ["zh-tw"] = "切換到手雷並投擲。設定後，Mod只會在按下此按鍵時自動投擲手雷。",
+        ["zh-tw"] = "切換到手雷並投擲。設定後，MOD只會在按下此快捷鍵時自動投擲手雷。",
         ["zh-cn"] = "切换至手雷栏并投掷。绑定按键后，模组仅在按下该键时才会自动投掷，不会自主触发。"
     },
     allow_override_tooltip = {
@@ -326,12 +326,12 @@ return {
     },
     dogsplosion_enabled_tooltip = {
         en = string.format("Automatically triggers %s when the conditions below are met. \n\nAt least one of the following settings must be enabled to use this feature: \nRequire Minimum Enemy Count \nRequire Pounce",cf(Localize("loc_talent_ability_detonate"), "pale_violet_red")),
-        ["zh-tw"] = string.format("符合下列條件時自動觸發 %s。\n\n至少啟用以下其中一項設定才能使用此功能：\n需要最低敵人數量\n需要撲擊",cf("遠端引爆", "pale_violet_red")),
+        ["zh-tw"] = string.format("符合下列條件時自動觸發 %s。\n\n至少啟用以下其中一項設定才能使用此功能：\n要求最低敵人數量\n要求撲擊",cf("遠端引爆", "pale_violet_red")),
         ["zh-cn"] = "满足下述条件时自动触发训犬引爆。\n必须开启以下至少一项才能生效：\n敌人数量阈值判定\n扑击触发判定"
     },
     dogsplosion_use_threshold = {
         en = "Require Minimum Enemy Count",
-        ["zh-tw"] = "需要最低敵人數量",
+        ["zh-tw"] = "要求最低敵人數量",
         ["zh-cn"] = "敌人数量阈值判定"
     },
     dogsplosion_use_threshold_tooltip = {
@@ -397,7 +397,7 @@ return {
     -- Hive Scum 巢都渣滓
     broker = {
         en = cf(Localize("loc_class_broker_name"), "ui_toughness_default"),
-        ["zh-tw"] = cf("巢都渣子", "ui_toughness_default"),
+        ["zh-tw"] = cf("巢都渣滓", "ui_toughness_default"),
         ["zh-cn"] = cf("巢都渣滓", "ui_toughness_default"),
     },
     flask_enabled = {
@@ -473,7 +473,7 @@ return {
     },
     help_downed = {
         en = "Automatically Rescue Downed Allies",
-        ["zh-tw"] = "自動救援倒地隊友",
+        ["zh-tw"] = "自動救起倒地隊友",
         ["zh-cn"] = "自动拉起倒地队友"
     },
     medic_minimum = {
@@ -523,7 +523,7 @@ return {
     },
     damage_taken = {
         en = "Damage Taken",
-        ["zh-tw"] = "承受傷害",
+        ["zh-tw"] = "受到傷害",
         ["zh-cn"] = "短时间承受伤害量"
     },
     shield_type_tooltip = {
@@ -538,7 +538,7 @@ return {
     },
     shield_threshold_tooltip = {
         en = string.format("%s: Refraction Emitter will deploy when health drops below this percentage due to Ranged damage.\n%s: Refraction Emitter will deploy when this much health damage has been received from Ranged sources within the past 2 seconds.\n\nRegardless of Threshold, Refraction Emitter will auto-deploy if the next instance of incoming Ranged damage would plausibly result in death.",cf("Current Health %%", "citadel_golden_griffon"),cf("Damage Taken", "citadel_golden_griffon")),
-        ["zh-tw"] = string.format("%s：遠程傷害使生命值低於此百分比時，部署折射力場發生器。\n%s：過去 2 秒內承受此數值的遠程生命值傷害時，部署折射力場發生器。\n\n不論門檻為何，若下一次遠程傷害可能致死，會自動部署折射力場發生器。",cf("目前生命值 %%", "citadel_golden_griffon"),cf("承受傷害", "citadel_golden_griffon")),
+        ["zh-tw"] = string.format("%s：遠程傷害使生命值低於此百分比時，部署折射力場發生器。\n%s：過去 2 秒內受到此數值的遠程生命值傷害時，部署折射力場發生器。\n\n不論門檻為何，若下一次遠程傷害可能致死，會自動部署折射力場發生器。",cf("目前生命值 %%", "citadel_golden_griffon"),cf("受到傷害", "citadel_golden_griffon")),
         ["zh-cn"] = string.format("%s：远程伤害使生命值低于该百分比时自动开盾。\n%s：2秒内受到对应数值远程伤害时自动开盾。\n无论阈值如何，若下一次远程伤害足以致死，会强制自动部署力场。",cf("当前生命值百分比", "citadel_golden_griffon"),cf("短时间承受伤害量", "citadel_golden_griffon"))
     },
     shield_minimum = {
