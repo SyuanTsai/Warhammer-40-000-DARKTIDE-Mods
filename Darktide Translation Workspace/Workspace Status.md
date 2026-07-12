@@ -34,6 +34,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | RetainSelection | RetainSelection | main | Codex/Feature/RetainSelection/Add-zh-tw | Darktide Translation Workspace/Log/RetainSelection.md | RetainSelection_localization.lua | all keys | 2026-07-12 07:04:18 +08:00 | 695d353 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/62 | show_cjk_glyphs/*localization.lua:first key | 已校正保留選取狀態描述；PR #62 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | show_cjk_glyphs | Show CJK Glyphs | main | Codex/Feature/show_cjk_glyphs/Add-zh-tw | Darktide Translation Workspace/Log/show_cjk_glyphs.md | show_cjk_glyphs_localization.lua | all keys | 2026-07-12 11:37:24 +08:00 | 5dddea8 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/63 | SimpleSpeedMeter/*localization.lua:first key | 已校正 Language Priority 繁中用語；PR #63 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | SimpleSpeedMeter | SimpleSpeedMeter | main | Codex/Feature/SimpleSpeedMeter/Add-zh-tw | Darktide Translation Workspace/Log/SimpleSpeedMeter.md | SimpleSpeedMeter_localization.lua | all keys | 2026-07-12 11:46:20 +08:00 | dbf4b15 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/64 | Custom HUD/*localization.lua:first key | 已校正速度計描述繁中用語；PR #64 ready |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | custom_hud | Custom HUD | main | Codex/Feature/custom_hud/Add-zh-tw | Darktide Translation Workspace/Log/custom_hud.md | custom_hud_localization.lua | all keys | 2026-07-12 11:57:45 +08:00 | 5508c1d | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/65 | Perspectives/*localization.lua:first key | 已校正 HUD 編輯模式與面板設定繁中用語；PR #65 ready |
 
 ## 工作鎖定
 
@@ -66,7 +67,7 @@
 | RetainSelection | Warhammer 40,000 DARKTIDE/mods/RetainSelection/scripts/mods/RetainSelection/RetainSelection_localization.lua | all keys | codex | released | Codex/Feature/RetainSelection/Add-zh-tw | Darktide Translation Workspace/Log/RetainSelection.md | 2026-07-12 03:17:12 +08:00 | 2026-07-12 07:04:18 +08:00 | PR #62 已建立且為 ready | 任務完成，釋放鎖定 |
 | show_cjk_glyphs | Warhammer 40,000 DARKTIDE/mods/show_cjk_glyphs/scripts/mods/show_cjk_glyphs/show_cjk_glyphs_localization.lua | all keys | codex | released | Codex/Feature/show_cjk_glyphs/Add-zh-tw | Darktide Translation Workspace/Log/show_cjk_glyphs.md | 2026-07-12 11:35:05 +08:00 | 2026-07-12 11:37:24 +08:00 | PR #63 已建立且為 ready | 任務完成，釋放鎖定 |
 | SimpleSpeedMeter | Warhammer 40,000 DARKTIDE/mods/SimpleSpeedMeter/scripts/mods/SimpleSpeedMeter/SimpleSpeedMeter_localization.lua | all keys | codex | released | Codex/Feature/SimpleSpeedMeter/Add-zh-tw | Darktide Translation Workspace/Log/SimpleSpeedMeter.md | 2026-07-12 11:44:13 +08:00 | 2026-07-12 11:46:20 +08:00 | PR #64 已建立且為 ready | 任務完成，釋放鎖定 |
-| custom_hud | Warhammer 40,000 DARKTIDE/mods/custom_hud/scripts/mods/custom_hud/custom_hud_localization.lua | custom_hud_description | codex | in_progress | Codex/Feature/custom_hud/Add-zh-tw | Darktide Translation Workspace/Log/custom_hud.md | 2026-07-12 11:53:24 +08:00 | 2026-07-12 11:53:24 +08:00 | 完成 localization 檢查、commit 與 PR 後釋放 | 開始校正 HUD 編輯模式與面板設定繁中用語 |
+| custom_hud | Warhammer 40,000 DARKTIDE/mods/custom_hud/scripts/mods/custom_hud/custom_hud_localization.lua | all keys | codex | released | Codex/Feature/custom_hud/Add-zh-tw | Darktide Translation Workspace/Log/custom_hud.md | 2026-07-12 11:53:24 +08:00 | 2026-07-12 11:57:45 +08:00 | PR #65 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -933,6 +934,38 @@
 | 2026-07-12 11:44:13 +08:00 | Warhammer 40,000 DARKTIDE/mods/SimpleSpeedMeter/scripts/mods/SimpleSpeedMeter/SimpleSpeedMeter_localization.lua | mod_description | in_progress | Section: Key Progress | 開始校正速度計描述用語 |
 | 2026-07-12 11:46:20 +08:00 | Warhammer 40,000 DARKTIDE/mods/SimpleSpeedMeter/scripts/mods/SimpleSpeedMeter/SimpleSpeedMeter_localization.lua | mod_description | completed | Section: Key Progress | 將「添加一個簡易的玩家速度計組件。」校正為「新增一個簡易的玩家速度計小工具。」 |
 
+### MOD-LOG-0027 - custom_hud
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | Custom HUD |
+| Repo directory | custom_hud |
+| AI handler | codex |
+| Status | completed |
+| Base branch | main |
+| Work branch | Codex/Feature/custom_hud/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/custom_hud.md |
+| Started at | 2026-07-12 11:53:24 +08:00 |
+| Last updated | 2026-07-12 11:57:45 +08:00 |
+| Completed at | 2026-07-12 11:57:45 +08:00 |
+| Commit | 5508c1d |
+| PR URL / number | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/65 |
+| Next position | Perspectives/*localization.lua:first key |
+| Notes | 已校正 HUD 編輯模式、面板設定與繁中用語；PR #65 ready。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/custom_hud/scripts/mods/custom_hud/custom_hud_localization.lua | completed | 16 | snap_to_elements_description | Section: Key Progress | 僅修改/新增 zh-tw 欄位；duplicate zh-tw=0、empty zh-tw=0 |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-12 11:53:24 +08:00 | Warhammer 40,000 DARKTIDE/mods/custom_hud/scripts/mods/custom_hud/custom_hud_localization.lua | custom_hud_description | in_progress | Section: Key Progress | 開始校正 HUD 編輯模式與面板設定繁中用語 |
+| 2026-07-12 11:57:45 +08:00 | Warhammer 40,000 DARKTIDE/mods/custom_hud/scripts/mods/custom_hud/custom_hud_localization.lua | snap_to_elements_description | completed | Section: Key Progress | 校正 16 個 zh-tw 值，包含操作說明、HUD 切換、資訊面板、面板縮放、清單列數、重設、透明度、網格與吸附描述 |
+
 ## 協作交接紀錄
 
 | Time | From | To | MOD | File | Key | From status | To status | Branch log | Note |
@@ -1030,6 +1063,7 @@
 | RetainSelection | codex | main | Codex/Feature/RetainSelection/Add-zh-tw | 695d353 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/62 | yes | yes | 僅包含 RetainSelection_localization.lua；PR ready |
 | show_cjk_glyphs | codex | main | Codex/Feature/show_cjk_glyphs/Add-zh-tw | 5dddea8 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/63 | yes | yes | 僅包含 show_cjk_glyphs_localization.lua；PR ready |
 | SimpleSpeedMeter | codex | main | Codex/Feature/SimpleSpeedMeter/Add-zh-tw | dbf4b15 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/64 | yes | yes | 僅包含 SimpleSpeedMeter_localization.lua；PR ready |
+| custom_hud | codex | main | Codex/Feature/custom_hud/Add-zh-tw | 5508c1d | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/65 | yes | yes | 僅包含 custom_hud_localization.lua；PR ready |
 
 ## Completed Files
 
@@ -1058,3 +1092,4 @@
 | RetainSelection | codex | Warhammer 40,000 DARKTIDE/mods/RetainSelection/scripts/mods/RetainSelection/RetainSelection_localization.lua | 1 | 695d353 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/62 | 2026-07-12 07:04:18 +08:00 | Darktide Translation Workspace/Log/RetainSelection.md | 校正保留選取狀態描述；PR ready |
 | show_cjk_glyphs | codex | Warhammer 40,000 DARKTIDE/mods/show_cjk_glyphs/scripts/mods/show_cjk_glyphs/show_cjk_glyphs_localization.lua | 1 | 5dddea8 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/63 | 2026-07-12 11:37:24 +08:00 | Darktide Translation Workspace/Log/show_cjk_glyphs.md | 校正 Language Priority 繁中用語；PR ready |
 | SimpleSpeedMeter | codex | Warhammer 40,000 DARKTIDE/mods/SimpleSpeedMeter/scripts/mods/SimpleSpeedMeter/SimpleSpeedMeter_localization.lua | 1 | dbf4b15 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/64 | 2026-07-12 11:46:20 +08:00 | Darktide Translation Workspace/Log/SimpleSpeedMeter.md | 校正速度計描述繁中用語；PR ready |
+| custom_hud | codex | Warhammer 40,000 DARKTIDE/mods/custom_hud/scripts/mods/custom_hud/custom_hud_localization.lua | 16 | 5508c1d | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/65 | 2026-07-12 11:57:45 +08:00 | Darktide Translation Workspace/Log/custom_hud.md | 校正 HUD 編輯模式與面板設定繁中用語；PR ready |
