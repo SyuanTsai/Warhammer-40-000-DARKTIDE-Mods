@@ -72,7 +72,7 @@
 | completed | 2026-07-07 +08:00 | Keep Dodging | keep_dodging | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | completed | 2026-07-12 12:21:31 +08:00 | Perspectives Mod | Perspectives | 校正視角與鏡頭設定繁中用語（PR #66）。 |
 | completed | 2026-07-07 +08:00 | Improved Havoc Tags | ImprovedHavocTags | 所有 zh-tw 已完整正確，無需修改。 |
-| ready | 2026-07-07 +08:00 | Ovenproof's Scoreboard Plugin | ovenproof_scoreboard_plugin |  |
+| completed | 2026-07-12 12:29:56 +08:00 | Ovenproof's Scoreboard Plugin | ovenproof_scoreboard_plugin | 校正計分板外掛、遠征追蹤與列名稱繁中用語（PR #67）。 |
 | ready | 2026-07-07 +08:00 | Scoreboard Explosive | ScoreboardExplosive |  |
 | completed | 2026-07-07 +08:00 | Better Hud Info View | better_hud_info_view | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Recolor Boss Health Bars | RecolorBossHealthBars | 所有 zh-tw 已完整正確，無需修改。 |

@@ -36,6 +36,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | SimpleSpeedMeter | SimpleSpeedMeter | main | Codex/Feature/SimpleSpeedMeter/Add-zh-tw | Darktide Translation Workspace/Log/SimpleSpeedMeter.md | SimpleSpeedMeter_localization.lua | all keys | 2026-07-12 11:46:20 +08:00 | dbf4b15 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/64 | Custom HUD/*localization.lua:first key | 已校正速度計描述繁中用語；PR #64 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | custom_hud | Custom HUD | main | Codex/Feature/custom_hud/Add-zh-tw | Darktide Translation Workspace/Log/custom_hud.md | custom_hud_localization.lua | all keys | 2026-07-12 11:57:45 +08:00 | 5508c1d | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/65 | Perspectives/*localization.lua:first key | 已校正 HUD 編輯模式與面板設定繁中用語；PR #65 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | Perspectives | Perspectives Mod | main | Codex/Feature/Perspectives/Add-zh-tw | Darktide Translation Workspace/Log/Perspectives.md | Perspectives_localization.lua | all keys | 2026-07-12 12:21:31 +08:00 | 88ae6e5 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/66 | ovenproof_scoreboard_plugin/*localization.lua:first key | 已校正視角、鏡頭與自動切換選項繁中用語；PR #66 ready |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | ovenproof_scoreboard_plugin | Ovenproof's Scoreboard Plugin | main | Codex/Feature/ovenproof_scoreboard_plugin/Add-zh-tw | Darktide Translation Workspace/Log/ovenproof_scoreboard_plugin.md | ovenproof_scoreboard_plugin_localization.lua | all keys | 2026-07-12 12:29:56 +08:00 | f9364ea | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/67 | ScoreboardExplosive/*localization.lua:first key | 已校正計分板外掛、遠征追蹤、閃擊/電子獒犬與暴擊率列繁中用語；PR #67 ready |
 
 ## 工作鎖定
 
@@ -70,7 +71,7 @@
 | SimpleSpeedMeter | Warhammer 40,000 DARKTIDE/mods/SimpleSpeedMeter/scripts/mods/SimpleSpeedMeter/SimpleSpeedMeter_localization.lua | all keys | codex | released | Codex/Feature/SimpleSpeedMeter/Add-zh-tw | Darktide Translation Workspace/Log/SimpleSpeedMeter.md | 2026-07-12 11:44:13 +08:00 | 2026-07-12 11:46:20 +08:00 | PR #64 已建立且為 ready | 任務完成，釋放鎖定 |
 | custom_hud | Warhammer 40,000 DARKTIDE/mods/custom_hud/scripts/mods/custom_hud/custom_hud_localization.lua | all keys | codex | released | Codex/Feature/custom_hud/Add-zh-tw | Darktide Translation Workspace/Log/custom_hud.md | 2026-07-12 11:53:24 +08:00 | 2026-07-12 11:57:45 +08:00 | PR #65 已建立且為 ready | 任務完成，釋放鎖定 |
 | Perspectives | Warhammer 40,000 DARKTIDE/mods/Perspectives/scripts/mods/Perspectives/Perspectives_localization.lua | all keys | codex | released | Codex/Feature/Perspectives/Add-zh-tw | Darktide Translation Workspace/Log/Perspectives.md | 2026-07-12 12:18:00 +08:00 | 2026-07-12 12:21:31 +08:00 | PR #66 已建立且為 ready | 任務完成，釋放鎖定 |
-| ovenproof_scoreboard_plugin | Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | all keys | codex | in_progress | Codex/Feature/ovenproof_scoreboard_plugin/Add-zh-tw | Darktide Translation Workspace/Log/ovenproof_scoreboard_plugin.md | 2026-07-12 12:25:41 +08:00 | 2026-07-12 12:25:41 +08:00 | 完成檢查並建立 ready PR | 開始校正計分板外掛繁中用語 |
+| ovenproof_scoreboard_plugin | Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | all keys | codex | released | Codex/Feature/ovenproof_scoreboard_plugin/Add-zh-tw | Darktide Translation Workspace/Log/ovenproof_scoreboard_plugin.md | 2026-07-12 12:25:41 +08:00 | 2026-07-12 12:29:56 +08:00 | PR #67 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -1001,6 +1002,38 @@
 | 2026-07-12 12:18:00 +08:00 | Warhammer 40,000 DARKTIDE/mods/Perspectives/scripts/mods/Perspectives/Perspectives_localization.lua | mod_description | in_progress | Section: Key Progress | 開始校正視角與鏡頭設定繁中用語 |
 | 2026-07-12 12:21:31 +08:00 | Warhammer 40,000 DARKTIDE/mods/Perspectives/scripts/mods/Perspectives/Perspectives_localization.lua | autoswitch_to_third_stay | completed | Section: Key Progress | 校正 27 個 zh-tw 值，包含視角輪換、中央瞄準、鏡頭距離/偏移、預設模式、觀戰、無裝備與自動切換選項 |
 
+### MOD-LOG-0029 - ovenproof_scoreboard_plugin
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | Ovenproof's Scoreboard Plugin |
+| Repo directory | ovenproof_scoreboard_plugin |
+| AI handler | codex |
+| Status | completed |
+| Base branch | main |
+| Work branch | Codex/Feature/ovenproof_scoreboard_plugin/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/ovenproof_scoreboard_plugin.md |
+| Started at | 2026-07-12 12:25:41 +08:00 |
+| Last updated | 2026-07-12 12:29:56 +08:00 |
+| Completed at | 2026-07-12 12:29:56 +08:00 |
+| Commit | f9364ea |
+| PR | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/67 |
+| Next position | ScoreboardExplosive/*localization.lua:first key |
+| Notes | 已校正計分板外掛、遠征追蹤、閃擊/電子獒犬、暴擊率與防禦列繁中用語；PR #67 ready。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | completed | 32 | row_total_boss | Section: Key Progress | 僅修改 zh-tw 欄位；duplicate zh-tw=0、empty zh-tw=0 |
+
+#### Key Summary
+
+| Time | File | Key | Status | Section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-12 12:25:41 +08:00 | Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | error_scoreboard_missing | in_progress | Section: Key Progress | 開始校正計分板外掛與遠征追蹤繁中用語 |
+| 2026-07-12 12:29:56 +08:00 | Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | row_total_boss | completed | Section: Key Progress | 校正 32 個 zh-tw 值，包含外掛提示、列分類、遠征追蹤、控場敵人竊取、列可見性、閃擊/電子獒犬、救起玩家、暴擊率、毒素與 Boss 列 |
+
 ## 協作交接紀錄
 
 | Time | From | To | MOD | File | Key | From status | To status | Branch log | Note |
@@ -1100,6 +1133,7 @@
 | SimpleSpeedMeter | codex | main | Codex/Feature/SimpleSpeedMeter/Add-zh-tw | dbf4b15 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/64 | yes | yes | 僅包含 SimpleSpeedMeter_localization.lua；PR ready |
 | custom_hud | codex | main | Codex/Feature/custom_hud/Add-zh-tw | 5508c1d | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/65 | yes | yes | 僅包含 custom_hud_localization.lua；PR ready |
 | Perspectives | codex | main | Codex/Feature/Perspectives/Add-zh-tw | 88ae6e5 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/66 | yes | yes | 僅包含 Perspectives_localization.lua；PR ready |
+| ovenproof_scoreboard_plugin | codex | main | Codex/Feature/ovenproof_scoreboard_plugin/Add-zh-tw | f9364ea | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/67 | yes | yes | 僅包含 ovenproof_scoreboard_plugin_localization.lua；PR ready |
 
 ## Completed Files
 
@@ -1130,3 +1164,4 @@
 | SimpleSpeedMeter | codex | Warhammer 40,000 DARKTIDE/mods/SimpleSpeedMeter/scripts/mods/SimpleSpeedMeter/SimpleSpeedMeter_localization.lua | 1 | dbf4b15 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/64 | 2026-07-12 11:46:20 +08:00 | Darktide Translation Workspace/Log/SimpleSpeedMeter.md | 校正速度計描述繁中用語；PR ready |
 | custom_hud | codex | Warhammer 40,000 DARKTIDE/mods/custom_hud/scripts/mods/custom_hud/custom_hud_localization.lua | 16 | 5508c1d | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/65 | 2026-07-12 11:57:45 +08:00 | Darktide Translation Workspace/Log/custom_hud.md | 校正 HUD 編輯模式與面板設定繁中用語；PR ready |
 | Perspectives | codex | Warhammer 40,000 DARKTIDE/mods/Perspectives/scripts/mods/Perspectives/Perspectives_localization.lua | 27 | 88ae6e5 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/66 | 2026-07-12 12:21:31 +08:00 | Darktide Translation Workspace/Log/Perspectives.md | 校正視角、鏡頭與自動切換選項繁中用語；PR ready |
+| ovenproof_scoreboard_plugin | codex | Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | 32 | f9364ea | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/67 | 2026-07-12 12:29:56 +08:00 | Darktide Translation Workspace/Log/ovenproof_scoreboard_plugin.md | 校正計分板外掛、遠征追蹤、列分類、閃擊/電子獒犬與暴擊率列繁中用語；PR ready |
