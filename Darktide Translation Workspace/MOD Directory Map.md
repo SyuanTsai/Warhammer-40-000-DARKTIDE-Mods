@@ -78,7 +78,7 @@
 | completed | 2026-07-07 +08:00 | Recolor Boss Health Bars | RecolorBossHealthBars | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Red Weapons at Home | red_weapons_at_home | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-12 12:49:54 +08:00 | AutoBlitz | AutoBlitz | 校正自動投擲、遠端引爆與力場觸發繁中用語（PR #69）。 |
-| ready | 2026-07-07 +08:00 | SpecialsTracker | SpecialsTracker |  |
+| completed | 2026-07-12 20:11:56 +08:00 | SpecialsTracker | SpecialsTracker | 校正追蹤通知、HUD 顯示選項與敵人名稱繁中用語（PR #70）。 |
 | completed | 2026-07-07 +08:00 | Display Ping (Latency) | DisplayPing | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | ready | 2026-07-07 +08:00 | Reconnect | Reconnect |  |
 | completed | 2026-07-07 +08:00 | Valkyrie Blitz-Ingress | valkyrie | 所有 zh-tw 已完整正確，無需修改。 |
