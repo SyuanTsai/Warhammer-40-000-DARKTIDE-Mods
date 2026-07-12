@@ -37,6 +37,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | custom_hud | Custom HUD | main | Codex/Feature/custom_hud/Add-zh-tw | Darktide Translation Workspace/Log/custom_hud.md | custom_hud_localization.lua | all keys | 2026-07-12 11:57:45 +08:00 | 5508c1d | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/65 | Perspectives/*localization.lua:first key | 已校正 HUD 編輯模式與面板設定繁中用語；PR #65 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | Perspectives | Perspectives Mod | main | Codex/Feature/Perspectives/Add-zh-tw | Darktide Translation Workspace/Log/Perspectives.md | Perspectives_localization.lua | all keys | 2026-07-12 12:21:31 +08:00 | 88ae6e5 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/66 | ovenproof_scoreboard_plugin/*localization.lua:first key | 已校正視角、鏡頭與自動切換選項繁中用語；PR #66 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | ovenproof_scoreboard_plugin | Ovenproof's Scoreboard Plugin | main | Codex/Feature/ovenproof_scoreboard_plugin/Add-zh-tw | Darktide Translation Workspace/Log/ovenproof_scoreboard_plugin.md | ovenproof_scoreboard_plugin_localization.lua | all keys | 2026-07-12 12:29:56 +08:00 | f9364ea | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/67 | ScoreboardExplosive/*localization.lua:first key | 已校正計分板外掛、遠征追蹤、閃擊/電子獒犬與暴擊率列繁中用語；PR #67 ready |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | ScoreboardExplosive | Scoreboard Explosive | main | Codex/Feature/ScoreboardExplosive/Add-zh-tw | Darktide Translation Workspace/Log/ScoreboardExplosive.md | ScoreboardExplosive_localization.lua | all keys | 2026-07-12 12:34:52 +08:00 | f07b4bd | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/68 | AutoBlitz/*localization.lua:first key | 已校正爆炸物統計、爆炸桶/火焰桶與戰鬥訊息繁中用語；PR #68 ready |
 
 ## 工作鎖定
 
@@ -72,7 +73,7 @@
 | custom_hud | Warhammer 40,000 DARKTIDE/mods/custom_hud/scripts/mods/custom_hud/custom_hud_localization.lua | all keys | codex | released | Codex/Feature/custom_hud/Add-zh-tw | Darktide Translation Workspace/Log/custom_hud.md | 2026-07-12 11:53:24 +08:00 | 2026-07-12 11:57:45 +08:00 | PR #65 已建立且為 ready | 任務完成，釋放鎖定 |
 | Perspectives | Warhammer 40,000 DARKTIDE/mods/Perspectives/scripts/mods/Perspectives/Perspectives_localization.lua | all keys | codex | released | Codex/Feature/Perspectives/Add-zh-tw | Darktide Translation Workspace/Log/Perspectives.md | 2026-07-12 12:18:00 +08:00 | 2026-07-12 12:21:31 +08:00 | PR #66 已建立且為 ready | 任務完成，釋放鎖定 |
 | ovenproof_scoreboard_plugin | Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | all keys | codex | released | Codex/Feature/ovenproof_scoreboard_plugin/Add-zh-tw | Darktide Translation Workspace/Log/ovenproof_scoreboard_plugin.md | 2026-07-12 12:25:41 +08:00 | 2026-07-12 12:29:56 +08:00 | PR #67 已建立且為 ready | 任務完成，釋放鎖定 |
-| ScoreboardExplosive | Warhammer 40,000 DARKTIDE/mods/ScoreboardExplosive/scripts/mods/ScoreboardExplosive/ScoreboardExplosive_localization.lua | all keys | codex | in_progress | Codex/Feature/ScoreboardExplosive/Add-zh-tw | Darktide Translation Workspace/Log/ScoreboardExplosive.md | 2026-07-12 12:32:36 +08:00 | 2026-07-12 12:32:36 +08:00 | 完成檢查並建立 ready PR | 開始校正爆炸物計分板繁中用語 |
+| ScoreboardExplosive | Warhammer 40,000 DARKTIDE/mods/ScoreboardExplosive/scripts/mods/ScoreboardExplosive/ScoreboardExplosive_localization.lua | all keys | codex | released | Codex/Feature/ScoreboardExplosive/Add-zh-tw | Darktide Translation Workspace/Log/ScoreboardExplosive.md | 2026-07-12 12:32:36 +08:00 | 2026-07-12 12:34:52 +08:00 | PR #68 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -1035,6 +1036,38 @@
 | 2026-07-12 12:25:41 +08:00 | Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | error_scoreboard_missing | in_progress | Section: Key Progress | 開始校正計分板外掛與遠征追蹤繁中用語 |
 | 2026-07-12 12:29:56 +08:00 | Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | row_total_boss | completed | Section: Key Progress | 校正 32 個 zh-tw 值，包含外掛提示、列分類、遠征追蹤、控場敵人竊取、列可見性、閃擊/電子獒犬、救起玩家、暴擊率、毒素與 Boss 列 |
 
+### MOD-LOG-0030 - ScoreboardExplosive
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | Scoreboard Explosive |
+| Repo directory | ScoreboardExplosive |
+| AI handler | codex |
+| Status | completed |
+| Base branch | main |
+| Work branch | Codex/Feature/ScoreboardExplosive/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/ScoreboardExplosive.md |
+| Started at | 2026-07-12 12:32:36 +08:00 |
+| Last updated | 2026-07-12 12:34:52 +08:00 |
+| Completed at | 2026-07-12 12:34:52 +08:00 |
+| Commit | f07b4bd |
+| PR | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/68 |
+| Next position | AutoBlitz/*localization.lua:first key |
+| Notes | 已校正爆炸物統計、爆炸桶/火焰桶與戰鬥訊息繁中用語；PR #68 ready。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/ScoreboardExplosive/scripts/mods/ScoreboardExplosive/ScoreboardExplosive_localization.lua | completed | 11 | message_explosive_detonated | Section: Key Progress | 僅修改 zh-tw 欄位；duplicate zh-tw=0、empty zh-tw=0 |
+
+#### Key Summary
+
+| Time | File | Key | Status | Section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-12 12:32:36 +08:00 | Warhammer 40,000 DARKTIDE/mods/ScoreboardExplosive/scripts/mods/ScoreboardExplosive/ScoreboardExplosive_localization.lua | mod_name | in_progress | Section: Key Progress | 開始校正 Scoreboard Explosive 爆炸物統計繁中用語 |
+| 2026-07-12 12:34:52 +08:00 | Warhammer 40,000 DARKTIDE/mods/ScoreboardExplosive/scripts/mods/ScoreboardExplosive/ScoreboardExplosive_localization.lua | message_explosive_detonated | completed | Section: Key Progress | 校正 11 個 zh-tw 值，包含 MOD 名稱/描述、點燃/引爆訊息、爆炸物、火焰桶與爆炸桶 |
+
 ## 協作交接紀錄
 
 | Time | From | To | MOD | File | Key | From status | To status | Branch log | Note |
@@ -1135,6 +1168,7 @@
 | custom_hud | codex | main | Codex/Feature/custom_hud/Add-zh-tw | 5508c1d | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/65 | yes | yes | 僅包含 custom_hud_localization.lua；PR ready |
 | Perspectives | codex | main | Codex/Feature/Perspectives/Add-zh-tw | 88ae6e5 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/66 | yes | yes | 僅包含 Perspectives_localization.lua；PR ready |
 | ovenproof_scoreboard_plugin | codex | main | Codex/Feature/ovenproof_scoreboard_plugin/Add-zh-tw | f9364ea | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/67 | yes | yes | 僅包含 ovenproof_scoreboard_plugin_localization.lua；PR ready |
+| ScoreboardExplosive | codex | main | Codex/Feature/ScoreboardExplosive/Add-zh-tw | f07b4bd | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/68 | yes | yes | 僅包含 ScoreboardExplosive_localization.lua；PR ready |
 
 ## Completed Files
 
@@ -1166,3 +1200,4 @@
 | custom_hud | codex | Warhammer 40,000 DARKTIDE/mods/custom_hud/scripts/mods/custom_hud/custom_hud_localization.lua | 16 | 5508c1d | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/65 | 2026-07-12 11:57:45 +08:00 | Darktide Translation Workspace/Log/custom_hud.md | 校正 HUD 編輯模式與面板設定繁中用語；PR ready |
 | Perspectives | codex | Warhammer 40,000 DARKTIDE/mods/Perspectives/scripts/mods/Perspectives/Perspectives_localization.lua | 27 | 88ae6e5 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/66 | 2026-07-12 12:21:31 +08:00 | Darktide Translation Workspace/Log/Perspectives.md | 校正視角、鏡頭與自動切換選項繁中用語；PR ready |
 | ovenproof_scoreboard_plugin | codex | Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | 32 | f9364ea | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/67 | 2026-07-12 12:29:56 +08:00 | Darktide Translation Workspace/Log/ovenproof_scoreboard_plugin.md | 校正計分板外掛、遠征追蹤、列分類、閃擊/電子獒犬與暴擊率列繁中用語；PR ready |
+| ScoreboardExplosive | codex | Warhammer 40,000 DARKTIDE/mods/ScoreboardExplosive/scripts/mods/ScoreboardExplosive/ScoreboardExplosive_localization.lua | 11 | f07b4bd | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/68 | 2026-07-12 12:34:52 +08:00 | Darktide Translation Workspace/Log/ScoreboardExplosive.md | 校正爆炸物統計、火焰桶/爆炸桶與戰鬥訊息繁中用語；PR ready |
