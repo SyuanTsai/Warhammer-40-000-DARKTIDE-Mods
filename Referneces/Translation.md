@@ -19,6 +19,8 @@
 #### MOD名詞
 - Overhand - 高拋投擲
 - Underhand - 低拋投擲
+- Cycled Viewpoint - 循環視角
+- Center - 中心(用於表達畫面位置時)/中央(用於表達遊戲區域)
 
 ### 通用名詞
 
