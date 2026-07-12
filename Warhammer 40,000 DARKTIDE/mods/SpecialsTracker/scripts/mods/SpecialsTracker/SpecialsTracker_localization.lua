@@ -277,7 +277,7 @@ loc_raw.tooltip = {
     tooltip_overlay_tracking = {
         en = "\nAlways = Enemy type will always be shown in the overlay\n\nOnly when active = Enemy type will only appear in the overlay if one of more of those enemies are alive\n\nNever = Enemy type will never be shown in the overlay",
         ["zh-cn"] = "\n总是 = 这种敌人总会在界面覆盖内显示\n\n仅存活时 = 当前有这种敌人存活，则在界面覆盖内显示\n\n从不 = 这种敌人从不在界面覆盖内显示",
-        ["zh-tw"] = "\n永遠 = 這種敵人會一直顯示在疊加介面中\n\n僅當存活時 = 只有當這種敵人存活時才會顯示在疊加介面中\n\n從不 = 這種敵人永遠不會顯示在疊加介面中",
+        ["zh-tw"] = "\n一律顯示 = 這種敵人會一直顯示在疊加介面中\n\n僅存活時 = 只有當這種敵人存活時才會顯示在疊加介面中\n\n永不顯示 = 這種敵人完全不會顯示在疊加介面中",
     },
     tooltip_monsters_pos = {
         en = "\nWhether the monsters will be listed at the top or the bottom of the list in the overlay\n\nIt is recommended to list them at the bottom, so the rest of the units don't get pushed up or down when a monster spawns or die",
@@ -377,17 +377,17 @@ loc_raw.option = {
     always = {
         en = "Always",
         ["zh-cn"] = "总是",
-        ["zh-tw"] = "永遠",
+        ["zh-tw"] = "一律顯示",
     },
     only_if_active = {
         en = "Only when active",
         ["zh-cn"] = "仅存活时",
-        ["zh-tw"] = "僅當存活時",
+        ["zh-tw"] = "僅存活時",
     },
     off = {
         en = "Never",
         ["zh-cn"] = "从不",
-        ["zh-tw"] = "從不",
+        ["zh-tw"] = "永不顯示",
     },
     short = {
         en = "Short",
@@ -611,12 +611,12 @@ overlay_name_sets.short = {
     chaos_spawn = {
         en = "SPWN",
         ["zh-cn"] = "混沌",
-        ["zh-tw"] = "渾沌",
+        ["zh-tw"] = "混沌",
     },
     chaos_spawn_wk = {
         en = "SPWN*",
         ["zh-cn"] = "混沌*",
-        ["zh-tw"] = "渾沌*",
+        ["zh-tw"] = "混沌*",
     },
     chaos_daemonhost = {
         en = "DH",
@@ -631,7 +631,7 @@ overlay_name_sets.short = {
     renegade_captain = {
         en = "CAPN",
         ["zh-cn"] = "连长",
-        ["zh-tw"] = "隊長",
+        ["zh-tw"] = "連長",
     },
     renegade_twin_captain = {
         en = "TWINS",
@@ -674,7 +674,7 @@ overlay_name_sets.long = {
     renegade_plasma_gunner = {
         en = "PLASM",
         -- Needs loc
-        ["zh-tw"] = "電漿",
+        ["zh-tw"] = "電漿槍",
     },
     renegade_sniper = {
         en = "SNIP",
@@ -729,12 +729,12 @@ overlay_name_sets.long = {
     chaos_spawn = {
         en = "SPAWN",
         ["zh-cn"] = "混沌卵",
-        ["zh-tw"] = "渾沌魔物",
+        ["zh-tw"] = "混沌魔物",
     },
     chaos_spawn_wk = {
         en = "SPAWN*",
         ["zh-cn"] = "混沌卵*",
-        ["zh-tw"] = "渾沌魔物*",
+        ["zh-tw"] = "混沌魔物*",
     },
     chaos_daemonhost = {
         en = "DHOST",
@@ -749,7 +749,7 @@ overlay_name_sets.long = {
     renegade_captain = {
         en = "CAPTAIN",
         ["zh-cn"] = "连长",
-        ["zh-tw"] = "隊長",
+        ["zh-tw"] = "連長",
     },
     renegade_twin_captain = {
         en = "TWINS",
@@ -792,7 +792,7 @@ overlay_name_sets.full = {
     renegade_plasma_gunner = {
         en = "Plasma",
         -- Needs loc
-        ["zh-tw"] = "電漿",
+        ["zh-tw"] = "電漿槍手",
     },
     renegade_sniper = {
         en = "Sniper",
@@ -847,12 +847,12 @@ overlay_name_sets.full = {
     chaos_spawn = {
         en = "Spawn",
         ["zh-cn"] = "混沌魔物",
-        ["zh-tw"] = "渾沌魔物",
+        ["zh-tw"] = "混沌魔物",
     },
     chaos_spawn_wk = {
         en = "Spawn*",
         ["zh-cn"] = "混沌魔物*",
-        ["zh-tw"] = "渾沌魔物*",
+        ["zh-tw"] = "混沌魔物*",
     },
     chaos_daemonhost = {
         en = "Daemonhost",
@@ -867,12 +867,12 @@ overlay_name_sets.full = {
     renegade_captain = {
         en = "Captain",
         ["zh-cn"] = "连长",
-        ["zh-tw"] = "隊長",
+        ["zh-tw"] = "連長",
     },
     renegade_twin_captain = {
         en = "Twins",
         ["zh-cn"] = "双子",
-        ["zh-tw"] = "雙子隊長",
+        ["zh-tw"] = "雙子連長",
     },
 }
 
@@ -993,12 +993,12 @@ loc_raw.mod_ui["renegade_netgunner_notif_name"] = {
 loc_raw.subcategory["renegade_plasma_gunner"] = {
     en = "Plasma Gunner",
     -- Needs loc
-    ["zh-tw"] = "電漿砲手",
+    ["zh-tw"] = "電漿槍手",
 }
 loc_raw.mod_ui["renegade_plasma_gunner_notif_name"] = {
     en = "Plasma Gunner",
     -- Needs loc
-    ["zh-tw"] = "電漿砲手",
+    ["zh-tw"] = "電漿槍手",
 }
 
 ---------
@@ -1107,13 +1107,13 @@ loc_raw.mod_ui["chaos_plague_ogryn_wk_notif_name"] = {
 loc_raw.mod_ui["chaos_spawn_notif_name"] = {
     en = "CHAOS SPAWN",
     ["zh-cn"] = "混沌魔物",
-    ["zh-tw"] = "渾沌魔物",
+    ["zh-tw"] = "混沌魔物",
 }
 
 loc_raw.mod_ui["chaos_spawn_wk_notif_name"] = {
     en = "CHAOS SPAWN (Weak)",
     ["zh-cn"] = "混沌魔物（虚弱）",
-    ["zh-tw"] = "渾沌魔物（虛弱）",
+    ["zh-tw"] = "混沌魔物（虛弱）",
 }
 
 -- Daemonhost - Other locs
@@ -1137,7 +1137,7 @@ loc_raw.mod_ui["chaos_mutator_daemonhost_notif_name"] = {
 loc_raw.mod_ui["renegade_captain_notif_name"] = {
     en = "CAPTAIN",
     ["zh-cn"] = "连长",
-    ["zh-tw"] = "隊長",
+    ["zh-tw"] = "連長",
 }
 
 -- Twins - Other locs
@@ -1145,7 +1145,7 @@ loc_raw.mod_ui["renegade_captain_notif_name"] = {
 loc_raw.mod_ui["renegade_twin_captain_notif_name"] = {
     en = "TWIN CAPTAINS",
     ["zh-cn"] = "双子连长",
-    ["zh-tw"] = "雙子隊長",
+    ["zh-tw"] = "雙子連長",
 }
 
 
