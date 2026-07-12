@@ -73,7 +73,6 @@
 | completed | 2026-07-12 12:21:31 +08:00 | Perspectives Mod | Perspectives | 校正視角與鏡頭設定繁中用語（PR #66）。 |
 | completed | 2026-07-07 +08:00 | Improved Havoc Tags | ImprovedHavocTags | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-12 12:29:56 +08:00 | Ovenproof's Scoreboard Plugin | ovenproof_scoreboard_plugin | 校正計分板外掛、遠征追蹤與列名稱繁中用語（PR #67）。 |
-| blocked | 2026-07-12 12:40:16 +08:00 | Servo-Friend | Servo-Friend | README active 清單新增/補登；main 的 mods 目錄缺少 Servo-Friend，需補本地資料夾後再處理。 |
 | completed | 2026-07-12 12:34:52 +08:00 | Scoreboard Explosive | ScoreboardExplosive | 校正爆炸物統計與戰鬥訊息繁中用語（PR #68）。 |
 | completed | 2026-07-07 +08:00 | Better Hud Info View | better_hud_info_view | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Recolor Boss Health Bars | RecolorBossHealthBars | 所有 zh-tw 已完整正確，無需修改。 |
@@ -151,3 +150,4 @@
 | removed | not checked | AuspexHelper | AuspexHelper | removed : 2026/07/11 |
 | removed | 2026-07-11 11:44:36 +08:00 | Dog Whistle | DogWhistle | removed : 2026/05/17 |
 | removed | 2026-07-11 11:37:27 +08:00 | HoldFire | HoldFire | removed : 2026/06/26 |
+| removed | 2026-07-12 12:40:16 +08:00 | Servo-Friend | Servo-Friend |  removed : 2026/05/17 |
