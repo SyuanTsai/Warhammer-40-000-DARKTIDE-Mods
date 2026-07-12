@@ -80,6 +80,7 @@
 | AutoBlitz | Warhammer 40,000 DARKTIDE/mods/AutoBlitz/scripts/mods/AutoBlitz/AutoBlitz_localization.lua | all keys | codex | released | Codex/Feature/AutoBlitz/Add-zh-tw | Darktide Translation Workspace/Log/AutoBlitz.md | 2026-07-12 12:46:07 +08:00 | 2026-07-12 12:49:54 +08:00 | PR #69 已建立且為 ready | 任務完成，釋放鎖定 |
 | SpecialsTracker | Warhammer 40,000 DARKTIDE/mods/SpecialsTracker/scripts/mods/SpecialsTracker/SpecialsTracker_localization.lua | all keys | codex | released | Codex/Feature/SpecialsTracker/Add-zh-tw | Darktide Translation Workspace/Log/SpecialsTracker.md | 2026-07-12 20:08:27 +08:00 | 2026-07-12 20:11:56 +08:00 | PR #70 已建立且為 ready | 任務完成，釋放鎖定 |
 | Reconnect | Warhammer 40,000 DARKTIDE/mods/Reconnect/scripts/mods/Reconnect/Reconnect_localization.lua | all keys | codex | released | Codex/Feature/Reconnect/Add-zh-tw | Darktide Translation Workspace/Log/Reconnect.md | 2026-07-12 20:31:37 +08:00 | 2026-07-12 20:33:37 +08:00 | PR #71 已建立且為 ready | 任務完成，釋放鎖定 |
+| i_wanna_see | Warhammer 40,000 DARKTIDE/mods/i_wanna_see/scripts/mods/i_wanna_see/i_wanna_see_localization.lua | all keys | codex | in_progress | Codex/Feature/i_wanna_see/Add-zh-tw | Darktide Translation Workspace/Log/i_wanna_see.md | 2026-07-12 21:06:27 +08:00 | 2026-07-12 21:06:27 +08:00 | 完成 zh-tw 校正並建立 ready PR 後釋放 | 接手 ready；安全續跑位置：i_wanna_see_localization.lua:first key |
 
 ## 逐 MOD 工作紀錄
 
