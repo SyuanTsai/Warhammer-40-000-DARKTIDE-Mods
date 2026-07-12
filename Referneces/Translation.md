@@ -16,6 +16,7 @@
 #### MOD名稱
 - AutoBlitz - 自動使用閃擊
 - Scoreboard - 記分板
+- Radar - 雷達
 
 #### MOD名詞
 - Overhand - 高拋投擲
@@ -56,6 +57,10 @@
 - Valkyrie - 女武神
 - Mourningstar - 哀星號
 - Darktide - 黑潮
+- Deadsider Sanctuaries - 死區避難所
+- Data Reliquary - 資料聖物箱
+- Data Reliquary Harvester - 資料聖物箱
+- Tech Remnants - 科技殘骸
 
 ### 特殊情境詞
 - Hogtied - 原為綁住，但在遊戲中應用俘虜比較符合意境。

@@ -24,7 +24,3 @@
 
 | Term / English | Proposed zh-tw | Source MOD | File | Localization key | Reason | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Radar | 雷達 | Radar | Radar_localization.lua | mod_name / multiple settings | MOD 主要 UI 名稱，正式詞彙表尚未收錄 | candidate | 本輪沿用「雷達」；mod_name 使用「雷達（小地圖）」 |
-| Tech-Remnants | 科技殘骸 | Radar | Radar_localization.lua | tech_remnants_group / show_expedition_tech_remnant | 遠征拾取物名稱，正式詞彙表尚未收錄 | candidate | 本輪未修改既有譯法，僅記錄候選 |
-| Data Reliquary / Data Reliquary Harvester | 資料聖骨匣 / 資料聖骨匣採集器 | Radar | Radar_localization.lua | show_data_reliquaries / show_expedition_loot_converter | 遠征目標/互動物名稱，正式詞彙表尚未收錄 | candidate | 本輪統一 label 與 tooltip 用語 |
-| Deadsider Sanctuaries | 亡行者聖所 | Radar | Radar_localization.lua | show_expedition_objective_transition | 遠征興趣點名稱，正式詞彙表尚未收錄 | candidate | 本輪統一 label 與 tooltip 用語 |
