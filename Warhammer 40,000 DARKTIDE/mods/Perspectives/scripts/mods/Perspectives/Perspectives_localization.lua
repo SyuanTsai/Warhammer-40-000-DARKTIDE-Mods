@@ -19,7 +19,7 @@ local loc = {
 	cycle_shoulder = {
 		en = "Cycle Viewpoint",
 		["zh-cn"] = "循环视角",
-		["zh-tw"] = "輪換視角",
+		["zh-tw"] = "循環視角",
 	},
 	aim_mode = {
 		en = "Aiming Behavior",
@@ -39,7 +39,7 @@ local loc = {
 	viewpoint_cycle = {
 		en = "Cycled Viewpoint",
 		["zh-cn"] = "循环视角",
-		["zh-tw"] = "輪換視角",
+		["zh-tw"] = "循環視角",
 	},
 	viewpoint_center = {
 		en = "Center",
@@ -59,7 +59,7 @@ local loc = {
 	cycle_includes_center = {
 		en = "Include Center in Cycle",
 		["zh-cn"] = "在循环中包含中心视角",
-		["zh-tw"] = "輪換時包含中心視角",
+		["zh-tw"] = "循環時包含中心視角",
 	},
 	center_to_1p_human = {
 		en = "Center Aim Goes to 1st Person (Human)",
@@ -74,7 +74,7 @@ local loc = {
 	center_to_1p_description = {
 		en = "If on, when cycled to a centered viewpoint and aiming, you'll temporarily go to 1st person instead of using the 3rd person centered aim camera. This is recommended for humans, and very strongly recommended for Ogryns.",
 		["zh-cn"] = "启用后，切换到中心视角并在瞄准时，你会临时进入第一人称而不是第三人称中心视角。推荐为人类角色启用，强烈推荐为欧格林启用。",
-		["zh-tw"] = "啟用後，輪換至中心視角並瞄準時，會暫時切至第一人稱，而不是使用第三人稱中心瞄準鏡頭。建議人類角色啟用，歐格林則強烈建議啟用。",
+		["zh-tw"] = "啟用後，循環至中心視角並瞄準時，會暫時切至第一人稱，而不是使用第三人稱中心瞄準鏡頭。建議人類角色啟用，歐格林則強烈建議啟用。",
 	},
 	perspective_transition_time = {
 		en = "Perspective Transition Time",
