@@ -118,7 +118,7 @@ local localization = {
         en = "Scoreboard required! This is an add-on plugin to it!",
 		ru = "Требуется табло! Это плагин для него!",
         ["zh-cn"] = "需要记分牌！这是一个附加插件！",
-        ["zh-tw"] = "需要 Scoreboard！這是 Scoreboard 的附加外掛！",
+        ["zh-tw"] = "需要記分板！這是記分板的附加MOD！",
 		["pt-br"] = "Scoreboard mod é necessário! Este é um plugin addon!",
     },
     -- @backup158: sai google translated these languages: ru, zh-cn
@@ -140,7 +140,7 @@ local localization = {
     -- @backup158: human translators need to review: ru, zh-cn, zh-tw, pt-br
     warning_chat_debug_messages = {
         en = "To disable this message, go to Mod Options --> OvenProof Scoreboard Plugin --> Disable \"Enable error messages\"",
-        ["zh-tw"] = "若要停用此訊息，請前往 Mod 選項 --> OvenProof Scoreboard Plugin --> 停用「啟用錯誤訊息」",
+        ["zh-tw"] = "若要停用此訊息，請前往 Mod 選項 --> OvenProof 記分板MOD --> 停用「啟用錯誤訊息」",
         -- ru = "",
 		-- ["zh-cn"] = "",
         -- ["pt-br"] = "",
@@ -845,7 +845,7 @@ local localization = {
         en = {left = "Total", right = "[ Times Downed | Players Revived ]",},
         ru = {left = "Всего", right = "[Сбит с ног/Поднял игроков]",},
         ["zh-cn"] = {left = "总", right = "[ 倒地次数 | 复苏玩家数 ]",},
-        ["zh-tw"] = { left = "總", right = "[ 倒地次數 | 救起玩家數 ]",},
+        ["zh-tw"] = { left = "總", right = "[ 倒地次數 | 救援玩家數 ]",},
         ["pt-br"] = {left = "Total", right = "[Vezes Caído | Aliados Revividos]",},
     },
     row_total_times_downed = {
@@ -859,7 +859,7 @@ local localization = {
         en = "Players Revived",
         ru = "Поднял игроков",
         ["zh-cn"] = "复苏玩家数",
-        ["zh-tw"] = "救起玩家數",
+        ["zh-tw"] = "救援玩家數",
         ["pt-br"] = "Aliados Revividos",
     },
     row_total_killed_rescued = {
