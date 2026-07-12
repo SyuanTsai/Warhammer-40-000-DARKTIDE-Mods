@@ -70,6 +70,7 @@
 | SimpleSpeedMeter | Warhammer 40,000 DARKTIDE/mods/SimpleSpeedMeter/scripts/mods/SimpleSpeedMeter/SimpleSpeedMeter_localization.lua | all keys | codex | released | Codex/Feature/SimpleSpeedMeter/Add-zh-tw | Darktide Translation Workspace/Log/SimpleSpeedMeter.md | 2026-07-12 11:44:13 +08:00 | 2026-07-12 11:46:20 +08:00 | PR #64 已建立且為 ready | 任務完成，釋放鎖定 |
 | custom_hud | Warhammer 40,000 DARKTIDE/mods/custom_hud/scripts/mods/custom_hud/custom_hud_localization.lua | all keys | codex | released | Codex/Feature/custom_hud/Add-zh-tw | Darktide Translation Workspace/Log/custom_hud.md | 2026-07-12 11:53:24 +08:00 | 2026-07-12 11:57:45 +08:00 | PR #65 已建立且為 ready | 任務完成，釋放鎖定 |
 | Perspectives | Warhammer 40,000 DARKTIDE/mods/Perspectives/scripts/mods/Perspectives/Perspectives_localization.lua | all keys | codex | released | Codex/Feature/Perspectives/Add-zh-tw | Darktide Translation Workspace/Log/Perspectives.md | 2026-07-12 12:18:00 +08:00 | 2026-07-12 12:21:31 +08:00 | PR #66 已建立且為 ready | 任務完成，釋放鎖定 |
+| ovenproof_scoreboard_plugin | Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | all keys | codex | in_progress | Codex/Feature/ovenproof_scoreboard_plugin/Add-zh-tw | Darktide Translation Workspace/Log/ovenproof_scoreboard_plugin.md | 2026-07-12 12:25:41 +08:00 | 2026-07-12 12:25:41 +08:00 | 完成檢查並建立 ready PR | 開始校正計分板外掛繁中用語 |
 
 ## 逐 MOD 工作紀錄
 
