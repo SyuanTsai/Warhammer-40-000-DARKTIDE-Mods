@@ -1081,6 +1081,7 @@
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | BLOCKER-0001 | 2026-07-08 18:08:51 +08:00 | codex | EmpowerUntilLimit | Warhammer 40,000 DARKTIDE/mods/EmpowerUntilLimit/scripts/mods/EmpowerUntilLimit/EmpowerUntilLimit_localization.lua | all keys | main | Codex/Feature/EmpowerUntilLimit/Add-zh-tw | n/a | n/a | GitHub CLI display name was `Syuan`, but schedule requires `SyuanTsai` before push/PR. | Rechecked after user update: `gh api user --jq .name` and `.login` both return SyuanTsai; pushed branches and created PR #49. | none | resolved by GitHub display name update | StimmCountdown/*localization.lua:first key | resolved |
 | BLOCKER-0002 | 2026-07-11 11:37:27 +08:00 | codex | HoldFire | Warhammer 40,000 DARKTIDE/mods/HoldFire | (none) | main | Codex/Feature/HoldFire/Add-zh-tw | n/a | n/a | README 與 MOD Directory Map 將 HoldFire 列為 active/ready，但 main 的 mods 目錄缺少 HoldFire 資料夾。 | 檢查 main worktree 的 `Warhammer 40,000 DARKTIDE/mods`，確認沒有 HoldFire 目錄；跳到下一個 ready MOD Radar。 | 補上 HoldFire 本地 MOD 目錄後再改回 ready | 可先處理 Radar | Radar/*localization.lua:first key | open |
+| BLOCKER-0003 | 2026-07-12 12:40:16 +08:00 | codex | Servo-Friend | Warhammer 40,000 DARKTIDE/mods/Servo-Friend | (none) | main | n/a | n/a | n/a | README active 清單包含 Servo-Friend，但 main 的 mods 目錄缺少 Servo-Friend 資料夾。 | 比對 README active 區塊與 MOD Directory Map，確認 map 缺 Servo-Friend；檢查 `Warhammer 40,000 DARKTIDE/mods`，確認沒有 Servo-Friend 目錄。 | 補上 Servo-Friend 本地 MOD 目錄後再改回 ready | 可先處理其他 ready / mod_updated 項目 | AutoBlitz/*localization.lua:first key | open |
 
 ### BLOCKER-0000 - <MOD>/<File>/<Key>
 
@@ -1137,6 +1138,25 @@
 - Decision needed: 補上 HoldFire 本地 MOD 目錄後再改回 ready。
 - Suggested options: 可先處理 Radar。
 - Safe next position: Radar/*localization.lua:first key
+- Status: open
+
+### BLOCKER-0003 - Servo-Friend/(missing directory)/(none)
+
+- Time: 2026-07-12 12:40:16 +08:00
+- AI handler: codex
+- Directory: Servo-Friend
+- Base branch: main
+- Work branch: n/a
+- Branch log: n/a
+- File: Warhammer 40,000 DARKTIDE/mods/Servo-Friend
+- Localization key: (none)
+- English source: n/a
+- Current zh-tw: n/a
+- Reason: README active 清單包含 Servo-Friend，但 main 的 mods 目錄缺少 Servo-Friend 資料夾。
+- Tried: 比對 README active 區塊與 MOD Directory Map，確認 map 缺 Servo-Friend；檢查 `Warhammer 40,000 DARKTIDE/mods`，確認沒有 Servo-Friend 目錄。
+- Decision needed: 補上 Servo-Friend 本地 MOD 目錄後再改回 ready。
+- Suggested options: 可先處理其他 ready / mod_updated 項目。
+- Safe next position: AutoBlitz/*localization.lua:first key
 - Status: open
 
 ## PR Records

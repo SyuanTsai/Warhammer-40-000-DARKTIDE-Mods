@@ -73,6 +73,7 @@
 | completed | 2026-07-12 12:21:31 +08:00 | Perspectives Mod | Perspectives | 校正視角與鏡頭設定繁中用語（PR #66）。 |
 | completed | 2026-07-07 +08:00 | Improved Havoc Tags | ImprovedHavocTags | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-12 12:29:56 +08:00 | Ovenproof's Scoreboard Plugin | ovenproof_scoreboard_plugin | 校正計分板外掛、遠征追蹤與列名稱繁中用語（PR #67）。 |
+| blocked | 2026-07-12 12:40:16 +08:00 | Servo-Friend | Servo-Friend | README active 清單新增/補登；main 的 mods 目錄缺少 Servo-Friend，需補本地資料夾後再處理。 |
 | completed | 2026-07-12 12:34:52 +08:00 | Scoreboard Explosive | ScoreboardExplosive | 校正爆炸物統計與戰鬥訊息繁中用語（PR #68）。 |
 | completed | 2026-07-07 +08:00 | Better Hud Info View | better_hud_info_view | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Recolor Boss Health Bars | RecolorBossHealthBars | 所有 zh-tw 已完整正確，無需修改。 |
@@ -90,7 +91,7 @@
 | completed | 2026-07-07 +08:00 | Quick Level Mastery | quick_level_mastery | 所有 zh-tw 已完整正確，無需修改。 |
 | ready | 2026-07-07 +08:00 | I Wanna See | i_wanna_see |  |
 | completed | 2026-07-07 +08:00 | VFX Swapper | vfx_swapper | 所有 zh-tw 已完整正確，無需修改。 |
-| mod_updated | 2026-07-11 11:44:36 +08:00 | CombatStats | CombatStats | README 更新至 Last updated 09 July 2026 / 0.4.13；需重新比對本地 localization。 |
+| mod_updated | 2026-07-12 12:40:16 +08:00 | CombatStats | CombatStats | README 更新至 Last updated 11 July 2026 / 0.4.14，手動維護最後下載日期 2026-07-12；需重新比對本地 localization。 |
 | completed | 2026-07-07 +08:00 | CharacterGrid | CharacterGrid | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | TeamKills | TeamKills | 無可翻譯內容（無静態中文項目）。 |
 | completed | 2026-07-07 +08:00 | BrokerAutoStim | BrokerAutoStim | 所有 zh-tw 已完整正確，無需修改。 |
@@ -118,7 +119,7 @@
 | completed | 2026-07-11 18:28:41 +08:00 | Auto Mark | AutoMark | 校正 Servo-Skull/Focus Target 詞彙表一致性（PR #55）。 |
 | completed | 2026-07-11 19:30:50 +08:00 | SMOG Cleaner | SMOG | 校正 SMOG 品牌名、Lua heap 與手動清理描述（PR #56）。 |
 | completed | 2026-07-11 20:00:16 +08:00 | ErrorTracker | ErrorTracker | 校正 MOD 崩潰報告描述（PR #57）。 |
-| completed | 2026-07-11 20:23:26 +08:00 | NoBrainer | NoBrainer | 校正 Darktide/Mourningstar/Tree Drill 詞彙；使用者手動合併至 main。 |
+| mod_updated | 2026-07-12 12:40:16 +08:00 | NoBrainer | NoBrainer | README 更新至 Last updated 11 July 2026 / 2.0.7，手動維護最後下載日期 2026-07-12；需重新比對本地 localization。 |
 | completed | 2026-07-11 20:35:47 +08:00 | AUPM | AUPM | 校正戰鬥技能使用統計與客製化開發用語（PR #58）。 |
 | completed | 2026-07-12 01:30:04 +08:00 | DPM | DPM | 校正 DPM 每分鐘傷害資料顯示描述（PR #59 已合併）。 |
 | completed | 2026-07-12 02:22:26 +08:00 | KeepSwinging | KeepSwinging | 校正自動揮擊、攻擊鍵修飾模式與 HUD 用語（PR #60 已合併）。 |
