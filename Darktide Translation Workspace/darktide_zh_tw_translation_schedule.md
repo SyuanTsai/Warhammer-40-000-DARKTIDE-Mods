@@ -23,7 +23,7 @@
 - 先做「輕量讀取」：用 `rg`、`git grep`、`Select-String` 或小範圍 `Get-Content` 讀需要的行；不要在每輪一開始完整貼出大型文件。
 - 必讀文件是資訊來源，不代表必須全文載入。優先讀取：
   - `Workspace Status.md` 的目前鎖定、Blocked Items、PR Records、目標 MOD 摘要。
-  - `MOD Directory Map.md` 中 status 為 `ready`、`original_mod_updated`、`stale`、`blocked` 的列，以及目標 MOD 的列。
+  - `MOD Directory Map.md` 中 status 為 `ready`、`mod_updated`、`stale`、`blocked` 的列，以及目標 MOD 的列。
   - `Term Candidates.md` 中目標 MOD 或本輪新增候選的相關段落。
   - `Referneces/Translation.md` 只在翻譯文字命中或疑似命中詞彙時查詢相關詞條。
 - 只有下列情況才全文讀取工作文件：檔案格式不明、索引搜尋結果互相矛盾、需要修復工作文件、或使用者要求完整審查。
@@ -50,7 +50,7 @@
 - `MOD Directory Map.md`：用表格列篩選候選 MOD，不全文複述。
 - `Term Candidates.md`：只讀目標 MOD 相關候選與本輪新增候選位置。
 - `Referneces/Translation.md`：用英文詞條查詢，不把整份詞彙表載入上下文。
-- `README.md`：只在刷新 MOD map、處理 `original_mod_updated`、或確認目標 MOD 路徑時讀相關段落。
+- `README.md`：只在刷新 MOD map、處理 `mod_updated`、或確認目標 MOD 路徑時讀相關段落。
 
 若環境需要工具權限，依平台提示申請。若缺少 push、PR 或 GitHub 權限，仍可先完成本地翻譯與 commit；結束回報時要明確列出未完成的 GitHub 動作。
 
@@ -68,12 +68,12 @@
 | Status | 行為 |
 | --- | --- |
 | `ready` | 可處理 |
-| `original_mod_updated` | 可處理；先比對 README、main 資料夾與本地內容 |
+| `mod_updated` | 可處理；先比對 README、main 資料夾與本地內容 |
 | `in_progress` | 其他代理處理中，除非明確交接否則跳過 |
 | `stale` | 可接手；接手前記錄原因與接手位置 |
 | `paused` | 跳過 |
 | `blocked` | 先看 `Workspace Status.md` 的 Blocked Items |
-| `completed` | 跳過，除非使用者改回 `ready` 或 `original_mod_updated` |
+| `completed` | 跳過，除非使用者改回 `ready` 或 `mod_updated` |
 | `not_scheduled` | 不自動處理 |
 | `removed` | 不處理 |
 
@@ -81,8 +81,8 @@
 
 1. 檢查 `git status`，避免覆蓋非本輪變更。
 2. 切到 `main`，輕量讀取必讀文件的相關段落。
-3. 從 `MOD Directory Map.md` 選擇下一個 `ready` 或 `original_mod_updated`，且未被其他代理鎖定的 MOD；若有 `stale`，先確認 stale 原因再接手。
-4. 只有在到達重新掃描週期、處理 `original_mod_updated`、或發現目標路徑不存在時，才掃描 `Warhammer 40,000 DARKTIDE/mods` 並比對 `README.md`。
+3. 從 `MOD Directory Map.md` 選擇下一個 `ready` 或 `mod_updated`，且未被其他代理鎖定的 MOD；若有 `stale`，先確認 stale 原因再接手。
+4. 只有在到達重新掃描週期、處理 `mod_updated`、或發現目標路徑不存在時，才掃描 `Warhammer 40,000 DARKTIDE/mods` 並比對 `README.md`。
 5. 若發現新增、移除或狀態不一致的 MOD，先在 `main` 更新 `MOD Directory Map.md`。
 6. 在 `main` 寫入最小鎖定紀錄：MOD、目前檔案或起始位置、AI handler、work branch、時間、safe next position。commit message 用 `Update AI work documents`。
 7. 建立或切到 `Codex/Feature/<Repo directory>/Add-zh-tw`；若需要保留主工作樹在 `main`，使用額外 worktree，例如 `git worktree add ../<Repo directory>-work -b Codex/Feature/<Repo directory>/Add-zh-tw main`，並在該 worktree 內修改 MOD 檔案。

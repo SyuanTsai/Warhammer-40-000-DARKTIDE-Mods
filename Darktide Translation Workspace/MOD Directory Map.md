@@ -49,7 +49,7 @@
 | completed | 2026-07-07 +08:00 | Stimms Pickup Icon | StimmsPickupIcon | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Killfeed Improvements | KillfeedImprovements | 修正 Psykhanium 詞彙表不一致（PR #41）。 |
 | completed | 2026-07-07 +08:00 | Gas Outline | GasOutline | 所有 zh-tw 已完整正確，無需修改。 |
-| mod_updated | 2026-07-11 11:44:36 +08:00 | Loadout Monitor | LoadoutMonitor | README 更新至 Last updated 09 July 2026；需重新比對本地 localization。 |
+| mod_updated | 2026-07-12 20:58:25 +08:00 | Loadout Monitor | LoadoutMonitor | README 更新至 Last updated 12 July 2026 / Version 1.9.2，手動維護最後下載日期 2026-07-12；需重新比對本地 localization。 |
 | completed | 2026-07-07 +08:00 | Quick Look Card | QuickLookCard | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | completed | 2026-07-07 +08:00 | Markers Improved All-in-One | markers_aio | 第二次重新處理：修正錢詞表不一致、補齊缺失 key、修正重複問題（PR #33）。 |
 | completed | 2026-07-07 +08:00 | Danger Zone | danger_zone | 所有 zh-tw 已完整正確，無需修改。 |
@@ -112,7 +112,7 @@
 | completed | 2026-07-09 01:15:43 +08:00 | StimmCountdown | StimmCountdown | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-09 01:24:11 +08:00 | Mauler Attack Indicator | mauler_attack_indicator | 校正 zh-tw ring / warning / attack 用語（PR #50）。 |
 | completed | 2026-07-11 11:05:15 +08:00 | Crusher Attack Indicator | crusher_attack_indicator | 校正 Cleave/順劈語意（PR #51）。 |
-| completed | 2026-07-11 11:50:22 +08:00 | Radar | Radar | 校正 Horde/遠征物品 tooltip 詞彙一致性（PR #52）。 |
+| completed | 2026-07-12 20:58:25 +08:00 | Radar | Radar | README 更新至 Last updated 12 July 2026 / Version 2.5.1，手動維護最後下載日期 2026-07-12 |
 | completed | 2026-07-11 12:28:46 +08:00 | PlasmaBFG | PlasmaBFG | 校正 Heat/Plasma/hook 相關 zh-tw 用語（PR #53）。 |
 | completed | 2026-07-11 13:11:01 +08:00 | SprintRelicHeavy | SprintRelicHeavy | 校正 Relic Blade 詞彙表與輔助功能描述（PR #54）。 |
 | completed | 2026-07-11 18:28:41 +08:00 | Auto Mark | AutoMark | 校正 Servo-Skull/Focus Target 詞彙表一致性（PR #55）。 |
