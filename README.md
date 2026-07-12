@@ -202,10 +202,10 @@
 
 ### [Loadout Monitor](https://www.nexusmods.com/warhammer40kdarktide/mods/160)
     載入中顯示隊友武器
-- MOD 網站最後更新日期：Last updated 09 July 2026, 5:36PM
-- MOD 版本：1.9.1
-- MOD 檔案名稱：Loadout Monitor-160-1-8-01-1764944780
-- 手動維護最後下載日期：2026-07-09
+- MOD 網站最後更新日期：Last updated 12 July 2026, 6:20PM
+- MOD 版本：1.9.2
+- MOD 檔案名稱：Loadout Monitor 160 1.9.2 2026-07-12T10-17Z K6YR06i8r
+- 手動維護最後下載日期：2026-07-12
 
 ### [Quick Look Card](https://www.nexusmods.com/warhammer40kdarktide/mods/142)
     快速資訊卡 可以快速取得武器的五維
