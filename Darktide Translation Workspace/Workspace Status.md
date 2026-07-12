@@ -68,6 +68,7 @@
 | show_cjk_glyphs | Warhammer 40,000 DARKTIDE/mods/show_cjk_glyphs/scripts/mods/show_cjk_glyphs/show_cjk_glyphs_localization.lua | all keys | codex | released | Codex/Feature/show_cjk_glyphs/Add-zh-tw | Darktide Translation Workspace/Log/show_cjk_glyphs.md | 2026-07-12 11:35:05 +08:00 | 2026-07-12 11:37:24 +08:00 | PR #63 已建立且為 ready | 任務完成，釋放鎖定 |
 | SimpleSpeedMeter | Warhammer 40,000 DARKTIDE/mods/SimpleSpeedMeter/scripts/mods/SimpleSpeedMeter/SimpleSpeedMeter_localization.lua | all keys | codex | released | Codex/Feature/SimpleSpeedMeter/Add-zh-tw | Darktide Translation Workspace/Log/SimpleSpeedMeter.md | 2026-07-12 11:44:13 +08:00 | 2026-07-12 11:46:20 +08:00 | PR #64 已建立且為 ready | 任務完成，釋放鎖定 |
 | custom_hud | Warhammer 40,000 DARKTIDE/mods/custom_hud/scripts/mods/custom_hud/custom_hud_localization.lua | all keys | codex | released | Codex/Feature/custom_hud/Add-zh-tw | Darktide Translation Workspace/Log/custom_hud.md | 2026-07-12 11:53:24 +08:00 | 2026-07-12 11:57:45 +08:00 | PR #65 已建立且為 ready | 任務完成，釋放鎖定 |
+| Perspectives | Warhammer 40,000 DARKTIDE/mods/Perspectives/scripts/mods/Perspectives/Perspectives_localization.lua | mod_description | codex | in_progress | Codex/Feature/Perspectives/Add-zh-tw | Darktide Translation Workspace/Log/Perspectives.md | 2026-07-12 12:18:00 +08:00 | 2026-07-12 12:18:00 +08:00 | 完成 localization 檢查、commit 與 PR 後釋放 | 開始校正視角與鏡頭設定繁中用語 |
 
 ## 逐 MOD 工作紀錄
 
