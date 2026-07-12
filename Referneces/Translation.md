@@ -15,6 +15,7 @@
 ### MOD
 #### MOD名稱
 - AutoBlitz - 自動使用閃擊
+- Scoreboard - 記分板
 
 #### MOD名詞
 - Overhand - 高拋投擲
