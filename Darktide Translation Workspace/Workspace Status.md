@@ -38,6 +38,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | Perspectives | Perspectives Mod | main | Codex/Feature/Perspectives/Add-zh-tw | Darktide Translation Workspace/Log/Perspectives.md | Perspectives_localization.lua | all keys | 2026-07-12 12:21:31 +08:00 | 88ae6e5 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/66 | ovenproof_scoreboard_plugin/*localization.lua:first key | 已校正視角、鏡頭與自動切換選項繁中用語；PR #66 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | ovenproof_scoreboard_plugin | Ovenproof's Scoreboard Plugin | main | Codex/Feature/ovenproof_scoreboard_plugin/Add-zh-tw | Darktide Translation Workspace/Log/ovenproof_scoreboard_plugin.md | ovenproof_scoreboard_plugin_localization.lua | all keys | 2026-07-12 12:29:56 +08:00 | f9364ea | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/67 | ScoreboardExplosive/*localization.lua:first key | 已校正計分板外掛、遠征追蹤、閃擊/電子獒犬與暴擊率列繁中用語；PR #67 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | ScoreboardExplosive | Scoreboard Explosive | main | Codex/Feature/ScoreboardExplosive/Add-zh-tw | Darktide Translation Workspace/Log/ScoreboardExplosive.md | ScoreboardExplosive_localization.lua | all keys | 2026-07-12 12:34:52 +08:00 | f07b4bd | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/68 | AutoBlitz/*localization.lua:first key | 已校正爆炸物統計、爆炸桶/火焰桶與戰鬥訊息繁中用語；PR #68 ready |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | AutoBlitz | AutoBlitz | main | Codex/Feature/AutoBlitz/Add-zh-tw | Darktide Translation Workspace/Log/AutoBlitz.md | AutoBlitz_localization.lua | all keys | 2026-07-12 12:49:54 +08:00 | df3d9ed | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/69 | SpecialsTracker/*localization.lua:first key | 已校正自動投擲、快捷鍵、投擲模式、遠端引爆、巢都渣滓、救援與受到傷害用語；PR #69 ready |
 
 ## 工作鎖定
 
@@ -74,7 +75,7 @@
 | Perspectives | Warhammer 40,000 DARKTIDE/mods/Perspectives/scripts/mods/Perspectives/Perspectives_localization.lua | all keys | codex | released | Codex/Feature/Perspectives/Add-zh-tw | Darktide Translation Workspace/Log/Perspectives.md | 2026-07-12 12:18:00 +08:00 | 2026-07-12 12:21:31 +08:00 | PR #66 已建立且為 ready | 任務完成，釋放鎖定 |
 | ovenproof_scoreboard_plugin | Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | all keys | codex | released | Codex/Feature/ovenproof_scoreboard_plugin/Add-zh-tw | Darktide Translation Workspace/Log/ovenproof_scoreboard_plugin.md | 2026-07-12 12:25:41 +08:00 | 2026-07-12 12:29:56 +08:00 | PR #67 已建立且為 ready | 任務完成，釋放鎖定 |
 | ScoreboardExplosive | Warhammer 40,000 DARKTIDE/mods/ScoreboardExplosive/scripts/mods/ScoreboardExplosive/ScoreboardExplosive_localization.lua | all keys | codex | released | Codex/Feature/ScoreboardExplosive/Add-zh-tw | Darktide Translation Workspace/Log/ScoreboardExplosive.md | 2026-07-12 12:32:36 +08:00 | 2026-07-12 12:34:52 +08:00 | PR #68 已建立且為 ready | 任務完成，釋放鎖定 |
-| AutoBlitz | Warhammer 40,000 DARKTIDE/mods/AutoBlitz/scripts/mods/AutoBlitz/AutoBlitz_localization.lua | all keys | codex | in_progress | Codex/Feature/AutoBlitz/Add-zh-tw | Darktide Translation Workspace/Log/AutoBlitz.md | 2026-07-12 12:46:07 +08:00 | 2026-07-12 12:46:07 +08:00 | 完成檢查並建立 ready PR | 開始校正 AutoBlitz 繁中用語 |
+| AutoBlitz | Warhammer 40,000 DARKTIDE/mods/AutoBlitz/scripts/mods/AutoBlitz/AutoBlitz_localization.lua | all keys | codex | released | Codex/Feature/AutoBlitz/Add-zh-tw | Darktide Translation Workspace/Log/AutoBlitz.md | 2026-07-12 12:46:07 +08:00 | 2026-07-12 12:49:54 +08:00 | PR #69 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -1069,6 +1070,38 @@
 | 2026-07-12 12:32:36 +08:00 | Warhammer 40,000 DARKTIDE/mods/ScoreboardExplosive/scripts/mods/ScoreboardExplosive/ScoreboardExplosive_localization.lua | mod_name | in_progress | Section: Key Progress | 開始校正 Scoreboard Explosive 爆炸物統計繁中用語 |
 | 2026-07-12 12:34:52 +08:00 | Warhammer 40,000 DARKTIDE/mods/ScoreboardExplosive/scripts/mods/ScoreboardExplosive/ScoreboardExplosive_localization.lua | message_explosive_detonated | completed | Section: Key Progress | 校正 11 個 zh-tw 值，包含 MOD 名稱/描述、點燃/引爆訊息、爆炸物、火焰桶與爆炸桶 |
 
+### MOD-LOG-0031 - AutoBlitz
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | AutoBlitz |
+| Repo directory | AutoBlitz |
+| AI handler | codex |
+| Status | completed |
+| Base branch | main |
+| Work branch | Codex/Feature/AutoBlitz/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/AutoBlitz.md |
+| Started at | 2026-07-12 12:46:07 +08:00 |
+| Last updated | 2026-07-12 12:49:54 +08:00 |
+| Completed at | 2026-07-12 12:49:54 +08:00 |
+| Commit | df3d9ed |
+| PR | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/69 |
+| Next position | SpecialsTracker/*localization.lua:first key |
+| Notes | 已校正自動投擲、快捷鍵、投擲模式、遠端引爆、巢都渣滓、救援與受到傷害用語；PR #69 ready。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/AutoBlitz/scripts/mods/AutoBlitz/AutoBlitz_localization.lua | completed | 17 | shield_threshold_tooltip | Section: Key Progress | 僅修改 zh-tw 欄位；duplicate zh-tw=0、empty zh-tw=0 |
+
+#### Key Summary
+
+| Time | File | Key | Status | Section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-12 12:46:07 +08:00 | Warhammer 40,000 DARKTIDE/mods/AutoBlitz/scripts/mods/AutoBlitz/AutoBlitz_localization.lua | mod_name | in_progress | Section: Key Progress | 開始校正 AutoBlitz 自動投擲與閃擊繁中用語 |
+| 2026-07-12 12:49:54 +08:00 | Warhammer 40,000 DARKTIDE/mods/AutoBlitz/scripts/mods/AutoBlitz/AutoBlitz_localization.lua | shield_threshold_tooltip | completed | Section: Key Progress | 校正 17 個 zh-tw 值，包含 MOD 名稱/描述、玩家取消、快捷鍵、上手/下手投擲、遠端引爆條件、巢都渣滓、救援倒地隊友與受到傷害 |
+
 ## 協作交接紀錄
 
 | Time | From | To | MOD | File | Key | From status | To status | Branch log | Note |
@@ -1190,6 +1223,7 @@
 | Perspectives | codex | main | Codex/Feature/Perspectives/Add-zh-tw | 88ae6e5 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/66 | yes | yes | 僅包含 Perspectives_localization.lua；PR ready |
 | ovenproof_scoreboard_plugin | codex | main | Codex/Feature/ovenproof_scoreboard_plugin/Add-zh-tw | f9364ea | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/67 | yes | yes | 僅包含 ovenproof_scoreboard_plugin_localization.lua；PR ready |
 | ScoreboardExplosive | codex | main | Codex/Feature/ScoreboardExplosive/Add-zh-tw | f07b4bd | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/68 | yes | yes | 僅包含 ScoreboardExplosive_localization.lua；PR ready |
+| AutoBlitz | codex | main | Codex/Feature/AutoBlitz/Add-zh-tw | df3d9ed | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/69 | yes | yes | 僅包含 AutoBlitz_localization.lua；PR ready |
 
 ## Completed Files
 
@@ -1222,3 +1256,4 @@
 | Perspectives | codex | Warhammer 40,000 DARKTIDE/mods/Perspectives/scripts/mods/Perspectives/Perspectives_localization.lua | 27 | 88ae6e5 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/66 | 2026-07-12 12:21:31 +08:00 | Darktide Translation Workspace/Log/Perspectives.md | 校正視角、鏡頭與自動切換選項繁中用語；PR ready |
 | ovenproof_scoreboard_plugin | codex | Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | 32 | f9364ea | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/67 | 2026-07-12 12:29:56 +08:00 | Darktide Translation Workspace/Log/ovenproof_scoreboard_plugin.md | 校正計分板外掛、遠征追蹤、列分類、閃擊/電子獒犬與暴擊率列繁中用語；PR ready |
 | ScoreboardExplosive | codex | Warhammer 40,000 DARKTIDE/mods/ScoreboardExplosive/scripts/mods/ScoreboardExplosive/ScoreboardExplosive_localization.lua | 11 | f07b4bd | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/68 | 2026-07-12 12:34:52 +08:00 | Darktide Translation Workspace/Log/ScoreboardExplosive.md | 校正爆炸物統計、火焰桶/爆炸桶與戰鬥訊息繁中用語；PR ready |
+| AutoBlitz | codex | Warhammer 40,000 DARKTIDE/mods/AutoBlitz/scripts/mods/AutoBlitz/AutoBlitz_localization.lua | 17 | df3d9ed | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/69 | 2026-07-12 12:49:54 +08:00 | Darktide Translation Workspace/Log/AutoBlitz.md | 校正自動投擲、快捷鍵、投擲模式、遠端引爆、巢都渣滓、救援與受到傷害用語；PR ready |
