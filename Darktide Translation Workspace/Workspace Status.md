@@ -64,6 +64,7 @@
 | KPM | Warhammer 40,000 DARKTIDE/mods/KPM/scripts/mods/KPM/KPM_localization.lua | all keys | codex | released | Codex/Feature/KPM/Add-zh-tw | Darktide Translation Workspace/Log/KPM.md | 2026-07-12 02:22:26 +08:00 | 2026-07-12 02:57:52 +08:00 | PR #61 已建立且為 ready | 任務完成，釋放鎖定 |
 | RetainSelection | Warhammer 40,000 DARKTIDE/mods/RetainSelection/scripts/mods/RetainSelection/RetainSelection_localization.lua | all keys | codex | released | Codex/Feature/RetainSelection/Add-zh-tw | Darktide Translation Workspace/Log/RetainSelection.md | 2026-07-12 03:17:12 +08:00 | 2026-07-12 07:04:18 +08:00 | PR #62 已建立且為 ready | 任務完成，釋放鎖定 |
 | show_cjk_glyphs | Warhammer 40,000 DARKTIDE/mods/show_cjk_glyphs/scripts/mods/show_cjk_glyphs/show_cjk_glyphs_localization.lua | all keys | codex | released | Codex/Feature/show_cjk_glyphs/Add-zh-tw | Darktide Translation Workspace/Log/show_cjk_glyphs.md | 2026-07-12 11:35:05 +08:00 | 2026-07-12 11:37:24 +08:00 | PR #63 已建立且為 ready | 任務完成，釋放鎖定 |
+| SimpleSpeedMeter | Warhammer 40,000 DARKTIDE/mods/SimpleSpeedMeter/scripts/mods/SimpleSpeedMeter/SimpleSpeedMeter_localization.lua | mod_description | codex | in_progress | Codex/Feature/SimpleSpeedMeter/Add-zh-tw | Darktide Translation Workspace/Log/SimpleSpeedMeter.md | 2026-07-12 11:44:13 +08:00 | 2026-07-12 11:44:13 +08:00 | 完成 localization 檢查、commit 與 PR 後釋放 | 開始校正速度計描述用語 |
 
 ## 逐 MOD 工作紀錄
 
