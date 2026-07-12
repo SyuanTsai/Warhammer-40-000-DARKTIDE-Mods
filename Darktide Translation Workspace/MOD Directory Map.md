@@ -68,7 +68,7 @@
 | completed | 2026-07-07 +08:00 | Name It - Rename Weapons and Curios | name_it | 所有靜態 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | LoadoutNames | LoadoutNames | 所有 zh-tw 已完整正確，無需修改。 |
 | mod_updated | 2026-07-11 11:44:36 +08:00 | Guarantee Ability Activation | guarantee_ability_activation | README 更新至 Last updated 08 July 2026 / 1.4.1；需重新比對本地 localization。 |
-| ready | 2026-07-07 +08:00 | Custom HUD | custom_hud |  |
+| completed | 2026-07-12 11:57:45 +08:00 | Custom HUD | custom_hud | 校正 HUD 編輯模式與面板設定繁中用語（PR #65）。 |
 | completed | 2026-07-07 +08:00 | Keep Dodging | keep_dodging | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | ready | 2026-07-11 11:44:36 +08:00 | Perspectives Mod | Perspectives | README 更新至 Last updated 08 July 2026 / 1.13|
 | completed | 2026-07-07 +08:00 | Improved Havoc Tags | ImprovedHavocTags | 所有 zh-tw 已完整正確，無需修改。 |
