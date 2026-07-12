@@ -76,6 +76,7 @@
 | ovenproof_scoreboard_plugin | Warhammer 40,000 DARKTIDE/mods/ovenproof_scoreboard_plugin/scripts/mods/ovenproof_scoreboard_plugin/ovenproof_scoreboard_plugin_localization.lua | all keys | codex | released | Codex/Feature/ovenproof_scoreboard_plugin/Add-zh-tw | Darktide Translation Workspace/Log/ovenproof_scoreboard_plugin.md | 2026-07-12 12:25:41 +08:00 | 2026-07-12 12:29:56 +08:00 | PR #67 已建立且為 ready | 任務完成，釋放鎖定 |
 | ScoreboardExplosive | Warhammer 40,000 DARKTIDE/mods/ScoreboardExplosive/scripts/mods/ScoreboardExplosive/ScoreboardExplosive_localization.lua | all keys | codex | released | Codex/Feature/ScoreboardExplosive/Add-zh-tw | Darktide Translation Workspace/Log/ScoreboardExplosive.md | 2026-07-12 12:32:36 +08:00 | 2026-07-12 12:34:52 +08:00 | PR #68 已建立且為 ready | 任務完成，釋放鎖定 |
 | AutoBlitz | Warhammer 40,000 DARKTIDE/mods/AutoBlitz/scripts/mods/AutoBlitz/AutoBlitz_localization.lua | all keys | codex | released | Codex/Feature/AutoBlitz/Add-zh-tw | Darktide Translation Workspace/Log/AutoBlitz.md | 2026-07-12 12:46:07 +08:00 | 2026-07-12 12:49:54 +08:00 | PR #69 已建立且為 ready | 任務完成，釋放鎖定 |
+| SpecialsTracker | Warhammer 40,000 DARKTIDE/mods/SpecialsTracker/scripts/mods/SpecialsTracker/SpecialsTracker_localization.lua | all keys | codex | in_progress | Codex/Feature/SpecialsTracker/Add-zh-tw | Darktide Translation Workspace/Log/SpecialsTracker.md | 2026-07-12 20:08:27 +08:00 | 2026-07-12 20:08:27 +08:00 | 完成檢查並建立 ready PR | 開始校正 SpecialsTracker 繁中用語 |
 
 ## 逐 MOD 工作紀錄
 
