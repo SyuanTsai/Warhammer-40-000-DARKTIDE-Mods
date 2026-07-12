@@ -87,12 +87,12 @@ return {
     -- Grenade Throw Mode 投掷方式
     overhand = {
         en = "Overhand",
-        ["zh-tw"] = "高拋投擲",
+        ["zh-tw"] = "高拋手雷",
         ["zh-cn"] = "高抛投掷",
     },
     underhand = {
         en = "Underhand",
-        ["zh-tw"] = "低拋投擲",
+        ["zh-tw"] = "低拋手雷",
         ["zh-cn"] = "低抛投掷",
     },
     -- Box 欧格林-投弹完毕！
@@ -463,7 +463,7 @@ return {
     },
     help_hogtied = {
         en = "Automatically Rescue Hogtied Allies",
-        ["zh-tw"] = "自動救援被綁住的隊友",
+        ["zh-tw"] = "自動救援被俘虜的隊友",
         ["zh-cn"] = "自动解救被束缚的队友"
     },
     help_netted = {
