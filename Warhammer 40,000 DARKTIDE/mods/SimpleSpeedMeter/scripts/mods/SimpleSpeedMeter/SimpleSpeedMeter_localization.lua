@@ -7,7 +7,7 @@ return {
 	mod_description = {
 		en = "Adds a simple player speed meter widget.",
 		["zh-cn"] = "添加一个简易的玩家速度计组件。",
-		["zh-tw"] = "添加一個簡易的玩家速度計組件。",
+		["zh-tw"] = "新增一個簡易的玩家速度計小工具。",
 	},
 	speed_title = {
 		en = "SPD",
