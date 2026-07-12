@@ -28,12 +28,12 @@ return {
     -- Mod Details Mod详细信息
     mod_name = {
         en = "AutoBlitz",
-        ["zh-tw"] = "AutoBlitz",
+        ["zh-tw"] = "自動使用閃擊",
         ["zh-cn"] = "自动释放闪击",
     },
     mod_description = {
         en = "GRENADE OUT",
-        ["zh-tw"] = "自動投擲手雷並使用閃擊。",
+        ["zh-tw"] = "自動投擲手雷或使用閃擊。",
         ["zh-cn"] = "自动投掷各类手雷与职业技能道具",
     },
     -- Debug
@@ -66,7 +66,7 @@ return {
     -- Global Settings 全局设置
     allow_override = {
         en = "Allow Player Override",
-        ["zh-tw"] = "允許玩家手動取消",
+        ["zh-tw"] = "允許玩家手動中斷",
         ["zh-cn"] = "允许手动打断自动投掷",
     },
     auto_throw_keybind = {
@@ -76,7 +76,7 @@ return {
     },
     auto_throw_keybind_tooltip = {
         en = "Swaps to and throws grenades. When set, AutoBlitz will not automatically throw grenades unless the keybind is pressed.",
-        ["zh-tw"] = "切換到手雷並投擲。設定後，AutoBlitz 只會在按下此快捷鍵時自動投擲手雷。",
+        ["zh-tw"] = "切換到手雷並投擲。設定後，MOD只會在按下此快捷鍵時自動投擲手雷。",
         ["zh-cn"] = "切换至手雷栏并投掷。绑定按键后，模组仅在按下该键时才会自动投掷，不会自主触发。"
     },
     allow_override_tooltip = {
@@ -87,12 +87,12 @@ return {
     -- Grenade Throw Mode 投掷方式
     overhand = {
         en = "Overhand",
-        ["zh-tw"] = "上手投擲",
+        ["zh-tw"] = "高拋投擲",
         ["zh-cn"] = "高抛投掷",
     },
     underhand = {
         en = "Underhand",
-        ["zh-tw"] = "下手投擲",
+        ["zh-tw"] = "低拋投擲",
         ["zh-cn"] = "低抛投掷",
     },
     -- Box 欧格林-投弹完毕！
@@ -366,17 +366,17 @@ return {
     },
     dogsplosion_pounce_only = {
         en = "Require Pounce",
-        ["zh-tw"] = "要求撲擊",
+        ["zh-tw"] = "需要撲擊",
         ["zh-cn"] = "扑击触发判定"
     },
     dogsplosion_require_tag = {
         en = "Require Tag",
-        ["zh-tw"] = "要求標記",
+        ["zh-tw"] = "需要標記",
         ["zh-cn"] = "需要指令标记"
     },
     dogsplosion_require_tag_tooltip = {
         en = string.format("This setting only applies when Require Pounce is enabled. \nIf enabled, a command tag must also be present when the pounce occurs."),
-        ["zh-tw"] = "此設定只在「要求撲擊」啟用時生效。\n啟用後，撲擊發生時也必須存在指令標記。",
+        ["zh-tw"] = "此設定只在「需要撲擊」啟用時生效。\n啟用後，撲擊發生時也必須存在指令標記。",
         ["zh-cn"] = "仅在开启「扑击触发判定」时生效。开启后，训犬扑击目标必须带有指令标记才会引爆。"
     },
     dogsplosion_cooldown = {

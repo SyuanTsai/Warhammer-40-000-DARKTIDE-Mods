@@ -12,6 +12,14 @@
 - Coherency - 協同
 - Blitz - 閃擊
 
+### MOD
+#### MOD名稱
+- AutoBlitz - 自動使用閃擊
+
+#### MOD名詞
+- Overhand - 高拋投擲
+- Underhand - 低拋投擲
+
 ### 通用名詞
 
 - Countdown - 冷卻
@@ -43,6 +51,9 @@
 - Valkyrie - 女武神
 - Mourningstar - 哀星號
 - Darktide - 黑潮
+
+### 特殊情境詞
+- Hogtied - 原為綁住，但在遊戲中應用俘虜比較符合意境。
 
 ### 增益效果 (BUFFS)
 
