@@ -556,7 +556,7 @@ overlay_name_sets.short = {
     renegade_plasma_gunner = {
         en = "PLSM",
         -- Needs loc
-        ["zh-tw"] = "電漿槍",
+        ["zh-tw"] = "電漿",
     },
     renegade_sniper = {
         en = "SNP",
