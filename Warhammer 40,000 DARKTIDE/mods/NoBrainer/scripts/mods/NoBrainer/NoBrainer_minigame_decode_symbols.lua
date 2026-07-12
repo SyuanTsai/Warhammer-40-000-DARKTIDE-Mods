@@ -71,20 +71,38 @@ end
 
 mod:hook_require("scripts/ui/views/scanner_display_view/minigame_decode_symbols_view", function(View)
 	mod:hook_safe(View, "draw_widgets", function(self, dt, t, input_service, ui_renderer)
-		if not S("enable_decode_highlight") then return end
-			if mod._practice_active and mod._practice_active() then return end
+		if not S("enable_decode_highlight") then
+			mod._debug_event_change("decode_highlight_blocked", "setting_disabled", "decode", "blocked", { reason = "setting_disabled" })
+			return
+		end
+			if mod._practice_active and mod._practice_active() then
+				mod._debug_event_change("decode_highlight_blocked", "practice_active", "decode", "blocked", { reason = "practice_active" })
+				return
+			end
 			_deps()
 			local ext = self._minigame_extension
-			if not ext then return end
+			if not ext then
+				mod._debug_event_change("decode_highlight_blocked", "missing_extension", "decode", "blocked", { reason = "missing_extension" })
+				return
+			end
 
 			local mg = ext:minigame(MinigameSettings.types.decode_symbols)
-			if not mg then return end
+			if not mg then
+				mod._debug_event_change("decode_highlight_blocked", "no_minigame", "decode", "blocked", { reason = "no_minigame" })
+				return
+			end
 
 			local targets = mg._decode_targets
-		if not targets or #targets == 0 then return end
+		if not targets or #targets == 0 then
+			mod._debug_event_change("decode_highlight_blocked", "missing_targets:" .. tostring(mg), "decode", "blocked", { reason = "missing_targets", stage = mg.current_stage and mg:current_stage() or mg._current_stage })
+			return
+		end
 
 		local stage = mg:current_stage()
-		if not stage then return end
+		if not stage then
+			mod._debug_event_change("decode_highlight_blocked", "missing_stage:" .. tostring(mg), "decode", "blocked", { reason = "missing_stage" })
+			return
+		end
 		local limit = math.min(#targets, stage + 3)
 			local count = limit - stage
 			if count <= 0 then
@@ -130,8 +148,18 @@ local decode_active = false
 local decode_completed = false
 local looks_like_decode_symbols
 
-local function reset_snapshot()
+local function debug_value(value)
+	if value == nil then return "nil" end
+	return value
+end
+
+local function reset_snapshot(reason)
 	local ds = mod._ds
+	if ds and (ds.active or ds.timer > 0) then
+		if mod._debug_enabled() then
+			mod._debug_event_change("decode_sample_reset", tostring(reason) .. ":" .. tostring(ds.stage) .. ":" .. tostring(ds.key), "decode", "sample", { reason = reason or "unknown", stage = ds.stage })
+		end
+	end
 	ds.timer = 0
 	ds.active = false
 	ds.completed = false
@@ -157,7 +185,10 @@ local function sample_decode_symbols(minigame)
 	end
 
 	if not looks_like_decode_symbols(minigame) then
-		reset_snapshot()
+		if mod._debug_enabled() then
+			mod._debug_event_change("decode_sample_invalid", tostring(key) .. ":" .. tostring(minigame ~= nil), "decode", "sample", { reason = minigame and "invalid_sample_shape" or "no_minigame" })
+		end
+		reset_snapshot(minigame and "invalid_sample_shape" or "no_minigame")
 		return
 	end
 
@@ -173,6 +204,10 @@ local function sample_decode_symbols(minigame)
 	ds.items_per_stage = minigame._decode_symbols_items_per_stage
 	ds.sweep_duration = minigame._decode_symbols_sweep_duration
 	ds.key = key
+
+	if mod._debug_enabled() then
+		mod._debug_event_change("decode_sample", tostring(key) .. ":" .. tostring(stage) .. ":" .. tostring(ds.completed) .. ":" .. tostring(ds.target), "decode", "sample", { reason = ds.completed and "completed" or "sampled", server = ds.server, stage = stage, target = debug_value(ds.target) })
+	end
 end
 
 local function is_active_decode_symbols(minigame)
@@ -182,12 +217,12 @@ end
 
 local function ds_reset(reason)
 	if decode_active and reason then
-		mod._debug_event("decode", reason, { stage = mod._ds and mod._ds.stage or mod._ds_submitted_stage })
+		mod._debug_run_end("decode", "cleanup", { reason = reason, stage = mod._ds and mod._ds.stage or mod._ds_submitted_stage })
 	end
 
 	decode_active = false
 	decode_completed = reason == "complete"
-	reset_snapshot()
+	reset_snapshot("cleanup")
 	mod._ds_submitted_stage = nil
 	mod._ds_submitted_until = 0
 	mod._ds_press_until = 0
@@ -196,11 +231,6 @@ end
 
 local function game_time()
 	return mod._time("gameplay")
-end
-
-local function debug_value(value)
-	if value == nil then return "nil" end
-	return value
 end
 
 local function next_center_delta(mg, now, start_time, target, margin)
@@ -240,15 +270,18 @@ local function should_press_decode(now)
 	if not stage or not start_time or not target
 		or not items_per_stage or items_per_stage <= 1
 		or not sweep_duration or sweep_duration <= 0 then
-		mod._debug_event_throttle("decode_missing_fields_event", 1.5, "decode", "wait", {
-			items = debug_value(items_per_stage),
-			reason = "missing_fields",
-			server = ds.server,
-			stage = debug_value(stage),
-			start = debug_value(start_time),
-			sweep = debug_value(sweep_duration),
-			target = debug_value(target),
-		})
+		if mod._debug_enabled() then
+			mod._debug_event_throttle("decode_missing_fields_event", 1.5, "decode", "wait", {
+				items = debug_value(items_per_stage),
+				minigame_start_time = debug_value(start_time),
+				minigame_time_source = "gameplay",
+				reason = "missing_fields",
+				server = ds.server,
+				stage = debug_value(stage),
+				sweep = debug_value(sweep_duration),
+				target = debug_value(target),
+			})
+		end
 		return false
 	end
 
@@ -268,21 +301,25 @@ local function should_press_decode(now)
 	local delta = next_center_delta({ _decode_symbols_sweep_duration = sweep_duration }, now, start_time, target, margin)
 
 	if not delta or delta > PRESS_LEAD or delta < -PRESS_GRACE then
-		mod._debug_event_throttle("decode_delta_event", 1.0, "decode", "wait", { delta = debug_value(delta), max = PRESS_LEAD, min = -PRESS_GRACE, reason = "outside_window", stage = stage, target = target })
+		if mod._debug_enabled() then
+			mod._debug_event_throttle("decode_delta_event", 1.0, "decode", "wait", { delta = debug_value(delta), max = PRESS_LEAD, min = -PRESS_GRACE, reason = "outside_window", stage = stage, target = target })
+		end
 		return false
 	end
 
-	mod._debug_event("decode", "press_window", { delta = delta, max = PRESS_LEAD, min = -PRESS_GRACE, server = ds.server, stage = stage, target = target, window = "synthetic_press" })
+	if mod._debug_enabled() then
+		mod._debug_event("decode", "press_window", { delta = delta, max = PRESS_LEAD, min = -PRESS_GRACE, server = ds.server, stage = stage, target = target, window = "synthetic_press" })
+	end
 	return true
 end
 
-local function submit_decode(now)
+local function submit_decode(now, action, source)
 	local stage = mod._ds and mod._ds.stage
 	mod._ds_submitted_stage = stage
 	mod._ds_submitted_until = now + SUBMIT_TIMEOUT
 	mod._ds_press_until = now + PRESS_DURATION
 	mod._ds_release_until = mod._ds_press_until + RELEASE_DURATION
-	mod._debug_event("decode", "submit_state", { press_until = mod._ds_press_until, release_until = mod._ds_release_until, stage = stage, submitted_until = mod._ds_submitted_until })
+	mod._debug_event("decode", "submit_sent", { action = action, press_until = mod._ds_press_until, release_until = mod._ds_release_until, source = source, stage = stage, submitted_until = mod._ds_submitted_until })
 end
 
 looks_like_decode_symbols = function(minigame)
@@ -302,28 +339,37 @@ function mod._ds_input(action, result)
 	if not now then return result end
 
 	if mod._ds_release_until > now then
-		mod._debug_event_throttle("decode_input_release_event", 1.0, "decode", "synthetic_release", { action = action, stage = mod._ds_submitted_stage, until_t = mod._ds_release_until })
+		if mod._debug_enabled() then
+			mod._debug_event_throttle("decode_input_release_event", 1.0, "decode", "synthetic_release", { action = action, stage = mod._ds_submitted_stage, until_t = mod._ds_release_until })
+		end
 		return false
 	end
 	if mod._ds_press_until > now then
-		mod._debug_event_throttle("decode_input_hold_event", 1.0, "decode", "synthetic_hold", { action = action, stage = mod._ds_submitted_stage, until_t = mod._ds_press_until })
+		if mod._debug_enabled() then
+			mod._debug_event_throttle("decode_input_hold_event", 1.0, "decode", "synthetic_hold", { action = action, stage = mod._ds_submitted_stage, until_t = mod._ds_press_until })
+		end
 		return true
 	end
 	if result then return result end
 	if not should_press_decode(now) then return result end
 
-	submit_decode(now)
-	mod._debug_event("decode", "synthetic_press", { action = action, stage = mod._ds_submitted_stage })
+	submit_decode(now, action, "route_input")
 	return true
 end
 
 mod:hook_safe("MinigameDecodeSymbols", "start", function(self, player)
-	if not mod._is_local_minigame_player(player) then return end
+	if not mod._is_local_minigame_player(player) then
+		mod._debug_event("decode", "blocked", { reason = "remote_player", server = self._is_server, stage = debug_value(self._current_stage) })
+		return
+	end
 
 	if S("enable_decode_auto") then
 		decode_active = true
 		decode_completed = false
-		mod._debug_event("decode", "start", { items = debug_value(self._decode_symbols_items_per_stage), server = self._is_server, stage = debug_value(self._current_stage), start = debug_value(self._decode_start_time), sweep = debug_value(self._decode_symbols_sweep_duration) })
+		mod._debug_run_start("decode")
+		mod._debug_event("decode", "start", { items = debug_value(self._decode_symbols_items_per_stage), minigame_start_time = debug_value(self._decode_start_time), minigame_time_source = "gameplay", server = self._is_server, stage = debug_value(self._current_stage), sweep = debug_value(self._decode_symbols_sweep_duration) })
+	else
+		mod._debug_event("decode", "blocked", { reason = "setting_disabled", server = self._is_server, stage = debug_value(self._current_stage) })
 	end
 end)
 mod:hook_safe("MinigameDecodeSymbols", "stop", function(self)
@@ -374,17 +420,26 @@ local function hook_decode_state_input(PlayerCharacterStateMinigame)
 		local player = self and self._player
 
 		if not mod._is_local_minigame_player(player) then
+			mod._debug_event_throttle("decode_state_blocked_event", 1.5, "decode", "blocked", { reason = "remote_player" })
 			return func(self, t, fixed_frame, input_extension)
 		end
 
 		if not looks_like_decode_symbols(minigame) then
+			if mod._debug_enabled() then
+				mod._debug_event_throttle("decode_state_blocked_event", 1.5, "decode", "blocked", { reason = "not_decode_symbols", state = tostring(minigame) })
+			end
 			return func(self, t, fixed_frame, input_extension)
 		end
 
+			if not decode_active then
+				mod._debug_run_start("decode")
+			end
 			decode_active = true
 			decode_completed = false
 			sample_decode_symbols(minigame)
-			mod._debug_event_throttle("decode_state_hook_event", 1.5, "decode", "state", { held = debug_value(minigame._action_held), server = minigame._is_server, stage = debug_value(minigame._current_stage) })
+			if mod._debug_enabled() then
+				mod._debug_event_throttle("decode_state_hook_event", 1.5, "decode", "state", { held = debug_value(minigame._action_held), server = minigame._is_server, stage = debug_value(minigame._current_stage) })
+			end
 
 		local action_one_hold = input_extension:get("action_one_hold")
 		local interact_hold = input_extension:get("interact_hold")
@@ -407,6 +462,9 @@ local function hook_decode_state_input(PlayerCharacterStateMinigame)
 		local block_weapon_actions = false
 
 		if not self:_is_wielding_minigame_device() then
+			if mod._debug_enabled() then
+				mod._debug_event_throttle("decode_state_blocked_event", 1.5, "decode", "blocked", { reason = "not_wielding_minigame_device", stage = debug_value(minigame._current_stage) })
+			end
 			return true
 		end
 
@@ -415,7 +473,7 @@ local function hook_decode_state_input(PlayerCharacterStateMinigame)
 		elseif mod._ds_press_until > t then
 			primary_input = true
 		elseif should_press_decode(t) then
-			submit_decode(t)
+			submit_decode(t, nil, "state_input")
 			primary_input = true
 		end
 
@@ -423,7 +481,9 @@ local function hook_decode_state_input(PlayerCharacterStateMinigame)
 			or mod._ds_press_until > t and "hold"
 			or "passthrough"
 
-		mod._debug_event_change("decode_primary", tostring(primary_input) .. ":" .. synthetic_phase .. ":" .. tostring(minigame._current_stage), "decode", "primary_input", { input = primary_input, phase = synthetic_phase, previous = debug_value(self._previous_input), stage = debug_value(minigame._current_stage) })
+		if mod._debug_enabled() then
+			mod._debug_event_change("decode_primary", tostring(primary_input) .. ":" .. synthetic_phase .. ":" .. tostring(minigame._current_stage), "decode", "primary_input", { input = primary_input, phase = synthetic_phase, previous = debug_value(self._previous_input), stage = debug_value(minigame._current_stage) })
+		end
 
 		if minigame:uses_action() and minigame:action(primary_input, t) then
 			mod._debug_event("decode", "action_accepted", { input = primary_input, phase = synthetic_phase, stage = debug_value(minigame._current_stage) })

@@ -1,3 +1,17 @@
+## [2.0.7] - 2026-07-11
+### Added
+- **Traditional Chinese localization**: Added a complete `zh-tw` translation by SyuanTsai and a language selector at the top of the mod options. Automatic mode follows the game's language with English fallback, while English and Traditional Chinese can be selected manually when automatic detection does not work. Manually selecting Traditional Chinese does not load the game's Chinese font; Darktide must also use Traditional Chinese or translated text may appear as squares.
+
+### Changed
+- **Scan diagnostics**: Successful automatic scans now end with an explicit `succeeded` event from the game's confirmed scan path, and repeated identical scan input route overrides are logged only once per scan attempt.
+
+## [2.0.6] - 2026-07-09
+### Changed
+- **Minigame diagnostics**: Expanded the existing rate-limited debug output with structured start, sample, wait, blocked, input, submit, cleanup, missing-data, and server/client reasons across Matching, Decode Symbols, Drill, Frequency, Balance, Scan, and Expedition Map.
+
+### Fixed
+- **Remote minigame lifecycle interference**: Drill, Frequency, and Balance now only arm solver lifecycle state for the local player and only accept `stop` / `complete` cleanup from the matching active instance, preventing teammates' minigames from resetting local solver state.
+- **Idle debug spam**: Normal gameplay input polling, inactive scan zones, and unavailable Expedition handlers no longer emit recurring blocked messages. Missing scan systems and the loss of a previously active Expedition handler remain diagnostic.
 
 ## [2.0.5] - 2026-07-04
 ### Added

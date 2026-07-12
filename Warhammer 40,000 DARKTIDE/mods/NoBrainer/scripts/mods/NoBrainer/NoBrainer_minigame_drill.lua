@@ -3,10 +3,14 @@ local S = mod._S
 
 local MinigameSettings = require("scripts/settings/minigame/minigame_settings")
 local drill_active = false
+local active_drill_key = nil
 local drill_completed = false
 
-local function _reset_snapshot()
+local function _reset_snapshot(reason)
 	local drill = mod._drill
+	if drill and (drill.active or drill.timer > 0) then
+		mod._debug_event_change("drill_sample_reset", tostring(reason) .. ":" .. tostring(drill.stage) .. ":" .. tostring(drill.key), "drill", "sample", { reason = reason or "unknown", stage = drill.stage })
+	end
 	drill.timer = 0
 	drill.active = false
 	drill.gameplay = false
@@ -29,22 +33,52 @@ local function _snapshot_fresh()
 	return drill and drill.active and drill.timer > 0 and drill.gameplay
 end
 
+local function _is_active_drill_mg(mg)
+	return mg ~= nil and active_drill_key == tostring(mg)
+end
+
 mod:hook_require("scripts/ui/views/scanner_display_view/minigame_drill_view", function(View)
 	mod:hook_safe(View, "_update_target", function(self, _, minigame, _)
-		if mod._practice_active and mod._practice_active() then return end
+		if mod._practice_active and mod._practice_active() then
+			mod._debug_event_throttle("drill_visual_blocked_event", 1.5, "drill", "blocked", { reason = "practice_active" })
+			return
+		end
 		if S("enable_drill_auto") then
 			mod._drill_sample(minigame, true)
 		end
-			if not S("enable_drill") then return end
-			local stage = minigame:current_stage()
-			if not self._target_widgets or not stage or stage > #self._target_widgets then return end
-			local tw = self._target_widgets[stage]
-			if not tw then return end
+		if not S("enable_drill") then
+			mod._debug_event_throttle("drill_visual_blocked_event", 1.5, "drill", "blocked", { reason = "highlight_disabled" })
+			return
+		end
+		local stage = minigame:current_stage()
+		if not stage then
+			mod._debug_event_throttle("drill_visual_blocked_event", 1.5, "drill", "blocked", { reason = "missing_stage" })
+			return
+		end
+		if not self._target_widgets then
+			mod._debug_event_throttle("drill_visual_blocked_event", 1.5, "drill", "blocked", { reason = "missing_target_widgets", stage = stage })
+			return
+		end
+		if stage > #self._target_widgets then
+			mod._debug_event_throttle("drill_visual_blocked_event", 1.5, "drill", "blocked", { reason = "stage_out_of_range", stage = stage, target_widgets = #self._target_widgets })
+			return
+		end
+		local tw = self._target_widgets[stage]
+		if not tw then
+			mod._debug_event_throttle("drill_visual_blocked_event", 1.5, "drill", "blocked", { reason = "missing_stage_widgets", stage = stage })
+			return
+		end
 
-			local correct = minigame:correct_targets()
+		local correct = minigame:correct_targets()
+		if not correct or not correct[stage] then
+			mod._debug_event_throttle("drill_visual_blocked_event", 1.5, "drill", "blocked", { reason = "missing_correct_targets", stage = stage })
+			return
+		end
 		local w = correct and correct[stage] and tw[correct[stage]]
 		if w and w.style and w.style.highlight then
 			w.style.highlight.color = { 255, 255, 255, 255 }
+		else
+			mod._debug_event_throttle("drill_visual_blocked_event", 1.5, "drill", "blocked", { reason = "missing_highlight_widget", stage = stage, target_index = correct[stage] })
 		end
 	end)
 end)
@@ -60,10 +94,20 @@ local function _is_gameplay(mg)
 	return not state or state == MinigameSettings.game_states.gameplay
 end
 
-mod:hook_safe("MinigameDrill", "start", function(self)
-	if not S("enable_drill_auto") then return end
+mod:hook_safe("MinigameDrill", "start", function(self, player)
+	if not mod._is_local_minigame_player(player) then
+		mod._debug_event("drill", "blocked", { reason = "remote_player", server = self._is_server, stage = self._current_stage })
+		return
+	end
+
+	if not S("enable_drill_auto") then
+		mod._debug_event("drill", "blocked", { reason = "setting_disabled", server = self._is_server, stage = self._current_stage })
+		return
+	end
 	drill_active = true
+	active_drill_key = tostring(self)
 	drill_completed = false
+	mod._debug_run_start("drill")
 	mod._drill_sample(self, false)
 	mod._drill_move_cooldown = _drill_move_delay()
 	mod._debug_event("drill", "start", { move_cooldown = mod._drill_move_cooldown, server = self._is_server, stage = self._current_stage })
@@ -79,7 +123,9 @@ mod:hook("MinigameDrill", "on_axis_set", function(func, self, t, x, y)
 		local np = self._cursor_position
 		if np and (np.x ~= cx or np.y ~= cy) then
 			local delay = _drill_move_delay()
-			mod._debug_event("drill", "cursor_moved", { cooldown = delay, from = tostring(cx) .. "," .. tostring(cy), stage = self.current_stage and self:current_stage() or self._current_stage, to = tostring(np.x) .. "," .. tostring(np.y) })
+			if mod._debug_enabled() then
+				mod._debug_event_change_throttle("drill_cursor_moved_event", tostring(cx) .. "," .. tostring(cy) .. ":" .. tostring(np.x) .. "," .. tostring(np.y), 1.0, "drill", "cursor_moved", { cooldown = delay, from = tostring(cx) .. "," .. tostring(cy), stage = self.current_stage and self:current_stage() or self._current_stage, to = tostring(np.x) .. "," .. tostring(np.y) })
+			end
 			if delay > 0 then
 				mod._drill_move_cooldown = delay
 			else
@@ -94,12 +140,13 @@ end)
 
 local function _drill_cleanup(reason)
 	if drill_active and reason then
-		mod._debug_event("drill", reason, { stage = mod._drill and mod._drill.stage or nil })
+		mod._debug_run_end("drill", "cleanup", { reason = reason, stage = mod._drill and mod._drill.stage or nil })
 	end
 
 	drill_active = false
+	active_drill_key = nil
 	drill_completed = reason == "complete"
-	_reset_snapshot()
+	_reset_snapshot("cleanup")
 	mod._drill_cooldown = 0
 	mod._drill_press_until = 0
 	mod._drill_release_until = 0
@@ -108,11 +155,19 @@ local function _drill_cleanup(reason)
 	mod._drill_prev_cursor = nil
 end
 
-mod:hook_safe("MinigameDrill", "stop", function()
-	_drill_cleanup(drill_active and not drill_completed and "stop" or nil)
+mod:hook_safe("MinigameDrill", "stop", function(self)
+	if _is_active_drill_mg(self) then
+		_drill_cleanup(not drill_completed and "stop" or nil)
+	else
+		mod._debug_event_throttle("drill_inactive_lifecycle_event", 1.5, "drill", "cleanup", { reason = "inactive_stop", server = self and self._is_server, stage = self and self._current_stage })
+	end
 end)
-mod:hook_safe("MinigameDrill", "complete", function()
-	_drill_cleanup("complete")
+mod:hook_safe("MinigameDrill", "complete", function(self)
+	if _is_active_drill_mg(self) then
+		_drill_cleanup("complete")
+	else
+		mod._debug_event_throttle("drill_inactive_lifecycle_event", 1.5, "drill", "cleanup", { reason = "inactive_complete", server = self and self._is_server, stage = self and self._current_stage })
+	end
 end)
 
 local function _target_for(mg)
@@ -140,7 +195,7 @@ function mod._drill_sample(mg, allow_server_fallback)
 	end
 
 	if not mg or not _is_gameplay(mg) then
-		_reset_snapshot()
+		_reset_snapshot(not mg and "no_minigame" or "not_gameplay")
 		return
 	end
 
@@ -181,10 +236,21 @@ function mod._drill_sample(mg, allow_server_fallback)
 		drill.dir_y = 0
 	end
 
+	if mod._debug_enabled() then
+		mod._debug_event_change_throttle("drill_sample_event", tostring(stage) .. ":" .. tostring(drill.cursor_x) .. "," .. tostring(drill.cursor_y) .. ":" .. tostring(drill.target_x) .. "," .. tostring(drill.target_y) .. ":" .. tostring(searching) .. ":" .. tostring(on_target), 1.0, "drill", "sample", {
+			current = tostring(drill.cursor_x) .. "," .. tostring(drill.cursor_y),
+			reason = "sampled",
+			searching = searching,
+			stage = stage,
+			target = tostring(drill.target_x) .. "," .. tostring(drill.target_y),
+			target_index = target_index,
+		})
+	end
+
 	if allow_server_fallback and now and mg._is_server and mod._drill_cooldown <= 0
 		and mod._drill_should_submit and mod._drill_should_submit() then
 		mod._drill_cooldown = 0.15
-		mod._debug_event("drill", "server_fallback", { stage = drill.stage })
+		mod._debug_event("drill", "server_fallback", { server = mg._is_server, stage = drill.stage })
 		mg:on_action_pressed(now)
 	end
 end
@@ -206,8 +272,10 @@ function mod._drill_move_vec()
 	end
 
 	if drill.dir_x == 0 and drill.dir_y == 0 then return nil end
-	mod._debug_event_change("drill_target", tostring(drill.stage) .. ":" .. tostring(drill.target_index), "drill", "target", { stage = drill.stage, target = tostring(drill.target_x) .. "," .. tostring(drill.target_y), target_index = drill.target_index })
-	mod._debug_event_throttle("drill_move_plan_event", 1.0, "drill", "move_plan", { cursor = tostring(drill.cursor_x) .. "," .. tostring(drill.cursor_y), dir = string.format("%.3f,%.3f", drill.dir_x, drill.dir_y), move_cooldown = mod._drill_move_cooldown or 0, stage = drill.stage, target = tostring(drill.target_x) .. "," .. tostring(drill.target_y), target_index = drill.target_index })
+	if mod._debug_enabled() then
+		mod._debug_event_change("drill_target", tostring(drill.stage) .. ":" .. tostring(drill.target_index), "drill", "target", { stage = drill.stage, target = tostring(drill.target_x) .. "," .. tostring(drill.target_y), target_index = drill.target_index })
+		mod._debug_event_throttle("drill_move_plan_event", 1.0, "drill", "move_plan", { cursor = tostring(drill.cursor_x) .. "," .. tostring(drill.cursor_y), dir = string.format("%.3f,%.3f", drill.dir_x, drill.dir_y), move_cooldown = mod._drill_move_cooldown or 0, stage = drill.stage, target = tostring(drill.target_x) .. "," .. tostring(drill.target_y), target_index = drill.target_index })
+	end
 	return Vector3(drill.dir_x, drill.dir_y, 0)
 end
 
@@ -244,7 +312,9 @@ local function on_update(dt)
 		local prev = mod._drill_prev_cursor
 		if drill.cursor_x and drill.cursor_y and prev and (drill.cursor_x ~= prev.x or drill.cursor_y ~= prev.y) then
 			local delay = _drill_move_delay()
-			mod._debug_event("drill", "cursor_sync", { cooldown = delay, from = tostring(prev.x) .. "," .. tostring(prev.y), stage = drill.stage, to = tostring(drill.cursor_x) .. "," .. tostring(drill.cursor_y) })
+			if mod._debug_enabled() then
+				mod._debug_event_change_throttle("drill_cursor_sync_event", tostring(prev.x) .. "," .. tostring(prev.y) .. ":" .. tostring(drill.cursor_x) .. "," .. tostring(drill.cursor_y), 1.0, "drill", "cursor_sync", { cooldown = delay, from = tostring(prev.x) .. "," .. tostring(prev.y), stage = drill.stage, to = tostring(drill.cursor_x) .. "," .. tostring(drill.cursor_y) })
+			end
 			if delay > 0 then
 				mod._drill_move_cooldown = delay
 			else

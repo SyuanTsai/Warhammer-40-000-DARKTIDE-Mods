@@ -14,6 +14,7 @@ mod._bal = {
 	lazy_limit = 0.35,
 	skip_chance = 0.25,
 	apply_skip_chance = 0.12,
+	stage = nil,
 	kp = 0.43,
 	kd = 0.10,
 	x = 0, y = 0,
@@ -27,10 +28,20 @@ mod._bal = {
 
 local st = mod._bal
 local balance_active = false
+local active_balance_key = nil
 local balance_completed = false
+
+local function _is_active_balance_mg(mg)
+	return mg ~= nil and active_balance_key == tostring(mg)
+end
+
+local function _stage(mg)
+	return mg and mg.current_stage and mg:current_stage() or mg and mg._current_stage
+end
 
 local function _reset_balance_tracking()
 	st.timer = 0
+	st.stage = nil
 	st.x, st.y = 0, 0
 	st.vx, st.vy = 0, 0
 	st.dist = 0
@@ -83,25 +94,35 @@ local function _apply_balance_profile()
 end
 
 mod:hook_safe("MinigameBalanceView", "_update_cursor", function(self)
-	if not S("enable_balance") then return end
+	if not S("enable_balance") then
+		mod._debug_event_change("balance_sample_blocked", "setting_disabled", "balance", "sample", { reason = "setting_disabled" })
+		return
+	end
 	local ext = self._minigame_extension
 	local mg = ext and ext:minigame(MinigameSettings.types.balance)
 	if not mg then
-        mod._debug_event_throttle("balance_no_mg_event", 1.5, "balance", "wait", { reason = "no_minigame" })
-        return
-    end
+		mod._debug_event_throttle("balance_no_mg_event", 1.5, "balance", "wait", { reason = "no_minigame" })
+		return
+	end
 
-	if mg.is_completed and mg:is_completed() then return end
+	if mg.is_completed and mg:is_completed() then
+		mod._debug_event_change("balance_sample_blocked", "completed", "balance", "sample", { reason = "completed" })
+		return
+	end
 	local state = mg.state and mg:state()
 	if state and state ~= MinigameSettings.game_states.gameplay then
-        mod._debug_event_throttle("balance_not_gameplay_event", 1.5, "balance", "wait", { reason = "not_gameplay", state = state })
-        return
-    end
+		mod._debug_event_throttle("balance_not_gameplay_event", 1.5, "balance", "wait", { reason = "not_gameplay", state = state })
+		return
+	end
 
 	local p = mg:position()
 	st.x, st.y = p.x, p.y
 	st.dist = math.sqrt(p.x * p.x + p.y * p.y)
+	st.stage = _stage(mg)
 	st.timer = 0.05
+	if mod._debug_enabled() then
+		mod._debug_event_throttle("balance_sample_event", 0.75, "balance", "sample", { current = string.format("%.3f,%.3f", st.x, st.y), dist = st.dist, reason = "sampled", stage = st.stage })
+	end
 end)
 
 local function on_update(dt)
@@ -132,56 +153,76 @@ local function on_update(dt)
 	end
 
 	if balance_active and st.enabled and st.timer > 0 then
-		mod._debug_event_throttle("balance_state_event", 1.0, "balance", "active", { dist = st.dist or 0, vx = st.vx or 0, vy = st.vy or 0, delayed_dist = st.delayed_dist or 0 })
+		if mod._debug_enabled() then
+			mod._debug_event_throttle("balance_state_event", 1.0, "balance", "active", { dist = st.dist or 0, vx = st.vx or 0, vy = st.vy or 0, delayed_dist = st.delayed_dist or 0 })
+		end
 	end
 end
 
-mod:hook_safe("MinigameBalance", "start", function()
-	if not S("enable_balance") then return end
+mod:hook_safe("MinigameBalance", "start", function(self, player)
+	if not mod._is_local_minigame_player(player) then
+		mod._debug_event("balance", "blocked", { reason = "remote_player", server = self and self._is_server, stage = _stage(self) })
+		return
+	end
+
+	if not S("enable_balance") then
+		mod._debug_event("balance", "blocked", { reason = "setting_disabled", server = self and self._is_server, stage = _stage(self) })
+		return
+	end
 	_reset_balance_tracking()
 	balance_active = true
+	active_balance_key = tostring(self)
 	balance_completed = false
 	st.enabled = true
+	st.stage = _stage(self)
+	mod._debug_run_start("balance")
 	_apply_balance_profile()
-	mod._debug_event("balance", "start", { kd = st.kd, kp = st.kp, scale = st.scale, speed = st.speed })
+	mod._debug_event("balance", "start", { kd = st.kd, kp = st.kp, scale = st.scale, server = self and self._is_server, speed = st.speed, stage = _stage(self) })
 end)
-mod:hook_safe("MinigameBalance", "stop", function()
-	if balance_active and not balance_completed then
-		mod._debug_event("balance", "stop")
+
+local function _balance_cleanup(reason)
+	if balance_active and reason then
+		mod._debug_run_end("balance", "cleanup", { reason = reason, stage = st.stage })
 	end
 
 	balance_active = false
-	balance_completed = false
+	active_balance_key = nil
+	balance_completed = reason == "complete"
 	_reset_balance_tracking()
-end)
-mod:hook_safe("MinigameBalance", "complete", function()
-	if balance_active then
-		mod._debug_event("balance", "complete")
-	end
+end
 
-	balance_active = false
-	balance_completed = true
-	_reset_balance_tracking()
+mod:hook_safe("MinigameBalance", "stop", function(self)
+	if _is_active_balance_mg(self) then
+		_balance_cleanup(balance_active and not balance_completed and "stop" or nil)
+	else
+		mod._debug_event_throttle("balance_inactive_lifecycle_event", 1.5, "balance", "cleanup", { reason = "inactive_stop" })
+	end
+end)
+mod:hook_safe("MinigameBalance", "complete", function(self)
+	if _is_active_balance_mg(self) then
+		_balance_cleanup(balance_active and "complete" or nil)
+	else
+		mod._debug_event_throttle("balance_inactive_lifecycle_event", 1.5, "balance", "cleanup", { reason = "inactive_complete" })
+	end
 end)
 
 local function on_setting(id)
 	if id == "balance_solve_speed" then _apply_balance_profile() end
-	if id == "enable_balance" and not S("enable_balance") then _reset_balance_tracking() end
+	if id == "enable_balance" and not S("enable_balance") then _balance_cleanup(balance_active and "setting_changed" or nil) end
 end
 local function on_enabled()
 	st.enabled = true
 	_apply_balance_profile()
 end
 local function on_disabled()
-	balance_active = false
-	balance_completed = false
+	_balance_cleanup(balance_active and "disabled" or nil)
 	st.enabled = false
-	_reset_balance_tracking()
 end
 local function on_round_end()
-	balance_active = false
-	balance_completed = false
-	_reset_balance_tracking()
+	_balance_cleanup(balance_active and "round_end" or nil)
+end
+local function on_unload()
+	_balance_cleanup(balance_active and "unload" or nil)
 end
 
 mod._reg("update", on_update)
@@ -189,7 +230,7 @@ mod._reg("setting_changed", on_setting)
 mod._reg("enabled", on_enabled)
 mod._reg("disabled", on_disabled)
 mod._reg("round_end", on_round_end)
-mod._reg("unload", on_round_end)
+mod._reg("unload", on_unload)
 
 function mod._bal_correction(axis, vel, dist, strength)
 	local response = axis * strength * (st.kp or 0.43) + (vel or 0) * strength * (st.kd or 0.10)

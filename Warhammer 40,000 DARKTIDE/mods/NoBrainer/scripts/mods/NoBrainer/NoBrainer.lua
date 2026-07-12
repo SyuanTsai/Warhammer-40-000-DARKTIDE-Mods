@@ -19,7 +19,7 @@ mod._clear_cache = function()
     end
 end
 
-mod._debug_state = { throttle = {}, changes = {}, rate = { window_start = 0, count = 0, suppressed = false } }
+mod._debug_state = { throttle = {}, changes = {}, runs = {}, run_ids = {}, rate = { window_start = 0, count = 0, suppressed = false } }
 mod._time = function(clock)
 	local time_manager = Managers.time
 	if not time_manager then
@@ -34,6 +34,186 @@ mod._debug_enabled = function()
 end
 local function debug_now()
 	return mod._time("gameplay") or mod._time("main") or 0
+end
+
+local function debug_time()
+	local value = mod._time("gameplay")
+	if value then
+		return value, "gameplay"
+	end
+
+	value = mod._time("main")
+	if value then
+		return value, "main"
+	end
+
+	return 0, "fallback"
+end
+
+local function debug_clock_time(clock)
+	if clock == "gameplay" then
+		return mod._time("gameplay") or 0, "gameplay"
+	end
+
+	if clock == "main" then
+		return mod._time("main") or 0, "main"
+	end
+
+	return 0, "fallback"
+end
+
+local debug_kind_by_tag = {
+	decode = "decode_symbols",
+	search = "decode_search",
+	drill = "drill",
+	frequency = "frequency",
+	balance = "balance",
+	expedition = "expedition_map",
+	scan = "scan",
+}
+
+local integer_debug_keys = {
+	added = true,
+	assigned = true,
+	before = true,
+	count = true,
+	from = true,
+	highlighted = true,
+	impacted = true,
+	item = true,
+	items = true,
+	limit = true,
+	removed = true,
+	run = true,
+	scannables = true,
+	slot = true,
+	speed = true,
+	stage = true,
+	target = true,
+	target_index = true,
+	target_widgets = true,
+	to = true,
+}
+
+local input_debug_events = {
+	action = true,
+	blocked = true,
+	correction = true,
+	hold_blocked = true,
+	hold_finished = true,
+	hold_started = true,
+	input = true,
+	primary_input = true,
+	submit_sent = true,
+	synthetic_hold = true,
+	synthetic_press = true,
+	synthetic_release = true,
+}
+
+mod._debug_action_alias = function(action, tag)
+	if action == "move" or action == "move_controller" then
+		return "move_vector"
+	end
+
+	if action == "move_left" or action == "move_right"
+		or action == "move_forward" or action == "move_backward" then
+		return "move_discrete"
+	end
+
+	if action == "action_one_pressed" then
+		return tag == "scan" and "scan_press" or "primary_press"
+	end
+
+	if action == "action_one_released" then
+		return tag == "scan" and "scan_release" or "primary_release"
+	end
+
+	if action == "action_one_hold" or action == "interact_hold"
+		or action == "interact_primary_hold" or action == "jump_held" then
+		return tag == "scan" and action == "action_one_hold" and "scan_hold" or "primary_hold"
+	end
+
+	return nil
+end
+
+local function debug_practice_active()
+	return mod._practice_active and mod._practice_active() == true or false
+end
+
+local function enrich_debug_fields(tag, event, fields)
+	local run = mod._debug_state.runs[tag]
+	local has_fields = type(fields) == "table"
+
+	if not run and not has_fields then
+		return fields
+	end
+
+	local enriched = {}
+	if has_fields then
+		for key, value in pairs(fields) do
+			enriched[key] = value
+		end
+	end
+
+	if run then
+		local now, source = debug_clock_time(run.time_source)
+		local t_rel = now - run.started_at
+		if t_rel < 0 then
+			t_rel = 0
+		end
+
+		enriched.run = run.id
+		enriched.kind = run.kind
+		enriched.t_rel = t_rel
+		enriched.time_source = source
+
+		if run.practice then
+			enriched.practice = true
+		end
+	end
+
+	if enriched.action ~= nil and enriched.action_alias == nil and input_debug_events[event] then
+		enriched.action_alias = mod._debug_action_alias(enriched.action, tag)
+	end
+
+	return enriched
+end
+
+mod._debug_run_active = function(tag)
+	return mod._debug_state.runs[tag] ~= nil
+end
+
+mod._debug_run_start = function(tag, fields)
+	if not mod._debug_enabled() then
+		return nil, fields
+	end
+
+	local now, source = debug_time()
+	local run_ids = mod._debug_state.run_ids
+	local id = (run_ids[tag] or 0) + 1
+	run_ids[tag] = id
+	mod._debug_state.runs[tag] = {
+		id = id,
+		kind = debug_kind_by_tag[tag] or tag,
+		practice = debug_practice_active(),
+		started_at = now,
+		time_source = source,
+	}
+
+	return id, fields
+end
+
+mod._debug_run_end = function(tag, event, fields)
+	if not mod._debug_state.runs[tag] then
+		return
+	end
+
+	mod._debug_event(tag, event or "cleanup", fields)
+	mod._debug_state.runs[tag] = nil
+end
+
+mod._debug_run_clear = function(tag)
+	mod._debug_state.runs[tag] = nil
 end
 
 local function debug_rate_allows()
@@ -90,7 +270,16 @@ local function format_debug_fields(fields)
 	local parts = {}
 	for i = 1, #keys do
 		local key = keys[i]
-		parts[#parts + 1] = tostring(key) .. "=" .. format_debug_value(fields[key])
+		local value = fields[key]
+		local text
+
+		if type(value) == "number" and integer_debug_keys[key] then
+			text = string.format("%d", math.floor(value + 0.5))
+		else
+			text = format_debug_value(value)
+		end
+
+		parts[#parts + 1] = tostring(key) .. "=" .. text
 	end
 
 	return table.concat(parts, " ")
@@ -116,7 +305,7 @@ mod._debug_event = function(tag, event, fields)
         return
     end
 
-	local formatted = format_debug_fields(fields)
+	local formatted = format_debug_fields(enrich_debug_fields(tag, event, fields))
 	if formatted ~= "" then
 		mod:echo(string.format("[NB debug][%s][%s] %s", tostring(tag or "general"), tostring(event or "event"), formatted))
 	else
@@ -185,9 +374,35 @@ mod._debug_event_change = function(key, value, tag, event, fields)
 	changes[key] = value_text
 	mod._debug_event(tag, event, fields)
 end
+mod._debug_event_change_throttle = function(key, value, seconds, tag, event, fields)
+	if not mod._debug_enabled() then
+        return
+    end
+
+	local changes = mod._debug_state.changes
+	local value_text = tostring(value)
+
+	if changes[key] == value_text then
+        return
+    end
+
+	local now = debug_now()
+	local throttle = mod._debug_state.throttle
+	local throttle_key = key .. ":throttle"
+	local next_at = throttle[throttle_key] or 0
+
+	if now < next_at then
+        return
+    end
+
+	changes[key] = value_text
+	throttle[throttle_key] = now + (seconds or 1)
+	mod._debug_event(tag, event, fields)
+end
 mod._clear_debug_state = function()
 	table.clear(mod._debug_state.throttle)
 	table.clear(mod._debug_state.changes)
+	table.clear(mod._debug_state.runs)
 	mod._debug_state.rate.window_start = 0
 	mod._debug_state.rate.count = 0
 	mod._debug_state.rate.suppressed = false
@@ -350,15 +565,15 @@ end
 
 mod.on_disabled = function()
     mod._clear_cache()
-    mod._clear_debug_state()
     _fire(mod._on_disabled)
     _reset_runtime("disabled")
+	mod._clear_debug_state()
 end
 
 mod.on_game_state_changed = function(st, name)
 	if st == "exit" and name == "StateGameplay" then
-        mod._clear_debug_state()
         _reset_runtime("gameplay_exit")
+		mod._clear_debug_state()
     end
 end
 mod.on_unload = function(exit_game)

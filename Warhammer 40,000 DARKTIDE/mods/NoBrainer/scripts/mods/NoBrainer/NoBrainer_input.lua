@@ -19,9 +19,16 @@ local MOVE_ACTIONS = {
 	move = true,
 	move_controller = true,
 }
+local scan_debug_route_overrides = {}
 
 local function _is_primary_hold_action(action)
 	return PRIMARY_HOLD_ACTIONS[action] == true
+end
+
+local function _scan_action_relevant(action)
+	return action == "action_one_pressed"
+		or action == "action_one_released"
+		or action == "action_one_hold"
 end
 
 local function _minigame_view_active()
@@ -241,7 +248,9 @@ end
 local function _balance(action, result)
 	if not S("enable_balance") then return result end
 	local bal = mod._bal
-	if not bal or bal.timer <= 0 or not bal.enabled then return result end
+	if not bal or bal.timer <= 0 or not bal.enabled then
+		return result
+	end
 
 	local scale = bal.scale or 0
 
@@ -252,11 +261,19 @@ local function _balance(action, result)
 	if scale < 0.95 then
 		use_x, use_y, use_dist = bal.delayed_x, bal.delayed_y, bal.delayed_dist
 		gate_vx, gate_vy = bal.delayed_vx, bal.delayed_vy
-		if math_random() < (bal.skip_chance or 0) then return result end
+		if math_random() < (bal.skip_chance or 0) then
+			if mod._debug_enabled() then
+				mod._debug_event_throttle("balance_input_skip_event", 1.0, "balance", "input", { action = action, reason = "skip", scale = scale })
+			end
+			return result
+		end
 	end
 
 	if use_dist <= lazy_limit then
 		if scale < 0.95 or (math_abs(gate_vx) <= 0.05 and math_abs(gate_vy) <= 0.05) then
+			if mod._debug_enabled() then
+				mod._debug_event_throttle("balance_input_lazy_event", 1.0, "balance", "input", { action = action, dist = use_dist or 0, lazy_limit = lazy_limit, reason = "lazy_deadzone", scale = scale, vx = gate_vx or 0, vy = gate_vy or 0 })
+			end
 			return result
 		end
 	end
@@ -268,22 +285,34 @@ local function _balance(action, result)
 		local x = correction_x and -correction_x or 0
 		local y = correction_y or 0
 
-		if x == 0 and y == 0 then return result end
-		if scale < 0.95 and math_random() < (bal.apply_skip_chance or 0) then return result end
+		if x == 0 and y == 0 then
+			if mod._debug_enabled() then
+				mod._debug_event_throttle("balance_input_zero_event", 1.0, "balance", "input", { action = action, reason = "zero_correction", scale = scale })
+			end
+			return result
+		end
+		if scale < 0.95 and math_random() < (bal.apply_skip_chance or 0) then
+			if mod._debug_enabled() then
+				mod._debug_event_throttle("balance_input_apply_skip_event", 1.0, "balance", "input", { action = action, reason = "apply_skip", scale = scale })
+			end
+			return result
+		end
 
-		mod._debug_event_throttle("balance_correction_event", 1.0, "balance", "correction", {
-			action = action,
-			correction_x = correction_x or 0,
-			correction_y = correction_y or 0,
-			dist = use_dist or 0,
-			out_x = x,
-			out_y = y,
-			scale = scale,
-			vx = gate_vx or 0,
-			vy = gate_vy or 0,
-			x = use_x or 0,
-			y = use_y or 0,
-		})
+		if mod._debug_enabled() then
+			mod._debug_event_throttle("balance_correction_event", 1.0, "balance", "correction", {
+				action = action,
+				correction_x = correction_x or 0,
+				correction_y = correction_y or 0,
+				dist = use_dist or 0,
+				out_x = x,
+				out_y = y,
+				scale = scale,
+				vx = gate_vx or 0,
+				vy = gate_vy or 0,
+				x = use_x or 0,
+				y = use_y or 0,
+			})
+		end
 		return Vector3(x, y, 0)
 	end
 
@@ -302,23 +331,28 @@ local function _balance(action, result)
 	end
 
 	if scale < 0.95 and v and math_random() < (bal.apply_skip_chance or 0) then
+		if mod._debug_enabled() then
+			mod._debug_event_throttle("balance_input_apply_skip_event", 1.0, "balance", "input", { action = action, reason = "apply_skip", scale = scale })
+		end
 		return result
 	end
 
 	if v then
 		local cur = type(current) == "number" and current or 0
-		mod._debug_event_throttle("balance_correction_event", 1.0, "balance", "correction", {
-			action = action,
-			correction_x = correction_x or 0,
-			correction_y = correction_y or 0,
-			dist = use_dist or 0,
-			out = math_max(cur, v),
-			scale = scale,
-			vx = gate_vx or 0,
-			vy = gate_vy or 0,
-			x = use_x or 0,
-			y = use_y or 0,
-		})
+		if mod._debug_enabled() then
+			mod._debug_event_throttle("balance_correction_event", 1.0, "balance", "correction", {
+				action = action,
+				correction_x = correction_x or 0,
+				correction_y = correction_y or 0,
+				dist = use_dist or 0,
+				out = math_max(cur, v),
+				scale = scale,
+				vx = gate_vx or 0,
+				vy = gate_vy or 0,
+				x = use_x or 0,
+				y = use_y or 0,
+			})
+		end
 		return math_max(cur, v)
 	end
 	return result
@@ -343,32 +377,49 @@ local function _scan_hold_duration()
 end
 
 local function _scan(action, result)
-    if not S("enable_auto_scan") then return result end
+	if not S("enable_auto_scan") then return result end
 
 	if mod._scan_holding then
 		if action == "action_one_hold" then
 			local now = mod._time("gameplay")
+			if not now then
+				mod._debug_event_throttle("scan_input_blocked_event", 0.5, "scan", "input", { action = action, reason = "no_time" })
+				return result
+			end
 			if now and now > mod._scan_hold_until then
-				mod._debug_event("scan", "hold_finished", { action = action, hold_until = mod._scan_hold_until, now = now, target = tostring(mod._scan_hold_target) })
+				mod._debug_run_end("scan", "hold_finished", { action = action, hold_until = mod._scan_hold_until, now = now, target = tostring(mod._scan_hold_target) })
 				mod._scan_holding = false
 				mod._scan_hold_target = nil
 				return result
-            end
-            return true
-        end
-        if action == "action_one_released" then
-            return false
-        end
-        return result
-    end
+			end
+			return true
+		end
+		if action == "action_one_released" then
+			return false
+		end
+		return result
+	end
 
-    if (mod._current_action or "") ~= "action_scan" then return result end
-    if not mod._scan_auto_pending then return result end
-    if action == "action_one_pressed" then
-        local player_manager = Managers.player
-        local player = player_manager and player_manager:local_player_safe(1)
-        local unit = player and player.player_unit
-        local ext = unit and ScriptUnit.has_extension(unit, "unit_data_system")
+	local current_action = mod._current_action or ""
+	local scan_active_action = current_action == "action_scan" or current_action == "action_scan_confirm"
+
+	if not mod._scan_auto_pending then
+		if scan_active_action and _scan_action_relevant(action) and action == "action_one_pressed" then
+			mod._debug_event_throttle("scan_input_no_pending_event", 1.5, "scan", "input", { action = action, reason = "no_pending" })
+		end
+		return result
+	end
+
+	if not scan_active_action then
+		mod._debug_event_throttle("scan_input_wrong_action_event", 1.5, "scan", "input", { action = action, current = mod._current_action, reason = "wrong_action" })
+		return result
+	end
+
+	if action == "action_one_pressed" then
+		local player_manager = Managers.player
+		local player = player_manager and player_manager:local_player_safe(1)
+		local unit = player and player.player_unit
+		local ext = unit and ScriptUnit.has_extension(unit, "unit_data_system")
 		local scan = ext and ext:read_component("scanning")
 		local target = scan and scan.scannable_unit
 		if not target then
@@ -385,20 +436,24 @@ local function _scan(action, result)
 			local scannable_ext = Unit.alive(target) and ScriptUnit.has_extension(target, "mission_objective_zone_scannable_system")
 			if scannable_ext and scannable_ext:is_active() then
 				local now = mod._time("gameplay")
-				if not now then return result end
+				if not now then
+					mod._debug_event_throttle("scan_input_blocked_event", 0.5, "scan", "input", { action = action, reason = "no_time", target = tostring(target) })
+					return result
+				end
 				mod._scan_auto_pending = false
 				mod._scan_holding = true
 				mod._scan_hold_target = target
 				mod._scan_hold_until = now + _scan_hold_duration()
-                mod._scan_cooldown = 0.3
+				mod._scan_cooldown = 0.3
+				table.clear(scan_debug_route_overrides)
 				mod._debug_event("scan", "hold_started", { action = action, hold_until = mod._scan_hold_until, target = tostring(target) })
-                return true
-            end
+				return true
+			end
 
 			mod._debug_event_throttle("scan_hold_blocked_event", 0.5, "scan", "hold_blocked", { action = action, reason = "inactive_target", target = tostring(target) })
-        end
-    end
-    return result
+		end
+	end
+	return result
 end
 
 local function _any_minigame_active()
@@ -427,12 +482,42 @@ local function _apply_route(fn, action, result)
 	return next_result
 end
 
+local function _debug_route_change(route, action, source, before, after)
+	if before ~= after and mod._debug_enabled() then
+		if route == "scan" then
+			local override = tostring(action) .. ":" .. tostring(source)
+			if scan_debug_route_overrides[override] then
+				return
+			end
+
+			scan_debug_route_overrides[override] = true
+		end
+
+		mod._debug_event_throttle("input_route_override_" .. route, 0.75, "input", "input", {
+			action = action,
+			reason = "route_override",
+			route = route,
+			source = source,
+		})
+	end
+end
+
+local function _apply_named_route(route, fn, action, result, source)
+	local next_result = _apply_route(fn, action, result)
+	_debug_route_change(route, action, source, result, next_result)
+	return next_result
+end
+
 function mod._route_input(action, result, source)
 	local r = result
 
-	if not mod:is_enabled() then return r end
+	if not mod:is_enabled() then
+		mod._debug_event_throttle("input_mod_disabled_event", 2.0, "input", "blocked", { action = action, reason = "mod_disabled", source = source })
+		return r
+	end
 
 	if mod._practice_active and mod._practice_active() then
+		mod._debug_event_throttle("input_practice_active_event", 1.0, "input", "blocked", { action = action, reason = "practice_active", source = source })
 		if action == "sprint" or action == "crouch" or action == "jump"
 			or action == "weapon_reload" or action == "wield_scroll" or action == "wield_switch"
 			or action == "action_one_pressed" or action == "action_one_released"
@@ -453,16 +538,18 @@ function mod._route_input(action, result, source)
 		return r
 	end
 
-		if not _any_minigame_active() then return r end
-		r = _apply_route(_decode, action, r)
-		r = _apply_route(function(a, value)
-            return _exp_move(a, value, source)
-        end, action, r)
-		r = _apply_route(_expedition, action, r)
-	r = _apply_route(_drill, action, r)
-	r = _apply_route(_frequency, action, r)
-	r = _apply_route(_scan, action, r)
-	r = _apply_route(_balance, action, r)
+	if not _any_minigame_active() then
+		return r
+	end
+	r = _apply_named_route("decode", _decode, action, r, source)
+	r = _apply_named_route("expedition_move", function(a, value)
+		return _exp_move(a, value, source)
+	end, action, r, source)
+	r = _apply_named_route("expedition_submit", _expedition, action, r, source)
+	r = _apply_named_route("drill", _drill, action, r, source)
+	r = _apply_named_route("frequency", _frequency, action, r, source)
+	r = _apply_named_route("scan", _scan, action, r, source)
+	r = _apply_named_route("balance", _balance, action, r, source)
 	return r
 end
 
