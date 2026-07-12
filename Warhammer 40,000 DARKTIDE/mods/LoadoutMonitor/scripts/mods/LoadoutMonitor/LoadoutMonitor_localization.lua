@@ -1,32 +1,41 @@
 local mod = get_mod("LoadoutMonitor")
 local locr = {}
-local function color_text(R,G,B,text)
+local lid = Application.user_setting("language_id")
+local _io = Mods.lua.io
+
+mod.color_text = function(R,G,B,text)
 	return string.format("{#color(%s,%s,%s)}%s{#reset()}",R,G,B,text)
 end
-local function generate_translation(t,prefix,suffix)
+
+local function generate_translation(t,prefix,suffix,lids)
+	if type(t) ~= "table" then return end
 	local prefix = prefix or ""
 	local suffix = suffix or ""
+	local full_id = ""
 	for id,text in pairs(t) do
-		local entry = {
-			en = text[1],
-			["zh-cn"] = text[2],
-		}
-		if text[3] then
-			entry["zh-tw"] = text[3]
+		full_id = prefix..id..suffix
+		locr[full_id] = locr[full_id] or {}
+		if type(text) == "table" and type(lids) == "table" and #lids == #text then
+			for i = 1,#lids do
+				locr[full_id][lids[i]] = text[i]
+			end
+		elseif type(text) == "string" and type(lids) == "string" then
+			locr[full_id][lids] = text	
 		end
-		locr[prefix..id..suffix] = entry
 	end
 end
-locr = {	mod_name = {
+locr = {	
+	mod_name = {
 		en = "Loadout Monitor",
 		["zh-cn"] = "配置监控器",
 		["zh-tw"] = "大廳顯示裝備",
 	},
 	mod_description = {
-		en = "Notable talents:\nVeteran:"..color_text(0,206,209,"Field Improvisation").." "..color_text(250,128,114,"Low Profile").."\nSkitarius:"..color_text(77,255,46,"Medicae Servo-Skull"),
-		["zh-cn"] = "特别天赋：\n老兵："..color_text(0,206,209,"临场发挥").." "..color_text(250,128,114,"放低姿态").."\n护教军士兵："..color_text(77,255,46,"医疗伺服头骨"),
-		["zh-tw"] = "特殊天賦：\n老兵："..color_text(0,206,209,"臨場發揮").." "..color_text(250,128,114,"低調").."\n護教軍："..color_text(77,255,46,"醫療伺服頭骨"),
-	},	lobby_exhibition = {
+		en = "Notable talents:\nVeteran:"..mod.color_text(0,206,209,"Field Improvisation").." "..mod.color_text(250,128,114,"Low Profile").."\nSkitarius:"..mod.color_text(77,255,46,"Medicae Servo-Skull"),
+		["zh-cn"] = "特别天赋：\n老兵："..mod.color_text(0,206,209,"临场发挥").." "..mod.color_text(250,128,114,"放低姿态").."\n护教军士兵："..mod.color_text(77,255,46,"医疗伺服头骨"),
+		["zh-tw"] = "特殊天賦：\n老兵："..mod.color_text(0,206,209,"臨場發揮").." "..mod.color_text(250,128,114,"低調").."\n護教軍："..mod.color_text(77,255,46,"醫療伺服頭骨"),
+	},
+	lobby_exhibition = {
 		en = "In lobby",
 		["zh-cn"] = "在准备大厅中",
 		["zh-tw"] = "在大廳中",
@@ -666,15 +675,14 @@ locr = {	mod_name = {
 
 	user_custom_feats_abbreviation_description = {
 		en = "1:Ability   2:Blitz   3:Aura   4:Keystone",
-		["zh-cn"] = "1：技能   2：闪击   3：光环   4：基石",
 		["zh-tw"] = "1：戰鬥技能   2：閃擊   3：光環   4：鑰石",		
+		["zh-cn"] = "1：技能   2：闪击   3：光环   4：基石",		
 	},
 }
 for i = 1,4 do
 	locr[string.format("player_Feats_order_%s",i)] = {
 		en = "Slot: "..tostring(i),
 		["zh-cn"] = "槽位："..tostring(i),
-		["zh-tw"] = "欄位："..tostring(i),
 	}
 end
 local def_abb = {
@@ -797,7 +805,18 @@ local def_abb = {
 	cryptic_overload_keystone = {"PO","过载","過載",},
 	-- = {"","",},
 }
-generate_translation(def_abb,"def_")
+generate_translation(def_abb,"def_","",{"en","zh-cn","zh-tw"})
+
+local _mod_directory = "./../mods/"
+local my_lid = "LoadoutMonitor/scripts/mods/LoadoutMonitor/LoadoutMonitor_localization_" .. lid
+
+local file = _io.open(_mod_directory .. my_lid .. ".lua","r")
+if file ~= nil then
+	file:close()
+	my_lid = mod:io_dofile(my_lid)
+	if my_lid.common then generate_translation(my_lid.common,nil,nil,lid) end
+	if my_lid.talents then generate_translation(my_lid.talents,"def_",nil,lid) end
+end
 
 return locr
 
@@ -808,4 +827,3 @@ return locr
 	["zh-cn"] = "",
 },
 --]]
-
