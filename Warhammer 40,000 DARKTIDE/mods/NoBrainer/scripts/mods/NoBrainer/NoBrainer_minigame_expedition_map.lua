@@ -69,7 +69,11 @@ local function _reset_readiness(reason)
 	cooldown_logged_until = 0
 
 	if reason then
-		mod._debug_event("expedition", "readiness_reset", { reason = reason })
+		if mod._debug_run_active("expedition") then
+			mod._debug_run_end("expedition", "cleanup", { reason = reason })
+		else
+			mod._debug_event("expedition", "readiness_reset", { reason = reason })
+		end
 	end
 end
 
@@ -112,8 +116,23 @@ local function _all_opps_done(handler)
 	return true
 end
 
-local function _clear_auto_mark()
+local function _clear_auto_mark(reason)
 	poll_timer = 0
+	local has_state = mod._exp_auto_mark ~= nil
+		or active_since ~= nil
+		or registry_signature ~= nil
+		or registry_changed_at ~= nil
+		or next_mark_at ~= 0
+		or last_handler ~= nil
+	local has_run = mod._debug_run_active("expedition")
+
+	if reason and (has_state or has_run) then
+		if has_run then
+			mod._debug_run_end("expedition", "cleanup", { reason = reason or "unknown", target = mod._exp_auto_mark })
+		else
+			mod._debug_event("expedition", "cleanup", { reason = reason or "unknown", target = mod._exp_auto_mark })
+		end
+	end
 	mod._exp_auto_mark = nil
 	_reset_readiness(nil)
 end
@@ -124,26 +143,33 @@ local function _tick()
 	if not handler then
 		mod._exp_auto_mark = nil
 		if last_handler then
+			mod._debug_event_throttle("exp_no_handler_event", 1.5, "expedition", "blocked", { reason = "no_handler" })
 			last_handler = nil
-			_reset_readiness("no handler")
+			_reset_readiness("no_handler")
 		end
 		return
 	end
 
 	if handler ~= last_handler then
 		last_handler = handler
-		_reset_readiness("handler changed")
+		_reset_readiness("handler_changed")
 	end
 
 	local active = _call(handler, "is_active")
 	if active ~= true then
 		mod._exp_auto_mark = nil
-		_reset_readiness("inactive")
+		if active_since then
+			mod._debug_event_throttle("exp_inactive_event", 1.5, "expedition", "blocked", { reason = "inactive", state = active })
+			_reset_readiness("inactive")
+		else
+			_reset_readiness(nil)
+		end
 		return
 	end
 
 	if not active_since then
 		active_since = now
+		mod._debug_run_start("expedition")
 		mod._debug_event("expedition", "active_grace_start", { grace = ACTIVE_GRACE })
 		return
 	end
@@ -183,13 +209,20 @@ local function _tick()
 	local slot = player and player:slot()
 	local unit = player and player.player_unit
 	local pos = unit and Unit.alive(unit) and Unit.world_position(unit, 1)
-	if not slot or not pos then return end
-	if not Managers.state or not Managers.state.game_session then return end
+	if not slot or not pos then
+		mod._debug_event_throttle("exp_player_blocked_event", 1.5, "expedition", "blocked", { has_pos = pos ~= nil, has_slot = slot ~= nil, reason = not slot and "missing_slot" or "missing_position" })
+		return
+	end
+	if not Managers.state or not Managers.state.game_session then
+		mod._debug_event_throttle("exp_session_blocked_event", 1.5, "expedition", "blocked", { reason = "no_session" })
+		return
+	end
 
 	local psm = handler._player_slot_marked
 	local my_mark = psm and psm[slot]
 
 	if my_mark and my_mark ~= mod._exp_auto_mark then
+		mod._debug_event_change("exp_manual_mark", tostring(my_mark), "expedition", "blocked", { reason = "manual_mark", slot = slot, target = my_mark })
 		mod._exp_auto_mark = nil
 		return
 	end
@@ -199,10 +232,12 @@ local function _tick()
 		local slots = _call(handler, "player_slots_by_level_marked", last)
 		if slots and slots[slot] then
 			if not _call(handler, "is_level_completed", last) then
+				mod._debug_event_change("exp_existing_auto_mark", tostring(last), "expedition", "wait", { reason = "valid_existing_auto_mark", slot = slot, target = last })
 				return
 			end
 		elseif _call(handler, "is_level_completed", last) then
 		else
+			mod._debug_event_change("exp_lost_auto_mark", tostring(last), "expedition", "blocked", { reason = "lost_auto_mark", slot = slot, target = last })
 			mod._exp_auto_mark = nil
 			return
 		end
@@ -258,13 +293,15 @@ local function _tick()
 		else
 			mod._debug_event("expedition", "mark_failed", { assigned = assigned, impacted = impacted, reason = mark_reason, target = nearest })
 		end
+	else
+		mod._debug_event_change_throttle("exp_no_candidate_event", tostring(registry_signature) .. ":" .. tostring(slot) .. ":" .. tostring(mark_reason), 5.0, "expedition", "blocked", { reason = "no_candidate", signature = registry_signature, slot = slot })
 	end
 end
 
 local function on_update(dt)
 	if not mod:is_enabled() then return end
 	if not S("enable_expedition_automark") then
-		_clear_auto_mark()
+		_clear_auto_mark("setting_disabled")
 		return
 	end
 	poll_timer = poll_timer + dt
@@ -274,12 +311,12 @@ local function on_update(dt)
 end
 
 local function on_round_end()
-	_clear_auto_mark()
+	_clear_auto_mark("round_end")
 end
 
 mod._reg("update", on_update)
 mod._reg("round_end", on_round_end)
-mod._reg("disabled", _clear_auto_mark)
-mod._reg("unload", _clear_auto_mark)
+mod._reg("disabled", function() _clear_auto_mark("disabled") end)
+mod._reg("unload", function() _clear_auto_mark("unload") end)
 
 return true

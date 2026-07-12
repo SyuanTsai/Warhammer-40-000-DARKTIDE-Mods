@@ -111,12 +111,14 @@ end
 
 local function _reset_submit_settle(reason)
 	if mod._exp_on_target_since and mod._exp_on_target_since > 0 then
-		mod._debug_event_throttle("search_settle_reset_event", 0.5, "search", "settle_reset", {
-			cursor = tostring(mod._exp_on_target_cursor_x) .. "," .. tostring(mod._exp_on_target_cursor_y),
-			reason = reason or "changed",
-			stage = mod._exp_on_target_stage,
-			target = tostring(mod._exp_on_target_target_x) .. "," .. tostring(mod._exp_on_target_target_y),
-		})
+		if mod._debug_enabled() then
+			mod._debug_event_throttle("search_settle_reset_event", 0.5, "search", "settle_reset", {
+				cursor = tostring(mod._exp_on_target_cursor_x) .. "," .. tostring(mod._exp_on_target_cursor_y),
+				reason = reason or "changed",
+				stage = mod._exp_on_target_stage,
+				target = tostring(mod._exp_on_target_target_x) .. "," .. tostring(mod._exp_on_target_target_y),
+			})
+		end
 	end
 
 	mod._exp_on_target_since = 0
@@ -130,13 +132,15 @@ end
 local function _clear_pending_move(reason)
 	if mod._exp_pending_move then
 		local pending = mod._exp_pending_move
-		mod._debug_event_throttle("search_pending_clear_event", 0.5, "search", "move_sync_cleared", {
-			cursor = tostring(pending.cursor_x) .. "," .. tostring(pending.cursor_y),
-			dir = tostring(pending.dir_x) .. "," .. tostring(pending.dir_y),
-			reason = reason or "changed",
-			stage = pending.stage,
-			target = tostring(pending.target_x) .. "," .. tostring(pending.target_y),
-		})
+		if mod._debug_enabled() then
+			mod._debug_event_throttle("search_pending_clear_event", 0.5, "search", "move_sync_cleared", {
+				cursor = tostring(pending.cursor_x) .. "," .. tostring(pending.cursor_y),
+				dir = tostring(pending.dir_x) .. "," .. tostring(pending.dir_y),
+				reason = reason or "changed",
+				stage = pending.stage,
+				target = tostring(pending.target_x) .. "," .. tostring(pending.target_y),
+			})
+		end
 	end
 
 	mod._exp_pending_move = nil
@@ -161,8 +165,11 @@ local function _stage(mg)
 	return mg and mg.current_stage and mg:current_stage() or mg and mg._current_stage
 end
 
-local function _reset_snapshot()
+local function _reset_snapshot(reason)
 	local exp = mod._exp
+	if exp and (exp.active or exp.timer > 0) then
+		mod._debug_event_change("search_sample_reset", tostring(reason) .. ":" .. tostring(exp.stage) .. ":" .. tostring(exp.key), "search", "sample", { reason = reason or "unknown", stage = exp.stage })
+	end
 	exp.timer = 0
 	exp.active = false
 	exp.gameplay = false
@@ -194,8 +201,8 @@ local function _sample_search(mg)
 	local key = mg and tostring(mg) or nil
 
 	if key and exp.key and exp.key ~= key then
-		_clear_pending_move("minigame changed")
-		_reset_submit_settle("minigame changed")
+		_clear_pending_move("minigame_changed")
+		_reset_submit_settle("minigame_changed")
 		mod._exp_press_until = 0
 		mod._exp_release_until = 0
 		mod._exp_move_cooldown = 0
@@ -206,7 +213,10 @@ local function _sample_search(mg)
 	end
 
 	if not S("enable_expedition_auto_solve") or not mg or not mg.cursor_position then
-		_reset_snapshot()
+		local reason = not S("enable_expedition_auto_solve") and "setting_disabled"
+			or not mg and "no_minigame"
+			or "missing_cursor_api"
+		_reset_snapshot(reason)
 		return
 	end
 
@@ -237,6 +247,15 @@ local function _sample_search(mg)
 	else
 		exp.dir_x = 0
 		exp.dir_y = 0
+	end
+
+	if mod._debug_enabled() then
+		mod._debug_event_change_throttle("search_sample_event", tostring(stage) .. ":" .. tostring(exp.cursor_x) .. "," .. tostring(exp.cursor_y) .. ":" .. tostring(exp.target_x) .. "," .. tostring(exp.target_y) .. ":" .. tostring(gameplay) .. ":" .. tostring(completed), 1.0, "search", "sample", {
+			current = tostring(exp.cursor_x) .. "," .. tostring(exp.cursor_y),
+			reason = gameplay and "sampled" or completed and "completed" or "not_gameplay",
+			stage = stage,
+			target = tostring(exp.target_x) .. "," .. tostring(exp.target_y),
+		})
 	end
 end
 
@@ -350,8 +369,14 @@ mod:hook_require("scripts/ui/views/scanner_display_view/minigame_decode_search_v
 		_deps()
 		local mg = _mg(self)
 		_sample_search(mg)
-		if not S("enable_matching") or not ui_renderer then return end
-		if not mg or not mg.symbols or not mg.current_stage then return end
+		if not S("enable_matching") or not ui_renderer then
+			mod._debug_event_change("search_highlight_blocked", "disabled_or_renderer:" .. tostring(S("enable_matching")) .. ":" .. tostring(ui_renderer ~= nil), "search", "blocked", { reason = not S("enable_matching") and "setting_disabled" or "missing_renderer" })
+			return
+		end
+		if not mg or not mg.symbols or not mg.current_stage then
+			mod._debug_event_change("search_highlight_blocked", "missing_data:" .. tostring(mg) .. ":" .. tostring(mg and mg.symbols ~= nil) .. ":" .. tostring(mg and mg.current_stage ~= nil), "search", "blocked", { reason = not mg and "no_minigame" or "missing_highlight_data" })
+			return
+		end
 
 	   if self._nb_mm ~= mg then
             self._nb_mm = mg
@@ -363,7 +388,10 @@ mod:hook_require("scripts/ui/views/scanner_display_view/minigame_decode_search_v
         end
 
 		local pos = _find_target(mg)
-		if not pos then return end
+		if not pos then
+			mod._debug_event_change("search_highlight_blocked", "no_target:" .. tostring(mg and _stage(mg)), "search", "blocked", { reason = "no_target", stage = mg and _stage(mg) })
+			return
+		end
 
 		local matches = {}
 		for y = 0, CH - 1 do for x = 0, CW - 1 do
@@ -399,8 +427,8 @@ local function _clear_match_cache(mg)
 		mg._nb_mtc = nil
 	end
 
-	_clear_pending_move("target cache")
-	_reset_submit_settle("target cache")
+	_clear_pending_move("target_cache")
+	_reset_submit_settle("target_cache")
 end
 
 local function _mark_move_sent(cursor, target, dir, now)
@@ -419,14 +447,16 @@ local function _mark_move_sent(cursor, target, dir, now)
 		until_t = now + SEARCH_MOVE_PENDING_TIMEOUT,
 	}
 
-	_reset_submit_settle("move sent")
-	mod._debug_event("search", "move_sent", {
-		cooldown = delay,
-		cursor = tostring(cursor and cursor.x) .. "," .. tostring(cursor and cursor.y),
-		dir = tostring(dir and dir.x) .. "," .. tostring(dir and dir.y),
-		stage = exp and exp.stage,
-		target = tostring(target and target.x) .. "," .. tostring(target and target.y),
-	})
+	_reset_submit_settle("move_sent")
+	if mod._debug_enabled() then
+		mod._debug_event("search", "move_sent", {
+			cooldown = delay,
+			cursor = tostring(cursor and cursor.x) .. "," .. tostring(cursor and cursor.y),
+			dir = tostring(dir and dir.x) .. "," .. tostring(dir and dir.y),
+			stage = exp and exp.stage,
+			target = tostring(target and target.x) .. "," .. tostring(target and target.y),
+		})
+	end
 end
 
 function mod._exp_find_move_dir()
@@ -454,7 +484,9 @@ function mod._exp_find_move_dir()
 
 	local x = dx == 0 and 0 or dx > 0 and 1 or -1
 	local y = dy == 0 and 0 or dy > 0 and -1 or 1
-	mod._debug_event_throttle("search_move_plan_event", 1.0, "search", "move_plan", { cursor = tostring(exp.cursor_x) .. "," .. tostring(exp.cursor_y), dir = tostring(x) .. "," .. tostring(y), stage = exp.stage, target = tostring(exp.target_x) .. "," .. tostring(exp.target_y) })
+	if mod._debug_enabled() then
+		mod._debug_event_throttle("search_move_plan_event", 1.0, "search", "move_plan", { cursor = tostring(exp.cursor_x) .. "," .. tostring(exp.cursor_y), dir = tostring(x) .. "," .. tostring(y), stage = exp.stage, target = tostring(exp.target_x) .. "," .. tostring(exp.target_y) })
+	end
 
 	return Vector3(x, y, 0)
 end
@@ -469,12 +501,14 @@ function mod._exp_take_move_dir(now)
 
 	if _pending_move_active(now) then
 		local pending = mod._exp_pending_move
-		mod._debug_event_throttle("search_move_pending_event", 0.75, "search", "move_blocked", {
-			cursor = tostring(pending and pending.cursor_x) .. "," .. tostring(pending and pending.cursor_y),
-			dir = tostring(pending and pending.dir_x) .. "," .. tostring(pending and pending.dir_y),
-			reason = "pending_sync",
-			stage = pending and pending.stage,
-		})
+		if mod._debug_enabled() then
+			mod._debug_event_throttle("search_move_pending_event", 0.75, "search", "move_blocked", {
+				cursor = tostring(pending and pending.cursor_x) .. "," .. tostring(pending and pending.cursor_y),
+				dir = tostring(pending and pending.dir_x) .. "," .. tostring(pending and pending.dir_y),
+				reason = "pending_sync",
+				stage = pending and pending.stage,
+			})
+		end
 		return nil
 	end
 
@@ -503,14 +537,22 @@ function mod._exp_ready_to_submit(now)
 	if not exp or not now or exp.timer <= 0 or not exp.active then return false end
 	if not exp.gameplay then
         mod._debug_event_throttle("search_submit_not_gameplay_event", 1.0, "search", "submit_blocked", { reason = "not_gameplay", stage = exp.stage })
-        _reset_submit_settle("not gameplay")
+		_reset_submit_settle("not_gameplay")
         return false
     end
 
 	local cursor, target, stage = _cursor_target()
 
 	if not cursor or not target or not exp.on_target then
-		_reset_submit_settle("off target")
+		if mod._debug_enabled() then
+			mod._debug_event_throttle("search_submit_off_target_event", 1.0, "search", "submit_blocked", {
+				current = cursor and tostring(cursor.x) .. "," .. tostring(cursor.y) or "nil",
+				reason = not cursor and "missing_cursor" or not target and "missing_target" or "off_target",
+				stage = stage,
+				target = target and tostring(target.x) .. "," .. tostring(target.y) or "nil",
+			})
+		end
+		_reset_submit_settle("off_target")
 		return false
 	end
 
@@ -540,7 +582,9 @@ function mod._exp_ready_to_submit(now)
 		mod._exp_on_target_cursor_y = cursor.y
 		mod._exp_on_target_target_x = target.x
 		mod._exp_on_target_target_y = target.y
-		mod._debug_event("search", "settle_start", { cursor = tostring(cursor.x) .. "," .. tostring(cursor.y), stage = stage, target = tostring(target.x) .. "," .. tostring(target.y) })
+		if mod._debug_enabled() then
+			mod._debug_event("search", "settle_start", { cursor = tostring(cursor.x) .. "," .. tostring(cursor.y), stage = stage, target = tostring(target.x) .. "," .. tostring(target.y) })
+		end
 		return false
 	end
 
@@ -564,20 +608,20 @@ function mod._exp_handle_stage_changed(from_stage, to_stage)
 		end
 	end
 
-	_clear_pending_move("stage changed")
-	_reset_submit_settle("stage changed")
+	_clear_pending_move("stage_changed")
+	_reset_submit_settle("stage_changed")
 	mod._exp_submitted_stage = nil
 	mod._exp_submitted_until = 0
 end
 
 local function _exp_cleanup(reason)
 	if search_active and reason then
-		mod._debug_event("search", reason, { stage = mod._exp and mod._exp.stage })
+		mod._debug_run_end("search", "cleanup", { reason = reason, stage = mod._exp and mod._exp.stage })
 	end
 
 	search_active = false
 	search_completed = reason == "complete"
-	_reset_snapshot()
+	_reset_snapshot("cleanup")
 	mod._exp_press_until = 0
 	mod._exp_release_until = 0
 	mod._exp_move_cooldown = 0
@@ -599,13 +643,19 @@ end
 
 mod:hook_safe("MinigameDecodeSearch", "start", function(self, player)
 	_clear_match_cache(self)
-	if not mod._is_local_minigame_player(player) then return end
+	if not mod._is_local_minigame_player(player) then
+		mod._debug_event("search", "blocked", { reason = "remote_player", server = self._is_server, stage = self._current_stage })
+		return
+	end
 
 	if S("enable_expedition_auto_solve") then
 		search_active = true
 		search_completed = false
+		mod._debug_run_start("search")
 		_sample_search(self)
 		mod._debug_event("search", "start", { server = self._is_server, stage = self._current_stage })
+	else
+		mod._debug_event("search", "blocked", { reason = "setting_disabled", server = self._is_server, stage = self._current_stage })
 	end
 end)
 mod:hook("MinigameDecodeSearch", "stop", function(func, self, ...)
@@ -617,7 +667,7 @@ mod:hook("MinigameDecodeSearch", "stop", function(func, self, ...)
 		local ok, result = pcall(func, self, ...)
 		if not ok then
 			if _is_teardown_stop_error(result) then
-				mod._debug_event("search", "stop_teardown_race", { err = tostring(result), stage = self and _stage(self) })
+				mod._debug_event("search", "stop_teardown_race", { err = tostring(result), reason = "stop_teardown_race", stage = self and _stage(self) })
 				if active then _exp_cleanup(cleanup_reason or "stop_teardown_race") end
 				return nil
 			end
@@ -629,8 +679,11 @@ mod:hook("MinigameDecodeSearch", "stop", function(func, self, ...)
 		return result
 	end
 
-	mod._debug_event("search", "stop_invalid_unit", { stage = self and _stage(self) })
-	if active then _exp_cleanup(search_active and not search_completed and "stop_invalid_unit" or nil) end
+	if active then
+		_exp_cleanup(search_active and not search_completed and "stop_invalid_unit" or nil)
+	else
+		mod._debug_event("search", "cleanup", { reason = "stop_invalid_unit", stage = self and _stage(self) })
+	end
 end)
 mod:hook_safe("MinigameDecodeSearch", "complete", function(self)
 	if _is_active_search_mg(self) then _exp_cleanup("complete") end
@@ -647,8 +700,8 @@ mod:hook("MinigameDecodeSearch", "on_axis_set", function(func, self, t, x, y)
 
 		local np = self._cursor_position
 		if np and (np.x ~= cx or np.y ~= cy) then
-			_clear_pending_move("cursor moved")
-			_reset_submit_settle("cursor moved")
+			_clear_pending_move("cursor_moved")
+			_reset_submit_settle("cursor_moved")
 			mod._exp_last_move_at = t or _game_time() or 0
 			local delay = _exp_move_delay()
 			if delay > 0 then
@@ -683,8 +736,8 @@ local function on_update_exp(dt)
 
 	local prev = mod._exp_prev_cursor
 	if exp.cursor_x and exp.cursor_y and prev and (exp.cursor_x ~= prev.x or exp.cursor_y ~= prev.y) then
-		_clear_pending_move("cursor sync")
-		_reset_submit_settle("cursor sync")
+		_clear_pending_move("cursor_sync")
+		_reset_submit_settle("cursor_sync")
 		mod._exp_last_move_at = _game_time() or mod._exp_last_move_at or 0
 		local delay = _exp_move_delay()
 		if delay > 0 then

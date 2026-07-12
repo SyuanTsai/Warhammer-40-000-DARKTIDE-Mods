@@ -8,6 +8,18 @@ return {
 	options = {
 		widgets = {
 			{
+				setting_id    = "language",
+				type          = "dropdown",
+				default_value = "auto",
+				require_restart = true,
+				tooltip       = "language_tooltip",
+				options       = {
+					{ text = "language_auto",  value = "auto" },
+					{ text = "language_en",    value = "en" },
+					{ text = "language_zh_tw", value = "zh-tw" },
+				},
+			},
+			{
 				setting_id    = "enable_debug_messages",
 				type          = "checkbox",
 				default_value = false,

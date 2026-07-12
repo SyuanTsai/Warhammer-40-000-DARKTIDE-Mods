@@ -4,6 +4,10 @@ local S = mod._S
 local scannable_units = {}
 local highlighted_units = {}
 local last_target = nil
+local refresh_dependencies_ready = false
+local refresh_loss_reason = nil
+local update_dependencies_ready = false
+local update_loss_reason = nil
 
 local function _count_table(t)
     local count = 0
@@ -20,6 +24,42 @@ local function _set_scannable_visuals(ext, outline, highlight)
 
     pcall(ext.set_scanning_outline, ext, outline)
     pcall(ext.set_scanning_highlight, ext, highlight)
+end
+
+local function _reset_dependency_readiness()
+    refresh_dependencies_ready = false
+    refresh_loss_reason = nil
+    update_dependencies_ready = false
+    update_loss_reason = nil
+end
+
+local function _scan_update_relevant()
+    local action = mod._current_action
+
+    return action == "action_scan"
+        or action == "action_scan_confirm"
+        or mod._scan_holding
+        or mod._scan_auto_pending
+        or mod._scan_hold_target ~= nil
+end
+
+local function _report_refresh_dependency_loss(reason)
+	if refresh_dependencies_ready and not refresh_loss_reason then
+		refresh_loss_reason = reason
+		mod._debug_event("scan", "blocked", { reason = reason })
+    end
+end
+
+local function _report_update_dependency_loss(reason)
+    if _scan_update_relevant() then
+        mod._debug_event_throttle("scan_update_blocked_event", 1.5, "scan", "blocked", { reason = reason })
+        return
+    end
+
+	if update_dependencies_ready and not update_loss_reason then
+		update_loss_reason = reason
+		mod._debug_event("scan", "blocked", { reason = reason })
+    end
 end
 
 local function _clear_highlights(reason)
@@ -44,15 +84,22 @@ local function _reset_scan_input_state(reason)
     local pending = mod._scan_auto_pending
     local hold_target = mod._scan_hold_target
 
-    if action ~= "" or holding or pending or hold_target then
-	    mod._debug_event_change("scan_input_reset", tostring(reason) .. ":" .. tostring(action) .. ":" .. tostring(holding) .. ":" .. tostring(pending) .. ":" .. tostring(hold_target), "scan", "input_reset", {
-		    action = action,
-		    holding = holding,
-		    pending = pending,
-		    reason = reason or "unknown",
-		    target = tostring(hold_target),
-	    })
-    end
+	if action ~= "" or holding or pending or hold_target then
+		local fields = {
+			action = action,
+			holding = holding,
+			pending = pending,
+			reason = reason or "unknown",
+			state = action,
+			target = tostring(hold_target),
+		}
+
+		if mod._debug_run_active("scan") then
+			mod._debug_run_end("scan", "cleanup", fields)
+		else
+			mod._debug_event_change("scan_input_reset", tostring(reason) .. ":" .. tostring(action) .. ":" .. tostring(holding) .. ":" .. tostring(pending) .. ":" .. tostring(hold_target), "scan", "cleanup", fields)
+		end
+	end
 
     mod._scan_auto_pending = false
     mod._scan_holding = false
@@ -65,7 +112,7 @@ local function _reset_scan_input_state(reason)
 end
 
 local function _reset_scan_state(reason)
-	mod._debug_event_change("scan_full_reset", tostring(reason) .. ":" .. tostring(_count_table(highlighted_units)), "scan", "full_reset", { highlighted = _count_table(highlighted_units), reason = reason or "unknown" })
+    _reset_dependency_readiness()
     _clear_highlights(reason or "full_reset")
     _reset_scan_input_state(reason or "full_reset")
 end
@@ -77,20 +124,39 @@ local function _refresh_highlights()
     end
 
     local mgr_ext = Managers.state and Managers.state.extension
+    if not mgr_ext then
+        _report_refresh_dependency_loss("missing_extension_manager")
+        _clear_highlights("missing_extension_manager")
+        return
+    end
     local has_system = mgr_ext and (not mgr_ext.has_system or mgr_ext:has_system("mission_objective_zone_system"))
+    if not has_system then
+        _report_refresh_dependency_loss("missing_zone_system")
+        _clear_highlights("missing_zone_system")
+        return
+    end
     local sys = has_system and mgr_ext:system("mission_objective_zone_system")
 
-    if not sys or not sys:any_active_scanning_zone() then
+    if not sys then
+        _report_refresh_dependency_loss("missing_zone_system")
+        _clear_highlights("missing_zone_system")
+        return
+    end
+
+    refresh_dependencies_ready = true
+    refresh_loss_reason = nil
+
+    if not sys:any_active_scanning_zone() then
         _clear_highlights("no_active_zone")
         return
     end
 
-	local before_highlighted = _count_table(highlighted_units)
-	local su = sys:scannable_units() or {}
-	table.clear(scannable_units)
-	for u in pairs(su) do scannable_units[u] = true end
-	local removed = 0
-	local added = 0
+    local before_highlighted = _count_table(highlighted_units)
+    local su = sys:scannable_units() or {}
+    table.clear(scannable_units)
+    for u in pairs(su) do scannable_units[u] = true end
+    local removed = 0
+    local added = 0
 
     for unit, _ in pairs(highlighted_units) do
         if not scannable_units[unit] then
@@ -140,13 +206,23 @@ mod:hook_safe("AuspexScanningEffects", "wield", function()
 end)
 
 mod:hook_safe("AuspexScanningEffects", "unwield", function()
+    _reset_dependency_readiness()
     _reset_scan_input_state("unwield")
     _refresh_highlights()
+    _reset_dependency_readiness()
 end)
 
 mod:hook_safe("AuspexScanningEffects", "destroy", function()
+    _reset_dependency_readiness()
     _reset_scan_input_state("destroy")
     _refresh_highlights()
+    _reset_dependency_readiness()
+end)
+
+mod:hook_require("scripts/extension_systems/weapon/actions/action_scan_confirm", function(ActionScanConfirm)
+    mod:hook_safe(ActionScanConfirm, "_bank_scannable_unit", function()
+        mod._debug_run_end("scan", "succeeded", { target = tostring(mod._scan_hold_target) })
+    end)
 end)
 
 
@@ -167,13 +243,28 @@ mod._reg("update", function(dt)
 
     local player_manager = Managers.player
     local player = player_manager and player_manager:local_player_safe(1)
-    if not player then return end
+    if not player then
+        _report_update_dependency_loss("missing_player")
+        return
+    end
     local unit = player.player_unit
-    if not unit then return end
+    if not unit then
+        _report_update_dependency_loss("missing_unit")
+        return
+    end
     local unit_data_ext = ScriptUnit.has_extension(unit, "unit_data_system")
-    if not unit_data_ext then return end
+    if not unit_data_ext then
+        _report_update_dependency_loss("missing_unit_data")
+        return
+    end
     local wac = unit_data_ext:read_component("weapon_action")
-    if not wac then return end
+    if not wac then
+        _report_update_dependency_loss("missing_weapon_action")
+        return
+    end
+
+    update_dependencies_ready = true
+    update_loss_reason = nil
 
     local previous_action = mod._current_action
     local current_action = wac.current_action_name
@@ -183,6 +274,7 @@ mod._reg("update", function(dt)
         or previous_action == "action_scan_confirm"
         or mod._scan_holding
         or mod._scan_auto_pending
+        or mod._scan_hold_target ~= nil
 
     if scan_relevant and previous_action ~= current_action then
         mod._debug_event_change("scan_action", tostring(wac.current_action_name), "scan", "action", { action = wac.current_action_name, holding = mod._scan_holding, pending = mod._scan_auto_pending })
@@ -195,22 +287,26 @@ mod._reg("update", function(dt)
         if mod._scan_cooldown > 0 then return end
 
         local scan = unit_data_ext:read_component("scanning")
-        if not scan then return end
+        if not scan then
+            mod._debug_event_throttle("scan_update_blocked_event", 1.5, "scan", "blocked", { action = wac.current_action_name, reason = "missing_scanning_component" })
+            return
+        end
         local target = scan.scannable_unit
         local los = scan.line_of_sight
-        if scan.is_active and target and los and target ~= last_target then
-            mod._scan_auto_pending = true
-            last_target = target
+		if scan.is_active and target and los and target ~= last_target then
+			mod._scan_auto_pending = true
+			last_target = target
+			mod._debug_run_start("scan")
 			mod._debug_event("scan", "auto_pending", { los = los, target = tostring(target) })
         end
-		if not los then
-			mod._debug_event_throttle("scan_no_los_event", 1.5, "scan", "wait", { action = wac.current_action_name, reason = "no_line_of_sight", target = tostring(target) })
-			last_target = nil
-		end
+        if not los then
+            mod._debug_event_throttle("scan_no_los_event", 1.5, "scan", "wait", { action = wac.current_action_name, reason = "no_line_of_sight", target = tostring(target) })
+            last_target = nil
+        end
     elseif wac.current_action_name ~= "action_scan_confirm" then
         last_target = nil
         if mod._scan_auto_pending then
-            mod._debug_event("scan", "pending_cleared", { action = wac.current_action_name, reason = "action_changed" })
+			mod._debug_run_end("scan", "pending_cleared", { action = wac.current_action_name, reason = "action_changed" })
             mod._scan_auto_pending = false
         end
     end
