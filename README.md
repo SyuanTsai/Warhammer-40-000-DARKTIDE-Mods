@@ -683,7 +683,7 @@
 - 手動維護最後下載日期：2025-12-06
 
 ### [Radar](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
-    遠征模式的小弟圖
+    遠征模式的小地圖
 - MOD 網站最後更新日期：Last updated 12 July 2026, 5:05PM
 - MOD 版本：2.5.1
 - MOD 檔案名稱：Radar 790 2.5.1 2026-07-12T09-05Z SDWlwDVoK
