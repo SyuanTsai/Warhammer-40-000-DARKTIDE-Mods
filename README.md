@@ -521,10 +521,10 @@
 
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
     記分板
-- MOD 網站最後更新日期：Last updated 09 July 2026, 9:00PM
-- MOD 版本：0.4.13
-- MOD 檔案名稱：CombatStats 661 0.4.13 2026-07-09T13-00Z 5gEeTgD8H
-- 手動維護最後下載日期：2026-07-10
+- MOD 網站最後更新日期：Last updated 11 July 2026, 11:32PM
+- MOD 版本：0.4.14
+- MOD 檔案名稱：CombatStats 661 0.4.14 2026-07-11T15-32Z mz1PFzZDc
+- 手動維護最後下載日期：2026-07-12
 
 ### [CharacterGrid](https://www.nexusmods.com/warhammer40kdarktide/mods/649)
     角色顯示
@@ -733,10 +733,10 @@
 
 ### [NoBrainer](https://www.nexusmods.com/warhammer40kdarktide/mods/896)
     最新的小遊戲助手
-- MOD 網站最後更新日期：Last updated 10 July 2026, 3:04AM
-- MOD 版本：2.0.5
+- MOD 網站最後更新日期：Last updated 11 July 2026, 5:14PM
+- MOD 版本：2.0.7
 - MOD 檔案名稱：NoBrainer 896 2.0.5 2026-07-09T19-04Z SDWlwDVxk
-- 手動維護最後下載日期：2026-07-10
+- 手動維護最後下載日期：2026-07-12
 
 # 移除的MOD
 
