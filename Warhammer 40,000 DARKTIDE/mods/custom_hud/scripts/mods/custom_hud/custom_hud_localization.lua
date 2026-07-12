@@ -18,10 +18,10 @@ return {
             .. "{#color(" .. colours.key .. ")}Arrows{#color(" .. colours.text .. ")} move ±1px, {#color(" .. colours.key .. ")}Alt+Arrows{#color(" .. colours.text .. ")} resize ±1px, {#color(" .. colours.key .. ")}Shift+Up/Down{#color(" .. colours.text .. ")} z-order\n"
             .. "{#color(" .. colours.key .. ")}Right-click{#color(" .. colours.text .. ")} hide, {#color(" .. colours.key .. ")}Double-click{#color(" .. colours.text .. ")} reset, {#color(" .. colours.key .. ")}Tab{#color(" .. colours.text .. ")} reset selected, {#color(" .. colours.key .. ")}Ctrl+Shift+C{#color(" .. colours.text .. ")} center{#reset()}",
         ["zh-cn"] = "允许自定义排列和调整 HUD 元素大小。",
-        ["zh-tw"] = "{#color(" .. colours.text .. ")}允許自訂排列和調整 HUD 元素大小。按 {#color(" .. colours.key .. ")}[F3]{#color(" .. colours.text .. ")} 進入編輯模式。{#reset()}\n\n"
-            .. "{#color(" .. colours.key .. ")}點擊{#color(" .. colours.text .. ")} 選擇, {#color(" .. colours.key .. ")}Ctrl+點擊{#color(" .. colours.text .. ")} 多選, {#color(" .. colours.key .. ")}Shift+拖動{#color(" .. colours.text .. ")} 移動, {#color(" .. colours.key .. ")}滾輪{#color(" .. colours.text .. ")} 縮放, {#color(" .. colours.key .. ")}Alt+拖動{#color(" .. colours.text .. ")} 調整大小\n"
-            .. "{#color(" .. colours.key .. ")}箭頭鍵{#color(" .. colours.text .. ")} 移動 ±1px, {#color(" .. colours.key .. ")}Alt+箭頭鍵{#color(" .. colours.text .. ")} 調整大小 ±1px, {#color(" .. colours.key .. ")}Shift+上/下{#color(" .. colours.text .. ")} 層級\n"
-            .. "{#color(" .. colours.key .. ")}右鍵{#color(" .. colours.text .. ")} 隐藏, {#color(" .. colours.key .. ")}雙擊{#color(" .. colours.text .. ")} 重置, {#color(" .. colours.key .. ")}Tab{#color(" .. colours.text .. ")} 重置選中項, {#color(" .. colours.key .. ")}Ctrl+Shift+C{#color("..colours.text..")} 居中{#reset()}",
+        ["zh-tw"] = "{#color(" .. colours.text .. ")}允許自訂 HUD 元素的位置與大小。按 {#color(" .. colours.key .. ")}[F3]{#color(" .. colours.text .. ")} 進入編輯模式。{#reset()}\n\n"
+            .. "{#color(" .. colours.key .. ")}點擊{#color(" .. colours.text .. ")} 選取, {#color(" .. colours.key .. ")}Ctrl+點擊{#color(" .. colours.text .. ")} 多選, {#color(" .. colours.key .. ")}Shift+拖曳{#color(" .. colours.text .. ")} 移動, {#color(" .. colours.key .. ")}滾輪{#color(" .. colours.text .. ")} 縮放, {#color(" .. colours.key .. ")}Alt+拖曳{#color(" .. colours.text .. ")} 調整大小\n"
+            .. "{#color(" .. colours.key .. ")}箭頭鍵{#color(" .. colours.text .. ")} 移動 ±1px, {#color(" .. colours.key .. ")}Alt+箭頭鍵{#color(" .. colours.text .. ")} 調整大小 ±1px, {#color(" .. colours.key .. ")}Shift+上/下{#color(" .. colours.text .. ")} 調整層級\n"
+            .. "{#color(" .. colours.key .. ")}右鍵{#color(" .. colours.text .. ")} 隱藏, {#color(" .. colours.key .. ")}雙擊{#color(" .. colours.text .. ")} 重設, {#color(" .. colours.key .. ")}Tab{#color(" .. colours.text .. ")} 重設選取項目, {#color(" .. colours.key .. ")}Ctrl+Shift+C{#color("..colours.text..")} 置中{#reset()}",
         ru = "Позволяет перемещать и изменять размер элементов интерфейса.",
     },
     settings_header = {
@@ -34,7 +34,7 @@ return {
         en = "Toggle HUD Customization",
         ["zh-cn"] = "开关 HUD 自定义",
         ru = "Переключение настройки интерфейса",
-        ["zh-tw"] = "開關 HUD 自訂",
+        ["zh-tw"] = "切換 HUD 自訂",
     },
     toggle_hud_customization_key_description = {
         en = "{#color(" .. colours.text .. ")}Toggles HUD customization on/off.{#reset()}\n\n"
@@ -52,33 +52,33 @@ return {
             .. "{#color(" .. colours.key .. ")}  Tab{#color(" .. colours.text .. ")} = Reset selected\n"
             .. "{#color(" .. colours.key .. ")}  Ctrl+Shift+C{#color(" .. colours.text .. ")} = Center on screen{#reset()}",
         ["zh-cn"] = "切换 HUD 自定义功能的开关。",
-        ["zh-tw"] = "{#color(" .. colours.text .. ")}切換 HUD 自訂功能的開關。{#reset()}\n\n"
-            .. "{#color(" .. colours.title .. ")}控制（在編輯模式下）：{#reset()}\n"
-            .. "{#color(" .. colours.key .. ")}  點擊{#color(" .. colours.text .. ")} = 選擇元素\n"
+        ["zh-tw"] = "{#color(" .. colours.text .. ")}切換 HUD 自訂功能開關。{#reset()}\n\n"
+            .. "{#color(" .. colours.title .. ")}控制（編輯模式）：{#reset()}\n"
+            .. "{#color(" .. colours.key .. ")}  點擊{#color(" .. colours.text .. ")} = 選取元素\n"
             .. "{#color(" .. colours.key .. ")}  Ctrl+點擊{#color(" .. colours.text .. ")} = 多選\n"
-            .. "{#color(" .. colours.key .. ")}  Shift+拖動{#color(" .. colours.text .. ")} = 移動元素\n"
+            .. "{#color(" .. colours.key .. ")}  Shift+拖曳{#color(" .. colours.text .. ")} = 移動元素\n"
             .. "{#color(" .. colours.key .. ")}  滾輪{#color(" .. colours.text .. ")} = 縮放元素\n"
-            .. "{#color(" .. colours.key .. ")}  Alt+拖動邊緣/角落{#color(" .. colours.text .. ")} = 調整大小\n"
+            .. "{#color(" .. colours.key .. ")}  Alt+拖曳邊緣/角落{#color(" .. colours.text .. ")} = 調整大小\n"
             .. "{#color(" .. colours.key .. ")}  Alt+箭頭鍵{#color(" .. colours.text .. ")} = 調整大小 ±1px\n"
             .. "{#color(" .. colours.key .. ")}  箭頭鍵{#color(" .. colours.text .. ")} = 移動 ±1px\n"
-            .. "{#color(" .. colours.key .. ")}  Shift+上/下{#color(" .. colours.text .. ")} = 層級\n"
+            .. "{#color(" .. colours.key .. ")}  Shift+上/下{#color(" .. colours.text .. ")} = 調整層級\n"
             .. "{#color(" .. colours.key .. ")}  右鍵{#color("..colours.text..")} = 切換隱藏\n"
-            .. "{#color("..colours.key..")}  雙擊{#color("..colours.text..")} = 重置為默認\n"
-            .. "{#color("..colours.key..")}  Tab{#color("..colours.text..")} = 重置選中項\n"
-            .. "{#color("..colours.key..")}  Ctrl+Shift+C{#color("..colours.text..")} = 居中於屏幕{#reset()}",
+            .. "{#color("..colours.key..")}  雙擊{#color("..colours.text..")} = 重設為預設值\n"
+            .. "{#color("..colours.key..")}  Tab{#color("..colours.text..")} = 重設選取項目\n"
+            .. "{#color("..colours.key..")}  Ctrl+Shift+C{#color("..colours.text..")} = 置中於螢幕{#reset()}",
         ru = "Включение/отключение оверлея настройки интерфейса.",
     },
     toggle_hud_hidden_key = {
         en = "Toggle HUD",
         ["zh-cn"] = "开关 HUD",
         ru = "Переключение интерфейса",
-        ["zh-tw"] = "開關 HUD",
+        ["zh-tw"] = "切換 HUD",
     },
     toggle_hud_hidden_key_description = {
         en = "Toggles the HUD on/off.",
         ["zh-cn"] = "切换 HUD 的开关。",
         ru = "Включение/отключение игрового интерфейса.",
-        ["zh-tw"] = "切換 HUD 的開關。",
+        ["zh-tw"] = "切換 HUD 顯示/隱藏。",
     },
     show_info_panel = {
         en = "Show Info Panel",
@@ -90,13 +90,13 @@ return {
         en = "Show the floating info panel in edit mode. You can also toggle it with the /panel command.",
         ["zh-cn"] = "在编辑模式下显示所有 HUD 元素的位置、大小和状态面板。",
         ru = "Показывает панель со списком всех элементов интерфейса в режиме редактирования.",
-        ["zh-tw"] = "在編輯模式下顯示所有 HUD 元素的位置、大小和狀態面板。",
+        ["zh-tw"] = "在編輯模式下顯示浮動資訊面板。也可以使用 /panel 指令切換。",
     },
     panel_font = {
         en = "Panel Font",
         ["zh-cn"] = "面板字体",
         ru = "Шрифт панели",
-        ["zh-tw"] = "字體",
+        ["zh-tw"] = "面板字體",
     },
     panel_font_description = {
         en = "Choose the font used in the info panel overlay.",
@@ -129,7 +129,7 @@ return {
         en = "Panel Font Size",
         ["zh-cn"] = "面板字体大小",
         ru = "Размер шрифта панели",
-        ["zh-tw"] = "字體大小",
+        ["zh-tw"] = "面板字體大小",
     },
     panel_font_size_description = {
         en = "Adjust the font size used in the info panel. Detail text is 3pt smaller.",
@@ -140,18 +140,19 @@ return {
     panel_scale = {
         en = "Panel Scale",
         ["zh-cn"] = "缩放",
+        ["zh-tw"] = "面板縮放",
     },
     panel_scale_description = {
         en = "Scale the floating info panel, including row spacing and detail area sizing.",
-        ["zh-tw"] = "縮放資訊面板，包括行距和細節區域大小。",
+        ["zh-tw"] = "縮放浮動資訊面板，包括列間距與詳細資訊區域大小。",
     },
     panel_list_rows = {
         en = "Panel List Rows",
-        ["zh-tw"] = "面板列表行数",
+        ["zh-tw"] = "面板清單列數",
     },
     panel_list_rows_description = {
         en = "Limit how many list entries are shown before the panel starts scrolling.",
-        ["zh-tw"] = "限制在面板開始滾動之前顯示多少列表條目。",
+        ["zh-tw"] = "限制資訊面板開始捲動前顯示的清單項目數。",
     },
     reset_hud = {
         en = "Reset HUD",
@@ -163,7 +164,7 @@ return {
         en = "Restore the HUD to Fatshark defaults.",
         ["zh-cn"] = "恢复 HUD 为肥鲨默认值。",
         ru = "Вернуть интерфейс к стандартным настройкам Fatshark.",
-        ["zh-tw"] = "將 HUD 還原為預設值。",
+        ["zh-tw"] = "將 HUD 還原為 Fatshark 預設值。",
     },
     opacity = {
         en = "Opacity Multiplier",
@@ -175,7 +176,7 @@ return {
         en = "Adjust the overall HUD opacity multiplier.",
         ["zh-cn"] = "调整元素不透明度。",
         ru = "Настройте прозрачность элементов.",
-        ["zh-tw"] = "調整元素不透明度。",
+        ["zh-tw"] = "調整整體 HUD 不透明度倍率。",
     },
     display_grid = {
         en = "Display Grid",
@@ -187,7 +188,7 @@ return {
         en = "Toggles display of a customizable grid to aid in repositioning elements.",
         ["zh-cn"] = "开关用于辅助元素定位的可自定义网格。",
         ru = "Переключение отображения настроечной сетки для облегчения изменения положения элементов.",
-        ["zh-tw"] = "切換顯示可自訂網格，以幫助重新定位元素。",
+        ["zh-tw"] = "切換顯示可自訂網格，以協助重新定位元素。",
     },
     snap_to_grid = {
         en = "Snap to Grid",
@@ -207,7 +208,7 @@ return {
     },
     snap_to_elements_description = {
         en = "Toggles snapping to nearby HUD element edges and centers while dragging a single element.",
-        ["zh-tw"] = "切換在拖動單個元素時吸附到附近 HUD 元素的邊緣和中心。",
+        ["zh-tw"] = "切換拖曳單一元素時，是否吸附到附近 HUD 元素的邊緣和中心。",
     },
     grid_cols = {
         en = "Columns",
