@@ -12,6 +12,19 @@
 - Coherency - 協同
 - Blitz - 閃擊
 
+### MOD
+#### MOD名稱
+- AutoBlitz - 自動使用閃擊
+- Scoreboard - 記分板
+
+#### MOD名詞
+- Overhand - 高拋投擲
+- Underhand - 低拋投擲
+- Cycled Viewpoint - 循環視角
+- Center - 中心(用於表達畫面位置時)/中央(用於表達遊戲區域)
+- explosive - 爆炸桶(用於描述遊戲中的爆裂物)
+- Fire Barrel - 燃燒桶(用於描述遊戲中的燃燒爆裂物)
+
 ### 通用名詞
 
 - Countdown - 冷卻
@@ -44,9 +57,14 @@
 - Mourningstar - 哀星號
 - Darktide - 黑潮
 
+### 特殊情境詞
+- Hogtied - 原為綁住，但在遊戲中應用俘虜比較符合意境。
+
 ### 增益效果 (BUFFS)
 
-- Crit - 致命一擊
+- Crit 
+  - 致命一擊(指已發生的攻擊結果、觸發事件或次數)
+  - 爆擊率(指機率屬性、百分比或觸發可能性)
 - Rending - 撕裂
 - Impact - 衝擊
 - Cleave - 順劈攻擊
