@@ -4,12 +4,12 @@ local loc = {
 	mod_description = {
 		en = "Switch between first and third person perspectives.",
 		["zh-cn"] = "在第一人称和第三人称视角之间切换。",
-		["zh-tw"] = "在第一人稱和第三人稱視角之間切換。"
+		["zh-tw"] = "切換第一人稱與第三人稱視角。"
 	},
 	third_person_toggle = {
 		en = "Switch Perspective (Toggle)",
 		["zh-cn"] = "切换视角（切换）",
-		["zh-tw"] = "切換視角（切換）"
+		["zh-tw"] = "切換視角（切換式）"
 	},
 	third_person_held = {
 		en = "Switch Perspective (Held)",
@@ -19,7 +19,7 @@ local loc = {
 	cycle_shoulder = {
 		en = "Cycle Viewpoint",
 		["zh-cn"] = "循环视角",
-		["zh-tw"] = "循環視角"
+		["zh-tw"] = "輪換視角"
 	},
 	aim_mode = {
 		en = "Aiming Behavior",
@@ -39,12 +39,12 @@ local loc = {
 	viewpoint_cycle = {
 		en = "Cycled Viewpoint",
 		["zh-cn"] = "循环视角",
-		["zh-tw"] = "循環視角"
+		["zh-tw"] = "輪換視角"
 	},
 	viewpoint_center = {
 		en = "Center",
 		["zh-cn"] = "中心",
-		["zh-tw"] = "中心"
+		["zh-tw"] = "中央"
 	},
 	viewpoint_right = {
 		en = "Right",
@@ -59,22 +59,22 @@ local loc = {
 	cycle_includes_center = {
 		en = "Include Center in Cycle",
 		["zh-cn"] = "在循环中包含中心视角",
-		["zh-tw"] = "在循環中包含中心視角"
+		["zh-tw"] = "輪換時包含中央視角"
 	},
 	center_to_1p_human = {
 		en = "Center Aim Goes to 1st Person (Human)",
 		["zh-cn"] = "中心瞄准改为第一人称（人类）",
-		["zh-tw"] = "將中心瞄準改為第一人稱（人類）"
+		["zh-tw"] = "中央瞄準時切至第一人稱（人類）"
 	},
 	center_to_1p_ogryn = {
 		en = "Center Aim Goes to 1st Person (Ogryn)",
 		["zh-cn"] = "中心瞄准改为第一人称（欧格林）",
-		["zh-tw"] = "將中心瞄準改為第一人稱（歐格林）"
+		["zh-tw"] = "中央瞄準時切至第一人稱（歐格林）"
 	},
 	center_to_1p_description = {
 		en = "If on, when cycled to a centered viewpoint and aiming, you'll temporarily go to 1st person instead of using the 3rd person centered aim camera. This is recommended for humans, and very strongly recommended for Ogryns.",
 		["zh-cn"] = "启用后，切换到中心视角并在瞄准时，你会临时进入第一人称而不是第三人称中心视角。推荐为人类角色启用，强烈推荐为欧格林启用。",
-		["zh-tw"] = "啟用後，切換至中心視角並瞄準時會改為第一人稱。人類與歐格林皆建議啟用。"
+		["zh-tw"] = "啟用後，輪換至中央視角並瞄準時，會暫時切至第一人稱，而不是使用第三人稱中央瞄準鏡頭。建議人類角色啟用，歐格林則強烈建議啟用。"
 	},
 	perspective_transition_time = {
 		en = "Perspective Transition Time",
@@ -89,47 +89,47 @@ local loc = {
 	custom_distance = {
 		en = "Camera Distance (Non-Aiming)",
 		["zh-cn"] = "摄像机距离（非瞄准）",
-		["zh-tw"] = "攝像機距離（非瞄準）"
+		["zh-tw"] = "鏡頭距離（非瞄準）"
 	},
 	custom_distance_description = {
 		en = "Increase to push your camera farther backward.",
 		["zh-cn"] = "增大表示向后移动摄像机。",
-		["zh-tw"] = "增加以將攝像機向後推得更遠。"
+		["zh-tw"] = "提高數值會將鏡頭往後推得更遠。"
 	},
 	custom_offset = {
 		en = "Camera Offset (Non-Aiming)",
 		["zh-cn"] = "摄像机偏移（非瞄准）",
-		["zh-tw"] = "攝像機偏移（非瞄準）"
+		["zh-tw"] = "鏡頭偏移（非瞄準）"
 	},
 	custom_offset_description = {
 		en = "Increase to push your camera farther from the center of your character. For example, the left-side viewpoint will be farther left at higher values.",
 		["zh-cn"] = "增大表示摄像机远离角色中心。例如，值越大，左侧视角就更偏左。",
-		["zh-tw"] = "增加以將攝像機推離角色中心。例如，左側視角在較高值時會更偏左。"
+		["zh-tw"] = "提高數值會將鏡頭推離角色中心。例如，數值越高，左側視角就會越偏左。"
 	},
 	custom_distance_zoom = {
 		en = "Camera Distance (Aiming)",
 		["zh-cn"] = "摄像机距离（瞄准）",
-		["zh-tw"] = "攝像機距離（瞄準）"
+		["zh-tw"] = "鏡頭距離（瞄準）"
 	},
 	custom_offset_zoom = {
 		en = "Camera Offset (Aiming)",
 		["zh-cn"] = "摄像机偏移（瞄准）",
-		["zh-tw"] = "攝像機偏移（瞄準）"
+		["zh-tw"] = "鏡頭偏移（瞄準）"
 	},
 	custom_distance_ogryn = {
 		en = "Camera Distance (Ogryn)",
 		["zh-cn"] = "摄像机距离（欧格林）",
-		["zh-tw"] = "攝像機距離（歐格林）"
+		["zh-tw"] = "鏡頭距離（歐格林）"
 	},
 	custom_offset_ogryn = {
 		en = "Camera Offset (Ogryn)",
 		["zh-cn"] = "摄像机偏移（欧格林）",
-		["zh-tw"] = "攝像機偏移（歐格林）"
+		["zh-tw"] = "鏡頭偏移（歐格林）"
 	},
 	xhair_fallback = {
 		en = "'No Crosshair' in 3rd Person",
 		["zh-cn"] = "第三人称下的“无准星时”设置",
-		["zh-tw"] = "第三人稱下的“無準星時”設置"
+		["zh-tw"] = "第三人稱下的「無準星」設定"
 	},
 	use_lookaround_node = {
 		en = "[LookAround] 3rd Person Inspect",
@@ -139,7 +139,7 @@ local loc = {
 	use_lookaround_node_description = {
 		en = "When using the mod LookAround to get freelook in 3rd person, use the 3rd Person Inspect viewpoint.",
 		["zh-cn"] = "在第三人称下使用 LookAround 模组的自由查看时，使用第三人称检视视角。",
-		["zh-tw"] = "在第三人稱下使用 LookAround 模組的自由查看時，使用第三人稱檢視視角。"
+		["zh-tw"] = "在第三人稱下使用 LookAround 模組的自由視角時，使用第三人稱檢視視角。"
 	},
 	default_perspective_mode = {
 		en = "Initial Perspective",
@@ -149,12 +149,12 @@ local loc = {
 	defper_normal = {
 		en = "Default",
 		["zh-cn"] = "默认",
-		["zh-tw"] = "默認"
+		["zh-tw"] = "預設"
 	},
 	defper_swapped = {
 		en = "Opposite of Default",
 		["zh-cn"] = "反转默认",
-		["zh-tw"] = "反轉默認"
+		["zh-tw"] = "與預設相反"
 	},
 	defper_always_first = {
 		en = "1st Person",
@@ -179,7 +179,7 @@ local loc = {
 	autoswitch_spectate = {
 		en = "Spectating",
 		["zh-cn"] = "旁观者",
-		["zh-tw"] = "旁觀者"
+		["zh-tw"] = "觀戰"
 	},
 	autoswitch_slot_primary = {
 		en = Localize("loc_ingame_wield_1")
@@ -213,7 +213,7 @@ local loc = {
 	autoswitch_slot_unarmed_description = {
 		en = "Occurs whenever your character puts your weapon away, e.g. when interacting with certain objects or being kocked back.",
 		["zh-cn"] = "角色收起武器时出现，例如与特定对象交互或者被击退的情况。",
-		["zh-tw"] = "角色收起武器時出現，例如與特定對象交互或者被擊退的情況。"
+		["zh-tw"] = "當角色收起武器時觸發，例如與特定物件互動或被擊退時。"
 	},
 	autoswitch_sprint = {
 		en = Localize("loc_ingame_sprint")
@@ -242,22 +242,22 @@ local loc = {
 	autoswitch_to_first_revert = {
 		en = "1st Person, During",
 		["zh-cn"] = "第一人称 During",
-		["zh-tw"] = "第一人稱視角時"
+		["zh-tw"] = "第一人稱，期間"
 	},
 	autoswitch_to_third_revert = {
 		en = "3rd Person, During",
 		["zh-cn"] = "第三人称 During",
-		["zh-tw"] = "第三人稱視角時"
+		["zh-tw"] = "第三人稱，期間"
 	},
 	autoswitch_to_first_stay = {
 		en = "1st Person, During & After",
 		["zh-cn"] = "第一人称 During & After",
-		["zh-tw"] = "第一人稱視角期間與之後"
+		["zh-tw"] = "第一人稱，期間與之後"
 	},
 	autoswitch_to_third_stay = {
 		en = "3rd Person, During & After",
 		["zh-cn"] = "第三人称 During & After",
-		["zh-tw"] = "第三人稱視角期間與之後"
+		["zh-tw"] = "第三人稱，期間與之後"
 	},
 	autoswitch_slab_block = {
 		en = Localize("loc_weapon_special_defensive_stance")
