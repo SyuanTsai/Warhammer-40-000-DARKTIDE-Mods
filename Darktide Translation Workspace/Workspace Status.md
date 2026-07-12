@@ -41,6 +41,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | AutoBlitz | AutoBlitz | main | Codex/Feature/AutoBlitz/Add-zh-tw | Darktide Translation Workspace/Log/AutoBlitz.md | AutoBlitz_localization.lua | all keys | 2026-07-12 12:49:54 +08:00 | df3d9ed | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/69 | SpecialsTracker/*localization.lua:first key | 已校正自動投擲、快捷鍵、投擲模式、遠端引爆、巢都渣滓、救援與受到傷害用語；PR #69 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | SpecialsTracker | SpecialsTracker | main | Codex/Feature/SpecialsTracker/Add-zh-tw | Darktide Translation Workspace/Log/SpecialsTracker.md | SpecialsTracker_localization.lua | all keys | 2026-07-12 20:11:56 +08:00 | c6fd2ff | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/70 | Reconnect/*localization.lua:first key | 已校正追蹤通知、HUD 顯示選項、混沌魔物、電漿槍手、連長與雙子連長用語；PR #70 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | Reconnect | Reconnect | main | Codex/Feature/Reconnect/Add-zh-tw | Darktide Translation Workspace/Log/Reconnect.md | Reconnect_localization.lua | all keys | 2026-07-12 20:33:37 +08:00 | 33018ed | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/71 | i_wanna_see/*localization.lua:first key | 已校正 /retry 指令、錯誤訊息、快捷鍵與重連彈出視窗繁中用語；PR #71 ready |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | i_wanna_see | I Wanna See | main | Codex/Feature/i_wanna_see/Add-zh-tw | Darktide Translation Workspace/Log/i_wanna_see.md | i_wanna_see_localization.lua | all keys | 2026-07-12 21:10:39 +08:00 | 0bd59bf | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/72 | CombatStats/*localization.lua:first key | 已校正 VFX 來源、淨化噴火器與懲戒閃電用語；PR #72 ready |
 
 ## 工作鎖定
 
@@ -80,7 +81,7 @@
 | AutoBlitz | Warhammer 40,000 DARKTIDE/mods/AutoBlitz/scripts/mods/AutoBlitz/AutoBlitz_localization.lua | all keys | codex | released | Codex/Feature/AutoBlitz/Add-zh-tw | Darktide Translation Workspace/Log/AutoBlitz.md | 2026-07-12 12:46:07 +08:00 | 2026-07-12 12:49:54 +08:00 | PR #69 已建立且為 ready | 任務完成，釋放鎖定 |
 | SpecialsTracker | Warhammer 40,000 DARKTIDE/mods/SpecialsTracker/scripts/mods/SpecialsTracker/SpecialsTracker_localization.lua | all keys | codex | released | Codex/Feature/SpecialsTracker/Add-zh-tw | Darktide Translation Workspace/Log/SpecialsTracker.md | 2026-07-12 20:08:27 +08:00 | 2026-07-12 20:11:56 +08:00 | PR #70 已建立且為 ready | 任務完成，釋放鎖定 |
 | Reconnect | Warhammer 40,000 DARKTIDE/mods/Reconnect/scripts/mods/Reconnect/Reconnect_localization.lua | all keys | codex | released | Codex/Feature/Reconnect/Add-zh-tw | Darktide Translation Workspace/Log/Reconnect.md | 2026-07-12 20:31:37 +08:00 | 2026-07-12 20:33:37 +08:00 | PR #71 已建立且為 ready | 任務完成，釋放鎖定 |
-| i_wanna_see | Warhammer 40,000 DARKTIDE/mods/i_wanna_see/scripts/mods/i_wanna_see/i_wanna_see_localization.lua | all keys | codex | in_progress | Codex/Feature/i_wanna_see/Add-zh-tw | Darktide Translation Workspace/Log/i_wanna_see.md | 2026-07-12 21:06:27 +08:00 | 2026-07-12 21:06:27 +08:00 | 完成 zh-tw 校正並建立 ready PR 後釋放 | 接手 ready；安全續跑位置：i_wanna_see_localization.lua:first key |
+| i_wanna_see | Warhammer 40,000 DARKTIDE/mods/i_wanna_see/scripts/mods/i_wanna_see/i_wanna_see_localization.lua | all keys | codex | released | Codex/Feature/i_wanna_see/Add-zh-tw | Darktide Translation Workspace/Log/i_wanna_see.md | 2026-07-12 21:06:27 +08:00 | 2026-07-12 21:10:39 +08:00 | PR #72 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -1171,6 +1172,38 @@
 | 2026-07-12 20:31:37 +08:00 | Warhammer 40,000 DARKTIDE/mods/Reconnect/scripts/mods/Reconnect/Reconnect_localization.lua | mod_description | in_progress | Section: Key Progress | 開始校正 Reconnect 指令、錯誤訊息與重連彈出視窗繁中用語 |
 | 2026-07-12 20:33:37 +08:00 | Warhammer 40,000 DARKTIDE/mods/Reconnect/scripts/mods/Reconnect/Reconnect_localization.lua | handle_rejoin_popup_description | completed | Section: Key Progress | 校正 7 個 zh-tw 值，包含 /retry 指令、主選單、錯誤訊息、人類玩家、快捷鍵、重連彈出視窗與無效連線階段 |
 
+### MOD-LOG-0034 - i_wanna_see
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | I Wanna See |
+| Repo directory | i_wanna_see |
+| AI handler | codex |
+| Status | completed |
+| Base branch | main |
+| Work branch | Codex/Feature/i_wanna_see/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/i_wanna_see.md |
+| Started at | 2026-07-12 21:06:27 +08:00 |
+| Last updated | 2026-07-12 21:10:39 +08:00 |
+| Completed at | 2026-07-12 21:10:39 +08:00 |
+| Commit | 0bd59bf |
+| PR | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/72 |
+| Next position | CombatStats/*localization.lua:first key |
+| Notes | 已校正 VFX 來源、Zealot Flamer/淨化噴火器與 Smite Lightning/懲戒閃電用語；PR #72 ready。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/i_wanna_see/scripts/mods/i_wanna_see/i_wanna_see_localization.lua | completed | 3 | remove_smite_effect | Section: Key Progress | 僅修改 zh-tw 欄位；duplicate zh-tw=0、empty zh-tw=0、placeholder mismatch=0 |
+
+#### Key Summary
+
+| Time | File | Key | Status | Section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-12 21:06:27 +08:00 | Warhammer 40,000 DARKTIDE/mods/i_wanna_see/scripts/mods/i_wanna_see/i_wanna_see_localization.lua | mod_description | in_progress | Section: Key Progress | 開始校正 i_wanna_see VFX、Flamer 與 Smite Lightning 繁中用語 |
+| 2026-07-12 21:10:39 +08:00 | Warhammer 40,000 DARKTIDE/mods/i_wanna_see/scripts/mods/i_wanna_see/i_wanna_see_localization.lua | remove_smite_effect | completed | Section: Key Progress | 校正 3 個 zh-tw 值：特效來源、狂信徒淨化噴火器、懲戒閃電 |
+
 ## 協作交接紀錄
 
 | Time | From | To | MOD | File | Key | From status | To status | Branch log | Note |
@@ -1295,6 +1328,7 @@
 | AutoBlitz | codex | main | Codex/Feature/AutoBlitz/Add-zh-tw | df3d9ed | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/69 | yes | yes | 僅包含 AutoBlitz_localization.lua；PR ready |
 | SpecialsTracker | codex | main | Codex/Feature/SpecialsTracker/Add-zh-tw | c6fd2ff | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/70 | yes | yes | 僅包含 SpecialsTracker_localization.lua；PR ready |
 | Reconnect | codex | main | Codex/Feature/Reconnect/Add-zh-tw | 33018ed | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/71 | yes | yes | 僅包含 Reconnect_localization.lua；PR ready |
+| i_wanna_see | codex | main | Codex/Feature/i_wanna_see/Add-zh-tw | 0bd59bf | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/72 | yes | yes | 僅包含 i_wanna_see_localization.lua；PR ready |
 
 ## Completed Files
 
@@ -1330,3 +1364,4 @@
 | AutoBlitz | codex | Warhammer 40,000 DARKTIDE/mods/AutoBlitz/scripts/mods/AutoBlitz/AutoBlitz_localization.lua | 17 | df3d9ed | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/69 | 2026-07-12 12:49:54 +08:00 | Darktide Translation Workspace/Log/AutoBlitz.md | 校正自動投擲、快捷鍵、投擲模式、遠端引爆、巢都渣滓、救援與受到傷害用語；PR ready |
 | SpecialsTracker | codex | Warhammer 40,000 DARKTIDE/mods/SpecialsTracker/scripts/mods/SpecialsTracker/SpecialsTracker_localization.lua | 23 | c6fd2ff | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/70 | 2026-07-12 20:11:56 +08:00 | Darktide Translation Workspace/Log/SpecialsTracker.md | 校正追蹤通知、HUD 顯示選項、混沌魔物、電漿槍手、連長與雙子連長用語；PR ready |
 | Reconnect | codex | Warhammer 40,000 DARKTIDE/mods/Reconnect/scripts/mods/Reconnect/Reconnect_localization.lua | 7 | 33018ed | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/71 | 2026-07-12 20:33:37 +08:00 | Darktide Translation Workspace/Log/Reconnect.md | 校正 /retry 指令、錯誤訊息、快捷鍵與重連彈出視窗繁中用語；PR ready |
+| i_wanna_see | codex | Warhammer 40,000 DARKTIDE/mods/i_wanna_see/scripts/mods/i_wanna_see/i_wanna_see_localization.lua | 3 | 0bd59bf | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/72 | 2026-07-12 21:10:39 +08:00 | Darktide Translation Workspace/Log/i_wanna_see.md | 校正 VFX 來源、淨化噴火器與懲戒閃電用語；PR ready |

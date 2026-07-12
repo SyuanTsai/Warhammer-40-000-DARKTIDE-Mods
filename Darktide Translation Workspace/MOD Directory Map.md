@@ -88,7 +88,7 @@
 | completed | 2026-07-07 +08:00 | InventoryStats | InventoryStats | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Clear Smoke | clear_smoke | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Quick Level Mastery | quick_level_mastery | 所有 zh-tw 已完整正確，無需修改。 |
-| ready | 2026-07-07 +08:00 | I Wanna See | i_wanna_see |  |
+| completed | 2026-07-12 21:10:39 +08:00 | I Wanna See | i_wanna_see | 已校正 VFX 來源、淨化噴火器與懲戒閃電用語；PR #72 ready。 |
 | completed | 2026-07-07 +08:00 | VFX Swapper | vfx_swapper | 所有 zh-tw 已完整正確，無需修改。 |
 | mod_updated | 2026-07-12 12:40:16 +08:00 | CombatStats | CombatStats | README 更新至 Last updated 11 July 2026 / 0.4.14，手動維護最後下載日期 2026-07-12；需重新比對本地 localization。 |
 | completed | 2026-07-07 +08:00 | CharacterGrid | CharacterGrid | 所有 zh-tw 已完整正確，無需修改。 |
