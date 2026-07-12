@@ -9,7 +9,7 @@ local loc = {
 	third_person_toggle = {
 		en = "Switch Perspective (Toggle)",
 		["zh-cn"] = "切换视角（切换）",
-		["zh-tw"] = "切換視角（切換式）"
+		["zh-tw"] = "切換視角（切換）"
 	},
 	third_person_held = {
 		en = "Switch Perspective (Held)",
@@ -44,7 +44,7 @@ local loc = {
 	viewpoint_center = {
 		en = "Center",
 		["zh-cn"] = "中心",
-		["zh-tw"] = "中央"
+		["zh-tw"] = "中心",
 	},
 	viewpoint_right = {
 		en = "Right",
@@ -59,22 +59,22 @@ local loc = {
 	cycle_includes_center = {
 		en = "Include Center in Cycle",
 		["zh-cn"] = "在循环中包含中心视角",
-		["zh-tw"] = "輪換時包含中央視角"
+		["zh-tw"] = "輪換時包含中心視角"
 	},
 	center_to_1p_human = {
 		en = "Center Aim Goes to 1st Person (Human)",
 		["zh-cn"] = "中心瞄准改为第一人称（人类）",
-		["zh-tw"] = "中央瞄準時切至第一人稱（人類）"
+		["zh-tw"] = "中心瞄準時切至第一人稱（人類）"
 	},
 	center_to_1p_ogryn = {
 		en = "Center Aim Goes to 1st Person (Ogryn)",
 		["zh-cn"] = "中心瞄准改为第一人称（欧格林）",
-		["zh-tw"] = "中央瞄準時切至第一人稱（歐格林）"
+		["zh-tw"] = "中心瞄準時切至第一人稱（歐格林）"
 	},
 	center_to_1p_description = {
 		en = "If on, when cycled to a centered viewpoint and aiming, you'll temporarily go to 1st person instead of using the 3rd person centered aim camera. This is recommended for humans, and very strongly recommended for Ogryns.",
 		["zh-cn"] = "启用后，切换到中心视角并在瞄准时，你会临时进入第一人称而不是第三人称中心视角。推荐为人类角色启用，强烈推荐为欧格林启用。",
-		["zh-tw"] = "啟用後，輪換至中央視角並瞄準時，會暫時切至第一人稱，而不是使用第三人稱中央瞄準鏡頭。建議人類角色啟用，歐格林則強烈建議啟用。"
+		["zh-tw"] = "啟用後，輪換至中心視角並瞄準時，會暫時切至第一人稱，而不是使用第三人稱中心瞄準鏡頭。建議人類角色啟用，歐格林則強烈建議啟用。"
 	},
 	perspective_transition_time = {
 		en = "Perspective Transition Time",
