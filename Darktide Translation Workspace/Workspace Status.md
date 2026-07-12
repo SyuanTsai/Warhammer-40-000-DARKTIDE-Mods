@@ -78,6 +78,7 @@
 | ScoreboardExplosive | Warhammer 40,000 DARKTIDE/mods/ScoreboardExplosive/scripts/mods/ScoreboardExplosive/ScoreboardExplosive_localization.lua | all keys | codex | released | Codex/Feature/ScoreboardExplosive/Add-zh-tw | Darktide Translation Workspace/Log/ScoreboardExplosive.md | 2026-07-12 12:32:36 +08:00 | 2026-07-12 12:34:52 +08:00 | PR #68 已建立且為 ready | 任務完成，釋放鎖定 |
 | AutoBlitz | Warhammer 40,000 DARKTIDE/mods/AutoBlitz/scripts/mods/AutoBlitz/AutoBlitz_localization.lua | all keys | codex | released | Codex/Feature/AutoBlitz/Add-zh-tw | Darktide Translation Workspace/Log/AutoBlitz.md | 2026-07-12 12:46:07 +08:00 | 2026-07-12 12:49:54 +08:00 | PR #69 已建立且為 ready | 任務完成，釋放鎖定 |
 | SpecialsTracker | Warhammer 40,000 DARKTIDE/mods/SpecialsTracker/scripts/mods/SpecialsTracker/SpecialsTracker_localization.lua | all keys | codex | released | Codex/Feature/SpecialsTracker/Add-zh-tw | Darktide Translation Workspace/Log/SpecialsTracker.md | 2026-07-12 20:08:27 +08:00 | 2026-07-12 20:11:56 +08:00 | PR #70 已建立且為 ready | 任務完成，釋放鎖定 |
+| Reconnect | Warhammer 40,000 DARKTIDE/mods/Reconnect/scripts/mods/Reconnect/Reconnect_localization.lua | all keys | codex | in_progress | Codex/Feature/Reconnect/Add-zh-tw | Darktide Translation Workspace/Log/Reconnect.md | 2026-07-12 20:31:37 +08:00 | 2026-07-12 20:31:37 +08:00 | 完成檢查並建立 ready PR | 開始校正 Reconnect 繁中用語 |
 
 ## 逐 MOD 工作紀錄
 
