@@ -32,6 +32,7 @@
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | KeepSwinging | KeepSwinging | main | Codex/Feature/KeepSwinging/Add-zh-tw | Darktide Translation Workspace/Log/KeepSwinging.md | KeepSwinging_localization.lua | all keys | 2026-07-12 02:22:26 +08:00 | a3fc6f6 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/60 | KPM/*localization.lua:first key | 已校正自動揮擊、攻擊鍵修飾模式與 HUD 用語；PR #60 已合併 |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | KPM | KPM | main | Codex/Feature/KPM/Add-zh-tw | Darktide Translation Workspace/Log/KPM.md | KPM_localization.lua | all keys | 2026-07-12 02:57:52 +08:00 | 9a92cf3 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/61 | RetainSelection/*localization.lua:first key | 已校正 KPM 描述、近戰/遠程類精英與專家敵人用語；PR #61 ready |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | RetainSelection | RetainSelection | main | Codex/Feature/RetainSelection/Add-zh-tw | Darktide Translation Workspace/Log/RetainSelection.md | RetainSelection_localization.lua | all keys | 2026-07-12 07:04:18 +08:00 | 695d353 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/62 | show_cjk_glyphs/*localization.lua:first key | 已校正保留選取狀態描述；PR #62 ready |
+| codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | show_cjk_glyphs | Show CJK Glyphs | main | Codex/Feature/show_cjk_glyphs/Add-zh-tw | Darktide Translation Workspace/Log/show_cjk_glyphs.md | show_cjk_glyphs_localization.lua | all keys | 2026-07-12 11:37:24 +08:00 | 5dddea8 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/63 | SimpleSpeedMeter/*localization.lua:first key | 已校正 Language Priority 繁中用語；PR #63 ready |
 
 ## 工作鎖定
 
@@ -62,7 +63,7 @@
 | KeepSwinging | Warhammer 40,000 DARKTIDE/mods/KeepSwinging/scripts/mods/KeepSwinging/KeepSwinging_localization.lua | all keys | codex | released | Codex/Feature/KeepSwinging/Add-zh-tw | Darktide Translation Workspace/Log/KeepSwinging.md | 2026-07-12 01:40:46 +08:00 | 2026-07-12 02:22:26 +08:00 | PR #60 已合併 | 任務完成，釋放鎖定 |
 | KPM | Warhammer 40,000 DARKTIDE/mods/KPM/scripts/mods/KPM/KPM_localization.lua | all keys | codex | released | Codex/Feature/KPM/Add-zh-tw | Darktide Translation Workspace/Log/KPM.md | 2026-07-12 02:22:26 +08:00 | 2026-07-12 02:57:52 +08:00 | PR #61 已建立且為 ready | 任務完成，釋放鎖定 |
 | RetainSelection | Warhammer 40,000 DARKTIDE/mods/RetainSelection/scripts/mods/RetainSelection/RetainSelection_localization.lua | all keys | codex | released | Codex/Feature/RetainSelection/Add-zh-tw | Darktide Translation Workspace/Log/RetainSelection.md | 2026-07-12 03:17:12 +08:00 | 2026-07-12 07:04:18 +08:00 | PR #62 已建立且為 ready | 任務完成，釋放鎖定 |
-| show_cjk_glyphs | Warhammer 40,000 DARKTIDE/mods/show_cjk_glyphs/scripts/mods/show_cjk_glyphs/show_cjk_glyphs_localization.lua | lang_priority | codex | in_progress | Codex/Feature/show_cjk_glyphs/Add-zh-tw | Darktide Translation Workspace/Log/show_cjk_glyphs.md | 2026-07-12 11:35:05 +08:00 | 2026-07-12 11:35:05 +08:00 | 完成 localization 檢查、commit 與 PR 後釋放 | 開始校正 CJK 字形語言優先順序用語 |
+| show_cjk_glyphs | Warhammer 40,000 DARKTIDE/mods/show_cjk_glyphs/scripts/mods/show_cjk_glyphs/show_cjk_glyphs_localization.lua | all keys | codex | released | Codex/Feature/show_cjk_glyphs/Add-zh-tw | Darktide Translation Workspace/Log/show_cjk_glyphs.md | 2026-07-12 11:35:05 +08:00 | 2026-07-12 11:37:24 +08:00 | PR #63 已建立且為 ready | 任務完成，釋放鎖定 |
 
 ## 逐 MOD 工作紀錄
 
@@ -865,6 +866,38 @@
 | 2026-07-12 03:17:12 +08:00 | Warhammer 40,000 DARKTIDE/mods/RetainSelection/scripts/mods/RetainSelection/RetainSelection_localization.lua | mod_description | in_progress | Section: Key Progress | 開始校正 RetainSelection zh-tw 描述 |
 | 2026-07-12 07:04:18 +08:00 | Warhammer 40,000 DARKTIDE/mods/RetainSelection/scripts/mods/RetainSelection/RetainSelection_localization.lua | mod_description | completed | Section: Key Progress | 將「保留選擇」校正為「保留選取狀態」 |
 
+### MOD-LOG-0025 - show_cjk_glyphs
+
+| 欄位 | 值 |
+| --- | --- |
+| README MOD | Show CJK Glyphs |
+| Repo directory | show_cjk_glyphs |
+| AI handler | codex |
+| Status | completed |
+| Base branch | main |
+| Work branch | Codex/Feature/show_cjk_glyphs/Add-zh-tw |
+| Branch log | Darktide Translation Workspace/Log/show_cjk_glyphs.md |
+| Started at | 2026-07-12 11:35:05 +08:00 |
+| Last updated | 2026-07-12 11:37:24 +08:00 |
+| Completed at | 2026-07-12 11:37:24 +08:00 |
+| Commit | 5dddea8 |
+| PR URL / number | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/63 |
+| Next position | SimpleSpeedMeter/*localization.lua:first key |
+| Notes | 已校正 Language Priority 繁中用語；PR #63 ready。 |
+
+#### File Summary
+
+| File | Status | Completed keys | Last key | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Warhammer 40,000 DARKTIDE/mods/show_cjk_glyphs/scripts/mods/show_cjk_glyphs/show_cjk_glyphs_localization.lua | completed | 1 | lang_priority | Section: Key Progress | 僅修改 zh-tw 欄位；duplicate zh-tw=0、empty zh-tw=0 |
+
+#### Key Summary
+
+| Time | File | Key | Status | Branch log section | Notes |
+| --- | --- | --- | --- | --- | --- |
+| 2026-07-12 11:35:05 +08:00 | Warhammer 40,000 DARKTIDE/mods/show_cjk_glyphs/scripts/mods/show_cjk_glyphs/show_cjk_glyphs_localization.lua | lang_priority | in_progress | Section: Key Progress | 開始校正 CJK 字形語言優先順序用語 |
+| 2026-07-12 11:37:24 +08:00 | Warhammer 40,000 DARKTIDE/mods/show_cjk_glyphs/scripts/mods/show_cjk_glyphs/show_cjk_glyphs_localization.lua | lang_priority | completed | Section: Key Progress | 將「語言優先級」校正為「語言優先順序」 |
+
 ## 協作交接紀錄
 
 | Time | From | To | MOD | File | Key | From status | To status | Branch log | Note |
@@ -960,6 +993,7 @@
 | KeepSwinging | codex | main | Codex/Feature/KeepSwinging/Add-zh-tw | a3fc6f6 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/60 | yes | yes | 僅包含 KeepSwinging_localization.lua；PR #60 已合併 |
 | KPM | codex | main | Codex/Feature/KPM/Add-zh-tw | 9a92cf3 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/61 | yes | yes | 僅包含 KPM_localization.lua；PR ready |
 | RetainSelection | codex | main | Codex/Feature/RetainSelection/Add-zh-tw | 695d353 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/62 | yes | yes | 僅包含 RetainSelection_localization.lua；PR ready |
+| show_cjk_glyphs | codex | main | Codex/Feature/show_cjk_glyphs/Add-zh-tw | 5dddea8 | yes | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/63 | yes | yes | 僅包含 show_cjk_glyphs_localization.lua；PR ready |
 
 ## Completed Files
 
@@ -986,3 +1020,4 @@
 | KeepSwinging | codex | Warhammer 40,000 DARKTIDE/mods/KeepSwinging/scripts/mods/KeepSwinging/KeepSwinging_localization.lua | 7 | a3fc6f6 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/60 | 2026-07-12 02:03:14 +08:00 | Darktide Translation Workspace/Log/KeepSwinging.md | 校正自動揮擊、攻擊鍵修飾模式與 HUD 用語；PR #60 已合併 |
 | KPM | codex | Warhammer 40,000 DARKTIDE/mods/KPM/scripts/mods/KPM/KPM_localization.lua | 4 | 9a92cf3 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/61 | 2026-07-12 02:57:52 +08:00 | Darktide Translation Workspace/Log/KPM.md | 校正 KPM 描述、近戰/遠程類精英與專家敵人用語；PR ready |
 | RetainSelection | codex | Warhammer 40,000 DARKTIDE/mods/RetainSelection/scripts/mods/RetainSelection/RetainSelection_localization.lua | 1 | 695d353 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/62 | 2026-07-12 07:04:18 +08:00 | Darktide Translation Workspace/Log/RetainSelection.md | 校正保留選取狀態描述；PR ready |
+| show_cjk_glyphs | codex | Warhammer 40,000 DARKTIDE/mods/show_cjk_glyphs/scripts/mods/show_cjk_glyphs/show_cjk_glyphs_localization.lua | 1 | 5dddea8 | https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/63 | 2026-07-12 11:37:24 +08:00 | Darktide Translation Workspace/Log/show_cjk_glyphs.md | 校正 Language Priority 繁中用語；PR ready |
