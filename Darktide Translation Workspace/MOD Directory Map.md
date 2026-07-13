@@ -32,7 +32,7 @@
 | completed | 2026-07-07 +08:00 | Skitarius | Skitarius | 修正簡體字混入、錯誤撰考問題（PR #37）。 |
 | completed | 2026-07-07 +08:00 | Auto Loot | AutoLoot | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-13 18:42:15 +08:00 | Healthbars | Healthbars | 校正血條、首領血條、靈能室與連長用語（PR #75）。 |
-| in_progress | 2026-07-13 18:54:36 +08:00 | IME Enable | IME_Enable | codex 接手重新比對 Version 1.2.0 localization。 |
+| completed | 2026-07-13 19:12:53 +08:00 | IME Enable | IME_Enable | 校正輸入框描述與 Darktide/黑潮詞彙（PR #76）。 |
 | completed | 2026-07-07 +08:00 | True Level | true_level | 修正 player_salvage_style_text 簡體字（PR #38）。 |
 | completed | 2026-07-07 +08:00 | Who Are You - Display account names | who_are_you | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | MultiBind | MultiBind | 補齊 wield_1 缺失 zh-tw（PR #39）。 |
