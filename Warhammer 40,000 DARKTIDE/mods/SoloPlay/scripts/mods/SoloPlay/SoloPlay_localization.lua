@@ -30,6 +30,7 @@ return {
 	},
 	format_expedition = {
 		en = Localize("loc_zone_expeditions") .. ": %s",
+		["zh-tw"] = Localize("loc_zone_expeditions") .. ": %s",
 	},
 
 	group_keybinds = {
@@ -41,16 +42,17 @@ return {
 		en = "Open Solo Play view",
 		["zh-cn"] = "打开单人游戏界面",
 		ru = "Открыть меню Игры в соло",
-		["zh-tw"] = "開啟單人遊戲界面",
+		["zh-tw"] = "開啟單人遊戲介面",
 	},
 	solo_keybind_description = {
 		en = "Solo Play view can also be opened by \"/solo\" command.",
 		["zh-cn"] = "单人游戏界面也可以通过“/solo”命令打开。",
 		ru = "Режим соло-игры также можно открыть с помощью команды \"/solo\".",
-		["zh-tw"] = "單人遊戲界面也可以通過「/solo」指令開啟。",
+		["zh-tw"] = "單人遊戲介面也可以透過「/solo」指令開啟。",
 	},
 	inventory_keybind = {
 		en = Localize("loc_alias_view_hotkey_inventory"),
+		["zh-tw"] = Localize("loc_alias_view_hotkey_inventory"),
 	},
 	group_modifiers = {
 		en = "Modifiers",
@@ -61,7 +63,7 @@ return {
 	mission_brief_enabled = {
 		en = "Mission Brief",
 		["zh-cn"] = "任务简报",
-		["zh-tw"] = "任務報告",
+		["zh-tw"] = "任務簡報",
 	},
 	friendly_fire_enabled = {
 		en = "Friendly fire",
@@ -144,13 +146,13 @@ return {
 		en = "Side Mission",
 		["zh-cn"] = "次要目标",
 		ru = "Дополнительная миссия",
-		["zh-tw"] = "次要任務",
+		["zh-tw"] = "次要目標",
 	},
 	label_circumstance = {
 		en = "Special Condition",
 		["zh-cn"] = "特殊状况",
 		ru = "Особое условие",
-		["zh-tw"] = "特殊狀況",
+		["zh-tw"] = "特殊條件",
 	},
 	label_circumstance1 = {
 		en = "Havoc Condition 1",
@@ -202,7 +204,7 @@ return {
 			.. "你无法从离线游戏中获得任何奖励或进度。",
 		ru = "Офлайн-игра предназначена в основном для тестирования, впечатления от неё могут отличаться от онлайн-игры.\n"
 			.. "В офлайн-игре вы не сможете получить никаких наград или прогресса.",
-		["zh-tw"] = "離線遊戲主要用於測試，其體驗可能與在線遊戲有所不同。\n"
+		["zh-tw"] = "離線遊戲主要用於測試，其體驗可能與線上遊戲有所不同。\n"
 			.. "你無法在離線遊戲中獲得任何獎勵或進度。",
 	},
 	tip_invalid_combination = {
@@ -259,7 +261,7 @@ return {
 		en = "Monstrosity Amount +%d\nMonstrosity Health +%d%%",
 		["zh-cn"] = "怪物数量 +%d\n怪物生命值 +%d%%",
 		ru = "Количество монстров: +%d\nЗдоровье монстров: +%d%%",
-		["zh-tw"] = "怪物數量 +%d\n怪物生命值 +%d%%",
+		["zh-tw"] = "巨獸數量 +%d\n巨獸生命值 +%d%%",
 	},
 	havoc_modifier_buff_horde = {
 		en = "Horde Hit Mass +%d%%\nHorde Health +%d%%",
@@ -295,7 +297,7 @@ return {
 		en = "Enemy Melee Corruption Damage %d%%",
 		["zh-cn"] = "敌人近战腐化伤害 %d%%",
 		ru = "Урон порчей от вражеских атак ближнего боя: %d%%",
-		["zh-tw"] = "敵人近戰腐化傷害 %d%%",
+		["zh-tw"] = "敵人近戰腐敗傷害 %d%%",
 	},
 	havoc_modifier_ammo_pickup_modifier = {
 		en = "Player Ammo Gained -%d%%",
@@ -349,7 +351,7 @@ return {
 		en = "Player Grenade Amount +%d\nBrain Burst Peril -%d%%",
 		["zh-cn"] = "玩家手雷 +%d\n大脑爆裂危机值 -%d%%",
 		ru = "Количество гранат у игрока: +%d\nОпасность от Разрыва мозга: -%d%%",
-		["zh-tw"] = "玩家手榴彈數量 +%d\n 顱腦爆裂反噬 -%d%%",
+		["zh-tw"] = "玩家手榴彈數量 +%d\n顱腦爆裂反噬 -%d%%",
 	},
 	havoc_modifier_positive_stamina_modifier = {
 		en = "Player Stamina +%d",
@@ -379,7 +381,7 @@ return {
 		en = "Player Crit Chance +%d%%",
 		["zh-cn"] = "玩家暴击率 +%d%%",
 		ru = "Шанс критического удара игрока: +%d%%",
-		["zh-tw"] = "玩家致命一擊率 +%d%%",
+		["zh-tw"] = "玩家暴擊機率 +%d%%",
 	},
 	havoc_modifier_positive_movement_speed = {
 		en = "Player Movement Speed +%d%%",
