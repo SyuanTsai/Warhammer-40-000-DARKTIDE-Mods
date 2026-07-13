@@ -101,7 +101,7 @@
 | completed | 2026-07-07 +08:00 | Talent Tree UX Improvements | TalentRefundBelow | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Archivum Messelina | Archivum Messelina | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Many More Try | ManyMoreTry | 所有 zh-tw 已完整正確，無需修改。 |
-| ready | 2026-07-07 +08:00 | Solo Play (Havoc Update) | SoloPlay |  |
+| in_progress | 2026-07-13 17:22:03 +08:00 | Solo Play (Havoc Update) | SoloPlay | codex 開始處理 zh-tw localization。 |
 | completed | 2026-07-07 +08:00 | TagKeys | TagKeys | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | completed | 2026-07-07 +08:00 | Weapon Filter | WeaponFilter | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | completed | 2026-07-07 +08:00 | AFK | afk | 所有 zh-tw 已完整正確，無需修改。 |
