@@ -90,7 +90,7 @@
 | completed | 2026-07-07 +08:00 | Quick Level Mastery | quick_level_mastery | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-12 21:10:39 +08:00 | I Wanna See | i_wanna_see | 已校正 VFX 來源、淨化噴火器與懲戒閃電用語；PR #72 ready。 |
 | completed | 2026-07-07 +08:00 | VFX Swapper | vfx_swapper | 所有 zh-tw 已完整正確，無需修改。 |
-| mod_updated | 2026-07-12 12:40:16 +08:00 | CombatStats | CombatStats | README 更新至 Last updated 11 July 2026 / 0.4.14，手動維護最後下載日期 2026-07-12；需重新比對本地 localization。 |
+| in_progress | 2026-07-13 17:01:33 +08:00 | CombatStats | CombatStats | codex 接手重新比對 0.4.14 localization。 |
 | completed | 2026-07-07 +08:00 | CharacterGrid | CharacterGrid | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | TeamKills | TeamKills | 無可翻譯內容（無静態中文項目）。 |
 | completed | 2026-07-07 +08:00 | BrokerAutoStim | BrokerAutoStim | 所有 zh-tw 已完整正確，無需修改。 |
