@@ -365,7 +365,7 @@ locr = {
 	trait_gadget_stamina_regeneration = {
 		en = "STRG", -- Stamina Regeneration
 		["zh-cn"] = "体回", -- 体力恢复
-		["zh-tw"] = "耐回", -- 體力恢复
+		["zh-tw"] = "耐回", -- 耐力恢復
 	},
 	trait_gadget_cooldown_reduction = {
 		en = "ABRG", -- Combat Ability Regeneration
