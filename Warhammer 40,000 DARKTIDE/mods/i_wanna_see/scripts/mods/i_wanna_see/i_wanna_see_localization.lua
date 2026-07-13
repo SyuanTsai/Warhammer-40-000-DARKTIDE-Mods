@@ -6,7 +6,7 @@ return {
 	},
 	mod_description = {
 		en = "Remove sources of VFX that block vision",
-		["zh-tw"] = "移除阻擋視線的特效",
+		["zh-tw"] = "移除阻擋視線的特效來源",
 	},
 	remove_purgatus_effect = {
 		en = "Remove Inferno Staff Effects",
@@ -14,11 +14,11 @@ return {
 	},
 	remove_flamer_effect = {
 		en = "Remove Zealot Flamer Effects",
-		["zh-tw"] = "移除狂信徒火焰噴射器特效",
+		["zh-tw"] = "移除狂信徒淨化噴火器特效",
 	},
 	remove_smite_effect = {
 		en = "Remove Smite Lightning Effects",
-		["zh-tw"] = "移除懲戒特效",
+		["zh-tw"] = "移除懲戒閃電特效",
 	},
 	remove_electro_effect = {
 		en = "Remove Electro Staff Lightning Effects",
