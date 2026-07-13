@@ -466,7 +466,7 @@ local localizations = {
         en = "Shows NET!! indicator when trapper winds up",
         ["zh-cn"] = "当陷阱手发动攻击时，显示“网！！”警告",
         ru = "Показывает индикатор «СЕТЬ!!» на экране, когда Ловушечник заряжает сетемёт",
-        ["zh-tw"] = "當陷阱手準備發動攻擊時，顯示「網!!」警告",
+        ["zh-tw"] = "當陷阱兵準備發動攻擊時，顯示「網!!」警告",
     },
     render_crusher_warning = {
         en = "\"CLEAVE!!\" indicator",
