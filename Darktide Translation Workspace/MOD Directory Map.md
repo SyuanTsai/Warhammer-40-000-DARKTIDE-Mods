@@ -24,12 +24,12 @@
 | Status | Last compared at | README MOD | Repo directory | Notes |
 | --- | --- | --- | --- | --- |
 | completed | 2026-07-06 22:35:51 +08:00 | Darktide Mod Loader | base | 已檢查完成，未找到 localization 檔案。 |
-| completed | 2026-07-06 23:13:46 +08:00 | Darktide Mod Framework | dmf | 已完成 zh-tw 校正與缺漏補齊（PR #31）。 |
+| ready | 2026-07-06 23:13:46 +08:00 | Darktide Mod Framework | dmf | 已完成 zh-tw 校正與缺漏補齊（PR #31）。 |
 | completed | 2026-07-06 23:16:11 +08:00 | What The Localization | WhatTheLocalization | 已檢查完成，所有 en key 均有 zh-tw，無需修改。 |
-| completed | 2026-07-06 23:32:20 +08:00 | Scoreboard | scoreboard | 已完成 zh-tw 缺漏補齊（PR #34）。 |
-| completed | 2026-07-07 +08:00 | Creature Spawner | creature_spawner | 修正 Combat Ability 詞彙表不一致（PR #35）。 |
-| completed | 2026-07-07 +08:00 | Power DI | Power_DI | 補齊缺失 zh-tw、修正 Curios/Crit 詞彙表（PR #36）。 |
-| completed | 2026-07-07 +08:00 | Skitarius | Skitarius | 修正簡體字混入、錯誤撰考問題（PR #37）。 |
+| ready | 2026-07-06 23:32:20 +08:00 | Scoreboard | scoreboard | 已完成 zh-tw 缺漏補齊（PR #34）。 |
+| ready | 2026-07-07 +08:00 | Creature Spawner | creature_spawner | 修正 Combat Ability 詞彙表不一致（PR #35）。 |
+| ready | 2026-07-07 +08:00 | Power DI | Power_DI | 補齊缺失 zh-tw、修正 Curios/Crit 詞彙表（PR #36）。 |
+| ready | 2026-07-07 +08:00 | Skitarius | Skitarius | 修正簡體字混入、錯誤撰考問題（PR #37）。 |
 | completed | 2026-07-07 +08:00 | Auto Loot | AutoLoot | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-13 18:42:15 +08:00 | Healthbars | Healthbars | 校正血條、首領血條、靈能室與連長用語（PR #75）。 |
 | completed | 2026-07-13 19:12:53 +08:00 | IME Enable | IME_Enable | 校正輸入框描述與 Darktide/黑潮詞彙（PR #76）。 |
@@ -51,7 +51,7 @@
 | completed | 2026-07-07 +08:00 | Gas Outline | GasOutline | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-13 19:54:16 +08:00 | Loadout Monitor | LoadoutMonitor | 校正專長/祝福錯譯、動態欄位與詞彙表用語（PR #77）。 |
 | completed | 2026-07-07 +08:00 | Quick Look Card | QuickLookCard | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
-| completed | 2026-07-07 +08:00 | Markers Improved All-in-One | markers_aio | 第二次重新處理：修正錢詞表不一致、補齊缺失 key、修正重複問題（PR #33）。 |
+| ready | 2026-07-07 +08:00 | Markers Improved All-in-One | markers_aio | 第二次重新處理：修正錢詞表不一致、補齊缺失 key、修正重複問題（PR #33）。 |
 | completed | 2026-07-07 +08:00 | Danger Zone | danger_zone | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Numeric UI | NumericUI | 修正 peril_icon 詞彙表不一致（PR #43）。 |
 | completed | 2026-07-13 20:38:33 +08:00 | Spidey Sense | Spidey Sense | 補上動態 proximity arrow 描述 zh-tw，校正敵人名稱與警告用語（PR #78）。 |
@@ -90,7 +90,7 @@
 | completed | 2026-07-07 +08:00 | Quick Level Mastery | quick_level_mastery | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-12 21:10:39 +08:00 | I Wanna See | i_wanna_see | 已校正 VFX 來源、淨化噴火器與懲戒閃電用語；PR #72 ready。 |
 | completed | 2026-07-07 +08:00 | VFX Swapper | vfx_swapper | 所有 zh-tw 已完整正確，無需修改。 |
-| completed | 2026-07-13 17:08:11 +08:00 | CombatStats | CombatStats | 校正 Horde 詞彙表一致性（PR #73 已合併）。 |
+| ready | 2026-07-13 17:08:11 +08:00 | CombatStats | CombatStats | 校正 Horde 詞彙表一致性（PR #73 已合併）。 |
 | completed | 2026-07-07 +08:00 | CharacterGrid | CharacterGrid | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | TeamKills | TeamKills | 無可翻譯內容（無静態中文項目）。 |
 | completed | 2026-07-07 +08:00 | BrokerAutoStim | BrokerAutoStim | 所有 zh-tw 已完整正確，無需修改。 |
