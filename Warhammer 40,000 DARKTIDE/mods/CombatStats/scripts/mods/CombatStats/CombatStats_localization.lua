@@ -290,7 +290,7 @@ return {
     breed_horde = {
         en = 'horde',
         ['zh-cn'] = '尸潮',
-        ['zh-tw'] = '屍潮',
+        ['zh-tw'] = '群怪',
     },
     breed_unknown = {
         en = 'unknown',
