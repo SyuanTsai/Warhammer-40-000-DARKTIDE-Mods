@@ -3761,7 +3761,7 @@ local loc = {
 	martyrs_skull_guide_disable_if_collected_tooltip = {
 		en = "Disable the Martyr's Skull guide if you have already collected this skull and have the penance unlocked?",
 		["zh-cn"] = "已收集颅骨并解锁苦修后，关闭殉道者颅骨指引。",
-		["zh-tw"] = "已收集顱骨並解鎖苦修後，關閉殉道者之顱指引。",
+		["zh-tw"] = "已收集殉道者之顱並解鎖苦修後，關閉殉道者之顱指引。",
 	},
 	martyrs_skull_guide_x_offset_tooltip = {
 		en = "Horizontal position of the guide widget (in pixels). 0 = left edge of screen.",
