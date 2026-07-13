@@ -360,12 +360,12 @@ locr = {
 	trait_weapon_trait_increase_stamina = {
 		en = "STAM", -- Stamina
 		["zh-cn"] = "体力", -- 体力
-		["zh-tw"] = "耐力", -- 體力
+		["zh-tw"] = "耐力", -- 耐力
 	},
 	trait_gadget_stamina_regeneration = {
 		en = "STRG", -- Stamina Regeneration
 		["zh-cn"] = "体回", -- 体力恢复
-		["zh-tw"] = "耐回", -- 體力恢复
+		["zh-tw"] = "耐回", -- 耐力恢復
 	},
 	trait_gadget_cooldown_reduction = {
 		en = "ABRG", -- Combat Ability Regeneration
@@ -397,7 +397,7 @@ locr = {
 		["zh-cn"] = "体力", -- 最大体力
 		ja = "活力", -- 最大スタミナ
 		ru = "ВНСЛ", -- Выносливость
-		["zh-tw"] = "耐力", -- 最大體力
+		["zh-tw"] = "耐力", -- 最大耐力
 	},
 	trait_gadget_inate_health_increase = {
 		en = "HP", -- Max Health
@@ -451,7 +451,7 @@ locr = {
 	trait_gadget_corruption_resistance = {
 		en = "CRPT", -- Corruption Resistance
 		["zh-cn"] = "腐抗", -- 腐化抗性
-		["zh-tw"] = "腐敗", -- 腐化抗性
+		["zh-tw"] = "腐抗", -- 腐化抗性
 	},
 	trait_gadget_permanent_damage_resistance = {
 		en = "GRIM", -- Corruption Resistance (Grimoires)
