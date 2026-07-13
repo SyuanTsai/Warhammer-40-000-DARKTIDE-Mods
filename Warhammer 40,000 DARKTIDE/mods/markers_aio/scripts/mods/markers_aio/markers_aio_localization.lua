@@ -3102,7 +3102,7 @@ local loc = {
 	servo_skull_settings = {
 		en = "DECODING MARKERS",
 		["zh-cn"] = "伺服颅骨标记（可破解终端）",
-		["zh-tw"] = "伺服顱骨標記（可操作終端）",
+		["zh-tw"] = "伺服頭骨標記（可操作終端）",
 	},
 	Investigation = {
 		en = "Investigation",
@@ -3133,14 +3133,14 @@ local loc = {
 		en = "Servo Skull Icon",
 		fr = "Icône du Crâne Serviteur",
 		ru = "Значок сервочерепа",
-		["zh-tw"] = "顱骨圖標",
+		["zh-tw"] = "伺服頭骨圖示",
 		["zh-cn"] = "伺服颅骨图标",
 	},
 	decoding_icon = {
 		en = "Decoding Icon (No Servo Skull Equipped)",
 		fr = "Icône de décodage (aucun Crâne Serviteur équipé)",
 		ru = "Значок декодирования (сервочереп не экипирован)",
-		["zh-tw"] = "破解中圖標（未裝備伺服顱骨）",
+		["zh-tw"] = "破解中圖示（未裝備伺服頭骨）",
 		["zh-cn"] = "解码图标（未装备伺服颅骨）",
 	},
 	servo_skull_keep_on_screen = {
@@ -3287,7 +3287,7 @@ local loc = {
 		en = "Gently pulse the marker size when the servo skull is stalled (1x to 1.2x)",
 		fr = "Fait doucement pulser la taille du marqueur lorsque le Crâne Serviteur est bloqué (1x à 1,2x)",
 		ru = "Мягко пульсирует размер маркера, когда сервочереп ожидает (от 1x до 1,2x)",
-		["zh-tw"] = "當伺服顱骨停滯時，標記大小會輕微閃爍（1倍至1.2倍）",
+		["zh-tw"] = "當伺服頭骨停滯時，標記大小會輕微閃爍（1倍至1.2倍）",
 		["zh-cn"] = "当伺服颅骨卡住时，标记大小会轻微脉冲（1倍至1.2倍）",
 	},
 	-- Player Assistance Markers
@@ -3330,14 +3330,14 @@ local loc = {
 		en = "Servo Skull Icon",
 		fr = "Icône du Crâne Serviteur",
 		ru = "Значок сервочерепа",
-		["zh-tw"] = "伺服顱骨圖示",
+		["zh-tw"] = "伺服頭骨圖示",
 		["zh-cn"] = "伺服颅骨图标",
 	},
 	player_assistance_icon = {
 		en = "Assistance Icon (No Servo Skull Equipped)",
 		fr = "Icône d'assistance (aucun Crâne Serviteur équipé)",
 		ru = "Значок помощи (сервочереп не экипирован)",
-		["zh-tw"] = "支援圖示（未裝備伺服顱骨）",
+		["zh-tw"] = "支援圖示（未裝備伺服頭骨）",
 		["zh-cn"] = "辅助图标（未装备伺服颅骨）",
 	},
 	player_assistance_keep_on_screen = {
@@ -3484,7 +3484,7 @@ local loc = {
 		en = "Gently pulse the marker size when the servo skull is stalled (1x to 1.2x)",
 		fr = "Fait doucement pulser la taille du marqueur lorsque le Crâne Serviteur est bloqué (1x à 1,2x)",
 		ru = "Мягко пульсирует размер маркера, когда сервочереп ожидает (от 1x до 1,2x)",
-		["zh-tw"] = "當伺服顱骨停滯時，標記大小會輕微閃爍（1倍至1.2倍）",
+		["zh-tw"] = "當伺服頭骨停滯時，標記大小會輕微閃爍（1倍至1.2倍）",
 		["zh-cn"] = "当伺服颅骨卡住时，标记大小会轻微脉冲（1倍至1.2倍）",
 	},
 	-- Unknown Markers
@@ -3751,17 +3751,17 @@ local loc = {
 	martyrs_skull_guide_enable_tooltip = {
 		en = "Enable an on-screen guide widget with step-by-step text for collecting Martyr's Skulls.",
 		["zh-cn"] = "启用屏幕上的步骤文字指引，指导收集殉道者颅骨。",
-		["zh-tw"] = "啟用螢幕上的步驟文字指引，指導收集殉道者顱骨。",		
+		["zh-tw"] = "啟用螢幕上的步驟文字指引，指導收集殉道者之顱。",
 	},
 	martyrs_skull_guide_markers_enable_tooltip = {
 		en = "Enable in-world positional markers for Martyr's Skull guide steps.",
 		["zh-cn"] = "启用任务内殉道者颅骨收集步骤的场景位置标记。",
-		["zh-tw"] = "啟用任務內殉道者顱骨收集步驟的場景位置標記。",
+		["zh-tw"] = "啟用任務內殉道者之顱收集步驟的場景位置標記。",
 	},
 	martyrs_skull_guide_disable_if_collected_tooltip = {
 		en = "Disable the Martyr's Skull guide if you have already collected this skull and have the penance unlocked?",
 		["zh-cn"] = "已收集颅骨并解锁苦修后，关闭殉道者颅骨指引。",
-		["zh-tw"] = "已收集顱骨並解鎖苦修後，關閉殉道者顱骨指引。",
+		["zh-tw"] = "已收集殉道者之顱並解鎖苦修後，關閉殉道者之顱指引。",
 	},
 	martyrs_skull_guide_x_offset_tooltip = {
 		en = "Horizontal position of the guide widget (in pixels). 0 = left edge of screen.",
