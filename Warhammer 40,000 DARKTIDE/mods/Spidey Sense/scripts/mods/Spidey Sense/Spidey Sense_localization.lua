@@ -252,13 +252,13 @@ local localizations = {
         en = "Colour for Ragers",
         ["zh-cn"] = "狂暴者颜色",
         ru = "Цвет для Берсерков",
-        ["zh-tw"] = "狂暴者顏色",
+        ["zh-tw"] = "狂怒者顏色",
     },
     rager_name = {
         en = "Rager",
         ["zh-cn"] = "狂暴者",
         ru = "Берсерк",
-        ["zh-tw"] = "狂暴者",
+        ["zh-tw"] = "狂怒者",
     },
     toxbomber_colour = {
         en = "Colour for Tox Grenadiers",
@@ -352,7 +352,7 @@ local localizations = {
         en = "Trapper Text Warnings",
         ["zh-cn"] = "陷阱手文字警告",
         ru = "Текст предупреждения для Ловушечников",
-        ["zh-tw"] = "陷阱手文字警告",
+        ["zh-tw"] = "陷阱兵文字警告",
     },
     pogryn_text_warnings = {
         en = "Plague Ogryn Text Warnings",
@@ -424,7 +424,7 @@ local localizations = {
         en = "CLEAVE!!",
         ["zh-cn"] = "劈砍！！",
         ru = "УДАР СВЕРХУ!!",
-        ["zh-tw"] = "劈砍!!",
+        ["zh-tw"] = "順劈!!",
     },
     net_text = {
         en = "NET!!",
@@ -466,19 +466,19 @@ local localizations = {
         en = "Shows NET!! indicator when trapper winds up",
         ["zh-cn"] = "当陷阱手发动攻击时，显示“网！！”警告",
         ru = "Показывает индикатор «СЕТЬ!!» на экране, когда Ловушечник заряжает сетемёт",
-        ["zh-tw"] = "當陷阱手準備發動攻擊時，顯示「網!!」警告",
+        ["zh-tw"] = "當陷阱兵準備發動攻擊時，顯示「網!!」警告",
     },
     render_crusher_warning = {
         en = "\"CLEAVE!!\" indicator",
         ["zh-cn"] = "“劈砍！！”警告语",
         ru = "Индикатор «УДАР СВЕРХУ!!»",
-        ["zh-tw"] = "「劈砍!!」警告語",
+        ["zh-tw"] = "「順劈!!」警告語",
     },
     render_crusher_warning_description = {
         en = "Shows CLEAVE!! indicator when Crusher or Mauler winds up",
         ["zh-cn"] = "当粉碎者或重锤兵发动攻击时，显示“劈砍！！”警告",
         ru = "Показывает индикатор «УДАР СВЕРХУ!!» на экране, когда Дробитель или Палач собирается нанести неотражаемый удар сверху",
-        ["zh-tw"] = "當碾壓者或重錘兵準備攻擊時，顯示「劈砍!!」警告",
+        ["zh-tw"] = "當碾壓者或重錘兵準備攻擊時，顯示「順劈!!」警告",
     },
     render_pogryn_warning = {
         en = "\"CHARGE!!\" indicator",
@@ -532,7 +532,7 @@ local localizations = {
         en = "Shows SNIPER SHOT! indicator when a sniper fires an aimed shot",
         ["zh-cn"] = "当狙击手进行瞄准射击时显示“狙击！！”警告",
         ru = "Показывает индикатор «ВЫСТРЕЛ СНАЙПЕРА!» на экране, когда снайпер готов выстрелить",
-        ["zh-tw"] = "當狙擊手進行瞄準射擊時顯示「狙擊!！」警告",
+        ["zh-tw"] = "當狙擊手進行瞄準射擊時顯示「狙擊!!」警告",
     },
     
     arial = {en = "Arial"},
@@ -639,6 +639,7 @@ local function addLocalisation(localisations, typeName)
     localisations[typeName .. "_arrow_description"] = {
         en = "Shows an indicator when the target is within a certain closer range",
         ["zh-cn"] = "当目标进入近距离范围内时显示指示器",
+        ["zh-tw"] = "當目標進入較近範圍內時顯示指示器",
     }
     localisations[typeName .. "_arrow_colour"] = {
         en = "Proximity Alert Colour",
@@ -710,19 +711,19 @@ addLocalisation(localizations, "toxbomber")
 localizations.text_warning_crusher_cleave = {
     en = "Crusher (Cleave)",
     ["zh-cn"] = "粉碎者（横扫）",
-    ["zh-tw"] = "粉碎者（橫掃）",
+    ["zh-tw"] = "碾壓者（順劈）",
     ru = "Крушитель (Рассечение)",
 }
 localizations.text_warning_trapper_net = {
     en = "Trapper (Net)",
     ["zh-cn"] = "血痂陷阱手（网）",
-    ["zh-tw"] = "陷阱手（網）",
+    ["zh-tw"] = "陷阱兵（網）",
     ru = "Ловчий (Сеть)",
 }
 localizations.text_warning_pogryn_charge = {
     en = "Plague Ogryn (Charge)",
     ["zh-cn"] = "瘟疫欧格林（冲锋）",
-    ["zh-tw"] = "瘟疫歐根（衝鋒）",
+    ["zh-tw"] = "瘟疫歐格林（衝鋒）",
     ru = "Чумной огрин (Рывок)",
 }
 localizations.text_warning_shotgun_shot = {
@@ -734,7 +735,7 @@ localizations.text_warning_shotgun_shot = {
 localizations.text_warning_hound_pounce = {
     en = "Hound (Pounce)",
     ["zh-cn"] = "猎犬（扑击）",
-    ["zh-tw"] = "獵犬（撲擊）",
+    ["zh-tw"] = "瘟疫獵犬（撲擊）",
     ru = "Гончая (Прыжок)",
 }
 localizations.text_warning_sniper_sniper = {
