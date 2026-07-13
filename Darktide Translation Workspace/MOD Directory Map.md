@@ -27,7 +27,7 @@
 | completed | 2026-07-13 21:25:41 +08:00 | Darktide Mod Framework | dmf | 校正 DMF 歡迎訊息中的 Darktide/黑潮詞彙（PR #81）。 |
 | completed | 2026-07-06 23:16:11 +08:00 | What The Localization | WhatTheLocalization | 已檢查完成，所有 en key 均有 zh-tw，無需修改。 |
 | completed | 2026-07-13 21:34:55 +08:00 | Scoreboard | scoreboard | 校正伺服頭骨與首領統計用語（PR #82）。 |
-| in_progress | 2026-07-13 21:36:57 +08:00 | Creature Spawner | creature_spawner | codex 依更新後排程重新比對 creature_spawner localization。 |
+| completed | 2026-07-13 22:01:40 +08:00 | Creature Spawner | creature_spawner | 校正首領、首領連戰與混沌魔物用語（PR #83）。 |
 | ready | 2026-07-07 +08:00 | Power DI | Power_DI | 補齊缺失 zh-tw、修正 Curios/Crit 詞彙表（PR #36）。 |
 | ready | 2026-07-07 +08:00 | Skitarius | Skitarius | 修正簡體字混入、錯誤撰考問題（PR #37）。 |
 | completed | 2026-07-07 +08:00 | Auto Loot | AutoLoot | 所有 zh-tw 已完整正確，無需修改。 |
