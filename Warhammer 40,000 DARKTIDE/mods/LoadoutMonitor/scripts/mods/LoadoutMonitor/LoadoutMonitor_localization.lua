@@ -431,7 +431,7 @@ locr = {
 		["zh-cn"] = "伤口", -- 生命格
 		ja = "傷口", -- 傷口
 		ru = "РАНЫ", -- Дополнительные раны
-		["zh-tw"] = "重傷", -- 傷痕
+		["zh-tw"] = "傷痕", -- 傷痕
 	},
 	trait_weapon_trait_reduce_sprint_cost = {
 		en = "SPRT", -- Sprint Efficiency
@@ -456,7 +456,7 @@ locr = {
 	trait_gadget_permanent_damage_resistance = {
 		en = "GRIM", -- Corruption Resistance (Grimoires)
 		["zh-cn"] = "书抗", -- 腐化抗性（魔法书）
-		["zh-tw"] = "法術書", -- 腐化抗性（魔法書）
+		["zh-tw"] = "法術書抗性", -- 腐化抗性（魔法書）
 	},
 	trait_weapon_trait_ranged_increased_reload_speed = {
 		en = "RLD ", -- Reload Speed
@@ -558,7 +558,7 @@ locr = {
 	trait_weapon_trait_ranged_increase_stamina = {
 		en = "STAM", -- Stamina (Weapon is Active)
 		["zh-cn"] = "体力", -- （使用武器时）体力
-		["zh-tw"] = "耐力", -- （使用武器時）體力
+		["zh-tw"] = "耐力", -- （使用武器時）耐力
 	},
 	
 	endview_scoreboard_weapons = {
