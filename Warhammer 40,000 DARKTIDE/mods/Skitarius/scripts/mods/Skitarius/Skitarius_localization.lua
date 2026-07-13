@@ -134,6 +134,7 @@ local localizations = {
     },
     interruption_sprint = {
         en = Localize("loc_ingame_sprint"),
+        ["zh-tw"] = Localize("loc_ingame_sprint"),
     },
     interruption_action_one = {
         en = "Attacking", -- [ ] Localize
@@ -142,6 +143,7 @@ local localizations = {
     },
     interruption_action_two = {
         en = Localize("loc_block"),
+        ["zh-tw"] = Localize("loc_block"),
     },
     interruption_action_both = {
         en = "Attacking / " .. Localize("loc_block"), -- [ ] Localize
@@ -220,6 +222,7 @@ local localizations = {
     -- Melee
     melee_settings = {
         en = Localize("loc_glossary_term_melee_weapons"),
+        ["zh-tw"] = Localize("loc_glossary_term_melee_weapons"),
     },
     current_melee = {
         en = "JUMP TO CURRENT/GLOBAL",
@@ -265,17 +268,20 @@ local localizations = {
         en =
         "When selected, Heavy attacks will be charged until this buff reaches the specified number of stacks in the Heavy Buff Stacks setting.",
         ["zh-cn"] = "启动神圣充能协议后，战术重击将维持相位蓄能状态，直至机魂增幅矩阵达到预设充能阶位（参见『重击增幅协议阶位配置』）。",
-        ["zh-tw"] = "啟動神聖充能協定後，戰術重擊將維持相位蓄能狀態，直至機魂增幅矩陣達到預設充能階比特（參見『重擊增幅協定階比特配寘』）。",
+        ["zh-tw"] = "啟動神聖充能協定後，戰術重擊將維持相位蓄能狀態，直至機魂增幅矩陣達到預設充能階位（參見『重擊增幅協定階位配置』）。",
     },
     thrust = { en = Localize("loc_trait_bespoke_power_bonus_based_on_charge_time") .. " / " .. Localize("loc_weapon_family_crowbar_p1_m1") },
     slow_and_steady = {
         en = Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time"),
+        ["zh-tw"] = Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time"),
     },
     crunch = {
         en = Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger"),
+        ["zh-tw"] = Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger"),
     },
     mechsword = {
-        en = Localize("loc_weapon_family_powersword_p3_m1")
+        en = Localize("loc_weapon_family_powersword_p3_m1"),
+        ["zh-tw"] = Localize("loc_weapon_family_powersword_p3_m1"),
     },
     heavy_buff_stacks = {
         en = "Heavy Buff Stacks",
@@ -289,7 +295,14 @@ local localizations = {
             cf(Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time") .. ":","terminal_text_body") .. " 3\n" ..
             cf(Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger") .. ":","terminal_text_body") .. " 4\n" ..
             cf(Localize("loc_weapon_family_powersword_p3_m1") .. ":","terminal_text_body") .. " 4\n"
-        )
+        ),
+        ["zh-tw"] = string.format(
+            "最大層數:\n" ..
+            cf(Localize("loc_trait_bespoke_power_bonus_based_on_charge_time") .. " / " .. Localize("loc_weapon_family_crowbar_p1_m1") .. ":","terminal_text_body") .. " 3\n" ..
+            cf(Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time") .. ":","terminal_text_body") .. " 3\n" ..
+            cf(Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger") .. ":","terminal_text_body") .. " 4\n" ..
+            cf(Localize("loc_weapon_family_powersword_p3_m1") .. ":","terminal_text_body") .. " 4\n"
+        ),
     },
     heavy_buff_special = {
         en = "Special Required For Heavy Modifier",
