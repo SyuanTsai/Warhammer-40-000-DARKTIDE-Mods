@@ -397,7 +397,7 @@ locr = {
 		["zh-cn"] = "体力", -- 最大体力
 		ja = "活力", -- 最大スタミナ
 		ru = "ВНСЛ", -- Выносливость
-		["zh-tw"] = "耐力", -- 最大體力
+		["zh-tw"] = "耐力", -- 最大耐力
 	},
 	trait_gadget_inate_health_increase = {
 		en = "HP", -- Max Health
