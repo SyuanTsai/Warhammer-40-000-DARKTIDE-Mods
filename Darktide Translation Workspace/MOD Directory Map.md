@@ -118,7 +118,7 @@
 | completed | 2026-07-11 18:28:41 +08:00 | Auto Mark | AutoMark | 校正 Servo-Skull/Focus Target 詞彙表一致性（PR #55）。 |
 | completed | 2026-07-11 19:30:50 +08:00 | SMOG Cleaner | SMOG | 校正 SMOG 品牌名、Lua heap 與手動清理描述（PR #56）。 |
 | completed | 2026-07-11 20:00:16 +08:00 | ErrorTracker | ErrorTracker | 校正 MOD 崩潰報告描述（PR #57）。 |
-| in_progress | 2026-07-13 20:45:25 +08:00 | NoBrainer | NoBrainer | codex 接手重新比對 v2.0.7 localization。 |
+| completed | 2026-07-13 20:52:11 +08:00 | NoBrainer | NoBrainer | 校正黑潮、哀星號與瘟疫樹用語（PR #80）。 |
 | completed | 2026-07-11 20:35:47 +08:00 | AUPM | AUPM | 校正戰鬥技能使用統計與客製化開發用語（PR #58）。 |
 | completed | 2026-07-12 01:30:04 +08:00 | DPM | DPM | 校正 DPM 每分鐘傷害資料顯示描述（PR #59 已合併）。 |
 | completed | 2026-07-12 02:22:26 +08:00 | KeepSwinging | KeepSwinging | 校正自動揮擊、攻擊鍵修飾模式與 HUD 用語（PR #60 已合併）。 |
