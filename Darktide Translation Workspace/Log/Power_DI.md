@@ -1,14 +1,14 @@
 # Power_DI Branch Log
 
-- AI handler: github-copilot
+- AI handler: codex
 - Base branch: main
 - Work branch: Codex/Feature/Power_DI/Add-zh-tw
-- Started at: 2026-07-07 +08:00
-- Last updated: 2026-07-07 +08:00
-- Status: completed
-- Commit: b7aa01b
-- Push: done
-- PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/36 (ready)
+- Started at: 2026-07-13 22:03:57 +08:00
+- Last updated: 2026-07-13 22:03:57 +08:00
+- Status: in_progress
+- Commit: pending
+- Push: pending
+- PR: pending
 
 ## Scope
 
@@ -18,12 +18,12 @@
 
 ## File Scan
 
-- Power_DI_localization.lua: 1152 行
-- mloc_9_companion: zh-tw 被注解掉，需補上
-- mloc_curio: "飾品" 應為 "珍品"（Translation.md: Curios -> 珍品）
-- mloc_crit_percent: "暴擊百分比" 應為 "致命一擊百分比"（Translation.md: Crit -> 致命一擊）
-- critical_hit: "暴擊命中" 應為 "致命一擊"
+- Reprocess updated ready row from MOD Directory Map.
+- Previous 2026-07-07 pass was PR #36.
+- Known focus from previous log: missing `mloc_9_companion` zh-tw, Curios -> 珍品, Crit -> 致命一擊.
 
-## Candidate Terms
+## Key Progress
 
-- mloc_horde "成群小怪" vs CombatStats "屍潮" 不一致 → 加入 Term Candidates.md
+- Current key: first key
+- Completed keys: 0
+- Blocked: none
