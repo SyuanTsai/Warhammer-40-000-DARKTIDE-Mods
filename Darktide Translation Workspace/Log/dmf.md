@@ -39,3 +39,16 @@
 ## Candidate Terms Draft
 
 - None yet.
+
+## 2026-07-13 21:25:41 +08:00 - codex
+
+- Scope: `Warhammer 40,000 DARKTIDE/mods/dmf/localization/dmf.lua`
+- Work branch: `Codex/Feature/dmf/Add-zh-tw`
+- Status: completed
+- Commit: `4ffb2d3`
+- PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/81
+- Completed keys: 1
+- Changed zh-tw wording for `dmf_options_view_init`.
+- Notes: rechecked dmf after updated map marked it ready; aligned `Darktide` -> `黑潮` in the welcome message. `percent` is pure symbol `%%`, so it intentionally remains without `zh-tw`.
+- Checks: semantic missing zh-tw=0, duplicate zh-tw=0, empty zh-tw=0, diff scope only dmf localization, `git diff --check` passed; Lua syntax tool unavailable locally.
+- Safe next position: `scoreboard/*localization.lua:first key`
