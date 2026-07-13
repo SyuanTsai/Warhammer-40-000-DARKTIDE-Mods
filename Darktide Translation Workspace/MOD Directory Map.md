@@ -90,7 +90,7 @@
 | completed | 2026-07-07 +08:00 | Quick Level Mastery | quick_level_mastery | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-12 21:10:39 +08:00 | I Wanna See | i_wanna_see | 已校正 VFX 來源、淨化噴火器與懲戒閃電用語；PR #72 ready。 |
 | completed | 2026-07-07 +08:00 | VFX Swapper | vfx_swapper | 所有 zh-tw 已完整正確，無需修改。 |
-| completed | 2026-07-13 17:08:11 +08:00 | CombatStats | CombatStats | 校正 Horde 詞彙表一致性（PR #73）。 |
+| completed | 2026-07-13 17:08:11 +08:00 | CombatStats | CombatStats | 校正 Horde 詞彙表一致性（PR #73 已合併）。 |
 | completed | 2026-07-07 +08:00 | CharacterGrid | CharacterGrid | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | TeamKills | TeamKills | 無可翻譯內容（無静態中文項目）。 |
 | completed | 2026-07-07 +08:00 | BrokerAutoStim | BrokerAutoStim | 所有 zh-tw 已完整正確，無需修改。 |

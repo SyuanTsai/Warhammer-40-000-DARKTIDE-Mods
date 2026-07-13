@@ -74,7 +74,7 @@
 - Work branch: Codex/Feature/CombatStats/Add-zh-tw
 - Completed at: 2026-07-13 17:08:11 +08:00
 - Commit: 1a0e1a2
-- PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/73 (ready)
+- PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/73 (merged)
 - Target file: Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua
 - Completed keys: 1
 - Update: `breed_horde` changed from `屍潮` to `群怪` to match `Referneces/Translation.md` (`Horde - 群怪`).
