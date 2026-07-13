@@ -51,7 +51,7 @@
 | completed | 2026-07-07 +08:00 | Gas Outline | GasOutline | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-13 19:54:16 +08:00 | Loadout Monitor | LoadoutMonitor | 校正專長/祝福錯譯、動態欄位與詞彙表用語（PR #77）。 |
 | completed | 2026-07-07 +08:00 | Quick Look Card | QuickLookCard | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
-| in_progress | 2026-07-13 23:27:30 +08:00 | Markers Improved All-in-One | markers_aio | codex 依更新後排程重新比對 markers_aio localization。 |
+| completed | 2026-07-13 23:35:51 +08:00 | Markers Improved All-in-One | markers_aio | 校正伺服頭骨、殉道者之顱與圖示用語（PR #85）。 |
 | completed | 2026-07-07 +08:00 | Danger Zone | danger_zone | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Numeric UI | NumericUI | 修正 peril_icon 詞彙表不一致（PR #43）。 |
 | completed | 2026-07-13 20:38:33 +08:00 | Spidey Sense | Spidey Sense | 補上動態 proximity arrow 描述 zh-tw，校正敵人名稱與警告用語（PR #78）。 |
