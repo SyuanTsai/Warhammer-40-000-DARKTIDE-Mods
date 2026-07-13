@@ -417,7 +417,7 @@ return {
 		fr = "Servo-crânes",
 		ru = "Сервочерепом",
 		["zh-cn"] = "伺服颅骨",
-		["zh-tw"] = "伺服顱骨",
+		["zh-tw"] = "伺服頭骨",
 	},
 	message_decoded_scanner = {
 		en = "Scanner",
@@ -786,7 +786,7 @@ return {
 		fr = "Dégâts infligés aux Boss",
 		ru = "Нанесение урона Боссу",
 		["zh-cn"] = "Boss 伤害",
-		["zh-tw"] = "Boss 傷害",
+		["zh-tw"] = "首領傷害",
 	},
 	row_boss_damage_dealt = {
 		en = "Boss Damage Dealt",
@@ -794,7 +794,7 @@ return {
 		fr = "Dégâts infligés aux Boss",
 		ru = "Урона нанесено Боссу",
 		["zh-cn"] = "Boss 伤害",
-		["zh-tw"] = "Boss 傷害",
+		["zh-tw"] = "首領傷害",
 	},
 	-- Enemies staggered
 	plugin_enemies_staggerd = {
@@ -920,7 +920,7 @@ return {
 		fr = "Boss tués",
 		ru = "Убийство Боссов",
 		["zh-cn"] = "Boss 击杀",
-		["zh-tw"] = "Boss 擊殺",
+		["zh-tw"] = "首領擊殺",
 	},
 	row_boss_threats = {
 		en = "Bosses Killed",
@@ -928,7 +928,7 @@ return {
 		fr = "Boss tués",
 		ru = "Убито Боссов",
 		["zh-cn"] = "Boss 击杀",
-		["zh-tw"] = "Boss 擊殺",
+		["zh-tw"] = "首領擊殺",
 	},
 	-- Disabler
 	plugin_disabler_threats = {
