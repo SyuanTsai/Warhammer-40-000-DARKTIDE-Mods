@@ -49,7 +49,7 @@
 | completed | 2026-07-07 +08:00 | Stimms Pickup Icon | StimmsPickupIcon | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Killfeed Improvements | KillfeedImprovements | 修正 Psykhanium 詞彙表不一致（PR #41）。 |
 | completed | 2026-07-07 +08:00 | Gas Outline | GasOutline | 所有 zh-tw 已完整正確，無需修改。 |
-| mod_updated | 2026-07-12 20:58:25 +08:00 | Loadout Monitor | LoadoutMonitor | README 更新至 Last updated 12 July 2026 / Version 1.9.2，手動維護最後下載日期 2026-07-12；需重新比對本地 localization。 |
+| in_progress | 2026-07-13 19:18:25 +08:00 | Loadout Monitor | LoadoutMonitor | codex 接手重新比對 Version 1.9.2 localization。 |
 | completed | 2026-07-07 +08:00 | Quick Look Card | QuickLookCard | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | completed | 2026-07-07 +08:00 | Markers Improved All-in-One | markers_aio | 第二次重新處理：修正錢詞表不一致、補齊缺失 key、修正重複問題（PR #33）。 |
 | completed | 2026-07-07 +08:00 | Danger Zone | danger_zone | 所有 zh-tw 已完整正確，無需修改。 |

@@ -33,7 +33,7 @@
 - empty zh-tw=0
 - diff scope ok
 - git diff --check passed
-- PR #76 verified open, ready, non-draft, merge state clean
+- PR #76 verified open, ready, non-draft, merge state clean; later merged at 2026-07-13 19:16:02 +08:00
 - Lua syntax tool unavailable locally
 
 ## Blocked
