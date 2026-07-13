@@ -451,7 +451,7 @@ locr = {
 	trait_gadget_corruption_resistance = {
 		en = "CRPT", -- Corruption Resistance
 		["zh-cn"] = "腐抗", -- 腐化抗性
-		["zh-tw"] = "腐敗", -- 腐化抗性
+		["zh-tw"] = "腐抗", -- 腐化抗性
 	},
 	trait_gadget_permanent_damage_resistance = {
 		en = "GRIM", -- Corruption Resistance (Grimoires)
