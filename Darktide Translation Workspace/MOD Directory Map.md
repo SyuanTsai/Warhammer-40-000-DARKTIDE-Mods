@@ -31,7 +31,7 @@
 | completed | 2026-07-07 +08:00 | Power DI | Power_DI | 補齊缺失 zh-tw、修正 Curios/Crit 詞彙表（PR #36）。 |
 | completed | 2026-07-07 +08:00 | Skitarius | Skitarius | 修正簡體字混入、錯誤撰考問題（PR #37）。 |
 | completed | 2026-07-07 +08:00 | Auto Loot | AutoLoot | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-13 18:15:11 +08:00 | Healthbars | Healthbars | codex 接手重新比對 26.07.07 localization。 |
+| completed | 2026-07-13 18:42:15 +08:00 | Healthbars | Healthbars | 校正血條、首領血條、靈能室與連長用語（PR #75）。 |
 | mod_updated | 2026-07-11 11:44:36 +08:00 | IME Enable | IME_Enable | README 更新至 Last updated 10 July 2026 / Version 1.2.0；需重新比對本地 localization。 |
 | completed | 2026-07-07 +08:00 | True Level | true_level | 修正 player_salvage_style_text 簡體字（PR #38）。 |
 | completed | 2026-07-07 +08:00 | Who Are You - Display account names | who_are_you | 所有 zh-tw 已完整正確，無需修改。 |
