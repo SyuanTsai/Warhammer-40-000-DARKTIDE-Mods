@@ -56,7 +56,7 @@ return {
     "-- 常規 --\n所有「普通」單位類型。\n" ..
     "-- 精英 --\n僅限普通精英單位。\n" ..
     "-- 專家 --\n僅限普通專家單位。\n" ..
-    "-- Boss --\n所有 Boss 和巨獸。\n" ..
+    "-- 首領 --\n所有首領和巨獸。\n" ..
     "-- 雜項 --\n未使用、不穩定或除錯用的單位。\n" ..
     "-- 全部 --\n所有已知單位。",
   },
@@ -100,13 +100,13 @@ return {
     en = "Boss",
     ["zh-cn"] = "Boss",
     ru = "Боссы",
-    ["zh-tw"] = "Boss",
+    ["zh-tw"] = "首領",
   },
   cs_unit_list_header_boss_description = {
     en = "All bosses and monstrosities",
     ["zh-cn"] = "所有 Boss 和怪物。",
     ru = "Все боссы и монстры",
-    ["zh-tw"] = "所有 Boss 和巨獸。",
+    ["zh-tw"] = "所有首領和巨獸。",
   },
   cs_unit_list_header_misc = {
     en = "Misc",
@@ -539,15 +539,15 @@ return {
   },
   cs_hero_trial_boss_rush_chaos_spawn = {
     en = "Boss Rush - Chaos Spawn",
-    ["zh-tw"] = "Boss Rush - 渾沌魔物",
+    ["zh-tw"] = "首領連戰 - 混沌魔物",
   },
   cs_hero_trial_boss_rush_beast_of_nurgle = {
     en = "Boss Rush - Beast of Nurgle",
-    ["zh-tw"] = "Boss Rush - 納垢巨獸",
+    ["zh-tw"] = "首領連戰 - 納垢巨獸",
   },
   cs_hero_trial_boss_rush_ogryn_pack_master = {
     en = "Boss Rush - Ogryn Pack Master",
-    ["zh-tw"] = "Boss Rush - 歐格林馴犬師",
+    ["zh-tw"] = "首領連戰 - 歐格林馴犬師",
   },
   cs_hero_trial_hunting_grounds = {
     en = "Hunting Grounds",
