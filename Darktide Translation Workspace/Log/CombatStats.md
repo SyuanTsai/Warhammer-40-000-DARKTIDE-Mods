@@ -66,3 +66,19 @@
 ## Candidate Terms Draft
 
 - pending scan
+
+## Reprocess Note (2026-07-13)
+
+- AI handler: codex
+- Base branch: main
+- Work branch: Codex/Feature/CombatStats/Add-zh-tw
+- Completed at: 2026-07-13 17:08:11 +08:00
+- Commit: 1a0e1a2
+- PR: https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/73 (ready)
+- Target file: Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua
+- Completed keys: 1
+- Update: `breed_horde` changed from `屍潮` to `群怪` to match `Referneces/Translation.md` (`Horde - 群怪`).
+- Checks: duplicate zh-tw=0; empty zh-tw=0; en entries=57; zh-tw entries=57; git diff --check passed; Lua syntax tool unavailable locally.
+- Blocked: none
+- Term candidates: none
+- Next position: SoloPlay/*localization.lua:first key
