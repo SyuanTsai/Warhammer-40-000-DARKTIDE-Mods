@@ -360,7 +360,7 @@ locr = {
 	trait_weapon_trait_increase_stamina = {
 		en = "STAM", -- Stamina
 		["zh-cn"] = "体力", -- 体力
-		["zh-tw"] = "耐力", -- 體力
+		["zh-tw"] = "耐力", -- 耐力
 	},
 	trait_gadget_stamina_regeneration = {
 		en = "STRG", -- Stamina Regeneration
