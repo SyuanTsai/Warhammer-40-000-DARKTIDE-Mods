@@ -26,7 +26,7 @@
 | completed | 2026-07-06 22:35:51 +08:00 | Darktide Mod Loader | base | 已檢查完成，未找到 localization 檔案。 |
 | completed | 2026-07-13 21:25:41 +08:00 | Darktide Mod Framework | dmf | 校正 DMF 歡迎訊息中的 Darktide/黑潮詞彙（PR #81）。 |
 | completed | 2026-07-06 23:16:11 +08:00 | What The Localization | WhatTheLocalization | 已檢查完成，所有 en key 均有 zh-tw，無需修改。 |
-| ready | 2026-07-06 23:32:20 +08:00 | Scoreboard | scoreboard | 已完成 zh-tw 缺漏補齊（PR #34）。 |
+| in_progress | 2026-07-13 21:31:28 +08:00 | Scoreboard | scoreboard | codex 依更新後排程重新比對 scoreboard localization。 |
 | ready | 2026-07-07 +08:00 | Creature Spawner | creature_spawner | 修正 Combat Ability 詞彙表不一致（PR #35）。 |
 | ready | 2026-07-07 +08:00 | Power DI | Power_DI | 補齊缺失 zh-tw、修正 Curios/Crit 詞彙表（PR #36）。 |
 | ready | 2026-07-07 +08:00 | Skitarius | Skitarius | 修正簡體字混入、錯誤撰考問題（PR #37）。 |
