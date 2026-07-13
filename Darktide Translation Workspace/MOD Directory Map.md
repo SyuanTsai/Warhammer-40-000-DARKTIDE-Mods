@@ -67,7 +67,7 @@
 | completed | 2026-07-07 +08:00 | Player Outlines | PlayerOutlines | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Name It - Rename Weapons and Curios | name_it | 所有靜態 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | LoadoutNames | LoadoutNames | 所有 zh-tw 已完整正確，無需修改。 |
-| in_progress | 2026-07-13 20:40:34 +08:00 | Guarantee Ability Activation | guarantee_ability_activation | codex 接手重新比對 v1.4.1 localization。 |
+| completed | 2026-07-13 20:44:01 +08:00 | Guarantee Ability Activation | guarantee_ability_activation | 校正戰鬥技能、不屈靈魂合唱與按住技能鍵用語（PR #79）。 |
 | completed | 2026-07-12 11:57:45 +08:00 | Custom HUD | custom_hud | 校正 HUD 編輯模式與面板設定繁中用語（PR #65）。 |
 | completed | 2026-07-07 +08:00 | Keep Dodging | keep_dodging | 所有靜態 zh-tw 已完整，動態項目無需补翻譯。 |
 | completed | 2026-07-12 12:21:31 +08:00 | Perspectives Mod | Perspectives | 校正視角與鏡頭設定繁中用語（PR #66）。 |
