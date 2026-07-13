@@ -4,9 +4,9 @@ local mod = get_mod("NoBrainer")
 -- https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods
 local localizations = {
 	mod_name           = { en = "No Brainer", ["zh-tw"] = "免動腦" },
-	mod_description    = { en = "Automates and enhances all Darktide minigames: Decode Symbols, Decode Search, Expedition Map, Auspex Scan, Train Balance, Tree Drill, and Frequency Matching.", ["zh-tw"] = "自動化並強化 Darktide 所有小遊戲：符號解碼、搜尋解碼、遠征地圖、占卜儀掃描、列車平衡、樹狀鑽探與頻率配對。" },
+	mod_description    = { en = "Automates and enhances all Darktide minigames: Decode Symbols, Decode Search, Expedition Map, Auspex Scan, Train Balance, Tree Drill, and Frequency Matching.", ["zh-tw"] = "自動化並強化黑潮所有小遊戲：符號解碼、搜尋解碼、遠征地圖、占卜儀掃描、列車平衡、瘟疫樹與頻率配對。" },
 	language           = { en = "Language", ["zh-tw"] = "語言" },
-	language_tooltip   = { en = "Select Automatic to follow the game's language. Manual Traditional Chinese requires Darktide's language to also be set to Traditional Chinese so the game loads a font with Chinese characters. Otherwise, the text may appear as squares. Restart the game after changing this setting.", ["zh-tw"] = "選擇自動以跟隨遊戲語言。手動選擇繁體中文時，Darktide 的語言也必須設為繁體中文，遊戲才會載入支援中文字元的字型，否則文字可能顯示為方框。變更此設定後請重新啟動遊戲。" },
+	language_tooltip   = { en = "Select Automatic to follow the game's language. Manual Traditional Chinese requires Darktide's language to also be set to Traditional Chinese so the game loads a font with Chinese characters. Otherwise, the text may appear as squares. Restart the game after changing this setting.", ["zh-tw"] = "選擇自動以跟隨遊戲語言。手動選擇繁體中文時，黑潮的語言也必須設為繁體中文，遊戲才會載入支援中文字元的字型，否則文字可能顯示為方框。變更此設定後請重新啟動遊戲。" },
 	language_auto      = { en = "Automatic (Game Language)", ["zh-tw"] = "自動（遊戲語言）" },
 	language_en        = { en = "English", ["zh-tw"] = "English" },
 	language_zh_tw     = { en = "Traditional Chinese", ["zh-tw"] = "繁體中文" },
@@ -67,7 +67,7 @@ local localizations = {
 
 	practice_group                    = { en = "Practice Mode", ["zh-tw"] = "練習模式" },
 	enable_practice                   = { en = "Enable Practice Mode", ["zh-tw"] = "啟用練習模式" },
-	enable_practice_tooltip           = { en = "Opens a standalone minigame overlay for practice. Only available in the Mourningstar and Psykanium. Auto-solvers are enabled if the corresponding settings are active above.", ["zh-tw"] = "開啟獨立小遊戲覆蓋介面進行練習。僅可在 Mourningstar 和靈能室使用。若上方對應設定已啟用，自動解題也會啟用。" },
+	enable_practice_tooltip           = { en = "Opens a standalone minigame overlay for practice. Only available in the Mourningstar and Psykanium. Auto-solvers are enabled if the corresponding settings are active above.", ["zh-tw"] = "開啟獨立小遊戲覆蓋介面進行練習。僅可在哀星號和靈能室使用。若上方對應設定已啟用，自動解題也會啟用。" },
 	practice_type                     = { en = "Minigame Type", ["zh-tw"] = "小遊戲類型" },
 	practice_type_tooltip             = { en = "Which minigame to practice.", ["zh-tw"] = "要練習的小遊戲。" },
 	practice_type_decode_symbols      = { en = "Decode Symbols", ["zh-tw"] = "符號解碼" },
