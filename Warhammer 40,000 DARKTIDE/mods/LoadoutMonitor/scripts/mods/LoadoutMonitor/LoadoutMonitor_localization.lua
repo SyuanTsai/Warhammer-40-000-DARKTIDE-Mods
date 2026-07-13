@@ -73,17 +73,17 @@ locr = {
 	setting_player_name_group = {
 		en = "Player Name",
 		["zh-cn"] = "玩家名",
-		["zh-tw"] = "玩家名",
+		["zh-tw"] = "玩家名稱",
 	},
 	display_player_name = {
 		en = "Player Name",
 		["zh-cn"] = "玩家名",
-		["zh-tw"] = "玩家名",
+		["zh-tw"] = "玩家名稱",
 	},
 	display_companion_name = {
 		en = "Dog Name",
 		["zh-cn"] = "伙伴名",
-		["zh-tw"] = "電子獒犬",
+		["zh-tw"] = "電子獒犬名稱",
 	},
 	setting_offset_x = {
 		en = "Offset X",
@@ -138,7 +138,7 @@ locr = {
 	by_both = {
 		en = "Both",
 		["zh-cn"] = "全部",
-		["zh-tw"] = "全部",
+		["zh-tw"] = "兩者",
 	},
 	setting_hide = {
 		en = "Hide",
@@ -208,7 +208,7 @@ locr = {
 	setting_perk_blessing_group = {
 		en = "Perk & Blessing",
 		["zh-cn"] = "专长与祝福",
-		["zh-tw"] = "過長名稱縮放(%%)",
+		["zh-tw"] = "專長與祝福",
 	},
 	blessing_level_rule = {
 		en = "Display blessing level by",
@@ -360,12 +360,12 @@ locr = {
 	trait_weapon_trait_increase_stamina = {
 		en = "STAM", -- Stamina
 		["zh-cn"] = "体力", -- 体力
-		["zh-tw"] = "體力", -- 體力
+		["zh-tw"] = "耐力", -- 體力
 	},
 	trait_gadget_stamina_regeneration = {
 		en = "STRG", -- Stamina Regeneration
 		["zh-cn"] = "体回", -- 体力恢复
-		["zh-tw"] = "體回", -- 體力恢复
+		["zh-tw"] = "耐回", -- 體力恢复
 	},
 	trait_gadget_cooldown_reduction = {
 		en = "ABRG", -- Combat Ability Regeneration
@@ -397,7 +397,7 @@ locr = {
 		["zh-cn"] = "体力", -- 最大体力
 		ja = "活力", -- 最大スタミナ
 		ru = "ВНСЛ", -- Выносливость
-		["zh-tw"] = "體力", -- 最大體力
+		["zh-tw"] = "耐力", -- 最大體力
 	},
 	trait_gadget_inate_health_increase = {
 		en = "HP", -- Max Health
@@ -431,7 +431,7 @@ locr = {
 		["zh-cn"] = "伤口", -- 生命格
 		ja = "傷口", -- 傷口
 		ru = "РАНЫ", -- Дополнительные раны
-		["zh-tw"] = "傷痕", -- 傷痕
+		["zh-tw"] = "重傷", -- 傷痕
 	},
 	trait_weapon_trait_reduce_sprint_cost = {
 		en = "SPRT", -- Sprint Efficiency
@@ -451,12 +451,12 @@ locr = {
 	trait_gadget_corruption_resistance = {
 		en = "CRPT", -- Corruption Resistance
 		["zh-cn"] = "腐抗", -- 腐化抗性
-		["zh-tw"] = "腐抗", -- 腐化抗性
+		["zh-tw"] = "腐敗", -- 腐化抗性
 	},
 	trait_gadget_permanent_damage_resistance = {
 		en = "GRIM", -- Corruption Resistance (Grimoires)
 		["zh-cn"] = "书抗", -- 腐化抗性（魔法书）
-		["zh-tw"] = "書抗", -- 腐化抗性（魔法書）
+		["zh-tw"] = "法術書", -- 腐化抗性（魔法書）
 	},
 	trait_weapon_trait_ranged_increased_reload_speed = {
 		en = "RLD ", -- Reload Speed
@@ -558,7 +558,7 @@ locr = {
 	trait_weapon_trait_ranged_increase_stamina = {
 		en = "STAM", -- Stamina (Weapon is Active)
 		["zh-cn"] = "体力", -- （使用武器时）体力
-		["zh-tw"] = "體力", -- （使用武器時）體力
+		["zh-tw"] = "耐力", -- （使用武器時）體力
 	},
 	
 	endview_scoreboard_weapons = {
@@ -644,12 +644,12 @@ locr = {
 	player_Feats_symbol_Keystone = {
 		en = "K",
 		["zh-cn"] = "基",
-		["zh-tw"] = "基",
+		["zh-tw"] = "鑰",
 	},
 	setting_Feats_order_Ability = {
 		en = "Ability",
 		["zh-cn"] = "技能",
-		["zh-tw"] = "技能",
+		["zh-tw"] = "戰鬥技能",
 	},
 	setting_Feats_order_Blitz = {
 		en = "Blitz",
@@ -664,7 +664,7 @@ locr = {
 	setting_Feats_order_Keystone = {
 		en = "Keystone",
 		["zh-cn"] = "基石",
-		["zh-tw"] = "基石",
+		["zh-tw"] = "鑰石",
 	},
 	player_feats_display_type = {
 		en = "Display type",
@@ -683,6 +683,7 @@ for i = 1,4 do
 	locr[string.format("player_Feats_order_%s",i)] = {
 		en = "Slot: "..tostring(i),
 		["zh-cn"] = "槽位："..tostring(i),
+		["zh-tw"] = "欄位："..tostring(i),
 	}
 end
 local def_abb = {
