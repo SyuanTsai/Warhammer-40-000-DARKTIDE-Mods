@@ -54,7 +54,7 @@
 | completed | 2026-07-07 +08:00 | Markers Improved All-in-One | markers_aio | 第二次重新處理：修正錢詞表不一致、補齊缺失 key、修正重複問題（PR #33）。 |
 | completed | 2026-07-07 +08:00 | Danger Zone | danger_zone | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Numeric UI | NumericUI | 修正 peril_icon 詞彙表不一致（PR #43）。 |
-| in_progress | 2026-07-13 19:58:03 +08:00 | Spidey Sense | Spidey Sense | codex 接手重新比對 v7.6 localization。 |
+| completed | 2026-07-13 20:38:33 +08:00 | Spidey Sense | Spidey Sense | 補上動態 proximity arrow 描述 zh-tw，校正敵人名稱與警告用語（PR #78）。 |
 | not_scheduled | not checked | Enhanced Descriptions | Enhanced_descriptions | 範圍特殊另外規劃 |
 | completed | 2026-07-07 +08:00 | Emperor's Guidance | EmperorsGuidance | 所有靜態 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Remember Server Location | RememberServerLocation | 所有 zh-tw 已完整正確，無需修改。 |
