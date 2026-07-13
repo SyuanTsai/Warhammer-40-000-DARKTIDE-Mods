@@ -28,7 +28,7 @@
 | completed | 2026-07-06 23:16:11 +08:00 | What The Localization | WhatTheLocalization | 已檢查完成，所有 en key 均有 zh-tw，無需修改。 |
 | completed | 2026-07-13 21:34:55 +08:00 | Scoreboard | scoreboard | 校正伺服頭骨與首領統計用語（PR #82）。 |
 | completed | 2026-07-13 22:01:40 +08:00 | Creature Spawner | creature_spawner | 校正首領、首領連戰與混沌魔物用語（PR #83）。 |
-| in_progress | 2026-07-13 22:03:57 +08:00 | Power DI | Power_DI | codex 依更新後排程重新比對 Power_DI localization。 |
+| completed | 2026-07-13 22:12:54 +08:00 | Power DI | Power_DI | 檢查完成：缺失 zh-tw、Curios/Crit 詞彙已修正於 main，無需 PR。 |
 | ready | 2026-07-07 +08:00 | Skitarius | Skitarius | 修正簡體字混入、錯誤撰考問題（PR #37）。 |
 | completed | 2026-07-07 +08:00 | Auto Loot | AutoLoot | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-13 18:42:15 +08:00 | Healthbars | Healthbars | 校正血條、首領血條、靈能室與連長用語（PR #75）。 |
