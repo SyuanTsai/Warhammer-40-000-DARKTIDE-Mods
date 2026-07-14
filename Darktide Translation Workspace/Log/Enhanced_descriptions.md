@@ -11,7 +11,7 @@
 | Completed at | pending |
 | Commit | 4d483e7 |
 | PR URL / number | pending |
-| Next position | ED-COLORS-TW-008: `momentum_text_colour.Momentum` |
+| Next position | ED-COLORS-TW-009: `rangedspec_text_colour.Rangedspec` |
 
 ## Batch Progress
 
@@ -37,6 +37,7 @@
 | ED-COLORS-TW-005 | 2026-07-14 22:59:30 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `peril_text_colour.PerilsozWarp` through `stamina_text_colour.Stamina_c_r` | 15 | 1 | completed | `toughness_text_colour.TDR` | 依詞彙表、root localization 與其他 MOD 用法將 Soulblaze 校正為「靈魂之火」；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: 5662d3b. |
 | ED-COLORS-TW-006 | 2026-07-14 23:07:12 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `toughness_text_colour.TDR` through `class_psyker_text_colour.cls_psy` | 15 | 4 | completed | `class_psyker_text_colour.cls_psys` | 依詞彙表與 root localization 將 Toughness Damage Reduction 校正為「韌性減傷」，Weak Spot 校正為「弱點」，Weakspot Hit 統一為「弱點命中」；其餘十一項已符合詞彙表或既有一致譯法。 Translation commit: e88c68e. |
 | ED-COLORS-TW-007 | 2026-07-14 23:11:05 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `class_psyker_text_colour.cls_psys` through `fury_text_colour.Rampage` | 15 | 1 | completed | `momentum_text_colour.Momentum` | 依詞彙表將 Rampage! 校正為「暴走」；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: 4d483e7. |
+| ED-COLORS-TW-008 | 2026-07-14 23:15:56 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `momentum_text_colour.Momentum` through `meleespec_text_colour.Meleejust` | 15 | 0 | completed | `rangedspec_text_colour.Rangedspec` | 本批十五項已符合詞彙表、root localization 或既有一致譯法；translation repo 無新 Lua commit。 |
 
 ## Checks
 
@@ -161,6 +162,12 @@
 - ED-COLORS-TW-007: `git -C <translation-repo> diff --check` passed before commit
 - ED-COLORS-TW-007: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
 - ED-COLORS-TW-007: Lua syntax tool unavailable
+- ED-COLORS-TW-008: all 15 keyword values present and non-empty
+- ED-COLORS-TW-008: glossary checked for Momentum, Stealth, Veteran, Focus, Focus Target, Melee Specialist, Arbites, Hive Scum, and related mark/adrenaline terms
+- ED-COLORS-TW-008: checked local usage for Momentum, Stealth, Focus Target, Marked Enemy, Vulture's Mark, and Melee Justice terms
+- ED-COLORS-TW-008: `git -C <translation-repo> diff --check` passed
+- ED-COLORS-TW-008: translation repo diff scope empty; no Lua commit created
+- ED-COLORS-TW-008: Lua syntax tool unavailable
 
 ## Blocked
 
