@@ -38,6 +38,38 @@
   - 本文件
 - Translation repo PR 不應包含任何本專案的 `Darktide Translation Workspace/` 文件。
 - Workspace repo commit 不應包含 Translation repo 的 Lua 變更。
+- 不得把 workspace repo 內的任何 Enhanced_descriptions 鏡像、副本或舊目錄當成 `<translation-repo>`。
+- 若 `<translation-repo>` 尚未明確設定，必須停止並要求使用者提供；不得從 workspace repo 內自動推測路徑。
+
+## 1.1 執行位置
+
+所有 Git 命令都必須明確指定 repo，不依賴目前 shell 的工作目錄。
+
+- Translation repo 命令一律使用 `git -C <translation-repo> ...`。
+- Workspace repo 命令一律使用 `git -C <workspace-repo> ...`。
+- 編輯 Lua 檔案時，路徑一律以 `<translation-repo>/...` 表示。
+- 編輯工作文件時，路徑一律以 `<workspace-repo>/Darktide Translation Workspace/...` 表示。
+- 不使用裸 `git status`、`git add`、`git commit`，避免在錯誤 repo 執行。
+- 執行翻譯前必須確認 `<translation-repo>` 是獨立 repo root：
+  - `git -C <translation-repo> rev-parse --show-toplevel`
+  - `git -C <translation-repo> rev-parse --show-prefix`
+- `show-toplevel` 必須等於 `<translation-repo>`，且 `show-prefix` 必須為空；否則代表目前路徑不是 repo root，必須停止。
+- 若 `git -C <translation-repo>` 回到 `<workspace-repo>` 或任何父層 repo，代表路徑錯誤，必須停止，不得提交。
+
+範例：
+
+```text
+git -C <translation-repo> rev-parse --show-toplevel
+git -C <translation-repo> rev-parse --show-prefix
+git -C <translation-repo> status --short
+git -C <translation-repo> diff --check
+git -C <translation-repo> add -- <changed-lua-files>
+git -C <translation-repo> commit -m "Translate zh-tw batch ED-ROOT-LOC-001"
+
+git -C <workspace-repo> status --short
+git -C <workspace-repo> add -- "Darktide Translation Workspace"
+git -C <workspace-repo> commit -m "Update Enhanced_descriptions translation workspace"
+```
 
 每批紀錄格式：
 
@@ -80,7 +112,11 @@ Safe next position: <next line/key/group>
 
 ## 3. 每批流程
 
-1. 確認兩個 repo 的 `git status --short`，避免覆蓋他人變更。
+1. 確認兩個 repo 的狀態，避免覆蓋他人變更：
+   - `git -C <translation-repo> rev-parse --show-toplevel`
+   - `git -C <translation-repo> rev-parse --show-prefix`
+   - `git -C <translation-repo> status --short`
+   - `git -C <workspace-repo> status --short`
 2. 讀取本文件、總排程、Workspace Status、對應 log 的相關段落。
 3. 在本專案工作文件鎖定單一檔案與下一個 5 條目範圍。
 4. 對 5 條目建立輕量清單：
@@ -96,9 +132,9 @@ Safe next position: <next line/key/group>
    - 無語意、純數字、純 placeholder：可跳過並記錄原因。
 6. 只在同一 batch 內維持一致性；跨 batch 的一致性由詞彙表與後續品質 pass 補強。
 7. 完成 5 條目後立即執行局部檢查。
-8. 在 Translation repo 檢查 diff scope，只允許 `.lua` 檔案；若包含非 Lua 變更，停止並修正。
-9. 在 Translation repo 自動 commit，commit message 使用英文：`Translate zh-tw batch <batch-id>`。
-10. 回到 Workspace repo 更新 Workspace Status、log、Term Candidates 或本文件，然後自動 commit，commit message 使用英文：`Update Enhanced_descriptions translation workspace`。
+8. 用 `git -C <translation-repo> diff --name-only` 檢查 diff scope，只允許 `.lua` 檔案；若包含非 Lua 變更，停止並修正。
+9. 用 `git -C <translation-repo> add -- <changed-lua-files>` stage Lua 檔，再用 `git -C <translation-repo> commit -m "Translate zh-tw batch <batch-id>"` 自動 commit。
+10. 更新 `<workspace-repo>/Darktide Translation Workspace/` 內的 Workspace Status、log、Term Candidates 或本文件，然後用 `git -C <workspace-repo> add -- "Darktide Translation Workspace"` 與 `git -C <workspace-repo> commit -m "Update Enhanced_descriptions translation workspace"` 自動 commit。
 11. 更新 safe next position，確保下一輪可從第 6 個未處理條目繼續。
 
 ## 4. Enhanced_descriptions 專用翻譯規則
@@ -188,7 +224,7 @@ Safe next position: <next line/key/group>
 
 - 該檔 active `["zh-tw"]` 數量與預期變化一致。
 - 註解 `-- ["zh-tw"]` 的剩餘項目都有合理原因或下一批位置。
-- `git diff --check` 通過。
+- `git -C <translation-repo> diff --check` 通過。
 - 若可用 Lua 工具，執行 Lua syntax check；不可用時記錄 `Lua syntax tool unavailable`。
 
 ## 7. Blocked queue 格式
