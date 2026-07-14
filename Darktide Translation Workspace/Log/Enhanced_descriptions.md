@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | f097ddc |
+| Commit | 0a97e7b |
 | PR URL / number | pending |
-| Next position | ED-COLORS-TW-002: `combat_ability_text_colour.Cmbt_abil_cd` |
+| Next position | ED-COLORS-TW-003: `crit_text_colour.Crt_hit_col` |
 
 ## Batch Progress
 
@@ -31,6 +31,7 @@
 | ED-ROOT-LOC-012 | 2026-07-14 22:19:06 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 15 localization keys: `fnp_colour` through `chemtox_colour` | 15 | 4 | completed | `talents_colour` | 依詞彙表校正 Focus Target 與 Arbites 用語，啟用 Hive Scum 與 Chem Toxin 的繁中欄位；其餘十一項已符合詞彙表。 Translation commit: f097ddc. |
 | ED-ROOT-LOC-013 | 2026-07-14 22:22:49 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | final 12 localization keys: `talents_colour` through `auric_colour` | 12 | 0 | completed | `<translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua`: `bleed_text_colour.Bleed` | 本批十二項已符合詞彙表或既有一致譯法；root localization 檔已處理完畢，translation repo 無新 Lua commit。 |
 | ED-COLORS-TW-001 | 2026-07-14 22:28:49 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `bleed_text_colour.Bleed` through `combat_ability_text_colour.Cmbt_abil` | 15 | 0 | completed | `combat_ability_text_colour.Cmbt_abil_cd` | 本批十五項已符合詞彙表或既有一致譯法；translation repo 無新 Lua commit。 |
+| ED-COLORS-TW-002 | 2026-07-14 22:34:35 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `combat_ability_text_colour.Cmbt_abil_cd` through `crit_text_colour.Crt_hit_chnc` | 15 | 10 | completed | `crit_text_colour.Crt_hit_col` | 依詞彙表將已發生的 Crit/Critical 校正為「致命一擊」，機率屬性校正為「爆擊率」；Corruption 與 Combat Ability Cooldown 已符合詞彙表。 Translation commit: 0a97e7b. |
 
 ## Checks
 
@@ -119,6 +120,12 @@
 - ED-COLORS-TW-001: `git -C <translation-repo> diff --check` passed
 - ED-COLORS-TW-001: translation repo diff scope empty; no Lua commit created
 - ED-COLORS-TW-001: Lua syntax tool unavailable
+- ED-COLORS-TW-002: all 15 keyword values present and non-empty
+- ED-COLORS-TW-002: glossary checked for Combat Ability Cooldown, Corruption, Crit, Critical, Critical Chance, and Critical Hit Chance
+- ED-COLORS-TW-002: checked local usage for Crit/Critical and Corruption terms
+- ED-COLORS-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-002: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-002: Lua syntax tool unavailable
 
 ## Blocked
 
