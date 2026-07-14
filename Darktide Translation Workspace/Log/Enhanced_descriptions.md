@@ -11,7 +11,7 @@
 | Completed at | pending |
 | Commit | f097ddc |
 | PR URL / number | pending |
-| Next position | ED-COLORS-TW-001: `bleed_text_colour.Bleed` |
+| Next position | ED-COLORS-TW-002: `combat_ability_text_colour.Cmbt_abil_cd` |
 
 ## Batch Progress
 
@@ -30,6 +30,7 @@
 | ED-ROOT-LOC-011 | 2026-07-14 22:14:44 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 15 localization keys: `finesse_colour` through `class_ogryn_colour` | 15 | 1 | completed | `fnp_colour` | 依詞彙表將 Health 校正為「生命值」；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: 5d3bcc4. |
 | ED-ROOT-LOC-012 | 2026-07-14 22:19:06 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 15 localization keys: `fnp_colour` through `chemtox_colour` | 15 | 4 | completed | `talents_colour` | 依詞彙表校正 Focus Target 與 Arbites 用語，啟用 Hive Scum 與 Chem Toxin 的繁中欄位；其餘十一項已符合詞彙表。 Translation commit: f097ddc. |
 | ED-ROOT-LOC-013 | 2026-07-14 22:22:49 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | final 12 localization keys: `talents_colour` through `auric_colour` | 12 | 0 | completed | `<translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua`: `bleed_text_colour.Bleed` | 本批十二項已符合詞彙表或既有一致譯法；root localization 檔已處理完畢，translation repo 無新 Lua commit。 |
+| ED-COLORS-TW-001 | 2026-07-14 22:28:49 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `bleed_text_colour.Bleed` through `combat_ability_text_colour.Cmbt_abil` | 15 | 0 | completed | `combat_ability_text_colour.Cmbt_abil_cd` | 本批十五項已符合詞彙表或既有一致譯法；translation repo 無新 Lua commit。 |
 
 ## Checks
 
@@ -112,6 +113,12 @@
 - ED-ROOT-LOC-013: `git -C <translation-repo> diff --check` passed
 - ED-ROOT-LOC-013: translation repo diff scope empty; no Lua commit created
 - ED-ROOT-LOC-013: Lua syntax tool unavailable
+- ED-COLORS-TW-001: all 15 keyword values present and non-empty
+- ED-COLORS-TW-001: glossary checked for Bleed, Brittleness, Burn, Heat, Cleave, Coherency, Ability Cooldown, and Combat Ability
+- ED-COLORS-TW-001: checked local usage for Cleaved, Heat, Ability_cd, and Cmbt_abil
+- ED-COLORS-TW-001: `git -C <translation-repo> diff --check` passed
+- ED-COLORS-TW-001: translation repo diff scope empty; no Lua commit created
+- ED-COLORS-TW-001: Lua syntax tool unavailable
 
 ## Blocked
 

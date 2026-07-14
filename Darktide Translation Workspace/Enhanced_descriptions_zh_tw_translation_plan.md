@@ -262,11 +262,11 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-14，目前是 `ED-COLORS-TW-001`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-14，目前是 `ED-COLORS-TW-002`：
 
 ```text
 File: <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua
-Start position: `bleed_text_colour.Bleed`
+Start position: `combat_ability_text_colour.Cmbt_abil_cd`
 Scope: 15 keyword values
-Safe next position target: the 16th keyword value after `bleed_text_colour.Bleed`
+Safe next position target: the 16th keyword value after `combat_ability_text_colour.Cmbt_abil_cd`
 ```
