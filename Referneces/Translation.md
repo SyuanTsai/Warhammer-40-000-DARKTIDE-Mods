@@ -61,6 +61,7 @@
 - Data Reliquary - 資料聖物箱
 - Data Reliquary Harvester - 資料聖物箱
 - Tech Remnants - 科技殘骸
+- Penances - 苦修
 
 ### 特殊情境詞
 - Hogtied - 原為綁住，但在遊戲中應用俘虜比較符合意境。
