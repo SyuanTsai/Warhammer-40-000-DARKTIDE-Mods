@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | d4c9498 |
+| Commit | e2b8afe |
 | PR URL / number | pending |
-| Next position | ED-COLORS-TW-013: `talents_text_colour.Rangd_stnc` |
+| Next position | ED-COLORS-TW-014: `talents_text_colour.burstlimo` |
 
 ## Batch Progress
 
@@ -42,6 +42,7 @@
 | ED-COLORS-TW-010 | 2026-07-14 23:23:59 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.Holy_relic` through `talents_text_colour.Assail` | 15 | 2 | completed | `talents_text_colour.assail` | 依詞彙表將 Stun Grenade 校正為「眩暈手雷」，Assail 校正為「靈能攻擊」；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: b7245c5. |
 | ED-COLORS-TW-011 | 2026-07-14 23:37:03 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.assail` through `talents_text_colour.scriersgaze` | 15 | 8 | completed | `talents_text_colour.seerspres` | 依詞彙表校正 Assail、Brain Burst、Brain Rupture、Enfeeble 與 Scrier's Gaze 用語；其餘七項已符合詞彙表或既有一致譯法。 Translation commit: 709de9a. |
 | ED-COLORS-TW-012 | 2026-07-14 23:40:30 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.seerspres` through `talents_text_colour.krak_gr` | 15 | 6 | completed | `talents_text_colour.Rangd_stnc` | 依詞彙表校正 Smite、Duty and Honour、Frag Grenade 與 Fragmentation Grenade 用語；其餘九項已符合詞彙表或既有一致譯法。 Translation commit: d4c9498. |
+| ED-COLORS-TW-013 | 2026-07-14 23:45:08 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.Rangd_stnc` through `talents_text_colour.bull_rush4` | 15 | 2 | completed | `talents_text_colour.burstlimo` | 依詞彙表校正 Attention Seeker 與 Bombs Away! 用語；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: e2b8afe. |
 
 ## Checks
 
@@ -196,6 +197,12 @@
 - ED-COLORS-TW-012: `git -C <translation-repo> diff --check` passed before commit
 - ED-COLORS-TW-012: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
 - ED-COLORS-TW-012: Lua syntax tool unavailable
+- ED-COLORS-TW-013: all 15 keyword values present and non-empty
+- ED-COLORS-TW-013: glossary checked for Ranged Stance, Scavenger, Marksman's Focus, Smoke Grenade, Survivalist, Voice of Command, Volley Fire, Weapons Specialist, Attention Seeker, Big Box of Hurt, Bombs Away!, Big Friendly Rock, Bonebreaker's Aura, Bull Rush, and Indomitable
+- ED-COLORS-TW-013: checked local usage for Veteran and Ogryn talent names and penances
+- ED-COLORS-TW-013: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-013: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-013: Lua syntax tool unavailable
 
 ## Blocked
 
