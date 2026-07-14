@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 0a97e7b |
+| Commit | d06694c |
 | PR URL / number | pending |
-| Next position | ED-COLORS-TW-003: `crit_text_colour.Crt_hit_col` |
+| Next position | ED-COLORS-TW-004: `electrocuted_text_colour.Electrocute` |
 
 ## Batch Progress
 
@@ -32,6 +32,7 @@
 | ED-ROOT-LOC-013 | 2026-07-14 22:22:49 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | final 12 localization keys: `talents_colour` through `auric_colour` | 12 | 0 | completed | `<translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua`: `bleed_text_colour.Bleed` | 本批十二項已符合詞彙表或既有一致譯法；root localization 檔已處理完畢，translation repo 無新 Lua commit。 |
 | ED-COLORS-TW-001 | 2026-07-14 22:28:49 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `bleed_text_colour.Bleed` through `combat_ability_text_colour.Cmbt_abil` | 15 | 0 | completed | `combat_ability_text_colour.Cmbt_abil_cd` | 本批十五項已符合詞彙表或既有一致譯法；translation repo 無新 Lua commit。 |
 | ED-COLORS-TW-002 | 2026-07-14 22:34:35 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `combat_ability_text_colour.Cmbt_abil_cd` through `crit_text_colour.Crt_hit_chnc` | 15 | 10 | completed | `crit_text_colour.Crt_hit_col` | 依詞彙表將已發生的 Crit/Critical 校正為「致命一擊」，機率屬性校正為「爆擊率」；Corruption 與 Combat Ability Cooldown 已符合詞彙表。 Translation commit: 0a97e7b. |
+| ED-COLORS-TW-003 | 2026-07-14 22:46:24 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `crit_text_colour.Crt_hit_col` through `damage_text_colour.Damagewrp` | 15 | 6 | completed | `electrocuted_text_colour.Electrocute` | 依詞彙表與語境校正 Critical Strike/Attack/Shots 的結果與機率用語；Crit damage 與 Damage 系列維持既有一致譯法。 Translation commit: d06694c. |
 
 ## Checks
 
@@ -126,6 +127,12 @@
 - ED-COLORS-TW-002: `git -C <translation-repo> diff --check` passed before commit
 - ED-COLORS-TW-002: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
 - ED-COLORS-TW-002: Lua syntax tool unavailable
+- ED-COLORS-TW-003: all 15 keyword values present and non-empty
+- ED-COLORS-TW-003: glossary checked for Critical Hit Damage, Critical Strike, Critical Strike Chance, Critical Strike Damage, Critical Attack, Critical Shots, Crit Damage, Damage, Ranged Damage, and Warp Damage
+- ED-COLORS-TW-003: checked local usage for Critical Strike/Attack/Shots, Crit Damage, and Damagewrp terms
+- ED-COLORS-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-003: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-003: Lua syntax tool unavailable
 
 ## Blocked
 
