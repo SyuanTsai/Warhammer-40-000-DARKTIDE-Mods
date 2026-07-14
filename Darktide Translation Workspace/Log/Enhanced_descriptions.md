@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 4d483e7 |
+| Commit | 0e045fc |
 | PR URL / number | pending |
-| Next position | ED-COLORS-TW-009: `rangedspec_text_colour.Rangedspec` |
+| Next position | ED-COLORS-TW-010: `talents_text_colour.Holy_relic` |
 
 ## Batch Progress
 
@@ -38,6 +38,7 @@
 | ED-COLORS-TW-006 | 2026-07-14 23:07:12 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `toughness_text_colour.TDR` through `class_psyker_text_colour.cls_psy` | 15 | 4 | completed | `class_psyker_text_colour.cls_psys` | 依詞彙表與 root localization 將 Toughness Damage Reduction 校正為「韌性減傷」，Weak Spot 校正為「弱點」，Weakspot Hit 統一為「弱點命中」；其餘十一項已符合詞彙表或既有一致譯法。 Translation commit: e88c68e. |
 | ED-COLORS-TW-007 | 2026-07-14 23:11:05 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `class_psyker_text_colour.cls_psys` through `fury_text_colour.Rampage` | 15 | 1 | completed | `momentum_text_colour.Momentum` | 依詞彙表將 Rampage! 校正為「暴走」；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: 4d483e7. |
 | ED-COLORS-TW-008 | 2026-07-14 23:15:56 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `momentum_text_colour.Momentum` through `meleespec_text_colour.Meleejust` | 15 | 0 | completed | `rangedspec_text_colour.Rangedspec` | 本批十五項已符合詞彙表、root localization 或既有一致譯法；translation repo 無新 Lua commit。 |
+| ED-COLORS-TW-009 | 2026-07-14 23:20:05 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `rangedspec_text_colour.Rangedspec` through `talents_text_colour.fury_faithful` | 15 | 2 | completed | `talents_text_colour.Holy_relic` | 依詞彙表與 root localization 將 Hive Scum 校正為「巢都渣滓」；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: 0e045fc. |
 
 ## Checks
 
@@ -168,6 +169,12 @@
 - ED-COLORS-TW-008: `git -C <translation-repo> diff --check` passed
 - ED-COLORS-TW-008: translation repo diff scope empty; no Lua commit created
 - ED-COLORS-TW-008: Lua syntax tool unavailable
+- ED-COLORS-TW-009: all 15 keyword values present and non-empty
+- ED-COLORS-TW-009: glossary checked for Ranged Specialist, Arbites, Hive Scum, Chem Toxin, Beacon of Purity, Benediction, Blazing Piety, Chastise the Wicked, Chorus of Spiritual Fortitude, Fury, Immolation Grenade, and Fury of the Faithful
+- ED-COLORS-TW-009: checked local usage for Hive Scum, Chem Toxin, Zealot talent names, Ranged Specialist, and Ranged Justice terms
+- ED-COLORS-TW-009: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-009: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-009: Lua syntax tool unavailable
 
 ## Blocked
 
