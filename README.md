@@ -514,10 +514,10 @@
 
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
     記分板
-- MOD 網站最後更新日期：Last updated 11 July 2026, 11:32PM
-- MOD 版本：0.4.14
-- MOD 檔案名稱：CombatStats 661 0.4.14 2026-07-11T15-32Z mz1PFzZDc
-- 手動維護最後下載日期：2026-07-12
+- MOD 網站最後更新日期：Last updated 14 July 2026, 1:58AM
+- MOD 版本：0.4.15
+- MOD 檔案名稱：CombatStats 661 0.4.15 2026-07-13T17-58Z 29Sw894jD
+- 手動維護最後下載日期：2026-07-14
 
 ### [CharacterGrid](https://www.nexusmods.com/warhammer40kdarktide/mods/649)
     角色顯示
