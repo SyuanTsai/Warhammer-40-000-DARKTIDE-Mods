@@ -549,10 +549,10 @@
 
 ### [Machine God's BeaconUI](https://www.nexusmods.com/warhammer40kdarktide/mods/684)
     地圖燈效控制
-- MOD 網站最後更新日期：Last updated 27 January 2026, 1:57AM
-- MOD 版本：2026.01.26
-- MOD 檔案名稱：Machine God's Beacon-684-2026-01-26-1769450266
-- 手動維護最後下載日期：2026-02-02
+- MOD 網站最後更新日期：Last updated 14 July 2026, 8:14AM
+- MOD 版本：2026.07.15
+- MOD 檔案名稱：Machine God's Beacon 684 2026.07.15 2026-07-14T00-14Z PhaYKh0Yz
+- 手動維護最後下載日期：2026-07-14
 
 ### [VeilShield](https://www.nexusmods.com/warhammer40kdarktide/mods/637)
     盾牌透明化
