@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | d49cb34 |
+| Commit | 7d5b2d7 |
 | PR URL / number | pending |
-| Next position | ED-ROOT-LOC-010: `combat_ability_colour` |
+| Next position | ED-ROOT-LOC-011: `finesse_colour` |
 
 ## Batch Progress
 
@@ -26,6 +26,7 @@
 | ED-ROOT-LOC-007 | 2026-07-14 15:30:37 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `enable_penances_file_description`, `enable_names_file`, `enable_names_file_description`, `enable_names_tal_bless_file`, `enable_names_tal_bless_file_description` | 5 | 5 | completed | `enable_debug_mode` | 校正苦行描述，補回名稱模組標題與警示描述的 color/reset 語法，移除未翻譯標記。 Translation commit: f542736. |
 | ED-ROOT-LOC-008 | 2026-07-14 16:25:44 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `enable_debug_mode`, `enable_debug_mode_description`, `dump_stat_colour`, `dump_stat2_colour`, `dump_stat3_colour` | 5 | 4 | completed | `bleed_colour` | 補齊 Debug 模組描述的指令清單，新增三個 Dump Stats 類別的繁中並保留 size/color/reset 語法。 Translation commit: 2ec5615. |
 | ED-ROOT-LOC-009 | 2026-07-14 17:19:11 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `bleed_colour`, `brittleness_colour`, `burn_colour`, `cleave_colour`, `coherency_colour` | 5 | 1 | completed | `combat_ability_colour` | 依詞彙表將 Cleave 從「順劈目標」校正為「順劈攻擊」；其餘四項已符合詞彙表。 Translation commit: d49cb34. |
+| ED-ROOT-LOC-010 | 2026-07-14 22:07:26 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `combat_ability_colour`, `corruption_colour`, `crit_colour`, `damage_colour`, `electrocuted_colour` | 5 | 2 | completed | `finesse_colour` | 依詞彙表將 Combat Ability 校正為「戰鬥技能」，Crit 校正為「致命一擊」；其餘三項已符合詞彙表。 Translation commit: 7d5b2d7. |
 
 ## Checks
 
@@ -81,6 +82,12 @@
 - ED-ROOT-LOC-009: glossary checked for Bleed, Brittleness, Burn, Cleave, Coherency, and Hit Mass
 - ED-ROOT-LOC-009: `git -C <translation-repo> diff --check` passed before commit
 - ED-ROOT-LOC-009: diff scope limited to `Enhanced_descriptions_localization.lua`
+- ED-ROOT-LOC-010: duplicate `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-010: active empty `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-010: keyword icon prefixes preserved in touched entries
+- ED-ROOT-LOC-010: glossary checked for Combat Ability, Corruption, Crit, Damage, and Electrocuted
+- ED-ROOT-LOC-010: `git -C <translation-repo> diff --check` passed before commit
+- ED-ROOT-LOC-010: diff scope limited to `Enhanced_descriptions_localization.lua`
 
 ## Blocked
 
