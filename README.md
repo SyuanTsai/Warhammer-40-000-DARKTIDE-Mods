@@ -684,10 +684,10 @@
 
 ### [Radar](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
     遠征模式的小地圖
-- MOD 網站最後更新日期：Last updated 12 July 2026, 5:05PM
-- MOD 版本：2.5.1
-- MOD 檔案名稱：Radar 790 2.5.1 2026-07-12T09-05Z SDWlwDVoK
-- 手動維護最後下載日期：2026-07-12
+- MOD 網站最後更新日期：Last updated 14 July 2026, 2:46AM
+- MOD 版本：2.5.2
+- MOD 檔案名稱：Radar 790 2.5.2 2026-07-13T18-46Z H3Uny3hM8
+- 手動維護最後下載日期：2026-07-14
 
 ### [PlasmaBFG](https://www.nexusmods.com/warhammer40kdarktide/mods/834)
     電漿槍 優化
