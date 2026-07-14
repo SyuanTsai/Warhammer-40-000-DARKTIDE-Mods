@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 0e045fc |
+| Commit | b7245c5 |
 | PR URL / number | pending |
-| Next position | ED-COLORS-TW-010: `talents_text_colour.Holy_relic` |
+| Next position | ED-COLORS-TW-011: `talents_text_colour.assail` |
 
 ## Batch Progress
 
@@ -39,6 +39,7 @@
 | ED-COLORS-TW-007 | 2026-07-14 23:11:05 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `class_psyker_text_colour.cls_psys` through `fury_text_colour.Rampage` | 15 | 1 | completed | `momentum_text_colour.Momentum` | 依詞彙表將 Rampage! 校正為「暴走」；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: 4d483e7. |
 | ED-COLORS-TW-008 | 2026-07-14 23:15:56 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `momentum_text_colour.Momentum` through `meleespec_text_colour.Meleejust` | 15 | 0 | completed | `rangedspec_text_colour.Rangedspec` | 本批十五項已符合詞彙表、root localization 或既有一致譯法；translation repo 無新 Lua commit。 |
 | ED-COLORS-TW-009 | 2026-07-14 23:20:05 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `rangedspec_text_colour.Rangedspec` through `talents_text_colour.fury_faithful` | 15 | 2 | completed | `talents_text_colour.Holy_relic` | 依詞彙表與 root localization 將 Hive Scum 校正為「巢都渣滓」；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: 0e045fc. |
+| ED-COLORS-TW-010 | 2026-07-14 23:23:59 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.Holy_relic` through `talents_text_colour.Assail` | 15 | 2 | completed | `talents_text_colour.assail` | 依詞彙表將 Stun Grenade 校正為「眩暈手雷」，Assail 校正為「靈能攻擊」；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: b7245c5. |
 
 ## Checks
 
@@ -175,6 +176,12 @@
 - ED-COLORS-TW-009: `git -C <translation-repo> diff --check` passed before commit
 - ED-COLORS-TW-009: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
 - ED-COLORS-TW-009: Lua syntax tool unavailable
+- ED-COLORS-TW-010: all 15 keyword values present and non-empty
+- ED-COLORS-TW-010: glossary checked for Holy Relic, Holy Revenant, Inexorable Judgement, Blades of Faith, Loner, Martyrdom, Stunstorm Grenade, Stun Grenade, Shroudfield, Momentum, Arbites Grenade, Break the Line, and Assail
+- ED-COLORS-TW-010: checked local usage for Zealot, Arbites, and Assail terms
+- ED-COLORS-TW-010: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-010: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-010: Lua syntax tool unavailable
 
 ## Blocked
 
