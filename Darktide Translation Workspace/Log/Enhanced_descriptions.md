@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 95d0114 |
+| Commit | 7c354b4 |
 | PR URL / number | pending |
-| Next position | ED-ROOT-LOC-005: `language_es` |
+| Next position | ED-ROOT-LOC-006: `enable_menus_file` |
 
 ## Batch Progress
 
@@ -21,6 +21,7 @@
 | ED-ROOT-LOC-002 | 2026-07-14 10:58:00 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `language_group`, `language_override`, `language_override_description`, `language_auto`, `language_en` | 5 | 1 | completed | `language_ru` | 校正 `language_override_description`，統一使用「描述改善」；其餘四個語意正確，未修改。 Translation commit: 95d0114. |
 | ED-ROOT-LOC-003 | 2026-07-14 12:53:39 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `language_ru`, `language_fr`, `language_zh_tw`, `language_zh_cn`, `language_de` | 5 | 0 | completed | `language_it` | 本批語言名稱繁中皆符合 `en`，未修改 Lua；translation repo 無新 commit。 |
 | ED-ROOT-LOC-004 | 2026-07-14 13:10:28 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `language_it`, `language_ja`, `language_ko`, `language_pl`, `language_pt_br` | 5 | 0 | completed | `language_es` | 本批語言名稱繁中皆符合 `en`，未修改 Lua；translation repo 無新 commit。 |
+| ED-ROOT-LOC-005 | 2026-07-14 14:26:28 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `language_es`, `enable_weapons_file`, `enable_weapons_file_description`, `enable_curious_file`, `enable_curious_file_description` | 5 | 4 | completed | `enable_menus_file` | 移除武器與珍品模組的未翻譯標記，依詞彙表校正 Weapon Perks/Curios 用語。 Translation commit: 7c354b4. |
 
 ## Checks
 
@@ -44,6 +45,12 @@
 - ED-ROOT-LOC-004: glossary checked for language names; no required entries found
 - ED-ROOT-LOC-004: `git -C <translation-repo> diff --check` passed
 - ED-ROOT-LOC-004: translation repo diff scope empty; no Lua commit created
+- ED-ROOT-LOC-005: duplicate `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-005: active empty `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-005: placeholders not present in touched strings
+- ED-ROOT-LOC-005: glossary checked for Weapon Perks, Curios, weapon blessings, and curio properties
+- ED-ROOT-LOC-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-ROOT-LOC-005: diff scope limited to `Enhanced_descriptions_localization.lua`
 
 ## Blocked
 
