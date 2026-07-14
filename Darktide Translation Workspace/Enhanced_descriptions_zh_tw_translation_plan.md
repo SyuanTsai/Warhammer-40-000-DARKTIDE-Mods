@@ -1,6 +1,6 @@
 # Enhanced_descriptions zh-tw Translation Plan
 
-本文件是獨立 Git repo `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions` 的繁中翻譯執行計畫。總規則仍以本專案的 `Darktide Translation Workspace/darktide_zh_tw_translation_schedule.md` 為準；本文件只補充 Enhanced_descriptions 這類大型模組需要的細分批次、檔案順序、雙 Git 提交規則與續跑格式。
+本文件是獨立 Enhanced Descriptions Git repo 的繁中翻譯執行計畫。總規則仍以 workspace repo 的 `Darktide Translation Workspace/darktide_zh_tw_translation_schedule.md` 為準；本文件只補充 Enhanced_descriptions 這類大型模組需要的細分批次、檔案順序、雙 Git 提交規則與續跑格式。
 
 建立日期：2026-07-13
 
@@ -15,18 +15,20 @@
 - 翻譯來源只看 `en`。已有 `zh-tw` 僅作校正對象，不作翻譯來源。
 - 不參考 `zh-cn` 推測翻譯；可以用來發現缺項，但不能作為文字來源。
 - 必須查詢 `Referneces/Translation.md` 的相關詞條；未能確認的專有名詞記到 `Term Candidates.md` 或本計畫的 Blocked queue。
-- 實際 Lua 翻譯檔案只修改 `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions` 內與繁中翻譯相關的 `.lua` 檔案。
+- 實際 Lua 翻譯檔案只修改 `<translation-repo>` 內與繁中翻譯相關的 `.lua` 檔案。
 - 不修改 `Enhanced_descriptions.lua`、`.mod`、data loader 或非翻譯邏輯，除非使用者另行要求。
 - 每次 Lua 批次完成後，必須在 `Darktide-Mod Enhanced Descriptions` repo 自動建立英文 commit；該 commit 僅允許包含 `.lua` 檔案修改。
 - 本專案 repo 只更新工作文件與排程狀態；每次工作文件變更也需要在本專案 Git 建立英文 commit。
 
 ## 1. Repo 與紀錄
 
-- Translation repo：`F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions`
+- `<translation-repo>`：Enhanced Descriptions 的獨立 Git repo root。
+- `<workspace-repo>`：保存本翻譯排程與工作文件的 Git repo root。
+- Translation repo：`<translation-repo>`
 - Translation work branch：`Codex/Feature/Enhanced_descriptions/Add-zh-tw`
 - Translation commit message：`Translate zh-tw batch <batch-id>`
-- Translation commit scope：only changed `.lua` files in `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions`
-- Workspace repo：`F:\GitFile\Persion - Games\Warhammer-40-000-DARKTIDE-Mods`
+- Translation commit scope：only changed `.lua` files in `<translation-repo>`
+- Workspace repo：`<workspace-repo>`
 - Workspace commit message：`Update Enhanced_descriptions translation workspace`
 - AI handler：`codex` 或 `github-copilot`
 - 工作文件仍保留在 `main`：
@@ -59,20 +61,20 @@ Safe next position: <next line/key/group>
 
 | Priority | File code | File | Initial size | Batch estimate |
 | --- | --- | --- | ---: | ---: |
-| 1 | ED-ROOT-LOC | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Enhanced_descriptions_localization.lua` | 92 keys | 19 |
-| 2 | ED-COLORS-TW | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Colors_Keywords_Numbers\COLORS_KWords_tw.lua` | 46 groups | 10+ |
-| 3 | ED-MENUS | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\MENUS.lua` | 79 keys | 16 |
-| 4 | ED-CURIOS | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\CURIOS_Blessings_Perks.lua` | 22 keys | 5 |
-| 5 | ED-TALENTS-MOD | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS_Modular.lua` | 29 keys | 6 |
-| 6 | ED-NAMES-TB | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\NAMES_Talents_Blessings.lua` | 285 keys | 57 |
-| 7 | ED-WEAPONS | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\WEAPONS_Blessings_Perks.lua` | 191 keys | 39 |
-| 8 | ED-PENANCES | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\PENANCES.lua` | 288 keys | 58 |
-| 9 | ED-PSYKER | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS\TALENTS_Psyker.lua` | 79 keys | 16 |
-| 10 | ED-ZEALOT | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS\TALENTS_Zealot.lua` | 79 keys | 16 |
-| 11 | ED-VETERAN | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS\TALENTS_Veteran.lua` | 75 keys | 15 |
-| 12 | ED-OGRYN | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS\TALENTS_Ogryn.lua` | 88 keys | 18 |
-| 13 | ED-ARBITES | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS\TALENTS_Arbites.lua` | 83 keys | 17 |
-| 14 | ED-SCUM | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS\TALENTS_Scum.lua` | 99 keys | 20 |
+| 1 | ED-ROOT-LOC | `<translation-repo>/Enhanced_descriptions_localization.lua` | 92 keys | 19 |
+| 2 | ED-COLORS-TW | `<translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua` | 46 groups | 10+ |
+| 3 | ED-MENUS | `<translation-repo>/Main_Modules/MENUS.lua` | 79 keys | 16 |
+| 4 | ED-CURIOS | `<translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua` | 22 keys | 5 |
+| 5 | ED-TALENTS-MOD | `<translation-repo>/Main_Modules/TALENTS_Modular.lua` | 29 keys | 6 |
+| 6 | ED-NAMES-TB | `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua` | 285 keys | 57 |
+| 7 | ED-WEAPONS | `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua` | 191 keys | 39 |
+| 8 | ED-PENANCES | `<translation-repo>/Main_Modules/PENANCES.lua` | 288 keys | 58 |
+| 9 | ED-PSYKER | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua` | 79 keys | 16 |
+| 10 | ED-ZEALOT | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Zealot.lua` | 79 keys | 16 |
+| 11 | ED-VETERAN | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Veteran.lua` | 75 keys | 15 |
+| 12 | ED-OGRYN | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Ogryn.lua` | 88 keys | 18 |
+| 13 | ED-ARBITES | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Arbites.lua` | 83 keys | 17 |
+| 14 | ED-SCUM | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua` | 99 keys | 20 |
 
 總估計：至少 312 批。`COLORS_KWords_tw.lua` 的實際名詞數高於群組數，實作時以每個詞彙 key-value 為準。
 
@@ -222,7 +224,7 @@ Enhanced_descriptions 視為完成時需滿足：
 下一輪可從 `ED-ROOT-LOC-001` 開始：
 
 ```text
-File: F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Enhanced_descriptions_localization.lua
+File: <translation-repo>/Enhanced_descriptions_localization.lua
 Start position: first localization key under localizations table
 Scope: 5 keys
 Safe next position target: sixth localization key
