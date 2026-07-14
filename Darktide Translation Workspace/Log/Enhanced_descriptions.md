@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | c6d259c |
+| Commit | 302677a |
 | PR URL / number | pending |
-| Next position | ED-MENUS-TW-001: `<translation-repo>/Main_Modules/MENUS.lua:first loc_* table` |
+| Next position | ED-MENUS-TW-002: `<translation-repo>/Main_Modules/MENUS.lua:loc_contract_view_intro_title` |
 
 ## Batch Progress
 
@@ -47,6 +47,7 @@
 | ED-COLORS-TW-015 | 2026-07-14 23:51:38 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 source values: `heresy_text_colour.heresy` through `phrs.Can_gen_mult`, including missing Dump Stats and phrase keys | 15 | 13 | completed | `phrs.Can_proc_mult` | 補齊 Dump Stats 色彩 key 與 Can_appl_thr_shldsb/Can_gen_mult 短語；校正可穿透護盾施加與刷新短語。 Translation commit: bbe283d. |
 | ED-COLORS-TW-016 | 2026-07-14 23:54:24 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 phrase values: `phrs.Can_proc_mult` through `phrs.Cant_Crit`, including missing Ogryn/Hive Scum/Cant_be_refr keys | 15 | 9 | completed | `phrs.Carap_cant_clv` | 補齊 Ogryn 與 Hive Scum 不疊加短語、Cant_be_refr，並校正觸發、層數施加、護盾施加與無法造成致命一擊短語。 Translation commit: 46b515e. |
 | ED-COLORS-TW-017 | 2026-07-14 23:57:25 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | final 9 phrase/note values: `phrs.Carap_cant_clv` through `nts.Weaksp_note` | 9 | 9 | completed | `<translation-repo>/Main_Modules/MENUS.lua:first loc_* table` | 校正甲殼護甲、協同韌性回復與 notes 短語，補齊 Weaksp_note；Keyword colors 檔已收尾。 Translation commit: c6d259c. |
+| ED-MENUS-TW-001 | 2026-07-15 00:18:34 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | first 15 loc_* tables: `loc_currency_name_plasteel` through `loc_contract_view_intro_description` | 15 | 2 | completed | `loc_contract_view_intro_title` | 前八項僅覆寫俄文、未新增 zh-tw；依詞彙表校正 Monstrosities 為「巨獸」並改用全形問號。 Translation commit: 302677a. |
 
 ## Checks
 
@@ -236,6 +237,15 @@
 - ED-COLORS-TW-017: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
 - ED-COLORS-TW-017: Lua syntax tool unavailable
 - ED-COLORS-TW-017: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` completed through current English source sequence
+- ED-MENUS-TW-001: all 15 `loc_*` tables reviewed
+- ED-MENUS-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-001: placeholders preserved: `{count:%s}`, `{kind:%s}`, `{count:%d}`, `{enemy_type:%s}`, `{weapon_type:%s}`
+- ED-MENUS-TW-001: glossary checked for Monstrosity, mission, and contract terms
+- ED-MENUS-TW-001: first 8 tables left without `zh-tw` because they only override `ru` and official localization should not be duplicated
+- ED-MENUS-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-MENUS-TW-001: diff scope limited to `Main_Modules/MENUS.lua`
+- ED-MENUS-TW-001: Lua syntax tool unavailable
 
 ## Blocked
 

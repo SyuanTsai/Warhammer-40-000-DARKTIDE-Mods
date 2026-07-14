@@ -262,11 +262,11 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-14，目前是 `ED-MENUS-TW-001`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-MENUS-TW-002`：
 
 ```text
 File: <translation-repo>/Main_Modules/MENUS.lua
-Start position: first `loc_*` table
+Start position: `loc_contract_view_intro_title`
 Scope: 15 `loc_*` tables
-Safe next position target: the 16th `loc_*` table after the first table
+Safe next position target: the 16th `loc_*` table after `loc_contract_view_intro_title`
 ```
