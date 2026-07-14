@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 5d3bcc4 |
+| Commit | f097ddc |
 | PR URL / number | pending |
-| Next position | ED-ROOT-LOC-012: `fnp_colour` |
+| Next position | ED-ROOT-LOC-013: `talents_colour` |
 
 ## Batch Progress
 
@@ -28,6 +28,7 @@
 | ED-ROOT-LOC-009 | 2026-07-14 17:19:11 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `bleed_colour`, `brittleness_colour`, `burn_colour`, `cleave_colour`, `coherency_colour` | 5 | 1 | completed | `combat_ability_colour` | 依詞彙表將 Cleave 從「順劈目標」校正為「順劈攻擊」；其餘四項已符合詞彙表。 Translation commit: d49cb34. |
 | ED-ROOT-LOC-010 | 2026-07-14 22:07:26 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `combat_ability_colour`, `corruption_colour`, `crit_colour`, `damage_colour`, `electrocuted_colour` | 5 | 2 | completed | `finesse_colour` | 依詞彙表將 Combat Ability 校正為「戰鬥技能」，Crit 校正為「致命一擊」；其餘三項已符合詞彙表。 Translation commit: 7d5b2d7. |
 | ED-ROOT-LOC-011 | 2026-07-14 22:14:44 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 15 localization keys: `finesse_colour` through `class_ogryn_colour` | 15 | 1 | completed | `fnp_colour` | 依詞彙表將 Health 校正為「生命值」；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: 5d3bcc4. |
+| ED-ROOT-LOC-012 | 2026-07-14 22:19:06 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 15 localization keys: `fnp_colour` through `chemtox_colour` | 15 | 4 | completed | `talents_colour` | 依詞彙表校正 Focus Target 與 Arbites 用語，啟用 Hive Scum 與 Chem Toxin 的繁中欄位；其餘十一項已符合詞彙表。 Translation commit: f097ddc. |
 
 ## Checks
 
@@ -96,6 +97,13 @@
 - ED-ROOT-LOC-011: `git -C <translation-repo> diff --check` passed before commit
 - ED-ROOT-LOC-011: diff scope limited to `Enhanced_descriptions_localization.lua`
 - ED-ROOT-LOC-011: Lua syntax tool unavailable
+- ED-ROOT-LOC-012: duplicate `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-012: active empty `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-012: keyword icon prefixes and leading spaces preserved in touched entries
+- ED-ROOT-LOC-012: glossary checked for Feel No Pain, Lucky Bullet, Trample, Zealot, Fury, Momentum, Stealth, Veteran, Focus, Focus Target, Melee Specialist, Ranged Specialist, Arbites, Hive Scum, and Chem Toxin
+- ED-ROOT-LOC-012: `git -C <translation-repo> diff --check` passed before commit
+- ED-ROOT-LOC-012: diff scope limited to `Enhanced_descriptions_localization.lua`
+- ED-ROOT-LOC-012: Lua syntax tool unavailable
 
 ## Blocked
 
