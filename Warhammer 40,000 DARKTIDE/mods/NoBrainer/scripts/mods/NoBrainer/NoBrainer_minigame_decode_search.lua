@@ -20,9 +20,12 @@ local SEARCH_MOVE_SYNC_LOCK = 0.35
 local SEARCH_MOVE_PENDING_TIMEOUT = 0.8
 local SEARCH_SUBMIT_SETTLE = 0.10
 local SEARCH_AFTER_MOVE_DELAY = 0.20
+local SEARCH_STARTUP_DELAY = 0.20
 local _find_target
 local search_active = false
 local search_completed = false
+
+mod._exp.session_active = false
 
 local function _game_time()
 	return mod._time("gameplay")
@@ -187,7 +190,7 @@ end
 
 local function _snapshot_fresh()
 	local exp = mod._exp
-	return exp and exp.active and exp.timer > 0 and exp.gameplay and not exp.completed
+	return exp and exp.session_active and exp.active and exp.timer > 0 and exp.gameplay and not exp.completed
 end
 
 local function _is_active_search_mg(mg)
@@ -461,7 +464,7 @@ end
 
 function mod._exp_find_move_dir()
 	local exp = mod._exp
-	if not exp or exp.timer <= 0 or not exp.active then return nil end
+	if not exp or not exp.session_active or exp.timer <= 0 or not exp.active then return nil end
 	if not exp.gameplay then
         mod._debug_event_throttle("search_not_gameplay_event", 1.5, "search", "wait", { reason = "not_gameplay", stage = exp.stage })
         return nil
@@ -534,7 +537,7 @@ end
 function mod._exp_ready_to_submit(now)
 	now = now or _game_time()
 	local exp = mod._exp
-	if not exp or not now or exp.timer <= 0 or not exp.active then return false end
+	if not exp or not exp.session_active or not now or exp.timer <= 0 or not exp.active then return false end
 	if not exp.gameplay then
         mod._debug_event_throttle("search_submit_not_gameplay_event", 1.0, "search", "submit_blocked", { reason = "not_gameplay", stage = exp.stage })
 		_reset_submit_settle("not_gameplay")
@@ -621,6 +624,7 @@ local function _exp_cleanup(reason)
 
 	search_active = false
 	search_completed = reason == "complete"
+	mod._exp.session_active = false
 	_reset_snapshot("cleanup")
 	mod._exp_press_until = 0
 	mod._exp_release_until = 0
@@ -649,11 +653,21 @@ mod:hook_safe("MinigameDecodeSearch", "start", function(self, player)
 	end
 
 	if S("enable_expedition_auto_solve") then
+		_reset_snapshot("start")
+		mod._exp.session_active = true
+		mod._exp_press_until = 0
+		mod._exp_release_until = 0
+		mod._exp_move_cooldown = 0
+		mod._exp_startup_delay = SEARCH_STARTUP_DELAY
+		mod._exp_submitted_stage = nil
+		mod._exp_submitted_until = 0
+		mod._exp_prev_cursor = nil
+		mod._exp_last_move_at = 0
 		search_active = true
 		search_completed = false
 		mod._debug_run_start("search")
 		_sample_search(self)
-		mod._debug_event("search", "start", { server = self._is_server, stage = self._current_stage })
+		mod._debug_event("search", "start", { server = self._is_server, stage = self._current_stage, startup_delay = mod._exp_startup_delay })
 	else
 		mod._debug_event("search", "blocked", { reason = "setting_disabled", server = self._is_server, stage = self._current_stage })
 	end
@@ -729,10 +743,15 @@ mod._reg("setting_changed", on_setting)
 local function on_update_exp(dt)
 	local exp = mod._exp
 	if exp and exp.timer > 0 then exp.timer = math.max(exp.timer - dt, 0) end
-	if mod._exp_startup_delay > 0 then mod._exp_startup_delay = math.max(mod._exp_startup_delay - dt, 0) end
+	if mod._exp_startup_delay > 0 then
+		mod._exp_startup_delay = math.max(mod._exp_startup_delay - dt, 0)
+		if mod._exp_startup_delay == 0 and exp and exp.session_active then
+			mod._debug_event("search", "startup_ready", { stage = exp.stage })
+		end
+	end
 	if mod._exp_move_cooldown > 0 then mod._exp_move_cooldown = math.max(mod._exp_move_cooldown - dt, 0) end
 
-	if not S("enable_expedition_auto_solve") or not exp or exp.timer <= 0 or not exp.active then return end
+	if not S("enable_expedition_auto_solve") or not exp or not exp.session_active or exp.timer <= 0 or not exp.active then return end
 
 	local prev = mod._exp_prev_cursor
 	if exp.cursor_x and exp.cursor_y and prev and (exp.cursor_x ~= prev.x or exp.cursor_y ~= prev.y) then

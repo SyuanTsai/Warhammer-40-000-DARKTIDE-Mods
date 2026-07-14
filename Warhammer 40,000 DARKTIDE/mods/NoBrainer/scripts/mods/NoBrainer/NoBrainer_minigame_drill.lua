@@ -6,6 +6,9 @@ local drill_active = false
 local active_drill_key = nil
 local drill_completed = false
 
+mod._drill.session_active = false
+mod._drill.session_ready = false
+
 local function _reset_snapshot(reason)
 	local drill = mod._drill
 	if drill and (drill.active or drill.timer > 0) then
@@ -30,7 +33,7 @@ end
 
 local function _snapshot_fresh()
 	local drill = mod._drill
-	return drill and drill.active and drill.timer > 0 and drill.gameplay
+	return drill and drill.session_active and drill.session_ready and drill.active and drill.timer > 0 and drill.gameplay
 end
 
 local function _is_active_drill_mg(mg)
@@ -104,13 +107,22 @@ mod:hook_safe("MinigameDrill", "start", function(self, player)
 		mod._debug_event("drill", "blocked", { reason = "setting_disabled", server = self._is_server, stage = self._current_stage })
 		return
 	end
+	_reset_snapshot("start")
+	mod._drill.session_active = true
+	mod._drill.session_ready = false
+	mod._drill_cooldown = 0
+	mod._drill_press_until = 0
+	mod._drill_release_until = 0
+	mod._drill_move_cooldown = 0
+	mod._drill_startup_delay = 0
+	mod._drill_prev_cursor = nil
 	drill_active = true
 	active_drill_key = tostring(self)
 	drill_completed = false
 	mod._debug_run_start("drill")
 	mod._drill_sample(self, false)
 	mod._drill_move_cooldown = _drill_move_delay()
-	mod._debug_event("drill", "start", { move_cooldown = mod._drill_move_cooldown, server = self._is_server, stage = self._current_stage })
+	mod._debug_event("drill", "start", { move_cooldown = mod._drill_move_cooldown, server = self._is_server, stage = self._current_stage, waiting_for_sync = not mod._drill.session_ready })
 end)
 
 mod:hook("MinigameDrill", "on_axis_set", function(func, self, t, x, y)
@@ -146,6 +158,8 @@ local function _drill_cleanup(reason)
 	drill_active = false
 	active_drill_key = nil
 	drill_completed = reason == "complete"
+	mod._drill.session_active = false
+	mod._drill.session_ready = false
 	_reset_snapshot("cleanup")
 	mod._drill_cooldown = 0
 	mod._drill_press_until = 0
@@ -179,6 +193,15 @@ local function _target_for(mg)
 	local targets = stage and mg:targets()
 
 	return stage, idx, idx and targets and targets[stage] and targets[stage][idx]
+end
+
+local function _initial_state_ready(drill)
+	return drill.stage == 1
+		and drill.cursor_x ~= nil and math.abs(drill.cursor_x) <= 0.001
+		and drill.cursor_y ~= nil and math.abs(drill.cursor_y) <= 0.001
+		and not drill.searching
+		and drill.target_index ~= nil
+		and drill.target_x ~= nil and drill.target_y ~= nil
 end
 
 function mod._drill_sample(mg, allow_server_fallback)
@@ -220,6 +243,15 @@ function mod._drill_sample(mg, allow_server_fallback)
 	drill.target_index = target_index
 	drill.key = key
 
+	if drill.session_active and not drill.session_ready then
+		if _initial_state_ready(drill) then
+			drill.session_ready = true
+			mod._debug_event("drill", "sync_ready", { current = tostring(drill.cursor_x) .. "," .. tostring(drill.cursor_y), stage = stage, target = tostring(drill.target_x) .. "," .. tostring(drill.target_y), target_index = target_index })
+		else
+			mod._debug_event_throttle("drill_sync_pending_event", 0.5, "drill", "wait", { current = tostring(drill.cursor_x) .. "," .. tostring(drill.cursor_y), reason = "awaiting_sync", searching = searching, stage = stage, target = tostring(drill.target_x) .. "," .. tostring(drill.target_y), target_index = target_index })
+		end
+	end
+
 	if cursor and target then
 		local dx = target.x - cursor.x
 		local dy = -(target.y - cursor.y)
@@ -247,7 +279,7 @@ function mod._drill_sample(mg, allow_server_fallback)
 		})
 	end
 
-	if allow_server_fallback and now and mg._is_server and mod._drill_cooldown <= 0
+	if allow_server_fallback and drill.session_active and drill.session_ready and now and mg._is_server and mod._drill_cooldown <= 0
 		and mod._drill_should_submit and mod._drill_should_submit() then
 		mod._drill_cooldown = 0.15
 		mod._debug_event("drill", "server_fallback", { server = mg._is_server, stage = drill.stage })
@@ -257,7 +289,7 @@ end
 
 function mod._drill_move_vec()
 	local drill = mod._drill
-	if not drill or drill.timer <= 0 or not drill.active then return nil end
+	if not drill or not drill.session_active or not drill.session_ready or drill.timer <= 0 or not drill.active then return nil end
 	if not drill.gameplay then
 		mod._debug_event_throttle("drill_not_gameplay_event", 1.5, "drill", "wait", { reason = "not_gameplay", stage = drill.stage })
 		return nil
@@ -308,7 +340,7 @@ local function on_update(dt)
 	if mod._drill_cooldown > 0 then mod._drill_cooldown = math.max(mod._drill_cooldown - dt, 0) end
 	if mod._drill_move_cooldown > 0 then mod._drill_move_cooldown = math.max(mod._drill_move_cooldown - dt, 0) end
 
-	if drill and drill.timer > 0 then
+	if drill and drill.session_active and drill.session_ready and drill.timer > 0 then
 		local prev = mod._drill_prev_cursor
 		if drill.cursor_x and drill.cursor_y and prev and (drill.cursor_x ~= prev.x or drill.cursor_y ~= prev.y) then
 			local delay = _drill_move_delay()

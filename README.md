@@ -726,10 +726,10 @@
 
 ### [NoBrainer](https://www.nexusmods.com/warhammer40kdarktide/mods/896)
     最新的小遊戲助手
-- MOD 網站最後更新日期：Last updated 11 July 2026, 5:14PM
-- MOD 版本：2.0.7
-- MOD 檔案名稱：NoBrainer 896 2.0.5 2026-07-09T19-04Z SDWlwDVxk
-- 手動維護最後下載日期：2026-07-12
+- MOD 網站最後更新日期：Last updated 13 July 2026, 1:26AM
+- MOD 版本：2.0.8
+- MOD 檔案名稱：NoBrainer 896 2.0.8 2026-07-12T17-26Z AVBg7VN6i
+- 手動維護最後下載日期：2026-07-14
 
 # 移除的MOD
 

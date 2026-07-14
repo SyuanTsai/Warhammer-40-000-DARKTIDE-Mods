@@ -4,6 +4,7 @@ local S = mod._S
 local scannable_units = {}
 local highlighted_units = {}
 local last_target = nil
+local last_completed_target = nil
 local refresh_dependencies_ready = false
 local refresh_loss_reason = nil
 local update_dependencies_ready = false
@@ -109,6 +110,7 @@ local function _reset_scan_input_state(reason)
     mod._scan_refresh_timer = nil
     mod._current_action = ""
     last_target = nil
+    last_completed_target = nil
 end
 
 local function _reset_scan_state(reason)
@@ -221,6 +223,7 @@ end)
 
 mod:hook_require("scripts/extension_systems/weapon/actions/action_scan_confirm", function(ActionScanConfirm)
     mod:hook_safe(ActionScanConfirm, "_bank_scannable_unit", function()
+        last_completed_target = mod._scan_hold_target
         mod._debug_run_end("scan", "succeeded", { target = tostring(mod._scan_hold_target) })
     end)
 end)
@@ -280,6 +283,19 @@ mod._reg("update", function(dt)
         mod._debug_event_change("scan_action", tostring(wac.current_action_name), "scan", "action", { action = wac.current_action_name, holding = mod._scan_holding, pending = mod._scan_auto_pending })
     end
 
+    if previous_action == "action_scan_confirm" and current_action ~= "action_scan_confirm" then
+        if mod._scan_holding and mod._debug_run_active("scan") then
+            mod._debug_run_end("scan", "hold_finished", { action = current_action, reason = "confirm_ended", target = tostring(mod._scan_hold_target) })
+        end
+
+        mod._scan_holding = false
+        mod._scan_hold_until = 0
+        mod._scan_hold_target = nil
+        if not last_completed_target then
+            last_target = nil
+        end
+    end
+
     mod._current_action = current_action
 
     if wac.current_action_name == "action_scan" then
@@ -293,7 +309,10 @@ mod._reg("update", function(dt)
         end
         local target = scan.scannable_unit
         local los = scan.line_of_sight
-		if scan.is_active and target and los and target ~= last_target then
+		if target and last_completed_target and target ~= last_completed_target then
+			last_completed_target = nil
+		end
+		if scan.is_active and target and los and target ~= last_target and target ~= last_completed_target then
 			mod._scan_auto_pending = true
 			last_target = target
 			mod._debug_run_start("scan")

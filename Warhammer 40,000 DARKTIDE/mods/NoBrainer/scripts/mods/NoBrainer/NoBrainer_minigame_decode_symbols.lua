@@ -133,6 +133,8 @@ local RELEASE_DURATION = 0.12
 local PRESS_LEAD = 0.095
 local PRESS_GRACE = 0.060
 local SUBMIT_TIMEOUT = 1.2
+local SYNC_STABILITY_DURATION = 0.12
+local SYNC_TARGET_EDGE_MARGIN = 0.03
 local PRIMARY_HOLD_ACTIONS = {
 	action_one_hold = true,
 	interact_hold = true,
@@ -146,11 +148,30 @@ mod._ds_press_until = 0
 mod._ds_release_until = 0
 local decode_active = false
 local decode_completed = false
+local decode_previous_start_time = nil
+local decode_waiting_for_sync = false
+local decode_sync_candidate_key = nil
+local decode_sync_candidate_start_time = nil
+local decode_sync_candidate_target = nil
+local decode_sync_candidate_since = nil
+local decode_synced_key = nil
+local decode_synced_start_time = nil
+local decode_synced_target = nil
 local looks_like_decode_symbols
 
 local function debug_value(value)
 	if value == nil then return "nil" end
 	return value
+end
+
+local function clear_sync_tracking()
+	decode_sync_candidate_key = nil
+	decode_sync_candidate_start_time = nil
+	decode_sync_candidate_target = nil
+	decode_sync_candidate_since = nil
+	decode_synced_key = nil
+	decode_synced_start_time = nil
+	decode_synced_target = nil
 end
 
 local function reset_snapshot(reason)
@@ -205,8 +226,36 @@ local function sample_decode_symbols(minigame)
 	ds.sweep_duration = minigame._decode_symbols_sweep_duration
 	ds.key = key
 
+	if decode_active and not ds.server and not decode_waiting_for_sync and stage == 1
+		and decode_synced_key ~= nil
+		and (key ~= decode_synced_key or ds.start_time ~= decode_synced_start_time or ds.target ~= decode_synced_target)
+	then
+		mod._debug_event("decode", "sync_changed", {
+			minigame_start_time = debug_value(ds.start_time),
+			previous_start_time = debug_value(decode_synced_start_time),
+			previous_target = debug_value(decode_synced_target),
+			reason = "stage_one_snapshot_changed",
+			stage = stage,
+			target = debug_value(ds.target),
+		})
+		decode_waiting_for_sync = true
+		clear_sync_tracking()
+		mod._ds_submitted_stage = nil
+		mod._ds_submitted_until = 0
+		mod._ds_press_until = 0
+		mod._ds_release_until = 0
+	end
+
 	if mod._debug_enabled() then
-		mod._debug_event_change("decode_sample", tostring(key) .. ":" .. tostring(stage) .. ":" .. tostring(ds.completed) .. ":" .. tostring(ds.target), "decode", "sample", { reason = ds.completed and "completed" or "sampled", server = ds.server, stage = stage, target = debug_value(ds.target) })
+		mod._debug_event_change("decode_sample", tostring(key) .. ":" .. tostring(stage) .. ":" .. tostring(ds.completed) .. ":" .. tostring(ds.target) .. ":" .. tostring(ds.start_time), "decode", "sample", {
+			minigame_start_time = debug_value(ds.start_time),
+			minigame_time_source = "synced_fixed_frame",
+			reason = ds.completed and "completed" or "sampled",
+			server = ds.server,
+			stage = stage,
+			target = debug_value(ds.target),
+			waiting_for_sync = decode_waiting_for_sync,
+		})
 	end
 end
 
@@ -215,13 +264,18 @@ local function is_active_decode_symbols(minigame)
 	return decode_active and ds and ds.key == tostring(minigame)
 end
 
-local function ds_reset(reason)
+local function ds_reset(reason, final_stage)
 	if decode_active and reason then
-		mod._debug_run_end("decode", "cleanup", { reason = reason, stage = mod._ds and mod._ds.stage or mod._ds_submitted_stage })
+		mod._debug_run_end("decode", "cleanup", { reason = reason, stage = final_stage or mod._ds and mod._ds.stage or mod._ds_submitted_stage })
+	end
+	if mod._ds and mod._ds.start_time then
+		decode_previous_start_time = mod._ds.start_time
 	end
 
 	decode_active = false
 	decode_completed = reason == "complete"
+	decode_waiting_for_sync = false
+	clear_sync_tracking()
 	reset_snapshot("cleanup")
 	mod._ds_submitted_stage = nil
 	mod._ds_submitted_until = 0
@@ -250,7 +304,7 @@ local function next_center_delta(mg, now, start_time, target, margin)
 	return math.abs(delta_a) < math.abs(delta_b) and delta_a or delta_b
 end
 
-local function should_press_decode(now)
+local function should_press_decode(now, decision_time_source)
 	local ds = mod._ds
 	if not ds or ds.timer <= 0 or not ds.active then
 		mod._debug_event_throttle("decode_no_mg_event", 1.5, "decode", "wait", { reason = "no_minigame" })
@@ -274,7 +328,7 @@ local function should_press_decode(now)
 			mod._debug_event_throttle("decode_missing_fields_event", 1.5, "decode", "wait", {
 				items = debug_value(items_per_stage),
 				minigame_start_time = debug_value(start_time),
-				minigame_time_source = "gameplay",
+				minigame_time_source = "synced_fixed_frame",
 				reason = "missing_fields",
 				server = ds.server,
 				stage = debug_value(stage),
@@ -285,9 +339,78 @@ local function should_press_decode(now)
 		return false
 	end
 
+	local sync_ready_now = false
+	if decode_waiting_for_sync then
+		local start_time_changed = decode_previous_start_time == nil or start_time ~= decode_previous_start_time
+		if stage ~= 1 or not start_time_changed then
+			decode_sync_candidate_key = nil
+			decode_sync_candidate_start_time = nil
+			decode_sync_candidate_target = nil
+			decode_sync_candidate_since = nil
+			mod._debug_event_throttle("decode_sync_pending_event", 0.5, "decode", "wait", {
+				minigame_start_time = start_time,
+				minigame_time_source = "synced_fixed_frame",
+				previous_start_time = debug_value(decode_previous_start_time),
+				reason = "awaiting_sync",
+				stage = stage,
+				target = target,
+			})
+			return false
+		end
+
+		if decode_sync_candidate_key ~= ds.key
+			or decode_sync_candidate_start_time ~= start_time
+			or decode_sync_candidate_target ~= target
+		then
+			decode_sync_candidate_key = ds.key
+			decode_sync_candidate_start_time = start_time
+			decode_sync_candidate_target = target
+			decode_sync_candidate_since = now
+			mod._debug_event("decode", "sync_candidate", {
+				minigame_start_time = start_time,
+				minigame_time_source = "synced_fixed_frame",
+				previous_start_time = debug_value(decode_previous_start_time),
+				reason = "awaiting_stability",
+				stage = stage,
+				target = target,
+			})
+			return false
+		end
+
+		local stable_for = now - decode_sync_candidate_since
+		if stable_for < SYNC_STABILITY_DURATION then
+			mod._debug_event_throttle("decode_sync_stability_event", 0.05, "decode", "wait", {
+				reason = "awaiting_stability",
+				stable_for = stable_for,
+				stage = stage,
+				target = target,
+			})
+			return false
+		end
+
+		decode_waiting_for_sync = false
+		decode_synced_key = ds.key
+		decode_synced_start_time = start_time
+		decode_synced_target = target
+		sync_ready_now = true
+		mod._debug_event("decode", "sync_ready", {
+			minigame_start_time = start_time,
+			minigame_time_source = "synced_fixed_frame",
+			previous_start_time = debug_value(decode_previous_start_time),
+			stable_for = stable_for,
+			stage = stage,
+			target = target,
+		})
+	end
+
 	if mod._ds_submitted_stage ~= stage then
 		if mod._ds_submitted_stage ~= nil then
-			mod._debug_event("decode", "stage_changed", { from = mod._ds_submitted_stage, to = stage })
+			mod._debug_event("decode", "stage_result", {
+				from = mod._ds_submitted_stage,
+				reason = "stage_changed",
+				result = stage > mod._ds_submitted_stage and "success" or "miss",
+				to = stage,
+			})
 		end
 
 		mod._ds_submitted_stage = nil
@@ -299,16 +422,42 @@ local function should_press_decode(now)
 
 	local margin = sweep_duration / (items_per_stage - 1)
 	local delta = next_center_delta({ _decode_symbols_sweep_duration = sweep_duration }, now, start_time, target, margin)
+	local target_half_width = margin * 0.5
+	local edge_margin = delta and target_half_width - math.abs(delta) or nil
+	local in_trigger_window = delta and delta <= PRESS_LEAD and delta >= -PRESS_GRACE
+	local in_safe_startup_target = sync_ready_now and edge_margin and edge_margin >= SYNC_TARGET_EDGE_MARGIN
 
-	if not delta or delta > PRESS_LEAD or delta < -PRESS_GRACE then
+	if not in_trigger_window and not in_safe_startup_target then
 		if mod._debug_enabled() then
-			mod._debug_event_throttle("decode_delta_event", 1.0, "decode", "wait", { delta = debug_value(delta), max = PRESS_LEAD, min = -PRESS_GRACE, reason = "outside_window", stage = stage, target = target })
+			mod._debug_event_throttle("decode_delta_event", 1.0, "decode", "wait", {
+				delta = debug_value(delta),
+				reason = "outside_trigger_window",
+				stage = stage,
+				target = target,
+				target_half_width = target_half_width,
+				trigger_grace = PRESS_GRACE,
+				trigger_lead = PRESS_LEAD,
+			})
 		end
 		return false
 	end
 
 	if mod._debug_enabled() then
-		mod._debug_event("decode", "press_window", { delta = delta, max = PRESS_LEAD, min = -PRESS_GRACE, server = ds.server, stage = stage, target = target, window = "synthetic_press" })
+		mod._debug_event("decode", "press_window", {
+			decision_time = now,
+			decision_time_source = decision_time_source,
+			delta = delta,
+			edge_margin = edge_margin,
+			minigame_start_time = start_time,
+			minigame_time_source = "synced_fixed_frame",
+			server = ds.server,
+			stage = stage,
+			target = target,
+			target_half_width = target_half_width,
+			trigger_grace = PRESS_GRACE,
+			trigger_lead = PRESS_LEAD,
+			window = in_trigger_window and "synthetic_press" or "startup_target",
+		})
 	end
 	return true
 end
@@ -329,7 +478,7 @@ looks_like_decode_symbols = function(minigame)
 		and minigame._decode_targets ~= nil
 end
 
-function mod._ds_input(action, result)
+function mod._ds_input(action, result, source)
 	if not S("enable_decode_auto") then return result end
 	local ds = mod._ds
 	if not ds or ds.timer <= 0 or not ds.active then return result end
@@ -338,22 +487,23 @@ function mod._ds_input(action, result)
 	local now = game_time()
 	if not now then return result end
 
-	if mod._ds_release_until > now then
-		if mod._debug_enabled() then
-			mod._debug_event_throttle("decode_input_release_event", 1.0, "decode", "synthetic_release", { action = action, stage = mod._ds_submitted_stage, until_t = mod._ds_release_until })
-		end
-		return false
-	end
 	if mod._ds_press_until > now then
 		if mod._debug_enabled() then
-			mod._debug_event_throttle("decode_input_hold_event", 1.0, "decode", "synthetic_hold", { action = action, stage = mod._ds_submitted_stage, until_t = mod._ds_press_until })
+			mod._debug_event_throttle("decode_input_hold_event", 1.0, "decode", "synthetic_hold", { action = action, source = source, stage = mod._ds_submitted_stage, until_t = mod._ds_press_until })
 		end
 		return true
 	end
+	if mod._ds_release_until > now then
+		if mod._debug_enabled() then
+			mod._debug_event_throttle("decode_input_release_event", 1.0, "decode", "synthetic_release", { action = action, source = source, stage = mod._ds_submitted_stage, until_t = mod._ds_release_until })
+		end
+		return false
+	end
 	if result then return result end
-	if not should_press_decode(now) then return result end
+	if source ~= "input_service" then return result end
+	if not should_press_decode(now, "gameplay") then return result end
 
-	submit_decode(now, action, "route_input")
+	submit_decode(now, action, source)
 	return true
 end
 
@@ -364,10 +514,20 @@ mod:hook_safe("MinigameDecodeSymbols", "start", function(self, player)
 	end
 
 	if S("enable_decode_auto") then
+		if mod._ds and mod._ds.start_time then
+			decode_previous_start_time = mod._ds.start_time
+		end
+		reset_snapshot("start")
+		clear_sync_tracking()
+		mod._ds_submitted_stage = nil
+		mod._ds_submitted_until = 0
+		mod._ds_press_until = 0
+		mod._ds_release_until = 0
 		decode_active = true
 		decode_completed = false
+		decode_waiting_for_sync = self._is_server ~= true
 		mod._debug_run_start("decode")
-		mod._debug_event("decode", "start", { items = debug_value(self._decode_symbols_items_per_stage), minigame_start_time = debug_value(self._decode_start_time), minigame_time_source = "gameplay", server = self._is_server, stage = debug_value(self._current_stage), sweep = debug_value(self._decode_symbols_sweep_duration) })
+		mod._debug_event("decode", "start", { items = debug_value(self._decode_symbols_items_per_stage), minigame_start_time = debug_value(self._decode_start_time), minigame_time_source = "synced_fixed_frame", previous_start_time = debug_value(decode_previous_start_time), server = self._is_server, stage = debug_value(self._current_stage), sweep = debug_value(self._decode_symbols_sweep_duration), waiting_for_sync = decode_waiting_for_sync })
 	else
 		mod._debug_event("decode", "blocked", { reason = "setting_disabled", server = self._is_server, stage = debug_value(self._current_stage) })
 	end
@@ -380,7 +540,15 @@ end)
 
 mod:hook_safe("MinigameDecodeSymbols", "complete", function(self)
     if S("enable_decode_auto") and is_active_decode_symbols(self) then
-        ds_reset("complete")
+        if mod._ds_submitted_stage ~= nil then
+            mod._debug_event("decode", "stage_result", {
+                from = mod._ds_submitted_stage,
+                reason = "complete",
+                result = "success",
+                to = self._current_stage,
+            })
+        end
+        ds_reset("complete", self._current_stage)
     end
 end)
 
@@ -392,7 +560,12 @@ local function on_update(dt)
 	local now = game_time()
 
 	if now and mod._ds_submitted_until > 0 and now >= mod._ds_submitted_until then
-		mod._debug_event("decode", "submit_timeout", { stage = mod._ds_submitted_stage })
+		mod._debug_event("decode", "stage_result", {
+			from = mod._ds_submitted_stage,
+			reason = "no_stage_change",
+			result = "miss",
+			to = ds and ds.stage or nil,
+		})
 		mod._ds_submitted_stage = nil
 		mod._ds_submitted_until = 0
 	end
@@ -468,17 +641,17 @@ local function hook_decode_state_input(PlayerCharacterStateMinigame)
 			return true
 		end
 
-		if mod._ds_release_until > t then
-			primary_input = false
-		elseif mod._ds_press_until > t then
+		if mod._ds_press_until > t then
 			primary_input = true
-		elseif should_press_decode(t) then
-			submit_decode(t, nil, "state_input")
+		elseif mod._ds_release_until > t then
+			primary_input = false
+		elseif minigame._is_server and should_press_decode(t, "fixed_frame") then
+			submit_decode(t, nil, "state_input_server")
 			primary_input = true
 		end
 
-		local synthetic_phase = mod._ds_release_until > t and "release"
-			or mod._ds_press_until > t and "hold"
+		local synthetic_phase = mod._ds_press_until > t and "hold"
+			or mod._ds_release_until > t and "release"
 			or "passthrough"
 
 		if mod._debug_enabled() then
@@ -486,7 +659,7 @@ local function hook_decode_state_input(PlayerCharacterStateMinigame)
 		end
 
 		if minigame:uses_action() and minigame:action(primary_input, t) then
-			mod._debug_event("decode", "action_accepted", { input = primary_input, phase = synthetic_phase, stage = debug_value(minigame._current_stage) })
+			mod._debug_event("decode", "input_edge_accepted", { input = primary_input, phase = synthetic_phase, stage = debug_value(minigame._current_stage) })
 			local animation_extension = self._animation_extension
 
 			if animation_extension then
