@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | e562ccd |
+| Commit | bbe283d |
 | PR URL / number | pending |
-| Next position | ED-COLORS-TW-015: `heresy_text_colour.heresy` |
+| Next position | ED-COLORS-TW-016: `phrs.Can_proc_mult` |
 
 ## Batch Progress
 
@@ -44,6 +44,7 @@
 | ED-COLORS-TW-012 | 2026-07-14 23:40:30 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.seerspres` through `talents_text_colour.krak_gr` | 15 | 6 | completed | `talents_text_colour.Rangd_stnc` | 依詞彙表校正 Smite、Duty and Honour、Frag Grenade 與 Fragmentation Grenade 用語；其餘九項已符合詞彙表或既有一致譯法。 Translation commit: d4c9498. |
 | ED-COLORS-TW-013 | 2026-07-14 23:45:08 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.Rangd_stnc` through `talents_text_colour.bull_rush4` | 15 | 2 | completed | `talents_text_colour.burstlimo` | 依詞彙表校正 Attention Seeker 與 Bombs Away! 用語；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: e2b8afe. |
 | ED-COLORS-TW-014 | 2026-07-14 23:47:47 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 active keyword values: `talents_text_colour.burstlimo` through `malice_text_colour.malice`; skipped commented `sedition_text_colour.sedition` | 15 | 1 | completed | `heresy_text_colour.heresy` | 依詞彙表校正 Stay Close! 用語；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: e562ccd. |
+| ED-COLORS-TW-015 | 2026-07-14 23:51:38 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 source values: `heresy_text_colour.heresy` through `phrs.Can_gen_mult`, including missing Dump Stats and phrase keys | 15 | 13 | completed | `phrs.Can_proc_mult` | 補齊 Dump Stats 色彩 key 與 Can_appl_thr_shldsb/Can_gen_mult 短語；校正可穿透護盾施加與刷新短語。 Translation commit: bbe283d. |
 
 ## Checks
 
@@ -211,6 +212,13 @@
 - ED-COLORS-TW-014: `git -C <translation-repo> diff --check` passed before commit
 - ED-COLORS-TW-014: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
 - ED-COLORS-TW-014: Lua syntax tool unavailable
+- ED-COLORS-TW-015: all 15 source values present and non-empty
+- ED-COLORS-TW-015: glossary checked for Heresy, Damnation, Auric, Damage, Cleave, and related Dump Stats terms
+- ED-COLORS-TW-015: checked local usage for Dump Stats menu labels, Bulwark shield, stack generation, and refresh phrases
+- ED-COLORS-TW-015: added missing `dump_stat_text_colour`, `dump_stat2_text_colour`, `dump_stat3_text_colour`, `Can_appl_thr_shldsb`, and `Can_gen_mult`
+- ED-COLORS-TW-015: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-015: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-015: Lua syntax tool unavailable
 
 ## Blocked
 
