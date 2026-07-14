@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 709de9a |
+| Commit | d4c9498 |
 | PR URL / number | pending |
-| Next position | ED-COLORS-TW-012: `talents_text_colour.seerspres` |
+| Next position | ED-COLORS-TW-013: `talents_text_colour.Rangd_stnc` |
 
 ## Batch Progress
 
@@ -41,6 +41,7 @@
 | ED-COLORS-TW-009 | 2026-07-14 23:20:05 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `rangedspec_text_colour.Rangedspec` through `talents_text_colour.fury_faithful` | 15 | 2 | completed | `talents_text_colour.Holy_relic` | 依詞彙表與 root localization 將 Hive Scum 校正為「巢都渣滓」；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: 0e045fc. |
 | ED-COLORS-TW-010 | 2026-07-14 23:23:59 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.Holy_relic` through `talents_text_colour.Assail` | 15 | 2 | completed | `talents_text_colour.assail` | 依詞彙表將 Stun Grenade 校正為「眩暈手雷」，Assail 校正為「靈能攻擊」；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: b7245c5. |
 | ED-COLORS-TW-011 | 2026-07-14 23:37:03 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.assail` through `talents_text_colour.scriersgaze` | 15 | 8 | completed | `talents_text_colour.seerspres` | 依詞彙表校正 Assail、Brain Burst、Brain Rupture、Enfeeble 與 Scrier's Gaze 用語；其餘七項已符合詞彙表或既有一致譯法。 Translation commit: 709de9a. |
+| ED-COLORS-TW-012 | 2026-07-14 23:40:30 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.seerspres` through `talents_text_colour.krak_gr` | 15 | 6 | completed | `talents_text_colour.Rangd_stnc` | 依詞彙表校正 Smite、Duty and Honour、Frag Grenade 與 Fragmentation Grenade 用語；其餘九項已符合詞彙表或既有一致譯法。 Translation commit: d4c9498. |
 
 ## Checks
 
@@ -189,6 +190,12 @@
 - ED-COLORS-TW-011: `git -C <translation-repo> diff --check` passed before commit
 - ED-COLORS-TW-011: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
 - ED-COLORS-TW-011: Lua syntax tool unavailable
+- ED-COLORS-TW-012: all 15 keyword values present and non-empty
+- ED-COLORS-TW-012: glossary checked for Seer's Presence, Smite, Telekine Shield, Close and Kill, Duty and Honour, Executioner's Stance, Focus Target!, Fire Team, Frag Grenade, Shredder Frag Grenade, Infiltrate, and Krak Grenade
+- ED-COLORS-TW-012: checked local usage for Psyker and Veteran talent names, penances, and grenade terms
+- ED-COLORS-TW-012: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-012: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-012: Lua syntax tool unavailable
 
 ## Blocked
 
