@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | bbe283d |
+| Commit | 46b515e |
 | PR URL / number | pending |
-| Next position | ED-COLORS-TW-016: `phrs.Can_proc_mult` |
+| Next position | ED-COLORS-TW-017: `phrs.Carap_cant_clv` |
 
 ## Batch Progress
 
@@ -45,6 +45,7 @@
 | ED-COLORS-TW-013 | 2026-07-14 23:45:08 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.Rangd_stnc` through `talents_text_colour.bull_rush4` | 15 | 2 | completed | `talents_text_colour.burstlimo` | 依詞彙表校正 Attention Seeker 與 Bombs Away! 用語；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: e2b8afe. |
 | ED-COLORS-TW-014 | 2026-07-14 23:47:47 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 active keyword values: `talents_text_colour.burstlimo` through `malice_text_colour.malice`; skipped commented `sedition_text_colour.sedition` | 15 | 1 | completed | `heresy_text_colour.heresy` | 依詞彙表校正 Stay Close! 用語；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: e562ccd. |
 | ED-COLORS-TW-015 | 2026-07-14 23:51:38 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 source values: `heresy_text_colour.heresy` through `phrs.Can_gen_mult`, including missing Dump Stats and phrase keys | 15 | 13 | completed | `phrs.Can_proc_mult` | 補齊 Dump Stats 色彩 key 與 Can_appl_thr_shldsb/Can_gen_mult 短語；校正可穿透護盾施加與刷新短語。 Translation commit: bbe283d. |
+| ED-COLORS-TW-016 | 2026-07-14 23:54:24 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 phrase values: `phrs.Can_proc_mult` through `phrs.Cant_Crit`, including missing Ogryn/Hive Scum/Cant_be_refr keys | 15 | 9 | completed | `phrs.Carap_cant_clv` | 補齊 Ogryn 與 Hive Scum 不疊加短語、Cant_be_refr，並校正觸發、層數施加、護盾施加與無法造成致命一擊短語。 Translation commit: 46b515e. |
 
 ## Checks
 
@@ -219,6 +220,13 @@
 - ED-COLORS-TW-015: `git -C <translation-repo> diff --check` passed before commit
 - ED-COLORS-TW-015: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
 - ED-COLORS-TW-015: Lua syntax tool unavailable
+- ED-COLORS-TW-016: all 15 phrase values present and non-empty
+- ED-COLORS-TW-016: glossary checked for Cleaving, Crit, Psyker, Veteran, Zealot, Ogryn, and Hive Scum
+- ED-COLORS-TW-016: checked local usage for CPhrs references in Psyker, Veteran, Ogryn, Zealot, and Scum talent modules
+- ED-COLORS-TW-016: added missing `Doesnt_Stack_Ogr_abil`, `Doesnt_Stack_Scm_Aura`, `Doesnt_Stack_Scm_eff`, and `Cant_be_refr`
+- ED-COLORS-TW-016: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-016: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-016: Lua syntax tool unavailable
 
 ## Blocked
 
