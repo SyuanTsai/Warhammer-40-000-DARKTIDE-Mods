@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | f542736 |
+| Commit | 2ec5615 |
 | PR URL / number | pending |
-| Next position | ED-ROOT-LOC-008: `enable_debug_mode` |
+| Next position | ED-ROOT-LOC-009: `bleed_colour` |
 
 ## Batch Progress
 
@@ -24,6 +24,7 @@
 | ED-ROOT-LOC-005 | 2026-07-14 14:26:28 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `language_es`, `enable_weapons_file`, `enable_weapons_file_description`, `enable_curious_file`, `enable_curious_file_description` | 5 | 4 | completed | `enable_menus_file` | 移除武器與珍品模組的未翻譯標記，依詞彙表校正 Weapon Perks/Curios 用語。 Translation commit: 7c354b4. |
 | ED-ROOT-LOC-006 | 2026-07-14 14:44:53 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `enable_menus_file`, `enable_menus_file_description`, `enable_talents_file`, `enable_talents_file_description`, `enable_penances_file` | 5 | 4 | completed | `enable_penances_file_description` | 移除選單、天賦與苦行模組文字中的未翻譯標記，依 `en` 校正 numbers/keywords 描述。 Translation commit: cab0cf3. |
 | ED-ROOT-LOC-007 | 2026-07-14 15:30:37 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `enable_penances_file_description`, `enable_names_file`, `enable_names_file_description`, `enable_names_tal_bless_file`, `enable_names_tal_bless_file_description` | 5 | 5 | completed | `enable_debug_mode` | 校正苦行描述，補回名稱模組標題與警示描述的 color/reset 語法，移除未翻譯標記。 Translation commit: f542736. |
+| ED-ROOT-LOC-008 | 2026-07-14 16:25:44 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `enable_debug_mode`, `enable_debug_mode_description`, `dump_stat_colour`, `dump_stat2_colour`, `dump_stat3_colour` | 5 | 4 | completed | `bleed_colour` | 補齊 Debug 模組描述的指令清單，新增三個 Dump Stats 類別的繁中並保留 size/color/reset 語法。 Translation commit: 2ec5615. |
 
 ## Checks
 
@@ -66,6 +67,13 @@
 - ED-ROOT-LOC-007: glossary checked for Weapons, Enemies, Talents, and Blessings
 - ED-ROOT-LOC-007: `git -C <translation-repo> diff --check` passed before commit
 - ED-ROOT-LOC-007: diff scope limited to `Enhanced_descriptions_localization.lua`
+- ED-ROOT-LOC-008: duplicate `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-008: active empty `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-008: debug commands preserved=10
+- ED-ROOT-LOC-008: size/color/reset syntax preserved in debug and dump stat entries
+- ED-ROOT-LOC-008: glossary checked for Damage, Ammo, Reload, Melee Damage, and equipment stats
+- ED-ROOT-LOC-008: `git -C <translation-repo> diff --check` passed before commit
+- ED-ROOT-LOC-008: diff scope limited to `Enhanced_descriptions_localization.lua`
 
 ## Blocked
 
