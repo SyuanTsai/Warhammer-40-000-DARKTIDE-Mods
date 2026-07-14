@@ -262,11 +262,11 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-14，目前是 `ED-ROOT-LOC-010`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-14，目前是 `ED-ROOT-LOC-012`：
 
 ```text
 File: <translation-repo>/Enhanced_descriptions_localization.lua
-Start position: `combat_ability_colour`
+Start position: `fnp_colour`
 Scope: 15 keys
-Safe next position target: the 16th localization key after `combat_ability_colour`
+Safe next position target: the 16th localization key after `fnp_colour`
 ```
