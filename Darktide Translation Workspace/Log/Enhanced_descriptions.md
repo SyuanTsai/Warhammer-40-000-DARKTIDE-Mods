@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 64d4048 |
+| Commit | 5662d3b |
 | PR URL / number | pending |
-| Next position | ED-COLORS-TW-005: `peril_text_colour.PerilsozWarp` |
+| Next position | ED-COLORS-TW-006: `toughness_text_colour.TDR` |
 
 ## Batch Progress
 
@@ -34,6 +34,7 @@
 | ED-COLORS-TW-002 | 2026-07-14 22:34:35 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `combat_ability_text_colour.Cmbt_abil_cd` through `crit_text_colour.Crt_hit_chnc` | 15 | 10 | completed | `crit_text_colour.Crt_hit_col` | 依詞彙表將已發生的 Crit/Critical 校正為「致命一擊」，機率屬性校正為「爆擊率」；Corruption 與 Combat Ability Cooldown 已符合詞彙表。 Translation commit: 0a97e7b. |
 | ED-COLORS-TW-003 | 2026-07-14 22:46:24 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `crit_text_colour.Crt_hit_col` through `damage_text_colour.Damagewrp` | 15 | 6 | completed | `electrocuted_text_colour.Electrocute` | 依詞彙表與語境校正 Critical Strike/Attack/Shots 的結果與機率用語；Crit damage 與 Damage 系列維持既有一致譯法。 Translation commit: d06694c. |
 | ED-COLORS-TW-004 | 2026-07-14 22:51:54 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `electrocuted_text_colour.Electrocute` through `peril_text_colour.Perils` | 15 | 2 | completed | `peril_text_colour.PerilsozWarp` | 依詞彙表與 root localization 將 Health/Max Health 校正為「生命值 / 最大生命值」；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: 64d4048. |
+| ED-COLORS-TW-005 | 2026-07-14 22:59:30 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `peril_text_colour.PerilsozWarp` through `stamina_text_colour.Stamina_c_r` | 15 | 1 | completed | `toughness_text_colour.TDR` | 依詞彙表、root localization 與其他 MOD 用法將 Soulblaze 校正為「靈魂之火」；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: 5662d3b. |
 
 ## Checks
 
@@ -140,6 +141,12 @@
 - ED-COLORS-TW-004: `git -C <translation-repo> diff --check` passed before commit
 - ED-COLORS-TW-004: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
 - ED-COLORS-TW-004: Lua syntax tool unavailable
+- ED-COLORS-TW-005: all 15 keyword values present and non-empty
+- ED-COLORS-TW-005: glossary checked for Peril, Power, Rending, Soulblaze, Stagger, Stun, and Stamina
+- ED-COLORS-TW-005: checked local usage for Perils of the Warp, Soulblaze, Stamina, Stamina_m, and Stamina_c_r terms
+- ED-COLORS-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-005: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-005: Lua syntax tool unavailable
 
 ## Blocked
 
