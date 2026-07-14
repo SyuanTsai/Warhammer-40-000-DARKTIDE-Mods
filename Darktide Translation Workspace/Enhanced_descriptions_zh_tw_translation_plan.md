@@ -6,11 +6,11 @@
 
 ## 0. 核心原則
 
-- 每批只處理 5 個名詞或條目。若第 5 個條目牽涉同一段多行描述，完成該條目的完整 `zh-tw` 後停止。
+- 每批只處理 15 個名詞或條目。若第 15 個條目牽涉同一段多行描述，完成該條目的完整 `zh-tw` 後停止。
 - 「名詞或條目」定義：
   - `Enhanced_descriptions_localization.lua`：一個 localization key 算 1 個條目。
   - `Main_Modules/*.lua` 與 `Main_Modules/TALENTS/*.lua`：一個 `["loc_*"] = { ... }` table 算 1 個條目。
-  - `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`：一個英文詞彙對應值算 1 個名詞；同一群組最多仍只取 5 個。
+  - `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`：一個英文詞彙對應值算 1 個名詞；同一群組最多仍只取 15 個。
 - 每批開始前先記錄 safe next position；每批完成後更新到下一個未處理 key 或詞彙。
 - 翻譯來源只看 `en`。已有 `zh-tw` 僅作校正對象，不作翻譯來源。
 - 不參考 `zh-cn` 推測翻譯；可以用來發現缺項，但不能作為文字來源。
@@ -83,7 +83,7 @@ Batch: ED-<file-code>-<batch-number>
 AI handler: <codex/github-copilot>
 File: <path>
 Start position: <line/key/group>
-Scope: 5 terms/items
+Scope: 15 terms/items
 Completed: <count>
 Changed zh-tw: <count>
 Term candidates: <none/list>
@@ -98,22 +98,22 @@ Safe next position: <next line/key/group>
 
 | Priority | File code | File | Initial size | Batch estimate |
 | --- | --- | --- | ---: | ---: |
-| 1 | ED-ROOT-LOC | `<translation-repo>/Enhanced_descriptions_localization.lua` | 92 keys | 19 |
-| 2 | ED-COLORS-TW | `<translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua` | 46 groups | 10+ |
-| 3 | ED-MENUS | `<translation-repo>/Main_Modules/MENUS.lua` | 79 keys | 16 |
-| 4 | ED-CURIOS | `<translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua` | 22 keys | 5 |
-| 5 | ED-TALENTS-MOD | `<translation-repo>/Main_Modules/TALENTS_Modular.lua` | 29 keys | 6 |
-| 6 | ED-NAMES-TB | `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua` | 285 keys | 57 |
-| 7 | ED-WEAPONS | `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua` | 191 keys | 39 |
-| 8 | ED-PENANCES | `<translation-repo>/Main_Modules/PENANCES.lua` | 288 keys | 58 |
-| 9 | ED-PSYKER | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua` | 79 keys | 16 |
-| 10 | ED-ZEALOT | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Zealot.lua` | 79 keys | 16 |
-| 11 | ED-VETERAN | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Veteran.lua` | 75 keys | 15 |
-| 12 | ED-OGRYN | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Ogryn.lua` | 88 keys | 18 |
-| 13 | ED-ARBITES | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Arbites.lua` | 83 keys | 17 |
-| 14 | ED-SCUM | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua` | 99 keys | 20 |
+| 1 | ED-ROOT-LOC | `<translation-repo>/Enhanced_descriptions_localization.lua` | 92 keys | 7 |
+| 2 | ED-COLORS-TW | `<translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua` | 46 groups | 4+ |
+| 3 | ED-MENUS | `<translation-repo>/Main_Modules/MENUS.lua` | 79 keys | 6 |
+| 4 | ED-CURIOS | `<translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua` | 22 keys | 2 |
+| 5 | ED-TALENTS-MOD | `<translation-repo>/Main_Modules/TALENTS_Modular.lua` | 29 keys | 2 |
+| 6 | ED-NAMES-TB | `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua` | 285 keys | 19 |
+| 7 | ED-WEAPONS | `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua` | 191 keys | 13 |
+| 8 | ED-PENANCES | `<translation-repo>/Main_Modules/PENANCES.lua` | 288 keys | 20 |
+| 9 | ED-PSYKER | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua` | 79 keys | 6 |
+| 10 | ED-ZEALOT | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Zealot.lua` | 79 keys | 6 |
+| 11 | ED-VETERAN | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Veteran.lua` | 75 keys | 5 |
+| 12 | ED-OGRYN | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Ogryn.lua` | 88 keys | 6 |
+| 13 | ED-ARBITES | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Arbites.lua` | 83 keys | 6 |
+| 14 | ED-SCUM | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua` | 99 keys | 7 |
 
-總估計：至少 312 批。`COLORS_KWords_tw.lua` 的實際名詞數高於群組數，實作時以每個詞彙 key-value 為準。
+總估計：至少 109 批。`COLORS_KWords_tw.lua` 的實際名詞數高於群組數，實作時以每個詞彙 key-value 為準。
 
 ## 3. 每批流程
 
@@ -123,8 +123,8 @@ Safe next position: <next line/key/group>
    - `git -C <translation-repo> status --short`
    - `git -C <workspace-repo> status --short`
 2. 讀取本文件、總排程、Workspace Status、對應 log 的相關段落。
-3. 在本專案工作文件鎖定單一檔案與下一個 5 條目範圍。
-4. 對 5 條目建立輕量清單：
+3. 在本專案工作文件鎖定單一檔案與下一個 15 條目範圍。
+4. 對 15 條目建立輕量清單：
    - key 或詞彙名
    - English source
    - current `zh-tw` 或目前繁中值
@@ -136,11 +136,11 @@ Safe next position: <next line/key/group>
    - 已被註解的 `zh-tw`：確認英文來源與結構後，必要時啟用並校正。
    - 無語意、純數字、純 placeholder：可跳過並記錄原因。
 6. 只在同一 batch 內維持一致性；跨 batch 的一致性由詞彙表與後續品質 pass 補強。
-7. 完成 5 條目後立即執行局部檢查。
+7. 完成 15 條目後立即執行局部檢查。
 8. 用 `git -C <translation-repo> diff --name-only` 檢查 diff scope，只允許 `.lua` 檔案；若包含非 Lua 變更，停止並修正。
 9. 用 `git -C <translation-repo> add -- <changed-lua-files>` stage Lua 檔，再用 `git -C <translation-repo> commit -m "Translate zh-tw batch <batch-id>"` 自動 commit。
 10. 更新 `<workspace-repo>/Darktide Translation Workspace/` 內的 Workspace Status、log、Term Candidates 或本文件，然後用 `git -C <workspace-repo> add -- "Darktide Translation Workspace"` 與 `git -C <workspace-repo> commit -m "Update Enhanced_descriptions translation workspace"` 自動 commit。
-11. 更新 safe next position，確保下一輪可從第 6 個未處理條目繼續。
+11. 更新 safe next position，確保下一輪可從第 16 個未處理條目繼續。
 
 ## 4. Enhanced_descriptions 專用翻譯規則
 
@@ -170,7 +170,7 @@ Safe next position: <next line/key/group>
 處理 `Enhanced_descriptions_localization.lua`。
 
 - 優先校正模組設定選單可見文字。
-- 每批 5 個 localization key。
+- 每批 15 個 localization key。
 - 檢查 `LOCALIZATION_GROUPS` 內是否有 key 在 `localizations` 中缺 `zh-tw`。
 - 顏色名稱由程式產生的項目不硬補翻譯，除非已有明確 localization table。
 
@@ -178,7 +178,7 @@ Safe next position: <next line/key/group>
 
 處理 `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`。
 
-- 每批 5 個英文詞彙 key-value，不以群組為單位。
+- 每批 15 個英文詞彙 key-value，不以群組為單位。
 - 同一群組內的詞彙應盡量同批或連續批處理，避免同義詞不一致。
 - 優先順序：核心戰鬥詞 > 職業/技能詞 > 難度詞 > note/warning/misc。
 
@@ -190,7 +190,7 @@ Safe next position: <next line/key/group>
 2. `CURIOS_Blessings_Perks.lua`
 3. `TALENTS_Modular.lua`
 
-這三個檔案每批 5 個 `loc_*` table。若某 table 目前只保留註解語系，先確認是否應啟用 `zh-tw`，不要一次解註解整段模板。
+這三個檔案每批 15 個 `loc_*` table。若某 table 目前只保留註解語系，先確認是否應啟用 `zh-tw`，不要一次解註解整段模板。
 
 ### 5.4 Names and broad combat terms
 
@@ -200,7 +200,7 @@ Safe next position: <next line/key/group>
 2. `WEAPONS_Blessings_Perks.lua`
 3. `PENANCES.lua`
 
-這些檔案名詞密度高，每批必須先抽出可能命中詞彙表的名稱，查詢後再翻譯。若一批 5 條目中有 2 個以上專有名詞不確定，先翻譯確定項，將不確定項列為 blocked，下一批從第 6 個可處理項繼續。
+這些檔案名詞密度高，每批必須先抽出可能命中詞彙表的名稱，查詢後再翻譯。若一批 15 條目中有 5 個以上專有名詞不確定，先翻譯確定項，將不確定項列為 blocked，下一批從第 16 個可處理項繼續。
 
 ### 5.5 Class talent modules
 
@@ -213,7 +213,7 @@ Safe next position: <next line/key/group>
 5. `TALENTS_Arbites.lua`
 6. `TALENTS_Scum.lua`
 
-每批 5 個 talent description table。若同一職業的技能名、光環、關鍵石、閃擊互相引用，優先把名稱表中的譯名固定，再處理描述。
+每批 15 個 talent description table。若同一職業的技能名、光環、關鍵石、閃擊互相引用，優先把名稱表中的譯名固定，再處理描述。
 
 ## 6. 品質檢查
 
@@ -262,11 +262,11 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從 `ED-ROOT-LOC-001` 開始：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-14，目前是 `ED-ROOT-LOC-010`：
 
 ```text
 File: <translation-repo>/Enhanced_descriptions_localization.lua
-Start position: first localization key under localizations table
-Scope: 5 keys
-Safe next position target: sixth localization key
+Start position: `combat_ability_colour`
+Scope: 15 keys
+Safe next position target: the 16th localization key after `combat_ability_colour`
 ```
