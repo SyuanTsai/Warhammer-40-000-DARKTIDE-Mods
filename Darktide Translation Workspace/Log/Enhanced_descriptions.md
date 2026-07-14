@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | e88c68e |
+| Commit | 4d483e7 |
 | PR URL / number | pending |
-| Next position | ED-COLORS-TW-007: `class_psyker_text_colour.cls_psys` |
+| Next position | ED-COLORS-TW-008: `momentum_text_colour.Momentum` |
 
 ## Batch Progress
 
@@ -36,6 +36,7 @@
 | ED-COLORS-TW-004 | 2026-07-14 22:51:54 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `electrocuted_text_colour.Electrocute` through `peril_text_colour.Perils` | 15 | 2 | completed | `peril_text_colour.PerilsozWarp` | 依詞彙表與 root localization 將 Health/Max Health 校正為「生命值 / 最大生命值」；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: 64d4048. |
 | ED-COLORS-TW-005 | 2026-07-14 22:59:30 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `peril_text_colour.PerilsozWarp` through `stamina_text_colour.Stamina_c_r` | 15 | 1 | completed | `toughness_text_colour.TDR` | 依詞彙表、root localization 與其他 MOD 用法將 Soulblaze 校正為「靈魂之火」；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: 5662d3b. |
 | ED-COLORS-TW-006 | 2026-07-14 23:07:12 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `toughness_text_colour.TDR` through `class_psyker_text_colour.cls_psy` | 15 | 4 | completed | `class_psyker_text_colour.cls_psys` | 依詞彙表與 root localization 將 Toughness Damage Reduction 校正為「韌性減傷」，Weak Spot 校正為「弱點」，Weakspot Hit 統一為「弱點命中」；其餘十一項已符合詞彙表或既有一致譯法。 Translation commit: e88c68e. |
+| ED-COLORS-TW-007 | 2026-07-14 23:11:05 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `class_psyker_text_colour.cls_psys` through `fury_text_colour.Rampage` | 15 | 1 | completed | `momentum_text_colour.Momentum` | 依詞彙表將 Rampage! 校正為「暴走」；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: 4d483e7. |
 
 ## Checks
 
@@ -154,6 +155,12 @@
 - ED-COLORS-TW-006: `git -C <translation-repo> diff --check` passed before commit
 - ED-COLORS-TW-006: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
 - ED-COLORS-TW-006: Lua syntax tool unavailable
+- ED-COLORS-TW-007: all 15 keyword values present and non-empty
+- ED-COLORS-TW-007: glossary checked for Psyker, Precision, Ogryn, Feel No Pain, Desperado, Lucky Bullet, Trample, Dependency, Zealot, Fury, and Rampage
+- ED-COLORS-TW-007: checked local usage for class labels, Feel No Pain, Lucky Bullet, Trample, Fury, and Rampage terms
+- ED-COLORS-TW-007: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-007: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-007: Lua syntax tool unavailable
 
 ## Blocked
 
