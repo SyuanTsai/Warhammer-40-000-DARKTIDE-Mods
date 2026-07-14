@@ -22,8 +22,8 @@
 
 ## 1. Repo 與紀錄
 
-- `<translation-repo>`：Enhanced Descriptions 的獨立 Git repo root。
-- `<workspace-repo>`：保存本翻譯排程與工作文件的 Git repo root。
+- `<translation-repo>`：Enhanced Descriptions 的獨立 Git repo root。執行時必須由本機設定解析，不寫入公開文件。
+- `<workspace-repo>`：保存本翻譯排程與工作文件的 Git repo root。執行時可用目前 repo root 或本機設定解析。
 - Translation repo：`<translation-repo>`
 - Translation work branch：`Codex/Feature/Enhanced_descriptions/Add-zh-tw`
 - Translation commit message：`Translate zh-tw batch <batch-id>`
@@ -39,12 +39,17 @@
 - Translation repo PR 不應包含任何本專案的 `Darktide Translation Workspace/` 文件。
 - Workspace repo commit 不應包含 Translation repo 的 Lua 變更。
 - 不得把 workspace repo 內的任何 Enhanced_descriptions 鏡像、副本或舊目錄當成 `<translation-repo>`。
-- 若 `<translation-repo>` 尚未明確設定，必須停止並要求使用者提供；不得從 workspace repo 內自動推測路徑。
+- 若 `<translation-repo>` 尚未由環境變數或本機私有設定明確解析，必須停止並要求使用者提供；不得從 workspace repo 內自動推測路徑。
 
 ## 1.1 執行位置
 
 所有 Git 命令都必須明確指定 repo，不依賴目前 shell 的工作目錄。
 
+- `<translation-repo>` 解析順序：
+  1. 讀取環境變數 `DARKTIDE_ED_TRANSLATION_REPO`。
+  2. 若環境變數未設定，讀取 gitignored 本機設定檔 `<workspace-repo>/Darktide Translation Workspace/local_repo_paths.ps1` 的 `$DARKTIDE_ED_TRANSLATION_REPO`。
+  3. 若兩者都沒有，停止並要求使用者提供路徑。
+- 本機設定檔不得提交；公開文件只能使用 `<translation-repo>` 代稱。
 - Translation repo 命令一律使用 `git -C <translation-repo> ...`。
 - Workspace repo 命令一律使用 `git -C <workspace-repo> ...`。
 - 編輯 Lua 檔案時，路徑一律以 `<translation-repo>/...` 表示。
