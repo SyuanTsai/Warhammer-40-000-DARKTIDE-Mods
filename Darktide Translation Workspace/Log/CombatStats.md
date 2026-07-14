@@ -82,3 +82,14 @@
 - Blocked: none
 - Term candidates: none
 - Next position: SoloPlay/*localization.lua:first key
+
+## Reprocess Note (2026-07-14)
+
+- AI handler: codex
+- Base branch: main
+- Work branch: Codex/Feature/CombatStats/Add-zh-tw
+- Started at: 2026-07-14 00:05:20 +08:00
+- Status: in_progress
+- Target file: Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua
+- Current key: first key
+- Blocked: none
