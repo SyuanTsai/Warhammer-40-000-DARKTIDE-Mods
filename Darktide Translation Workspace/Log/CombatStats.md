@@ -89,7 +89,21 @@
 - Base branch: main
 - Work branch: Codex/Feature/CombatStats/Add-zh-tw
 - Started at: 2026-07-14 00:05:20 +08:00
-- Status: in_progress
+- Last updated: 2026-07-14 08:36:55 +08:00
+- Status: completed
+- Commit: none
+- Push: none
+- PR: none
 - Target file: Warhammer 40,000 DARKTIDE/mods/CombatStats/scripts/mods/CombatStats/CombatStats_localization.lua
-- Current key: first key
+- Current key: all keys
+- Completed keys: 57 checked
 - Blocked: none
+
+## Checks
+
+- CombatStats_localization.lua: 300 lines, 57 localization entries.
+- zh-tw completeness scan: 57 entries, 0 missing, 0 duplicate zh-tw entries.
+- Empty/commented zh-tw scan: no hits.
+- Targeted old glossary-risk scan: no hits for `屍潮`, `Horde`, `爆擊`, `暴擊`, `Crit`, `統計資料`, `增益覆蓋`, or `快捷鍵：切換統計檢視`.
+- Existing main values include `breed_horde = 群怪`, `crit = 致命一擊`, and `toggle_view_keybind = 切換統計檢視`.
+- No localization diff; no PR needed.
