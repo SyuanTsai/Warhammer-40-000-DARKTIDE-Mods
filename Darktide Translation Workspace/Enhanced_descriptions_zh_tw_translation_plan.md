@@ -1,6 +1,6 @@
 # Enhanced_descriptions zh-tw Translation Plan
 
-本文件是 `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions` 的繁中翻譯執行計畫。總規則仍以 `Darktide Translation Workspace/darktide_zh_tw_translation_schedule.md` 為準；本文件只補充 Enhanced_descriptions 這類大型模組需要的細分批次、檔案順序與續跑格式。
+本文件是獨立 Git repo `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions` 的繁中翻譯執行計畫。總規則仍以本專案的 `Darktide Translation Workspace/darktide_zh_tw_translation_schedule.md` 為準；本文件只補充 Enhanced_descriptions 這類大型模組需要的細分批次、檔案順序、雙 Git 提交規則與續跑格式。
 
 建立日期：2026-07-13
 
@@ -15,19 +15,27 @@
 - 翻譯來源只看 `en`。已有 `zh-tw` 僅作校正對象，不作翻譯來源。
 - 不參考 `zh-cn` 推測翻譯；可以用來發現缺項，但不能作為文字來源。
 - 必須查詢 `Referneces/Translation.md` 的相關詞條；未能確認的專有名詞記到 `Term Candidates.md` 或本計畫的 Blocked queue。
-- 只修改 Enhanced_descriptions 目錄內與繁中翻譯相關的檔案。
+- 實際 Lua 翻譯檔案只修改 `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions` 內與繁中翻譯相關的 `.lua` 檔案。
 - 不修改 `Enhanced_descriptions.lua`、`.mod`、data loader 或非翻譯邏輯，除非使用者另行要求。
+- 每次 Lua 批次完成後，必須在 `Darktide-Mod Enhanced Descriptions` repo 自動建立英文 commit；該 commit 僅允許包含 `.lua` 檔案修改。
+- 本專案 repo 只更新工作文件與排程狀態；每次工作文件變更也需要在本專案 Git 建立英文 commit。
 
-## 1. 工作分支與紀錄
+## 1. Repo 與紀錄
 
-- Work branch：`Codex/Feature/Enhanced_descriptions/Add-zh-tw`
+- Translation repo：`F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions`
+- Translation work branch：`Codex/Feature/Enhanced_descriptions/Add-zh-tw`
+- Translation commit message：`Translate zh-tw batch <batch-id>`
+- Translation commit scope：only changed `.lua` files in `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions`
+- Workspace repo：`F:\GitFile\Persion - Games\Warhammer-40-000-DARKTIDE-Mods`
+- Workspace commit message：`Update Enhanced_descriptions translation workspace`
 - AI handler：`codex` 或 `github-copilot`
 - 工作文件仍保留在 `main`：
   - `Darktide Translation Workspace/Workspace Status.md`
   - `Darktide Translation Workspace/Log/Enhanced_descriptions.md`
   - `Darktide Translation Workspace/Term Candidates.md`
   - 本文件
-- 一般 PR 不應包含 `Darktide Translation Workspace/`，除非 PR 目的就是更新工作文件。
+- Translation repo PR 不應包含任何本專案的 `Darktide Translation Workspace/` 文件。
+- Workspace repo commit 不應包含 Translation repo 的 Lua 變更。
 
 每批紀錄格式：
 
@@ -51,28 +59,28 @@ Safe next position: <next line/key/group>
 
 | Priority | File code | File | Initial size | Batch estimate |
 | --- | --- | --- | ---: | ---: |
-| 1 | ED-ROOT-LOC | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Enhanced_descriptions_localization.lua` | 92 keys | 19 |
-| 2 | ED-COLORS-TW | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Colors_Keywords_Numbers/COLORS_KWords_tw.lua` | 46 groups | 10+ |
-| 3 | ED-MENUS | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/MENUS.lua` | 79 keys | 16 |
-| 4 | ED-CURIOS | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/CURIOS_Blessings_Perks.lua` | 22 keys | 5 |
-| 5 | ED-TALENTS-MOD | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/TALENTS_Modular.lua` | 29 keys | 6 |
-| 6 | ED-NAMES-TB | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/NAMES_Talents_Blessings.lua` | 285 keys | 57 |
-| 7 | ED-WEAPONS | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/WEAPONS_Blessings_Perks.lua` | 191 keys | 39 |
-| 8 | ED-PENANCES | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/PENANCES.lua` | 288 keys | 58 |
-| 9 | ED-PSYKER | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/TALENTS/TALENTS_Psyker.lua` | 79 keys | 16 |
-| 10 | ED-ZEALOT | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/TALENTS/TALENTS_Zealot.lua` | 79 keys | 16 |
-| 11 | ED-VETERAN | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/TALENTS/TALENTS_Veteran.lua` | 75 keys | 15 |
-| 12 | ED-OGRYN | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/TALENTS/TALENTS_Ogryn.lua` | 88 keys | 18 |
-| 13 | ED-ARBITES | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/TALENTS/TALENTS_Arbites.lua` | 83 keys | 17 |
-| 14 | ED-SCUM | `Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/TALENTS/TALENTS_Scum.lua` | 99 keys | 20 |
+| 1 | ED-ROOT-LOC | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Enhanced_descriptions_localization.lua` | 92 keys | 19 |
+| 2 | ED-COLORS-TW | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Colors_Keywords_Numbers\COLORS_KWords_tw.lua` | 46 groups | 10+ |
+| 3 | ED-MENUS | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\MENUS.lua` | 79 keys | 16 |
+| 4 | ED-CURIOS | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\CURIOS_Blessings_Perks.lua` | 22 keys | 5 |
+| 5 | ED-TALENTS-MOD | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS_Modular.lua` | 29 keys | 6 |
+| 6 | ED-NAMES-TB | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\NAMES_Talents_Blessings.lua` | 285 keys | 57 |
+| 7 | ED-WEAPONS | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\WEAPONS_Blessings_Perks.lua` | 191 keys | 39 |
+| 8 | ED-PENANCES | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\PENANCES.lua` | 288 keys | 58 |
+| 9 | ED-PSYKER | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS\TALENTS_Psyker.lua` | 79 keys | 16 |
+| 10 | ED-ZEALOT | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS\TALENTS_Zealot.lua` | 79 keys | 16 |
+| 11 | ED-VETERAN | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS\TALENTS_Veteran.lua` | 75 keys | 15 |
+| 12 | ED-OGRYN | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS\TALENTS_Ogryn.lua` | 88 keys | 18 |
+| 13 | ED-ARBITES | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS\TALENTS_Arbites.lua` | 83 keys | 17 |
+| 14 | ED-SCUM | `F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Main_Modules\TALENTS\TALENTS_Scum.lua` | 99 keys | 20 |
 
 總估計：至少 312 批。`COLORS_KWords_tw.lua` 的實際名詞數高於群組數，實作時以每個詞彙 key-value 為準。
 
 ## 3. 每批流程
 
-1. 確認 `git status --short`，避免覆蓋他人變更。
+1. 確認兩個 repo 的 `git status --short`，避免覆蓋他人變更。
 2. 讀取本文件、總排程、Workspace Status、對應 log 的相關段落。
-3. 鎖定單一檔案與下一個 5 條目範圍。
+3. 在本專案工作文件鎖定單一檔案與下一個 5 條目範圍。
 4. 對 5 條目建立輕量清單：
    - key 或詞彙名
    - English source
@@ -85,7 +93,11 @@ Safe next position: <next line/key/group>
    - 已被註解的 `zh-tw`：確認英文來源與結構後，必要時啟用並校正。
    - 無語意、純數字、純 placeholder：可跳過並記錄原因。
 6. 只在同一 batch 內維持一致性；跨 batch 的一致性由詞彙表與後續品質 pass 補強。
-7. 完成 5 條目後立即執行局部檢查並更新 safe next position。
+7. 完成 5 條目後立即執行局部檢查。
+8. 在 Translation repo 檢查 diff scope，只允許 `.lua` 檔案；若包含非 Lua 變更，停止並修正。
+9. 在 Translation repo 自動 commit，commit message 使用英文：`Translate zh-tw batch <batch-id>`。
+10. 回到 Workspace repo 更新 Workspace Status、log、Term Candidates 或本文件，然後自動 commit，commit message 使用英文：`Update Enhanced_descriptions translation workspace`。
+11. 更新 safe next position，確保下一輪可從第 6 個未處理條目繼續。
 
 ## 4. Enhanced_descriptions 專用翻譯規則
 
@@ -201,6 +213,8 @@ Enhanced_descriptions 視為完成時需滿足：
 - `Term Candidates.md` 已收錄所有未正式定案的新專有名詞。
 - 無 duplicate `zh-tw`、空 `zh-tw`、placeholder mismatch。
 - PR diff 只包含 Enhanced_descriptions 的繁中翻譯變更。
+- Translation repo commit 只包含 `.lua` 檔案修改，且 commit message 為英文。
+- Workspace repo 已提交最新工作文件更新，且 commit message 為英文。
 - `Workspace Status.md` 與 `Log/Enhanced_descriptions.md` 記錄最終完成狀態。
 
 ## 9. 下一步
@@ -208,7 +222,7 @@ Enhanced_descriptions 視為完成時需滿足：
 下一輪可從 `ED-ROOT-LOC-001` 開始：
 
 ```text
-File: Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Enhanced_descriptions_localization.lua
+File: F:\GitFile\Persion - Games\Darktide-Mod Enhanced Descriptions\Enhanced_descriptions_localization.lua
 Start position: first localization key under localizations table
 Scope: 5 keys
 Safe next position target: sixth localization key
