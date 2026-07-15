@@ -326,6 +326,16 @@
 - ED-TALENTS-MOD-TW-001: `git -C <translation-repo> diff --check` passed before commit
 - ED-TALENTS-MOD-TW-001: diff scope limited to `Main_Modules/TALENTS_Modular.lua`
 - ED-TALENTS-MOD-TW-001: Lua syntax tool unavailable
+- ED-TALENTS-MOD-TW-002: all final 14 `loc_*` tables reviewed
+- ED-TALENTS-MOD-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-TALENTS-MOD-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-TALENTS-MOD-TW-002: placeholders preserved: `{melee_damage:%s}`, `{movement_speed:%s}`, `{warp_charge:%s}`, `{ranged_damage:%s}`, `{reload_speed:%s}`, `{rending:%s}`, `{stamina:%s}`, `{duration:%s}`, `{toughness:%s}`, `{power:%s}`
+- ED-TALENTS-MOD-TW-002: `CKWord`, `CNumb("-", "n_minus_rgb")`, `CNote("Rend_note")`, and Combat Shotgun note concatenation preserved
+- ED-TALENTS-MOD-TW-002: glossary/local usage checked for Melee Damage, Movement Speed, Peril, Ranged Damage, Reload Speed, Rending, Stamina, Toughness, Toughness Damage Reduction, and Chem Toxin
+- ED-TALENTS-MOD-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-TALENTS-MOD-TW-002: diff scope limited to `Main_Modules/TALENTS_Modular.lua`
+- ED-TALENTS-MOD-TW-002: Lua syntax tool unavailable
+- ED-TALENTS-MOD-TW-002: `Main_Modules/TALENTS_Modular.lua` completed through current English source sequence
 
 ## Blocked
 
