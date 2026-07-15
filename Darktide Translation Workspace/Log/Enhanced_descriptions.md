@@ -812,6 +812,17 @@
 - ED-PENANCES-TW-013: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-013: Lua syntax tool unavailable
 - ED-PENANCES-TW-013: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_group_class_ogryn_2_description`
+- ED-PENANCES-TW-014: 15 active localization tables reviewed
+- ED-PENANCES-TW-014: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-014: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-014: placeholders preserved: `{target}`, `{amount}`, `{num_enemies}`, `7`
+- ED-PENANCES-TW-014: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-014: glossary/local usage checked for Ogryn, Coherency, Bull Rush, Indomitable, Big Boxes of Hurt, Bombs Away!, Loyal Protector, Big Friendly Rock, Frag Bomb, Heavy Hitter, Point-Blank Barrage, Feel No Pain, Keystone, Blitz, Ability, Malice, Heresy, Elite, Specialist, and Ranged enemies
+- ED-PENANCES-TW-014: added active zh-tw for Ogryn class penance group, Coherency full-mission objective, Bull Rush/Indomitable objective, Big Boxes/Bombs Away objective, Loyal Protector taunt, Big Friendly Rock, Frag Bomb, Heavy Hitter, Point-Blank Barrage, and Feel No Pain descriptions
+- ED-PENANCES-TW-014: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-014: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-014: Lua syntax tool unavailable
+- ED-PENANCES-TW-014: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_ogryn_leadbelcher_free_shot_description`
 
 ## Blocked
 
