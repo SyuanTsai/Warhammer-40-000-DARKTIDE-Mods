@@ -823,6 +823,17 @@
 - ED-PENANCES-TW-014: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-014: Lua syntax tool unavailable
 - ED-PENANCES-TW-014: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_ogryn_leadbelcher_free_shot_description`
+- ED-PENANCES-TW-015: 15 active localization tables reviewed
+- ED-PENANCES-TW-015: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-015: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-015: placeholders preserved: `{target}`, `{time_window}`
+- ED-PENANCES-TW-015: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-015: glossary/local usage checked for Burst Limiter Override, Bonebreaker's Aura, Coward Culling, Stay Close!, Toughness, Coherency, Bull Rush, Indomitable, Plague Ogryn, Corruptor, Big Boxes of Hurt, Bombs Away!, Bulwark, Crusher, Reaper, Pack Master, Arbites, and Arbitrator
+- ED-PENANCES-TW-015: added active zh-tw for Ogryn leadbelcher, aura, toughness, charge, Corruptor, Bull Rush/Indomitable, and Heavyweight Champion descriptions; added Arbites/Arbitrator class title as `法務官` per updated glossary
+- ED-PENANCES-TW-015: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-015: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-015: Lua syntax tool unavailable
+- ED-PENANCES-TW-015: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_rank_adamant_2_x_description`
 
 ## Blocked
 
