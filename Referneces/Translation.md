@@ -499,46 +499,6 @@
 
 ## 職業與天賦
 
-### 職業核心詞
-
-#### 靈能者 (PSYKER)
-
-- Precision - 精準
-
-#### 歐格林 (OGRYN)
-
-- Feel No Pain - 麻木
-- Lucky Bullet - 幸運子彈
-- Trample - 踐踏
-
-#### 狂信徒 (ZEALOT)
-
-- Momentum - 勢能
-- Stealth - 隱身
-- Fury - 狂怒
-
-#### 老兵 (VETERAN)
-
-- Focus Target - 鎖定目標
-- Focus - 專注
-- Melee Specialist - 近戰專家
-- Ranged Specialist - 遠程專家
-
-### 天賦相關 (小型節點)
-
-- Peril Resistance - 反噬抗性
-- Melee Damage Boost - 近戰增幅
-- Movement Speed Boost - 移動速度增幅
-- Reload Boost - 換彈速度增幅
-- Rending Boost - 撕裂增幅
-- Stamina Boost - 耐力增幅
-- Stamina Regeneration Boost - 耐力恢復增幅
-- Suppression Boost - 壓制增幅
-- Toughness Boost - 韌性增幅
-- Toughness Damage Reduction - 韌性減傷
-
-
----
 ### Psyker - 靈能者
 
 #### 靈能者專有名詞
@@ -651,8 +611,8 @@
 
 - Big Box of Hurt - 巨量傷害盒
 - Big Friendly Rock - 投石問路
-- Bombs Away! - 投彈完畢!
 - Frag Bomb - 破片炸彈
+- Bombs Away! - 投彈完畢!
 
 ##### 光環
 
@@ -665,13 +625,13 @@
 
 - Bull Rush - 蠻牛衝撞
 - Indomitable - 不屈不撓
-- Stomping Boots - 跺殺之靴
 - Trample - 踐踏
+- Stomping Boots - 跺殺之靴
 - Pulverise - 粉碎
 - Loyal Protector - 忠誠守護者
-- Valuable Destruction - 重要干擾
-- Go Again - 再來
 - Big Lungs - 強力肺活
+- Valuable Distraction - 重要干擾
+- Go again! - 再來
 - Point-Blank Barrage - 貼身火力
 - Bullet Bravado - 壯膽子彈
 - Hail of Fire - 槍林彈雨
@@ -689,40 +649,40 @@
 - Toughest! - 最堅韌!
 - Burst Limiter Override - 爆限超載
 - Maximum Firepower - 最大火力
-- Good Shootin - 好槍法
 - More Burst Limiter Overrides! - 爆限大超載!
+- Good Shootin' - 好槍法
 
 ##### 一般天賦
 
-- Furious - 怒不可遏
-- Reloaded and Ready - 換彈完畢
-- The Best Defence - 最好的防禦
+- Lynchpin - 關鍵人物
 - Heavyweight - 重量級
 - Steady Grip - 穩定握持
 - Smash 'Em! - 碾碎它們!
-- Lynchpin - 關鍵人物
 - Slam - 猛擊
+- The Best Defence - 最好的防禦
+- Furious - 怒不可遏
+- Towering Presence - 卓越氣場
 - Soften Them Up - 削弱敵人
+- Payback Time - 報復時間
+- Ammo Stash - 彈藥儲存包
+- Big Boom - 大爆炸
 - Crunch! - 嘎嘎!
 - Batter - 重毆
-- Pacemaker - 領跑者
-- Ammo Stash - 彈藥儲存包
-- Hard Knocks - 沉重打擊
 - Too Stubborn to Die - 堅韌不屈
-- Delight in Destruction - 毀滅之樂
 - Attention Seeker - 渴求關注
-- Get Stuck In - 全神貫注
-- Towering Presence - 卓越氣場
+- Pacemaker - 領跑者
 - Unstoppable Momentum - 勢不可擋
-- No Stopping Me! - 誰敢攔我!
-- Dominate - 主宰
-- Payback Time - 報復時間
-- Big Boom - 大爆炸
-- Massacre - 屠殺
-- Implacable - 利刃出鞘
-- No Pushover - 睚眥必報
-- Won't Give In - 絕不屈服
+- Delight in Destruction - 毀滅之樂
 - Mobile Emplacement - 機動部屬
+- Implacable - 利刃出鞘
+- Dominate - 主宰
+- No Pushover - 睚眥必報
+- Get Stuck In - 全神貫注
+- Reloaded and Ready - 換彈完畢
+- Massacre - 屠殺
+- No Stopping Me! - 誰敢攔我!
+- Hard Knocks - 沉重打擊
+- Won't Give In - 絕不屈服
 
 ### Zealot - 狂信徒
 
@@ -737,7 +697,7 @@
 - Stun Grenade - 眩暈手雷
 - Stunstorm Grenade - 眩暈風暴手雷
 - Immolation Grenade - 獻祭手雷
-- Blades of Faith  - 信仰之刃
+- Blades of Faith - 信仰之刃
 
 ##### 光環
 
@@ -751,67 +711,67 @@
 - Chastise the Wicked - 懲奸除惡
 - Fury of the Faithful - 有信者之怒
 - Redoubled Zeal - 倍增狂熱
-- Invocation of Death - 死亡禱文
 - Chorus of Spiritual Fortitude - 不屈靈魂合唱
 - Holy Cause - 神聖事業
 - Banishing Light - 放逐之光
 - Ecclesiarch's Call - 教宗之喚
-- Martyr's Purpose - 殉道者之願
 - Shroudfield - 隱秘領域
 - Master-Crafted Shroudfield - 大師級隱秘領域
-- Perfectionist - 完美主義者
 - Invigorating Revelation - 振奮啟示
-- Pious Cut-Throat - 虔誠刺客
+- Perfectionist - 完美主義者
 
 ##### 鑰石
 
 - Blazing Piety - 熾熱虔誠
-- Stalwart - 死忠
 - Fury Rising - 怒火升騰
 - Infectious Zeal - 迅疾狂熱
 - Righteous Warrior - 正義勇士
+- Stalwart - 死忠
+- Invocation of Death - 死亡禱文
 - Martyrdom - 殉道
 - I Shall Not Fall - 不滅意志
 - Maniac - 狂燥之心
+- Martyr's Purpose - 殉道者之願
 - Inexorable Judgement - 命定審判
 - Retributor's Stance - 懲戒者姿態
 - Inebriate's Poise - 飄忽身形
+- Pious Cut-Throat - 虔誠刺客
 
 ##### 一般天賦
 
+- Anoint in Blood - 鮮血受膏
 - Disdain - 蔑視
 - Backstabber - 背刺者
-- Anoint in Blood - 鮮血受膏
-- Scourge - 天災
+- The Voice of Terra - 泰拉之音
 - Enemies Within, Enemies Without - 內憂外患
 - Fortitude in Fellowship - 合抱成林
-- Purge the Unclean - 淨化不潔
 - Blood Redemption - 鮮血救贖
-- Bleed for the Emperor - 為了帝皇
-- Vicious Offering - 惡毒贈禮
-- The Voice of Terra - 泰拉之音
-- Restoring Faith  - 恢復信仰
 - Second Wind - 精力復甦
-- Enduring Faith - 堅韌信仰
 - The Emperor's Bullet - 帝皇之彈
-- Dance of Death - 死亡之舞
+- Vicious Offering - 惡毒贈禮
+- Purge the Unclean - 淨化不潔
 - Duellist - 決鬥者
 - Until Death - 死戰到底
-- Shield of Contempt - 輕蔑之盾
-- Thy Wrath be Swift - 勃然大怒
-- Good Balance - 四平八穩
-- Desperation - 背水一戰
+- Sustained Assault - 持續突擊
 - Holy Revenant - 吊命聖徒
+- Thy Wrath be Swift - 勃然大怒
+- Desperation - 背水一戰
 - Sainted Gunslinger - 封聖神射手
 - Hammer of Faith - 信仰之錘
-- Grievous Wounds - 重傷
 - Ambuscade - 伏擊
 - Punishment - 懲罰
+- Shield of Contempt - 輕蔑之盾
 - Faithful Frenzy - 信仰狂亂
-- Sustained Assault - 持續突擊
+- Good Balance - 四平八穩
 - The Master's Retribution - 大師的反擊
+- Dance of Death - 死亡之舞
+- Grievous Wounds - 重傷
+- Scourge - 天災
+- Enduring Faith - 堅韌信仰
+- Bleed for the Emperor - 為了帝皇
 - Faith's Fortitude - 信仰之勇
 - Swift Certainty - 堅定迅捷
+- Restoring Faith - 恢復信仰
 
 ### Veteran - 老兵
 
@@ -822,18 +782,21 @@
 - Inspiring Presence - 鼓舞人心
 
 ##### 閃擊
+
 - Frag Grenade - 破片手雷
 - Shredder Frag Grenade - 粉碎者破片手雷
 - Krak Grenade - 穿甲手雷
 - Smoke Grenade - 煙霧手雷
 
 ##### 光環
+
 - Scavenger - 拾荒者
 - Survivalist - 生存專家
 - Fire Team - 火力小分隊
 - Close and Kill - 抵近殺敵
 
 ##### 主動技能
+
 - Volley Fire - 火力齊射
 - Executioner's Stance - 處決者姿態
 - Enhanced Target Priority - 目標引導增強
@@ -845,10 +808,10 @@
 - Only In Death Does Duty End - 只有死亡，職責才會終結
 - For the Emperor! - 為了皇帝！
 - Infiltrate - 滲透
-- Low Profile - 低調
 - Overwatch - 掩護射擊
 - Hunter's Resolve - 獵手決意
 - Surprise Attack - 突襲
+- Low Profile - 低調
 - Close Quarters Killzone - 肉搏戰
 
 ##### 鑰石
@@ -871,48 +834,48 @@
 
 ##### 一般天賦
 
-- Longshot - 遠射
-- Close Order Drill - 密集隊形訓練
-- One Motion - 行雲流水
 - Exhilarating Takedown - 振奮擊倒
-- Volley Adept - 齊射能手
 - Charismatic - 超凡魅力
 - Confirmed Kill - 擊殺紀錄
-- Tactical Reload - 戰術裝填
 - Out for Blood - 嗜血
 - Get Back in the Fight! - 重投戰鬥!
-- Catch a Breath - 喘息片刻
-- Grenade Tinkerer - 手雷專家
+- Volley Adept - 齊射能手
+- Longshot - 遠射
 - Covering Fire - 火力掩護
-- Serrated Blade - 鋸齒刀刃
-- Agile Engagement - 靈活接敵
-- Kill Zone - 殺戮地帶
-- Opening Salvo - 首輪齊射
+- One Motion - 行雲流水
+- Tactical Reload - 戰術裝填
+- Close Order Drill - 密集隊形訓練
+- Superiority Complex - 優越情節
+- Iron Will - 鋼鐵意志
+- Trench Fighter Drill - 戰壕兵訓練
 - Field Improvisation - 臨場發揮
 - Twinned Blast - 雙響炮
-- Demolition Stockpile - 炸藥儲備
+- Opening Salvo - 首輪齊射
+- Serrated Blade - 鋸齒刀刃
+- Catch a Breath - 喘息片刻
 - Grenadier - 擲彈兵/轟炸者
-- Leave No One Behind - 不拋棄不放棄
+- Demolition Stockpile - 炸藥儲備
+- Grenade Tinkerer - 手雷專家
 - Precision Strikes - 堅定不移
 - Deadshot - 死亡射手
 - Born Leader - 天生領袖
-- Keep Their Heads Down! - 讓他們全趴下!
+- Leave No One Behind - 不拋棄不放棄
+- Demolition Team - 爆破小隊
 - Reciprocity - 互惠互利
 - Duck and Dive - 靈活應對
 - Fully Loaded - 全副武裝
 - Tactical Awareness - 戰術意識
 - Desperado - 亡命之徒
-- Shock Trooper - 突擊隊
-- Superiority Complex - 優越情節
-- Iron Will - 鋼鐵意志
-- Demolition Team - 爆破小隊
-- Exploit Weakness - 趁火打劫
-- Onslaught - 猛攻
-- Trench Fighter Drill - 戰壕兵訓練
-- Skirmisher - 遊擊者
+- Keep Their Heads Down! - 讓他們全趴下!
 - Competitive Urge - 求勝心
 - Rending Strikes - 裂擊
+- Agile Engagement - 靈活接敵
+- Skirmisher - 遊擊者
+- Shock Trooper - 突擊隊
+- Kill Zone - 殺戮地帶
 - Bring it Down! - 幹掉它!
+- Onslaught - 猛攻
+- Exploit Weakness - 趁火打劫
 
 ### Arbites - 法務官
 
@@ -998,3 +961,41 @@
 - Chordclaw Bleed - 弦爪流血
 
 ##### 戰錘世界觀術語
+
+### 天賦相關 (小型節點)
+
+- Peril Resistance - 反噬抗性
+- Melee Damage Boost - 近戰增幅
+- Movement Speed Boost - 移動速度增幅
+- Reload Boost - 換彈速度增幅
+- Rending Boost - 撕裂增幅
+- Stamina Boost - 耐力增幅
+- Stamina Regeneration Boost - 耐力恢復增幅
+- Suppression Boost - 壓制增幅
+- Toughness Boost - 韌性增幅
+- Toughness Damage Reduction - 韌性減傷
+
+### 職業核心詞
+
+#### 靈能者 (PSYKER)
+
+- Precision - 精準
+
+#### 歐格林 (OGRYN)
+
+- Feel No Pain - 麻木
+- Lucky Bullet - 幸運子彈
+- Trample - 踐踏
+
+#### 狂信徒 (ZEALOT)
+
+- Momentum - 勢能
+- Stealth - 隱身
+- Fury - 狂怒
+
+#### 老兵 (VETERAN)
+
+- Focus Target - 鎖定目標
+- Focus - 專注
+- Melee Specialist - 近戰專家
+- Ranged Specialist - 遠程專家
