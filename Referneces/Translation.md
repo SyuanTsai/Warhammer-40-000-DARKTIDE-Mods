@@ -513,11 +513,12 @@
 #### 靈能者天賦
 
 ##### 閃擊
+
 - Brain Burst - 顱腦爆裂
 - Brain Rupture - 顱腦崩裂
 - Kinetic Resonance - 動能共鳴
+- Kinetic Flayer - 動能撕裂者
 - Smite - 懲戒
-- Lightning Storm - 閃電風暴
 - Charged Strike - 蓄力打擊
 - Enfeeble - 衰弱詛咒
 - Assail - 靈能攻擊
@@ -544,7 +545,6 @@
 - Telekine Dome - 念力穹頂
 - Sanctuary - 庇護所
 - Scrier's Gaze - 占卜者的注視
-- Endurance - 堅韌
 - Precognition - 預知未來
 - Warp Speed - 亞空間加速
 - Reality Anchor - 現實錨點
@@ -555,7 +555,6 @@
 - Warp Siphon - 亞空間虹吸
 - Inner Tranquility - 平心靜氣
 - Essence Harvest - 吸精奪萃
-- Empyrean Empowerment - 至天高之力
 - Warp Battery - 亞空間電池
 - In Fire Reborn - 涅槃
 - Psychic Vampire - 靈能吸血鬼
@@ -579,25 +578,31 @@
 - Perilous Combustion - 險惡燃燒
 - Battle Meditation - 戰鬥冥想
 - Perfect Timing - 完美時機
+- Channeled Force - 靈能引導
 - Mind in Motion - 思維活躍
+- Souldrinker - 汲魂者
 - Malefic Momentum - 惡意攻勢
-- Perilous Assault - 反噬突襲
 - Lightning Speed - 迅雷之勢
 - Empyric Shock - 亞空間震波
+- Wildfire - 野火
 - Warp Splitting - 亞空間分裂
-- Unlucky for Some - 倒楣蛋
 - By Crack of Bone - 骨折後遺症
+- Immaterial Focus - 無形專注
 - Psykinetic's Aura - 靈能學者光環
 - Empathic Evasion - 反射閃避
 - One with the Warp - 亞空間強化
+- Just a Dream - 如夢似幻
 - Anticipation - 看破
 - Solidity - 穩固
 - Puppet Master - 傀儡師
+- Vulnerable Minds -
 - Warp Rider - 亞空間騎士
+- True Aim - 精確瞄準
 - Kinetic Deflection - 動能偏斜
 - Empyric Resolve - 亞空間意志
 - Penetration of the Soul - 靈魂穿透
 - Crystalline Will - 結晶意志
+- Warp Ghost - 亞空間幽魂
 - Tranquility Through Slaughter - 殺無赦，心祥和
 - Surety of Arms - 武器在手，信心我有。
 
