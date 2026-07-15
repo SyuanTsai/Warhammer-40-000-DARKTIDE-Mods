@@ -26,6 +26,18 @@
 - explosive - 爆炸桶(用於描述遊戲中的爆裂物)
 - Fire Barrel - 燃燒桶(用於描述遊戲中的燃燒爆裂物)
 
+##### MOD Enhanced descriptions 專用詞表
+- Previous Missions - 歷史任務
+- Loadout - 裝備
+- Favourite - 最愛
+- Perk - 附加屬性(遊戲原生用詞)
+- Primary Action - 主要攻擊(當使用在武器描述時Action翻譯成攻擊)
+- Secondary Action - 次要攻擊(當使用在武器描述時Action翻譯成攻擊)
+- Heat Management - 熱能管理
+- Cloud Radius - 火焰範圍(Cloud意指火雲)
+
+
+
 ### 通用名詞
 
 - Countdown - 冷卻
@@ -487,47 +499,7 @@
 
 ## 職業與天賦
 
-### 職業核心詞
-
-#### 靈能者 (PSYKER)
-
-- Precision - 精準
-
-#### 歐格林 (OGRYN)
-
-- Feel No Pain - 麻木
-- Lucky Bullet - 幸運子彈
-- Trample - 踐踏
-
-#### 狂信徒 (ZEALOT)
-
-- Momentum - 勢能
-- Stealth - 隱身
-- Fury - 狂怒
-
-#### 老兵 (VETERAN)
-
-- Focus Target - 鎖定目標
-- Focus - 專注
-- Melee Specialist - 近戰專家
-- Ranged Specialist - 遠程專家
-
-### 天賦相關 (小型節點)
-
-- Peril Resistance - 反噬抗性
-- Melee Damage Boost - 近戰增幅
-- Movement Speed Boost - 移動速度增幅
-- Reload Boost - 換彈速度增幅
-- Rending Boost - 撕裂增幅
-- Stamina Boost - 耐力增幅
-- Stamina Regeneration Boost - 耐力恢復增幅
-- Suppression Boost - 壓制增幅
-- Toughness Boost - 韌性增幅
-- Toughness Damage Reduction - 韌性減傷
-
 ### Psyker - 靈能者
-
----
 
 #### 靈能者專有名詞
 
@@ -536,53 +508,56 @@
 - Warp attack - 亞空間攻擊
 - Soulblaze - 靈魂之火
 - Warp Charge - 亞空間充能
+- Warp Resistance - 反噬抗性
 
 #### 靈能者天賦
 
 ##### 閃擊
+
 - Brain Burst - 顱腦爆裂
 - Brain Rupture - 顱腦崩裂
 - Kinetic Resonance - 動能共鳴
+- Kinetic Flayer - 動能撕裂者
 - Smite - 懲戒
-- Lightning Storm - 閃電風暴
-- Enfeeble - 衰弱詛咒
 - Charged Strike - 蓄力打擊
+- Enfeeble - 衰弱詛咒
 - Assail - 靈能攻擊
 - Ethereal Shards - 乙太碎片
 - Quick Shards - 迅捷碎片
 
 ##### 光環
-- Quickening - 加速
+
+- The Quickening - 加速
 - Kinetic Presence - 動能釋放
 - Seer's Presence - 先知之眼
 - Prescience - 預兆
 
 ##### 主動技能
+
 - Psykinetic's Wrath - 靈能學者之怒
 - Venting Shriek - 靈能尖嘯
-- Becalming Eruption - 平靜进發
 - Warp Rupture - 亞空間爆發
-- Warp Creeping Flames - 蔓延火焰
+- Becalming Eruption - 平靜进發
+- Creeping Flames - 蔓延火焰
 - Telekine Shield - 念力護盾
 - Bolstered Shield - 強化護盾
 - Enervating Threshold - 衰弱界線
 - Telekine Dome - 念力穹頂
 - Sanctuary - 庇護所
 - Scrier's Gaze - 占卜者的注視
-- Endurance - 堅韌
 - Precognition - 預知未來
 - Warp Speed - 亞空間加速
 - Reality Anchor - 現實錨點
 - Warp Unbound - 亞空間突破
 
 ##### 鑰石
+
 - Warp Siphon - 亞空間虹吸
 - Inner Tranquility - 平心靜氣
 - Essence Harvest - 吸精奪萃
-- Empyrean Empowerment - 至天高之力
+- Warp Battery - 亞空間電池
 - In Fire Reborn - 涅槃
 - Psychic Vampire - 靈能吸血鬼
-- Warp Battery - 亞空間電池
 - Empowered Psionics - 靈能強化
 - Bio-Lodestone - 生物磁石
 - Psychic Leeching - 吸血閃電
@@ -595,31 +570,41 @@
 - Cruel Fortune - 殘忍命運
 
 ##### 一般天賦
+
 - Soulstealer - 靈魂竊賊
 - Mettle - 堅毅
 - Quietude - 心如止水
 - Warp Expenditure - 亞空間耗費
-- Perilous Combustion 險惡燃燒
-- Perfect Timing - 完美時機
+- Perilous Combustion - 險惡燃燒
 - Battle Meditation - 戰鬥冥想
-- Psykinetic's Aura - 靈能學者光環
+- Perfect Timing - 完美時機
+- Channeled Force - 靈能引導
+- Mind in Motion - 思維活躍
+- Souldrinker - 汲魂者
 - Malefic Momentum - 惡意攻勢
-- Perilous Assault - 反噬突襲
 - Lightning Speed - 迅雷之勢
 - Empyric Shock - 亞空間震波
-- By Crack of Bone - 骨折後遺症
+- Wildfire - 野火
 - Warp Splitting - 亞空間分裂
-- Unlucky for Some - 倒楣蛋
-- One with the Warp - 亞空間強化
+- By Crack of Bone - 骨折後遺症
+- Immaterial Focus - 無形專注
+- Psykinetic's Aura - 靈能學者光環
 - Empathic Evasion - 反射閃避
+- One with the Warp - 亞空間強化
+- Just a Dream - 如夢似幻
 - Anticipation - 看破
+- Solidity - 穩固
 - Puppet Master - 傀儡師
-- Crystalline Will - 結晶意志
+- Vulnerable Minds -
 - Warp Rider - 亞空間騎士
+- True Aim - 精確瞄準
 - Kinetic Deflection - 動能偏斜
-- Tranquility Through Slaughter - 殺無赦，心祥和
 - Empyric Resolve - 亞空間意志
 - Penetration of the Soul - 靈魂穿透
+- Crystalline Will - 結晶意志
+- Warp Ghost - 亞空間幽魂
+- Tranquility Through Slaughter - 殺無赦，心祥和
+- Surety of Arms - 武器在手，信心我有。
 
 ### Ogryn - 歐格林
 
@@ -631,8 +616,10 @@
 
 - Big Box of Hurt - 巨量傷害盒
 - Big Friendly Rock - 投石問路
-- Bombs Away! - 投彈完畢!
+- That One Didn't Count - 那下不算!
 - Frag Bomb - 破片炸彈
+- Bombs Away! - 投彈完畢!
+- Bigger Box of Hurt - 超巨量傷害箱
 
 ##### 光環
 
@@ -645,13 +632,13 @@
 
 - Bull Rush - 蠻牛衝撞
 - Indomitable - 不屈不撓
-- Stomping Boots - 跺殺之靴
 - Trample - 踐踏
+- Stomping Boots - 跺殺之靴
 - Pulverise - 粉碎
 - Loyal Protector - 忠誠守護者
-- Valuable Destruction - 重要干擾
-- Go Again - 再來
-- Big Lungs - 強力肺活
+- Valuable Distraction - 重要干擾
+- No Pain! - 一點都不痛!
+- Go again! - 再來
 - Point-Blank Barrage - 貼身火力
 - Bullet Bravado - 壯膽子彈
 - Hail of Fire - 槍林彈雨
@@ -660,49 +647,73 @@
 ##### 鑰石
 
 - Heavy Hitter - 重拳出擊
+- Don't Feel a Thing - 毫髮無傷
 - Just Getting Started - 熱身完畢
 - Unstoppable - 越戰越勇
-- Brutish Momentum - 兇蠻打擊
+- Great Cleaver - 強力劈砍
+- Impactful - 震撼衝擊
 - Feel No Pain - 麻木
 - Pained Outburst - 痛楚爆發
 - Strongest! - 最強壯!
 - Toughest! - 最堅韌!
 - Burst Limiter Override - 爆限超載
+- Back Off! - 退後!
 - Maximum Firepower - 最大火力
-- Good Shootin - 好槍法
-- More Burst Limiter Overrides! - 爆限大超載!
+- Good Shootin' - 好槍法
+- Heat of Battle - 激鬥戰火
+- Bulletstorm - 子彈風暴
 
 ##### 一般天賦
 
-- Furious - 怒不可遏
-- Reloaded and Ready - 換彈完畢
-- The Best Defence - 最好的防禦
+- Lynchpin - 關鍵人物
 - Heavyweight - 重量級
 - Steady Grip - 穩定握持
 - Smash 'Em! - 碾碎它們!
-- Lynchpin - 關鍵人物
-- Slam - 猛擊
+- The Best Defence - 最好的防禦
+- Furious - 怒不可遏
+- Towering Presence - 卓越氣場
 - Soften Them Up - 削弱敵人
+- Payback Time - 報復時間
+- Pumped Up - 士氣高昂
+- Focused Fighter - 專注鬥士
+- Strongman - 大肌肌
+- Can't Hit Me...Again - 休想再打中我......
+- Keep Shooting - 射不停
+- Beat Them Back - 擊潰他們
+- Strike True - 精準打擊
+- Slam - 猛擊
+- Ammo Stash - 彈藥儲存包
+- Big Boom - 大爆炸
 - Crunch! - 嘎嘎!
 - Batter - 重毆
-- Pacemaker - 領跑者
-- Ammo Stash - 彈藥儲存包
-- Hard Knocks - 沉重打擊
+- Brutish Strength - 蠻橫之力
+- For the Lil'Uns - 為了小子們
+- Concentrate - 專注
+- Fire Away - 火力全開
+- Simple Minded - 頭腦簡單
+- Unbreakable - 堅不可摧
 - Too Stubborn to Die - 堅韌不屈
-- Delight in Destruction - 毀滅之樂
+- Frenzied Blows - 狂暴猛擊
 - Attention Seeker - 渴求關注
-- Get Stuck In - 全神貫注
-- Towering Presence - 卓越氣場
+- Bruiser - 格鬥兵
+- Pacemaker - 領跑者
 - Unstoppable Momentum - 勢不可擋
-- No Stopping Me! - 誰敢攔我!
-- Dominate - 主宰
-- Payback Time - 報復時間
-- Big Boom - 大爆炸
-- Massacre - 屠殺
-- Implacable - 利刃出鞘
-- No Pushover - 睚眥必報
-- Won't Give In - 絕不屈服
+- Delight in Destruction - 毀滅之樂
+- Dedicated Practice - 熟能生巧
 - Mobile Emplacement - 機動部屬
+- Implacable - 利刃出鞘
+- Dominate - 主宰
+- No Pushover - 睚眥必報
+- Get Stuck In - 全神貫注
+- Reloaded and Ready - 換彈完畢
+- Massacre - 屠殺
+- No Stopping Me! - 誰敢攔我!
+- Bash and Blast - 猛砸爆裂
+- Hard Knocks - 沉重打擊
+- No Hurting Friends! - 相親相愛好夥伴!
+- Won't Give In - 絕不屈服
+- Spray and Slay - 射盡殺戮
+- Lucky Streak - 好運連連
 
 ### Zealot - 狂信徒
 
@@ -717,81 +728,94 @@
 - Stun Grenade - 眩暈手雷
 - Stunstorm Grenade - 眩暈風暴手雷
 - Immolation Grenade - 獻祭手雷
-- Blades of Faith  - 信仰之刃
+- Blades of Faith - 信仰之刃
 
 ##### 光環
 
 - The Emperors's Will - 帝皇之諭
 - Benediction - 恩賜
 - Beacon of Purity - 純潔信標
-- Loner - 孤狼
+- Zealous - 熱忱
 
 ##### 主動技能
 
 - Chastise the Wicked - 懲奸除惡
 - Fury of the Faithful - 有信者之怒
+- Unrelenting Fury - 無盡狂怒
 - Redoubled Zeal - 倍增狂熱
-- Invocation of Death - 死亡禱文
 - Chorus of Spiritual Fortitude - 不屈靈魂合唱
 - Holy Cause - 神聖事業
-- Banishing Light - 放逐之光
 - Ecclesiarch's Call - 教宗之喚
-- Martyr's Purpose - 殉道者之願
 - Shroudfield - 隱秘領域
 - Master-Crafted Shroudfield - 大師級隱秘領域
-- Perfectionist - 完美主義者
 - Invigorating Revelation - 振奮啟示
-- Pious Cut-Throat - 虔誠刺客
+- Perfectionist - 完美主義者
 
 ##### 鑰石
 
 - Blazing Piety - 熾熱虔誠
-- Stalwart - 死忠
-- Fury Rising - 怒火升騰
 - Infectious Zeal - 迅疾狂熱
 - Righteous Warrior - 正義勇士
+- Stalwart - 死忠
+- Invocation of Death - 死亡禱文
 - Martyrdom - 殉道
 - I Shall Not Fall - 不滅意志
+- On the Brink - 危境之際
 - Maniac - 狂燥之心
+- Restorative Verses - 治癒詩頌
+- Martyr's Purpose - 殉道者之願
 - Inexorable Judgement - 命定審判
 - Retributor's Stance - 懲戒者姿態
 - Inebriate's Poise - 飄忽身形
+- Eternal - 永恆
+- Pious Cut-Throat - 虔誠刺客
 
 ##### 一般天賦
 
+- Anoint in Blood - 鮮血受膏
 - Disdain - 蔑視
 - Backstabber - 背刺者
-- Anoint in Blood - 鮮血受膏
-- Scourge - 天災
-- Enemies Within, Enemies Without - 內憂外患
-- Fortitude in Fellowship - 合抱成林
-- Purge the Unclean - 淨化不潔
-- Blood Redemption - 鮮血救贖
-- Bleed for the Emperor - 為了帝皇
-- Vicious Offering - 惡毒贈禮
 - The Voice of Terra - 泰拉之音
-- Restoring Faith  - 恢復信仰
+- Enemies Within, Enemies Without - 內憂外患
+- Blood Redemption - 鮮血救贖
 - Second Wind - 精力復甦
-- Enduring Faith - 堅韌信仰
-- The Emperor's Bullet - 帝皇之彈
-- Dance of Death - 死亡之舞
+- Vicious Offering - 惡毒贈禮
+- Purge the Unclean - 淨化不潔
 - Duellist - 決鬥者
 - Until Death - 死戰到底
-- Shield of Contempt - 輕蔑之盾
-- Thy Wrath be Swift - 勃然大怒
-- Good Balance - 四平八穩
-- Desperation - 背水一戰
-- Holy Revenant - 吊命聖徒
-- Sainted Gunslinger - 封聖神射手
-- Hammer of Faith - 信仰之錘
-- Grievous Wounds - 重傷
-- Ambuscade - 伏擊
-- Punishment - 懲罰
-- Faithful Frenzy - 信仰狂亂
 - Sustained Assault - 持續突擊
+- Holy Revenant - 吊命聖徒
+- Thy Wrath be Swift - 勃然大怒
+- Desperation - 背水一戰
+- Punishment - 懲罰
+- Against the Odds - 逆境而上
+- Shield of Contempt - 輕蔑之盾
+- Unseen Blade - 無形之刃
+- Out of Pocket - 自掏腰包
+- Faithful Frenzy - 信仰狂亂
+- Providence - 神恩庇護
+- Good Balance - 四平八穩
+- Impassible - 不可逾越
+- Retaliatory Defence - 反制護盾
+- Abolish Blasphemers - 弒除瀆者
 - The Master's Retribution - 大師的反擊
+- Dance of Death - 死亡之舞
+- Grievous Wounds - 重傷
+- Scourge - 天災
+- Enduring Faith - 堅韌信仰
+- Punish Impiety - 褻瀆必懲
+- Bleed for the Emperor - 為了帝皇
+- Time to Kill - 殺戮時刻
+- Hubris - 傲慢
+- Blinded by Blood - 血色迷障
+- Prime Target - 頭號目標
+- No Respite - 刻不容緩
+- Unfaltering - 不屈之志
 - Faith's Fortitude - 信仰之勇
-- Swift Certainty - 堅定迅捷
+- Restoring Faith - 恢復信仰
+- Behind the Lines - 敵後行動
+- Relentless Fervor - 狂熱不懈
+- Riposte - 靈活還擊
 
 ### Veteran - 老兵
 
@@ -799,21 +823,22 @@
 
 #### 老兵天賦
 
-- Inspiring Presence - 鼓舞人心
-
 ##### 閃擊
+
 - Frag Grenade - 破片手雷
 - Shredder Frag Grenade - 粉碎者破片手雷
 - Krak Grenade - 穿甲手雷
 - Smoke Grenade - 煙霧手雷
 
 ##### 光環
+
 - Scavenger - 拾荒者
 - Survivalist - 生存專家
 - Fire Team - 火力小分隊
 - Close and Kill - 抵近殺敵
 
 ##### 主動技能
+
 - Volley Fire - 火力齊射
 - Executioner's Stance - 處決者姿態
 - Enhanced Target Priority - 目標引導增強
@@ -823,12 +848,10 @@
 - Voice of Command - 發號施令
 - Duty and Honour - 責任與榮譽
 - Only In Death Does Duty End - 只有死亡，職責才會終結
-- For the Emperor! - 為了皇帝！
 - Infiltrate - 滲透
-- Low Profile - 低調
 - Overwatch - 掩護射擊
 - Hunter's Resolve - 獵手決意
-- Surprise Attack - 突襲
+- Low Profile - 低調
 - Close Quarters Killzone - 肉搏戰
 
 ##### 鑰石
@@ -837,7 +860,6 @@
 - Chink in their Armour - 滲透盔甲
 - Tunnel Vision - 視野狹窄
 - Long Range Assassin - 遠程刺客
-- Camouflage - 偽裝
 - Focus Target! - 鎖定目標
 - Target Down! - 目標擊倒!
 - Redirect Fire! - 轉移火力!
@@ -846,53 +868,51 @@
 - Always Prepared - 有備無患
 - Invigorated - 活力煥發
 - On Your Toes - 時刻警覺
-- Fleeting Fire - 集火
-- Conditioning - 身體調節
 
 ##### 一般天賦
 
-- Longshot - 遠射
-- Close Order Drill - 密集隊形訓練
-- One Motion - 行雲流水
 - Exhilarating Takedown - 振奮擊倒
-- Volley Adept - 齊射能手
-- Charismatic - 超凡魅力
 - Confirmed Kill - 擊殺紀錄
-- Tactical Reload - 戰術裝填
 - Out for Blood - 嗜血
-- Get Back in the Fight! - 重投戰鬥!
-- Catch a Breath - 喘息片刻
-- Grenade Tinkerer - 手雷專家
+- Volley Adept - 齊射能手
+- Longshot - 遠射
 - Covering Fire - 火力掩護
-- Serrated Blade - 鋸齒刀刃
-- Agile Engagement - 靈活接敵
-- Kill Zone - 殺戮地帶
-- Opening Salvo - 首輪齊射
+- One Motion - 行雲流水
+- Tactical Reload - 戰術裝填
+- Close Order Drill - 密集隊形訓練
+- Superiority Complex - 優越情節
+- Iron Will - 鋼鐵意志
+- Trench Fighter Drill - 戰壕兵訓練
 - Field Improvisation - 臨場發揮
-- Twinned Blast - 雙響炮
-- Demolition Stockpile - 炸藥儲備
+- Withering Fire - 凋零烈焰
+- Opening Salvo - 首輪齊射
+- Covert Operative - 秘密特工
+- Serrated Blade - 鋸齒刀刃
+- Catch a Breath - 喘息片刻
 - Grenadier - 擲彈兵/轟炸者
-- Leave No One Behind - 不拋棄不放棄
+- Demolition Stockpile - 炸藥儲備
+- Grenade Tinkerer - 手雷專家
 - Precision Strikes - 堅定不移
 - Deadshot - 死亡射手
 - Born Leader - 天生領袖
-- Keep Their Heads Down! - 讓他們全趴下!
+- Leave No One Behind - 不拋棄不放棄
+- Demolition Team - 爆破小隊
 - Reciprocity - 互惠互利
 - Duck and Dive - 靈活應對
 - Fully Loaded - 全副武裝
 - Tactical Awareness - 戰術意識
 - Desperado - 亡命之徒
-- Shock Trooper - 突擊隊
-- Superiority Complex - 優越情節
-- Iron Will - 鋼鐵意志
-- Demolition Team - 爆破小隊
-- Exploit Weakness - 趁火打劫
-- Onslaught - 猛攻
-- Trench Fighter Drill - 戰壕兵訓練
-- Skirmisher - 遊擊者
+- Keep Their Heads Down! - 讓他們全趴下!
 - Competitive Urge - 求勝心
 - Rending Strikes - 裂擊
+- Agile Engagement - 靈活接敵
+- Skirmisher - 遊擊者
+- Shock Trooper - 突擊隊
+- Kill Zone - 殺戮地帶
+- Lock and Load - 荷槍實彈
 - Bring it Down! - 幹掉它!
+- Onslaught - 猛攻
+- Exploit Weakness - 趁火打劫
 
 ### Arbites - 法務官
 
@@ -904,15 +924,100 @@
 #### 法務官天賦
 
 ##### 閃擊
+
 - Arbites Grenade - 法務官手榴彈
+- Remote Detonation -
+- Voltaic Shock Mine -
 
 ##### 光環
 
+- Part of the Squad -
+- Ruthless Efficiency -
+- Breaking Dissent -
+
 ##### 主動技能
+
+- Nuncio-Aquila -
+- Castigator's Stance -
+- Blessed Armament -
+- Writ of Execution -
+- Bloodlust -
+- Inspiring Recitation -
+- Fear of Justice -
+- Break the Line -
+- Commendation from Condemnation -
+- Targeted Brutality -
+- Kill Order -
+- Engage -
 
 ##### 鑰石
 
+- Unleashed Brutality -
+- Lone Wolf -
+- Go Get 'Em! -
+- Execution Order -
+- Efficient Killer -
+- Malocator -
+- No Lenience -
+- Keeping Protocol -
+- Not Far Behind -
+- Terminus Warrant -
+- Obstinate -
+- Terminal Decree -
+- Writ of Judgement -
+- Forceful -
+- Adamant Will -
+- Will of the Lex -
+- Targets Acquired -
+- Arbites Vigilant -
+- Judicial Force -
+
 ##### 一般天賦
+
+- No Escape -
+- Withering Fire -
+- Hammer of Judgement -
+- Razor-Jaw Augment -
+- Target Neutralised -
+- Up Close -
+- Force of Will -
+- Retaliatory Force -
+- Man and Cyber-Mastiff -
+- Walk It Off -
+- Shield Plates -
+- Arbitrator Armour -
+- Voltaic Mandibles Augment -
+- Ammo Belt -
+- Concussive -
+- Canine Morale -
+- Imposing Force -
+- Suppression Force -
+- Suppression Protocols -
+- Plasteel Plates -
+- Arbites Revelatum -
+- Justified Measures -
+- Hold the Line -
+- Judicious Efficiency -
+- Rapid Movement -
+- Rebreather -
+- Cower, Miscreants! -
+- Target the Weak -
+- The Emperor's Fist -
+- Zealous Dedication -
+- Street Smarts -
+- Drive them Back -
+- Target Selection -
+- Soulguilt Scan -
+- Priority Endowment -
+- Target Priority -
+- Final Warning -
+- Weight of the Lex -
+- Serrated Maw -
+- Prosecution Blow -
+- March -
+- Monstrosity Hunter -
+- Strike Down -
+- True Grit -
 
 ### Hive Scum - 巢都渣滓
 
@@ -930,14 +1035,96 @@
 
 ##### 閃擊
 
+- Blinder -
+- Blackout -
+- Boom Bringer -
+- Chem Grenade -
+
 ##### 光環
+
+- Gunslinger -
+- Gunslinger Improved -
+- Ruffian -
+- Anarchist -
 
 ##### 主動技能
 
+- Desperado - 亡命之徒
+- Enhanced Desperado -
+- Pick Your Targets -
+- Focused Resolve -
+- Rampage! -
+- Channelled Aggression -
+- Boiling Blood -
+- Forge's Bellow -
+- Pulverising Strikes -
+- Stimm Supply - 化學性依賴
+- Practiced Deployment -
+- Booby Trap -
+- Fast Acting Stimms -
+
 ##### 鑰石
+
+- Alley Rat -
+- Nimble -
+- Vulture’s Mark -
+- Vulture's Push -
+- Vulture's Dodge -
+- Patient Hunter -
+- Adrenaline Frenzy -
+- Adrenaline Assassin -
+- Adrenaline Smiter -
+- Stoked Rage -
+- Adrenaline Unbound -
+- Uncontrolled Aggression -
 - Chemical Dependency - 化學性依賴
+- Chem Enhanced -
+- Chem Fortified -
+- Maxed Out Chems -
 
 ##### 一般天賦
+
+- Voice of Tertium -
+- Quick and Deadly -
+- Precision Violence -
+- In Your Face -
+- Calling for a Time Out -
+- Burst of Energy -
+- Sticky Hands -
+- A Tertium Welcome -
+- Speedloader -
+- Float Like a Butterfly -
+- Regained Posture -
+- Tis but a Scratch -
+- Slippery Customer -
+- Ramping Backstabs -
+- Sample Collector -
+- Jittery -
+- Long Lasting -
+- Blessed Stimms -
+- Swift Endurance -
+- Punching Above One's Weight -
+- Hive City Brawler -
+- Cheap Shots -
+- Battering Strikes -
+- Coated Weaponry -
+- Ammo Jack -
+- Pickpocket -
+- Hyper-Critical -
+- The Sweet Spot -
+- Unload -
+- Hyper-Violence -
+- Street Tough -
+- Battering Momentum -
+- Extra Pouches -
+- Pocket Toxin -
+- Splash Damage -
+- Toxic Renewal -
+- Toxin Mania -
+- Moving Target -
+- Channelled Devastation -
+- Virulent Strain -
+- Targeted Toxin -
 
 ### Skitarius - 護教軍
 
@@ -978,3 +1165,41 @@
 - Chordclaw Bleed - 弦爪流血
 
 ##### 戰錘世界觀術語
+
+### 天賦相關 (小型節點)
+
+- Peril Resistance - 反噬抗性
+- Melee Damage Boost - 近戰增幅
+- Movement Speed Boost - 移動速度增幅
+- Reload Boost - 換彈速度增幅
+- Rending Boost - 撕裂增幅
+- Stamina Boost - 耐力增幅
+- Stamina Regeneration Boost - 耐力恢復增幅
+- Suppression Boost - 壓制增幅
+- Toughness Boost - 韌性增幅
+- Toughness Damage Reduction - 韌性減傷
+
+### 職業核心詞
+
+#### 靈能者 (PSYKER)
+
+- Precision - 精準
+
+#### 歐格林 (OGRYN)
+
+- Feel No Pain - 麻木
+- Lucky Bullet - 幸運子彈
+- Trample - 踐踏
+
+#### 狂信徒 (ZEALOT)
+
+- Momentum - 勢能
+- Stealth - 隱身
+- Fury - 狂怒
+
+#### 老兵 (VETERAN)
+
+- Focus Target - 鎖定目標
+- Focus - 專注
+- Melee Specialist - 近戰專家
+- Ranged Specialist - 遠程專家

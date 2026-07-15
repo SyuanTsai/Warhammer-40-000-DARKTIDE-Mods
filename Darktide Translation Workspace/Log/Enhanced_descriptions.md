@@ -472,6 +472,16 @@
 - ED-NAMES-TW-014: `git -C <translation-repo> diff --check` passed before commit
 - ED-NAMES-TW-014: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-014: Lua syntax tool unavailable
+- ED-NAMES-TW-015: next 15 active localization tables reviewed
+- ED-NAMES-TW-015: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-015: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-015: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-015: glossary/local usage checked for Light 'em Up, Heavy Hitter, Just Getting Started, Unstoppable, Brutish Momentum, Feel No Pain, Toughest!, Burst Limiter Override, Good Shootin', More Burst Limiter Overrides!, Furious, Reloaded and Ready, Steady Grip, Smash 'Em!, and Lynchpin
+- ED-NAMES-TW-015: corrected `Steady Grip` from `穩固握持` to glossary `穩定握持`
+- ED-NAMES-TW-015: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-015: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-015: Lua syntax tool unavailable
+- ED-NAMES-TW-015: stopped after this batch per user request; safe next position is `loc_talent_ogryn_melee_stagger`
 
 ## Blocked
 
