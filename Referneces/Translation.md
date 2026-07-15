@@ -26,6 +26,16 @@
 - explosive - 爆炸桶(用於描述遊戲中的爆裂物)
 - Fire Barrel - 燃燒桶(用於描述遊戲中的燃燒爆裂物)
 
+##### MOD Enhanced descriptions 專用詞表
+- Previous Missions - 歷史任務
+- Loadout - 裝備
+- Favourite - 最愛
+- Perk - 附加屬性(遊戲原生用詞)
+- Primary Action - 主要攻擊(當使用在武器描述時Action翻譯成攻擊)
+- Secondary Action - 次要攻擊(當使用在武器描述時Action翻譯成攻擊)
+
+
+
 ### 通用名詞
 
 - Countdown - 冷卻
@@ -536,6 +546,7 @@
 - Warp attack - 亞空間攻擊
 - Soulblaze - 靈魂之火
 - Warp Charge - 亞空間充能
+- Warp Resistance - 反噬抗性
 
 #### 靈能者天賦
 
