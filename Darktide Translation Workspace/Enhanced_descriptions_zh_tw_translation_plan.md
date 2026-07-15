@@ -210,8 +210,8 @@ Safe next position: <next line/key/group>
 2. `TALENTS_Zealot.lua`
 3. `TALENTS_Veteran.lua`
 4. `TALENTS_Ogryn.lua`
-5. `TALENTS_Arbites.lua` - skip for now per user request on 2026-07-15
-6. `TALENTS_Scum.lua` - skip for now per user request on 2026-07-15
+5. `TALENTS_Arbites.lua`
+6. `TALENTS_Scum.lua`
 
 每批 15 個 talent description table。若同一職業的技能名、光環、關鍵石、閃擊互相引用，優先把名稱表中的譯名固定，再處理描述。
 
