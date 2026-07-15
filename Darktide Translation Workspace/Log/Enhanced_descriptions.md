@@ -679,6 +679,17 @@
 - ED-PENANCES-TW-001: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-001: Lua syntax tool unavailable
 - ED-PENANCES-TW-001: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_basic_training_description`
+- ED-PENANCES-TW-002: 15 active localization tables reviewed
+- ED-PENANCES-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-002: placeholders preserved: `{target}`
+- ED-PENANCES-TW-002: `CKWord` and `CNumb` structure preserved in touched `zh-tw`; added missing `PthOTrst_p` to `COLORS_KWords_tw.lua`
+- ED-PENANCES-TW-002: glossary/local usage checked for Curio/Curios, Penances, Veteran, Basic Tutorial, Sire Melk's Requisitorium, Shrine of the Omnissiah, Path of Trust, and Threat difficulty names
+- ED-PENANCES-TW-002: corrected Curio slot wording, access-unlock wording, Path of Trust colored keyword structure, Trust Level punctuation, and mission-type objective wording
+- ED-PENANCES-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-002: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
+- ED-PENANCES-TW-002: Lua syntax tool unavailable
+- ED-PENANCES-TW-002: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_missions_veteran_2_objective_3_name`
 
 ## Blocked
 
