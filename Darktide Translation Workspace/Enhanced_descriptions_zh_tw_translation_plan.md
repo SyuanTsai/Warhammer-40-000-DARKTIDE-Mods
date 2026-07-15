@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-NAMES-TW-016`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-NAMES-TW-017`：
 
 ```text
 File: <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua
-Start position: `loc_talent_ogryn_melee_stagger`
+Start position: `loc_talent_adamant_damage_vs_staggered_aura`
 Scope: 15 localization tables
-Safe next position target: the 16th localization table after `loc_talent_ogryn_melee_stagger`
+Safe next position target: the 16th localization table after `loc_talent_adamant_damage_vs_staggered_aura`
 ```
 
-最新執行狀態：ED-NAMES-TW-015 已完成；依使用者要求，本批次完成後停止。
+最新執行狀態：ED-NAMES-TW-016 已完成；translation repo commit `7aafc5c`。本輪仍依使用者要求持續執行，下一批接 `loc_talent_adamant_damage_vs_staggered_aura`。
