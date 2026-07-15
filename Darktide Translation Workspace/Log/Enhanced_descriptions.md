@@ -433,6 +433,15 @@
 - ED-NAMES-TW-010: `git -C <translation-repo> diff --check` passed before commit
 - ED-NAMES-TW-010: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-010: Lua syntax tool unavailable
+- ED-NAMES-TW-011: next 15 active localization tables reviewed
+- ED-NAMES-TW-011: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-011: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-011: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-011: glossary/local usage checked for Good Balance, Holy Revenant, Sainted Gunslinger, Grievous Wounds, Faithful Frenzy, Sustained Assault, Swift Certainty, Shredder Frag Grenade, Scavenger, Survivalist, Enhanced Target Priority, Only In Death Does Duty End, Low Profile, Overwatch, and Close Quarters Killzone
+- ED-NAMES-TW-011: no Lua changes required
+- ED-NAMES-TW-011: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-011: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-011: Lua syntax tool unavailable
 
 ## Blocked
 
