@@ -924,15 +924,100 @@
 #### 法務官天賦
 
 ##### 閃擊
+
 - Arbites Grenade - 法務官手榴彈
+- Remote Detonation -
+- Voltaic Shock Mine -
 
 ##### 光環
 
+- Part of the Squad -
+- Ruthless Efficiency -
+- Breaking Dissent -
+
 ##### 主動技能
+
+- Nuncio-Aquila -
+- Castigator's Stance -
+- Blessed Armament -
+- Writ of Execution -
+- Bloodlust -
+- Inspiring Recitation -
+- Fear of Justice -
+- Break the Line -
+- Commendation from Condemnation -
+- Targeted Brutality -
+- Kill Order -
+- Engage -
 
 ##### 鑰石
 
+- Unleashed Brutality -
+- Lone Wolf -
+- Go Get 'Em! -
+- Execution Order -
+- Efficient Killer -
+- Malocator -
+- No Lenience -
+- Keeping Protocol -
+- Not Far Behind -
+- Terminus Warrant -
+- Obstinate -
+- Terminal Decree -
+- Writ of Judgement -
+- Forceful -
+- Adamant Will -
+- Will of the Lex -
+- Targets Acquired -
+- Arbites Vigilant -
+- Judicial Force -
+
 ##### 一般天賦
+
+- No Escape -
+- Withering Fire -
+- Hammer of Judgement -
+- Razor-Jaw Augment -
+- Target Neutralised -
+- Up Close -
+- Force of Will -
+- Retaliatory Force -
+- Man and Cyber-Mastiff -
+- Walk It Off -
+- Shield Plates -
+- Arbitrator Armour -
+- Voltaic Mandibles Augment -
+- Ammo Belt -
+- Concussive -
+- Canine Morale -
+- Imposing Force -
+- Suppression Force -
+- Suppression Protocols -
+- Plasteel Plates -
+- Arbites Revelatum -
+- Justified Measures -
+- Hold the Line -
+- Judicious Efficiency -
+- Rapid Movement -
+- Rebreather -
+- Cower, Miscreants! -
+- Target the Weak -
+- The Emperor's Fist -
+- Zealous Dedication -
+- Street Smarts -
+- Drive them Back -
+- Target Selection -
+- Soulguilt Scan -
+- Priority Endowment -
+- Target Priority -
+- Final Warning -
+- Weight of the Lex -
+- Serrated Maw -
+- Prosecution Blow -
+- March -
+- Monstrosity Hunter -
+- Strike Down -
+- True Grit -
 
 ### Hive Scum - 巢都渣滓
 
@@ -950,14 +1035,96 @@
 
 ##### 閃擊
 
+- Blinder -
+- Blackout -
+- Boom Bringer -
+- Chem Grenade -
+
 ##### 光環
+
+- Gunslinger -
+- Gunslinger Improved -
+- Ruffian -
+- Anarchist -
 
 ##### 主動技能
 
+- Desperado - 亡命之徒
+- Enhanced Desperado -
+- Pick Your Targets -
+- Focused Resolve -
+- Rampage! -
+- Channelled Aggression -
+- Boiling Blood -
+- Forge's Bellow -
+- Pulverising Strikes -
+- Stimm Supply - 化學性依賴
+- Practiced Deployment -
+- Booby Trap -
+- Fast Acting Stimms -
+
 ##### 鑰石
+
+- Alley Rat -
+- Nimble -
+- Vulture’s Mark -
+- Vulture's Push -
+- Vulture's Dodge -
+- Patient Hunter -
+- Adrenaline Frenzy -
+- Adrenaline Assassin -
+- Adrenaline Smiter -
+- Stoked Rage -
+- Adrenaline Unbound -
+- Uncontrolled Aggression -
 - Chemical Dependency - 化學性依賴
+- Chem Enhanced -
+- Chem Fortified -
+- Maxed Out Chems -
 
 ##### 一般天賦
+
+- Voice of Tertium -
+- Quick and Deadly -
+- Precision Violence -
+- In Your Face -
+- Calling for a Time Out -
+- Burst of Energy -
+- Sticky Hands -
+- A Tertium Welcome -
+- Speedloader -
+- Float Like a Butterfly -
+- Regained Posture -
+- Tis but a Scratch -
+- Slippery Customer -
+- Ramping Backstabs -
+- Sample Collector -
+- Jittery -
+- Long Lasting -
+- Blessed Stimms -
+- Swift Endurance -
+- Punching Above One's Weight -
+- Hive City Brawler -
+- Cheap Shots -
+- Battering Strikes -
+- Coated Weaponry -
+- Ammo Jack -
+- Pickpocket -
+- Hyper-Critical -
+- The Sweet Spot -
+- Unload -
+- Hyper-Violence -
+- Street Tough -
+- Battering Momentum -
+- Extra Pouches -
+- Pocket Toxin -
+- Splash Damage -
+- Toxic Renewal -
+- Toxin Mania -
+- Moving Target -
+- Channelled Devastation -
+- Virulent Strain -
+- Targeted Toxin -
 
 ### Skitarius - 護教軍
 
