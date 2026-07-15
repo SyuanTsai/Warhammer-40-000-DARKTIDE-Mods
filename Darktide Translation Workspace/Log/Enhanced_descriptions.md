@@ -734,6 +734,17 @@
 - ED-PENANCES-TW-006: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-006: Lua syntax tool unavailable
 - ED-PENANCES-TW-006: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_missions_zealot_2_objective_3_description`
+- ED-PENANCES-TW-007: 15 active localization tables reviewed
+- ED-PENANCES-TW-007: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-007: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-007: placeholders preserved: `{target}`, `{time_window}`, `{health}%`
+- ED-PENANCES-TW-007: `CKWord`, `CNumb`, and `CNote` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-007: glossary/local usage checked for Zealot, Penances, Critical Hits, Stunned, Chain/Power weapons, Health, Wound, Stun Grenade, Stunstorm Grenade, Chastise the Wicked, Fury of the Faithful, and Shroudfield
+- ED-PENANCES-TW-007: corrected Critical Hits display to `爆擊命中`, clarified no-shot mission condition, and rewrote Just A Flesh Wound health/wound segment condition
+- ED-PENANCES-TW-007: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-007: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-007: Lua syntax tool unavailable
+- ED-PENANCES-TW-007: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_zealot_elite_or_special_kills_with_shroudfield_description`
 
 ## Blocked
 
