@@ -980,6 +980,17 @@
 - ED-VETERAN-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
 - ED-VETERAN-TW-002: Lua syntax tool unavailable
 - ED-VETERAN-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_talent_veteran_weapon_switch_new_description`
+- ED-VETERAN-TW-003: 15 active localization tables reviewed
+- ED-VETERAN-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-003: placeholders preserved: `{ranged_stacks:%s}`, `{melee_stacks:%s}`, `{reload_speed:%s}`, `{ranged_attack_speed:%s}`, `{ranged_crit_chance:%s}`, `{ranged_duration:%s}`, `{melee_attack_speed:%s}`, `{dodge_modifier:%s}`, `{melee_duration:%s}`, `{ammo:%s}`, `{duration:%s}`, `{stamina:%s}`, `{stamina_reduction:%s}`, `{toughness:%s}`, `{cooldown:%s}`, `{toughness_damage_reduction:%s}`, `{stacks:%s}`, `{toughness_over_time:%s}`, `{ranged_damage:%s}`, `{ranged_close:%s}`, `{max_ranged_damage:%s}`, `{ranged_far:%s}`, `{radius:%s}`, `{base_damage:%s}`, `{swap_speed}`, `{toughness_percent:%s}`
+- ED-VETERAN-TW-003: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-VETERAN-TW-003: glossary/local usage checked for Weapons Specialist, Always Prepared, Invigorated, On Your Toes, Exhilarating Takedown, Confirmed Kill, Out for Blood, Volley Adept, Longshot, Covering Fire, One Motion, Tactical Reload, Close Order Drill, Superiority Complex, Iron Will, Ranged Specialist, Melee Specialist, Reload Speed, Critical Hit, Toughness Damage Reduction, Combat Shotguns, Ammo Crates, and Coherency
+- ED-VETERAN-TW-003: corrected weapon-specialist activation wording, ammo/reserve typos, Reload Speed terminology, Combat Shotgun and Ammo Crate typos, Weakspot kill phrasing, Confirmed Kill regeneration wording, Longshot table percent header, Covering Fire base-damage wording, Coherency ally word order, and Iron Will condition wording
+- ED-VETERAN-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-VETERAN-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
+- ED-VETERAN-TW-003: Lua syntax tool unavailable
+- ED-VETERAN-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_talent_veteran_attack_speed_description`
 
 ## Blocked
 
