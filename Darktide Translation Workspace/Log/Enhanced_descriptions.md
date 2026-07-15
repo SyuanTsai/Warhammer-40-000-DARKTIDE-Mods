@@ -690,6 +690,17 @@
 - ED-PENANCES-TW-002: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
 - ED-PENANCES-TW-002: Lua syntax tool unavailable
 - ED-PENANCES-TW-002: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_missions_veteran_2_objective_3_name`
+- ED-PENANCES-TW-003: 15 active localization tables reviewed
+- ED-PENANCES-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-003: placeholders preserved: `{target}`, `{distance}`
+- ED-PENANCES-TW-003: `CKWord`, `CNumb`, and `CNote` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-003: glossary/local usage checked for Veteran, Penances, Weakspot Hits, Weakspots, Threat difficulty names, Damage, and mission objectives
+- ED-PENANCES-TW-003: corrected Stay Accurate description from weakspot damage wording to ranged weakspot-hit kills and restored `Weaksp_note`
+- ED-PENANCES-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-003: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-003: Lua syntax tool unavailable
+- ED-PENANCES-TW-003: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_veteran_2_kills_with_last_round_in_mag_name`
 
 ## Blocked
 
