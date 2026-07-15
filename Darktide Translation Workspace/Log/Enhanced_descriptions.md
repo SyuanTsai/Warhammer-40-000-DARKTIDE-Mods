@@ -834,6 +834,17 @@
 - ED-PENANCES-TW-015: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-015: Lua syntax tool unavailable
 - ED-PENANCES-TW-015: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_rank_adamant_2_x_description`
+- ED-PENANCES-TW-016: 15 active localization tables reviewed
+- ED-PENANCES-TW-016: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-016: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-016: placeholders preserved: `{target}`, `{target:%s}`, `{amount:%s}`
+- ED-PENANCES-TW-016: `CKWord` and `CNumb` structure preserved in touched `zh-tw`; added missing `BreaknDissent` to `COLORS_KWords_tw.lua`
+- ED-PENANCES-TW-016: glossary/local usage checked for Arbites/Arbitrator, Cyber-Mastiff, Bomber, Sniper, Trapper, Mutant, Poxburster, Electrocuted, Damage, Breaking Dissent, Staggered, Coherency, Malice, Heresy, Trust Level, and Penances
+- ED-PENANCES-TW-016: added active zh-tw for Arbites progression/objective/group entries and Cyber-Mastiff/electrocuted/block/staggered aura descriptions using updated `法務官` terminology
+- ED-PENANCES-TW-016: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-016: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
+- ED-PENANCES-TW-016: Lua syntax tool unavailable
+- ED-PENANCES-TW-016: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_adamant_team_wield_speed_aura_kills_description`
 
 ## Blocked
 
