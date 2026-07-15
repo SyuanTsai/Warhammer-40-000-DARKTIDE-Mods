@@ -867,6 +867,18 @@
 - ED-PENANCES-TW-018: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
 - ED-PENANCES-TW-018: Lua syntax tool unavailable
 - ED-PENANCES-TW-018: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_broker_deploy_stimm_field_description`
+- ED-PENANCES-TW-019: 15 active localization tables reviewed
+- ED-PENANCES-TW-019: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-019: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-019: placeholders preserved: `{target}`, `{viscosity_target}`, `%`
+- ED-PENANCES-TW-019: `CKWord` and `CNumb` structure preserved in touched `zh-tw`; added Scum/Cartel keyword support in `COLORS_KWords_tw.lua`
+- ED-PENANCES-TW-019: glossary/local usage checked for Stimm Supply, Vulture's Mark, Adrenaline Frenzy, Chemical Dependency, Chem Toxin, Weakspots, Strength, Toughness, Attack Speed, and Cartel Special Stimm
+- ED-PENANCES-TW-019: added active zh-tw for Scum Stimm Supply, Vulture's Mark, Adrenaline Frenzy, Chemical Dependency, Cartel Special Stimm, and Chem Toxin penance descriptions; `loc_achievement_category_offensive_label` was reviewed and already correct
+- ED-PENANCES-TW-019: added `Cartel Special Stimm` and `Viscosity` to Term Candidates because `Referneces/Translation.md` has no fixed zh-tw entries
+- ED-PENANCES-TW-019: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-019: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
+- ED-PENANCES-TW-019: Lua syntax tool unavailable
+- ED-PENANCES-TW-019: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_enemies_killed_by_barrels_description`
 
 ## Blocked
 
