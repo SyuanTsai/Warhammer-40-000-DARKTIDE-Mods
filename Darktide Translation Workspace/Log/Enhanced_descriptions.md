@@ -1025,6 +1025,17 @@
 - ED-OGRYN-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
 - ED-OGRYN-TW-001: Lua syntax tool unavailable
 - ED-OGRYN-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_ability_ogryn_taunt_shout_new_desc`
+- ED-OGRYN-TW-002: 15 active localization tables reviewed
+- ED-OGRYN-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-002: placeholders preserved: `{radius:%s}`, `{duration:%s}`, `{first_pulse:%s}`, `{second_pulse:%s}`, `{cooldown:%s}`, `{talent_name:%s}`, `{base_damage:%s}`, `{tougness:%s}`, `{toughness_per_hit:%s}`, `{max:%s}`, `{cooldown_reduction:%s}`, `{ranged_attack_speed:%s}`, `{reload_speed:%s}`, `{reduced_move_penalty:%s}`, `{ammo_return_percent:%s}`, `{ability:%s}`, `{toughness:%s}`, `{toughness_reload:%s}`, `{damage:%s}`, `{rending_multiplier:%s}`, `{stacks:%s}`, `{max_stacks:%s}`, `{heavy_stacks:%s}`, `{toughness_damage_reduction:%s}`, `{attack_speed:%s}`, `{melee_toughness:%s}`, `{cleave:%s}`, `{impact:%s}`, `{toughness_regen:%s}`, `{damage_reduction:%s}`
+- ED-OGRYN-TW-002: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-OGRYN-TW-002: glossary/local usage checked for Loyal Protector, Valuable Distraction, No Pain!, Go again!, Point-Blank Barrage, Bullet Bravado, Hail of Fire, Light 'em Up, Heavy Hitter, Don't Feel a Thing, Just Getting Started, Unstoppable, Great Cleaver, Impactful, Feel No Pain, Taunt, Attention Seeker, Toughness, Rending, Burn, Cleave, Impact, and Damage Reduction
+- ED-OGRYN-TW-002: corrected Taunt typo and colored keyword, Attention Seeker glossary term, damage-taken word order, shout typo, per-second Toughness wording, cooldown-reduction word order, Braced movement penalty wording, ammo return wording, table percent header, Bullet Bravado list structure, Unstoppable table separator, and Damage Reduction wording
+- ED-OGRYN-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-OGRYN-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
+- ED-OGRYN-TW-002: Lua syntax tool unavailable
+- ED-OGRYN-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_new_desc`
 
 ## Blocked
 
