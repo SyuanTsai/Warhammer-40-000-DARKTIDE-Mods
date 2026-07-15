@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 7aafc5c |
+| Commit | 736aa2d |
 | PR URL / number | pending |
-| Next position | ED-NAMES-TW-017: `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua:loc_talent_adamant_damage_vs_staggered_aura` |
+| Next position | ED-NAMES-TW-018: `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua:loc_talent_adamant_bullet_rain_toughness` |
 
 ## Batch Progress
 
@@ -56,6 +56,7 @@
 | ED-CURIOS-TW-001 | 2026-07-15 08:43:29 +08:00 | <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua | first 15 loc_* tables: `loc_inate_gadget_health_desc` through `loc_trait_gadget_mission_credits_increase_desc` | 15 | 10 | completed | `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` | 依詞彙表與本地用法校正最大生命值、戰鬥技能恢復速度、腐敗抗性、法術書、格擋消耗降低、盟友復活速度、韌性與審判庭代幣；其餘五項已符合來源。 Translation commit: ba792c4. |
 | ED-CURIOS-TW-002 | 2026-07-15 08:46:47 +08:00 | <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua | final 7 loc_* tables: `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` through `loc_trait_gadget_dr_vs_snipers_desc` | 7 | 7 | completed | `<translation-repo>/Main_Modules/TALENTS_Modular.lua:loc_glossary_talent_default` | 校正任務獎勵珍品機率句，依詞彙表校正 Flamers 為「火焰兵」，並統一傷害抗性敵人括號格式；CURIOS_Blessings_Perks.lua 已處理至檔尾。 Translation commit: 412476f. |
 | ED-NAMES-TW-016 | 2026-07-15 15:03:08 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_ogryn_melee_stagger` through `loc_talent_ability_adamant_grenade_improved` | 15 | 1 | completed | `loc_talent_adamant_damage_vs_staggered_aura` | 依詞彙表將 `Mobile Emplacement` 校正為「機動部屬」；`Voltaic Shock Mine` 詞彙表繁中空白，保留現有「電能地雷」並新增候選詞。 Translation commit: 7aafc5c. |
+| ED-NAMES-TW-017 | 2026-07-15 15:55:23 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_adamant_damage_vs_staggered_aura` through `loc_talent_adamant_bullet_rain_tdr` | 15 | 2 | completed | `loc_talent_adamant_bullet_rain_toughness` | 依更新後詞彙表校正 `Not Far Behind` 為「不落人後」，並補齊 `Dispense Justice` 暫譯「伸張正義」。 Translation commit: 736aa2d. |
 
 ## Checks
 
@@ -494,6 +495,17 @@
 - ED-NAMES-TW-016: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-016: Lua syntax tool unavailable
 - ED-NAMES-TW-016: safe next position is `loc_talent_adamant_damage_vs_staggered_aura`
+- ED-NAMES-TW-017: next 15 active localization tables reviewed
+- ED-NAMES-TW-017: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-017: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-017: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-017: glossary/local usage checked for Breaking Dissent, Castigator's Stance, Blessed Armament, Inspiring Recitation, Fear of Justice, Break the Line, Commendation from Condemnation, Kill Order, Engage, Execution Order, Keeping Protocol, Not Far Behind, Terminus Warrant, Dispense Justice, and Obstinate
+- ED-NAMES-TW-017: corrected `Not Far Behind` from `不弱人後` to glossary `不落人後`
+- ED-NAMES-TW-017: added active `zh-tw` for `Dispense Justice` and recorded it in `Term Candidates.md`
+- ED-NAMES-TW-017: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-017: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-017: Lua syntax tool unavailable
+- ED-NAMES-TW-017: safe next position is `loc_talent_adamant_bullet_rain_toughness`
 
 ## Blocked
 
@@ -502,3 +514,4 @@
 ## Term Candidates
 
 - `Voltaic Shock Mine` -> `電能地雷` added during ED-NAMES-TW-016 because `Referneces/Translation.md` has the English term with an empty zh-tw value.
+- `Dispense Justice` -> `伸張正義` added during ED-NAMES-TW-017 because updated `Referneces/Translation.md` still has no entry for this talent name.
