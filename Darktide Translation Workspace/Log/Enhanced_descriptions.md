@@ -623,6 +623,17 @@
 - ED-WEAPONS-TW-009: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
 - ED-WEAPONS-TW-009: Lua syntax tool unavailable
 - ED-WEAPONS-TW-009: safe next position is `loc_trait_bespoke_damage_vs_stagger_desc`
+- ED-WEAPONS-TW-010: 15 active localization tables reviewed
+- ED-WEAPONS-TW-010: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-010: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-010: placeholders preserved: `{vs_stagger:%s}`, `{toughness:%s}`, `{crit_chance:%s}`, `{value:%s}`, `{charge_time:%s}`, `{stacks:%s}`, `{crit_chance_max:%s}`, `{warp_charge:%s}`, `{rending:%s}`, `{time:%s}`, `{max_stacks:%s}`, `{reduction:%s}`, `{num_stacks:%s}`, `{duration:%s}`, `{proc_chance:%s}`, `{ammo:%s}`
+- ED-WEAPONS-TW-010: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_green`, `Dot_red`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-010: glossary/local usage checked for Staggered, Toughness, Critical Chance, Critical Hit, Peril, Weakspot Hit, Weakspots, Cleaving, Brittleness, Soulblaze, Burn, and Mk VII/IX/IIB weapon marks
+- ED-WEAPONS-TW-010: corrected `Weakspothits_rgb_tw` to existing `Weakspothit_rgb_tw`, changed Staggered wording to 踉蹌, restored missing notes for multiple procs, DoT-kill restrictions, staff projectile restrictions, attack-speed exclusion, stack caps, refresh behavior, shield blocking, and melee exclusion
+- ED-WEAPONS-TW-010: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-010: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-010: Lua syntax tool unavailable
+- ED-WEAPONS-TW-010: safe next position is `loc_trait_bespoke_crit_chance_on_successful_dodge_desc`
 
 ## Blocked
 
