@@ -601,6 +601,17 @@
 - ED-WEAPONS-TW-007: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
 - ED-WEAPONS-TW-007: Lua syntax tool unavailable
 - ED-WEAPONS-TW-007: safe next position is `loc_trait_bespoke_increased_weakspot_damage_against_toxin_status_desc`
+- ED-WEAPONS-TW-008: 15 active localization tables reviewed
+- ED-WEAPONS-TW-008: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-008: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-008: placeholders preserved: `{damage:%s}`, `{stacks:%s}`, `{time:%s}`, `{close_damage:%s}`, `{power_level:%s}`, `{stamina:%s}`, `{reload_speed:%s}`, `{movement_speed:%s}`, `{ammo:%s}`, `{suppression:%s}`, `{damage_vs_suppressed}`, `{toughness:%s}`
+- ED-WEAPONS-TW-008: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_red` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-008: glossary/local usage checked for Chem Toxin, Weakspot Damage, Damage, Toughness, Stamina, Reload Speed, Suppression, Strength/威力, Weakspot Hit, and Ranged Attacks
+- ED-WEAPONS-TW-008: corrected Close Damage from melee damage to generic damage, corrected Terrifying Barrage radius to `12.5`, added missing refresh/DoT-kill notes, and changed Ghost to existing `Weakspothit_rgb_tw`
+- ED-WEAPONS-TW-008: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-008: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-008: Lua syntax tool unavailable
+- ED-WEAPONS-TW-008: safe next position is `loc_trait_bespoke_crit_chance_based_on_aim_time_desc`
 
 ## Blocked
 
