@@ -393,6 +393,15 @@
 - ED-NAMES-TW-006: `git -C <translation-repo> diff --check` passed before commit
 - ED-NAMES-TW-006: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-006: Lua syntax tool unavailable
+- ED-NAMES-TW-007: next 15 active localization tables reviewed
+- ED-NAMES-TW-007: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-007: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-007: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-007: glossary/local usage checked for Brain Rupture, Kinetic Flayer, Ethereal Shards, Quick Shards, Psykinetic's Wrath, Venting Shriek, Warp Rupture, Becalming Eruption, Warp Creeping Flames, Sanctuary, Scrier's Gaze, Precognition, Warp Unbound, Warp Siphon, and Essence Harvest
+- ED-NAMES-TW-007: no Lua changes required
+- ED-NAMES-TW-007: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-007: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-007: Lua syntax tool unavailable
 
 ## Blocked
 
