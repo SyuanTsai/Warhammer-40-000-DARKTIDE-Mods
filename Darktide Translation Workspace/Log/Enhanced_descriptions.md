@@ -383,6 +383,16 @@
 - ED-NAMES-TW-005: `git -C <translation-repo> diff --check` passed
 - ED-NAMES-TW-005: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-005: Lua syntax tool unavailable
+- ED-NAMES-TW-006: next 15 active localization tables reviewed
+- ED-NAMES-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-006: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-006: glossary/local usage checked for Cleave Boost, Critical Chance Boost, Impact Boost, Melee Damage Boost, Movement Speed Boost, Peril Resistance, Ranged Damage Boost, Reload Boost, Rending Boost, Toughness Boost, Toughness Damage Reduction, Brain Burst, and Brain Rupture
+- ED-NAMES-TW-006: corrected `Melee Damage Boost` from `重擊傷害增幅` to `近戰增幅`
+- ED-NAMES-TW-006: corrected `Rending Boost` from `撕裂增強` to `撕裂增幅`
+- ED-NAMES-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-006: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-006: Lua syntax tool unavailable
 
 ## Blocked
 
