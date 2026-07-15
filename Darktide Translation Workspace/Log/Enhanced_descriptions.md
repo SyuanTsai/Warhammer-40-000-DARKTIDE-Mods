@@ -767,6 +767,17 @@
 - ED-PENANCES-TW-009: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-009: Lua syntax tool unavailable
 - ED-PENANCES-TW-009: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_rank_psyker_2_x_description`
+- ED-PENANCES-TW-010: 15 active localization tables reviewed
+- ED-PENANCES-TW-010: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-010: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-010: placeholders preserved: `{target}`, `{time_window}`
+- ED-PENANCES-TW-010: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-010: glossary/local usage checked for Psyker, Warp attacks, Brain Burst, Brain Rupture, Perils of the Warp, Health, Trust Level, and Threat difficulty names
+- ED-PENANCES-TW-010: corrected Psyker Trust Level punctuation, mission counter/objective wording, and Warp attacks display text to `亞空間攻擊`
+- ED-PENANCES-TW-010: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-010: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-010: Lua syntax tool unavailable
+- ED-PENANCES-TW-010: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_psyker_2_easy_2_tweaked_description`
 
 ## Blocked
 
