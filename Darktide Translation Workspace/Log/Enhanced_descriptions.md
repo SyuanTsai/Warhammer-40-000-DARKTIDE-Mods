@@ -801,6 +801,17 @@
 - ED-PENANCES-TW-012: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-012: Lua syntax tool unavailable
 - ED-PENANCES-TW-012: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_missions_ogryn_2_objective_2_name`
+- ED-PENANCES-TW-013: 15 active localization tables reviewed
+- ED-PENANCES-TW-013: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-013: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-013: placeholders preserved: `{target}`, `{amount}`, `{time}`, `{num_enemies}`
+- ED-PENANCES-TW-013: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-013: glossary/local usage checked for Ogryn, Penances, Malice, Heresy, Coherency, Knocked Down, Incapacitated, Revive, Assist, and Melee Attack
+- ED-PENANCES-TW-013: added missing zh-tw for Ogryn mission objective 2 and 3 descriptions; corrected group description from Trust Level text to Penances text, Assist/Revive wording, Malice/Heresy threat wording, and hard mission ally-down condition
+- ED-PENANCES-TW-013: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-013: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-013: Lua syntax tool unavailable
+- ED-PENANCES-TW-013: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_group_class_ogryn_2_description`
 
 ## Blocked
 
