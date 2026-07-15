@@ -262,11 +262,11 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-NAMES-TW-012`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-NAMES-TW-013`：
 
 ```text
 File: <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua
-Start position: `loc_talent_veteran_snipers_focus_rending_bonus`
+Start position: `loc_talent_veteran_kill_grants_damage_to_other_slot`
 Scope: 15 localization tables
-Safe next position target: the 16th localization table after `loc_talent_veteran_snipers_focus_rending_bonus`
+Safe next position target: the 16th localization table after `loc_talent_veteran_kill_grants_damage_to_other_slot`
 ```

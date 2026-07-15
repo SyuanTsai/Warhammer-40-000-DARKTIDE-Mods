@@ -442,6 +442,16 @@
 - ED-NAMES-TW-011: `git -C <translation-repo> diff --check` passed
 - ED-NAMES-TW-011: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-011: Lua syntax tool unavailable
+- ED-NAMES-TW-012: next 15 active localization tables reviewed
+- ED-NAMES-TW-012: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-012: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-012: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-012: glossary/local usage checked for Chink in their Armour, Weapons Specialist, Conditioning, Longshot, One Motion, Exhilarating Takedown, Charismatic, Confirmed Kill, Tactical Reload, Out for Blood, Get Back in the Fight!, Catch a Breath, Grenade Tinkerer, Covering Fire, and Serrated Blade
+- ED-NAMES-TW-012: kept `Get Back in the Fight!` as `重投戰鬥！` with fullwidth punctuation for zh-tw UI consistency
+- ED-NAMES-TW-012: no Lua changes required
+- ED-NAMES-TW-012: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-012: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-012: Lua syntax tool unavailable
 
 ## Blocked
 
