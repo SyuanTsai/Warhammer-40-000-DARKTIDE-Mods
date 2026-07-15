@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 2bebbdd |
+| Commit | b64a0d8 |
 | PR URL / number | pending |
-| Next position | ED-MENUS-TW-005: `<translation-repo>/Main_Modules/MENUS.lua:loc_stats_display_mobility_stat` |
+| Next position | ED-MENUS-TW-006: `<translation-repo>/Main_Modules/MENUS.lua:loc_wait_reason_store` |
 
 ## Batch Progress
 
@@ -51,6 +51,7 @@
 | ED-MENUS-TW-002 | 2026-07-15 08:28:56 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_contract_view_intro_title` through `loc_credits_vendor_view_option_buy` | 15 | 11 | completed | `loc_credits_goods_vendor_description_text` | 校正 Melk 標題、合約完成獎勵、Low/Medium/High、未知防禦性珍品、每週合約通知、聖化/威力提示、服務問句與 Requisition 標籤。 Translation commit: a818308. |
 | ED-MENUS-TW-003 | 2026-07-15 08:31:42 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_credits_goods_vendor_description_text` through `loc_inventory_view_display_name` | 15 | 7 | completed | `loc_inventory_title_slot_gear_lowerbody` | 補上 Stimm Lab 繁中，校正 Brunt 武器描述、Strike Team、Previous Missions、Havoc Assignment 與 Loadout 標籤；其餘八項已符合詞彙表或既有一致譯法。 Translation commit: e66dab3. |
 | ED-MENUS-TW-004 | 2026-07-15 08:34:22 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_inventory_title_slot_gear_lowerbody` through `loc_weapon_special_special_attack` | 15 | 5 | completed | `loc_stats_display_mobility_stat` | 依詞彙表與本地用法校正 Favourite、Perk、Primary Action、Secondary Action 與 Special Melee Attack；其餘十項已符合來源或既有一致譯法。 Translation commit: 2bebbdd. |
+| ED-MENUS-TW-005 | 2026-07-15 08:37:10 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_stats_display_mobility_stat` through `loc_wait_reason_backend` | 15 | 10 | completed | `loc_wait_reason_store` | 補齊七個 Dump Stats `CKWord` 繁中，校正 Cloud Radius、Dedicated Server 與 Fatshark backend 等等待提示；其餘五項已符合來源或既有一致譯法。 Translation commit: b64a0d8. |
 
 ## Checks
 
@@ -275,6 +276,15 @@
 - ED-MENUS-TW-004: `git -C <translation-repo> diff --check` passed before commit
 - ED-MENUS-TW-004: diff scope limited to `Main_Modules/MENUS.lua`
 - ED-MENUS-TW-004: Lua syntax tool unavailable
+- ED-MENUS-TW-005: all 15 `loc_*` tables reviewed
+- ED-MENUS-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-005: `CKWord` color keys preserved and changed only to `*_rgb_tw` variants for added zh-tw entries
+- ED-MENUS-TW-005: glossary/local usage checked for Mobility, Melee Damage, Warp Resistance, Ammo, Defences, Heat Management, Damage, Finesse, Dodge Distance, and wait reason labels
+- ED-MENUS-TW-005: added missing `zh-tw` for seven Dump Stats tables
+- ED-MENUS-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-MENUS-TW-005: diff scope limited to `Main_Modules/MENUS.lua`
+- ED-MENUS-TW-005: Lua syntax tool unavailable
 
 ## Blocked
 
