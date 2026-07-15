@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | ba792c4 |
+| Commit | 412476f |
 | PR URL / number | pending |
-| Next position | ED-CURIOS-TW-002: `<translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua:loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` |
+| Next position | ED-TALENTS-MOD-TW-001: `<translation-repo>/Main_Modules/TALENTS_Modular.lua:loc_glossary_talent_default` |
 
 ## Batch Progress
 
@@ -54,6 +54,7 @@
 | ED-MENUS-TW-005 | 2026-07-15 08:37:10 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_stats_display_mobility_stat` through `loc_wait_reason_backend` | 15 | 10 | completed | `loc_wait_reason_store` | 補齊七個 Dump Stats `CKWord` 繁中，校正 Cloud Radius、Dedicated Server 與 Fatshark backend 等等待提示；其餘五項已符合來源或既有一致譯法。 Translation commit: b64a0d8. |
 | ED-MENUS-TW-006 | 2026-07-15 08:39:56 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | final 4 loc_* tables: `loc_wait_reason_store` through `loc_wait_reason_platform_psn` | 4 | 3 | completed | `<translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua:loc_inate_gadget_health_desc` | 校正 Steam、Xbox、PSN 平台等待提示的品牌空格；MENUS.lua 已處理至檔尾。 Translation commit: 703a343. |
 | ED-CURIOS-TW-001 | 2026-07-15 08:43:29 +08:00 | <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua | first 15 loc_* tables: `loc_inate_gadget_health_desc` through `loc_trait_gadget_mission_credits_increase_desc` | 15 | 10 | completed | `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` | 依詞彙表與本地用法校正最大生命值、戰鬥技能恢復速度、腐敗抗性、法術書、格擋消耗降低、盟友復活速度、韌性與審判庭代幣；其餘五項已符合來源。 Translation commit: ba792c4. |
+| ED-CURIOS-TW-002 | 2026-07-15 08:46:47 +08:00 | <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua | final 7 loc_* tables: `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` through `loc_trait_gadget_dr_vs_snipers_desc` | 7 | 7 | completed | `<translation-repo>/Main_Modules/TALENTS_Modular.lua:loc_glossary_talent_default` | 校正任務獎勵珍品機率句，依詞彙表校正 Flamers 為「火焰兵」，並統一傷害抗性敵人括號格式；CURIOS_Blessings_Perks.lua 已處理至檔尾。 Translation commit: 412476f. |
 
 ## Checks
 
@@ -305,6 +306,16 @@
 - ED-CURIOS-TW-001: `git -C <translation-repo> diff --check` passed before commit
 - ED-CURIOS-TW-001: diff scope limited to `Main_Modules/CURIOS_Blessings_Perks.lua`
 - ED-CURIOS-TW-001: Lua syntax tool unavailable
+- ED-CURIOS-TW-002: all final 7 `loc_*` tables reviewed
+- ED-CURIOS-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-CURIOS-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-CURIOS-TW-002: placeholders preserved: `{mission_reward_gear_instead_of_weapon_modifier:%s}`, `{damage_reduction:%s}`
+- ED-CURIOS-TW-002: `CKWord` color keys preserved for `Damage_res_rgb_tw`
+- ED-CURIOS-TW-002: glossary/local usage checked for Curio, Mission Reward, Damage Resistance, Flamers, Bombers, Gunners, Pox Hounds, Mutants, and Snipers
+- ED-CURIOS-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-CURIOS-TW-002: diff scope limited to `Main_Modules/CURIOS_Blessings_Perks.lua`
+- ED-CURIOS-TW-002: Lua syntax tool unavailable
+- ED-CURIOS-TW-002: `Main_Modules/CURIOS_Blessings_Perks.lua` completed through current English source sequence
 
 ## Blocked
 

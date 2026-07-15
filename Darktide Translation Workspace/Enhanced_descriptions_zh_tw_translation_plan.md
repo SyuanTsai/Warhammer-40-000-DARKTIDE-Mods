@@ -262,11 +262,11 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-CURIOS-TW-002`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-TALENTS-MOD-TW-001`：
 
 ```text
-File: <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua
-Start position: `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc`
+File: <translation-repo>/Main_Modules/TALENTS_Modular.lua
+Start position: `loc_glossary_talent_default`
 Scope: 15 `loc_*` tables
-Safe next position target: the next file after final CURIOS_Blessings_Perks.lua `loc_*` table
+Safe next position target: the 16th `loc_*` table after `loc_glossary_talent_default`
 ```
