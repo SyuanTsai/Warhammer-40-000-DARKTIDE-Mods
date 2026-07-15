@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-VETERAN-TW-001`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-VETERAN-TW-002`：
 
 ```text
 File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Veteran.lua
-Start position: `loc_ability_frag_grenade_description`
+Start position: `loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency_description`
 Scope: next 15 active localization tables
-Safe next position target: the 16th active localization table after `loc_ability_frag_grenade_description`
+Safe next position target: the 16th active localization table after `loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency_description`
 ```
 
-最新執行狀態：ED-ZEALOT-TW-006 已完成；translation repo commit `ee8bf39`。Zealot active localization tables completed. 下一批接 `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_ability_frag_grenade_description`。
+最新執行狀態：ED-VETERAN-TW-001 已完成；translation repo commit `3ccc85c`。下一批接 `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency_description`。

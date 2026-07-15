@@ -958,6 +958,17 @@
 - ED-ZEALOT-TW-006: Lua syntax tool unavailable
 - ED-ZEALOT-TW-006: `Main_Modules/TALENTS/TALENTS_Zealot.lua` active localization tables completed through current source sequence
 - ED-ZEALOT-TW-006: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_ability_frag_grenade_description`
+- ED-VETERAN-TW-001: 15 active localization tables reviewed
+- ED-VETERAN-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-001: placeholders preserved: `{stacks:%s}`, `{talent_name:%s}`, `{duration:%s}`, `{ammo:%s}`, `{cooldown:%s}`, `{ammo_2:%s}`, `{damage:%s}`, `{movement_speed:%s}`, `{weakspot_damage:%s}`, `{toughness:%s}`, `{old_talent_name:%s}`, `{refresh_duration:%s}`, `{power:%s}`, `{range:%s}`
+- ED-VETERAN-TW-001: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-VETERAN-TW-001: glossary/local usage checked for Frag Grenade, Shredder Frag Grenade, Krak Grenade, Smoke Grenade, Scavenger, Survivalist, Fire Team, Close and Kill, Volley Fire, Executioner's Stance, Enhanced Target Priority, Counter-Fire, The Bigger they Are..., Marksman, Voice of Command, Toughness, Coherency, Weakspot Hits, Stagger, Bleed, Suppression, Veteran, Infiltrate, and Voice of Command
+- ED-VETERAN-TW-001: corrected Frag/Fragmentation Grenade typo and glossary term, Krak/Smoke Grenade glossary terms, numeric range punctuation, aura word order, Ranged Stance duration/suppression wording, Executioner's Stance outline wording, Captain to `連長`, Weakspot Hits colored keyword, and block/Void shield wording
+- ED-VETERAN-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-VETERAN-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
+- ED-VETERAN-TW-001: Lua syntax tool unavailable
+- ED-VETERAN-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency_description`
 
 ## Blocked
 
