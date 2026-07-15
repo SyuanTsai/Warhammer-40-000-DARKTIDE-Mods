@@ -845,6 +845,17 @@
 - ED-PENANCES-TW-016: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
 - ED-PENANCES-TW-016: Lua syntax tool unavailable
 - ED-PENANCES-TW-016: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_adamant_team_wield_speed_aura_kills_description`
+- ED-PENANCES-TW-017: 15 active localization tables reviewed
+- ED-PENANCES-TW-017: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-017: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-017: placeholders preserved: `{target}`, `{target:%s}`, `{cluster:%s}`
+- ED-PENANCES-TW-017: `CKWord` and `CNumb` structure preserved in touched `zh-tw`; added/updated Arbites keyword support in `COLORS_KWords_tw.lua`
+- ED-PENANCES-TW-017: glossary/local usage checked for Ruthless Efficiency, Part of the Squad, Voltaic Shock Mine, Nuncio-Aquila, Castigator's Stance, Break the Line, Remote Detonation, Arbites Grenade, Execution Order, Terminus Warrant, Forceful, Coherency, Cyber-Mastiff, Stun, Stagger, Monstrosity, Heresy, Hive Scum, and Trust Level
+- ED-PENANCES-TW-017: added active zh-tw for Arbites aura/ability/blitz/keystone descriptions, updated `Forceful` and `BreakZLine` to glossary terms, and corrected Scum class/trust text to `巢都渣滓`
+- ED-PENANCES-TW-017: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-017: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
+- ED-PENANCES-TW-017: Lua syntax tool unavailable
+- ED-PENANCES-TW-017: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_missions_broker_2_x_description`
 
 ## Blocked
 

@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-PENANCES-TW-017`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-PENANCES-TW-018`：
 
 ```text
 File: <translation-repo>/Main_Modules/PENANCES.lua
-Start position: `loc_achievement_adamant_team_wield_speed_aura_kills_description`
+Start position: `loc_achievement_missions_broker_2_x_description`
 Scope: 15 localization tables
-Safe next position target: the 16th localization table after `loc_achievement_adamant_team_wield_speed_aura_kills_description`
+Safe next position target: the 16th localization table after `loc_achievement_missions_broker_2_x_description`
 ```
 
-最新執行狀態：ED-PENANCES-TW-016 已完成；translation repo commit `4163345`。下一批接 `Main_Modules/PENANCES.lua:loc_achievement_adamant_team_wield_speed_aura_kills_description`。
+最新執行狀態：ED-PENANCES-TW-017 已完成；translation repo commit `4e57535`。下一批接 `Main_Modules/PENANCES.lua:loc_achievement_missions_broker_2_x_description`。
