@@ -913,6 +913,17 @@
 - ED-ZEALOT-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
 - ED-ZEALOT-TW-002: Lua syntax tool unavailable
 - ED-ZEALOT-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_quickness_desc`
+- ED-ZEALOT-TW-003: 15 active localization tables reviewed
+- ED-ZEALOT-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-003: placeholders preserved: `{max_stacks:%s}`, `{duration:%s}`, `{damage_modifier:%s}`, `{melee_attack_speed:%s}`, `{ranged_attack_speed:%s}`, `{toughness:%s}`, `{stacks:%s}`, `{talent_name:%s}`, `{cooldown:%s}`, `{damage:%s}`, `{max:%s}`, `{range:%s}`, `{more_toughness:%s}`, `{monster_count:%s}`
+- ED-ZEALOT-TW-003: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ZEALOT-TW-003: glossary/local usage checked for Inexorable Judgement, Momentum, Weakspot Hit, Anoint in Blood, Disdain, Backstabber, The Voice of Terra, Enemies Within Enemies Without, Blood Redemption, Second Wind, Vicious Offering, Purge the Unclean, Duellist, Infested, Unyielding, Finesse Damage, Toughness, and Damage
+- ED-ZEALOT-TW-003: corrected Momentum duration wording, Weakspot Hit colored keyword, typo `冇`, typo `測翼`, ranged/near-enemy Toughness wording, and passive damage/replenishment word order
+- ED-ZEALOT-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-ZEALOT-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
+- ED-ZEALOT-TW-003: Lua syntax tool unavailable
+- ED-ZEALOT-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_resist_death_desc`
 
 ## Blocked
 

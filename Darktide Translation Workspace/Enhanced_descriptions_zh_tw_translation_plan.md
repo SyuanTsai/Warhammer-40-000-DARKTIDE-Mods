@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-ZEALOT-TW-003`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-ZEALOT-TW-004`：
 
 ```text
 File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Zealot.lua
-Start position: `loc_talent_zealot_quickness_desc`
+Start position: `loc_talent_zealot_resist_death_desc`
 Scope: 15 localization tables
-Safe next position target: the 16th localization table after `loc_talent_zealot_quickness_desc`
+Safe next position target: the 16th localization table after `loc_talent_zealot_resist_death_desc`
 ```
 
-最新執行狀態：ED-ZEALOT-TW-002 已完成；translation repo commit `71cd395`。下一批接 `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_quickness_desc`。
+最新執行狀態：ED-ZEALOT-TW-003 已完成；translation repo commit `962db7e`。下一批接 `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_resist_death_desc`。
