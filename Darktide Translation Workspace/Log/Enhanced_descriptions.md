@@ -1069,6 +1069,18 @@
 - ED-OGRYN-TW-005: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
 - ED-OGRYN-TW-005: Lua syntax tool unavailable
 - ED-OGRYN-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_windup_reduces_damage_taken_desc`
+- ED-OGRYN-TW-006: final 13 active localization tables reviewed
+- ED-OGRYN-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-006: placeholders preserved: `{damage_taken_multiplier:%s}`, `{rending_multiplier:%s}`, `{duration:%s}`, `{push_impact_modifier:%s}`, `{cooldown:%s}`, `{time:%s}`, `{movement_speed:%s}`, `{damage:%s}`, `{crit_chance:%s}`, `{max_stacks:%s}`, `{stacks:%s}`, `{strength:%s}`, `{tdr:%s}`, `{damage_taken:%s}`, `{range:%s}`, `{attack_speed:%s}`, `{crit_damage:%s}`
+- ED-OGRYN-TW-006: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-OGRYN-TW-006: glossary/local usage checked for Implacable, Dominate, No Pushover, Get Stuck In, Reloaded and Ready, Massacre, No Stopping Me!, Bash and Blast, Hard Knocks, No Hurting Friends!, Won't Give In, Spray and Slay, Lucky Streak, Damage Reduction, Rending, Stagger, Combat Ability, Coherency, Stun, Ability Cooldown, Critical Chance, Toughness Damage Reduction, and Critical Strike Damage
+- ED-OGRYN-TW-006: corrected Damage Reduction wording, Push Stagger word order, Coherency ally phrasing, ranged damage on reload wording, staggered enemy damage-taken wording, Coherency damage-taken trigger, empty clip terminology, and Critical Strike Damage wording
+- ED-OGRYN-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-OGRYN-TW-006: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
+- ED-OGRYN-TW-006: Lua syntax tool unavailable
+- ED-OGRYN-TW-006: `Main_Modules/TALENTS/TALENTS_Ogryn.lua` active localization tables completed through current source sequence
+- ED-OGRYN-TW-006: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_ability_adamant_grenade_description`
 
 ## Blocked
 
