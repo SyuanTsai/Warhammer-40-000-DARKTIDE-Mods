@@ -924,6 +924,17 @@
 - ED-ZEALOT-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
 - ED-ZEALOT-TW-003: Lua syntax tool unavailable
 - ED-ZEALOT-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_resist_death_desc`
+- ED-ZEALOT-TW-004: 15 active localization tables reviewed
+- ED-ZEALOT-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-004: placeholders preserved: `{active_duration:%s}`, `{cooldown_duration:%s}`, `{damage:%s}`, `{time:%s}`, `{amount:%s}`, `{talent_name:%s}`, `{max_health:%s}`, `{melee_multiplier:%s}`, `{movement_speed:%s}`, `{stamina:%s}`, `{impact_modifier:%s}`, `{min_hits:%s}`, `{max_stacks:%s}`, `{num_enemies:%s}`, `{range:%s}`, `{cleave:%s}`, `{stacks:%s}`, `{damage_reduction:%s}`, `{duration:%s}`, `{cooldown:%s}`, `{ammo:%s}`, `{revive_speed:%s}`, `{tdr:%s}`, `{block_cost:%s}`, `{linger_time:%s}`, `{dodges:%s}`
+- ED-ZEALOT-TW-004: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ZEALOT-TW-004: glossary/local usage checked for Until Death, Sustained Assault, Holy Revenant, Thy Wrath Be Swift, Desperation, Punishment, Against the Odds, Shield of Contempt, Unseen Blade, Out of Pocket, Faithful Frenzy, Providence, Good Balance, Impassible, Retaliatory Defence, Health, Stamina, Impact, Cleave, Coherency, Damage Reduction, Ammo, and Toughness Damage Reduction
+- ED-ZEALOT-TW-004: corrected Health to `生命值`, missing-Stamina wording, Shield of Contempt Damage Reduction wording, Unseen Blade target wording, Out of Pocket ammo sentence, Providence Revive Speed wording, and Good Balance Damage Reduction wording
+- ED-ZEALOT-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-ZEALOT-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
+- ED-ZEALOT-TW-004: Lua syntax tool unavailable
+- ED-ZEALOT-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_damage_vs_elites_desc`
 
 ## Blocked
 
