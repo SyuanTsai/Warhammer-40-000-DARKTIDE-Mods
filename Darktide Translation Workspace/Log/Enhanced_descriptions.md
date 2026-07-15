@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 10e4d49 |
+| Commit | 9029232 |
 | PR URL / number | pending |
-| Next position | ED-WEAPONS-TW-005: `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_bespoke_stacking_rending_debuff_on_weakspot_desc` |
+| Next position | ED-WEAPONS-TW-006: `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc` |
 
 ## Batch Progress
 
@@ -63,6 +63,7 @@
 | ED-WEAPONS-TW-002 | 2026-07-15 16:17:52 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_ranged_common_wield_armored_damage_desc` through `loc_trait_bespoke_armor_penetration_against_staggered_desc` | 15 | 10 | completed | `loc_trait_bespoke_bleed_on_activated_hit_desc` | 校正 ranged perk 屬性描述與 Opportunist，移除 zh-tw `vs` 殘留並保留 `CKWord`/`CNumb` 結構。 Translation commit: cb6b25e. |
 | ED-WEAPONS-TW-003 | 2026-07-15 16:24:25 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_bespoke_bleed_on_activated_hit_desc` through `loc_trait_bespoke_infinite_melee_cleave_on_weakspot_kill_desc` | 15 | 8 | completed | `loc_trait_bespoke_power_bonus_on_first_attack_desc` | 補回 Bloodletter 持續時間/tick/護盾限制、Power 類可刷新提示、Devastating Strike 甲殼限制，以及 Brutal Momentum/Deathblow 的非歐格林限制。 Translation commit: b9398ae. |
 | ED-WEAPONS-TW-004 | 2026-07-15 16:33:36 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_bespoke_power_bonus_on_first_attack_desc` through `loc_trait_bespoke_rending_on_backstabs_desc` | 15 | 15 | completed | `loc_trait_bespoke_stacking_rending_debuff_on_weakspot_desc` | 補回 Limbsplitter/All or Nothing/Decapitator/Relentless Strikes 的 note 與刷新資訊，校正 Agile、Slaughter Spree、bleed、dodge、Haymaker、Smackdown、Mercy Killer、Ruthless Backstab 描述。 Translation commit: 10e4d49. |
+| ED-WEAPONS-TW-005 | 2026-07-15 16:41:01 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_bespoke_stacking_rending_debuff_on_weakspot_desc` through `loc_trait_bespoke_wind_slash_crits_desc` | 15 | 15 | completed | `loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc` | 補齊 Uncanny Strike、Trauma、Vicious Slice、Hammerblow、Skullcrusher、Thunderstrike、Chained Deathblow、Perfect Strike、Bladed Momentum、Deflector、Momentum、Murderous Tranquility、Blazing Spirit、Unstable Power、Warp Slice 的缺漏資訊與詞彙一致性。 Translation commit: 9029232. |
 
 ## Checks
 
@@ -570,6 +571,15 @@
 - ED-WEAPONS-TW-004: `git -C <translation-repo> diff --check` passed before commit
 - ED-WEAPONS-TW-004: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
 - ED-WEAPONS-TW-004: Lua syntax tool unavailable
+- ED-WEAPONS-TW-005: 15 active localization tables reviewed
+- ED-WEAPONS-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-005: placeholders preserved: `{stacks:%s}`, `{rending:%s}`, `{time:%s}`, `{max_stacks:%s}`, `{impact:%s}`, `{damage:%s}`, `{crit_chance:%s}`, `{crit_damage:%s}`, `{block_cost:%s}`, `{toughness:%s}`, `{multiple_hit:%s}`, `{warp_charge:%s}`, `{power_level:%s}`, `{cooldown:%s}`
+- ED-WEAPONS-TW-005: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_green`, `Dot_red`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-005: glossary/local usage checked for Brittleness, Impact, Staggered, Critical Chance, Critical Hit, Hit Mass/順劈目標, Rending, Toughness, Peril, Soulblaze, Strength, and Cooldown
+- ED-WEAPONS-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-005: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-005: Lua syntax tool unavailable
 
 ## Blocked
 
