@@ -668,6 +668,17 @@
 - ED-WEAPONS-TW-013: Lua syntax tool unavailable
 - ED-WEAPONS-TW-013: `Main_Modules/WEAPONS_Blessings_Perks.lua` completed through current active source sequence
 - ED-WEAPONS-TW-013: safe next position is `Main_Modules/PENANCES.lua:loc_item_type_gear_lowerbody`
+- ED-PENANCES-TW-001: 15 active localization tables reviewed
+- ED-PENANCES-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-001: placeholders preserved: `{target}`
+- ED-PENANCES-TW-001: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-001: glossary/local usage checked for Penances, Previous Missions, Prologue, Basic Tutorial, Private Game, Trust Level, and mission type names
+- ED-PENANCES-TW-001: corrected Trust Level punctuation/wording, localized Prologue display text to `序章`, and adjusted Call to Arms title to `武裝號召`
+- ED-PENANCES-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-001: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-001: Lua syntax tool unavailable
+- ED-PENANCES-TW-001: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_basic_training_description`
 
 ## Blocked
 
