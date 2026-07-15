@@ -424,6 +424,15 @@
 - ED-NAMES-TW-009: `git -C <translation-repo> diff --check` passed before commit
 - ED-NAMES-TW-009: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-009: Lua syntax tool unavailable
+- ED-NAMES-TW-010: next 15 active localization tables reviewed
+- ED-NAMES-TW-010: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-010: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-010: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-010: glossary/local usage checked for Blazing Piety, Stalwart, Fury Rising, I Shall Not Fall, Inexorable Judgement, Inebriate's Poise, Anoint in Blood, Scourge, Enemies Within, Enemies Without, Fortitude in Fellowship, Purge the Unclean, Bleed for the Emperor, Vicious Offering, Second Wind, and Thy Wrath be Swift
+- ED-NAMES-TW-010: corrected `Stalwart` from `忠誠` to glossary `死忠`
+- ED-NAMES-TW-010: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-010: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-010: Lua syntax tool unavailable
 
 ## Blocked
 
