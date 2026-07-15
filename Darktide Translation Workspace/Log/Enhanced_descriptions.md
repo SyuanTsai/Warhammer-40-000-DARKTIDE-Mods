@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 8cccd2c |
+| Commit | e0b41b0 |
 | PR URL / number | pending |
-| Next position | ED-WEAPONS-TW-001: `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_melee_common_wield_increased_armored_damage_desc` |
+| Next position | ED-WEAPONS-TW-002: `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_ranged_common_wield_armored_damage_desc` |
 
 ## Batch Progress
 
@@ -59,6 +59,7 @@
 | ED-NAMES-TW-017 | 2026-07-15 15:55:23 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_adamant_damage_vs_staggered_aura` through `loc_talent_adamant_bullet_rain_tdr` | 15 | 2 | completed | `loc_talent_adamant_bullet_rain_toughness` | 依更新後詞彙表校正 `Not Far Behind` 為「不落人後」，並補齊 `Dispense Justice` 暫譯「伸張正義」。 Translation commit: 736aa2d. |
 | ED-NAMES-TW-018 | 2026-07-15 15:59:40 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_adamant_bullet_rain_toughness` through `loc_talent_adamant_ammo_belt` | 15 | 1 | completed | `loc_talent_adamant_melee_weakspot_hits_count_as_stagger` | 依更新後詞彙表將 `Shield Plates` 從「盾型裝甲」校正為「盾形裝甲」。 Translation commit: 8cccd2c. |
 | ED-NAMES-TW-019 | 2026-07-15 16:06:34 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | final 15 active localization tables: `loc_talent_adamant_melee_weakspot_hits_count_as_stagger` through `loc_talent_adamant_limit_dmg_taken_from_hits` | 15 | 0 | completed | `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_melee_common_wield_increased_armored_damage_desc` | 本批十五項已符合更新後 Arbites 詞彙表；NAMES_Talents_Blessings.lua 已處理至檔尾，translation repo 無新 Lua commit。 |
+| ED-WEAPONS-TW-001 | 2026-07-15 16:12:52 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | first 15 active localization tables: `loc_trait_melee_common_wield_increased_armored_damage_desc` through `loc_gadget_sprint_cost_reduction_desc` | 15 | 11 | completed | `loc_trait_ranged_common_wield_armored_damage_desc` | 校正 melee perk 屬性描述，移除 zh-tw `vs` 殘留，並依詞彙表校正格檔效率與衝刺體力消耗。 Translation commit: e0b41b0. |
 
 ## Checks
 
@@ -528,6 +529,16 @@
 - ED-NAMES-TW-019: diff scope empty; no translation repo commit created
 - ED-NAMES-TW-019: Lua syntax tool unavailable
 - ED-NAMES-TW-019: `Main_Modules/NAMES_Talents_Blessings.lua` completed through current active source sequence
+- ED-WEAPONS-TW-001: first 15 active localization tables reviewed
+- ED-WEAPONS-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-001: placeholders preserved: `{damage:%s}`, `{crit_chance:%s}`, `{crit_damage:%s}`, `{stamina:%s}`, `{weakspot_damage:%s}`, `{reduced_block_cost:%s}`, `{sprinting_cost_multiplier:%s}`
+- ED-WEAPONS-TW-001: `CKWord`/`CNumb` keys preserved for touched `zh-tw`
+- ED-WEAPONS-TW-001: glossary/local usage checked for Damage vs Flak/Maniacs/Infested/Unyielding/Carapace/Unarmoured, Crit chance, Crit damage, Damage vs Groaners and Poxwalkers, Damage vs Elites, Damage vs Specialists, Stamina, Weakspot damage, Block Efficiency, and Cost for Sprinting
+- ED-WEAPONS-TW-001: removed `vs` from touched active `zh-tw` entries
+- ED-WEAPONS-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-001: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-001: Lua syntax tool unavailable
 
 ## Blocked
 

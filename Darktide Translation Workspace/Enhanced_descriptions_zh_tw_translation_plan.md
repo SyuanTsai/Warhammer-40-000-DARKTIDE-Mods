@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-WEAPONS-TW-001`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-WEAPONS-TW-002`：
 
 ```text
 File: <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua
-Start position: `loc_trait_melee_common_wield_increased_armored_damage_desc`
+Start position: `loc_trait_ranged_common_wield_armored_damage_desc`
 Scope: 15 localization tables
-Safe next position target: the 16th localization table after `loc_trait_melee_common_wield_increased_armored_damage_desc`
+Safe next position target: the 16th localization table after `loc_trait_ranged_common_wield_armored_damage_desc`
 ```
 
-最新執行狀態：ED-NAMES-TW-019 已完成；`NAMES_Talents_Blessings.lua` 已處理至檔尾，translation repo 無新 Lua commit。下一批接 `WEAPONS_Blessings_Perks.lua`。
+最新執行狀態：ED-WEAPONS-TW-001 已完成；translation repo commit `e0b41b0`。下一批接 `loc_trait_ranged_common_wield_armored_damage_desc`。
