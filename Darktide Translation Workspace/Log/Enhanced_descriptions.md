@@ -364,6 +364,15 @@
 - ED-NAMES-TW-003: `git -C <translation-repo> diff --check` passed
 - ED-NAMES-TW-003: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-003: Lua syntax tool unavailable
+- ED-NAMES-TW-004: next 15 active localization tables reviewed
+- ED-NAMES-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-004: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-004: glossary/local usage checked for Surge, Warp Nexus, Transfer Peril, Blazing Spirit, Penetrating Flame, Showstopper, Concentrated Fire, Reassuringly Accurate, Man-Stopper, Scattershot, Full Bore, Shattering Impact, Everlasting Flame, and Quickflame
+- ED-NAMES-TW-004: no Lua changes required
+- ED-NAMES-TW-004: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-004: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-004: Lua syntax tool unavailable
 
 ## Blocked
 
