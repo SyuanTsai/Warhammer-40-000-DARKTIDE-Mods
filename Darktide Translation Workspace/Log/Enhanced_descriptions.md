@@ -1047,6 +1047,17 @@
 - ED-OGRYN-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
 - ED-OGRYN-TW-003: Lua syntax tool unavailable
 - ED-OGRYN-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_bigger_coherency_radius_desc`
+- ED-OGRYN-TW-004: 15 active localization tables reviewed
+- ED-OGRYN-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-004: placeholders preserved: `{radius:%s}`, `{duration:%s}`, `{damage:%s}`, `{stamina:%s}`, `{damage_taken:%s}`, `{reduction:%s}`, `{stacks:%s}`, `{damage_reduction:%s}`, `{resistance:%s}`, `{cooldown:%s}`, `{reload_speed:%s}`, `{melee_damage:%s}`, `{max_ammo:%s}`, `{explosion_radius:%s}`, `{stagger:%s}`, `{heavy_stacks:%s}`
+- ED-OGRYN-TW-004: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-OGRYN-TW-004: glossary/local usage checked for Towering Presence, Soften Them Up, Payback Time, Pumped Up, Focused Fighter, Strongman, Can't Hit Me...Again, Keep Shooting, Beat Them Back, Strike True, Slam, Ammo Stash, Big Boom, Crunch!, Batter, Ripper Guns, Grenadier Gauntlet, Rumbler, Twin-Linked Stubbers, Kickback, Pox Hound, Trapper, Gunner, Reaper, Sniper, Mutant, Coherency, Damage Taken, Damage Resistance, Stamina, Weakspot, Strength, Impact, Staggering, and Bleed
+- ED-OGRYN-TW-004: corrected Coherency radius word order, Damage Taken phrasing, Ogryn weapon glossary names, Payback Time trigger list, Stamina typo, Damage Resistance wording, Empty Clip terminology, heavy/light melee wording, ammo reserve rounding, and explosion radius wording
+- ED-OGRYN-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-OGRYN-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
+- ED-OGRYN-TW-004: Lua syntax tool unavailable
+- ED-OGRYN-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_pushing_applies_brittlenes_desc`
 
 ## Blocked
 
