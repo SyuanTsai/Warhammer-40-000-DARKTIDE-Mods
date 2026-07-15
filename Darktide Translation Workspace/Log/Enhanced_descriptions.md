@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | cb6b25e |
+| Commit | b9398ae |
 | PR URL / number | pending |
-| Next position | ED-WEAPONS-TW-003: `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_bespoke_bleed_on_activated_hit_desc` |
+| Next position | ED-WEAPONS-TW-004: `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_bespoke_power_bonus_on_first_attack_desc` |
 
 ## Batch Progress
 
@@ -61,6 +61,7 @@
 | ED-NAMES-TW-019 | 2026-07-15 16:06:34 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | final 15 active localization tables: `loc_talent_adamant_melee_weakspot_hits_count_as_stagger` through `loc_talent_adamant_limit_dmg_taken_from_hits` | 15 | 0 | completed | `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_melee_common_wield_increased_armored_damage_desc` | 本批十五項已符合更新後 Arbites 詞彙表；NAMES_Talents_Blessings.lua 已處理至檔尾，translation repo 無新 Lua commit。 |
 | ED-WEAPONS-TW-001 | 2026-07-15 16:12:52 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | first 15 active localization tables: `loc_trait_melee_common_wield_increased_armored_damage_desc` through `loc_gadget_sprint_cost_reduction_desc` | 15 | 11 | completed | `loc_trait_ranged_common_wield_armored_damage_desc` | 校正 melee perk 屬性描述，移除 zh-tw `vs` 殘留，並依詞彙表校正格檔效率與衝刺體力消耗。 Translation commit: e0b41b0. |
 | ED-WEAPONS-TW-002 | 2026-07-15 16:17:52 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_ranged_common_wield_armored_damage_desc` through `loc_trait_bespoke_armor_penetration_against_staggered_desc` | 15 | 10 | completed | `loc_trait_bespoke_bleed_on_activated_hit_desc` | 校正 ranged perk 屬性描述與 Opportunist，移除 zh-tw `vs` 殘留並保留 `CKWord`/`CNumb` 結構。 Translation commit: cb6b25e. |
+| ED-WEAPONS-TW-003 | 2026-07-15 16:24:25 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_bespoke_bleed_on_activated_hit_desc` through `loc_trait_bespoke_infinite_melee_cleave_on_weakspot_kill_desc` | 15 | 8 | completed | `loc_trait_bespoke_power_bonus_on_first_attack_desc` | 補回 Bloodletter 持續時間/tick/護盾限制、Power 類可刷新提示、Devastating Strike 甲殼限制，以及 Brutal Momentum/Deathblow 的非歐格林限制。 Translation commit: b9398ae. |
 
 ## Checks
 
@@ -550,6 +551,15 @@
 - ED-WEAPONS-TW-002: `git -C <translation-repo> diff --check` passed before commit
 - ED-WEAPONS-TW-002: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
 - ED-WEAPONS-TW-002: Lua syntax tool unavailable
+- ED-WEAPONS-TW-003: 15 active localization tables reviewed
+- ED-WEAPONS-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-003: placeholders preserved: `{stacks:%s}`, `{crit_chance:%s}`, `{power_level:%s}`, `{time:%s}`, `{movement_speed:%s}`, `{rending:%s}`, `{max_stacks:%s}`, `{cleave:%s}`, `{multiple_hit:%s}`, `{damage:%s}`, `{hit_mass:%s}`, `{weakspot_damage:%s}`
+- ED-WEAPONS-TW-003: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-003: glossary/local usage checked for Bleed, Critical Chance, Strength, Movement Speed, Rending, Brittleness, Cleave, Critical Hit, Weakspot Damage, Weakspot Kill, Hit Mass, Ogryn, and Carapace
+- ED-WEAPONS-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-003: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-003: Lua syntax tool unavailable
 
 ## Blocked
 
