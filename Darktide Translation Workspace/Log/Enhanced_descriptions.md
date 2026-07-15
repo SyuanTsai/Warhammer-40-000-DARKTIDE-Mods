@@ -402,6 +402,17 @@
 - ED-NAMES-TW-007: `git -C <translation-repo> diff --check` passed
 - ED-NAMES-TW-007: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-007: Lua syntax tool unavailable
+- ED-NAMES-TW-008: next 15 active localization tables reviewed
+- ED-NAMES-TW-008: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-008: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-008: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-008: glossary/local usage checked for In Fire Reborn, Psychic Leeching, Charged Up, Disrupt Destiny, Purloin Providence, Lingering Influence, Soulstealer, Quietude, Warp Expenditure, Perilous Combustion, Perfect Timing, Wildfire, Mind in Motion, Malefic Momentum, and Souldrinker
+- ED-NAMES-TW-008: corrected `Mind in Motion` from copied `靈能學者光環` to candidate `動中之心`
+- ED-NAMES-TW-008: added `Mind in Motion` to `Term Candidates.md`
+- ED-NAMES-TW-008: user requested skipping `Main_Modules/TALENTS/TALENTS_Psyker.lua` for now when class talent description modules are reached
+- ED-NAMES-TW-008: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-008: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-008: Lua syntax tool unavailable
 
 ## Blocked
 

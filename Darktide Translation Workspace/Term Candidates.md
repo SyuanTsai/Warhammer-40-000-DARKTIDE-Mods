@@ -24,3 +24,4 @@
 
 | Term / English | Proposed zh-tw | Source MOD | File | Localization key | Reason | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| Mind in Motion | 動中之心 | Enhanced_descriptions | `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua` | `loc_talent_psyker_venting_doesnt_slow` | `Referneces/Translation.md`/local table missing fixed zh-tw; current value was copied from `Psykinetic's Aura` and was semantically wrong. | candidate | Added during ED-NAMES-TW-008. |
