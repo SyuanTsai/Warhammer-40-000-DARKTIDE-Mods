@@ -590,6 +590,17 @@
 - ED-WEAPONS-TW-006: `git -C <translation-repo> diff --check` passed before commit
 - ED-WEAPONS-TW-006: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
 - ED-WEAPONS-TW-006: Lua syntax tool unavailable
+- ED-WEAPONS-TW-007: 15 active localization tables reviewed
+- ED-WEAPONS-TW-007: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-007: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-007: placeholders preserved: `{rend:%s}`, `{extra_hits:%s}`, `{stagger:%s}`, `{heavy_damage:%s}`, `{crit_chance:%s}`, `{time:%s}`, `{toughness:%s}`, `{power:%s}`, `{damage:%s}`, `{power_level:%s}`, `{explosion_radius:%s}`, `{block_cost:%s}`, `{cooldown:%s}`, `{stacks:%s}`, `{duration:%s}`, `{rending:%s}`, `{max_stacks:%s}`
+- ED-WEAPONS-TW-007: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_green`, and `Dot_red` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-007: glossary/local usage checked for Brittleness, Impact, Damage, Hit Mass/順劈目標, Cleave, Critical Chance, Toughness, Strength/威力, Stamina, Block Cost, Chem Toxin, Arbites, and Hive Scum
+- ED-WEAPONS-TW-007: removed unsupported `{max_stacks:%s}` from Supercharge and removed non-source two-stage recovery claim from No Guts, No Glory
+- ED-WEAPONS-TW-007: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-007: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-007: Lua syntax tool unavailable
+- ED-WEAPONS-TW-007: safe next position is `loc_trait_bespoke_increased_weakspot_damage_against_toxin_status_desc`
 
 ## Blocked
 
