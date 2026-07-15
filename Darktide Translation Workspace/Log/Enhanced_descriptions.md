@@ -1014,6 +1014,17 @@
 - ED-VETERAN-TW-005: Lua syntax tool unavailable
 - ED-VETERAN-TW-005: `Main_Modules/TALENTS/TALENTS_Veteran.lua` active localization tables completed through current source sequence
 - ED-VETERAN-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_ability_ogryn_grenade_box_description`
+- ED-OGRYN-TW-001: 15 active localization tables reviewed
+- ED-OGRYN-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-001: placeholders preserved: `{recharge:%s}`, `{max_charges:%s}`, `{talent_name:%s}`, `{cooldown_duration:%s}`, `{radius:%s}`, `{num_grenades:%s}`, `{amount:%s}`, `{damage:%s}`, `{toughness_regen_rate_modifier:%s}`, `{suppression:%s}`, `{attack_speed:%s}`, `{move_speed:%s}`, `{duration:%s}`, `{cooldown:%s}`, `{stack:%s}`, `{toughness:%s}`, `{ability:%s}`, `{stacks:%s}`
+- ED-OGRYN-TW-001: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-OGRYN-TW-001: glossary/local usage checked for Big Box of Hurt, Big Friendly Rock, That One Didn't Count, Frag Bomb, Bombs Away!, Bigger Box of Hurt, Intimidating Presence, Bonebreaker's Aura, Stay Close!, Coward Culling, Bull Rush, Indomitable, Trample, Stomping Boots, Pulverise, Frag Grenade, Trample, Ripper Guns, Grenadier Gauntlet, Rumbler, Twin-Linked Stubbers, Kickback, Pack Master, Captain, Twins, Coherency, Stagger, Weakspot Hits, Bleed, and Suppression
+- ED-OGRYN-TW-001: corrected grenade terminology, Captain to `連長`, Pack Master naming, missing punctuation, glossary weapon names, Coherency ally phrasing, suppressible enemy names, Trample colored keyword, Bulwark shield spacing, and Void shield wording
+- ED-OGRYN-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-OGRYN-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
+- ED-OGRYN-TW-001: Lua syntax tool unavailable
+- ED-OGRYN-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_ability_ogryn_taunt_shout_new_desc`
 
 ## Blocked
 

@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-OGRYN-TW-001`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-OGRYN-TW-002`：
 
 ```text
 File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Ogryn.lua
-Start position: `loc_ability_ogryn_grenade_box_description`
+Start position: `loc_ability_ogryn_taunt_shout_new_desc`
 Scope: next 15 active localization tables
-Safe next position target: the 16th active localization table after `loc_ability_ogryn_grenade_box_description`
+Safe next position target: the 16th active localization table after `loc_ability_ogryn_taunt_shout_new_desc`
 ```
 
-最新執行狀態：ED-VETERAN-TW-005 已完成；translation repo commit `49c23a4`。Veteran active localization tables completed. 下一批接 `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_ability_ogryn_grenade_box_description`。
+最新執行狀態：ED-OGRYN-TW-001 已完成；translation repo commit `52e5d5f`。下一批接 `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_ability_ogryn_taunt_shout_new_desc`。
