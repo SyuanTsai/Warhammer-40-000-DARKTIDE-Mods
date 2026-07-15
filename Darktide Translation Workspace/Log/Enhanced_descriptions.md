@@ -969,6 +969,17 @@
 - ED-VETERAN-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
 - ED-VETERAN-TW-001: Lua syntax tool unavailable
 - ED-VETERAN-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency_description`
+- ED-VETERAN-TW-002: 15 active localization tables reviewed
+- ED-VETERAN-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-002: placeholders preserved: `{talent_name:%s}`, `{toughness:%s}`, `{duration:%s}`, `{damage:%s}`, `{movement_speed:%s}`, `{damage_duration:%s}`, `{cooldown:%s}`, `{charges:%s}`, `{ability_cooldown:%s}`, `{tdr:%s}`, `{threat_multiplier:%s}`, `{power:%s}`, `{stacks:%s}`, `{max_stacks}`, `{reload_speed:%s}`, `{rending:%s}`, `{toughness_replenish_multiplier:%s}`, `{stamina:%s}`, `{new_stacks:%s}`, `{time:%s}`, `{max_stacks:%s}`
+- ED-VETERAN-TW-002: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-VETERAN-TW-002: glossary/local usage checked for Duty and Honour, Only In Death Does Duty End, Infiltrate, Overwatch, Hunter's Resolve, Low Profile, Close Quarters Killzone, Marksman's Focus, Chink in their Armour, Tunnel Vision, Long Range Assassin, Focus Target!, Target Down!, Redirect Fire!, Focused Fire, Toughness, Coherency, Stealth, Combat Ability, Focus, Rending, Finesse, Stamina, and Weakspot Hit
+- ED-VETERAN-TW-002: corrected Coherency ally phrasing, revive wording, Stealth duration/ending wording, Combat Ability charge wording, Toughness Damage Reduction duration order, Close Quarters Killzone damage/table wording, Weakspot Hit colored keyword, numeric color wrappers for Focus/Focus Target stack increases, and Focus Target yellow-highlight typo
+- ED-VETERAN-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-VETERAN-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
+- ED-VETERAN-TW-002: Lua syntax tool unavailable
+- ED-VETERAN-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_talent_veteran_weapon_switch_new_description`
 
 ## Blocked
 
