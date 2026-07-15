@@ -612,6 +612,17 @@
 - ED-WEAPONS-TW-008: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
 - ED-WEAPONS-TW-008: Lua syntax tool unavailable
 - ED-WEAPONS-TW-008: safe next position is `loc_trait_bespoke_crit_chance_based_on_aim_time_desc`
+- ED-WEAPONS-TW-009: 15 active localization tables reviewed
+- ED-WEAPONS-TW-009: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-009: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-009: placeholders preserved: `{crit_chance:%s}`, `{time:%s}`, `{stacks:%s}`, `{crit_weakspot_damage:%s}`, `{damage:%s}`, `{power_level:%s}`, `{ammo:%s}`, `{suppression:%s}`, `{recoil_reduction:%s}`, `{damage_near:%s}`, `{weapon_spread:%s}`, `{radius:%s}`
+- ED-WEAPONS-TW-009: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_nc`, and `Dot_green` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-009: glossary/local usage checked for Critical Chance, Critical Hit, Critical, Weakspot Hit, Weakspot Damage, Staggered/Staggering, Strength/威力, Suppression, Bleed, Explosion Radius, and Reload reset wording
+- ED-WEAPONS-TW-009: corrected `Weakspothits_rgb_tw` to existing `Weakspothit_rgb_tw` in touched entries, replaced hard/stun wording with 踉蹌 where source says Stagger, and restored missing notes for alt fire, suppression immunity, refresh, shield blocking, and always-active explosion radius
+- ED-WEAPONS-TW-009: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-009: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-009: Lua syntax tool unavailable
+- ED-WEAPONS-TW-009: safe next position is `loc_trait_bespoke_damage_vs_stagger_desc`
 
 ## Blocked
 
