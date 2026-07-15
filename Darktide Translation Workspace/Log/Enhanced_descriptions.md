@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | b64a0d8 |
+| Commit | 703a343 |
 | PR URL / number | pending |
-| Next position | ED-MENUS-TW-006: `<translation-repo>/Main_Modules/MENUS.lua:loc_wait_reason_store` |
+| Next position | ED-CURIOS-TW-001: `<translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua:loc_inate_gadget_health_desc` |
 
 ## Batch Progress
 
@@ -52,6 +52,7 @@
 | ED-MENUS-TW-003 | 2026-07-15 08:31:42 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_credits_goods_vendor_description_text` through `loc_inventory_view_display_name` | 15 | 7 | completed | `loc_inventory_title_slot_gear_lowerbody` | 補上 Stimm Lab 繁中，校正 Brunt 武器描述、Strike Team、Previous Missions、Havoc Assignment 與 Loadout 標籤；其餘八項已符合詞彙表或既有一致譯法。 Translation commit: e66dab3. |
 | ED-MENUS-TW-004 | 2026-07-15 08:34:22 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_inventory_title_slot_gear_lowerbody` through `loc_weapon_special_special_attack` | 15 | 5 | completed | `loc_stats_display_mobility_stat` | 依詞彙表與本地用法校正 Favourite、Perk、Primary Action、Secondary Action 與 Special Melee Attack；其餘十項已符合來源或既有一致譯法。 Translation commit: 2bebbdd. |
 | ED-MENUS-TW-005 | 2026-07-15 08:37:10 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_stats_display_mobility_stat` through `loc_wait_reason_backend` | 15 | 10 | completed | `loc_wait_reason_store` | 補齊七個 Dump Stats `CKWord` 繁中，校正 Cloud Radius、Dedicated Server 與 Fatshark backend 等等待提示；其餘五項已符合來源或既有一致譯法。 Translation commit: b64a0d8. |
+| ED-MENUS-TW-006 | 2026-07-15 08:39:56 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | final 4 loc_* tables: `loc_wait_reason_store` through `loc_wait_reason_platform_psn` | 4 | 3 | completed | `<translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua:loc_inate_gadget_health_desc` | 校正 Steam、Xbox、PSN 平台等待提示的品牌空格；MENUS.lua 已處理至檔尾。 Translation commit: 703a343. |
 
 ## Checks
 
@@ -285,6 +286,15 @@
 - ED-MENUS-TW-005: `git -C <translation-repo> diff --check` passed before commit
 - ED-MENUS-TW-005: diff scope limited to `Main_Modules/MENUS.lua`
 - ED-MENUS-TW-005: Lua syntax tool unavailable
+- ED-MENUS-TW-006: all final 4 `loc_*` tables reviewed
+- ED-MENUS-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-006: no placeholder-bearing strings in touched active `zh-tw`
+- ED-MENUS-TW-006: local usage checked for Store, Steam, Xbox, and PSN labels
+- ED-MENUS-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-MENUS-TW-006: diff scope limited to `Main_Modules/MENUS.lua`
+- ED-MENUS-TW-006: Lua syntax tool unavailable
+- ED-MENUS-TW-006: `Main_Modules/MENUS.lua` completed through current English source sequence
 
 ## Blocked
 
