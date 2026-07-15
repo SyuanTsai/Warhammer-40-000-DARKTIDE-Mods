@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-PENANCES-TW-020`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-ZEALOT-TW-001`：
 
 ```text
-File: <translation-repo>/Main_Modules/PENANCES.lua
-Start position: `loc_achievement_enemies_killed_by_barrels_description`
+File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Zealot.lua
+Start position: `loc_ability_shock_grenade_description`
 Scope: 15 localization tables
-Safe next position target: the 16th localization table after `loc_achievement_enemies_killed_by_barrels_description`
+Safe next position target: the 16th localization table after `loc_ability_shock_grenade_description`
 ```
 
-最新執行狀態：ED-PENANCES-TW-019 已完成；translation repo commit `34045c8`。下一批接 `Main_Modules/PENANCES.lua:loc_achievement_enemies_killed_by_barrels_description`。
+最新執行狀態：ED-PENANCES-TW-020 已完成；translation repo commit `4d6da00`。`Main_Modules/PENANCES.lua` active localization tables 已處理完畢；依使用者先前要求跳過 `Main_Modules/TALENTS/TALENTS_Psyker.lua`，下一批接 `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_ability_shock_grenade_description`。

@@ -879,6 +879,18 @@
 - ED-PENANCES-TW-019: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
 - ED-PENANCES-TW-019: Lua syntax tool unavailable
 - ED-PENANCES-TW-019: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_enemies_killed_by_barrels_description`
+- ED-PENANCES-TW-020: final 3 active localization tables reviewed
+- ED-PENANCES-TW-020: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-020: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-020: placeholders preserved: `{target}`
+- ED-PENANCES-TW-020: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-020: glossary/local usage checked for Pox Burster, Explosive barrels, Penances, and offensive category naming
+- ED-PENANCES-TW-020: enabled active zh-tw for explosive barrel and Poxburster descriptions; `loc_achievement_enemies_killed_by_poxburster_name` was reviewed and already correct
+- ED-PENANCES-TW-020: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-020: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-020: Lua syntax tool unavailable
+- ED-PENANCES-TW-020: `Main_Modules/PENANCES.lua` active localization tables completed through current source sequence
+- ED-PENANCES-TW-020: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_ability_shock_grenade_description`; skipped `Main_Modules/TALENTS/TALENTS_Psyker.lua` per user request
 
 ## Blocked
 
