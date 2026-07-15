@@ -935,6 +935,17 @@
 - ED-ZEALOT-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
 - ED-ZEALOT-TW-004: Lua syntax tool unavailable
 - ED-ZEALOT-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_damage_vs_elites_desc`
+- ED-ZEALOT-TW-005: 15 active localization tables reviewed
+- ED-ZEALOT-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-005: placeholders preserved: `{damage:%s}`, `{cooldown:%s}`, `{duration:%s}`, `{spread:%s}`, `{recoil:%s}`, `{impact_modifier:%s}`, `{crit_chance:%s}`, `{max_stacks:%s}`, `{time:%s}`, `{toughness_damage_reduction:%s}`, `{attack_speed:%s}`, `{damage_reduction:%s}`, `{damage_resistance:%s}`, `{damage_taken:%s}`, `{toughness:%s}`, `{stamina:%s}`, `{health_segment:%s}`
+- ED-ZEALOT-TW-005: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ZEALOT-TW-005: glossary/local usage checked for Abolish Blasphemers, Dance of Death, Grievous Wounds, Scourge, Enduring Faith, Bleed for the Emperor, Time to Kill, Hubris, Blinded by Blood, Prime Target, No Respite, Unfaltering, Faith's Fortitude, Elite, Weakspot Hits, Bleed, Critical Hit, Critical Chance, Health, Wounds, Damage Resistance, and Stamina
+- ED-ZEALOT-TW-005: corrected Elite damage word order, Dance of Death conjunction, Weakspot Hits colored keyword, Critical/Critical Chance wording, Health to `生命值`, Japanese-form `増加`, Prime Target recovery wording, and typo `潜行`
+- ED-ZEALOT-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-ZEALOT-TW-005: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
+- ED-ZEALOT-TW-005: Lua syntax tool unavailable
+- ED-ZEALOT-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_heal_damage_taken_desc`
 
 ## Blocked
 
