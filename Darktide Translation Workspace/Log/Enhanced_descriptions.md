@@ -756,6 +756,17 @@
 - ED-PENANCES-TW-008: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-008: Lua syntax tool unavailable
 - ED-PENANCES-TW-008: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_zealot_aura_corruption_healed_name`
+- ED-PENANCES-TW-009: 15 active localization tables reviewed
+- ED-PENANCES-TW-009: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-009: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-009: placeholders preserved: `{target}`, `{time_window}`
+- ED-PENANCES-TW-009: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-009: glossary/local usage checked for Beacon of Purity, Corruption Damage, Martyrdom, Chastise the Wicked, Fury of the Faithful, Stun Grenade, Stunstorm Grenade, Sniper, Mutant, Holy Revenant, Health, Psyker, and Zealot
+- ED-PENANCES-TW-009: corrected Shocking Stuff spacing around `Stunned` keyword
+- ED-PENANCES-TW-009: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-009: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-009: Lua syntax tool unavailable
+- ED-PENANCES-TW-009: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_rank_psyker_2_x_description`
 
 ## Blocked
 
