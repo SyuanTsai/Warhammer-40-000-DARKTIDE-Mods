@@ -354,6 +354,16 @@
 - ED-NAMES-TW-002: `git -C <translation-repo> diff --check` passed
 - ED-NAMES-TW-002: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-002: Lua syntax tool unavailable
+- ED-NAMES-TW-003: next 15 active localization tables reviewed
+- ED-NAMES-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-003: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-003: glossary/local usage checked for Offensive Defence, Raking Fire, Dumdum, Sustained Fire, Fire Frenzy, Deathspitter, Stripped Down, Speedload, Terrifying Barrage, Ceaseless Barrage, Inspiring Barrage, Surgical, No Respite, Blaze Away, and Pinning Fire
+- ED-NAMES-TW-003: `Inspiring Barrage` kept as `振奮彈幕` to match the ranged weapon blessing section despite a later duplicate glossary entry
+- ED-NAMES-TW-003: no Lua changes required
+- ED-NAMES-TW-003: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-003: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-003: Lua syntax tool unavailable
 
 ## Blocked
 
