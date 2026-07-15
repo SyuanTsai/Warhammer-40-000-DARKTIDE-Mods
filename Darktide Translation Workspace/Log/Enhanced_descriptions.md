@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 736aa2d |
+| Commit | 8cccd2c |
 | PR URL / number | pending |
-| Next position | ED-NAMES-TW-018: `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua:loc_talent_adamant_bullet_rain_toughness` |
+| Next position | ED-NAMES-TW-019: `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua:loc_talent_adamant_melee_weakspot_hits_count_as_stagger` |
 
 ## Batch Progress
 
@@ -57,6 +57,7 @@
 | ED-CURIOS-TW-002 | 2026-07-15 08:46:47 +08:00 | <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua | final 7 loc_* tables: `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` through `loc_trait_gadget_dr_vs_snipers_desc` | 7 | 7 | completed | `<translation-repo>/Main_Modules/TALENTS_Modular.lua:loc_glossary_talent_default` | 校正任務獎勵珍品機率句，依詞彙表校正 Flamers 為「火焰兵」，並統一傷害抗性敵人括號格式；CURIOS_Blessings_Perks.lua 已處理至檔尾。 Translation commit: 412476f. |
 | ED-NAMES-TW-016 | 2026-07-15 15:03:08 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_ogryn_melee_stagger` through `loc_talent_ability_adamant_grenade_improved` | 15 | 1 | completed | `loc_talent_adamant_damage_vs_staggered_aura` | 依詞彙表將 `Mobile Emplacement` 校正為「機動部屬」；`Voltaic Shock Mine` 詞彙表繁中空白，保留現有「電能地雷」並新增候選詞。 Translation commit: 7aafc5c. |
 | ED-NAMES-TW-017 | 2026-07-15 15:55:23 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_adamant_damage_vs_staggered_aura` through `loc_talent_adamant_bullet_rain_tdr` | 15 | 2 | completed | `loc_talent_adamant_bullet_rain_toughness` | 依更新後詞彙表校正 `Not Far Behind` 為「不落人後」，並補齊 `Dispense Justice` 暫譯「伸張正義」。 Translation commit: 736aa2d. |
+| ED-NAMES-TW-018 | 2026-07-15 15:59:40 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_adamant_bullet_rain_toughness` through `loc_talent_adamant_ammo_belt` | 15 | 1 | completed | `loc_talent_adamant_melee_weakspot_hits_count_as_stagger` | 依更新後詞彙表將 `Shield Plates` 從「盾型裝甲」校正為「盾形裝甲」。 Translation commit: 8cccd2c. |
 
 ## Checks
 
@@ -506,6 +507,16 @@
 - ED-NAMES-TW-017: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-017: Lua syntax tool unavailable
 - ED-NAMES-TW-017: safe next position is `loc_talent_adamant_bullet_rain_toughness`
+- ED-NAMES-TW-018: next 15 active localization tables reviewed
+- ED-NAMES-TW-018: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-018: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-018: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-018: glossary/local usage checked for Terminal Decree, Writ of Judgement, Forceful, Arbites Vigilant, Judicial Force, No Escape, Withering Fire, Hammer of Judgement, Razor-Jaw Augment, Up Close, Walk It Off, Shield Plates, Arbitrator Armour, Voltaic Mandibles Augment, and Ammo Belt
+- ED-NAMES-TW-018: corrected `Shield Plates` from `盾型裝甲` to glossary `盾形裝甲`
+- ED-NAMES-TW-018: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-018: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-018: Lua syntax tool unavailable
+- ED-NAMES-TW-018: safe next position is `loc_talent_adamant_melee_weakspot_hits_count_as_stagger`
 
 ## Blocked
 
