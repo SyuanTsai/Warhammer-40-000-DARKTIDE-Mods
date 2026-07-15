@@ -991,6 +991,17 @@
 - ED-VETERAN-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
 - ED-VETERAN-TW-003: Lua syntax tool unavailable
 - ED-VETERAN-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_talent_veteran_attack_speed_description`
+- ED-VETERAN-TW-004: 15 active localization tables reviewed
+- ED-VETERAN-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-004: placeholders preserved: `{melee_attack_speed:%s}`, `{damage_heal:%s}`, `{toughness:%s}`, `{cleave:%s}`, `{crit_chance:%s}`, `{ammo:%s}`, `{damage:%s}`, `{stacks:%s}`, `{duration:%s}`, `{chance:%s}`, `{amount:%s}`, `{time:%s}`, `{krak_grenade:%s}`, `{krak:%s}`, `{frag_grenade:%s}`, `{frag_damage:%s}`, `{smoke_grenade:%s}`, `{smoke:%s}`, `{stamina:%s}`, `{stamina_per_shot:%s}`, `{radius:%s}`, `{revive_speed:%s}`, `{movement_speed:%s}`, `{damage_reduction:%s}`
+- ED-VETERAN-TW-004: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-VETERAN-TW-004: glossary/local usage checked for Trench Fighter Drill, Field Improvisation, Withering Fire, Opening Salvo, Covert Operative, Serrated Blade, Catch a Breath, Grenadier, Demolition Stockpile, Grenade Tinkerer, Precision Strikes, Deadshot, Born Leader, Leave No One Behind, Demolition Team, Corruption, Wound, Cleave, Critical Hit, Bleed, Krak Grenade, Frag Grenade, Smoke Grenade, Stamina, Coherency, and Stun
+- ED-VETERAN-TW-004: corrected Ammo Crate typo, per-second Toughness wording, Opening Salvo Critical Hit Chance wording, Covert Operative damage order, Serrated Blade application/armor wording, Catch a Breath targeting wording, Grenadier and Demolition Team grenade/coherency wording, Precision Strikes order, Deadshot stamina drain wording, Born Leader Coherency grant wording, and Leave No One Behind assist/revive wording
+- ED-VETERAN-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-VETERAN-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
+- ED-VETERAN-TW-004: Lua syntax tool unavailable
+- ED-VETERAN-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_talent_veteran_dodging_grants_crit_description`
 
 ## Blocked
 
