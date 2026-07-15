@@ -745,6 +745,17 @@
 - ED-PENANCES-TW-007: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-007: Lua syntax tool unavailable
 - ED-PENANCES-TW-007: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_zealot_elite_or_special_kills_with_shroudfield_description`
+- ED-PENANCES-TW-008: 15 active localization tables reviewed
+- ED-PENANCES-TW-008: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-008: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-008: placeholders preserved: `{target}`
+- ED-PENANCES-TW-008: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-008: glossary/local usage checked for Shroudfield, Chorus of Spiritual Fortitude, Fury, Blazing Piety, Inexorable Judgement, Momentum, Blades of Faith, Immolation Grenade, Zealous, Coherency, Benediction, Toughness Damage, and Zealot
+- ED-PENANCES-TW-008: corrected Blades of Faith kill target wording to `專家或精英敵人`
+- ED-PENANCES-TW-008: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-008: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-008: Lua syntax tool unavailable
+- ED-PENANCES-TW-008: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_zealot_aura_corruption_healed_name`
 
 ## Blocked
 

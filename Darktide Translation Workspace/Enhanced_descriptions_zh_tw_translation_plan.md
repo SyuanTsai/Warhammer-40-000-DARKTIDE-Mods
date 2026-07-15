@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-PENANCES-TW-008`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-PENANCES-TW-009`：
 
 ```text
 File: <translation-repo>/Main_Modules/PENANCES.lua
-Start position: `loc_achievement_zealot_elite_or_special_kills_with_shroudfield_description`
+Start position: `loc_achievement_zealot_aura_corruption_healed_name`
 Scope: 15 localization tables
-Safe next position target: the 16th localization table after `loc_achievement_zealot_elite_or_special_kills_with_shroudfield_description`
+Safe next position target: the 16th localization table after `loc_achievement_zealot_aura_corruption_healed_name`
 ```
 
-最新執行狀態：ED-PENANCES-TW-007 已完成；translation repo commit `0d04154`。下一批接 `Main_Modules/PENANCES.lua:loc_achievement_zealot_elite_or_special_kills_with_shroudfield_description`。
+最新執行狀態：ED-PENANCES-TW-008 已完成；translation repo commit `0d1151f`。下一批接 `Main_Modules/PENANCES.lua:loc_achievement_zealot_aura_corruption_healed_name`。
