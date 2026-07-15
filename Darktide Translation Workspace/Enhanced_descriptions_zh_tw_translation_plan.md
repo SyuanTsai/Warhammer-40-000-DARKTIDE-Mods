@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-NAMES-TW-019`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-WEAPONS-TW-001`：
 
 ```text
-File: <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua
-Start position: `loc_talent_adamant_melee_weakspot_hits_count_as_stagger`
+File: <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua
+Start position: `loc_trait_melee_common_wield_increased_armored_damage_desc`
 Scope: 15 localization tables
-Safe next position target: the 16th localization table after `loc_talent_adamant_melee_weakspot_hits_count_as_stagger`
+Safe next position target: the 16th localization table after `loc_trait_melee_common_wield_increased_armored_damage_desc`
 ```
 
-最新執行狀態：ED-NAMES-TW-018 已完成；translation repo commit `8cccd2c`。本輪仍依使用者要求持續執行，下一批接 `loc_talent_adamant_melee_weakspot_hits_count_as_stagger`。
+最新執行狀態：ED-NAMES-TW-019 已完成；`NAMES_Talents_Blessings.lua` 已處理至檔尾，translation repo 無新 Lua commit。下一批接 `WEAPONS_Blessings_Perks.lua`。

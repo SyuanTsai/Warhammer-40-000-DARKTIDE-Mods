@@ -11,7 +11,7 @@
 | Completed at | pending |
 | Commit | 8cccd2c |
 | PR URL / number | pending |
-| Next position | ED-NAMES-TW-019: `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua:loc_talent_adamant_melee_weakspot_hits_count_as_stagger` |
+| Next position | ED-WEAPONS-TW-001: `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_melee_common_wield_increased_armored_damage_desc` |
 
 ## Batch Progress
 
@@ -58,6 +58,7 @@
 | ED-NAMES-TW-016 | 2026-07-15 15:03:08 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_ogryn_melee_stagger` through `loc_talent_ability_adamant_grenade_improved` | 15 | 1 | completed | `loc_talent_adamant_damage_vs_staggered_aura` | 依詞彙表將 `Mobile Emplacement` 校正為「機動部屬」；`Voltaic Shock Mine` 詞彙表繁中空白，保留現有「電能地雷」並新增候選詞。 Translation commit: 7aafc5c. |
 | ED-NAMES-TW-017 | 2026-07-15 15:55:23 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_adamant_damage_vs_staggered_aura` through `loc_talent_adamant_bullet_rain_tdr` | 15 | 2 | completed | `loc_talent_adamant_bullet_rain_toughness` | 依更新後詞彙表校正 `Not Far Behind` 為「不落人後」，並補齊 `Dispense Justice` 暫譯「伸張正義」。 Translation commit: 736aa2d. |
 | ED-NAMES-TW-018 | 2026-07-15 15:59:40 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_adamant_bullet_rain_toughness` through `loc_talent_adamant_ammo_belt` | 15 | 1 | completed | `loc_talent_adamant_melee_weakspot_hits_count_as_stagger` | 依更新後詞彙表將 `Shield Plates` 從「盾型裝甲」校正為「盾形裝甲」。 Translation commit: 8cccd2c. |
+| ED-NAMES-TW-019 | 2026-07-15 16:06:34 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | final 15 active localization tables: `loc_talent_adamant_melee_weakspot_hits_count_as_stagger` through `loc_talent_adamant_limit_dmg_taken_from_hits` | 15 | 0 | completed | `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_melee_common_wield_increased_armored_damage_desc` | 本批十五項已符合更新後 Arbites 詞彙表；NAMES_Talents_Blessings.lua 已處理至檔尾，translation repo 無新 Lua commit。 |
 
 ## Checks
 
@@ -517,6 +518,16 @@
 - ED-NAMES-TW-018: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-018: Lua syntax tool unavailable
 - ED-NAMES-TW-018: safe next position is `loc_talent_adamant_melee_weakspot_hits_count_as_stagger`
+- ED-NAMES-TW-019: final 15 active localization tables reviewed
+- ED-NAMES-TW-019: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-019: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-019: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-019: glossary/local usage checked for Concussive, Canine Morale, Imposing Force, Plasteel Plates, Hold the Line, Judicious Efficiency, Rapid Movement, Rebreather, Street Smarts, Drive them Back, Target Selection, Prosecution Blow, Monstrosity Hunter, Strike Down, and True Grit
+- ED-NAMES-TW-019: no Lua changes required
+- ED-NAMES-TW-019: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-019: diff scope empty; no translation repo commit created
+- ED-NAMES-TW-019: Lua syntax tool unavailable
+- ED-NAMES-TW-019: `Main_Modules/NAMES_Talents_Blessings.lua` completed through current active source sequence
 
 ## Blocked
 
