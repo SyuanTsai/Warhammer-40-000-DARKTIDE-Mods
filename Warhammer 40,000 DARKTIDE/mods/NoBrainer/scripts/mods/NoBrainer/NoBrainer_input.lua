@@ -37,9 +37,9 @@ local function _minigame_view_active()
 	return ui:view_active("scanner_display_view") or ui:view_active(PRACTICE_VIEW)
 end
 
-local function _decode(action, result)
+local function _decode(action, result, source)
 	if mod._ds_input then
-		return mod._ds_input(action, result)
+		return mod._ds_input(action, result, source)
 	end
 
 	return result
@@ -48,7 +48,7 @@ end
 local function _exp_move(action, result, source)
 	if not S("enable_expedition_auto_solve") then return result end
 	local exp = mod._exp
-	if not exp or exp.timer <= 0 or not exp.active or not exp.gameplay then return result end
+	if not exp or not exp.session_active or exp.timer <= 0 or not exp.active or not exp.gameplay then return result end
 	if (mod._exp_startup_delay or 0) > 0 then return result end
 	if not _minigame_view_active() then return result end
 
@@ -86,7 +86,7 @@ end
 local function _expedition(action, result)
 	if not S("enable_expedition_auto_solve") then return result end
 	local exp = mod._exp
-	if not exp or exp.timer <= 0 or not exp.active or not exp.gameplay then return result end
+	if not exp or not exp.session_active or exp.timer <= 0 or not exp.active or not exp.gameplay then return result end
 	if (mod._exp_startup_delay or 0) > 0 then return result end
 
 	local now = mod._time("gameplay")
@@ -141,7 +141,7 @@ end
 local function _drill(action, result)
 	if not S("enable_drill_auto") then return result end
 	local drill = mod._drill
-	if not drill or drill.timer <= 0 or not drill.active or not drill.gameplay then return result end
+	if not drill or not drill.session_active or not drill.session_ready or drill.timer <= 0 or not drill.active or not drill.gameplay then return result end
 	if (mod._drill_startup_delay or 0) > 0 then return result end
 	if not _minigame_view_active() then
 		return result
@@ -151,13 +151,13 @@ local function _drill(action, result)
 		local now = mod._time("gameplay")
 		if not now then return result end
 		local stage = drill.stage
-		if mod._drill_release_until > now then
-			mod._debug_event_throttle("drill_input_release_event", 1.0, "drill", "synthetic_release", { action = action, stage = stage, until_t = mod._drill_release_until })
-			return false
-		end
 		if mod._drill_press_until > now then
 			mod._debug_event_throttle("drill_input_press_event", 1.0, "drill", "synthetic_hold", { action = action, stage = stage, until_t = mod._drill_press_until })
 			return true
+		end
+		if mod._drill_release_until > now then
+			mod._debug_event_throttle("drill_input_release_event", 1.0, "drill", "synthetic_release", { action = action, stage = stage, until_t = mod._drill_release_until })
+			return false
 		end
 		if result then return result end
 		if mod._drill_cooldown > 0 then return result end
@@ -248,7 +248,7 @@ end
 local function _balance(action, result)
 	if not S("enable_balance") then return result end
 	local bal = mod._bal
-	if not bal or bal.timer <= 0 or not bal.enabled then
+	if not bal or not bal.active or bal.timer <= 0 or not bal.enabled then
 		return result
 	end
 
@@ -389,6 +389,7 @@ local function _scan(action, result)
 			if now and now > mod._scan_hold_until then
 				mod._debug_run_end("scan", "hold_finished", { action = action, hold_until = mod._scan_hold_until, now = now, target = tostring(mod._scan_hold_target) })
 				mod._scan_holding = false
+				mod._scan_hold_until = 0
 				mod._scan_hold_target = nil
 				return result
 			end
@@ -463,17 +464,17 @@ local function _any_minigame_active()
 	local drill = mod._drill
 	local ds = mod._ds
 
-	return (exp and exp.active and (exp.timer or 0) > 0)
+	return (exp and exp.session_active and exp.active and (exp.timer or 0) > 0)
 		or (freq and freq.active and (freq.timer or 0) > 0)
-		or (drill and drill.active and (drill.timer or 0) > 0)
+		or (drill and drill.session_active and drill.session_ready and drill.active and (drill.timer or 0) > 0)
 		or (ds and ds.active and (ds.timer or 0) > 0)
 		or mod._scan_holding
 		or mod._scan_auto_pending
-		or (bal and bal.enabled and (bal.timer or 0) > 0)
+		or (bal and bal.active and bal.enabled and (bal.timer or 0) > 0)
 end
 
-local function _apply_route(fn, action, result)
-	local next_result = fn(action, result)
+local function _apply_route(fn, action, result, source)
+	local next_result = fn(action, result, source)
 
 	if next_result == nil then
 		return result
@@ -503,7 +504,7 @@ local function _debug_route_change(route, action, source, before, after)
 end
 
 local function _apply_named_route(route, fn, action, result, source)
-	local next_result = _apply_route(fn, action, result)
+	local next_result = _apply_route(fn, action, result, source)
 	_debug_route_change(route, action, source, result, next_result)
 	return next_result
 end
@@ -555,7 +556,8 @@ end
 
 local function hook_fn(func, self, action)
 	local r = func(self, action)
-	return mod._route_input(action, r, "input_service")
+	local source = self and self.type == "Ingame" and "input_service" or "input_service_other"
+	return mod._route_input(action, r, source)
 end
 
 mod:hook(CLASS.InputService, "_get", hook_fn)

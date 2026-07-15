@@ -5,6 +5,7 @@ local MinigameSettings = require("scripts/settings/minigame/minigame_settings")
 
 mod._bal = {
 	timer    = 0,
+	active   = false,
 	enabled  = true,
 	strength = 0.75,
 	speed    = 5,
@@ -48,6 +49,21 @@ local function _reset_balance_tracking()
 	st.prev_x, st.prev_y = 0, 0
 	st.delayed_x, st.delayed_y = 0, 0
 	st.delayed_dist = 0
+	st.delayed_vx, st.delayed_vy = 0, 0
+end
+
+local function _initialize_balance_tracking(mg)
+	local position = mg and mg.position and mg:position()
+	if not position then return end
+
+	local x, y = position.x, position.y
+	local dist = math.sqrt(x * x + y * y)
+	st.x, st.y = x, y
+	st.prev_x, st.prev_y = x, y
+	st.delayed_x, st.delayed_y = x, y
+	st.dist = dist
+	st.delayed_dist = dist
+	st.vx, st.vy = 0, 0
 	st.delayed_vx, st.delayed_vy = 0, 0
 end
 
@@ -170,14 +186,16 @@ mod:hook_safe("MinigameBalance", "start", function(self, player)
 		return
 	end
 	_reset_balance_tracking()
+	_initialize_balance_tracking(self)
 	balance_active = true
 	active_balance_key = tostring(self)
 	balance_completed = false
+	st.active = true
 	st.enabled = true
 	st.stage = _stage(self)
 	mod._debug_run_start("balance")
 	_apply_balance_profile()
-	mod._debug_event("balance", "start", { kd = st.kd, kp = st.kp, scale = st.scale, server = self and self._is_server, speed = st.speed, stage = _stage(self) })
+	mod._debug_event("balance", "start", { current = string.format("%.3f,%.3f", st.x, st.y), dist = st.dist, kd = st.kd, kp = st.kp, scale = st.scale, server = self and self._is_server, speed = st.speed, stage = _stage(self) })
 end)
 
 local function _balance_cleanup(reason)
@@ -188,6 +206,7 @@ local function _balance_cleanup(reason)
 	balance_active = false
 	active_balance_key = nil
 	balance_completed = reason == "complete"
+	st.active = false
 	_reset_balance_tracking()
 end
 

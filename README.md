@@ -33,13 +33,6 @@
 - MOD 檔案名稱：Scoreboard-22-2-5-1777657786
 - 手動維護最後下載日期：2025-05-17
 
-### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
-    怪物生成器 - 靈能室可以選擇要生那些怪，並且產生特定波次訓練身法。
-- MOD 網站最後更新日期：Last updated 20 March 2026, 3:26AM
-- MOD 版本：26.03.19
-- MOD 檔案名稱：Creature Spawner-25-26-03-19-1773948379
-- 手動維護最後下載日期：2026-03-29
-
 ### [Power DI](https://www.nexusmods.com/warhammer40kdarktide/mods/281)
     進階記分板
 - MOD 網站最後更新日期：Last updated 23 March 2026, 12:43AM
@@ -237,10 +230,10 @@
 
 ### [Spidey Sense](https://www.nexusmods.com/warhammer40kdarktide/mods/268)
     蜘蛛感應 - 畫面顯示特定敵人位置
-- MOD 網站最後更新日期：Last updated 10 July 2026, 7:24PM
-- MOD 版本：v7.6
-- MOD 檔案名稱：Spidey Sense 7.6 268 7.6 2026-07-10T11-24Z ufCjsfdhr
-- 手動維護最後下載日期：2026-07-10
+- MOD 網站最後更新日期：Last updated 13 July 2026, 9:26PM
+- MOD 版本：v7.7
+- MOD 檔案名稱：Spidey Sense 7.7 268 7.7 2026-07-13T13-26Z ufCjsfdBC
+- 手動維護最後下載日期：2026-07-14
 - GitHub :
 - Source=>  https://github.com/Wobin/SpideySense
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mod-SpideySense
@@ -514,10 +507,10 @@
 
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
     記分板
-- MOD 網站最後更新日期：Last updated 11 July 2026, 11:32PM
-- MOD 版本：0.4.14
-- MOD 檔案名稱：CombatStats 661 0.4.14 2026-07-11T15-32Z mz1PFzZDc
-- 手動維護最後下載日期：2026-07-12
+- MOD 網站最後更新日期：Last updated 14 July 2026, 1:58AM
+- MOD 版本：0.4.15
+- MOD 檔案名稱：CombatStats 661 0.4.15 2026-07-13T17-58Z 29Sw894jD
+- 手動維護最後下載日期：2026-07-14
 
 ### [CharacterGrid](https://www.nexusmods.com/warhammer40kdarktide/mods/649)
     角色顯示
@@ -549,10 +542,10 @@
 
 ### [Machine God's BeaconUI](https://www.nexusmods.com/warhammer40kdarktide/mods/684)
     地圖燈效控制
-- MOD 網站最後更新日期：Last updated 27 January 2026, 1:57AM
-- MOD 版本：2026.01.26
-- MOD 檔案名稱：Machine God's Beacon-684-2026-01-26-1769450266
-- 手動維護最後下載日期：2026-02-02
+- MOD 網站最後更新日期：Last updated 14 July 2026, 8:14AM
+- MOD 版本：2026.07.15
+- MOD 檔案名稱：Machine God's Beacon 684 2026.07.15 2026-07-14T00-14Z PhaYKh0Yz
+- 手動維護最後下載日期：2026-07-14
 
 ### [VeilShield](https://www.nexusmods.com/warhammer40kdarktide/mods/637)
     盾牌透明化
@@ -567,6 +560,28 @@
 - MOD 版本：1.2.9
 - MOD 檔案名稱：Modular Menu Buttons-166-1-2-9-1774255754
 - 手動維護最後下載日期：2026-03-29
+
+### [Retain Selection](https://www.nexusmods.com/warhammer40kdarktide/mods/485)
+    我的最愛功能(需確認是否需要保留)
+- MOD 網站最後更新日期：Last updated 14 March 2025, 7:25PM
+- MOD 版本：1.0
+- MOD 檔案名稱：Retain Selection-485-1-0-1741951532
+- 手動維護最後下載日期：2026-07-14
+
+### [Show CJK Glyphs](https://www.nexusmods.com/warhammer40kdarktide/mods/149)
+    顯示亞洲區域字型
+- MOD 網站最後更新日期：Last updated 16 April 2025, 10:35PM
+- MOD 版本：1.0.3
+- MOD 檔案名稱：show_cjk_glyphs-149-2-0-2-1683521516
+- 手動維護最後下載日期：2026-07-14
+
+### [Simple Speed Meter](https://www.nexusmods.com/warhammer40kdarktide/mods/404)
+    顯示移動速度(用於比較不同武器的移動)
+- MOD 網站最後更新日期：Last updated 08 May 2023, 12:51PM
+- MOD 版本：2.02
+- MOD 檔案名稱：SimpleSpeedMeter-404-1-0-3-1744814116
+- 手動維護最後下載日期：2026-07-14
+
 ---
 # 遊戲內操作相關MOD
 
@@ -601,6 +616,13 @@
 - MOD 版本：Version 2.3.6
 - MOD 檔案名稱：SoloPlay-176-2-3-6-1770568165
 - 手動維護最後下載日期：2026-02-10
+
+### [KeepSwinging](https://www.nexusmods.com/warhammer40kdarktide/mods/88)
+    自動輕擊
+- MOD 網站最後更新日期：Last updated 06 July 2026, 2:12AM
+- MOD 版本：1.12
+- MOD 檔案名稱：KeepSwinging 88 1.12 2026-07-05T18-12Z 5gEeTgDA6
+- 手動維護最後下載日期：2026-07-06
 
 ### [TagKeys](https://www.nexusmods.com/warhammer40kdarktide/mods/79)
     使用快捷鍵做遊戲標記
@@ -684,10 +706,10 @@
 
 ### [Radar](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
     遠征模式的小地圖
-- MOD 網站最後更新日期：Last updated 12 July 2026, 5:05PM
-- MOD 版本：2.5.1
-- MOD 檔案名稱：Radar 790 2.5.1 2026-07-12T09-05Z SDWlwDVoK
-- 手動維護最後下載日期：2026-07-12
+- MOD 網站最後更新日期：Last updated 14 July 2026, 2:46AM
+- MOD 版本：2.5.2
+- MOD 檔案名稱：Radar 790 2.5.2 2026-07-13T18-46Z H3Uny3hM8
+- 手動維護最後下載日期：2026-07-14
 
 ### [PlasmaBFG](https://www.nexusmods.com/warhammer40kdarktide/mods/834)
     電漿槍 優化
@@ -726,10 +748,10 @@
 
 ### [NoBrainer](https://www.nexusmods.com/warhammer40kdarktide/mods/896)
     最新的小遊戲助手
-- MOD 網站最後更新日期：Last updated 11 July 2026, 5:14PM
-- MOD 版本：2.0.7
-- MOD 檔案名稱：NoBrainer 896 2.0.5 2026-07-09T19-04Z SDWlwDVxk
-- 手動維護最後下載日期：2026-07-12
+- MOD 網站最後更新日期：Last updated 13 July 2026, 1:26AM
+- MOD 版本：2.0.8
+- MOD 檔案名稱：NoBrainer 896 2.0.8 2026-07-12T17-26Z AVBg7VN6i
+- 手動維護最後下載日期：2026-07-14
 
 # 移除的MOD
 

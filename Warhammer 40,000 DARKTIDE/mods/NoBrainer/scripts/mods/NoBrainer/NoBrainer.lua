@@ -1,6 +1,6 @@
 local mod = get_mod("NoBrainer")
 
-local DEBUG_RATE_LIMIT = 100
+local DEBUG_RATE_LIMIT = 300
 local DEBUG_RATE_WINDOW = 30
 
 local cache = {}

@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | d49cb34 |
+| Commit | 412476f |
 | PR URL / number | pending |
-| Next position | ED-ROOT-LOC-010: `combat_ability_colour` |
+| Next position | ED-TALENTS-MOD-TW-001: `<translation-repo>/Main_Modules/TALENTS_Modular.lua:loc_glossary_talent_default` |
 
 ## Batch Progress
 
@@ -26,6 +26,35 @@
 | ED-ROOT-LOC-007 | 2026-07-14 15:30:37 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `enable_penances_file_description`, `enable_names_file`, `enable_names_file_description`, `enable_names_tal_bless_file`, `enable_names_tal_bless_file_description` | 5 | 5 | completed | `enable_debug_mode` | 校正苦行描述，補回名稱模組標題與警示描述的 color/reset 語法，移除未翻譯標記。 Translation commit: f542736. |
 | ED-ROOT-LOC-008 | 2026-07-14 16:25:44 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `enable_debug_mode`, `enable_debug_mode_description`, `dump_stat_colour`, `dump_stat2_colour`, `dump_stat3_colour` | 5 | 4 | completed | `bleed_colour` | 補齊 Debug 模組描述的指令清單，新增三個 Dump Stats 類別的繁中並保留 size/color/reset 語法。 Translation commit: 2ec5615. |
 | ED-ROOT-LOC-009 | 2026-07-14 17:19:11 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `bleed_colour`, `brittleness_colour`, `burn_colour`, `cleave_colour`, `coherency_colour` | 5 | 1 | completed | `combat_ability_colour` | 依詞彙表將 Cleave 從「順劈目標」校正為「順劈攻擊」；其餘四項已符合詞彙表。 Translation commit: d49cb34. |
+| ED-ROOT-LOC-010 | 2026-07-14 22:07:26 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 5 localization keys: `combat_ability_colour`, `corruption_colour`, `crit_colour`, `damage_colour`, `electrocuted_colour` | 5 | 2 | completed | `finesse_colour` | 依詞彙表將 Combat Ability 校正為「戰鬥技能」，Crit 校正為「致命一擊」；其餘三項已符合詞彙表。 Translation commit: 7d5b2d7. |
+| ED-ROOT-LOC-011 | 2026-07-14 22:14:44 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 15 localization keys: `finesse_colour` through `class_ogryn_colour` | 15 | 1 | completed | `fnp_colour` | 依詞彙表將 Health 校正為「生命值」；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: 5d3bcc4. |
+| ED-ROOT-LOC-012 | 2026-07-14 22:19:06 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | 15 localization keys: `fnp_colour` through `chemtox_colour` | 15 | 4 | completed | `talents_colour` | 依詞彙表校正 Focus Target 與 Arbites 用語，啟用 Hive Scum 與 Chem Toxin 的繁中欄位；其餘十一項已符合詞彙表。 Translation commit: f097ddc. |
+| ED-ROOT-LOC-013 | 2026-07-14 22:22:49 +08:00 | <translation-repo>/Enhanced_descriptions_localization.lua | final 12 localization keys: `talents_colour` through `auric_colour` | 12 | 0 | completed | `<translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua`: `bleed_text_colour.Bleed` | 本批十二項已符合詞彙表或既有一致譯法；root localization 檔已處理完畢，translation repo 無新 Lua commit。 |
+| ED-COLORS-TW-001 | 2026-07-14 22:28:49 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `bleed_text_colour.Bleed` through `combat_ability_text_colour.Cmbt_abil` | 15 | 0 | completed | `combat_ability_text_colour.Cmbt_abil_cd` | 本批十五項已符合詞彙表或既有一致譯法；translation repo 無新 Lua commit。 |
+| ED-COLORS-TW-002 | 2026-07-14 22:34:35 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `combat_ability_text_colour.Cmbt_abil_cd` through `crit_text_colour.Crt_hit_chnc` | 15 | 10 | completed | `crit_text_colour.Crt_hit_col` | 依詞彙表將已發生的 Crit/Critical 校正為「致命一擊」，機率屬性校正為「爆擊率」；Corruption 與 Combat Ability Cooldown 已符合詞彙表。 Translation commit: 0a97e7b. |
+| ED-COLORS-TW-003 | 2026-07-14 22:46:24 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `crit_text_colour.Crt_hit_col` through `damage_text_colour.Damagewrp` | 15 | 6 | completed | `electrocuted_text_colour.Electrocute` | 依詞彙表與語境校正 Critical Strike/Attack/Shots 的結果與機率用語；Crit damage 與 Damage 系列維持既有一致譯法。 Translation commit: d06694c. |
+| ED-COLORS-TW-004 | 2026-07-14 22:51:54 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `electrocuted_text_colour.Electrocute` through `peril_text_colour.Perils` | 15 | 2 | completed | `peril_text_colour.PerilsozWarp` | 依詞彙表與 root localization 將 Health/Max Health 校正為「生命值 / 最大生命值」；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: 64d4048. |
+| ED-COLORS-TW-005 | 2026-07-14 22:59:30 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `peril_text_colour.PerilsozWarp` through `stamina_text_colour.Stamina_c_r` | 15 | 1 | completed | `toughness_text_colour.TDR` | 依詞彙表、root localization 與其他 MOD 用法將 Soulblaze 校正為「靈魂之火」；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: 5662d3b. |
+| ED-COLORS-TW-006 | 2026-07-14 23:07:12 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `toughness_text_colour.TDR` through `class_psyker_text_colour.cls_psy` | 15 | 4 | completed | `class_psyker_text_colour.cls_psys` | 依詞彙表與 root localization 將 Toughness Damage Reduction 校正為「韌性減傷」，Weak Spot 校正為「弱點」，Weakspot Hit 統一為「弱點命中」；其餘十一項已符合詞彙表或既有一致譯法。 Translation commit: e88c68e. |
+| ED-COLORS-TW-007 | 2026-07-14 23:11:05 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `class_psyker_text_colour.cls_psys` through `fury_text_colour.Rampage` | 15 | 1 | completed | `momentum_text_colour.Momentum` | 依詞彙表將 Rampage! 校正為「暴走」；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: 4d483e7. |
+| ED-COLORS-TW-008 | 2026-07-14 23:15:56 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `momentum_text_colour.Momentum` through `meleespec_text_colour.Meleejust` | 15 | 0 | completed | `rangedspec_text_colour.Rangedspec` | 本批十五項已符合詞彙表、root localization 或既有一致譯法；translation repo 無新 Lua commit。 |
+| ED-COLORS-TW-009 | 2026-07-14 23:20:05 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `rangedspec_text_colour.Rangedspec` through `talents_text_colour.fury_faithful` | 15 | 2 | completed | `talents_text_colour.Holy_relic` | 依詞彙表與 root localization 將 Hive Scum 校正為「巢都渣滓」；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: 0e045fc. |
+| ED-COLORS-TW-010 | 2026-07-14 23:23:59 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.Holy_relic` through `talents_text_colour.Assail` | 15 | 2 | completed | `talents_text_colour.assail` | 依詞彙表將 Stun Grenade 校正為「眩暈手雷」，Assail 校正為「靈能攻擊」；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: b7245c5. |
+| ED-COLORS-TW-011 | 2026-07-14 23:37:03 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.assail` through `talents_text_colour.scriersgaze` | 15 | 8 | completed | `talents_text_colour.seerspres` | 依詞彙表校正 Assail、Brain Burst、Brain Rupture、Enfeeble 與 Scrier's Gaze 用語；其餘七項已符合詞彙表或既有一致譯法。 Translation commit: 709de9a. |
+| ED-COLORS-TW-012 | 2026-07-14 23:40:30 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.seerspres` through `talents_text_colour.krak_gr` | 15 | 6 | completed | `talents_text_colour.Rangd_stnc` | 依詞彙表校正 Smite、Duty and Honour、Frag Grenade 與 Fragmentation Grenade 用語；其餘九項已符合詞彙表或既有一致譯法。 Translation commit: d4c9498. |
+| ED-COLORS-TW-013 | 2026-07-14 23:45:08 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 keyword values: `talents_text_colour.Rangd_stnc` through `talents_text_colour.bull_rush4` | 15 | 2 | completed | `talents_text_colour.burstlimo` | 依詞彙表校正 Attention Seeker 與 Bombs Away! 用語；其餘十三項已符合詞彙表或既有一致譯法。 Translation commit: e2b8afe. |
+| ED-COLORS-TW-014 | 2026-07-14 23:47:47 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 active keyword values: `talents_text_colour.burstlimo` through `malice_text_colour.malice`; skipped commented `sedition_text_colour.sedition` | 15 | 1 | completed | `heresy_text_colour.heresy` | 依詞彙表校正 Stay Close! 用語；其餘十四項已符合詞彙表或既有一致譯法。 Translation commit: e562ccd. |
+| ED-COLORS-TW-015 | 2026-07-14 23:51:38 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 source values: `heresy_text_colour.heresy` through `phrs.Can_gen_mult`, including missing Dump Stats and phrase keys | 15 | 13 | completed | `phrs.Can_proc_mult` | 補齊 Dump Stats 色彩 key 與 Can_appl_thr_shldsb/Can_gen_mult 短語；校正可穿透護盾施加與刷新短語。 Translation commit: bbe283d. |
+| ED-COLORS-TW-016 | 2026-07-14 23:54:24 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | 15 phrase values: `phrs.Can_proc_mult` through `phrs.Cant_Crit`, including missing Ogryn/Hive Scum/Cant_be_refr keys | 15 | 9 | completed | `phrs.Carap_cant_clv` | 補齊 Ogryn 與 Hive Scum 不疊加短語、Cant_be_refr，並校正觸發、層數施加、護盾施加與無法造成致命一擊短語。 Translation commit: 46b515e. |
+| ED-COLORS-TW-017 | 2026-07-14 23:57:25 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | final 9 phrase/note values: `phrs.Carap_cant_clv` through `nts.Weaksp_note` | 9 | 9 | completed | `<translation-repo>/Main_Modules/MENUS.lua:first loc_* table` | 校正甲殼護甲、協同韌性回復與 notes 短語，補齊 Weaksp_note；Keyword colors 檔已收尾。 Translation commit: c6d259c. |
+| ED-MENUS-TW-001 | 2026-07-15 00:18:34 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | first 15 loc_* tables: `loc_currency_name_plasteel` through `loc_contract_view_intro_description` | 15 | 2 | completed | `loc_contract_view_intro_title` | 前八項僅覆寫俄文、未新增 zh-tw；依詞彙表校正 Monstrosities 為「巨獸」並改用全形問號。 Translation commit: 302677a. |
+| ED-MENUS-TW-002 | 2026-07-15 08:28:56 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_contract_view_intro_title` through `loc_credits_vendor_view_option_buy` | 15 | 11 | completed | `loc_credits_goods_vendor_description_text` | 校正 Melk 標題、合約完成獎勵、Low/Medium/High、未知防禦性珍品、每週合約通知、聖化/威力提示、服務問句與 Requisition 標籤。 Translation commit: a818308. |
+| ED-MENUS-TW-003 | 2026-07-15 08:31:42 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_credits_goods_vendor_description_text` through `loc_inventory_view_display_name` | 15 | 7 | completed | `loc_inventory_title_slot_gear_lowerbody` | 補上 Stimm Lab 繁中，校正 Brunt 武器描述、Strike Team、Previous Missions、Havoc Assignment 與 Loadout 標籤；其餘八項已符合詞彙表或既有一致譯法。 Translation commit: e66dab3. |
+| ED-MENUS-TW-004 | 2026-07-15 08:34:22 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_inventory_title_slot_gear_lowerbody` through `loc_weapon_special_special_attack` | 15 | 5 | completed | `loc_stats_display_mobility_stat` | 依詞彙表與本地用法校正 Favourite、Perk、Primary Action、Secondary Action 與 Special Melee Attack；其餘十項已符合來源或既有一致譯法。 Translation commit: 2bebbdd. |
+| ED-MENUS-TW-005 | 2026-07-15 08:37:10 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_stats_display_mobility_stat` through `loc_wait_reason_backend` | 15 | 10 | completed | `loc_wait_reason_store` | 補齊七個 Dump Stats `CKWord` 繁中，校正 Cloud Radius、Dedicated Server 與 Fatshark backend 等等待提示；其餘五項已符合來源或既有一致譯法。 Translation commit: b64a0d8. |
+| ED-MENUS-TW-006 | 2026-07-15 08:39:56 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | final 4 loc_* tables: `loc_wait_reason_store` through `loc_wait_reason_platform_psn` | 4 | 3 | completed | `<translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua:loc_inate_gadget_health_desc` | 校正 Steam、Xbox、PSN 平台等待提示的品牌空格；MENUS.lua 已處理至檔尾。 Translation commit: 703a343. |
+| ED-CURIOS-TW-001 | 2026-07-15 08:43:29 +08:00 | <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua | first 15 loc_* tables: `loc_inate_gadget_health_desc` through `loc_trait_gadget_mission_credits_increase_desc` | 15 | 10 | completed | `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` | 依詞彙表與本地用法校正最大生命值、戰鬥技能恢復速度、腐敗抗性、法術書、格擋消耗降低、盟友復活速度、韌性與審判庭代幣；其餘五項已符合來源。 Translation commit: ba792c4. |
+| ED-CURIOS-TW-002 | 2026-07-15 08:46:47 +08:00 | <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua | final 7 loc_* tables: `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` through `loc_trait_gadget_dr_vs_snipers_desc` | 7 | 7 | completed | `<translation-repo>/Main_Modules/TALENTS_Modular.lua:loc_glossary_talent_default` | 校正任務獎勵珍品機率句，依詞彙表校正 Flamers 為「火焰兵」，並統一傷害抗性敵人括號格式；CURIOS_Blessings_Perks.lua 已處理至檔尾。 Translation commit: 412476f. |
 
 ## Checks
 
@@ -81,6 +110,368 @@
 - ED-ROOT-LOC-009: glossary checked for Bleed, Brittleness, Burn, Cleave, Coherency, and Hit Mass
 - ED-ROOT-LOC-009: `git -C <translation-repo> diff --check` passed before commit
 - ED-ROOT-LOC-009: diff scope limited to `Enhanced_descriptions_localization.lua`
+- ED-ROOT-LOC-010: duplicate `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-010: active empty `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-010: keyword icon prefixes preserved in touched entries
+- ED-ROOT-LOC-010: glossary checked for Combat Ability, Corruption, Crit, Damage, and Electrocuted
+- ED-ROOT-LOC-010: `git -C <translation-repo> diff --check` passed before commit
+- ED-ROOT-LOC-010: diff scope limited to `Enhanced_descriptions_localization.lua`
+- ED-ROOT-LOC-011: duplicate `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-011: active empty `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-011: keyword icon prefixes preserved in touched entries
+- ED-ROOT-LOC-011: glossary checked for Finesse, Health, Hit Mass, Impact, Peril, Power, Rending, Soulblaze, Stagger, Stamina, Toughness, Weak Spot, Psyker, Precision, and Ogryn
+- ED-ROOT-LOC-011: `git -C <translation-repo> diff --check` passed before commit
+- ED-ROOT-LOC-011: diff scope limited to `Enhanced_descriptions_localization.lua`
+- ED-ROOT-LOC-011: Lua syntax tool unavailable
+- ED-ROOT-LOC-012: duplicate `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-012: active empty `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-012: keyword icon prefixes and leading spaces preserved in touched entries
+- ED-ROOT-LOC-012: glossary checked for Feel No Pain, Lucky Bullet, Trample, Zealot, Fury, Momentum, Stealth, Veteran, Focus, Focus Target, Melee Specialist, Ranged Specialist, Arbites, Hive Scum, and Chem Toxin
+- ED-ROOT-LOC-012: `git -C <translation-repo> diff --check` passed before commit
+- ED-ROOT-LOC-012: diff scope limited to `Enhanced_descriptions_localization.lua`
+- ED-ROOT-LOC-012: Lua syntax tool unavailable
+- ED-ROOT-LOC-013: duplicate `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-013: active empty `["zh-tw"]` in touched entries=0
+- ED-ROOT-LOC-013: keyword icon prefixes preserved in touched entries
+- ED-ROOT-LOC-013: glossary checked for Talents, Penances, Note, Sedition, Uprising, Malice, Heresy, Damnation, and Auric
+- ED-ROOT-LOC-013: `git -C <translation-repo> diff --check` passed
+- ED-ROOT-LOC-013: translation repo diff scope empty; no Lua commit created
+- ED-ROOT-LOC-013: Lua syntax tool unavailable
+- ED-COLORS-TW-001: all 15 keyword values present and non-empty
+- ED-COLORS-TW-001: glossary checked for Bleed, Brittleness, Burn, Heat, Cleave, Coherency, Ability Cooldown, and Combat Ability
+- ED-COLORS-TW-001: checked local usage for Cleaved, Heat, Ability_cd, and Cmbt_abil
+- ED-COLORS-TW-001: `git -C <translation-repo> diff --check` passed
+- ED-COLORS-TW-001: translation repo diff scope empty; no Lua commit created
+- ED-COLORS-TW-001: Lua syntax tool unavailable
+- ED-COLORS-TW-002: all 15 keyword values present and non-empty
+- ED-COLORS-TW-002: glossary checked for Combat Ability Cooldown, Corruption, Crit, Critical, Critical Chance, and Critical Hit Chance
+- ED-COLORS-TW-002: checked local usage for Crit/Critical and Corruption terms
+- ED-COLORS-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-002: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-002: Lua syntax tool unavailable
+- ED-COLORS-TW-003: all 15 keyword values present and non-empty
+- ED-COLORS-TW-003: glossary checked for Critical Hit Damage, Critical Strike, Critical Strike Chance, Critical Strike Damage, Critical Attack, Critical Shots, Crit Damage, Damage, Ranged Damage, and Warp Damage
+- ED-COLORS-TW-003: checked local usage for Critical Strike/Attack/Shots, Crit Damage, and Damagewrp terms
+- ED-COLORS-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-003: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-003: Lua syntax tool unavailable
+- ED-COLORS-TW-004: all 15 keyword values present and non-empty
+- ED-COLORS-TW-004: glossary checked for Electrocute/Electrocuted, Finesse, Health, Wound, Hit Mass, Impact, and Peril
+- ED-COLORS-TW-004: checked local usage for Health/Health_m and Wound terms
+- ED-COLORS-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-004: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-004: Lua syntax tool unavailable
+- ED-COLORS-TW-005: all 15 keyword values present and non-empty
+- ED-COLORS-TW-005: glossary checked for Peril, Power, Rending, Soulblaze, Stagger, Stun, and Stamina
+- ED-COLORS-TW-005: checked local usage for Perils of the Warp, Soulblaze, Stamina, Stamina_m, and Stamina_c_r terms
+- ED-COLORS-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-005: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-005: Lua syntax tool unavailable
+- ED-COLORS-TW-006: all 15 keyword values present and non-empty
+- ED-COLORS-TW-006: glossary checked for Toughness, Toughness Damage Reduction, Weakspot, Weak Spot, Weakspot damage, and Psyker
+- ED-COLORS-TW-006: checked local usage for TDR, Toughness Damage Reduction, Weak Spot, Weakspot Hit, Weakspot Damage, and Psyker terms
+- ED-COLORS-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-006: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-006: Lua syntax tool unavailable
+- ED-COLORS-TW-007: all 15 keyword values present and non-empty
+- ED-COLORS-TW-007: glossary checked for Psyker, Precision, Ogryn, Feel No Pain, Desperado, Lucky Bullet, Trample, Dependency, Zealot, Fury, and Rampage
+- ED-COLORS-TW-007: checked local usage for class labels, Feel No Pain, Lucky Bullet, Trample, Fury, and Rampage terms
+- ED-COLORS-TW-007: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-007: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-007: Lua syntax tool unavailable
+- ED-COLORS-TW-008: all 15 keyword values present and non-empty
+- ED-COLORS-TW-008: glossary checked for Momentum, Stealth, Veteran, Focus, Focus Target, Melee Specialist, Arbites, Hive Scum, and related mark/adrenaline terms
+- ED-COLORS-TW-008: checked local usage for Momentum, Stealth, Focus Target, Marked Enemy, Vulture's Mark, and Melee Justice terms
+- ED-COLORS-TW-008: `git -C <translation-repo> diff --check` passed
+- ED-COLORS-TW-008: translation repo diff scope empty; no Lua commit created
+- ED-COLORS-TW-008: Lua syntax tool unavailable
+- ED-COLORS-TW-009: all 15 keyword values present and non-empty
+- ED-COLORS-TW-009: glossary checked for Ranged Specialist, Arbites, Hive Scum, Chem Toxin, Beacon of Purity, Benediction, Blazing Piety, Chastise the Wicked, Chorus of Spiritual Fortitude, Fury, Immolation Grenade, and Fury of the Faithful
+- ED-COLORS-TW-009: checked local usage for Hive Scum, Chem Toxin, Zealot talent names, Ranged Specialist, and Ranged Justice terms
+- ED-COLORS-TW-009: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-009: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-009: Lua syntax tool unavailable
+- ED-COLORS-TW-010: all 15 keyword values present and non-empty
+- ED-COLORS-TW-010: glossary checked for Holy Relic, Holy Revenant, Inexorable Judgement, Blades of Faith, Loner, Martyrdom, Stunstorm Grenade, Stun Grenade, Shroudfield, Momentum, Arbites Grenade, Break the Line, and Assail
+- ED-COLORS-TW-010: checked local usage for Zealot, Arbites, and Assail terms
+- ED-COLORS-TW-010: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-010: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-010: Lua syntax tool unavailable
+- ED-COLORS-TW-011: all 15 keyword values present and non-empty
+- ED-COLORS-TW-011: glossary checked for Assail, Brain Burst, Brain Rupture, Disrupt Destiny, Enfeeble, Empowered Psionics, Kinetic Presence, Prescience, Psykinetic's Wrath, Venting Shriek, and Scrier's Gaze
+- ED-COLORS-TW-011: checked local usage for Psyker talent names and penances
+- ED-COLORS-TW-011: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-011: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-011: Lua syntax tool unavailable
+- ED-COLORS-TW-012: all 15 keyword values present and non-empty
+- ED-COLORS-TW-012: glossary checked for Seer's Presence, Smite, Telekine Shield, Close and Kill, Duty and Honour, Executioner's Stance, Focus Target!, Fire Team, Frag Grenade, Shredder Frag Grenade, Infiltrate, and Krak Grenade
+- ED-COLORS-TW-012: checked local usage for Psyker and Veteran talent names, penances, and grenade terms
+- ED-COLORS-TW-012: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-012: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-012: Lua syntax tool unavailable
+- ED-COLORS-TW-013: all 15 keyword values present and non-empty
+- ED-COLORS-TW-013: glossary checked for Ranged Stance, Scavenger, Marksman's Focus, Smoke Grenade, Survivalist, Voice of Command, Volley Fire, Weapons Specialist, Attention Seeker, Big Box of Hurt, Bombs Away!, Big Friendly Rock, Bonebreaker's Aura, Bull Rush, and Indomitable
+- ED-COLORS-TW-013: checked local usage for Veteran and Ogryn talent names and penances
+- ED-COLORS-TW-013: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-013: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-013: Lua syntax tool unavailable
+- ED-COLORS-TW-014: all 15 active keyword values present and non-empty
+- ED-COLORS-TW-014: glossary checked for Burst Limiter Override, Coward Culling, Feel No Pain, Frag Bomb, Heavy Hitter, Loyal Protector, Point-Blank Barrage, Stay Close!, Basic Training, Curio, Shrine of the Omnissiah, Prologue, Sire Melk's Requisitorium, Uprising, and Malice
+- ED-COLORS-TW-014: checked local usage for Ogryn talent names, penances, menu terms, and difficulty names
+- ED-COLORS-TW-014: commented `sedition_text_colour.sedition` left inactive
+- ED-COLORS-TW-014: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-014: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-014: Lua syntax tool unavailable
+- ED-COLORS-TW-015: all 15 source values present and non-empty
+- ED-COLORS-TW-015: glossary checked for Heresy, Damnation, Auric, Damage, Cleave, and related Dump Stats terms
+- ED-COLORS-TW-015: checked local usage for Dump Stats menu labels, Bulwark shield, stack generation, and refresh phrases
+- ED-COLORS-TW-015: added missing `dump_stat_text_colour`, `dump_stat2_text_colour`, `dump_stat3_text_colour`, `Can_appl_thr_shldsb`, and `Can_gen_mult`
+- ED-COLORS-TW-015: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-015: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-015: Lua syntax tool unavailable
+- ED-COLORS-TW-016: all 15 phrase values present and non-empty
+- ED-COLORS-TW-016: glossary checked for Cleaving, Crit, Psyker, Veteran, Zealot, Ogryn, and Hive Scum
+- ED-COLORS-TW-016: checked local usage for CPhrs references in Psyker, Veteran, Ogryn, Zealot, and Scum talent modules
+- ED-COLORS-TW-016: added missing `Doesnt_Stack_Ogr_abil`, `Doesnt_Stack_Scm_Aura`, `Doesnt_Stack_Scm_eff`, and `Cant_be_refr`
+- ED-COLORS-TW-016: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-016: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-016: Lua syntax tool unavailable
+- ED-COLORS-TW-017: all final 9 phrase/note values present and non-empty
+- ED-COLORS-TW-017: glossary checked for Carapace, Cleaved, Coherency, Toughness, Brittleness, Finesse, Impact, Strength, Rending, Weakspots, and Beast of Nurgle
+- ED-COLORS-TW-017: checked local usage for CNote references and weakspot/Carapace terms
+- ED-COLORS-TW-017: added missing `Weaksp_note`
+- ED-COLORS-TW-017: `git -C <translation-repo> diff --check` passed before commit
+- ED-COLORS-TW-017: diff scope limited to `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- ED-COLORS-TW-017: Lua syntax tool unavailable
+- ED-COLORS-TW-017: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` completed through current English source sequence
+- ED-MENUS-TW-001: all 15 `loc_*` tables reviewed
+- ED-MENUS-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-001: placeholders preserved: `{count:%s}`, `{kind:%s}`, `{count:%d}`, `{enemy_type:%s}`, `{weapon_type:%s}`
+- ED-MENUS-TW-001: glossary checked for Monstrosity, mission, and contract terms
+- ED-MENUS-TW-001: first 8 tables left without `zh-tw` because they only override `ru` and official localization should not be duplicated
+- ED-MENUS-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-MENUS-TW-001: diff scope limited to `Main_Modules/MENUS.lua`
+- ED-MENUS-TW-001: Lua syntax tool unavailable
+- ED-MENUS-TW-002: all 15 `loc_*` tables reviewed
+- ED-MENUS-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-002: no placeholder-bearing strings in touched active `zh-tw`
+- ED-MENUS-TW-002: glossary/local usage checked for Sire Melk's Requisitorium, Contracts, Curios, Rarity, Power, and Requisition
+- ED-MENUS-TW-002: added missing `zh-tw` for `loc_notification_new_contract`
+- ED-MENUS-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-MENUS-TW-002: diff scope limited to `Main_Modules/MENUS.lua`
+- ED-MENUS-TW-002: Lua syntax tool unavailable
+- ED-MENUS-TW-003: all 15 `loc_*` tables reviewed
+- ED-MENUS-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-003: placeholders preserved: `{killer:%s}`, `{victim:%s}`
+- ED-MENUS-TW-003: glossary/local usage checked for Curios, Stimm, Havoc, Strike Team, and Loadout
+- ED-MENUS-TW-003: added missing `zh-tw` for `loc_broker_stimm_builder_view_display_name`
+- ED-MENUS-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-MENUS-TW-003: diff scope limited to `Main_Modules/MENUS.lua`
+- ED-MENUS-TW-003: Lua syntax tool unavailable
+- ED-MENUS-TW-004: all 15 `loc_*` tables reviewed
+- ED-MENUS-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-004: no placeholder-bearing strings in touched active `zh-tw`
+- ED-MENUS-TW-004: glossary/local usage checked for Weapon Perks, Primary Action, Secondary Action, Favourite, and Special Attack
+- ED-MENUS-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-MENUS-TW-004: diff scope limited to `Main_Modules/MENUS.lua`
+- ED-MENUS-TW-004: Lua syntax tool unavailable
+- ED-MENUS-TW-005: all 15 `loc_*` tables reviewed
+- ED-MENUS-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-005: `CKWord` color keys preserved and changed only to `*_rgb_tw` variants for added zh-tw entries
+- ED-MENUS-TW-005: glossary/local usage checked for Mobility, Melee Damage, Warp Resistance, Ammo, Defences, Heat Management, Damage, Finesse, Dodge Distance, and wait reason labels
+- ED-MENUS-TW-005: added missing `zh-tw` for seven Dump Stats tables
+- ED-MENUS-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-MENUS-TW-005: diff scope limited to `Main_Modules/MENUS.lua`
+- ED-MENUS-TW-005: Lua syntax tool unavailable
+- ED-MENUS-TW-006: all final 4 `loc_*` tables reviewed
+- ED-MENUS-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-006: no placeholder-bearing strings in touched active `zh-tw`
+- ED-MENUS-TW-006: local usage checked for Store, Steam, Xbox, and PSN labels
+- ED-MENUS-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-MENUS-TW-006: diff scope limited to `Main_Modules/MENUS.lua`
+- ED-MENUS-TW-006: Lua syntax tool unavailable
+- ED-MENUS-TW-006: `Main_Modules/MENUS.lua` completed through current English source sequence
+- ED-CURIOS-TW-001: all 15 `loc_*` tables reviewed
+- ED-CURIOS-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-CURIOS-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-CURIOS-TW-001: placeholders preserved: `{max_health_modifier:%s}`, `{extra_max_amount_of_wounds:%s}`, `{stamina_modifier:%s}`, `{toughness_bonus:%s}`, `{ability_cooldown_modifier:%s}`, `{corruption_taken_multiplier:%s}`, `{permanent_damage_converter_resistance:%s}`, `{block_cost_multiplier:%s}`, `{revive_speed_modifier:%s}`, `{stamina_regeneration_modifier:%s}`, `{toughness_regen_delay_multiplier:%s}`, `{mission_reward_xp_modifier:%s}`, `{mission_reward_credit_modifier:%s}`
+- ED-CURIOS-TW-001: `CKWord` color keys preserved or moved to correct `*_rgb_tw` variants for Health, Combat Ability, Corruption Resistance, Stamina, and Toughness
+- ED-CURIOS-TW-001: glossary/local usage checked for Health, Wound, Stamina, Toughness, Combat Ability, Corruption, Grimoire, Block Cost Reduction, Ally Revive Speed, Experience, and Ordo Dockets
+- ED-CURIOS-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-CURIOS-TW-001: diff scope limited to `Main_Modules/CURIOS_Blessings_Perks.lua`
+- ED-CURIOS-TW-001: Lua syntax tool unavailable
+- ED-CURIOS-TW-002: all final 7 `loc_*` tables reviewed
+- ED-CURIOS-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-CURIOS-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-CURIOS-TW-002: placeholders preserved: `{mission_reward_gear_instead_of_weapon_modifier:%s}`, `{damage_reduction:%s}`
+- ED-CURIOS-TW-002: `CKWord` color keys preserved for `Damage_res_rgb_tw`
+- ED-CURIOS-TW-002: glossary/local usage checked for Curio, Mission Reward, Damage Resistance, Flamers, Bombers, Gunners, Pox Hounds, Mutants, and Snipers
+- ED-CURIOS-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-CURIOS-TW-002: diff scope limited to `Main_Modules/CURIOS_Blessings_Perks.lua`
+- ED-CURIOS-TW-002: Lua syntax tool unavailable
+- ED-CURIOS-TW-002: `Main_Modules/CURIOS_Blessings_Perks.lua` completed through current English source sequence
+- ED-TALENTS-MOD-TW-001: all 15 `loc_*` tables reviewed
+- ED-TALENTS-MOD-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-TALENTS-MOD-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-TALENTS-MOD-TW-001: placeholders preserved: `{cleave:%s}`, `{crit_chance:%s}`, `{impact:%s}`
+- ED-TALENTS-MOD-TW-001: `CKWord`, `CPhrs("Carap_cant_cleave")`, and `CNote("Impact_note")` references preserved
+- ED-TALENTS-MOD-TW-001: glossary/local usage checked for Passive, Blitz, Aura, Combat Ability, Talent, Keystone, Keystone Modifier, Cleave, Critical Hit Chance, and Impact
+- ED-TALENTS-MOD-TW-001: added active `zh-tw` for full-build hotkey and popup title
+- ED-TALENTS-MOD-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-TALENTS-MOD-TW-001: diff scope limited to `Main_Modules/TALENTS_Modular.lua`
+- ED-TALENTS-MOD-TW-001: Lua syntax tool unavailable
+- ED-TALENTS-MOD-TW-002: all final 14 `loc_*` tables reviewed
+- ED-TALENTS-MOD-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-TALENTS-MOD-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-TALENTS-MOD-TW-002: placeholders preserved: `{melee_damage:%s}`, `{movement_speed:%s}`, `{warp_charge:%s}`, `{ranged_damage:%s}`, `{reload_speed:%s}`, `{rending:%s}`, `{stamina:%s}`, `{duration:%s}`, `{toughness:%s}`, `{power:%s}`
+- ED-TALENTS-MOD-TW-002: `CKWord`, `CNumb("-", "n_minus_rgb")`, `CNote("Rend_note")`, and Combat Shotgun note concatenation preserved
+- ED-TALENTS-MOD-TW-002: glossary/local usage checked for Melee Damage, Movement Speed, Peril, Ranged Damage, Reload Speed, Rending, Stamina, Toughness, Toughness Damage Reduction, and Chem Toxin
+- ED-TALENTS-MOD-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-TALENTS-MOD-TW-002: diff scope limited to `Main_Modules/TALENTS_Modular.lua`
+- ED-TALENTS-MOD-TW-002: Lua syntax tool unavailable
+- ED-TALENTS-MOD-TW-002: `Main_Modules/TALENTS_Modular.lua` completed through current English source sequence
+- ED-NAMES-TW-001: first 15 active localization tables reviewed
+- ED-NAMES-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-001: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-001: glossary checked for Opportunist, Bloodletter, Bloodthirsty, Rev It Up, Thunderous, Shred, Savage Sweep, Brutal Momentum, Limbsplitter, All or Nothing, Agile, Slaughter Spree, Relentless Strikes, Executor, and Precognition
+- ED-NAMES-TW-001: no Lua changes required
+- ED-NAMES-TW-001: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-001: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-001: Lua syntax tool unavailable
+- ED-NAMES-TW-002: next 15 active localization tables reviewed
+- ED-NAMES-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-002: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-002: glossary/local usage checked for Haymaker, Smackdown, Mercy Killer, Vicious Slice, Hammerblow, Thunderstrike, Chained Deathblow, Bladed Momentum, Blazing Spirit, Warp Slice, Syphon, Power Cycler, Sunder, Slow and Steady, and Power Surge
+- ED-NAMES-TW-002: no Lua changes required
+- ED-NAMES-TW-002: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-002: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-002: Lua syntax tool unavailable
+- ED-NAMES-TW-003: next 15 active localization tables reviewed
+- ED-NAMES-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-003: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-003: glossary/local usage checked for Offensive Defence, Raking Fire, Dumdum, Sustained Fire, Fire Frenzy, Deathspitter, Stripped Down, Speedload, Terrifying Barrage, Ceaseless Barrage, Inspiring Barrage, Surgical, No Respite, Blaze Away, and Pinning Fire
+- ED-NAMES-TW-003: `Inspiring Barrage` kept as `振奮彈幕` to match the ranged weapon blessing section despite a later duplicate glossary entry
+- ED-NAMES-TW-003: no Lua changes required
+- ED-NAMES-TW-003: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-003: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-003: Lua syntax tool unavailable
+- ED-NAMES-TW-004: next 15 active localization tables reviewed
+- ED-NAMES-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-004: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-004: glossary/local usage checked for Surge, Warp Nexus, Transfer Peril, Blazing Spirit, Penetrating Flame, Showstopper, Concentrated Fire, Reassuringly Accurate, Man-Stopper, Scattershot, Full Bore, Shattering Impact, Everlasting Flame, and Quickflame
+- ED-NAMES-TW-004: no Lua changes required
+- ED-NAMES-TW-004: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-004: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-004: Lua syntax tool unavailable
+- ED-NAMES-TW-005: next 15 active localization tables reviewed
+- ED-NAMES-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-005: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-005: glossary/local usage checked for Fan the Flames, Hot-Shot, Power Blast, Gets Hot!, Volatile, Blaze Away, Rising Heat, Gauntlet Momentum, Pulverise, Overwhelming Fire, Born in Blood, Pierce, Inspiring Barrage, Expansive, and Adhesive Charge
+- ED-NAMES-TW-005: `Inspiring Barrage` kept as `激勵彈幕` to match the ALT OGRYN glossary entry
+- ED-NAMES-TW-005: no Lua changes required
+- ED-NAMES-TW-005: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-005: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-005: Lua syntax tool unavailable
+- ED-NAMES-TW-006: next 15 active localization tables reviewed
+- ED-NAMES-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-006: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-006: glossary/local usage checked for Cleave Boost, Critical Chance Boost, Impact Boost, Melee Damage Boost, Movement Speed Boost, Peril Resistance, Ranged Damage Boost, Reload Boost, Rending Boost, Toughness Boost, Toughness Damage Reduction, Brain Burst, and Brain Rupture
+- ED-NAMES-TW-006: corrected `Melee Damage Boost` from `重擊傷害增幅` to `近戰增幅`
+- ED-NAMES-TW-006: corrected `Rending Boost` from `撕裂增強` to `撕裂增幅`
+- ED-NAMES-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-006: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-006: Lua syntax tool unavailable
+- ED-NAMES-TW-007: next 15 active localization tables reviewed
+- ED-NAMES-TW-007: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-007: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-007: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-007: glossary/local usage checked for Brain Rupture, Kinetic Flayer, Ethereal Shards, Quick Shards, Psykinetic's Wrath, Venting Shriek, Warp Rupture, Becalming Eruption, Warp Creeping Flames, Sanctuary, Scrier's Gaze, Precognition, Warp Unbound, Warp Siphon, and Essence Harvest
+- ED-NAMES-TW-007: no Lua changes required
+- ED-NAMES-TW-007: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-007: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-007: Lua syntax tool unavailable
+- ED-NAMES-TW-008: next 15 active localization tables reviewed
+- ED-NAMES-TW-008: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-008: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-008: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-008: glossary/local usage checked for In Fire Reborn, Psychic Leeching, Charged Up, Disrupt Destiny, Purloin Providence, Lingering Influence, Soulstealer, Quietude, Warp Expenditure, Perilous Combustion, Perfect Timing, Wildfire, Mind in Motion, Malefic Momentum, and Souldrinker
+- ED-NAMES-TW-008: corrected `Mind in Motion` from copied `靈能學者光環` to candidate `動中之心`
+- ED-NAMES-TW-008: added `Mind in Motion` to `Term Candidates.md`
+- ED-NAMES-TW-008: user requested skipping `Main_Modules/TALENTS/TALENTS_Psyker.lua` for now when class talent description modules are reached
+- ED-NAMES-TW-008: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-008: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-008: Lua syntax tool unavailable
+- ED-NAMES-TW-009: next 15 active localization tables reviewed
+- ED-NAMES-TW-009: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-009: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-009: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-009: glossary/local usage checked for Unlucky for Some, Solidity, Warp Rider, Tranquility Through Slaughter, Surety of Arms, Stunstorm Grenade, Immolation Grenade, Beacon of Purity, Loner, Fury of the Faithful, Ecclesiarch's Call, Martyr's Purpose, Master-Crafted Shroudfield, Invigorating Revelation, and Pious Cut-Throat
+- ED-NAMES-TW-009: corrected `Solidity` from duplicated `心如止水` to candidate `堅實`
+- ED-NAMES-TW-009: corrected `Surety of Arms` from sentence-like `武器在手，信心我有。` to candidate `武器確信`
+- ED-NAMES-TW-009: added `Solidity` and `Surety of Arms` to `Term Candidates.md`
+- ED-NAMES-TW-009: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-009: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-009: Lua syntax tool unavailable
+- ED-NAMES-TW-010: next 15 active localization tables reviewed
+- ED-NAMES-TW-010: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-010: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-010: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-010: glossary/local usage checked for Blazing Piety, Stalwart, Fury Rising, I Shall Not Fall, Inexorable Judgement, Inebriate's Poise, Anoint in Blood, Scourge, Enemies Within, Enemies Without, Fortitude in Fellowship, Purge the Unclean, Bleed for the Emperor, Vicious Offering, Second Wind, and Thy Wrath be Swift
+- ED-NAMES-TW-010: corrected `Stalwart` from `忠誠` to glossary `死忠`
+- ED-NAMES-TW-010: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-010: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-010: Lua syntax tool unavailable
+- ED-NAMES-TW-011: next 15 active localization tables reviewed
+- ED-NAMES-TW-011: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-011: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-011: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-011: glossary/local usage checked for Good Balance, Holy Revenant, Sainted Gunslinger, Grievous Wounds, Faithful Frenzy, Sustained Assault, Swift Certainty, Shredder Frag Grenade, Scavenger, Survivalist, Enhanced Target Priority, Only In Death Does Duty End, Low Profile, Overwatch, and Close Quarters Killzone
+- ED-NAMES-TW-011: no Lua changes required
+- ED-NAMES-TW-011: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-011: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-011: Lua syntax tool unavailable
+- ED-NAMES-TW-012: next 15 active localization tables reviewed
+- ED-NAMES-TW-012: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-012: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-012: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-012: glossary/local usage checked for Chink in their Armour, Weapons Specialist, Conditioning, Longshot, One Motion, Exhilarating Takedown, Charismatic, Confirmed Kill, Tactical Reload, Out for Blood, Get Back in the Fight!, Catch a Breath, Grenade Tinkerer, Covering Fire, and Serrated Blade
+- ED-NAMES-TW-012: kept `Get Back in the Fight!` as `重投戰鬥！` with fullwidth punctuation for zh-tw UI consistency
+- ED-NAMES-TW-012: no Lua changes required
+- ED-NAMES-TW-012: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-012: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-012: Lua syntax tool unavailable
+- ED-NAMES-TW-013: next 15 active localization tables reviewed
+- ED-NAMES-TW-013: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-013: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-013: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-013: glossary/local usage checked for Agile Engagement, Twinned Blast, Grenadier, Born Leader, Keep Their Heads Down!, Reciprocity, Duck and Dive, Fully Loaded, Tactical Awareness, Demolition Team, Trench Fighter Drill, Competitive Urge, Rending Strikes, Bring it Down!, and Big Box of Hurt
+- ED-NAMES-TW-013: kept `Grenadier` as `擲彈兵` for the Veteran talent name despite the glossary context note `擲彈兵/轟炸者`
+- ED-NAMES-TW-013: corrected `Keep Their Heads Down!` from `讓他們全趴下` to glossary `讓他們全趴下!`
+- ED-NAMES-TW-013: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-013: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-013: Lua syntax tool unavailable
+- ED-NAMES-TW-014: next 15 active localization tables reviewed
+- ED-NAMES-TW-014: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-014: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-014: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-014: glossary/local usage checked for Bombs Away!, Frag Bomb, Intimidating Presence, Stay Close!, Coward Culling, Bull Rush, Indomitable, Stomping Boots, Trample, Pulverise, Valuable Distraction, Go Again, Point-Blank Barrage, Bullet Bravado, and Hail of Fire
+- ED-NAMES-TW-014: `Valuable Distraction` kept as `重要干擾`; glossary row currently appears as `Valuable Destruction` but local comment/source is `Valuable Distraction`
+- ED-NAMES-TW-014: corrected `Go Again` from `再來!` to glossary `再來`
+- ED-NAMES-TW-014: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-014: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-014: Lua syntax tool unavailable
 
 ## Blocked
 

@@ -2,6 +2,8 @@
 
 來源：`README.md`。只處理 `# 移除的MOD` 之前仍在維護的 MOD；`# 移除的MOD` 之後的項目不維護、不處理。
 
+重要：`MOD 對應表` 中若有項目不在 `README.md` active 區塊，不能直接視為已移除。這類項目可能是非公開 MOD，必須保留在 `MOD 對應表` 並維持原狀；只有項目明確出現在 README 的 `# 移除的MOD` 區塊，或使用者明確要求移除時，才可移到 `已從 README 排除的 MOD`。
+
 ## 狀態欄位
 
 | Status | 用途 | 下一輪作業規則 |
@@ -112,7 +114,7 @@
 | completed | 2026-07-09 01:15:43 +08:00 | StimmCountdown | StimmCountdown | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-09 01:24:11 +08:00 | Mauler Attack Indicator | mauler_attack_indicator | 校正 zh-tw ring / warning / attack 用語（PR #50）。 |
 | completed | 2026-07-11 11:05:15 +08:00 | Crusher Attack Indicator | crusher_attack_indicator | 校正 Cleave/順劈語意（PR #51）。 |
-| completed | 2026-07-12 20:58:25 +08:00 | Radar | Radar | README 更新至 Last updated 12 July 2026 / Version 2.5.1，手動維護最後下載日期 2026-07-12 |
+| mod_updated | 2026-07-12 20:58:25 +08:00 | Radar | Radar | README 更新至 Last updated 14 July 2026, 2:46AM / Version 2.5.2，手動維護最後下載日期 2026-07-14；下一輪需比對本地內容。 |
 | completed | 2026-07-11 12:28:46 +08:00 | PlasmaBFG | PlasmaBFG | 校正 Heat/Plasma/hook 相關 zh-tw 用語（PR #53）。 |
 | completed | 2026-07-11 13:11:01 +08:00 | SprintRelicHeavy | SprintRelicHeavy | 校正 Relic Blade 詞彙表與輔助功能描述（PR #54）。 |
 | completed | 2026-07-11 18:28:41 +08:00 | Auto Mark | AutoMark | 校正 Servo-Skull/Focus Target 詞彙表一致性（PR #55）。 |
@@ -123,13 +125,13 @@
 | completed | 2026-07-12 01:30:04 +08:00 | DPM | DPM | 校正 DPM 每分鐘傷害資料顯示描述（PR #59 已合併）。 |
 | completed | 2026-07-12 02:22:26 +08:00 | KeepSwinging | KeepSwinging | 校正自動揮擊、攻擊鍵修飾模式與 HUD 用語（PR #60 已合併）。 |
 | completed | 2026-07-12 02:57:52 +08:00 | KPM | KPM | 校正 KPM 描述、近戰/遠程類精英與專家敵人用語（PR #61）。 |
-| completed | 2026-07-12 07:04:18 +08:00 | RetainSelection | RetainSelection | 校正保留選取狀態描述（PR #62）。 |
+| completed | 2026-07-12 07:04:18 +08:00 | Retain Selection | RetainSelection | 校正保留選取狀態描述（PR #62）。 |
 | completed | 2026-07-12 11:37:24 +08:00 | Show CJK Glyphs | show_cjk_glyphs | 校正 Language Priority 繁中用語（PR #63）。 |
-| completed | 2026-07-12 11:46:20 +08:00 | SimpleSpeedMeter | SimpleSpeedMeter | 校正速度計描述繁中用語（PR #64）。 |
+| completed | 2026-07-12 11:46:20 +08:00 | Simple Speed Meter | SimpleSpeedMeter | 校正速度計描述繁中用語（PR #64）。 |
 
 ## 已從 README 排除的 MOD
 
-以下項目位於 README 的 `# 移除的MOD` 區塊下，不維護、不處理 localization：
+以下項目位於 README 的 `# 移除的MOD` 區塊下，不維護、不處理 localization。不要把僅「不在 README active 區塊」的非公開 MOD 加入此表；除非該項目明確列在 README 的移除區塊，或使用者明確要求。
 
 | Status | Last compared at | README MOD | Reason | Notes |
 | --- | --- | --- | --- | --- |

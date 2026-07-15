@@ -1,3 +1,18 @@
+## [2.0.8] - 2026-07-12
+### Changed
+- **Balance restart tracking**: Balance input now waits for the local minigame start before routing corrections and initializes position tracking from the current resumed cursor position, preventing a false velocity spike on the first sample after an interruption.
+- **Matching restart synchronization**: Decode Search movement and submit routing now require an active local minigame session and wait 0.20 seconds after each start, preventing stale pre-start cursor samples from triggering an incorrect move or submit after an interruption.
+- **Drill restart synchronization**: Drill movement, submit pulses, and the local-server fallback now require an active local session and the synchronized stage-1 baseline before acting. Drill submit pulses also apply the intended 80ms press before the 120ms release, without adding a fixed startup delay.
+- **Decode Symbols diagnostics**: Decode timing logs now distinguish the solver's trigger lead/grace from the game's actual target half-width, report the remaining margin to the target edge, identify local input-edge acceptance separately, report server-synchronized stage success or misses, and retain the final completed stage in cleanup output.
+- **Debug message capacity**: Increased the global debug output limit from 100 to 300 visible messages per 30 seconds for longer diagnostic captures.
+
+### Fixed
+- **Decode Symbols restart input**: Interrupted Decode Symbols runs now wait for a stable stage-1 snapshot of the minigame instance, synchronized start time, and target before submitting again. Unexpected snapshot changes re-arm synchronization and cancel stale synthetic input, while a safe first-pass target can still be submitted immediately after the short stability check. Only the Ingame input service reserves networked submit attempts, and the intended 80ms press is followed by the 120ms release. Existing submit timeout and retry behavior remains as a fallback.
+- **Scan restart input**: Interrupted scans now clear their synthetic hold as soon as scan confirmation ends and allow the same target to be selected again immediately, while completed targets remain suppressed until the scanner selects a different target. This prevents stale holds from blocking retries and client synchronization delay from triggering a redundant scan after success.
+
+### Credits
+- To adamigo50 for some feedback during gameplay!
+
 ## [2.0.7] - 2026-07-11
 ### Added
 - **Traditional Chinese localization**: Added a complete `zh-tw` translation by SyuanTsai and a language selector at the top of the mod options. Automatic mode follows the game's language with English fallback, while English and Traditional Chinese can be selected manually when automatic detection does not work. Manually selecting Traditional Chinese does not load the game's Chinese font; Darktide must also use Traditional Chinese or translated text may appear as squares.

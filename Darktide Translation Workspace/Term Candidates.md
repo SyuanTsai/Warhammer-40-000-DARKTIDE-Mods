@@ -24,3 +24,6 @@
 
 | Term / English | Proposed zh-tw | Source MOD | File | Localization key | Reason | Status | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- |
+| Mind in Motion | 動中之心 | Enhanced_descriptions | `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua` | `loc_talent_psyker_venting_doesnt_slow` | `Referneces/Translation.md`/local table missing fixed zh-tw; current value was copied from `Psykinetic's Aura` and was semantically wrong. | candidate | Added during ED-NAMES-TW-008. |
+| Solidity | 堅實 | Enhanced_descriptions | `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua` | `loc_talent_psyker_increased_vent_speed` | `Referneces/Translation.md`/local table missing fixed zh-tw; current value duplicated `Quietude`. | candidate | Added during ED-NAMES-TW-009. |
+| Surety of Arms | 武器確信 | Enhanced_descriptions | `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua` | `loc_talent_psyker_reload_speed_warp` | `Referneces/Translation.md`/local table missing fixed zh-tw; current value was sentence-like and unsuitable as a talent name. | candidate | Added during ED-NAMES-TW-009. |
