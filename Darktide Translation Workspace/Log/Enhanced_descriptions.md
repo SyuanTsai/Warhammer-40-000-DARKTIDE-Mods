@@ -345,6 +345,15 @@
 - ED-NAMES-TW-001: `git -C <translation-repo> diff --check` passed
 - ED-NAMES-TW-001: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-001: Lua syntax tool unavailable
+- ED-NAMES-TW-002: next 15 active localization tables reviewed
+- ED-NAMES-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-002: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-002: glossary/local usage checked for Haymaker, Smackdown, Mercy Killer, Vicious Slice, Hammerblow, Thunderstrike, Chained Deathblow, Bladed Momentum, Blazing Spirit, Warp Slice, Syphon, Power Cycler, Sunder, Slow and Steady, and Power Surge
+- ED-NAMES-TW-002: no Lua changes required
+- ED-NAMES-TW-002: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-002: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-002: Lua syntax tool unavailable
 
 ## Blocked
 
