@@ -1081,6 +1081,17 @@
 - ED-OGRYN-TW-006: Lua syntax tool unavailable
 - ED-OGRYN-TW-006: `Main_Modules/TALENTS/TALENTS_Ogryn.lua` active localization tables completed through current source sequence
 - ED-OGRYN-TW-006: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_ability_adamant_grenade_description`
+- ED-ARBITES-TW-001: 15 active localization tables reviewed
+- ED-ARBITES-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-001: placeholders preserved: `{charges:%s}`, `{max_charges:%s}`, `{cooldown:%s}`, `{talent_name:%s}`, `{duration:%s}`, `{range:%s}`, `{tdr:%s}`, `{reload_speed:%s}`, `{damage_vs_stagger:%s}`, `{toughness:%s}`, `{damage_taken:%s}`, `{strength:%s}`, `{movement_speed:%s}`, `{movement_reduction:%s}`, `{stance_name:%s}`, `{ammo:%s}`, `{damage:%s}`, `{stacks:%s}`, `{nuncio_name:%s}`, `{suppression:%s}`, `{impact:%s}`, `{recoil:%s}`, `{revive_speed:%s}`, `{attack_speed:%s}`
+- ED-ARBITES-TW-001: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ARBITES-TW-001: glossary/local usage checked for Arbites, Arbites Grenade, Remote Detonation, Voltaic Shock Mine, Part of the Squad, Ruthless Efficiency, Breaking Dissent, Nuncio-Aquila, Castigator's Stance, Cyber-Mastiff, Toughness Damage Reduction, Revive Speed, Coherency, Void shield, Stagger/Staggering, Electrocute, Strength, Impact, Stun, Suppression, and Clip
+- ED-ARBITES-TW-001: corrected Arbites term to `法務官`, Toughness Damage Reduction to `韌性減傷`, ally/Coherency phrasing, grenade limit wording, Remote Detonation charge/cooldown wording, Voltaic Shock Mine wording, ammo-to-clip wording, aura effect direction, Castigator's Stance movement penalty wording, Nuncio-Aquila ally wording, and revive speed wording
+- ED-ARBITES-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-ARBITES-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
+- ED-ARBITES-TW-001: Lua syntax tool unavailable
+- ED-ARBITES-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_drone_debuff_talent_desc`
 
 ## Blocked
 
