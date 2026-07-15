@@ -462,6 +462,16 @@
 - ED-NAMES-TW-013: `git -C <translation-repo> diff --check` passed before commit
 - ED-NAMES-TW-013: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-013: Lua syntax tool unavailable
+- ED-NAMES-TW-014: next 15 active localization tables reviewed
+- ED-NAMES-TW-014: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-014: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-014: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-014: glossary/local usage checked for Bombs Away!, Frag Bomb, Intimidating Presence, Stay Close!, Coward Culling, Bull Rush, Indomitable, Stomping Boots, Trample, Pulverise, Valuable Distraction, Go Again, Point-Blank Barrage, Bullet Bravado, and Hail of Fire
+- ED-NAMES-TW-014: `Valuable Distraction` kept as `重要干擾`; glossary row currently appears as `Valuable Destruction` but local comment/source is `Valuable Distraction`
+- ED-NAMES-TW-014: corrected `Go Again` from `再來!` to glossary `再來`
+- ED-NAMES-TW-014: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-014: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-014: Lua syntax tool unavailable
 
 ## Blocked
 
