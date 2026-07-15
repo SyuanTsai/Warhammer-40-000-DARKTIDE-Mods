@@ -33,6 +33,8 @@
 - Perk - 附加屬性(遊戲原生用詞)
 - Primary Action - 主要攻擊(當使用在武器描述時Action翻譯成攻擊)
 - Secondary Action - 次要攻擊(當使用在武器描述時Action翻譯成攻擊)
+- Heat Management - 熱能管理
+- Cloud Radius - 火焰範圍(Cloud意指火雲)
 
 
 
@@ -631,6 +633,9 @@
 - Tranquility Through Slaughter - 殺無赦，心祥和
 - Empyric Resolve - 亞空間意志
 - Penetration of the Soul - 靈魂穿透
+- Mind in Motion - 思維活躍
+- Solidity - 穩固
+- Surety of Arms - 武器在手，信心我有。
 
 ### Ogryn - 歐格林
 
