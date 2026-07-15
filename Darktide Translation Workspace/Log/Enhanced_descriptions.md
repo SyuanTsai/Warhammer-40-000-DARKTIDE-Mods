@@ -452,6 +452,16 @@
 - ED-NAMES-TW-012: `git -C <translation-repo> diff --check` passed
 - ED-NAMES-TW-012: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-012: Lua syntax tool unavailable
+- ED-NAMES-TW-013: next 15 active localization tables reviewed
+- ED-NAMES-TW-013: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-013: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-013: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-013: glossary/local usage checked for Agile Engagement, Twinned Blast, Grenadier, Born Leader, Keep Their Heads Down!, Reciprocity, Duck and Dive, Fully Loaded, Tactical Awareness, Demolition Team, Trench Fighter Drill, Competitive Urge, Rending Strikes, Bring it Down!, and Big Box of Hurt
+- ED-NAMES-TW-013: kept `Grenadier` as `擲彈兵` for the Veteran talent name despite the glossary context note `擲彈兵/轟炸者`
+- ED-NAMES-TW-013: corrected `Keep Their Heads Down!` from `讓他們全趴下` to glossary `讓他們全趴下!`
+- ED-NAMES-TW-013: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-013: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-013: Lua syntax tool unavailable
 
 ## Blocked
 
