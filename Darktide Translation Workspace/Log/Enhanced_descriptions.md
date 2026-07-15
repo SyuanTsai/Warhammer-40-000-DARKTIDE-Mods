@@ -413,6 +413,17 @@
 - ED-NAMES-TW-008: `git -C <translation-repo> diff --check` passed before commit
 - ED-NAMES-TW-008: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-008: Lua syntax tool unavailable
+- ED-NAMES-TW-009: next 15 active localization tables reviewed
+- ED-NAMES-TW-009: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-009: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-009: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-009: glossary/local usage checked for Unlucky for Some, Solidity, Warp Rider, Tranquility Through Slaughter, Surety of Arms, Stunstorm Grenade, Immolation Grenade, Beacon of Purity, Loner, Fury of the Faithful, Ecclesiarch's Call, Martyr's Purpose, Master-Crafted Shroudfield, Invigorating Revelation, and Pious Cut-Throat
+- ED-NAMES-TW-009: corrected `Solidity` from duplicated `心如止水` to candidate `堅實`
+- ED-NAMES-TW-009: corrected `Surety of Arms` from sentence-like `武器在手，信心我有。` to candidate `武器確信`
+- ED-NAMES-TW-009: added `Solidity` and `Surety of Arms` to `Term Candidates.md`
+- ED-NAMES-TW-009: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-009: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-009: Lua syntax tool unavailable
 
 ## Blocked
 
