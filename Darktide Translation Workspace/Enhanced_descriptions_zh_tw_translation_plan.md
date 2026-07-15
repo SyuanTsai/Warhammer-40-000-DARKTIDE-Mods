@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-WEAPONS-TW-006`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-WEAPONS-TW-007`：
 
 ```text
 File: <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua
-Start position: `loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc`
+Start position: `loc_trait_bespoke_armor_rend_on_activated_attacks_desc`
 Scope: 15 localization tables
-Safe next position target: the 16th localization table after `loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc`
+Safe next position target: the 16th localization table after `loc_trait_bespoke_armor_rend_on_activated_attacks_desc`
 ```
 
-最新執行狀態：ED-WEAPONS-TW-005 已完成；translation repo commit `9029232`。下一批接 `loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc`。
+最新執行狀態：ED-WEAPONS-TW-006 已完成；translation repo commit `cd9525c`。下一批接 `loc_trait_bespoke_armor_rend_on_activated_attacks_desc`。

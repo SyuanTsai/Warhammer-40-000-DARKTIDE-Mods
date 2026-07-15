@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 9029232 |
+| Commit | cd9525c |
 | PR URL / number | pending |
-| Next position | ED-WEAPONS-TW-006: `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc` |
+| Next position | ED-WEAPONS-TW-007: `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_bespoke_armor_rend_on_activated_attacks_desc` |
 
 ## Batch Progress
 
@@ -64,6 +64,7 @@
 | ED-WEAPONS-TW-003 | 2026-07-15 16:24:25 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_bespoke_bleed_on_activated_hit_desc` through `loc_trait_bespoke_infinite_melee_cleave_on_weakspot_kill_desc` | 15 | 8 | completed | `loc_trait_bespoke_power_bonus_on_first_attack_desc` | 補回 Bloodletter 持續時間/tick/護盾限制、Power 類可刷新提示、Devastating Strike 甲殼限制，以及 Brutal Momentum/Deathblow 的非歐格林限制。 Translation commit: b9398ae. |
 | ED-WEAPONS-TW-004 | 2026-07-15 16:33:36 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_bespoke_power_bonus_on_first_attack_desc` through `loc_trait_bespoke_rending_on_backstabs_desc` | 15 | 15 | completed | `loc_trait_bespoke_stacking_rending_debuff_on_weakspot_desc` | 補回 Limbsplitter/All or Nothing/Decapitator/Relentless Strikes 的 note 與刷新資訊，校正 Agile、Slaughter Spree、bleed、dodge、Haymaker、Smackdown、Mercy Killer、Ruthless Backstab 描述。 Translation commit: 10e4d49. |
 | ED-WEAPONS-TW-005 | 2026-07-15 16:41:01 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_bespoke_stacking_rending_debuff_on_weakspot_desc` through `loc_trait_bespoke_wind_slash_crits_desc` | 15 | 15 | completed | `loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc` | 補齊 Uncanny Strike、Trauma、Vicious Slice、Hammerblow、Skullcrusher、Thunderstrike、Chained Deathblow、Perfect Strike、Bladed Momentum、Deflector、Momentum、Murderous Tranquility、Blazing Spirit、Unstable Power、Warp Slice 的缺漏資訊與詞彙一致性。 Translation commit: 9029232. |
+| ED-WEAPONS-TW-006 | 2026-07-15 16:47:11 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc` through `loc_trait_bespoke_weakspot_damage_bonus_on_pushed_enemies_desc` | 15 | 15 | completed | `loc_trait_bespoke_armor_rend_on_activated_attacks_desc` | 補齊 Exorcist、Superiority、Lightning Reflexes、High Voltage、Falter、Overwhelming Force、Counterattack、Cranial Grounding、Overload、Energy Leakage、Heatsink、Syphon、Energy Transfer、Shock & Awe、Take a Swing 的缺漏資訊與詞彙一致性。 Translation commit: cd9525c. |
 
 ## Checks
 
@@ -580,6 +581,15 @@
 - ED-WEAPONS-TW-005: `git -C <translation-repo> diff --check` passed before commit
 - ED-WEAPONS-TW-005: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
 - ED-WEAPONS-TW-005: Lua syntax tool unavailable
+- ED-WEAPONS-TW-006: 15 active localization tables reviewed
+- ED-WEAPONS-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-006: placeholders preserved: `{warp_charge:%s}`, `{power_level:%s}`, `{time:%s}`, `{stacks:%s}`, `{duration:%s}`, `{cooldown_duration:%s}`, `{damage:%s}`, `{stagger:%s}`, `{ranged_stagger:%s}`, `{chance:%s}`, `{cooldown:%s}`, `{attack_speed:%s}`, `{interval:%s}`, `{buildup_amount:%s}`, `{overheat_reduction:%s}`, `{amount}`, `{toughness:%s}`, `{heat_reduction:%s}`, `{heat_dissipation:%s}`, `{hit_mass:%s}`
+- ED-WEAPONS-TW-006: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_red`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-006: glossary/local usage checked for Peril, Weakspot, Strength, Elite, Specialist, Stun, Electrocuted/Electrocute, Stagger, Attack Speed, Finesse Damage, Heat, Toughness, Hit Mass/順劈目標, and Weakspot Damage
+- ED-WEAPONS-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-006: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-006: Lua syntax tool unavailable
 
 ## Blocked
 
