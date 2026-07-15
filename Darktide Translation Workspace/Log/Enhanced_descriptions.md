@@ -634,6 +634,17 @@
 - ED-WEAPONS-TW-010: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
 - ED-WEAPONS-TW-010: Lua syntax tool unavailable
 - ED-WEAPONS-TW-010: safe next position is `loc_trait_bespoke_crit_chance_on_successful_dodge_desc`
+- ED-WEAPONS-TW-011: 15 active localization tables reviewed
+- ED-WEAPONS-TW-011: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-011: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-011: placeholders preserved: `{crit_chance:%s}`, `{time:%s}`, `{toughness:%s}`, `{stacks:%s}`, `{stagger:%s}`, `{power_level:%s}`, `{reload_speed:%s}`, `{rend:%s}`, `{rending:%s}`, `{max_stacks:%s}`, `{stagger_reduction:%s}`, `{impact_modifier:%s}`, `{hit_mass_reduction:%s}`
+- ED-WEAPONS-TW-011: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_green`, `Dot_red`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-011: glossary/local usage checked for Desperado, Reassuringly Accurate, Flechette, Man-Stopper, Scattershot, Full Bore, Both Barrels, Trickshooter, Hand-Cannon, Shattering Impact, Everlasting Flame, Quickflame, Fan the Flames, Overpressure, Hot-Shot, Critical Hit, Weakspot Hit, Cleave, Brittleness, Burning, Strength, and Rending
+- ED-WEAPONS-TW-011: corrected missing refresh/melee-exclusion/coherency/stack-removal/shield/carapace/fuel-tank/held-stack notes; replaced missing or unsuitable `Crit_k_rgb_tw`, `Crit0_rgb_tw`, `Stagger2_rgb_tw`, `Crit_chance_r_rgb_tw`, and `Cleaving_r_rgb_tw` usages in touched entries
+- ED-WEAPONS-TW-011: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-011: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-011: Lua syntax tool unavailable
+- ED-WEAPONS-TW-011: safe next position is `loc_trait_bespoke_faster_charge_on_chained_attacks_desc`
 
 ## Blocked
 
