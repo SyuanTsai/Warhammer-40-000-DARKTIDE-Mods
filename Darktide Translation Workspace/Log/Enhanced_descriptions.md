@@ -778,6 +778,18 @@
 - ED-PENANCES-TW-010: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-010: Lua syntax tool unavailable
 - ED-PENANCES-TW-010: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_psyker_2_easy_2_tweaked_description`
+- ED-PENANCES-TW-011: 15 active localization tables reviewed
+- ED-PENANCES-TW-011: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-011: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-011: placeholders preserved: `{target}`
+- ED-PENANCES-TW-011: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-011: glossary/local usage checked for Psykinetic's Wrath, Venting Shriek, Perils of the Warp, Brain Burst, Brain Rupture, Warp Charge, Assail, Scrier's Gaze, Empowered Psionics, Disrupt Destiny, Precision, Telekine Shield, Kinetic Presence, Seer's Presence, Pox Hound, Mutant, Trapper, and Empyric terms
+- ED-PENANCES-TW-011: corrected Venting Shriek display text to `靈能尖嘯`, Assail display text to `靈能攻擊`, hard Psyker target wording, Empowered Psionics target class wording, and Empyric Recovery name to `亞空間恢復`
+- ED-PENANCES-TW-011: added `Empyric Recovery` to Term Candidates because the exact penance name is not in `Referneces/Translation.md`
+- ED-PENANCES-TW-011: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-011: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-011: Lua syntax tool unavailable
+- ED-PENANCES-TW-011: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_psyker_team_critical_hits_description`
 
 ## Blocked
 
@@ -787,3 +799,4 @@
 
 - `Voltaic Shock Mine` -> `電能地雷` added during ED-NAMES-TW-016 because `Referneces/Translation.md` has the English term with an empty zh-tw value.
 - `Dispense Justice` -> `伸張正義` added during ED-NAMES-TW-017 because updated `Referneces/Translation.md` still has no entry for this talent name.
+- `Empyric Recovery` -> `亞空間恢復` added during ED-PENANCES-TW-011 because `Referneces/Translation.md` has related `Empyric` terms but not this penance name.
