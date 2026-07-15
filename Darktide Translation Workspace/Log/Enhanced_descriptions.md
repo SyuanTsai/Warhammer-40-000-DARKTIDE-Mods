@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 412476f |
+| Commit | 7aafc5c |
 | PR URL / number | pending |
-| Next position | ED-TALENTS-MOD-TW-001: `<translation-repo>/Main_Modules/TALENTS_Modular.lua:loc_glossary_talent_default` |
+| Next position | ED-NAMES-TW-017: `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua:loc_talent_adamant_damage_vs_staggered_aura` |
 
 ## Batch Progress
 
@@ -55,6 +55,7 @@
 | ED-MENUS-TW-006 | 2026-07-15 08:39:56 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | final 4 loc_* tables: `loc_wait_reason_store` through `loc_wait_reason_platform_psn` | 4 | 3 | completed | `<translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua:loc_inate_gadget_health_desc` | 校正 Steam、Xbox、PSN 平台等待提示的品牌空格；MENUS.lua 已處理至檔尾。 Translation commit: 703a343. |
 | ED-CURIOS-TW-001 | 2026-07-15 08:43:29 +08:00 | <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua | first 15 loc_* tables: `loc_inate_gadget_health_desc` through `loc_trait_gadget_mission_credits_increase_desc` | 15 | 10 | completed | `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` | 依詞彙表與本地用法校正最大生命值、戰鬥技能恢復速度、腐敗抗性、法術書、格擋消耗降低、盟友復活速度、韌性與審判庭代幣；其餘五項已符合來源。 Translation commit: ba792c4. |
 | ED-CURIOS-TW-002 | 2026-07-15 08:46:47 +08:00 | <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua | final 7 loc_* tables: `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` through `loc_trait_gadget_dr_vs_snipers_desc` | 7 | 7 | completed | `<translation-repo>/Main_Modules/TALENTS_Modular.lua:loc_glossary_talent_default` | 校正任務獎勵珍品機率句，依詞彙表校正 Flamers 為「火焰兵」，並統一傷害抗性敵人括號格式；CURIOS_Blessings_Perks.lua 已處理至檔尾。 Translation commit: 412476f. |
+| ED-NAMES-TW-016 | 2026-07-15 15:03:08 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_ogryn_melee_stagger` through `loc_talent_ability_adamant_grenade_improved` | 15 | 1 | completed | `loc_talent_adamant_damage_vs_staggered_aura` | 依詞彙表將 `Mobile Emplacement` 校正為「機動部屬」；`Voltaic Shock Mine` 詞彙表繁中空白，保留現有「電能地雷」並新增候選詞。 Translation commit: 7aafc5c. |
 
 ## Checks
 
@@ -482,6 +483,17 @@
 - ED-NAMES-TW-015: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-015: Lua syntax tool unavailable
 - ED-NAMES-TW-015: stopped after this batch per user request; safe next position is `loc_talent_ogryn_melee_stagger`
+- ED-NAMES-TW-016: next 15 active localization tables reviewed
+- ED-NAMES-TW-016: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-016: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-016: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-016: glossary/local usage checked for Slam, Soften Them Up, Crunch!, Pacemaker, Hard Knocks, Too Stubborn to Die, Delight in Destruction, Attention Seeker, Towering Presence, Unstoppable Momentum, Dominate, Mobile Emplacement, Arbites Grenade, and Voltaic Shock Mine
+- ED-NAMES-TW-016: corrected `Mobile Emplacement` from `機動部署` to glossary `機動部屬`
+- ED-NAMES-TW-016: added `Voltaic Shock Mine` to `Term Candidates.md`
+- ED-NAMES-TW-016: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-016: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-016: Lua syntax tool unavailable
+- ED-NAMES-TW-016: safe next position is `loc_talent_adamant_damage_vs_staggered_aura`
 
 ## Blocked
 
@@ -489,4 +501,4 @@
 
 ## Term Candidates
 
-- none
+- `Voltaic Shock Mine` -> `電能地雷` added during ED-NAMES-TW-016 because `Referneces/Translation.md` has the English term with an empty zh-tw value.

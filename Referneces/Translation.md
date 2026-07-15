@@ -926,98 +926,98 @@
 ##### 閃擊
 
 - Arbites Grenade - 法務官手榴彈
-- Remote Detonation -
-- Voltaic Shock Mine -
+- Remote Detonation - 遠程引爆
+- Voltaic Shock Mine - 電能地雷
 
 ##### 光環
 
-- Part of the Squad -
-- Ruthless Efficiency -
-- Breaking Dissent -
+- Part of the Squad - 小隊之友
+- Ruthless Efficiency - 雷厲風行
+- Breaking Dissent - 鎮壓異己
 
 ##### 主動技能
 
-- Nuncio-Aquila -
-- Castigator's Stance -
-- Blessed Armament -
-- Writ of Execution -
-- Bloodlust -
-- Inspiring Recitation -
-- Fear of Justice -
-- Break the Line -
-- Commendation from Condemnation -
-- Targeted Brutality -
-- Kill Order -
-- Engage -
+- Nuncio-Aquila - 天鷹使節
+- Castigator's Stance - 懲戒者姿態
+- Blessed Armament - 蒙福軍武
+- Writ of Execution - 處決令
+- Bloodlust - 嗜血殺戮
+- Inspiring Recitation - 振奮朗誦
+- Fear of Justice - 畏怯正義
+- Break the Line - 突破重圍
+- Commendation from Condemnation - 懲惡揚善
+- Targeted Brutality - 針鋒相對
+- Kill Order - 殺戮命令
+- Engage - 交鋒
 
 ##### 鑰石
 
-- Unleashed Brutality -
-- Lone Wolf -
-- Go Get 'Em! -
-- Execution Order -
-- Efficient Killer -
-- Malocator -
-- No Lenience -
-- Keeping Protocol -
-- Not Far Behind -
-- Terminus Warrant -
-- Obstinate -
-- Terminal Decree -
-- Writ of Judgement -
-- Forceful -
-- Adamant Will -
-- Will of the Lex -
-- Targets Acquired -
-- Arbites Vigilant -
-- Judicial Force -
+- Unleashed Brutality - 猛犬出擊
+- Lone Wolf - 孤狼
+- Go Get 'Em! - 往前進攻!
+- Execution Order - 處刑命令
+- Efficient Killer - 效率殺手
+- Malocator - 生化武器關
+- No Lenience - 罪不可赦
+- Keeping Protocol - 殺戮協議
+- Not Far Behind - 不落人後
+- Terminus Warrant - 終點站令狀
+- Obstinate - 能屈能伸
+- Terminal Decree - 終端律令
+- Writ of Judgement - 審判之旨
+- Forceful - 堅定不移
+- Adamant Will - 堅定意志
+- Will of the Lex - 律法之志
+- Targets Acquired - 鎖定目標
+- Arbites Vigilant - 法務官警覺
+- Judicial Force - 審判之力
 
 ##### 一般天賦
 
-- No Escape -
-- Withering Fire -
-- Hammer of Judgement -
-- Razor-Jaw Augment -
-- Target Neutralised -
-- Up Close -
-- Force of Will -
-- Retaliatory Force -
-- Man and Cyber-Mastiff -
-- Walk It Off -
-- Shield Plates -
-- Arbitrator Armour -
-- Voltaic Mandibles Augment -
-- Ammo Belt -
-- Concussive -
-- Canine Morale -
-- Imposing Force -
-- Suppression Force -
-- Suppression Protocols -
-- Plasteel Plates -
-- Arbites Revelatum -
-- Justified Measures -
-- Hold the Line -
-- Judicious Efficiency -
-- Rapid Movement -
-- Rebreather -
-- Cower, Miscreants! -
-- Target the Weak -
-- The Emperor's Fist -
-- Zealous Dedication -
-- Street Smarts -
-- Drive them Back -
-- Target Selection -
-- Soulguilt Scan -
-- Priority Endowment -
-- Target Priority -
-- Final Warning -
-- Weight of the Lex -
-- Serrated Maw -
-- Prosecution Blow -
-- March -
-- Monstrosity Hunter -
-- Strike Down -
-- True Grit -
+- No Escape - 無處可逃
+- Withering Fire - 凋零烈焰
+- Hammer of Judgement - 審判之錘
+- Razor-Jaw Augment - 重顎獠牙
+- Target Neutralised - 繩之以法
+- Up Close - 近在眉睫
+- Force of Will - 鐵血之志
+- Retaliatory Force -  還治其人之身
+- Man and Cyber-Mastiff - 電子獒犬與人(機械戰犬與人)
+- Walk It Off - 走一走治百病
+- Shield Plates - 盾形裝甲
+- Arbitrator Armour - 法務官之鎧
+- Voltaic Mandibles Augment - 電能獠牙
+- Ammo Belt - 彈藥腰帶
+- Concussive - 震盪攻擊
+- Canine Morale - 猛犬氣場
+- Imposing Force - 勢如破竹
+- Suppression Force - 壓制武力
+- Suppression Protocols - 苛政壓制
+- Plasteel Plates - 塑鋼裝甲
+- Arbites Revelatum - 追跡法務官
+- Justified Measures - 正當手段
+- Hold the Line - 堅守陣線
+- Judicious Efficiency - 恰如其分
+- Rapid Movement - 迅疾走位
+- Rebreather - 呼吸器
+- Cower, Miscreants! - 惡徒退散
+- Target the Weak - 針對弱者
+- The Emperor's Fist - 帝皇之拳
+- Zealous Dedication - 狂熱信仰
+- Street Smarts - 街頭妙招
+- Drive them Back - 兵敗如山倒
+- Target Selection - 篩選目標
+- Soulguilt Scan - 罪孽判官
+- Priority Endowment - 秉賦為先
+- Target Priority - 擊殺順序
+- Final Warning - 最後通牒
+- Weight of the Lex - 重如律法
+- Serrated Maw - 鋒利獠牙
+- Prosecution Blow - 制裁重擊
+- March - 行軍之志
+- Monstrosity Hunter - 巨獸獵人
+- Strike Down - 毀滅打擊
+- True Grit - 堅忍不拔
 
 ### Hive Scum - 巢都渣滓
 
@@ -1035,96 +1035,96 @@
 
 ##### 閃擊
 
-- Blinder -
-- Blackout -
-- Boom Bringer -
-- Chem Grenade -
+- Blinder - 閃光彈
+- Blackout - 擊暈
+- Boom Bringer - 炸彈使者
+- Chem Grenade - 化學手榴彈
 
 ##### 光環
 
-- Gunslinger -
-- Gunslinger Improved -
-- Ruffian -
-- Anarchist -
+- Gunslinger - 神射手
+- Gunslinger Improved - 精進神射手
+- Ruffian - 惡棍
+- Anarchist - 無政府主義者
 
 ##### 主動技能
 
 - Desperado - 亡命之徒
-- Enhanced Desperado -
-- Pick Your Targets -
-- Focused Resolve -
-- Rampage! -
-- Channelled Aggression -
-- Boiling Blood -
-- Forge's Bellow -
-- Pulverising Strikes -
+- Enhanced Desperado - 強化亡命之徒
+- Pick Your Targets - 精準獵殺
+- Focused Resolve - 專注凝神
+- Rampage! - 橫衝直撞!
+- Channelled Aggression - 凝聚殺意
+- Boiling Blood - 碎骨打擊
+- Forge's Bellow - 沸騰之血
+- Pulverising Strikes - 熔爐怒吼
 - Stimm Supply - 化學性依賴
-- Practiced Deployment -
-- Booby Trap -
-- Fast Acting Stimms -
+- Practiced Deployment - 熟練部屬
+- Booby Trap - 毒性陷阱
+- Fast Acting Stimms - 速效型興奮劑
 
 ##### 鑰石
 
-- Alley Rat -
-- Nimble -
-- Vulture’s Mark -
-- Vulture's Push -
-- Vulture's Dodge -
-- Patient Hunter -
-- Adrenaline Frenzy -
-- Adrenaline Assassin -
-- Adrenaline Smiter -
-- Stoked Rage -
-- Adrenaline Unbound -
-- Uncontrolled Aggression -
+- Alley Rat - 過街老鼠
+- Nimble - 靈巧
+- Vulture’s Mark - 兀鷲印記
+- Vulture's Push - 兀鷲推擊
+- Vulture's Dodge - 兀鷲閃避
+- Patient Hunter - 堅毅獵手
+- Adrenaline Frenzy - 腎上腺素狂暴
+- Adrenaline Assassin - 腎上腺素刺客
+- Adrenaline Smiter - 腎上腺素懲戒者
+- Stoked Rage - 振奮怒火
+- Adrenaline Unbound - 腎上腺素突破
+- Uncontrolled Aggression - 失控攻擊
 - Chemical Dependency - 化學性依賴
-- Chem Enhanced -
-- Chem Fortified -
-- Maxed Out Chems -
+- Chem Enhanced - 化學強化
+- Chem Fortified - 化學增強
+- Maxed Out Chems - 化學藥劑全開
 
 ##### 一般天賦
 
-- Voice of Tertium -
-- Quick and Deadly -
-- Precision Violence -
-- In Your Face -
-- Calling for a Time Out -
-- Burst of Energy -
-- Sticky Hands -
-- A Tertium Welcome -
-- Speedloader -
-- Float Like a Butterfly -
-- Regained Posture -
-- Tis but a Scratch -
-- Slippery Customer -
-- Ramping Backstabs -
-- Sample Collector -
-- Jittery -
-- Long Lasting -
-- Blessed Stimms -
-- Swift Endurance -
-- Punching Above One's Weight -
-- Hive City Brawler -
-- Cheap Shots -
-- Battering Strikes -
-- Coated Weaponry -
-- Ammo Jack -
-- Pickpocket -
-- Hyper-Critical -
-- The Sweet Spot -
-- Unload -
-- Hyper-Violence -
-- Street Tough -
-- Battering Momentum -
-- Extra Pouches -
-- Pocket Toxin -
-- Splash Damage -
-- Toxic Renewal -
-- Toxin Mania -
-- Moving Target -
-- Channelled Devastation -
-- Virulent Strain -
-- Targeted Toxin -
+- Voice of Tertium - 特提恩之聲
+- Quick and Deadly - 快速且致命
+- Precision Violence - 精準暴力
+- In Your Face - 打你的臉
+- Calling for a Time Out - 請求暫停
+- Burst of Energy - 能量爆發
+- Sticky Hands - 黏黏手
+- A Tertium Welcome - 特提恩是迎賓
+- Speedloader - 快速裝填
+- Float Like a Butterfly - 翩翩蝶舞
+- Regained Posture - 恢復姿態
+- Tis but a Scratch - 沒甚麼，只是擦傷
+- Slippery Customer - 奧客
+- Ramping Backstabs - 加重背刺
+- Sample Collector - 樣本採集
+- Jittery - 神經質
+- Long Lasting - 延長藥效
+- Blessed Stimms - 神佑興奮劑
+- Swift Endurance - 堅韌疾速
+- Punching Above One's Weight - 以小搏大
+- Hive City Brawler - 巢都格鬥家
+- Cheap Shots - 趁人之危
+- Battering Strikes - 猛烈劈擊
+- Coated Weaponry - 塗讀武裝
+- Ammo Jack - 軍火商
+- Pickpocket - 順手牽羊
+- Hyper-Critical - 心狠手辣
+- The Sweet Spot - 甜蜜點
+- Unload - 狂轟猛射
+- Hyper-Violence - 超暴力
+- Street Tough - 街頭硬漢
+- Battering Momentum - 趁勝追擊
+- Extra Pouches - 額外彈藥袋
+- Pocket Toxin - 隨身毒素
+- Splash Damage - 連帶傷害
+- Toxic Renewal - 毒性再生
+- Toxin Mania - 毒藥狂熱
+- Moving Target - 移動目標
+- Channelled Devastation - 蓄力殲滅
+- Virulent Strain - 劇毒菌株
+- Targeted Toxin - 精準投毒
 
 ### Skitarius - 護教軍
 
