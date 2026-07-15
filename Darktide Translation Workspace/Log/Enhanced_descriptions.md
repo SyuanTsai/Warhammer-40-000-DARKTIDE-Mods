@@ -645,6 +645,17 @@
 - ED-WEAPONS-TW-011: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
 - ED-WEAPONS-TW-011: Lua syntax tool unavailable
 - ED-WEAPONS-TW-011: safe next position is `loc_trait_bespoke_faster_charge_on_chained_attacks_desc`
+- ED-WEAPONS-TW-012: 15 active localization tables reviewed
+- ED-WEAPONS-TW-012: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-012: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-012: placeholders preserved: `{charge_time:%s}`, `{stacks:%s}`, `{min_stack_count:%s}`, `{max_stack_count:%s}`, `{crit_chance_min:%s}`, `{crit_chance_max:%s}`, `{crit_chance:%s}`, `{ranged_crit_damage:%s}`, `{charge_speed:%s}`, `{power_level:%s}`, `{damage:%s}`, `{heat_percentage:%s}`, `{power:%s}`, `{time:%s}`, `{bullet_amount:%s}`
+- ED-WEAPONS-TW-012: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_green`, `Dot_red`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-012: glossary/local usage checked for Weight of Fire, Armourbane, Power Blast, Gets Hot!, Volatile, Blaze Away, Rising Heat, Optimised Cooling, Focused Cooling, Gauntlet Momentum, Pulverise, Disruptive, Explosive Offensive, Charmed Reload, Heat, Rending, Critical Chance, Critical Hit, Strength, and Ammo
+- ED-WEAPONS-TW-012: corrected charge-stack expiration, shield application, 20%/91% charge scaling, overheat/heat wording, T4 optimized cooling values, gauntlet momentum bug note, refresh notes, push/alt-fire stack removal, and crit reload proc note; replaced missing or unsuitable `Heat2_rgb_tw`, `Crt_chance_rgb_tw`, `Crit_hit_r_color_rgb_tw`, and `Strength_m_rgb_tw` usages in touched entries
+- ED-WEAPONS-TW-012: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-012: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-012: Lua syntax tool unavailable
+- ED-WEAPONS-TW-012: safe next position is `loc_trait_bespoke_power_bonus_on_chained_hits_on_single_target_desc`
 
 ## Blocked
 
