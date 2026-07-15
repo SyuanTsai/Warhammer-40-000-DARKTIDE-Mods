@@ -790,6 +790,17 @@
 - ED-PENANCES-TW-011: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-011: Lua syntax tool unavailable
 - ED-PENANCES-TW-011: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_psyker_team_critical_hits_description`
+- ED-PENANCES-TW-012: 15 active localization tables reviewed
+- ED-PENANCES-TW-012: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-012: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-012: placeholders preserved: `{target}`, `{time_window}`, `50%`
+- ED-PENANCES-TW-012: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-012: glossary/local usage checked for Prescience, Critical strikes, Smite, Stunned, Brain Burst, Brain Rupture, Pox Hound, Warp Charge, Perils of the Warp, Monstrosity, Health, Ogryn, Trust Level, and Threat difficulty names
+- ED-PENANCES-TW-012: corrected Prescience critical-strike wording, Warp Battery threat wording, Going Out With a Bang title, Ogryn title color key, Ogryn Trust Level punctuation, and Ogryn mission counter wording
+- ED-PENANCES-TW-012: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-012: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-012: Lua syntax tool unavailable
+- ED-PENANCES-TW-012: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_missions_ogryn_2_objective_2_name`
 
 ## Blocked
 
