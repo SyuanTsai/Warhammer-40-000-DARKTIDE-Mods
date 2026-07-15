@@ -902,6 +902,17 @@
 - ED-ZEALOT-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
 - ED-ZEALOT-TW-001: Lua syntax tool unavailable
 - ED-ZEALOT-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_ability_zealot_stealth_rending_description`
+- ED-ZEALOT-TW-002: 15 active localization tables reviewed
+- ED-ZEALOT-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-002: placeholders preserved: `{duration:%s}`, `{movement_speed:%s}`, `{backstab_damage:%s}`, `{finesse_damage:%s}`, `{crit_chance:%s}`, `{rending:%s}`, `{cooldown:%s}`, `{talent_name:%s}`, `{buff_duration:%s}`, `{damage:%s}`, `{threat:%s}`, `{toughness:%s}`, `{dr:%s}`, `{monster:%s}`, `{ogryn:%s}`, `{other:%s}`, `{max_stacks:%s}`, `{radius:%s}`, `{toughness_damage_reduction:%s}`, `{toughness_small:%s}`, `{cooldown_regen:%s}`, `{max_wounds:%s}`, `{corruption_resistance:%s}`, `{attack_speed:%s}`, `{toughness_modifier:%s}`, `{current_health:%s}`
+- ED-ZEALOT-TW-002: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ZEALOT-TW-002: glossary/local usage checked for Shroudfield, Master-Crafted Shroudfield, Stealth, Finesse Damage, Critical Chance, Critical Hits, Rending, Ability Cooldown, Blazing Piety, Fury, Martyrdom, Wounds, Corruption, Toughness, and Health
+- ED-ZEALOT-TW-002: corrected Critical Chance wording to `爆擊率`, typo `威薄`, Damage Resistance and Health wording, Martyrdom missing-wound sentence, plus-value ordering, and stray string concatenation before the Stealth keyword
+- ED-ZEALOT-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-ZEALOT-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
+- ED-ZEALOT-TW-002: Lua syntax tool unavailable
+- ED-ZEALOT-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_quickness_desc`
 
 ## Blocked
 
