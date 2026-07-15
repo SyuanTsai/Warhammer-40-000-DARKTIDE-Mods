@@ -1092,6 +1092,18 @@
 - ED-ARBITES-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
 - ED-ARBITES-TW-001: Lua syntax tool unavailable
 - ED-ARBITES-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_drone_debuff_talent_desc`
+- ED-ARBITES-TW-002: 15 active localization tables reviewed
+- ED-ARBITES-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-002: placeholders preserved: `{damage_reduction:%s}`, `{attack_speed_reduction:%s}`, `{duration:%s}`, `{damage:%s}`, `{stagger:%s}`, `{cooldown:%s}`, `{toughness:%s}`, `{stamina:%s}`, `{toughness_max:%s}`, `{stamina_max:%s}`, `{cooldown_elite:%s}`, `{max_cooldown}`, `{companion_damage:%s}`, `{distance:%s}`, `{charge_ability_name:%s}`, `{attack_speed:%s}`, `{tdr:%s}`, `{charges:%s}`, `{grenade_time:%s}`, `{grenade_blitz_name:%s}`, `{time_shock_mine:%s}`, `{shock_mine_name:%s}`, `{toughness:%s}`, `{dog_damage:%s}`, `{crit_chance:%s}`, `{crit_damage:%s}`, `{regen:%s}`, `{rending:%s}`, `{damage_red:%s}`, `{max_stacks:%s}`, `{movement_speed:%s}`
+- ED-ARBITES-TW-002: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ARBITES-TW-002: glossary/local usage checked for Break the Line, Execution Order, Terminus Warrant, Cyber-Mastiff, Combat Ability, Toughness Damage Reduction, Stamina, Elite, Specialist, Monstrosity, Marked Enemy, Bosses, Critical Chance, Critical Damage, Rending, Blitz, and Damage Resistance
+- ED-ARBITES-TW-002: corrected Break the Line to `突破重圍`, Bosses to `首領`, Lone Wolf typo, Toughness Damage Reduction to `韌性減傷`, charge distance wording, damage-vs-target wording, Execution Order dog damage wording, cooldown/rending wording, monstrosity damage/resistance wording, and max charge wording
+- ED-ARBITES-TW-002: `Mercy Sanction` not present in `Referneces/Translation.md`; retained existing local usage `仁慈制裁`
+- ED-ARBITES-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-ARBITES-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
+- ED-ARBITES-TW-002: Lua syntax tool unavailable
+- ED-ARBITES-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_terminus_warrant_new_desc`
 
 ## Blocked
 
