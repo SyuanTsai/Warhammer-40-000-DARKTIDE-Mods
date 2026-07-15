@@ -656,6 +656,18 @@
 - ED-WEAPONS-TW-012: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
 - ED-WEAPONS-TW-012: Lua syntax tool unavailable
 - ED-WEAPONS-TW-012: safe next position is `loc_trait_bespoke_power_bonus_on_chained_hits_on_single_target_desc`
+- ED-WEAPONS-TW-013: final 11 active localization tables reviewed
+- ED-WEAPONS-TW-013: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-013: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-013: placeholders preserved: `{power:%s}`, `{hit:%s}`, `{time:%s}`, `{stacks:%s}`, `{rending:%s}`, `{max_stacks:%s}`, `{toughness:%s}`, `{stagger:%s}`, `{power_level:%s}`, `{radius:%s}`, `{dmg_vs_ogryn_monster:%s}`, `{reload_speed:%s}`, `{duration:%s}`
+- ED-WEAPONS-TW-013: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_green`, `Dot_red`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-013: glossary/local usage checked for Overwhelming Fire, Can Opener, Born in Blood, Pierce, Inspiring Barrage, Expansive, Shrapnel, Blast Zone, Adhesive Charge, Marksman's Reflex, Ogryn, Monstrosity, Hit Mass, Brittleness, Cleaved, Weakspot Hit, Rumbler, and Kickback
+- ED-WEAPONS-TW-013: corrected final weapon-blessing entries for single-target stacks, bayonet brittleness, close-range toughness multi-procs, armour hit mass bypass, carapace cleave, ranged strength refresh, close-explosion bleed notes, adhesive grenades, and projectile weakspot reload refresh restriction
+- ED-WEAPONS-TW-013: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-013: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-013: Lua syntax tool unavailable
+- ED-WEAPONS-TW-013: `Main_Modules/WEAPONS_Blessings_Perks.lua` completed through current active source sequence
+- ED-WEAPONS-TW-013: safe next position is `Main_Modules/PENANCES.lua:loc_item_type_gear_lowerbody`
 
 ## Blocked
 
