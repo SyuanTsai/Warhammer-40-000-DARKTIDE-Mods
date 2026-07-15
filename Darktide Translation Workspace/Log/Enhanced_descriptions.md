@@ -1002,6 +1002,18 @@
 - ED-VETERAN-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
 - ED-VETERAN-TW-004: Lua syntax tool unavailable
 - ED-VETERAN-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_talent_veteran_dodging_grants_crit_description`
+- ED-VETERAN-TW-005: final 15 active localization tables reviewed
+- ED-VETERAN-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-005: placeholders preserved: `{crit_chance:%s}`, `{duration:%s}`, `{stacks:%s}`, `{stamina:%s}`, `{ammo:%s}`, `{regen:%s}`, `{time:%s}`, `{finesse:%s}`, `{suppression:%s}`, `{proc_chance:%s}`, `{damage:%s}`, `{melee_impact:%s}`, `{rending_multiplier:%s}`, `{base_damage:%s}`, `{ranged_damage:%s}`, `{cooldown:%s}`, `{max_stacks:%s}`
+- ED-VETERAN-TW-005: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-VETERAN-TW-005: glossary/local usage checked for Reciprocity, Duck and Dive, Fully Loaded, Tactical Awareness, Desperado, Keep Their Heads Down!, Competitive Urge, Rending Strikes, Agile Engagement, Skirmisher, Shock Trooper, Kill Zone, Bring it Down!, Onslaught, Exploit Weakness, Pox Hound, Trapper, Gunner, Reaper, Sniper, Ogryn, Captain, Twins, Brittleness, Critical Shots, Rending, Suppression, Impact, Finesse, and Combat Ability
+- ED-VETERAN-TW-005: corrected Critical Hit Chance wording, dodge trigger conjunctions, reserve ammo rounding wording, Competitive Urge proc wording, Rending and Agile Engagement effect order, Skirmisher base-damage wording, Las-weapon critical shot wording, Kill Zone condition/block wording, Captain to `連長`, continuous-hit wording, and Exploit Weakness trigger order
+- ED-VETERAN-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-VETERAN-TW-005: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
+- ED-VETERAN-TW-005: Lua syntax tool unavailable
+- ED-VETERAN-TW-005: `Main_Modules/TALENTS/TALENTS_Veteran.lua` active localization tables completed through current source sequence
+- ED-VETERAN-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_ability_ogryn_grenade_box_description`
 
 ## Blocked
 
