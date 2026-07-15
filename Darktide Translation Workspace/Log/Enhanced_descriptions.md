@@ -856,6 +856,17 @@
 - ED-PENANCES-TW-017: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
 - ED-PENANCES-TW-017: Lua syntax tool unavailable
 - ED-PENANCES-TW-017: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_missions_broker_2_x_description`
+- ED-PENANCES-TW-018: 15 active localization tables reviewed
+- ED-PENANCES-TW-018: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-018: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-018: placeholders preserved: `{target}`, `{enemy_count}`
+- ED-PENANCES-TW-018: `CKWord` and `CNumb` structure preserved in touched `zh-tw`; added Scum keyword support in `COLORS_KWords_tw.lua`
+- ED-PENANCES-TW-018: glossary/local usage checked for Hive Scum, Gunslinger, Ruffian, Anarchist, Blinder, Boom Bringer, Chem Grenade, Desperado, Rampage!, Ammo, Coherency, Critical strikes, Damage, Malice, and Heresy
+- ED-PENANCES-TW-018: corrected Hive Scum to `巢都渣滓`, mission objective wording, and added active zh-tw for Scum aura/blitz/ability descriptions through Rampage
+- ED-PENANCES-TW-018: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-018: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
+- ED-PENANCES-TW-018: Lua syntax tool unavailable
+- ED-PENANCES-TW-018: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_broker_deploy_stimm_field_description`
 
 ## Blocked
 
