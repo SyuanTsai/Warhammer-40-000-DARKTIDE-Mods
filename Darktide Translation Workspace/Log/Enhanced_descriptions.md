@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 703a343 |
+| Commit | ba792c4 |
 | PR URL / number | pending |
-| Next position | ED-CURIOS-TW-001: `<translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua:loc_inate_gadget_health_desc` |
+| Next position | ED-CURIOS-TW-002: `<translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua:loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` |
 
 ## Batch Progress
 
@@ -53,6 +53,7 @@
 | ED-MENUS-TW-004 | 2026-07-15 08:34:22 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_inventory_title_slot_gear_lowerbody` through `loc_weapon_special_special_attack` | 15 | 5 | completed | `loc_stats_display_mobility_stat` | 依詞彙表與本地用法校正 Favourite、Perk、Primary Action、Secondary Action 與 Special Melee Attack；其餘十項已符合來源或既有一致譯法。 Translation commit: 2bebbdd. |
 | ED-MENUS-TW-005 | 2026-07-15 08:37:10 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_stats_display_mobility_stat` through `loc_wait_reason_backend` | 15 | 10 | completed | `loc_wait_reason_store` | 補齊七個 Dump Stats `CKWord` 繁中，校正 Cloud Radius、Dedicated Server 與 Fatshark backend 等等待提示；其餘五項已符合來源或既有一致譯法。 Translation commit: b64a0d8. |
 | ED-MENUS-TW-006 | 2026-07-15 08:39:56 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | final 4 loc_* tables: `loc_wait_reason_store` through `loc_wait_reason_platform_psn` | 4 | 3 | completed | `<translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua:loc_inate_gadget_health_desc` | 校正 Steam、Xbox、PSN 平台等待提示的品牌空格；MENUS.lua 已處理至檔尾。 Translation commit: 703a343. |
+| ED-CURIOS-TW-001 | 2026-07-15 08:43:29 +08:00 | <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua | first 15 loc_* tables: `loc_inate_gadget_health_desc` through `loc_trait_gadget_mission_credits_increase_desc` | 15 | 10 | completed | `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` | 依詞彙表與本地用法校正最大生命值、戰鬥技能恢復速度、腐敗抗性、法術書、格擋消耗降低、盟友復活速度、韌性與審判庭代幣；其餘五項已符合來源。 Translation commit: ba792c4. |
 
 ## Checks
 
@@ -295,6 +296,15 @@
 - ED-MENUS-TW-006: diff scope limited to `Main_Modules/MENUS.lua`
 - ED-MENUS-TW-006: Lua syntax tool unavailable
 - ED-MENUS-TW-006: `Main_Modules/MENUS.lua` completed through current English source sequence
+- ED-CURIOS-TW-001: all 15 `loc_*` tables reviewed
+- ED-CURIOS-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-CURIOS-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-CURIOS-TW-001: placeholders preserved: `{max_health_modifier:%s}`, `{extra_max_amount_of_wounds:%s}`, `{stamina_modifier:%s}`, `{toughness_bonus:%s}`, `{ability_cooldown_modifier:%s}`, `{corruption_taken_multiplier:%s}`, `{permanent_damage_converter_resistance:%s}`, `{block_cost_multiplier:%s}`, `{revive_speed_modifier:%s}`, `{stamina_regeneration_modifier:%s}`, `{toughness_regen_delay_multiplier:%s}`, `{mission_reward_xp_modifier:%s}`, `{mission_reward_credit_modifier:%s}`
+- ED-CURIOS-TW-001: `CKWord` color keys preserved or moved to correct `*_rgb_tw` variants for Health, Combat Ability, Corruption Resistance, Stamina, and Toughness
+- ED-CURIOS-TW-001: glossary/local usage checked for Health, Wound, Stamina, Toughness, Combat Ability, Corruption, Grimoire, Block Cost Reduction, Ally Revive Speed, Experience, and Ordo Dockets
+- ED-CURIOS-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-CURIOS-TW-001: diff scope limited to `Main_Modules/CURIOS_Blessings_Perks.lua`
+- ED-CURIOS-TW-001: Lua syntax tool unavailable
 
 ## Blocked
 

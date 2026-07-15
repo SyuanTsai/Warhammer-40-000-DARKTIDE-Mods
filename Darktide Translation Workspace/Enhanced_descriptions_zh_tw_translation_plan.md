@@ -262,11 +262,11 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-CURIOS-TW-001`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-CURIOS-TW-002`：
 
 ```text
 File: <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua
-Start position: `loc_inate_gadget_health_desc`
+Start position: `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc`
 Scope: 15 `loc_*` tables
-Safe next position target: the 16th `loc_*` table after `loc_inate_gadget_health_desc`
+Safe next position target: the next file after final CURIOS_Blessings_Perks.lua `loc_*` table
 ```
