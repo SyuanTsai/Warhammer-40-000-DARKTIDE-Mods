@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | a818308 |
+| Commit | e66dab3 |
 | PR URL / number | pending |
-| Next position | ED-MENUS-TW-003: `<translation-repo>/Main_Modules/MENUS.lua:loc_credits_goods_vendor_description_text` |
+| Next position | ED-MENUS-TW-004: `<translation-repo>/Main_Modules/MENUS.lua:loc_inventory_title_slot_gear_lowerbody` |
 
 ## Batch Progress
 
@@ -49,6 +49,7 @@
 | ED-COLORS-TW-017 | 2026-07-14 23:57:25 +08:00 | <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua | final 9 phrase/note values: `phrs.Carap_cant_clv` through `nts.Weaksp_note` | 9 | 9 | completed | `<translation-repo>/Main_Modules/MENUS.lua:first loc_* table` | 校正甲殼護甲、協同韌性回復與 notes 短語，補齊 Weaksp_note；Keyword colors 檔已收尾。 Translation commit: c6d259c. |
 | ED-MENUS-TW-001 | 2026-07-15 00:18:34 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | first 15 loc_* tables: `loc_currency_name_plasteel` through `loc_contract_view_intro_description` | 15 | 2 | completed | `loc_contract_view_intro_title` | 前八項僅覆寫俄文、未新增 zh-tw；依詞彙表校正 Monstrosities 為「巨獸」並改用全形問號。 Translation commit: 302677a. |
 | ED-MENUS-TW-002 | 2026-07-15 08:28:56 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_contract_view_intro_title` through `loc_credits_vendor_view_option_buy` | 15 | 11 | completed | `loc_credits_goods_vendor_description_text` | 校正 Melk 標題、合約完成獎勵、Low/Medium/High、未知防禦性珍品、每週合約通知、聖化/威力提示、服務問句與 Requisition 標籤。 Translation commit: a818308. |
+| ED-MENUS-TW-003 | 2026-07-15 08:31:42 +08:00 | <translation-repo>/Main_Modules/MENUS.lua | 15 loc_* tables: `loc_credits_goods_vendor_description_text` through `loc_inventory_view_display_name` | 15 | 7 | completed | `loc_inventory_title_slot_gear_lowerbody` | 補上 Stimm Lab 繁中，校正 Brunt 武器描述、Strike Team、Previous Missions、Havoc Assignment 與 Loadout 標籤；其餘八項已符合詞彙表或既有一致譯法。 Translation commit: e66dab3. |
 
 ## Checks
 
@@ -256,6 +257,15 @@
 - ED-MENUS-TW-002: `git -C <translation-repo> diff --check` passed before commit
 - ED-MENUS-TW-002: diff scope limited to `Main_Modules/MENUS.lua`
 - ED-MENUS-TW-002: Lua syntax tool unavailable
+- ED-MENUS-TW-003: all 15 `loc_*` tables reviewed
+- ED-MENUS-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-MENUS-TW-003: placeholders preserved: `{killer:%s}`, `{victim:%s}`
+- ED-MENUS-TW-003: glossary/local usage checked for Curios, Stimm, Havoc, Strike Team, and Loadout
+- ED-MENUS-TW-003: added missing `zh-tw` for `loc_broker_stimm_builder_view_display_name`
+- ED-MENUS-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-MENUS-TW-003: diff scope limited to `Main_Modules/MENUS.lua`
+- ED-MENUS-TW-003: Lua syntax tool unavailable
 
 ## Blocked
 
