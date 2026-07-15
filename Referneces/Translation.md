@@ -616,8 +616,10 @@
 
 - Big Box of Hurt - 巨量傷害盒
 - Big Friendly Rock - 投石問路
+- That One Didn't Count - 那下不算!
 - Frag Bomb - 破片炸彈
 - Bombs Away! - 投彈完畢!
+- Bigger Box of Hurt - 超巨量傷害箱
 
 ##### 光環
 
@@ -634,8 +636,8 @@
 - Stomping Boots - 跺殺之靴
 - Pulverise - 粉碎
 - Loyal Protector - 忠誠守護者
-- Big Lungs - 強力肺活
 - Valuable Distraction - 重要干擾
+- No Pain! - 一點都不痛!
 - Go again! - 再來
 - Point-Blank Barrage - 貼身火力
 - Bullet Bravado - 壯膽子彈
@@ -645,17 +647,21 @@
 ##### 鑰石
 
 - Heavy Hitter - 重拳出擊
+- Don't Feel a Thing - 毫髮無傷
 - Just Getting Started - 熱身完畢
 - Unstoppable - 越戰越勇
-- Brutish Momentum - 兇蠻打擊
+- Great Cleaver - 強力劈砍
+- Impactful - 震撼衝擊
 - Feel No Pain - 麻木
 - Pained Outburst - 痛楚爆發
 - Strongest! - 最強壯!
 - Toughest! - 最堅韌!
 - Burst Limiter Override - 爆限超載
+- Back Off! - 退後!
 - Maximum Firepower - 最大火力
-- More Burst Limiter Overrides! - 爆限大超載!
 - Good Shootin' - 好槍法
+- Heat of Battle - 激鬥戰火
+- Bulletstorm - 子彈風暴
 
 ##### 一般天賦
 
@@ -663,21 +669,37 @@
 - Heavyweight - 重量級
 - Steady Grip - 穩定握持
 - Smash 'Em! - 碾碎它們!
-- Slam - 猛擊
 - The Best Defence - 最好的防禦
 - Furious - 怒不可遏
 - Towering Presence - 卓越氣場
 - Soften Them Up - 削弱敵人
 - Payback Time - 報復時間
+- Pumped Up - 士氣高昂
+- Focused Fighter - 專注鬥士
+- Strongman - 大肌肌
+- Can't Hit Me...Again - 休想再打中我......
+- Keep Shooting - 射不停
+- Beat Them Back - 擊潰他們
+- Strike True - 精準打擊
+- Slam - 猛擊
 - Ammo Stash - 彈藥儲存包
 - Big Boom - 大爆炸
 - Crunch! - 嘎嘎!
 - Batter - 重毆
+- Brutish Strength - 蠻橫之力
+- For the Lil'Uns - 為了小子們
+- Concentrate - 專注
+- Fire Away - 火力全開
+- Simple Minded - 頭腦簡單
+- Unbreakable - 堅不可摧
 - Too Stubborn to Die - 堅韌不屈
+- Frenzied Blows - 狂暴猛擊
 - Attention Seeker - 渴求關注
+- Bruiser - 格鬥兵
 - Pacemaker - 領跑者
 - Unstoppable Momentum - 勢不可擋
 - Delight in Destruction - 毀滅之樂
+- Dedicated Practice - 熟能生巧
 - Mobile Emplacement - 機動部屬
 - Implacable - 利刃出鞘
 - Dominate - 主宰
@@ -686,8 +708,12 @@
 - Reloaded and Ready - 換彈完畢
 - Massacre - 屠殺
 - No Stopping Me! - 誰敢攔我!
+- Bash and Blast - 猛砸爆裂
 - Hard Knocks - 沉重打擊
+- No Hurting Friends! - 相親相愛好夥伴!
 - Won't Give In - 絕不屈服
+- Spray and Slay - 射盡殺戮
+- Lucky Streak - 好運連連
 
 ### Zealot - 狂信徒
 
