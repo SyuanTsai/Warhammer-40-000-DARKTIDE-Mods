@@ -701,6 +701,17 @@
 - ED-PENANCES-TW-003: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-003: Lua syntax tool unavailable
 - ED-PENANCES-TW-003: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_veteran_2_kills_with_last_round_in_mag_name`
+- ED-PENANCES-TW-004: 15 active localization tables reviewed
+- ED-PENANCES-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-004: placeholders preserved: `{target}`
+- ED-PENANCES-TW-004: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-004: glossary/local usage checked for Ammo/Ammunition, Toughness, Damage, Scavenger, Survivalist, Infiltrate, Voice of Command, Penances, and Veteran
+- ED-PENANCES-TW-004: corrected Make Every Shot Count ammo/accuracy sentence and punctuation, and adjusted Killshot Ready title to `致命射擊就緒`
+- ED-PENANCES-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-004: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-004: Lua syntax tool unavailable
+- ED-PENANCES-TW-004: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_veteran_enemies_killed_with_max_focus_fire_description`
 
 ## Blocked
 
