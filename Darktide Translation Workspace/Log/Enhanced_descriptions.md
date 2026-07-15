@@ -373,6 +373,16 @@
 - ED-NAMES-TW-004: `git -C <translation-repo> diff --check` passed
 - ED-NAMES-TW-004: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-004: Lua syntax tool unavailable
+- ED-NAMES-TW-005: next 15 active localization tables reviewed
+- ED-NAMES-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-005: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-005: glossary/local usage checked for Fan the Flames, Hot-Shot, Power Blast, Gets Hot!, Volatile, Blaze Away, Rising Heat, Gauntlet Momentum, Pulverise, Overwhelming Fire, Born in Blood, Pierce, Inspiring Barrage, Expansive, and Adhesive Charge
+- ED-NAMES-TW-005: `Inspiring Barrage` kept as `激勵彈幕` to match the ALT OGRYN glossary entry
+- ED-NAMES-TW-005: no Lua changes required
+- ED-NAMES-TW-005: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-005: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-005: Lua syntax tool unavailable
 
 ## Blocked
 

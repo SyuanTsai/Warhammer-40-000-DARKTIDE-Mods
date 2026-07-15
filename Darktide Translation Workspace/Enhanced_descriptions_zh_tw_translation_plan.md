@@ -262,11 +262,11 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-NAMES-TW-005`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-NAMES-TW-006`：
 
 ```text
 File: <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua
-Start position: `loc_trait_bespoke_ignore_stagger_reduction_with_primary_on_burning`
+Start position: `loc_talent_cleave_boost_medium`
 Scope: 15 localization tables
-Safe next position target: the 16th localization table after `loc_trait_bespoke_ignore_stagger_reduction_with_primary_on_burning`
+Safe next position target: the 16th localization table after `loc_talent_cleave_boost_medium`
 ```
