@@ -926,98 +926,98 @@
 ##### 閃擊
 
 - Arbites Grenade - 法務官手榴彈
-- Remote Detonation -
-- Voltaic Shock Mine -
+- Remote Detonation - 遠程引爆
+- Voltaic Shock Mine - 電能地雷
 
 ##### 光環
 
-- Part of the Squad -
-- Ruthless Efficiency -
-- Breaking Dissent -
+- Part of the Squad - 小隊之友
+- Ruthless Efficiency - 雷厲風行
+- Breaking Dissent - 鎮壓異己
 
 ##### 主動技能
 
-- Nuncio-Aquila -
-- Castigator's Stance -
-- Blessed Armament -
-- Writ of Execution -
-- Bloodlust -
-- Inspiring Recitation -
-- Fear of Justice -
-- Break the Line -
-- Commendation from Condemnation -
-- Targeted Brutality -
-- Kill Order -
-- Engage -
+- Nuncio-Aquila - 天鷹使節
+- Castigator's Stance - 懲戒者姿態
+- Blessed Armament - 蒙福軍武
+- Writ of Execution - 處決令
+- Bloodlust - 嗜血殺戮
+- Inspiring Recitation - 振奮朗誦
+- Fear of Justice - 畏怯正義
+- Break the Line - 突破重圍
+- Commendation from Condemnation - 懲惡揚善
+- Targeted Brutality - 針鋒相對
+- Kill Order - 殺戮命令
+- Engage - 交鋒
 
 ##### 鑰石
 
-- Unleashed Brutality -
-- Lone Wolf -
-- Go Get 'Em! -
-- Execution Order -
-- Efficient Killer -
-- Malocator -
-- No Lenience -
-- Keeping Protocol -
-- Not Far Behind -
-- Terminus Warrant -
-- Obstinate -
-- Terminal Decree -
-- Writ of Judgement -
-- Forceful -
-- Adamant Will -
-- Will of the Lex -
-- Targets Acquired -
-- Arbites Vigilant -
-- Judicial Force -
+- Unleashed Brutality - 猛犬出擊
+- Lone Wolf - 孤狼
+- Go Get 'Em! - 往前進攻!
+- Execution Order - 處刑命令
+- Efficient Killer - 效率殺手
+- Malocator - 生化武器關
+- No Lenience - 罪不可赦
+- Keeping Protocol - 殺戮協議
+- Not Far Behind - 不落人後
+- Terminus Warrant - 終點站令狀
+- Obstinate - 能屈能伸
+- Terminal Decree - 終端律令
+- Writ of Judgement - 審判之旨
+- Forceful - 堅定不移
+- Adamant Will - 堅定意志
+- Will of the Lex - 律法之志
+- Targets Acquired - 鎖定目標
+- Arbites Vigilant - 法務官警覺
+- Judicial Force - 審判之力
 
 ##### 一般天賦
 
-- No Escape -
-- Withering Fire -
-- Hammer of Judgement -
-- Razor-Jaw Augment -
-- Target Neutralised -
-- Up Close -
-- Force of Will -
-- Retaliatory Force -
-- Man and Cyber-Mastiff -
-- Walk It Off -
-- Shield Plates -
-- Arbitrator Armour -
-- Voltaic Mandibles Augment -
-- Ammo Belt -
-- Concussive -
-- Canine Morale -
-- Imposing Force -
-- Suppression Force -
-- Suppression Protocols -
-- Plasteel Plates -
-- Arbites Revelatum -
-- Justified Measures -
-- Hold the Line -
-- Judicious Efficiency -
-- Rapid Movement -
-- Rebreather -
-- Cower, Miscreants! -
-- Target the Weak -
-- The Emperor's Fist -
-- Zealous Dedication -
-- Street Smarts -
-- Drive them Back -
-- Target Selection -
-- Soulguilt Scan -
-- Priority Endowment -
-- Target Priority -
-- Final Warning -
-- Weight of the Lex -
-- Serrated Maw -
-- Prosecution Blow -
-- March -
-- Monstrosity Hunter -
-- Strike Down -
-- True Grit -
+- No Escape - 無處可逃
+- Withering Fire - 凋零烈焰
+- Hammer of Judgement - 審判之錘
+- Razor-Jaw Augment - 重顎獠牙
+- Target Neutralised - 繩之以法
+- Up Close - 近在眉睫
+- Force of Will - 鐵血之志
+- Retaliatory Force -  還治其人之身
+- Man and Cyber-Mastiff - 電子獒犬與人(機械戰犬與人)
+- Walk It Off - 走一走治百病
+- Shield Plates - 盾形裝甲
+- Arbitrator Armour - 法務官之鎧
+- Voltaic Mandibles Augment - 電能獠牙
+- Ammo Belt - 彈藥腰帶
+- Concussive - 震盪攻擊
+- Canine Morale - 猛犬氣場
+- Imposing Force - 勢如破竹
+- Suppression Force - 壓制武力
+- Suppression Protocols - 苛政壓制
+- Plasteel Plates - 塑鋼裝甲
+- Arbites Revelatum - 追跡法務官
+- Justified Measures - 正當手段
+- Hold the Line - 堅守陣線
+- Judicious Efficiency - 恰如其分
+- Rapid Movement - 迅疾走位
+- Rebreather - 呼吸器
+- Cower, Miscreants! - 惡徒退散
+- Target the Weak - 針對弱者
+- The Emperor's Fist - 帝皇之拳
+- Zealous Dedication - 狂熱信仰
+- Street Smarts - 街頭妙招
+- Drive them Back - 兵敗如山倒
+- Target Selection - 篩選目標
+- Soulguilt Scan - 罪孽判官
+- Priority Endowment - 秉賦為先
+- Target Priority - 擊殺順序
+- Final Warning - 最後通牒
+- Weight of the Lex - 重如律法
+- Serrated Maw - 鋒利獠牙
+- Prosecution Blow - 制裁重擊
+- March - 行軍之志
+- Monstrosity Hunter - 巨獸獵人
+- Strike Down - 毀滅打擊
+- True Grit - 堅忍不拔
 
 ### Hive Scum - 巢都渣滓
 
