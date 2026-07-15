@@ -823,8 +823,6 @@
 
 #### 老兵天賦
 
-- Inspiring Presence - 鼓舞人心
-
 ##### 閃擊
 
 - Frag Grenade - 破片手雷
@@ -850,11 +848,9 @@
 - Voice of Command - 發號施令
 - Duty and Honour - 責任與榮譽
 - Only In Death Does Duty End - 只有死亡，職責才會終結
-- For the Emperor! - 為了皇帝！
 - Infiltrate - 滲透
 - Overwatch - 掩護射擊
 - Hunter's Resolve - 獵手決意
-- Surprise Attack - 突襲
 - Low Profile - 低調
 - Close Quarters Killzone - 肉搏戰
 
@@ -864,7 +860,6 @@
 - Chink in their Armour - 滲透盔甲
 - Tunnel Vision - 視野狹窄
 - Long Range Assassin - 遠程刺客
-- Camouflage - 偽裝
 - Focus Target! - 鎖定目標
 - Target Down! - 目標擊倒!
 - Redirect Fire! - 轉移火力!
@@ -873,16 +868,12 @@
 - Always Prepared - 有備無患
 - Invigorated - 活力煥發
 - On Your Toes - 時刻警覺
-- Fleeting Fire - 集火
-- Conditioning - 身體調節
 
 ##### 一般天賦
 
 - Exhilarating Takedown - 振奮擊倒
-- Charismatic - 超凡魅力
 - Confirmed Kill - 擊殺紀錄
 - Out for Blood - 嗜血
-- Get Back in the Fight! - 重投戰鬥!
 - Volley Adept - 齊射能手
 - Longshot - 遠射
 - Covering Fire - 火力掩護
@@ -893,8 +884,9 @@
 - Iron Will - 鋼鐵意志
 - Trench Fighter Drill - 戰壕兵訓練
 - Field Improvisation - 臨場發揮
-- Twinned Blast - 雙響炮
+- Withering Fire - 凋零烈焰
 - Opening Salvo - 首輪齊射
+- Covert Operative - 秘密特工
 - Serrated Blade - 鋸齒刀刃
 - Catch a Breath - 喘息片刻
 - Grenadier - 擲彈兵/轟炸者
@@ -917,6 +909,7 @@
 - Skirmisher - 遊擊者
 - Shock Trooper - 突擊隊
 - Kill Zone - 殺戮地帶
+- Lock and Load - 荷槍實彈
 - Bring it Down! - 幹掉它!
 - Onslaught - 猛攻
 - Exploit Weakness - 趁火打劫
