@@ -891,6 +891,17 @@
 - ED-PENANCES-TW-020: Lua syntax tool unavailable
 - ED-PENANCES-TW-020: `Main_Modules/PENANCES.lua` active localization tables completed through current source sequence
 - ED-PENANCES-TW-020: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_ability_shock_grenade_description`; skipped `Main_Modules/TALENTS/TALENTS_Psyker.lua` per user request
+- ED-ZEALOT-TW-001: 15 active localization tables reviewed
+- ED-ZEALOT-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-001: placeholders preserved: `{talent_name:%s}`, `{radius:%s}`, `{damage_reduction:%s}`, `{corruption:%s}`, `{stamina_cost_multiplier:%s}`, `{stamina_delay:%s}`, `{toughness:%s}`, `{damage:%s}`, `{cooldown:%s}`, `{attack_speed:%s}`, `{time:%s}`, `{duration:%s}`, `{charges:%s}`, `{interval:%s}`, `{flat_toughness:%s}`, `{max_toughness:%s}`, `{stacks:%s}`
+- ED-ZEALOT-TW-001: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ZEALOT-TW-001: glossary/local usage checked for Stun Grenade, Stunstorm Grenade, Immolation Grenade, Blades of Faith, Benediction, Beacon of Purity, Zealous, Chastise the Wicked, Fury of the Faithful, Chorus of Spiritual Fortitude, Holy Relic, Toughness, Toughness Damage Reduction, Critical Hit, Rending, Cleave, Coherency, Corruption, Stamina, and Bulwark
+- ED-ZEALOT-TW-001: corrected Bulwark shield wording, Immolation Grenade/Blades of Faith details, aura phrasing, Critical Hit wording, Fury of the Faithful missing dash restrictions, Chorus cancellation/bonus Toughness details, `Tghnss_gold_rgb_tw` key usage, and typo `彈藥笱`
+- ED-ZEALOT-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-ZEALOT-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
+- ED-ZEALOT-TW-001: Lua syntax tool unavailable
+- ED-ZEALOT-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_ability_zealot_stealth_rending_description`
 
 ## Blocked
 

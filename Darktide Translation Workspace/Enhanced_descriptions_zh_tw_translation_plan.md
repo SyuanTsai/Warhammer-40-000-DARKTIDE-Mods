@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-ZEALOT-TW-001`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-ZEALOT-TW-002`：
 
 ```text
 File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Zealot.lua
-Start position: `loc_ability_shock_grenade_description`
+Start position: `loc_ability_zealot_stealth_rending_description`
 Scope: 15 localization tables
-Safe next position target: the 16th localization table after `loc_ability_shock_grenade_description`
+Safe next position target: the 16th localization table after `loc_ability_zealot_stealth_rending_description`
 ```
 
-最新執行狀態：ED-PENANCES-TW-020 已完成；translation repo commit `4d6da00`。`Main_Modules/PENANCES.lua` active localization tables 已處理完畢；依使用者先前要求跳過 `Main_Modules/TALENTS/TALENTS_Psyker.lua`，下一批接 `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_ability_shock_grenade_description`。
+最新執行狀態：ED-ZEALOT-TW-001 已完成；translation repo commit `e584617`。下一批接 `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_ability_zealot_stealth_rending_description`。
