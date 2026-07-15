@@ -723,6 +723,17 @@
 - ED-PENANCES-TW-005: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-005: Lua syntax tool unavailable
 - ED-PENANCES-TW-005: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_veteran_2_hard_1_name`
+- ED-PENANCES-TW-006: 15 active localization tables reviewed
+- ED-PENANCES-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-006: placeholders preserved: `{target}`, `{num_enemies}`, `{time}`
+- ED-PENANCES-TW-006: `CKWord`, `CNumb`, and `CNote` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-006: glossary/local usage checked for Volley Fire, Executioner's Stance, Weakspots, Frag Grenade, Shredder Frag Grenade, Zealot, Trust Level, and mission objectives
+- ED-PENANCES-TW-006: corrected Zealot Trust Level punctuation, mission counter wording, and first Zealot mission-type objective sentence
+- ED-PENANCES-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-006: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-006: Lua syntax tool unavailable
+- ED-PENANCES-TW-006: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_missions_zealot_2_objective_3_description`
 
 ## Blocked
 

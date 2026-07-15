@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-PENANCES-TW-006`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-PENANCES-TW-007`：
 
 ```text
 File: <translation-repo>/Main_Modules/PENANCES.lua
-Start position: `loc_achievement_veteran_2_hard_1_name`
+Start position: `loc_achievement_missions_zealot_2_objective_3_description`
 Scope: 15 localization tables
-Safe next position target: the 16th localization table after `loc_achievement_veteran_2_hard_1_name`
+Safe next position target: the 16th localization table after `loc_achievement_missions_zealot_2_objective_3_description`
 ```
 
-最新執行狀態：ED-PENANCES-TW-005 已完成；translation repo commit `611be3d`。下一批接 `Main_Modules/PENANCES.lua:loc_achievement_veteran_2_hard_1_name`。
+最新執行狀態：ED-PENANCES-TW-006 已完成；translation repo commit `eef26cf`。下一批接 `Main_Modules/PENANCES.lua:loc_achievement_missions_zealot_2_objective_3_description`。
