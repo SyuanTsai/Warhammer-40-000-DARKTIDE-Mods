@@ -1035,96 +1035,96 @@
 
 ##### 閃擊
 
-- Blinder -
-- Blackout -
-- Boom Bringer -
-- Chem Grenade -
+- Blinder - 閃光彈
+- Blackout - 擊暈
+- Boom Bringer - 炸彈使者
+- Chem Grenade - 化學手榴彈
 
 ##### 光環
 
-- Gunslinger -
-- Gunslinger Improved -
-- Ruffian -
-- Anarchist -
+- Gunslinger - 神射手
+- Gunslinger Improved - 精進神射手
+- Ruffian - 惡棍
+- Anarchist - 無政府主義者
 
 ##### 主動技能
 
 - Desperado - 亡命之徒
-- Enhanced Desperado -
-- Pick Your Targets -
-- Focused Resolve -
-- Rampage! -
-- Channelled Aggression -
-- Boiling Blood -
-- Forge's Bellow -
-- Pulverising Strikes -
+- Enhanced Desperado - 強化亡命之徒
+- Pick Your Targets - 精準獵殺
+- Focused Resolve - 專注凝神
+- Rampage! - 橫衝直撞!
+- Channelled Aggression - 凝聚殺意
+- Boiling Blood - 碎骨打擊
+- Forge's Bellow - 沸騰之血
+- Pulverising Strikes - 熔爐怒吼
 - Stimm Supply - 化學性依賴
-- Practiced Deployment -
-- Booby Trap -
-- Fast Acting Stimms -
+- Practiced Deployment - 熟練部屬
+- Booby Trap - 毒性陷阱
+- Fast Acting Stimms - 速效型興奮劑
 
 ##### 鑰石
 
-- Alley Rat -
-- Nimble -
-- Vulture’s Mark -
-- Vulture's Push -
-- Vulture's Dodge -
-- Patient Hunter -
-- Adrenaline Frenzy -
-- Adrenaline Assassin -
-- Adrenaline Smiter -
-- Stoked Rage -
-- Adrenaline Unbound -
-- Uncontrolled Aggression -
+- Alley Rat - 過街老鼠
+- Nimble - 靈巧
+- Vulture’s Mark - 兀鷲印記
+- Vulture's Push - 兀鷲推擊
+- Vulture's Dodge - 兀鷲閃避
+- Patient Hunter - 堅毅獵手
+- Adrenaline Frenzy - 腎上腺素狂暴
+- Adrenaline Assassin - 腎上腺素刺客
+- Adrenaline Smiter - 腎上腺素懲戒者
+- Stoked Rage - 振奮怒火
+- Adrenaline Unbound - 腎上腺素突破
+- Uncontrolled Aggression - 失控攻擊
 - Chemical Dependency - 化學性依賴
-- Chem Enhanced -
-- Chem Fortified -
-- Maxed Out Chems -
+- Chem Enhanced - 化學強化
+- Chem Fortified - 化學增強
+- Maxed Out Chems - 化學藥劑全開
 
 ##### 一般天賦
 
-- Voice of Tertium -
-- Quick and Deadly -
-- Precision Violence -
-- In Your Face -
-- Calling for a Time Out -
-- Burst of Energy -
-- Sticky Hands -
-- A Tertium Welcome -
-- Speedloader -
-- Float Like a Butterfly -
-- Regained Posture -
-- Tis but a Scratch -
-- Slippery Customer -
-- Ramping Backstabs -
-- Sample Collector -
-- Jittery -
-- Long Lasting -
-- Blessed Stimms -
-- Swift Endurance -
-- Punching Above One's Weight -
-- Hive City Brawler -
-- Cheap Shots -
-- Battering Strikes -
-- Coated Weaponry -
-- Ammo Jack -
-- Pickpocket -
-- Hyper-Critical -
-- The Sweet Spot -
-- Unload -
-- Hyper-Violence -
-- Street Tough -
-- Battering Momentum -
-- Extra Pouches -
-- Pocket Toxin -
-- Splash Damage -
-- Toxic Renewal -
-- Toxin Mania -
-- Moving Target -
-- Channelled Devastation -
-- Virulent Strain -
-- Targeted Toxin -
+- Voice of Tertium - 特提恩之聲
+- Quick and Deadly - 快速且致命
+- Precision Violence - 精準暴力
+- In Your Face - 打你的臉
+- Calling for a Time Out - 請求暫停
+- Burst of Energy - 能量爆發
+- Sticky Hands - 黏黏手
+- A Tertium Welcome - 特提恩是迎賓
+- Speedloader - 快速裝填
+- Float Like a Butterfly - 翩翩蝶舞
+- Regained Posture - 恢復姿態
+- Tis but a Scratch - 沒甚麼，只是擦傷
+- Slippery Customer - 奧客
+- Ramping Backstabs - 加重背刺
+- Sample Collector - 樣本採集
+- Jittery - 神經質
+- Long Lasting - 延長藥效
+- Blessed Stimms - 神佑興奮劑
+- Swift Endurance - 堅韌疾速
+- Punching Above One's Weight - 以小搏大
+- Hive City Brawler - 巢都格鬥家
+- Cheap Shots - 趁人之危
+- Battering Strikes - 猛烈劈擊
+- Coated Weaponry - 塗讀武裝
+- Ammo Jack - 軍火商
+- Pickpocket - 順手牽羊
+- Hyper-Critical - 心狠手辣
+- The Sweet Spot - 甜蜜點
+- Unload - 狂轟猛射
+- Hyper-Violence - 超暴力
+- Street Tough - 街頭硬漢
+- Battering Momentum - 趁勝追擊
+- Extra Pouches - 額外彈藥袋
+- Pocket Toxin - 隨身毒素
+- Splash Damage - 連帶傷害
+- Toxic Renewal - 毒性再生
+- Toxin Mania - 毒藥狂熱
+- Moving Target - 移動目標
+- Channelled Devastation - 蓄力殲滅
+- Virulent Strain - 劇毒菌株
+- Targeted Toxin - 精準投毒
 
 ### Skitarius - 護教軍
 
