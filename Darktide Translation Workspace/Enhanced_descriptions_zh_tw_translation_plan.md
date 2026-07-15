@@ -262,11 +262,11 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-TALENTS-MOD-TW-001`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-TALENTS-MOD-TW-002`：
 
 ```text
 File: <translation-repo>/Main_Modules/TALENTS_Modular.lua
-Start position: `loc_glossary_talent_default`
+Start position: `loc_talent_melee_damage_boost_medium_desc`
 Scope: 15 `loc_*` tables
-Safe next position target: the 16th `loc_*` table after `loc_glossary_talent_default`
+Safe next position target: the 16th `loc_*` table after `loc_talent_melee_damage_boost_medium_desc`, or next file if TALENTS_Modular.lua ends first
 ```

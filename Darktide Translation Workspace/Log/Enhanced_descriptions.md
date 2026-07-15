@@ -316,6 +316,16 @@
 - ED-CURIOS-TW-002: diff scope limited to `Main_Modules/CURIOS_Blessings_Perks.lua`
 - ED-CURIOS-TW-002: Lua syntax tool unavailable
 - ED-CURIOS-TW-002: `Main_Modules/CURIOS_Blessings_Perks.lua` completed through current English source sequence
+- ED-TALENTS-MOD-TW-001: all 15 `loc_*` tables reviewed
+- ED-TALENTS-MOD-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-TALENTS-MOD-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-TALENTS-MOD-TW-001: placeholders preserved: `{cleave:%s}`, `{crit_chance:%s}`, `{impact:%s}`
+- ED-TALENTS-MOD-TW-001: `CKWord`, `CPhrs("Carap_cant_cleave")`, and `CNote("Impact_note")` references preserved
+- ED-TALENTS-MOD-TW-001: glossary/local usage checked for Passive, Blitz, Aura, Combat Ability, Talent, Keystone, Keystone Modifier, Cleave, Critical Hit Chance, and Impact
+- ED-TALENTS-MOD-TW-001: added active `zh-tw` for full-build hotkey and popup title
+- ED-TALENTS-MOD-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-TALENTS-MOD-TW-001: diff scope limited to `Main_Modules/TALENTS_Modular.lua`
+- ED-TALENTS-MOD-TW-001: Lua syntax tool unavailable
 
 ## Blocked
 
