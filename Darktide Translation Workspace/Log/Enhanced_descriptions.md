@@ -1036,6 +1036,17 @@
 - ED-OGRYN-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
 - ED-OGRYN-TW-002: Lua syntax tool unavailable
 - ED-OGRYN-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_new_desc`
+- ED-OGRYN-TW-003: 15 active localization tables reviewed
+- ED-OGRYN-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-003: placeholders preserved: `{talent_name:%s}`, `{stacks:%s}`, `{toughness_replenish:%s}`, `{cooldown:%s}`, `{toughness_regen:%s}`, `{proc_chance:%s}`, `{ranged_damage:%s}`, `{duration:%s}`, `{chance:%s}`, `{cooldown_reduction:%s}`, `{fire_rate:%s}`, `{toughness_multiplier:%s}`, `{damage:%s}`, `{damage_reduction:%s}`, `{toughness:%s}`, `{heavy_toughness:%s}`
+- ED-OGRYN-TW-003: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-OGRYN-TW-003: glossary/local usage checked for Pained Outburst, Strongest!, Toughest!, Burst Limiter Override, Back Off!, Maximum Firepower, Good Shootin', Heat of Battle, Bulletstorm, Lynchpin, Heavyweight, Steady Grip, Smash 'Em!, The Best Defence, Furious, Lucky Bullet, Feel No Pain, Pack Master, Captain, Ripper Guns, Grenadier Gauntlet, Rumbler, Twin-Linked Stubbers, Kickback, Cleave, Critical, Damage, Toughness, Coherency, and Damage Reduction
+- ED-OGRYN-TW-003: corrected cooldown phrasing, Captain to `連長`, Lucky Bullet trigger wording, Cleave colored keyword, Critical wording, Bulletstorm Coherency ally wording, Pack Master mistranslation, Heavyweight damage/reduction structure, braced ranged weapon wording, and Ogryn weapon glossary typos
+- ED-OGRYN-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-OGRYN-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
+- ED-OGRYN-TW-003: Lua syntax tool unavailable
+- ED-OGRYN-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_bigger_coherency_radius_desc`
 
 ## Blocked
 

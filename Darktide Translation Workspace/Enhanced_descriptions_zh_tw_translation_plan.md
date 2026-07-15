@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-OGRYN-TW-003`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-OGRYN-TW-004`：
 
 ```text
 File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Ogryn.lua
-Start position: `loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_new_desc`
+Start position: `loc_talent_ogryn_bigger_coherency_radius_desc`
 Scope: next 15 active localization tables
-Safe next position target: the 16th active localization table after `loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_new_desc`
+Safe next position target: `loc_talent_ogryn_pushing_applies_brittlenes_desc`
 ```
 
-最新執行狀態：ED-OGRYN-TW-002 已完成；translation repo commit `565713c`。下一批接 `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_new_desc`。
+最新執行狀態：ED-OGRYN-TW-003 已完成；translation repo commit `d1e7c5b`。下一批接 `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_bigger_coherency_radius_desc`。
