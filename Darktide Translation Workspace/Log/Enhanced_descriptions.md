@@ -946,6 +946,18 @@
 - ED-ZEALOT-TW-005: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
 - ED-ZEALOT-TW-005: Lua syntax tool unavailable
 - ED-ZEALOT-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_heal_damage_taken_desc`
+- ED-ZEALOT-TW-006: final 4 active localization tables reviewed
+- ED-ZEALOT-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-006: placeholders preserved: `{damage_reduction:%s}`, `{time:%s}`, `{range:%s}`, `{cooldown:%s}`, `{sprint_speed:%s}`, `{sprint_cost:%s}`, `{duration:%s}`, `{damage:%s}`, `{stacks:%s}`
+- ED-ZEALOT-TW-006: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ZEALOT-TW-006: glossary/local usage checked for Restoring Faith, Behind the Lines, Relentless Fervor, Riposte, Health, Damage, Heavy Melee Backstab Kills, Sprint Speed, Sprint Cost, Slowdown Immunity, and Dodge
+- ED-ZEALOT-TW-006: corrected Health to `生命值`, Restoring Faith timing/percentage word order, Heavy Melee Backstab Kills wording, Sprint Speed conjunction, and Slowdown Immunity wording
+- ED-ZEALOT-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-ZEALOT-TW-006: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
+- ED-ZEALOT-TW-006: Lua syntax tool unavailable
+- ED-ZEALOT-TW-006: `Main_Modules/TALENTS/TALENTS_Zealot.lua` active localization tables completed through current source sequence
+- ED-ZEALOT-TW-006: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_ability_frag_grenade_description`
 
 ## Blocked
 
