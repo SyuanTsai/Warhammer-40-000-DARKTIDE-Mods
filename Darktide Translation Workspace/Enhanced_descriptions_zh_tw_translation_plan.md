@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-16，目前是 `ED-OGRYN-TW-005`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-16，目前是 `ED-OGRYN-TW-006`：
 
 ```text
 File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Ogryn.lua
-Start position: `loc_talent_ogryn_pushing_applies_brittlenes_desc`
-Scope: next 15 active localization tables
-Safe next position target: `loc_talent_ogryn_windup_reduces_damage_taken_desc`
+Start position: `loc_talent_ogryn_windup_reduces_damage_taken_desc`
+Scope: final 13 active localization tables in Ogryn
+Safe next position target: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_ability_adamant_grenade_description`
 ```
 
-最新執行狀態：ED-OGRYN-TW-004 已完成；translation repo commit `2d6f410`。下一批接 `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_pushing_applies_brittlenes_desc`。
+最新執行狀態：ED-OGRYN-TW-005 已完成；translation repo commit `cd56ec5`。下一批接 `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_windup_reduces_damage_taken_desc`。

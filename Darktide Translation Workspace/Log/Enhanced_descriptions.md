@@ -1058,6 +1058,17 @@
 - ED-OGRYN-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
 - ED-OGRYN-TW-004: Lua syntax tool unavailable
 - ED-OGRYN-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_pushing_applies_brittlenes_desc`
+- ED-OGRYN-TW-005: 15 active localization tables reviewed
+- ED-OGRYN-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-005: placeholders preserved: `{stacks:%s}`, `{duration:%s}`, `{power:%s}`, `{toughness_damage_reduction:%s}`, `{cooldown:%s}`, `{revive_speed:%s}`, `{sway_reduction:%s}`, `{spread_reduction:%s}`, `{recoil_reduction:%s}`, `{stamina:%s}`, `{more_stacks:%s}`, `{max_stacks:%s}`, `{resistance:%s}`, `{damage:%s}`, `{health:%s}`, `{toughness_multiplier:%s}`, `{attack_speed:%s}`, `{cooldown_regen:%s}`, `{multi_hit:%s}`, `{reload_speed:%s}`, `{movement_speed:%s}`, `{damage_reduction:%s}`, `{wield_speed:%s}`, `{damage_taken_multiplier:%s}`
+- ED-OGRYN-TW-005: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-OGRYN-TW-005: glossary/local usage checked for Brutish Strength, For the Lil'Uns, Concentrate, Fire Away, Simple Minded, Unbreakable, Too Stubborn to Die, Frenzied Blows, Attention Seeker, Bruiser, Pacemaker, Unstoppable Momentum, Delight in Destruction, Dedicated Practice, Mobile Emplacement, Brittleness, Toughness, Strength, Toughness Damage Reduction, Stun, Stamina, Burn, Corruption, Corruption Damage, Poxburster, Poxwalker, Pox Hound, Beast of Nurgle, Daemonhost, Grimoire, Health, Taunt, Captain, Coherency, Ability Cooldown, Staggering, Bleeding, Stimm, and Damage Reduction
+- ED-OGRYN-TW-005: corrected OCR typos, Stamina/Health terminology, braced ranged weapon wording, weapon handling terms, Poxwalker/Beast of Nurgle/Grimoire/Stimm glossary terms, Perfect Block overhead wording, Taunt description structure, Captain to `連長`, Coherency ally wording, reload speed wording, item swap wording, and Damage Reduction wording
+- ED-OGRYN-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-OGRYN-TW-005: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
+- ED-OGRYN-TW-005: Lua syntax tool unavailable
+- ED-OGRYN-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_windup_reduces_damage_taken_desc`
 
 ## Blocked
 
