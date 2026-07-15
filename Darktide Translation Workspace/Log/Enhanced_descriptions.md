@@ -712,6 +712,17 @@
 - ED-PENANCES-TW-004: diff scope limited to `Main_Modules/PENANCES.lua`
 - ED-PENANCES-TW-004: Lua syntax tool unavailable
 - ED-PENANCES-TW-004: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_veteran_enemies_killed_with_max_focus_fire_description`
+- ED-PENANCES-TW-005: 15 active localization tables reviewed
+- ED-PENANCES-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-005: placeholders preserved: `{target}`
+- ED-PENANCES-TW-005: `CKWord`, `CNumb`, and `CNote` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-005: glossary/local usage checked for Marksman's Focus, Krak Grenade, Smoke Grenade, Focus Target!, Weapons Specialist, Fire Team, Close and Kill, Coherency, Executioner's Stance, Critical, Weakspot Hits, and Penances
+- ED-PENANCES-TW-005: corrected Marksman's Focus display text to glossary `狙擊專注`, changed Focus Soldier punctuation to full-width `！`, and removed stray period from Keep it Tight title
+- ED-PENANCES-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-005: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-005: Lua syntax tool unavailable
+- ED-PENANCES-TW-005: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_veteran_2_hard_1_name`
 
 ## Blocked
 
