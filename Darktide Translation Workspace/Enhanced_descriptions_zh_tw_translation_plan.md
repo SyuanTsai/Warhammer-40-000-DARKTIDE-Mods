@@ -262,11 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-NAMES-TW-015`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-15，目前是 `ED-NAMES-TW-016`：
 
 ```text
 File: <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua
-Start position: `loc_talent_ogryn_special_ammo_fire_shots`
+Start position: `loc_talent_ogryn_melee_stagger`
 Scope: 15 localization tables
-Safe next position target: the 16th localization table after `loc_talent_ogryn_special_ammo_fire_shots`
+Safe next position target: the 16th localization table after `loc_talent_ogryn_melee_stagger`
 ```
+
+最新執行狀態：ED-NAMES-TW-015 已完成；依使用者要求，本批次完成後停止。
