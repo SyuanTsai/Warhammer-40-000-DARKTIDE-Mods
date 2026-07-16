@@ -1126,6 +1126,17 @@
 - ED-ARBITES-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
 - ED-ARBITES-TW-004: Lua syntax tool unavailable
 - ED-ARBITES-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_dodge_grants_damage_desc`
+- ED-ARBITES-TW-005: 15 active localization tables reviewed
+- ED-ARBITES-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-005: placeholders preserved: `{damage:%s}`, `{duration:%s}`, `{stacks:%s}`, `{normal_stacks:%s}`, `{damage_taken_multiplier:%s}`, `{max_stacks:%s}`, `{ogryn_stacks:%s}`, `{reload_speed:%s}`, `{speed:%s}`, `{stamina:%s}`, `{cd:%s}`, `{corruption:%s}`, `{toxic_reduction:%s}`, `{damage_vs_suppressed:%s}`, `{impact:%s}`, `{crit_chance:%s}`, `{dodge:%s}`, `{dodge_duration:%s}`, `{cleave:%s}`, `{time:%s}`, `{strength:%s}`, `{clip_size:%s}`, `{health:%s}`
+- ED-ARBITES-TW-005: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ARBITES-TW-005: glossary/local usage checked for Arbites Revelatum, Justified Measures, Hold the Line, Judicious Efficiency, Rapid Movement, Rebreather, Cower, Miscreants!, The Emperor's Fist, Zealous Dedication, Street Smarts, Drive them Back, Target Selection, Soulguilt Scan, Priority Endowment, Target Priority, Damage, Staggering, Stamina, Corruption, Critical Strike Chance, Cleave, Weakspot, Clip, and Health
+- ED-ARBITES-TW-005: corrected damage/effect direction wording, Staggering formatting, reload/sprint speed wording, toxic gas reduction wording, suppressed enemy damage wording, critical chance wording, Cleave wording, elite/specialist damage wording, Weakspot strength wording, Clip to `彈匣`, and Health to `生命值`
+- ED-ARBITES-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-ARBITES-TW-005: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
+- ED-ARBITES-TW-005: Lua syntax tool unavailable
+- ED-ARBITES-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_ranged_damage_on_melee_stagger_desc`
 
 ## Blocked
 
