@@ -1104,6 +1104,17 @@
 - ED-ARBITES-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
 - ED-ARBITES-TW-002: Lua syntax tool unavailable
 - ED-ARBITES-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_terminus_warrant_new_desc`
+- ED-ARBITES-TW-003: 15 active localization tables reviewed
+- ED-ARBITES-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-003: placeholders preserved: `{max_stacks:%s}`, `{weakspot_stacks:%s}`, `{melee_duration:%s}`, `{melee_strength:%s}`, `{tdr:%s}`, `{ranged_duration:%s}`, `{ranged_strength:%s}`, `{ranged_cleave:%s}`, `{suppression:%s}`, `{stacks:%s}`, `{duration:%s}`, `{cdr:%s}`, `{toughness:%s}`, `{melee_stacks:%s}`, `{attack_speed:%s}`, `{crit_chance:%s}`, `{impact:%s}`, `{dr:%s}`, `{cleave:%s}`, `{strength:%s}`, `{low_stacks:%s}`, `{high_stacks:%s}`, `{cooldown:%s}`, `{damage:%s}`, `{movement_speed:%s}`, `{melee_attack_speed:%s}`, `{hits:%s}`, `{instant_toughness:%s}`
+- ED-ARBITES-TW-003: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ARBITES-TW-003: glossary/local usage checked for Terminus Warrant, Melee Justice, Ranged Justice, Toughness Damage Reduction, Ability Cooldown, Coherency, Critical Hit Chance, Forceful, Arbites Vigilant, Combat Ability, Stagger/Staggering, Impact, Damage Resistance, Stun, Will of the Lex, Cleave, Elite, Specialist, Withering Fire, Hammer of Judgement, Cyber-Mastiff, Bleed, and Target Neutralised
+- ED-ARBITES-TW-003: corrected Forceful to `堅定不移`, Toughness Damage Reduction to `韌性減傷`, stack gain wording, Coherency ally wording, cooldown regeneration wording, critical chance wording, ranged damage after reload wording, melee attack speed wording, and Target Neutralised broken parentheses
+- ED-ARBITES-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-ARBITES-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
+- ED-ARBITES-TW-003: Lua syntax tool unavailable
+- ED-ARBITES-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_close_kills_restore_toughness_desc`
 
 ## Blocked
 
