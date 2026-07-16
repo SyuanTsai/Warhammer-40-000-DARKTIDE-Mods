@@ -1149,6 +1149,18 @@
 - ED-ARBITES-TW-006: Lua syntax tool unavailable
 - ED-ARBITES-TW-006: `Main_Modules/TALENTS/TALENTS_Arbites.lua` active localization tables completed through current source sequence
 - ED-ARBITES-TW-006: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_blitz_flash_grenade_desc`
+- ED-SCUM-TW-001: 15 active localization tables reviewed
+- ED-SCUM-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-001: placeholders preserved: `{num_charges:%s}`, `{num_kills:%s}`, `{max_charges:%s}`, `{talent_name:%s}`, `{ammo:%s}`, `{talent:%s}`, `{melee_damage:%s}`, `{critical_chance:%s}`, `{duration:%s}`, `{sprint_movement_speed:%s}`, `{cooldown:%s}`, `{default_talent:%s}`, `{duration_max:%s}`, `{duration_extend:%s}`, `{focus:%s}`, `{rending:%s}`, `{stacks:%s}`, `{damage:%s}`, `{cooldown_base:%s}`, `{cooldown_elite:%s}`, `{cooldown_max:%s}`, `{power:%s}`, `{attack_speed:%s}`, `{damage_taken:%s}`, `{rage_duration_extend:%s}`, `{rage_duration_max:%s}`, `{punk_rage:%s}`, `{rage_duration_extend_elites:%s}`, `{rage_duration_max_upgrade:%s}`
+- ED-SCUM-TW-001: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-001: glossary/local usage checked for Hive Scum, Blinder, Boom Bringer, Chem Grenade, Gunslinger, Gunslinger Improved, Ruffian, Anarchist, Desperado, Rampage!, Chem Toxin, Coherency, Toughness, Stamina, Ability Cooldown, Rending, Strength, Stagger, Stun, Hit mass, Elite, Specialist, Monstrosity, Captain, and Bulwark
+- ED-SCUM-TW-001: corrected grenade wording, Scum class helper wording to `巢都渣滓`, ammo aura wording, Chem Grenade timer/toxin/explosion details, missile armor modifier tables, Desperado duration/marking wording, Rampage damage reduction and duration extension wording, and `手雷`/`隊長`/simplified-character leftovers
+- ED-SCUM-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-SCUM-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Scum.lua`
+- ED-SCUM-TW-001: Lua syntax tool unavailable
+- ED-SCUM-TW-001: translation repo commit `4d660cb`
+- ED-SCUM-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_ability_punk_rage_sub_3_desc_02`
 
 ## Blocked
 
