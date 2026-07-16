@@ -984,7 +984,7 @@
 - Retaliatory Force -  還治其人之身
 - Man and Cyber-Mastiff - 電子獒犬與人(機械戰犬與人)
 - Walk It Off - 走一走治百病
-- Shield Plates - 盾形裝甲
+- Shield Plates - 盾型裝甲
 - Arbitrator Armour - 法務官之鎧
 - Voltaic Mandibles Augment - 電能獠牙
 - Ammo Belt - 彈藥腰帶

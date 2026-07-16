@@ -9,9 +9,9 @@
 | Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
 | Started at | 2026-07-14 09:32:58 +08:00 |
 | Completed at | pending |
-| Commit | 7aafc5c |
+| Commit | cd9525c |
 | PR URL / number | pending |
-| Next position | ED-NAMES-TW-017: `<translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua:loc_talent_adamant_damage_vs_staggered_aura` |
+| Next position | ED-WEAPONS-TW-007: `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_bespoke_armor_rend_on_activated_attacks_desc` |
 
 ## Batch Progress
 
@@ -56,6 +56,15 @@
 | ED-CURIOS-TW-001 | 2026-07-15 08:43:29 +08:00 | <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua | first 15 loc_* tables: `loc_inate_gadget_health_desc` through `loc_trait_gadget_mission_credits_increase_desc` | 15 | 10 | completed | `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` | 依詞彙表與本地用法校正最大生命值、戰鬥技能恢復速度、腐敗抗性、法術書、格擋消耗降低、盟友復活速度、韌性與審判庭代幣；其餘五項已符合來源。 Translation commit: ba792c4. |
 | ED-CURIOS-TW-002 | 2026-07-15 08:46:47 +08:00 | <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua | final 7 loc_* tables: `loc_trait_gadget_mission_reward_gear_instead_of_weapon_increase_desc` through `loc_trait_gadget_dr_vs_snipers_desc` | 7 | 7 | completed | `<translation-repo>/Main_Modules/TALENTS_Modular.lua:loc_glossary_talent_default` | 校正任務獎勵珍品機率句，依詞彙表校正 Flamers 為「火焰兵」，並統一傷害抗性敵人括號格式；CURIOS_Blessings_Perks.lua 已處理至檔尾。 Translation commit: 412476f. |
 | ED-NAMES-TW-016 | 2026-07-15 15:03:08 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_ogryn_melee_stagger` through `loc_talent_ability_adamant_grenade_improved` | 15 | 1 | completed | `loc_talent_adamant_damage_vs_staggered_aura` | 依詞彙表將 `Mobile Emplacement` 校正為「機動部屬」；`Voltaic Shock Mine` 詞彙表繁中空白，保留現有「電能地雷」並新增候選詞。 Translation commit: 7aafc5c. |
+| ED-NAMES-TW-017 | 2026-07-15 15:55:23 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_adamant_damage_vs_staggered_aura` through `loc_talent_adamant_bullet_rain_tdr` | 15 | 2 | completed | `loc_talent_adamant_bullet_rain_toughness` | 依更新後詞彙表校正 `Not Far Behind` 為「不落人後」，並補齊 `Dispense Justice` 暫譯「伸張正義」。 Translation commit: 736aa2d. |
+| ED-NAMES-TW-018 | 2026-07-15 15:59:40 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | 15 active localization tables: `loc_talent_adamant_bullet_rain_toughness` through `loc_talent_adamant_ammo_belt` | 15 | 1 | completed | `loc_talent_adamant_melee_weakspot_hits_count_as_stagger` | 依更新後詞彙表將 `Shield Plates` 從「盾型裝甲」校正為「盾形裝甲」。 Translation commit: 8cccd2c. |
+| ED-NAMES-TW-019 | 2026-07-15 16:06:34 +08:00 | <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua | final 15 active localization tables: `loc_talent_adamant_melee_weakspot_hits_count_as_stagger` through `loc_talent_adamant_limit_dmg_taken_from_hits` | 15 | 0 | completed | `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_melee_common_wield_increased_armored_damage_desc` | 本批十五項已符合更新後 Arbites 詞彙表；NAMES_Talents_Blessings.lua 已處理至檔尾，translation repo 無新 Lua commit。 |
+| ED-WEAPONS-TW-001 | 2026-07-15 16:12:52 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | first 15 active localization tables: `loc_trait_melee_common_wield_increased_armored_damage_desc` through `loc_gadget_sprint_cost_reduction_desc` | 15 | 11 | completed | `loc_trait_ranged_common_wield_armored_damage_desc` | 校正 melee perk 屬性描述，移除 zh-tw `vs` 殘留，並依詞彙表校正格檔效率與衝刺體力消耗。 Translation commit: e0b41b0. |
+| ED-WEAPONS-TW-002 | 2026-07-15 16:17:52 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_ranged_common_wield_armored_damage_desc` through `loc_trait_bespoke_armor_penetration_against_staggered_desc` | 15 | 10 | completed | `loc_trait_bespoke_bleed_on_activated_hit_desc` | 校正 ranged perk 屬性描述與 Opportunist，移除 zh-tw `vs` 殘留並保留 `CKWord`/`CNumb` 結構。 Translation commit: cb6b25e. |
+| ED-WEAPONS-TW-003 | 2026-07-15 16:24:25 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_bespoke_bleed_on_activated_hit_desc` through `loc_trait_bespoke_infinite_melee_cleave_on_weakspot_kill_desc` | 15 | 8 | completed | `loc_trait_bespoke_power_bonus_on_first_attack_desc` | 補回 Bloodletter 持續時間/tick/護盾限制、Power 類可刷新提示、Devastating Strike 甲殼限制，以及 Brutal Momentum/Deathblow 的非歐格林限制。 Translation commit: b9398ae. |
+| ED-WEAPONS-TW-004 | 2026-07-15 16:33:36 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_bespoke_power_bonus_on_first_attack_desc` through `loc_trait_bespoke_rending_on_backstabs_desc` | 15 | 15 | completed | `loc_trait_bespoke_stacking_rending_debuff_on_weakspot_desc` | 補回 Limbsplitter/All or Nothing/Decapitator/Relentless Strikes 的 note 與刷新資訊，校正 Agile、Slaughter Spree、bleed、dodge、Haymaker、Smackdown、Mercy Killer、Ruthless Backstab 描述。 Translation commit: 10e4d49. |
+| ED-WEAPONS-TW-005 | 2026-07-15 16:41:01 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_bespoke_stacking_rending_debuff_on_weakspot_desc` through `loc_trait_bespoke_wind_slash_crits_desc` | 15 | 15 | completed | `loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc` | 補齊 Uncanny Strike、Trauma、Vicious Slice、Hammerblow、Skullcrusher、Thunderstrike、Chained Deathblow、Perfect Strike、Bladed Momentum、Deflector、Momentum、Murderous Tranquility、Blazing Spirit、Unstable Power、Warp Slice 的缺漏資訊與詞彙一致性。 Translation commit: 9029232. |
+| ED-WEAPONS-TW-006 | 2026-07-15 16:47:11 +08:00 | <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua | 15 active localization tables: `loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc` through `loc_trait_bespoke_weakspot_damage_bonus_on_pushed_enemies_desc` | 15 | 15 | completed | `loc_trait_bespoke_armor_rend_on_activated_attacks_desc` | 補齊 Exorcist、Superiority、Lightning Reflexes、High Voltage、Falter、Overwhelming Force、Counterattack、Cranial Grounding、Overload、Energy Leakage、Heatsink、Syphon、Energy Transfer、Shock & Awe、Take a Swing 的缺漏資訊與詞彙一致性。 Translation commit: cd9525c. |
 
 ## Checks
 
@@ -494,6 +503,737 @@
 - ED-NAMES-TW-016: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
 - ED-NAMES-TW-016: Lua syntax tool unavailable
 - ED-NAMES-TW-016: safe next position is `loc_talent_adamant_damage_vs_staggered_aura`
+- ED-NAMES-TW-017: next 15 active localization tables reviewed
+- ED-NAMES-TW-017: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-017: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-017: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-017: glossary/local usage checked for Breaking Dissent, Castigator's Stance, Blessed Armament, Inspiring Recitation, Fear of Justice, Break the Line, Commendation from Condemnation, Kill Order, Engage, Execution Order, Keeping Protocol, Not Far Behind, Terminus Warrant, Dispense Justice, and Obstinate
+- ED-NAMES-TW-017: corrected `Not Far Behind` from `不弱人後` to glossary `不落人後`
+- ED-NAMES-TW-017: added active `zh-tw` for `Dispense Justice` and recorded it in `Term Candidates.md`
+- ED-NAMES-TW-017: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-017: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-017: Lua syntax tool unavailable
+- ED-NAMES-TW-017: safe next position is `loc_talent_adamant_bullet_rain_toughness`
+- ED-NAMES-TW-018: next 15 active localization tables reviewed
+- ED-NAMES-TW-018: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-018: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-018: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-018: glossary/local usage checked for Terminal Decree, Writ of Judgement, Forceful, Arbites Vigilant, Judicial Force, No Escape, Withering Fire, Hammer of Judgement, Razor-Jaw Augment, Up Close, Walk It Off, Shield Plates, Arbitrator Armour, Voltaic Mandibles Augment, and Ammo Belt
+- ED-NAMES-TW-018: corrected `Shield Plates` from `盾型裝甲` to glossary `盾形裝甲`
+- ED-NAMES-TW-018: `git -C <translation-repo> diff --check` passed before commit
+- ED-NAMES-TW-018: diff scope limited to `Main_Modules/NAMES_Talents_Blessings.lua`
+- ED-NAMES-TW-018: Lua syntax tool unavailable
+- ED-NAMES-TW-018: safe next position is `loc_talent_adamant_melee_weakspot_hits_count_as_stagger`
+- ED-NAMES-TW-019: final 15 active localization tables reviewed
+- ED-NAMES-TW-019: duplicate active `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-019: active empty `["zh-tw"]` in touched tables=0
+- ED-NAMES-TW-019: no placeholder-bearing strings in touched active `zh-tw`
+- ED-NAMES-TW-019: glossary/local usage checked for Concussive, Canine Morale, Imposing Force, Plasteel Plates, Hold the Line, Judicious Efficiency, Rapid Movement, Rebreather, Street Smarts, Drive them Back, Target Selection, Prosecution Blow, Monstrosity Hunter, Strike Down, and True Grit
+- ED-NAMES-TW-019: no Lua changes required
+- ED-NAMES-TW-019: `git -C <translation-repo> diff --check` passed
+- ED-NAMES-TW-019: diff scope empty; no translation repo commit created
+- ED-NAMES-TW-019: Lua syntax tool unavailable
+- ED-NAMES-TW-019: `Main_Modules/NAMES_Talents_Blessings.lua` completed through current active source sequence
+- ED-WEAPONS-TW-001: first 15 active localization tables reviewed
+- ED-WEAPONS-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-001: placeholders preserved: `{damage:%s}`, `{crit_chance:%s}`, `{crit_damage:%s}`, `{stamina:%s}`, `{weakspot_damage:%s}`, `{reduced_block_cost:%s}`, `{sprinting_cost_multiplier:%s}`
+- ED-WEAPONS-TW-001: `CKWord`/`CNumb` keys preserved for touched `zh-tw`
+- ED-WEAPONS-TW-001: glossary/local usage checked for Damage vs Flak/Maniacs/Infested/Unyielding/Carapace/Unarmoured, Crit chance, Crit damage, Damage vs Groaners and Poxwalkers, Damage vs Elites, Damage vs Specialists, Stamina, Weakspot damage, Block Efficiency, and Cost for Sprinting
+- ED-WEAPONS-TW-001: removed `vs` from touched active `zh-tw` entries
+- ED-WEAPONS-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-001: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-001: Lua syntax tool unavailable
+- ED-WEAPONS-TW-002: 15 active localization tables reviewed
+- ED-WEAPONS-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-002: placeholders preserved: `{damage:%s}`, `{crit_chance:%s}`, `{crit_damage:%s}`, `{stamina:%s}`, `{weakspot_damage:%s}`, `{reload_speed:%s}`, `{rending:%s}`
+- ED-WEAPONS-TW-002: `CKWord`/`CNumb` keys preserved for touched `zh-tw`
+- ED-WEAPONS-TW-002: glossary/local usage checked for ranged Damage vs Flak/Maniacs/Infested/Unyielding/Carapace/Unarmoured, Crit chance, Crit damage, Damage vs Elites, Damage vs Groaners and Poxwalkers, Damage vs Specialists, Stamina, Weakspot damage, Reload Speed, Rending, and Staggered
+- ED-WEAPONS-TW-002: removed `vs` from touched active `zh-tw` entries
+- ED-WEAPONS-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-002: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-002: Lua syntax tool unavailable
+- ED-WEAPONS-TW-003: 15 active localization tables reviewed
+- ED-WEAPONS-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-003: placeholders preserved: `{stacks:%s}`, `{crit_chance:%s}`, `{power_level:%s}`, `{time:%s}`, `{movement_speed:%s}`, `{rending:%s}`, `{max_stacks:%s}`, `{cleave:%s}`, `{multiple_hit:%s}`, `{damage:%s}`, `{hit_mass:%s}`, `{weakspot_damage:%s}`
+- ED-WEAPONS-TW-003: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-003: glossary/local usage checked for Bleed, Critical Chance, Strength, Movement Speed, Rending, Brittleness, Cleave, Critical Hit, Weakspot Damage, Weakspot Kill, Hit Mass, Ogryn, and Carapace
+- ED-WEAPONS-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-003: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-003: Lua syntax tool unavailable
+- ED-WEAPONS-TW-004: 15 active localization tables reviewed
+- ED-WEAPONS-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-004: placeholders preserved: `{cooldown:%s}`, `{power_level:%s}`, `{finesse:%s}`, `{time:%s}`, `{stacks:%s}`, `{melee_weakspot_damage}`, `{crit_chance:%s}`, `{damage:%s}`, `{proc_chance:%s}`, `{rending:%s}`
+- ED-WEAPONS-TW-004: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_nc`, and `Dot_red` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-004: glossary/local usage checked for Strength, Stamina, Finesse, Weakspot Damage, Critical Chance, Bleed, Critical Hit, Staggered, Rending, and backstab wording
+- ED-WEAPONS-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-004: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-004: Lua syntax tool unavailable
+- ED-WEAPONS-TW-005: 15 active localization tables reviewed
+- ED-WEAPONS-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-005: placeholders preserved: `{stacks:%s}`, `{rending:%s}`, `{time:%s}`, `{max_stacks:%s}`, `{impact:%s}`, `{damage:%s}`, `{crit_chance:%s}`, `{crit_damage:%s}`, `{block_cost:%s}`, `{toughness:%s}`, `{multiple_hit:%s}`, `{warp_charge:%s}`, `{power_level:%s}`, `{cooldown:%s}`
+- ED-WEAPONS-TW-005: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_green`, `Dot_red`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-005: glossary/local usage checked for Brittleness, Impact, Staggered, Critical Chance, Critical Hit, Hit Mass/順劈目標, Rending, Toughness, Peril, Soulblaze, Strength, and Cooldown
+- ED-WEAPONS-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-005: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-005: Lua syntax tool unavailable
+- ED-WEAPONS-TW-006: 15 active localization tables reviewed
+- ED-WEAPONS-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-006: placeholders preserved: `{warp_charge:%s}`, `{power_level:%s}`, `{time:%s}`, `{stacks:%s}`, `{duration:%s}`, `{cooldown_duration:%s}`, `{damage:%s}`, `{stagger:%s}`, `{ranged_stagger:%s}`, `{chance:%s}`, `{cooldown:%s}`, `{attack_speed:%s}`, `{interval:%s}`, `{buildup_amount:%s}`, `{overheat_reduction:%s}`, `{amount}`, `{toughness:%s}`, `{heat_reduction:%s}`, `{heat_dissipation:%s}`, `{hit_mass:%s}`
+- ED-WEAPONS-TW-006: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_red`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-006: glossary/local usage checked for Peril, Weakspot, Strength, Elite, Specialist, Stun, Electrocuted/Electrocute, Stagger, Attack Speed, Finesse Damage, Heat, Toughness, Hit Mass/順劈目標, and Weakspot Damage
+- ED-WEAPONS-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-006: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-006: Lua syntax tool unavailable
+- ED-WEAPONS-TW-007: 15 active localization tables reviewed
+- ED-WEAPONS-TW-007: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-007: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-007: placeholders preserved: `{rend:%s}`, `{extra_hits:%s}`, `{stagger:%s}`, `{heavy_damage:%s}`, `{crit_chance:%s}`, `{time:%s}`, `{toughness:%s}`, `{power:%s}`, `{damage:%s}`, `{power_level:%s}`, `{explosion_radius:%s}`, `{block_cost:%s}`, `{cooldown:%s}`, `{stacks:%s}`, `{duration:%s}`, `{rending:%s}`, `{max_stacks:%s}`
+- ED-WEAPONS-TW-007: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_green`, and `Dot_red` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-007: glossary/local usage checked for Brittleness, Impact, Damage, Hit Mass/順劈目標, Cleave, Critical Chance, Toughness, Strength/威力, Stamina, Block Cost, Chem Toxin, Arbites, and Hive Scum
+- ED-WEAPONS-TW-007: removed unsupported `{max_stacks:%s}` from Supercharge and removed non-source two-stage recovery claim from No Guts, No Glory
+- ED-WEAPONS-TW-007: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-007: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-007: Lua syntax tool unavailable
+- ED-WEAPONS-TW-007: safe next position is `loc_trait_bespoke_increased_weakspot_damage_against_toxin_status_desc`
+- ED-WEAPONS-TW-008: 15 active localization tables reviewed
+- ED-WEAPONS-TW-008: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-008: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-008: placeholders preserved: `{damage:%s}`, `{stacks:%s}`, `{time:%s}`, `{close_damage:%s}`, `{power_level:%s}`, `{stamina:%s}`, `{reload_speed:%s}`, `{movement_speed:%s}`, `{ammo:%s}`, `{suppression:%s}`, `{damage_vs_suppressed}`, `{toughness:%s}`
+- ED-WEAPONS-TW-008: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_red` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-008: glossary/local usage checked for Chem Toxin, Weakspot Damage, Damage, Toughness, Stamina, Reload Speed, Suppression, Strength/威力, Weakspot Hit, and Ranged Attacks
+- ED-WEAPONS-TW-008: corrected Close Damage from melee damage to generic damage, corrected Terrifying Barrage radius to `12.5`, added missing refresh/DoT-kill notes, and changed Ghost to existing `Weakspothit_rgb_tw`
+- ED-WEAPONS-TW-008: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-008: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-008: Lua syntax tool unavailable
+- ED-WEAPONS-TW-008: safe next position is `loc_trait_bespoke_crit_chance_based_on_aim_time_desc`
+- ED-WEAPONS-TW-009: 15 active localization tables reviewed
+- ED-WEAPONS-TW-009: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-009: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-009: placeholders preserved: `{crit_chance:%s}`, `{time:%s}`, `{stacks:%s}`, `{crit_weakspot_damage:%s}`, `{damage:%s}`, `{power_level:%s}`, `{ammo:%s}`, `{suppression:%s}`, `{recoil_reduction:%s}`, `{damage_near:%s}`, `{weapon_spread:%s}`, `{radius:%s}`
+- ED-WEAPONS-TW-009: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_nc`, and `Dot_green` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-009: glossary/local usage checked for Critical Chance, Critical Hit, Critical, Weakspot Hit, Weakspot Damage, Staggered/Staggering, Strength/威力, Suppression, Bleed, Explosion Radius, and Reload reset wording
+- ED-WEAPONS-TW-009: corrected `Weakspothits_rgb_tw` to existing `Weakspothit_rgb_tw` in touched entries, replaced hard/stun wording with 踉蹌 where source says Stagger, and restored missing notes for alt fire, suppression immunity, refresh, shield blocking, and always-active explosion radius
+- ED-WEAPONS-TW-009: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-009: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-009: Lua syntax tool unavailable
+- ED-WEAPONS-TW-009: safe next position is `loc_trait_bespoke_damage_vs_stagger_desc`
+- ED-WEAPONS-TW-010: 15 active localization tables reviewed
+- ED-WEAPONS-TW-010: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-010: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-010: placeholders preserved: `{vs_stagger:%s}`, `{toughness:%s}`, `{crit_chance:%s}`, `{value:%s}`, `{charge_time:%s}`, `{stacks:%s}`, `{crit_chance_max:%s}`, `{warp_charge:%s}`, `{rending:%s}`, `{time:%s}`, `{max_stacks:%s}`, `{reduction:%s}`, `{num_stacks:%s}`, `{duration:%s}`, `{proc_chance:%s}`, `{ammo:%s}`
+- ED-WEAPONS-TW-010: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_green`, `Dot_red`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-010: glossary/local usage checked for Staggered, Toughness, Critical Chance, Critical Hit, Peril, Weakspot Hit, Weakspots, Cleaving, Brittleness, Soulblaze, Burn, and Mk VII/IX/IIB weapon marks
+- ED-WEAPONS-TW-010: corrected `Weakspothits_rgb_tw` to existing `Weakspothit_rgb_tw`, changed Staggered wording to 踉蹌, restored missing notes for multiple procs, DoT-kill restrictions, staff projectile restrictions, attack-speed exclusion, stack caps, refresh behavior, shield blocking, and melee exclusion
+- ED-WEAPONS-TW-010: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-010: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-010: Lua syntax tool unavailable
+- ED-WEAPONS-TW-010: safe next position is `loc_trait_bespoke_crit_chance_on_successful_dodge_desc`
+- ED-WEAPONS-TW-011: 15 active localization tables reviewed
+- ED-WEAPONS-TW-011: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-011: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-011: placeholders preserved: `{crit_chance:%s}`, `{time:%s}`, `{toughness:%s}`, `{stacks:%s}`, `{stagger:%s}`, `{power_level:%s}`, `{reload_speed:%s}`, `{rend:%s}`, `{rending:%s}`, `{max_stacks:%s}`, `{stagger_reduction:%s}`, `{impact_modifier:%s}`, `{hit_mass_reduction:%s}`
+- ED-WEAPONS-TW-011: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_green`, `Dot_red`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-011: glossary/local usage checked for Desperado, Reassuringly Accurate, Flechette, Man-Stopper, Scattershot, Full Bore, Both Barrels, Trickshooter, Hand-Cannon, Shattering Impact, Everlasting Flame, Quickflame, Fan the Flames, Overpressure, Hot-Shot, Critical Hit, Weakspot Hit, Cleave, Brittleness, Burning, Strength, and Rending
+- ED-WEAPONS-TW-011: corrected missing refresh/melee-exclusion/coherency/stack-removal/shield/carapace/fuel-tank/held-stack notes; replaced missing or unsuitable `Crit_k_rgb_tw`, `Crit0_rgb_tw`, `Stagger2_rgb_tw`, `Crit_chance_r_rgb_tw`, and `Cleaving_r_rgb_tw` usages in touched entries
+- ED-WEAPONS-TW-011: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-011: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-011: Lua syntax tool unavailable
+- ED-WEAPONS-TW-011: safe next position is `loc_trait_bespoke_faster_charge_on_chained_attacks_desc`
+- ED-WEAPONS-TW-012: 15 active localization tables reviewed
+- ED-WEAPONS-TW-012: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-012: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-012: placeholders preserved: `{charge_time:%s}`, `{stacks:%s}`, `{min_stack_count:%s}`, `{max_stack_count:%s}`, `{crit_chance_min:%s}`, `{crit_chance_max:%s}`, `{crit_chance:%s}`, `{ranged_crit_damage:%s}`, `{charge_speed:%s}`, `{power_level:%s}`, `{damage:%s}`, `{heat_percentage:%s}`, `{power:%s}`, `{time:%s}`, `{bullet_amount:%s}`
+- ED-WEAPONS-TW-012: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_green`, `Dot_red`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-012: glossary/local usage checked for Weight of Fire, Armourbane, Power Blast, Gets Hot!, Volatile, Blaze Away, Rising Heat, Optimised Cooling, Focused Cooling, Gauntlet Momentum, Pulverise, Disruptive, Explosive Offensive, Charmed Reload, Heat, Rending, Critical Chance, Critical Hit, Strength, and Ammo
+- ED-WEAPONS-TW-012: corrected charge-stack expiration, shield application, 20%/91% charge scaling, overheat/heat wording, T4 optimized cooling values, gauntlet momentum bug note, refresh notes, push/alt-fire stack removal, and crit reload proc note; replaced missing or unsuitable `Heat2_rgb_tw`, `Crt_chance_rgb_tw`, `Crit_hit_r_color_rgb_tw`, and `Strength_m_rgb_tw` usages in touched entries
+- ED-WEAPONS-TW-012: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-012: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-012: Lua syntax tool unavailable
+- ED-WEAPONS-TW-012: safe next position is `loc_trait_bespoke_power_bonus_on_chained_hits_on_single_target_desc`
+- ED-WEAPONS-TW-013: final 11 active localization tables reviewed
+- ED-WEAPONS-TW-013: duplicate active `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-013: active empty `["zh-tw"]` in touched tables=0
+- ED-WEAPONS-TW-013: placeholders preserved: `{power:%s}`, `{hit:%s}`, `{time:%s}`, `{stacks:%s}`, `{rending:%s}`, `{max_stacks:%s}`, `{toughness:%s}`, `{stagger:%s}`, `{power_level:%s}`, `{radius:%s}`, `{dmg_vs_ogryn_monster:%s}`, `{reload_speed:%s}`, `{duration:%s}`
+- ED-WEAPONS-TW-013: `CKWord`, `CNumb`, `CPhrs`, `CNote`, `Dot_green`, `Dot_red`, and `Dot_nc` structure preserved in touched `zh-tw`
+- ED-WEAPONS-TW-013: glossary/local usage checked for Overwhelming Fire, Can Opener, Born in Blood, Pierce, Inspiring Barrage, Expansive, Shrapnel, Blast Zone, Adhesive Charge, Marksman's Reflex, Ogryn, Monstrosity, Hit Mass, Brittleness, Cleaved, Weakspot Hit, Rumbler, and Kickback
+- ED-WEAPONS-TW-013: corrected final weapon-blessing entries for single-target stacks, bayonet brittleness, close-range toughness multi-procs, armour hit mass bypass, carapace cleave, ranged strength refresh, close-explosion bleed notes, adhesive grenades, and projectile weakspot reload refresh restriction
+- ED-WEAPONS-TW-013: `git -C <translation-repo> diff --check` passed before commit
+- ED-WEAPONS-TW-013: diff scope limited to `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- ED-WEAPONS-TW-013: Lua syntax tool unavailable
+- ED-WEAPONS-TW-013: `Main_Modules/WEAPONS_Blessings_Perks.lua` completed through current active source sequence
+- ED-WEAPONS-TW-013: safe next position is `Main_Modules/PENANCES.lua:loc_item_type_gear_lowerbody`
+- ED-PENANCES-TW-001: 15 active localization tables reviewed
+- ED-PENANCES-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-001: placeholders preserved: `{target}`
+- ED-PENANCES-TW-001: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-001: glossary/local usage checked for Penances, Previous Missions, Prologue, Basic Tutorial, Private Game, Trust Level, and mission type names
+- ED-PENANCES-TW-001: corrected Trust Level punctuation/wording, localized Prologue display text to `序章`, and adjusted Call to Arms title to `武裝號召`
+- ED-PENANCES-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-001: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-001: Lua syntax tool unavailable
+- ED-PENANCES-TW-001: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_basic_training_description`
+- ED-PENANCES-TW-002: 15 active localization tables reviewed
+- ED-PENANCES-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-002: placeholders preserved: `{target}`
+- ED-PENANCES-TW-002: `CKWord` and `CNumb` structure preserved in touched `zh-tw`; added missing `PthOTrst_p` to `COLORS_KWords_tw.lua`
+- ED-PENANCES-TW-002: glossary/local usage checked for Curio/Curios, Penances, Veteran, Basic Tutorial, Sire Melk's Requisitorium, Shrine of the Omnissiah, Path of Trust, and Threat difficulty names
+- ED-PENANCES-TW-002: corrected Curio slot wording, access-unlock wording, Path of Trust colored keyword structure, Trust Level punctuation, and mission-type objective wording
+- ED-PENANCES-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-002: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
+- ED-PENANCES-TW-002: Lua syntax tool unavailable
+- ED-PENANCES-TW-002: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_missions_veteran_2_objective_3_name`
+- ED-PENANCES-TW-003: 15 active localization tables reviewed
+- ED-PENANCES-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-003: placeholders preserved: `{target}`, `{distance}`
+- ED-PENANCES-TW-003: `CKWord`, `CNumb`, and `CNote` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-003: glossary/local usage checked for Veteran, Penances, Weakspot Hits, Weakspots, Threat difficulty names, Damage, and mission objectives
+- ED-PENANCES-TW-003: corrected Stay Accurate description from weakspot damage wording to ranged weakspot-hit kills and restored `Weaksp_note`
+- ED-PENANCES-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-003: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-003: Lua syntax tool unavailable
+- ED-PENANCES-TW-003: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_veteran_2_kills_with_last_round_in_mag_name`
+- ED-PENANCES-TW-004: 15 active localization tables reviewed
+- ED-PENANCES-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-004: placeholders preserved: `{target}`
+- ED-PENANCES-TW-004: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-004: glossary/local usage checked for Ammo/Ammunition, Toughness, Damage, Scavenger, Survivalist, Infiltrate, Voice of Command, Penances, and Veteran
+- ED-PENANCES-TW-004: corrected Make Every Shot Count ammo/accuracy sentence and punctuation, and adjusted Killshot Ready title to `致命射擊就緒`
+- ED-PENANCES-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-004: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-004: Lua syntax tool unavailable
+- ED-PENANCES-TW-004: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_veteran_enemies_killed_with_max_focus_fire_description`
+- ED-PENANCES-TW-005: 15 active localization tables reviewed
+- ED-PENANCES-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-005: placeholders preserved: `{target}`
+- ED-PENANCES-TW-005: `CKWord`, `CNumb`, and `CNote` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-005: glossary/local usage checked for Marksman's Focus, Krak Grenade, Smoke Grenade, Focus Target!, Weapons Specialist, Fire Team, Close and Kill, Coherency, Executioner's Stance, Critical, Weakspot Hits, and Penances
+- ED-PENANCES-TW-005: corrected Marksman's Focus display text to glossary `狙擊專注`, changed Focus Soldier punctuation to full-width `！`, and removed stray period from Keep it Tight title
+- ED-PENANCES-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-005: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-005: Lua syntax tool unavailable
+- ED-PENANCES-TW-005: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_veteran_2_hard_1_name`
+- ED-PENANCES-TW-006: 15 active localization tables reviewed
+- ED-PENANCES-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-006: placeholders preserved: `{target}`, `{num_enemies}`, `{time}`
+- ED-PENANCES-TW-006: `CKWord`, `CNumb`, and `CNote` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-006: glossary/local usage checked for Volley Fire, Executioner's Stance, Weakspots, Frag Grenade, Shredder Frag Grenade, Zealot, Trust Level, and mission objectives
+- ED-PENANCES-TW-006: corrected Zealot Trust Level punctuation, mission counter wording, and first Zealot mission-type objective sentence
+- ED-PENANCES-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-006: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-006: Lua syntax tool unavailable
+- ED-PENANCES-TW-006: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_missions_zealot_2_objective_3_description`
+- ED-PENANCES-TW-007: 15 active localization tables reviewed
+- ED-PENANCES-TW-007: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-007: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-007: placeholders preserved: `{target}`, `{time_window}`, `{health}%`
+- ED-PENANCES-TW-007: `CKWord`, `CNumb`, and `CNote` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-007: glossary/local usage checked for Zealot, Penances, Critical Hits, Stunned, Chain/Power weapons, Health, Wound, Stun Grenade, Stunstorm Grenade, Chastise the Wicked, Fury of the Faithful, and Shroudfield
+- ED-PENANCES-TW-007: corrected Critical Hits display to `爆擊命中`, clarified no-shot mission condition, and rewrote Just A Flesh Wound health/wound segment condition
+- ED-PENANCES-TW-007: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-007: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-007: Lua syntax tool unavailable
+- ED-PENANCES-TW-007: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_zealot_elite_or_special_kills_with_shroudfield_description`
+- ED-PENANCES-TW-008: 15 active localization tables reviewed
+- ED-PENANCES-TW-008: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-008: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-008: placeholders preserved: `{target}`
+- ED-PENANCES-TW-008: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-008: glossary/local usage checked for Shroudfield, Chorus of Spiritual Fortitude, Fury, Blazing Piety, Inexorable Judgement, Momentum, Blades of Faith, Immolation Grenade, Zealous, Coherency, Benediction, Toughness Damage, and Zealot
+- ED-PENANCES-TW-008: corrected Blades of Faith kill target wording to `專家或精英敵人`
+- ED-PENANCES-TW-008: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-008: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-008: Lua syntax tool unavailable
+- ED-PENANCES-TW-008: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_zealot_aura_corruption_healed_name`
+- ED-PENANCES-TW-009: 15 active localization tables reviewed
+- ED-PENANCES-TW-009: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-009: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-009: placeholders preserved: `{target}`, `{time_window}`
+- ED-PENANCES-TW-009: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-009: glossary/local usage checked for Beacon of Purity, Corruption Damage, Martyrdom, Chastise the Wicked, Fury of the Faithful, Stun Grenade, Stunstorm Grenade, Sniper, Mutant, Holy Revenant, Health, Psyker, and Zealot
+- ED-PENANCES-TW-009: corrected Shocking Stuff spacing around `Stunned` keyword
+- ED-PENANCES-TW-009: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-009: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-009: Lua syntax tool unavailable
+- ED-PENANCES-TW-009: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_rank_psyker_2_x_description`
+- ED-PENANCES-TW-010: 15 active localization tables reviewed
+- ED-PENANCES-TW-010: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-010: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-010: placeholders preserved: `{target}`, `{time_window}`
+- ED-PENANCES-TW-010: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-010: glossary/local usage checked for Psyker, Warp attacks, Brain Burst, Brain Rupture, Perils of the Warp, Health, Trust Level, and Threat difficulty names
+- ED-PENANCES-TW-010: corrected Psyker Trust Level punctuation, mission counter/objective wording, and Warp attacks display text to `亞空間攻擊`
+- ED-PENANCES-TW-010: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-010: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-010: Lua syntax tool unavailable
+- ED-PENANCES-TW-010: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_psyker_2_easy_2_tweaked_description`
+- ED-PENANCES-TW-011: 15 active localization tables reviewed
+- ED-PENANCES-TW-011: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-011: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-011: placeholders preserved: `{target}`
+- ED-PENANCES-TW-011: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-011: glossary/local usage checked for Psykinetic's Wrath, Venting Shriek, Perils of the Warp, Brain Burst, Brain Rupture, Warp Charge, Assail, Scrier's Gaze, Empowered Psionics, Disrupt Destiny, Precision, Telekine Shield, Kinetic Presence, Seer's Presence, Pox Hound, Mutant, Trapper, and Empyric terms
+- ED-PENANCES-TW-011: corrected Venting Shriek display text to `靈能尖嘯`, Assail display text to `靈能攻擊`, hard Psyker target wording, Empowered Psionics target class wording, and Empyric Recovery name to `亞空間恢復`
+- ED-PENANCES-TW-011: added `Empyric Recovery` to Term Candidates because the exact penance name is not in `Referneces/Translation.md`
+- ED-PENANCES-TW-011: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-011: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-011: Lua syntax tool unavailable
+- ED-PENANCES-TW-011: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_psyker_team_critical_hits_description`
+- ED-PENANCES-TW-012: 15 active localization tables reviewed
+- ED-PENANCES-TW-012: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-012: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-012: placeholders preserved: `{target}`, `{time_window}`, `50%`
+- ED-PENANCES-TW-012: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-012: glossary/local usage checked for Prescience, Critical strikes, Smite, Stunned, Brain Burst, Brain Rupture, Pox Hound, Warp Charge, Perils of the Warp, Monstrosity, Health, Ogryn, Trust Level, and Threat difficulty names
+- ED-PENANCES-TW-012: corrected Prescience critical-strike wording, Warp Battery threat wording, Going Out With a Bang title, Ogryn title color key, Ogryn Trust Level punctuation, and Ogryn mission counter wording
+- ED-PENANCES-TW-012: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-012: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-012: Lua syntax tool unavailable
+- ED-PENANCES-TW-012: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_missions_ogryn_2_objective_2_name`
+- ED-PENANCES-TW-013: 15 active localization tables reviewed
+- ED-PENANCES-TW-013: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-013: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-013: placeholders preserved: `{target}`, `{amount}`, `{time}`, `{num_enemies}`
+- ED-PENANCES-TW-013: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-013: glossary/local usage checked for Ogryn, Penances, Malice, Heresy, Coherency, Knocked Down, Incapacitated, Revive, Assist, and Melee Attack
+- ED-PENANCES-TW-013: added missing zh-tw for Ogryn mission objective 2 and 3 descriptions; corrected group description from Trust Level text to Penances text, Assist/Revive wording, Malice/Heresy threat wording, and hard mission ally-down condition
+- ED-PENANCES-TW-013: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-013: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-013: Lua syntax tool unavailable
+- ED-PENANCES-TW-013: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_group_class_ogryn_2_description`
+- ED-PENANCES-TW-014: 15 active localization tables reviewed
+- ED-PENANCES-TW-014: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-014: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-014: placeholders preserved: `{target}`, `{amount}`, `{num_enemies}`, `7`
+- ED-PENANCES-TW-014: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-014: glossary/local usage checked for Ogryn, Coherency, Bull Rush, Indomitable, Big Boxes of Hurt, Bombs Away!, Loyal Protector, Big Friendly Rock, Frag Bomb, Heavy Hitter, Point-Blank Barrage, Feel No Pain, Keystone, Blitz, Ability, Malice, Heresy, Elite, Specialist, and Ranged enemies
+- ED-PENANCES-TW-014: added active zh-tw for Ogryn class penance group, Coherency full-mission objective, Bull Rush/Indomitable objective, Big Boxes/Bombs Away objective, Loyal Protector taunt, Big Friendly Rock, Frag Bomb, Heavy Hitter, Point-Blank Barrage, and Feel No Pain descriptions
+- ED-PENANCES-TW-014: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-014: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-014: Lua syntax tool unavailable
+- ED-PENANCES-TW-014: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_ogryn_leadbelcher_free_shot_description`
+- ED-PENANCES-TW-015: 15 active localization tables reviewed
+- ED-PENANCES-TW-015: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-015: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-015: placeholders preserved: `{target}`, `{time_window}`
+- ED-PENANCES-TW-015: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-015: glossary/local usage checked for Burst Limiter Override, Bonebreaker's Aura, Coward Culling, Stay Close!, Toughness, Coherency, Bull Rush, Indomitable, Plague Ogryn, Corruptor, Big Boxes of Hurt, Bombs Away!, Bulwark, Crusher, Reaper, Pack Master, Arbites, and Arbitrator
+- ED-PENANCES-TW-015: added active zh-tw for Ogryn leadbelcher, aura, toughness, charge, Corruptor, Bull Rush/Indomitable, and Heavyweight Champion descriptions; added Arbites/Arbitrator class title as `法務官` per updated glossary
+- ED-PENANCES-TW-015: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-015: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-015: Lua syntax tool unavailable
+- ED-PENANCES-TW-015: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_rank_adamant_2_x_description`
+- ED-PENANCES-TW-016: 15 active localization tables reviewed
+- ED-PENANCES-TW-016: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-016: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-016: placeholders preserved: `{target}`, `{target:%s}`, `{amount:%s}`
+- ED-PENANCES-TW-016: `CKWord` and `CNumb` structure preserved in touched `zh-tw`; added missing `BreaknDissent` to `COLORS_KWords_tw.lua`
+- ED-PENANCES-TW-016: glossary/local usage checked for Arbites/Arbitrator, Cyber-Mastiff, Bomber, Sniper, Trapper, Mutant, Poxburster, Electrocuted, Damage, Breaking Dissent, Staggered, Coherency, Malice, Heresy, Trust Level, and Penances
+- ED-PENANCES-TW-016: added active zh-tw for Arbites progression/objective/group entries and Cyber-Mastiff/electrocuted/block/staggered aura descriptions using updated `法務官` terminology
+- ED-PENANCES-TW-016: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-016: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
+- ED-PENANCES-TW-016: Lua syntax tool unavailable
+- ED-PENANCES-TW-016: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_adamant_team_wield_speed_aura_kills_description`
+- ED-PENANCES-TW-017: 15 active localization tables reviewed
+- ED-PENANCES-TW-017: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-017: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-017: placeholders preserved: `{target}`, `{target:%s}`, `{cluster:%s}`
+- ED-PENANCES-TW-017: `CKWord` and `CNumb` structure preserved in touched `zh-tw`; added/updated Arbites keyword support in `COLORS_KWords_tw.lua`
+- ED-PENANCES-TW-017: glossary/local usage checked for Ruthless Efficiency, Part of the Squad, Voltaic Shock Mine, Nuncio-Aquila, Castigator's Stance, Break the Line, Remote Detonation, Arbites Grenade, Execution Order, Terminus Warrant, Forceful, Coherency, Cyber-Mastiff, Stun, Stagger, Monstrosity, Heresy, Hive Scum, and Trust Level
+- ED-PENANCES-TW-017: added active zh-tw for Arbites aura/ability/blitz/keystone descriptions, updated `Forceful` and `BreakZLine` to glossary terms, and corrected Scum class/trust text to `巢都渣滓`
+- ED-PENANCES-TW-017: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-017: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
+- ED-PENANCES-TW-017: Lua syntax tool unavailable
+- ED-PENANCES-TW-017: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_missions_broker_2_x_description`
+- ED-PENANCES-TW-018: 15 active localization tables reviewed
+- ED-PENANCES-TW-018: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-018: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-018: placeholders preserved: `{target}`, `{enemy_count}`
+- ED-PENANCES-TW-018: `CKWord` and `CNumb` structure preserved in touched `zh-tw`; added Scum keyword support in `COLORS_KWords_tw.lua`
+- ED-PENANCES-TW-018: glossary/local usage checked for Hive Scum, Gunslinger, Ruffian, Anarchist, Blinder, Boom Bringer, Chem Grenade, Desperado, Rampage!, Ammo, Coherency, Critical strikes, Damage, Malice, and Heresy
+- ED-PENANCES-TW-018: corrected Hive Scum to `巢都渣滓`, mission objective wording, and added active zh-tw for Scum aura/blitz/ability descriptions through Rampage
+- ED-PENANCES-TW-018: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-018: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
+- ED-PENANCES-TW-018: Lua syntax tool unavailable
+- ED-PENANCES-TW-018: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_broker_deploy_stimm_field_description`
+- ED-PENANCES-TW-019: 15 active localization tables reviewed
+- ED-PENANCES-TW-019: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-019: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-019: placeholders preserved: `{target}`, `{viscosity_target}`, `%`
+- ED-PENANCES-TW-019: `CKWord` and `CNumb` structure preserved in touched `zh-tw`; added Scum/Cartel keyword support in `COLORS_KWords_tw.lua`
+- ED-PENANCES-TW-019: glossary/local usage checked for Stimm Supply, Vulture's Mark, Adrenaline Frenzy, Chemical Dependency, Chem Toxin, Weakspots, Strength, Toughness, Attack Speed, and Cartel Special Stimm
+- ED-PENANCES-TW-019: added active zh-tw for Scum Stimm Supply, Vulture's Mark, Adrenaline Frenzy, Chemical Dependency, Cartel Special Stimm, and Chem Toxin penance descriptions; `loc_achievement_category_offensive_label` was reviewed and already correct
+- ED-PENANCES-TW-019: added `Cartel Special Stimm` and `Viscosity` to Term Candidates because `Referneces/Translation.md` has no fixed zh-tw entries
+- ED-PENANCES-TW-019: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-019: diff scope limited to `Main_Modules/PENANCES.lua` plus `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` keyword support
+- ED-PENANCES-TW-019: Lua syntax tool unavailable
+- ED-PENANCES-TW-019: safe next position is `Main_Modules/PENANCES.lua:loc_achievement_enemies_killed_by_barrels_description`
+- ED-PENANCES-TW-020: final 3 active localization tables reviewed
+- ED-PENANCES-TW-020: duplicate active `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-020: active empty `["zh-tw"]` in touched tables=0
+- ED-PENANCES-TW-020: placeholders preserved: `{target}`
+- ED-PENANCES-TW-020: `CKWord` and `CNumb` structure preserved in touched `zh-tw`
+- ED-PENANCES-TW-020: glossary/local usage checked for Pox Burster, Explosive barrels, Penances, and offensive category naming
+- ED-PENANCES-TW-020: enabled active zh-tw for explosive barrel and Poxburster descriptions; `loc_achievement_enemies_killed_by_poxburster_name` was reviewed and already correct
+- ED-PENANCES-TW-020: `git -C <translation-repo> diff --check` passed before commit
+- ED-PENANCES-TW-020: diff scope limited to `Main_Modules/PENANCES.lua`
+- ED-PENANCES-TW-020: Lua syntax tool unavailable
+- ED-PENANCES-TW-020: `Main_Modules/PENANCES.lua` active localization tables completed through current source sequence
+- ED-PENANCES-TW-020: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_ability_shock_grenade_description`; skipped `Main_Modules/TALENTS/TALENTS_Psyker.lua` per user request
+- ED-ZEALOT-TW-001: 15 active localization tables reviewed
+- ED-ZEALOT-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-001: placeholders preserved: `{talent_name:%s}`, `{radius:%s}`, `{damage_reduction:%s}`, `{corruption:%s}`, `{stamina_cost_multiplier:%s}`, `{stamina_delay:%s}`, `{toughness:%s}`, `{damage:%s}`, `{cooldown:%s}`, `{attack_speed:%s}`, `{time:%s}`, `{duration:%s}`, `{charges:%s}`, `{interval:%s}`, `{flat_toughness:%s}`, `{max_toughness:%s}`, `{stacks:%s}`
+- ED-ZEALOT-TW-001: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ZEALOT-TW-001: glossary/local usage checked for Stun Grenade, Stunstorm Grenade, Immolation Grenade, Blades of Faith, Benediction, Beacon of Purity, Zealous, Chastise the Wicked, Fury of the Faithful, Chorus of Spiritual Fortitude, Holy Relic, Toughness, Toughness Damage Reduction, Critical Hit, Rending, Cleave, Coherency, Corruption, Stamina, and Bulwark
+- ED-ZEALOT-TW-001: corrected Bulwark shield wording, Immolation Grenade/Blades of Faith details, aura phrasing, Critical Hit wording, Fury of the Faithful missing dash restrictions, Chorus cancellation/bonus Toughness details, `Tghnss_gold_rgb_tw` key usage, and typo `彈藥笱`
+- ED-ZEALOT-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-ZEALOT-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
+- ED-ZEALOT-TW-001: Lua syntax tool unavailable
+- ED-ZEALOT-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_ability_zealot_stealth_rending_description`
+- ED-ZEALOT-TW-002: 15 active localization tables reviewed
+- ED-ZEALOT-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-002: placeholders preserved: `{duration:%s}`, `{movement_speed:%s}`, `{backstab_damage:%s}`, `{finesse_damage:%s}`, `{crit_chance:%s}`, `{rending:%s}`, `{cooldown:%s}`, `{talent_name:%s}`, `{buff_duration:%s}`, `{damage:%s}`, `{threat:%s}`, `{toughness:%s}`, `{dr:%s}`, `{monster:%s}`, `{ogryn:%s}`, `{other:%s}`, `{max_stacks:%s}`, `{radius:%s}`, `{toughness_damage_reduction:%s}`, `{toughness_small:%s}`, `{cooldown_regen:%s}`, `{max_wounds:%s}`, `{corruption_resistance:%s}`, `{attack_speed:%s}`, `{toughness_modifier:%s}`, `{current_health:%s}`
+- ED-ZEALOT-TW-002: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ZEALOT-TW-002: glossary/local usage checked for Shroudfield, Master-Crafted Shroudfield, Stealth, Finesse Damage, Critical Chance, Critical Hits, Rending, Ability Cooldown, Blazing Piety, Fury, Martyrdom, Wounds, Corruption, Toughness, and Health
+- ED-ZEALOT-TW-002: corrected Critical Chance wording to `爆擊率`, typo `威薄`, Damage Resistance and Health wording, Martyrdom missing-wound sentence, plus-value ordering, and stray string concatenation before the Stealth keyword
+- ED-ZEALOT-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-ZEALOT-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
+- ED-ZEALOT-TW-002: Lua syntax tool unavailable
+- ED-ZEALOT-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_quickness_desc`
+- ED-ZEALOT-TW-003: 15 active localization tables reviewed
+- ED-ZEALOT-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-003: placeholders preserved: `{max_stacks:%s}`, `{duration:%s}`, `{damage_modifier:%s}`, `{melee_attack_speed:%s}`, `{ranged_attack_speed:%s}`, `{toughness:%s}`, `{stacks:%s}`, `{talent_name:%s}`, `{cooldown:%s}`, `{damage:%s}`, `{max:%s}`, `{range:%s}`, `{more_toughness:%s}`, `{monster_count:%s}`
+- ED-ZEALOT-TW-003: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ZEALOT-TW-003: glossary/local usage checked for Inexorable Judgement, Momentum, Weakspot Hit, Anoint in Blood, Disdain, Backstabber, The Voice of Terra, Enemies Within Enemies Without, Blood Redemption, Second Wind, Vicious Offering, Purge the Unclean, Duellist, Infested, Unyielding, Finesse Damage, Toughness, and Damage
+- ED-ZEALOT-TW-003: corrected Momentum duration wording, Weakspot Hit colored keyword, typo `冇`, typo `測翼`, ranged/near-enemy Toughness wording, and passive damage/replenishment word order
+- ED-ZEALOT-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-ZEALOT-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
+- ED-ZEALOT-TW-003: Lua syntax tool unavailable
+- ED-ZEALOT-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_resist_death_desc`
+- ED-ZEALOT-TW-004: 15 active localization tables reviewed
+- ED-ZEALOT-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-004: placeholders preserved: `{active_duration:%s}`, `{cooldown_duration:%s}`, `{damage:%s}`, `{time:%s}`, `{amount:%s}`, `{talent_name:%s}`, `{max_health:%s}`, `{melee_multiplier:%s}`, `{movement_speed:%s}`, `{stamina:%s}`, `{impact_modifier:%s}`, `{min_hits:%s}`, `{max_stacks:%s}`, `{num_enemies:%s}`, `{range:%s}`, `{cleave:%s}`, `{stacks:%s}`, `{damage_reduction:%s}`, `{duration:%s}`, `{cooldown:%s}`, `{ammo:%s}`, `{revive_speed:%s}`, `{tdr:%s}`, `{block_cost:%s}`, `{linger_time:%s}`, `{dodges:%s}`
+- ED-ZEALOT-TW-004: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ZEALOT-TW-004: glossary/local usage checked for Until Death, Sustained Assault, Holy Revenant, Thy Wrath Be Swift, Desperation, Punishment, Against the Odds, Shield of Contempt, Unseen Blade, Out of Pocket, Faithful Frenzy, Providence, Good Balance, Impassible, Retaliatory Defence, Health, Stamina, Impact, Cleave, Coherency, Damage Reduction, Ammo, and Toughness Damage Reduction
+- ED-ZEALOT-TW-004: corrected Health to `生命值`, missing-Stamina wording, Shield of Contempt Damage Reduction wording, Unseen Blade target wording, Out of Pocket ammo sentence, Providence Revive Speed wording, and Good Balance Damage Reduction wording
+- ED-ZEALOT-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-ZEALOT-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
+- ED-ZEALOT-TW-004: Lua syntax tool unavailable
+- ED-ZEALOT-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_damage_vs_elites_desc`
+- ED-ZEALOT-TW-005: 15 active localization tables reviewed
+- ED-ZEALOT-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-005: placeholders preserved: `{damage:%s}`, `{cooldown:%s}`, `{duration:%s}`, `{spread:%s}`, `{recoil:%s}`, `{impact_modifier:%s}`, `{crit_chance:%s}`, `{max_stacks:%s}`, `{time:%s}`, `{toughness_damage_reduction:%s}`, `{attack_speed:%s}`, `{damage_reduction:%s}`, `{damage_resistance:%s}`, `{damage_taken:%s}`, `{toughness:%s}`, `{stamina:%s}`, `{health_segment:%s}`
+- ED-ZEALOT-TW-005: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ZEALOT-TW-005: glossary/local usage checked for Abolish Blasphemers, Dance of Death, Grievous Wounds, Scourge, Enduring Faith, Bleed for the Emperor, Time to Kill, Hubris, Blinded by Blood, Prime Target, No Respite, Unfaltering, Faith's Fortitude, Elite, Weakspot Hits, Bleed, Critical Hit, Critical Chance, Health, Wounds, Damage Resistance, and Stamina
+- ED-ZEALOT-TW-005: corrected Elite damage word order, Dance of Death conjunction, Weakspot Hits colored keyword, Critical/Critical Chance wording, Health to `生命值`, Japanese-form `増加`, Prime Target recovery wording, and typo `潜行`
+- ED-ZEALOT-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-ZEALOT-TW-005: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
+- ED-ZEALOT-TW-005: Lua syntax tool unavailable
+- ED-ZEALOT-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Zealot.lua:loc_talent_zealot_heal_damage_taken_desc`
+- ED-ZEALOT-TW-006: final 4 active localization tables reviewed
+- ED-ZEALOT-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-ZEALOT-TW-006: placeholders preserved: `{damage_reduction:%s}`, `{time:%s}`, `{range:%s}`, `{cooldown:%s}`, `{sprint_speed:%s}`, `{sprint_cost:%s}`, `{duration:%s}`, `{damage:%s}`, `{stacks:%s}`
+- ED-ZEALOT-TW-006: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ZEALOT-TW-006: glossary/local usage checked for Restoring Faith, Behind the Lines, Relentless Fervor, Riposte, Health, Damage, Heavy Melee Backstab Kills, Sprint Speed, Sprint Cost, Slowdown Immunity, and Dodge
+- ED-ZEALOT-TW-006: corrected Health to `生命值`, Restoring Faith timing/percentage word order, Heavy Melee Backstab Kills wording, Sprint Speed conjunction, and Slowdown Immunity wording
+- ED-ZEALOT-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-ZEALOT-TW-006: diff scope limited to `Main_Modules/TALENTS/TALENTS_Zealot.lua`
+- ED-ZEALOT-TW-006: Lua syntax tool unavailable
+- ED-ZEALOT-TW-006: `Main_Modules/TALENTS/TALENTS_Zealot.lua` active localization tables completed through current source sequence
+- ED-ZEALOT-TW-006: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_ability_frag_grenade_description`
+- ED-VETERAN-TW-001: 15 active localization tables reviewed
+- ED-VETERAN-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-001: placeholders preserved: `{stacks:%s}`, `{talent_name:%s}`, `{duration:%s}`, `{ammo:%s}`, `{cooldown:%s}`, `{ammo_2:%s}`, `{damage:%s}`, `{movement_speed:%s}`, `{weakspot_damage:%s}`, `{toughness:%s}`, `{old_talent_name:%s}`, `{refresh_duration:%s}`, `{power:%s}`, `{range:%s}`
+- ED-VETERAN-TW-001: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-VETERAN-TW-001: glossary/local usage checked for Frag Grenade, Shredder Frag Grenade, Krak Grenade, Smoke Grenade, Scavenger, Survivalist, Fire Team, Close and Kill, Volley Fire, Executioner's Stance, Enhanced Target Priority, Counter-Fire, The Bigger they Are..., Marksman, Voice of Command, Toughness, Coherency, Weakspot Hits, Stagger, Bleed, Suppression, Veteran, Infiltrate, and Voice of Command
+- ED-VETERAN-TW-001: corrected Frag/Fragmentation Grenade typo and glossary term, Krak/Smoke Grenade glossary terms, numeric range punctuation, aura word order, Ranged Stance duration/suppression wording, Executioner's Stance outline wording, Captain to `連長`, Weakspot Hits colored keyword, and block/Void shield wording
+- ED-VETERAN-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-VETERAN-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
+- ED-VETERAN-TW-001: Lua syntax tool unavailable
+- ED-VETERAN-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency_description`
+- ED-VETERAN-TW-002: 15 active localization tables reviewed
+- ED-VETERAN-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-002: placeholders preserved: `{talent_name:%s}`, `{toughness:%s}`, `{duration:%s}`, `{damage:%s}`, `{movement_speed:%s}`, `{damage_duration:%s}`, `{cooldown:%s}`, `{charges:%s}`, `{ability_cooldown:%s}`, `{tdr:%s}`, `{threat_multiplier:%s}`, `{power:%s}`, `{stacks:%s}`, `{max_stacks}`, `{reload_speed:%s}`, `{rending:%s}`, `{toughness_replenish_multiplier:%s}`, `{stamina:%s}`, `{new_stacks:%s}`, `{time:%s}`, `{max_stacks:%s}`
+- ED-VETERAN-TW-002: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-VETERAN-TW-002: glossary/local usage checked for Duty and Honour, Only In Death Does Duty End, Infiltrate, Overwatch, Hunter's Resolve, Low Profile, Close Quarters Killzone, Marksman's Focus, Chink in their Armour, Tunnel Vision, Long Range Assassin, Focus Target!, Target Down!, Redirect Fire!, Focused Fire, Toughness, Coherency, Stealth, Combat Ability, Focus, Rending, Finesse, Stamina, and Weakspot Hit
+- ED-VETERAN-TW-002: corrected Coherency ally phrasing, revive wording, Stealth duration/ending wording, Combat Ability charge wording, Toughness Damage Reduction duration order, Close Quarters Killzone damage/table wording, Weakspot Hit colored keyword, numeric color wrappers for Focus/Focus Target stack increases, and Focus Target yellow-highlight typo
+- ED-VETERAN-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-VETERAN-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
+- ED-VETERAN-TW-002: Lua syntax tool unavailable
+- ED-VETERAN-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_talent_veteran_weapon_switch_new_description`
+- ED-VETERAN-TW-003: 15 active localization tables reviewed
+- ED-VETERAN-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-003: placeholders preserved: `{ranged_stacks:%s}`, `{melee_stacks:%s}`, `{reload_speed:%s}`, `{ranged_attack_speed:%s}`, `{ranged_crit_chance:%s}`, `{ranged_duration:%s}`, `{melee_attack_speed:%s}`, `{dodge_modifier:%s}`, `{melee_duration:%s}`, `{ammo:%s}`, `{duration:%s}`, `{stamina:%s}`, `{stamina_reduction:%s}`, `{toughness:%s}`, `{cooldown:%s}`, `{toughness_damage_reduction:%s}`, `{stacks:%s}`, `{toughness_over_time:%s}`, `{ranged_damage:%s}`, `{ranged_close:%s}`, `{max_ranged_damage:%s}`, `{ranged_far:%s}`, `{radius:%s}`, `{base_damage:%s}`, `{swap_speed}`, `{toughness_percent:%s}`
+- ED-VETERAN-TW-003: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-VETERAN-TW-003: glossary/local usage checked for Weapons Specialist, Always Prepared, Invigorated, On Your Toes, Exhilarating Takedown, Confirmed Kill, Out for Blood, Volley Adept, Longshot, Covering Fire, One Motion, Tactical Reload, Close Order Drill, Superiority Complex, Iron Will, Ranged Specialist, Melee Specialist, Reload Speed, Critical Hit, Toughness Damage Reduction, Combat Shotguns, Ammo Crates, and Coherency
+- ED-VETERAN-TW-003: corrected weapon-specialist activation wording, ammo/reserve typos, Reload Speed terminology, Combat Shotgun and Ammo Crate typos, Weakspot kill phrasing, Confirmed Kill regeneration wording, Longshot table percent header, Covering Fire base-damage wording, Coherency ally word order, and Iron Will condition wording
+- ED-VETERAN-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-VETERAN-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
+- ED-VETERAN-TW-003: Lua syntax tool unavailable
+- ED-VETERAN-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_talent_veteran_attack_speed_description`
+- ED-VETERAN-TW-004: 15 active localization tables reviewed
+- ED-VETERAN-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-004: placeholders preserved: `{melee_attack_speed:%s}`, `{damage_heal:%s}`, `{toughness:%s}`, `{cleave:%s}`, `{crit_chance:%s}`, `{ammo:%s}`, `{damage:%s}`, `{stacks:%s}`, `{duration:%s}`, `{chance:%s}`, `{amount:%s}`, `{time:%s}`, `{krak_grenade:%s}`, `{krak:%s}`, `{frag_grenade:%s}`, `{frag_damage:%s}`, `{smoke_grenade:%s}`, `{smoke:%s}`, `{stamina:%s}`, `{stamina_per_shot:%s}`, `{radius:%s}`, `{revive_speed:%s}`, `{movement_speed:%s}`, `{damage_reduction:%s}`
+- ED-VETERAN-TW-004: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-VETERAN-TW-004: glossary/local usage checked for Trench Fighter Drill, Field Improvisation, Withering Fire, Opening Salvo, Covert Operative, Serrated Blade, Catch a Breath, Grenadier, Demolition Stockpile, Grenade Tinkerer, Precision Strikes, Deadshot, Born Leader, Leave No One Behind, Demolition Team, Corruption, Wound, Cleave, Critical Hit, Bleed, Krak Grenade, Frag Grenade, Smoke Grenade, Stamina, Coherency, and Stun
+- ED-VETERAN-TW-004: corrected Ammo Crate typo, per-second Toughness wording, Opening Salvo Critical Hit Chance wording, Covert Operative damage order, Serrated Blade application/armor wording, Catch a Breath targeting wording, Grenadier and Demolition Team grenade/coherency wording, Precision Strikes order, Deadshot stamina drain wording, Born Leader Coherency grant wording, and Leave No One Behind assist/revive wording
+- ED-VETERAN-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-VETERAN-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
+- ED-VETERAN-TW-004: Lua syntax tool unavailable
+- ED-VETERAN-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Veteran.lua:loc_talent_veteran_dodging_grants_crit_description`
+- ED-VETERAN-TW-005: final 15 active localization tables reviewed
+- ED-VETERAN-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-VETERAN-TW-005: placeholders preserved: `{crit_chance:%s}`, `{duration:%s}`, `{stacks:%s}`, `{stamina:%s}`, `{ammo:%s}`, `{regen:%s}`, `{time:%s}`, `{finesse:%s}`, `{suppression:%s}`, `{proc_chance:%s}`, `{damage:%s}`, `{melee_impact:%s}`, `{rending_multiplier:%s}`, `{base_damage:%s}`, `{ranged_damage:%s}`, `{cooldown:%s}`, `{max_stacks:%s}`
+- ED-VETERAN-TW-005: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-VETERAN-TW-005: glossary/local usage checked for Reciprocity, Duck and Dive, Fully Loaded, Tactical Awareness, Desperado, Keep Their Heads Down!, Competitive Urge, Rending Strikes, Agile Engagement, Skirmisher, Shock Trooper, Kill Zone, Bring it Down!, Onslaught, Exploit Weakness, Pox Hound, Trapper, Gunner, Reaper, Sniper, Ogryn, Captain, Twins, Brittleness, Critical Shots, Rending, Suppression, Impact, Finesse, and Combat Ability
+- ED-VETERAN-TW-005: corrected Critical Hit Chance wording, dodge trigger conjunctions, reserve ammo rounding wording, Competitive Urge proc wording, Rending and Agile Engagement effect order, Skirmisher base-damage wording, Las-weapon critical shot wording, Kill Zone condition/block wording, Captain to `連長`, continuous-hit wording, and Exploit Weakness trigger order
+- ED-VETERAN-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-VETERAN-TW-005: diff scope limited to `Main_Modules/TALENTS/TALENTS_Veteran.lua`
+- ED-VETERAN-TW-005: Lua syntax tool unavailable
+- ED-VETERAN-TW-005: `Main_Modules/TALENTS/TALENTS_Veteran.lua` active localization tables completed through current source sequence
+- ED-VETERAN-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_ability_ogryn_grenade_box_description`
+- ED-OGRYN-TW-001: 15 active localization tables reviewed
+- ED-OGRYN-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-001: placeholders preserved: `{recharge:%s}`, `{max_charges:%s}`, `{talent_name:%s}`, `{cooldown_duration:%s}`, `{radius:%s}`, `{num_grenades:%s}`, `{amount:%s}`, `{damage:%s}`, `{toughness_regen_rate_modifier:%s}`, `{suppression:%s}`, `{attack_speed:%s}`, `{move_speed:%s}`, `{duration:%s}`, `{cooldown:%s}`, `{stack:%s}`, `{toughness:%s}`, `{ability:%s}`, `{stacks:%s}`
+- ED-OGRYN-TW-001: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-OGRYN-TW-001: glossary/local usage checked for Big Box of Hurt, Big Friendly Rock, That One Didn't Count, Frag Bomb, Bombs Away!, Bigger Box of Hurt, Intimidating Presence, Bonebreaker's Aura, Stay Close!, Coward Culling, Bull Rush, Indomitable, Trample, Stomping Boots, Pulverise, Frag Grenade, Trample, Ripper Guns, Grenadier Gauntlet, Rumbler, Twin-Linked Stubbers, Kickback, Pack Master, Captain, Twins, Coherency, Stagger, Weakspot Hits, Bleed, and Suppression
+- ED-OGRYN-TW-001: corrected grenade terminology, Captain to `連長`, Pack Master naming, missing punctuation, glossary weapon names, Coherency ally phrasing, suppressible enemy names, Trample colored keyword, Bulwark shield spacing, and Void shield wording
+- ED-OGRYN-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-OGRYN-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
+- ED-OGRYN-TW-001: Lua syntax tool unavailable
+- ED-OGRYN-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_ability_ogryn_taunt_shout_new_desc`
+- ED-OGRYN-TW-002: 15 active localization tables reviewed
+- ED-OGRYN-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-002: placeholders preserved: `{radius:%s}`, `{duration:%s}`, `{first_pulse:%s}`, `{second_pulse:%s}`, `{cooldown:%s}`, `{talent_name:%s}`, `{base_damage:%s}`, `{tougness:%s}`, `{toughness_per_hit:%s}`, `{max:%s}`, `{cooldown_reduction:%s}`, `{ranged_attack_speed:%s}`, `{reload_speed:%s}`, `{reduced_move_penalty:%s}`, `{ammo_return_percent:%s}`, `{ability:%s}`, `{toughness:%s}`, `{toughness_reload:%s}`, `{damage:%s}`, `{rending_multiplier:%s}`, `{stacks:%s}`, `{max_stacks:%s}`, `{heavy_stacks:%s}`, `{toughness_damage_reduction:%s}`, `{attack_speed:%s}`, `{melee_toughness:%s}`, `{cleave:%s}`, `{impact:%s}`, `{toughness_regen:%s}`, `{damage_reduction:%s}`
+- ED-OGRYN-TW-002: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-OGRYN-TW-002: glossary/local usage checked for Loyal Protector, Valuable Distraction, No Pain!, Go again!, Point-Blank Barrage, Bullet Bravado, Hail of Fire, Light 'em Up, Heavy Hitter, Don't Feel a Thing, Just Getting Started, Unstoppable, Great Cleaver, Impactful, Feel No Pain, Taunt, Attention Seeker, Toughness, Rending, Burn, Cleave, Impact, and Damage Reduction
+- ED-OGRYN-TW-002: corrected Taunt typo and colored keyword, Attention Seeker glossary term, damage-taken word order, shout typo, per-second Toughness wording, cooldown-reduction word order, Braced movement penalty wording, ammo return wording, table percent header, Bullet Bravado list structure, Unstoppable table separator, and Damage Reduction wording
+- ED-OGRYN-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-OGRYN-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
+- ED-OGRYN-TW-002: Lua syntax tool unavailable
+- ED-OGRYN-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_new_desc`
+- ED-OGRYN-TW-003: 15 active localization tables reviewed
+- ED-OGRYN-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-003: placeholders preserved: `{talent_name:%s}`, `{stacks:%s}`, `{toughness_replenish:%s}`, `{cooldown:%s}`, `{toughness_regen:%s}`, `{proc_chance:%s}`, `{ranged_damage:%s}`, `{duration:%s}`, `{chance:%s}`, `{cooldown_reduction:%s}`, `{fire_rate:%s}`, `{toughness_multiplier:%s}`, `{damage:%s}`, `{damage_reduction:%s}`, `{toughness:%s}`, `{heavy_toughness:%s}`
+- ED-OGRYN-TW-003: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-OGRYN-TW-003: glossary/local usage checked for Pained Outburst, Strongest!, Toughest!, Burst Limiter Override, Back Off!, Maximum Firepower, Good Shootin', Heat of Battle, Bulletstorm, Lynchpin, Heavyweight, Steady Grip, Smash 'Em!, The Best Defence, Furious, Lucky Bullet, Feel No Pain, Pack Master, Captain, Ripper Guns, Grenadier Gauntlet, Rumbler, Twin-Linked Stubbers, Kickback, Cleave, Critical, Damage, Toughness, Coherency, and Damage Reduction
+- ED-OGRYN-TW-003: corrected cooldown phrasing, Captain to `連長`, Lucky Bullet trigger wording, Cleave colored keyword, Critical wording, Bulletstorm Coherency ally wording, Pack Master mistranslation, Heavyweight damage/reduction structure, braced ranged weapon wording, and Ogryn weapon glossary typos
+- ED-OGRYN-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-OGRYN-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
+- ED-OGRYN-TW-003: Lua syntax tool unavailable
+- ED-OGRYN-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_bigger_coherency_radius_desc`
+- ED-OGRYN-TW-004: 15 active localization tables reviewed
+- ED-OGRYN-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-004: placeholders preserved: `{radius:%s}`, `{duration:%s}`, `{damage:%s}`, `{stamina:%s}`, `{damage_taken:%s}`, `{reduction:%s}`, `{stacks:%s}`, `{damage_reduction:%s}`, `{resistance:%s}`, `{cooldown:%s}`, `{reload_speed:%s}`, `{melee_damage:%s}`, `{max_ammo:%s}`, `{explosion_radius:%s}`, `{stagger:%s}`, `{heavy_stacks:%s}`
+- ED-OGRYN-TW-004: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-OGRYN-TW-004: glossary/local usage checked for Towering Presence, Soften Them Up, Payback Time, Pumped Up, Focused Fighter, Strongman, Can't Hit Me...Again, Keep Shooting, Beat Them Back, Strike True, Slam, Ammo Stash, Big Boom, Crunch!, Batter, Ripper Guns, Grenadier Gauntlet, Rumbler, Twin-Linked Stubbers, Kickback, Pox Hound, Trapper, Gunner, Reaper, Sniper, Mutant, Coherency, Damage Taken, Damage Resistance, Stamina, Weakspot, Strength, Impact, Staggering, and Bleed
+- ED-OGRYN-TW-004: corrected Coherency radius word order, Damage Taken phrasing, Ogryn weapon glossary names, Payback Time trigger list, Stamina typo, Damage Resistance wording, Empty Clip terminology, heavy/light melee wording, ammo reserve rounding, and explosion radius wording
+- ED-OGRYN-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-OGRYN-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
+- ED-OGRYN-TW-004: Lua syntax tool unavailable
+- ED-OGRYN-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_pushing_applies_brittlenes_desc`
+- ED-OGRYN-TW-005: 15 active localization tables reviewed
+- ED-OGRYN-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-005: placeholders preserved: `{stacks:%s}`, `{duration:%s}`, `{power:%s}`, `{toughness_damage_reduction:%s}`, `{cooldown:%s}`, `{revive_speed:%s}`, `{sway_reduction:%s}`, `{spread_reduction:%s}`, `{recoil_reduction:%s}`, `{stamina:%s}`, `{more_stacks:%s}`, `{max_stacks:%s}`, `{resistance:%s}`, `{damage:%s}`, `{health:%s}`, `{toughness_multiplier:%s}`, `{attack_speed:%s}`, `{cooldown_regen:%s}`, `{multi_hit:%s}`, `{reload_speed:%s}`, `{movement_speed:%s}`, `{damage_reduction:%s}`, `{wield_speed:%s}`, `{damage_taken_multiplier:%s}`
+- ED-OGRYN-TW-005: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-OGRYN-TW-005: glossary/local usage checked for Brutish Strength, For the Lil'Uns, Concentrate, Fire Away, Simple Minded, Unbreakable, Too Stubborn to Die, Frenzied Blows, Attention Seeker, Bruiser, Pacemaker, Unstoppable Momentum, Delight in Destruction, Dedicated Practice, Mobile Emplacement, Brittleness, Toughness, Strength, Toughness Damage Reduction, Stun, Stamina, Burn, Corruption, Corruption Damage, Poxburster, Poxwalker, Pox Hound, Beast of Nurgle, Daemonhost, Grimoire, Health, Taunt, Captain, Coherency, Ability Cooldown, Staggering, Bleeding, Stimm, and Damage Reduction
+- ED-OGRYN-TW-005: corrected OCR typos, Stamina/Health terminology, braced ranged weapon wording, weapon handling terms, Poxwalker/Beast of Nurgle/Grimoire/Stimm glossary terms, Perfect Block overhead wording, Taunt description structure, Captain to `連長`, Coherency ally wording, reload speed wording, item swap wording, and Damage Reduction wording
+- ED-OGRYN-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-OGRYN-TW-005: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
+- ED-OGRYN-TW-005: Lua syntax tool unavailable
+- ED-OGRYN-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Ogryn.lua:loc_talent_ogryn_windup_reduces_damage_taken_desc`
+- ED-OGRYN-TW-006: final 13 active localization tables reviewed
+- ED-OGRYN-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-OGRYN-TW-006: placeholders preserved: `{damage_taken_multiplier:%s}`, `{rending_multiplier:%s}`, `{duration:%s}`, `{push_impact_modifier:%s}`, `{cooldown:%s}`, `{time:%s}`, `{movement_speed:%s}`, `{damage:%s}`, `{crit_chance:%s}`, `{max_stacks:%s}`, `{stacks:%s}`, `{strength:%s}`, `{tdr:%s}`, `{damage_taken:%s}`, `{range:%s}`, `{attack_speed:%s}`, `{crit_damage:%s}`
+- ED-OGRYN-TW-006: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-OGRYN-TW-006: glossary/local usage checked for Implacable, Dominate, No Pushover, Get Stuck In, Reloaded and Ready, Massacre, No Stopping Me!, Bash and Blast, Hard Knocks, No Hurting Friends!, Won't Give In, Spray and Slay, Lucky Streak, Damage Reduction, Rending, Stagger, Combat Ability, Coherency, Stun, Ability Cooldown, Critical Chance, Toughness Damage Reduction, and Critical Strike Damage
+- ED-OGRYN-TW-006: corrected Damage Reduction wording, Push Stagger word order, Coherency ally phrasing, ranged damage on reload wording, staggered enemy damage-taken wording, Coherency damage-taken trigger, empty clip terminology, and Critical Strike Damage wording
+- ED-OGRYN-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-OGRYN-TW-006: diff scope limited to `Main_Modules/TALENTS/TALENTS_Ogryn.lua`
+- ED-OGRYN-TW-006: Lua syntax tool unavailable
+- ED-OGRYN-TW-006: `Main_Modules/TALENTS/TALENTS_Ogryn.lua` active localization tables completed through current source sequence
+- ED-OGRYN-TW-006: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_ability_adamant_grenade_description`
+- ED-ARBITES-TW-001: 15 active localization tables reviewed
+- ED-ARBITES-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-001: placeholders preserved: `{charges:%s}`, `{max_charges:%s}`, `{cooldown:%s}`, `{talent_name:%s}`, `{duration:%s}`, `{range:%s}`, `{tdr:%s}`, `{reload_speed:%s}`, `{damage_vs_stagger:%s}`, `{toughness:%s}`, `{damage_taken:%s}`, `{strength:%s}`, `{movement_speed:%s}`, `{movement_reduction:%s}`, `{stance_name:%s}`, `{ammo:%s}`, `{damage:%s}`, `{stacks:%s}`, `{nuncio_name:%s}`, `{suppression:%s}`, `{impact:%s}`, `{recoil:%s}`, `{revive_speed:%s}`, `{attack_speed:%s}`
+- ED-ARBITES-TW-001: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ARBITES-TW-001: glossary/local usage checked for Arbites, Arbites Grenade, Remote Detonation, Voltaic Shock Mine, Part of the Squad, Ruthless Efficiency, Breaking Dissent, Nuncio-Aquila, Castigator's Stance, Cyber-Mastiff, Toughness Damage Reduction, Revive Speed, Coherency, Void shield, Stagger/Staggering, Electrocute, Strength, Impact, Stun, Suppression, and Clip
+- ED-ARBITES-TW-001: corrected Arbites term to `法務官`, Toughness Damage Reduction to `韌性減傷`, ally/Coherency phrasing, grenade limit wording, Remote Detonation charge/cooldown wording, Voltaic Shock Mine wording, ammo-to-clip wording, aura effect direction, Castigator's Stance movement penalty wording, Nuncio-Aquila ally wording, and revive speed wording
+- ED-ARBITES-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-ARBITES-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
+- ED-ARBITES-TW-001: Lua syntax tool unavailable
+- ED-ARBITES-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_drone_debuff_talent_desc`
+- ED-ARBITES-TW-002: 15 active localization tables reviewed
+- ED-ARBITES-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-002: placeholders preserved: `{damage_reduction:%s}`, `{attack_speed_reduction:%s}`, `{duration:%s}`, `{damage:%s}`, `{stagger:%s}`, `{cooldown:%s}`, `{toughness:%s}`, `{stamina:%s}`, `{toughness_max:%s}`, `{stamina_max:%s}`, `{cooldown_elite:%s}`, `{max_cooldown}`, `{companion_damage:%s}`, `{distance:%s}`, `{charge_ability_name:%s}`, `{attack_speed:%s}`, `{tdr:%s}`, `{charges:%s}`, `{grenade_time:%s}`, `{grenade_blitz_name:%s}`, `{time_shock_mine:%s}`, `{shock_mine_name:%s}`, `{toughness:%s}`, `{dog_damage:%s}`, `{crit_chance:%s}`, `{crit_damage:%s}`, `{regen:%s}`, `{rending:%s}`, `{damage_red:%s}`, `{max_stacks:%s}`, `{movement_speed:%s}`
+- ED-ARBITES-TW-002: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ARBITES-TW-002: glossary/local usage checked for Break the Line, Execution Order, Terminus Warrant, Cyber-Mastiff, Combat Ability, Toughness Damage Reduction, Stamina, Elite, Specialist, Monstrosity, Marked Enemy, Bosses, Critical Chance, Critical Damage, Rending, Blitz, and Damage Resistance
+- ED-ARBITES-TW-002: corrected Break the Line to `突破重圍`, Bosses to `首領`, Lone Wolf typo, Toughness Damage Reduction to `韌性減傷`, charge distance wording, damage-vs-target wording, Execution Order dog damage wording, cooldown/rending wording, monstrosity damage/resistance wording, and max charge wording
+- ED-ARBITES-TW-002: `Mercy Sanction` not present in `Referneces/Translation.md`; retained existing local usage `仁慈制裁`
+- ED-ARBITES-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-ARBITES-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
+- ED-ARBITES-TW-002: Lua syntax tool unavailable
+- ED-ARBITES-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_terminus_warrant_new_desc`
+- ED-ARBITES-TW-003: 15 active localization tables reviewed
+- ED-ARBITES-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-003: placeholders preserved: `{max_stacks:%s}`, `{weakspot_stacks:%s}`, `{melee_duration:%s}`, `{melee_strength:%s}`, `{tdr:%s}`, `{ranged_duration:%s}`, `{ranged_strength:%s}`, `{ranged_cleave:%s}`, `{suppression:%s}`, `{stacks:%s}`, `{duration:%s}`, `{cdr:%s}`, `{toughness:%s}`, `{melee_stacks:%s}`, `{attack_speed:%s}`, `{crit_chance:%s}`, `{impact:%s}`, `{dr:%s}`, `{cleave:%s}`, `{strength:%s}`, `{low_stacks:%s}`, `{high_stacks:%s}`, `{cooldown:%s}`, `{damage:%s}`, `{movement_speed:%s}`, `{melee_attack_speed:%s}`, `{hits:%s}`, `{instant_toughness:%s}`
+- ED-ARBITES-TW-003: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ARBITES-TW-003: glossary/local usage checked for Terminus Warrant, Melee Justice, Ranged Justice, Toughness Damage Reduction, Ability Cooldown, Coherency, Critical Hit Chance, Forceful, Arbites Vigilant, Combat Ability, Stagger/Staggering, Impact, Damage Resistance, Stun, Will of the Lex, Cleave, Elite, Specialist, Withering Fire, Hammer of Judgement, Cyber-Mastiff, Bleed, and Target Neutralised
+- ED-ARBITES-TW-003: corrected Forceful to `堅定不移`, Toughness Damage Reduction to `韌性減傷`, stack gain wording, Coherency ally wording, cooldown regeneration wording, critical chance wording, ranged damage after reload wording, melee attack speed wording, and Target Neutralised broken parentheses
+- ED-ARBITES-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-ARBITES-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
+- ED-ARBITES-TW-003: Lua syntax tool unavailable
+- ED-ARBITES-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_close_kills_restore_toughness_desc`
+- ED-ARBITES-TW-004: 15 active localization tables reviewed
+- ED-ARBITES-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-004: placeholders preserved: `{toughness:%s}`, `{block_cost:%s}`, `{duration:%s}`, `{damage:%s}`, `{attack_speed:%s}`, `{range:%s}`, `{stamina:%s}`, `{perfect_toughness:%s}`, `{cooldown:%s}`, `{ammo:%s}`, `{tdr:%s}`, `{damage_reduction:%s}`, `{hits:%s}`
+- ED-ARBITES-TW-004: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ARBITES-TW-004: glossary/local usage checked for Force of Will, Retaliatory Force, Man and Cyber-Mastiff, Shield Plates, Arbitrator Armour, Voltaic Mandibles Augment, Ammo Belt, Concussive, Canine Morale, Imposing Force, Suppression Force, Suppression Protocols, Plasteel Plates, Cyber-Mastiff, Toughness Damage Reduction, Break the Line, Coherency, Stagger/Staggering, Weakspot Hits, Bleed, and Damage Resistance
+- ED-ARBITES-TW-004: corrected Toughness Damage Reduction to `韌性減傷`, Break the Line to `突破重圍`, Coherency ally phrasing, block cost word order, weakspot/Staggered wording, per-second Toughness wording, Damage Resistance wording, and suppression-force damage wording while preserving `CKWord("傷害")`
+- ED-ARBITES-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-ARBITES-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
+- ED-ARBITES-TW-004: Lua syntax tool unavailable
+- ED-ARBITES-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_dodge_grants_damage_desc`
+- ED-ARBITES-TW-005: 15 active localization tables reviewed
+- ED-ARBITES-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-005: placeholders preserved: `{damage:%s}`, `{duration:%s}`, `{stacks:%s}`, `{normal_stacks:%s}`, `{damage_taken_multiplier:%s}`, `{max_stacks:%s}`, `{ogryn_stacks:%s}`, `{reload_speed:%s}`, `{speed:%s}`, `{stamina:%s}`, `{cd:%s}`, `{corruption:%s}`, `{toxic_reduction:%s}`, `{damage_vs_suppressed:%s}`, `{impact:%s}`, `{crit_chance:%s}`, `{dodge:%s}`, `{dodge_duration:%s}`, `{cleave:%s}`, `{time:%s}`, `{strength:%s}`, `{clip_size:%s}`, `{health:%s}`
+- ED-ARBITES-TW-005: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ARBITES-TW-005: glossary/local usage checked for Arbites Revelatum, Justified Measures, Hold the Line, Judicious Efficiency, Rapid Movement, Rebreather, Cower, Miscreants!, The Emperor's Fist, Zealous Dedication, Street Smarts, Drive them Back, Target Selection, Soulguilt Scan, Priority Endowment, Target Priority, Damage, Staggering, Stamina, Corruption, Critical Strike Chance, Cleave, Weakspot, Clip, and Health
+- ED-ARBITES-TW-005: corrected damage/effect direction wording, Staggering formatting, reload/sprint speed wording, toxic gas reduction wording, suppressed enemy damage wording, critical chance wording, Cleave wording, elite/specialist damage wording, Weakspot strength wording, Clip to `彈匣`, and Health to `生命值`
+- ED-ARBITES-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-ARBITES-TW-005: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
+- ED-ARBITES-TW-005: Lua syntax tool unavailable
+- ED-ARBITES-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_ranged_damage_on_melee_stagger_desc`
+- ED-ARBITES-TW-006: final 8 active localization tables reviewed
+- ED-ARBITES-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-006: placeholders preserved: `{damage:%s}`, `{duration:%s}`, `{stacks:%s}`, `{rending:%s}`, `{movement_speed:%s}`, `{limit:%s}`
+- ED-ARBITES-TW-006: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ARBITES-TW-006: glossary/local usage checked for Final Warning, Weight of the Lex, Serrated Maw, Prosecution Blow, March, Monstrosity Hunter, Strike Down, True Grit, Staggering, Rending, Critical Strike, Ogryn, Monstrosity, Health, and Damage
+- ED-ARBITES-TW-006: corrected ranged/melee damage wording, Critical Strike display wording, movement speed wording, Ogryn/Monstrosity damage wording, Staggered enemy Rending wording, and Health to `生命值`
+- ED-ARBITES-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-ARBITES-TW-006: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
+- ED-ARBITES-TW-006: Lua syntax tool unavailable
+- ED-ARBITES-TW-006: `Main_Modules/TALENTS/TALENTS_Arbites.lua` active localization tables completed through current source sequence
+- ED-ARBITES-TW-006: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_blitz_flash_grenade_desc`
+- ED-SCUM-TW-001: 15 active localization tables reviewed
+- ED-SCUM-TW-001: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-001: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-001: placeholders preserved: `{num_charges:%s}`, `{num_kills:%s}`, `{max_charges:%s}`, `{talent_name:%s}`, `{ammo:%s}`, `{talent:%s}`, `{melee_damage:%s}`, `{critical_chance:%s}`, `{duration:%s}`, `{sprint_movement_speed:%s}`, `{cooldown:%s}`, `{default_talent:%s}`, `{duration_max:%s}`, `{duration_extend:%s}`, `{focus:%s}`, `{rending:%s}`, `{stacks:%s}`, `{damage:%s}`, `{cooldown_base:%s}`, `{cooldown_elite:%s}`, `{cooldown_max:%s}`, `{power:%s}`, `{attack_speed:%s}`, `{damage_taken:%s}`, `{rage_duration_extend:%s}`, `{rage_duration_max:%s}`, `{punk_rage:%s}`, `{rage_duration_extend_elites:%s}`, `{rage_duration_max_upgrade:%s}`
+- ED-SCUM-TW-001: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-001: glossary/local usage checked for Hive Scum, Blinder, Boom Bringer, Chem Grenade, Gunslinger, Gunslinger Improved, Ruffian, Anarchist, Desperado, Rampage!, Chem Toxin, Coherency, Toughness, Stamina, Ability Cooldown, Rending, Strength, Stagger, Stun, Hit mass, Elite, Specialist, Monstrosity, Captain, and Bulwark
+- ED-SCUM-TW-001: corrected grenade wording, Scum class helper wording to `巢都渣滓`, ammo aura wording, Chem Grenade timer/toxin/explosion details, missile armor modifier tables, Desperado duration/marking wording, Rampage damage reduction and duration extension wording, and `手雷`/`隊長`/simplified-character leftovers
+- ED-SCUM-TW-001: `git -C <translation-repo> diff --check` passed before commit
+- ED-SCUM-TW-001: diff scope limited to `Main_Modules/TALENTS/TALENTS_Scum.lua`
+- ED-SCUM-TW-001: Lua syntax tool unavailable
+- ED-SCUM-TW-001: translation repo commit `4d660cb`
+- ED-SCUM-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_ability_punk_rage_sub_3_desc_02`
+- ED-SCUM-TW-002: 15 active localization tables reviewed
+- ED-SCUM-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-002: placeholders preserved: `{punk_rage:%s}`, `{duration:%s}`, `{attack_speed_reduction:%s}`, `{cleave:%s}`, `{max_stacks:%s}`, `{melee_power:%s}`, `{total_corruption_heal:%s}`, `{stimm_field:%s}`, `{cooldown:%s}`, `{stacks:%s}`, `{linger_duration:%s}`, `{dodge_distance_modifier:%s}`, `{dodge_linger_time:%s}`, `{crit_chance:%s}`, `{toughness:%s}`, `{frenzy:%s}`, `{frenzy_duration:%s}`, `{on_crit:%s}`, `{melee_damage:%s}`, `{attack_speed:%s}`
+- ED-SCUM-TW-002: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-002: glossary/local usage checked for Hive Scum, Rampage!, Stimm, Stimm Supply, Chem Toxin, Cartel Special Stimm, Vulture's Mark, Adrenaline, Adrenaline Frenzy, Corruption, Health, Toughness, Coherency, Critical Strike, Critical Strike Chance, Weakspot Hits, Cleave, Strength, Stagger, Specialist, Elite, and Monstrosity
+- ED-SCUM-TW-002: corrected Forge's Bellow shout wording without nonexistent `Shout_rgb_tw`, Pulverising Strikes stack wording, Stimm Supply healing/radius/cooldown wording, Fast Acting Stimms typo, Vulture's Mark stack and aura wording, Critical Strike display wording, and Adrenaline stack/kill blow wording
+- ED-SCUM-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-SCUM-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Scum.lua`
+- ED-SCUM-TW-002: Lua syntax tool unavailable
+- ED-SCUM-TW-002: translation repo commit `dc1b44e`
+- ED-SCUM-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_keystone_adrenaline_junkie_sub_3_desc`
+- ED-SCUM-TW-003: 15 active localization tables reviewed
+- ED-SCUM-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-003: placeholders preserved: `{frenzy:%s}`, `{duration:%s}`, `{toughness:%s}`, `{dependency:%s}`, `{max_stacks:%s}`, `{cooldown_reduction:%s}`, `{critical_chance:%s}`, `{toughness_damage_reduction:%s}`, `{toughness_elites:%s}`, `{damage_near:%s}`, `{default:%s}`, `{weakspot:%s}`, `{critical:%s}`, `{range_near:%s}`, `{damage_far:%s}`, `{range_far:%s}`, `{toughness_damage_taken_modifier:%s}`, `{cooldown:%s}`, `{wield_speed:%s}`, `{recoil:%s}`, `{spread:%s}`, `{damage:%s}`
+- ED-SCUM-TW-003: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-003: glossary/local usage checked for Adrenaline, Adrenaline Frenzy, Chemical Dependency, Stimm, Ability Cooldown, Critical Hit Chance, Toughness Damage Reduction, Toughness, Critical Strike, Weakspot Hits, Damage, Stun, Swap Speed, Recoil, Spread, Grenade, Specialist, Elite, and Disabler enemies
+- ED-SCUM-TW-003: corrected CNumb number formatting, Chemical Dependency cooldown reduction sign/wording, Toughness Damage Reduction to `韌性減傷`, Critical Strike display wording, close-range meter wording, Sticky Hands grenade wording, and Health/Toughness related phrasing
+- ED-SCUM-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-SCUM-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Scum.lua`
+- ED-SCUM-TW-003: Lua syntax tool unavailable
+- ED-SCUM-TW-003: translation repo commit `0db5bb4`
+- ED-SCUM-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_passive_reload_speed_on_close_kill_desc`
+- ED-SCUM-TW-004: 15 active localization tables reviewed
+- ED-SCUM-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-004: placeholders preserved: `{reload_speed:%s}`, `{duration:%s}`, `{critical_strike_chance:%s}`, `{stamina:%s}`, `{toughness:%s}`, `{power:%s}`, `{stacks:%s}`, `{restore:%s}`, `{restore_toxined:%s}`, `{dodge_cooldown_reset_modifier:%s}`, `{duration_increase:%s}`, `{cleanse_amount:%s}`, `{cleanse_threshold:%s}`, `{attack_speed_increase:%s}`, `{multiplier:%s}`, `{damage_increase:%s}`, `{damage_reduction:%s}`, `{power_light:%s}`, `{power_heavy:%s}`, `{max_stacks:%s}`
+- ED-SCUM-TW-004: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-004: glossary/local usage checked for Cartel Special Stimm, Celerity Stimm, Combat Stimm, Concentration Stimm, Med Stimm, Chem Toxin, Critical Strike, Critical Strike Chance, Stamina, Toughness, Corruption, Health, Damage, Damage Reduction, Strength, Cleave, Staggered, Pack Master, Elite, Specialist, Monstrosity, and Grenade
+- ED-SCUM-TW-004: corrected close-range meter wording, Critical Strike display wording, stimm duration wording, Pack Master to `獸群領主`, Staggered Strength wording, Battering Strikes sentence order, and Coated Weaponry Critical Strike wording
+- ED-SCUM-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-SCUM-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Scum.lua`
+- ED-SCUM-TW-004: Lua syntax tool unavailable
+- ED-SCUM-TW-004: translation repo commit `3bc3ec0`
+- ED-SCUM-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_passive_extended_mag_desc`
+- ED-SCUM-TW-005: 15 active localization tables reviewed
+- ED-SCUM-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-005: placeholders preserved: `{clip_size:%s}`, `{ammo_threshold:%s}`, `{threshold:%s}`, `{weakspot_damage:%s}`, `{damage:%s}`, `{duration:%s}`, `{ammo_per_stack:%s}`, `{damage_per_stack:%s}`, `{percentage:%s}`, `{movement_speed:%s}`, `{cooldown:%s}`, `{min_targets:%s}`, `{multiplier:%s}`, `{ammo:%s}`, `{blinder:%s}`, `{blinder_stacks:%s}`, `{missile_launcher:%s}`, `{missile_launcher_stacks:%s}`, `{chem_grenade:%s}`, `{chem_grenade_stacks:%s}`, `{max_targets:%s}`, `{radius:%s}`, `{toxin_stacks:%s}`, `{range:%s}`, `{toughness_amount:%s}`, `{max_enemies:%s}`, `{damage_max:%s}`, `{extra_consecutive_dodges:%s}`, `{critical_chance:%s}`, `{melee_damage:%s}`, `{max_stacks:%s}`, `{max_melee_damage:%s}`
+- ED-SCUM-TW-005: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-005: glossary/local usage checked for Clip, Critical Strike, Critical Damage, Health, Damage, Weakspot Damage, Chem Toxin, Blitz, Blinder, Boom Bringer, Chem Grenade, Toughness, Critical Chance, Melee Damage, Captains/Twins, Pack Master, Crusher, and human-sized enemies
+- ED-SCUM-TW-005: corrected Critical Strike display wording, Health to `生命值`, Crusher to `粉碎者`, Blitz wording, meter wording, and Critical Chance to `爆擊率`
+- ED-SCUM-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-SCUM-TW-005: diff scope limited to `Main_Modules/TALENTS/TALENTS_Scum.lua`
+- ED-SCUM-TW-005: Lua syntax tool unavailable
+- ED-SCUM-TW-005: translation repo commit `5f8a7d6`
+- ED-SCUM-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage_desc`
+- ED-SCUM-TW-006: 15 active localization tables reviewed
+- ED-SCUM-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-006: placeholders preserved: `{duration:%s}`, `{damage_taken:%s}`, `{default:%s}`, `{monster:%s}`, `{toughness_amount:%s}`, `{toughness_replenish_modifier:%s}`, `{damage_taken_multiplier:%s}`, `{power_level:%s}`, `{finesse_modifier_bonus:%s}`, `{rending_multiplier:%s}`, `{critical_strike_chance:%s}`, `{attack_speed:%s}`, `{wield_speed:%s}`, `{stamina_cost_multiplier:%s}`
+- ED-SCUM-TW-006: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-006: glossary/local usage checked for Chem Toxin, Damage Taken, Monstrosity, Stimm, Toughness, Toughness Replenishment, Damage Reduction, Strength, Finesse, Rending, Critical Strike Chance, Swap Speed, Grenade, Stamina, Stun, and Slowdown Immunity
+- ED-SCUM-TW-006: corrected toxin damage direction wording, Toughness replenishment wording, Strength sentence order, Critical Strike Chance to `爆擊率`, and Swap Speed grenade wording
+- ED-SCUM-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-SCUM-TW-006: diff scope limited to `Main_Modules/TALENTS/TALENTS_Scum.lua`
+- ED-SCUM-TW-006: Lua syntax tool unavailable
+- ED-SCUM-TW-006: translation repo commit `fc1a8b1`
+- ED-SCUM-TW-006: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_stat_reload_speed`
+- ED-SCUM-TW-007: final 9 active localization tables reviewed
+- ED-SCUM-TW-007: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-007: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-007: placeholders preserved: `{reload_speed:%s}`, `{recoil_modifier:%s}`, `{movement_speed:%s}`, `{dodge_distance_modifier:%s}`, `{dodge_speed_multiplier:%s}`, `{dodge_cooldown_reset_modifier:%s}`, `{combat_ability_cooldown_regen_modifier:%s}`, `{duration:%s}`, `{cooldown:%s}`
+- ED-SCUM-TW-007: `CKWord`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-007: glossary/local usage checked for Reload Speed, Recoil, Movement Speed, Dodge Distance, Dodge Speed, Dodge Recovery Speed, Cooldown Regeneration, Ability Cooldown, Melee Kills, and Ranged Kills
+- ED-SCUM-TW-007: reviewed final Stimm Lab active localization tables; existing `zh-tw` already matched source semantics and glossary, so no Lua changes were required
+- ED-SCUM-TW-007: `git -C <translation-repo> diff --check` passed with empty diff
+- ED-SCUM-TW-007: diff scope empty; translation repo clean, no new translation commit
+- ED-SCUM-TW-007: Lua syntax tool unavailable
+- ED-SCUM-TW-007: `Main_Modules/TALENTS/TALENTS_Scum.lua` active localization tables completed through current source sequence
+- ED-SCUM-TW-007: PSYKER remains skipped per user request
+- ED-SCUM-TW-007: Enhanced_descriptions talent class sequence is complete except PSYKER
 
 ## Blocked
 
@@ -502,3 +1242,5 @@
 ## Term Candidates
 
 - `Voltaic Shock Mine` -> `電能地雷` added during ED-NAMES-TW-016 because `Referneces/Translation.md` has the English term with an empty zh-tw value.
+- `Dispense Justice` -> `伸張正義` added during ED-NAMES-TW-017 because updated `Referneces/Translation.md` still has no entry for this talent name.
+- `Empyric Recovery` -> `亞空間恢復` added during ED-PENANCES-TW-011 because `Referneces/Translation.md` has related `Empyric` terms but not this penance name.
