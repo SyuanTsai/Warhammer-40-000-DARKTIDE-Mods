@@ -1185,6 +1185,18 @@
 - ED-SCUM-TW-003: Lua syntax tool unavailable
 - ED-SCUM-TW-003: translation repo commit `0db5bb4`
 - ED-SCUM-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_passive_reload_speed_on_close_kill_desc`
+- ED-SCUM-TW-004: 15 active localization tables reviewed
+- ED-SCUM-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-004: placeholders preserved: `{reload_speed:%s}`, `{duration:%s}`, `{critical_strike_chance:%s}`, `{stamina:%s}`, `{toughness:%s}`, `{power:%s}`, `{stacks:%s}`, `{restore:%s}`, `{restore_toxined:%s}`, `{dodge_cooldown_reset_modifier:%s}`, `{duration_increase:%s}`, `{cleanse_amount:%s}`, `{cleanse_threshold:%s}`, `{attack_speed_increase:%s}`, `{multiplier:%s}`, `{damage_increase:%s}`, `{damage_reduction:%s}`, `{power_light:%s}`, `{power_heavy:%s}`, `{max_stacks:%s}`
+- ED-SCUM-TW-004: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-004: glossary/local usage checked for Cartel Special Stimm, Celerity Stimm, Combat Stimm, Concentration Stimm, Med Stimm, Chem Toxin, Critical Strike, Critical Strike Chance, Stamina, Toughness, Corruption, Health, Damage, Damage Reduction, Strength, Cleave, Staggered, Pack Master, Elite, Specialist, Monstrosity, and Grenade
+- ED-SCUM-TW-004: corrected close-range meter wording, Critical Strike display wording, stimm duration wording, Pack Master to `獸群領主`, Staggered Strength wording, Battering Strikes sentence order, and Coated Weaponry Critical Strike wording
+- ED-SCUM-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-SCUM-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Scum.lua`
+- ED-SCUM-TW-004: Lua syntax tool unavailable
+- ED-SCUM-TW-004: translation repo commit `3bc3ec0`
+- ED-SCUM-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_passive_extended_mag_desc`
 
 ## Blocked
 
