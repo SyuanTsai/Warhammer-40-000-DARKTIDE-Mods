@@ -1209,6 +1209,18 @@
 - ED-SCUM-TW-005: Lua syntax tool unavailable
 - ED-SCUM-TW-005: translation repo commit `5f8a7d6`
 - ED-SCUM-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage_desc`
+- ED-SCUM-TW-006: 15 active localization tables reviewed
+- ED-SCUM-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-006: placeholders preserved: `{duration:%s}`, `{damage_taken:%s}`, `{default:%s}`, `{monster:%s}`, `{toughness_amount:%s}`, `{toughness_replenish_modifier:%s}`, `{damage_taken_multiplier:%s}`, `{power_level:%s}`, `{finesse_modifier_bonus:%s}`, `{rending_multiplier:%s}`, `{critical_strike_chance:%s}`, `{attack_speed:%s}`, `{wield_speed:%s}`, `{stamina_cost_multiplier:%s}`
+- ED-SCUM-TW-006: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-006: glossary/local usage checked for Chem Toxin, Damage Taken, Monstrosity, Stimm, Toughness, Toughness Replenishment, Damage Reduction, Strength, Finesse, Rending, Critical Strike Chance, Swap Speed, Grenade, Stamina, Stun, and Slowdown Immunity
+- ED-SCUM-TW-006: corrected toxin damage direction wording, Toughness replenishment wording, Strength sentence order, Critical Strike Chance to `爆擊率`, and Swap Speed grenade wording
+- ED-SCUM-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-SCUM-TW-006: diff scope limited to `Main_Modules/TALENTS/TALENTS_Scum.lua`
+- ED-SCUM-TW-006: Lua syntax tool unavailable
+- ED-SCUM-TW-006: translation repo commit `fc1a8b1`
+- ED-SCUM-TW-006: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_stat_reload_speed`
 
 ## Blocked
 

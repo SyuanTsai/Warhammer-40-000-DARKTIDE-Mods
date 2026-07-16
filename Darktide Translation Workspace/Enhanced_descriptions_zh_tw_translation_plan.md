@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-16，目前是 `ED-SCUM-TW-006`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-16，目前是 `ED-SCUM-TW-007`：
 
 ```text
 File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua
-Start position: `loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage_desc`
-Scope: next 15 active localization tables
-Safe next position target: `loc_talent_stat_reload_speed`
+Start position: `loc_talent_stat_reload_speed`
+Scope: final active localization tables in Scum
+Safe next position target: Scum active localization table sequence complete
 ```
 
-最新執行狀態：ED-SCUM-TW-005 已完成；translation repo commit `5f8a7d6`。`Main_Modules/TALENTS/TALENTS_Scum.lua` 已完成前 75 個 active localization tables；下一批接 `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage_desc`。
+最新執行狀態：ED-SCUM-TW-006 已完成；translation repo commit `fc1a8b1`。`Main_Modules/TALENTS/TALENTS_Scum.lua` 已完成前 90 個 active localization tables；下一批接 `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_stat_reload_speed`，預期為 Scum 最後一批 active localization tables。
