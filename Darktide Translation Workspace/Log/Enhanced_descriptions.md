@@ -1197,6 +1197,18 @@
 - ED-SCUM-TW-004: Lua syntax tool unavailable
 - ED-SCUM-TW-004: translation repo commit `3bc3ec0`
 - ED-SCUM-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_passive_extended_mag_desc`
+- ED-SCUM-TW-005: 15 active localization tables reviewed
+- ED-SCUM-TW-005: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-005: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-005: placeholders preserved: `{clip_size:%s}`, `{ammo_threshold:%s}`, `{threshold:%s}`, `{weakspot_damage:%s}`, `{damage:%s}`, `{duration:%s}`, `{ammo_per_stack:%s}`, `{damage_per_stack:%s}`, `{percentage:%s}`, `{movement_speed:%s}`, `{cooldown:%s}`, `{min_targets:%s}`, `{multiplier:%s}`, `{ammo:%s}`, `{blinder:%s}`, `{blinder_stacks:%s}`, `{missile_launcher:%s}`, `{missile_launcher_stacks:%s}`, `{chem_grenade:%s}`, `{chem_grenade_stacks:%s}`, `{max_targets:%s}`, `{radius:%s}`, `{toxin_stacks:%s}`, `{range:%s}`, `{toughness_amount:%s}`, `{max_enemies:%s}`, `{damage_max:%s}`, `{extra_consecutive_dodges:%s}`, `{critical_chance:%s}`, `{melee_damage:%s}`, `{max_stacks:%s}`, `{max_melee_damage:%s}`
+- ED-SCUM-TW-005: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-005: glossary/local usage checked for Clip, Critical Strike, Critical Damage, Health, Damage, Weakspot Damage, Chem Toxin, Blitz, Blinder, Boom Bringer, Chem Grenade, Toughness, Critical Chance, Melee Damage, Captains/Twins, Pack Master, Crusher, and human-sized enemies
+- ED-SCUM-TW-005: corrected Critical Strike display wording, Health to `生命值`, Crusher to `粉碎者`, Blitz wording, meter wording, and Critical Chance to `爆擊率`
+- ED-SCUM-TW-005: `git -C <translation-repo> diff --check` passed before commit
+- ED-SCUM-TW-005: diff scope limited to `Main_Modules/TALENTS/TALENTS_Scum.lua`
+- ED-SCUM-TW-005: Lua syntax tool unavailable
+- ED-SCUM-TW-005: translation repo commit `5f8a7d6`
+- ED-SCUM-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage_desc`
 
 ## Blocked
 
