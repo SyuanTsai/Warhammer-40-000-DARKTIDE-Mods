@@ -1221,6 +1221,19 @@
 - ED-SCUM-TW-006: Lua syntax tool unavailable
 - ED-SCUM-TW-006: translation repo commit `fc1a8b1`
 - ED-SCUM-TW-006: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_stat_reload_speed`
+- ED-SCUM-TW-007: final 9 active localization tables reviewed
+- ED-SCUM-TW-007: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-007: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-007: placeholders preserved: `{reload_speed:%s}`, `{recoil_modifier:%s}`, `{movement_speed:%s}`, `{dodge_distance_modifier:%s}`, `{dodge_speed_multiplier:%s}`, `{dodge_cooldown_reset_modifier:%s}`, `{combat_ability_cooldown_regen_modifier:%s}`, `{duration:%s}`, `{cooldown:%s}`
+- ED-SCUM-TW-007: `CKWord`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-007: glossary/local usage checked for Reload Speed, Recoil, Movement Speed, Dodge Distance, Dodge Speed, Dodge Recovery Speed, Cooldown Regeneration, Ability Cooldown, Melee Kills, and Ranged Kills
+- ED-SCUM-TW-007: reviewed final Stimm Lab active localization tables; existing `zh-tw` already matched source semantics and glossary, so no Lua changes were required
+- ED-SCUM-TW-007: `git -C <translation-repo> diff --check` passed with empty diff
+- ED-SCUM-TW-007: diff scope empty; translation repo clean, no new translation commit
+- ED-SCUM-TW-007: Lua syntax tool unavailable
+- ED-SCUM-TW-007: `Main_Modules/TALENTS/TALENTS_Scum.lua` active localization tables completed through current source sequence
+- ED-SCUM-TW-007: PSYKER remains skipped per user request
+- ED-SCUM-TW-007: Enhanced_descriptions talent class sequence is complete except PSYKER
 
 ## Blocked
 

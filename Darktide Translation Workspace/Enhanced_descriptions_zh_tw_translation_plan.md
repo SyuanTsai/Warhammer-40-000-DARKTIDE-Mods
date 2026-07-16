@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-16，目前是 `ED-SCUM-TW-007`：
+截至 2026-07-16，除使用者要求跳過的 PSYKER 外，目前 Enhanced_descriptions talent class sequence 已完成，無下一批：
 
 ```text
 File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua
-Start position: `loc_talent_stat_reload_speed`
-Scope: final active localization tables in Scum
-Safe next position target: Scum active localization table sequence complete
+Completed through: `loc_talent_buff_cooldown_on_ranged_kills`
+Skipped by request: <translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua
+Safe next position target: none
 ```
 
-最新執行狀態：ED-SCUM-TW-006 已完成；translation repo commit `fc1a8b1`。`Main_Modules/TALENTS/TALENTS_Scum.lua` 已完成前 90 個 active localization tables；下一批接 `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_stat_reload_speed`，預期為 Scum 最後一批 active localization tables。
+最新執行狀態：ED-SCUM-TW-007 已完成審核；最後一個 translation repo commit 仍為 `fc1a8b1`，因最後 9 個 active localization tables 已符合詞彙與 placeholder 要求，無 Lua 變更可提交。`Main_Modules/TALENTS/TALENTS_Scum.lua` active table 序列已完成；PSYKER 依使用者要求跳過。
