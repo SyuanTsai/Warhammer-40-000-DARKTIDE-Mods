@@ -1173,6 +1173,18 @@
 - ED-SCUM-TW-002: Lua syntax tool unavailable
 - ED-SCUM-TW-002: translation repo commit `dc1b44e`
 - ED-SCUM-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_keystone_adrenaline_junkie_sub_3_desc`
+- ED-SCUM-TW-003: 15 active localization tables reviewed
+- ED-SCUM-TW-003: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-003: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-003: placeholders preserved: `{frenzy:%s}`, `{duration:%s}`, `{toughness:%s}`, `{dependency:%s}`, `{max_stacks:%s}`, `{cooldown_reduction:%s}`, `{critical_chance:%s}`, `{toughness_damage_reduction:%s}`, `{toughness_elites:%s}`, `{damage_near:%s}`, `{default:%s}`, `{weakspot:%s}`, `{critical:%s}`, `{range_near:%s}`, `{damage_far:%s}`, `{range_far:%s}`, `{toughness_damage_taken_modifier:%s}`, `{cooldown:%s}`, `{wield_speed:%s}`, `{recoil:%s}`, `{spread:%s}`, `{damage:%s}`
+- ED-SCUM-TW-003: `CKWord`, `CNumb`, `CPhrs`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-003: glossary/local usage checked for Adrenaline, Adrenaline Frenzy, Chemical Dependency, Stimm, Ability Cooldown, Critical Hit Chance, Toughness Damage Reduction, Toughness, Critical Strike, Weakspot Hits, Damage, Stun, Swap Speed, Recoil, Spread, Grenade, Specialist, Elite, and Disabler enemies
+- ED-SCUM-TW-003: corrected CNumb number formatting, Chemical Dependency cooldown reduction sign/wording, Toughness Damage Reduction to `韌性減傷`, Critical Strike display wording, close-range meter wording, Sticky Hands grenade wording, and Health/Toughness related phrasing
+- ED-SCUM-TW-003: `git -C <translation-repo> diff --check` passed before commit
+- ED-SCUM-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Scum.lua`
+- ED-SCUM-TW-003: Lua syntax tool unavailable
+- ED-SCUM-TW-003: translation repo commit `0db5bb4`
+- ED-SCUM-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_passive_reload_speed_on_close_kill_desc`
 
 ## Blocked
 
