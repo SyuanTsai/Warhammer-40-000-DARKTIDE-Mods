@@ -1137,6 +1137,18 @@
 - ED-ARBITES-TW-005: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
 - ED-ARBITES-TW-005: Lua syntax tool unavailable
 - ED-ARBITES-TW-005: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_ranged_damage_on_melee_stagger_desc`
+- ED-ARBITES-TW-006: final 8 active localization tables reviewed
+- ED-ARBITES-TW-006: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-006: active empty `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-006: placeholders preserved: `{damage:%s}`, `{duration:%s}`, `{stacks:%s}`, `{rending:%s}`, `{movement_speed:%s}`, `{limit:%s}`
+- ED-ARBITES-TW-006: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ARBITES-TW-006: glossary/local usage checked for Final Warning, Weight of the Lex, Serrated Maw, Prosecution Blow, March, Monstrosity Hunter, Strike Down, True Grit, Staggering, Rending, Critical Strike, Ogryn, Monstrosity, Health, and Damage
+- ED-ARBITES-TW-006: corrected ranged/melee damage wording, Critical Strike display wording, movement speed wording, Ogryn/Monstrosity damage wording, Staggered enemy Rending wording, and Health to `生命值`
+- ED-ARBITES-TW-006: `git -C <translation-repo> diff --check` passed before commit
+- ED-ARBITES-TW-006: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
+- ED-ARBITES-TW-006: Lua syntax tool unavailable
+- ED-ARBITES-TW-006: `Main_Modules/TALENTS/TALENTS_Arbites.lua` active localization tables completed through current source sequence
+- ED-ARBITES-TW-006: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_blitz_flash_grenade_desc`
 
 ## Blocked
 

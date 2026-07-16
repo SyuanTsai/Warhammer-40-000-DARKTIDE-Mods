@@ -262,13 +262,13 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-下一輪可從目前 log 的 safe next position 開始；截至 2026-07-16，目前是 `ED-ARBITES-TW-006`：
+下一輪可從目前 log 的 safe next position 開始；截至 2026-07-16，目前是 `ED-SCUM-TW-001`：
 
 ```text
-File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Arbites.lua
-Start position: `loc_talent_adamant_ranged_damage_on_melee_stagger_desc`
-Scope: final 8 active localization tables in Arbites
-Safe next position target: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_blitz_flash_grenade_desc`
+File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua
+Start position: `loc_talent_broker_blitz_flash_grenade_desc`
+Scope: next 15 active localization tables
+Safe next position target: `loc_talent_broker_ability_punk_rage_sub_3_desc_02`
 ```
 
-最新執行狀態：ED-ARBITES-TW-005 已完成；translation repo commit `0caef9f`。下一批接 `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_ranged_damage_on_melee_stagger_desc`。
+最新執行狀態：ED-ARBITES-TW-006 已完成；translation repo commit `00a136e`。`Main_Modules/TALENTS/TALENTS_Arbites.lua` active table 序列已完成；下一批接 `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_blitz_flash_grenade_desc`。
