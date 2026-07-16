@@ -1115,6 +1115,17 @@
 - ED-ARBITES-TW-003: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
 - ED-ARBITES-TW-003: Lua syntax tool unavailable
 - ED-ARBITES-TW-003: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_close_kills_restore_toughness_desc`
+- ED-ARBITES-TW-004: 15 active localization tables reviewed
+- ED-ARBITES-TW-004: duplicate active `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-004: active empty `["zh-tw"]` in touched tables=0
+- ED-ARBITES-TW-004: placeholders preserved: `{toughness:%s}`, `{block_cost:%s}`, `{duration:%s}`, `{damage:%s}`, `{attack_speed:%s}`, `{range:%s}`, `{stamina:%s}`, `{perfect_toughness:%s}`, `{cooldown:%s}`, `{ammo:%s}`, `{tdr:%s}`, `{damage_reduction:%s}`, `{hits:%s}`
+- ED-ARBITES-TW-004: `CKWord`, `CNumb`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-ARBITES-TW-004: glossary/local usage checked for Force of Will, Retaliatory Force, Man and Cyber-Mastiff, Shield Plates, Arbitrator Armour, Voltaic Mandibles Augment, Ammo Belt, Concussive, Canine Morale, Imposing Force, Suppression Force, Suppression Protocols, Plasteel Plates, Cyber-Mastiff, Toughness Damage Reduction, Break the Line, Coherency, Stagger/Staggering, Weakspot Hits, Bleed, and Damage Resistance
+- ED-ARBITES-TW-004: corrected Toughness Damage Reduction to `韌性減傷`, Break the Line to `突破重圍`, Coherency ally phrasing, block cost word order, weakspot/Staggered wording, per-second Toughness wording, Damage Resistance wording, and suppression-force damage wording while preserving `CKWord("傷害")`
+- ED-ARBITES-TW-004: `git -C <translation-repo> diff --check` passed before commit
+- ED-ARBITES-TW-004: diff scope limited to `Main_Modules/TALENTS/TALENTS_Arbites.lua`
+- ED-ARBITES-TW-004: Lua syntax tool unavailable
+- ED-ARBITES-TW-004: safe next position is `Main_Modules/TALENTS/TALENTS_Arbites.lua:loc_talent_adamant_dodge_grants_damage_desc`
 
 ## Blocked
 
