@@ -1161,6 +1161,18 @@
 - ED-SCUM-TW-001: Lua syntax tool unavailable
 - ED-SCUM-TW-001: translation repo commit `4d660cb`
 - ED-SCUM-TW-001: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_ability_punk_rage_sub_3_desc_02`
+- ED-SCUM-TW-002: 15 active localization tables reviewed
+- ED-SCUM-TW-002: duplicate active `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-002: active empty `["zh-tw"]` in touched tables=0
+- ED-SCUM-TW-002: placeholders preserved: `{punk_rage:%s}`, `{duration:%s}`, `{attack_speed_reduction:%s}`, `{cleave:%s}`, `{max_stacks:%s}`, `{melee_power:%s}`, `{total_corruption_heal:%s}`, `{stimm_field:%s}`, `{cooldown:%s}`, `{stacks:%s}`, `{linger_duration:%s}`, `{dodge_distance_modifier:%s}`, `{dodge_linger_time:%s}`, `{crit_chance:%s}`, `{toughness:%s}`, `{frenzy:%s}`, `{frenzy_duration:%s}`, `{on_crit:%s}`, `{melee_damage:%s}`, `{attack_speed:%s}`
+- ED-SCUM-TW-002: `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved in touched `zh-tw`
+- ED-SCUM-TW-002: glossary/local usage checked for Hive Scum, Rampage!, Stimm, Stimm Supply, Chem Toxin, Cartel Special Stimm, Vulture's Mark, Adrenaline, Adrenaline Frenzy, Corruption, Health, Toughness, Coherency, Critical Strike, Critical Strike Chance, Weakspot Hits, Cleave, Strength, Stagger, Specialist, Elite, and Monstrosity
+- ED-SCUM-TW-002: corrected Forge's Bellow shout wording without nonexistent `Shout_rgb_tw`, Pulverising Strikes stack wording, Stimm Supply healing/radius/cooldown wording, Fast Acting Stimms typo, Vulture's Mark stack and aura wording, Critical Strike display wording, and Adrenaline stack/kill blow wording
+- ED-SCUM-TW-002: `git -C <translation-repo> diff --check` passed before commit
+- ED-SCUM-TW-002: diff scope limited to `Main_Modules/TALENTS/TALENTS_Scum.lua`
+- ED-SCUM-TW-002: Lua syntax tool unavailable
+- ED-SCUM-TW-002: translation repo commit `dc1b44e`
+- ED-SCUM-TW-002: safe next position is `Main_Modules/TALENTS/TALENTS_Scum.lua:loc_talent_broker_keystone_adrenaline_junkie_sub_3_desc`
 
 ## Blocked
 
