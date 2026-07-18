@@ -35,7 +35,7 @@
 - Secondary Action - 次要攻擊(當使用在武器描述時Action翻譯成攻擊)
 - Heat Management - 熱能管理
 - Cloud Radius - 火焰範圍(Cloud意指火雲)
-
+- Mobility - 移動性
 
 
 ### 通用名詞
@@ -80,7 +80,7 @@
 
 ### 增益效果 (BUFFS)
 
-- Crit 
+- Crit(需依據情境作調整)
   - 致命一擊(指已發生的攻擊結果、觸發事件或次數)
   - 爆擊率(指機率屬性、百分比或觸發可能性)
 - Rending - 撕裂
