@@ -1305,6 +1305,19 @@ Checks: duplicate/empty active `zh-tw`=0; placeholders and display functions pre
 Translation repo commit: `6787469`
 Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_melee_weaving_desc`
 
+Batch: ED-PSYKER-TW-005
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Start position: `loc_talent_psyker_melee_weaving_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 11
+Term candidates: none
+Blocked: none
+Checks: duplicate/empty active `zh-tw`=0; placeholders preserved; restored missing Dot/CKWord/CNumb wrappers, corrected formal combat terms, table percent formatting, wording direction, and a critical dodge typo; diff check passed; diff scope limited to Psyker Lua; Lua syntax tool unavailable
+Translation repo commit: `100cc6d`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_alternative_peril_explosion_new_desc`
+
 ## Blocked
 
 - none
