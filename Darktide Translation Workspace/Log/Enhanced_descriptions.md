@@ -1266,6 +1266,19 @@ Checks: duplicate active `["zh-tw"]` in touched tables=0; active empty `["zh-tw"
 Translation repo commit: `bf72179`
 Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_shout_vent_warp_charge_description`
 
+Batch: ED-PSYKER-TW-002
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Start position: `loc_talent_psyker_shout_vent_warp_charge_description`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 13
+Term candidates: none
+Blocked: none
+Checks: duplicate active `["zh-tw"]` in touched tables=0; active empty `["zh-tw"]` in touched tables=0; placeholder mismatch=0; corrected missing source sentences, an invalid raw newline in a quoted Lua string, enemy/glossary names, number wrappers, shield wording, and color-function parity; `git -C <translation-repo> diff --check` passed; diff scope limited to `Main_Modules/TALENTS/TALENTS_Psyker.lua`; Lua syntax tool unavailable
+Translation repo commit: `a885b5c`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc`
+
 ## Blocked
 
 - none
