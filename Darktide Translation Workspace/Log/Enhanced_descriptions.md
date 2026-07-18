@@ -5,13 +5,13 @@
 | Field | Value |
 | --- | --- |
 | AI handler | codex |
-| Base branch | main |
-| Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
+| Base branch | xss0 |
+| Work branch | Added-Traditional-Chinese |
 | Started at | 2026-07-14 09:32:58 +08:00 |
-| Completed at | pending |
-| Commit | cd9525c |
-| PR URL / number | pending |
-| Next position | ED-WEAPONS-TW-007: `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_bespoke_armor_rend_on_activated_attacks_desc` |
+| Completed at | 2026-07-18 14:45:00 +08:00 |
+| Commit | cbaaaf6 |
+| PR URL / number | https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA/pull/37 |
+| Next position | none; completed |
 
 ## Batch Progress
 
@@ -1427,6 +1427,20 @@ Safe next position: final cross-file quality pass
 ## Blocked
 
 - none
+
+## Completion
+
+Completed at: 2026-07-18 14:45:00 +08:00
+
+- Completed all 15 Traditional Chinese target Lua files in the independent translation repo.
+- Checked 93 root localization entries, 327 Traditional Chinese keyword assignments, and 1,504 active `loc_*` tables.
+- Confirmed 1,496 active tables have exactly one non-empty `zh-tw`; the 8 MENUS tables without `zh-tw` contain Russian-only overrides and intentionally defer to the official game localization.
+- Final duplicate, empty, placeholder, display-helper, and `git diff --check` checks passed. Placeholder checks exclude Lua fallback-table fields such as `loc_key` and `locale`. A Lua compiler was not available locally.
+- Verified every one of the final 13 unpublished batch commits contained only `.lua` paths before push.
+- Pushed `Added-Traditional-Chinese` through translation commit `cbaaaf6`.
+- Created ready PR #37: https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA/pull/37
+- Verified the online PR is open, ready for review, mergeable, and limited to the 15 expected Enhanced Descriptions localization Lua files.
+- Safe next position: none; Enhanced_descriptions is complete.
 
 ## Term Candidates
 

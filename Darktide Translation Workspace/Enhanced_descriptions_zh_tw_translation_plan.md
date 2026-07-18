@@ -25,7 +25,7 @@
 - `<translation-repo>`：Enhanced Descriptions 的獨立 Git repo root。執行時必須由本機設定解析，不寫入公開文件。
 - `<workspace-repo>`：保存本翻譯排程與工作文件的 Git repo root。執行時可用目前 repo root 或本機設定解析。
 - Translation repo：`<translation-repo>`
-- Translation work branch：`Codex/Feature/Enhanced_descriptions/Add-zh-tw`
+- Translation work branch（actual）：`Added-Traditional-Chinese`
 - Translation commit message：`Translate zh-tw batch <batch-id>`
 - Translation commit scope：only changed `.lua` files in `<translation-repo>`
 - Workspace repo：`<workspace-repo>`
@@ -112,9 +112,9 @@ Safe next position: <next line/key/group>
 | 12 | ED-OGRYN | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Ogryn.lua` | 88 keys | 6 |
 | 13 | ED-ARBITES | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Arbites.lua` | 83 keys | 6 |
 | 14 | ED-SCUM | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua` | 99 keys | 7 |
-| 15 | ED-SKITARIUS | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarius.lua` | TBD; verify source path in `<translation-repo>` before batch | TBD |
+| 15 | ED-SKITARII | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua` | 101 keys | 7 |
 
-總估計：至少 109 批，另加 ED-SKITARIUS 的待確認批次。`COLORS_KWords_tw.lua` 的實際名詞數高於群組數，實作時以每個詞彙 key-value 為準。
+實際完成：135 批（含 2026-07-18 merge delta）。`COLORS_KWords_tw.lua` 以每個詞彙 key-value 計數；新增職業檔依實際檔名記為 ED-SKITARII。
 
 ## 3. 每批流程
 
@@ -213,7 +213,7 @@ Safe next position: <next line/key/group>
 4. `TALENTS_Ogryn.lua`
 5. `TALENTS_Arbites.lua`
 6. `TALENTS_Scum.lua`
-7. `TALENTS_Skitarius.lua` - verify source path in `<translation-repo>` before batch; not present in the 2026-07-18 workspace mirror
+7. `TALENTS_Skitarii.lua` - verified in `<translation-repo>` and completed as 101 active localization tables
 
 每批 15 個 talent description table。若同一職業的技能名、光環、關鍵石、閃擊互相引用，優先把名稱表中的譯名固定，再處理描述。
 
@@ -264,16 +264,16 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-截至 2026-07-18，PSYKER 已依使用者要求重新加入工作清單；Skitarius 也加入待處理清單，但執行前必須先在 `<translation-repo>` 重新掃描並確認是否存在 `Main_Modules/TALENTS/TALENTS_Skitarius.lua` 或新的對應來源檔。
+截至 2026-07-18，全部目標檔案均已完成。實際新增職業檔案為 `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`，已完成 101 個 active localization tables；Psyker 也已依使用者要求重新檢查並完成 79 個 active localization tables。
 
 ```text
-Next file: <translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua
-Start position: final cross-file quality pass
-Scope: 15 talent description tables
-Queued after PSYKER: ED-SKITARIUS, source path pending verification in `<translation-repo>`
-Previous completed file: <translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua through `loc_talent_buff_cooldown_on_ranged_kills`
+Next file: none
+Start position: completed
+Scope: none
+Final translation commit: cbaaaf6
+PR: https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA/pull/37 (ready for review)
 ```
 
-最新執行狀態：ED-SKITARII-TW-007 已完成全部 101 個 active localization tables，translation repo commit 為 `cbaaaf6`；全檔 duplicate/empty/placeholder 檢查通過。Psyker 與 Skitarii 批次皆完成，下一步為所有目標 Lua 檔案的最終跨檔品質檢查。
+最新執行狀態：completed。ED-SKITARII-TW-007 已完成全部 101 個 active localization tables，translation repo commit 為 `cbaaaf6`。最終跨檔 QA 共檢查 15 個目標 Lua 檔、93 個 root localization entries、327 個繁中 keyword assignments 與 1,504 個 active `loc_*` tables；其中 1,496 個 table 有明確 `zh-tw`，MENUS 的 8 個僅含俄文覆寫項目依原檔規則沿用遊戲官方繁中。duplicate、empty、placeholder 與 `git diff --check` 均通過；Lua compiler 在本機環境不可用。分支已推送，ready PR #37 已建立，線上 diff 僅包含 15 個 Enhanced Descriptions 繁中目標 Lua 檔。
 
 2026-07-18 merge delta：上游 merge commit `6a1e6d9880a0f99d4a1043e25b74d77eedbe2c3f` 已先以 ED-MERGE-6A1E6D9-TW-001 處理已更新內容；本批排除 `Main_Modules/TALENTS/TALENTS_Psyker.lua` 與 `Main_Modules/TALENTS/TALENTS_Skitarii.lua`，並提交 translation repo commit `d99ede0`。Psyker 已於 ED-PSYKER-TW-001 恢復正常流程。
