@@ -1359,6 +1359,19 @@ Checks: active `zh-tw` count increased 15 to 30; placeholders and display functi
 Translation repo commit: `e278279`
 Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_precision_stance_reload_speed_desc`
 
+Batch: ED-SKITARII-TW-003
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`
+Start position: `loc_talent_cryptic_precision_stance_reload_speed_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 15 added
+Term candidates: none
+Blocked: none
+Checks: active `zh-tw` count increased 30 to 45; placeholders and display functions preserved; glossary/local usage checked for Critical Strike Chance, Capacitance, Combat Ability, Toughness Damage Reduction, Coherency, Overload, Electrocution, Stamina, and Rending; diff check passed; diff scope limited to Skitarii Lua; Lua syntax tool unavailable
+Translation repo commit: `ef9af16`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_overload_keystone_abilities_desc`
+
 ## Blocked
 
 - none
