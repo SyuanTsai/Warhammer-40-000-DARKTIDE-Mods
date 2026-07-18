@@ -2,7 +2,7 @@
 
 本文件是 Enhanced Descriptions 第二階段繁中翻譯計畫。第一份計畫負責建立完整的 `zh-tw` 基礎；本計畫改以現有繁中內容為主要審閱對象，集中處理缺少的翻譯、資訊不完整、語意不準確與中文不流暢等問題。
 
-總流程仍以 `Darktide Translation Workspace/darktide_zh_tw_translation_schedule.md` 為準。本文件只補充第二階段的中文優先審校規則、批次分類、品質標準與完成條件。
+總流程仍以 `Darktide Translation Workspace/darktide_zh_tw_translation_schedule.md` 為準。本文件補充第二階段的中文優先審校規則、批次分類、品質標準與完成條件；但涉及 remote 所有權、push、PR 或任何 GitHub 寫入時，本文件第 1.1 節是 Enhanced_descriptions Plan 2 的最高優先安全規則，明確覆蓋上位排程中的一般 PR 流程。
 
 建立日期：2026-07-18
 
@@ -28,7 +28,18 @@
 - 第二階段 log：`Darktide Translation Workspace/Log/Enhanced_descriptions_zh_tw_revision.md`
 - Translation repo commit 只允許包含繁中翻譯相關 `.lua` 檔案。
 - Workspace repo commit 只允許包含 `Darktide Translation Workspace/` 內的工作文件。
-- 不自動合併 PR；完成後建立 ready for review PR。
+- PR #37 只用來確認第一階段是否已進入基準；它不是第二階段向該儲存庫建立 PR 或執行其他寫入操作的授權。
+- 不自動建立或合併任何 PR。完成第二階段不以建立 PR 為必要條件。
+
+### 1.1 Git 遠端所有權與寫入安全界線
+
+- 使用者擁有且唯一允許推送的 translation remote：`origin` = `SyuanTsai/Warhammer-40-000-DARKTIDE-Enhanced_Descriptions`。
+- 第三方唯讀 remote：`upstream` = `xsSplater/Darktide_Enhanced_Descriptions_BETA`。
+- `upstream` 只允許 `fetch`、讀取 branch／commit／diff 與查詢既有 PR 狀態；即使 Git remote 顯示 push URL，也禁止對 `upstream` 執行 `push`、建立 branch、建立 PR、留言、合併或任何 API 寫入。
+- 每次第二階段開始、推送或準備交接前，都必須重新執行唯讀 remote 檢查，確認 `origin` 擁有者仍為 `SyuanTsai`、`upstream` 擁有者仍為 `xsSplater`。若不符，立即設為 `BLOCKED`，不得猜測或繼續。
+- 工作分支只可建立在本機並推送到已驗證的 `origin`；禁止推送到任何其他 remote。
+- 除非使用者在當次對話明確要求建立 PR，否則只提交、推送到使用者自己的 `origin` 並交付 branch／commit 資訊，不呼叫任何 PR 建立工具。
+- 即使使用者明確要求建立 PR，建立前仍必須回報並確認 `head owner/repo` 與 `base owner/repo`。若 base repository 不屬於 `SyuanTsai`，必須另取得使用者對該第三方目標的明確授權；本計畫本身不提供這項授權。
 
 若 PR #37 尚未合併，本計畫狀態為 `waiting_for_base`，可以進行唯讀盤點，但不得開始第二階段 Lua commit，以免第一、第二階段 diff 混在一起。
 
@@ -200,13 +211,13 @@
 - 執行 `git diff --check` 與可用的 Lua syntax check。
 - 確認相對 upstream 的 diff 只包含允許的 15 個繁中目標 Lua 檔，或另有明確核准的新繁中檔。
 
-### Phase E：提交與 PR
+### Phase E：提交與安全交接
 
 - 每個有 Lua 變更的批次建立獨立英文 commit。
 - 沒有 Lua diff 的純 `KEEP`／`SKIP` 批次只更新 workspace log，不建立空 translation commit。
-- 推送第二階段工作分支。
-- 建立 ready PR，base 使用最新 upstream `xss0`。
-- PR description 必須列出新增數、變更數、保留數、跳過數、blocked、完成檔案與 QA 結果。
+- 推送前驗證 remote 所有權；第二階段工作分支只可推送至使用者的 `origin`。
+- 推送後交付 branch、commit、新增數、變更數、保留數、跳過數、blocked、完成檔案與 QA 結果。
+- 預設在此停止，不建立 PR。只有使用者在當次對話明確要求，且通過 1.1 節的目標 repository 授權檢查後，才可另外執行 PR 流程。
 
 ## 9. 每批紀錄格式
 
@@ -254,7 +265,8 @@ Safe next position: <next key/group>
 - 詞彙、正體字、標點與 UI 語氣已完成跨檔一致性檢查。
 - Translation commits 只包含允許的繁中 Lua 變更。
 - Workspace Status、第二階段 log、Term Candidates 與本計畫已更新並提交。
-- ready PR 已建立，線上 diff scope 與本計畫一致。
+- 本機工作分支與使用者 `origin` 上的分支已同步，diff scope 與本計畫一致；不要求建立 PR。
+- 未對 `upstream` 或其他第三方 repository 執行 push、PR、留言、合併或 API 寫入。
 - Blocked queue 為空，或每個 blocked 項目都有使用者可決策的完整紀錄。
 
 ## 12. 下一步
