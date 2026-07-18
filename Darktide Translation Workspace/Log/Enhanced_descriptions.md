@@ -1331,6 +1331,21 @@ Checks: active tables=79; active `zh-tw`=79; duplicate/empty active `zh-tw`=0; c
 Translation repo commit: `980c10c`
 Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_servo_skull_base_burn_desc`
 
+## Skitarii 2026-07-18
+
+Batch: ED-SKITARII-TW-001
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`
+Start position: `loc_talent_cryptic_servo_skull_base_burn_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 15 added
+Term candidates: Adapted Medicae Syringes, Arc Grenade, Capacitance, Refraction Emitter
+Blocked: none
+Checks: active `zh-tw` count increased 0 to 15; placeholders and display functions preserved; formal terms checked for Servo-Skull, Weapon Malfunction, Brittleness, Coherency, Toughness Damage Reduction, and Skitarii; diff check passed; diff scope limited to Skitarii Lua; Lua syntax tool unavailable
+Translation repo commit: `673ad50`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_aura_weapon_improved_desc`
+
 ## Blocked
 
 - none
