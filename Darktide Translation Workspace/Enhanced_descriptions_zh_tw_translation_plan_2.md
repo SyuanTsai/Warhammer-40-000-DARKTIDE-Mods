@@ -263,7 +263,17 @@ Safe next position: <next key/group>
 Plan status: waiting_for_base
 Required first: confirm PR #37 is merged into upstream xss0
 Then: create Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-First task: Phase A full inventory
+Provisional inventory: completed 2026-07-18 20:51:34 +08:00 against PR head 6e043fa
+First task after merge: refresh upstream/xss0 and rerun final Phase A inventory
 First file: <translation-repo>/Enhanced_descriptions_localization.lua
 Safe next position: first active localization entry
 ```
+
+### 12.1 啟動紀錄（2026-07-18）
+
+- PR #37 狀態：`OPEN`，`mergedAt=null`；base=`xss0`，head=`Added-Traditional-Chinese`。
+- 最新遠端基準：`upstream/xss0`=`7deedb3`；PR head=`6e043fa`，且包含該 upstream commit。
+- 因啟動條件尚未成立，未建立第二階段工作分支，也未修改或提交任何 Lua。
+- 已依允許範圍完成 PR head 的唯讀暫定盤點；詳細統計見 `Log/Enhanced_descriptions_zh_tw_revision.md`。
+- 暫定結果：missing `zh-tw`=0、duplicate=0、empty=0、註解正規化後 placeholder mismatch=0；MENUS 官方 localization fallback `SKIP`=8。
+- PR 合併後必須重新 fetch 並重跑 Phase A；暫定盤點不可取代最終基準盤點。

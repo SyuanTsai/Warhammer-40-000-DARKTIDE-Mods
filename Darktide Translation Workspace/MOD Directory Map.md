@@ -57,7 +57,7 @@
 | completed | 2026-07-07 +08:00 | Danger Zone | danger_zone | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Numeric UI | NumericUI | 修正 peril_icon 詞彙表不一致（PR #43）。 |
 | completed | 2026-07-13 20:38:33 +08:00 | Spidey Sense | Spidey Sense | 補上動態 proximity arrow 描述 zh-tw，校正敵人名稱與警告用語（PR #78）。 |
-| completed | 2026-07-18 14:45:00 +08:00 | Enhanced Descriptions | Enhanced_descriptions | 獨立 translation repo 全部 15 個繁中目標 Lua 檔已完成；ready PR #37。 |
+| blocked | 2026-07-18 20:51:34 +08:00 | Enhanced Descriptions | Enhanced_descriptions | 第一階段 15 個繁中目標 Lua 檔已完成；第二階段已啟動，但必須等待 ready PR #37 合併至 upstream/xss0。唯讀暫定盤點已完成。 |
 | completed | 2026-07-07 +08:00 | Emperor's Guidance | EmperorsGuidance | 所有靜態 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Remember Server Location | RememberServerLocation | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Default To Highest Blessing Tier | DefaultToHighestBlessingTier | 所有 zh-tw 已完整正確，無需修改。 |
