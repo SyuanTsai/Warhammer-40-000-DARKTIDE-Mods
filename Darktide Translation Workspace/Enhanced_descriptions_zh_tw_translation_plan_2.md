@@ -278,7 +278,7 @@ Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
 Provisional inventory: completed 2026-07-18 20:51:34 +08:00 against PR head 6e043fa
 Final Phase A: confirmed against authorized base 6e043fa
 First file: <translation-repo>/Enhanced_descriptions_localization.lua
-Safe next position: ED2-ROOT-REV-003 at enable_penances_file
+Safe next position: ED2-ROOT-REV-004 at coherency_colour
 ```
 
 ### 12.1 啟動紀錄（2026-07-18）
@@ -307,4 +307,5 @@ Safe next position: ED2-ROOT-REV-003 at enable_penances_file
 - 已在相同 commit 上重驗 Phase A 結構盤點：missing `zh-tw`=0、duplicate=0、empty=0、註解正規化後 placeholder mismatch=0；MENUS fallback `SKIP`=8。
 - `ED2-ROOT-REV-001` 已審閱 15 條，`CHANGE`=4、`KEEP`=11，translation commit=`29cad5b`。
 - `ED2-ROOT-REV-002` 已審閱 15 條，`CHANGE`=5、`KEEP`=10，translation commit=`1c7ddf3`。
-- Safe next position：`ED2-ROOT-REV-003`，`Enhanced_descriptions_localization.lua` 的 `enable_penances_file`。
+- `ED2-ROOT-REV-003` 已審閱 15 條，`CHANGE`=6、`KEEP`=9，translation commit=`7e2e27e`。
+- Safe next position：`ED2-ROOT-REV-004`，`Enhanced_descriptions_localization.lua` 的 `coherency_colour`。

@@ -8,8 +8,8 @@ AI handler: codex
 Status: in_progress
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Translation Lua changes: ED2-ROOT-REV-001..002 committed at 29cad5b and 1c7ddf3
-Safe next position: ED2-ROOT-REV-003 at Enhanced_descriptions_localization.lua / enable_penances_file
+Translation Lua changes: ED2-ROOT-REV-001..003 committed at 29cad5b, 1c7ddf3, and 7e2e27e
+Safe next position: ED2-ROOT-REV-004 at Enhanced_descriptions_localization.lua / coherency_colour
 ```
 
 ## Base Gate 2026-07-18
@@ -120,12 +120,32 @@ Translation commit: 1c7ddf3
 Safe next position: enable_penances_file
 ```
 
+## Batch ED2-ROOT-REV-003
+
+```text
+Batch: ED2-ROOT-REV-003
+AI handler: codex
+File: <translation-repo>/Enhanced_descriptions_localization.lua
+Start position: enable_penances_file
+Scope: 15 active entries through cleave_colour
+Reviewed: 15
+ADD: 0
+CHANGE: 6 (TERMINOLOGY=4, UNNATURAL=3, SCRIPT_VARIANT=1)
+KEEP: 9
+SKIP: 0
+BLOCKED: 0
+Term candidates: none
+Checks: duplicate active zh-tw=0; empty active zh-tw=0; touched color/size/reset markers preserved; diff scope limited to one allowed zh-tw Lua file; git diff --check passed; Lua syntax tool unavailable
+Translation commit: 7e2e27e
+Safe next position: coherency_colour
+```
+
 ## Safe Next Position
 
 ```text
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Next revision batch: ED2-ROOT-REV-003
+Next revision batch: ED2-ROOT-REV-004
 File: <translation-repo>/Enhanced_descriptions_localization.lua
-Start position: enable_penances_file
+Start position: coherency_colour
 ```
