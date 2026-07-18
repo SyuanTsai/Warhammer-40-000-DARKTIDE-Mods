@@ -57,7 +57,7 @@
 | completed | 2026-07-07 +08:00 | Danger Zone | danger_zone | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Numeric UI | NumericUI | 修正 peril_icon 詞彙表不一致（PR #43）。 |
 | completed | 2026-07-13 20:38:33 +08:00 | Spidey Sense | Spidey Sense | 補上動態 proximity arrow 描述 zh-tw，校正敵人名稱與警告用語（PR #78）。 |
-| in_progress | 2026-07-18 22:08:03 +08:00 | Enhanced Descriptions | Enhanced_descriptions | 使用者不允許 PR；第二階段直接從使用者自有第一階段 commit `6e043fa` 建立分支。ED2-ROOT-REV-001..003 已完成，下一批從 `coherency_colour` 開始。 |
+| in_progress | 2026-07-18 22:35:59 +08:00 | Enhanced Descriptions | Enhanced_descriptions | 使用者不允許 PR；根 localization 93 條已完成，下一批從 `COLORS_KWords_tw.lua` 第一個 assignment 開始。 |
 | completed | 2026-07-07 +08:00 | Emperor's Guidance | EmperorsGuidance | 所有靜態 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Remember Server Location | RememberServerLocation | 所有 zh-tw 已完整正確，無需修改。 |
 | completed | 2026-07-07 +08:00 | Default To Highest Blessing Tier | DefaultToHighestBlessingTier | 所有 zh-tw 已完整正確，無需修改。 |

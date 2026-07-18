@@ -8,8 +8,9 @@ AI handler: codex
 Status: in_progress
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Translation Lua changes: ED2-ROOT-REV-001..003 committed at 29cad5b, 1c7ddf3, and 7e2e27e
-Safe next position: ED2-ROOT-REV-004 at Enhanced_descriptions_localization.lua / coherency_colour
+Translation Lua changes: ED2-ROOT-REV-001..007 complete; REV-005 had no Lua diff
+Completed files: Enhanced_descriptions_localization.lua (93 reviewed; CHANGE=19; KEEP=74)
+Safe next position: ED2-COLORS-REV-001 at Colors_Keywords_Numbers/COLORS_KWords_tw.lua / first assignment
 ```
 
 ## Base Gate 2026-07-18
@@ -140,12 +141,92 @@ Translation commit: 7e2e27e
 Safe next position: coherency_colour
 ```
 
+## Batch ED2-ROOT-REV-004
+
+```text
+Batch: ED2-ROOT-REV-004
+AI handler: codex
+File: <translation-repo>/Enhanced_descriptions_localization.lua
+Start position: coherency_colour
+Scope: 15 active entries through stagger_colour
+Reviewed: 15
+ADD: 0
+CHANGE: 1 (PUNCTUATION=1)
+KEEP: 14
+SKIP: 0
+BLOCKED: 0
+Term candidates: none
+Checks: duplicate active zh-tw=0; empty active zh-tw=0; diff scope limited to one allowed zh-tw Lua file; git diff --check passed; Lua syntax tool unavailable
+Translation commit: 9e9814d
+Safe next position: stamina_colour
+```
+
+## Batch ED2-ROOT-REV-005
+
+```text
+Batch: ED2-ROOT-REV-005
+AI handler: codex
+File: <translation-repo>/Enhanced_descriptions_localization.lua
+Start position: stamina_colour
+Scope: 15 active entries through focus_colour
+Reviewed: 15
+ADD: 0
+CHANGE: 0
+KEEP: 15
+SKIP: 0
+BLOCKED: 0
+Term candidates: none
+Checks: glossary terms matched; duplicate/empty active zh-tw=0; no Lua diff
+Translation commit: none
+Safe next position: focust_colour
+```
+
+## Batch ED2-ROOT-REV-006
+
+```text
+Batch: ED2-ROOT-REV-006
+AI handler: codex
+File: <translation-repo>/Enhanced_descriptions_localization.lua
+Start position: focust_colour
+Scope: 15 active entries through malice_colour
+Reviewed: 15
+ADD: 0
+CHANGE: 2 (PUNCTUATION=1, DISPLAY_CLARITY=1)
+KEEP: 13
+SKIP: 0
+BLOCKED: 0
+Term candidates: none
+Checks: duplicate active zh-tw=0; empty active zh-tw=0; diff scope limited to one allowed zh-tw Lua file; git diff --check passed; Lua syntax tool unavailable
+Translation commit: 2326228
+Safe next position: heresy_colour
+```
+
+## Batch ED2-ROOT-REV-007
+
+```text
+Batch: ED2-ROOT-REV-007
+AI handler: codex
+File: <translation-repo>/Enhanced_descriptions_localization.lua
+Start position: heresy_colour
+Scope: final 3 active entries through auric_colour
+Reviewed: 3
+ADD: 0
+CHANGE: 1 (TERMINOLOGY=1)
+KEEP: 2
+SKIP: 0
+BLOCKED: 0
+Term candidates: Auric = 奧里克
+Checks: static tables=92 plus one generated assignment; duplicate active zh-tw=0; empty active zh-tw=0; diff scope limited to one allowed zh-tw Lua file; git diff --check passed; Lua syntax tool unavailable
+Translation commit: b6c968e
+Safe next position: Colors_Keywords_Numbers/COLORS_KWords_tw.lua / first assignment
+```
+
 ## Safe Next Position
 
 ```text
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Next revision batch: ED2-ROOT-REV-004
-File: <translation-repo>/Enhanced_descriptions_localization.lua
-Start position: coherency_colour
+Next revision batch: ED2-COLORS-REV-001
+File: <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua
+Start position: first assignment
 ```
