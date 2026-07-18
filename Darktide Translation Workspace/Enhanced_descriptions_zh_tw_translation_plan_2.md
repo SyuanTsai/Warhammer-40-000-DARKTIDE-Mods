@@ -322,4 +322,9 @@ Safe next position: ED2-MENUS-REV-001 at first loc_* table
 - CURIOS 最終 QA：tables=22、missing=0、duplicate=0、empty=0、placeholder mismatch=0，且 key sequence 與 `6e043fa` 一致；`git diff --check` 通過。
 - `Main_Modules/TALENTS_Modular.lua` 已完成 2 批人工審閱：`Reviewed`=29、`CHANGE`=2、`KEEP`=27、`ADD/SKIP/BLOCKED`=0；translation commits=`07341eb`、`8cd4663`。
 - TALENTS_Modular 最終 QA：tables=29、missing=0、duplicate=0、empty=0、placeholder mismatch=0，且 key sequence 與 `6e043fa` 一致；`git diff --check` 通過。
-- Safe next position：`ED2-NAMES-REV-001`，`Main_Modules/NAMES_Talents_Blessings.lua` 的第一個 `loc_*` table。
+- 使用者已於 translation commit `cab8cd1` 完成前 5 檔 Code review；該 commit 對 ROOT、COLORS、MENUS、CURIOS、TALENTS_Modular 的選詞覆寫視為使用者核准結果，後續不得自行回復。
+- 2026-07-19 已重新完整讀取最新版 `Referneces/Translation.md`：1,322 行，SHA-256=`6DE8B5F84B66A368F52C3E7555B29C7BE1A663763DFBC0CBE5FB76664E45B202`；workspace `main` 與 `origin/main` 同步，translation remotes fetch 後授權基準仍為 `6e043fa`。
+- `Main_Modules/NAMES_Talents_Blessings.lua` 已完成 19 批人工審閱：`Reviewed`=285、`CHANGE`=18、`KEEP`=267、`ADD/SKIP/BLOCKED`=0。
+- NAMES translation commits：`3eeda34`、`9126d4a`、`68d0416`、`8a6b7fd`、`7921154`、`2d22c5d`、`271c526`、`e511729`；其餘 11 批沒有 Lua diff，未建立空 commit。
+- NAMES 最終 QA：tables=285、missing=0、duplicate=0、empty=0、halfwidth Chinese punctuation=0，key sequence 與 `6e043fa` 一致，18 條有效 `zh-tw` diff，`git diff --check` 通過。
+- Safe next position：`ED2-WEAPONS-REV-001`，`Main_Modules/WEAPONS_Blessings_Perks.lua` 的第一個 `loc_*` table。

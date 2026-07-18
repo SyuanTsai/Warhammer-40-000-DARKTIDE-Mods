@@ -8,9 +8,9 @@ AI handler: codex
 Status: in_progress
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Translation Lua changes: ED2-ROOT-REV-001..007, ED2-COLORS-REV-001..022, ED2-MENUS-REV-001..006, ED2-CURIOS-REV-001..002, and ED2-TALENTS-MODULAR-REV-001..002 complete; batches without Lua diff have no empty commit
-Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua; Main_Modules/MENUS.lua; Main_Modules/CURIOS_Blessings_Perks.lua; Main_Modules/TALENTS_Modular.lua
-Safe next position: ED2-NAMES-REV-001 at Main_Modules/NAMES_Talents_Blessings.lua / first loc_* table
+Translation Lua changes: ED2-ROOT-REV-001..007, ED2-COLORS-REV-001..022, ED2-MENUS-REV-001..006, ED2-CURIOS-REV-001..002, ED2-TALENTS-MODULAR-REV-001..002, and ED2-NAMES-REV-001..019 complete; batches without Lua diff have no empty commit
+Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua; Main_Modules/MENUS.lua; Main_Modules/CURIOS_Blessings_Perks.lua; Main_Modules/TALENTS_Modular.lua; Main_Modules/NAMES_Talents_Blessings.lua
+Safe next position: ED2-WEAPONS-REV-001 at Main_Modules/WEAPONS_Blessings_Perks.lua / first loc_* table
 ```
 
 ## Base Gate 2026-07-18
@@ -292,12 +292,47 @@ Reason summary: `UNNATURAL` (removed duplicated “cooldown regeneration” sema
 
 Reason summary: `TERMINOLOGY` (`Keystone Modifier` → `鑰石修正項`) and `UNNATURAL` (`Peril Generation` → `反噬累積`). Common checks: table count=29; missing=0; duplicate=0; empty=0; placeholder mismatch=0; key sequence matches authorized base; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0.
 
+## User Code Review 2026-07-19
+
+- Translation commit `cab8cd1` is the user's authoritative review of the first five completed files.
+- It adjusts 19 lines across ROOT, COLORS, MENUS, CURIOS, and TALENTS_Modular, including Crit display wording, Mobility, Ordo Dockets, menu labels, and Keystone Modifier.
+- These user-approved overrides supersede earlier batch wording and are preserved. Historical batch counts above describe the AI review actions; the current branch content is the final authority.
+- `Referneces/Translation.md` was then reread completely: 1,322 lines; SHA-256 `6DE8B5F84B66A368F52C3E7555B29C7BE1A663763DFBC0CBE5FB76664E45B202`.
+- Read-only fetch confirmed workspace `main...origin/main` divergence `0/0`; translation authorized base remains `origin/Added-Traditional-Chinese` at `6e043fa`.
+
+## NAMES Manual Review
+
+| Batch | Units | CHANGE | KEEP | Translation commit | Safe next position |
+| --- | ---: | ---: | ---: | --- | --- |
+| ED2-NAMES-REV-001 | 1–15 | 0 | 15 | none | unit 16 |
+| ED2-NAMES-REV-002 | 16–30 | 0 | 15 | none | unit 31 |
+| ED2-NAMES-REV-003 | 31–45 | 0 | 15 | none | unit 46 |
+| ED2-NAMES-REV-004 | 46–60 | 0 | 15 | none | unit 61 |
+| ED2-NAMES-REV-005 | 61–75 | 1 | 14 | 3eeda34 | unit 76 |
+| ED2-NAMES-REV-006 | 76–90 | 6 | 9 | 9126d4a | unit 91 |
+| ED2-NAMES-REV-007 | 91–105 | 1 | 14 | 68d0416 | unit 106 |
+| ED2-NAMES-REV-008 | 106–120 | 0 | 15 | none | unit 121 |
+| ED2-NAMES-REV-009 | 121–135 | 0 | 15 | none | unit 136 |
+| ED2-NAMES-REV-010 | 136–150 | 0 | 15 | none | unit 151 |
+| ED2-NAMES-REV-011 | 151–165 | 0 | 15 | none | unit 166 |
+| ED2-NAMES-REV-012 | 166–180 | 0 | 15 | none | unit 181 |
+| ED2-NAMES-REV-013 | 181–195 | 2 | 13 | 8a6b7fd | unit 196 |
+| ED2-NAMES-REV-014 | 196–210 | 2 | 13 | 7921154 | unit 211 |
+| ED2-NAMES-REV-015 | 211–225 | 4 | 11 | 2d22c5d | unit 226 |
+| ED2-NAMES-REV-016 | 226–240 | 1 | 14 | 271c526 | unit 241 |
+| ED2-NAMES-REV-017 | 241–255 | 0 | 15 | none | unit 256 |
+| ED2-NAMES-REV-018 | 256–270 | 1 | 14 | e511729 | unit 271 |
+| ED2-NAMES-REV-019 | 271–285 | 0 | 15 | none | WEAPONS first loc_* table |
+| **Total** | **285** | **18** | **267** |  |  |
+
+Reason summary: `TERMINOLOGY` (`Kinetic Flayer`, `Steady Grip`, `Shield Plates`) and `PUNCTUATION` (fullwidth parentheses and exclamation marks). All 285 active entries were checked against the newly reread formal reference; contextual duplicate translations were preserved where the reference itself distinguishes weapon families. Common checks: table count=285; missing=0; duplicate=0; empty=0; halfwidth punctuation candidates=0; changed `zh-tw` lines=18; key sequence matches authorized base; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0; Lua syntax tool unavailable.
+
 ## Safe Next Position
 
 ```text
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Next revision batch: ED2-NAMES-REV-001
-File: <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua
+Next revision batch: ED2-WEAPONS-REV-001
+File: <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua
 Start position: first loc_* table
 ```
