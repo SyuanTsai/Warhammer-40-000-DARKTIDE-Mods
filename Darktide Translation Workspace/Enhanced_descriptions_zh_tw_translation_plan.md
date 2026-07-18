@@ -270,10 +270,12 @@ Enhanced_descriptions 視為完成時需滿足：
 Next file: none
 Start position: completed
 Scope: none
-Final translation commit: cbaaaf6
+Final translation commit: 6e043fa
 PR: https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA/pull/37 (ready for review)
 ```
 
-最新執行狀態：completed。ED-SKITARII-TW-007 已完成全部 101 個 active localization tables，translation repo commit 為 `cbaaaf6`。最終跨檔 QA 共檢查 15 個目標 Lua 檔、93 個 root localization entries、327 個繁中 keyword assignments 與 1,504 個 active `loc_*` tables；其中 1,496 個 table 有明確 `zh-tw`，MENUS 的 8 個僅含俄文覆寫項目依原檔規則沿用遊戲官方繁中。duplicate、empty、placeholder 與 `git diff --check` 均通過；Lua compiler 在本機環境不可用。分支已推送，ready PR #37 已建立，線上 diff 僅包含 15 個 Enhanced Descriptions 繁中目標 Lua 檔。
+最新執行狀態：completed。ED-SKITARII-TW-007 已完成全部 101 個 active localization tables，最終 translation repo commit 為 `6e043fa`。最終跨檔 QA 共檢查 15 個目標 Lua 檔、93 個 root localization entries、327 個繁中 keyword assignments 與 1,504 個 active `loc_*` tables；其中 1,496 個 table 有明確 `zh-tw`，MENUS 的 8 個僅含俄文覆寫項目依原檔規則沿用遊戲官方繁中。duplicate、empty、placeholder 與 `git diff --check` 均通過；Lua compiler 在本機環境不可用。分支已推送，ready PR #37 已建立；PR 包含 15 個 Enhanced Descriptions 繁中目標 Lua 檔，以及使用者更新的 `AI Document/Translation Table - zh-tw.md`。
 
 2026-07-18 merge delta：上游 merge commit `6a1e6d9880a0f99d4a1043e25b74d77eedbe2c3f` 已先以 ED-MERGE-6A1E6D9-TW-001 處理已更新內容；本批排除 `Main_Modules/TALENTS/TALENTS_Psyker.lua` 與 `Main_Modules/TALENTS/TALENTS_Skitarii.lua`，並提交 translation repo commit `d99ede0`。Psyker 已於 ED-PSYKER-TW-001 恢復正常流程。
+
+2026-07-18 術語表校正：依使用者更新並提交於 `c0ba427` 的 `AI Document/Translation Table - zh-tw.md`，重新檢查當日 172 個變更條目，校正 Psyker、Skitarii、Scum、Veteran 共 4 個 Lua 檔。34 個 placeholder 與 57 個 `CKWord` 樣式鍵均保持一致，`git diff --check` 通過；校正提交為 `6e043fa`，已推送並更新 PR #37。

@@ -1437,10 +1437,25 @@ Completed at: 2026-07-18 14:45:00 +08:00
 - Confirmed 1,496 active tables have exactly one non-empty `zh-tw`; the 8 MENUS tables without `zh-tw` contain Russian-only overrides and intentionally defer to the official game localization.
 - Final duplicate, empty, placeholder, display-helper, and `git diff --check` checks passed. Placeholder checks exclude Lua fallback-table fields such as `loc_key` and `locale`. A Lua compiler was not available locally.
 - Verified every one of the final 13 unpublished batch commits contained only `.lua` paths before push.
-- Pushed `Added-Traditional-Chinese` through translation commit `cbaaaf6`.
+- Pushed `Added-Traditional-Chinese` through translation commit `6e043fa`.
 - Created ready PR #37: https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA/pull/37
-- Verified the online PR is open, ready for review, mergeable, and limited to the 15 expected Enhanced Descriptions localization Lua files.
+- Verified the ready PR contains the 15 expected Enhanced Descriptions localization Lua files plus the user-updated `AI Document/Translation Table - zh-tw.md`.
 - Safe next position: none; Enhanced_descriptions is complete.
+
+## Updated Translation Table Correction 2026-07-18
+
+Batch: ED-TABLE-20260718-TW-001
+AI handler: codex
+Reference: `<translation-repo>/AI Document/Translation Table - zh-tw.md` at user commit `c0ba427`
+Scope: 172 localization tables changed on 2026-07-18 (Psyker 60, Skitarii 101, Scum 1, Veteran 2, Zealot 1, Weapons 7)
+Changed files: `TALENTS_Psyker.lua`, `TALENTS_Skitarii.lua`, `TALENTS_Scum.lua`, `TALENTS_Veteran.lua`
+Changed zh-tw: aligned critical-hit result/chance terminology, Soulblaze, Reload Speed, Flamer contexts, Inferno Staff, Crusher, Primary Action, Refraction Emitter, Voltaic Expander, Power Overload, and Finesse buff wording
+Unchanged after review: `TALENTS_Zealot.lua`, `WEAPONS_Blessings_Perks.lua`
+Blocked: none
+Checks: only four expected Lua files changed; 34 placeholders preserved; 57 `CKWord` style keys preserved; old target terms absent from the scoped correction set; `git diff --check` passed; Lua compiler unavailable
+Translation repo commit: `6e043fa`
+Pushed: yes; ready PR #37 updated
+Safe next position: none; first-phase plan remains complete
 
 ## Term Candidates
 
