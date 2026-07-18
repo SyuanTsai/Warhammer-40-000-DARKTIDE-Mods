@@ -338,4 +338,6 @@ Safe next position: ED2-MENUS-REV-001 at first loc_* table
 - `Main_Modules/TALENTS/TALENTS_Veteran.lua` 已完成 5 批人工審閱：`Reviewed`=75、`CHANGE`=18、`KEEP`=57、`ADD/SKIP/BLOCKED`=0；translation commits=`d75b8a0`、`8dea2bb`、`ed94940`、`027c92d`、`809f7ce`。
 - `Main_Modules/TALENTS/TALENTS_Ogryn.lua` 已完成 6 批人工審閱：`Reviewed`=88、`CHANGE`=14、`KEEP`=74、`ADD/SKIP/BLOCKED`=0；translation commits=`ebc6019`、`9f7461e`、`d186034`、`acd811d`、`b24a9c0`、`f668adc`。
 - Ogryn 最終 QA：tables=88、missing=0、duplicate=0、empty=0，key sequence 與 `6e043fa` 一致；術語與標點殘留掃描為 0，`git diff --check` 通過。
-- Safe next position：`ED2-ARBITES-REV-001`，`Main_Modules/TALENTS/TALENTS_Arbites.lua` 的第一個 `loc_*` table。
+- `Main_Modules/TALENTS/TALENTS_Arbites.lua` 已完成 6 批人工審閱：`Reviewed`=83、`CHANGE`=26、`KEEP`=57、`ADD/SKIP/BLOCKED`=0；translation commits=`f5dbd86`、`7a1d485`、`a4d7b42`、`a09185c`、`ca69a38`、`1b4bee9`。
+- Arbites 最終 QA：tables=83、missing=0、duplicate=0、empty=0，key sequence 與 `6e043fa` 一致；術語與格式殘留掃描為 0，`git diff --check` 通過。
+- Safe next position：`ED2-SCUM-REV-001`，`Main_Modules/TALENTS/TALENTS_Scum.lua` 的第一個 `loc_*` table。
