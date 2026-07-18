@@ -1346,6 +1346,19 @@ Checks: active `zh-tw` count increased 0 to 15; placeholders and display functio
 Translation repo commit: `673ad50`
 Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_aura_weapon_improved_desc`
 
+Batch: ED-SKITARII-TW-002
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`
+Start position: `loc_talent_cryptic_aura_weapon_improved_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 15 added
+Term candidates: Electric Discharge, Voltaic Expander, Chordclaw
+Blocked: none
+Checks: active `zh-tw` count increased 15 to 30; placeholders and display functions preserved; glossary/local usage checked for Coherency, Toughness, Rending, Critical Strike, Capacitance, Cooldown, Suppression, and Chordclaw Bleed; diff check passed; diff scope limited to Skitarii Lua; Lua syntax tool unavailable
+Translation repo commit: `e278279`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_precision_stance_reload_speed_desc`
+
 ## Blocked
 
 - none
