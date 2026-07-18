@@ -314,4 +314,8 @@ Safe next position: ED2-MENUS-REV-001 at first loc_* table
 - `ED2-ROOT-REV-007` 已審閱 3 條，`CHANGE`=1、`KEEP`=2，translation commit=`b6c968e`。
 - `Enhanced_descriptions_localization.lua` 已完成：`Reviewed`=93、`CHANGE`=19、`KEEP`=74、`ADD/SKIP/BLOCKED`=0。
 - `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` 已完成：`Reviewed`=327、`CHANGE`=17、`KEEP`=256、`SKIP`=54、`ADD/BLOCKED`=0。
-- Safe next position：`ED2-MENUS-REV-001`，`Main_Modules/MENUS.lua` 的第一個 `loc_*` table。
+- `Main_Modules/MENUS.lua` 已完成 6 批人工審閱：`Reviewed`=79、`CHANGE`=18、`KEEP`=51、`SKIP`=8、`BLOCKED`=2。
+- MENUS translation commits：`71cabf6`、`3953b11`、`a858411`、`57fe99b`、`10e9711`、`409304c`。
+- MENUS 最終 QA：tables=79、active `zh-tw`=71、fallback=8、duplicate=0、empty=0、placeholder mismatch=0，且 `loc_*` key sequence 與 `6e043fa` 一致；`git diff --check` 通過。
+- MENUS blocked：`loc_item_weapon_rarity_6` 缺官方英文顯示文字（`Sainted` 僅屬社群推測）；`loc_weapon_stats_display_dodge_distance` 的來源英文亦為空。兩者保留現有語意正確的繁中，待官方原文可用時再決策。
+- Safe next position：`ED2-CURIOS-REV-001`，`Main_Modules/CURIOS_Blessings_Perks.lua` 的第一個 `loc_*` table。

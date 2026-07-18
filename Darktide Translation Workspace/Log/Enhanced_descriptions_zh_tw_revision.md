@@ -8,9 +8,9 @@ AI handler: codex
 Status: in_progress
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Translation Lua changes: ED2-ROOT-REV-001..007 and ED2-COLORS-REV-001..022 complete; batches without Lua diff have no empty commit
-Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua
-Safe next position: ED2-MENUS-REV-001 at Main_Modules/MENUS.lua / first loc_* table
+Translation Lua changes: ED2-ROOT-REV-001..007, ED2-COLORS-REV-001..022, and ED2-MENUS-REV-001..006 complete; batches without Lua diff have no empty commit
+Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua; Main_Modules/MENUS.lua
+Safe next position: ED2-CURIOS-REV-001 at Main_Modules/CURIOS_Blessings_Perks.lua / first loc_* table
 ```
 
 ## Base Gate 2026-07-18
@@ -253,12 +253,31 @@ All 327 assignment lines were reviewed in source order. Table-structure and non-
 
 Reason summary: `TERMINOLOGY` (Critical Hit/Strike, Vulture’s Mark, Warp Resistance, Heat Management), `UNNATURAL`/`GRAMMAR` (shield application, stack expiry, Carapace and Coherency notes). Common checks: assignment count=327; key sequence matches base; `CKWord` lookup sequence matches base (30/30); diff scope limited to allowed zh-tw Lua; `git diff --check` passed; Lua syntax tool unavailable; `ADD/BLOCKED`=0.
 
+## MENUS Manual Review
+
+| Batch | Units | CHANGE | KEEP | SKIP | BLOCKED | Translation commit | Safe next position |
+| --- | ---: | ---: | ---: | ---: | ---: | --- | --- |
+| ED2-MENUS-REV-001 | 1–15 | 4 | 3 | 8 | 0 | 71cabf6 | unit 16 |
+| ED2-MENUS-REV-002 | 16–30 | 4 | 11 | 0 | 0 | 3953b11 | unit 31 |
+| ED2-MENUS-REV-003 | 31–45 | 1 | 14 | 0 | 0 | a858411 | unit 46 |
+| ED2-MENUS-REV-004 | 46–60 | 1 | 13 | 0 | 1 | 57fe99b | unit 61 |
+| ED2-MENUS-REV-005 | 61–75 | 4 | 10 | 0 | 1 | 10e9711 | unit 76 |
+| ED2-MENUS-REV-006 | 76–79 | 4 | 0 | 0 | 0 | 409304c | CURIOS first loc_* table |
+| **Total** | **79** | **18** | **51** | **8** | **2** |  |  |
+
+Reason summary: `TERMINOLOGY` (defensive curio, Special Melee Attack, Mobility), `OVERTRANSLATION` (boss category and Profane weapon shorthand), `UNNATURAL`/`PUNCTUATION` (mission counters, contracts, intro prompt, loading ellipses). Common checks: table count=79; active `zh-tw`=71; intentional localization fallback=8; duplicate=0; empty=0; placeholder mismatch=0; key sequence matches authorized base; `git diff --check` passed; Lua syntax tool unavailable.
+
+Blocked queue:
+
+- `loc_item_weapon_rarity_6`: English source is blank. The game source confirms only that this is the reserved sixth rarity; `Sainted` is not an authoritative display string. Current `神化` is retained pending an official source.
+- `loc_weapon_stats_display_dodge_distance`: English source is blank. Current `閃避距離` agrees with the key and Russian/zh-cn semantics, but cannot be checked against an authoritative English display string.
+
 ## Safe Next Position
 
 ```text
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Next revision batch: ED2-MENUS-REV-001
-File: <translation-repo>/Main_Modules/MENUS.lua
+Next revision batch: ED2-CURIOS-REV-001
+File: <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua
 Start position: first loc_* table
 ```
