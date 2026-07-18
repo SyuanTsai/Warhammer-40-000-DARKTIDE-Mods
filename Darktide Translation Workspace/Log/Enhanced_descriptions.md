@@ -1279,6 +1279,19 @@ Checks: duplicate active `["zh-tw"]` in touched tables=0; active empty `["zh-tw"
 Translation repo commit: `a885b5c`
 Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc`
 
+Batch: ED-PSYKER-TW-003
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Start position: `loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 11
+Term candidates: none
+Blocked: none
+Checks: duplicate/empty active `zh-tw`=0; placeholders and display functions preserved; corrected Blitz terminology, charge consumption semantics, shared Coherency effect, number wrappers, formal talent names, and typos; diff check passed; diff scope limited to Psyker Lua; Lua syntax tool unavailable
+Translation repo commit: `85db8ca`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_toughness_on_warp_kill_desc`
+
 ## Blocked
 
 - none
