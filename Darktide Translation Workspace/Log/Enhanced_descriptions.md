@@ -5,13 +5,13 @@
 | Field | Value |
 | --- | --- |
 | AI handler | codex |
-| Base branch | main |
-| Work branch | Codex/Feature/Enhanced_descriptions/Add-zh-tw |
+| Base branch | xss0 |
+| Work branch | Added-Traditional-Chinese |
 | Started at | 2026-07-14 09:32:58 +08:00 |
-| Completed at | pending |
-| Commit | cd9525c |
-| PR URL / number | pending |
-| Next position | ED-WEAPONS-TW-007: `<translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua:loc_trait_bespoke_armor_rend_on_activated_attacks_desc` |
+| Completed at | 2026-07-18 14:45:00 +08:00 |
+| Commit | cbaaaf6 |
+| PR URL / number | https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA/pull/37 |
+| Next position | none; completed |
 
 ## Batch Progress
 
@@ -1235,9 +1235,212 @@
 - ED-SCUM-TW-007: PSYKER remains skipped per user request
 - ED-SCUM-TW-007: Enhanced_descriptions talent class sequence is complete except PSYKER
 
+## Merge Delta 2026-07-18
+
+Batch: ED-MERGE-6A1E6D9-TW-001
+AI handler: codex
+Merge commit: `6a1e6d9880a0f99d4a1043e25b74d77eedbe2c3f`
+File: multiple updated localization modules
+Start position: updated `en` localization tables from merge commit, excluding `Main_Modules/TALENTS/TALENTS_Skitarii.lua` and `Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Scope: 12 updated items
+Completed: 12
+Changed zh-tw: 11
+Term candidates: none
+Blocked: none
+Checks: active `zh-tw` present for all touched items; duplicate active `["zh-tw"]` in touched tables=0; active empty `["zh-tw"]` in touched tables=0; placeholders preserved; `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved; glossary/local usage checked for Critical Melee, Critical Strikes, Human-sized enemies, Marksman's Focus, Focus, Demolition Stockpile, Krak Grenade, Smoke Grenade, Frag Grenade, Momentum, Dodge Speed, Dodge Distance, Rending, Staggered, Arc, Electrocute, Strength, Weakspot Hit, Weapon Special, and Heavy Attack; `git -C <translation-repo> diff --check` passed; diff scope limited to `.lua` files in `Main_Modules/TALENTS` and `Main_Modules/WEAPONS_Blessings_Perks.lua`; Lua syntax tool unavailable
+Translation repo commit: `d99ede0`
+Safe next position: merge delta complete; normal flow remains `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_ability_psyker_smite_description_new`, with `Main_Modules/TALENTS/TALENTS_Skitarii.lua` queued later by the regular class talent workflow
+
+## Psyker Resume 2026-07-18
+
+Batch: ED-PSYKER-TW-001
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Start position: `loc_ability_psyker_smite_description_new`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 12
+Term candidates: none
+Blocked: none
+Checks: duplicate active `["zh-tw"]` in touched tables=0; active empty `["zh-tw"]` in touched tables=0; placeholders preserved; corrected missing source semantics, typos, glossary terms, sentence order, and `CKWord`/`Dot_*` structure; `git -C <translation-repo> diff --check` passed; diff scope limited to `Main_Modules/TALENTS/TALENTS_Psyker.lua`; Lua syntax tool unavailable
+Translation repo commit: `bf72179`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_shout_vent_warp_charge_description`
+
+Batch: ED-PSYKER-TW-002
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Start position: `loc_talent_psyker_shout_vent_warp_charge_description`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 13
+Term candidates: none
+Blocked: none
+Checks: duplicate active `["zh-tw"]` in touched tables=0; active empty `["zh-tw"]` in touched tables=0; placeholder mismatch=0; corrected missing source sentences, an invalid raw newline in a quoted Lua string, enemy/glossary names, number wrappers, shield wording, and color-function parity; `git -C <translation-repo> diff --check` passed; diff scope limited to `Main_Modules/TALENTS/TALENTS_Psyker.lua`; Lua syntax tool unavailable
+Translation repo commit: `a885b5c`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc`
+
+Batch: ED-PSYKER-TW-003
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Start position: `loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 11
+Term candidates: none
+Blocked: none
+Checks: duplicate/empty active `zh-tw`=0; placeholders and display functions preserved; corrected Blitz terminology, charge consumption semantics, shared Coherency effect, number wrappers, formal talent names, and typos; diff check passed; diff scope limited to Psyker Lua; Lua syntax tool unavailable
+Translation repo commit: `85db8ca`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_toughness_on_warp_kill_desc`
+
+Batch: ED-PSYKER-TW-004
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Start position: `loc_talent_psyker_toughness_on_warp_kill_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 10
+Term candidates: none
+Blocked: none
+Checks: duplicate/empty active `zh-tw`=0; placeholders and display functions preserved; corrected critical/weakspot triggers, damage direction, enemy names, CNumb arguments, typos, and missing display wrappers; diff check passed; diff scope limited to Psyker Lua; Lua syntax tool unavailable
+Translation repo commit: `6787469`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_melee_weaving_desc`
+
+Batch: ED-PSYKER-TW-005
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Start position: `loc_talent_psyker_melee_weaving_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 11
+Term candidates: none
+Blocked: none
+Checks: duplicate/empty active `zh-tw`=0; placeholders preserved; restored missing Dot/CKWord/CNumb wrappers, corrected formal combat terms, table percent formatting, wording direction, and a critical dodge typo; diff check passed; diff scope limited to Psyker Lua; Lua syntax tool unavailable
+Translation repo commit: `100cc6d`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_alternative_peril_explosion_new_desc`
+
+Batch: ED-PSYKER-TW-006
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Start position: `loc_talent_psyker_alternative_peril_explosion_new_desc`
+Scope: final 4 active localization tables
+Completed: 4
+Changed zh-tw: 3
+Term candidates: none
+Blocked: none
+Checks: active tables=79; active `zh-tw`=79; duplicate/empty active `zh-tw`=0; corrected corrupted overload sentence, shield typo, and missing CNumb wrapper; known bad-text scan found no target-language hits; diff check passed; Lua syntax tool unavailable
+Translation repo commit: `980c10c`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_servo_skull_base_burn_desc`
+
+## Skitarii 2026-07-18
+
+Batch: ED-SKITARII-TW-001
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`
+Start position: `loc_talent_cryptic_servo_skull_base_burn_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 15 added
+Term candidates: Adapted Medicae Syringes, Arc Grenade, Capacitance, Refraction Emitter
+Blocked: none
+Checks: active `zh-tw` count increased 0 to 15; placeholders and display functions preserved; formal terms checked for Servo-Skull, Weapon Malfunction, Brittleness, Coherency, Toughness Damage Reduction, and Skitarii; diff check passed; diff scope limited to Skitarii Lua; Lua syntax tool unavailable
+Translation repo commit: `673ad50`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_aura_weapon_improved_desc`
+
+Batch: ED-SKITARII-TW-002
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`
+Start position: `loc_talent_cryptic_aura_weapon_improved_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 15 added
+Term candidates: Electric Discharge, Voltaic Expander, Chordclaw
+Blocked: none
+Checks: active `zh-tw` count increased 15 to 30; placeholders and display functions preserved; glossary/local usage checked for Coherency, Toughness, Rending, Critical Strike, Capacitance, Cooldown, Suppression, and Chordclaw Bleed; diff check passed; diff scope limited to Skitarii Lua; Lua syntax tool unavailable
+Translation repo commit: `e278279`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_precision_stance_reload_speed_desc`
+
+Batch: ED-SKITARII-TW-003
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`
+Start position: `loc_talent_cryptic_precision_stance_reload_speed_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 15 added
+Term candidates: none
+Blocked: none
+Checks: active `zh-tw` count increased 30 to 45; placeholders and display functions preserved; glossary/local usage checked for Critical Strike Chance, Capacitance, Combat Ability, Toughness Damage Reduction, Coherency, Overload, Electrocution, Stamina, and Rending; diff check passed; diff scope limited to Skitarii Lua; Lua syntax tool unavailable
+Translation repo commit: `ef9af16`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_overload_keystone_abilities_desc`
+
+Batch: ED-SKITARII-TW-004
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`
+Start position: `loc_talent_cryptic_overload_keystone_abilities_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 15 added
+Term candidates: Power Overload
+Blocked: none
+Checks: active `zh-tw` count increased 45 to 60; placeholders and display functions preserved; glossary/local usage checked for Combat Ability, Toughness Damage Reduction, Critical Hit Chance, Capacitance, Electrocution, Brittleness, Soulblaze, Chem Toxin, Corruption Damage, and Cleave; diff check passed; diff scope limited to Skitarii Lua; Lua syntax tool unavailable
+Translation repo commit: `25f5626`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_stun_dr_power_desc`
+
+Batch: ED-SKITARII-TW-005
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`
+Start position: `loc_talent_cryptic_stun_dr_power_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 15 added
+Term candidates: none
+Blocked: none
+Checks: active `zh-tw` count increased 60 to 75; placeholders and display functions preserved; glossary/local usage checked for Stun, Critical Hits, Electrocute, Coherency, Toughness Damage, Stamina, Damage Resistance, Combat Ability, Strength, and Toughness Damage Reduction; diff check passed; diff scope limited to Skitarii Lua; Lua syntax tool unavailable
+Translation repo commit: `7b81ca1`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_crits_grant_tdr_desc`
+
+Batch: ED-SKITARII-TW-006
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`
+Start position: `loc_talent_cryptic_crits_grant_tdr_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 15 added
+Term candidates: none
+Blocked: none
+Checks: active `zh-tw` count increased 75 to 90; placeholders and display functions preserved; glossary/local usage checked for Critical Hits, Toughness Damage Reduction, Ogryn, Monstrosity, Captain, Stamina, Combat Ability, Weakspot, Coherency, and Stun; diff check passed; diff scope limited to Skitarii Lua; Lua syntax tool unavailable
+Translation repo commit: `25406d1`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_melee_cleave_and_impact_desc`
+
+Batch: ED-SKITARII-TW-007
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`
+Start position: `loc_talent_cryptic_melee_cleave_and_impact_desc`
+Scope: final 11 active localization tables
+Completed: 11
+Changed zh-tw: 11 added; one misplaced duplicate from ED-SKITARII-TW-001 relocated to its correct table
+Term candidates: none
+Blocked: none
+Checks: active tables=101; active `zh-tw`=101; duplicate/empty active `zh-tw`=0; placeholder mismatch=0 after comment-normalized comparison; diff check passed; diff scope limited to Skitarii Lua; Lua syntax tool unavailable
+Translation repo commit: `cbaaaf6`
+Safe next position: final cross-file quality pass
+
 ## Blocked
 
 - none
+
+## Completion
+
+Completed at: 2026-07-18 14:45:00 +08:00
+
+- Completed all 15 Traditional Chinese target Lua files in the independent translation repo.
+- Checked 93 root localization entries, 327 Traditional Chinese keyword assignments, and 1,504 active `loc_*` tables.
+- Confirmed 1,496 active tables have exactly one non-empty `zh-tw`; the 8 MENUS tables without `zh-tw` contain Russian-only overrides and intentionally defer to the official game localization.
+- Final duplicate, empty, placeholder, display-helper, and `git diff --check` checks passed. Placeholder checks exclude Lua fallback-table fields such as `loc_key` and `locale`. A Lua compiler was not available locally.
+- Verified every one of the final 13 unpublished batch commits contained only `.lua` paths before push.
+- Pushed `Added-Traditional-Chinese` through translation commit `cbaaaf6`.
+- Created ready PR #37: https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA/pull/37
+- Verified the online PR is open, ready for review, mergeable, and limited to the 15 expected Enhanced Descriptions localization Lua files.
+- Safe next position: none; Enhanced_descriptions is complete.
 
 ## Term Candidates
 
