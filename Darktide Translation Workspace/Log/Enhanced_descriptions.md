@@ -1235,6 +1235,22 @@
 - ED-SCUM-TW-007: PSYKER remains skipped per user request
 - ED-SCUM-TW-007: Enhanced_descriptions talent class sequence is complete except PSYKER
 
+## Merge Delta 2026-07-18
+
+Batch: ED-MERGE-6A1E6D9-TW-001
+AI handler: codex
+Merge commit: `6a1e6d9880a0f99d4a1043e25b74d77eedbe2c3f`
+File: multiple updated localization modules
+Start position: updated `en` localization tables from merge commit, excluding `Main_Modules/TALENTS/TALENTS_Skitarii.lua` and `Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Scope: 12 updated items
+Completed: 12
+Changed zh-tw: 11
+Term candidates: none
+Blocked: none
+Checks: active `zh-tw` present for all touched items; duplicate active `["zh-tw"]` in touched tables=0; active empty `["zh-tw"]` in touched tables=0; placeholders preserved; `CKWord`, `CNumb`, `CPhrs`, `CNote`, and `Dot_*` structure preserved; glossary/local usage checked for Critical Melee, Critical Strikes, Human-sized enemies, Marksman's Focus, Focus, Demolition Stockpile, Krak Grenade, Smoke Grenade, Frag Grenade, Momentum, Dodge Speed, Dodge Distance, Rending, Staggered, Arc, Electrocute, Strength, Weakspot Hit, Weapon Special, and Heavy Attack; `git -C <translation-repo> diff --check` passed; diff scope limited to `.lua` files in `Main_Modules/TALENTS` and `Main_Modules/WEAPONS_Blessings_Perks.lua`; Lua syntax tool unavailable
+Translation repo commit: `d99ede0`
+Safe next position: merge delta complete; normal flow remains `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_ability_psyker_smite_description_new`, with `Main_Modules/TALENTS/TALENTS_Skitarii.lua` queued later by the regular class talent workflow
+
 ## Blocked
 
 - none

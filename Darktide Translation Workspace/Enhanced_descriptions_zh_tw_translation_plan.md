@@ -275,3 +275,5 @@ Previous completed file: <translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lu
 ```
 
 最新執行狀態：ED-SCUM-TW-007 已完成審核；最後一個 translation repo commit 仍為 `fc1a8b1`，因最後 9 個 active localization tables 已符合詞彙與 placeholder 要求，無 Lua 變更可提交。`Main_Modules/TALENTS/TALENTS_Scum.lua` active table 序列已完成；下一輪改由 PSYKER 開始，之後處理 Skitarius 待確認來源。
+
+2026-07-18 merge delta：上游 merge commit `6a1e6d9880a0f99d4a1043e25b74d77eedbe2c3f` 已先以 ED-MERGE-6A1E6D9-TW-001 處理已更新內容；本批排除 `Main_Modules/TALENTS/TALENTS_Psyker.lua` 與 `Main_Modules/TALENTS/TALENTS_Skitarii.lua`，並提交 translation repo commit `d99ede0`。正常流程 safe next position 不變，仍從 `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_ability_psyker_smite_description_new` 開始。
