@@ -10,6 +10,8 @@
 | `Darktide Translation Workspace/MOD Directory Map.md` | README MOD 對應表、狀態、比對時間、已移除 MOD 清單 |
 | `Darktide Translation Workspace/Term Candidates.md` | `Referneces/Translation.md` 尚未收錄的特殊名詞與新詞彙候選 |
 | `Darktide Translation Workspace/Log/<Repo directory>.md` | 每個 MOD 的工作分支 LOG、逐檔進度、逐 key 草稿、blocked 詳情與同步紀錄 |
+| `Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan.md` | Enhanced Descriptions 第一階段繁中補齊計畫與完成紀錄 |
+| `Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan_2.md` | Enhanced Descriptions 第二階段中文優先新增、修訂與潤飾計畫 |
 
 ## 目前狀態摘要
 
