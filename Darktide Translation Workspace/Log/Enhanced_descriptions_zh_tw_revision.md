@@ -5,11 +5,11 @@
 ```text
 Plan: Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan_2.md
 AI handler: codex
-Status: waiting_for_base
-Required first: user specifies an alternate base, or PR #37 is reopened and merged into upstream xss0
-Work branch: not created
-Translation Lua changes: none
-Safe next position: after base decision, fetch the selected base, create revision branch, rerun final Phase A inventory
+Status: in_progress
+Authorized base: origin/Added-Traditional-Chinese at 6e043fa
+Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
+Translation Lua changes: ED2-ROOT-REV-001 committed at 29cad5b
+Safe next position: ED2-ROOT-REV-002 at Enhanced_descriptions_localization.lua / language_de
 ```
 
 ## Base Gate 2026-07-18
@@ -30,12 +30,12 @@ Safe next position: after base decision, fetch the selected base, create revisio
 - Latest fetched `upstream/xss0`: `7deedb3`
 - First-stage head / local clean worktree: `6e043fa`
 - Ancestry: `6e043fa` is not an ancestor of `upstream/xss0`; all 15 target Lua files still differ from the upstream base.
-- Decision: keep `waiting_for_base`; do not create the revision branch or second-stage Lua commits.
-- Decision needed: user specifies an alternate base, or PR #37 is reopened and merged into `upstream/xss0`.
+- Historical decision: kept `waiting_for_base` until the user clarified that PR #37 is not allowed.
+- Resolution: user instruction supersedes the PR gate; use the user-owned first-stage commit `6e043fa` and do not create any PR.
 
-## Provisional Phase A Inventory
+## Final Phase A Inventory
 
-This inventory is provisional and must be repeated after PR #37 is actually merged and `upstream/xss0` is refreshed.
+The structural inventory was revalidated on the authorized user-owned base `6e043fa`. The earlier provisional snapshot used the same commit, so its per-file counts are the final Phase A baseline.
 
 | File | Review units | Active/current zh-tw | Missing zh-tw | SKIP | Duplicate | Empty | Placeholder mismatch |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -78,16 +78,34 @@ Checks:
 - empty active `zh-tw`=0
 - comment-normalized placeholder mismatch=0
 - no Lua files changed
-- no second-stage branch or translation commit created
+- revision branch created from authorized base `6e043fa`
+
+## Batch ED2-ROOT-REV-001
+
+```text
+Batch: ED2-ROOT-REV-001
+AI handler: codex
+File: <translation-repo>/Enhanced_descriptions_localization.lua
+Start position: generated type_name_text_colour entry
+Scope: first 15 active entries through language_zh_cn
+Reviewed: 15
+ADD: 0
+CHANGE: 4 (MISSING_INFO=1, WRONG_MEANING=1, UNNATURAL=3)
+KEEP: 11
+SKIP: 0
+BLOCKED: 0
+Term candidates: Enhanced Descriptions = 強化描述
+Checks: duplicate active zh-tw=0; empty active zh-tw=0; touched placeholders/color markers preserved; diff scope limited to one allowed zh-tw Lua file; git diff --check passed; Lua syntax tool unavailable
+Translation commit: 29cad5b
+Safe next position: language_de
+```
 
 ## Safe Next Position
 
 ```text
-Required first: user specifies an alternate base, or PR #37 is reopened and merged into upstream xss0
-Then: fetch the selected base and record its final commit
-Then: create Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Then: rerun final Phase A inventory
-First revision batch after final inventory: ED2-ROOT-REV-001
+Authorized base: origin/Added-Traditional-Chinese at 6e043fa
+Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
+Next revision batch: ED2-ROOT-REV-002
 File: <translation-repo>/Enhanced_descriptions_localization.lua
-Start position: first active localization entry
+Start position: language_de
 ```

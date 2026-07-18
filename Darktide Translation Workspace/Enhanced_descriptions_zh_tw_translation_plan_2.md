@@ -19,9 +19,9 @@
 
 ## 1. 啟動條件與分支
 
-- 第一階段 ready PR：`https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA/pull/37`
-- 第二階段開始前，必須先確認 PR #37 已合併，或使用者明確指定其他基準。
-- 基準分支：更新後的 upstream `xss0`。
+- 第一階段歷史 PR：`https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA/pull/37`；使用者不允許以此 PR 作為第二階段前置條件或交付方式。
+- 第二階段授權基準：使用者自有 `origin/Added-Traditional-Chinese` 的 `6e043fa`。
+- `upstream/xss0` 只作唯讀比較，不是第二階段分支基準。
 - 建議工作分支：`Codex/Feature/Enhanced_descriptions/Revise-zh-tw`
 - Translation commit message：`Revise zh-tw batch <batch-id>`
 - Workspace commit message：`Update Enhanced_descriptions zh-tw revision workspace`
@@ -41,7 +41,7 @@
 - 除非使用者在當次對話明確要求建立 PR，否則只提交、推送到使用者自己的 `origin` 並交付 branch／commit 資訊，不呼叫任何 PR 建立工具。
 - 即使使用者明確要求建立 PR，建立前仍必須回報並確認 `head owner/repo` 與 `base owner/repo`。若 base repository 不屬於 `SyuanTsai`，必須另取得使用者對該第三方目標的明確授權；本計畫本身不提供這項授權。
 
-若 PR #37 尚未合併，本計畫狀態為 `waiting_for_base`，可以進行唯讀盤點，但不得開始第二階段 Lua commit，以免第一、第二階段 diff 混在一起。
+第二階段從使用者自有第一階段 commit `6e043fa` 建立獨立分支，因此不等待、重開或合併 PR #37。除非使用者另行明確要求，本計畫不得建立任何 PR。
 
 ## 2. 允許的變更範圍
 
@@ -174,7 +174,7 @@
 
 ### Phase A：基準與盤點
 
-1. 確認 PR #37 已合併或取得使用者指定基準。
+1. 確認使用者指定基準；本輪為使用者自有 `origin/Added-Traditional-Chinese` 的 `6e043fa`。
 2. fetch upstream，確認 `xss0` 為最新。
 3. 從最新基準建立第二階段工作分支。
 4. 掃描全部目標檔案，建立每檔統計：
@@ -272,13 +272,13 @@ Safe next position: <next key/group>
 ## 12. 下一步
 
 ```text
-Plan status: waiting_for_base
-Required first: user specifies an alternate base, or PR #37 is reopened and merged into upstream xss0
-Then: create Codex/Feature/Enhanced_descriptions/Revise-zh-tw
+Plan status: in_progress
+Authorized base: origin/Added-Traditional-Chinese at 6e043fa
+Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
 Provisional inventory: completed 2026-07-18 20:51:34 +08:00 against PR head 6e043fa
-First task after merge: refresh upstream/xss0 and rerun final Phase A inventory
+Final Phase A: confirmed against authorized base 6e043fa
 First file: <translation-repo>/Enhanced_descriptions_localization.lua
-Safe next position: first active localization entry
+Safe next position: ED2-ROOT-REV-002 at language_de
 ```
 
 ### 12.1 啟動紀錄（2026-07-18）
@@ -298,3 +298,12 @@ Safe next position: first active localization entry
 - remote 所有權符合安全規則：`origin`=`SyuanTsai/Warhammer-40-000-DARKTIDE-Enhanced_Descriptions`；`upstream`=`xsSplater/Darktide_Enhanced_Descriptions_BETA`。
 - 決策：維持 `waiting_for_base`；未建立第二階段分支，未修改或提交 Lua，也未對第三方 repository 執行任何寫入。
 - 需要使用者指定替代基準，或先讓 PR #37 重新開啟並合併；之後才能重跑最終 Phase A 並開始 `ED2-ROOT-REV-001`。
+
+### 12.3 使用者基準指示與正式啟動（2026-07-18）
+
+- 使用者明確表示不允許 PR #37；撤銷以第三方 PR 合併作為第二階段前置條件的錯誤解讀。
+- 第二階段改以使用者自有 `origin/Added-Traditional-Chinese` 的 `6e043fa` 為授權基準；`upstream` 維持唯讀。
+- 已建立本機分支 `Codex/Feature/Enhanced_descriptions/Revise-zh-tw`，未建立或更新任何 PR。
+- 已在相同 commit 上重驗 Phase A 結構盤點：missing `zh-tw`=0、duplicate=0、empty=0、註解正規化後 placeholder mismatch=0；MENUS fallback `SKIP`=8。
+- `ED2-ROOT-REV-001` 已審閱 15 條，`CHANGE`=4、`KEEP`=11，translation commit=`29cad5b`。
+- Safe next position：`ED2-ROOT-REV-002`，`Enhanced_descriptions_localization.lua` 的 `language_de`。
