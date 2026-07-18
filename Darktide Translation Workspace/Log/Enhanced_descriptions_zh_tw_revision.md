@@ -5,12 +5,13 @@
 ```text
 Plan: Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan_2.md
 AI handler: codex
-Status: in_progress
+Status: completed
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Translation Lua changes: ED2-ROOT-REV-001..007, ED2-COLORS-REV-001..022, ED2-MENUS-REV-001..006, ED2-CURIOS-REV-001..002, ED2-TALENTS-MODULAR-REV-001..002, ED2-NAMES-REV-001..019, ED2-WEAPONS-REV-001..014, and ED2-PENANCES-REV-001..020 complete; batches without Lua diff have no empty commit
-Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua; Main_Modules/MENUS.lua; Main_Modules/CURIOS_Blessings_Perks.lua; Main_Modules/TALENTS_Modular.lua; Main_Modules/NAMES_Talents_Blessings.lua; Main_Modules/WEAPONS_Blessings_Perks.lua; Main_Modules/PENANCES.lua
-Safe next position: ED2-PSYKER-REV-001 at Main_Modules/TALENTS/TALENTS_Psyker.lua / first loc_* table
+Translation Lua changes: all planned ED2 review batches complete through ED2-SKITARII-REV-007; batches without Lua diff have no empty commit
+Completed files: all 15 target Lua files
+Final translation commit: 6b4dde9
+Safe next position: none; awaiting user review
 ```
 
 ## Base Gate 2026-07-18
@@ -461,12 +462,37 @@ Reason summary: `TERMINOLOGY` (meters → `公尺`, Crit chance → `爆擊率`,
 
 Reason summary: `TERMINOLOGY` (augmented → `強化版本`, Crit chance → `爆擊率`, Critical results → `致命一擊`, Toughness Damage Reduction → `韌性傷害減免`, Weakspot Hits → `命中弱點`, Reload → `裝填`, and Spread → `散布`), `SEMANTIC_ACCURACY` (Killing Blow, Critical Melee Attack, toxin tick, and duration clauses), `UNNATURAL`, and `PUNCTUATION` (damage ranges, multiplication signs, numeric table, and colon spacing). Common checks: table count=99; missing=0; duplicate=0; empty=0; key sequence matches authorized base; residual scans for obsolete augmented/Crit/Toughness/Weakspot/Reload/Spread terms and malformed duration phrases returned 0; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0; Lua syntax tool unavailable. Git grouped adjacent hunks across batch boundaries, so `9b507aa`, `0b05adb`, and `29265c4` are attributed to every review batch they affect.
 
+## TALENTS_Skitarii Manual Review
+
+| Batch | Units | CHANGE | KEEP | Translation commit | Safe next position |
+| --- | ---: | ---: | ---: | --- | --- |
+| ED2-SKITARII-REV-001 | 1–15 | 3 | 12 | f338152 | unit 16 |
+| ED2-SKITARII-REV-002 | 16–30 | 5 | 10 | 47ec548 | unit 31 |
+| ED2-SKITARII-REV-003 | 31–45 | 5 | 10 | 9113233 | unit 46 |
+| ED2-SKITARII-REV-004 | 46–60 | 5 | 10 | 6cc59ed | unit 61 |
+| ED2-SKITARII-REV-005 | 61–75 | 4 | 11 | 6a53bb0 | unit 76 |
+| ED2-SKITARII-REV-006 | 76–90 | 7 | 8 | 3e83eaf | unit 91 |
+| ED2-SKITARII-REV-007 | 91–101 | 6 | 5 | 6b4dde9 | final cross-file QA |
+| **Total** | **101** | **35** | **66** |  |  |
+
+Reason summary: `TERMINOLOGY` (meters → `公尺`, Toughness Damage Reduction → `韌性傷害減免`, Spread → `散布`, Reload → `裝填`, Reserve Ammo → `備用彈藥`, and Heavy Melee Attack → `重型近戰攻擊`), `SEMANTIC_ACCURACY` (Weakspot Kill, push, and bracing wording), and `UNNATURAL` (duration clauses and enhanced-version wording). Common checks: table count=101; missing=0; duplicate=0; empty=0; placeholder mismatch=0; key sequence matches authorized base; residual scans for obsolete distance/Toughness/Spread/Reload/Weakspot/push/duration wording returned 0; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0; Lua syntax tool unavailable.
+
+## Final Cross-file QA
+
+- All 15 target Lua files were reviewed; inventory total=`1,924`, active/current `zh-tw`=`1,916`, documented MENUS fallback `SKIP`=`8`.
+- `git diff origin/Added-Traditional-Chinese..HEAD --check` passed.
+- The branch diff contains exactly the 15 authorized target Lua files and no out-of-scope file.
+- Parsed localization tables preserve the authorized-base key sequence and report missing=0, duplicate=0, empty=0, placeholder mismatch=0; prior file-specific assignment QA for the COLORS/NAMES/PENANCES special structures remains valid.
+- The formal reference used for the final pass is `Referneces/Translation.md`, 1,322 lines, SHA-256=`6DE8B5F84B66A368F52C3E7555B29C7BE1A663763DFBC0CBE5FB76664E45B202`.
+- User-reviewed translation commit `cab8cd1` was preserved. No push or PR was created.
+
 ## Safe Next Position
 
 ```text
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Next revision batch: ED2-SKITARII-REV-001
-File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua
-Start position: first loc_* table
+Plan status: completed
+Next revision batch: none
+File: all 15 target Lua files complete
+Start position: none; awaiting user review
 ```

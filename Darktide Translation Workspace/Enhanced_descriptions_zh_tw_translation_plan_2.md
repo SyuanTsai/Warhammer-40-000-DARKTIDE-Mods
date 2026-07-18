@@ -272,13 +272,14 @@ Safe next position: <next key/group>
 ## 12. 下一步
 
 ```text
-Plan status: in_progress
+Plan status: completed
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
 Provisional inventory: completed 2026-07-18 20:51:34 +08:00 against PR head 6e043fa
 Final Phase A: confirmed against authorized base 6e043fa
-First file: <translation-repo>/Enhanced_descriptions_localization.lua
-Safe next position: ED2-MENUS-REV-001 at first loc_* table
+Final translation commit: 6b4dde9
+Completed scope: all 15 target Lua files
+Safe next position: none; awaiting user review
 ```
 
 ### 12.1 啟動紀錄（2026-07-18）
@@ -342,4 +343,13 @@ Safe next position: ED2-MENUS-REV-001 at first loc_* table
 - Arbites 最終 QA：tables=83、missing=0、duplicate=0、empty=0，key sequence 與 `6e043fa` 一致；術語與格式殘留掃描為 0，`git diff --check` 通過。
 - `Main_Modules/TALENTS/TALENTS_Scum.lua` 已完成 7 批人工審閱：`Reviewed`=99、`CHANGE`=33、`KEEP`=66、`ADD/SKIP/BLOCKED`=0；translation commits=`9b507aa`、`0b05adb`、`55bb04d`、`a65c6ae`、`a19bc24`、`1075db5`、`29265c4`。
 - Scum 最終 QA：tables=99、missing=0、duplicate=0、empty=0，key sequence 與 `6e043fa` 一致；術語與格式殘留掃描為 0，`git diff --check` 通過。
-- Safe next position：`ED2-SKITARII-REV-001`，`Main_Modules/TALENTS/TALENTS_Skitarii.lua` 的第一個 `loc_*` table。
+- `Main_Modules/TALENTS/TALENTS_Skitarii.lua` 已完成 7 批人工審閱：`Reviewed`=101、`CHANGE`=35、`KEEP`=66、`ADD/SKIP/BLOCKED`=0；translation commits=`f338152`、`47ec548`、`9113233`、`6cc59ed`、`6a53bb0`、`3e83eaf`、`6b4dde9`。
+- Skitarii 最終 QA：tables=101、missing=0、duplicate=0、empty=0、placeholder mismatch=0，key sequence 與 `6e043fa` 一致；術語與格式殘留掃描為 0，`git diff --check` 通過。
+
+### 12.4 完成紀錄（2026-07-19）
+
+- 第二階段 15/15 個目標 Lua 檔已完成，總盤點 `1,924` 條：active/current `zh-tw`=`1,916`，MENUS 官方 localization fallback `SKIP`=`8`。
+- 分支相對 `origin/Added-Traditional-Chinese` 的差異恰為 15 個授權目標 Lua 檔；沒有 workspace 文件或範圍外檔案混入 translation branch。
+- 全案 `git diff --check`、鍵序、missing、duplicate、empty、placeholder 檢查通過；各檔人工術語與格式殘留掃描均已完成。
+- 保留使用者核准的 `cab8cd1` Code review 結果；依使用者限制，沒有 push，也沒有建立或更新 PR。
+- 計畫狀態：`completed`；Safe next position：`none`，等待使用者 Review。
