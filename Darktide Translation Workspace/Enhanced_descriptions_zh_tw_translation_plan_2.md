@@ -330,4 +330,7 @@ Safe next position: ED2-MENUS-REV-001 at first loc_* table
 - `Main_Modules/WEAPONS_Blessings_Perks.lua` 已完成 14 批人工審閱：`Reviewed`=197、`CHANGE`=62、`KEEP`=135、`ADD/SKIP/BLOCKED`=0。
 - WEAPONS translation commits：`eb92954`、`6066ea5`、`cc0013a`、`d1c9ca3`、`d5ba143`、`47e3d2e`、`2d6435b`、`0fcd209`、`a4b7c37`、`3456484`、`7b388c6`、`9bc208c`、`4a3d53a`；第 14 批沒有 Lua diff，未建立空 commit。
 - WEAPONS 最終 QA：tables=197、missing=0、duplicate=0、empty=0、placeholder mismatch=0，key sequence 與 `6e043fa` 一致；唯一半形標點候選是刻意保留的技術標記 `BUG:`，`git diff --check` 通過。
-- Safe next position：`ED2-PENANCES-REV-001`，`Main_Modules/PENANCES.lua` 的第一個 `loc_*` table。
+- `Main_Modules/PENANCES.lua` 已完成 20 批人工審閱：`Reviewed`=288、`CHANGE`=55、`KEEP`=233、`ADD/SKIP/BLOCKED`=0。
+- PENANCES translation commits：`22dfa42`、`8850278`、`f767958`、`405e411`、`38fdc8a`、`5331132`、`5398233`、`484a97d`、`37512b7`、`526d1ec`、`aa65924`、`23a54d1`、`ec36cde`、`5c295f5`、`562105e`、`ae86abd`；第 1、11、17、20 批沒有 Lua diff，未建立空 commit。
+- PENANCES 最終 QA：tables=288、missing=0、duplicate=0、empty=0、placeholder mismatch=0、halfwidth Chinese punctuation=0，key sequence 與 `6e043fa` 一致，`git diff --check` 通過。
+- Safe next position：`ED2-PSYKER-REV-001`，`Main_Modules/TALENTS/TALENTS_Psyker.lua` 的第一個 `loc_*` table。

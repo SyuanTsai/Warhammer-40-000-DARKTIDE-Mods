@@ -8,9 +8,9 @@ AI handler: codex
 Status: in_progress
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Translation Lua changes: ED2-ROOT-REV-001..007, ED2-COLORS-REV-001..022, ED2-MENUS-REV-001..006, ED2-CURIOS-REV-001..002, ED2-TALENTS-MODULAR-REV-001..002, ED2-NAMES-REV-001..019, and ED2-WEAPONS-REV-001..014 complete; batches without Lua diff have no empty commit
-Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua; Main_Modules/MENUS.lua; Main_Modules/CURIOS_Blessings_Perks.lua; Main_Modules/TALENTS_Modular.lua; Main_Modules/NAMES_Talents_Blessings.lua; Main_Modules/WEAPONS_Blessings_Perks.lua
-Safe next position: ED2-PENANCES-REV-001 at Main_Modules/PENANCES.lua / first loc_* table
+Translation Lua changes: ED2-ROOT-REV-001..007, ED2-COLORS-REV-001..022, ED2-MENUS-REV-001..006, ED2-CURIOS-REV-001..002, ED2-TALENTS-MODULAR-REV-001..002, ED2-NAMES-REV-001..019, ED2-WEAPONS-REV-001..014, and ED2-PENANCES-REV-001..020 complete; batches without Lua diff have no empty commit
+Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua; Main_Modules/MENUS.lua; Main_Modules/CURIOS_Blessings_Perks.lua; Main_Modules/TALENTS_Modular.lua; Main_Modules/NAMES_Talents_Blessings.lua; Main_Modules/WEAPONS_Blessings_Perks.lua; Main_Modules/PENANCES.lua
+Safe next position: ED2-PSYKER-REV-001 at Main_Modules/TALENTS/TALENTS_Psyker.lua / first loc_* table
 ```
 
 ## Base Gate 2026-07-18
@@ -349,12 +349,40 @@ Reason summary: `TERMINOLOGY` (`Kinetic Flayer`, `Steady Grip`, `Shield Plates`)
 
 Reason summary: `TERMINOLOGY` (contextual Crit rules, Reload Speed, Weakspot Hit, Heat, Stagger), `SEMANTIC_ACCURACY` (stack generation, refresh rules, attack restrictions, caps, triggering targets), `HELPER_KEY` (corrected `Dont_intw_coher_tghn`), and `PUNCTUATION`. Common checks: table count=197; missing=0; duplicate=0; empty=0; placeholder mismatch=0; key sequence matches authorized base; the only halfwidth punctuation candidate is the intentional technical marker `BUG:`; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0; Lua syntax tool unavailable.
 
+## PENANCES Manual Review
+
+| Batch | Units | CHANGE | KEEP | Translation commit | Safe next position |
+| --- | ---: | ---: | ---: | --- | --- |
+| ED2-PENANCES-REV-001 | 1–15 | 0 | 15 | none | unit 16 |
+| ED2-PENANCES-REV-002 | 16–30 | 2 | 13 | 22dfa42 | unit 31 |
+| ED2-PENANCES-REV-003 | 31–45 | 6 | 9 | 8850278 | unit 46 |
+| ED2-PENANCES-REV-004 | 46–60 | 1 | 14 | f767958 | unit 61 |
+| ED2-PENANCES-REV-005 | 61–75 | 3 | 12 | 405e411, ae86abd | unit 76 |
+| ED2-PENANCES-REV-006 | 76–90 | 1 | 14 | 38fdc8a | unit 91 |
+| ED2-PENANCES-REV-007 | 91–105 | 2 | 13 | 5331132 | unit 106 |
+| ED2-PENANCES-REV-008 | 106–120 | 3 | 12 | 5398233, ae86abd | unit 121 |
+| ED2-PENANCES-REV-009 | 121–135 | 2 | 13 | 484a97d, ae86abd | unit 136 |
+| ED2-PENANCES-REV-010 | 136–150 | 1 | 14 | 37512b7 | unit 151 |
+| ED2-PENANCES-REV-011 | 151–165 | 2 | 13 | ae86abd | unit 166 |
+| ED2-PENANCES-REV-012 | 166–180 | 4 | 11 | 526d1ec | unit 181 |
+| ED2-PENANCES-REV-013 | 181–195 | 6 | 9 | aa65924 | unit 196 |
+| ED2-PENANCES-REV-014 | 196–210 | 3 | 12 | 23a54d1, ae86abd | unit 211 |
+| ED2-PENANCES-REV-015 | 211–225 | 3 | 12 | ec36cde, ae86abd | unit 226 |
+| ED2-PENANCES-REV-016 | 226–240 | 3 | 12 | 5c295f5 | unit 241 |
+| ED2-PENANCES-REV-017 | 241–255 | 4 | 11 | ae86abd | unit 256 |
+| ED2-PENANCES-REV-018 | 256–270 | 3 | 12 | 562105e | unit 271 |
+| ED2-PENANCES-REV-019 | 271–285 | 6 | 9 | ae86abd | unit 286 |
+| ED2-PENANCES-REV-020 | 286–288 | 0 | 3 | none | PSYKER first loc_* table |
+| **Total** | **288** | **55** | **233** |  |  |
+
+Reason summary: `TERMINOLOGY` (contextual Crit rules, Weakspot Hit, Burn, Powered Attacks, Warp, and formal `Keystone` → `鑰石`), `SEMANTIC_ACCURACY` (single-Mission and ranged-enemy constraints), and `PUNCTUATION` (fullwidth parentheses, exclamation marks, and ellipsis). The formal Keystone rule was discovered in batch 19 and applied retrospectively to 15 earlier entries plus 6 current-batch entries; the table attributes the shared commit to each affected batch. Common checks: table count=288; missing=0; duplicate=0; empty=0; placeholder mismatch=0; halfwidth punctuation candidates=0; key sequence matches authorized base; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0; Lua syntax tool unavailable.
+
 ## Safe Next Position
 
 ```text
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Next revision batch: ED2-PENANCES-REV-001
-File: <translation-repo>/Main_Modules/PENANCES.lua
+Next revision batch: ED2-PSYKER-REV-001
+File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua
 Start position: first loc_* table
 ```
