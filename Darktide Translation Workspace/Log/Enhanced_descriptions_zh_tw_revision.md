@@ -8,9 +8,9 @@ AI handler: codex
 Status: in_progress
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Translation Lua changes: ED2-ROOT-REV-001..007, ED2-COLORS-REV-001..022, and ED2-MENUS-REV-001..006 complete; batches without Lua diff have no empty commit
-Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua; Main_Modules/MENUS.lua
-Safe next position: ED2-CURIOS-REV-001 at Main_Modules/CURIOS_Blessings_Perks.lua / first loc_* table
+Translation Lua changes: ED2-ROOT-REV-001..007, ED2-COLORS-REV-001..022, ED2-MENUS-REV-001..006, and ED2-CURIOS-REV-001..002 complete; batches without Lua diff have no empty commit
+Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua; Main_Modules/MENUS.lua; Main_Modules/CURIOS_Blessings_Perks.lua
+Safe next position: ED2-TALENTS-MODULAR-REV-001 at Main_Modules/TALENTS_Modular.lua / first loc_* table
 ```
 
 ## Base Gate 2026-07-18
@@ -272,12 +272,22 @@ Blocked queue:
 - `loc_item_weapon_rarity_6`: English source is blank. The game source confirms only that this is the reserved sixth rarity; `Sainted` is not an authoritative display string. Current `神化` is retained pending an official source.
 - `loc_weapon_stats_display_dodge_distance`: English source is blank. Current `閃避距離` agrees with the key and Russian/zh-cn semantics, but cannot be checked against an authoritative English display string.
 
+## CURIOS Manual Review
+
+| Batch | Units | CHANGE | KEEP | Translation commit | Safe next position |
+| --- | ---: | ---: | ---: | --- | --- |
+| ED2-CURIOS-REV-001 | 1–15 | 2 | 13 | 63ba3f7 | unit 16 |
+| ED2-CURIOS-REV-002 | 16–22 | 0 | 7 | none | TALENTS_Modular first loc_* table |
+| **Total** | **22** | **2** | **20** |  |  |
+
+Reason summary: `UNNATURAL` (removed duplicated “cooldown regeneration” semantics) and `OVERTRANSLATION` (removed the parenthetical “money” gloss from Ordo Dockets). Common checks: table count=22; missing=0; duplicate=0; empty=0; placeholder mismatch=0; key sequence matches authorized base; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0.
+
 ## Safe Next Position
 
 ```text
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Next revision batch: ED2-CURIOS-REV-001
-File: <translation-repo>/Main_Modules/CURIOS_Blessings_Perks.lua
+Next revision batch: ED2-TALENTS-MODULAR-REV-001
+File: <translation-repo>/Main_Modules/TALENTS_Modular.lua
 Start position: first loc_* table
 ```
