@@ -8,9 +8,9 @@ AI handler: codex
 Status: in_progress
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Translation Lua changes: ED2-ROOT-REV-001..007 complete; REV-005 had no Lua diff
-Completed files: Enhanced_descriptions_localization.lua (93 reviewed; CHANGE=19; KEEP=74)
-Safe next position: ED2-COLORS-REV-001 at Colors_Keywords_Numbers/COLORS_KWords_tw.lua / first assignment
+Translation Lua changes: ED2-ROOT-REV-001..007 and ED2-COLORS-REV-001..022 complete; batches without Lua diff have no empty commit
+Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua
+Safe next position: ED2-MENUS-REV-001 at Main_Modules/MENUS.lua / first loc_* table
 ```
 
 ## Base Gate 2026-07-18
@@ -221,12 +221,44 @@ Translation commit: b6c968e
 Safe next position: Colors_Keywords_Numbers/COLORS_KWords_tw.lua / first assignment
 ```
 
+## COLORS batch summary
+
+All 327 assignment lines were reviewed in source order. Table-structure and non-localizable code assignments are `SKIP`; translated values are `KEEP` or `CHANGE`.
+
+| Batch | Units | CHANGE | KEEP | SKIP | Translation commit | Safe next position |
+| --- | ---: | ---: | ---: | ---: | --- | --- |
+| ED2-COLORS-REV-001 | 1–15 | 0 | 11 | 4 | none | coherency_text_colour |
+| ED2-COLORS-REV-002 | 16–30 | 0 | 11 | 4 | none | Crit_chance |
+| ED2-COLORS-REV-003 | 31–45 | 5 | 10 | 0 | dbaa689 | Crit_Attk |
+| ED2-COLORS-REV-004 | 46–60 | 2 | 11 | 2 | fad3317 | finesse_text_colour |
+| ED2-COLORS-REV-005 | 61–75 | 0 | 10 | 5 | none | PerilsozWarp |
+| ED2-COLORS-REV-006 | 76–90 | 0 | 11 | 4 | none | Stuns |
+| ED2-COLORS-REV-007 | 91–105 | 0 | 12 | 3 | none | Weakspots |
+| ED2-COLORS-REV-008 | 106–120 | 0 | 12 | 3 | none | fnp_text_colour |
+| ED2-COLORS-REV-009 | 121–135 | 0 | 10 | 5 | none | momentum_text_colour |
+| ED2-COLORS-REV-010 | 136–150 | 0 | 10 | 5 | none | Focus_Target |
+| ED2-COLORS-REV-011 | 151–165 | 1 | 10 | 4 | 9071ab9 | chemtox_text_colour |
+| ED2-COLORS-REV-012 | 166–180 | 0 | 13 | 2 | none | loner |
+| ED2-COLORS-REV-013 | 181–195 | 0 | 15 | 0 | none | PartozSquad |
+| ED2-COLORS-REV-014 | 196–210 | 0 | 15 | 0 | none | VulturesMark |
+| ED2-COLORS-REV-015 | 211–225 | 0 | 15 | 0 | none | psy_wrath2 |
+| ED2-COLORS-REV-016 | 226–240 | 0 | 15 | 0 | none | frag_gr |
+| ED2-COLORS-REV-017 | 241–255 | 0 | 15 | 0 | none | bigfriendro |
+| ED2-COLORS-REV-018 | 256–270 | 0 | 15 | 0 | none | Prologue_p |
+| ED2-COLORS-REV-019 | 271–285 | 0 | 9 | 6 | none | Melee_dmg |
+| ED2-COLORS-REV-020 | 286–300 | 5 | 6 | 4 | fad02ff | Can_proc_mult |
+| ED2-COLORS-REV-021 | 301–315 | 1 | 14 | 0 | c2c9a68 | Carap_cant_clv |
+| ED2-COLORS-REV-022 | 316–327 | 3 | 6 | 3 | 6a24fb4 | MENUS.lua first loc_* table |
+| **Total** | **327** | **17** | **256** | **54** |  |  |
+
+Reason summary: `TERMINOLOGY` (Critical Hit/Strike, Vulture’s Mark, Warp Resistance, Heat Management), `UNNATURAL`/`GRAMMAR` (shield application, stack expiry, Carapace and Coherency notes). Common checks: assignment count=327; key sequence matches base; `CKWord` lookup sequence matches base (30/30); diff scope limited to allowed zh-tw Lua; `git diff --check` passed; Lua syntax tool unavailable; `ADD/BLOCKED`=0.
+
 ## Safe Next Position
 
 ```text
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Next revision batch: ED2-COLORS-REV-001
-File: <translation-repo>/Colors_Keywords_Numbers/COLORS_KWords_tw.lua
-Start position: first assignment
+Next revision batch: ED2-MENUS-REV-001
+File: <translation-repo>/Main_Modules/MENUS.lua
+Start position: first loc_* table
 ```

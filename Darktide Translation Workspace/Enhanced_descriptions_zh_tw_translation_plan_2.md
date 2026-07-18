@@ -278,7 +278,7 @@ Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
 Provisional inventory: completed 2026-07-18 20:51:34 +08:00 against PR head 6e043fa
 Final Phase A: confirmed against authorized base 6e043fa
 First file: <translation-repo>/Enhanced_descriptions_localization.lua
-Safe next position: ED2-COLORS-REV-001 at first assignment
+Safe next position: ED2-MENUS-REV-001 at first loc_* table
 ```
 
 ### 12.1 啟動紀錄（2026-07-18）
@@ -313,4 +313,5 @@ Safe next position: ED2-COLORS-REV-001 at first assignment
 - `ED2-ROOT-REV-006` 已審閱 15 條，`CHANGE`=2、`KEEP`=13，translation commit=`2326228`。
 - `ED2-ROOT-REV-007` 已審閱 3 條，`CHANGE`=1、`KEEP`=2，translation commit=`b6c968e`。
 - `Enhanced_descriptions_localization.lua` 已完成：`Reviewed`=93、`CHANGE`=19、`KEEP`=74、`ADD/SKIP/BLOCKED`=0。
-- Safe next position：`ED2-COLORS-REV-001`，`Colors_Keywords_Numbers/COLORS_KWords_tw.lua` 的第一個 assignment。
+- `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` 已完成：`Reviewed`=327、`CHANGE`=17、`KEEP`=256、`SKIP`=54、`ADD/BLOCKED`=0。
+- Safe next position：`ED2-MENUS-REV-001`，`Main_Modules/MENUS.lua` 的第一個 `loc_*` table。
