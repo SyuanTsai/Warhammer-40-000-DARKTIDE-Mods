@@ -1372,6 +1372,19 @@ Checks: active `zh-tw` count increased 30 to 45; placeholders and display functi
 Translation repo commit: `ef9af16`
 Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_overload_keystone_abilities_desc`
 
+Batch: ED-SKITARII-TW-004
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`
+Start position: `loc_talent_cryptic_overload_keystone_abilities_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 15 added
+Term candidates: Power Overload
+Blocked: none
+Checks: active `zh-tw` count increased 45 to 60; placeholders and display functions preserved; glossary/local usage checked for Combat Ability, Toughness Damage Reduction, Critical Hit Chance, Capacitance, Electrocution, Brittleness, Soulblaze, Chem Toxin, Corruption Damage, and Cleave; diff check passed; diff scope limited to Skitarii Lua; Lua syntax tool unavailable
+Translation repo commit: `25f5626`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_stun_dr_power_desc`
+
 ## Blocked
 
 - none

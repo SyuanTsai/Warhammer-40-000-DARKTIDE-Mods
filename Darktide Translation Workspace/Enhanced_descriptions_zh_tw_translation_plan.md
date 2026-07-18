@@ -268,12 +268,12 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ```text
 Next file: <translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua
-Start position: `loc_talent_cryptic_overload_keystone_abilities_desc`
+Start position: `loc_talent_cryptic_stun_dr_power_desc`
 Scope: 15 talent description tables
 Queued after PSYKER: ED-SKITARIUS, source path pending verification in `<translation-repo>`
 Previous completed file: <translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua through `loc_talent_buff_cooldown_on_ranged_kills`
 ```
 
-最新執行狀態：ED-SKITARII-TW-003 已新增累計 45 個 active localization tables 的 `zh-tw`，translation repo commit 為 `ef9af16`。下一批由 `loc_talent_cryptic_overload_keystone_abilities_desc` 繼續；Skitarii 進度為 45/101。
+最新執行狀態：ED-SKITARII-TW-004 已新增累計 60 個 active localization tables 的 `zh-tw`，translation repo commit 為 `25f5626`。下一批由 `loc_talent_cryptic_stun_dr_power_desc` 繼續；Skitarii 進度為 60/101。
 
 2026-07-18 merge delta：上游 merge commit `6a1e6d9880a0f99d4a1043e25b74d77eedbe2c3f` 已先以 ED-MERGE-6A1E6D9-TW-001 處理已更新內容；本批排除 `Main_Modules/TALENTS/TALENTS_Psyker.lua` 與 `Main_Modules/TALENTS/TALENTS_Skitarii.lua`，並提交 translation repo commit `d99ede0`。Psyker 已於 ED-PSYKER-TW-001 恢復正常流程。
