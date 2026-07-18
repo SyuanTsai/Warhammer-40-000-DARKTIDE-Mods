@@ -333,4 +333,9 @@ Safe next position: ED2-MENUS-REV-001 at first loc_* table
 - `Main_Modules/PENANCES.lua` 已完成 20 批人工審閱：`Reviewed`=288、`CHANGE`=55、`KEEP`=233、`ADD/SKIP/BLOCKED`=0。
 - PENANCES translation commits：`22dfa42`、`8850278`、`f767958`、`405e411`、`38fdc8a`、`5331132`、`5398233`、`484a97d`、`37512b7`、`526d1ec`、`aa65924`、`23a54d1`、`ec36cde`、`5c295f5`、`562105e`、`ae86abd`；第 1、11、17、20 批沒有 Lua diff，未建立空 commit。
 - PENANCES 最終 QA：tables=288、missing=0、duplicate=0、empty=0、placeholder mismatch=0、halfwidth Chinese punctuation=0，key sequence 與 `6e043fa` 一致，`git diff --check` 通過。
-- Safe next position：`ED2-PSYKER-REV-001`，`Main_Modules/TALENTS/TALENTS_Psyker.lua` 的第一個 `loc_*` table。
+- `Main_Modules/TALENTS/TALENTS_Psyker.lua` 已完成 6 批人工審閱：`Reviewed`=79、`CHANGE`=23、`KEEP`=56、`ADD/SKIP/BLOCKED`=0；translation commits=`6ad3f55`、`537ba56`、`14b60f6`、`92ff9b4`、`c260005`、`8023ed5`。
+- `Main_Modules/TALENTS/TALENTS_Zealot.lua` 已完成 6 批人工審閱：`Reviewed`=79、`CHANGE`=21、`KEEP`=58、`ADD/SKIP/BLOCKED`=0；translation commits=`e2a7878`、`1ad1d18`、`9120dff`、`57b4fa8`、`3ca1ae9`、`1252194`。
+- `Main_Modules/TALENTS/TALENTS_Veteran.lua` 已完成 5 批人工審閱：`Reviewed`=75、`CHANGE`=18、`KEEP`=57、`ADD/SKIP/BLOCKED`=0；translation commits=`d75b8a0`、`8dea2bb`、`ed94940`、`027c92d`、`809f7ce`。
+- `Main_Modules/TALENTS/TALENTS_Ogryn.lua` 已完成 6 批人工審閱：`Reviewed`=88、`CHANGE`=14、`KEEP`=74、`ADD/SKIP/BLOCKED`=0；translation commits=`ebc6019`、`9f7461e`、`d186034`、`acd811d`、`b24a9c0`、`f668adc`。
+- Ogryn 最終 QA：tables=88、missing=0、duplicate=0、empty=0，key sequence 與 `6e043fa` 一致；術語與標點殘留掃描為 0，`git diff --check` 通過。
+- Safe next position：`ED2-ARBITES-REV-001`，`Main_Modules/TALENTS/TALENTS_Arbites.lua` 的第一個 `loc_*` table。
