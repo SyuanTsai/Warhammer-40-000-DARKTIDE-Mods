@@ -1251,6 +1251,21 @@ Checks: active `zh-tw` present for all touched items; duplicate active `["zh-tw"
 Translation repo commit: `d99ede0`
 Safe next position: merge delta complete; normal flow remains `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_ability_psyker_smite_description_new`, with `Main_Modules/TALENTS/TALENTS_Skitarii.lua` queued later by the regular class talent workflow
 
+## Psyker Resume 2026-07-18
+
+Batch: ED-PSYKER-TW-001
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Start position: `loc_ability_psyker_smite_description_new`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 12
+Term candidates: none
+Blocked: none
+Checks: duplicate active `["zh-tw"]` in touched tables=0; active empty `["zh-tw"]` in touched tables=0; placeholders preserved; corrected missing source semantics, typos, glossary terms, sentence order, and `CKWord`/`Dot_*` structure; `git -C <translation-repo> diff --check` passed; diff scope limited to `Main_Modules/TALENTS/TALENTS_Psyker.lua`; Lua syntax tool unavailable
+Translation repo commit: `bf72179`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_shout_vent_warp_charge_description`
+
 ## Blocked
 
 - none

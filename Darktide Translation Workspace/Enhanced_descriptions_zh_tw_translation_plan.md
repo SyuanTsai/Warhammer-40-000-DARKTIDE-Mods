@@ -268,12 +268,12 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ```text
 Next file: <translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua
-Start position: `loc_ability_psyker_smite_description_new`
+Start position: `loc_talent_psyker_shout_vent_warp_charge_description`
 Scope: 15 talent description tables
 Queued after PSYKER: ED-SKITARIUS, source path pending verification in `<translation-repo>`
 Previous completed file: <translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua through `loc_talent_buff_cooldown_on_ranged_kills`
 ```
 
-最新執行狀態：ED-SCUM-TW-007 已完成審核；最後一個 translation repo commit 仍為 `fc1a8b1`，因最後 9 個 active localization tables 已符合詞彙與 placeholder 要求，無 Lua 變更可提交。`Main_Modules/TALENTS/TALENTS_Scum.lua` active table 序列已完成；下一輪改由 PSYKER 開始，之後處理 Skitarius 待確認來源。
+最新執行狀態：ED-PSYKER-TW-001 已完成 15 個 active localization tables，translation repo commit 為 `bf72179`。下一批由 `loc_talent_psyker_shout_vent_warp_charge_description` 繼續，Psyker 完成後處理已確認存在的 `Main_Modules/TALENTS/TALENTS_Skitarii.lua`。
 
-2026-07-18 merge delta：上游 merge commit `6a1e6d9880a0f99d4a1043e25b74d77eedbe2c3f` 已先以 ED-MERGE-6A1E6D9-TW-001 處理已更新內容；本批排除 `Main_Modules/TALENTS/TALENTS_Psyker.lua` 與 `Main_Modules/TALENTS/TALENTS_Skitarii.lua`，並提交 translation repo commit `d99ede0`。正常流程 safe next position 不變，仍從 `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_ability_psyker_smite_description_new` 開始。
+2026-07-18 merge delta：上游 merge commit `6a1e6d9880a0f99d4a1043e25b74d77eedbe2c3f` 已先以 ED-MERGE-6A1E6D9-TW-001 處理已更新內容；本批排除 `Main_Modules/TALENTS/TALENTS_Psyker.lua` 與 `Main_Modules/TALENTS/TALENTS_Skitarii.lua`，並提交 translation repo commit `d99ede0`。Psyker 已於 ED-PSYKER-TW-001 恢復正常流程。
