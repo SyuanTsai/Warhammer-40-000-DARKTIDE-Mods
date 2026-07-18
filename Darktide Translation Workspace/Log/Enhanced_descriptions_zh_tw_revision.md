@@ -405,12 +405,25 @@ Reason summary: `TERMINOLOGY` (`Scrier's Gaze` → `占卜者的注視`, overcha
 
 Reason summary: `TERMINOLOGY` (Crit results → `致命一擊`, augmented → `強化版本`, and meters → `公尺`), `SEMANTIC_ACCURACY` (`Knock back` → `擊退`, `Block Break` → `格擋被擊破`, and the Wound-threshold damage clause), `UNNATURAL`, and `PUNCTUATION` (knife-replenishment dashes plus two numeric tables). Common checks: table count=79; missing=0; duplicate=0; empty=0; key sequence matches authorized base; residual scans for `米`, `爆擊命中`, obsolete Keystone terms, and halfwidth `%:` returned 0; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0; Lua syntax tool unavailable.
 
+## TALENTS_Veteran Manual Review
+
+| Batch | Units | CHANGE | KEEP | Translation commit | Safe next position |
+| --- | ---: | ---: | ---: | --- | --- |
+| ED2-VETERAN-REV-001 | 1–15 | 6 | 9 | d75b8a0 | unit 16 |
+| ED2-VETERAN-REV-002 | 16–30 | 2 | 13 | 8dea2bb | unit 31 |
+| ED2-VETERAN-REV-003 | 31–45 | 3 | 12 | ed94940 | unit 46 |
+| ED2-VETERAN-REV-004 | 46–60 | 3 | 12 | 027c92d | unit 61 |
+| ED2-VETERAN-REV-005 | 61–75 | 4 | 11 | 809f7ce | OGRYN first loc_* table |
+| **Total** | **75** | **18** | **57** |  |  |
+
+Reason summary: `TERMINOLOGY` (Crit chance → `爆擊率`, Critical Hits → `致命一擊`, Critical Shots → `致命射擊`, Finesse strength → `靈巧威力`, and meters → `公尺`) and `PUNCTUATION` (grenade damage ranges, replenishment dashes, and two distance/damage tables). Common checks: table count=75; missing=0; duplicate=0; empty=0; key sequence matches authorized base; residual scans for `米`, obsolete Crit variants, obsolete Keystone terms, `距離(m)`, and halfwidth `%:` returned 0; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0; Lua syntax tool unavailable.
+
 ## Safe Next Position
 
 ```text
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Next revision batch: ED2-VETERAN-REV-001
-File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Veteran.lua
+Next revision batch: ED2-OGRYN-REV-001
+File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Ogryn.lua
 Start position: first loc_* table
 ```
