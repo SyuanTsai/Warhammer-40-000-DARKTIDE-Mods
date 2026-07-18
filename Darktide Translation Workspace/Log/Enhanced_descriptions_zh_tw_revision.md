@@ -8,9 +8,9 @@ AI handler: codex
 Status: in_progress
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Translation Lua changes: ED2-ROOT-REV-001..007, ED2-COLORS-REV-001..022, ED2-MENUS-REV-001..006, ED2-CURIOS-REV-001..002, ED2-TALENTS-MODULAR-REV-001..002, and ED2-NAMES-REV-001..019 complete; batches without Lua diff have no empty commit
-Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua; Main_Modules/MENUS.lua; Main_Modules/CURIOS_Blessings_Perks.lua; Main_Modules/TALENTS_Modular.lua; Main_Modules/NAMES_Talents_Blessings.lua
-Safe next position: ED2-WEAPONS-REV-001 at Main_Modules/WEAPONS_Blessings_Perks.lua / first loc_* table
+Translation Lua changes: ED2-ROOT-REV-001..007, ED2-COLORS-REV-001..022, ED2-MENUS-REV-001..006, ED2-CURIOS-REV-001..002, ED2-TALENTS-MODULAR-REV-001..002, ED2-NAMES-REV-001..019, and ED2-WEAPONS-REV-001..014 complete; batches without Lua diff have no empty commit
+Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua; Main_Modules/MENUS.lua; Main_Modules/CURIOS_Blessings_Perks.lua; Main_Modules/TALENTS_Modular.lua; Main_Modules/NAMES_Talents_Blessings.lua; Main_Modules/WEAPONS_Blessings_Perks.lua
+Safe next position: ED2-PENANCES-REV-001 at Main_Modules/PENANCES.lua / first loc_* table
 ```
 
 ## Base Gate 2026-07-18
@@ -327,12 +327,34 @@ Reason summary: `TERMINOLOGY` (`Keystone Modifier` → `鑰石修正項`) and `U
 
 Reason summary: `TERMINOLOGY` (`Kinetic Flayer`, `Steady Grip`, `Shield Plates`) and `PUNCTUATION` (fullwidth parentheses and exclamation marks). All 285 active entries were checked against the newly reread formal reference; contextual duplicate translations were preserved where the reference itself distinguishes weapon families. Common checks: table count=285; missing=0; duplicate=0; empty=0; halfwidth punctuation candidates=0; changed `zh-tw` lines=18; key sequence matches authorized base; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0; Lua syntax tool unavailable.
 
+## WEAPONS Manual Review
+
+| Batch | Units | CHANGE | KEEP | Translation commit | Safe next position |
+| --- | ---: | ---: | ---: | --- | --- |
+| ED2-WEAPONS-REV-001 | 1–15 | 1 | 14 | eb92954 | unit 16 |
+| ED2-WEAPONS-REV-002 | 16–30 | 1 | 14 | 6066ea5 | unit 31 |
+| ED2-WEAPONS-REV-003 | 31–45 | 7 | 8 | cc0013a | unit 46 |
+| ED2-WEAPONS-REV-004 | 46–60 | 6 | 9 | d1c9ca3 | unit 61 |
+| ED2-WEAPONS-REV-005 | 61–75 | 8 | 7 | d5ba143 | unit 76 |
+| ED2-WEAPONS-REV-006 | 76–90 | 5 | 10 | 47e3d2e | unit 91 |
+| ED2-WEAPONS-REV-007 | 91–105 | 2 | 13 | 2d6435b | unit 106 |
+| ED2-WEAPONS-REV-008 | 106–120 | 1 | 14 | 0fcd209 | unit 121 |
+| ED2-WEAPONS-REV-009 | 121–135 | 5 | 10 | a4b7c37 | unit 136 |
+| ED2-WEAPONS-REV-010 | 136–150 | 7 | 8 | 3456484 | unit 151 |
+| ED2-WEAPONS-REV-011 | 151–165 | 10 | 5 | 7b388c6 | unit 166 |
+| ED2-WEAPONS-REV-012 | 166–180 | 7 | 8 | 9bc208c | unit 181 |
+| ED2-WEAPONS-REV-013 | 181–195 | 2 | 13 | 4a3d53a | unit 196 |
+| ED2-WEAPONS-REV-014 | 196–197 | 0 | 2 | none | PENANCES first loc_* table |
+| **Total** | **197** | **62** | **135** |  |  |
+
+Reason summary: `TERMINOLOGY` (contextual Crit rules, Reload Speed, Weakspot Hit, Heat, Stagger), `SEMANTIC_ACCURACY` (stack generation, refresh rules, attack restrictions, caps, triggering targets), `HELPER_KEY` (corrected `Dont_intw_coher_tghn`), and `PUNCTUATION`. Common checks: table count=197; missing=0; duplicate=0; empty=0; placeholder mismatch=0; key sequence matches authorized base; the only halfwidth punctuation candidate is the intentional technical marker `BUG:`; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0; Lua syntax tool unavailable.
+
 ## Safe Next Position
 
 ```text
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Next revision batch: ED2-WEAPONS-REV-001
-File: <translation-repo>/Main_Modules/WEAPONS_Blessings_Perks.lua
+Next revision batch: ED2-PENANCES-REV-001
+File: <translation-repo>/Main_Modules/PENANCES.lua
 Start position: first loc_* table
 ```
