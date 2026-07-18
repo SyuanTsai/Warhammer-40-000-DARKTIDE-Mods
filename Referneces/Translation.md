@@ -1132,19 +1132,126 @@
 
 - Skitarius / Skitarii - 護教軍
 - Servo-Skull - 伺服頭骨
-- Noospheric Command - 心智網指令
+- Adapted Medicae Syringes - 適應型醫療注射器
+- Capacitance - 電容量
+- Chordclaw - 弦爪
 
 #### 護教軍天賦
 
 ##### 閃擊
 
+- Servo-Skull - 伺服頭骨
+- Artificer Servo-Skull - 匠師伺服頭骨
+- Medicae Servo-Skull - 醫療伺服頭骨
+- Purgator Servo-Skull - 滌罪伺服頭骨
+- Noospheric Command - 心智網指令
+- Arc Grenades - 電弧手榴彈
+- Overcharged Arc Grenades - 超載電弧手榴彈
+- Enhanced Arc Grenades - 強化電弧手榴彈
+- Integrated Refraction Emitter - 整合型艾曼納圖斯力場
+- Overcharged Refraction Emitter - 過載艾曼納圖斯力場
+- Voltaic Resistance - 電流抗性
+- Kinetic Repulsion - 動能排斥
+
 ##### 光環
+
+- Resurgence - 復甦
+- Ammunition Deposit - 彈藥存放
+- Foe-Render Creed - 碎敵信條
 
 ##### 主動技能
 
+- Voltaic Expander - 電能擴張器
+- Voltaic Emitter - 電能發射器
+- Voltaic Overcharge - 電流超載
+- Voltaic Motivator - 電能驅動
+- Voltaic Arcs - 電流弧
+- Chordclaw Strike - 弦爪重擊
+- Satiated Steel - 鋼鐵富足
+- Axial Slash - 軸向斬擊
+- Probing Strikes - 試探連擊
+- Slice and Dice - 千刀萬剮
+- Advanced Combat Doctrines - 進階戰鬥教範
+- Restoration Protocol - 修復協定
+- Writ of Ammunition Enumeration - 彈藥盤點之旨
+- Calculated Priority - 精算順序
+- Readiness Doctrines - 備戰教條
+- Piercing Sight - 洞察之眼
+- Capacitor Reclamation Loop - 電容回收迴路
+- Augmented Power-Cycle - 強化能量循環
+- Flux Conduit Build-Up - 通量導管蓄積
+- Reactor Coil Recharge - 反應爐線圈充能
+
 ##### 鑰石
 
+- Redline Capacitors - 極限電容
+- Advanced Power Management - 進階能量管理
+- Resource Optimisation Canticles - 資源最佳化聖歌
+- Capacitory Limit Override - 電容極限覆寫
+- Surge-Extension - 脈衝延伸
+- Power Overload - 能量超載
+- Critical Power Overload - 爆擊能量過載
+- Invigorating Overload - 振奮過載
+- Static Capacitor Drain - 靜電電容消耗
+- Powerdrive - 動力驅動
+- Flensing Protocols - 削切協議
+- Servo-Sinew Surge - 伺服肌腱湧動
+- Higher Purpose - 崇高意圖
+- Enhanced Capacitance Protocols - 強化電容協議
+- Honed Dissector - 熟練解剖者
+
 ##### 一般天賦
+
+- Overcharge Transfer Lattice - 過載轉移晶格
+- Retribution Conduit - 報應導管
+- Kinetic Energy Distribution - 動能分配器
+- System Shock - 系統電擊
+- Entropic Transfer - 熵能轉移
+- Weakness Analysis Doctrine - 弱點分析教義
+- Voltaic Burst - 電流爆發
+- Ablative Wards - 抗腐護符
+- Shockline Breach Protocol - 電擊破壞協定
+- Galvanized Coating - 鍍鋅精密塗層
+- Electro-Strike Conduit - 電擊打擊導管
+- Data Sensor Protocol - 數據感應協定
+- Salvation Doctrine - 救贖教範
+- Precision Combat Augurs - 精準戰鬥探測儀
+- Hybrid Combat Covenant - 混合戰鬥契約
+- Auto-Repair Doctrines - 自我修復教義
+- Power Overflow - 能量溢流
+- Sequenced Charge - 序列充能
+- Target Prioritization Psalms - 標記優先聖詩
+- Moebian Conductor - 莫比亞導體
+- Superior Defence Engrams - 卓越防禦記憶模組
+- Superior Tracking Litanies - 卓越追蹤聖歌
+- Omnissian Recharge Litany - 歐姆尼賽亞充能聖歌
+- Residual Current Buffer - 剩餘電流緩衝
+- Power Redistribution Uplink - 能量載分配鏈路
+- Binary Ballistics Protocol - 二元彈道協議
+- Threat Detection Imperative - 威脅偵測指令
+- Assassination Protocols - 暗殺協議
+- Evasive Servo Recovery - 閃避伺服恢復
+- Channelled Motive Force - 原初動力導流
+- Last Stand Relay - 絕境中繼
+- Ammo-Cell Augury - 彈藥預知
+- Galvanic Marking Array - 電流標記陣列
+- Rad-Sink - 輻射槽
+- Servo-Core Recharge Engine - 伺服核心充能引擎
+- Voltaic Restoration - 電能修復
+- Protectorate Protocol - 守護協議
+- Gunsmith - 槍械技師
+- Ammunition-Restoration Pod - 彈藥補給艙
+- Adaptive Combat Calibration - 適應性戰鬥校準
+- Progressive Plating Matrix - 漸進裝甲矩陣
+- Sureshot Cogitator Sync - 精準思算機同步
+- Ablative Motion Routines - 離格動作例程
+- Target-Neutralization Feedback - 目標殲滅回饋
+- Uncapped Arrestor - 無限抑制器
+- Force Distribution Actuators - 力量分配致動器
+- Sustained Assault Doctrine - 持續攻擊教義
+- Slaughter Protocol - 屠殺協議
+- Adaptive Combat Engram - 適應性戰鬥記憶體
+- Hydraulic Inpact - 液壓衝擊
 
 ##### 敵人 / 單位
 
@@ -1163,8 +1270,17 @@
 - Damage over Time - 持續傷害
 - Chem Toxin - 化學毒素
 - Chordclaw Bleed - 弦爪流血
+- Electric Discharge - 電能放電
+- Overload - 超載
 
 ##### 戰錘世界觀術語
+
+- Augur / Augury - 占卜儀 / 占卜
+- Cogitator - 沉思機
+- Engram - 記憶印痕
+- Motive Force - 原動力
+- Noosphere / Noospheric - 心智網
+- Omnissiah / Omnissian - 歐姆尼賽亞
 
 ### 天賦相關 (小型節點)
 
