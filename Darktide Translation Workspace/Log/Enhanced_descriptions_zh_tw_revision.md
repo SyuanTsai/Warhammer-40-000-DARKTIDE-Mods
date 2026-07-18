@@ -391,12 +391,26 @@ Reason summary: `TERMINOLOGY` (contextual Crit rules, Weakspot Hit, Burn, Powere
 
 Reason summary: `TERMINOLOGY` (`Scrier's Gaze` → `占卜者的注視`, overcharge → `超載`, Active Quelling → `主動平息`, Reload → `裝填`, Crit results → `致命一擊`, and distance unit → `公尺`), `CONSISTENCY` (Empowered Blitz wording and Peril generation), and `PUNCTUATION` (fullwidth ranges/parentheses plus numeric-table separators). Common checks: table count=79; missing=0; duplicate=0; empty=0; key sequence matches authorized base; all edited placeholders were preserved; residual scans for obsolete terms and `米` returned 0; the 10 nonstandard-brace candidates are intentional `{#color(...)}` / `{#reset()}` markup; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0; Lua syntax tool unavailable.
 
+## TALENTS_Zealot Manual Review
+
+| Batch | Units | CHANGE | KEEP | Translation commit | Safe next position |
+| --- | ---: | ---: | ---: | --- | --- |
+| ED2-ZEALOT-REV-001 | 1–15 | 7 | 8 | e2a7878 | unit 16 |
+| ED2-ZEALOT-REV-002 | 16–30 | 2 | 13 | 1ad1d18 | unit 31 |
+| ED2-ZEALOT-REV-003 | 31–45 | 3 | 12 | 9120dff | unit 46 |
+| ED2-ZEALOT-REV-004 | 46–60 | 3 | 12 | 57b4fa8 | unit 61 |
+| ED2-ZEALOT-REV-005 | 61–75 | 5 | 10 | 3ca1ae9 | unit 76 |
+| ED2-ZEALOT-REV-006 | 76–79 | 1 | 3 | 1252194 | VETERAN first loc_* table |
+| **Total** | **79** | **21** | **58** |  |  |
+
+Reason summary: `TERMINOLOGY` (Crit results → `致命一擊`, augmented → `強化版本`, and meters → `公尺`), `SEMANTIC_ACCURACY` (`Knock back` → `擊退`, `Block Break` → `格擋被擊破`, and the Wound-threshold damage clause), `UNNATURAL`, and `PUNCTUATION` (knife-replenishment dashes plus two numeric tables). Common checks: table count=79; missing=0; duplicate=0; empty=0; key sequence matches authorized base; residual scans for `米`, `爆擊命中`, obsolete Keystone terms, and halfwidth `%:` returned 0; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0; Lua syntax tool unavailable.
+
 ## Safe Next Position
 
 ```text
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Next revision batch: ED2-ZEALOT-REV-001
-File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Zealot.lua
+Next revision batch: ED2-VETERAN-REV-001
+File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Veteran.lua
 Start position: first loc_* table
 ```
