@@ -273,7 +273,7 @@ Safe next position: <next key/group>
 
 ```text
 Plan status: waiting_for_base
-Required first: confirm PR #37 is merged into upstream xss0
+Required first: user specifies an alternate base, or PR #37 is reopened and merged into upstream xss0
 Then: create Codex/Feature/Enhanced_descriptions/Revise-zh-tw
 Provisional inventory: completed 2026-07-18 20:51:34 +08:00 against PR head 6e043fa
 First task after merge: refresh upstream/xss0 and rerun final Phase A inventory
@@ -289,3 +289,12 @@ Safe next position: first active localization entry
 - 已依允許範圍完成 PR head 的唯讀暫定盤點；詳細統計見 `Log/Enhanced_descriptions_zh_tw_revision.md`。
 - 暫定結果：missing `zh-tw`=0、duplicate=0、empty=0、註解正規化後 placeholder mismatch=0；MENUS 官方 localization fallback `SKIP`=8。
 - PR 合併後必須重新 fetch 並重跑 Phase A；暫定盤點不可取代最終基準盤點。
+
+### 12.2 基準閘門重查（2026-07-18）
+
+- 檢查時間：`2026-07-18 21:47:45 +08:00`。
+- PR #37 狀態已變為 `CLOSED`，但 `mergedAt=null`、`mergeCommit=null`；base=`xss0`，head=`Added-Traditional-Chinese`。
+- 唯讀 fetch 後 `upstream/xss0` 仍為 `7deedb3`；第一階段 head `6e043fa` 不是其 ancestor，15 個目標 Lua 檔仍有第一階段差異。
+- remote 所有權符合安全規則：`origin`=`SyuanTsai/Warhammer-40-000-DARKTIDE-Enhanced_Descriptions`；`upstream`=`xsSplater/Darktide_Enhanced_Descriptions_BETA`。
+- 決策：維持 `waiting_for_base`；未建立第二階段分支，未修改或提交 Lua，也未對第三方 repository 執行任何寫入。
+- 需要使用者指定替代基準，或先讓 PR #37 重新開啟並合併；之後才能重跑最終 Phase A 並開始 `ED2-ROOT-REV-001`。

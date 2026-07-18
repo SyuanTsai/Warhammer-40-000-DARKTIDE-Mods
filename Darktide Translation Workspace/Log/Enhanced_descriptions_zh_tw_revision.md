@@ -6,10 +6,10 @@
 Plan: Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan_2.md
 AI handler: codex
 Status: waiting_for_base
-Required first: merge PR #37 into upstream xss0
+Required first: user specifies an alternate base, or PR #37 is reopened and merged into upstream xss0
 Work branch: not created
 Translation Lua changes: none
-Safe next position: re-confirm PR #37 merged, fetch upstream/xss0, create revision branch, rerun final Phase A inventory
+Safe next position: after base decision, fetch the selected base, create revision branch, rerun final Phase A inventory
 ```
 
 ## Base Gate 2026-07-18
@@ -21,6 +21,17 @@ Safe next position: re-confirm PR #37 merged, fetch upstream/xss0, create revisi
 - PR head / local clean worktree: `6e043fa`
 - Ancestry: `upstream/xss0` is an ancestor of PR head, so PR head was used only as the expected post-merge snapshot for a provisional read-only inventory.
 - Decision: keep `waiting_for_base`; do not create `Codex/Feature/Enhanced_descriptions/Revise-zh-tw`; do not create second-stage Lua commits.
+
+## Base Gate Recheck 2026-07-18
+
+- Checked at: `2026-07-18 21:47:45 +08:00`
+- Remote ownership: `origin`=`SyuanTsai/Warhammer-40-000-DARKTIDE-Enhanced_Descriptions`; `upstream`=`xsSplater/Darktide_Enhanced_Descriptions_BETA`
+- PR state: `CLOSED`; `mergedAt=null`; `mergeCommit=null`; base=`xss0`; head=`Added-Traditional-Chinese`
+- Latest fetched `upstream/xss0`: `7deedb3`
+- First-stage head / local clean worktree: `6e043fa`
+- Ancestry: `6e043fa` is not an ancestor of `upstream/xss0`; all 15 target Lua files still differ from the upstream base.
+- Decision: keep `waiting_for_base`; do not create the revision branch or second-stage Lua commits.
+- Decision needed: user specifies an alternate base, or PR #37 is reopened and merged into `upstream/xss0`.
 
 ## Provisional Phase A Inventory
 
@@ -72,8 +83,8 @@ Checks:
 ## Safe Next Position
 
 ```text
-Required first: confirm PR #37 merged into upstream xss0
-Then: fetch upstream and record final base commit
+Required first: user specifies an alternate base, or PR #37 is reopened and merged into upstream xss0
+Then: fetch the selected base and record its final commit
 Then: create Codex/Feature/Enhanced_descriptions/Revise-zh-tw
 Then: rerun final Phase A inventory
 First revision batch after final inventory: ED2-ROOT-REV-001
