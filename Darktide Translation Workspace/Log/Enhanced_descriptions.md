@@ -1411,6 +1411,19 @@ Checks: active `zh-tw` count increased 75 to 90; placeholders and display functi
 Translation repo commit: `25406d1`
 Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_melee_cleave_and_impact_desc`
 
+Batch: ED-SKITARII-TW-007
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`
+Start position: `loc_talent_cryptic_melee_cleave_and_impact_desc`
+Scope: final 11 active localization tables
+Completed: 11
+Changed zh-tw: 11 added; one misplaced duplicate from ED-SKITARII-TW-001 relocated to its correct table
+Term candidates: none
+Blocked: none
+Checks: active tables=101; active `zh-tw`=101; duplicate/empty active `zh-tw`=0; placeholder mismatch=0 after comment-normalized comparison; diff check passed; diff scope limited to Skitarii Lua; Lua syntax tool unavailable
+Translation repo commit: `cbaaaf6`
+Safe next position: final cross-file quality pass
+
 ## Blocked
 
 - none
