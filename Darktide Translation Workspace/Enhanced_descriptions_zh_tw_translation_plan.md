@@ -112,8 +112,9 @@ Safe next position: <next line/key/group>
 | 12 | ED-OGRYN | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Ogryn.lua` | 88 keys | 6 |
 | 13 | ED-ARBITES | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Arbites.lua` | 83 keys | 6 |
 | 14 | ED-SCUM | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua` | 99 keys | 7 |
+| 15 | ED-SKITARIUS | `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarius.lua` | TBD; verify source path in `<translation-repo>` before batch | TBD |
 
-總估計：至少 109 批。`COLORS_KWords_tw.lua` 的實際名詞數高於群組數，實作時以每個詞彙 key-value 為準。
+總估計：至少 109 批，另加 ED-SKITARIUS 的待確認批次。`COLORS_KWords_tw.lua` 的實際名詞數高於群組數，實作時以每個詞彙 key-value 為準。
 
 ## 3. 每批流程
 
@@ -206,12 +207,13 @@ Safe next position: <next line/key/group>
 
 處理順序：
 
-1. `TALENTS_Psyker.lua` - skip for now per user request on 2026-07-15
+1. `TALENTS_Psyker.lua` - re-added to work list per user request on 2026-07-18
 2. `TALENTS_Zealot.lua`
 3. `TALENTS_Veteran.lua`
 4. `TALENTS_Ogryn.lua`
 5. `TALENTS_Arbites.lua`
 6. `TALENTS_Scum.lua`
+7. `TALENTS_Skitarius.lua` - verify source path in `<translation-repo>` before batch; not present in the 2026-07-18 workspace mirror
 
 每批 15 個 talent description table。若同一職業的技能名、光環、關鍵石、閃擊互相引用，優先把名稱表中的譯名固定，再處理描述。
 
@@ -262,13 +264,14 @@ Enhanced_descriptions 視為完成時需滿足：
 
 ## 9. 下一步
 
-截至 2026-07-16，除使用者要求跳過的 PSYKER 外，目前 Enhanced_descriptions talent class sequence 已完成，無下一批：
+截至 2026-07-18，PSYKER 已依使用者要求重新加入工作清單；Skitarius 也加入待處理清單，但執行前必須先在 `<translation-repo>` 重新掃描並確認是否存在 `Main_Modules/TALENTS/TALENTS_Skitarius.lua` 或新的對應來源檔。
 
 ```text
-File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua
-Completed through: `loc_talent_buff_cooldown_on_ranged_kills`
-Skipped by request: <translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua
-Safe next position target: none
+Next file: <translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua
+Start position: `loc_ability_psyker_smite_description_new`
+Scope: 15 talent description tables
+Queued after PSYKER: ED-SKITARIUS, source path pending verification in `<translation-repo>`
+Previous completed file: <translation-repo>/Main_Modules/TALENTS/TALENTS_Scum.lua through `loc_talent_buff_cooldown_on_ranged_kills`
 ```
 
-最新執行狀態：ED-SCUM-TW-007 已完成審核；最後一個 translation repo commit 仍為 `fc1a8b1`，因最後 9 個 active localization tables 已符合詞彙與 placeholder 要求，無 Lua 變更可提交。`Main_Modules/TALENTS/TALENTS_Scum.lua` active table 序列已完成；PSYKER 依使用者要求跳過。
+最新執行狀態：ED-SCUM-TW-007 已完成審核；最後一個 translation repo commit 仍為 `fc1a8b1`，因最後 9 個 active localization tables 已符合詞彙與 placeholder 要求，無 Lua 變更可提交。`Main_Modules/TALENTS/TALENTS_Scum.lua` active table 序列已完成；下一輪改由 PSYKER 開始，之後處理 Skitarius 待確認來源。
