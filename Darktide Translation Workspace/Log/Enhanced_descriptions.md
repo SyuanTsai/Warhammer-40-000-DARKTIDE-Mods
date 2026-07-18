@@ -1398,6 +1398,19 @@ Checks: active `zh-tw` count increased 60 to 75; placeholders and display functi
 Translation repo commit: `7b81ca1`
 Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_crits_grant_tdr_desc`
 
+Batch: ED-SKITARII-TW-006
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Skitarii.lua`
+Start position: `loc_talent_cryptic_crits_grant_tdr_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 15 added
+Term candidates: none
+Blocked: none
+Checks: active `zh-tw` count increased 75 to 90; placeholders and display functions preserved; glossary/local usage checked for Critical Hits, Toughness Damage Reduction, Ogryn, Monstrosity, Captain, Stamina, Combat Ability, Weakspot, Coherency, and Stun; diff check passed; diff scope limited to Skitarii Lua; Lua syntax tool unavailable
+Translation repo commit: `25406d1`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_melee_cleave_and_impact_desc`
+
 ## Blocked
 
 - none
