@@ -1318,6 +1318,19 @@ Checks: duplicate/empty active `zh-tw`=0; placeholders preserved; restored missi
 Translation repo commit: `100cc6d`
 Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_alternative_peril_explosion_new_desc`
 
+Batch: ED-PSYKER-TW-006
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Start position: `loc_talent_psyker_alternative_peril_explosion_new_desc`
+Scope: final 4 active localization tables
+Completed: 4
+Changed zh-tw: 3
+Term candidates: none
+Blocked: none
+Checks: active tables=79; active `zh-tw`=79; duplicate/empty active `zh-tw`=0; corrected corrupted overload sentence, shield typo, and missing CNumb wrapper; known bad-text scan found no target-language hits; diff check passed; Lua syntax tool unavailable
+Translation repo commit: `980c10c`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua:loc_talent_cryptic_servo_skull_base_burn_desc`
+
 ## Blocked
 
 - none
