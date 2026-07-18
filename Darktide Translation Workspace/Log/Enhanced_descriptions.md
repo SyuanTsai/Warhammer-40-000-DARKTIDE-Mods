@@ -1292,6 +1292,19 @@ Checks: duplicate/empty active `zh-tw`=0; placeholders and display functions pre
 Translation repo commit: `85db8ca`
 Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_toughness_on_warp_kill_desc`
 
+Batch: ED-PSYKER-TW-004
+AI handler: codex
+File: `<translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua`
+Start position: `loc_talent_psyker_toughness_on_warp_kill_desc`
+Scope: 15 active localization tables
+Completed: 15
+Changed zh-tw: 10
+Term candidates: none
+Blocked: none
+Checks: duplicate/empty active `zh-tw`=0; placeholders and display functions preserved; corrected critical/weakspot triggers, damage direction, enemy names, CNumb arguments, typos, and missing display wrappers; diff check passed; diff scope limited to Psyker Lua; Lua syntax tool unavailable
+Translation repo commit: `6787469`
+Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua:loc_talent_psyker_melee_weaving_desc`
+
 ## Blocked
 
 - none
