@@ -320,4 +320,6 @@ Safe next position: ED2-MENUS-REV-001 at first loc_* table
 - MENUS blocked：`loc_item_weapon_rarity_6` 缺官方英文顯示文字（`Sainted` 僅屬社群推測）；`loc_weapon_stats_display_dodge_distance` 的來源英文亦為空。兩者保留現有語意正確的繁中，待官方原文可用時再決策。
 - `Main_Modules/CURIOS_Blessings_Perks.lua` 已完成 2 批人工審閱：`Reviewed`=22、`CHANGE`=2、`KEEP`=20、`ADD/SKIP/BLOCKED`=0；translation commit=`63ba3f7`。
 - CURIOS 最終 QA：tables=22、missing=0、duplicate=0、empty=0、placeholder mismatch=0，且 key sequence 與 `6e043fa` 一致；`git diff --check` 通過。
-- Safe next position：`ED2-TALENTS-MODULAR-REV-001`，`Main_Modules/TALENTS_Modular.lua` 的第一個 `loc_*` table。
+- `Main_Modules/TALENTS_Modular.lua` 已完成 2 批人工審閱：`Reviewed`=29、`CHANGE`=2、`KEEP`=27、`ADD/SKIP/BLOCKED`=0；translation commits=`07341eb`、`8cd4663`。
+- TALENTS_Modular 最終 QA：tables=29、missing=0、duplicate=0、empty=0、placeholder mismatch=0，且 key sequence 與 `6e043fa` 一致；`git diff --check` 通過。
+- Safe next position：`ED2-NAMES-REV-001`，`Main_Modules/NAMES_Talents_Blessings.lua` 的第一個 `loc_*` table。

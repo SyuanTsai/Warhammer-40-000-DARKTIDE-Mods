@@ -8,9 +8,9 @@ AI handler: codex
 Status: in_progress
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Translation Lua changes: ED2-ROOT-REV-001..007, ED2-COLORS-REV-001..022, ED2-MENUS-REV-001..006, and ED2-CURIOS-REV-001..002 complete; batches without Lua diff have no empty commit
-Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua; Main_Modules/MENUS.lua; Main_Modules/CURIOS_Blessings_Perks.lua
-Safe next position: ED2-TALENTS-MODULAR-REV-001 at Main_Modules/TALENTS_Modular.lua / first loc_* table
+Translation Lua changes: ED2-ROOT-REV-001..007, ED2-COLORS-REV-001..022, ED2-MENUS-REV-001..006, ED2-CURIOS-REV-001..002, and ED2-TALENTS-MODULAR-REV-001..002 complete; batches without Lua diff have no empty commit
+Completed files: Enhanced_descriptions_localization.lua; Colors_Keywords_Numbers/COLORS_KWords_tw.lua; Main_Modules/MENUS.lua; Main_Modules/CURIOS_Blessings_Perks.lua; Main_Modules/TALENTS_Modular.lua
+Safe next position: ED2-NAMES-REV-001 at Main_Modules/NAMES_Talents_Blessings.lua / first loc_* table
 ```
 
 ## Base Gate 2026-07-18
@@ -282,12 +282,22 @@ Blocked queue:
 
 Reason summary: `UNNATURAL` (removed duplicated “cooldown regeneration” semantics) and `OVERTRANSLATION` (removed the parenthetical “money” gloss from Ordo Dockets). Common checks: table count=22; missing=0; duplicate=0; empty=0; placeholder mismatch=0; key sequence matches authorized base; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0.
 
+## TALENTS_Modular Manual Review
+
+| Batch | Units | CHANGE | KEEP | Translation commit | Safe next position |
+| --- | ---: | ---: | ---: | --- | --- |
+| ED2-TALENTS-MODULAR-REV-001 | 1–15 | 1 | 14 | 07341eb | unit 16 |
+| ED2-TALENTS-MODULAR-REV-002 | 16–29 | 1 | 13 | 8cd4663 | NAMES first loc_* table |
+| **Total** | **29** | **2** | **27** |  |  |
+
+Reason summary: `TERMINOLOGY` (`Keystone Modifier` → `鑰石修正項`) and `UNNATURAL` (`Peril Generation` → `反噬累積`). Common checks: table count=29; missing=0; duplicate=0; empty=0; placeholder mismatch=0; key sequence matches authorized base; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0.
+
 ## Safe Next Position
 
 ```text
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Next revision batch: ED2-TALENTS-MODULAR-REV-001
-File: <translation-repo>/Main_Modules/TALENTS_Modular.lua
+Next revision batch: ED2-NAMES-REV-001
+File: <translation-repo>/Main_Modules/NAMES_Talents_Blessings.lua
 Start position: first loc_* table
 ```
