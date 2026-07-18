@@ -377,12 +377,26 @@ Reason summary: `TERMINOLOGY` (contextual Crit rules, Reload Speed, Weakspot Hit
 
 Reason summary: `TERMINOLOGY` (contextual Crit rules, Weakspot Hit, Burn, Powered Attacks, Warp, and formal `Keystone` → `鑰石`), `SEMANTIC_ACCURACY` (single-Mission and ranged-enemy constraints), and `PUNCTUATION` (fullwidth parentheses, exclamation marks, and ellipsis). The formal Keystone rule was discovered in batch 19 and applied retrospectively to 15 earlier entries plus 6 current-batch entries; the table attributes the shared commit to each affected batch. Common checks: table count=288; missing=0; duplicate=0; empty=0; placeholder mismatch=0; halfwidth punctuation candidates=0; key sequence matches authorized base; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0; Lua syntax tool unavailable.
 
+## TALENTS_Psyker Manual Review
+
+| Batch | Units | CHANGE | KEEP | Translation commit | Safe next position |
+| --- | ---: | ---: | ---: | --- | --- |
+| ED2-PSYKER-REV-001 | 1–15 | 4 | 11 | 6ad3f55 | unit 16 |
+| ED2-PSYKER-REV-002 | 16–30 | 6 | 9 | 537ba56 | unit 31 |
+| ED2-PSYKER-REV-003 | 31–45 | 2 | 13 | 14b60f6 | unit 46 |
+| ED2-PSYKER-REV-004 | 46–60 | 4 | 11 | 92ff9b4 | unit 61 |
+| ED2-PSYKER-REV-005 | 61–75 | 5 | 10 | c260005 | unit 76 |
+| ED2-PSYKER-REV-006 | 76–79 | 2 | 2 | 8023ed5 | ZEALOT first loc_* table |
+| **Total** | **79** | **23** | **56** |  |  |
+
+Reason summary: `TERMINOLOGY` (`Scrier's Gaze` → `占卜者的注視`, overcharge → `超載`, Active Quelling → `主動平息`, Reload → `裝填`, Crit results → `致命一擊`, and distance unit → `公尺`), `CONSISTENCY` (Empowered Blitz wording and Peril generation), and `PUNCTUATION` (fullwidth ranges/parentheses plus numeric-table separators). Common checks: table count=79; missing=0; duplicate=0; empty=0; key sequence matches authorized base; all edited placeholders were preserved; residual scans for obsolete terms and `米` returned 0; the 10 nonstandard-brace candidates are intentional `{#color(...)}` / `{#reset()}` markup; `git diff --check` passed; `ADD/SKIP/BLOCKED`=0; Lua syntax tool unavailable.
+
 ## Safe Next Position
 
 ```text
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa
 Work branch: Codex/Feature/Enhanced_descriptions/Revise-zh-tw
-Next revision batch: ED2-PSYKER-REV-001
-File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Psyker.lua
+Next revision batch: ED2-ZEALOT-REV-001
+File: <translation-repo>/Main_Modules/TALENTS/TALENTS_Zealot.lua
 Start position: first loc_* table
 ```
