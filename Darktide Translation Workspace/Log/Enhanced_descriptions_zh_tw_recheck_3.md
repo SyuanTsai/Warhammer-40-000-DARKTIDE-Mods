@@ -2739,3 +2739,16 @@ Current manifest progress: `1,508 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 110`, 
 - Safe next position: full-file QA for `Main_Modules/TALENTS/TALENTS_Zealot.lua`; unit review must not resume until this correction is checkpointed.
 
 Current manifest progress remains `1,508 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 110`, `KEEP 1,332`, `SKIP 62`, `BLOCKED 3`).
+
+### TALENTS_Zealot full-file QA checkpoint
+
+- Full-file verifier: current / manifest / queue units `79 / 79 / 79`; AI-rechecked `79`; missing or stale units `0`; zh-tw hash mismatches `0`; queue/manifest mismatches `0`.
+- Final file results: `CHANGE 20`, `KEEP 59`; `BLOCKED 0`.
+- Source and placeholder status: `79 match`; incomplete sources `0`.
+- Formal zh-tw lookup gate: total calls `3,403` (`CKWord 1,898`, `CNumb 1,235`, `CPhrs 193`, `CNote 77`); unresolved calls `0`; unresolved source definitions `0`.
+- Auxiliary cross-locale runtime diagnostic remains read-only: `25` unresolved non-target calls, all recorded as `BASELINE_NON_ZHTW`; no non-zh-tw content was changed.
+- The entire Zealot diff was manually reread and contains only active zh-tw localization content. The full Plan 3 base-to-live scope audit remained at out-of-scope changed lines `0`; `git diff --check` passed.
+- Translation commit: `cca607c` (`fix(zh-tw): complete zealot talents recheck`), containing only `Main_Modules/TALENTS/TALENTS_Zealot.lua`; the pre-existing staged Ogryn and Scum changes remained outside this commit.
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Veteran.lua` unit `1` (`ED3-VETERAN-RECHECK-001`).
+
+Current manifest progress remains `1,508 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 110`, `KEEP 1,332`, `SKIP 62`, `BLOCKED 3`).
