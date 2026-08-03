@@ -1,0 +1,669 @@
+# Enhanced Descriptions zh-tw Recheck 3 Log
+
+Status: `in_progress`
+
+AI handler: `codex`
+
+Plan: `Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan_3.md`
+
+## Locked execution context
+
+- Translation repository: `F:/GitFile/Persion - Games/Darktide-Mod Enhanced Descriptions`
+- Work branch: `codex/feature/enhanced-descriptions/recheck-zh-tw-v3`
+- Authorized base: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- `origin/Added-Traditional-Chinese`: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- `upstream/xss0`: `7deedb307651faeabe7d64e59c20fc02a6ad0682`
+- Origin owner: `SyuanTsai`
+- Upstream owner: `xsSplater` (read-only)
+- Git identity: `SyuanTsai <carsun00@gmail.com>`
+- Glossary commit: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1`
+- Glossary SHA-256: `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- Historical Review comparison base: `6b4dde9`
+- Remote policy: local commits only; no push, PR, or third-party write.
+
+The user invoked Plan 3 after the glossary correction commit, so the locked glossary above is the recognized formal reference for this run.
+
+## Phase A — baseline and complete manifest
+
+Initial inventory generated: `2026-08-03T17:27:53+08:00`
+
+The manifest was generated with every row initialized to `ai_rechecked=no`; no script assigned `KEEP` or any other AI result.
+
+| File | Review units | Active zh-tw | Fallback | Baseline SHA-256 |
+| --- | ---: | ---: | ---: | --- |
+| `Enhanced_descriptions_localization.lua` | 93 | 93 | 0 | `D38613039A67FB97DB7635988E0B693EFAB42674417909D50D34AD05834A96E3` |
+| `Colors_Keywords_Numbers/COLORS_KWords_tw.lua` | 356 | 356 | 0 | `8A142183DF33552C2EDF40A72C85B013593649228C40FCA6706F5095800209C7` |
+| `Main_Modules/MENUS.lua` | 79 | 71 | 8 | `952D5999DCB16E5A1929FDEB2E5CB613669D82CE8B3FD024C121F9256EB19172` |
+| `Main_Modules/CURIOS_Blessings_Perks.lua` | 22 | 22 | 0 | `96DEF9A6001DFBA978828A9CC35698236EC523F9E95FEF0EE7572154C3287DF4` |
+| `Main_Modules/TALENTS_Modular.lua` | 29 | 29 | 0 | `19F91AA0D895393BE1AFB367EEB2974FE4D89ED7F84180454CB55430371724AD` |
+| `Main_Modules/NAMES_Talents_Blessings.lua` | 285 | 285 | 0 | `DEC0FC8D293C5E02175577CF27DF09B469F810DCF59549C9623079B3E5298E37` |
+| `Main_Modules/WEAPONS_Blessings_Perks.lua` | 197 | 197 | 0 | `8B99FA547226D9C9D64CDCCC83099063C42485BFADCE1DC3F02EEE606CEB4B70` |
+| `Main_Modules/PENANCES.lua` | 288 | 288 | 0 | `6903CB12B0EE8A0973D9C7965126A64582EB31357E38AD8B6AB12553B55D8004` |
+| `Main_Modules/TALENTS/TALENTS_Psyker.lua` | 79 | 79 | 0 | `F32309DD17CBA82A05DE80BCCCD8026FD9E054A46A0DCAEB7B79E8A949554CF0` |
+| `Main_Modules/TALENTS/TALENTS_Zealot.lua` | 79 | 79 | 0 | `251B2634FA69C1D1ED595A857D7BBD83EC5CB86DBEE7FFCF4EB43897CC24F170` |
+| `Main_Modules/TALENTS/TALENTS_Veteran.lua` | 75 | 75 | 0 | `D9879AAAC80E93DA31EB64499C30F8859F3C66D2A08069998D14D6AABF8A6E56` |
+| `Main_Modules/TALENTS/TALENTS_Ogryn.lua` | 88 | 88 | 0 | `7089EC2984377B65B15D975F6E05DF827D1F88669FDDD3CC6394C6E260AC8E6F` |
+| `Main_Modules/TALENTS/TALENTS_Arbites.lua` | 83 | 83 | 0 | `BD3D12220FDDB9D505A027428AFC28766FC5837A34C0E7DA3574F0EB48AB9F62` |
+| `Main_Modules/TALENTS/TALENTS_Scum.lua` | 99 | 99 | 0 | `569CCB73EB98E49BC193118E760FAA012C9EBF65DAE111246BC0465414C734DC` |
+| `Main_Modules/TALENTS/TALENTS_Skitarii.lua` | 101 | 101 | 0 | `EF587EA0DBFCC6785E0BED352CB6D94C44553B96A18CD4EF094FE2380D1F45B4` |
+| **Total** | **1,953** | **1,945** | **8** |  |
+
+Initial structural scan:
+
+- Formal manifest total: `1,953`
+- `REVIEW_TOUCHED`: `116`
+- `ai_rechecked=yes`: `0`
+- Empty source/zh-tw hashes: `0`
+- Comment-normalized placeholder multiset mismatch: `0`
+- Duplicate case-sensitive unit identifiers: `0`
+- Case-insensitive diagnostic collisions: `4` (`Assail/assail`, `Momentum/momentum`, `Psy_Mark/Psy_mark`, `Smite/smite`); these remain distinct Lua identifiers and are not duplicate manifest keys.
+- Documented official-localization fallbacks: `8`, all in `Main_Modules/MENUS.lua`.
+- Manifest key order and unit numbering are the Phase A sequence authority.
+
+`BASELINE_NON_ZHTW` observations in `6b4dde9..95cbb81` (tracking only; not modified by this run):
+
+- `Main_Modules/MENUS.lua`: Russian comment cleanup.
+- `Main_Modules/TALENTS/TALENTS_Arbites.lua`: English `max_cooldown` placeholder correction.
+- `Main_Modules/TALENTS/TALENTS_Skitarii.lua`: comment typo `Hydraulic Inpact` → `Hydraulic Impact`.
+
+## Phase B — lookup dependency closure
+
+Initial extraction from all active zh-tw expressions:
+
+- Total helper calls: `3,401`
+- `CKWord`: `1,897` calls / `267` unique keys
+- `CNumb`: `1,234` calls / `210` unique keys
+- `CPhrs`: `191` calls / `25` unique keys
+- `CNote`: `79` calls / `7` unique keys
+- Available keyword definitions: `273`
+- Available phrase definitions: `23`
+- Available note definitions: `6`
+- Available number keys: `275`
+- Initial unresolved active zh-tw calls: `10`, all in `Main_Modules/WEAPONS_Blessings_Perks.lua`
+
+Resolved in the working tree before Phase C:
+
+| Count | Problem | Resolution | Reason |
+| ---: | --- | --- | --- |
+| 2 | Missing `CPhrs("Gen_mult_stacks_n_refr")` | Compose existing `Can_gen_mult` and `Can_be_refr` phrases | `LOOKUP_MISSING` |
+| 2 | Missing `CNote("Hit_Mass_note")` appended to already-complete zh-tw descriptions | Remove redundant unresolved note call | `LOOKUP_MISSING` |
+| 5 | Stale typo `Dont_intw_coher_tghn` | Use defined `Dont_intw_coher_toughn` | `LOOKUP_MISSING` |
+| 1 | Stale number color key `n_04_rgb` | Use defined `n_0_4_rgb` | `LOOKUP_MISSING` |
+
+Only `zh-tw` expressions were changed. Identical stale references in English, Russian, zh-cn, or other languages are outside Plan 3 modification scope and remain baseline observations.
+
+The source table also contains 20 currently unused zh-tw keyword definitions. They are not active unresolved calls and will be individually AI-reviewed with the other `COLORS_KWords_tw.lua` units rather than automatically classified.
+
+Post-fix lookup rescan:
+
+- Active zh-tw helper calls: `3,401`
+- `CKWord`: `1,897` calls / `267` unique keys
+- `CNumb`: `1,234` calls / `210` unique keys
+- `CPhrs`: `193` calls / `23` unique keys
+- `CNote`: `77` calls / `6` unique keys
+- Unresolved active zh-tw calls: `0`
+- The 20 source-less, currently unused definitions remain queued for individual COLORS review; they are not active lookup failures.
+- Phase B structural lookup closure: complete.
+- Display-text ↔ lookup-key semantic equivalence remains an explicit check on every Phase C localization unit and is not inferred from this structural pass.
+
+## Batch log
+
+### ED3-COLORS-RECHECK-001
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `1–15`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `11`
+- SKIP: `4` (`keyword_group_structure` container rows; all contained source/zh-tw values were still read and checked)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `3`; reconciled: `3`
+- GLOSSARY_HIT: `14`; mismatch: `0`
+- Lookup checks: all 11 keyword definitions resolve; all unique zh-tw display-text/key pairs are semantically matched.
+- `Heat_diss`: source-less table extension resolved against the complete English use at `Main_Modules/WEAPONS_Blessings_Perks.lua:1644`; `Heat dissipation` ↔ `熱能消散` is correct.
+- `Flamer`: verified against its only current zh-tw use, the Skitarii Servo-Skull weapon; `淨化噴火器` is the applicable glossary sense, not enemy `火焰兵`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-002, COLORS units 16–30`
+
+### ED3-COLORS-RECHECK-002
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `16–30`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `12`
+- SKIP: `3` (`keyword_group_structure` container rows)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `2`; reconciled: `2`
+- GLOSSARY_HIT: `14`; mismatch: `0`
+- Lookup checks: all active definitions resolve; unused `Cmbt_abil_cd` and `Corrupted` were still checked and are semantically correct.
+- `Cleaving`: both current display forms (`順劈攻擊`, `順劈命中`) were checked in their complete sentences and remain semantically aligned with the key.
+- `Ability`: resolved against the complete Skitarii English use at line 878; generic `Ability` ↔ `技能` remains distinct from formal `Combat Ability` ↔ `戰鬥技能`.
+- `Corruption_res`: resolved against both Curio English uses; `Corruption Resistance` ↔ `腐敗抗性` is correct.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-003, COLORS units 31–45`
+
+### ED3-COLORS-RECHECK-003
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `31–45`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `14`
+- SKIP: `1` (`keyword_group_structure` container row)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `5`; reconciled: `5`
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- Lookup checks: all active Crit-family definitions resolve; the unused `Crt_hit_col` definition was still semantically checked.
+- Source-less extensions `Crit_k`, `Crit_m_chance`, `Crit_r_chance`, `Crit_hit_m_dmg`, and `Crit_hit_r_dmg` were each resolved against their complete English weapon-description uses.
+- Context rule verified: attack results use `致命一擊`, plural/general events use `暴擊`, chance attributes use `爆擊率`, and damage attributes use `暴擊傷害`.
+- The three actual displays of generic `Critical` (`致命一擊`, `致命`, `暴擊`) were checked in complete sentences and are contextually valid.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-004, COLORS units 46–60`
+
+### ED3-COLORS-RECHECK-004
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `46–60`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `1` (`TERMINOLOGY`: `Warp-Damage` `亞空間傷害` → `靈能傷害`)
+- KEEP: `13`
+- SKIP: `1` (`keyword_group_structure` container row)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `6`; reconciled: `6`
+- GLOSSARY_HIT: `15`; mismatch: `1` found and corrected
+- Lookup checks: all definitions resolve; `Damage_res` and `Damage_r` were resolved against all complete Curio/weapon English uses.
+- `Warp-Damage`: the locked glossary entry uses the legacy spelling `Damage wrap` but explicitly fixes its zh-tw as `靈能傷害`; this remains distinct from `Warp attack` ↔ `亞空間攻擊`.
+- Linked display correction: the sole current use in `Main_Modules/TALENTS/TALENTS_Psyker.lua` unit 58 was changed to `靈能傷害`; that unit remains `ai_rechecked=no` until its own Phase C batch, and its current hash was refreshed without assigning a result.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-005, COLORS units 61–75`
+
+### ED3-COLORS-RECHECK-005
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `61–75`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `12`
+- SKIP: `3` (`keyword_group_structure` container rows)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `6`; reconciled: `6`
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- Lookup checks: all definitions and unique display pairs resolve and match.
+- `Damagewrp_a`: resolved from the full Penance English use `Warp attacks`; `亞空間攻擊` matches the formal glossary and remains distinct from the corrected `Warp-Damage／靈能傷害`.
+- `Electrocuting`: corrected-spelling zh-tw extension resolved from the full Skitarii English use; the source's legacy misspelled `Electrcuting` alias is also preserved and valid.
+- `Finesse` displays `靈巧` or the contextual compound `靈巧威力`; `Health` displays `生命值` or grammatical `生命`. All remain semantically aligned.
+- English-only uppercase `HEALTH` has no active zh-tw lookup use; no missing active definition was introduced.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-006, COLORS units 76–90`
+
+### ED3-COLORS-RECHECK-006
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `76–90`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `10`
+- SKIP: `5` (`keyword_group_structure` container rows)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `12`; mismatch: `0`
+- Lookup checks: all active definitions and display pairs resolve and match; unused `Perils` and `Power` definitions were still checked.
+- `Health_m`: resolved from both complete Curio `Maximum Health` uses; `最大生命值` is correct.
+- `Wound / Wounds`: `傷痕` is consistent across active uses but absent from the formal glossary, so a candidate row was added to `Term Candidates.md` without changing the formal glossary.
+- `Strength`: not an exact glossary entry, but all actual Enhanced Descriptions uses denote the same weapon `威力` property; no semantic drift found.
+- Source-side `Cartel_Stimm` is defined in a later zh-tw group and its active display resolves; no active definition is missing.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-007, COLORS units 91–105`
+
+### ED3-COLORS-RECHECK-007
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `91–105`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `12`
+- SKIP: `3` (`keyword_group_structure` container rows)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `4`; reconciled: `4`
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- Lookup checks: all active Rending, Soulblaze, Stagger/Stun, and Stamina definitions/display pairs resolve and match.
+- `Stagger2`: resolved against the complete weapon English `Stagger effect/strength` use; `踉蹌效果` is accurate.
+- `Staggered`: both `踉蹌` and grammatical `踉蹌中` displays were checked in full sentences.
+- `Soulblaze`: the formal glossary contains both `靈魂之火` and a conflicting stray `靈能之火`; the Psyker-specific formal entry and existing active uses consistently support `靈魂之火`, which was retained and documented rather than changing the glossary.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-008, COLORS units 106–120`
+
+### ED3-COLORS-RECHECK-008
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `106–120`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0` in this manifest range; `4` linked future localization units corrected
+- KEEP: `13`
+- SKIP: `2` (`keyword_group_structure` container rows)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `2`; reconciled: `2`
+- GLOSSARY_HIT: `15`; linked mismatch: `4` found and corrected
+- Lookup checks: all Stamina, Toughness/TDR, and Weakspot definitions resolve.
+- Source-less `Stamina_m`, `Stamina_se`, `Toughness_m`, and `Toughness_rs` definitions were resolved against their complete English Curio/weapon uses.
+- Reverse-use audit found three `Tghns_dmg_red` displays still using `韌性傷害減免` and one table label displaying raw `TDR`; all four were standardized to formal `韌性減傷`.
+- Linked corrections are in Psyker unit 65 and Ogryn units 25, 62, and 85. They remain `ai_rechecked=no` until their own Phase C batches; hashes were refreshed without assigning results.
+- `Weak Spot／Weakspot` displays `弱點`, `弱點部位`, `弱點命中`, or `命中弱點` according to sentence grammar; all are semantically aligned.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-009, COLORS units 121–135`
+
+### ED3-COLORS-RECHECK-009
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `121–135`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `12`
+- SKIP: `3` (`keyword_group_structure` container rows)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `3`; reconciled: `3`
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- Lookup checks: all Weakspot extensions, Psyker/Ogryn class keys, Precision, and Celerity Stimm definitions resolve and match.
+- `Weakspot_m_dmg`, `Weakspot_r_dmg`, and `Weakspot_k_dmg` were resolved against all complete weapon/Veteran English uses; near/far qualifiers are preserved either inside the colored phrase or immediately before it.
+- Unused plural/possessive Psyker definitions were still read and verified.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-010, COLORS units 136–150`
+
+### ED3-COLORS-RECHECK-010
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `136–150`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `11`
+- SKIP: `4` (`keyword_group_structure` container rows)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `5`; reconciled: `5`
+- GLOSSARY_HIT: `14`; mismatch: `0`
+- Lookup checks: all active Feel No Pain, Overload, Lucky Bullet, Toughness, Servo-Skull, Trample, and Zealot definitions/display pairs resolve and match.
+- `Tghnss_Gold = Golden Toughness` exists only as an unused English-side alias; the active English and zh-tw descriptions both use `Tghnss_gold = Toughness／韌性`, so no active zh-tw definition is missing.
+- Unused `Desperado`, `Dependency`, and possessive `Zealot's` definitions were still read against their complete source definitions. Standalone `Dependency／依賴性` has no exact formal-glossary row, but is semantically correct and does not currently have an active zh-tw lookup call.
+- `Overload` and grammatical `overloading` were checked in the complete Skitarii keystone descriptions; both correctly display `超載`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-011, COLORS units 151–165`
+
+### ED3-COLORS-RECHECK-011
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `151–165`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `2` (`TERMINOLOGY`: `Rampage!` `暴走` → `橫衝直撞！`; `Adrenaline Frenzy` `腎上腺素狂熱` → `腎上腺素狂暴`)
+- KEEP: `9`
+- SKIP: `4` (`keyword_group_structure` container rows)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `2`; reconciled: `2`
+- GLOSSARY_HIT: `11`; mismatch: `2` found and corrected
+- Lookup checks: all active Fury, Momentum, Taunt, Adrenaline, Stealth, Marked, and Veteran definitions/display pairs resolve and were read in complete English/zh-tw descriptions.
+- `Rampage!` is the Hive Scum active-ability term, so the exact class-specific glossary entry `橫衝直撞！` takes precedence over the generic weapon-blessing `Rampage／暴走` entry.
+- `Adrenaline Frenzy` now matches the exact Hive Scum keystone glossary entry `腎上腺素狂暴`; its active separate key `AdrenFrenz_rgb_tw` already used that formal form.
+- `Momentum` remains `勢能` under the exact Zealot core-term entry, despite unrelated named abilities using other translations for compounds containing Momentum.
+- The corrected Rampage and Adrenaline Frenzy aliases are currently unused, but were corrected because the review covers the entire comparison table rather than active calls only.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-012, COLORS units 166–180`
+
+### ED3-COLORS-RECHECK-012
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `166–180`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0` in this manifest range; `2` linked future localization units corrected
+- KEEP: `11`
+- SKIP: `4` (`keyword_group_structure` container rows)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `8`; reconciled: `8`
+- GLOSSARY_HIT: `12`; linked mismatch: `2` found and corrected
+- Lookup checks: all active Capacitance, Forceful, Focus, Electric Discharge, Focus Target, Marked Enemy, Vulture's Mark, Chordclaw, Melee/Ranged Justice, Fire Rate, and Specialist definitions/display pairs resolve and were checked in complete descriptions.
+- Reverse-use audit found two `VultsMark_rgb_tw` displays using `禿鷹標記`; both Scum units were standardized to the exact formal `Vulture’s Mark／兀鷲印記`. Scum units 24 and 27 remain `ai_rechecked=no` until their own Phase C batches; hashes were refreshed without assigning results.
+- Source-less `FireRate` was resolved against both complete English uses in the Skitarii precision-stance description; `射速` is accurate.
+- Missing fixed terms were recorded only in `Term Candidates.md`: `Taunt／嘲諷`, `Adrenaline／腎上腺素`, `Marked Enemy／標記敵人`, `Melee Justice／近戰正義`, `Ranged Justice／遠程正義`, and `Fire Rate／射速`. Formal glossary content was not modified.
+- Source-side `Shout` and `Exhausted` aliases have no active zh-tw lookup calls; no active definition is missing.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-013, COLORS units 181–195`
+
+### ED3-COLORS-RECHECK-013
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `181–195`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `11`
+- SKIP: `4` (`keyword_group_structure` container rows)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `4`; reconciled: `4`
+- GLOSSARY_HIT: `14`; mismatch: `0`
+- TERM_CANDIDATE: `Ranged Justice／遠程正義`, already recorded during batch 012.
+- Lookup checks: all active Ranged Specialist/Justice, Arbitrator, Hive Scum, Adapted Medicae Syringes, Chem Toxin, Med Stimm, Beacon of Purity, and Benediction definitions/display pairs resolve and match.
+- `Arbitrator／法務官` is supported by the formal Arbites class terminology and `Arbitrator Armour／法務官之鎧`; possessive variants remain grammatically correct as `法務官`.
+- Source `Med Stimm` is the same medical-stimm category as formal `Medic Stimm／醫療興奮劑`; all active displays match.
+- The large named-term container at unit 193 was read in full. Source-only omissions and zh-tw extensions have no unresolved active lookup calls; each child entry remains scheduled for its own unit review.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-014, COLORS units 196–210`
+
+### ED3-COLORS-RECHECK-014
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `196–210`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `14`; mismatch: `0`
+- TERM_CANDIDATE: `Loner／孤狼` added; exact term is absent while formal `Lone Wolf／孤狼` supports the translation.
+- Lookup checks: all active Blazing Piety, Chastise the Wicked, Chorus of Spiritual Fortitude, Fury, Immolation Grenade, Fury of the Faithful, Holy Relic, Holy Revenant, Inexorable Judgement, Blades of Faith, Martyrdom, Stunstorm Grenade, and Stun Grenade displays resolve and match.
+- The unused `Loner` definition was still read and retained as `孤狼`; its exact fixed term is now tracked as a candidate rather than treated as an exact glossary hit.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-015, COLORS units 211–225`
+
+### ED3-COLORS-RECHECK-015
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `211–225`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `1`; reconciled: `1`
+- GLOSSARY_HIT: `14`; mismatch: `0`
+- TERM_CANDIDATE: `Arc Grenade／電弧手榴彈`, pre-existing; formal glossary currently contains the plural `Arc Grenades／電弧手榴彈`.
+- Lookup checks: every active Zealous, Shroudfield, Momentum, Arbites Grenade, Breaking Dissent, Break the Line, Castigator's Stance, Voltaic Shock Mine, Execution Order, Nuncio-Aquila, Part of the Squad, Remote Detonation, Ruthless Efficiency, Terminus Warrant, and Arc Grenade display resolves and matches.
+- `Momentum／勢能` is the Zealot core term in this table and therefore follows the exact class-core glossary entry rather than the unrelated generic weapon `Momentum／勢頭` entry.
+- Hyphen and singular/plural differences (`Nuncio Aquila` vs formal `Nuncio-Aquila`; `Arc Grenade` vs formal plural) do not alter the selected fixed translations.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-016, COLORS units 226–240`
+
+### ED3-COLORS-RECHECK-016
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `226–240`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `4`; reconciled: `4`
+- GLOSSARY_HIT: `14`; mismatch: `0`
+- TERM_CANDIDATE: `Cartel Special Stimm／卡特爾特製興奮劑` remains a candidate; no formal entry exists.
+- Lookup checks: all active Power Overload, Voltaic Expander, Weapon Malfunction, Hive Scum talent names, Cartel Special Stimm, and Vulture's Mark displays resolve and match.
+- Source-less `WeaponMalfunction` was resolved from the complete Skitarii Arc Grenades English description and matches formal `Weapon Malfunction／武器故障`.
+- Current `Power Overload／能量超載` and `Voltaic Expander／電能擴張器` match the latest formal glossary. Their stale candidate proposals (`威力超載`, `電能擴展器`) were changed to `conflict`, with formal terminology controlling.
+- Candidate statuses updated to `accepted` for Adapted Medicae Syringes, Arc Grenade(s), Capacitance, Electric Discharge, and Chordclaw because the current formal glossary now contains or directly covers their fixed values.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-017, COLORS units 241–255`
+
+### ED3-COLORS-RECHECK-017
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `241–255`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `14`; mismatch: `0`
+- TERM_CANDIDATE: `Viscosity／黏稠度` remains a candidate; no formal entry exists and all active uses are consistent.
+- Lookup checks: all active Adrenaline Frenzy, Viscosity, Assail, Brain Burst/Rupture, Disrupt Destiny, Enfeeble, Empowered Psionics, Kinetic Presence, Prescience, Psykinetic's Wrath, and Venting Shriek displays resolve and match.
+- Duplicate aliases for Assail and Brain Burst/Rupture were individually checked; casing and key differences do not change their fixed zh-tw forms.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-018, COLORS units 256–270`
+
+### ED3-COLORS-RECHECK-018
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `256–270`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- Lookup checks: all active Scrier's Gaze, Seer's Presence, Smite, Telekine Shield, Close and Kill, Duty and Honour, Executioner's Stance, Focus Target!, Fire Team, and Frag/Fragmentation Grenade displays resolve and match.
+- The no-apostrophe `Scrier Gaze` alias and duplicate Smite/Frag Grenade keys were individually checked; aliases consistently map to the same formal zh-tw terms.
+- `Fragmentation Grenade` is an expanded English alias for the same `Frag Grenade／破片手雷`, not a separate translation term.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-019, COLORS units 271–285`
+
+### ED3-COLORS-RECHECK-019
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `271–285`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `1`; reconciled: `1`
+- GLOSSARY_HIT: `14`; mismatch: `0`
+- TERM_CANDIDATE: `Ranged Stance／遠程姿態` added; all active Veteran descriptions consistently use this absent fixed term.
+- Lookup checks: every active Shredder Frag Grenade, Infiltrate, Krak Grenade, Ranged Stance, Scavenger, Marksman's Focus, Smoke Grenade, Survivalist, Voice of Command, Volley Fire, Weapons Specialist, Attention Seeker, Big Box of Hurt, Bombs Away!, and Big Friendly Rock display resolves and matches.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-020, COLORS units 286–300`
+
+### ED3-COLORS-RECHECK-020
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `286–300`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `1`; reconciled: `1`
+- GLOSSARY_HIT: `12`; mismatch: `0`
+- TERM_CANDIDATE: `Basic Training／基礎訓練`, `Shrine of the Omnissiah／歐姆尼賽亞的神龕`, and `Prologue／序章` added as fixed UI/location names absent from the formal glossary.
+- Lookup checks: every active Ogryn talent name plus Basic Training, Curio, Shrine of the Omnissiah, and Prologue display resolves and matches.
+- Singular `Curio／珍品` is directly covered by formal plural `Curios／珍品`; no separate candidate was needed.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-021, COLORS units 301–315`
+
+### ED3-COLORS-RECHECK-021
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `301–315`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `9`
+- SKIP: `6` (`keyword_group_structure` container rows)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `2`; reconciled: `2`
+- GLOSSARY_HIT: `10`; mismatch: `0`
+- TERM_CANDIDATE: `Path of Trust／信任之路`, `Sire Melk's Requisitorium／梅爾克領主的必備品店`, and `Melee Damage／近戰傷害` added; `Auric／奧里克` remains an existing candidate.
+- Lookup checks: all active campaign/vendor names, difficulty names, Auric, Mobility, and Melee Damage displays resolve and match.
+- Difficulty terms Uprising, Malice, Heresy, and Damnation match the formal glossary across all active Penance calls. Commented MENUS fallback lines do not constitute active lookup mismatches.
+- The attribute container at unit 313 was read in full; `Warp Resistance／反噬抗性` already matches the formal glossary and remains scheduled as unit 316.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-022, COLORS units 316–330`
+
+### ED3-COLORS-RECHECK-022
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `316–330`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `11`
+- SKIP: `4` (`2` keyword containers; `2` file-structure rows)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `2`; reconciled: `2`
+- GLOSSARY_HIT: `7`; mismatch: `0`
+- TERM_CANDIDATE: `Ammo／彈藥` and `Defences／防禦` added as active fixed menu labels absent as standalone formal entries.
+- Lookup checks: Warp Resistance, Ammo, Defences, Heat Management, and Damage menu labels all resolve; every active use of the six common phrase helpers was checked against its complete caller context.
+- Shield/Bulwark scope, refresh timing, per-stack decay, multiple-stack generation, and Cleaving multi-proc semantics are all preserved in zh-tw.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-023, COLORS units 331–345`
+
+### ED3-COLORS-RECHECK-023
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `331–345`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `12`; mismatch: `0`
+- Caller checks: each common phrase helper was checked wherever its semantic scope could differ; class-specific aura/talent/debuff restrictions remain attached to the correct class and effect type.
+- Cleaving multi-proc, stack-duration refresh, shield application limits, active-duration refresh prohibition, critical-hit prohibition, and default Carapace cleave immunity are all preserved without weakened or broadened conditions.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-COLORS-RECHECK-024, COLORS units 346–356`
+
+### ED3-COLORS-RECHECK-024
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`
+- Manifest units: `346–356`
+- Reviewed: `11`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `8`
+- SKIP: `3` (`tw_file_structure` rows)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `8`; mismatch: `0`
+- The duplicated Carapace-cleave restriction and Coherency Toughness Regeneration exception were checked independently; both preserve the English scope.
+- Brittleness, Finesse, Impact, Strength, Rending, and Weakspot explanatory notes retain every affected stat, subject, and stated Beast of Nurgle exception.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `eaedd8569dc68e3b3ff8d2f30a1c9e5211a7fabe`
+- Safe next position: `ED3-ROOT-RECHECK-001, Enhanced_descriptions_localization.lua units 1–15`
+
+### COLORS file completion checkpoint
+
+- Full file: `356 / 356` units AI-rechecked.
+- Final results: `CHANGE 3`, `KEEP 299`, `SKIP 54`, `ADD 0`, `BLOCKED 0`.
+- Current/manifest/queue unit counts: `356 / 356 / 356`.
+- Current zh-tw hash mismatches: `0`; queue/manifest state mismatches: `0`.
+- Placeholder status: `302 match`, `54 not_applicable`, `0 mismatch`, `0 source_pending`.
+- Active lookup calls unresolved: `0`; unresolved source definitions: `0`.
+- Translation diff boundary: one zh-tw file, three terminology replacements, no key/number/helper/control-flow change.
+- Translation commit: `eaedd8569dc68e3b3ff8d2f30a1c9e5211a7fabe` (`fix(zh-tw): complete colors terminology recheck`).
+
+Current manifest progress: `356 / 1,953` AI-rechecked (`CHANGE 3`, `KEEP 299`, `SKIP 54`).
+
+Safe next position: `Phase C — ED3-ROOT-RECHECK-001, Enhanced_descriptions_localization.lua units 1–15.`
