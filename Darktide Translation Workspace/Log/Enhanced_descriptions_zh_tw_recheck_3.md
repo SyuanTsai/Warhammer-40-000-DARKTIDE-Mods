@@ -666,4 +666,181 @@ Post-fix lookup rescan:
 
 Current manifest progress: `356 / 1,953` AI-rechecked (`CHANGE 3`, `KEEP 299`, `SKIP 54`).
 
-Safe next position: `Phase C — ED3-ROOT-RECHECK-001, Enhanced_descriptions_localization.lua units 1–15.`
+### ED3-ROOT-RECHECK-001
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Enhanced_descriptions_localization.lua`
+- Manifest units: `1–15`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `1`; mismatch: `0`
+- TERM_CANDIDATE: existing `Enhanced Descriptions／強化描述` remains consistent.
+- Full mod description preserves highlighted subject types, readability purpose, localization-fix scope, and clarification scope.
+- Language override explanation retains Auto/Manual behavior, line breaks, bullets, and all language labels.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-ROOT-RECHECK-002, ROOT units 16–30`
+
+Current manifest progress: `371 / 1,953` AI-rechecked (`CHANGE 3`, `KEEP 314`, `SKIP 54`).
+
+### ED3-ROOT-RECHECK-002
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Enhanced_descriptions_localization.lua`
+- Manifest units: `16–30`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `7`; mismatch: `0`
+- Remaining language labels and Weapons, Curios, Menus, and Talents module labels/descriptions were read in full.
+- Weapon Blessings/Perks, Curio Blessings/attributes, Melk's Contracts, optional-disable conditions, and the limited scope of talent-description improvements are all preserved.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-ROOT-RECHECK-003, ROOT units 31–45`
+
+Current manifest progress: `386 / 1,953` AI-rechecked (`CHANGE 3`, `KEEP 329`, `SKIP 54`).
+
+### ED3-ROOT-RECHECK-003
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Enhanced_descriptions_localization.lua`
+- Manifest units: `31–45`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `13`; mismatch: `0`
+- Penances and name modules retain non-English-only restrictions, optional-disable behavior, and exact color markup.
+- Debug Mode retains all ten slash commands, command names, purposes, caution text, newlines, and reset semantics.
+- Dump Stats groups accurately enumerate Mobility/Melee Damage/Warp Resistance, Ammo/Defences/Heat Management, and Damage; Bleed, Brittleness, Burn, and Cleave labels match formal terms.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-ROOT-RECHECK-004, ROOT units 46–60`
+
+Current manifest progress: `401 / 1,953` AI-rechecked (`CHANGE 3`, `KEEP 344`, `SKIP 54`).
+
+### ED3-ROOT-RECHECK-004
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Enhanced_descriptions_localization.lua`
+- Manifest units: `46–60`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- Core color labels for Coherency through Stagger were checked independently against the formal glossary and current keyword table.
+- `Soulblaze／靈魂之火` follows the Psyker-specific formal entry and active-use consensus; `Health / Wound／生命值／傷痕` also matches the retained Wound candidate.
+- Icons, separators, and slash markup are unchanged.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-ROOT-RECHECK-005, ROOT units 61–75`
+
+Current manifest progress: `416 / 1,953` AI-rechecked (`CHANGE 3`, `KEEP 359`, `SKIP 54`).
+
+### ED3-ROOT-RECHECK-005
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Enhanced_descriptions_localization.lua`
+- Manifest units: `61–75`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- Stamina, Toughness, Weak Spot, and all four class labels match the formal glossary and current game terminology.
+- Psyker Precision, Ogryn Feel No Pain/Lucky Bullet/Trample, Zealot Fury/Momentum/Stealth, and Veteran Focus retain their class-specific meanings; `Momentum／勢能` is the Zealot core mechanic rather than the generic weapon sense `勢頭`.
+- Icons and color-key structure are unchanged.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-ROOT-RECHECK-006, ROOT units 76–90`
+
+Current manifest progress: `431 / 1,953` AI-rechecked (`CHANGE 3`, `KEEP 374`, `SKIP 54`).
+
+### ED3-ROOT-RECHECK-006
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Enhanced_descriptions_localization.lua`
+- Manifest units: `76–90`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `12`; mismatch: `0`
+- Focus Target, Melee/Ranged Specialist, Arbitrator, Hive Scum, Chem Toxin, Talents/Penances, Note, and the three difficulty names agree with formal terminology.
+- `Numbers／數值` and `Variables／變數` correctly describe configurable display categories; `Warning／警告` is an ordinary interface label, not the talent name `Final Warning／最後通牒`.
+- Icons, leading spaces, punctuation, and color-key structure are unchanged.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-ROOT-RECHECK-007, ROOT units 91–93`
+
+Current manifest progress: `446 / 1,953` AI-rechecked (`CHANGE 3`, `KEEP 389`, `SKIP 54`).
+
+### ED3-ROOT-RECHECK-007
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Enhanced_descriptions_localization.lua`
+- Manifest units: `91–93`
+- Reviewed: `3`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `3`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `2`; mismatch: `0`
+- Heresy and Damnation match the formal difficulty names.
+- `Auric／奧里克` is absent as a standalone formal entry but matches the retained candidate and current cross-module usage.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `none`
+- Safe next position: `ED3-MENUS-RECHECK-001, Main_Modules/MENUS.lua units 1–15`
+
+### ROOT file completion checkpoint
+
+- Full file: `93 / 93` units AI-rechecked.
+- Final results: `CHANGE 0`, `KEEP 93`, `SKIP 0`, `ADD 0`, `BLOCKED 0`.
+- Current/manifest/queue unit counts: `93 / 93 / 93`.
+- Current zh-tw hash mismatches: `0`; queue/manifest state mismatches: `0`.
+- Placeholder status: `93 match`, `0 fallback`, `0 mismatch`, `0 source_pending`.
+- Active lookup calls unresolved: `0`; unresolved source definitions: `0`.
+- Translation diff boundary: no zh-tw content changes in this file.
+- Translation commit: `none`.
+
+Current manifest progress: `449 / 1,953` AI-rechecked (`CHANGE 3`, `KEEP 392`, `SKIP 54`).
+
+Safe next position: `Phase C — ED3-MENUS-RECHECK-001, Main_Modules/MENUS.lua units 1–15.`
