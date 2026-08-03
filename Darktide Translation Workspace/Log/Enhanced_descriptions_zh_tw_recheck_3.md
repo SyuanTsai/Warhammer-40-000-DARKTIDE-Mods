@@ -2740,6 +2740,63 @@ Current manifest progress: `1,508 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 110`, 
 
 Current manifest progress remains `1,508 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 110`, `KEEP 1,332`, `SKIP 62`, `BLOCKED 3`).
 
+### Batch ED3-SCUM-RECHECK-006
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Scum.lua`.
+- Manifest units: `76-90`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `2` — unit 76 rewrote the active relationship as applying Chem Toxin to enemies; unit 77 corrected the reversed `被你感染化學毒素` construction to enemies infected by Chem Toxin applied by the player.
+- KEEP: `13`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `12`; mismatch: `0`. Locked or established terms checked include `Chem Toxin`, `Damage`, `Toughness`, `Strength`, `Finesse`, `Rending`, contextual `Critical Strike Chance`, `Stamina`, and `Stun`.
+- Lookup checks: all `12` lookup-using units resolved every active `CKWord`, `CNumb`, `CPhrs`, and `CNote` call; complete `Dont_intw_coher_toughn`, `Pwr_note`, `Fns_note`, and `Rend_note` expansions and every referenced numeric definition were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Scum file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Scum.lua` unit `91` (`ED3-SCUM-RECHECK-007`).
+
+Current manifest progress: `1,844 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 214`, `KEEP 1,564`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-SCUM-RECHECK-007
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Scum.lua`.
+- Manifest units: `91-99`.
+- Reviewed: `9`.
+- ADD: `0`.
+- CHANGE: `0`.
+- KEEP: `9` — Reload Speed, Recoil, Movement Speed, all Dodge modifiers, Cooldown Regeneration, and both kill-triggered Ability Cooldown descriptions retain the complete English meaning and natural zh-tw wording.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `5`; mismatch: `0`. Locked or established terms checked include `Reload Speed`, `Movement Speed`, `Cooldown`, and `Ability Cooldown`.
+- Lookup checks: all `3` lookup-using units resolved every active `CKWord` and `CPhrs` call; the complete `Can_be_refr` expansion was read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `9` units have complete matching active English sources.
+- Translation commit: `none` (pending full-file verification and commit).
+- Safe next position: full-file QA gate for `Main_Modules/TALENTS/TALENTS_Scum.lua`, then `Main_Modules/TALENTS/TALENTS_Skitarii.lua` unit `1` (`ED3-SKITARII-RECHECK-001`).
+
+Current manifest progress: `1,853 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 214`, `KEEP 1,573`, `SKIP 62`, `BLOCKED 3`).
+
+### TALENTS_Scum full-file QA checkpoint
+
+- Full-file verifier: current / manifest / queue units `99 / 99 / 99`; AI-rechecked `99`; missing or stale units `0`; zh-tw hash mismatches `0`; queue/manifest mismatches `0`.
+- Final file results: `CHANGE 26`, `KEEP 73`; `BLOCKED 0`.
+- Source and placeholder status: `99 match`; incomplete sources `0`.
+- Formal zh-tw lookup gate: total calls `3,403` (`CKWord 1,898`, `CNumb 1,235`, `CPhrs 193`, `CNote 77`); unresolved calls `0`; unresolved source definitions `0`.
+- Auxiliary cross-locale runtime diagnostic remains read-only: `25` unresolved non-target calls, all recorded as `BASELINE_NON_ZHTW`; no non-zh-tw content was changed.
+- The entire Scum base-to-live diff was manually reread and contains only active zh-tw localization content. The full Plan 3 base-to-live scope audit covered `574` changed lines (`289` base / `285` live; `7` definition-file / `567` explicit zh-tw) with out-of-scope changed lines `0`; `git diff --check` passed.
+- Translation commit: `8bbe672` (`fix(zh-tw): complete scum talents recheck`), containing only `Main_Modules/TALENTS/TALENTS_Scum.lua`.
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua` unit `1` (`ED3-SKITARII-RECHECK-001`).
+
+Current manifest progress remains `1,853 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 214`, `KEEP 1,573`, `SKIP 62`, `BLOCKED 3`).
+
 ### Batch ED3-VETERAN-RECHECK-004
 
 - AI handler: `codex`.
@@ -3086,6 +3143,116 @@ Current manifest progress: `1,754 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 188`, 
 - Safe next position: `Main_Modules/TALENTS/TALENTS_Scum.lua` unit `1` (`ED3-SCUM-RECHECK-001`).
 
 Current manifest progress remains `1,754 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 188`, `KEEP 1,500`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-SCUM-RECHECK-001
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Scum.lua`.
+- Manifest units: `1-15`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `7` — unit 3 aligned Unarmoured / Flak / Maniac / Infested and Bulwark shield to `無護甲` / `防彈護甲` / `狂熱者` / `被感染` / `堡壘盾牌`; unit 4 aligned Flak and rewrote both armour-Damage statements naturally; units 5-8 aligned Allies in Coherency to `協同範圍內的盟友`; unit 14 aligned Heavy Attacks to established `重攻擊`.
+- KEEP: `8`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `15`; mismatch: `0` after the listed corrections. Locked or established terms checked include `Chem Toxin`, `Coherency`, `Damage`, `Hit Mass`, `Rending`, `Stagger`, `Stamina`, `Strength`, `Stun`, `Toughness`, `Ability Cooldown`, contextual `Critical Chance`, all listed armour categories, and Mutant / Monstrosity / Twins / Captain.
+- Lookup checks: all `15` units resolved every active `CKWord`, `CNumb`, `CPhrs`, and `CNote` call; complete `Can_be_refr`, `Can_be_refr_drop_1`, `Can_proc_mult_str`, `Cant_Crit`, `Doesnt_Stack_Scm_Aura`, `Doesnt_Stack_Scm_eff`, `Pwr_note`, and `Rend_note` expansions and every referenced numeric definition were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Scum file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Scum.lua` unit `16` (`ED3-SCUM-RECHECK-002`).
+
+Current manifest progress: `1,769 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 195`, `KEEP 1,508`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-SCUM-RECHECK-002
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Scum.lua`.
+- Manifest units: `16-30`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `5` — unit 24 aligned Allies in Coherency to `協同範圍內的盟友`; unit 27 removed the visible split inside `兀鷲印記持續時間`; units 28-30 applied the formal contextual Crit rule by describing Melee Attacks / Attacks as `造成致命一擊`, and unit 29 additionally rewrote its Weakspot / non-Weakspot conditions naturally.
+- KEEP: `10`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `12`; mismatch: `0`. Locked or established terms checked include `Vulture's Mark`, `Adrenaline`, `Cartel Special Stimm`, `Chem Toxin`, `Coherency`, `Corruption`, `Corruption Damage`, `Cleave`, `Damage`, `Health`, `Stagger`, `Strength`, `Toughness`, `Weakspot`, and contextual `Critical Strike` / `Critical`.
+- Lookup checks: all `13` lookup-using units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; complete `Can_be_refr`, `Can_proc_mult`, and `Doesnt_Stack_Scm_eff` expansions and every referenced numeric definition were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Scum file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Scum.lua` unit `31` (`ED3-SCUM-RECHECK-003`).
+
+Current manifest progress: `1,784 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 200`, `KEEP 1,518`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-SCUM-RECHECK-003
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Scum.lua`.
+- Manifest units: `31-45`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `5` — unit 33 removed the visible split inside `腎上腺素持續時間`; unit 39 aligned Mutant to formal `變種人`; unit 40 explicitly distinguished ordinary Melee Crit-or-Weakspot recovery from the higher simultaneous Crit-and-Weakspot recovery; unit 43 rewrote the timed Stun Immunity list item naturally; unit 44 aligned `Autopistol` / `Braced Autoguns` to formal `撕裂者自動手槍` / `槍托自動槍`.
+- KEEP: `10`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `2`; reconciled: `2` — units 36 and 42 were independently reread and retained with their current formal Toughness Damage Reduction terminology and complete activation conditions.
+- GLOSSARY_HIT: `13`; mismatch: `0` after the listed corrections. Locked or established terms checked include `Adrenaline`, `Chemical Dependency`, `Ability Cooldown`, contextual `Critical Hit Chance` / `Critical Strike`, `Damage`, `Stun`, `Toughness`, `Toughness Damage Reduction`, `Weakspot`, Mutant and all listed weapon families.
+- Lookup checks: all `14` lookup-using units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; complete `Can_be_refr_drop_1` and `Can_proc_mult_str` expansions and every referenced numeric definition were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Scum file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Scum.lua` unit `46` (`ED3-SCUM-RECHECK-004`).
+
+Current manifest progress: `1,799 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 205`, `KEEP 1,528`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-SCUM-RECHECK-004
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Scum.lua`.
+- Manifest units: `46-60`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `3` — units 47-48 aligned Mutant to formal `變種人`; unit 56 aligned Crusher / Mauler / Radio Operator / Shotgunners to `碾壓者` / `重錘兵` / `無線電操作員` / `霰彈槍手`.
+- KEEP: `12`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `15`; mismatch: `0` after the listed corrections. Locked or established terms checked include all Stimm names, `Chem Toxin`, contextual `Critical Strike Chance` / `Critical Strikes`, `Cooldown`, `Corruption`, `Corruption Damage`, `Damage`, `Health`, `Reload Speed`, `Stagger`, `Stamina`, `Strength`, `Toughness`, `Toughness Damage`, `Cleave`, every listed Elite / Monster breed, and Mutant / Gunners / Reaper / Sniper / disablers.
+- Lookup checks: all `15` units resolved every active `CKWord`, `CNumb`, `CPhrs`, and `CNote` call; complete `Can_appl_thr_shldsb`, `Can_be_refr`, `Can_proc_mult`, and `Pwr_note` expansions and every referenced numeric definition were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Scum file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Scum.lua` unit `61` (`ED3-SCUM-RECHECK-005`).
+
+Current manifest progress: `1,814 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 208`, `KEEP 1,540`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-SCUM-RECHECK-005
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Scum.lua`.
+- Manifest units: `61-75`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `4` — unit 67 removed the redundant `周圍所有附近敵人`; unit 70 rewrote the Blitz relationship as applying different Chem Toxin Stack counts; units 72-73 corrected the active-voice `感染化學毒素的敵人` to enemies infected by Chem Toxin.
+- KEEP: `11`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `12`; mismatch: `0`. Locked or established terms checked include `Blitz`, `Chem Toxin`, `Cleave`, contextual `Critical Hit Chance` / `Critical Strikes` / `Crit Damage`, `Damage`, `Health`, `Toughness`, `Weakspot Damage`, and all named non-human-sized enemies.
+- Lookup checks: all `11` lookup-using units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; the complete `Can_be_refr` expansion and every referenced numeric definition were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Scum file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Scum.lua` unit `76` (`ED3-SCUM-RECHECK-006`).
+
+Current manifest progress: `1,829 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 212`, `KEEP 1,551`, `SKIP 62`, `BLOCKED 3`).
 
 ### Batch ED3-VETERAN-RECHECK-001
 
