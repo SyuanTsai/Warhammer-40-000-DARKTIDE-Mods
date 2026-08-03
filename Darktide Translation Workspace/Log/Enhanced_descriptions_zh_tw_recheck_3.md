@@ -2422,3 +2422,148 @@ At initial batch completion, manifest progress was `1,349 / 1,953` AI-rechecked 
 - Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua` unit `1` (`ED3-PSYKER-RECHECK-001`).
 
 Current manifest progress: `1,349 / 1,953` AI-rechecked (`CHANGE 77`, `KEEP 1,207`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PSYKER-RECHECK-001
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Psyker.lua`.
+- Manifest units: `1-15`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `2` — unit 2 changed the unidiomatic `輕微踉蹌目標` order to `使目標輕微踉蹌`; unit 15 changed `眩暈前方 5 公尺半徑內的敵人` to the grammatical `使前方半徑 5 公尺內的敵人眩暈` (`GRAMMAR;UNNATURAL`).
+- KEEP: `13`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `13`; mismatch: `0`. Locked contextual terms checked include `Combat Ability`, `Damage`, `Weakspot`, `Peril`, `Stagger`, `Stun`, `Electrocuted`, `Enfeeble`, `Cleave`, `Coherency`, `Cooldown`, contextual `Crit`, `Psyker`, `Flak`, `Carapace`, `Monstrosity`, `Ogryn`, and `Pox Hound`.
+- Lookup checks: `13` units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; the complete shared `Cant_Crit`, `Doesnt_Stack_Psy_eff`, and `Doesnt_Stack_Psy_Aura` English / zh-tw phrases were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Psyker file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua` unit `16` (`ED3-PSYKER-RECHECK-002`).
+
+Current manifest progress: `1,364 / 1,953` AI-rechecked (`CHANGE 79`, `KEEP 1,220`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PSYKER-RECHECK-002
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Psyker.lua`.
+- Manifest units: `16-30`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `3` — unit 16 corrected the same front-radius Stun word-order defect as unit 15 (`GRAMMAR;UNNATURAL`); unit 18 removed the double reduction wording that rendered as `降低 -X%`, retaining the explicit negative values without a second `降低` (`WRONG_MEANING;DISPLAY_CLARITY`); unit 25 clarified that enemy kills temporarily slow the Peril build-up rate (`GRAMMAR;DISPLAY_CLARITY`).
+- KEEP: `12`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `12`; mismatch: `0`. Locked terms checked include `Peril`, `Psyker`, `Stun`, `Stagger`, `Damage`, `Soulblaze`, `Specialist`, `Trapper`, `Bomber`, `Flamer`, `Pox Burster`, `Electrocuted`, `Toughness`, `Toughness Damage Reduction`, `Scrier's Gaze`, `Weakspot`, `Cleave`, `Finesse Damage`, `Perils of the Warp`, `Warp Charge`, and `Combat Ability`.
+- Lookup checks: `14` units resolved every active `CKWord`, `CNumb`, `CPhrs`, and `CNote` call; the complete `Doesnt_Stack_Psy_eff`, `Refr_dur_stappl`, `Fns_note`, and `Can_be_refr` English / zh-tw expansions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Psyker file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua` unit `31` (`ED3-PSYKER-RECHECK-003`).
+
+Current manifest progress: `1,379 / 1,953` AI-rechecked (`CHANGE 82`, `KEEP 1,232`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PSYKER-RECHECK-003
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Psyker.lua`.
+- Manifest units: `31-45`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `3` — unit 35 corrected the ungrammatical `所有隊友靈能者` order; unit 36 restored the omitted `between Enemies` scope for empowered chain-lightning spread; unit 41 clarified Toughness regeneration order, restored the styled `Damage` term, and aligned `Bruisers`, `Ragers`, and `Gunners` with locked `格鬥兵`, `狂怒者`, and `砲手` (`TERMINOLOGY;GRAMMAR;DISPLAY_CLARITY;CONSISTENCY`).
+- KEEP: `12`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `12`; mismatch: `0`. Locked terms checked include `Peril`, `Warp Charge`, `Toughness`, `Soulblaze`, `Psyker`, `Coherency`, `Blitz`, `Damage`, `Precision`, `Critical Damage`, `Weakspot Damage`, all nine listed target enemy categories, `Assail`, and `Brain Rupture`.
+- Lookup checks: `13` units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; the complete `Can_be_refr` expansion was read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Psyker file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua` unit `46` (`ED3-PSYKER-RECHECK-004`).
+
+Current manifest progress: `1,394 / 1,953` AI-rechecked (`CHANGE 85`, `KEEP 1,244`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PSYKER-RECHECK-004
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Psyker.lua`.
+- Manifest units: `46-60`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `2` — unit 55 replaced the slash-form `3% 韌性 /秒` with the grammatical `每秒恢復 3% 韌性`, matching the repeated regeneration wording (`GRAMMAR;CONSISTENCY`); unit 58 formally accepted the already staged linked correction from `亞空間傷害` to locked `靈能傷害` (`TERMINOLOGY;CONSISTENCY`).
+- KEEP: `13`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `1`; reconciled: `1` — unit 47's complete current Crit / Toughness / Movement Speed text was reread and retained.
+- GLOSSARY_HIT: `14`; mismatch: `0`. Locked contextual terms checked include `Warp Attack`, `Toughness`, contextual `Critical Hits` / `Critical Attack`, `Weakspot`, `Soulblaze`, `Burn`, `Bleed`, `Peril`, `Psyker`, `Damage`, `Inferno Staff`, `Warp-Damage`, `Daemonhost`, `Cleave`, and `Carapace`.
+- Lookup checks: all `15` units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; complete `Can_be_refr`, `Refr_dur_stappl`, `Can_appl_thr_shlds`, and `Carap_cant_cleave` / `Carap_cant_clv` English / zh-tw expansions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Psyker file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua` unit `61` (`ED3-PSYKER-RECHECK-005`).
+
+Current manifest progress: `1,409 / 1,953` AI-rechecked (`CHANGE 87`, `KEEP 1,257`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PSYKER-RECHECK-005
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Psyker.lua`.
+- Manifest units: `61-75`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `3` — unit 62 restored the repeated `97%` threshold after `dropping below`, removing the ambiguous bare `降至以下` (`MISSING_INFO;GRAMMAR;DISPLAY_CLARITY`); unit 65 formally accepted the already staged linked change from the raw `TDR` display to locked `韌性減傷` (`TERMINOLOGY;CONSISTENCY`); unit 66 replaced the unnatural `受到的傷害之 {percent}` with `所受傷害的 {percent}` (`GRAMMAR;UNNATURAL`).
+- KEEP: `12`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `13`; mismatch: `0`. Locked terms checked include `Peril`, `Weakspot`, `Damage`, `Stun`, `Cooldown`, `Coherency`, contextual `Critical Hit`, `Toughness Damage Reduction`, `TDR`, `Ogryn`, `Monstrosity`, `Weakspot Hit`, `Stamina`, `Rending`, and `Warp Attack`.
+- Lookup checks: all `15` units resolved every active `CKWord`, `CNumb`, `CPhrs`, and `CNote` call; complete `Can_proc_mult`, `Can_be_refr`, `Dont_intw_coher_toughn`, and `Rend_note` English / zh-tw expansions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Psyker file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua` unit `76` (`ED3-PSYKER-RECHECK-006`).
+
+Current manifest progress: `1,424 / 1,953` AI-rechecked (`CHANGE 90`, `KEEP 1,269`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PSYKER-RECHECK-006
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Psyker.lua`.
+- Manifest units: `76-79`.
+- Reviewed: `4`.
+- ADD: `0`.
+- CHANGE: `0`.
+- KEEP: `4`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `1`; reconciled: `1` — unit 78's complete current Non-Warp ranged Critical Hit / shield-trigger description was reread and retained.
+- GLOSSARY_HIT: `4`; mismatch: `0`. Locked or established terms checked include `Damage`, `Perils of the Warp`, `Health`, `Corruption Damage`, `Stamina`, `Toughness`, `Peril`, contextual `Critical Hits`, and `Reload Speed`.
+- Lookup checks: all `4` units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; the complete `Dont_intw_coher_toughn` English / zh-tw expansion was reread; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `4` units have complete matching active English sources.
+- Translation commit: `none` (pending full-file QA below).
+- Safe next position: full-file QA for `Main_Modules/TALENTS/TALENTS_Psyker.lua`.
+
+Current manifest progress: `1,428 / 1,953` AI-rechecked (`CHANGE 90`, `KEEP 1,273`, `SKIP 62`, `BLOCKED 3`).
+
+### TALENTS_Psyker full-file QA checkpoint
+
+- Full-file verifier: current / manifest / queue units `79 / 79 / 79`; AI-rechecked `79`; missing or stale units `0`; zh-tw hash mismatches `0`; queue/manifest mismatches `0`.
+- Final file results: `CHANGE 13`, `KEEP 66`; `BLOCKED 0`.
+- Source and placeholder status: `79 match`; incomplete sources `0`.
+- Lookup recheck: total project calls `3,403`; unresolved calls `0`; unresolved source definitions `0`.
+- Entire-file residual scan found no remaining active `亞空間傷害`, raw zh-tw `TDR`, double-negative `降低 -...`, slash-form `/秒`, obsolete listed enemy terms, or `生命` keyword mismatch.
+- Entire staged + unstaged diff was manually inspected; all changes are limited to active `zh-tw` localization content. `git diff --check` passed.
+- Translation commit: `f8683ec` (`fix(zh-tw): complete psyker talents recheck`), containing only `Main_Modules/TALENTS/TALENTS_Psyker.lua`; the pre-existing staged Ogryn and Scum changes remained outside this commit.
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Zealot.lua` unit `1` (`ED3-ZEALOT-RECHECK-001`).
+
+Current manifest progress remains `1,428 / 1,953` AI-rechecked (`CHANGE 90`, `KEEP 1,273`, `SKIP 62`, `BLOCKED 3`).
