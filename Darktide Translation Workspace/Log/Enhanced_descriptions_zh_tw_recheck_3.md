@@ -1966,3 +1966,459 @@ Current manifest progress: `1,059 / 1,953` AI-rechecked (`CHANGE 46`, `KEEP 949`
 Current manifest progress: `1,061 / 1,953` AI-rechecked (`CHANGE 46`, `KEEP 951`, `SKIP 62`, `BLOCKED 2`).
 
 Safe next position: `Phase C — next manifest file after Main_Modules/WEAPONS_Blessings_Perks.lua`.
+
+### Batch ED3-PENANCES-RECHECK-001
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `1-15`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `2` — unit 11 changed `四葉草式幸運` to `宛如四葉幸運草` (`UNNATURAL`) to preserve the title's four-leaf-clover simile naturally; unit 12 changed `將 {target} 個職業達到信任等級 30` to `將 {target} 個職業的信任等級提升至 30` (`GRAMMAR`).
+- KEEP: `12`.
+- SKIP: `0`.
+- BLOCKED: `1` — unit 3, `loc_private_tag_description` (`SOURCE_MISSING`). The current English comment and Git history provide only `Penance can only be completed in a private game`; the complete Russian and zh-tw strings contain an additional private-party requirement, but an exact complete English value was not recoverable from the two local repositories, file history, installed-game read-only search, or public source search. The current zh-tw was left unchanged instead of inferring the missing source sentence.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `1`; mismatch: `0` (`Penance` / `苦修`). `Trust Level` / `信任等級` is absent from the locked formal glossary and was added to `Term Candidates.md` as a repeated fixed progression term.
+- Lookup checks: units 12 and 14 resolved all `CNumb` / `CKWord` calls; missing or mismatched active lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`. Fourteen units have complete matching sources; the single documented source gap is the blocked unit 3.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `16` (`ED3-PENANCES-RECHECK-002`).
+
+Current manifest progress: `1,076 / 1,953` AI-rechecked (`CHANGE 48`, `KEEP 963`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-002
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `16-30`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `4` — unit 17 changed `小零碎` to `不值一提的小玩意` (`MISSING_INFO;UNNATURAL`) so `Unconsidered Trifles` retains both the disregarded/trivial and small-object senses; unit 26 changed the mission counter from `次任務` to `場任務` (`UNNATURAL`); units 27 and 29 changed `Vantage Point` from `有利地形` to `有利位置` (`WRONG_MEANING`) because the source names a point/location, not terrain.
+- KEEP: `11`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `8`; mismatch: `0` (`Curio`, `Omnissiah`, `Veteran`, and `Malice`). Existing candidates for `Basic Training`, `Sire Melk's Requisitorium`, `Shrine of the Omnissiah`, `Path of Trust`, and `Trust Level` were checked; `Vantage Point` / `有利位置` was added as a new repeated-title candidate.
+- Lookup checks: `10` units resolved all active `CKWord` / `CNumb` calls; missing or mismatched active lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after documented English-comment source resolution.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `31` (`ED3-PENANCES-RECHECK-003`).
+
+Current manifest progress: `1,091 / 1,953` AI-rechecked (`CHANGE 52`, `KEEP 974`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-003
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `31-45`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `5` — unit 31 completed the `Vantage Point` family correction to `有利位置（3）` (`WRONG_MEANING`); units 38-39 changed `Promotion Material` from unrelated `樹立榜樣` to `晉升之材` (`WRONG_MEANING`); unit 42 reordered the ranged weakspot-kill sentence to `使用遠程武器命中弱點並擊殺…` (`GRAMMAR;DISPLAY_CLARITY`); unit 44 changed `公尺以上` to `距離超過 … 公尺` to preserve the strict `over` threshold (`WRONG_MEANING;DISPLAY_CLARITY`).
+- KEEP: `10`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `9`; mismatch: `0` (`Veteran`, `Penances`, `Weakspot`, and the four named difficulty tiers). `Threat Level` / `威脅等級` and `Promotion Material` / `晉升之材` were added to `Term Candidates.md`; the existing `Vantage Point` candidate now covers all three tiers.
+- Lookup checks: `10` units resolved all active `CKWord`, `CNumb`, and `CNote` calls. The complete `Weaksp_note` English/zh-tw content and its nested Weakspot lookup were reread; missing or mismatched active lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after documented English-comment source resolution.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `46` (`ED3-PENANCES-RECHECK-004`).
+
+Current manifest progress: `1,106 / 1,953` AI-rechecked (`CHANGE 57`, `KEEP 984`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-004
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `46-60`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `0`.
+- KEEP: `15`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `8`; mismatch: `0`. The locked values for `Malice`, `Heresy`, `Overwatch`, `Scavenger`, `Survivalist`, `Infiltrate`, `Voice of Command`, `Toughness`, and `Marksman's Focus` were respected. `Master of War` / `戰爭大師` was added to `Term Candidates.md` as the shared `{class_name}` meta-title template.
+- Lookup checks: `7` units resolved all active `CKWord` and `CNumb` calls; each displayed label was checked against its resolved formal or contextual definition; missing or mismatched active lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after eight documented English-comment source resolutions, including the `{class_name}` placeholder in unit 52.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `61` (`ED3-PENANCES-RECHECK-005`).
+
+Current manifest progress: `1,121 / 1,953` AI-rechecked (`CHANGE 57`, `KEEP 999`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-005
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `61-75`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `2` — unit 62 changed `Armourbane` from `護甲之災` to the locked formal term `護甲之禍` (`TERMINOLOGY`); unit 69 changed `致命一擊並命中弱點` to `命中弱點的致命一擊` (`GRAMMAR;DISPLAY_CLARITY`) so the sentence unambiguously describes one critical hit that also hits a weakspot.
+- KEEP: `13`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `9`; mismatch: `0`. Locked terms checked include `Armourbane`, `Krak Grenade`, `Smoke Grenade`, `Marksman's Focus`, `Focus Target!`, `Weapons Specialist`, contextual `Crit`, `Weakspot`, `Fire Team`, `Close and Kill`, `Coherency`, `Malice`, and `Executioner's Stance`.
+- Lookup checks: `8` units resolved all active `CKWord`, `CNumb`, and `CNote` calls. The complete `Weaksp_note` and its nested lookup were reread for unit 69; missing or mismatched active lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after seven documented English-comment source resolutions.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `76` (`ED3-PENANCES-RECHECK-006`).
+
+Current manifest progress: `1,136 / 1,953` AI-rechecked (`CHANGE 59`, `KEEP 1,012`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-006
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `76-90`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `1` — unit 90 changed `或更高難度下` to `或更高威脅等級下` (`TERMINOLOGY;CONSISTENCY`), matching the complete `Threat or higher` source and the established `Threat Level` candidate used by adjacent PENANCES descriptions.
+- KEEP: `14`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `10`; mismatch: `0`. Locked or established values checked include `Heresy`, `Malice`, `Volley Fire`, `Executioner's Stance`, `Weakspot`, `Frag Grenade`, `Shredder Frag Grenade`, `Zealot`, `Trust Level`, and `Threat Level`; all five unique Penance titles were also reviewed directly against their English comments.
+- Lookup checks: `10` units resolved all active zh-tw `CKWord`, `CNumb`, and `CNote` calls. Both complete `Weaksp_note` uses were reread; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after five documented English-comment source resolutions.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `91` (`ED3-PENANCES-RECHECK-007`).
+
+Current manifest progress: `1,151 / 1,953` AI-rechecked (`CHANGE 60`, `KEEP 1,026`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-007
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `91-105`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `4` — units 91 and 99 changed `更高難度` to `更高威脅等級` (`TERMINOLOGY;CONSISTENCY`); unit 96 changed `鏈鋸或動力武器` to `鏈鋸武器或動力武器` (`MISSING_INFO;GRAMMAR`) so both source weapon categories are explicit; unit 100 now states the strict `under {time_window}` threshold as `耗時少於 {time_window} 分鐘`, uses `威脅等級`, and displays the locked lookup term `生命值` (`WRONG_MEANING;TERMINOLOGY;DISPLAY_CLARITY`).
+- KEEP: `11`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `9`; mismatch: `0`. Locked or established values checked include `Zealot`, `Penance`, `Malice`, `Heresy`, `Threat Level`, contextual plural `Crit`, `Stunned`, `Health`, `Wound`, `Stun Grenade`, `Stunstorm Grenade`, `Chastise the Wicked`, and `Fury of the Faithful`.
+- Lookup checks: `9` units resolved all active zh-tw `CKWord` and `CNumb` calls; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after six documented English-comment source resolutions.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `106` (`ED3-PENANCES-RECHECK-008`).
+
+Current manifest progress: `1,166 / 1,953` AI-rechecked (`CHANGE 64`, `KEEP 1,037`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-008
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `106-120`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `0`.
+- KEEP: `15`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `8`; mismatch: `0`. Locked values checked include `Shroudfield`, `Toughness`, `Chorus of Spiritual Fortitude`, `Fury`, `Blazing Piety`, Zealot `Momentum`, `Inexorable Judgement`, `Blades of Faith`, `Immolation Grenade`, `Zealous`, `Coherency`, `Benediction`, and `Toughness Damage`; all seven unique Penance titles were also reviewed directly against their English comments.
+- Lookup checks: `8` units resolved every active zh-tw `CKWord` and `CNumb` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after seven documented English-comment source resolutions.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `121` (`ED3-PENANCES-RECHECK-009`).
+
+Current manifest progress: `1,181 / 1,953` AI-rechecked (`CHANGE 64`, `KEEP 1,052`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-009
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `121-135`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `1` — unit 134 replaced the awkward `獲得的生命／治療至 … 生命` construction with `只靠 … 被動天賦，將生命值恢復至 …` (`GRAMMAR;TERMINOLOGY;DISPLAY_CLARITY`), preserving the source's sole-healing-source condition and the locked `Health` display term.
+- KEEP: `14`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `8`; mismatch: `0`. Locked values checked include `Corruption Damage`, `Coherency`, `Beacon of Purity`, `Malice`, `Heresy`, `Martyrdom`, `Chastise the Wicked`, `Fury of the Faithful`, `Stun Grenade`, `Stunstorm Grenade`, `Stunned`, `Holy Revenant`, `Health`, and `Psyker`; all seven unique Penance titles were reviewed directly against their English comments.
+- Lookup checks: `8` units resolved every active zh-tw `CKWord` and `CNumb` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after seven documented English-comment source resolutions.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `136` (`ED3-PENANCES-RECHECK-010`).
+
+Current manifest progress: `1,196 / 1,953` AI-rechecked (`CHANGE 65`, `KEEP 1,066`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-010
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `136-150`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `4` — units 139-140 changed `更高難度` to the established `更高威脅等級` (`TERMINOLOGY;CONSISTENCY`); unit 148 clarified the ledge-kill action from `推落邊緣擊殺` to `從高處邊緣推落並擊殺` (`GRAMMAR;DISPLAY_CLARITY`); unit 150 changed `Blessed by Fate` from the incomplete `命運保佑` to `受命運眷顧` (`GRAMMAR;UNNATURAL`).
+- KEEP: `11`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `10`; mismatch: `0`. Locked or established values checked include `Psyker`, `Trust Level`, `Malice`, `Heresy`, `Threat Level`, `Penance`, `Warp attack`, `Brain Burst`, and `Brain Rupture`; all four unique Penance titles were reviewed directly against their English comments, including the contextual retention of `Cliffhanger` as `懸崖邊緣`.
+- Lookup checks: `11` units resolved every active zh-tw `CKWord` and `CNumb` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after four documented English-comment source resolutions.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `151` (`ED3-PENANCES-RECHECK-011`).
+
+Current manifest progress: `1,211 / 1,953` AI-rechecked (`CHANGE 69`, `KEEP 1,077`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-011
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `151-165`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `0`.
+- KEEP: `15`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `10`; mismatch: `0`. Locked values checked include `Psykinetic's Wrath`, `Venting Shriek`, `Perils of the Warp`, `Malice`, `Heresy`, `Brain Burst`, `Brain Rupture`, `Assail`, `Scrier's Gaze`, `Empowered Psionics`, `Precision`, `Disrupt Destiny`, `Telekine Shield`, `Kinetic Presence`, and `Seer's Presence`; all five unique Penance titles were reviewed directly against their English comments.
+- Lookup checks: `10` units resolved every active zh-tw `CKWord` and `CNumb` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after five documented English-comment source resolutions.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `166` (`ED3-PENANCES-RECHECK-012`).
+
+Current manifest progress: `1,226 / 1,953` AI-rechecked (`CHANGE 69`, `KEEP 1,092`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-012
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `166-180`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `1` — unit 173 changed `造成其生命的 50% 傷害` to `造成相當於其生命值 50% 的傷害` (`GRAMMAR;TERMINOLOGY;DISPLAY_CLARITY`), restoring the locked `Health` term and making the Monstrosity damage threshold unambiguous.
+- KEEP: `14`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `11`; mismatch: `0`. Locked or established values checked include contextual `Crit`, `Prescience`, `Stunned`, `Smite`, `Brain Burst`, `Brain Rupture`, `Malice`, `Heresy`, `Perils of the Warp`, `Health`, `Ogryn`, and `Trust Level`; the three fallback titles and active `Beat-em-Up (1)` source were reviewed in full.
+- Lookup checks: `11` units resolved every active zh-tw `CKWord` and `CNumb` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after three documented English-comment source resolutions.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `181` (`ED3-PENANCES-RECHECK-013`).
+
+Current manifest progress: `1,241 / 1,953` AI-rechecked (`CHANGE 70`, `KEEP 1,106`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-013
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `181-195`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `0`.
+- KEEP: `15`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `5`; mismatch: `0`. Locked values checked include `Ogryn`, `Malice`, `Heresy`, `Threat Level`, and `Penance`; the `Beat-em-Up`, `Help Everyone`, `Keep Them Grounded`, `Cleave Them Down`, and three `Bone 'ead` fallback titles were each reread against their complete English comments.
+- Lookup checks: `7` units resolved every active zh-tw `CKWord` and `CNumb` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after eight documented English-comment source resolutions.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `196` (`ED3-PENANCES-RECHECK-014`).
+
+Current manifest progress: `1,256 / 1,953` AI-rechecked (`CHANGE 70`, `KEEP 1,121`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-014
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `196-210`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `0`.
+- KEEP: `15`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `10`; mismatch: `0`. Locked values checked include `Ogryn`, `Penance`, `Malice`, `Heresy`, `Threat Level`, `Coherency`, `Bull Rush`, `Indomitable`, `Big Box of Hurt`, `Bombs Away!`, `Loyal Protector`, `Big Friendly Rock`, `Frag Bomb`, `Heavy Hitter`, `Point-Blank Barrage`, and `Feel No Pain`; all five unique Penance titles were reviewed directly against their English comments.
+- Lookup checks: `10` units resolved every active zh-tw `CKWord` and `CNumb` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after five documented English-comment source resolutions.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `211` (`ED3-PENANCES-RECHECK-015`).
+
+Current manifest progress: `1,271 / 1,953` AI-rechecked (`CHANGE 70`, `KEEP 1,136`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-015
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `211-225`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `2` — unit 220 changed the bowling-context title from `全中` to the established Taiwan bowling result `全倒` (`TERMINOLOGY;DISPLAY_CLARITY`); unit 223 changed the loose `{time_window} 秒內` wording to the strict `耗時少於 {time_window} 秒` threshold required by `under` (`WRONG_MEANING;DISPLAY_CLARITY`).
+- KEEP: `13`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `10`; mismatch: `0`. Locked values checked include `Burst Limiter Override`, `Bonebreaker's Aura`, `Coward Culling`, `Stay Close!`, `Coherency`, `Toughness`, `Bull Rush`, `Indomitable`, `Big Box of Hurt`, `Bombs Away!`, all five named Ogryn enemy types, and `Arbitrator`; all five fallback titles were reviewed directly against their English comments.
+- Lookup checks: `10` units resolved every active zh-tw `CKWord` and `CNumb` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after five documented English-comment source resolutions.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `226` (`ED3-PENANCES-RECHECK-016`).
+
+Current manifest progress: `1,286 / 1,953` AI-rechecked (`CHANGE 72`, `KEEP 1,149`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-016
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `226-240`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `0`.
+- KEEP: `15`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `12`; mismatch: `0`. Locked or established values checked include `Arbitrator`, `Trust Level`, `Malice`, `Heresy`, `Threat Level`, `Penance`, `Cyber-Mastiff`, all named enemy types, `Electrocuted`, `Damage`, `Staggered`, `Breaking Dissent`, and `Coherency`; all three `Diligent Patrol` titles were reviewed against complete English sources.
+- Lookup checks: `12` units resolved every active zh-tw `CKWord` and `CNumb` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after two documented English-comment source resolutions.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `241` (`ED3-PENANCES-RECHECK-017`).
+
+Current manifest progress: `1,301 / 1,953` AI-rechecked (`CHANGE 72`, `KEEP 1,164`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-017
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `241-255`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `0`.
+- KEEP: `15`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `15`; mismatch: `0`. Locked or established values checked include `Ruthless Efficiency`, `Part of the Squad`, `Voltaic Shock Mine`, `Nuncio-Aquila`, `Castigator's Stance`, `Break the Line`, `Remote Detonation`, `Arbites Grenade`, `Execution Order`, `Terminus Warrant`, `Forceful`, `Hive Scum`, `Coherency`, `Stun`, `Stagger`, `Heresy`, `Threat Level`, and `Trust Level`.
+- Lookup checks: `15` units resolved every active zh-tw `CKWord` and `CNumb` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `256` (`ED3-PENANCES-RECHECK-018`).
+
+Current manifest progress: `1,316 / 1,953` AI-rechecked (`CHANGE 72`, `KEEP 1,179`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-018
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `256-270`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `1` — unit 261 replaced the unnatural quantity phrase `分享 {target} 彈藥量` with `分享總計 {target} 發彈藥`, matching the same file's established ammunition classifier and total-count wording (`GRAMMAR;CONSISTENCY`).
+- KEEP: `14`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `15`; mismatch: `0`. Locked or established values checked include `Hive Scum`, `Penance`, `Malice`, `Heresy`, `Threat Level`, `Gunslinger`, `Ruffian`, `Anarchist`, contextual `Critical strikes`, `Coherency`, `Stagger`, `Blinder`, `Blitz`, `Boom Bringer`, `Monstrosity`, `Chem Grenade`, `Desperado`, `Rampage!`, and `Damage`.
+- Lookup checks: `15` units resolved every active zh-tw `CKWord` and `CNumb` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `271` (`ED3-PENANCES-RECHECK-019`).
+
+Current manifest progress: `1,331 / 1,953` AI-rechecked (`CHANGE 73`, `KEEP 1,193`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-019
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `271-285`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `0`.
+- KEEP: `15`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `14`; mismatch: `0`. Locked or established values checked include `Stimm Supply`, `Vulture's Mark`, `Adrenaline`, `Adrenaline Frenzy`, `Chemical Dependency`, `Keystone`, `Weakspot`, `Strength`, `Toughness`, `Chem Toxin`, and the candidate values `Cartel Special Stimm` / `Viscosity`; the `Offensive` category label was independently reviewed against its complete English comment.
+- Lookup checks: `14` units resolved every active zh-tw `CKWord` and `CNumb` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching sources after one documented English-comment source resolution.
+- Translation commit: `none` (pending completion of the full PENANCES file).
+- Safe next position: `Main_Modules/PENANCES.lua` unit `286` (`ED3-PENANCES-RECHECK-020`).
+
+Current manifest progress: `1,346 / 1,953` AI-rechecked (`CHANGE 73`, `KEEP 1,208`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-PENANCES-RECHECK-020
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/PENANCES.lua`.
+- Manifest units: `286-288`.
+- Reviewed: `3`.
+- ADD: `0`.
+- CHANGE: `0`.
+- KEEP: `3`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `2`; mismatch: `0`. Locked values checked include `explosive` / `爆炸桶` and `Pox Burster` / `瘟疫爆者`; the `The Enemy of my Enemy is my Friend` title was independently reviewed against its complete English comment.
+- Lookup checks: `2` units resolved every active zh-tw `CKWord` and `CNumb` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `3` units have complete matching sources after one documented English-comment source resolution.
+- Translation commit: `8f4d7ec` (created after full-file QA).
+- Safe next position: full-file QA reconciliation below.
+
+At initial batch completion, manifest progress was `1,349 / 1,953` AI-rechecked (`CHANGE 73`, `KEEP 1,211`, `SKIP 62`, `BLOCKED 3`).
+
+### PENANCES full-file QA reconciliation
+
+- Entire-file residual terminology scan found five active zh-tw occurrences where English explicitly says `Threat` but the translation still said `更高難度`.
+- Reconciled units: `30`, `32`, `44`, `47`, `51`.
+- Units `30`, `32`, `47`, and `51`: `KEEP -> CHANGE` with `TERMINOLOGY;CONSISTENCY`; each now says `更高威脅等級`.
+- Unit `44`: remained `CHANGE`; reason codes expanded from `WRONG_MEANING;DISPLAY_CLARITY` to `WRONG_MEANING;DISPLAY_CLARITY;TERMINOLOGY;CONSISTENCY`, and the same terminology correction was applied alongside its previously corrected strict-distance threshold.
+- Re-ran original batch handlers `ED3-PENANCES-RECHECK-002`, `003`, and `004` in explicit reconciliation mode, refreshing current zh-tw hashes and queue expressions for all five units.
+- Full-file verifier: current / manifest / queue units `288 / 288 / 288`; AI-rechecked `288`; missing or stale units `0`; zh-tw hash mismatches `0`; queue/manifest mismatches `0`; unresolved lookup calls `0`; unresolved source definitions `0`.
+- Source and placeholder status: `287 match`; `1 source_missing` is the already documented unit `3` BLOCKED source gap and was not silently converted to KEEP.
+- Final file results: `CHANGE 31`, `KEEP 256`, `BLOCKED 1`.
+- Entire diff was manually inspected; changes are limited to active `zh-tw` localization content. `git diff --check` passed.
+- Translation commit: `8f4d7ec` (`fix(zh-tw): complete penances recheck`), containing only `Main_Modules/PENANCES.lua`; the pre-existing staged TALENTS changes remained outside this commit.
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Psyker.lua` unit `1` (`ED3-PSYKER-RECHECK-001`).
+
+Current manifest progress: `1,349 / 1,953` AI-rechecked (`CHANGE 77`, `KEEP 1,207`, `SKIP 62`, `BLOCKED 3`).
