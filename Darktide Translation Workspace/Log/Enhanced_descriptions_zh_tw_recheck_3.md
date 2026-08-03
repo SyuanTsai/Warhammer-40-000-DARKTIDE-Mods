@@ -1004,4 +1004,64 @@ Current manifest progress: `524 / 1,953` AI-rechecked (`CHANGE 7`, `KEEP 453`, `
 
 Current manifest progress: `528 / 1,953` AI-rechecked (`CHANGE 7`, `KEEP 457`, `SKIP 62`, `BLOCKED 2`).
 
-Safe next position: `Phase C — ED3-CURIOS-RECHECK-001, Main_Modules/CURIOS_Blessings_Perks.lua units 1–15.`
+### ED3-CURIOS-RECHECK-001
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/CURIOS_Blessings_Perks.lua`
+- Manifest units: `1–15`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `1` (`PUNCTUATION`: unit 15)
+- KEEP: `14`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `10`; mismatch: `0`
+- Maximum Health/Stamina/Toughness, Wound, Combat Ability regeneration, both Corruption Resistance variants, Stamina/Toughness regeneration, and all numeric placeholders were checked independently and preserve their complete effects.
+- Unit 15 retains the Review's currency clarification but changes `審判庭代幣(錢)` to full-width Traditional Chinese punctuation `審判庭代幣（錢）`.
+- TERM_CANDIDATE: added `Ordo Dockets／審判庭代幣` after confirming the formal glossary is missing the fixed currency name and LoadoutMonitor uses the same core translation.
+- Lookup checks: `13` resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending CURIOS file completion`
+- Safe next position: `ED3-CURIOS-RECHECK-002, CURIOS units 16–22`
+
+Current manifest progress: `543 / 1,953` AI-rechecked (`CHANGE 8`, `KEEP 471`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-CURIOS-RECHECK-002
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/CURIOS_Blessings_Perks.lua`
+- Manifest units: `16–22`
+- Reviewed: `7`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `7`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `7`; mismatch: `0`
+- Curio-instead-of-Weapon reward chance preserves both the replacement condition and mission-reward scope.
+- Damage Resistance targets were independently checked as Flamers, Bombers, Gunners, Pox Hounds, Mutants, and Snipers; all six match formal enemy names and retain full-width target parentheses.
+- Lookup checks: `7` resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `3b85fc9d886d47cd9bea39d9347555fd1de155f9`
+- Safe next position: `ED3-MODULAR-RECHECK-001, Main_Modules/TALENTS_Modular.lua units 1–15`
+
+### CURIOS file completion checkpoint
+
+- Full file: `22 / 22` units AI-rechecked.
+- Final results: `CHANGE 1`, `KEEP 21`, `SKIP 0`, `ADD 0`, `BLOCKED 0`.
+- Current/manifest/queue unit counts: `22 / 22 / 22`.
+- Current zh-tw hash mismatches: `0`; queue/manifest state mismatches: `0`.
+- Placeholder status: `22 match`, `0 mismatch`, `0 source_pending`.
+- Active lookup calls unresolved: `0`; unresolved source definitions: `0`.
+- Translation diff boundary: one zh-tw file, one approved punctuation correction, no key/number/helper/control-flow or other-language change.
+- Translation commit: `3b85fc9d886d47cd9bea39d9347555fd1de155f9` (`fix(zh-tw): complete curios recheck`).
+
+Current manifest progress: `550 / 1,953` AI-rechecked (`CHANGE 8`, `KEEP 478`, `SKIP 62`, `BLOCKED 2`).
+
+Safe next position: `Phase C — ED3-MODULAR-RECHECK-001, Main_Modules/TALENTS_Modular.lua units 1–15.`
