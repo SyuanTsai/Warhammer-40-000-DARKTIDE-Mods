@@ -1606,3 +1606,363 @@ Current manifest progress: `849 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 776`, `
 Current manifest progress: `864 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 791`, `SKIP 62`, `BLOCKED 2`).
 
 Safe next position: `Phase C — ED3-WEAPONS-RECHECK-001, Main_Modules/WEAPONS_Blessings_Perks.lua units 1–15`.
+
+### ED3-WEAPONS-RECHECK-001
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `1–15`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `1` (`TERMINOLOGY;GRAMMAR`: unit 3)
+- KEEP: `14`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `1` corrected.
+- Six armour-category damage properties plus melee Critical Chance/Damage, horde/Elite/Specialist damage, Stamina, melee Weakspot Damage, Block Efficiency, and sprint Stamina Cost were each checked against full English expressions, exact placeholders, helper keys, and formal terminology.
+- Unit 3 changes `對感染敵人的傷害提升` to `對被感染敵人的傷害提升`, restoring the passive meaning of `Infested Enemies` and aligning with formal `被感染的敵人` terminology.
+- Lookup checks: `15` units resolved; unresolved helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending WEAPONS file completion`
+- Safe next position: `ED3-WEAPONS-RECHECK-002, WEAPONS units 16–30`
+
+Current manifest progress: `879 / 1,953` AI-rechecked (`CHANGE 10`, `KEEP 805`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-WEAPONS-RECHECK-002
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `16–30`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `1` (`TERMINOLOGY;GRAMMAR`: unit 18)
+- KEEP: `14`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `1` corrected.
+- Ranged damage properties for all six armour categories, ranged Critical Chance/Damage, horde/Elite/Specialist damage, active-weapon Stamina, ranged Weakspot Damage, Reload Speed, and melee Rending against staggered enemies were each checked against their complete English expressions, exact placeholders, helper keys, notes, and formal terminology.
+- Unit 18 changes `對感染敵人的傷害提升` to `對被感染敵人的傷害提升`, restoring the passive meaning of `Infested Enemies` and aligning with formal `被感染的敵人` terminology.
+- Lookup checks: `15` units resolved; unresolved helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending WEAPONS file completion`
+- Safe next position: `ED3-WEAPONS-RECHECK-003, WEAPONS units 31–45`
+
+Current manifest progress: `894 / 1,953` AI-rechecked (`CHANGE 11`, `KEEP 819`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-WEAPONS-RECHECK-003
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `31–45`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `3`; reconciled: `3` (units 38, 39, 43).
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- Bleed, activated-kill Critical Chance, Strength from hits/kills/charge time, Movement Speed, Brittleness, Cleave, chained-hit Critical Chance/Strength, and two Weakspot Kill descriptions were each compared with their complete English expressions, helper semantics, notes, placeholders, and formal terminology.
+- The three Review-touched chained-hit descriptions retain the English generation limits, durations, refresh behavior, ranged exclusion, and per-swing stack rules without loss or scope drift.
+- The two related Weakspot Kill keys intentionally share the same complete translation; `Weakspot Damage`, `Weakspot Kill`, and `Hit Mass` remain aligned with `弱點傷害`, `弱點擊殺`, and `順劈目標`.
+- Lookup checks: `15` units resolved; unresolved helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending WEAPONS file completion`
+- Safe next position: `ED3-WEAPONS-RECHECK-004, WEAPONS units 46–60`
+
+Current manifest progress: `909 / 1,953` AI-rechecked (`CHANGE 11`, `KEEP 834`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-WEAPONS-RECHECK-004
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `46–60`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- First-attack and missing-Stamina Strength, one-shot Finesse, dodge efficiency, Weakspot/Critical Kill, Bleed, repeated Weakspot, dodge-triggered Critical Chance/Finesse Damage, chained-heavy instakill, staggered-enemy special attacks, bleeding-enemy Weakspot Damage, and backstab Rending were each checked in full.
+- The formal glossary contains contextual `Finesse` entries for both `靈巧` and `靈巧傷害`; the current strings correctly use `靈巧` for the standalone modifier and `靈巧傷害` where English explicitly says `Finesse Damage`.
+- Gunner, Reaper, and Sniper remain aligned with `砲手`, `收割者`, and `狙擊手`; all trigger exclusions, tier values, stack limits, durations, and notes are preserved.
+- Lookup checks: `15` units resolved; unresolved helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending WEAPONS file completion`
+- Safe next position: `ED3-WEAPONS-RECHECK-005, WEAPONS units 61–75`
+
+Current manifest progress: `924 / 1,953` AI-rechecked (`CHANGE 11`, `KEEP 849`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-WEAPONS-RECHECK-005
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `61–75`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `2`; reconciled: `2` (units 64, 68).
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- Brittleness on Weakspot Hit, repeated/sweeping/stacking Impact, stagger-state Damage/Impact, Weakspot Kill Critical Chance, armour Hit Mass bypass, melee Rending, ranged blocking, Toughness recovery, Peril quelling, Soulblaze, Peril-scaled Strength, and activated Critical Strike were checked against all triggers, caps, durations, notes, and helper phrases.
+- Review-touched unit 64 preserves multiple stack generation by each melee swing or push action. Review-touched unit 68 preserves both armour-derived Hit Mass bypass and the ability to cleave Carapace armour.
+- `Soulblaze` remains `靈魂之火`, consistent with the module keyword definition and the glossary's repeated Psyker-context entry. The zh-tw Toughness helper uses the defined canonical key and preserves the non-interaction with Coherency Toughness regeneration.
+- Lookup checks: `15` units resolved; unresolved zh-tw helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending WEAPONS file completion`
+- Safe next position: `ED3-WEAPONS-RECHECK-006, WEAPONS units 76–90`
+
+Current manifest progress: `939 / 1,953` AI-rechecked (`CHANGE 11`, `KEEP 864`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-WEAPONS-RECHECK-006
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `76–90`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `3` (`ACCURACY;GRAMMAR`: units 83, 86, 89)
+- KEEP: `12`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `1`; reconciled: `1` (unit 76).
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- Repeated Weakspot Peril quelling, Elite/Specialist kill Strength, Perfect Block, Electrocuted damage, Stagger, attack speed, Heat/Finesse interactions, Heat lockout/scaling/reduction/dissipation, special-weapon Toughness, enemy Hit Mass, and pushed-enemy Weakspot Damage were checked in full.
+- Unit 83 now explicitly says chained Weakspot Hits **lower** Heat buildup and grant Finesse Damage; the previous wording incorrectly said the player gained Heat buildup.
+- Unit 86 removes the semantic double negative `降低 -數值` while retaining the signed number helper: Weakspot or Critical Kills now display the negative Heat modifier and state that it takes effect over the specified duration.
+- Unit 89 now identifies the signed value as an enemy Hit Mass modifier; the previous sentence lacked a predicate and did not clearly describe the effect.
+- Review-touched unit 76 correctly limits repeated-Weakspot Peril quelling to one proc per melee swing regardless of the number of enemy Weakspots hit.
+- Lookup checks: `15` units resolved; unresolved zh-tw helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0` after reparsing all three changes.
+- Translation commit: `pending WEAPONS file completion`
+- Safe next position: `ED3-WEAPONS-RECHECK-007, WEAPONS units 91–105`
+
+Current manifest progress: `954 / 1,953` AI-rechecked (`CHANGE 14`, `KEEP 876`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-WEAPONS-RECHECK-007
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `91–105`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `1` (`TERMINOLOGY;CONSISTENCY`: unit 104)
+- KEEP: `14`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- Energised-hit Brittleness/Impact/Damage/Hit Mass, special-action Critical Chance/Toughness, chained-hit Toughness, push Critical Chance, weapon-special Strength, fully charged heavy attacks, charge-scaled Toughness, explosions, zero-Stamina block pushback, block-spent Stamina stacks, and secondary-mode Brittleness were checked in full.
+- Unit 104 changes `最多堆疊 … 次` to `最多可疊加 … 層`, matching formal `Stacks／疊加` terminology and the same sentence's subsequent per-stack wording. All values, duration behavior, stack consumption, and refresh semantics are unchanged.
+- Lookup checks: `15` units resolved; unresolved zh-tw helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0` after reparsing the change.
+- Translation commit: `pending WEAPONS file completion`
+- Safe next position: `ED3-WEAPONS-RECHECK-008, WEAPONS units 106–120`
+
+Current manifest progress: `969 / 1,953` AI-rechecked (`CHANGE 15`, `KEEP 890`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-WEAPONS-RECHECK-008
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `106–120`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `6` (`TERMINOLOGY;CONSISTENCY`: units 108, 112, 115, 117, 118, 119)
+- KEEP: `9`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- Chem Toxin Weakspot Damage, rear shooting, close-range repeated-hit damage/immunity/kill buffs/suppression, salvo follow-up Damage, sprint immunity, Reload Speed, continuous-fire movement-penalty reduction/Suppression/Toughness, and Weakspot Hit ranged immunity were checked in full.
+- Six stacking descriptions now use formal and internally consistent `可疊加 … 層` instead of `堆疊 … 次`. No trigger, range, duration, cap, ammo percentage, or value changed.
+- Unit 117 remains a reduction of the alternate-fire movement-speed **penalty**, as confirmed by the blessing comment and cross-language context; its beneficial direction was preserved.
+- Lookup checks: `15` units resolved; unresolved zh-tw helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0` after reparsing all six changes.
+- Translation commit: `pending WEAPONS file completion`
+- Safe next position: `ED3-WEAPONS-RECHECK-009, WEAPONS units 121–135`
+
+Current manifest progress: `984 / 1,953` AI-rechecked (`CHANGE 21`, `KEEP 899`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-WEAPONS-RECHECK-009
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `121–135`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `7` (`TERMINOLOGY;CONSISTENCY`: units 121, 124, 126, 128, 130, 131; `TERMINOLOGY;ACCURACY`: unit 134)
+- KEEP: `8`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- Aim-time/ammo/Weakspot Critical properties, Stagger-scaled Damage, first-shot Strength, Suppression immunity, continuous-fire Strength/Critical Chance, close-kill Suppression/Recoil, sprint hipfire, ranged Bleed, point-blank explosions, and melee-kill ranged Critical Chance were checked in full.
+- Six stacking descriptions now use `可疊加 … 層`, preserving discharge/reset behavior, caps, and durations.
+- Unit 134 changes `近距離射擊` to `近身射擊` for `Point blank shots`. This avoids conflating the point-blank trigger with Darktide's separate 12.5-metre close-range category and remains aligned with the formal `Point Blank／近身平射` entry.
+- Lookup checks: `15` units resolved; unresolved zh-tw helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0` after reparsing all seven changes.
+- Translation commit: `pending WEAPONS file completion`
+- Safe next position: `ED3-WEAPONS-RECHECK-010, WEAPONS units 136–150`
+
+Current manifest progress: `999 / 1,953` AI-rechecked (`CHANGE 28`, `KEEP 907`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-WEAPONS-RECHECK-010
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `136–150`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `4` (`TERMINOLOGY;CONSISTENCY`: units 138–141)
+- KEEP: `11`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- Staggered-enemy Damage, Elite-kill Toughness, duplicated Surge descriptions, chained-secondary charge time, Peril Critical Chance, Weakspot Peril quelling, charged Brittleness, secondary-attack movement penalty/uninterruptibility, Soulblaze/Brittleness/Burn, Elite/Special explosion, ammo reduction, and chained-ranged Weakspot Critical Chance were checked in full.
+- Units 138 and 139 replace `電動力法杖` and `虛空爆裂法杖` with the formal weapon names `電流力場法杖` and `虛空爆破力場法杖`. Their shared value of two shots and Primary-Attack-only restriction remain unchanged.
+- Units 140 and 141 replace `堆疊 … 次` with `可疊加 … 層` while preserving charge-time and Peril thresholds.
+- Lookup checks: `15` units resolved; unresolved zh-tw helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0` after reparsing all four changes.
+- Translation commit: `pending WEAPONS file completion`
+- Safe next position: `ED3-WEAPONS-RECHECK-011, WEAPONS units 151–165`
+
+Current manifest progress: `1,014 / 1,953` AI-rechecked (`CHANGE 32`, `KEEP 918`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-WEAPONS-RECHECK-011
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `151–165`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `3` (`TERMINOLOGY;CONSISTENCY`: units 155, 158, 164)
+- KEEP: `12`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `1`; reconciled: `1` (unit 161).
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- Dodge Critical Chance, Critical-kill Toughness, ranged Bleed, Critical Cleave/Stagger, previous-hit Critical Chance, all-pellet Strength, both-barrel Reload Speed, chained-Weakspot Strength, Rending/Brittleness, reserve-fuel behavior, empty-tank Reload Speed, burning-enemy Stagger resistance, ammo-scaled Strength, and Weakspot Cleave were checked in full.
+- Units 155, 158, and 164 now use `可疊加 … 層`, retaining next-shot stack removal, refresh rules, and reload-held stacks.
+- Review-touched unit 161 correctly says Critical Hits spend reserve ammunition instead of ammunition from the current fuel tank.
+- Lookup checks: `15` units resolved; unresolved zh-tw helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0` after reparsing all three changes.
+- Translation commit: `pending WEAPONS file completion`
+- Safe next position: `ED3-WEAPONS-RECHECK-012, WEAPONS units 166–180`
+
+Current manifest progress: `1,029 / 1,953` AI-rechecked (`CHANGE 35`, `KEEP 930`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-WEAPONS-RECHECK-012
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `166–180`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `7` (`TERMINOLOGY;CONSISTENCY`: units 166, 168–170, 175, 179; `TERMINOLOGY;CONSISTENCY;GRAMMAR`: unit 173)
+- KEEP: `8`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- Charged-attack speed/Brittleness/Critical Chance, Overheat Critical properties/charge speed, continuous-fire and Heat Strength, Heat generation, chained-melee Strength, melee-kill Critical Chance, secondary/special explosion Strength, aim-time Strength, and reserve-ammo Critical reload were checked in full.
+- Seven stacking descriptions now use `疊加／可疊加 … 層`; unit 173 also changes `總計約 41% 降低` to the grammatical `總降低量約 41%`. All signed reductions, thresholds, caps, expiry/reset behavior, and bug notes are preserved.
+- Lookup checks: `15` units resolved; unresolved zh-tw helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0` after reparsing all seven changes.
+- Translation commit: `pending WEAPONS file completion`
+- Safe next position: `ED3-WEAPONS-RECHECK-013, WEAPONS units 181–195`
+
+Current manifest progress: `1,044 / 1,953` AI-rechecked (`CHANGE 42`, `KEEP 938`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-WEAPONS-RECHECK-013
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `181–195`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `4` (`TERMINOLOGY;CONSISTENCY`: units 181, 186, 189, 192)
+- KEEP: `11`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- Single-target Strength, special-hit Brittleness, close-kill Toughness, armour Hit Mass bypass, special Cleave ranged Strength, continuous-fire Toughness/explosion radius, multi-hit melee Strength, close-explosion Bleed, Ogryn/Monstrosity grenade behavior, projectile Weakspot Reload Speed, Arc lightning, Elite/Special Electrocution, and kill Strength were checked in full.
+- Units 181, 186, and 189 now use `可疊加 … 層`. Unit 192 changes `立即死亡` to the established same-file `立即擊殺` for `Instakill`, including the sentence explaining that it prevents other triggers.
+- Lookup checks: `15` units resolved; unresolved zh-tw helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0` after reparsing all four changes.
+- Translation commit: `pending WEAPONS file completion`
+- Safe next position: `ED3-WEAPONS-RECHECK-014, WEAPONS units 196–210`
+
+Current manifest progress: `1,059 / 1,953` AI-rechecked (`CHANGE 46`, `KEEP 949`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-WEAPONS-RECHECK-014
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/WEAPONS_Blessings_Perks.lua`
+- Manifest units: `196–197`
+- Reviewed: `2`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `2`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `2`; mismatch: `0`.
+- The final Special-charge refund and Weapon-Special follow-up sequence were checked against their complete English expressions, trigger order, cooldown, charge count, three enhanced attacks, and miss-consumption rule; both translations are complete.
+- Lookup checks: `2` units resolved; unresolved zh-tw helper calls `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `04fd493` (completed with the full WEAPONS file).
+- Safe next position: `WEAPONS full-file QA and commit`
+
+### WEAPONS_Blessings_Perks file completion checkpoint
+
+- Full file: `197 / 197` units AI-rechecked.
+- Final results: `CHANGE 37`, `KEEP 160`, `SKIP 0`, `ADD 0`, `BLOCKED 0`.
+- Current/manifest/queue unit counts: `197 / 197 / 197`.
+- Current zh-tw hash mismatches: `0`; queue/manifest state mismatches: `0`.
+- Placeholder status: `197 match`, `0 mismatch`, `0 source_pending`, `0 source_missing`.
+- Active lookup calls unresolved: `0`; unresolved source definitions: `0`.
+- REVIEW_TOUCHED: `7`; reconciled: `7` (units 38, 39, 43, 64, 68, 76, 161).
+- Glossary coverage: `197` formal/contextual hits; no new exact-term candidate was required.
+- Translation diff boundary: all changes are confined to zh-tw expressions and their zh-tw helper references; no localization key, other-language value, numeric value, control flow, or table structure changed.
+- Translation commit: `04fd493f56bc6715cbf29bf9fae5edb21f9cd3f9` (`fix(zh-tw): complete weapons recheck`).
+
+Current manifest progress: `1,061 / 1,953` AI-rechecked (`CHANGE 46`, `KEEP 951`, `SKIP 62`, `BLOCKED 2`).
+
+Safe next position: `Phase C — next manifest file after Main_Modules/WEAPONS_Blessings_Perks.lua`.
