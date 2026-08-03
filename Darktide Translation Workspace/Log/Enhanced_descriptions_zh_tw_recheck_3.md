@@ -2656,7 +2656,9 @@ Current manifest progress: `1,473 / 1,953` AI-rechecked (`CHANGE 100`, `KEEP 1,3
 
 Current manifest progress: `1,488 / 1,953` AI-rechecked (`CHANGE 107`, `KEEP 1,316`, `SKIP 62`, `BLOCKED 3`).
 
-### Full lookup integrity gate — ED3-LOOKUP-GATE-001
+### Superseded lookup integrity gate attempt — ED3-LOOKUP-GATE-001
+
+> **Superseded for scope error.** This attempt incorrectly treated helper calls in every locale field as writable Plan 3 scope. Its `runtime-gate unresolved 0` claim is not a valid zh-tw completion gate. All 25 non-zh-tw edits introduced by this attempt were later restored exactly; see `Lookup scope correction — ED3-LOOKUP-GATE-002` below.
 
 - The unit-by-unit translation review was paused at the existing safe next position, `Main_Modules/TALENTS/TALENTS_Zealot.lua` unit `61`; no staged or unstaged work was reset, restored, or discarded.
 - Scan basis: the live filesystem (`HEAD + index + working tree`) for all `15` Plan 3 target files. The final scan is anchored at translation commit `f1697f455dec474471a1b3c087868d61d477272d`, while the pre-existing staged Ogryn / Scum changes and unstaged Zealot changes remain present.
@@ -2675,3 +2677,64 @@ Current manifest progress: `1,488 / 1,953` AI-rechecked (`CHANGE 107`, `KEEP 1,3
 - Safe next position remains `Main_Modules/TALENTS/TALENTS_Zealot.lua` unit `61` (`ED3-ZEALOT-RECHECK-005`).
 
 Current manifest progress: `1,489 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 107`, `KEEP 1,316`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-ZEALOT-RECHECK-005
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Zealot.lua`.
+- Manifest units: `61-75`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `0`.
+- KEEP: `15` — every current zh-tw description preserves the complete trigger, target, duration, stack limit, cooldown, and numeric relationship from its active English source; no unsupported mechanic scope was added to units 68 or 72.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `2`; reconciled: `2` — units 65 and 66 were independently reread against their complete current English and retained.
+- GLOSSARY_HIT: `11`; mismatch: `0`. Locked or established terms checked include `Damage`, `Stagger`, `Weakspot Hit`, `Bleed`, `Bleeding`, contextual `Critical Hit(s)` / `Critical Chance`, `Toughness Damage Reduction`, `Health`, `Wound`, `Weakspot`, `Toughness`, and `Stamina`; `Spread`, `Recoil`, and `Uninterruptible` were also checked against established project usage with no conflicting candidate entry.
+- Lookup checks: all `11` lookup-using units resolved every active `CKWord` and `CNumb` call; the complete keyword and numeric expansions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Zealot file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Zealot.lua` unit `76` (`ED3-ZEALOT-RECHECK-006`).
+
+Current manifest progress: `1,504 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 107`, `KEEP 1,331`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-ZEALOT-RECHECK-006
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Zealot.lua`.
+- Manifest units: `76-79`.
+- Reviewed: `4`.
+- ADD: `0`.
+- CHANGE: `3` — unit 76 replaced the unnatural `治癒該傷害` with an explicit restoration of Health equal to the stated portion of the Damage over the stated time (`GRAMMAR;UNNATURAL;DISPLAY_CLARITY`); unit 77 corrected the inverted `重攻擊近戰` order to the established `近戰重攻擊` trigger relationship (`GRAMMAR;CONSISTENCY`); unit 78 aligned `Sprint Cost` with the formal glossary term `衝刺體力消耗` (`TERMINOLOGY;CONSISTENCY`).
+- KEEP: `1` — unit 79 preserves the complete successful-Dodge trigger, Damage modifier, stack limit, and duration.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `4`; mismatch: `0`. Locked or established terms checked include `Health`, `Damage`, `Suppression`, `Backstab`, `Cost for Sprinting`, `Sprint Speed`, and `Dodge`.
+- Lookup checks: both lookup-using units resolved every active `CKWord` call; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `4` units have complete matching active English sources.
+- Translation commit: `none` (full-file QA was paused for the lookup-scope audit below).
+- Safe next position: full-file QA for `Main_Modules/TALENTS/TALENTS_Zealot.lua`.
+
+Current manifest progress: `1,508 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 110`, `KEEP 1,332`, `SKIP 62`, `BLOCKED 3`).
+
+### Lookup scope correction — ED3-LOOKUP-GATE-002
+
+- The user identified a severe scope violation after Zealot unit 79. Further unit review and the Zealot full-file commit were paused immediately; no staged Ogryn / Scum work or unstaged Zealot work was reset, restored, or discarded.
+- Plan 3 was reread in full. Its authorized modification boundary is active zh-tw content in the 15 target files; other locale fields, program logic, localization keys, table names, function names, and balance data are explicitly outside translation scope. Non-zh-tw helper problems may only be recorded as `BASELINE_NON_ZHTW` risk.
+- Exact audit of translation commit `f1697f4`: `26` substantive changes — `1` authorized zh-tw phrase definition and `25` unauthorized non-zh-tw line changes (`zh-cn 9`, `en 7`, `ru 9`). The current index / worktree audit separately confirmed that all staged Ogryn (`3`) and Scum (`2`) lines and all unstaged Zealot (`23`) lines are confined to zh-tw expressions.
+- The `25` non-zh-tw lines were restored individually without reset or history rewriting in translation commit `02d8f59` (`fix(scope): restore non-zh-tw localization calls`). The restoration did not include the staged Ogryn / Scum files or the unstaged Zealot file.
+- Net lookup-change diff from `f1697f4^` through `02d8f59`: only the single authorized `Gen_mult_stacks_n_refr` definition remains in `Colors_Keywords_Numbers/COLORS_KWords_tw.lua`; Psyker, Veteran, and WEAPONS are byte-equivalent to their pre-gate content for this change set.
+- Formal zh-tw lookup gate basis: live filesystem (`HEAD + index + working tree`), all `15` Plan 3 target files, every active zh-tw expression, and all referenced `COLORS_KWords_tw.lua` / `COLORS_Numbers.lua` definitions.
+- Formal helper totals: `3,403` calls — `CKWord 1,898`, `CNumb 1,235`, `CPhrs 193`, `CNote 77`; unresolved `CKWord 0`, `CNumb 0`, `CPhrs 0`, `CNote 0`.
+- `ADD_DEFINITION`: `Gen_mult_stacks_n_refr` remains an authorized addition to the zh-tw phrase table, built from the complete trusted `Can_gen_mult` + `Can_be_refr` content as requested. No non-zh-tw call site is changed.
+- Auxiliary cross-locale runtime diagnostic (read-only, not the Plan 3 gate): `12,150` calls; unresolved `25` — `CPhrs 12`, `CNote 11`, `CNumb 2`, `CKWord 0`. All `25` occur only in non-target fields and are recorded as `BASELINE_NON_ZHTW`: `REPLACE_WITH_CANONICAL_KEY 16` (`en 7`, `ru 9`) and `REMOVE_DEAD_REFERENCE 9` (`zh-cn 9`). They are not authorized translation changes and are excluded from the zero-unresolved zh-tw gate.
+- Manifest / queue verification after restoration passed for WEAPONS (`197 / 197 / 197`), Psyker (`79 / 79 / 79`), and Veteran (`75 / 75 / 75`), with missing, stale, zh-tw hash, and queue/manifest mismatches all `0`.
+- `git diff --check` passed. No translation content outside zh-tw remains changed in the net lookup correction or the current uncommitted work.
+- Safe next position: full-file QA for `Main_Modules/TALENTS/TALENTS_Zealot.lua`; unit review must not resume until this correction is checkpointed.
+
+Current manifest progress remains `1,508 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 110`, `KEEP 1,332`, `SKIP 62`, `BLOCKED 3`).
