@@ -2797,6 +2797,151 @@ Current manifest progress: `1,583 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 136`, 
 
 Current manifest progress remains `1,583 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 136`, `KEEP 1,381`, `SKIP 62`, `BLOCKED 3`).
 
+### Batch ED3-OGRYN-RECHECK-001
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Ogryn.lua`.
+- Manifest units: `1-15`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `11` — units 1, 2, and 5 restored the explicit Instakill property and aligned enemy `Gunners` to formal `砲手`; unit 3 aligned the Weak Spot fallback to `弱點` and replaced the unnatural charge-count construction; unit 4 restored the omitted parenthetical flavour and explicit instant-kill mechanic; unit 5 also corrected the box subject; units 7-10 aligned Allies in Coherency to `協同範圍內的盟友`, with unit 10 additionally correcting `Armored Groaner` / Dreg Gunner / Scab Gunner to formal names; unit 12 rewrote the backward-movement cancellation instruction naturally; unit 13 corrected the reversed subject so the Ogryn, not each enemy hit, gains Trample.
+- KEEP: `4`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `14`; mismatch: `0` after the listed corrections. Locked or established terms checked include `Damage`, `Stagger`, `Weak Spot` / `Weakspot Hit`, `Frag Grenade`, `Coherency`, `Toughness`, `Trample`, `Bleed`, all listed Ogryn weapons, and every named enemy / armour category in the Blitz and Suppression descriptions.
+- Lookup checks: all `15` units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; complete `Doesnt_Stack_Ogr_Aura`, `Dont_intw_coher_toughn`, and `Refr_dur_stappl` expansions and all referenced numeric definitions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Ogryn file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Ogryn.lua` unit `16` (`ED3-OGRYN-RECHECK-002`).
+
+Current manifest progress: `1,598 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 147`, `KEEP 1,385`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-OGRYN-RECHECK-002
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Ogryn.lua`.
+- Manifest units: `16-30`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `5` — unit 17 restored Base Damage Taken as an incoming-Damage increase and clarified the Attention Seeker exclusion; unit 18 explicitly assigned each shout-hit Stack to the player; unit 19 rendered Cooldown replenishment as a reduction of remaining Cooldown time; unit 20 restored the proportional relationship for Ammo returned after the ability; unit 27 rewrote both the per-Stack Melee-kill Toughness modifier and the base `5% of Maximum Toughness` relationship.
+- KEEP: `10`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `1`; reconciled: `1` — unit 24's current per-swing Heavy Hitter generation, stack limits, duration, and Melee Damage relationship were independently reread and retained.
+- GLOSSARY_HIT: `15`; mismatch: `0`. Locked or established terms checked include candidate `Taunt`, `Attention Seeker`, `Toughness`, `Stagger`, `Cooldown`, `Damage`, `Rending`, `Burn`, `Heavy Hitter`, `Toughness Damage Reduction`, `Cleave`, `Impact`, and `Feel No Pain`.
+- Lookup checks: all `15` units resolved every active `CKWord`, `CNumb`, `CPhrs`, and `CNote` call; complete `Can_be_refr`, `Carap_cant_cleave`, `Dont_intw_coher_toughn`, `Rend_note`, and `Impact_note` expansions and all referenced numeric definitions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Ogryn file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Ogryn.lua` unit `31` (`ED3-OGRYN-RECHECK-003`).
+
+Current manifest progress: `1,613 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 152`, `KEEP 1,395`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-OGRYN-RECHECK-003
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Ogryn.lua`.
+- Manifest units: `31-45`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `4` — unit 39 aligned Allies in Coherency to `協同範圍內的盟友`; unit 40 removed the visible split inside the compound `協同韌性恢復`; unit 41 rewrote Damage Reduction against the listed enemies as Damage received from those enemies being reduced; unit 44 restored the explicit single-Melee-Attack condition for hitting multiple enemies.
+- KEEP: `11`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `1`; reconciled: `1` — unit 35's current killing-Melee-Attack trigger, next-shot Lucky Bullet chance, per-swing limit, and stack cap were independently reread and retained.
+- GLOSSARY_HIT: `13`; mismatch: `0`. Locked or established terms checked include `Cooldown`, `Toughness`, `Damage`, `Stagger`, `Lucky Bullet`, contextual `Critical`, `Ability Cooldown`, `Coherency`, all listed Ogryn enemies and weapons, and candidate `Ammo`.
+- Lookup checks: all `14` lookup-using units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; complete `Can_be_refr`, `Doesnt_Stack_Ogr_abil`, and `Dont_intw_coher_toughn` expansions and all referenced numeric definitions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Ogryn file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Ogryn.lua` unit `46` (`ED3-OGRYN-RECHECK-004`).
+
+Current manifest progress: `1,628 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 156`, `KEEP 1,406`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-OGRYN-RECHECK-004
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Ogryn.lua`.
+- Manifest units: `46-60`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `6` — unit 48 aligned enemy `Gunners` to formal `砲手`; unit 52 replaced the unnatural bare `受到遠程命中` with an explicit Ranged-Attack hit; unit 54 aligned Heavy Melee Attack to `近戰重攻擊`; unit 55 removed the visible split inside `近戰弱點威力`; unit 59 restored the explicit Melee condition and established heavy-attack order; unit 60 aligned Light / Heavy Melee Hit to `近戰輕攻擊` / `近戰重攻擊`.
+- KEEP: `9`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `1`; reconciled: `1` — unit 50's per-swing generation, Melee Damage Resistance, stack cap, and Melee-Damage-only removal condition were independently reread and retained.
+- GLOSSARY_HIT: `14`; mismatch: `0`. Locked or established terms checked include `Coherency`, `Damage`, `Stamina`, contextual Gunners / Reaper / Sniper and disabler enemies, `Reload Speed`, `Weakspot`, `Strength`, `Impact`, `Stagger`, candidate `Ammo`, and `Bleed`.
+- Lookup checks: all `12` lookup-using units resolved every active `CKWord`, `CNumb`, `CPhrs`, and `CNote` call; complete `Can_be_refr`, `Doesnt_Stack_Ogr_abil`, `Pwr_note`, and `Impact_note` expansions and all referenced numeric definitions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Ogryn file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Ogryn.lua` unit `61` (`ED3-OGRYN-RECHECK-005`).
+
+Current manifest progress: `1,643 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 162`, `KEEP 1,415`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-OGRYN-RECHECK-005
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Ogryn.lua`.
+- Manifest units: `61-75`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `3` — unit 69 aligned enemy `Gunners` to formal `砲手`; unit 70 aligned an Ally in Coherency to `協同範圍內的隊友`; unit 73 made the one-per-Bleeding-enemy Damage Resistance relationship explicit and rendered the cap as Stacks rather than occurrences.
+- KEEP: `12`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `1`; reconciled: `1` — unit 68's Chained-Hit trigger, Melee Attack Speed duration / stack limit, one-per-swing generation, and refresh rule were independently reread and retained.
+- GLOSSARY_HIT: `12`; mismatch: `0`. Locked or established terms checked include `Brittleness`, `Stagger`, `Toughness`, `Strength`, `Toughness Damage Reduction`, `Stun`, `Stamina`, `Burn`, `Corruption`, `Corruption Damage`, `Health`, candidate `Taunt`, all listed special enemies, `Coherency`, `Ability Cooldown`, `Reload Speed`, `Damage`, `Bleeding`, and formal `Grimoire`.
+- Lookup checks: all `13` lookup-using units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; complete `Can_be_refr` and `Cant_be_refr` expansions and all referenced numeric definitions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Ogryn file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Ogryn.lua` unit `76` (`ED3-OGRYN-RECHECK-006`).
+
+Current manifest progress: `1,658 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 165`, `KEEP 1,427`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-OGRYN-RECHECK-006
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Ogryn.lua`.
+- Manifest units: `76-88`.
+- Reviewed: `13`.
+- ADD: `0`.
+- CHANGE: `3` — units 79 and 85 aligned Allies in Coherency to `協同範圍內的隊友`; unit 86 rewrote the per-downed-or-incapacitated-Ally Damage Reduction relationship as a complete natural sentence.
+- KEEP: `10`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `12`; mismatch: `0`. Locked or established terms checked include `Damage`, `Rending`, `Stagger`, `Combat Ability`, `Coherency`, `Stun`, contextual `Critical Chance` / `Critical Strike Damage`, `Strength`, and `Toughness Damage Reduction`.
+- Lookup checks: all `12` lookup-using units resolved every active `CKWord`, `CNumb`, `CPhrs`, and `CNote` call; complete `Can_be_refr`, `Can_gen_mult`, and `Rend_note` expansions and the referenced numeric definition were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `13` units have complete matching active English sources.
+- Translation commit: `none` (pending full-file QA for TALENTS_Ogryn).
+- Safe next position: full-file QA for `Main_Modules/TALENTS/TALENTS_Ogryn.lua`.
+
+Current manifest progress: `1,671 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 168`, `KEEP 1,437`, `SKIP 62`, `BLOCKED 3`).
+
+### TALENTS_Ogryn full-file QA checkpoint
+
+- Full-file verifier: current / manifest / queue units `88 / 88 / 88`; AI-rechecked `88`; missing or stale units `0`; zh-tw hash mismatches `0`; queue/manifest mismatches `0`.
+- Final file results: `CHANGE 32`, `KEEP 56`; `BLOCKED 0`.
+- Source and placeholder status: `88 match`; incomplete sources `0`.
+- Formal zh-tw lookup gate: total calls `3,403` (`CKWord 1,898`, `CNumb 1,235`, `CPhrs 193`, `CNote 77`); unresolved calls `0`; unresolved source definitions `0`.
+- Auxiliary cross-locale runtime diagnostic remains read-only: `25` unresolved non-target calls, all recorded as `BASELINE_NON_ZHTW`; no non-zh-tw content was changed.
+- The entire Ogryn HEAD-to-live diff was manually reread and contains only active zh-tw localization content. The full Plan 3 base-to-live scope audit covers `11` changed target files and `438` changed lines (`220` base / `218` live): `7` lines in the dedicated zh-tw definition file and `431` lines inside explicit zh-tw fields; out-of-scope changed lines `0`. `git diff --check` passed.
+- Translation commit: `eca6fe4` (`fix(zh-tw): complete ogryn talents recheck`), containing only `Main_Modules/TALENTS/TALENTS_Ogryn.lua`; the pre-existing staged Scum changes remained outside this commit.
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Arbites.lua` unit `1` (`ED3-ARBITES-RECHECK-001`).
+
+Current manifest progress remains `1,671 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 168`, `KEEP 1,437`, `SKIP 62`, `BLOCKED 3`).
+
 ### Batch ED3-VETERAN-RECHECK-001
 
 - AI handler: `codex`.
