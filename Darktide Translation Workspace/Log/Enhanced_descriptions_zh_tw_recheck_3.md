@@ -2567,3 +2567,111 @@ Current manifest progress: `1,428 / 1,953` AI-rechecked (`CHANGE 90`, `KEEP 1,27
 - Safe next position: `Main_Modules/TALENTS/TALENTS_Zealot.lua` unit `1` (`ED3-ZEALOT-RECHECK-001`).
 
 Current manifest progress remains `1,428 / 1,953` AI-rechecked (`CHANGE 90`, `KEEP 1,273`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-ZEALOT-RECHECK-001
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Zealot.lua`.
+- Manifest units: `1-15`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `7` — units 1-2 aligned `Captains` to locked `連長`, with unit 2 also restoring the omitted `blast` scope; unit 3 corrected the ungrammatical Burning / Staggering clause; units 8, 14, and 15 restored the complete `Allies in Coherency` relationship; unit 13 rewrote the Holy Relic pulse-duration sentence so the 1.5-second effects and recipients are unambiguous.
+- KEEP: `8`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `3`; reconciled: `3` — units 5 and 6 were independently retained; unit 14 received the additional Coherency-scope correction.
+- GLOSSARY_HIT: `14`; mismatch: `0`. Locked terms checked include `Stun Grenade`, `Electrocuted`, `Stagger`, `Mutant`, `Pox Burster`, `Monstrosity`, `Captain`, `Twins`, `Bulwark`, `Burn`, `Cleave`, all listed knife targets, `Toughness Damage Reduction`, `Coherency`, `Corruption`, `Wound`, `Grimoire`, `Stamina`, `Critical Hit`, `Rending`, `Unyielding`, `Carapace`, `Holy Relic`, and `Zealot`.
+- Lookup checks: `14` units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; complete `Can_be_refr`, `Can_appl_thr_shlds`, `Doesnt_Stack_Zea_Aura`, and `Doesnt_Stack_Zea_abil` English / zh-tw expansions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Zealot file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Zealot.lua` unit `16` (`ED3-ZEALOT-RECHECK-002`).
+
+Current manifest progress: `1,443 / 1,953` AI-rechecked (`CHANGE 97`, `KEEP 1,281`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-ZEALOT-RECHECK-002
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Zealot.lua`.
+- Manifest units: `16-30`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `3` — unit 20 rewrote the Fury activation line so `{duration}` unambiguously modifies the granted effect; unit 21 restored `Allies in Coherency` as `協同範圍內的盟友`; unit 23 added the missing `時` trigger relationship and replaced the slash-form Toughness rate with `每秒恢復`.
+- KEEP: `12`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `4`; reconciled: `4` — units 20 and 23 received the listed corrections; units 24 and 26 were independently retained.
+- GLOSSARY_HIT: `14`; mismatch: `0`. Locked or established terms checked include `Stealth`, `Damage`, `Finesse Damage`, contextual `Critical Chance`, `Rending`, all nine listed monster / Ogryn categories, `Fury`, `Coherency`, `Toughness`, `Toughness Damage Reduction`, contextual `Critical Hits`, `Wound`, `Corruption`, and `Health`.
+- Lookup checks: `14` units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; complete `Can_be_refr` expansion was reread; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Zealot file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Zealot.lua` unit `31` (`ED3-ZEALOT-RECHECK-003`).
+
+Current manifest progress: `1,458 / 1,953` AI-rechecked (`CHANGE 100`, `KEEP 1,293`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-ZEALOT-RECHECK-003
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Zealot.lua`.
+- Manifest units: `31-45`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `0`.
+- KEEP: `15` — all current zh-tw descriptions preserve the complete English conditions, targets, stack behavior, durations, distances, and numeric tables.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `14`; mismatch: `0`. Locked or established terms checked include Zealot-specific `Momentum`, `Toughness`, `Weakspot Hit`, `Backstab`, `Flanking Hits`, `Finesse Damage`, `Infested`, `Unyielding`, `Damage`, and `Ability Cooldown`.
+- Lookup checks: `14` units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; all current English / zh-tw expansions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Zealot file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Zealot.lua` unit `46` (`ED3-ZEALOT-RECHECK-004`).
+
+Current manifest progress: `1,473 / 1,953` AI-rechecked (`CHANGE 100`, `KEEP 1,308`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-ZEALOT-RECHECK-004
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Zealot.lua`.
+- Manifest units: `46-60`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `7` — unit 48 clarified both the maximum-Health cap and the three-times Melee-Damage healing contribution; unit 50 aligned `missing Stamina` to the established `缺少的耐力`; unit 51 supplied the missing gain relationship and natural `衝擊強度` phrasing; unit 52 restored the player as the implicit recipient of each nearby-enemy threshold; unit 53 changed `協同中的盟友` to the established `協同範圍內的盟友`; unit 54 replaced lock-on wording with the accurate `未以你為目標`; unit 55 aligned `Missing Ammo` to `已缺少彈藥`.
+- KEEP: `8`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `1`; reconciled: `1` — unit 57's complete current Assist / Revive, Movement Speed, and locked Toughness Damage Reduction wording was independently reread and retained.
+- GLOSSARY_HIT: `12`; mismatch: `0`. Locked or established terms checked include `Damage`, `Health`, `Stun` / `Stunned`, `Stamina`, `Impact`, `Cleave`, `Coherency`, and `Toughness Damage Reduction`; no conflicting candidate entry was found.
+- Lookup checks: `12` units resolved every active `CKWord` and `CNumb` call; the keyword configuration and unit 50's complete percent / numeric table expansions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Zealot file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Zealot.lua` unit `61` (`ED3-ZEALOT-RECHECK-005`).
+
+Current manifest progress: `1,488 / 1,953` AI-rechecked (`CHANGE 107`, `KEEP 1,316`, `SKIP 62`, `BLOCKED 3`).
+
+### Full lookup integrity gate — ED3-LOOKUP-GATE-001
+
+- The unit-by-unit translation review was paused at the existing safe next position, `Main_Modules/TALENTS/TALENTS_Zealot.lua` unit `61`; no staged or unstaged work was reset, restored, or discarded.
+- Scan basis: the live filesystem (`HEAD + index + working tree`) for all `15` Plan 3 target files. The final scan is anchored at translation commit `f1697f455dec474471a1b3c087868d61d477272d`, while the pre-existing staged Ogryn / Scum changes and unstaged Zealot changes remain present.
+- The original zh-tw-expression-only layer contained `3,403` calls: `CKWord 1,898`, `CNumb 1,235`, `CPhrs 193`, `CNote 77`; unresolved calls: `0`.
+- Because `CPhrs` and `CNote` resolve against the currently loaded language table while every active locale expression is evaluated, and `CNumb` uses the shared number table, the gate also scanned those helpers across every active locale expression in the `15` files. Initial runtime-gate totals were `12,150` calls: `CKWord 1,898`, `CNumb 8,692`, `CPhrs 883`, `CNote 677`; unresolved calls: `41` (`CPhrs 28`, `CNote 11`, `CNumb 2`, `CKWord 0`).
+- `ADD_DEFINITION`: `Gen_mult_stacks_n_refr` accounted for `16` calls in the `en`, `de`, `it`, `ja`, `ko`, `pl`, `pt-br`, and `es` fields of both `loc_trait_bespoke_increase_power_on_hit_desc` and `loc_trait_bespoke_increase_power_on_kill_desc`. One shared zh-tw phrase definition was added from the complete trusted `Can_gen_mult` + `Can_be_refr` source content; no single blessing call was substituted as a workaround.
+- `REPLACE_WITH_CANONICAL_KEY`: `16` calls — `Dont_intw_coher_tghn` → `Dont_intw_coher_toughn` (`9`); `Refr_dur_stappl_ru` → `Refr_dur_stappl` (`1`); `Dont_intw_coher_toughn_ru` → `Dont_intw_coher_toughn` (`2`); `Pwr_note_rgb` / `Pwr_note_rgb_ru` → `Pwr_note` (`2`); `n_04_rgb` → `n_0_4_rgb` (`2`).
+- `REMOVE_DEAD_REFERENCE`: all `9` active `Hit_Mass_note` calls were removed from zh-cn fields in `Main_Modules/WEAPONS_Blessings_Perks.lua`. Every affected description already contained the complete English Hit Mass mechanic, and no trustworthy shared note definition exists; no mechanic text was invented.
+- `BLOCKED_UNKNOWN_CONTENT`: `0`.
+- Final runtime-gate totals: `12,141` calls — `CKWord 1,898`, `CNumb 8,692`, `CPhrs 883`, `CNote 668`; unresolved `CKWord 0`, `CNumb 0`, `CPhrs 0`, `CNote 0`.
+- Final definition inventory: `CKWord 273`, `CNumb 275`, `CPhrs 24`, `CNote 6`.
+- The new `Gen_mult_stacks_n_refr#1` phrase is now formal manifest unit `330`, AI-rechecked as `ADD:LOOKUP_MISSING`; subsequent COLORS unit numbers were reconciled by stable ID without changing their prior AI results. Formal manifest total is now `1,954`.
+- Current / manifest / queue verification passed for `COLORS_KWords_tw.lua` (`357 / 357 / 357`), `WEAPONS_Blessings_Perks.lua` (`197 / 197 / 197`), and `TALENTS_Psyker.lua` (`79 / 79 / 79`), with missing/stale/hash/queue mismatches all `0`. The live parser successfully parsed all `1,954` units.
+- `git diff --check` passed. A standalone Lua / luac syntax executable and bundled Python Lua parser were unavailable; the balanced-expression parser and complete lookup scan supplied structural verification.
+- Translation commit: `f1697f4` (`fix(lookups): close shared localization references`), containing only `COLORS_KWords_tw.lua`, `WEAPONS_Blessings_Perks.lua`, `TALENTS_Psyker.lua`, and `TALENTS_Veteran.lua`.
+- Safe next position remains `Main_Modules/TALENTS/TALENTS_Zealot.lua` unit `61` (`ED3-ZEALOT-RECHECK-005`).
+
+Current manifest progress: `1,489 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 107`, `KEEP 1,316`, `SKIP 62`, `BLOCKED 3`).
