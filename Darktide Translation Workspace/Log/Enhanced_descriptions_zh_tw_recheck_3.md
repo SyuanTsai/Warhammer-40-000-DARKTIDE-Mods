@@ -1125,3 +1125,484 @@ Current manifest progress: `565 / 1,953` AI-rechecked (`CHANGE 8`, `KEEP 493`, `
 Current manifest progress: `579 / 1,953` AI-rechecked (`CHANGE 8`, `KEEP 507`, `SKIP 62`, `BLOCKED 2`).
 
 Safe next position: `Phase C — ED3-NAMES-RECHECK-001, Main_Modules/NAMES_Talents_Blessings.lua units 1–15.`
+
+### ED3-NAMES-RECHECK-001
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `1–15`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- Each active zh-tw blessing name was independently paired with the adjacent commented English source: Opportunist, Bloodletter, Bloodthirsty, Rev It Up, Thunderous, Shred, Savage Sweep, Brutal Momentum, Limbsplitter, All or Nothing, Agile, Slaughter Spree, Relentless Strikes, Executor, and Precognition.
+- All fifteen blessing-context translations exactly match the formal glossary, including `Precognition／未卜先知` rather than the separate talent-context entry `Precognition／預知未來`.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- Safe next position: `ED3-NAMES-RECHECK-002, NAMES units 16–30`
+
+Current manifest progress: `594 / 1,953` AI-rechecked (`CHANGE 8`, `KEEP 522`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-002
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `16–30`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- Haymaker through Power Surge were each checked against their adjacent commented English headers and active localization keys; every current zh-tw name exactly matches its blessing-context formal glossary entry.
+- Distinct mechanics and names such as Thunderstrike versus Thunderous, Chained Deathblow, Bladed Momentum, the melee Blazing Spirit entry, Syphon, Power Cycler, and Sunder remain correctly differentiated.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- Safe next position: `ED3-NAMES-RECHECK-003, NAMES units 31–45`
+
+Current manifest progress: `609 / 1,953` AI-rechecked (`CHANGE 8`, `KEEP 537`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-003
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `31–45`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- Offensive Defence and fourteen standard ranged blessing names were independently checked against their commented English sources, active keys, and formal glossary entries; all current zh-tw values match.
+- The standard key `loc_trait_bespoke_toughness_on_continuous_fire` correctly uses `Inspiring Barrage／振奮彈幕`; the later `..._alternative` Ogryn key is a distinct contextual entry and does not invalidate this translation.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- Safe next position: `ED3-NAMES-RECHECK-004, NAMES units 46–60`
+
+Current manifest progress: `624 / 1,953` AI-rechecked (`CHANGE 8`, `KEEP 552`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-004
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `46–60`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- Both Surge localization keys (base double-shot and double-shot-plus-critical-chance) were checked separately and correctly share `湧動`; the remaining staff, flame, firearm, and shotgun blessing names each match their exact formal entries.
+- Blazing Spirit is also valid in this ranged/staff context and consistently remains `燃燒靈魂`.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- Safe next position: `ED3-NAMES-RECHECK-005, NAMES units 61–75`
+
+Current manifest progress: `639 / 1,953` AI-rechecked (`CHANGE 8`, `KEEP 567`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-005
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `61–75`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- Flame, plasma, gauntlet, heavy-weapon, and Ogryn blessing names were checked one by one against their commented English headers, active keys, and contextual formal entries; all current translations match.
+- The `loc_trait_bespoke_toughness_on_continuous_fire_alternative` Ogryn key correctly uses `Inspiring Barrage／激勵彈幕`, distinct from the standard key reviewed in batch 003.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- Safe next position: `ED3-NAMES-RECHECK-006, NAMES units 76–90`
+
+Current manifest progress: `654 / 1,953` AI-rechecked (`CHANGE 8`, `KEEP 582`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-006
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `76–90`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `1` (`TERMINOLOGY`: unit 77)
+- KEEP: `14`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `1` corrected.
+- Unit 77 changes `Critical Chance Boost` from `暴擊機率增幅` to `爆擊率增幅`, following the formal Crit rule for a probability attribute and matching the paired description's `爆擊率` wording.
+- Cleave, Impact, melee/ranged damage, movement, Peril, reload, Rending, Toughness, and Toughness Damage Reduction node labels preserve the intentional shared display names; explicit Low/Medium suffixes remain only where the active English strings contain them.
+- Brain Burst remains the distinct base Blitz name `顱腦爆裂`.
+- Lookup checks: `11` commented English sources plus `4` active English strings resolved, missing `0`, mismatch `0` after correction.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- Safe next position: `ED3-NAMES-RECHECK-007, NAMES units 91–105`
+
+Current manifest progress: `669 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 596`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-007
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `91–105`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `1`; reconciled: `1` (unit 98)
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- All fifteen Psyker Blitz, Ability, modifier, and Keystone names were independently paired with the commented English source and contextual formal glossary entry.
+- Review-touched unit 98 `Becalming Eruption／平靜迸發` is complete and correct after fresh source/key/glossary comparison.
+- `Precognition／預知未來` is retained specifically for the Psyker ability modifier; the blessing-context `Precognition／未卜先知` remains a distinct entry.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- Safe next position: `ED3-NAMES-RECHECK-008, NAMES units 106–120`
+
+Current manifest progress: `684 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 611`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-008
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `106–120`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `0`
+- Fifteen Psyker Keystone and passive names were independently checked against their English headers and formal glossary entries; all current zh-tw values match.
+- Historical candidate `Mind in Motion／動中之心` conflicts with the now-authoritative formal `Mind in Motion／思維活躍`; the current translation correctly follows the formal entry and the candidate row is marked `conflict`.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- TERM_CANDIDATE: changed historical `Mind in Motion／動中之心` from `candidate` to `conflict`; no formal glossary edit.
+- Safe next position: `ED3-NAMES-RECHECK-009, NAMES units 121–135`
+
+Current manifest progress: `699 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 626`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-009
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `121–135`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `13`; mismatch: `0`; exact formal entries missing: `2`.
+- Psyker and Zealot names were individually paired with the English headers and contextual formal entries. `Solidity／穩固` and `Surety of Arms／武器在手，信心我有。` correctly follow the formal glossary despite contrary historical candidates; both candidates are now marked `conflict`.
+- `Unlucky for Some／倒楣蛋` is semantically complete as a concise passive title and was added as a candidate because the exact formal term is absent. Existing `Loner／孤狼` candidate remains applicable.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- TERM_CANDIDATE: added `Unlucky for Some／倒楣蛋`; changed `Solidity／堅實` and `Surety of Arms／武器確信` to `conflict`; no formal glossary edit.
+- Safe next position: `ED3-NAMES-RECHECK-010, NAMES units 136–150`
+
+Current manifest progress: `714 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 641`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-010
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `136–150`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `13`; mismatch: `0`; exact formal entries missing: `2`.
+- Fifteen Zealot Keystone and passive names were independently compared with their English headers and formal glossary. All thirteen formal hits match exactly, including the intentionally concise `Bleed for the Emperor／為了帝皇`.
+- `Fury Rising／怒火升騰` and `Fortitude in Fellowship／合抱成林` are semantically sound but absent as exact formal entries, so both were recorded as candidates.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- TERM_CANDIDATE: added `Fury Rising／怒火升騰` and `Fortitude in Fellowship／合抱成林`; no formal glossary edit.
+- Safe next position: `ED3-NAMES-RECHECK-011, NAMES units 151–165`
+
+Current manifest progress: `729 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 656`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-011
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `151–165`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `13`; mismatch: `0`; exact formal entries missing: `2`.
+- The final Zealot passives and initial Veteran Blitz/Aura/Ability names were checked independently against English headers, active localization keys, and formal entries; all thirteen exact hits match.
+- `Sainted Gunslinger／封聖神射手` and `Swift Certainty／堅定迅捷` retain both source-name components and were added as candidates because the exact formal entries are missing.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- TERM_CANDIDATE: added `Sainted Gunslinger／封聖神射手` and `Swift Certainty／堅定迅捷`; no formal glossary edit.
+- Safe next position: `ED3-NAMES-RECHECK-012, NAMES units 166–180`
+
+Current manifest progress: `744 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 671`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-012
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `166–180`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `12`; mismatch: `0`; exact formal entries missing: `3`.
+- Fifteen Veteran Keystone and passive names were independently paired with English headers and their localization keys; all twelve exact formal entries match, including punctuation in `Get Back in the Fight!`'s retained translation.
+- `Conditioning／身體調節`, `Charismatic／超凡魅力`, and `Get Back in the Fight!／重投戰鬥！` are complete and semantically sound but absent as exact formal entries, so all three were recorded as candidates.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- TERM_CANDIDATE: added `Conditioning／身體調節`, `Charismatic／超凡魅力`, and `Get Back in the Fight!／重投戰鬥！`; no formal glossary edit.
+- Safe next position: `ED3-NAMES-RECHECK-013, NAMES units 181–195`
+
+Current manifest progress: `759 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 686`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-013
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `181–195`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `14`; mismatch: `0`; exact formal entries missing: `1`.
+- Veteran passive names and the first Ogryn Blitz name were individually checked against English headers and active keys; all fourteen formal hits match, including contextual `Grenadier／擲彈兵` and punctuation-bearing command titles.
+- `Twinned Blast／雙響炮` is a complete compact rendering of the doubled explosion and was added as a candidate because the exact formal entry is absent.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- TERM_CANDIDATE: added `Twinned Blast／雙響炮`; no formal glossary edit.
+- Safe next position: `ED3-NAMES-RECHECK-014, NAMES units 196–210`
+
+Current manifest progress: `774 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 701`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-014
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `196–210`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- Ogryn Blitz, Aura, and Ability names were individually checked against English headers, active keys, and formal glossary entries; all fifteen current zh-tw names match exactly.
+- Contextually repeated `Pulverise／粉碎` remains consistent, and command punctuation in `Bombs Away!` and `Stay Close!` is preserved by the formal translations.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- Safe next position: `ED3-NAMES-RECHECK-015, NAMES units 211–225`
+
+Current manifest progress: `789 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 716`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-015
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `211–225`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `13`; mismatch: `0`; exact formal entries missing: `2`.
+- Ogryn Ability, Keystone, and passive names were independently compared with English headers and active keys. All thirteen formal hits match, including contextually repeated labels and punctuation-bearing names.
+- `Brutish Momentum／兇蠻打擊` retains the brutish attack character in its light-attack refresh context; `More Burst Limiter Overrides!／爆限大超載！` conveys the increased override emphatically. Both exact terms are absent from the formal glossary and were recorded as candidates.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- TERM_CANDIDATE: added `Brutish Momentum／兇蠻打擊` and `More Burst Limiter Overrides!／爆限大超載！`; no formal glossary edit.
+- Safe next position: `ED3-NAMES-RECHECK-016, NAMES units 226–240`
+
+Current manifest progress: `804 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 731`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-016
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `226–240`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `1`; reconciled: `1` (unit 237)
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- The final Ogryn passives and initial Arbites Blitz names were individually compared with English headers, keys, and formal entries; all fifteen current translations match.
+- Review-touched unit 237 `Mobile Emplacement／機動部署` is correct after fresh source/key/glossary comparison. Both base and improved Arbites Grenade keys correctly share `法務官手榴彈`; accepted `Voltaic Shock Mine／電能地雷` remains aligned with the formal glossary.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- Safe next position: `ED3-NAMES-RECHECK-017, NAMES units 241–255`
+
+Current manifest progress: `819 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 746`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-017
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `241–255`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `14`; mismatch: `0`; exact formal entries missing: `1`.
+- Arbites Aura, Ability, and Keystone names were independently paired with English headers, active keys, and formal entries. All fourteen exact hits match, including the formal stylizations for Terminus Warrant and Keeping Protocol.
+- `Dispense Justice／伸張正義` remains semantically sound and is already tracked as a candidate because the formal glossary still lacks the exact talent name.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- Safe next position: `ED3-NAMES-RECHECK-018, NAMES units 256–270`
+
+Current manifest progress: `834 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 761`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-018
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `256–270`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- Arbites Keystone and passive names were individually compared with English headers, active keys, and formal entries; all fifteen current zh-tw values match exactly.
+- Contextually repeated `Withering Fire／凋零烈焰` remains valid, and the equipment/augmentation names retain their complete scope.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending NAMES file completion`
+- Safe next position: `ED3-NAMES-RECHECK-019, NAMES units 271–285`
+
+Current manifest progress: `849 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 776`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-NAMES-RECHECK-019
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/NAMES_Talents_Blessings.lua`
+- Manifest units: `271–285`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `15`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `15`; mismatch: `0`.
+- The final Arbites passive names were individually compared with English headers, active keys, and formal entries; all fifteen current zh-tw values match exactly.
+- Equipment, movement, force, target-selection, and attack titles retain their full contextual distinctions through the end of the file.
+- Lookup checks: `15` commented English sources resolved, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `7f37d29abde48c8f4fe03e20a26906564e976c0a`
+- Safe next position: `ED3-WEAPONS-RECHECK-001, Main_Modules/WEAPONS_Blessings_Perks.lua units 1–15`
+
+### NAMES_Talents_Blessings file completion checkpoint
+
+- Full file: `285 / 285` units AI-rechecked.
+- Final results: `CHANGE 1`, `KEEP 284`, `SKIP 0`, `ADD 0`, `BLOCKED 0`.
+- Current/manifest/queue unit counts: `285 / 285 / 285`.
+- Current zh-tw hash mismatches: `0`; queue/manifest state mismatches: `0`.
+- Placeholder status: `285 match`, `0 mismatch`, `0 source_pending`, `0 source_missing` after recording all adjacent English headers.
+- Active lookup calls unresolved: `0`; unresolved source definitions: `0`.
+- REVIEW_TOUCHED: `2`; reconciled: `2` (`Becalming Eruption／平靜迸發`, `Mobile Emplacement／機動部署`).
+- Glossary coverage: `272` formal/contextual hits and `13` exact-term gaps covered by candidate records.
+- Translation diff boundary: one zh-tw talent-name string changed from `暴擊機率增幅` to `爆擊率增幅`; no localization key, number, helper, control flow, table structure, or other-language change.
+- Translation commit: `7f37d29abde48c8f4fe03e20a26906564e976c0a` (`fix(zh-tw): complete names recheck`).
+- Candidate maintenance: added eleven missing exact talent-name candidates; retained existing `Loner` and `Dispense Justice` candidates; changed historical `Mind in Motion`, `Solidity`, and `Surety of Arms` proposals to `conflict` because the formal glossary now specifies different values.
+
+Current manifest progress: `864 / 1,953` AI-rechecked (`CHANGE 9`, `KEEP 791`, `SKIP 62`, `BLOCKED 2`).
+
+Safe next position: `Phase C — ED3-WEAPONS-RECHECK-001, Main_Modules/WEAPONS_Blessings_Perks.lua units 1–15`.
