@@ -12,6 +12,7 @@
 | `Darktide Translation Workspace/Log/<Repo directory>.md` | 每個 MOD 的工作分支 LOG、逐檔進度、逐 key 草稿、blocked 詳情與同步紀錄 |
 | `Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan.md` | Enhanced Descriptions 第一階段繁中補齊計畫與完成紀錄 |
 | `Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan_2.md` | Enhanced Descriptions 第二階段中文優先新增、修訂與潤飾計畫 |
+| `Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan_3.md` | Enhanced Descriptions 第三階段 15 檔、1,954 單元 AI 全量重查與完成紀錄 |
 
 ## 目前狀態摘要
 
@@ -19,6 +20,7 @@
 
 | AI handler | Status | Permission status | Permission scope | Current MOD | README name | Base branch | Work branch | Branch log | Current file | Current localization key | Last updated | Commit | Pushed | PR URL / number | Next position | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| codex | completed | granted | read/status/diff, user-owned translation repo branch and Lua commits, workspace docs commit; no push/PR | Enhanced_descriptions | Enhanced Descriptions | origin/Added-Traditional-Chinese at 95cbb81 | codex/feature/enhanced-descriptions/recheck-zh-tw-v3 | Darktide Translation Workspace/Log/Enhanced_descriptions_zh_tw_recheck_3.md | <translation-repo>/all 15 zh-tw target Lua files | 1,954/1,954 complete | 2026-08-04 +08:00 | efe0fef | no | none | none | Plan 3 完成：ADD 1、CHANGE 242、KEEP 1,646、SKIP 62、BLOCKED 3；active zh-tw lookup unresolved 0、scope violations 0、Phase D/E QA 通過；3 個 BLOCKED 均為有完整紀錄的 SOURCE_MISSING fallback。 |
 | codex | completed | granted | read/status/diff, user-owned translation repo branch and Lua commits, workspace docs commit; no PR | Enhanced_descriptions | Enhanced Descriptions | origin/Added-Traditional-Chinese at 6e043fa | Codex/Feature/Enhanced_descriptions/Revise-zh-tw | Darktide Translation Workspace/Log/Enhanced_descriptions_zh_tw_revision.md | <translation-repo>/all 15 zh-tw target Lua files | all target entries complete | 2026-07-19 +08:00 | 6b4dde9 | no | none | none; awaiting user review | 完成檔案 15/15、總盤點 1,924 條；Skitarii 101 條 CHANGE=35、KEEP=66，全案 QA 通過；保留使用者 `cab8cd1` Code review，不建立 PR、不推送。 |
 | codex | completed | granted | read/status/diff, external translation repo lua commit, workspace docs commit, push, create ready PR | Enhanced_descriptions | Enhanced Descriptions | xss0 | Added-Traditional-Chinese | Darktide Translation Workspace/Log/Enhanced_descriptions.md | <translation-repo>/all 15 zh-tw target Lua files | all target entries | 2026-07-18 20:16:27 +08:00 | 6e043fa | yes | https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA/pull/37 | none | 全部目標已完成；依 `c0ba427` 新版術語表重查當日 172 個條目並校正 4 個 Lua 檔，placeholder／CKWord 鍵與 diff check 均通過；PR #37 已更新。 |
 | codex | completed | granted | read/status/diff, workspace docs commit, branch, localization commit, push, create ready PR | CombatStats | CombatStats | main | Codex/Feature/CombatStats/Add-zh-tw | Darktide Translation Workspace/Log/CombatStats.md | CombatStats_localization.lua | all keys | 2026-07-14 08:36:55 +08:00 | none | no | none | none | 檢查完成：Horde/群怪等舊目標問題已修正於 main，無需 PR。 |

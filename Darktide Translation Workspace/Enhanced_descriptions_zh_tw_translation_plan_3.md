@@ -324,13 +324,21 @@ Safe next position: <next manifest unit>
 ## 9. 下一步
 
 ```text
-Plan status: planned
-Planning snapshot: origin/Added-Traditional-Chinese at 95cbb81
-Provisional review units: 1,953
-Provisional current zh-tw: 1,945
-Provisional SKIP: 8
-Execution started: no
-Lua changes: none
-Work branch: not created
-Safe next position: Phase A — revalidate base/glossary gates and generate manifest
+Plan status: completed
+Formal base: 95cbb81420ccf2ce9036d36dce9f21dad0f2356f
+Glossary: 2ee103994a6ad5d9a52bbc97a96919eba8c245f1 / 283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF
+Formal manifest total: 1,954
+Files complete: 15/15
+AI rechecked: 1,954/1,954
+Results: ADD 1 / CHANGE 242 / KEEP 1,646 / SKIP 62 / BLOCKED 3
+Review touched: 117/117
+Active zh-tw lookup calls: 3,403; unresolved 0
+Translation branch: codex/feature/enhanced-descriptions/recheck-zh-tw-v3
+Translation HEAD: efe0fef51ffa71e0d449df4a5f5594a17778a1ba
+Workspace branch: codex/sync-zh-tw-terms
+Lua diff scope: 13 changed target files; only zh-tw fields and the dedicated zh-tw definition file; violations 0
+Blocked queue: 3 SOURCE_MISSING fallback units, each fully recorded for later source recovery
+Execution completed: 2026-08-04 +08:00
+Push / PR: none
+Safe next position: none — Plan 3 complete
 ```
