@@ -2740,6 +2740,129 @@ Current manifest progress: `1,508 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 110`, 
 
 Current manifest progress remains `1,508 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 110`, `KEEP 1,332`, `SKIP 62`, `BLOCKED 3`).
 
+### Batch ED3-VETERAN-RECHECK-004
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Veteran.lua`.
+- Manifest units: `46-60`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `3` — unit 58 removed the visible split inside `協同半徑`, rewrote the Toughness-share relationship naturally, and aligned Allies in Coherency to `協同範圍內的盟友`; unit 59 supplied the missing duration relationship after Revive; unit 60 consistently rendered both Coherency conditions as being inside the Coherency range.
+- KEEP: `12`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `1`; reconciled: `1` — unit 49's complete Reload, first-ammo segment, and Ranged Critical Chance relationship was independently reread and retained.
+- GLOSSARY_HIT: `12`; mismatch: `0`. Locked or established terms checked include `Toughness`, `Corruption`, candidate `Wound`, `Cleave`, contextual `Critical Hit` / `Critical Chance`, `Damage`, `Bleed`, `Weakspot Damage`, `Stamina`, `Plasma Gun`, `Coherency`, and `Stun`; the formal grenade names represented by unit 54's runtime placeholders were also checked with no text-level mismatch.
+- Lookup checks: all `13` lookup-using units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; complete `Refr_dur_stappl`, `Cant_appl_thr_shlds`, and `Dont_intw_coher_toughn` expansions and every referenced numeric definition were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Veteran file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Veteran.lua` unit `61` (`ED3-VETERAN-RECHECK-005`).
+
+Current manifest progress: `1,568 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 131`, `KEEP 1,371`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-VETERAN-RECHECK-005
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Veteran.lua`.
+- Manifest units: `61-75`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `5` — unit 61 aligned enemy `Gunner` to the formal `砲手`; unit 62 corrected the strict `more than 0 Stamina` requirement that had been rendered as the inclusive `0 以上`; unit 67 supplied the missing duration relationship; unit 70 rewrote the all-Base-Damage modifier as an increase; unit 72 made the exact continuous-duration condition explicit and rewrote Base Ranged Damage as an increase rather than a bare amount.
+- KEEP: `10`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `2`; reconciled: `2` — unit 61 received the listed formal-term correction; unit 75's Melee Critical Hit trigger, Damage modifier, and duration were independently reread and retained under the glossary's contextual Crit rule.
+- GLOSSARY_HIT: `15`; mismatch: `0` after the unit 61 correction. Locked or established terms checked include contextual `Critical Hit` / `Critical Chance`, `Stamina`, candidate `Ammo`, `Combat Ability`, `Finesse`, `Suppression`, `Damage`, `Impact`, `Rending`, `Critical Shots`, `Brittleness`, `Ogryn`, `Monstrosity`, `Captain`, `Twins`, and the listed Pox Hound / Trapper / Mutant / Gunner / Reaper / Sniper enemies.
+- Lookup checks: all `13` lookup-using units resolved every active `CKWord`, `CNumb`, `CPhrs`, and `CNote` call; complete `Fns_note`, `Impact_note`, `Rend_note`, `Brtl_note`, and `Can_be_refr` expansions and every referenced numeric definition were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending full-file QA for TALENTS_Veteran).
+- Safe next position: full-file QA for `Main_Modules/TALENTS/TALENTS_Veteran.lua`.
+
+Current manifest progress: `1,583 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 136`, `KEEP 1,381`, `SKIP 62`, `BLOCKED 3`).
+
+### TALENTS_Veteran full-file QA checkpoint
+
+- Full-file verifier: current / manifest / queue units `75 / 75 / 75`; AI-rechecked `75`; missing or stale units `0`; zh-tw hash mismatches `0`; queue/manifest mismatches `0`.
+- Final file results: `CHANGE 26`, `KEEP 49`; `BLOCKED 0`.
+- Source and placeholder status: `75 match`; incomplete sources `0`.
+- Formal zh-tw lookup gate: total calls `3,403` (`CKWord 1,898`, `CNumb 1,235`, `CPhrs 193`, `CNote 77`); unresolved calls `0`; unresolved source definitions `0`.
+- Auxiliary cross-locale runtime diagnostic remains read-only: `25` unresolved non-target calls, all recorded as `BASELINE_NON_ZHTW`; no non-zh-tw content was changed.
+- The entire Veteran diff was manually reread and contains only active zh-tw localization content. The full Plan 3 base-to-live scope audit now covers `11` changed target files and `340` changed lines (`170` base / `170` live), with all lines classified as the dedicated zh-tw definition file or explicit zh-tw fields; out-of-scope changed lines `0`. `git diff --check` passed.
+- Translation commit: `21b157b` (`fix(zh-tw): complete veteran talents recheck`), containing only `Main_Modules/TALENTS/TALENTS_Veteran.lua`; the pre-existing staged Ogryn and Scum changes remained outside this commit.
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Ogryn.lua` unit `1` (`ED3-OGRYN-RECHECK-001`).
+
+Current manifest progress remains `1,583 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 136`, `KEEP 1,381`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-VETERAN-RECHECK-001
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Veteran.lua`.
+- Manifest units: `1-15`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `9` — unit 2 restored the passive `enemies hit` relationship as `被命中的敵人`; unit 3 clarified that the Krak Grenade attaches to enemies wearing Flak / Carapace armour and to Unyielding enemies; units 5-6 restored both the trigger and recipients as Allies in Coherency; units 7-8 and 11 aligned `協同中的盟友` to the established `協同範圍內的盟友`; unit 10 corrected the direction and visibility of enemy outlines shown to the Veteran; unit 15 rewrote the Stagger exclusion naturally and added the missing cooldown colon.
+- KEEP: `6`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `15`; mismatch: `0`. Locked or established terms checked include `Frag Grenade`, `Krak Grenade`, `Smoke Grenade`, `Damage`, `Bleed`, `Stagger`, `Flak`, `Carapace`, `Unyielding`, `Monstrosity`, `Bomber`, `Mutant`, `Poxburster`, `Coherency`, `Weakspot Damage`, `Combat Ability`, `Stealth`, all listed Scab / Dreg and Ogryn targets, `Captain`, and candidate `Ranged Stance`.
+- Lookup checks: all `13` lookup-using units resolved every active `CKWord`, `CNumb`, `CPhrs`, and `CNote` call; the complete `Doesnt_Stack_Vet_Aura` and `Pwr_note` expansions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Veteran file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Veteran.lua` unit `16` (`ED3-VETERAN-RECHECK-002`).
+
+Current manifest progress: `1,523 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 119`, `KEEP 1,338`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-VETERAN-RECHECK-002
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Veteran.lua`.
+- Manifest units: `16-30`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `4` — unit 16 aligned the recipient to Allies in Coherency and clarified the additional Toughness bar; unit 22 corrected a wrong-meaning reading of a timed Damage buff as damage dealt over time, then made the distance falloff and explosion / DoT condition explicit; units 28-29 aligned Allies in Coherency to `協同範圍內的盟友`.
+- KEEP: `11`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `1`; reconciled: `1` — unit 20's current Stealth / Toughness Damage Reduction description was independently reread and retained.
+- GLOSSARY_HIT: `14`; mismatch: `0`. Locked or established terms checked include `Toughness`, `Stealth`, `Damage`, `Combat Ability`, `Cooldown`, `Weakspot`, `Finesse`, `Rending`, `Reload Speed`, `Stamina`, `Coherency`, `Focus`, `Focus Target`, and `Damage over Time`.
+- Lookup checks: all `14` lookup-using units resolved every active `CKWord`, `CNumb`, `CPhrs`, and `CNote` call; complete `Can_proc_mult_str`, `Dont_intw_coher_toughn`, `Can_proc_mult`, `Fns_note`, and `Rend_note` expansions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Veteran file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Veteran.lua` unit `31` (`ED3-VETERAN-RECHECK-003`).
+
+Current manifest progress: `1,538 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 123`, `KEEP 1,349`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-VETERAN-RECHECK-003
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Veteran.lua`.
+- Manifest units: `31-45`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `5` — unit 33 corrected the duration clause for Melee Specialist; unit 37 restored the `of Maximum Toughness` modifier relationship; unit 39 supplied the missing target preposition and explicit distance cap relationship; unit 40 rewrote the Base Damage modifier as an increase rather than a bare fragment; unit 43 aligned Allies in Coherency to `協同範圍內的盟友`.
+- KEEP: `10`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `4`; reconciled: `4` — units 31, 35, and 45 were independently retained; unit 43 received the listed Coherency-scope correction.
+- GLOSSARY_HIT: `15`; mismatch: `0`. Locked or established terms checked include `Ranged Specialist`, `Melee Specialist`, contextual `Critical Hit` / `Critical Chance`, `Reload Speed`, `Stamina`, `Toughness`, `Toughness Damage Reduction`, `Weakspot`, `Damage`, `Combat Shotguns`, `Stimm`, and `Coherency`.
+- Lookup checks: all `12` lookup-using units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; complete `Can_proc_mult`, `Can_be_refr_drop_1`, and `Can_be_refr` expansions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Veteran file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Veteran.lua` unit `46` (`ED3-VETERAN-RECHECK-004`).
+
+Current manifest progress: `1,553 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 128`, `KEEP 1,359`, `SKIP 62`, `BLOCKED 3`).
+
 ### TALENTS_Zealot full-file QA checkpoint
 
 - Full-file verifier: current / manifest / queue units `79 / 79 / 79`; AI-rechecked `79`; missing or stale units `0`; zh-tw hash mismatches `0`; queue/manifest mismatches `0`.
