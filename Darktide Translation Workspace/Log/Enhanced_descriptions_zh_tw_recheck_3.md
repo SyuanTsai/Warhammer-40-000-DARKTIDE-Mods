@@ -2797,6 +2797,184 @@ Current manifest progress: `1,853 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 214`, 
 
 Current manifest progress remains `1,853 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 214`, `KEEP 1,573`, `SKIP 62`, `BLOCKED 3`).
 
+### Batch ED3-SKITARII-RECHECK-001
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Skitarii.lua`.
+- Manifest units: `1-15`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `5` — unit 3 aligned Hogtied / Ally to `被俘` / `盟友` and separated per-second Toughness recovery from the non-stacking Toughness Damage Reduction buff; unit 7 rewrote the Brittleness stack value naturally; units 13-15 aligned Allies in Coherency to `協同範圍內的盟友`.
+- KEEP: `10`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `1`; reconciled: `1` — unit 3 was independently reread and received the listed terminology and effect-relationship corrections.
+- GLOSSARY_HIT: `15`; mismatch: `0` after the listed corrections. Locked or established terms checked include `Servo-Skull`, `Adapted Medicae Syringes`, `Arc Grenades`, `Arcs`, `Brittleness`, `Burn`, `Capacitance`, `Coherency`, `Damage`, `Electrocution`, `Flamer`, `Health`, `Impact`, `Refraction Emitter`, `Toughness`, `Toughness Damage Reduction`, and `Weapon Malfunction`.
+- Lookup checks: all `15` units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; the complete `Can_be_refr` expansion and every referenced numeric definition were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Skitarii file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua` unit `16` (`ED3-SKITARII-RECHECK-002`).
+
+Current manifest progress: `1,868 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 219`, `KEEP 1,583`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-SKITARII-RECHECK-002
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Skitarii.lua`.
+- Manifest units: `16-30`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `4` — unit 16 aligned Allies in Coherency to `協同範圍內的盟友`; unit 18 made the timed weapon-malfunction relationship grammatical and explicit; unit 22 aligned Heavy Melee Attack to established `近戰重攻擊`; unit 30 restored the missing relationship that each Elite Kill grants one Stack before describing the per-Stack Damage.
+- KEEP: `11`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `14`; mismatch: `0` after the listed corrections. Locked or established terms checked include `Electric Discharge`, `Voltaic Expander`, `Chordclaw`, `Cleave`, `Rending`, `Critical Strike`, `Bleed`, `Capacitance`, `Cooldown`, `Fire Rate`, `Suppression`, `Toughness`, `Damage`, `Impact`, and `Coherency`.
+- Lookup checks: all `14` lookup-using units resolved every active `CKWord`, `CNumb`, and `CPhrs` call; complete `Can_be_refr`, `Can_proc_mult_str`, and `Cant_be_refr` expansions and every referenced numeric definition were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Skitarii file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua` unit `31` (`ED3-SKITARII-RECHECK-003`).
+
+Current manifest progress: `1,883 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 223`, `KEEP 1,594`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-SKITARII-RECHECK-003
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Skitarii.lua`.
+- Manifest units: `31-45`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `4` — unit 35 changed Critical Hits to contextual `造成致命一擊` and the canonical zh-tw keyword; unit 41 removed the duplicated Toughness-recovery construction; unit 42 aligned both Allies in Coherency relationships and made the kill subject explicit; unit 44 aligned Allies in Coherency to `協同範圍內的盟友`.
+- KEEP: `11`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `4`; reconciled: `4` — units 35 and 42 received the listed corrections, while units 37 and 45 were independently reread and retained with complete charge, Stack, duration, and permanent-bonus relationships.
+- GLOSSARY_HIT: `15`; mismatch: `0` after the listed corrections. Locked or established terms checked include contextual `Critical Hits` / `Critical Strike Chance`, `Capacitance`, `Combat Ability`, `Coherency`, `Damage`, `Electrocution`, `Overload`, `Rending`, `Reload Speed`, `Stamina`, `Strength`, `Toughness`, `Toughness Damage Reduction`, and `Weakspot`.
+- Lookup checks: all `14` lookup-using units resolved every active `CKWord` and `CNumb` call; every referenced keyword and numeric definition was read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Skitarii file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua` unit `46` (`ED3-SKITARII-RECHECK-004`).
+
+Current manifest progress: `1,898 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 227`, `KEEP 1,605`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-SKITARII-RECHECK-004
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Skitarii.lua`.
+- Manifest units: `46-60`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `3` — units 54 and 56 moved the timed Toughness-recovery clause into the trigger sentence and removed duplicated `恢復`; unit 55 aligned the Brittleness Stack value to natural `X 層脆弱，每層 2.5%` wording.
+- KEEP: `12`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `1`; reconciled: `1` — unit 47 was independently reread and retained with complete Stack loss, one-second internal cooldown, Elite / Specialist restoration, and Toughness relationships.
+- GLOSSARY_HIT: `14`; mismatch: `0`. Locked or established terms checked include `Power Overload`, contextual `Critical Hit Chance`, `Ability`, `Capacitance`, `Chem Toxin`, `Cleave`, `Combat Ability`, `Corruption`, `Corruption Damage`, `Damage`, `Electrocution`, `Brittleness`, `Soulblaze`, `Burn`, `Bleed`, `Toughness`, and `Toughness Damage Reduction`.
+- Lookup checks: all `14` lookup-using units resolved every active `CKWord` and `CNumb` call; every referenced keyword and numeric definition was read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units retain complete matching active English sources, including the inferable source typo `マharge` in unit 53 whose zh-tw effect relationship correctly describes the current Combat Ability charge.
+- Translation commit: `none` (pending completion of the full TALENTS_Skitarii file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua` unit `61` (`ED3-SKITARII-RECHECK-005`).
+
+Current manifest progress: `1,913 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 230`, `KEEP 1,617`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-SKITARII-RECHECK-005
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Skitarii.lua`.
+- Manifest units: `61-75`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `5` — unit 62 changed Melee Critical Hits to contextual `近戰攻擊造成致命一擊` and the canonical zh-tw keyword; units 63-64 and 68 aligned Ally / Allies in Coherency to `盟友`; unit 74 removed the duplicated timed Toughness-recovery construction.
+- KEEP: `10`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `2`; reconciled: `2` — unit 62 received the listed Critical Hit correction, while unit 75 was independently reread and retained with complete current-charge and Toughness Damage Reduction scaling.
+- GLOSSARY_HIT: `14`; mismatch: `0` after the listed corrections. Locked or established terms checked include contextual `Critical Hits`, `Capacitance`, `Combat Ability`, `Coherency`, `Damage`, `Health Damage`, `Specialist`, `Stamina`, `Strength`, `Stun`, `Toughness`, `Toughness Damage`, and `Toughness Damage Reduction`.
+- Lookup checks: all `13` lookup-using units resolved every active `CKWord` call; every referenced keyword definition was read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units retain complete matching active English sources, including the inferable source typo `マharge` in units 67, 69, and 75 whose zh-tw charge relationships are complete.
+- Translation commit: `none` (pending completion of the full TALENTS_Skitarii file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua` unit `76` (`ED3-SKITARII-RECHECK-006`).
+
+Current manifest progress: `1,928 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 235`, `KEEP 1,627`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-SKITARII-RECHECK-006
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Skitarii.lua`.
+- Manifest units: `76-90`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `4` — unit 76 changed Critical Hits to contextual `造成致命一擊` and the canonical zh-tw keyword; unit 77 removed the duplicated timed Toughness-recovery construction; units 87-88 aligned Allies in Coherency / Ally to `盟友`.
+- KEEP: `11`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `2`; reconciled: `2` — unit 76 received the listed Critical Hit correction, while unit 78 was independently reread and retained with complete Ranged Kill, per-Stack duration, maximum Stack, and one-at-a-time decay relationships.
+- GLOSSARY_HIT: `13`; mismatch: `0` after the listed corrections. Locked or established terms checked include contextual `Critical Hits` / `Critical Hit Chance`, `Combat Ability`, `Coherency`, `Damage`, `Ogryn`, `Monstrosity`, `Captain`, `Reload Speed`, `Stamina`, `Stun`, `Toughness`, `Toughness Damage Reduction`, and `Weakspot`.
+- Lookup checks: all `12` lookup-using units resolved every active `CKWord` call; every referenced keyword definition was read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units retain complete matching active English sources, including the inferable source typo `マharges` in unit 82 whose zero-charge Critical Hit Chance relationship is complete.
+- Translation commit: `none` (pending completion of the full TALENTS_Skitarii file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Skitarii.lua` unit `91` (`ED3-SKITARII-RECHECK-007`).
+
+Current manifest progress: `1,943 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 239`, `KEEP 1,638`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-SKITARII-RECHECK-007
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Skitarii.lua`.
+- Manifest units: `91-101`.
+- Reviewed: `11`.
+- ADD: `0`.
+- CHANGE: `1` — unit 101 aligned Heavy Melee Damage to established `近戰重攻擊傷害`.
+- KEEP: `10`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `1`; reconciled: `1` — unit 92 was independently reread and retained with complete on-hit duration, maximum Stack, and one-Stack-per-Attack conditions.
+- GLOSSARY_HIT: `10`; mismatch: `0` after the listed correction. Locked or established terms checked include `Cleave`, `Damage`, `Impact`, `Stamina`, `Stun`, `Suppression`, `Toughness`, `Toughness Damage Reduction`, `Weakspot`, and `Weakspot Damage`.
+- Lookup checks: all `10` lookup-using units resolved every active `CKWord` call; every referenced keyword definition was read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `11` units have complete matching active English sources.
+- Translation commit: `none` (pending full-file and final Plan 3 verification).
+- Safe next position: full-file QA gate for `Main_Modules/TALENTS/TALENTS_Skitarii.lua`, followed by the final all-15-file Plan 3 completion gate.
+
+Current manifest progress: `1,954 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 240`, `KEEP 1,648`, `SKIP 62`, `BLOCKED 3`).
+
+### TALENTS_Skitarii full-file QA checkpoint
+
+- Full-file verifier: current / manifest / queue units `101 / 101 / 101`; AI-rechecked `101`; missing or stale units `0`; source / zh-tw hash mismatches `0`; placeholder-status mismatches `0`; queue/manifest mismatches `0`.
+- Final file results: `CHANGE 26`, `KEEP 75`; `BLOCKED 0`.
+- Source and placeholder status: `101 match`; incomplete sources `0`.
+- Formal zh-tw lookup gate: total calls `3,403` (`CKWord 1,898`, `CNumb 1,235`, `CPhrs 193`, `CNote 77`); unresolved calls `0`; unresolved source definitions `0`.
+- Auxiliary cross-locale runtime diagnostic remains read-only: `25` unresolved non-target calls, all recorded as `BASELINE_NON_ZHTW`; no auxiliary non-zh-tw content was changed by this review.
+- The entire Skitarii base-to-live diff was manually reread twice and contains only active zh-tw localization content. `git diff --check` passed; indentation changed during editing was restored to the file's existing style and all hashes were reverified.
+- Translation commit: `d6b4529` (`fix(zh-tw): complete skitarii talents recheck`), containing only `Main_Modules/TALENTS/TALENTS_Skitarii.lua`.
+- Safe next position: final all-15-file Plan 3 completion gate.
+
+### Final completion gate — external working-tree blocker
+
+- Manifest integrity is complete: `15` files, `1,954 / 1,954` AI-rechecked, result sum `1,954`, duplicate units `0`, missing batch IDs `0`, missing required reasons `0`, invalid glossary flags `0`, and batches over the `15`-unit limit `0`.
+- All active zh-tw lookup calls remain resolved: `CKWord 1,898`, `CNumb 1,235`, `CPhrs 193`, `CNote 77`; unresolved `0`.
+- Before the external writes, the full base-to-live scope audit covered `646` changed lines (`325` base / `321` live; `7` definition-file / `639` explicit zh-tw) with violations `0`.
+- Two concurrent non-zh-tw working-tree edits appeared after that clean audit and after Skitarii's last write. They were not made, discarded, restored, staged, or committed by this review:
+  - `Main_Modules/TALENTS/TALENTS_Arbites.lua`, unit `19`, English: `{max_cooldown:%s}` became `{max_cooldown}`. The strengthened verifier reports source-hash mismatch `1` and placeholder-status mismatch `1`.
+  - `Main_Modules/TALENTS/TALENTS_Psyker.lua`, Russian field near line `4118`: `CPhrs("Carap_cant_cleave")` became unresolved `CPhrs("Carap_cant_clv")`.
+- Current live scope audit therefore reports `4` changed-side violations (`2` English sides and `2` Russian sides). The two files remain uncommitted and untouched pending explicit release or correction.
+- Safe next position: once those two external diffs are removed or explicitly authorized for correction, rerun strengthened 15-file verification, formal lookup gate, base-to-live scope audit, and repository cleanliness checks; then write the final Plan 3 completion checkpoint.
+
+Current manifest progress remains `1,954 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 240`, `KEEP 1,648`, `SKIP 62`, `BLOCKED 3`); final completion status remains pending only the external working-tree scope gate.
+
 ### Batch ED3-VETERAN-RECHECK-004
 
 - AI handler: `codex`.
