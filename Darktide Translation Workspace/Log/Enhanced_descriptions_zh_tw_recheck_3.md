@@ -2942,6 +2942,151 @@ Current manifest progress: `1,671 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 168`, 
 
 Current manifest progress remains `1,671 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 168`, `KEEP 1,437`, `SKIP 62`, `BLOCKED 3`).
 
+### Batch ED3-ARBITES-RECHECK-001
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Arbites.lua`.
+- Manifest units: `1-15`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `6` — unit 1 integrated the grenade's exception clause into the sentence without the broken comma-parenthesis layout; units 6-8 aligned Allies in Coherency to `協同範圍內的盟友`; units 9 and 14 made the deployment radius explicitly apply to both buffed Allies and debuffed Enemies.
+- KEEP: `9`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `2`; reconciled: `2` — unit 6 received the listed Coherency-scope correction; unit 15's current Toughness Damage Reduction, Revive Speed, and Attack Speed relationships were independently reread and retained.
+- GLOSSARY_HIT: `13`; mismatch: `0`. Locked or established terms checked include `Arbites Grenade`, `Arbites`, `Cyber-Mastiff`, `Coherency`, `Toughness Damage Reduction`, `Damage`, `Stagger`, `Electrocuted`, `Impact`, `Strength`, `Stun`, and `Reload Speed`.
+- Lookup checks: all `13` lookup-using units resolved every active `CKWord` and `CNumb` call; all referenced keyword and numeric definitions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Arbites file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Arbites.lua` unit `16` (`ED3-ARBITES-RECHECK-002`).
+
+Current manifest progress: `1,686 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 174`, `KEEP 1,446`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-ARBITES-RECHECK-002
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Arbites.lua`.
+- Manifest units: `16-30`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `1` — unit 23 rewrote the awkward bare `1 充能恢復間隔` fragment as the explicit time required to replenish one Blitz charge.
+- KEEP: `14`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `2`; reconciled: `2` — unit 19's per-hit Break the Line Cooldown reductions and cap were independently reread and retained; unit 23 received the listed grammar / display correction while retaining its current Toughness Damage Reduction term.
+- GLOSSARY_HIT: `14`; mismatch: `0`. Locked or established terms checked include `Break the Line`, `Combat Ability`, `Cooldown`, `Damage`, `Impact`, `Marked Enemy`, contextual `Crit Chance` / `Crit Damage`, `Rending`, `Stagger`, `Stamina`, `Toughness`, `Toughness Damage Reduction`, and `Monstrosity`.
+- Lookup checks: all `15` units resolved every active `CKWord` and `CNumb` call; all referenced keyword and numeric definitions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Arbites file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Arbites.lua` unit `31` (`ED3-ARBITES-RECHECK-003`).
+
+Current manifest progress: `1,701 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 175`, `KEEP 1,460`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-ARBITES-RECHECK-003
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Arbites.lua`.
+- Manifest units: `31-45`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `4` — unit 33 aligned Allies in Coherency to `協同範圍內的盟友`; unit 35 separated Staggering Hits from successfully Blocked Attacks as two explicit triggers; unit 40 corrected the broken verb-object order to `使附近敵人踉蹌`; unit 44 limited Bleed application to enemies knocked away by the Cyber-Mastiff's Pounce without adding an unsupported knockdown relationship.
+- KEEP: `11`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `1`; reconciled: `1` — unit 31's complete Melee Justice / Ranged Justice generation, spend triggers, effects, exclusions, and Power note were independently reread and retained.
+- GLOSSARY_HIT: `14`; mismatch: `0`. Locked or established terms checked include `Forceful`, `Coherency`, `Ability Cooldown`, `Toughness`, `Toughness Damage Reduction`, `Weakspot`, contextual `Critical Hit Chance`, `Damage`, `Impact`, `Stagger`, `Stun`, `Cleave`, `Strength`, and `Bleed`.
+- Lookup checks: all `14` lookup-using units resolved every active `CKWord`, `CNumb`, and `CNote` call; the complete `Pwr_note` expansion and every referenced numeric definition were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Arbites file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Arbites.lua` unit `46` (`ED3-ARBITES-RECHECK-004`).
+
+Current manifest progress: `1,716 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 179`, `KEEP 1,471`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-ARBITES-RECHECK-004
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Arbites.lua`.
+- Manifest units: `46-60`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `2` — unit 56 aligned Allies in Coherency to `協同範圍內的盟友`; unit 58 rewrote the melee / Push / Break the Line Stagger condition into a natural causal clause and removed the visible space before `的敵人`.
+- KEEP: `13`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `2`; reconciled: `2` — unit 56 received the listed Coherency-scope correction while retaining formal Toughness Damage Reduction; unit 59's multi-target Attack trigger, duration, and Toughness Damage Reduction were independently reread and retained.
+- GLOSSARY_HIT: `14`; mismatch: `0`. Locked or established terms checked include `Toughness`, `Stamina`, `Stagger`, `Electrocuted`, `Weakspot`, `Coherency`, `Toughness Damage Reduction`, `Break the Line`, and `Damage`.
+- Lookup checks: all `14` lookup-using units resolved every active `CKWord` and `CNumb` call; all referenced keyword and numeric definitions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Arbites file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Arbites.lua` unit `61` (`ED3-ARBITES-RECHECK-005`).
+
+Current manifest progress: `1,731 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 181`, `KEEP 1,484`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-ARBITES-RECHECK-005
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Arbites.lua`.
+- Manifest units: `61-75`.
+- Reviewed: `15`.
+- ADD: `0`.
+- CHANGE: `3` — unit 63 restored natural `使敵人踉蹌` syntax and explicitly tied the generated Damage Resistance to the next Melee hit taken; unit 68 removed the contradictory `額外受到／增加` construction and listed the additional Melee Damage and Impact directly; unit 73 supplied the missing `時` in the Weakspot-Hit trigger and removed the visible Chinese spacing split.
+- KEEP: `12`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `13`; mismatch: `0`. Locked or established terms checked include contextual `Critical Strike Chance`, `Damage`, `Stagger`, `Stamina`, `Corruption`, `Impact`, `Cleave`, `Weakspot`, `Health`, and `Reload Speed`.
+- Lookup checks: all `14` lookup-using units resolved every active `CKWord` and `CNumb` call; all referenced keyword and numeric definitions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `15` units have complete matching active English sources.
+- Translation commit: `none` (pending completion of the full TALENTS_Arbites file).
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Arbites.lua` unit `76` (`ED3-ARBITES-RECHECK-006`).
+
+Current manifest progress: `1,746 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 184`, `KEEP 1,496`, `SKIP 62`, `BLOCKED 3`).
+
+### Batch ED3-ARBITES-RECHECK-006
+
+- AI handler: `codex`.
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`.
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`.
+- File: `Main_Modules/TALENTS/TALENTS_Arbites.lua`.
+- Manifest units: `76-83`.
+- Reviewed: `8`.
+- ADD: `0`.
+- CHANGE: `4` — unit 76 made the Melee-Attack hit and resulting Stagger relationship explicit; unit 77 aligned Heavy Melee Attack to established `近戰重攻擊`; unit 80 supplied the omitted Attack noun in the Ranged-Hit trigger; unit 83 removed the visible split inside `生命值傷害`.
+- KEEP: `4`.
+- SKIP: `0`.
+- BLOCKED: `0`.
+- REVIEW_TOUCHED: `0`; reconciled: `0`.
+- GLOSSARY_HIT: `7`; mismatch: `0`. Locked or established terms checked include `Brittleness`, contextual `Critical Strike`, `Damage`, `Health`, `Rending`, `Stagger`, `Ogryn`, and `Monstrosity`.
+- Lookup checks: all `7` lookup-using units resolved every active `CKWord` and `CNumb` call; all referenced keyword and numeric definitions were read directly; missing or mismatched active zh-tw lookups: `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`; all `8` units have complete matching active English sources.
+- Translation commit: `none` (pending full-file QA for TALENTS_Arbites).
+- Safe next position: full-file QA for `Main_Modules/TALENTS/TALENTS_Arbites.lua`.
+
+Current manifest progress: `1,754 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 188`, `KEEP 1,500`, `SKIP 62`, `BLOCKED 3`).
+
+### TALENTS_Arbites full-file QA checkpoint
+
+- Full-file verifier: current / manifest / queue units `83 / 83 / 83`; AI-rechecked `83`; missing or stale units `0`; zh-tw hash mismatches `0`; queue/manifest mismatches `0`.
+- Final file results: `CHANGE 20`, `KEEP 63`; `BLOCKED 0`.
+- Source and placeholder status: `83 match`; incomplete sources `0`.
+- Formal zh-tw lookup gate: total calls `3,403` (`CKWord 1,898`, `CNumb 1,235`, `CPhrs 193`, `CNote 77`); unresolved calls `0`; unresolved source definitions `0`.
+- Auxiliary cross-locale runtime diagnostic remains read-only: `25` unresolved non-target calls, all recorded as `BASELINE_NON_ZHTW`; no non-zh-tw content was changed.
+- The entire Arbites HEAD-to-live diff was manually reread and contains only active zh-tw localization content. The full Plan 3 base-to-live scope audit covers `12` changed target files and `494` changed lines (`249` base / `245` live): `7` lines in the dedicated zh-tw definition file and `487` lines inside explicit zh-tw fields; out-of-scope changed lines `0`. `git diff --check` passed.
+- Translation commit: `f01947d` (`fix(zh-tw): complete arbites talents recheck`), containing only `Main_Modules/TALENTS/TALENTS_Arbites.lua`; the pre-existing staged Scum changes remained outside this commit.
+- Safe next position: `Main_Modules/TALENTS/TALENTS_Scum.lua` unit `1` (`ED3-SCUM-RECHECK-001`).
+
+Current manifest progress remains `1,754 / 1,954` AI-rechecked (`ADD 1`, `CHANGE 188`, `KEEP 1,500`, `SKIP 62`, `BLOCKED 3`).
+
 ### Batch ED3-VETERAN-RECHECK-001
 
 - AI handler: `codex`.
