@@ -843,4 +843,165 @@ Current manifest progress: `446 / 1,953` AI-rechecked (`CHANGE 3`, `KEEP 389`, `
 
 Current manifest progress: `449 / 1,953` AI-rechecked (`CHANGE 3`, `KEEP 392`, `SKIP 54`).
 
-Safe next position: `Phase C — ED3-MENUS-RECHECK-001, Main_Modules/MENUS.lua units 1–15.`
+### ED3-MENUS-RECHECK-001
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/MENUS.lua`
+- Manifest units: `1–15`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `1` (`TERMINOLOGY;GRAMMAR`: unit 10)
+- KEEP: `6`
+- SKIP: `8` (`OFFICIAL_LOCALIZATION_FALLBACK`: units 1–8)
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `7`; mismatch corrected: `1`
+- The eight tables without active zh-tw are deliberate game-localization fallbacks under the file's translator policy; Plasteel/Diamantine and large/small pickup variants remain owned by official localization.
+- Contract actions, dynamic kind/enemy/weapon placeholders, mission count, and no-player-death condition are complete and correctly ordered.
+- Unit 10 changed `巨獸(畸形怪獸)` to `隻巨獸`: this restores the formal `Monstrosity／巨獸` term and a natural Traditional Chinese classifier.
+- Unit 15's commented English source (`Well? What is it you want?`) was read and recorded; the active zh-tw preserves the question and tone.
+- Lookup checks: `6` resolved, `8` documented fallback, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending MENUS file completion`
+- Safe next position: `ED3-MENUS-RECHECK-002, MENUS units 16–30`
+
+Current manifest progress: `464 / 1,953` AI-rechecked (`CHANGE 4`, `KEEP 398`, `SKIP 62`).
+
+### ED3-MENUS-RECHECK-002
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/MENUS.lua`
+- Manifest units: `16–30`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `1` (`MISSING_INFO`: unit 24)
+- KEEP: `14`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `5`; mismatch corrected: `0`
+- All fourteen commented English sources were read in full and recorded with exact source lines; their placeholder status is now `match`, not unresolved `source_missing`.
+- Melk's shop title follows the retained candidate; contract actions/complexity, mystery acquisitions, notification, crafting limits, weapon sacrifice, vendor dialogue, and requisition action preserve their source semantics.
+- Unit 24 changed `未知的珍品` to `未知的防禦型珍品`, restoring the missing `Defensive` qualifier while retaining the formal `Curio／珍品` term.
+- Lookup checks: resolved `0`, fallback `0`, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending MENUS file completion`
+- Safe next position: `ED3-MENUS-RECHECK-003, MENUS units 31–45`
+
+Current manifest progress: `479 / 1,953` AI-rechecked (`CHANGE 5`, `KEEP 412`, `SKIP 62`).
+
+### ED3-MENUS-RECHECK-003
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/MENUS.lua`
+- Manifest units: `31–45`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `1` (`PUNCTUATION`: unit 31)
+- KEEP: `14`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `10`; mismatch: `0`
+- All fifteen commented English sources were read and recorded; the kill-feed placeholders remain identical and correctly reordered for zh-tw syntax.
+- Account Wallet, both Strike Team labels, Previous Missions, Stimm Lab, Havoc title/reward/assignment, all Curio slots, and Loadout preserve complete meanings and formal terminology where defined.
+- Unit 31 retains the useful `Profane` rarity explanation `白武` but changes ASCII parentheses to full-width Traditional Chinese punctuation: `（白武）`.
+- Lookup checks: resolved `0`, fallback `0`, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending MENUS file completion`
+- Safe next position: `ED3-MENUS-RECHECK-004, MENUS units 46–60`
+
+Current manifest progress: `494 / 1,953` AI-rechecked (`CHANGE 6`, `KEEP 426`, `SKIP 62`).
+
+### ED3-MENUS-RECHECK-004
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/MENUS.lua`
+- Manifest units: `46–60`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `1` (`PUNCTUATION`: unit 60)
+- KEEP: `13`
+- SKIP: `0`
+- BLOCKED: `1` (`SOURCE_MISSING`: unit 53)
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `4`; mismatch: `0`
+- Cosmetic slots, five sourced rarity names, Favourite, Perk, and four weapon-action labels preserve their complete UI meanings. The typo `Anoited` was normalized to the unambiguous source term `Anointed` for audit metadata only.
+- Unit 53 (`loc_item_weapon_rarity_6`) has a blank English source. Local Darktide source confirms only the reserved localization key; an exact external search found only community speculation about `Sainted`, not an authoritative display string. Existing `神化` is retained and the unit remains `BLOCKED`.
+- Unit 60 preserves the Review's category-style wording but changes `特殊攻擊(近戰)` to `特殊攻擊（近戰）` for full-width Traditional Chinese punctuation.
+- Lookup checks: resolved `0`, fallback `0`, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending MENUS file completion`
+- Safe next position: `ED3-MENUS-RECHECK-005, MENUS units 61–75`
+
+Current manifest progress: `509 / 1,953` AI-rechecked (`CHANGE 7`, `KEEP 439`, `SKIP 62`, `BLOCKED 1`).
+
+### ED3-MENUS-RECHECK-005
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/MENUS.lua`
+- Manifest units: `61–75`
+- Reviewed: `15`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `14`
+- SKIP: `0`
+- BLOCKED: `1` (`SOURCE_MISSING`: unit 71)
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `6`; mismatch: `0`
+- All seven active Dump Stats lookups resolve and their display text matches the lookup semantics; the three plain-text stat labels also preserve the complete source meaning.
+- Unit 71 (`loc_weapon_stats_display_dodge_distance`) has no English source. `閃避距離` agrees with the localization key and surrounding semantics, but cannot receive KEEP without a full authoritative source, so it is retained as `BLOCKED`.
+- Units 72–75 were checked against their complete English table headings; disc read, dedicated server, other-player wait, and Fatshark backend communication are all preserved with correct Traditional Chinese ellipses where present.
+- Lookup checks: `7` resolved, fallback `0`, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `pending MENUS file completion`
+- Safe next position: `ED3-MENUS-RECHECK-006, MENUS units 76–79`
+
+Current manifest progress: `524 / 1,953` AI-rechecked (`CHANGE 7`, `KEEP 453`, `SKIP 62`, `BLOCKED 2`).
+
+### ED3-MENUS-RECHECK-006
+
+- AI handler: `codex`
+- Base commit: `95cbb81420ccf2ce9036d36dce9f21dad0f2356f`
+- Glossary commit/hash: `2ee103994a6ad5d9a52bbc97a96919eba8c245f1` / `283266D49389A1D06C04920A531CBCF9720053D385AFD41B98A51C46C3A5C4AF`
+- File: `Main_Modules/MENUS.lua`
+- Manifest units: `76–79`
+- Reviewed: `4`
+- ADD: `0`
+- CHANGE: `0`
+- KEEP: `4`
+- SKIP: `0`
+- BLOCKED: `0`
+- REVIEW_TOUCHED: `0`; reconciled: `0`
+- GLOSSARY_HIT: `0`; mismatch: `0`
+- Store, Steam, Xbox, and PSN wait reasons were read against their English table headings and `loc_wait_reason_*` contexts; action, brand spacing, and Traditional Chinese ellipses are correct.
+- Lookup checks: resolved `0`, fallback `0`, missing `0`, mismatch `0`.
+- Structure checks: duplicate `0`; empty `0`; placeholder mismatch `0`; markup mismatch `0`.
+- Translation commit: `130eb4ad93baaba8f92a326acac50ca08096f4af`
+- Safe next position: `ED3-CURIOS-RECHECK-001, Main_Modules/CURIOS_Blessings_Perks.lua units 1–15`
+
+### MENUS file completion checkpoint
+
+- Full file: `79 / 79` units AI-rechecked.
+- Final results: `CHANGE 4`, `KEEP 65`, `SKIP 8`, `ADD 0`, `BLOCKED 2`.
+- Current/manifest/queue unit counts: `79 / 79 / 79`.
+- Current zh-tw hash mismatches: `0`; queue/manifest state mismatches: `0`.
+- Placeholder status: `69 match`, `8 fallback`, `2 source_missing`, `0 mismatch`, `0 source_pending`.
+- Active lookup calls unresolved: `0`; unresolved source definitions: `0`.
+- Translation diff boundary: one zh-tw file, four approved wording/punctuation corrections, no key/number/helper/control-flow or other-language change.
+- Translation commit: `130eb4ad93baaba8f92a326acac50ca08096f4af` (`fix(zh-tw): complete menus recheck`).
+- Retained blockers: `loc_item_weapon_rarity_6` and `loc_weapon_stats_display_dodge_distance` lack authoritative English display strings; their current zh-tw values are preserved pending source availability.
+
+Current manifest progress: `528 / 1,953` AI-rechecked (`CHANGE 7`, `KEEP 457`, `SKIP 62`, `BLOCKED 2`).
+
+Safe next position: `Phase C — ED3-CURIOS-RECHECK-001, Main_Modules/CURIOS_Blessings_Perks.lua units 1–15.`
