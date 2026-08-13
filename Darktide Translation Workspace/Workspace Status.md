@@ -7,12 +7,16 @@
 | 文件 | 用途 |
 | --- | --- |
 | `Darktide Translation Workspace/Workspace Status.md` | 多代理目前狀態、工作鎖定、逐 MOD 摘要、交接、blocked、PR、完成檔案 |
+| `Darktide Translation Workspace/Rules/zh-tw_localization_base_rules.md` | 所有翻譯階段共用的結構、lookup、變更範圍與品質門檻 |
+| `Darktide Translation Workspace/Rules/zh-tw_initial_translation_rules.md` | 首次建立 active `zh-tw` 的英文優先來源規則 |
+| `Darktide Translation Workspace/Rules/zh-tw_revision_rules.md` | 第二次以後以繁中為主、英文核對與俄文描述參考的修訂規則 |
+| `Darktide Translation Workspace/Rules/enhanced_descriptions_zh-tw_special_rules.md` | Enhanced Descriptions 專用官方譯名與 `PENANCES.lua` 保留規則 |
 | `Darktide Translation Workspace/MOD Directory Map.md` | README MOD 對應表、狀態、比對時間、已移除 MOD 清單 |
 | `Darktide Translation Workspace/Term Candidates.md` | `Referneces/Translation.md` 尚未收錄的特殊名詞與新詞彙候選 |
 | `Darktide Translation Workspace/Log/<Repo directory>.md` | 每個 MOD 的工作分支 LOG、逐檔進度、逐 key 草稿、blocked 詳情與同步紀錄 |
-| `Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan.md` | Enhanced Descriptions 第一階段繁中補齊計畫與完成紀錄 |
-| `Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan_2.md` | Enhanced Descriptions 第二階段中文優先新增、修訂與潤飾計畫 |
-| `Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan_3.md` | Enhanced Descriptions 第三階段 15 檔、1,954 單元 AI 全量重查與完成紀錄 |
+| `Darktide Translation Workspace/Deprecated Plans/Enhanced_descriptions_zh_tw_translation_plan.md` | 已過時且不可作為現行依據的第一階段歷史計畫與完成紀錄 |
+| `Darktide Translation Workspace/Deprecated Plans/Enhanced_descriptions_zh_tw_translation_plan_2.md` | 已過時且不可作為現行依據的第二階段歷史計畫與完成紀錄 |
+| `Darktide Translation Workspace/Deprecated Plans/Enhanced_descriptions_zh_tw_translation_plan_3.md` | 已過時且不可作為現行依據的第三階段歷史計畫與完成紀錄 |
 
 ## 目前狀態摘要
 

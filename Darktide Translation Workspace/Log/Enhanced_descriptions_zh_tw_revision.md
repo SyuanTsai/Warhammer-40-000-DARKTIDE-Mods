@@ -3,7 +3,7 @@
 ## Status
 
 ```text
-Plan: Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan_2.md
+Plan: Darktide Translation Workspace/Deprecated Plans/Enhanced_descriptions_zh_tw_translation_plan_2.md（已過時，僅供歷史查閱）
 AI handler: codex
 Status: completed
 Authorized base: origin/Added-Traditional-Chinese at 6e043fa

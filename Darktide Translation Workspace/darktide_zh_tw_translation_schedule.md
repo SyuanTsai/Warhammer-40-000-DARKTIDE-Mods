@@ -4,6 +4,7 @@
 
 ## 0. 執行原則
 
+- 所有工作共同遵循 `Darktide Translation Workspace/Rules/zh-tw_localization_base_rules.md`，並依 localization unit 狀態套用 `Darktide Translation Workspace/Rules/zh-tw_initial_translation_rules.md` 或 `Darktide Translation Workspace/Rules/zh-tw_revision_rules.md`；目標 MOD 另有專案規則時一併套用。
 - 每輪都以 `main` 為準讀取工作文件，再決定下一個 MOD。
 - 預設使用低 token 模式：先讀索引、狀態列與目標 MOD 相關段落；只有在接手、阻塞、衝突或品質檢查需要時才讀完整文件或大段 diff。
 - 每個 MOD 使用獨立工作分支：`Codex/Feature/<Repo directory>/Add-zh-tw`。
@@ -36,15 +37,21 @@
 
 每輪開始時，從 `main` 以低 token 模式讀取：
 
-1. `Darktide Translation Workspace/darktide_zh_tw_translation_schedule.md`
-2. `Darktide Translation Workspace/Workspace Status.md`
-3. `Darktide Translation Workspace/MOD Directory Map.md`
-4. `Darktide Translation Workspace/Term Candidates.md`
-5. `Referneces/Translation.md`
-6. `README.md`
+1. `Darktide Translation Workspace/Rules/zh-tw_localization_base_rules.md`
+2. 本輪適用的 `Darktide Translation Workspace/Rules/zh-tw_initial_translation_rules.md` 或 `Darktide Translation Workspace/Rules/zh-tw_revision_rules.md`
+3. 目標 MOD 適用的專案規則文件；沒有時記為 `none`
+4. `Darktide Translation Workspace/darktide_zh_tw_translation_schedule.md`
+5. `Darktide Translation Workspace/Workspace Status.md`
+6. `Darktide Translation Workspace/MOD Directory Map.md`
+7. `Darktide Translation Workspace/Term Candidates.md`
+8. `Referneces/Translation.md`
+9. `README.md`
 
 讀取方式：
 
+- `Rules/zh-tw_localization_base_rules.md`：確認共通結構、lookup、變更範圍與品質門檻；除非規則版本更新，不必每輪全文重讀。
+- `Rules/zh-tw_initial_translation_rules.md`／`Rules/zh-tw_revision_rules.md`：依 unit 的 stage 讀取一份；同批混合 stage 時讀取兩份並在 manifest 個別標記。
+- 專案規則文件：只在處理對應 MOD 或檔案時讀取；Enhanced Descriptions 使用 `Rules/enhanced_descriptions_zh-tw_special_rules.md`。
 - `darktide_zh_tw_translation_schedule.md`：只需確認本流程版本與本輪相關規則；除非流程被修改，不必每輪全文重讀。
 - `Workspace Status.md`：優先讀鎖定區、Blocked Items、PR Records、Next position；接手某 MOD 後再讀該 MOD 摘要。
 - `MOD Directory Map.md`：用表格列篩選候選 MOD，不全文複述。
@@ -58,6 +65,10 @@
 
 | 文件 | 用途 |
 | --- | --- |
+| `Rules/zh-tw_localization_base_rules.md` | 所有繁中工作共通的結構、lookup、變更範圍與品質門檻 |
+| `Rules/zh-tw_initial_translation_rules.md` | 首次建立 active `zh-tw` 的來源順位與完成標準 |
+| `Rules/zh-tw_revision_rules.md` | 第二次以後繁中修訂、英俄參考與來源變動處理 |
+| `Rules/enhanced_descriptions_zh-tw_special_rules.md` | Enhanced Descriptions 專用官方譯名與檔案例外 |
 | `Workspace Status.md` | 多代理目前狀態、鎖定、MOD 摘要、PR、blocked、下一步 |
 | `MOD Directory Map.md` | MOD 排程狀態來源 |
 | `Term Candidates.md` | 翻譯表尚未收錄的新詞彙候選 |
@@ -136,25 +147,17 @@
 
 不要在 log 裡保存每個正常 key 的完整英文、翻譯推理或長 diff。
 
-## 5. 翻譯規則
+## 5. 工作模式與規則路由
 
-1. 英文 `en` 是唯一翻譯來源。
-2. 既有 `zh-tw` 只能作為待校正文字，不能作為翻譯來源。
-3. 不參考 `zh-cn` 或其他語系推測翻譯。
-4. `Referneces/Translation.md` 是強制詞彙表；命中詞條時 `zh-tw` 必須使用指定譯名。
-5. `Term Candidates.md` 只記錄候選詞，不取代正式詞彙表。
-6. UI 文字要自然、精簡，符合遊戲 MOD 設定選單語氣。
-7. Warhammer 40,000: Darktide 專有名詞若無詞彙表依據，優先保留英文或採用繁中玩家常用譯名。
-8. 保留 placeholder，例如 `%s`、`%d`、`{name}`、`$(...)`。
-9. 不翻譯程式碼、設定 key、檔名、mod id、函式名。
-10. 不改 Lua 結構、key、縮排風格、逗號與其他語系內容。
-11. 只新增或修改 `["zh-tw"]` 欄位。
-12. 每個 localization key 的 table 內最多只能有一個 `["zh-tw"]`。
-13. 若 `["zh-tw"]` 已存在，只能修改該既有欄位；不得在同一 table 內新增第二個 `["zh-tw"]`。
-14. 若 `["zh-tw"]` 缺失，才可依 `en` 新增。
-15. 新增 `["zh-tw"]` 時，不得以 `zh-cn` 或其他語系所在位置判斷是否缺失；必須先掃描該 key 的完整 table。
-16. 若 `["zh-tw"]` 品質差，依 `en` 校正。
-17. 純符號、純數字、純 placeholder 或無語意 UI 文字可以沒有 `["zh-tw"]`；不要為這類項目補上與 `en` 相同的值。
+本節只負責選擇規則；實際來源順位與翻譯方法由獨立模式文件定義。
+
+1. 每個 PLAN 宣告預設 `Mode`，每批 log 或 manifest 記錄實際 `Stage` 與 `Rule set`。
+2. 缺少可用 active `zh-tw` 的 unit 標記為 `FIRST_TRANSLATION`，套用 `Rules/zh-tw_initial_translation_rules.md`。
+3. 已有可用 active `zh-tw` 的 unit 標記為 `ZH_TW_REVISION`，套用 `Rules/zh-tw_revision_rules.md`。
+4. 英文與俄文出現機制級差異時，依修訂規則標記為 `SOURCE_DRIFT` 並執行來源查證。
+5. 同批包含首次新增與既有修訂時，逐 unit 套用規則，不以整個檔案強制使用單一來源順位。
+6. 目標 MOD 或檔案具有官方既有譯名、特殊 fallback 或其他核准例外時，一併套用專案規則文件。
+7. BASE RULE 的 placeholder、lookup、Lua 結構、其他語系邊界與最低品質門檻適用於所有模式。
 
 ## 6. 詞彙表比對
 

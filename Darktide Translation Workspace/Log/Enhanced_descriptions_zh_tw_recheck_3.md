@@ -4,7 +4,7 @@ Status: `in_progress`
 
 AI handler: `codex`
 
-Plan: `Darktide Translation Workspace/Enhanced_descriptions_zh_tw_translation_plan_3.md`
+Plan: `Darktide Translation Workspace/Deprecated Plans/Enhanced_descriptions_zh_tw_translation_plan_3.md`（已過時，僅供歷史查閱）
 
 ## Locked execution context
 

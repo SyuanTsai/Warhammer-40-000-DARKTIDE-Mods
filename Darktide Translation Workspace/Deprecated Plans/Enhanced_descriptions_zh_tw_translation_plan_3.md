@@ -1,3 +1,7 @@
+# 過時警告：本 PLAN 已不可使用，內容不再可信
+
+本文件僅保留為歷史紀錄，不可作為目前翻譯規則、執行流程、來源判定或交付依據。現行工作請使用 `Darktide Translation Workspace/Rules/zh-tw_localization_base_rules.md`、適用的模式／專案規則與最新核准的 PLAN。
+
 # Enhanced_descriptions zh-tw Translation Plan 3
 
 本文件是 Enhanced Descriptions 第三階段繁中翻譯完整性重查計畫。第三階段不沿用第二階段的逐條 `KEEP`／`CHANGE` 結果作為已完成證明，而是以最新使用者 Review 後的版本重新建立清冊，重新核對全部翻譯對照、lookup 依賴、正式詞彙與顯示結構。

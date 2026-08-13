@@ -1,3 +1,7 @@
+# 過時警告：本 PLAN 已不可使用，內容不再可信
+
+本文件僅保留為歷史紀錄，不可作為目前翻譯規則、執行流程、來源判定或交付依據。現行工作請使用 `Darktide Translation Workspace/Rules/zh-tw_localization_base_rules.md`、適用的模式／專案規則與最新核准的 PLAN。
+
 # Enhanced_descriptions zh-tw Translation Plan
 
 本文件是獨立 Enhanced Descriptions Git repo 的繁中翻譯執行計畫。總規則仍以 workspace repo 的 `Darktide Translation Workspace/darktide_zh_tw_translation_schedule.md` 為準；本文件只補充 Enhanced_descriptions 這類大型模組需要的細分批次、檔案順序、雙 Git 提交規則與續跑格式。
