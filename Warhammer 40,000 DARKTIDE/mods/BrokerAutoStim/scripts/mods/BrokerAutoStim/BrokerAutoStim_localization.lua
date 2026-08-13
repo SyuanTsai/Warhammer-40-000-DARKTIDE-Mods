@@ -152,12 +152,12 @@
 		not_with_stimm_supply = {
             en = "Not with Stimm Supply",
             ["zh-cn"] = "选择兴奋剂补给时禁用自动化",
-			["zh-tw"] = "不與化學性依賴同時使用",
+            ["zh-tw"] = "不與化學性依賴同時使用",
         },
         not_with_stimm_supply_description = {
             en = "Disable auto-stim if you have the Stimm Field combat ability.",
             ["zh-cn"] = "若玩家选择了右线兴奋剂补给大招，则禁用自动注射兴奋剂的功能。",
-			["zh-tw"] = "如果你擁有「化學性依賴」戰鬥技能，停用自動注射興奮劑。",
+            ["zh-tw"] = "如果你擁有「化學性依賴」戰鬥技能，停用自動注射興奮劑。",
         },
 		auto_inject_prevention = {
 			en = "Auto Inject Prevention",
@@ -413,5 +413,10 @@
 			en = "Size of the HUD icon in pixels.",
 			["zh-cn"] = "HUD图标的像素大小。",
 			["zh-tw"] = "HUD 圖示的像素大小。",
+		},
+		tab_general = {
+			en = "General Settings",
+			["zh-cn"] = "常规设置",
+			["zh-tw"] = "一般設定",
 		},
 	}
