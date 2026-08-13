@@ -118,15 +118,15 @@ local localization = {
     companion_range_limitation = {
         en = "Companion Range Limitation",
         ["zh-cn"] = "伙伴范围限制",
-        ["zh-tw"] = "同伴範圍限制",
+        ["zh-tw"] = "標記來源範圍限制",
     },
     companion_range_limitation_tooltip = {
         en = "Restrict the maximum distance between your " .. highlight("companion") .. " and a target that can be marked by the Auto-Mark.\n\n" ..
             "Set to " .. highlight("0") .. " to disable.",
         ["zh-cn"] = "限制自动标记系统可标记的目标与你的" .. highlight("伙伴") .. "之间的最大距离。\n\n" ..
             "设置为" .. highlight("0") .. "以禁用。",
-        ["zh-tw"] = "限制自動標記系統可標記的目標與你的" .. highlight("同伴") .. "之間的最大距離。\n\n" ..
-            "設為" .. highlight("0") .. "可停用",
+        ["zh-tw"] = "限制自動標記可標記目標與你的" .. highlight("同伴或伺服頭骨") .. "之間的最大距離。\n\n" ..
+            "設為" .. highlight("0") .. "可停用。",
     },
     companion_cancel_mark = {
         en = "Auto Cancel Cyber-Mastiff Mark",
@@ -454,7 +454,7 @@ local localization = {
     focus_target_ignore_unaggroed_description = {
         en = "When enabled, Focus Target will not mark enemies that are not alerted.",
         ["zh-cn"] = "当启用时，聚焦目标将不会标记未警觉的敌人。",
-        ["zh-tw"] = "當啟用時，專注目標將不會標記未觸發警戒的敵人。",
+        ["zh-tw"] = "當啟用時，鎖定目標將不會標記未觸發警戒的敵人。",
     },
     focus_target_switch = {
         en = "Switch Target on Attack",
