@@ -1,5 +1,31 @@
 local mod = get_mod("Archivum Messelina")
 
+local Keyboard = Keyboard
+local ipairs = ipairs
+local string_lower = string.lower
+
+mod.reset_view_state = function()
+	mod.view = nil
+	mod.input_field = nil
+	mod.player = nil
+	mod.last_index = nil
+	mod.achievements_by_category = nil
+	mod.searchFiltered = nil
+	mod.searchFilteredSet = nil
+	mod.set_is_writing_asap = nil
+	mod.block_next_legend_escape_check = nil
+	mod._counts_dirty = true
+end
+
+mod.bind_view = function(view)
+	if mod.view ~= view then
+		mod.view = view
+		mod.input_field = nil
+	end
+
+	mod.input_field = mod.input_field or view._widgets_by_name["search_input"]
+end
+
 mod.is_writing = function()
 	return mod.input_field and mod.input_field.content and mod.input_field.content.is_writing
 end
@@ -32,7 +58,7 @@ mod.set_navigation_lock = function(view, locked)
 	if view._top_panel and view._top_panel.disable_input then
 		view._top_panel:disable_input(locked)
 
-		if view._top_panel.set_is_handling_navigation_input and view._top_panel.set_is_handling_navigation_input then
+		if view._top_panel.set_is_handling_navigation_input then
 			view._top_panel:set_is_handling_navigation_input(not locked)
 		end
 	end
@@ -60,7 +86,7 @@ local is_close_search_keystroke = function(ks)
 		return false
 	end
 
-	local key = string.lower(ks)
+	local key = string_lower(ks)
 
 	return key == "escape" or key == "esc" or key == "enter" or key == "return" or key == "\n" or key == "\r"
 end
@@ -70,7 +96,7 @@ local is_focus_search_shortcut = function(ks)
 		return false
 	end
 
-	return string.lower(ks) == "s"
+	return string_lower(ks) == "s"
 end
 
 mod.search_results = function(view, dt, t, input_service)
@@ -78,8 +104,7 @@ mod.search_results = function(view, dt, t, input_service)
 		return
 	end
 
-	mod.view = mod.view or view
-	mod.input_field = mod.input_field or view._widgets_by_name["search_input"]
+	mod.bind_view(view)
 
 	if not mod.visibility() or not mod.input_field then
 		return
