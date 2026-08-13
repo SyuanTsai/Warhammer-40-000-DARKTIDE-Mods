@@ -462,7 +462,7 @@
 - MOD 檔案名稱：MissionBrief-387-1-9-1774306770
 - 手動維護最後下載日期：2026-03-29
 
-### [Uptime](https://www.nexusmods.com/warhammer40kdarktide/mods/387)
+### [Uptime](https://www.nexusmods.com/warhammer40kdarktide/mods/573)
     觀察天賦的運作狀況
 - MOD 網站最後更新日期：Last updated 30 December 2025, 10:00PM
 - MOD 版本：1.3.6
@@ -476,7 +476,7 @@
 - MOD 檔案名稱：InventoryStats-152-1-8-1758663470
 - 手動維護最後下載日期：2025-10-01
 
-### [Clear Smoke](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
+### [Clear Smoke](https://www.nexusmods.com/warhammer40kdarktide/mods/517)
     煙霧輔助
 - MOD 網站最後更新日期：Last updated 21 November 2025, 7:21AM
 - MOD 版本：1.2
@@ -484,7 +484,7 @@
 - 手動維護最後下載日期：2025-12-06
 - Use Google driver.
 
-### [Quick Level Mastery](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
+### [Quick Level Mastery](https://www.nexusmods.com/warhammer40kdarktide/mods/395)
     自動升級裝備(含自動買)
 - MOD 網站最後更新日期：Last updated 23 January 2026, 3:18AM
 - MOD 版本：0.1.1
@@ -690,7 +690,7 @@
 - MOD 檔案名稱：Mauler Attack Indicator-638-1-0-1-1773969244
 - 手動維護最後下載日期：2026-03-29
 
-### [Crusher Attack Indicator](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
+### [Crusher Attack Indicator](https://www.nexusmods.com/warhammer40kdarktide/mods/639)
     輾壓者的攻擊範圍顯示
 - MOD 網站最後更新日期：Last updated 20 March 2026, 9:10AM
 - MOD 版本：1.0.1
@@ -844,7 +844,7 @@
 - 手動維護最後下載日期：2025-06-24
 - 移除原因：與狗哨(DogWhistle)功能重複
 
-### [RickAndMortis](https://www.nexusmods.com/warhammer40kdarktide/mods/488)
+### [RickAndMortis](https://www.nexusmods.com/warhammer40kdarktide/mods/491)
     靈能室測試死神試煉的技能
 - MOD 網站最後更新日期：Last updated 30 March 2025 4:49AM
 - MOD 版本：0.55
@@ -876,7 +876,7 @@
 - 手動維護最後下載日期：2025-12-28
 - 移除原因：SMOG Cleaner取代此功能。
 
-### [AuspexHelper](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
+### [AuspexHelper](https://www.nexusmods.com/warhammer40kdarktide/mods/757)
     遠征模式的小弟圖
 - MOD 網站最後更新日期：Last updated 20 March 2026, 12:54PM
 - MOD 版本：1.01
