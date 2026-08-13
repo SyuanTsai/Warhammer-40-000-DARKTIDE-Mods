@@ -76,7 +76,7 @@ return {
     },
     auto_throw_keybind_tooltip = {
         en = "Swaps to and throws grenades. When set, AutoBlitz will not automatically throw grenades unless the keybind is pressed.",
-        ["zh-cn"] = "切换至手雷栏并投掷。绑定按键后，模组仅在按下该键时才会自动投掷，不会自主触发。"
+        ["zh-cn"] = "切换至手雷栏并投掷。绑定按键后，模组仅在按下该键时才会自动投掷，不会自主触发。",
         ["zh-tw"] = "切換到手雷並投擲。設定後，MOD只會在按下此快捷鍵時自動投擲手雷。",
     },
     allow_override_tooltip = {
@@ -181,10 +181,10 @@ return {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum Shredder Frag Grenades: \nStandard/%s: %d/%s\nEnhanced Blitz: %d/%s\n",
         cf("Grenadier", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
         ["zh-cn"] = string.format("持有手雷达到该数量才会自动投掷。\n最大投放次数：\n标准/%s：%d/%s\n强化闪击天赋：%d/%s\n",
-        ["zh-tw"] = string.format("至少持有此數量的手雷才會自動投擲。\n\n粉碎者破片手雷上限：\n標準/%s：%d/%s\n閃擊強化：%d/%s\n",
-        cf("擲彈兵/轟炸者", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
         cf("掷弹兵", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
        
+        ["zh-tw"] = string.format("至少持有此數量的手雷才會自動投擲。\n\n粉碎者破片手雷上限：\n標準/%s：%d/%s\n閃擊強化：%d/%s\n",
+        cf("擲彈兵/轟炸者", "ui_veteran_text"), frag, cf(frag + grenadier, "ui_veteran_text"), frag + enhanced, cf(frag + grenadier + enhanced, "ui_veteran_text")),
     },
     -- Krak 穿甲手雷
     krak_enabled = {
@@ -206,9 +206,9 @@ return {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum Krak Grenades: \nStandard/%s: %d/%s\nEnhanced Blitz: %d/%s\n",
         cf("Grenadier", "ui_veteran_text"), krak, cf(krak + grenadier, "ui_veteran_text"), krak + enhanced, cf(krak + grenadier + enhanced, "ui_veteran_text")),
         ["zh-cn"] = string.format("持有手雷达到该数量才会自动投掷。\n最大投放次数：\n标准/%s：%d/%s\n强化闪击天赋：%d/%s\n",
+        cf("掷弹兵", "ui_veteran_text"), krak, cf(krak + grenadier, "ui_veteran_text"), krak + enhanced, cf(krak + grenadier + enhanced, "ui_veteran_text")),
         ["zh-tw"] = string.format("至少持有此數量的手雷才會自動投擲。\n\n穿甲手雷上限：\n標準/%s：%d/%s\n閃擊強化：%d/%s\n",
         cf("擲彈兵/轟炸者", "ui_veteran_text"), krak, cf(krak + grenadier, "ui_veteran_text"), krak + enhanced, cf(krak + grenadier + enhanced, "ui_veteran_text")),
-        cf("掷弹兵", "ui_veteran_text"), krak, cf(krak + grenadier, "ui_veteran_text"), krak + enhanced, cf(krak + grenadier + enhanced, "ui_veteran_text")),
     },
     -- Smoke 烟雾弹
     smoke_enabled = {
@@ -230,9 +230,9 @@ return {
         en = string.format("Must have at least this many grenades to auto-throw.\n\nMaximum Smoke Grenades: \nStandard/%s: %d/%s\nEnhanced Blitz: %d/%s\n",
         cf("Grenadier", "ui_veteran_text"), smoke, cf(smoke + grenadier, "ui_veteran_text"), smoke + enhanced, cf(smoke + grenadier + enhanced, "ui_veteran_text")),
         ["zh-cn"] = string.format("持有手雷达到该数量才会自动投掷。\n最大投放次数：\n标准/%s：%d/%s\n强化闪击天赋：%d/%s\n",
+        cf("掷弹兵", "ui_veteran_text"), smoke, cf(smoke + grenadier, "ui_veteran_text"), smoke + enhanced, cf(smoke + grenadier + enhanced, "ui_veteran_text")),
         ["zh-tw"] = string.format("至少持有此數量的手雷才會自動投擲。\n\n煙霧手雷上限：\n標準/%s：%d/%s\n閃擊強化：%d/%s\n",
         cf("擲彈兵/轟炸者", "ui_veteran_text"), smoke, cf(smoke + grenadier, "ui_veteran_text"), smoke + enhanced, cf(smoke + grenadier + enhanced, "ui_veteran_text")),
-        cf("掷弹兵", "ui_veteran_text"), smoke, cf(smoke + grenadier, "ui_veteran_text"), smoke + enhanced, cf(smoke + grenadier + enhanced, "ui_veteran_text")),
     },
     -- Flame 狂信徒-焚化手雷
     flame_enabled = {
@@ -279,7 +279,7 @@ return {
     -- Mine 法务官-震荡地雷
     mine_enabled = {
         en = cf(Localize("loc_talent_ability_shock_mine"), "pale_violet_red"),
-        ["zh-cn"] = cf("震荡地雷（法务官）", "pale_violet_red")
+        ["zh-cn"] = cf("震荡地雷（法务官）", "pale_violet_red"),
         ["zh-tw"] = cf("震盪地雷", "pale_violet_red"),
     },
     mine_throw_type = {
@@ -300,7 +300,7 @@ return {
     -- Arbites Grenade 法务官手雷
     arbites_enabled = {
         en = cf(Localize("loc_talent_ability_adamant_grenade"), "pale_violet_red"),
-        ["zh-cn"] = cf("法务官手雷", "pale_violet_red")
+        ["zh-cn"] = cf("法务官手雷", "pale_violet_red"),
         ["zh-tw"] = cf("法務官手榴彈", "pale_violet_red"),
     },
     arbites_throw_type = {
@@ -321,72 +321,72 @@ return {
     -- Dogsplosion 法务官-训犬远程引爆
     dogsplosion_enabled = {
         en = cf(Localize("loc_talent_ability_detonate"), "pale_violet_red"),
-        ["zh-cn"] = cf("远程引爆（法务官）", "pale_violet_red")
+        ["zh-cn"] = cf("远程引爆（法务官）", "pale_violet_red"),
         ["zh-tw"] = cf("遠端引爆", "pale_violet_red"),
     },
     dogsplosion_enabled_tooltip = {
         en = string.format("Automatically triggers %s when the conditions below are met. \n\nAt least one of the following settings must be enabled to use this feature: \nRequire Minimum Enemy Count \nRequire Pounce",cf(Localize("loc_talent_ability_detonate"), "pale_violet_red")),
-        ["zh-cn"] = "满足下述条件时自动触发训犬引爆。\n必须开启以下至少一项才能生效：\n敌人数量阈值判定\n扑击触发判定"
+        ["zh-cn"] = "满足下述条件时自动触发训犬引爆。\n必须开启以下至少一项才能生效：\n敌人数量阈值判定\n扑击触发判定",
         ["zh-tw"] = string.format("符合下列條件時自動觸發 %s。\n\n至少啟用以下其中一項設定才能使用此功能：\n要求最低敵人數量\n要求撲擊",cf("遠端引爆", "pale_violet_red")),
     },
     dogsplosion_use_threshold = {
         en = "Require Minimum Enemy Count",
-        ["zh-cn"] = "敌人数量阈值判定"
+        ["zh-cn"] = "敌人数量阈值判定",
         ["zh-tw"] = "要求最低敵人數量",
     },
     dogsplosion_use_threshold_tooltip = {
         en = "When enabled, detonation will only take place if ANY of the enemy counts below are met. \nOnly enemies within the detonation radius are counted.",
-        ["zh-cn"] = "开启后，仅当满足任意一项敌人数量条件才会引爆。仅统计爆炸范围内的敌人。"
+        ["zh-cn"] = "开启后，仅当满足任意一项敌人数量条件才会引爆。仅统计爆炸范围内的敌人。",
         ["zh-tw"] = "啟用後，只有符合下列任一敵人數量條件時才會引爆。\n只計算引爆半徑內的敵人。",
     },
     dogsplosion_enemy_threshold = {
         en = "Total Enemies",
-        ["zh-cn"] = "总敌人数量"
+        ["zh-cn"] = "总敌人数量",
         ["zh-tw"] = "敵人總數",
     },
     dogsplosion_elite_threshold = {
         en = "Total Elites",
-        ["zh-cn"] = "精英敌人数量"
+        ["zh-cn"] = "精英敌人数量",
         ["zh-tw"] = "精英總數",
     },
     dogsplosion_special_threshold = {
         en = "Total Specialists",
-        ["zh-cn"] = "特感敌人数量"
+        ["zh-cn"] = "特感敌人数量",
         ["zh-tw"] = "專家總數",
     },
     dogsplosion_boss_threshold = {
         en = "Total Bosses",
-        ["zh-cn"] = "首领敌人数量"
+        ["zh-cn"] = "首领敌人数量",
         ["zh-tw"] = "首領總數",
     },
     dogsplosion_allow_daemonhost = {
         en = "Allow Detonation Near Sleeping Daemonhosts",
-        ["zh-cn"] = "允许在沉睡恶魔宿主附近引爆"
+        ["zh-cn"] = "允许在沉睡恶魔宿主附近引爆",
         ["zh-tw"] = "允許在沉睡的惡魔宿主附近引爆",
     },
     dogsplosion_pounce_only = {
         en = "Require Pounce",
-        ["zh-cn"] = "扑击触发判定"
+        ["zh-cn"] = "扑击触发判定",
         ["zh-tw"] = "需要撲擊",
     },
     dogsplosion_require_tag = {
         en = "Require Tag",
-        ["zh-cn"] = "需要指令标记"
+        ["zh-cn"] = "需要指令标记",
         ["zh-tw"] = "需要標記",
     },
     dogsplosion_require_tag_tooltip = {
         en = string.format("This setting only applies when Require Pounce is enabled. \nIf enabled, a command tag must also be present when the pounce occurs."),
-        ["zh-cn"] = "仅在开启「扑击触发判定」时生效。开启后，训犬扑击目标必须带有指令标记才会引爆。"
+        ["zh-cn"] = "仅在开启「扑击触发判定」时生效。开启后，训犬扑击目标必须带有指令标记才会引爆。",
         ["zh-tw"] = "此設定只在「需要撲擊」啟用時生效。\n啟用後，撲擊發生時也必須存在指令標記。",
     },
     dogsplosion_cooldown = {
         en = "Cooldown",
-        ["zh-cn"] = "引爆冷却时间"
+        ["zh-cn"] = "引爆冷却时间",
         ["zh-tw"] = "冷卻",
     },
     dogsplosion_minimum = {
         en = "Minimum Charges",
-        ["zh-cn"] = "最低充能层数阈值"
+        ["zh-cn"] = "最低充能层数阈值",
         ["zh-tw"] = "最低充能數",
     },
     dogsplosion_minimum_tooltip = {
@@ -443,12 +443,12 @@ return {
     },
     skull_enabled = {
         en = cf(Localize("loc_talent_cryptic_servo_skull"), "citadel_golden_griffon"),
-        ["zh-cn"] = cf("伺服头骨自动强化", "citadel_golden_griffon")
+        ["zh-cn"] = cf("伺服头骨自动强化", "citadel_golden_griffon"),
         ["zh-tw"] = cf("伺服頭骨自動強化", "citadel_golden_griffon"),
     },
     skull_enabled_tooltip = {
         en = "Automatically empowers the Servo-Skull when available. Only applies to the default Servo-Skull equipped when no blitz is selected.",
-        ["zh-cn"] = "伺服头骨就绪时自动强化；仅作用于未选择闪击技能时携带的基础伺服头骨。"
+        ["zh-cn"] = "伺服头骨就绪时自动强化；仅作用于未选择闪击技能时携带的基础伺服头骨。",
         ["zh-tw"] = "伺服頭骨可用時自動強化。只套用於未選擇閃擊時裝備的預設伺服頭骨。",
     },
     purg_enabled = {
@@ -463,22 +463,22 @@ return {
     },
     help_hogtied = {
         en = "Automatically Rescue Hogtied Allies",
-        ["zh-cn"] = "自动解救被束缚的队友"
+        ["zh-cn"] = "自动解救被束缚的队友",
         ["zh-tw"] = "自動救援被俘虜的隊友",
     },
     help_netted = {
         en = "Automatically Rescue Netted Allies",
-        ["zh-cn"] = "自动解救被网困住的队友"
+        ["zh-cn"] = "自动解救被网困住的队友",
         ["zh-tw"] = "自動救援被網住的隊友",
     },
     help_downed = {
         en = "Automatically Rescue Downed Allies",
-        ["zh-cn"] = "自动拉起倒地队友"
+        ["zh-cn"] = "自动拉起倒地队友",
         ["zh-tw"] = "自動救起倒地隊友",
     },
     medic_minimum = {
         en = "Minimum Charges",
-        ["zh-cn"] = "最低充能层数阈值"
+        ["zh-cn"] = "最低充能层数阈值",
         ["zh-tw"] = "最低充能數",
     },
     medic_tooltip = {
@@ -513,32 +513,32 @@ return {
     },
     shield_type = {
         en = "Auto-Deploy Trigger",
-        ["zh-cn"] = "自动部署触发条件"
+        ["zh-cn"] = "自动部署触发条件",
         ["zh-tw"] = "自動部署觸發",
     },
     current_health = {
         en = "Current Health %%",
-        ["zh-cn"] = "当前生命值百分比"
+        ["zh-cn"] = "当前生命值百分比",
         ["zh-tw"] = "目前生命值 %%",
     },
     damage_taken = {
         en = "Damage Taken",
-        ["zh-cn"] = "短时间承受伤害量"
+        ["zh-cn"] = "短时间承受伤害量",
         ["zh-tw"] = "受到傷害",
     },
     shield_type_tooltip = {
         en = Localize("loc_talent_cryptic_grenade_ability_force_field") .. " will be automatically deployed when the trigger condition is met, as dictated by the Trigger Threshold setting.",
-        ["zh-cn"] = "满足设定的触发阈值时，自动部署折射力场发生器。"
+        ["zh-cn"] = "满足设定的触发阈值时，自动部署折射力场发生器。",
         ["zh-tw"] = "符合觸發門檻設定時，會自動部署折射力場發生器。",
     },
     shield_threshold = {
         en = "Trigger Threshold",
-        ["zh-cn"] = "触发阈值"
+        ["zh-cn"] = "触发阈值",
         ["zh-tw"] = "觸發門檻",
     },
     shield_threshold_tooltip = {
         en = string.format("%s: Refraction Emitter will deploy when health drops below this percentage due to Ranged damage.\n%s: Refraction Emitter will deploy when this much health damage has been received from Ranged sources within the past 2 seconds.\n\nRegardless of Threshold, Refraction Emitter will auto-deploy if the next instance of incoming Ranged damage would plausibly result in death.",cf("Current Health %%", "citadel_golden_griffon"),cf("Damage Taken", "citadel_golden_griffon")),
-        ["zh-cn"] = string.format("%s：远程伤害使生命值低于该百分比时自动开盾。\n%s：2秒内受到对应数值远程伤害时自动开盾。\n无论阈值如何，若下一次远程伤害足以致死，会强制自动部署力场。",cf("当前生命值百分比", "citadel_golden_griffon"),cf("短时间承受伤害量", "citadel_golden_griffon"))
+        ["zh-cn"] = string.format("%s：远程伤害使生命值低于该百分比时自动开盾。\n%s：2秒内受到对应数值远程伤害时自动开盾。\n无论阈值如何，若下一次远程伤害足以致死，会强制自动部署力场。",cf("当前生命值百分比", "citadel_golden_griffon"),cf("短时间承受伤害量", "citadel_golden_griffon")),
         ["zh-tw"] = string.format("%s：遠程傷害使生命值低於此百分比時，部署折射力場發生器。\n%s：過去 2 秒內受到此數值的遠程生命值傷害時，部署折射力場發生器。\n\n不論門檻為何，若下一次遠程傷害可能致死，會自動部署折射力場發生器。",cf("目前生命值 %%", "citadel_golden_griffon"),cf("受到傷害", "citadel_golden_griffon")),
     },
     shield_minimum = {
