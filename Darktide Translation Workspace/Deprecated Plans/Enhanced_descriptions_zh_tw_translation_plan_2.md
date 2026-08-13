@@ -1,3 +1,7 @@
+# 過時警告：本 PLAN 已不可使用，內容不再可信
+
+本文件僅保留為歷史紀錄，不可作為目前翻譯規則、執行流程、來源判定或交付依據。現行工作請使用 `Darktide Translation Workspace/Rules/zh-tw_localization_base_rules.md`、適用的模式／專案規則與最新核准的 PLAN。
+
 # Enhanced_descriptions zh-tw Translation Plan 2
 
 本文件是 Enhanced Descriptions 第二階段繁中翻譯計畫。第一份計畫負責建立完整的 `zh-tw` 基礎；本計畫改以現有繁中內容為主要審閱對象，集中處理缺少的翻譯、資訊不完整、語意不準確與中文不流暢等問題。
