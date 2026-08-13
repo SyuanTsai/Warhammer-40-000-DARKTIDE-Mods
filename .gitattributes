@@ -1,0 +1,5 @@
+.gitattributes text eol=lf
+.gitignore text eol=lf
+"AI Prompt/*.md" text eol=lf
+.hash/*.hash text eol=lf
+.hash/*.pending.hash text eol=lf
