@@ -95,15 +95,15 @@ local localization = {
     execution_order_priority = {
         en = "Execution Order Priority",
         ["zh-cn"] = "遵从处决指令",
-        ["zh-tw"] = "處決指令優先順序",
+        ["zh-tw"] = "處刑命令優先順序",
     },
     execution_order_priority_description = {
         en = "Arbites Cyber-Mastiff Auto-Mark prioritizes enemies chosen by Execution Order.\n\n" ..
             "Switches target if your current marked target is not chosen by Execution Order, but your aimed target is.",
         ["zh-cn"] = "遵从处决指令的选择，法务官智能獒犬自动标记将优先标记已被处决指令选中的敌人。\n\n" ..
             "当已标记的敌人没有被处决指令选中，而正在瞄准的敌人被处决指令选中时，将切换至瞄准的目标。",
-        ["zh-tw"] = "遵從處決指令的選擇，法務官電子獒犬自動標記將優先標記已被處決指令選中的敵人。\n\n" ..
-            "當已標記的敵人沒有被處決指令選中，而正在瞄準的敵人被處決指令選中時，將切換至瞄準的目標。",
+        ["zh-tw"] = "遵從處刑命令的選擇，法務官電子獒犬自動標記將優先標記已被處刑命令選中的敵人。\n\n" ..
+            "當已標記的敵人沒有被處刑命令選中，而正在瞄準的敵人被處刑命令選中時，將切換至瞄準的目標。",
     },
     execution_order_force_mark = {
         en = "Force Mark",
