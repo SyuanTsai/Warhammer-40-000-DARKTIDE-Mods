@@ -1,43 +1,56 @@
-local mod = get_mod('CombatStats')
-
-mod:add_global_localize_strings({
-    loc_combat_stats_reset_stats = {
-        en = 'Reset Stats',
-        ['zh-cn'] = '重置统计', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '重置統計',
-    },
-    loc_combat_stats_view_history = {
-        en = 'View History',
-        ['zh-cn'] = '查看历史', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '查看歷史紀錄',
-    },
-    loc_combat_stats_back_to_current = {
-        en = 'Back to Current',
-        ['zh-cn'] = '返回当前', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '返回目前統計',
-    },
-    loc_combat_stats_back_to_history = {
-        en = 'Back to History',
-        ['zh-cn'] = '返回历史', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '返回歷史紀錄',
-    },
-    loc_combat_stats_delete_entry = {
-        en = 'Delete Entry',
-        ['zh-cn'] = '删除条目', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '刪除項目',
-    },
-    loc_combat_stats_menu_button = {
-        en = 'Combat Stats',
-        ['zh-cn'] = '战斗统计',
-        ['zh-tw'] = '戰鬥統計',
-    },
-})
-
 return {
+    global_loc = {
+        loc_combat_stats_reset_stats = {
+            en = 'Reset Stats',
+            ['zh-cn'] = '重置统计', -- FIXME: confirm translation, translated via google translate
+            ['zh-tw'] = '重置統計',
+        },
+        loc_combat_stats_view_history = {
+            en = 'View History',
+            ['zh-cn'] = '查看历史', -- FIXME: confirm translation, translated via google translate
+            ['zh-tw'] = '查看歷史紀錄',
+        },
+        loc_combat_stats_back_to_current = {
+            en = 'Back to Current',
+            ['zh-cn'] = '返回当前', -- FIXME: confirm translation, translated via google translate
+            ['zh-tw'] = '返回目前統計',
+        },
+        loc_combat_stats_back_to_history = {
+            en = 'Back to History',
+            ['zh-cn'] = '返回历史', -- FIXME: confirm translation, translated via google translate
+            ['zh-tw'] = '返回歷史紀錄',
+        },
+        loc_combat_stats_delete_entry = {
+            en = 'Delete Entry',
+            ['zh-cn'] = '删除条目', -- FIXME: confirm translation, translated via google translate
+            ['zh-tw'] = '刪除項目',
+        },
+        loc_combat_stats_menu_button = {
+            en = 'Combat Stats',
+            ['zh-cn'] = '战斗统计',
+            ['zh-tw'] = '戰鬥統計',
+        },
+    },
+    game_loc = {
+        -- Damage types
+        damage = 'loc_stats_display_damage_stat',
+        burn = 'loc_stats_display_burn_stat',
+        -- Hit types
+        weakspot = 'loc_weapon_details_weakspot',
+        crit = 'loc_weapon_details_crit',
+        -- Attack range
+        melee = 'loc_setting_melee',
+        ranged = 'loc_setting_ranged',
+        -- Other
+        companion = 'loc_inventory_title_slot_companion_gear_full_new',
+        arc = 'loc_weapon_keyword_arc_weapon',
+        buff = 'loc_settings_menu_group_buff_interface_settings',
+    },
+
     mod_name = {
-        en = 'Combat Stats',
+        en = ' Combat {#color(255,191,0)}Stats{#reset()}',
         ['zh-cn'] = '战斗统计',
-        ['zh-tw'] = '戰鬥統計',
+        ['zh-tw'] = ' 戰鬥{#color(255,191,0)}統計{#reset()}',
     },
     mod_description = {
         en = 'Track detailed combat statistics including damage, kills, buff uptime, and more.',
@@ -60,6 +73,11 @@ return {
         en = 'Toggle Stats View',
         ['zh-cn'] = '切换统计视图',
         ['zh-tw'] = '切換統計檢視',
+    },
+    add_to_esc_menu = {
+        en = 'Show in Options Menu',
+        ['zh-cn'] = '在选项菜单中显示',
+        ['zh-tw'] = '在選項選單中顯示',
     },
     only_in_psykhanium = {
         en = 'Only In Psykhanium',
@@ -148,11 +166,6 @@ return {
         ['zh-cn'] = 'DPS',
         ['zh-tw'] = 'DPS',
     },
-    damage = {
-        en = 'Damage',
-        ['zh-cn'] = '伤害',
-        ['zh-tw'] = '傷害',
-    },
     hits = {
         en = 'Hits',
         ['zh-cn'] = '命中数',
@@ -168,55 +181,15 @@ return {
         ['zh-cn'] = '过量伤害', -- FIXME: confirm translation, translated via google translate
         ['zh-tw'] = '溢出傷害',
     },
-    melee = {
-        en = 'Melee',
-        ['zh-cn'] = '近战',
-        ['zh-tw'] = '近戰',
-    },
-    ranged = {
-        en = 'Ranged',
-        ['zh-cn'] = '远程',
-        ['zh-tw'] = '遠程',
-    },
     explosion = {
         en = 'Explosion',
         ['zh-cn'] = '爆炸',
         ['zh-tw'] = '爆炸',
     },
-    companion = {
-        en = 'Companion',
-        ['zh-cn'] = '同伴',
-        ['zh-tw'] = '同伴',
-    },
-    arc = {
-        en = 'Arc',
-        ['zh-cn'] = '电弧', -- FIXME: confirm translation, translated via google translate
-        ['zh-tw'] = '電弧',
-    },
-    buff = {
-        en = 'Buff',
-        ['zh-cn'] = '增益',
-        ['zh-tw'] = '增益',
-    },
-    crit = {
-        en = 'Crit',
-        ['zh-cn'] = '暴击',
-        ['zh-tw'] = '致命一擊',
-    },
-    weakspot = {
-        en = 'Weakspot',
-        ['zh-cn'] = '弱点',
-        ['zh-tw'] = '弱點',
-    },
     bleed = {
         en = 'Bleed',
         ['zh-cn'] = '流血',
         ['zh-tw'] = '流血',
-    },
-    burn = {
-        en = 'Burn',
-        ['zh-cn'] = '燃烧',
-        ['zh-tw'] = '燃燒',
     },
     toxin = {
         en = 'Toxin',
@@ -262,6 +235,28 @@ return {
     },
 
     -- Breed Types
+    breed_boss = {
+        en = 'Boss',
+        ['zh-cn'] = '怪物',
+        ['zh-tw'] = '巨獸',
+    },
+    breed_specialist = {
+        en = 'Specialist',
+        ['zh-cn'] = '专家',
+        ['zh-tw'] = '專家',
+    },
+    breed_elite = {
+        en = 'Elite',
+        ['zh-cn'] = '精英',
+        ['zh-tw'] = '精英',
+    },
+    breed_horde = {
+        en = 'Horde',
+        ['zh-cn'] = '尸潮',
+        ['zh-tw'] = '群怪',
+    },
+
+    -- Legacy breed types (FIXME: remove later)
     breed_monster = {
         en = 'monster',
         ['zh-cn'] = '怪物',
@@ -281,16 +276,6 @@ return {
         en = 'special',
         ['zh-cn'] = '专家',
         ['zh-tw'] = '專家',
-    },
-    breed_elite = {
-        en = 'elite',
-        ['zh-cn'] = '精英',
-        ['zh-tw'] = '精英',
-    },
-    breed_horde = {
-        en = 'horde',
-        ['zh-cn'] = '尸潮',
-        ['zh-tw'] = '群怪',
     },
     breed_unknown = {
         en = 'unknown',
