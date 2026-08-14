@@ -562,6 +562,10 @@ merged.lua = 以 new.lua 為基礎完成 zh-tw 合併的結果
 4. `Darktide Translation Workspace/Rules/zh-tw_revision_rules.md`
 5. 目標 MOD、檔案或 key scope 實際相交的專案規則；沒有時記為 `none`
 
+`source_sync` 採穩定翻譯邊界：只有 localization key 為新版新增，或既有 key 的英文原文、placeholder、lookup、markup、函式結構出現語意相關變動時，才可新增或修改 active `zh-tw`。既有 key 的來源未變時，不論 AI、上游 `zh-tw` 或 Review 是否提出用詞、標點、語序、自然度或風格改善，都必須完整保留基準版本的 `zh-tw`，並納入 `unchanged_key_count` 彙總；品質改善另走獨立翻譯排程，或取得使用者明確授權後處理。
+
+相同穩定原則適用於 README 的既有中文功能摘要：MOD 更新流程不得僅因翻譯或文案偏好改寫；只有來源功能語意改變、新增說明需求或使用者明確授權時才調整。版本、日期、檔名與雜湊等來源事實仍依本流程更新。
+
 只查詢 `Referneces/Translation.md`、`Term Candidates.md` 與目標 MOD 相關的詞條或段落。這些工作文件在本 MOD PR 中維持原狀；新候選詞先記錄在本輪 `localization-decisions.json`，需要納入工作文件時另走 `main` 的翻譯工作文件流程。
 
 專案規則先比對 MOD 目錄、檔案路徑與 key pattern，再決定是否套用。例如 `enhanced_descriptions_zh-tw_special_rules.md` 只在其指定檔案或 key scope 與本輪唯一 `_localization.lua` 相交時加入；僅名稱相同但 scope 未相交時記為 `none`，避免把其他檔案專用規則套到本輪 loc。
@@ -611,7 +615,7 @@ merged.lua = 以 new.lua 為基礎完成 zh-tw 合併的結果
 }
 ```
 
-target units 包含新增 Key、英文／placeholder／lookup／markup 改變、上游新增/移除/改變 `zh-tw`，以及本輪實際調整繁中的 Key；其餘來源與既有繁中均未變的 Key 以 `unchanged_key_count` 彙總，不逐筆寫入。每個 target unit 保存 key、狀態、結果與簡短原因即可；英文全文、繁中全文與一般翻譯推理留在 loc diff，不重複寫入 artifact。
+target units 只包含新增 Key，以及英文原文、placeholder、lookup、markup 或函式結構有語意相關變動的既有 Key。上游只新增、移除或改變 `zh-tw`，但來源原文與執行結構未變時，不得納入 target set，也不得產生繁中 diff；既有可靠 `zh-tw` 從基準版本完整保留。其餘來源未變的 Key 以 `unchanged_key_count` 彙總，不逐筆寫入。每個 target unit 保存 key、狀態、結果與簡短原因即可；英文全文、繁中全文與一般翻譯推理留在 loc diff，不重複寫入 artifact。
 
 ### 10.2 合併工具與結構 self-test
 
@@ -641,21 +645,22 @@ self-test 驗證輸出可解析、非 `zh-tw` 語意不變，且 `zh-tw` 位於�
 ### 10.3 逐 unit 合併與判定
 
 1. 將 `new.lua` 完整複製為 `merged.lua`。
-2. 以 localization key 為單位比較 `old`、`new` 與 `merged`，先建立 target set，再決定 stage：
-   - `FIRST_TRANSLATION`：舊版與新版都沒有可用 active `zh-tw`，或可見內容只有空值、英文原文複製、不可用占位文字；尚無可用繁中的新 Key 也屬於此 stage。
-   - `ZH_TW_REVISION`：舊版或新版已有可正常顯示且語意完整的 active `zh-tw`。新版移除 `zh-tw`、但舊版仍有可靠翻譯時也使用此 stage，並以舊版繁中作為主要審閱文本。
+2. 以 localization key 為單位由 AI 分別閱讀 `old`、`new` 與實際引用情境，先只依來源變動建立 target set，再決定 stage；指令或 diff 輸出只能協助定位，不能代替語意判讀：
+   - `FIRST_TRANSLATION`：新版新增 Key，且沒有可用 active `zh-tw`，或可見內容只有空值、英文原文複製、不可用占位文字。
+   - `ZH_TW_REVISION`：新版新增 Key 且已有可用 `zh-tw`，或既有 Key 的來源已改變而舊版／新版仍有可用 `zh-tw`；以既有繁中作為主要審閱文本。
    - `SOURCE_DRIFT`：既有 unit 的新舊英文在動作、對象、觸發條件、範圍、數值、時間、層數、上限、冷卻、效果、限制、例外、placeholder 或函式結構出現機制級差異。
    - 上游刪除的 Key：`merged.lua` 維持新版的 Key 集合，在來源差異摘要記錄移除，逐 unit decisions 聚焦於新版仍存在的內容。
+   - 既有 Key 的來源未變：不屬於 target unit；若基準版本有可靠 `zh-tw`，完整保留並彙總為 unchanged。若缺少或僅有不可用 `zh-tw`，本輪仍不得補譯，另記為獨立翻譯工作的候選。
 3. 依 stage 使用來源順位：
    - `FIRST_TRANSLATION`：新版英文機制與完整語意 → 正式詞彙表 → 其他語系的輔助語境 → 自然臺灣繁中。實際寫入的動作、條件、數值與例外都要能回溯至英文或已核准資料；其他語系獨有的機制資訊只記為來源疑點，繁中維持英文可驗證範圍。
-   - `ZH_TW_REVISION`：既有繁中主文 → 新版英文機制核對 → 俄文（存在時）的敘述方式參考 → 正式詞彙表與既有 Review 決策。內容已自然、完整且正確時使用 `KEEP`，只在有可證明改善時使用 `CHANGE`。
+   - `ZH_TW_REVISION`：只有 target eligibility 已由「新版新增」或「來源改變」建立後，才以既有繁中主文 → 新版英文機制核對 → 俄文（存在時）的敘述方式參考 → 正式詞彙表與既有 Review 決策進行判定。來源未變時不得僅因品質改善使用 `CHANGE`。
    - `SOURCE_DRIFT`：先比對舊／新英文、上游差異與可用遊戲資料，以確認後的最新英文機制更新繁中；俄文與其他尚未同步語系只作舊版或輔助參考。來源版本仍有衝突時使用 `BLOCKED:SOURCE_CONFLICT`。
-   - Key 仍存在、英文及其執行結構未變，且舊版有可靠 `zh-tw`：預設把舊版 `zh-tw` 完整保留到 merged，結果記為 `KEEP`；只有適用規則能證明品質改善時才記為 `CHANGE`。
-   - 新版自行新增或修改 `zh-tw`：將新版、舊版、英文、正式詞彙與既有 Review 決策一起比較，再依證據決定 `KEEP` 或 `CHANGE`，不因來源是上游而直接覆蓋已維護的繁中。
+   - Key 仍存在、英文及其執行結構未變，且舊版有可靠 `zh-tw`：無條件把舊版 `zh-tw` 完整保留到 merged，彙總為 unchanged；不得因適用規則、AI 潤飾、上游繁中或 Review 建議改為 `CHANGE`。
+   - 新版自行新增或修改 `zh-tw`，但英文及其執行結構未變：忽略該上游繁中變動並保留舊版 `zh-tw`。只有 Key 新增或來源改變時，才將新版繁中納入 target unit 的 AI 判讀。
 4. 詞彙表採查詢式比對：忽略大小寫、將彎引號與直引號視為相同、將缺少撇號的所有格視為同詞，並允許完整詞條出現在較長 UI 文字中。命中正式詞條時使用指定譯名；合理候選尚未收錄時寫入 artifact 的 `term_candidates`，而不是直接修改 `Referneces/Translation.md`。
 5. 每個 unit 使用固定結果：
    - `ADD`：依首次翻譯規則建立可用 active `zh-tw` 或必要繁中 lookup 定義。
-   - `CHANGE`：修正可證明的語意、資訊、術語、結構或臺灣繁中可讀性問題，並使用 `MISSING_INFO`、`WRONG_MEANING`、`UNNATURAL`、`TERMINOLOGY`、`GRAMMAR`、`PUNCTUATION`、`SCRIPT_VARIANT`、`DISPLAY_CLARITY`、`LOOKUP_MISSING`、`LOOKUP_MISMATCH`、`PLACEHOLDER_MISMATCH`、`REVIEW_REGRESSION` 或 `SOURCE_DRIFT` 等 reason code。
+   - `CHANGE`：只可用於新版新增或來源改變的 target unit，修正可證明的語意、資訊、術語、結構或臺灣繁中可讀性問題，並使用 `MISSING_INFO`、`WRONG_MEANING`、`UNNATURAL`、`TERMINOLOGY`、`GRAMMAR`、`PUNCTUATION`、`SCRIPT_VARIANT`、`DISPLAY_CLARITY`、`LOOKUP_MISSING`、`LOOKUP_MISMATCH`、`PLACEHOLDER_MISMATCH`、`REVIEW_REGRESSION` 或 `SOURCE_DRIFT` 等 reason code。
    - `KEEP`：現有繁中已正確、完整、自然且符合規則。
    - `SKIP`：官方 fallback、純符號、純數字、純 placeholder 或其他明確無語意項目依原結構保留。
    - `BLOCKED`：來源、詞彙、結構或授權不足以可靠判定。英文缺失／空白使用 `BLOCKED:SOURCE_MISSING`；英文與 placeholder、程式資料或其他來源出現機制級衝突使用 `BLOCKED:SOURCE_CONFLICT`。先記錄該 unit 並繼續處理其他 key；完成 Gate 前仍未解決的有效文字 `BLOCKED` 依第 5 節請使用者決定。
@@ -684,7 +689,7 @@ self-test 驗證輸出可解析、非 `zh-tw` 語意不變，且 `zh-tw` 位於�
    - `highlight()`、`cf()`、`CKWord`、`CNumb`、`CPhrs`、`CNote` 等會影響執行、lookup 或顯示結構的 helper 核對數量、結構、語意鍵與著色範圍。
    - 英文 lookup 基底鍵在繁中使用對應語系鍵，例如 `Burning_rgb` 對應 `Burning_rgb_tw`；每個新增繁中 lookup 定義都有 active 使用位置、可追溯來源與一致的色彩分類。
    - `Localize()` 可在 `en` 中取得遊戲內文字，而 `zh-tw` 可使用譯後 literal；占位符檢查聚焦在兩語系都需要保留的執行期結構，將 `Localize()` 視為語系實作差異。
-11. 原文未變且符合規則的既有 `zh-tw` 記為 `KEEP`。Review 只提出詞彙風格統一、而原文與語意均維持既有內容時，記錄為 optional 並維持本次 diff 範圍；若 Review 與 `Referneces/Translation.md` 不一致，以詞彙表、適用規則與實際遊戲語意完成判定，回覆依據後解決。
+11. 原文未變的既有 `zh-tw` 一律完整保留，並納入 `unchanged_key_count` 彙總；即使能證明既有翻譯存在用詞、標點、語序、自然度或其他品質問題也不得在 `source_sync` 修改。Review 對這類內容的建議記錄為 optional，回覆此穩定邊界後解決；需要修正時另走獨立翻譯排程或取得使用者明確授權。
 
 全部 target units 完成後，原子寫入 `localization-decisions.json`，重新計算 scope 與結果計數，並把 `merged.lua` 的 size/SHA-256 寫入 `localization-sources.json`。回讀兩份 JSON、逐項核對 target key 集合與實際 diff 後，才進入安裝。
 
@@ -1074,6 +1079,7 @@ pullRequest {
 - `unclassified_missing_zh_tw`、unresolved active-text `BLOCKED`、duplicate `zh-tw`、empty active `zh-tw`、direct-depth errors、separator errors、non-`zh-tw` semantic differences、placeholder multiset mismatches、lookup failures 與必要 marker mismatches 全部為零；官方 fallback 與無語意 unit 以 `SKIP` 明確分類。
 - `validator-self-test.json` 顯示所有 multiline、separator、encoding 與 round-trip fixtures 通過。
 - `localization-decisions.json` 記錄 `source_sync`、基準 commit、規則檔 SHA-256、適用專案規則、scope 計數，以及每個 target unit 的 stage/result/reason；target set 與 old/new/merged 實際差異一致。
+- target set 只包含新增 Key 或來源原文／執行結構改變的 Key；來源未變的既有 `zh-tw` 與 README 中文功能摘要均未因潤飾、風格、上游繁中或 Review 建議產生 diff。
 - 所有新增、原文改變、`SOURCE_DRIFT` 或 lookup 變動的 key 已搜尋完整新版 MOD 的引用情境。
 - 詞彙表命中項目使用指定譯名；候選詞留在 artifact，工作文件維持於 MOD PR 之外。
 - `merged.lua` 保留 `new.lua` 的 encoding、BOM 與 newline。
