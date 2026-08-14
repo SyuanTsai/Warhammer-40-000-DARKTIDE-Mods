@@ -2,3 +2,6 @@
 Darktide Translation Workspace/local_repo_paths.ps1
 AI Auto Update/
 .hash/*.pending.hash
+.agents
+.codex
+AGENTS.md
