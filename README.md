@@ -478,10 +478,10 @@
 
 ### [Clear Smoke](https://www.nexusmods.com/warhammer40kdarktide/mods/517)
     煙霧輔助
-- MOD 網站最後更新日期：Last updated 21 November 2025, 7:21AM
-- MOD 版本：1.2
-- MOD 檔案名稱：clear_smoke-517-1-2-1763680914
-- 手動維護最後下載日期：2025-12-06
+- MOD 網站最後更新日期：Last updated 24 July 2026, 8:41PM
+- MOD 版本：1.5
+- MOD 檔案名稱：clear_smoke 517 1.5 2026-07-24T12-41Z AVBg7VNZu.zip
+- 手動維護最後下載日期：2026-08-15
 - Use Google driver.
 
 ### [Quick Level Mastery](https://www.nexusmods.com/warhammer40kdarktide/mods/395)
