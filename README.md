@@ -528,10 +528,10 @@
 
 ### [BrokerAutoStim](https://www.nexusmods.com/warhammer40kdarktide/mods/655)
     顯示隊伍擊殺資訊
-- MOD 網站最後更新日期：Last updated 22 December 2025, 8:28AM
-- MOD 版本：2.5
-- MOD 檔案名稱：BrokerAutoStim-655-2-5-1766363294
-- 手動維護最後下載日期：2026-01-01
+- MOD 網站最後更新日期：Last updated 06 August 2026, 4:45AM
+- MOD 版本：2.10
+- MOD 檔案名稱：BrokerAutoStim 655 2.10 2026-08-05T20-45Z 5gEeTgDq1.zip
+- 手動維護最後下載日期：2026-08-13
 
 ### [TalentUI](https://www.nexusmods.com/warhammer40kdarktide/mods/683)
     天賦UI
