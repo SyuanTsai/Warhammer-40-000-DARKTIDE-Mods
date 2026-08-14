@@ -288,10 +288,10 @@
 
 ### [Chat Block](https://www.nexusmods.com/warhammer40kdarktide/mods/68)
     2對話時自動防禦
-- MOD 網站最後更新日期：Last updated 09 February 2026, 2:27AM
-- MOD 版本：2026-02-08-1
-- MOD 檔案名稱：ChatBlock-68-26-02-08-1-1770575237
-- 手動維護最後下載日期：2026-03-21
+- MOD 網站最後更新日期：Last updated 05 August 2026, 2:36PM
+- MOD 版本：26.08.05
+- MOD 檔案名稱：ChatBlock 68 26.08.05 2026-08-05T06-36Z 95Dkb5SgG.zip
+- 手動維護最後下載日期：2026-08-14
 
 ### [Inspect from Social](https://www.nexusmods.com/warhammer40kdarktide/mods/254)
     查看玩家天賦裝備
