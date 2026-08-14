@@ -8,14 +8,16 @@
 盤點來源檔
 → 即時網站核對
 → 建立獨立 worktree 與 Update/<MOD-slug> 分支
-→ 解壓縮與檢查新版
-→ 只合併 zh-tw
-→ 刪除舊 MOD 後完整安裝新版
-→ 驗證、Commit 與 Push
-→ 建立非 Draft PR
-→ Copilot Balanced Review
-→ 修正 Review 並重新 Review
-→ 等待使用者最終合併
+→ 比對正式 hash 與 README metadata
+  ├─ 已是最新 → 歸檔來源並清理，以無更新結果結束
+  └─ 需要更新 → 解壓縮與檢查新版
+     → 只合併 zh-tw
+     → 刪除舊 MOD 後完整安裝新版
+     → 驗證、Commit 與 Push
+     → 建立非 Draft PR
+     → Copilot Balanced Review
+     → 修正 Review 並重新 Review
+     → 等待使用者最終合併
 ```
 
 可同時存在多個 MOD 分支與 PR，但每個 MOD 必須使用獨立 worktree、來源檔、狀態、審查資料與鎖。
@@ -25,12 +27,31 @@
 1. 只在真正需要使用者操作或決策時詢問；一般檔案操作、驗證、翻譯、Git 與 PR Review 迴圈自主完成。
 2. 只主動維護本地化：
    - 非 loc 檔案依新版壓縮檔原樣替換。
-   - 不自行修改上游程式邏輯。
-   - Review 發現程式問題時，在 PR 記錄「不在本地化維護範圍」，不修改程式碼。
-3. 合併工具只允許寫入 `zh-tw`。`en`、`zh-cn`、`ru` 及其他語系必須來自新版壓縮檔。
-4. MOD 必須完整刪除後重新安裝，不得帶回舊版程式、設定或已被上游刪除的檔案。
+   - 上游程式邏輯維持新版壓縮檔內容。
+   - Review 發現程式問題時，在 PR 記錄「供上游後續處理」，本 PR 維持本地化範圍。
+3. 合併工具的可寫入語系為 `zh-tw`。`en`、`zh-cn`、`ru` 及其他語系完整取自新版壓縮檔。
+   - 插入位置以完整欄位表達式與 localization table depth 為依據；Lua localization 的值可能是跨行的 `string.format`、字串串接或函式呼叫。
+   - 必須先解析完整欄位表達式與 localization table depth，再替換或插入 `zh-tw`。
+4. MOD 採乾淨安裝：完整移除舊目錄後，只放入新版待安裝樹與完成合併的 loc。
 5. 每個 PR 只包含一個 MOD、README 對應區段與該 MOD 的正式 `.hash`。
-6. PR 必須為非 Draft。Codex 不合併 PR；只有使用者進行最終合併。
+6. PR 以非 Draft 建立並停在可合併狀態，由使用者執行最終合併。
+7. Review 建議先與 `Referneces/Translation.md`、原文實際使用情境及本流程維護範圍交叉查證；採用有依據的建議，其他建議則回覆判定依據並保留經查證的內容。
+
+### 2.1 單一 MOD 執行摘要
+
+| 階段 | 權威輸入 | 完成證據 | state |
+| --- | --- | --- | --- |
+| Claim | 根目錄來源檔、README/Nexus 即時資料 | archive SHA-256、精確 MOD/loc 路徑 | `claimed` |
+| 無更新判定 | `origin/main` 正式 hash、README、Nexus metadata | 全部穩定欄位一致時直接歸檔 | `already-current` |
+| Git 隔離 | 需要更新的來源、branch/PR/worktree 查詢 | 乾淨獨立 worktree 與 `base_oid` | `worktree-ready` |
+| 安裝 | old/new/merged、中文規則、manifest | 待安裝樹與 worktree 完整一致 | `installed` |
+| 發佈 | cached diff、commit、remote、PR | tree OID、remote OID、非 Draft PR | `committed` → `pushed` → `pr-open` |
+| 審查 | Balanced request、review 與 threads | 最新 HEAD 的完整 feedback 與零 unresolved | `review-requested` → `awaiting-user-merge` |
+| 歸檔 | MERGED PR、main 正式 hash | `Finished` 來源、worktree/branch 清理 | `merged` → 移除 state |
+
+每一列都先驗證完成證據，再更新 state；中斷後依第 4.3 節從外部證據補寫落後狀態。
+
+一般續跑先讀 state、上表及當前狀態對應章節，再讀該 MOD 的失敗證據或 artifacts；流程檔 Git 版本、schema、規則 SHA 或現場證據不一致時才重新做全文審查。這讓日常執行維持精簡，同時保留完整規則作為異常處理依據。
 
 ## 3. 目錄與隔離模型
 
@@ -43,6 +64,8 @@ AI Auto Update/
 ├─ <待處理壓縮檔>
 ├─ In Progress/
 │  ├─ .locks/
+│  ├─ .tools/
+│  │  └─ <tool-bundle-sha256>/
 │  └─ <MOD-slug>/
 │     ├─ state.json
 │     ├─ source/
@@ -52,12 +75,22 @@ AI Auto Update/
 │        ├─ old.lua
 │        ├─ new.lua
 │        ├─ merged.lua
-│        └─ install-manifest.txt
+│        ├─ install-manifest.txt
+│        ├─ install-manifest.previous.txt  # 只有 Review 修正時暫存上一版
+│        ├─ install-manifest.candidate.txt # 只有 Review 修正時暫存候選版
+│        ├─ localization-sources.json
+│        ├─ validator-self-test.json
+│        ├─ localization-decisions.json
+│        ├─ validation-report.json
+│        ├─ review-evidence.json
+│        └─ review-feedback.json
 └─ Finished/
    └─ <已完成壓縮檔>
 ```
 
-主工作區不用來編輯 MOD、stage 或 commit。所有 MOD 修改都在對應 worktree 內執行。
+主工作區專門負責協調工作與保存 `In Progress`；所有 MOD 編輯、stage 與 commit 都在對應 worktree 內執行。
+
+正式更新快照固定放在 repository/worktree 根目錄的 `.hash/<MOD-slug>.hash`；`AI Auto Update` 只保存來源檔與流程狀態。
 
 ### 3.2 每個 MOD 使用獨立 worktree
 
@@ -67,7 +100,7 @@ worktree 根目錄放在主 repository 之外：
 <repository-parent>/Warhammer-40-000-DARKTIDE-Mods-worktrees/<MOD-slug>/
 ```
 
-不得把 linked worktree 建立在主 repository 內。若建立外部 worktree 需要檔案系統授權，當下請求該精確目錄的寫入權限，不要改用共用工作區。
+linked worktree 固定建立在上述 repository 外部目錄。需要額外檔案系統授權時，只申請該精確 worktree 目錄的寫入權限。
 
 分支格式：
 
@@ -75,7 +108,7 @@ worktree 根目錄放在主 repository 之外：
 Update/<MOD-slug>
 ```
 
-空白及 Git 不允許的字元轉為 `-`，並使用下列指令驗證：
+slug 以精確 MOD directory 為來源：將空白與 Git ref／Windows path 的保留字元正規化為 `-`、合併連續 `-`、移除開頭/結尾的點與橫線。若結果為空，或與既有 state/branch/worktree slug 在 ordinal ignore-case 下重複，加入 `-<Nexus-ID>` 形成唯一值。slug 寫入 state 後全流程固定使用，並以指令驗證 branch：
 
 ```text
 git check-ref-format --branch Update/<MOD-slug>
@@ -84,15 +117,15 @@ git check-ref-format --branch Update/<MOD-slug>
 ### 3.3 並行不變條件
 
 - 一個 MOD 只能對應一個 branch、worktree、state 與進行中來源檔。
-- 每個 worker 只使用 `git -C <worktree>` 操作自己的 worktree，不依賴目前 shell 所在分支。
-- 不得在 worktree 之間複製未 commit 的檔案。
+- 每個 worker 都以 `git -C <worktree>` 精確操作自己的 worktree，執行結果與目前 shell 所在分支彼此獨立。
+- worktree 之間只透過已 commit 的 Git revision，或具有 SHA-256／manifest 的 `In Progress` artifact 交換資料。
 - 多個 PR 可以同時開啟、Review 或等待使用者合併。
-- 同一個 PR 在任一時間只允許一個 worker 寫入。
-- 若其他 PR 合併後使當前 PR 發生衝突，只在當前 worktree 合併最新 `origin/main`；不 force-push。合併後更新 `base_oid`，並重跑驗證與 Balanced Review。
+- 同一個 PR 在任一時間由 lock 指定的唯一 worker 持有寫入權。
+- 若其他 PR 合併後使當前 PR 發生衝突，先比較舊 `base_oid..origin/main` 是否觸及本 MOD、README 對應區段或正式 hash。只影響其他路徑時，在當前 worktree 合併最新 `origin/main`，更新 `base_oid` 並重跑驗證；若觸及本 MOD allowlist，將 `origin/main` 的最新 MOD/README/hash 視為新基準，重新擷取 old、重跑中文合併、乾淨安裝與全部 Gate。兩種情況都以一般 push 更新分支，並對新 HEAD 重新要求 Balanced Review。
 
 ### 3.4 啟用前一次性基礎檢查
 
-此流程檔、`.gitignore` 與 `.gitattributes` 必須先由獨立的流程基礎 commit/PR 合併到 `main`，不得混入任一 MOD PR。
+此流程檔、`.gitignore` 與 `.gitattributes` 先由獨立的流程基礎 commit/PR 合併到 `main`；MOD PR 維持單一 MOD 的 allowlist 範圍。
 
 `.gitignore`：
 
@@ -101,7 +134,7 @@ AI Auto Update/
 .hash/*.pending.hash
 ```
 
-第一條防止來源壓縮檔、state、lock 與 review artifacts 被誤加入 Git；第二條只忽略 pending hash，不影響 `.hash/<MOD-slug>.hash` 正式追蹤。
+第一條將來源壓縮檔、state、lock 與 review artifacts 隔離在 Git 追蹤範圍外；第二條只隔離 pending hash，讓 `.hash/<MOD-slug>.hash` 維持正式追蹤。
 
 `.gitattributes`：
 
@@ -119,9 +152,9 @@ AI Auto Update/
 
 - `AI Auto Update/<test-file>` 會被 Git ignore。
 - `.hash/test.pending.hash` 會被 Git ignore。
-- `.hash/test.hash` 不會被 Git ignore。
+- `.hash/test.hash` 維持 Git 可追蹤狀態。
 - `git check-attr eol -- .hash/test.hash .hash/test.pending.hash` 兩者都回報 `eol: lf`。
-- 主工作區沒有未提交的流程文件、`.gitignore` 或 `.gitattributes` 變更。
+- 主工作區的流程文件、`.gitignore` 與 `.gitattributes` 已提交，`git status --porcelain` 為空。
 
 ## 4. 鎖與狀態
 
@@ -136,10 +169,10 @@ AI Auto Update/In Progress/.locks/<MOD-slug>.lock/
 
 `owner.json` 記錄 worker/task ID、worktree、branch、取得時間與最後 heartbeat。
 
-- 建立 lock directory 失敗代表另一個 worker 已取得該 MOD；跳過該 MOD，繼續其他 MOD。
+- lock directory 已存在代表另一個 worker 持有該 MOD；目前 worker 保留現況並繼續其他 MOD。
 - 每個會寫入檔案、Git 或 GitHub 的主要步驟前更新 heartbeat。
 - 等待 Review 或使用者合併時釋放鎖，狀態仍保留；繼續處理前重新取得鎖。
-- 鎖超過 30 分鐘沒有 heartbeat 時，先檢查 worktree、Git process 與 task 是否仍在執行。無法證明鎖已失效時，不自行刪除；跳過該 MOD 並處理其他 MOD。
+- 鎖超過 30 分鐘沒有 heartbeat 時，先檢查 worktree、Git process 與 task。只有證據確認原 worker 已結束，才接管並重建該精確鎖；其餘情況保留鎖並處理其他 MOD。
 
 ### 4.2 `state.json`
 
@@ -147,23 +180,49 @@ AI Auto Update/In Progress/.locks/<MOD-slug>.lock/
 
 ```json
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "mod": "<MOD-name>",
   "mod_slug": "<MOD-slug>",
+  "repo_mod_directory": "<exact-directory-name>",
+  "readme_heading": "<exact-README-heading>",
+  "mod_relative_path": "Warhammer 40,000 DARKTIDE/mods/<exact-directory-name>",
+  "old_localization_relative_path": "<path-relative-to-MOD-root>",
+  "new_localization_relative_path": null,
   "nexus_id": "<Nexus-ID>",
+  "nexus_url": "<Nexus-MOD-URL>",
+  "nexus_last_updated_raw": "<verbatim-page-value>",
+  "nexus_page_version": "<verbatim-page-version>",
+  "main_file_version": "<verbatim-main-file-version>",
+  "main_file_uploaded_at_raw": "<verbatim-files-page-value>",
+  "main_file_uploaded_at_utc": "<UTC ISO-8601>",
+  "nexus_checked_at": "<ISO-8601 with timezone>",
+  "reference_sources": [],
+  "maintenance_date": "<YYYY-MM-DD Asia/Taipei>",
+  "tool_bundle_sha256": null,
+  "validator_fixture_version": null,
   "branch": "Update/<MOD-slug>",
   "worktree_path": "<absolute-path>",
-  "base_oid": "<origin/main-oid>",
+  "base_oid": null,
   "archive_filename": "<source-archive>",
   "archive_path": "<absolute-current-path>",
   "archive_size": 0,
   "archive_sha256": "<sha256>",
+  "archive_format": "zip|rar|7z",
+  "archive_last_write_time_utc": "<UTC ISO-8601>",
   "pr_number": null,
   "pr_url": null,
   "head_oid": null,
   "review_requested_oid": null,
   "reviewed_oid": null,
+  "review_effort": null,
+  "review_requested_at": null,
+  "review_completed_at": null,
+  "merge_commit_oid": null,
+  "merged_at": null,
+  "archived_branch_oid": null,
+  "branch_normalized_at": null,
   "status": "claimed",
+  "resume_status": null,
   "last_error": null,
   "updated_at": "<ISO-8601 with timezone>"
 }
@@ -174,8 +233,10 @@ AI Auto Update/In Progress/.locks/<MOD-slug>.lock/
 ```text
 claimed
 worktree-ready
+already-current
 installed
 committed
+pushed
 pr-open
 review-requested
 review-changes
@@ -185,7 +246,52 @@ closed-unmerged
 failed
 ```
 
-每次繼續工作前，必須核對 state 的 MOD、分支、worktree、壓縮檔名、SHA-256、PR 與 Git HEAD。核對失敗時只停止該 MOD，不影響其他 MOD。
+正常狀態路徑為：
+
+```text
+claimed
+├─ 來源與已合併版本完全相同 → already-current → 歸檔來源並清理
+└─ 需要更新 → worktree-ready
+   → installed
+   → committed
+   → pushed
+   → pr-open
+   → review-requested
+     ├─ feedback 分類完成且 HEAD 相同 → awaiting-user-merge → merged
+     └─ HEAD 需要更新 → review-changes → review-requested
+```
+
+- `committed` 表示本機 commit 已建立，`head_oid` 等於本機 HEAD。
+- `pushed` 表示 push 已成功，且遠端 branch OID 等於本機 HEAD。
+- `already-current` 表示來源檔核心識別、Nexus／README metadata 與 `origin/main` 的正式 hash 已一致；此結果執行來源歸檔與乾淨工作環境清理，並以無變更結果結束。
+- Review feedback 的分析、修正、commit 與 push 都使用 `review-changes`；確認新 HEAD 已送出 Balanced Review 後回到 `review-requested`。
+- `closed-unmerged` 與 `failed` 是可恢復的側向狀態。進入任一側向狀態時，`resume_status` 保存最近一次成功狀態；`failed` 另以 `last_error` 保存 `stage`、`message`、`head_oid` 與 `at`。成功續跑後清空 `resume_status` 與 `last_error`。
+- 狀態細節記錄在既有欄位、`last_error` 或 review artifacts，`status` 維持使用上述固定集合。
+- `review_effort` 在送審時固定為 `balanced`；`review_requested_at` 與 `review_completed_at` 使用含時區的 ISO-8601。
+
+既有 schema version 1／2 state 將新增欄位視為 `null`。先以 state、branch、worktree、archive SHA-256、Git tree 中唯一 MOD 目錄與 PR（若已建立）完成唯一對應，再補齊精確 MOD/loc 路徑並從 Nexus 即時頁面補齊網站欄位。`awaiting-user-merge` 的 Review 欄位另由 PR timeline、review `submittedAt`／`commit.oid` 與 Browser Balanced 證據重建；證據完整時原子升級為 version 3，證據仍待補齊時先回到 `review-changes` 重新驗證與送審。升級只新增可由權威來源唯一重建的資料，原始 state 先保留備份到同一 MOD 的 review artifacts，直到新版 state 通過解析與對帳。
+
+legacy artifacts 的來源證據可重新建立：`old.lua` 與 `state.base_oid:<old-loc-path>` 比對；archive 重新解壓到唯一暫存目錄後，將原始 loc 與 `new.lua` 比對；`merged.lua` 與 PR HEAD 的正式 loc 比對。三者一致後建立 `localization-sources.json`，再以目前規則重跑 decisions、validator 與 Codex Review。既有 commit 可用 `validation_basis=legacy-head-reconstruction`，以 `HEAD^{tree}`、`git show` path allowlist 與重跑結果建立 `validation-report.json`；新流程一般使用 `validation_basis=cached-tree`。重建結果使 HEAD 改變時重新 commit/push/Balanced Review，HEAD 維持相同且既有 Balanced 證據完整時可沿用該 Review。
+
+每次繼續工作前，核對 state 的 MOD、分支、worktree、壓縮檔名、SHA-256、PR 與 Git HEAD。資料一致時續跑；資料尚未一致時保留該 MOD 現況並處理其他 MOD。
+
+### 4.3 中斷後狀態對帳
+
+Git commit、push、PR 建立、Browser 送審與檔案搬移無法和 `state.json` 形成單一交易。續跑時先讀取外部證據，再補寫落後的 state：
+
+| state 顯示 | 權威證據 | 對帳結果 |
+| --- | --- | --- |
+| `claimed`，archive 仍可能在根目錄或 `source/` | 兩個精確位置的 size／SHA-256 | 唯一相符檔案成為 `archive_path`；若兩處均相同，保留 `source/` 並清理根目錄重複檔 |
+| `claimed`，worktree 已存在 | state 的絕對路徑、branch、HEAD、`origin/main` 建立基準與乾淨狀態 | 證據完全一致時補寫 `base_oid` 並轉為 `worktree-ready` |
+| `worktree-ready`，正式 MOD 樹可能正在切換 | `localization-sources.json`、install manifest、worktree 完整樹與精確目標路徑 | manifest 與所有 SHA-256 一致時轉為 `installed`；目標缺少或不完整時依第 11 節精確還原 worktree，再從已驗證 artifacts 重新安裝 |
+| `already-current`，來源尚未歸檔或 state 尚未清理 | 正式 hash、README/Nexus metadata 與 archive SHA-256 | 只完成第 8.2 節尚未完成的歸檔與清理 |
+| `installed`，但 HEAD 已前進 | `git show HEAD` 的 parent、訊息、日期與 path allowlist；正式 hash 等於來源 SHA-256 | 證據完整時補寫 `head_oid` 並轉為 `committed` |
+| `committed` | 遠端 `Update/<MOD-slug>` OID 等於本機 HEAD | 轉為 `pushed` |
+| `pushed` | 唯一 OPEN PR 的 base/head 與 branch OID 相符 | 補寫 PR number/URL 並轉為 `pr-open` |
+| `pr-open` 或 `review-changes` | 同一 `review_requested_oid` 的 balanced request event 已出現 | 補寫 `review-evidence.json` 並轉為 `review-requested` |
+| `merged`，archive 可能在 `source/` 或 `Finished/` | 兩個精確位置的 SHA-256 與已合併正式 hash | 補寫正確 `archive_path`，再完成其餘歸檔 |
+
+每列只有在權威證據唯一且完整時才自動前移 state。證據呈現多個可能結果、使本 MOD 無法安全續作時，將目前成功狀態寫入 `resume_status`、差異寫入 `last_error`，再設為 `failed`；現場完整保留，其他 MOD 照常進行。
 
 ## 5. 使用者參與界線
 
@@ -193,28 +299,28 @@ failed
 
 1. Nexus 或 GitHub 需要登入、OTP 或 CAPTCHA。
 2. Nexus 最終下載按鈕需由使用者操作。
-3. 多個檔案或 Nexus 頁面都可能配對，無法可靠決定正確來源。
-4. 翻譯涉及無法由原文、上下文或 `Referneces/Translation.md` 決定的含義。
+3. 多個檔案或 Nexus 頁面都可能配對，需要使用者選定唯一來源。
+4. 原文、上下文與 `Referneces/Translation.md` 仍提供多種合理翻譯，需要使用者決定語意。
 5. PR 被關閉但未合併，需要決定重新開啟或放棄。
 6. 需要使用者最終合併 PR。
 7. 需要擴大檔案系統或帳號權限。
 
-除上述情況外，不要因一般步驟再請使用者確認。
+其餘一般步驟由流程自主完成並以驗證結果留下可追蹤證據。
 
 ## 6. 協調器：盤點、續跑與確定性選檔
 
 ### 6.1 先繼續已有狀態
 
 1. 讀取 `AI Auto Update/In Progress/*/state.json`。
-2. 對 `claimed` 至 `review-changes` 的 MOD，取得鎖後從對應步驟繼續。
+2. 對 `claimed`、`worktree-ready`、`already-current`、`installed`、`committed`、`pushed`、`pr-open`、`review-requested` 與 `review-changes`，取得鎖後從該狀態對應的下一個未完成步驟繼續；`already-current` 只續作第 8.2 節的歸檔與清理。
 3. 對 `awaiting-user-merge` 的 MOD，查詢 PR：
    - 仍 OPEN 且 PR `headRefOid` 等於 `reviewed_oid`：保留並釋放鎖，可處理其他 MOD。
-   - 仍 OPEN 但 PR `headRefOid` 不等於 `reviewed_oid`：代表 Review 後又有新 commit；將狀態改為 `review-changes`，重新驗證並送出 Balanced Review。
+   - 仍 OPEN 但 PR `headRefOid` 不等於 `reviewed_oid`：代表 Review 後又有新 commit；將 `reviewed_oid`／`review_completed_at` 清為 `null`、狀態改為 `review-changes`，重新驗證並送出 Balanced Review。
    - MERGED：執行第 15 節歸檔。
    - CLOSED 且未合併：設為 `closed-unmerged`，只詢問該 PR 要重新開啟或放棄；其他 MOD 繼續。
-4. `merged` 代表 PR 已合併但本機歸檔可能尚未完成；取得鎖後從第 15 節的 state/archive/worktree 現況繼續，不重複覆寫或刪除。
-5. `closed-unmerged` 保留現狀並等待使用者對該 PR 的決定；不阻擋其他 MOD。
-6. `failed` 不阻擋其他 MOD；保留 `last_error` 與所有診斷資料。
+4. `merged` 代表 PR 已合併而本機歸檔仍可續作；取得鎖後依第 15 節核對 state/archive/worktree 現況，完成尚未完成的歸檔動作。
+5. `closed-unmerged` 保留現狀並等待使用者對該 PR 的決定；其他 MOD 可照常處理。
+6. `failed` 保留 `resume_status`、`last_error` 與所有診斷資料；可自主修復時從 `resume_status` 續跑，並讓其他 MOD 照常進行。
 
 ### 6.2 再盤點新來源
 
@@ -225,9 +331,11 @@ failed
 1. 完整檔名以 ordinal ignore-case 升冪。
 2. 忽略大小寫後同名時，以完整檔名 ordinal 升冪。
 
-選取第一個尚未被 state 或 lock 佔用的檔案。需要並行時，依同一排序繼續選取不同 MOD；不得讓兩個 worker 處理同一 MOD。
+選取第一個尚未被 state 或 lock 佔用的檔案。需要並行時，依同一排序繼續選取不同 MOD，並以 lock 保證每個 MOD 只由一個 worker 處理。
 
-### 6.3 沒有來源檔時
+### 6.3 需要取得來源檔時
+
+只有第 6.1 節沒有可續跑工作，且第 6.2 節找不到任何合格來源壓縮檔時，才啟動本節；根目錄已有候選檔時直接進入第 7 節，不另外下載。
 
 使用 Browser 技能開啟：
 
@@ -235,28 +343,29 @@ failed
 https://www.nexusmods.com/users/myaccount?tab=download+history
 ```
 
-- 需要登入時，保留頁籤並請使用者自行登入。Codex 不讀取或代填帳號、密碼、OTP、cookie、local storage 或密碼管理器。
+- 需要登入時，保留頁籤並由使用者在瀏覽器中自行輸入登入資訊；Codex 僅等待登入完成，接著從公開可見的頁面狀態繼續流程。
 - 使用者在 Download history 選擇 MOD 並完成最終下載。
 - 使用者回覆下載完成後，只檢查瀏覽器預設下載目錄或使用者指定目錄。
 - 只接受本輪開始後新增或修改，且檔案大小與修改時間已穩定的完整壓縮檔。
-- 依 MOD 名稱、Nexus ID、版本與完整檔名識別。只有無法唯一配對時才請使用者指定。
-- 搬移到 `AI Auto Update/<完整原始檔名>` 前後都比較檔案大小與 SHA-256；同名且雜湊不同時不覆寫。
+- 依 MOD 名稱、Nexus ID、版本與完整檔名識別；得到唯一配對時自主搬移，存在多個候選時請使用者指定。
+- 搬移到 `AI Auto Update/<完整原始檔名>` 前後都比較檔案大小與 SHA-256；同名且雜湊相同時沿用既有檔，雜湊不同時保留兩者並請使用者決定檔名。
 
 ## 7. 候選檔識別、Nexus 即時核對與取得鎖
 
-1. 從檔名、README 與既有 MOD 目錄解析 MOD 名稱、slug 與 Nexus ID。
+1. 從檔名、README 與既有 MOD 目錄解析 MOD 名稱、slug、Nexus ID、README heading、精確 MOD 目錄及現有 `_localization.lua` 相對路徑；所有路徑以 repository/worktree root 為基準正規化後寫入 state。
 2. 使用 README 網址開啟 Nexus 即時頁面，核對：
    - 頁面標題與 MOD 一致。
    - Nexus ID 一致。
    - MOD 主頁 `Last updated`。
    - MOD 主頁頂端 `Version`。
    - Files 頁 Main file 的名稱、版本、上傳日期與來源壓縮檔一致。
-3. README 的日期與版本以 MOD 主頁顯示為準；`.hash` 的版本與檔名以實際 Main file 為準。兩者版本不同時，PR 同時記錄，不自行推定。
-4. 標題、ID 或 Main file 無法唯一配對，且不屬於第 16 節特例時，請使用者決定。
-5. 計算來源檔大小、LastWriteTime UTC 與 SHA-256。
-6. 建立該 MOD 的互斥鎖。
-7. 鎖定後建立 `In Progress/<MOD-slug>/source/`，將壓縮檔由根目錄搬入，並重新核對大小與 SHA-256。
-8. 建立 `state.json`，狀態為 `claimed`。從此以後，其他 worker 不再從根目錄選取該檔案。
+3. 同時保存 Nexus 畫面的原始日期文字與正規化 UTC。來源檔名含 `Z` 時，以 UTC 與 `main_file_uploaded_at_utc` 比較；README 逐字保留網站原始顯示，版本判定則以正規化後的時間為準。
+4. README 的日期與版本以 MOD 主頁顯示為準；`.hash` 的版本與檔名以實際 Main file 為準。兩者版本不同時，PR 同時列出兩個網站欄位及來源位置，由可追溯資料表達差異。
+5. 標題、ID 與 Main file 形成唯一配對時繼續；存在多個合理配對且不屬於第 16 節特例時，請使用者決定。
+6. 計算來源檔大小、LastWriteTime UTC 與 SHA-256，並由檔案 signature 判定 `archive_format`。
+7. 建立該 MOD 的互斥鎖。
+8. 建立 `In Progress/<MOD-slug>/source/` 與 `state.json`；寫入 `repo_mod_directory`、`readme_heading`、`mod_relative_path`、`old_localization_relative_path`、網站核對時間，以及 claim 當下 `Asia/Taipei` 日期的 `maintenance_date`。初始 `archive_path` 指向 `AI Auto Update` 根目錄中的來源檔，狀態為 `claimed`。state 落盤後，該檔案即由此 MOD claim。
+9. 將壓縮檔搬入 `source/`，重新核對大小與 SHA-256，再原子更新 `state.archive_path`。中途中斷時，續跑程序依 state 同時檢查舊、新兩個精確位置，以 SHA-256 判定已完成的步驟。
 
 ## 8. Git 基準、獨立 worktree 與 `.hash`
 
@@ -266,32 +375,59 @@ https://www.nexusmods.com/users/myaccount?tab=download+history
 git fetch origin
 ```
 
-核對本機分支、遠端同名分支、已登記 worktree 與同名 PR：
+以完整 fetch 取得一致的遠端狀態；成功後再核對 `origin/main`、目標 branch 與 PR。登入、權限、網路或遠端資料尚未同步時，保存錯誤證據並依第 17 節續跑。
+
+進入無更新判定前，先用 `git worktree list --porcelain` 與 `gh pr list --state open --head Update/<MOD-slug>` 檢查是否有遺失 state 的進行中工作。存在 OPEN PR 或已登記 worktree 時，優先依第 8.3 節的 PR/branch/artifact 證據重建並續跑；兩者都不存在時才進入第 8.2 節。
+
+### 8.2 建立 worktree 前判定是否已是最新
+
+直接從 `origin/main` 讀取 `.hash/<MOD-slug>.hash` 與 README 對應區段；主工作區維持在 `main`，branch/worktree 留待確定需要更新後建立。hash 欄位格式見第 8.5 節；既有 hash 的 `last_write_time_utc` 視為 `archive_last_write_time_utc` 的舊名稱，新增 metadata 欄位缺少時維持向後相容，等下一次實際更新再補齊。
+
+先核對核心來源識別 `mod`、`repo_directory`（舊 hash 可由 MOD 路徑補證）、`nexus_id`、`version`、`filename`、`size_bytes` 與 `sha256`，再依一般映射或第 16 節特例映射，核對 README 的網址、主頁日期、主頁版本、Patch 版本（若適用）與檔名是否等於本輪 Nexus 即時資料。既有 hash 已包含 `nexus_url`、`nexus_last_updated`、`nexus_page_version` 或 `main_file_uploaded_at_utc` 時，這些欄位也必須與 state 一致；舊 hash 缺少新增欄位本身不構成更新。`generated_at`、`maintenance_date` 與 archive mtime 是稽核資訊，不用來判定新版：
+
+- 核心來源與 README metadata 全部一致：視為 `origin/main` 已合併的相同來源，將 state 設為 `already-current`，直接進入來源歸檔與 state 清理。
+- 任一核心來源或 README metadata 不同：進入第 8.3 節建立隔離 worktree；PR 以實際差異呈現檔案更新或 metadata 同步。
+
+`already-current` 的清理順序：
+
+1. 將來源搬入 `Finished`；同名檔 SHA-256 相同時沿用既有檔，不同時維持兩份原位置，將 `resume_status` 設為 `already-current`、state 設為 `failed`，再請使用者決定歸檔名稱。
+2. 核對本輪沒有建立 worktree/pending hash，既有安全 branch 與遠端維持原狀。
+3. 最後刪除該 MOD state 與空的 In Progress 目錄。任一步驟中斷時保留 `already-current` state，下一輪只續作尚未完成的清理。
+
+### 8.3 建立 worktree
+
+確認需要更新後，才核對本機分支、遠端同名分支、已登記 worktree 與同名 PR：
 
 ```text
 git branch --list Update/<MOD-slug>
 git ls-remote --heads origin refs/heads/Update/<MOD-slug>
 git worktree list --porcelain
-gh pr list --state open --head Update/<MOD-slug>
+gh pr list --state all --head Update/<MOD-slug> --limit 100 --json number,state,headRefOid,baseRefName,createdAt,mergedAt,url
 ```
 
-- 新工作：必須確認同名 branch、worktree 與 PR 都不存在。
-- 續跑：必須與 `state.json` 全部對應；不得另建分支、刪除分支、覆寫 worktree 或 force-push。
+PR 結果先限制 `baseRefName=main`、以 `createdAt` 排序並保留 number/OID，讓「最新」有唯一且可重現的定義。
+
+- 第一次使用此分支：同名 branch、worktree 與歷史 PR 均不存在時，從 `origin/main` 建立。
+- 同一 MOD 的後續執行：允許保留同名本機／遠端 branch 與歷史 `MERGED` PR。先確認目前沒有 OPEN PR、沒有 worktree 使用該 branch，且所有仍存在的本機／遠端 branch tip 都是 `origin/main` 的 ancestor；條件通過後把本機 branch 基準移到最新 `origin/main`。遠端 branch 存在時，後續新 commit 對舊遠端 tip 形成 fast-forward；遠端 branch 已在 squash／rebase 歸檔時正規化清除，則以一般 push 重新建立。
+- 最新同名 PR 為 CLOSED 且未合併時，依第 17.2 節處理。
+- 續跑：沿用 `state.json` 對應的既有 branch、worktree 與 PR，並以一般 push 延續同一工作紀錄。
 - branch 或 PR 存在但 state 遺失時，先以 PR metadata、branch HEAD、來源 SHA-256、正式/pending hash 與 review artifacts 重建狀態。只有所有資料能唯一對應時才自主重建；否則保留現狀、跳過該 MOD，只在必須重新開啟或放棄時請使用者決定。
 
-### 8.2 建立 worktree
-
-新分支：
+第一次建立分支：
 
 ```text
 git worktree add -b Update/<MOD-slug> "<worktree-path>" origin/main
 ```
 
-既有本機分支但 worktree 不存在：
+重用已由先前流程確認安全的分支：
 
 ```text
+git merge-base --is-ancestor Update/<MOD-slug> origin/main
+git branch -f Update/<MOD-slug> origin/main
 git worktree add "<worktree-path>" Update/<MOD-slug>
 ```
+
+若只有遠端 branch，先將該精確 ref fetch 到 remote-tracking ref，驗證其 tip 是 `origin/main` 的 ancestor，再使用相同 `git branch -f`／`git worktree add` 步驟。`git branch -f` 只調整未被任何 worktree 使用、且已由 MERGED PR 納入 main 的本機 branch；遠端 branch 留待本輪 commit 以 fast-forward push 更新。
 
 建立後驗證：
 
@@ -299,19 +435,19 @@ git worktree add "<worktree-path>" Update/<MOD-slug>
 - `git -C <worktree> status --porcelain` 在新工作時為空。
 - `git -C <worktree> rev-parse HEAD` 等於建立時記錄的 `origin/main` OID。
 
-通過後將 state 設為 `worktree-ready`。
+通過後將建立時核對的 `origin/main` OID 寫入 `state.base_oid`，再把 state 設為 `worktree-ready`。
 
-### 8.3 新工作與續跑的 preflight 不同
+### 8.4 新工作與續跑的 preflight 不同
 
 - 新工作：worktree 必須完全乾淨。
-- 續跑：允許且只允許下列路徑有變更：
+- 續跑：工作中變更集合使用下列 allowlist：
   - `README.md`
   - `Warhammer 40,000 DARKTIDE/mods/<MOD目錄>`
   - `.hash/<MOD-slug>.pending.hash`
   - `.hash/<MOD-slug>.hash`
-- 續跑時將實際 diff、state 與上述 allowlist 逐項核對。超出範圍只停止該 MOD，不用廣域 restore 或 clean。
+- 續跑時將實際 diff、state 與上述 allowlist 逐項核對。範圍一致時繼續；出現額外路徑時保留現場、記錄該 MOD 的差異並讓其他 MOD 繼續。
 
-### 8.4 建立該 MOD 的 pending hash
+### 8.5 建立該 MOD 的 pending hash
 
 只在 MOD 已選定且 worktree 建立後，建立：
 
@@ -323,45 +459,51 @@ git worktree add "<worktree-path>" Update/<MOD-slug>
 
 ```text
 mod=<MOD名稱>
+repo_directory=<精確 MOD 目錄名稱>
 nexus_id=<Nexus MOD ID>
+nexus_url=<Nexus MOD URL>
+nexus_last_updated=<Nexus 主頁原始顯示>
+nexus_page_version=<Nexus 主頁 Version>
 version=<Main file版本>
+main_file_uploaded_at_utc=<UTC ISO-8601>
 generated_at=<ISO-8601 Asia/Taipei>
+maintenance_date=<YYYY-MM-DD Asia/Taipei>
 timezone=Asia/Taipei
 algorithm=SHA-256
 sha256=<小寫十六進位 SHA-256>
 size_bytes=<檔案大小>
-last_write_time_utc=<UTC ISO-8601>
+archive_last_write_time_utc=<UTC ISO-8601>
 filename=<完整檔名>
 ```
 
-比較 `origin/main` 中已有的 `.hash/<MOD-slug>.hash` 時，必須同時比對 `mod`、`nexus_id`、`version`、`filename`、`size_bytes` 與 `sha256`：
+欄位以第一個 `=` 分隔，因此日期與檔名可原樣保存。第 8.2 節使用同一欄位定義與 legacy 相容規則進行無更新判定。
 
-- 全部一致：視為已合併的相同來源，不建立 PR。將壓縮檔歸檔到 `Finished`，清除本輪 worktree/state。
-- 任一不同：繼續更新。
-
-pending hash 不加入 commit。更新驗證完成後才寫入 `.hash/<MOD-slug>.hash` 並精確刪除 pending hash。
+pending hash 保留為本地工作資料；更新驗證完成後，以其內容產生納入 commit 的 `.hash/<MOD-slug>.hash`，再精確清除 pending hash。
 
 ## 9. 解壓縮、完整目錄比對與 loc 三份狀態
 
 ### 9.1 解壓縮前後驗證
 
-從 `state.archive_path` 讀取壓縮檔。解壓縮前後重新計算大小、LastWriteTime UTC 與 SHA-256，必須與 state 一致。
+從 `state.archive_path` 讀取壓縮檔。解壓縮前後重新計算大小、LastWriteTime UTC 與 SHA-256，必須與 state 一致；再以檔案 signature 確認實際格式為 state 記錄的 `zip`、`rar` 或 `7z`，副檔名只作為候選提示。
 
-解壓到 `In Progress/<MOD-slug>/staging/`，不直接解壓到 worktree 或正式 `mods`。`staging` 與 worktree 必須位於同一儲存裝置，避免安裝時變成跨磁碟複製。解壓縮前先根據 archive entries 的解壓後總大小檢查可用空間；無法滿足待安裝樹、worktree 與安全預留空間時，不開始解壓縮。然後檢查：
+先列出全部 archive entries，再解壓到唯一的 `In Progress/<MOD-slug>/staging.next-<uuid>/`。既有 `staging/` 的 extraction manifest 與本次 archive SHA-256 完全一致時可直接重用；其餘情況保留至新暫存樹驗證通過，再精確替換。開始前核對 staging 與 worktree 位於同一 volume，並以 entries 的檔案數、解壓後總大小及可用空間確認能容納待安裝樹、worktree 與安全預留量。然後檢查：
 
 - 壓縮檔可完整讀取。
-- 沒有 `..`、絕對路徑、磁碟機路徑或路徑穿越。
+- archive 未加密，所有 entry 都可由既定解壓工具讀取。
+- 每個 archive entry 正規化後都位於暫存 root 內，且使用相對路徑；drive-qualified、UNC、rooted、`..` 越界、Windows reserved device name、alternate data stream、symbolic link、hard link 與 reparse point 均列為結構不符。
 - 只有一個預期 MOD 根目錄。
 - 根目錄名稱與既有 MOD 目錄一致。
 - 有且只有一個以 `_localization.lua` 結尾的 loc 檔。
 
-任一前置條件不符時，不修改 worktree；只將該 MOD 設為 `failed` 並保留資料。
+驗證通過後，將唯一 loc 的 MOD-root 相對路徑寫入 `state.new_localization_relative_path`，再把暫存樹原子改名為 `staging/`。`staging/.extraction-manifest.json` 位於 MOD 根目錄之外，保存 archive SHA-256、entry 相對路徑、size 與解壓後 SHA-256，讓中斷續跑可判定現有 staging 是否能重用；安裝動作精確搬移唯一 MOD 根目錄，manifest 則留在 staging 管理範圍。
+
+全部前置條件通過後才進入 worktree 修改。此階段的停止點只來自來源損壞、路徑越界、壓縮結構不符、空間不足或 loc 數量不符等外部條件；此時正式 MOD 仍維持原狀。將該 MOD 設為 `failed`、把目前狀態寫入 `resume_status`，並完整保留資料供修正或續跑。
 
 ### 9.2 比對完整目錄
 
-比較 worktree 現有 MOD 與新版解壓縮目錄，列出新增、修改與上游刪除的檔案。這些差異用於 PR 摘要，不代表要修改上游程式碼。
+比較 worktree 現有 MOD 與新版解壓縮目錄，列出新增、修改與上游刪除的檔案。這些差異用於 PR 摘要；上游程式內容維持新版原貌，本流程專注維護 `zh-tw` 本地化與 metadata。
 
-已被新版移除的舊檔不得帶回。
+待安裝樹完全以新版為基準，因此自然排除新版已移除的舊檔。
 
 ### 9.3 loc 三份狀態
 
@@ -371,52 +513,210 @@ new.lua    = 新版壓縮檔的原始 loc
 merged.lua = 以 new.lua 為基礎完成 zh-tw 合併的結果
 ```
 
-三份 loc 寫入 `review-artifacts/`，不加入 Git，保留至 PR 合併。
+三份 loc 寫入由 `.gitignore` 保護的 `review-artifacts/`，作為 PR 合併前的本地驗證依據。
+
+開始合併前必須先確認三個來源路徑：
+
+- `old.lua` 存在，且 SHA-256 等於複製當下的 worktree 舊 loc。
+- `new.lua` 存在，且 SHA-256 等於 staging 新版原始 loc。
+- 輸出路徑由 `state.worktree_path` 與固定目錄模板組成，解析結果精確等於 `In Progress/<MOD-slug>/review-artifacts/merged.lua`。
+
+完成 byte-for-byte 複製與回讀後，以原子寫入建立 `review-artifacts/localization-sources.json`：
+
+```json
+{
+  "schema_version": 1,
+  "old": {
+    "relative_path": "<state.old_localization_relative_path>",
+    "size_bytes": 0,
+    "sha256": "<sha256>"
+  },
+  "new": {
+    "relative_path": "<state.new_localization_relative_path>",
+    "size_bytes": 0,
+    "sha256": "<sha256>",
+    "encoding": "<encoding>",
+    "bom": "<present|absent>",
+    "newline": "<LF|CRLF>"
+  },
+  "merged": {
+    "size_bytes": null,
+    "sha256": null
+  }
+}
+```
+
+`old`／`new` 是不可變的擷取證據；每次產生或修正 `merged.lua` 後，只更新 `merged` 的 size/SHA-256。即使安裝後移除 staging，仍可用此檔證明 `old.lua`／`new.lua` 是安裝前擷取的原始內容。
+
+`merged.lua` 必須沿用 `new.lua` 的文字編碼、BOM 與換行格式。console 輸出僅作診斷提示；正式判定以回讀檔案後的解析結果及 byte-level 編碼檢查為準。
 
 ## 10. 只合併 `zh-tw`
 
+### 10.1 中文規則路由
+
+本更新流程的整體工作模式固定為 `source_sync`。每輪以 worktree 的基準 commit 讀取下列規則，並依單一 localization unit 的實際狀態套用，而不是讓整個檔案共用單一 stage：
+
+1. `Darktide Translation Workspace/darktide_zh_tw_translation_schedule.md`
+2. `Darktide Translation Workspace/Rules/zh-tw_localization_base_rules.md`
+3. `Darktide Translation Workspace/Rules/zh-tw_initial_translation_rules.md`
+4. `Darktide Translation Workspace/Rules/zh-tw_revision_rules.md`
+5. 目標 MOD、檔案或 key scope 實際相交的專案規則；沒有時記為 `none`
+
+只查詢 `Referneces/Translation.md`、`Term Candidates.md` 與目標 MOD 相關的詞條或段落。這些工作文件在本 MOD PR 中維持原狀；新候選詞先記錄在本輪 `localization-decisions.json`，需要納入工作文件時另走 `main` 的翻譯工作文件流程。
+
+專案規則先比對 MOD 目錄、檔案路徑與 key pattern，再決定是否套用。例如 `enhanced_descriptions_zh-tw_special_rules.md` 只在其指定檔案或 key scope 與本輪唯一 `_localization.lua` 相交時加入；僅名稱相同但 scope 未相交時記為 `none`，避免把其他檔案專用規則套到本輪 loc。
+
+`Update/<MOD-slug>`、README、正式 `.hash`、非 Draft PR、Balanced Review 與合併後歸檔仍依本文件執行；翻譯排程文件中的 `Codex/Feature/...` 分支、只含 loc 的 PR 與工作文件同步規則只適用於獨立翻譯排程，不取代本更新流程。
+
+每輪把規則版本與逐 unit 的最小判定寫入 `review-artifacts/localization-decisions.json`：
+
+```json
+{
+  "schema_version": 1,
+  "mode": "source_sync",
+  "base_commit": "<state.base_oid>",
+  "rule_files": [
+    { "path": "<rule-file>", "sha256": "<sha256>" }
+  ],
+  "project_rule_files": [],
+  "scope": {
+    "added_key_count": 0,
+    "removed_key_count": 0,
+    "changed_source_key_count": 0,
+    "changed_upstream_zh_tw_key_count": 0,
+    "unchanged_key_count": 0,
+    "target_key_count": 0
+  },
+  "counts": {
+    "ADD": 0,
+    "CHANGE": 0,
+    "KEEP": 0,
+    "SKIP": 0,
+    "BLOCKED": 0
+  },
+  "term_candidates": [],
+  "units": [
+    {
+      "key": "<localization-key>",
+      "stage": "FIRST_TRANSLATION|ZH_TW_REVISION|SOURCE_DRIFT",
+      "source_status": "current|changed|missing|conflict",
+      "glossary_status": "matched|candidate|not-applicable",
+      "lookup_status": "resolved|fallback|blocked",
+      "placeholder_status": "matched|blocked",
+      "non_zh_tw_scope_status": "identical|non-functional-only|blocked",
+      "result": "ADD|CHANGE|KEEP|SKIP|BLOCKED",
+      "reason": "<short-reason-code>"
+    }
+  ]
+}
+```
+
+target units 包含新增 Key、英文／placeholder／lookup／markup 改變、上游新增/移除/改變 `zh-tw`，以及本輪實際調整繁中的 Key；其餘來源與既有繁中均未變的 Key 以 `unchanged_key_count` 彙總，不逐筆寫入。每個 target unit 保存 key、狀態、結果與簡短原因即可；英文全文、繁中全文與一般翻譯推理留在 loc diff，不重複寫入 artifact。
+
+### 10.2 合併工具與結構 self-test
+
+合併前先建立或重用內容定址的 tool bundle：
+
+```text
+AI Auto Update/In Progress/.tools/<tool-bundle-sha256>/
+```
+
+bundle 包含本輪 merger、validator、必要 parser dependency 與 fixtures。SHA-256 由相對路徑及每個檔案 bytes 依固定排序計算；先在 `.tools` 下建立唯一暫存目錄，完成 self-test 與 hash 回讀後再原子改名為 SHA 目錄。目標 SHA 目錄已存在時，逐檔驗證後直接重用。正式 SHA 目錄以唯讀方式使用；工具或 fixture 改變時建立新的 SHA 目錄，讓已開始的 MOD 繼續使用 state 記錄的原 bundle。選定 bundle 後寫入 `state.tool_bundle_sha256` 與 `state.validator_fixture_version`；兩欄必須和 `validator-self-test.json` 一致。
+
+既有 `AI Auto Update/In Progress/merge_localizations.py` 視為 legacy 輸入，只讀取其 bytes；新一輪需要合併或 Review 修正時，將它連同 validator/fixtures 封裝並通過 self-test 後再形成上述 bundle。已進入 `awaiting-user-merge` 且 HEAD 無變更的舊 state 可直接等待合併；只有重新修改 loc 時才需要建立 bundle，避免為歷史完成結果補造工具證據。
+
+合併器第一次在本輪流程使用前，先完全以 fixtures 執行 self-test，再處理正式 MOD。測試至少涵蓋：
+
+- 上游最後欄位沒有結尾逗號，需在加入 `zh-tw` 前補分隔符。
+- `zh-cn = string.format(...)` 跨多行，且參數列包含逗號與巢狀函式。
+- `en` 或 `zh-cn` 使用 `..` 串接多行字串。
+- 新版已存在 `zh-tw`、新版缺少 `zh-tw`、以及語系欄位順序不同。
+- 字串內含括號、花括號、逗號、引號、escape 與註解。
+- UTF-8 BOM／無 BOM 及 LF／CRLF round-trip。
+
+self-test 驗證輸出可解析、非 `zh-tw` 語意不變，且 `zh-tw` 位於自己的直接欄位。結果保存到 `review-artifacts/validator-self-test.json`；所有 fixture 通過後才對真正的 `old.lua`／`new.lua` 執行合併。
+
+`validator-self-test.json` 同時記錄 merger/validator SHA-256、fixture version、執行時間與各案例結果。同一流程執行期間，可重用相同程式 SHA-256 與 fixture version 的通過結果；merger、validator 或 fixture 任一內容改變時重新執行 self-test。每個 MOD 的 review artifacts 都保存本次採用的結果副本。
+
+### 10.3 逐 unit 合併與判定
+
 1. 將 `new.lua` 完整複製為 `merged.lua`。
-2. 以 localization key 為單位比較 `old`、`new` 與 `merged`：
-   - Key 仍存在且原文未變：保留既有 `zh-tw`。
-   - Key 仍存在但原文改變：依新原文調整 `zh-tw`。
-   - 新版缺少 `zh-tw`：補回可靠對應的舊翻譯。
-   - 新 Key：依 `Referneces/Translation.md` 的術語與風格翻譯。
-   - 上游刪除的 Key：不補回。
-   - 新版已有 `zh-tw`：仍與舊翻譯與術語表比較。
-3. 正向限制寫入範圍：所有新增或修改只能發生在 `['zh-tw']` 或 `["zh-tw"]` 欄位。
-4. 解析 `new` 與 `merged` 的 localization table，確認：
+2. 以 localization key 為單位比較 `old`、`new` 與 `merged`，先建立 target set，再決定 stage：
+   - `FIRST_TRANSLATION`：舊版與新版都沒有可用 active `zh-tw`，或可見內容只有空值、英文原文複製、不可用占位文字；尚無可用繁中的新 Key 也屬於此 stage。
+   - `ZH_TW_REVISION`：舊版或新版已有可正常顯示且語意完整的 active `zh-tw`。新版移除 `zh-tw`、但舊版仍有可靠翻譯時也使用此 stage，並以舊版繁中作為主要審閱文本。
+   - `SOURCE_DRIFT`：既有 unit 的新舊英文在動作、對象、觸發條件、範圍、數值、時間、層數、上限、冷卻、效果、限制、例外、placeholder 或函式結構出現機制級差異。
+   - 上游刪除的 Key：`merged.lua` 維持新版的 Key 集合，在來源差異摘要記錄移除，逐 unit decisions 聚焦於新版仍存在的內容。
+3. 依 stage 使用來源順位：
+   - `FIRST_TRANSLATION`：新版英文機制與完整語意 → 正式詞彙表 → 其他語系的輔助語境 → 自然臺灣繁中。實際寫入的動作、條件、數值與例外都要能回溯至英文或已核准資料；其他語系獨有的機制資訊只記為來源疑點，繁中維持英文可驗證範圍。
+   - `ZH_TW_REVISION`：既有繁中主文 → 新版英文機制核對 → 俄文（存在時）的敘述方式參考 → 正式詞彙表與既有 Review 決策。內容已自然、完整且正確時使用 `KEEP`，只在有可證明改善時使用 `CHANGE`。
+   - `SOURCE_DRIFT`：先比對舊／新英文、上游差異與可用遊戲資料，以確認後的最新英文機制更新繁中；俄文與其他尚未同步語系只作舊版或輔助參考。來源版本仍有衝突時使用 `BLOCKED:SOURCE_CONFLICT`。
+   - Key 仍存在、英文及其執行結構未變，且舊版有可靠 `zh-tw`：預設把舊版 `zh-tw` 完整保留到 merged，結果記為 `KEEP`；只有適用規則能證明品質改善時才記為 `CHANGE`。
+   - 新版自行新增或修改 `zh-tw`：將新版、舊版、英文、正式詞彙與既有 Review 決策一起比較，再依證據決定 `KEEP` 或 `CHANGE`，不因來源是上游而直接覆蓋已維護的繁中。
+4. 詞彙表採查詢式比對：忽略大小寫、將彎引號與直引號視為相同、將缺少撇號的所有格視為同詞，並允許完整詞條出現在較長 UI 文字中。命中正式詞條時使用指定譯名；合理候選尚未收錄時寫入 artifact 的 `term_candidates`，而不是直接修改 `Referneces/Translation.md`。
+5. 每個 unit 使用固定結果：
+   - `ADD`：依首次翻譯規則建立可用 active `zh-tw` 或必要繁中 lookup 定義。
+   - `CHANGE`：修正可證明的語意、資訊、術語、結構或臺灣繁中可讀性問題，並使用 `MISSING_INFO`、`WRONG_MEANING`、`UNNATURAL`、`TERMINOLOGY`、`GRAMMAR`、`PUNCTUATION`、`SCRIPT_VARIANT`、`DISPLAY_CLARITY`、`LOOKUP_MISSING`、`LOOKUP_MISMATCH`、`PLACEHOLDER_MISMATCH`、`REVIEW_REGRESSION` 或 `SOURCE_DRIFT` 等 reason code。
+   - `KEEP`：現有繁中已正確、完整、自然且符合規則。
+   - `SKIP`：官方 fallback、純符號、純數字、純 placeholder 或其他明確無語意項目依原結構保留。
+   - `BLOCKED`：來源、詞彙、結構或授權不足以可靠判定。英文缺失／空白使用 `BLOCKED:SOURCE_MISSING`；英文與 placeholder、程式資料或其他來源出現機制級衝突使用 `BLOCKED:SOURCE_CONFLICT`。先記錄該 unit 並繼續處理其他 key；完成 Gate 前仍未解決的有效文字 `BLOCKED` 依第 5 節請使用者決定。
+6. 對原文改變、新增、`SOURCE_DRIFT` 或 lookup 變動的 key，先在完整新版 MOD 目錄搜尋所有引用位置：
+
+   ```text
+   rg -n "<localization-key>" "<staging-MOD-root>"
+   ```
+
+   同一 key 可能同時被多個 UI 選項共用。翻譯以所有實際引用情境為範圍，並將 key 名稱與第一個呼叫位置視為輔助線索。
+7. 合併器只可使用下列結構化操作：
+   - 新版已有 `zh-tw`：只替換該欄位的完整 value expression，其他直接語系欄位維持原值。
+   - 新版缺少 `zh-tw` 且結果為 `ADD`／`CHANGE`：在該 localization block 的 closing brace 前，以直接欄位深度加入完整 `zh-tw` 欄位；`SKIP` 維持新版原結構，`BLOCKED` 保留待決狀態直到解決。
+   - 若加入前的最後一個上游欄位原本省略結尾逗號，只能在該完整欄位表達式之後補上 Lua 必要逗號。
+   - `zh-tw` 一律寫在 localization block 的直接欄位位置，位於各上游語系完整表達式之外。
+8. 正向限制寫入範圍：所有翻譯內容新增或修改只能發生在 `['zh-tw']` 或 `["zh-tw"]` 欄位，以及同一 `_localization.lua` 內已核准的繁中專用 lookup 定義。唯一允許的其他語系文字差異，是為新增直接欄位而在前一個完整上游欄位後補上的必要分隔逗號。
+9. 解析 `new` 與 `merged` 的 localization table，確認：
    - 所有非 `zh-tw` 語系的 key 集合與值完全相同。
    - 同一 localization key 最多只有一個 `zh-tw`。
-   - 欄位順序、縮排與為了 Lua 語法必要加入的逗號不視為非 `zh-tw` 語意變更。
-5. 檢查 `%s`、`%d`、變數、占位符、色彩與樣式標記、逸出字元、換行、引號與逗號。
+   - 每個 `en`、`zh-cn` 與 `zh-tw` 都位於 localization block 的直接欄位深度，解析結果彼此獨立。
+   - 每個直接語系欄位的完整表達式都能在 block closing brace 前正確結束，且與下一欄有逗號或分號分隔。
+   - `new` 與 `merged` 的 `en`、`zh-cn`、`ru` 及其他非 `zh-tw` 欄位存在性與正規化後的完整表達式相同。
+   - 欄位順序、縮排與為了 Lua 語法必要加入的分隔逗號不視為非 `zh-tw` 語意變更。
+10. 檢查 `%s`、`%d`、位置型格式參數、變數、占位符、色彩與樣式標記、逸出字元、換行、引號、串接運算與逗號。
+   - placeholder 名稱、數量與重複次數以 multiset 與英文對齊；`string.format` 的格式參數數量與型別相容，且各語系的參數列緊接自己的函式呼叫。
+   - `highlight()`、`cf()`、`CKWord`、`CNumb`、`CPhrs`、`CNote` 等會影響執行、lookup 或顯示結構的 helper 核對數量、結構、語意鍵與著色範圍。
+   - 英文 lookup 基底鍵在繁中使用對應語系鍵，例如 `Burning_rgb` 對應 `Burning_rgb_tw`；每個新增繁中 lookup 定義都有 active 使用位置、可追溯來源與一致的色彩分類。
+   - `Localize()` 可在 `en` 中取得遊戲內文字，而 `zh-tw` 可使用譯後 literal；占位符檢查聚焦在兩語系都需要保留的執行期結構，將 `Localize()` 視為語系實作差異。
+11. 原文未變且符合規則的既有 `zh-tw` 記為 `KEEP`。Review 只提出詞彙風格統一、而原文與語意均維持既有內容時，記錄為 optional 並維持本次 diff 範圍；若 Review 與 `Referneces/Translation.md` 不一致，以詞彙表、適用規則與實際遊戲語意完成判定，回覆依據後解決。
+
+全部 target units 完成後，原子寫入 `localization-decisions.json`，重新計算 scope 與結果計數，並把 `merged.lua` 的 size/SHA-256 寫入 `localization-sources.json`。回讀兩份 JSON、逐項核對 target key 集合與實際 diff 後，才進入安裝。
 
 ## 11. 完整刪除並重新安裝
 
 只有第 9–10 節全部通過後才進入安裝：
 
-1. 將 `merged.lua` 寫入解壓縮後的乾淨新版 MOD 根目錄，形成「待安裝樹」。
+1. 將 `merged.lua` 寫入解壓縮後的乾淨新版 MOD 根目錄，形成「待安裝樹」；回讀正式 loc，確認 bytes 與 `localization-sources.json` 的 merged size/SHA-256 一致。
 2. 逐檔建立相對路徑、檔案大小與 SHA-256 清單。
-3. 回讀待安裝樹並核對清單。未通過前不得刪除 worktree 內現有 MOD。
-4. 將清單保存為 `review-artifacts/install-manifest.txt`。
+3. 回讀待安裝樹並核對清單；清單完全一致後才切換 worktree 內現有 MOD。
+4. 將清單先寫入同目錄暫存檔，回讀成功後原子取代 `review-artifacts/install-manifest.txt`。
 5. 解析 MOD 目標絕對路徑，確認它同時：
    - 位於該 MOD 的獨立 worktree 內。
    - 位於 `Warhammer 40,000 DARKTIDE/mods` 下。
    - 等於 state 記錄的單一 MOD 目錄。
 6. 完整刪除 worktree 內該 MOD 目錄。
 7. 將完整待安裝樹搬入 worktree 的 `mods`。
-8. 依 manifest 比對安裝後的所有檔案、大小與 SHA-256，且不得有多餘檔案。
+8. 依 manifest 比對安裝後的所有檔案、大小與 SHA-256，並確認相對路徑集合與 manifest 完全相同。
 9. 通過後精確刪除該 MOD 的 `staging/`，保留 source、old/new/merged 與 manifest。
 10. 將 state 設為 `installed`。
 
-如果作業系統因檔案占用、權限或儲存裝置錯誤而在刪除後中斷，只還原該 worktree：
+如果作業系統因檔案占用、權限或儲存裝置錯誤而在刪除後中斷，只還原該 worktree。先從 index 移除本輪 allowlist 的 staged 狀態，再依 HEAD 還原原本已追蹤的精確路徑：
 
 ```text
-git -C "<worktree>" restore --source=HEAD --staged --worktree -- README.md "Warhammer 40,000 DARKTIDE/mods/<MOD目錄>" ".hash/<MOD-slug>.hash"
+git -C "<worktree>" diff --cached --name-only -- README.md "<state.mod_relative_path>" ".hash/<MOD-slug>.hash"
+git -C "<worktree>" restore --staged -- <上一步實際回傳的精確 cached paths>
+git -C "<worktree>" restore --source=HEAD --worktree -- README.md "<state.mod_relative_path>"
 ```
 
-若 MOD 目錄含未追蹤檔案，先再次驗證它是 state 中的精確單一 MOD 目錄，再刪除該目錄後執行上述 restore。不得使用廣域 `git clean`、`git reset --hard` 或對 repository/worktree root 遞迴刪除。
+若 HEAD 已追蹤正式 hash，再對 `.hash/<MOD-slug>.hash` 執行相同 `git restore --source=HEAD --worktree`；若 HEAD 尚未追蹤，確認它是本輪依 state 產生的精確檔案後移除。MOD 目錄含本輪安裝的未追蹤檔案時，先再次驗證它等於 `state.mod_relative_path` 且位於該 worktree 的 `mods` 下，再移除該精確目錄並從 HEAD 還原。最後精確移除 pending hash，使 worktree 回到乾淨 HEAD；`AI Auto Update/In Progress/<MOD-slug>` 與 `Finished` 維持完整，供修正後重新安裝。
 
-`In Progress/<MOD-slug>/source`、`review-artifacts` 與 `state.json` 不在 worktree 中，不受 Git Restore 影響，必須保留。
+`In Progress/<MOD-slug>/source`、`review-artifacts` 與 `state.json` 位於 worktree 外，Git Restore 後仍完整保留。
 
 ## 12. README、正式 `.hash` 與驗證
 
@@ -431,13 +731,17 @@ git -C "<worktree>" restore --source=HEAD --staged --worktree -- README.md "Warh
 - 手動維護最後下載日期：YYYY-MM-DD
 ```
 
-- 手動維護日期使用 commit 前的 `Asia/Taipei` 日期。
+區段範圍從 `state.readme_heading` 的唯一精確行開始，到下一個同層 `###` heading 前結束；先確認 heading 只出現一次。更新後以段落 diff 證明一般 MOD 只有上述四個欄位改變，Ovenproof 另允許第 16 節的 `Patch 版本`。
+
+- 手動維護日期使用本輪 claim／取得完整來源時寫入 `state.maintenance_date` 的 `Asia/Taipei` 日期；等待 Review 或 commit 跨日仍維持該下載／執行日期。
+- 寫入 README 與正式 hash 時沿用同一 `maintenance_date`；commit 訊息日期則依第 13 節使用實際 commit 當日，兩者各自表達下載與提交時間。
 - Nexus 日期格式逐字保留。
 - 除特例外，README 網址、頁面標題與 Nexus ID 必須一致。
+- Ovenproof 依第 16 節保留原版 `241` 的 MOD 日期/版本，並在 `MOD 版本` 後更新 `Patch 版本：<514 頁面 Version>`；檔名仍使用 Patch Main file 的完整實體檔名。
 
 ### 12.2 正式 `.hash`
 
-以 pending hash 的已驗證內容寫入：
+先從 state 重新核對 pending hash 的 Nexus metadata、Main file upload time、archive size/SHA-256 與完整檔名，再以已驗證內容寫入：
 
 ```text
 <worktree>/.hash/<MOD-slug>.hash
@@ -448,15 +752,32 @@ git -C "<worktree>" restore --source=HEAD --staged --worktree -- README.md "Warh
 ### 12.3 必做驗證
 
 - `git -C <worktree> diff --check`。
+- `git -C <worktree> diff --numstat` 與 `git -C <worktree> diff --stat`，確認 diff 尺度符合實際更新，BOM、編碼與 LF/CRLF 維持新版格式。
 - 檔案新增、修改、刪除清單。
 - 安裝後樹與 manifest 完全一致。
-- `new` → `merged` 的非 `zh-tw` key/value 完全一致。
-- `zh-tw` 完整性、重複欄位、占位符與格式標記。
+- `new` → `merged` 的非 `zh-tw` key/value 完全一致；以解析後的完整表達式作為判定依據。
+- `zh-tw` 完整性、直接欄位深度、重複欄位、欄位分隔、placeholder multiset、lookup 與格式標記。
+- `localization-decisions.json` 的規則檔 SHA-256、unit stage、結果計數及實際 key 集合一致，且有效文字沒有未解決的 `BLOCKED`。
 - Lua 結構或可用語法檢查。
 - worktree diff 只有 README、當前 MOD 與正式 hash。
-- 來源壓縮檔、state、review artifacts 與 pending hash 不在 staged 範圍。
+- 主工作區在驗證前後都保持乾淨；所有診斷輸出只能寫入該 MOD 的 `In Progress`。
 
-若 Lua 檢查器不可用，必須對已精確 stage 的 cached diff 執行 Codex Review，並讀取 `new.lua`、`merged.lua` 與 manifest。存在未解決問題時不得 commit。
+若 Lua compiler/parser 可用，先對 `merged.lua` 執行語法檢查。若目前環境沒有 Lua compiler/parser，改由下列三項共同提供等價的結構證據：
+
+1. 使用能追蹤 quote、escape、註解、`()`、`[]`、`{}` depth 與完整 value expression 的結構驗證器。
+2. 確認第 10 節所有 direct-field、separator、non-`zh-tw` semantic 與 marker 檢查為零錯誤。
+3. 將「commit 前須執行 Codex Review」寫入本輪 validation report；第 13 節精確 stage 後，讓 Review 同時讀取 cached diff、`new.lua`、`merged.lua`、`localization-sources.json`、`localization-decisions.json` 與 manifest。
+
+前兩項通過後進入第 13 節；Codex Review 與 cached diff 驗證也通過、問題清單為空後，才建立 commit。
+
+若驗證器使用 Python 匯入 repository 內腳本，必須停用 bytecode 產生，例如：
+
+```text
+$env:PYTHONDONTWRITEBYTECODE = "1"
+python -B <validator> ...
+```
+
+執行前後檢查主工作區。驗證器以 `-B` 將 bytecode 留在記憶體；若工具仍產生快取，確認它是本輪建立的精確 `__pycache__` 後清除該目錄，使 `scripts/` 與其他工作樹維持原狀。
 
 ## 13. Commit、Push 與非 Draft PR
 
@@ -466,14 +787,39 @@ git -C "<worktree>" restore --source=HEAD --staged --worktree -- README.md "Warh
 git -C "<worktree>" add -- README.md "Warhammer 40,000 DARKTIDE/mods/<MOD目錄>" ".hash/<MOD-slug>.hash"
 ```
 
-禁止 `git add .`、`git add -A` 與從主工作區 stage。
+stage 操作只使用上述三個精確路徑，並從對應 worktree 執行。
+
+stage 前核對 repository Git 身份：`git config user.name` 等於 `SyuanTsai`，`git config user.email` 等於 `carsun00@gmail.com`；不一致時先在此 repository scope 修正，再建立本輪 commit。
 
 commit 前：
 
 1. `git -C <worktree> diff --cached --name-status` 只能包含 allowlist。
 2. `git -C <worktree> diff --cached --check` 必須通過。
 3. 完整檢閱 `git -C <worktree> diff --cached`。
-4. 確認沒有其他 MOD、來源壓縮檔、pending hash 或使用者變更。
+4. 對 cached diff 執行 Codex Review，並讀取 `new.lua`、`merged.lua`、`localization-sources.json`、`localization-decisions.json` 與 install manifest；可處理問題全部解決後重跑本節。
+5. cached path 集合是本 MOD allowlist 的子集合，並完整包含本輪預期的 README、正式 hash 與 MOD 實際差異；allowlist 內沒有遺漏的 unstaged 變更，來源壓縮檔、pending hash 與使用者其他變更均留在 cached diff 之外。
+6. 執行 `git -C <worktree> write-tree`，將 `cached_tree_oid`、cached paths、各項驗證結果、Codex Review 結論、工具/規則 SHA-256 與含時區時間原子寫入 `review-artifacts/validation-report.json`：
+
+```json
+{
+  "schema_version": 1,
+  "validation_basis": "cached-tree",
+  "base_oid": "<state.base_oid>",
+  "head_before_commit": "<HEAD>",
+  "cached_tree_oid": "<git-write-tree-oid>",
+  "cached_paths": [],
+  "checks": {
+    "diff_check": "passed",
+    "manifest": "passed",
+    "localization": "passed",
+    "codex_review": "passed"
+  },
+  "validated_oid": null,
+  "validated_at": "<ISO-8601 with timezone>"
+}
+```
+
+legacy commit 重建時只將 `validation_basis` 設為 `legacy-head-reconstruction`，並以第 4.2 節的 base/HEAD/artifact 證據填入同一結構。
 
 Commit 訊息：
 
@@ -481,17 +827,28 @@ Commit 訊息：
 Update <MOD名稱> to <Main file版本> YYYY-MM-DD
 ```
 
+Review 修正的後續 commit 使用：
+
+```text
+Fix <MOD名稱> zh-tw review feedback YYYY-MM-DD
+```
+
+若修正內容是合併器造成的結構問題，可使用能明確描述原因的動詞，例如 `Fix <MOD名稱> zh-tw merge YYYY-MM-DD`。所有 commit 訊息都必須包含日期。
+
 日期使用 commit 當下 `Asia/Taipei` 日期。
 
-commit 後使用 `git show --name-status --stat HEAD` 再次確認範圍，通過後 push `Update/<MOD-slug>`，並建立：
+commit 後使用 `git show --name-status --stat HEAD` 再次確認範圍，並確認 `git rev-parse HEAD^{tree}` 等於 `validation-report.json.cached_tree_oid`；通過後將 `validated_oid` 寫入 report，再 push `Update/<MOD-slug>`，並建立：
 
+- Title：`Update <MOD名稱> to <Main file版本> YYYY-MM-DD`
 - Base：`main`
 - Head：`Update/<MOD-slug>`
 - Draft：`false`
 
-PR 說明包含：MOD 名稱、Nexus 網址、主頁版本、Main file 版本、來源實體檔名、上游檔案差異摘要、loc/zh-tw 調整與驗證結果。
+PR 說明包含：MOD 名稱、Nexus 網址、主頁版本、Main file 版本、來源實體檔名、上游檔案差異摘要、套用的中文規則、`ADD/CHANGE/KEEP/SKIP/BLOCKED` 計數、詞彙候選摘要、loc/zh-tw 調整與驗證結果。詞彙候選為空時明確寫 `none`；非空時保留在 PR 紀錄，讓合併後清除本地 artifacts 仍可追溯。
 
-push 成功後寫入 `head_oid` 並將 state 設為 `committed`。寫入 PR number/URL/head OID 後，state 設為 `pr-open`。
+`state.pr_number` 為 `null` 時建立唯一的非 Draft PR；已有 PR 時核對 base/head 後更新同一 PR 的 title/body，讓 Review 修正與續跑維持單一紀錄。
+
+commit 建立後立即寫入 `head_oid`，將 state 設為 `committed`。push 成功並確認遠端 branch OID 等於本機 HEAD 後，state 設為 `pushed`。建立 PR 並寫入 PR number/URL/head OID 後，state 設為 `pr-open`。
 
 ## 14. Copilot Balanced Review 迴圈
 
@@ -499,15 +856,18 @@ push 成功後寫入 `head_oid` 並將 state 設為 `committed`。寫入 PR numb
 
 1. 使用 Browser 或 Chrome 控制技能開啟 PR，沿用已登入工作階段。
 2. 在 `Reviewers` 選擇 Copilot，將深度設為 `Balanced`（Deep analysis, moderate cost）。
-3. 確認畫面顯示 `Copilot Balanced` 後送出 Review。
-4. 將當下 `git rev-parse HEAD` 同時寫入 `head_oid` 與 `review_requested_oid`，state 設為 `review-requested`。
-5. 釋放本地鎖，可繼續處理其他 MOD。
+3. 送審前取得 `git rev-parse HEAD`，寫入 `head_oid`、`review_requested_oid`、`review_requested_at`，將 `review_effort` 設為 `balanced`，並把目前週期的 `reviewed_oid`／`review_completed_at` 設為 `null`；此時維持原 state status，直到畫面確認送審成功。
+4. 確認畫面顯示 `Copilot Balanced` 後送出 Review。Repository 自動產生的 Lite Review 可作為額外意見來源；完成 Gate 仍以另行要求的 Balanced Review 為準。
+5. 畫面顯示 `Reviewing at balanced effort` 或 PR timeline 出現本次 `requested a balanced review` 事件後，將事件來源、可見文字、時間與對應 requested OID 寫入 `review-evidence.json`，再把 state 設為 `review-requested`。
+6. 釋放本地鎖，可繼續處理其他 MOD。
 
-若 GitHub 要求登入，保留頁籤請使用者登入。若當前權限、方案或介面無法選擇 Balanced，保留非 Draft PR、worktree 與所有 In Progress 資料，在 `last_error` 記錄原因並釋放鎖；不得改用 Lite Review 或標記完成。
+每次瀏覽器操作都使用目前 session 內有效的 tab；先前 tab 已關閉或過期時，重新取得或建立 tab 並直接開啟同一 PR。送審後確認畫面顯示 `Reviewing at balanced effort` 或等價狀態，並以 PR timeline 的 balanced request event 作為送審佐證。
+
+若 GitHub 要求登入，保留頁籤請使用者登入。若當前權限、方案或介面無法選擇 Balanced，將目前 `pr-open` 或 `review-changes` 寫入 `resume_status`，state 設為 `failed`，在 `last_error` 記錄原因並釋放鎖；非 Draft PR、worktree 與所有 In Progress 資料完整保留，Balanced 可用後從 `resume_status` 接續完成 Gate。
 
 ### 14.2 取得完整 feedback
 
-瀏覽器畫面只用於送審與人機操作，不作為完整 feedback 資料源。
+瀏覽器畫面用於送審與人機操作；完整 feedback 則由 GitHub connector、`gh` 或 GraphQL 取得並保存。
 
 - 使用 GitHub connector 或 `gh pr view` 取得 PR metadata。
 - 使用 `gh api graphql` 取得 thread-aware 資料。GraphQL 至少包含：
@@ -517,8 +877,10 @@ pullRequest {
   state
   headRefOid
   mergeCommit { oid }
-  reviews(last: 100) {
+  reviews(first: 100, after: $reviewsCursor) {
+    pageInfo { hasNextPage endCursor }
     nodes {
+      id
       author { login }
       state
       submittedAt
@@ -526,7 +888,8 @@ pullRequest {
       body
     }
   }
-  reviewThreads(first: 100) {
+  reviewThreads(first: 100, after: $threadsCursor) {
+    pageInfo { hasNextPage endCursor }
     nodes {
       id
       isResolved
@@ -534,6 +897,7 @@ pullRequest {
       path
       line
       comments(first: 100) {
+        pageInfo { hasNextPage endCursor }
         nodes { author { login } body createdAt updatedAt }
       }
     }
@@ -541,44 +905,82 @@ pullRequest {
 }
 ```
 
-可使用 GitHub PR comment handler 的 `fetch_comments.py` 取得 comments 與 threads，但現有 helper 沒有 review `commit.oid`時，必須以上述 GraphQL 欄位補齊，不得把缺少 commit OID 的結果當作已驗證最新 HEAD。
+`reviews` 與 `reviewThreads` 依各自 `pageInfo` 續查到 `hasNextPage=false`；任一 thread 的 comments 超過 100 筆時，再以該 thread 的 comments cursor 單獨續查。所有頁面完成且 ID 去重後，才計算 unresolved 與 feedback 數量。
 
-使用 `gh` 前先執行 `gh auth status`。若尚未登入，請使用者執行 `gh auth login`；若發生 rate limit 或短暫網路錯誤，保留狀態並稍後重試，不得以不完整的 flat comments 取代 thread-aware 讀取。
+可使用 GitHub PR comment handler 的 `fetch_comments.py` 取得 comments 與 threads；當 helper 未提供 review `commit.oid` 時，以上述 GraphQL 欄位補齊，讓完成判定具備最新 HEAD 證據。
+
+讀取每一筆 Copilot review 的完整 `body`，包括 `<details>` 中的 `Suppressed comments`。`generated no new comments` 表示沒有新增 inline thread；optional/suppressed feedback仍逐項分類為「採用」或「保留現況並記錄理由」。
+
+將所有 inline、summary、optional 與 suppressed feedback 寫入 `review-artifacts/review-feedback.json`。頂層保存 reviews/threads/comments 的 `pagination_complete`、去重後計數與查詢時間；每筆至少包含 `review_id`、來源類型、path/line（若有）、內容摘要、分類、採用與否、處理方式、理由、thread ID（若有）與 resolved 狀態；以此檔證明所有頁面及每項 feedback 都已完成判定。
+
+使用 `gh` 前先執行 `gh auth status`。若尚未登入，請使用者執行 `gh auth login`；若發生 rate limit 或短暫網路錯誤，保留狀態並稍後重試，以完整的 thread-aware 結果完成判定。
+
+每次 Balanced request 與完成結果都寫入 `review-artifacts/review-evidence.json`：
+
+```json
+{
+  "effort": "balanced",
+  "requested_oid": "<review_requested_oid>",
+  "requested_at": "<ISO-8601 with timezone>",
+  "request_event_observed": true,
+  "request_event_source": "github-ui|timeline-api",
+  "request_event_text": "requested a balanced review",
+  "request_event_at": "<ISO-8601 with timezone>",
+  "review_id": null,
+  "reviewer_login": null,
+  "review_submitted_at": null,
+  "review_commit_oid": null,
+  "ui_last_completed_effort": null,
+  "verified_at": "<ISO-8601 with timezone>"
+}
+```
+
+送審確認後先寫入 request/event 欄位，Review 完成後再填入 review ID、reviewer login、時間與 commit OID。每次寫檔都使用同目錄暫存檔、JSON 解析與原子取代。GitHub UI 有提供 `Last completed: balanced` 時記錄該值；完成後 UI 未顯示此欄位時使用 `null`，並由 balanced request event、時間、Copilot reviewer 身分與 review commit OID 共同證明。
 
 ### 14.3 修正與再 Review
 
-1. 重新取得該 MOD 的鎖並核對 state/worktree/PR。
+1. 重新取得該 MOD 的鎖並核對 state/worktree/PR，將 state 設為 `review-changes`。
 2. 將 feedback 分為：
-   - 本地化：自主修正。
+   - 本地化：依該 unit 的 stage、BASE RULE、模式規則、專案規則與正式詞彙表判定；採用時同步更新 `localization-decisions.json` 的 result/reason，保留現況時記錄對應規則與理由。
    - README 或 metadata：自主修正。
-   - 上游程式邏輯：回覆不在本地化維護範圍，不修改程式碼。
+   - 上游程式邏輯：回覆「供上游後續處理」，本 PR 維持新版壓縮檔內容。
    - 資訊性、過時或重複：記錄理由。
 3. 修正 loc 時，必須同時更新：
    - worktree 內正式 localization 檔。
    - `review-artifacts/merged.lua`。
+   - `localization-sources.json` 的 merged size/SHA-256。
+   - `localization-decisions.json` 中受影響 unit 的 stage/result/reason 與彙總計數。
 4. 任何 loc 修正後都必須：
    - 重跑 `new` → `merged` 語意比對。
-   - 重建 `install-manifest.txt`。
-   - 重新核對 worktree 內完整 MOD 樹。
-   - 重跑第 12–13 節的驗證、精確 stage、commit 與 push。
+   - 先將目前的 `install-manifest.txt` 精確複製為 `install-manifest.previous.txt`，再從 worktree 完整 MOD 樹建立 `install-manifest.candidate.txt`；比較完成後才更新正式 manifest。
+   - 將 `install-manifest.candidate.txt` 與 `install-manifest.previous.txt` 比較；除了 localization 檔的 size/SHA-256 外，所有非 loc 相對路徑、大小與 SHA-256 必須完全相同。比較通過後才原子取代 `install-manifest.txt`。這項規則讓第 11 節刪除 staging 後仍能可靠驗證 Review 修正只影響 loc。
+   - 重新核對 worktree 內完整 MOD 樹與新 manifest 完全一致。
+   - 重跑第 12 節，並執行第 13 節的精確 stage、Codex Review、validation report、commit、push 與遠端 OID 驗證；沿用既有 PR。
 5. 對已處理或不採用的 thread 留下可追蹤理由，再解決該 thread。
-6. 推送後更新 `head_oid`，state 設為 `review-changes`，並對新 HEAD 重新送出 Balanced Review。舊 Review 不得沿用。
+6. 比較處理前後 HEAD：
+   - HEAD 已改變：commit 後立即更新 `head_oid`，push 並確認遠端 OID，再對新 HEAD 重新送出 Balanced Review；舊 Review 保留為歷史意見，新完成 Gate 使用新 HEAD 的 Review 證據。
+   - HEAD 維持相同：完成 feedback 分類、必要回覆與 thread resolution 後，沿用同一 HEAD 已完成的 Balanced Review，直接執行第 14.4 節 Gate。
 
 ### 14.4 Review 完成條件
 
 同時滿足下列條件才完成：
 
 - `git -C <worktree> rev-parse HEAD` 等於 PR `headRefOid`。
-- 最新 Copilot Balanced review 的 `commit.oid` 等於 PR `headRefOid`。
-- 沒有 unresolved review thread。
-- 沒有尚未回覆或分類的 feedback。
+- PR timeline 存在本次 `balanced` request event，event evidence 的 requested OID 等於 `review_requested_oid`；對應 review 的 `author.login` 為 GitHub Copilot reviewer（目前為 `copilot-pull-request-reviewer`），且 `submittedAt` 晚於或等於 `request_event_at`。
+- 該次 Copilot review 的 `commit.oid` 等於 PR `headRefOid` 與 `review_requested_oid`。
+- reviews、reviewThreads 與每個 thread comments 都已完成分頁與 ID 去重，unresolved review thread 數量為 `0`。
+- inline、summary、optional 與 suppressed feedback 均已有分類與回覆紀錄。
 - 最後一次 manifest、loc 語意比對與 cached diff 驗證通過。
 
-通過後將 `reviewed_oid` 設為該 HEAD，state 設為 `awaiting-user-merge`，釋放鎖，通知使用者 PR 已可合併。Codex 不執行合併，並可繼續處理其他 MOD。
+送出新 HEAD Review 後，GitHub API 可能暫時仍只回傳上一個 commit 的 review。持續等待到 balanced request event、review `submittedAt` 與 `commit.oid` 同時符合上述條件；將證據寫入 `review-evidence.json`，避免依賴 API 回傳順序或單一畫面狀態。
+
+同一 HEAD 同時有自動 Lite 與手動 Balanced 時，依 PR timeline 的 request／started／reviewed 事件順序配對，並優先使用 UI 的 `Last completed: balanced` 佐證。多筆 review 仍無法唯一對應時，等待現有 Review 全部完成後重新要求一次 Balanced，以後續唯一 review 作為完成證據。
+
+通過後記錄 `review_completed_at`，將 `reviewed_oid` 設為該 HEAD、state 設為 `awaiting-user-merge`，釋放鎖並通知使用者 PR 已可合併；流程可繼續處理其他 MOD，最終合併仍由使用者執行。
 
 ## 15. 使用者合併後歸檔
 
-先執行 `git fetch origin`，再查詢 PR 並確認：
+先依第 8.1 節執行完整 `git fetch origin`，再查詢 PR 並確認：
 
 - PR state 為 `MERGED`。
 - PR 最終 `headRefOid` 等於 `state.reviewed_oid`。
@@ -587,27 +989,36 @@ pullRequest {
 
 通過後：
 
-1. 將 state 設為 `merged`。
+1. 將 PR `mergeCommit.oid` 與合併時間寫入 `merge_commit_oid`／`merged_at`，再把 state 設為 `merged`。
 2. 將 `source/` 內壓縮檔搬到 `Finished/`，保留完整檔名。
 3. `Finished` 已有同名檔時：
    - SHA-256 相同：保留既有檔，精確刪除 In Progress 的重複來源檔。
-   - SHA-256 不同：停止該 MOD 歸檔，不覆寫。
-4. 歸檔完成後將 `state.archive_path` 更新為 `Finished` 中的絕對路徑；中途續跑時先比對兩個可能位置的 SHA-256，不重複搬移。
-5. 核對 worktree 完全乾淨，且 worktree 絕對路徑等於 state 並位於預期 worktree root 後，使用不帶 `--force` 的 `git worktree remove` 移除該 worktree。
-6. 來源已歸檔且 worktree 已安全移除後，刪除該 MOD 的 `review-artifacts`。
-7. `state.json` 必須最後刪除；再確認 In Progress 目錄為空後刪除該目錄。如果中途失敗，保留 state 才能繼續歸檔。
-8. 保留本機分支紀錄；不自動刪除遠端分支。
+   - SHA-256 不同：兩份檔案維持原位置，將 `resume_status` 設為 `merged`、state 設為 `failed`，記錄衝突並請使用者決定歸檔名稱。
+4. 歸檔完成後將 `state.archive_path` 更新為 `Finished` 中的絕對路徑；中途續跑時先比對兩個可能位置的 SHA-256，只完成尚未完成的搬移。
+5. 核對 worktree 完全乾淨，且 worktree 絕對路徑等於 state 並位於預期 worktree root 後，使用標準 `git worktree remove`（無 `--force`）移除該 worktree。
+6. 正規化固定名稱分支，讓下一輪仍可使用 `Update/<MOD-slug>`：
+   - 先確認本機舊 branch tip 等於 `state.reviewed_oid`，再將該值寫入 `archived_branch_oid`，並讓 `branch_normalized_at` 維持 `null`；PR number 與 `merge_commit_oid` 已在 state 中，GitHub MERGED PR 保留完整歷史。
+   - 以 `git worktree list --porcelain` 確認該 branch 目前未被任何 worktree 使用。
+   - 遠端 branch 已由 GitHub 自動刪除時，直接以 `git branch -f Update/<MOD-slug> origin/main` 正規化本機 branch。
+   - 遠端 branch tip 是 `origin/main` 的 ancestor 時，保留遠端 branch；以 `git branch -f Update/<MOD-slug> origin/main` 將未被 worktree 使用的本機 branch 指向 `origin/main`。
+   - 遠端 branch tip 因 squash／rebase merge 而不是 `origin/main` 的 ancestor 時，先確認 `mergeCommit.oid` 已在 `origin/main` 且正式 hash 已合併，再以 `git push origin --delete Update/<MOD-slug>` 精確清除遠端 branch，並以相同 `git branch -f` 將本機 branch 指向 `origin/main`。
+   - 核對本機 branch 已指向 `origin/main`，且遠端 branch 符合上列保留或清除結果後，才把完成時間寫入 `branch_normalized_at`。
+7. 來源已歸檔、worktree 已移除且 branch 已正規化後，刪除該 MOD 的 `review-artifacts`；schema version 1／2 遺留的 `staging`、`pending.hash`、`pr-body.md`、README 工作副本等暫存檔，先確認都能由 archive、PR、正式 hash 或新版 artifacts 取代後，再按精確路徑一併清除。
+8. 確認 In Progress 的單一 MOD 目錄只剩 `state.json` 後，再刪除 state 與空目錄。中途出現錯誤時保留 state，供下一次從現況續跑。
+
+`.tools/<sha256>/` 是跨 MOD 共用的內容定址快取，保留供後續更新重用，與單一 MOD 歸檔分開管理。
 
 ## 16. Ovenproof's Scoreboard Plugin 特例
 
 - 原版 Nexus：`https://www.nexusmods.com/warhammer40kdarktide/mods/241`
 - Community Patch：`https://www.nexusmods.com/warhammer40kdarktide/mods/514`
 - README 主標題保留連到原版 `241`，並在同區段另列 Patch `514`。
-- MOD 主頁日期與版本取自 `241`；Patch 日期與版本取自 `514`。
-- 實際安裝檔名與 `.hash` 的 Nexus ID、版本、檔名取自 Community Patch `514`。
-- 分別驗證原版標題/網址/ID `241` 與 Patch 標題/網址/ID/壓縮檔 `514`，不要把兩者欄位互相覆蓋。
+- README 的 `MOD 網站最後更新日期` 與 `MOD 版本` 取自原版 `241`，`Patch 版本` 與實際檔名取自 Community Patch `514`，維持目前 README 欄位格式。
+- state 的主要 `nexus_*`／`main_file_*` 欄位與 `.hash` 的 Nexus ID、版本、檔名取自實際安裝來源 Community Patch `514`。
+- 原版 `241` 寫入 `state.reference_sources`，至少保存 `role=upstream-reference`、標題、網址、ID、Last updated、Version 與核對時間；Patch `514` 的頁面日期與版本保存在 state 主要欄位及 PR 說明。
+- 兩個頁面分別驗證標題／網址／ID；壓縮檔只與 Patch `514` 的 Main file 配對，避免把原版頁面 metadata 誤當成實際安裝檔來源。
 
-## 17. 失敗、關閉 PR 與復原
+## 17. 異常狀態、關閉 PR 與復原
 
 ### 17.1 單一 MOD 失敗
 
@@ -615,38 +1026,70 @@ pullRequest {
 - 保留來源檔、old/new/merged、manifest、worktree 與 branch。
 - 釋放鎖；其他 MOD 可繼續。
 - 可自主修復的工具、驗證或本地化問題，重新取得鎖後繼續。
-- 只有需要帳號、權限、無法決定的來源或翻譯含義時才請使用者處理。
+- 帳號、權限、來源選擇或翻譯含義需要決策時，帶著現有證據請使用者處理。
 
 ### 17.2 PR 關閉但未合併
 
-將狀態設為 `closed-unmerged`，保留所有資料並請使用者選擇：
+將目前成功狀態寫入 `resume_status`，再把狀態設為 `closed-unmerged`，保留所有資料並請使用者選擇：
 
-- 重新開啟：沿用原 branch/worktree/state，重新核對 HEAD 與 Review。
-- 放棄：確認使用者決定後，將來源檔搬回 `AI Auto Update` 根目錄，再精確清除該 MOD 的 worktree、review artifacts 與 state。不刪除遠端分支，除非使用者另行要求。
+- 重新開啟：沿用原 branch/worktree/state，恢復 `resume_status` 後重新核對 HEAD 與 Review。
+- 放棄：使用者確認後，先將來源檔搬回 `AI Auto Update` 根目錄；同名檔 SHA-256 相同時沿用根目錄既有檔，不同時保留兩份並請使用者指定名稱。接著核對 PR 確為 CLOSED/unmerged，且本機／遠端 branch tip 等於 state 記錄的該 PR HEAD。依第 11 節把獨立 worktree 還原為乾淨基準並移除，再精確刪除遠端與本機 `Update/<MOD-slug>` branch，最後清除該 MOD 的 review artifacts 與 state。任一 OID 不相符時保留現況並請使用者決定，讓其他 commit 維持完整。
 
-### 17.3 禁止的復原方式
+### 17.3 安全復原邊界
 
-- `git reset --hard`
-- 廣域 `git clean`
-- 對 repository root、worktree root、`AI Auto Update`、`In Progress` 或 `Finished` 遞迴刪除
-- 未核對 state 與絕對路徑就刪除目錄
-- 覆寫不同 SHA-256 的同名來源檔
-- force-push 現有 MOD 分支
+復原使用可追蹤、精確且可續跑的操作：
+
+- 使用第 11 節的精確路徑 `git restore` 還原單一 MOD、README 與該 MOD hash。
+- 清理範圍限定為 state 已驗證的單一 MOD 目錄或本輪建立的精確暫存目錄。
+- repository root、worktree root、`AI Auto Update`、`In Progress` 與 `Finished` 保持原狀。
+- 不同 SHA-256 的同名來源檔各自保留，交由使用者決定歸檔名稱。
+- 進行中的 MOD 分支使用一般 push 延續歷史；PR 合併後的固定分支名稱依第 15 節正規化。
 
 ## 18. 完成條件
 
-單一 MOD 只有在下列項目全部成立時，才可回報「已完成、等待使用者合併」：
+需要更新的 MOD 只有在下列項目全部成立時，才可回報「已完成、等待使用者合併」：
 
-- 來源檔與 Nexus 即時頁面已可靠配對。
-- 來源 SHA-256 在搬移與解壓縮前後一致。
-- 新版 MOD 是完整刪除舊版後的乾淨安裝。
-- 只有 `zh-tw` 是本地合併產生的語系變更。
-- README、正式 `.hash`、manifest、Lua 與 staged allowlist 驗證通過。
-- Commit 與 push 成功，PR 為非 Draft。
-- Copilot 深度為 Balanced。
-- 最新 PR HEAD 已完成 Balanced Review。
-- 沒有 unresolved thread 或未分類 feedback。
-- `state.reviewed_oid` 等於 PR `headRefOid`。
+- 第 19 節 Gate A–D 全部通過並留下 artifacts、Git 與 GitHub 證據。
+- state 為 `awaiting-user-merge`，`reviewed_oid` 等於 PR `headRefOid`。
 - 來源檔、state 與 review artifacts 仍保留在 In Progress，等待使用者合併。
 
-當某個 MOD 達到上述狀態後，不需要等待它合併才處理其他 MOD；只要使用獨立 worktree/state/lock，即可安全繼續下一個。
+來源已與 `origin/main` 完全相同時，依第 8.2 節完成 `already-current` 歸檔與 state 清理後，回報「已是最新、無需 PR」；此結果以正式 hash、README/Nexus metadata 與 Finished archive SHA-256 為證據，不套用需要 worktree、commit/PR 的 Gate C–D。
+
+當某個 MOD 達到上述狀態後，可直接使用另一組獨立 worktree/state/lock 處理下一個 MOD；各 PR 可分別等待使用者合併。
+
+## 19. 防回歸 Gate
+
+每個 MOD 留下下列四個 gate 的可核對結果；四個 gate 全部通過時進入下一階段，尚未通過的 MOD 保留現況供續跑，其他 MOD 照常進行：
+
+### Gate A：來源與路徑
+
+- archive、state、worktree、old/new/merged 與目標 MOD 絕對路徑都已解析並存在。
+- archive 搬移前後的 filename、size 與 SHA-256 一致。
+- `localization-sources.json` 的 old/new 相對路徑分別等於 state，`old.lua`／`new.lua` 的 size/SHA-256 等於不可變擷取紀錄，`merged.lua` 等於目前 merged 紀錄。
+- 工具的 artifact 輸出路徑精確等於 `review-artifacts` 內的預期檔案。
+
+### Gate B：loc 結構
+
+- `parsed_new_total_key_count` 等於 `parsed_merged_total_key_count`。
+- `unclassified_missing_zh_tw`、unresolved active-text `BLOCKED`、duplicate `zh-tw`、empty active `zh-tw`、direct-depth errors、separator errors、non-`zh-tw` semantic differences、placeholder multiset mismatches、lookup failures 與必要 marker mismatches 全部為零；官方 fallback 與無語意 unit 以 `SKIP` 明確分類。
+- `validator-self-test.json` 顯示所有 multiline、separator、encoding 與 round-trip fixtures 通過。
+- `localization-decisions.json` 記錄 `source_sync`、基準 commit、規則檔 SHA-256、適用專案規則、scope 計數，以及每個 target unit 的 stage/result/reason；target set 與 old/new/merged 實際差異一致。
+- 所有新增、原文改變、`SOURCE_DRIFT` 或 lookup 變動的 key 已搜尋完整新版 MOD 的引用情境。
+- 詞彙表命中項目使用指定譯名；候選詞留在 artifact，工作文件維持於 MOD PR 之外。
+- `merged.lua` 保留 `new.lua` 的 encoding、BOM 與 newline。
+
+### Gate C：安裝與 Commit
+
+- 安裝樹與 manifest 的相對路徑、size、SHA-256 完全一致。
+- `validation-report.json` 顯示 cached paths 只包含 README、單一 MOD 與 `.hash/<MOD-slug>.hash`，且沒有 allowlist 內遺漏的 unstaged 變更。
+- `validation-report.json.cached_tree_oid` 等於 `HEAD^{tree}`，`validated_oid` 等於本機與遠端 HEAD；`diff --check`、結構驗證與 Codex Review 均通過。
+- 主工作區與其他 worktree 的 `git status --porcelain` 符合執行前快照，本輪 `__pycache__`、`.pyc` 與驗證輸出均已保存在指定 artifact 或完成精確清理。
+- push 後 `origin/Update/<MOD-slug>` 與本機 HEAD 一致。
+
+### Gate D：PR 與 Review
+
+- PR 為 OPEN、非 Draft，base/head 正確。
+- `head_oid`、`review_requested_oid`、PR `headRefOid` 與本次 Balanced request 對應 review 的 `commit.oid` 全部一致。
+- `review-evidence.json` 的 effort、request event 來源/文字/時間、Copilot reviewer、review ID 與 commit OID 通過第 14.4 節條件。
+- reviews、threads 與 comments 分頁全部完成，unresolved thread 為零；`review-feedback.json` 顯示 review body 內的 normal、optional 與 suppressed feedback 都已分類。
+- `reviewed_oid` 寫入同一 HEAD 後，state 才能設為 `awaiting-user-merge`。
