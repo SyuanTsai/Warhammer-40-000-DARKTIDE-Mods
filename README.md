@@ -287,7 +287,7 @@
 - 手動維護最後下載日期：2025-07-23
 
 ### [Chat Block](https://www.nexusmods.com/warhammer40kdarktide/mods/68)
-    聊天、開啟 Steam 內嵌介面或切換視窗時自動維持格擋
+    2對話時自動防禦
 - MOD 網站最後更新日期：Last updated 05 August 2026, 2:36PM
 - MOD 版本：26.08.05
 - MOD 檔案名稱：ChatBlock 68 26.08.05 2026-08-05T06-36Z 95Dkb5SgG.zip
