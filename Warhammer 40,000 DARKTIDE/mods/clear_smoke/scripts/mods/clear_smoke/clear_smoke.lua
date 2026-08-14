@@ -75,11 +75,12 @@ local function create_radius_decal(self)
     local position = Unit.local_position(unit, 1)
 
     if not Managers.package:has_loaded(PACKAGE_NAME) then
-        Managers.package:load(PACKAGE_NAME, "clear_smoke", function()
-            spawn_radius_decal(position, world, duration)
-        end)
-    else
-        spawn_radius_decal(position, world, duration)
+		local position_box = Vector3Box(position)
+		Managers.package:load(PACKAGE_NAME, "clear_smoke", function()
+			spawn_radius_decal(position_box:unbox(), world, duration)
+		end)
+	else
+		spawn_radius_decal(position, world, duration)
     end
 end
 

@@ -1,0 +1,16 @@
+mod=Clear Smoke
+repo_directory=clear_smoke
+nexus_id=517
+nexus_url=https://www.nexusmods.com/warhammer40kdarktide/mods/517
+nexus_last_updated=24 July 2026, 8:41PM
+nexus_page_version=1.5
+version=1.5
+main_file_uploaded_at_utc=2026-07-24T12:41:00Z
+generated_at=2026-08-15T00:54:00+08:00
+maintenance_date=2026-08-15
+timezone=Asia/Taipei
+algorithm=SHA-256
+sha256=0873315f5e2c76d2c85d3dc8bb9a01c08a04225134dbb0fa478d7b4dc17c9d65
+size_bytes=4193
+archive_last_write_time_utc=2026-08-13T11:47:26.0866901Z
+filename=clear_smoke 517 1.5 2026-07-24T12-41Z AVBg7VNZu.zip
