@@ -63,6 +63,13 @@
 - 新增原生執行檔、安裝腳本、可疑 nested archive、路徑／連結異常，或 Review 指出憑證外洩、任意程式執行、惡意載荷等供應鏈風險時，分類為 `security-blocking`。保存證據、設定 `waiting-user` 並釋放鎖；不得自動執行、修改、忽略或直接 resolve。
 - SHA-256 只證明 bytes 一致，不代表來源可信。來源仍須與唯一 Nexus 頁面、ID、Main file metadata 及取得時間對帳；可取得遠端 file ID 或官方 checksum 時一併保存。
 
+`security-blocking` 分為兩類：
+
+1. **不可覆寫的結構風險**：路徑逃逸、rooted／UNC／drive-qualified path、symbolic link、hard link、reparse point、alternate data stream、加密或 reader 無法完整列舉的內容，以及 manifest 與實際檔案系統不一致。這些條件不得用使用者接受風險繞過，只能更換來源或放棄更新。
+2. **可一次性核准的 payload 風險**：來源唯一但新增的原生執行檔、安裝／系統腳本或 nested archive。使用者若決定繼續，state 的 `security_overrides[]` 必須記錄精確 `relative_path`、檔案 SHA-256、archive SHA-256、Nexus URL/file ID、risk type、`approved_by=user`、核准時間、`run_id` 與 `decision=allow-install-once`。禁止 wildcard、目錄級或永久核准。未明列於本類的安全風險一律視為不可覆寫。
+
+一次性 override 只對同一 `run_id`、archive SHA-256、來源、精確 path 與檔案 SHA-256 有效；任何一項改變立即失效並重新阻擋。核准後重新跑第 9.1 節，只有完全命中 override 的 payload 可搬入 MOD；其他安全 Gate 維持不變。接受的 override 數量與明細寫入 validation/review evidence 及 PR 摘要，歸檔後失效，不沿用至下一次更新。
+
 ## 3. 目錄與隔離模型
 
 ### 3.1 主工作區只負責協調
@@ -210,13 +217,17 @@ AI Auto Update/In Progress/.locks/<MOD-slug>.lock/
 
 狀態檔以同目錄暫存檔寫完且通過 JSON 解析後，再取代正式檔，避免寫到一半：
 
-state 與 review artifacts 是代理續跑與稽核用的內部紀錄，使用者不需手動維護。可用共用 writer/helper 時，必須由同一 writer 產生、解析並核對 OID、時間與 status 的跨檔一致性後再原子取代；沒有 helper 時仍依各節規定逐檔原子寫入並立即回讀驗證。每次 checkpoint 遞增 `state_revision`，同一主要步驟產生的 state 與 artifacts 共用新的 `operation_id`；續跑只接受 revision／operation ID 與 OID 證據一致的組合。這項規則處理的是「多個紀錄分次寫入可能彼此不一致」的風險，不代表 MOD 內容或翻譯本身有問題。
+state 與 review artifacts 是代理續跑與稽核用的內部紀錄，使用者不需手動維護。可用共用 writer/helper 時，必須由同一 writer 產生、解析並核對 OID、時間與 status 的跨檔一致性後再原子取代；沒有 helper 時仍依各節規定逐檔原子寫入並立即回讀驗證。
+
+`run_id` 在單一 MOD claim 建立時產生，直到完成歸檔都不可變；`merge_epoch` 只在第 3.3 節建立新基準時遞增。每個 checkpoint 遞增 `state_revision` 並產生新的 `operation_id`，`parent_operation_id` 指向上一個已完成 checkpoint。artifact 保存自己產生時的 run/epoch/operation/parent，不得為了迎合最新 state 而覆寫舊 operation ID。續跑驗證的是同一 `run_id`、正確 `merge_epoch`、operation parent lineage、stage 順序與各自 OID／SHA 證據，不要求不同階段 artifact 的 `operation_id` 相等。這項規則處理的是「多個紀錄分次寫入可能彼此不一致」的風險，不代表 MOD 內容或翻譯本身有問題。
 
 ```json
 {
   "schema_version": 6,
+  "run_id": "<uuid-stable-for-this-claim>",
   "state_revision": 1,
-  "operation_id": "<uuid>",
+  "operation_id": "<uuid-current-checkpoint>",
+  "parent_operation_id": null,
   "mod": "<MOD-name>",
   "mod_slug": "<MOD-slug>",
   "repo_mod_directory": "<exact-directory-name>",
@@ -276,6 +287,7 @@ state 與 review artifacts 是代理續跑與稽核用的內部紀錄，使用�
   "status": "claimed",
   "resume_status": null,
   "waiting_reason": null,
+  "security_overrides": [],
   "last_error": null,
   "updated_at": "<ISO-8601 with timezone>"
 }
@@ -325,9 +337,16 @@ claimed
 - 狀態細節記錄在既有欄位、`last_error` 或 review artifacts，`status` 維持使用上述固定集合。
 - `review_effort` 在送審時固定為 `balanced`；`review_requested_at` 與 `review_completed_at` 使用含時區的 ISO-8601。
 
-既有 schema version 1–5 state 先以 state、branch、worktree、archive SHA-256、Git tree 中唯一 MOD 目錄與 PR（若已建立）完成唯一對應，再由舊單檔欄位或實際載入證據建立 `localization_files`，並以本節的 workflow branch／commit/blob 證據補齊 workflow 欄位。`awaiting-user-merge` 的 Review 欄位另由 PR timeline、review `submittedAt`／`commit.oid` 與 Browser Balanced 證據重建；證據完整時原子升級為 version 5，證據仍待補齊時先回到 `review-changes` 重新驗證與送審。升級只加入可由權威來源唯一重建的資料，原始 state 先保留備份到同一 MOD 的 review artifacts，直到新版 state 通過解析與對帳。
+既有 schema version 1–5 state（包含仍為 version 3 的既有 MOD）必須直接升級為 version 6，禁止停在中間 schema。升級流程為：
 
-legacy artifacts 的來源證據可逐 localization 重建：`old.lua` 與 `state.base_oid:<old-loc-path>` 比對；archive 重新解壓到唯一暫存目錄後，將原始 loc 與 `new.lua` 比對；`merged.lua` 與 PR HEAD 的正式 loc 比對。三者一致後，為每個 id 建立 `review-artifacts/localization/<id>/` 的 sources 與 decisions；舊單檔 root artifacts 驗證通過後可作為該唯一 id 的輸入，不直接覆寫。再以目前規則重跑 validator 與 `zh-tw` scoped Codex Review。既有 commit 可用 `validation_basis=legacy-head-reconstruction`，以 `HEAD^{tree}`、`git show` path allowlist 與重跑結果建立 `validation-report.json`；新流程一般使用 `validation_basis=cached-tree`。重建結果使 HEAD 改變時重新 commit/push/Balanced Review，HEAD 維持相同且既有 Balanced 證據完整時可沿用該 Review。
+1. 先以舊 state、branch、worktree、archive SHA-256、Git tree 中唯一 MOD 目錄與 PR（若已建立）完成唯一對應，尚未修改任何既有檔案前在記憶體產生新的穩定 `run_id` 與 migration `operation_id`。
+2. 將原始 state bytes、舊 schema、size、SHA-256、migration `run_id`／`operation_id` 與 `parent_operation_id=null` 保存為 `review-artifacts/state-migration-v6.json`；新版 state 使用同一 `run_id`、migration checkpoint operation、`parent_operation_id=null` 與 `state_revision=1`。舊 artifact 沒有 operation metadata 不得偽造歷史 lineage，必須先依下列來源重新驗證，再由 migration operation 產生帶有 run/epoch/operation 欄位的新 artifact。
+3. `base_oid` 優先沿用可讀且與 branch／worktree old bytes 一致的舊值；缺少時，只能由 PR base、branch parent、正式 hash 與 old loc Git blob 唯一重建。`main_sync_oid` 設為目前 HEAD 已包含的最新 `origin/main` ancestor；新舊證據沒有顯示基準重建時，`merge_epoch=1`。
+4. 由舊單檔欄位、Git blob、archive extraction manifest 與實際載入證據重建 `localization_files`。`security_overrides` 一律初始化為空，不從舊留言或現場狀態推測使用者曾接受風險。
+5. `review_cycle`、Review OID 與完成時間只有在 PR timeline、review `submittedAt`／`commit.oid`、HEAD 與 Browser Balanced 證據能唯一重建時才沿用；否則設為 `0`、清除完成欄位並回到 `review-changes` 重新驗證與送審。其餘新增 waiting/retry 欄位依目前外部狀態唯一重建，沒有證據時使用 `null`。
+6. 所有新版 artifacts 與 state 的 run/epoch/operation lineage、OID、SHA、路徑及 JSON 解析全部通過後，才原子寫入 schema 6。原始 state 與舊 artifacts 保留到 version 6 通過 Gate A；任一必要欄位無法唯一重建時保持原檔、設為 `failed` 並記錄缺少證據，不得填入猜測值。
+
+legacy artifacts 的來源證據可逐 localization 重建：`old.lua` 與 `state.base_oid:<old-loc-path>` 比對；archive 重新解壓到唯一暫存目錄後，將原始 loc 與 `new.lua` 比對；`merged.lua` 與 PR HEAD 的正式 loc 比對。三者一致後，為每個 id 建立 `review-artifacts/localization/<id>/` 的 sources 與 decisions；新版 artifact 寫入同一 migration `run_id`／`merge_epoch`，其 `operation_id` 以 parent chain 從 migration checkpoint 接續。舊單檔 root artifacts 驗證通過後可作為該唯一 id 的輸入，不直接覆寫。再以目前規則重跑 validator 與 `zh-tw` scoped Codex Review。既有 commit 可用 `validation_basis=legacy-head-reconstruction`，以 `HEAD^{tree}`、`git show` path allowlist 與重跑結果建立 `validation-report.json`；新流程一般使用 `validation_basis=cached-tree`。重建結果使 HEAD 改變時重新 commit/push/Balanced Review，HEAD 維持相同且既有 Balanced 證據完整時可沿用該 Review。
 
 每次繼續工作前，核對 state 的 workflow commit/blob SHA、MOD、分支、worktree、壓縮檔名、SHA-256、PR 與 Git HEAD。資料一致時續跑；專用 workflow branch 已前進不會改變進行中 MOD，仍使用 state 固定的可讀 blob。資料尚未一致時保留該 MOD 現況並處理其他 MOD。
 
@@ -564,12 +583,12 @@ pending hash 保留為本地工作資料；更新驗證完成後，以其內容�
 - archive 未加密，所有 entry 都可由本輪選定 reader 完整讀取；reader 名稱、版本、偵測格式與能力結果保存於 extraction manifest。
 - 每個 archive entry 正規化後都位於暫存 root 內，且使用相對路徑；drive-qualified、UNC、rooted、`..` 越界、Windows reserved device name、alternate data stream、symbolic link、hard link 與 reparse point 均列為結構不符。
 - 解壓完成後對實際檔案系統再次解析 canonical path，逐項確認仍位於暫存 root、類型只有一般檔案／目錄，且沒有 symbolic link、hard link、reparse point、alternate data stream 或 reader 未列出的項目；不得只信任 archive entry metadata。
-- 盤點新增的原生執行檔、安裝／系統腳本與 nested archive。屬於既有且來源可唯一對帳的檔案只記錄 bytes；新的或角色不明者設為 `security-blocking`，不得搬入正式 MOD。
+- 盤點新增的原生執行檔、安裝／系統腳本與 nested archive。屬於既有且來源可唯一對帳的檔案只記錄 bytes；新的或角色不明者設為 `security-blocking`。只有第 2.2 節定義的精確一次性 override 完全命中並重新驗證後才可搬入正式 MOD；結構風險永遠不得 override。
 - 只有一個預期 MOD 根目錄。
 - 根目錄名稱與既有 MOD 目錄一致。
 - 依第 7 節識別優先表閱讀新版樹，確認 active localization 為 `none`、`single` 或 `multiple`；檔名只產生候選，所有確認路徑都位於唯一 MOD 根目錄內。
 
-驗證通過後，AI 將新版 active localization 與舊版清單依載入角色、key 結構及路徑關係配對，更新 `state.localization_mode` 與 `state.localization_files`。切換 staging 時不得假設 Windows 能原子覆蓋既有非空目錄：先把既有 `staging/` 改名為唯一 `staging.previous-<uuid>/`，再把已驗證的 next 目錄改名為 `staging/`；新 staging 回讀通過後才刪除 previous。中斷續跑時依 manifest 與 archive SHA-256 選出唯一完整版本，其他候選保留到完成對帳後再清理。`staging/.extraction-manifest.json` 位於 MOD 根目錄之外，保存 archive SHA-256、實際格式、reader 名稱／版本／能力結果、entry 相對路徑、size 與解壓後 SHA-256，讓中斷續跑可判定現有 staging 是否能重用；回讀成功後再原子複製為 `review-artifacts/extraction-manifest.json`，供 staging 清理後驗證。安裝動作只精確搬移唯一 MOD 根目錄，staging manifest 留在原處直到第 11 節完成。
+驗證通過後，AI 將新版 active localization 與舊版清單依載入角色、key 結構及路徑關係配對，更新 `state.localization_mode` 與 `state.localization_files`。切換 staging 時不得假設 Windows 能原子覆蓋既有非空目錄：先把既有 `staging/` 改名為唯一 `staging.previous-<uuid>/`，再把已驗證的 next 目錄改名為 `staging/`；新 staging 回讀通過後才刪除 previous。中斷續跑時依 manifest 與 archive SHA-256 選出唯一完整版本，其他候選保留到完成對帳後再清理。`staging/.extraction-manifest.json` 位於 MOD 根目錄之外，頂層保存 schema version、`run_id`、`merge_epoch`、自己的 `operation_id`／`parent_operation_id`、archive SHA-256、實際格式、reader 名稱／版本／能力結果，並逐 entry 保存相對路徑、size 與解壓後 SHA-256，讓中斷續跑可判定現有 staging 是否能重用；回讀成功後再原子複製為 `review-artifacts/extraction-manifest.json`，供 staging 清理後驗證。安裝動作只精確搬移唯一 MOD 根目錄，staging manifest 留在原處直到第 11 節完成。
 
 全部前置條件通過後才進入 worktree 修改。此階段的停止點只來自來源損壞、路徑越界、壓縮結構不符、空間不足，或 localization 證據仍無法可靠判讀等外部條件；此時正式 MOD 仍維持原狀。可由工具或來源重試修復者設為 `failed`；需要來源、安全或 localization 決策者設為 `waiting-user`。兩者都先保存 `resume_status` 與完整資料，再釋放鎖。
 
@@ -626,8 +645,11 @@ merged.lua = 以 new.lua 為基礎完成 zh-tw 合併的結果
 
 ```json
 {
-  "schema_version": 3,
-  "operation_id": "<state.operation_id>",
+  "schema_version": 4,
+  "run_id": "<state.run_id>",
+  "merge_epoch": "<state.merge_epoch>",
+  "operation_id": "<artifact-operation-id>",
+  "parent_operation_id": "<preceding-operation-id>",
   "localization_id": "<state.localization_files[].id>",
   "old": {
     "source": "git-blob",
@@ -654,7 +676,7 @@ merged.lua = 以 new.lua 為基礎完成 zh-tw 合併的結果
 }
 ```
 
-`old`／`new` 是不可變的擷取證據；新版新增項目的 `old` 寫為 `null`。每次產生或修正 `merged.lua` 後，只更新 `merged` 的 size/SHA-256。即使後續移除 staging，仍可用 Git blob、archive extraction manifest 與此檔證明 `old.lua`／`new.lua` 的來源。既有 schema version 1／2 artifact 可依第 4.2 節驗證後沿用並補上 localization id；新一輪一律建立 version 3。
+`old`／`new` 是不可變的擷取證據；新版新增項目的 `old` 寫為 `null`。每次產生或修正 `merged.lua` 後，只更新 `merged` 的 size/SHA-256。即使後續移除 staging，仍可用 Git blob、archive extraction manifest 與此檔證明 `old.lua`／`new.lua` 的來源。既有 schema version 1–3 artifact 可依第 4.2 節驗證後重建並補上 localization id 與完整 lineage；新一輪一律建立 version 4。
 
 `merged.lua` 必須沿用 `new.lua` 的文字編碼、BOM 與換行格式。console 輸出僅作診斷提示；正式判定以回讀檔案後的解析結果及 byte-level 編碼檢查為準。
 
@@ -672,7 +694,9 @@ merged.lua = 以 new.lua 為基礎完成 zh-tw 合併的結果
 4. `Darktide Translation Workspace/Rules/zh-tw_revision_rules.md`
 5. 目標 MOD、檔案或 key scope 實際相交的專案規則；沒有時記為 `none`
 
-`source_sync` 採穩定翻譯邊界：只有 localization key 為新版新增，或既有 key 的英文原文、placeholder、lookup、markup、函式結構出現語意相關變動時，才可新增或修改 active `zh-tw`。既有 key 的來源未變時，不論 AI、上游 `zh-tw` 或 Review 是否提出用詞、標點、語序、自然度或風格改善，都必須完整保留基準版本的 `zh-tw`，並納入 `unchanged_key_count` 彙總；品質改善另走獨立翻譯排程，或取得使用者明確授權後處理。
+`source_sync` 採穩定翻譯邊界，但規則優先序明確如下：排程與 initial/base rules 對「缺少可用 active `zh-tw`」的 `FIRST_TRANSLATION` 判定，高於本流程避免品質潤飾的穩定邊界。因此下列 unit 必須進入 target set：新版新增 key、既有 key 的英文原文／placeholder／lookup／markup／函式結構有語意相關變動，以及基準版本缺少、空白、英文複製或其他不可用 active `zh-tw` 的既有 key。最後一類即使來源未變仍套用 `FIRST_TRANSLATION` 並建立可用繁中，不得延後。
+
+只有「來源未變且基準版本已有可靠 active `zh-tw`」的既有 key 才適用穩定保留：不論 AI、上游 `zh-tw` 或 Review 是否提出用詞、標點、語序、自然度或風格改善，都完整保留基準版本的 `zh-tw`，並納入 `unchanged_key_count`；品質改善另走獨立翻譯排程，或取得使用者明確授權後處理。
 
 相同穩定原則適用於 README 的既有中文功能摘要：MOD 更新流程不得僅因翻譯或文案偏好改寫；只有來源功能語意改變、新增說明需求或使用者明確授權時才調整。版本、日期、檔名與雜湊等來源事實仍依本流程更新。
 
@@ -686,8 +710,11 @@ merged.lua = 以 new.lua 為基礎完成 zh-tw 合併的結果
 
 ```json
 {
-  "schema_version": 1,
-  "operation_id": "<state.operation_id>",
+  "schema_version": 2,
+  "run_id": "<state.run_id>",
+  "merge_epoch": "<state.merge_epoch>",
+  "operation_id": "<artifact-operation-id>",
+  "parent_operation_id": "<preceding-operation-id>",
   "mode": "source_sync",
   "base_commit": "<state.base_oid>",
   "rule_files": [
@@ -700,7 +727,7 @@ merged.lua = 以 new.lua 為基礎完成 zh-tw 合併的結果
     "changed_source_key_count": 0,
     "changed_upstream_zh_tw_key_count": 0,
     "unchanged_key_count": 0,
-    "deferred_unchanged_missing_zh_tw_count": 0,
+    "missing_or_unusable_zh_tw_key_count": 0,
     "target_key_count": 0
   },
   "counts": {
@@ -727,7 +754,7 @@ merged.lua = 以 new.lua 為基礎完成 zh-tw 合併的結果
 }
 ```
 
-target units 只包含新增 Key，以及英文原文、placeholder、lookup、markup 或函式結構有語意相關變動的既有 Key。上游只新增、移除或改變 `zh-tw`，但來源原文與執行結構未變時，不得納入 target set，也不得產生繁中 diff；既有可靠 `zh-tw` 從基準版本完整保留。其餘來源未變的 Key 以 `unchanged_key_count` 彙總，不逐筆寫入。每個 target unit 保存 key、狀態、結果與簡短原因即可；英文全文、繁中全文與一般翻譯推理留在 loc diff，不重複寫入 artifact。
+target units 包含新增 Key、英文原文／placeholder／lookup／markup／函式結構有語意相關變動的既有 Key，以及基準版本缺少或只有不可用 active `zh-tw` 的既有 Key。最後一類計入 `missing_or_unusable_zh_tw_key_count`，逐筆以 `FIRST_TRANSLATION` 處理。上游只新增、移除或改變 `zh-tw`，但基準已有可靠繁中且來源原文與執行結構未變時，不得納入 target set，也不得產生繁中 diff；既有可靠 `zh-tw` 從基準版本完整保留。其餘來源未變且已有可靠繁中的 Key 以 `unchanged_key_count` 彙總，不逐筆寫入。每個 target unit 保存 key、狀態、結果與簡短原因即可；英文全文、繁中全文與一般翻譯推理留在 loc diff，不重複寫入 artifact。
 
 ### 10.2 合併工具與結構 self-test
 
@@ -753,23 +780,23 @@ bundle 包含本輪 merger、validator、必要 parser dependency 與 fixtures�
 
 self-test 驗證輸出可解析、非 `zh-tw` 語意不變，且 `zh-tw` 位於自己的直接欄位。結果保存到 `review-artifacts/validator-self-test.json`；所有 fixture 通過後才對真正的 `old.lua`／`new.lua` 執行合併。
 
-`validator-self-test.json` 同時記錄 merger/validator SHA-256、fixture version、執行時間與各案例結果。同一流程執行期間，可重用相同程式 SHA-256 與 fixture version 的通過結果；merger、validator 或 fixture 任一內容改變時重新執行 self-test。每個 MOD 的 review artifacts 都保存本次採用的結果副本。
+`validator-self-test.json` 頂層保存 schema version、`run_id`、`merge_epoch`、自己的 `operation_id`／`parent_operation_id`，並記錄 merger/validator SHA-256、fixture version、執行時間與各案例結果。同一流程執行期間，可重用相同程式 SHA-256 與 fixture version 的通過結果；merger、validator 或 fixture 任一內容改變時重新執行 self-test。每個 MOD 的 review artifacts 都保存本次採用的結果副本。
 
 ### 10.3 逐 unit 合併與判定
 
 1. 將 `new.lua` 完整複製為 `merged.lua`。
 2. 以 localization key 為單位由 AI 分別閱讀 `old`、`new` 與實際引用情境，先只依來源變動建立 target set，再決定 stage；指令或 diff 輸出只能協助定位，不能代替語意判讀：
-   - `FIRST_TRANSLATION`：新版新增 Key，且沒有可用 active `zh-tw`，或可見內容只有空值、英文原文複製、不可用占位文字。
+   - `FIRST_TRANSLATION`：新版新增 Key，或基準版本中的既有 active unit 沒有可用 `zh-tw`；包含缺少欄位、空值、英文原文複製或不可用占位文字。來源是否改變不影響此 stage。
    - `ZH_TW_REVISION`：新版新增 Key 且已有可用 `zh-tw`，或既有 Key 的來源已改變而舊版／新版仍有可用 `zh-tw`；以既有繁中作為主要審閱文本。
    - `SOURCE_DRIFT`：既有 unit 的新舊英文在動作、對象、觸發條件、範圍、數值、時間、層數、上限、冷卻、效果、限制、例外、placeholder 或函式結構出現機制級差異。
    - 上游刪除的 Key：`merged.lua` 維持新版的 Key 集合，在來源差異摘要記錄移除，逐 unit decisions 聚焦於新版仍存在的內容。
-   - 既有 Key 的來源未變：不屬於 target unit；若基準版本有可靠 `zh-tw`，完整保留並彙總為 unchanged。若缺少或僅有不可用 `zh-tw`，本輪仍不得補譯，寫入 `deferred_unchanged_missing_zh_tw_count` 並另記為獨立翻譯工作的候選；此分類不是 active target 的 `BLOCKED`。
+   - 既有 Key 的來源未變：若基準版本有可靠 `zh-tw`，不屬於 target unit，完整保留並彙總為 unchanged；若缺少或僅有不可用 `zh-tw`，必須納入 target set、計入 `missing_or_unusable_zh_tw_key_count`，以 `FIRST_TRANSLATION` 產生可用繁中。
 3. 依 stage 使用來源順位：
    - `FIRST_TRANSLATION`：新版英文機制與完整語意 → 正式詞彙表 → 其他語系的輔助語境 → 自然臺灣繁中。實際寫入的動作、條件、數值與例外都要能回溯至英文或已核准資料；其他語系獨有的機制資訊只記為來源疑點，繁中維持英文可驗證範圍。
    - `ZH_TW_REVISION`：只有 target eligibility 已由「新版新增」或「來源改變」建立後，才以既有繁中主文 → 新版英文機制核對 → 俄文（存在時）的敘述方式參考 → 正式詞彙表與既有 Review 決策進行判定。來源未變時不得僅因品質改善使用 `CHANGE`。
    - `SOURCE_DRIFT`：先比對舊／新英文、上游差異與可用遊戲資料，以確認後的最新英文機制更新繁中；俄文與其他尚未同步語系只作舊版或輔助參考。來源版本仍有衝突時使用 `BLOCKED:SOURCE_CONFLICT`。
    - Key 仍存在、英文及其執行結構未變，且舊版有可靠 `zh-tw`：無條件把舊版 `zh-tw` 完整保留到 merged，彙總為 unchanged；不得因適用規則、AI 潤飾、上游繁中或 Review 建議改為 `CHANGE`。
-   - 新版自行新增或修改 `zh-tw`，但英文及其執行結構未變：忽略該上游繁中變動並保留舊版 `zh-tw`。只有 Key 新增或來源改變時，才將新版繁中納入 target unit 的 AI 判讀。
+   - 新版自行新增或修改 `zh-tw`，但英文及其執行結構未變：基準已有可靠繁中時忽略上游繁中變動並保留舊版；基準缺少或只有不可用繁中時，該 unit 仍以 `FIRST_TRANSLATION` 進入 target set，新版繁中只作候選並依英文與正式規則驗證。
 4. 詞彙表採查詢式比對：忽略大小寫、將彎引號與直引號視為相同、將缺少撇號的所有格視為同詞，並允許完整詞條出現在較長 UI 文字中。命中正式詞條時使用指定譯名；合理候選尚未收錄時寫入 artifact 的 `term_candidates`，而不是直接修改 `Referneces/Translation.md`。
 5. 每個 unit 使用固定結果：
    - `ADD`：依首次翻譯規則建立可用 active `zh-tw` 或必要繁中 lookup 定義。
@@ -814,7 +841,7 @@ self-test 驗證輸出可解析、非 `zh-tw` 語意不變，且 `zh-tw` 位於�
 1. `single`／`multiple` 模式逐筆回讀 worktree 正式 loc，確認 bytes 與該 id 的 `localization-sources.json` merged size/SHA-256 一致；`none` 將本項記為 `not-applicable`。
 2. 逐檔建立正式 MOD 樹的相對路徑、檔案大小與 SHA-256 清單。
 3. 將檔案集合與 extraction manifest 對照：active localization 路徑只允許等於各自 id 的 `merged.lua`，其餘路徑的大小與 SHA-256 必須完全一致；`none` 則整棵 MOD 樹都必須等於 extraction manifest。這可證明 Git/AI 步驟沒有改動上游程式或遺留舊檔。
-4. 回讀完整 MOD 樹並核對清單；清單完全一致後，將清單先寫入同目錄暫存檔，回讀成功再原子取代 `review-artifacts/install-manifest.txt`。
+4. 回讀完整 MOD 樹並核對清單；manifest 開頭以固定 comment header 保存 `schema_version`、`run_id`、`merge_epoch`、自己的 `operation_id`／`parent_operation_id`，後續逐行才是相對路徑、size 與 SHA-256。清單完全一致後，將完整 manifest 先寫入同目錄暫存檔，回讀成功再原子取代 `review-artifacts/install-manifest.txt`。
 5. 再次解析 MOD 目標絕對路徑，確認它同時：
    - 位於該 MOD 的獨立 worktree 內。
    - 位於 `Warhammer 40,000 DARKTIDE/mods` 下。
@@ -933,8 +960,10 @@ commit 前：
 
 ```json
 {
-  "schema_version": 4,
-  "operation_id": "<state.operation_id>",
+  "schema_version": 5,
+  "run_id": "<state.run_id>",
+  "operation_id": "<artifact-operation-id>",
+  "parent_operation_id": "<preceding-operation-id>",
   "validation_basis": "cached-tree",
   "workflow": {
     "ref": "<state.workflow_ref>",
@@ -953,6 +982,11 @@ commit 前：
     "manifest": "passed",
     "localization": "passed|not-applicable",
     "zh_tw_review": "passed"
+  },
+  "security": {
+    "blocking_count": 0,
+    "accepted_override_count": 0,
+    "accepted_overrides": []
   },
   "syntax_validation": {
     "method": "luac|parser|structural-validator|not-applicable",
@@ -975,7 +1009,7 @@ commit 前：
 
 legacy commit 重建時只將 `validation_basis` 設為 `legacy-head-reconstruction`，並以第 4.2 節的 base/HEAD/artifact 證據填入同一結構。
 
-既有 schema version 1–3 report 可在其他 OID 與驗證證據完整時保留，補齊 workflow、逐 localization syntax evidence 與 `zh_tw_review` scope 結果後升級；新一輪一律建立 version 4。`none` 模式將 localization check 記為 `not-applicable`，`syntax_validation.method` 設為 `not-applicable` 且 `targets` 為空陣列；其餘 manifest、diff 與 Review 證據仍須完成。
+既有 schema version 1–4 report 可在其他 OID 與驗證證據完整時重建，補齊 run/epoch/operation lineage、workflow、security override、逐 localization syntax evidence 與 `zh_tw_review` scope 結果後升級；新一輪一律建立 version 5。`none` 模式將 localization check 記為 `not-applicable`，`syntax_validation.method` 設為 `not-applicable` 且 `targets` 為空陣列；其餘 manifest、diff 與 Review 證據仍須完成。
 
 Commit 訊息：
 
@@ -1069,7 +1103,7 @@ pullRequest {
 
 取得每一筆 Copilot review 的完整 `body`，包括 `<details>` 中的 `Suppressed comments`，只為完成 scope 分流與 thread 對帳。`generated no new comments` 表示沒有新增 inline thread。指向 active localization 的 feedback，只有涉及 `zh-tw`、翻譯資格、placeholder／lookup／markup 或合併結構安全時才進入內容判讀；README／`.hash` 只處理版本、日期、檔名與雜湊等來源事實。其餘 normal、optional、suppressed 或 summary feedback 一般標記 `out-of-scope`，不評估正確性、不形成建議、不重述到 PR；但涉及憑證、路徑逃逸、任意程式執行、惡意載荷或供應鏈安全者一律改標 `security-blocking`，保存最小必要摘要並依第 2.2 節等待使用者，不得直接 resolve。
 
-將所有 inline、summary、optional 與 suppressed feedback 的處理狀態寫入 `review-artifacts/review-feedback.json`。頂層保存 `operation_id`、reviews/threads/comments 的 `pagination_complete`、去重後計數、scope 計數、`security_blocking_count` 與查詢時間。scope 內項目保存 `review_id`、來源類型、path/line、與 `zh-tw` 相關的內容摘要、採用與否、處理方式、理由、thread ID 與 resolved 狀態；`out-of-scope` 項目只保存 review/thread ID、來源類型、path/line、`scope=out-of-scope` 與 resolved 狀態，不保存內容摘要、影響判斷或建議。`security-blocking` 只保存理解與決策風險所需的最小摘要、來源、thread 與使用者決策狀態。此檔只證明 feedback 已完成範圍分流及 thread 對帳，不把一般非目標內容轉化為本流程意見。
+將所有 inline、summary、optional 與 suppressed feedback 的處理狀態寫入 `review-artifacts/review-feedback.json`。頂層保存 schema version、`run_id`、`merge_epoch`、自己的 `operation_id`／`parent_operation_id`、reviews/threads/comments 的 `pagination_complete`、去重後計數、scope 計數、`security_blocking_count`、`accepted_security_override_count` 與查詢時間。scope 內項目保存 `review_id`、來源類型、path/line、與 `zh-tw` 相關的內容摘要、採用與否、處理方式、理由、thread ID 與 resolved 狀態；`out-of-scope` 項目只保存 review/thread ID、來源類型、path/line、`scope=out-of-scope` 與 resolved 狀態，不保存內容摘要、影響判斷或建議。`security-blocking` 只保存理解與決策風險所需的最小摘要、來源、thread 與使用者決策狀態。此檔只證明 feedback 已完成範圍分流及 thread 對帳，不把一般非目標內容轉化為本流程意見。
 
 使用 `gh` 前先執行 `gh auth status`。若尚未登入，依第 5 節轉為 `waiting-user` 並請使用者執行 `gh auth login`；若發生 rate limit 或短暫網路錯誤，保存下一次重試時間、釋放鎖並稍後重試，以完整的 thread-aware 結果完成判定。
 
@@ -1077,7 +1111,11 @@ pullRequest {
 
 ```json
 {
-  "operation_id": "<state.operation_id>",
+  "schema_version": 1,
+  "run_id": "<state.run_id>",
+  "merge_epoch": "<state.merge_epoch>",
+  "operation_id": "<artifact-operation-id>",
+  "parent_operation_id": "<preceding-operation-id>",
   "effort": "balanced",
   "requested_oid": "<review_requested_oid>",
   "requested_at": "<ISO-8601 with timezone>",
@@ -1092,6 +1130,8 @@ pullRequest {
   "review_submitted_at": null,
   "review_commit_oid": null,
   "ui_last_completed_effort": null,
+  "accepted_security_override_count": 0,
+  "accepted_security_overrides": [],
   "verified_at": "<ISO-8601 with timezone>"
 }
 ```
@@ -1119,7 +1159,7 @@ pullRequest {
    - 將 `install-manifest.candidate.txt` 與 `install-manifest.previous.txt` 比較；除了 localization 檔的 size/SHA-256 外，所有非 loc 相對路徑、大小與 SHA-256 必須完全相同。比較通過後才原子取代 `install-manifest.txt`。這項規則讓第 11 節刪除 staging 後仍能可靠驗證 Review 修正只影響 loc。
    - 重新核對 worktree 內完整 MOD 樹與新 manifest 完全一致。
    - 重跑第 12 節，並執行第 13 節的精確 stage、`zh-tw` scoped Codex Review、validation report、commit、push 與遠端 OID 驗證；沿用既有 PR。
-5. scope 內 thread 留下與 `zh-tw` 規則或 metadata 來源相關的可追蹤理由後解決；一般 `out-of-scope` thread 完成 scope 標記後 resolve，不發表內容意見。只有 GitHub 明確要求文字才能 resolve 時，使用固定中性範圍聲明「此流程僅維護 zh-tw，未評估此項」，不得加入技術判斷。`security-blocking` thread 在使用者完成風險決策前保持 unresolved；使用者明確接受、來源移除風險，或決定放棄更新後，將決策與時間寫入 feedback artifact，再依決策 resolve 或結束 PR。
+5. scope 內 thread 留下與 `zh-tw` 規則或 metadata 來源相關的可追蹤理由後解決；一般 `out-of-scope` thread 完成 scope 標記後 resolve，不發表內容意見。只有 GitHub 明確要求文字才能 resolve 時，使用固定中性範圍聲明「此流程僅維護 zh-tw，未評估此項」，不得加入技術判斷。`security-blocking` thread 在使用者完成風險決策前保持 unresolved。只有可覆寫 payload 風險能以第 2.2 節的精確 `allow-install-once` 記錄繼續；核准後重新驗證並將其從 blocking 移至 accepted override。不可覆寫風險只能更換／移除來源或放棄更新。所有決策與時間寫入 feedback artifact，再依結果 resolve 或結束 PR。
 6. 比較處理前後 HEAD：
    - HEAD 已改變：先遞增 `review_cycle`；超過三輪或符合本節無進展條件時轉為 `waiting-user`。其餘情況在 commit 後立即更新 `head_oid`，push 並確認遠端 OID，再對新 HEAD 重新送出 Balanced Review；舊 Review 保留為歷史 feedback，新完成 Gate 使用新 HEAD 的 Review 證據。
    - HEAD 維持相同：完成 scope 分流、scope 內必要回覆與 thread resolution 後，沿用同一 HEAD 已完成的 Balanced Review，直接執行第 14.4 節 Gate。
@@ -1132,7 +1172,7 @@ pullRequest {
 - PR timeline 或 GitHub UI 存在本次 `balanced` request 的結構化／可見證據，event evidence 的 requested OID 等於 `review_requested_oid`；事件文字可因 GitHub 語系或 UI 更新而不同，不以單一英文句子作唯一判定。對應 review 的 `author.login` 必須等於本次實際 requested reviewer，且該帳號由 GitHub metadata 證明為 Copilot Bot；目前觀察值 `copilot-pull-request-reviewer` 只作預設候選，不是永久硬編碼條件。`submittedAt` 必須晚於或等於 `request_event_at`。
 - 該次 Copilot review 的 `commit.oid` 等於 PR `headRefOid` 與 `review_requested_oid`。
 - reviews、reviewThreads 與每個 thread comments 都已完成分頁與 ID 去重，unresolved review thread 數量為 `0`。
-- inline、summary、optional 與 suppressed feedback 均已完成 scope 分流；scope 內已有處理紀錄，`out-of-scope` 只有最小識別與 resolved 證據，沒有內容意見；`security_blocking_count=0`。
+- inline、summary、optional 與 suppressed feedback 均已完成 scope 分流；scope 內已有處理紀錄，`out-of-scope` 只有最小識別與 resolved 證據，沒有內容意見；`security_blocking_count=0`。若 `accepted_security_override_count>0`，每筆都與 state 的一次性 override 完全一致並已出現在 PR 摘要。
 - 最後一次 manifest 與 cached diff 驗證通過；有 active localization 時，每個 id 的 loc 語意與 syntax evidence 也都通過，`none` 不要求 loc 證據。
 - PR 說明已有可讀的 `zh-tw` 審查摘要，讓使用者確認 scope 內採用項目、保留現況理由、翻譯驗證結果與目前 unresolved thread 數；不包含 `out-of-scope` 內容或上游程式意見。
 
@@ -1227,8 +1267,8 @@ pullRequest {
 
 ### Gate A：來源與路徑
 
-- workflow ref／commit／path／SHA 可由同一 Git blob 重建，且等於 state 與 validation report；`merge_epoch`、`base_oid`、`main_sync_oid` 與各 artifact 的 `operation_id` 互相一致。
-- archive、state、worktree 與目標 MOD 絕對路徑都已解析並存在。
+- workflow ref／commit／path／SHA 可由同一 Git blob 重建，且等於 state 與 validation report；state 與所有 artifacts 具有相同 `run_id` 與正確 `merge_epoch`，每個 artifact 保留自己的 `operation_id`／`parent_operation_id`，並能依 parent chain、stage 順序及 OID／SHA 證據回溯到目前 state checkpoint。不同階段 operation ID 不要求相等。
+- archive、state、worktree 與目標 MOD 絕對路徑都已解析並存在；`security_overrides` 只包含第 2.2 節定義的精確一次性核准，且每筆 run/archive/source/path/file SHA 全部吻合。不可覆寫風險與未核准 payload 均為零。
 - archive 搬移前後的 filename、size 與 SHA-256 一致。
 - `review-artifacts/extraction-manifest.json` 記錄實際格式與 reader 證據，等於通過安全解壓檢查的 staging manifest，並能在 staging 清理後重建新版原始樹的路徑、size 與 SHA-256 證據。
 - `single`／`multiple` 模式中，每個 `localization_files[].id` 都有唯一的 `review-artifacts/localization/<id>/`；sources 的 old/new 相對路徑分別等於該 state entry，`old.lua`（若適用）等於固定 `base_oid`，`new.lua` 等於 extraction manifest，`merged.lua` 等於目前 merged 紀錄。
@@ -1240,11 +1280,11 @@ pullRequest {
 `single`／`multiple` 模式對每個 `localization_files[].id` 逐檔套用以下條件並彙總；`none` 模式記錄 `not-applicable` 後通過本 Gate，不要求虛構 localization artifact。
 
 - `parsed_new_total_key_count` 等於 `parsed_merged_total_key_count`。
-- `unclassified_missing_zh_tw`、target set 中 unresolved active-text `BLOCKED`、duplicate `zh-tw`、target set 中 empty active `zh-tw`、direct-depth errors、separator errors、non-`zh-tw` semantic differences、placeholder multiset mismatches、lookup failures 與必要 marker mismatches 全部為零；官方 fallback 與無語意 unit 以 `SKIP` 明確分類。來源未變且原本缺少／不可用 `zh-tw` 的非 target unit 必須完整計入 `deferred_unchanged_missing_zh_tw_count`，不得混入未分類缺漏。
+- `unclassified_missing_zh_tw`、target set 中 unresolved active-text `BLOCKED`、duplicate `zh-tw`、target set 中 empty active `zh-tw`、direct-depth errors、separator errors、non-`zh-tw` semantic differences、placeholder multiset mismatches、lookup failures 與必要 marker mismatches 全部為零；官方 fallback 與無語意 unit 以 `SKIP` 明確分類。所有缺少／不可用 active `zh-tw` 的有效文字 unit 都已納入 target set、計入 `missing_or_unusable_zh_tw_key_count` 並以 `FIRST_TRANSLATION` 完成，沒有延後或未分類項目。
 - `validator-self-test.json` 顯示所有 multiline、separator、encoding 與 round-trip fixtures 通過。
 - `localization-decisions.json` 記錄 `source_sync`、基準 commit、規則檔 SHA-256、適用專案規則、scope 計數，以及每個 target unit 的 stage/result/reason；target set 與 old/new/merged 實際差異一致。
 - Git diff 只用來建立檔案與 unit 候選；AI 已解析 old/new 完整 key 集合、逐一比對每個共用 unit 的完整 localization expression 並判讀來源語意，沒有以行級 diff 自動決定翻譯或排除未出現在 diff 的 unit。
-- target set 只包含新增 Key 或來源原文／執行結構改變的 Key；來源未變的既有 `zh-tw` 與 README 中文功能摘要均未因潤飾、風格、上游繁中或 Review 建議產生 diff。
+- target set 只包含新增 Key、來源原文／執行結構改變的 Key，以及基準缺少／不可用 active `zh-tw` 的 Key；來源未變且已有可靠繁中的既有 `zh-tw` 與 README 中文功能摘要均未因潤飾、風格、上游繁中或 Review 建議產生 diff。
 - 所有新增、原文改變、`SOURCE_DRIFT` 或 lookup 變動的 key 已搜尋完整新版 MOD 的引用情境。
 - 詞彙表命中項目使用指定譯名；候選詞留在 artifact，工作文件維持於 MOD PR 之外。
 - `merged.lua` 保留 `new.lua` 的 encoding、BOM 與 newline。
@@ -1262,6 +1302,6 @@ pullRequest {
 - PR 為 OPEN、非 Draft，base/head 正確。
 - `head_oid`、`review_requested_oid`、PR `headRefOid` 與本次 Balanced request 對應 review 的 `commit.oid` 全部一致。
 - `review-evidence.json` 的 effort、request event 來源／可見證據／時間、實際 requested Copilot reviewer、review ID 與 commit OID 通過第 14.4 節條件；`review_cycle` 未超過自動修正上限。
-- reviews、threads 與 comments 分頁全部完成，unresolved thread 為零；`review-feedback.json` 顯示 normal、optional、suppressed 與 summary feedback 均已完成 scope 分流，scope 內項目已處理，`out-of-scope` 只保存最小對帳證據，且 `security_blocking_count=0`。
+- reviews、threads 與 comments 分頁全部完成，unresolved thread 為零；`review-feedback.json` 顯示 normal、optional、suppressed 與 summary feedback 均已完成 scope 分流，scope 內項目已處理，`out-of-scope` 只保存最小對帳證據，且 `security_blocking_count=0`；任何 accepted security override 都與 state/validation/PR 摘要一致。
 - PR 說明提供可讀的 `zh-tw` Review 摘要，內容足以理解 scope 內採用、保留、翻譯驗證與 unresolved thread 數；不包含 `out-of-scope` 意見，也不以固定標題或模板作為完成判定。
 - `reviewed_oid` 寫入同一 HEAD 後，state 才能設為 `awaiting-user-merge`。
