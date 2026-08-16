@@ -28,12 +28,30 @@ git show "<state.workflow_commit_oid>:AI Prompt/AI-Auto-Update-MOD-Review-Baseli
 
 只有會造成同一 MOD 多 active generation／多重寫入／stale downgrade、缺少 same-run crash recovery 而永久 deadlock、舊 generation 刪除新 owner lock、不同 MOD 交叉污染、`Finished`／queue shared destination race、其他共享資源競態、死鎖，或單一 MOD 阻塞全體的具體問題屬於併發 finding。未影響上述不變條件的一般框架選擇、理論擴充、效能調校或跨機器架構建議均為 `out-of-scope`。
 
+### 1.2 不可削弱的核心需求：實際 Git 變更可自動驗證
+
+自動更新的正確性必須由本輪實際產生的 Git tree／Candidate Commit、明確版本區間的 Git diff 與權威來源證據自動判定；不得以只 Review 流程文件、預期操作、空的 worktree diff，或要求使用者再手動更新一次作為完成證據。
+
+最低驗證模型固定為：
+
+- archive 與 staging 必須先通過主流程的安全、identity 與 extraction manifest Gate，才可在隔離 worktree 建立 Candidate Commit；不得為了取得 diff 而先 Commit 未通過安全檢查的來源。
+- 實際安裝順序必須能證明：完整移除單一舊 MOD directory、以已驗證新版 MOD root 完整覆蓋、只套用核准的 active `zh-tw`、再更新 README 對應區段與該 MOD hash。
+- 每個 Candidate Commit 必須固定記錄 `base_oid`、`candidate_oid`／`candidate_tree_oid` 與 allowlist，並以 `base_oid..candidate_oid` 或等價的明確 immutable tree 比較取得 diff；不得使用 Commit 後通常為空的無參數 worktree diff 代替。
+- Candidate Gate 必須將實際 Git tree 同 extraction/install manifest 對帳，證明檔案集合無舊檔殘留或來源遺漏、非 localization bytes 等於新版來源、active localization 只含核准變更、README／hash metadata 正確，且沒有 allowlist 外異動。
+- 驗證證據至少綁定 run ID、固定 workflow/Baseline、archive SHA、`base_oid`、candidate tree、實際 diff、manifest 與 validation report SHA；後續應能從本輪 Git／PR 與保存的 artifacts 判定結果，不必人工重做同一次更新。
+- Candidate Gate 未通過時不得把該 Commit 視為可 Push／PR 的完成版本。可修正 finding 必須建立修正後的新 HEAD 並重跑完整 Gate；安全、identity 或無法可靠修正的問題必須依主流程回滾或停在 `waiting-user`，不得以人工確認取代證據。
+- 任一 Candidate Commit、HEAD、tree、manifest 或 report 改變，都使先前 Candidate Review 失效。已發布的 branch 不得用 reset、rebase 或 force-push 隱藏失敗；依主流程追加修正或 revert 證據。
+- Candidate Commit、Diff Review、修正與回滾都必須維持第 1.1 節的 MOD identity reservation 與每 MOD 隔離；不得為此把不同 MOD 改成全域序列執行。
+
+只有會造成實際更新無法由固定 Git tree／diff 與來源證據判定、Candidate 與驗證證據不一致、錯誤版本被 Push／建立 PR、修正後沿用舊 Review、越界寫入，或仍需人工重做才能發現錯誤的具體問題屬於本節 finding。純粹偏好的 Commit 拆分、diff 顯示工具或歷史美化建議均為 `out-of-scope`。
+
 ## 2. 共同版本基準
 
 同一次本地與外部 Review 必須對應完全相同的：
 
 - PR `headRefOid` 與本機／遠端 branch HEAD。
 - `state.base_oid`、`merge_epoch` 與 `validation-report.json.cached_tree_oid`。
+- Candidate Gate 的 `base_oid`、`candidate_oid`／`candidate_tree_oid`、明確版本區間 diff、manifest 與 validation report SHA／結果。
 - workflow commit/path/SHA、本檔 blob/SHA，以及實際採用規則檔 SHA-256。
 - `localization_mode` 與 active `localization_files[].id`。
 - 每個 active id 的 `new.lua`／`merged.lua` SHA、target keys、unit stages 與 counts。
@@ -45,7 +63,7 @@ git show "<state.workflow_commit_oid>:AI Prompt/AI-Auto-Update-MOD-Review-Baseli
 Reviewer 只使用完成判定所需的最小權威輸入：
 
 1. state 中固定的 workflow、本基準、base／HEAD、mode 與 active localization 清單。
-2. cached diff、extraction/install manifest 與 validation report。
+2. Candidate Commit 的明確 `base_oid..candidate_oid` diff、extraction/install manifest、validation report，以及它們綁定相同 candidate tree 的證據。
 3. 每個 active id 的 `new.lua`、`merged.lua`、localization sources 與 decisions；`old.lua` 只用於判定既有翻譯與來源變動。
 4. 正式翻譯規則、詞彙表與 target unit 的必要引用情境。
 5. README 對應區段、正式 `.hash` 及其 Nexus/archive 來源事實。
@@ -64,6 +82,7 @@ Reviewer 只使用完成判定所需的最小權威輸入：
 5. README 版本／日期／網址與正式 `.hash` 的檔名、版本、size、SHA 是否和權威來源一致。
 6. 是否出現主流程第 2.2 節的憑證、任意命令執行、路徑逃逸、惡意載荷或供應鏈風險。
 7. 併發隔離是否保持：不同 MOD 可同時處理；同一 MOD 只有一個 active generation／identity reservation／writer；lock→state crash window 與 active worker 死亡都能以相同 run ID reattach，不會永久 deadlock或產生替代 generation；等待合併不會產生 stale downgrade，舊 run 不會刪除新 owner lock；lock、state、來源、artifacts、branch、worktree 與 PR 不會跨 MOD 混用；`Finished`／queue 搬移沒有 shared destination race；單一 MOD 的等待或失敗不會阻擋其他無衝突 MOD。
+8. 實際 Candidate Commit 是否由已驗證來源完整替換舊 MOD，且 `base_oid..candidate_oid` diff、candidate tree、manifest、README／hash 與 validation evidence 能在不人工重做更新的前提下共同證明結果；Gate 失敗時是否阻止 Push／PR，修正後是否對新 HEAD 重跑。
 
 一般非 `zh-tw` 程式功能、設計、效能、品質、命名、註解、格式或風格不在共同審查問題內。未影響第 7 項不變條件的一般併發框架、效能與擴充建議也不在範圍內。
 
@@ -84,7 +103,7 @@ Reviewer 身分、措辭、信心或建議數量不改變分類。只有偏好�
 - location：目前 HEAD 的 localization id/key、README／`.hash` 精確 path/欄位，或併發問題所涉及的 workflow section、state、lock、branch、worktree、PR／共享資源。
 - violated baseline：違反的主流程規則、Gate 或本檔審查問題。
 - evidence：目前共同版本基準中的實際值、bytes、SHA、expression 或來源事實。
-- consequence：可驗證的錯譯、遺漏、結構錯誤、越界寫入、metadata 不一致、安全風險、stale downgrade、lock owner 誤刪、缺少 same-run recovery 造成的永久 deadlock、shared destination race 或跨 MOD 污染／阻塞。
+- consequence：可驗證的錯譯、遺漏、結構錯誤、越界寫入、metadata 不一致、安全風險、Candidate tree／diff／manifest 證據不一致、錯誤版本被 Push／建立 PR、仍需人工重做才能發現錯誤、stale downgrade、lock owner 誤刪、缺少 same-run recovery 造成的永久 deadlock、shared destination race 或跨 MOD 污染／阻塞。
 - disposition：`adopt`、`keep` 或 `security-blocking`；`out-of-scope` 不形成 finding。
 
 沒有 actionable finding 時明確記錄 `none`。不得為了產生意見而重述已通過的 Gate、評論非目標程式，或把翻譯偏好包裝成正確性問題。
@@ -94,6 +113,7 @@ Reviewer 身分、措辭、信心或建議數量不改變分類。只有偏好�
 送出外部 Review 前，PR 說明的審查摘要至少列出：
 
 - 目前 HEAD。
+- Candidate Gate 的 base/candidate OID、candidate tree、validation report SHA 與通過結果。
 - 本基準 path/SHA。
 - active localization ids。
 - target／unchanged／BLOCKED 計數。
