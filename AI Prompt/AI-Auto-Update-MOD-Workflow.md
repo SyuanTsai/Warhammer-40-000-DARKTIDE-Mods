@@ -10,9 +10,10 @@
 → 建立獨立 worktree 與 Update/<MOD-slug> 分支
 → 比對正式 hash 與 README metadata
   ├─ 已是最新 → 歸檔來源並清理，以無更新結果結束
-  └─ 需要更新 → 解壓縮與檢查新版
-     → 只合併 zh-tw
-     → 刪除舊 MOD 後完整安裝新版
+  └─ 需要更新 → 安全解壓縮與檢查新版
+     → 刪除舊 MOD 後搬入乾淨新版
+     → 以固定 Git base 與 Git diff 取得舊資料及變更候選
+     → AI 逐 localization unit 判讀並只合併 zh-tw
      → 驗證、Commit 與 Push
      → 建立非 Draft PR
      → Copilot Balanced Review
@@ -28,11 +29,11 @@
 2. 只主動維護本地化：
    - 非 loc 檔案依新版壓縮檔原樣替換。
    - 上游程式邏輯維持新版壓縮檔內容。
-   - Review 發現程式問題時，在 PR 記錄「供上游後續處理」，本 PR 維持本地化範圍。
+   - Review 對上游程式提出的功能、設計或維護意見，由 AI 說明影響與證據並在 PR 記錄「供上游後續處理」；本 PR 不改寫上游程式，維持本地化更新範圍。
 3. 合併工具的可寫入語系為 `zh-tw`。`en`、`zh-cn`、`ru` 及其他語系完整取自新版壓縮檔。
    - 插入位置以完整欄位表達式與 localization table depth 為依據；Lua localization 的值可能是跨行的 `string.format`、字串串接或函式呼叫。
    - 必須先解析完整欄位表達式與 localization table depth，再替換或插入 `zh-tw`。
-4. MOD 採乾淨安裝：完整移除舊目錄後，只放入新版待安裝樹與完成合併的 loc。
+4. MOD 採乾淨安裝：新版先在 staging 通過安全檢查，再完整移除舊目錄並搬入新版原始樹；舊版 loc 從固定 `base_oid` 的 Git blob 取得，Git diff 只提供變更候選與 PR 摘要，翻譯資格與內容仍由 AI 逐 localization unit 判讀。完成合併後，正式 MOD 只包含新版樹與合併後的 loc。
 5. 每個 PR 只包含一個 MOD、README 對應區段與該 MOD 的正式 `.hash`。
 6. PR 以非 Draft 建立並停在可合併狀態，由使用者執行最終合併。
 7. Review 建議先與 `Referneces/Translation.md`、原文實際使用情境及本流程維護範圍交叉查證；採用有依據的建議，其他建議則回覆判定依據並保留經查證的內容。
@@ -44,7 +45,7 @@
 | Claim | 根目錄來源檔、README/Nexus 即時資料 | archive SHA-256、精確 MOD/loc 路徑 | `claimed` |
 | 無更新判定 | `origin/main` 正式 hash、README、Nexus metadata | 全部穩定欄位一致時直接歸檔 | `already-current` |
 | Git 隔離 | 需要更新的來源、branch/PR/worktree 查詢 | 乾淨獨立 worktree 與 `base_oid` | `worktree-ready` |
-| 安裝 | old/new/merged、中文規則、manifest | 待安裝樹與 worktree 完整一致 | `installed` |
+| 安裝 | `base_oid` Git blob、新版 worktree、old/new/merged、中文規則、manifest | 新版樹已乾淨替換、AI 合併完成且 worktree 與 manifest 完整一致 | `installed` |
 | 發佈 | cached diff、commit、remote、PR | tree OID、remote OID、非 Draft PR | `committed` → `pushed` → `pr-open` |
 | 審查 | Balanced request、review 與 threads | 最新 HEAD 的完整 feedback 與零 unresolved | `review-requested` → `awaiting-user-merge` |
 | 歸檔 | MERGED PR、main 正式 hash | `Finished` 來源、worktree/branch 清理 | `merged` → 移除 state |
@@ -72,15 +73,18 @@ AI Auto Update/
 │     │  └─ <完整原始檔名>
 │     ├─ staging/
 │     └─ review-artifacts/
-│        ├─ old.lua
-│        ├─ new.lua
-│        ├─ merged.lua
+│        ├─ localization/
+│        │  └─ <localization-id>/
+│        │     ├─ old.lua               # 新增 localization 時不存在
+│        │     ├─ new.lua
+│        │     ├─ merged.lua
+│        │     ├─ localization-sources.json
+│        │     └─ localization-decisions.json
+│        ├─ extraction-manifest.json
 │        ├─ install-manifest.txt
 │        ├─ install-manifest.previous.txt  # 只有 Review 修正時暫存上一版
 │        ├─ install-manifest.candidate.txt # 只有 Review 修正時暫存候選版
-│        ├─ localization-sources.json
 │        ├─ validator-self-test.json
-│        ├─ localization-decisions.json
 │        ├─ validation-report.json
 │        ├─ review-evidence.json
 │        └─ review-feedback.json
@@ -156,6 +160,12 @@ AI Auto Update/
 - `git check-attr eol -- .hash/test.hash .hash/test.pending.hash` 兩者都回報 `eol: lf`。
 - 主工作區的流程文件、`.gitignore` 與 `.gitattributes` 已提交，`git status --porcelain` 為空。
 
+### 3.5 Workflow 版本基準
+
+Workflow 規則的專用歷史分支為 `codex/AI-Auto-Update-Workflow-Hash`；它只保存流程文件與直接相關的基礎設定，不作為 MOD 更新分支。每個新 MOD claim 時解析該 ref 的 commit OID，以 `git show <workflow-commit-oid>:<workflow-path>` 讀取已提交的流程 bytes 並計算 SHA-256，再把 ref、commit、path 與 SHA 寫入 state。後續續跑一律使用 state 指定且 Git object database 仍可讀取的同一份 blob；工作樹尚未提交的流程草稿不會靜默改變進行中 MOD 的判讀規則。
+
+專用 branch ref 暫時不可用但 state 的 commit OID 與 blob 仍可驗證時，繼續使用該固定 commit；兩者都無法提供可讀取的流程 bytes 時，保留現況並請使用者補回基準。這項固定只處理規則來源可追溯性，不限制 AI 在規則允許範圍內選擇最合適的方法。
+
 ## 4. 鎖與狀態
 
 ### 4.1 互斥鎖
@@ -171,6 +181,7 @@ AI Auto Update/In Progress/.locks/<MOD-slug>.lock/
 
 - lock directory 已存在代表另一個 worker 持有該 MOD；目前 worker 保留現況並繼續其他 MOD。
 - 每個會寫入檔案、Git 或 GitHub 的主要步驟前更新 heartbeat。
+- 只要目前 worker 仍持有鎖，包含等待 Browser、GitHub API、Copilot Review 或其他外部結果期間，至少每 3 分鐘更新一次 heartbeat；可用低於 3 分鐘的輪詢同時完成，禁止讓長時間等待留下過期 heartbeat。已依下一點釋放鎖時不再更新。
 - 等待 Review 或使用者合併時釋放鎖，狀態仍保留；繼續處理前重新取得鎖。
 - 鎖超過 30 分鐘沒有 heartbeat 時，先檢查 worktree、Git process 與 task。只有證據確認原 worker 已結束，才接管並重建該精確鎖；其餘情況保留鎖並處理其他 MOD。
 
@@ -178,16 +189,29 @@ AI Auto Update/In Progress/.locks/<MOD-slug>.lock/
 
 狀態檔以同目錄暫存檔寫完且通過 JSON 解析後，再取代正式檔，避免寫到一半：
 
+state 與 review artifacts 是代理續跑與稽核用的內部紀錄，使用者不需手動維護。可用共用 writer/helper 時，必須由同一 writer 產生、解析並核對 OID、時間與 status 的跨檔一致性後再原子取代；沒有 helper 時仍依各節規定逐檔原子寫入並立即回讀驗證。這項規則處理的是「多個紀錄分次寫入可能彼此不一致」的風險，不代表 MOD 內容或翻譯本身有問題。
+
 ```json
 {
-  "schema_version": 3,
+  "schema_version": 5,
   "mod": "<MOD-name>",
   "mod_slug": "<MOD-slug>",
   "repo_mod_directory": "<exact-directory-name>",
   "readme_heading": "<exact-README-heading>",
   "mod_relative_path": "Warhammer 40,000 DARKTIDE/mods/<exact-directory-name>",
-  "old_localization_relative_path": "<path-relative-to-MOD-root>",
-  "new_localization_relative_path": null,
+  "localization_mode": "none|single|multiple",
+  "localization_files": [
+    {
+      "id": "<stable-localization-id>",
+      "old_relative_path": "<path-relative-to-MOD-root-or-null>",
+      "new_relative_path": null,
+      "evidence": []
+    }
+  ],
+  "workflow_ref": "codex/AI-Auto-Update-Workflow-Hash",
+  "workflow_commit_oid": "<commit-oid>",
+  "workflow_path": "AI Prompt/AI-Auto-Update-MOD-Workflow.md",
+  "workflow_sha256": "<sha256>",
   "nexus_id": "<Nexus-ID>",
   "nexus_url": "<Nexus-MOD-URL>",
   "nexus_last_updated_raw": "<verbatim-page-value>",
@@ -207,7 +231,7 @@ AI Auto Update/In Progress/.locks/<MOD-slug>.lock/
   "archive_path": "<absolute-current-path>",
   "archive_size": 0,
   "archive_sha256": "<sha256>",
-  "archive_format": "zip|rar|7z",
+  "archive_format": "<signature-detected-format>",
   "archive_last_write_time_utc": "<UTC ISO-8601>",
   "pr_number": null,
   "pr_url": null,
@@ -227,6 +251,8 @@ AI Auto Update/In Progress/.locks/<MOD-slug>.lock/
   "updated_at": "<ISO-8601 with timezone>"
 }
 ```
+
+`localization_files` 是所有模式唯一的 active localization 路徑權威清單；`none` 為空陣列，`single` 有一筆，`multiple` 有多筆。每個 `id` 在該 MOD state 內保持穩定：初始 claim 時 `new_relative_path` 可為 `null`，新版配對完成後每筆 new path 都必須存在；`old_relative_path=null` 表示新版新增。新版移除的舊 loc 由 Git diff 與 manifest 記錄，不放入 active 清單。不再另外維護會與清單分歧的單檔相容欄位。
 
 狀態只使用：
 
@@ -269,11 +295,11 @@ claimed
 - 狀態細節記錄在既有欄位、`last_error` 或 review artifacts，`status` 維持使用上述固定集合。
 - `review_effort` 在送審時固定為 `balanced`；`review_requested_at` 與 `review_completed_at` 使用含時區的 ISO-8601。
 
-既有 schema version 1／2 state 將新增欄位視為 `null`。先以 state、branch、worktree、archive SHA-256、Git tree 中唯一 MOD 目錄與 PR（若已建立）完成唯一對應，再補齊精確 MOD/loc 路徑並從 Nexus 即時頁面補齊網站欄位。`awaiting-user-merge` 的 Review 欄位另由 PR timeline、review `submittedAt`／`commit.oid` 與 Browser Balanced 證據重建；證據完整時原子升級為 version 3，證據仍待補齊時先回到 `review-changes` 重新驗證與送審。升級只新增可由權威來源唯一重建的資料，原始 state 先保留備份到同一 MOD 的 review artifacts，直到新版 state 通過解析與對帳。
+既有 schema version 1–4 state 先以 state、branch、worktree、archive SHA-256、Git tree 中唯一 MOD 目錄與 PR（若已建立）完成唯一對應，再由舊單檔欄位或實際載入證據建立 `localization_files`，並以本節的 workflow branch／commit/blob 證據補齊 workflow 欄位。`awaiting-user-merge` 的 Review 欄位另由 PR timeline、review `submittedAt`／`commit.oid` 與 Browser Balanced 證據重建；證據完整時原子升級為 version 5，證據仍待補齊時先回到 `review-changes` 重新驗證與送審。升級只加入可由權威來源唯一重建的資料，原始 state 先保留備份到同一 MOD 的 review artifacts，直到新版 state 通過解析與對帳。
 
-legacy artifacts 的來源證據可重新建立：`old.lua` 與 `state.base_oid:<old-loc-path>` 比對；archive 重新解壓到唯一暫存目錄後，將原始 loc 與 `new.lua` 比對；`merged.lua` 與 PR HEAD 的正式 loc 比對。三者一致後建立 `localization-sources.json`，再以目前規則重跑 decisions、validator 與 Codex Review。既有 commit 可用 `validation_basis=legacy-head-reconstruction`，以 `HEAD^{tree}`、`git show` path allowlist 與重跑結果建立 `validation-report.json`；新流程一般使用 `validation_basis=cached-tree`。重建結果使 HEAD 改變時重新 commit/push/Balanced Review，HEAD 維持相同且既有 Balanced 證據完整時可沿用該 Review。
+legacy artifacts 的來源證據可逐 localization 重建：`old.lua` 與 `state.base_oid:<old-loc-path>` 比對；archive 重新解壓到唯一暫存目錄後，將原始 loc 與 `new.lua` 比對；`merged.lua` 與 PR HEAD 的正式 loc 比對。三者一致後，為每個 id 建立 `review-artifacts/localization/<id>/` 的 sources 與 decisions；舊單檔 root artifacts 驗證通過後可作為該唯一 id 的輸入，不直接覆寫。再以目前規則重跑 validator 與 Codex Review。既有 commit 可用 `validation_basis=legacy-head-reconstruction`，以 `HEAD^{tree}`、`git show` path allowlist 與重跑結果建立 `validation-report.json`；新流程一般使用 `validation_basis=cached-tree`。重建結果使 HEAD 改變時重新 commit/push/Balanced Review，HEAD 維持相同且既有 Balanced 證據完整時可沿用該 Review。
 
-每次繼續工作前，核對 state 的 MOD、分支、worktree、壓縮檔名、SHA-256、PR 與 Git HEAD。資料一致時續跑；資料尚未一致時保留該 MOD 現況並處理其他 MOD。
+每次繼續工作前，核對 state 的 workflow commit/blob SHA、MOD、分支、worktree、壓縮檔名、SHA-256、PR 與 Git HEAD。資料一致時續跑；專用 workflow branch 已前進不會改變進行中 MOD，仍使用 state 固定的可讀 blob。資料尚未一致時保留該 MOD 現況並處理其他 MOD。
 
 ### 4.3 中斷後狀態對帳
 
@@ -283,7 +309,7 @@ Git commit、push、PR 建立、Browser 送審與檔案搬移無法和 `state.js
 | --- | --- | --- |
 | `claimed`，archive 仍可能在根目錄或 `source/` | 兩個精確位置的 size／SHA-256 | 唯一相符檔案成為 `archive_path`；若兩處均相同，保留 `source/` 並清理根目錄重複檔 |
 | `claimed`，worktree 已存在 | state 的絕對路徑、branch、HEAD、`origin/main` 建立基準與乾淨狀態 | 證據完全一致時補寫 `base_oid` 並轉為 `worktree-ready` |
-| `worktree-ready`，正式 MOD 樹可能正在切換 | `localization-sources.json`、install manifest、worktree 完整樹與精確目標路徑 | manifest 與所有 SHA-256 一致時轉為 `installed`；目標缺少或不完整時依第 11 節精確還原 worktree，再從已驗證 artifacts 重新安裝 |
+| `worktree-ready`，正式 MOD 樹可能已替換但尚未完成 AI 合併 | staging extraction manifest、`base_oid` Git blob、`localization_files` 對應 artifacts（若適用）、install manifest、worktree 完整樹與精確目標路徑 | manifest 與所有 SHA-256 一致，且 active localization 的 merged 證據逐檔一致時轉為 `installed`；`none` 不要求 loc artifacts。任一適用證據缺少或目標不完整時依第 11 節精確還原 worktree，再從已驗證 staging／archive 重跑乾淨替換與 AI 合併 |
 | `already-current`，來源尚未歸檔或 state 尚未清理 | 正式 hash、README/Nexus metadata 與 archive SHA-256 | 只完成第 8.2 節尚未完成的歸檔與清理 |
 | `installed`，但 HEAD 已前進 | `git show HEAD` 的 parent、訊息、日期與 path allowlist；正式 hash 等於來源 SHA-256 | 證據完整時補寫 `head_oid` 並轉為 `committed` |
 | `committed` | 遠端 `Update/<MOD-slug>` OID 等於本機 HEAD | 轉為 `pushed` |
@@ -324,7 +350,7 @@ Git commit、push、PR 建立、Browser 送審與檔案搬移無法和 `state.js
 
 ### 6.2 再盤點新來源
 
-只列出 `AI Auto Update` 根目錄直接包含的 `.zip`、`.rar`、`.7z`，排除 `In Progress`、`Finished`、`.crdownload`、`.part` 與 `.tmp`。
+只列出 `AI Auto Update` 根目錄直接包含、已穩定寫入的普通檔案，排除 `In Progress`、`Finished`、`.crdownload`、`.part`、`.tmp` 與其他明確未完成下載；不以副檔名建立來源白名單。候選檔由 signature／container metadata、Nexus Main file 資訊與安全 reader 能力共同確認。
 
 固定排序：
 
@@ -352,7 +378,19 @@ https://www.nexusmods.com/users/myaccount?tab=download+history
 
 ## 7. 候選檔識別、Nexus 即時核對與取得鎖
 
-1. 從檔名、README 與既有 MOD 目錄解析 MOD 名稱、slug、Nexus ID、README heading、精確 MOD 目錄及現有 `_localization.lua` 相對路徑；所有路徑以 repository/worktree root 為基準正規化後寫入 state。
+Localization 以證據優先順序辨識；這是 AI 閱讀順序，不是檔名白名單：
+
+| 優先 | 識別證據 | AI 判讀方式 |
+| --- | --- | --- |
+| 1 | 既有 state、前次 artifact 或已驗證的 MOD 路徑 | 先確認該路徑仍存在、角色未改變，不因檔名慣例不同而排除。 |
+| 2 | MOD 程式中的載入、註冊或引用關係 | 追蹤 `io_dofile`、localization 註冊、table 匯入與實際 key 使用，判斷哪些檔案會在執行時生效。 |
+| 3 | 檔名與目錄慣例 | `_localization.lua`、`localization.lua`、`loc.lua`、語系名稱或 localization 目錄只用來產生候選。 |
+| 4 | 檔案內容與資料結構 | AI 閱讀 key、語系欄位、lookup、回傳 table 與上下文，確認是否為可合併的 active localization unit。 |
+| 5 | README、版本說明與其他文件 | 作為角色與用途的補充證據，不單獨凌駕實際載入和內容證據。 |
+
+AI 綜合證據後將結果記為 `none`、`single` 或 `multiple`，並把每個確認生效檔案、舊／新相對路徑與簡短證據寫入 `state.localization_files`。零個 localization 是可接受的純上游更新；多個生效檔案則逐檔套用第 9–12 節。只有多個候選在閱讀載入關係與內容後仍無法可靠區分時，才請使用者補充，而不是用檔名或候選數量直接阻擋流程。
+
+1. 從檔名、README 與既有 MOD 目錄解析 MOD 名稱、slug、Nexus ID、README heading、精確 MOD 目錄及 localization 候選；依上述優先表由 AI 確認 active localization 路徑。所有路徑以 repository/worktree root 為基準正規化後寫入 state。
 2. 使用 README 網址開啟 Nexus 即時頁面，核對：
    - 頁面標題與 MOD 一致。
    - Nexus ID 一致。
@@ -362,9 +400,9 @@ https://www.nexusmods.com/users/myaccount?tab=download+history
 3. 同時保存 Nexus 畫面的原始日期文字與正規化 UTC。來源檔名含 `Z` 時，以 UTC 與 `main_file_uploaded_at_utc` 比較；README 逐字保留網站原始顯示，版本判定則以正規化後的時間為準。
 4. README 的日期與版本以 MOD 主頁顯示為準；`.hash` 的版本與檔名以實際 Main file 為準。兩者版本不同時，PR 同時列出兩個網站欄位及來源位置，由可追溯資料表達差異。
 5. 標題、ID 與 Main file 形成唯一配對時繼續；存在多個合理配對且不屬於第 16 節特例時，請使用者決定。
-6. 計算來源檔大小、LastWriteTime UTC 與 SHA-256，並由檔案 signature 判定 `archive_format`。
+6. 計算來源檔大小、LastWriteTime UTC 與 SHA-256，並由檔案 signature／container metadata 判定實際 `archive_format`；副檔名只是提示，不使用固定格式白名單。
 7. 建立該 MOD 的互斥鎖。
-8. 建立 `In Progress/<MOD-slug>/source/` 與 `state.json`；寫入 `repo_mod_directory`、`readme_heading`、`mod_relative_path`、`old_localization_relative_path`、網站核對時間，以及 claim 當下 `Asia/Taipei` 日期的 `maintenance_date`。初始 `archive_path` 指向 `AI Auto Update` 根目錄中的來源檔，狀態為 `claimed`。state 落盤後，該檔案即由此 MOD claim。
+8. 依第 3.5 節解析並驗證 workflow ref／commit／path／SHA，建立 `In Progress/<MOD-slug>/source/` 與 `state.json`；寫入 workflow 證據、`repo_mod_directory`、`readme_heading`、`mod_relative_path`、`localization_mode`、`localization_files`、網站核對時間，以及 claim 當下 `Asia/Taipei` 日期的 `maintenance_date`。初始 `archive_path` 指向 `AI Auto Update` 根目錄中的來源檔，狀態為 `claimed`。state 落盤後，該檔案即由此 MOD claim。
 9. 將壓縮檔搬入 `source/`，重新核對大小與 SHA-256，再原子更新 `state.archive_path`。中途中斷時，續跑程序依 state 同時檢查舊、新兩個精確位置，以 SHA-256 判定已完成的步驟。
 
 ## 8. Git 基準、獨立 worktree 與 `.hash`
@@ -480,59 +518,90 @@ filename=<完整檔名>
 
 pending hash 保留為本地工作資料；更新驗證完成後，以其內容產生納入 commit 的 `.hash/<MOD-slug>.hash`，再精確清除 pending hash。
 
-## 9. 解壓縮、完整目錄比對與 loc 三份狀態
+## 9. 安全解壓、乾淨替換、Git 差異與 loc 三份狀態
 
 ### 9.1 解壓縮前後驗證
 
-從 `state.archive_path` 讀取壓縮檔。解壓縮前後重新計算大小、LastWriteTime UTC 與 SHA-256，必須與 state 一致；再以檔案 signature 確認實際格式為 state 記錄的 `zip`、`rar` 或 `7z`，副檔名只作為候選提示。
+從 `state.archive_path` 讀取來源容器。解壓縮前後重新計算大小、LastWriteTime UTC 與 SHA-256，必須與 state 一致；再以檔案 signature／container metadata 確認實際格式等於 `state.archive_format`，副檔名只作為候選提示。AI 依實際格式選擇本輪 reader；工具名稱或來源類型不固定，但 reader 必須能在寫入前列出 entries，提供路徑、類型、大小與加密資訊，並能解壓到指定暫存目錄。
 
 先列出全部 archive entries，再解壓到唯一的 `In Progress/<MOD-slug>/staging.next-<uuid>/`。既有 `staging/` 的 extraction manifest 與本次 archive SHA-256 完全一致時可直接重用；其餘情況保留至新暫存樹驗證通過，再精確替換。開始前核對 staging 與 worktree 位於同一 volume，並以 entries 的檔案數、解壓後總大小及可用空間確認能容納待安裝樹、worktree 與安全預留量。然後檢查：
 
 - 壓縮檔可完整讀取。
-- archive 未加密，所有 entry 都可由既定解壓工具讀取。
+- archive 未加密，所有 entry 都可由本輪選定 reader 完整讀取；reader 名稱、版本、偵測格式與能力結果保存於 extraction manifest。
 - 每個 archive entry 正規化後都位於暫存 root 內，且使用相對路徑；drive-qualified、UNC、rooted、`..` 越界、Windows reserved device name、alternate data stream、symbolic link、hard link 與 reparse point 均列為結構不符。
 - 只有一個預期 MOD 根目錄。
 - 根目錄名稱與既有 MOD 目錄一致。
-- 有且只有一個以 `_localization.lua` 結尾的 loc 檔。
+- 依第 7 節識別優先表閱讀新版樹，確認 active localization 為 `none`、`single` 或 `multiple`；檔名只產生候選，所有確認路徑都位於唯一 MOD 根目錄內。
 
-驗證通過後，將唯一 loc 的 MOD-root 相對路徑寫入 `state.new_localization_relative_path`，再把暫存樹原子改名為 `staging/`。`staging/.extraction-manifest.json` 位於 MOD 根目錄之外，保存 archive SHA-256、entry 相對路徑、size 與解壓後 SHA-256，讓中斷續跑可判定現有 staging 是否能重用；安裝動作精確搬移唯一 MOD 根目錄，manifest 則留在 staging 管理範圍。
+驗證通過後，AI 將新版 active localization 與舊版清單依載入角色、key 結構及路徑關係配對，更新 `state.localization_mode` 與 `state.localization_files`。接著把暫存樹原子改名為 `staging/`。`staging/.extraction-manifest.json` 位於 MOD 根目錄之外，保存 archive SHA-256、實際格式、reader 名稱／版本／能力結果、entry 相對路徑、size 與解壓後 SHA-256，讓中斷續跑可判定現有 staging 是否能重用；回讀成功後再原子複製為 `review-artifacts/extraction-manifest.json`，供 staging 清理後驗證。安裝動作只精確搬移唯一 MOD 根目錄，staging manifest 留在原處直到第 11 節完成。
 
-全部前置條件通過後才進入 worktree 修改。此階段的停止點只來自來源損壞、路徑越界、壓縮結構不符、空間不足或 loc 數量不符等外部條件；此時正式 MOD 仍維持原狀。將該 MOD 設為 `failed`、把目前狀態寫入 `resume_status`，並完整保留資料供修正或續跑。
+全部前置條件通過後才進入 worktree 修改。此階段的停止點只來自來源損壞、路徑越界、壓縮結構不符、空間不足，或 localization 證據仍無法可靠判讀等外部條件；此時正式 MOD 仍維持原狀。將該 MOD 設為 `failed`、把目前狀態寫入 `resume_status`，並完整保留資料供修正或續跑。
 
-### 9.2 比對完整目錄
+### 9.2 固定 Git 基準與舊 loc
 
-比較 worktree 現有 MOD 與新版解壓縮目錄，列出新增、修改與上游刪除的檔案。這些差異用於 PR 摘要；上游程式內容維持新版原貌，本流程專注維護 `zh-tw` 本地化與 metadata。
+進入 worktree 修改前，確認 worktree 乾淨、目前 HEAD 等於 `state.base_oid`，且該 OID 是可讀取的 commit。舊版權威資料一律取自這個固定 Git tree，不再先複製或逐檔比較 worktree 的舊 MOD 目錄：
 
-待安裝樹完全以新版為基準，因此自然排除新版已移除的舊檔。
+1. 對 `state.localization_files` 中每個有 `old_relative_path` 的項目，使用 `git show <base_oid>:<state.mod_relative_path>/<old-relative-path>` 讀取舊 loc blob，byte-for-byte 寫入該項目的 `old.lua`。
+2. 回讀每個 `old.lua`，確認 Git blob OID、size 與 SHA-256；若 worktree 目前仍有對應舊 loc，另確認其 bytes 與該 blob 一致。任何差異都代表 worktree 並非乾淨基準，停止切換並先釐清。
+3. 舊 MOD 其他檔案不建立副本；需要舊內容時以 `git show <base_oid>:<path>` 精確讀取，復原時由同一 `base_oid` 還原。
 
-### 9.3 loc 三份狀態
+Git 是舊版 bytes 與路徑集合的權威來源，但不是翻譯語意判定器。後續 Git diff 只能標示需要優先閱讀的檔案與 unit 候選，不得以新增／刪除行直接決定原文是否改變或繁中是否可修改，也不得因某個 unit 沒出現在行級 diff 就略過它；AI 仍須解析並逐一比對 old/new 的完整 key 集合與每個共用 unit。
+
+### 9.3 完整刪除舊 MOD 並搬入新版
+
+只有第 9.1–9.2 節全部通過後才切換 worktree：
+
+1. 解析 MOD 目標絕對路徑，確認它位於該 MOD 的獨立 worktree、位於 `Warhammer 40,000 DARKTIDE/mods` 下，且精確等於 state 記錄的單一 MOD 目錄。
+2. 依 extraction manifest 回讀 staging 中的完整新版 MOD 樹；相對路徑、size 與 SHA-256 必須全部一致。
+3. 完整刪除 worktree 內的舊 MOD 目錄，再將 staging 中唯一新版 MOD 根目錄搬入相同精確位置。不得直接將 archive 解壓到 worktree，也不得覆蓋式解壓。
+4. 在尚未修改 loc 前，依 extraction manifest 核對 worktree 內新版原始樹，確認沒有舊檔殘留、遺漏檔案或部分搬移。
+5. 對固定 `base_oid` 與目前未提交 worktree 執行下列 Git 查詢；diff 列出已追蹤檔案的修改／刪除，`ls-files --others` 補齊尚未追蹤的新版檔案。兩者與 extraction manifest 的路徑集合合併後，形成完整新增、修改、刪除與 rename 候選，作為上游變更清單、AI 閱讀入口與 PR 摘要。上游程式內容維持新版原貌。
+
+   ```text
+   git -C "<worktree>" diff --name-status --find-renames <base_oid> -- "<state.mod_relative_path>"
+   git -C "<worktree>" ls-files --others --exclude-standard -- "<state.mod_relative_path>"
+   git -C "<worktree>" diff --stat <base_oid> -- "<state.mod_relative_path>"
+   git -C "<worktree>" diff <base_oid> -- "<state.mod_relative_path>"
+   ```
+
+待安裝樹完全以新版為基準，因此自然排除新版已移除的舊檔。Git diff 不得用來直接還原整份舊 localization；這會覆蓋新版 Key、其他語系或執行結構。只有第 10 節解析後判定來源未變的既有 unit，才可從 `old.lua` 取回該 unit 的可靠 `zh-tw`。
+
+### 9.4 loc 三份狀態
+
+下列三份狀態對新版每個 active localization 分別建立。無論 `single` 或 `multiple`，每個檔案都統一使用 `review-artifacts/localization/<id>/`，避免單檔相容欄位與多檔路徑產生兩套權威來源。後文提到 loc artifact 時，均代表目前 `state.localization_files[]` 項目的這個目錄。新版新增的 localization 沒有 `old.lua`，所有 active unit 以新增來源判讀；新版移除的舊 loc 由 Git diff 與 extraction manifest 記錄，不留在 active 清單，也不產生 `merged.lua`。`none` 模式的 active 清單為空，不建立 `localization/` 子目錄，將 localization 專屬步驟與 Gate B 記為 `not-applicable`，繼續驗證完整上游安裝。
 
 ```text
-old.lua    = worktree 現有 MOD 的 loc
-new.lua    = 新版壓縮檔的原始 loc
+old.lua    = state.base_oid 中既有 MOD 的 loc Git blob
+new.lua    = 乾淨搬入 worktree 後、AI 合併前的新版原始 loc
 merged.lua = 以 new.lua 為基礎完成 zh-tw 合併的結果
 ```
 
 三份 loc 寫入由 `.gitignore` 保護的 `review-artifacts/`，作為 PR 合併前的本地驗證依據。
 
-開始合併前必須先確認三個來源路徑：
+開始合併前必須先確認每個 active localization 的來源路徑：
 
-- `old.lua` 存在，且 SHA-256 等於複製當下的 worktree 舊 loc。
-- `new.lua` 存在，且 SHA-256 等於 staging 新版原始 loc。
-- 輸出路徑由 `state.worktree_path` 與固定目錄模板組成，解析結果精確等於 `In Progress/<MOD-slug>/review-artifacts/merged.lua`。
+- 有舊路徑時，`old.lua` 必須存在，且 Git blob OID、size 與 SHA-256 等於 `state.base_oid:<old-loc-path>`；新版新增項目則在 sources artifact 將 `old` 記為 `null`。
+- 將 worktree 內尚未經 AI 合併的新版原始 loc byte-for-byte 複製為 `new.lua`；其 size/SHA-256 必須等於 extraction manifest 的同一路徑。
+- 輸出路徑由 `state.worktree_path`、`localization_files[].id` 與固定目錄模板組成，解析結果精確等於 `In Progress/<MOD-slug>/review-artifacts/localization/<id>/merged.lua`。
 
-完成 byte-for-byte 複製與回讀後，以原子寫入建立 `review-artifacts/localization-sources.json`：
+完成 byte-for-byte 複製與回讀後，以原子寫入建立該 id 的 `localization-sources.json`：
 
 ```json
 {
-  "schema_version": 1,
+  "schema_version": 3,
+  "localization_id": "<state.localization_files[].id>",
   "old": {
-    "relative_path": "<state.old_localization_relative_path>",
+    "source": "git-blob",
+    "base_oid": "<state.base_oid>",
+    "blob_oid": "<git-blob-oid>",
+    "relative_path": "<state.localization_files[].old_relative_path>",
     "size_bytes": 0,
     "sha256": "<sha256>"
   },
   "new": {
-    "relative_path": "<state.new_localization_relative_path>",
+    "source": "installed-upstream",
+    "archive_sha256": "<state.archive_sha256>",
+    "relative_path": "<state.localization_files[].new_relative_path>",
     "size_bytes": 0,
     "sha256": "<sha256>",
     "encoding": "<encoding>",
@@ -546,11 +615,13 @@ merged.lua = 以 new.lua 為基礎完成 zh-tw 合併的結果
 }
 ```
 
-`old`／`new` 是不可變的擷取證據；每次產生或修正 `merged.lua` 後，只更新 `merged` 的 size/SHA-256。即使安裝後移除 staging，仍可用此檔證明 `old.lua`／`new.lua` 是安裝前擷取的原始內容。
+`old`／`new` 是不可變的擷取證據；新版新增項目的 `old` 寫為 `null`。每次產生或修正 `merged.lua` 後，只更新 `merged` 的 size/SHA-256。即使後續移除 staging，仍可用 Git blob、archive extraction manifest 與此檔證明 `old.lua`／`new.lua` 的來源。既有 schema version 1／2 artifact 可依第 4.2 節驗證後沿用並補上 localization id；新一輪一律建立 version 3。
 
 `merged.lua` 必須沿用 `new.lua` 的文字編碼、BOM 與換行格式。console 輸出僅作診斷提示；正式判定以回讀檔案後的解析結果及 byte-level 編碼檢查為準。
 
 ## 10. 只合併 `zh-tw`
+
+本節只在 `localization_mode` 為 `single` 或 `multiple` 時執行，並對每個 active id 分別產生判定與結果；`none` 將本節記為 `not-applicable` 後直接進入第 11 節。這是成果路由，不限制 AI 用來理解語意與引用情境的方法。
 
 ### 10.1 中文規則路由
 
@@ -568,11 +639,11 @@ merged.lua = 以 new.lua 為基礎完成 zh-tw 合併的結果
 
 只查詢 `Referneces/Translation.md`、`Term Candidates.md` 與目標 MOD 相關的詞條或段落。這些工作文件在本 MOD PR 中維持原狀；新候選詞先記錄在本輪 `localization-decisions.json`，需要納入工作文件時另走 `main` 的翻譯工作文件流程。
 
-專案規則先比對 MOD 目錄、檔案路徑與 key pattern，再決定是否套用。例如 `enhanced_descriptions_zh-tw_special_rules.md` 只在其指定檔案或 key scope 與本輪唯一 `_localization.lua` 相交時加入；僅名稱相同但 scope 未相交時記為 `none`，避免把其他檔案專用規則套到本輪 loc。
+專案規則先比對 MOD 目錄、實際 active localization 路徑與 key pattern，再決定是否套用。例如 `enhanced_descriptions_zh-tw_special_rules.md` 只在其指定檔案或 key scope 與本輪某個 active localization 相交時加入；僅名稱相同但 scope 未相交時記為 `none`，避免把其他檔案專用規則套到本輪 loc。
 
 `Update/<MOD-slug>`、README、正式 `.hash`、非 Draft PR、Balanced Review 與合併後歸檔仍依本文件執行；翻譯排程文件中的 `Codex/Feature/...` 分支、只含 loc 的 PR 與工作文件同步規則只適用於獨立翻譯排程，不取代本更新流程。
 
-每輪把規則版本與逐 unit 的最小判定寫入 `review-artifacts/localization-decisions.json`：
+每輪把規則版本與逐 unit 的最小判定寫入目前 id 的 `review-artifacts/localization/<id>/localization-decisions.json`：
 
 ```json
 {
@@ -631,6 +702,7 @@ bundle 包含本輪 merger、validator、必要 parser dependency 與 fixtures�
 
 合併器第一次在本輪流程使用前，先完全以 fixtures 執行 self-test，再處理正式 MOD。測試至少涵蓋：
 
+- localization 語系索引同時涵蓋 `['zh-tw']` 與 `["zh-tw"]`；兩者解析後視為相同語系 key，寫回既有欄位時保留新版原本的引號風格。
 - 上游最後欄位沒有結尾逗號，需在加入 `zh-tw` 前補分隔符。
 - `zh-cn = string.format(...)` 跨多行，且參數列包含逗號與巢狀函式。
 - `en` 或 `zh-cn` 使用 `..` 串接多行字串。
@@ -667,7 +739,7 @@ self-test 驗證輸出可解析、非 `zh-tw` 語意不變，且 `zh-tw` 位於�
 6. 對原文改變、新增、`SOURCE_DRIFT` 或 lookup 變動的 key，先在完整新版 MOD 目錄搜尋所有引用位置：
 
    ```text
-   rg -n "<localization-key>" "<staging-MOD-root>"
+   rg -n "<localization-key>" "<worktree-installed-MOD-root>"
    ```
 
    同一 key 可能同時被多個 UI 選項共用。翻譯以所有實際引用情境為範圍，並將 key 名稱與第一個呼叫位置視為輔助線索。
@@ -676,6 +748,7 @@ self-test 驗證輸出可解析、非 `zh-tw` 語意不變，且 `zh-tw` 位於�
    - 新版缺少 `zh-tw` 且結果為 `ADD`／`CHANGE`：在該 localization block 的 closing brace 前，以直接欄位深度加入完整 `zh-tw` 欄位；`SKIP` 維持新版原結構，`BLOCKED` 保留待決狀態直到解決。
    - 若加入前的最後一個上游欄位原本省略結尾逗號，只能在該完整欄位表達式之後補上 Lua 必要逗號。
    - `zh-tw` 一律寫在 localization block 的直接欄位位置，位於各上游語系完整表達式之外。
+   - 不得對正式 loc 執行整檔 `git restore`、checkout 或以 `old.lua` 整檔覆蓋；舊版資料只能按已解析的 localization unit 取回 `zh-tw`。
 8. 正向限制寫入範圍：所有翻譯內容新增或修改只能發生在 `['zh-tw']` 或 `["zh-tw"]` 欄位，以及同一 `_localization.lua` 內已核准的繁中專用 lookup 定義。唯一允許的其他語系文字差異，是為新增直接欄位而在前一個完整上游欄位後補上的必要分隔逗號。
 9. 解析 `new` 與 `merged` 的 localization table，確認：
    - 所有非 `zh-tw` 語系的 key 集合與值完全相同。
@@ -691,35 +764,38 @@ self-test 驗證輸出可解析、非 `zh-tw` 語意不變，且 `zh-tw` 位於�
    - `Localize()` 可在 `en` 中取得遊戲內文字，而 `zh-tw` 可使用譯後 literal；占位符檢查聚焦在兩語系都需要保留的執行期結構，將 `Localize()` 視為語系實作差異。
 11. 原文未變的既有 `zh-tw` 一律完整保留，並納入 `unchanged_key_count` 彙總；即使能證明既有翻譯存在用詞、標點、語序、自然度或其他品質問題也不得在 `source_sync` 修改。Review 對這類內容的建議記錄為 optional，回覆此穩定邊界後解決；需要修正時另走獨立翻譯排程或取得使用者明確授權。
 
-全部 target units 完成後，原子寫入 `localization-decisions.json`，重新計算 scope 與結果計數，並把 `merged.lua` 的 size/SHA-256 寫入 `localization-sources.json`。回讀兩份 JSON、逐項核對 target key 集合與實際 diff 後，才進入安裝。
+全部 target units 完成後，原子寫入 `localization-decisions.json`，重新計算 scope 與結果計數，並把 `merged.lua` 的 size/SHA-256 寫入 `localization-sources.json`。回讀兩份 JSON、逐項核對 target key 集合與 `old`／`new`／`merged` 的實際 unit 差異後，將 `merged.lua` 原子寫回 worktree 內正式 loc；回讀 bytes 必須與 merged 紀錄一致，才進入第 11 節。
 
-## 11. 完整刪除並重新安裝
+## 11. 合併後清單、安裝驗證與復原
 
-只有第 9–10 節全部通過後才進入安裝：
+第 9 節已完成乾淨替換；有 active localization 時，第 10 節只改動允許的繁中範圍，`none` 時則保持整棵新版樹不變。適用步驟通過後建立最終安裝證據：
 
-1. 將 `merged.lua` 寫入解壓縮後的乾淨新版 MOD 根目錄，形成「待安裝樹」；回讀正式 loc，確認 bytes 與 `localization-sources.json` 的 merged size/SHA-256 一致。
-2. 逐檔建立相對路徑、檔案大小與 SHA-256 清單。
-3. 回讀待安裝樹並核對清單；清單完全一致後才切換 worktree 內現有 MOD。
-4. 將清單先寫入同目錄暫存檔，回讀成功後原子取代 `review-artifacts/install-manifest.txt`。
-5. 解析 MOD 目標絕對路徑，確認它同時：
+1. `single`／`multiple` 模式逐筆回讀 worktree 正式 loc，確認 bytes 與該 id 的 `localization-sources.json` merged size/SHA-256 一致；`none` 將本項記為 `not-applicable`。
+2. 逐檔建立正式 MOD 樹的相對路徑、檔案大小與 SHA-256 清單。
+3. 將檔案集合與 extraction manifest 對照：active localization 路徑只允許等於各自 id 的 `merged.lua`，其餘路徑的大小與 SHA-256 必須完全一致；`none` 則整棵 MOD 樹都必須等於 extraction manifest。這可證明 Git/AI 步驟沒有改動上游程式或遺留舊檔。
+4. 回讀完整 MOD 樹並核對清單；清單完全一致後，將清單先寫入同目錄暫存檔，回讀成功再原子取代 `review-artifacts/install-manifest.txt`。
+5. 再次解析 MOD 目標絕對路徑，確認它同時：
    - 位於該 MOD 的獨立 worktree 內。
    - 位於 `Warhammer 40,000 DARKTIDE/mods` 下。
    - 等於 state 記錄的單一 MOD 目錄。
-6. 完整刪除 worktree 內該 MOD 目錄。
-7. 將完整待安裝樹搬入 worktree 的 `mods`。
-8. 依 manifest 比對安裝後的所有檔案、大小與 SHA-256，並確認相對路徑集合與 manifest 完全相同。
-9. 通過後精確刪除該 MOD 的 `staging/`，保留 source、old/new/merged 與 manifest。
-10. 將 state 設為 `installed`。
+6. 依 manifest 再比對安裝後的所有檔案、大小與 SHA-256，並確認第 9.3 節 Git diff 的路徑集合能完整說明相對 `base_oid` 的新增、修改、刪除與 rename 候選。
+7. 確認 `review-artifacts/extraction-manifest.json` 等於 staging manifest 後，精確刪除該 MOD 的 `staging/`，保留 source、適用的 `localization/<id>/` artifacts、extraction manifest 與 install manifest。
+8. 將 state 設為 `installed`。
 
-如果作業系統因檔案占用、權限或儲存裝置錯誤而在刪除後中斷，只還原該 worktree。先從 index 移除本輪 allowlist 的 staged 狀態，再依 HEAD 還原原本已追蹤的精確路徑：
+如果作業系統因檔案占用、權限、儲存裝置錯誤，或流程在乾淨替換後、AI 合併完成前中斷，只還原該 worktree。先從 index 移除本輪 allowlist 的 staged 狀態：
 
 ```text
 git -C "<worktree>" diff --cached --name-only -- README.md "<state.mod_relative_path>" ".hash/<MOD-slug>.hash"
 git -C "<worktree>" restore --staged -- <上一步實際回傳的精確 cached paths>
-git -C "<worktree>" restore --source=HEAD --worktree -- README.md "<state.mod_relative_path>"
 ```
 
-若 HEAD 已追蹤正式 hash，再對 `.hash/<MOD-slug>.hash` 執行相同 `git restore --source=HEAD --worktree`；若 HEAD 尚未追蹤，確認它是本輪依 state 產生的精確檔案後移除。MOD 目錄含本輪安裝的未追蹤檔案時，先再次驗證它等於 `state.mod_relative_path` 且位於該 worktree 的 `mods` 下，再移除該精確目錄並從 HEAD 還原。最後精確移除 pending hash，使 worktree 回到乾淨 HEAD；`AI Auto Update/In Progress/<MOD-slug>` 與 `Finished` 維持完整，供修正後重新安裝。
+接著再次驗證 MOD 目標絕對路徑等於 `state.mod_relative_path` 且位於該 worktree 的 `mods` 下；若目標存在，完整移除這個精確 MOD 目錄，再執行：
+
+```text
+git -C "<worktree>" restore --source=<state.base_oid> --worktree -- README.md "<state.mod_relative_path>"
+```
+
+若 `base_oid` 已追蹤正式 hash，再對 `.hash/<MOD-slug>.hash` 執行相同 `git restore --source=<state.base_oid> --worktree`；若基準尚未追蹤，確認它是本輪依 state 產生的精確檔案後移除。不得使用涵蓋整個 worktree 的 `git clean`。最後精確移除 pending hash，使 worktree 回到乾淨 `base_oid`；`AI Auto Update/In Progress/<MOD-slug>` 與 `Finished` 維持完整，供修正後從已驗證 staging 重跑，或在 staging 已移動／不完整時由 archive 重新安全解壓。
 
 `In Progress/<MOD-slug>/source`、`review-artifacts` 與 `state.json` 位於 worktree 外，Git Restore 後仍完整保留。
 
@@ -756,24 +832,33 @@ git -C "<worktree>" restore --source=HEAD --worktree -- README.md "<state.mod_re
 
 ### 12.3 必做驗證
 
+所有模式共同完成：
+
 - `git -C <worktree> diff --check`。
 - `git -C <worktree> diff --numstat` 與 `git -C <worktree> diff --stat`，確認 diff 尺度符合實際更新，BOM、編碼與 LF/CRLF 維持新版格式。
 - 檔案新增、修改、刪除清單。
 - 安裝後樹與 manifest 完全一致。
-- `new` → `merged` 的非 `zh-tw` key/value 完全一致；以解析後的完整表達式作為判定依據。
-- `zh-tw` 完整性、直接欄位深度、重複欄位、欄位分隔、placeholder multiset、lookup 與格式標記。
-- `localization-decisions.json` 的規則檔 SHA-256、unit stage、結果計數及實際 key 集合一致，且有效文字沒有未解決的 `BLOCKED`。
-- Lua 結構或可用語法檢查。
 - worktree diff 只有 README、當前 MOD 與正式 hash。
 - 主工作區在驗證前後都保持乾淨；所有診斷輸出只能寫入該 MOD 的 `In Progress`。
 
-若 Lua compiler/parser 可用，先對 `merged.lua` 執行語法檢查。若目前環境沒有 Lua compiler/parser，改由下列三項共同提供等價的結構證據：
+`single`／`multiple` 模式再對每個 `localization_files[]` 項目完成：
+
+- `new` → `merged` 的非 `zh-tw` key/value 完全一致；以解析後的完整表達式作為判定依據。
+- `zh-tw` 完整性、直接欄位深度、重複欄位、欄位分隔、placeholder multiset、lookup 與格式標記。
+- 該 id 的 `localization-decisions.json` 規則檔 SHA-256、unit stage、結果計數及實際 key 集合一致，且有效文字沒有未解決的 `BLOCKED`。
+- `merged.lua` 通過 Lua 結構或可用語法檢查。
+
+`none` 模式將 localization 與 syntax validation 記為 `not-applicable`，不要求建立或讀取 loc artifacts；完整新版樹仍須通過共同 manifest 與 cached diff 驗證。
+
+有 active localization 且 Lua compiler/parser 可用時，逐一對每個 id 的 `merged.lua` 執行語法檢查。若目前環境沒有 Lua compiler/parser，改由下列三項共同提供等價的結構證據：
 
 1. 使用能追蹤 quote、escape、註解、`()`、`[]`、`{}` depth 與完整 value expression 的結構驗證器。
 2. 確認第 10 節所有 direct-field、separator、non-`zh-tw` semantic 與 marker 檢查為零錯誤。
-3. 將「commit 前須執行 Codex Review」寫入本輪 validation report；第 13 節精確 stage 後，讓 Review 同時讀取 cached diff、`new.lua`、`merged.lua`、`localization-sources.json`、`localization-decisions.json` 與 manifest。
+3. 將「commit 前須執行 Codex Review」寫入本輪 validation report；第 13 節精確 stage 後，讓 Review 同時讀取 cached diff、manifest，以及每個 active id 的 `new.lua`、`merged.lua`、`localization-sources.json` 與 `localization-decisions.json`。
 
 前兩項通過後進入第 13 節；Codex Review 與 cached diff 驗證也通過、問題清單為空後，才建立 commit。
+
+Windows 預檢先執行 `Get-Command lua,luac -ErrorAction SilentlyContinue`。目前電腦可使用 WinGet 安裝 Lua 5.4；只有取得使用者明確同意後才執行 `winget install --id DEVCOM.Lua --exact --accept-package-agreements --accept-source-agreements`。安裝後以 `lua -v`、`luac -v` 驗證，並對每個 active id 以 `luac -p <localization/<id>/merged.lua>` 執行不產生輸出檔的語法檢查。未獲安裝授權或套件不可用時，不得自行安裝，仍使用本節的三項等價結構證據並在 validation report 記錄限制。
 
 若驗證器使用 Python 匯入 repository 內腳本，必須停用 bytecode 產生，例如：
 
@@ -801,14 +886,20 @@ commit 前：
 1. `git -C <worktree> diff --cached --name-status` 只能包含 allowlist。
 2. `git -C <worktree> diff --cached --check` 必須通過。
 3. 完整檢閱 `git -C <worktree> diff --cached`。
-4. 對 cached diff 執行 Codex Review，並讀取 `new.lua`、`merged.lua`、`localization-sources.json`、`localization-decisions.json` 與 install manifest；可處理問題全部解決後重跑本節。
+4. 對 cached diff 執行 Codex Review，並讀取 extraction/install manifest；`single`／`multiple` 再逐 id 讀取 `new.lua`、`merged.lua`、`localization-sources.json` 與 `localization-decisions.json`，`none` 不要求不存在的 loc artifacts。可處理問題全部解決後重跑本節。
 5. cached path 集合是本 MOD allowlist 的子集合，並完整包含本輪預期的 README、正式 hash 與 MOD 實際差異；allowlist 內沒有遺漏的 unstaged 變更，來源壓縮檔、pending hash 與使用者其他變更均留在 cached diff 之外。
-6. 執行 `git -C <worktree> write-tree`，將 `cached_tree_oid`、cached paths、各項驗證結果、Codex Review 結論、工具/規則 SHA-256 與含時區時間原子寫入 `review-artifacts/validation-report.json`：
+6. 執行 `git -C <worktree> write-tree`，將 workflow 基準、`cached_tree_oid`、cached paths、各項驗證結果、Codex Review 結論、最小語法驗證證據、工具/規則 SHA-256 與含時區時間原子寫入 `review-artifacts/validation-report.json`。語法證據只保存可重現判定所需欄位，不保存完整 console output：
 
 ```json
 {
-  "schema_version": 1,
+  "schema_version": 3,
   "validation_basis": "cached-tree",
+  "workflow": {
+    "ref": "<state.workflow_ref>",
+    "commit_oid": "<state.workflow_commit_oid>",
+    "path": "<state.workflow_path>",
+    "sha256": "<state.workflow_sha256>"
+  },
   "base_oid": "<state.base_oid>",
   "head_before_commit": "<HEAD>",
   "cached_tree_oid": "<git-write-tree-oid>",
@@ -816,8 +907,22 @@ commit 前：
   "checks": {
     "diff_check": "passed",
     "manifest": "passed",
-    "localization": "passed",
+    "localization": "passed|not-applicable",
     "codex_review": "passed"
+  },
+  "syntax_validation": {
+    "method": "luac|parser|structural-validator|not-applicable",
+    "tool": "<tool-name-or-null>",
+    "version": "<version-or-null>",
+    "fallback_used": false,
+    "tool_bundle_sha256": "<sha256-or-null>",
+    "targets": [
+      {
+        "localization_id": "<state.localization_files[].id>",
+        "merged_sha256": "<sha256>",
+        "result": "passed|failed"
+      }
+    ]
   },
   "validated_oid": null,
   "validated_at": "<ISO-8601 with timezone>"
@@ -825,6 +930,8 @@ commit 前：
 ```
 
 legacy commit 重建時只將 `validation_basis` 設為 `legacy-head-reconstruction`，並以第 4.2 節的 base/HEAD/artifact 證據填入同一結構。
+
+既有 schema version 1／2 report 可在其他 OID 與驗證證據完整時保留，補齊 workflow 與逐 localization syntax evidence 後升級；新一輪一律建立 version 3。`none` 模式將 localization check 記為 `not-applicable`，`syntax_validation.method` 設為 `not-applicable` 且 `targets` 為空陣列；其餘 manifest、diff 與 Review 證據仍須完成。
 
 Commit 訊息：
 
@@ -849,7 +956,7 @@ commit 後使用 `git show --name-status --stat HEAD` 再次確認範圍，並�
 - Head：`Update/<MOD-slug>`
 - Draft：`false`
 
-PR 說明包含：MOD 名稱、Nexus 網址、主頁版本、Main file 版本、來源實體檔名、上游檔案差異摘要、套用的中文規則、`ADD/CHANGE/KEEP/SKIP/BLOCKED` 計數、詞彙候選摘要、loc/zh-tw 調整與驗證結果。詞彙候選為空時明確寫 `none`；非空時保留在 PR 紀錄，讓合併後清除本地 artifacts 仍可追溯。
+PR 說明包含：MOD 名稱、Nexus 網址、主頁版本、Main file 版本、來源實體檔名、上游檔案差異摘要、套用的中文規則、`ADD/CHANGE/KEEP/SKIP/BLOCKED` 計數、詞彙候選摘要、loc/zh-tw 調整與驗證結果。詞彙候選為空時明確寫 `none`；非空時保留在 PR 紀錄，讓合併後清除本地 artifacts 仍可追溯。Review 完成後，同一 PR 說明應提供一段使用者可直接理解的審查結果摘要，涵蓋 Balanced/Lite 的範圍與結果、已採用或保留現況的重要項目、需供上游後續處理的影響、suppressed/optional feedback 及 unresolved thread 數。標題、段落與敘述方式可依該次 Review 自由組織，不要求固定使用 `Review disposition` 字樣或逐欄模板；沒有 feedback 時以自然語句清楚說明即可。
 
 `state.pr_number` 為 `null` 時建立唯一的非 Draft PR；已有 PR 時核對 base/head 後更新同一 PR 的 title/body，讓 Review 修正與續跑維持單一紀錄。
 
@@ -860,9 +967,9 @@ commit 建立後立即寫入 `head_oid`，將 state 設為 `committed`。push �
 ### 14.1 送審
 
 1. 使用 Browser 或 Chrome 控制技能開啟 PR，沿用已登入工作階段。
-2. 在 `Reviewers` 選擇 Copilot，將深度設為 `Balanced`（Deep analysis, moderate cost）。
+2. PR 建立後立即在 `Reviewers` 選擇 Copilot，將深度設為 `Balanced`（Deep analysis, moderate cost）。GitHub 公開 REST review-request endpoint 目前只能指定 `copilot-pull-request-reviewer[bot]` 為 reviewer，沒有公開的 review-effort 參數；不得依賴未公開 API。除非 repository 已把自動 Review 預設設為對應的深度層級，否則仍以 Browser UI 選擇 Balanced。
 3. 送審前取得 `git rev-parse HEAD`，寫入 `head_oid`、`review_requested_oid`、`review_requested_at`，將 `review_effort` 設為 `balanced`，並把目前週期的 `reviewed_oid`／`review_completed_at` 設為 `null`；此時維持原 state status，直到畫面確認送審成功。
-4. 確認畫面顯示 `Copilot Balanced` 後送出 Review。Repository 自動產生的 Lite Review 可作為額外意見來源；完成 Gate 仍以另行要求的 Balanced Review 為準。
+4. 確認畫面顯示 `Copilot Balanced` 後送出 Review。Repository 自動產生的 Lite Review 可作為額外意見來源，但在本次 Balanced Review 完成前不分析、不回覆也不 resolve Lite feedback；Balanced 完成後再把 Lite 與 Balanced 一併去重、分類與處理。完成 Gate 仍只以另行要求的 Balanced Review 為準。
 5. 畫面顯示 `Reviewing at balanced effort` 或 PR timeline 出現本次 `requested a balanced review` 事件後，將事件來源、可見文字、時間與對應 requested OID 寫入 `review-evidence.json`，再把 state 設為 `review-requested`。
 6. 釋放本地鎖，可繼續處理其他 MOD。
 
@@ -872,7 +979,7 @@ commit 建立後立即寫入 `head_oid`，將 state 設為 `committed`。push �
 
 ### 14.2 取得完整 feedback
 
-瀏覽器畫面用於送審與人機操作；完整 feedback 則由 GitHub connector、`gh` 或 GraphQL 取得並保存。
+瀏覽器畫面只用於選擇／送出 Balanced 與確認 request event；完整 feedback 與完成 Gate 的 metadata 以 GitHub connector、`gh` 或 GraphQL 為主取得並保存。API 用來讀取 review ID、reviewer、`submittedAt`、`commit.oid`、threads/comments 與 pagination，不得只憑 UI 的相對時間或按鈕文字判定完成。
 
 - 使用 GitHub connector 或 `gh pr view` 取得 PR metadata。
 - 使用 `gh api graphql` 取得 thread-aware 資料。GraphQL 至少包含：
@@ -948,13 +1055,15 @@ pullRequest {
 2. 將 feedback 分為：
    - 本地化：依該 unit 的 stage、BASE RULE、模式規則、專案規則與正式詞彙表判定；採用時同步更新 `localization-decisions.json` 的 result/reason，保留現況時記錄對應規則與理由。
    - README 或 metadata：自主修正。
-   - 上游程式邏輯：回覆「供上游後續處理」，本 PR 維持新版壓縮檔內容。
-   - 資訊性、過時或重複：記錄理由。
+   - 上游程式 Review 意見：不論涉及可能的功能錯誤、設計差異、程式邏輯、註解、命名或樣式，AI 都評估實際影響、保存證據並回覆「供上游後續處理」；非 loc bytes 維持新版壓縮檔內容，不在本 PR 改寫。
+   - 來源壓縮檔實際無法通過完整性、安全解壓、路徑邊界或語法／結構驗證時，依對應 validation Gate 保存失敗證據並停止。這是來源驗證結果，不把單純的 Review 意見誤當成修改上游程式的授權。
+   - 資訊性、不適用、過時或重複：記錄可驗證理由。
+   - 每項分類、採用與否、處理方式、理由與 thread resolved 狀態寫入 `review-feedback.json`；同一 PR 說明同步維持可讀的審查結果摘要，完整逐項證據保留在 artifact 與 thread 回覆。
 3. 修正 loc 時，必須同時更新：
    - worktree 內正式 localization 檔。
-   - `review-artifacts/merged.lua`。
-   - `localization-sources.json` 的 merged size/SHA-256。
-   - `localization-decisions.json` 中受影響 unit 的 stage/result/reason 與彙總計數。
+   - 該 id 的 `review-artifacts/localization/<id>/merged.lua`。
+   - 該 id 的 `localization-sources.json` merged size/SHA-256。
+   - 該 id 的 `localization-decisions.json` 中受影響 unit 的 stage/result/reason 與彙總計數。
 4. 任何 loc 修正後都必須：
    - 重跑 `new` → `merged` 語意比對。
    - 先將目前的 `install-manifest.txt` 精確複製為 `install-manifest.previous.txt`，再從 worktree 完整 MOD 樹建立 `install-manifest.candidate.txt`；比較完成後才更新正式 manifest。
@@ -968,14 +1077,15 @@ pullRequest {
 
 ### 14.4 Review 完成條件
 
-同時滿足下列條件才完成：
+具備下列可驗證成果時，Review 即可完成：
 
 - `git -C <worktree> rev-parse HEAD` 等於 PR `headRefOid`。
 - PR timeline 存在本次 `balanced` request event，event evidence 的 requested OID 等於 `review_requested_oid`；對應 review 的 `author.login` 為 GitHub Copilot reviewer（目前為 `copilot-pull-request-reviewer`），且 `submittedAt` 晚於或等於 `request_event_at`。
 - 該次 Copilot review 的 `commit.oid` 等於 PR `headRefOid` 與 `review_requested_oid`。
 - reviews、reviewThreads 與每個 thread comments 都已完成分頁與 ID 去重，unresolved review thread 數量為 `0`。
 - inline、summary、optional 與 suppressed feedback 均已有分類與回覆紀錄。
-- 最後一次 manifest、loc 語意比對與 cached diff 驗證通過。
+- 最後一次 manifest 與 cached diff 驗證通過；有 active localization 時，每個 id 的 loc 語意與 syntax evidence 也都通過，`none` 不要求 loc 證據。
+- PR 說明已有可讀的審查結果摘要，讓使用者能確認已採用項目、保留現況理由、上游後續事項與目前 unresolved thread 數；摘要格式可由 AI 依實際內容組織。
 
 送出新 HEAD Review 後，GitHub API 可能暫時仍只回傳上一個 commit 的 review。持續等待到 balanced request event、review `submittedAt` 與 `commit.oid` 同時符合上述條件；將證據寫入 `review-evidence.json`，避免依賴 API 回傳順序或單一畫面狀態。
 
@@ -1028,7 +1138,7 @@ pullRequest {
 ### 17.1 單一 MOD 失敗
 
 - 將狀態設為 `failed`，記錄精確步驟、錯誤、HEAD 與時間。
-- 保留來源檔、old/new/merged、manifest、worktree 與 branch。
+- 保留來源檔、適用的 `localization/<id>/` artifacts、manifest、worktree 與 branch。
 - 釋放鎖；其他 MOD 可繼續。
 - 可自主修復的工具、驗證或本地化問題，重新取得鎖後繼續。
 - 帳號、權限、來源選擇或翻譯含義需要決策時，帶著現有證據請使用者處理。
@@ -1044,7 +1154,7 @@ pullRequest {
 
 復原使用可追蹤、精確且可續跑的操作：
 
-- 使用第 11 節的精確路徑 `git restore` 還原單一 MOD、README 與該 MOD hash。
+- 使用第 11 節的固定 `base_oid` 與精確路徑 `git restore` 還原單一 MOD、README 與該 MOD hash；Git diff 只作路徑與候選證據，不作翻譯判定。
 - 清理範圍限定為 state 已驗證的單一 MOD 目錄或本輪建立的精確暫存目錄。
 - repository root、worktree root、`AI Auto Update`、`In Progress` 與 `Finished` 保持原狀。
 - 不同 SHA-256 的同名來源檔各自保留，交由使用者決定歸檔名稱。
@@ -1068,17 +1178,23 @@ pullRequest {
 
 ### Gate A：來源與路徑
 
-- archive、state、worktree、old/new/merged 與目標 MOD 絕對路徑都已解析並存在。
+- workflow ref／commit／path／SHA 可由同一 Git blob 重建，且等於 state 與 validation report。
+- archive、state、worktree 與目標 MOD 絕對路徑都已解析並存在。
 - archive 搬移前後的 filename、size 與 SHA-256 一致。
-- `localization-sources.json` 的 old/new 相對路徑分別等於 state，`old.lua`／`new.lua` 的 size/SHA-256 等於不可變擷取紀錄，`merged.lua` 等於目前 merged 紀錄。
-- 工具的 artifact 輸出路徑精確等於 `review-artifacts` 內的預期檔案。
+- `review-artifacts/extraction-manifest.json` 記錄實際格式與 reader 證據，等於通過安全解壓檢查的 staging manifest，並能在 staging 清理後重建新版原始樹的路徑、size 與 SHA-256 證據。
+- `single`／`multiple` 模式中，每個 `localization_files[].id` 都有唯一的 `review-artifacts/localization/<id>/`；sources 的 old/new 相對路徑分別等於該 state entry，`old.lua`（若適用）等於固定 `base_oid`，`new.lua` 等於 extraction manifest，`merged.lua` 等於目前 merged 紀錄。
+- `none` 模式的 `localization_files` 為空，不要求 localization 目錄或 loc artifacts；完整新版樹由 extraction/install manifest 證明。
+- 工具的 artifact 輸出路徑精確等於目前 mode 與 id 對應的預期檔案。
 
 ### Gate B：loc 結構
+
+`single`／`multiple` 模式對每個 `localization_files[].id` 逐檔套用以下條件並彙總；`none` 模式記錄 `not-applicable` 後通過本 Gate，不要求虛構 localization artifact。
 
 - `parsed_new_total_key_count` 等於 `parsed_merged_total_key_count`。
 - `unclassified_missing_zh_tw`、unresolved active-text `BLOCKED`、duplicate `zh-tw`、empty active `zh-tw`、direct-depth errors、separator errors、non-`zh-tw` semantic differences、placeholder multiset mismatches、lookup failures 與必要 marker mismatches 全部為零；官方 fallback 與無語意 unit 以 `SKIP` 明確分類。
 - `validator-self-test.json` 顯示所有 multiline、separator、encoding 與 round-trip fixtures 通過。
 - `localization-decisions.json` 記錄 `source_sync`、基準 commit、規則檔 SHA-256、適用專案規則、scope 計數，以及每個 target unit 的 stage/result/reason；target set 與 old/new/merged 實際差異一致。
+- Git diff 只用來建立檔案與 unit 候選；AI 已解析 old/new 完整 key 集合、逐一比對每個共用 unit 的完整 localization expression 並判讀來源語意，沒有以行級 diff 自動決定翻譯或排除未出現在 diff 的 unit。
 - target set 只包含新增 Key 或來源原文／執行結構改變的 Key；來源未變的既有 `zh-tw` 與 README 中文功能摘要均未因潤飾、風格、上游繁中或 Review 建議產生 diff。
 - 所有新增、原文改變、`SOURCE_DRIFT` 或 lookup 變動的 key 已搜尋完整新版 MOD 的引用情境。
 - 詞彙表命中項目使用指定譯名；候選詞留在 artifact，工作文件維持於 MOD PR 之外。
@@ -1086,7 +1202,7 @@ pullRequest {
 
 ### Gate C：安裝與 Commit
 
-- 安裝樹與 manifest 的相對路徑、size、SHA-256 完全一致。
+- 正式 MOD 樹與 install manifest 的相對路徑、size、SHA-256 完全一致；有 active localization 時，每個正式 loc 等於對應 id 的 merged，其餘檔案等於 archive extraction manifest；`none` 時完整 MOD 樹都等於 archive extraction manifest。
 - `validation-report.json` 顯示 cached paths 只包含 README、單一 MOD 與 `.hash/<MOD-slug>.hash`，且沒有 allowlist 內遺漏的 unstaged 變更。
 - `validation-report.json.cached_tree_oid` 等於 `HEAD^{tree}`，`validated_oid` 等於本機與遠端 HEAD；`diff --check`、結構驗證與 Codex Review 均通過。
 - 主工作區與其他 worktree 的 `git status --porcelain` 符合執行前快照，本輪 `__pycache__`、`.pyc` 與驗證輸出均已保存在指定 artifact 或完成精確清理。
@@ -1098,4 +1214,5 @@ pullRequest {
 - `head_oid`、`review_requested_oid`、PR `headRefOid` 與本次 Balanced request 對應 review 的 `commit.oid` 全部一致。
 - `review-evidence.json` 的 effort、request event 來源/文字/時間、Copilot reviewer、review ID 與 commit OID 通過第 14.4 節條件。
 - reviews、threads 與 comments 分頁全部完成，unresolved thread 為零；`review-feedback.json` 顯示 review body 內的 normal、optional 與 suppressed feedback 都已分類。
+- PR 說明提供可讀的 Review 結果摘要，內容足以理解採用、保留、上游後續事項與 unresolved thread 數；不以固定標題或模板作為完成判定。
 - `reviewed_oid` 寫入同一 HEAD 後，state 才能設為 `awaiting-user-merge`。
