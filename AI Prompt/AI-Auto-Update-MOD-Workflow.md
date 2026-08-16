@@ -118,7 +118,7 @@ Update/<MOD-slug>/<YYYYMMDD>-<run-id-short>
 
 ### 3.3 Lock
 
-lock 以原子 directory-create 取得。`owner.json` 記錄 run ID、目前 worker ID（reserved 時為 null）、`lease_mode=active|reserved`、取得時間、heartbeat、state path 與 worktree。
+lock 以原子 directory-create 取得。`owner.json` 記錄 run ID、固定 workflow commit OID、MOD lock key、canonical MOD path、來源 SHA、claim path、planned/current state path、目前 worker ID（reserved 時為 null）、`lease_mode=active|reserved`、取得時間、heartbeat 與 worktree；state 尚未建立時也必須能由 claim 與 owner tuple 找回同一 run。
 
 - `source-acquisition.lock` 只保護 queue 盤點／claim，以及來源移入 `Finished`、退回 queue 時的目的檔解析、SHA 去重與同 volume 原子搬移；完成一個短操作後立即釋放。
 - MOD lock 不放在實際 MOD 目錄或 worktree；以 canonical `mod_relative_path` 的 SHA-256 作為中央 `.locks/mod/<sha256>.lock` identity。這使不同檔名或 slug 仍會對同一 repository MOD 目錄互斥，且乾淨安裝刪除 MOD 目錄時不會遺失鎖。
@@ -126,16 +126,28 @@ lock 以原子 directory-create 取得。`owner.json` 記錄 run ID、目前 wor
 - `git-coordination.lock` 只保護共用 Git metadata 寫入：精確 fetch 共用 remote-tracking ref、建立／刪除 local branch、worktree add/remove/prune。取得前確認目前不持有 `source-acquisition.lock` 或其他全域短期協調鎖；MOD identity reservation 可繼續持有，但任何持有 Git coordination lock 的操作不得等待 MOD lock。完成單一短操作後立即釋放；不得包住檔案同步、翻譯、驗證、commit、不同 branch 的 push、PR 或 Review。
 - Git coordination lock 已被其他 worker 持有時，以有限退避重試，不把 lock contention 記為 MOD 內容失敗。
 - `active` 由 worker、`reserved` 由協調器至少每 3 分鐘更新 heartbeat。
-- 超過 30 分鐘沒有 heartbeat 時，只有確認 owner run 不存在或已完成終止清理、原 worker 已結束且 worktree 沒有活動 Git process，才可接管；存在非終止 state 的 reserved generation 不得視為 stale。
+- 超過 30 分鐘沒有 heartbeat 時，先依第 3.4 節判定 same-run reattach；`reattach` 只能更換 worker ID／heartbeat／lease mode，不得更換 run ID 或建立新 generation。存在非終止 state 或可驗證 claim 的 generation 不得由其他 run 接管。
 - 不得以全域 lock 包住解壓、翻譯、驗證、Commit、Push、PR 或 Review。
+
+### 3.4 Same-run crash recovery
+
+協調器啟動或恢復排程時，必須先掃描中央 MOD locks 與 release/orphan tombstones，再掃描 claim 與 state。恢復 identity 只使用固定 tuple：`run_id + workflow_commit_oid + mod_lock_key + canonical mod_relative_path + source SHA`；任一欄位不一致都不得自動 reattach。
+
+1. 固定 MOD lock 存在、state 尚未建立，但有唯一 matching claim：確認原 worker 已結束且沒有活動 Git process後，以 claim 固定的 workflow commit 與同一 run ID 原子建立最小 state，更新 `owner.json.state_path`，再指派新 worker；不得建立新 claim、branch 或 generation。
+2. 固定 MOD lock 與 non-terminal state 都存在，但 active worker heartbeat 超時：確認 worker 已結束、worktree/branch 仍屬於該 state 且沒有活動 Git process後，只更新 owner 的 worker ID、heartbeat 與 `lease_mode=active`，使用同一 state 從已完成 Gate 繼續。
+3. 固定 MOD lock 與 non-terminal reserved state 都存在：核對完整 tuple 後以相同 run 恢復 coordinator heartbeat，保持 worker ID 為 null；條件改變前不得指派 writer。
+4. non-terminal state 存在但固定 MOD lock 缺少：只有在固定 lock path 不存在、沒有同 MOD 其他 state/claim，且 state 的 run ID、workflow commit、lock key、canonical path 與來源 SHA 全部一致時，才可為同一 run 原子重建 MOD lock。
+5. lock 的 `owner.json` 缺少／損壞時，先以 lock key 搜尋 claim、state 與 worktree。唯一 matching run 可重建 owner 後 same-run reattach；多個或矛盾候選設為 `waiting-user` 並保留 lock。
+6. 超過 30 分鐘且完全沒有 matching claim/state、worker 或 Git process 的 lock 才是 orphan。協調器將固定 lock 原子改名為 `.orphan-<mod-lock-key>-<timestamp>` 保存證據後，才允許新 generation 取得原固定 path；不得直接刪除 orphan。
+7. 每次 reattach／重建都原子寫入 state 的 `last_recovery`，至少保存 reason、舊／新 worker ID、verified claim/state/worktree、時間與同一 run ID。失敗時保留原 lock/state/claim，不得用新 run 繞過。
 
 ## 4. 精簡 state
 
-新 claim 使用 `schema_version=8`；舊 state 依其固定 workflow commit 續跑，不轉換成 version 8。
+新 claim 使用 `schema_version=9`；舊 state 依其固定 workflow commit 續跑，不轉換成 version 9。
 
 ```json
 {
-  "schema_version": 8,
+  "schema_version": 9,
   "run_id": "<uuid>",
   "status": "claimed",
   "mod": "<MOD-name>",
@@ -195,6 +207,7 @@ lock 以原子 directory-create 取得。`owner.json` 記錄 run ID、目前 wor
   },
   "security_overrides": [],
   "waiting_reason": null,
+  "last_recovery": null,
   "last_error": null,
   "updated_at": "<ISO-8601>"
 }
@@ -216,7 +229,7 @@ waiting-user
 failed
 ```
 
-state 使用同目錄暫存檔寫入、JSON 回讀成功後原子取代。沒有 operation lineage；每個階段只依 state、Git、manifest、PR 與檔案 SHA 回復。
+state 使用同目錄暫存檔寫入、JSON 回讀成功後原子取代。`last_recovery` 為 null 或單次最新 same-run recovery evidence，不是 operation lineage；每個階段只依 state、Git、manifest、PR 與檔案 SHA 回復。
 
 `external_review.status` 只允許 `not-requested|requested|completed|not-applicable|unavailable`；timeout 使用 `status=unavailable` 與 `reason=timeout`，不建立額外狀態。
 
@@ -224,13 +237,14 @@ state 使用同目錄暫存檔寫入、JSON 回讀成功後原子取代。沒有
 
 ### 5.1 排程
 
-1. 先掃描 `.claims/*/claim.json`，恢復 `claimed|identifying` 工作；`waiting-user` claim 在使用者補齊識別資訊後重新排程，不得因來源已離開根目錄而遺失。
-2. 再掃描 `In Progress/*/state.json`。
-3. 可自主續跑的 claim／MOD 優先分派 worker。
-4. `waiting-user`、`failed`、`awaiting-user-merge` 不占用 worker；只在條件改變後重新排程。
-5. 有空閒 worker 時，再從 `AI Auto Update` 根目錄 claim 新來源。
-6. 多個來源存在時按完整檔名 ordinal ignore-case，再按 ordinal 排序。
-7. 同一 MOD lock 已存在時，對應 claim 保留排隊，worker 改處理其他 MOD。
+1. 先掃描中央 `.locks/mod/*.lock`、release/orphan tombstones，依第 3.4 節完成 same-run recovery 判定。
+2. 再掃描 `.claims/*/claim.json`，恢復 `claimed|identifying` 工作；`waiting-user` claim 在使用者補齊識別資訊後重新排程，不得因來源已離開根目錄而遺失。
+3. 再掃描 `In Progress/*/state.json`。
+4. 可自主續跑的 claim／MOD 優先分派 worker。
+5. `waiting-user`、`failed`、`awaiting-user-merge` 不占用 worker；只在條件改變後重新排程。
+6. 有空閒 worker 時，再從 `AI Auto Update` 根目錄 claim 新來源。
+7. 多個來源存在時按完整檔名 ordinal ignore-case，再按 ordinal 排序。
+8. 同一 MOD lock 已存在時，只有 owner tuple matching 的 run 可依第 3.4 節 reattach；其他 claim 保留排隊，worker 改處理其他 MOD。
 
 ### 5.2 Claim
 
@@ -242,10 +256,10 @@ state 使用同目錄暫存檔寫入、JSON 回讀成功後原子取代。沒有
 2. 產生 run ID。
 3. 建立 `.claims/<run-id>/source`。
 4. 計算 filename、size、SHA-256。
-5. 在同一 volume 原子搬移來源並寫入 `claim.json`；至少保存 `run_id`、status、來源 path/size/SHA、建立時間、waiting reason 與已知識別證據。
+5. 在同一 volume 原子搬移來源並寫入 `claim.json`；至少保存 `run_id`、固定 workflow commit OID／Workflow SHA、status、來源 path/size/SHA、建立時間、waiting reason 與已知識別證據。
 6. 釋放來源鎖；claim 路徑不得在持有來源鎖時等待或取得 MOD lock。
 
-worker 接手 claim 時先將 claim status 設為 `identifying`，再利用檔名、README、Nexus ID、archive root 與既有 MOD 目錄確認唯一 MOD。確認 canonical `mod_relative_path` 後計算 MOD lock key並取得中央 MOD lock，再將 claim 搬到 `In Progress/<slug>-<run-short>` 並建立 state。無法唯一識別時將 claim status 設為 `waiting-user`、保存原因並釋放 worker；協調器下一輪仍可由 `.claims/*/claim.json` 找回。
+worker 接手 claim 時先將 claim status 設為 `identifying`，再利用檔名、README、Nexus ID、archive root 與既有 MOD 目錄確認唯一 MOD。確認 canonical `mod_relative_path` 後，先把 canonical path、MOD lock key、planned state path 與來源 SHA 原子寫回 claim，再由協調器為同一 run 取得中央 MOD lock並寫入完整 owner tuple。取得後先在 planned path 原子建立 `status=claimed` 的最小 state，archive path 暫時指向 claim source；再將來源同 volume 原子搬到 `In Progress/<slug>-<run-short>/source`、更新 state archive path並繼續。任一步驟 crash 都依第 3.4 節以同一 run reattach。無法唯一識別時將 claim status 設為 `waiting-user`、保存原因並釋放 worker；協調器下一輪仍可由 `.claims/*/claim.json` 找回。
 
 slug 將非允許字元轉成 `-`、合併連續 `-` 並移除首尾點／橫線；結果為空或與其他 MOD 發生碰撞時附加 Nexus ID。最後必須通過第 2.1 節的格式與 Git ref 驗證。
 
@@ -660,7 +674,7 @@ MERGED 後：
 ### Gate A：來源、安全與併發
 
 - workflow/Baseline 固定 commit、blob、SHA 可重建。
-- source、MOD 與短期 Git coordination locks 的 identity、owner、範圍及釋放結果正確；`Finished`／queue 搬移沒有 shared destination race，共享 Git metadata 沒有競態。
+- source、MOD 與短期 Git coordination locks 的 identity、owner、範圍及釋放結果正確；same-run crash recovery 可由 lock／claim／state tuple 重建且不產生永久 deadlock；`Finished`／queue 搬移沒有 shared destination race，共享 Git metadata 沒有競態。
 - archive/Nexus/README/hash identity 一致。
 - archive path、entry、collision、payload 與 staging manifest 安全檢查通過。
 - 每個 MOD 同時只有一個 active generation；其 identity reservation、state、source、artifacts、branch、worktree 與 PR 唯一對應，舊 generation 不會刪除新 owner 的 lock。
