@@ -60,7 +60,7 @@ Reviewer 只使用完成判定所需的最小權威輸入：
 1. target eligibility 是否正確：新增、來源語意／執行結構改變或缺少可用 active `zh-tw` 的 unit 都已納入，來源未變且已有可靠繁中的 unit 沒有被任意改寫。
 2. target `zh-tw` 是否忠實涵蓋英文來源的動作、對象、條件、範圍、數值、時間、限制與例外，並符合正式詞彙及臺灣繁中。
 3. placeholder、lookup、markup、escape、串接、函式結構與 Lua direct-field/separator 是否保持正確。
-4. 核准 `zh-tw`／繁中 lookup spans 以外的 bytes 是否保持新版原樣。唯一例外是主流程第 10.3 節已證明、為插入 `zh-tw` 直接欄位所需的單一 Lua 分隔逗號；這不是重新排版許可。
+4. 核准 `zh-tw`／繁中 lookup spans 以外的 bytes 是否保持新版原樣。唯一例外是主流程第 8.6 節允許、並由第 8.7 節驗證、為插入 `zh-tw` 直接欄位所需的單一 Lua 分隔逗號；這不是重新排版許可。
 5. README 版本／日期／網址與正式 `.hash` 的檔名、版本、size、SHA 是否和權威來源一致。
 6. 是否出現主流程第 2.2 節的憑證、任意命令執行、路徑逃逸、惡意載荷或供應鏈風險。
 7. 併發隔離是否保持：不同 MOD 可同時處理；同一 MOD 只有一個 writer；lock、state、來源、artifacts、branch、worktree 與 PR 不會跨 MOD 混用；單一 MOD 的等待或失敗不會阻擋其他無衝突 MOD。
@@ -99,4 +99,4 @@ Reviewer 身分、措辭、信心或建議數量不改變分類。只有偏好�
 - target／unchanged／BLOCKED 計數。
 - 適用規則與「只維護 `zh-tw`」的範圍。
 
-外部 feedback 回來後，先依本基準分類，再決定採用或保留。Review 完成仍以主流程 Gate 與 `AI-Auto-Update-MOD-Workflow.md` 第 14.4 節為準；本檔不建立額外完成狀態。
+外部 feedback 回來後，先依本基準分類，再決定採用或保留。Review 完成仍以 `AI-Auto-Update-MOD-Workflow.md` 第 11.4 節與第 15 節 Gate D 為準；本檔不建立額外完成狀態。
