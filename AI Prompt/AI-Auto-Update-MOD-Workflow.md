@@ -256,12 +256,12 @@ slug 將非允許字元轉成 `-`、合併連續 `-` 並移除首尾點／橫線
 
 ### 6.1 Workflow 基準
 
-新 claim 前由協調器取得短期 `git-coordination.lock`，精確更新 workflow branch ref 與 `origin/main`，保存兩個 commit OID 後立即釋放；再解析 workflow commit，從同一 Git tree 讀取：
+新 claim 前由協調器取得短期 `git-coordination.lock`，精確更新 workflow branch ref 與 `origin/main`，把兩個 ref 各解析一次並保存為不可變的 workflow commit OID 與 `checked_main_oid` 後立即釋放；後續不得再次解析這兩個可變 ref。再從固定 workflow commit 的同一 Git tree 讀取：
 
 - `AI Prompt/AI-Auto-Update-MOD-Workflow.md`。
 - `AI Prompt/AI-Auto-Update-MOD-Review-Baseline.md`。
 
-本次取得的 main OID 同時寫入 `main_checked_oid`，供第 6.3 節已是最新判定；不得使用 fetch 前的過期 remote-tracking ref。
+`checked_main_oid` 同時寫入 state 的 `main_checked_oid`，供第 6.3 節已是最新判定；本輪所有 main 內容讀取都必須使用該固定 OID，不得在 lock 外再次解析 remote-tracking ref。
 
 兩檔分別記錄 path、blob OID、size、SHA-256；Baseline 以 `role=review-baseline` 寫入 `reference_sources`。之後全程使用固定 commit。Workflow 本身缺少或不可讀時不得開始新 claim；Baseline 缺少或不可讀時可完成安裝、Commit 與 PR，但不得進入第 11 節 Review 完成，PR body 必須明確標記 Baseline unavailable。
 
@@ -278,7 +278,7 @@ README 使用主頁 Version／Last updated；正式 hash 使用實際 Main file 
 
 ### 6.3 已是最新
 
-從最新 `origin/main` 讀取 README 對應區段與 `.hash/<slug>.hash`。下列全部一致時不建立 worktree：
+從本輪固定的 `checked_main_oid` 讀取 README 對應區段與 `.hash/<slug>.hash`。同一次判定的所有 `git show` 與 metadata 讀取都使用該 OID；下列全部一致時不建立 worktree：
 
 - mod、repo directory、Nexus ID。
 - Main file version、filename、size、SHA-256。
@@ -288,10 +288,10 @@ README 使用主頁 Version／Last updated；正式 hash 使用實際 Main file 
 
 ### 6.4 Worktree
 
-需要更新時，由協調器取得短期 `git-coordination.lock`，精確 fetch `origin/main`，並從該 commit 建立唯一 local branch 與外部 worktree；完成 branch/worktree metadata 寫入後立即釋放。通過以下條件後寫入 `base_oid` 並設為 `worktree-ready`：
+需要更新時，由協調器取得短期 `git-coordination.lock`，精確 fetch `origin/main`，將 ref 解析一次為新的不可變 `checked_main_oid`，並只從該 OID 建立唯一 local branch 與外部 worktree；完成 branch/worktree metadata 寫入後立即釋放。將該 OID 同時寫入 `base_oid`／`main_checked_oid`，通過以下條件後設為 `worktree-ready`：
 
 - branch 與 state 完全一致。
-- worktree HEAD 等於建立時的 `origin/main`。
+- worktree HEAD 等於建立時固定的 `checked_main_oid`。
 - worktree tracked/untracked 狀態乾淨。
 - worktree canonical path 位於預期 worktree root。
 - 沒有其他 state 或 worktree 使用相同 branch/path。
@@ -617,12 +617,12 @@ Review finding 依 Baseline 分類。沒有 actionable finding 時記錄 `none`�
 
 ## 12. 併發中的 main 更新
 
-每次 Commit 前與 Review 完成前，由協調器取得短期 `git-coordination.lock` 精確更新 `origin/main`，保存最新 main OID 後立即釋放，再比較前次 `main_checked_oid..origin/main`：
+每次 Commit 前與 Review 完成前，由協調器取得短期 `git-coordination.lock` 精確更新 `origin/main`，把該 ref 解析一次並保存為不可變的 `checked_main_oid` 後立即釋放。後續影響判定、讀取、merge 與 state 更新只能使用此 OID，不得再次解析 `origin/main`；比較範圍固定為前次 `main_checked_oid..checked_main_oid`：
 
-- 未觸及本 MOD directory、該 MOD hash 或 README 目標區段：更新 `main_checked_oid`，繼續目前 HEAD。
-- 觸及本 MOD directory、該 MOD hash 或 README 目標區段：目前 Review 失效。取得 MOD lock，在目前唯一 branch 以一般 merge 納入最新 main，不 reset、不 rebase、不 force-push；merge 完成且 worktree 乾淨後，將最新 main OID 同時寫為新 `base_oid`／`main_checked_oid`、遞增 `merge_epoch`，依第 9.1 節只把本輪 allowlist 還原到新 base，再從 archive 重建 old/new/merged、安裝、validation、commit、push 與同 HEAD Review。
-- 只修改其他 MOD 的 README 區段且目前 PR 可乾淨合併：不更新 branch，只更新 `main_checked_oid`。
-- 只修改其他區段但目前 PR 發生 README merge conflict：在目前唯一 branch 以一般 merge 納入最新 main，解決 README 時保留最新 main 全文及本 MOD 目標區段；接著將最新 main OID 同時寫為新 `base_oid`／`main_checked_oid`、遞增 `merge_epoch`，重新建立 old/new/merged provenance、validation、push 與同 HEAD Review。相同 MOD bytes 未變時可重用 archive/staging manifest，但所有 base-bound artifacts 必須重建。
+- 未觸及本 MOD directory、該 MOD hash 或 README 目標區段：將 state 的 `main_checked_oid` 更新為 `checked_main_oid`，繼續目前 HEAD。
+- 觸及本 MOD directory、該 MOD hash 或 README 目標區段：目前 Review 失效。取得 MOD lock，在目前唯一 branch 以一般 merge 納入固定的 `checked_main_oid`，不 reset、不 rebase、不 force-push；merge 完成且 worktree 乾淨後，將 `checked_main_oid` 同時寫為新 `base_oid`／`main_checked_oid`、遞增 `merge_epoch`，依第 9.1 節只把本輪 allowlist 還原到新 base，再從 archive 重建 old/new/merged、安裝、validation、commit、push 與同 HEAD Review。
+- 只修改其他 MOD 的 README 區段且目前 PR 可乾淨合併：不更新 branch，只把 state 的 `main_checked_oid` 更新為 `checked_main_oid`。
+- 只修改其他區段但目前 PR 發生 README merge conflict：在目前唯一 branch 以一般 merge 納入固定的 `checked_main_oid`，解決 README 時保留該 OID 的 README 全文及本 MOD 目標區段；接著將 `checked_main_oid` 同時寫為新 `base_oid`／`main_checked_oid`、遞增 `merge_epoch`，重新建立 old/new/merged provenance、validation、push 與同 HEAD Review。相同 MOD bytes 未變時可重用 archive/staging manifest，但所有 base-bound artifacts 必須重建。
 
 merge main、commit 與 push 仍由該 MOD lock 隔離；只有 fetch 與 shared branch/worktree metadata 操作使用短期 Git coordination lock。不得用任何全域鎖包住 README 解衝突、來源安裝、中文處理或 Review；單一 PR 衝突不停止其他 MOD。
 
