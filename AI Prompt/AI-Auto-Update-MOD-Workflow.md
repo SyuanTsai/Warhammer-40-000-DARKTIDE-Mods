@@ -666,4 +666,3 @@ MERGED 後：
 - state = `awaiting-user-merge`。
 
 Gate A–D 全部通過後，才回報「已完成，等待使用者合併」。單一 MOD 未通過時保留其 state，其他 MOD繼續併發。
-f9e2ced2bcab2232a3e206b05b9d1331a39c723731b82cfa45e1a686b1897f46  AI-Auto-Update-MOD-Workflow.new.md
