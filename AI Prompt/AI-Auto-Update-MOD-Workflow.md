@@ -1101,6 +1101,8 @@ commit 建立後立即寫入 `head_oid`，將 state 設為 `committed`。push �
 
 外部 feedback 造成新 commit 時遞增 `review_cycle`，最多自動修正三輪。相同 feedback 在等價內容上重複、連續一輪沒有可驗證進展，或第三輪後仍需修改時，才保存證據並轉為 `waiting-user`。
 
+本地 Codex Review、可用的外部 Review 與 feedback 分流共同遵循 `AI Prompt/AI-Auto-Update-MOD-Review-Baseline.md`。每個 MOD 從 `state.workflow_commit_oid` 的同一 Git tree 讀取該檔，將 `role=review-baseline`、path、blob OID 與 SHA-256 寫入 `state.reference_sources[]`，並在 validation report/PR 摘要對帳；不得讀取工作樹草稿或其他 commit 的版本。檔案缺少、無法解析或證據不一致時只阻擋 Review 完成，保留已驗證的安裝與 PR 現況供修復。
+
 ### 14.1 嘗試要求 Copilot Balanced
 
 1. `localization_mode=none` 不送出 `zh-tw` 外部 Review；建立 schema 2 evidence，記錄 `outcome/effort=not-applicable`、`reason=localization-none` 與核對時間，再進入第 14.4 節。
@@ -1175,7 +1177,7 @@ commit 建立後立即寫入 `head_oid`，將 state 設為 `committed`。push �
    - 重跑第 12 節，並執行第 13 節的精確 stage、`zh-tw` scoped Codex Review、validation report、commit、push 與遠端 OID 驗證；沿用既有 PR。
 5. scope 內 thread 留下與 `zh-tw` 規則或 metadata 來源相關的理由後解決；`out-of-scope` thread 保持原狀，不回覆、不 resolve。`security-blocking` 在使用者完成風險決策前保持 unresolved；可覆寫 payload 只能以第 2.2 節的精確 `allow-install-once` 繼續，不可覆寫風險只能更換／移除來源或放棄更新。
 6. 比較處理前後 HEAD：
-   - HEAD 已改變：先遞增 `review_cycle`；超過三輪或無進展時轉為 `waiting-user`。其餘情況在 commit/push 後重跑本地 Gate，再依 14.1 嘗試對新 HEAD 送審。
+   - HEAD 已改變：先遞增 `review_cycle`；超過三輪或無進展時轉為 `waiting-user`。其餘情況在 commit/push 後重跑本地 Gate，再依第 14.1 節嘗試對新 HEAD 送審。
    - HEAD 維持相同：完成 scope 內必要回覆與 thread resolution 後直接執行第 14.4 節。
 
 ### 14.4 Review 完成條件
