@@ -8,10 +8,14 @@
 claim 來源
 → 核對 Nexus／README／正式 hash
 → 建立獨立 lock、state、branch 與 worktree
-→ 安全解壓並以新版完整替換 MOD
-→ 只維護所有 active zh-tw
-→ 驗證新版同步、翻譯、README 與 hash
-→ Commit、Push、建立非 Draft PR
+→ 安全解壓並建立 extraction manifest
+→ 完整刪除單一舊 MOD directory，以已驗證新版 MOD root 完整覆蓋
+→ 只套用所有 active zh-tw 的核准修改
+→ 更新 README／hash 並建立 install manifest
+→ 建立本機 Candidate Commit
+→ 以 base_oid..candidate_oid 產生 immutable Git diff 與 candidate tree manifest
+→ Candidate Gate 對帳 Git tree／diff／archive／install／validation evidence
+→ Gate 通過才 Push、建立非 Draft PR；失敗則回滾／重建／修正後建立新 Candidate
 → 對同一 PR HEAD 完成本地 Review
 → 處理 scope 內 feedback
 → 等待使用者合併
@@ -23,9 +27,11 @@ claim 來源
 2. 所有 active `zh-tw` 的必要新增與來源同步修正。
 3. README 對應區段的來源 metadata。
 4. `.hash/<MOD-slug>.hash`。
-5. 完成上述工作所需的安全、隔離、驗證與 Review。
+5. 完成上述工作所需的安全、隔離、Candidate evidence、驗證與 Review。
 
 非 localization 程式只同步新版 bytes，不分析或修改其功能、設計、效能、命名、註解與風格。其他語系只作為理解來源與驗證未誤改的資料。
+
+自動更新是否正確，固定以本輪實際產生的 `base_oid`、Candidate Commit／tree、`base_oid..candidate_oid` Git diff、extraction/install/candidate-tree manifests 與 validation report 判定。Candidate Gate 通過前，Candidate Commit 只存在本機隔離 branch，不得 Push、不得建立 PR，也不得要求使用者再手動更新一次作為驗證。任何 Candidate HEAD、tree、manifest、diff 或 report 改變，都使前一份 Candidate evidence 失效，必須對新 Candidate 重建完整證據。
 
 每個新 claim 固定本流程與 `AI-Auto-Update-MOD-Review-Baseline.md` 的 workflow commit。已存在的進行中 state 繼續使用自己記錄的舊 workflow commit；不得因 workflow branch 前進而半途更換規則，也不進行自動 schema migration。
 
@@ -89,9 +95,14 @@ AI Auto Update/
 │     ├─ staging/
 │     └─ artifacts/
 │        ├─ extraction-manifest.json
-│        ├─ install-manifest.txt
+│        ├─ install-manifest.json
+│        ├─ candidate-tree-manifest.json
+│        ├─ candidate-name-status.txt
+│        ├─ candidate.diff
 │        ├─ validation-report.json
 │        ├─ review.json
+│        ├─ rejected/
+│        │  └─ <candidate-oid>/
 │        └─ localization/
 │           └─ <safe-id>/
 │              ├─ old.lua
@@ -99,7 +110,17 @@ AI Auto Update/
 │              ├─ merged.lua
 │              └─ decisions.json
 └─ Finished/
-   └─ <已完成來源檔>
+   ├─ <已完成來源檔>
+   └─ .evidence/
+      └─ <run-id>/
+         ├─ extraction-manifest.json
+         ├─ install-manifest.json
+         ├─ candidate-tree-manifest.json
+         ├─ candidate-name-status.txt
+         ├─ candidate.diff
+         ├─ validation-report.json
+         ├─ review.json
+         └─ state-final.json
 ```
 
 每個 worktree 位於 repository 外：
@@ -123,11 +144,11 @@ lock 以原子 directory-create 取得。`owner.json` 記錄 run ID、固定 wor
 - `source-acquisition.lock` 只保護 queue 盤點／claim，以及來源移入 `Finished`、退回 queue 時的目的檔解析、SHA 去重與同 volume 原子搬移；完成一個短操作後立即釋放。
 - MOD lock 不放在實際 MOD 目錄或 worktree；以 canonical `mod_relative_path` 的 SHA-256 作為中央 `.locks/mod/<sha256>.lock` identity。這使不同檔名或 slug 仍會對同一 repository MOD 目錄互斥，且乾淨安裝刪除 MOD 目錄時不會遺失鎖。
 - 中央 MOD lock 的建立、接管與釋放只由協調器序列化執行，worker 不得自行刪除。MOD identity reservation 從確認唯一 `mod_relative_path` 起持有到該 generation 合併歸檔，或使用者明確放棄且清理完成；等待登入、決策、Review 或合併時只將 `lease_mode` 改為 `reserved` 並釋放 worker，不釋放 MOD lock。
-- `git-coordination.lock` 只保護共用 Git metadata 寫入：精確 fetch 共用 remote-tracking ref、建立／刪除 local branch、worktree add/remove/prune。取得前確認目前不持有 `source-acquisition.lock` 或其他全域短期協調鎖；MOD identity reservation 可繼續持有，但任何持有 Git coordination lock 的操作不得等待 MOD lock。完成單一短操作後立即釋放；不得包住檔案同步、翻譯、驗證、commit、不同 branch 的 push、PR 或 Review。
+- `git-coordination.lock` 只保護共用 Git metadata 寫入：精確 fetch 共用 remote-tracking ref、建立／刪除 local branch、worktree add/remove/prune。取得前確認目前不持有 `source-acquisition.lock` 或其他全域短期協調鎖；MOD identity reservation 可繼續持有，但任何持有 Git coordination lock 的操作不得等待 MOD lock。完成單一短操作後立即釋放；不得包住檔案同步、翻譯、驗證、Candidate Commit、不同 branch 的 push、PR 或 Review。
 - Git coordination lock 已被其他 worker 持有時，以有限退避重試，不把 lock contention 記為 MOD 內容失敗。
 - `active` 由 worker、`reserved` 由協調器至少每 3 分鐘更新 heartbeat。
 - 超過 30 分鐘沒有 heartbeat 時，先依第 3.4 節判定 same-run reattach；`reattach` 只能更換 worker ID／heartbeat／lease mode，不得更換 run ID 或建立新 generation。存在非終止 state 或可驗證 claim 的 generation 不得由其他 run 接管。
-- 不得以全域 lock 包住解壓、翻譯、驗證、Commit、Push、PR 或 Review。
+- 不得以全域 lock 包住解壓、翻譯、驗證、Candidate Commit、Push、PR 或 Review。
 
 ### 3.4 Same-run crash recovery
 
@@ -141,13 +162,15 @@ lock 以原子 directory-create 取得。`owner.json` 記錄 run ID、固定 wor
 6. 超過 30 分鐘且完全沒有 matching claim/state、worker 或 Git process 的 lock 才是 orphan。協調器將固定 lock 原子改名為 `.orphan-<mod-lock-key>-<timestamp>` 保存證據後，才允許新 generation 取得原固定 path；不得直接刪除 orphan。
 7. 每次 reattach／重建都原子寫入 state 的 `last_recovery`，至少保存 reason、舊／新 worker ID、verified claim/state/worktree、時間與同一 run ID。失敗時保留原 lock/state/claim，不得用新 run 繞過。
 
+Candidate 階段 crash recovery 額外遵守：若 state 已記錄 `candidate_oid`，reattach 後必須先確認 local branch HEAD、Candidate tree、artifacts SHA 與 `candidate_gate` tuple 是否仍完全一致；一致才可從已完成 Candidate Gate 繼續，不一致則把 Candidate Gate 視為失效並重建 evidence。不得因 crash 直接跳過 Candidate Gate 或 Push 未驗證 HEAD。
+
 ## 4. 精簡 state
 
-新 claim 使用 `schema_version=9`；舊 state 依其固定 workflow commit 續跑，不轉換成 version 9。
+新 claim 使用 `schema_version=10`；舊 state 依其固定 workflow commit 續跑，不轉換成 version 10。
 
 ```json
 {
-  "schema_version": 9,
+  "schema_version": 10,
   "run_id": "<uuid>",
   "status": "claimed",
   "mod": "<MOD-name>",
@@ -185,6 +208,21 @@ lock 以原子 directory-create 取得。`owner.json` 記錄 run ID、固定 wor
   "merge_epoch": 1,
   "localization_mode": "none",
   "localization_files": [],
+  "candidate_oid": null,
+  "candidate_tree_oid": null,
+  "candidate_gate": {
+    "status": "not-run",
+    "base_oid": null,
+    "candidate_oid": null,
+    "candidate_tree_oid": null,
+    "diff_sha256": null,
+    "name_status_sha256": null,
+    "extraction_manifest_sha256": null,
+    "install_manifest_sha256": null,
+    "candidate_tree_manifest_sha256": null,
+    "validation_report_sha256": null,
+    "validated_at": null
+  },
   "pr_number": null,
   "pr_url": null,
   "head_oid": null,
@@ -219,6 +257,7 @@ status 只使用：
 claimed
 worktree-ready
 installed
+candidate-committed
 committed
 pr-open
 reviewing
@@ -229,7 +268,9 @@ waiting-user
 failed
 ```
 
-state 使用同目錄暫存檔寫入、JSON 回讀成功後原子取代。`last_recovery` 為 null 或單次最新 same-run recovery evidence，不是 operation lineage；每個階段只依 state、Git、manifest、PR 與檔案 SHA 回復。
+`candidate_oid`／`candidate_tree_oid` 表示目前本機待驗證或已通過 Gate 的 Candidate；`head_oid` 表示已發布 remote branch／PR 的目前 HEAD。首次 Push 前 `head_oid` 可以是 null。`candidate_gate.status` 只允許 `not-run|passed|rejected`，且 `passed` 必須綁定與目前 `candidate_oid` 完全相同的 base／candidate／tree／artifact SHA tuple。任何 worktree、index、Candidate HEAD、manifest 或 evidence 變更都先把 `candidate_gate.status` 設回 `not-run`；不得沿用舊 report。
+
+state 使用同目錄暫存檔寫入、JSON 回讀成功後原子取代。`last_recovery` 為 null 或單次最新 same-run recovery evidence，不是 operation lineage；每個階段只依 state、Git、manifest、PR 與檔案 SHA 回復。被拒絕 Candidate 的歷史 evidence 放在 `artifacts/rejected/<candidate-oid>/`，不塞入 state operation lineage。
 
 `external_review.status` 只允許 `not-requested|requested|completed|not-applicable|unavailable`；timeout 使用 `status=unavailable` 與 `reason=timeout`，不建立額外狀態。
 
@@ -276,7 +317,7 @@ slug 將非允許字元轉成 `-`、合併連續 `-` 並移除首尾點／橫線
 
 `checked_main_oid` 同時寫入 state 的 `main_checked_oid`，供第 6.3 節已是最新判定；本輪所有 main 內容讀取都必須使用該固定 OID，不得在 lock 外再次解析 remote-tracking ref。
 
-兩檔分別記錄 path、blob OID、size、SHA-256；Baseline 以 `role=review-baseline` 寫入 `reference_sources`。之後全程使用固定 commit。Workflow 本身缺少或不可讀時不得開始新 claim；Baseline 缺少或不可讀時可完成安裝、Commit 與 PR，但不得進入第 11 節 Review 完成，PR body 必須明確標記 Baseline unavailable。
+兩檔分別記錄 path、blob OID、size、SHA-256；Baseline 以 `role=review-baseline` 寫入 `reference_sources`。之後全程使用固定 commit。Workflow 本身缺少或不可讀時不得開始新 claim；Baseline 缺少或不可讀時可完成安裝、Candidate Commit、Candidate Gate、Push 與 PR，但不得進入第 11 節 Review 完成，PR body 必須明確標記 Baseline unavailable。
 
 ### 6.2 Nexus 與 metadata
 
@@ -329,7 +370,9 @@ README 使用主頁 Version／Last updated；正式 hash 使用實際 Main file 
 4. 只能有一個預期 MOD root。
 5. MOD root 必須能唯一對應 state 的 repository MOD directory。
 6. payload 依第 2.2 節與 `base_oid` 舊 blob 比對。
-7. 通過後才以原子 rename 成 `staging` 並寫入 `extraction-manifest.json`。
+7. 以 deterministic relative-path 排序寫入 `extraction-manifest.json`；至少保存 run ID、archive filename/size/SHA、MOD root、每個實際 staging file 的 normalized relative path、size、SHA-256 與 payload security disposition。
+8. manifest 回讀後重新掃描 staging，必須逐 path/size/SHA 與 manifest 完全一致；通過後才以原子 rename 成 `staging`。
+9. 計算 extraction manifest 自身 SHA-256。從這一刻起 `staging` 視為 immutable；若任何 staging byte、path 或 manifest 改變，必須廢棄該 staging 並從 archive 重新執行本節，不得在原 manifest 上局部修補。
 
 任何結構安全問題設為 `waiting-user` 或 `failed` 前，正式 worktree MOD 保持原狀；其他 MOD 繼續。
 
@@ -416,7 +459,7 @@ README 使用主頁 Version／Last updated；正式 hash 使用實際 Main file 
 - `SKIP`：純符號、純數字、純 placeholder 或官方 fallback。
 - `BLOCKED`：來源、詞彙或結構不足以可靠判定。
 
-有效文字存在 `BLOCKED` 時，該 MOD 不得進入 Commit；保存 key、原因與證據後設為 `waiting-user`。其他 MOD 繼續。
+有效文字存在 `BLOCKED` 時，該 MOD 不得進入 Candidate Commit；保存 key、原因與證據後設為 `waiting-user`。其他 MOD 繼續。
 
 ### 8.6 引用情境與寫入範圍
 
@@ -455,15 +498,17 @@ README 使用主頁 Version／Last updated；正式 hash 使用實際 Main file 
 
 1. 確認 worktree 乾淨，且 `base_oid` 是目前 branch HEAD 的 ancestor；初次安裝時 HEAD 必須等於 `base_oid`。
 2. 若本輪因 main 前進而重建，先以 `base_oid` 將本 MOD directory、README 目標區段及該 MOD hash 的工作樹內容還原到最新 main 基準；只處理這三個 allowlist，不重設 branch、其他 MOD 或整個 worktree。
-3. 從 `base_oid` 重新取得 old loc 並重建 old/new/merged provenance，然後完整移除該 worktree 內的單一舊 MOD 目錄。
-4. 從已驗證 staging 搬入完整新版 MOD root。
-5. active localization 以對應 `merged.lua` 原子取代。
-6. 建立 install manifest：每個 relative path、size、SHA。
-7. active loc 必須等於 merged；其他檔案必須等於 extraction manifest。
-8. worktree 內不得有舊檔殘留或 archive 沒有的額外檔案。
-9. 通過後設為 `installed`。
+3. 從 `base_oid` 重新取得 old loc 並重建 old/new/merged provenance。
+4. 遞迴完整移除該 worktree 內的單一舊 MOD directory；確認 canonical MOD path 已不存在後，才可開始安裝新版。不得以逐檔覆寫代替刪除，避免舊版已移除的檔案殘留。
+5. 從 immutable、已驗證 staging 搬入／複製完整新版 MOD root，重新確認 repository MOD directory 與 canonical path 正確。
+6. active localization 以對應 `merged.lua` 原子取代；其他 archive bytes 不得再修改。
+7. 以 deterministic relative-path 排序建立 `install-manifest.json`：至少保存 run ID、archive SHA、extraction-manifest SHA、base OID、MOD path，以及正式預期 MOD 樹每個 relative path、size、SHA-256、provenance=`archive|merged:<localization-id>`。
+8. 逐檔驗證 active loc 必須等於 merged；其他檔案 path/size/SHA 必須等於 extraction manifest 對應新版來源。
+9. 正式 MOD tree 的 path set 必須等於 install manifest；不得有舊檔殘留、來源遺漏或 archive 沒有的額外檔案。
+10. 計算 install manifest SHA-256；manifest 或正式 MOD tree 任一 byte/path 改變時，既有 Candidate evidence 全部失效。
+11. 通過後設為 `installed`。
 
-失敗時只還原本輪 worktree 的 README、MOD 與 hash allowlist 到 `base_oid`；不得對 repository root 或其他 worktree 執行遞迴清理。
+失敗時只還原本輪 worktree 的 README、MOD 與 hash allowlist 到 `base_oid`；不得對 repository root 或其他 worktree 執行遞迴清理。非 localization bytes 若和 staging/extraction manifest 不一致，不得手工修補單檔，必須重新執行本節的「刪除舊 MOD → 完整覆蓋新版」流程。
 
 ### 9.2 README
 
@@ -500,9 +545,9 @@ filename
 
 所有外部文字寫入前拒絕 CR、LF、NUL 與控制字元。正式 hash 必須與 state archive 及 Nexus Main file facts 一致。
 
-## 10. Commit、Push 與 PR
+## 10. Candidate Commit、Git evidence、Push 與 PR
 
-### 10.1 Commit 前驗證
+### 10.1 Candidate 前驗證
 
 只 stage：
 
@@ -510,38 +555,118 @@ filename
 - 本輪單一 MOD directory。
 - `.hash/<MOD-slug>.hash`。
 
-建立 commit 前完成：
+建立 Candidate Commit 前完成：
 
 - cached paths 沒有其他檔案。
 - allowlist 內沒有遺漏的 unstaged 變更。
 - `diff --check` 通過。
-- install manifest 與正式 MOD 樹一致。
+- install manifest 與正式 MOD worktree tree 一致。
 - active loc 的第 8.7 節全部通過。
 - README 與 hash metadata 一致。
 - security blocking count 為 0。
 - 主 repository 與其他 worktree 沒有被本 worker 改動。
+- branch HEAD 仍以 `base_oid` 為 ancestor；首次 Candidate 前 HEAD 必須等於 `base_oid`，已發布 PR 的後續修正則 HEAD 必須等於 state 記錄的目前 published head。
 
-寫入 `validation-report.json`，至少包含 workflow/Baseline SHA、base OID、cached tree OID、archive SHA、localization ids、target／unchanged／BLOCKED counts、manifest 結果、安全結果與規則 SHA。
+可用 `git write-tree` 取得 pre-candidate index tree 作為建 Commit 前一致性檢查，但它不是完成證據；最終驗證必須以實際 Candidate Commit 的 immutable tree 為準。本階段不得建立最終 `validation-report.json`，也不得用 Commit 後通常為空的 worktree diff 作為證據。
 
-這一階段稱為 pre-commit validation，不宣稱已完成 Baseline Review。
+### 10.2 建立本機 Candidate Commit
 
-### 10.2 Commit 與 Push
-
-commit 訊息：
+初次更新 commit 訊息：
 
 ```text
 Update <MOD-name> to <Main-file-version> YYYY-MM-DD
 ```
 
-Review 修正：
+Review／Candidate 修正 commit 訊息：
 
 ```text
 Fix <MOD-name> zh-tw review YYYY-MM-DD
 ```
 
-commit 後確認 `HEAD^{tree}` 等於 validation report 的 cached tree OID，再 push 唯一 branch。local HEAD、remote branch OID 一致後設為 `committed`。
+或對非 loc 的核准 metadata／install 修正使用能精確描述本 MOD scope 的短訊息。
 
-### 10.3 PR
+建立 commit 後立即固定：
+
+- `candidate_oid = HEAD`。
+- `candidate_tree_oid = HEAD^{tree}`。
+- `candidate_gate.status = not-run`。
+- `candidate_gate.base_oid = base_oid`，其餘 evidence SHA 先清空。
+
+重新確認 Candidate tree 等於剛才 staged index tree、`base_oid` 仍是 Candidate ancestor、worktree/index 乾淨且沒有 allowlist 外變更後，state 設為 `candidate-committed`。Candidate Commit 此時**只存在本機 branch**；Candidate Gate 通過前不得 Push、不得建立／更新 PR，也不得將它視為完成版本。
+
+### 10.3 Immutable Git evidence 與 Candidate Gate
+
+Candidate Gate 固定針對同一 immutable tuple：
+
+```text
+run_id
+workflow_commit_oid
+base_oid
+candidate_oid
+candidate_tree_oid
+archive_sha256
+extraction_manifest_sha256
+install_manifest_sha256
+allowlist
+```
+
+先從實際 Candidate Commit 建立證據，不從 worktree 推測：
+
+1. 以整個 repository 的 `base_oid..candidate_oid` 產生 `candidate-name-status.txt`；使用 no-renames 語意，完整列出新增／修改／刪除 path，並計算 SHA-256。
+2. 以同一 `base_oid..candidate_oid` 產生 `candidate.diff`；固定使用 full-index、binary、no-ext-diff、no-renames 等價語意，使文字與 binary 變更都綁定明確 blob。計算 SHA-256。不得使用無參數 `git diff`、worktree diff 或 Commit 後空 diff 代替。
+3. 直接從 `candidate_oid` 的 Git tree 枚舉本 MOD directory 所有 blobs，讀取 blob bytes 計算 size／SHA-256，建立 `candidate-tree-manifest.json`。同一 manifest 另記錄 `candidate_tree_oid`、README blob OID/SHA-256、正式 hash blob OID/SHA-256 與 allowlist。
+4. 所有 artifact 先寫入本輪唯一暫存檔，回讀、計算 SHA 後原子取代正式檔；生成期間 Candidate HEAD 或 tree 變動即全部作廢重來。
+
+接著自動執行 Candidate Gate，全部成立才可 pass：
+
+- local branch HEAD = `candidate_oid`，`HEAD^{tree}` = `candidate_tree_oid`，且 `base_oid` 是 Candidate ancestor。
+- `candidate-name-status.txt` 的所有變更只位於 `README.md` 的唯一目標區段、本輪單一 MOD directory、`.hash/<MOD-slug>.hash`；沒有 allowlist 外異動。
+- Candidate MOD tree 的 path set、size、SHA-256 與 `install-manifest.json` 完全一致，因此 Git tree 中沒有舊檔殘留、來源遺漏或 worktree-only 檔案。
+- install manifest 的所有 `provenance=archive` 檔案 path/size/SHA-256 與 extraction manifest 完全一致；所有 `provenance=merged:<id>` 檔案與對應 `merged.lua` 完全一致，且其 new→merged 修改已通過第 8.7 節。
+- README 只有目標 heading 允許的 metadata／必要功能摘要變更；`.hash` 與 Nexus、archive filename/version/size/SHA 完全一致。
+- `candidate.diff` 的 base/head 正是 state 的 immutable `base_oid..candidate_oid`；重新生成相同 diff 必須得到相同 SHA-256。
+- extraction/install/candidate-tree manifests 的 SHA、workflow/Baseline blob/SHA、translation rules SHA、archive SHA 與目前 state 完全一致。
+- security blocking count = 0；所有 security override 仍精確綁定本輪 archive SHA/path/file SHA。
+
+Candidate Gate 完成後寫入最終 `validation-report.json`，至少包含：
+
+- run ID、MOD identity、workflow commit/path/blob/SHA、Review Baseline path/blob/SHA。
+- archive filename/size/SHA、Nexus Main file facts。
+- `base_oid`、`candidate_oid`、`candidate_tree_oid`、merge epoch 與 allowlist。
+- extraction/install/candidate-tree manifest SHA-256。
+- `candidate-name-status.txt` 與 `candidate.diff` SHA-256，以及 changed path counts。
+- active localization ids、new/merged/decisions SHA、target／unchanged／BLOCKED counts、中文 Gate 結果。
+- README/hash metadata Gate、安全 Gate、tree-vs-manifest Gate、allowlist Gate 與 `diff --check` 結果。
+- `result=passed|rejected`、驗證時間與拒絕原因；不得把人工「看起來正確」當成 passed evidence。
+
+final report 寫完後計算 `validation_report_sha256`，再重新確認 local HEAD／tree 與所有 input artifact SHA 沒有變動。完全一致且 report `result=passed` 時，才把 state 的 `candidate_gate` 原子更新為 `status=passed` 及完整 base/candidate/tree/artifact SHA tuple。任一 OID、tree、manifest、diff 或 report SHA 不一致時為 `rejected`，不得 Push。
+
+### 10.4 Candidate Gate 失敗：回滾、重建或修正
+
+Candidate Gate rejected 時先把該 Candidate 的 `candidate.diff`、name-status、candidate-tree manifest、validation report 與相關 manifest SHA 複製到 `artifacts/rejected/<candidate-oid>/` 保存，再依 finding 類型處理：
+
+1. **舊檔殘留、來源遺漏、非 loc bytes 與 archive 不一致**：不得逐檔手工修補。只還原本輪 README／MOD／hash allowlist 到 `base_oid` 或目前安全基準，再重新執行第 9.1 節「完整刪除舊 MOD → 從 immutable staging 完整覆蓋 → 套用 merged」流程。
+2. **active zh-tw、README 或 hash 的 scope 內可修正問題**：只修改核准範圍，更新 merged／decisions／install manifest 與 metadata 後重新 stage。
+3. **security、identity、archive/staging provenance 不可靠或無法自動修正**：設為 `waiting-user`；保留 lock、state、來源、Candidate/rejected evidence，不得以人工重新更新一次取代 Gate。
+
+若此 branch 從未 Push、remote branch 不存在且 PR 尚未建立，可在保存 rejected evidence並再次確認本 run 擁有 MOD identity reservation後，將**本機 unpublished branch**移回 `base_oid`，再建立乾淨的新 Candidate；這不是 force-push。只要 branch 曾發布或 PR 已存在，就不得 reset、rebase 或 force-push 隱藏失敗 Candidate，必須以一般追加 commit 建立新的 Candidate HEAD。
+
+每個新 Candidate 都必須清除／失效前一個 `candidate_gate`，重新執行第 10.1–10.3 節。只有最新 Candidate Gate 通過的 HEAD 才可發布。
+
+### 10.5 Push
+
+只有 `candidate_gate.status=passed` 且 state 中的 `candidate_gate.base_oid/candidate_oid/candidate_tree_oid`、manifest SHA、diff SHA、validation report SHA 全部仍和目前 Candidate 一致時，才可 Push 唯一 branch。
+
+Push 後確認：
+
+- local HEAD = `candidate_oid`。
+- remote branch OID = `candidate_oid`。
+- remote tree = `candidate_tree_oid`。
+- 沒有 force-push。
+
+全部成立才把 `head_oid` 設為 `candidate_oid`、status 設為 `committed`。若 Push 前 HEAD 或 evidence 改變，回到第 10.3 節；若 remote 已出現非預期 OID，不覆寫，設為 `waiting-user` 或依第 12 節處理。
+
+### 10.6 PR
 
 建立或更新唯一非 Draft PR：
 
@@ -552,7 +677,11 @@ commit 後確認 `HEAD^{tree}` 等於 validation report 的 cached tree OID，�
 
 PR body 在進入 Review 前必須列出：
 
-- 目前 HEAD。
+- 目前 HEAD／Candidate OID／Candidate tree OID。
+- Candidate Gate base OID 與 `result=passed`。
+- `candidate.diff` SHA-256 與 changed path count。
+- extraction/install/candidate-tree manifest SHA-256。
+- validation report SHA-256。
 - Review Baseline path/SHA。
 - active localization ids。
 - target／unchanged／BLOCKED counts。
@@ -563,24 +692,25 @@ PR body 在進入 Review 前必須列出：
 - security override 明細或 none。
 - 外部 Review 狀態。
 
-建立並核對 PR head OID 後設為 `pr-open`。
+建立／更新 PR 後必須核對 `PR headRefOid = remote branch OID = candidate_oid`，且 Candidate Gate tuple 仍相同，才設為 `pr-open`。
 
 ## 11. 同一 HEAD Review
 
 ### 11.1 本地 Review
 
-只有 PR 已建立、local HEAD、remote branch HEAD 與 PR `headRefOid` 完全相同後，才依固定 commit 的 `AI-Auto-Update-MOD-Review-Baseline.md` 執行正式本地 Review。
+只有 PR 已建立、local HEAD、remote branch HEAD、PR `headRefOid` 與 `candidate_oid` 完全相同，且 Candidate Gate 對該 OID 為 passed 後，才依固定 commit 的 `AI-Auto-Update-MOD-Review-Baseline.md` 執行正式本地 Review。
 
 共同輸入固定為：
 
-- state、workflow/Baseline SHA、base/head。
-- validation report、cached diff、extraction/install manifest。commit 後 index 必須等於 HEAD tree，cached diff 以 index 對 `base_oid` 取得，並再次確認其 tree OID 等於 validation report 與 `HEAD^{tree}`，不得使用空的 worktree diff 代替。
+- state、workflow/Baseline SHA、`base_oid`、`candidate_oid`／`candidate_tree_oid` 與 PR head。
+- Candidate Gate 的 `validation-report.json`、extraction/install/candidate-tree manifests、`candidate-name-status.txt`、`candidate.diff` 及其 SHA。
+- Review 開始前重新以 immutable `base_oid..candidate_oid` 生成 Git diff／name-status，SHA 必須和 Candidate Gate evidence 完全一致；不得從 index、cached diff 或空的 worktree diff推導目前變更。
 - active id 的 new/merged/decisions。
 - 必要規則、詞彙與引用情境。
 - README/hash/Nexus/archive facts。
 - lock/state/branch/worktree/PR 的併發隔離證據。
 
-Review finding 依 Baseline 分類。沒有 actionable finding 時記錄 `none`。本地 Review 通過後，將結果與目前 HEAD 寫入 `review.json`。
+Review 必須先確認實際 Candidate tree 能由 manifest 與 diff 自動證明「舊 MOD 已完整移除、新版來源已完整覆蓋、只有核准 zh-tw／README／hash 變更」，再審查 Baseline 其餘共同問題。Review finding 依 Baseline 分類。沒有 actionable finding 時記錄 `none`。本地 Review 通過後，將結果、Candidate evidence SHA 與目前 HEAD 寫入 `review.json`。
 
 ### 11.2 修正迴圈
 
@@ -589,11 +719,13 @@ Review finding 依 Baseline 分類。沒有 actionable finding 時記錄 `none`�
 1. 只處理 `adopt` finding；`keep` 留下具體證據，不修改。
 2. `security-blocking` 立即將該 MOD 設為 `waiting-user`。
 3. 修改前若 `review_cycle >= 3`，不得開始第 4 次自動修正，改為 `waiting-user`。
-4. 修改 loc 時同步更新 merged、decisions、install manifest、validation report。
-5. 重新執行第 8.7、9、10 節，建立新 commit 並 push。
-6. commit 成功後 `review_cycle += 1`。
-7. 更新 PR body 的 HEAD 與 counts。
-8. 對新 HEAD 從第 11.1 節重跑；舊 Review 不再有效。
+4. 修改 loc 時同步更新 merged、decisions、install manifest；README/hash 或安裝 finding 也同步更新對應 manifest/evidence。
+5. 任一修改開始前先把舊 `candidate_gate` 設為 `not-run`，舊 validation report、diff、Candidate Review 全部失效。
+6. 重新執行第 8.7、9 與 10.1–10.3 節，建立新的 Candidate Commit並跑完整 Candidate Gate。
+7. 因 PR 已發布，修正只可追加一般 commit；不得 reset、rebase 或 force-push。Candidate Gate passed 後才依第 10.5 節 Push 新 HEAD。
+8. commit 成功並通過 Candidate Gate後 `review_cycle += 1`。
+9. 更新 PR body 的 Candidate OID/tree、evidence SHA 與 counts。
+10. 對新 HEAD 從第 11.1 節重跑；舊 Review 不再有效。
 
 ### 11.3 外部 Review 與所有 PR feedback
 
@@ -617,48 +749,50 @@ Review finding 依 Baseline 分類。沒有 actionable finding 時記錄 `none`�
 
 全部成立才設為 `awaiting-user-merge`：
 
-- local HEAD = remote branch HEAD = PR `headRefOid`。
-- validation report cached tree = `HEAD^{tree}`。
+- local HEAD = remote branch HEAD = PR `headRefOid` = `candidate_oid`。
+- Candidate Gate status = passed，且 gate 的 base/candidate/tree、extraction/install/candidate-tree manifests、diff 與 validation report SHA 全部對應目前 HEAD。
+- `candidate_tree_oid = HEAD^{tree}`，重新生成 `base_oid..candidate_oid` diff 的 SHA 等於 validation report。
 - 本地 Review 對目前 HEAD 為 `none` 或所有 finding 已 disposition。
 - scope 內 feedback 全部處理，security blocking count = 0。
 - active loc validation 全部通過；`none` 模式為 not-applicable。
-- PR body 已更新 Baseline 要求摘要。
-- `reviewed_oid` 寫入目前 HEAD。
+- PR body 已更新 Baseline 要求的 Candidate Gate／evidence 摘要。
+- `reviewed_oid` 寫入目前 `candidate_oid`。
 - 外部 Review 狀態是 `completed`、`not-applicable` 或 `unavailable`；`completed` 的 request/review/head 證據全部對應目前 HEAD，其他狀態具有 reason、head 與 verified time。
 
 將 MOD lock 設為 `lease_mode=reserved`、由協調器維持 heartbeat，釋放 worker並通知使用者可合併；不得釋放該 MOD identity reservation，同 MOD 後續 claim 保持排隊，其他 MOD 繼續。
 
 ## 12. 併發中的 main 更新
 
-每次 Commit 前與 Review 完成前，由協調器取得短期 `git-coordination.lock` 精確更新 `origin/main`，把該 ref 解析一次並保存為不可變的 `checked_main_oid` 後立即釋放。後續影響判定、讀取、merge 與 state 更新只能使用此 OID，不得再次解析 `origin/main`；比較範圍固定為前次 `main_checked_oid..checked_main_oid`：
+每次 Candidate Commit 前與 Review 完成前，由協調器取得短期 `git-coordination.lock` 精確更新 `origin/main`，把該 ref 解析一次並保存為不可變的 `checked_main_oid` 後立即釋放。後續影響判定、讀取、merge 與 state 更新只能使用此 OID，不得再次解析 `origin/main`；比較範圍固定為前次 `main_checked_oid..checked_main_oid`：
 
-- 未觸及本 MOD directory、該 MOD hash 或 README 目標區段：將 state 的 `main_checked_oid` 更新為 `checked_main_oid`，繼續目前 HEAD。
-- 觸及本 MOD directory、該 MOD hash 或 README 目標區段：目前 Review 失效。確認目前 run 仍擁有 MOD identity reservation，指派 worker 並將 lock 改為 `lease_mode=active`；在目前唯一 branch 以一般 merge 納入固定的 `checked_main_oid`，不 reset、不 rebase、不 force-push。merge 完成且 worktree 乾淨後，將 `checked_main_oid` 同時寫為新 `base_oid`／`main_checked_oid`、遞增 `merge_epoch`，依第 9.1 節只把本輪 allowlist 還原到新 base，再從 archive 重建 old/new/merged、安裝、validation、commit、push 與同 HEAD Review。
+- 未觸及本 MOD directory、該 MOD hash 或 README 目標區段：將 state 的 `main_checked_oid` 更新為 `checked_main_oid`，繼續目前 Candidate；但任何已建立 Candidate 仍只以自己固定的 `base_oid..candidate_oid` evidence 判定，不偷換 base。
+- 觸及本 MOD directory、該 MOD hash 或 README 目標區段：目前 Candidate Gate 與 Review 失效。確認目前 run 仍擁有 MOD identity reservation，指派 worker並將 lock 改為 `lease_mode=active`；在目前唯一 branch 以一般 merge 納入固定的 `checked_main_oid`，不 reset、不 rebase、不 force-push。merge 完成且 worktree 乾淨後，將 `checked_main_oid` 同時寫為新 `base_oid`／`main_checked_oid`、遞增 `merge_epoch`，依第 9.1 節只把本輪 allowlist 還原到新 base，再從 archive 重建 old/new/merged、安裝、建立新 Candidate、重跑 Candidate Gate、Push 與同 HEAD Review。
 - 只修改其他 MOD 的 README 區段且目前 PR 可乾淨合併：不更新 branch，只把 state 的 `main_checked_oid` 更新為 `checked_main_oid`。
-- 只修改其他區段但目前 PR 發生 README merge conflict：在目前唯一 branch 以一般 merge 納入固定的 `checked_main_oid`，解決 README 時保留該 OID 的 README 全文及本 MOD 目標區段；接著將 `checked_main_oid` 同時寫為新 `base_oid`／`main_checked_oid`、遞增 `merge_epoch`，重新建立 old/new/merged provenance、validation、push 與同 HEAD Review。相同 MOD bytes 未變時可重用 archive/staging manifest，但所有 base-bound artifacts 必須重建。
+- 只修改其他區段但目前 PR 發生 README merge conflict：在目前唯一 branch 以一般 merge 納入固定的 `checked_main_oid`，解決 README 時保留該 OID 的 README 全文及本 MOD 目標區段；接著將 `checked_main_oid` 同時寫為新 `base_oid`／`main_checked_oid`、遞增 `merge_epoch`，重新建立 old/new/merged provenance、install/candidate-tree manifests、Candidate diff、validation、Push 與同 HEAD Review。相同 MOD bytes 未變時可重用 archive/staging manifest，但所有 base-bound artifacts 必須重建。
 
-merge main、commit 與 push 仍由該 MOD lock 隔離；只有 fetch 與 shared branch/worktree metadata 操作使用短期 Git coordination lock。不得用任何全域鎖包住 README 解衝突、來源安裝、中文處理或 Review；單一 PR 衝突不停止其他 MOD。
+merge main、Candidate Commit 與 push 仍由該 MOD lock 隔離；只有 fetch 與 shared branch/worktree metadata 操作使用短期 Git coordination lock。不得用任何全域鎖包住 README 解衝突、來源安裝、Candidate Gate、中文處理或 Review；單一 PR 衝突不停止其他 MOD。
 
 ## 13. 合併後歸檔
 
 協調器看到 `awaiting-user-merge` 時查詢 PR：
 
-- OPEN 且 head 等於 `reviewed_oid`：先依第 12 節核對最新 main、PR mergeability 與新增 feedback；仍無相關變更、衝突或 scope/security feedback 時保持等待，否則設為 `reviewing`。
-- OPEN 但 head 不同：設為 `reviewing`，對新 HEAD 重跑。
+- OPEN 且 head 等於 `reviewed_oid`：先依第 12 節核對最新 main、PR mergeability 與新增 feedback；仍無相關變更、衝突或 scope/security feedback時，再確認 Candidate Gate tuple／evidence SHA 仍對應該 head，才保持等待，否則設為 `reviewing`。
+- OPEN 但 head 不同：設為 `reviewing`，對新 HEAD 重跑 Candidate Gate 與 Review。
 - CLOSED 未合併：設為 `waiting-user`，請使用者選擇重新開啟或放棄。
-- MERGED：確認合併內容的正式 hash 等於來源 SHA，然後歸檔。
+- MERGED：確認合併內容的正式 hash 等於來源 SHA，且被合併 PR head 等於 `reviewed_oid = candidate_oid`，然後歸檔。
 
 MERGED 後：
 
-1. state 設為 `merged`；在第 6 步成功前保留 state 與 MOD identity reservation。
+1. state 設為 `merged`；在第 7 步成功前保留 state 與 MOD identity reservation。
 2. 取得短期 `source-acquisition.lock`，重新核對來源 size／SHA，並在同一 critical section 內解析 `Finished` 目的檔、執行同名同 SHA 去重或同 volume 原子搬移；不同 SHA 的同名檔不得覆蓋，保留來源並設為 `waiting-user`。完成後立即釋放來源鎖；若使用者排除 collision 並完成歸檔，將 state 恢復為 `merged` 再續跑。
 3. 確認 worktree 乾淨且本機 branch tip 等於 `reviewed_oid` 後，取得短期 `git-coordination.lock`，使用標準 `git worktree remove`；確認移除完成後再刪除本機本輪唯一 branch，然後立即釋放 Git coordination lock。
 4. 遠端 branch 已由 GitHub 刪除時不處理，仍存在時只刪除本輪唯一 remote branch；不同 branch 的 remote delete 不需要持有本機 Git coordination lock。
-5. 清除本輪 staging、artifacts 與可安全刪除的空目錄，但保留 state 與固定名稱的 MOD lock。
-6. 前述步驟全部完成後，協調器重新核對 `owner.json.run_id`、state path、`mod_lock_key` 與 expected terminal evidence：本節為 `status=merged`；第 6.3 節為 `status=already-current`；放棄流程為 `status=waiting-user`、`waiting_reason=abandon-confirmed` 及使用者確認證據。完全相符時，將固定 MOD lock directory 原子改名為本 run 唯一的 `.released-<mod-lock-key>-<run-id>` tombstone；只有改名成功才可刪除 state，最後只刪除該 tombstone。owner 或 terminal evidence 不符、或改名失敗時保留 state 與 lock，禁止刪除固定 lock path。
-7. 任一步驟中斷時保留可恢復證據；若已完成第 6 步的原子改名，續跑只能清除本 run 的 state／tombstone，不得再寫 repository 或操作後來 generation 的固定 MOD lock。
+5. 在刪除本輪 artifacts 前，建立 `Finished/.evidence/.tmp-<run-id>`，只複製 final extraction/install/candidate-tree manifests、candidate-name-status、candidate.diff、validation report、review 與 `state-final.json`。`state-final.json` 至少固定 run ID、archive SHA、base/candidate/tree/reviewed OID、PR URL/number、merged evidence、所有 artifact SHA 與 workflow/Baseline SHA。回讀並逐 SHA 對帳 state／PR body後，以 run ID 唯一路徑原子 rename 成 `Finished/.evidence/<run-id>`；目標已存在時只有內容 SHA 全部相同才視為 idempotent，否則 `waiting-user`。因 run ID 唯一，不以全域鎖包住 evidence 建立；只在單次 rename 競態時重試。
+6. evidence 歸檔成功後，清除本輪 staging、原 artifacts 與可安全刪除的空目錄，但保留 state、`Finished/.evidence/<run-id>` 與固定名稱 MOD lock。歸檔 evidence 不得包含 credential 或不受信任可執行內容，只保存既有文字/JSON evidence 與 diff。
+7. 前述步驟全部完成後，協調器重新核對 `owner.json.run_id`、state path、`mod_lock_key` 與 expected terminal evidence：本節為 `status=merged`；第 6.3 節為 `status=already-current`；放棄流程為 `status=waiting-user`、`waiting_reason=abandon-confirmed` 及使用者確認證據。完全相符時，將固定 MOD lock directory 原子改名為本 run 唯一的 `.released-<mod-lock-key>-<run-id>` tombstone；只有改名成功才可刪除 state，最後只刪除該 tombstone。owner 或 terminal evidence 不符、或改名失敗時保留 state 與 lock，禁止刪除固定 lock path。
+8. 任一步驟中斷時保留可恢復證據；若已完成第 7 步的原子改名，續跑只能清除本 run 的 state／tombstone，不得再寫 repository 或操作後來 generation 的固定 MOD lock。
 
-放棄 CLOSED PR 時，只有使用者確認後才還原本輪 worktree並刪除本輪唯一 branch/PR 資料；來源退回 queue 必須使用短期 `source-acquisition.lock` 完成目的檔 collision 檢查與同 volume 原子搬移。將 `waiting_reason` 設為 `abandon-confirmed` 並保存使用者確認證據；清理完成後使用第 6 步相同的 owner-checked 原子改名程序釋放 MOD identity reservation。任何 OID、SHA 或 owner 不一致時保留現況。
+放棄 CLOSED PR 時，只有使用者確認後才還原本輪 worktree並刪除本輪唯一 branch/PR 資料；來源退回 queue 必須使用短期 `source-acquisition.lock` 完成目的檔 collision 檢查與同 volume 原子搬移。將 `waiting_reason` 設為 `abandon-confirmed` 並保存使用者確認證據；清理完成後使用第 7 步相同的 owner-checked 原子改名程序釋放 MOD identity reservation。任何 OID、SHA 或 owner 不一致時保留現況。
 
 ## 14. Ovenproof's Scoreboard Plugin 特例
 
@@ -676,7 +810,7 @@ MERGED 後：
 - workflow/Baseline 固定 commit、blob、SHA 可重建。
 - source、MOD 與短期 Git coordination locks 的 identity、owner、範圍及釋放結果正確；same-run crash recovery 可由 lock／claim／state tuple 重建且不產生永久 deadlock；`Finished`／queue 搬移沒有 shared destination race，共享 Git metadata 沒有競態。
 - archive/Nexus/README/hash identity 一致。
-- archive path、entry、collision、payload 與 staging manifest 安全檢查通過。
+- archive path、entry、collision、payload 與 staging/extraction manifest 安全檢查通過；extraction manifest SHA 與 immutable staging 一致。
 - 每個 MOD 同時只有一個 active generation；其 identity reservation、state、source、artifacts、branch、worktree 與 PR 唯一對應，舊 generation 不會刪除新 owner 的 lock。
 - 沒有跨 MOD 寫入或全域阻塞。
 - security blocking count = 0。
@@ -690,22 +824,25 @@ MERGED 後：
 - 非 zh-tw fields/bytes、placeholder、lookup、markup、expression 與 Lua 結構驗證通過。
 - new/merged/decisions/counts/SHA 一致。
 
-### Gate C：安裝與 Git
+### Gate C：Candidate 安裝與 Git
 
-- 正式 MOD 樹等於 extraction/install manifest，只有 active loc 等於 merged。
-- cached paths 只有 README、單一 MOD 與單一 hash。
+- 安裝順序已證明為「完整刪除舊 MOD directory → 從已驗證 staging 完整覆蓋新版 → 只套用核准 active zh-tw → 更新 README/hash」。
+- `candidate_oid`／`candidate_tree_oid` 固定，`base_oid` 是 Candidate ancestor。
+- Candidate MOD Git tree 的 path/size/SHA 與 install manifest 完全一致；install manifest 的 archive provenance 與 extraction manifest 完全一致，active loc 與 merged 完全一致。
+- `base_oid..candidate_oid` 的 name-status 與 binary/full-index diff 已產生、SHA 可重建，且所有變更只在 README 目標區段、單一 MOD directory、單一 hash allowlist。
 - README/hash metadata 正確。
-- local/remote HEAD 一致，validation cached tree 等於 HEAD tree。
-- main 的相關變更已完成影響判定。
+- validation report 綁定 run ID、workflow/Baseline、archive SHA、base/candidate/tree、manifest SHA、diff SHA 與 Candidate Gate result。
+- `candidate_gate.status=passed`，且 Gate 通過後 Candidate 才被 Push。
+- local/remote HEAD = `candidate_oid`，remote tree = `candidate_tree_oid`；main 的相關變更已完成影響判定。
 
 ### Gate D：PR 與 Review
 
-- PR OPEN、非 Draft、base/head 正確。
-- PR body 含 Baseline 要求摘要。
-- 本地 Review 與所有已取得 scope 內 feedback 對應目前 HEAD。
+- PR OPEN、非 Draft、base/head 正確，`PR headRefOid = candidate_oid`。
+- PR body 含 Candidate Gate base/candidate/tree、diff、manifest、validation report SHA 與 Baseline 要求摘要。
+- 本地 Review 與所有已取得 scope 內 feedback 對應目前 Candidate HEAD，且 Review 使用 immutable `base_oid..candidate_oid` diff，不使用空 worktree diff。
 - 外部 Review completed 時具備 request event、review ID、reviewer、submitted time 與 commit OID；not-applicable/unavailable 時具備 reason、head 與 verified time。
 - 所有 scope finding 已 disposition，security blocking = 0。
-- `reviewed_oid = PR headRefOid`。
+- `reviewed_oid = PR headRefOid = candidate_oid`。
 - state = `awaiting-user-merge`。
 
-Gate A–D 全部通過後，才回報「已完成，等待使用者合併」。單一 MOD 未通過時保留其 state，其他 MOD繼續併發。
+Gate A–D 全部通過後，才回報「已完成，等待使用者合併」。判定結果必須能由本輪 Git commit/tree/diff、archive/extraction/install/candidate-tree manifests、validation report、PR 與保存的 evidence 重建，不得要求使用者再手動執行同一次 MOD 更新來確認。單一 MOD 未通過時保留其 state，其他 MOD 繼續併發。
