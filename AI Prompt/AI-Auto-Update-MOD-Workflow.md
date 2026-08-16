@@ -81,7 +81,9 @@ AI Auto Update/
 ├─ In Progress/
 │  ├─ .locks/
 │  │  ├─ source-acquisition.lock/
-│  │  └─ <MOD-slug>.lock/
+│  │  ├─ git-coordination.lock/
+│  │  └─ mod/
+│  │     └─ <mod-path-sha256>.lock/
 │  └─ <MOD-slug>-<run-id-short>/
 │     ├─ state.json
 │     ├─ source/<原始檔名>
@@ -120,10 +122,13 @@ Update/<MOD-slug>/<YYYYMMDD>-<run-id-short>
 lock 以原子 directory-create 取得，`owner.json` 只記錄 run ID、worker ID、取得時間、heartbeat、state path 與 worktree。
 
 - `source-acquisition.lock` 只保護 queue 盤點、選取、建立 claim 及同 volume 原子搬移，完成後立即釋放。
-- MOD lock 從確認 slug 起持有到目前寫入步驟結束；等待登入、決策、Review 或合併前釋放。
+- MOD lock 不放在實際 MOD 目錄或 worktree；以 canonical `mod_relative_path` 的 SHA-256 作為中央 `.locks/mod/<sha256>.lock` identity。這使不同檔名或 slug 仍會對同一 repository MOD 目錄互斥，且乾淨安裝刪除 MOD 目錄時不會遺失鎖。
+- MOD lock 從確認唯一 `mod_relative_path` 起持有到目前寫入步驟結束；等待登入、決策、Review 或合併前釋放。
+- `git-coordination.lock` 只保護共用 Git metadata 寫入：精確 fetch 共用 remote-tracking ref、建立／刪除 local branch、worktree add/remove/prune。取得前再次確認目前不持有其他共用鎖，完成單一短操作後立即釋放；不得包住檔案同步、翻譯、驗證、commit、不同 branch 的 push、PR 或 Review。
+- Git coordination lock 已被其他 worker 持有時，以有限退避重試，不把 lock contention 記為 MOD 內容失敗。
 - 活動 worker 至少每 3 分鐘更新 heartbeat。
 - 超過 30 分鐘沒有 heartbeat 時，只有確認原 worker 已結束且 worktree 沒有活動 Git process，才可接管。
-- 不得以全域 lock 包住解壓、翻譯、驗證、Git、PR 或 Review。
+- 不得以全域 lock 包住解壓、翻譯、驗證、Commit、Push、PR 或 Review。
 
 ## 4. 精簡 state
 
@@ -138,6 +143,7 @@ lock 以原子 directory-create 取得，`owner.json` 只記錄 run ID、worker 
   "mod_slug": "<safe-slug>",
   "repo_mod_directory": "<exact-directory>",
   "mod_relative_path": "Warhammer 40,000 DARKTIDE/mods/<exact-directory>",
+  "mod_lock_key": "<sha256-of-canonical-mod-relative-path>",
   "readme_heading": "<exact-heading>",
   "workflow_ref": "Codex/AI-Auto-Update-Workflow-Hash",
   "workflow_commit_oid": "<commit>",
@@ -173,7 +179,21 @@ lock 以原子 directory-create 取得，`owner.json` 只記錄 run ID、worker 
   "head_oid": null,
   "reviewed_oid": null,
   "review_cycle": 0,
-  "external_review": "not-requested",
+  "external_review": {
+    "status": "not-requested",
+    "head_oid": null,
+    "requested_at": null,
+    "request_event_id": null,
+    "request_event_source": null,
+    "request_event_kind": null,
+    "request_event_at": null,
+    "review_id": null,
+    "reviewer_login": null,
+    "submitted_at": null,
+    "review_commit_oid": null,
+    "verified_at": null,
+    "reason": null
+  },
   "security_overrides": [],
   "waiting_reason": null,
   "last_error": null,
@@ -199,16 +219,19 @@ failed
 
 state 使用同目錄暫存檔寫入、JSON 回讀成功後原子取代。沒有 operation lineage；每個階段只依 state、Git、manifest、PR 與檔案 SHA 回復。
 
+`external_review.status` 只允許 `not-requested|requested|completed|not-applicable|unavailable`；timeout 使用 `status=unavailable` 與 `reason=timeout`，不建立額外狀態。
+
 ## 5. 協調器與來源 claim
 
 ### 5.1 排程
 
-1. 先掃描 `In Progress/*/state.json`。
-2. 可自主續跑的 MOD 優先分派 worker。
-3. `waiting-user`、`failed`、`awaiting-user-merge` 不占用 worker；只在條件改變後重新排程。
-4. 有空閒 worker 時，再從 `AI Auto Update` 根目錄 claim 新來源。
-5. 多個來源存在時按完整檔名 ordinal ignore-case，再按 ordinal 排序。
-6. 同一 MOD lock 已存在時，對應 claim 保留排隊，worker 改處理其他 MOD。
+1. 先掃描 `.claims/*/claim.json`，恢復 `claimed|identifying` 工作；`waiting-user` claim 在使用者補齊識別資訊後重新排程，不得因來源已離開根目錄而遺失。
+2. 再掃描 `In Progress/*/state.json`。
+3. 可自主續跑的 claim／MOD 優先分派 worker。
+4. `waiting-user`、`failed`、`awaiting-user-merge` 不占用 worker；只在條件改變後重新排程。
+5. 有空閒 worker 時，再從 `AI Auto Update` 根目錄 claim 新來源。
+6. 多個來源存在時按完整檔名 ordinal ignore-case，再按 ordinal 排序。
+7. 同一 MOD lock 已存在時，對應 claim 保留排隊，worker 改處理其他 MOD。
 
 ### 5.2 Claim
 
@@ -220,10 +243,10 @@ state 使用同目錄暫存檔寫入、JSON 回讀成功後原子取代。沒有
 2. 產生 run ID。
 3. 建立 `.claims/<run-id>/source`。
 4. 計算 filename、size、SHA-256。
-5. 在同一 volume 原子搬移來源並寫入 `claim.json`。
+5. 在同一 volume 原子搬移來源並寫入 `claim.json`；至少保存 `run_id`、status、來源 path/size/SHA、建立時間、waiting reason 與已知識別證據。
 6. 釋放來源鎖。
 
-worker 接手 claim 後，利用檔名、README、Nexus ID、archive root 與既有 MOD 目錄確認唯一 MOD。確認 slug 後取得 MOD lock，將 claim 搬到 `In Progress/<slug>-<run-short>` 並建立 state。無法唯一識別時只將該 claim 設為 `waiting-user`。
+worker 接手 claim 時先將 claim status 設為 `identifying`，再利用檔名、README、Nexus ID、archive root 與既有 MOD 目錄確認唯一 MOD。確認 canonical `mod_relative_path` 後計算 MOD lock key並取得中央 MOD lock，再將 claim 搬到 `In Progress/<slug>-<run-short>` 並建立 state。無法唯一識別時將 claim status 設為 `waiting-user`、保存原因並釋放 worker；協調器下一輪仍可由 `.claims/*/claim.json` 找回。
 
 slug 將非允許字元轉成 `-`、合併連續 `-` 並移除首尾點／橫線；結果為空或與其他 MOD 發生碰撞時附加 Nexus ID。最後必須通過第 2.1 節的格式與 Git ref 驗證。
 
@@ -233,10 +256,12 @@ slug 將非允許字元轉成 `-`、合併連續 `-` 並移除首尾點／橫線
 
 ### 6.1 Workflow 基準
 
-新 claim 前精確更新 workflow branch ref，解析 commit，從同一 Git tree 讀取：
+新 claim 前由協調器取得短期 `git-coordination.lock`，精確更新 workflow branch ref 與 `origin/main`，保存兩個 commit OID 後立即釋放；再解析 workflow commit，從同一 Git tree 讀取：
 
 - `AI Prompt/AI-Auto-Update-MOD-Workflow.md`。
 - `AI Prompt/AI-Auto-Update-MOD-Review-Baseline.md`。
+
+本次取得的 main OID 同時寫入 `main_checked_oid`，供第 6.3 節已是最新判定；不得使用 fetch 前的過期 remote-tracking ref。
 
 兩檔分別記錄 path、blob OID、size、SHA-256；Baseline 以 `role=review-baseline` 寫入 `reference_sources`。之後全程使用固定 commit。Workflow 本身缺少或不可讀時不得開始新 claim；Baseline 缺少或不可讀時可完成安裝、Commit 與 PR，但不得進入第 11 節 Review 完成，PR body 必須明確標記 Baseline unavailable。
 
@@ -263,7 +288,7 @@ README 使用主頁 Version／Last updated；正式 hash 使用實際 Main file 
 
 ### 6.4 Worktree
 
-需要更新時，精確 fetch `origin/main`，從其 commit 建立唯一 branch 與外部 worktree。通過以下條件後寫入 `base_oid` 並設為 `worktree-ready`：
+需要更新時，由協調器取得短期 `git-coordination.lock`，精確 fetch `origin/main`，並從該 commit 建立唯一 local branch 與外部 worktree；完成 branch/worktree metadata 寫入後立即釋放。通過以下條件後寫入 `base_oid` 並設為 `worktree-ready`：
 
 - branch 與 state 完全一致。
 - worktree HEAD 等於建立時的 `origin/main`。
@@ -415,14 +440,15 @@ README 使用主頁 Version／Last updated；正式 hash 使用實際 Main file 
 
 第 7–8 節通過後：
 
-1. 確認 worktree HEAD 仍等於 `base_oid` 且 worktree 乾淨。
-2. 從 `base_oid` 取得需要的 old loc 後，完整移除該 worktree 內的單一舊 MOD 目錄。
-3. 從已驗證 staging 搬入完整新版 MOD root。
-4. active localization 以對應 `merged.lua` 原子取代。
-5. 建立 install manifest：每個 relative path、size、SHA。
-6. active loc 必須等於 merged；其他檔案必須等於 extraction manifest。
-7. worktree 內不得有舊檔殘留或 archive 沒有的額外檔案。
-8. 通過後設為 `installed`。
+1. 確認 worktree 乾淨，且 `base_oid` 是目前 branch HEAD 的 ancestor；初次安裝時 HEAD 必須等於 `base_oid`。
+2. 若本輪因 main 前進而重建，先以 `base_oid` 將本 MOD directory、README 目標區段及該 MOD hash 的工作樹內容還原到最新 main 基準；只處理這三個 allowlist，不重設 branch、其他 MOD 或整個 worktree。
+3. 從 `base_oid` 重新取得 old loc 並重建 old/new/merged provenance，然後完整移除該 worktree 內的單一舊 MOD 目錄。
+4. 從已驗證 staging 搬入完整新版 MOD root。
+5. active localization 以對應 `merged.lua` 原子取代。
+6. 建立 install manifest：每個 relative path、size、SHA。
+7. active loc 必須等於 merged；其他檔案必須等於 extraction manifest。
+8. worktree 內不得有舊檔殘留或 archive 沒有的額外檔案。
+9. 通過後設為 `installed`。
 
 失敗時只還原本輪 worktree 的 README、MOD 與 hash allowlist 到 `base_oid`；不得對 repository root 或其他 worktree 執行遞迴清理。
 
@@ -558,12 +584,13 @@ Review finding 依 Baseline 分類。沒有 actionable finding 時記錄 `none`�
 
 ### 11.3 外部 Review 與所有 PR feedback
 
-外部 Review 是可選層，不取代本地 Review：
+外部 Review 是可選層，不取代本地 Review。每次 request、完成或不可用結果都原子寫入 state 的 `external_review` 與 `review.json`：
 
-- `localization_mode=none`：記為 `not-applicable`。
-- 已登入且 UI 可直接要求 Copilot Balanced 時，每個 HEAD 最多送出一次。
-- 不可用時記為 `unavailable`，不要求使用者登入。
-- 已送出但 24 小時沒有能唯一對應目前 HEAD 的結果時記為 `unavailable:timeout`。
+- `localization_mode=none`：記為 `not-applicable`，保存 reason、目前 HEAD 與 verified time。
+- 已登入且 UI 可直接要求 Copilot Balanced 時，每個 HEAD 最多送出一次；保存 requested HEAD、request time 與可取得的 request event ID。
+- 完成結果只有在 review ID、reviewer login、submitted time 與 review commit OID 能唯一對應 requested HEAD，且該 HEAD 等於目前 PR `headRefOid` 時，才可記為 `completed`。
+- 不可用時記為 `unavailable`，保存 reason、目前 HEAD 與 verified time，不要求使用者登入。
+- 已送出但 24 小時沒有能唯一對應目前 HEAD 的結果時，將 status 記為 `unavailable`、reason 記為 `timeout`，並保留原 request evidence。
 
 不論是否送出 Copilot Review，都要掃描目前 PR 新增或尚未處理的 reviews、review bodies、threads 與 comments，至少完成最小 scope/security 分類：
 
@@ -584,20 +611,20 @@ Review finding 依 Baseline 分類。沒有 actionable finding 時記錄 `none`�
 - active loc validation 全部通過；`none` 模式為 not-applicable。
 - PR body 已更新 Baseline 要求摘要。
 - `reviewed_oid` 寫入目前 HEAD。
-- 外部 Review 狀態是 `completed`、`not-applicable` 或 `unavailable`。
+- 外部 Review 狀態是 `completed`、`not-applicable` 或 `unavailable`；`completed` 的 request/review/head 證據全部對應目前 HEAD，其他狀態具有 reason、head 與 verified time。
 
 釋放 MOD lock並通知使用者可合併；其他 MOD 繼續。
 
 ## 12. 併發中的 main 更新
 
-每次 Commit 前與 Review 完成前精確更新 `origin/main`，比較前次 `main_checked_oid..origin/main`：
+每次 Commit 前與 Review 完成前，由協調器取得短期 `git-coordination.lock` 精確更新 `origin/main`，保存最新 main OID 後立即釋放，再比較前次 `main_checked_oid..origin/main`：
 
 - 未觸及本 MOD directory、該 MOD hash 或 README 目標區段：更新 `main_checked_oid`，繼續目前 HEAD。
-- 觸及本 MOD directory、該 MOD hash 或 README 目標區段：目前 Review 失效；以最新 main 作新 `base_oid`、遞增 `merge_epoch`，重新執行來源安裝、中文 target 判定與全部驗證。
-- 只修改其他 MOD 的 README 區段但 GitHub 顯示目前 PR 可乾淨合併：不更新 branch。
-- 只修改其他區段但目前 PR 發生 README merge conflict：將最新 main 合併到本 branch，只保留本 MOD 目標區段的變更，重新驗證、push 並對新 HEAD Review。
+- 觸及本 MOD directory、該 MOD hash 或 README 目標區段：目前 Review 失效。取得 MOD lock，在目前唯一 branch 以一般 merge 納入最新 main，不 reset、不 rebase、不 force-push；merge 完成且 worktree 乾淨後，將最新 main OID 同時寫為新 `base_oid`／`main_checked_oid`、遞增 `merge_epoch`，依第 9.1 節只把本輪 allowlist 還原到新 base，再從 archive 重建 old/new/merged、安裝、validation、commit、push 與同 HEAD Review。
+- 只修改其他 MOD 的 README 區段且目前 PR 可乾淨合併：不更新 branch，只更新 `main_checked_oid`。
+- 只修改其他區段但目前 PR 發生 README merge conflict：在目前唯一 branch 以一般 merge 納入最新 main，解決 README 時保留最新 main 全文及本 MOD 目標區段；接著將最新 main OID 同時寫為新 `base_oid`／`main_checked_oid`、遞增 `merge_epoch`，重新建立 old/new/merged provenance、validation、push 與同 HEAD Review。相同 MOD bytes 未變時可重用 archive/staging manifest，但所有 base-bound artifacts 必須重建。
 
-不得使用全域鎖避免 README 衝突；衝突只由該 PR 的 worker 處理，不停止其他 MOD。
+merge main、commit 與 push 仍由該 MOD lock 隔離；只有 fetch 與 shared branch/worktree metadata 操作使用短期 Git coordination lock。不得用任何全域鎖包住 README 解衝突、來源安裝、中文處理或 Review；單一 PR 衝突不停止其他 MOD。
 
 ## 13. 合併後歸檔
 
@@ -612,8 +639,8 @@ MERGED 後：
 
 1. state 設為 `merged`。
 2. 將來源搬到 `Finished`；同名同 SHA 去重，不同 SHA 不覆蓋並詢問使用者。
-3. 確認 worktree 乾淨後使用標準 `git worktree remove`。
-4. 確認 branch tip 等於 `reviewed_oid`，再刪除本機 branch；遠端 branch 已由 GitHub 刪除時不處理，仍存在時只刪除本輪唯一 branch。
+3. 確認 worktree 乾淨且本機 branch tip 等於 `reviewed_oid` 後，取得短期 `git-coordination.lock`，使用標準 `git worktree remove`；確認移除完成後再刪除本機本輪唯一 branch，然後立即釋放 Git coordination lock。
+4. 遠端 branch 已由 GitHub 刪除時不處理，仍存在時只刪除本輪唯一 remote branch；不同 branch 的 remote delete 不需要持有本機 Git coordination lock。
 5. 清除本輪 staging、artifacts、state、lock 與空目錄。
 6. 任一步驟中斷時保留 state，下次只續作未完成項目。
 
@@ -633,6 +660,7 @@ MERGED 後：
 ### Gate A：來源、安全與併發
 
 - workflow/Baseline 固定 commit、blob、SHA 可重建。
+- source、MOD 與短期 Git coordination locks 的 identity、owner、範圍及釋放結果正確；沒有共享 Git metadata 競態。
 - archive/Nexus/README/hash identity 一致。
 - archive path、entry、collision、payload 與 staging manifest 安全檢查通過。
 - 每 MOD lock/state/source/artifacts/branch/worktree/PR 唯一對應。
@@ -661,6 +689,7 @@ MERGED 後：
 - PR OPEN、非 Draft、base/head 正確。
 - PR body 含 Baseline 要求摘要。
 - 本地 Review 與所有已取得 scope 內 feedback 對應目前 HEAD。
+- 外部 Review completed 時具備 request event、review ID、reviewer、submitted time 與 commit OID；not-applicable/unavailable 時具備 reason、head 與 verified time。
 - 所有 scope finding 已 disposition，security blocking = 0。
 - `reviewed_oid = PR headRefOid`。
 - state = `awaiting-user-merge`。
