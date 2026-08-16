@@ -62,10 +62,9 @@ Nexus、archive、檔名、README、MOD、localization、PR feedback 與工具�
 ### 3.1 固定不變條件
 
 - 不同 MOD 可由不同 worker 同時處理。
-- 同一 MOD 同一時間只能有一個 writer。
-- 每個 MOD 使用獨立的 lock、state、來源、artifacts、branch、worktree 與 PR。
-- worker 只能寫入自己的 claim/state/artifacts/worktree 與對應 GitHub branch/PR。
-- `waiting-user`、`failed`、等待 Review 或等待合併只停止該 MOD。
+- 同一 MOD 從確認 canonical identity 起，到合併歸檔或使用者明確放棄為止，同一時間只能有一個 active generation／writer，並由同一個 MOD identity lock reservation 綁定其 run ID。
+- 每個 MOD generation 使用獨立的 state、來源、artifacts、branch、worktree 與 PR；worker 只能寫入自己 run 的資源。
+- `waiting-user`、`failed`、等待 Review 或等待合併不占用 worker，但仍保留該 MOD identity reservation；同 MOD 的後續 claim 排隊，其他 MOD 不受影響。
 - 主 repository 不進行 MOD 編輯，只負責 queue、state、lock、Git ref 查詢及建立 worktree。
 - 最低併發範圍是同一台機器與同一份共享 repository/filesystem；不建立跨 clone 的分散式 lease。
 
@@ -119,15 +118,15 @@ Update/<MOD-slug>/<YYYYMMDD>-<run-id-short>
 
 ### 3.3 Lock
 
-lock 以原子 directory-create 取得，`owner.json` 只記錄 run ID、worker ID、取得時間、heartbeat、state path 與 worktree。
+lock 以原子 directory-create 取得。`owner.json` 記錄 run ID、目前 worker ID（reserved 時為 null）、`lease_mode=active|reserved`、取得時間、heartbeat、state path 與 worktree。
 
-- `source-acquisition.lock` 只保護 queue 盤點、選取、建立 claim 及同 volume 原子搬移，完成後立即釋放。
+- `source-acquisition.lock` 只保護 queue 盤點／claim，以及來源移入 `Finished`、退回 queue 時的目的檔解析、SHA 去重與同 volume 原子搬移；完成一個短操作後立即釋放。
 - MOD lock 不放在實際 MOD 目錄或 worktree；以 canonical `mod_relative_path` 的 SHA-256 作為中央 `.locks/mod/<sha256>.lock` identity。這使不同檔名或 slug 仍會對同一 repository MOD 目錄互斥，且乾淨安裝刪除 MOD 目錄時不會遺失鎖。
-- MOD lock 從確認唯一 `mod_relative_path` 起持有到目前寫入步驟結束；等待登入、決策、Review 或合併前釋放。
-- `git-coordination.lock` 只保護共用 Git metadata 寫入：精確 fetch 共用 remote-tracking ref、建立／刪除 local branch、worktree add/remove/prune。取得前再次確認目前不持有其他共用鎖，完成單一短操作後立即釋放；不得包住檔案同步、翻譯、驗證、commit、不同 branch 的 push、PR 或 Review。
+- 中央 MOD lock 的建立、接管與釋放只由協調器序列化執行，worker 不得自行刪除。MOD identity reservation 從確認唯一 `mod_relative_path` 起持有到該 generation 合併歸檔，或使用者明確放棄且清理完成；等待登入、決策、Review 或合併時只將 `lease_mode` 改為 `reserved` 並釋放 worker，不釋放 MOD lock。
+- `git-coordination.lock` 只保護共用 Git metadata 寫入：精確 fetch 共用 remote-tracking ref、建立／刪除 local branch、worktree add/remove/prune。取得前確認目前不持有 `source-acquisition.lock` 或其他全域短期協調鎖；MOD identity reservation 可繼續持有，但任何持有 Git coordination lock 的操作不得等待 MOD lock。完成單一短操作後立即釋放；不得包住檔案同步、翻譯、驗證、commit、不同 branch 的 push、PR 或 Review。
 - Git coordination lock 已被其他 worker 持有時，以有限退避重試，不把 lock contention 記為 MOD 內容失敗。
-- 活動 worker 至少每 3 分鐘更新 heartbeat。
-- 超過 30 分鐘沒有 heartbeat 時，只有確認原 worker 已結束且 worktree 沒有活動 Git process，才可接管。
+- `active` 由 worker、`reserved` 由協調器至少每 3 分鐘更新 heartbeat。
+- 超過 30 分鐘沒有 heartbeat 時，只有確認 owner run 不存在或已完成終止清理、原 worker 已結束且 worktree 沒有活動 Git process，才可接管；存在非終止 state 的 reserved generation 不得視為 stale。
 - 不得以全域 lock 包住解壓、翻譯、驗證、Commit、Push、PR 或 Review。
 
 ## 4. 精簡 state
@@ -244,7 +243,7 @@ state 使用同目錄暫存檔寫入、JSON 回讀成功後原子取代。沒有
 3. 建立 `.claims/<run-id>/source`。
 4. 計算 filename、size、SHA-256。
 5. 在同一 volume 原子搬移來源並寫入 `claim.json`；至少保存 `run_id`、status、來源 path/size/SHA、建立時間、waiting reason 與已知識別證據。
-6. 釋放來源鎖。
+6. 釋放來源鎖；claim 路徑不得在持有來源鎖時等待或取得 MOD lock。
 
 worker 接手 claim 時先將 claim status 設為 `identifying`，再利用檔名、README、Nexus ID、archive root 與既有 MOD 目錄確認唯一 MOD。確認 canonical `mod_relative_path` 後計算 MOD lock key並取得中央 MOD lock，再將 claim 搬到 `In Progress/<slug>-<run-short>` 並建立 state。無法唯一識別時將 claim status 設為 `waiting-user`、保存原因並釋放 worker；協調器下一輪仍可由 `.claims/*/claim.json` 找回。
 
@@ -284,7 +283,7 @@ README 使用主頁 Version／Last updated；正式 hash 使用實際 Main file 
 - Main file version、filename、size、SHA-256。
 - README URL、主頁 Version、Last updated 與檔名。
 
-將來源搬到 `Finished`，同名同 SHA 時只保留一份，state 設為 `already-current` 後清除該 run。不同 SHA 的同名檔不得覆蓋，改為 `waiting-user`。
+取得短期 `source-acquisition.lock`，重新核對來源 size／SHA，並在同一 critical section 內解析 `Finished` 目的檔、執行同名同 SHA 去重或同 volume 原子搬移；不同 SHA 的同名檔不得覆蓋，保留來源並改為 `waiting-user`。歸檔成功後將 state 設為 `already-current`，再依第 13 節相同的 owner-checked 原子釋放程序（expected terminal status 使用 `already-current`）結束 MOD identity reservation 並清除該 run。
 
 ### 6.4 Worktree
 
@@ -613,14 +612,14 @@ Review finding 依 Baseline 分類。沒有 actionable finding 時記錄 `none`�
 - `reviewed_oid` 寫入目前 HEAD。
 - 外部 Review 狀態是 `completed`、`not-applicable` 或 `unavailable`；`completed` 的 request/review/head 證據全部對應目前 HEAD，其他狀態具有 reason、head 與 verified time。
 
-釋放 MOD lock並通知使用者可合併；其他 MOD 繼續。
+將 MOD lock 設為 `lease_mode=reserved`、由協調器維持 heartbeat，釋放 worker並通知使用者可合併；不得釋放該 MOD identity reservation，同 MOD 後續 claim 保持排隊，其他 MOD 繼續。
 
 ## 12. 併發中的 main 更新
 
 每次 Commit 前與 Review 完成前，由協調器取得短期 `git-coordination.lock` 精確更新 `origin/main`，把該 ref 解析一次並保存為不可變的 `checked_main_oid` 後立即釋放。後續影響判定、讀取、merge 與 state 更新只能使用此 OID，不得再次解析 `origin/main`；比較範圍固定為前次 `main_checked_oid..checked_main_oid`：
 
 - 未觸及本 MOD directory、該 MOD hash 或 README 目標區段：將 state 的 `main_checked_oid` 更新為 `checked_main_oid`，繼續目前 HEAD。
-- 觸及本 MOD directory、該 MOD hash 或 README 目標區段：目前 Review 失效。取得 MOD lock，在目前唯一 branch 以一般 merge 納入固定的 `checked_main_oid`，不 reset、不 rebase、不 force-push；merge 完成且 worktree 乾淨後，將 `checked_main_oid` 同時寫為新 `base_oid`／`main_checked_oid`、遞增 `merge_epoch`，依第 9.1 節只把本輪 allowlist 還原到新 base，再從 archive 重建 old/new/merged、安裝、validation、commit、push 與同 HEAD Review。
+- 觸及本 MOD directory、該 MOD hash 或 README 目標區段：目前 Review 失效。確認目前 run 仍擁有 MOD identity reservation，指派 worker 並將 lock 改為 `lease_mode=active`；在目前唯一 branch 以一般 merge 納入固定的 `checked_main_oid`，不 reset、不 rebase、不 force-push。merge 完成且 worktree 乾淨後，將 `checked_main_oid` 同時寫為新 `base_oid`／`main_checked_oid`、遞增 `merge_epoch`，依第 9.1 節只把本輪 allowlist 還原到新 base，再從 archive 重建 old/new/merged、安裝、validation、commit、push 與同 HEAD Review。
 - 只修改其他 MOD 的 README 區段且目前 PR 可乾淨合併：不更新 branch，只把 state 的 `main_checked_oid` 更新為 `checked_main_oid`。
 - 只修改其他區段但目前 PR 發生 README merge conflict：在目前唯一 branch 以一般 merge 納入固定的 `checked_main_oid`，解決 README 時保留該 OID 的 README 全文及本 MOD 目標區段；接著將 `checked_main_oid` 同時寫為新 `base_oid`／`main_checked_oid`、遞增 `merge_epoch`，重新建立 old/new/merged provenance、validation、push 與同 HEAD Review。相同 MOD bytes 未變時可重用 archive/staging manifest，但所有 base-bound artifacts 必須重建。
 
@@ -637,14 +636,15 @@ merge main、commit 與 push 仍由該 MOD lock 隔離；只有 fetch 與 shared
 
 MERGED 後：
 
-1. state 設為 `merged`。
-2. 將來源搬到 `Finished`；同名同 SHA 去重，不同 SHA 不覆蓋並詢問使用者。
+1. state 設為 `merged`；在第 6 步成功前保留 state 與 MOD identity reservation。
+2. 取得短期 `source-acquisition.lock`，重新核對來源 size／SHA，並在同一 critical section 內解析 `Finished` 目的檔、執行同名同 SHA 去重或同 volume 原子搬移；不同 SHA 的同名檔不得覆蓋，保留來源並設為 `waiting-user`。完成後立即釋放來源鎖；若使用者排除 collision 並完成歸檔，將 state 恢復為 `merged` 再續跑。
 3. 確認 worktree 乾淨且本機 branch tip 等於 `reviewed_oid` 後，取得短期 `git-coordination.lock`，使用標準 `git worktree remove`；確認移除完成後再刪除本機本輪唯一 branch，然後立即釋放 Git coordination lock。
 4. 遠端 branch 已由 GitHub 刪除時不處理，仍存在時只刪除本輪唯一 remote branch；不同 branch 的 remote delete 不需要持有本機 Git coordination lock。
-5. 清除本輪 staging、artifacts、state、lock 與空目錄。
-6. 任一步驟中斷時保留 state，下次只續作未完成項目。
+5. 清除本輪 staging、artifacts 與可安全刪除的空目錄，但保留 state 與固定名稱的 MOD lock。
+6. 前述步驟全部完成後，協調器重新核對 `owner.json.run_id`、state path、`mod_lock_key` 與 expected terminal evidence：本節為 `status=merged`；第 6.3 節為 `status=already-current`；放棄流程為 `status=waiting-user`、`waiting_reason=abandon-confirmed` 及使用者確認證據。完全相符時，將固定 MOD lock directory 原子改名為本 run 唯一的 `.released-<mod-lock-key>-<run-id>` tombstone；只有改名成功才可刪除 state，最後只刪除該 tombstone。owner 或 terminal evidence 不符、或改名失敗時保留 state 與 lock，禁止刪除固定 lock path。
+7. 任一步驟中斷時保留可恢復證據；若已完成第 6 步的原子改名，續跑只能清除本 run 的 state／tombstone，不得再寫 repository 或操作後來 generation 的固定 MOD lock。
 
-放棄 CLOSED PR 時，只有使用者確認後才還原本輪 worktree、刪除本輪唯一 branch/PR 資料並把來源移回 queue。任何 OID 或 SHA 不一致時保留現況。
+放棄 CLOSED PR 時，只有使用者確認後才還原本輪 worktree並刪除本輪唯一 branch/PR 資料；來源退回 queue 必須使用短期 `source-acquisition.lock` 完成目的檔 collision 檢查與同 volume 原子搬移。將 `waiting_reason` 設為 `abandon-confirmed` 並保存使用者確認證據；清理完成後使用第 6 步相同的 owner-checked 原子改名程序釋放 MOD identity reservation。任何 OID、SHA 或 owner 不一致時保留現況。
 
 ## 14. Ovenproof's Scoreboard Plugin 特例
 
@@ -660,10 +660,10 @@ MERGED 後：
 ### Gate A：來源、安全與併發
 
 - workflow/Baseline 固定 commit、blob、SHA 可重建。
-- source、MOD 與短期 Git coordination locks 的 identity、owner、範圍及釋放結果正確；沒有共享 Git metadata 競態。
+- source、MOD 與短期 Git coordination locks 的 identity、owner、範圍及釋放結果正確；`Finished`／queue 搬移沒有 shared destination race，共享 Git metadata 沒有競態。
 - archive/Nexus/README/hash identity 一致。
 - archive path、entry、collision、payload 與 staging manifest 安全檢查通過。
-- 每 MOD lock/state/source/artifacts/branch/worktree/PR 唯一對應。
+- 每個 MOD 同時只有一個 active generation；其 identity reservation、state、source、artifacts、branch、worktree 與 PR 唯一對應，舊 generation 不會刪除新 owner 的 lock。
 - 沒有跨 MOD 寫入或全域阻塞。
 - security blocking count = 0。
 
