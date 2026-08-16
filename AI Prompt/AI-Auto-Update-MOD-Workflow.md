@@ -2,7 +2,7 @@
 
 ## 1. 目標
 
-從 `AI Auto Update` 取得 MOD 壓縮檔，自主完成：
+從 `AI Auto Update` 取得 MOD 壓縮檔，以「完整維護所有 active `zh-tw`」作為唯一內容責任，自主完成下列流程。新版非 loc 檔案、其他語系、README 版本與 hash 只作為同步載體、原文依據或完成證據，不延伸為程式 Review 或其他維護任務：
 
 ```text
 盤點來源檔
@@ -16,8 +16,8 @@
      → AI 逐 localization unit 判讀並只合併 zh-tw
      → 驗證、Commit 與 Push
      → 建立非 Draft PR
-     → Copilot Balanced Review
-     → 修正 Review 並重新 Review
+     → Copilot Balanced zh-tw scoped Review
+     → 修正 scope 內 feedback 並重新 Review
      → 等待使用者最終合併
 ```
 
@@ -26,17 +26,17 @@
 ## 2. 自主原則
 
 1. 只在真正需要使用者操作或決策時詢問；一般檔案操作、驗證、翻譯、Git 與 PR Review 迴圈自主完成。
-2. 只主動維護本地化：
-   - 非 loc 檔案依新版壓縮檔原樣替換。
-   - 上游程式邏輯維持新版壓縮檔內容。
-   - Review 對上游程式提出的功能、設計或維護意見，由 AI 說明影響與證據並在 PR 記錄「供上游後續處理」；本 PR 不改寫上游程式，維持本地化更新範圍。
+2. 唯一內容維護目標是所有 active `zh-tw`：
+   - AI 完整識別並維護新版 MOD 中所有 active `zh-tw`；新增或來源語意改變的 unit 依規則翻譯，來源未變的既有翻譯維持穩定。
+   - 非 loc 檔案只依新版來源同步並以 manifest 驗證 bytes；不分析、不評論、不修正其功能、設計、程式邏輯、命名、註解或維護品質。
+   - loc 內非 `zh-tw` 欄位只作為理解原文及證明合併未誤改的依據，不將其他語系內容納入維護或 Review 意見。
 3. 合併工具的可寫入語系為 `zh-tw`。`en`、`zh-cn`、`ru` 及其他語系完整取自新版壓縮檔。
    - 插入位置以完整欄位表達式與 localization table depth 為依據；Lua localization 的值可能是跨行的 `string.format`、字串串接或函式呼叫。
    - 必須先解析完整欄位表達式與 localization table depth，再替換或插入 `zh-tw`。
 4. MOD 採乾淨安裝：新版先在 staging 通過安全檢查，再完整移除舊目錄並搬入新版原始樹；舊版 loc 從固定 `base_oid` 的 Git blob 取得，Git diff 只提供變更候選與 PR 摘要，翻譯資格與內容仍由 AI 逐 localization unit 判讀。完成合併後，正式 MOD 只包含新版樹與合併後的 loc。
 5. 每個 PR 只包含一個 MOD、README 對應區段與該 MOD 的正式 `.hash`。
 6. PR 以非 Draft 建立並停在可合併狀態，由使用者執行最終合併。
-7. Review 建議先與 `Referneces/Translation.md`、原文實際使用情境及本流程維護範圍交叉查證；採用有依據的建議，其他建議則回覆判定依據並保留經查證的內容。
+7. Review 只處理 active `zh-tw`、翻譯資格／結構安全，以及 README 版本與正式 hash 等完成任務所需的來源事實；其他 feedback 只標記為 `out-of-scope`，不分析內容、不提供意見，也不納入 PR 摘要。
 
 ### 2.1 單一 MOD 執行摘要
 
@@ -47,7 +47,7 @@
 | Git 隔離 | 需要更新的來源、branch/PR/worktree 查詢 | 乾淨獨立 worktree 與 `base_oid` | `worktree-ready` |
 | 安裝 | `base_oid` Git blob、新版 worktree、old/new/merged、中文規則、manifest | 新版樹已乾淨替換、AI 合併完成且 worktree 與 manifest 完整一致 | `installed` |
 | 發佈 | cached diff、commit、remote、PR | tree OID、remote OID、非 Draft PR | `committed` → `pushed` → `pr-open` |
-| 審查 | Balanced request、review 與 threads | 最新 HEAD 的完整 feedback 與零 unresolved | `review-requested` → `awaiting-user-merge` |
+| 審查 | Balanced request、review 與 threads | 最新 HEAD 的 `zh-tw` scope feedback 完成處理、其餘完成範圍標記且零 unresolved | `review-requested` → `awaiting-user-merge` |
 | 歸檔 | MERGED PR、main 正式 hash | `Finished` 來源、worktree/branch 清理 | `merged` → 移除 state |
 
 每一列都先驗證完成證據，再更新 state；中斷後依第 4.3 節從外部證據補寫落後狀態。
@@ -297,7 +297,7 @@ claimed
 
 既有 schema version 1–4 state 先以 state、branch、worktree、archive SHA-256、Git tree 中唯一 MOD 目錄與 PR（若已建立）完成唯一對應，再由舊單檔欄位或實際載入證據建立 `localization_files`，並以本節的 workflow branch／commit/blob 證據補齊 workflow 欄位。`awaiting-user-merge` 的 Review 欄位另由 PR timeline、review `submittedAt`／`commit.oid` 與 Browser Balanced 證據重建；證據完整時原子升級為 version 5，證據仍待補齊時先回到 `review-changes` 重新驗證與送審。升級只加入可由權威來源唯一重建的資料，原始 state 先保留備份到同一 MOD 的 review artifacts，直到新版 state 通過解析與對帳。
 
-legacy artifacts 的來源證據可逐 localization 重建：`old.lua` 與 `state.base_oid:<old-loc-path>` 比對；archive 重新解壓到唯一暫存目錄後，將原始 loc 與 `new.lua` 比對；`merged.lua` 與 PR HEAD 的正式 loc 比對。三者一致後，為每個 id 建立 `review-artifacts/localization/<id>/` 的 sources 與 decisions；舊單檔 root artifacts 驗證通過後可作為該唯一 id 的輸入，不直接覆寫。再以目前規則重跑 validator 與 Codex Review。既有 commit 可用 `validation_basis=legacy-head-reconstruction`，以 `HEAD^{tree}`、`git show` path allowlist 與重跑結果建立 `validation-report.json`；新流程一般使用 `validation_basis=cached-tree`。重建結果使 HEAD 改變時重新 commit/push/Balanced Review，HEAD 維持相同且既有 Balanced 證據完整時可沿用該 Review。
+legacy artifacts 的來源證據可逐 localization 重建：`old.lua` 與 `state.base_oid:<old-loc-path>` 比對；archive 重新解壓到唯一暫存目錄後，將原始 loc 與 `new.lua` 比對；`merged.lua` 與 PR HEAD 的正式 loc 比對。三者一致後，為每個 id 建立 `review-artifacts/localization/<id>/` 的 sources 與 decisions；舊單檔 root artifacts 驗證通過後可作為該唯一 id 的輸入，不直接覆寫。再以目前規則重跑 validator 與 `zh-tw` scoped Codex Review。既有 commit 可用 `validation_basis=legacy-head-reconstruction`，以 `HEAD^{tree}`、`git show` path allowlist 與重跑結果建立 `validation-report.json`；新流程一般使用 `validation_basis=cached-tree`。重建結果使 HEAD 改變時重新 commit/push/Balanced Review，HEAD 維持相同且既有 Balanced 證據完整時可沿用該 Review。
 
 每次繼續工作前，核對 state 的 workflow commit/blob SHA、MOD、分支、worktree、壓縮檔名、SHA-256、PR 與 Git HEAD。資料一致時續跑；專用 workflow branch 已前進不會改變進行中 MOD，仍使用 state 固定的可讀 blob。資料尚未一致時保留該 MOD 現況並處理其他 MOD。
 
@@ -555,7 +555,7 @@ Git 是舊版 bytes 與路徑集合的權威來源，但不是翻譯語意判定
 2. 依 extraction manifest 回讀 staging 中的完整新版 MOD 樹；相對路徑、size 與 SHA-256 必須全部一致。
 3. 完整刪除 worktree 內的舊 MOD 目錄，再將 staging 中唯一新版 MOD 根目錄搬入相同精確位置。不得直接將 archive 解壓到 worktree，也不得覆蓋式解壓。
 4. 在尚未修改 loc 前，依 extraction manifest 核對 worktree 內新版原始樹，確認沒有舊檔殘留、遺漏檔案或部分搬移。
-5. 對固定 `base_oid` 與目前未提交 worktree 執行下列 Git 查詢；diff 列出已追蹤檔案的修改／刪除，`ls-files --others` 補齊尚未追蹤的新版檔案。兩者與 extraction manifest 的路徑集合合併後，形成完整新增、修改、刪除與 rename 候選，作為上游變更清單、AI 閱讀入口與 PR 摘要。上游程式內容維持新版原貌。
+5. 對固定 `base_oid` 與目前未提交 worktree 執行下列 Git 查詢；diff 列出已追蹤檔案的修改／刪除，`ls-files --others` 補齊尚未追蹤的新版檔案。兩者與 extraction manifest 的路徑集合合併後，形成完整新增、修改、刪除與 rename 路徑證據；AI 只從中定位 active localization 與驗證來源同步範圍，不閱讀或評論非 loc 程式差異。PR 若需要呈現來源同步，只列事實性的 path/status/count，不描述上游程式品質或影響。
 
    ```text
    git -C "<worktree>" diff --name-status --find-renames <base_oid> -- "<state.mod_relative_path>"
@@ -854,9 +854,9 @@ git -C "<worktree>" restore --source=<state.base_oid> --worktree -- README.md "<
 
 1. 使用能追蹤 quote、escape、註解、`()`、`[]`、`{}` depth 與完整 value expression 的結構驗證器。
 2. 確認第 10 節所有 direct-field、separator、non-`zh-tw` semantic 與 marker 檢查為零錯誤。
-3. 將「commit 前須執行 Codex Review」寫入本輪 validation report；第 13 節精確 stage 後，讓 Review 同時讀取 cached diff、manifest，以及每個 active id 的 `new.lua`、`merged.lua`、`localization-sources.json` 與 `localization-decisions.json`。
+3. 將「commit 前須執行 `zh-tw` scoped Codex Review」寫入本輪 validation report；第 13 節精確 stage 後，Review 讀取 manifest 與每個 active id 的 `new.lua`、`merged.lua`、`localization-sources.json`、`localization-decisions.json`，並只用 cached diff 確認寫入範圍與非 loc bytes 未被 AI 改動，不對非 loc 程式內容提出意見。
 
-前兩項通過後進入第 13 節；Codex Review 與 cached diff 驗證也通過、問題清單為空後，才建立 commit。
+前兩項通過後進入第 13 節；`zh-tw` scoped Codex Review 與 cached diff 範圍驗證也通過、scope 內問題清單為空後，才建立 commit。
 
 Windows 預檢先執行 `Get-Command lua,luac -ErrorAction SilentlyContinue`。目前電腦可使用 WinGet 安裝 Lua 5.4；只有取得使用者明確同意後才執行 `winget install --id DEVCOM.Lua --exact --accept-package-agreements --accept-source-agreements`。安裝後以 `lua -v`、`luac -v` 驗證，並對每個 active id 以 `luac -p <localization/<id>/merged.lua>` 執行不產生輸出檔的語法檢查。未獲安裝授權或套件不可用時，不得自行安裝，仍使用本節的三項等價結構證據並在 validation report 記錄限制。
 
@@ -886,13 +886,13 @@ commit 前：
 1. `git -C <worktree> diff --cached --name-status` 只能包含 allowlist。
 2. `git -C <worktree> diff --cached --check` 必須通過。
 3. 完整檢閱 `git -C <worktree> diff --cached`。
-4. 對 cached diff 執行 Codex Review，並讀取 extraction/install manifest；`single`／`multiple` 再逐 id 讀取 `new.lua`、`merged.lua`、`localization-sources.json` 與 `localization-decisions.json`，`none` 不要求不存在的 loc artifacts。可處理問題全部解決後重跑本節。
+4. 對 cached diff 執行 `zh-tw` scoped Codex Review，並讀取 extraction/install manifest；`single`／`multiple` 再逐 id 讀取 `new.lua`、`merged.lua`、`localization-sources.json` 與 `localization-decisions.json`，`none` 不要求不存在的 loc artifacts。Review 只判斷 `zh-tw` 翻譯、翻譯資格、loc 結構安全及必要 metadata 事實；非 loc diff 只確認 path/bytes 屬於來源同步，不分析程式內容。scope 內問題全部解決後重跑本節。
 5. cached path 集合是本 MOD allowlist 的子集合，並完整包含本輪預期的 README、正式 hash 與 MOD 實際差異；allowlist 內沒有遺漏的 unstaged 變更，來源壓縮檔、pending hash 與使用者其他變更均留在 cached diff 之外。
-6. 執行 `git -C <worktree> write-tree`，將 workflow 基準、`cached_tree_oid`、cached paths、各項驗證結果、Codex Review 結論、最小語法驗證證據、工具/規則 SHA-256 與含時區時間原子寫入 `review-artifacts/validation-report.json`。語法證據只保存可重現判定所需欄位，不保存完整 console output：
+6. 執行 `git -C <worktree> write-tree`，將 workflow 基準、`cached_tree_oid`、cached paths、各項驗證結果、`zh-tw` scoped Codex Review 結論、最小語法驗證證據、工具/規則 SHA-256 與含時區時間原子寫入 `review-artifacts/validation-report.json`。語法證據只保存可重現判定所需欄位，不保存完整 console output：
 
 ```json
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "validation_basis": "cached-tree",
   "workflow": {
     "ref": "<state.workflow_ref>",
@@ -908,7 +908,7 @@ commit 前：
     "diff_check": "passed",
     "manifest": "passed",
     "localization": "passed|not-applicable",
-    "codex_review": "passed"
+    "zh_tw_review": "passed"
   },
   "syntax_validation": {
     "method": "luac|parser|structural-validator|not-applicable",
@@ -931,7 +931,7 @@ commit 前：
 
 legacy commit 重建時只將 `validation_basis` 設為 `legacy-head-reconstruction`，並以第 4.2 節的 base/HEAD/artifact 證據填入同一結構。
 
-既有 schema version 1／2 report 可在其他 OID 與驗證證據完整時保留，補齊 workflow 與逐 localization syntax evidence 後升級；新一輪一律建立 version 3。`none` 模式將 localization check 記為 `not-applicable`，`syntax_validation.method` 設為 `not-applicable` 且 `targets` 為空陣列；其餘 manifest、diff 與 Review 證據仍須完成。
+既有 schema version 1–3 report 可在其他 OID 與驗證證據完整時保留，補齊 workflow、逐 localization syntax evidence 與 `zh_tw_review` scope 結果後升級；新一輪一律建立 version 4。`none` 模式將 localization check 記為 `not-applicable`，`syntax_validation.method` 設為 `not-applicable` 且 `targets` 為空陣列；其餘 manifest、diff 與 Review 證據仍須完成。
 
 Commit 訊息：
 
@@ -956,20 +956,20 @@ commit 後使用 `git show --name-status --stat HEAD` 再次確認範圍，並�
 - Head：`Update/<MOD-slug>`
 - Draft：`false`
 
-PR 說明包含：MOD 名稱、Nexus 網址、主頁版本、Main file 版本、來源實體檔名、上游檔案差異摘要、套用的中文規則、`ADD/CHANGE/KEEP/SKIP/BLOCKED` 計數、詞彙候選摘要、loc/zh-tw 調整與驗證結果。詞彙候選為空時明確寫 `none`；非空時保留在 PR 紀錄，讓合併後清除本地 artifacts 仍可追溯。Review 完成後，同一 PR 說明應提供一段使用者可直接理解的審查結果摘要，涵蓋 Balanced/Lite 的範圍與結果、已採用或保留現況的重要項目、需供上游後續處理的影響、suppressed/optional feedback 及 unresolved thread 數。標題、段落與敘述方式可依該次 Review 自由組織，不要求固定使用 `Review disposition` 字樣或逐欄模板；沒有 feedback 時以自然語句清楚說明即可。
+PR 說明包含：MOD 名稱、Nexus 網址、主頁版本、Main file 版本、來源實體檔名、來源同步的 path/status/count 事實、套用的中文規則、`ADD/CHANGE/KEEP/SKIP/BLOCKED` 計數、詞彙候選摘要、`zh-tw` 調整與驗證結果。不得加入上游非 loc 程式的功能、設計、品質或影響分析。詞彙候選為空時明確寫 `none`；非空時保留在 PR 紀錄，讓合併後清除本地 artifacts 仍可追溯。Review 完成後，同一 PR 說明提供使用者可直接理解的 `zh-tw` 審查摘要，涵蓋 Balanced/Lite 中 scope 內的採用／保留項目、翻譯驗證結果與 unresolved thread 數；只納入與 `zh-tw` 或必要 metadata 事實相關的 suppressed/optional feedback。`out-of-scope` feedback 不重述、不評論、不納入摘要。標題、段落與敘述方式可由 AI 依實際內容組織；scope 內沒有 feedback 時以自然語句說明即可。
 
 `state.pr_number` 為 `null` 時建立唯一的非 Draft PR；已有 PR 時核對 base/head 後更新同一 PR 的 title/body，讓 Review 修正與續跑維持單一紀錄。
 
 commit 建立後立即寫入 `head_oid`，將 state 設為 `committed`。push 成功並確認遠端 branch OID 等於本機 HEAD 後，state 設為 `pushed`。建立 PR 並寫入 PR number/URL/head OID 後，state 設為 `pr-open`。
 
-## 14. Copilot Balanced Review 迴圈
+## 14. Copilot Balanced `zh-tw` Review 迴圈
 
 ### 14.1 送審
 
 1. 使用 Browser 或 Chrome 控制技能開啟 PR，沿用已登入工作階段。
 2. PR 建立後立即在 `Reviewers` 選擇 Copilot，將深度設為 `Balanced`（Deep analysis, moderate cost）。GitHub 公開 REST review-request endpoint 目前只能指定 `copilot-pull-request-reviewer[bot]` 為 reviewer，沒有公開的 review-effort 參數；不得依賴未公開 API。除非 repository 已把自動 Review 預設設為對應的深度層級，否則仍以 Browser UI 選擇 Balanced。
 3. 送審前取得 `git rev-parse HEAD`，寫入 `head_oid`、`review_requested_oid`、`review_requested_at`，將 `review_effort` 設為 `balanced`，並把目前週期的 `reviewed_oid`／`review_completed_at` 設為 `null`；此時維持原 state status，直到畫面確認送審成功。
-4. 確認畫面顯示 `Copilot Balanced` 後送出 Review。Repository 自動產生的 Lite Review 可作為額外意見來源，但在本次 Balanced Review 完成前不分析、不回覆也不 resolve Lite feedback；Balanced 完成後再把 Lite 與 Balanced 一併去重、分類與處理。完成 Gate 仍只以另行要求的 Balanced Review 為準。
+4. 確認 PR 說明已明示 Review scope 僅涵蓋 active `zh-tw`、翻譯邊界／結構安全與必要 metadata 事實，再於畫面顯示 `Copilot Balanced` 後送出 Review。Repository 自動產生的 Lite Review 可作為額外來源，但在本次 Balanced Review 完成前不處理；Balanced 完成後與 Lite 一併去重並先做 scope 分流。完成 Gate 仍只以另行要求的 Balanced Review 為準。
 5. 畫面顯示 `Reviewing at balanced effort` 或 PR timeline 出現本次 `requested a balanced review` 事件後，將事件來源、可見文字、時間與對應 requested OID 寫入 `review-evidence.json`，再把 state 設為 `review-requested`。
 6. 釋放本地鎖，可繼續處理其他 MOD。
 
@@ -1021,9 +1021,9 @@ pullRequest {
 
 可使用 GitHub PR comment handler 的 `fetch_comments.py` 取得 comments 與 threads；當 helper 未提供 review `commit.oid` 時，以上述 GraphQL 欄位補齊，讓完成判定具備最新 HEAD 證據。
 
-讀取每一筆 Copilot review 的完整 `body`，包括 `<details>` 中的 `Suppressed comments`。`generated no new comments` 表示沒有新增 inline thread；optional/suppressed feedback仍逐項分類為「採用」或「保留現況並記錄理由」。
+取得每一筆 Copilot review 的完整 `body`，包括 `<details>` 中的 `Suppressed comments`，只為完成 scope 分流與 thread 對帳。`generated no new comments` 表示沒有新增 inline thread。指向 active localization 的 feedback，只有涉及 `zh-tw`、翻譯資格、placeholder／lookup／markup 或合併結構安全時才進入內容判讀；README／`.hash` 只處理版本、日期、檔名與雜湊等來源事實。其餘 normal、optional、suppressed 或 summary feedback 一律標記 `out-of-scope`，不評估正確性、不形成建議、不重述到 PR。
 
-將所有 inline、summary、optional 與 suppressed feedback 寫入 `review-artifacts/review-feedback.json`。頂層保存 reviews/threads/comments 的 `pagination_complete`、去重後計數與查詢時間；每筆至少包含 `review_id`、來源類型、path/line（若有）、內容摘要、分類、採用與否、處理方式、理由、thread ID（若有）與 resolved 狀態；以此檔證明所有頁面及每項 feedback 都已完成判定。
+將所有 inline、summary、optional 與 suppressed feedback 的處理狀態寫入 `review-artifacts/review-feedback.json`。頂層保存 reviews/threads/comments 的 `pagination_complete`、去重後計數、scope 計數與查詢時間。scope 內項目保存 `review_id`、來源類型、path/line、與 `zh-tw` 相關的內容摘要、採用與否、處理方式、理由、thread ID 與 resolved 狀態；`out-of-scope` 項目只保存 review/thread ID、來源類型、path/line、`scope=out-of-scope` 與 resolved 狀態，不保存內容摘要、影響判斷或建議。此檔只證明 feedback 已完成範圍分流及 thread 對帳，不把非目標內容轉化為本流程意見。
 
 使用 `gh` 前先執行 `gh auth status`。若尚未登入，請使用者執行 `gh auth login`；若發生 rate limit 或短暫網路錯誤，保留狀態並稍後重試，以完整的 thread-aware 結果完成判定。
 
@@ -1053,12 +1053,12 @@ pullRequest {
 
 1. 重新取得該 MOD 的鎖並核對 state/worktree/PR，將 state 設為 `review-changes`。
 2. 將 feedback 分為：
-   - 本地化：依該 unit 的 stage、BASE RULE、模式規則、專案規則與正式詞彙表判定；採用時同步更新 `localization-decisions.json` 的 result/reason，保留現況時記錄對應規則與理由。
-   - README 或 metadata：自主修正。
-   - 上游程式 Review 意見：不論涉及可能的功能錯誤、設計差異、程式邏輯、註解、命名或樣式，AI 都評估實際影響、保存證據並回覆「供上游後續處理」；非 loc bytes 維持新版壓縮檔內容，不在本 PR 改寫。
-   - 來源壓縮檔實際無法通過完整性、安全解壓、路徑邊界或語法／結構驗證時，依對應 validation Gate 保存失敗證據並停止。這是來源驗證結果，不把單純的 Review 意見誤當成修改上游程式的授權。
-   - 資訊性、不適用、過時或重複：記錄可驗證理由。
-   - 每項分類、採用與否、處理方式、理由與 thread resolved 狀態寫入 `review-feedback.json`；同一 PR 說明同步維持可讀的審查結果摘要，完整逐項證據保留在 artifact 與 thread 回覆。
+   - `zh-tw` scope：依該 unit 的 stage、BASE RULE、模式規則、專案規則、正式詞彙表與實際引用情境判定；採用時同步更新 `localization-decisions.json`，保留現況時記錄對應翻譯規則與理由。
+   - 必要 metadata 事實：只核對 README／`.hash` 的版本、日期、檔名、網址與雜湊，依權威來源自主修正；不處理文案或風格偏好。
+   - `out-of-scope`：所有非 `zh-tw` 程式功能、設計、效能、品質、命名、註解、樣式及其他與翻譯維護無關的內容，只寫入最小 scope 狀態，不分析、不回覆意見、不修改，也不加入 PR 摘要。
+   - 每項的 scope 與 thread resolved 狀態寫入 `review-feedback.json`；只有 scope 內項目保存採用與否、處理方式及理由，並同步到 PR 的 `zh-tw` 審查摘要。
+
+來源檔完整性、安全解壓、路徑邊界、manifest 與 loc 合併語法是本流程自身的執行 Gate，依第 9、11–13 節處理；它們不是對上游程式提供意見的 Review 類別。
 3. 修正 loc 時，必須同時更新：
    - worktree 內正式 localization 檔。
    - 該 id 的 `review-artifacts/localization/<id>/merged.lua`。
@@ -1069,11 +1069,11 @@ pullRequest {
    - 先將目前的 `install-manifest.txt` 精確複製為 `install-manifest.previous.txt`，再從 worktree 完整 MOD 樹建立 `install-manifest.candidate.txt`；比較完成後才更新正式 manifest。
    - 將 `install-manifest.candidate.txt` 與 `install-manifest.previous.txt` 比較；除了 localization 檔的 size/SHA-256 外，所有非 loc 相對路徑、大小與 SHA-256 必須完全相同。比較通過後才原子取代 `install-manifest.txt`。這項規則讓第 11 節刪除 staging 後仍能可靠驗證 Review 修正只影響 loc。
    - 重新核對 worktree 內完整 MOD 樹與新 manifest 完全一致。
-   - 重跑第 12 節，並執行第 13 節的精確 stage、Codex Review、validation report、commit、push 與遠端 OID 驗證；沿用既有 PR。
-5. 對已處理或不採用的 thread 留下可追蹤理由，再解決該 thread。
+   - 重跑第 12 節，並執行第 13 節的精確 stage、`zh-tw` scoped Codex Review、validation report、commit、push 與遠端 OID 驗證；沿用既有 PR。
+5. scope 內 thread 留下與 `zh-tw` 規則或 metadata 來源相關的可追蹤理由後解決；`out-of-scope` thread 直接完成 scope 標記並 resolve，不發表內容意見。只有 GitHub 明確要求文字才能 resolve 時，使用固定中性範圍聲明「此流程僅維護 zh-tw，未評估此項」，不得加入技術判斷。
 6. 比較處理前後 HEAD：
-   - HEAD 已改變：commit 後立即更新 `head_oid`，push 並確認遠端 OID，再對新 HEAD 重新送出 Balanced Review；舊 Review 保留為歷史意見，新完成 Gate 使用新 HEAD 的 Review 證據。
-   - HEAD 維持相同：完成 feedback 分類、必要回覆與 thread resolution 後，沿用同一 HEAD 已完成的 Balanced Review，直接執行第 14.4 節 Gate。
+   - HEAD 已改變：commit 後立即更新 `head_oid`，push 並確認遠端 OID，再對新 HEAD 重新送出 Balanced Review；舊 Review 保留為歷史 feedback，新完成 Gate 使用新 HEAD 的 Review 證據。
+   - HEAD 維持相同：完成 scope 分流、scope 內必要回覆與 thread resolution 後，沿用同一 HEAD 已完成的 Balanced Review，直接執行第 14.4 節 Gate。
 
 ### 14.4 Review 完成條件
 
@@ -1083,9 +1083,9 @@ pullRequest {
 - PR timeline 存在本次 `balanced` request event，event evidence 的 requested OID 等於 `review_requested_oid`；對應 review 的 `author.login` 為 GitHub Copilot reviewer（目前為 `copilot-pull-request-reviewer`），且 `submittedAt` 晚於或等於 `request_event_at`。
 - 該次 Copilot review 的 `commit.oid` 等於 PR `headRefOid` 與 `review_requested_oid`。
 - reviews、reviewThreads 與每個 thread comments 都已完成分頁與 ID 去重，unresolved review thread 數量為 `0`。
-- inline、summary、optional 與 suppressed feedback 均已有分類與回覆紀錄。
+- inline、summary、optional 與 suppressed feedback 均已完成 scope 分流；scope 內已有處理紀錄，`out-of-scope` 只有最小識別與 resolved 證據，沒有內容意見。
 - 最後一次 manifest 與 cached diff 驗證通過；有 active localization 時，每個 id 的 loc 語意與 syntax evidence 也都通過，`none` 不要求 loc 證據。
-- PR 說明已有可讀的審查結果摘要，讓使用者能確認已採用項目、保留現況理由、上游後續事項與目前 unresolved thread 數；摘要格式可由 AI 依實際內容組織。
+- PR 說明已有可讀的 `zh-tw` 審查摘要，讓使用者確認 scope 內採用項目、保留現況理由、翻譯驗證結果與目前 unresolved thread 數；不包含 `out-of-scope` 內容或上游程式意見。
 
 送出新 HEAD Review 後，GitHub API 可能暫時仍只回傳上一個 commit 的 review。持續等待到 balanced request event、review `submittedAt` 與 `commit.oid` 同時符合上述條件；將證據寫入 `review-evidence.json`，避免依賴 API 回傳順序或單一畫面狀態。
 
@@ -1204,7 +1204,7 @@ pullRequest {
 
 - 正式 MOD 樹與 install manifest 的相對路徑、size、SHA-256 完全一致；有 active localization 時，每個正式 loc 等於對應 id 的 merged，其餘檔案等於 archive extraction manifest；`none` 時完整 MOD 樹都等於 archive extraction manifest。
 - `validation-report.json` 顯示 cached paths 只包含 README、單一 MOD 與 `.hash/<MOD-slug>.hash`，且沒有 allowlist 內遺漏的 unstaged 變更。
-- `validation-report.json.cached_tree_oid` 等於 `HEAD^{tree}`，`validated_oid` 等於本機與遠端 HEAD；`diff --check`、結構驗證與 Codex Review 均通過。
+- `validation-report.json.cached_tree_oid` 等於 `HEAD^{tree}`，`validated_oid` 等於本機與遠端 HEAD；`diff --check`、結構驗證與 `zh_tw_review` 均通過。
 - 主工作區與其他 worktree 的 `git status --porcelain` 符合執行前快照，本輪 `__pycache__`、`.pyc` 與驗證輸出均已保存在指定 artifact 或完成精確清理。
 - push 後 `origin/Update/<MOD-slug>` 與本機 HEAD 一致。
 
@@ -1213,6 +1213,6 @@ pullRequest {
 - PR 為 OPEN、非 Draft，base/head 正確。
 - `head_oid`、`review_requested_oid`、PR `headRefOid` 與本次 Balanced request 對應 review 的 `commit.oid` 全部一致。
 - `review-evidence.json` 的 effort、request event 來源/文字/時間、Copilot reviewer、review ID 與 commit OID 通過第 14.4 節條件。
-- reviews、threads 與 comments 分頁全部完成，unresolved thread 為零；`review-feedback.json` 顯示 review body 內的 normal、optional 與 suppressed feedback 都已分類。
-- PR 說明提供可讀的 Review 結果摘要，內容足以理解採用、保留、上游後續事項與 unresolved thread 數；不以固定標題或模板作為完成判定。
+- reviews、threads 與 comments 分頁全部完成，unresolved thread 為零；`review-feedback.json` 顯示 normal、optional、suppressed 與 summary feedback 均已完成 scope 分流，scope 內項目已處理，`out-of-scope` 只保存最小對帳證據。
+- PR 說明提供可讀的 `zh-tw` Review 摘要，內容足以理解 scope 內採用、保留、翻譯驗證與 unresolved thread 數；不包含 `out-of-scope` 意見，也不以固定標題或模板作為完成判定。
 - `reviewed_oid` 寫入同一 HEAD 後，state 才能設為 `awaiting-user-merge`。
