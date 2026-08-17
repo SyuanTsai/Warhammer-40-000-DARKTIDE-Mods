@@ -1,0 +1,15 @@
+mod=IME Enable
+repo_directory=IME_Enable
+nexus_id=167
+nexus_url=https://www.nexusmods.com/warhammer40kdarktide/mods/167
+nexus_last_updated=10 July 2026, 2:31AM
+nexus_page_version=1.2.0
+version=1.2.0
+main_file_uploaded_at_utc=2026-07-09T18:31:00Z
+generated_at=2026-08-18T02:01:59+08:00
+maintenance_date=2026-08-18
+timezone=Asia/Taipei
+algorithm=SHA-256
+sha256=34a3d17ebf4c37fa2a4bd359ff9bee80623b735d5d984e3cab9eb96cc9a57407
+size_bytes=2805
+filename=IME_Enable 167 1.2.0 2026-07-09T18-31Z Z1K0I1f3D.zip
