@@ -56,10 +56,10 @@
 
 ### [Healthbars](https://www.nexusmods.com/warhammer40kdarktide/mods/16)
     UI改善
-- MOD 網站最後更新日期：Last updated 07 July 2026, 9:54PM
-- MOD 版本：26.07.07
-- MOD 檔案名稱：Healthbars 16 26.07.07 2026-07-07T13-54Z 5gEeTgDsA
-- 手動維護最後下載日期：2026-07-08
+- MOD 網站最後更新日期：Last updated 05 August 2026, 6:36AM
+- MOD 版本：26.08.05
+- MOD 檔案名稱：Healthbars 16 26.08.05 2026-08-05T06-36Z xc7NGcMwi.zip
+- 手動維護最後下載日期：2026-08-17
 - GitHub :
 - Source=>  https://github.com/danreeves/darktide-mods
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mods-Danreeves
@@ -240,10 +240,10 @@
 
 ### [Enhanced Descriptions](https://www.nexusmods.com/warhammer40kdarktide/mods/210)
     描述改善
-- MOD 網站最後更新日期：Last updated 20 April 2026, 4:43PM
-- MOD 版本：5.82
-- MOD 檔案名稱：Enhanced_descriptions-210-5-82-1776494245
-- 手動維護最後下載日期：2026-05-17
+- MOD 網站最後更新日期：Last updated 18 July 2026, 2:02AM
+- MOD 版本：6.0.0b
+- MOD 檔案名稱：Enhanced Descriptions 210 6.0.0b 2026-07-17T18-02Z YFIfRFOFf.zip
+- 手動維護最後下載日期：2026-08-17
 - GitHub :
 - Source=>  https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA
 - Fork  =>  https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Enhanced_Descriptions
@@ -507,10 +507,10 @@
 
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
     記分板
-- MOD 網站最後更新日期：Last updated 14 July 2026, 1:58AM
-- MOD 版本：0.4.15
-- MOD 檔案名稱：CombatStats 661 0.4.15 2026-07-13T17-58Z 29Sw894jD
-- 手動維護最後下載日期：2026-07-14
+- MOD 網站最後更新日期：Last updated 03 August 2026, 2:39PM
+- MOD 版本：0.5.11
+- MOD 檔案名稱：CombatStats 661 0.5.11 2026-08-03T06-39Z PhaYKh0Gw.zip
+- 手動維護最後下載日期：2026-08-15
 
 ### [CharacterGrid](https://www.nexusmods.com/warhammer40kdarktide/mods/649)
     角色顯示
@@ -699,10 +699,10 @@
 
 ### [Creature Spawner](https://www.nexusmods.com/warhammer40kdarktide/mods/25)
     怪物生成器 - 靈能室可以選擇要生那些怪，並且產生特定波次訓練身法。
-- MOD 網站最後更新日期：Last updated 30 October 2025, 6:17AM
-- MOD 版本：Version 25.10.29
-- MOD 檔案名稱：Creature Spawner-25-25-10-29-1761776237
-- 手動維護最後下載日期：2025-12-06
+- MOD 網站最後更新日期：Last updated 26 July 2026, 4:04AM
+- MOD 版本：26.07.25
+- MOD 檔案名稱：Creature Spawner 25 26.07.25 2026-07-25T20-04Z IP0ifPXuX.zip
+- 手動維護最後下載日期：2026-08-16
 
 ### [Radar](https://www.nexusmods.com/warhammer40kdarktide/mods/790)
     遠征模式的小地圖

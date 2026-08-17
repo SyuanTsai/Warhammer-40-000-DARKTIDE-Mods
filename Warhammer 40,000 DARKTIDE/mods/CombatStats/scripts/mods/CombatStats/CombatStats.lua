@@ -1,5 +1,9 @@
 local mod = get_mod('CombatStats')
 
+local SharedUtils = mod:io_dofile('CombatStats/scripts/mods/CombatStats/shared/shared_utils')
+local _loc = mod:io_dofile('CombatStats/scripts/mods/CombatStats/CombatStats_localization')
+SharedUtils.apply_loc_settings(mod, _loc)
+
 local Breed = mod:original_require('scripts/utilities/breed')
 
 local CombatStatsTracker = mod:io_dofile('CombatStats/scripts/mods/CombatStats/combat_stats_tracker')
@@ -16,70 +20,13 @@ mod:register_hud_element({
     },
 })
 
--- Register Combat Stats View
-mod:add_require_path('CombatStats/scripts/mods/CombatStats/combat_stats_view/combat_stats_view')
-mod:register_view({
+-- Register Combat Stats View (and its ESC-menu button)
+SharedUtils.register_stats_view(mod, {
     view_name = 'combat_stats_view',
-    view_settings = {
-        init_view_function = function(ingame_ui_context)
-            return true
-        end,
-        class = 'CombatStatsView',
-        disable_game_world = false,
-        game_world_blur = 0,
-        load_always = true,
-        load_in_hub = true,
-        path = 'CombatStats/scripts/mods/CombatStats/combat_stats_view/combat_stats_view',
-        package = 'packages/ui/views/options_view/options_view',
-        state_bound = false,
-        enter_sound_events = {
-            'wwise/events/ui/play_ui_enter_short',
-        },
-        exit_sound_events = {
-            'wwise/events/ui/play_ui_back_short',
-        },
-        wwise_states = {
-            options = 'ingame_menu',
-        },
-    },
-    view_transitions = {},
-    view_options = {
-        close_all = false,
-        close_previous = false,
-        close_transition_time = nil,
-        transition_time = nil,
-    },
+    class_name = 'CombatStatsView',
+    path = 'CombatStats/scripts/mods/CombatStats/combat_stats_view/combat_stats_view',
+    button_text_loc = 'loc_combat_stats_menu_button',
 })
-
--- Add a button to the ESC menu that opens the view
-local COMBAT_STATS_MENU_BUTTON = {
-    text = 'loc_combat_stats_menu_button',
-    type = 'button',
-    icon = 'content/ui/materials/icons/system/escape/settings',
-    trigger_function = function()
-        Managers.ui:open_view('combat_stats_view')
-    end,
-}
-
-mod:hook(CLASS.SystemView, '_setup_content_widgets', function(func, self, content, ...)
-    local patched = content
-    if content then
-        patched = {}
-        for state_key, list in pairs(content) do
-            local cloned = table.clone(list)
-            local insert_at = #cloned + 1
-            for i = 1, #cloned do
-                if cloned[i].type == 'spacing_vertical' then
-                    insert_at = i
-                    break
-                end
-            end
-            table.insert(cloned, insert_at, COMBAT_STATS_MENU_BUTTON)
-            patched[state_key] = cloned
-        end
-    end
-    return func(self, patched, ...)
-end)
 
 -- Initialize tracker and history
 mod.tracker = CombatStatsTracker:new()
@@ -168,21 +115,23 @@ mod:hook(
             local player = Managers.player and Managers.player:local_player_safe(1)
             if player then
                 local player_unit = player.player_unit
-                local player_unit_spawn_manager = Managers.state and Managers.state.player_unit_spawn
-                local attacker_owner = attacking_unit
-                    and player_unit_spawn_manager
-                    and player_unit_spawn_manager:owner(attacking_unit)
 
                 local attacked_breed = ALIVE[attacked_unit]
                         and ScriptUnit.has_extension(attacked_unit, 'unit_data_system')
                     or nil
                 attacked_breed = attacked_breed and attacked_breed:breed()
 
-                -- Update the HP ledger for any player hit so teammate damage is reflected.
+                -- Update the HP ledger for any player hit so teammate damage is reflected
                 local actual_damage, overkill_damage = damage, 0
-                if attacker_owner and Breed.is_minion(attacked_breed) then
-                    actual_damage, overkill_damage =
-                        mod.tracker:update_enemy_health(attacked_unit, damage, attack_result)
+                if Breed.is_minion(attacked_breed) then
+                    local player_unit_spawn_manager = Managers.state and Managers.state.player_unit_spawn
+                    local attacker_owner = attacking_unit
+                        and player_unit_spawn_manager
+                        and player_unit_spawn_manager:owner(attacking_unit)
+                    if attacker_owner then
+                        actual_damage, overkill_damage =
+                            mod.tracker:update_enemy_health(attacked_unit, damage, attack_result)
+                    end
                 end
 
                 if player_unit and attacking_unit == player_unit and attacked_breed then
@@ -203,10 +152,6 @@ mod:hook(
                         hit_weakspot,
                         damage_profile_name
                     )
-
-                    if attack_result == 'died' then
-                        mod.tracker:finish_enemy_engagement(attacked_unit, true)
-                    end
                 elseif
                     player_unit
                     and attacked_unit == player_unit
@@ -218,6 +163,10 @@ mod:hook(
                     if breed then
                         mod.tracker:start_enemy_engagement(attacking_unit, breed)
                     end
+                end
+
+                if attack_result == 'died' and player_unit and attacking_unit == player_unit then
+                    mod.tracker:finish_enemy_engagement(attacked_unit, true)
                 end
             end
         end

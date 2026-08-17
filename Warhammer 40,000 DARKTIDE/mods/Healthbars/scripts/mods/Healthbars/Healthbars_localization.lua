@@ -305,7 +305,7 @@ local localization = {
 		ja = "標準のボス体力バーに継続ダメージ／デバフマーカーを表示",
 		ko = "기본 보스 체력 표시줄에 지속 피해/약화 효과 표식 표시",
     	["zh-cn"] = "在原版首领生命条上显示持续伤害/减益标记",
-		["zh-tw"] = "在原版首領血條上顯示持續傷害/減益標記",
+    	["zh-tw"] = "在原版首領血條上顯示持續傷害/減益標記",
     	ru = "Показывать маркеры периодического урона/ослаблений на стандартных полосах здоровья боссов",
     	fr = "Afficher les marqueurs de dégâts sur la durée/affaiblissements sur les barres de santé des boss d’origine",
     },

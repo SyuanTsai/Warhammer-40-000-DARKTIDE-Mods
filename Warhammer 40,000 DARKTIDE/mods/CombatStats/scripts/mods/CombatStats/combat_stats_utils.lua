@@ -1,6 +1,6 @@
 local mod = get_mod('CombatStats')
+local SharedUtils = mod:io_dofile('CombatStats/scripts/mods/CombatStats/shared/shared_utils')
 
-local Breeds = mod:original_require('scripts/settings/breed/breeds')
 local BuffTemplates = mod:original_require('scripts/settings/buff/buff_templates')
 local ArchetypeTalents = mod:original_require('scripts/settings/ability/archetype_talents/archetype_talents')
 local Archetypes = mod:original_require('scripts/settings/archetype/archetypes')
@@ -33,29 +33,6 @@ function CombatStatsUtils:init()
     self._archetype_cache = {}
 end
 
-local function safe_localize(text)
-    if not text or text == '' or text == 'n/a' then
-        return nil
-    end
-
-    local success, localized = pcall(Localize, text)
-    if not success then
-        return nil
-    end
-
-    if
-        localized
-        and type(localized) == 'string'
-        and localized ~= text
-        and not localized:find('^loc_')
-        and not localized:lower():find('unlocalized')
-    then
-        return localized
-    end
-
-    return nil
-end
-
 function CombatStatsUtils:get_archetype_display_name(archetype_name)
     if not archetype_name or archetype_name == 'unknown' then
         return mod:localize('unknown')
@@ -68,7 +45,7 @@ function CombatStatsUtils:get_archetype_display_name(archetype_name)
     local result = archetype_name
     local archetype_data = Archetypes[archetype_name]
     if archetype_data and archetype_data.archetype_name then
-        local localized = safe_localize(archetype_data.archetype_name)
+        local localized = SharedUtils.safe_localize(archetype_data.archetype_name)
         if localized then
             result = localized
         end
@@ -85,7 +62,7 @@ function CombatStatsUtils:get_mission_display_name(mission_name)
 
     local mission_settings = Missions[mission_name]
     if mission_settings and mission_settings.mission_name then
-        return safe_localize(mission_settings.mission_name) or mission_name
+        return SharedUtils.safe_localize(mission_settings.mission_name) or mission_name
     end
 
     return mission_name
@@ -100,37 +77,7 @@ function CombatStatsUtils:get_breed_display_name(breed_name)
         return self._breed_cache[breed_name]
     end
 
-    local result = breed_name
-    local breed = Breeds[breed_name]
-    if breed then
-        if breed.display_name then
-            local localized = safe_localize(breed.display_name)
-            if localized then
-                result = localized
-                self._breed_cache[breed_name] = result
-                return result
-            end
-        end
-
-        if breed.boss_display_name then
-            if type(breed.boss_display_name) == 'table' and #breed.boss_display_name > 0 then
-                local localized = safe_localize(breed.boss_display_name[1])
-                if localized then
-                    result = localized
-                    self._breed_cache[breed_name] = result
-                    return result
-                end
-            elseif type(breed.boss_display_name) == 'string' then
-                local localized = safe_localize(breed.boss_display_name)
-                if localized then
-                    result = localized
-                    self._breed_cache[breed_name] = result
-                    return result
-                end
-            end
-        end
-    end
-
+    local result = SharedUtils.breed_display_name(breed_name)
     self._breed_cache[breed_name] = result
     return result
 end
@@ -154,7 +101,7 @@ function CombatStatsUtils:get_buff_display_name(buff_name)
 
     -- Check if buff has display_title
     if buff_template.display_title then
-        local localized = safe_localize(buff_template.display_title)
+        local localized = SharedUtils.safe_localize(buff_template.display_title)
         if localized then
             result = localized
             self._buff_cache[buff_name] = result
@@ -197,7 +144,7 @@ function CombatStatsUtils:get_buff_display_name(buff_name)
                 or talent_name == buff_related_talent
             then
                 if definition.display_name then
-                    local localized = safe_localize(definition.display_name)
+                    local localized = SharedUtils.safe_localize(definition.display_name)
                     if localized then
                         result = localized
                         self._buff_cache[buff_name] = result
@@ -215,7 +162,7 @@ function CombatStatsUtils:get_buff_display_name(buff_name)
                         and format_value.find_value.buff_template_name == buff_name
                     then
                         if definition.display_name then
-                            local localized = safe_localize(definition.display_name)
+                            local localized = SharedUtils.safe_localize(definition.display_name)
                             if localized then
                                 result = localized
                                 self._buff_cache[buff_name] = result
@@ -242,7 +189,7 @@ function CombatStatsUtils:get_buff_display_name(buff_name)
                     if master_items then
                         for item_id, item_data in pairs(master_items) do
                             if item_data.trait == trait_name and item_data.display_name then
-                                local localized = safe_localize(item_data.display_name)
+                                local localized = SharedUtils.safe_localize(item_data.display_name)
                                 if localized then
                                     result = localized
                                     self._buff_cache[buff_name] = result
