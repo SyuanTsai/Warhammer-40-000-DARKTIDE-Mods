@@ -50,14 +50,14 @@ local CONFIG = {
 
 		Crit_hit = "暴擊命中",
 		Crit_hits = "暴擊命中",
-		Crtcll_strk = "暴擊",
+		Crtcll_strk = "致命一擊",
 		Crt_hit_chnc = "暴擊命中機率",
 		Crt_hit_col = "暴擊傷害",
 		Crit_hit_m_dmg = "近戰暴擊傷害", -- Melee Crit Damage
 		Crit_hit_r_dmg = "遠程暴擊傷害", -- Ranged Crit Damage
 
 		Crit_strike = "暴擊打擊",
-		Crit_strikes = "暴擊",
+		Crit_strikes = "致命一擊",
 		Crt_chnc_r = "暴擊打擊機率",
 		Crt_strk_dmg = "暴擊打擊傷害",
 
@@ -216,13 +216,13 @@ local CONFIG = {
 	},
 	-- Arbitres
 	class_arbites_text_colour = {
-		cls_arb = "法務官",
-		cls_arb2 = "法務官",
+		cls_arb = "仲裁官",
+		cls_arb2 = "仲裁官",
 	},
 	-- Hive Scum
 	class_scum_text_colour = {
-		cls_scm = "巢都敗類",
-		cls_scm2 = "巢都敗類",
+		cls_scm = "蜂巢渣滓",
+		cls_scm2 = "蜂巢渣滓",
 	},
 	chemtox_text_colour = {
 		Chem_Tox = "化學毒素",
@@ -252,7 +252,7 @@ local CONFIG = {
 		shroudf = "隱秘領域",
 		momentum = "勢能",
 		-- Arbites
-		Arbites_gren = "法務官手榴彈",
+		Arbites_gren = "仲裁手榴彈",
 		BreakZLine = "突破防線",
 		-- Psyker
 		Assail = "攻擊",

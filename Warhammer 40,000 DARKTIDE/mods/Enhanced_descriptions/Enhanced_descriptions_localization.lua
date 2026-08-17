@@ -128,7 +128,7 @@ local localizations = {
 		en = "{#color(192, 255, 26)} Enhanced Descriptions{#reset()}",
 		ru = "{#color(192, 255, 26)} Улучшенные описания{#reset()}",
 		fr = "{#color(192, 255, 26)} Descriptions améliorées{#reset()}",
-		["zh-tw"] = "{#color(192, 255, 26)} 描述改善{#reset()}",
+		["zh-tw"] = "{#color(192, 255, 26)} 增強描述{#reset()}",
 		["zh-cn"] = "{#color(192, 255, 26)} 描述增强{#reset()}",
 		de = "{#color(192, 255, 26)} Erweiterte Beschreibungen{#reset()}",
 		it = "{#color(192, 255, 26)} Descrizioni Migliorate{#reset()}",
@@ -142,7 +142,7 @@ local localizations = {
 		en = "Improves readability by highlighting numbers and keywords in descriptions of Talents, Blessings, Penances, Curios, and other menu texts. Also fixes localizations and adds clarity to some descriptions.",
 		ru = "Enhanced Descriptions - Улучшает читаемость за счёт выделения чисел и ключевых слов в описаниях Талантов, Благословений, Искуплений, Реликвий и других текстах меню. Также вносит исправления в локализации и добавляет ясности в некоторые описания.",
 		fr = "Améliore la lisibilité en mettant en évidence les nombres et mots-clés dans les descriptions des Talents, Bénédictions, Pénitences, Curiosités et autres textes de menu. Corrige également les localisations et ajoute de la clarté à certaines descriptions.",
-		["zh-tw"] = "透過高亮顯示天賦、祝福、苦行、珍品及其他選單文字描述中的數值與效果，提升整體可讀性；同時修正翻譯問題，改善描述內容的清晰度與一致性。",
+		["zh-tw"] = "透過醒目標示天賦、祝福、苦行、珍品與其他選單文字中的數值與關鍵詞，提升整體可讀性；同時修正翻譯問題，讓部分描述更清楚。",
 		["zh-cn"] = "通过高亮显示天赋、祝福、苦修、珍品和其他菜单文本描述中的数字和关键词来提升可读性。同时修复本地化问题并为部分描述增加清晰度。",
 		de = "Verbessert die Lesbarkeit durch Hervorhebung von Zahlen und Schlüsselwörtern in Beschreibungen von Talenten, Segnungen, Bußen, Kuriositäten und anderen Menütexten. Korrigiert außerdem Lokalisierungsfehler und fügt einigen Beschreibungen mehr Klarheit hinzu.",
 		it = "Migliora la leggibilità evidenziando numeri e parole chiave nelle descrizioni di Talenti, Benedizioni, Penitenze, Curiosità e altri testi di menu. Corregge anche le localizzazioni e aggiunge chiarezza ad alcune descrizioni.",
@@ -714,6 +714,8 @@ local localizations = {
 			.."\n{#size(17)}{#color(95, 95, 95)}// Mobility, Melee Damage, Warp Resistance{#reset()}",
 		ru = "Мусорные статы"
 			.."\n{#size(17)}{#color(95, 95, 95)}// Мобильность, Урон рукопашный, Сопротивление варпу{#reset()}",
+		["zh-tw"] = "雜項屬性"
+			.."\n{#size(17)}{#color(95, 95, 95)}// 移動性、近戰傷害、反噬抗性{#reset()}",
 	},
 --[+DUMP STATS 2+]--
 	dump_stat2_colour = {
@@ -721,6 +723,8 @@ local localizations = {
 			.."\n{#size(17)}{#color(95, 95, 95)}// Ammo, Defences, Heat Management{#reset()}",
 		ru = "Мусорные статы 2"
 			.."\n{#size(17)}{#color(95, 95, 95)}// Боеприпасы, Защита, Отведение тепла{#reset()}",
+		["zh-tw"] = "雜項屬性 2"
+			.."\n{#size(17)}{#color(95, 95, 95)}// 彈藥、防禦、熱能管理{#reset()}",
 	},
 --[+DUMP STATS 3+]--
 	dump_stat3_colour = {
@@ -728,6 +732,8 @@ local localizations = {
 			.."\n{#size(17)}{#color(95, 95, 95)}// Damage{#reset()}",
 		ru = "Мусорные статы 3"
 			.."\n{#size(17)}{#color(95, 95, 95)}// Урон {#reset()}", -- {#size(14)}(Игольный пистолет, Огнемёт и др., наносят урон со временем, на который не влияет эта стата).
+		["zh-tw"] = "雜項屬性 3"
+			.."\n{#size(17)}{#color(95, 95, 95)}// 傷害{#reset()}",
 	},
 
 --[+MAIN+]--
@@ -875,7 +881,7 @@ local localizations = {
 		en = " Finesse",
 		fr = " Finesse",
 		ru = " Точность",
-		["zh-tw"] = " 靈巧",
+		["zh-tw"] = " 技巧",
 		["zh-cn"] = " 灵巧",
 		de = " Finesse",
 		it = " Finezza",
@@ -1117,7 +1123,7 @@ local localizations = {
 		en = " Trample",
 		fr = " Piétinement",
 		ru = " Топот",
-		["zh-tw"] = " 踐踏",
+		["zh-tw"] = " 衝鋒",
 		["zh-cn"] = " 践踏",
 		de = " Zertrampeln",
 		it = " Calpestio",
@@ -1175,7 +1181,7 @@ local localizations = {
 		en = " Stealth",
 		fr = " Furtivité",
 		ru = " Скрытность",
-		["zh-tw"] = " 隱身",
+		["zh-tw"] = " 隱形",
 		["zh-cn"] = " 潜行",
 		de = " Tarnung",
 		it = " Furtività",
@@ -1279,6 +1285,7 @@ local localizations = {
 		en = " Hive Scum",
 		-- fr = "",
 		ru = " Отребье Улья",
+		["zh-tw"] = " 蜂巢敗類",
 		-- ["zh-tw"] = "",
 		-- ["zh-cn"] = "",
 		-- de = "",
@@ -1293,6 +1300,7 @@ local localizations = {
 		en = " Chem Toxin",
 		-- fr = "",
 		ru = " Хим-токсин",
+		["zh-tw"] = " 化學毒素",
 		-- ["zh-tw"] = "",
 		-- ["zh-cn"] = "",
 		-- de = "",
@@ -1365,7 +1373,7 @@ local localizations = {
 		en = " Note",
 		fr = " Annotation",
 		ru = " Примечания",
-		["zh-tw"] = " 備註",
+		["zh-tw"] = " 註釋",
 		["zh-cn"] = " 注释",
 		de = " Hinweis",
 		it = " Nota",
@@ -1395,7 +1403,7 @@ local localizations = {
 		en = "Sedition",
 		fr = "Sédition",
 		ru = "Мятеж",
-		["zh-tw"] = "暴動",
+		["zh-tw"] = "煽動叛亂",
 		["zh-cn"] = "煽动叛乱",
 		de = "Aufruhr",
 		it = "Sedizione",
