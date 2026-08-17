@@ -191,7 +191,7 @@ run_id + workflow_commit_oid + mod_lock_key + canonical mod_relative_path + sour
 6. 超過 30 分鐘且完全沒有 matching claim/state、worker 或 Git process 的 lock 才是 orphan。先原子改名為 `.orphan-<mod-lock-key>-<timestamp>` 保存證據，才允許新 generation 使用原固定 path。
 7. reattach／重建都原子寫入 state `last_recovery`；失敗時保留原 lock/state/claim，不得用新 run 繞過。
 
-Evidence 階段 crash recovery 額外遵守：若 state 已記錄 C1/C2/C3/F 任一 OID，reattach 後先確認該 OID、tree、branch ancestry、artifact SHA 與 evidence mapping。只有完全一致的已完成 checkpoint 才可續用；任一不一致使受影響 evidence 與 Final Candidate Gate 失效，從最近可證明的安全 checkpoint 重建，不得跳過 Gate。
+Evidence 階段 crash recovery 額外遵守：若 state 已記錄 C1/C2/C3/F 任一 OID，reattach 後先確認該 OID、tree、branch ancestry、checkpoint parent-tree invariant、artifact SHA 與 evidence mapping。只有完全一致的已完成 checkpoint 才可續用；任一不一致使受影響 evidence 與 Final Candidate Gate 失效，從最近可證明的安全 checkpoint 重建，不得跳過 Gate。
 
 ## 4. State 與證據模型
 
@@ -274,10 +274,14 @@ Evidence 階段 crash recovery 額外遵守：若 state 已記錄 C1/C2/C3/F 任
     "c2_oid": null,
     "c3_oid": null,
     "f_oid": null,
+    "c0_tree_oid": null,
     "c1_tree_oid": null,
     "c2_tree_oid": null,
     "c3_tree_oid": null,
     "f_tree_oid": null,
+    "c1_parent_tree_oid": null,
+    "c2_parent_tree_oid": null,
+    "c3_parent_tree_oid": null,
     "evidence_target_paths_sha256": null,
     "extraction_manifest_sha256": null,
     "raw_install_manifest_sha256": null,
@@ -339,7 +343,8 @@ failed
 - `c2_status`／`c3_status` 只允許 `not-run|committed|not-applicable`。`not-applicable` 必須有可驗證 reason，且只允許 `localization_mode=none` 或沒有 active target file。
 - active target 存在但某階段實際 tree delta 為空時，C2/C3 可建立必要 evidence checkpoint commit；必須記錄 `*_empty_reason` 並由 Gate 證明該階段預期 bytes 本來就相同。不得為無 target 的情況建立空 Commit。
 - `evidence_diffs.*` 每筆至少保存 base OID、head OID、diff path/SHA-256、name-status path/SHA-256 與產生參數版本。
-- `candidate_gate.status` 只允許 `not-run|passed|rejected`。任何 C1/C2/C3/F OID/tree、target path set、manifest、diff、rules SHA、localization artifact 或 validation report 改變，先把 Gate 設回 `not-run`，舊 Review 同時失效。
+- `candidate_gate.status` 只允許 `not-run|passed|rejected`。任何 C1/C2/C3/F OID/tree、checkpoint parent tree、target path set、manifest、diff、rules SHA、localization artifact 或 validation report 改變，先把 Gate 設回 `not-run`，舊 Review 同時失效。
+- `c1_parent_tree_oid` 必須等於 C0 tree；C2 適用時 `c2_parent_tree_oid` 必須等於 C1 tree；C3 適用時 `c3_parent_tree_oid` 必須等於 C2 tree。這三個 parent-tree invariant 用來證明 checkpoint commit 本身確實從上一層語意 tree 開始，而不是只靠遠距 endpoint diff 掩蓋中間的 target/metadata 回滾。
 - state 使用同目錄暫存檔寫入、JSON 回讀成功後原子取代。
 - 被拒絕 Candidate 的歷史 evidence 放在 `artifacts/rejected/<candidate-oid>/`，不塞入 state operation lineage。
 
@@ -619,6 +624,14 @@ filename
 
 C1 的 tree 語意固定為：**C0 加上新版 upstream 的所有非 `evidence_target_paths` MOD 變更；target paths 仍保持 C0 狀態；README/hash 保持 C0。**
 
+建立 C1 前先固定 `C1^`（C1 的第一 parent）並取得其 tree。必須滿足：
+
+```text
+C1^ tree == C0 tree
+```
+
+首次未發布 evidence chain 通常 `C1^ = C0`。已發布 branch 的 refresh 則依第 10.5 節，必要時先用 append-only normalization support commit 將 parent tree 恢復為 C0 tree；support commit 不屬於目前 C1/C2/C3/F evidence mapping，但其 OID/tree 必須保存在 rejected/refresh evidence 供 crash recovery 對帳。
+
 操作：
 
 1. worktree 保持第 9.1 節完整 raw upstream 樹。
@@ -630,14 +643,21 @@ C1 的 tree 語意固定為：**C0 加上新版 upstream 的所有非 `evidence_
 Update <MOD-name> upstream non-localization <version> YYYY-MM-DD
 ```
 
-5. 固定 `c1_oid` 與 `c1_tree_oid`。
-6. 立即驗證 `C0..C1` 所有 changed paths 都是本 MOD 非 target paths，且 C1 非 target tree 等於 immutable staging；任何 target path、README/hash 或其他 path 出現即失敗。
+5. 固定 `c1_oid`、`c1_tree_oid`、`c1_parent_tree_oid=C1^ tree`。
+6. 驗證 `c1_parent_tree_oid = c0_tree_oid`；再驗證 `C0..C1` 所有 changed paths 都是本 MOD 非 target paths，且 C1 非 target tree 等於 immutable staging。任何 target path、README/hash 或其他 path 出現即失敗。
+7. 額外驗證 `C1^..C1` 本身也只包含本 MOD non-target paths；不得用先在同一 C1 commit 撤銷舊 target/metadata、再靠 `C0..C1` endpoint 看起來乾淨的方式通過。
 
-若新版只有 target 變更而沒有非 target delta，active target 存在時 C1 可建立必要 evidence checkpoint empty commit，必須記錄 `c1_empty_reason` 並由 Gate 證明 C0 與預期 C1 tree 本來相同；不得無理由建立空 Commit。
+若新版只有 target 變更而沒有 non-target delta，active target 存在時 C1 可建立必要 evidence checkpoint empty commit，必須記錄 `c1_empty_reason` 並由 Gate 證明 C0/C1 tree 本來相同；不得無理由建立空 Commit。
 
 ### 10.3 C2：raw upstream target checkpoint
 
-active target 存在時：
+active target 存在時，建立 C2 前固定 `C2^` tree，必須滿足：
+
+```text
+C2^ tree == C1 tree
+```
+
+操作：
 
 1. 從目前 raw worktree／immutable staging 將 `evidence_target_paths` 的新版原始狀態完整 stage；不得套用 merged、舊翻譯或 AI 修改。
 2. 只允許 target path 的 addition/modification/deletion；非 target、README/hash 不得進 index。
@@ -647,14 +667,22 @@ active target 存在時：
 Record <MOD-name> upstream localization raw <version> YYYY-MM-DD
 ```
 
-4. 固定 `c2_oid`、`c2_tree_oid`、`c2_status=committed`。
-5. 驗證 C2 target tree 精確等於 staging raw target state；`C1..C2` 只能包含 `evidence_target_paths`，並能直接看出 upstream 對 target 的刪除、改寫、新增及既有 `zh-tw` 被清除或改變的 bytes/fields/keys。
+4. 固定 `c2_oid`、`c2_tree_oid`、`c2_parent_tree_oid=C2^ tree`、`c2_status=committed`。
+5. 驗證 `c2_parent_tree_oid = c1_tree_oid`，且 `C2^..C2` 與 `C1..C2` 都只能包含 `evidence_target_paths`；C2 target tree 必須精確等於 staging raw target state，並能直接看出 upstream 對 target 的刪除、改寫、新增及既有 `zh-tw` 被清除或改變的 bytes/fields/keys。
 
-若 active target 非空但 raw target tree 對 C1 沒有 byte delta，可建立 evidence-required empty C2，記錄 `c2_empty_reason` 並證明 C1 target state已等於 staging raw。`localization_mode=none` 或沒有 active target file 時，C2=`not-applicable`，不得建立空 C2。
+若 active target 非空但 raw target tree 對 C1 沒有 byte delta，可建立 evidence-required empty C2，記錄 `c2_empty_reason` 並證明 C1 target state 已等於 staging raw。`localization_mode=none` 或沒有 active target file 時，C2=`not-applicable`，不得建立空 C2。
 
 ### 10.4 C3：核准 zh-tw checkpoint；metadata；F
 
-active target 存在時：
+active target 存在時，建立 C3 前固定 `C3^` tree，必須滿足：
+
+```text
+C3^ tree == C2 tree
+```
+
+首次 evidence chain 通常 `C3^=C2`；已發布 branch 的 zh-tw-only refresh 可先追加 tree 等於 C2 的 normalization support commit，再建立新的 C3。
+
+操作：
 
 1. C2 後才將 `merged.lua` 原子取代對應 target path。
 2. 重跑第 8.7 節並建立/驗證 final `install-manifest.json`。
@@ -665,8 +693,8 @@ active target 存在時：
 Restore <MOD-name> zh-tw <version> YYYY-MM-DD
 ```
 
-5. 固定 `c3_oid`、`c3_tree_oid`、`c3_status=committed`。
-6. 驗證 `C2..C3` 只能包含 target paths，C3 target blobs 等於 merged artifacts，且非 target tree 與 C2 完全相同。
+5. 固定 `c3_oid`、`c3_tree_oid`、`c3_parent_tree_oid=C3^ tree`、`c3_status=committed`。
+6. 驗證 `c3_parent_tree_oid = c2_tree_oid`，且 `C3^..C3` 與 `C2..C3` 都只能包含 target paths；C3 target blobs 等於 merged artifacts，非 target tree 與 C2 完全相同。
 
 active target 非空但 merged tree 與 C2 相同時，可建立 evidence-required empty C3，記錄 `c3_empty_reason` 並證明沒有需要寫入的繁中 delta。無 active target 時 C3=`not-applicable`。
 
@@ -688,22 +716,31 @@ evidence_chain.f_tree_oid = F^{tree}
 
 若 metadata 無實際變更，F 可等於 C3；`localization_mode=none` 時 upstream MOD commit 使用 C1 語意包含完整 MOD raw upstream，C2/C3 not-applicable，metadata 後的 HEAD 為 F。
 
-通過 checkpoint tree 語意驗證後 state=`evidence-committed`，固定 F 後 state=`candidate-committed`。此時所有新 commits 仍只存在本機 branch。
+通過 checkpoint tree 與 parent-tree 語意驗證後 state=`evidence-committed`，固定 F 後 state=`candidate-committed`。此時所有新 commits 仍只存在本機 branch。
 
 ### 10.5 Published branch 的 append-only evidence refresh
 
-任何 C1/C2/C3/F tree、target path set、manifest、rules 或 Review finding 改變，都使受影響 mapping 與 Review 失效。
+任何 C1/C2/C3/F tree、checkpoint parent tree、target path set、manifest、rules 或 Review finding 改變，都使受影響 mapping 與 Review 失效。
 
 **從未 Push 的 branch**：先把 rejected evidence 保存到 `artifacts/rejected/<F>/`；確認本 run 仍擁有 MOD reservation 後，可將 unpublished local branch 回到 C0 或明確安全基準，再乾淨重建 C1/C2/C3/F。這不是 force-push。
 
 **曾 Push 或已有 PR 的 branch**：禁止 reset/rebase/squash/force-push 隱藏舊證據。使用 append-only semantic checkpoint refresh：
 
 - **只改 metadata**：C1/C2/C3 保持不變，追加 metadata fix commit，更新 F；重建 `C0..F`、`C3..F`、final tree 與 Gate。
-- **zh-tw/merged 改變但 raw upstream 與非 target 未變**：先追加 normalization commit，把 README/hash 與任何 C3 後非 target metadata 恢復為 C2 tree 對應狀態，同時保持 MOD 非 target=C2；再套用修正後 merged 並建立新的 C3 checkpoint，使新 `C2..C3` tree diff 仍只含核准 target 變更；最後重新套用 metadata commit 形成新 F。
-- **非 target upstream/install、target path set 或 C1/C2 語意改變**：追加一組新的 semantic checkpoints。先建立新的 C1 tree，使 `C0..new-C1` 只等於目前核准的 upstream non-target delta、target/README/hash 等於 C0；再建立 new C2 raw target、new C3 merged target，最後 metadata→new F。
+- **zh-tw/merged 改變但 raw upstream 與 non-target 未變**：若目前 HEAD tree 不等於 C2 tree，先追加 normalization support commit，把整個本輪 allowlist tree 恢復為 **C2 tree**；support commit 可以撤銷舊 C3/metadata，但不列為新 C3。確認 normalization commit tree 精確等於 C2 tree 後，再套用修正後 merged，只 stage target paths，建立新的 C3，使 `C3^ tree=C2 tree`、`C2..C3` 與 `C3^..C3` 都只含核准 target 變更；最後重新套用 metadata commit形成新 F。若目前 HEAD tree 已等於 C2 tree，不建立空 support commit。
+- **non-target upstream/install、target path set 或 C1/C2 語意改變**：不得直接從舊 F 建立 new C1。若目前 HEAD tree 不等於 C0 tree，先追加 **evidence-base normalization support commit**，將本輪 allowlist 的 tree 精確恢復為 C0 tree；確認 support commit tree=`C0 tree` 後才開始新 chain。接著只 stage upstream non-target 建 new C1，必須 `C1^ tree=C0 tree`；再由 new C1 建 new C2 raw target，必須 `C2^ tree=new C1 tree`；再由 new C2 建 new C3 merged，必須 `C3^ tree=new C2 tree`；最後 metadata→new F。若目前 HEAD tree 已等於 C0 tree，不建立空 support commit。
+- normalization support commit 必須是 append-only、不得 force-push，並保存 OID/tree、目的基準 tree、產生原因與 allowlist；它不是 C1/C2/C3/F 之一，也不得被 PR 摘要誤列成目前證據 checkpoint。
 - 每次 refresh `evidence_generation += 1`，state 只指向目前有效 C1/C2/C3/F；舊 commits 保留於歷史與 rejected evidence，不得宣稱仍是目前 Gate。
 
-semantic checkpoint 的有效性以**對應 Git tree 與指定 diff range**判定，不以 commit 是否緊鄰為判定。即使歷史中存在舊 Candidate commits，目前 `C0..C1`、`C1..C2`、`C2..C3` 的 tree diff 仍必須分別保持 non-target-only、raw-target-only、approved-zh-tw-only 語意。
+目前 evidence checkpoint 不只看遠距 endpoint diff，還必須同時通過 parent-tree invariant：
+
+```text
+C1^ tree == C0 tree
+C2^ tree == C1 tree   （C2 適用時）
+C3^ tree == C2 tree   （C3 適用時）
+```
+
+因此即使歷史中存在舊 Candidate、normalization 或 metadata commits，目前 `C0..C1`、`C1..C2`、`C2..C3` 的 endpoint diff，以及 `C1^..C1`、`C2^..C2`、`C3^..C3` 的 checkpoint commit diff 都必須分別保持 non-target-only、raw-target-only、approved-zh-tw-only 語意。不得只靠 endpoint tree 正確來掩蓋 checkpoint commit 本身混入 target/metadata 回滾。
 
 ### 10.6 Immutable Git evidence
 
@@ -717,6 +754,8 @@ semantic checkpoint 的有效性以**對應 Git tree 與指定 diff range**判�
 
 每個 name-status 使用 no-renames 語意；每個 diff 固定使用 full-index、binary、no-ext-diff、no-renames 等價語意，計算 SHA-256。不得使用無參數 `git diff`、worktree diff 或 Commit 後空 diff 代替。
 
+另外保存 checkpoint parent evidence：C1/C2/C3 各自第一 parent OID、parent tree OID，以及 `parent..checkpoint` 的 changed path allowlist 摘要/SHA。它不取代 Baseline 必要的四組 immutable diff，而是用來證明 checkpoint commit 本身沒有混入其他層級變更。
+
 直接從 F Git tree 枚舉本 MOD directory blobs，讀取 blob bytes 計算 size/SHA，建立 `candidate-tree-manifest.json`；另記 F tree OID、README blob OID/SHA、正式 hash blob OID/SHA 與 allowlist。所有 artifacts 以本輪唯一暫存檔寫入、回讀、SHA 後原子取代；生成期間任一 OID/tree 變動即全部作廢。
 
 ### 10.7 Final Candidate Gate
@@ -729,10 +768,12 @@ workflow_commit_oid + Workflow blob/SHA
 Review Baseline blob/SHA
 archive_sha256
 C0/C1/C2/C3/F commit OID + tree OID
+C1/C2/C3 parent OID + parent tree OID（適用時）
 evidence_generation
 evidence_target_paths + SHA
 C0..C1 / C1..C2 / C2..C3 / C0..F diff + name-status SHA
 C3..F metadata diff SHA（適用時）
+checkpoint parent..checkpoint allowlist evidence SHA
 extraction/raw-install/install/candidate-tree manifest SHA
 translation rules SHA
 ```
@@ -740,15 +781,16 @@ translation rules SHA
 全部成立才 pass：
 
 - local HEAD=F、`HEAD^{tree}=F tree`，C0 是 F ancestor；C1/C2/C3（適用者）都是目前 branch ancestry 中可解析 commits。
-- `C0..C1` 只呈現新版 upstream 非 target 實際變更；C1 target old paths 等於 C0 blobs，new target paths 在 C0 不存在者於 C1 仍不存在；README/hash 等於 C0。
-- `C1..C2`（適用時）只包含 `evidence_target_paths`，且 C2 raw target state 精確等於 immutable staging。
-- `C2..C3`（適用時）只包含 `evidence_target_paths`，且 C3 target blobs 精確等於 merged；核准繁中 spans/lookup/separator 外 bytes 不變。
+- `C1^ tree = C0 tree`；`C1^..C1` 只包含本 MOD non-target paths。不得讓 C1 commit 本身包含 target/README/hash 的撤銷或重寫。
+- `C0..C1` 只呈現新版 upstream non-target 實際變更；C1 target old paths 等於 C0 blobs，new target paths 在 C0 不存在者於 C1 仍不存在；README/hash 等於 C0。
+- C2 適用時 `C2^ tree = C1 tree`；`C2^..C2` 與 `C1..C2` 都只包含 `evidence_target_paths`，且 C2 raw target state 精確等於 immutable staging。
+- C3 適用時 `C3^ tree = C2 tree`；`C3^..C3` 與 `C2..C3` 都只包含 `evidence_target_paths`，且 C3 target blobs 精確等於 merged；核准繁中 spans/lookup/separator 外 bytes 不變。
 - `C3..F`（適用時）只包含 README 目標區段與單一正式 hash 等 metadata allowlist；不得包含 MOD bytes。若 F=C3，記為相同 tree、metadata diff not-required。
 - `C0..F` 所有 changes 只位於 README 目標區段、本輪單一 MOD directory與單一 hash allowlist。
 - F MOD tree path/size/SHA 與 install manifest完全一致；archive provenance 與 extraction manifest一致；merged provenance 與 localization artifacts一致。
 - raw-install manifest 能證明乾淨安裝的 raw upstream tree；install manifest 能證明最終 target 替換後無舊檔、遺漏或額外檔。
 - README/hash 與 Nexus、archive filename/version/size/SHA 一致。
-- 每個 immutable diff 重新產生得到相同 SHA。
+- 每個 immutable diff 與 checkpoint parent evidence 重新產生得到相同 SHA。
 - workflow/Baseline/rules/archive/manifests/state SHA 全部一致。
 - `diff --check`、中文 Gate、security Gate、allowlist Gate 全部通過，security blocking=0。
 
@@ -757,6 +799,7 @@ translation rules SHA
 - run ID、MOD identity、workflow/Baseline path/blob/SHA。
 - archive/Nexus facts。
 - evidence generation、C0/C1/C2/C3/F commit/tree OID；not-applicable reason。
+- C1/C2/C3 第一 parent OID/tree OID、parent-tree invariant 結果及 parent..checkpoint allowlist evidence SHA。
 - evidence target paths/SHA 與 active localization ids。
 - 各必要 diff/name-status SHA、changed path counts、Gate 結果。
 - extraction/raw-install/install/candidate-tree manifest SHA。
@@ -764,21 +807,22 @@ translation rules SHA
 - README/hash、security、tree-vs-manifest、allowlist、`diff --check` Gate。
 - `result=passed|rejected`、驗證時間與拒絕原因。
 
-final report 計算 SHA 後再核對所有 input OID/tree/SHA 沒有改變。完全一致且 result=passed 才原子更新 `candidate_gate.status=passed`。任何不一致為 rejected，不得 Push。
+final report 計算 SHA 後再核對所有 input OID/tree/SHA 沒有改變。完全一致且 result=passed 才原子更新 `candidate_gate.status=passed`，並把 C0/C1/C2/C3/F tree 與 checkpoint parent tree 一起寫入 passed tuple。任何不一致為 rejected，不得 Push。
 
 ### 10.8 Gate 失敗處理
 
-先保存目前 evidence chain mapping、diffs、manifests、validation report 到 `artifacts/rejected/<F>/`。
+先保存目前 evidence chain mapping、checkpoint parent evidence、diffs、manifests、validation report 到 `artifacts/rejected/<F>/`。
 
 - 舊檔殘留、來源遺漏、非 loc bytes 與 archive 不一致：不得逐檔手工修補；回到完整乾淨安裝與 evidence refresh。
+- checkpoint parent-tree invariant 失敗：不得只重產 endpoint diff；未發布 branch 回安全基準乾淨重建，已發布 branch 依第 10.5 節先建立正確 normalization support tree，再重建受影響 checkpoint。
 - active zh-tw、README/hash scope 內問題：只修改核准範圍，更新 merged/decisions/manifests 後依第 10.5 節重建受影響 checkpoint。
 - security、identity、archive/staging provenance 不可靠：`waiting-user`，保留 lock/state/source/evidence。
 
-每個新 F 都必須清除舊 Gate、重跑必要 evidence diffs、final tree manifest、validation report。只有目前 F 的 Gate passed 才可發布。
+每個新 F 都必須清除舊 Gate、重跑必要 evidence diffs、checkpoint parent evidence、final tree manifest、validation report。只有目前 F 的 Gate passed 才可發布。
 
 ### 10.9 Push
 
-只有 `candidate_gate.status=passed` 且完整 tuple 仍對應目前 C0/C1/C2/C3/F、target paths、manifests、diffs、validation report 時才可 Push 唯一 branch。
+只有 `candidate_gate.status=passed` 且完整 tuple 仍對應目前 C0/C1/C2/C3/F、checkpoint parent trees、target paths、manifests、diffs、validation report 時才可 Push 唯一 branch。
 
 Push 後確認 local HEAD=F、remote branch OID=F、remote tree=F tree、沒有 force-push。成立才 `head_oid=F`、status=`committed`。remote 出現非預期 OID 不覆寫，改 `waiting-user` 或依第 12 節處理。
 
@@ -792,6 +836,7 @@ PR body 在 Review 前至少列出：
 - C0、C1、C2、C3、F commit OID；not-applicable reason。
 - C1/C2/C3/F tree OID。
 - `C0..C1`、`C1..C2`、`C2..C3`、`C0..F` diff SHA/name-status SHA 與 Gate；F>C3 時另列 `C3..F`。
+- checkpoint parent-tree invariant：`C1^tree=C0tree`、`C2^tree=C1tree`、`C3^tree=C2tree`（適用者）與 Gate 結果。
 - evidence target paths/SHA。
 - extraction/raw-install/install/candidate-tree manifest SHA、validation report SHA 與 Final Candidate Gate result。
 - Review Baseline path/blob/SHA。
@@ -811,6 +856,7 @@ PR body 在 Review 前至少列出：
 共同輸入：
 
 - state、workflow/Baseline SHA、C0/C1/C2/C3/F/tree 與 PR head。
+- C1/C2/C3 第一 parent OID/tree 與 checkpoint parent evidence。
 - `evidence_target_paths` 與 active localization mapping。
 - 全部必要 immutable diffs/name-status及 SHA。
 - extraction/raw-install/install/candidate-tree manifests、validation report。
@@ -818,15 +864,18 @@ PR body 在 Review 前至少列出：
 - 必要規則、詞彙、引用情境、README/hash/Nexus/archive facts。
 - 相關 MOD 的 generation/lock owner/claim/state/branch/worktree/PR/shared destination concurrency evidence。
 
-Review 開始前重新產生必要 diff，SHA 必須與 Gate 完全一致。Reviewer 必須分別驗證：
+Review 開始前重新產生必要 diff 與 checkpoint parent evidence，SHA 必須與 Gate 完全一致。Reviewer 必須分別驗證：
 
+- `C1^ tree=C0 tree` 且 `C1^..C1` 只做 non-target upstream。
 - C0..C1 = non-target upstream。
+- `C2^ tree=C1 tree` 且 C2 checkpoint commit 只做 raw target upstream（適用時）。
 - C1..C2 = raw target upstream delta。
+- `C3^ tree=C2 tree` 且 C3 checkpoint commit 只做核准 zh-tw（適用時）。
 - C2..C3 = 自動復原/更新核准繁中。
 - C0..F = 最終 PR tree。
 - F final tree = manifests + metadata + allowlist。
 
-不得只看 `C0..F` 就宣稱三層證據成立。finding 依 Baseline 分類，沒有 actionable finding 記錄 `none`。通過後將目前 evidence generation、C0/C1/C2/C3/F、diff SHA、Gate SHA 與 HEAD 寫入 `review.json`。
+不得只看 `C0..F` 或只看 endpoint trees 就宣稱三層證據成立。finding 依 Baseline 分類，沒有 actionable finding 記錄 `none`。通過後將目前 evidence generation、C0/C1/C2/C3/F、checkpoint parent tree、diff SHA、Gate SHA 與 HEAD 寫入 `review.json`。
 
 ### 11.2 修正迴圈
 
@@ -836,7 +885,7 @@ Review 開始前重新產生必要 diff，SHA 必須與 Gate 完全一致。Revi
 2. `security-blocking` 立即 `waiting-user`。
 3. `review_cycle >= 3` 時不得開始第 4 次自動修正，改 `waiting-user`。
 4. loc 修改同步更新 merged/decisions/install manifest；README/hash 或安裝 finding 更新對應 evidence。
-5. 修改前先將 candidate gate=`not-run`，舊 validation/diffs/Review 失效。
+5. 修改前先將 candidate gate=`not-run`，舊 validation/diffs/checkpoint parent evidence/Review 失效。
 6. 依第 10.5 節選擇 metadata-only、C3 refresh 或 full C1/C2/C3 refresh；已發布 branch 只可 append commits。
 7. 重跑第 8.7、9、10.6–10.7；Gate passed 後才 Push 新 F。
 8. 成功後 `review_cycle += 1`，更新 PR body。
@@ -865,8 +914,8 @@ scope 內 feedback 全部必須有 disposition；thread 型 feedback 必須 reso
 全部成立才 `awaiting-user-merge`：
 
 - local=remote=PR head=F=candidate_oid。
-- Gate passed 且綁定目前 evidence generation、C0/C1/C2/C3/F、target set、manifests、diffs、validation report。
-- 重新生成全部必要 diff SHA 與 validation report 一致。
+- Gate passed 且綁定目前 evidence generation、C0/C1/C2/C3/F、checkpoint parent trees、target set、manifests、diffs、validation report。
+- 重新生成全部必要 diff與 checkpoint parent evidence SHA，與 validation report 一致。
 - 本地 Review 對目前 F 為 none 或 findings 全部 disposition。
 - scope feedback 全部處理，security blocking=0。
 - active loc validation 通過；none 模式 not-applicable。
@@ -881,11 +930,11 @@ scope 內 feedback 全部必須有 disposition；thread 型 feedback 必須 reso
 每次建立/刷新 F 前與 Review 完成前，由協調器取得短期 `git-coordination.lock` 精確更新 `origin/main`，解析一次為不可變 `checked_main_oid` 後立即釋放。影響判定只使用前次 `main_checked_oid..checked_main_oid`。
 
 - **未觸及本 MOD directory、該 MOD hash 或 README 目標區段**：只更新 `main_checked_oid`；目前 evidence 仍以固定 C0..F 判定，不偷換 C0。
-- **觸及本 MOD directory、hash 或 README 目標區段**：目前 Gate/Review 失效。確認 reservation 後，在目前唯一 branch 以一般 merge 納入固定 `checked_main_oid`，不得 reset/rebase/force-push。merge 後將 `base_oid=C0=checked_main_oid`、更新 C0 tree、`merge_epoch += 1`、`evidence_generation += 1`，從 archive/staging 與新 C0 重建 old/new/merged、target paths、乾淨安裝及新的 semantic C1/C2/C3/F checkpoints。
+- **觸及本 MOD directory、hash 或 README 目標區段**：目前 Gate/Review 失效。確認 reservation 後，在目前唯一 branch 以一般 merge 納入固定 `checked_main_oid`，不得 reset/rebase/force-push。merge 後將 `base_oid=C0=checked_main_oid`、更新 C0 tree、`merge_epoch += 1`、`evidence_generation += 1`，從 archive/staging 與新 C0 重建 old/new/merged、target paths、乾淨安裝。若 merge 後 HEAD tree 不等於新 C0 tree，先依第 10.5 節追加 evidence-base normalization support commit，使其 tree 精確等於新 C0 tree；只有 parent tree=C0 tree 後才能建立 new C1。接著按 C1→C2→C3→metadata F 重建，並驗證全部 parent-tree invariant。
 - **只修改其他 MOD README 區段且目前 PR 可乾淨合併**：不更新 branch，只更新 `main_checked_oid`。
-- **其他區段造成 README merge conflict**：一般 merge 固定 main OID，解 conflict 時保留該 OID README 全文及本 MOD目標區段；接著更新 C0/merge epoch 並完整重建 base-bound evidence。
+- **其他區段造成 README merge conflict**：一般 merge 固定 main OID，解 conflict 時保留該 OID README 全文及本 MOD目標區段；接著更新 C0/merge epoch，先建立 tree=C0 的 normalization support checkpoint，再完整重建 base-bound C1/C2/C3/F evidence。
 
-若新 C0 已在 published branch ancestry 中，append-only semantic checkpoint refresh 仍可建立新的 C1 tree，使 `C0..C1` 只包含目前 upstream non-target delta；接續 C2 raw、C3 merged、metadata F。不得因既有舊 commits 存在而放寬 diff 語意。
+若新 C0 已在 published branch ancestry 中，不代表可以直接從舊 F 建立 C1。append-only refresh 必須先確保 `C1^ tree=C0 tree`；若不等就先用 support commit 正規化。不得因既有舊 commits 存在而放寬 `C1^..C1` 或 `C0..C1` 語意。
 
 merge main、evidence commits、push 由該 MOD reservation 隔離；只有 fetch 與 shared branch/worktree metadata 使用短期 Git coordination lock。單一 PR conflict 不停止其他 MOD。
 
@@ -904,7 +953,7 @@ MERGED 後：
 2. 取得短期 `source-acquisition.lock`，核對來源 size/SHA，解析 `Finished` 目的檔並執行同名同 SHA 去重或同 volume 原子搬移；不同 SHA 同名不得覆蓋。
 3. worktree 乾淨且 local branch tip=`reviewed_oid` 後，取得短期 `git-coordination.lock` 使用標準 worktree remove，再刪除本機本輪 branch。
 4. 遠端 branch 若仍存在，只刪除本輪唯一 remote branch；不得操作其他 branch。
-5. 建立 `Finished/.evidence/.tmp-<run-id>`，複製 final extraction/raw-install/install/candidate-tree manifests、目前 git-evidence、validation report、review、`state-final.json`。state-final 至少固定 run/archive SHA、evidence generation、C0/C1/C2/C3/F/tree、target paths SHA、reviewed OID、PR、merged evidence、所有 artifact SHA、workflow/Baseline SHA。
+5. 建立 `Finished/.evidence/.tmp-<run-id>`，複製 final extraction/raw-install/install/candidate-tree manifests、目前 git-evidence、validation report、review、`state-final.json`。state-final 至少固定 run/archive SHA、evidence generation、C0/C1/C2/C3/F/tree、checkpoint parent OID/tree、target paths SHA、reviewed OID、PR、merged evidence、所有 artifact SHA、workflow/Baseline SHA。
 6. 回讀逐 SHA 對帳後原子 rename 為 `Finished/.evidence/<run-id>`；已存在時只有內容 SHA 全相同才 idempotent，否則 `waiting-user`。
 7. evidence 歸檔成功後清除 staging/原 artifacts/安全空目錄，但暫留 state 與固定 MOD lock。
 8. 協調器重新核對 owner run ID、state path、lock key 與 expected terminal evidence。完全相符時將固定 lock 原子改名 `.released-<mod-lock-key>-<run-id>`；只有改名成功才可刪 state，最後只刪該 tombstone。owner/evidence 不符或改名失敗則保留 state/lock。
@@ -947,22 +996,23 @@ MERGED 後：
 
 - 已證明實際安裝順序為「完整刪除舊 MOD → immutable staging 完整覆蓋 raw upstream」，不是逐檔覆寫。
 - C0=base_oid 固定；C1/C2/C3/F OID/tree 及 ancestry 可重建；not-applicable reason 正確。
+- `C1^ tree=C0 tree`，且 `C1^..C1` 只含 upstream non-target；不得在 C1 commit 本身混入 target/metadata rollback。
 - `C0..C1` 只含 upstream non-target；target tree 保留 C0 狀態。
-- `C1..C2` 只含 raw target，C2 target blobs=staging；無 active target 時 N/A。
-- `C2..C3` 只含核准 zh-tw target changes，C3 target blobs=merged；無 active target時 N/A。
+- C2 適用時 `C2^ tree=C1 tree`，且 `C2^..C2`／`C1..C2` 只含 raw target，C2 target blobs=staging。
+- C3 適用時 `C3^ tree=C2 tree`，且 `C3^..C3`／`C2..C3` 只含核准 zh-tw target changes，C3 target blobs=merged。
 - `C3..F` 若存在只含 README/hash metadata；F final tree 無其他 post-C3 MOD bytes。
 - `C0..F` 證明完整 PR tree，所有變更只在 README 目標區段、單一 MOD directory、單一 hash allowlist。
 - extraction/raw-install/install/candidate-tree manifests 與各階段 Git trees/diffs 相互對帳，無舊檔、遺漏、來源污染或 worktree-only檔案。
-- 全部必要 immutable diff/name-status SHA 可重建。
-- validation report 綁定 run、workflow/Baseline、archive、C0/C1/C2/C3/F、target set、manifests、diffs/rules/localization SHA。
+- 全部必要 immutable diff/name-status 與 checkpoint parent evidence SHA 可重建。
+- validation report 綁定 run、workflow/Baseline、archive、C0/C1/C2/C3/F、checkpoint parent OID/tree、target set、manifests、diffs/rules/localization SHA。
 - Gate passed 後才 Push；已發布 branch 無 squash/rebase/force-push 隱藏證據。
 - local/remote HEAD=F，remote tree=F tree；main 相關變更已完成影響判定。
 
 ### Gate D：PR 與 Review
 
 - PR OPEN、非 Draft、base/head 正確，`PR headRefOid=F`。
-- PR body 含 Baseline 要求的 C0/C1/C2/C3/F、trees、diff SHA、target paths、manifests、validation/Baseline 摘要。
-- 本地 Review 對目前 F 分別檢查 `C0..C1`、`C1..C2`、`C2..C3`、`C0..F`，沒有用空 worktree diff 或只看 final diff 取代分層證據。
+- PR body 含 Baseline 要求的 C0/C1/C2/C3/F、trees、diff SHA、checkpoint parent-tree Gate、target paths、manifests、validation/Baseline 摘要。
+- 本地 Review 對目前 F 分別檢查 checkpoint parent-tree invariant、`C0..C1`、`C1..C2`、`C2..C3`、`C0..F`，沒有用空 worktree diff、只看 final diff 或只看 endpoint tree 取代分層證據。
 - 外部 Review completed 時 request/review/head 證據對應 F；not-applicable/unavailable 有 reason/head/verified time。
 - scope findings 全部 disposition，security blocking=0。
 - `reviewed_oid=PR headRefOid=F`。
