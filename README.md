@@ -621,7 +621,7 @@
     自動輕擊
 - MOD 網站最後更新日期：Last updated 06 July 2026, 2:12AM
 - MOD 版本：1.12
-- MOD 檔案名稱：KeepSwinging 88 1.12 2026-07-05T18-12Z 5gEeTgDA6
+- MOD 檔案名稱：KeepSwinging 88 1.12 2026-07-05T18-12Z 5gEeTgDA6.zip
 - 手動維護最後下載日期：2026-08-18
 
 ### [TagKeys](https://www.nexusmods.com/warhammer40kdarktide/mods/79)
