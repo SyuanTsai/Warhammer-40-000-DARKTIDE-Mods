@@ -10,6 +10,7 @@ claim 來源
 → 建立獨立 lock、state、branch 與 worktree
 → 安全解壓並建立 extraction manifest
 → 找出所有 active localization，固定 evidence_target_paths
+→ 以 bounded parallel 執行彼此獨立的唯讀來源、hash 與 Git object 驗證
 → 完整刪除單一舊 MOD directory，以已驗證新版 MOD root 完整覆蓋
 → C0 = base_oid
 → C1 = upstream-non-target commit
@@ -21,6 +22,7 @@ claim 來源
 → Gate 通過才 Push、建立或更新非 Draft PR
 → 對同一 PR HEAD 完成本地 Review
 → 處理 scope 內 feedback；任何受影響 evidence mapping 失效並重建
+→ 外部 Review 最多送出一次且不阻塞、不輪詢；保存單次觀測結果
 → 等待使用者合併
 ```
 
@@ -114,6 +116,9 @@ AI Auto Update/
 │        ├─ raw-install-manifest.json
 │        ├─ install-manifest.json
 │        ├─ candidate-tree-manifest.json
+│        ├─ metadata-preview.json
+│        ├─ git-byte-preflight.json
+│        ├─ evidence-generation-receipt.json
 │        ├─ validation-report.json
 │        ├─ review.json
 │        ├─ git-evidence/
@@ -142,6 +147,9 @@ AI Auto Update/
          ├─ raw-install-manifest.json
          ├─ install-manifest.json
          ├─ candidate-tree-manifest.json
+         ├─ metadata-preview.json
+         ├─ git-byte-preflight.json
+         ├─ evidence-generation-receipt.json
          ├─ validation-report.json
          ├─ review.json
          ├─ git-evidence/
@@ -193,13 +201,26 @@ run_id + workflow_commit_oid + mod_lock_key + canonical mod_relative_path + sour
 
 Evidence 階段 crash recovery 額外遵守：若 state 已記錄 C1/C2/C3/F 任一 OID，reattach 後先確認該 OID、tree、branch ancestry、checkpoint parent-tree invariant、artifact SHA 與 evidence mapping。只有完全一致的已完成 checkpoint 才可續用；任一不一致使受影響 evidence 與 Final Candidate Gate 失效，從最近可證明的安全 checkpoint 重建，不得跳過 Gate。
 
+### 3.5 Bounded parallel 與階段計時
+
+同一 MOD 仍只有一個 writer，但不互相依賴且不修改共享狀態的工作必須以 bounded parallel 執行，預設同時最多 4 項：
+
+- archive stability/security listing 與 Nexus/README facts 查詢。
+- 不同檔案的 size/SHA、localization source lookup 與只讀規則載入。
+- C1/C2/C3/F 固定後，各明確 commit range 的 diff/name-status、checkpoint parent summary 與 F tree blob enumeration。
+- 本地 Review 中互不依賴的 evidence layers 與 manifest/hash 對帳。
+
+平行 worker 只寫自己的 run-local 暫存檔；coordinator 回讀所有結果並核對固定 input OID/SHA 後，才原子更新正式 artifact/state。需要 Git index、worktree、state、PR 或 lock 寫入的步驟保持單 writer 串行；不得為追求速度放寬安全 Gate。
+
+每個新 run 在 state 保存 `stage_timings`。每個 stage 至少包含 `started_at`、`completed_at`、`duration_ms`、`result`，stage 固定為 `claim_source`、`source_verify`、`localization`、`install_manifests`、`evidence_gate`、`publish_pr`、`local_review`、`external_review_observation`、`feedback_fix`。重建時另記 `attempt` 與 `reason`，不得把重建時間混入單一不明區段。計時只供診斷，不是略過 Gate 的依據。
+
 ## 4. State 與證據模型
 
-新 claim 使用 `schema_version=11`；舊 state 依其固定 workflow commit 續跑，不轉換成 version 11。
+新 claim 使用 `schema_version=12`；舊 state 依其固定 workflow commit 續跑，不轉換成 version 12。
 
 ```json
 {
-  "schema_version": 11,
+  "schema_version": 12,
   "run_id": "<uuid>",
   "status": "claimed",
   "mod": "<MOD-name>",
@@ -236,6 +257,8 @@ Evidence 階段 crash recovery 額外遵守：若 state 已記錄 C1/C2/C3/F 任
   "main_checked_oid": null,
   "merge_epoch": 1,
   "evidence_generation": 1,
+  "git_byte_mode": "no-filters-v1",
+  "stage_timings": {},
   "localization_mode": "none",
   "localization_files": [],
   "evidence_target_paths": [],
@@ -287,6 +310,9 @@ Evidence 階段 crash recovery 額外遵守：若 state 已記錄 C1/C2/C3/F 任
     "raw_install_manifest_sha256": null,
     "install_manifest_sha256": null,
     "candidate_tree_manifest_sha256": null,
+    "git_byte_preflight_sha256": null,
+    "metadata_preview_sha256": null,
+    "evidence_generation_receipt_sha256": null,
     "validation_report_sha256": null,
     "validated_at": null
   },
@@ -307,6 +333,8 @@ Evidence 階段 crash recovery 額外遵守：若 state 已記錄 C1/C2/C3/F 任
     "reviewer_login": null,
     "submitted_at": null,
     "review_commit_oid": null,
+    "snapshot_at": null,
+    "feedback_snapshot_sha256": null,
     "verified_at": null,
     "reason": null
   },
@@ -343,6 +371,8 @@ failed
 - `c2_status`／`c3_status` 只允許 `not-run|committed|not-applicable`。`not-applicable` 必須有可驗證 reason，且只允許 `localization_mode=none` 或沒有 active target file。
 - active target 存在但某階段實際 tree delta 為空時，C2/C3 可建立必要 evidence checkpoint commit；必須記錄 `*_empty_reason` 並由 Gate 證明該階段預期 bytes 本來就相同。不得為無 target 的情況建立空 Commit。
 - `evidence_diffs.*` 每筆至少保存 base OID、head OID、diff path/SHA-256、name-status path/SHA-256 與產生參數版本。
+- `git_byte_mode` 固定為 `no-filters-v1`：所有本輪 payload、merged localization、README 與 hash blob 都以 `git hash-object --no-filters` 建立，並以明確 index entry 更新；不得讓 `core.autocrlf`、working-tree filter 或 `git add` 隱式改變證據 bytes。
+- `external_review.status` 只允許 `not-requested|requested-pending|completed|not-applicable|unavailable`；`requested-pending` 是合法的非阻塞終態觀測，不建立背景輪詢。
 - `candidate_gate.status` 只允許 `not-run|passed|rejected`。任何 C1/C2/C3/F OID/tree、checkpoint parent tree、target path set、manifest、diff、rules SHA、localization artifact 或 validation report 改變，先把 Gate 設回 `not-run`，舊 Review 同時失效。
 - `c1_parent_tree_oid` 必須等於 C0 tree；C2 適用時 `c2_parent_tree_oid` 必須等於 C1 tree；C3 適用時 `c3_parent_tree_oid` 必須等於 C2 tree。這三個 parent-tree invariant 用來證明 checkpoint commit 本身確實從上一層語意 tree 開始，而不是只靠遠距 endpoint diff 掩蓋中間的 target/metadata 回滾。
 - state 使用同目錄暫存檔寫入、JSON 回讀成功後原子取代。
@@ -579,6 +609,13 @@ install manifest 改變使 C3/F 與 Final Candidate Gate 失效；若非 localiz
 
 Nexus/README/hash 的最終預期內容可以在 C1 前完成計算與驗證，但**repository worktree 中 README 與正式 `.hash` 的實際寫入必須在 C3 checkpoint 建立後**，避免污染 `C0..C1`、`C1..C2`、`C2..C3`。
 
+先由已固定的 state archive 與 Nexus Main file facts 建立唯一 `metadata-preview.json`，README 目標欄位與正式 hash 都只能從此 canonical object render，不得各自重新解析或手工拼接。preview 必須在 metadata commit 前通過：
+
+- README 與 hash 的 `filename` 都與 `state.archive.filename` **完整字串相等，包含副檔名**；不得使用 stem、顯示名稱或省略 `.zip`／其他 extension。
+- version、Nexus ID/URL、last updated、uploaded UTC、size 與 SHA 都與固定來源 facts 一致。
+- README patch 只有唯一目標 heading 區段；hash path 只有本 MOD 的正式 hash。
+- render 後回讀兩份內容，逐欄與 preview 比對；不一致時不得建立 F、Push 或等待外部 Review。
+
 README 只更新 `state.readme_heading` 唯一區段到下一個同層 heading：網站最後更新日期、MOD 版本、MOD 檔名、手動維護最後下載日期。既有中文功能摘要只有來源功能語意確實改變或使用者明確要求才修改。
 
 正式 `.hash/<MOD-slug>.hash` 使用 UTF-8/LF、每行 `key=value`，至少包含：
@@ -617,8 +654,11 @@ filename
 - README/hash 尚未寫入本輪 metadata 變更。
 - security blocking count=0。
 - 主 repository 與其他 worktree 未被本 worker 改動。
+- `git_byte_mode=no-filters-v1` 已通過 preflight：從 run-local CRLF/LF probe 與至少一個 archive payload 建立 `hash-object --no-filters` blob，回讀 blob bytes 後 size/SHA 與原檔完全一致。
 
 任何一項失敗不得為了取得 diff 而 Commit 未驗證來源。
+
+建立 C1/C2/C3/F 的 payload、merged localization、README 與 hash index entries 時，固定使用 `git hash-object -w --no-filters` 取得 blob OID，再以明確 `git update-index --cacheinfo`／`--force-remove` 套用預期 path state；不得以受 `core.autocrlf` 或 clean filter 影響的 `git add` 判定是否有 byte delta。每個 checkpoint commit 後立即從 Git tree 回讀受影響 blobs，與 staging／merged／metadata preview 的原始 bytes 對帳，讓 byte mismatch 在首次 Gate 前失敗。
 
 ### 10.2 C1：upstream non-target checkpoint
 
@@ -754,6 +794,10 @@ C3^ tree == C2 tree   （C3 適用時）
 
 每個 name-status 使用 no-renames 語意；每個 diff 固定使用 full-index、binary、no-ext-diff、no-renames 等價語意，計算 SHA-256。不得使用無參數 `git diff`、worktree diff 或 Commit 後空 diff 代替。
 
+同一 evidence generation 的所有明確 ranges、checkpoint summaries 與 F tree enumeration 以固定 input tuple 執行一次 bounded-parallel batch。batch 完成後保存 `evidence-generation-receipt.json`，至少包含 generation、Git 版本、產生參數版本、每個 task 的 base/head/tree、artifact path/size/SHA、started/completed time 與 batch input tuple SHA。coordinator 再以不同讀取路徑核對 commit/tree OID、artifact file SHA、changed-path allowlist 與至少一個 deterministic spot-check；通過後 artifacts 成為該 generation 的 immutable evidence。
+
+只要 generation、C0/C1/C2/C3/F OID/tree、產生參數版本與 artifact SHA 都未改變，本地 Review 必須重用這個 receipt 與 immutable artifacts，不得無條件再次產生全部 diff。只有 receipt 缺失、artifact SHA 不符、Git object 無法解析、產生參數版本改變，或 Reviewer 發現具體 evidence 矛盾時，才將 Gate 設回 `not-run` 並重建受影響 artifacts。
+
 另外保存 checkpoint parent evidence：C1/C2/C3 各自第一 parent OID、parent tree OID，以及 `parent..checkpoint` 的 changed path allowlist 摘要/SHA。它不取代 Baseline 必要的四組 immutable diff，而是用來證明 checkpoint commit 本身沒有混入其他層級變更。
 
 直接從 F Git tree 枚舉本 MOD directory blobs，讀取 blob bytes 計算 size/SHA，建立 `candidate-tree-manifest.json`；另記 F tree OID、README blob OID/SHA、正式 hash blob OID/SHA 與 allowlist。所有 artifacts 以本輪唯一暫存檔寫入、回讀、SHA 後原子取代；生成期間任一 OID/tree 變動即全部作廢。
@@ -776,6 +820,9 @@ C3..F metadata diff SHA（適用時）
 checkpoint parent..checkpoint allowlist evidence SHA
 extraction/raw-install/install/candidate-tree manifest SHA
 translation rules SHA
+git_byte_mode + byte preflight SHA
+metadata preview SHA
+evidence generation receipt SHA
 ```
 
 全部成立才 pass：
@@ -789,8 +836,8 @@ translation rules SHA
 - `C0..F` 所有 changes 只位於 README 目標區段、本輪單一 MOD directory與單一 hash allowlist。
 - F MOD tree path/size/SHA 與 install manifest完全一致；archive provenance 與 extraction manifest一致；merged provenance 與 localization artifacts一致。
 - raw-install manifest 能證明乾淨安裝的 raw upstream tree；install manifest 能證明最終 target 替換後無舊檔、遺漏或額外檔。
-- README/hash 與 Nexus、archive filename/version/size/SHA 一致。
-- 每個 immutable diff 與 checkpoint parent evidence 重新產生得到相同 SHA。
+- README/hash 與 `metadata-preview.json`、Nexus、archive filename/version/size/SHA 一致，且 README/hash filename 都完整包含來源副檔名。
+- `evidence-generation-receipt.json` 的固定 input tuple、artifact SHA、changed-path allowlist、Git object spot-check 與目前 generation 一致；Gate 內不得再啟動第二套全量 diff 產生流程。
 - workflow/Baseline/rules/archive/manifests/state SHA 全部一致。
 - `diff --check`、中文 Gate、security Gate、allowlist Gate 全部通過，security blocking=0。
 
@@ -804,7 +851,8 @@ translation rules SHA
 - 各必要 diff/name-status SHA、changed path counts、Gate 結果。
 - extraction/raw-install/install/candidate-tree manifest SHA。
 - old/new/merged/decisions SHA、target/unchanged/BLOCKED counts、中文 Gate。
-- README/hash、security、tree-vs-manifest、allowlist、`diff --check` Gate。
+- README/hash、metadata preview、git byte mode/preflight、security、tree-vs-manifest、allowlist、`diff --check` Gate。
+- metadata preview SHA、git byte preflight result、evidence generation receipt SHA、artifact verification mode 與 stage timings。
 - `result=passed|rejected`、驗證時間與拒絕原因。
 
 final report 計算 SHA 後再核對所有 input OID/tree/SHA 沒有改變。完全一致且 result=passed 才原子更新 `candidate_gate.status=passed`，並把 C0/C1/C2/C3/F tree 與 checkpoint parent tree 一起寫入 passed tuple。任何不一致為 rejected，不得 Push。
@@ -864,7 +912,7 @@ PR body 在 Review 前至少列出：
 - 必要規則、詞彙、引用情境、README/hash/Nexus/archive facts。
 - 相關 MOD 的 generation/lock owner/claim/state/branch/worktree/PR/shared destination concurrency evidence。
 
-Review 開始前重新產生必要 diff 與 checkpoint parent evidence，SHA 必須與 Gate 完全一致。Reviewer 必須分別驗證：
+Review 開始前先驗證 `evidence-generation-receipt.json`、所有 artifact file SHA、Git endpoint OID/tree 與 Gate tuple 完全一致。固定 tuple 未變時直接讀取 immutable artifacts，**不得無條件重新產生全部 diff 與 checkpoint parent evidence**；只有第 10.6 節列出的 mismatch／缺失／具體矛盾才使 Gate 失效並觸發重建。Reviewer 必須分別驗證：
 
 - `C1^ tree=C0 tree` 且 `C1^..C1` 只做 non-target upstream。
 - C0..C1 = non-target upstream。
@@ -896,12 +944,13 @@ Review 開始前重新產生必要 diff 與 checkpoint parent evidence，SHA 必
 外部 Review 是可選層，不取代本地 Review：
 
 - `localization_mode=none`：`not-applicable`，保存 reason、目前 F、verified time。
-- 已登入且 UI 可直接要求 Copilot Balanced 時，每個 F 最多送出一次；保存 requested HEAD/time/request event。
+- 若目前 F 已因 repository automatic review settings 產生 Copilot request／review，該事件就是本 F 唯一 external request；不得再 re-request Balanced 或其他 effort。
+- 只有目前 F 尚無任何 automatic request，且已登入 UI 可直接要求 Copilot Balanced 時，才可送出一次；保存 requested HEAD/time/request event。送出後不得 sleep、wait loop 或週期性查詢。
 - 只有 review ID、reviewer、submitted time、review commit OID 唯一對應 requested F，且等於目前 PR head 時才 `completed`。
 - 不可用時 `unavailable`，保存 reason、F、verified time，不要求使用者登入。
-- 已送出但 24 小時沒有唯一對應目前 F 的結果時 `unavailable`、reason=`timeout`，保留 request evidence。
+- request 當下只做一次 bounded snapshot；若沒有唯一完成結果，立即記為 `requested-pending`，保存 request evidence、snapshot time 與 F，釋放 worker並繼續完成流程。不得建立 24 小時 timeout watcher 或任何背景輪詢。
 
-不論是否送外部 Review，都掃描目前 PR 新增或未處理的 reviews/bodies/threads/comments：
+不論是否送外部 Review，都只在本輪固定時點掃描一次目前 PR 已存在且新增或未處理的 reviews/bodies/threads/comments：
 
 - `zh-tw`、翻譯資格、loc 結構、必要 metadata、C1/C2/C3/F evidence/concurrency invariant：依 Baseline adopt/keep。
 - 憑證、任意命令、路徑逃逸、惡意載荷、供應鏈訊號：`security-blocking`。
@@ -909,19 +958,21 @@ Review 開始前重新產生必要 diff 與 checkpoint parent evidence，SHA 必
 
 scope 內 feedback 全部必須有 disposition；thread 型 feedback 必須 resolved。造成新 commit 時依第 11.2 節處理。
 
+`requested-pending` 之後若 GitHub 事件、使用者要求、合併前檢查或下一次 same-run recovery 自然喚醒流程，才對新出現的 review 做單次增量 snapshot；沒有外部事件時不主動查詢。外部 Review 是補充證據，因此 pending 不阻擋已通過 Gate 與本地 Review 的 F 進入 `awaiting-user-merge`。
+
 ### 11.4 Review 完成
 
 全部成立才 `awaiting-user-merge`：
 
 - local=remote=PR head=F=candidate_oid。
 - Gate passed 且綁定目前 evidence generation、C0/C1/C2/C3/F、checkpoint parent trees、target set、manifests、diffs、validation report。
-- 重新生成全部必要 diff與 checkpoint parent evidence SHA，與 validation report 一致。
+- evidence receipt、既有 immutable artifacts SHA、Git endpoint OID/tree 與 validation report 一致；固定 tuple 未變時不重產 diff。
 - 本地 Review 對目前 F 為 none 或 findings 全部 disposition。
 - scope feedback 全部處理，security blocking=0。
 - active loc validation 通過；none 模式 not-applicable。
 - PR body 已更新 Baseline 要求完整 evidence 摘要。
 - `reviewed_oid=F`。
-- 外部 Review=`completed|not-applicable|unavailable` 且證據對應目前 F。
+- 外部 Review=`completed|requested-pending|not-applicable|unavailable` 且 request/snapshot 證據對應目前 F；pending 明確標示為非阻塞且沒有 polling scheduled。
 
 將 MOD lock 改 `lease_mode=reserved`，協調器維持 heartbeat，釋放 worker並通知使用者可合併；不得釋放 identity reservation，其他 MOD 繼續。
 
@@ -940,9 +991,9 @@ merge main、evidence commits、push 由該 MOD reservation 隔離；只有 fetc
 
 ## 13. 合併後歸檔
 
-協調器看到 `awaiting-user-merge` 時查詢 PR：
+協調器只在使用者要求、GitHub 事件、same-run recovery 或實際準備合併／歸檔時處理 `awaiting-user-merge`；不得以固定週期輪詢。被喚醒時查詢 PR：
 
-- OPEN 且 head=`reviewed_oid`：先依第 12 節核對 latest main、mergeability、新 feedback；仍無相關變更/衝突/finding時，再確認 Gate/evidence tuple 對應該 head。
+- OPEN 且 head=`reviewed_oid`：先依第 12 節核對 latest main、mergeability、新 feedback；若 external review 原為 `requested-pending`，同一次 snapshot 一併吸收其完成結果。仍無相關變更/衝突/finding時，再確認 Gate/evidence tuple 對應該 head。
 - OPEN 但 head 不同：`reviewing`，對新 F 重跑 Gate/Review。
 - CLOSED 未合併：`waiting-user`，請使用者選擇重新開啟或放棄。
 - MERGED：確認正式 hash 等於來源 SHA，且被合併 head=`reviewed_oid=F`，才歸檔。
@@ -953,7 +1004,7 @@ MERGED 後：
 2. 取得短期 `source-acquisition.lock`，核對來源 size/SHA，解析 `Finished` 目的檔並執行同名同 SHA 去重或同 volume 原子搬移；不同 SHA 同名不得覆蓋。
 3. worktree 乾淨且 local branch tip=`reviewed_oid` 後，取得短期 `git-coordination.lock` 使用標準 worktree remove，再刪除本機本輪 branch。
 4. 遠端 branch 若仍存在，只刪除本輪唯一 remote branch；不得操作其他 branch。
-5. 建立 `Finished/.evidence/.tmp-<run-id>`，複製 final extraction/raw-install/install/candidate-tree manifests、目前 git-evidence、validation report、review、`state-final.json`。state-final 至少固定 run/archive SHA、evidence generation、C0/C1/C2/C3/F/tree、checkpoint parent OID/tree、target paths SHA、reviewed OID、PR、merged evidence、所有 artifact SHA、workflow/Baseline SHA。
+5. 建立 `Finished/.evidence/.tmp-<run-id>`，複製 final extraction/raw-install/install/candidate-tree manifests、metadata preview、git byte preflight、evidence generation receipt、目前 git-evidence、validation report、review、`state-final.json`。state-final 至少固定 run/archive SHA、evidence generation、C0/C1/C2/C3/F/tree、checkpoint parent OID/tree、target paths SHA、reviewed OID、PR、merged evidence、所有 artifact SHA、workflow/Baseline SHA 與 stage timings。
 6. 回讀逐 SHA 對帳後原子 rename 為 `Finished/.evidence/<run-id>`；已存在時只有內容 SHA 全相同才 idempotent，否則 `waiting-user`。
 7. evidence 歸檔成功後清除 staging/原 artifacts/安全空目錄，但暫留 state 與固定 MOD lock。
 8. 協調器重新核對 owner run ID、state path、lock key 與 expected terminal evidence。完全相符時將固定 lock 原子改名 `.released-<mod-lock-key>-<run-id>`；只有改名成功才可刪 state，最後只刪該 tombstone。owner/evidence 不符或改名失敗則保留 state/lock。
@@ -1003,7 +1054,7 @@ MERGED 後：
 - `C3..F` 若存在只含 README/hash metadata；F final tree 無其他 post-C3 MOD bytes。
 - `C0..F` 證明完整 PR tree，所有變更只在 README 目標區段、單一 MOD directory、單一 hash allowlist。
 - extraction/raw-install/install/candidate-tree manifests 與各階段 Git trees/diffs 相互對帳，無舊檔、遺漏、來源污染或 worktree-only檔案。
-- 全部必要 immutable diff/name-status 與 checkpoint parent evidence SHA 可重建。
+- `git_byte_mode=no-filters-v1`、metadata preview 與 evidence generation receipt 通過；全部必要 immutable diff/name-status 與 checkpoint parent evidence SHA 綁定固定 tuple 且可重建，但 Review 不重複全量產生。
 - validation report 綁定 run、workflow/Baseline、archive、C0/C1/C2/C3/F、checkpoint parent OID/tree、target set、manifests、diffs/rules/localization SHA。
 - Gate passed 後才 Push；已發布 branch 無 squash/rebase/force-push 隱藏證據。
 - local/remote HEAD=F，remote tree=F tree；main 相關變更已完成影響判定。
@@ -1013,7 +1064,7 @@ MERGED 後：
 - PR OPEN、非 Draft、base/head 正確，`PR headRefOid=F`。
 - PR body 含 Baseline 要求的 C0/C1/C2/C3/F、trees、diff SHA、checkpoint parent-tree Gate、target paths、manifests、validation/Baseline 摘要。
 - 本地 Review 對目前 F 分別檢查 checkpoint parent-tree invariant、`C0..C1`、`C1..C2`、`C2..C3`、`C0..F`，沒有用空 worktree diff、只看 final diff 或只看 endpoint tree 取代分層證據。
-- 外部 Review completed 時 request/review/head 證據對應 F；not-applicable/unavailable 有 reason/head/verified time。
+- 外部 Review completed 時 request/review/head 證據對應 F；requested-pending 有 request/snapshot/head 與 no-polling evidence；not-applicable/unavailable 有 reason/head/verified time。
 - scope findings 全部 disposition，security blocking=0。
 - `reviewed_oid=PR headRefOid=F`。
 - state=`awaiting-user-merge`。
