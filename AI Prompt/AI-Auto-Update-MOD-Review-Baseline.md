@@ -44,7 +44,7 @@ git show "<state.workflow_commit_oid>:AI Prompt/AI-Auto-Update-MOD-Review-Baseli
 ```text
 C0 = base_oid，更新前固定 Git 基準
 C1 = upstream-non-target commit
-C2 = upstream-target-raw commit
+C2 = upstream-target-indexed commit；不含翻譯修改，只允許固定 Git text normalization
 C3 = zh-tw-restored commit
 F  = 最終 Candidate HEAD；若後續只有 README/hash 等 metadata commit，F 可晚於 C3
 ```
@@ -55,14 +55,14 @@ F  = 最終 Candidate HEAD；若後續只有 README/hash 等 metadata commit，F
 
 - archive 與 staging 必須先通過主流程的安全、identity 與 extraction manifest Gate，才可建立任何更新 Commit；不得為了取得 diff 而 Commit 未通過安全檢查的來源。
 - worktree 的實際安裝動作必須先完整移除單一舊 MOD directory，再以已驗證新版 MOD root 完整覆蓋。Commit 分層只控制「哪些變更進入哪一個 Git tree」，不得把逐檔覆寫舊 MOD 當成替代安裝方式。
-- **C1：新版原始內容，排除 target paths。** 完整新版已存在 worktree 後，只 stage／commit 非 `evidence_target_paths` 的 MOD 變更。所有 target path 的 deletion、addition、rename、content change 都不得進入 C1 index，因此 C1 Git tree 對既有 target path 保留 C0 blob，對新版新增 target path 仍保持不存在。`C0..C1` 必須只呈現新版 upstream 的非 target 實際變更。
-- **C2：套入新版原始 target files。** 從同一份 immutable staging 將 `evidence_target_paths` 的原始新版狀態完整 stage／commit，不得先套用 `merged.lua`、舊翻譯或 AI 修改。`C1..C2` 必須直接呈現 target files 從舊版維護狀態到新版 upstream 原始狀態的 delta，因此能由 Git 紀錄看出新版刪除、改寫、新增了哪些 target bytes／fields／keys，以及哪些既有 `zh-tw` 被 upstream 清除或改掉。
-- **C3：只復原／更新核准的 zh-tw。** 必須以 C2 的 raw upstream target tree 為起點，只套用主流程與翻譯規則核准的 active `zh-tw`／繁中 lookup spans、允許的單一 Lua separator，以及主流程第 8.6 節可驗證的 localization newline 轉換。`C2..C3` 必須直接呈現自動流程實際復原、補上或修正了哪些繁中內容與 EOL 正規化；不得混入 upstream 非 target 變更或其他格式化。
+- **C1：新版原始內容，排除 target paths。** 完整新版已存在 worktree 後，只以主流程固定的正常 Git add stage／commit 非 `evidence_target_paths` 的 MOD 變更。所有 target path 的 deletion、addition、rename、content change 都不得進入 C1 index，因此 C1 Git tree 對既有 target path 保留 C0 blob，對新版新增 target path 仍保持不存在。`C0..C1` 必須只呈現新版 upstream 的非 target 實際變更；archive raw bytes 與 Git-normalized index bytes 的關係由 normalization manifest 證明。
+- **C2：套入新版原始 target 語意的 Git index 表示。** 從同一份 immutable staging 將 `evidence_target_paths` 的原始新版狀態以固定正常 Git add 完整 stage／commit，不得先套用 `merged.lua`、舊翻譯、AI 修改、trim、tab cleanup、重新縮排或 formatter。只允許 normalization manifest 已證明的 Git `CRLF→LF`。`C1..C2` 必須直接且可讀地呈現 target files 從舊版維護狀態到新版 upstream 的實際 fields／keys delta；不得因 EOL-only churn 使 GitHub 顯示大範圍全檔刪除／新增。
+- **C3：只復原／更新核准的 zh-tw。** 必須以 C2 的 indexed upstream target tree 為起點，只套用主流程與翻譯規則核准的 active `zh-tw`／繁中 lookup spans及允許的單一 Lua separator。`C2..C3` 必須直接呈現自動流程實際復原、補上或修正了哪些繁中內容；不得混入 EOL-only、一般 whitespace、upstream non-target 變更或其他格式化。
 - README／正式 `.hash` 或其他必要 metadata 不得污染 `C1..C2` 與 `C2..C3` 的 target evidence。主流程可以把 metadata 放在 C1 前後或 C3 後的獨立 commit，但必須保證三個核心 diff 的語意仍可直接判讀。最終 `F` 必須固定記錄並驗證其 tree。
 - 必須保存並可重建至少四個 immutable diff：`C0..C1`、`C1..C2`、`C2..C3`、`C0..F`；需要時另保存 `C3..F` 以隔離 metadata。不得使用 Commit 後通常為空的無參數 worktree diff 代替。
 - 同一 evidence generation 的 immutable diffs 與 checkpoint parent evidence 只需由 Gate 的 bounded-parallel batch 產生一次，並以固定 input tuple、artifact SHA、changed-path allowlist、Git object spot-check 與 `evidence-generation-receipt.json` 驗證。正式 Review 在 tuple 未變時必須直接使用這些 immutable artifacts；**不得把再次全量產生所有 diff 當成不可削弱需求**。只有 receipt/artifact/OID 不一致、產生參數版本改變或具體 evidence 矛盾才使 Gate 失效並要求重建。
-- `C0..C1` 必須證明非 target upstream 同步；`C1..C2` 必須證明 raw target upstream delta／清除內容；`C2..C3` 必須證明繁中復原與更新；`C0..F` 必須證明最後 PR tree。Reviewer 不得只看 `C0..F` 就宣稱三層證據成立。
-- 最終 Candidate Gate 仍必須將 `F` 的實際 Git tree同 extraction/install manifest 對帳，證明檔案集合無舊檔殘留或來源遺漏、非 localization bytes 等於新版來源、active localization 只含核准翻譯變更與可驗證 newline 轉換、README／hash metadata 正確，且沒有 allowlist 外異動。分層 Commit 證據不能取代最終 tree Gate，最終 tree Gate 也不能取代分層 Commit 證據。
+- `C0..C1` 必須證明非 target upstream 同步；`C1..C2` 必須證明可讀的 indexed upstream target delta／清除內容；`C2..C3` 必須證明繁中復原與更新；`C0..F` 必須證明最後 PR tree。Reviewer 不得只看 `C0..F` 就宣稱三層證據成立。
+- 最終 Candidate Gate 仍必須將 `F` 的實際 Git tree同 extraction/raw-install/install/candidate-tree manifests及 git-index-normalization 對帳，證明檔案集合無舊檔殘留或來源遺漏、raw archive bytes 可重建、Git index 只做核准 EOL normalization、非 localization 沒有一般 whitespace 或其他內容改寫、active localization 只含核准翻譯變更、README／hash metadata 正確，且沒有 allowlist 外異動。分層 Commit 證據不能取代最終 tree Gate，最終 tree Gate 也不能取代分層 Commit 證據。
 - 驗證證據至少綁定 run ID、固定 workflow/Baseline、archive SHA、C0/C1/C2/C3/F commit OID 與 tree OID、四個必要 diff SHA、target path set、extraction/install manifest 與 validation report SHA；後續應能只靠本輪 Git／PR 與保存 artifacts 判定結果，不必人工重做同一次更新。
 - 在正式 Review 前不得 squash、rebase、重排或合併 C1/C2/C3，使必要證據邊界消失。已發布 branch 不得 force-push 隱藏失敗證據；修正必須依主流程追加新 commit 並重建受影響的 evidence mapping。
 - 任一 C1/C2/C3/F OID、tree、target path set、manifest、diff 或 report 改變，都使先前 Candidate Review 失效。若需重建證據鏈，必須由明確安全基準重新產生受影響 commits/diffs，不能沿用舊結論。
@@ -70,7 +70,7 @@ F  = 最終 Candidate HEAD；若後續只有 README/hash 等 metadata commit，F
 
 若 `localization_mode=none`，或本輪沒有任何需要進入翻譯維護證據鏈的 active target file，C2/C3 可記為 `not-applicable`；但仍必須由 C0、upstream commit、最終 Candidate tree/diff 與 manifest 自動證明來源同步。不得建立空 Commit 只為湊數。
 
-只有會造成 C1/C2/C3 語意邊界被污染或消失、`C1..C2` 無法直接看出 upstream 對 target 的清除／修改、`C2..C3` 無法直接看出自動復原／翻譯內容、實際更新無法由固定 Git trees/diffs 與來源證據判定、final Candidate 與驗證證據不一致、錯誤版本被 Push／建立 PR、修正後沿用舊 Review、越界寫入，或仍需人工重做才能發現錯誤的具體問題屬於本節 finding。
+只有會造成 C1/C2/C3 語意邊界被污染或消失、`C1..C2` 無法直接看出 upstream 對 target 的清除／修改、EOL-only churn 使一般 GitHub／Git diff 呈現大範圍全檔刪除新增、`C2..C3` 無法直接看出自動復原／翻譯內容、流程自主 trim／移除 tab／重新縮排／format、實際更新無法由固定 Git trees/diffs 與來源證據判定、final Candidate 與驗證證據不一致、錯誤版本被 Push／建立 PR、修正後沿用舊 Review、越界寫入，或仍需人工重做才能發現錯誤的具體問題屬於本節 finding。
 
 額外的 Commit 命名、Commit message wording、diff 顯示工具或不影響上述證據語意的歷史美化建議仍為 `out-of-scope`；**C0→C1→C2→C3 的必要證據邊界本身不是偏好，屬於強制 in-scope。**
 
@@ -82,10 +82,10 @@ F  = 最終 Candidate HEAD；若後續只有 README/hash 等 metadata commit，F
 - `state.base_oid`／C0、`merge_epoch`，以及目前 evidence chain 的 C1、C2、C3、F commit OID／tree OID；not-applicable 階段必須有明確 reason。
 - `evidence_target_paths` 的固定集合，以及每個 active localization id 對應的 old/new relative path。
 - `C0..C1`、`C1..C2`、`C2..C3`、`C0..F` 的 immutable diff SHA／name-status SHA；若 F 晚於 C3，另記 `C3..F` metadata diff SHA。
-- final Candidate Gate 的 extraction/install/candidate-tree manifest SHA、validation report SHA 與通過結果。
+- final Candidate Gate 的 extraction/raw-install/install/candidate-tree manifest SHA、git-index-normalization SHA、diff-readability evidence、validation report SHA 與通過結果。
 - workflow commit/path/SHA、本檔 blob/SHA，以及實際採用規則檔 SHA-256。
 - `localization_mode` 與 active `localization_files[].id`。
-- 每個 active id 的 `old.lua`／`new.lua`／`merged.lua` SHA、target keys、unit stages 與 counts。
+- 每個 active id 的 `old.lua`／`new.lua`／`indexed.lua`／`merged.lua` SHA、index transform、target keys、unit stages 與 counts。
 
 外部 Review 為可選補充層：completed review 必須對應上述同一 F；尚未完成的唯一 request 則以 `requested-pending` 保存 requested F 與單次 snapshot。pending 不改變本地 Review 的版本基準，也不要求 worker 等待或輪詢。
 
@@ -96,8 +96,8 @@ F  = 最終 Candidate HEAD；若後續只有 README/hash 等 metadata commit，F
 Reviewer 只使用完成判定所需的最小權威輸入：
 
 1. state 中固定的 workflow、本基準、C0/C1/C2/C3/F、mode、evidence target paths 與 active localization 清單。
-2. `C0..C1`、`C1..C2`、`C2..C3`、`C0..F` 的明確 immutable Git diff／name-status 與 SHA，以及 extraction/install/candidate-tree manifests、validation report，並證明全部綁定同一 run 與正確 commit trees。
-3. 每個 active id 的 `old.lua`、`new.lua`、`merged.lua`、localization sources 與 decisions；其中 `new.lua` 必須能對應 C2 raw upstream target blob，`merged.lua` 必須能對應 C3 target blob。
+2. `C0..C1`、`C1..C2`、`C2..C3`、`C0..F` 的明確 immutable Git diff／name-status 與 SHA，以及 extraction/raw-install/install/candidate-tree manifests、git-index-normalization、diff-readability evidence、validation report，並證明全部綁定同一 run 與正確 commit trees。
+3. 每個 active id 的 `old.lua`、`new.lua`、`indexed.lua`、`merged.lua`、localization sources 與 decisions；其中 `new.lua` 必須對應 immutable staging raw source，`indexed.lua` 必須對應 C2 target blob，`merged.lua` 必須對應 C3 target blob。
 4. 正式翻譯規則、詞彙表與 target unit 的必要引用情境。
 5. README 對應區段、正式 `.hash` 及其 Nexus/archive 來源事實；若 F 晚於 C3，使用 `C3..F` 驗證 metadata 沒有污染 target evidence。
 6. 判定併發不變條件時，只讀取相關 MOD 的 generation／lock owner／claim／state identity 與 same-run recovery tuple、branch/worktree/PR 對應，以及共享來源、`Finished`／queue 的 claim／寫入邊界；不得藉此擴張為一般架構 Review。
@@ -111,11 +111,11 @@ Reviewer 只使用完成判定所需的最小權威輸入：
 1. target eligibility 是否正確：新增、來源語意／執行結構改變或缺少可用 active `zh-tw` 的 unit 都已納入，來源未變且已有可靠繁中的 unit 沒有被任意改寫。
 2. target `zh-tw` 是否忠實涵蓋英文來源的動作、對象、條件、範圍、數值、時間、限制與例外，並符合正式詞彙及臺灣繁中。
 3. placeholder、lookup、markup、escape、串接、函式結構與 Lua direct-field/separator 是否保持正確。
-4. 核准 `zh-tw`／繁中 lookup spans 以外的 bytes 是否在 canonicalize EOL 後保持新版原樣。例外只允許主流程驗證過的單一 Lua 分隔逗號，以及第 8.6 節記錄完整 old/new/merged newline 與 SHA 的 `LF`／`CRLF` 轉換；這不是一般重新排版許可，也不得改變 target eligibility 或翻譯內容。
+4. raw `new.lua` 到 `indexed.lua` 是否只有 normalization manifest 已證明的 Git `CRLF→LF`，且一般空格、tab、縮排、BOM、final-newline 與其他 code units 不變；`indexed.lua` 到 `merged.lua` 是否除核准 `zh-tw`／繁中 lookup spans 與單一 Lua separator 外逐 byte 相同。這不是一般重新排版許可，也不得改變 target eligibility 或翻譯內容。
 5. README 版本／日期／網址與正式 `.hash` 的檔名、版本、size、SHA 是否和同一份 metadata preview／權威來源一致；README 與 hash filename 都必須完整等於 archive filename，包含副檔名，不得以 stem 代替。
 6. 是否出現主流程安全章節定義的憑證、任意命令執行、路徑逃逸、惡意載荷或供應鏈風險。
 7. 併發隔離是否保持：不同 MOD 可同時處理；同一 MOD 只有一個 active generation／identity reservation／writer；lock→state crash window 與 active worker 死亡都能以相同 run ID reattach，不會永久 deadlock或產生替代 generation；等待合併不會產生 stale downgrade，舊 run 不會刪除新 owner lock；lock、state、來源、artifacts、branch、worktree 與 PR 不會跨 MOD 混用；`Finished`／queue 搬移沒有 shared destination race；單一 MOD 的等待或失敗不會阻擋其他無衝突 MOD。
-8. Git evidence chain 是否正確：C1 是否只提交 upstream 非 target 變更並保留 C0 target blobs；C2 是否只把 immutable staging 的 raw upstream target 狀態帶入 Git，使 `C1..C2` 能直接顯示 upstream 清除／修改／新增了什麼；C3 是否只套用核准 zh-tw 與可驗證 newline 轉換，使 `C2..C3` 能直接顯示自動復原／新增／修正與 EOL 正規化；F 的最終 tree、`C0..F` diff、manifest、README／hash 與 validation evidence 是否共同證明正確結果，而不需人工重做更新。
+8. Git evidence chain 是否正確：C1 是否只提交 Git-normalized upstream 非 target 變更並保留 C0 target blobs；C2 是否只把 immutable staging 的 upstream target 語意經固定正常 Git add 帶入 Git，使一般 `C1..C2` 能直接顯示 upstream 清除／修改／新增了什麼且沒有 EOL-only churn；C3 是否只套用核准 zh-tw，使 `C2..C3` 能直接顯示自動復原／新增／修正而沒有一般 whitespace 異動；F 的最終 tree、`C0..F` diff、normalization/manifests、README／hash 與 validation evidence 是否共同證明正確結果，而不需人工重做更新或切換 ignore-whitespace 檢視。
 9. Gate 失敗時是否阻止錯誤 evidence chain／Candidate 被視為完成版本；修正後是否對新的受影響 commits、diffs、final HEAD 與 tree 重跑驗證，而沒有沿用舊 Review 或用 squash／force-push 隱藏失敗證據。
 
 一般非 `zh-tw` 程式功能、設計、效能、品質、命名、註解、格式或風格不在共同審查問題內。未影響第 7 項不變條件的一般併發框架、效能與擴充建議也不在範圍內。
@@ -151,9 +151,9 @@ Reviewer 身分、措辭、信心或建議數量不改變分類。只有偏好�
 - C1/C2/C3/F tree OID。
 - `C0..C1`、`C1..C2`、`C2..C3`、`C0..F` diff SHA／name-status SHA 與各自 Gate 結果；若 F 晚於 C3，再列 `C3..F` metadata diff SHA。
 - evidence target paths。
-- extraction/install/candidate-tree manifest SHA、validation report SHA 與 final Candidate Gate 結果。
+- extraction/raw-install/install/candidate-tree manifest SHA、git-index-normalization SHA、diff-readability 結果、validation report SHA 與 final Candidate Gate 結果。
 - 本基準 path/SHA。
-- active localization ids。
+- active localization ids，以及每個 id 的 raw `new.lua`、`indexed.lua`、`merged.lua` SHA／index transform。
 - target／unchanged／BLOCKED 計數。
 - 適用規則與「只維護 `zh-tw`」的範圍。
 
