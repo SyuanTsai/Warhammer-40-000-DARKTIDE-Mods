@@ -57,12 +57,12 @@ F  = 最終 Candidate HEAD；若後續只有 README/hash 等 metadata commit，F
 - worktree 的實際安裝動作必須先完整移除單一舊 MOD directory，再以已驗證新版 MOD root 完整覆蓋。Commit 分層只控制「哪些變更進入哪一個 Git tree」，不得把逐檔覆寫舊 MOD 當成替代安裝方式。
 - **C1：新版原始內容，排除 target paths。** 完整新版已存在 worktree 後，只 stage／commit 非 `evidence_target_paths` 的 MOD 變更。所有 target path 的 deletion、addition、rename、content change 都不得進入 C1 index，因此 C1 Git tree 對既有 target path 保留 C0 blob，對新版新增 target path 仍保持不存在。`C0..C1` 必須只呈現新版 upstream 的非 target 實際變更。
 - **C2：套入新版原始 target files。** 從同一份 immutable staging 將 `evidence_target_paths` 的原始新版狀態完整 stage／commit，不得先套用 `merged.lua`、舊翻譯或 AI 修改。`C1..C2` 必須直接呈現 target files 從舊版維護狀態到新版 upstream 原始狀態的 delta，因此能由 Git 紀錄看出新版刪除、改寫、新增了哪些 target bytes／fields／keys，以及哪些既有 `zh-tw` 被 upstream 清除或改掉。
-- **C3：只復原／更新核准的 zh-tw。** 必須以 C2 的 raw upstream target tree 為起點，只套用主流程與翻譯規則核准的 active `zh-tw`／繁中 lookup spans，以及允許的單一 Lua separator。`C2..C3` 必須直接呈現自動流程實際復原、補上或修正了哪些繁中內容；不得混入 upstream 非 target 變更或未核准格式化。
+- **C3：只復原／更新核准的 zh-tw。** 必須以 C2 的 raw upstream target tree 為起點，只套用主流程與翻譯規則核准的 active `zh-tw`／繁中 lookup spans、允許的單一 Lua separator，以及主流程第 8.6 節可驗證的 localization newline 轉換。`C2..C3` 必須直接呈現自動流程實際復原、補上或修正了哪些繁中內容與 EOL 正規化；不得混入 upstream 非 target 變更或其他格式化。
 - README／正式 `.hash` 或其他必要 metadata 不得污染 `C1..C2` 與 `C2..C3` 的 target evidence。主流程可以把 metadata 放在 C1 前後或 C3 後的獨立 commit，但必須保證三個核心 diff 的語意仍可直接判讀。最終 `F` 必須固定記錄並驗證其 tree。
 - 必須保存並可重建至少四個 immutable diff：`C0..C1`、`C1..C2`、`C2..C3`、`C0..F`；需要時另保存 `C3..F` 以隔離 metadata。不得使用 Commit 後通常為空的無參數 worktree diff 代替。
 - 同一 evidence generation 的 immutable diffs 與 checkpoint parent evidence 只需由 Gate 的 bounded-parallel batch 產生一次，並以固定 input tuple、artifact SHA、changed-path allowlist、Git object spot-check 與 `evidence-generation-receipt.json` 驗證。正式 Review 在 tuple 未變時必須直接使用這些 immutable artifacts；**不得把再次全量產生所有 diff 當成不可削弱需求**。只有 receipt/artifact/OID 不一致、產生參數版本改變或具體 evidence 矛盾才使 Gate 失效並要求重建。
 - `C0..C1` 必須證明非 target upstream 同步；`C1..C2` 必須證明 raw target upstream delta／清除內容；`C2..C3` 必須證明繁中復原與更新；`C0..F` 必須證明最後 PR tree。Reviewer 不得只看 `C0..F` 就宣稱三層證據成立。
-- 最終 Candidate Gate 仍必須將 `F` 的實際 Git tree同 extraction/install manifest 對帳，證明檔案集合無舊檔殘留或來源遺漏、非 localization bytes 等於新版來源、active localization 只含核准變更、README／hash metadata 正確，且沒有 allowlist 外異動。分層 Commit 證據不能取代最終 tree Gate，最終 tree Gate 也不能取代分層 Commit 證據。
+- 最終 Candidate Gate 仍必須將 `F` 的實際 Git tree同 extraction/install manifest 對帳，證明檔案集合無舊檔殘留或來源遺漏、非 localization bytes 等於新版來源、active localization 只含核准翻譯變更與可驗證 newline 轉換、README／hash metadata 正確，且沒有 allowlist 外異動。分層 Commit 證據不能取代最終 tree Gate，最終 tree Gate 也不能取代分層 Commit 證據。
 - 驗證證據至少綁定 run ID、固定 workflow/Baseline、archive SHA、C0/C1/C2/C3/F commit OID 與 tree OID、四個必要 diff SHA、target path set、extraction/install manifest 與 validation report SHA；後續應能只靠本輪 Git／PR 與保存 artifacts 判定結果，不必人工重做同一次更新。
 - 在正式 Review 前不得 squash、rebase、重排或合併 C1/C2/C3，使必要證據邊界消失。已發布 branch 不得 force-push 隱藏失敗證據；修正必須依主流程追加新 commit 並重建受影響的 evidence mapping。
 - 任一 C1/C2/C3/F OID、tree、target path set、manifest、diff 或 report 改變，都使先前 Candidate Review 失效。若需重建證據鏈，必須由明確安全基準重新產生受影響 commits/diffs，不能沿用舊結論。
@@ -111,11 +111,11 @@ Reviewer 只使用完成判定所需的最小權威輸入：
 1. target eligibility 是否正確：新增、來源語意／執行結構改變或缺少可用 active `zh-tw` 的 unit 都已納入，來源未變且已有可靠繁中的 unit 沒有被任意改寫。
 2. target `zh-tw` 是否忠實涵蓋英文來源的動作、對象、條件、範圍、數值、時間、限制與例外，並符合正式詞彙及臺灣繁中。
 3. placeholder、lookup、markup、escape、串接、函式結構與 Lua direct-field/separator 是否保持正確。
-4. 核准 `zh-tw`／繁中 lookup spans 以外的 bytes 是否保持新版原樣。唯一例外是主流程允許並驗證、為插入 `zh-tw` 直接欄位所需的單一 Lua 分隔逗號；這不是重新排版許可。
+4. 核准 `zh-tw`／繁中 lookup spans 以外的 bytes 是否在 canonicalize EOL 後保持新版原樣。例外只允許主流程驗證過的單一 Lua 分隔逗號，以及第 8.6 節記錄完整 old/new/merged newline 與 SHA 的 `LF`／`CRLF` 轉換；這不是一般重新排版許可，也不得改變 target eligibility 或翻譯內容。
 5. README 版本／日期／網址與正式 `.hash` 的檔名、版本、size、SHA 是否和同一份 metadata preview／權威來源一致；README 與 hash filename 都必須完整等於 archive filename，包含副檔名，不得以 stem 代替。
 6. 是否出現主流程安全章節定義的憑證、任意命令執行、路徑逃逸、惡意載荷或供應鏈風險。
 7. 併發隔離是否保持：不同 MOD 可同時處理；同一 MOD 只有一個 active generation／identity reservation／writer；lock→state crash window 與 active worker 死亡都能以相同 run ID reattach，不會永久 deadlock或產生替代 generation；等待合併不會產生 stale downgrade，舊 run 不會刪除新 owner lock；lock、state、來源、artifacts、branch、worktree 與 PR 不會跨 MOD 混用；`Finished`／queue 搬移沒有 shared destination race；單一 MOD 的等待或失敗不會阻擋其他無衝突 MOD。
-8. Git evidence chain 是否正確：C1 是否只提交 upstream 非 target 變更並保留 C0 target blobs；C2 是否只把 immutable staging 的 raw upstream target 狀態帶入 Git，使 `C1..C2` 能直接顯示 upstream 清除／修改／新增了什麼；C3 是否只套用核准 zh-tw，使 `C2..C3` 能直接顯示自動復原／新增／修正了什麼；F 的最終 tree、`C0..F` diff、manifest、README／hash 與 validation evidence 是否共同證明正確結果，而不需人工重做更新。
+8. Git evidence chain 是否正確：C1 是否只提交 upstream 非 target 變更並保留 C0 target blobs；C2 是否只把 immutable staging 的 raw upstream target 狀態帶入 Git，使 `C1..C2` 能直接顯示 upstream 清除／修改／新增了什麼；C3 是否只套用核准 zh-tw 與可驗證 newline 轉換，使 `C2..C3` 能直接顯示自動復原／新增／修正與 EOL 正規化；F 的最終 tree、`C0..F` diff、manifest、README／hash 與 validation evidence 是否共同證明正確結果，而不需人工重做更新。
 9. Gate 失敗時是否阻止錯誤 evidence chain／Candidate 被視為完成版本；修正後是否對新的受影響 commits、diffs、final HEAD 與 tree 重跑驗證，而沒有沿用舊 Review 或用 squash／force-push 隱藏失敗證據。
 
 一般非 `zh-tw` 程式功能、設計、效能、品質、命名、註解、格式或風格不在共同審查問題內。未影響第 7 項不變條件的一般併發框架、效能與擴充建議也不在範圍內。

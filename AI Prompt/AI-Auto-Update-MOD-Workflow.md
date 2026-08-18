@@ -216,11 +216,11 @@ Evidence 階段 crash recovery 額外遵守：若 state 已記錄 C1/C2/C3/F 任
 
 ## 4. State 與證據模型
 
-新 claim 使用 `schema_version=12`；舊 state 依其固定 workflow commit 續跑，不轉換成 version 12。
+新 claim 使用 `schema_version=13`；舊 state 依其固定 workflow commit 續跑，不轉換成 version 13。
 
 ```json
 {
-  "schema_version": 12,
+  "schema_version": 13,
   "run_id": "<uuid>",
   "status": "claimed",
   "mod": "<MOD-name>",
@@ -258,6 +258,7 @@ Evidence 階段 crash recovery 額外遵守：若 state 已記錄 C1/C2/C3/F 任
   "merge_epoch": 1,
   "evidence_generation": 1,
   "git_byte_mode": "no-filters-v1",
+  "localization_newline_mode": "preserve-c0-when-safe-v1",
   "stage_timings": {},
   "localization_mode": "none",
   "localization_files": [],
@@ -372,6 +373,7 @@ failed
 - active target 存在但某階段實際 tree delta 為空時，C2/C3 可建立必要 evidence checkpoint commit；必須記錄 `*_empty_reason` 並由 Gate 證明該階段預期 bytes 本來就相同。不得為無 target 的情況建立空 Commit。
 - `evidence_diffs.*` 每筆至少保存 base OID、head OID、diff path/SHA-256、name-status path/SHA-256 與產生參數版本。
 - `git_byte_mode` 固定為 `no-filters-v1`：所有本輪 payload、merged localization、README 與 hash blob 都以 `git hash-object --no-filters` 建立，並以明確 index entry 更新；不得讓 `core.autocrlf`、working-tree filter 或 `git add` 隱式改變證據 bytes。
+- `localization_newline_mode` 固定為 `preserve-c0-when-safe-v1`：C2 raw target 仍逐 byte 等於 immutable staging；C3 merged target 只可依第 8.6 節的 deterministic newline policy 明確轉換 EOL，不得依賴 Git filter 或工作目錄設定。
 - `external_review.status` 只允許 `not-requested|requested-pending|completed|not-applicable|unavailable`；`requested-pending` 是合法的非阻塞終態觀測，不建立背景輪詢。
 - `candidate_gate.status` 只允許 `not-run|passed|rejected`。任何 C1/C2/C3/F OID/tree、checkpoint parent tree、target path set、manifest、diff、rules SHA、localization artifact 或 validation report 改變，先把 Gate 設回 `not-run`，舊 Review 同時失效。
 - `c1_parent_tree_oid` 必須等於 C0 tree；C2 適用時 `c2_parent_tree_oid` 必須等於 C1 tree；C3 適用時 `c3_parent_tree_oid` 必須等於 C2 tree。這三個 parent-tree invariant 用來證明 checkpoint commit 本身確實從上一層語意 tree 開始，而不是只靠遠距 endpoint diff 掩蓋中間的 target/metadata 回滾。
@@ -509,7 +511,7 @@ evidence_chain.c0_tree_oid = C0^{tree}
 - `new.lua`：immutable staging 的新版原始 bytes。
 - `merged.lua`：以 `new.lua` 為基礎，只完成核准繁中修改。
 
-記錄 old/new/merged relative path、size、SHA、encoding、BOM、newline。artifact root 從 state 所在目錄取得，不從 worktree path 或來源文字推導。
+記錄 old/new/merged relative path、size、SHA、encoding、BOM、newline。另記 `newline_action=preserve-c0|keep-new`、old/new/merged newline、reason 與轉換前後 SHA。artifact root 從 state 所在目錄取得，不從 worktree path 或來源文字推導。
 
 ### 8.3 規則來源
 
@@ -534,7 +536,7 @@ evidence_chain.c0_tree_oid = C0^{tree}
 
 來源與執行結構未變且 C0 已有可靠 `zh-tw` 的既有 key 不是 target，必須逐 byte 保留舊版 `zh-tw`。
 
-上游只改變 `zh-tw`、英文與執行結構未變時：C0 已有可靠繁中則保留 C0；C0 缺少可用繁中則列為 target，以上游繁中作候選並依英文與正式規則驗證。
+上游只改變 `zh-tw`、英文與執行結構未變時：C0 已有可靠繁中則保留 C0；C0 缺少可用繁中則列為 target，以上游繁中作候選並依英文與正式規則驗證。這是 source-sync 的核心需求；newline policy 不得把上游 `zh-tw`-only drift 改列為 target 或覆寫既有核准翻譯。
 
 ### 8.5 翻譯判定
 
@@ -558,7 +560,14 @@ evidence_chain.c0_tree_oid = C0^{tree}
 - 同一 localization 檔內已確認只有繁中使用的 lookup 定義。
 - 新增直接 `zh-tw` 欄位時，前一個完整欄位所需的單一 Lua 分隔逗號。
 
-不得整檔還原舊 loc，不得改其他語系、欄位順序、縮排、註解或空白。`merged.lua` 保留 `new.lua` encoding/BOM/newline。
+不得整檔還原舊 loc，不得改其他語系、欄位順序、縮排、註解或一般空白。`merged.lua` 保留 `new.lua` encoding/BOM，newline 依下列 deterministic policy 處理：
+
+1. C2／`new.lua` 永遠保存 immutable staging 原始 newline 與 bytes，不做正規化。
+2. C0 有對應 old file，old/new 都能以已記錄 encoding 無損解碼，且各自只使用單一一致的 `LF` 或 `CRLF` 時，`merged.lua` 使用 C0 newline；只轉換行尾 code units，不改任何其他 code point、BOM、欄位、縮排或空白，記 `newline_action=preserve-c0`。
+3. 新增 localization file、old/new 為 mixed／未知 newline、無法無損解碼，或無法證明只改 EOL 時，保留 `new.lua` newline，記 `newline_action=keep-new` 與具體 reason；不得猜測或透過 `core.autocrlf` 修正。
+4. 轉換後以「將 new/merged 的 CRLF 與 LF 都 canonicalize 為 LF」比較；除核准繁中 spans、單一必要 separator 外，canonicalized bytes 必須相同。line count、最後是否有 newline、encoding 與 BOM 也必須不變。
+
+這項 EOL 正規化只改善 repository final diff；不得影響 target eligibility、翻譯內容或 raw archive evidence。
 
 ### 8.7 中文驗證
 
@@ -566,7 +575,8 @@ evidence_chain.c0_tree_oid = C0^{tree}
 
 - new/merged key set 相同。
 - 所有非 `zh-tw` 語系欄位與 expression 相同。
-- 核准繁中 spans 與單一必要 separator 外 bytes 相同。
+- canonicalize EOL 後，核准繁中 spans 與單一必要 separator 外 bytes 相同；未 canonicalize 的 byte 差異只能是已記錄的 `LF`／`CRLF` 轉換。
+- `newline_action`、old/new/merged newline、轉換前後 SHA、line count、final-newline、encoding/BOM 驗證結果一致；`preserve-c0` 時 merged newline 等於 C0，`keep-new` 時等於 new。
 - 每 key 最多一個直接 `zh-tw` 欄位。
 - direct-field depth、完整 expression、quote、escape、comment、括號深度正確。
 - placeholder 名稱、型別與 multiset 對齊英文。
@@ -831,7 +841,7 @@ evidence generation receipt SHA
 - `C1^ tree = C0 tree`；`C1^..C1` 只包含本 MOD non-target paths。不得讓 C1 commit 本身包含 target/README/hash 的撤銷或重寫。
 - `C0..C1` 只呈現新版 upstream non-target 實際變更；C1 target old paths 等於 C0 blobs，new target paths 在 C0 不存在者於 C1 仍不存在；README/hash 等於 C0。
 - C2 適用時 `C2^ tree = C1 tree`；`C2^..C2` 與 `C1..C2` 都只包含 `evidence_target_paths`，且 C2 raw target state 精確等於 immutable staging。
-- C3 適用時 `C3^ tree = C2 tree`；`C3^..C3` 與 `C2..C3` 都只包含 `evidence_target_paths`，且 C3 target blobs 精確等於 merged；核准繁中 spans/lookup/separator 外 bytes 不變。
+- C3 適用時 `C3^ tree = C2 tree`；`C3^..C3` 與 `C2..C3` 都只包含 `evidence_target_paths`，且 C3 target blobs 精確等於 merged；canonicalize EOL 後核准繁中 spans/lookup/separator 外 bytes 不變，未 canonicalize 的其他差異只能是第 8.6 節核准並記錄的 newline 轉換。
 - `C3..F`（適用時）只包含 README 目標區段與單一正式 hash 等 metadata allowlist；不得包含 MOD bytes。若 F=C3，記為相同 tree、metadata diff not-required。
 - `C0..F` 所有 changes 只位於 README 目標區段、本輪單一 MOD directory與單一 hash allowlist。
 - F MOD tree path/size/SHA 與 install manifest完全一致；archive provenance 與 extraction manifest一致；merged provenance 與 localization artifacts一致。
@@ -850,7 +860,7 @@ evidence generation receipt SHA
 - evidence target paths/SHA 與 active localization ids。
 - 各必要 diff/name-status SHA、changed path counts、Gate 結果。
 - extraction/raw-install/install/candidate-tree manifest SHA。
-- old/new/merged/decisions SHA、target/unchanged/BLOCKED counts、中文 Gate。
+- old/new/merged/decisions SHA、newline action/evidence、target/unchanged/BLOCKED counts、中文 Gate。
 - README/hash、metadata preview、git byte mode/preflight、security、tree-vs-manifest、allowlist、`diff --check` Gate。
 - metadata preview SHA、git byte preflight result、evidence generation receipt SHA、artifact verification mode 與 stage timings。
 - `result=passed|rejected`、驗證時間與拒絕原因。
@@ -1040,7 +1050,7 @@ MERGED 後：
 - target = added ∪ changed source/structure ∪ missing/unusable zh-tw。
 - 有效 target 全部完成，BLOCKED=0。
 - 原文未變且已有可靠繁中的 unit 保留 C0 zh-tw。
-- 非 zh-tw fields/bytes、placeholder、lookup、markup、expression、Lua 結構驗證通過。
+- 非 zh-tw fields/expressions、placeholder、lookup、markup、Lua 結構驗證通過；canonicalize EOL 後非核准 spans bytes 相同，額外 byte 差異只有已記錄的 newline 轉換。
 - old/new/merged/decisions/counts/SHA 一致。
 
 ### Gate C：分層 Git Evidence 與 Final Candidate
@@ -1050,7 +1060,7 @@ MERGED 後：
 - `C1^ tree=C0 tree`，且 `C1^..C1` 只含 upstream non-target；不得在 C1 commit 本身混入 target/metadata rollback。
 - `C0..C1` 只含 upstream non-target；target tree 保留 C0 狀態。
 - C2 適用時 `C2^ tree=C1 tree`，且 `C2^..C2`／`C1..C2` 只含 raw target，C2 target blobs=staging。
-- C3 適用時 `C3^ tree=C2 tree`，且 `C3^..C3`／`C2..C3` 只含核准 zh-tw target changes，C3 target blobs=merged。
+- C3 適用時 `C3^ tree=C2 tree`，且 `C3^..C3`／`C2..C3` 只含核准 zh-tw target changes及第 8.6 節允許的 localization newline 轉換，C3 target blobs=merged。
 - `C3..F` 若存在只含 README/hash metadata；F final tree 無其他 post-C3 MOD bytes。
 - `C0..F` 證明完整 PR tree，所有變更只在 README 目標區段、單一 MOD directory、單一 hash allowlist。
 - extraction/raw-install/install/candidate-tree manifests 與各階段 Git trees/diffs 相互對帳，無舊檔、遺漏、來源污染或 worktree-only檔案。
