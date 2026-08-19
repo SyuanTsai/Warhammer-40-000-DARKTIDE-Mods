@@ -254,18 +254,10 @@ return {
 					},
 					{
 						setting_id = "notable_talents_icon_size",
-						title = "setting_icon_size",
+						title = "setting_font_size",
 						type = "numeric",
 						default_value = 40,
 						range = { 1, 75 },
-					},
-					{
-						setting_id = "notable_talents_intensity",
-						title = "notable_talents_intensity",
-						type = "numeric",
-						default_value = 0.05,
-						range = { -1, 1 },
-						decimals_number = 2
 					},
 					{
 						setting_id = "notable_talents_offset_x",
@@ -459,7 +451,6 @@ return {
 					},
 				},
 			},
-			
 		},
 	},
 }

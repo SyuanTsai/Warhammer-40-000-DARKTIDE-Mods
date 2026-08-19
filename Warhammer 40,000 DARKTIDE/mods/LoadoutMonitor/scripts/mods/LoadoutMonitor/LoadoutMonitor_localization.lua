@@ -1,12 +1,19 @@
 local mod = get_mod("LoadoutMonitor")
 local locr = {}
-local lid = Application.user_setting("language_id")
+local lid = Managers and Managers.localization and Managers.localization:language() or mod:get("user_lid") or "en"
+local default_lid_order = {"en","zh-cn","zh-tw"}
 local _io = Mods.lua.io
-
 mod.color_text = function(R,G,B,text)
 	return string.format("{#color(%s,%s,%s)}%s{#reset()}",R,G,B,text)
 end
-
+local dnt = function(text,R,G,B)
+	local L_text = Localize(text)
+	if not R and not G and not B then
+		return L_text
+	else
+		return mod.color_text(R,G,B,L_text)
+	end
+end
 local function generate_translation(t,prefix,suffix,lids)
 	if type(t) ~= "table" then return end
 	local prefix = prefix or ""
@@ -24,6 +31,9 @@ local function generate_translation(t,prefix,suffix,lids)
 		end
 	end
 end
+local generate_notable_talents_description = function(nt)
+	return string.format("%s:\n%s: %s || %s\n%s: %s",nt,dnt("loc_class_veteran_name"),dnt("loc_talent_veteran_better_deployables",0,206,209),dnt("loc_talent_veteran_combat_ability_revives",255,215,0),dnt("loc_class_cryptic_name"),dnt("loc_talent_cryptic_servo_skull_inject_ally",77,255,46))
+end
 locr = {	
 	mod_name = {
 		en = "Loadout Monitor",
@@ -31,10 +41,10 @@ locr = {
 		["zh-tw"] = "大廳顯示裝備",
 	},
 	mod_description = {
-		en = "Notable talents:\nVeteran:"..mod.color_text(0,206,209,"Field Improvisation").." "..mod.color_text(250,128,114,"Low Profile").."\nSkitarius:"..mod.color_text(77,255,46,"Medicae Servo-Skull"),
-		["zh-cn"] = "特别天赋：\n老兵："..mod.color_text(0,206,209,"临场发挥").." "..mod.color_text(250,128,114,"放低姿态").."\n护教军士兵："..mod.color_text(77,255,46,"医疗伺服头骨"),
-		["zh-tw"] = "特殊天賦：\n老兵："..mod.color_text(0,206,209,"臨場發揮").." "..mod.color_text(250,128,114,"低調").."\n護教軍："..mod.color_text(77,255,46,"醫療伺服頭骨"),
-	},
+		en = generate_notable_talents_description("Notable talents"),
+		["zh-cn"] = generate_notable_talents_description("特别天赋"),
+		["zh-tw"] = generate_notable_talents_description("特殊天賦"),
+		},
 	lobby_exhibition = {
 		en = "In lobby",
 		["zh-cn"] = "在准备大厅中",
@@ -99,6 +109,11 @@ locr = {
 		en = "Feats",
 		["zh-cn"] = "天赋",
 		["zh-tw"] = "天賦",
+	},
+	player_notable_talents = {
+		en = "Notable talents",
+		["zh-cn"] = "特别天赋",
+		["zh-tw"] = "特殊天賦",
 	},
 	setting_player_notable_talents = {
 		en = "Notable talents",
@@ -260,178 +275,178 @@ locr = {
 	trait_weapon_trait_increase_power = {
 		en = "PWR ", -- Power
 		["zh-cn"] = "能量", -- 伤害与踉跄效果
-		["zh-tw"] = "威力", -- 傷害與踉跄效果
+		["zh-tw"] = "威力",
 	},
 	trait_gadget_damage_reduction_vs_flamers = {
 		en = "FLAM", -- Damage Resistance (Tox Flamers)
 		["zh-cn"] = "火兵", -- 伤害抗性（剧毒火焰兵）
-		["zh-tw"] = "火兵", -- 傷害抗性（劇毒火焰兵）
+		["zh-tw"] = "火兵",
 	},
 	trait_gadget_damage_reduction_vs_mutants = {
 		en = "MUTN", -- Damage Resistance (Mutants)
 		["zh-cn"] = "变种", -- 伤害抗性（变种人）
-		["zh-tw"] = "變種", -- 傷害抗性（變種人）
+		["zh-tw"] = "變種",
 	},
 	trait_gadget_damage_reduction_vs_gunners = {
 		en = "GUNR", -- Damage Resistance (Gunners)
 		["zh-cn"] = "炮手", -- 伤害抗性（炮手）
-		["zh-tw"] = "炮手", -- 傷害抗性（炮手）
+		["zh-tw"] = "炮手",
 	},
 	trait_gadget_damage_reduction_vs_snipers = {
 		en = "SNPR", -- Damage Resistance (Snipers)
 		["zh-cn"] = "狙击", -- 伤害抗性（狙击手）
-		["zh-tw"] = "狙擊", -- 傷害抗性（狙擊手）
+		["zh-tw"] = "狙擊",
 	},
 	trait_gadget_damage_reduction_vs_bombers = {
 		en = "BRST", -- Damage Resistance (Poxbursters).
 		["zh-cn"] = "自爆", -- 伤害抗性（瘟疫爆者）。
-		["zh-tw"] = "自爆", -- 傷害抗性（瘟疫爆者）。
+		["zh-tw"] = "自爆",
 	},
 	trait_gadget_damage_reduction_vs_hounds = {
 		en = "HOND", -- Damage Resistance (Pox Hounds)
 		["zh-cn"] = "猎犬", -- 伤害抗性（瘟疫猎犬）
-		["zh-tw"] = "獵犬", -- 傷害抗性（瘟疫獵犬）
+		["zh-tw"] = "獵犬",
 	},
 	trait_gadget_damage_reduction_vs_grenadiers = {
 		en = "BMBR", -- Damage Resistance (Bombers)
 		["zh-cn"] = "雷兵", -- 伤害抗性（轰炸者）
-		["zh-tw"] = "轟炸者", -- 傷害抗性（轟炸者）
+		["zh-tw"] = "轟炸者",
 	},
 	trait_weapon_trait_melee_common_wield_increased_resistant_damage = {
 		en = "UYLD", -- Damage (Unyielding Enemies)
 		["zh-cn"] = "不屈", -- 伤害（不屈敌人）
-		["zh-tw"] = "不屈", -- 傷害（不屈敵人）
+		["zh-tw"] = "不屈",
 	},
 	trait_weapon_trait_melee_common_wield_increased_disgustingly_resilient_damage = {
 		en = "IFST", -- Damage (Infested Enemies)
 		["zh-cn"] = "感染", -- 伤害（感染敌人）
-		["zh-tw"] = "感染", -- 傷害（感染敵人）
+		["zh-tw"] = "感染",
 	},
 	trait_weapon_trait_melee_common_wield_increased_unarmored_damage = {
 		en = "UAMR", -- Damage (Unarmoured Enemies)
 		["zh-cn"] = "无甲", -- 伤害（无甲敌人）
-		["zh-tw"] = "無甲", -- 傷害（無甲敵人）
+		["zh-tw"] = "無甲",
 	},
 	trait_weapon_trait_melee_common_wield_increased_berserker_damage = {
 		en = "MNAC", -- Damage (Maniacs)
 		["zh-cn"] = "狂人", -- 伤害（狂人）
-		["zh-tw"] = "狂人", -- 傷害（狂人）
+		["zh-tw"] = "狂人",
 	},
 	trait_weapon_trait_melee_common_wield_increased_super_armor_damage = {
 		en = "CRPC", -- Damage (Carapace Armoured Enemies)
 		["zh-cn"] = "硬壳", -- 伤害（硬壳装甲敌人）
-		["zh-tw"] = "硬甲", -- 傷害（硬甲敵人）
+		["zh-tw"] = "硬甲",
 	},
 	trait_weapon_trait_melee_common_wield_increased_armored_damage = {
 		en = "FLAK", -- Damage (Flak Armoured Enemies)
 		["zh-cn"] = "防弹", -- 伤害（防弹装甲敌人）
-		["zh-tw"] = "防彈", -- 傷害（防彈裝甲敵人）
+		["zh-tw"] = "防彈",
 	},
 	trait_weapon_trait_ranged_common_wield_increased_resistant_damage = {
 		en = "UYLD", -- Damage (Unyielding Enemies)
 		["zh-cn"] = "不屈", -- 伤害（不屈敌人）
-		["zh-tw"] = "不屈", -- 傷害（不屈敵人）
+		["zh-tw"] = "不屈",
 	},
 	trait_weapon_trait_ranged_common_wield_increased_disgustingly_resilient_damage = {
 		en = "IFST", -- Damage (Infested Enemies)
 		["zh-cn"] = "感染", -- 伤害（感染敌人）
-		["zh-tw"] = "感染", -- 傷害（感染敵人）
+		["zh-tw"] = "感染",
 	},
 	trait_weapon_trait_ranged_common_wield_increased_unarmored_damage = {
 		en = "UAMR", -- Damage (Unarmoured Enemies)
 		["zh-cn"] = "无甲", -- 伤害（无甲敌人）
-		["zh-tw"] = "無甲", -- 傷害（無甲敵人）
+		["zh-tw"] = "無甲",
 	},
 	trait_weapon_trait_ranged_common_wield_increased_berserker_damage = {
 		en = "MNAC", -- Damage (Maniacs)
 		["zh-cn"] = "狂人", -- 伤害（狂人）
-		["zh-tw"] = "狂人", -- 傷害（狂人）
+		["zh-tw"] = "狂人",
 	},
 	trait_weapon_trait_ranged_common_wield_increased_super_armor_damage = {
 		en = "CRPC", -- Damage (Carapace Armoured Enemies)
 		["zh-cn"] = "硬壳", -- 伤害（硬壳装甲敌人）
-		["zh-tw"] = "硬甲", -- 傷害（硬甲敵人）
+		["zh-tw"] = "硬甲",
 	},
 	trait_weapon_trait_ranged_common_wield_increased_armored_damage = {
 		en = "FLAK", -- Damage (Flak Armoured Enemies)
 		["zh-cn"] = "防弹", -- 伤害（防弹装甲敌人）
-		["zh-tw"] = "防彈", -- 傷害（防彈裝甲敵人）
+		["zh-tw"] = "防彈",
 	},
 	trait_weapon_trait_increase_stamina = {
 		en = "STAM", -- Stamina
 		["zh-cn"] = "体力", -- 体力
-		["zh-tw"] = "耐力", -- 耐力
+		["zh-tw"] = "耐力",
 	},
 	trait_gadget_stamina_regeneration = {
 		en = "STRG", -- Stamina Regeneration
 		["zh-cn"] = "体回", -- 体力恢复
-		["zh-tw"] = "耐回", -- 耐力恢復
+		["zh-tw"] = "耐回",
 	},
 	trait_gadget_cooldown_reduction = {
 		en = "ABRG", -- Combat Ability Regeneration
 		["zh-cn"] = "技回", -- 作战技能恢复
-		["zh-tw"] = "技回", -- 戰鬥技能恢復
+		["zh-tw"] = "技回",
 	},
 	trait_weapon_trait_increase_impact = {
 		en = "IMPC", -- Impact (Melee)
 		["zh-cn"] = "冲击", -- 冲击（近战）
-		["zh-tw"] = "衝擊", -- 衝擊（近戰）
+		["zh-tw"] = "衝擊",
 	},
 	trait_gadget_revive_speed_increase = {
 		en = "RVIV", -- Revive Speed (Ally)
 		["zh-cn"] = "友活", -- 复活速度（盟友）
-		["zh-tw"] = "復活", -- 復活速度（盟友）
+		["zh-tw"] = "復活",
 	},
 	trait_gadget_mission_credits_increase = {
 		en = "ODKT", -- Ordo Dockets (Mission Rewards)
 		["zh-cn"] = "金币", -- 审判庭双子币（任务奖励）
-		["zh-tw"] = "審判庭代幣", -- 審判庭雙子幣（任務獎勵）
+		["zh-tw"] = "審判庭代幣",
 	},
 	trait_gadget_mission_reward_gear_instead_of_weapon_increase = {
 		en = "CURO", -- Chance of Curio as Mission Reward (instead of Weapon)
 		["zh-cn"] = "珍品", -- 以珍品作为任务奖励（而非武器）的几率
-		["zh-tw"] = "珍品", -- 以珍品作為任務獎勵（而非武器）的機率
+		["zh-tw"] = "珍品",
 	},
 	trait_gadget_stamina_increase = {
 		en = "STAM", -- Max Stamina
 		["zh-cn"] = "体力", -- 最大体力
+		["zh-tw"] = "耐力",
 		ja = "活力", -- 最大スタミナ
 		ru = "ВНСЛ", -- Выносливость
-		["zh-tw"] = "耐力", -- 最大耐力
 	},
 	trait_gadget_inate_health_increase = {
 		en = "HP", -- Max Health
 		["zh-cn"] = "生命", -- 最大生命值
+		["zh-tw"] = "生命",
 		ja = "体力", -- 最大ヘルス
 		ru = "ЗДОР", -- Здоровье
-		["zh-tw"] = "生命", -- 最大生命值
 	},
 	trait_gadget_health_increase = {
 		en = "HP", -- Max Health
 		["zh-cn"] = "生命", -- 最大生命值
-		["zh-tw"] = "生命", -- 最大生命值
+		["zh-tw"] = "生命",
 	},
 	trait_gadget_block_cost_reduction = {
 		en = "BLK ", -- Block Efficiency
 		["zh-cn"] = "格挡", -- 格挡效益
-		["zh-tw"] = "格擋", -- 格擋效益
+		["zh-tw"] = "格擋",
 	},
 	trait_weapon_trait_reduced_block_cost = {
 		en = "BLK ", -- Block Efficiency
 		["zh-cn"] = "格挡", -- 格挡效益
-		["zh-tw"] = "格擋", -- 格擋效益
+		["zh-tw"] = "格擋",
 	},
 	trait_weapon_trait_increase_finesse = {
 		en = "FNS ", -- Finesse
 		["zh-cn"] = "娴熟", -- 武器娴熟
-		["zh-tw"] = "靈巧", -- 武器熟練
+		["zh-tw"] = "靈巧",
 	},
 	trait_gadget_inate_max_wounds_increase = {
 		en = "WND ", -- Wound(s)
 		["zh-cn"] = "伤口", -- 生命格
+		["zh-tw"] = "傷痕",
 		ja = "傷口", -- 傷口
 		ru = "РАНЫ", -- Дополнительные раны
-		["zh-tw"] = "傷痕", -- 傷痕
 	},
 	trait_weapon_trait_reduce_sprint_cost = {
 		en = "SPRT", -- Sprint Efficiency
@@ -441,124 +456,124 @@ locr = {
 	trait_gadget_sprint_cost_reduction = {
 		en = "SPRT", -- Sprint Efficiency
 		["zh-cn"] = "疾跑", -- 疾跑效益
-		["zh-tw"] = "衝刺", -- 衝刺效益
+		["zh-tw"] = "衝刺",
 	},
 	trait_gadget_mission_xp_increase = {
 		en = "EXP ", -- Experience
 		["zh-cn"] = "经验", -- 经验
-		["zh-tw"] = "經驗", -- 經驗
+		["zh-tw"] = "經驗",
 	},
 	trait_gadget_corruption_resistance = {
 		en = "CRPT", -- Corruption Resistance
 		["zh-cn"] = "腐抗", -- 腐化抗性
-		["zh-tw"] = "腐抗", -- 腐化抗性
+		["zh-tw"] = "腐抗",
 	},
 	trait_gadget_permanent_damage_resistance = {
 		en = "GRIM", -- Corruption Resistance (Grimoires)
 		["zh-cn"] = "书抗", -- 腐化抗性（魔法书）
-		["zh-tw"] = "法術書抗性", -- 腐化抗性（魔法書）
+		["zh-tw"] = "法術書抗性",
 	},
 	trait_weapon_trait_ranged_increased_reload_speed = {
 		en = "RLD ", -- Reload Speed
 		["zh-cn"] = "装弹", -- 装弹速度
-		["zh-tw"] = "裝彈", -- 裝彈速度
+		["zh-tw"] = "裝彈",
 	},
 	trait_weapon_trait_increase_damage = {
 		en = "DMG ", -- Melee Damage
 		["zh-cn"] = "伤害", -- 近战伤害
-		["zh-tw"] = "傷害", -- 近戰傷害
+		["zh-tw"] = "傷害",
 	},
 	trait_weapon_trait_increase_damage_specials = {
 		en = "SPEC", -- Increased Melee Damage (Specialists)
 		["zh-cn"] = "专家", -- 近战伤害加成（专家）
-		["zh-tw"] = "專家", -- 近戰傷害加成（專家）
+		["zh-tw"] = "專家",
 	},
 	trait_weapon_trait_increase_damage_hordes = {
 		en = "HORD", -- Melee Damage (Groaners, Poxwalkers)
 		["zh-cn"] = "群怪", -- 近战伤害（呻吟者、瘟疫行者）
-		["zh-tw"] = "群怪", -- 近戰傷害（呻吟者、瘟疫行者）
+		["zh-tw"] = "群怪",
 	},
 	trait_weapon_trait_increase_damage_elites = {
 		en = "ELTE", -- Melee Damage (Elites)
 		["zh-cn"] = "精英", -- 近战伤害（精英）
-		["zh-tw"] = "菁英", -- 近戰傷害（菁英）
+		["zh-tw"] = "菁英",
 	},
 	trait_weapon_trait_increase_weakspot_damage = {
 		en = "WEAK", -- Melee Weak Spot Damage
 		["zh-cn"] = "弱点", -- 近战弱点伤害
-		["zh-tw"] = "弱點", -- 近戰弱點傷害
+		["zh-tw"] = "弱點",
 	},
 	trait_weapon_trait_increase_attack_speed = {
 		en = "ATSP", -- Melee Attack Speed
 		["zh-cn"] = "攻速", -- 近战攻击速度
-		["zh-tw"] = "攻速", -- 近戰攻擊速度
+		["zh-tw"] = "攻速",
 	},
 	trait_weapon_trait_increase_crit_damage = {
 		en = "CRDM", -- Melee Critical Hit Damage
 		["zh-cn"] = "暴伤", -- 近战暴击伤害
-		["zh-tw"] = "爆傷", -- 近戰暴擊傷害
+		["zh-tw"] = "爆傷",
 	},
 	trait_weapon_trait_increase_crit_chance = {
 		en = "CRCH", -- Melee Critical Hit Chance
 		["zh-cn"] = "暴率", -- 近战暴击几率
-		["zh-tw"] = "爆率", -- 近戰暴擊機率
+		["zh-tw"] = "爆率",
 	},
 	trait_weapon_trait_ranged_increase_damage = {
 		en = "DMG ", -- Ranged Damage
 		["zh-cn"] = "伤害", -- 远程伤害
-		["zh-tw"] = "傷害", -- 遠程傷害
+		["zh-tw"] = "傷害",
 	},
 	trait_weapon_trait_ranged_increase_damage_specials = {
 		en = "SPEC", -- Ranged Damage (Specialists)
 		["zh-cn"] = "专家", -- 远程伤害（专家）
-		["zh-tw"] = "專家", -- 遠程傷害（專家）
+		["zh-tw"] = "專家",
 	},
 	trait_weapon_trait_ranged_increase_damage_hordes = {
 		en = "HORD", -- Ranged Damage (Groaners, Poxwalkers)
 		["zh-cn"] = "群怪", -- 远程伤害（呻吟者、瘟疫行者）
-		["zh-tw"] = "群怪", -- 遠程傷害（呻吟者、瘟疫行者）
+		["zh-tw"] = "群怪",
 	},
 	trait_weapon_trait_ranged_increase_damage_elites = {
 		en = "ELTE", -- Ranged Damage (Elites)
 		["zh-cn"] = "精英", -- 远程伤害（精英）
-		["zh-tw"] = "菁英", -- 遠程傷害（菁英）
+		["zh-tw"] = "菁英",
 	},
 	trait_weapon_trait_ranged_increase_weakspot_damage = {
 		en = "WEAK", -- Ranged Weak Spot Damage
 		["zh-cn"] = "弱点", -- 远程弱点伤害
-		["zh-tw"] = "弱點", -- 遠程弱點傷害
+		["zh-tw"] = "弱點",
 	},
 	trait_weapon_trait_ranged_increase_crit_damage = {
 		en = "CRDM", -- Ranged Critical Hit Damage
 		["zh-cn"] = "暴伤", -- 远程暴击伤害
-		["zh-tw"] = "爆傷", -- 遠程暴擊傷害
+		["zh-tw"] = "爆傷",
 	},
 	trait_weapon_trait_ranged_increase_crit_chance = {
 		en = "CRCH", -- Increase Ranged Critical Strike Chance
 		["zh-cn"] = "暴率", -- 远程暴击几率增加
-		["zh-tw"] = "爆率", -- 遠程暴擊機率增加
+		["zh-tw"] = "爆率",
 	},
 	trait_gadget_inate_toughness_increase = {
 		en = "TN", -- Toughness
 		["zh-cn"] = "韧性", -- 韧性
+		["zh-tw"] = "韌性",
 		ja = "靭性", -- 最大タフネス
 		ru = "СТЙК", -- Стойкость
-		["zh-tw"] = "韌性", -- 韌性
 	},
 	trait_gadget_toughness_increase = {
 		en = "TN", -- Toughness
 		["zh-cn"] = "韧性", -- 韧性
-		["zh-tw"] = "韌性", -- 韌性
+		["zh-tw"] = "韌性",
 	},
 	trait_gadget_toughness_regen_delay = {
 		en = "TNRG", -- Toughness Regeneration Speed
 		["zh-cn"] = "韧回", -- 韧性回复速度
-		["zh-tw"] = "韌回", -- 韌性回復速度
+		["zh-tw"] = "韌回",
 	},
 	trait_weapon_trait_ranged_increase_stamina = {
 		en = "STAM", -- Stamina (Weapon is Active)
 		["zh-cn"] = "体力", -- （使用武器时）体力
-		["zh-tw"] = "耐力", -- （使用武器時）耐力
+		["zh-tw"] = "耐力",
 	},
 	
 	endview_scoreboard_weapons = {
@@ -675,8 +690,12 @@ locr = {
 
 	user_custom_feats_abbreviation_description = {
 		en = "1:Ability   2:Blitz   3:Aura   4:Keystone",
-		["zh-tw"] = "1：戰鬥技能   2：閃擊   3：光環   4：鑰石",		
 		["zh-cn"] = "1：技能   2：闪击   3：光环   4：基石",		
+		["zh-tw"] = "1：戰鬥技能   2：閃擊   3：光環   4：鑰石",
+	},
+	lobby_log_debug = {
+		en = "Debug:lobby",
+		["zh-tw"] = "除錯：大廳",
 	},
 }
 for i = 1,4 do
@@ -806,19 +825,32 @@ local def_abb = {
 	cryptic_overload_keystone = {"PO","过载","過載",},
 	-- = {"","",},
 }
-generate_translation(def_abb,"def_","",{"en","zh-cn","zh-tw"})
+local highlights = {
+	veteran_better_deployables = {"FI","箱","箱"},
+	veteran_combat_ability_revive_nearby_allies = {"Rv","活","活"},
+	cryptic_servo_skull_inject_ally = {"MS","疗","療"},
+}
+generate_translation(def_abb,"def_","",default_lid_order)
+generate_translation(highlights,"highlight_","",default_lid_order)
 
-local _mod_directory = "./../mods/"
-local my_lid = "LoadoutMonitor/scripts/mods/LoadoutMonitor/LoadoutMonitor_localization_" .. lid
-
-local file = _io.open(_mod_directory .. my_lid .. ".lua","r")
-if file ~= nil then
-	file:close()
-	my_lid = mod:io_dofile(my_lid)
-	if my_lid.common then generate_translation(my_lid.common,nil,nil,lid) end
-	if my_lid.talents then generate_translation(my_lid.talents,"def_",nil,lid) end
+if lid and type(lid) == "string" then
+	local _mod_directory = "./../mods/"
+	local my_lid = "LoadoutMonitor/scripts/mods/LoadoutMonitor/LoadoutMonitor_localization_" .. lid
+	local file = _io.open(_mod_directory .. my_lid .. ".lua","r")
+	if file ~= nil then
+		file:close()
+		my_lid = mod:io_dofile(my_lid)
+		if my_lid.common then
+			local myl_nt = my_lid.common.player_notable_talents or my_lid.common.setting_player_notable_talents
+			if my_nt then
+				my_lid.common.mod_description = generate_notable_talents_description(myl_nt)
+			end
+			generate_translation(my_lid.common,nil,nil,lid)			
+		end
+		if my_lid.talents then generate_translation(my_lid.talents,"def_",nil,lid) end
+		if my_lid.notable then generate_translation(my_lid.notable,"highlight_",nil,lid) end
+	end
 end
-
 return locr
 
 
