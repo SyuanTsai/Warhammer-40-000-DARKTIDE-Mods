@@ -436,10 +436,10 @@
 
 ### [Reconnect](https://www.nexusmods.com/warhammer40kdarktide/mods/132)
     
-- MOD 網站最後更新日期：Last updated 26 April 2023, 9:51AM
-- MOD 版本：1.2.2
-- MOD 檔案名稱：Reconnect-132-1-2-2-1682473888
-- 手動維護最後下載日期：2025-07-23
+- MOD 網站最後更新日期：Last updated 18 August 2026, 2:33AM
+- MOD 版本：1.3.0
+- MOD 檔案名稱：Reconnect 132 1.3.0 2026-08-18T02-33Z UszQnsmqf.zip
+- 手動維護最後下載日期：2026-08-22
 
 ### [Valkyrie Blitz-Ingress](https://www.nexusmods.com/warhammer40kdarktide/mods/544)
     省略開場任務介紹(浩劫斷線時加速回歸)

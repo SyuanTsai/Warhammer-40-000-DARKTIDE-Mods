@@ -1,0 +1,15 @@
+mod=Reconnect
+repo_directory=Reconnect
+nexus_id=132
+nexus_url=https://www.nexusmods.com/warhammer40kdarktide/mods/132
+nexus_last_updated=18 August 2026, 2:33AM
+nexus_page_version=1.3.0
+version=1.3.0
+main_file_uploaded_at_utc=2026-08-18T02:33:00Z
+generated_at=2026-08-22T20:17:57.5937551+08:00
+maintenance_date=2026-08-22
+timezone=Asia/Taipei
+algorithm=SHA-256
+sha256=ce8528da60ed66cb031ac5c4531198d56056d03c649831ef05c99a955b379adb
+size_bytes=5413
+filename=Reconnect 132 1.3.0 2026-08-18T02-33Z UszQnsmqf.zip
