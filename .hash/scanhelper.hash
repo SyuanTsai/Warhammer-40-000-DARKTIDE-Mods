@@ -1,0 +1,15 @@
+mod=ScanHelper
+repo_directory=ScanHelper
+nexus_id=657
+nexus_url=https://www.nexusmods.com/warhammer40kdarktide/mods/657
+nexus_last_updated=23 July 2026, 6:00PM
+nexus_page_version=1
+version=1.0
+main_file_uploaded_at_utc=2026-07-23T18:00:00Z
+generated_at=2026-08-25T19:54:24.4796699+08:00
+maintenance_date=2026-08-25
+timezone=Asia/Taipei
+algorithm=SHA-256
+sha256=94a14ef7e79f32fbc583a85154b8b1585eed2516d4278ee5b410faf0356e3604
+size_bytes=2430
+filename=ScanHelper 657 1 2026-07-23T18-00Z 4SVrcSAmj.zip
