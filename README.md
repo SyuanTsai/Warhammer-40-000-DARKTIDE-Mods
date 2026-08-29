@@ -383,8 +383,10 @@
 
 ### [Ovenproof's Scoreboard Plugin - Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/514)
     記分板排版工具
-- MOD 網站最後更新日期：Last updated 13 August 2026, 2:13PM
-- MOD 版本：1.13.8
+- MOD 網站最後更新日期：Last updated 11 April 2026, 4:45PM
+- MOD 版本：1.4.2
+- Patch 網站最後更新日期：Last updated 13 August 2026, 2:13PM
+- Patch 版本：1.13.8
 - MOD 檔案名稱：Ovenproof's Scoreboard Plugin - Community Patch 514 1.13.8 2026-08-13T06-13Z SDWlwDVjZ.zip
 - 手動維護最後下載日期：2026-08-29
 - GitHub :
