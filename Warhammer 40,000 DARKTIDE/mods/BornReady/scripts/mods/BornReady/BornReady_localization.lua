@@ -13,6 +13,7 @@ return {
 	},
 	leave_party = {
 		en = Localize("loc_social_menu_leave_party"),
+		["zh-tw"] = "離開小隊",
 	},
 	autoready = {
 		en = "Ready up in lobby",
