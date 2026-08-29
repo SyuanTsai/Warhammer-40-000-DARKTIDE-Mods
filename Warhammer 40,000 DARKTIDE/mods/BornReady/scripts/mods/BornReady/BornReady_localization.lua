@@ -7,6 +7,7 @@ return {
 	},
 	mod_description = {
 		en = "Options to auto-accept matchmaking, lobbies, and party invites.",
+		["zh-cn"] = "提供选项自动接受匹配、任务准备和小队邀请。",
 		["zh-tw"] = "提供自動接受配對、大廳和小隊邀請的選項。",
 		ru = "Born Ready - Опции автовыбора в подборе, лобби и при приглашениях в группу.",
 	},
@@ -21,15 +22,15 @@ return {
 	},
 	autoskip = {
 		en = "Automatically skip",
-		["zh-cn"] = "跳过任务结束界面",
+		["zh-cn"] = "自动跳过",
+		ru = "Пропускать экран наград",
 		["zh-tw"] = "自動跳過任務結算",
-		ru = "Пропустить экран окончания миссии",
 	},
 	end_skip_time = {
 		en = "Delay (seconds)",
-		["zh-cn"] = "跳过任务结束延迟（秒）",
+		["zh-cn"] = "延迟（秒）",
+		ru = "Задержка перед пропуском экрана наград (сек)",
 		["zh-tw"] = "延遲（秒）",
-		ru = "Задержка перед пропуском экрана окончания миссии (сек)",
 	},
 	automatch = {
 		en = "Accept mission prompt",
@@ -64,8 +65,8 @@ return {
 	auto_no = {
 		en = "Automatically Decline",
 		["zh-cn"] = "自动拒绝",
-		["zh-tw"] = "自動拒絕",
 		ru = "Автоматически отклонять",
+		["zh-tw"] = "自動拒絕",
 	},
 	eom_skip = {
 		en = Localize("loc_item_type_end_of_round"),
@@ -73,18 +74,26 @@ return {
 	},
 	eom_skip_now_kb = {
 		en = "Skip Now",
+		["zh-cn"] = "立即跳过",
+		ru = "Пропустить сейчас",
 		["zh-tw"] = "立即跳過",
 	},
 	eom_cancel_chat = {
 		en = "Chat cancels skip",
+		["zh-cn"] = "聊天取消跳过",
+		ru = "Чат отменяет пропуск экрана наград",
 		["zh-tw"] = "聊天時取消跳過",
 	},
 	eom_cancel_kb = {
 		en = "Cancel Current Skip",
+		["zh-cn"] = "取消这次跳过",
+		ru = "Отменить текущий пропуск",
 		["zh-tw"] = "取消目前的跳過",
 	},
 	msg_eom_cancel = {
 		en = "End-of-mission autoskip cancelled",
+		["zh-cn"] = "已取消任务结束自动跳过",
+		ru = "Автопропуск экрана наград отменён",
 		["zh-tw"] = "任務結束自動跳過已取消",
 	},
 }
