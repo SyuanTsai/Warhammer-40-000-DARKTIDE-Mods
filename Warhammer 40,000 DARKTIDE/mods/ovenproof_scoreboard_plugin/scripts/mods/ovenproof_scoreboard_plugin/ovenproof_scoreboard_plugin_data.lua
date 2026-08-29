@@ -106,6 +106,7 @@ local data_and_widgets = {
 					},
 				},
 			},
+			--[[
 			{	setting_id 		= "custom_row_categorization",
 				type 			= "group",
 				sub_widgets		= {
@@ -131,6 +132,7 @@ local data_and_widgets = {
 					},
 				},
 			},
+			]]
 			{	setting_id 		= "exploration_tracking_group",
 				type 			= "group",
 				sub_widgets		= {
