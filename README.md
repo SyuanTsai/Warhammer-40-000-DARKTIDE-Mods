@@ -381,13 +381,15 @@
 - MOD 檔案名稱：Improved Havoc Tags-500-2-3-1750873657
 - 手動維護最後下載日期：2025-10-01
 
-### [Ovenproof's Scoreboard Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/241)
+### [Ovenproof's Scoreboard Plugin - Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/514)
     記分板排版工具
+- 原版 MOD：[Ovenproof's Scoreboard Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/241)
 - MOD 網站最後更新日期：Last updated 11 April 2026, 4:45PM
 - MOD 版本：1.4.2
-- Patch 版本：1.11.1
-- MOD 檔案名稱：Ovenproof's Scoreboard Plugin - Community Patch-514-1-11-1-1775897120
-- 手動維護最後下載日期：2026-05-17
+- Patch 網站最後更新日期：Last updated 13 August 2026, 2:13PM
+- Patch 版本：1.13.8
+- MOD 檔案名稱：Ovenproof's Scoreboard Plugin - Community Patch 514 1.13.8 2026-08-13T06-13Z SDWlwDVjZ.zip
+- 手動維護最後下載日期：2026-08-29
 - GitHub :
 - Source=>  https://github.com/Backup158/DarktideOvenproofScoreboardPluginPatch
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mods-OvenproofScoreboardPluginPatch
