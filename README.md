@@ -9,13 +9,23 @@
 - MOD 檔案名稱：Darktide Mod Loader-19-25-09-23-1758623959
 - 手動維護最後下載日期：2025-09-30
 
-### [Darktide Mod Framework](https://www.nexusmods.com/warhammer40kdarktide/mods/8?tab=descriptionn)
+### [Darktide Mod Framework](https://www.nexusmods.com/warhammer40kdarktide/mods/8)
     MOD框架 - 想要使用MOD必備，此MOD才能夠讓你開始加入其他的MOD
-- MOD 網站最後更新日期：Last updated 03 December 2025, 8:21AM
-- MOD 版本：Version 25.12.02
-- MOD 檔案名稱：Darktide Mod Framework-8-25-12-02-1764721271
-- 手動維護最後下載日期：2025-12-06
-
+- MOD 網站最後更新日期：Last updated 20 August 2026, 5:00AM
+- MOD 版本：Version 26.08.19
+- MOD 檔案名稱：Darktide Mod Framework 8 26.08.19 2026-08-19T21-00Z L8cAq8xWz.zip
+- 手動維護最後下載日期：2026-08-29
+- Nexus MOD ID: `8`
+- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/8`
+- Nexus page version: `26.08.19`
+- Nexus last updated: `2026-08-19T21:00:31.0000000+00:00`
+- Main file ID: `7495`
+- Main file version: `26.08.19`
+- Main file uploaded at UTC: `2026-08-19T21:00:31.0000000+00:00`
+- Archive filename: `Darktide Mod Framework 8 26.08.19 2026-08-19T21-00Z L8cAq8xWz.zip`
+- Archive size bytes: `138966`
+- Archive SHA-256: `b31cdfb6b31bd602a0c196195c13373c1c3ab2044f02643d23e7a4c02cb91cd5`
+- Acquisition method: `manual-queue`
 ---
 # 遊戲體驗改善
 

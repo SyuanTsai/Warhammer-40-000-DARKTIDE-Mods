@@ -1,0 +1,17 @@
+mod=Darktide Mod Framework
+repo_directory=dmf
+nexus_id=8
+nexus_url=https://www.nexusmods.com/warhammer40kdarktide/mods/8
+nexus_last_updated=2026-08-19T21:00:31.0000000+00:00
+nexus_page_version=26.08.19
+version=26.08.19
+main_file_id=7495
+main_file_uploaded_at_utc=2026-08-19T21:00:31.0000000+00:00
+acquisition_method=manual-queue
+generated_at=2026-08-29T08:51:34+08:00
+maintenance_date=2026-08-29
+timezone=Asia/Taipei
+algorithm=SHA-256
+sha256=b31cdfb6b31bd602a0c196195c13373c1c3ab2044f02643d23e7a4c02cb91cd5
+size_bytes=138966
+filename=Darktide Mod Framework 8 26.08.19 2026-08-19T21-00Z L8cAq8xWz.zip
