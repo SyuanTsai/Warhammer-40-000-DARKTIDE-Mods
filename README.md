@@ -462,10 +462,21 @@
 
 ### [BornReady](https://www.nexusmods.com/warhammer40kdarktide/mods/96)
     預先載入
-- MOD 網站最後更新日期：Last updated 26 August 2024, 8:39AM
-- MOD 版本：1.6
-- MOD 檔案名稱：BornReady-96-1-6-1724632773
-- 手動維護最後下載日期：2025-07-23
+- MOD 網站最後更新日期：Last updated 24 August 2026, 5:04AM
+- MOD 版本：1.7
+- MOD 檔案名稱：BornReady 96 1.7 2026-08-23T21-04Z mz1PFzZkA.zip
+- 手動維護最後下載日期：2026-08-30
+- Nexus MOD ID: `96`
+- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/96`
+- Nexus page version: `1.7`
+- Nexus last updated: `2026-08-23T21:04:00.0000000+00:00`
+- Main file ID: `7660`
+- Main file version: `1.7`
+- Main file uploaded at UTC: `2026-08-23T21:04:00.0000000+00:00`
+- Archive filename: `BornReady 96 1.7 2026-08-23T21-04Z mz1PFzZkA.zip`
+- Archive size bytes: `4907`
+- Archive SHA-256: `e3e378ea6be5aa4cb6a5bdc0cba77bd331cda73ab0ed13cf28fb81478bf9a005`
+- Acquisition method: `manual-queue`
 
 ### [MissionBrief](https://www.nexusmods.com/warhammer40kdarktide/mods/387)
     預先載入
