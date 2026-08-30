@@ -494,10 +494,21 @@
 
 ### [InventoryStats](https://www.nexusmods.com/warhammer40kdarktide/mods/152)
     玩家Build資訊
-- MOD 網站最後更新日期：Last updated 17 November 2025, 8:09PM
-- MOD 版本：1.9
-- MOD 檔案名稱：InventoryStats-152-1-8-1758663470
-- 手動維護最後下載日期：2025-10-01
+- MOD 網站最後更新日期：Last updated 24 August 2026, 5:04AM
+- MOD 版本：1.10
+- MOD 檔案名稱：InventoryStats 152 1.10 2026-08-23T21-04Z 8bwV4bcyi.zip
+- 手動維護最後下載日期：2026-08-30
+- Nexus MOD ID: 152
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/152
+- Nexus page version: 1.10
+- Nexus last updated: 2026-08-23T21:04:00.0000000+00:00
+- Main file ID: 7666
+- Main file version: 1.10
+- Main file uploaded at UTC: 2026-08-23T21:04:00.0000000+00:00
+- Archive filename: InventoryStats 152 1.10 2026-08-23T21-04Z 8bwV4bcyi.zip
+- Archive size bytes: 11992
+- Archive SHA-256: 890be47e0ad91200386b8b4cb6eaa5a11daffb1aa411cccef88bcd0880274e16
+- Acquisition method: manual-queue
 
 ### [Clear Smoke](https://www.nexusmods.com/warhammer40kdarktide/mods/517)
     煙霧輔助
