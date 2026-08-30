@@ -69,6 +69,7 @@ return {
 	},
 	toughness = {
 		en = Localize("loc_hud_display_name_toughness"),
+		["zh-tw"] = "韌性",
 	},
 	tough_regen_delay = {
 		en = "T. Regen Delay",
@@ -92,6 +93,7 @@ return {
 	},
 	stamina = {
 		en = Localize("loc_hud_display_name_stamina"),
+		["zh-tw"] = "體力",
 	},
 	stamina_regen = {
 		en = Localize("loc_hud_display_name_stamina") .. " Regen",
