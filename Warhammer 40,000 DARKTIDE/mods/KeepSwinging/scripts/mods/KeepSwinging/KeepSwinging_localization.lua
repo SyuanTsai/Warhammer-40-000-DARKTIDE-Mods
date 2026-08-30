@@ -91,18 +91,14 @@ return {
 	},
 	include_melee_primary = {
 		en = Localize("loc_item_type_weapon_melee") .. " " .. Localize("loc_weapon_action_title_light"),
-		["zh-tw"] = Localize("loc_item_type_weapon_melee") .. " " .. Localize("loc_weapon_action_title_light"),
 	},
 	include_melee_specials = {
 		en = Localize("loc_item_type_weapon_melee") .. " " .. Localize("loc_weapon_action_title_special"),
-		["zh-tw"] = Localize("loc_item_type_weapon_melee") .. " " .. Localize("loc_weapon_action_title_special"),
 	},
 	include_gauntlets = {
 		en = Localize("loc_weapon_pattern_name_ogryn_gauntlet_p1") .. " " .. Localize("loc_weapon_action_title_light"),
-		["zh-tw"] = Localize("loc_weapon_pattern_name_ogryn_gauntlet_p1") .. " " .. Localize("loc_weapon_action_title_light"),
 	},
 	include_ranged_specials = {
 		en = Localize("loc_item_type_weapon_ranged") .. " " .. Localize("loc_weapon_special_weapon_bash"),
-		["zh-tw"] = Localize("loc_item_type_weapon_ranged") .. " " .. Localize("loc_weapon_special_weapon_bash"),
 	},
 }
