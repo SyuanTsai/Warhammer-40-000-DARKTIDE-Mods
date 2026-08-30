@@ -11,6 +11,9 @@
 - Toughness - 韌性
 - Coherency - 協同
 - Blitz - 閃擊
+- Companion 
+  - 電子獒犬，當MOD只支援法務官描述時
+  - 支援單位，支援電子獒犬與顱骨。
 
 ### MOD
 #### MOD名稱
