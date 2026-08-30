@@ -750,10 +750,17 @@
 
 ### [Auto Mark](https://www.nexusmods.com/warhammer40kdarktide/mods/736)
     自動標記 (非狗哨)
-- MOD 網站最後更新日期：Last updated 19 August 2026, 11:32PM
-- MOD 版本：2.5.0
-- MOD 檔案名稱：AutoMark 736 2.5.0 2026-08-19T15-32Z txMvExeB6.zip
-- 手動維護最後下載日期：2026-08-20
+- Nexus MOD ID: 736
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/736
+- Nexus page version: 2.5.1
+- Nexus last updated: 2026-08-20T13:05:54.0000000+00:00
+- Main file ID: 7544
+- Main file version: 2.5.1
+- Main file uploaded at UTC: 2026-08-20T13:05:54.0000000+00:00
+- Archive filename: AutoMark 736 2.5.1 2026-08-20T13-05Z QHh61HP4x.zip
+- Archive size bytes: 46076
+- Archive SHA-256: 403e47f41ee7b68227c08c57195d3afdd130505749c6ba74186b62901687e20e
+- Acquisition method: manual-queue
 
 ### [SMOG Cleaner](https://www.nexusmods.com/warhammer40kdarktide/mods/847)
     記憶體管理
