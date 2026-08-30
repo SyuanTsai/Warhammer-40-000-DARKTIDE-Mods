@@ -78,7 +78,7 @@ local localization = {
             "设置为" .. highlight("按一次") ..
             "时，此功能变为普通敌人标记。",
         ["zh-tw"] = "電子獒犬標記專用按鍵，身為法務官，你現在可同時使用一般敵人標記與電子獒犬標記。\n\n" ..
-            "當" .. highlight("電子獒犬目標標記") ..
+            "當" .. highlight("支援單位目標標記") ..
             "設為" .. highlight("按一次") ..
             "時，此功能會變為一般敵人標記。",
     },
@@ -110,7 +110,7 @@ local localization = {
     threat_priority_tooltip = {
         en = "When enabled, Companion Auto-Mark prioritizes enemies targeting the player.",
         ["zh-cn"] = "开启后，伙伴自动标记将优先标记以玩家为攻击目标的敌人。",
-        ["zh-tw"] = "開啟後，電子獒犬自動標記將優先標記以玩家為攻擊目標的敵人。",
+        ["zh-tw"] = "開啟後，支援單位自動標記將優先標記以玩家為攻擊目標的敵人。",
     },
     execution_order_priority = {
         en = "Execution Order Priority",
@@ -135,14 +135,14 @@ local localization = {
     companion_range_limitation = {
         en = "Companion Range Limitation",
         ["zh-cn"] = "伙伴范围限制",
-        ["zh-tw"] = "電子獒犬範圍限制",
+        ["zh-tw"] = "支援單位範圍限制",
     },
     companion_range_limitation_tooltip = {
         en = "Restrict the maximum distance between your " .. highlight("companion") .. " and a target that can be marked by the Companion Auto-Mark.\n\n" ..
             "Set to " .. highlight("0") .. " to disable.",
         ["zh-cn"] = "限制伙伴自动标记系统可标记的目标与你的" .. highlight("伙伴") .. "之间的最大距离。\n\n" ..
             "设置为" .. highlight("0") .. "以禁用。",
-        ["zh-tw"] = "限制電子獒犬自動標記系統可標記的目標與你的" .. highlight("電子獒犬") .. "之間的最大距離。\n\n" ..
+        ["zh-tw"] = "限制支援單位自動標記系統可標記的目標與你的" .. highlight("支援單位") .. "之間的最大距離。\n\n" ..
             "設為" .. highlight("0") .. "可停用",
     },
     companion_cancel_mark = {
@@ -291,7 +291,7 @@ local localization = {
             "Set to " .. highlight("0") .. " to disable.",
         ["zh-cn"] = "限制伙伴自动标记系统可标记的目标与" .. highlight("玩家") .. "之间的最大距离。\n\n" ..
             "设置为" .. highlight("0") .. "以禁用。",
-        ["zh-tw"] = "限制電子獒犬自動標記系統可標記的目標與" .. highlight("玩家") .. "之間的最大距離。\n\n" ..
+        ["zh-tw"] = "限制支援單位自動標記系統可標記的目標與" .. highlight("玩家") .. "之間的最大距離。\n\n" ..
             "設為" .. highlight("0") .. "可停用",
     },
     -- cryptic settings
