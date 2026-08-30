@@ -334,10 +334,21 @@
 
 ### [LoadoutNames](https://www.nexusmods.com/warhammer40kdarktide/mods/286)
     替天賦命名。
-- MOD 網站最後更新日期：Last updated 25 June 2025, 7:07AM
-- MOD 版本：1.6
-- MOD 檔案名稱：Loadoutnames-286-1-6-1750806423.
-- 手動維護最後下載日期：2025-06-25
+- MOD 網站最後更新日期：Last updated 24 August 2026, 5:04AM
+- MOD 版本：1.7
+- MOD 檔案名稱：LoadoutNames 286 1.7 2026-08-23T21-04Z amZIYmRwQ.zip
+- 手動維護最後下載日期：2026-08-30
+- Nexus MOD ID: 286
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/286
+- Nexus page version: 1.7
+- Nexus last updated: 2026-08-23T21:04:00.0000000+00:00
+- Main file ID: 7667
+- Main file version: 1.7
+- Main file uploaded at UTC: 2026-08-23T21:04:00.0000000+00:00
+- Archive filename: LoadoutNames 286 1.7 2026-08-23T21-04Z amZIYmRwQ.zip
+- Archive size bytes: 4844
+- Archive SHA-256: b89c0efa01b75c1b8487ff048cad13d810d7173c50b7934286a05cedb84f3e98
+- Acquisition method: manual-queue
 
 ### [Guarantee Ability Activation](https://www.nexusmods.com/warhammer40kdarktide/mods/336)
     防止取消大絕

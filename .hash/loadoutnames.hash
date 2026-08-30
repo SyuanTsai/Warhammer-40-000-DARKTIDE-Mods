@@ -1,0 +1,17 @@
+mod=LoadoutNames
+repo_directory=LoadoutNames
+nexus_id=286
+nexus_url=https://www.nexusmods.com/warhammer40kdarktide/mods/286
+nexus_last_updated=2026-08-23T21:04:00.0000000+00:00
+nexus_page_version=1.7
+main_file_id=7667
+version=1.7
+main_file_uploaded_at_utc=2026-08-23T21:04:00.0000000+00:00
+generated_at=2026-08-30T22:46:00+08:00
+maintenance_date=2026-08-30
+timezone=Asia/Taipei
+algorithm=SHA-256
+sha256=b89c0efa01b75c1b8487ff048cad13d810d7173c50b7934286a05cedb84f3e98
+size_bytes=4844
+filename=LoadoutNames 286 1.7 2026-08-23T21-04Z amZIYmRwQ.zip
+acquisition_method=manual-queue
