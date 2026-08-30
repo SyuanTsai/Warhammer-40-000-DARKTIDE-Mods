@@ -653,21 +653,10 @@
 
 ### [KeepSwinging](https://www.nexusmods.com/warhammer40kdarktide/mods/88)
     自動輕擊
-- MOD 網站最後更新日期：Last updated 24 August 2026, 5:05AM
-- MOD 版本：1.13
-- MOD 檔案名稱：KeepSwinging 88 1.13 2026-08-23T21-05Z iYOupY3AS.zip
-- 手動維護最後下載日期：2026-08-30
-- Nexus MOD ID: 88
-- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/88
-- Nexus page version: 1.13
-- Nexus last updated: 2026-08-23T21:05:00.0000000+00:00
-- Main file ID: 7686
-- Main file version: 1.13
-- Main file uploaded at UTC: 2026-08-23T21:05:00.0000000+00:00
-- Archive filename: KeepSwinging 88 1.13 2026-08-23T21-05Z iYOupY3AS.zip
-- Archive size bytes: 7190
-- Archive SHA-256: eb5ad82b750023bf8bf94c387a34b019bfceca5649cd0c4b96dada79c1a65cee
-- Acquisition method: manual-queue
+- MOD 網站最後更新日期：Last updated 06 July 2026, 2:12AM
+- MOD 版本：1.12
+- MOD 檔案名稱：KeepSwinging 88 1.12 2026-07-05T18-12Z 5gEeTgDA6.zip
+- 手動維護最後下載日期：2026-08-18
 
 ### [TagKeys](https://www.nexusmods.com/warhammer40kdarktide/mods/79)
     使用快捷鍵做遊戲標記
