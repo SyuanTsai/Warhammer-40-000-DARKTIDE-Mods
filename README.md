@@ -649,10 +649,21 @@
 
 ### [TagKeys](https://www.nexusmods.com/warhammer40kdarktide/mods/79)
     使用快捷鍵做遊戲標記
-- MOD 網站最後更新日期：Last updated 08 April 2023 8:12AM
-- MOD 版本：1.3
-- MOD 檔案名稱：TagKeys-79-1-3-1680937957
-- 手動維護最後下載日期：2025-02-24
+- MOD 網站最後更新日期：Last updated 24 August 2026, 5:04AM
+- MOD 版本：1.5
+- MOD 檔案名稱：TagKeys 79 1.5 2026-08-23T21-04Z SDWlwDVU0.zip
+- 手動維護最後下載日期：2026-08-30
+- Nexus MOD ID: 79
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/79
+- Nexus page version: 1.5
+- Nexus last updated: 2026-08-23T21:04:00.0000000+00:00
+- Main file ID: 7680
+- Main file version: 1.5
+- Main file uploaded at UTC: 2026-08-23T21:04:00.0000000+00:00
+- Archive filename: TagKeys 79 1.5 2026-08-23T21-04Z SDWlwDVU0.zip
+- Archive size bytes: 3598
+- Archive SHA-256: 012d85772379bbc9006abff5c609dbd9945628a6827ef9919abd3ace5b6cd195
+- Acquisition method: manual-queue
 
 ### [Weapon Filter](https://www.nexusmods.com/warhammer40kdarktide/mods/373)
     武器過濾
