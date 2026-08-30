@@ -480,10 +480,21 @@
 
 ### [MissionBrief](https://www.nexusmods.com/warhammer40kdarktide/mods/387)
     預先載入
-- MOD 網站最後更新日期：Last updated 24 March 2026, 6:59AM
-- MOD 版本：1.9
-- MOD 檔案名稱：MissionBrief-387-1-9-1774306770
-- 手動維護最後下載日期：2026-03-29
+- MOD 網站最後更新日期：Last updated 24 August 2026, 5:04AM
+- MOD 版本：1.12
+- MOD 檔案名稱：MissionBrief 387 1.12 2026-08-23T21-04Z 8bwV4bcyz.zip
+- 手動維護最後下載日期：2026-08-30
+- Nexus MOD ID: 387
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/387
+- Nexus page version: 1.12
+- Nexus last updated: 2026-08-23T21:04:00.0000000+00:00
+- Main file ID: 7670
+- Main file version: 1.12
+- Main file uploaded at UTC: 2026-08-23T21:04:00.0000000+00:00
+- Archive filename: MissionBrief 387 1.12 2026-08-23T21-04Z 8bwV4bcyz.zip
+- Archive size bytes: 8049
+- Archive SHA-256: f0f404f76f949c94840817256a220fd9d9596a28a9792f72058eee93acf15627
+- Acquisition method: manual-queue
 
 ### [Uptime](https://www.nexusmods.com/warhammer40kdarktide/mods/573)
     觀察天賦的運作狀況
