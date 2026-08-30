@@ -1,0 +1,17 @@
+mod=TagKeys
+repo_directory=TagKeys
+nexus_id=79
+nexus_url=https://www.nexusmods.com/warhammer40kdarktide/mods/79
+nexus_last_updated=2026-08-23T21:04:00.0000000+00:00
+nexus_page_version=1.5
+main_file_id=7680
+version=1.5
+main_file_uploaded_at_utc=2026-08-23T21:04:00.0000000+00:00
+generated_at=2026-08-30T18:37:53.7797735+08:00
+maintenance_date=2026-08-30
+timezone=Asia/Taipei
+algorithm=SHA-256
+sha256=012d85772379bbc9006abff5c609dbd9945628a6827ef9919abd3ace5b6cd195
+size_bytes=3598
+filename=TagKeys 79 1.5 2026-08-23T21-04Z SDWlwDVU0.zip
+acquisition_method=manual-queue
