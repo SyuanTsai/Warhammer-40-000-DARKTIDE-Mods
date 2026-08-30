@@ -1082,7 +1082,7 @@ local localization = {
     row_total_companion = {
         en = {left = "Total Companion", right = right_hand_localizations.kill_damage["en"],},
         ru = {left = "Полный компаньон", right = right_hand_localizations.kill_damage["ru"],},
-        ["zh-tw"] = { left = "總電子獒犬", right = right_hand_localizations.kill_damage["zh-tw"],},
+        ["zh-tw"] = { left = "支援單位", right = right_hand_localizations.kill_damage["zh-tw"],},
         ["zh-cn"] = {left = "完全同伴", right = right_hand_localizations.kill_damage["zh-cn"],},
         ["pt-br"] = {left = "Total Companheiro", right = right_hand_localizations.kill_damage["pt-br"]},
     },
