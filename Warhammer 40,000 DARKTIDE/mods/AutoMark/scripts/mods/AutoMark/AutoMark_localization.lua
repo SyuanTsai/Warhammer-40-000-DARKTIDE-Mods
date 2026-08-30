@@ -24,7 +24,7 @@ local localization = {
     mod_name = {
         en = "Auto Mark",
         ["zh-cn"] = "智能标记",
-        ["zh-tw"] = "自動標記",
+        ["zh-tw"] = "智慧標記",
     },
     mod_description = {
         en = "Enhance your marking experience",
@@ -78,7 +78,7 @@ local localization = {
             "设置为" .. highlight("按一次") ..
             "时，此功能变为普通敌人标记。",
         ["zh-tw"] = "電子獒犬標記專用按鍵，身為法務官，你現在可同時使用一般敵人標記與電子獒犬標記。\n\n" ..
-            "當" .. highlight("輔助單位標記方式") ..
+            "當" .. highlight("同伴目標標記方式") ..
             "設為" .. highlight("按一次") ..
             "時，此功能會變為一般敵人標記。",
     },
@@ -100,7 +100,7 @@ local localization = {
     companion_mark_tagged_always_visible_description = {
         en = "When enabled, targets marked by any mark or chosen by Execution Order are always treated as visible by Cyber-Mastiff AUTO-MARK.",
         ["zh-cn"] = "开启后，被任意标记或处决指令选中的目标，智能獒犬自动标记将始终视其为可见。",
-        ["zh-tw"] = "開啟後，被任意標記或處刑命令選中的目標，智慧獒犬自動標記將始終視其為可見。",
+        ["zh-tw"] = "開啟後，被任意標記或處決指令選中的目標，智慧獒犬自動標記將始終視其為可見。",
     },
     threat_priority = {
         en = "Threat Priority",
@@ -110,39 +110,39 @@ local localization = {
     threat_priority_tooltip = {
         en = "When enabled, Companion Auto-Mark prioritizes enemies targeting the player.",
         ["zh-cn"] = "开启后，伙伴自动标记将优先标记以玩家为攻击目标的敌人。",
-        ["zh-tw"] = "開啟後，輔助單位自動標記將優先標記以玩家為攻擊目標的敵人。",
+        ["zh-tw"] = "開啟後，同伴自動標記將優先標記以玩家為攻擊目標的敵人。",
     },
     execution_order_priority = {
         en = "Execution Order Priority",
         ["zh-cn"] = "遵从处决指令",
-        ["zh-tw"] = "處刑命令優先順序",
+        ["zh-tw"] = "遵從處決指令",
     },
     execution_order_priority_description = {
         en = "Arbites Cyber-Mastiff Auto-Mark prioritizes enemies chosen by Execution Order.",
         ["zh-cn"] = "遵从处决指令的选择，法务官智能獒犬自动标记将优先标记已被处决指令选中的敌人。",
-        ["zh-tw"] = "遵從處刑命令的選擇，法務官電子獒犬自動標記將優先標記已被處刑命令選中的敵人。",
+        ["zh-tw"] = "遵從處決指令的選擇，法務官電子獒犬自動標記將優先標記已被處決指令選中的敵人。",
     },
     execution_order_force_mark = {
         en = "Execution Order Force Mark",
         ["zh-cn"] = "处决指令强制标记",
-        ["zh-tw"] = "處刑命令強制標記",
+        ["zh-tw"] = "處決指令強制標記",
     },
     execution_order_force_mark_description = {
         en = "When enabled, targets chosen by Execution Order can be auto marked by Cyber-Mastiff even if their enemy type is set to ignored in priority settings.",
         ["zh-cn"] = "开启后，处决指令选中的目标，即便其敌人类型在优先级设置中被设为忽略，仍可被智能獒犬自动标记。",
-        ["zh-tw"] = "開啟後，處刑命令選中的目標，即便其敵人類型在優先度設定中被設為忽略，仍可被電子獒犬自動標記。",
+        ["zh-tw"] = "開啟後，處決指令選中的目標，即便其敵人類型在優先度設定中被設為忽略，仍可被電子獒犬自動標記。",
     },
     companion_range_limitation = {
         en = "Companion Range Limitation",
         ["zh-cn"] = "伙伴范围限制",
-        ["zh-tw"] = "輔助單位範圍限制",
+        ["zh-tw"] = "伙伴範圍限制",
     },
     companion_range_limitation_tooltip = {
         en = "Restrict the maximum distance between your " .. highlight("companion") .. " and a target that can be marked by the Companion Auto-Mark.\n\n" ..
             "Set to " .. highlight("0") .. " to disable.",
         ["zh-cn"] = "限制伙伴自动标记系统可标记的目标与你的" .. highlight("伙伴") .. "之间的最大距离。\n\n" ..
             "设置为" .. highlight("0") .. "以禁用。",
-        ["zh-tw"] = "限制輔助單位自動標記系統可標記的目標與你的" .. highlight("輔助單位") .. "之間的最大距離。\n\n" ..
+        ["zh-tw"] = "限制同伴自動標記系統可標記的目標與你的" .. highlight("同伴") .. "之間的最大距離。\n\n" ..
             "設為" .. highlight("0") .. "可停用",
     },
     companion_cancel_mark = {
@@ -291,7 +291,7 @@ local localization = {
             "Set to " .. highlight("0") .. " to disable.",
         ["zh-cn"] = "限制伙伴自动标记系统可标记的目标与" .. highlight("玩家") .. "之间的最大距离。\n\n" ..
             "设置为" .. highlight("0") .. "以禁用。",
-        ["zh-tw"] = "限制輔助單位自動標記系統可標記的目標與" .. highlight("玩家") .. "之間的最大距離。\n\n" ..
+        ["zh-tw"] = "限制同伴自動標記系統可標記的目標與" .. highlight("玩家") .. "之間的最大距離。\n\n" ..
             "設為" .. highlight("0") .. "可停用",
     },
     -- cryptic settings
@@ -311,7 +311,7 @@ local localization = {
         ["zh-cn"] = "伺服颅骨标记专用按键，现在你可以作为护教军，同时使用普通敌人标记和伺服颅骨标记了。\n\n" ..
             "当" .. highlight("伙伴目标标记") .. "设置为" .. highlight("按一次") .. "时，此功能变为普通敌人标记。",
         ["zh-tw"] = "伺服顱骨標記專用按鍵。身為護教軍，你現在可同時使用一般敵人標記與伺服顱骨標記。\n\n" ..
-            "當" .. highlight("輔助單位標記方式") .. "設為" .. highlight("按一次") .. "時，此功能會變為一般敵人標記。",
+            "當" .. highlight("同伴目標標記方式") .. "設為" .. highlight("按一次") .. "時，此功能會變為一般敵人標記。",
     },
     servo_skull_mark_ignore_unaggroed_description = {
         en = "When enabled, Servo-Skull Auto-Mark will not mark enemies that are not alerted.",
