@@ -1,0 +1,17 @@
+mod=InventoryStats
+repo_directory=InventoryStats
+nexus_id=152
+nexus_url=https://www.nexusmods.com/warhammer40kdarktide/mods/152
+nexus_last_updated=2026-08-23T21:04:00.0000000+00:00
+nexus_page_version=1.10
+main_file_id=7666
+version=1.10
+main_file_uploaded_at_utc=2026-08-23T21:04:00.0000000+00:00
+generated_at=2026-08-30T18:27:39.9228149+08:00
+maintenance_date=2026-08-30
+timezone=Asia/Taipei
+algorithm=SHA-256
+sha256=890be47e0ad91200386b8b4cb6eaa5a11daffb1aa411cccef88bcd0880274e16
+size_bytes=11992
+filename=InventoryStats 152 1.10 2026-08-23T21-04Z 8bwV4bcyi.zip
+acquisition_method=manual-queue
