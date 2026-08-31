@@ -18,7 +18,7 @@ ru = "Простой очиститель мусора объектов модо
 ["zh-cn"] = "适用于 %s Lua 堆的简单模组对象垃圾清理器",
 es = "Limpiador sencillo de objetos basura de mods para tu heap de Lua de %s",
 ja = "%sのLuaヒープ向けModオブジェクト不要データ簡易クリーナー",
-["zh-tw"] = "適用於 %s 大小 Lua 堆積記憶體的簡易模組物件垃圾清理器",
+["zh-tw"] = "快速清理 MOD 佔據的閒置記憶體，適用於大小為 %s 的 Lua 記憶體",
 },
 mod_description_manual = {
 en = "Type {#color(255,191,0)}/smog{#reset()} or use the keybind to perform manually",
@@ -28,7 +28,7 @@ ru = "Введите {#color(255,191,0)}/smog{#reset()} или использу�
 ["zh-cn"] = "输入 {#color(255,191,0)}/smog{#reset()} 或使用按键绑定手动执行清理",
 es = "Escribe {#color(255,191,0)}/smog{#reset()} o usa la tecla asignada para realizar la limpieza manualmente",
 ja = "{#color(255,191,0)}/smog{#reset()} と入力するか、キー割り当てを使用して手動でクリーンアップします",
-["zh-tw"] = "輸入 {#color(255,191,0)}/smog{#reset()} 或使用快捷鍵手動執行",
+["zh-tw"] = "輸入 {#color(255,191,0)}/smog{#reset()} 或使用快捷鍵，即可手動執行清理",
 },
 cleaning_permitted = {
 en = "Cleaning permitted",
@@ -48,7 +48,7 @@ ru = "{#color(93,101,50)}Отключите, чтобы запретить оч�
 ["zh-cn"] = "{#color(93,101,50)}关闭后将停止清理；HUD 仍会正常工作。{#reset()}",
 es = "{#color(93,101,50)}Desactívalo para impedir la limpieza; el HUD seguirá funcionando.{#reset()}",
 ja = "{#color(93,101,50)}オフにするとクリーンアップを停止します。HUDは引き続き動作します。{#reset()}",
-["zh-tw"] = "{#color(93,101,50)}關閉可防止清理；HUD 仍會運作。{#reset()}",
+["zh-tw"] = "{#color(93,101,50)}停用即可停止清理；HUD 仍會正常運作。{#reset()}",
 },
 auto_clean_on_start = {
 en = "Clean at convenient moments",
@@ -128,7 +128,7 @@ ru = "{#color(93,101,50)}Нажмите один раз, чтобы включи
 ["zh-cn"] = "{#color(93,101,50)}按一次开关 HUD，重复按可循环切换 HUD 样式{#reset()}",
 es = "{#color(93,101,50)}Pulsa una vez para activar o desactivar el HUD, repetidamente para alternar entre diseños del HUD{#reset()}",
 ja = "{#color(93,101,50)}1回押すとHUDをオン/オフ、繰り返し押すとHUDデザインを切り替えます{#reset()}",
-["zh-tw"] = "{#color(93,101,50)}按一次可切換 HUD 顯示；連續按下可循環切換 HUD 樣式{#reset()}",
+["zh-tw"] = "{#color(93,101,50)}按一下可切換 HUD 顯示；重複按下可循環切換 HUD 樣式{#reset()}",
 },
 hud_x_axis = {
 en = "HUD X Axis",
@@ -158,7 +158,7 @@ ru = "Выберите клавишу для очистки кучи Lua",
 ["zh-cn"] = "选择清理 Lua 堆的按键",
 es = "Elige una tecla para limpiar el heap de Lua",
 ja = "Luaヒープをクリーンアップするキーを選択",
-["zh-tw"] = "選擇清理 Lua 堆積記憶體的按鍵",
+["zh-tw"] = "選擇用來清理 Lua 記憶體的按鍵",
 },
 manual_clear_key_desc = {
 en = "{#color(93,101,50)}Manually trigger a full garbage clean.{#reset()}",
@@ -168,7 +168,7 @@ ru = "{#color(93,101,50)}Вручную запускает полную очис
 ["zh-cn"] = "{#color(93,101,50)}手动触发一次完整的垃圾清理。{#reset()}",
 es = "{#color(93,101,50)}Activa manualmente una limpieza completa de basura.{#reset()}",
 ja = "{#color(93,101,50)}完全なガベージクリーンアップを手動で実行します。{#reset()}",
-["zh-tw"] = "{#color(93,101,50)}手動觸發完整垃圾清理。{#reset()}",
+["zh-tw"] = "{#color(93,101,50)}手動執行記憶體深度清理。{#reset()}",
 },
 notification_y_axis = {
 en = "Notifications - Y Axis",
@@ -188,7 +188,7 @@ ru = "Очистить кучу Lua",
 ["zh-cn"] = "清理 Lua 堆",
 es = "Limpiar el heap de Lua",
 ja = "Luaヒープをクリーンアップ",
-["zh-tw"] = "清理 Lua 堆積記憶體",
+["zh-tw"] = "清理 Lua 記憶體",
 },
 unclean_shutdown = {
 en = "Darktide did not close cleanly last time. SMOG last recorded no memory pressure.",
@@ -198,7 +198,7 @@ ru = "В прошлый раз Darktide завершилась некоррек�
 ["zh-cn"] = "Darktide 上次未正常关闭。SMOG 最后记录时未发现内存压力。",
 es = "Darktide no se cerró correctamente la última vez. SMOG no registró presión de memoria en su último estado.",
 ja = "前回、Darktideは正常に終了しませんでした。SMOGの最終記録ではメモリ圧迫はありませんでした。",
-["zh-tw"] = "黑潮上次未正常關閉。SMOG 最後記錄到沒有記憶體壓力。",
+["zh-tw"] = "黑潮上次未正常關閉，但 SMOG 當時未偵測到記憶體使用量過高。",
 },
 unclean_shutdown_lua = {
 en = "Darktide did not close cleanly last time. SMOG last recorded pressure in the Lua heap.",
@@ -208,7 +208,7 @@ ru = "В прошлый раз Darktide завершилась некоррек�
 ["zh-cn"] = "Darktide 上次未正常关闭。SMOG 最后记录到 Lua 堆存在内存压力。",
 es = "Darktide no se cerró correctamente la última vez. SMOG registró por última vez presión en el heap de Lua.",
 ja = "前回、Darktideは正常に終了しませんでした。SMOGの最終記録ではLuaヒープにメモリ圧迫がありました。",
-["zh-tw"] = "黑潮上次未正常關閉。SMOG 最後記錄到 Lua 堆積記憶體存在壓力。",
+["zh-tw"] = "黑潮上次未正常關閉，SMOG 當時偵測到 Lua 記憶體使用量過高。",
 },
 unclean_shutdown_game = {
 en = "Darktide did not close cleanly last time. SMOG last recorded pressure in Game Memory, not the Lua heap.",
@@ -218,7 +218,7 @@ ru = "В прошлый раз Darktide завершилась некоррек�
 ["zh-cn"] = "Darktide 上次未正常关闭。SMOG 最后记录到游戏整体内存存在压力，而不是 Lua 堆。",
 es = "Darktide no se cerró correctamente la última vez. SMOG registró por última vez presión en la memoria general del juego, no en el heap de Lua.",
 ja = "前回、Darktideは正常に終了しませんでした。SMOGの最終記録ではLuaヒープではなくゲーム全体のメモリに圧迫がありました。",
-["zh-tw"] = "黑潮上次未正常關閉。SMOG 最後記錄到遊戲記憶體存在壓力，而非 Lua 堆積記憶體。",
+["zh-tw"] = "黑潮上次未正常關閉，SMOG 當時偵測到遊戲記憶體使用量過高，問題不在 Lua 記憶體。",
 },
 unclean_shutdown_mixed = {
 en = "Darktide did not close cleanly last time. SMOG last recorded pressure in both the Lua heap and Game Memory.",
@@ -228,7 +228,7 @@ ru = "В прошлый раз Darktide завершилась некоррек�
 ["zh-cn"] = "Darktide 上次未正常关闭。SMOG 最后记录到 Lua 堆和游戏整体内存都存在压力。",
 es = "Darktide no se cerró correctamente la última vez. SMOG registró por última vez presión tanto en el heap de Lua como en la memoria general del juego.",
 ja = "前回、Darktideは正常に終了しませんでした。SMOGの最終記録ではLuaヒープとゲーム全体のメモリの両方に圧迫がありました。",
-["zh-tw"] = "黑潮上次未正常關閉。SMOG 最後記錄到 Lua 堆積記憶體與遊戲記憶體皆存在壓力。",
+["zh-tw"] = "黑潮上次未正常關閉，SMOG 當時偵測到 Lua 記憶體與遊戲記憶體使用量都過高。",
 },
 cleaning_not_permitted = {
 en = "Cleaning not permitted; change in options menu.",
@@ -258,7 +258,7 @@ ru = "Куча Lua продолжает расти после очистки, а
 ["zh-cn"] = "清理后的 Lua 堆仍在增长，而完整清理只能释放很少的内存。已暂停例行完整清理。",
 es = "El heap de Lua sigue aumentando después de la limpieza mientras que una limpieza completa recupera muy poca memoria. Las limpiezas completas rutinarias se han pausado.",
 ja = "クリーンアップ後もLuaヒープが増え続け、完全クリーンアップで解放される量もごくわずかです。定期的な完全クリーンアップを一時停止しました。",
-["zh-tw"] = "清理後 Lua 堆積記憶體仍持續增加，且完整清理幾乎無法回收記憶體。已暫停例行完整清理。",
+["zh-tw"] = "清理後，Lua 記憶體仍持續增加，而深度清理只能回收極少量記憶體。已暫停例行深度清理。",
 },
 routine_cleaning = {
 en = "Routine cleaning...",
@@ -278,7 +278,7 @@ ru = "Куча Lua осталась выше 80%%. Пошаговая очист
 ["zh-cn"] = "Lua 堆仍高于 80%%。正在进行增量清理...",
 es = "El heap de Lua se mantuvo por encima del 80%%. Limpieza incremental...",
 ja = "Luaヒープが80%%を超えたままです。段階的にクリーンアップ中...",
-["zh-tw"] = "堆積記憶體仍高於 80%%。正在進行漸進式清理...",
+["zh-tw"] = "記憶體仍高於 80%%。正在逐步清理...",
 },
 heap_increasing_incremental_cleaning = {
 en = "Heap remained above 80%%. Increasing incremental cleaning.",
@@ -288,7 +288,7 @@ ru = "Куча Lua осталась выше 80%%. Пошаговая очист
 ["zh-cn"] = "Lua 堆仍高于 80%%。正在加强增量清理。",
 es = "El heap de Lua se mantuvo por encima del 80%%. Se aumenta la limpieza incremental.",
 ja = "Luaヒープが80%%を超えたままです。段階的クリーンアップを強化します。",
-["zh-tw"] = "堆積記憶體仍高於 80%%。正在加強漸進式清理。",
+["zh-tw"] = "記憶體仍高於 80%%。正在加快清理速度。",
 },
 heap_now_under_eighty = {
 en = "Now under 80%%.",
@@ -308,7 +308,7 @@ ru = "Куча Lua выросла более чем на 15%% за 30 секун
 ["zh-cn"] = "Lua 堆在 30 秒内增长超过 15%%。正在清理...",
 es = "El heap de Lua aumentó más de un 15%% en 30 segundos. Limpiando...",
 ja = "Luaヒープが30秒間で15%%を超えて増加しました。クリーンアップ中...",
-["zh-tw"] = "堆積記憶體在 30 秒內暴增超過 15%%。正在清理...",
+["zh-tw"] = "記憶體在 30 秒內增加超過 15%%。正在清理...",
 },
 heap_reached_ninety = {
 en = "Heap reached 90%%. Cleaning automatically...",
@@ -318,7 +318,7 @@ ru = "Куча Lua достигла 90%%. Автоматическая очис�
 ["zh-cn"] = "Lua 堆已达到 90%%。正在自动清理...",
 es = "El heap de Lua alcanzó el 90%%. Limpieza automática...",
 ja = "Luaヒープが90%%に達しました。自動クリーンアップ中...",
-["zh-tw"] = "堆積記憶體已達 90%%。正在自動清理...",
+["zh-tw"] = "記憶體已達 90%%。正在自動清理...",
 },
 warning_eightyfive_key = {
 en = "Heap above 85%%: press [%s] urgently.",
@@ -328,7 +328,7 @@ ru = "Куча Lua выше 85%%: срочно нажмите [%s].",
 ["zh-cn"] = "Lua 堆高于 85%%：请立即按下 [%s]。",
 es = "Heap de Lua por encima del 85%%: pulsa [%s] urgentemente.",
 ja = "Luaヒープが85%%を超えています。すぐに[%s]を押してください。",
-["zh-tw"] = "堆積記憶體高於 85%%：請立即按下 [%s]。",
+["zh-tw"] = "記憶體高於 85%%：請立即按下 [%s]。",
 },
 warning_eightyfive_command = {
 en = "Heap above 85%%: type /smog urgently.",
@@ -338,7 +338,7 @@ ru = "Куча Lua выше 85%%: срочно введите /smog.",
 ["zh-cn"] = "Lua 堆高于 85%%：请立即输入 /smog。",
 es = "Heap de Lua por encima del 85%%: escribe /smog urgentemente.",
 ja = "Luaヒープが85%%を超えています。すぐに/smogを入力してください。",
-["zh-tw"] = "堆積記憶體高於 85%%：請立即輸入 /smog。",
+["zh-tw"] = "記憶體高於 85%%：請立即輸入 /smog。",
 },
 warning_post_ninety_key = {
 en = "Automatic cleaning did not lower the heap below 80%%: press [%s] urgently.",
@@ -348,7 +348,7 @@ ru = "Автоматическая очистка не снизила кучу L
 ["zh-cn"] = "自动清理未将 Lua 堆降至 80%% 以下：请立即按下 [%s]。",
 es = "La limpieza automática no redujo el heap de Lua por debajo del 80%%: pulsa [%s] urgentemente.",
 ja = "自動クリーンアップでLuaヒープが80%%未満まで下がりませんでした。すぐに[%s]を押してください。",
-["zh-tw"] = "自動清理未能將堆積記憶體降至 80%% 以下：請立即按下 [%s]。",
+["zh-tw"] = "自動清理未能將記憶體降至 80%% 以下：請立即按下 [%s]。",
 },
 warning_post_ninety_command = {
 en = "Automatic cleaning did not lower the heap below 80%%: type /smog urgently.",
@@ -358,7 +358,7 @@ ru = "Автоматическая очистка не снизила кучу L
 ["zh-cn"] = "自动清理未将 Lua 堆降至 80%% 以下：请立即输入 /smog。",
 es = "La limpieza automática no redujo el heap de Lua por debajo del 80%%: escribe /smog urgentemente.",
 ja = "自動クリーンアップでLuaヒープが80%%未満まで下がりませんでした。すぐに/smogを入力してください。",
-["zh-tw"] = "自動清理未能將堆積記憶體降至 80%% 以下：請立即輸入 /smog。",
+["zh-tw"] = "自動清理未能將記憶體降至 80%% 以下：請立即輸入 /smog。",
 },
 warning_ninetyfive_hub_key = {
 en = "You are likely to crash unless you press [%s] or leave the game.",
@@ -368,7 +368,7 @@ ru = "Вероятен сбой, если вы не нажмёте [%s] или �
 ["zh-cn"] = "除非按下 [%s] 或退出游戏，否则很可能会崩溃。",
 es = "Es probable que el juego se bloquee si no pulsas [%s] o sales del juego.",
 ja = "[%s]を押すかゲームを終了しないと、クラッシュする可能性があります。",
-["zh-tw"] = "若不按下 [%s] 或離開遊戲，遊戲很可能會崩潰。",
+["zh-tw"] = "請按下 [%s] 或退出遊戲，否則遊戲很可能會崩潰。",
 },
 warning_ninetyfive_hub_command = {
 en = "You are likely to crash unless you type /smog or leave the game.",
@@ -378,7 +378,7 @@ ru = "Вероятен сбой, если вы не введёте /smog или 
 ["zh-cn"] = "除非输入 /smog 或退出游戏，否则很可能会崩溃。",
 es = "Es probable que el juego se bloquee si no escribes /smog o sales del juego.",
 ja = "/smogを入力するかゲームを終了しないと、クラッシュする可能性があります。",
-["zh-tw"] = "若不輸入 /smog 或離開遊戲，遊戲很可能會崩潰。",
+["zh-tw"] = "請輸入 /smog 或退出遊戲，否則遊戲很可能會崩潰。",
 },
 warning_ninetyfive_mission_key = {
 en = "You are likely to crash unless you press [%s] or leave the mission.",
@@ -388,7 +388,7 @@ ru = "Вероятен сбой, если вы не нажмёте [%s] или �
 ["zh-cn"] = "除非按下 [%s] 或离开任务，否则很可能会崩溃。",
 es = "Es probable que el juego se bloquee si no pulsas [%s] o abandonas la misión.",
 ja = "[%s]を押すかミッションを離脱しないと、クラッシュする可能性があります。",
-["zh-tw"] = "若不按下 [%s] 或離開任務，遊戲很可能會崩潰。",
+["zh-tw"] = "請按下 [%s] 或退出任務，否則遊戲很可能會崩潰。",
 },
 warning_ninetyfive_mission_command = {
 en = "You are likely to crash unless you type /smog or leave the mission.",
@@ -398,6 +398,6 @@ ru = "Вероятен сбой, если вы не введёте /smog или 
 ["zh-cn"] = "除非输入 /smog 或离开任务，否则很可能会崩溃。",
 es = "Es probable que el juego se bloquee si no escribes /smog o abandonas la misión.",
 ja = "/smogを入力するかミッションを離脱しないと、クラッシュする可能性があります。",
-["zh-tw"] = "若不輸入 /smog 或離開任務，遊戲很可能會崩潰。",
+["zh-tw"] = "請輸入 /smog 或退出任務，否則遊戲很可能會崩潰。",
 },
 }
