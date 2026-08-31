@@ -391,21 +391,10 @@
 
 ### [Perspectives Mod](https://www.nexusmods.com/warhammer40kdarktide/mods/111)
     第三人稱視角
-- MOD 網站最後更新日期：Last updated 24 August 2026, 5:05AM
-- MOD 版本：1.14
-- MOD 檔案名稱：Perspectives 111 1.14 2026-08-23T21-05Z l24cL2qQv.zip
-- 手動維護最後下載日期：2026-08-31
-- Nexus MOD ID: 111
-- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/111
-- Nexus page version: 1.14
-- Nexus last updated: 2026-08-23T21:05:24.0000000+00:00
-- Main file ID: 7689
-- Main file version: 1.14
-- Main file uploaded at UTC: 2026-08-23T21:05:24.0000000+00:00
-- Archive filename: Perspectives 111 1.14 2026-08-23T21-05Z l24cL2qQv.zip
-- Archive size bytes: 11644
-- Archive SHA-256: fb08ad3387c1362a60bdd2d38d2c54b23820702438b20239936a71b454dd45b6
-- Acquisition method: manual-queue
+- MOD 網站最後更新日期：Last updated 08 July 2026, 7:54PM
+- MOD 版本：1.13
+- MOD 檔案名稱：Perspectives-111-1-11-1733248815
+- 手動維護最後下載日期：2026-07-09
 
 ### [Improved Havoc Tags](https://www.nexusmods.com/warhammer40kdarktide/mods/500)
     浩劫詞條說明改善
