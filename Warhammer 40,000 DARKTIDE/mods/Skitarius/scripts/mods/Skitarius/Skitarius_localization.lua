@@ -10,35 +10,35 @@ local localizations = {
     -- Mod Details
     mod_name = {
         en = "Skitarius",
-        ["zh-tw"] = "護教軍",
+        ["zh-tw"] = "機械教信徒",
         ["zh-cn"] = "战斗序列（鼠标宏）",
     },
     mod_description = {
         en = "FROM THE MOMENT I UNDERSTOOD THE WEAKNESS OF MY FLESH, IT DISGUSTED ME.",
-        ["zh-tw"] = "從我理解血肉的脆弱那一刻起，它便令我厭惡。",
+        ["zh-tw"] = "當我看穿血肉的脆弱，那一刻，我的心靈便被機械的完美所召喚，對這腐朽之軀只剩厭憎",
         ["zh-cn"] = "设置一个独属于你的连招，按键自动作出相应动作——————B站 独一无二的小真寻 汉化维护",
     },
     -- Debug
     debug = {
         en = "Debug",
-        ["zh-tw"] = "偵錯",
+        ["zh-tw"] = "開發模式",
         ["zh-cn"] = "调试模式",
     },
     -- HUD Element
     hud_element = {
         en = "Enable Sequence Indicator",
-        ["zh-tw"] = "啟用序列指示器",
+        ["zh-tw"] = "啟用MOD指示器",
         ["zh-cn"] = "启用MOD指示器",
     },
     hud_element_tooltip = {
         en = "When enabled, a HUD icon will be displayed indicating mod and sequence status.",
         ["zh-cn"] = "启用后，将显示一个HUD图标，指示模块和序列状态。",
-        ["zh-tw"] = "啟用後，將顯示 HUD 圖示來指示模組與序列狀態。",
+        ["zh-tw"] = "啟用後，將顯示一個HUD圖標，訓示模塊和序列狀態。",
     },
     hud_element_type = {
         en = "Sequence Indicator Style",
         ["zh-cn"] = "显像模式",
-        ["zh-tw"] = "序列指示器樣式",
+        ["zh-tw"] = "顯像模式",
 
     },
     hud_element_type_tooltip = {
@@ -66,7 +66,7 @@ local localizations = {
     hud_element_type_opacity = {
         en = "Opacity",
         ["zh-cn"] = "透明度",
-        ["zh-tw"] = "不透明度",
+        ["zh-tw"] = "透明度",
     },
     hud_element_type_icon_color = {
         en = "Icon + Color",
@@ -75,14 +75,14 @@ local localizations = {
     },
     hud_element_size = {
         en = "Sequence Indicator Size",
-        ["zh-tw"] = "序列指示器大小",
+        ["zh-tw"] = "MOD指示器大小",
         ["zh-cn"] = "序列指示器尺寸",
     },
     -- Mod Settings
     mod_settings = {
         en = "Mod Settings", -- [ ] Localize
         ["zh-cn"] = "MOD设置",
-        ["zh-tw"] = "模組設定",
+        ["zh-tw"] = "MOD指設置",
 
     },
     mod_enable_held = {
@@ -123,7 +123,7 @@ local localizations = {
     },
     halt_on_interrupt_types = {
         en = "Manual Interruptions",
-        ["zh-tw"] = "手動中斷類型",
+        ["zh-tw"] = "中断应急终止 ",
         ["zh-cn"] = "手动中断",
     },
     halt_on_interrupt_types_tooltip = {
@@ -134,7 +134,6 @@ local localizations = {
     },
     interruption_sprint = {
         en = Localize("loc_ingame_sprint"),
-        ["zh-tw"] = Localize("loc_ingame_sprint"),
     },
     interruption_action_one = {
         en = "Attacking", -- [ ] Localize
@@ -143,16 +142,14 @@ local localizations = {
     },
     interruption_action_two = {
         en = Localize("loc_block"),
-        ["zh-tw"] = Localize("loc_block"),
     },
     interruption_action_both = {
         en = "Attacking / " .. Localize("loc_block"), -- [ ] Localize
-        ["zh-tw"] = "攻擊 / " .. Localize("loc_block"),
+        ["zh-tw"] = "攻擊 / 格擋中",
         ["zh-cn"] = "攻击 / 格挡中",
     },
     interruption_all = {
         en = Localize("loc_ingame_sprint") .. " / Attacking / Blocking", -- [ ] Localize
-        ["zh-tw"] = Localize("loc_ingame_sprint") .. " / 攻擊中 / 格擋中",
     },
     -- Keybinds
     maintain_bind = {
@@ -222,7 +219,6 @@ local localizations = {
     -- Melee
     melee_settings = {
         en = Localize("loc_glossary_term_melee_weapons"),
-        ["zh-tw"] = Localize("loc_glossary_term_melee_weapons"),
     },
     current_melee = {
         en = "JUMP TO CURRENT/GLOBAL",
@@ -251,7 +247,7 @@ local localizations = {
     },
     halt = {
         en = "Halt Sequence",
-        ["zh-tw"] = "暫停序列",
+        ["zh-tw"] = "暂停序列",
         ["zh-cn"] = "中断序列",
     },
     melee_weapon_selection = {
@@ -268,21 +264,17 @@ local localizations = {
         en =
         "When selected, Heavy attacks will be charged until this buff reaches the specified number of stacks in the Heavy Buff Stacks setting.",
         ["zh-cn"] = "启动神圣充能协议后，战术重击将维持相位蓄能状态，直至机魂增幅矩阵达到预设充能阶位（参见『重击增幅协议阶位配置』）。",
-        ["zh-tw"] = "啟動神聖充能協定後，戰術重擊將維持相位蓄能狀態，直至機魂增幅矩陣達到預設充能階位（參見『重擊增幅協定階位配置』）。",
+        ["zh-tw"] = "啟動神聖充能協定後，戰術重擊將維持相位蓄能狀態，直至機魂增幅矩陣達到預設充能階比特（參見『重擊增幅協定階比特配寘』）。",
     },
     thrust = { en = Localize("loc_trait_bespoke_power_bonus_based_on_charge_time") .. " / " .. Localize("loc_weapon_family_crowbar_p1_m1") },
     slow_and_steady = {
         en = Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time"),
-        ["zh-tw"] = Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time"),
     },
     crunch = {
         en = Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger"),
-        ["zh-tw"] = Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger"),
     },
     mechsword = {
-        en = Localize("loc_weapon_family_powersword_p3_m1"),
-        ["zh-tw"] = Localize("loc_weapon_family_powersword_p3_m1"),
-
+        en = Localize("loc_weapon_family_powersword_p3_m1")
     },
     heavy_buff_stacks = {
         en = "Heavy Buff Stacks",
@@ -296,15 +288,7 @@ local localizations = {
             cf(Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time") .. ":","terminal_text_body") .. " 3\n" ..
             cf(Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger") .. ":","terminal_text_body") .. " 4\n" ..
             cf(Localize("loc_weapon_family_powersword_p3_m1") .. ":","terminal_text_body") .. " 4\n"
-        ),
-        ["zh-tw"] = string.format(
-            "最大層數:\n" ..
-            cf(Localize("loc_trait_bespoke_power_bonus_based_on_charge_time") .. " / " .. Localize("loc_weapon_family_crowbar_p1_m1") .. ":","terminal_text_body") .. " 3\n" ..
-            cf(Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time") .. ":","terminal_text_body") .. " 3\n" ..
-            cf(Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger") .. ":","terminal_text_body") .. " 4\n" ..
-            cf(Localize("loc_weapon_family_powersword_p3_m1") .. ":","terminal_text_body") .. " 4\n"
-        ),
-
+        )
     },
     heavy_buff_special = {
         en = "Special Required For Heavy Modifier",
@@ -319,34 +303,34 @@ local localizations = {
     always_special = {
         en = "Always Activate Special Actions",
         ["zh-cn"] = "始终激活武器特殊技能",
-        ["zh-tw"] = "一律啟動武器特殊攻擊",
+        ["zh-tw"] = "始终激活武器特殊技能",
     },
     always_special_tooltip = {
         en = "When enabled, the mod will always execute Special actions, regardless of weapon state.",
         ["zh-cn"] = "启用后，无论武器状态如何，mod都将始终执行特殊动作",
-        ["zh-tw"] = "啟用後，無論武器狀態如何，模組都會一律執行特殊攻擊。",
+        ["zh-tw"] = "啟用後，無論武器狀態如何，mod都將始終執行特殊動作",
     },
     heavy_buff_special_tooltip = {
         en =
         "When enabled, the Heavy Buff Modifier setting will only take effect while the current weapon's Special Action is active.",
         ["zh-cn"] = "启用后，「蓄力buff修正器」设置将仅在当前武器的特殊动作激活期间生效",
-        ["zh-tw"] = "啟用後，「重擊強化調整」設定僅會在目前武器的特殊攻擊啟動時生效。",
+        ["zh-tw"] = "啟用後，「蓄力buff修正器」設定將僅在當前武器的特殊動作啟動期間生效",
     },
     global_melee = {
         en = "GLOBAL", -- [ ] Localize
-        ["zh-tw"] = "全域近戰",
+        ["zh-tw"] = "全局近戰",
         ["zh-cn"] = "全局近战",
     },
     force_heavy_when_special = {
         en = "Force Heavies When Special Active",
         ["zh-cn"] = "全局近战",
-        ["zh-tw"] = "特殊攻擊啟動時強制重擊",
+        ["zh-tw"] = "全局近戰",
     },
     force_heavy_when_special_tooltip = {
         en =
         "When enabled, Heavy attacks will be executed when the weapon's Special action is active, regardless of the standard sequence.",
         ["zh-cn"] = "启用后，无论标准顺序如何，当武器的特殊动作处于活动状态时，都将执行重型攻击",
-        ["zh-tw"] = "啟用後，武器的特殊攻擊啟動時會執行重擊，無視標準序列。",
+        ["zh-tw"] = "啟用後，無論標準順序如何，當武器的特殊動作處於活動狀態時，都將執行重型攻擊",
     },
     hold_heavy_when_sprinting = {
         en = "Hold Heavies During Sprint/Slide",
@@ -371,7 +355,7 @@ local localizations = {
     },
     no_repeat = {
         en = "Halt Sequence on Completion",
-        ["zh-tw"] = "完成後停止序列",
+        ["zh-tw"] = "完成后停止",
         ["zh-cn"] = "完成后停止",
     },
     sequence_step_one = {
@@ -472,12 +456,12 @@ local localizations = {
     ranged_settings = { en = Localize("loc_glossary_term_ranged_weapons") },
     always_charge = {
         en = "Always Auto-Release Charges",
-        ["zh-tw"] = "一律自動釋放蓄力",
+        ["zh-tw"] = "蓄力將自動釋放，無需手動操作",
         ["zh-cn"] = "始终自动释放充能",
     },
     always_charge_threshold = {
         en = "Global Charge Threshold %%",
-        ["zh-tw"] = "全域蓄力閾值 %%",
+        ["zh-tw"] = "蓄力將自動釋放，無需手動操作的閾值 %%",
         ["zh-cn"] = "充能自动释放阈值 %%",
     },
     always_charge_tooltip = {
@@ -490,7 +474,7 @@ local localizations = {
         en = string.format(
             "When enabled, this threshold will be used to determine when to auto-release charged attacks. \nThis will be overridden by the Weapon Charge Threshold setting if that setting is lower."),
         ["zh-cn"] = string.format("该阈值用于调整远程武器的充能强度,如果充能阈值过低,此设置将被覆盖"),
-        ["zh-tw"] = string.format("啟用後，將使用此閾值判定何時自動釋放蓄力攻擊。\n如果「武器蓄力閾值」的設定值較低，則以該設定為準。"),
+        ["zh-tw"] = string.format("該閾值用於調整遠程武器的充能強度,如果充能閾值過低,此設置將被覆蓋"),
     },
     ranged_weapon_selection = {
         en = "Weapon Selection", -- [ ] Localize
@@ -499,7 +483,7 @@ local localizations = {
     },
     global_ranged = {
         en = "GLOBAL", -- [ ] Localize
-        ["zh-tw"] = "全域遠程",
+        ["zh-tw"] = "全局遠程",
         ["zh-cn"] = "全局远程",
     },
     automatic_fire = {
@@ -565,12 +549,12 @@ local localizations = {
     },
     rate_of_fire_hip = {
         en = "Hipfire Attack Delay (ms)",
-        ["zh-tw"] = "腰射攻擊延遲（毫秒）",
+        ["zh-tw"] = "射速 %% (腰射)",
         ["zh-cn"] = "射速 %% (散射)",
     },
     rate_of_fire_ads = {
         en = "ADS Attack Delay (ms)",
-        ["zh-tw"] = "瞄準攻擊延遲（毫秒）",
+        ["zh-tw"] = "射速 %% (瞄準)",
         ["zh-cn"] = "射速 %% (瞄准)",
     },
     automatic_special = {
