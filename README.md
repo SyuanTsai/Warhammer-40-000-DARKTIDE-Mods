@@ -834,6 +834,17 @@
 - MOD 版本：1.1
 - MOD 檔案名稱：SMOG 847 1.1 cwrBAw1N3
 - 手動維護最後下載日期：2026-07-06
+- Nexus MOD ID: `847`
+- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/847`
+- Nexus page version: `3.2`
+- Nexus last updated: `2026-08-27T00:46:28.0000000+00:00`
+- Main file ID: `7801`
+- Main file version: `3.2`
+- Main file uploaded at UTC: `2026-08-27T00:46:28.0000000+00:00`
+- Archive filename: `SMOG 847 3.2 2026-08-27T00-46Z X0p3C0jlp.zip`
+- Archive size bytes: `31721`
+- Archive SHA-256: `2ae47c29743266c5e04fe17e18c4eea1af6609eed6aafe4b703239ffdd414539`
+- Acquisition method: `manual-queue`
 
 ### [ErrorTracker](https://www.nexusmods.com/warhammer40kdarktide/mods/824)
     錯誤追蹤
