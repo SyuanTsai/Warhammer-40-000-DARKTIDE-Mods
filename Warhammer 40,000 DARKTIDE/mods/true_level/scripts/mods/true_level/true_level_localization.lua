@@ -74,7 +74,7 @@ local loc = {
         en = "Amount " .. salvage_text .. " " .. salvage_icon,
         ja = "数量 " .. salvage_text .. " " .. salvage_icon,
         ["zh-cn"] = "数量 " .. salvage_text .. " " .. salvage_icon,
-        ["zh-tw"] = "数量 " .. salvage_text .. " " .. salvage_icon,
+        ["zh-tw"] = "數量 " .. salvage_text .. " " .. salvage_icon,
         ru = "Количество " .. salvage_text .. " " .. salvage_icon,
     },
     player_salvage_style_icon = {
