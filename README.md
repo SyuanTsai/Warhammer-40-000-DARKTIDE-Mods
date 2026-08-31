@@ -212,17 +212,6 @@
 - MOD 版本：2.12.08
 - MOD 檔案名稱：Markers Aio-447-2-12-08-1776873052
 - 手動維護最後下載日期：2026-05-17
-- Nexus MOD ID: `447`
-- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/447`
-- Nexus page version: `2.14.5`
-- Nexus last updated: `2026-08-24T19:25:36.0000000+00:00`
-- Main file ID: `7747`
-- Main file version: `2.14.5`
-- Main file uploaded at UTC: `2026-08-24T19:25:36.0000000+00:00`
-- Archive filename: `Markers Improved All-in-One 447 2.14.5 2026-08-24T19-25Z K6YR06iO9.zip`
-- Archive size bytes: `97429`
-- Archive SHA-256: `57abc1191fcb88aa898bfd925fd9da87c99f6e0d24440cb8a7274547f3e272e9`
-- Acquisition method: `manual-queue`
 
 ### [Danger Zone](https://www.nexusmods.com/warhammer40kdarktide/mods/440)
     危險區域 - 顯示危險的範圍 爆桶、惡魔宿主...等
