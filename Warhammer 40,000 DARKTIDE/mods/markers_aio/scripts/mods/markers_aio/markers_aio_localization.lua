@@ -36,6 +36,7 @@ local colours = {
 	title = "200,140,20",
 	subtitle = "226,199,126",
 	text = "169,191,153",
+	faded_text = "84,95,76",
 }
 
 -- Always use an updated font list.
@@ -126,13 +127,6 @@ mod.gradientText = function(text, startColor, endColor, colorSpaces)
 	return result
 end
 
-local colours = {
-	title = "200,140,20",
-	subtitle = "226,199,126",
-	text = "169,191,153",
-	faded_text = "84,95,76",
-}
-
 -- rainbow
 -- en = "{#color(255,0,0)}M{#color(255,85,0)}a{#color(255,170,0)}r{#color(255,255,0)}k{#color(170,255,0)}e{#color(85,255,0)}r{#color(0,255,0)}s {#color(0,255,85)}I{#color(0,255,170)}m{#color(0,255,255)}p{#color(0,170,255)}r{#color(0,85,255)}o{#color(0,0,255)}v{#color(85,0,255)}e{#color(170,0,255)}d {#color(255,0,255)}A{#color(255,0,170)}I{#color(255,0,85)}O{#reset()}",
 -- fire
@@ -170,18 +164,21 @@ local loc = {
 
 	mod_name = {
 		en = mod_name["en"],
+		fr = mod_name["fr"],
 		ru = mod_name["ru"],
 		["zh-cn"] = mod_name["zh-cn"],
 		["zh-tw"] = mod_name["zh-tw"],
 	},
 	mod_name_pizazz = {
 		en = mod.gradientText(mod_name["en"], { 0, 128, 255 }, { 255, 0, 150 }, true),
+		fr = mod.gradientText(mod_name["fr"], { 0, 128, 255 }, { 255, 0, 150 }, true),
 		ru = mod.gradientText(mod_name["ru"], { 0, 128, 255 }, { 255, 0, 150 }, true),
 		["zh-cn"] = mod.gradientText(mod_name["zh-cn"], { 0, 128, 255 }, { 255, 0, 150 }, true),
 		["zh-tw"] = mod.gradientText(mod_name["zh-tw"], { 0, 128, 255 }, { 255, 0, 150 }, true),
 	},
 	mod_name_boring = {
 		en = mod_name["en"],
+		fr = mod_name["fr"],
 		ru = mod_name["ru"],
 		["zh-cn"] = mod_name["zh-cn"],
 		["zh-tw"] = mod_name["zh-tw"],
@@ -3650,7 +3647,7 @@ local loc = {
 	-- Unknown Markers
 	unknown_markers_settings = {
 		en = "UNKNOWN MARKERS (Those not covered elsewhere!)",
-		ru = "НЕИЗВЕТСНЫЕ МЕТКИ (которые не попали в другие разделы!)",
+		ru = "НЕИЗВЕСТНЫЕ МЕТКИ (которые не попали в другие разделы!)",
 		["zh-cn"] = "未知物品标记（未归类物品）",
 		["zh-tw"] = "未知物品標記（未歸類物品）",
 	},
