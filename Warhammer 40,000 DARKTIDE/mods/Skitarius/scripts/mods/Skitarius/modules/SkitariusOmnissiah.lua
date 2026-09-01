@@ -1000,7 +1000,7 @@ end
 SkitariusOmnissiah.set_swap = function(self, occurred)
     SWAP.OCCURRED = occurred
     if occurred then
-        --SWAP.LIMITER = true  -- Enable the limiter when swap occurs
+        SWAP.LIMITER = true  -- Enable the limiter when swap occurs
     end
 end
 

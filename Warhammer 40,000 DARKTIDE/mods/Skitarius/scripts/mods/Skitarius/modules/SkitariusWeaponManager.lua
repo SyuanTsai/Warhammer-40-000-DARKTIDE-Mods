@@ -473,7 +473,17 @@ SkitariusWeaponManager.in_cooldown = function(self)
                 dual_shivs_p1_m1 = true,
                 dual_shivs_p1_m2 = true,
                 powersword_p3_m1 = true,
-                powermaul_p3_m1 = true
+                powermaul_p3_m1 = true,
+                forcesword_2h_p1_m1 = true,
+                forcesword_2h_p1_m2 = true,
+            }
+            local special_charge_maximums = {
+                dual_shivs_p1_m1 = 3,
+                dual_shivs_p1_m2 = 3,
+                powersword_p3_m1 = 6,
+                powermaul_p3_m1 = 8,
+                forcesword_2h_p1_m1 = 2,
+                forcesword_2h_p1_m2 = 2,
             }
             if weapon_template_name and special_charge_weapons[weapon_template_name] and special_charges then
                 
@@ -482,10 +492,20 @@ SkitariusWeaponManager.in_cooldown = function(self)
                 if engram then
                     reserve = engram:get_setting("SPECIAL_BUFF_STACKS") or 0
                 end
+                local max = special_charge_maximums[weapon_template_name] or 0
+                if reserve > max then
+                    reserve = max
+                end
                 --mod:echo("Reserve: %s, Special Charges: %s", reserve, special_charges)
                 -- Arc Maul has 40 max charges, uses 5 per attack, so 8 reserve "charges"
                 if weapon_template_name == "powermaul_p3_m1" then
                     reserve = reserve * 5
+                end
+                -- Force Greatswords have 20 max charges, split into two groups of 10
+                if weapon_template_name == "forcesword_2h_p1_m1" or weapon_template_name == "forcesword_2h_p1_m2" then
+                    reserve = reserve * 10
+                    -- special logic since this uses a blend of riot shield and normal charges
+                    return special_charges < reserve
                 end
                 -- Mechanicus Power Sword edge-cases
                 if weapon_template_name == "powersword_p3_m1" and special_active then
