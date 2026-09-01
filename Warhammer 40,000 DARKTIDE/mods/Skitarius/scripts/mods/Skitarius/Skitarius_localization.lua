@@ -10,24 +10,24 @@ local localizations = {
     -- Mod Details
     mod_name = {
         en = "Skitarius",
-        ["zh-tw"] = "護教軍",
+        ["zh-tw"] = "機械教信徒",
         ["zh-cn"] = "战斗序列（鼠标宏）",
     },
     mod_description = {
         en = "FROM THE MOMENT I UNDERSTOOD THE WEAKNESS OF MY FLESH, IT DISGUSTED ME.",
-        ["zh-tw"] = "從我理解血肉的脆弱那一刻起，它便令我厭惡。",
+        ["zh-tw"] = "當我看穿血肉的脆弱，那一刻，我的心靈便被機械的完美所召喚，對這腐朽之軀只剩厭憎。",
         ["zh-cn"] = "设置一个独属于你的连招，按键自动作出相应动作——————B站 独一无二的小真寻 汉化维护",
     },
     -- Debug
     debug = {
         en = "Debug",
-        ["zh-tw"] = "偵錯",
+        ["zh-tw"] = "開發模式",
         ["zh-cn"] = "调试模式",
     },
     -- HUD Element
     hud_element = {
         en = "Enable Sequence Indicator",
-        ["zh-tw"] = "啟用序列指示器",
+        ["zh-tw"] = "啟用MOD指示器",
         ["zh-cn"] = "启用MOD指示器",
     },
     hud_element_tooltip = {
@@ -39,7 +39,6 @@ local localizations = {
         en = "Sequence Indicator Style",
         ["zh-cn"] = "显像模式",
         ["zh-tw"] = "序列指示器樣式",
-
     },
     hud_element_type_tooltip = {
         en = string.format(
@@ -75,7 +74,7 @@ local localizations = {
     },
     hud_element_size = {
         en = "Sequence Indicator Size",
-        ["zh-tw"] = "序列指示器大小",
+        ["zh-tw"] = "MOD指示器大小",
         ["zh-cn"] = "序列指示器尺寸",
     },
     -- Mod Settings
