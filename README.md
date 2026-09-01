@@ -72,10 +72,21 @@
 
 ### [True Level](https://www.nexusmods.com/warhammer40kdarktide/mods/156)
     真實等級 - 顯示真正的等級
-- MOD 網站最後更新日期：Last updated 29 April 2026, 9:35PM
-- MOD 版本：Version 1.10.0
-- MOD 檔案名稱：True Level-156-1-10-0-1777469719
-- 手動維護最後下載日期：2026-05-17
+- MOD 網站最後更新日期：2026-08-17T08:20:00.0000000+00:00
+- MOD 版本：Version 1.10.3
+- MOD 檔案名稱：True Level 156 1.10.3 2026-08-17T08-20Z txMvExehe.zip
+- 手動維護最後下載日期：2026-09-01
+- Nexus MOD ID: 156
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/156
+- Nexus page version: 1.10.3
+- Nexus last updated: 2026-08-17T08:20:00.0000000+00:00
+- Main file ID: 7427
+- Main file version: 1.10.3
+- Main file uploaded at UTC: 2026-08-17T08:20:00.0000000+00:00
+- Archive filename: True Level 156 1.10.3 2026-08-17T08-20Z txMvExehe.zip
+- Archive size bytes: 22601
+- Archive SHA-256: a11d6e0c760202235c7ff8cc06801d52be72ab03740f0fad8c0b325ebbd7374f
+- Acquisition method: manual-queue
 - GitHub :
 - Source=>  https://github.com/zombine04/darktide-mods
 - Fork  =>  https://github.com/SyuanTsai/darktide-mods
