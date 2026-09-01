@@ -7,7 +7,7 @@ local loc = {
 	mod_description = {
 		en = "Recolors the health bars of certain enemies, and allows more boss health bars to be shown on the screen at once",
 		["zh-cn"] = "重新给特定敌人的血条上色，并允许在屏幕上同时显示更多Boss血条",
-		["zh-tw"] = "重新為特定敵人的血條著色，並允許同時在螢幕上顯示更多首領血條",
+		["zh-tw"] = "重新染色首領的血條，並允許螢幕上顯示更多的血條",
 	},
 	color_daemonhost = {
 		en = "Daemonhost",
