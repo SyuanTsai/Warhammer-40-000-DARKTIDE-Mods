@@ -511,10 +511,21 @@
 
 ### [SpecialsTracker](https://www.nexusmods.com/warhammer40kdarktide/mods/274)
     顯示場上所有特感數量
-- MOD 網站最後更新日期：Last updated 24 September 2025, 8:12PM
-- MOD 版本：1.6
-- MOD 檔案名稱：SpecialsTracker-274-1-6-1758715953
-- 手動維護最後下載日期：2025-10-01
+- MOD 網站最後更新日期：2026-07-23T19:43:11.0000000+00:00
+- MOD 版本：1.8
+- MOD 檔案名稱：SpecialsTracker 274 1.8 2026-07-23T19-43Z txMvExeiL.zip
+- 手動維護最後下載日期：2026-09-02
+- Nexus MOD ID: 274
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/274
+- Nexus page version: 1.8
+- Nexus last updated: 2026-07-23T19:43:11.0000000+00:00
+- Main file ID: 6807
+- Main file version: 1.8
+- Main file uploaded at UTC: 2026-07-23T19:43:11.0000000+00:00
+- Archive filename: SpecialsTracker 274 1.8 2026-07-23T19-43Z txMvExeiL.zip
+- Archive size bytes: 36793
+- Archive SHA-256: 4d8e345ec27c99d1643471701b34f590162b4c6e32a5273f3c5c7dc447c9ed7e
+- Acquisition method: manual-queue
 
 ### [Display Ping (Latency)](https://www.nexusmods.com/warhammer40kdarktide/mods/460)
     顯示延遲
