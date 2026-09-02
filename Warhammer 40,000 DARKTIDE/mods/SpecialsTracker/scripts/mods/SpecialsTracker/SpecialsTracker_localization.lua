@@ -1,4 +1,5 @@
-local mod = get_mod("SpecialsTracker")
+local mod = get_mod("SpecialsTracker"),
+        ["zh-tw"] = "\n在疊加介面後方顯示背景，並在周圍加上邊框，讓內容更容易閱讀。",
 local Breeds = require("scripts/settings/breed/breeds")
 
 
@@ -70,12 +71,12 @@ loc_raw.category = {
     extended_events = {
         en = "Notification sound & background color",
         ["zh-cn"] = "通知音效 & 背景色",
-        ["zh-tw"] = "通知音效 & 背景顏色",
+        ["zh-tw"] = "通知音效與背景顏色",
     },
     priority_lvls = {
         en = "Unit name colors by priority level",
         ["zh-cn"] = "单位名称颜色（按优先级）",
-        ["zh-tw"] = "單位名稱顏色（依優先等級）",
+        ["zh-tw"] = "依優先等級顯示單位名稱顏色",
     },
     breed_widgets = {
         en = "Trackable units",
@@ -93,7 +94,7 @@ loc_raw.subcategory = {
     color_spawn = {
         en = "Spawn notifications",
         ["zh-cn"] = "生成通知",
-        ["zh-tw"] = "產生通知",
+        ["zh-tw"] = "出現通知",
     },
     color_death = {
         en = "Death notifications",
@@ -103,13 +104,14 @@ loc_raw.subcategory = {
     color_hybrid = {
         en = "Hybrid (spawn + death) notifications",
         ["zh-cn"] = "混合（生成+死亡）通知",
-        ["zh-tw"] = "混合（產生+死亡）通知",
+        ["zh-tw"] = "混合（出現+死亡）通知",
     },
 }
 
 for _, i in pairs(priority_lvls) do
     loc_raw.subcategory["color_"..i] = {
         en = "Priority level "..i,
+        ["zh-tw"] = "優先等級 "..i,
         ["zh-cn"] = "优先级 "..i,
     }
 end
@@ -117,13 +119,13 @@ end
 loc_raw.subcategory["color_monsters"] = {
     en = "Monsters - Priority level 0",
     ["zh-cn"] = "怪物 - 优先级 0",
-    ["zh-tw"] = "怪物 - 優先等級 0",
+    ["zh-tw"] = "巨獸 - 優先等級 0",
 }
 
 loc_raw.subcategory["color_monsters_wk"] = {
     en = "Monsters (Weakened) - Priority level 0",
     ["zh-cn"] = "怪物（虚弱）- 优先级 0",
-    ["zh-tw"] = "怪物（虛弱）- 優先等級 0",
+    ["zh-tw"] = "巨獸（虛弱）- 優先等級 0",
 }
 
 
@@ -140,7 +142,7 @@ loc_raw.setting = {
     global_toggle_overlay = {
         en = cf(global_toggle_color) .. "HUD element (overlay)",
         ["zh-cn"] = cf(global_toggle_color) .. "HUD 元素（界面覆盖）",
-        ["zh-tw"] = cf(global_toggle_color) .. "HUD 元件（介面疊加）",
+        ["zh-tw"] = cf(global_toggle_color) .. "HUD 元件（疊加介面）",
     },
     notif_display_type = {
         en = "Notification style",
@@ -155,32 +157,32 @@ loc_raw.setting = {
     notif_grouping = {
         en = "Group spawn/death notifs. of a given enemy",
         ["zh-cn"] = "合并指定敌人的生成/死亡通知",
-        ["zh-tw"] = "合併指定敵人的產生/死亡通知",
+        ["zh-tw"] = "合併指定敵人的出現/死亡通知",
     },
     hud_scale = {
         en = "Overlay scale",
         ["zh-cn"] = "界面覆盖缩放",
-        ["zh-tw"] = "介面疊加縮放",
+        ["zh-tw"] = "疊加介面縮放",
     },
     font = {
         en = "Overlay font",
         ["zh-cn"] = "界面覆盖字体",
-        ["zh-tw"] = "介面疊加字體",
+        ["zh-tw"] = "疊加介面字體",
     },
     hud_color_lerp_ratio = {
         en = "Overlay names color intensity",
         ["zh-cn"] = "界面覆盖名称颜色强度",
-        ["zh-tw"] = "介面疊加名稱顏色強度",
+        ["zh-tw"] = "疊加介面名稱顏色強度",
     },
     overlay_name_style = {
         en = "Overlay name style",
         ["zh-cn"] = "界面覆盖名称样式",
-        ["zh-tw"] = "介面疊加名稱樣式",
+        ["zh-tw"] = "疊加介面名稱樣式",
     },
     show_overlay_background = {
         en = "Overlay background",
         -- Need loc - ["zh-cn"] = 
-        -- Need loc - ["zh-tw"] = 
+        ["zh-tw"] = "疊加介面背景",
     },
     debugging = {
         en = "Debugging mode",
@@ -193,14 +195,14 @@ for _, i in pairs(priority_lvls) do
     loc_raw.setting["color_used_in_hud_"..i] = {
         en = "Use color in overlay",
         ["zh-cn"] = "在界面覆盖中使用颜色",
-        ["zh-tw"] = "在介面疊加中使用顏色",
+        ["zh-tw"] = "在疊加介面中使用顏色",
     }
 end
 
 loc_raw.setting["monsters_pos"] = {
     en = "Monsters position in overlay",
     ["zh-cn"] = "界面覆盖中怪物位置",
-    ["zh-tw"] = "介面疊加中怪物位置",
+    ["zh-tw"] = "巨獸在疊加介面中的位置",
 }
 
 for _, i in pairs(color_indices) do
@@ -215,7 +217,7 @@ for _, breed_name in pairs(trackable_breeds) do
     loc_raw.setting[breed_name.."_overlay"] = {
         en = "Show in overlay",
         ["zh-cn"] = "在界面覆盖中显示",
-        ["zh-tw"] = "在介面疊加中顯示",
+        ["zh-tw"] = "在疊加介面中顯示",
     }
     loc_raw.setting[breed_name.."_notif"] = {
         en = "Notifications",
@@ -246,27 +248,27 @@ loc_raw.tooltip = {
     tooltip_notif_grouping = {
         en = "\nIf a spawn and a death notification of the same enemy would appear simultaneously, collapse them into one hybrid notification instead",
         ["zh-cn"] = "\n如果相同类型敌人的生成和死亡通知会同时出现，则将它们折叠成混合通知",
-        ["zh-tw"] = "\n若相同類型敵人的產生與死亡通知同時出現，則將它們合併成混合通知",
+        ["zh-tw"] = "\n若相同類型敵人的出現與死亡通知同時出現，則改為合併成一則混合通知",
     },
     tooltip_notif_display_type = {
         en = "\nAdd a marking to notifications to further separate spawn and death ones, on top of their background color\n\nIcon: Short text with an icon representing spawn or death\n\nText: Longer text with no icon",
         ["zh-cn"] = "\n向通知添加标记，在背景颜色的基础上进一步区分生成与死亡类型\n\n图标：区分生成与死亡的图标和短文本\n\n无图标的长文本",
-        ["zh-tw"] = "\n在通知加入額外標記，在背景顏色的基礎上進一步區分產生與死亡類型\n\n圖示：區分產生與死亡的圖示和短文字\n\n無圖示的長文字",
+        ["zh-tw"] = "\n在通知加入額外標記，除了背景顏色外進一步區分出現與死亡通知\n\n圖示：短文字加上代表出現或死亡的圖示\n\n文字：較長且無圖示的文字",
     },
     tooltip_overlay_move_from_center = {
         en = "\nMove the overlay to a \"default\" position to the right of the screen.\n\nIf you want to move the overlay more precisely, I recommend you leave this option off, and use the mod " .. cf("ui_terminal") .. "Custom HUD{#reset()} to move it.",
         ["zh-cn"] = "\n将界面覆盖移动到屏幕右侧的“默认”位置。\n\n如果你要精细控制位置，我推荐你禁用此选项，然后使用 " .. cf("ui_terminal") .. "Custom HUD{#reset()} 模组来管理。",
-        ["zh-tw"] = "\n將介面疊加移動到螢幕右側的「預設」位置。\n\n若要更精細地控制位置，建議關掉此選項，再搭配其他模組使用。",
+        ["zh-tw"] = "\n將疊加介面移動到螢幕右側的「預設」位置。\n\n若要更精細地調整位置，建議關閉此選項，並使用 " .. cf("ui_terminal") .. "Custom HUD{#reset()} 模組移動。",
     },
     tooltip_hud_color_lerp_ratio = {
         en = "\nHow strongly the color specific to an enemy's priority level is expressed in the overlay, 0 being not-at-all (white), and 1 being completely (the enemy's priority level's color)\n\nThis overlay-specific coloring can be disabled per priority level to simply have white instead",
         ["zh-cn"] = "\n在界面覆盖中，敌人优先级颜色的强度，0 表示无强度（白色），1 表示全强度（敌人优先级颜色本身）\n\n覆盖界面内的颜色可以分优先级禁用，以直接显示为白色",
-        ["zh-tw"] = "\n在介面疊加中，敵人優先等級顏色的強度，0 表示無強度（白色），1 表示全強度（敵人優先等級顏色本身）\n\n疊加介面內的顏色可以分優先等級停用，以直接顯示為白色",
+        ["zh-tw"] = "\n敵人優先等級顏色在疊加介面中的顯示強度。0 表示不顯示（白色），1 表示完整顯示（敵人優先等級的顏色）\n\n可針對各優先等級停用此疊加介面顏色，改為直接顯示白色",
     },
     tooltip_monsters_hud_only_if_alive = {
         en = "\nIf this is enabled, monster that are toggled on to be in the overlay will have their name and unit count only actually appear if at least one is alive\n\nThis is *strongly* recommended in order to keep the overlay as compact as possible",
         ["zh-cn"] = "\n如果启用，设定为在界面覆盖内显示的怪物名称和数量将仅在至少有一个单位存活时显示e\n\n*强烈*建议启用此选项，以保持界面覆盖的紧凑性",
-        ["zh-tw"] = "\n若啟用，設定在介面疊加顯示的怪物名稱與數量將僅在至少有一個單位存活時顯示\n\n*強烈*建議啟用此選項，以保持介面疊加的緊湊性",
+        ["zh-tw"] = "\n若啟用，設為顯示在疊加介面中的巨獸名稱與數量，只有在至少一隻存活時才會實際顯示\n\n*強烈*建議啟用此選項，以盡量保持疊加介面精簡",
     },
     tooltip_color_alpha = {
         en = "\nOpacity of the notification, 0 being fully transparent and 255 fully opaque",
@@ -276,27 +278,27 @@ loc_raw.tooltip = {
     tooltip_priority_lvls = {
         en = "\nEach tracked unit will be assigned a priority level, which determines its name color in notifications (and optionally the overlay), as well as how high it appears in the overlay\n\n1 is the highest priority, and 3 is the lowest, except for monsters which always have priority level of 0",
         ["zh-cn"] = "\n每种被追踪的单位会属于一个优先级，用于决定其名称在通知内（或者在界面覆盖内）的颜色，也用于确定它们在界面覆盖内的顺序\n\n1 为最高优先级，3 为最低优先级，但怪物的优先级始终为 0",
-        ["zh-tw"] = "\n每種被追蹤的單位都會有對應的優先等級，用來決定其名稱在通知內（或介面疊加內）的顏色，也用來決定它們在介面疊加內的順序\n\n1 為最高優先等級，3 為最低優先等級，但怪物的優先等級始終為 0",
+        ["zh-tw"] = "\n每種被追蹤的單位都會被指定優先等級，用來決定其名稱在通知內（或疊加介面內）的顏色，以及在疊加介面中的排列高度\n\n1 為最高優先等級，3 為最低優先等級，但巨獸一律為優先等級 0",
     },
     tooltip_overlay_tracking = {
         en = "\nAlways = Enemy type will always be shown in the overlay\n\nOnly when active = Enemy type will only appear in the overlay if one of more of those enemies are alive\n\nNever = Enemy type will never be shown in the overlay",
         ["zh-cn"] = "\n总是 = 这种敌人总会在界面覆盖内显示\n\n仅存活时 = 当前有这种敌人存活，则在界面覆盖内显示\n\n从不 = 这种敌人从不在界面覆盖内显示",
-        ["zh-tw"] = "\n總是 = 這種敵人會一直顯示在介面疊加中\n\n僅當存活時 = 當有這種敵人存活時，會顯示在介面疊加中\n\n從不 = 這種敵人不會顯示在介面疊加中",
+        ["zh-tw"] = "\n一律顯示 = 這種敵人會一直顯示在疊加介面中\n\n僅存活時 = 只有當這種敵人存活時才會顯示在疊加介面中\n\n永不顯示 = 這種敵人完全不會顯示在疊加介面中",
     },
     tooltip_monsters_pos = {
         en = "\nWhether the monsters will be listed at the top or the bottom of the list in the overlay\n\nIt is recommended to list them at the bottom, so the rest of the units don't get pushed up or down when a monster spawns or die",
         ["zh-cn"] = "\n在界面覆盖的顶部还是底部显示怪物\n\n建议设置为底部，防止当怪物生成或死亡时，影响其他单位的显示位置",
-        ["zh-tw"] = "\n在介面疊加的頂部或底部顯示怪物\n\n建議設置為底部，防止當怪物產生或死亡時，影響其他單位的顯示位置",
+        ["zh-tw"] = "\n決定巨獸列在疊加介面清單的頂部或底部\n\n建議列在底部，避免巨獸出現或死亡時讓其他單位的位置上下移動",
     },
     tooltip_global_toggle_notif = {
         en = "\nEnable or disable the display of notifications when desired units spawn or die.\n\nNotifications can be toggled on or off for each enemy type separately, though setting this to \"off\" disables them globally, regardless of other mod settings.",
         ["zh-cn"] = "\n显示或隐藏特定单位生成或死亡的通知。\n\n每种敌人可以单独配置通知选项，但如果禁用此全局选项，则单独的选项会被忽略。",
-        ["zh-tw"] = "\n顯示或隱藏特定單位產生或死亡的通知。\n\n每種敵人可以單獨配置通知選項，但若停用此全域選項，則單獨的選項會被忽略。",
+        ["zh-tw"] = "\n啟用或停用特定單位出現或死亡時的通知顯示。\n\n每種敵人都可個別開關通知，但若將此選項設為「關閉」，無論其他模組設定為何，都會全域停用通知。",
     },
     tooltip_global_toggle_overlay = {
         en = "\nEnable or disable the display of a permanent overlay, which tracks the number of currently active enemies of certain types.\n\nEach enemy type can have its overlay behaviour changed separately, though setting this to \"off\" disables the overlay globally, regardless of other overlay settings.",
         ["zh-cn"] = "\n显示或隐藏永久界面覆盖，用于跟踪当前存活的特定敌人数量。\n\n每种敌人可以单独配置界面覆盖选项，但如果禁用此全局选项，则单独的选项会被忽略。",
-        ["zh-tw"] = "\n顯示或隱藏永久的介面疊加，用來追蹤目前存活的特定敵人數量。\n\n每種敵人可以單獨配置介面疊加選項，但若停用此全域選項，則單獨的選項會被忽略。",
+        ["zh-tw"] = "\n啟用或停用永久疊加介面，用來追蹤目前存活的特定敵人數量。\n\n每種敵人都可個別調整疊加介面行為，但若將此選項設為「關閉」，無論其他疊加介面設定為何，都會全域停用疊加介面。",
     },
     tooltip_show_overlay_background = {
         en = "\nShow a background behind, and borders around the overlay to make it easier to read."
@@ -384,17 +386,17 @@ loc_raw.option = {
     always = {
         en = "Always",
         ["zh-cn"] = "总是",
-        ["zh-tw"] = "永遠",
+        ["zh-tw"] = "一律顯示",
     },
     only_if_active = {
         en = "Only when active",
         ["zh-cn"] = "仅存活时",
-        ["zh-tw"] = "僅當存活時",
+        ["zh-tw"] = "僅存活時",
     },
     off = {
         en = "Never",
         ["zh-cn"] = "从不",
-        ["zh-tw"] = "從不",
+        ["zh-tw"] = "永不顯示",
     },
     short = {
         en = "Short",
@@ -434,7 +436,7 @@ loc_raw.mod_ui = {
     spawn_message_text = {
         en = "%s spawned - %s",
         ["zh-cn"] = "%s 生成了 - %s",
-        ["zh-tw"] = "%s 產生了 - %s",
+        ["zh-tw"] = "%s 已出現 - %s",
     },
     death_message_text = {
         en = "%s died - %s",
@@ -444,7 +446,7 @@ loc_raw.mod_ui = {
     spawn_message_simple_text = {
         en = "%s spawned",
         ["zh-cn"] = "%s 生成了",
-        ["zh-tw"] = "%s 產生了",
+        ["zh-tw"] = "%s 已出現",
     },
     death_message_simple_text = {
         en = "%s died",
@@ -466,7 +468,7 @@ loc_raw.mod_ui = {
     hybrid_message_grouped_2_text = {
         en = "Spawned %s - Died %s",
         ["zh-cn"] = "生成了 %s - 死亡了 %s",
-        ["zh-tw"] = "產生了 %s - 已死亡 %s",
+        ["zh-tw"] = "出現 %s - 死亡 %s",
     },
 }
 
@@ -483,7 +485,7 @@ loc_raw.misc = {
     mod_description = {
         en = "Shows a notification when certain enemies spawn or die, as well as a counter of how many such units are currently alive",
         ["zh-cn"] = "在特定敌人生成或死亡时显示通知，同时显示当前存活的单位数量",
-        ["zh-tw"] = "在特定敵人產生或死亡時顯示通知，並可顯示目前存活的單位數量",
+        ["zh-tw"] = "在特定敵人出現或死亡時顯示通知，並顯示目前存活的這類單位數量",
     },
 }
 
@@ -562,6 +564,7 @@ overlay_name_sets.short = {
     },
     renegade_plasma_gunner = {
         en = "PLSM",
+        ["zh-tw"] = "電漿",
         -- Needs loc
     },
     renegade_sniper = {
@@ -572,7 +575,7 @@ overlay_name_sets.short = {
     chaos_poxwalker_bomber = {
         en = "BRST",
         ["zh-cn"] = "爆破",
-        ["zh-tw"] = "爆破",
+        ["zh-tw"] = "瘟爆",
     },
     chaos_beast_of_nurgle = {
         en = "BST",
@@ -586,18 +589,22 @@ overlay_name_sets.short = {
     },
     chaos_ogryn_houndmaster = {
         en = "PACK",
+        ["zh-tw"] = "獸領",
         -- Need loc
     },
     chaos_ogryn_houndmaster_wk = {
         en = "PACK*",
+        ["zh-tw"] = "獸領*",
         -- Need loc
     },
     chaos_armored_hound = {
         en = "A-HND",
+        ["zh-tw"] = "甲獵",
         -- Need loc
     },
     chaos_armored_hound_wk = {
         en = "A-HND*",
+        ["zh-tw"] = "甲獵*",
         -- Need loc
     },
     chaos_plague_ogryn = {
@@ -628,12 +635,12 @@ overlay_name_sets.short = {
     chaos_mutator_daemonhost = {
         en = "HEX DH",
         ["zh-cn"] = "咒缚宿主",
-        ["zh-tw"] = "儀式宿主",
+        ["zh-tw"] = "魔縛",
     },
     renegade_captain = {
         en = "CAPN",
         ["zh-cn"] = "连长",
-        ["zh-tw"] = "隊長",
+        ["zh-tw"] = "連長",
     },
     renegade_twin_captain = {
         en = "TWINS",
@@ -671,10 +678,11 @@ overlay_name_sets.long = {
     renegade_netgunner = {
         en = "TRAP",
         ["zh-cn"] = "陷阱手",
-        ["zh-tw"] = "陷阱手",
+        ["zh-tw"] = "陷阱兵",
     },
     renegade_plasma_gunner = {
         en = "PLASM",
+        ["zh-tw"] = "電漿槍",
         -- Needs loc
     },
     renegade_sniper = {
@@ -685,7 +693,7 @@ overlay_name_sets.long = {
     chaos_poxwalker_bomber = {
         en = "BURST",
         ["zh-cn"] = "爆破手",
-        ["zh-tw"] = "爆破手",
+        ["zh-tw"] = "瘟疫爆者",
     },
     chaos_beast_of_nurgle = {
         en = "BEAST",
@@ -699,29 +707,33 @@ overlay_name_sets.long = {
     },
     chaos_ogryn_houndmaster = {
         en = "PACKMST",
+        ["zh-tw"] = "獸群領主",
         -- Need loc
     },
     chaos_ogryn_houndmaster_wk = {
         en = "PACKMST*",
+        ["zh-tw"] = "獸群領主*",
         -- Need loc
     },
     chaos_armored_hound = {
         en = "ARM-HND",
+        ["zh-tw"] = "裝甲獵犬",
         -- Need loc
     },
     chaos_armored_hound_wk = {
         en = "ARM-HND*",
+        ["zh-tw"] = "裝甲獵犬*",
         -- Need loc
     },
     chaos_plague_ogryn = {
         en = "OGRYN",
         ["zh-cn"] = "瘟疫欧",
-        ["zh-tw"] = "瘟疫歐格林",
+        ["zh-tw"] = "歐格林",
     },
     chaos_plague_ogryn_wk = {
         en = "OGRYN*",
         ["zh-cn"] = "瘟疫欧*",
-        ["zh-tw"] = "瘟疫歐格林*",
+        ["zh-tw"] = "歐格林*",
     },
     chaos_spawn = {
         en = "SPAWN",
@@ -741,12 +753,12 @@ overlay_name_sets.long = {
     chaos_mutator_daemonhost = {
         en = "HEX DHOST",
         ["zh-cn"] = "咒缚宿主",
-        ["zh-tw"] = "魔缚惡魔宿主",
+        ["zh-tw"] = "魔縛惡魔宿主",
     },
     renegade_captain = {
         en = "CAPTAIN",
         ["zh-cn"] = "连长",
-        ["zh-tw"] = "隊長",
+        ["zh-tw"] = "連長",
     },
     renegade_twin_captain = {
         en = "TWINS",
@@ -779,15 +791,16 @@ overlay_name_sets.full = {
     renegade_grenadier = {
         en = "Bomber",
         ["zh-cn"] = "火焰轰炸者",
-        ["zh-tw"] = "火焰轟炸者",
+        ["zh-tw"] = "血痂轟炸者",
     },
     renegade_netgunner = {
         en = "Trapper",
         ["zh-cn"] = "陷阱手",
-        ["zh-tw"] = "陷阱手",
+        ["zh-tw"] = "陷阱兵",
     },
     renegade_plasma_gunner = {
         en = "Plasma",
+        ["zh-tw"] = "電漿槍手",
         -- Needs loc
     },
     renegade_sniper = {
@@ -798,7 +811,7 @@ overlay_name_sets.full = {
     chaos_poxwalker_bomber = {
         en = "Burster",
         ["zh-cn"] = "爆破手",
-        ["zh-tw"] = "爆破手",
+        ["zh-tw"] = "瘟疫爆者",
     },
     chaos_beast_of_nurgle = {
         en = "Beast",
@@ -812,18 +825,22 @@ overlay_name_sets.full = {
     },
     chaos_ogryn_houndmaster = {
         en = "PackMaster",
+        ["zh-tw"] = "獸群領主",
         -- Need loc
     },
     chaos_ogryn_houndmaster_wk = {
         en = "PackMaster*",
+        ["zh-tw"] = "獸群領主*",
         -- Need loc
     },
     chaos_armored_hound = {
         en = "Arm. Hound",
+        ["zh-tw"] = "裝甲獵犬",
         -- Need loc
     },
     chaos_armored_hound_wk = {
         en = "Arm. Hound*",
+        ["zh-tw"] = "裝甲獵犬*",
         -- Need loc
     },
     chaos_plague_ogryn = {
@@ -854,17 +871,17 @@ overlay_name_sets.full = {
     chaos_mutator_daemonhost = {
         en = "Hex Daemonhost",
         ["zh-cn"] = "咒缚恶魔宿主",
-        ["zh-tw"] = "魔缚惡魔宿主",
+        ["zh-tw"] = "魔縛惡魔宿主",
     },
     renegade_captain = {
         en = "Captain",
         ["zh-cn"] = "连长",
-        ["zh-tw"] = "隊長",
+        ["zh-tw"] = "連長",
     },
     renegade_twin_captain = {
         en = "Twins",
         ["zh-cn"] = "双子",
-        ["zh-tw"] = "雙子",
+        ["zh-tw"] = "雙子連長",
     },
 }
 
@@ -900,10 +917,12 @@ loc_raw.mod_ui["flamer_notif_name"] = {
 
 loc_raw.subcategory["chaos_armored_hound"] = {
     en = "Armored Hound",
+    ["zh-tw"] = "裝甲獵犬",
     -- Need loc
 }
 loc_raw.mod_ui["chaos_armored_hound_notif_name"] = {
     en = "Armored Hound",
+    ["zh-tw"] = "裝甲獵犬",
     -- Need loc
 }
 
@@ -982,10 +1001,12 @@ loc_raw.mod_ui["renegade_netgunner_notif_name"] = {
 
 loc_raw.subcategory["renegade_plasma_gunner"] = {
     en = "Plasma Gunner",
+    ["zh-tw"] = "電漿槍手",
     -- Needs loc
 }
 loc_raw.mod_ui["renegade_plasma_gunner_notif_name"] = {
     en = "Plasma Gunner",
+    ["zh-tw"] = "電漿槍手",
     -- Needs loc
 }
 
@@ -1025,13 +1046,13 @@ loc_raw.mod_ui["chaos_poxwalker_bomber_notif_name"] = {
 loc_raw.subcategory["monsters"] = {
     en = "Monsters",
     ["zh-cn"] = "怪物",
-    ["zh-tw"] = "怪物",
+    ["zh-tw"] = "巨獸",
 }
 
 loc_raw.subcategory["monsters_wk"] = {
     en = "Monsters (weakened)",
     ["zh-cn"] = "怪物（虚弱）",
-    ["zh-tw"] = "怪物（虛弱）",
+    ["zh-tw"] = "巨獸（虛弱）",
 }
 
 -- Beast of Nurgle - Other locs
@@ -1052,11 +1073,13 @@ loc_raw.mod_ui["chaos_beast_of_nurgle_wk_notif_name"] = {
 
 loc_raw.mod_ui["chaos_ogryn_houndmaster_notif_name"] = {
     en = "PACKMASTER",
+    ["zh-tw"] = "獸群領主",
         -- Need loc
 }
 
 loc_raw.mod_ui["chaos_ogryn_houndmaster_wk_notif_name"] = {
     en = "PACKMASTER (Weak)",
+    ["zh-tw"] = "獸群領主*",
         -- Need loc
 }
 
@@ -1064,11 +1087,13 @@ loc_raw.mod_ui["chaos_ogryn_houndmaster_wk_notif_name"] = {
 
 loc_raw.mod_ui["chaos_armored_hound_notif_name"] = {
     en = "ARMORED HOUND",
+    ["zh-tw"] = "裝甲獵犬",
         -- Need loc
 }
 
 loc_raw.mod_ui["chaos_armored_hound_wk_notif_name"] = {
     en = "ARMORED HOUND (Weak)",
+    ["zh-tw"] = "裝甲獵犬（虛弱）",
         -- Need loc
 }
 
@@ -1113,7 +1138,7 @@ loc_raw.mod_ui["chaos_daemonhost_notif_name"] = {
 loc_raw.mod_ui["chaos_mutator_daemonhost_notif_name"] = {
     en = "HEXBOUND DAEMONHOST",
     ["zh-cn"] = "咒缚恶魔宿主",
-    ["zh-tw"] = "咒缚恶魔宿主",
+    ["zh-tw"] = "魔縛惡魔宿主",
 }
 
 -- Captain - Other locs
@@ -1121,7 +1146,7 @@ loc_raw.mod_ui["chaos_mutator_daemonhost_notif_name"] = {
 loc_raw.mod_ui["renegade_captain_notif_name"] = {
     en = "CAPTAIN",
     ["zh-cn"] = "连长",
-    ["zh-tw"] = "隊長",
+    ["zh-tw"] = "連長",
 }
 
 -- Twins - Other locs
@@ -1129,7 +1154,7 @@ loc_raw.mod_ui["renegade_captain_notif_name"] = {
 loc_raw.mod_ui["renegade_twin_captain_notif_name"] = {
     en = "TWIN CAPTAINS",
     ["zh-cn"] = "双子连长",
-    ["zh-tw"] = "雙子",
+    ["zh-tw"] = "雙子連長",
 }
 
 
