@@ -15,24 +15,24 @@ local localizations = {
         ru = "Spidey Sense - Добавляет цветной дуговой индикатор, показывающий направление звуковых сигналов для определённых врагов.",
     },
     arc_side = {
-        ["zh-tw"] = "在側面顯示弧形",
         en = "Show Arcs On Side",
+        ["zh-tw"] = "在側面顯示弧形",
     },
     arc_side_tooltip = {
-        ["zh-tw"] = "將方向弧形限制為你一側的威脅。兩側顯示所有弧形（預設）；左側僅顯示你左側威脅的弧形；右側僅顯示你右側威脅的弧形。直接在前方或後方的威脅仍然會在任一側顯示。",
         en = "Limit directional arcs to threats on one side of you. Both shows every arc (default); Left shows only arcs for threats to your left; Right shows only arcs for threats to your right. Threats directly ahead or behind still show on either side.",
+        ["zh-tw"] = "將方向弧形限制為你一側的威脅。兩側顯示所有弧形（預設）；左側僅顯示你左側威脅的弧形；右側僅顯示你右側威脅的弧形。直接在前方或後方的威脅仍然會在任一側顯示。",
     },
     arc_side_both = {
-        ["zh-tw"] = "兩側",
         en = "Both",
+        ["zh-tw"] = "兩側",
     },
     arc_side_left = {
-        ["zh-tw"] = "左側",
         en = "Left",
+        ["zh-tw"] = "左側",
     },
     arc_side_right = {
-        ["zh-tw"] = "右側",
         en = "Right",
+        ["zh-tw"] = "右側",
     },
     invalid_colour_setting = {
         en = " has an invalid color. Please update the arc or text settings",
