@@ -1,14 +1,13 @@
 --[[
 Title: Spidey Sense
 Author: Wobin
-Date: 13/07/2026
+Date: 24/08/2026
 Repository: https://github.com/Wobin/SpideySense
-Version: 7.7
 --]]
 
 local mod = get_mod("Spidey Sense")
 
-mod.version = "7.7"
+mod.version = mod.get_metadata and mod:get_metadata("version") or "unknown"
 
 mod._indicators = {}
 
@@ -108,6 +107,14 @@ mod.on_setting_changed = function(setting_id)
   end
 end
 
+
+mod.on_settings_reset = function()
+  if mod.ui and mod.ui.invalidate_setting_caches then
+    mod.ui.invalidate_setting_caches(nil)
+  end
+  update_active_enemies()
+  update_render_warnings()
+end
 update_active_enemies()
 update_render_warnings()
 
@@ -160,7 +167,9 @@ mod.hook_monster = function(sound_name, unit_or_position, check_unit)
 	then create_indicator(unit_or_position, "burster") end
   
 	if active_enemies.hound
-		and (sound_name:match("wwise/events/minions/play_enemy_chaos_hound"))
+		and (sound_name:match("wwise/events/minions/play_enemy_chaos_hound")
+			or sound_name:match("wwise/events/minions/play_chaos_hound_armoured")
+			or sound_name:match("wwise/events/minions/play_chaos_hound_mutator"))
 	then create_indicator(unit_or_position, "hound") end
 
 	if active_enemies.mutant 
@@ -293,19 +302,8 @@ mod.update = function(dt)
 end
 
 mod.on_all_mods_loaded = function()
-
-  if not Managers.backend:authenticated() then
-   Promise.delay(5):next(mod.on_all_mods_loaded)
-   return
-  end
-
-  local function load_package(package_name)
-    if not Managers.package:has_loaded(package_name) then
-      Managers.package:load(package_name, "Spidey Sense")
-    end
-  end
-
-  load_package("packages/ui/views/inventory_background_view/inventory_background_view")
+  if mod._loaded then return end
+  mod._loaded = true
 
   mod:info(mod.version)
   mod.ui.loadWarnings()
