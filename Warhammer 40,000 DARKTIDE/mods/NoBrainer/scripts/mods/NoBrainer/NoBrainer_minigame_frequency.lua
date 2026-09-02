@@ -27,6 +27,12 @@ local ARROW_HIDDEN   = { 0,   255, 165, 0 }
 local RAD_180       = math.rad(180)
 local RAD_90        = math.rad(90)
 local RAD_NEG90     = math.rad(-90)
+local FREQUENCY_MIN_STRENGTH = 0.45
+local FREQUENCY_MAX_STARTUP_EXTRA = 0.25
+local FREQUENCY_MAX_REACTION_DELAY = 1.00
+local FREQUENCY_MAX_CONFIRM_DELAY = 1.20
+local FREQUENCY_MAX_COOLDOWN_EXTRA = 0.12
+local FREQUENCY_RESTART_RECOVERY_TIMEOUT = 1.2
 
 local ARROW_SPECS = {
     x = { offset = { -385, ARROW_TOP_Y, ARROW_DEPTH } },
@@ -35,12 +41,19 @@ local ARROW_SPECS = {
 local frequency_active = false
 local active_frequency_key = nil
 local frequency_completed = false
+local frequency_stopped_key = nil
+local frequency_stopped_until = 0
+local frequency_restart_key = nil
+local frequency_restart_until = 0
+local frequency_restart_stop_seen = false
+local frequency_restart_board_fresh = false
+local frequency_restart_stage_fresh = false
+local frequency_restart_target_fresh = false
 
-local function _reset_snapshot(reason)
+mod._freq.session_active = false
+
+local function _reset_snapshot()
     local freq = mod._freq
-    if freq and (freq.active or freq.timer > 0) then
-        mod._debug_event_change("frequency_sample_reset", tostring(reason) .. ":" .. tostring(freq.stage) .. ":" .. tostring(freq.key), "frequency", "sample", { reason = reason or "unknown", stage = freq.stage })
-    end
     freq.timer = 0
     freq.active = false
     freq.gameplay = false
@@ -58,7 +71,7 @@ end
 
 local function _snapshot_fresh()
     local freq = mod._freq
-    return freq and freq.active and freq.timer > 0 and freq.gameplay and not freq.completed
+    return freq and freq.session_active and freq.active and freq.timer > 0 and freq.gameplay and not freq.completed
 end
 
 local function _is_active_frequency_mg(mg)
@@ -67,11 +80,6 @@ end
 
 local function _stage(mg)
     return mg and mg.current_stage and mg:current_stage() or mg and mg._current_stage
-end
-
-local function _point_text(point)
-    if not point then return "nil" end
-    return tostring(point.x) .. "," .. tostring(point.y)
 end
 
 local function _ensure_arrows(view)
@@ -106,12 +114,16 @@ local function _is_gameplay(mg)
     return not state or state == MinigameSettings.game_states.gameplay
 end
 
+local function _scanner_view_active()
+    local ui = Managers.ui
+    return ui and ui:view_active("scanner_display_view")
+end
+
 local function _freq_on_target_mg(mg)
-    if not mg or not mg.is_visually_on_target then return false end
+    if not mg then return false end
     if not _is_gameplay(mg) then return false end
 
-    local ok, on_target = pcall(mg.is_visually_on_target, mg)
-    return ok and on_target == true
+    return mg:is_visually_on_target() == true
 end
 
 local function _sample_frequency(mg, allow_server_fallback)
@@ -130,10 +142,7 @@ local function _sample_frequency(mg, allow_server_fallback)
     end
 
     if not S("enable_frequency_auto") or not mg or not mg.frequency or not mg.target_frequency then
-        local reason = not S("enable_frequency_auto") and "setting_disabled"
-            or not mg and "no_minigame"
-            or "missing_frequency_api"
-        _reset_snapshot(reason)
+        _reset_snapshot()
         return
     end
 
@@ -170,17 +179,10 @@ local function _sample_frequency(mg, allow_server_fallback)
         freq.dir_y = 0
     end
 
-	if mod._debug_enabled() then
-		mod._debug_event_change_throttle("frequency_sample_event", tostring(stage) .. ":" .. _point_text(current) .. ":" .. _point_text(target) .. ":" .. tostring(gameplay) .. ":" .. tostring(completed), 1.0, "frequency", "sample", {
-			current = _point_text(current),
-			reason = gameplay and "sampled" or completed and "completed" or "not_gameplay",
-			stage = stage,
-			target = _point_text(target),
-		})
-	end
-
     local now = mod._time("gameplay")
-    if allow_server_fallback and now and mg._is_server and gameplay and not completed and mod._freq_startup_delay <= 0 then
+    if allow_server_fallback and frequency_active and freq.session_active and _is_active_frequency_mg(mg)
+        and now and mg._is_server and gameplay and not completed and mod._freq_startup_delay <= 0
+    then
         local on_target = freq.on_target
         local move_vec = mod._freq_move_vec and mod._freq_move_vec()
         if move_vec then
@@ -189,7 +191,6 @@ local function _sample_frequency(mg, allow_server_fallback)
         end
 
         if on_target and mod._freq_try_submit and mod._freq_try_submit(now) then
-            mod._debug_event("frequency", "server_fallback", { server = mg._is_server, stage = freq.stage })
             mg:test_frequency(mg._frequency.x, mg._frequency.y)
         end
     end
@@ -197,41 +198,30 @@ end
 
 mod:hook_require("scripts/ui/views/scanner_display_view/minigame_frequency_view", function(View)
 	mod:hook_safe(View, "draw_widgets", function(self, dt, t, input_service, ui_renderer)
-		if mod._practice_active and mod._practice_active() then
-			mod._debug_event_throttle("frequency_visual_blocked_event", 1.5, "frequency", "blocked", { reason = "practice_active" })
-			return
-		end
 		_deps()
 
 		local ext = self._minigame_extension
 		if not ext then
-			mod._debug_event_throttle("frequency_visual_blocked_event", 1.5, "frequency", "blocked", { reason = "missing_extension" })
 			return
 		end
-		local ok, mg = pcall(ext.minigame, ext, MinigameSettings.types.frequency)
-		mg = ok and mg or nil
+		local mg = ext:minigame(MinigameSettings.types.frequency)
 		_sample_frequency(mg, true)
 		if not S("enable_frequency_highlight") then
-			mod._debug_event_throttle("frequency_visual_blocked_event", 1.5, "frequency", "blocked", { reason = "highlight_disabled" })
 			return
 		end
 		if not ui_renderer then
-			mod._debug_event_throttle("frequency_visual_blocked_event", 1.5, "frequency", "blocked", { reason = "missing_renderer" })
 			return
 		end
 		if not mg or not mg.frequency or not mg.target_frequency then
-			mod._debug_event_throttle("frequency_visual_blocked_event", 1.5, "frequency", "blocked", { reason = "missing_minigame_or_api" })
 			return
 		end
 		if mg.is_completed and mg:is_completed() then
-			mod._debug_event_throttle("frequency_visual_blocked_event", 1.5, "frequency", "blocked", { reason = "completed", stage = _stage(mg) })
 			return
 		end
 
 		local current = mg:frequency()
 		local target  = mg:target_frequency()
 		if not current or not target then
-			mod._debug_event_throttle("frequency_visual_blocked_event", 1.5, "frequency", "blocked", { reason = "missing_current_or_target", stage = _stage(mg) })
 			return
 		end
 
@@ -241,7 +231,6 @@ mod:hook_require("scripts/ui/views/scanner_display_view/minigame_frequency_view"
 
 		local arrows = _ensure_arrows(self)
 		if not arrows then
-			mod._debug_event_throttle("frequency_visual_blocked_event", 1.5, "frequency", "blocked", { reason = "missing_arrow_widgets", stage = _stage(mg) })
 			return
 		end
 
@@ -272,45 +261,29 @@ end)
 
 function mod._freq_move_vec()
 	local freq = mod._freq
-	if not freq or freq.timer <= 0 or not freq.active or freq.completed then return nil end
+	if not freq or not freq.session_active or freq.timer <= 0 or not freq.active or freq.completed then return nil end
 	if not freq.gameplay then
-        mod._debug_event_throttle("freq_not_gameplay_event", 1.5, "frequency", "wait", { reason = "not_gameplay", stage = freq.stage })
-        return nil
+		return nil
     end
 
 	_deps()
 	if not freq.current_x or not freq.current_y or not freq.target_x or not freq.target_y then
-		if mod._debug_enabled() then
-			mod._debug_event_throttle("freq_missing_event", 1.5, "frequency", "wait", { current = tostring(freq.current_x) .. "," .. tostring(freq.current_y), reason = "missing_current_or_target", stage = freq.stage, target = tostring(freq.target_x) .. "," .. tostring(freq.target_y) })
-		end
         return nil
     end
 
-    local margin  = (MinigameSettings.frequency_success_margin or 0.1) * 0.35
-    local dx      = freq.target_x - freq.current_x
-    local dy      = freq.target_y - freq.current_y
     local ix = freq.dir_x or 0
     local iy = freq.dir_y or 0
 
-	if mod._debug_enabled() then
-		mod._debug_event_throttle("freq_move_plan_event", 1.0, "frequency", "move_plan", { current = tostring(freq.current_x) .. "," .. tostring(freq.current_y), dx = dx, dy = dy, input = string.format("%.3f,%.3f", ix, iy), margin = margin, stage = freq.stage, target = tostring(freq.target_x) .. "," .. tostring(freq.target_y) })
-	end
-
-    if mod._freq_scale < 0.95 then
-        local strength = 0.03 + mod._freq_scale * 0.97
-        local noise = 1 - mod._freq_scale
+    if mod._freq_scale < 1 then
+        local strength = FREQUENCY_MIN_STRENGTH + mod._freq_scale * (1 - FREQUENCY_MIN_STRENGTH)
 
 		local now = mod._time("gameplay")
         if now and mod._freq_reaction_until > now then
             return Vector3(0, 0, 0)
         end
 
-        ix = ix * strength * (1.0 - noise * 0.12 + math.random() * noise * 0.24)
-        iy = iy * strength * (1.0 - noise * 0.12 + math.random() * noise * 0.24)
-
-        if math.random() < noise * 0.05 then
-            return Vector3(math.random() * 0.3 - 0.15, math.random() * 0.3 - 0.15, 0)
-        end
+        ix = ix * strength
+        iy = iy * strength
     end
 
     return Vector3(ix, iy, 0)
@@ -324,27 +297,18 @@ local function _freq_update_state(now)
     if not stage then return false end
 
     if stage ~= mod._freq_last_stage then
-        if mod._freq_last_stage and mod._freq_last_stage ~= 0 then
-            mod._debug_event("frequency", "stage_changed", { from = mod._freq_last_stage, to = stage })
-        end
-
+		local previous_stage = mod._freq_last_stage
         mod._freq_last_stage = stage
         mod._freq_confirm_until = 0
 
-        if mod._freq_scale < 0.95 then
-            local delay = (1 - mod._freq_scale) * 4.0
-            mod._freq_reaction_until = now + delay * (0.4 + math.random() * 0.6)
+        if previous_stage ~= 0 and mod._freq_scale < 1 then
+            mod._freq_reaction_until = now + mod._speed_pacing("frequency_solve_speed") * FREQUENCY_MAX_REACTION_DELAY
         end
     end
 
     local on_target = freq.on_target == true
-    if on_target ~= mod._freq_was_on_target then
-        mod._debug_event("frequency", "target_state", { on_target = on_target, stage = stage })
-    end
-
-    if on_target and not mod._freq_was_on_target and mod._freq_scale < 0.95 then
-        local delay = (1 - mod._freq_scale) * 2.0
-        mod._freq_confirm_until = now + delay * (0.3 + math.random() * 0.7)
+    if on_target and not mod._freq_was_on_target and mod._freq_scale < 1 then
+        mod._freq_confirm_until = now + mod._speed_pacing("frequency_solve_speed") * FREQUENCY_MAX_CONFIRM_DELAY
     end
 
     mod._freq_was_on_target = on_target
@@ -356,43 +320,43 @@ function mod._freq_try_submit(now)
 	local freq = mod._freq
 	if not freq or not now then return false end
 	if mod._freq_startup_delay > 0 then
-        mod._debug_event_throttle("freq_startup_event", 1.0, "frequency", "wait", { reason = "startup", remaining = mod._freq_startup_delay, stage = freq.stage })
         return false
     end
 
 	if mod._freq_cooldown > 0 then
-        mod._debug_event_throttle("freq_cooldown_event", 1.0, "frequency", "wait", { reason = "cooldown", remaining = mod._freq_cooldown, stage = freq.stage })
         return false
     end
 
 	if not _freq_update_state(now) then
-        mod._debug_event_throttle("freq_off_target_event", 1.0, "frequency", "wait", { reason = "off_target", stage = freq.stage })
         return false
     end
 
 	if mod._freq_confirm_until > now or mod._freq_reaction_until > now then
-        mod._debug_event_throttle("freq_confirm_event", 1.0, "frequency", "wait", { confirm_until = mod._freq_confirm_until, now = now, reaction_until = mod._freq_reaction_until, reason = "reaction_confirm" })
         return false
     end
 
 	local scale = mod._freq_scale or 0
-	mod._freq_cooldown = 0.08 + (1 - scale) * 0.22
+	mod._freq_cooldown = 0.08 + (1 - scale) * FREQUENCY_MAX_COOLDOWN_EXTRA
 	mod._freq_press_until = now + 0.08
 	mod._freq_release_until = mod._freq_press_until + 0.12
-	mod._debug_event("frequency", "submit_ready", { stage = freq.stage })
 
 	return true
 end
 
 local function _freq_cleanup(reason)
-	if frequency_active and reason then
-		mod._debug_run_end("frequency", "cleanup", { reason = reason, stage = mod._freq and mod._freq.stage })
-	end
-
 	frequency_active = false
 	active_frequency_key = nil
 	frequency_completed = reason == "complete"
-	_reset_snapshot("cleanup")
+	frequency_stopped_key = nil
+	frequency_stopped_until = 0
+	frequency_restart_key = nil
+	frequency_restart_until = 0
+	frequency_restart_stop_seen = false
+	frequency_restart_board_fresh = false
+	frequency_restart_stage_fresh = false
+	frequency_restart_target_fresh = false
+	mod._freq.session_active = false
+	_reset_snapshot()
 	mod._freq_cooldown      = 0
 	mod._freq_startup_delay = 0
 	mod._freq_last_stage    = 0
@@ -403,66 +367,154 @@ local function _freq_cleanup(reason)
 	mod._freq_release_until  = 0
 end
 
+local function _arm_frequency_session(mg, restart_until)
+	frequency_active = true
+	active_frequency_key = tostring(mg)
+	frequency_completed = false
+	frequency_stopped_key = nil
+	frequency_stopped_until = 0
+	frequency_restart_key = nil
+	frequency_restart_until = restart_until or 0
+	frequency_restart_stop_seen = false
+	frequency_restart_board_fresh = false
+	frequency_restart_stage_fresh = false
+	frequency_restart_target_fresh = false
+	mod._freq.session_active = true
+	_reset_snapshot()
+	_sample_frequency(mg, false)
+	mod._freq_scale = mod._speed_scale("frequency_solve_speed")
+	mod._freq_cooldown = 0
+	mod._freq_last_stage = 0
+	mod._freq_reaction_until = 0
+	mod._freq_confirm_until = 0
+	mod._freq_was_on_target = false
+	mod._freq_press_until = 0
+	mod._freq_release_until = 0
+	mod._freq_startup_delay = 0.5 + mod._speed_pacing("frequency_solve_speed") * FREQUENCY_MAX_STARTUP_EXTRA
+end
+
 mod:hook_safe("MinigameFrequency", "start", function(self, player)
 	if not mod._is_local_minigame_player(player) then
-		mod._debug_event("frequency", "blocked", { reason = "remote_player", server = self._is_server, stage = self._current_stage })
+		if frequency_active and _is_active_frequency_mg(self)
+			or frequency_restart_key and frequency_restart_key == tostring(self)
+			or frequency_stopped_key and frequency_stopped_key == tostring(self)
+		then
+			_freq_cleanup("ownership_transferred")
+		end
 		return
 	end
 
 	if not S("enable_frequency_auto") then
-		mod._debug_event("frequency", "blocked", { reason = "setting_disabled", server = self._is_server, stage = self._current_stage })
 		return
 	end
 
-	frequency_active = true
-	active_frequency_key = tostring(self)
-	frequency_completed = false
-	mod._debug_run_start("frequency")
-	_sample_frequency(self, false)
-	mod._freq_scale         = mod._speed_scale("frequency_solve_speed")
-	mod._freq_last_stage    = 0
-	mod._freq_reaction_until = 0
-	mod._freq_confirm_until  = 0
-	mod._freq_was_on_target  = false
-	mod._freq_press_until    = 0
-	mod._freq_release_until  = 0
+	local now = mod._time("gameplay")
+	local quick_restart = self._is_server ~= true
+		and now ~= nil
+		and frequency_stopped_key == tostring(self)
+		and now <= frequency_stopped_until
+	local restart_until = quick_restart and now + FREQUENCY_RESTART_RECOVERY_TIMEOUT or 0
 
-	local speed = mod._N("frequency_solve_speed", 2, 1, 10)
-	if speed >= 8 then
-		mod._freq_startup_delay = 0.5
-	elseif speed >= 6 then
-		mod._freq_startup_delay = 0.3
-	elseif speed <= 3 then
-		mod._freq_startup_delay = 2.5
+	if quick_restart then
+		_freq_cleanup("restart_sync")
+		frequency_restart_key = tostring(self)
+		frequency_restart_until = restart_until
 	else
-		mod._freq_startup_delay = 1.0
+		_arm_frequency_session(self, restart_until)
 	end
-
-	if mod._freq_scale < 0.95 then
-		local delay = (1 - mod._freq_scale) * 4.0
-		local now = mod._time("gameplay")
-		if now then
-			mod._freq_reaction_until = now + delay * (0.5 + math.random() * 0.5)
-		end
-	end
-
-	mod._debug_event("frequency", "start", { reaction_until = mod._freq_reaction_until, server = self._is_server, speed = speed, stage = self._current_stage, startup_delay = mod._freq_startup_delay })
 end)
 
-mod:hook_safe("MinigameFrequency", "stop", function(self)
-	if _is_active_frequency_mg(self) then
+mod:hook_safe("MinigameFrequency", "stop", function(self, ...)
+	local key = tostring(self)
+	local active = _is_active_frequency_mg(self)
+	local player = select(1, ...)
+	local arg_count = select("#", ...)
+	local now = mod._time("gameplay")
+	local local_stop = arg_count > 0 and mod._is_local_minigame_player(player)
+	local stale_stop_before_restart = arg_count == 0
+		and not active
+		and self._is_server ~= true
+		and frequency_stopped_key == key
+	local recoverable_restart = (active or frequency_restart_key == key)
+		and arg_count == 0
+		and self._is_server ~= true
+		and not frequency_completed
+		and now ~= nil
+		and now <= frequency_restart_until
+	local restart_until = frequency_restart_until
+
+	if active or frequency_restart_key == key then
 		_freq_cleanup(not frequency_completed and "stop" or nil)
-	else
-		mod._debug_event_throttle("frequency_inactive_lifecycle_event", 1.5, "frequency", "cleanup", { reason = "inactive_stop", server = self and self._is_server, stage = self and self._current_stage })
+	end
+
+	if local_stop and self._is_server ~= true and now then
+		frequency_stopped_key = key
+		frequency_stopped_until = now + FREQUENCY_RESTART_RECOVERY_TIMEOUT
+	elseif stale_stop_before_restart then
+		frequency_stopped_key = nil
+		frequency_stopped_until = 0
+	elseif recoverable_restart then
+		frequency_restart_key = key
+		frequency_restart_until = restart_until
+		frequency_restart_stop_seen = true
 	end
 end)
 mod:hook_safe("MinigameFrequency", "complete", function(self)
-	if _is_active_frequency_mg(self) then
+	if _is_active_frequency_mg(self) or frequency_restart_key == tostring(self) then
 		_freq_cleanup("complete")
-	else
-		mod._debug_event_throttle("frequency_inactive_lifecycle_event", 1.5, "frequency", "cleanup", { reason = "inactive_complete", server = self and self._is_server, stage = self and self._current_stage })
 	end
 end)
+
+mod:hook_safe("MinigameFrequency", "generate_board", function(self)
+	if frequency_restart_key == tostring(self) and frequency_restart_stop_seen then
+		frequency_restart_board_fresh = true
+		frequency_restart_stage_fresh = false
+		frequency_restart_target_fresh = false
+	end
+end)
+
+mod:hook_safe("MinigameFrequency", "set_current_stage", function(self, stage)
+	if frequency_restart_key == tostring(self) and frequency_restart_stop_seen and frequency_restart_board_fresh and stage == 1 then
+		frequency_restart_stage_fresh = true
+		frequency_restart_target_fresh = false
+	end
+end)
+
+mod:hook_safe("MinigameFrequency", "set_target_frequency", function(self)
+	if frequency_restart_key == tostring(self) and frequency_restart_stop_seen and frequency_restart_board_fresh and frequency_restart_stage_fresh then
+		frequency_restart_target_fresh = true
+	end
+end)
+
+function mod._freq_rearm_from_state(state, t)
+	if not frequency_restart_key then return end
+
+	local now = t or mod._time("gameplay")
+	if not now or now > frequency_restart_until then
+		_freq_cleanup("restart_timeout")
+		return
+	end
+	if frequency_active or not S("enable_frequency_auto") then return end
+	if not frequency_restart_stop_seen then return end
+	if not frequency_restart_board_fresh or not frequency_restart_stage_fresh or not frequency_restart_target_fresh then return end
+
+	local mg = state and state._minigame
+	local player = state and state._player
+	if not mg or tostring(mg) ~= frequency_restart_key then return end
+	if mg._is_server == true or not mod._is_local_minigame_player(player) or not _scanner_view_active() then return end
+	if mg.is_completed and mg:is_completed() or not _is_gameplay(mg) then return end
+	local unit = mg._minigame_unit
+	if not unit or not Unit.alive(unit) then return end
+
+	_sample_frequency(mg, false)
+	local freq = mod._freq
+	if freq.key ~= frequency_restart_key or freq.stage ~= 1 then return end
+	if type(freq.current_x) ~= "number" or type(freq.current_y) ~= "number" then return end
+	if type(freq.target_x) ~= "number" or type(freq.target_y) ~= "number" then return end
+
+	local restart_until = frequency_restart_until
+	_arm_frequency_session(mg, restart_until)
+end
 
 local function on_update(dt)
 	local freq = mod._freq
