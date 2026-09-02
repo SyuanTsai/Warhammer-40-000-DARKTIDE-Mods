@@ -180,13 +180,13 @@ local localizations = {
     },
     melee_backstab_name = {
         en = "Melee Backstab",
-        ["zh-cn"] = "近战背刺",
         ["zh-tw"] = "近戰背刺",
+        ["zh-cn"] = "近战背刺",
     },
     ranged_backstab_name = {
       en = "Ranged Backstab",
-      ["zh-cn"] = "远程背刺",
       ["zh-tw"] = "遠程背刺",
+      ["zh-cn"] = "远程背刺",
     },
     melee_backstab_colour = {
         en = "Colour for Melee Backstab warnings",
@@ -638,8 +638,8 @@ local function addLocalisation(localisations, typeName)
     }
     localisations[typeName .. "_arrow_description"] = {
         en = "Shows an indicator when the target is within a certain closer range",
-        ["zh-cn"] = "当目标进入近距离范围内时显示指示器",
         ["zh-tw"] = "當目標進入較近範圍內時顯示指示器",
+        ["zh-cn"] = "当目标进入近距离范围内时显示指示器",
     }
     localisations[typeName .. "_arrow_colour"] = {
         en = "Proximity Alert Colour",
