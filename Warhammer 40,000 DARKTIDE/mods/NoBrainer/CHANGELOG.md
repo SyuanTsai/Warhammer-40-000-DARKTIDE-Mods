@@ -1,3 +1,102 @@
+# Changelog
+
+## [3.1.4]
+### Changed
+- **Decode Symbols predicted reroll synchronization**: A rerolled client board can skip the generic 120ms stability wait when its fresh start time, stage 1, all 28 symbols, and all four targets exactly match the seed-predicted board. Incomplete or mismatched replication retains the existing fail-closed synchronization path.
+- **Decode Symbols exact client retry valuation**: Before a measured restart sample exists, a seed-verified client decision now values a retry from the network round-trip floor plus the existing restart synchronization margin instead of the conservative 750ms fallback. Host and statistical decisions retain the fallback, while completed retries continue to replace and adapt the estimate from observed cancel-to-board timing.
+
+### Fixed
+- **Decode Symbols high-ping consecutive rerolls**: A temporary client state correction that reopens the same terminal before the authoritative stop acknowledgement no longer resets an in-progress cancel. Its duplicate local stop is ignored until the server stop arrives, preserving the predicted board and remaining reroll count through consecutive retries.
+
+## [3.1.2] - 2026-08-19
+### Added
+- **Simplified Chinese localization**: Added a complete `zh-cn` translation and manual Simplified Chinese language option. Credits to EasyRain233 for providing a translation! Automatic mode uses the translation when Darktide's language is set to Simplified Chinese.
+
+## [3.1.1] - 2026-08-18
+### Added
+- **Russian localization**: Added a complete Russian translation and manual Russian language option. Automatic mode uses the Russian translation when Darktide's language is set to Russian.
+
+## [3.1] - 2026-08-17
+### Added
+- **Decode Symbols smart seed reroll**: Added an optional Smart Seed Reroll setting that can cancel and retry up to two slow stage-1 layouts before auto-solving. Host play predicts future layouts directly from the isolated minigame seed; network clients use only seed candidates that reproduce the full current symbol and target layout exactly, with finite-horizon statistical stopping as a fallback. Client forecasts include measured submit-to-stage acknowledgement delay and current network RTT, while restart cost is learned separately from the full cancel-to-stable-board path. Retries use normal networked cancel and interaction input, wait for the authoritative stop acknowledgement, reacquire the same terminal, and fail closed on stale synchronization, ownership changes, invalid targets, or timeout.
+- **Smart reroll expected time saving**: A deterministic Monte Carlo simulation of 2,000,000 paired trials sampled all 1,512 legal target layouts with continuous realized cursor phases while applying the runtime policy's 32-phase future-board valuation, 0.5-second minimum net-saving threshold, and maximum of two retries. At the client's 0.2-second minimum stage-ready delay, exact seed prediction reduced the 5.545-second no-reroll mean by 0.645 seconds (11.63%) with the cold 0.75-second restart cost and by 0.720 seconds (12.99%) with a 0.630-second learned cost. A 0.30-second stage-ready delay with the cold restart cost still saved 0.641 seconds (11.55%). Future target layouts are known in exact mode, while future start phases remain unknown and are phase-averaged as in the runtime policy.
+
+## [3.0.2] - 2026-08-04
+### Changed
+- **Matching speed 5 movement pacing**: The next movement pulse can now fire immediately after the full server-synchronized cursor coordinate acknowledges the previous move, restoring the practical speed of version 2.2.1 without removing pending-move, stale-session, stage, or timeout safeguards. Timed-out movement also resets submit settling before retrying from the latest fresh snapshot.
+
+### Fixed
+- **Matching high-latency restart recovery**: A delayed server stop from a cancelled Matching session can no longer permanently clear a newer local solver session. Recovery is bounded to the original restart window and only re-arms from the same active local `PlayerCharacterStateMinigame`, scanner view, and fresh gameplay snapshot, preserving stale-input protection during real exits, stuns, ownership changes, and mission transitions.
+- **Shared high-latency restart safeguards**: Drill, Balance, and Frequency now distinguish an argumentful local cancel from the delayed argumentless server stop that can cross a quick restart. Recovery is restricted to the same local minigame instance, active scanner view, gameplay state, and an unextended 1.2-second window; completion, ownership transfer, stun/state exit, setting changes, timeout, and round cleanup remain fail-closed.
+- **Restart stop ordering**: When the delayed argumentless server stop arrives before the player re-enters Drill, Balance, or Frequency, it now consumes the pending restart marker so the following local start arms normally instead of waiting for a second stop that will never arrive.
+- **Drill high-latency restart recovery**: Drill re-arms only from a coherent current stage, cursor, target, selection, and search snapshot. Centered idle stages, the correct node, and valid intermediate selected nodes are supported, while normal starts retain the stricter stage-1 reset gate and all pending movement, submit pulses, cooldowns, and settle state are discarded before recovery.
+- **Balance high-latency restart recovery**: Balance remains inactive until two fresh post-stop server positions arrive with a plausible sample interval. It rebuilds position and velocity from those samples after clearing command history, pending samples, prediction, correction, RTT, and safety state, preventing stale or zero-velocity steering from crossing the restart boundary.
+- **Frequency high-latency restart recovery**: Frequency remains inactive during a quick restart until the delayed server stop is observed, followed by a fresh ordered board, stage-1, and target synchronization. The full normal startup delay and all movement, reaction, confirmation, cooldown, and submit gates then restart from clean state.
+
+## [3.0.1] - 2026-08-01
+### Fixed
+- **Drill client startup synchronization**: Drill auto-solve now observes the server-replicated stage-1 reset directly when search state is cleared, instead of relying solely on the next UI sample to see the brief centered cursor state. This prevents held movement input during startup from moving the cursor before readiness is armed and permanently disabling automation, while preserving the existing stale-session and ownership safeguards.
+
+## [3.0.0] - 2026-07-30
+### Removed
+- **Practice Mode**: Removed the practice controller, simulated minigames, selector and practice views, keybind, settings, localization, input routing, and runtime integration.
+- **Expedition auto-marking**: Removed automatic Expedition POI, vault, and extraction marking together with its settings and localization. Decode Search highlighting, auto-solve, and the `expedition_solve_speed` setting remain available.
+- **Permanent debug system**: Removed the debug setting, chat output, rate limiting, run tracking, route diagnostics, telemetry, counters, and debug-only allocations across every runtime module. Development diagnostics now live in the separate `NoBrainerDebug` companion and are not included in NoBrainer releases.
+- **Balance speed setting**: Removed the misleading Balance speed slider because Balance has a fixed progression time and the gentle predictive profile already completes reliably.
+
+### Changed
+- **Lightweight runtime**: Reduced the mod's Lua source from 8,934 to 4,079 lines, a 54.3% reduction, while retaining minigame solution highlights, configurable auto-solve pacing, Auspex scanning, servo-skull auto-hack, and Balance automation.
+- **Protected-call cleanup**: Removed 11 redundant `pcall` wrappers from update dispatch, gameplay time, scanner-template loading, minigame UI sampling, scan visuals, and network timing. Expected lifecycle absence now uses explicit timer, state, extension, and host checks, reducing per-frame protected-call and exception overhead while preserving DMF callstacks for unexpected failures. The focused Decode Search stop wrapper remains for its confirmed destroyed-extension teardown race.
+- **Servo-skull attempt state**: Replaced the mixed diagnostic state with a minimal functional order state and added recovery when a confirmed tag disappears before hacking begins.
+- **Auto-solve speed scale**: Replaced the old 1-10 speed sliders for Matching, Drill, and Frequency with a maintainable 1-5 scale. Speed 1 is the default paced profile, while speed 5 preserves the fastest solver decisions. Intermediate levels apply deterministic pacing to the same solver instead of separate algorithms, random skips, or deliberate wrong input.
+- **Matching pacing range**: Made Matching speed 1 approximately 30% shorter than the previous speed 1 profile and distributed speeds 2-4 linearly across the reduced pacing range. Every speed now uses the same diagonal routing and server-confirmed movement synchronization, while speed 5 retains the fastest submit pacing.
+- **Fixed Balance controller**: Balance now always uses 35% normal predictive gain. Boundary safety corrections still use full strength.
+
+### Fixed
+- **Decode Symbols high-latency restart recovery**: A delayed client stop after an immediate cancel and restart now preserves the pending synchronization wait, and the active local minigame state can re-arm the solver while replicated ownership is temporarily unavailable. This prevents Decode Symbols auto-solve from remaining inactive after a high-latency restart without allowing stale board input.
+
+### Compatibility
+- **Updating from earlier versions**: Existing removed settings, including `balance_solve_speed`, are safely ignored and older string-based solve-speed values are still migrated for the remaining configurable solvers. Fully exit Darktide before installing this update; updating through Ctrl+Shift+R is not supported because removed Practice Mode class replacements can remain in memory until restart.
+- **Speed setting migration**: Existing numeric 1-10 values for Matching, Drill, and Frequency are migrated once to the new 1-5 scale. Previous speed 10 becomes speed 5, old Human becomes speed 1, and old Inhuman becomes speed 5. Balance keeps its existing enable setting but no longer reads its retired speed value.
+
+## [2.2.1] - 2026-07-25
+### Fixed
+- **Drill submit synchronization**: Movement input is now blocked while a submitted stage waits for server confirmation or the existing timeout. This prevents a late cursor snapshot from triggering another movement and duplicate submit before the stage RPC arrives.
+
+## [2.2.0] - 2026-07-23
+### Added
+- **Skitarius servo-skull auto-hack**: Added an enabled-by-default option that automatically orders the hacking servo skull to the nearest available minigame. Command range is configurable from 5 to 100 metres and defaults to the servo skull ability's normal 25-metre targeting range. Line of sight is required by default, with an option to allow orders through walls, floors, and ceilings. Targets and replicated state are checked every 50ms, pending orders prevent duplicate requests, failed confirmations use a separate retry delay, and structured diagnostics track selection, server confirmation, hacking state, tag removal, and completion.
+- **Practice Mode selector**: The Practice Mode hotkey now opens an in-game selector for Decode Symbols, Decode Search, Drill, Frequency, and Balance. Minigame selection has been removed from mod options and the selector retains the latest choice for the current session.
+- **Traditional Chinese coverage**: Added `zh-tw` localization for all new Servo Skull options and tooltips, the updated Practice hotkey behavior, and every label and description in the Practice selector.
+- **Practice auspex presentation**: Practice minigames now use a real handheld auspex with the stock wield, focus, and scanner-display flow in the Psykanium. The Mourningstar continues to use the standalone presentation.
+
+### Changed
+- **Practice Balance fidelity**: Practice Balance now uses the stock push, disruption, speed, movement, and sound constants and follows the stock position-before-force update order. Progress pauses outside the valid radius instead of being lost, while the standalone practice run retains its 20 seconds of accumulated in-bounds training time.
+
+## [2.1.0] - 2026-07-22
+### Changed
+- **Central input routing performance**: Active automation now classifies primary, movement, and scan actions before dispatch and invokes only the relevant solver routes in their existing order. This removes the per-query Matching movement closure and avoids unrelated view, time, manager, vector, and random-work paths without changing input precedence, synthetic release behavior, solve-speed pacing, or server-confirmation gates.
+- **Minigame hot-path allocations**: Decode Symbols now passes sweep duration directly and skips idle gameplay-time reads, while Matching and Drill reuse their previous-cursor snapshots. Matching also draws its four target highlights without a temporary index table, and Drill updates the existing highlight color instead of allocating another table each frame.
+- **Scan polling performance**: Local player unit-data, weapon-action, and scanning components are cached for the current player-unit lifetime and invalidated on unit changes and existing cleanup paths. Highlight bookkeeping counts and repeated no-line-of-sight debug payloads are now built only when debug output is enabled.
+- **Balance runtime overhead**: Inactive Balance sessions now return before update-state writes. Speed 10 keeps all RTT, observer, command-replay, prediction, and safety control state active while collecting forecast, residual, packet, ping, stall, and aggregate statistics only during an active debug run; attaching debug mid-run starts a fresh diagnostic interval.
+- **Expedition auto-mark polling**: Disabled auto-mark cleanup now runs on setting and lifecycle transitions instead of every mod update.
+- **Balance speed 10 controller**: Replaced the frame-derived PD path with an RTT-aware predictive controller that samples synchronized positions directly, estimates hidden velocity, replays delayed input commands, compensates for the game's outward force, and applies disruption-aware safety braking. Speeds 1-9 are unchanged.
+- **Balance diagnostics**: Added packet timing, observer innovation, timestamp-matched forecast error, controller saturation, measured/predicted radius, safety headroom, boundary-stall, and aggregate completion metrics for tuning dedicated-server runs.
+- **Matching speed 10 submit**: Submit now fires on the next stable gameplay tick after the server-synchronized cursor reaches the target, instead of adding the normal 0.20-second post-move guard and 0.10-second settle delay. Movement sync locks, retry timeouts, stage transitions, and speeds 1-9 are unchanged, while structured diagnostics expose the selected submit mode and every sync, settle, and submit phase for both paths.
+- **Matching duplicate routing**: When the target symbol grid appears in multiple valid board positions, the solver now locks onto the match requiring the fewest diagonal movement pulses from the current cursor. This reduces server-acknowledged movement cycles without changing movement synchronization or submit timing.
+- **Matching route diagnostics**: Debug output now records every valid duplicate with its diagonal/Manhattan score, the old first-match baseline, the chosen target, planned and saved movement steps, and a bounded stage summary of sent, acknowledged, and unacknowledged movement pulses.
+- **Matching debug lifecycle clarity**: Pre-session view sampling no longer emits false missing-target warnings, valid board synchronization is reported as a wait state, the post-final-stage sentinel is reported as completion pending, and every full expected-coordinate acknowledgement emits an indexed `move_acked` event. Route summaries now distinguish their start and final cursor positions.
+- **Drill speed 10 synchronization**: Movement now sends one target pulse and waits for the server-synchronized cursor and selected index before allowing another input. Submit independently waits for the server search state and still fires immediately when the game's mandatory 0.50-second search completes; the 0.60-second stage transition and speed 1-9 pacing are unchanged.
+
+### Fixed
+- **Scan local-player lifecycle isolation**: Auspex init, wield, unwield, and destroy callbacks now ignore remote-player equipment, preventing a teammate's scanner lifecycle from refreshing or clearing the local auto-scan state.
+- **Expedition handler cleanup**: Auto-mark cleanup now releases the cached navigation handler, preventing a stale mission reference and repeated disabled-state cleanup after an Expedition handler has been observed.
+- **Servo-skull minigame ownership race**: A remote start on the same Decode Symbols, Decode Search, Drill, Frequency, or Balance instance now immediately clears the previously armed local solver, while remote starts on different devices remain isolated. This prevents stale synthetic input when a Skitarius servo skull wins a simultaneous interaction.
+- **Matching high-latency movement sync**: Pending movement now clears only when the server-synchronized cursor reaches the full expected coordinate. Intermediate per-axis or stale cursor RPCs remain blocked and are diagnosed separately, preventing overlapping movement pulses and target overshoot under high latency.
+- **Drill high-latency input duplication**: Pending target movement and submitted stages now remain locked until their server RPC or bounded timeout arrives, preventing repeated node selections and duplicate submit pulses under high latency. Cursor acknowledgement accounts for the RPC's observed 1/128 coordinate quantization while still requiring the exact selected target index.
+- **Balance movement leakage**: Balance corrections now require an active scanner or practice view, preventing stale auto-balance input from moving the player after minigame ownership changes or the view closes.
+- **Frequency and Decode Symbols stale sessions**: Added durable local-session and active-view gates so later UI/state sampling cannot re-arm synthetic input after ownership has transferred.
+
 ## [2.0.8] - 2026-07-12
 ### Changed
 - **Balance restart tracking**: Balance input now waits for the local minigame start before routing corrections and initializes position tracking from the current resumed cursor position, preventing a false velocity spike on the first sample after an interruption.
@@ -192,7 +291,6 @@
 - **Decode Symbols — Simplified state machine**: Replaced `_ds_count` (integer counter) with `_ds_armed` (boolean). Removed `_ds_count_same()` helper, removed `_ds_mg` reference (no longer needed without pre-press), dropped unused `off` parameter from `_ds_on_target`. Input hook is now 11 lines; `is_on_target` hook is 6 lines.
 - **Decode Symbols — Detection window**: `prec` constant changed from 0.35 to 0.3 for a standardised 0.13s window centered in the game's 0.333s window. Same ping reliability, no magic numbers.
 
-Version 1.4.5
 ## [1.4.5] - 2026-06-14
 ### Fixed
 - **Decode Symbols — Online timing accuracy**: Detection window was the full 0.333s game window, making the press point random within the column. On high ping (>100ms RTT), presses detected near the window edge arrived at the server after the cursor had already left the game's validation window, causing misses. Now uses a centered `prec = 0.35` filter (0.1s window centered in the game's 0.333s window), ensuring detection always occurs close to center with maximum ping margin in both directions. Reliable up to ~280ms RTT.
@@ -204,7 +302,7 @@ Version 1.4.5
 - **Decode Symbols — Removed FixedFrame clock**: Reverted `_calculate_cursor_time` to use the view's `t` parameter (`gameplay_time`) instead of `FixedFrame.get_latest_fixed_time()`. The FixedFrame approach was 16-30ms stale on clients, causing late detection that added to ping latency. Removed `require("scripts/utilities/fixed_frame")` dependency.
 - **Decode Symbols — Tooltip**: Updated to note ~280ms ping reliability so users on very high-ping servers can disable auto-solve.
 
-Version 1.4.3
+## [1.4.3] - 2026-06-14
 ### Fixed
 - **Decode Search (Matching) — Human speed**: Cooldown was set on every `on_axis_set` call, including zero-input and on-target frames, causing up to 1.875s of wasted dead time at the start of each stage. On small 2×2 boards this made auto-move appear non-functional. Fixed by only setting cooldown when `on_axis_set` actually changes the cursor position.
 - **Defense-in-depth**: `mod._exp_move_cooldown` is now initialized in `NoBrainer.lua` alongside all other state, and all reads are nil-guarded.
@@ -220,12 +318,10 @@ Version 1.4.3
 - Input hook skips all 7 solvers via `_any_minigame_active()` gate when no minigame is active.
 - Input hook: global references (`Managers`, `math.*`) localized to module scope.
 
-Version 1.4.1
 ## [1.4.1] - 2026-06-14
 ### Fixed
 - **Auspex Scan — Stale highlights**: When the auspex minigame completed, the mod's 1-second refresh loop kept re-applying `set_scanning_outline(true)` and `set_scanning_highlight(true)` on scannable objects even after no scanning zone was active — leaving highlighted objects visible to the mod user that no one else could see. Fixed by guarding the highlight refresh with `sys:any_active_scanning_zone()`. Highlights are now cleared immediately when the scanning zone is no longer active.
 
-Version 1.4.0
 ## [1.4.0] - 2026-06-13
 ### Added
 - **Frequency Matching** — Directional arrows highlight which way to push the waveform toward the correct target.
@@ -233,8 +329,6 @@ Version 1.4.0
 ### Fixed
 - **Decode Search (Expedition) (Human speed)** — `_exp_move` no longer computes movement vector during cooldown. Early-return on `_exp_move_cooldown > 0` saves ~10 table-lookups per frame while movement is blocked by `on_axis_set`.
 - **Balance (Train)** — Online play caused velocity spikes from RPC bursts, making the Inhuman solver oscillate between edges. Raw velocity is now clamped at ±10 (was ±50) and EMA-smoothed (alpha 0.30) so a single burst cannot saturate the D-term.
-
-# Changelog
 
 ## [1.3.0] - 2026-06-09
 

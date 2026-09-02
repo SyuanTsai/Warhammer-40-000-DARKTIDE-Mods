@@ -943,10 +943,10 @@
 
 ### [NoBrainer](https://www.nexusmods.com/warhammer40kdarktide/mods/896)
     最新的小遊戲助手
-- MOD 網站最後更新日期：Last updated 13 July 2026, 1:26AM
-- MOD 版本：2.0.8
-- MOD 檔案名稱：NoBrainer 896 2.0.8 2026-07-12T17-26Z AVBg7VN6i
-- 手動維護最後下載日期：2026-07-14
+- MOD 網站最後更新日期：Last updated 29 August 2026, 3:13 am
+- MOD 版本：3.1.4
+- MOD 檔案名稱：NoBrainer 896 3.1.4 2026-08-28T19-13Z 3OsdoOUuY
+- 手動維護最後下載日期：2026-09-02
 
 # 移除的MOD
 

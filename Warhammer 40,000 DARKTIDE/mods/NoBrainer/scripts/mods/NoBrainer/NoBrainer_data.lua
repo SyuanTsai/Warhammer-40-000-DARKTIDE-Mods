@@ -16,14 +16,37 @@ return {
 				options       = {
 					{ text = "language_auto",  value = "auto" },
 					{ text = "language_en",    value = "en" },
+					{ text = "language_zh_cn", value = "zh-cn" },
 					{ text = "language_zh_tw", value = "zh-tw" },
+					{ text = "language_ru",    value = "ru" },
 				},
 			},
 			{
-				setting_id    = "enable_debug_messages",
-				type          = "checkbox",
-				default_value = false,
-				tooltip       = "enable_debug_messages_tooltip",
+				setting_id  = "servo_skull_group",
+				type        = "group",
+				title       = "servo_skull_group",
+				sub_widgets = {
+					{
+						setting_id    = "enable_servo_skull_auto_hack",
+						type          = "checkbox",
+						default_value = true,
+						tooltip       = "enable_servo_skull_auto_hack_tooltip",
+					},
+					{
+						setting_id    = "servo_skull_require_line_of_sight",
+						type          = "checkbox",
+						default_value = true,
+						tooltip       = "servo_skull_require_line_of_sight_tooltip",
+					},
+					{
+						setting_id      = "servo_skull_command_range",
+						type            = "numeric",
+						default_value   = 25,
+						range           = { 5, 100 },
+						decimals_number = 0,
+						tooltip         = "servo_skull_command_range_tooltip",
+					},
+				},
 			},
 
 			{
@@ -42,6 +65,12 @@ return {
 						type          = "checkbox",
 						default_value = true,
 						tooltip       = "enable_decode_auto_tooltip",
+					},
+					{
+						setting_id    = "enable_decode_smart_reroll",
+						type          = "checkbox",
+						default_value = false,
+						tooltip       = "enable_decode_smart_reroll_tooltip",
 					},
 				},
 			},
@@ -65,8 +94,8 @@ return {
 					{
 						setting_id    = "expedition_solve_speed",
 						type          = "numeric",
-						default_value = 5,
-						range         = { 1, 10 },
+						default_value = 1,
+						range         = { 1, 5 },
 						decimals_number = 0,
 						tooltip       = "expedition_solve_speed_tooltip",
 					},
@@ -104,14 +133,6 @@ return {
 						default_value = true,
 						tooltip       = "enable_balance_tooltip",
 					},
-					{
-						setting_id    = "balance_solve_speed",
-						type          = "numeric",
-						default_value = 5,
-						range         = { 1, 10 },
-						decimals_number = 0,
-						tooltip       = "balance_solve_speed_tooltip",
-					},
 				},
 			},
 
@@ -135,12 +156,12 @@ return {
 					{
 						setting_id    = "drill_solve_speed",
 						type          = "numeric",
-						default_value = 5,
-						range         = { 1, 10 },
+						default_value = 1,
+						range         = { 1, 5 },
 						decimals_number = 0,
 						tooltip       = "drill_solve_speed_tooltip",
 					},
-	
+
 				},
 			},
 
@@ -164,78 +185,10 @@ return {
 					{
 						setting_id    = "frequency_solve_speed",
 						type          = "numeric",
-						default_value = 2,
-						range         = { 1, 10 },
+						default_value = 1,
+						range         = { 1, 5 },
 						decimals_number = 0,
 						tooltip       = "frequency_solve_speed_tooltip",
-					},
-				},
-			},
-
-			{
-				setting_id  = "expedition_group",
-				type        = "group",
-				title       = "expedition_group",
-				sub_widgets = {
-					{
-						setting_id    = "enable_expedition_automark",
-						type          = "checkbox",
-						default_value = false,
-						tooltip       = "enable_expedition_automark_tooltip",
-					},
-					{
-						setting_id    = "expedition_automark_silent",
-						type          = "checkbox",
-						default_value = true,
-						tooltip       = "expedition_automark_silent_tooltip",
-					},
-					{
-						setting_id    = "enable_expedition_automark_vault",
-						type          = "checkbox",
-						default_value = false,
-						tooltip       = "enable_expedition_automark_vault_tooltip",
-					},
-					{
-						setting_id    = "enable_expedition_automark_extraction",
-						type          = "checkbox",
-						default_value = false,
-						tooltip       = "enable_expedition_automark_extraction_tooltip",
-					},
-				},
-			},
-
-			{
-				setting_id  = "practice_group",
-				type        = "group",
-				title       = "practice_group",
-				sub_widgets = {
-					{
-						setting_id    = "enable_practice",
-						type          = "checkbox",
-						default_value = false,
-						tooltip       = "enable_practice_tooltip",
-					},
-					{
-						setting_id    = "practice_type",
-						type          = "dropdown",
-						default_value = "decode_symbols",
-						tooltip       = "practice_type_tooltip",
-						options       = {
-							{ text = "practice_type_decode_symbols", value = "decode_symbols" },
-							{ text = "practice_type_decode_search",  value = "decode_search" },
-							{ text = "practice_type_drill",          value = "drill" },
-							{ text = "practice_type_frequency",      value = "frequency" },
-							{ text = "practice_type_balance",        value = "balance" },
-						},
-					},
-					{
-						setting_id       = "practice_toggle_key",
-						type             = "keybind",
-						default_value    = { "f10" },
-						keybind_trigger  = "pressed",
-						keybind_type     = "function_call",
-						function_name    = "toggle_practice",
-						tooltip          = "practice_toggle_key_tooltip",
 					},
 				},
 			},
