@@ -26,7 +26,8 @@ not copied to neighboring mods and do not create a root-level grant.
 The following inventory was generated from the reviewed Git tree. A missing
 license or source field means that the repository did not establish it; it
 does not mean public domain or permission to redistribute. File counts include
-the directory's tracked blobs.
+the directory's tracked blobs. The tracked regular file `mod_load_order.txt` is
+not a mod directory and is excluded from the directory count.
 
 | Mod directory | Tracked files | Local LICENSE | README | Binary/media |
 | --- | ---: | --- | --- | --- |
@@ -82,7 +83,7 @@ the directory's tracked blobs.
 | markers_aio | 28 | not found | not found | none detected |
 | mauler_attack_indicator | 4 | not found | not found | none detected |
 | MissionBrief | 6 | not found | not found | none detected |
-| mod_load_order.txt | 0 | not found | not found | none detected |
+
 | modular_menu_buttons | 5 | not found | not found | none detected |
 | more_characters_and_loadouts | 4 | not found | not found | none detected |
 | MultiBind | 4 | not found | not found | none detected |
@@ -151,10 +152,10 @@ license or permission, the item remains unlicensed by this repository.
 | Power DI | https://www.nexusmods.com/warhammer40kdarktide/mods/281 | not recorded | ：Version 1.1.19 | ：Power_DI_1.1.19.zip-281-v1-1-19-1774197819 |
 | Skitarius | https://www.nexusmods.com/warhammer40kdarktide/mods/510 | not recorded | 2.2.5 / 510 | Skitarius 2.2.5 510 2.2.5 2026-08-10T12-40Z Ci3ojiHh2.zip / 1a5a41619dbbaed5ff2054fb21f6b9857a553ba475d8e00f43acb32a67e10450 |
 | Auto Loot | https://www.nexusmods.com/warhammer40kdarktide/mods/375 | not recorded | ：1.1.0 | ：AutoLoot-375-1-1-0-1773853450 |
-| Healthbars | https://www.nexusmods.com/warhammer40kdarktide/mods/16 | not recorded | ：26.08.05 | ：Healthbars 16 26.08.05 2026-08-05T06-36Z xc7NGcMwi.zip |
+| Healthbars | https://www.nexusmods.com/warhammer40kdarktide/mods/16 | https://github.com/danreeves/darktide-mods | ：26.08.05 | ：Healthbars 16 26.08.05 2026-08-05T06-36Z xc7NGcMwi.zip |
 | IME Enable | https://www.nexusmods.com/warhammer40kdarktide/mods/167 | not recorded | ：Version 1.2.0 | ：IME_Enable 167 1.2.0 2026-07-09T18-31Z Z1K0I1f3D.zip |
-| True Level | https://www.nexusmods.com/warhammer40kdarktide/mods/156 | not recorded | 1.10.3 / 156 | True Level 156 1.10.3 2026-08-17T08-20Z txMvExehe.zip / a11d6e0c760202235c7ff8cc06801d52be72ab03740f0fad8c0b325ebbd7374f |
-| Who Are You - Display account names | https://www.nexusmods.com/warhammer40kdarktide/mods/127 | not recorded | ：Version 3.7.4 | ：Who Are You-127-3-7-4-1764702919 |
+| True Level | https://www.nexusmods.com/warhammer40kdarktide/mods/156 | https://github.com/zombine04/darktide-mods | 1.10.3 / 156 | True Level 156 1.10.3 2026-08-17T08-20Z txMvExehe.zip / a11d6e0c760202235c7ff8cc06801d52be72ab03740f0fad8c0b325ebbd7374f |
+| Who Are You - Display account names | https://www.nexusmods.com/warhammer40kdarktide/mods/127 | https://github.com/zombine04/darktide-mods | ：Version 3.7.4 | ：Who Are You-127-3-7-4-1764702919 |
 | MultiBind | https://www.nexusmods.com/warhammer40kdarktide/mods/337 | not recorded | ：未提供 | ：MultiBind.zip-337-V1-0-1720518374 |
 | More Characters and Loadouts | https://www.nexusmods.com/warhammer40kdarktide/mods/209 | not recorded | ：1.0.0 | ：More Characters and Loadouts-209-1-0-0-1694742033 |
 | Psych Ward | https://www.nexusmods.com/warhammer40kdarktide/mods/89 | not recorded | ：1.7.1 | ：Psych Ward-89-1-7-1-1776147547 |
@@ -164,7 +165,7 @@ license or permission, the item remains unlicensed by this repository.
 | Tree Helper | https://www.nexusmods.com/warhammer40kdarktide/mods/369 | not recorded | ：1.0.0 | ：Tree_Helper-369-1-0-0-1727816343 |
 | Scan Helper | https://www.nexusmods.com/warhammer40kdarktide/mods/657 | not recorded | ：1 | ：ScanHelper 657 1 2026-07-23T18-00Z 4SVrcSAmj.zip |
 | Show Crit Chance | https://www.nexusmods.com/warhammer40kdarktide/mods/279 | not recorded | ：1.1.0 | ：show_crit_chance_v110-279-1-1-0-1739713916 |
-| Debuff Indicator | https://www.nexusmods.com/warhammer40kdarktide/mods/137 | not recorded | ：1.7.4 | ：Debuff Indicator-137-1-7-4-1765939029 |
+| Debuff Indicator | https://www.nexusmods.com/warhammer40kdarktide/mods/137 | https://github.com/zombine04/darktide-mods | ：1.7.4 | ：Debuff Indicator-137-1-7-4-1765939029 |
 | Super Impact | https://www.nexusmods.com/warhammer40kdarktide/mods/319 | not recorded | ：1.1 | ：SuperImpact.zip-319-V1-1-1718836296 |
 | Stimms Pickup Icon | https://www.nexusmods.com/warhammer40kdarktide/mods/265 | not recorded | ：1.4.0 | ：StimmsPickupIcon-265-1-4-0-1765042230 |
 | Killfeed Improvements | https://www.nexusmods.com/warhammer40kdarktide/mods/70 | not recorded | ：26.08.05 | ：KillfeedImprovements 70 26.08.05 2026-08-05T06-36Z vNTD9NbBl.zip |
@@ -174,10 +175,10 @@ license or permission, the item remains unlicensed by this repository.
 | Markers Improved All-in-One | https://www.nexusmods.com/warhammer40kdarktide/mods/447 | not recorded | `2.14.5` / `447` | `Markers Improved All-in-One 447 2.14.5 2026-08-24T19-25Z K6YR06iO9.zip` / `57abc1191fcb88aa898bfd925fd9da87c99f6e0d24440cb8a7274547f3e272e9` |
 | Danger Zone | https://www.nexusmods.com/warhammer40kdarktide/mods/440 | not recorded | ：1.1.1 | ：danger_zone-440-1-1-1-1735267980 |
 | Numeric UI | https://www.nexusmods.com/warhammer40kdarktide/mods/14 | not recorded | `26.02.08-1` / `14` | `NumericUI 14 26.08.09 2026-08-09T17-49Z X0p3C0jth.zip` / `64650a365eddae703356f7fce890e8362ae8c7bb719c7621c58f810a514b42a3` |
-| Spidey Sense | https://www.nexusmods.com/warhammer40kdarktide/mods/268 | not recorded | 7.9.0 / 268 | Spidey Sense 7.9.0 268 7.9.0 2026-08-23T16-50Z 95Dkb5S3s.zip / f7eff09ea3d20ceb3b3438e86b6c39b86cd57072e8d3837c3f8b275c15a348c5 |
-| Enhanced Descriptions | https://www.nexusmods.com/warhammer40kdarktide/mods/210 | not recorded | ：6.0.0b | ：Enhanced Descriptions 210 6.0.0b 2026-07-17T18-02Z YFIfRFOFf.zip |
+| Spidey Sense | https://www.nexusmods.com/warhammer40kdarktide/mods/268 | https://github.com/Wobin/SpideySense | 7.9.0 / 268 | Spidey Sense 7.9.0 268 7.9.0 2026-08-23T16-50Z 95Dkb5S3s.zip / f7eff09ea3d20ceb3b3438e86b6c39b86cd57072e8d3837c3f8b275c15a348c5 |
+| Enhanced Descriptions | https://www.nexusmods.com/warhammer40kdarktide/mods/210 | https://github.com/xsSplater/Darktide_Enhanced_Descriptions_BETA | ：6.0.0b | ：Enhanced Descriptions 210 6.0.0b 2026-07-17T18-02Z YFIfRFOFf.zip |
 | Emperor's Guidance | https://www.nexusmods.com/warhammer40kdarktide/mods/468 | not recorded | ：1.2.8 | ：Emperor's Guidance 1.2.7-468-1-2-7-1751131867 |
-| Remember Server Location | https://www.nexusmods.com/warhammer40kdarktide/mods/308 | not recorded | ：1.1.6 | ：RememberServerLocation-308-1-1-6-1764627354 |
+| Remember Server Location | https://www.nexusmods.com/warhammer40kdarktide/mods/308 | https://github.com/deluxghost/darktide-mods | ：1.1.6 | ：RememberServerLocation-308-1-1-6-1764627354 |
 | Default To Highest Blessing Tier | https://www.nexusmods.com/warhammer40kdarktide/mods/364 | not recorded | ：1.0.2 | ：DefaultToHighestBlessingTier-364-1-0-2-1738124336 |
 | Buy Until Rating | https://www.nexusmods.com/warhammer40kdarktide/mods/100 | not recorded | ：2.3.1 | ：Buy Until Rating-100-2-3-1-1738015238 |
 | Character Screen Contracts (aka Better Melk) | https://www.nexusmods.com/warhammer40kdarktide/mods/71 | not recorded | ：1.11 | ：BetterMelk-71-1-13-1753164937 |
@@ -189,10 +190,10 @@ license or permission, the item remains unlicensed by this repository.
 | LoadoutNames | https://www.nexusmods.com/warhammer40kdarktide/mods/286 | not recorded | 1.7 / 286 | LoadoutNames 286 1.7 2026-08-23T21-04Z amZIYmRwQ.zip / b89c0efa01b75c1b8487ff048cad13d810d7173c50b7934286a05cedb84f3e98 |
 | Guarantee Ability Activation | https://www.nexusmods.com/warhammer40kdarktide/mods/336 | not recorded | ：1.4.1 | ：Guarantee Ability Activation 336 1.4.1 2026-07-08T15-57Z cwrBAw7Y1 |
 | Custom HUD | https://www.nexusmods.com/warhammer40kdarktide/mods/10 | not recorded | ：2.1.3 | ：Custom HUD-10-2-1-3-1775574086 |
-| Keep Dodging | https://www.nexusmods.com/warhammer40kdarktide/mods/182 | not recorded | ：1.1.3 | ：Keep Dodging-182-1-1-3-1764702136 |
+| Keep Dodging | https://www.nexusmods.com/warhammer40kdarktide/mods/182 | https://github.com/zombine04/darktide-mods | ：1.1.3 | ：Keep Dodging-182-1-1-3-1764702136 |
 | Perspectives Mod | https://www.nexusmods.com/warhammer40kdarktide/mods/111 | not recorded | 1.14 / 111 | Perspectives 111 1.14 2026-08-23T21-05Z l24cL2qQv.zip / fb08ad3387c1362a60bdd2d38d2c54b23820702438b20239936a71b454dd45b6 |
 | Improved Havoc Tags | https://www.nexusmods.com/warhammer40kdarktide/mods/500 | not recorded | ：3.1 | ：Improved Havoc Tags-500-2-3-1750873657 |
-| Ovenproof's Scoreboard Plugin - Community Patch | https://www.nexusmods.com/warhammer40kdarktide/mods/514 | not recorded | ：1.4.2 | ：Ovenproof's Scoreboard Plugin - Community Patch 514 1.13.8 2026-08-13T06-13Z SDWlwDVjZ.zip |
+| Ovenproof's Scoreboard Plugin - Community Patch | https://www.nexusmods.com/warhammer40kdarktide/mods/514 | https://github.com/Backup158/DarktideOvenproofScoreboardPluginPatch | ：1.4.2 | ：Ovenproof's Scoreboard Plugin - Community Patch 514 1.13.8 2026-08-13T06-13Z SDWlwDVjZ.zip |
 | Scoreboard Explosive | https://www.nexusmods.com/warhammer40kdarktide/mods/113 | not recorded | ：1.1.3 | ：ScoreboardExplosive-113-1-1-3-1701451982 |
 | Better Hud Info View | https://www.nexusmods.com/warhammer40kdarktide/mods/511 | not recorded | ：1.5 | ：better_hud_info_view-511-1-5-1752931365 |
 | Recolor Boss Health Bars | https://www.nexusmods.com/warhammer40kdarktide/mods/314 | not recorded | 2.4 / 314 | Recolor Boss Health Bars 314 2.4 2026-07-19T15-18Z L8cAq8xR5.zip / fb784186a0f4bf771d44c032fdbd010816b5cca7468f1d1289935e980a766ec2 |
@@ -223,14 +224,14 @@ license or permission, the item remains unlicensed by this repository.
 | Simple Speed Meter | https://www.nexusmods.com/warhammer40kdarktide/mods/404 | not recorded | ：2.02 | ：SimpleSpeedMeter-404-1-0-3-1744814116 |
 | Talent Tree UX Improvements | https://www.nexusmods.com/warhammer40kdarktide/mods/216 | not recorded | 1.10 / 216 | TalentRefundBelow 216 1.10 2026-08-23T21-04Z L8cAq8x12.zip / 4bb72fc631ee63252a7b0231434f83067d39ffcd158b99b3950702e626d5af0d |
 | Archivum Messelina | https://www.nexusmods.com/warhammer40kdarktide/mods/307 | not recorded | ：3.2 | ：Archivum Messelina 3.2 307 3.2 2026-07-16T11-53Z oudzUuncp.zip |
-| Many More Try | https://www.nexusmods.com/warhammer40kdarktide/mods/175 | not recorded | ：Version 1.5.7 | ：ManyMoreTry-175-1-5-7-1764627541 |
+| Many More Try | https://www.nexusmods.com/warhammer40kdarktide/mods/175 | https://github.com/deluxghost/darktide-mods | ：Version 1.5.7 | ：ManyMoreTry-175-1-5-7-1764627541 |
 | Solo Play (Havoc Update) | https://www.nexusmods.com/warhammer40kdarktide/mods/176 | not recorded | ：Version 2.3.6 | ：SoloPlay-176-2-3-6-1770568165 |
 | KeepSwinging | https://www.nexusmods.com/warhammer40kdarktide/mods/88 | not recorded | 1.13 / 88 | KeepSwinging 88 1.13 2026-08-23T21-05Z iYOupY3AS.zip / eb5ad82b750023bf8bf94c387a34b019bfceca5649cd0c4b96dada79c1a65cee |
 | TagKeys | https://www.nexusmods.com/warhammer40kdarktide/mods/79 | not recorded | 1.5 / 79 | TagKeys 79 1.5 2026-08-23T21-04Z SDWlwDVU0.zip / 012d85772379bbc9006abff5c609dbd9945628a6827ef9919abd3ace5b6cd195 |
 | Weapon Filter | https://www.nexusmods.com/warhammer40kdarktide/mods/373 | not recorded | ：1.0.3 | ：Wea-373-1-0-3-1738008684 |
 | AFK | https://www.nexusmods.com/warhammer40kdarktide/mods/33 | not recorded | ：23.04.05 | ：AFK-33-23-4-05-1680675716 |
 | Remember Difficulty | https://www.nexusmods.com/warhammer40kdarktide/mods/490 | not recorded | ：1.0.1 | ：Remember Difficulty-490-1-0-1-1765938766 |
-| Share Talents | https://www.nexusmods.com/warhammer40kdarktide/mods/215 | not recorded | ：1.2.1 | ：ShareTalents-215-1-2-1-1764627463 |
+| Share Talents | https://www.nexusmods.com/warhammer40kdarktide/mods/215 | https://github.com/deluxghost/darktide-mods | ：1.2.1 | ：ShareTalents-215-1-2-1-1764627463 |
 | Auto Rations - Recover or Destroy | https://www.nexusmods.com/warhammer40kdarktide/mods/625 | not recorded | ：1.1 | ：auto_rations-625-1-1-1761148704 |
 | Empower Until Limit | https://www.nexusmods.com/warhammer40kdarktide/mods/365 | not recorded | ：1.0.2 | ：auto_rations-625-1-1-1761148704 |
 | StimmCountdown | https://www.nexusmods.com/warhammer40kdarktide/mods/653 | not recorded | ：1.4.1 | ：StimmCountdown-653-1-4-1-1777739403 |
@@ -263,7 +264,9 @@ license or permission, the item remains unlicensed by this repository.
 
 Entries without a matching linked heading, including helper libraries,
 framework files, translation inputs, removed items, and any newly added
-directory, remain subject to the same unresolved-rights rule. The README and
+directory, remain subject to the same unresolved-rights rule. Source URLs shown
+in the catalog are transcribed from the corresponding README entries; they are
+references, not proof of ownership or redistribution permission. The README and
 this inventory must be updated when a mod is added, removed, or replaced.
 
 ## Tools and non-mod assets
