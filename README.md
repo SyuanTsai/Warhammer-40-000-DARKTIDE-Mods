@@ -1,3 +1,12 @@
+> Rights boundary: this repository is a collection of independently sourced
+> mods, translations, tools, archives, and references. No repository-wide
+> license is granted. Each item keeps its original license and attribution
+> requirements.
+>
+> See [LICENSE-SCOPE.md](LICENSE-SCOPE.md) and
+> [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) before redistributing any
+> item.
+>
 # Warhammer-40-000-DARKTIDE-Mods
 
 # 基本必須安裝
