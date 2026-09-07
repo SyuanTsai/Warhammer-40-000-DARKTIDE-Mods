@@ -1,0 +1,44 @@
+Curios Auspex - Changelog
+=========================
+
+v2.1.1 - Curio Data / BUY Safety Hotfix
+----------------------------------------
+- Fixed impossible primary values such as 37% Toughness and 38% Health caused by secondary Curio perk values being mistaken for the innate Curio roll.
+- Curio type classification now accepts only Darktide's innate gadget trait instead of generic health/toughness/stamina text from secondary perks.
+- Primary roll resolution now prefers the innate base rating and strictly rejects values outside valid Curio primary ranges.
+- Fail-closed audit hardening rejects innate base ratings above Darktide's Curio range and never guesses a primary roll from coarse displayed item power.
+- BUY revalidation now requires the refreshed offer to match both the expected Curio type and exact validated roll.
+- BUY confirmation is also bound to the cached currency/price; if the re-fetched offer price changes or cannot be verified, the purchase is cancelled and the store is refreshed.
+- Invalid/stale cached BUY results are blocked and refreshed without attempting a purchase.
+- BUY confirmation and success messages now use percentage-safe wording to avoid `% Toughness` / `% Health` logger-format crashes.
+- No changes to the validated v2.1 Character Select auto-layout geometry.
+
+v2.1 - Character Select Layout & Stability Update
+--------------------------------------------------
+- Added automatic Character Select side placement based on Darktide's native scenegraph geometry.
+- Roomy layouts use the full left-side Auspex rail; tighter layouts automatically use the full right-side rail.
+- Fixed 1920x1080 right-side clipping by correctly positioning Darktide's center-anchored character-grid reveal mask.
+- Reveal-mask geometry is calculated once from the native baseline and remains stable for the active view.
+- Live resolution callbacks do not rebuild, resize, or move the active Auspex Character Select layout.
+- Store timers and BUY/CONFIRM controls remain locked to the same rail geometry.
+- Darktide's native Character Select row, portrait, name, insignia, and list geometry remain untouched.
+- Validated after clean boots at 1920x1080 and 3440x1440.
+
+Initial Release Notes
+---------------------
+- Added per-operative Curio stock tracking on Character Select.
+- Added configurable inclusive Minimum Roll and Desired Quantity targets for Toughness, Health, Stamina, and Wound Curios.
+- Added green per-type completion checkmarks when owned stock meets or exceeds a configured target.
+- Added Armoury Exchange and Sire Melk scanning using Darktide store rotation timestamps.
+- Consolidated store countdowns into one fixed Character Select Armoury / Sire Melk timer strip that stays visible while scrolling.
+- Added readable per-operative store results and support for multiple qualifying offers.
+- Added safe per-offer BUY -> CONFIRM purchasing with exact-offer refresh, wishlist revalidation, price/wallet validation, and post-purchase inventory/store refresh.
+- Added percentage-safe purchase/status messages for Curios such as 17% Toughness and 21% Health.
+- Added confirmed store-refresh notifications in the Mourningstar, including aggregate current wishlist match counts. Refreshes that occur during missions are reported after returning to the hub.
+- Added a one-shot notification test under Advanced / Diagnostics using the same live notification path as real refreshes.
+- Added an optional Mourningstar Store Widget for the active operative with store countdowns and matching Curio results.
+- Added widget scale presets from 50% to 150%.
+- Added optional Custom HUD positioning handoff while retaining built-in X/Y positioning as a fallback.
+- Added hot-reload-safe Character Select row rebuilding and root-native BUY hotspots.
+- Added optional unknown-Curio diagnostics and detailed console logging, both off by default.
+- Hardened mod-disable cleanup so the fixed Character Select store timer header is removed immediately if Curios Auspex is toggled off while the screen is open.
