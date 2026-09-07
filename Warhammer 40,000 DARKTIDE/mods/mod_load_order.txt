@@ -96,6 +96,7 @@ TalentUI
 machine_gods_beacon
 veil_shield
 ServerPing
+RequisitionAuspex
 
 -- 基本上不需設定
 psych_ward
