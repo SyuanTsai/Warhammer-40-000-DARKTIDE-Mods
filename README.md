@@ -735,6 +735,13 @@
 - MOD 檔案名稱：SimpleSpeedMeter-404-1-0-3-1744814116
 - 手動維護最後下載日期：2026-07-14
 
+### [Server ping](https://www.nexusmods.com/warhammer40kdarktide/mods/1221)
+    顯示真實的服務器PING
+- MOD 網站最後更新日期：Last updated 25 August 2026, 12:08AM
+- MOD 版本：Version 1
+- MOD 檔案名稱：ServerPing 1221 1 2026-08-24T16-06Z SDWlwDVLT
+- 手動維護最後下載日期：2026-09-07
+
 ---
 # 遊戲內操作相關MOD
 
