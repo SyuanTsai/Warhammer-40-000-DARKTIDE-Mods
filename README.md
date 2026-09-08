@@ -971,14 +971,16 @@
 - MOD 檔案名稱：NoBrainer 896 3.1.4 2026-08-28T19-13Z 3OsdoOUuY
 - 手動維護最後下載日期：2026-09-02
 
+
+# 移除的MOD
+
 ### [Curios Auspex](https://www.nexusmods.com/warhammer40kdarktide/mods/1226)
     飾品助手
 - MOD 網站最後更新日期：Last updated 31 August 2026, 3:54AM
 - MOD 版本：2.11
 - MOD 檔案名稱：CuriosAuspex v2.1.1 1226 2.1.1 2026-08-30T19-54Z H3Uny3hlt
 - 手動維護最後下載日期：2026-09-07
-
-# 移除的MOD
+- 移除原因：目前與Character Screen Contracts (aka Better Melk)嚴重衝突
 
 ### [FullAuto](https://www.nexusmods.com/warhammer40kdarktide/mods/87)
     自動開火，只要按住就會一直開火

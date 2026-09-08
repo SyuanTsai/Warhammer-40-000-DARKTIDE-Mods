@@ -96,7 +96,6 @@ TalentUI
 machine_gods_beacon
 veil_shield
 ServerPing
-RequisitionAuspex
 HavocPeek
 
 -- 基本上不需設定
