@@ -71,6 +71,7 @@
 - Mortis Trials - 死神試煉
 - Valkyrie - 女武神
 - Mourningstar - 哀星號
+- Warband - 打擊小隊
 - Darktide - 黑潮
 - Deadsider Sanctuaries - 死區避難所
 - Data Reliquary - 資料聖物箱
