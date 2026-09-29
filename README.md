@@ -908,8 +908,19 @@
     遠征模式的小地圖
 - MOD 網站最後更新日期：Last updated 29 September 2026, 9:35PM
 - MOD 版本：3.0.1
-- MOD 檔案名稱：Radar 790 3.0.1 2026-09-29T13-35Z pRus3Roxz
+- MOD 檔案名稱：Radar 790 3.0.1 2026-09-29T13-35Z pRus3Roxz.zip
 - 手動維護最後下載日期：2026-09-30
+- Nexus MOD ID: 790
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/790
+- Nexus page version: 3.0.1
+- Nexus last updated: 2026-09-29T13:35Z
+- Main file ID: 8531
+- Main file version: 3.0.1
+- Main file uploaded at UTC: 2026-09-29T13:35Z
+- Archive filename: Radar 790 3.0.1 2026-09-29T13-35Z pRus3Roxz.zip
+- Archive size bytes: 337175
+- Archive SHA-256: 3a23f316a097302ca8be33f4632fc4c38a159c232f8bd926366d6e54c9e919a7
+- Acquisition method: manual-queue
 
 ### [PlasmaBFG](https://www.nexusmods.com/warhammer40kdarktide/mods/834)
     電漿槍 優化
