@@ -264,21 +264,21 @@
 
 ### [Numeric UI](https://www.nexusmods.com/warhammer40kdarktide/mods/14)
     UI改善
-- MOD 網站最後更新日期：Last updated 09 February 2026, 2:28AM
-- MOD 版本：26.02.08-1
-- MOD 檔案名稱：NumericUI-14-26-02-08-1-1770575286
-- 手動維護最後下載日期：2026-02-10
+- MOD 網站最後更新日期：Last updated 29 September 2026, 11:08PM
+- MOD 版本：26.09.29.1
+- MOD 檔案名稱：NumericUI 14 26.09.29.1 2026-09-29T15-08Z 8bwV4bczU.zip
+- 手動維護最後下載日期：2026-09-30
 - Nexus MOD ID: `14`
 - Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/14`
 - Nexus page version: `26.02.08-1`
-- Nexus last updated: `2026-08-09T17:49:00.0000000+00:00`
-- Main file ID: `7181`
-- Main file version: `26.08.09`
-- Main file uploaded at UTC: `2026-08-09T17:49:00.0000000+00:00`
-- Archive filename: `NumericUI 14 26.08.09 2026-08-09T17-49Z X0p3C0jth.zip`
-- Archive size bytes: `28586`
-- Archive SHA-256: `64650a365eddae703356f7fce890e8362ae8c7bb719c7621c58f810a514b42a3`
-- Acquisition method: `nexus-browser`
+- Nexus last updated: `2026-09-29T15:08Z`
+- Main file ID: `8538`
+- Main file version: `26.09.29.1`
+- Main file uploaded at UTC: `2026-09-29T15:08Z`
+- Archive filename: `NumericUI 14 26.09.29.1 2026-09-29T15-08Z 8bwV4bczU.zip`
+- Archive size bytes: `44691`
+- Archive SHA-256: `a14b58c0b7c717326061f7d2d6ada03b379029ad5f0a0f99855f1b0b485cfc08`
+- Acquisition method: `manual-queue`
 
 ### [Spidey Sense](https://www.nexusmods.com/warhammer40kdarktide/mods/268)
     蜘蛛感應 - 畫面顯示特定敵人位置
