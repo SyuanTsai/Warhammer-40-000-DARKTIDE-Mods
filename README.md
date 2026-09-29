@@ -778,11 +778,11 @@
 - 手動維護最後下載日期：2026-08-13
 
 ### [Many More Try](https://www.nexusmods.com/warhammer40kdarktide/mods/175)
-    任務管理器 - 可以啟動最近24小時內的任何關卡
-- MOD 網站最後更新日期：Last updated 02 December 2025, 6:19AM
-- MOD 版本：Version 1.5.7
-- MOD 檔案名稱：ManyMoreTry-175-1-5-7-1764627541
-- 手動維護最後下載日期：2025-12-06
+    任務管理器 - 可以啟動最近3小時內的任何關卡
+- MOD 網站最後更新日期：Last updated 29 September 2026, 8:30PM
+- MOD 版本：Version 1.5.8
+- MOD 檔案名稱：ManyMoreTry 175 1.5.8 2026-09-29T12-30Z ke28Welol
+- 手動維護最後下載日期：2026-09-30
 - GitHub :
 - Source=>  https://github.com/deluxghost/darktide-mods
 - Fork  =>  https://github.com/SyuanTsai/darktide-mods-1
