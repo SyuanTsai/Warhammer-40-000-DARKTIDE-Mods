@@ -311,6 +311,7 @@ local PRAY = {
 
 HEAVY_SPECIAL = {
     powersword_p3_m1 = true,
+    ogryn_hammer_2h_p1_m1 = true,
 }
 
 
@@ -392,7 +393,7 @@ SkitariusOmnissiah.omnissiah = function(self, queried_input, user_value)
             desired_action = self.engram:current_command()
         end
     end
-
+    
     desired_action = self:maybe_convert_desire(current_action, desired_action)
     
     if not current_action or not PRAY[current_action] or not PRAY[current_action][desired_action] then
@@ -529,6 +530,7 @@ SkitariusOmnissiah.action_to_step = function(self, action_name)
         weapon_manager:set_pushing(false)
     end
     -- MELEE
+    
     if string.find(action_name, "start") and (not string.find(action_name, "start_special") or string.find(weapon_name, "combatsword_p2")) then
         return "start_attack"
     elseif string.find(action_name, "special") or string.find(action_name, "psyker_push") or string.find(action_name, "flashlight") or string.find(action_name, "whip") then
@@ -615,8 +617,12 @@ SkitariusOmnissiah.maybe_convert_action = function(self, player_unit, running_ac
             action_melee_start_right_2_special = true,
             action_melee_start_left_special = true,
             action_melee_start_left_2_special = true,
-            action_melee_start_push_special = true
+            action_melee_start_push_special = true,
+            -- hammer
+            action_melee_start_1_special = true,
+            action_melee_start_2_special = true,
         }
+        --mod:echo(original_name)
     if string.find(action_name, "start_attack") or mechanicus_strings[original_name] then
         if (weapon_manager:weapon_type() == "RANGED" or HEAVY_SPECIAL[weapon_name]) and
            ( mechanicus_strings[original_name] or (string.find(original_name, "stab") or string.find(original_name, "bash"))) then
@@ -799,6 +805,15 @@ SkitariusOmnissiah.maybe_convert_desire = function(self, current_action, desired
         -- SUPER fucking jank
         if current_action == desired_action then
             self.engram:iterate_engram()
+        end
+    end
+
+    -- Ogryn Hammer, similar situation
+    if weapon_name == "ogryn_hammer_2h_p1_m1" then
+        if desired_action == "special_action" and current_action == "idle" then
+            desired_action = "special_start_attack"
+        elseif desired_action == "special_action" and current_action == "special_start_attack" then
+            desired_action = "special_light_attack"
         end
     end
 

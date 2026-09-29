@@ -50,10 +50,10 @@
 
 ### [Skitarius](https://www.nexusmods.com/warhammer40kdarktide/mods/510)
     顱骨支援
-- MOD 網站最後更新日期：2026-08-10T12:40:00.0000000+00:00
-- MOD 版本：2.2.5
-- MOD 檔案名稱：Skitarius 2.2.5 510 2.2.5 2026-08-10T12-40Z Ci3ojiHh2.zip
-- 手動維護最後下載日期：2026-09-01
+- MOD 網站最後更新日期：Last updated 29 September 2026, 8:40PM
+- MOD 版本：2.2.6
+- MOD 檔案名稱：Skitarius 2.2.6 510 2.2.6 2026-09-29T12-40Z 5gEeTgDic
+- 手動維護最後下載日期：2026-09-30
 - Nexus MOD ID: 510
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/510
 - Nexus page version: 2.2.5

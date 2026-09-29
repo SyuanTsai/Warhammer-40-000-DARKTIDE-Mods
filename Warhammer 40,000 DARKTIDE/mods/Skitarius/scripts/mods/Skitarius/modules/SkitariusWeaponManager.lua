@@ -3,18 +3,20 @@ local WeaponTemplates = require("scripts/settings/equipment/weapon_templates/wea
 local Ammo = require("scripts/utilities/ammo")
 
 local string_find = string.find
-
+-- ogryn_hammer_2h_p1_m1
 local TRAIT_MAP = {
     thrust = "windup_increases_power_child",
     slow_and_steady = "toughness_on_hit_based_on_charge_time_visual_stack_count",
     crunch = "ogryn_windup_increases_power_parent",
-    mechsword = "windup_increases_special_power_default_child"
+    mechsword = "windup_increases_special_power_default_child",
+    big_hammer = "windup_increases_power_default_four_steps_child",
 }
 local MAX_MAP = {
     thrust = 3,
     slow_and_steady = 3,
     crunch = 4,
-    mechsword = 4
+    mechsword = 4,
+    big_hammer = 4
 }
 
 -- Weapons which should use normal heavy modifiers during special and NOT special modifiers
@@ -345,8 +347,9 @@ SkitariusWeaponManager.is_charged_melee = function(self, running_action, compone
                     end
                     -- Compare current stacks to the required stacks
                     local current_stacks = self:fetch_stacks(search_string)
+                    
                     -- Handle thrust being offset by 1 internally
-                    if required_buff == "thrust" or required_buff == "mechsword" then
+                    if required_buff == "thrust" or required_buff == "mechsword" or required_buff == "big_hammer" then
                         current_stacks = current_stacks - 1
                         if current_stacks < 0 then
                             current_stacks = 0

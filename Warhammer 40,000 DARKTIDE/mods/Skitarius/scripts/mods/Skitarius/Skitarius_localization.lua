@@ -133,7 +133,6 @@ local localizations = {
     },
     interruption_sprint = {
         en = Localize("loc_ingame_sprint"),
-        ["zh-tw"] = Localize("loc_ingame_sprint"),
     },
     interruption_action_one = {
         en = "Attacking", -- [ ] Localize
@@ -142,7 +141,6 @@ local localizations = {
     },
     interruption_action_two = {
         en = Localize("loc_block"),
-        ["zh-tw"] = Localize("loc_block"),
     },
     interruption_action_both = {
         en = "Attacking / " .. Localize("loc_block"), -- [ ] Localize
@@ -151,7 +149,6 @@ local localizations = {
     },
     interruption_all = {
         en = Localize("loc_ingame_sprint") .. " / Attacking / Blocking", -- [ ] Localize
-        ["zh-tw"] = Localize("loc_ingame_sprint") .. " / 攻擊中 / 格擋中",
     },
     -- Keybinds
     maintain_bind = {
@@ -221,7 +218,6 @@ local localizations = {
     -- Melee
     melee_settings = {
         en = Localize("loc_glossary_term_melee_weapons"),
-        ["zh-tw"] = Localize("loc_glossary_term_melee_weapons"),
     },
     current_melee = {
         en = "JUMP TO CURRENT/GLOBAL",
@@ -272,15 +268,15 @@ local localizations = {
     thrust = { en = Localize("loc_trait_bespoke_power_bonus_based_on_charge_time") .. " / " .. Localize("loc_weapon_family_crowbar_p1_m1") },
     slow_and_steady = {
         en = Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time"),
-        ["zh-tw"] = Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time"),
     },
     crunch = {
         en = Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger"),
-        ["zh-tw"] = Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger"),
     },
     mechsword = {
-        en = Localize("loc_weapon_family_powersword_p3_m1"),
-        ["zh-tw"] = Localize("loc_weapon_family_powersword_p3_m1"),
+        en = Localize("loc_weapon_family_powersword_p3_m1")
+    },
+    big_hammer = {
+        en = Localize("loc_weapon_family_ogryn_hammer_2h_p1_m1")
     },
     heavy_buff_stacks = {
         en = "Heavy Buff Stacks",
@@ -294,14 +290,7 @@ local localizations = {
             cf(Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time") .. ":","terminal_text_body") .. " 3\n" ..
             cf(Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger") .. ":","terminal_text_body") .. " 4\n" ..
             cf(Localize("loc_weapon_family_powersword_p3_m1") .. ":","terminal_text_body") .. " 4\n"
-        ),
-        ["zh-tw"] = string.format(
-            "最大層數:\n" ..
-            cf(Localize("loc_trait_bespoke_power_bonus_based_on_charge_time") .. " / " .. Localize("loc_weapon_family_crowbar_p1_m1") .. ":","terminal_text_body") .. " 3\n" ..
-            cf(Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time") .. ":","terminal_text_body") .. " 3\n" ..
-            cf(Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger") .. ":","terminal_text_body") .. " 4\n" ..
-            cf(Localize("loc_weapon_family_powersword_p3_m1") .. ":","terminal_text_body") .. " 4\n"
-        ),
+        )
     },
     heavy_buff_special = {
         en = "Special Required For Heavy Modifier",
@@ -469,12 +458,12 @@ local localizations = {
     ranged_settings = { en = Localize("loc_glossary_term_ranged_weapons") },
     always_charge = {
         en = "Always Auto-Release Charges",
-        ["zh-tw"] = "一律自動釋放蓄力",
+        ["zh-tw"] = "重擊蓄力到達設定時自動釋放，無需手動操作",
         ["zh-cn"] = "始终自动释放充能",
     },
     always_charge_threshold = {
         en = "Global Charge Threshold %%",
-        ["zh-tw"] = "全域蓄力閾值 %%",
+        ["zh-tw"] = "重擊蓄力自動釋放的閾值 %%",
         ["zh-cn"] = "充能自动释放阈值 %%",
     },
     always_charge_tooltip = {
