@@ -264,10 +264,10 @@
 
 ### [Numeric UI](https://www.nexusmods.com/warhammer40kdarktide/mods/14)
     UI改善
-- MOD 網站最後更新日期：Last updated 09 February 2026, 2:28AM
-- MOD 版本：26.02.08-1
-- MOD 檔案名稱：NumericUI-14-26-02-08-1-1770575286
-- 手動維護最後下載日期：2026-02-10
+- MOD 網站最後更新日期：Last updated 29 September 2026, 11:08PM
+- MOD 版本：26.09.29.1
+- MOD 檔案名稱：NumericUI 14 26.09.29.1 2026-09-29T15-08Z 8bwV4bczU
+- 手動維護最後下載日期：2026-09-30
 - Nexus MOD ID: `14`
 - Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/14`
 - Nexus page version: `26.02.08-1`
