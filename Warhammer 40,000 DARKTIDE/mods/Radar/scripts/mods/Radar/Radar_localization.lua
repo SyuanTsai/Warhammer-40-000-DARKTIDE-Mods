@@ -729,7 +729,7 @@ local _color_label_texts = {
         ja = "Tox 敵の色",
         ko = "Tox 적 색상",
         ["zh-cn"] = "Tox 敌人颜色",
-        ["zh-tw"] = "劇毒敵人顏色",
+        ["zh-tw"] = "毒氣敵人顏色",
     },
     enemy_mutator = {
         en = "Mutator enemy color",
@@ -743,7 +743,7 @@ local _color_label_texts = {
         ja = "変異敵の色",
         ko = "변이 적 색상",
         ["zh-cn"] = "变异敌人颜色",
-        ["zh-tw"] = "變異敵人顏色",
+        ["zh-tw"] = "變種人顏色",
     },
     enemy_armored_hound = {
         en = "Armored hound color",
