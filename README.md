@@ -52,18 +52,18 @@
     顱骨支援
 - MOD 網站最後更新日期：Last updated 29 September 2026, 8:40PM
 - MOD 版本：2.2.6
-- MOD 檔案名稱：Skitarius 2.2.6 510 2.2.6 2026-09-29T12-40Z 5gEeTgDic
+- MOD 檔案名稱：Skitarius 2.2.6 510 2.2.6 2026-09-29T12-40Z 5gEeTgDic.zip
 - 手動維護最後下載日期：2026-09-30
 - Nexus MOD ID: 510
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/510
-- Nexus page version: 2.2.5
-- Nexus last updated: 2026-08-10T12:40:00.0000000+00:00
-- Main file ID: 7219
-- Main file version: 2.2.5
-- Main file uploaded at UTC: 2026-08-10T12:40:00.0000000+00:00
-- Archive filename: Skitarius 2.2.5 510 2.2.5 2026-08-10T12-40Z Ci3ojiHh2.zip
-- Archive size bytes: 40015
-- Archive SHA-256: 1a5a41619dbbaed5ff2054fb21f6b9857a553ba475d8e00f43acb32a67e10450
+- Nexus page version: 2.2.6
+- Nexus last updated: 2026-09-29T12:40:00.0000000+00:00
+- Main file ID: 8529
+- Main file version: 2.2.6
+- Main file uploaded at UTC: 2026-09-29T12:40:00.0000000+00:00
+- Archive filename: Skitarius 2.2.6 510 2.2.6 2026-09-29T12-40Z 5gEeTgDic.zip
+- Archive size bytes: 40183
+- Archive SHA-256: 23d79c80f5bb27a1d41d2a0a10921ac4a815aaa6abb43b6ee36544dec4e7af97
 - Acquisition method: manual-queue
 
 ### [Auto Loot](https://www.nexusmods.com/warhammer40kdarktide/mods/375)
