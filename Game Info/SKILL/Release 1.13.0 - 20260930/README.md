@@ -22,7 +22,7 @@ MOD 僅參考依職業拆檔及排版；未用其機制、數值或譯名對照�
 - [老兵完整節點索引與逐項說明](TALENTS_Veteran.md)
 - [POC 方法、案例與驗收](POC.md)
 
-目前完成：`veteran_replenish_grenades`。完整節點盤點及其他機制仍進行中；不能將本階段視為完整技能樹交付。
+目前完成：`veteran_replenish_grenades`、`veteran_ranged_power_out_of_melee`。完整節點盤點及其他機制仍進行中；不能將本階段視為完整技能樹交付。
 
 每個通過驗收的節點立即單獨本機 commit。commit 訊息含 talent ID；提交 SHA 由 `git log --format='%H %s' -- 'Game Info/SKILL/Release 1.13.0 - 20260930'` 查核（不在同一 commit 內放入自我引用 SHA）。後續索引更新補記已產生的 SHA。
 
@@ -32,3 +32,9 @@ MOD 僅參考依職業拆檔及排版；未用其機制、數值或譯名對照�
 2. 完成條件觸發、疊層、冷卻、升級／替換四類 POC，再擴展全部節點。
 3. 全文核對永久連結行號、分類、待確認翻譯及逐節點 commit。
 4. 不分析其他職業；不改 MOD Lua；不對唯讀來源寫入或 commit。
+
+## 已完成提交
+
+| talent ID | 首次完成 commit |
+|---|---|
+| `veteran_replenish_grenades` | `125c6b8c24d8c96daa7f61806555527fbba03f61` |
