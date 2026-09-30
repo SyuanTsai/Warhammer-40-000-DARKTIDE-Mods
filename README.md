@@ -812,10 +812,10 @@
 
 ### [Solo Play (Havoc Update)](https://www.nexusmods.com/warhammer40kdarktide/mods/176)
     單人遊戲 - 支援浩劫模式
-- MOD 網站最後更新日期：Last updated 09 February 2026, 12:29AM
-- MOD 版本：Version 2.3.6
-- MOD 檔案名稱：SoloPlay-176-2-3-6-1770568165
-- 手動維護最後下載日期：2026-02-10
+- MOD 網站最後更新日期：Last updated 09 September 2026, 3:26AM
+- MOD 版本：Version 2.6.9
+- MOD 檔案名稱：SoloPlay 176 2.6.9 2026-09-29T19-26Z ndQ1mdFFD
+- 手動維護最後下載日期：2026-09-30
 
 ### [KeepSwinging](https://www.nexusmods.com/warhammer40kdarktide/mods/88)
     自動輕擊
