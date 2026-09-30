@@ -459,12 +459,23 @@
 ### [Ovenproof's Scoreboard Plugin - Community Patch](https://www.nexusmods.com/warhammer40kdarktide/mods/514)
     記分板排版工具
 - 原版 MOD：[Ovenproof's Scoreboard Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/241)
-- MOD 網站最後更新日期：Last updated 11 April 2026, 4:45PM
+- MOD 網站最後更新日期：Last updated 22 February 2024, 10:22AM
 - MOD 版本：1.4.2
-- Patch 網站最後更新日期：Last updated 13 August 2026, 2:13PM
-- Patch 版本：1.13.8
-- MOD 檔案名稱：Ovenproof's Scoreboard Plugin - Community Patch 514 1.13.8 2026-08-13T06-13Z SDWlwDVjZ.zip
-- 手動維護最後下載日期：2026-08-29
+- Patch 網站最後更新日期：Last updated 29 September 2026, 11:25PM
+- Patch 版本：1.14.0
+- MOD 檔案名稱：Ovenproof's Scoreboard Plugin - Community Patch 514 1.14.0 2026-09-29T15-25Z oudzUunMy.zip
+- 手動維護最後下載日期：2026-09-30
+- Nexus MOD ID: 514
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/514
+- Nexus page version: 1.14.0
+- Nexus last updated: 2026-09-29T15:25Z
+- Main file ID: 8539
+- Main file version: 1.14.0
+- Main file uploaded at UTC: 2026-09-29T15:25Z
+- Archive filename: Ovenproof's Scoreboard Plugin - Community Patch 514 1.14.0 2026-09-29T15-25Z oudzUunMy.zip
+- Archive size bytes: 39412
+- Archive SHA-256: c293876f2b9c39f1446920d2288668f99136746581e5c264aec416c9e255db8f
+- Acquisition method: manual-queue
 - GitHub :
 - Source=>  https://github.com/Backup158/DarktideOvenproofScoreboardPluginPatch
 - Fork  =>  https://github.com/SyuanTsai/Darktide-Mods-OvenproofScoreboardPluginPatch
