@@ -1,7 +1,5 @@
 # 老兵天賦：Release 1.13.0
 
-本頁整理五個技能的效果、觸發條件與實際算例。名稱沿用既有翻譯表；名稱對應及遊戲內表現的驗證限制，集中記錄於[來源說明](README.md)。
-
 <a id="talent-index"></a>
 
 ## 技能目錄
@@ -9,14 +7,10 @@
 | 分類 | 技能 | 主要效果 |
 |---|---|---|
 | 閃擊 | [炸藥儲備(Demolition Stockpile)](#veteran_replenish_grenades) | 定期補回手雷 |
-| 光環 | 尚未分析 | — |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
-| 鑰石 | 尚未分析 | — |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
 | 技能 | [優越情節(Superiority Complex)](#veteran_increase_damage_vs_elites) | 增加對精英敵人的傷害 |
-
-[技術識別碼與來源文件索引](TALENTS%20Veteran/README.md)
 
 ---
 
@@ -43,10 +37,6 @@
 
 ---
 
-## 光環
-
-尚未完成逐項分析。
-
 ## 能力
 
 <a id="veteran_combat_ability_extra_charge"></a>
@@ -69,10 +59,6 @@
 [詳細資料](TALENTS%20Veteran/veteran_combat_ability_extra_charge.md) · [返回目錄](#talent-index)
 
 ---
-
-## 鑰石
-
-尚未完成逐項分析。
 
 ## 技能
 
