@@ -1,5 +1,6 @@
 local mod = get_mod("markers_aio")
-local HereticalIdolTemplate = mod:io_dofile("markers_aio/scripts/mods/markers_aio/heretical_idol_markers_template")
+local HereticalIdolTemplate =
+	mod:io_dofile("markers_aio/scripts/mods/markers_aio/modules/heretical_idols/heretical_idol_markers_template")
 
 local HudElementWorldMarkers = require("scripts/ui/hud/elements/world_markers/hud_element_world_markers")
 local HUDElementInteractionSettings = require("scripts/ui/hud/elements/interaction/hud_element_interaction_settings")
@@ -7,6 +8,12 @@ local DestructibleExtension = require("scripts/extension_systems/destructible/de
 local UIWidget = require("scripts/managers/ui/ui_widget")
 
 local fs = mod.frame_settings
+
+local function remove_totem_from_tracking_safe(unit)
+	if mod.remove_totem_from_tracking then
+		mod.remove_totem_from_tracking(unit)
+	end
+end
 
 mod.heretical_idols = {}
 mod._world_markers_list = {}
@@ -23,7 +30,7 @@ end
 
 mod:hook_safe(CLASS.DestructibleExtension, "set_collectible_data", function(self, data)
 	mod.add_heretical_idol_marker(self, data.unit, data.section_id)
-	self._owner_system:enable_update_function(self.__class_name, "update", data.unit, self)
+	self._owner_system:enable_update_function(data.unit, "update")
 end)
 
 DestructibleExtension.update = function(self, unit, dt, t)
@@ -70,7 +77,7 @@ DestructibleExtension._add_damage = function(self, damage_amount, attack_directi
 		destruction_info.health = math.max(0, health_after_damage)
 
 		if health_after_damage <= 0 then
-			mod.remove_totem_from_tracking(self._unit)
+			remove_totem_from_tracking_safe(self._unit)
 
 			if self._collectible_data then
 				if self._collectible_data.unit and self._collectible_data.section_id then
@@ -104,7 +111,7 @@ DestructibleExtension.rpc_destructible_last_destruction = function(self)
 
 	Unit.flow_event(self._unit, "lua_last_destruction")
 
-	mod.remove_totem_from_tracking(self._unit)
+	remove_totem_from_tracking_safe(self._unit)
 
 	if self._collectible_data then
 		if self._collectible_data.unit and self._collectible_data.section_id then

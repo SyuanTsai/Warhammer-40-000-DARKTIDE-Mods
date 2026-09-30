@@ -1,5 +1,5 @@
 local mod = get_mod("markers_aio")
-mod.version = "2.14.5"
+mod.version = "2.15.4"
 mod:info("Markers Improved AIO Improved is installed, using version: " .. tostring(mod.version))
 
 mod.lookup_border_color = function(colour_string)
@@ -187,6 +187,11 @@ local loc = {
 		["zh-tw"] = mod_name["zh-tw"],
 	},
 
+	ammo_status_settings = {
+		["zh-tw"] = "彈藥浪費提示",
+		en = "AMMO WASTAGE INDICATORS",
+	},
+
 	-- Tab names (used in settings UI)
 	tab_general = {
 		en = "General",
@@ -201,6 +206,13 @@ local loc = {
 		ru = "Боеприпасы и Медицина",
 		["zh-tw"] = "彈藥與醫療",
 		["zh-cn"] = "弹药与医疗",
+	},
+	tab_ammo_status = {
+		en = "Ammo Info",
+		fr = "Infos Munitions",
+		ru = "Информация о боеприпасах",
+		["zh-tw"] = "彈藥資訊",
+		["zh-cn"] = "弹药信息",
 	},
 	tab_chests = {
 		en = "Chests",
@@ -264,6 +276,81 @@ local loc = {
 		ru = "Событие",
 		["zh-tw"] = "活動",
 		["zh-cn"] = "活动",
+	},
+	tab_objective = {
+		en = "OBJECTIVE MARKERS",
+		fr = "Objectifs",
+		ru = "Задачи",
+		["zh-tw"] = "任務目標標記",
+		["zh-cn"] = "目标",
+	},
+	objective_require_line_of_sight_tooltip = {
+		en = "Hide objective markers when they are behind cover. Disabled by default to keep the base game behaviour of showing objectives through walls.",
+		ru = "Скрывать метки задач за укрытием. По умолчанию выключено, чтобы сохранить базовое поведение игры (показ задач сквозь стены).",
+		["zh-tw"] = "任務目標標記被遮蔽物擋住時隱藏。預設關閉，保留原版隔牆顯示任務目標的方式。",
+		["zh-cn"] = "任务标记被遮挡时隐藏。默认关闭以保持原版透视显示任务的特性。",
+	},
+	objective_markers_settings = {
+		en = "General Settings",
+		fr = "Paramètres généraux",
+		ru = "Общие настройки",
+		["zh-tw"] = "一般設定",
+		["zh-cn"] = "通用设置",
+	},
+	objective_enable = {
+		en = "Enable Markers",
+		fr = "Activer les marqueurs",
+		ru = "Включить метки",
+		["zh-tw"] = "啟用標記",
+		["zh-cn"] = "启用标记",
+	},
+	objective_keep_on_screen = {
+		en = "Keep on screen",
+		fr = "Rester à l'écran",
+		ru = "Держать на экране",
+		["zh-tw"] = "保持顯示於螢幕",
+		["zh-cn"] = "保持在屏幕上",
+	},
+	objective_require_line_of_sight = {
+		en = "Require Line of Sight",
+		fr = "Exiger une ligne de vue",
+		ru = "Требовать прямую видимость",
+		["zh-tw"] = "僅顯示視線內的標記",
+		["zh-cn"] = "需要视野",
+	},
+	objective_toggle_los = {
+		en = "Toggle 'Require Line of Sight'",
+		ru = "Переключение «В зоне видимости»",
+		["zh-tw"] = "切換「僅顯示視線內的標記」",
+		["zh-cn"] = "切换「仅视野内显示」",
+	},
+	objective_max_distance = {
+		en = "Max distance",
+		fr = "Distance maximale",
+		ru = "Максимальная дистанция",
+		["zh-tw"] = "最大距離",
+		["zh-cn"] = "最大距离",
+	},
+	objective_scale = {
+		en = "Scale",
+		fr = "Échelle",
+		ru = "Масштаб",
+		["zh-tw"] = "大小",
+		["zh-cn"] = "大小",
+	},
+	objective_alpha = {
+		en = "Alpha",
+		fr = "Alpha",
+		ru = "Альфа",
+		["zh-tw"] = "透明度",
+		["zh-cn"] = "透明度",
+	},
+	objective_border_colour = {
+		en = "Border colour",
+		fr = "Couleur de la bordure",
+		ru = "Цвет рамки",
+		["zh-tw"] = "邊框顏色",
+		["zh-cn"] = "边框颜色",
 	},
 	tab_decoding = {
 		en = "Decoding",
@@ -441,7 +528,7 @@ local loc = {
 
 	-- General Settings
 	aio_settings = {
-		en = "{#color(" .. colours.title .. ")}" .. "Global Marker Settings" .. "{#reset()}",
+		en = "GENERAL MARKER SETTINGS",
 		fr = "MARKERS IMPROVED AIO SETTINGS",
 		ru = "НАСТРОЙКИ УЛУЧШЕННЫХ МЕТОК",
 		["zh-tw"] = "圖標改善設定",
@@ -660,6 +747,13 @@ local loc = {
 		ru = "Показывать заряды медстанции",
 		["zh-tw"] = "顯示醫療充能",
 		["zh-cn"] = "显示医疗箱使用次数",
+	},
+	display_med_crate_estimate = {
+		en = "Display Estimated Medcrate Charge",
+		fr = "Afficher l'estimation de charge des caisses médicales",
+		ru = "Показывать оценку заряда медящиков",
+		["zh-tw"] = "顯示醫療箱預估剩餘百分比",
+		["zh-cn"] = "显示医疗箱预估剩余百分比",
 	},
 	display_ammo_charges = {
 		en = "Display Ammo Charges",
@@ -2941,6 +3035,34 @@ local loc = {
 		["zh-cn"] = "活动物品标记颜色",
 		["zh-tw"] = "活動物品標記顏色",
 	},
+	objective_colour = {
+		en = "Objective Markers Colour",
+		fr = "Couleur des marqueurs d'objectifs",
+		ru = "Цвет меток задач",
+		["zh-tw"] = "任務目標標記顏色",
+		["zh-cn"] = "目标标记颜色",
+	},
+	objective_colour_R = {
+		en = "R",
+		fr = "R",
+		ru = "К",
+		["zh-tw"] = "紅",
+		["zh-cn"] = "红",
+	},
+	objective_colour_G = {
+		en = "G",
+		fr = "V",
+		ru = "З",
+		["zh-tw"] = "綠",
+		["zh-cn"] = "绿",
+	},
+	objective_colour_B = {
+		en = "B",
+		fr = "B",
+		ru = "С",
+		["zh-tw"] = "藍",
+		["zh-cn"] = "蓝",
+	},
 	event_colour_R = {
 		en = "R",
 		fr = "R",
@@ -3884,7 +4006,7 @@ local loc = {
 	},
 	toggle_los_tooltip = {
 		en = "Optional: Enter a keybind to toggle the 'Require Line of Sight' functionality for this marker type.",
-		ru = "Опционально: укажите сочетание клавиш для переключения функции «Требуется прямая видимость» для этого типа меток.",
+		ru = "Опционально: укажите сочетание клавиш для переключения функции «Требуется прямая видимость» для этого ��ипа меток.",
 		["zh-cn"] = "可选：设置快捷键切换此类标记的「需要视线」功能。",
 		["zh-tw"] = "可選：設定快捷鍵切換此類標記的「需要視線」功能。",
 	},
@@ -3895,10 +4017,352 @@ local loc = {
 		["zh-tw"] = "以數字顯示彈藥箱剩餘可使用次數。",
 	},
 	display_med_charges_tooltip = {
-		en = "Display a text-based numerical counter indicating the percentage left on a crate or the charges left on a medical station before it runs out.",
-		ru = "Показывает текстовый числовой счётчик, показывающий процент оставшегося заряда ящика или количество зарядов, оставшихся в медстанции до их полного израсходования.",
-		["zh-cn"] = "以数字显示医疗箱剩余百分比或医疗站剩余使用次数。",
-		["zh-tw"] = "以數字顯示醫療箱剩餘百分比或醫療站剩餘使用次數。",
+		en = "Display a text-based numerical counter indicating the percentage left on a crate or the charges left on a medical station before it runs out. In multiplayer, crate percentages on other players' screens are estimated (shown with a ~).",
+		ru = "Показывает текстовый числовой счётчик, показывающий процент оставшегося заряда ящика или количество зарядов, оставшихся в медстанции до их полного израсходования. В сетевой игре проценты медящиков на других игроках оцениваются (показываются с ~).",
+		["zh-tw"] = "以數字顯示醫療箱剩餘百分比或醫療站剩餘使用次數。多人遊戲中，其他玩家畫面上的醫療箱百分比為估計值（以 ~ 表示）。",
+		["zh-cn"] = "以数字显示医疗箱剩余百分比或医疗站剩余使用次数。联机游戏中他处的医疗箱百分比为估算值（以 ~ 前缀标示）。",
+	},
+	display_med_crate_estimate_tooltip = {
+		en = "Show the live estimated charge percentage left on a deployed medcrate (crates placed by other players in multiplayer, where the exact reserve is not shared). Estimates are shown as approximate ranges like ~60-80%% to reflect that they cannot be exact, and they already account for the crate lifetime. Disabling this hides only the estimated percentage; the exact percentage still shows when it is known (e.g. solo lobbies/psykhanium).",
+		ru = "Показывает живую оценку оставшегося процента заряда развёрнутого медящика (ящиков, поставленных другими игроками в сетевой игре, где точное значение резерва не передаётся). Оценки показываются приблизительными диапазонами, например ~60-80%%, и уже учитывают время жизни ящика. Отключение скрывает только оценку; точный процент остаётся видимым, когда он известен (например, когда вы хост).",
+		["zh-tw"] = "顯示已放置醫療箱的即時預估剩餘充能百分比。多人遊戲中，其他玩家放置的醫療箱不會同步確切剩餘量，因此以 ~60-80%% 之類的範圍顯示估計值；估算時也已計入醫療箱的持續時間。關閉後只會隱藏估計值；若能取得確切百分比（例如單人房或靈能室），仍會顯示。",
+		["zh-cn"] = "显示已部署医疗箱的实时预估剩余百分比（联机游戏中由其他玩家放置的医疗箱无法获取精确值）。预估以近似范围显示（如 ~60-80%%），并已计入医疗箱寿命。关闭后仅隐藏预估百分比；已知精确值时（如作为主机）仍会显示精确值。",
+	},
+	ammo_status_colours_enable_tooltip = {
+		en = "Tint ammo pickup markers by how useful they are to you",
+		ru = "Окрашивает метки подбора боеприпасов в зависимости от пользы для вас: зелёный = можно забрать всё, оранжевый = союзнику нужнее, красный = часть боеприпасов будет потрачена впустую.",
+		["zh-tw"] = "依拾取彈藥對你的補給效益，為彈藥標記著色。",
+		["zh-cn"] = "根据弹药拾取对您的用处着色：绿色=可全部拾取，橙色=队友更需要，红色=会有浪费。",
+	},
+	ammo_status_dim_unwanted_enable_tooltip = {
+		en = "Dim the marker to 50%% opacity when the ammo status is wasted or a teammate needs it more than you, so useful pickups stand out. Full opacity is kept when you can take it all.",
+		ru = "Затемняет метку до 50%% непрозрачности, когда боеприпасы тратятся впустую или союзнику они нужнее, чем вам, чтобы полезные подборы выделялись. Полная непрозрачность сохраняется, когда вы можете забрать всё.",
+		["zh-tw"] = "當拾取會浪費彈藥，或隊友比你更需要時，將標記透明度降至 50%%，讓值得拾取的彈藥更醒目。若能全數取得，標記則維持完全不透明。",
+		["zh-cn"] = "当弹药状态为浪费、或队友比你更需要时，将标记淡化至 50%% 不透明度，使有用的拾取更醒目；可全部拾取时保持完全不透明。",
+	},
+	ammo_status_circle_enable = {
+		en = "Corner status circle",
+		fr = "Cercle d'état en coin",
+		ru = "Круг статуса в углу",
+		["zh-tw"] = "右上角狀態圓點",
+		["zh-cn"] = "角落状态圆",
+	},
+	ammo_status_circle_enable_tooltip = {
+		en = "Show a small circle in the top-right corner of ammo pickup markers, tinted with the ammo status colour (green = take it all, orange = a teammate needs it more, red = would waste ammo). A teammate's class icon in their colour is drawn on the circle when they need it more.",
+		fr = "Affiche un petit cercle dans le coin supérieur droit des marqueurs de munitions, coloré selon l'état (vert = tout prendre, orange = un coéquipier en a plus besoin, rouge = perte de munitions). L'icône de classe d'un coéquipier dans sa couleur est dessinée sur le cercle quand il en a plus besoin.",
+		ru = "Показывает маленький круг в правом верхнем углу метки боеприпасов, окрашенный по статусу (зелёный = можно забрать всё, оранжевый = союзнику нужнее, красный = будет потеря). Когда союзнику нужнее, на круге отображается иконка его класса в цвете команды.",
+		["zh-tw"] = "在彈藥拾取標記右上角顯示小圓點，並依狀態著色：綠色表示可全數取得、橘色表示隊友更需要、紅色表示拾取會浪費彈藥。隊友更需要時，圓點上會顯示該隊友的職業圖示與對應顏色。",
+		["zh-cn"] = "在弹药拾取标记的右上角显示小圆点，按弹药状态着色（绿=可全拿、橙=队友更需要、红=会浪费）。当队友更需要时，圆上叠加其职业图标并显示队友颜色。",
+	},
+	ammo_status_numeric_enable_tooltip = {
+		en = "Master toggle for the gain (+G) and waste (-W) numbers. When enabled you can pick where they appear: on the world marker, in the interact prompt, or both.",
+		ru = "Главный переключатель чисел +G и -W. Когда включено, вы можете выбрать, где они отображаются: на мировой метке, в окне взаимодействия или в обоих местах.",
+		["zh-tw"] = "獲得量（+G）與浪費量（-W）數字的總開關。啟用後可選擇顯示在場景中的拾取標記、互動提示，或兩處都顯示。",
+		["zh-cn"] = "获得(+G)与浪费(-W)数字的主开关。开启后可选择显示位置：显示标记上、互动提示中或两者都显示。",
+	},
+	ammo_status_show_gain_tooltip = {
+		en = "Show the number of ammo rounds that will be added to your reserve.",
+		ru = "Показывать число патронов, которое будет добавлено к вашему запасу.",
+		["zh-tw"] = "顯示拾取後會加入備用彈藥的發數。",
+		["zh-cn"] = "显示将补充到后备弹药的数量。",
+	},
+	ammo_status_show_waste_tooltip = {
+		en = "Show how many ammo rounds would be wasted because your reserve is too full.",
+		ru = "Показывать число патронов, которые будут потеряны из-за слишком полного запаса.",
+		["zh-tw"] = "顯示因備用彈藥太滿而會浪費的發數。",
+		["zh-cn"] = "显示因后备弹药过满而浪费的数量。",
+	},
+	ammo_status_show_most_needy_tooltip = {
+		en = "When a teammate needs the ammo more than you, show their class icon with their team colour to mark who should take this pickup.",
+		ru = "Если союзнику нужно больше боеприпасов, чем вам, показывает иконку его класса в цвете его команды, чтобы отметить, кому следует забрать этот предмет.",
+		["zh-tw"] = "當隊友比你更需要這份彈藥時，顯示該隊友的職業圖示與對應顏色，標示應由誰拾取。",
+		["zh-cn"] = "当队友比您更需要弹药时，以队友职业图标与队友颜色标示谁应该拾取。",
+	},
+	ammo_status_margin_tooltip = {
+		en = "How much lower (in %%) a teammate's ammo must be than yours before they are considered more needy than you.",
+		ru = "На сколько процентов запас боеприпасов союзника должен быть ниже вашего, чтобы он считался более нуждающимся в них.",
+		["zh-tw"] = "設定隊友的彈藥百分比須比你低多少個百分點（%%），才會被視為更需要彈藥。",
+		["zh-cn"] = "队友弹药百分比比您低多少(%%)才会判定为比您更需要。",
+	},
+	ammo_status_colours_enable = {
+		en = "Status ring colours",
+		fr = "Couleurs de l'anneau d'état",
+		ru = "Цвета кольца статуса",
+		["zh-tw"] = "狀態環顏色",
+		["zh-cn"] = "状态环颜色",
+	},
+	ammo_status_dim_unwanted_enable = {
+		en = "Dim wasted/unneeded markers",
+		fr = "Atténuer les marqueurs gaspillés/inutiles",
+		ru = "Затемнять бесполезные метки",
+		["zh-tw"] = "淡化不宜拾取的彈藥標記",
+		["zh-cn"] = "淡化无用标记",
+	},
+	ammo_status_numeric_enable = {
+		en = "Show gain/waste numbers",
+		fr = "Afficher les nombres de gain/perte",
+		ru = "Показывать числа +G/-W",
+		["zh-tw"] = "顯示獲得量／浪費量數字",
+		["zh-cn"] = "显示获得/浪费数字",
+	},
+	ammo_status_show_gain = {
+		en = "Show ammo gained",
+		fr = "Afficher les munitions gagnées",
+		ru = "Показывать полученные патроны",
+		["zh-tw"] = "顯示可獲得的彈藥量",
+		["zh-cn"] = "显示获得弹药",
+	},
+	ammo_status_show_waste = {
+		en = "Show ammo wasted",
+		fr = "Afficher les munitions perdues",
+		ru = "Показывать потерянные патроны",
+		["zh-tw"] = "顯示會浪費的彈藥量",
+		["zh-cn"] = "显示浪费弹药",
+	},
+	ammo_status_show_most_needy = {
+		en = "Show most needy teammate icon",
+		fr = "Icône du coéquipier le plus à court",
+		ru = "Иконка наиболее нуждающегося союзника",
+		["zh-tw"] = "顯示最需要彈藥的隊友圖示",
+		["zh-cn"] = "显示最需要弹药的队友图标",
+	},
+	ammo_status_margin = {
+		en = "Needy margin",
+		fr = "Marge de besoin",
+		ru = "Порог нужды",
+		["zh-tw"] = "隊友彈藥差距門檻",
+		["zh-cn"] = "需求差值",
+	},
+	ammo_status_green_colour = {
+		en = "Status Colour: Take It All",
+		fr = "Couleur du statut : Prendre tout",
+		ru = "Цвет статуса: взять всё",
+		["zh-tw"] = "狀態顏色：可全數取得",
+		["zh-cn"] = "状态颜色：可全部拾取",
+	},
+	ammo_status_green_colour_R = {
+		en = "R",
+		fr = "R",
+		ru = "К",
+		["zh-tw"] = "紅",
+		["zh-cn"] = "红",
+	},
+	ammo_status_green_colour_G = {
+		en = "G",
+		fr = "V",
+		ru = "З",
+		["zh-tw"] = "綠",
+		["zh-cn"] = "绿",
+	},
+	ammo_status_green_colour_B = {
+		en = "B",
+		fr = "B",
+		ru = "С",
+		["zh-tw"] = "藍",
+		["zh-cn"] = "蓝",
+	},
+	ammo_status_orange_colour = {
+		en = "Status Colour: Teammate Needs It More",
+		fr = "Couleur du statut : Un coéquipier en a plus besoin",
+		ru = "Цвет статуса: союзнику нужнее",
+		["zh-tw"] = "狀態顏色：隊友更需要",
+		["zh-cn"] = "状态颜色：队友更需要",
+	},
+	ammo_status_orange_colour_R = {
+		en = "R",
+		fr = "R",
+		ru = "К",
+		["zh-tw"] = "紅",
+		["zh-cn"] = "红",
+	},
+	ammo_status_orange_colour_G = {
+		en = "G",
+		fr = "V",
+		ru = "З",
+		["zh-tw"] = "綠",
+		["zh-cn"] = "绿",
+	},
+	ammo_status_orange_colour_B = {
+		en = "B",
+		fr = "B",
+		ru = "С",
+		["zh-tw"] = "藍",
+		["zh-cn"] = "蓝",
+	},
+	ammo_status_red_colour = {
+		en = "Status Colour: Would Waste Ammo",
+		fr = "Couleur du statut : Munitions gaspillées",
+		ru = "Цвет статуса: боеприпасы будут потеряны",
+		["zh-tw"] = "狀態顏色：拾取會浪費彈藥",
+		["zh-cn"] = "状态颜色：会有浪费",
+	},
+	ammo_status_red_colour_R = {
+		en = "R",
+		fr = "R",
+		ru = "К",
+		["zh-tw"] = "紅",
+		["zh-cn"] = "红",
+	},
+	ammo_status_red_colour_G = {
+		en = "G",
+		fr = "V",
+		ru = "З",
+		["zh-tw"] = "綠",
+		["zh-cn"] = "绿",
+	},
+	ammo_status_red_colour_B = {
+		en = "B",
+		fr = "B",
+		ru = "С",
+		["zh-tw"] = "藍",
+		["zh-cn"] = "蓝",
+	},
+	ammo_status_enable = {
+		en = "Enable ammo info",
+		fr = "Activer les infos munitions",
+		ru = "Включить информацию о боеприпасах",
+		["zh-tw"] = "啟用彈藥資訊",
+		["zh-cn"] = "启用弹药信息",
+	},
+	ammo_status_enable_tooltip = {
+		en = "Master toggle for the ammo info features (ring colours, gain/waste numbers, most needy teammate icon).",
+		ru = "Главный переключатель функций информации о боеприпасах (цвет кольца, числа +G/-W, иконка наиболее нуждающегося союзника).",
+		["zh-tw"] = "彈藥資訊功能的總開關，包括狀態環顏色、獲得量／浪費量數字，以及最需要彈藥的隊友圖示。",
+		["zh-cn"] = "弹药信息功能总开关（状态环颜色、获得/浪费数值、最需要弹药的队友图标）。",
+	},
+	ammo_status_marker_text_enable = {
+		en = "Show numbers on pickup marker",
+		fr = "Afficher les nombres sur la marqueur",
+		ru = "Показывать числа на метке предмета",
+		["zh-tw"] = "在拾取標記上顯示數字",
+		["zh-cn"] = "在拾取标记上显示数字",
+	},
+	ammo_status_marker_text_enable_tooltip = {
+		en = "Show the gain (+G) and waste (-W) numbers directly on the ammo pickup's world marker, under the marker icon.",
+		ru = "Показывать числа +G и -W прямо на мировой метке предмета, под иконкой.",
+		["zh-tw"] = "在場景中的彈藥拾取標記上，直接於圖示下方顯示獲得量（+G）與浪費量（-W）。",
+		["zh-cn"] = "在弹药的显示标记图标下方直接显示获得(+G)与浪费(-W)数值。",
+	},
+	ammo_status_popup_text_enable = {
+		en = "Show numbers in interact prompt",
+		fr = "Afficher les nombres dans la fenêtre d'interaction",
+		ru = "Показывать числа в окне взаимодействия",
+		["zh-tw"] = "在互動提示中顯示數字",
+		["zh-cn"] = "在互动提示中显示数字",
+	},
+	ammo_status_popup_text_enable_tooltip = {
+		en = "Show the gain (+G) and waste (-W) next to the ammo pickup name in the interact prompt that appears when you are close enough to interact.",
+		ru = "Показывать +G и -W рядом с названием предмета в окне взаимодействия, которое появляется, когда вы достаточно близко для подбора.",
+		["zh-tw"] = "靠近彈藥並可互動時，在互動提示的彈藥名稱旁顯示獲得量（+G）與浪費量（-W）。",
+		["zh-cn"] = "在足够靠近进行互动时出现的互动提示中，在弹药名称旁显示获得(+G)与浪费(-W)。",
+	},
+	ammo_status_text_font_size = {
+		en = "Pickup marker text size",
+		fr = "Taille du texte de la marqueur",
+		ru = "Размер текста метки",
+		["zh-tw"] = "拾取標記文字大小",
+		["zh-cn"] = "拾取标记文字大小",
+	},
+	ammo_status_text_font_size_tooltip = {
+		en = "Font size of the gain/waste numbers shown on the pickup marker.",
+		ru = "Размер шрифта чисел +G/-W на метке предмета.",
+		["zh-tw"] = "設定拾取標記上獲得量／浪費量數字的字體大小。",
+		["zh-cn"] = "拾取标记上获得/浪费数字的字体大小。",
+	},
+	ammo_status_text_position = {
+		en = "Pickup marker text position",
+		fr = "Position du texte de la marqueur",
+		ru = "Положение текста метки",
+		["zh-tw"] = "拾取標記文字位置",
+		["zh-cn"] = "拾取标记文字位置",
+	},
+	ammo_status_text_position_tooltip = {
+		en = "Where the gain/waste numbers are placed relative to the pickup marker icon. Defaults to Top so it does not overlap the distance text (which defaults to Bottom).",
+		ru = "Где размещаются числа +G/-W относительно иконки метки. По умолчанию сверху, чтобы не пересекаться с текстом дистанции (по умолчанию снизу).",
+		["zh-tw"] = "設定獲得量／浪費量數字相對於拾取標記圖示的位置。預設顯示在上方，避免與預設顯示在下方的距離文字重疊。",
+		["zh-cn"] = "获得/浪费数字相对拾取标记图标的位置。默认位于上方，以避免与距离文字（默认在下方）重叠。",
+	},
+	ammo_status_text_offset = {
+		en = "Pickup marker text offset",
+		fr = "Décalage du texte de la marqueur",
+		ru = "Смещение текста метки",
+		["zh-tw"] = "拾取標記文字偏移",
+		["zh-cn"] = "拾取标记文字偏移",
+	},
+	ammo_status_text_offset_tooltip = {
+		en = "Extra distance (in pixels) added to the chosen position, so you can push the numbers further from or closer to the marker.",
+		ru = "Дополнительное расстояние (в пикселях) к выбранному положению, чтобы отодвинуть или приблизить числа к метке.",
+		["zh-tw"] = "在所選位置上額外調整距離（像素），可讓數字離標記更近或更遠。",
+		["zh-cn"] = "在所选位置上额外增加的距离（像素），可用来调整数字与标记的距离。",
+	},
+	ammo_status_text_width = {
+		en = "Pickup marker text width",
+		fr = "Largeur du texte de la marqueur",
+		ru = "Ширина текста метки",
+		["zh-tw"] = "拾取標記文字寬度",
+		["zh-cn"] = "拾取标记文字宽度",
+	},
+	ammo_status_text_width_tooltip = {
+		en = "Width of the text box on the pickup marker. Large values keep '+30 (-5)' on a single line instead of splitting it.",
+		ru = "Ширина текстового поля на метке. Большие значения не дают тексту '+30 (-5)' переноситься на две строки.",
+		["zh-tw"] = "設定拾取標記上文字方塊的寬度。加寬後，'+30 (-5)' 等內容可維持單行顯示。",
+		["zh-cn"] = "拾取标记上文字框的宽度。较大的值可让 '+30 (-5)' 保持在一行而不折行。",
+	},
+	ammo_status_gain_colour = {
+		en = "Gain (+) Colour",
+		fr = "Couleur du gain (+)",
+		ru = "Цвет получения (+)",
+		["zh-tw"] = "獲得量（+）顏色",
+		["zh-cn"] = "获得(+)颜色",
+	},
+	ammo_status_gain_colour_R = {
+		en = "R",
+		fr = "R",
+		ru = "К",
+		["zh-tw"] = "紅",
+		["zh-cn"] = "红",
+	},
+	ammo_status_gain_colour_G = {
+		en = "G",
+		fr = "V",
+		ru = "З",
+		["zh-tw"] = "綠",
+		["zh-cn"] = "绿",
+	},
+	ammo_status_gain_colour_B = {
+		en = "B",
+		fr = "B",
+		ru = "С",
+		["zh-tw"] = "藍",
+		["zh-cn"] = "蓝",
+	},
+	ammo_status_waste_colour = {
+		en = "Waste (-) Colour",
+		fr = "Couleur de la perte (-)",
+		ru = "Цвет потери (-)",
+		["zh-tw"] = "浪費量（-）顏色",
+		["zh-cn"] = "浪费(-)颜色",
+	},
+	ammo_status_waste_colour_R = {
+		en = "R",
+		fr = "R",
+		ru = "К",
+		["zh-tw"] = "紅",
+		["zh-cn"] = "红",
+	},
+	ammo_status_waste_colour_G = {
+		en = "G",
+		fr = "V",
+		ru = "З",
+		["zh-tw"] = "綠",
+		["zh-cn"] = "绿",
+	},
+	ammo_status_waste_colour_B = {
+		en = "B",
+		fr = "B",
+		ru = "С",
+		["zh-tw"] = "藍",
+		["zh-cn"] = "蓝",
 	},
 	change_colour_for_ammo_charges_tooltip = {
 		en = "Adjust the colour of the background of ammo crate and medical markers to differentiate the amount of uses they have left?",
@@ -4167,7 +4631,10 @@ local apply_colours = function()
 				local rgb = { 144, 155, 136 }
 
 				if rgb ~= nil then
-					local text = apply_color_to_text(text, rgb[1], rgb[2], rgb[3])
+					-- Strip any colour tags applied by a previous pass, otherwise every
+					-- call wraps the already-wrapped string again and grows it forever.
+					local clean = string.gsub(text, "{#.-}", "")
+					local text = apply_color_to_text(clean, rgb[1], rgb[2], rgb[3])
 
 					if loc[key] == nil then
 						loc[key] = {}
