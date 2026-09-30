@@ -18,11 +18,20 @@
 <a id="veteran_replenish_grenades"></a>
 ### 炸藥儲備 — veteran_replenish_grenades
 
+**介面精簡說明**：缺少手雷時，每經過一個補給週期恢復 1 顆：破片手雷 60 秒、穿甲手雷 90 秒、煙霧手雷 60 秒。補滿手雷會清除補給進度；持續缺額時逐顆補給。
+
+**運作方式**：手雷數量不足時才開始倒數，每次補回 1 顆。倒數途中再次投雷，不會重設已累積的進度；若拾取手雷補滿，進度就會清除。多缺幾顆仍需逐顆等待，不會一次補滿。
+
+**技能樹關係**：粉碎者破片手雷、穿甲手雷、煙霧手雷三條分支都連到此天賦。它提供通用補給效果，不會改變已選擇的手雷種類；往下可連到額外手雷容量、手雷強化及後續戰鬥天賦。中文名稱沿用翻譯表，名稱對應仍屬暫定。
+
+**分析狀態**：核心機制已由原始碼確認；尚未進行遊戲內驗證。
+
+<details>
+<summary>原始碼依據、計算與待確認事項</summary>
+
 - 名稱 key：`loc_talent_ranger_replenish_grenade`；描述 key：`loc_talent_veteran_grenade_regeneration_per_grenade_desc`。中文沿用詞表 `Demolition Stockpile - 炸藥儲備`，key 對應暫定、待使用者確認。
 - 節點類型 `tactical_modifier`，花費 1 點，上限 1 點。因此歸入閃擊升級，而非光環或獨立手雷替換。[節點定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1111-L1141)。
 - 狀態：**完成（核心靜態機制）**；非遊戲內驗證。
-
-**介面精簡說明**：缺少手雷時，每經過一個補給週期恢復 1 顆：破片手雷 60 秒、穿甲手雷 90 秒、煙霧手雷 60 秒。補滿手雷會清除補給進度；持續缺額時逐顆補給。
 
 **原始碼確認 — 引用與作用對象**：天賦的被動效果安裝 `veteran_grenade_replenishment`；天賦系統將被動效果加入持有者的增益效果系統，再操作 `template_context.unit` 的 `grenade_ability`。因此補給持有者自己，不是協同隊友或地面彈藥。[天賦與顯示參數](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1988-L2030)、[被動效果安裝](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/talent/player_unit_talent_extension.lua#L164-L175)、[持有者及種類選擇](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1813-L1841)。
 
@@ -36,9 +45,18 @@
 
 天賦的內部 `name` 仍寫「every 60 seconds」，`format_values.time` 取後備值 75 秒，但另有破片／穿甲／煙霧手雷的專用值；不能把內部名稱欄位或通用時間欄位當作所有類型實際週期。未取得語系字串本體，不能宣稱遊戲介面必定顯示錯誤。[顯示資料與被動效果](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1988-L2030)。
 
-**節點關係**：父節點為 `node_0800a598-65f0-4293-a838-43c21ce1849c`、`node_29b3560b-2a50-46cd-b0bb-352b34897c49`、`node_4bde1a72-40bd-46ad-950f-8546a48ccb9f`；子節點為 `node_06272211-2d9a-47c7-bf84-8e7ea1eb8a01`、`node_60000569-87a7-4c75-874b-02b86af43f52`、`node_340ef70a-75c5-4a84-9627-6ccd00409d01`、`node_8c9efccd-3b95-45aa-a620-98f9d4d7133e`、`node_5888acc4-4572-49ef-b277-f38b174bb166`。`all_parents_chosen=false`。該節點無能力替換或獨有互斥宣告；整體技能樹選點限制另行追蹤，不將連線直接等同必須全選。[父子節點與需求](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1120-L1140)。
+
 
 **案例與待確認**：見 [POC](POC.md)。在 t=100 首次觀察到破片手雷缺額，t=160 不補給，第一個 t>160 的更新才補給；這是判斷式推導，非精確遊戲排程保證。運行中更換手雷能力時，增益效果是否重建尚未追完；本文件只保證固定配裝存續期間內的種類選擇。初始化函式 `start_func` 直接呼叫能力系統；缺少能力系統的異常初始化是否可實際發生不作結論。未進行遊戲內驗證，未核實官方繁體名稱。
+
+</details>
+
+<details>
+<summary>節點連線核對資料</summary>
+
+**節點關係**：父節點為 `node_0800a598-65f0-4293-a838-43c21ce1849c`、`node_29b3560b-2a50-46cd-b0bb-352b34897c49`、`node_4bde1a72-40bd-46ad-950f-8546a48ccb9f`；子節點為 `node_06272211-2d9a-47c7-bf84-8e7ea1eb8a01`、`node_60000569-87a7-4c75-874b-02b86af43f52`、`node_340ef70a-75c5-4a84-9627-6ccd00409d01`、`node_8c9efccd-3b95-45aa-a620-98f9d4d7133e`、`node_5888acc4-4572-49ef-b277-f38b174bb166`。`all_parents_chosen=false`。該節點無能力替換或獨有互斥宣告；整體技能樹選點限制另行追蹤，不將連線直接等同必須全選。[父子節點與需求](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1120-L1140)。
+
+</details>
 
 ## 光環
 
