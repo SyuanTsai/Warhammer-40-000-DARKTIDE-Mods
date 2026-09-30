@@ -1,13 +1,13 @@
 {
     "name": "BrokerAutoStim",
     "author": "IndicaBunny",
-    "version": "2.11",
+    "version": "3.0",
     "homepage": "https://www.nexusmods.com/warhammer40kdarktide/mods/655",
     "source": "https://github.com/MaddyMarv/BrokerAutoStim",
     "funding": {
         "kofi": "https://ko-fi.com/indicabunny"
     },
-    "description": "Automatically injects the broker stim for you after you've been in combat for a set time.",
+    "description": "Automatically uses your Broker stim in combat. Supports profile switching, animation cancels, and combat safety checks.",
     "dependencies": {
         "required": [],
         "self_after": [],
