@@ -250,20 +250,20 @@
 
 ### [Markers Improved All-in-One](https://www.nexusmods.com/warhammer40kdarktide/mods/447)
     標記一體化 整合包
-- MOD 網站最後更新日期：Last updated 22 April 2026, 11:50PM
-- MOD 版本：2.12.08
-- MOD 檔案名稱：Markers Aio-447-2-12-08-1776873052
-- 手動維護最後下載日期：2026-05-17
+- MOD 網站最後更新日期：Last updated 30 September 2026, 2:23AM
+- MOD 版本：2.15.4
+- MOD 檔案名稱：Markers Improved All-in-One 447 2.15.4 2026-09-29T18-23Z UszQnsmmV.zip
+- 手動維護最後下載日期：2026-09-30
 - Nexus MOD ID: `447`
 - Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/447`
-- Nexus page version: `2.14.5`
-- Nexus last updated: `2026-08-24T19:25:36.0000000+00:00`
-- Main file ID: `7747`
-- Main file version: `2.14.5`
-- Main file uploaded at UTC: `2026-08-24T19:25:36.0000000+00:00`
-- Archive filename: `Markers Improved All-in-One 447 2.14.5 2026-08-24T19-25Z K6YR06iO9.zip`
-- Archive size bytes: `97429`
-- Archive SHA-256: `57abc1191fcb88aa898bfd925fd9da87c99f6e0d24440cb8a7274547f3e272e9`
+- Nexus page version: `2.15.4`
+- Nexus last updated: `2026-09-29T18:23Z`
+- Main file ID: `8561`
+- Main file version: `2.15.4`
+- Main file uploaded at UTC: `2026-09-29T18:23Z`
+- Archive filename: `Markers Improved All-in-One 447 2.15.4 2026-09-29T18-23Z UszQnsmmV.zip`
+- Archive size bytes: `112576`
+- Archive SHA-256: `cb89d3c5409c16b9d9c7c144b3af7c153079f52ae425e19fb93cef443fe96297`
 - Acquisition method: `manual-queue`
 
 ### [Danger Zone](https://www.nexusmods.com/warhammer40kdarktide/mods/440)
