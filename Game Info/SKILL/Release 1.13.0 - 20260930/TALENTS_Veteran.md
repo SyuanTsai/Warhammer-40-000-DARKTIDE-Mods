@@ -8,10 +8,10 @@
 
 完整節點盤點進行中；目前索引不可當作完整覆蓋清單。
 
-| 分類 | talent ID | node ID | 狀態 |
+| 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
-| 閃擊（升級） | `veteran_replenish_grenades` | `node_8acdddd9-366b-4601-bf16-13574eb1cb24` | 完成（靜態分析） |
-| 技能 | `veteran_ranged_power_out_of_melee` | `node_b0c4f49c-fd47-4b1c-9279-82e12dc3ac7d` | 完成（靜態分析） |
+| 閃擊（升級） | 炸藥儲備（名稱對應暫定） / `veteran_replenish_grenades` | `node_8acdddd9-366b-4601-bf16-13574eb1cb24` | 完成（靜態分析） |
+| 技能 | 殺戮地帶（名稱對應暫定） / `veteran_ranged_power_out_of_melee` | `node_b0c4f49c-fd47-4b1c-9279-82e12dc3ac7d` | 完成（靜態分析） |
 
 ## 閃擊
 
