@@ -48,3 +48,4 @@ MOD 僅參考依職業拆檔及排版；未用其機制、數值或譯名對照�
 | `veteran_ranged_power_out_of_melee` | `2bf2967cdcfa21260ddc454054e6979af3cf60fe` |
 | `veteran_replenish_toughness_on_weakspot_kill` | `a8127ef51e9c82bdd9b1476999a8267fbbc4ca8e` |
 | `veteran_combat_ability_extra_charge` | `f311d7c8dac62f077d488587eb4f32eec7ad3137` |
+| `veteran_increase_damage_vs_elites` | `292addf3060ccdb9e49966014b7e0bccfb9f2765` |
