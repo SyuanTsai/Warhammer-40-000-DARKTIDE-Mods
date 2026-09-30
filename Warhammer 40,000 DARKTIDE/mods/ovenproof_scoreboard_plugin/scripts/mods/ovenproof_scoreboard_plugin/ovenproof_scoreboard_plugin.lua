@@ -24,9 +24,11 @@ local math_round = math.round
 
 local tonumber = tonumber
 local tostring = tostring
+
 local string = string
 local string_len = string.len
 local string_sub = string.sub
+local string_format = string.format
 
 local table = table
 local table_array_contains = table.array_contains
@@ -36,7 +38,6 @@ local table_array_contains = table.array_contains
 -- #######
 -- Mod Locals
 -- #######
-mod.version = "1.13.8"
 local debug_messages_enabled
 local separate_companion_damage = {}
 local track_blitz_damage
@@ -111,7 +112,7 @@ local mod_expeditions_loot = mod.expeditions_loot
 -- 		to count ammo wasted
 local tracked_current_ammo_for_players = {}
 -- 		to see who's interacting
-local tracked_interaction_units_for_players = {}
+-- local tracked_interaction_units_for_players = {}
 --		to see who's disabled (and for when they get freed)
 local tracked_disabled_players_for_players = {}
 
@@ -190,32 +191,52 @@ mod.set_blank_rows = function (self, account_id)
 		mod:replace_key_to_edit("blank_"..i, account_id, "\u{200A}")
 	end
 	mod:replace_key_to_edit("highest_single_hit", account_id, "\u{200A}0\u{200A}")
+	mod:replace_key_to_edit("damage_done_taken_ratio", account_id, "\u{200A}0\u{200A}")
 end
 
 -- ############
--- Add Damage Taken/Done Ratio
--- this may not be possible since the original mod makes rows only increase or decrease in value
--- ############
---[[
-mod.add_damage_taken_done_ratio = function(self, account_id)
-
-end
-]]
-
--- ############
--- Replace entire value in scoreboard
+-- Replace entire value in scoreboard, but not text
 -- ############
 mod.replace_key_to_edit = function(self, row_name, account_id, value)
 	local row = scoreboard:get_scoreboard_row(row_name)
+	-- mod:info("Replace key to edit: "..row_name)
 	if row then
 		-- local validation = row.validation
 		if tonumber(value) then
+			-- mod:info(">> Value is number: "..value)
 			local value = value and math_max(0, value) or 0
+			-- mod:info(">> Updated value: "..tostring(value))
 			row.data = row.data or {}
 			row.data[account_id] = row.data[account_id] or {}			
 			row.data[account_id].value = value
 			row.data[account_id].score = value
 			row.data[account_id].text = nil
+		else
+			-- mod:info(">> Value is not number: "..tostring(value))
+			row.data = row.data or {}
+			row.data[account_id] = row.data[account_id] or {}
+			row.data[account_id].text = value
+			row.data[account_id].value = 0
+			row.data[account_id].score = 0
+		end
+	end
+end
+
+-- ############
+-- Replace entire value and text in scoreboard
+-- ############
+mod.replace_row_text_and_value = function(self, row_name, account_id, value)
+	local row = scoreboard:get_scoreboard_row(row_name)
+	if row then
+		-- local validation = row.validation
+		local value_as_number = tonumber(value)
+		if value_as_number then
+			local value = value and math_max(0, value) or 0
+			row.data = row.data or {}
+			row.data[account_id] = row.data[account_id] or {}			
+			row.data[account_id].value = value_as_number
+			row.data[account_id].score = value_as_number
+			row.data[account_id].text = value
 		else
 			row.data = row.data or {}
 			row.data[account_id] = row.data[account_id] or {}
@@ -264,6 +285,41 @@ local function setting_is_enabled_and_check_if_havoc_only(main_setting, is_playi
 	return mod:get(main_setting) and ((not only_in_havoc) or (only_in_havoc and is_playing_havoc))
 end
 
+-- ############
+-- Calculate Damage Done/Taken Ratio
+-- ############
+mod.calculate_damage_done_taken_ratio = function(self, account_id)
+	local new_total_damage_done, new_total_damage_taken
+
+	-- mod:info("Updating damage done/taken ratio")
+	local taken_row = scoreboard:get_scoreboard_row("total_damage_taken")
+	if taken_row and taken_row.data and taken_row.data[account_id] then
+		new_total_damage_taken = taken_row.data[account_id].value
+	end
+	local done_row = scoreboard:get_scoreboard_row("total_damage")
+	if done_row and done_row.data and done_row.data[account_id] then
+		new_total_damage_done = done_row.data[account_id].value
+	end
+
+	if new_total_damage_done and new_total_damage_taken then
+		-- mod:info("Confirmed: Updating damage done/taken ratio")
+		new_total_damage_done = tonumber(new_total_damage_done)
+		new_total_damage_taken = tonumber(new_total_damage_taken)
+		if new_total_damage_taken == 0 then
+			-- mod:info(">> no damage taken yet")
+			-- Private Char Map: Fire icon. U+E020
+			mod:replace_row_text_and_value("damage_done_taken_ratio", account_id, "")
+		else
+			local new_ratio = new_total_damage_done / new_total_damage_taken
+			-- Convert to string, then Format string to truncate decimal points
+			local new_ratio_string = string_format("%.3f", tostring(new_ratio))
+			-- mod:echo(">> New ratio: "..new_ratio_string.." - "..account_id)
+			mod:replace_row_text_and_value("damage_done_taken_ratio", account_id, new_ratio_string)
+		end
+	end
+
+end
+
 -- ########################
 -- Executions on Game States
 -- ########################
@@ -286,14 +342,20 @@ local function replace_registered_scoreboard_value(row_name, key_to_edit, functi
 
 	-- @backup158: ok anyone reading this is about to be horrified
 	-- like why tf am i doing this O(N) when I could use a key access for constant time
-	-- scoreboard only runs with arrays for itself and the plugins, and adds the plugins to itself
-	-- adding a key messes up the order sorting, so my rows ended up at the bottom every time
-	for i = 1, #(scoreboard.registered_scoreboard_rows) do
-		local row = scoreboard.registered_scoreboard_rows[i]
-		if row.name == row_name then
-			function_to_use(row, key_to_edit, other_parameters)
-		end
-	end
+	-- 	scoreboard only runs with arrays for itself and the plugins, and adds the plugins to itself
+	-- 	adding a key messes up the order sorting, so my rows ended up at the bottom every time
+	-- I considered making a local lookup cache, where I'd map name-index pairs
+	--  Tests show that going scoreboard.registered_scoreboard_rows[3] would be nil
+	-- for i = 1, #(scoreboard.registered_scoreboard_rows) do
+	-- 	local row = scoreboard.registered_scoreboard_rows[i]
+	-- 	if row.name == row_name then
+	-- 		function_to_use(row, key_to_edit, other_parameters)
+	-- 	end
+	-- end
+
+	-- Get_scoreboard_row already runs this search natively
+	local row = scoreboard:get_scoreboard_row(row_name)
+	function_to_use(row, key_to_edit, other_parameters)
 end
 
 local replace_row_with_value = function(row, key_to_edit, value)
@@ -419,6 +481,17 @@ local function update_all_scoreboard_row_visibilities()
 	end
 
 	-- ------------
+	-- Fun Stuff
+	-- ------------
+	-- Hiding damage done/taken ratio
+	if mod:get("option_hide_damage_done_taken_ratio") then
+		-- this is the default, but I need this here to work without a restart/reload
+		change_scoreboard_row_visibility("damage_done_taken_ratio", false)
+	else
+		change_scoreboard_row_visibility("damage_done_taken_ratio", true)
+	end
+
+	-- ------------
 	-- Expeditions Pickup Classification
 	-- ------------
 	local currency_only_in_expeditions = mod:get("exploration_show_currency_only_in_expeditions")
@@ -496,7 +569,6 @@ function mod.on_all_mods_loaded()
 	end
 
 	set_locals_for_settings()
-	mod:info("Version "..mod.version.." loaded uwu nya :3")
 
 	-- ################################################
 	-- HOOKS
@@ -513,7 +585,7 @@ function mod.on_all_mods_loaded()
 	-- 	Runs on opening and every tick while it's open
 	-- ######
 	mod:hook(CLASS.HudElementTacticalOverlay, "_draw_widgets", function(func, self, dt, t, input_service, ui_renderer, render_settings, ...)
-		mod:add_damage_taken_done_ratio()
+		mod:add_damage_done_taken_ratio()
 		--mod:echo("IF YOU SEE THIS YELL AT ME: tactical overlay widgets")
 		func(self, dt, t, input_service, ui_renderer, render_settings, ...)
 		-- base mod hooks onto this first, but executes after the original function
@@ -522,7 +594,7 @@ function mod.on_all_mods_loaded()
 	-- Before game end
 	-- ######
 	mod:hook(CLASS.EndView, "on_enter", function(func, self)
-		mod:add_damage_taken_done_ratio()
+		mod:add_damage_done_taken_ratio()
 		--mod:echo("IF YOU SEE THIS YELL AT ME: entering end view")
 		func(self)
 		-- base mod hooks onto this first, but executes after the original function
@@ -533,8 +605,8 @@ function mod.on_all_mods_loaded()
 	-- Interactions Started?
 	-- ############
 	mod:hook(CLASS.InteracteeExtension, "started", function(func, self, interactor_unit, ...)
-
-		tracked_interaction_units_for_players[self._unit] = interactor_unit
+		-- @Backup158: Wait I never see this get used?
+		-- tracked_interaction_units_for_players[self._unit] = interactor_unit
 
 		-- Ammunition
 		local unit_data_extension = ScriptUnit.extension(interactor_unit, "unit_data_system")
@@ -718,7 +790,7 @@ function mod.on_all_mods_loaded()
 	--	Player State
 	-- ############
 	mod:hook(CLASS.PlayerHuskHealthExtension, "fixed_update", function(func, self, unit, dt, t, ...)
-		local Breed = scoreboard:original_require("scripts/utilities/breed")
+		-- local Breed = scoreboard:original_require("scripts/utilities/breed")
 		if unit then
 			local player = Managers.player:player_by_unit(unit)
 			if player then		
@@ -726,13 +798,14 @@ function mod.on_all_mods_loaded()
 				local player_state = self._character_state_read_component.state_name
 				if self._damage and self._damage > 0 then
 					scoreboard:update_stat("total_damage_taken", account_id, self._damage)
+					mod:calculate_damage_done_taken_ratio(account_id)
 				end
 				
 				local unit_data_extension = ScriptUnit.extension(unit, "unit_data_system")
 				local disabled_character_state_component = unit_data_extension:read_component("disabled_character_state")
 				if disabled_character_state_component then
 					local is_disabled = disabled_character_state_component.is_disabled
-					local is_pounced = is_disabled and disabled_character_state_component.disabling_type == "pounced"
+					-- local is_pounced = is_disabled and disabled_character_state_component.disabling_type == "pounced"
 					local disabling_unit = disabled_character_state_component.disabling_unit
 					
 					if is_disabled and disabling_unit then
@@ -756,10 +829,13 @@ function mod.on_all_mods_loaded()
 					end
 					self._player_state_tracker[account_id].state = player_state
 					if mod_states_disabled[player_state] then
+						-- mod:echo("uwu Typical disabled state: "..player_state.." caught account: "..account_id.." ("..tostring(player:name())..")")
 						scoreboard:update_stat("total_times_disabled", account_id, 1)
 					-- optionally tracks these disabled states, if enabled
 					elseif mod_optional_states_disabled[player_state] then
+						-- mod:echo("uwu Optional state: "..player_state.." caught account: "..account_id.." ("..tostring(player:name())..")")
 						if mod:get("track_"..player_state) then
+							-- mod:echo(">> Tracking that optional state: "..player_state)
 							scoreboard:update_stat("total_times_disabled", account_id, 1)
 						end
 					elseif player_state == "knocked_down" then
@@ -1100,21 +1176,23 @@ function mod.on_all_mods_loaded()
 	--	Attack reports
 	-- ############
 	mod:hook(CLASS.AttackReportManager, "add_attack_result", function(func, self, damage_profile, attacked_unit, attacking_unit, attack_direction, hit_world_position, hit_weakspot, damage, attack_result, attack_type, damage_efficiency, is_critical_strike, ...)
-		local Breed = scoreboard:original_require("scripts/utilities/breed")
 		local player = attacking_unit and player_from_unit(attacking_unit)
-		local target_is_player = attacked_unit and player_from_unit(attacked_unit)
-		local actual_damage
-		
-		-- only add damage if done by a player. could there be a check for companion that can be associated with the player?
+		-- Only check damage if done by a player. @Backup158: Could there be a check for companion that can be associated with the player?
 		if player then
-			local account_id = player:account_id() or player:name()
+			local target_is_player = attacked_unit and player_from_unit(attacked_unit)
 			
 			if damage > 0 then			
+				local Breed = scoreboard:original_require("scripts/utilities/breed")
+				local actual_damage
+				local account_id = player:account_id() or player:name()
+
 				local unit_data_extension = ScriptUnit.has_extension(attacked_unit, "unit_data_system")
 				local breed_or_nil = unit_data_extension and unit_data_extension:breed()
 				local target_is_minion = breed_or_nil and Breed.is_minion(breed_or_nil)
 
-				-- only when hitting an npc (only enemies can be damaged by you)
+				-- Updates stats depending on what the target type
+				-- 	Minion is effectively enemies, since friendly minions can't get damaged by you
+				--  Player is player
 				if target_is_minion then
 					local unit_health_extension = ScriptUnit.has_extension(attacked_unit, "health_system")
 					local damage_taken = unit_health_extension and unit_health_extension:damage_taken()
@@ -1143,6 +1221,7 @@ function mod.on_all_mods_loaded()
 					end
 					
 					scoreboard:update_stat("total_damage", account_id, actual_damage)
+					mod:calculate_damage_done_taken_ratio(account_id)
 					
 					-- ------------------------
 					-- Updating Fun Stuff
@@ -1154,7 +1233,8 @@ function mod.on_all_mods_loaded()
 
 					if actual_damage > self._attack_report_tracker[account_id].highest_single_hit then
 						self._attack_report_tracker[account_id].highest_single_hit = actual_damage
-						mod:replace_row_text("highest_single_hit", account_id, math_floor(damage))
+						-- @Backup158: actual_damage is the same as damage
+						mod:replace_row_text_and_value("highest_single_hit", account_id, math_floor(damage))
 					end
 					
 					if actual_damage == max_health then
@@ -1461,6 +1541,7 @@ function mod.on_all_mods_loaded()
 				end
 			end
 			
+			-- Friendly fire typically has 0 damage done
 			if attack_result == "friendly_fire" then
 				-- Note: I had one singular instance where I crashed from trying to index target_is_player when it was nil,
 				-- so I added a check for that, even though it only happened once. Better safe than sorry, eh? -Vatinas
@@ -1479,15 +1560,21 @@ end
 -- 	Entering a match
 -- ############
 function mod.on_game_state_changed(status, state_name)
-	-- think this means "entering gameplay" from "hub"
+	-- @Backup158: think this means "entering gameplay" from "hub"
 	if state_name == "GameplayStateRun" and status == "enter" and Managers.state.mission:mission().name ~= "hub_ship" then
 		in_match = true
+
+		-- Check if match is Havoc
+		-- Needed to set the ammunition pickup modifier
+		-- 1. In a normal match, it is 1
+		-- 2. In a Havoc match...
+		--		When there's an actual modifier, it's an actual value [0.85, 0.4]
+		-- 		At lower ranks, the modifier is 1 but it's not actually written as the modifier value
 		local havoc_extension = Managers.state.game_mode:game_mode():extension("havoc")
-		-- is_playing_havoc = Managers.state.difficulty:get_parsed_havoc_data()
+		-- is_playing_havoc = Managers.state.difficulty:get_parsed_havoc_data() -- No longer works
 		if havoc_extension then
 			is_playing_havoc = true
-			-- adding fallback 
-			-- havoc modifier goes from 0.85-0.4, but lower ranks just use 1
+			-- Fallback for low ranks
 			mod.ammunition_pickup_modifier = havoc_extension:get_modifier_value("ammo_pickup_modifier") or 1
 			mod:info("Havoc ammo modifier: "..tostring(mod.ammunition_pickup_modifier))
 		else
@@ -1507,6 +1594,7 @@ function mod.on_game_state_changed(status, state_name)
 	else
 		in_match = false
 		is_playing_havoc = false
+		is_playing_expeditions = false
 	end
 
 	update_all_scoreboard_row_visibilities()
