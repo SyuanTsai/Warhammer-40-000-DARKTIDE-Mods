@@ -151,7 +151,7 @@ return {
 	},
 	flamer_vfx_default = {
 		en = "Default",
-		["zh-cn"] = "默认",
+		["zh-cn"] = "默认（不要选会崩溃）",
 		["zh-tw"] = "預設",
 	},
 	grenade_vfx_default = {
@@ -189,26 +189,7 @@ return {
 		["zh-cn"] = "震荡杖特效？",
 		["zh-tw"] = "震盪杖特效？",
 	},
-	rotten_circle_red = {
-		en = "Red",
-		["zh-cn"] = "红",
-		["zh-tw"] = "紅",
-	},
-	rotten_circle_green = {
-		en = "Green",
-		["zh-cn"] = "绿",
-		["zh-tw"] = "綠",
-	},
-	rotten_circle_blue = {
-		en = "Blue",
-		["zh-cn"] = "蓝",
-		["zh-tw"] = "藍",
-	},
-	rotten_circle_alpha = {
-		en = "Opacity",
-		["zh-cn"] = "透明度",
-		["zh-tw"] = "不透明度",
-	},
+
 	blight_indicators_group = {
 		en = "Blight Spreads Indicators",
 		["zh-cn"] = "瘟疫扩散指示器",
@@ -219,26 +200,7 @@ return {
 		["zh-cn"] = "瘟疫扩散圆形范围指示器",
 		["zh-tw"] = "瘟疫散播範圍顯示",
 	},
-	blight_circle_red = {
-		en = "Red",
-		["zh-cn"] = "红",
-		["zh-tw"] = "紅",
-	},
-	blight_circle_green = {
-		en = "Green",
-		["zh-cn"] = "绿",
-		["zh-tw"] = "綠",
-	},
-	blight_circle_blue = {
-		en = "Blue",
-		["zh-cn"] = "蓝",
-		["zh-tw"] = "藍",
-	},
-	blight_circle_alpha = {
-		en = "Opacity",
-		["zh-cn"] = "透明度",
-		["zh-tw"] = "不透明度",
-	},	
+
 	chemnade_indicators_group = {
 		en = "Chem Grenade Indicators",
 		["zh-cn"] = "化学手雷指示器",
@@ -249,26 +211,7 @@ return {
 		["zh-cn"] = "化学手雷圆形范围指示器",
 		["zh-tw"] = "化學手雷範圍顯示",
 	},
-	chemnade_circle_red = {
-		en = "Red",
-		["zh-cn"] = "红",
-		["zh-tw"] = "紅",
-	},
-	chemnade_circle_green = {
-		en = "Green",
-		["zh-cn"] = "绿",
-		["zh-tw"] = "綠",
-	},
-	chemnade_circle_blue = {
-		en = "Blue",
-		["zh-cn"] = "蓝",
-		["zh-tw"] = "藍",
-	},
-	chemnade_circle_alpha = {
-		en = "Opacity",
-		["zh-cn"] = "透明度",
-		["zh-tw"] = "不透明度",
-	},
+
 	fire_indicators_group = {
 		en = "Zealot Immolation Grenade Indicators",
 		["zh-cn"] = "狂信火雷指示器",
@@ -279,26 +222,7 @@ return {
 		["zh-cn"] = "狂信火雷圆形范围指示器",
 		["zh-tw"] = "狂信徒獻祭手雷範圍顯示",
 	},
-	fire_circle_red = {
-		en = "Red",
-		["zh-cn"] = "红",
-		["zh-tw"] = "紅",
-	},
-	fire_circle_green = {
-		en = "Green",
-		["zh-cn"] = "绿",
-		["zh-tw"] = "綠",
-	},
-	fire_circle_blue = {
-		en = "Blue",
-		["zh-cn"] = "蓝",
-		["zh-tw"] = "藍",
-	},
-	fire_circle_alpha = {
-		en = "Opacity",
-		["zh-cn"] = "透明度",
-		["zh-tw"] = "不透明度",
-	},
+
 	gasnade_indicators_group = {
 		en = "Tox Bomber Grenade Indicators",
 		["zh-cn"] = "毒爆弹指示器",
@@ -316,7 +240,7 @@ return {
 	},
 	havoc_toggle_group = {
 		en = "Havoc Specific Toggles - {#color(255, 35, 5)}RESTART after changing these.",
-		["zh-cn"] = "浩劫特定切换 - {#color(255, 35, 5)}重启。",
+		["zh-cn"] = "浩劫特定切换 - {#color(255, 35, 5)}修改后需重启。",
 		["zh-tw"] = "浩劫專用開關 - {#color(255, 35, 5)}變更後請重啟。",
 	},
 	havoc_tt = {
@@ -359,8 +283,8 @@ return {
 		["zh-cn"] = "禁用暴走特效。需要重启。",
 		["zh-tw"] = "停用憤怒敵人特效*",
 	},
-	curroptor_goo = {
-		en = "Curroptor Goo",
+	corruptor_goo = {
+		en = "Corruptor Goo",
 		["zh-cn"] = "腐化粘液",
 		["zh-tw"] = "腐蝕者黏液",
 	},	
@@ -499,11 +423,6 @@ return {
 		["zh-cn"] = "禁用狂暴状态屏幕特效",
 		["zh-tw"] = "停用巢都敗類暴走螢幕特效",
 	},
-	galvanic_vfx = {
-		en = "Disable Galvanic Rifle Muzzle VFX",
-		["zh-cn"] = "禁用流电步枪开火特效",
-		["zh-tw"] = "停用電能步槍開火特效",
-	},
 	lasgun_vfx = {
 		en = "Disable Lasgun Muzzle VFX",
 		["zh-cn"] = "禁用激光枪特效",
@@ -529,7 +448,7 @@ return {
 		["zh-cn"] = "移除电弧闪电与黑烟特效",
 		["zh-tw"] = "移除閃電與黑煙特效",
 	},
-	gal_vfx = {
+	galv_vfx = {
 		en = "Disable Galvanic Rifle Muzzle Flash",
 		["zh-cn"] = "禁用流电步枪开火特效",
 		["zh-tw"] = "停用電能步槍開火特效",
@@ -556,7 +475,7 @@ return {
 	},
 	simple_hav_tt = {
 		en = "Removes particle effects from Final Toll and Encroaching Garden while maintaining color. Requires restart.",
-		["zh-cn"] = "在保持颜色的同时移除最后的钟声和花园蔓生的粒子特效。需要重启。",
+		["zh-cn"] = "在保持颜色的同时移除Final Toll和Encroaching Garden的粒子特效。需要重启。",
 		["zh-tw"] = "移除背水一戰和蔓生花園的粒子特效，同時保留顏色。需要重啟。",
 	},
 }

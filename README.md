@@ -675,10 +675,10 @@
 
 ### [VFX Swapper](https://www.nexusmods.com/warhammer40kdarktide/mods/678)
     修改特效的顯示方式
-- MOD 網站最後更新日期：Last updated 19 March 2026, 10:53PM
-- MOD 版本：1.1.1
-- MOD 檔案名稱：Quick fix for volumetric crash on load-in-678-1-1-1-1773931987
-- 手動維護最後下載日期：2026-05-17
+- MOD 網站最後更新日期：Last updated 30 September 2026, 4:52AM
+- MOD 版本：1.3
+- MOD 檔案名稱：Vfx Swapper 678 1.3 2026-09-29T20-52Z RZfXOZuui
+- 手動維護最後下載日期：2026-09-30
 
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
     記分板
