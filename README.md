@@ -692,10 +692,10 @@
 
 ### [BrokerAutoStim](https://www.nexusmods.com/warhammer40kdarktide/mods/655)
     顯示隊伍擊殺資訊
-- MOD 網站最後更新日期：Last updated 24 August 2026, 6:28AM
-- MOD 版本：2.11
-- MOD 檔案名稱：BrokerAutoStim 655 2.11 2026-08-23T22-28Z UszQnsm1k.zip
-- 手動維護最後下載日期：2026-08-30
+- MOD 網站最後更新日期：Last updated 30 September 2026, 12:10AM
+- MOD 版本：3.0
+- MOD 檔案名稱：BrokerAutoStim 655 3.0 2026-09-29T16-10Z ke28Welop.zip
+- 手動維護最後下載日期：2026-09-30
 - Nexus MOD ID: 655
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/655
 - Nexus page version: 2.11
