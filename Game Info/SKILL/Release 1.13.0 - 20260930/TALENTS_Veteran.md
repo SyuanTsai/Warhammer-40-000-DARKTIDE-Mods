@@ -1,22 +1,24 @@
 # 老兵天賦：Release 1.13.0
 
-來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。來源日期、公開一致性檢查及限制見 [README](README.md)。中文採既有翻譯表；名稱 key 對應尚無公開繁體語系字串佐證時，列為暫定，並非官方名稱宣告。
+本頁整理五個技能的效果、觸發條件與實際算例。名稱沿用既有翻譯表；名稱對應及遊戲內表現的驗證限制，集中記錄於[來源說明](README.md)。
 
 <a id="talent-index"></a>
 
-## 當前技能樹與完成索引
+## 技能目錄
 
-職業明確選用 `veteran_tree` 及 `ArchetypeTalents.veteran`；基礎天賦另在 `base_talents`。不能將所有 veteran Buff 視為當前可選技能。[職業選用與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)。tree 本身 `version=34`、30 點；這個內部 version 不等於遊戲版本。[tree header](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。
+| 分類 | 技能 | 主要效果 |
+|---|---|---|
+| 閃擊 | [炸藥儲備(Demolition Stockpile)](#veteran_replenish_grenades) | 定期補回手雷 |
+| 光環 | 尚未分析 | — |
+| 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
+| 鑰石 | 尚未分析 | — |
+| 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
+| 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
+| 技能 | [優越情節(Superiority Complex)](#veteran_increase_damage_vs_elites) | 增加對精英敵人的傷害 |
 
-依使用者指示，本階段只完成以下五個樣本，已暫停後續分析，等待調整描述規則；此索引不是完整技能樹覆蓋清單。
+[技術識別碼與來源文件索引](TALENTS%20Veteran/README.md)
 
-| 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
-|---|---|---|---|
-| 閃擊（升級） | 炸藥儲備（名稱對應暫定） / `veteran_replenish_grenades` | `node_8acdddd9-366b-4601-bf16-13574eb1cb24` | 完成（靜態分析） |
-| 技能 | 殺戮地帶（名稱對應暫定） / `veteran_ranged_power_out_of_melee` | `node_b0c4f49c-fd47-4b1c-9279-82e12dc3ac7d` | 完成（靜態分析） |
-| 技能 | 振奮擊倒（名稱對應暫定） / `veteran_replenish_toughness_on_weakspot_kill` | `node_f0744989-1f87-4da4-aa97-30a821197ed9` | 完成（靜態分析） |
-| 能力（升級） | 掩護射擊（名稱對應暫定） / `veteran_combat_ability_extra_charge` | `node_6469a1ec-589f-49a3-a53e-3676c3181dad` | 完成（靜態分析） |
-| 技能 | 優越情節（名稱對應暫定） / `veteran_increase_damage_vs_elites` | `node_06272211-2d9a-47c7-bf84-8e7ea1eb8a01` | 完成（靜態分析） |
+---
 
 ## 閃擊
 
