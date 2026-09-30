@@ -17,3 +17,10 @@
 **原始碼確認／程式推導：起算與例外**。滲透的施放動作設定為動作開始時消耗成本；共用動作只在存在暫停冷卻設定時暫停恢復，而此能力的定義沒有該設定。因此正常施放產生資源缺額後，共用更新即可恢復，不需要等隱身效果結束。若其他系統設定了恢復暫停或調整恢復屬性，則依共用更新規則處理。提高充能上限時，共用更新可能補給新增容量，但有重生跳過旗標，不能宣稱任何重生或重配裝時都必定立即給滿兩次。[施放開始扣除](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/ability_templates/veteran_stealth_combat_ability.lua#L90-L101)、[共用動作扣除及暫停條件](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_ability_base.lua#L25-L43)、[容量變動與重生例外](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L788-L803)、[恢復暫停檢查](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L826-L860)。
 
 **顯示與待確認**：顯示參數也從同一模板取得 +1 次與 +33%，這兩個值與執行屬性一致；尚未核實實際繁體語系字串。精確可用時刻受固定更新、小數精度及其他效果影響；53.2／106.4 秒是明列假設下的資源模型推導，不是遊戲內碼表實測。滲透的完整隱身／仇恨／傷害效果不在此升級節點的完成範圍。
+
+## 圖示來源
+
+- 圖示取自 [Games Lantern 編輯器](https://darktide.gameslantern.com/build-editor)的公開資料，取得日期為 2026-10-01；[原始圖片](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/ability_modifier/veteran_combat_ability_extra_charge.webp)。
+- 天賦與節點對應：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_combat_ability_extra_charge:node_6469a1ec-589f-49a3-a53e-3676c3181dad`；與[固定版本節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1333-L1355)核對。來源原始碼提供圖示路徑，但不含圖片檔。
+- 原始圖片為 288 × 288 WebP，5758 bytes；SHA-256：`53175748e3bd3e442f5a1d8a8af2958f1b718dfb95df8707f67b9d68adfb6edd`。
+- [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6)記錄五張圖示；目前以來源網址顯示，尚未建立 GitHub 圖片附件。圖片僅用於視覺呈現，不作技能機制證據。
