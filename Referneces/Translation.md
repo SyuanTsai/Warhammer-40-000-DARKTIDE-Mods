@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_increase_damage_vs_elites` / `veteran_increase_damage_vs_elites` - 優越情節
+  - 狀態：暫定 key 對應，待使用者確認；沿用既有 Superiority Complex 譯名，不宣稱官方名稱。
+  - 來源：[Release 1.13.0 天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L893-L916)；來源僅證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_combat_ability_extra_charge` / `veteran_combat_ability_extra_charge` - 掩護射擊
   - 狀態：暫定 key 對應，待使用者確認；沿用既有 Overwatch 譯名，不宣稱官方名稱。
   - 來源：[Release 1.13.0 天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L606-L644)；來源僅證明識別鍵與天賦關係。
