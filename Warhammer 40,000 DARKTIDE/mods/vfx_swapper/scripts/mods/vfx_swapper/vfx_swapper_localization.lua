@@ -1,4 +1,4 @@
-return {
+local localizations = {
 	mod_name = {
 		en = "VFX Swapper",
 		["zh-cn"] = "视觉特效替换器",
@@ -49,6 +49,11 @@ return {
 		["zh-cn"] = "替换狂信火雷特效（火焰）",
 		["zh-tw"] = "替換狂信徒獻祭手雷特效（火焰）",
 	},
+	chem_grenade_vfx = {
+		en = "Disable Chem Grenade VFX (Explosion)",
+		["zh-cn"] = "禁用兴奋剂手雷初始爆炸特效",
+		["zh-tw"] = "停用化學手榴彈爆炸特效",
+	},
 	replace_rotten_armor = {
 		en = "Replace Rotten Armor's Lingering Gas (after kill)",
 		["zh-cn"] = "替换腐化装甲残留毒气（击杀后）特效",
@@ -68,6 +73,21 @@ return {
 		en = "Default",
 		["zh-cn"] = "默认",
 		["zh-tw"] = "預設",
+	},
+	replace_smoke_grenade_vfx = {
+		en = "Replace Smoke Grenade",
+		["zh-cn"] = "替换烟雾弹特效",
+		["zh-tw"] = "替換煙霧手雷特效",
+	},
+	smoke_grenade_vfx_default = {
+		en = "Default",
+		["zh-cn"] = "默认",
+		["zh-tw"] = "預設",
+	},
+	smoke_grenade_tt = {
+		en = "More will be added as good candidates are found.",
+		["zh-cn"] = "随着更多合适的特效被发现，将会添加更多选项。",
+		["zh-tw"] = "找到合適的特效後，會加入更多選項。",
 	},
 	zealot_grenade = {
 		en = "Zealot Grenade",
@@ -144,10 +164,35 @@ return {
 		["zh-cn"] = "电磁雷",
 		["zh-tw"] = "電磁雷",
 	},
+	empty = {
+		en = "No VFX (use with Danger Zone mod)",
+		["zh-cn"] = "无特效（配合危险区域圆圈使用）",
+		["zh-tw"] = "無特效（搭配 Danger Zone MOD 使用）",
+	},
+	SMOKE = {
+		en = "Short Gray Smoke",
+		["zh-cn"] = "短灰色烟雾",
+		["zh-tw"] = "低矮的灰色煙霧",
+	},
 	rotten_vfx_default = {
 		en = "Default",
 		["zh-cn"] = "默认",
 		["zh-tw"] = "預設",
+	},
+	flamer_swap = {
+		en = "Yeatloaf's Blue Zealot Flamer",
+		["zh-cn"] = "Yeatloaf的蓝色狂信火焰效果",
+		["zh-tw"] = "Yeatloaf 的藍色淨化噴火器特效（狂信徒）",
+	},
+	kill_flamer_vfx = {
+		en = "Remove Flamer/Flame Staff Effects",
+		["zh-cn"] = "移除燃烧瓶/火焰杖特效",
+		["zh-tw"] = "移除淨化噴火器與烈焰力場法杖特效",
+	},
+	kill_flamer_tt = {
+		en = "Only applies to the streaming fire effects (not enemies being on fire)",
+		["zh-cn"] = "仅对持续火焰特效生效（不包括着火的敌人）",
+		["zh-tw"] = "僅影響持續噴出的火焰特效，不影響敵人身上的燃燒效果。",
 	},
 	flamer_vfx_default = {
 		en = "Default",
@@ -359,9 +404,14 @@ return {
 		["zh-tw"] = "停用噴泉/珊瑚噴出的毒氣。",
 	},
 	vfx_limiter_group = {
-		en = "OG VFX Limiter Options",
-		["zh-cn"] = "原版特效限制器选项",
-		["zh-tw"] = "原版特效限制器選項",
+		en = "Misc. Effect Toggles",
+		["zh-cn"] = "杂项特效切换",
+		["zh-tw"] = "其他特效開關",
+	},
+	forcesword_vfx = {
+		en = "Disable Force Sword VFX",
+		["zh-cn"] = "禁用原力剑特效",
+		["zh-tw"] = "停用烈焰力場劍特效",
 	},
 	frag_grenade_vfx = {
 		en = "Disable Shredder Frag/Rumbler/Arbites Grenades VFX",
@@ -413,6 +463,11 @@ return {
 		["zh-cn"] = "禁用邪恶仪式特效",
 		["zh-tw"] = "停用魔縛儀式特效",
 	},
+	ritual_vfx_tt = {
+		en = "Disables 2 of the ritual effects. Specifically the ones that get bugged and become attached to players. Note that this does make Rituals harder to see at a distance.",
+		["zh-cn"] = "禁用两个仪式特效。特别是那些会出现bug并附着在玩家身上的特效。请注意，这确实会使远处的仪式更难以看清。",
+		["zh-tw"] = "停用兩種儀式特效，也就是發生異常後會附著在玩家身上的特效。這會讓遠處的儀式更難看清。",
+	},
 	scum_stimm_screen = {
 		en = "Disable Scum's Stimm Smoke screen effect",
 		["zh-cn"] = "禁用兴奋剂烟雾屏幕特效",
@@ -453,10 +508,35 @@ return {
 		["zh-cn"] = "禁用流电步枪开火特效",
 		["zh-tw"] = "停用電能步槍開火特效",
 	},
+	arc_maul_vfx = {
+		en = "Disable Arc Maul Special Activation VFX",
+		["zh-cn"] = "禁用电弧钉锤特效",
+		["zh-tw"] = "停用電弧錘特殊啟動特效",
+	},
+	arc_maul_tt = {
+		en = "The visual effects on the weapon itself when it is activated.",
+		["zh-cn"] = "武器激活时的特效",
+		["zh-tw"] = "武器啟動時，武器本身顯示的特效。",
+	},
+	arc_grenade_vfx = {
+		en = "Disable Arc Grenade Explosion VFX",
+		["zh-cn"] = "禁用电弧手雷爆炸特效",
+		["zh-tw"] = "停用電弧手榴彈爆炸特效",
+	},
+	replace_shock_mine_vfx = {
+		en = "Swap Shock Mine VFX with basic chain lightning VFX",
+		["zh-cn"] = "替换电荷地雷特效为链闪电特效",
+		["zh-tw"] = "將電能地雷特效替換為基本連鎖閃電特效",
+	},
 	poxwalker_vfx = {
-		en = "Disable minion death effects",
-		["zh-cn"] = "禁用杂兵死亡特效",
-		["zh-tw"] = "停用雜兵死亡特效",
+		en = "Disable basic minion death effects",
+		["zh-tw"] = "停用一般雜兵死亡特效",
+		["zh-cn"] = "禁用杂兵死亡特效"
+	},
+	poxwalker_vfx_tt = {
+		en = "Effects like bloodballs, exploding guts, and other particle heavy effects - gibbing is untouched",
+		["zh-tw"] = "停用血球、內臟炸裂等大量粒子特效；肢解效果不受影響。",
+		["zh-cn"] = "特效如血球、内脏爆裂等粒子效果繁多 - 肢解不受影响"
 	},
 	disable_bon_death = {
 		en = "Disable Beast of Nurgle death explosion",
@@ -478,4 +558,66 @@ return {
 		["zh-cn"] = "在保持颜色的同时移除Final Toll和Encroaching Garden的粒子特效。需要重启。",
 		["zh-tw"] = "移除背水一戰和蔓生花園的粒子特效，同時保留顏色。需要重啟。",
 	},
+	--new
+	autogun_vfx = {
+		en = "Disable Autogun Muzzle VFX",
+		["zh-cn"] = "禁用自动步枪开火特效",
+		["zh-tw"] = "停用自動槍槍口特效",
+	},
+	autogun_tt = {
+		en = "Disables muzzle flash effects for 1st and 3rd person (allies), for infantry, braced, and vigilant autoguns",
+		["zh-cn"] = "禁用第一人称和第三人称（队友）的开火特效，针对三种自动枪。",
+		["zh-tw"] = "停用步兵、槍托及機動自動槍的第一人稱與隊友第三人稱槍口火光特效。",
+	},
+	plasma_vfx = {
+		en = "Disable Plasma Gun Impact/Explosion",
+		["zh-cn"] = "禁用等离子枪命中/爆炸特效",
+		["zh-tw"] = "停用電漿槍命中與爆炸特效",
+	},
+	plasma_muzzle = {
+		en = "Disable Plasma Muzzle VFX",
+		["zh-cn"] = "禁用等离子枪开火特效",
+		["zh-tw"] = "停用電漿槍槍口特效",
+	},
+	plasma_beam = {
+		en = "Disable Plasma beam's lingering effect",
+		["zh-cn"] = "禁用等离子枪激光束残留特效",
+		["zh-tw"] = "停用電漿槍光束殘留特效",
+	},
+	impact_fx = {
+		en = "Disable Player Impact VFX",
+		["zh-cn"] = "禁用玩家命中特效",
+		["zh-tw"] = "停用自身攻擊的命中特效",
+	},
+	network_impact = {
+		en = "Disable Teammate Impact VFX",
+		["zh-cn"] = "禁用队友命中特效",
+		["zh-tw"] = "停用隊友攻擊的命中特效",
+	},
 }
+
+local color_prefixes = {
+	"rotten_circle",
+	"blight_circle",
+	"chemnade_circle",
+	"fire_circle",
+	"gas_grenade_circle",
+}
+
+for _, prefix in ipairs(color_prefixes) do
+	localizations[prefix .. "_red"] = { en = "Red", ["zh-cn"] = "红" }
+	localizations[prefix .. "_green"] = { en = "Green", ["zh-cn"] = "绿" }
+	localizations[prefix .. "_blue"] = { en = "Blue", ["zh-cn"] = "蓝" }
+	localizations[prefix .. "_alpha"] = { en = "Opacity", ["zh-cn"] = "透明度" }
+end
+
+for _, prefix in ipairs({ "rotten_circle", "blight_circle", "chemnade_circle", "fire_circle", "gas_grenade_circle" }) do
+	localizations[prefix .. "_red"]["zh-tw"] = "紅"
+	localizations[prefix .. "_green"]["zh-tw"] = "綠"
+	localizations[prefix .. "_blue"]["zh-tw"] = "藍"
+	localizations[prefix .. "_alpha"]["zh-tw"] = "不透明度"
+end
+
+return localizations
+	
+
