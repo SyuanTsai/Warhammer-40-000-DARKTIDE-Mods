@@ -23,3 +23,10 @@
 
 
 **案例與待確認**：見 [POC](../POC.md)。在 t=100 首次觀察到破片手雷缺額，t=160 不補給，第一個 t>160 的更新才補給；這是判斷式推導，非精確遊戲排程保證。運行中更換手雷能力時，增益效果是否重建尚未追完；本文件只保證固定配裝存續期間內的種類選擇。初始化函式 `start_func` 直接呼叫能力系統；缺少能力系統的異常初始化是否可實際發生不作結論。未進行遊戲內驗證，未核實官方繁體名稱。
+
+## 圖示來源
+
+- 圖示取自 [Games Lantern 編輯器](https://darktide.gameslantern.com/build-editor)的公開資料，取得日期為 2026-10-01；[原始圖片](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/tactical_modifier/veteran_replenish_grenades.webp)。
+- 天賦與節點對應：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_replenish_grenades:node_8acdddd9-366b-4601-bf16-13574eb1cb24`；與[固定版本節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1111-L1141)核對。來源原始碼提供圖示路徑，但不含圖片檔。
+- 原始圖片為 288 × 288 WebP，3502 bytes；SHA-256：`eb6b53cc5b461f6e26a97868f0b69c3f7b7317cf1bd4841b94ee3ea33c911a62`。
+- [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6)記錄五張圖示；目前以來源網址顯示，尚未建立 GitHub 圖片附件。圖片僅用於視覺呈現，不作技能機制證據。
