@@ -13,6 +13,9 @@ local _disable_corrupted_enemies_color = false
 local _disable_rotten_armor_impact = false
 local _disable_bon_death = false
 local _disable_burster_death = false
+local _disable_network_impact = false
+local _disable_impact_fx = false
+local _replace_shock_mine_vfx = false
 
 local BLOCKED_VFX = {
     ["content/fx/particles/impacts/flesh/nurgle_corruption_death"] = true,
@@ -44,6 +47,9 @@ local function refresh_additionalvfx_cache()
     _disable_rotten_armor_impact = mod:get("disable_rotten_armor_impact")
 	_disable_bon_death = mod:get("disable_bon_death")
 	_disable_burster_death = mod:get("disable_burster_death")
+    _disable_impact_fx = mod:get("impact_fx")
+	_disable_network_impact = mod:get("network_impact")
+	_replace_shock_mine_vfx = mod:get("replace_shock_mine_vfx")
 
 	BLOCKED_VFX_RPC["primer_explosion"] = _disable_toxin_death_vfx
 	BLOCKED_VFX_RPC["primer_gas"] = _disable_toxin_death_vfx
@@ -58,22 +64,20 @@ refresh_additionalvfx_cache()
 -- Block Toxin Death Explosion VFX (From Chem-grenade and Explosive Needler)
 -- ============================================================================
 
-mod:hook("WeaponSystem", "rpc_trigger_husk_explosion", function(func, self, channel_id, explosion_template_id, position, rotation, radius_variable_value, weapon_charge_level, optional_attacking_owner_unit_id)
+mod:hook("WeaponSystem", "rpc_trigger_husk_explosion", function(func, self, channel_id, explosion_template_id, ...)
     local explosion_template_name = NetworkLookup.explosion_templates[explosion_template_id]
 	if BLOCKED_VFX_RPC[explosion_template_name] then
         return
     end
-    return func(self, channel_id, explosion_template_id, position, rotation, radius_variable_value, weapon_charge_level, optional_attacking_owner_unit_id)
+    return func(self, channel_id, explosion_template_id, ...)
 end)
 
 mod:hook_require("scripts/utilities/attack/explosion", function(Explosion)
     mod:hook(Explosion, "create_husk_explosion", function(func, world, physics_world, wwise_world, attacking_owner_unit_or_nil, explosion_template, position, rotation, radius_variables, charge_level)
-        -- pre-hook logic
 		if BLOCKED_VFX_RPC[explosion_template.name] then
 			return
 		end
         return func(world, physics_world, wwise_world, attacking_owner_unit_or_nil, explosion_template, position, rotation, radius_variables, charge_level)
-		 -- post-hook logic
     end)
 end)
 -- ============================================================================
@@ -94,7 +98,6 @@ mod:hook("FxSystem", "trigger_vfx", function(func, self, vfx_name, position, opt
     return func(self, vfx_name, position, optional_rotation, ...)
 end)
 
--- Hook RPC handler to block VFX sent from server in multiplayer
 mod:hook("FxSystem", "rpc_trigger_vfx", function(func, self, channel_id, vfx_id, ...)
     local vfx_name = NetworkLookup.vfx[vfx_id]
     if _disable_death_vfx then
@@ -137,9 +140,69 @@ mod:hook("FxSystem", "rpc_start_template_effect", function(func, self, channel_i
     return func(self, channel_id, buffer_index, template_id, ...)
 end)
 
+mod:hook("FxSystem", "rpc_stop_template_effect", function(func, self, channel_id, buffer_index, is_player_effect)
+    local effect_templates_handler = not is_player_effect and self._effect_templates_handler or self._player_effect_templates_handler
+    local template_effects = effect_templates_handler._template_effects
+    local template_effect = template_effects[buffer_index]
+    if template_effect and not template_effect.template then
+        return 
+    end
+    return func(self, channel_id, buffer_index, is_player_effect)
+end)
+
 mod:hook("MinionBuffExtension", "has_keyword", function(func, self, keyword)
     if _disable_rotten_armor_impact and keyword == "rotten_armor" then
         return false
     end
     return func(self, keyword)
+end)
+
+mod:hook("FxSystem", "rpc_play_impact_fx", function(func, self, channel_id, impact_fx_name_id, position, ...)
+	if _disable_network_impact then
+		local impact_fx_name = NetworkLookup.impact_fx_names[impact_fx_name_id]
+		if impact_fx_name then
+			return
+		end
+	end
+	return func(self, channel_id, impact_fx_name_id, position, ...)
+end)
+
+
+mod:hook("FxSystem", "play_impact_fx", function(func, self, impact_fx, position, ...)
+    if impact_fx and _disable_impact_fx then
+		local saved_vfx = impact_fx.vfx
+		impact_fx.vfx = nil
+
+		local result = func(self, impact_fx, position, ...)	
+		impact_fx.vfx = saved_vfx
+		return result
+	end
+		
+	return func(self, impact_fx, position, ...)
+end)
+
+mod:hook_require("scripts/components/shock_mine", function(instance)
+    mod:hook(instance, "_play_target_vfx", function(func, self, world, unit, target_unit)
+        local effect_name
+        if _replace_shock_mine_vfx then
+            effect_name = "content/fx/particles/abilities/chainlightning/protectorate_chainlightning_attack_looping_no_target"
+        else
+            effect_name = "content/fx/particles/weapons/grenades/shock_mine/shock_mine_link_01"
+        end
+
+        local particle_id = World.create_particles(world, effect_name, Vector3.zero())
+        local source_pos = Unit.world_position(unit, Unit.node(unit, "fx_center"))
+        local target_pos = Unit.world_position(target_unit, Unit.node(target_unit, "enemy_aim_target_02"))
+        local line = target_pos - source_pos
+        local direction, length = Vector3.direction_length(line)
+        local rotation = Quaternion.look(direction)
+        local particle_length = Vector3(length, length, length)
+        local length_variable_index = World.find_particles_variable(world, effect_name, "length")
+
+        World.set_particles_variable(world, particle_id, length_variable_index, particle_length)
+        World.move_particles(world, particle_id, source_pos, rotation)
+
+        local target_particle_ids = self._target_particle_ids
+        target_particle_ids[#target_particle_ids + 1] = particle_id
+    end)
 end)

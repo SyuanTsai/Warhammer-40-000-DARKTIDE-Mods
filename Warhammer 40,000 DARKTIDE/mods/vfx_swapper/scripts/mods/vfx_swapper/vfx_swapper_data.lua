@@ -36,7 +36,7 @@ return {
 							{ text = "summoning_circle", value = "content/fx/particles/enemies/renegade_psyker/renegade_psyker_summoning_circle" },
 							{ text = "green_fire_short", value = "content/fx/particles/liquid_area/fire_lingering_cultist" },
 							{ text = "fire_short", value = "content/fx/particles/liquid_area/fire_lingering" },
-							{ text = "curroptor_goo", value = "content/fx/particles/liquid_area/corruptor_nurgle_goo"},
+							{ text = "corruptor_goo", value = "content/fx/particles/liquid_area/corruptor_nurgle_goo"},
 							{ text = "lightning_liquid_area", value = "content/fx/particles/liquid_area/lightning_liguid_area" },
 						},
 					},
@@ -50,7 +50,7 @@ return {
 							{ text = "summoning_circle", value = "content/fx/particles/enemies/renegade_psyker/renegade_psyker_summoning_circle" },
 							{ text = "green_fire_short", value = "content/fx/particles/liquid_area/fire_lingering_cultist" },
 							{ text = "fire_short", value = "content/fx/particles/liquid_area/fire_lingering" },
-							{ text = "curroptor_goo", value = "content/fx/particles/liquid_area/corruptor_nurgle_goo"},
+							{ text = "corruptor_goo", value = "content/fx/particles/liquid_area/corruptor_nurgle_goo"},
 							{ text = "lightning_liquid_area", value = "content/fx/particles/liquid_area/lightning_liguid_area" }, 
 						},
 					},
@@ -64,7 +64,7 @@ return {
 							{ text = "summoning_circle", value = "content/fx/particles/enemies/renegade_psyker/renegade_psyker_summoning_circle" },
 							{ text = "green_fire_short", value = "content/fx/particles/liquid_area/fire_lingering_cultist" },
 							{ text = "fire_short", value = "content/fx/particles/liquid_area/fire_lingering" },
-							{ text = "curroptor_goo", value = "content/fx/particles/liquid_area/corruptor_nurgle_goo"},
+							{ text = "corruptor_goo", value = "content/fx/particles/liquid_area/corruptor_nurgle_goo"},
 							{ text = "lightning_liquid_area", value = "content/fx/particles/liquid_area/lightning_liguid_area" },
 						},
 					},
@@ -78,7 +78,7 @@ return {
 							{ text = "fire_vfx_beast_slime", value = "content/fx/particles/liquid_area/beast_of_nurgle_slime" },
 							{ text = "fire_vfx_beast_goo", value = "content/fx/particles/liquid_area/nurgle_corruption_goo" },
 							{ text = "gas_vfx_ground_cloud", value = "content/fx/particles/weapons/grenades/gas_grenade_ground" },
-							{ text = "curroptor_goo", value = "content/fx/particles/liquid_area/corruptor_nurgle_goo"},
+							{ text = "corruptor_goo", value = "content/fx/particles/liquid_area/corruptor_nurgle_goo"},
 							{ text = "lightning_liquid_area", value = "content/fx/particles/liquid_area/lightning_liguid_area" },
 						},
 					},
@@ -123,7 +123,8 @@ return {
 							{ text = "fire_vfx_beast_slime", value = "content/fx/particles/liquid_area/beast_of_nurgle_slime" },
 							{ text = "fire_vfx_beast_goo", value = "content/fx/particles/liquid_area/nurgle_corruption_goo" },
 							{ text = "lightning_liquid_area", value = "content/fx/particles/liquid_area/lightning_liguid_area" },
-							{ text = "curroptor_goo", value = "content/fx/particles/liquid_area/corruptor_nurgle_goo"},
+							{ text = "corruptor_goo", value = "content/fx/particles/liquid_area/corruptor_nurgle_goo"},
+							{ text = "SMOKE", value = "content/fx/particles/environment/entertainment/creeping_fog_entertainment_01" },
 						},
 					},
 					{
@@ -131,17 +132,38 @@ return {
 						type = "dropdown",
 						default_value = "content/fx/particles/liquid_area/fire_lingering",
 						options = {
+							{ text = "empty", value = "CIRCLE_ONLY" },
 							{ text = "fire_barrel_vfx_default", value = "content/fx/particles/liquid_area/fire_lingering" },
 							{ text = "zealot_grenade", value = "content/fx/particles/weapons/grenades/fire_grenade/fire_grenade_player_lingering_fire" },
 							-- { text = "fire_barrel_vfx_beast_slime", value = "content/fx/particles/liquid_area/beast_of_nurgle_slime" },
 							-- { text = "fire_barrel_vfx_beast_goo", value = "content/fx/particles/liquid_area/nurgle_corruption_goo" },
 							-- { text = "gas_vfx_ground_cloud", value = "content/fx/particles/weapons/grenades/gas_grenade_ground" },
-							{ text = "curroptor_goo", value = "content/fx/particles/liquid_area/corruptor_nurgle_goo"},
+							{ text = "corruptor_goo", value = "content/fx/particles/liquid_area/corruptor_nurgle_goo"},
 							{ text = "lightning_liquid_area", value = "content/fx/particles/liquid_area/lightning_liguid_area" },
+						},
+					},
+					{
+						setting_id = "replace_smoke_grenade_vfx",
+						type = "dropdown",
+						tooltip = "smoke_grenade_tt",
+						default_value = "DEFAULT",
+						options = {
+							{ text = "smoke_grenade_vfx_default", value = "DEFAULT" },
+							{ text = "SMOKE", value = "content/fx/particles/environment/entertainment/creeping_fog_entertainment_01" },
 						},
 					},
 				},
 			},
+			{
+				setting_id = "replace_shock_mine_vfx",
+				type = "checkbox",
+				default_value = false,
+			},
+			-- {
+			-- 	setting_id = "flamer_swap",
+			-- 	type = "checkbox",
+			-- 	default_value = false,
+			-- },
 			{
 				setting_id = "skit_group",
 				type = "group",
@@ -159,10 +181,21 @@ return {
 						tooltip = "arc_tt",
 					},
 					{
-						setting_id = "gal_vfx",
+						setting_id = "galv_vfx",
 						type = "checkbox",
 						default_value = true,
 						tooltip = "gal_tt",
+					},
+					{
+						setting_id = "arc_maul_vfx",
+						type = "checkbox",
+						default_value = false,
+						tooltip = "arc_maul_tt",
+					},
+					{
+						setting_id = "arc_grenade_vfx",
+						type = "checkbox",
+						default_value = false,
 					},
 				},
 			},
@@ -201,6 +234,11 @@ return {
 						default_value = false,
 					},
 					{
+						setting_id = "chem_grenade_vfx",
+						type = "checkbox",
+						default_value = false,
+					},
+					{
 						setting_id = "netgunner_vfx",
 						type = "checkbox",
 						default_value = false,
@@ -211,15 +249,21 @@ return {
 						default_value = false,
 					},
 					{
+						setting_id = "kill_flamer_vfx",
+						type = "checkbox",
+						default_value = false,
+						tooltip = "kill_flamer_tt",
+					},
+					{
 						setting_id = "voidstrike_explosion_vfx",
 						type = "checkbox",
 						default_value = false,
 					},
-					-- {
-					-- 	setting_id = "ritual_vfx",
-					-- 	type = "checkbox",
-					-- 	default_value = false,
-					-- },
+					{
+						setting_id = "forcesword_vfx",
+						type = "checkbox",
+						default_value = false,
+					},
 					{
 						setting_id = "scum_stimm_screen",
 						type = "checkbox",
@@ -241,9 +285,47 @@ return {
 					-- 	default_value = true,
 					-- },
 					{
-						setting_id = "poxwalker_vfx",
+						setting_id = "ritual_vfx",
+						type = "checkbox",
+						tooltip = "ritual_vfx_tt",
+						default_value = false,
+					},
+					{
+						setting_id = "autogun_vfx",
+						type = "checkbox",
+						tooltip = "autogun_tt",
+						default_value = false,
+					},
+					{
+						setting_id = "plasma_vfx",
 						type = "checkbox",
 						default_value = false,
+					},
+					{
+						setting_id = "plasma_muzzle",
+						type = "checkbox",
+						default_value = false,
+					},
+					{
+						setting_id = "plasma_beam",
+						type = "checkbox",
+						default_value = false,
+					},
+					{
+						setting_id = "impact_fx",
+						type = "checkbox",
+						default_value = false,
+					},
+					{
+						setting_id = "network_impact",
+						type = "checkbox",
+						default_value = false,
+					},
+					{
+						setting_id = "poxwalker_vfx",
+						type = "checkbox",
+						tooltip = "poxwalker_vfx_tt",
+						default_value = true,
 					},
 					{
 						setting_id = "disable_bon_death",
@@ -289,7 +371,7 @@ return {
 						type = "checkbox",
 						tooltip =  "rampaging_tip",
 						require_restart = true,
-						default_value = true,
+						default_value = false,
 					},
 					{
 						setting_id = "disable_toxin_death_vfx",
@@ -585,28 +667,3 @@ return {
 		},
 	},
 }
-
--- I  wouldn't use these if I were you. 
---content/fx/particles/environment/transit/manhole_smoke_01
--- { text = "testvfx", value = "content/fx/particles/enemies/daemonhost/daemonhost_hand_glow" },
--- { text = "test2vfx", value = "content/fx/particles/enemies/buff_gardens_embrace_head" },
--- { text = "test3vfx", value = "content/fx/particles/enemies/buff_gardens_embrace_head_02" },
--- { text = "test4vfx", value = "content/fx/particles/enemies/daemonhost/daemonhost_hand_execution" },
--- { text = "test5vfx", value = "content/fx/particles/enemies/chaos_mutator_daemonhost_shield" },
--- { text = "test6vfx", value = "content/fx/particles/weapons/grenades/twin_grenade_passive" },
--- { text = "test7vfx", value = "content/fx/particles/player_buffs/player_netted_idle" },
--- { text = "test8vfx", value = "content/fx/particles/abilities/ability_radius_aoe" },
--- { text = "gas_grenade_gas", value = "content/fx/particles/weapons/grenades/gas_grenade_gas" },
--- { text = "test6vfx", value = "content/fx/particles/weapons/grenades/twin_grenade_passive" },
--- content/fx/particles/enemies/cultist_ritualist/ritual_force_minions_heresy_target_01
--- { text = "test FX", value = "content/fx/particles/enemies/cultist_flamer/cultist_flame_thrower_hit" },
--- { text = "test FX", value = "content/fx/particles/abilities/biomancer_soul" },
--- content/fx/particles/environment/nurgle_ground_fog 
--- ["content/fx/particles/interacts/skull_totem_buff"] = "disable_skull_totem_vfx",
--- ["content/fx/particles/interacts/skull_totem_pulse"] = "disable_skull_totem_vfx",
--- ["content/fx/particles/interacts/skull_totem_activation"] = "disable_skull_totem_vfx",
--- ["content/fx/particles/interacts/skull_totem_auxiliary"] = "disable_skull_totem_vfx",
--- ["content/fx/particles/destructibles/skull_totem_destroy_top"] = "disable_skull_totem_vfx",
--- ["content/fx/particles/destructibles/skull_totem_destroy_stage"] = "disable_skull_totem_vfx",
---content/fx/particles/environment/backdrop_smoke_billowy_large
---content/fx/particles/environment/tank_foundry/steam_billowy_12
