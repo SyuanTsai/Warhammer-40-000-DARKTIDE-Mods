@@ -160,32 +160,27 @@
 ---
 
 <a id="veteran_increase_damage_vs_elites"></a>
-### 優越情節 — veteran_increase_damage_vs_elites
 
-**介面精簡說明**：對精英敵人的傷害提高 15%。
+### 優越情節(Superiority Complex)
 
-**運作方式**：點選後持續生效，近戰與遠程攻擊均可受益，不需要先擊殺、命中弱點或造成致命一擊。判定依據是目標的精英分類；只有專家敵人分類、沒有精英分類的目標，不會因這個天賦而受到額外傷害。效果作用於自己的攻擊，沒有距離、持續時間或冷卻要求，也不會因連續命中而疊層。
+> 對精英敵人的傷害增加 15%，近戰與遠程攻擊均可受益。
 
-**傷害計算**：這 15% 與同一計算階段的傷害加成相加。例如，該階段原本有 25% 加成，加入後為 40%，不是把原來的傷害再乘以 1.15。最終傷害仍受目標防護與其餘傷害計算影響。
+#### 運作方式
 
-**技能樹關係與狀態**：這是與炸藥儲備等節點相連的普通被動天賦，不會替換手雷或戰鬥能力。核心靜態機制完成；中文名稱對應暫定，未進行遊戲內驗證。
+- 點選後持續生效，不需要先擊殺、命中弱點或造成致命一擊。
+- 依照敵人的**精英分類**判定；只有專家分類、沒有精英分類的敵人，不適用此加成。
+- 只增加自己的攻擊傷害，沒有距離條件或冷卻時間。
+- 不會因連續命中而累積更多層數。
 
-<details>
-<summary>原始碼依據、計算與待確認事項</summary>
+#### 傷害計算與算例
 
-- 名稱鍵：`loc_talent_veteran_increase_damage_vs_elites`；描述鍵：`loc_talent_veteran_increase_damage_vs_elites_desc`。沿用既有詞表 Superiority Complex 的「優越情節」，名稱與鍵的對應待使用者確認。
-- 當前節點為 `node_06272211-2d9a-47c7-bf84-8e7ea1eb8a01`，類型 `default`，花費及上限均為 1。[節點定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1551-L1579)。
+- 這 15% 與同一計算階段的傷害加成**相加**。
+- 以下假設對精英目標的該階段基礎傷害為 **100**，其餘倍率均為 1；最終傷害仍受目標防護等計算影響。
+- **沒有其他加成**：`100 × (1 + 15%) = 115`，增加 15 傷害。
+- **原本已有 25% 加成**：原本為 `100 × (1 + 25%) = 125`；加上本技能後為 `100 × (1 + 25% + 15%) = 140`。
+- 後者比原本多 `140 − 125 = 15` 傷害，相對增加 `15 ÷ 125 = 12%`；不是將 125 再乘 1.15。
+- **非精英目標**：本技能不提供加成；若沒有其他加成，上例仍為 `100 × 1 = 100`。
 
-**原始碼確認：引用與數值**。天賦安裝的是 `veteran_increase_elite_damage`，不能因識別碼不同而漏追此效果。其 `damage_vs_elites=0.15`，有效層數上限 1；未設事件觸發、距離條件、持續時間或冷卻。顯示參數也讀取同一屬性，未發現數值與執行設定不一致。[天賦引用及顯示參數](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L893-L916)、[被動效果](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L736-L743)。
+[原始碼依據、計算與待確認事項](TALENTS%20Veteran/veteran_increase_damage_vs_elites.md) · [回技能目錄](#talent-index)
 
-**程式推導：作用對象與存續**。共用天賦系統將被動效果加入持有者，移除天賦時移除其效果；有效疊層限制為 1。因此它是配裝持有期間的自身被動加成，不是為目標施加易傷，也不會隨命中次數增加。[被動效果安裝](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/talent/player_unit_talent_extension.lua#L164-L175)、[移除被動效果](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/talent/player_unit_talent_extension.lua#L221-L231)、[有效層數限制](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L404-L410)。
-
-**原始碼確認：目標條件**。共同傷害流程檢查 `attacked_breed_or_nil.tags.elite`；只有成立時才加入攻擊者的 `damage_vs_elites`。此項沒有近戰、遠程、弱點或致命一擊限制；專家分類則在另一個判定處理，不能把專家標記本身當成精英。目標分類缺失時亦不加成。以上適用於使用該共同傷害流程及攻擊者屬性的傷害，不據此保證所有特殊傷害來源都會傳入相同屬性。[精英及專家分類判定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L334-L355)。
-
-**程式推導：加算位置**。此屬性為加算倍率；效果聚合將 0.15 加入屬性，傷害計算再將屬性值減 1 後加入傷害加算合計。故原合計為 1 時變 1.15，原為 1.25 時變 1.40。接著仍與其他倍率及目標受傷屬性共同結算，不能將所有最終傷害一概另乘 1.15。[屬性型別](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L780-L786)、[屬性聚合](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L689-L727)、[加算起點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L236-L245)、[加入精英加成](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L334-L337)、[後續倍率與傷害結算](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L575-L614)。
-
-**連線核對**：父節點為 `node_60000569-87a7-4c75-874b-02b86af43f52`、`node_8acdddd9-366b-4601-bf16-13574eb1cb24`、`node_8c9efccd-3b95-45aa-a620-98f9d4d7133e`；子節點為 `node_92ce0aa9-e7c8-4620-9ad3-de2cedbf9431`、`node_51cd0e84-38e8-4df8-b703-bf34e5b166eb`、`node_60000569-87a7-4c75-874b-02b86af43f52`。`all_parents_chosen=false`，無獨有互斥或替換宣告；連線不等於必須全選。來源見上方節點定義；炸藥儲備對應與連線亦見本文件的該技能段落。
-
-**案例與待確認**：精英目標與非精英目標、近戰與遠程，以及已有其他傷害加成時的靜態案例見 [POC](POC.md)。未取得官方繁體語系字串；未進行遊戲內傷害測試，也未逐一驗證所有特殊傷害來源。這些限制不改變上述共同傷害流程中的分類判定與加算數值。
-
-</details>
+---
