@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_toughness_on_weakspot_kill` / `veteran_replenish_toughness_on_weakspot_kill` - 振奮擊倒
+  - 狀態：暫定 key 對應，待使用者確認；沿用既有 Exhilarating Takedown 譯名，不宣稱官方名稱。
+  - 來源：[Release 1.13.0 天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2302-L2340)；來源僅證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_ranged_power_out_of_melee` / `veteran_ranged_power_out_of_melee` - 殺戮地帶
   - 狀態：暫定 key 對應，待使用者確認；沿用既有 Kill Zone 譯名，不宣稱官方名稱。
   - 來源：[Release 1.13.0 talent 定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1530-L1560)；來源僅證明 key 與 talent 關係。

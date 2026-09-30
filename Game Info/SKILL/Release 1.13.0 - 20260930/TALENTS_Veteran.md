@@ -12,6 +12,7 @@
 |---|---|---|---|
 | 閃擊（升級） | 炸藥儲備（名稱對應暫定） / `veteran_replenish_grenades` | `node_8acdddd9-366b-4601-bf16-13574eb1cb24` | 完成（靜態分析） |
 | 技能 | 殺戮地帶（名稱對應暫定） / `veteran_ranged_power_out_of_melee` | `node_b0c4f49c-fd47-4b1c-9279-82e12dc3ac7d` | 完成（靜態分析） |
+| 技能 | 振奮擊倒（名稱對應暫定） / `veteran_replenish_toughness_on_weakspot_kill` | `node_f0744989-1f87-4da4-aa97-30a821197ed9` | 完成（靜態分析） |
 
 ## 閃擊
 
@@ -99,5 +100,43 @@
 **程式推導 — 邊界與更新順序**：初始化是 `last_hit_t=0`，不是「安裝時間」。若當前任務時間已大於 8，首次 update 即可生效；不能說每次重新配裝必須固定等待 8 秒。若 t=100 受擊，t=108 恰好相等仍不生效，第一個大於 108 的 update 才生效；期間再受擊會延後完整門檻。沒有自然 duration 或一次性消耗。Buff 固定更新先計算條件、再處理事件、最後更新 stats；事件改 timestamp 後，條件布林可能到下一輪才更新，精確畫面／攻擊幀的延遲未實測。[初始化與條件](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L690-L715)、[固定更新順序](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/player_unit_buff_extension.lua#L131-L144)。
 
 **顯示差異與待確認**：talent 內部 `name` 仍描述附近無敵人，format_values 也保留 radius；目前實際增益效果使用「上次近戰受擊時間」，不能以舊描述取代執行邏輯。未取得 localization 本體，不能判定玩家 UI 真的顯示舊文案。中文 key 對應與遊戲內表現待確認；不影響以上靜態條件和數值。POC 案例見 [POC](POC.md)。
+
+</details>
+
+<a id="veteran_replenish_toughness_on_weakspot_kill"></a>
+### 振奮擊倒 — veteran_replenish_toughness_on_weakspot_kill
+
+**介面精簡說明**：遠程弱點擊殺恢復 15% 最大韌性，並獲得一層韌性減傷，最多三層。每次觸發刷新 8 秒計時；未再觸發時，每經過一個 8 秒週期減少一層。
+
+**運作方式**：必須由同一次命中擊中弱點並擊殺目標；不要求致命一擊，也不限精英敵人。即使韌性已滿，仍能累積減傷。普通近戰弱點擊殺、未擊殺的遠程弱點命中，以及打中身體的遠程擊殺，都不符合條件。
+
+**疊層與計算**：一、二、三層分別減少 10%、19%、27.1% 韌性傷害。每層把韌性受傷倍率乘以 0.9，因此三層是 `1 − 0.9³ = 27.1%`，不是 30%。這是韌性減傷，不代表生命值傷害也降低相同比例。三層後停止觸發，效果約經 8 秒降至二層，再過 8 秒降至一層，最後再過 8 秒消失；實際變化發生於時間門檻之後的更新。
+
+**恢復量與例外**：沒有其他加成時，最大韌性 100、目前剩 70，會恢復至 85；目前剩 95 時只補到 100。韌性恢復加成會調整恢復量。禁止韌性恢復的狀態可阻止補充，但這段程式仍繼續嘗試加入減傷效果。
+
+**技能樹關係與狀態**：這是由起始節點連出的普通天賦，不是能力替換。核心靜態機制完成；中文名稱對應暫定，未進行遊戲內驗證。
+
+<details>
+<summary>原始碼依據、計算與待確認事項</summary>
+
+- 名稱鍵：`loc_talent_veteran_toughness_on_weakspot_kill`；描述鍵：`loc_talent_veteran_toughness_on_weakspot_kill_alt_desc`。中文沿用詞表 Exhilarating Takedown 的「振奮擊倒」，鍵與名稱對應待確認。
+- 節點 `node_f0744989-1f87-4da4-aa97-30a821197ed9`，類型 `default`，花費及上限均為 1。[當前節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L858-L885)。
+- 天賦安裝 `veteran_ranged_weakspot_toughness_recovery`；其觸發後加入 `veteran_ranged_weakspot_toughenss_buff`（保留原始拼字）。[天賦對應](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2302-L2340)、[觸發與減傷效果](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1716-L1750)。
+
+**原始碼確認：觸發**。訂閱 `on_hit`，觸發機率 1；條件為 `hit_weakspot` 且 `attack_result=died`，以及 `attack_type=ranged` 或傷害設定的 `count_as_ranged_attack`。未設額外冷卻；特殊設定「算作遠程攻擊」亦可通過，因此正文的普通近戰排除不應套用到這種特殊標記。共用事件發送會排除玩家對友方、禁止觸發的傷害類型、`skip_on_hit_proc` 或已處理過的事件。[遠程擊殺判斷](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L216-L224)、[弱點與組合判斷](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L473-L520)、[事件資料及排除](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/attack.lua#L550-L620)、[禁止觸發的傷害類型](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/attack.lua#L86-L88)。
+
+**程式推導：恢復**。設定量為 0.15；呼叫時不忽略恢復加成。名目量為 `最大韌性 × 0.15 × toughness_replenish_modifier × toughness_replenish_multiplier`；實際量受缺額限制，不產生超額韌性。倒地且未強制協助、死亡、禁止恢復關鍵字，以及只允許能力恢復而本次原因不在允許清單內，都可令恢復為 0。原觸發函式不檢查恢復量回傳值，仍會加入減傷效果。[數值](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L121-L126)、[恢復公式與上下限](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)、[恢復允許清單及阻止條件](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L411-L475)、[恢復後仍加層](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1723-L1731)。
+
+**程式推導：減傷**。有效層數限制在 3；此屬性為連乘型，逐層乘入 0.9。減傷因子在韌性傷害步驟與其他近戰／遠程韌性因子共同計算，之後仍有上下限與近戰外溢等步驟，不能把同一百分比直接套到生命傷害。[有效層數](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L404-L410)、[屬性型別](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L1001-L1004)、[逐層乘算](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L689-L727)、[韌性傷害結算](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_taken_calculation.lua#L211-L281)。
+
+**程式推導：刷新與衰退**。新增層會把共用起始時間改成觸發時間；超過 `起始時間+8` 才標為到期。移除前有二或三層時，只移除一層並重設計時；重設同時清除到期旗標；最後一層到期才刪除效果。因此非所有層一起在 8 秒後消失。[加入及刷新](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buff_extension_base.lua#L434-L461)、[嚴格大於時間門檻](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L29-L44)、[移除與重設](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buff_extension_base.lua#L635-L669)、[重設清除到期旗標](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L619-L639)。
+
+**有效上限與內部計數的差別**：設定只有 `max_stacks=3`，沒有 `max_stacks_cap`，內部計數可暫時超過 3，但效果計算仍限制在三層。每次加層的索引會指向同一效果物件；到期遍歷這些索引時，溢出計數可在同一輪更新連續移除，直到從三層降到二層時重設計時。不能將溢出計數寫成額外減傷，也不能說每個溢出計數都能額外延長 8 秒。這是程式推導，尚無遊戲實測。[沒有硬上限時允許加層](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buff_extension_base.lua#L560-L589)、[計數本身不封頂](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L469-L515)、[多索引共用物件](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buff_extension_base.lua#L434-L488)、[到期逐索引處理](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buff_extension_base.lua#L187-L206)、[移除與清除當前索引](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buff_extension_base.lua#L647-L698)。
+
+**相關互動**：恢復流程發送的事件同時帶有名目量及實際量；「天生領袖」對應的共享效果讀取名目量，排除來源原因為 `shared` 的事件，再為協同內其他單位補充韌性。因此不能以持有者已滿韌性便推論共享量一定為零；該共享天賦的完整數值與範圍不在本五技能樣本的驗收內。[恢復事件](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L477-L491)、[共享效果讀取與排除](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2330-L2377)。
+
+**顯示差異與待確認**：內部名稱敘述仍寫 6 秒，但設定與顯示參數引用的是 8 秒。未取得實際語系字串，不能宣稱遊戲介面必定錯誤。原始碼事件如何對應每種特殊武器／傷害的實際弱點命中，以及精確同幀更新表現，未進行遊戲內驗證；正文只給已確認的判斷規則。[內部文字與顯示參數](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2302-L2339)。
+
+父節點：`node_8376d017-537b-45f4-b3c5-e653fd1ac6d2`；子節點：`node_129ff9f1-a7ba-4556-8617-c63d53c68f7c`、`node_25df52cb-b6f9-469c-b831-3118f9f498f5`、`node_62b7b680-7096-40ed-9303-7ba124a5d812`、`node_d99d3163-8528-4232-af21-f29cbf453fb1`。 `all_parents_chosen=false`；此節點沒有替換或互斥宣告。連線來源見上方當前節點連結。
 
 </details>
