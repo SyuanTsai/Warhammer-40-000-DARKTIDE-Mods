@@ -398,10 +398,10 @@
 
 ### [LoadoutNames](https://www.nexusmods.com/warhammer40kdarktide/mods/286)
     替天賦命名。
-- MOD 網站最後更新日期：Last updated 24 August 2026, 5:04AM
-- MOD 版本：1.7
-- MOD 檔案名稱：LoadoutNames 286 1.7 2026-08-23T21-04Z amZIYmRwQ.zip
-- 手動維護最後下載日期：2026-08-30
+- MOD 網站最後更新日期：Last updated 30 September 2026, 2:51AM
+- MOD 版本：1.8
+- MOD 檔案名稱：LoadoutNames 286 1.8 2026-09-29T18-51Z EGv9eGJJR.zip
+- 手動維護最後下載日期：2026-09-30
 - Nexus MOD ID: 286
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/286
 - Nexus page version: 1.7
