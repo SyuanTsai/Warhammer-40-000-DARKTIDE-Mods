@@ -85,34 +85,36 @@
 ## 技能
 
 <a id="veteran_ranged_power_out_of_melee"></a>
-### 殺戮地帶 — veteran_ranged_power_out_of_melee
 
-**介面精簡說明**：超過 8 秒未受到近戰命中時，獲得 +15% 遠程傷害。再次受到近戰命中會重新計時。
+### 殺戮地帶(Kill Zone)
 
-**運作方式**：檢查的是你上次受到近戰命中的時間。敵人靠近、自己揮出近戰攻擊，或受到遠程命中，都不是這個增益的重設條件。再次受到符合條件的近戰命中，便重新等待超過 8 秒。
+> 超過 8 秒未被近戰命中時，遠程傷害增加 15%。再次被近戰命中後重新計時。
 
-**加成如何計算**：增加 15 個百分點的遠程傷害加成，與同一計算階段的加成相加。例如該階段原有 25% 加成，生效後變成 40%；不能直接把最終傷害再乘 1.15。此效果不累積層數。
+#### 運作方式
 
-**分析狀態**：核心機制已由原始碼確認；中文名稱對應暫定，尚未進行遊戲內驗證。
+- 依據你**上次被近戰命中的時間**判定；超過 8 秒後啟用加成。
+- 敵人靠近、自己使用近戰攻擊，或被遠程攻擊命中，都不會重設這段等待時間。
+- 再次被近戰命中時，重新等待超過 8 秒。
+- 生效後沒有固定持續秒數；只要未再次被近戰命中，就可持續受益。
+- 不會累積層數，也不會隨等待時間增加而提高加成。
 
-<details>
-<summary>原始碼依據、計算與待確認事項</summary>
+#### 傷害計算與算例
 
-- 名稱 key：`loc_talent_veteran_ranged_power_out_of_melee`；描述 key：`loc_talent_veteran_ranged_power_out_of_melee_new_desc`。中文沿用詞表 Kill Zone 譯名，key 對應暫定、待使用者確認。
-- 節點 `node_b0c4f49c-fd47-4b1c-9279-82e12dc3ac7d`，`default`，1 點，上限 1。父子關係見[節點來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L691-L720)。無 ability 替換、疊層或獨有互斥宣告。
-- 狀態：**完成（核心靜態機制）**。
+- 這 15% 與同一計算階段的傷害加成**相加**。
+- 以下假設該階段的基礎傷害為 **100**，其餘傷害倍率均為 1；實際傷害仍受裝甲等後續計算影響。
+- **沒有其他加成**：`100 × (1 + 15%) = 115`，增加 `115 − 100 = 15` 傷害。
+- **原本已有 25% 加成**：原本為 `100 × (1 + 25%) = 125`；技能生效後為 `100 × (1 + 25% + 15%) = 140`，增加 15 傷害。
+- 後者相對於原本的 125 傷害，增加 `15 ÷ 125 = 12%`；不是 `125 × 1.15 = 143.75`。
 
-**原始碼確認 — 條件與持續**：talent 安裝同名 passive Buff；訂閱 `on_player_hit_received`，只在 `attack_type == melee` 且 `attacked_unit` 是自己時，寫入 `last_hit_t=t`。固定更新以 `t > last_hit_t + 8` 決定是否提供 `ranged_damage=0.15`。沒有附近敵人查詢、擊殺、暴擊、協同或距離門檻，也沒有疊層；生效後持續到下一個合格命中令條件失效。這是本人傷害 stat，不直接施加隊友。[talent 與舊顯示資料](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1530-L1560)、[Buff 完整邏輯](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L680-L719)、[8 秒設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L191-L193)、[近戰判斷](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L368-L370)。
+#### 計時案例與例外
 
-**原始碼確認 — 事件限制**：該事件由伺服器為玩家目標送出，需通過共用 `should_proc` 及事件去重；此 Buff predicate 沒有要求傷害值大於 0。因此只能描述為「收到合格的近戰命中事件」，不能自行添加必須扣生命、不能被韌性吸收等限制。遠程命中不改此計時器。共用攻擊流程會排除玩家對友方目標，`grimoire` damage type 不觸發 proc。[受擊事件](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/attack.lua#L752-L782)、[友方與 should_proc](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/attack.lua#L550-L581)、[排除 damage type](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/attack.lua#L86-L88)。是否所有格擋／閃避情境都會到達此路徑，需要各攻擊呼叫端逐項核對；不作通用保證。
+- 第 100 秒被近戰命中：第 108 秒恰好滿 8 秒時仍未生效，要等超過第 108 秒後的更新。
+- 第 107 秒又被近戰命中：重新計時，改為超過 `107 + 8 = 115 秒` 後生效。
+- 不以「生命值是否減少」作判定；格擋、閃避等情況是否算一次命中，尚未逐一驗證。
 
-**程式推導 — 加算位置**：`ranged_damage` 是 `additive_multiplier`；Buff 的條件成立才將 0.15 加入該 stat。傷害計算將 `(ranged_damage - 1)` 加入一般 damage stat 合計；遠程判定接受 `attack_type=ranged` 或 profile 的 `count_as_ranged_attack`。因此 +15 個百分點加入此加算部分，不能無條件宣稱所有最終傷害乘 1.15；例如該部分原為 1.25，加入後為 1.40，此部分相對增加 12%。其他裝甲、profile、弱點及後續傷害步驟仍適用。[stat 類型](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L938-L950)、[條件與 stat 聚合](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L689-L727)、[合計起點與遠程判定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L236-L245)、[遠程傷害加入合計](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L317-L319)、[後續倍率與回傳](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L575-L584)。
+[原始碼依據、計算與待確認事項](TALENTS%20Veteran/veteran_ranged_power_out_of_melee.md) · [回技能目錄](#talent-index)
 
-**程式推導 — 邊界與更新順序**：初始化是 `last_hit_t=0`，不是「安裝時間」。若當前任務時間已大於 8，首次 update 即可生效；不能說每次重新配裝必須固定等待 8 秒。若 t=100 受擊，t=108 恰好相等仍不生效，第一個大於 108 的 update 才生效；期間再受擊會延後完整門檻。沒有自然 duration 或一次性消耗。Buff 固定更新先計算條件、再處理事件、最後更新 stats；事件改 timestamp 後，條件布林可能到下一輪才更新，精確畫面／攻擊幀的延遲未實測。[初始化與條件](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L690-L715)、[固定更新順序](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/player_unit_buff_extension.lua#L131-L144)。
-
-**顯示差異與待確認**：talent 內部 `name` 仍描述附近無敵人，format_values 也保留 radius；目前實際增益效果使用「上次近戰受擊時間」，不能以舊描述取代執行邏輯。未取得 localization 本體，不能判定玩家 UI 真的顯示舊文案。中文 key 對應與遊戲內表現待確認；不影響以上靜態條件和數值。POC 案例見 [POC](POC.md)。
-
-</details>
+---
 
 <a id="veteran_replenish_toughness_on_weakspot_kill"></a>
 ### 振奮擊倒 — veteran_replenish_toughness_on_weakspot_kill
