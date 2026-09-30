@@ -53,36 +53,30 @@
 ## 能力
 
 <a id="veteran_combat_ability_extra_charge"></a>
-### 掩護射擊 — veteran_combat_ability_extra_charge
 
-**介面精簡說明**：滲透的充能上限增加 1 次，最多可儲存 2 次；每次充能所需的恢復時間增加 33%。
+### 掩護射擊(Overwatch)
 
-**運作方式**：這是滲透分支的升級。你能多存一次使用機會，但補回每次充能較慢。沒有其他加成、恢復也未暫停時，每次充能的基準恢復時間由 40 秒變成 53.2 秒。
+> 滲透最多可保留 2 次使用次數，但每補回 1 次所需的冷卻時間增加 33%。
 
-**補充方式與案例**：兩次充能共用同一個恢復資源池，並非各自同時跑一條完整倒數。若資源恰好耗盡，以上述基準速度連續恢復，約 53.2 秒取得一次充能、106.4 秒補滿兩次；若第二次使用前已累積部分進度，剩餘等待時間會較短。已有可用充能時，不必等到兩次都補滿；實際按下能力仍須符合角色狀態與操作條件。
+#### 運作方式
 
-**技能樹關係與狀態**：先選擇滲透，才有這個相連的升級節點；它不會把滲透替換成另一個能力，也不延長隱身時間。核心靜態機制完成；中文名稱對應暫定，未進行遊戲內驗證。
+- 將滲透的使用次數上限從 **1 次提高為 2 次**。
+- 兩次使用次數**共用一個冷卻進度，依序補回**。不會各自同時倒數，再一起恢復。
+- 施放滲透後就開始恢復使用次數，不必等隱身結束。
+- 冷卻進行中再次使用滲透，已累積的恢復進度會保留。
+- 只要還有 1 次可用，就不必等到 2 次都補滿；是否能立即施放仍取決於當下角色狀態。
 
-<details>
-<summary>原始碼依據、計算與待確認事項</summary>
+#### 冷卻時間與算例
 
-- 名稱鍵：`loc_talent_veteran_combat_ability_extra_charge`；描述鍵：`loc_talent_veteran_combat_ability_extra_charge_description`。中文沿用詞表 Overwatch 的「掩護射擊」，名稱對應待確認。
-- 節點 `node_6469a1ec-589f-49a3-a53e-3676c3181dad`，類型 `ability_modifier`，花費及上限均為 1；唯一父節點為滲透，無子節點。[升級節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1333-L1355)、[滲透節點與能力分支](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L295-L327)。
-- 天賦的被動增益直接使用同名模板；模板提供 `ability_extra_charges=1` 及 `combat_ability_resource_cost_per_use_modifier=0.33`，效果最多計一次。沒有觸發事件、持續時間、疊層累積或額外目標範圍。[天賦及顯示值](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L606-L644)、[兩項屬性](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L358-L366)。
+- 以下假設沒有其他冷卻加成、額外恢復或暫停恢復的效果。
+- **補回 1 次**：`40 × (1 + 33%) = 53.2 秒`，比原本多 `53.2 − 40 = 13.2 秒`。
+- **從零進度補滿 2 次**：`53.2 × 2 = 106.4 秒`。約第 53.2 秒先補回 1 次，再過約 53.2 秒補回第 2 次。
+- **倒數途中用掉另一次**：原有 2 次，先用 1 次，經過 20 秒再用掉剩下的 1 次；已恢復的 20 秒仍保留，因此再等約 `53.2 − 20 = 33.2 秒` 即可補回 1 次。若不再使用，再過約 53.2 秒補滿。
+- 實際可用時間受遊戲更新及其他技能影響；53.2 秒是上述條件下的計算值。
 
-**原始碼確認：對應能力**。滲透天賦配備 `veteran_combat_ability_stealth`；該能力繼承共用老兵能力設定的 `ability_extra_charges` 屬性、基礎上限 1 與每秒恢復 1 單位，並改用 40 單位的每次充能成本。[滲透配備能力](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2094-L2112)、[共用能力設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L7-L24)、[滲透能力覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L65-L80)、[基礎上限](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L78-L85)、[滲透的40秒基準](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L5-L8)。
+[原始碼依據、計算與待確認事項](TALENTS%20Veteran/veteran_combat_ability_extra_charge.md) · [回技能目錄](#talent-index)
 
-**程式推導：容量與恢復時間**。最大充能為 `基礎上限 + 額外充能屬性`，因此本節點使 1 變成 2。每次充能成本為 `(基礎成本 + 固定成本增減) × 成本倍率`；成本倍率是加算型，本節點加入 0.33。僅此項時為 `40 × (1+0.33)=53.2`，而不是只花 40×0.33。恢復速率仍為每秒 1，所以基準時間為 53.2 秒。若另有成本增減或恢復速率加成，應先組合各自的屬性再計算，不能將任何配裝都固定寫成 53.2 秒。[容量計算](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L734-L770)、[每次成本公式](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1437-L1461)、[成本屬性型別](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L731-L740)、[屬性加算規則](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L689-L727)、[每次恢復時間換算](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1299-L1320)。
-
-**程式推導：同一資源池**。最大資源為 `最大充能 × 每次充能成本`，本例為 106.4；共用更新每次加上 `每秒淨恢復量 × dt`，限制在上限內，再以資源除以每次成本、無條件捨去小數換成可用充能。因此從零資源起算，第一份與第二份按累積門檻依序可用，沒有兩個獨立計時器。一般使用只消耗 1 次充能對應的資源，剩餘小數進度仍留在同一資源池。[資源容量](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1323-L1348)、[恢復與充能門檻](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L880)、[按充能扣除資源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L999-L1027)、[預設使用1次](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1487-L1511)。
-
-**原始碼確認／程式推導：起算與例外**。滲透的施放動作設定為動作開始時消耗成本；共用動作只在存在暫停冷卻設定時暫停恢復，而此能力的定義沒有該設定。因此正常施放產生資源缺額後，共用更新即可恢復，不需要等隱身效果結束。若其他系統設定了恢復暫停或調整恢復屬性，則依共用更新規則處理。提高充能上限時，共用更新可能補給新增容量，但有重生跳過旗標，不能宣稱任何重生或重配裝時都必定立即給滿兩次。[施放開始扣除](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/ability_templates/veteran_stealth_combat_ability.lua#L90-L101)、[共用動作扣除及暫停條件](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_ability_base.lua#L25-L43)、[容量變動與重生例外](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L788-L803)、[恢復暫停檢查](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L826-L860)。
-
-**顯示與待確認**：顯示參數也從同一模板取得 +1 次與 +33%，這兩個值與執行屬性一致；尚未核實實際繁體語系字串。精確可用時刻受固定更新、小數精度及其他效果影響；53.2／106.4 秒是明列假設下的資源模型推導，不是遊戲內碼表實測。滲透的完整隱身／仇恨／傷害效果不在此升級節點的完成範圍。
-
-節點核對：父節點 `node_04923c84-a6e7-428b-9074-19b157f088bb`，子節點為空；`all_parents_chosen=false`。能力基礎分支有 `combat` 互斥群組，本升級本身沒有另一個互斥宣告。
-
-</details>
+---
 
 ## 鑰石
 
