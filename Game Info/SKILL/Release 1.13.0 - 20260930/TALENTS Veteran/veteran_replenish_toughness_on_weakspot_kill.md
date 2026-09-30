@@ -21,3 +21,10 @@
 **相關互動**：恢復流程發送的事件同時帶有名目量及實際量；「天生領袖」對應的共享效果讀取名目量，排除來源原因為 `shared` 的事件，再為協同內其他單位補充韌性。因此不能以持有者已滿韌性便推論共享量一定為零；該共享天賦的完整數值與範圍不在本五技能樣本的驗收內。[恢復事件](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L477-L491)、[共享效果讀取與排除](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2330-L2377)。
 
 **顯示差異與待確認**：內部名稱敘述仍寫 6 秒，但設定與顯示參數引用的是 8 秒。未取得實際語系字串，不能宣稱遊戲介面必定錯誤。原始碼事件如何對應每種特殊武器／傷害的實際弱點命中，以及精確同幀更新表現，未進行遊戲內驗證；正文只給已確認的判斷規則。[內部文字與顯示參數](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2302-L2339)。
+
+## 圖示來源
+
+- 圖示取自 [Games Lantern 編輯器](https://darktide.gameslantern.com/build-editor)的公開資料，取得日期為 2026-10-01；[原始圖片](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_replenish_toughness_on_weakspot_kill.webp)。
+- 天賦與節點對應：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_replenish_toughness_on_weakspot_kill:node_f0744989-1f87-4da4-aa97-30a821197ed9`；與[固定版本節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L858-L885)核對。來源原始碼提供圖示路徑，但不含圖片檔。
+- 原始圖片為 288 × 288 WebP，5666 bytes；SHA-256：`9a769f0edec7463879d085a495f308f4fb4db69cb4dd9048f87bbea121d2820f`。
+- [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6)記錄五張圖示；目前以來源網址顯示，尚未建立 GitHub 圖片附件。圖片僅用於視覺呈現，不作技能機制證據。
