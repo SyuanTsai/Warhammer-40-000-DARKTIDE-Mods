@@ -776,10 +776,10 @@
 
 ### [Talent Tree UX Improvements](https://www.nexusmods.com/warhammer40kdarktide/mods/216)
    技能修改助手 - 能夠讓你快速地更換天賦支線
-- MOD 網站最後更新日期：Last updated 24 August 2026, 5:04AM
-- MOD 版本：1.10
-- MOD 檔案名稱：TalentRefundBelow 216 1.10 2026-08-23T21-04Z L8cAq8x12.zip
-- 手動維護最後下載日期：2026-08-31
+- MOD 網站最後更新日期：Last updated 30 September 2026, 2:51AM
+- MOD 版本：1.11
+- MOD 檔案名稱：TalentRefundBelow 216 1.11 2026-09-29T18-51Z VWLqrWBBr.zip
+- 手動維護最後下載日期：2026-09-30
 - Nexus MOD ID: 216
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/216
 - Nexus page version: 1.10
