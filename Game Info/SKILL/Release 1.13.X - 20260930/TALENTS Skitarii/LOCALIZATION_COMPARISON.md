@@ -13,6 +13,7 @@
 | [電流弧](#cryptic_discharge_generates_arcs) | 未見明確矛盾 |
 | [電能驅動](#cryptic_discharge_attack_speed_increase) | 未見明確矛盾 |
 | [電流超載](#cryptic_discharge_toughness) | 未見明確矛盾 |
+| [通量導管蓄積](#cryptic_crits_grant_power) | 未見明確矛盾 |
 | [強化能量循環](#cryptic_increased_passive_cooldown_regen) | 未見明確矛盾 |
 | [削切協議](#cryptic_dissector) | 未見明確矛盾；補充計算與限制 |
 | [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
@@ -108,6 +109,13 @@
 - 描述鍵：`loc_talent_cryptic_discharge_toughness_per_charge_desc`；hash：`c12213ad`。
 - 結論：未見明確矛盾。已逐項比對本機同一描述鍵的繁中與英文，觸發、作用方向及數值占位一致；主文補充實際分母、時間與限制，省略細節不列錯誤。
 - [原始碼推導與限制](cryptic_discharge_toughness.md)。
+
+<a id="cryptic_crits_grant_power"></a>
+## 通量導管蓄積(Flux Conduit Build-Up)
+
+- 描述鍵：`loc_talent_cryptic_crits_grant_power_desc`；hash：`10f2fa54`。
+- 結論：未見明確矛盾。inventory 的繁中與英文都寫明暴擊觸發、產生電容量並持續4秒，與來源每次暴擊啟動4秒回復期間一致。累積方式及回復率折算是程式細節，原文省略不構成矛盾。
+- [原始碼推導與限制](cryptic_crits_grant_power.md)。
 
 <a id="cryptic_increased_passive_cooldown_regen"></a>
 ## 強化能量循環(Augmented Power-Cycle)
