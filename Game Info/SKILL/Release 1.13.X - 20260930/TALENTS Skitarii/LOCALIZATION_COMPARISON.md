@@ -13,6 +13,7 @@
 | [歐姆尼賽亞充能聖歌](#cryptic_multi_hits_restore_toughness) | 未見明確矛盾 |
 | [熵能轉移](#cryptic_electrocution_toughness) | 未見明確矛盾 |
 | [過載轉移晶格](#cryptic_electrocution_defense) | 未見明確矛盾 |
+| [電擊破壞協定](#cryptic_pushing_grants_cleave) | 未見明確矛盾 |
 | [報應導管](#cryptic_damage_vs_electrocuted_scaling_on_charge) | 未見明確矛盾 |
 | [電流標記陣列](#cryptic_elite_kills_damage) | 作用條件用語有誤 |
 | [絕境中繼](#cryptic_crit_chance_based_on_charge) | 未見明確矛盾 |
@@ -62,6 +63,13 @@
 - 描述鍵：`loc_talent_cryptic_electrocution_defense_desc`；hash：`b02129e2`。
 - 結論：未見明確矛盾。中英文範圍中心都是攻擊者；補充造成傷害與冷卻條件。
 - [原始碼推導與限制](cryptic_electrocution_defense.md)。
+
+<a id="cryptic_pushing_grants_cleave"></a>
+## 電擊破壞協定(Shockline Breach Protocol)
+
+- 描述鍵：`loc_talent_cryptic_pushing_grants_cleave_alt_desc`；hash：`d5aece03`。
+- 結論：未見明確矛盾。繁中與英文一致；補充順劈的作用量。
+- [原始碼推導與限制](cryptic_pushing_grants_cleave.md)。
 
 <a id="cryptic_damage_vs_electrocuted_scaling_on_charge"></a>
 ## 報應導管(Retribution Conduit)

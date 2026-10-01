@@ -11,6 +11,7 @@
 | <img src="https://github.com/user-attachments/assets/d9876bb9-a417-45e8-814c-acbc24233120" width="32" height="32" alt="歐姆尼賽亞充能聖歌天賦圖示"> [歐姆尼賽亞充能聖歌](#cryptic_multi_hits_restore_toughness)<br>- Omnissian Recharge Litany | <ul><li>單次攻擊命中至少 3 名敵人</li><li>3 秒內恢復 10% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/98a10c08-52e1-47bf-a288-a2043ba40a63" width="32" height="32" alt="熵能轉移天賦圖示"> [熵能轉移](#cryptic_electrocution_toughness)<br>- Entropic Transfer | <ul><li>施加或刷新電擊後，4 秒內恢復 12% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/74c8388d-8388-4646-8a91-0eb056656036" width="32" height="32" alt="過載轉移晶格天賦圖示"> [過載轉移晶格](#cryptic_electrocution_defense)<br>- Overcharge Transfer Lattice | <ul><li>遭近戰傷害時電擊攻擊者周圍 2.5 公尺敵人</li><li>冷卻 15 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/dca309fd-773f-4a07-a659-cfb320cd14a9" width="32" height="32" alt="電擊破壞協定天賦圖示"> [電擊破壞協定](#cryptic_pushing_grants_cleave)<br>- Shockline Breach Protocol | <ul><li>推中敵人後，近戰順劈提高 50%、持續 8 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/eb093286-7cce-40e8-b518-3b5bc16dd38d" width="32" height="32" alt="報應導管天賦圖示"> [報應導管](#cryptic_damage_vs_electrocuted_scaling_on_charge)<br>- Retribution Conduit | <ul><li>對電擊目標提高 10% 傷害</li><li>每份完整電容量再增加 5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/77cad8a5-5837-45fe-98a7-549e27e5d738" width="32" height="32" alt="電流標記陣列天賦圖示"> [電流標記陣列](#cryptic_elite_kills_damage)<br>- Galvanic Marking Array | <ul><li>以遠程攻擊擊殺精英，每次提高 5% 傷害</li><li>最多 4 層，每 15 秒衰減一層</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5e8556aa-e9d9-4400-a863-bb26a5f11e17" width="32" height="32" alt="絕境中繼天賦圖示"> [絕境中繼](#cryptic_crit_chance_based_on_charge)<br>- Last Stand Relay | <ul><li>爆擊率增加 6 個百分點</li><li>沒有完整電容量時提高至 10 個百分點</li></ul> | 技能 |
@@ -102,6 +103,19 @@
 - **冷卻方式**：觸發後冷卻 15 秒。例如第 0 秒觸發，第 10 秒再被打不會重複發動，第 15 秒後再次受到符合條件的攻擊才會發動。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_electrocution_defense.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_pushing_grants_cleave"></a>
+### 電擊破壞協定(Shockline Breach Protocol)
+
+<img src="https://github.com/user-attachments/assets/dca309fd-773f-4a07-a659-cfb320cd14a9" width="72" height="72" alt="電擊破壞協定天賦圖示">
+
+- **觸發方式**：推擊命中敵人後，近戰順劈能力提高 50%，持續 8 秒；再次推中會刷新時間，不疊層。
+
+- **順劈算例**：假設攻擊原本能處理 10 單位敵人質量，效果變成 10 × (1 + 50%) = 15。能多打中幾人仍取決於敵人質量與攻擊本身的限制。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_pushing_grants_cleave.md) · [返回目錄](#talent-index)
 
 ---
 
