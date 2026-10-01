@@ -35,6 +35,7 @@
 | [報復時間](#ogryn_revenge_damage) | 跨來源待同版核對 |
 | [主宰](#ogryn_rending_on_elite_kills) | 繁中描述錯誤 |
 | [換彈完畢](#ogryn_reloading_grants_damage) | 未見明確矛盾 |
+| [大爆炸](#ogryn_increase_explosion_radius) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -228,3 +229,10 @@
 - 描述鍵：`loc_talent_ogryn_ranged_damage_on_reload_desc`；hash：`a8bc8a04`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_reloading_grants_damage.md)。
+
+<a id="ogryn_increase_explosion_radius"></a>
+## 大爆炸(Big Boom)
+
+- 描述鍵：`loc_talent_ogryn_increase_explosion_radius_desc`；hash：`15f7867d`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_increase_explosion_radius.md)。

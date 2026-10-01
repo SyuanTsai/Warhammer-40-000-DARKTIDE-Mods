@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/5d6152a6-dedb-49c4-a7d2-328d082084c0" width="32" height="32" alt="報復時間天賦圖示"> [報復時間](#ogryn_revenge_damage)<br>- Payback Time | <ul><li>成功閃避近戰攻擊，或被近戰命中後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0eb640b4-e206-4d0b-a982-f74b33baf5b2" width="32" height="32" alt="主宰天賦圖示"> [主宰](#ogryn_rending_on_elite_kills)<br>- Dominate | <ul><li>擊殺精英後獲得 15% 撕裂，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/27fcc279-9828-4df7-b895-04956bb2463b" width="32" height="32" alt="換彈完畢天賦圖示"> [換彈完畢](#ogryn_reloading_grants_damage)<br>- Reloaded and Ready | <ul><li>換彈後，遠程傷害提高 15%，持續 8 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c6421034-209b-4fab-857d-541fa0667d8b" width="32" height="32" alt="大爆炸天賦圖示"> [大爆炸](#ogryn_increase_explosion_radius)<br>- Big Boom | <ul><li>爆炸半徑增加 27.5%。</li></ul> | 技能 |
 
 ---
 
@@ -442,5 +443,20 @@
 - **傷害算例**：基礎 100 點遠程傷害變成 115 點；同階段已有 20% 加成時為 100 × (1 + 20% + 15%) = 135 點。近戰傷害不受此加成影響。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_reloading_grants_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_increase_explosion_radius"></a>
+### 大爆炸(Big Boom)
+
+<img src="https://github.com/user-attachments/assets/c6421034-209b-4fab-857d-541fa0667d8b" width="72" height="72" alt="大爆炸天賦圖示">
+
+- **效果**：爆炸的外圍半徑與中心高傷害區域半徑都增加 27.5%；不直接增加每次爆炸的傷害數值。
+
+- **範圍算例**：原半徑 4 公尺，變成 4 × 1.275 = 5.1 公尺；以沒有遮擋的平面圓形估算，面積變成原本的 1.275² ≈ 1.626 倍，約增加 62.6%。
+
+- **疊加方式**：其他同階段爆炸半徑加成相加；地形遮擋與爆炸本身的命中判定仍會影響實際覆蓋。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_increase_explosion_radius.md) · [返回目錄](#talent-index)
 
 ---
