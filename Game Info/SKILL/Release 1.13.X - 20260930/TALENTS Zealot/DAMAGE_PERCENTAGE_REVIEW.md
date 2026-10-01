@@ -24,4 +24,5 @@
 | [勃然大怒](zealot_damage_boosts_movement.md) | 受傷後移動速度提高 15%，持續 2 秒。；免疫一般受擊造成的減速與踉蹌。；完整計算與適用限制見來源文件。 |
 | [反制護盾](zealot_stamina_on_block_break.md) | 格擋被打破時恢復 50% 最大耐力，冷卻 12 秒。；完整計算與適用限制見來源文件。 |
 | [四平八穩](zealot_reduced_damage_after_dodge.md) | 成功閃避後減傷 25%，持續 2.5 秒。；完整計算與適用限制見來源文件。 |
+| [內憂外患](zealot_toughness_in_melee.md) | 5 公尺內有敵人時，持續恢復韌性；每秒最高 7.5% 最大韌性。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_4.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |

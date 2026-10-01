@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **82 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L3-L10)。內部 tree version 29 不等於遊戲發行版號。
 
-完成 19／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 20／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -29,4 +29,5 @@
 | 技能 | [勃然大怒](zealot_damage_boosts_movement.md) / `zealot_damage_boosts_movement` | `node_9b7ccd7d-8eba-4b0e-9759-7e674c7dfde9` | 完成（核心靜態機制） |
 | 技能 | [反制護盾](zealot_stamina_on_block_break.md) / `zealot_stamina_on_block_break` | `node_2aa8cb10-8d27-4716-b001-85aa3bf9cc41` | 完成（核心靜態機制） |
 | 技能 | [四平八穩](zealot_reduced_damage_after_dodge.md) / `zealot_reduced_damage_after_dodge` | `node_7ee3c5f1-cc73-412b-9e62-f013af339bc4` | 完成（核心靜態機制） |
+| 技能 | [內憂外患](zealot_toughness_in_melee.md) / `zealot_toughness_in_melee` | `node_019a38fd-8454-4e5c-961b-7e74d408f0af` | 完成（核心靜態機制） |
 | 技能 | [近戰增幅](base_melee_damage_node_buff_medium_4.md) / `base_melee_damage_node_buff_medium_4` | `node_94333107-ec28-44ca-b37e-2f714fc57ed5` | 完成（核心靜態機制） |
