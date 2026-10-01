@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **81 個可選節點**，均為一點；同一配置最多分配 30 點。零點起始佔位 `not_selected` 不屬天賦效果，不列入 81 項。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36)。內部 tree version 26 不等於遊戲發行版號。
 
-完成 55／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 56／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -37,7 +37,7 @@
 | 能力 | [庇護所](psyker_boost_allies_in_sphere.md) / `psyker_boost_allies_in_sphere` | `node_d64a57d2-05d8-4077-92a2-d12069d8d628` | 完成（核心靜態機制） |
 | 能力 | [念力穹頂](psyker_sphere_shield.md) / `psyker_sphere_shield` | `node_b965d30f-4412-43e5-856a-c571751925a7` | 已定位；機制待核對 |
 | 能力 | [衰弱界線](psyker_shield_stun_passive.md) / `psyker_shield_stun_passive` | `node_959bd205-bf6c-48fc-ab14-f59364fedd6c` | 已定位；機制待核對 |
-| 能力 | [亞空間突破](psyker_overcharge_stance_infinite_casting.md) / `psyker_overcharge_stance_infinite_casting` | `node_012fb3aa-bcfb-429b-8bd9-376cd7ad7915` | 已定位；機制待核對 |
+| 能力 | [亞空間突破](psyker_overcharge_stance_infinite_casting.md) / `psyker_overcharge_stance_infinite_casting` | `node_012fb3aa-bcfb-429b-8bd9-376cd7ad7915` | 完成（核心靜態機制） |
 | 鑰石 | [亞空間虹吸](psyker_passive_souls_from_elite_kills.md) / `psyker_passive_souls_from_elite_kills` | `node_25c8ee81-d16b-4d5b-b0fa-fc1e7b40c26f` | 已定位；機制待核對 |
 | 鑰石 | [擾動命運](psyker_new_mark_passive.md) / `psyker_new_mark_passive` | `node_44ce21ca-9b23-46b9-a6df-eae7ee03114b` | 已定位；機制待核對 |
 | 鑰石 | [靈能強化](psyker_empowered_ability.md) / `psyker_empowered_ability` | `node_8d367c1d-ce78-44f3-a7b8-6a4b55341929` | 已定位；機制待核對 |

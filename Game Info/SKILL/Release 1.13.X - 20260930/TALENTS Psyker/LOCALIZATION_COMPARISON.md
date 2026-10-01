@@ -34,7 +34,7 @@
 | [庇護所](#psyker_boost_allies_in_sphere) | 未見明確矛盾 |
 | [念力穹頂](#psyker_sphere_shield) | 已配對；機制待核對 |
 | [衰弱界線](#psyker_shield_stun_passive) | 已配對；機制待核對 |
-| [亞空間突破](#psyker_overcharge_stance_infinite_casting) | 已配對；機制待核對 |
+| [亞空間突破](#psyker_overcharge_stance_infinite_casting) | 未見明確矛盾 |
 | [亞空間虹吸](#psyker_passive_souls_from_elite_kills) | 已配對；機制待核對 |
 | [擾動命運](#psyker_new_mark_passive) | 已配對；機制待核對 |
 | [靈能強化](#psyker_empowered_ability) | 已配對；機制待核對 |
@@ -280,7 +280,7 @@
 ## 亞空間突破(Warp Unbound)
 
 - 描述鍵：`loc_talent_psyker_overcharge_infinite_casting_desc`；hash：`10334171`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源尚未確認同版。 詳細持續時間／觸發範圍以固定來源推導，仍須同版遊戲核對。
 - [原始碼推導與限制](psyker_overcharge_stance_infinite_casting.md)。
 
 <a id="psyker_passive_souls_from_elite_kills"></a>

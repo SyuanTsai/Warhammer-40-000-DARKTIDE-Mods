@@ -24,6 +24,7 @@
 | <img src="https://github.com/user-attachments/assets/123c7e4e-3844-4ff0-94c0-5cf7f7772b8f" width="32" height="32" alt="現實錨點天賦圖示"> [現實錨點](#psyker_overcharge_reduced_warp_charge)<br>- Reality Anchor | <ul><li>注視期間反噬生成減少 20%</li><li>平息所需時間縮短 30%</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="32" height="32" alt="念力護盾天賦圖示"> [念力護盾](#psyker_combat_ability_force_field)<br>- Telekine Shield | <ul><li>展開護盾，阻擋敵方遠程攻擊</li><li>最長 17.5 秒；冷卻 40 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0" width="32" height="32" alt="庇護所天賦圖示"> [庇護所](#psyker_boost_allies_in_sphere)<br>- Sanctuary | <ul><li>穹頂內每秒恢復 10% 最大韌性</li><li>消散時提供 50% 韌性減傷，持續 5 秒</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8" width="32" height="32" alt="亞空間突破天賦圖示"> [亞空間突破](#psyker_overcharge_stance_infinite_casting)<br>- Warp Unbound | <ul><li>注視結束後仍能免於反噬超載</li><li>保護持續 11.5 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="亞空間耗費天賦圖示"> [亞空間耗費](#psyker_toughness_on_melee)<br>- Warp Expenditure | <ul><li>近戰命中首個敵人，恢復 2.5% 最大韌性。</li><li>近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
@@ -323,6 +324,19 @@
 - **恢復與減傷算例：**最大韌性 100 時，每秒恢復 100 × 10% = 10 點，3 秒最多恢復 30 點，以缺額為上限。減傷期間原本承受 40 點韌性傷害，變成 40 × 0.5 = 20 點。
 
 [詳細資料](TALENTS%20Psyker/psyker_boost_allies_in_sphere.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_overcharge_stance_infinite_casting"></a>
+### 亞空間突破(Warp Unbound)
+
+<img src="https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8" width="72" height="72" alt="亞空間突破天賦圖示">
+
+- **運作方式：**占卜者的注視結束後，額外保留免於反噬超載的保護；反噬仍會照常累積。
+
+- **持續時間：**10 秒離場效果加上 1.5 秒緩衝，共 10 + 1.5 = 11.5 秒。注視本身仍會在反噬達 100% 時結束。
+
+[詳細資料](TALENTS%20Psyker/psyker_overcharge_stance_infinite_casting.md) · [返回目錄](#talent-index)
 
 ---
 

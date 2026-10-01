@@ -32,7 +32,7 @@
 | [庇護所](psyker_boost_allies_in_sphere.md) | 穹頂內每秒恢復 10% 最大韌性；消散時提供 50% 韌性減傷，持續 5 秒；完整計算與適用限制見來源文件。 |
 | [念力穹頂](psyker_sphere_shield.md) | 機制與公式待核對。 |
 | [衰弱界線](psyker_shield_stun_passive.md) | 機制與公式待核對。 |
-| [亞空間突破](psyker_overcharge_stance_infinite_casting.md) | 機制與公式待核對。 |
+| [亞空間突破](psyker_overcharge_stance_infinite_casting.md) | 注視結束後仍能免於反噬超載；保護持續 11.5 秒；完整計算與適用限制見來源文件。 |
 | [亞空間虹吸](psyker_passive_souls_from_elite_kills.md) | 機制與公式待核對。 |
 | [擾動命運](psyker_new_mark_passive.md) | 機制與公式待核對。 |
 | [靈能強化](psyker_empowered_ability.md) | 機制與公式待核對。 |
