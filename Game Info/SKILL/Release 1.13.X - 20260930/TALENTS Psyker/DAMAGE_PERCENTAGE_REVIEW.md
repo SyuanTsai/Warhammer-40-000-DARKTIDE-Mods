@@ -21,7 +21,7 @@
 | [靈能尖嘯](psyker_shout_vent_warp_charge.md) | 機制與公式待核對。 |
 | [占卜者的注視](psyker_combat_ability_stance.md) | 傷害、爆擊與弱點加成，並恢復韌性；反噬達 100% 結束；累積增傷保留 10 秒；完整計算與適用限制見來源文件。 |
 | [平靜迸發](psyker_shout_reduces_warp_charge_generation.md) | 機制與公式待核對。 |
-| [亞空間爆發](psyker_discharge_damage_debuff.md) | 機制與公式待核對。 |
+| [亞空間爆發](psyker_discharge_damage_debuff.md) | 尖嘯命中的敵人傷害降低 10%；受到傷害提高 10%，持續 8 秒；完整計算與適用限制見來源文件。 |
 | [蔓延火焰](psyker_warpfire_on_shout.md) | 機制與公式待核對。 |
 | [預知未來](psyker_overcharge_weakspot_kill_bonuses.md) | 機制與公式待核對。 |
 | [亞空間加速](psyker_overcharge_increased_movement_speed.md) | 機制與公式待核對。 |

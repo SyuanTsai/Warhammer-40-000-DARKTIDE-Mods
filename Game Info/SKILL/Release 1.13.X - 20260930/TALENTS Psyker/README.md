@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **81 個可選節點**，均為一點；同一配置最多分配 30 點。零點起始佔位 `not_selected` 不屬天賦效果，不列入 81 項。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36)。內部 tree version 26 不等於遊戲發行版號。
 
-完成 52／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 53／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -26,7 +26,7 @@
 | 能力 | [靈能尖嘯](psyker_shout_vent_warp_charge.md) / `psyker_shout_vent_warp_charge` | `node_650c5469-5194-4722-a4f8-7d62487039df` | 已定位；機制待核對 |
 | 能力 | [占卜者的注視](psyker_combat_ability_stance.md) / `psyker_combat_ability_stance` | `node_2a022d3f-fddf-4faf-a79d-c8fe6a18fe36` | 完成（核心靜態機制） |
 | 能力 | [平靜迸發](psyker_shout_reduces_warp_charge_generation.md) / `psyker_shout_reduces_warp_charge_generation` | `node_b6b57be7-9aa8-483b-a127-6c1815d452a4` | 已定位；機制待核對 |
-| 能力 | [亞空間爆發](psyker_discharge_damage_debuff.md) / `psyker_discharge_damage_debuff` | `node_685300ac-9564-437d-9611-de94d66ec880` | 已定位；機制待核對 |
+| 能力 | [亞空間爆發](psyker_discharge_damage_debuff.md) / `psyker_discharge_damage_debuff` | `node_685300ac-9564-437d-9611-de94d66ec880` | 完成（核心靜態機制） |
 | 能力 | [蔓延火焰](psyker_warpfire_on_shout.md) / `psyker_warpfire_on_shout` | `node_400d79d6-4aaa-47e4-b9c4-127b79ef639a` | 已定位；機制待核對 |
 | 能力 | [預知未來](psyker_overcharge_weakspot_kill_bonuses.md) / `psyker_overcharge_weakspot_kill_bonuses` | `node_17c2bf3f-7235-4e00-be33-5931be3bb011` | 已定位；機制待核對 |
 | 能力 | [亞空間加速](psyker_overcharge_increased_movement_speed.md) / `psyker_overcharge_increased_movement_speed` | `node_229f2961-ef6f-4ccb-942e-8c4945f1f90f` | 已定位；機制待核對 |
