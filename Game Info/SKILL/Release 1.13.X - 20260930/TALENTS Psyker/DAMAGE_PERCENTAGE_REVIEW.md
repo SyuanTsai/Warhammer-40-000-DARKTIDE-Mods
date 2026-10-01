@@ -37,7 +37,7 @@
 | [擾動命運](psyker_new_mark_passive.md) | 機制與公式待核對。 |
 | [靈能強化](psyker_empowered_ability.md) | 機制與公式待核對。 |
 | [平心靜氣](psyker_reduced_warp_charge_cost_and_venting_speed.md) | 每層亞空間充能降低反噬生成 8%；完整計算與適用限制見來源文件。 |
-| [吸精奪萃](psyker_toughness_on_soul.md) | 機制與公式待核對。 |
+| [吸精奪萃](psyker_toughness_on_soul.md) | 取得亞空間充能後，5 秒恢復 30% 最大韌性；再次取得會刷新持續時間；完整計算與適用限制見來源文件。 |
 | [生物磁石](psyker_empowered_grenades_passive_improved.md) | 機制與公式待核對。 |
 | [吸血閃電](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md) | 機制與公式待核對。 |
 | [吞靈強擊](psyker_empowered_ability_on_elite_kills.md) | 機制與公式待核對。 |

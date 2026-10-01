@@ -39,7 +39,7 @@
 | [擾動命運](#psyker_new_mark_passive) | 已配對；機制待核對 |
 | [靈能強化](#psyker_empowered_ability) | 已配對；機制待核對 |
 | [平心靜氣](#psyker_reduced_warp_charge_cost_and_venting_speed) | 未見明確矛盾 |
-| [吸精奪萃](#psyker_toughness_on_soul) | 已配對；機制待核對 |
+| [吸精奪萃](#psyker_toughness_on_soul) | 未見明確矛盾 |
 | [生物磁石](#psyker_empowered_grenades_passive_improved) | 已配對；機制待核對 |
 | [吸血閃電](#psyker_empowered_chain_lightnings_replenish_toughness_to_allies) | 已配對；機制待核對 |
 | [吞靈強擊](#psyker_empowered_ability_on_elite_kills) | 已配對；機制待核對 |
@@ -315,7 +315,7 @@
 ## 吸精奪萃(Essence Harvest)
 
 - 描述鍵：`loc_talent_psyker_toughness_regen_on_soul_desc`；hash：`fc9f3c0b`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字尚未核實同版。
 - [原始碼推導與限制](psyker_toughness_on_soul.md)。
 
 <a id="psyker_empowered_grenades_passive_improved"></a>
