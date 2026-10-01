@@ -549,6 +549,10 @@
 
 - **重複施放**：不疊層；已開始的 10 秒倒數不會因效果期間再次施放而重設。
 
+#### 繁中原文勘誤
+
+- 原文的「近戰傷害加成」應為 **近距離傷害加成**。判斷的是與敵人的距離，近距離開槍也能受益。
+
 [詳細資料](TALENTS%20Veteran/veteran_increased_close_damage_after_combat_ability.md) · [返回目錄](#talent-index)
 
 ---
