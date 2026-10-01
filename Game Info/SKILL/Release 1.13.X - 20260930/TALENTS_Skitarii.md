@@ -37,6 +37,7 @@
 | <img src="https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3" width="32" height="32" alt="能量超載天賦圖示"> [能量超載](#cryptic_overload_keystone)<br>- Power Overload | <ul><li>你與協同中的隊友擊殺一般敵人獲得1層，精英或專家獲得2層；達30層觸發過載並歸零。</li><li>過載使你與協同中的隊友獲得15%傷害加成及15%韌性傷害減免，持續8秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="32" height="32" alt="伺服肌腱湧動天賦圖示"> [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed)<br>- Servo-Sinew Surge | <ul><li>每層削切協議額外提供1.5%暴擊率與1.5%近戰攻擊速度；效果隨削切協議層數變動。</li><li>6層時增加9個百分點暴擊率與9%近戰攻速；8層時分別增加12個百分點與12%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444" width="32" height="32" alt="熟練解剖者天賦圖示"> [熟練解剖者](#cryptic_dissector_max_stacks)<br>- Honed Dissector | <ul><li>將削切協議層數上限從6提高到8；啟用時會直接從8層開始。</li><li>新增加的2層沿用原本每層傷害與韌性承傷步進，滿8層相當於傷害+20%、韌性承傷倍率0.80。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84" width="32" height="32" alt="進階能量管理天賦圖示"> [進階能量管理](#cryptic_redline_strength)<br>- Advanced Power Management | <ul><li>使用戰鬥技能時，依使用前持有的充能數增加力量效果；每份充能提供5%威力加成，效果最多累積5層並持續10秒。</li><li>新增加層會刷新10秒倒數；層數到達5層後不再增加，但後續觸發仍會刷新時間。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/de2e3c8c-8b4c-4859-87d0-c1416c07ef5c" width="32" height="32" alt="強化電容協議天賦圖示"> [強化電容協議](#cryptic_dissector_ability_stacks)<br>- Enhanced Capacitance Protocols | <ul><li>使用戰鬥能力時，將削切協議補至目前上限。</li><li>層數仍沿用削切協議的受傷失層規則，並保留其每層傷害與韌性減傷。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="32" height="32" alt="崇高意圖天賦圖示"> [崇高意圖](#cryptic_dissector_power)<br>- Higher Purpose | <ul><li>精英或專家擊殺額外回復戰鬥技能充能資源2.5%；這是加在護教軍原有的精英／專家擊殺4%回復上，合計6.5%。</li><li>以單份充能為基準；進階戰鬥教範啟用期間不會觸發。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="能量載分配鏈路天賦圖示"> [能量載分配鏈路](#cryptic_crits_grant_tdr)<br>- Power Redistribution Uplink | <ul><li>爆擊命中後，3 秒內恢復 7.5% 韌性</li><li>期間承受的韌性傷害降低 15%</li></ul> | 技能 |
@@ -570,6 +571,23 @@
 - **算例**：每層傷害+2.5%，所以8層時傷害+20%；韌性承傷倍率為1−0.025×8=0.80。沒有其他增傷時，100點基礎攻擊傷害變成120點；若承受100點原始韌性傷害，實際為80點。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_dissector_max_stacks.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_redline_strength"></a>
+### 進階能量管理(Advanced Power Management)
+
+<img src="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84" width="72" height="72" alt="進階能量管理天賦圖示">
+
+- **觸發方式**：使用戰鬥技能時，依使用前持有的充能數增加效果層數；每一份充能增加一層，最多5層。
+
+- **效果**：每層使威力提高5%，持續10秒；新增層數會刷新倒數，達到5層後再次觸發只刷新時間。
+
+- **算例**：使用前有3份充能，會獲得3層、威力提高15%。若原本威力為500，修正後為575。這不代表最終傷害必定增加15%；最終傷害仍取決於攻擊類型、武器傷害設定與目標護甲等條件。
+
+- **搭配限制**：弦爪持續出招期間的再次發動不會重複觸發這項效果；需先結束弦爪，再次啟用能力。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_redline_strength.md) · [返回目錄](#talent-index)
 
 ---
 

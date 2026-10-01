@@ -38,6 +38,7 @@
 | [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
 | [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed) | 未見明確矛盾；補充計算與限制 |
 | [熟練解剖者](#cryptic_dissector_max_stacks) | 未見明確矛盾；補充計算與限制 |
+| [進階能量管理](#cryptic_redline_strength) | 未見明確矛盾 |
 | [強化電容協議](#cryptic_dissector_ability_stacks) | 未見明確矛盾；補充計算與限制 |
 | [崇高意圖](#cryptic_dissector_power) | 未見明確矛盾；補充計算與限制 |
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
@@ -302,6 +303,13 @@
 - 描述鍵：`loc_talent_cryptic_dissector_max_stacks_desc`；hash：`52304209`。
 - 結論：未見明確矛盾；補充計算與限制。繁中與英文都說明上限提高到8；固定版基礎6層加2層，文字一致。啟用時初始滿層及其既有每層效果是程式補充，不屬誤譯。
 - [原始碼推導與限制](cryptic_dissector_max_stacks.md)。
+
+<a id="cryptic_redline_strength"></a>
+## 進階能量管理(Advanced Power Management)
+
+- 描述鍵：`loc_talent_cryptic_redline_strength_clarified_desc`；hash：`4e708242`。
+- 結論：未見明確矛盾。本機繁中與英文都描述使用能力時按當時持有的充能取得力量，並寫明持續時間；固定版依使用前充能數增加層數，每層套用5%威力等級修正、最多5層並刷新10秒。UI未直接說明該力量修正作用於威力等級，也未列出上限；這些是程式細節的補充，不構成明確翻譯錯誤。
+- [原始碼推導與限制](cryptic_redline_strength.md)。
 
 <a id="cryptic_dissector_ability_stacks"></a>
 ## 強化電容協議(Enhanced Capacitance Protocols)
