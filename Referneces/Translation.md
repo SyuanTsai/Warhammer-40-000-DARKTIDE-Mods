@@ -1734,3 +1734,5 @@
 - Barrage III - 彈幕 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L684-L700)）
 
 - Barrage IV - 彈幕 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L701-L717)）
+
+- Tank - 坦克（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L718-L722)）
