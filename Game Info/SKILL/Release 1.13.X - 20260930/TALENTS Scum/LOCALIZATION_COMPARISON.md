@@ -26,6 +26,7 @@
 | [熟練部署](#broker_ability_stimm_field_sub_3) | 未見翻譯差異（程式以半秒輪詢觸發） |
 | [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1) | 未見明確矛盾 |
 | [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3) | 未見明確矛盾 |
+| [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5) | 未見明確矛盾 |
 | [失控攻擊](#broker_keystone_adrenaline_junkie_sub_4) | 未見明確矛盾 |
 | [腎上腺素懲戒者](#broker_keystone_adrenaline_junkie_sub_2) | 未見明確矛盾 |
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
@@ -201,6 +202,13 @@
 - 描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_3_desc`；hash：`95b51a39`。
 - 結論：未見明確矛盾。繁中與英文均表示狂暴持續時間提升至 20 秒；程式以核心 10 秒及升級 20 秒的差額調整 buff 時長。
 - [原始碼推導與限制](broker_keystone_adrenaline_junkie_sub_3.md)。
+
+<a id="broker_keystone_adrenaline_junkie_sub_5"></a>
+## 腎上腺素突破(Adrenaline Unbound)
+
+- 描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_5_desc`；hash：`1af84a83`。
+- 結論：未見明確矛盾。繁中與英文都把恢復效果限定在狂暴期間，設定值為每秒 5%；程式使用最大韌性百分比回補並由韌性缺額限制實際值。
+- [原始碼推導與限制](broker_keystone_adrenaline_junkie_sub_5.md)。
 
 <a id="broker_keystone_adrenaline_junkie_sub_4"></a>
 ## 失控攻擊(Uncontrolled Aggression)

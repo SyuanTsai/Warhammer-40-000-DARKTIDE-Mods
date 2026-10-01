@@ -24,6 +24,7 @@
 | <img src="https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3" width="32" height="32" alt="熟練部署天賦圖示"> [熟練部署](#broker_ability_stimm_field_sub_3)<br>- Practiced Deployment | <ul><li>取得新的可用興奮劑時，補滿一次興奮劑補給的能力充能；能力最多 1 次充能，已滿時不會再增加。</li><li>程式每 0.5 秒檢查興奮劑欄位或自身興奮劑充能是否變為可用，因此觸發會在下一次檢查時補滿。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448" width="32" height="32" alt="腎上腺素刺客天賦圖示"> [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1)<br>- Adrenaline Assassin | <ul><li>選用腎上腺素刺客後，一般非弱點近戰命中不給層；近戰弱點命中共給 3 層。</li><li>爆擊仍額外加 1 層，因此近戰弱點爆擊共給 4 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c" width="32" height="32" alt="振奮怒火天賦圖示"> [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3)<br>- Stoked Rage | <ul><li>腎上腺素狂暴的持續時間由 10 秒提高至 20 秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce" width="32" height="32" alt="腎上腺素突破天賦圖示"> [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5)<br>- Adrenaline Unbound | <ul><li>狂暴期間每秒恢復最大韌性的 5%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/2b1aa9f6-20e2-4d38-b2fb-6af765a426ca" width="32" height="32" alt="失控攻擊天賦圖示"> [失控攻擊](#broker_keystone_adrenaline_junkie_sub_4)<br>- Uncontrolled Aggression | <ul><li>每層腎上腺素的持續時間由 2 秒提高至 4 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/29f93050-b0a8-48ca-88fe-2e40d9769a99" width="32" height="32" alt="腎上腺素懲戒者天賦圖示"> [腎上腺素懲戒者](#broker_keystone_adrenaline_junkie_sub_2)<br>- Adrenaline Smiter | <ul><li>只有近戰擊殺才會取得腎上腺素：一般擊殺額外 +4 層，精英擊殺再額外 +10 層。</li><li>非擊殺的近戰命中不給層；爆擊擊殺仍保留核心的額外 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
@@ -376,6 +377,21 @@
 - **不變部分**：此升級不改變腎上腺素的 2 秒堆疊計時、30 層上限或狂暴的攻速與傷害倍率。
 
 [詳細資料](TALENTS%20Scum/broker_keystone_adrenaline_junkie_sub_3.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_keystone_adrenaline_junkie_sub_5"></a>
+### 腎上腺素突破(Adrenaline Unbound)
+
+<img src="https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce" width="72" height="72" alt="腎上腺素突破天賦圖示">
+
+- **恢復量**：每秒恢復最大韌性的 5%；最大韌性 100 時，每次恢復 為 100 × 0.05 = 5 點。
+
+- **恢復上限**：恢復量不超過當前韌性缺額；韌性已滿時，該次恢復 不會增加韌性。
+
+- **計時**：只有狂暴期間才會恢復；首次恢復 可在 狂暴開始時立即執行，之後按 1 秒間隔。
+
+[詳細資料](TALENTS%20Scum/broker_keystone_adrenaline_junkie_sub_5.md) · [返回目錄](#talent-index)
 
 ---
 
