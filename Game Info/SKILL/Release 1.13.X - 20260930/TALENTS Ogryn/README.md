@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L3-L10)。內部 tree version 25 不等於遊戲發行版號。
 
-完成 25／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 26／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -36,3 +36,4 @@
 | 技能 | [誰敢攔我！](ogryn_windup_is_uninterruptible.md) / `ogryn_windup_is_uninterruptible` | `node_08929afd-e60d-457d-8006-b87c917647ff` | 完成（核心靜態機制） |
 | 技能 | [屠殺](ogryn_kills_grant_crit_chance.md) / `ogryn_kills_grant_crit_chance` | `node_3f0606c3-a70e-461e-a487-031ef17650ba` | 完成（核心靜態機制） |
 | 技能 | [報復時間](ogryn_revenge_damage.md) / `ogryn_revenge_damage` | `node_dc6e3ffa-e5cb-4993-a914-04445d983656` | 完成（核心靜態機制） |
+| 技能 | [主宰](ogryn_rending_on_elite_kills.md) / `ogryn_rending_on_elite_kills` | `node_fffcae3d-430c-4955-98ba-098c7eb9d71b` | 完成（核心靜態機制） |

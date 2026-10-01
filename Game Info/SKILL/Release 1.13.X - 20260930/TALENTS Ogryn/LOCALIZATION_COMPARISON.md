@@ -33,6 +33,7 @@
 | [誰敢攔我！](#ogryn_windup_is_uninterruptible) | 未見明確矛盾 |
 | [屠殺](#ogryn_kills_grant_crit_chance) | 未見明確矛盾 |
 | [報復時間](#ogryn_revenge_damage) | 跨來源待同版核對 |
+| [主宰](#ogryn_rending_on_elite_kills) | 繁中描述錯誤 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -210,3 +211,12 @@
 - 描述鍵：`loc_talent_ogryn_revenge_damage_new_desc`；hash：`2474ccf6`。
 - 結論：跨來源待同版核對。同源繁中與英文都沒有近戰限制，固定程式共用on_melee_hit篩選。未確認版本一致，不判為繁中誤譯。
 - [原始碼推導與限制](ogryn_revenge_damage.md)。
+
+<a id="ogryn_rending_on_elite_kills"></a>
+## 主宰(Dominate)
+
+- 描述鍵：`loc_talent_ogryn_rending_on_elite_kills_desc`；hash：`4203de9c`。
+- 結論：繁中描述錯誤。同一占位符格式為百分比，繁中卻加上「倍撕裂」，英文無倍數單位；把15%撕裂寫成倍數會誤導。
+- 繁中原文短引：擊殺精英敵人後持續{rending_multiplier:%s}倍撕裂{duration:%s}秒。
+- 同源英文：{rending_multiplier:%s} Rending for {duration:%s}s on Elite Kill.
+- [原始碼推導與限制](ogryn_rending_on_elite_kills.md)。

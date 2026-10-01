@@ -31,6 +31,7 @@
 | <img src="https://github.com/user-attachments/assets/d80b562f-7fc2-4daf-85e4-ae25f8171a89" width="32" height="32" alt="誰敢攔我！天賦圖示"> [誰敢攔我！](#ogryn_windup_is_uninterruptible)<br>- No Stopping Me! | <ul><li>近戰重擊蓄力不易受打斷，並移除蓄力動作的移動減速。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7e27b3b4-5eca-49b5-aafd-c8abc6635b14" width="32" height="32" alt="屠殺天賦圖示"> [屠殺](#ogryn_kills_grant_crit_chance)<br>- Massacre | <ul><li>每次擊殺增加 2 個百分點爆擊機率，最多 8 層，持續 12 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5d6152a6-dedb-49c4-a7d2-328d082084c0" width="32" height="32" alt="報復時間天賦圖示"> [報復時間](#ogryn_revenge_damage)<br>- Payback Time | <ul><li>成功閃避近戰攻擊，或被近戰命中後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/0eb640b4-e206-4d0b-a982-f74b33baf5b2" width="32" height="32" alt="主宰天賦圖示"> [主宰](#ogryn_rending_on_elite_kills)<br>- Dominate | <ul><li>擊殺精英後獲得 15% 撕裂，持續 10 秒。</li></ul> | 技能 |
 
 ---
 
@@ -408,5 +409,24 @@
 - **傷害算例**：基礎 100 點變成 115 點；同階段已有 20% 加成時，則為 100 × (1 + 20% + 15%) = 135 點。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_revenge_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_rending_on_elite_kills"></a>
+### 主宰(Dominate)
+
+<img src="https://github.com/user-attachments/assets/0eb640b4-e206-4d0b-a982-f74b33baf5b2" width="72" height="72" alt="主宰天賦圖示">
+
+- **觸發方式**：擊殺精英敵人後獲得 15% 撕裂，持續 10 秒；再次觸發刷新時間，不會逐次堆高。
+
+- **作用方式**：撕裂改善攻擊對特定護甲的傷害倍率；實際增幅取決於武器原有的護甲倍率，不能把所有最終傷害一律乘 1.15。
+
+- **傷害算例**：若對甲殼護甲的原倍率為 0.5，基礎 100 點原本造成 50 點，加入 15% 撕裂後為 100 × (0.5 + 0.15) = 65 點，相對提高 30%。若原倍率已達 1，超額撕裂只取四分之一，變成 100 × (1 + 0.15 × 0.25) = 103.75 點。
+
+#### 繁中原文勘誤
+
+- 原文在撕裂百分比後加上「倍」，單位錯誤。效果是獲得 15% 撕裂，並不是撕裂變成 15 倍。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_rending_on_elite_kills.md) · [返回目錄](#talent-index)
 
 ---

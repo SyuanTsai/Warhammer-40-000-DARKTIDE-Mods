@@ -31,3 +31,4 @@
 | [誰敢攔我！](ogryn_windup_is_uninterruptible.md) | 近戰重擊蓄力不易受打斷，並移除蓄力動作的移動減速。；完整計算與適用限制見來源文件。 |
 | [屠殺](ogryn_kills_grant_crit_chance.md) | 每次擊殺增加 2 個百分點爆擊機率，最多 8 層，持續 12 秒。；完整計算與適用限制見來源文件。 |
 | [報復時間](ogryn_revenge_damage.md) | 成功閃避近戰攻擊，或被近戰命中後，傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
+| [主宰](ogryn_rending_on_elite_kills.md) | 擊殺精英後獲得 15% 撕裂，持續 10 秒。；完整計算與適用限制見來源文件。 |
