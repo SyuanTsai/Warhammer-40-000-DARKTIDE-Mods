@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5" width="32" height="32" alt="極限電容天賦圖示"> [極限電容](#cryptic_redline)<br>- Redline Capacitors | <ul><li>每消耗或補回一份戰鬥技能充能，獲得5%韌性傷害減免與5%電容量自然恢復加成；最多4層。</li><li>新增層會重設12秒倒數，之後每12秒失去1層；戰鬥技能充能上限增加1份。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3" width="32" height="32" alt="能量超載天賦圖示"> [能量超載](#cryptic_overload_keystone)<br>- Power Overload | <ul><li>你與協同中的隊友擊殺一般敵人獲得1層，精英或專家獲得2層；達30層觸發過載並歸零。</li><li>過載使你與協同中的隊友獲得15%傷害加成及15%韌性傷害減免，持續8秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a59865c6-45fb-4f1e-b360-b8100e541a00" width="32" height="32" alt="爆擊能量過載天賦圖示"> [爆擊能量過載](#cryptic_overload_keystone_bigger_explosion)<br>- Critical Power Overload | <ul><li>能量超載時，使周圍8公尺內命中的敵人遭電擊，承受傷害提高15%，持續8秒。</li><li>再次命中刷新時間；這次範圍效果本身不造成爆炸傷害。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/f0977f9f-2eb1-458a-a2c1-5e5642a284aa" width="32" height="32" alt="靜電電容消耗天賦圖示"> [靜電電容消耗](#cryptic_overload_keystone_permastack)<br>- Static Capacitor Drain | <ul><li>累計超載8／16／24次，依序獲得傷害提高15%、韌性減傷20%、電容量自然恢復加快25%。</li><li>三項加成可以同時保留，各只取得一次，持續至死亡。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="32" height="32" alt="伺服肌腱湧動天賦圖示"> [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed)<br>- Servo-Sinew Surge | <ul><li>每層削切協議額外提供1.5%暴擊率與1.5%近戰攻擊速度；效果隨削切協議層數變動。</li><li>6層時增加9個百分點暴擊率與9%近戰攻速；8層時分別增加12個百分點與12%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444" width="32" height="32" alt="熟練解剖者天賦圖示"> [熟練解剖者](#cryptic_dissector_max_stacks)<br>- Honed Dissector | <ul><li>將削切協議層數上限從6提高到8；啟用時會直接從8層開始。</li><li>新增加的2層沿用原本每層傷害與韌性承傷步進，滿8層相當於傷害+20%、韌性承傷倍率0.80。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84" width="32" height="32" alt="進階能量管理天賦圖示"> [進階能量管理](#cryptic_redline_strength)<br>- Advanced Power Management | <ul><li>使用戰鬥技能時，依使用前持有的充能數增加力量效果；每份充能提供5%威力加成，效果最多累積5層並持續10秒。</li><li>新增加層會刷新10秒倒數；層數到達5層後不再增加，但後續觸發仍會刷新時間。</li></ul> | 鑰石 |
@@ -655,6 +656,25 @@
 - **重複觸發**：同一效果最多1層，再次命中刷新8秒持續時間，不會變成30%。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_overload_keystone_bigger_explosion.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_overload_keystone_permastack"></a>
+### 靜電電容消耗(Static Capacitor Drain)
+
+<img src="https://github.com/user-attachments/assets/f0977f9f-2eb1-458a-a2c1-5e5642a284aa" width="72" height="72" alt="靜電電容消耗天賦圖示">
+
+- **累計方式**：每次能量超載計1次；累計8次獲得傷害提高15%，16次再獲得韌性減傷20%，24次再使電容量自然恢復加快25%。三項效果可同時保留，持續至死亡。
+
+- **傷害算例**：基礎100點傷害，取得15%加成後為100 × (1 + 15%) = 115點；若同階段已有20%加成，則為100 × (1 + 20% + 15%) = 135點。
+
+- **減傷算例**：原本承受100點韌性傷害，取得20%韌性減傷後為100 × (1 − 20%) = 80點；與超載本身15%韌性減傷同時生效時，為100 × 0.8 × 0.85 = 68點。
+
+- **充能算例**：每份充能需50點電容量，原本每秒恢復1點；取得加成後為1 × (1 + 25%) = 1.25點，補回1份需50 ÷ 1.25 = 40秒。若另有50%自然恢復加成，則每秒恢復1 × (1 + 50% + 25%) = 1.75點。
+
+- **恢復例外**：依單份充能比例直接補回電容量的效果，不會一律多補25%；例如一般擊殺原本補回1點，仍補回1點。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_overload_keystone_permastack.md) · [返回目錄](#talent-index)
 
 ---
 

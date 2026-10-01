@@ -42,6 +42,7 @@
 | [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
 | [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
 | [爆擊能量過載](#cryptic_overload_keystone_bigger_explosion) | 未見明確矛盾 |
+| [靜電電容消耗](#cryptic_overload_keystone_permastack) | 未見明確矛盾 |
 | [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed) | 未見明確矛盾；補充計算與限制 |
 | [熟練解剖者](#cryptic_dissector_max_stacks) | 未見明確矛盾；補充計算與限制 |
 | [進階能量管理](#cryptic_redline_strength) | 未見明確矛盾 |
@@ -341,6 +342,13 @@
 - 描述鍵：`loc_talent_cryptic_overload_keystone_bigger_explosion_desc`；hash：`4bcf4f12`。
 - 結論：未見明確矛盾。繁中與英文都寫明超載對近距離敵人施加電擊並提高其承受傷害，設定值為15%、8秒。固定版把近戰範圍落實為半徑8的敵人篩選，並以零傷害爆炸施加狀態；UI未寫半徑或爆炸自身不造成傷害屬細節省略，不構成明確翻譯錯誤。
 - [原始碼推導與限制](cryptic_overload_keystone_bigger_explosion.md)。
+
+<a id="cryptic_overload_keystone_permastack"></a>
+## 靜電電容消耗(Static Capacitor Drain)
+
+- 描述鍵：`loc_talent_cryptic_overload_keystone_permastack_desc`；hash：`c193a6c8`。
+- 結論：未見明確矛盾。繁中與英文都列出第8、16、24次超載取得三項加成，數值為15%傷害、20%韌性減傷、25%電容量生成，並說明持續至死亡。固定版門檻和 stat buff 數值一致；自然回充與適用直接恢復的實作、停止被動時清除屬 UI 未展開的細節，不視為翻譯錯誤。
+- [原始碼推導與限制](cryptic_overload_keystone_permastack.md)。
 
 <a id="cryptic_dissector_crit_attack_speed"></a>
 ## 伺服肌腱湧動(Servo-Sinew Surge)
