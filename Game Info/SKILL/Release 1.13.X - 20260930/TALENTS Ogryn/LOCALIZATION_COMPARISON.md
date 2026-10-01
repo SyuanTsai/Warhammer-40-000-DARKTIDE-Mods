@@ -44,6 +44,7 @@
 | [蠻橫之力](#ogryn_pushing_applies_brittleness) | 未見明確矛盾 |
 | [火力全開](#ogryn_explosions_burn) | 繁中描述錯誤 |
 | [堅不可摧](#ogryn_block_all_attacks) | 未見明確矛盾 |
+| [士氣高昂](#ogryn_damage_reduction_on_high_stamina) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -302,3 +303,10 @@
 - 描述鍵：`loc_talent_ogryn_block_all_attacks_variant_desc`；hash：`b565afeb`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_block_all_attacks.md)。
+
+<a id="ogryn_damage_reduction_on_high_stamina"></a>
+## 士氣高昂(Pumped Up)
+
+- 描述鍵：`loc_talent_ogryn_damage_reduction_on_high_stamina_desc`；hash：`ab8d5e62`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_damage_reduction_on_high_stamina.md)。

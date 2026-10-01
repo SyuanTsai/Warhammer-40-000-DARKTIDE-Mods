@@ -42,3 +42,4 @@
 | [蠻橫之力](ogryn_pushing_applies_brittleness.md) | 推擊施加 4 層脆弱，合計 10%，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [火力全開](ogryn_explosions_burn.md) | 爆炸施加 1 層燃燒，爆炸中心區域改為 2 層，最多 8 層。；完整計算與適用限制見來源文件。 |
 | [堅不可摧](ogryn_block_all_attacks.md) | 完美格擋可擋下原本不可格擋的近戰攻擊。；完美格擋後，下一次近戰傷害提高 20%。；完整計算與適用限制見來源文件。 |
+| [士氣高昂](ogryn_damage_reduction_on_high_stamina.md) | 耐力高於 75% 時，受到的傷害減少 12.5%。；完整計算與適用限制見來源文件。 |
