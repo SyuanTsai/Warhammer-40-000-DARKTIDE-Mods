@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/78f209fd-3e8b-456d-954d-c67fdf6e23ee" width="32" height="32" alt="破骨者之環天賦圖示"> [破骨者之環](#ogryn_melee_damage_coherency_improved)<br>- Bonebreaker's Aura | <ul><li>「破骨者之環」使你和協同範圍內隊友的近戰攻擊傷害提高 10%。</li><li>這是基礎近戰光環的強化版本，採用 10% 數值，不會再把基礎 7.5% 額外相加。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/ea712cab-0dd4-47fa-a2c5-98edb7e41783" width="32" height="32" alt="爆限超載天賦圖示"> [爆限超載](#ogryn_leadbelcher_no_ammo_chance)<br>- Burst Limiter Override | <ul><li>遠程攻擊有 15% 基礎機率觸發幸運子彈，觸發的射擊不消耗彈藥。</li><li>遠程擊殺每層增加 2% 遠程傷害，最多 10 層；加層時刷新 10 秒期限。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9436a125-4e9f-4655-ae8f-4975db2f4af1" width="32" height="32" alt="麻木天賦圖示"> [麻木](#ogryn_carapace_armor)<br>- Feel No Pain | <ul><li>開始時有 10 層麻木；每層增加韌性恢復，並使韌性所受傷害再乘以 0.97。</li><li>受到有效傷害時最多每秒失去一層；未滿層時每隔 2 秒恢復一層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6ad5a8ad-f1c2-4c43-997a-02b89543ebd9" width="32" height="32" alt="重拳出擊天賦圖示"> [重拳出擊](#ogryn_passive_heavy_hitter)<br>- Heavy Hitter | <ul><li>近戰命中累積重拳出擊：一般命中增加 1 層，重擊命中增加 2 層。</li><li>每層增加 3% 近戰傷害，最多 8 層；新增層數會刷新 7.5 秒期限。</li></ul> | 鑰石 |
@@ -73,6 +74,26 @@
 | <img src="https://github.com/user-attachments/assets/9e138d4c-f301-46c6-9eef-5aff038efc7c" width="32" height="32" alt="格鬥兵天賦圖示"> [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown)<br>- Bruiser | <ul><li>自己或協同隊友擊殺精英後，持續 4 秒額外恢復戰鬥技能冷卻。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dae8db6d-b212-4abd-a84b-246c0910e0b3" width="32" height="32" alt="精準打擊天賦圖示"> [精準打擊](#ogryn_weakspot_damage)<br>- Strike True | <ul><li>近戰命中弱點時，威力提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/38b1d6e0-b6a5-4692-92a2-fe6caf0b9083" width="32" height="32" alt="機動部署天賦圖示"> [機動部署](#ogryn_bracing_reduces_damage_taken)<br>- Mobile Emplacement | <ul><li>架槍或射擊期間，受到的傷害減少 25%。</li></ul> | 技能 |
+
+---
+
+## 光環
+
+<a id="ogryn_melee_damage_coherency_improved"></a>
+### 破骨者之環(Bonebreaker's Aura)
+
+<img src="https://github.com/user-attachments/assets/78f209fd-3e8b-456d-954d-c67fdf6e23ee" width="72" height="72" alt="破骨者之環天賦圖示">
+
+- **生效條件**：你或協同範圍內隊友取得此光環時，近戰攻擊傷害提高 10%；持有者本人也在協同範圍計算內。
+
+- **傷害算例**：原本造成 100 點近戰傷害，沒有其他修正時為 100 × 1.10 = 110 點。 若同階段另有 20% 加成，則為 100 × (1 + 20% + 10%) = 130 點。
+
+- **疊層與冷卻**：光環效果最多 1 層，沒有獨立冷卻；此 10% 是強化後的數值，不再加上基礎 7.5%。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_melee_damage_coherency_improved.md) · [返回目錄](#talent-index)
+
+---
+
 
 ---
 

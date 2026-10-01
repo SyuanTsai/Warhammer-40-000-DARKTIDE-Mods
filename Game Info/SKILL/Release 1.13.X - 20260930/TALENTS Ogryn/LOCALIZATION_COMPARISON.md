@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [破骨者之環](#ogryn_melee_damage_coherency_improved) | 未見明確矛盾 |
 | [爆限超載](#ogryn_leadbelcher_no_ammo_chance) | 未見明確矛盾 |
 | [麻木](#ogryn_carapace_armor) | 跨來源待同版核對 |
 | [重拳出擊](#ogryn_passive_heavy_hitter) | 未見明確矛盾 |
@@ -74,6 +75,13 @@
 | [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown) | 未見明確矛盾 |
 | [精準打擊](#ogryn_weakspot_damage) | 未見明確矛盾 |
 | [機動部署](#ogryn_bracing_reduces_damage_taken) | 未見明確矛盾 |
+
+<a id="ogryn_melee_damage_coherency_improved"></a>
+## 破骨者之環(Bonebreaker's Aura)
+
+- 描述鍵：`loc_talent_damage_aura_improved_new`；hash：`68da370d`。
+- 結論：未見明確矛盾。同 hash 68da370d 的繁中與英文都寫明你和協同盟友獲得近戰攻擊傷害加成，並指出此節點強化基礎近戰光環；設定值由基礎 7.5% 改為強化版 10%，因此不將兩者相加。本機 Build 25492122 的繁中與英文文字以相同 hash 配對；公開固定 SHA 是否對應同一 Build 尚未確認。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- [原始碼推導與限制](ogryn_melee_damage_coherency_improved.md)。
 
 <a id="ogryn_leadbelcher_no_ammo_chance"></a>
 ## 爆限超載(Burst Limiter Override)
