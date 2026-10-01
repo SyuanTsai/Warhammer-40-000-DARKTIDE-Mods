@@ -15,6 +15,7 @@
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
+| 技能 | [火力掩護(Covering Fire)](#veteran_replenish_toughness_and_boost_allies) | 遠程擊殺敵人時，可為該敵人附近的 1 名隊友恢復 15% 最大韌性，並使其傷害增加 15%，持續 6 秒。 |
 | 技能 | [求勝心(Competitive Urge)](#veteran_ally_kills_increase_damage) | 隊友擊殺敵人時，有 2.5% 機率使你的傷害、近戰衝擊與壓制效果增加 20%，持續 8 秒。 |
 | 技能 | [擊殺紀錄(Confirmed Kill)](#veteran_elite_kills_replenish_toughness) | 擊殺精英或專家敵人，立即恢復 10% 最大韌性。 |
 | 技能 | [密集隊形訓練(Close Order Drill)](#veteran_reduced_toughness_damage_in_coherency) | 協同範圍內每有 1 名隊友，韌性減傷增加 11%；3 名隊友時達到 33%。 |
@@ -217,6 +218,25 @@
 - 三層後未再觸發：約 **8 秒**後剩 2 層、**16 秒**後剩 1 層、**24 秒**後效果結束。
 
 [詳細資料](TALENTS%20Veteran/veteran_replenish_toughness_on_weakspot_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_replenish_toughness_and_boost_allies"></a>
+
+### 火力掩護(Covering Fire)
+
+<img src="https://github.com/user-attachments/assets/8c1dadf2-9263-4efa-a710-9da08a41eb3e" width="72" height="72" alt="火力掩護天賦圖示">
+
+- **遠程擊殺敵人時，可為該敵人附近的 1 名隊友恢復 15% 最大韌性，並使其傷害增加 15%，持續 6 秒。**
+- 不作用於自己。再次獲得傷害加成時刷新持續時間，不疊層。
+- 搜尋起始範圍為 8 公尺；多名隊友同時在附近時，選人與範圍判定存在異常，不能保證選到最近的一人。
+
+#### 恢復與傷害算例
+
+- 若只有一名隊友距離被擊殺敵人 5 公尺，最大韌性 200：恢復 `200 × 15% = 30`；只缺 10 時實際補 **10**。
+- 只計此增益，隊友基礎傷害 100 變為 `100 × 1.15 = 115`。
+
+[詳細資料](TALENTS%20Veteran/veteran_replenish_toughness_and_boost_allies.md) · [返回目錄](#talent-index)
 
 ---
 
