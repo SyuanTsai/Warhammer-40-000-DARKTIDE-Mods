@@ -6,7 +6,7 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 10／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 11／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -86,4 +86,4 @@
 | 技能 | 讓他們全趴下！ / `veteran_increase_suppression` | `node_a3f092bc-651f-457d-9791-9c38ff2b99fd` | 待核對 |
 | 技能 | 秘密特工 / `veteran_increased_damage_when_flanking` | `node_eb62ac80-bd39-4ad3-bf09-49e25ae55af9` | 待核對 |
 | 技能 | [近戰傷害提升](base_melee_damage_node_buff_high_2.md) / `base_melee_damage_node_buff_high_2` | `node_85b81c97-8ca9-42db-a637-06a3af956bba` | 完成（核心靜態機制） |
-| 技能 | 韌性減傷 / `base_toughness_damage_reduction_node_buff_medium_1` | `node_0c833225-0e7c-478d-93e9-82263be2f0d7` | 待核對 |
+| 技能 | [韌性減傷](base_toughness_damage_reduction_node_buff_medium_1.md) / `base_toughness_damage_reduction_node_buff_medium_1` | `node_0c833225-0e7c-478d-93e9-82263be2f0d7` | 完成（核心靜態機制） |

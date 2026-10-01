@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_toughness_damage_reduction_medium` / `base_toughness_damage_reduction_node_buff_medium_1` - 韌性減傷
+  - 英文對應：Toughness Damage Reduction。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L437-L463)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_melee_damage_boost_medium` / `base_melee_damage_node_buff_high_2` - 近戰傷害提升
   - 英文對應：Melee Damage Boost。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1181-L1204)；此來源證明識別鍵與天賦關係。
