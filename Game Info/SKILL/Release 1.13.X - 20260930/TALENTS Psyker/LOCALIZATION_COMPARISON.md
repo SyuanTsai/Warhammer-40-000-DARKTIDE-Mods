@@ -24,7 +24,7 @@
 | [占卜者的注視](#psyker_combat_ability_stance) | 明確翻譯錯誤 |
 | [平靜迸發](#psyker_shout_reduces_warp_charge_generation) | 未見明確矛盾 |
 | [亞空間爆發](#psyker_discharge_damage_debuff) | 未見明確矛盾 |
-| [蔓延火焰](#psyker_warpfire_on_shout) | 已配對；機制待核對 |
+| [蔓延火焰](#psyker_warpfire_on_shout) | 未見明確矛盾 |
 | [預知未來](#psyker_overcharge_weakspot_kill_bonuses) | 未見明確矛盾 |
 | [亞空間加速](#psyker_overcharge_increased_movement_speed) | 未見明確矛盾 |
 | [靈能學者光環](#psyker_2_tier_3_name_2) | 未見明確矛盾 |
@@ -208,7 +208,7 @@
 ## 蔓延火焰(Creeping Flames)
 
 - 描述鍵：`loc_talent_psyker_warpfire_on_shout_desc`；hash：`8ec3e5f7`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源尚未確認同版。
 - [原始碼推導與限制](psyker_warpfire_on_shout.md)。
 
 <a id="psyker_overcharge_weakspot_kill_bonuses"></a>

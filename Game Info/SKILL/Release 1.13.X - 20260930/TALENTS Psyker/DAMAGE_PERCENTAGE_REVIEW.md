@@ -22,7 +22,7 @@
 | [占卜者的注視](psyker_combat_ability_stance.md) | 傷害、爆擊與弱點加成，並恢復韌性；反噬達 100% 結束；累積增傷保留 10 秒；完整計算與適用限制見來源文件。 |
 | [平靜迸發](psyker_shout_reduces_warp_charge_generation.md) | 尖嘯每命中一名敵人，降低反噬生成；最多 25 層，持續 5 秒；完整計算與適用限制見來源文件。 |
 | [亞空間爆發](psyker_discharge_damage_debuff.md) | 尖嘯命中的敵人傷害降低 10%；受到傷害提高 10%，持續 8 秒；完整計算與適用限制見來源文件。 |
-| [蔓延火焰](psyker_warpfire_on_shout.md) | 機制與公式待核對。 |
+| [蔓延火焰](psyker_warpfire_on_shout.md) | 尖嘯依反噬值施加靈魂之火；每個命中目標獲得 1 至 6 層；完整計算與適用限制見來源文件。 |
 | [預知未來](psyker_overcharge_weakspot_kill_bonuses.md) | 注視增加靈巧傷害，最高 30%；弱點擊殺加快傷害疊層；完整計算與適用限制見來源文件。 |
 | [亞空間加速](psyker_overcharge_increased_movement_speed.md) | 注視期間增加 20% 移動速度；完整計算與適用限制見來源文件。 |
 | [靈能學者光環](psyker_2_tier_3_name_2.md) | 擊殺精英或專家後，加快能力冷卻；效果持續 3 秒；完整計算與適用限制見來源文件。 |
