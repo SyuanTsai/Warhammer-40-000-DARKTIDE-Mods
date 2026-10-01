@@ -34,6 +34,7 @@
 | [反應爐線圈充能](#cryptic_weakspot_kills_grant_power) | 未見明確矛盾 |
 | [強化能量循環](#cryptic_increased_passive_cooldown_regen) | 未見明確矛盾 |
 | [電容回收迴路](#cryptic_multi_hits_grant_power) | 未見明確矛盾 |
+| [電能發射器](#cryptic_discharge) | 未見明確矛盾 |
 | [鋼鐵富足](#cryptic_chordclaw_capacitance_restoration) | 未見明確矛盾 |
 | [千刀萬剮](#cryptic_chordclaw_consecutive_bonus) | 未見明確矛盾 |
 | [洞察之眼](#cryptic_precision_stance_crit_cleave) | 未見明確矛盾 |
@@ -287,6 +288,13 @@
 - 描述鍵：`loc_talent_cryptic_multi_hits_grant_power_desc`；hash：`998c8ded`。
 - 結論：未見明確矛盾。繁中與英文均寫同一次攻擊命中3名以上敵人後恢復1%，與程式在命中第3個目標時觸發一次相符。0.25秒間隔及1%以單份成本為基準，是原文省略的程式細節，沒有相反描述。
 - [原始碼推導與限制](cryptic_multi_hits_grant_power.md)。
+
+<a id="cryptic_discharge"></a>
+## 電能發射器(Voltaic Emitter)
+
+- 描述鍵：`loc_talent_cryptic_discharge_desc`；hash：`1ffeaa91`。
+- 結論：未見明確矛盾。本機繁中與英文都列出12公尺主放電、2秒觸電、消耗至少2份時30公尺武器故障12秒、消耗至少3份時15秒命中觸電2秒，以及強化版定位。來源碼吻合；單次最多消耗3份和傷害由後續電擊跳傷結算是文字未展開的實作細節。
+- [原始碼推導與限制](cryptic_discharge.md)。
 
 <a id="cryptic_chordclaw_capacitance_restoration"></a>
 ## 鋼鐵富足(Satiated Steel)

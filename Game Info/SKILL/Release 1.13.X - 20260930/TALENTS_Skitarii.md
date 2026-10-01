@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/833b596d-dbc9-49fe-9f90-436140e700ed" width="32" height="32" alt="反應爐線圈充能天賦圖示"> [反應爐線圈充能](#cryptic_weakspot_kills_grant_power)<br>- Reactor Coil Recharge | <ul><li>弱點擊殺恢復目前戰鬥能力單份充能成本的2%；以50點為一份時，每次恢復1點電容量。</li><li>恢復量會保留為小數進度；未達下一份完整充能前不會增加可用份數。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/39f22717-a782-4201-b5b3-f63a166bedd1" width="32" height="32" alt="強化能量循環天賦圖示"> [強化能量循環](#cryptic_increased_passive_cooldown_regen)<br>- Augmented Power-Cycle | <ul><li>電容量自然恢復由每秒單份的2%提高至3%；每份50點時，每秒由1點提高至1.5點。</li><li>在沒有其他消耗或回充修正時，一份充能約33.3秒回滿，三份由空回滿約100秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/7557cf7d-9d8b-41ba-bff3-582bdcc5c063" width="32" height="32" alt="電容回收迴路天賦圖示"> [電容回收迴路](#cryptic_multi_hits_grant_power)<br>- Capacitor Reclamation Loop | <ul><li>單次攻擊命中至少3名敵人時，回復目前戰鬥能力單份成本的1%電容量。</li><li>按單份成本50點計，每次回復0.5點；觸發後至少間隔0.25秒才能再次觸發。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/637d6e54-1c81-434d-b5bc-d779d4d8674b" width="32" height="32" alt="電能發射器天賦圖示"> [電能發射器](#cryptic_discharge)<br>- Voltaic Emitter | <ul><li>啟動時消耗1至3份已補滿的電容量，單次最多消耗3份；更多充能及下一份未滿進度保留。</li><li>主放電固定影響12公尺內敵人，觸電2秒並造成持續傷害。</li><li>消耗至少2份時，另使30公尺內符合條件的敵人武器故障；至少3份時，接下來15秒內攻擊命中會使敵人觸電2秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/756e60ad-5734-42a4-be62-759096344f67" width="32" height="32" alt="鋼鐵富足天賦圖示"> [鋼鐵富足](#cryptic_chordclaw_capacitance_restoration)<br>- Satiated Steel | <ul><li>弦爪造成近戰擊殺後，在5秒內額外恢復目前戰鬥能力單份成本的25%。</li><li>單份電容量50點時，完整5秒額外恢復12.5點；期間再擊殺會刷新時間，不疊加恢復速率。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/a4bee55e-0868-4104-89c8-e2009e89ae4d" width="32" height="32" alt="千刀萬剮天賦圖示"> [千刀萬剮](#cryptic_chordclaw_consecutive_bonus)<br>- Slice and Dice | <ul><li>每次啟動弦爪技能增加一層弦爪傷害加成，每層20%，上限3層。</li><li>每層持續5秒；新層加入時更新持續時間，最多提供60%弦爪傷害修正。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/bedef96d-1746-44a5-a482-1abe4e5e15c6" width="32" height="32" alt="洞察之眼天賦圖示"> [洞察之眼](#cryptic_precision_stance_crit_cleave)<br>- Piercing Sight | <ul><li>進階戰鬥教範啟用時，遠程順劈增加30%、遠程暴擊率增加15個百分點。</li><li>持續4秒後提高至60%順劈與30個百分點暴擊率；關閉能力即失去加成。</li></ul> | 能力 |
@@ -526,6 +527,27 @@
 - **運作方式**：每次恢復後至少等待0.25秒才可再次觸發；電容量小數會累積，50點才形成一份完整充能。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_multi_hits_grant_power.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_discharge"></a>
+### 電能發射器(Voltaic Emitter)
+
+<img src="https://github.com/user-attachments/assets/637d6e54-1c81-434d-b5bc-d779d4d8674b" width="72" height="72" alt="電能發射器天賦圖示">
+
+- **充能消耗**：發動時消耗目前已補滿的1至3份充能，單次最多3份。若有4或5份，多出的份數會保留；未滿一份的進度也不會消失。
+
+- **放電效果**：使周圍12公尺內命中的敵人觸電2秒，期間受到持續電擊傷害。無論消耗1、2或3份，主放電半徑都是12公尺。
+
+- **消耗2份以上**：另外干擾周圍30公尺內可受武器故障影響的敵人，通常持續12秒；部分敵人的持續時間不同。
+
+- **消耗3份**：接下來15秒內，你的近戰或遠程攻擊命中仍存活的敵人，會使其觸電2秒。
+
+- **消耗算例**：目前有185點電容量，相當於3份完整充能與第4份的70%進度；發動後消耗3 × 50 = 150點，剩35點。若只靠每秒1點自然恢復，再取得1份可用充能需要(50 − 35) ÷ 1 = 15秒。
+
+- **傷害算例**：初始範圍效果本身不直接扣血，傷害來自後續電擊。假設對某目標每次電擊造成10點，這次實際結算4次，合計10 × 4 = 40點；實際傷害與次數隨目標及結算時序改變。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_discharge.md) · [返回目錄](#talent-index)
 
 ---
 
