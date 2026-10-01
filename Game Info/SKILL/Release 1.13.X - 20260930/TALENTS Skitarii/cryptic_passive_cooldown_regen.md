@@ -13,6 +13,7 @@
 - cryptic_ability_recharge 在 on_kill 判定；一般敵人補 0.02、帶 elite 或 special tag 的敵人補 0.04。它在 cryptic_precision_stance keyword 存在時提前返回。restore_ability_charge_percentage 將此比例乘上單一份成本，不是總三份容量的百分比。
 - 同名 passive buff 的 combat_ability_resource_regen_modifier=0 是中性 additive-multiplier 數值；底層能力仍按 resource_regen_per_second 自然回復。settings 中 base_charges、charge_gain、min/max_charge、max_power 由 format_values 讀取，未作為 ability resource runtime 欄位；實際上限由 player ability 設定 max_charges=3。
 - 進階戰鬥教範期間，能力基礎每秒自然回復 1 資源點與同值的 while-active 成本相抵；架勢另按每秒 10% 單份進度與每次射擊 1% 額外消耗同一資源池，重裝時暫停每秒消耗。
+- 本機Steam Build25492122：描述鍵 `loc_talent_cryptic_passive_cooldown_regen_desc`、同源中英hash `cc7d6ab9` 已精確配對。中英共同將職業資源概括為至少1、最多3份的消耗模式；實際能力分別採用1份、最多3份或分段比例消耗。共同概括不能單獨判成繁中誤譯；以各能力的固定程式為準。
 
 ## 原始碼依據
 
