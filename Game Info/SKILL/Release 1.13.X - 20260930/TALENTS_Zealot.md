@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/d1133aca-9af8-4b47-934f-d073de0d4e1c" width="32" height="32" alt="迅疾狂熱天賦圖示"> [迅疾狂熱](#zealot_shared_fanatic_rage)<br>- Infectious Zeal | <ul><li>狂怒開始時，當下協同隊友增加 10 個百分點爆擊率，持續 8 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5ac46e08-8f7b-4828-8bfa-e47c240e113b" width="32" height="32" alt="治癒詩頌天賦圖示"> [治癒詩頌](#zealot_martyrdom_toughness_modifier)<br>- Restorative Verses | <ul><li>殉道每缺少一格完整傷口，提高 5%韌性恢復效率，最多計 5 格、最高+25%。</li><li>效果改變韌性恢復效率，不會直接給予一筆韌性。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="32" height="32" alt="永恆天賦圖示"> [永恆](#zealot_quickness_increased_duration)<br>- Eternal | <ul><li>命定審判的啟動增益持續時間由 6 秒延長至 10 秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/9bc683a7-534a-4244-8381-1a6c0463003f" width="32" height="32" alt="危境之際天賦圖示"> [危境之際](#zealot_corruption_resistance_stacking)<br>- On the Brink | <ul><li>殉道每缺少一格完整傷口，腐敗傷害承受倍率降低 10%；最多計 5 格，最高降低 50%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="狂熱朝聖者天賦圖示"> [狂熱朝聖者](#zealot_resist_death_ability)<br>- Zealous Pilgrim | <ul><li>使用戰鬥技能後獲得 4 秒免死效果。</li><li>隱身技能在退出隱身後生效；聖物技能在卸下聖物後生效。</li><li>無法殺死期間，傷害及攻擊速度各提高 10%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="天災天賦圖示"> [天災](#zealot_crits_apply_bleed)<br>- Scourge | <ul><li>近戰爆擊施加 2 層流血；攻擊流血敵人增加近戰爆擊率。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="背刺者天賦圖示"> [背刺者](#zealot_backstab_damage)<br>- Backstabber | <ul><li>近戰背刺與遠程側襲傷害增加 25%。</li></ul> | 技能 |
@@ -513,6 +514,19 @@
 - **持續算例**：第 0 秒命中啟動後，原本約第 6 秒結束，改為約第 10 秒結束；期間命中仍不會刷新本輪加成。持續時間增加 4 秒，層數與每層加成不變。
 
 [詳細資料](TALENTS%20Zealot/zealot_quickness_increased_duration.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_corruption_resistance_stacking"></a>
+### 危境之際(On the Brink)
+
+<img src="https://github.com/user-attachments/assets/9bc683a7-534a-4244-8381-1a6c0463003f" width="72" height="72" alt="危境之際天賦圖示">
+
+- **運作方式**：每失去一整格生命，承受的腐敗傷害降低 10%，最多 5 層、50%；不會清除已累積的腐敗。
+
+- **腐敗算例**：原本會獲得 20 點腐敗，3 層時為 20 × (1 − 3 × 10%) = 14 點；5 層時為 10 點。其他腐敗倍率另相乘，不會因此免疫所有腐敗來源。
+
+[詳細資料](TALENTS%20Zealot/zealot_corruption_resistance_stacking.md) · [返回目錄](#talent-index)
 
 ---
 

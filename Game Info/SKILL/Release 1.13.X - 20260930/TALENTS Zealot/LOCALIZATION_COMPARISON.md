@@ -35,6 +35,7 @@
 | [迅疾狂熱](#zealot_shared_fanatic_rage) | 跨來源待同版核對 |
 | [治癒詩頌](#zealot_martyrdom_toughness_modifier) | 明確繁中誤譯 |
 | [永恆](#zealot_quickness_increased_duration) | 未見明確矛盾 |
+| [危境之際](#zealot_corruption_resistance_stacking) | 未見明確矛盾 |
 | [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
 | [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
 | [背刺者](#zealot_backstab_damage) | 未見明確矛盾 |
@@ -280,6 +281,13 @@
 - 描述鍵：`loc_talent_zealot_quickness_increased_duration_desc`；hash：`ffd6bfbb`。
 - 結論：未見明確矛盾。遊戲繁中「持續時間延長至 10 秒」與英文一致；原始碼 talent name 有舊的閃避文字，但正式本地化描述與實際特殊規則都指向持續時間。
 - [原始碼推導與限制](zealot_quickness_increased_duration.md)。
+
+<a id="zealot_corruption_resistance_stacking"></a>
+## 危境之際(On the Brink)
+
+- 描述鍵：`loc_talent_zealot_corruption_resistance_stacking_desc`；hash：`892c3a6b`。
+- 結論：未見明確矛盾。中英文都表達殉道每層提供腐敗抗性；用承傷倍率說明其運作是實作細節。
+- [原始碼推導與限制](zealot_corruption_resistance_stacking.md)。
 
 <a id="zealot_resist_death_ability"></a>
 ## 狂熱朝聖者(Zealous Pilgrim)
