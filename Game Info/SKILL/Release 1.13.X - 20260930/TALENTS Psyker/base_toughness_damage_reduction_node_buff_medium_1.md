@@ -1,11 +1,37 @@
-# 韌性減傷(Toughness Damage Reduction)：來源與待確認事項
+# 韌性減傷(Toughness Damage Reduction)：原始碼依據
 
-[返回技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#base_toughness_damage_reduction_node_buff_medium_1)
+[返回玩家說明](../TALENTS_Psyker.md#base_toughness_damage_reduction_node_buff_medium_1)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#base_toughness_damage_reduction_node_buff_medium_1)
 
-- 狀態：已完成節點與原文定位；機制、公式及勘誤尚待核對。
-- 本機原文：Steam Build `25492122`，`ui` 資源，繁中／英文按相同 hash 配對。
-- 天賦：`base_toughness_damage_reduction_node_buff_medium_1`；分類：技能；節點類型：`stat`。
-- 來源：[當前樹節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1680-L1709)；[天賦定義與顯示參數](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L437-L463)。
-- 名稱鍵：`loc_talent_toughness_damage_reduction_medium`；本機遊戲名稱：韌性減傷。
-- 描述鍵：`loc_talent_toughness_damage_reduction_medium_desc`；`ui` 描述 hash：`1272bcc0`。
-- 比對狀態：繁中／英文已配對；效果與勘誤待逐項核對。
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`base_toughness_damage_reduction_node_buff_medium_1`；名稱鍵：`loc_talent_toughness_damage_reduction_medium`；描述鍵：`loc_talent_toughness_damage_reduction_medium_desc`。
+- 節點：`node_9049de9c-7aef-4bda-bc26-2892d147c486`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- player_toughness_damage_reduction_node_buff_medium_1使用toughness_damage_taken_modifier=-.1，是additive_multiplier而非toughness_damage_taken_multiplier。
+
+## 原始碼依據
+
+- [scripts/settings/buff/player_buff_templates.lua：432–443](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/player_buff_templates.lua#L432-L443)
+- [scripts/settings/buff/buff_settings.lua：1000–1020](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L1000-L1020)
+- [scripts/settings/ability/archetype_talents/talents/base_talents.lua：437–463](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L437-L463)
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1680–1709](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1680-L1709)
+
+## 算例條件與待確認事項
+
+- **減傷算例**：原本 100 點韌性傷害、此階段無其他減傷時，100 × (1 − 10%) = 90 點。若已有 5% 同階段減傷，則為 100 × (1 − 5% − 10%) = 85 點；其他獨立乘算減傷再另外套用。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`1272bcc0`。
+- 核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/stat/base_toughness_damage_reduction_node_buff_medium_1.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:base_toughness_damage_reduction_node_buff_medium_1:node_9049de9c-7aef-4bda-bc26-2892d147c486`。
+- 格式：image/webp；288×288；4428 bytes。
+- SHA-256：`2c0b1f33804d13d580ac4f509d01684e8ee0245f2fcfd26bbdbef6b8d420df0f`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928034845)；[公開圖片](https://github.com/user-attachments/assets/57a54ed7-4f34-449f-9f2d-eb401a97b51a)。附件已下載比對位元組與 SHA-256。
