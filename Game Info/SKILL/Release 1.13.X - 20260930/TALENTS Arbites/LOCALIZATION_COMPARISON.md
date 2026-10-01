@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [電子獒犬與人](#adamant_toughness_regen_near_companion) | 未見明確矛盾 |
+| [凋零烈焰](#adamant_damage_after_reloading) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
@@ -16,3 +17,10 @@
 - 描述鍵：`loc_talent_adamant_toughness_regen_near_companion_desc`；hash：`f6bc6fb8`。
 - 結論：未見明確矛盾。繁中「附近…每秒恢復」與英文 within…per second 一致；未列最大值與恢復修正屬省略。
 - [原始碼推導與限制](adamant_toughness_regen_near_companion.md)。
+
+<a id="adamant_damage_after_reloading"></a>
+## 凋零烈焰(Withering Fire)
+
+- 描述鍵：`loc_talent_adamant_damage_after_reloading_desc`；hash：`e68c7c57`。
+- 結論：未見明確矛盾。繁中「換彈後…遠程傷害」與英文 after Reloading／Ranged Damage 一致；補上刷新及加算並非勘誤。
+- [原始碼推導與限制](adamant_damage_after_reloading.md)。

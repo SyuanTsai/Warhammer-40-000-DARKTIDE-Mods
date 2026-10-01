@@ -7,3 +7,4 @@
 | 技能 | 本次核對內容 |
 |---|---|
 | [電子獒犬與人](adamant_toughness_regen_near_companion.md) | 在自己的電子獒犬 8 公尺內，每秒恢復最大韌性的 5%。；完整計算與適用限制見來源文件。 |
+| [凋零烈焰](adamant_damage_after_reloading.md) | 換彈後，遠程傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
