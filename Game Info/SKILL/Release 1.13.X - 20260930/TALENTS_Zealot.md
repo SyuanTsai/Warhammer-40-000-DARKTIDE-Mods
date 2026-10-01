@@ -10,6 +10,7 @@
 | <img src="https://github.com/user-attachments/assets/69a5f7ea-11bc-41ae-8758-86a14213a116" width="32" height="32" alt="蔑視天賦圖示"> [蔑視](#zealot_multi_hits_increase_damage)<br>- Disdain | <ul><li>上一次近戰揮擊每命中一名敵人，使下一次近戰傷害增加 5%，最多 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/162368d9-1a5d-4273-a2cd-4ab8c3c22a6d" width="32" height="32" alt="淨化不潔天賦圖示"> [淨化不潔](#zealot_increased_damage_vs_resilient)<br>- Purge the Unclean | <ul><li>對被感染及不屈護甲類型的傷害增加 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9e5a26dc-8d4f-4c94-9dcd-fdc807cc1d48" width="32" height="32" alt="持續突擊天賦圖示"> [持續突擊](#zealot_hits_grant_stacking_damage)<br>- Sustained Assault | <ul><li>近戰命中增加 4% 近戰傷害，持續 5 秒，最多 5 層。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c3395dd2-63a2-430a-9eec-fb9ecd995308" width="32" height="32" alt="堅韌信仰天賦圖示"> [堅韌信仰](#zealot_crits_reduce_toughness_damage)<br>- Enduring Faith | <ul><li>爆擊命中後，韌性受到的傷害降低 40%，持續 4 秒。</li></ul> | 技能 |
 
 ---
 
@@ -66,5 +67,20 @@
 - **傷害算例**：沒有其他加成，3 層使 100 × (1 + 3 × 4%) = 112 點；滿層為 120 點。原有同階段 25% 加成時，滿層則為 100 × (1 + 25% + 20%) = 145 點。
 
 [詳細資料](TALENTS%20Zealot/zealot_hits_grant_stacking_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_crits_reduce_toughness_damage"></a>
+### 堅韌信仰(Enduring Faith)
+
+<img src="https://github.com/user-attachments/assets/c3395dd2-63a2-430a-9eec-fb9ecd995308" width="72" height="72" alt="堅韌信仰天賦圖示">
+
+- **運作方式**：爆擊命中後，韌性受到的傷害降低 40%，持續 4 秒；近戰與遠程爆擊都可觸發。
+
+- **刷新方式**：再次爆擊命中會刷新 4 秒，不疊加多份減傷。
+
+- **減傷算例**：只計此效果，原有 100 點韌性傷害變成 100 × 0.6 = 60 點。若另有獨立的 10% 韌性減傷，則為 100 × 0.6 × 0.9 = 54 點，共降低 46%；這不是生命減傷。
+
+[詳細資料](TALENTS%20Zealot/zealot_crits_reduce_toughness_damage.md) · [返回目錄](#talent-index)
 
 ---
