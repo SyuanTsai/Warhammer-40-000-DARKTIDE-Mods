@@ -15,6 +15,7 @@
 | [惡棍](#broker_coherency_melee_damage) | 未見明確矛盾 |
 | [無政府主義者](#broker_coherency_anarchist) | 未見明確矛盾 |
 | [強化亡命之徒](#broker_ability_focus_improved) | 未見明確中英矛盾 |
+| [凝聚殺意](#broker_ability_punk_rage_sub_1) | 未見明確中英矛盾 |
 | [專注凝神](#broker_ability_focus_sub_3) | 未見中英翻譯差異（觸發條件由程式補充） |
 | [精準獵殺](#broker_ability_focus_sub_2) | 未見明確中英矛盾 |
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
@@ -113,6 +114,13 @@
 - 描述鍵：`loc_talent_broker_ability_focus_improved_desc`；hash：`a1148a57`。
 - 結論：未見明確中英矛盾。繁中與英文都描述遠程攻擊視同閃避、衝刺免耗耐力並加速、近距離標記與遠程擊殺延長；固定版本設定值與計時邏輯相符。針槍毒素的額外追蹤條件是程式補充，原文省略不作勘誤。
 - [原始碼推導與限制](broker_ability_focus_improved.md)。
+
+<a id="broker_ability_punk_rage_sub_1"></a>
+## 凝聚殺意(Channelled Aggression)
+
+- 描述鍵：`loc_talent_broker_ability_punk_rage_sub_1_desc_02`；hash：`472cc8e5`。
+- 結論：未見明確中英矛盾。繁中與英文都將效果限制在怒火期間的近戰重攻擊，並描述撕裂；設定及傷害計算的適用條件一致。設定內另有0.5進度值，但不是原文翻譯差異。
+- [原始碼推導與限制](broker_ability_punk_rage_sub_1.md)。
 
 <a id="broker_ability_focus_sub_3"></a>
 ## 專注凝神(Focused Resolve)

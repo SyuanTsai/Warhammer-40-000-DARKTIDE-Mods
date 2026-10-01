@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/7fc85ba0-f7e6-4aba-a966-638511f2c713" width="32" height="32" alt="惡棍天賦圖示"> [惡棍](#broker_coherency_melee_damage)<br>- Ruffian | <ul><li>你與協同中的隊友，近戰傷害增加 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="32" height="32" alt="無政府主義者天賦圖示"> [無政府主義者](#broker_coherency_anarchist)<br>- Anarchist | <ul><li>你與協同中的隊友，爆擊機率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7" width="32" height="32" alt="強化亡命之徒天賦圖示"> [強化亡命之徒](#broker_ability_focus_improved)<br>- Enhanced Desperado | <ul><li>啟動後自動切換並裝填遠程武器，進入 10 秒專注狀態；此時遠程攻擊視同成功閃避，衝刺不耗耐力，衝刺速度加算 +20%。</li><li>標示 12.5 公尺內可標記的敵人；以遠程武器近距離擊殺標記目標可延長狀態，初始每次 +1 秒，經過 20 秒後延長量逐段縮小。</li><li>基礎冷卻 45 秒；狀態存續期間自然充能暫停，狀態結束後才恢復。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/db7fee2b-9e46-49f1-a0ac-28cd6cea424f" width="32" height="32" alt="凝聚殺意天賦圖示"> [凝聚殺意](#broker_ability_punk_rage_sub_1)<br>- Channelled Aggression | <ul><li>怒火狀態期間，近戰重攻擊獲得加算 +25% 撕裂修正，作用於護甲穿透計算。</li><li>此效果檢查的是近戰重攻擊；撕裂修正不等於直接增加 25% 傷害。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/74d4304b-23f7-4666-879b-62c727596b69" width="32" height="32" alt="專注凝神天賦圖示"> [專注凝神](#broker_ability_focus_sub_3)<br>- Focused Resolve | <ul><li>專注期間的近距離遠程擊殺可恢復技能冷卻：一般擊殺 0.5 秒，精英或專家擊殺 1 秒；每次專注最多恢復 5 秒。</li><li>按 45 秒基礎冷卻及每秒自然充能 1 計，恢復至上限相當於最多補回 5 秒資源；不計其他修正，專注結束後自然充能剩 40 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="精準獵殺天賦圖示"> [精準獵殺](#broker_ability_focus_sub_2)<br>- Pick Your Targets | <ul><li>專注期間遠程攻擊加算 +15% 撕裂修正；近距離遠程擊殺每次另疊 3% 遠程傷害，最多 5 層（+15%），每層持續 3 秒並可由新擊殺刷新。</li><li>此撕裂加成作用於護甲計算，擊殺疊層是遠程傷害加算；只計滿層效果時，基礎100點遠程傷害變為115點。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
@@ -187,6 +188,21 @@
 - **彈藥與冷卻**：狀態期間重新裝填不扣彈藥儲備；基礎冷卻 45 秒的自然充能在狀態結束後才開始恢復，延長的狀態時間也會延後冷卻恢復。 結束時，會依剩餘備彈重新結算彈匣；狀態內的免費子彈不會整匣保留。
 
 [詳細資料](TALENTS%20Scum/broker_ability_focus_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_ability_punk_rage_sub_1"></a>
+### 凝聚殺意(Channelled Aggression)
+
+<img src="https://github.com/user-attachments/assets/db7fee2b-9e46-49f1-a0ac-28cd6cea424f" width="72" height="72" alt="凝聚殺意天賦圖示">
+
+- **生效攻擊**：怒火狀態期間，近戰重攻擊附加 +25% 撕裂修正。
+
+- **效果解讀**：撕裂影響攻擊穿透護甲時使用的計算；它不是傷害乘以 1.25，也不會套用到輕攻擊或遠程攻擊。
+
+- **護甲算例**：假設原本護甲傷害倍率為 0.5，且該護甲完整接受這項撕裂，會變成 0.5 + 0.25 = 0.75；同一筆護甲前 100 點傷害由 50 變成 75。不同護甲與武器原有穿透力，會改變實際增幅。
+
+[詳細資料](TALENTS%20Scum/broker_ability_punk_rage_sub_1.md) · [返回目錄](#talent-index)
 
 ---
 
