@@ -9,6 +9,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/ea712cab-0dd4-47fa-a2c5-98edb7e41783" width="32" height="32" alt="爆限超載天賦圖示"> [爆限超載](#ogryn_leadbelcher_no_ammo_chance)<br>- Burst Limiter Override | <ul><li>遠程攻擊有 15% 基礎機率觸發幸運子彈，觸發的射擊不消耗彈藥。</li><li>遠程擊殺每層增加 2% 遠程傷害，最多 10 層；加層時刷新 10 秒期限。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9436a125-4e9f-4655-ae8f-4975db2f4af1" width="32" height="32" alt="麻木天賦圖示"> [麻木](#ogryn_carapace_armor)<br>- Feel No Pain | <ul><li>開始時有 10 層麻木；每層增加韌性恢復，並使韌性所受傷害再乘以 0.97。</li><li>受到有效傷害時最多每秒失去一層；未滿層時每隔 2 秒恢復一層。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/6ad5a8ad-f1c2-4c43-997a-02b89543ebd9" width="32" height="32" alt="重拳出擊天賦圖示"> [重拳出擊](#ogryn_passive_heavy_hitter)<br>- Heavy Hitter | <ul><li>近戰命中累積重拳出擊：一般命中增加 1 層，重擊命中增加 2 層。</li><li>每層增加 3% 近戰傷害，最多 8 層；新增層數會刷新 7.5 秒期限。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c" width="32" height="32" alt="痛楚爆發天賦圖示"> [痛楚爆發](#ogryn_carapace_armor_trigger_on_zero_stacks)<br>- Pained Outburst | <ul><li>麻木失去一層後降至 4 層或更低時，會擊退附近敵人並恢復最大韌性的 50%。</li><li>此效果每 30 秒最多觸發一次；擊退爆發不造成直接傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3d442f9a-0143-43d7-a6e2-10a5d6b8a9f8" width="32" height="32" alt="最強壯！天賦圖示"> [最強壯！](#ogryn_carapace_armor_add_stack_on_push)<br>- Strongest! | <ul><li>推搡至少一名敵人時，麻木恢復 1 層。</li><li>麻木最多 10 層；一次推搡推中多人也只恢復 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d6e55419-0e35-49cc-9bd6-163bdff037d4" width="32" height="32" alt="最堅韌！天賦圖示"> [最堅韌！](#ogryn_carapace_armor_more_toughness)<br>- Toughest! | <ul><li>「最堅韌！」讓麻木每層額外增加 2.5% 韌性恢復量。</li><li>與麻木本身每層 3% 相加；滿 10 層合計增加 55%。</li></ul> | 鑰石 |
@@ -108,6 +109,21 @@
 - **倒地時**：倒地會清除目前麻木層數，之後再逐層恢復。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_carapace_armor.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_passive_heavy_hitter"></a>
+### 重拳出擊(Heavy Hitter)
+
+<img src="https://github.com/user-attachments/assets/6ad5a8ad-f1c2-4c43-997a-02b89543ebd9" width="72" height="72" alt="重拳出擊天賦圖示">
+
+- **累積條件**：近戰命中增加層數；推搡不計，同一揮擊順劈到的後續目標不會重複增加層數。
+
+- **層數與傷害**：一般命中增加 1 層，重擊命中增加 2 層；最多 8 層，每層增加 3% 近戰傷害，滿層增加 24%。
+
+- **刷新與算例**：每次新增層數都會刷新 7.5 秒期限。4 次一般命中可增加 12%；滿 8 層時，基礎近戰傷害 100 變成 100 × (1 + 24%) = 124。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_passive_heavy_hitter.md) · [返回目錄](#talent-index)
 
 ---
 
