@@ -40,6 +40,7 @@
 | [渴求關注](#ogryn_blocking_ranged_taunts) | 未見明確矛盾 |
 | [為了小子們](#ogryn_protect_allies) | 未見明確矛盾 |
 | [頭腦簡單](#ogryn_corruption_resistance) | 未見明確矛盾 |
+| [專注鬥士](#ogryn_melee_attacks_give_mtdr) | 跨來源待同版核對 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -268,3 +269,10 @@
 - 描述鍵：`loc_talent_ogryn_corruption_resistance_desc`；hash：`ca230578`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_corruption_resistance.md)。
+
+<a id="ogryn_melee_attacks_give_mtdr"></a>
+## 專注鬥士(Focused Fighter)
+
+- 描述鍵：`loc_talent_ogryn_melee_attacks_give_mtdr_desc`；hash：`7ced0743`。
+- 結論：跨來源待同版核對。中英都指受近戰傷害清層；此SHA的全隊事件沒有本人篩選，可能因隊友受擊也清除。非單獨繁中誤譯，需同版實測。
+- [原始碼推導與限制](ogryn_melee_attacks_give_mtdr.md)。

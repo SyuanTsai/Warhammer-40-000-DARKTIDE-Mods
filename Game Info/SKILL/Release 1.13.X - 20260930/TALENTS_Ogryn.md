@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/119478f3-6425-4e96-9f26-e0df95a4bf1e" width="32" height="32" alt="渴求關注天賦圖示"> [渴求關注](#ogryn_blocking_ranged_taunts)<br>- Attention Seeker | <ul><li>格擋敵人攻擊或推擊敵人，嘲諷該敵人 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d61a8184-294b-4ade-9847-3c5241828792" width="32" height="32" alt="為了小子們天賦圖示"> [為了小子們](#ogryn_protect_allies)<br>- For the Lil'Uns | <ul><li>隊友韌性破裂後，提高 10% 威力並獲得 25% 韌性減傷，持續 10 秒。</li><li>隊友倒地後，提高 25% 扶起速度並免疫暈眩，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c5cc14b1-1227-4449-a1d9-de912e048e6e" width="32" height="32" alt="頭腦簡單天賦圖示"> [頭腦簡單](#ogryn_corruption_resistance)<br>- Simple Minded | <ul><li>受到的腐敗減少 40%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/fca0827b-6dac-4c44-b92e-8aba309ff4ca" width="32" height="32" alt="專注鬥士天賦圖示"> [專注鬥士](#ogryn_melee_attacks_give_mtdr)<br>- Focused Fighter | <ul><li>每次近戰揮擊命中後獲得 4% 近戰減傷，最多 5 層。</li></ul> | 技能 |
 
 ---
 
@@ -522,5 +523,20 @@
 - **腐敗算例**：原本增加 20 點腐敗，變成 20 × 0.6 = 12 點；若另有獨立 20% 腐敗減免，則為 20 × 0.6 × 0.8 = 9.6 點。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_corruption_resistance.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_melee_attacks_give_mtdr"></a>
+### 專注鬥士(Focused Fighter)
+
+<img src="https://github.com/user-attachments/assets/fca0827b-6dac-4c44-b92e-8aba309ff4ca" width="72" height="72" alt="專注鬥士天賦圖示">
+
+- **獲得層數**：每次近戰揮擊至少命中一名敵人，便增加一層；同一揮擊打中多人仍只增加一層，最多 5 層。
+
+- **減傷算例**：每層乘上 0.96，5 層時為 100 × 0.96⁵ ≈ 81.54 點，合計約減少 18.46%，不是直接減少 20%。
+
+- **移除方式**：層數沒有固定倒數；受到近戰傷害後清除。此減傷只影響近戰傷害，不會降低遠程傷害。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_melee_attacks_give_mtdr.md) · [返回目錄](#talent-index)
 
 ---
