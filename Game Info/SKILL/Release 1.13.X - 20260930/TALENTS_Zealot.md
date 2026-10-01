@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/79a0a582-a493-49eb-a470-ab7ed7e7f782" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fb4eb2d4-1dee-4596-8262-2c99311be059" width="32" height="32" alt="泰拉之音天賦圖示"> [泰拉之音](#zealot_toughness_while_shooting)<br>- The Voice of Terra | <ul><li>射擊期間每秒恢復 10% 最大韌性，停火後再持續 0.5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0849a882-e966-43d8-8786-554a7a657ee2" width="32" height="32" alt="恢復信仰天賦圖示"> [恢復信仰](#zealot_heal_part_of_damage_taken)<br>- Restoring Faith | <ul><li>生命受傷後，逐步恢復該次傷害的 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/ba989f49-6c6c-4457-bc33-f09ab8342c1f" width="32" height="32" alt="為了帝皇天賦圖示"> [為了帝皇](#zealot_reduced_damage_on_wound)<br>- Bleed for the Emperor | <ul><li>單次生命傷害若會跨過下一個傷口分界，該次生命傷害降低 40%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -143,6 +144,21 @@
 - **恢復上限**：只能補回可治療的生命缺額，不能清除腐敗占用的生命上限。
 
 [詳細資料](TALENTS%20Zealot/zealot_heal_part_of_damage_taken.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_reduced_damage_on_wound"></a>
+### 為了帝皇(Bleed for the Emperor)
+
+<img src="https://github.com/user-attachments/assets/ba989f49-6c6c-4457-bc33-f09ab8342c1f" width="72" height="72" alt="為了帝皇天賦圖示">
+
+- **運作方式**：單次生命傷害若會讓生命值低於下一個傷口分界，該次生命傷害降低 40%；減傷套用整次生命傷害，而非只套用超過分界的部分。
+
+- **傷害算例**：最大生命 200、共 4 格傷口，每格 50。現在有 120 點生命，下一條分界是 100；原本 30 點傷害會跨過分界，因此變成 30 × 0.6 = 18 點，受擊後剩 102 點。
+
+- **門檻例外**：同一情況下若恰好受到 20 點生命傷害，只會降到 100 點，沒有低於分界，因此不觸發這項減傷。
+
+[詳細資料](TALENTS%20Zealot/zealot_reduced_damage_on_wound.md) · [返回目錄](#talent-index)
 
 ---
 

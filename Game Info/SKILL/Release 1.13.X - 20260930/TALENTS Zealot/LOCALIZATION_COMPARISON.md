@@ -17,6 +17,7 @@
 | [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [泰拉之音](#zealot_toughness_while_shooting) | 未見明確矛盾 |
 | [恢復信仰](#zealot_heal_part_of_damage_taken) | 未見明確矛盾 |
+| [為了帝皇](#zealot_reduced_damage_on_wound) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_4) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
@@ -81,6 +82,13 @@
 - 描述鍵：`loc_talent_zealot_heal_damage_taken_desc`；hash：`c39c8d71`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_heal_part_of_damage_taken.md)。
+
+<a id="zealot_reduced_damage_on_wound"></a>
+## 為了帝皇(Bleed for the Emperor)
+
+- 描述鍵：`loc_talent_zealot_3_tier_3_ability_2_description`；hash：`4cc48983`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_reduced_damage_on_wound.md)。
 
 <a id="base_melee_damage_node_buff_medium_4"></a>
 ## 近戰增幅(Melee Damage Boost)
