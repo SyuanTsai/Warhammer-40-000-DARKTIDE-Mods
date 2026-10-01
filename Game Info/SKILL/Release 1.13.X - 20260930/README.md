@@ -3,7 +3,8 @@
 ## 文件入口
 
 - [老兵完整天賦說明](TALENTS_Veteran.md)
-- [靈能者準備清單與技術索引](TALENTS%20Psyker/README.md)
+- [靈能者完整天賦說明](TALENTS_Psyker.md)
+- [靈能者來源、公式與技術索引](TALENTS%20Psyker/README.md)
 - [角色基礎效果](TALENTS%20Veteran/BASE_EFFECTS.md)
 - [逐項原始碼、公式與待確認事項](TALENTS%20Veteran/README.md)
 - [未被當前技能樹直接使用的定義](TALENTS%20Veteran/UNUSED_DEFINITIONS.md)
@@ -37,12 +38,25 @@
 - 職業基礎清單另有 6 項未出現在可選節點的效果，已逐項補充；起始火力齊射同時屬基礎清單與技能樹，不重複計數。
 - 老兵定義檔共有 99 項，當前樹直接使用其中 74 項，另使用 3 個通用屬性定義。未直接用於樹的 25 項中，6 項為基礎效果、19 項另列排除清單；「未直接使用」不等於可在遊戲中選取，也不等於所有相關增益模板都無用途。
 
-## 靈能者準備結果
+## 靈能者完成範圍
 
-- 已定位 81 個可選節點：閃擊 9、光環 3、能力 15、鑰石 16、技能 38；另有 1 個無技能效果的起始佔位，不列入計數。
-- 81 項皆已對應固定版本的天賦定義，以及本機 Build 25492122 的繁中／英文描述鍵與 hash。另列 4 項職業基礎效果、16 項未直接出現在技能樹的定義。
-- 本次為準備盤點，逐技能機制驗收與玩家文件尚未完成；原文配對成功不代表完成勘誤。完整清單與後續核對重點見[靈能者技術索引](TALENTS%20Psyker/README.md)。
-- 沿用既有分支、老兵 POC、玩家格式與勘誤門檻；新增暫定詞彙已放入翻譯表，完整擷取文字繼續只保留本機。
+| 分類 | 完成／當前節點 |
+|---|---|
+| 閃擊與升級 | 9／9 |
+| 光環 | 3／3 |
+| 能力與升級 | 15／15 |
+| 鑰石與升級 | 16／16 |
+| 技能（含 3 個屬性節點） | 38／38 |
+| 合計 | **81／81** |
+
+- 81 個可選節點均有玩家條列說明、實際算例、來源子文件、圖示與獨立提交；零點起始佔位沒有技能效果，不列入計數。
+- 沿用老兵的主頁與附錄層次：`TALENTS_Psyker.md`、`TALENTS Psyker/README.md`、逐技能來源、基礎效果、未直接使用的定義、原文比對與百分比盤點。主頁目錄固定為「技能｜主要效果｜分類」，圖示在中文名稱前，英文另起一行。
+- 另完成 [4 項角色基礎效果](TALENTS%20Psyker/BASE_EFFECTS.md)；[16 項未直接使用的定義](TALENTS%20Psyker/UNUSED_DEFINITIONS.md)分開交代相關增益是否仍被當前技能引用，不將「未出現在技能樹」等同全面停用。
+- [原文比對](TALENTS%20Psyker/LOCALIZATION_COMPARISON.md)涵蓋 81 個本機 Build 25492122 繁中／英文描述鍵與 hash。7 項明確繁中誤譯附在對應技能下；5 項跨來源差異留待同版核對；省略公式、例外或時序不視為錯誤。
+- [81 項百分比與算例盤點](TALENTS%20Psyker/DAMAGE_PERCENTAGE_REVIEW.md)區分一般傷害、弱點／爆擊額外傷害、速度與時間、反噬百分點、逐層加算／乘算，以及韌性最大值與缺額。
+- 所有機制以固定公開 SHA 為證據。文字 Build 與公開來源尚未核成同版；尚未遊戲內測試。優先實測項目：動能撕裂者的高反噬限制、平息速度顯示值、擾動命運的選敵與遠程閃避宣告、靈能強化的蓄力顯示值，以及涅槃的尾刀條件。
+- 81 張 288×288 WebP 圖示保存於 [Media-Assets Issue #7](https://github.com/SyuanTsai/Media-Assets/issues/7)，主頁目錄 32×32、內文 72×72。附件已逐張以公開讀取比對位元組大小與 SHA-256；來源、取得日期與附件網址寫在各來源子文件。Games Lantern 只用於取得圖示。
+- 圖檔未提交 Git。遊戲完整擷取文字仍保留本機 `Extracted Text`，由 ignore 排除；未修改 MOD Lua 或遊戲原始碼。名稱沿用翻譯表，不以此宣稱是官方譯名。
 
 ## 老兵證據與驗證限制
 
@@ -187,3 +201,100 @@
 | 殺戮地帶 | `d922741ce13299cd2fd346d922398d1927d9edaf` |
 | 振奮擊倒 | `86e951997a9df1b8860b8805e4efbe1a7ec2d690` |
 | 優越情節 | `a093262838d19e8a16cde408be398a323bf0fbe8` |
+
+## 靈能者提交紀錄
+
+本次維持 `Feature/Skill-Reverse-engineering`。下表記錄各技能最後一次機制／文案提交；共用排版、附錄與提示詞另作文件提交。
+
+| 分類 | 技能／talent ID | 提交 |
+|---|---|---|
+| 閃擊 | [動能撕裂者](TALENTS%20Psyker/psyker_smite_on_hit.md) / `psyker_smite_on_hit` | `981a2451c17a8a76f28b8f79d1eb446caae573fd` |
+| 閃擊 | [顱腦崩裂](TALENTS%20Psyker/psyker_brain_burst_improved.md) / `psyker_brain_burst_improved` | `7ed93e0cbd06895fa0360f2b1fcee717716b2ec7` |
+| 閃擊 | [靈能攻擊](TALENTS%20Psyker/psyker_grenade_throwing_knives.md) / `psyker_grenade_throwing_knives` | `6308e929fc4d2df3873db0016f6915fe0d2732a0` |
+| 閃擊 | [乙太碎片](TALENTS%20Psyker/psyker_throwing_knives_piercing.md) / `psyker_throwing_knives_piercing` | `339aa289c72f85d2368916f7c03a94d20ee313ef` |
+| 閃擊 | [懲戒](TALENTS%20Psyker/psyker_grenade_chain_lightning.md) / `psyker_grenade_chain_lightning` | `1a08f49d970f285bd86fbed656f2f89a69bf392a` |
+| 閃擊 | [動能共鳴](TALENTS%20Psyker/psyker_ability_increase_brain_burst_speed.md) / `psyker_ability_increase_brain_burst_speed` | `9549b854fe99af411e561f198adb58bea8a8e9b1` |
+| 閃擊 | [迅捷碎片](TALENTS%20Psyker/psyker_throwing_knives_cast_speed.md) / `psyker_throwing_knives_cast_speed` | `003cc6e6d37b684fe60fc7278b92a1840f22a1f7` |
+| 閃擊 | [衰弱詛咒](TALENTS%20Psyker/psyker_chain_lightning_improved_target_buff.md) / `psyker_chain_lightning_improved_target_buff` | `926f249033b943e922e1c087f063f8c7d10adfef` |
+| 閃擊 | [蓄力打擊](TALENTS%20Psyker/psyker_chain_lightning_heavy_attacks.md) / `psyker_chain_lightning_heavy_attacks` | `a0c7670eefced015c490659a75fa8a5e53251ba5` |
+| 光環 | [動能釋放](TALENTS%20Psyker/psyker_aura_damage_vs_elites.md) / `psyker_aura_damage_vs_elites` | `8d8ec03f992c71cf2b9665c00453a22de3d7766b` |
+| 光環 | [先知之眼](TALENTS%20Psyker/psyker_cooldown_aura_improved.md) / `psyker_cooldown_aura_improved` | `80d351563bbb6da500e095d600fb0fead2f0493c` |
+| 光環 | [預兆](TALENTS%20Psyker/psyker_aura_crit_chance_aura.md) / `psyker_aura_crit_chance_aura` | `8f9f82d14967ef0febb6475488288f0ea2260cad` |
+| 能力 | [靈能尖嘯](TALENTS%20Psyker/psyker_shout_vent_warp_charge.md) / `psyker_shout_vent_warp_charge` | `fcd41795589fa31635a571fcaf2a3353dcc856ec` |
+| 能力 | [占卜者的注視](TALENTS%20Psyker/psyker_combat_ability_stance.md) / `psyker_combat_ability_stance` | `1f5a586651e2f640096c7edf1d396f7158f60450` |
+| 能力 | [平靜迸發](TALENTS%20Psyker/psyker_shout_reduces_warp_charge_generation.md) / `psyker_shout_reduces_warp_charge_generation` | `0113acbd0bceb52d0f409ed24e686e2632a2351a` |
+| 能力 | [亞空間爆發](TALENTS%20Psyker/psyker_discharge_damage_debuff.md) / `psyker_discharge_damage_debuff` | `a28ab02eb385e9d6fb2ef1965273caaaa816094d` |
+| 能力 | [蔓延火焰](TALENTS%20Psyker/psyker_warpfire_on_shout.md) / `psyker_warpfire_on_shout` | `13c68e7885759c862219fbcf6e3c3af92c624072` |
+| 能力 | [預知未來](TALENTS%20Psyker/psyker_overcharge_weakspot_kill_bonuses.md) / `psyker_overcharge_weakspot_kill_bonuses` | `2ce233939d3202d1fcc54832c9f17d873f9d89b6` |
+| 能力 | [亞空間加速](TALENTS%20Psyker/psyker_overcharge_increased_movement_speed.md) / `psyker_overcharge_increased_movement_speed` | `a0ac43a25fcc6b573b51feb131d93d331748779e` |
+| 能力 | [靈能學者光環](TALENTS%20Psyker/psyker_2_tier_3_name_2.md) / `psyker_2_tier_3_name_2` | `9d4138193805c7eacb53791b581fa480525fea72` |
+| 能力 | [現實錨點](TALENTS%20Psyker/psyker_overcharge_reduced_warp_charge.md) / `psyker_overcharge_reduced_warp_charge` | `b138392019137e3b3f75d5068e6e03d37d2be86a` |
+| 能力 | [念力護盾](TALENTS%20Psyker/psyker_combat_ability_force_field.md) / `psyker_combat_ability_force_field` | `905b9ad0ffc785f3396eeab39e0a68b8d3c08562` |
+| 能力 | [強化護盾](TALENTS%20Psyker/psyker_shield_extra_charge.md) / `psyker_shield_extra_charge` | `7f46e0c782494d1dafe06d22aa5f49c6be8ddb93` |
+| 能力 | [庇護所](TALENTS%20Psyker/psyker_boost_allies_in_sphere.md) / `psyker_boost_allies_in_sphere` | `908ecdec1a38363f2c5d93f36d0aab514ddacf9b` |
+| 能力 | [念力穹頂](TALENTS%20Psyker/psyker_sphere_shield.md) / `psyker_sphere_shield` | `86c2d8ed0ce2da89bdb3817ef5585816c967fba0` |
+| 能力 | [衰弱界線](TALENTS%20Psyker/psyker_shield_stun_passive.md) / `psyker_shield_stun_passive` | `362245ac06ce8dc2d8dd64124ee061a1c6c5fa02` |
+| 能力 | [亞空間突破](TALENTS%20Psyker/psyker_overcharge_stance_infinite_casting.md) / `psyker_overcharge_stance_infinite_casting` | `c4242739e8a8729142b09bc9cff26fd4604a5693` |
+| 鑰石 | [亞空間虹吸](TALENTS%20Psyker/psyker_passive_souls_from_elite_kills.md) / `psyker_passive_souls_from_elite_kills` | `c2f18e52c377c08106919130ed8f89d1c88d4e93` |
+| 鑰石 | [擾動命運](TALENTS%20Psyker/psyker_new_mark_passive.md) / `psyker_new_mark_passive` | `f11a4692b5db8160b29d87a9deda427dd68f2684` |
+| 鑰石 | [靈能強化](TALENTS%20Psyker/psyker_empowered_ability.md) / `psyker_empowered_ability` | `7329dd94cec73f236f39ad4aa43fe74f0c584031` |
+| 鑰石 | [平心靜氣](TALENTS%20Psyker/psyker_reduced_warp_charge_cost_and_venting_speed.md) / `psyker_reduced_warp_charge_cost_and_venting_speed` | `b395458008baf4bcf117cddac86abc9e4cad127e` |
+| 鑰石 | [吸精奪萃](TALENTS%20Psyker/psyker_toughness_on_soul.md) / `psyker_toughness_on_soul` | `4748836c0666a51762bf41c462e2de81b9fc6b2b` |
+| 鑰石 | [生物磁石](TALENTS%20Psyker/psyker_empowered_grenades_passive_improved.md) / `psyker_empowered_grenades_passive_improved` | `bb8a22930a0149ed5ad36bdc29e505627105a34f` |
+| 鑰石 | [吸血閃電](TALENTS%20Psyker/psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md) / `psyker_empowered_chain_lightnings_replenish_toughness_to_allies` | `e603032c272e28d9f16c59a5ac7260c02fed2c11` |
+| 鑰石 | [吞靈強擊](TALENTS%20Psyker/psyker_empowered_ability_on_elite_kills.md) / `psyker_empowered_ability_on_elite_kills` | `54abdeab251cf168c8ba0d6b0ebc67a5eae67c91` |
+| 鑰石 | [完美主義](TALENTS%20Psyker/psyker_mark_increased_max_stacks.md) / `psyker_mark_increased_max_stacks` | `758457cba8b91b4a94ed88f13727c5faec872147` |
+| 鑰石 | [盜竊天命](TALENTS%20Psyker/psyker_mark_kills_can_vent.md) / `psyker_mark_kills_can_vent` | `9067df90183081cf94d84f0ffae17e43065d59dc` |
+| 鑰石 | [持久影響](TALENTS%20Psyker/psyker_mark_increased_duration.md) / `psyker_mark_increased_duration` | `f02e87133237723486f8fc489497a38d1a91a7b3` |
+| 鑰石 | [充能完畢](TALENTS%20Psyker/psyker_empowered_grenades_increased_max_stacks.md) / `psyker_empowered_grenades_increased_max_stacks` | `a26fca52a83dcbaa8c7610f93789701c2ba15d85` |
+| 鑰石 | [涅槃](TALENTS%20Psyker/psyker_warpfire_generate_souls.md) / `psyker_warpfire_generate_souls` | `a7fe60f2ae52b053a6db36e4bac9b606eabb0fbb` |
+| 鑰石 | [靈能吸血鬼](TALENTS%20Psyker/psyker_aura_souls_on_kill.md) / `psyker_aura_souls_on_kill` | `d97dea4788393a7f77cfa33a73d18b9cad8f931a` |
+| 鑰石 | [亞空間電池](TALENTS%20Psyker/psyker_increased_max_souls.md) / `psyker_increased_max_souls` | `bb72f4d9c11afff1e9614aa9de4f4e7042e3cc4d` |
+| 鑰石 | [殘忍命運](TALENTS%20Psyker/psyker_mark_weakspot_kills.md) / `psyker_mark_weakspot_kills` | `fcd10a5bc325db344f1f732f0abff126b84b815c` |
+| 技能 | [靈魂竊賊](TALENTS%20Psyker/psyker_toughness_on_warp_kill.md) / `psyker_toughness_on_warp_kill` | `92f87ba8f9cdc9c54e3b59b4029ec4ad41166635` |
+| 技能 | [心如止水](TALENTS%20Psyker/psyker_toughness_on_vent.md) / `psyker_toughness_on_vent` | `aa5253ba6bfdba0253697863fbd35d0c8bc8b66b` |
+| 技能 | [亞空間耗費](TALENTS%20Psyker/psyker_toughness_on_melee.md) / `psyker_toughness_on_melee` | `3396d4be0d4f45e672831a9fbdd9e09cdd605070` |
+| 技能 | [堅毅](TALENTS%20Psyker/psyker_crits_regen_toughness_movement_speed.md) / `psyker_crits_regen_toughness_movement_speed` | `23bb5e29b6644b5a1879b12de464a3785e836f5e` |
+| 技能 | [險惡燃燒](TALENTS%20Psyker/psyker_elite_kills_add_warpfire.md) / `psyker_elite_kills_add_warpfire` | `0e2589a51f7564bf73007ce3e1500c9e81f8012b` |
+| 技能 | [戰鬥冥想](TALENTS%20Psyker/psyker_chance_to_vent_on_kill.md) / `psyker_chance_to_vent_on_kill` | `c678ee2ce14e925f27ef68a619056acd94b7d7e2` |
+| 技能 | [完美時機](TALENTS%20Psyker/psyker_crits_empower_next_attack.md) / `psyker_crits_empower_next_attack` | `a63e30e8fe6dc98dd094ecc0eeb61924c0858ddf` |
+| 技能 | [野火](TALENTS%20Psyker/psyker_spread_warpfire_on_kill.md) / `psyker_spread_warpfire_on_kill` | `6cbf666ed225d599a79ba73627b8867475d488b1` |
+| 技能 | [思維活躍](TALENTS%20Psyker/psyker_venting_improvements.md) / `psyker_venting_improvements` | `10264a91336f14e6b81e30605d908490ec5a54aa` |
+| 技能 | [惡意攻勢](TALENTS%20Psyker/psyker_kills_stack_other_weapon_damage.md) / `psyker_kills_stack_other_weapon_damage` | `b424a4c638c4176d818f8907f557ca305337f383` |
+| 技能 | [亞空間強化](TALENTS%20Psyker/psyker_warp_charge_reduces_toughness_damage_taken.md) / `psyker_warp_charge_reduces_toughness_damage_taken` | `f980bb20999df69fa4081db60cc6c998b3ab4912` |
+| 技能 | [看破](TALENTS%20Psyker/psyker_improved_dodge.md) / `psyker_improved_dodge` | `9847cd74c30c611d0e12c5583091a39f462f4813` |
+| 技能 | [反射閃避](TALENTS%20Psyker/psyker_dodge_after_crits.md) / `psyker_dodge_after_crits` | `83f25f69c86c0896be79ca34e5fc738951536860` |
+| 技能 | [穩固](TALENTS%20Psyker/psyker_increased_vent_speed.md) / `psyker_increased_vent_speed` | `6e5b28e036995e1973d8c962704a6bad2a3d5833` |
+| 技能 | [亞空間騎士](TALENTS%20Psyker/psyker_damage_based_on_warp_charge.md) / `psyker_damage_based_on_warp_charge` | `79f816e74454080897dced149c63bfc8a05faf0e` |
+| 技能 | [精確瞄準](TALENTS%20Psyker/psyker_guaranteed_crit_on_multiple_weakspot_hits.md) / `psyker_guaranteed_crit_on_multiple_weakspot_hits` | `8d917747cd06b31ce58b90f9d101ff5f544ddfe5` |
+| 技能 | [傀儡師](TALENTS%20Psyker/psyker_coherency_aura_size_increase.md) / `psyker_coherency_aura_size_increase` | `41810b749e44dd37df62e2a1ace66a7bff147a14` |
+| 技能 | [動能偏斜](TALENTS%20Psyker/psyker_block_costs_warp_charge.md) / `psyker_block_costs_warp_charge` | `fb091ca08189221d5cba84d118cccc619e1d129d` |
+| 技能 | [韌性增幅](TALENTS%20Psyker/base_toughness_node_buff_medium_5.md) / `base_toughness_node_buff_medium_5` | `af26d8281ad284f4e145e8a8f4fdf34a4538f28a` |
+| 技能 | [韌性增幅](TALENTS%20Psyker/base_toughness_node_buff_medium_4.md) / `base_toughness_node_buff_medium_4` | `4951d766b010799013c76d0ff61b4afba68ea81f` |
+| 技能 | [韌性減傷](TALENTS%20Psyker/base_toughness_damage_reduction_node_buff_medium_1.md) / `base_toughness_damage_reduction_node_buff_medium_1` | `03dc090d04010cc53434dcc3e45c5c494a4c6f7d` |
+| 技能 | [迅雷之勢](TALENTS%20Psyker/psyker_melee_attack_speed.md) / `psyker_melee_attack_speed` | `4505cc589572e32d8928ebd140b0842ffc39bb57` |
+| 技能 | [亞空間分裂](TALENTS%20Psyker/psyker_cleave_from_peril.md) / `psyker_cleave_from_peril` | `07cd63c5611d1872898fa3933a3262809894a893` |
+| 技能 | [汲魂者](TALENTS%20Psyker/psyker_killing_enemy_with_warpfire_boosts.md) / `psyker_killing_enemy_with_warpfire_boosts` | `6bb08010eced40fd59f0a5e463a87f748e81b03a` |
+| 技能 | [骨折後遺症](TALENTS%20Psyker/psyker_melee_weaving.md) / `psyker_melee_weaving` | `937dc356c387667bb984e72934f8ed7ad60f5a8e` |
+| 技能 | [脆弱心智](TALENTS%20Psyker/psyker_damage_vs_ogryns_and_monsters.md) / `psyker_damage_vs_ogryns_and_monsters` | `788079e3d02cbb4d62d2b8a171d7a23b10344f76` |
+| 技能 | [聚焦亞空間](TALENTS%20Psyker/psyker_increased_warp_damage.md) / `psyker_increased_warp_damage` | `d590fac8e825e437c1af61539aee864e02563cb7` |
+| 技能 | [反噬平衡](TALENTS%20Psyker/psyker_weapon_attacks_peril_equilibrium.md) / `psyker_weapon_attacks_peril_equilibrium` | `ce3d7b554ddcc99dfe16003208998945a2767c9c` |
+| 技能 | [武器在手，信心我有。](TALENTS%20Psyker/psyker_reload_speed_warp_charge.md) / `psyker_reload_speed_warp_charge` | `5d58aef2c0eb03bb22a6f7cd36885f9131253f9e` |
+| 技能 | [結晶意志](TALENTS%20Psyker/psyker_alternative_peril_explosion.md) / `psyker_alternative_peril_explosion` | `5ed73414c4f9718fc7751e95cdd6e22d2f86eeb5` |
+| 技能 | [靈能引導](TALENTS%20Psyker/psyker_force_staff_bonus.md) / `psyker_force_staff_bonus` | `c88ad3e13596de68bdecb2110d2fcdfe7dd65baa` |
+| 技能 | [亞空間震波](TALENTS%20Psyker/psyker_force_staff_quick_attack_bonus.md) / `psyker_force_staff_quick_attack_bonus` | `79fd18448871b4a0eadfecf926297d14b5c39ed8` |
+| 技能 | [如夢似幻](TALENTS%20Psyker/psyker_damage_to_peril_conversion.md) / `psyker_damage_to_peril_conversion` | `706d1d24222364ad3ee2bfdb6a03b82476aaf20d` |
+| 技能 | [無形專注](TALENTS%20Psyker/psyker_damage_resistance_stun_immunity.md) / `psyker_damage_resistance_stun_immunity` | `eaed27761d55f688bc783a8d52f4c66ffff8e91e` |
+| 技能 | [亞空間意志](TALENTS%20Psyker/psyker_warp_glass_cannon.md) / `psyker_warp_glass_cannon` | `a76117125bc177fc06111db949cf598ae5776967` |
+| 技能 | [亞空間幽魂](TALENTS%20Psyker/psyker_stat_mix.md) / `psyker_stat_mix` | `2012124709c92c0f2853b573b6774145ff3afe59` |
+| 技能 | [靈魂穿透](TALENTS%20Psyker/psyker_warp_attacks_rending.md) / `psyker_warp_attacks_rending` | `38c12229f3291f950e832eac33ec4fef34721c21` |
+| 技能 | [念力之握](TALENTS%20Psyker/psyker_increased_blitz_damage.md) / `psyker_increased_blitz_damage` | `3e851158d4d18f6bfd009771d15f7855cfe864a5` |
+
+### 靈能者基礎效果提交
+
+| talent ID | 提交 |
+|---|---|
+| `psyker_peril_passive` | `b2f38d205923f3e2f294f28412acae1363509776` |
+| `psyker_aura_ability_cooldown` | `a8eae6068280f220a29410ed4a2911caf7769171` |
+| `psyker_grenade_smite` | `8e214437ea00a8e7e30655994db274ba2710f3c8` |
+| `psyker_combat_ability_shout` | `9673f92ba66106990f7b9a84966f49a04e538ba7` |
