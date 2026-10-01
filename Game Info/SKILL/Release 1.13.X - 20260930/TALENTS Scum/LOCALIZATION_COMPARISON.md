@@ -49,6 +49,7 @@
 | [以小搏大](#broker_passive_damage_vs_elites_monsters) | 未見明確矛盾 |
 | [甜蜜點](#broker_passive_increased_weakspot_damage) | 未見明確矛盾 |
 | [延長藥效](#broker_passive_stimm_increased_duration) | 未見明確矛盾 |
+| [神佑興奮劑](#broker_passive_stimm_cleanse_on_kill) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -338,3 +339,10 @@
 - 描述鍵：`loc_talent_broker_passive_stimm_increased_duration_desc`；hash：`905ad5d9`。
 - 結論：未見明確矛盾。兩語都是興奮劑持續時間加5秒，未見矛盾。
 - [原始碼推導與限制](broker_passive_stimm_increased_duration.md)。
+
+<a id="broker_passive_stimm_cleanse_on_kill"></a>
+## 神佑興奮劑(Blessed Stimms)
+
+- 描述鍵：`loc_talent_broker_passive_stimm_cleanse_on_kill_desc`；hash：`565482d8`。
+- 結論：未見明確矛盾。兩語均稱每次用藥最多50%；固定程式最後一次可能跨門檻，屬程式與兩語共同文案的邊界落差，不列繁中誤譯。
+- [原始碼推導與限制](broker_passive_stimm_cleanse_on_kill.md)。

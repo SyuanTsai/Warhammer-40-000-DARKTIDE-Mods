@@ -47,6 +47,7 @@
 | <img src="https://github.com/user-attachments/assets/280d8610-ccf2-4be3-a05b-6f4a140f8b23" width="32" height="32" alt="以小搏大天賦圖示"> [以小搏大](#broker_passive_damage_vs_elites_monsters)<br>- Punching Above One's Weight | <ul><li>對精英及怪物的傷害增加 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bd4b828f-f439-429d-a682-c036774235f3" width="32" height="32" alt="甜蜜點天賦圖示"> [甜蜜點](#broker_passive_increased_weakspot_damage)<br>- The Sweet Spot | <ul><li>弱點命中的額外傷害部分增加 25%；實際總增幅依武器而變。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c19f893c-1a73-4111-b234-e675605b17b5" width="32" height="32" alt="延長藥效天賦圖示"> [延長藥效](#broker_passive_stimm_increased_duration)<br>- Long Lasting | <ul><li>興奮劑效果延長 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/6f1ead13-0e28-4983-86e7-44478bd76cdc" width="32" height="32" alt="神佑興奮劑天賦圖示"> [神佑興奮劑](#broker_passive_stimm_cleanse_on_kill)<br>- Blessed Stimms | <ul><li>興奮劑生效時，每次擊殺清除最大生命 1% 的腐敗；每次用藥以 50% 為停止門檻。</li></ul> | 技能 |
 
 ---
 
@@ -626,5 +627,20 @@
 - **適用限制**：延長具有持續效果的興奮劑；瞬間治療本身不會因此多治療 5 秒。
 
 [詳細資料](TALENTS%20Scum/broker_passive_stimm_increased_duration.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_stimm_cleanse_on_kill"></a>
+### 神佑興奮劑(Blessed Stimms)
+
+<img src="https://github.com/user-attachments/assets/6f1ead13-0e28-4983-86e7-44478bd76cdc" width="72" height="72" alt="神佑興奮劑天賦圖示">
+
+- **恢復方式**：使用興奮劑後，在藥效仍存在時，每次擊殺清除相當於最大生命 1% 的腐敗。腐敗已吞掉完整生命區段的部分不會被清除。
+
+- **恢復算例**：最大生命 200 時，每次最多清除 2 點；累計清除量達到 100 點後停止。每次重新用藥會重設本次累計量。
+
+- **門檻例外**：每次擊殺先檢查是否達 50%，再執行完整一次清除。若累計 99 點而本次清除 2 點，會到 101 點才停止，因此最後一次可能略超過標示門檻。
+
+[詳細資料](TALENTS%20Scum/broker_passive_stimm_cleanse_on_kill.md) · [返回目錄](#talent-index)
 
 ---

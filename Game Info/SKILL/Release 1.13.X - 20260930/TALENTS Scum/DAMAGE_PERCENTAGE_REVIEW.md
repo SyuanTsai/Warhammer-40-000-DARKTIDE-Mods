@@ -47,3 +47,4 @@
 | [以小搏大](broker_passive_damage_vs_elites_monsters.md) | 對精英及怪物的傷害增加 15%。；完整計算與適用限制見來源文件。 |
 | [甜蜜點](broker_passive_increased_weakspot_damage.md) | 弱點命中的額外傷害部分增加 25%；實際總增幅依武器而變。；完整計算與適用限制見來源文件。 |
 | [延長藥效](broker_passive_stimm_increased_duration.md) | 興奮劑效果延長 5 秒。；完整計算與適用限制見來源文件。 |
+| [神佑興奮劑](broker_passive_stimm_cleanse_on_kill.md) | 興奮劑生效時，每次擊殺清除最大生命 1% 的腐敗；每次用藥以 50% 為停止門檻。；完整計算與適用限制見來源文件。 |
