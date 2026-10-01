@@ -35,6 +35,7 @@
 | 技能 | [不拋棄不放棄(Leave No One Behind)](#veteran_movement_speed_towards_downed) | 面向需要援助的隊友時，移動速度增加 20%，並免疫暈眩。 |
 | 技能 | [裂擊(Rending Strikes)](#veteran_rending_bonus) | 武器獲得 10% 撕裂。 |
 | 技能 | [互惠互利(Reciprocity)](#veteran_dodging_grants_crit) | 每次成功閃避攻擊，爆擊率增加 5 個百分點，最多 5 層。 |
+| 技能 | [靈活接敵(Agile Engagement)](#veteran_kill_grants_damage_to_other_slot) | 近戰擊殺使遠程傷害增加 25%；遠程擊殺使近戰傷害增加 25%。 |
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
@@ -617,6 +618,24 @@
 - 原本爆擊率 10%，三層時為 `10% + 3 × 5% = 25%`；五層時為 `10% + 5 × 5% = 35%`。
 
 [詳細資料](TALENTS%20Veteran/veteran_dodging_grants_crit.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_kill_grants_damage_to_other_slot"></a>
+
+### 靈活接敵(Agile Engagement)
+
+<img src="https://github.com/user-attachments/assets/a7c3f5a6-113a-404a-873d-985481ec316b" width="72" height="72" alt="靈活接敵天賦圖示">
+
+- **近戰擊殺使遠程傷害增加 25%；遠程擊殺使近戰傷害增加 25%。**
+- 兩種加成各持續 **6 秒**，可同時存在；同類擊殺刷新對應時間，不疊層。
+
+#### 傷害與時間算例
+
+- 只計此加成，另一類攻擊基礎傷害 100：`100 × 1.25 = 125 傷害`。
+- 第 0 秒近戰擊殺、第 4 秒再次近戰擊殺：遠程增傷延長至約第 `4 + 6 = 10 秒`。
+
+[詳細資料](TALENTS%20Veteran/veteran_kill_grants_damage_to_other_slot.md) · [返回目錄](#talent-index)
 
 ---
 
