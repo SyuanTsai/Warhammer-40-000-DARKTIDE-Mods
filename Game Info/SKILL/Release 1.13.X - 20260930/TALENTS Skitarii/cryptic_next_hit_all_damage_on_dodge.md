@@ -1,0 +1,40 @@
+# 精準戰鬥探測儀(Precision Combat Augurs)：原始碼依據
+
+[返回玩家說明](../TALENTS_Skitarii.md#cryptic_next_hit_all_damage_on_dodge)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_next_hit_all_damage_on_dodge)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`cryptic_next_hit_all_damage_on_dodge`；名稱鍵：`loc_talent_cryptic_next_hit_damage_on_dodge`；描述鍵：`loc_talent_cryptic_next_attack_all_damage_on_dodge_desc`。
+- 節點：`node_43262e68-cd8e-491e-8bd5-f0b4164fa561`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- 成功閃避加max1的server_only_proc_buff，conditional melee_damage/ranged_damage0.15；on_shoot/on_sweep_finish置attack_boost_active=false並退出。沒有期限。
+
+## 原始碼依據
+
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：3766–3798](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L3766-L3798)
+- [scripts/utilities/attack/damage_calculation.lua：295–319](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L295-L319)
+- [scripts/settings/talent/talent_settings_cryptic.lua：667–669](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L667-L669)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：3754–3765](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L3754-L3765)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：2730–2745](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L2730-L2745)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：2455–2479](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L2455-L2479)
+
+## 算例條件與待確認事項
+
+- **傷害算例**：基礎傷害 100，生效時為 100 × 1.15 = 115；已有 25% 同階段加成時，100 × (1 + 25% + 15%) = 140。
+- 多彈丸/延遲命中的同幀傷害順序需實測；不能承諾每顆後到的投射物都保有加成。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`501926d3`。
+- 雙語Next Attack一致；補充揮空/開火消耗與單次儲存。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/default/cryptic_next_hit_all_damage_on_dodge.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
+- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_next_hit_all_damage_on_dodge:node_43262e68-cd8e-491e-8bd5-f0b4164fa561`。
+- 格式：image/webp；220×220；5950 bytes。
+- SHA-256：`218da164b6ca3bec71d5b5c84f04a6ab180d2e4e4272c44fed646fb38e3a239e`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935656030)；[公開圖片](https://github.com/user-attachments/assets/a18e19ec-6cad-4a2c-996b-6e7eddf47195)。附件已下載比對位元組與 SHA-256。

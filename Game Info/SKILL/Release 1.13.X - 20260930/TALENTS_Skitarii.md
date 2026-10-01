@@ -42,6 +42,7 @@
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="適應性戰鬥校準天賦圖示"> [適應性戰鬥校準](#cryptic_cleave_and_impact)<br>- Adaptive Combat Calibration | <ul><li>韌性高於 50%：近戰順劈提高 30%</li><li>韌性不高於 50%：近戰衝擊提高 30%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/53a3e76f-67fe-4d9e-bff5-7aafaee21065" width="32" height="32" alt="守護協議天賦圖示"> [守護協議](#cryptic_disabled_allies_defense)<br>- Protectorate Protocol | <ul><li>協同隊友失去行動能力時，受到傷害降低 25%</li><li>親自救援後，再給 6 秒減傷與一般硬直免疫</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0bbe1f46-d58e-414d-9ab3-1c8ed0170a41" width="32" height="32" alt="數據感應協定天賦圖示"> [數據感應協定](#cryptic_ally_coherency_defenses)<br>- Data Sensor Protocol | <ul><li>你或協同隊友受到韌性傷害，受傷者恢復 25% 耐力</li><li>受到生命傷害則恢復 25% 韌性，兩類各冷卻 15 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/a18e19ec-6cad-4a2c-996b-6e7eddf47195" width="32" height="32" alt="精準戰鬥探測儀天賦圖示"> [精準戰鬥探測儀](#cryptic_next_hit_all_damage_on_dodge)<br>- Precision Combat Augurs | <ul><li>成功閃避後，下次近戰攻擊或射擊傷害提高 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/80106b42-e788-43cb-a07a-ee69f668002f" width="32" height="32" alt="電流爆發天賦圖示"> [電流爆發](#cryptic_electrocution_push)<br>- Voltaic Burst | <ul><li>推擊造成踉蹌時施加電擊</li><li>冷卻 12 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1c4ea759-440c-48dd-bc21-3bc8303683d5" width="32" height="32" alt="抗腐護符天賦圖示"> [抗腐護符](#cryptic_corruption_resistance_doom)<br>- Ablative Wards | <ul><li>受到的腐敗減少 90%</li><li>每 20 秒付出基準 1 點腐敗代價</li></ul> | 技能 |
 
@@ -594,6 +595,21 @@
 - 原文寫「當你或……盟友受到傷害時，盟友恢復……」。正確受益者是受到那次傷害的人：你受傷就恢復自己，隊友受傷就恢復該隊友，不是把恢復量轉給其他盟友。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_ally_coherency_defenses.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_next_hit_all_damage_on_dodge"></a>
+### 精準戰鬥探測儀(Precision Combat Augurs)
+
+<img src="https://github.com/user-attachments/assets/a18e19ec-6cad-4a2c-996b-6e7eddf47195" width="72" height="72" alt="精準戰鬥探測儀天賦圖示">
+
+- **觸發方式**：成功閃避敵人攻擊後，下一次近戰揮擊或射擊獲得 15% 傷害加成。
+
+- **消耗方式**：近戰揮擊結束或開火後消耗效果，即使沒有命中也會用掉；連續閃避不能儲存多次加成。
+
+- **傷害算例**：基礎傷害 100，生效時為 100 × 1.15 = 115；已有 25% 同階段加成時，100 × (1 + 25% + 15%) = 140。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_next_hit_all_damage_on_dodge.md) · [返回目錄](#talent-index)
 
 ---
 
