@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [死戰到底](#zealot_resist_death) | 未見明確矛盾 |
+| [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
 | [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
 | [背刺者](#zealot_backstab_damage) | 未見明確矛盾 |
 | [蔑視](#zealot_multi_hits_increase_damage) | 未見明確矛盾 |
@@ -61,6 +62,13 @@
 - 描述鍵：`loc_talent_zealot_resist_death_base_desc`；hash：`0da0b898`。
 - 結論：未見明確矛盾。繁中與英文都描述致命傷害觸發、無法殺死效果及冷卻；起算細節省略屬描述不完整。
 - [原始碼推導與限制](zealot_resist_death.md)。
+
+<a id="zealot_resist_death_ability"></a>
+## 狂熱朝聖者(Zealous Pilgrim)
+
+- 描述鍵：`loc_talent_zealot_resist_death_ability_offensive_desc`；hash：`ccea0bcc`。
+- 結論：未見明確矛盾。繁中與英文對使用技能、隱身/聖物起算時點及兩項增益的方向相符。
+- [原始碼推導與限制](zealot_resist_death_ability.md)。
 
 <a id="zealot_crits_apply_bleed"></a>
 ## 天災(Scourge)

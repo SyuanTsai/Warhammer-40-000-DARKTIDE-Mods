@@ -7,6 +7,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="死戰到底天賦圖示"> [死戰到底](#zealot_resist_death)<br>- Until Death | <ul><li>承受致命傷害時獲得 8 秒免死效果。</li><li>效果結束後冷卻 120 秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="狂熱朝聖者天賦圖示"> [狂熱朝聖者](#zealot_resist_death_ability)<br>- Zealous Pilgrim | <ul><li>使用戰鬥技能後獲得 4 秒免死效果。</li><li>隱身技能在退出隱身後生效；聖物技能在卸下聖物後生效。</li><li>無法殺死期間，傷害及攻擊速度各提高 10%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="天災天賦圖示"> [天災](#zealot_crits_apply_bleed)<br>- Scourge | <ul><li>近戰爆擊施加 2 層流血；攻擊流血敵人增加近戰爆擊率。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="背刺者天賦圖示"> [背刺者](#zealot_backstab_damage)<br>- Backstabber | <ul><li>近戰背刺與遠程側襲傷害增加 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/69a5f7ea-11bc-41ae-8758-86a14213a116" width="32" height="32" alt="蔑視天賦圖示"> [蔑視](#zealot_multi_hits_increase_damage)<br>- Disdain | <ul><li>上一次近戰揮擊每命中一名敵人，使下一次近戰傷害增加 5%，最多 25%。</li></ul> | 技能 |
@@ -67,6 +68,21 @@
 - **冷卻算例**：8 秒效果結束後，再冷卻 120 秒；第 0 秒觸發，約第 8 秒效果結束，約第 128 秒才再次可用。已處於其他免死效果時，不會再觸發本天賦。
 
 [詳細資料](TALENTS%20Zealot/zealot_resist_death.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_resist_death_ability"></a>
+### 狂熱朝聖者(Zealous Pilgrim)
+
+<img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="72" height="72" alt="狂熱朝聖者天賦圖示">
+
+- **觸發方式**：使用戰鬥技能可獲得 4 秒免死效果；隱身技能在隱身結束時開始，聖物技能在卸下聖物時開始。
+
+- **攻擊增益**：持有免死效果時，傷害與攻擊速度各提高 10%。
+
+- **傷害與速度算例**：只計這項增益，基礎 100 點傷害變成 100 × 1.1 = 110 點；受攻速影響的 1 秒動作變成 1 ÷ 1.1 ≈ 0.909 秒。其他同階段加成先相加。
+
+[詳細資料](TALENTS%20Zealot/zealot_resist_death_ability.md) · [返回目錄](#talent-index)
 
 ---
 
