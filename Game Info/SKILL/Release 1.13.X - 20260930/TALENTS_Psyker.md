@@ -26,6 +26,7 @@
 | <img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="32" height="32" alt="念力護盾天賦圖示"> [念力護盾](#psyker_combat_ability_force_field)<br>- Telekine Shield | <ul><li>展開護盾，阻擋敵方遠程攻擊</li><li>最長 17.5 秒；冷卻 40 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/72b10287-7ce1-47a1-a57f-a88c56c51f9f" width="32" height="32" alt="強化護盾天賦圖示"> [強化護盾](#psyker_shield_extra_charge)<br>- Bolstered Shield | <ul><li>念力護盾最多儲存 2 次</li><li>每次充能需 40 秒，逐次恢復</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0" width="32" height="32" alt="庇護所天賦圖示"> [庇護所](#psyker_boost_allies_in_sphere)<br>- Sanctuary | <ul><li>穹頂內每秒恢復 10% 最大韌性</li><li>消散時提供 50% 韌性減傷，持續 5 秒</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191" width="32" height="32" alt="衰弱界線天賦圖示"> [衰弱界線](#psyker_shield_stun_passive)<br>- Enervating Threshold | <ul><li>穿越護盾的敵人有 20% 機率被電擊</li><li>專家與巨獸必定觸發；專家會損傷護盾</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8" width="32" height="32" alt="亞空間突破天賦圖示"> [亞空間突破](#psyker_overcharge_stance_infinite_casting)<br>- Warp Unbound | <ul><li>注視結束後仍能免於反噬超載</li><li>保護持續 11.5 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
@@ -354,6 +355,21 @@
 - **恢復與減傷算例：**最大韌性 100 時，每秒恢復 100 × 10% = 10 點，3 秒最多恢復 30 點，以缺額為上限。減傷期間原本承受 40 點韌性傷害，變成 40 × 0.5 = 20 點。
 
 [詳細資料](TALENTS%20Psyker/psyker_boost_allies_in_sphere.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_shield_stun_passive"></a>
+### 衰弱界線(Enervating Threshold)
+
+<img src="https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191" width="72" height="72" alt="衰弱界線天賦圖示">
+
+- **運作方式：**敵人穿越你的念力護盾時，有 20% 機率遭電擊。專家敵人與巨獸會必定觸發，但實際能否中斷動作仍受敵人抗性影響。
+
+- **護盾消耗：**專家敵人觸發時也會損傷護盾，仍受護盾的 0.33 秒扣除間隔限制。
+
+- **機率算例：**一般敵人每次有效穿越的機率為 20%；100 次穿越的期望觸發次數為 100 × 20% = 20 次，並非每五次保證觸發一次。
+
+[詳細資料](TALENTS%20Psyker/psyker_shield_stun_passive.md) · [返回目錄](#talent-index)
 
 ---
 
