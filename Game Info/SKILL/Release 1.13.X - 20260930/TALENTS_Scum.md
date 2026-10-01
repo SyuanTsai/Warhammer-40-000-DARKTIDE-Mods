@@ -42,6 +42,7 @@
 | <img src="https://github.com/user-attachments/assets/28aafc63-bbd4-4097-a93f-3fb0d62f8710" width="32" height="32" alt="精準投毒天賦圖示"> [精準投毒](#broker_passive_reduced_damage_by_toxined)<br>- Targeted Toxin | <ul><li>你感染的敵人造成傷害降低 15%；怪物與指定頭目改為降低 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0d36baca-b919-457c-890e-535a0ce33236" width="32" height="32" alt="毒性再生天賦圖示"> [毒性再生](#broker_passive_replenish_toughness_while_toxined_enemies_in_proximity)<br>- Toxic Renewal | <ul><li>15 公尺內每名感染毒素的敵人，每秒恢復 1% 最大韌性，最多計 10 名。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/148db758-02d7-4855-9f45-badcabc7c8cf" width="32" height="32" alt="軍火商天賦圖示"> [軍火商](#broker_passive_extended_mag)<br>- Ammo Jack | <ul><li>彈匣容量增加 15%，結果無條件進位。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/d6795940-e616-410f-b56b-76593e8a12eb" width="32" height="32" alt="趁人之危天賦圖示"> [趁人之危](#broker_passive_damage_vs_heavy_staggered)<br>- Cheap Shots | <ul><li>對踉蹌敵人增傷 10%；中度或重度踉蹌改為 15%。</li></ul> | 技能 |
 
 ---
 
@@ -550,5 +551,18 @@
 - **作用範圍**：改變彈匣容量，不直接增加備用彈藥上限。其他同類容量加成先相加，再將結果無條件進位。
 
 [詳細資料](TALENTS%20Scum/broker_passive_extended_mag.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_damage_vs_heavy_staggered"></a>
+### 趁人之危(Cheap Shots)
+
+<img src="https://github.com/user-attachments/assets/d6795940-e616-410f-b56b-76593e8a12eb" width="72" height="72" alt="趁人之危天賦圖示">
+
+- **增傷方式**：敵人處於踉蹌判定時，傷害增加 10%；達到中度或重度踉蹌則共增加 15%，兩個數字不直接相加為 25%。
+
+- **傷害算例**：基礎 100 點，輕度踉蹌時為 110，中度或重度為 115；另有同階段 25% 增傷時，後者為 100 × (1 + 25% + 15%) = 140 點。
+
+[詳細資料](TALENTS%20Scum/broker_passive_damage_vs_heavy_staggered.md) · [返回目錄](#talent-index)
 
 ---
