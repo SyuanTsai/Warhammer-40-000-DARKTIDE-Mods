@@ -82,7 +82,7 @@
 | [靈能引導](psyker_force_staff_bonus.md) | 機制與公式待核對。 |
 | [亞空間震波](psyker_force_staff_quick_attack_bonus.md) | 機制與公式待核對。 |
 | [如夢似幻](psyker_damage_to_peril_conversion.md) | 機制與公式待核對。 |
-| [無形專注](psyker_damage_resistance_stun_immunity.md) | 機制與公式待核對。 |
+| [無形專注](psyker_damage_resistance_stun_immunity.md) | 受到的傷害減少 10%。；反噬達 97% 時免疫暈眩；降離門檻後保留 4 秒。；完整計算與適用限制見來源文件。 |
 | [亞空間意志](psyker_warp_glass_cannon.md) | 機制與公式待核對。 |
 | [亞空間幽魂](psyker_stat_mix.md) | 機制與公式待核對。 |
 | [靈魂穿透](psyker_warp_attacks_rending.md) | 機制與公式待核對。 |

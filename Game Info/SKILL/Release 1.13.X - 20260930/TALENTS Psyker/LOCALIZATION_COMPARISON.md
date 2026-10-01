@@ -84,7 +84,7 @@
 | [靈能引導](#psyker_force_staff_bonus) | 已配對；機制待核對 |
 | [亞空間震波](#psyker_force_staff_quick_attack_bonus) | 已配對；機制待核對 |
 | [如夢似幻](#psyker_damage_to_peril_conversion) | 已配對；機制待核對 |
-| [無形專注](#psyker_damage_resistance_stun_immunity) | 已配對；機制待核對 |
+| [無形專注](#psyker_damage_resistance_stun_immunity) | 未見明確矛盾 |
 | [亞空間意志](#psyker_warp_glass_cannon) | 已配對；機制待核對 |
 | [亞空間幽魂](#psyker_stat_mix) | 已配對；機制待核對 |
 | [靈魂穿透](#psyker_warp_attacks_rending) | 已配對；機制待核對 |
@@ -630,7 +630,7 @@
 ## 無形專注(Immaterial Focus)
 
 - 描述鍵：`loc_talent_psyker_damage_resistance_stun_immunity_desc`；hash：`c5294daa`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_damage_resistance_stun_immunity.md)。
 
 <a id="psyker_warp_glass_cannon"></a>

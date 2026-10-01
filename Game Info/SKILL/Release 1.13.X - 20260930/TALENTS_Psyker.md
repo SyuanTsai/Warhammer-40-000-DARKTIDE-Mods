@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/57a54ed7-4f34-449f-9f2d-eb401a97b51a" width="32" height="32" alt="韌性減傷天賦圖示"> [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1)<br>- Toughness Damage Reduction | <ul><li>韌性減傷增加 10 個百分點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c8b43c74-3790-440f-8610-db321e11da83" width="32" height="32" alt="亞空間分裂天賦圖示"> [亞空間分裂](#psyker_cleave_from_peril)<br>- Warp Splitting | <ul><li>依目前反噬增加傷害順劈能力，最高增加 100%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6b51b11f-eed5-45f3-b539-6b4502778099" width="32" height="32" alt="結晶意志天賦圖示"> [結晶意志](#psyker_alternative_peril_explosion)<br>- Crystalline Will | <ul><li>反噬爆炸傷害增加 100%，半徑增加 25%。</li><li>以移除一格傷痕代替通常的爆炸倒地；爆炸擊殺精英可免除此代價。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/288f8a4c-fee3-4e56-8e0b-b2419e2a115b" width="32" height="32" alt="無形專注天賦圖示"> [無形專注](#psyker_damage_resistance_stun_immunity)<br>- Immaterial Focus | <ul><li>受到的傷害減少 10%。</li><li>反噬達 97% 時免疫暈眩；降離門檻後保留 4 秒。</li></ul> | 技能 |
 
 ---
 
@@ -181,5 +182,18 @@
 - **傷害與範圍算例**：只比較這兩項修正，原本 100 點爆炸傷害變成 100 × 2 = 200 點；原爆炸半徑 10 公尺變成 10 × 1.25 = 12.5 公尺。實際傷害仍受距離衰減與敵人護甲影響。
 
 [詳細資料](TALENTS%20Psyker/psyker_alternative_peril_explosion.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_damage_resistance_stun_immunity"></a>
+### 無形專注(Immaterial Focus)
+
+<img src="https://github.com/user-attachments/assets/288f8a4c-fee3-4e56-8e0b-b2419e2a115b" width="72" height="72" alt="無形專注天賦圖示">
+
+- **運作方式**：受到的傷害減少 10%。反噬達 97% 時免疫暈眩；降到 97% 以下後，免疫效果再持續 4 秒。
+
+- **減傷算例**：只比較此減傷階段，100 點傷害變成 100 × 0.9 = 90 點。若另有獨立 20% 減傷，則為 100 × 0.8 × 0.9 = 72 點，合計減少 28%。
+
+[詳細資料](TALENTS%20Psyker/psyker_damage_resistance_stun_immunity.md) · [返回目錄](#talent-index)
 
 ---
