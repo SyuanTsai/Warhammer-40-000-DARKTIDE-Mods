@@ -11,6 +11,7 @@
 | 光環 | [抵近殺敵(Close and Kill)](#veteran_movement_speed_coherency) | 你與協同範圍內的隊友移動速度增加 7.5%。 |
 | 光環 | [火力小分隊(Fire Team)](#veteran_increased_damage_coherency) | 你與協同範圍內的隊友傷害增加 7.5%。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
+| 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
 | 技能 | [優越情節(Superiority Complex)](#veteran_increase_damage_vs_elites) | 增加對精英敵人的傷害 |
@@ -119,6 +120,23 @@
 ---
 
 ## 技能
+
+<a id="base_toughness_node_buff_medium_2"></a>
+
+### 韌性提升(Toughness Boost)
+
+<img src="https://github.com/user-attachments/assets/1ef34fb3-ac4e-47d1-b7c1-0d13f10e3173" width="72" height="72" alt="韌性提升天賦圖示">
+
+- **最大韌性增加 25 點。**
+
+#### 韌性算例
+
+- 未計百分比韌性加成時，最大韌性 100 變為 `100 + 25 = 125`。
+- 原先有 20% 最大韌性加成時，由 `100 × 1.2 = 120` 變為 `(100 + 25) × 1.2 = 150`。
+
+[詳細資料](TALENTS%20Veteran/base_toughness_node_buff_medium_2.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="veteran_ranged_power_out_of_melee"></a>
 
