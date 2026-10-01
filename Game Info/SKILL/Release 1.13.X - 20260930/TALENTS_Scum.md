@@ -89,6 +89,7 @@
 | <img src="https://github.com/user-attachments/assets/51c007e0-bed4-4759-a369-04ab37032369" width="32" height="32" alt="裝備財閥特殊裝備天賦圖示"> [裝備財閥特殊裝備](#broker_stimm_activation_talent)<br>- Equip Cartel Special | <ul><li>分配興奮劑配方後，裝備可自動恢復的專用興奮劑；配方共用 30 點額度。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="32" height="32" alt="激勵 I天賦圖示"> [激勵 I](#broker_stimm_celerity_1)<br>- Spur I | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="32" height="32" alt="激勵 II天賦圖示"> [激勵 II](#broker_stimm_celerity_2)<br>- Spur II | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/27832b4a-d52a-49bb-a87e-2a3cd7fa4371" width="32" height="32" alt="激勵 III天賦圖示"> [激勵 III](#broker_stimm_celerity_3)<br>- Spur III | <ul><li>攻擊速度增加 4%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
 
 ---
 
@@ -1362,5 +1363,24 @@
 - **攻速算例**：從激勵 I 選到本節點，共增加 8%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.08 ≈ 0.926 秒。
 
 [詳細資料](TALENTS%20Scum/broker_stimm_celerity_2.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_stimm_celerity_3"></a>
+### 激勵 III(Spur III)
+
+<img src="https://github.com/user-attachments/assets/27832b4a-d52a-49bb-a87e-2a3cd7fa4371" width="72" height="72" alt="激勵 III天賦圖示">
+
+- **配方成本**：3 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
+
+- **攻擊速度**：增加 4%，與其他攻速加成相加。
+
+- **耐力消耗**：本節點使耐力消耗乘以 0.85，即減少 15%。
+
+- **耐力算例**：原消耗 10 點，僅此項時變成 10 × 0.85 = 8.5 點；II、III、IV 都選取時為 10 × 0.85 × 0.85 × 0.8 = 5.78 點。
+
+- **攻速算例**：從激勵 I 選到本節點，共增加 12%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.12 ≈ 0.893 秒。
+
+[詳細資料](TALENTS%20Scum/broker_stimm_celerity_3.md) · [返回目錄](#talent-index)
 
 ---
