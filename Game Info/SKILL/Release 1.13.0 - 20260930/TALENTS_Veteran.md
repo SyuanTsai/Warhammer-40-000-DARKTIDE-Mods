@@ -8,6 +8,7 @@
 |---|---|---|
 | 閃擊 | [煙霧手雷(Smoke Grenade)](#veteran_smoke_grenade) | 投出煙霧手雷，約 1.5 秒後展開持續 15 秒的煙霧。 |
 | 閃擊 | [擲彈兵(Grenadier)](#veteran_extra_grenade) | 手雷攜帶上限增加 1 顆。 |
+| 閃擊 | [手雷專家(Grenade Tinkerer)](#veteran_improved_grenades) | 粉碎者破片手雷：爆炸傷害增加 25%，爆炸半徑增加 25%。 |
 | 閃擊 | [炸藥儲備(Demolition Stockpile)](#veteran_replenish_grenades) | 定期補回手雷 |
 | 光環 | [抵近殺敵(Close and Kill)](#veteran_movement_speed_coherency) | 你與協同範圍內的隊友移動速度增加 7.5%。 |
 | 光環 | [火力小分隊(Fire Team)](#veteran_increased_damage_coherency) | 你與協同範圍內的隊友傷害增加 7.5%。 |
@@ -71,6 +72,26 @@
 - 投擲 10 次，額外手雷的期望數為 `10 × 20% = 2 顆`；機率獨立判定，不保證每 5 次必定觸發。
 
 [詳細資料](TALENTS%20Veteran/veteran_extra_grenade.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_improved_grenades"></a>
+
+### 手雷專家(Grenade Tinkerer)
+
+<img src="https://github.com/user-attachments/assets/5179b403-3945-41a4-9c68-5278b6968c24" width="72" height="72" alt="手雷專家天賦圖示">
+
+- **粉碎者破片手雷：爆炸傷害增加 25%，爆炸半徑增加 25%。**
+- **穿甲手雷：爆炸傷害增加 75%。**
+- **煙霧手雷：煙霧持續時間增加 100%。**
+
+#### 強化算例
+
+- 只計此天賦，破片爆炸原本 500 傷害，變為 `500 × 1.25 = 625`；外圈半徑 `10 × 1.25 = 12.5 公尺`，中心區 `2 × 1.25 = 2.5 公尺`。
+- 穿甲爆炸原本 2,400 傷害，變為 `2,400 × 1.75 = 4,200`；煙霧由 `15 × 2 = 30 秒`。
+- 傷害仍受距離、護甲及其他加成影響；流血傷害不套用破片爆炸的 25% 加成。
+
+[詳細資料](TALENTS%20Veteran/veteran_improved_grenades.md) · [返回目錄](#talent-index)
 
 ---
 
