@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/53013aa9-f833-431c-8b85-3e548dbc318c" width="32" height="32" alt="堅毅天賦圖示"> [堅毅](#psyker_crits_regen_toughness_movement_speed)<br>- Mettle | <ul><li>爆擊命中後持續恢復韌性，並增加 5% 移動速度。</li><li>移動加成最多 3 層、持續 4 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/69bdf081-b37e-479b-a157-f6e047efcfda" width="32" height="32" alt="戰鬥冥想天賦圖示"> [戰鬥冥想](#psyker_chance_to_vent_on_kill)<br>- Battle Meditation | <ul><li>反噬產生量減少 10%。</li><li>擊殺有 10% 機率降低 10 個百分點反噬。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/3c19e5ea-ccab-46a3-9763-c8d4075c6332" width="32" height="32" alt="完美時機天賦圖示"> [完美時機](#psyker_crits_empower_next_attack)<br>- Perfect Timing | <ul><li>爆擊命中增加 3% 傷害，最多 5 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1561e519-2633-4a6f-af9f-fffe6a6c8a03" width="32" height="32" alt="傀儡師天賦圖示"> [傀儡師](#psyker_coherency_aura_size_increase)<br>- Puppet Master | <ul><li>協同範圍半徑增加 75%。</li></ul> | 技能 |
@@ -20,6 +21,21 @@
 ---
 
 ## 技能
+
+<a id="psyker_crits_regen_toughness_movement_speed"></a>
+### 堅毅(Mettle)
+
+<img src="https://github.com/user-attachments/assets/53013aa9-f833-431c-8b85-3e548dbc318c" width="72" height="72" alt="堅毅天賦圖示">
+
+- **觸發方式**：爆擊命中後，4 秒內恢復 10% 最大韌性，並增加 5% 移動速度。
+
+- **疊層與刷新**：移動速度最多 3 層，合計增加 15%；再次觸發重設 4 秒。韌性維持每秒恢復 2.5% 最大值，不隨移動速度層數倍增。
+
+- **恢復算例**：最大韌性 100、缺額足夠且無其他加成，持續 4 秒恢復 100 × 10% = 10 點；疊到 3 層仍每秒恢復 2.5 點，移動倍率則為 1 + 3 × 5% = 1.15。
+
+[詳細資料](TALENTS%20Psyker/psyker_crits_regen_toughness_movement_speed.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="psyker_chance_to_vent_on_kill"></a>
 ### 戰鬥冥想(Battle Meditation)

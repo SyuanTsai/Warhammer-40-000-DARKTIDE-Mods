@@ -54,7 +54,7 @@
 | [靈魂竊賊](#psyker_toughness_on_warp_kill) | 已配對；機制待核對 |
 | [心如止水](#psyker_toughness_on_vent) | 已配對；機制待核對 |
 | [亞空間耗費](#psyker_toughness_on_melee) | 已配對；機制待核對 |
-| [堅毅](#psyker_crits_regen_toughness_movement_speed) | 已配對；機制待核對 |
+| [堅毅](#psyker_crits_regen_toughness_movement_speed) | 未見明確矛盾 |
 | [險惡燃燒](#psyker_elite_kills_add_warpfire) | 已配對；機制待核對 |
 | [戰鬥冥想](#psyker_chance_to_vent_on_kill) | 未見明確矛盾 |
 | [完美時機](#psyker_crits_empower_next_attack) | 未見明確矛盾 |
@@ -416,7 +416,7 @@
 ## 堅毅(Mettle)
 
 - 描述鍵：`loc_talent_psyker_crits_regen_toughness_speed_description`；hash：`0da7190a`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。繁中與英文均將持續恢復和可疊層移速分段；補入「恢復速率不隨層數倍增」屬機制說明，不列錯誤。
 - [原始碼推導與限制](psyker_crits_regen_toughness_movement_speed.md)。
 
 <a id="psyker_elite_kills_add_warpfire"></a>
