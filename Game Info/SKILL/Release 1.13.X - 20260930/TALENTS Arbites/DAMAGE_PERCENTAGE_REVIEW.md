@@ -39,5 +39,6 @@
 | [街頭妙招](adamant_dodge_improvement.md) | 有效閃避次數增加 1 次；近戰閃避結束後的判定寬限延長 25%。；完整計算與適用限制見來源文件。 |
 | [巨獸獵人](adamant_monster_hunter.md) | 對歐格林與巨獸造成的傷害提高 20%。；完整計算與適用限制見來源文件。 |
 | [擊殺順序](adamant_increased_damage_to_high_health.md) | 對生命值高於 75% 的敵人，傷害提高 15%。；完整計算與適用限制見來源文件。 |
+| [秉賦為先](adamant_clip_size.md) | 彈匣容量提高 15%，容量向上取整數。；完整計算與適用限制見來源文件。 |
 | [惡徒退散](adamant_damage_vs_suppressed.md) | 對受壓制敵人的傷害提高 25%。；完整計算與適用限制見來源文件。 |
 | [正當手段](adamant_stacking_damage.md) | 攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。；完整計算與適用限制見來源文件。 |
