@@ -15,6 +15,7 @@
 | [惡棍](#broker_coherency_melee_damage) | 未見明確矛盾 |
 | [無政府主義者](#broker_coherency_anarchist) | 未見明確矛盾 |
 | [強化亡命之徒](#broker_ability_focus_improved) | 未見明確中英矛盾 |
+| [化學性依賴](#broker_ability_stimm_field) | 未見明確中英矛盾 |
 | [橫衝直撞！](#broker_ability_punk_rage) | 未見中英翻譯差異（壓制免疫未由程式證實） |
 | [熔爐怒吼](#broker_ability_punk_rage_sub_2) | 未見明確中英矛盾 |
 | [凝聚殺意](#broker_ability_punk_rage_sub_1) | 未見明確中英矛盾 |
@@ -119,6 +120,13 @@
 - 描述鍵：`loc_talent_broker_ability_focus_improved_desc`；hash：`a1148a57`。
 - 結論：未見明確中英矛盾。繁中與英文都描述遠程攻擊視同閃避、衝刺免耗耐力並加速、近距離標記與遠程擊殺延長；固定版本設定值與計時邏輯相符。針槍毒素的額外追蹤條件是程式補充，原文省略不作勘誤。
 - [原始碼推導與限制](broker_ability_focus_improved.md)。
+
+<a id="broker_ability_stimm_field"></a>
+## 化學性依賴(Stimm Supply)
+
+- 描述鍵：`loc_talent_broker_ability_stimm_field_desc_3`；hash：`81b45839`。
+- 結論：未見明確中英矛盾。繁中與英文都描述地面氣體場域、持續治療腐敗、腐敗免疫與分享已裝備興奮劑效果；設定 20 秒、0.25 秒間隔、每次 0.5 點與範圍觸發相符。冷卻暫停及裝備消耗細節是程式補充，不是原文矛盾。
+- [原始碼推導與限制](broker_ability_stimm_field.md)。
 
 <a id="broker_ability_punk_rage"></a>
 ## 橫衝直撞！(Rampage!)

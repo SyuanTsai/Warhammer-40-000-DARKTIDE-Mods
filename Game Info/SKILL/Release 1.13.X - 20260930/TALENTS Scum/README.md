@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 60／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 61／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -18,6 +18,7 @@
 | 光環 | [惡棍](broker_coherency_melee_damage.md) / `broker_coherency_melee_damage` | `node_5717014d-0da6-4d49-b43b-3c9233e6fb37` | 完成（核心靜態機制） |
 | 光環 | [無政府主義者](broker_coherency_anarchist.md) / `broker_coherency_anarchist` | `node_821e29e2-e6df-445f-817d-2f2d5c79c617` | 完成（核心靜態機制） |
 | 能力 | [強化亡命之徒](broker_ability_focus_improved.md) / `broker_ability_focus_improved` | `node_4fa187c3-c910-4e93-b982-cc2e68d2515b` | 完成（核心靜態機制） |
+| 能力 | [化學性依賴](broker_ability_stimm_field.md) / `broker_ability_stimm_field` | `node_e341cdcf-7254-4ac0-9f37-cb056b00d14d` | 完成（核心靜態機制） |
 | 能力 | [橫衝直撞！](broker_ability_punk_rage.md) / `broker_ability_punk_rage` | `node_a24b4ec0-aec0-45a1-b746-05dbd671e2e2` | 完成（核心靜態機制） |
 | 能力 | [熔爐怒吼](broker_ability_punk_rage_sub_2.md) / `broker_ability_punk_rage_sub_2` | `node_0625b695-b695-49f5-9050-551fbd7e9699` | 完成（核心靜態機制） |
 | 能力 | [凝聚殺意](broker_ability_punk_rage_sub_1.md) / `broker_ability_punk_rage_sub_1` | `node_4a01428d-790a-49d5-adbb-e910b4272cbe` | 完成（核心靜態機制） |
