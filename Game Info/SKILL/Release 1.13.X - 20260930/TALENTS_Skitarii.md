@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/dd369366-6fa1-4e92-bd7b-c92f5bf8023a" width="32" height="32" alt="電流超載天賦圖示"> [電流超載](#cryptic_discharge_toughness)<br>- Voltaic Overcharge | <ul><li>電流發射器每消耗一道充能，立即恢復最大韌性的25%；電流爆炸每命中一名存活敵人，再恢復最大韌性的1%。</li><li>恢復量會受韌性補充修正影響，並且不能超過當前缺少的韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/39f22717-a782-4201-b5b3-f63a166bedd1" width="32" height="32" alt="強化能量循環天賦圖示"> [強化能量循環](#cryptic_increased_passive_cooldown_regen)<br>- Augmented Power-Cycle | <ul><li>每秒額外恢復單道充能需求的1%電容量；依此電能發射器基準，回充速度由每秒1提高至1.5。</li><li>在沒有其他消耗或回充修正時，一道充能約33.3秒回滿，三道由空回滿約100秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/856a3399-5f26-40e1-988e-8960086a92c9" width="32" height="32" alt="削切協議天賦圖示"> [削切協議](#cryptic_dissector)<br>- Flensing Protocols | <ul><li>初始6層，每層傷害增加2.5%、韌性傷害減免2.5%；滿層各為15%。</li><li>受到生命或韌性傷害時失去1層，每秒最多一次；精英或專家擊殺補2層，並恢復最大韌性15%。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5" width="32" height="32" alt="極限電容天賦圖示"> [極限電容](#cryptic_redline)<br>- Redline Capacitors | <ul><li>每消耗或補回一份戰鬥技能充能，獲得5%韌性傷害減免與5%電容量自然恢復加成；最多4層。</li><li>新增層會重設12秒倒數，之後每12秒失去1層；戰鬥技能充能上限增加1份。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="能量載分配鏈路天賦圖示"> [能量載分配鏈路](#cryptic_crits_grant_tdr)<br>- Power Redistribution Uplink | <ul><li>爆擊命中後，3 秒內恢復 7.5% 韌性</li><li>期間承受的韌性傷害降低 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ea4be2ad-8b84-4e83-a056-993beed7b39c" width="32" height="32" alt="適應性戰鬥記憶體天賦圖示"> [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break)<br>- Adaptive Combat Engram | <ul><li>韌性耗盡後，減少 30% 承受傷害、持續 5 秒</li><li>效果結束後冷卻 15 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4738c3e6-2609-414c-9c00-f50fea4dcef3" width="32" height="32" alt="閃避伺服恢復天賦圖示"> [閃避伺服恢復](#cryptic_successful_dodge_stamina)<br>- Evasive Servo Recovery | <ul><li>成功閃避恢復 10% 耐力</li></ul> | 技能 |
@@ -181,6 +182,25 @@
 - **算例**：6層時受到一筆傷害會降為5層；1秒內再受傷不會再掉層，至少等1秒後的另一筆傷害才可再次移除。滿6層時，100點基礎攻擊傷害增加至115點；若同時承受100點原始韌性傷害，0.85倍率使實際韌性傷害為85點。擊殺精英時若只缺1層，只補1層，但仍恢復最大韌性15%。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_dissector.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_redline"></a>
+### 極限電容(Redline Capacitors)
+
+<img src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5" width="72" height="72" alt="極限電容天賦圖示">
+
+- **觸發方式**：戰鬥技能實際消耗或補回充能時，每份充能增加1層；一次消耗2份充能會增加2層，最多4層。
+
+- **每層效果**：電容量自然恢復速度每層提高5%，韌性傷害減免每層增加5%。滿4層時，原本每秒恢復單份電容量的2%，會變成2% × (1 + 20%) = 2.4%；原本100點韌性傷害變成100 × (1 − 20%) = 80點。
+
+- **持續時間**：每層效果維持12秒；新增加層會重設倒數。到達4層後再次觸發不會超過上限，但會刷新效果時間。沒有新觸發時，每12秒減少1層。
+
+- **充能上限**：戰鬥技能充能上限由3份提高至4份。
+
+- **恢復例外**：擊殺回充、弱點擊殺回充與「崇高意圖」的直接恢復量不會因這項加成提高。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_redline.md) · [返回目錄](#talent-index)
 
 ---
 

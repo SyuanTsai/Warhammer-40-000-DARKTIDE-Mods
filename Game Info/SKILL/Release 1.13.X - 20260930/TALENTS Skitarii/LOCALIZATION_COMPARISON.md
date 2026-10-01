@@ -15,6 +15,7 @@
 | [電流超載](#cryptic_discharge_toughness) | 未見明確矛盾 |
 | [強化能量循環](#cryptic_increased_passive_cooldown_regen) | 未見明確矛盾 |
 | [削切協議](#cryptic_dissector) | 未見明確矛盾；補充計算與限制 |
+| [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
 | [閃避伺服恢復](#cryptic_successful_dodge_stamina) | 未見明確矛盾 |
@@ -116,6 +117,13 @@
 - 描述鍵：`loc_talent_cryptic_dissector_desc`；hash：`3e2c62db`。
 - 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文都說明上限6層、每層傷害與韌性減傷2.5%、受傷每秒最多失1層、精英／專家擊殺補2層並回復15%韌性。固定版支持數值與觸發；啟用時從滿層開始，以及滿層擊殺仍回韌性，是UI未展開的實作細節，不屬誤譯。
 - [原始碼推導與限制](cryptic_dissector.md)。
+
+<a id="cryptic_redline"></a>
+## 極限電容(Redline Capacitors)
+
+- 描述鍵：`loc_talent_cryptic_redline_charge_stacking_clarified_desc`；hash：`22a7f709`。
+- 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文都說明每次取得／消耗充能、5%韌性減傷與電容量生成、12秒、上限4層及額外最大充能。固定版將每層具體落在5%韌性承傷倍率步進與戰鬥技能資源回充倍率；直接回復是否吃倍率由實際回復路徑決定。未發現明確誤譯，UI未逐項展開不列錯誤。
+- [原始碼推導與限制](cryptic_redline.md)。
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
