@@ -23,6 +23,7 @@
 | 技能 | [亡命之徒(Desperado)](#veteran_increased_melee_crit_chance_and_melee_finesse) | 近戰爆擊率增加 10 個百分點。 |
 | 技能 | [嗜血(Out for Blood)](#veteran_all_kills_replenish_toughness) | 每次擊殺額外恢復 5% 最大韌性。 |
 | 技能 | [遊擊者(Skirmisher)](#veteran_increase_damage_after_sprinting) | 衝刺或滑行時持續累積傷害加成，每層增加 6.25%，最多 4 層。 |
+| 技能 | [趁火打劫(Exploit Weakness)](#veteran_crits_apply_rending) | 近戰爆擊命中後，傷害增加 20%，持續 6 秒。 |
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
@@ -370,6 +371,24 @@
 - 只計此加成，基礎傷害 100：`100 × (1 + 4 × 6.25%) = 125 傷害`。
 
 [詳細資料](TALENTS%20Veteran/veteran_increase_damage_after_sprinting.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_crits_apply_rending"></a>
+
+### 趁火打劫(Exploit Weakness)
+
+<img src="https://github.com/user-attachments/assets/fd178238-be59-4c18-8631-12423f5506fb" width="72" height="72" alt="趁火打劫天賦圖示">
+
+- **近戰爆擊命中後，傷害增加 20%，持續 6 秒。**
+- 期間的近戰與遠程傷害均可受益；再次近戰爆擊會刷新時間，不累積加成。
+
+#### 傷害與持續時間算例
+
+- 基礎傷害 100、沒有其他傷害加成：`100 × 1.2 = 120 傷害`。
+- 第 4 秒再次觸發，持續至約第 `4 + 6 = 10 秒`。
+
+[詳細資料](TALENTS%20Veteran/veteran_crits_apply_rending.md) · [返回目錄](#talent-index)
 
 ---
 
