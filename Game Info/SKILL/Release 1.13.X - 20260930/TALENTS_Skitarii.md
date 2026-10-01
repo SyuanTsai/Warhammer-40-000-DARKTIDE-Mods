@@ -44,6 +44,7 @@
 | <img src="https://github.com/user-attachments/assets/e3f4e5a5-52c8-489e-a83f-3bf13c80eca8" width="32" height="32" alt="鍍鋅精密塗層天賦圖示"> [鍍鋅精密塗層](#cryptic_stun_dr_power)<br>- Galvanized Coating | <ul><li>常駐一般受擊硬直免疫與 15% 減傷</li><li>受到近戰傷害時消耗單份電容量的 7.5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="莫比亞導體天賦圖示"> [莫比亞導體](#cryptic_damage_on_ability)<br>- Moebian Conductor | <ul><li>啟動戰鬥能力後，傷害提高 15%、持續 10 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="適應性戰鬥校準天賦圖示"> [適應性戰鬥校準](#cryptic_cleave_and_impact)<br>- Adaptive Combat Calibration | <ul><li>韌性高於 50%：近戰順劈提高 30%</li><li>韌性不高於 50%：近戰衝擊提高 30%</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/f34040ff-ebd0-4f7e-b857-4557ccdee00c" width="32" height="32" alt="剩餘電流緩衝天賦圖示"> [剩餘電流緩衝](#cryptic_tdr_based_on_charge)<br>- Residual Current Buffer | <ul><li>常駐 10% 韌性減傷</li><li>每份完整電容量再增加 2.5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/deb63065-b15d-498f-a16c-ec7726ca6a22" width="32" height="32" alt="卓越防禦記憶模組天賦圖示"> [卓越防禦記憶模組](#cryptic_ranged_stacking_toughness)<br>- Superior Defence Engrams | <ul><li>遠程擊殺疊層，每層每秒恢復 1% 韌性</li><li>最多 5 層，持續 8 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f821891a-e246-41c9-ae45-97f93d0b8547" width="32" height="32" alt="標記優先聖詩天賦圖示"> [標記優先聖詩](#cryptic_specials_marking)<br>- Target Prioritization Psalms | <ul><li>顯示 12.5 公尺內專家敵人的輪廓</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/53a3e76f-67fe-4d9e-bff5-7aafaee21065" width="32" height="32" alt="守護協議天賦圖示"> [守護協議](#cryptic_disabled_allies_defense)<br>- Protectorate Protocol | <ul><li>協同隊友失去行動能力時，受到傷害降低 25%</li><li>親自救援後，再給 6 秒減傷與一般硬直免疫</li></ul> | 技能 |
@@ -627,6 +628,21 @@
 - **作用範圍**：順劈影響能穿過多少敵人，衝擊影響踉蹌；兩者不會同時生效，也不是直接加 30% 傷害。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_cleave_and_impact.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_tdr_based_on_charge"></a>
+### 剩餘電流緩衝(Residual Current Buffer)
+
+<img src="https://github.com/user-attachments/assets/f34040ff-ebd0-4f7e-b857-4557ccdee00c" width="72" height="72" alt="剩餘電流緩衝天賦圖示">
+
+- **運作方式**：常駐降低 10% 承受的韌性傷害；目前每保有一份完整電容量，再增加 2.5% 減傷。
+
+- **減傷算例**：3 份時，10% + 3 × 2.5% = 17.5%；100 點韌性傷害 → 100 × 0.825 = 82.5。另有獨立 20% 韌性減傷時，82.5 × 0.8 = 66 點。
+
+- **切換條件**：只按已充滿的份數計算，電容量消耗或補滿時即更新；0 份時仍保有 10% 減傷。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_tdr_based_on_charge.md) · [返回目錄](#talent-index)
 
 ---
 

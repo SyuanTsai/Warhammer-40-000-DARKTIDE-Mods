@@ -46,6 +46,7 @@
 | [鍍鋅精密塗層](#cryptic_stun_dr_power) | 未見明確矛盾 |
 | [莫比亞導體](#cryptic_damage_on_ability) | 未見明確矛盾 |
 | [適應性戰鬥校準](#cryptic_cleave_and_impact) | 未見明確矛盾 |
+| [剩餘電流緩衝](#cryptic_tdr_based_on_charge) | 未見明確矛盾 |
 | [卓越防禦記憶模組](#cryptic_ranged_stacking_toughness) | 未見明確矛盾 |
 | [標記優先聖詩](#cryptic_specials_marking) | 未見明確矛盾 |
 | [守護協議](#cryptic_disabled_allies_defense) | 未見明確矛盾 |
@@ -323,6 +324,13 @@
 - 描述鍵：`loc_talent_cryptic_melee_cleave_and_impact_desc`；hash：`6d23edd0`。
 - 結論：未見明確矛盾。中英皆寫高於/低於，省略剛好50%的歸屬；作邊界補充，不列錯誤。
 - [原始碼推導與限制](cryptic_cleave_and_impact.md)。
+
+<a id="cryptic_tdr_based_on_charge"></a>
+## 剩餘電流緩衝(Residual Current Buffer)
+
+- 描述鍵：`loc_talent_cryptic_tdr_based_on_charge_base_desc`；hash：`3b317052`。
+- 結論：未見明確矛盾。中英一致；補充同技能加總、不同減傷相乘與整份門檻。
+- [原始碼推導與限制](cryptic_tdr_based_on_charge.md)。
 
 <a id="cryptic_ranged_stacking_toughness"></a>
 ## 卓越防禦記憶模組(Superior Defence Engrams)
