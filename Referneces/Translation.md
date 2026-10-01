@@ -1730,3 +1730,5 @@
 - Barrage I - 彈幕 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L650-L666)）
 
 - Barrage II - 彈幕 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L667-L683)）
+
+- Barrage III - 彈幕 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L684-L700)）
