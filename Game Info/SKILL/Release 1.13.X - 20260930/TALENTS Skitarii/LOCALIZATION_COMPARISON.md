@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
+| [報應導管](#cryptic_damage_vs_electrocuted_scaling_on_charge) | 未見明確矛盾 |
 | [絕境中繼](#cryptic_crit_chance_based_on_charge) | 未見明確矛盾 |
 | [弱點分析教義](#cryptic_afflicted_increased_damage) | 未見明確矛盾 |
 | [液壓衝擊](#cryptic_better_heavies) | 未見明確矛盾 |
@@ -20,6 +21,13 @@
 - 描述鍵：`loc_talent_cryptic_crits_grant_tdr_desc`；hash：`12420803`。
 - 結論：未見明確矛盾。中英原文未清楚拆分持續恢復與減傷；主文補充每秒速率，不列為誤譯。
 - [原始碼推導與限制](cryptic_crits_grant_tdr.md)。
+
+<a id="cryptic_damage_vs_electrocuted_scaling_on_charge"></a>
+## 報應導管(Retribution Conduit)
+
+- 描述鍵：`loc_talent_cryptic_damage_vs_electrocuted_scaling_on_charge_desc`；hash：`232897f8`。
+- 結論：未見明確矛盾。原文每道充能方向一致；補充完整份數與加算公式。
+- [原始碼推導與限制](cryptic_damage_vs_electrocuted_scaling_on_charge.md)。
 
 <a id="cryptic_crit_chance_based_on_charge"></a>
 ## 絕境中繼(Last Stand Relay)
