@@ -17,6 +17,7 @@
 | [快速裝填](#broker_passive_reload_speed_on_close_kill) | 未見明確矛盾 |
 | [能量爆發](#broker_passive_stun_immunity_on_toughness_broken) | 未見明確矛盾 |
 | [韌性增幅](#base_toughness_node_buff_medium_1) | 未見明確矛盾 |
+| [恢復姿態](#broker_passive_stamina_on_successful_dodge) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -80,3 +81,10 @@
 - 描述鍵：`loc_talent_toughness_boost_medium_desc`；hash：`329702b6`。
 - 結論：未見明確矛盾。同源繁中與英文都是最大韌性增加，未見明確矛盾。
 - [原始碼推導與限制](base_toughness_node_buff_medium_1.md)。
+
+<a id="broker_passive_stamina_on_successful_dodge"></a>
+## 恢復姿態(Regained Posture)
+
+- 描述鍵：`loc_talent_broker_passive_stamina_on_successful_dodge_desc`；hash：`022ffbe4`。
+- 結論：未見明確矛盾。兩語皆為成功閃避恢復耐力，未見矛盾。
+- [原始碼推導與限制](broker_passive_stamina_on_successful_dodge.md)。

@@ -15,3 +15,4 @@
 | [快速裝填](broker_passive_reload_speed_on_close_kill.md) | 12.5 公尺內的遠程擊殺，使換彈速度提高 30%，持續 8 秒。；完整計算與適用限制見來源文件。 |
 | [能量爆發](broker_passive_stun_immunity_on_toughness_broken.md) | 自身韌性耗盡時恢復 50% 最大韌性，免疫眩暈 6 秒；效果結束後冷卻 10 秒。；完整計算與適用限制見來源文件。 |
 | [韌性增幅](base_toughness_node_buff_medium_1.md) | 最大韌性增加 25 點。；完整計算與適用限制見來源文件。 |
+| [恢復姿態](broker_passive_stamina_on_successful_dodge.md) | 成功閃避時，恢復最大耐力的 10%。；完整計算與適用限制見來源文件。 |
