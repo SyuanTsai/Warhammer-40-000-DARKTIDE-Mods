@@ -30,6 +30,7 @@
 | <img src="https://github.com/user-attachments/assets/bb088b60-c1e8-42a7-b68e-3ef59f5d9eb9" width="32" height="32" alt="利刃出鞘天賦圖示"> [利刃出鞘](#ogryn_windup_reduces_damage_taken)<br>- Implacable | <ul><li>近戰重擊蓄力期間，受到的傷害減少 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d80b562f-7fc2-4daf-85e4-ae25f8171a89" width="32" height="32" alt="誰敢攔我！天賦圖示"> [誰敢攔我！](#ogryn_windup_is_uninterruptible)<br>- No Stopping Me! | <ul><li>近戰重擊蓄力不易受打斷，並移除蓄力動作的移動減速。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7e27b3b4-5eca-49b5-aafd-c8abc6635b14" width="32" height="32" alt="屠殺天賦圖示"> [屠殺](#ogryn_kills_grant_crit_chance)<br>- Massacre | <ul><li>每次擊殺增加 2 個百分點爆擊機率，最多 8 層，持續 12 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/5d6152a6-dedb-49c4-a7d2-328d082084c0" width="32" height="32" alt="報復時間天賦圖示"> [報復時間](#ogryn_revenge_damage)<br>- Payback Time | <ul><li>成功閃避近戰攻擊，或被近戰命中後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 
 ---
 
@@ -392,5 +393,20 @@
 - **機率算例**：原本 5% 爆擊機率，滿層變成 5% + 8 × 2% = 21%，不是 5% × 1.16。加成適用爆擊機率，不代表每次攻擊必定爆擊。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_kills_grant_crit_chance.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_revenge_damage"></a>
+### 報復時間(Payback Time)
+
+<img src="https://github.com/user-attachments/assets/5d6152a6-dedb-49c4-a7d2-328d082084c0" width="72" height="72" alt="報復時間天賦圖示">
+
+- **觸發方式**：成功閃避近戰攻擊，或受到近戰攻擊造成的傷害後，獲得 15% 傷害加成，持續 5 秒；韌性吸收的傷害也能觸發。
+
+- **疊層與刷新**：近戰、遠程傷害都能受益；重複觸發只刷新時間，不累積多層。
+
+- **傷害算例**：基礎 100 點變成 115 點；同階段已有 20% 加成時，則為 100 × (1 + 20% + 15%) = 135 點。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_revenge_damage.md) · [返回目錄](#talent-index)
 
 ---

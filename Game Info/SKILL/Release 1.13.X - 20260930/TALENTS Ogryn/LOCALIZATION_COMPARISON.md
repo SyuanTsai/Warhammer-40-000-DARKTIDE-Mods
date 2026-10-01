@@ -32,6 +32,7 @@
 | [利刃出鞘](#ogryn_windup_reduces_damage_taken) | 未見明確矛盾 |
 | [誰敢攔我！](#ogryn_windup_is_uninterruptible) | 未見明確矛盾 |
 | [屠殺](#ogryn_kills_grant_crit_chance) | 未見明確矛盾 |
+| [報復時間](#ogryn_revenge_damage) | 跨來源待同版核對 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -202,3 +203,10 @@
 - 描述鍵：`loc_talent_ogryn_crit_chance_on_kill_desc`；hash：`4e716e92`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_kills_grant_crit_chance.md)。
+
+<a id="ogryn_revenge_damage"></a>
+## 報復時間(Payback Time)
+
+- 描述鍵：`loc_talent_ogryn_revenge_damage_new_desc`；hash：`2474ccf6`。
+- 結論：跨來源待同版核對。同源繁中與英文都沒有近戰限制，固定程式共用on_melee_hit篩選。未確認版本一致，不判為繁中誤譯。
+- [原始碼推導與限制](ogryn_revenge_damage.md)。
