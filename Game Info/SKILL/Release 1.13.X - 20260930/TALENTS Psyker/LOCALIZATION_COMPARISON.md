@@ -62,7 +62,7 @@
 | [思維活躍](#psyker_venting_improvements) | 已配對；機制待核對 |
 | [惡意攻勢](#psyker_kills_stack_other_weapon_damage) | 已配對；機制待核對 |
 | [亞空間強化](#psyker_warp_charge_reduces_toughness_damage_taken) | 已配對；機制待核對 |
-| [看破](#psyker_improved_dodge) | 已配對；機制待核對 |
+| [看破](#psyker_improved_dodge) | 繁中原文勘誤 |
 | [反射閃避](#psyker_dodge_after_crits) | 未見明確矛盾 |
 | [穩固](#psyker_increased_vent_speed) | 已配對；機制待核對 |
 | [亞空間騎士](#psyker_damage_based_on_warp_charge) | 未見明確矛盾 |
@@ -472,7 +472,9 @@
 ## 看破(Anticipation)
 
 - 描述鍵：`loc_talent_psyker_improved_dodge_description`；hash：`b7dff1d2`。
-- 已配對原文，機制待核對。
+- 結論：繁中原文勘誤。繁中「有效閃避次數增加至」把增加量寫成新的總數；英文是增加指定次數，實際為原有次數再加 1，不是總共只能閃避 1 次。
+- 繁中原文短引：有效閃避次數增加至{extra_consecutive_dodges:%s}次，視為有效閃避的時間增加{dodge_linger_time:%s}。
+- 同源英文：Increase Effective Dodges by {extra_consecutive_dodges:%s} and time considered Dodging by {dodge_linger_time:%s}.
 - [原始碼推導與限制](psyker_improved_dodge.md)。
 
 <a id="psyker_dodge_after_crits"></a>
