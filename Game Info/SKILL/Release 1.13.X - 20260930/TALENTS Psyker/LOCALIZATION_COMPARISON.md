@@ -17,7 +17,7 @@
 | [迅捷碎片](#psyker_throwing_knives_cast_speed) | 已配對；機制待核對 |
 | [衰弱詛咒](#psyker_chain_lightning_improved_target_buff) | 已配對；機制待核對 |
 | [蓄力打擊](#psyker_chain_lightning_heavy_attacks) | 已配對；機制待核對 |
-| [動能釋放](#psyker_aura_damage_vs_elites) | 已配對；機制待核對 |
+| [動能釋放](#psyker_aura_damage_vs_elites) | 未見已確認矛盾 |
 | [先知之眼](#psyker_cooldown_aura_improved) | 已配對；機制待核對 |
 | [預兆](#psyker_aura_crit_chance_aura) | 未見已確認矛盾 |
 | [靈能尖嘯](#psyker_shout_vent_warp_charge) | 已配對；機制待核對 |
@@ -157,7 +157,7 @@
 ## 動能釋放(Kinetic Presence)
 
 - 描述鍵：`loc_talent_psyker_base_3_description`；hash：`4fad8ca6`。
-- 已配對原文，機制待核對。
+- 結論：未見已確認矛盾。本地繁中說明的受益者為自己與協同隊友，目標為精英敵人，增幅由固定原始碼確認為 10%。
 - [原始碼推導與限制](psyker_aura_damage_vs_elites.md)。
 
 <a id="psyker_cooldown_aura_improved"></a>
