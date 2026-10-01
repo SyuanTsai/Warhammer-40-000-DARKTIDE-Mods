@@ -13,6 +13,7 @@
 | [懲惡揚善](#adamant_charge_toughness) | 未見明確矛盾 |
 | [針鋒相對](#adamant_charge_cooldown_reduction) | 未見明確矛盾 |
 | [交鋒](#adamant_charge_longer_distance) | 未見明確矛盾 |
+| [猛犬出擊](#adamant_companion_focus_elite) | 未見明確矛盾 |
 | [電子獒犬與人](#adamant_toughness_regen_near_companion) | 未見明確矛盾 |
 | [凋零烈焰](#adamant_damage_after_reloading) | 未見明確矛盾 |
 | [審判之錘](#adamant_multiple_hits_attack_speed) | 未見明確矛盾 |
@@ -99,6 +100,13 @@
 - 描述鍵：`loc_talent_adamant_charge_longer_distance_desc`；hash：`3945c4ac`。
 - 結論：未見明確矛盾。繁中「距離延長至…公尺」對應英文「distance … increased to …m」；兩者都描述增加後的總距離。
 - [原始碼推導與限制](adamant_charge_longer_distance.md)。
+
+<a id="adamant_companion_focus_elite"></a>
+## 猛犬出擊(Unleashed Brutality)
+
+- 描述鍵：`loc_talent_adamant_cyber_mastiff_elites_desc`；hash：`596a5388`。
+- 結論：未見明確矛盾。繁中「優先攻擊精英和專家敵人，對其造成 25%傷害」對應英文 “prioritises Elite and Specialist Enemies, and deals 25% Damage to them”；一致。
+- [原始碼推導與限制](adamant_companion_focus_elite.md)。
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
