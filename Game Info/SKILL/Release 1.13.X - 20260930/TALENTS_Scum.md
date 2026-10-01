@@ -49,6 +49,7 @@
 | <img src="https://github.com/user-attachments/assets/c19f893c-1a73-4111-b234-e675605b17b5" width="32" height="32" alt="延長藥效天賦圖示"> [延長藥效](#broker_passive_stimm_increased_duration)<br>- Long Lasting | <ul><li>興奮劑效果延長 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6f1ead13-0e28-4983-86e7-44478bd76cdc" width="32" height="32" alt="神佑興奮劑天賦圖示"> [神佑興奮劑](#broker_passive_stimm_cleanse_on_kill)<br>- Blessed Stimms | <ul><li>興奮劑生效時，每次擊殺清除最大生命 1% 的腐敗；每次用藥以 50% 為停止門檻。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5cb31261-7422-451a-9aac-d1c38b48c802" width="32" height="32" alt="巢都格鬥家天賦圖示"> [巢都格鬥家](#broker_passive_dr_damage_tradeoff_on_stamina)<br>- Hive City Brawler | <ul><li>耐力越滿，減傷越高；耐力越低，近戰增傷越高，兩者各最多 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/3247cd98-e623-4d24-a821-db3f3a6ee20a" width="32" height="32" alt="順手牽羊天賦圖示"> [順手牽羊](#broker_passive_low_ammo_regen)<br>- Pickpocket | <ul><li>備用彈藥低於 20% 時，近戰擊殺精英或專家會補到 20%。</li></ul> | 技能 |
 
 ---
 
@@ -660,5 +661,18 @@
 - **與其他加成**：減傷採獨立承傷倍率，例如另有 20% 獨立減傷，滿耐力時為 100 × 0.8 × 0.8 = 64。近戰傷害則與同階段增傷相加。
 
 [詳細資料](TALENTS%20Scum/broker_passive_dr_damage_tradeoff_on_stamina.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_low_ammo_regen"></a>
+### 順手牽羊(Pickpocket)
+
+<img src="https://github.com/user-attachments/assets/3247cd98-e623-4d24-a821-db3f3a6ee20a" width="72" height="72" alt="順手牽羊天賦圖示">
+
+- **觸發條件**：以近戰擊殺精英或專家敵人，且備用彈藥少於上限的 20% 時，把備用彈藥補到該門檻；彈匣內彈藥不計入門檻。
+
+- **補充算例**：備用上限 150，門檻為 ⌊150 × 20%⌋ = 30 發。目前 8 發時補 22 發到 30；已有 30 發則不觸發。上限 37 時，門檻取整為 7 發。
+
+[詳細資料](TALENTS%20Scum/broker_passive_low_ammo_regen.md) · [返回目錄](#talent-index)
 
 ---

@@ -51,6 +51,7 @@
 | [延長藥效](#broker_passive_stimm_increased_duration) | 未見明確矛盾 |
 | [神佑興奮劑](#broker_passive_stimm_cleanse_on_kill) | 未見明確矛盾 |
 | [巢都格鬥家](#broker_passive_dr_damage_tradeoff_on_stamina) | 未見明確矛盾 |
+| [順手牽羊](#broker_passive_low_ammo_regen) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -354,3 +355,10 @@
 - 描述鍵：`loc_talent_broker_passive_dr_damage_tradeoff_on_stamina_desc`；hash：`2fe3c231`。
 - 結論：未見明確矛盾。兩語均按剩餘耐力減傷、已用耐力增傷，未見矛盾。
 - [原始碼推導與限制](broker_passive_dr_damage_tradeoff_on_stamina.md)。
+
+<a id="broker_passive_low_ammo_regen"></a>
+## 順手牽羊(Pickpocket)
+
+- 描述鍵：`loc_talent_broker_passive_low_ammo_regen_desc_04`；hash：`aa6ac8e6`。
+- 結論：未見明確矛盾。兩語均為低於門檻才補到門檻，未見矛盾。
+- [原始碼推導與限制](broker_passive_low_ammo_regen.md)。
