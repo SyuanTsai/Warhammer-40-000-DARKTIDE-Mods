@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/38c99293-d836-4a4e-91fb-1f6a65a848f8" width="32" height="32" alt="吸血閃電天賦圖示"> [吸血閃電](#psyker_empowered_chain_lightnings_replenish_toughness_to_allies)<br>- Psychic Leeching | <ul><li>使用強化閃擊，恢復本人與協同隊友 20% 最大韌性</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6312d53d-fec2-44c3-b04e-778d2e74e232" width="32" height="32" alt="吞靈強擊天賦圖示"> [吞靈強擊](#psyker_empowered_ability_on_elite_kills)<br>- Overpowering Souls | <ul><li>擊殺精英必定取得一層靈能強化</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d2ef8713-7c0b-4dec-b13a-7f9e6a294435" width="32" height="32" alt="完美主義天賦圖示"> [完美主義](#psyker_mark_increased_max_stacks)<br>- Perfectionism | <ul><li>精準加成上限由 15 層提高至 25 層</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/06e543d8-85dd-455b-8ac2-3f9f29b03cf1" width="32" height="32" alt="盜竊天命天賦圖示"> [盜竊天命](#psyker_mark_kills_can_vent)<br>- Purloin Providence | <ul><li>擊殺被標記的敵人，平息 5 個反噬百分點</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="亞空間耗費天賦圖示"> [亞空間耗費](#psyker_toughness_on_melee)<br>- Warp Expenditure | <ul><li>近戰命中首個敵人，恢復 2.5% 最大韌性。</li><li>近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
@@ -584,6 +585,19 @@
 - **選擇限制**：與「持久影響」只能擇一選取。
 
 [詳細資料](TALENTS%20Psyker/psyker_mark_increased_max_stacks.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_mark_kills_can_vent"></a>
+### 盜竊天命(Purloin Providence)
+
+<img src="https://github.com/user-attachments/assets/06e543d8-85dd-455b-8ac2-3f9f29b03cf1" width="72" height="72" alt="盜竊天命天賦圖示">
+
+- **觸發方式**：親自擊殺擾動命運目前標記的敵人，立即平息 5 個反噬百分點。
+
+- **反噬算例**：原有 60% 反噬時，變成 60% − 5 個百分點 = 55%；原有 3% 時則降至 0%。
+
+[詳細資料](TALENTS%20Psyker/psyker_mark_kills_can_vent.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -42,7 +42,7 @@
 | [吸血閃電](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md) | 使用強化閃擊，恢復本人與協同隊友 20% 最大韌性；完整計算與適用限制見來源文件。 |
 | [吞靈強擊](psyker_empowered_ability_on_elite_kills.md) | 擊殺精英必定取得一層靈能強化；完整計算與適用限制見來源文件。 |
 | [完美主義](psyker_mark_increased_max_stacks.md) | 精準加成上限由 15 層提高至 25 層；完整計算與適用限制見來源文件。 |
-| [盜竊天命](psyker_mark_kills_can_vent.md) | 機制與公式待核對。 |
+| [盜竊天命](psyker_mark_kills_can_vent.md) | 擊殺被標記的敵人，平息 5 個反噬百分點；完整計算與適用限制見來源文件。 |
 | [持久影響](psyker_mark_increased_duration.md) | 機制與公式待核對。 |
 | [充能完畢](psyker_empowered_grenades_increased_max_stacks.md) | 機制與公式待核對。 |
 | [涅槃](psyker_warpfire_generate_souls.md) | 機制與公式待核對。 |
