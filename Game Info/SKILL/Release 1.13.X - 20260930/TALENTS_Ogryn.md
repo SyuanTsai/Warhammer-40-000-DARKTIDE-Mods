@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/fca0827b-6dac-4c44-b92e-8aba309ff4ca" width="32" height="32" alt="專注鬥士天賦圖示"> [專注鬥士](#ogryn_melee_attacks_give_mtdr)<br>- Focused Fighter | <ul><li>每次近戰揮擊命中後獲得 4% 近戰減傷，最多 5 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/024bec9b-772c-4313-b7b8-d119efdcf8f1" width="32" height="32" alt="蠻橫之力天賦圖示"> [蠻橫之力](#ogryn_pushing_applies_brittleness)<br>- Brutish Strength | <ul><li>推擊施加 4 層脆弱，合計 10%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c78dbead-adf5-4b9e-9629-9a3a0a93ae8c" width="32" height="32" alt="火力全開天賦圖示"> [火力全開](#ogryn_explosions_burn)<br>- Fire Away | <ul><li>爆炸施加 1 層燃燒，爆炸中心區域改為 2 層，最多 8 層。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/3ff7d7eb-6206-4d77-91c5-483259320072" width="32" height="32" alt="堅不可摧天賦圖示"> [堅不可摧](#ogryn_block_all_attacks)<br>- Unbreakable | <ul><li>完美格擋可擋下原本不可格擋的近戰攻擊。</li><li>完美格擋後，下一次近戰傷害提高 20%。</li></ul> | 技能 |
 
 ---
 
@@ -576,5 +577,20 @@
 - 原文「近距離時增加 2 層」會讓人誤以為合計 3 層；實際是在爆炸中心區域改為施加 2 層。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_explosions_burn.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_block_all_attacks"></a>
+### 堅不可摧(Unbreakable)
+
+<img src="https://github.com/user-attachments/assets/3ff7d7eb-6206-4d77-91c5-483259320072" width="72" height="72" alt="堅不可摧天賦圖示">
+
+- **完美格擋**：一般情況下，開始格擋後約 0.3 秒內屬於完美格擋時段，可格擋原本標示為不可格擋的近戰攻擊；仍需符合一般格擋的角度等條件。
+
+- **傷害加成**：成功完美格擋後，下一次近戰揮擊提高 20% 傷害，最多保留 5 秒；揮擊完成即消耗，即使揮空也會移除。重複完美格擋刷新時間，但不疊加百分比。
+
+- **傷害算例**：基礎 100 點變成 120 點；同階段原有 30% 增傷時為 100 × (1 + 30% + 20%) = 150 點。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_block_all_attacks.md) · [返回目錄](#talent-index)
 
 ---
