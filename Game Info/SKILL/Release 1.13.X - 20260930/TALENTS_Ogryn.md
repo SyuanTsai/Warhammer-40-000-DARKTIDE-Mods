@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/53e0b90e-52dc-4a4a-953c-b235753aa97a" width="32" height="32" alt="削弱敵人天賦圖示"> [削弱敵人](#ogryn_targets_recieve_damage_taken_increase_debuff)<br>- Soften Them Up | <ul><li>近戰造成傷害後，使存活敵人在 5 秒內受到的傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/72cbf891-ecd4-425c-8d46-97cb4d4863f9" width="32" height="32" alt="堅韌不屈天賦圖示"> [堅韌不屈](#ogryn_toughness_on_low_health)<br>- Too Stubborn to Die | <ul><li>生命低於 50% 時，韌性恢復量提高 100%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dbfbaef7-b829-41cf-96cb-a9d09192cfbd" width="32" height="32" alt="重毆天賦圖示"> [重毆](#ogryn_heavy_bleeds)<br>- Batter | <ul><li>造成傷害的近戰命中施加 1 層流血，重擊改為 4 層。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/206be198-2a5f-426f-944a-8d85fd74f1d6" width="32" height="32" alt="沉重打擊天賦圖示"> [沉重打擊](#ogryn_staggering_increases_damage)<br>- Hard Knocks | <ul><li>近戰或推擊使敵人踉蹌後，其受到的近戰傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 
 ---
 
@@ -170,5 +171,20 @@
 - **傷害算例**：4 層時為 87.5 × 0.25² × 2.5 ≈ 13.67 點；8 層為 43.75 點，16 層為 87.5 點。因此 8 層不是 4 層傷害的兩倍。其他護甲與增傷會改變結果。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_heavy_bleeds.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_staggering_increases_damage"></a>
+### 沉重打擊(Hard Knocks)
+
+<img src="https://github.com/user-attachments/assets/206be198-2a5f-426f-944a-8d85fd74f1d6" width="72" height="72" alt="沉重打擊天賦圖示">
+
+- **觸發方式**：近戰使仍存活的敵人踉蹌，或推擊命中處於踉蹌狀態的敵人後，使其受到的近戰傷害增加 15%，持續 5 秒；隊友的近戰也能受益。
+
+- **疊加與刷新**：此效果最多 1 層，再次觸發刷新時間。可與削弱敵人的 15% 通用承傷加成同階段相加。
+
+- **傷害算例**：基礎 100 點近戰傷害，只有此效果時為 115 點；與削弱敵人同時生效時為 100 × (1 + 15% + 15%) = 130 點。遠程不受本項近戰承傷加成影響。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_staggering_increases_damage.md) · [返回目錄](#talent-index)
 
 ---

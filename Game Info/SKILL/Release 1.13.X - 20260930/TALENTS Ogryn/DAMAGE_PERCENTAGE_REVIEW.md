@@ -16,3 +16,4 @@
 | [削弱敵人](ogryn_targets_recieve_damage_taken_increase_debuff.md) | 近戰造成傷害後，使存活敵人在 5 秒內受到的傷害提高 15%。；完整計算與適用限制見來源文件。 |
 | [堅韌不屈](ogryn_toughness_on_low_health.md) | 生命低於 50% 時，韌性恢復量提高 100%。；完整計算與適用限制見來源文件。 |
 | [重毆](ogryn_heavy_bleeds.md) | 造成傷害的近戰命中施加 1 層流血，重擊改為 4 層。；完整計算與適用限制見來源文件。 |
+| [沉重打擊](ogryn_staggering_increases_damage.md) | 近戰或推擊使敵人踉蹌後，其受到的近戰傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
