@@ -6,7 +6,7 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 66／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 67／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -45,7 +45,7 @@
 | 鑰石 | [鎖定目標](veteran_improved_tag.md) / `veteran_improved_tag` | `node_18f58702-92f4-4084-afc3-934731f36b83` | 完成（核心靜態機制） |
 | 鑰石 | [目標擊倒！](veteran_improved_tag_dead_bonus.md) / `veteran_improved_tag_dead_bonus` | `node_a7ec533f-0efa-450a-b45d-02b8c7f61861` | 完成（核心靜態機制） |
 | 鑰石 | [轉移火力！](veteran_improved_tag_dead_coherency_bonus.md) / `veteran_improved_tag_dead_coherency_bonus` | `node_ac52f1fe-53d7-4e5a-8872-21c6db29db9e` | 完成（核心靜態機制） |
-| 鑰石 | 集中火力 / `veteran_improved_tag_more_damage` | `node_97953f03-3524-42f4-b653-da2e3468823f` | 待核對 |
+| 鑰石 | [集中火力](veteran_improved_tag_more_damage.md) / `veteran_improved_tag_more_damage` | `node_97953f03-3524-42f4-b653-da2e3468823f` | 完成（核心靜態機制） |
 | 技能 | [爆破小隊](veteran_aura_elite_kills_restore_grenade.md) / `veteran_aura_elite_kills_restore_grenade` | `node_743e6ff1-6bb2-4816-9270-ef9c92d9d376` | 完成（核心靜態機制） |
 | 技能 | [戰術裝填](veteran_faster_reload_on_non_empty_clips.md) / `veteran_faster_reload_on_non_empty_clips` | `node_be2f4721-6e3e-4594-9393-6654b6c234cd` | 完成（核心靜態機制） |
 | 技能 | [齊射能手](veteran_reload_speed_on_elite_kill.md) / `veteran_reload_speed_on_elite_kill` | `node_d99d3163-8528-4232-af21-f29cbf453fb1` | 完成（核心靜態機制） |

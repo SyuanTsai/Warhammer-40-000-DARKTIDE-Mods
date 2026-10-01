@@ -31,6 +31,7 @@
 | 鑰石 | [鎖定目標(Focus Target!)](#veteran_improved_tag) | 累積與標記：起始有 1 層，每 1.5 秒增加 1 層，最多 4 層。標記敵人時，依儲存的層數提高該敵人承受的傷害，自己和隊友的攻擊都能受益；成功套用後，儲存量重回 1 層。 |
 | 鑰石 | [目標擊倒！(Target Down!)](#veteran_improved_tag_dead_bonus) | 觸發方式：目前被鎖定目標標記的敵人死亡時，你與協同範圍內的隊友恢復韌性及耐力，不要求由你親自擊殺。 |
 | 鑰石 | [轉移火力！(Redirect Fire!)](#veteran_improved_tag_dead_coherency_bonus) | 觸發方式：目前被鎖定目標標記的敵人死亡時，你與協同範圍內的隊友獲得傷害加成，持續 10 秒，不要求由你親自擊殺。 |
+| 鑰石 | [集中火力(Focused Fire)](#veteran_improved_tag_more_damage) | 效果：鎖定目標可儲存的層數從 4 層提高至 6 層，每層仍讓目標承受的傷害乘以 1.05。 |
 | 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
 | 技能 | [戰術裝填(Tactical Reload)](#veteran_faster_reload_on_non_empty_clips) | 彈匣還有彈藥時開始裝填，裝填速度增加 25%。 |
 | 技能 | [齊射能手(Volley Adept)](#veteran_reload_speed_on_elite_kill) | 擊殺精英或專家敵人後，下一次裝填速度增加 30%。 |
@@ -539,6 +540,21 @@
 - **搭配集中火力：**增傷上限提高至 6 層，最多 `6 × 2.5% = 15%`。
 
 [詳細資料](TALENTS%20Veteran/veteran_improved_tag_dead_coherency_bonus.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_improved_tag_more_damage"></a>
+
+### 集中火力(Focused Fire)
+
+<img src="https://github.com/user-attachments/assets/a95c5ea6-546f-462d-a073-56f9d1a21103" width="72" height="72" alt="集中火力天賦圖示">
+
+- **效果：**鎖定目標可儲存的層數從 4 層提高至 6 層，每層仍讓目標承受的傷害乘以 1.05。
+- **累積時間：**每 1.5 秒增加 1 層的速度不變；從 1 層累積至 6 層約需 `(6 − 1) × 1.5 = 7.5 秒`。
+- **傷害算例：**6 層時，原本 100 點傷害變成 `100 × 1.05⁶ ≈ 134.01 點`；4 層則約為 121.55 點。
+- **其他搭配：**另選目標擊倒！時，6 層標記死亡可恢復 30% 最大韌性與耐力；另選轉移火力！時，其增傷上限提高至 6 層、合計 15%。
+
+[詳細資料](TALENTS%20Veteran/veteran_improved_tag_more_damage.md) · [返回目錄](#talent-index)
 
 ---
 
