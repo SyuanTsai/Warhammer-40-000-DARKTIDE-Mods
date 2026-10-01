@@ -9,6 +9,7 @@
 | <img src="https://github.com/user-attachments/assets/67294825-4742-461c-8445-8eabf69981d3" width="32" height="32" alt="最好的防禦天賦圖示"> [最好的防禦](#ogryn_multi_heavy_toughness)<br>- The Best Defence | <ul><li>一次近戰攻擊命中至少 2 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bdf5653a-6df6-4998-a781-ae623083055a" width="32" height="32" alt="碾碎它們！天賦圖示"> [碾碎它們！](#ogryn_single_heavy_toughness)<br>- Smash 'Em! | <ul><li>一次近戰攻擊命中恰好 1 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/47f9eea2-c58f-4ed3-8678-e42d2ec1701f" width="32" height="32" alt="關鍵人物天賦圖示"> [關鍵人物](#ogryn_increased_coherency_toughness)<br>- Lynchpin | <ul><li>自身的協同韌性恢復速度提高 100%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/f61476bf-8738-40b1-8c66-63980d690cc7" width="32" height="32" alt="射不停天賦圖示"> [射不停](#ogryn_reload_speed_on_empty)<br>- Keep Shooting | <ul><li>彈匣清空後開始換彈，換彈速度提高 20%。</li></ul> | 技能 |
 
 ---
 
@@ -56,5 +57,20 @@
 - **生效條件**：仍須符合協同韌性恢復的條件與等待時間；這項天賦只改變恢復速率。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_increased_coherency_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_reload_speed_on_empty"></a>
+### 射不停(Keep Shooting)
+
+<img src="https://github.com/user-attachments/assets/f61476bf-8738-40b1-8c66-63980d690cc7" width="72" height="72" alt="射不停天賦圖示">
+
+- **觸發方式**：彈匣為空時開始換彈，該次換彈速度提高 20%；彈匣仍有子彈時提早換彈，不會因這項效果加速。
+
+- **時間算例**：只計這份加成，受換彈速度影響的 3 秒動作變成 3 ÷ (1 + 20%) = 2.5 秒，縮短約 16.7%；不是直接少 20% 時間。
+
+- **效果維持**：是否空匣在換彈前判定；開始換彈後保留該次判定，不因裝入子彈就立刻移除。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_reload_speed_on_empty.md) · [返回目錄](#talent-index)
 
 ---

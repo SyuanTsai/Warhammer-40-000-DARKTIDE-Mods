@@ -11,6 +11,7 @@
 | [最好的防禦](#ogryn_multi_heavy_toughness) | 未見明確矛盾 |
 | [碾碎它們！](#ogryn_single_heavy_toughness) | 未見明確矛盾 |
 | [關鍵人物](#ogryn_increased_coherency_toughness) | 未見明確矛盾 |
+| [射不停](#ogryn_reload_speed_on_empty) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -32,3 +33,10 @@
 - 描述鍵：`loc_talent_ogryn_coherency_toughness_increase_desc`；hash：`d0729082`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_increased_coherency_toughness.md)。
+
+<a id="ogryn_reload_speed_on_empty"></a>
+## 射不停(Keep Shooting)
+
+- 描述鍵：`loc_talent_ogryn_reload_speed_on_empty_desc`；hash：`000cf461`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_reload_speed_on_empty.md)。
