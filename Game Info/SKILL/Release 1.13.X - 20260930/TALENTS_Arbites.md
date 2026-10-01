@@ -8,6 +8,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="32" height="32" alt="突破重圍天賦圖示"> [突破重圍](#adamant_charge)<br>- Break the Line | <ul><li>向前猛砸並衝入敵陣；猛砸期間視為格擋，結束後獲得 6 秒傷害與衝擊加成。</li><li>基礎冷卻 20 秒，單次充能。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="天鷹使節天賦圖示"> [天鷹使節](#adamant_area_buff_drone_improved)<br>- Nuncio-Aquila | <ul><li>部署阿奎拉傳令機，持續 20 秒並影響周圍 7.5 公尺；冷卻 60 秒，單次充能。</li><li>強化版讓盟友每秒恢復 7.5% 韌性，並提高壓制與衝擊、降低後座力，同時免疫暈眩、減速與壓制。</li><li>範圍內敵人受到的傷害提高 15%。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/8c312d8e-8b49-45cd-828e-62cffc6d0a25" width="32" height="32" alt="蒙福軍武天賦圖示"> [蒙福軍武](#adamant_stance_ranged_kills_transfer_ammo)<br>- Blessed Armament | <ul><li>處於懲戒者姿態時，遠程擊殺會從備彈補入彈匣容量的 10%，無條件進位，彈匣不足時只補缺口。</li><li>能力姿態持續 10 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/f7454987-ea7e-474e-bb22-3c3ead9adb1b" width="32" height="32" alt="處決令天賦圖示"> [處決令](#adamant_stance_elite_kills_stack_damage)<br>- Writ of Execution | <ul><li>處於懲戒者姿態時，每擊殺一名精英或專家敵人，傷害提高 7.5%，持續 12 秒，最多 6 層。</li><li>滿層提供 45% 傷害加成；已取得的增益可在姿態結束後繼續倒數。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/27a74ed8-eb51-4774-ae8e-2089aa7b1686" width="32" height="32" alt="嗜血殺戮天賦圖示"> [嗜血殺戮](#adamant_stance_dog_bloodlust)<br>- Bloodlust | <ul><li>啟動懲戒者姿態後，電子獒犬造成的傷害提高 75%，效果維持姿態的 10 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/53dd2864-62b6-4e6c-9d62-e79831b33c78" width="32" height="32" alt="振奮朗誦天賦圖示"> [振奮朗誦](#adamant_drone_buff_talent)<br>- Inspiring Recitation | <ul><li>受到阿奎拉傳令機影響的盟友，額外獲得 30% 韌性減傷、30% 復活速度及 10% 攻擊速度。</li></ul> | 能力 |
@@ -116,6 +117,21 @@
 - **敵人受制**：範圍內敵人受到的傷害提高 15%；例如其他條件相同時，原本 100 點傷害按 1.15 倍計算為 115 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_area_buff_drone_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_stance_ranged_kills_transfer_ammo"></a>
+### 蒙福軍武(Blessed Armament)
+
+<img src="https://github.com/user-attachments/assets/8c312d8e-8b49-45cd-828e-62cffc6d0a25" width="72" height="72" alt="蒙福軍武天賦圖示">
+
+- **觸發條件**：只有在懲戒者姿態期間，遠程擊殺才會補彈；子彈從備彈轉入彈匣。
+
+- **補彈算法**：每次觸發以彈匣容量的 10% 計算並無條件進位。例如容量 30 發，計算為 30×10%=3 發；若只缺 1 發，就只補 1 發。備彈不足時只轉入剩餘彈藥，不會憑空產生子彈。
+
+- **生效時間**：效果隨懲戒者姿態生效，姿態基礎持續 10 秒。
+
+[詳細資料](TALENTS%20Arbites/adamant_stance_ranged_kills_transfer_ammo.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -10,6 +10,7 @@
 |---|---|
 | [突破重圍](#adamant_charge) | 繁中原文勘誤 |
 | [天鷹使節](#adamant_area_buff_drone_improved) | 未見明確矛盾 |
+| [蒙福軍武](#adamant_stance_ranged_kills_transfer_ammo) | 待同版核對 |
 | [處決令](#adamant_stance_elite_kills_stack_damage) | 未見明確矛盾 |
 | [嗜血殺戮](#adamant_stance_dog_bloodlust) | 未見明確矛盾 |
 | [振奮朗誦](#adamant_drone_buff_talent) | 未見明確矛盾 |
@@ -98,6 +99,13 @@
 - 描述鍵：`loc_talent_ability_area_buff_drone_new_improved_description`；hash：`1e02d48e`。
 - 結論：未見明確矛盾。繁中「每秒恢復韌性」「對暈眩、減速和壓制效果免疫」分別對應英文「Toughness per second」及「Immune to Stun, Slowdown, and Suppression」；兩文都指出敵人承受更多傷害。
 - [原始碼推導與限制](adamant_area_buff_drone_improved.md)。
+
+<a id="adamant_stance_ranged_kills_transfer_ammo"></a>
+## 蒙福軍武(Blessed Armament)
+
+- 描述鍵：`loc_talent_adamant_stance_ranged_kills_transfer_ammo_no_cd_desc`；hash：`263d1e30`。
+- 結論：待同版核對。繁中「遠程擊殺」「彈匣上限的…彈藥（無條件進位至整數）」對應英文「ranged kills」「total Ammo in your Clip…rounded up」；兩文都寫明每次攻擊僅觸發一次。實作的時間戳節流與設定檔間隔欄位需核對同版行為。
+- [原始碼推導與限制](adamant_stance_ranged_kills_transfer_ammo.md)。
 
 <a id="adamant_stance_elite_kills_stack_damage"></a>
 ## 處決令(Writ of Execution)
