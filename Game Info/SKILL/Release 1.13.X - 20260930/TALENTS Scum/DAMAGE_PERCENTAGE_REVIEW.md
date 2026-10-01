@@ -87,6 +87,7 @@
 | [趁勝追擊](broker_passive_cleave_on_cleave.md) | 單次近戰命中至少 3 名敵人，獲得 50% 額外順劈供下一次攻擊使用。；完整計算與適用限制見來源文件。 |
 | [裝備財閥特殊裝備](broker_stimm_activation_talent.md) | 分配興奮劑配方後，裝備可自動恢復的專用興奮劑；配方共用 30 點額度。；完整計算與適用限制見來源文件。 |
 | [野火 I](broker_stimm_combat_1.md) | 威力增加 4%。；完整計算與適用限制見來源文件。 |
+| [野火 IV](broker_stimm_combat_4a.md) | 威力增加 4%。；弱點與爆擊額外傷害增加 10%。；完整計算與適用限制見來源文件。 |
 | [野火 II](broker_stimm_combat_2.md) | 威力增加 4%。；完整計算與適用限制見來源文件。 |
 | [野火 III](broker_stimm_combat_3.md) | 威力增加 4%。；完整計算與適用限制見來源文件。 |
 | [激勵 I](broker_stimm_celerity_1.md) | 攻擊速度增加 4%。；武器切換速度增加 25%。；完整計算與適用限制見來源文件。 |

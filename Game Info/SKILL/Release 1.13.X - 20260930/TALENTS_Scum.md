@@ -88,6 +88,7 @@
 | <img src="https://github.com/user-attachments/assets/6fa27fb0-2d79-43fc-b74a-d64da58773f6" width="32" height="32" alt="趁勝追擊天賦圖示"> [趁勝追擊](#broker_passive_cleave_on_cleave)<br>- Battering Momentum | <ul><li>單次近戰命中至少 3 名敵人，獲得 50% 額外順劈供下一次攻擊使用。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/51c007e0-bed4-4759-a369-04ab37032369" width="32" height="32" alt="裝備財閥特殊裝備天賦圖示"> [裝備財閥特殊裝備](#broker_stimm_activation_talent)<br>- Equip Cartel Special | <ul><li>分配興奮劑配方後，裝備可自動恢復的專用興奮劑；配方共用 30 點額度。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/22ab15e3-5280-408f-884c-5d8ebd692363" width="32" height="32" alt="野火 I天賦圖示"> [野火 I](#broker_stimm_combat_1)<br>- Wildfire I | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/b90d885e-2e9a-43e7-9b64-d42447b285f9" width="32" height="32" alt="野火 IV天賦圖示"> [野火 IV](#broker_stimm_combat_4a)<br>- Wildfire IV | <ul><li>威力增加 4%。</li><li>弱點與爆擊額外傷害增加 10%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/e53e3328-a026-4e3c-8e91-c63cd69522c6" width="32" height="32" alt="野火 II天賦圖示"> [野火 II](#broker_stimm_combat_2)<br>- Wildfire II | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/58b8efb6-6c10-4795-8046-33bb49eee893" width="32" height="32" alt="野火 III天賦圖示"> [野火 III](#broker_stimm_combat_3)<br>- Wildfire III | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="32" height="32" alt="激勵 I天賦圖示"> [激勵 I](#broker_stimm_celerity_1)<br>- Spur I | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li></ul> | 興奮劑配方 |
@@ -1342,6 +1343,25 @@
 - **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 1 個威力節點時，為 500 × (1 + 1 × 4%) = 520。
 
 [詳細資料](TALENTS%20Scum/broker_stimm_combat_1.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_stimm_combat_4a"></a>
+### 野火 IV(Wildfire IV)
+
+<img src="https://github.com/user-attachments/assets/b90d885e-2e9a-43e7-9b64-d42447b285f9" width="72" height="72" alt="野火 IV天賦圖示">
+
+- **配方成本**：4 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
+
+- **威力**：增加 4%，與前置配方及其他同階段威力加成相加。威力會再參與武器傷害、踉蹌及順劈計算。
+
+- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 4 個威力節點時，為 500 × (1 + 4 × 4%) = 580。
+
+- **弱點與爆擊**：額外傷害部分增加 10%；普通命中傷害不受這一項加成。
+
+- **額外傷害算例**：先固定威力與其他條件，普通傷害 100、原弱點傷害 200 時，本節點將結果變為 100 + (200 − 100) × 1.1 = 210，整筆傷害提高 5%。野火 IV、V 的這項加成合計 35%，同例為 235。
+
+[詳細資料](TALENTS%20Scum/broker_stimm_combat_4a.md) · [返回目錄](#talent-index)
 
 ---
 
