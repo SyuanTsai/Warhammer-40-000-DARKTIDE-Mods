@@ -20,6 +20,7 @@
 | [孤狼](#adamant_disable_companion) | 未見明確矛盾 |
 | [鎖定目標](#adamant_forceful_offensive) | 未見明確矛盾 |
 | [法務官警覺](#adamant_forceful_ability_damage) | 未見明確矛盾 |
+| [審判之力](#adamant_forceful_stagger_on_low_high) | 未見明確矛盾 |
 | [效率殺手](#adamant_execution_order_crit) | 未見明確矛盾 |
 | [生化武器關](#adamant_execution_order_cdr) | 未見明確矛盾 |
 | [罪不可赦](#adamant_execution_order_rending) | 未見明確矛盾 |
@@ -163,6 +164,13 @@
 - 描述鍵：`loc_talent_adamant_forceful_ability_damage`；hash：`5c5993f8`。
 - 結論：未見明確矛盾。繁中「使用戰鬥技能時，每層使你獲得…威力，持續…秒。移除所有層數」對應英文 “On Combat Ability, Gain … Strength for each stack. Lasts … Removes all Stacks”；無中英矛盾。
 - [原始碼推導與限制](adamant_forceful_ability_damage.md)。
+
+<a id="adamant_forceful_stagger_on_low_high"></a>
+## 審判之力(Judicial Force)
+
+- 描述鍵：`loc_talent_adamant_forceful_stagger_on_low_high_desc`；hash：`ef289d31`。
+- 結論：未見明確矛盾。繁中與英文都列0／10層震撼與各自冷卻；2.5公尺範圍及門檻穿越判斷屬補充，未列為錯誤。
+- [原始碼推導與限制](adamant_forceful_stagger_on_low_high.md)。
 
 <a id="adamant_execution_order_crit"></a>
 ## 效率殺手(Efficient Killer)
