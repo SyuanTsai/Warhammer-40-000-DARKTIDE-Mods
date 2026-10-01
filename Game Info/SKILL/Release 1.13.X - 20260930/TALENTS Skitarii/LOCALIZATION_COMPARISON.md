@@ -17,6 +17,7 @@
 | [削切協議](#cryptic_dissector) | 未見明確矛盾；補充計算與限制 |
 | [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
 | [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
+| [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed) | 未見明確矛盾；補充計算與限制 |
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
 | [閃避伺服恢復](#cryptic_successful_dodge_stamina) | 未見明確矛盾 |
@@ -132,6 +133,13 @@
 - 描述鍵：`loc_talent_cryptic_overload_keystone_coherency_desc`；hash：`58d058f4`。
 - 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文均描述協同擊殺給層、一般1層／精英與專家2層、上限30、到頂重置以及8秒隊伍傷害與韌性減傷。固定版支持這些效果；傷害增量的單次事件溢出不保留屬UI省略細節，未發現明確誤譯。
 - [原始碼推導與限制](cryptic_overload_keystone.md)。
+
+<a id="cryptic_dissector_crit_attack_speed"></a>
+## 伺服肌腱湧動(Servo-Sinew Surge)
+
+- 描述鍵：`loc_talent_cryptic_dissector_crit_attack_speed_desc`；hash：`7ddcfcd5`。
+- 結論：未見明確矛盾；補充計算與限制。繁中與英文均明確寫明每層增加暴擊率與近戰攻擊速度；固定版兩項都是每層1.5%，無誤譯。
+- [原始碼推導與限制](cryptic_dissector_crit_attack_speed.md)。
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
