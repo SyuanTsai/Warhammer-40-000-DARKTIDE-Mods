@@ -51,7 +51,7 @@
 | [靈能吸血鬼](#psyker_aura_souls_on_kill) | 已配對；機制待核對 |
 | [亞空間電池](#psyker_increased_max_souls) | 已配對；機制待核對 |
 | [殘忍命運](#psyker_mark_weakspot_kills) | 已配對；機制待核對 |
-| [靈魂竊賊](#psyker_toughness_on_warp_kill) | 已配對；機制待核對 |
+| [靈魂竊賊](#psyker_toughness_on_warp_kill) | 未見明確矛盾 |
 | [心如止水](#psyker_toughness_on_vent) | 未見明確矛盾 |
 | [亞空間耗費](#psyker_toughness_on_melee) | 未見明確矛盾 |
 | [堅毅](#psyker_crits_regen_toughness_movement_speed) | 未見明確矛盾 |
@@ -395,7 +395,7 @@
 ## 靈魂竊賊(Soulstealer)
 
 - 描述鍵：`loc_talent_psyker_toughness_on_warp_kill_desc`；hash：`ffb1d758`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_toughness_on_warp_kill.md)。
 
 <a id="psyker_toughness_on_vent"></a>

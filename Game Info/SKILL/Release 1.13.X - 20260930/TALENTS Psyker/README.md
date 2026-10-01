@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **81 個可選節點**，均為一點；同一配置最多分配 30 點。零點起始佔位 `not_selected` 不屬天賦效果，不列入 81 項。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36)。內部 tree version 26 不等於遊戲發行版號。
 
-完成 32／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 33／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -54,7 +54,7 @@
 | 鑰石 | [靈能吸血鬼](psyker_aura_souls_on_kill.md) / `psyker_aura_souls_on_kill` | `node_b5482701-b516-444a-92d4-df82bc410afd` | 已定位；機制待核對 |
 | 鑰石 | [亞空間電池](psyker_increased_max_souls.md) / `psyker_increased_max_souls` | `node_0eee06a4-3acd-4b44-ae64-61376c34b3da` | 已定位；機制待核對 |
 | 鑰石 | [殘忍命運](psyker_mark_weakspot_kills.md) / `psyker_mark_weakspot_kills` | `node_9c95d8c4-7304-4a56-a9fa-6a727d553105` | 已定位；機制待核對 |
-| 技能 | [靈魂竊賊](psyker_toughness_on_warp_kill.md) / `psyker_toughness_on_warp_kill` | `node_5cdd458f-bbfc-40a3-ac1f-4a229ddbbb6a` | 已定位；機制待核對 |
+| 技能 | [靈魂竊賊](psyker_toughness_on_warp_kill.md) / `psyker_toughness_on_warp_kill` | `node_5cdd458f-bbfc-40a3-ac1f-4a229ddbbb6a` | 完成（核心靜態機制） |
 | 技能 | [心如止水](psyker_toughness_on_vent.md) / `psyker_toughness_on_vent` | `node_0866df78-dac3-46dc-9af6-30119a64acbe` | 完成（核心靜態機制） |
 | 技能 | [亞空間耗費](psyker_toughness_on_melee.md) / `psyker_toughness_on_melee` | `node_aeefc406-9103-4749-a827-a90a0525baea` | 完成（核心靜態機制） |
 | 技能 | [堅毅](psyker_crits_regen_toughness_movement_speed.md) / `psyker_crits_regen_toughness_movement_speed` | `node_a9e156c8-8c1a-4421-a5de-ec60da158b5d` | 完成（核心靜態機制） |
