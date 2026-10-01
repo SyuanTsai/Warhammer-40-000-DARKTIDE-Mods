@@ -1,4 +1,4 @@
-# 亡命之徒(Outlaw)：基礎戰鬥能力：原始碼依據
+# 亡命之徒(Desperado)：基礎戰鬥能力：原始碼依據
 
 [返回基礎效果](BASE_EFFECTS.md#broker_ability_focus)｜[技術索引](README.md)
 
