@@ -42,6 +42,7 @@
 | <img src="https://github.com/user-attachments/assets/03af9ca3-e4f4-4383-9650-f8ac659cfadd" width="32" height="32" alt="秉賦為先天賦圖示"> [秉賦為先](#adamant_clip_size)<br>- Priority Endowment | <ul><li>彈匣容量提高 15%，容量向上取整數。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="惡徒退散天賦圖示"> [惡徒退散](#adamant_damage_vs_suppressed)<br>- Cower, Miscreants! | <ul><li>對受壓制敵人的傷害提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="正當手段天賦圖示"> [正當手段](#adamant_stacking_damage)<br>- Justified Measures | <ul><li>攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/96221430-4610-4bf3-9b19-4fd056c99e74" width="32" height="32" alt="還治其人之身天賦圖示"> [還治其人之身](#adamant_perfect_block_damage_boost)<br>- Retaliatory Force | <ul><li>格擋耐力消耗降低 15%；完美格擋後，傷害與攻速提高 15%，持續 8 秒。</li></ul> | 技能 |
 
 ---
 
@@ -518,5 +519,20 @@
 - **傷害算例**：滿層為 5 × 2% = 10%，基礎 100 點傷害變成 110 點；同階段原有 25% 加成時，125 點變成 135 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_stacking_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_perfect_block_damage_boost"></a>
+### 還治其人之身(Retaliatory Force)
+
+<img src="https://github.com/user-attachments/assets/96221430-4610-4bf3-9b19-4fd056c99e74" width="72" height="72" alt="還治其人之身天賦圖示">
+
+- **格擋消耗**：格擋耐力消耗降低 15%；原本消耗 2 點耐力，單計本效果為 2 × 0.85 = 1.7 點。
+
+- **完美格擋增益**：完美格擋後，傷害與攻速提高 15%，持續 8 秒；再次完美格擋重設時間。
+
+- **增益算例**：基礎 100 點傷害變成 115 點；受攻速影響的 1 秒動作變成 1 ÷ 1.15 ≈ 0.870 秒。若已有同階段 25% 增傷，則為 100 × (1 + 25% + 15%) = 140 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_perfect_block_damage_boost.md) · [返回目錄](#talent-index)
 
 ---

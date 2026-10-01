@@ -44,6 +44,7 @@
 | [秉賦為先](#adamant_clip_size) | 未見明確矛盾 |
 | [惡徒退散](#adamant_damage_vs_suppressed) | 未見明確矛盾 |
 | [正當手段](#adamant_stacking_damage) | 未見明確矛盾 |
+| [還治其人之身](#adamant_perfect_block_damage_boost) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
@@ -298,3 +299,10 @@
 - 描述鍵：`loc_talent_adamant_stacking_damage_desc`；hash：`8191a7bf`。
 - 結論：未見明確矛盾。繁中「攻擊命中後」與英文 on Successful Attack一致；首目標限制屬補充。
 - [原始碼推導與限制](adamant_stacking_damage.md)。
+
+<a id="adamant_perfect_block_damage_boost"></a>
+## 還治其人之身(Retaliatory Force)
+
+- 描述鍵：`loc_talent_adamant_perfect_block_damage_boost_alt_desc`；hash：`9349e3e7`。
+- 結論：未見明確矛盾。繁中與英文均把格擋消耗列常駐、傷害攻速列完美格擋後；條件與對象一致。
+- [原始碼推導與限制](adamant_perfect_block_damage_boost.md)。
