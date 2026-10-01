@@ -11,6 +11,7 @@
 | [投彈完畢！](#ogryn_box_explodes) | 未見明確矛盾 |
 | [破片炸彈](#ogryn_grenade_frag) | 未見明確矛盾 |
 | [投石問路](#ogryn_grenade_friend_rock) | 未見明確矛盾 |
+| [那下不算！](#ogryn_replenish_rock_on_miss) | 跨來源待同版核對 |
 | [超巨量傷害箱](#ogryn_big_box_of_hurt_more_bombs) | 未見明確矛盾 |
 | [破骨者之環](#ogryn_melee_damage_coherency_improved) | 未見明確矛盾 |
 | [優勝劣汰](#ogryn_damage_vs_suppressed_coherency) | 未見明確矛盾 |
@@ -102,6 +103,13 @@
 - 描述鍵：`loc_ability_ogryn_friend_rock_desc`；hash：`45cf696a`。
 - 結論：未見明確矛盾。同 hash 45cf696a 的繁中與英文都描述單一目標投擲、對甲殼與不屈敵人效果較弱、每 45 秒取得一顆且最多持有 4 顆；能力設定直接確認 45 秒與 4 顆上限，投射物則使用直接命中傷害。未列出傷害公式屬省略，不據此判為翻譯錯誤。本機 Build 25492122 的繁中與英文文字以相同 hash 配對；公開固定 SHA 是否對應同一 Build 尚未確認。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_grenade_friend_rock.md)。
+
+<a id="ogryn_replenish_rock_on_miss"></a>
+## 那下不算！(That One Didn't Count)
+
+- 描述鍵：`loc_talent_ogryn_replenish_rock_on_miss_desc`；hash：`af804692`。
+- 結論：跨來源待同版核對。同源中英都寫未命中任何敵人；固定程式的impact_hit在可受傷害目標分支設值，不限敵人，可破壞物品亦可能影響。來源未核同版，保留差異，不列繁中誤譯。
+- [原始碼推導與限制](ogryn_replenish_rock_on_miss.md)。
 
 <a id="ogryn_big_box_of_hurt_more_bombs"></a>
 ## 超巨量傷害箱(Bigger Box of Hurt)

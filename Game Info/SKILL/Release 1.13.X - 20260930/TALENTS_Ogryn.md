@@ -10,6 +10,7 @@
 | <img src="https://github.com/user-attachments/assets/a7e97984-e57a-4028-ab1b-6e89a0e42fdf" width="32" height="32" alt="投彈完畢！天賦圖示"> [投彈完畢！](#ogryn_box_explodes)<br>- Bombs Away! | <ul><li>選擇「投彈完畢！」後，手雷箱命中敵人會破開並散出 6 顆手雷；搭配「超巨量傷害箱」時為 9 顆。</li><li>最多攜帶 3 箱；散出的手雷各自倒數引爆。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/ce691c05-0701-4539-921b-620c90189fa2" width="32" height="32" alt="破片炸彈天賦圖示"> [破片炸彈](#ogryn_grenade_frag)<br>- Frag Bomb | <ul><li>爆炸半徑 16 公尺，中心 2 公尺傷害較高；最多攜帶 1 顆。</li><li>對符合條件的普通敵人直接致命；巨獸、連長與歐格林按傷害計算。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/641d8592-01cf-4120-ae26-b53ea1a58776" width="32" height="32" alt="投石問路天賦圖示"> [投石問路](#ogryn_grenade_friend_rock)<br>- Big Friendly Rock | <ul><li>「投石問路」向單一敵人投出岩石，最多持有 4 顆；一般每 45 秒恢復 1 顆。</li><li>岩石使用直接命中傷害，不套用爆炸範圍；對甲殼護甲的效果較弱。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/3d000b06-db5c-4ff3-96c9-54d09216587d" width="32" height="32" alt="那下不算！天賦圖示"> [那下不算！](#ogryn_replenish_rock_on_miss)<br>- That One Didn't Count | <ul><li>岩石命中弱點，或未命中可受傷害的目標，返還 1 顆；每 5 秒最多一次。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/13c08b08-ef80-4f04-8a70-cddfa4db7389" width="32" height="32" alt="超巨量傷害箱天賦圖示"> [超巨量傷害箱](#ogryn_big_box_of_hurt_more_bombs)<br>- Bigger Box of Hurt | <ul><li>「超巨量傷害箱」讓「投彈完畢！」命中後散出的手雷增加 3 顆。</li><li>基礎 6 顆加上 3 顆後為 9 顆；增加的是散出數量，不會增加手雷箱的投擲充能。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/78f209fd-3e8b-456d-954d-c67fdf6e23ee" width="32" height="32" alt="破骨者之環天賦圖示"> [破骨者之環](#ogryn_melee_damage_coherency_improved)<br>- Bonebreaker's Aura | <ul><li>「破骨者之環」使你和協同範圍內隊友的近戰攻擊傷害提高 10%。</li><li>這是基礎近戰光環的強化版本，採用 10% 數值，不會再把基礎 7.5% 額外相加。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/4b71152f-747b-450c-9d3a-82a313fc8360" width="32" height="32" alt="優勝劣汰天賦圖示"> [優勝劣汰](#ogryn_damage_vs_suppressed_coherency)<br>- Coward Culling | <ul><li>「優勝劣汰」使你和協同範圍內隊友對受壓制敵人的傷害提高 20%；另使你造成的壓制提高 25%。</li></ul> | 光環 |
@@ -135,6 +136,21 @@
 - **特殊敵人**：岩石可直接擊殺專家敵人，並對特定敵人另有必殺設定；這些情況不以一般傷害算例決定是否擊殺。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_grenade_friend_rock.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_replenish_rock_on_miss"></a>
+### 那下不算！(That One Didn't Count)
+
+<img src="https://github.com/user-attachments/assets/3d000b06-db5c-4ff3-96c9-54d09216587d" width="72" height="72" alt="那下不算！天賦圖示">
+
+- **觸發條件**：岩石命中至少一個弱點，或整次投擲沒有命中可受傷害的目標時，返還 1 顆。撞到地形仍可算落空；命中可破壞物品則可能失去落空資格。
+
+- **充能算例**：投出最後一顆後若該次符合條件，會回復為 1 顆；每次只恢復 1 顆，總數不超過 4 顆。
+
+- **冷卻算例**：從前一次返還起算 5 秒；若第二顆岩石在第 4 秒結束飛行，即使符合返還條件也不會恢復。以投射物結束時計算，不只比較兩次按下投擲的時間。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_replenish_rock_on_miss.md) · [返回目錄](#talent-index)
 
 ---
 
