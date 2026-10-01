@@ -10,6 +10,7 @@
 |---|---|
 | [破骨者之環](#ogryn_melee_damage_coherency_improved) | 未見明確矛盾 |
 | [優勝劣汰](#ogryn_damage_vs_suppressed_coherency) | 未見明確矛盾 |
+| [跟緊我！](#ogryn_toughness_regen_aura) | 未見明確矛盾 |
 | [爆限超載](#ogryn_leadbelcher_no_ammo_chance) | 未見明確矛盾 |
 | [麻木](#ogryn_carapace_armor) | 跨來源待同版核對 |
 | [重拳出擊](#ogryn_passive_heavy_hitter) | 未見明確矛盾 |
@@ -90,6 +91,13 @@
 - 描述鍵：`loc_talent_ogryn_damage_vs_suppressed_new_desc`；hash：`4e68c42c`。
 - 結論：未見明確矛盾。同 hash 4e68c42c 的中英文都明列你與協同盟友對受壓制敵人的傷害加成，以及持有者造成的壓制數值；設定分別為 +20% 傷害與 +25% 壓制，兩者作用對象不同。本機 Build 25492122 的繁中與英文文字以相同 hash 配對；公開固定 SHA 是否對應同一 Build 尚未確認。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_damage_vs_suppressed_coherency.md)。
+
+<a id="ogryn_toughness_regen_aura"></a>
+## 跟緊我！(Stay Close!)
+
+- 描述鍵：`loc_talent_ogryn_toughness_regen_aura_desc`；hash：`89218b06`。
+- 結論：未見明確矛盾。同 hash 89218b06 的繁中與英文都說明你與協同盟友獲得韌性恢復加成，未宣稱光環會自動恢復韌性。原始設定提高的是恢復量修正，而自然恢復使用另一個速率屬性。本機 Build 25492122 的繁中與英文文字以相同 hash 配對；公開固定 SHA 是否對應同一 Build 尚未確認。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- [原始碼推導與限制](ogryn_toughness_regen_aura.md)。
 
 <a id="ogryn_leadbelcher_no_ammo_chance"></a>
 ## 爆限超載(Burst Limiter Override)
