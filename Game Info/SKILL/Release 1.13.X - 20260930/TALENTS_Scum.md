@@ -12,6 +12,7 @@
 | <img src="https://github.com/user-attachments/assets/3927d1d0-9e15-4b96-9a91-00f0503e338c" width="32" height="32" alt="精進神射手天賦圖示"> [精進神射手](#broker_aura_gunslinger_improved)<br>- Gunslinger Improved | <ul><li>協同中的成員拾取彈藥時，各成員額外取得相當於該補給 10% 的彈藥。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/7fc85ba0-f7e6-4aba-a966-638511f2c713" width="32" height="32" alt="惡棍天賦圖示"> [惡棍](#broker_coherency_melee_damage)<br>- Ruffian | <ul><li>你與協同中的隊友，近戰傷害增加 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="32" height="32" alt="無政府主義者天賦圖示"> [無政府主義者](#broker_coherency_anarchist)<br>- Anarchist | <ul><li>你與協同中的隊友，爆擊機率增加 5 個百分點。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7" width="32" height="32" alt="強化亡命之徒天賦圖示"> [強化亡命之徒](#broker_ability_focus_improved)<br>- Enhanced Desperado | <ul><li>啟動後自動切換並裝填遠程武器，進入 10 秒專注狀態；此時遠程攻擊視同成功閃避，衝刺不耗耐力，衝刺速度加算 +20%。</li><li>標示 12.5 公尺內可標記的敵人；以遠程武器近距離擊殺標記目標可延長狀態，初始每次 +1 秒，經過 20 秒後延長量逐段縮小。</li><li>基礎冷卻 45 秒；狀態存續期間自然充能暫停，狀態結束後才恢復。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="特提恩是迎賓天賦圖示"> [特提恩是迎賓](#broker_passive_first_target_damage)<br>- A Tertium Welcome | <ul><li>每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="打你的臉天賦圖示"> [打你的臉](#broker_passive_close_ranged_damage)<br>- In Your Face | <ul><li>手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。</li></ul> | 技能 |
@@ -160,6 +161,30 @@
 - **機率算例**：原本 10% 變成 10% + 5% = 15%，原本 25% 則變成 30%。
 
 [詳細資料](TALENTS%20Scum/broker_coherency_anarchist.md) · [返回目錄](#talent-index)
+
+---
+
+
+---
+
+## 能力
+
+<a id="broker_ability_focus_improved"></a>
+### 強化亡命之徒(Enhanced Desperado)
+
+<img src="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7" width="72" height="72" alt="強化亡命之徒天賦圖示">
+
+- **啟動與防護**：立即切換遠程武器並裝滿彈匣，進入 10 秒專注。期間視為正在閃避遠程攻擊，衝刺不消耗耐力，並免疫壓制。
+
+- **衝刺算例**：衝刺速度增加 20%；原本 5 公尺／秒變成 5 × 1.2 = 6 公尺／秒。
+
+- **標記與延長**：標示 12.5 公尺內符合條件的敵人。近距離遠程擊殺可延長專注，初始每次 1 秒；啟動滿 20 秒後每次降為 0.2 秒，滿 40 秒後降為 0.04 秒。每次延長後的剩餘時間最多回到 10 秒。
+
+- **針槍毒素例外**：狀態期間以針槍遠程命中並追蹤到的敵人，即使最後由毒素傷害擊殺，也可能延長狀態；還須符合近距離死亡條件。其他毒素擊殺不會一概觸發。
+
+- **彈藥與冷卻**：狀態期間重新裝填不扣彈藥儲備；基礎冷卻 45 秒的自然充能在狀態結束後才開始恢復，延長的狀態時間也會延後冷卻恢復。 結束時，會依剩餘備彈重新結算彈匣；狀態內的免費子彈不會整匣保留。
+
+[詳細資料](TALENTS%20Scum/broker_ability_focus_improved.md) · [返回目錄](#talent-index)
 
 ---
 
