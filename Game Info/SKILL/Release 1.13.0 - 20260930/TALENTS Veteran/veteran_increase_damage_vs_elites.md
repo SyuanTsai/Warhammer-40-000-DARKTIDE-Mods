@@ -22,4 +22,4 @@
 - 圖示取自 [Games Lantern 編輯器](https://darktide.gameslantern.com/build-editor)的公開資料，取得日期為 2026-10-01；[原始圖片](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_increase_damage_vs_elites.webp)。
 - 天賦與節點對應：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_increase_damage_vs_elites:node_06272211-2d9a-47c7-bf84-8e7ea1eb8a01`；與[固定版本節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1551-L1579)核對。來源原始碼提供圖示路徑，但不含圖片檔。
 - 原始圖片為 288 × 288 WebP，6380 bytes；SHA-256：`f51bb58c4c6269272c653a56e3db0eb9a985a139f0270260ab05ae9de91827e3`。
-- [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6)記錄五張圖示；目前以來源網址顯示，尚未建立 GitHub 圖片附件。圖片僅用於視覺呈現，不作技能機制證據。
+- 圖片保存在 [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6) 的 [GitHub 圖片附件](https://github.com/user-attachments/assets/915cdbef-5b88-4d3b-a4f1-e29e8a8f0f07)，主頁引用此附件；圖檔不加入 Git 分支。已核對附件的 SHA-256 與檔案大小，均與原圖一致。圖片僅用於視覺呈現，不作技能機制證據。

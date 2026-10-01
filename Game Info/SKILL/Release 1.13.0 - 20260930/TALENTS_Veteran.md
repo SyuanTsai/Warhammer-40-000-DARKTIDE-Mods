@@ -20,7 +20,7 @@
 
 ### 炸藥儲備(Demolition Stockpile)
 
-<img src="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/tactical_modifier/veteran_replenish_grenades.webp" width="72" height="72" alt="炸藥儲備天賦圖示">
+<img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="72" height="72" alt="炸藥儲備天賦圖示">
 
 - 手雷未滿時，定期補充 **1 顆手雷**。
 - **粉碎者破片手雷、煙霧手雷：60 秒。**
@@ -43,7 +43,7 @@
 
 ### 掩護射擊(Overwatch)
 
-<img src="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/ability_modifier/veteran_combat_ability_extra_charge.webp" width="72" height="72" alt="掩護射擊天賦圖示">
+<img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="72" height="72" alt="掩護射擊天賦圖示">
 
 - **滲透增加 1 次使用次數，最多儲存 2 次。**
 - **每次冷卻時間延長 33%。**
@@ -66,7 +66,7 @@
 
 ### 殺戮地帶(Kill Zone)
 
-<img src="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_ranged_power_out_of_melee.webp" width="72" height="72" alt="殺戮地帶天賦圖示">
+<img src="https://github.com/user-attachments/assets/8cc616f0-d225-4b5f-81a4-8780f478d471" width="72" height="72" alt="殺戮地帶天賦圖示">
 
 - **超過 8 秒未受到近戰命中時，遠程傷害增加 15%。**
 - 再次受到近戰命中時，效果中斷並重新計時。
@@ -86,7 +86,7 @@
 
 ### 振奮擊倒(Exhilarating Takedown)
 
-<img src="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_replenish_toughness_on_weakspot_kill.webp" width="72" height="72" alt="振奮擊倒天賦圖示">
+<img src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907" width="72" height="72" alt="振奮擊倒天賦圖示">
 
 - **遠程弱點擊殺恢復 15% 最大韌性，並獲得 1 層韌性減傷，最多 3 層。**
 - 每層使韌性受到的傷害降低 **10%**，各層減傷相乘；三層合計降低 **27.1%**。
@@ -115,7 +115,7 @@
 
 ### 優越情節(Superiority Complex)
 
-<img src="https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_increase_damage_vs_elites.webp" width="72" height="72" alt="優越情節天賦圖示">
+<img src="https://github.com/user-attachments/assets/915cdbef-5b88-4d3b-a4f1-e29e8a8f0f07" width="72" height="72" alt="優越情節天賦圖示">
 
 - **對精英敵人的傷害增加 15%。**
 - 近戰與遠程攻擊均適用。

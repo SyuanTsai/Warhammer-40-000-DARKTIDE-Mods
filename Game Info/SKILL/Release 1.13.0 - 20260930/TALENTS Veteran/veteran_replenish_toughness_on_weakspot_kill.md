@@ -27,4 +27,4 @@
 - 圖示取自 [Games Lantern 編輯器](https://darktide.gameslantern.com/build-editor)的公開資料，取得日期為 2026-10-01；[原始圖片](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_replenish_toughness_on_weakspot_kill.webp)。
 - 天賦與節點對應：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_replenish_toughness_on_weakspot_kill:node_f0744989-1f87-4da4-aa97-30a821197ed9`；與[固定版本節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L858-L885)核對。來源原始碼提供圖示路徑，但不含圖片檔。
 - 原始圖片為 288 × 288 WebP，5666 bytes；SHA-256：`9a769f0edec7463879d085a495f308f4fb4db69cb4dd9048f87bbea121d2820f`。
-- [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6)記錄五張圖示；目前以來源網址顯示，尚未建立 GitHub 圖片附件。圖片僅用於視覺呈現，不作技能機制證據。
+- 圖片保存在 [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6) 的 [GitHub 圖片附件](https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907)，主頁引用此附件；圖檔不加入 Git 分支。已核對附件的 SHA-256 與檔案大小，均與原圖一致。圖片僅用於視覺呈現，不作技能機制證據。

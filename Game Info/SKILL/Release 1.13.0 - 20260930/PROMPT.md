@@ -95,11 +95,14 @@
 
 ## 圖示取得與呈現
 
-- 先檢查固定版本原始碼是否包含可用圖檔；只有材質或圖示路徑，不等於有圖片。
+- 先讀取 [Media-Assets README](https://github.com/SyuanTsai/Media-Assets/blob/main/README.md)，確認目前的圖片保存規則。圖片只保存在 Issue 附件；Git 僅保存來源、雜湊及附件網址等文字紀錄。
+- 檢查固定版本原始碼是否包含可用圖檔；只有材質或圖示路徑，不等於有圖片。
 - 原始碼沒有圖片時，可使用使用者指定的 Games Lantern 編輯器取得圖示；以天賦識別碼及節點核對，不憑相似外觀猜測。
 - Games Lantern 只作圖示來源，不能用其技能敘述或數值替代唯一原始碼證據。
-- 經使用者授權，以 `SyuanTsai/Media-Assets` 的 Issue 方式記錄圖片與來源；不得將建立 Issue 的授權擴張為直接修改該儲存庫主分支。
-- 分清「Issue 引用來源網址」與「已上傳 GitHub 附件」；未上傳附件不可宣稱已完成 GitHub 圖片備份。需要登入才能上傳時，先完成文案及來源紀錄，明確回報附件狀態。
+- 經使用者授權，將圖片存為 `SyuanTsai/Media-Assets` 的 Issue 附件，文件引用附件網址。不得將圖檔提交至 main、master 或任何其他 Git 分支。
+- 可以透過已獲授權的 GitHub 帳號，在瀏覽器或支援附件的官方 GitHub CLI 上傳。[GitHub CLI 2.99.0](https://github.com/cli/cli/releases/tag/v2.99.0) 已支援 Issue 的 `--attach`；使用前先核對實際版本與指令說明，不假設本機版本已支援，也不自行安裝或升級。
+- Issue 中引用來源圖片或 `raw.githubusercontent.com` 網址，不等於已建立附件。只有 Issue 中實際存在且可讀取的 GitHub 圖片附件，才能標示保存完成；核對附件內容、大小及 SHA-256 與原圖一致。
+- 無法上傳附件時，保留已完成文案及來源紀錄，回報具體限制；不得改用 Git 分支存放圖片，也不得把外部來源網址描述成 Issue 附件。
 - 原圖保留，不重畫、不任意裁切或改色；記錄原網址、取得日期、尺寸、檔案雜湊與 Media-Assets Issue。圖示旁只放技能內容，來源及保存狀態留在子文件。
 - 每個技能標題下以適合閱讀的尺寸顯示圖示，提供繁中替代文字；確認圖片能載入。
 

@@ -23,4 +23,4 @@
 - 圖示取自 [Games Lantern 編輯器](https://darktide.gameslantern.com/build-editor)的公開資料，取得日期為 2026-10-01；[原始圖片](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_ranged_power_out_of_melee.webp)。
 - 天賦與節點對應：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_ranged_power_out_of_melee:node_b0c4f49c-fd47-4b1c-9279-82e12dc3ac7d`；與[固定版本節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L691-L720)核對。來源原始碼提供圖示路徑，但不含圖片檔。
 - 原始圖片為 288 × 288 WebP，4726 bytes；SHA-256：`52a9ca53b86c95279d44bb47d35df4ea94b268bee43bb59da8129e4e5661bc18`。
-- [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6)記錄五張圖示；目前以來源網址顯示，尚未建立 GitHub 圖片附件。圖片僅用於視覺呈現，不作技能機制證據。
+- 圖片保存在 [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6) 的 [GitHub 圖片附件](https://github.com/user-attachments/assets/8cc616f0-d225-4b5f-81a4-8780f478d471)，主頁引用此附件；圖檔不加入 Git 分支。已核對附件的 SHA-256 與檔案大小，均與原圖一致。圖片僅用於視覺呈現，不作技能機制證據。
