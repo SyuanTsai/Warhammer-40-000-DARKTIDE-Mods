@@ -10,6 +10,7 @@
 | <img src="https://github.com/user-attachments/assets/d45e19a1-d480-42db-bd0c-70ed43aba9aa" width="32" height="32" alt="整合型艾曼納圖斯力場天賦圖示"> [整合型艾曼納圖斯力場](#cryptic_grenade_ability_force_field)<br>- Integrated Refraction Emitter | <ul><li>展開一個跟隨玩家的力場，吸收遠程攻擊並在啟動與結束時電擊附近敵人。</li><li>持續8秒，最多儲存3次；每次需75秒自然恢復。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/295017d9-50cd-4797-8b33-bd3627a7139f" width="32" height="32" alt="滌罪伺服頭骨天賦圖示"> [滌罪伺服頭骨](#cryptic_flamethrower)<br>- Purgator Servo-Skull | <ul><li>額外召喚一台配備噴火器的伺服頭骨，可指定區域施放火焰。</li><li>與醫療伺服頭骨同時選用時，共用使用次數上限由3次增至5次。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/adeeeef3-0c2e-450a-974b-66ce6c6366bd" width="32" height="32" alt="醫療伺服頭骨天賦圖示"> [醫療伺服頭骨](#cryptic_servo_skull_inject_ally)<br>- Medicae Servo-Skull | <ul><li>額外召喚一台醫療伺服頭骨，可救援需要盟友協助的隊友。</li><li>救援後，隊友獲得5秒韌性傷害減免與韌性恢復。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/6a4875ee-4056-4964-ae36-846e598954bc" width="32" height="32" alt="電弧手榴彈天賦圖示"> [電弧手榴彈](#cryptic_grenade_ability_arc_grenade)<br>- Arc Grenades | <ul><li>投擲後造成10公尺電擊爆炸，最多以4個目標起始電弧並向附近敵人連鎖。</li><li>每擊殺一名精英或專家敵人，恢復0.04份電容量。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/0efafa0a-aad0-4bb8-869f-133db37cf152" width="32" height="32" alt="匠師伺服頭骨天賦圖示"> [匠師伺服頭骨](#cryptic_servo_skull_improved)<br>- Artificer Servo-Skull | <ul><li>伺服頭骨可常駐跟隨，並可受命射擊敵人或執行資料解碼。</li><li>基礎伺服頭骨強化效果改為永久生效；命中還會使敵人承受更多傷害並累積燃燒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/e70f3e4b-d2c2-4840-bc29-56ba85dd816d" width="32" height="32" alt="過載艾曼納圖斯力場天賦圖示"> [過載艾曼納圖斯力場](#cryptic_force_field_duration_increase)<br>- Overcharged Refraction Emitter | <ul><li>將艾曼納圖斯力場持續時間由8秒提高至12秒，並在持續時間中點額外引發一次電擊爆炸。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/9eb6e468-224f-4d7c-b696-cc58aa08f532" width="32" height="32" alt="動能排斥天賦圖示"> [動能排斥](#cryptic_force_field_capacitance_restore)<br>- Kinetic Repulsion | <ul><li>艾曼納圖斯力場吸收遠程攻擊時會恢復電容量。</li><li>每次吸收恢復0.025份，每次力場最多恢復0.75份。</li></ul> | 閃擊 |
@@ -140,6 +141,27 @@
 - **救援限制**：無法救起懸掛在邊緣的隊友。若救援失敗且你仍存活，會退回這次消耗的使用次數。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_servo_skull_inject_ally.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_grenade_ability_arc_grenade"></a>
+### 電弧手榴彈(Arc Grenades)
+
+<img src="https://github.com/user-attachments/assets/6a4875ee-4056-4964-ae36-846e598954bc" width="72" height="72" alt="電弧手榴彈天賦圖示">
+
+- **運作方式**：爆炸半徑10公尺，最多向4名敵人發出電弧；優先選取特定重甲敵人，再尋找其他精英與有效目標。每道電弧可再連鎖附近敵人。
+
+- **運作方式**：每條電弧可在12公尺內連鎖最多5次；實際命中數取決於附近是否有有效敵人。
+
+- **運作方式**：電弧手榴彈或其電弧擊殺精英、專家時，每次恢復0.04份電容量。
+
+- **算例**：擊殺3名符合條件的敵人，共恢復3×0.04=0.12份電容量；手榴彈本身最多有3次使用次數。
+
+- **電容量算例**：單份50點時，每名合格擊殺額外恢復50 × 4% = 2點；擊殺3名合計6點。此為手雷額外效果，職業原有擊殺回充另計。
+
+- **使用次數**：基礎可攜帶3顆；不會像力場一樣隨時間自行補充。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_grenade_ability_arc_grenade.md) · [返回目錄](#talent-index)
 
 ---
 

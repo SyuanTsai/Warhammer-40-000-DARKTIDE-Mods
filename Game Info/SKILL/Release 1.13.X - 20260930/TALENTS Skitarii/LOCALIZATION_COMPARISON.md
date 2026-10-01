@@ -11,6 +11,7 @@
 | [整合型艾曼納圖斯力場](#cryptic_grenade_ability_force_field) | 未見明確矛盾；補充機制與算例 |
 | [滌罪伺服頭骨](#cryptic_flamethrower) | 未見明確矛盾；補充機制與算例 |
 | [醫療伺服頭骨](#cryptic_servo_skull_inject_ally) | 未見明確矛盾；補充機制與算例 |
+| [電弧手榴彈](#cryptic_grenade_ability_arc_grenade) | 文字與程式目標排序待同版核對 |
 | [匠師伺服頭骨](#cryptic_servo_skull_improved) | 未見明確矛盾；補充機制與算例 |
 | [過載艾曼納圖斯力場](#cryptic_force_field_duration_increase) | 未見明確矛盾；補充機制與算例 |
 | [動能排斥](#cryptic_force_field_capacitance_restore) | 未見明確矛盾；補充機制與算例 |
@@ -115,6 +116,13 @@
 - 描述鍵：`loc_talent_cryptic_servo_skull_inject_ally_revive_new_desc`；hash：`86ee1b55`。
 - 結論：未見明確矛盾；補充機制與算例。繁中描述已涵蓋救援、75%韌性承傷減免、每秒20%韌性恢復與5秒持續。程式確認承傷乘數0.25代表減免75%，並確認有效目標判斷與共用次數消耗；翻譯沒有列出這些條件屬機制省略。Build 25492122 尚未確認與固定來源同版。
 - [原始碼推導與限制](cryptic_servo_skull_inject_ally.md)。
+
+<a id="cryptic_grenade_ability_arc_grenade"></a>
+## 電弧手榴彈(Arc Grenades)
+
+- 描述鍵：`loc_talent_cryptic_arc_grenades_capacitance_gain_desc`；hash：`22344160`。
+- 結論：文字與程式目標排序待同版核對。繁中與英文都概括優先披甲與專家；固定程式先指定4個品種，再篩精英及其他目標，兩處精英判斷的欄位亦不同。先記錄來源差異，不單獨判定繁中錯譯。電弧數與擊殺電容量相符。
+- [原始碼推導與限制](cryptic_grenade_ability_arc_grenade.md)。
 
 <a id="cryptic_servo_skull_improved"></a>
 ## 匠師伺服頭骨(Artificer Servo-Skull)
