@@ -15,6 +15,7 @@
 | [惡棍](#broker_coherency_melee_damage) | 未見明確矛盾 |
 | [無政府主義者](#broker_coherency_anarchist) | 未見明確矛盾 |
 | [強化亡命之徒](#broker_ability_focus_improved) | 未見明確中英矛盾 |
+| [精準獵殺](#broker_ability_focus_sub_2) | 未見明確中英矛盾 |
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
 | [特提恩是迎賓](#broker_passive_first_target_damage) | 未見明確矛盾 |
 | [打你的臉](#broker_passive_close_ranged_damage) | 未見明確矛盾 |
@@ -111,6 +112,13 @@
 - 描述鍵：`loc_talent_broker_ability_focus_improved_desc`；hash：`a1148a57`。
 - 結論：未見明確中英矛盾。繁中與英文都描述遠程攻擊視同閃避、衝刺免耗耐力並加速、近距離標記與遠程擊殺延長；固定版本設定值與計時邏輯相符。針槍毒素的額外追蹤條件是程式補充，原文省略不作勘誤。
 - [原始碼推導與限制](broker_ability_focus_improved.md)。
+
+<a id="broker_ability_focus_sub_2"></a>
+## 精準獵殺(Pick Your Targets)
+
+- 描述鍵：`loc_talent_broker_ability_focus_sub_2_desc`；hash：`4946598e`。
+- 結論：未見明確中英矛盾。繁中與英文都寫專注期間遠程攻擊加撕裂，並由擊殺累積遠程傷害、最多5層；設定數值為撕裂0.15、每層遠程傷害0.03、上限5層。近距離檢查與針槍追蹤是程式細節補充。
+- [原始碼推導與限制](broker_ability_focus_sub_2.md)。
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)

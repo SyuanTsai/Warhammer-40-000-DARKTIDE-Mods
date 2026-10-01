@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/7fc85ba0-f7e6-4aba-a966-638511f2c713" width="32" height="32" alt="惡棍天賦圖示"> [惡棍](#broker_coherency_melee_damage)<br>- Ruffian | <ul><li>你與協同中的隊友，近戰傷害增加 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="32" height="32" alt="無政府主義者天賦圖示"> [無政府主義者](#broker_coherency_anarchist)<br>- Anarchist | <ul><li>你與協同中的隊友，爆擊機率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7" width="32" height="32" alt="強化亡命之徒天賦圖示"> [強化亡命之徒](#broker_ability_focus_improved)<br>- Enhanced Desperado | <ul><li>啟動後自動切換並裝填遠程武器，進入 10 秒專注狀態；此時遠程攻擊視同成功閃避，衝刺不耗耐力，衝刺速度加算 +20%。</li><li>標示 12.5 公尺內可標記的敵人；以遠程武器近距離擊殺標記目標可延長狀態，初始每次 +1 秒，經過 20 秒後延長量逐段縮小。</li><li>基礎冷卻 45 秒；狀態存續期間自然充能暫停，狀態結束後才恢復。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="精準獵殺天賦圖示"> [精準獵殺](#broker_ability_focus_sub_2)<br>- Pick Your Targets | <ul><li>專注期間遠程攻擊加算 +15% 撕裂修正；近距離遠程擊殺每次另疊 3% 遠程傷害，最多 5 層（+15%），每層持續 3 秒並可由新擊殺刷新。</li><li>此撕裂加成作用於護甲計算，擊殺疊層是遠程傷害加算；只計滿層效果時，基礎100點遠程傷害變為115點。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="特提恩是迎賓天賦圖示"> [特提恩是迎賓](#broker_passive_first_target_damage)<br>- A Tertium Welcome | <ul><li>每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="打你的臉天賦圖示"> [打你的臉](#broker_passive_close_ranged_damage)<br>- In Your Face | <ul><li>手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。</li></ul> | 技能 |
@@ -185,6 +186,23 @@
 - **彈藥與冷卻**：狀態期間重新裝填不扣彈藥儲備；基礎冷卻 45 秒的自然充能在狀態結束後才開始恢復，延長的狀態時間也會延後冷卻恢復。 結束時，會依剩餘備彈重新結算彈匣；狀態內的免費子彈不會整匣保留。
 
 [詳細資料](TALENTS%20Scum/broker_ability_focus_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_ability_focus_sub_2"></a>
+### 精準獵殺(Pick Your Targets)
+
+<img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="72" height="72" alt="精準獵殺天賦圖示">
+
+- **遠程撕裂**：專注狀態期間，遠程攻擊獲得 +15% 撕裂修正；這影響護甲穿透，不是直接增加 15% 傷害。
+
+- **擊殺疊層**：專注期間的近距離遠程擊殺增加 1 層，每層 3% 遠程傷害、最多 5 層。再次擊殺刷新時間；停止擊殺後每 3 秒掉 1 層，專注結束則全部移除。
+
+- **觸發範圍**：普通觸發要求在 12.5 公尺內遠程擊殺；先前用毒針手槍命中追蹤的敵人，也可在近距離毒素死亡時觸發。
+
+- **傷害算例**：只計滿 5 層時，基礎 100 點遠程傷害 × (1 + 5 × 0.03) = 115 點；其他遠程傷害修正會與此加算合併。
+
+[詳細資料](TALENTS%20Scum/broker_ability_focus_sub_2.md) · [返回目錄](#talent-index)
 
 ---
 
