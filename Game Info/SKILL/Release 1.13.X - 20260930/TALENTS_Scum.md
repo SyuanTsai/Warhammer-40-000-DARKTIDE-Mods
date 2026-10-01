@@ -48,6 +48,7 @@
 | <img src="https://github.com/user-attachments/assets/bd4b828f-f439-429d-a682-c036774235f3" width="32" height="32" alt="甜蜜點天賦圖示"> [甜蜜點](#broker_passive_increased_weakspot_damage)<br>- The Sweet Spot | <ul><li>弱點命中的額外傷害部分增加 25%；實際總增幅依武器而變。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c19f893c-1a73-4111-b234-e675605b17b5" width="32" height="32" alt="延長藥效天賦圖示"> [延長藥效](#broker_passive_stimm_increased_duration)<br>- Long Lasting | <ul><li>興奮劑效果延長 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6f1ead13-0e28-4983-86e7-44478bd76cdc" width="32" height="32" alt="神佑興奮劑天賦圖示"> [神佑興奮劑](#broker_passive_stimm_cleanse_on_kill)<br>- Blessed Stimms | <ul><li>興奮劑生效時，每次擊殺清除最大生命 1% 的腐敗；每次用藥以 50% 為停止門檻。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/5cb31261-7422-451a-9aac-d1c38b48c802" width="32" height="32" alt="巢都格鬥家天賦圖示"> [巢都格鬥家](#broker_passive_dr_damage_tradeoff_on_stamina)<br>- Hive City Brawler | <ul><li>耐力越滿，減傷越高；耐力越低，近戰增傷越高，兩者各最多 20%。</li></ul> | 技能 |
 
 ---
 
@@ -642,5 +643,22 @@
 - **門檻例外**：每次擊殺先檢查是否達 50%，再執行完整一次清除。若累計 99 點而本次清除 2 點，會到 101 點才停止，因此最後一次可能略超過標示門檻。
 
 [詳細資料](TALENTS%20Scum/broker_passive_stimm_cleanse_on_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_dr_damage_tradeoff_on_stamina"></a>
+### 巢都格鬥家(Hive City Brawler)
+
+<img src="https://github.com/user-attachments/assets/5cb31261-7422-451a-9aac-d1c38b48c802" width="72" height="72" alt="巢都格鬥家天賦圖示">
+
+- **計算方式**：減傷 = 20% × 目前耐力比例；近戰增傷 = 20% × 已消耗耐力比例。兩者隨耐力變化即時調整。
+
+- **半耐力算例**：剩餘 50% 耐力時，減傷與近戰增傷各 10%。單計本效果，原本承受 100 點變成 90，原本造成 100 點近戰傷害變成 110。
+
+- **滿空耐力算例**：滿耐力時承傷 100 × 0.8 = 80，近戰不增傷；耐力耗盡時不減傷，近戰則為 100 × 1.2 = 120。
+
+- **與其他加成**：減傷採獨立承傷倍率，例如另有 20% 獨立減傷，滿耐力時為 100 × 0.8 × 0.8 = 64。近戰傷害則與同階段增傷相加。
+
+[詳細資料](TALENTS%20Scum/broker_passive_dr_damage_tradeoff_on_stamina.md) · [返回目錄](#talent-index)
 
 ---

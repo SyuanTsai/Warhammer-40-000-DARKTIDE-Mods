@@ -50,6 +50,7 @@
 | [甜蜜點](#broker_passive_increased_weakspot_damage) | 未見明確矛盾 |
 | [延長藥效](#broker_passive_stimm_increased_duration) | 未見明確矛盾 |
 | [神佑興奮劑](#broker_passive_stimm_cleanse_on_kill) | 未見明確矛盾 |
+| [巢都格鬥家](#broker_passive_dr_damage_tradeoff_on_stamina) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -346,3 +347,10 @@
 - 描述鍵：`loc_talent_broker_passive_stimm_cleanse_on_kill_desc`；hash：`565482d8`。
 - 結論：未見明確矛盾。兩語均稱每次用藥最多50%；固定程式最後一次可能跨門檻，屬程式與兩語共同文案的邊界落差，不列繁中誤譯。
 - [原始碼推導與限制](broker_passive_stimm_cleanse_on_kill.md)。
+
+<a id="broker_passive_dr_damage_tradeoff_on_stamina"></a>
+## 巢都格鬥家(Hive City Brawler)
+
+- 描述鍵：`loc_talent_broker_passive_dr_damage_tradeoff_on_stamina_desc`；hash：`2fe3c231`。
+- 結論：未見明確矛盾。兩語均按剩餘耐力減傷、已用耐力增傷，未見矛盾。
+- [原始碼推導與限制](broker_passive_dr_damage_tradeoff_on_stamina.md)。

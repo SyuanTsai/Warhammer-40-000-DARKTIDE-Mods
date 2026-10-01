@@ -48,3 +48,4 @@
 | [甜蜜點](broker_passive_increased_weakspot_damage.md) | 弱點命中的額外傷害部分增加 25%；實際總增幅依武器而變。；完整計算與適用限制見來源文件。 |
 | [延長藥效](broker_passive_stimm_increased_duration.md) | 興奮劑效果延長 5 秒。；完整計算與適用限制見來源文件。 |
 | [神佑興奮劑](broker_passive_stimm_cleanse_on_kill.md) | 興奮劑生效時，每次擊殺清除最大生命 1% 的腐敗；每次用藥以 50% 為停止門檻。；完整計算與適用限制見來源文件。 |
+| [巢都格鬥家](broker_passive_dr_damage_tradeoff_on_stamina.md) | 耐力越滿，減傷越高；耐力越低，近戰增傷越高，兩者各最多 20%。；完整計算與適用限制見來源文件。 |
