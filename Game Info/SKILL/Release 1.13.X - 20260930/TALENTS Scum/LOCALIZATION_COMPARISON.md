@@ -43,6 +43,7 @@
 | [隨身毒素](#broker_passive_blitz_inflicts_toxin) | 未見明確矛盾 |
 | [精準投毒](#broker_passive_reduced_damage_by_toxined) | 未見明確矛盾 |
 | [毒性再生](#broker_passive_replenish_toughness_while_toxined_enemies_in_proximity) | 未見明確矛盾 |
+| [軍火商](#broker_passive_extended_mag) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -290,3 +291,10 @@
 - 描述鍵：`loc_talent_broker_passive_replenish_toughness_while_toxined_enemies_in_proximity_desc`；hash：`c1d98f78`。
 - 結論：未見明確矛盾。兩語均描述範圍、間隔、每敵人恢復量與上限，未見矛盾。
 - [原始碼推導與限制](broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md)。
+
+<a id="broker_passive_extended_mag"></a>
+## 軍火商(Ammo Jack)
+
+- 描述鍵：`loc_talent_broker_passive_extended_mag_desc`；hash：`414a3799`。
+- 結論：未見明確矛盾。兩語均明確寫出無條件進位，未見矛盾。
+- [原始碼推導與限制](broker_passive_extended_mag.md)。

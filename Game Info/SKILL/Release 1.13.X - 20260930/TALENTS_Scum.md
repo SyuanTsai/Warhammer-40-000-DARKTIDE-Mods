@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/6125da40-9e12-4107-bb5b-a8aa330a4b89" width="32" height="32" alt="隨身毒素天賦圖示"> [隨身毒素](#broker_passive_blitz_inflicts_toxin)<br>- Pocket Toxin | <ul><li>閃擊爆炸額外施毒：致盲手雷 3 層、飛彈 6 層、化學手雷 10 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/28aafc63-bbd4-4097-a93f-3fb0d62f8710" width="32" height="32" alt="精準投毒天賦圖示"> [精準投毒](#broker_passive_reduced_damage_by_toxined)<br>- Targeted Toxin | <ul><li>你感染的敵人造成傷害降低 15%；怪物與指定頭目改為降低 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0d36baca-b919-457c-890e-535a0ce33236" width="32" height="32" alt="毒性再生天賦圖示"> [毒性再生](#broker_passive_replenish_toughness_while_toxined_enemies_in_proximity)<br>- Toxic Renewal | <ul><li>15 公尺內每名感染毒素的敵人，每秒恢復 1% 最大韌性，最多計 10 名。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/148db758-02d7-4855-9f45-badcabc7c8cf" width="32" height="32" alt="軍火商天賦圖示"> [軍火商](#broker_passive_extended_mag)<br>- Ammo Jack | <ul><li>彈匣容量增加 15%，結果無條件進位。</li></ul> | 技能 |
 
 ---
 
@@ -536,5 +537,18 @@
 - **恢復算例**：最大韌性 100、附近 4 名感染敵人，每秒恢復 100 × 4 × 1% = 4 點；10 名或更多時，每秒最多 10 點。只缺 3 點時實際只補 3 點。
 
 [詳細資料](TALENTS%20Scum/broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_extended_mag"></a>
+### 軍火商(Ammo Jack)
+
+<img src="https://github.com/user-attachments/assets/148db758-02d7-4855-9f45-badcabc7c8cf" width="72" height="72" alt="軍火商天賦圖示">
+
+- **容量算例**：原本 30 發，變成 ⌈30 × 1.15⌉ = 35 發；原本 7 發，變成 ⌈7 × 1.15⌉ = 9 發。
+
+- **作用範圍**：改變彈匣容量，不直接增加備用彈藥上限。其他同類容量加成先相加，再將結果無條件進位。
+
+[詳細資料](TALENTS%20Scum/broker_passive_extended_mag.md) · [返回目錄](#talent-index)
 
 ---
