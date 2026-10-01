@@ -11,7 +11,7 @@
 
 - 修正啟用後，能量超載被動才接受 on_combat_ability 事件；檢查 ability_cost 大於0，並依 ability_cost×5 增加層數。設定值為每道充能5層，根鑰石上限30層。
 - _add_overload_stack 先將顯示層數與新增數量比較；若總數達到或超過30，呼叫一次超載並清除現有累積，不把溢出部分帶到下一輪。
-- 護教軍 discharge action 在技能開始時以使用充能數填入 ability_cost 並送出事件。Precision Stance Toggle 的 active=false 啟動分支呼叫基底 start 並送出事件；active=true 停止分支在呼叫基底 start 前 return，因而不會送出第二個 on_combat_ability 事件。此結論只說該停止分支不觸發 Powerdrive 計算，不推斷它是否另有充能扣款。
+- 電能發射器在動作開始時以本次消耗數填入 ability_cost。鎖定姿態啟動時傳 floor(0.25)=0，不在一般啟動入口加層；停止分支雖在 super.start 前 return，但移除姿態 buff 時仍會執行下述專用 stop_func 結算。
 - 鎖定姿態的 stop_func 另有專用結算：floor(cooldown_percent_used + 0.25) × 5，再經 cryptic_buffs_event_give_overload_keystone_stacks 交給鑰石。不能因 toggle 停止分支沒有 on_combat_ability 就說結束時不會加層。啟動的 ability_cost=floor(0.25)=0；持續與射擊消耗逐次加入 cooldown_percent_used，恢復不扣回計數。
 - 弦爪 activation 在 active=false 才發出 on_combat_ability；後續 active=true 的使用雖繼續扣充能，不會再次走此加層入口。
 
