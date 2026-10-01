@@ -301,7 +301,7 @@
 ## 靈能強化(Empowered Psionics)
 
 - 描述鍵：`loc_talent_psyker_empowered_ability_description`；hash：`8b4a7ea9`。
-- 結論：待同版核對。繁中與英文都將顱腦崩裂加成稱施放時間減少；固定原始碼實際按蓄力速度+50%計算。雙語一致的跨來源差異留待同版核對；Assail免投擲次數與消耗強化層屬兩種資源，不判為矛盾。
+- 結論：待同版核對。繁中與英文都將顱腦崩裂加成稱施放時間減少；固定原始碼實際按蓄力速度+50%計算。雙語一致的跨來源差異留待同版核對；Assail免投擲次數與消耗強化層屬兩種資源，不判為矛盾。 懲戒傳導速度顯示與實際讀取亦有落差：此路徑優先取明定0.3秒，未乘強化倍率。
 - [原始碼推導與限制](psyker_empowered_ability.md)。
 
 <a id="psyker_reduced_warp_charge_cost_and_venting_speed"></a>
