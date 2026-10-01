@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_survivalist_passive` / `veteran_survivalist_passive` - 生存專家（基礎被動）
+  - 英文對應：Survivalist Passive。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1417-L1436)。
+
 - `loc_talent_veteran_base_ranged_damage` / `veteran_base_ranged_damage` - 基礎遠程傷害加成
   - 英文對應：Increased Ranged Damage。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
   - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1400-L1416)。
