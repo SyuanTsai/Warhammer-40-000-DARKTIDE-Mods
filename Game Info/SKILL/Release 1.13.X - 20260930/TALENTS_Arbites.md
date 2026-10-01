@@ -30,7 +30,7 @@
 | <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="孤狼天賦圖示"> [孤狼](#adamant_disable_companion)<br>- Lone Wolf | <ul><li>移除電子獒犬，換取 +20% 傷害、+10% 攻擊速度、15% 韌性減傷與額外 1 次閃擊攜帶量。</li><li>缺少手榴彈時每 45 秒補 1 枚；電能地雷則每 90 秒補 1 枚。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/1016875d-cc4c-44f2-8a06-c93155d482d4" width="32" height="32" alt="律法之志天賦圖示"> [律法之志](#adamant_forceful_toughness_regen_per_stack)<br>- Will of the Lex | <ul><li>選取後 堅定不移 每層每秒恢復 0.5% 最大韌性。</li><li>效果隨 堅定不移 層數逐秒累積，最多 10 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/92922b1c-4991-480e-86af-e050b9faa496" width="32" height="32" alt="堅定意志天賦圖示"> [堅定意志](#adamant_forceful_stun_immune_and_block_all)<br>- Adamant Will | <ul><li>堅定不移 維持滿層時取得免暈與減速免疫。</li><li>離開滿層後效果再維持 3 秒；完美格擋時額外允許格擋不可格擋攻擊。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/3ecc49e6-a4c7-4d77-926d-623e4f8f34f6" width="32" height="32" alt="鎖定目標天賦圖示"> [鎖定目標](#adamant_forceful_offensive)<br>- Targets Acquired | <ul><li>堅定不移 達 10 層時取得攻速與順劈加成。</li><li>離開滿層後加成再維持 3 秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/3ecc49e6-a4c7-4d77-926d-623e4f8f34f6" width="32" height="32" alt="鎖定目標天賦圖示"> [鎖定目標](#adamant_forceful_offensive)<br>- Targets Acquired | <ul><li>堅定不移達 10 層時取得攻速與順劈加成。</li><li>離開滿層後加成再維持 3 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/bc3b59ed-a142-4807-86f9-f75d65b367b4" width="32" height="32" alt="法務官警覺天賦圖示"> [法務官警覺](#adamant_forceful_ability_damage)<br>- Arbites Vigilant | <ul><li>使用戰鬥技能時，將當前堅定不移層數轉成 12 秒威力加成。</li><li>最多 10 層各給 2.5% 威力，觸發會消耗堅定不移層數。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/62f41d0b-cd55-459d-b4d7-c8c155da410f" width="32" height="32" alt="審判之力天賦圖示"> [審判之力](#adamant_forceful_stagger_on_low_high)<br>- Judicial Force | <ul><li>堅定不移 從未滿升至 10 層，或從有層數降到 0 層時，會使附近敵人遭到爆炸踉蹌。</li><li>達到高層與歸零各自有 5 秒冷卻。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/7b782337-07db-4ff4-9a85-ba21d1fcfe6b" width="32" height="32" alt="能屈能伸天賦圖示"> [能屈能伸](#adamant_terminus_warrant_cdr)<br>- Obstinate | <ul><li>只有消耗滿層數（基礎 20 層）才會啟動冷卻恢復 效果。</li><li>效果 維持 12 秒，每秒恢復 0.33 秒的戰鬥技能資源；名目上最多回復 3.96 秒，並受剩餘冷卻上限限制。</li></ul> | 鑰石 |
@@ -491,7 +491,7 @@
 
 <img src="https://github.com/user-attachments/assets/3ecc49e6-a4c7-4d77-926d-623e4f8f34f6" width="72" height="72" alt="鎖定目標天賦圖示">
 
-- **條件與持續**：堅定不移 滿 10 層時獲得 +10% 攻擊速度與 +50% 順劈；離開滿層後再維持 3 秒。
+- **條件與持續**：堅定不移滿 10 層時獲得 +10% 攻擊速度與 +50% 順劈；離開滿層後再維持 3 秒。
 
 - **速度與順劈算例**：單計本效果，原本 1 秒的可加速攻擊動作需 1 ÷ 1.1 ≈ 0.91 秒；可造成傷害的順劈質量額度原本 10 時變成 10 × 1.5 = 15。這不是固定多打中 50% 的敵人，也不會一併提高踉蹌用的順劈額度。
 
