@@ -8,6 +8,7 @@
 |---|---|---|
 | 閃擊 | [擲彈兵(Grenadier)](#veteran_extra_grenade) | 手雷攜帶上限增加 1 顆。 |
 | 閃擊 | [炸藥儲備(Demolition Stockpile)](#veteran_replenish_grenades) | 定期補回手雷 |
+| 光環 | [火力小分隊(Fire Team)](#veteran_increased_damage_coherency) | 你與協同範圍內的隊友傷害增加 7.5%。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
@@ -53,6 +54,26 @@
 - 破片手雷已倒數 30 秒，再投擲 1 顆：再等約 `60 − 30 = 30 秒` 補回第 1 顆，之後再等約 60 秒補回第 2 顆。
 
 [詳細資料](TALENTS%20Veteran/veteran_replenish_grenades.md) · [返回目錄](#talent-index)
+
+---
+
+## 光環
+
+<a id="veteran_increased_damage_coherency"></a>
+
+### 火力小分隊(Fire Team)
+
+<img src="https://github.com/user-attachments/assets/9a3da9ac-d8f1-4745-9af6-25852f52834a" width="72" height="72" alt="火力小分隊天賦圖示">
+
+- **你與協同範圍內的隊友傷害增加 7.5%。**
+- 同一種光環不因多位老兵而重複疊加；取代你的拾荒者光環。
+
+#### 傷害算例
+
+- 只計此光環、基礎傷害 100：`100 × (1 + 7.5%) = 107.5 傷害`。
+- 同階段已有 25% 加成時：`100 × (1 + 25% + 7.5%) = 132.5 傷害`。
+
+[詳細資料](TALENTS%20Veteran/veteran_increased_damage_coherency.md) · [返回目錄](#talent-index)
 
 ---
 
