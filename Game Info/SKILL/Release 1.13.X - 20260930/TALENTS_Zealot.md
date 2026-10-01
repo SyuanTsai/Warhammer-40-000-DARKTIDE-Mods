@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="32" height="32" alt="頭號目標天賦圖示"> [頭號目標](#zealot_elite_kills_empowers)<br>- Prime Target | <ul><li>擊殺精英後增傷 10%，並在 5 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5d469457-ce3e-4c4f-ac25-c0759b30b61f" width="32" height="32" alt="敵後行動天賦圖示"> [敵後行動](#zealot_suppress_on_backstab_kill)<br>- Behind the Lines | <ul><li>重擊背刺擊殺後，壓制自身 8 公尺內的敵人；冷卻 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/4bf327a5-94f0-4af9-ad51-b3380308846e" width="32" height="32" alt="殺戮時刻天賦圖示"> [殺戮時刻](#zealot_backstab_periodic_damage)<br>- Time to Kill | <ul><li>下一次有效近戰背刺增加 50% 傷害；觸發後冷卻 8 秒。</li></ul> | 技能 |
 
 ---
 
@@ -530,5 +531,20 @@
 - **冷卻算例**：第 0 秒觸發後，第 2 秒再次重擊背刺擊殺不會再觸發；約第 5 秒起才可再次生效。
 
 [詳細資料](TALENTS%20Zealot/zealot_suppress_on_backstab_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_backstab_periodic_damage"></a>
+### 殺戮時刻(Time to Kill)
+
+<img src="https://github.com/user-attachments/assets/4bf327a5-94f0-4af9-ad51-b3380308846e" width="72" height="72" alt="殺戮時刻天賦圖示">
+
+- **運作方式**：效果可用時，近戰背刺增加 50% 傷害；造成傷害的背刺命中後，進入 8 秒冷卻。不需要擊殺。
+
+- **傷害算例**：固定其他條件、該階段基準為 100，沒有其他背刺加成時為 100 × 1.5 = 150 點；若已有同階段 20% 背刺加成，則由 120 變成 100 × (1 + 20% + 50%) = 170 點。
+
+- **方向限制**：必須是近戰命中敵人背後的有效角度；從背後射擊不算這項近戰背刺。
+
+[詳細資料](TALENTS%20Zealot/zealot_backstab_periodic_damage.md) · [返回目錄](#talent-index)
 
 ---

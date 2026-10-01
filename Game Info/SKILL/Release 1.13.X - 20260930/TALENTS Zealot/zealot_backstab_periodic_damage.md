@@ -1,0 +1,40 @@
+# 殺戮時刻(Time to Kill)：原始碼依據
+
+[返回玩家說明](../TALENTS_Zealot.md#zealot_backstab_periodic_damage)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_backstab_periodic_damage)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`zealot_backstab_periodic_damage`；名稱鍵：`loc_talent_zealot_backstab_periodic_damage`；描述鍵：`loc_talent_zealot_backstab_periodic_damage_desc`。
+- 節點：`node_1fbb7b5c-aac2-4489-9a39-9a9eab68f484`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- conditional_stat_buffs backstab_damage+.5在context.active即非冷卻時生效，on_hit配is_damaging_backstab觸發冷卻8。allow_backstabbing常駐，增傷條件仍受CD；背刺計算獨立於finesse額外傷害。
+
+## 原始碼依據
+
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：3221–3248](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L3221-L3248)
+- [scripts/settings/talent/talent_settings_zealot.lua：222–225](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L222-L225)
+- [scripts/utilities/attack/damage_calculation.lua：95–109](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L95-L109)
+- [scripts/utilities/attack/damage_calculation.lua：848–861](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L848-L861)
+- [scripts/utilities/attack/attack_positioning.lua：9–65](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/attack_positioning.lua#L9-L65)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2677–2696](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2677-L2696)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1941–1966](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1941-L1966)
+
+## 算例條件與待確認事項
+
+- **傷害算例**：固定其他條件、該階段基準為 100，沒有其他背刺加成時為 100 × 1.5 = 150 點；若已有同階段 20% 背刺加成，則由 120 變成 100 × (1 + 20% + 50%) = 170 點。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`f5f63199`。
+- 核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/default/zealot_backstab_periodic_damage.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_backstab_periodic_damage:node_1fbb7b5c-aac2-4489-9a39-9a9eab68f484`。
+- 格式：image/webp；288×288；6816 bytes。
+- SHA-256：`b718a16a872f49916c80ac08ef25195daca462abfdb4a07df6975c876eaea232`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929296872)；[公開圖片](https://github.com/user-attachments/assets/4bf327a5-94f0-4af9-ad51-b3380308846e)。附件已下載比對位元組與 SHA-256。

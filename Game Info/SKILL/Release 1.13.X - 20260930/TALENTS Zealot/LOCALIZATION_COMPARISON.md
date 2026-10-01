@@ -43,6 +43,7 @@
 | [近戰增幅](#base_melee_damage_node_buff_medium_4) | 未見明確矛盾 |
 | [頭號目標](#zealot_elite_kills_empowers) | 未見明確矛盾 |
 | [敵後行動](#zealot_suppress_on_backstab_kill) | 未見明確矛盾 |
+| [殺戮時刻](#zealot_backstab_periodic_damage) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
 ## 背刺者(Backstabber)
@@ -290,3 +291,10 @@
 - 描述鍵：`loc_talent_zealot_suppress_on_backstab_kill_desc`；hash：`2ae92ad1`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_suppress_on_backstab_kill.md)。
+
+<a id="zealot_backstab_periodic_damage"></a>
+## 殺戮時刻(Time to Kill)
+
+- 描述鍵：`loc_talent_zealot_backstab_periodic_damage_desc`；hash：`f5f63199`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_backstab_periodic_damage.md)。

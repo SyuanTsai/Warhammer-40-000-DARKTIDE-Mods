@@ -41,3 +41,4 @@
 | [近戰增幅](base_melee_damage_node_buff_medium_4.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |
 | [頭號目標](zealot_elite_kills_empowers.md) | 擊殺精英後增傷 10%，並在 5 秒內恢復 15% 最大韌性。；完整計算與適用限制見來源文件。 |
 | [敵後行動](zealot_suppress_on_backstab_kill.md) | 重擊背刺擊殺後，壓制自身 8 公尺內的敵人；冷卻 5 秒。；完整計算與適用限制見來源文件。 |
+| [殺戮時刻](zealot_backstab_periodic_damage.md) | 下一次有效近戰背刺增加 50% 傷害；觸發後冷卻 8 秒。；完整計算與適用限制見來源文件。 |
