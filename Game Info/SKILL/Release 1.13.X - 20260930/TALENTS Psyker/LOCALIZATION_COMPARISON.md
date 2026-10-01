@@ -73,7 +73,7 @@
 | [韌性增幅](#base_toughness_node_buff_medium_4) | 未見明確矛盾 |
 | [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
 | [迅雷之勢](#psyker_melee_attack_speed) | 已配對；機制待核對 |
-| [亞空間分裂](#psyker_cleave_from_peril) | 已配對；機制待核對 |
+| [亞空間分裂](#psyker_cleave_from_peril) | 繁中原文勘誤 |
 | [汲魂者](#psyker_killing_enemy_with_warpfire_boosts) | 已配對；機制待核對 |
 | [骨折後遺症](#psyker_melee_weaving) | 已配對；機制待核對 |
 | [脆弱心智](#psyker_damage_vs_ogryns_and_monsters) | 已配對；機制待核對 |
@@ -549,7 +549,9 @@
 ## 亞空間分裂(Warp Splitting)
 
 - 描述鍵：`loc_talent_psyker_cleave_from_peril_desc`；hash：`5de5fc01`。
-- 已配對原文，機制待核對。
+- 結論：繁中原文勘誤。繁中「順劈攻擊傷害」把順劈能力寫成傷害增幅；英文是 Cleave，實際提高能穿過的敵人質量上限，不是直接提高每次命中的傷害。
+- 繁中原文短引：根據當前反噬值，最多提高{max_cleave:%s}順劈攻擊傷害。
+- 同源英文：Up to {max_cleave:%s} Cleave, based on Peril.
 - [原始碼推導與限制](psyker_cleave_from_peril.md)。
 
 <a id="psyker_killing_enemy_with_warpfire_boosts"></a>
