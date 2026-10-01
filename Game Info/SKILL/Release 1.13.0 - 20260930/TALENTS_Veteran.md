@@ -20,6 +20,7 @@
 | 能力 | [低調(Low Profile)](#veteran_reduced_threat_after_combat_ability) | 使用戰鬥能力後，敵人選你為目標的仇恨權重降低 90%，持續 10 秒。 |
 | 能力 | [處決者姿態(Executioner's Stance)](#veteran_combat_ability_elite_and_special_outlines) | 強化火力齊射：遠程傷害與遠程弱點額外傷害加成各提高至 25%，遠程衝擊加成提高至 100%。 |
 | 能力 | [目標引導增強(Enhanced Target Priority)](#veteran_combat_ability_coherency_outlines) | 效果：啟動處決者姿態時，協同範圍內的隊友也會看見菁英與特殊敵人的輪廓，持續 5 秒。你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。 |
+| 能力 | [火力反擊(Counter-Fire)](#veteran_combat_ability_ranged_roamer_outlines) | 效果：處決者姿態會額外標出一般射手與潛行者，例如血痂射手、渣滓潛行者。啟動或刷新輪廓時，這些敵人必須在你 50 公尺內。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
@@ -350,6 +351,20 @@
 - **時間算例：**啟動時提供一次，若 4 秒後擊殺符合條件的敵人並刷新姿態，隊友的輪廓時間重回 5 秒，約可看見至第 9 秒。
 
 [詳細資料](TALENTS%20Veteran/veteran_combat_ability_coherency_outlines.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_combat_ability_ranged_roamer_outlines"></a>
+
+### 火力反擊(Counter-Fire)
+
+<img src="https://github.com/user-attachments/assets/ca186661-9499-4f3f-9449-596caa35b7b6" width="72" height="72" alt="火力反擊天賦圖示">
+
+- **效果：**處決者姿態會額外標出一般射手與潛行者，例如血痂射手、渣滓潛行者。啟動或刷新輪廓時，這些敵人必須在你 50 公尺內。
+- **延長姿態：**擊殺這些新增的目標類型，也能重設處決者姿態的持續時間。沒有另選敵人越大...時重回 6 秒；另選後重回 9 秒。
+- **時間算例：**啟動姿態 4 秒後擊殺一名符合條件的射手，原本剩餘 2 秒會重回 6 秒，約可持續至第 10 秒。
+
+[詳細資料](TALENTS%20Veteran/veteran_combat_ability_ranged_roamer_outlines.md) · [返回目錄](#talent-index)
 
 ---
 
