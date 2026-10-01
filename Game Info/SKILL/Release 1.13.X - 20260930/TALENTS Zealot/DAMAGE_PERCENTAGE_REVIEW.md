@@ -45,3 +45,4 @@
 | [敵後行動](zealot_suppress_on_backstab_kill.md) | 重擊背刺擊殺後，壓制自身 8 公尺內的敵人；冷卻 5 秒。；完整計算與適用限制見來源文件。 |
 | [殺戮時刻](zealot_backstab_periodic_damage.md) | 下一次有效近戰背刺增加 50% 傷害；觸發後冷卻 8 秒。；完整計算與適用限制見來源文件。 |
 | [逆境而上](zealot_offensive_vs_many.md) | 5 公尺內每 2 名敵人提供 2% 傷害與 10% 順劈能力，最多 5 層。；完整計算與適用限制見來源文件。 |
+| [自掏腰包](zealot_reload_from_melee.md) | 近戰擊殺時，從備彈補回彈匣缺額的 10%。；完整計算與適用限制見來源文件。 |

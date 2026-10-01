@@ -47,6 +47,7 @@
 | [敵後行動](#zealot_suppress_on_backstab_kill) | 未見明確矛盾 |
 | [殺戮時刻](#zealot_backstab_periodic_damage) | 未見明確矛盾 |
 | [逆境而上](#zealot_offensive_vs_many) | 未見明確矛盾 |
+| [自掏腰包](#zealot_reload_from_melee) | 明確繁中誤譯 |
 
 <a id="zealot_crits_apply_bleed"></a>
 ## 天災(Scourge)
@@ -322,3 +323,12 @@
 - 描述鍵：`loc_talent_zealot_offensive_vs_many_desc`；hash：`d2cd1130`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_offensive_vs_many.md)。
+
+<a id="zealot_reload_from_melee"></a>
+## 自掏腰包(Out of Pocket)
+
+- 描述鍵：`loc_talent_zealot_reload_from_melee_desc`；hash：`730a8c75`。
+- 結論：明確繁中誤譯。同源英文from your Reserve表明備彈是來源；繁中將彈藥儲備寫成恢復對象。實作transfer_from_reserve_to_clip也確認由備彈移入彈匣。
+- 繁中原文短引：近戰擊殺可恢復{ammo:%s}的缺失彈藥儲備。
+- 同源英文：Melee Kills replenish {ammo:%s} of your Missing Ammo from your Reserve.
+- [原始碼推導與限制](zealot_reload_from_melee.md)。
