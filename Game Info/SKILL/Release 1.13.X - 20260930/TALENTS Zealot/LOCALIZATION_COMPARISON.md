@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [不屈靈魂合唱](#zealot_bolstering_prayer) | 待同版核對 |
+| [教宗之喚](#zealot_channel_grants_damage) | 明確繁中誤譯 |
 | [死戰到底](#zealot_resist_death) | 未見明確矛盾 |
 | [殉道](#zealot_martyrdom) | 未見明確矛盾 |
 | [不滅意志](#zealot_martyrdom_grants_toughness) | 未見明確矛盾 |
@@ -71,6 +72,15 @@
 - 描述鍵：`loc_talent_zealot_bolstering_prayer_expanded_description`；hash：`ae04279a`。
 - 結論：待同版核對。inventory 的 Build 25492122 未證明與固定公開 SHA 同版；固定 SHA 的 format_values 合計 45%，實際動作則分成 20% 每脈衝與 25%/秒，暫不把跨版或描述差異判為譯文錯誤。
 - [原始碼推導與限制](zealot_bolstering_prayer.md)。
+
+<a id="zealot_channel_grants_damage"></a>
+## 教宗之喚(Ecclesiarch's Call)
+
+- 描述鍵：`loc_talent_zealot_zealot_channel_offensive_desc`；hash：`af1e14c2`。
+- 結論：明確繁中誤譯。相同hash的繁中疊層數使用{damage:%s}，英文使用{stacks:%s}；把傷害百分比欄位代入層數，屬明確參數錯誤。
+- 繁中原文短引：每次脈衝都會為您與處於凝聚狀態的盟友賦予{damage:%s}傷害。疊加{damage:%s}次。持續{duration:%s}秒。
+- 同源英文：Each pulse grants {damage:%s} Damage to you and Allies in Coherency. Stacking {stacks:%s} times. Lasts {duration:%s}s.
+- [原始碼推導與限制](zealot_channel_grants_damage.md)。
 
 <a id="zealot_resist_death"></a>
 ## 死戰到底(Until Death)

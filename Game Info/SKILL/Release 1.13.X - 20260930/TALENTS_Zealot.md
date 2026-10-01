@@ -7,6 +7,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/4ae30922-3e39-4ded-8e19-35ec595befa0" width="32" height="32" alt="不屈靈魂合唱天賦圖示"> [不屈靈魂合唱](#zealot_bolstering_prayer)<br>- Chorus of Spiritual Fortitude | <ul><li>引導約 3.67 秒，開始時立即脈衝，之後每 0.8 秒一次；基礎冷卻 60 秒。</li><li>每次脈衝作用於本人與協同中的盟友，恢復韌性、提高暫時最大韌性，並賦予免死及眩暈免疫。</li><li>脈衝會踉蹌附近敵人；引導期間另持續恢復韌性。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/1abe7e62-3810-4680-9c49-7f6091782ab6" width="32" height="32" alt="教宗之喚天賦圖示"> [教宗之喚](#zealot_channel_grants_damage)<br>- Ecclesiarch's Call | <ul><li>「教宗之喚」使合唱每次脈衝為本人與協同盟友增加 +6% 傷害。</li><li>最多疊加 5 層，理論上限 +30%；每層 buff 持續 10 秒，重複脈衝刷新時間。</li><li>合唱約 3.67 秒、每 0.8 秒脈衝，通常單次引導可觸發 5 次。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="死戰到底天賦圖示"> [死戰到底](#zealot_resist_death)<br>- Until Death | <ul><li>承受致命傷害時獲得 8 秒免死效果。</li><li>效果結束後冷卻 120 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="殉道天賦圖示"> [殉道](#zealot_martyrdom)<br>- Martyrdom | <ul><li>每失去一整格生命，近戰傷害增加 10%，最多 5 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="32" height="32" alt="不滅意志天賦圖示"> [不滅意志](#zealot_martyrdom_grants_toughness)<br>- I Shall Not Fall | <ul><li>殉道每缺少一格生命傷口，韌性承傷降低 7.5%，最多 5 格。</li></ul> | 鑰石 |
@@ -83,6 +84,25 @@
 - **冷卻**：基礎冷卻 60 秒、1 次充能。持有聖物時暫停自然回充，收起後才開始恢復；提早中止會減少脈衝次數。
 
 [詳細資料](TALENTS%20Zealot/zealot_bolstering_prayer.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_channel_grants_damage"></a>
+### 教宗之喚(Ecclesiarch's Call)
+
+<img src="https://github.com/user-attachments/assets/1abe7e62-3810-4680-9c49-7f6091782ab6" width="72" height="72" alt="教宗之喚天賦圖示">
+
+- **運作方式**：不屈靈魂合唱的每次脈衝，為你與協同隊友增加 1 層傷害加成，每層 6%，最多 5 層、30%。
+
+- **持續時間**：效果持續 10 秒，後續脈衝刷新時間；完整引導約 5 次脈衝可達上限，提早收起則可能不足 5 層。
+
+- **傷害算例**：滿層時，基礎 100 點變成 100 × (1 + 5 × 6%) = 130 點；若原本已有同階段 25% 加成，則是 100 × (1 + 25% + 30%) = 155 點。
+
+#### 繁中原文勘誤
+
+- 繁中原文的「疊加次數」誤用了傷害百分比欄位；正確是最多 5 層，每層增加 6% 傷害。
+
+[詳細資料](TALENTS%20Zealot/zealot_channel_grants_damage.md) · [返回目錄](#talent-index)
 
 ---
 
