@@ -22,6 +22,7 @@
 | [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
 | [決鬥者](#zealot_increased_crit_and_weakspot_damage_after_dodge) | 未見明確矛盾 |
 | [輕蔑之盾](#zealot_ally_damage_taken_reduced) | 跨來源待同版核對 |
+| [褻瀆必懲](#zealot_push_attacks_attack_speed) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_4) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
@@ -123,6 +124,13 @@
 - 描述鍵：`loc_talent_zealot_3_tier_4_ability_3_description`；hash：`96972711`。
 - 結論：跨來源待同版核對。繁中與英文皆指協同成員；固定來源的on_damage_taken廣播及本模板未做協同檢查。這是跨來源範圍差異，版本未證實一致，不列翻譯錯誤。
 - [原始碼推導與限制](zealot_ally_damage_taken_reduced.md)。
+
+<a id="zealot_push_attacks_attack_speed"></a>
+## 褻瀆必懲(Punish Impiety)
+
+- 描述鍵：`loc_talent_zealot_push_attacks_attack_speed_desc`；hash：`ab4ad805`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_push_attacks_attack_speed.md)。
 
 <a id="base_melee_damage_node_buff_medium_4"></a>
 ## 近戰增幅(Melee Damage Boost)
