@@ -21,6 +21,7 @@
 | 能力 | [處決者姿態(Executioner's Stance)](#veteran_combat_ability_elite_and_special_outlines) | 強化火力齊射：遠程傷害與遠程弱點額外傷害加成各提高至 25%，遠程衝擊加成提高至 100%。 |
 | 能力 | [目標引導增強(Enhanced Target Priority)](#veteran_combat_ability_coherency_outlines) | 效果：啟動處決者姿態時，協同範圍內的隊友也會看見菁英與特殊敵人的輪廓，持續 5 秒。你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。 |
 | 能力 | [火力反擊(Counter-Fire)](#veteran_combat_ability_ranged_roamer_outlines) | 效果：處決者姿態會額外標出一般射手與潛行者，例如血痂射手、渣滓潛行者。啟動或刷新輪廓時，這些敵人必須在你 50 公尺內。 |
+| 能力 | [獵手決意(Hunter's Resolve)](#veteran_toughness_bonus_leaving_invisibility) | 效果：啟動滲透時，受到的韌性傷害降低 50%；隱身期間持續生效，解除隱身後再維持 10 秒。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
@@ -365,6 +366,21 @@
 - **時間算例：**啟動姿態 4 秒後擊殺一名符合條件的射手，原本剩餘 2 秒會重回 6 秒，約可持續至第 10 秒。
 
 [詳細資料](TALENTS%20Veteran/veteran_combat_ability_ranged_roamer_outlines.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_toughness_bonus_leaving_invisibility"></a>
+
+### 獵手決意(Hunter's Resolve)
+
+<img src="https://github.com/user-attachments/assets/0c033c93-a850-4295-853d-10698ec96e89" width="72" height="72" alt="獵手決意天賦圖示">
+
+- **效果：**啟動滲透時，受到的韌性傷害降低 50%；隱身期間持續生效，解除隱身後再維持 10 秒。
+- **傷害算例：**原本會損失 100 點韌性的攻擊，生效時變成 `100 × 0.5 = 50 點`。這項效果不減少生命傷害。
+- **時間算例：**隱身 8 秒後才解除，減傷總共約持續 `8 + 10 = 18 秒`；若第 2 秒主動攻擊解除，則約持續至第 12 秒。
+- **多次施放：**若靠額外次數或縮短冷卻讓兩次效果重疊，兩份減傷各自計時並相乘；重疊時，原本 100 點韌性傷害變成 `100 × 0.5 × 0.5 = 25 點`。
+
+[詳細資料](TALENTS%20Veteran/veteran_toughness_bonus_leaving_invisibility.md) · [返回目錄](#talent-index)
 
 ---
 
