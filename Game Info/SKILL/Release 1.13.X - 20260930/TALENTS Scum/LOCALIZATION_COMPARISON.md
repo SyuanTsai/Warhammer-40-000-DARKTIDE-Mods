@@ -38,6 +38,7 @@
 | [劇毒菌株](#broker_passive_toxin_infected_enemies_take_increased_damage) | 未見明確矛盾 |
 | [毒藥狂熱](#broker_passive_damage_after_toxined_enemies) | 未見明確矛盾 |
 | [連帶傷害](#broker_passive_toxin_spread_on_kills) | 未見明確矛盾 |
+| [額外彈藥袋](#broker_passive_increased_blitz_ammo) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -250,3 +251,10 @@
 - 描述鍵：`loc_talent_broker_passive_toxin_spread_on_kills_desc_02`；hash：`a94fd4a3`。
 - 結論：未見明確矛盾。兩語均為近戰擊殺精英後擴散；對已感染目標的2層門檻屬補充。
 - [原始碼推導與限制](broker_passive_toxin_spread_on_kills.md)。
+
+<a id="broker_passive_increased_blitz_ammo"></a>
+## 額外彈藥袋(Extra Pouches)
+
+- 描述鍵：`loc_talent_broker_passive_increased_blitz_ammo_desc`；hash：`0e811057`。
+- 結論：未見明確矛盾。兩語均為增加閃擊充能數量，未見矛盾。
+- [原始碼推導與限制](broker_passive_increased_blitz_ammo.md)。
