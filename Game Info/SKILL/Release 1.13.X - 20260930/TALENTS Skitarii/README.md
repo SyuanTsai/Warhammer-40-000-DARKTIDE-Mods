@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **97 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10)。內部 tree version 18 不等於遊戲發行版號。
 
-完成 44／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 45／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -45,6 +45,7 @@
 | 技能 | [電能修復](cryptic_coherency_toughness_on_ability.md) / `cryptic_coherency_toughness_on_ability` | `node_898ff194-0732-4782-b33a-f24581ca52d0` | 完成（核心靜態機制） |
 | 技能 | [救贖教範](cryptic_revive_speed_and_dr.md) / `cryptic_revive_speed_and_dr` | `node_f274c4fb-a29e-497a-a783-08f5ee20f839` | 完成（核心靜態機制） |
 | 技能 | [彈藥補給艙](cryptic_passive_ammo_replenishment.md) / `cryptic_passive_ammo_replenishment` | `node_ea18c305-acab-479a-8fd9-3c700199f611` | 完成（核心靜態機制） |
+| 技能 | [持續攻擊教義](cryptic_stacking_melee_damage.md) / `cryptic_stacking_melee_damage` | `node_987f94ff-7679-4651-8217-d9592c83efe3` | 完成（核心靜態機制） |
 | 技能 | [莫比亞導體](cryptic_damage_on_ability.md) / `cryptic_damage_on_ability` | `node_ab833650-8296-4bca-b5ac-b347ca72b960` | 完成（核心靜態機制） |
 | 技能 | [適應性戰鬥校準](cryptic_cleave_and_impact.md) / `cryptic_cleave_and_impact` | `node_ec45bdd9-6470-4bfb-85de-26897fdaac5c` | 完成（核心靜態機制） |
 | 技能 | [卓越防禦記憶模組](cryptic_ranged_stacking_toughness.md) / `cryptic_ranged_stacking_toughness` | `node_a615c4c7-47ca-4039-8649-58f9fbf10d17` | 完成（核心靜態機制） |

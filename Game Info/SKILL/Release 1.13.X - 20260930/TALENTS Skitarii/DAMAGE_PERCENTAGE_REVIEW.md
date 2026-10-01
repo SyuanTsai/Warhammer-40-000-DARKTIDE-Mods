@@ -40,6 +40,7 @@
 | [電能修復](cryptic_coherency_toughness_on_ability.md) | 使用戰鬥能力，為自己與協同隊友恢復 20% 韌性；完整計算與適用限制見來源文件。 |
 | [救贖教範](cryptic_revive_speed_and_dr.md) | 援助隊友時減少 25% 承受傷害；援助速度提高 25%；完整計算與適用限制見來源文件。 |
 | [彈藥補給艙](cryptic_passive_ammo_replenishment.md) | 每 15 秒恢復儲備彈藥上限的 1%；完整計算與適用限制見來源文件。 |
+| [持續攻擊教義](cryptic_stacking_melee_damage.md) | 近戰攻擊命中後，每次提高 3% 傷害；最多 5 層，持續 8 秒；完整計算與適用限制見來源文件。 |
 | [莫比亞導體](cryptic_damage_on_ability.md) | 啟動戰鬥能力後，傷害提高 15%、持續 10 秒；完整計算與適用限制見來源文件。 |
 | [適應性戰鬥校準](cryptic_cleave_and_impact.md) | 韌性高於 50%：近戰順劈提高 30%；韌性不高於 50%：近戰衝擊提高 30%；完整計算與適用限制見來源文件。 |
 | [卓越防禦記憶模組](cryptic_ranged_stacking_toughness.md) | 遠程擊殺疊層，每層每秒恢復 1% 韌性；最多 5 層，持續 8 秒；完整計算與適用限制見來源文件。 |

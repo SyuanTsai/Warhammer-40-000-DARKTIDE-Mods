@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/bb7b86c4-512f-495f-a82a-7011cae498d6" width="32" height="32" alt="電能修復天賦圖示"> [電能修復](#cryptic_coherency_toughness_on_ability)<br>- Voltaic Restoration | <ul><li>使用戰鬥能力，為自己與協同隊友恢復 20% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a86f113d-1a3e-4fc6-b1d1-24fe727b118d" width="32" height="32" alt="救贖教範天賦圖示"> [救贖教範](#cryptic_revive_speed_and_dr)<br>- Salvation Doctrine | <ul><li>援助隊友時減少 25% 承受傷害</li><li>援助速度提高 25%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5330c87c-7abe-4993-8eb2-5cb11586c013" width="32" height="32" alt="彈藥補給艙天賦圖示"> [彈藥補給艙](#cryptic_passive_ammo_replenishment)<br>- Ammunition-Restoration Pod | <ul><li>每 15 秒恢復儲備彈藥上限的 1%</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/9e58fba3-e137-4f3e-89c3-ea7f5ebb0f24" width="32" height="32" alt="持續攻擊教義天賦圖示"> [持續攻擊教義](#cryptic_stacking_melee_damage)<br>- Sustained Assault Doctrine | <ul><li>近戰攻擊命中後，每次提高 3% 傷害</li><li>最多 5 層，持續 8 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="莫比亞導體天賦圖示"> [莫比亞導體](#cryptic_damage_on_ability)<br>- Moebian Conductor | <ul><li>啟動戰鬥能力後，傷害提高 15%、持續 10 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="適應性戰鬥校準天賦圖示"> [適應性戰鬥校準](#cryptic_cleave_and_impact)<br>- Adaptive Combat Calibration | <ul><li>韌性高於 50%：近戰順劈提高 30%</li><li>韌性不高於 50%：近戰衝擊提高 30%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/deb63065-b15d-498f-a16c-ec7726ca6a22" width="32" height="32" alt="卓越防禦記憶模組天賦圖示"> [卓越防禦記憶模組](#cryptic_ranged_stacking_toughness)<br>- Superior Defence Engrams | <ul><li>遠程擊殺疊層，每層每秒恢復 1% 韌性</li><li>最多 5 層，持續 8 秒</li></ul> | 技能 |
@@ -564,6 +565,21 @@
 - **上限與例外**：備彈還會預留填滿空缺彈匣的量；整把武器已滿時不能無限累積。沒有彈藥儲備的武器不會因此獲得彈藥。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_passive_ammo_replenishment.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_stacking_melee_damage"></a>
+### 持續攻擊教義(Sustained Assault Doctrine)
+
+<img src="https://github.com/user-attachments/assets/9e58fba3-e137-4f3e-89c3-ea7f5ebb0f24" width="72" height="72" alt="持續攻擊教義天賦圖示">
+
+- **疊層方式**：近戰揮擊至少命中一名敵人，便增加 1 層傷害加成；每次揮擊最多一層，每層 3%，最多 5 層。
+
+- **持續時間**：再次觸發刷新 8 秒；效果也能提高遠程傷害。
+
+- **傷害算例**：5 層提供 15%，基礎傷害 100 → 115；若原有 25% 同階段加成，100 × (1 + 25% + 15%) = 140。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_stacking_melee_damage.md) · [返回目錄](#talent-index)
 
 ---
 
