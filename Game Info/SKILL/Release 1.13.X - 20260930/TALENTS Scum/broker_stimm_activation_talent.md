@@ -16,6 +16,8 @@
 
 ## 原始碼依據
 
+- 延長藥效額外增加5秒：[數值設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L374-L376)；[套用至興奮劑持續時間](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L2001-L2006)。
+
 - [scripts/settings/archetype/archetypes/broker_archetype.lua：72–89](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L72-L89)
 - [scripts/ui/views/broker_stimm_builder_view/broker_stimm_builder_view.lua：1165–1199](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/broker_stimm_builder_view/broker_stimm_builder_view.lua#L1165-L1199)
 - [scripts/settings/equipment/weapon_templates/pocketables/syringe_broker_pocketable.lua：6–35](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/pocketables/syringe_broker_pocketable.lua#L6-L35)
