@@ -46,6 +46,7 @@
 | <img src="https://github.com/user-attachments/assets/1918d789-dd64-401d-b985-c99915053691" width="32" height="32" alt="充能完畢天賦圖示"> [充能完畢](#psyker_empowered_grenades_increased_max_stacks)<br>- Charged Up | <ul><li>靈能強化最多儲存 3 層</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/f42fce6a-aab7-4622-a8b9-bd171fba4b33" width="32" height="32" alt="涅槃天賦圖示"> [涅槃](#psyker_warpfire_generate_souls)<br>- In Fire Reborn | <ul><li>帶有靈魂之火的敵人死亡時，有 10% 機率取得亞空間充能</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/36248d6b-7838-4004-86e5-645956cb8392" width="32" height="32" alt="靈能吸血鬼天賦圖示"> [靈能吸血鬼](#psyker_aura_souls_on_kill)<br>- Psychic Vampire | <ul><li>本人或協同隊友擊殺，有 4% 機率讓你獲得亞空間充能</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/47c3ad89-c6a0-4c8c-a452-b8af3e859043" width="32" height="32" alt="亞空間電池天賦圖示"> [亞空間電池](#psyker_increased_max_souls)<br>- Warp Battery | <ul><li>亞空間充能上限由 4 層提高至 6 層</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="亞空間耗費天賦圖示"> [亞空間耗費](#psyker_toughness_on_melee)<br>- Warp Expenditure | <ul><li>近戰命中首個敵人，恢復 2.5% 最大韌性。</li><li>近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
@@ -660,6 +661,21 @@
 - **選擇限制**：與「涅槃」只能擇一選取。
 
 [詳細資料](TALENTS%20Psyker/psyker_aura_souls_on_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_increased_max_souls"></a>
+### 亞空間電池(Warp Battery)
+
+<img src="https://github.com/user-attachments/assets/47c3ad89-c6a0-4c8c-a452-b8af3e859043" width="72" height="72" alt="亞空間電池天賦圖示">
+
+- **運作方式**：亞空間充能上限由 4 層提高至 6 層，每層的傷害與冷卻效果不變。
+
+- **傷害算例**：6 層共增加 6 × 4% = 24% 傷害；沒有其他加成時，100 × 1.24 = 124 點。相較原本 4 層的 116 點，增加 8 點。
+
+- **冷卻算例**：6 層恢復一次能力冷卻的 6 × 7.5% = 45%；以 30 秒計算，恢復 13.5 秒。
+
+[詳細資料](TALENTS%20Psyker/psyker_increased_max_souls.md) · [返回目錄](#talent-index)
 
 ---
 
