@@ -35,6 +35,7 @@
 | <img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="32" height="32" alt="永恆天賦圖示"> [永恆](#zealot_quickness_increased_duration)<br>- Eternal | <ul><li>命定審判的啟動增益持續時間由 6 秒延長至 10 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9bc683a7-534a-4244-8381-1a6c0463003f" width="32" height="32" alt="危境之際天賦圖示"> [危境之際](#zealot_corruption_resistance_stacking)<br>- On the Brink | <ul><li>殉道每缺少一格完整傷口，腐敗傷害承受倍率降低 10%；最多計 5 格，最高降低 50%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="狂熱朝聖者天賦圖示"> [狂熱朝聖者](#zealot_resist_death_ability)<br>- Zealous Pilgrim | <ul><li>使用戰鬥技能後獲得 4 秒免死效果。</li><li>隱身技能在退出隱身後生效；聖物技能在卸下聖物後生效。</li><li>無法殺死期間，傷害及攻擊速度各提高 10%。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/439077af-f74c-4c06-8a8a-dbeab52d9a53" width="32" height="32" alt="復活天賦圖示"> [復活](#zealot_resist_death_golden_toughness)<br>- Risen | <ul><li>免死期間，每秒增加 5 點最大韌性，最多 8 層、共 40 點；加成持續 5 秒。</li><li>最大韌性增加時，韌性傷害值不變，因此目前韌性也會同步增加。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="天災天賦圖示"> [天災](#zealot_crits_apply_bleed)<br>- Scourge | <ul><li>近戰爆擊施加 2 層流血；攻擊流血敵人增加近戰爆擊率。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="背刺者天賦圖示"> [背刺者](#zealot_backstab_damage)<br>- Backstabber | <ul><li>近戰背刺與遠程側襲傷害增加 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/69a5f7ea-11bc-41ae-8758-86a14213a116" width="32" height="32" alt="蔑視天賦圖示"> [蔑視](#zealot_multi_hits_increase_damage)<br>- Disdain | <ul><li>上一次近戰揮擊每命中一名敵人，使下一次近戰傷害增加 5%，最多 25%。</li></ul> | 技能 |
@@ -542,6 +543,23 @@
 - **傷害與速度算例**：只計這項增益，基礎 100 點傷害變成 100 × 1.1 = 110 點；受攻速影響的 1 秒動作變成 1 ÷ 1.1 ≈ 0.909 秒。其他同階段加成先相加。
 
 [詳細資料](TALENTS%20Zealot/zealot_resist_death_ability.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_resist_death_golden_toughness"></a>
+### 復活(Risen)
+
+<img src="https://github.com/user-attachments/assets/439077af-f74c-4c06-8a8a-dbeab52d9a53" width="72" height="72" alt="復活天賦圖示">
+
+- **疊層方式**：免死期間，約在開始後 0.75 秒取得第一層，之後每秒增加一層；每層增加 5 點最大韌性，最多 8 層、40 點。
+
+- **持續時間**：新增層數會刷新整組效果的 5 秒持續時間；免死結束後停止加層，最後一層帶來的倒數仍繼續。
+
+- **韌性算例**：原本最大韌性 100、目前 60，取得一層後變成最大 105、目前 65。若完整取得 8 層、期間沒有其他變化，就成為 100／140；到期回到上限 100 時，可保留目前 100。若到期前目前只有 70，則保持 70／100。
+
+- **短期免死**：4 秒免死期間，約可在第 0.75、1.75、2.75、3.75 秒取得 4 層，合計增加 20 點；實際觸發仍受更新時點影響。
+
+[詳細資料](TALENTS%20Zealot/zealot_resist_death_golden_toughness.md) · [返回目錄](#talent-index)
 
 ---
 

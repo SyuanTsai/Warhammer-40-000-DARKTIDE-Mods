@@ -37,6 +37,7 @@
 | [永恆](#zealot_quickness_increased_duration) | 未見明確矛盾 |
 | [危境之際](#zealot_corruption_resistance_stacking) | 未見明確矛盾 |
 | [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
+| [復活](#zealot_resist_death_golden_toughness) | 未見明確矛盾 |
 | [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
 | [背刺者](#zealot_backstab_damage) | 未見明確矛盾 |
 | [蔑視](#zealot_multi_hits_increase_damage) | 未見明確矛盾 |
@@ -295,6 +296,13 @@
 - 描述鍵：`loc_talent_zealot_resist_death_ability_offensive_desc`；hash：`ccea0bcc`。
 - 結論：未見明確矛盾。繁中與英文對使用技能、隱身/聖物起算時點及兩項增益的方向相符。
 - [原始碼推導與限制](zealot_resist_death_ability.md)。
+
+<a id="zealot_resist_death_golden_toughness"></a>
+## 復活(Risen)
+
+- 描述鍵：`loc_talent_resist_death_toughness_desc`；hash：`568ffaee`。
+- 結論：未見明確矛盾。中英文都表示無法殺死期間按秒增加最大韌性、總量上限與5秒加成；韌性上限變化對目前韌性的連動屬實作補充。
+- [原始碼推導與限制](zealot_resist_death_golden_toughness.md)。
 
 <a id="zealot_crits_apply_bleed"></a>
 ## 天災(Scourge)
