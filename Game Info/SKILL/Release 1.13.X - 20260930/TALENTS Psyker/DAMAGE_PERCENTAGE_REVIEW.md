@@ -77,7 +77,7 @@
 | [脆弱心智](psyker_damage_vs_ogryns_and_monsters.md) | 對歐格林與巨獸的傷害增加 20%。；完整計算與適用限制見來源文件。 |
 | [聚焦亞空間](psyker_increased_warp_damage.md) | 亞空間傷害增加 15%。；完整計算與適用限制見來源文件。 |
 | [反噬平衡](psyker_weapon_attacks_peril_equilibrium.md) | 機制與公式待核對。 |
-| [武器在手，信心我有。](psyker_reload_speed_warp_charge.md) | 機制與公式待核對。 |
+| [武器在手，信心我有。](psyker_reload_speed_warp_charge.md) | 反噬不高於 80% 時，裝填速度增加 30%。；補滿一整個彈匣產生 15 個百分點反噬，按實際補彈比例計算。；完整計算與適用限制見來源文件。 |
 | [結晶意志](psyker_alternative_peril_explosion.md) | 反噬爆炸傷害增加 100%，半徑增加 25%。；以移除一格傷痕代替通常的爆炸倒地；爆炸擊殺精英可免除此代價。；完整計算與適用限制見來源文件。 |
 | [靈能引導](psyker_force_staff_bonus.md) | 高蓄力後，主要法杖攻擊增傷 20%，持續 5 秒。；主要攻擊後，次要法杖攻擊增傷 10%，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [亞空間震波](psyker_force_staff_quick_attack_bonus.md) | 力場法杖主要攻擊命中，使目標受到的亞空間傷害每層乘 1.06。；最多 5 層，持續 10 秒。；完整計算與適用限制見來源文件。 |
