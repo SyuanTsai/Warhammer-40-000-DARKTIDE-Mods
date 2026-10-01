@@ -26,6 +26,7 @@
 | [絕不屈服](#ogryn_knocked_allies_grant_damage_reduction) | 未見明確矛盾 |
 | [嘎嘎！](#ogryn_fully_charged_attacks_gain_damage_and_stagger) | 未見明確矛盾 |
 | [毀滅之樂](#ogryn_nearby_bleeds_reduce_damage_taken) | 未見明確矛盾 |
+| [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -152,3 +153,10 @@
 - 描述鍵：`loc_talent_ogryn_damage_reduction_per_bleed_desc`；hash：`2f439ba8`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_nearby_bleeds_reduce_damage_taken.md)。
+
+<a id="base_toughness_damage_reduction_node_buff_medium_1"></a>
+## 韌性減傷(Toughness Damage Reduction)
+
+- 描述鍵：`loc_talent_toughness_damage_reduction_medium_desc`；hash：`1272bcc0`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](base_toughness_damage_reduction_node_buff_medium_1.md)。
