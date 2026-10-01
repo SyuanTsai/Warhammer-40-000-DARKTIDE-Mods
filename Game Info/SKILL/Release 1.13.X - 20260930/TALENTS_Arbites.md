@@ -26,6 +26,7 @@
 | <img src="https://github.com/user-attachments/assets/e8b31492-509e-479a-9369-203e36e1e1e4" width="32" height="32" alt="衝擊加成天賦圖示"> [衝擊加成](#base_impact_node_buff_medium_1)<br>- Impact Boost | <ul><li>衝擊提高 25%，更容易使敵人踉蹌。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/170599ce-ad50-4760-93b2-da650c6deac8" width="32" height="32" alt="塑鋼裝甲天賦圖示"> [塑鋼裝甲](#adamant_plasteel_plates)<br>- Plasteel Plates | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9a87f145-d4a8-4554-b8ca-f5fbb2a58944" width="32" height="32" alt="追跡法務官天賦圖示"> [追跡法務官](#adamant_dodge_grants_damage)<br>- Arbites Revelatum | <ul><li>成功閃避敵人攻擊後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/88c5f583-d739-484e-a7cd-89b79a90334d" width="32" height="32" alt="恰如其分天賦圖示"> [恰如其分](#adamant_elite_special_kills_reload_speed)<br>- Judicious Efficiency | <ul><li>擊殺精英或專家敵人後，下次換彈速度提高 20%。</li></ul> | 技能 |
 
 ---
 
@@ -284,5 +285,18 @@
 - **傷害算例**：基礎 100 點傷害、無其他修正時變成 100 × (1 + 15%) = 115 點；同階段原有 25% 加成時，由 125 點變成 140 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_dodge_grants_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_elite_special_kills_reload_speed"></a>
+### 恰如其分(Judicious Efficiency)
+
+<img src="https://github.com/user-attachments/assets/88c5f583-d739-484e-a7cd-89b79a90334d" width="72" height="72" alt="恰如其分天賦圖示">
+
+- **觸發與消耗**：擊殺精英或專家敵人後，下次換彈速度提高 20%；重複擊殺不累積倍率。效果保留到完成換彈並離開換彈動作。
+
+- **換彈算例**：只計受換彈速度影響的動作段，原本 3 秒變成 3 ÷ 1.2 = 2.5 秒；加速 20% 不等於時間減少 20%。
+
+[詳細資料](TALENTS%20Arbites/adamant_elite_special_kills_reload_speed.md) · [返回目錄](#talent-index)
 
 ---

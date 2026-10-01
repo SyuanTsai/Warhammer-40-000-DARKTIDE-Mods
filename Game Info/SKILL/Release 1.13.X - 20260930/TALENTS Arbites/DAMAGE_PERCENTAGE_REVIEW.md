@@ -26,3 +26,4 @@
 | [衝擊加成](base_impact_node_buff_medium_1.md) | 衝擊提高 25%，更容易使敵人踉蹌。；完整計算與適用限制見來源文件。 |
 | [塑鋼裝甲](adamant_plasteel_plates.md) | 最大韌性增加 25 點。；完整計算與適用限制見來源文件。 |
 | [追跡法務官](adamant_dodge_grants_damage.md) | 成功閃避敵人攻擊後，傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
+| [恰如其分](adamant_elite_special_kills_reload_speed.md) | 擊殺精英或專家敵人後，下次換彈速度提高 20%。；完整計算與適用限制見來源文件。 |

@@ -28,6 +28,7 @@
 | [衝擊加成](#base_impact_node_buff_medium_1) | 未見明確矛盾 |
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
 | [追跡法務官](#adamant_dodge_grants_damage) | 未見明確矛盾 |
+| [恰如其分](#adamant_elite_special_kills_reload_speed) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
@@ -168,3 +169,10 @@
 - 描述鍵：`loc_talent_adamant_dodge_grants_damage_desc`；hash：`ad9cd3f2`。
 - 結論：未見明確矛盾。繁中「成功閃避攻擊」對應英文 Successful Dodge，無明確矛盾。
 - [原始碼推導與限制](adamant_dodge_grants_damage.md)。
+
+<a id="adamant_elite_special_kills_reload_speed"></a>
+## 恰如其分(Judicious Efficiency)
+
+- 描述鍵：`loc_talent_adamant_elite_special_kills_reload_speed_desc`；hash：`79ad9249`。
+- 結論：未見明確矛盾。繁中「下次換彈」與英文 next reload一致；逐發裝填的消耗時點屬補充。
+- [原始碼推導與限制](adamant_elite_special_kills_reload_speed.md)。
