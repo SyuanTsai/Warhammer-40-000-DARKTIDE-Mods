@@ -15,6 +15,7 @@
 | [惡棍](#broker_coherency_melee_damage) | 未見明確矛盾 |
 | [無政府主義者](#broker_coherency_anarchist) | 未見明確矛盾 |
 | [強化亡命之徒](#broker_ability_focus_improved) | 未見明確中英矛盾 |
+| [熔爐怒吼](#broker_ability_punk_rage_sub_2) | 未見明確中英矛盾 |
 | [凝聚殺意](#broker_ability_punk_rage_sub_1) | 未見明確中英矛盾 |
 | [專注凝神](#broker_ability_focus_sub_3) | 未見中英翻譯差異（觸發條件由程式補充） |
 | [精準獵殺](#broker_ability_focus_sub_2) | 未見明確中英矛盾 |
@@ -114,6 +115,13 @@
 - 描述鍵：`loc_talent_broker_ability_focus_improved_desc`；hash：`a1148a57`。
 - 結論：未見明確中英矛盾。繁中與英文都描述遠程攻擊視同閃避、衝刺免耗耐力並加速、近距離標記與遠程擊殺延長；固定版本設定值與計時邏輯相符。針槍毒素的額外追蹤條件是程式補充，原文省略不作勘誤。
 - [原始碼推導與限制](broker_ability_focus_improved.md)。
+
+<a id="broker_ability_punk_rage_sub_2"></a>
+## 熔爐怒吼(Pulverising Strikes)
+
+- 描述鍵：`loc_talent_broker_ability_punk_rage_sub_2_desc`；hash：`fb3a2cef`。
+- 結論：未見明確中英矛盾。繁中與英文都寫怒火期間增加橫掃，並按持續時間每秒取得近戰威力、最多10次；程式給每層2.5%與10層上限。+50%橫掃來自格式值，沒有翻譯差異。
+- [原始碼推導與限制](broker_ability_punk_rage_sub_2.md)。
 
 <a id="broker_ability_punk_rage_sub_1"></a>
 ## 凝聚殺意(Channelled Aggression)

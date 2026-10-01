@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/7fc85ba0-f7e6-4aba-a966-638511f2c713" width="32" height="32" alt="惡棍天賦圖示"> [惡棍](#broker_coherency_melee_damage)<br>- Ruffian | <ul><li>你與協同中的隊友，近戰傷害增加 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="32" height="32" alt="無政府主義者天賦圖示"> [無政府主義者](#broker_coherency_anarchist)<br>- Anarchist | <ul><li>你與協同中的隊友，爆擊機率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7" width="32" height="32" alt="強化亡命之徒天賦圖示"> [強化亡命之徒](#broker_ability_focus_improved)<br>- Enhanced Desperado | <ul><li>啟動後自動切換並裝填遠程武器，進入 10 秒專注狀態；此時遠程攻擊視同成功閃避，衝刺不耗耐力，衝刺速度加算 +20%。</li><li>標示 12.5 公尺內可標記的敵人；以遠程武器近距離擊殺標記目標可延長狀態，初始每次 +1 秒，經過 20 秒後延長量逐段縮小。</li><li>基礎冷卻 45 秒；狀態存續期間自然充能暫停，狀態結束後才恢復。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/1a4c2d3b-dfba-4840-a85d-c8d5390e3a42" width="32" height="32" alt="熔爐怒吼天賦圖示"> [熔爐怒吼](#broker_ability_punk_rage_sub_2)<br>- Pulverising Strikes | <ul><li>怒火期間攻擊橫掃能力加算 +50%；另在怒火每存續約 1 秒累積一層近戰威力，每層 +2.5%，最多 10 層（+25%）。</li><li>與怒火基本 +35% 近戰威力等級合併時，只計這兩項最多為 +60% 威力等級修正，不等於 +60% 傷害。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/db7fee2b-9e46-49f1-a0ac-28cd6cea424f" width="32" height="32" alt="凝聚殺意天賦圖示"> [凝聚殺意](#broker_ability_punk_rage_sub_1)<br>- Channelled Aggression | <ul><li>怒火狀態期間，近戰重攻擊獲得加算 +25% 撕裂修正，作用於護甲穿透計算。</li><li>此效果檢查的是近戰重攻擊；撕裂修正不等於直接增加 25% 傷害。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/74d4304b-23f7-4666-879b-62c727596b69" width="32" height="32" alt="專注凝神天賦圖示"> [專注凝神](#broker_ability_focus_sub_3)<br>- Focused Resolve | <ul><li>專注期間的近距離遠程擊殺可恢復技能冷卻：一般擊殺 0.5 秒，精英或專家擊殺 1 秒；每次專注最多恢復 5 秒。</li><li>按 45 秒基礎冷卻及每秒自然充能 1 計，恢復至上限相當於最多補回 5 秒資源；不計其他修正，專注結束後自然充能剩 40 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="精準獵殺天賦圖示"> [精準獵殺](#broker_ability_focus_sub_2)<br>- Pick Your Targets | <ul><li>專注期間遠程攻擊加算 +15% 撕裂修正；近距離遠程擊殺每次另疊 3% 遠程傷害，最多 5 層（+15%），每層持續 3 秒並可由新擊殺刷新。</li><li>此撕裂加成作用於護甲計算，擊殺疊層是遠程傷害加算；只計滿層效果時，基礎100點遠程傷害變為115點。</li></ul> | 能力 |
@@ -188,6 +189,21 @@
 - **彈藥與冷卻**：狀態期間重新裝填不扣彈藥儲備；基礎冷卻 45 秒的自然充能在狀態結束後才開始恢復，延長的狀態時間也會延後冷卻恢復。 結束時，會依剩餘備彈重新結算彈匣；狀態內的免費子彈不會整匣保留。
 
 [詳細資料](TALENTS%20Scum/broker_ability_focus_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_ability_punk_rage_sub_2"></a>
+### 熔爐怒吼(Pulverising Strikes)
+
+<img src="https://github.com/user-attachments/assets/1a4c2d3b-dfba-4840-a85d-c8d5390e3a42" width="72" height="72" alt="熔爐怒吼天賦圖示">
+
+- **順劈算例**：怒火期間，傷害與踉蹌的順劈容量各增加 50%；原本容量 10 變成 15。實際能穿過幾名敵人，仍取決於敵人質量及武器限制。
+
+- **逐漸累積威力**：怒火每持續約 1 秒增加一層近戰威力，每層 +2.5%，最多 10 層，總計最多 +25%。
+
+- **與怒火合併**：若已取得怒火本身的 +35% 近戰威力等級，只計這兩項且累積到上限時為 35% + (10 × 2.5%) = 60% 威力等級修正；這不是最終傷害 +60%。 例如威力 500 變成 500 × 1.6 = 800。
+
+[詳細資料](TALENTS%20Scum/broker_ability_punk_rage_sub_2.md) · [返回目錄](#talent-index)
 
 ---
 
