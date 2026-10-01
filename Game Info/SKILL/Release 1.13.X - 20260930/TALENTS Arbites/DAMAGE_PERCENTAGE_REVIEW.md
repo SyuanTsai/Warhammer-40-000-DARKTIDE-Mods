@@ -43,6 +43,7 @@
 | [街頭妙招](adamant_dodge_improvement.md) | 有效閃避次數增加 1 次；近戰閃避結束後的判定寬限延長 25%。；完整計算與適用限制見來源文件。 |
 | [巨獸獵人](adamant_monster_hunter.md) | 對歐格林與巨獸造成的傷害提高 20%。；完整計算與適用限制見來源文件。 |
 | [帝皇之拳](adamant_first_melee_hit_increased_damage.md) | 每次近戰揮擊的第一個命中目標，傷害提高 15%、衝擊提高 30%。；完整計算與適用限制見來源文件。 |
+| [篩選目標](adamant_pinning_dog_elite_damage.md) | 擊殺自己的電子獒犬正在壓制的精英或專家敵人後，對精英與專家的傷害提高 15%，持續 8 秒。；完整計算與適用限制見來源文件。 |
 | [擊殺順序](adamant_increased_damage_to_high_health.md) | 對生命值高於 75% 的敵人，傷害提高 15%。；完整計算與適用限制見來源文件。 |
 | [迅疾走位](adamant_sprinting_sliding.md) | 滑行結束後，衝刺速度提高 5%，持續 5 秒；擊殺恢復最大耐力的 5%，冷卻 0.75 秒。；完整計算與適用限制見來源文件。 |
 | [最後通牒](adamant_ranged_damage_on_melee_stagger.md) | 近戰或推擊使敵人踉蹌後，遠程傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |

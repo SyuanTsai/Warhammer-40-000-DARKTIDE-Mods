@@ -43,6 +43,7 @@
 | <img src="https://github.com/user-attachments/assets/cd883557-4048-43f0-a3b7-3a90bbc6ffe8" width="32" height="32" alt="街頭妙招天賦圖示"> [街頭妙招](#adamant_dodge_improvement)<br>- Street Smarts | <ul><li>有效閃避次數增加 1 次；近戰閃避結束後的判定寬限延長 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/62b4954d-42c3-4eab-a6ea-a17719414e19" width="32" height="32" alt="巨獸獵人天賦圖示"> [巨獸獵人](#adamant_monster_hunter)<br>- Monstrosity Hunter | <ul><li>對歐格林與巨獸造成的傷害提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc" width="32" height="32" alt="帝皇之拳天賦圖示"> [帝皇之拳](#adamant_first_melee_hit_increased_damage)<br>- The Emperor's Fist | <ul><li>每次近戰揮擊的第一個命中目標，傷害提高 15%、衝擊提高 30%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/4b7cf064-ea83-4334-a484-a222e22af7a3" width="32" height="32" alt="篩選目標天賦圖示"> [篩選目標](#adamant_pinning_dog_elite_damage)<br>- Target Selection | <ul><li>擊殺自己的電子獒犬正在壓制的精英或專家敵人後，對精英與專家的傷害提高 15%，持續 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47" width="32" height="32" alt="擊殺順序天賦圖示"> [擊殺順序](#adamant_increased_damage_to_high_health)<br>- Target Priority | <ul><li>對生命值高於 75% 的敵人，傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8a0b3c73-0e7e-4d31-9f7d-385634eae6e3" width="32" height="32" alt="迅疾走位天賦圖示"> [迅疾走位](#adamant_sprinting_sliding)<br>- Rapid Movement | <ul><li>滑行結束後，衝刺速度提高 5%，持續 5 秒；擊殺恢復最大耐力的 5%，冷卻 0.75 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/75cf7e7e-044e-432f-b7cb-b73e53164425" width="32" height="32" alt="最後通牒天賦圖示"> [最後通牒](#adamant_ranged_damage_on_melee_stagger)<br>- Final Warning | <ul><li>近戰或推擊使敵人踉蹌後，遠程傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
@@ -550,6 +551,21 @@
 - **分項算例**：單計增傷，原本 100 點近戰傷害變成 115 點；原本 100 單位踉蹌強度變成 130。已有同階段 25% 增傷時，傷害為 100 × (1 + 25% + 15%) = 140 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_first_melee_hit_increased_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_pinning_dog_elite_damage"></a>
+### 篩選目標(Target Selection)
+
+<img src="https://github.com/user-attachments/assets/4b7cf064-ea83-4334-a484-a222e22af7a3" width="72" height="72" alt="篩選目標天賦圖示">
+
+- **觸發方式**：你或自己的電子獒犬擊殺牠正在壓制的精英或專家敵人後，接下來 8 秒對精英與專家敵人的傷害提高 15%。
+
+- **刷新與限制**：再次觸發重設 8 秒，不累積增傷；普通敵人的死亡不會觸發，對普通敵人也沒有這項增傷。
+
+- **傷害算例**：對符合條件的目標，基礎 100 點傷害變成 115 點；同階段已有 25% 加成時，則為 100 × (1 + 25% + 15%) = 140 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_pinning_dog_elite_damage.md) · [返回目錄](#talent-index)
 
 ---
 

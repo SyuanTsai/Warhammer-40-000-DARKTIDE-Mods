@@ -45,6 +45,7 @@
 | [街頭妙招](#adamant_dodge_improvement) | 繁中原文勘誤 |
 | [巨獸獵人](#adamant_monster_hunter) | 未見明確矛盾 |
 | [帝皇之拳](#adamant_first_melee_hit_increased_damage) | 未見明確矛盾 |
+| [篩選目標](#adamant_pinning_dog_elite_damage) | 未見明確矛盾 |
 | [擊殺順序](#adamant_increased_damage_to_high_health) | 未見明確矛盾 |
 | [迅疾走位](#adamant_sprinting_sliding) | 未見明確矛盾 |
 | [最後通牒](#adamant_ranged_damage_on_melee_stagger) | 未見明確矛盾 |
@@ -316,6 +317,13 @@
 - 描述鍵：`loc_talent_adamant_first_melee_hit_increased_damage_desc`；hash：`b13d7bb8`。
 - 結論：未見明確矛盾。繁中「每次攻擊命中的第一個敵人」與英文 first Enemy hit with each attack一致；先後事件為補充。
 - [原始碼推導與限制](adamant_first_melee_hit_increased_damage.md)。
+
+<a id="adamant_pinning_dog_elite_damage"></a>
+## 篩選目標(Target Selection)
+
+- 描述鍵：`loc_talent_adamant_pinning_dog_elite_damage_description`；hash：`0b95c919`。
+- 結論：未見明確矛盾。繁中與英文的壓制中擊殺條件相符；犬本身的擊殺歸屬與時間刷新屬補充，不判為誤譯。
+- [原始碼推導與限制](adamant_pinning_dog_elite_damage.md)。
 
 <a id="adamant_increased_damage_to_high_health"></a>
 ## 擊殺順序(Target Priority)
