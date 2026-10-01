@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [滌罪伺服頭骨](#cryptic_flamethrower) | 未見明確矛盾；補充機制與算例 |
+| [醫療伺服頭骨](#cryptic_servo_skull_inject_ally) | 未見明確矛盾；補充機制與算例 |
 | [修復協定](#cryptic_precision_stance_toughness_suppression) | 單位用語有誤 |
 | [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased) | 未見明確矛盾 |
 | [電流弧](#cryptic_discharge_generates_arcs) | 未見明確矛盾 |
@@ -85,6 +86,13 @@
 - 描述鍵：`loc_talent_cryptic_servo_skull_flamethrower_new_desc`；hash：`e66555ce`。
 - 結論：未見明確矛盾；補充機制與算例。繁中描述已涵蓋額外噴火頭骨、落點部署、兩種射擊模式與雙選增加使用次數。固定來源另證明每次噴火消耗共用手榴彈能力1次、15秒動作與10公尺射程；屬翻譯省略的機制細節，不判為錯譯。Build 25492122 尚未確認與固定來源同版。
 - [原始碼推導與限制](cryptic_flamethrower.md)。
+
+<a id="cryptic_servo_skull_inject_ally"></a>
+## 醫療伺服頭骨(Medicae Servo-Skull)
+
+- 描述鍵：`loc_talent_cryptic_servo_skull_inject_ally_revive_new_desc`；hash：`86ee1b55`。
+- 結論：未見明確矛盾；補充機制與算例。繁中描述已涵蓋救援、75%韌性承傷減免、每秒20%韌性恢復與5秒持續。程式確認承傷乘數0.25代表減免75%，並確認有效目標判斷與共用次數消耗；翻譯沒有列出這些條件屬機制省略。Build 25492122 尚未確認與固定來源同版。
+- [原始碼推導與限制](cryptic_servo_skull_inject_ally.md)。
 
 <a id="cryptic_precision_stance_toughness_suppression"></a>
 ## 修復協定(Restoration Protocol)

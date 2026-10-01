@@ -8,6 +8,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/295017d9-50cd-4797-8b33-bd3627a7139f" width="32" height="32" alt="滌罪伺服頭骨天賦圖示"> [滌罪伺服頭骨](#cryptic_flamethrower)<br>- Purgator Servo-Skull | <ul><li>額外召喚一台配備噴火器的伺服頭骨，可指定區域施放火焰。</li><li>與醫療伺服頭骨同時選用時，共用使用次數上限由3次增至5次。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/adeeeef3-0c2e-450a-974b-66ce6c6366bd" width="32" height="32" alt="醫療伺服頭骨天賦圖示"> [醫療伺服頭骨](#cryptic_servo_skull_inject_ally)<br>- Medicae Servo-Skull | <ul><li>額外召喚一台醫療伺服頭骨，可救援需要盟友協助的隊友。</li><li>救援後，隊友獲得5秒韌性傷害減免與韌性恢復。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/eb879996-8768-4102-8799-0fecaf6f7a98" width="32" height="32" alt="修復協定天賦圖示"> [修復協定](#cryptic_precision_stance_toughness_suppression)<br>- Restoration Protocol | <ul><li>精準姿態啟動時清除壓制；姿態維持期間每秒恢復最大韌性的10%。</li><li>回復按最大韌性的比例計算，受一般韌性補充修正影響，且最多補到滿韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ac9ea4d6-352f-4ad1-95f2-a2de10d39d2d" width="32" height="32" alt="彈藥盤點之旨天賦圖示"> [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased)<br>- Writ of Ammunition Enumeration | <ul><li>精準姿態啟動時提高遠程射速15%；姿態連續維持滿4秒後提高至30%。</li><li>姿態結束會撤除此射速加成，4秒計時亦重置。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="32" height="32" alt="電流弧天賦圖示"> [電流弧](#cryptic_discharge_generates_arcs)<br>- Voltaic Arcs | <ul><li>電能發射器每消耗一道充能，額外釋放一道向前電弧；最多生成 5 道。</li><li>每道電弧從前方 12 公尺內的有效敵人起始，之後可鏈接附近敵人。</li></ul> | 能力 |
@@ -94,6 +95,23 @@
 - **算例**：基礎上限3次；若也選擇醫療伺服頭骨，上限增加2次至5次，噴火與救援共用這5次使用次數。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_flamethrower.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_servo_skull_inject_ally"></a>
+### 醫療伺服頭骨(Medicae Servo-Skull)
+
+<img src="https://github.com/user-attachments/assets/adeeeef3-0c2e-450a-974b-66ce6c6366bd" width="72" height="72" alt="醫療伺服頭骨天賦圖示">
+
+- **運作方式**：額外獲得一台醫療伺服頭骨；標記倒地、被綁或被網住且需要協助的隊友，即可派它前往救援。
+
+- **運作方式**：救援會使隊友起身，之後5秒內所受韌性傷害降至原本的25%，並每秒恢復相當於最大韌性的20%。
+
+- **算例**：若隊友最大韌性為100，恢復期間每秒回復20韌性，最多可回復100；每次救援消耗1次閃擊使用次數，並與噴火伺服頭骨共用。
+
+- **救援限制**：無法救起懸掛在邊緣的隊友。若救援失敗且你仍存活，會退回這次消耗的使用次數。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_servo_skull_inject_ally.md) · [返回目錄](#talent-index)
 
 ---
 
