@@ -41,6 +41,7 @@
 | [削切協議](#cryptic_dissector) | 未見明確矛盾；補充計算與限制 |
 | [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
 | [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
+| [爆擊能量過載](#cryptic_overload_keystone_bigger_explosion) | 未見明確矛盾 |
 | [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed) | 未見明確矛盾；補充計算與限制 |
 | [熟練解剖者](#cryptic_dissector_max_stacks) | 未見明確矛盾；補充計算與限制 |
 | [進階能量管理](#cryptic_redline_strength) | 未見明確矛盾 |
@@ -333,6 +334,13 @@
 - 描述鍵：`loc_talent_cryptic_overload_keystone_coherency_desc`；hash：`58d058f4`。
 - 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文均描述協同擊殺給層、一般1層／精英與專家2層、上限30、到頂重置以及8秒隊伍傷害與韌性減傷。固定版支持這些效果；傷害增量的單次事件溢出不保留屬UI省略細節，未發現明確誤譯。
 - [原始碼推導與限制](cryptic_overload_keystone.md)。
+
+<a id="cryptic_overload_keystone_bigger_explosion"></a>
+## 爆擊能量過載(Critical Power Overload)
+
+- 描述鍵：`loc_talent_cryptic_overload_keystone_bigger_explosion_desc`；hash：`4bcf4f12`。
+- 結論：未見明確矛盾。繁中與英文都寫明超載對近距離敵人施加電擊並提高其承受傷害，設定值為15%、8秒。固定版把近戰範圍落實為半徑8的敵人篩選，並以零傷害爆炸施加狀態；UI未寫半徑或爆炸自身不造成傷害屬細節省略，不構成明確翻譯錯誤。
+- [原始碼推導與限制](cryptic_overload_keystone_bigger_explosion.md)。
 
 <a id="cryptic_dissector_crit_attack_speed"></a>
 ## 伺服肌腱湧動(Servo-Sinew Surge)

@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/856a3399-5f26-40e1-988e-8960086a92c9" width="32" height="32" alt="削切協議天賦圖示"> [削切協議](#cryptic_dissector)<br>- Flensing Protocols | <ul><li>初始6層，每層傷害增加2.5%、韌性傷害減免2.5%；滿層各為15%。</li><li>受到生命或韌性傷害時失去1層，每秒最多一次；精英或專家擊殺補2層，並恢復最大韌性15%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5" width="32" height="32" alt="極限電容天賦圖示"> [極限電容](#cryptic_redline)<br>- Redline Capacitors | <ul><li>每消耗或補回一份戰鬥技能充能，獲得5%韌性傷害減免與5%電容量自然恢復加成；最多4層。</li><li>新增層會重設12秒倒數，之後每12秒失去1層；戰鬥技能充能上限增加1份。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3" width="32" height="32" alt="能量超載天賦圖示"> [能量超載](#cryptic_overload_keystone)<br>- Power Overload | <ul><li>你與協同中的隊友擊殺一般敵人獲得1層，精英或專家獲得2層；達30層觸發過載並歸零。</li><li>過載使你與協同中的隊友獲得15%傷害加成及15%韌性傷害減免，持續8秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/a59865c6-45fb-4f1e-b360-b8100e541a00" width="32" height="32" alt="爆擊能量過載天賦圖示"> [爆擊能量過載](#cryptic_overload_keystone_bigger_explosion)<br>- Critical Power Overload | <ul><li>能量超載時，使周圍8公尺內命中的敵人遭電擊，承受傷害提高15%，持續8秒。</li><li>再次命中刷新時間；這次範圍效果本身不造成爆炸傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="32" height="32" alt="伺服肌腱湧動天賦圖示"> [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed)<br>- Servo-Sinew Surge | <ul><li>每層削切協議額外提供1.5%暴擊率與1.5%近戰攻擊速度；效果隨削切協議層數變動。</li><li>6層時增加9個百分點暴擊率與9%近戰攻速；8層時分別增加12個百分點與12%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444" width="32" height="32" alt="熟練解剖者天賦圖示"> [熟練解剖者](#cryptic_dissector_max_stacks)<br>- Honed Dissector | <ul><li>將削切協議層數上限從6提高到8；啟用時會直接從8層開始。</li><li>新增加的2層沿用原本每層傷害與韌性承傷步進，滿8層相當於傷害+20%、韌性承傷倍率0.80。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84" width="32" height="32" alt="進階能量管理天賦圖示"> [進階能量管理](#cryptic_redline_strength)<br>- Advanced Power Management | <ul><li>使用戰鬥技能時，依使用前持有的充能數增加力量效果；每份充能提供5%威力加成，效果最多累積5層並持續10秒。</li><li>新增加層會刷新10秒倒數；層數到達5層後不再增加，但後續觸發仍會刷新時間。</li></ul> | 鑰石 |
@@ -639,6 +640,21 @@
 - **算例**：已有28層時擊殺一名精英或專家，增加2層至30層，立即觸發並歸零；若已有29層時增加2層，也只觸發一次，超過30層的部分不會留下。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_overload_keystone.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_overload_keystone_bigger_explosion"></a>
+### 爆擊能量過載(Critical Power Overload)
+
+<img src="https://github.com/user-attachments/assets/a59865c6-45fb-4f1e-b360-b8100e541a00" width="72" height="72" alt="爆擊能量過載天賦圖示">
+
+- **觸發方式**：能量超載時，對周圍8公尺內命中的敵人施加電擊與承傷增加效果，持續8秒。
+
+- **傷害算例**：對受影響敵人原本造成100點的攻擊，變成100 × 1.15 = 115點。這是敵人承傷提高，這次範圍效果本身不造成爆炸傷害。
+
+- **重複觸發**：同一效果最多1層，再次命中刷新8秒持續時間，不會變成30%。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_overload_keystone_bigger_explosion.md) · [返回目錄](#talent-index)
 
 ---
 
