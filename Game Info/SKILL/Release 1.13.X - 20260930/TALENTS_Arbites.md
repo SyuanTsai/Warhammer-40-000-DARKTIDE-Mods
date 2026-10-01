@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/7b24cc5d-1975-4762-8b77-8899c0713175" width="32" height="32" alt="兵敗如山倒天賦圖示"> [兵敗如山倒](#adamant_cleave_after_push)<br>- Drive them Back | <ul><li>推擊命中敵人後，近戰傷害的順劈容量提高 75%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e51d3184-42e7-434f-8369-0ae7a6568619" width="32" height="32" alt="盾型裝甲天賦圖示"> [盾型裝甲](#adamant_shield_plates)<br>- Shield Plates | <ul><li>格擋後 3 秒恢復最大韌性的 15%；完美格擋另立即恢復 10%，這份立即恢復有 1 秒冷卻。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bff83e5a-48a0-4f4c-b280-3093df526c5d" width="32" height="32" alt="重如律法天賦圖示"> [重如律法](#adamant_heavy_attacks_increase_damage)<br>- Weight of the Lex | <ul><li>近戰重擊命中後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c776951e-d8de-46cb-ad58-7c14af6b0997" width="32" height="32" alt="狂熱信仰天賦圖示"> [狂熱信仰](#adamant_crit_chance_on_kill)<br>- Zealous Dedication | <ul><li>擊殺後每層增加 2 個百分點爆擊機率，最多 8 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/62b4954d-42c3-4eab-a6ea-a17719414e19" width="32" height="32" alt="巨獸獵人天賦圖示"> [巨獸獵人](#adamant_monster_hunter)<br>- Monstrosity Hunter | <ul><li>對歐格林與巨獸造成的傷害提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="惡徒退散天賦圖示"> [惡徒退散](#adamant_damage_vs_suppressed)<br>- Cower, Miscreants! | <ul><li>對受壓制敵人的傷害提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="正當手段天賦圖示"> [正當手段](#adamant_stacking_damage)<br>- Justified Measures | <ul><li>攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。</li></ul> | 技能 |
@@ -387,6 +388,19 @@
 - **傷害算例**：只比較增益生效後的攻擊，基礎 100 點變成 100 × (1 + 15%) = 115 點；已有同階段 25% 加成時，125 點變成 140 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_heavy_attacks_increase_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_crit_chance_on_kill"></a>
+### 狂熱信仰(Zealous Dedication)
+
+<img src="https://github.com/user-attachments/assets/c776951e-d8de-46cb-ad58-7c14af6b0997" width="72" height="72" alt="狂熱信仰天賦圖示">
+
+- **疊層與刷新**：每次擊殺獲得 1 層，每層增加 2 個百分點爆擊機率，最多 8 層；再次擊殺重設全部層數的 10 秒，滿層也能刷新。
+
+- **機率算例**：原本爆擊率 5%，滿層後為 5% + 8 × 2% = 21%；不是把原本 5% 乘以 1.16。
+
+[詳細資料](TALENTS%20Arbites/adamant_crit_chance_on_kill.md) · [返回目錄](#talent-index)
 
 ---
 
