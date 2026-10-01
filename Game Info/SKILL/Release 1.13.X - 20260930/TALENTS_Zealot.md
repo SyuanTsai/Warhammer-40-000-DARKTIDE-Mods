@@ -37,6 +37,7 @@
 | <img src="https://github.com/user-attachments/assets/6406ef43-19df-4cab-9091-e5c490d72cef" width="32" height="32" alt="刻不容緩天賦圖示"> [刻不容緩](#zealot_melee_crits_restore_stamina)<br>- No Respite | <ul><li>近戰爆擊命中時恢復 10% 最大耐力；冷卻 1 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ef521c17-0aae-4e01-b54c-9a25d1f9d792" width="32" height="32" alt="神恩庇護天賦圖示"> [神恩庇護](#zealot_revive_speed)<br>- Providence | <ul><li>救起倒地隊友的速度提高 25%；協助隊友後，對方獲得移速與韌性減傷。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9b7dda36-1d18-41b4-9e28-3cfd26f0ad66" width="32" height="32" alt="弒除瀆者天賦圖示"> [弒除瀆者](#zealot_damage_vs_elites)<br>- Abolish Blasphemers | <ul><li>對精英敵人的傷害提高 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/2ea26a3b-1222-4c56-8120-26a65b4595fa" width="32" height="32" alt="傲慢天賦圖示"> [傲慢](#zealot_weakspot_damage_reduction)<br>- Hubris | <ul><li>弱點擊殺後減傷 15%，持續 4 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -471,6 +472,19 @@
 - **傷害算例**：100 × 1.15 = 115 點；若已有同階段 20% 傷害加成，則是 100 × (1 + 20% + 15%) = 135 點。
 
 [詳細資料](TALENTS%20Zealot/zealot_damage_vs_elites.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_weakspot_damage_reduction"></a>
+### 傲慢(Hubris)
+
+<img src="https://github.com/user-attachments/assets/2ea26a3b-1222-4c56-8120-26a65b4595fa" width="72" height="72" alt="傲慢天賦圖示">
+
+- **觸發方式**：命中弱點並擊殺敵人後，受到的傷害降低 15%，持續 4 秒；近戰與遠程皆可，單純命中弱點不會觸發。
+
+- **持續與算例**：效果不累積層數，再次觸發會刷新時間。只計本天賦時，100 × 0.85 = 85 點傷害；另有獨立 25% 減傷時為 100 × 0.85 × 0.75 = 63.75 點。
+
+[詳細資料](TALENTS%20Zealot/zealot_weakspot_damage_reduction.md) · [返回目錄](#talent-index)
 
 ---
 
