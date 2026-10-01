@@ -93,6 +93,7 @@
 | [野火 II](#broker_stimm_combat_2) | 未見明確中英矛盾 |
 | [野火 III](#broker_stimm_combat_3) | 未見明確中英矛盾 |
 | [狂怒 I](#broker_stimm_combat_4b) | 未見明確中英矛盾 |
+| [獵鷹蕈劑 I](#broker_stimm_combat_4c) | 未見明確中英矛盾 |
 | [激勵 I](#broker_stimm_celerity_1) | 未見明確中英矛盾 |
 | [狂熱](#broker_stimm_celerity_5c) | 未見明確中英矛盾 |
 | [激勵 II](#broker_stimm_celerity_2) | 未見明確中英矛盾 |
@@ -698,6 +699,13 @@
 - 描述鍵：`loc_talent_stat_power_level / loc_talent_stat_rending_multiplier`；hash：`f8a49d31 / 0dd2df4e`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
 - [原始碼推導與限制](broker_stimm_combat_4b.md)。
+
+<a id="broker_stimm_combat_4c"></a>
+## 獵鷹蕈劑 I(Vultoprene I)
+
+- 描述鍵：`loc_talent_stat_power_level / loc_talent_stat_critical_strike_chance`；hash：`f8a49d31 / a4e46663`。
+- 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
+- [原始碼推導與限制](broker_stimm_combat_4c.md)。
 
 <a id="broker_stimm_celerity_1"></a>
 ## 激勵 I(Spur I)
