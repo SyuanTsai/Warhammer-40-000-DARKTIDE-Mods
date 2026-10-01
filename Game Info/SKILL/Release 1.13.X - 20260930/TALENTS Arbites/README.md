@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/adamant_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10)。內部 tree version 19 不等於遊戲發行版號。
 
-完成 16／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 17／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -26,4 +26,5 @@
 | 技能 | [苛政壓制](adamant_hitting_multiple_gives_tdr.md) / `adamant_hitting_multiple_gives_tdr` | `node_edc914ed-dc63-47f0-b8e5-97a051892616` | 完成（核心靜態機制） |
 | 技能 | [遠程傷害增幅](base_ranged_damage_node_buff_medium_1.md) / `base_ranged_damage_node_buff_medium_1` | `node_a40126d6-c985-42b7-bffb-7234639e6704` | 完成（核心靜態機制） |
 | 技能 | [近戰增幅](base_melee_damage_node_buff_medium_1.md) / `base_melee_damage_node_buff_medium_1` | `node_030fde55-407f-4bb3-bd36-46d70fe56bbf` | 完成（核心靜態機制） |
+| 技能 | [順劈加成](base_cleave_node_buff_medium_1.md) / `base_cleave_node_buff_medium_1` | `node_4cb10022-552a-4499-84e1-b956aa007511` | 完成（核心靜態機制） |
 | 技能 | [塑鋼裝甲](adamant_plasteel_plates.md) / `adamant_plasteel_plates` | `node_49bbfafc-233f-4a23-9a72-0412b4fcf719` | 完成（核心靜態機制） |

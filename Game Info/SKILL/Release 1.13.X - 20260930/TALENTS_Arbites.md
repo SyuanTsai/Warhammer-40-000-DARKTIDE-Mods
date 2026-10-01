@@ -21,6 +21,7 @@
 | <img src="https://github.com/user-attachments/assets/02fd58ae-50fc-461f-879d-70d77a2aff44" width="32" height="32" alt="苛政壓制天賦圖示"> [苛政壓制](#adamant_hitting_multiple_gives_tdr)<br>- Suppression Protocols | <ul><li>同一次攻擊命中至少 3 名敵人，獲得 20% 韌性減傷，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/62b0bee6-3606-40bc-9d78-06f072535e59" width="32" height="32" alt="遠程傷害增幅天賦圖示"> [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1)<br>- Ranged Damage Boost | <ul><li>遠程傷害提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8c224499-f2ca-420c-bcf6-39034e6a35b2" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害提高 10%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/d3fa1c73-0a49-42ab-920c-11b7238af849" width="32" height="32" alt="順劈加成天賦圖示"> [順劈加成](#base_cleave_node_buff_medium_1)<br>- Cleave Boost | <ul><li>傷害與踉蹌的順劈容量提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/170599ce-ad50-4760-93b2-da650c6deac8" width="32" height="32" alt="塑鋼裝甲天賦圖示"> [塑鋼裝甲](#adamant_plasteel_plates)<br>- Plasteel Plates | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
 
 ---
@@ -215,6 +216,19 @@
 - **傷害算例**：沒有其他加成時，基礎 100 點近戰傷害變成 100 × (1 + 10%) = 110 點；原有同階段 25% 加成時，125 點變成 100 × (1 + 25% + 10%) = 135 點。
 
 [詳細資料](TALENTS%20Arbites/base_melee_damage_node_buff_medium_1.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="base_cleave_node_buff_medium_1"></a>
+### 順劈加成(Cleave Boost)
+
+<img src="https://github.com/user-attachments/assets/d3fa1c73-0a49-42ab-920c-11b7238af849" width="72" height="72" alt="順劈加成天賦圖示">
+
+- **順劈算例**：單計順劈容量，原本可穿過 10 單位敵人質量的攻擊，變成 10 × (1 + 25%) = 12.5 單位。
+
+- **實際效果**：更容易一次掃中多名敵人；命中人數仍受敵人質量、護甲和武器本身的穿透限制影響，不等於傷害提高 25%。
+
+[詳細資料](TALENTS%20Arbites/base_cleave_node_buff_medium_1.md) · [返回目錄](#talent-index)
 
 ---
 

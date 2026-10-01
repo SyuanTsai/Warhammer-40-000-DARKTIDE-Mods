@@ -23,6 +23,7 @@
 | [苛政壓制](#adamant_hitting_multiple_gives_tdr) | 未見明確矛盾 |
 | [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
+| [順劈加成](#base_cleave_node_buff_medium_1) | 未見明確矛盾 |
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
@@ -129,6 +130,13 @@
 - 描述鍵：`loc_talent_melee_damage_boost_medium_desc`；hash：`7b5da013`。
 - 結論：未見明確矛盾。繁中與英文均為對應攻擊類型傷害加成，未見明確矛盾。
 - [原始碼推導與限制](base_melee_damage_node_buff_medium_1.md)。
+
+<a id="base_cleave_node_buff_medium_1"></a>
+## 順劈加成(Cleave Boost)
+
+- 描述鍵：`loc_talent_cleave_boost_medium_desc`；hash：`88737f68`。
+- 結論：未見明確矛盾。繁中「順劈」與英文 Cleave 對應；未詳列傷害/衝擊質量上限不列勘誤。
+- [原始碼推導與限制](base_cleave_node_buff_medium_1.md)。
 
 <a id="adamant_plasteel_plates"></a>
 ## 塑鋼裝甲(Plasteel Plates)
