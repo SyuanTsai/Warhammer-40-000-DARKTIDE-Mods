@@ -28,6 +28,7 @@
 | [電能驅動](#cryptic_discharge_attack_speed_increase) | 未見明確矛盾 |
 | [電流超載](#cryptic_discharge_toughness) | 未見明確矛盾 |
 | [軸向斬擊](#cryptic_chordclaw_horizontal_swipe) | 未見明確矛盾 |
+| [試探連擊](#cryptic_chordclaw_quick_stab_combo) | 未見明確矛盾 |
 | [通量導管蓄積](#cryptic_crits_grant_power) | 未見明確矛盾 |
 | [反應爐線圈充能](#cryptic_weakspot_kills_grant_power) | 未見明確矛盾 |
 | [強化能量循環](#cryptic_increased_passive_cooldown_regen) | 未見明確矛盾 |
@@ -239,6 +240,13 @@
 - 描述鍵：`loc_talent_cryptic_chordclaw_horizontal_swipe_desc`；hash：`262d64b6`。
 - 結論：未見明確矛盾。inventory 中英都表示弦爪改用橫向橫掃，與特殊規則選取水平掃擊 action 相符。兩種本地化都未列攻擊力量表，屬未呈現內部數值，不能據此判為錯誤。
 - [原始碼推導與限制](cryptic_chordclaw_horizontal_swipe.md)。
+
+<a id="cryptic_chordclaw_quick_stab_combo"></a>
+## 試探連擊(Probing Strikes)
+
+- 描述鍵：`loc_talent_cryptic_chordclaw_quick_stab_combo_clarified_desc`；hash：`e0d3d43f`。
+- 結論：未見明確矛盾。繁中與英文都列出3次快速刺擊、6層流血及按住輸入改用一般攻擊。文字沒有明說每次造成傷害的刺擊各加6層；固定版來源碼顯示此為逐次命中效果，屬未展開條件而非相反敘述。
+- [原始碼推導與限制](cryptic_chordclaw_quick_stab_combo.md)。
 
 <a id="cryptic_crits_grant_power"></a>
 ## 通量導管蓄積(Flux Conduit Build-Up)
