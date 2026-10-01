@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **97 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10)。內部 tree version 18 不等於遊戲發行版號。
 
-完成 96／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 97／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -38,6 +38,7 @@
 | 能力 | [強化能量循環](cryptic_increased_passive_cooldown_regen.md) / `cryptic_increased_passive_cooldown_regen` | `node_b540e7b8-df34-4676-b412-e95eec0b05b0` | 完成（核心靜態機制） |
 | 能力 | [電容回收迴路](cryptic_multi_hits_grant_power.md) / `cryptic_multi_hits_grant_power` | `node_17b66510-2729-4d8a-98a2-646758b5b00c` | 完成（核心靜態機制） |
 | 能力 | [電能發射器](cryptic_discharge.md) / `cryptic_discharge` | `node_202342c8-045c-486b-aa66-75d636866621` | 完成（核心靜態機制） |
+| 能力 | [進階戰鬥教範](cryptic_precision_stance.md) / `cryptic_precision_stance` | `node_c465a486-1c34-40e4-a34f-84b020753a16` | 完成（核心靜態機制） |
 | 能力 | [鋼鐵富足](cryptic_chordclaw_capacitance_restoration.md) / `cryptic_chordclaw_capacitance_restoration` | `node_fef9bd81-9333-4292-877d-95a71f773931` | 完成（核心靜態機制） |
 | 能力 | [千刀萬剮](cryptic_chordclaw_consecutive_bonus.md) / `cryptic_chordclaw_consecutive_bonus` | `node_5313efe8-b680-4879-8b64-65e9996ff694` | 完成（核心靜態機制） |
 | 能力 | [洞察之眼](cryptic_precision_stance_crit_cleave.md) / `cryptic_precision_stance_crit_cleave` | `node_bbc91e02-a605-4136-8d58-f767ac08da21` | 完成（核心靜態機制） |

@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/39f22717-a782-4201-b5b3-f63a166bedd1" width="32" height="32" alt="強化能量循環天賦圖示"> [強化能量循環](#cryptic_increased_passive_cooldown_regen)<br>- Augmented Power-Cycle | <ul><li>電容量自然恢復由每秒單份的2%提高至3%；每份50點時，每秒由1點提高至1.5點。</li><li>在沒有其他消耗或回充修正時，一份充能約33.3秒回滿，三份由空回滿約100秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/7557cf7d-9d8b-41ba-bff3-582bdcc5c063" width="32" height="32" alt="電容回收迴路天賦圖示"> [電容回收迴路](#cryptic_multi_hits_grant_power)<br>- Capacitor Reclamation Loop | <ul><li>單次攻擊命中至少3名敵人時，回復目前戰鬥能力單份成本的1%電容量。</li><li>按單份成本50點計，每次回復0.5點；觸發後至少間隔0.25秒才能再次觸發。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/637d6e54-1c81-434d-b5bc-d779d4d8674b" width="32" height="32" alt="電能發射器天賦圖示"> [電能發射器](#cryptic_discharge)<br>- Voltaic Emitter | <ul><li>啟動時消耗1至3份已補滿的電容量，單次最多消耗3份；更多充能及下一份未滿進度保留。</li><li>主放電固定影響12公尺內敵人，觸電2秒並造成持續傷害。</li><li>消耗至少2份時，另使30公尺內符合條件的敵人武器故障；至少3份時，接下來15秒內攻擊命中會使敵人觸電2秒。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/fe67d92b-3b1a-4da7-bf6a-43bb643e80d6" width="32" height="32" alt="進階戰鬥教範天賦圖示"> [進階戰鬥教範](#cryptic_precision_stance)<br>- Advanced Combat Doctrines | <ul><li>切換至遠程武器並協助瞄準準星附近的敵人；散佈降低90%、後座力降低60%。</li><li>啟動扣除單份電容量進度的25%，之後每秒扣10%、每次射擊再扣1%；裝填時暫停每秒扣除。</li><li>重新裝填速度提高25%，結束後保留5秒；再次按下技能、切離遠程武器或耗盡電容量便結束。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/756e60ad-5734-42a4-be62-759096344f67" width="32" height="32" alt="鋼鐵富足天賦圖示"> [鋼鐵富足](#cryptic_chordclaw_capacitance_restoration)<br>- Satiated Steel | <ul><li>弦爪造成近戰擊殺後，在5秒內額外恢復目前戰鬥能力單份成本的25%。</li><li>單份電容量50點時，完整5秒額外恢復12.5點；期間再擊殺會刷新時間，不疊加恢復速率。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/a4bee55e-0868-4104-89c8-e2009e89ae4d" width="32" height="32" alt="千刀萬剮天賦圖示"> [千刀萬剮](#cryptic_chordclaw_consecutive_bonus)<br>- Slice and Dice | <ul><li>每次啟動弦爪技能增加一層弦爪傷害加成，每層20%，上限3層。</li><li>每層持續5秒；新層加入時更新持續時間，最多提供60%弦爪傷害修正。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/bedef96d-1746-44a5-a482-1abe4e5e15c6" width="32" height="32" alt="洞察之眼天賦圖示"> [洞察之眼](#cryptic_precision_stance_crit_cleave)<br>- Piercing Sight | <ul><li>進階戰鬥教範啟用時，遠程順劈增加30%、遠程暴擊率增加15個百分點。</li><li>持續4秒後提高至60%順劈與30個百分點暴擊率；關閉能力即失去加成。</li></ul> | 能力 |
@@ -548,6 +549,31 @@
 - **傷害算例**：初始範圍效果本身不直接扣血，傷害來自後續電擊。假設對某目標每次電擊造成10點，這次實際結算4次，合計10 × 4 = 40點；實際傷害與次數隨目標及結算時序改變。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_discharge.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_precision_stance"></a>
+### 進階戰鬥教範(Advanced Combat Doctrines)
+
+<img src="https://github.com/user-attachments/assets/fe67d92b-3b1a-4da7-bf6a-43bb643e80d6" width="72" height="72" alt="進階戰鬥教範天賦圖示">
+
+- **瞄準效果**：切換至遠程武器，協助瞄準準星附近的敵人；持續期間散佈降低90%、後座力降低60%。不另提供固定的傷害加成。
+
+- **啟動消耗**：至少有1份完整充能才能啟動，但實際只扣單份的25%。每份50點時，啟動消耗50 × 25% = 12.5點。
+
+- **持續與射擊消耗**：每秒另扣單份的10%，即50 × 10% = 5點；每次射擊再扣50 × 1% = 0.5點。這些比例都以1份計算，充能上限提高不會增加每次扣除量。
+
+- **持續時間算例**：只有1份、共50點時，啟動後剩37.5點；若不射擊、不換彈且沒有額外恢復，可維持37.5 ÷ 5 = 7.5秒。滿3份時則為(150 − 12.5) ÷ 5 = 27.5秒。
+
+- **射擊算例**：滿3份啟動後，持續10秒並射擊20次，剩150 − 12.5 − 10 × 5 − 20 × 0.5 = 77.5點；此例不計換彈與額外恢復。
+
+- **重新裝填**：換彈期間暫停每秒5點的持續消耗。重新裝填速度提高25%，結束姿態後保留5秒；沒有其他加成時，原本2秒的裝填縮為2 ÷ 1.25 = 1.6秒。
+
+- **恢復限制**：啟用期間，基礎自然恢復與額外維持成本互相抵消；職業原有的擊殺回充也會停止。其他自然恢復加成仍可抵銷部分耗電，例如增加50%自然恢復時，每秒淨消耗5 − 0.5 = 4.5點。
+
+- **結束與再用**：再次按下技能、切離遠程武器或電容量耗盡便結束。結束後恢復一般回充；從0點、只靠每秒1點自然恢復，要50秒才有1份可再次啟動。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_precision_stance.md) · [返回目錄](#talent-index)
 
 ---
 
