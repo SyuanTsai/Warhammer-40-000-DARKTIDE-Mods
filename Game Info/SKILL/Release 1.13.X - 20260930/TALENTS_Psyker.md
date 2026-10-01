@@ -10,6 +10,7 @@
 | <img src="https://github.com/user-attachments/assets/2e792f27-7daf-4ce9-abcc-9d92ded0985c" width="32" height="32" alt="動能撕裂者天賦圖示"> [動能撕裂者](#psyker_smite_on_hit)<br>- Kinetic Flayer | <ul><li>命中仍存活的精英、專家敵人或巨獸時觸發顱腦崩裂，冷卻 12 秒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/a0c17626-2777-4302-bc7e-9b3a48aadcd0" width="32" height="32" alt="靈能攻擊天賦圖示"> [靈能攻擊](#psyker_grenade_throwing_knives)<br>- Assail | <ul><li>投擲追蹤敵人的靈能碎片；可瞄準指定目標。</li><li>最多保留 10 次，每 3 秒恢復一次。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/ae86e2bb-6971-4dfe-b678-0aa814ccdfa1" width="32" height="32" alt="乙太碎片天賦圖示"> [乙太碎片](#psyker_throwing_knives_piercing)<br>- Ethereal Shards | <ul><li>靈能攻擊的傷害及撞擊穿透容量增加 50%。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/981d6617-da53-4f4d-8c85-c2e64dddab43" width="32" height="32" alt="懲戒天賦圖示"> [懲戒](#psyker_grenade_chain_lightning)<br>- Smite | <ul><li>持續電擊目標並向附近敵人傳導</li><li>蓄力施放可加快擴散及傷害提升</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9" width="32" height="32" alt="動能共鳴天賦圖示"> [動能共鳴](#psyker_ability_increase_brain_burst_speed)<br>- Kinetic Resonance | <ul><li>使用戰鬥能力後 10 秒內，顱腦崩裂蓄力速度增加 75%，反噬產生量減少 50%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/7db7b0d7-3d96-4b42-8f50-f9112f80badc" width="32" height="32" alt="迅捷碎片天賦圖示"> [迅捷碎片](#psyker_throwing_knives_cast_speed)<br>- Quick Shards | <ul><li>靈能攻擊的次數恢復速率增加 30%；基礎每次恢復由 3 秒縮短至約 2.31 秒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/0519f0ec-0ce9-4846-8ed4-95a0b9c092de" width="32" height="32" alt="衰弱詛咒天賦圖示"> [衰弱詛咒](#psyker_chain_lightning_improved_target_buff)<br>- Enfeeble | <ul><li>你電擊的敵人受到所有來源的傷害提高 10%。</li></ul> | 閃擊 |
@@ -117,6 +118,23 @@
 - **穿透算例**：無其他穿透修正，原本可穿過 2 個質量單位，變成 2 × 1.5 = 3 個質量單位。敵人質量不同，不等於固定多打 1 名敵人。
 
 [詳細資料](TALENTS%20Psyker/psyker_throwing_knives_piercing.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_grenade_chain_lightning"></a>
+### 懲戒(Smite)
+
+<img src="https://github.com/user-attachments/assets/981d6617-da53-4f4d-8c85-c2e64dddab43" width="72" height="72" alt="懲戒天賦圖示">
+
+- **運作方式**：持續施放靈能閃電，電擊目標並向附近敵人傳導；敵人是否持續僵直仍受抗性與動作影響。蓄力施放可加快傳導與傷害提升。
+
+- **擴散方式**：每次傳導可尋找 5 公尺內的敵人。快速施放的後續傳導上限，在 1.2、1.8、2.7 秒依序增加至 1、2、3 次；蓄力施放則在 0.4、0.6、0.9 秒達到相同上限。敵人位置與視線仍會限制實際數量。
+
+- **持續傷害**：電擊以 0.1 至 0.3 秒的隨機間隔造成傷害。快速施放需約 5 秒提升至最高強度，蓄力施放約需 2 秒；較難穿透的目標會延後開始受傷。最終傷害另受敵人護甲與加成影響。
+
+- **反噬算例**：沒有其他修正時，快速施放前 0.1 秒約增加 0.75 個反噬百分點，之後每秒約增加 22.5 個百分點。持續 0.35 秒約增加 0.75 + 22.5 × 0.25 = 6.375 個百分點；蓄力前置過程完整進行 0.8 秒時，該階段另增加約 5 個百分點。
+
+[詳細資料](TALENTS%20Psyker/psyker_grenade_chain_lightning.md) · [返回目錄](#talent-index)
 
 ---
 

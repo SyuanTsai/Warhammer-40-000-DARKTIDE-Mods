@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **81 個可選節點**，均為一點；同一配置最多分配 30 點。零點起始佔位 `not_selected` 不屬天賦效果，不列入 81 項。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36)。內部 tree version 26 不等於遊戲發行版號。
 
-完成 63／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 64／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -15,7 +15,7 @@
 | 閃擊 | [顱腦崩裂](psyker_brain_burst_improved.md) / `psyker_brain_burst_improved` | `node_58a8d92f-0b8c-43c4-ac80-f0c597fffc54` | 已定位；機制待核對 |
 | 閃擊 | [靈能攻擊](psyker_grenade_throwing_knives.md) / `psyker_grenade_throwing_knives` | `node_35ce2086-9081-49c7-9703-f3c07eb0be86` | 完成（核心靜態機制） |
 | 閃擊 | [乙太碎片](psyker_throwing_knives_piercing.md) / `psyker_throwing_knives_piercing` | `node_df9852a3-36e2-40ab-bd6b-c8ce430cfaa4` | 完成（核心靜態機制） |
-| 閃擊 | [懲戒](psyker_grenade_chain_lightning.md) / `psyker_grenade_chain_lightning` | `node_88eb687e-bd2e-449e-b198-1bd2318eeda1` | 已定位；機制待核對 |
+| 閃擊 | [懲戒](psyker_grenade_chain_lightning.md) / `psyker_grenade_chain_lightning` | `node_88eb687e-bd2e-449e-b198-1bd2318eeda1` | 完成（核心靜態機制） |
 | 閃擊 | [動能共鳴](psyker_ability_increase_brain_burst_speed.md) / `psyker_ability_increase_brain_burst_speed` | `node_d0f28c39-50b3-4f6f-893f-52e71aaba392` | 完成（核心靜態機制） |
 | 閃擊 | [迅捷碎片](psyker_throwing_knives_cast_speed.md) / `psyker_throwing_knives_cast_speed` | `node_a0e99f21-5abe-407d-a328-c955e9cc27f2` | 完成（核心靜態機制） |
 | 閃擊 | [衰弱詛咒](psyker_chain_lightning_improved_target_buff.md) / `psyker_chain_lightning_improved_target_buff` | `node_8da8c02b-211b-48bc-a170-f06b79b545b9` | 完成（核心靜態機制） |

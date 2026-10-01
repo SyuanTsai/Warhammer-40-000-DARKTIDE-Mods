@@ -12,7 +12,7 @@
 | [顱腦崩裂](#psyker_brain_burst_improved) | 已配對；機制待核對 |
 | [靈能攻擊](#psyker_grenade_throwing_knives) | 描述方向吻合，細節未列盡 |
 | [乙太碎片](#psyker_throwing_knives_piercing) | 描述不完整，未見已確認矛盾 |
-| [懲戒](#psyker_grenade_chain_lightning) | 已配對；機制待核對 |
+| [懲戒](#psyker_grenade_chain_lightning) | 未見已確認矛盾 |
 | [動能共鳴](#psyker_ability_increase_brain_burst_speed) | 效果方向吻合，算例補足速度換算 |
 | [迅捷碎片](#psyker_throwing_knives_cast_speed) | 描述吻合，部分格式參數是未掛載殘留 |
 | [衰弱詛咒](#psyker_chain_lightning_improved_target_buff) | 未見已確認矛盾 |
@@ -122,7 +122,7 @@
 ## 懲戒(Smite)
 
 - 描述鍵：`loc_ability_psyker_chain_lightning_description`；hash：`837f8e7f`。
-- 已配對原文，機制待核對。
+- 結論：未見已確認矛盾。本地繁中說明的鎖定、眩暈、鄰近擴散與蓄力效果均可由固定來源確認；此草稿進一步把直接根目標上限、後續跳躍、電擊 tick 與反噬成本分開說明，沒有把內部時程誤寫成必定命中數。
 - [原始碼推導與限制](psyker_grenade_chain_lightning.md)。
 
 <a id="psyker_ability_increase_brain_burst_speed"></a>

@@ -10,7 +10,7 @@
 | [顱腦崩裂](psyker_brain_burst_improved.md) | 機制與公式待核對。 |
 | [靈能攻擊](psyker_grenade_throwing_knives.md) | 投擲追蹤敵人的靈能碎片；可瞄準指定目標。；最多保留 10 次，每 3 秒恢復一次。；完整計算與適用限制見來源文件。 |
 | [乙太碎片](psyker_throwing_knives_piercing.md) | 靈能攻擊的傷害及撞擊穿透容量增加 50%。；完整計算與適用限制見來源文件。 |
-| [懲戒](psyker_grenade_chain_lightning.md) | 機制與公式待核對。 |
+| [懲戒](psyker_grenade_chain_lightning.md) | 持續電擊目標並向附近敵人傳導；蓄力施放可加快擴散及傷害提升；完整計算與適用限制見來源文件。 |
 | [動能共鳴](psyker_ability_increase_brain_burst_speed.md) | 使用戰鬥能力後 10 秒內，顱腦崩裂蓄力速度增加 75%，反噬產生量減少 50%。；完整計算與適用限制見來源文件。 |
 | [迅捷碎片](psyker_throwing_knives_cast_speed.md) | 靈能攻擊的次數恢復速率增加 30%；基礎每次恢復由 3 秒縮短至約 2.31 秒。；完整計算與適用限制見來源文件。 |
 | [衰弱詛咒](psyker_chain_lightning_improved_target_buff.md) | 你電擊的敵人受到所有來源的傷害提高 10%。；完整計算與適用限制見來源文件。 |
