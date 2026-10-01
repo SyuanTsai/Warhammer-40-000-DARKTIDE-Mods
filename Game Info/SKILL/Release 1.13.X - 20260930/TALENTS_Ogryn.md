@@ -46,6 +46,7 @@
 | <img src="https://github.com/user-attachments/assets/de5091de-3dd6-455b-875a-55228eb4d67e" width="32" height="32" alt="好運連連天賦圖示"> [好運連連](#ogryn_crit_damage_increase)<br>- Lucky Streak | <ul><li>爆擊時，額外傷害部分增加 75%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5f6d651a-4c88-40ea-a96b-3133459df2f4" width="32" height="32" alt="狂暴猛擊天賦圖示"> [狂暴猛擊](#ogryn_stacking_attack_speed)<br>- Frenzied Blows | <ul><li>連續近戰命中從第二次起累積攻速，每層 2.5%，最多 5 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/373afc07-72d5-4815-91c0-0e5d0d02d279" width="32" height="32" alt="擊潰他們天賦圖示"> [擊潰他們](#ogryn_melee_damage_after_heavy)<br>- Beat Them Back | <ul><li>重擊命中後，近戰傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/d21c7405-647a-4da2-a396-16b9c5cd8819" width="32" height="32" alt="專注天賦圖示"> [專注](#ogryn_drain_stamina_for_handling)<br>- Concentrate | <ul><li>架槍時消耗耐力，降低 60% 晃動、20% 散布與 15% 後座力。</li></ul> | 技能 |
 
 ---
 
@@ -654,5 +655,20 @@
 - **傷害算例**：基礎 100 點變成 115 點；同階段已有 20% 時為 100 × (1 + 20% + 15%) = 135 點。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_melee_damage_after_heavy.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_drain_stamina_for_handling"></a>
+### 專注(Concentrate)
+
+<img src="https://github.com/user-attachments/assets/d21c7405-647a-4da2-a396-16b9c5cd8819" width="72" height="72" alt="專注天賦圖示">
+
+- **生效條件**：架起遠程武器且仍有耐力時，降低 60% 晃動、20% 散布與 15% 後座力；耐力耗盡後失去這些加成。
+
+- **耐力消耗**：每秒消耗 0.5 點耐力，換彈時停止這筆消耗。若目前有 5 點耐力、沒有其他消耗或消耗修正，最多支撐 5 ÷ 0.5 = 10 秒。
+
+- **操控算例**：隔離其他修正，原本各為 100 的晃動、散布與後座力參數，分別變成 40、80、85。這些是操控參數，不代表命中率固定提高相同百分比。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_drain_stamina_for_handling.md) · [返回目錄](#talent-index)
 
 ---

@@ -46,3 +46,4 @@
 | [好運連連](ogryn_crit_damage_increase.md) | 爆擊時，額外傷害部分增加 75%。；完整計算與適用限制見來源文件。 |
 | [狂暴猛擊](ogryn_stacking_attack_speed.md) | 連續近戰命中從第二次起累積攻速，每層 2.5%，最多 5 層。；完整計算與適用限制見來源文件。 |
 | [擊潰他們](ogryn_melee_damage_after_heavy.md) | 重擊命中後，近戰傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
+| [專注](ogryn_drain_stamina_for_handling.md) | 架槍時消耗耐力，降低 60% 晃動、20% 散布與 15% 後座力。；完整計算與適用限制見來源文件。 |
