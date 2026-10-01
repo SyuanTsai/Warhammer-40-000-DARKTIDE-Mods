@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [滌罪伺服頭骨](#cryptic_flamethrower) | 未見明確矛盾；補充機制與算例 |
 | [修復協定](#cryptic_precision_stance_toughness_suppression) | 單位用語有誤 |
 | [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased) | 未見明確矛盾 |
 | [電流弧](#cryptic_discharge_generates_arcs) | 未見明確矛盾 |
@@ -77,6 +78,13 @@
 | [電流爆發](#cryptic_electrocution_push) | 未見明確矛盾 |
 | [抗腐護符](#cryptic_corruption_resistance_doom) | 未見明確矛盾 |
 | [威脅偵測指令](#cryptic_ranged_kills_tdr) | 未見明確矛盾 |
+
+<a id="cryptic_flamethrower"></a>
+## 滌罪伺服頭骨(Purgator Servo-Skull)
+
+- 描述鍵：`loc_talent_cryptic_servo_skull_flamethrower_new_desc`；hash：`e66555ce`。
+- 結論：未見明確矛盾；補充機制與算例。繁中描述已涵蓋額外噴火頭骨、落點部署、兩種射擊模式與雙選增加使用次數。固定來源另證明每次噴火消耗共用手榴彈能力1次、15秒動作與10公尺射程；屬翻譯省略的機制細節，不判為錯譯。Build 25492122 尚未確認與固定來源同版。
+- [原始碼推導與限制](cryptic_flamethrower.md)。
 
 <a id="cryptic_precision_stance_toughness_suppression"></a>
 ## 修復協定(Restoration Protocol)

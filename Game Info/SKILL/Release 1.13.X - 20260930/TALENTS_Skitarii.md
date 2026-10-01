@@ -1,11 +1,13 @@
 # 護教軍天賦：Release 1.13.0
 
+[角色基礎效果](TALENTS%20Skitarii/BASE_EFFECTS.md)
 
 <a id="talent-index"></a>
 ## 技能目錄
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/295017d9-50cd-4797-8b33-bd3627a7139f" width="32" height="32" alt="滌罪伺服頭骨天賦圖示"> [滌罪伺服頭骨](#cryptic_flamethrower)<br>- Purgator Servo-Skull | <ul><li>額外召喚一台配備噴火器的伺服頭骨，可指定區域施放火焰。</li><li>與醫療伺服頭骨同時選用時，共用使用次數上限由3次增至5次。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/eb879996-8768-4102-8799-0fecaf6f7a98" width="32" height="32" alt="修復協定天賦圖示"> [修復協定](#cryptic_precision_stance_toughness_suppression)<br>- Restoration Protocol | <ul><li>精準姿態啟動時清除壓制；姿態維持期間每秒恢復最大韌性的10%。</li><li>回復按最大韌性的比例計算，受一般韌性補充修正影響，且最多補到滿韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ac9ea4d6-352f-4ad1-95f2-a2de10d39d2d" width="32" height="32" alt="彈藥盤點之旨天賦圖示"> [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased)<br>- Writ of Ammunition Enumeration | <ul><li>精準姿態啟動時提高遠程射速15%；姿態連續維持滿4秒後提高至30%。</li><li>姿態結束會撤除此射速加成，4秒計時亦重置。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="32" height="32" alt="電流弧天賦圖示"> [電流弧](#cryptic_discharge_generates_arcs)<br>- Voltaic Arcs | <ul><li>電能發射器每消耗一道充能，額外釋放一道向前電弧；最多生成 5 道。</li><li>每道電弧從前方 12 公尺內的有效敵人起始，之後可鏈接附近敵人。</li></ul> | 能力 |
@@ -75,6 +77,26 @@
 | <img src="https://github.com/user-attachments/assets/80106b42-e788-43cb-a07a-ee69f668002f" width="32" height="32" alt="電流爆發天賦圖示"> [電流爆發](#cryptic_electrocution_push)<br>- Voltaic Burst | <ul><li>推擊造成踉蹌時施加電擊</li><li>冷卻 12 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1c4ea759-440c-48dd-bc21-3bc8303683d5" width="32" height="32" alt="抗腐護符天賦圖示"> [抗腐護符](#cryptic_corruption_resistance_doom)<br>- Ablative Wards | <ul><li>受到的腐敗減少 90%</li><li>每 20 秒付出基準 1 點腐敗代價</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a2e228da-729a-4b03-b07a-72bfaadf5dc3" width="32" height="32" alt="威脅偵測指令天賦圖示"> [威脅偵測指令](#cryptic_ranged_kills_tdr)<br>- Threat Detection Imperative | <ul><li>遠程擊殺每層減少 4% 韌性傷害</li><li>最多 5 層，每 8 秒衰減一層</li></ul> | 技能 |
+
+---
+
+## 閃擊
+
+<a id="cryptic_flamethrower"></a>
+### 滌罪伺服頭骨(Purgator Servo-Skull)
+
+<img src="https://github.com/user-attachments/assets/295017d9-50cd-4797-8b33-bd3627a7139f" width="72" height="72" alt="滌罪伺服頭骨天賦圖示">
+
+- **運作方式**：額外獲得一台噴火伺服頭骨；指定地面區域後，它會移動到位置並噴火，火焰最多作用15秒、射程10公尺。
+
+- **運作方式**：使用主要動作可切換擴散與集中模式。每次下令噴火會消耗1次閃擊使用次數。
+
+- **算例**：基礎上限3次；若也選擇醫療伺服頭骨，上限增加2次至5次，噴火與救援共用這5次使用次數。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_flamethrower.md) · [返回目錄](#talent-index)
+
+---
+
 
 ---
 
