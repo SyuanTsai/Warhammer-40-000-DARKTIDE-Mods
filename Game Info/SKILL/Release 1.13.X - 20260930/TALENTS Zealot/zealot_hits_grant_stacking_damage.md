@@ -1,0 +1,39 @@
+# 持續突擊(Sustained Assault)：原始碼依據
+
+[返回玩家說明](../TALENTS_Zealot.md#zealot_hits_grant_stacking_damage)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_hits_grant_stacking_damage)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`zealot_hits_grant_stacking_damage`；名稱鍵：`loc_talent_zealot_increased_damage_stacks_on_hit`；描述鍵：`loc_talent_zealot_increased_damage_stacks_on_hit_desc`。
+- 節點：`node_18bd9f66-02ab-4d6b-93ef-c860bbdf62e4`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- on_hit以機率1進入on_melee_hit（attack_type==melee）後施加effect；effect duration5、max_stacks5、refresh_duration_on_stack=true，各層melee_damage=.04，為同階段加算。
+
+## 原始碼依據
+
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：3863–3901](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L3863-L3901)
+- [scripts/settings/talent/talent_settings_zealot.lua：410–416](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L410-L416)
+- [scripts/settings/buff/helper_functions/check_proc_functions.lua：368–370](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L368-L370)
+- [scripts/utilities/attack/damage_calculation.lua：289–303](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L289-L303)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：1733–1757](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1733-L1757)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：152–178](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L152-L178)
+
+## 算例條件與待確認事項
+
+- **傷害算例**：沒有其他加成，3 層使 100 × (1 + 3 × 4%) = 112 點；滿層為 120 點。原有同階段 25% 加成時，滿層則為 100 × (1 + 25% + 20%) = 145 點。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`fa8c449f`。
+- 核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/default/zealot_hits_grant_stacking_damage.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_hits_grant_stacking_damage:node_18bd9f66-02ab-4d6b-93ef-c860bbdf62e4`。
+- 格式：image/webp；288×288；5252 bytes。
+- SHA-256：`d10b478dbd386d05606a7dc84db55202b1b58996bf25fc061ddd12966e3b678a`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929296872)；[公開圖片](https://github.com/user-attachments/assets/9e5a26dc-8d4f-4c94-9dcd-fdc807cc1d48)。附件已下載比對位元組與 SHA-256。
