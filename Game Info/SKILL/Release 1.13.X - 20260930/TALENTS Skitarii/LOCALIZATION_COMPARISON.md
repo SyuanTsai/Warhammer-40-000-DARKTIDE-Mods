@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
+| [弱點分析教義](#cryptic_afflicted_increased_damage) | 未見明確矛盾 |
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
@@ -16,3 +17,10 @@
 - 描述鍵：`loc_talent_cryptic_crits_grant_tdr_desc`；hash：`12420803`。
 - 結論：未見明確矛盾。中英原文未清楚拆分持續恢復與減傷；主文補充每秒速率，不列為誤譯。
 - [原始碼推導與限制](cryptic_crits_grant_tdr.md)。
+
+<a id="cryptic_afflicted_increased_damage"></a>
+## 弱點分析教義(Weakness Analysis Doctrine)
+
+- 描述鍵：`loc_talent_cryptic_afflicted_increased_damage_desc`；hash：`70e7ba50`。
+- 結論：未見明確矛盾。繁中與英文一致；補充加成作用在自己與刷新方式。
+- [原始碼推導與限制](cryptic_afflicted_increased_damage.md)。
