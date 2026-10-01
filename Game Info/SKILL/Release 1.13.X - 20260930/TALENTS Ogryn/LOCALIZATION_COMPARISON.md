@@ -15,6 +15,7 @@
 | [怒不可遏](#ogryn_more_hits_more_damage) | 未見明確矛盾 |
 | [重量級](#ogryn_ogryn_killer) | 未見明確矛盾 |
 | [猛擊](#ogryn_melee_stagger) | 未見明確矛盾 |
+| [削弱敵人](#ogryn_targets_recieve_damage_taken_increase_debuff) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -64,3 +65,10 @@
 - 描述鍵：`loc_talent_ogryn_melee_stagger_new_desc`；hash：`ce88baeb`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_melee_stagger.md)。
+
+<a id="ogryn_targets_recieve_damage_taken_increase_debuff"></a>
+## 削弱敵人(Soften Them Up)
+
+- 描述鍵：`loc_talent_ogryn_targets_recieve_damage_increase_debuff_new_desc`；hash：`8d887b7b`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_targets_recieve_damage_taken_increase_debuff.md)。

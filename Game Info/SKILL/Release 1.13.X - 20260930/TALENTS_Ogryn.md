@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/aeba8245-43aa-438c-9357-a7ac4556a98d" width="32" height="32" alt="怒不可遏天賦圖示"> [怒不可遏](#ogryn_more_hits_more_damage)<br>- Furious | <ul><li>前一次近戰攻擊每命中 1 名敵人，下次近戰傷害增加 3%，最多 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c006f0e1-3f32-4dcc-891a-8c44b4ebe6df" width="32" height="32" alt="重量級天賦圖示"> [重量級](#ogryn_ogryn_killer)<br>- Heavyweight | <ul><li>對堡壘、碾壓者、收割者與瘟疫歐格林造成的傷害提高 30%。</li><li>受到這些敵人的傷害降低 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ee98056a-b754-4821-9542-717ef68c944a" width="32" height="32" alt="猛擊天賦圖示"> [猛擊](#ogryn_melee_stagger)<br>- Slam | <ul><li>近戰衝擊提高 25%；近戰或推擊使敵人踉蹌時恢復 5% 耐力。</li><li>耐力恢復有 0.75 秒冷卻。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/53e0b90e-52dc-4a4a-953c-b235753aa97a" width="32" height="32" alt="削弱敵人天賦圖示"> [削弱敵人](#ogryn_targets_recieve_damage_taken_increase_debuff)<br>- Soften Them Up | <ul><li>近戰造成傷害後，使存活敵人在 5 秒內受到的傷害提高 15%。</li></ul> | 技能 |
 
 ---
 
@@ -120,5 +121,20 @@
 - **算例**：最大耐力 8 時，每次恢復 8 × 5% = 0.4；只缺 0.2 就只補 0.2。只計衝擊階段，基準 100 變成 100 × 1.25 = 125，實際能否踉蹌仍取決於敵人與攻擊。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_melee_stagger.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_targets_recieve_damage_taken_increase_debuff"></a>
+### 削弱敵人(Soften Them Up)
+
+<img src="https://github.com/user-attachments/assets/53e0b90e-52dc-4a4a-953c-b235753aa97a" width="72" height="72" alt="削弱敵人天賦圖示">
+
+- **觸發方式**：近戰攻擊對敵人造成傷害且敵人仍存活時，使其受到的傷害提高 15%，持續 5 秒；隊友後續攻擊也能受益。
+
+- **刷新方式**：再次造成合格近戰傷害會重設 5 秒時間；效果最多 1 層，不會因多次命中累加到 30%。
+
+- **傷害算例**：效果已施加後，原本 100 點傷害變成 100 × (1 + 15%) = 115 點；若同一承傷階段另有 20% 加成，則為 135 點。首次觸發的那一擊不會追溯重算。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_targets_recieve_damage_taken_increase_debuff.md) · [返回目錄](#talent-index)
 
 ---
