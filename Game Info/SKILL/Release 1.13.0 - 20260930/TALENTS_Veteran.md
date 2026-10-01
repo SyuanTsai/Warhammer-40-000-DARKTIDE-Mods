@@ -27,6 +27,7 @@
 | 鑰石 | [武器專家(Weapons Specialist)](#veteran_weapon_switch_passive) | 切換至遠程武器：手持近戰武器時，每次擊殺累積 1 層，最多 10 層。切出遠程武器後，消耗所有層數，每層提高 2% 遠程攻擊速度與裝填速度，持續 10 秒；再切換武器會提前結束。 |
 | 鑰石 | [時刻警覺(On Your Toes)](#veteran_weapon_switch_replenish_toughness) | 觸發方式：儲存至少 1 層武器專家的加成後，切換至對應武器，恢復 20% 最大韌性。恢復量固定，不隨層數增加。 |
 | 鑰石 | [有備無患(Always Prepared)](#veteran_weapon_switch_replenish_ammo) | 觸發方式：手持近戰武器擊殺、儲存武器專家的層數後，切出遠程武器，會把備用彈藥移入彈匣。層數越多，補入量越多。 |
+| 鑰石 | [活力煥發(Invigorated)](#veteran_weapon_switch_replenish_stamina) | 觸發方式：手持遠程武器擊殺敵人、儲存武器專家的近戰加成後，切出近戰武器，恢復 20% 最大耐力，並在 3 秒內降低 25% 耐力消耗。 |
 | 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
 | 技能 | [戰術裝填(Tactical Reload)](#veteran_faster_reload_on_non_empty_clips) | 彈匣還有彈藥時開始裝填，裝填速度增加 25%。 |
 | 技能 | [齊射能手(Volley Adept)](#veteran_reload_speed_on_elite_kill) | 擊殺精英或專家敵人後，下一次裝填速度增加 30%。 |
@@ -475,6 +476,20 @@
 - **限制：**實際補入量不會超過備彈或彈匣缺口；若算出補 10 發、備彈只剩 3 發，就只補 3 發。
 
 [詳細資料](TALENTS%20Veteran/veteran_weapon_switch_replenish_ammo.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_weapon_switch_replenish_stamina"></a>
+
+### 活力煥發(Invigorated)
+
+<img src="https://github.com/user-attachments/assets/bc2a44d8-866d-4f29-a680-f84e98b72b01" width="72" height="72" alt="活力煥發天賦圖示">
+
+- **觸發方式：**手持遠程武器擊殺敵人、儲存武器專家的近戰加成後，切出近戰武器，恢復 20% 最大耐力，並在 3 秒內降低 25% 耐力消耗。
+- **持續與重觸發：**減少耐力消耗的效果不因再次切換武器而提前結束；重新符合擊殺與切換條件時，恢復耐力並把 3 秒持續時間重設。
+- **算例：**最大耐力 6 點時，恢復 `6 × 20% = 1.2 點`，最多補到上限。原本消耗 2 點耐力的動作，在效果期間消耗 `2 × (1 − 25%) = 1.5 點`。
+
+[詳細資料](TALENTS%20Veteran/veteran_weapon_switch_replenish_stamina.md) · [返回目錄](#talent-index)
 
 ---
 
