@@ -22,7 +22,7 @@
 | 能力 | [目標引導增強(Enhanced Target Priority)](#veteran_combat_ability_coherency_outlines) | 效果：啟動處決者姿態時，協同範圍內的隊友也會看見精英與專家敵人的輪廓，持續 5 秒。你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。 |
 | 能力 | [火力反擊(Counter-Fire)](#veteran_combat_ability_ranged_roamer_outlines) | 效果：處決者姿態會額外標出一般射手與潛行者，例如血痂射手、渣滓潛行者。啟動或刷新輪廓時，這些敵人必須在你 50 公尺內。 |
 | 能力 | [獵手決意(Hunter's Resolve)](#veteran_toughness_bonus_leaving_invisibility) | 效果：啟動滲透時，受到的韌性傷害降低 50%；隱身期間持續生效，解除隱身後再維持 10 秒。 |
-| 能力 | [戰術意識(Tactical Awareness)](#veteran_elite_kills_reduce_cooldown) | 觸發方式：擊殺特殊敵人後，獲得 3 秒的冷卻恢復效果：每秒額外恢復 1 秒戰鬥能力冷卻。一般菁英不會觸發。 |
+| 能力 | [戰術意識(Tactical Awareness)](#veteran_elite_kills_reduce_cooldown) | 觸發方式：擊殺專家敵人後，獲得 3 秒的冷卻恢復效果：每秒額外恢復 1 秒戰鬥能力冷卻。一般精英不會觸發。 |
 | 能力 | [發號施令(Voice of Command)](#veteran_combat_ability_stagger_nearby_enemies) | 施放效果：大聲呼喊，使周圍 9 公尺內的敵人踉蹌，並立即回滿自己的韌性。 |
 | 能力 | [只有死亡，職責才會終結(Only In Death Does Duty End)](#veteran_combat_ability_revive_nearby_allies) | 效果：發號施令可以立即扶起周圍 9 公尺內倒地的隊友，無須逐一按住救援。一次施放可扶起範圍內多名倒地隊友。 |
 | 能力 | [鷹眼(Marksman)](#veteran_increased_weakspot_power_after_combat_ability) | 效果：使用戰鬥能力後，命中弱點時的攻擊威力提高 20%，持續 10 秒；近戰與遠程攻擊皆可受益。使用滲透時，隱身期間便生效，解除隱身後再維持 10 秒。 |
@@ -397,8 +397,8 @@
 
 <img src="https://github.com/user-attachments/assets/57d6b442-9cee-45c3-ba74-4a191649eddb" width="72" height="72" alt="戰術意識天賦圖示">
 
-- **觸發方式：**擊殺特殊敵人後，獲得 3 秒的冷卻恢復效果：每秒額外恢復 1 秒戰鬥能力冷卻。一般菁英不會觸發。
-- **連續擊殺：**效果不疊加恢復速度；期間再次擊殺特殊敵人，會把持續時間重設為 3 秒，原本的每秒恢復節奏繼續。
+- **觸發方式：**擊殺專家敵人後，獲得 3 秒的冷卻恢復效果：每秒額外恢復 1 秒戰鬥能力冷卻。一般精英不會觸發。
+- **連續擊殺：**效果不疊加恢復速度；期間再次擊殺專家敵人，會把持續時間重設為 3 秒，原本的每秒恢復節奏繼續。
 - **冷卻算例：**觸發時還剩 25 秒冷卻，接下來約 3 秒內，自然冷卻前進 3 秒，天賦另外恢復 3 秒，因此剩餘 `25 − 3 − 3 = 19 秒`。
 - **上限：**能力恢復完成後，多出的恢復量不會儲存到下次施放；若有兩次使用次數，則繼續恢復尚缺的次數，直到全滿。
 
