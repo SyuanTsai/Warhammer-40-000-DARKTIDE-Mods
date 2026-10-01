@@ -80,7 +80,7 @@
 | [聚焦亞空間](#psyker_increased_warp_damage) | 已配對；機制待核對 |
 | [反噬平衡](#psyker_weapon_attacks_peril_equilibrium) | 已配對；機制待核對 |
 | [武器在手，信心我有。](#psyker_reload_speed_warp_charge) | 已配對；機制待核對 |
-| [結晶意志](#psyker_alternative_peril_explosion) | 已配對；機制待核對 |
+| [結晶意志](#psyker_alternative_peril_explosion) | 未見明確矛盾 |
 | [靈能引導](#psyker_force_staff_bonus) | 已配對；機制待核對 |
 | [亞空間震波](#psyker_force_staff_quick_attack_bonus) | 已配對；機制待核對 |
 | [如夢似幻](#psyker_damage_to_peril_conversion) | 已配對；機制待核對 |
@@ -598,7 +598,7 @@
 ## 結晶意志(Crystalline Will)
 
 - 描述鍵：`loc_talent_psyker_alternative_peril_explosion_new_desc`；hash：`7ea53d48`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_alternative_peril_explosion.md)。
 
 <a id="psyker_force_staff_bonus"></a>

@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **81 個可選節點**，均為一點；同一配置最多分配 30 點。零點起始佔位 `not_selected` 不屬天賦效果，不列入 81 項。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36)。內部 tree version 26 不等於遊戲發行版號。
 
-完成 3／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 4／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -83,7 +83,7 @@
 | 技能 | [聚焦亞空間](psyker_increased_warp_damage.md) / `psyker_increased_warp_damage` | `node_1a3b8fd0-026d-4a46-b89e-6c1889f85a78` | 已定位；機制待核對 |
 | 技能 | [反噬平衡](psyker_weapon_attacks_peril_equilibrium.md) / `psyker_weapon_attacks_peril_equilibrium` | `node_237fc277-fe42-473b-aeda-70d82fc2d9e8` | 已定位；機制待核對 |
 | 技能 | [武器在手，信心我有。](psyker_reload_speed_warp_charge.md) / `psyker_reload_speed_warp_charge` | `node_e3d09295-0206-4166-91c4-2371e8abf9e3` | 已定位；機制待核對 |
-| 技能 | [結晶意志](psyker_alternative_peril_explosion.md) / `psyker_alternative_peril_explosion` | `node_25ffe424-4f39-4206-8304-66333fe44fa5` | 已定位；機制待核對 |
+| 技能 | [結晶意志](psyker_alternative_peril_explosion.md) / `psyker_alternative_peril_explosion` | `node_25ffe424-4f39-4206-8304-66333fe44fa5` | 完成（核心靜態機制） |
 | 技能 | [靈能引導](psyker_force_staff_bonus.md) / `psyker_force_staff_bonus` | `node_f0bb8060-6afc-4ae9-954d-3817cc054b35` | 已定位；機制待核對 |
 | 技能 | [亞空間震波](psyker_force_staff_quick_attack_bonus.md) / `psyker_force_staff_quick_attack_bonus` | `node_de28df8a-4aed-426c-8122-73893a04aa5b` | 已定位；機制待核對 |
 | 技能 | [如夢似幻](psyker_damage_to_peril_conversion.md) / `psyker_damage_to_peril_conversion` | `node_eaba4084-d11f-424a-872b-69ee649bdd44` | 已定位；機制待核對 |
