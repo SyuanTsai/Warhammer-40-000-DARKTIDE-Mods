@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/d45e19a1-d480-42db-bd0c-70ed43aba9aa" width="32" height="32" alt="整合型艾曼納圖斯力場天賦圖示"> [整合型艾曼納圖斯力場](#cryptic_grenade_ability_force_field)<br>- Integrated Refraction Emitter | <ul><li>展開一個跟隨玩家的力場，吸收遠程攻擊並在啟動與結束時電擊附近敵人。</li><li>持續8秒，最多儲存3次；每次需75秒自然恢復。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/295017d9-50cd-4797-8b33-bd3627a7139f" width="32" height="32" alt="滌罪伺服頭骨天賦圖示"> [滌罪伺服頭骨](#cryptic_flamethrower)<br>- Purgator Servo-Skull | <ul><li>額外召喚一台配備噴火器的伺服頭骨，可指定區域施放火焰。</li><li>與醫療伺服頭骨同時選用時，共用使用次數上限由3次增至5次。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/adeeeef3-0c2e-450a-974b-66ce6c6366bd" width="32" height="32" alt="醫療伺服頭骨天賦圖示"> [醫療伺服頭骨](#cryptic_servo_skull_inject_ally)<br>- Medicae Servo-Skull | <ul><li>額外召喚一台醫療伺服頭骨，可救援需要盟友協助的隊友。</li><li>救援後，隊友獲得5秒韌性傷害減免與韌性恢復。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/0efafa0a-aad0-4bb8-869f-133db37cf152" width="32" height="32" alt="匠師伺服頭骨天賦圖示"> [匠師伺服頭骨](#cryptic_servo_skull_improved)<br>- Artificer Servo-Skull | <ul><li>伺服頭骨可常駐跟隨，並可受命射擊敵人或執行資料解碼。</li><li>基礎伺服頭骨強化效果改為永久生效；命中還會使敵人承受更多傷害並累積燃燒。</li></ul> | 閃擊 |
@@ -84,6 +85,19 @@
 ---
 
 ## 閃擊
+
+<a id="cryptic_grenade_ability_force_field"></a>
+### 整合型艾曼納圖斯力場(Integrated Refraction Emitter)
+
+<img src="https://github.com/user-attachments/assets/d45e19a1-d480-42db-bd0c-70ed43aba9aa" width="72" height="72" alt="整合型艾曼納圖斯力場天賦圖示">
+
+- **運作方式**：指定並啟動艾曼納圖斯力場，在你周圍展開可吸收遠程攻擊的護盾，持續8秒；啟動與結束時會電擊5公尺內敵人。
+
+- **運作方式**：基礎有3次使用次數，每次啟動消耗1次；不計其他修正時，每次需75秒恢復，3次全用完後恢復全部需225秒。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_grenade_ability_force_field.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="cryptic_flamethrower"></a>
 ### 滌罪伺服頭骨(Purgator Servo-Skull)

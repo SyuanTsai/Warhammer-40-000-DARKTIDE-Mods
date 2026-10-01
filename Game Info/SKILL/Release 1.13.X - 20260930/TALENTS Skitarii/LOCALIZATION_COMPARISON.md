@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [整合型艾曼納圖斯力場](#cryptic_grenade_ability_force_field) | 未見明確矛盾；補充機制與算例 |
 | [滌罪伺服頭骨](#cryptic_flamethrower) | 未見明確矛盾；補充機制與算例 |
 | [醫療伺服頭骨](#cryptic_servo_skull_inject_ally) | 未見明確矛盾；補充機制與算例 |
 | [匠師伺服頭骨](#cryptic_servo_skull_improved) | 未見明確矛盾；補充機制與算例 |
@@ -81,6 +82,13 @@
 | [電流爆發](#cryptic_electrocution_push) | 未見明確矛盾 |
 | [抗腐護符](#cryptic_corruption_resistance_doom) | 未見明確矛盾 |
 | [威脅偵測指令](#cryptic_ranged_kills_tdr) | 未見明確矛盾 |
+
+<a id="cryptic_grenade_ability_force_field"></a>
+## 整合型艾曼納圖斯力場(Integrated Refraction Emitter)
+
+- 描述鍵：`loc_talent_cryptic_grenade_ability_force_field_cooldown_desc`；hash：`1988edfa`。
+- 結論：未見明確矛盾；補充機制與算例。本機中英均描述吸收遠程攻擊、8秒持續、3次使用及75秒恢復。來源補明5公尺起訖電擊、共用恢復進度；未展開這些細節不視為錯譯。
+- [原始碼推導與限制](cryptic_grenade_ability_force_field.md)。
 
 <a id="cryptic_flamethrower"></a>
 ## 滌罪伺服頭骨(Purgator Servo-Skull)
