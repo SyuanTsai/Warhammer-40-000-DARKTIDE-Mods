@@ -15,6 +15,7 @@
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
 | 技能 | [密集隊形訓練(Close Order Drill)](#veteran_reduced_toughness_damage_in_coherency) | 協同範圍內每有 1 名隊友，韌性減傷增加 11%；3 名隊友時達到 33%。 |
+| 技能 | [遠射(Longshot)](#veteran_increased_damage_based_on_range) | 遠程傷害增加 10%；距離越遠，額外再增加最多 15%。 |
 | 技能 | [行雲流水(One Motion)](#veteran_reduce_swap_time) | 武器切換速度增加 50%。 |
 | 技能 | [幹掉它！(Bring it Down!)](#veteran_big_game_hunter) | 對歐格林與巨獸的傷害增加 20%。 |
 | 技能 | [優越情節(Superiority Complex)](#veteran_increase_damage_vs_elites) | 增加對精英敵人的傷害 |
@@ -212,6 +213,24 @@
 - 3 人協同並同時觸發鋼鐵意志：`100 × 0.67 × 0.5 = 33.5`。
 
 [詳細資料](TALENTS%20Veteran/veteran_reduced_toughness_damage_in_coherency.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_increased_damage_based_on_range"></a>
+
+### 遠射(Longshot)
+
+<img src="https://github.com/user-attachments/assets/f7517509-e85f-47fb-b775-234a6aa0950a" width="72" height="72" alt="遠射天賦圖示">
+
+- **遠程傷害增加 10%；距離越遠，額外再增加最多 15%。**
+- 12.5 公尺內為 10%；30 公尺起達到合計 25%。中間距離依平方根曲線增加。
+
+#### 距離與傷害算例
+
+- 只計此天賦，基礎傷害 100：12.5 公尺內為 `100 × 1.10 = 110`，30 公尺起為 `100 × 1.25 = 125`。
+- 21.25 公尺：距離比例 `(21.25 − 12.5) ÷ (30 − 12.5) = 0.5`；傷害為 `100 × [1 + 10% + 15% × √0.5] ≈ 120.61`。
+
+[詳細資料](TALENTS%20Veteran/veteran_increased_damage_based_on_range.md) · [返回目錄](#talent-index)
 
 ---
 
