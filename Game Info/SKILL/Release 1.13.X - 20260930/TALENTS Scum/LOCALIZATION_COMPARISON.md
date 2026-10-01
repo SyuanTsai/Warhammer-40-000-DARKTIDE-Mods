@@ -91,6 +91,7 @@
 | [激勵 I](#broker_stimm_celerity_1) | 未見明確中英矛盾 |
 | [激勵 II](#broker_stimm_celerity_2) | 未見明確中英矛盾 |
 | [激勵 III](#broker_stimm_celerity_3) | 未見明確中英矛盾 |
+| [激勵 IV](#broker_stimm_celerity_4) | 未見明確中英矛盾 |
 
 <a id="broker_blitz_flash_grenade_improved"></a>
 ## 擊暈(Blackout)
@@ -676,3 +677,10 @@
 - 描述鍵：`loc_talent_stat_attack_speed / loc_talent_stat_stamina_cost_multiplier`；hash：`a2530496 / 26fbf08f`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
 - [原始碼推導與限制](broker_stimm_celerity_3.md)。
+
+<a id="broker_stimm_celerity_4"></a>
+## 激勵 IV(Spur IV)
+
+- 描述鍵：`loc_talent_stat_attack_speed / loc_talent_stat_stamina_cost_multiplier`；hash：`a2530496 / 26fbf08f`。
+- 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
+- [原始碼推導與限制](broker_stimm_celerity_4.md)。
