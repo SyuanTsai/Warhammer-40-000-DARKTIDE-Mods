@@ -40,6 +40,7 @@
 | [制裁重擊](#adamant_crits_rend) | 未見明確矛盾 |
 | [街頭妙招](#adamant_dodge_improvement) | 繁中原文勘誤 |
 | [巨獸獵人](#adamant_monster_hunter) | 未見明確矛盾 |
+| [擊殺順序](#adamant_increased_damage_to_high_health) | 未見明確矛盾 |
 | [惡徒退散](#adamant_damage_vs_suppressed) | 未見明確矛盾 |
 | [正當手段](#adamant_stacking_damage) | 未見明確矛盾 |
 
@@ -268,6 +269,13 @@
 - 描述鍵：`loc_talent_adamant_monster_hunter_desc`；hash：`7ec647c9`。
 - 結論：未見明確矛盾。繁中「歐格林和巨獸」對應英文 Ogryns and Monstrosities，沒有重複計算兩份加成的依據。
 - [原始碼推導與限制](adamant_monster_hunter.md)。
+
+<a id="adamant_increased_damage_to_high_health"></a>
+## 擊殺順序(Target Priority)
+
+- 描述鍵：`loc_talent_adamant_increased_damage_to_high_health_desc`；hash：`c5936e7c`。
+- 結論：未見明確矛盾。繁中「高於…生命值」與英文 above…Health一致；「造成…傷害」較不清楚，但未單憑措辭判錯，主文明寫加成及門檻。
+- [原始碼推導與限制](adamant_increased_damage_to_high_health.md)。
 
 <a id="adamant_damage_vs_suppressed"></a>
 ## 惡徒退散(Cower, Miscreants!)

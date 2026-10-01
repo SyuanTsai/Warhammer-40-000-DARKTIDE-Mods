@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/e650aa60-14d1-446d-9fa3-fed8dd633716" width="32" height="32" alt="制裁重擊天賦圖示"> [制裁重擊](#adamant_crits_rend)<br>- Prosecution Blow | <ul><li>遠程爆擊獲得 20% 撕裂。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cd883557-4048-43f0-a3b7-3a90bbc6ffe8" width="32" height="32" alt="街頭妙招天賦圖示"> [街頭妙招](#adamant_dodge_improvement)<br>- Street Smarts | <ul><li>有效閃避次數增加 1 次；近戰閃避結束後的判定寬限延長 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/62b4954d-42c3-4eab-a6ea-a17719414e19" width="32" height="32" alt="巨獸獵人天賦圖示"> [巨獸獵人](#adamant_monster_hunter)<br>- Monstrosity Hunter | <ul><li>對歐格林與巨獸造成的傷害提高 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47" width="32" height="32" alt="擊殺順序天賦圖示"> [擊殺順序](#adamant_increased_damage_to_high_health)<br>- Target Priority | <ul><li>對生命值高於 75% 的敵人，傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="惡徒退散天賦圖示"> [惡徒退散](#adamant_damage_vs_suppressed)<br>- Cower, Miscreants! | <ul><li>對受壓制敵人的傷害提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="正當手段天賦圖示"> [正當手段](#adamant_stacking_damage)<br>- Justified Measures | <ul><li>攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。</li></ul> | 技能 |
 
@@ -464,6 +465,19 @@
 - **作用範圍**：近戰與遠程皆可；敵人同時符合兩種類型也只套用一次加成。
 
 [詳細資料](TALENTS%20Arbites/adamant_monster_hunter.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_increased_damage_to_high_health"></a>
+### 擊殺順序(Target Priority)
+
+<img src="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47" width="72" height="72" alt="擊殺順序天賦圖示">
+
+- **觸發條件**：命中前，目標剩餘生命高於最大生命的 75% 時，該次攻擊傷害提高 15%；恰好 75% 不生效。
+
+- **傷害算例**：目標最大生命 1000、目前 800 時，基礎 100 點傷害變成 100 × 1.15 = 115 點；目前 750 時仍為 100 點。已有同階段 25% 加成且門檻成立時，125 點變成 140 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_increased_damage_to_high_health.md) · [返回目錄](#talent-index)
 
 ---
 
