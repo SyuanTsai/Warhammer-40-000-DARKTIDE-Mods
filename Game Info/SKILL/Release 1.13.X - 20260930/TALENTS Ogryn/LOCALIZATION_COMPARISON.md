@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [子彈風暴](#ogryn_blo_ally_ranged_buffs) | 繁中描述錯誤 |
+| [激鬥戰火](#ogryn_blo_wield_speed) | 未見明確矛盾 |
 | [退後！](#ogryn_blo_melee) | 繁中描述錯誤 |
 | [最好的防禦](#ogryn_multi_heavy_toughness) | 未見明確矛盾 |
 | [碾碎它們！](#ogryn_single_heavy_toughness) | 未見明確矛盾 |
@@ -69,6 +70,13 @@
 - 繁中原文短引：幸運子彈命中時，自身與協同中的盟友的遠程傷害提高{ranged_damage:%s}，持續{duration:%s}秒。
 - 同源英文：{ranged_damage:%s} Ranged Damage to you and Allies in Coherency on Lucky Bullet. Lasts {duration:%s}s.
 - [原始碼推導與限制](ogryn_blo_ally_ranged_buffs.md)。
+
+<a id="ogryn_blo_wield_speed"></a>
+## 激鬥戰火(Heat of Battle)
+
+- 描述鍵：`loc_talent_ogryn_blo_fire_rate_desc`；hash：`7290e9ce`。
+- 結論：未見明確矛盾。繁中寫「每層額外提高…射速」，英文寫「also grants … Fire Rate per Stack」；兩者都表示此效果依爆限超載層數逐層增加。
+- [原始碼推導與限制](ogryn_blo_wield_speed.md)。
 
 <a id="ogryn_blo_melee"></a>
 ## 退後！(Back Off!)

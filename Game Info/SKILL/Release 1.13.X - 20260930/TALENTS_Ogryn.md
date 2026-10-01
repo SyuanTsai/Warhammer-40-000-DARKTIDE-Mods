@@ -8,6 +8,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760" width="32" height="32" alt="子彈風暴天賦圖示"> [子彈風暴](#ogryn_blo_ally_ranged_buffs)<br>- Bulletstorm | <ul><li>觸發幸運子彈時，你和協同範圍內的隊友獲得 +15% 遠程傷害，持續 8 秒。</li><li>再次觸發會把效果時間重新延長為 8 秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/a9ec95cc-0b91-4558-81b5-faefcf1207d7" width="32" height="32" alt="激鬥戰火天賦圖示"> [激鬥戰火](#ogryn_blo_wield_speed)<br>- Heat of Battle | <ul><li>「激鬥戰火」讓爆限超載每層另增加 1.5% 遠程射速。</li><li>沿用遠程擊殺累積的 10 層、每次加層刷新 10 秒；滿層增加 15% 遠程射速。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5c8fc9b0-2f06-4311-87f7-511d4c6ce6d5" width="32" height="32" alt="退後！天賦圖示"> [退後！](#ogryn_blo_melee)<br>- Back Off! | <ul><li>近戰擊殺可提高下一次射擊觸發幸運子彈的機率，每層增加 10 個百分點。</li><li>最多累積 10 層；下一次射擊後清空，該次即使觸發幸運子彈而免耗彈藥也會消耗層數。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/67294825-4742-461c-8445-8eabf69981d3" width="32" height="32" alt="最好的防禦天賦圖示"> [最好的防禦](#ogryn_multi_heavy_toughness)<br>- The Best Defence | <ul><li>一次近戰攻擊命中至少 2 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bdf5653a-6df6-4998-a781-ae623083055a" width="32" height="32" alt="碾碎它們！天賦圖示"> [碾碎它們！](#ogryn_single_heavy_toughness)<br>- Smash 'Em! | <ul><li>一次近戰攻擊命中恰好 1 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
@@ -82,6 +83,21 @@
 - 繁中「幸運子彈命中時」比英文及程式條件多出命中限制。建議改為「觸發幸運子彈時」，避免玩家誤以為必須打中敵人。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_blo_ally_ranged_buffs.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_blo_wield_speed"></a>
+### 激鬥戰火(Heat of Battle)
+
+<img src="https://github.com/user-attachments/assets/a9ec95cc-0b91-4558-81b5-faefcf1207d7" width="72" height="72" alt="激鬥戰火天賦圖示">
+
+- **前置條件**：先由遠程擊殺累積爆限超載層數；本節點跟隨這些層數，不會自行增加或延長層數。
+
+- **每層效果**：每層增加 1.5% 遠程射速，最多 10 層。
+
+- **算例**：6 層增加 9% 遠程射速；滿 10 層增加 15%。若基礎連射間隔為 1 秒，滿層後約為 1 ÷ 1.15 = 0.87 秒。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_blo_wield_speed.md) · [返回目錄](#talent-index)
 
 ---
 
