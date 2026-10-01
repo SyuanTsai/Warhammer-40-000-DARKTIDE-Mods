@@ -19,6 +19,7 @@
 | <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="預兆天賦圖示"> [預兆](#psyker_aura_crit_chance_aura)<br>- Prescience | <ul><li>你與協同中的隊友的暴擊機率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a" width="32" height="32" alt="占卜者的注視天賦圖示"> [占卜者的注視](#psyker_combat_ability_stance)<br>- Scrier's Gaze | <ul><li>傷害、爆擊與弱點加成，並恢復韌性</li><li>反噬達 100% 結束；累積增傷保留 10 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/8a145b7f-771a-42b6-a809-56650cd24f7e" width="32" height="32" alt="亞空間爆發天賦圖示"> [亞空間爆發](#psyker_discharge_damage_debuff)<br>- Warp Rupture | <ul><li>尖嘯命中的敵人傷害降低 10%</li><li>受到傷害提高 10%，持續 8 秒</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/41b92eae-77a3-481e-af12-783845ce49c4" width="32" height="32" alt="預知未來天賦圖示"> [預知未來](#psyker_overcharge_weakspot_kill_bonuses)<br>- Precognition | <ul><li>注視增加靈巧傷害，最高 30%</li><li>弱點擊殺加快傷害疊層</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/f9987bfc-f9d7-48d8-9431-8c361223c50e" width="32" height="32" alt="亞空間加速天賦圖示"> [亞空間加速](#psyker_overcharge_increased_movement_speed)<br>- Warp Speed | <ul><li>注視期間增加 20% 移動速度</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="32" height="32" alt="靈能學者光環天賦圖示"> [靈能學者光環](#psyker_2_tier_3_name_2)<br>- Psykinetic's Aura | <ul><li>擊殺精英或專家後，加快能力冷卻</li><li>效果持續 3 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/123c7e4e-3844-4ff0-94c0-5cf7f7772b8f" width="32" height="32" alt="現實錨點天賦圖示"> [現實錨點](#psyker_overcharge_reduced_warp_charge)<br>- Reality Anchor | <ul><li>注視期間反噬生成減少 20%</li><li>平息所需時間縮短 30%</li></ul> | 能力 |
@@ -249,6 +250,21 @@
 - **傷害算例：**不計其他加成，敵人原本造成 100 點傷害會變成 100 × 0.9 = 90 點；原本承受 100 點則變成 100 × 1.1 = 110 點。
 
 [詳細資料](TALENTS%20Psyker/psyker_discharge_damage_debuff.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_overcharge_weakspot_kill_bonuses"></a>
+### 預知未來(Precognition)
+
+<img src="https://github.com/user-attachments/assets/41b92eae-77a3-481e-af12-783845ce49c4" width="72" height="72" alt="預知未來天賦圖示">
+
+- **運作方式：**占卜者的注視期間，每秒再獲得 1% 靈巧傷害加成，最多 30%，結束後保留 10 秒。弱點擊殺會替傷害與靈巧傷害各增加一層進度。
+
+- **疊層算例：**注視累積 8 層時完成一次弱點擊殺，變成 8 + 1 = 9 層；不會因此延長注視的實際持續時間。
+
+- **傷害算例：**靈巧加成作用於弱點或爆擊的額外傷害。只看 30% 靈巧加成，假設一般傷害 100、額外傷害 50，150 點會變成 100 + 50 × 1.30 = 165 點，整次命中增加 10%；注視的其他加成另計。
+
+[詳細資料](TALENTS%20Psyker/psyker_overcharge_weakspot_kill_bonuses.md) · [返回目錄](#talent-index)
 
 ---
 

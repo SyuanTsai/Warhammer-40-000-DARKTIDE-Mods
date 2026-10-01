@@ -25,7 +25,7 @@
 | [平靜迸發](#psyker_shout_reduces_warp_charge_generation) | 已配對；機制待核對 |
 | [亞空間爆發](#psyker_discharge_damage_debuff) | 未見明確矛盾 |
 | [蔓延火焰](#psyker_warpfire_on_shout) | 已配對；機制待核對 |
-| [預知未來](#psyker_overcharge_weakspot_kill_bonuses) | 已配對；機制待核對 |
+| [預知未來](#psyker_overcharge_weakspot_kill_bonuses) | 未見明確矛盾 |
 | [亞空間加速](#psyker_overcharge_increased_movement_speed) | 未見明確矛盾 |
 | [靈能學者光環](#psyker_2_tier_3_name_2) | 未見明確矛盾 |
 | [現實錨點](#psyker_overcharge_reduced_warp_charge) | 明確翻譯錯誤 |
@@ -215,7 +215,7 @@
 ## 預知未來(Precognition)
 
 - 描述鍵：`loc_ability_psyker_overcharge_weakspot_description`；hash：`492219ab`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源尚未確認同版。
 - [原始碼推導與限制](psyker_overcharge_weakspot_kill_bonuses.md)。
 
 <a id="psyker_overcharge_increased_movement_speed"></a>
