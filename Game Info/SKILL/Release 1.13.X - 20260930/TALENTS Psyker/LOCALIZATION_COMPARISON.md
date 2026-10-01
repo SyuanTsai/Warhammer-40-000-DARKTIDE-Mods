@@ -47,7 +47,7 @@
 | [盜竊天命](#psyker_mark_kills_can_vent) | 未見明確矛盾 |
 | [持久影響](#psyker_mark_increased_duration) | 未見明確矛盾 |
 | [充能完畢](#psyker_empowered_grenades_increased_max_stacks) | 未見明確矛盾 |
-| [涅槃](#psyker_warpfire_generate_souls) | 已配對；機制待核對 |
+| [涅槃](#psyker_warpfire_generate_souls) | 待同版核對 |
 | [靈能吸血鬼](#psyker_aura_souls_on_kill) | 已配對；機制待核對 |
 | [亞空間電池](#psyker_increased_max_souls) | 已配對；機制待核對 |
 | [殘忍命運](#psyker_mark_weakspot_kills) | 已配對；機制待核對 |
@@ -371,7 +371,7 @@
 ## 涅槃(In Fire Reborn)
 
 - 描述鍵：`loc_talent_psyker_warpfire_generates_souls_desc`；hash：`d52dac75`。
-- 已配對原文，機制待核對。
+- 結論：待同版核對。繁中與英文均寫靈魂之火擊殺；固定來源也接受死亡時帶有靈魂之火的敵人，不要求本人尾刀。兩語言一致，跨來源實作差異尚待同版核對，不列繁中誤譯。
 - [原始碼推導與限制](psyker_warpfire_generate_souls.md)。
 
 <a id="psyker_aura_souls_on_kill"></a>

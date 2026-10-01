@@ -44,6 +44,7 @@
 | <img src="https://github.com/user-attachments/assets/06e543d8-85dd-455b-8ac2-3f9f29b03cf1" width="32" height="32" alt="盜竊天命天賦圖示"> [盜竊天命](#psyker_mark_kills_can_vent)<br>- Purloin Providence | <ul><li>擊殺被標記的敵人，平息 5 個反噬百分點</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d2b37d6f-6054-462c-ba12-5583c59bceb8" width="32" height="32" alt="持久影響天賦圖示"> [持久影響](#psyker_mark_increased_duration)<br>- Lingering Influence | <ul><li>精準加成倒數由 5 秒延長至 10 秒</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/1918d789-dd64-401d-b985-c99915053691" width="32" height="32" alt="充能完畢天賦圖示"> [充能完畢](#psyker_empowered_grenades_increased_max_stacks)<br>- Charged Up | <ul><li>靈能強化最多儲存 3 層</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/f42fce6a-aab7-4622-a8b9-bd171fba4b33" width="32" height="32" alt="涅槃天賦圖示"> [涅槃](#psyker_warpfire_generate_souls)<br>- In Fire Reborn | <ul><li>帶有靈魂之火的敵人死亡時，有 10% 機率取得亞空間充能</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="亞空間耗費天賦圖示"> [亞空間耗費](#psyker_toughness_on_melee)<br>- Warp Expenditure | <ul><li>近戰命中首個敵人，恢復 2.5% 最大韌性。</li><li>近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
@@ -628,6 +629,21 @@
 - **層數算例**：已有 2 層時再取得一層，2 + 1 = 3 層；已有 3 層時再次取得仍維持 3 層。
 
 [詳細資料](TALENTS%20Psyker/psyker_empowered_grenades_increased_max_stacks.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_warpfire_generate_souls"></a>
+### 涅槃(In Fire Reborn)
+
+<img src="https://github.com/user-attachments/assets/f42fce6a-aab7-4622-a8b9-bd171fba4b33" width="72" height="72" alt="涅槃天賦圖示">
+
+- **觸發方式**：敵人死亡時仍帶有靈魂之火，或由你的靈魂之火造成致命傷害時，有 10% 機率獲得一層亞空間充能。前者不要求由你補上最後一擊。
+
+- **機率算例**：不受充能上限截斷時，100 次符合條件的死亡事件，期望取得 100 × 10% = 10 層；實際結果依隨機判定而異。
+
+- **選擇限制**：與「靈能吸血鬼」只能擇一選取。
+
+[詳細資料](TALENTS%20Psyker/psyker_warpfire_generate_souls.md) · [返回目錄](#talent-index)
 
 ---
 
