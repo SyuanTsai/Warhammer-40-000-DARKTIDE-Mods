@@ -33,6 +33,7 @@
 | [兵敗如山倒](adamant_cleave_after_push.md) | 推擊命中敵人後，近戰傷害的順劈容量提高 75%，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [盾型裝甲](adamant_shield_plates.md) | 格擋後 3 秒恢復最大韌性的 15%；完美格擋另立即恢復 10%，這份立即恢復有 1 秒冷卻。；完整計算與適用限制見來源文件。 |
 | [重如律法](adamant_heavy_attacks_increase_damage.md) | 近戰重擊命中後，傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
+| [毀滅打擊](adamant_melee_attacks_on_staggered_rend.md) | 對踉蹌敵人的近戰攻擊獲得 15% 撕裂。；完整計算與適用限制見來源文件。 |
 | [狂熱信仰](adamant_crit_chance_on_kill.md) | 擊殺後每層增加 2 個百分點爆擊機率，最多 8 層，持續 10 秒。；完整計算與適用限制見來源文件。 |
 | [巨獸獵人](adamant_monster_hunter.md) | 對歐格林與巨獸造成的傷害提高 20%。；完整計算與適用限制見來源文件。 |
 | [惡徒退散](adamant_damage_vs_suppressed.md) | 對受壓制敵人的傷害提高 25%。；完整計算與適用限制見來源文件。 |

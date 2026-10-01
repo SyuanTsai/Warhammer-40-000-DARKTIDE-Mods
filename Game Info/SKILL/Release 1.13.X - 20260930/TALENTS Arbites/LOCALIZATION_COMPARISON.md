@@ -35,6 +35,7 @@
 | [兵敗如山倒](#adamant_cleave_after_push) | 未見明確矛盾 |
 | [盾型裝甲](#adamant_shield_plates) | 未見明確矛盾 |
 | [重如律法](#adamant_heavy_attacks_increase_damage) | 未見明確矛盾 |
+| [毀滅打擊](#adamant_melee_attacks_on_staggered_rend) | 未見明確矛盾 |
 | [狂熱信仰](#adamant_crit_chance_on_kill) | 未見明確矛盾 |
 | [巨獸獵人](#adamant_monster_hunter) | 未見明確矛盾 |
 | [惡徒退散](#adamant_damage_vs_suppressed) | 未見明確矛盾 |
@@ -228,6 +229,13 @@
 - 描述鍵：`loc_talent_adamant_heavy_attacks_increase_damage_desc`；hash：`573a8877`。
 - 結論：未見明確矛盾。繁中「近戰重擊後」與英文 after Heavy Melee Attack一致；命中及揮擊結束時點屬補充。
 - [原始碼推導與限制](adamant_heavy_attacks_increase_damage.md)。
+
+<a id="adamant_melee_attacks_on_staggered_rend"></a>
+## 毀滅打擊(Strike Down)
+
+- 描述鍵：`loc_talent_adamant_melee_attacks_on_staggered_rend_alt_desc`；hash：`c925f6cc`。
+- 結論：未見明確矛盾。繁中與英文均限定踉蹌敵人的近戰撕裂；作用條件一致，公式為補充。
+- [原始碼推導與限制](adamant_melee_attacks_on_staggered_rend.md)。
 
 <a id="adamant_crit_chance_on_kill"></a>
 ## 狂熱信仰(Zealous Dedication)
