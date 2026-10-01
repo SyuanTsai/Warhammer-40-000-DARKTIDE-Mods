@@ -34,3 +34,4 @@
 | [主宰](ogryn_rending_on_elite_kills.md) | 擊殺精英後獲得 15% 撕裂，持續 10 秒。；完整計算與適用限制見來源文件。 |
 | [換彈完畢](ogryn_reloading_grants_damage.md) | 換彈後，遠程傷害提高 15%，持續 8 秒。；完整計算與適用限制見來源文件。 |
 | [大爆炸](ogryn_increase_explosion_radius.md) | 爆炸半徑增加 27.5%。；完整計算與適用限制見來源文件。 |
+| [睚眥必報](ogryn_blocking_reduces_push_cost.md) | 每 8 秒可發動一次強化推擊，衝擊力增加 250%。；完整計算與適用限制見來源文件。 |

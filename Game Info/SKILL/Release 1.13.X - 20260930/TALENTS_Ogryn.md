@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/0eb640b4-e206-4d0b-a982-f74b33baf5b2" width="32" height="32" alt="主宰天賦圖示"> [主宰](#ogryn_rending_on_elite_kills)<br>- Dominate | <ul><li>擊殺精英後獲得 15% 撕裂，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/27fcc279-9828-4df7-b895-04956bb2463b" width="32" height="32" alt="換彈完畢天賦圖示"> [換彈完畢](#ogryn_reloading_grants_damage)<br>- Reloaded and Ready | <ul><li>換彈後，遠程傷害提高 15%，持續 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c6421034-209b-4fab-857d-541fa0667d8b" width="32" height="32" alt="大爆炸天賦圖示"> [大爆炸](#ogryn_increase_explosion_radius)<br>- Big Boom | <ul><li>爆炸半徑增加 27.5%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/b35eb9be-169c-48cf-a295-329eae3a3610" width="32" height="32" alt="睚眥必報天賦圖示"> [睚眥必報](#ogryn_blocking_reduces_push_cost)<br>- No Pushover | <ul><li>每 8 秒可發動一次強化推擊，衝擊力增加 250%。</li></ul> | 技能 |
 
 ---
 
@@ -458,5 +459,20 @@
 - **疊加方式**：其他同階段爆炸半徑加成相加；地形遮擋與爆炸本身的命中判定仍會影響實際覆蓋。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_increase_explosion_radius.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_blocking_reduces_push_cost"></a>
+### 睚眥必報(No Pushover)
+
+<img src="https://github.com/user-attachments/assets/b35eb9be-169c-48cf-a295-329eae3a3610" width="72" height="72" alt="睚眥必報天賦圖示">
+
+- **觸發方式**：效果可用時，推擊的衝擊力增加 250%；完成這次推擊後開始 8 秒冷卻，冷卻中的普通推擊不會重新延長倒數。
+
+- **衝擊力算例**：原本 100 點推擊衝擊力，強化後為 100 × (1 + 250%) = 350 點；這是造成踉蹌的強度，不是 350 點傷害。
+
+- **消耗方式**：冷卻從推擊完成時計算，即使沒有推到敵人也會消耗這次強化。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_blocking_reduces_push_cost.md) · [返回目錄](#talent-index)
 
 ---
