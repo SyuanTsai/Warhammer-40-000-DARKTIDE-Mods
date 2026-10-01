@@ -43,6 +43,7 @@
 | [彈藥補給艙](#cryptic_passive_ammo_replenishment) | 未見明確矛盾 |
 | [莫比亞導體](#cryptic_damage_on_ability) | 未見明確矛盾 |
 | [適應性戰鬥校準](#cryptic_cleave_and_impact) | 未見明確矛盾 |
+| [卓越防禦記憶模組](#cryptic_ranged_stacking_toughness) | 未見明確矛盾 |
 | [守護協議](#cryptic_disabled_allies_defense) | 未見明確矛盾 |
 | [數據感應協定](#cryptic_ally_coherency_defenses) | 受益對象用語有誤 |
 | [精準戰鬥探測儀](#cryptic_next_hit_all_damage_on_dodge) | 未見明確矛盾 |
@@ -296,6 +297,13 @@
 - 描述鍵：`loc_talent_cryptic_melee_cleave_and_impact_desc`；hash：`6d23edd0`。
 - 結論：未見明確矛盾。中英皆寫高於/低於，省略剛好50%的歸屬；作邊界補充，不列錯誤。
 - [原始碼推導與限制](cryptic_cleave_and_impact.md)。
+
+<a id="cryptic_ranged_stacking_toughness"></a>
+## 卓越防禦記憶模組(Superior Defence Engrams)
+
+- 描述鍵：`loc_talent_cryptic_ranged_stacking_toughness_desc`；hash：`057bb0ce`。
+- 結論：未見明確矛盾。中英文一致；補充刷新與上限。
+- [原始碼推導與限制](cryptic_ranged_stacking_toughness.md)。
 
 <a id="cryptic_disabled_allies_defense"></a>
 ## 守護協議(Protectorate Protocol)
