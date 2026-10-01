@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/7090c8fb-aaaa-4015-a5c1-21e7093507be" width="32" height="32" alt="復甦天賦圖示"> [復甦](#cryptic_coherency_regen_aura_improved)<br>- Resurgence | <ul><li>獲得25點韌性，且你與協同範圍內隊友在戰鬥中的協同韌性恢復至少為一般速率的50%。</li><li>協同恢復最低倍率可在附近有敵人時生效。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/59dcc637-0b0f-4f3b-8e79-f4fdf53b6cef" width="32" height="32" alt="彈藥存放天賦圖示"> [彈藥存放](#cryptic_ammo_aura)<br>- Ammunition Deposit | <ul><li>你獲得25點韌性，任務中的玩家獲得15%儲備彈藥容量。</li><li>備彈容量效果不受協同距離限制；多名隊友選用時不重複加成。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/a48f1d74-488a-42d3-a59d-33d55135dad2" width="32" height="32" alt="碎敵信條天賦圖示"> [碎敵信條](#cryptic_aura_weapon_improved)<br>- Foe-Render Creed | <ul><li>你獲得25點韌性；你與協同範圍內隊友的順劈上限提高15%，撕裂提高7.5%。</li><li>協同鏈包含施放者本人，因此自身也取得順劈與撕裂加成。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/af7ec3de-6e36-4171-8be2-d385177b170e" width="32" height="32" alt="弦爪重擊天賦圖示"> [弦爪重擊](#cryptic_chordclaw)<br>- Chordclaw Strike | <ul><li>弦爪重擊每次啟動消耗1份充能；弦爪重攻擊必定暴擊並有+50%撕裂。</li><li>啟動期間的弦爪效果另提供+30%近戰傷害及暈眩免疫；攻擊的實際生命傷害依敵人與傷害計算而變。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/eb879996-8768-4102-8799-0fecaf6f7a98" width="32" height="32" alt="修復協定天賦圖示"> [修復協定](#cryptic_precision_stance_toughness_suppression)<br>- Restoration Protocol | <ul><li>進階戰鬥教範啟動時清除壓制；能力維持期間每秒恢復最大韌性的10%。</li><li>回復按最大韌性的比例計算，受一般韌性補充修正影響，且最多補到滿韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ac9ea4d6-352f-4ad1-95f2-a2de10d39d2d" width="32" height="32" alt="彈藥盤點之旨天賦圖示"> [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased)<br>- Writ of Ammunition Enumeration | <ul><li>進階戰鬥教範啟動時提高遠程射速15%；能力連續維持滿4秒後提高至30%。</li><li>能力結束會撤除此射速加成，4秒計時亦重置。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="32" height="32" alt="電流弧天賦圖示"> [電流弧](#cryptic_discharge_generates_arcs)<br>- Voltaic Arcs | <ul><li>電能發射器每消耗一份充能，額外釋放一道向前電弧；一次最多消耗3份，因此一般使用最多3道。</li><li>每道電弧從前方 12 公尺內的有效敵人起始，之後可鏈接附近敵人。</li></ul> | 能力 |
@@ -270,6 +271,23 @@
 ---
 
 ## 能力
+
+<a id="cryptic_chordclaw"></a>
+### 弦爪重擊(Chordclaw Strike)
+
+<img src="https://github.com/user-attachments/assets/af7ec3de-6e36-4171-8be2-d385177b170e" width="72" height="72" alt="弦爪重擊天賦圖示">
+
+- **運作方式**：啟動弦爪重擊消耗1份電容量，基礎上限3份，其他天賦可增加上限；弦爪重攻擊必定暴擊，並提高50%撕裂。
+
+- **運作方式**：啟動後弦爪效果還會提高近戰傷害30%並免疫暈眩。撕裂影響對防護的傷害計算；必定暴擊不代表對所有敵人造成固定生命傷害。
+
+- **傷害算例**：只比較30%近戰加成，固定護甲、暴擊與其他條件後，原100點變成100 × (1 + 30%) = 130點；若同階段已有20%加成，則是100 × (1 + 20% + 30%) = 150點。撕裂與暴擊另依目標計算。
+
+- **充能與持續**：每次消耗一份50點電容量，沒有其他恢復加成時需50秒補回。攻擊效果最長10秒，切換離開弦爪時結束；連續再次發動會消耗充能，但不會重新觸發依賴首次啟用的能力效果。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_chordclaw.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="cryptic_precision_stance_toughness_suppression"></a>
 ### 修復協定(Restoration Protocol)

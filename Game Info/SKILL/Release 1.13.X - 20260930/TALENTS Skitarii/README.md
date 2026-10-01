@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **97 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10)。內部 tree version 18 不等於遊戲發行版號。
 
-完成 80／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 81／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -22,6 +22,7 @@
 | 光環 | [復甦](cryptic_coherency_regen_aura_improved.md) / `cryptic_coherency_regen_aura_improved` | `node_e9138b1a-56be-4048-bdfa-e8c1e7ede57d` | 完成（核心靜態機制） |
 | 光環 | [彈藥存放](cryptic_ammo_aura.md) / `cryptic_ammo_aura` | `node_4d9ce721-2e3e-4c09-8fa2-345ff9c390bc` | 完成（核心靜態機制） |
 | 光環 | [碎敵信條](cryptic_aura_weapon_improved.md) / `cryptic_aura_weapon_improved` | `node_9317a30a-682c-4b3f-ac86-83a2bf829f87` | 完成（核心靜態機制） |
+| 能力 | [弦爪重擊](cryptic_chordclaw.md) / `cryptic_chordclaw` | `node_2214fc60-12a4-4108-84e4-64b146f9b86b` | 完成（核心靜態機制） |
 | 能力 | [修復協定](cryptic_precision_stance_toughness_suppression.md) / `cryptic_precision_stance_toughness_suppression` | `node_1f07ccdc-f96c-4700-ac3f-13fb3244419d` | 完成（核心靜態機制） |
 | 能力 | [彈藥盤點之旨](cryptic_precision_stance_fire_rate_increased.md) / `cryptic_precision_stance_fire_rate_increased` | `node_9f2a7af2-4bde-47c2-a856-379c9ca8e034` | 完成（核心靜態機制） |
 | 能力 | [電流弧](cryptic_discharge_generates_arcs.md) / `cryptic_discharge_generates_arcs` | `node_76d47f27-b1fe-4614-a013-9cdcfb6ac12b` | 完成（核心靜態機制） |

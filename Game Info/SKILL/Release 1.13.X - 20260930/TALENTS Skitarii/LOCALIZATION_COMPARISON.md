@@ -19,6 +19,7 @@
 | [復甦](#cryptic_coherency_regen_aura_improved) | 未見明確矛盾；補充恢復倍率 |
 | [彈藥存放](#cryptic_ammo_aura) | 待同版核對 |
 | [碎敵信條](#cryptic_aura_weapon_improved) | 未見明確矛盾；補充計算 |
+| [弦爪重擊](#cryptic_chordclaw) | 未見明確矛盾 |
 | [修復協定](#cryptic_precision_stance_toughness_suppression) | 單位用語有誤 |
 | [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased) | 未見明確矛盾 |
 | [電流弧](#cryptic_discharge_generates_arcs) | 未見明確矛盾 |
@@ -165,6 +166,13 @@
 - 描述鍵：`loc_talent_cryptic_aura_weapon_improved_desc`；hash：`6d4feb19`。
 - 結論：未見明確矛盾；補充計算。繁中描述列出自身+25韌性及協同隊友的順劈、撕裂效果。固定來源的協同鏈包含施放者本人，故自身也取得15%順劈最大命中質量與7.5%撕裂；未明寫自身受光環效果屬描述省略。Build 25492122 尚未確認與固定來源同版。
 - [原始碼推導與限制](cryptic_aura_weapon_improved.md)。
+
+<a id="cryptic_chordclaw"></a>
+## 弦爪重擊(Chordclaw Strike)
+
+- 描述鍵：`loc_talent_cryptic_chordclaw_desc`；hash：`df29b524`。
+- 結論：未見明確矛盾。繁中與英文均列出強力重型近戰攻擊、必定暴擊及+50%撕裂，與攻擊 action 與能力效果一致。來源還對啟動期間提供近戰傷害及暈眩免疫；本地化沒有逐一列出這些額外效果，不視為相反說明。
+- [原始碼推導與限制](cryptic_chordclaw.md)。
 
 <a id="cryptic_precision_stance_toughness_suppression"></a>
 ## 修復協定(Restoration Protocol)
