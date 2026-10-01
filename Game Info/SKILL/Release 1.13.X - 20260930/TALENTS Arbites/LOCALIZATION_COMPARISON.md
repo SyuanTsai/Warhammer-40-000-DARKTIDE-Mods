@@ -10,6 +10,7 @@
 |---|---|
 | [電子獒犬與人](#adamant_toughness_regen_near_companion) | 未見明確矛盾 |
 | [凋零烈焰](#adamant_damage_after_reloading) | 未見明確矛盾 |
+| [審判之錘](#adamant_multiple_hits_attack_speed) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
@@ -24,3 +25,10 @@
 - 描述鍵：`loc_talent_adamant_damage_after_reloading_desc`；hash：`e68c7c57`。
 - 結論：未見明確矛盾。繁中「換彈後…遠程傷害」與英文 after Reloading／Ranged Damage 一致；補上刷新及加算並非勘誤。
 - [原始碼推導與限制](adamant_damage_after_reloading.md)。
+
+<a id="adamant_multiple_hits_attack_speed"></a>
+## 審判之錘(Hammer of Judgement)
+
+- 描述鍵：`loc_talent_adamant_multiple_hits_attack_speed_desc`；hash：`8c88fc12`。
+- 結論：未見明確矛盾。繁中「一次近戰攻擊…以上」與英文 or more／a Melee Attack 均含達到門檻；第三目標觸發與文意相符。
+- [原始碼推導與限制](adamant_multiple_hits_attack_speed.md)。
