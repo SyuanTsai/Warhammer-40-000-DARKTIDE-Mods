@@ -6,6 +6,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="死戰到底天賦圖示"> [死戰到底](#zealot_resist_death)<br>- Until Death | <ul><li>承受致命傷害時獲得 8 秒免死效果。</li><li>效果結束後冷卻 120 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="天災天賦圖示"> [天災](#zealot_crits_apply_bleed)<br>- Scourge | <ul><li>近戰爆擊施加 2 層流血；攻擊流血敵人增加近戰爆擊率。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="背刺者天賦圖示"> [背刺者](#zealot_backstab_damage)<br>- Backstabber | <ul><li>近戰背刺與遠程側襲傷害增加 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/69a5f7ea-11bc-41ae-8758-86a14213a116" width="32" height="32" alt="蔑視天賦圖示"> [蔑視](#zealot_multi_hits_increase_damage)<br>- Disdain | <ul><li>上一次近戰揮擊每命中一名敵人，使下一次近戰傷害增加 5%，最多 25%。</li></ul> | 技能 |
@@ -51,6 +52,24 @@
 | <img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="32" height="32" alt="為您撐腰天賦圖示"> [為您撐腰](#zealot_melee_kills_restore_toughness_to_target)<br>- Got Your Back | <ul><li>近戰擊殺正鎖定隊友的敵人，替隊友恢復 7.5% 最大韌性，自己額外恢復 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8137f892-5370-4a69-b790-556f579414d2" width="32" height="32" alt="淨化仇恨天賦圖示"> [淨化仇恨](#zealot_dmg_vs_burning_electrocuted)<br>- Purifying Hatred | <ul><li>對燃燒或遭電擊的敵人增加 15% 傷害；兩者同時成立可合計 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a007251f-9a21-4822-b2e4-38eac8e0ae56" width="32" height="32" alt="死亡之舞天賦圖示"> [死亡之舞](#zealot_improved_weapon_handling_after_dodge)<br>- Dance of Death | <ul><li>成功閃避後，散布降低 75%、後座累積降低 50%，持續 3 秒。</li></ul> | 技能 |
+
+---
+
+## 鑰石
+
+<a id="zealot_resist_death"></a>
+### 死戰到底(Until Death)
+
+<img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="72" height="72" alt="死戰到底天賦圖示">
+
+- **觸發方式**：承受致命傷害時，保住生命並獲得 8 秒免死效果；仍會受到傷害，並非所有傷害都歸零。
+
+- **冷卻算例**：8 秒效果結束後，再冷卻 120 秒；第 0 秒觸發，約第 8 秒效果結束，約第 128 秒才再次可用。已處於其他免死效果時，不會再觸發本天賦。
+
+[詳細資料](TALENTS%20Zealot/zealot_resist_death.md) · [返回目錄](#talent-index)
+
+---
+
 
 ---
 
