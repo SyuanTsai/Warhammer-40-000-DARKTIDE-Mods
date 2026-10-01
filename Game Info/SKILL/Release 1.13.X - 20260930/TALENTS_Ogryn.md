@@ -28,6 +28,7 @@
 | <img src="https://github.com/user-attachments/assets/9af41f8c-0f0e-4b2b-965e-c0d01fea2746" width="32" height="32" alt="相親相愛好夥伴！天賦圖示"> [相親相愛好夥伴！](#ogryn_damage_taken_by_all_increases_strength_tdr)<br>- No Hurting Friends! | <ul><li>自己或協同隊友受傷時，每層增加 2% 威力，最多 5 層。</li><li>滿層額外減少 15% 韌性傷害。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/895c3ccd-387f-4862-9a2b-b429ff5d6432" width="32" height="32" alt="全神貫注天賦圖示"> [全神貫注](#ogryn_ally_movement_boost_on_ability)<br>- Get Stuck In | <ul><li>施放戰鬥技能後，你與協同隊友提高 20% 移動速度，持續 6 秒。</li><li>期間免疫暈眩與壓制。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bb088b60-c1e8-42a7-b68e-3ef59f5d9eb9" width="32" height="32" alt="利刃出鞘天賦圖示"> [利刃出鞘](#ogryn_windup_reduces_damage_taken)<br>- Implacable | <ul><li>近戰重擊蓄力期間，受到的傷害減少 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/d80b562f-7fc2-4daf-85e4-ae25f8171a89" width="32" height="32" alt="誰敢攔我！天賦圖示"> [誰敢攔我！](#ogryn_windup_is_uninterruptible)<br>- No Stopping Me! | <ul><li>近戰重擊蓄力不易受打斷，並移除蓄力動作的移動減速。</li></ul> | 技能 |
 
 ---
 
@@ -362,5 +363,20 @@
 - **減傷算例**：只計此效果，100 點傷害變成 100 × 0.85 = 85 點；另有獨立 20% 減傷時為 100 × 0.85 × 0.8 = 68 點。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_windup_reduces_damage_taken.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_windup_is_uninterruptible"></a>
+### 誰敢攔我！(No Stopping Me!)
+
+<img src="https://github.com/user-attachments/assets/d80b562f-7fc2-4daf-85e4-ae25f8171a89" width="72" height="72" alt="誰敢攔我！天賦圖示">
+
+- **生效條件**：近戰重擊蓄力期間獲得不可打斷效果，並移除該動作造成的移動減速；結束蓄力後效果結束。
+
+- **移速算例**：假設正常速度為每秒 5 公尺，蓄力原本使速度降低 50% 至 2.5 公尺／秒，移除這項減速後恢復為 5 公尺／秒；不是讓所有移動速度額外提高 100%。
+
+- **限制**：這不是無敵效果，蓄力時仍會受到傷害。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_windup_is_uninterruptible.md) · [返回目錄](#talent-index)
 
 ---

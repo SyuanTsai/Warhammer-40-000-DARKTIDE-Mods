@@ -30,6 +30,7 @@
 | [相親相愛好夥伴！](#ogryn_damage_taken_by_all_increases_strength_tdr) | 繁中描述錯誤 |
 | [全神貫注](#ogryn_ally_movement_boost_on_ability) | 未見明確矛盾 |
 | [利刃出鞘](#ogryn_windup_reduces_damage_taken) | 未見明確矛盾 |
+| [誰敢攔我！](#ogryn_windup_is_uninterruptible) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -186,3 +187,10 @@
 - 描述鍵：`loc_talent_ogryn_windup_reduces_damage_taken_desc`；hash：`fed4526c`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_windup_reduces_damage_taken.md)。
+
+<a id="ogryn_windup_is_uninterruptible"></a>
+## 誰敢攔我！(No Stopping Me!)
+
+- 描述鍵：`loc_talent_ogryn_windup_is_uninterruptible_unslowed_desc`；hash：`6704b700`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_windup_is_uninterruptible.md)。
