@@ -11,6 +11,7 @@
 | <img src="https://github.com/user-attachments/assets/0519f0ec-0ce9-4846-8ed4-95a0b9c092de" width="32" height="32" alt="衰弱詛咒天賦圖示"> [衰弱詛咒](#psyker_chain_lightning_improved_target_buff)<br>- Enfeeble | <ul><li>你電擊的敵人受到所有來源的傷害提高 10%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e" width="32" height="32" alt="蓄力打擊天賦圖示"> [蓄力打擊](#psyker_chain_lightning_heavy_attacks)<br>- Charged Strike | <ul><li>近戰重擊命中後使敵人電擊 2 秒，電擊期間造成持續傷害。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/ddd7895f-a971-4cdf-99bd-3f536cab3f8a" width="32" height="32" alt="動能釋放天賦圖示"> [動能釋放](#psyker_aura_damage_vs_elites)<br>- Kinetic Presence | <ul><li>你與協同中的隊友對精英敵人造成的傷害提高 10%。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/61a749ff-c64c-47a7-8607-e19b59a688b3" width="32" height="32" alt="先知之眼天賦圖示"> [先知之眼](#psyker_cooldown_aura_improved)<br>- Seer's Presence | <ul><li>你與協同中的隊友的技能冷卻時間縮短 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="預兆天賦圖示"> [預兆](#psyker_aura_crit_chance_aura)<br>- Prescience | <ul><li>你與協同中的隊友的暴擊機率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
@@ -109,6 +110,19 @@
 - **傷害算例**：只比較此階段，基準 100 點、沒有其他加成時，100 × 1.1 = 110 點；已有 25% 同階段加成時，由 125 變成 100 × (1 + 25% + 10%) = 135 點。非精英敵人不享有此加成。
 
 [詳細資料](TALENTS%20Psyker/psyker_aura_damage_vs_elites.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_cooldown_aura_improved"></a>
+### 先知之眼(Seer's Presence)
+
+<img src="https://github.com/user-attachments/assets/61a749ff-c64c-47a7-8607-e19b59a688b3" width="72" height="72" alt="先知之眼天賦圖示">
+
+- **光環效果**：你與協同範圍內的隊友，戰鬥能力冷卻時間縮短 10%。同一光環不重複疊層。
+
+- **冷卻算例**：恢復速率固定且沒有其他修正，原本需 40 秒，改為 40 × (1 − 10%) = 36 秒；原本需 60 秒則改為 54 秒。
+
+[詳細資料](TALENTS%20Psyker/psyker_cooldown_aura_improved.md) · [返回目錄](#talent-index)
 
 ---
 

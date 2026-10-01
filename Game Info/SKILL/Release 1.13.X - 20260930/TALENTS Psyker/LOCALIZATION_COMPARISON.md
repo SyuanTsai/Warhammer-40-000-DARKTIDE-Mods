@@ -18,7 +18,7 @@
 | [衰弱詛咒](#psyker_chain_lightning_improved_target_buff) | 未見已確認矛盾 |
 | [蓄力打擊](#psyker_chain_lightning_heavy_attacks) | 未見已確認矛盾 |
 | [動能釋放](#psyker_aura_damage_vs_elites) | 未見已確認矛盾 |
-| [先知之眼](#psyker_cooldown_aura_improved) | 已配對；機制待核對 |
+| [先知之眼](#psyker_cooldown_aura_improved) | 未見已確認矛盾 |
 | [預兆](#psyker_aura_crit_chance_aura) | 未見已確認矛盾 |
 | [靈能尖嘯](#psyker_shout_vent_warp_charge) | 已配對；機制待核對 |
 | [占卜者的注視](#psyker_combat_ability_stance) | 已配對；機制待核對 |
@@ -164,7 +164,7 @@
 ## 先知之眼(Seer's Presence)
 
 - 描述鍵：`loc_talent_psyker_cooldown_aura_improved_description`；hash：`8daf59be`。
-- 已配對原文，機制待核對。
+- 結論：未見已確認矛盾。本地繁中說明列出本人與協同隊友享有技能冷卻縮減；目前光環值為 10%，與固定原始碼設定一致。
 - [原始碼推導與限制](psyker_cooldown_aura_improved.md)。
 
 <a id="psyker_aura_crit_chance_aura"></a>
