@@ -1738,3 +1738,5 @@
 - Tank - 坦克（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L718-L722)）
 
 - Regain - 恢復（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L723-L732)）
+
+- Spur V - 激勵 V（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L545-L549)）

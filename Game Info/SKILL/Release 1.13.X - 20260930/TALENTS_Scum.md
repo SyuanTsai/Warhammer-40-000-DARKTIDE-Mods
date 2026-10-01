@@ -111,6 +111,7 @@
 | <img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="32" height="32" alt="激勵 II天賦圖示"> [激勵 II](#broker_stimm_celerity_2)<br>- Spur II | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/27832b4a-d52a-49bb-a87e-2a3cd7fa4371" width="32" height="32" alt="激勵 III天賦圖示"> [激勵 III](#broker_stimm_celerity_3)<br>- Spur III | <ul><li>攻擊速度增加 4%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/c4f5bb04-c085-4d9d-8341-0346d3e6a173" width="32" height="32" alt="激勵 IV天賦圖示"> [激勵 IV](#broker_stimm_celerity_4)<br>- Spur IV | <ul><li>攻擊速度增加 4%。</li><li>耐力消耗減少 20%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/ed3da982-a076-4b67-a1ca-c889ede0ba70" width="32" height="32" alt="激勵 V天賦圖示"> [激勵 V](#broker_stimm_celerity_5a)<br>- Spur V | <ul><li>攻擊速度再增加 4%，並免疫暈眩與減速。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/f238889d-d7aa-45e0-8d16-9726389c7fe8" width="32" height="32" alt="恢復天賦圖示"> [恢復](#broker_stimm_durability_5b)<br>- Regain | <ul><li>藥效期間每秒恢復最大韌性的 5%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/21b33eec-94cc-4cea-b531-1ff788ff6bc9" width="32" height="32" alt="反射天賦圖示"> [反射](#broker_stimm_celerity_5b)<br>- Reflex | <ul><li>換彈速度增加 30%，後座不穩定度累積降低 50%。</li></ul> | 興奮劑配方 |
 
@@ -1788,6 +1789,23 @@
 - **攻速算例**：從激勵 I 選到本節點，共增加 16%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.16 ≈ 0.862 秒。
 
 [詳細資料](TALENTS%20Scum/broker_stimm_celerity_4.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_stimm_celerity_5a"></a>
+### 激勵 V(Spur V)
+
+<img src="https://github.com/user-attachments/assets/ed3da982-a076-4b67-a1ca-c889ede0ba70" width="72" height="72" alt="激勵 V天賦圖示">
+
+- **配方成本**：5 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
+
+- **攻擊速度**：增加 4%；與激勵 I～IV 合計增加 20%。
+
+- **攻速算例**：原本可加速的 1 秒攻擊動作，在整條激勵路線下為 1 ÷ 1.2 ≈ 0.833 秒。
+
+- **防護效果**：藥效期間免疫暈眩與減速；不等同解除已被擒抱或捕捉的狀態。
+
+[詳細資料](TALENTS%20Scum/broker_stimm_celerity_5a.md) · [返回目錄](#talent-index)
 
 ---
 
