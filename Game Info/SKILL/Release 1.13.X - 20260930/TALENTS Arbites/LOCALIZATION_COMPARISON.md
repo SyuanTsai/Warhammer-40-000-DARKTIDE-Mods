@@ -19,6 +19,7 @@
 | [孤狼](#adamant_disable_companion) | 未見明確矛盾 |
 | [效率殺手](#adamant_execution_order_crit) | 未見明確矛盾 |
 | [生化武器關](#adamant_execution_order_cdr) | 未見明確矛盾 |
+| [罪不可赦](#adamant_execution_order_rending) | 未見明確矛盾 |
 | [殺戮協議](#adamant_execution_order_permastack) | 待同版核對 |
 | [往前進攻！](#adamant_companion_focus_ranged) | 未見明確矛盾 |
 | [猛犬出擊](#adamant_companion_focus_elite) | 未見明確矛盾 |
@@ -152,6 +153,13 @@
 - 描述鍵：`loc_talent_execution_order_cdr_on_kill_description`；hash：`1cb35d28`。
 - 結論：未見明確矛盾。同源繁中與英文均為擊殺標記目標後增加冷卻恢復；實際持續8秒。另有未使用的cdr_time=3設定，但不構成文字或生效時間矛盾。
 - [原始碼推導與限制](adamant_execution_order_cdr.md)。
+
+<a id="adamant_execution_order_rending"></a>
+## 罪不可赦(No Lenience)
+
+- 描述鍵：`loc_talent_execution_order_command_applies_brittleness_description`；hash：`59853225`。
+- 結論：未見明確矛盾。繁中「擊殺被標記的敵人後，獲得 10%撕裂效果，持續 8 秒」對應英文 “gain 10% Rending for 8s after a Marked Kill”；一致。
+- [原始碼推導與限制](adamant_execution_order_rending.md)。
 
 <a id="adamant_execution_order_permastack"></a>
 ## 殺戮協議(Keeping Protocol)

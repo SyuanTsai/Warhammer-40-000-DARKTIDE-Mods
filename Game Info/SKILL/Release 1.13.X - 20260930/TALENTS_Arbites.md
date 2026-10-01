@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="孤狼天賦圖示"> [孤狼](#adamant_disable_companion)<br>- Lone Wolf | <ul><li>選取後伺服器端移除電子獒犬，改給自身傷害、攻速、韌性受傷倍率與閃擊充能補給。</li><li>一般手榴彈每 45 秒補 1 顆；使用震撼地雷時每 90 秒補 1 顆；補給只在有缺額時計時。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="32" height="32" alt="效率殺手天賦圖示"> [效率殺手](#adamant_execution_order_crit)<br>- Efficient Killer | <ul><li>擊殺被標記敵人時，獲得 8 秒爆擊機率與爆擊傷害加成。</li><li>加成為 +10 個百分點爆擊機率與 +25% 額外爆擊傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="32" height="32" alt="生化武器關天賦圖示"> [生化武器關](#adamant_execution_order_cdr)<br>- Malocator | <ul><li>擊殺被標記敵人後，建立 8 秒戰鬥技能資源恢復效果。</li><li>每秒恢復 0.5 秒能力資源，名目上最多約 4 秒，受剩餘冷卻上限限制。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/ab53bec8-fd00-470c-8c5d-46cc58904f13" width="32" height="32" alt="罪不可赦天賦圖示"> [罪不可赦](#adamant_execution_order_rending)<br>- No Lenience | <ul><li>擊殺被標記敵人後，獲得 8 秒撕裂加成。</li><li>撕裂修正為 +10%，進入共用護甲傷害計算。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/eeb40551-fbea-4de0-8e46-0a07e4bfcec6" width="32" height="32" alt="殺戮協議天賦圖示"> [殺戮協議](#adamant_execution_order_permastack)<br>- Keeping Protocol | <ul><li>每次擊殺被標記敵人，永久增加對怪獸的傷害與防禦，最多 30 層。</li><li>每層增加 1% 對怪獸傷害；怪獸打你的傷害逐層相乘降低。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6208ebde-9eb1-4a4d-923c-823a0e511bf9" width="32" height="32" alt="往前進攻！天賦圖示"> [往前進攻！](#adamant_companion_focus_ranged)<br>- Go Get 'Em! | <ul><li>電子獒犬更偏好選擇遠程敵人，並對遠程敵人增加 50% 傷害。</li><li>選敵評分提高遠程敵人優先度，並擴大遠程焦點的選敵距離。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d61cee49-95ce-43fb-ae8a-b05ba598366b" width="32" height="32" alt="猛犬出擊天賦圖示"> [猛犬出擊](#adamant_companion_focus_elite)<br>- Unleashed Brutality | <ul><li>電子獒犬更偏好精英與專家敵人，並對兩類敵人增加 25% 傷害。</li><li>選敵評分提高精英與專家敵人的優先度。</li></ul> | 鑰石 |
@@ -245,6 +246,19 @@
 - **冷卻算例**：效果持續 8 秒，每秒額外恢復 0.5 秒戰鬥技能冷卻，名目總量為 8 × 0.5 = 4 秒；仍有正常冷卻倒數，並以尚未恢復的部分為限。這不是立刻扣除剩餘冷卻的 50%。再次觸發刷新時間，不加快每秒返還量。
 
 [詳細資料](TALENTS%20Arbites/adamant_execution_order_cdr.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_execution_order_rending"></a>
+### 罪不可赦(No Lenience)
+
+<img src="https://github.com/user-attachments/assets/ab53bec8-fd00-470c-8c5d-46cc58904f13" width="72" height="72" alt="罪不可赦天賦圖示">
+
+- **觸發與持續**：擊殺被標記敵人會取得 +10% 撕裂效果，持續 8 秒；再次觸發會刷新。
+
+- **傷害算例**：若基礎 100 點、護甲傷害係數原為 0.5，傷害由 50 變成 100 × (0.5 + 0.1) = 60，實際提高 20%。若係數已達 1 且該護甲適用超額轉換，則為 100 × (1 + 0.1 × 0.25) = 102.5。
+
+[詳細資料](TALENTS%20Arbites/adamant_execution_order_rending.md) · [返回目錄](#talent-index)
 
 ---
 
