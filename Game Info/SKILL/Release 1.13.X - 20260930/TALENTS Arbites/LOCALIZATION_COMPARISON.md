@@ -23,6 +23,7 @@
 | [苛政壓制](#adamant_hitting_multiple_gives_tdr) | 未見明確矛盾 |
 | [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
+| [勢如破竹](#adamant_damage_reduction_after_elite_kill) | 未見明確矛盾 |
 | [順劈加成](#base_cleave_node_buff_medium_1) | 未見明確矛盾 |
 | [衝擊加成](#base_impact_node_buff_medium_1) | 未見明確矛盾 |
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
@@ -131,6 +132,13 @@
 - 描述鍵：`loc_talent_melee_damage_boost_medium_desc`；hash：`7b5da013`。
 - 結論：未見明確矛盾。繁中與英文均為對應攻擊類型傷害加成，未見明確矛盾。
 - [原始碼推導與限制](base_melee_damage_node_buff_medium_1.md)。
+
+<a id="adamant_damage_reduction_after_elite_kill"></a>
+## 勢如破竹(Imposing Force)
+
+- 描述鍵：`loc_talent_adamant_damage_reduction_after_elite_kill_desc`；hash：`368927ce`。
+- 結論：未見明確矛盾。繁中「擊殺精英或專家…傷害抗性」與英文相符，沒有把它寫成僅韌性抗性。
+- [原始碼推導與限制](adamant_damage_reduction_after_elite_kill.md)。
 
 <a id="base_cleave_node_buff_medium_1"></a>
 ## 順劈加成(Cleave Boost)
