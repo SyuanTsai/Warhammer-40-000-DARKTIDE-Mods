@@ -61,3 +61,52 @@
 - 本機 Steam Build 25492122 與固定公開來源尚未證實同版。
 
 ---
+
+<a id="zealot_shock_grenade"></a>
+## 基礎閃擊
+
+- 天賦識別碼：`zealot_shock_grenade`。
+
+- **運作方式**：最多攜帶 3 枚震撼手雷，引信 1.5 秒；投出一枚後，3 − 1 = 2 枚。
+
+- **範圍與效果**：爆炸最大半徑 8 公尺、近距區域半徑 2 公尺，命中附加持續 8 秒的電擊。點選眩暈風暴手雷後，半徑乘 1.5，分別變成 12 與 3 公尺，攜帶量不變。
+
+- **傷害算例**：只計週期電擊、沒有其他修正時，單次無護甲傷害為 8 × 0.5 = 4 點；間隔約 0.3～0.8 秒。同一電擊效果只刷新時間，不疊成多層。
+
+- **控制限制**：敵人抗性與遮蔽物會影響結果；已在踉蹌中的瘟疫爆者會跳過週期電擊，並非免疫所有爆炸效果。
+
+### 原始碼確認與程式推導
+
+- base_talents 將 zealot_shock_grenade 綁到手雷槽，talent definition 綁 PlayerAbilities.zealot_shock_grenade。
+
+- 能力使用 grenade_shock inventory item，max_charges 從 zealot_2.grenade.max_charges 讀取，設定值 3；投射物 fuse_time=1.5。
+
+- 電擊與傷害鏈和[眩暈風暴手雷](zealot_improved_stun_grenade.md)共用；基礎版本沒有 explosion_radius_modifier_shock=.5。
+
+### 原始碼依據
+
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L54-L63)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua#L94-L105)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L319-L321)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/projectile/player_projectile_templates.lua#L413-L426)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L66-L101)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/weapon_buff_templates.lua#L413-L474)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L64-L91)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L319-L328)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L513-L519)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/explosion.lua#L484-L502)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L648-L690)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/explosion.lua#L429-L482)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/power_level_settings.lua#L7-L25)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/power_level.lua#L21-L23)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/power_level.lua#L63-L91)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_profile.lua#L29-L80)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L219-L227)
+
+### 待確認事項
+
+- 傷害例只計隔離的週期電擊，不含初次爆炸；未測量敵人控制抗性與實際結算次數。
+- 本機 Steam Build 25492122 與固定公開來源尚未證實同版。
+
+---
