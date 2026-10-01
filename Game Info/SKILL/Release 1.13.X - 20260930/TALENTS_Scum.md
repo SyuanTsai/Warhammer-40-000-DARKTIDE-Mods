@@ -23,6 +23,7 @@
 | <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="精準獵殺天賦圖示"> [精準獵殺](#broker_ability_focus_sub_2)<br>- Pick Your Targets | <ul><li>專注期間遠程攻擊加算 +15% 撕裂修正；近距離遠程擊殺每次另疊 3% 遠程傷害，最多 5 層（+15%），每層持續 3 秒並可由新擊殺刷新。</li><li>此撕裂加成作用於護甲計算，擊殺疊層是遠程傷害加算；只計滿層效果時，基礎100點遠程傷害變為115點。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3" width="32" height="32" alt="熟練部署天賦圖示"> [熟練部署](#broker_ability_stimm_field_sub_3)<br>- Practiced Deployment | <ul><li>取得新的可用興奮劑時，補滿一次興奮劑補給的能力充能；能力最多 1 次充能，已滿時不會再增加。</li><li>程式每 0.5 秒檢查興奮劑欄位或自身興奮劑充能是否變為可用，因此觸發會在下一次檢查時補滿。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/4ea2874c-338f-42ec-95cb-9f4c08e64794" width="32" height="32" alt="速效型興奮劑天賦圖示"> [速效型興奮劑](#broker_ability_stimm_field_sub_1)<br>- Fast Acting Stimms | <ul><li>場域持續時間縮短為 5 秒；離場或場域結束時，已取得的場域效果可再持續 15 秒。</li><li>場域結束後立即恢復 60 秒自然冷卻；15 秒效果延續期間不會讓場域冷卻繼續暫停。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/c3cdd1a9-e1eb-4e29-9a5e-6bae44c280a4" width="32" height="32" alt="毒性陷阱天賦圖示"> [毒性陷阱](#broker_ability_stimm_field_sub_2)<br>- Booby Trap | <ul><li>場域持續時間正常結束時爆炸；3公尺範圍內受到爆炸傷害的敵人會附加 7 層毒素。</li><li>爆炸以破片傷害計算；遭提前取消或場域尚未到期時，不會觸發這次爆炸。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/4575cb9c-10e2-489c-8b4f-0b8f4eda154d" width="32" height="32" alt="靈巧天賦圖示"> [靈巧](#broker_passive_improved_dodges)<br>- Nimble | <ul><li>閃避移動速度提高 25%，閃避後仍被判定為閃避的時間增加 0.15 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d" width="32" height="32" alt="腎上腺素狂暴天賦圖示"> [腎上腺素狂暴](#broker_keystone_adrenaline_junkie)<br>- Adrenaline Frenzy | <ul><li>近戰命中獲得 1 層腎上腺素；近戰爆擊額外獲得 1 層。</li><li>2 秒內未獲得新層時，每 2 秒失去 1 層；最多 30 層。</li><li>達 30 層時清除腎上腺素並觸發 10 秒狂暴：近戰攻速 +10%、近戰傷害 +25%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9b42d72f-2429-446a-bf75-d5d87db98b36" width="32" height="32" alt="化學性依賴天賦圖示"> [化學性依賴](#broker_keystone_chemical_dependency)<br>- Chemical Dependency | <ul><li>使用興奮劑取得 1 層化學依賴性，每層提高戰鬥技能資源回充速度 10%。</li><li>最多 3 層，每層持續 90 秒；沒有新層時每 90 秒衰退 1 層。</li></ul> | 鑰石 |
@@ -365,6 +366,23 @@
 - **冷卻**：場域結束後開始 60 秒自然冷卻，雖然部分隊友的效果仍可能延續 15 秒。只計這段能力時間，從部署到下一次自然充能約為 5+60=65 秒。
 
 [詳細資料](TALENTS%20Scum/broker_ability_stimm_field_sub_1.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_ability_stimm_field_sub_2"></a>
+### 毒性陷阱(Booby Trap)
+
+<img src="https://github.com/user-attachments/assets/c3cdd1a9-e1eb-4e29-9a5e-6bae44c280a4" width="72" height="72" alt="毒性陷阱天賦圖示">
+
+- **觸發時機**：場域持續時間結束時爆炸；基本場域在 20 秒後結束。若同時套用縮短場域的效果，則以實際場域持續時間結束時觸發。
+
+- **爆炸效果**：半徑 3 公尺的破片爆炸命中並造成傷害的敵人會獲得 7 層毒素。只計一次爆炸，不是場域每次脈衝都施加7層。
+
+- **冷卻**：場域結束並爆炸後，60 秒自然冷卻開始恢復；爆炸本身不延長冷卻暫停。
+
+- **傷害算例**：不計其他加成與特殊減傷，距離爆心 0.5 公尺內的無護甲目標受到 20 × 500 × 300 ÷ 10000 = 300 點爆炸傷害；對應護甲係數為 0.25 時，則為 300 × 0.25 = 75 點。後續毒素傷害另外結算。
+
+[詳細資料](TALENTS%20Scum/broker_ability_stimm_field_sub_2.md) · [返回目錄](#talent-index)
 
 ---
 

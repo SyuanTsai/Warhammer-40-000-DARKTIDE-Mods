@@ -25,6 +25,7 @@
 | [精準獵殺](#broker_ability_focus_sub_2) | 未見明確中英矛盾 |
 | [熟練部署](#broker_ability_stimm_field_sub_3) | 未見翻譯差異（程式以半秒輪詢觸發） |
 | [速效型興奮劑](#broker_ability_stimm_field_sub_1) | 未見明確中英矛盾 |
+| [毒性陷阱](#broker_ability_stimm_field_sub_2) | 未見明確中英矛盾 |
 | [靈巧](#broker_passive_improved_dodges) | 未見明確矛盾 |
 | [腎上腺素狂暴](#broker_keystone_adrenaline_junkie) | 未見明確矛盾 |
 | [化學性依賴](#broker_keystone_chemical_dependency) | 未見明確矛盾 |
@@ -203,6 +204,13 @@
 - 描述鍵：`loc_talent_broker_ability_stimm_field_sub_1_desc`；hash：`8022348e`。
 - 結論：未見明確中英矛盾。繁中與英文都描述場域縮短至5秒、離開後效果再持續15秒；固定版程式在離場與場域結束時都讓已套用效果延續15秒。冷卻在場域本體結束後恢復是程式補充。
 - [原始碼推導與限制](broker_ability_stimm_field_sub_1.md)。
+
+<a id="broker_ability_stimm_field_sub_2"></a>
+## 毒性陷阱(Booby Trap)
+
+- 描述鍵：`loc_talent_broker_ability_stimm_field_sub_2_desc`；hash：`59a6d46b`。
+- 結論：未見明確中英矛盾。繁中與英文都寫場域時間結束後爆炸，並對附近敵人施加7層毒素。傷害 profile 的 on_damage_dealt 實際只對受爆炸正傷害目標加入7層，屬程式觸發條件補充，原文省略不構成翻譯勘誤。
+- [原始碼推導與限制](broker_ability_stimm_field_sub_2.md)。
 
 <a id="broker_passive_improved_dodges"></a>
 ## 靈巧(Nimble)
