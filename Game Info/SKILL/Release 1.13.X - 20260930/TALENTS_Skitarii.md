@@ -36,6 +36,7 @@
 | <img src="https://github.com/user-attachments/assets/6e39714f-23a2-4d43-b5ae-6cfe4fa9b214" width="32" height="32" alt="槍械技師天賦圖示"> [槍械技師](#cryptic_auto_reload)<br>- Gunsmith | <ul><li>裝填速度提高 15%</li><li>停止射擊 5 秒後，每秒從備彈填入彈匣容量的 7.5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c9876de0-2e5d-4421-9bee-326ac0c92290" width="32" height="32" alt="暗殺協議天賦圖示"> [暗殺協議](#cryptic_ranged_vs_bfg)<br>- Assassination Protocols | <ul><li>對歐格林、怪獸與隊長的遠程傷害提高 25%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="32" height="32" alt="系統電擊天賦圖示"> [系統電擊](#cryptic_electrocution_applies_brittleness)<br>- System Shock | <ul><li>施加或刷新電擊時增加 3 層脆弱</li><li>每層 2.5%，持續 5 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/0bbe1f46-d58e-414d-9ab3-1c8ed0170a41" width="32" height="32" alt="數據感應協定天賦圖示"> [數據感應協定](#cryptic_ally_coherency_defenses)<br>- Data Sensor Protocol | <ul><li>你或協同隊友受到韌性傷害，受傷者恢復 25% 耐力</li><li>受到生命傷害則恢復 25% 韌性，兩類各冷卻 15 秒</li></ul> | 技能 |
 
 ---
 
@@ -492,5 +493,26 @@
 - **隊伍效果**：脆弱施加在敵人身上，隊友的攻擊也能受益；不同武器與護甲的實際增幅各異。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_electrocution_applies_brittleness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_ally_coherency_defenses"></a>
+### 數據感應協定(Data Sensor Protocol)
+
+<img src="https://github.com/user-attachments/assets/0bbe1f46-d58e-414d-9ab3-1c8ed0170a41" width="72" height="72" alt="數據感應協定天賦圖示">
+
+- **恢復耐力**：你或協同範圍內隊友受到韌性傷害時，受傷的那個人恢復最大耐力的 25%。
+
+- **恢復韌性**：你或協同範圍內隊友受到生命傷害時，受傷的那個人恢復最大韌性的 25%；致命攻擊不觸發。
+
+- **冷卻方式**：兩類效果各自冷卻 15 秒，但同類效果共用你的觸發冷卻。例如隊友甲先觸發耐力恢復，5 秒後隊友乙受韌性傷害，不能再觸發同一項效果。
+
+- **恢復算例**：受傷者最大耐力 6 格、最大韌性 120，對應恢復 6 × 25% = 1.5 格耐力，或 120 × 25% = 30 點韌性；不是讓全隊同時恢復。
+
+#### 繁中原文勘誤
+
+- 原文寫「當你或……盟友受到傷害時，盟友恢復……」。正確受益者是受到那次傷害的人：你受傷就恢復自己，隊友受傷就恢復該隊友，不是把恢復量轉給其他盟友。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_ally_coherency_defenses.md) · [返回目錄](#talent-index)
 
 ---

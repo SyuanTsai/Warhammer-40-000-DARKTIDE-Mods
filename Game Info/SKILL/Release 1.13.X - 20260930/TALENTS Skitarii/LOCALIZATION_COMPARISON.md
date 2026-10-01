@@ -38,6 +38,7 @@
 | [槍械技師](#cryptic_auto_reload) | 未見明確矛盾 |
 | [暗殺協議](#cryptic_ranged_vs_bfg) | 未見明確矛盾 |
 | [系統電擊](#cryptic_electrocution_applies_brittleness) | 未見明確矛盾 |
+| [數據感應協定](#cryptic_ally_coherency_defenses) | 受益對象用語有誤 |
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
@@ -250,3 +251,12 @@
 - 描述鍵：`loc_talent_cryptic_electrocution_applies_brittleness_desc`；hash：`47a5f3d9`。
 - 結論：未見明確矛盾。中英每次3層與2.5%一致；上限、持續及傷害公式為補充。
 - [原始碼推導與限制](cryptic_electrocution_applies_brittleness.md)。
+
+<a id="cryptic_ally_coherency_defenses"></a>
+## 數據感應協定(Data Sensor Protocol)
+
+- 描述鍵：`loc_talent_cryptic_ally_coherency_defenses_desc`；hash：`307b308a`。
+- 結論：受益對象用語有誤。繁中把they翻成盟友，省掉自己作為受益者，並易誤讀為傷害後讓其他隊友恢復。實際回復給受傷者本人。
+- 繁中原文短引：當你或協同中的盟友受到韌性傷害時，盟友恢復{stamina:%s}耐力。冷卻時間{stamina_cd:%s}秒。
+- 同源英文：When you or an Ally in Coherency take toughness damage, they restore {stamina:%s} Stamina. {stamina_cd:%s}s Cooldown.
+- [原始碼推導與限制](cryptic_ally_coherency_defenses.md)。
