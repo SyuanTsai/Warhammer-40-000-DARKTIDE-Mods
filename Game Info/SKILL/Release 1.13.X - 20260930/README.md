@@ -1,4 +1,4 @@
-# Release 1.13.0：職業天賦原始碼分析
+# Release 1.13.X：職業天賦原始碼分析
 
 ## 文件入口
 
@@ -14,6 +14,7 @@
 
 ## 來源版本
 
+- 本目錄供 1.13 系列使用，沿用建檔日期 `20260930`；後續 1.13.x 小版本在此修訂。目前實際分析版本仍為 **Release 1.13.0**，以以下固定來源為準。
 - 唯一機制證據：[Aussiemon/Darktide-Source-Code 固定提交](https://github.com/Aussiemon/Darktide-Source-Code/commit/419fe18d414a618ce0474bd015bab470afb446d6)。
 - SHA：`419fe18d414a618ce0474bd015bab470afb446d6`；tree：`09479ac7d53d2d85578d127fa5f77982389d2d47`。
 - 公開提交標題：`Added Version 1.13.0 (Scripts) 09-29-26`；committer 日期為 2026-09-29 17:45:01 UTC（臺灣時間 2026-09-30 01:45:01）。提交日期與遊戲發布日期不同；目錄日期沿用指定命名。
