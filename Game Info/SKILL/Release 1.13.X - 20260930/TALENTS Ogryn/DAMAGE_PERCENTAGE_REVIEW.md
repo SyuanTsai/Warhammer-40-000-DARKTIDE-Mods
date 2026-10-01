@@ -55,3 +55,4 @@
 | [猛砸爆裂](ogryn_melee_improves_ranged.md) | 每次近戰擊殺增加 3% 遠程傷害，最多 5 層，持續 10 秒。；完整計算與適用限制見來源文件。 |
 | [格鬥兵](ogryn_ally_elite_kills_grant_cooldown.md) | 自己或協同隊友擊殺精英後，持續 4 秒額外恢復戰鬥技能冷卻。；完整計算與適用限制見來源文件。 |
 | [精準打擊](ogryn_weakspot_damage.md) | 近戰命中弱點時，威力提高 10%。；完整計算與適用限制見來源文件。 |
+| [機動部署](ogryn_bracing_reduces_damage_taken.md) | 架槍或射擊期間，受到的傷害減少 25%。；完整計算與適用限制見來源文件。 |

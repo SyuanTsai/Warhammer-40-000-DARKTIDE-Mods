@@ -57,6 +57,7 @@
 | [猛砸爆裂](#ogryn_melee_improves_ranged) | 未見明確矛盾 |
 | [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown) | 未見明確矛盾 |
 | [精準打擊](#ogryn_weakspot_damage) | 未見明確矛盾 |
+| [機動部署](#ogryn_bracing_reduces_damage_taken) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -408,3 +409,10 @@
 - 描述鍵：`loc_talent_ogryn_weakspot_damage_desc`；hash：`658a5b8e`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_weakspot_damage.md)。
+
+<a id="ogryn_bracing_reduces_damage_taken"></a>
+## 機動部署(Mobile Emplacement)
+
+- 描述鍵：`loc_talent_ogryn_bracing_or_shooting_reduces_damage_taken_desc`；hash：`7467e28d`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_bracing_reduces_damage_taken.md)。

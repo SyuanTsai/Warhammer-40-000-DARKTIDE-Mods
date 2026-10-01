@@ -55,6 +55,7 @@
 | <img src="https://github.com/user-attachments/assets/fdf1eb1f-b76f-4452-beac-f2205fc32d2b" width="32" height="32" alt="猛砸爆裂天賦圖示"> [猛砸爆裂](#ogryn_melee_improves_ranged)<br>- Bash and Blast | <ul><li>每次近戰擊殺增加 3% 遠程傷害，最多 5 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9e138d4c-f301-46c6-9eef-5aff038efc7c" width="32" height="32" alt="格鬥兵天賦圖示"> [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown)<br>- Bruiser | <ul><li>自己或協同隊友擊殺精英後，持續 4 秒額外恢復戰鬥技能冷卻。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dae8db6d-b212-4abd-a84b-246c0910e0b3" width="32" height="32" alt="精準打擊天賦圖示"> [精準打擊](#ogryn_weakspot_damage)<br>- Strike True | <ul><li>近戰命中弱點時，威力提高 10%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/38b1d6e0-b6a5-4692-92a2-fe6caf0b9083" width="32" height="32" alt="機動部署天賦圖示"> [機動部署](#ogryn_bracing_reduces_damage_taken)<br>- Mobile Emplacement | <ul><li>架槍或射擊期間，受到的傷害減少 25%。</li></ul> | 技能 |
 
 ---
 
@@ -796,5 +797,20 @@
 - **傷害計算**：這項加成作用在威力，再交給武器的傷害、衝擊力等曲線計算；它與只增加弱點額外傷害的效果不同，不應直接把最終傷害固定乘 1.1。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_weakspot_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_bracing_reduces_damage_taken"></a>
+### 機動部署(Mobile Emplacement)
+
+<img src="https://github.com/user-attachments/assets/38b1d6e0-b6a5-4692-92a2-fe6caf0b9083" width="72" height="72" alt="機動部署天賦圖示">
+
+- **生效條件**：架起遠程武器或正在射擊時，受到的傷害減少 25%；射擊停止後仍保留約 0.5 秒的射擊判定。
+
+- **減傷算例**：此階段原本 100 點傷害變成 100 × 0.75 = 75 點；另有獨立 20% 減傷時為 60 點。
+
+- **持續方式**：只要符合架槍或射擊條件便生效，沒有額外疊層或固定冷卻。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_bracing_reduces_damage_taken.md) · [返回目錄](#talent-index)
 
 ---
