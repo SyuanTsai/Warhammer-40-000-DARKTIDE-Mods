@@ -42,7 +42,7 @@
 | [吸精奪萃](#psyker_toughness_on_soul) | 未見明確矛盾 |
 | [生物磁石](#psyker_empowered_grenades_passive_improved) | 未見明確矛盾 |
 | [吸血閃電](#psyker_empowered_chain_lightnings_replenish_toughness_to_allies) | 未見明確矛盾 |
-| [吞靈強擊](#psyker_empowered_ability_on_elite_kills) | 已配對；機制待核對 |
+| [吞靈強擊](#psyker_empowered_ability_on_elite_kills) | 未見明確矛盾 |
 | [完美主義](#psyker_mark_increased_max_stacks) | 已配對；機制待核對 |
 | [盜竊天命](#psyker_mark_kills_can_vent) | 已配對；機制待核對 |
 | [持久影響](#psyker_mark_increased_duration) | 已配對；機制待核對 |
@@ -336,7 +336,7 @@
 ## 吞靈強擊(Overpowering Souls)
 
 - 描述鍵：`loc_talent_psyker_empowered_ability_on_elite_kills_description`；hash：`23c36e9e`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字尚未核實同版。
 - [原始碼推導與限制](psyker_empowered_ability_on_elite_kills.md)。
 
 <a id="psyker_mark_increased_max_stacks"></a>

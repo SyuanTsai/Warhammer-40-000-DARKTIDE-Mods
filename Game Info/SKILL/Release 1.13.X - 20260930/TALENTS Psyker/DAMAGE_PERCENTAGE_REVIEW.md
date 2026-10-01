@@ -40,7 +40,7 @@
 | [吸精奪萃](psyker_toughness_on_soul.md) | 取得亞空間充能後，5 秒恢復 30% 最大韌性；再次取得會刷新持續時間；完整計算與適用限制見來源文件。 |
 | [生物磁石](psyker_empowered_grenades_passive_improved.md) | 擊殺取得靈能強化的機率由 10% 提高至 15%；完整計算與適用限制見來源文件。 |
 | [吸血閃電](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md) | 使用強化閃擊，恢復本人與協同隊友 20% 最大韌性；完整計算與適用限制見來源文件。 |
-| [吞靈強擊](psyker_empowered_ability_on_elite_kills.md) | 機制與公式待核對。 |
+| [吞靈強擊](psyker_empowered_ability_on_elite_kills.md) | 擊殺精英必定取得一層靈能強化；完整計算與適用限制見來源文件。 |
 | [完美主義](psyker_mark_increased_max_stacks.md) | 機制與公式待核對。 |
 | [盜竊天命](psyker_mark_kills_can_vent.md) | 機制與公式待核對。 |
 | [持久影響](psyker_mark_increased_duration.md) | 機制與公式待核對。 |
