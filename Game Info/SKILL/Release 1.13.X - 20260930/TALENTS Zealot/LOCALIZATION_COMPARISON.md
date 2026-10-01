@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [不屈靈魂合唱](#zealot_bolstering_prayer) | 待同版核對 |
+| [有信者之怒](#zealot_attack_speed_post_ability) | 跨來源待同版核對 |
 | [神聖事業](#zealot_channel_grants_toughness_damage_reduction) | 原文字串未精確配對 |
 | [教宗之喚](#zealot_channel_grants_damage) | 明確繁中誤譯 |
 | [倍增狂熱](#zealot_additional_charge_of_ability) | 未見明確矛盾 |
@@ -74,6 +75,13 @@
 - 描述鍵：`loc_talent_zealot_bolstering_prayer_expanded_description`；hash：`ae04279a`。
 - 結論：待同版核對。inventory 的 Build 25492122 未證明與固定公開 SHA 同版；固定 SHA 的 format_values 合計 45%，實際動作則分成 20% 每脈衝與 25%/秒，暫不把跨版或描述差異判為譯文錯誤。
 - [原始碼推導與限制](zealot_bolstering_prayer.md)。
+
+<a id="zealot_attack_speed_post_ability"></a>
+## 有信者之怒(Fury of the Faithful)
+
+- 描述鍵：`loc_talent_zealot_attack_speed_after_dash_new_desc`；hash：`f5695318`。
+- 結論：跨來源待同版核對。繁中與英文皆用同一time欄位；固定來源顯示參數10秒，但buff duration為10+1=11秒，尚未同版遊戲介面確認。兩語效果方向相符，非繁中單方誤譯。
+- [原始碼推導與限制](zealot_attack_speed_post_ability.md)。
 
 <a id="zealot_channel_grants_toughness_damage_reduction"></a>
 ## 神聖事業(Holy Cause)
