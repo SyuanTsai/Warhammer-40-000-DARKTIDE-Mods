@@ -7,6 +7,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/fd2156cb-6e65-4214-bd01-ab0b28665714" width="32" height="32" alt="擊暈天賦圖示"> [擊暈](#broker_blitz_flash_grenade_improved)<br>- Blackout | <ul><li>快速投擲的擊退手雷，最多攜帶 5 顆；每 20 次近距離擊殺恢復 1 顆。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/3b4df232-3b49-4f84-98c0-2b3e8828f917" width="32" height="32" alt="炸彈使者天賦圖示"> [炸彈使者](#broker_blitz_missile_launcher)<br>- Boom Bringer | <ul><li>發射高威力飛彈，最多 2 枚；爆炸基礎半徑 7 公尺。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="特提恩是迎賓天賦圖示"> [特提恩是迎賓](#broker_passive_first_target_damage)<br>- A Tertium Welcome | <ul><li>每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="打你的臉天賦圖示"> [打你的臉](#broker_passive_close_ranged_damage)<br>- In Your Face | <ul><li>手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。</li></ul> | 技能 |
@@ -75,6 +76,21 @@
 - 繁中原文將「近距離擊殺」寫成「近戰擊殺」。12.5 公尺內的遠程擊殺也能累計手雷恢復進度。
 
 [詳細資料](TALENTS%20Scum/broker_blitz_flash_grenade_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_blitz_missile_launcher"></a>
+### 炸彈使者(Boom Bringer)
+
+<img src="https://github.com/user-attachments/assets/3b4df232-3b49-4f84-98c0-2b3e8828f917" width="72" height="72" alt="炸彈使者天賦圖示">
+
+- **攻擊方式**：飛彈直接命中與爆炸分別計算傷害；爆炸內圈半徑 4 公尺、整體半徑 7 公尺，外圈傷害較低且會衰減。
+
+- **傷害算例**：以未受其他修正、未衰減的內圈爆炸計，基礎傷害為 20 × (500 × 2800 ÷ 10000) = 2800。打到無甲部位套 1.25 倍為 3500，甲殼部位套 2.4 倍為 6720。這些數字不含飛彈直擊、部位、敵人特殊減傷或其他天賦。
+
+- **彈藥方式**：最多攜帶 2 枚，額外彈藥袋提高至 3 枚。取代原本擊暈手雷後，不再靠每 20 次近距離擊殺補充。
+
+[詳細資料](TALENTS%20Scum/broker_blitz_missile_launcher.md) · [返回目錄](#talent-index)
 
 ---
 
