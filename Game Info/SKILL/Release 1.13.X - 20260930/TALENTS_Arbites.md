@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="32" height="32" alt="殺戮命令天賦圖示"> [殺戮命令](#adamant_dog_damage_after_ability)<br>- Kill Order | <ul><li>使用戰鬥技能後，電子獒犬傷害提高 50%，持續 12 秒；效果生效時再次使用戰鬥技能可刷新。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="32" height="32" alt="處刑命令天賦圖示"> [處刑命令](#adamant_execution_order)<br>- Execution Order | <ul><li>自動標記前方 40 公尺內的精英、專家或頭目。</li><li>你或電子獒犬擊殺標記目標後，恢復 15% 最大韌性，並獲得 8 秒傷害與攻速加成。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="孤狼天賦圖示"> [孤狼](#adamant_disable_companion)<br>- Lone Wolf | <ul><li>選取後伺服器端移除電子獒犬，改給自身傷害、攻速、韌性受傷倍率與閃擊充能補給。</li><li>一般手榴彈每 45 秒補 1 顆；使用震撼地雷時每 90 秒補 1 顆；補給只在有缺額時計時。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/92922b1c-4991-480e-86af-e050b9faa496" width="32" height="32" alt="堅定意志天賦圖示"> [堅定意志](#adamant_forceful_stun_immune_and_block_all)<br>- Adamant Will | <ul><li>堅定不移 維持滿層時取得免暈與減速免疫。</li><li>離開滿層後效果再維持 3 秒；完美格擋時額外允許格擋不可格擋攻擊。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3ecc49e6-a4c7-4d77-926d-623e4f8f34f6" width="32" height="32" alt="鎖定目標天賦圖示"> [鎖定目標](#adamant_forceful_offensive)<br>- Targets Acquired | <ul><li>堅定不移 達 10 層時取得攻速與順劈加成。</li><li>離開滿層後加成再維持 3 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/bc3b59ed-a142-4807-86f9-f75d65b367b4" width="32" height="32" alt="法務官警覺天賦圖示"> [法務官警覺](#adamant_forceful_ability_damage)<br>- Arbites Vigilant | <ul><li>使用戰鬥技能時，將當前 堅定不移 層數轉成 12 秒威力加成。</li><li>最多 10 層各給 2.5% 威力，觸發會消耗 堅定不移 層數。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/62f41d0b-cd55-459d-b4d7-c8c155da410f" width="32" height="32" alt="審判之力天賦圖示"> [審判之力](#adamant_forceful_stagger_on_low_high)<br>- Judicial Force | <ul><li>堅定不移 從未滿升至 10 層，或從有層數降到 0 層時，會使附近敵人遭到爆炸踉蹌。</li><li>達到高層與歸零各自有 5 秒冷卻。</li></ul> | 鑰石 |
@@ -239,6 +240,19 @@
 - **補充算例**：一般手榴彈缺少至少 1 顆時，開始等 45 秒並補回 1 顆；震撼地雷缺額則等 90 秒。補回後重新等下一次，滿充能時不計時。
 
 [詳細資料](TALENTS%20Arbites/adamant_disable_companion.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_forceful_stun_immune_and_block_all"></a>
+### 堅定意志(Adamant Will)
+
+<img src="https://github.com/user-attachments/assets/92922b1c-4991-480e-86af-e050b9faa496" width="72" height="72" alt="堅定意志天賦圖示">
+
+- **觸發與持續**：堅定不移 到達 10 層時啟用免疫眩暈與減速；離開滿層後再維持 3 秒。
+
+- **完美格擋**：效果期間，完美格擋可擋下原本不可格擋的攻擊；一般格擋不會因此獲得相同能力。此效果仍需符合攻擊的格擋判定，不等於全程無敵。
+
+[詳細資料](TALENTS%20Arbites/adamant_forceful_stun_immune_and_block_all.md) · [返回目錄](#talent-index)
 
 ---
 

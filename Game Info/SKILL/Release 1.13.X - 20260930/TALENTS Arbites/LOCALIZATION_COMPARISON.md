@@ -18,6 +18,7 @@
 | [殺戮命令](#adamant_dog_damage_after_ability) | 未見明確矛盾 |
 | [處刑命令](#adamant_execution_order) | 待同版核對 |
 | [孤狼](#adamant_disable_companion) | 未見明確矛盾 |
+| [堅定意志](#adamant_forceful_stun_immune_and_block_all) | 未見明確矛盾 |
 | [鎖定目標](#adamant_forceful_offensive) | 未見明確矛盾 |
 | [法務官警覺](#adamant_forceful_ability_damage) | 未見明確矛盾 |
 | [審判之力](#adamant_forceful_stagger_on_low_high) | 未見明確矛盾 |
@@ -150,6 +151,13 @@
 - 描述鍵：`loc_talent_adamant_disable_companion_replenish_split_desc`；hash：`fe3bded9`。
 - 結論：未見明確矛盾。同源繁中與英文的移除獒犬、個人增益與補充間隔一致；45／90秒都有實際消費路徑，另一個未使用的60秒欄位不構成文字矛盾。
 - [原始碼推導與限制](adamant_disable_companion.md)。
+
+<a id="adamant_forceful_stun_immune_and_block_all"></a>
+## 堅定意志(Adamant Will)
+
+- 描述鍵：`loc_talent_adamant_forceful_stun_immune_and_block_all_linger_desc`；hash：`8e7f2015`。
+- 結論：未見明確矛盾。繁中「疊滿層數時（以及後續的 3 秒內）免疫眩暈，且完美格擋能格擋所有攻擊」對應英文 “While at Max Stacks, and for 3s afterwards … your perfect blocks can block all attacks”；條件一致。
+- [原始碼推導與限制](adamant_forceful_stun_immune_and_block_all.md)。
 
 <a id="adamant_forceful_offensive"></a>
 ## 鎖定目標(Targets Acquired)
