@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **97 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10)。內部 tree version 18 不等於遊戲發行版號。
 
-完成 94／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 95／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -45,6 +45,7 @@
 | 鑰石 | [極限電容](cryptic_redline.md) / `cryptic_redline` | `node_4c399707-0cd3-4618-af06-a16a6cf05d28` | 完成（核心靜態機制） |
 | 鑰石 | [能量超載](cryptic_overload_keystone.md) / `cryptic_overload_keystone` | `node_2b657eae-4687-4860-a0c8-d87ac8266e32` | 完成（核心靜態機制） |
 | 鑰石 | [爆擊能量過載](cryptic_overload_keystone_bigger_explosion.md) / `cryptic_overload_keystone_bigger_explosion` | `node_18456fa4-d46f-4a4e-ae55-1c1e9c09befd` | 完成（核心靜態機制） |
+| 鑰石 | [振奮過載](cryptic_overload_keystone_toughness_stamina.md) / `cryptic_overload_keystone_toughness_stamina` | `node_2296b656-a1b9-42b7-8b38-32801a972c29` | 完成（核心靜態機制） |
 | 鑰石 | [靜電電容消耗](cryptic_overload_keystone_permastack.md) / `cryptic_overload_keystone_permastack` | `node_50941b31-87cd-4b4e-86f1-25c09ee86bb5` | 完成（核心靜態機制） |
 | 鑰石 | [伺服肌腱湧動](cryptic_dissector_crit_attack_speed.md) / `cryptic_dissector_crit_attack_speed` | `node_aafbd29f-1545-4e6c-bcee-660f62f96f95` | 完成（核心靜態機制） |
 | 鑰石 | [熟練解剖者](cryptic_dissector_max_stacks.md) / `cryptic_dissector_max_stacks` | `node_dcc243dd-aaf5-41cd-be8c-5db40d46967f` | 完成（核心靜態機制） |

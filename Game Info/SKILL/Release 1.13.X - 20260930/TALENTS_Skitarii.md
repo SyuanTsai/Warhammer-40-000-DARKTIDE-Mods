@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5" width="32" height="32" alt="極限電容天賦圖示"> [極限電容](#cryptic_redline)<br>- Redline Capacitors | <ul><li>每消耗或補回一份戰鬥技能充能，獲得5%韌性傷害減免與5%電容量自然恢復加成；最多4層。</li><li>新增層會重設12秒倒數，之後每12秒失去1層；戰鬥技能充能上限增加1份。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3" width="32" height="32" alt="能量超載天賦圖示"> [能量超載](#cryptic_overload_keystone)<br>- Power Overload | <ul><li>你與協同中的隊友擊殺一般敵人獲得1層，精英或專家獲得2層；達30層觸發過載並歸零。</li><li>過載使你與協同中的隊友獲得15%傷害加成及15%韌性傷害減免，持續8秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a59865c6-45fb-4f1e-b360-b8100e541a00" width="32" height="32" alt="爆擊能量過載天賦圖示"> [爆擊能量過載](#cryptic_overload_keystone_bigger_explosion)<br>- Critical Power Overload | <ul><li>能量超載時，使周圍8公尺內命中的敵人遭電擊，承受傷害提高15%，持續8秒。</li><li>再次命中刷新時間；這次範圍效果本身不造成爆炸傷害。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/cfc8d67b-448d-4b33-afac-86fd412b2a6d" width="32" height="32" alt="振奮過載天賦圖示"> [振奮過載](#cryptic_overload_keystone_toughness_stamina)<br>- Invigorating Overload | <ul><li>每次能量超載時，你與協同中的隊友各自恢復最大韌性的20%及最大耐力的20%。</li><li>恢復受韌性與耐力上限限制；韌性恢復也會套用已有的韌性恢復修正。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/f0977f9f-2eb1-458a-a2c1-5e5642a284aa" width="32" height="32" alt="靜電電容消耗天賦圖示"> [靜電電容消耗](#cryptic_overload_keystone_permastack)<br>- Static Capacitor Drain | <ul><li>累計超載8／16／24次，依序獲得傷害提高15%、韌性減傷20%、電容量自然恢復加快25%。</li><li>三項加成可以同時保留，各只取得一次，持續至死亡。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="32" height="32" alt="伺服肌腱湧動天賦圖示"> [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed)<br>- Servo-Sinew Surge | <ul><li>每層削切協議額外提供1.5%暴擊率與1.5%近戰攻擊速度；效果隨削切協議層數變動。</li><li>6層時增加9個百分點暴擊率與9%近戰攻速；8層時分別增加12個百分點與12%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444" width="32" height="32" alt="熟練解剖者天賦圖示"> [熟練解剖者](#cryptic_dissector_max_stacks)<br>- Honed Dissector | <ul><li>將削切協議層數上限從6提高到8；啟用時會直接從8層開始。</li><li>新增加的2層沿用原本每層傷害與韌性承傷步進，滿8層相當於傷害+20%、韌性承傷倍率0.80。</li></ul> | 鑰石 |
@@ -656,6 +657,21 @@
 - **重複觸發**：同一效果最多1層，再次命中刷新8秒持續時間，不會變成30%。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_overload_keystone_bigger_explosion.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_overload_keystone_toughness_stamina"></a>
+### 振奮過載(Invigorating Overload)
+
+<img src="https://github.com/user-attachments/assets/cfc8d67b-448d-4b33-afac-86fd412b2a6d" width="72" height="72" alt="振奮過載天賦圖示">
+
+- **觸發方式**：能量超載時，你與協同範圍內隊友各自恢復最大韌性20%及最大耐力20%。
+
+- **恢復算例**：最大韌性100、最大耐力5格時，一次恢復100 × 20% = 20點韌性及5 × 20% = 1格耐力；若只缺12點韌性，就只補12點。
+
+- **其他加成**：韌性恢復仍受你的韌性恢復加成影響。例如只有25%恢復加成時，20 × 1.25 = 25點；不會超過最大韌性。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_overload_keystone_toughness_stamina.md) · [返回目錄](#talent-index)
 
 ---
 

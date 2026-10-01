@@ -42,6 +42,7 @@
 | [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
 | [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
 | [爆擊能量過載](#cryptic_overload_keystone_bigger_explosion) | 未見明確矛盾 |
+| [振奮過載](#cryptic_overload_keystone_toughness_stamina) | 未見明確矛盾 |
 | [靜電電容消耗](#cryptic_overload_keystone_permastack) | 未見明確矛盾 |
 | [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed) | 未見明確矛盾；補充計算與限制 |
 | [熟練解剖者](#cryptic_dissector_max_stacks) | 未見明確矛盾；補充計算與限制 |
@@ -342,6 +343,13 @@
 - 描述鍵：`loc_talent_cryptic_overload_keystone_bigger_explosion_desc`；hash：`4bcf4f12`。
 - 結論：未見明確矛盾。繁中與英文都寫明超載對近距離敵人施加電擊並提高其承受傷害，設定值為15%、8秒。固定版把近戰範圍落實為半徑8的敵人篩選，並以零傷害爆炸施加狀態；UI未寫半徑或爆炸自身不造成傷害屬細節省略，不構成明確翻譯錯誤。
 - [原始碼推導與限制](cryptic_overload_keystone_bigger_explosion.md)。
+
+<a id="cryptic_overload_keystone_toughness_stamina"></a>
+## 振奮過載(Invigorating Overload)
+
+- 描述鍵：`loc_talent_cryptic_overload_keystone_toughness_stamina_desc`；hash：`7c6a74c0`。
+- 結論：未見明確矛盾。繁中與英文都表示在能量超載時恢復20%韌性與20%耐力；固定版設定與實際恢復呼叫一致。UI未展開最大值基準、恢復上限及既有韌性修正的細節，不構成翻譯錯誤。
+- [原始碼推導與限制](cryptic_overload_keystone_toughness_stamina.md)。
 
 <a id="cryptic_overload_keystone_permastack"></a>
 ## 靜電電容消耗(Static Capacitor Drain)
