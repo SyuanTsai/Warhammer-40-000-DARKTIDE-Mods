@@ -97,6 +97,7 @@
 | <img src="https://github.com/user-attachments/assets/abb7491f-9991-4352-a6e7-46f5a34c1ee3" width="32" height="32" alt="獵鷹蕈劑 I天賦圖示"> [獵鷹蕈劑 I](#broker_stimm_combat_4c)<br>- Vultoprene I | <ul><li>威力增加 4%。</li><li>爆擊機率增加 5 個百分點。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/c91fbea3-470d-4fa1-ac50-d2ab5c741a35" width="32" height="32" alt="獵鷹蕈劑 II天賦圖示"> [獵鷹蕈劑 II](#broker_stimm_combat_5c)<br>- Vultoprene II | <ul><li>威力增加 4%。</li><li>爆擊機率增加 10 個百分點。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/b6316199-6d72-4db3-8be6-a74600e54b2f" width="32" height="32" alt="抗焦慮藥 I天賦圖示"> [抗焦慮藥 I](#broker_stimm_concentration_1)<br>- Kalma I | <ul><li>戰鬥能力恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/8401a77b-6cc2-4b03-a0de-dd67296d008d" width="32" height="32" alt="抗焦慮藥 II天賦圖示"> [抗焦慮藥 II](#broker_stimm_concentration_2)<br>- Kalma II | <ul><li>戰鬥能力恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="32" height="32" alt="激勵 I天賦圖示"> [激勵 I](#broker_stimm_celerity_1)<br>- Spur I | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/12ddbfdc-82bd-4ece-ba73-e6550451e5a4" width="32" height="32" alt="狂熱天賦圖示"> [狂熱](#broker_stimm_celerity_5c)<br>- Fervor | <ul><li>移速與閃避距離增加 10%，閃避速度乘以 1.1；有效閃避次數恢復等待縮短 10%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="32" height="32" alt="激勵 II天賦圖示"> [激勵 II](#broker_stimm_celerity_2)<br>- Spur II | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
@@ -1512,6 +1513,25 @@
 - **暫停期間**：戰鬥能力若因狀態或場域尚未結束而暫停自然恢復，這項速度加成不會自行啟動倒數。
 
 [詳細資料](TALENTS%20Scum/broker_stimm_concentration_1.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_stimm_concentration_2"></a>
+### 抗焦慮藥 II(Kalma II)
+
+<img src="https://github.com/user-attachments/assets/8401a77b-6cc2-4b03-a0de-dd67296d008d" width="72" height="72" alt="抗焦慮藥 II天賦圖示">
+
+- **配方成本**：2 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
+
+- **恢復速度**：戰鬥能力自然恢復速度增加 6.25%；前置配方的加成保留，同階段相加。
+
+- **持續恢復算例**：從抗焦慮藥 I 選到本節點時，總加成為 12.5%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.125 秒；15 秒藥效內共恢復 15 × 1.125 = 16.875 秒。
+
+- **剩餘時間算例**：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 16.875 = 43.125 秒；之後恢復原速。
+
+- **暫停期間**：戰鬥能力若因狀態或場域尚未結束而暫停自然恢復，這項速度加成不會自行啟動倒數。
+
+[詳細資料](TALENTS%20Scum/broker_stimm_concentration_2.md) · [返回目錄](#talent-index)
 
 ---
 
