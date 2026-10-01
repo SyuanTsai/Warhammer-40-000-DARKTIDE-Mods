@@ -18,6 +18,7 @@
 | [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
 | [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
 | [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed) | 未見明確矛盾；補充計算與限制 |
+| [熟練解剖者](#cryptic_dissector_max_stacks) | 未見明確矛盾；補充計算與限制 |
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
 | [閃避伺服恢復](#cryptic_successful_dodge_stamina) | 未見明確矛盾 |
@@ -140,6 +141,13 @@
 - 描述鍵：`loc_talent_cryptic_dissector_crit_attack_speed_desc`；hash：`7ddcfcd5`。
 - 結論：未見明確矛盾；補充計算與限制。繁中與英文均明確寫明每層增加暴擊率與近戰攻擊速度；固定版兩項都是每層1.5%，無誤譯。
 - [原始碼推導與限制](cryptic_dissector_crit_attack_speed.md)。
+
+<a id="cryptic_dissector_max_stacks"></a>
+## 熟練解剖者(Honed Dissector)
+
+- 描述鍵：`loc_talent_cryptic_dissector_max_stacks_desc`；hash：`52304209`。
+- 結論：未見明確矛盾；補充計算與限制。繁中與英文都說明上限提高到8；固定版基礎6層加2層，文字一致。啟用時初始滿層及其既有每層效果是程式補充，不屬誤譯。
+- [原始碼推導與限制](cryptic_dissector_max_stacks.md)。
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
