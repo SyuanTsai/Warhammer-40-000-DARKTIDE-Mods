@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_ability_frag_grenade` / `veteran_frag_grenade` - 破片手雷
+  - 英文對應：Frag Grenade。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L33-L42)。
+
 - `loc_talent_ranger_volley_fire_big_game_hunter` / `veteran_combat_ability_ogryn_outlines` - 敵人越大...
   - 英文對應：The Bigger they Are ...。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L373-L405)；此來源證明識別鍵與天賦關係。
