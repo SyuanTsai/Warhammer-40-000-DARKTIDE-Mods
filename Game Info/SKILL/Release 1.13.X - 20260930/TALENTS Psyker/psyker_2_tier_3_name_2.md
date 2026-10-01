@@ -9,24 +9,29 @@
 
 ## 原始碼確認與程式推導
 
-- 被動監聽 on_minion_death，僅 tags.elite 或 tags.special 通過；server端再要求 attacking_unit==template_context.unit，接著只在擁有者自己的 buff_extension 加 psyker_cooldown_buff。該buff持續3秒、max_stacks=1、再次套用會刷新；timer 初始固定時間+1，每次 t>timer 時 timer加1並呼叫 restore_ability_resource("combat_ability",0.5)。因此可直接確認每個tick恢復0.5個冷卻資源單位；按秒間隔推算三秒期間約三次、合計1.5秒冷卻資源，但第三tick與buff到期邊界需遊戲內確認。雖 start_func 保存 coherency_extension，該 proc 路徑沒有使用它來遍歷隊友。
+- 被動監聽 on_minion_death，僅 tags.elite 或 tags.special 通過；server端再要求 attacking_unit==template_context.unit，接著只在擁有者自己的 buff_extension 加 psyker_cooldown_buff。該buff持續3秒、max_stacks=1、再次套用會刷新；timer 初始固定時間+1，每次 t>timer 時 timer加1並呼叫 restore_ability_resource("combat_ability",0.5)。因此可直接確認每個tick恢復0.5個冷卻資源單位；按秒間隔推算三秒期間約三次、合計1.5秒冷卻資源，但第三tick與buff到期邊界需遊戲內確認。雖 start_func 保存 coherency_extension，該 proc 路徑沒有使用它來遍歷隊友。 已核對到期更新順序：Buff.update 先執行 duration 檢查，再執行模板的 update_func；即使 duration 檢查在該次更新把效果標為結束，BuffExtensionBase 也要等所有 Buff.update 完成後才移除。因此正常固定更新下，t 超過第三個一秒計時點時，第三次 0.5 秒恢復會先發生，再移除三秒效果。若單次更新時間跨過多個一秒計時點，模板使用單一 if 而非迴圈，不會在同一更新補做多次恢復。
 
 ## 原始碼依據
 
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：839–880](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L880)
+- [scripts/extension_systems/buff/buff_extension_base.lua：187–206](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buff_extension_base.lua#L187-L206)
+- [scripts/extension_systems/buff/buffs/buff.lua：29–48](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L29-L48)
+- [scripts/extension_systems/buff/buffs/buff.lua：103–127](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L103-L127)
+- [scripts/extension_systems/buff/buffs/buff.lua：305–327](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L305-L327)
+- [scripts/extension_systems/buff/player_unit_buff_extension.lua：131–145](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/player_unit_buff_extension.lua#L131-L145)
 - [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：1414–1433](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1414-L1433)
-- [scripts/settings/talent/talent_settings_psyker.lua：39–42](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L39-L42)
 - [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1658–1687](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1658-L1687)
 - [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1689–1720](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1689-L1720)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：839–880](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L880)
+- [scripts/settings/talent/talent_settings_psyker.lua：39–42](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L39-L42)
 - [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：1414–1433](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1414-L1433)
 - [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：718–746](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L718-L746)
 
 ## 算例條件與待確認事項
 
-- **冷卻算例：**若倒數原剩 20 秒，在正常恢復 1 秒並觸發一次額外恢復後，變成 20 − 1 − 0.5 = 18.5 秒。
-- 原始碼的條件是elite/special tags及本人為attacking_unit；隊友擊殺和非上述tags不在此proc路徑。
-- 雖 talent 註解字串提到coherency allies，這份commit的proc函式沒有把效果分配給協同隊友；Build25492122 同版性未知，不能直接判定遊戲翻譯錯誤。
-- 計時刷新/到期與最後一個tick是否落在duration邊界需同版實測。
+- **冷卻算例**：若倒數原剩 20 秒，在正常恢復 1 秒並觸發一次額外恢復後，變成 20 − 1 − 0.5 = 18.5 秒。
+- 觸發條件仍是程式碼標記為 elite 或 special 的敵人，且擊殺者為持有者本人。
+- 公開原始碼的能力註解提到協同範圍內隊友，但這條恢復流程把資源還給觸發者本人；Build25492122 與此來源版本是否一致仍待核對。
+- 若更新時間一次跨越多個一秒計時點，單次更新最多處理一次；正常固定更新下依據程式順序可推得三次恢復。
 - 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
 
 ## 原文核對
