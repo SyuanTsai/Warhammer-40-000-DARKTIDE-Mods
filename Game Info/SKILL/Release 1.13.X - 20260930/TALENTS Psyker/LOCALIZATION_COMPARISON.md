@@ -86,7 +86,7 @@
 | [如夢似幻](#psyker_damage_to_peril_conversion) | 未見明確矛盾 |
 | [無形專注](#psyker_damage_resistance_stun_immunity) | 未見明確矛盾 |
 | [亞空間意志](#psyker_warp_glass_cannon) | 已配對；機制待核對 |
-| [亞空間幽魂](#psyker_stat_mix) | 已配對；機制待核對 |
+| [亞空間幽魂](#psyker_stat_mix) | 未見明確矛盾 |
 | [靈魂穿透](#psyker_warp_attacks_rending) | 已配對；機制待核對 |
 | [念力之握](#psyker_increased_blitz_damage) | 繁中原文勘誤 |
 
@@ -648,7 +648,7 @@
 ## 亞空間幽魂(Warp Ghost)
 
 - 描述鍵：`loc_talent_psyker_stat_mix_desc`；hash：`df89fc40`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_stat_mix.md)。
 
 <a id="psyker_warp_attacks_rending"></a>
