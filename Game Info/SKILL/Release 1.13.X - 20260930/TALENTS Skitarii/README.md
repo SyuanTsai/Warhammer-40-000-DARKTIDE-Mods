@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **97 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10)。內部 tree version 18 不等於遊戲發行版號。
 
-完成 87／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 88／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -16,6 +16,7 @@
 | 閃擊 | [醫療伺服頭骨](cryptic_servo_skull_inject_ally.md) / `cryptic_servo_skull_inject_ally` | `node_f09fc8b6-be58-4bca-8d9c-b4ed66c72473` | 完成（核心靜態機制） |
 | 閃擊 | [電弧手榴彈](cryptic_grenade_ability_arc_grenade.md) / `cryptic_grenade_ability_arc_grenade` | `node_a09226d4-6e29-4806-982f-f00da2c2ec60` | 完成（核心靜態機制） |
 | 閃擊 | [匠師伺服頭骨](cryptic_servo_skull_improved.md) / `cryptic_servo_skull_improved` | `node_15960c27-305b-4ad6-8cb9-1ceec79789b9` | 完成（核心靜態機制） |
+| 閃擊 | [超載電弧手榴彈](cryptic_arc_grenades_brittleness.md) / `cryptic_arc_grenades_brittleness` | `node_d609f926-8570-41c2-9d4f-2954298c8f73` | 完成（核心靜態機制） |
 | 閃擊 | [過載艾曼納圖斯力場](cryptic_force_field_duration_increase.md) / `cryptic_force_field_duration_increase` | `node_c462607d-3464-41ba-b43c-6d210aa1d65f` | 完成（核心靜態機制） |
 | 閃擊 | [動能排斥](cryptic_force_field_capacitance_restore.md) / `cryptic_force_field_capacitance_restore` | `node_4a240e77-1a0d-4833-ad5c-82bec1eca8c2` | 完成（核心靜態機制） |
 | 閃擊 | [心智網指令](cryptic_servo_skull_improved_tagging.md) / `cryptic_servo_skull_improved_tagging` | `node_cc688d42-e7dd-45bb-81ec-df7c8d772e3f` | 完成（核心靜態機制） |

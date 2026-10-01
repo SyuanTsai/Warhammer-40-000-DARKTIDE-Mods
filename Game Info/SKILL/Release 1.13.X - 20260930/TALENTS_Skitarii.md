@@ -12,6 +12,7 @@
 | <img src="https://github.com/user-attachments/assets/adeeeef3-0c2e-450a-974b-66ce6c6366bd" width="32" height="32" alt="醫療伺服頭骨天賦圖示"> [醫療伺服頭骨](#cryptic_servo_skull_inject_ally)<br>- Medicae Servo-Skull | <ul><li>額外召喚一台醫療伺服頭骨，可救援需要盟友協助的隊友。</li><li>救援後，隊友獲得5秒韌性傷害減免與韌性恢復。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/6a4875ee-4056-4964-ae36-846e598954bc" width="32" height="32" alt="電弧手榴彈天賦圖示"> [電弧手榴彈](#cryptic_grenade_ability_arc_grenade)<br>- Arc Grenades | <ul><li>投擲後造成10公尺電擊爆炸，最多以4個目標起始電弧並向附近敵人連鎖。</li><li>每擊殺一名精英或專家敵人，恢復0.04份電容量。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/0efafa0a-aad0-4bb8-869f-133db37cf152" width="32" height="32" alt="匠師伺服頭骨天賦圖示"> [匠師伺服頭骨](#cryptic_servo_skull_improved)<br>- Artificer Servo-Skull | <ul><li>伺服頭骨可常駐跟隨，並可受命射擊敵人或執行資料解碼。</li><li>基礎伺服頭骨強化效果改為永久生效；命中還會使敵人承受更多傷害並累積燃燒。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/14c1a0d8-2916-40d7-a7e2-8572a0b3e6d2" width="32" height="32" alt="超載電弧手榴彈天賦圖示"> [超載電弧手榴彈](#cryptic_arc_grenades_brittleness)<br>- Overcharged Arc Grenades | <ul><li>電弧手榴彈最多增加2個起始電弧目標。</li><li>電弧連鎖命中的敵人獲得8層脆弱。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/e70f3e4b-d2c2-4840-bc29-56ba85dd816d" width="32" height="32" alt="過載艾曼納圖斯力場天賦圖示"> [過載艾曼納圖斯力場](#cryptic_force_field_duration_increase)<br>- Overcharged Refraction Emitter | <ul><li>將艾曼納圖斯力場持續時間由8秒提高至12秒，並在持續時間中點額外引發一次電擊爆炸。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/9eb6e468-224f-4d7c-b696-cc58aa08f532" width="32" height="32" alt="動能排斥天賦圖示"> [動能排斥](#cryptic_force_field_capacitance_restore)<br>- Kinetic Repulsion | <ul><li>艾曼納圖斯力場吸收遠程攻擊時會恢復電容量。</li><li>每次吸收恢復0.025份，每次力場最多恢復0.75份。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/c365855a-e85f-4d0d-8156-4048ae9f7e02" width="32" height="32" alt="心智網指令天賦圖示"> [心智網指令](#cryptic_servo_skull_improved_tagging)<br>- Noospheric Command | <ul><li>標記敵人並下令攻擊，可使伺服頭骨短暫大幅加快射擊。</li><li>完整2秒加速消耗0.3份電容量；沒有最低電容量時不能啟動，訓練場例外。</li></ul> | 閃擊 |
@@ -177,6 +178,23 @@
 - **算例**：以原本每發100傷害、3秒射擊冷卻為例，常駐加成後每發125傷害、冷卻1.5秒。頭骨射中敵人時，該敵人5秒內承受傷害提高15%，並增加1層燃燒；最多8層，達上限時刷新燃燒時間。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_servo_skull_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_arc_grenades_brittleness"></a>
+### 超載電弧手榴彈(Overcharged Arc Grenades)
+
+<img src="https://github.com/user-attachments/assets/14c1a0d8-2916-40d7-a7e2-8572a0b3e6d2" width="72" height="72" alt="超載電弧手榴彈天賦圖示">
+
+- **運作方式**：電弧手榴彈的起始電弧上限由4道增加至6道；每道電弧可再連鎖的次數維持不變。
+
+- **運作方式**：被電弧連鎖擊中的敵人會獲得8層脆弱，每層2.5%，持續5秒。
+
+- **算例**：單次電弧命中可施加8×2.5%=20%脆弱；再次命中可繼續疊加，最多16層，即40%。
+
+- **傷害算例**：只比較護甲階段，假設護甲前100點、原倍率0.5且該護甲的撕裂係數為1，8層脆弱會讓傷害由100 × 0.5 = 50點提高至100 × (0.5 + 20%) = 70點。16層則為90點；跨過護甲倍率1時須另算。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_arc_grenades_brittleness.md) · [返回目錄](#talent-index)
 
 ---
 
