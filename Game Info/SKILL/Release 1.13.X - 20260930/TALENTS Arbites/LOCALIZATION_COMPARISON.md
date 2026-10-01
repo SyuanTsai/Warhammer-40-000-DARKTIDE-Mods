@@ -33,6 +33,7 @@
 | [無處可逃](#adamant_elite_special_kills_offensive_boost) | 未見明確矛盾 |
 | [兵敗如山倒](#adamant_cleave_after_push) | 未見明確矛盾 |
 | [重如律法](#adamant_heavy_attacks_increase_damage) | 未見明確矛盾 |
+| [巨獸獵人](#adamant_monster_hunter) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
@@ -208,3 +209,10 @@
 - 描述鍵：`loc_talent_adamant_heavy_attacks_increase_damage_desc`；hash：`573a8877`。
 - 結論：未見明確矛盾。繁中「近戰重擊後」與英文 after Heavy Melee Attack一致；命中及揮擊結束時點屬補充。
 - [原始碼推導與限制](adamant_heavy_attacks_increase_damage.md)。
+
+<a id="adamant_monster_hunter"></a>
+## 巨獸獵人(Monstrosity Hunter)
+
+- 描述鍵：`loc_talent_adamant_monster_hunter_desc`；hash：`7ec647c9`。
+- 結論：未見明確矛盾。繁中「歐格林和巨獸」對應英文 Ogryns and Monstrosities，沒有重複計算兩份加成的依據。
+- [原始碼推導與限制](adamant_monster_hunter.md)。
