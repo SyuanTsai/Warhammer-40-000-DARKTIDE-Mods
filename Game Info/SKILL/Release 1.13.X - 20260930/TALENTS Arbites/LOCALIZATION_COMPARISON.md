@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [天鷹使節](#adamant_area_buff_drone_improved) | 未見明確矛盾 |
+| [懲惡揚善](#adamant_charge_toughness) | 未見明確矛盾 |
 | [針鋒相對](#adamant_charge_cooldown_reduction) | 未見明確矛盾 |
 | [交鋒](#adamant_charge_longer_distance) | 未見明確矛盾 |
 | [電子獒犬與人](#adamant_toughness_regen_near_companion) | 未見明確矛盾 |
@@ -67,6 +68,13 @@
 - 描述鍵：`loc_talent_ability_area_buff_drone_new_improved_description`；hash：`1e02d48e`。
 - 結論：未見明確矛盾。繁中「每秒恢復韌性」「對暈眩、減速和壓制效果免疫」分別對應英文「Toughness per second」及「Immune to Stun, Slowdown, and Suppression」；兩文都指出敵人承受更多傷害。
 - [原始碼推導與限制](adamant_area_buff_drone_improved.md)。
+
+<a id="adamant_charge_toughness"></a>
+## 懲惡揚善(Commendation from Condemnation)
+
+- 描述鍵：`loc_talent_adamant_charge_toughness_alt_description`；hash：`af8a4ee4`。
+- 結論：未見明確矛盾。繁中「每次擊中精英敵人、專家敵人或巨獸」對應英文「for each Elite, Specialist, or Monstrosity hit」；恢復量與兩項上限的描述一致。
+- [原始碼推導與限制](adamant_charge_toughness.md)。
 
 <a id="adamant_charge_cooldown_reduction"></a>
 ## 針鋒相對(Targeted Brutality)

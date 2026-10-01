@@ -7,6 +7,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="天鷹使節天賦圖示"> [天鷹使節](#adamant_area_buff_drone_improved)<br>- Nuncio-Aquila | <ul><li>部署阿奎拉傳令機，持續 20 秒並影響周圍 7.5 公尺；冷卻 60 秒，單次充能。</li><li>強化版讓盟友每秒恢復 7.5% 韌性，並提高壓制與衝擊、降低後座力，同時免疫暈眩、減速與壓制。</li><li>範圍內敵人受到的傷害提高 15%。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573" width="32" height="32" alt="懲惡揚善天賦圖示"> [懲惡揚善](#adamant_charge_toughness)<br>- Commendation from Condemnation | <ul><li>衝鋒擊中精英、專家或巨獸時，每名不同目標恢復 20% 韌性與 15% 耐力。</li><li>單次衝鋒最多恢復 100% 韌性及 75% 耐力；同一敵人不重複計算。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/d2b1945d-2300-4993-a649-00c1e3858e0d" width="32" height="32" alt="針鋒相對天賦圖示"> [針鋒相對](#adamant_charge_cooldown_reduction)<br>- Targeted Brutality | <ul><li>衝鋒每次有效命中一般敵人返還 0.5 秒戰鬥技能冷卻；命中精英、專家或巨獸返還 1 秒。</li><li>單次衝鋒最多返還 5 秒冷卻。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="32" height="32" alt="交鋒天賦圖示"> [交鋒](#adamant_charge_longer_distance)<br>- Engage | <ul><li>衝鋒距離由基礎 3.75 公尺增加 3.75 公尺，目標距離上限成為 7.5 公尺。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/a6716d2d-1100-4bbe-be59-683b5b9176b4" width="32" height="32" alt="電子獒犬與人天賦圖示"> [電子獒犬與人](#adamant_toughness_regen_near_companion)<br>- Man and Cyber-Mastiff | <ul><li>在自己的電子獒犬 8 公尺內，每秒恢復最大韌性的 5%。</li></ul> | 技能 |
@@ -75,6 +76,21 @@
 - **敵人受制**：範圍內敵人受到的傷害提高 15%；例如其他條件相同時，原本 100 點傷害按 1.15 倍計算為 115 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_area_buff_drone_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_charge_toughness"></a>
+### 懲惡揚善(Commendation from Condemnation)
+
+<img src="https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573" width="72" height="72" alt="懲惡揚善天賦圖示">
+
+- **觸發條件**：衝鋒擊中精英、專家或巨獸時，依不同敵人計算；同一目標在一次衝鋒中只計一次。
+
+- **恢復量與上限**：衝鋒結束時一起恢復；每名不同目標恢復最大韌性的 20% 與最大耐力的 15%，最多恢復 100% 最大韌性、75% 最大耐力，均不超過目前缺額。
+
+- **算例**：擊中 3 名不同的合格目標，恢復 3×20%=60% 韌性及 3×15%=45% 耐力；同一名敵人再被擊中不增加恢復量。
+
+[詳細資料](TALENTS%20Arbites/adamant_charge_toughness.md) · [返回目錄](#talent-index)
 
 ---
 
