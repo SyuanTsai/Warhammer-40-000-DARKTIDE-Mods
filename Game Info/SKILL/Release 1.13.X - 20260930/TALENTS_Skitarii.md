@@ -6,6 +6,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="32" height="32" alt="電流弧天賦圖示"> [電流弧](#cryptic_discharge_generates_arcs)<br>- Voltaic Arcs | <ul><li>電能發射器每消耗一道充能，額外釋放一道向前電弧；最多生成 5 道。</li><li>每道電弧從前方 12 公尺內的有效敵人起始，之後可鏈接附近敵人。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b74a0dba-64ed-40b6-b630-792c413387cd" width="32" height="32" alt="電能驅動天賦圖示"> [電能驅動](#cryptic_discharge_attack_speed_increase)<br>- Voltaic Motivator | <ul><li>每次使用電能發射器後，攻擊速度提高 5% 基礎值，再按消耗充能每道增加 5%。</li><li>加成持續 15 秒；消耗 1、2、3 道時，總加成分別為 10%、15%、20%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="能量載分配鏈路天賦圖示"> [能量載分配鏈路](#cryptic_crits_grant_tdr)<br>- Power Redistribution Uplink | <ul><li>爆擊命中後，3 秒內恢復 7.5% 韌性</li><li>期間承受的韌性傷害降低 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ea4be2ad-8b84-4e83-a056-993beed7b39c" width="32" height="32" alt="適應性戰鬥記憶體天賦圖示"> [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break)<br>- Adaptive Combat Engram | <ul><li>韌性耗盡後，減少 30% 承受傷害、持續 5 秒</li><li>效果結束後冷卻 15 秒</li></ul> | 技能 |
@@ -61,6 +62,21 @@
 ---
 
 ## 能力
+
+<a id="cryptic_discharge_generates_arcs"></a>
+### 電流弧(Voltaic Arcs)
+
+<img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="72" height="72" alt="電流弧天賦圖示">
+
+- **觸發方式**：使用電能發射器時，每消耗一份完整電容量，向前釋放一道電弧；消耗 3 份就釋放 3 道。
+
+- **作用範圍**：初始目標需在前方 12 公尺內且仍存活。每道電弧可繼續向附近有效目標連鎖，最多 4 次，造成電擊傷害與衝擊。
+
+- **例外**：附近目標不足時，實際電弧或連鎖數會較少；傷害仍依護甲與攻擊結算，不能用電弧數直接當作生命傷害。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_discharge_generates_arcs.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="cryptic_discharge_attack_speed_increase"></a>
 ### 電能驅動(Voltaic Motivator)
