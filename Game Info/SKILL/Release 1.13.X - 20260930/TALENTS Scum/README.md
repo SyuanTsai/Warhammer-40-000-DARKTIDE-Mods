@@ -2,12 +2,14 @@
 
 [返回玩家說明](../TALENTS_Scum.md)｜[版本、日期與證據限制](../README.md)
 
+[角色基礎效果](BASE_EFFECTS.md)｜[未直接使用的定義](UNUSED_DEFINITIONS.md)
+
 [遊戲本體繁中描述比對](LOCALIZATION_COMPARISON.md)｜[百分比描述盤點](DAMAGE_PERCENTAGE_REVIEW.md)
 
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 109／109 項核心靜態機制核對（主天賦、配方與啟用節點）。名稱沿用翻譯表；尚未進行遊戲內驗證。
+主天賦79／79、興奮劑配方29／29，另有1項零點啟用說明與6項基礎／條件式效果，均已核對核心靜態機制。名稱沿用翻譯表；尚未進行遊戲內驗證。配方樹另有獨立30點額度，每項成本1～5點且各只購買一次。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -120,3 +122,7 @@
 | 興奮劑配方 | [狂熱](broker_stimm_concentration_5b.md) / `broker_stimm_concentration_5b` | `node_cfc646a9-648a-402d-bcb5-7656f2852309` | 完成（核心靜態機制） |
 | 興奮劑配方 | [集中藥](broker_stimm_concentration_5c.md) / `broker_stimm_concentration_5c` | `node_a03d2d80-93e2-4d27-94b6-73c24692de2c` | 完成（核心靜態機制） |
 | 興奮劑配方 | [反射](broker_stimm_celerity_5b.md) / `broker_stimm_celerity_5b` | `node_8b44a279-b6fb-410a-9805-22f5e25d470c` | 完成（核心靜態機制） |
+
+## 圖示與來源
+
+109張圖示只保存在[Media-Assets Issue #12](https://github.com/SyuanTsai/Media-Assets/issues/12)附件；逐張以未登入下載核對位元組與SHA-256。Games Lantern只供圖示，不作機制證據。
