@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/1a4c2d3b-dfba-4840-a85d-c8d5390e3a42" width="32" height="32" alt="熔爐怒吼天賦圖示"> [熔爐怒吼](#broker_ability_punk_rage_sub_2)<br>- Pulverising Strikes | <ul><li>怒火期間攻擊橫掃能力加算 +50%；另在怒火每存續約 1 秒累積一層近戰威力，每層 +2.5%，最多 10 層（+25%）。</li><li>與怒火基本 +35% 近戰威力等級合併時，只計這兩項最多為 +60% 威力等級修正，不等於 +60% 傷害。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/db7fee2b-9e46-49f1-a0ac-28cd6cea424f" width="32" height="32" alt="凝聚殺意天賦圖示"> [凝聚殺意](#broker_ability_punk_rage_sub_1)<br>- Channelled Aggression | <ul><li>怒火狀態期間，近戰重攻擊獲得加算 +25% 撕裂修正，作用於護甲穿透計算。</li><li>此效果檢查的是近戰重攻擊；撕裂修正不等於直接增加 25% 傷害。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/c23bede2-8365-4a28-9fcf-0aa91847923a" width="32" height="32" alt="沸騰之血天賦圖示"> [沸騰之血](#broker_ability_punk_rage_sub_3)<br>- Forge's Bellow | <ul><li>選用後，怒火開始與結束時各發動一次 4.5 公尺範圍怒吼；周遭敵人受到踉蹌。</li><li>每次怒吼使範圍內敵人的近戰攻擊速度加算 -50%，持續 5 秒；單計此減速時，原本 1 秒的攻擊間隔約成 2 秒。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/040166f5-e6b1-4f43-ae17-2c21b8fd8014" width="32" height="32" alt="碎骨打擊天賦圖示"> [碎骨打擊](#broker_ability_punk_rage_sub_4)<br>- Boiling Blood | <ul><li>近戰命中帶有精英、專家、怪物或隊長標籤的敵人時，怒火延長 1 秒；這類命中的延長量在 30 秒前不遞減，之後每跨 30 秒減半。</li><li>一般敵人的命中仍依基本規則延長 0.3 秒，並在 20 秒後遞減；30 秒提升只套用於上述特殊敵人標籤。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/74d4304b-23f7-4666-879b-62c727596b69" width="32" height="32" alt="專注凝神天賦圖示"> [專注凝神](#broker_ability_focus_sub_3)<br>- Focused Resolve | <ul><li>專注期間的近距離遠程擊殺可恢復技能冷卻：一般擊殺 0.5 秒，精英或專家擊殺 1 秒；每次專注最多恢復 5 秒。</li><li>按 45 秒基礎冷卻及每秒自然充能 1 計，恢復至上限相當於最多補回 5 秒資源；不計其他修正，專注結束後自然充能剩 40 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="精準獵殺天賦圖示"> [精準獵殺](#broker_ability_focus_sub_2)<br>- Pick Your Targets | <ul><li>專注期間遠程攻擊加算 +15% 撕裂修正；近距離遠程擊殺每次另疊 3% 遠程傷害，最多 5 層（+15%），每層持續 3 秒並可由新擊殺刷新。</li><li>此撕裂加成作用於護甲計算，擊殺疊層是遠程傷害加算；只計滿層效果時，基礎100點遠程傷害變為115點。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
@@ -235,6 +236,19 @@
 - **敵人減速**：每次怒吼使範圍內敵人的近戰攻擊速度降低 50%，持續 5 秒。以原本 1 秒的近戰攻擊間隔估算，速度剩一半後間隔約為 1 ÷ 0.5 = 2 秒；這是比原來長 100%，不是長 50%。遠程攻擊速度不在這個修正欄位內。
 
 [詳細資料](TALENTS%20Scum/broker_ability_punk_rage_sub_3.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_ability_punk_rage_sub_4"></a>
+### 碎骨打擊(Boiling Blood)
+
+<img src="https://github.com/user-attachments/assets/040166f5-e6b1-4f43-ae17-2c21b8fd8014" width="72" height="72" alt="碎骨打擊天賦圖示">
+
+- **特殊敵人延長**：近戰命中精英、專家、怪物或隊長類敵人，怒火延長 1 秒。此類命中每次延長量到 30 秒後才開始遞減；30 秒後為 0.5 秒、60 秒後為 0.25 秒。
+
+- **一般敵人延長**：普通敵人命中仍沿用基礎每次 0.3 秒，並在 20 秒後開始遞減。30 秒門檻不會一併改動普通敵人的延長規則。
+
+[詳細資料](TALENTS%20Scum/broker_ability_punk_rage_sub_4.md) · [返回目錄](#talent-index)
 
 ---
 

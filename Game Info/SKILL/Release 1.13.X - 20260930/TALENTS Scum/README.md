@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 57／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 58／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -21,6 +21,7 @@
 | 能力 | [熔爐怒吼](broker_ability_punk_rage_sub_2.md) / `broker_ability_punk_rage_sub_2` | `node_0625b695-b695-49f5-9050-551fbd7e9699` | 完成（核心靜態機制） |
 | 能力 | [凝聚殺意](broker_ability_punk_rage_sub_1.md) / `broker_ability_punk_rage_sub_1` | `node_4a01428d-790a-49d5-adbb-e910b4272cbe` | 完成（核心靜態機制） |
 | 能力 | [沸騰之血](broker_ability_punk_rage_sub_3.md) / `broker_ability_punk_rage_sub_3` | `node_32f5f38d-828f-4993-8fcf-ebd1f1f30199` | 完成（核心靜態機制） |
+| 能力 | [碎骨打擊](broker_ability_punk_rage_sub_4.md) / `broker_ability_punk_rage_sub_4` | `node_8efd6143-4d2d-4bd8-a40d-229263fccfd1` | 完成（核心靜態機制） |
 | 能力 | [專注凝神](broker_ability_focus_sub_3.md) / `broker_ability_focus_sub_3` | `node_28d7a3c1-58af-42f2-99c4-70b734175557` | 完成（核心靜態機制） |
 | 能力 | [精準獵殺](broker_ability_focus_sub_2.md) / `broker_ability_focus_sub_2` | `node_276ffd37-efb4-4ced-b119-38aa2714359b` | 完成（核心靜態機制） |
 | 技能 | [快速且致命](broker_passive_close_range_damage_on_dodge.md) / `broker_passive_close_range_damage_on_dodge` | `node_a8bc4def-415e-4b1b-9b1d-6f2783c5323d` | 完成（核心靜態機制） |

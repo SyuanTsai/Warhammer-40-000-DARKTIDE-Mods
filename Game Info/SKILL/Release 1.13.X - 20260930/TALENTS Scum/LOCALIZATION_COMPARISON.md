@@ -18,6 +18,7 @@
 | [熔爐怒吼](#broker_ability_punk_rage_sub_2) | 未見明確中英矛盾 |
 | [凝聚殺意](#broker_ability_punk_rage_sub_1) | 未見明確中英矛盾 |
 | [沸騰之血](#broker_ability_punk_rage_sub_3) | 未見中英翻譯差異（攻擊間隔百分比與程式值不相符） |
+| [碎骨打擊](#broker_ability_punk_rage_sub_4) | 未見明確中英矛盾 |
 | [專注凝神](#broker_ability_focus_sub_3) | 未見中英翻譯差異（觸發條件由程式補充） |
 | [精準獵殺](#broker_ability_focus_sub_2) | 未見明確中英矛盾 |
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
@@ -137,6 +138,13 @@
 - 描述鍵：`loc_talent_broker_ability_punk_rage_sub_3_desc_02`；hash：`aa1fa2de`。
 - 結論：未見中英翻譯差異（攻擊間隔百分比與程式值不相符）。繁中與英文皆稱攻擊間隔增加50%，因此沒有兩語反向翻譯。固定版本程式卻把敵人 melee_attack_speed 設為-0.5；按速度倒數，單計此效果攻擊間隔約變兩倍（增加100%），另有遠程攻擊不受此近戰欄位影響。故記錄程式與文字數值落差，不填翻譯勘誤。
 - [原始碼推導與限制](broker_ability_punk_rage_sub_3.md)。
+
+<a id="broker_ability_punk_rage_sub_4"></a>
+## 碎骨打擊(Boiling Blood)
+
+- 描述鍵：`loc_talent_broker_ability_punk_rage_sub_4_desc`；hash：`43686b03`。
+- 結論：未見明確中英矛盾。繁中與英文都描述精英／怪物命中可延長1秒、遞減門檻延至30秒；程式證據確認特殊標籤命中使用該值。專家與隊長標籤也適用是程式補充，不是原文反向。
+- [原始碼推導與限制](broker_ability_punk_rage_sub_4.md)。
 
 <a id="broker_ability_focus_sub_3"></a>
 ## 專注凝神(Focused Resolve)
