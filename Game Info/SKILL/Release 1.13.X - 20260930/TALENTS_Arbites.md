@@ -22,6 +22,7 @@
 | <img src="https://github.com/user-attachments/assets/62b0bee6-3606-40bc-9d78-06f072535e59" width="32" height="32" alt="遠程傷害增幅天賦圖示"> [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1)<br>- Ranged Damage Boost | <ul><li>遠程傷害提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8c224499-f2ca-420c-bcf6-39034e6a35b2" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d3fa1c73-0a49-42ab-920c-11b7238af849" width="32" height="32" alt="順劈加成天賦圖示"> [順劈加成](#base_cleave_node_buff_medium_1)<br>- Cleave Boost | <ul><li>傷害與踉蹌的順劈容量提高 25%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/e8b31492-509e-479a-9369-203e36e1e1e4" width="32" height="32" alt="衝擊加成天賦圖示"> [衝擊加成](#base_impact_node_buff_medium_1)<br>- Impact Boost | <ul><li>衝擊提高 25%，更容易使敵人踉蹌。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/170599ce-ad50-4760-93b2-da650c6deac8" width="32" height="32" alt="塑鋼裝甲天賦圖示"> [塑鋼裝甲](#adamant_plasteel_plates)<br>- Plasteel Plates | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
 
 ---
@@ -229,6 +230,19 @@
 - **實際效果**：更容易一次掃中多名敵人；命中人數仍受敵人質量、護甲和武器本身的穿透限制影響，不等於傷害提高 25%。
 
 [詳細資料](TALENTS%20Arbites/base_cleave_node_buff_medium_1.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="base_impact_node_buff_medium_1"></a>
+### 衝擊加成(Impact Boost)
+
+<img src="https://github.com/user-attachments/assets/e8b31492-509e-479a-9369-203e36e1e1e4" width="72" height="72" alt="衝擊加成天賦圖示">
+
+- **衝擊算例**：單計衝擊倍率，原本 100 單位踉蹌強度變成 100 × (1 + 25%) = 125 單位。
+
+- **作用範圍**：影響是否達到敵人的踉蹌門檻；不是生命傷害加成，也不保證對所有敵人都能打出更強踉蹌。
+
+[詳細資料](TALENTS%20Arbites/base_impact_node_buff_medium_1.md) · [返回目錄](#talent-index)
 
 ---
 

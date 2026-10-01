@@ -22,4 +22,5 @@
 | [遠程傷害增幅](base_ranged_damage_node_buff_medium_1.md) | 遠程傷害提高 10%。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_1.md) | 近戰傷害提高 10%。；完整計算與適用限制見來源文件。 |
 | [順劈加成](base_cleave_node_buff_medium_1.md) | 傷害與踉蹌的順劈容量提高 25%。；完整計算與適用限制見來源文件。 |
+| [衝擊加成](base_impact_node_buff_medium_1.md) | 衝擊提高 25%，更容易使敵人踉蹌。；完整計算與適用限制見來源文件。 |
 | [塑鋼裝甲](adamant_plasteel_plates.md) | 最大韌性增加 25 點。；完整計算與適用限制見來源文件。 |

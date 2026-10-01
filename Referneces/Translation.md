@@ -1686,3 +1686,5 @@
 - Ranged Damage Boost - 遠程傷害增幅（沿用本機繁中名稱，待使用者確認；`base_ranged_damage_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1637-L1660)）
 
 - Cleave Boost - 順劈加成（沿用本機繁中名稱，待使用者確認；`base_cleave_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1013-L1036)）
+
+- Impact Boost - 衝擊加成（沿用本機繁中名稱，待使用者確認；`base_impact_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L989-L1012)）

@@ -24,6 +24,7 @@
 | [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [順劈加成](#base_cleave_node_buff_medium_1) | 未見明確矛盾 |
+| [衝擊加成](#base_impact_node_buff_medium_1) | 未見明確矛盾 |
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
@@ -137,6 +138,13 @@
 - 描述鍵：`loc_talent_cleave_boost_medium_desc`；hash：`88737f68`。
 - 結論：未見明確矛盾。繁中「順劈」與英文 Cleave 對應；未詳列傷害/衝擊質量上限不列勘誤。
 - [原始碼推導與限制](base_cleave_node_buff_medium_1.md)。
+
+<a id="base_impact_node_buff_medium_1"></a>
+## 衝擊加成(Impact Boost)
+
+- 描述鍵：`loc_talent_impact_boost_medium_desc`；hash：`f61917fa`。
+- 結論：未見明確矛盾。繁中「衝擊」與英文 Impact 一致，補充與生命傷害的區別。
+- [原始碼推導與限制](base_impact_node_buff_medium_1.md)。
 
 <a id="adamant_plasteel_plates"></a>
 ## 塑鋼裝甲(Plasteel Plates)
