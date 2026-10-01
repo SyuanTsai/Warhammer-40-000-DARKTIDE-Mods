@@ -24,6 +24,19 @@ conditional由_is_in_weapon_alternate_fire_with_stamina判斷武器slot、altern
 - 玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
 - 靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
 
+## 遊戲本體繁中對照
+
+- 文本來源：本機Steam Build `25492122`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
+- 語系鍵：`loc_talent_veteran_ads_drains_stamina_boost_desc`；hash：`81e6a4bd`；繁中entry_index：`8433`；英文entry_index：`8434`。以資源＋hash配對，已確認兩語系此hash各一筆。
+- 繁中問題片段：「後座力減免」；同版英文對照片段：`Sway Reduction`。引文保留原始占位符，未冒充遊戲畫面的最終數字。
+- 判定：**明確繁中描述錯誤**。屬性名稱錯譯：同版英文是Sway Reduction；格式參數讀1-sway_modifier，設定sway=.4而recoil=-.12。不是術語風格差異，而是把一個數值套在另一屬性上。
+- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不將未證實同版的實作差異單獨當成繁中錯譯。完整文本只留本機，Git僅保存必要短引文與追溯資料。
+- [完整比對範圍與版本限制](LOCALIZATION_COMPARISON.md)。
+
+- [公開依據：scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第248–263行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L248-L263)
+- [公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第1411–1425行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1411-L1425)
+- [公開依據：scripts/settings/talent/talent_settings_veteran.lua，第173–180行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L173-L180)
+
 ## 圖示來源
 
 - [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_ads_drain_stamina.webp)；取得日期 2026-10-01。圖示只供呈現，不作機制證據。
