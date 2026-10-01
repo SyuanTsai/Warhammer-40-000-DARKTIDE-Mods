@@ -291,7 +291,7 @@
 ## 專注鬥士(Focused Fighter)
 
 - 描述鍵：`loc_talent_ogryn_melee_attacks_give_mtdr_desc`；hash：`7ced0743`。
-- 結論：跨來源待同版核對。中英都指受近戰傷害清層；此SHA的全隊事件沒有本人篩選，可能因隊友受擊也清除。非單獨繁中誤譯，需同版實測。
+- 結論：跨來源待同版核對。同源中英都描述受到近戰傷害後清層；固定公開實作使用全隊傷害事件且沒有本人篩選，隊友受傷亦會清除。兩來源未確認同版，不列繁中誤譯。
 - [原始碼推導與限制](ogryn_melee_attacks_give_mtdr.md)。
 
 <a id="ogryn_pushing_applies_brittleness"></a>
