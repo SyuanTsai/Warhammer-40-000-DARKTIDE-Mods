@@ -48,7 +48,7 @@
 | <img src="https://github.com/user-attachments/assets/a5b64063-ac9d-404d-98ac-528f24aafb65" width="32" height="32" alt="戰術裝填天賦圖示"> [戰術裝填](#veteran_faster_reload_on_non_empty_clips)<br>- Tactical Reload | <ul><li>彈匣還有彈藥時開始裝填，裝填速度增加 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/009ef44a-cf3d-44cf-ac8b-cda57c6fd83d" width="32" height="32" alt="齊射能手天賦圖示"> [齊射能手](#veteran_reload_speed_on_elite_kill)<br>- Volley Adept | <ul><li>擊殺精英或專家敵人後，下一次裝填速度增加 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="堅定不移天賦圖示"> [堅定不移](#veteran_increased_weakspot_damage)<br>- Precision Strikes | <ul><li>弱點命中的額外傷害加成 +30%；整次命中的增幅依武器、目標與既有加成而變。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/7be19cb4-a1cb-4211-b9f2-d754f3c95b6c" width="32" height="32" alt="亡命之徒天賦圖示"> [亡命之徒](#veteran_increased_melee_crit_chance_and_melee_finesse)<br>- Desperado | <ul><li>近戰爆擊率增加 10 個百分點。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/7be19cb4-a1cb-4211-b9f2-d754f3c95b6c" width="32" height="32" alt="亡命之徒天賦圖示"> [亡命之徒](#veteran_increased_melee_crit_chance_and_melee_finesse)<br>- Desperado | <ul><li>近戰爆擊率增加 10 個百分點。</li><li>近戰爆擊／弱點額外傷害加成 +25%，整次命中的增幅依武器與目標而變。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d6402640-110e-4d25-b1b3-780a49b1c4e1" width="32" height="32" alt="嗜血天賦圖示"> [嗜血](#veteran_all_kills_replenish_toughness)<br>- Out for Blood | <ul><li>每次擊殺額外恢復 5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dca385d7-a54e-4bf5-b67d-f3d29ef82234" width="32" height="32" alt="遊擊者天賦圖示"> [遊擊者](#veteran_increase_damage_after_sprinting)<br>- Skirmisher | <ul><li>衝刺或滑行時持續累積傷害加成，每層增加 6.25%，最多 4 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fd178238-be59-4c18-8631-12423f5506fb" width="32" height="32" alt="趁火打劫天賦圖示"> [趁火打劫](#veteran_crits_apply_rending)<br>- Exploit Weakness | <ul><li>近戰爆擊命中後，傷害增加 20%，持續 6 秒。</li></ul> | 技能 |
@@ -877,12 +877,16 @@
 <img src="https://github.com/user-attachments/assets/7be19cb4-a1cb-4211-b9f2-d754f3c95b6c" width="72" height="72" alt="亡命之徒天賦圖示">
 
 - **近戰爆擊率增加 10 個百分點。**
-- **近戰爆擊或弱點命中的額外傷害增加 25%。**
+- **近戰爆擊或弱點命中的額外傷害加成增加 25%。**
+- 傷害加成只作用於額外部分，整次命中的增幅依武器與目標而變。同時爆擊並命中弱點時，這項 25% 加成只套用一次。
 
 #### 爆擊與傷害算例
 
-- 原本近戰爆擊率 10%：`10% + 10% = 20%`。
-- 假設基礎部分 100、爆擊或弱點額外部分 40，沒有其他加成：`100 + 40 × 1.25 = 150 傷害`，原本為 140。
+- **爆擊率**：原本近戰爆擊率 10%，點選後為 `10% + 10% = 20%`。
+
+- **單次傷害**：假設未爆擊的近戰弱點命中，基礎部分 100、未加成的額外部分 40，沒有其他加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × 1.25 = 150 點`，整次傷害增加 `10 ÷ 140 ≈ 7.14%`。
+
+- **額外傷害較高時**：若同條件的額外部分為 100，則由 200 變成 `100 + 100 × 1.25 = 225 點`，增加 `25 ÷ 200 = 12.5%`。這些算例只比較單次弱點傷害；持續攻擊的平均傷害還受爆擊率、弱點命中率與攻擊方式影響。
 
 [詳細資料](TALENTS%20Veteran/veteran_increased_melee_crit_chance_and_melee_finesse.md) · [返回目錄](#talent-index)
 
