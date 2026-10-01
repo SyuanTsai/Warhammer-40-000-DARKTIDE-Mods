@@ -10,6 +10,7 @@
 | <img src="https://github.com/user-attachments/assets/8d21cff6-d918-4e91-8426-b98634887a03" width="32" height="32" alt="信仰之刃天賦圖示"> [信仰之刃](#zealot_throwing_knives)<br>- Blades of Faith | <ul><li>以 12 把投擲刀取代手雷，可在衝刺時快速投擲。</li><li>近戰擊殺精英或專家敵人補 1 把；拾取彈藥也能補充。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/73777d2d-3727-47dc-8093-0d25ec6a3cfd" width="32" height="32" alt="眩暈風暴手雷天賦圖示"> [眩暈風暴手雷](#zealot_improved_stun_grenade)<br>- Stunstorm Grenade | <ul><li>震撼手雷的爆炸半徑增加 50%，最大半徑由 8 公尺提高為 12 公尺。</li><li>最多攜帶 3 枚；命中後附加持續 8 秒的電擊效果。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/da0a72a9-f944-4291-a753-a8c87b696ad5" width="32" height="32" alt="恩賜天賦圖示"> [恩賜](#zealot_toughness_damage_reduction_coherency_improved)<br>- Benediction | <ul><li>你與協同範圍內的隊友受到的韌性傷害降低 15%。</li><li>取代原有的 7.5% 光環；相同光環不重複疊加。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/ac37d3b8-a749-4604-98ba-2781c220761f" width="32" height="32" alt="純潔信標天賦圖示"> [純潔信標](#zealot_corruption_healing_coherency_improved)<br>- Beacon of Purity | <ul><li>每秒為你與協同範圍內的隊友清除 1.5 點腐敗。</li><li>只清除目前傷口內的腐敗，不能恢復已失去的完整傷口。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/4ae30922-3e39-4ded-8e19-35ec595befa0" width="32" height="32" alt="不屈靈魂合唱天賦圖示"> [不屈靈魂合唱](#zealot_bolstering_prayer)<br>- Chorus of Spiritual Fortitude | <ul><li>引導約 3.67 秒，開始時立即脈衝，之後每 0.8 秒一次；基礎冷卻 60 秒。</li><li>每次脈衝作用於本人與協同中的盟友，恢復韌性、提高暫時最大韌性，並賦予免死及眩暈免疫。</li><li>脈衝會踉蹌附近敵人；引導期間另持續恢復韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/bd841f6f-e0ff-4cfa-a3ac-f7d08bfbc80e" width="32" height="32" alt="有信者之怒天賦圖示"> [有信者之怒](#zealot_attack_speed_post_ability)<br>- Fury of the Faithful | <ul><li>向前衝刺，基礎冷卻 30 秒；開始時恢復最多相當於最大韌性 50% 的韌性。</li><li>衝刺後獲得 +20% 攻擊速度；描述顯示 10 秒，執行 buff 時長為 11 秒。</li><li>衝刺後的近戰 buff 最長 3 秒，下一次有效近戰命中獲得 +25% 近戰傷害、+100% 近戰暴擊機率與 +100% 近戰撕裂。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29" width="32" height="32" alt="神聖事業天賦圖示"> [神聖事業](#zealot_channel_grants_toughness_damage_reduction)<br>- Holy Cause | <ul><li>「神聖事業」讓合唱脈衝對本人與協同盟友疊加韌性傷害減免。</li><li>每次脈衝 +8% 韌性傷害減免，最多 5 層，即最高 40%；持續 10 秒，脈衝會刷新時間。</li><li>合唱約 3.67 秒、每 0.8 秒脈衝一次；約 5 次脈衝可累積到上限。</li></ul> | 能力 |
@@ -167,6 +168,23 @@
 - **光環替換與疊加**：此效果取代基礎的 7.5% 韌性減傷光環，不能相加成 22.5%。多名隊友同時提供恩賜，也只採用一次 15% 減傷。
 
 [詳細資料](TALENTS%20Zealot/zealot_toughness_damage_reduction_coherency_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_corruption_healing_coherency_improved"></a>
+### 純潔信標(Beacon of Purity)
+
+<img src="https://github.com/user-attachments/assets/ac37d3b8-a749-4604-98ba-2781c220761f" width="72" height="72" alt="純潔信標天賦圖示">
+
+- **效果**：每 1 秒為你與協同範圍內的隊友清除 1.5 點腐敗。這是固定點數，不是生命上限的 1.5%。
+
+- **回復算例**：若仍保有全部傷口、目前有 10 點腐敗，一次回復後為 10 − 1.5 = 8.5 點；在沒有新增腐敗的情況下，7 次回復即可清除這 10 點。
+
+- **傷口限制**：不能恢復已失去的完整傷口。例如生命上限 200、共 4 格傷口，失去一格且有 60 點腐敗時，最多只能清到 51 點，無法靠此光環取回那一格。
+
+- **疊加方式**：多名隊友提供相同光環時，每秒仍只清除 1.5 點，不會變成 3 點或更多。
+
+[詳細資料](TALENTS%20Zealot/zealot_corruption_healing_coherency_improved.md) · [返回目錄](#talent-index)
 
 ---
 
