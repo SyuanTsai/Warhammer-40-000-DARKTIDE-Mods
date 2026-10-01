@@ -43,6 +43,7 @@
 | <img src="https://github.com/user-attachments/assets/0d36baca-b919-457c-890e-535a0ce33236" width="32" height="32" alt="毒性再生天賦圖示"> [毒性再生](#broker_passive_replenish_toughness_while_toxined_enemies_in_proximity)<br>- Toxic Renewal | <ul><li>15 公尺內每名感染毒素的敵人，每秒恢復 1% 最大韌性，最多計 10 名。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/148db758-02d7-4855-9f45-badcabc7c8cf" width="32" height="32" alt="軍火商天賦圖示"> [軍火商](#broker_passive_extended_mag)<br>- Ammo Jack | <ul><li>彈匣容量增加 15%，結果無條件進位。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d6795940-e616-410f-b56b-76593e8a12eb" width="32" height="32" alt="趁人之危天賦圖示"> [趁人之危](#broker_passive_damage_vs_heavy_staggered)<br>- Cheap Shots | <ul><li>對踉蹌敵人增傷 10%；中度或重度踉蹌改為 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/83713f05-33fd-41c1-86f2-c536d7a1f06c" width="32" height="32" alt="心狠手辣天賦圖示"> [心狠手辣](#broker_passive_melee_crit_instakill)<br>- Hyper-Critical | <ul><li>近戰爆擊後，若人類體型敵人的剩餘生命少於該次傷害，立即處決；隊長除外。</li></ul> | 技能 |
 
 ---
 
@@ -564,5 +565,20 @@
 - **傷害算例**：基礎 100 點，輕度踉蹌時為 110，中度或重度為 115；另有同階段 25% 增傷時，後者為 100 × (1 + 25% + 15%) = 140 點。
 
 [詳細資料](TALENTS%20Scum/broker_passive_damage_vs_heavy_staggered.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_melee_crit_instakill"></a>
+### 心狠手辣(Hyper-Critical)
+
+<img src="https://github.com/user-attachments/assets/83713f05-33fd-41c1-86f2-c536d7a1f06c" width="72" height="72" alt="心狠手辣天賦圖示">
+
+- **觸發條件**：近戰爆擊命中人類體型敵人後，若敵人仍活著，而且剩餘生命嚴格小於該次實際傷害，就會被直接處決。隊長類敵人不適用。
+
+- **生命門檻算例**：敵人原有 190 點生命，這次爆擊造成 100，命中後剩 90；90 < 100，因此處決。原有 200 時剩 100，因 100 不小於 100，不觸發。
+
+- **兩倍傷害的意思**：在這次命中確實扣除相同傷害的前提下，等同命中前生命低於傷害的 2 倍；不是打完後剩餘生命低於 2 倍就處決。
+
+[詳細資料](TALENTS%20Scum/broker_passive_melee_crit_instakill.md) · [返回目錄](#talent-index)
 
 ---
