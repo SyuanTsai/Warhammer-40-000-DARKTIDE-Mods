@@ -15,6 +15,7 @@
 | [子彈風暴](#ogryn_blo_ally_ranged_buffs) | 繁中描述錯誤 |
 | [激鬥戰火](#ogryn_blo_wield_speed) | 未見明確矛盾 |
 | [退後！](#ogryn_blo_melee) | 繁中描述錯誤 |
+| [強力劈砍](#ogryn_heavy_hitter_cleave) | 未見明確矛盾 |
 | [最好的防禦](#ogryn_multi_heavy_toughness) | 未見明確矛盾 |
 | [碾碎它們！](#ogryn_single_heavy_toughness) | 未見明確矛盾 |
 | [關鍵人物](#ogryn_increased_coherency_toughness) | 未見明確矛盾 |
@@ -118,6 +119,13 @@
 - 繁中原文短引：擊殺敵人後，近戰攻擊有{chance:%s}機率使下次射擊觸發幸運子彈，可堆疊{stacks:%s}次。
 - 同源英文：On Killing Melee Attack gain {chance:%s} chance to trigger Lucky Bullet on next Shot. Stacks {stacks:%s} times.
 - [原始碼推導與限制](ogryn_blo_melee.md)。
+
+<a id="ogryn_heavy_hitter_cleave"></a>
+## 強力劈砍(Great Cleaver)
+
+- 描述鍵：`loc_talent_ogryn_passive_heavy_hitter_cleave_desc`；hash：`7eed29b9`。
+- 結論：未見明確矛盾。繁中寫「額外增加…順劈效果」，英文寫「also grants … Cleave for each stack」；兩者都表示依重拳出擊層數增加順劈效果，沒有把它說成傷害加成。
+- [原始碼推導與限制](ogryn_heavy_hitter_cleave.md)。
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
