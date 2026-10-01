@@ -10,6 +10,7 @@
 |---|---|
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
+| [過載轉移晶格](#cryptic_electrocution_defense) | 未見明確矛盾 |
 | [報應導管](#cryptic_damage_vs_electrocuted_scaling_on_charge) | 未見明確矛盾 |
 | [絕境中繼](#cryptic_crit_chance_based_on_charge) | 未見明確矛盾 |
 | [弱點分析教義](#cryptic_afflicted_increased_damage) | 未見明確矛盾 |
@@ -30,6 +31,13 @@
 - 描述鍵：`loc_talent_cryptic_dr_on_toughness_break_desc`；hash：`05a4e1a1`。
 - 結論：待同版核對。中英都把15秒寫成觸發間隔，但固定來源採5秒效果後加15秒冷卻。屬雙語文字與來源實作差異，尚未確認同版，不能定為繁中誤譯。
 - [原始碼推導與限制](cryptic_dr_on_toughness_break.md)。
+
+<a id="cryptic_electrocution_defense"></a>
+## 過載轉移晶格(Overcharge Transfer Lattice)
+
+- 描述鍵：`loc_talent_cryptic_electrocution_defense_desc`；hash：`b02129e2`。
+- 結論：未見明確矛盾。中英文範圍中心都是攻擊者；補充造成傷害與冷卻條件。
+- [原始碼推導與限制](cryptic_electrocution_defense.md)。
 
 <a id="cryptic_damage_vs_electrocuted_scaling_on_charge"></a>
 ## 報應導管(Retribution Conduit)

@@ -8,6 +8,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="能量載分配鏈路天賦圖示"> [能量載分配鏈路](#cryptic_crits_grant_tdr)<br>- Power Redistribution Uplink | <ul><li>爆擊命中後，3 秒內恢復 7.5% 韌性</li><li>期間承受的韌性傷害降低 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ea4be2ad-8b84-4e83-a056-993beed7b39c" width="32" height="32" alt="適應性戰鬥記憶體天賦圖示"> [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break)<br>- Adaptive Combat Engram | <ul><li>韌性耗盡後，減少 30% 承受傷害、持續 5 秒</li><li>效果結束後冷卻 15 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/74c8388d-8388-4646-8a91-0eb056656036" width="32" height="32" alt="過載轉移晶格天賦圖示"> [過載轉移晶格](#cryptic_electrocution_defense)<br>- Overcharge Transfer Lattice | <ul><li>遭近戰傷害時電擊攻擊者周圍 2.5 公尺敵人</li><li>冷卻 15 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/eb093286-7cce-40e8-b518-3b5bc16dd38d" width="32" height="32" alt="報應導管天賦圖示"> [報應導管](#cryptic_damage_vs_electrocuted_scaling_on_charge)<br>- Retribution Conduit | <ul><li>對電擊目標提高 10% 傷害</li><li>每份完整電容量再增加 5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5e8556aa-e9d9-4400-a863-bb26a5f11e17" width="32" height="32" alt="絕境中繼天賦圖示"> [絕境中繼](#cryptic_crit_chance_based_on_charge)<br>- Last Stand Relay | <ul><li>爆擊率增加 6 個百分點</li><li>沒有完整電容量時提高至 10 個百分點</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4683657a-edf5-4420-b60f-68eddc85ef43" width="32" height="32" alt="弱點分析教義天賦圖示"> [弱點分析教義](#cryptic_afflicted_increased_damage)<br>- Weakness Analysis Doctrine | <ul><li>命中電擊、燃燒、靈魂之火、流血或中毒敵人</li><li>傷害提高 10%、持續 8 秒</li></ul> | 技能 |
@@ -46,6 +47,21 @@
 - **減傷算例**：沒有其他減傷時，100 × (1 − 30%) = 70 點；若另有獨立的 25% 減傷，則是 100 × 0.70 × 0.75 = 52.5 點。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_dr_on_toughness_break.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_electrocution_defense"></a>
+### 過載轉移晶格(Overcharge Transfer Lattice)
+
+<img src="https://github.com/user-attachments/assets/74c8388d-8388-4646-8a91-0eb056656036" width="72" height="72" alt="過載轉移晶格天賦圖示">
+
+- **觸發方式**：受到近戰攻擊傷害時，以攻擊者為中心，電擊 2.5 公尺內的存活敵人；單純格擋不觸發。
+
+- **電擊效果**：電擊狀態維持 3 秒，再次施加會刷新時間；對不同敵人的實際控制效果仍取決於其抗性。
+
+- **冷卻方式**：觸發後冷卻 15 秒。例如第 0 秒觸發，第 10 秒再被打不會重複發動，第 15 秒後再次受到符合條件的攻擊才會發動。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_electrocution_defense.md) · [返回目錄](#talent-index)
 
 ---
 
