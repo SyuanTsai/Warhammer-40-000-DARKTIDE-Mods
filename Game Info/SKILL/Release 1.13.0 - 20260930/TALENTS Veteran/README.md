@@ -6,7 +6,7 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 13／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 14／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -78,7 +78,7 @@
 | 技能 | 遠射 / `veteran_increased_damage_based_on_range` | `node_62b7b680-7096-40ed-9303-7ba124a5d812` | 待核對 |
 | 技能 | [行雲流水](veteran_reduce_swap_time.md) / `veteran_reduce_swap_time` | `node_41d2b96f-c399-47c0-88c3-9e60a07638fc` | 完成（核心靜態機制） |
 | 技能 | 死亡射手 / `veteran_ads_drain_stamina` | `node_7adfbd19-7df3-4337-875b-2a9dfa00d378` | 待核對 |
-| 技能 | 幹掉它！ / `veteran_big_game_hunter` | `node_181e4412-cb3f-4b80-b3f9-10c5bb61d022` | 待核對 |
+| 技能 | [幹掉它！](veteran_big_game_hunter.md) / `veteran_big_game_hunter` | `node_181e4412-cb3f-4b80-b3f9-10c5bb61d022` | 完成（核心靜態機制） |
 | 技能 | [優越情節](veteran_increase_damage_vs_elites.md) / `veteran_increase_damage_vs_elites` | `node_06272211-2d9a-47c7-bf84-8e7ea1eb8a01` | 完成（核心靜態機制） |
 | 技能 | 靈活應對 / `veteran_dodging_grants_stamina` | `node_e17c1b44-cbfd-4f58-bc7e-dc80ff90fbcc` | 待核對 |
 | 技能 | 鋼鐵意志 / `veteran_tdr_on_high_toughness` | `node_60000569-87a7-4c75-874b-02b86af43f52` | 待核對 |

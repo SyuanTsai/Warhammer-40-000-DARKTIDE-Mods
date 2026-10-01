@@ -15,6 +15,7 @@
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
 | 技能 | [行雲流水(One Motion)](#veteran_reduce_swap_time) | 武器切換速度增加 50%。 |
+| 技能 | [幹掉它！(Bring it Down!)](#veteran_big_game_hunter) | 對歐格林與巨獸的傷害增加 20%。 |
 | 技能 | [優越情節(Superiority Complex)](#veteran_increase_damage_vs_elites) | 增加對精英敵人的傷害 |
 | 技能 | [讓他們全趴下！(Keep Their Heads Down!)](#veteran_increase_suppression) | 造成的壓制效果增加 75%。 |
 | 技能 | [近戰傷害提升(Melee Damage Boost)](#base_melee_damage_node_buff_high_2) | 近戰傷害增加 15%。 |
@@ -205,6 +206,24 @@
 - 這段動作縮短約 33.3%；不會連帶加速裝填或攻擊。
 
 [詳細資料](TALENTS%20Veteran/veteran_reduce_swap_time.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_big_game_hunter"></a>
+
+### 幹掉它！(Bring it Down!)
+
+<img src="https://github.com/user-attachments/assets/fc1e80c9-c17b-4e96-909d-bab403221f03" width="72" height="72" alt="幹掉它！天賦圖示">
+
+- **對歐格林與巨獸的傷害增加 20%。**
+- 近戰與遠程攻擊均適用。
+
+#### 傷害算例
+
+- 只計此天賦，基礎傷害 100：`100 × 1.2 = 120 傷害`。
+- 同階段另有 15% 傷害加成：`100 × (1 + 20% + 15%) = 135 傷害`。
+
+[詳細資料](TALENTS%20Veteran/veteran_big_game_hunter.md) · [返回目錄](#talent-index)
 
 ---
 
