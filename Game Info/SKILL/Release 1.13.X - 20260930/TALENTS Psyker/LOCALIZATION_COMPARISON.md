@@ -64,7 +64,7 @@
 | [亞空間強化](#psyker_warp_charge_reduces_toughness_damage_taken) | 已配對；機制待核對 |
 | [看破](#psyker_improved_dodge) | 繁中原文勘誤 |
 | [反射閃避](#psyker_dodge_after_crits) | 未見明確矛盾 |
-| [穩固](#psyker_increased_vent_speed) | 已配對；機制待核對 |
+| [穩固](#psyker_increased_vent_speed) | 待同版核對 |
 | [亞空間騎士](#psyker_damage_based_on_warp_charge) | 未見明確矛盾 |
 | [精確瞄準](#psyker_guaranteed_crit_on_multiple_weakspot_hits) | 未見明確矛盾 |
 | [傀儡師](#psyker_coherency_aura_size_increase) | 繁中原文勘誤 |
@@ -488,7 +488,7 @@
 ## 穩固(Solidity)
 
 - 描述鍵：`loc_talent_psyker_increased_vent_speed_description`；hash：`479e9713`。
-- 已配對原文，機制待核對。
+- 結論：待同版核對。本機用語為平息速度，固定源碼把.7套到時間與間隔。兩者版本未對齊，不直接判定繁中誤譯。
 - [原始碼推導與限制](psyker_increased_vent_speed.md)。
 
 <a id="psyker_damage_based_on_warp_charge"></a>

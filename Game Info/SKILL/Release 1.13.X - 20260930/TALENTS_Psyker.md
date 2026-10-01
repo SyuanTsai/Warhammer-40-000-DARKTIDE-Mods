@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/3c19e5ea-ccab-46a3-9763-c8d4075c6332" width="32" height="32" alt="完美時機天賦圖示"> [完美時機](#psyker_crits_empower_next_attack)<br>- Perfect Timing | <ul><li>爆擊命中增加 3% 傷害，最多 5 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/80b2261c-4df6-4531-b9c1-bf67fbbbdcee" width="32" height="32" alt="看破天賦圖示"> [看破](#psyker_improved_dodge)<br>- Anticipation | <ul><li>有效閃避次數增加 1 次；閃避保護的延續時間增加 50%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/946f549a-ed56-4711-aee8-39ce35a0a6b1" width="32" height="32" alt="反射閃避天賦圖示"> [反射閃避](#psyker_dodge_after_crits)<br>- Empathic Evasion | <ul><li>爆擊命中後，1 秒內對遠程攻擊視為正在閃避。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/86582600-a30d-4e5a-b87b-ae33b2e78746" width="32" height="32" alt="穩固天賦圖示"> [穩固](#psyker_increased_vent_speed)<br>- Solidity | <ul><li>平息反噬的時間倍率變成 0.7。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8f79e11c-ea7c-4e52-957b-007bd85bcf1b" width="32" height="32" alt="亞空間騎士天賦圖示"> [亞空間騎士](#psyker_damage_based_on_warp_charge)<br>- Warp Rider | <ul><li>依目前反噬提高傷害，最高增加 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4b242d12-87d5-44a8-a2aa-4c1a0f3a2376" width="32" height="32" alt="精確瞄準天賦圖示"> [精確瞄準](#psyker_guaranteed_crit_on_multiple_weakspot_hits)<br>- True Aim | <ul><li>累積 5 次有效弱點命中，使下一次遠程攻擊必定爆擊。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1561e519-2633-4a6f-af9f-fffe6a6c8a03" width="32" height="32" alt="傀儡師天賦圖示"> [傀儡師](#psyker_coherency_aura_size_increase)<br>- Puppet Master | <ul><li>協同範圍半徑增加 75%。</li></ul> | 技能 |
@@ -122,6 +123,19 @@
 - **適用範圍**：這是遠程閃避判定，不提供近戰無敵，也不能把所有爆炸、地面火焰都當成可免疫的遠程命中。
 
 [詳細資料](TALENTS%20Psyker/psyker_dodge_after_crits.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_increased_vent_speed"></a>
+### 穩固(Solidity)
+
+<img src="https://github.com/user-attachments/assets/86582600-a30d-4e5a-b87b-ae33b2e78746" width="72" height="72" alt="穩固天賦圖示">
+
+- **運作方式**：主動平息反噬所需時間縮短 30%。
+
+- **時間算例**：相同武器、起始反噬與其他條件下，原本需 4 秒的平息過程約變成 4 × 0.7 = 2.8 秒。換算每秒處理速度為 1 ÷ 0.7 ≈ 1.429 倍，約快 42.9%。
+
+[詳細資料](TALENTS%20Psyker/psyker_increased_vent_speed.md) · [返回目錄](#talent-index)
 
 ---
 
