@@ -39,6 +39,7 @@
 | <img src="https://github.com/user-attachments/assets/d61a8184-294b-4ade-9847-3c5241828792" width="32" height="32" alt="為了小子們天賦圖示"> [為了小子們](#ogryn_protect_allies)<br>- For the Lil'Uns | <ul><li>隊友韌性破裂後，提高 10% 威力並獲得 25% 韌性減傷，持續 10 秒。</li><li>隊友倒地後，提高 25% 扶起速度並免疫暈眩，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c5cc14b1-1227-4449-a1d9-de912e048e6e" width="32" height="32" alt="頭腦簡單天賦圖示"> [頭腦簡單](#ogryn_corruption_resistance)<br>- Simple Minded | <ul><li>受到的腐敗減少 40%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fca0827b-6dac-4c44-b92e-8aba309ff4ca" width="32" height="32" alt="專注鬥士天賦圖示"> [專注鬥士](#ogryn_melee_attacks_give_mtdr)<br>- Focused Fighter | <ul><li>每次近戰揮擊命中後獲得 4% 近戰減傷，最多 5 層。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/024bec9b-772c-4313-b7b8-d119efdcf8f1" width="32" height="32" alt="蠻橫之力天賦圖示"> [蠻橫之力](#ogryn_pushing_applies_brittleness)<br>- Brutish Strength | <ul><li>推擊施加 4 層脆弱，合計 10%，持續 5 秒。</li></ul> | 技能 |
 
 ---
 
@@ -538,5 +539,20 @@
 - **移除方式**：層數沒有固定倒數；受到近戰傷害後清除。此減傷只影響近戰傷害，不會降低遠程傷害。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_melee_attacks_give_mtdr.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_pushing_applies_brittleness"></a>
+### 蠻橫之力(Brutish Strength)
+
+<img src="https://github.com/user-attachments/assets/024bec9b-772c-4313-b7b8-d119efdcf8f1" width="72" height="72" alt="蠻橫之力天賦圖示">
+
+- **觸發與疊層**：推擊仍存活的敵人時，施加 4 層脆弱，每層 2.5%，合計 10%；最多 16 層、40%，持續 5 秒，再次施加刷新時間。
+
+- **作用方式**：效果留在敵人身上，隊友也能受益。脆弱與攻擊者的撕裂共同改善護甲倍率，不是讓最終傷害固定提高相同比例。
+
+- **傷害算例**：假設對甲殼護甲的原倍率為 0.5、基礎傷害 100，一次推擊後為 100 × (0.5 + 4 × 2.5%) = 60 點；滿 16 層為 90 點。超過護甲倍率 1 的部分另按超額撕裂規則計算。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_pushing_applies_brittleness.md) · [返回目錄](#talent-index)
 
 ---

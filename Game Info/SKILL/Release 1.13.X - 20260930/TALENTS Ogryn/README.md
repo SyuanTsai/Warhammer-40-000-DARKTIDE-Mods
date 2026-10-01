@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L3-L10)。內部 tree version 25 不等於遊戲發行版號。
 
-完成 33／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 34／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -44,3 +44,4 @@
 | 技能 | [為了小子們](ogryn_protect_allies.md) / `ogryn_protect_allies` | `node_1ea4b738-84ef-45d6-8a69-151d578944d5` | 完成（核心靜態機制） |
 | 技能 | [頭腦簡單](ogryn_corruption_resistance.md) / `ogryn_corruption_resistance` | `node_fda3d772-6d7d-4571-bf2b-80a14bbad5f9` | 完成（核心靜態機制） |
 | 技能 | [專注鬥士](ogryn_melee_attacks_give_mtdr.md) / `ogryn_melee_attacks_give_mtdr` | `node_bbd8f036-4fd4-4438-bc14-bb08632c7b09` | 完成（核心靜態機制） |
+| 技能 | [蠻橫之力](ogryn_pushing_applies_brittleness.md) / `ogryn_pushing_applies_brittleness` | `node_11f1b2c0-3982-411e-b0fd-9f51ef609d6c` | 完成（核心靜態機制） |
