@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="32" height="32" alt="系統電擊天賦圖示"> [系統電擊](#cryptic_electrocution_applies_brittleness)<br>- System Shock | <ul><li>施加或刷新電擊時增加 3 層脆弱</li><li>每層 2.5%，持續 5 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d265085f-7abd-4433-adc1-3f0276351436" width="32" height="32" alt="彈藥預知天賦圖示"> [彈藥預知](#cryptic_ammo_reserve)<br>- Ammo-Cell Augury | <ul><li>儲備彈藥上限增加 25%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bb7b86c4-512f-495f-a82a-7011cae498d6" width="32" height="32" alt="電能修復天賦圖示"> [電能修復](#cryptic_coherency_toughness_on_ability)<br>- Voltaic Restoration | <ul><li>使用戰鬥能力，為自己與協同隊友恢復 20% 韌性</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/a86f113d-1a3e-4fc6-b1d1-24fe727b118d" width="32" height="32" alt="救贖教範天賦圖示"> [救贖教範](#cryptic_revive_speed_and_dr)<br>- Salvation Doctrine | <ul><li>援助隊友時減少 25% 承受傷害</li><li>援助速度提高 25%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5330c87c-7abe-4993-8eb2-5cb11586c013" width="32" height="32" alt="彈藥補給艙天賦圖示"> [彈藥補給艙](#cryptic_passive_ammo_replenishment)<br>- Ammunition-Restoration Pod | <ul><li>每 15 秒恢復儲備彈藥上限的 1%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="莫比亞導體天賦圖示"> [莫比亞導體](#cryptic_damage_on_ability)<br>- Moebian Conductor | <ul><li>啟動戰鬥能力後，傷害提高 15%、持續 10 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="適應性戰鬥校準天賦圖示"> [適應性戰鬥校準](#cryptic_cleave_and_impact)<br>- Adaptive Combat Calibration | <ul><li>韌性高於 50%：近戰順劈提高 30%</li><li>韌性不高於 50%：近戰衝擊提高 30%</li></ul> | 技能 |
@@ -532,6 +533,21 @@
 - **計次方式**：按能力啟動次數恢復；一次消耗 3 份電容量不會改成恢復 60%。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_coherency_toughness_on_ability.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_revive_speed_and_dr"></a>
+### 救贖教範(Salvation Doctrine)
+
+<img src="https://github.com/user-attachments/assets/a86f113d-1a3e-4fc6-b1d1-24fe727b118d" width="72" height="72" alt="救贖教範天賦圖示">
+
+- **運作方式**：拉起倒地隊友、拉上懸掛隊友、拆網或救援被俘隊友時，受到的傷害減少 25%，援助動作速度提高 25%。
+
+- **時間算例**：原本 4 秒的援助動作，在沒有其他速度加成時為 4 ÷ 1.25 = 3.2 秒。
+
+- **減傷算例**：援助期間原本 100 點傷害變成 100 × 0.75 = 75；停止援助後不再享有這項減傷。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_revive_speed_and_dr.md) · [返回目錄](#talent-index)
 
 ---
 
