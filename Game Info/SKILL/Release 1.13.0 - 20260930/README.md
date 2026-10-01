@@ -6,6 +6,7 @@
 - [角色基礎效果](TALENTS%20Veteran/BASE_EFFECTS.md)
 - [逐項原始碼、公式與待確認事項](TALENTS%20Veteran/README.md)
 - [未被當前技能樹直接使用的定義](TALENTS%20Veteran/UNUSED_DEFINITIONS.md)
+- [77項百分比描述盤點](TALENTS%20Veteran/DAMAGE_PERCENTAGE_REVIEW.md)
 - [POC 與完整職業驗收](POC.md)
 - [可重用分析與描述提示詞](PROMPT.md)
 
@@ -51,7 +52,7 @@
 
 ## 本機提交
 
-交付分支：`Feature/Skill-Reverse-engineering`；本次完整職業續作基準：`de3968f295f072632c0b51acc1208f5691029461`。每項驗收後精確暫存並單獨提交，未 push、建立 PR 或合併。下表記錄節點首次完成的提交，後續描述修正另可沿該技能子文件的 Git 歷史查閱。
+初始交付分支：`Feature/Skill-Reverse-engineering`；完整職業續作基準：`de3968f295f072632c0b51acc1208f5691029461`。每項驗收後精確暫存並單獨提交。下表保留節點首次完成的提交；該批文件後續已經由 [PR #162](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/162) 合併。本次百分比描述修正在 `codex/veteran-damage-percentage-clarity` 分支，各技能修正另可沿來源子文件的 Git 歷史查閱。
 
 | 分類 | 技能／talent ID | 首次完成 commit |
 |---|---|---|

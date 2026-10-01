@@ -27,6 +27,14 @@ stat_buff_stacking_count 將屬性層數限制在10；max_stacks_cap=31 是內�
 - [scripts/utilities/action/action_handler.lua，第 356–429 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/action/action_handler.lua#L356-L429)
 - [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 2585–2626 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2585-L2626)
 
+## 百分比與實際傷害增幅
+
+- **程式推導**：每層 ranged_finesse_modifier_bonus=.075；10層加成.75作用於base_finesse_damage，而非整筆damage。B=100、F=40、s=0時140→170（約21.43%）；F=100時200→275（37.5%）。玩家例固定非爆擊弱點命中、其他倍率為1。
+- ranged_finesse_modifier_bonus 與 hit_weakspot 成立時的 weakspot_damage 在同一 finesse_buff_damage_multiplier 內加算；10層與堅定不移合計.75+.30，B=F=100時傷害305。爆擊弱點命中先產生同一F，再套本加成一次，不存在因兩種條件同時成立而把.75套兩次的步驟。
+
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2798–2883 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2798-L2883)
+- [scripts/utilities/attack/damage_calculation.lua，第 672–782 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L672-L782)
+
 ## 算例條件與待確認事項
 
 - 玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
