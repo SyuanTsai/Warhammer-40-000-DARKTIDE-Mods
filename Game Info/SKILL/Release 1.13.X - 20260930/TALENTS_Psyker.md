@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/f556046f-b193-4776-963d-798307d2c36a" width="32" height="32" alt="亞空間震波天賦圖示"> [亞空間震波](#psyker_force_staff_quick_attack_bonus)<br>- Empyric Shock | <ul><li>力場法杖主要攻擊命中，使目標受到的亞空間傷害每層乘 1.06。</li><li>最多 5 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/b3086f22-3f24-417f-aaba-f59714897616" width="32" height="32" alt="如夢似幻天賦圖示"> [如夢似幻](#psyker_damage_to_peril_conversion)<br>- Just a Dream | <ul><li>反噬低於 97% 時減傷 25%，並依收到的傷害增加反噬。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/288f8a4c-fee3-4e56-8e0b-b2419e2a115b" width="32" height="32" alt="無形專注天賦圖示"> [無形專注](#psyker_damage_resistance_stun_immunity)<br>- Immaterial Focus | <ul><li>受到的傷害減少 10%。</li><li>反噬達 97% 時免疫暈眩；降離門檻後保留 4 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/49c99b4c-1fdc-4355-900d-2e4b4c733ba8" width="32" height="32" alt="亞空間意志天賦圖示"> [亞空間意志](#psyker_warp_glass_cannon)<br>- Empyric Resolve | <ul><li>反噬產生量減少 40%，韌性恢復量減少 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/57acd7a3-65a7-460c-876c-3153b63d69a3" width="32" height="32" alt="亞空間幽魂天賦圖示"> [亞空間幽魂](#psyker_stat_mix)<br>- Warp Ghost | <ul><li>耐力增加 2 點，韌性恢復量增加 25%。</li><li>反噬在自然消退的適用區段減慢 80%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/790d837c-239d-4d45-b4e8-c3c039df63ba" width="32" height="32" alt="靈魂穿透天賦圖示"> [靈魂穿透](#psyker_warp_attacks_rending)<br>- Penetration of the Soul | <ul><li>亞空間攻擊依目前反噬獲得撕裂，最高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e66044cc-0b83-4f85-86ff-84661f076941" width="32" height="32" alt="念力之握天賦圖示"> [念力之握](#psyker_increased_blitz_damage)<br>- Psykinetic Grip | <ul><li>顱腦崩裂、懲戒與靈能攻擊的傷害增加 20%。</li></ul> | 技能 |
@@ -522,6 +523,21 @@
 - **減傷算例**：只比較此減傷階段，100 點傷害變成 100 × 0.9 = 90 點。若另有獨立 20% 減傷，則為 100 × 0.8 × 0.9 = 72 點，合計減少 28%。
 
 [詳細資料](TALENTS%20Psyker/psyker_damage_resistance_stun_immunity.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_warp_glass_cannon"></a>
+### 亞空間意志(Empyric Resolve)
+
+<img src="https://github.com/user-attachments/assets/49c99b4c-1fdc-4355-900d-2e4b4c733ba8" width="72" height="72" alt="亞空間意志天賦圖示">
+
+- **運作方式**：反噬產生量減少 40%，但受此恢復修正影響的韌性恢復量也減少 30%。
+
+- **反噬算例**：原本產生 20 個百分點反噬，變成 20 × 0.6 = 12 個百分點；另有獨立 10% 反噬減免時，為 20 × 0.6 × 0.9 = 10.8 個百分點。
+
+- **恢復算例**：原本恢復 10 點韌性，變成 10 × 0.7 = 7 點；若另有 25% 恢復加成，則為 10 × 1.25 × 0.7 = 8.75 點，仍受最大韌性限制。
+
+[詳細資料](TALENTS%20Psyker/psyker_warp_glass_cannon.md) · [返回目錄](#talent-index)
 
 ---
 

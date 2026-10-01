@@ -83,7 +83,7 @@
 | [亞空間震波](psyker_force_staff_quick_attack_bonus.md) | 力場法杖主要攻擊命中，使目標受到的亞空間傷害每層乘 1.06。；最多 5 層，持續 10 秒。；完整計算與適用限制見來源文件。 |
 | [如夢似幻](psyker_damage_to_peril_conversion.md) | 反噬低於 97% 時減傷 25%，並依收到的傷害增加反噬。；完整計算與適用限制見來源文件。 |
 | [無形專注](psyker_damage_resistance_stun_immunity.md) | 受到的傷害減少 10%。；反噬達 97% 時免疫暈眩；降離門檻後保留 4 秒。；完整計算與適用限制見來源文件。 |
-| [亞空間意志](psyker_warp_glass_cannon.md) | 機制與公式待核對。 |
+| [亞空間意志](psyker_warp_glass_cannon.md) | 反噬產生量減少 40%，韌性恢復量減少 30%。；完整計算與適用限制見來源文件。 |
 | [亞空間幽魂](psyker_stat_mix.md) | 耐力增加 2 點，韌性恢復量增加 25%。；反噬在自然消退的適用區段減慢 80%。；完整計算與適用限制見來源文件。 |
 | [靈魂穿透](psyker_warp_attacks_rending.md) | 亞空間攻擊依目前反噬獲得撕裂，最高 20%。；完整計算與適用限制見來源文件。 |
 | [念力之握](psyker_increased_blitz_damage.md) | 顱腦崩裂、懲戒與靈能攻擊的傷害增加 20%。；完整計算與適用限制見來源文件。 |
