@@ -24,6 +24,7 @@
 | 能力 | [獵手決意(Hunter's Resolve)](#veteran_toughness_bonus_leaving_invisibility) | 效果：啟動滲透時，受到的韌性傷害降低 50%；隱身期間持續生效，解除隱身後再維持 10 秒。 |
 | 能力 | [戰術意識(Tactical Awareness)](#veteran_elite_kills_reduce_cooldown) | 觸發方式：擊殺特殊敵人後，獲得 3 秒的冷卻恢復效果：每秒額外恢復 1 秒戰鬥能力冷卻。一般菁英不會觸發。 |
 | 能力 | [發號施令(Voice of Command)](#veteran_combat_ability_stagger_nearby_enemies) | 施放效果：大聲呼喊，使周圍 9 公尺內的敵人踉蹌，並立即回滿自己的韌性。 |
+| 能力 | [只有死亡，職責才會終結(Only In Death Does Duty End)](#veteran_combat_ability_revive_nearby_allies) | 效果：發號施令可以立即扶起周圍 9 公尺內倒地的隊友，無須逐一按住救援。一次施放可扶起範圍內多名倒地隊友。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
@@ -413,6 +414,20 @@
 - **範圍與限制：**距離 8 公尺的敵人位於作用範圍，10 公尺則超出範圍。實際踉蹌反應會受到敵人種類及當下狀態影響。
 
 [詳細資料](TALENTS%20Veteran/veteran_combat_ability_stagger_nearby_enemies.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_combat_ability_revive_nearby_allies"></a>
+
+### 只有死亡，職責才會終結(Only In Death Does Duty End)
+
+<img src="https://github.com/user-attachments/assets/a8bcdde1-34e3-449d-9b46-e9130865b285" width="72" height="72" alt="只有死亡，職責才會終結天賦圖示">
+
+- **效果：**發號施令可以立即扶起周圍 9 公尺內倒地的隊友，無須逐一按住救援。一次施放可扶起範圍內多名倒地隊友。
+- **適用狀態：**只處理倒地待救援；被網住、被壓制、懸掛邊緣或死亡後等待營救，不屬於這項自動扶起的範圍。
+- **距離與冷卻：**基礎作用半徑為 9 公尺、冷卻 40 秒。例如兩名倒地隊友分別在 5 與 8 公尺處，兩人都能被扶起；10 公尺外則無法。
+
+[詳細資料](TALENTS%20Veteran/veteran_combat_ability_revive_nearby_allies.md) · [返回目錄](#talent-index)
 
 ---
 
