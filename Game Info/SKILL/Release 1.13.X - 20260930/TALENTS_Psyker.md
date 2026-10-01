@@ -28,6 +28,7 @@
 | <img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="32" height="32" alt="念力護盾天賦圖示"> [念力護盾](#psyker_combat_ability_force_field)<br>- Telekine Shield | <ul><li>展開護盾，阻擋敵方遠程攻擊</li><li>最長 17.5 秒；冷卻 40 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/72b10287-7ce1-47a1-a57f-a88c56c51f9f" width="32" height="32" alt="強化護盾天賦圖示"> [強化護盾](#psyker_shield_extra_charge)<br>- Bolstered Shield | <ul><li>念力護盾最多儲存 2 次</li><li>每次充能需 40 秒，逐次恢復</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0" width="32" height="32" alt="庇護所天賦圖示"> [庇護所](#psyker_boost_allies_in_sphere)<br>- Sanctuary | <ul><li>穹頂內每秒恢復 10% 最大韌性</li><li>消散時提供 50% 韌性減傷，持續 5 秒</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/60e6d4b2-0696-4215-8afd-8c9725d4801f" width="32" height="32" alt="念力穹頂天賦圖示"> [念力穹頂](#psyker_sphere_shield)<br>- Telekine Dome | <ul><li>護盾改為半徑 6 公尺的球形屏障</li><li>最長 25 秒；冷卻 60 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191" width="32" height="32" alt="衰弱界線天賦圖示"> [衰弱界線](#psyker_shield_stun_passive)<br>- Enervating Threshold | <ul><li>穿越護盾的敵人有 20% 機率被電擊</li><li>專家與巨獸必定觸發；專家會損傷護盾</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8" width="32" height="32" alt="亞空間突破天賦圖示"> [亞空間突破](#psyker_overcharge_stance_infinite_casting)<br>- Warp Unbound | <ul><li>注視結束後仍能免於反噬超載</li><li>保護持續 11.5 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
@@ -383,6 +384,19 @@
 - **恢復與減傷算例：**最大韌性 100 時，每秒恢復 100 × 10% = 10 點，3 秒最多恢復 30 點，以缺額為上限。減傷期間原本承受 40 點韌性傷害，變成 40 × 0.5 = 20 點。
 
 [詳細資料](TALENTS%20Psyker/psyker_boost_allies_in_sphere.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_sphere_shield"></a>
+### 念力穹頂(Telekine Dome)
+
+<img src="https://github.com/user-attachments/assets/60e6d4b2-0696-4215-8afd-8c9725d4801f" width="72" height="72" alt="念力穹頂天賦圖示">
+
+- **運作方式：**念力護盾改為在施放位置周圍展開半徑約 6 公尺的球形屏障，最長持續 25 秒，基礎冷卻改為 60 秒。護盾仍可能因耐久耗盡提早消失。
+
+- **時間比較：**相較原本護盾，持續時間增加 25 − 17.5 = 7.5 秒；冷卻增加 60 − 40 = 20 秒。耐久仍可承受 20 次有效扣除。
+
+[詳細資料](TALENTS%20Psyker/psyker_sphere_shield.md) · [返回目錄](#talent-index)
 
 ---
 
