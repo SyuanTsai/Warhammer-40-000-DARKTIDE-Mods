@@ -25,6 +25,7 @@
 | [加重背刺](#broker_passive_ramping_backstabs) | 未見明確矛盾 |
 | [移動目標](#broker_passive_increased_ranged_dodges) | 未見明確矛盾 |
 | [樣本採集](#broker_passive_stimm_cd_on_kill) | 繁中原文誤譯 |
+| [神經質](#broker_passive_improved_dodges_at_full_stamina) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -146,3 +147,10 @@
 - 繁中原文短引：擊殺可縮減{stimm:%s}的冷卻時間{restore:%s}秒。擊殺{toxin:%s}名受感染的敵人，反而會恢復{restore_toxined:%s}秒。
 - 同源英文：Kills reduce {restore:%s}s of your {stimm:%s} Cooldown. Killing {toxin:%s} infected Enemies instead restores {restore_toxined:%s}s.
 - [原始碼推導與限制](broker_passive_stimm_cd_on_kill.md)。
+
+<a id="broker_passive_improved_dodges_at_full_stamina"></a>
+## 神經質(Jittery)
+
+- 描述鍵：`loc_talent_broker_passive_improved_dodges_at_full_stamina_desc`；hash：`abe61ad9`。
+- 結論：未見明確矛盾。繁中與英文均寫「超過75%」，固定來源使用包含等於的>=。因兩種文字一致且來源未證實同版，記為邊界差異待同版核對，不列繁中誤譯。
+- [原始碼推導與限制](broker_passive_improved_dodges_at_full_stamina.md)。

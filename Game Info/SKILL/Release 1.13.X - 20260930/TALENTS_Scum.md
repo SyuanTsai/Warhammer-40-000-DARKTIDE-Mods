@@ -23,6 +23,7 @@
 | <img src="https://github.com/user-attachments/assets/d6f72725-01aa-4bc8-aeca-5e76118c1a51" width="32" height="32" alt="加重背刺天賦圖示"> [加重背刺](#broker_passive_ramping_backstabs)<br>- Ramping Backstabs | <ul><li>每次近戰背刺後增加 10% 近戰威力，最多 5 層；非背刺近戰命中會清除。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/95c8ba8f-bd1f-424f-bee5-435d83d4dfa6" width="32" height="32" alt="移動目標天賦圖示"> [移動目標](#broker_passive_increased_ranged_dodges)<br>- Moving Target | <ul><li>手持遠程武器時，有效閃避次數增加 1 次。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/19fc62d1-22a4-4366-9195-e523695c2a90" width="32" height="32" alt="樣本採集天賦圖示"> [樣本採集](#broker_passive_stimm_cd_on_kill)<br>- Sample Collector | <ul><li>每次擊殺縮短強化劑冷卻 0.5 秒；目標受毒素感染時改為 1 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/ab7d66da-9caa-4c94-9ddf-279a30441f67" width="32" height="32" alt="神經質天賦圖示"> [神經質](#broker_passive_improved_dodges_at_full_stamina)<br>- Jittery | <ul><li>耐力至少 75% 時，有效閃避次數的恢復等待時間縮短 40%。</li></ul> | 技能 |
 
 ---
 
@@ -268,5 +269,18 @@
 - 繁中原文把毒素名稱放進「擊殺…名」的人數位置。實際條件是「擊殺受毒素感染的敵人」，每次改縮短 1 秒冷卻。
 
 [詳細資料](TALENTS%20Scum/broker_passive_stimm_cd_on_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_improved_dodges_at_full_stamina"></a>
+### 神經質(Jittery)
+
+<img src="https://github.com/user-attachments/assets/ab7d66da-9caa-4c94-9ddf-279a30441f67" width="72" height="72" alt="神經質天賦圖示">
+
+- **生效條件**：目前耐力達最大值的 75% 時，連續閃避次數的恢復等待時間縮短 40%；低於門檻就失去加成。
+
+- **時間算例**：原本停止連續閃避後需等待 1 秒，變成 1 × (1 − 40%) = 0.6 秒。最大耐力 4 點時，至少保有 4 × 75% = 3 點即可生效。
+
+[詳細資料](TALENTS%20Scum/broker_passive_improved_dodges_at_full_stamina.md) · [返回目錄](#talent-index)
 
 ---
