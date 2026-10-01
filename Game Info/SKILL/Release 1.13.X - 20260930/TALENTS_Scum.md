@@ -102,6 +102,7 @@
 | <img src="https://github.com/user-attachments/assets/d4e178b4-1b2e-48cc-8221-35d5c515e8cb" width="32" height="32" alt="抗焦慮藥 IV天賦圖示"> [抗焦慮藥 IV](#broker_stimm_concentration_4)<br>- Kalma IV | <ul><li>戰鬥能力恢復速度增加 6.25%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/f86ba1f1-5859-40ce-b662-6f9e54e9afe5" width="32" height="32" alt="抗焦慮藥 V天賦圖示"> [抗焦慮藥 V](#broker_stimm_concentration_5a)<br>- Kalma V | <ul><li>戰鬥能力恢復速度增加 25%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/883f2dd7-ad0d-4986-a5d0-32fa36a11e27" width="32" height="32" alt="彈幕 I天賦圖示"> [彈幕 I](#broker_stimm_durability_1)<br>- Barrage I | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/e99ef969-5e48-4129-9a22-d11f0e23aa80" width="32" height="32" alt="彈幕 II天賦圖示"> [彈幕 II](#broker_stimm_durability_2)<br>- Barrage II | <ul><li>使用時恢復最大韌性的 6.25%；藥效期間韌性恢復增加 5%、承受傷害降低 4%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="32" height="32" alt="激勵 I天賦圖示"> [激勵 I](#broker_stimm_celerity_1)<br>- Spur I | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/12ddbfdc-82bd-4ece-ba73-e6550451e5a4" width="32" height="32" alt="狂熱天賦圖示"> [狂熱](#broker_stimm_celerity_5c)<br>- Fervor | <ul><li>移速與閃避距離增加 10%，閃避速度乘以 1.1；有效閃避次數恢復等待縮短 10%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="32" height="32" alt="激勵 II天賦圖示"> [激勵 II](#broker_stimm_celerity_2)<br>- Spur II | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
@@ -1612,6 +1613,25 @@
 - **恢復算例**：最大韌性 100，前置配方與本節點的恢復加成都生效時，使用後恢復 100 × (1 × 6.25%) × (1 + 1 × 5%) = 6.5625 點；實際仍受缺額限制。
 
 [詳細資料](TALENTS%20Scum/broker_stimm_durability_1.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_stimm_durability_2"></a>
+### 彈幕 II(Barrage II)
+
+<img src="https://github.com/user-attachments/assets/e99ef969-5e48-4129-9a22-d11f0e23aa80" width="72" height="72" alt="彈幕 II天賦圖示">
+
+- **配方成本**：2 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
+
+- **使用時恢復**：額外恢復最大韌性的 6.25%，受到韌性恢復加成影響，最多補至上限。
+
+- **持續效果**：韌性恢復量增加 5%，承受傷害乘以 0.96，也就是本節點提供 4% 減傷。
+
+- **減傷算例**：從彈幕 I 選到本節點，共 2 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^2 ≈ 92.160 點。
+
+- **恢復算例**：最大韌性 100，前置配方與本節點的恢復加成都生效時，使用後恢復 100 × (2 × 6.25%) × (1 + 2 × 5%) = 13.75 點；實際仍受缺額限制。
+
+[詳細資料](TALENTS%20Scum/broker_stimm_durability_2.md) · [返回目錄](#talent-index)
 
 ---
 
