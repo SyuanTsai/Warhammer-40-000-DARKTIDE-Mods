@@ -37,6 +37,7 @@
 | [重如律法](#adamant_heavy_attacks_increase_damage) | 未見明確矛盾 |
 | [毀滅打擊](#adamant_melee_attacks_on_staggered_rend) | 未見明確矛盾 |
 | [狂熱信仰](#adamant_crit_chance_on_kill) | 未見明確矛盾 |
+| [制裁重擊](#adamant_crits_rend) | 未見明確矛盾 |
 | [巨獸獵人](#adamant_monster_hunter) | 未見明確矛盾 |
 | [惡徒退散](#adamant_damage_vs_suppressed) | 未見明確矛盾 |
 | [正當手段](#adamant_stacking_damage) | 未見明確矛盾 |
@@ -243,6 +244,13 @@
 - 描述鍵：`loc_talent_adamant_crit_chance_on_kill_desc`；hash：`4411328c`。
 - 結論：未見明確矛盾。繁中「暴擊機率…堆疊」與英文 Critical Strike Chance／Stacks一致；用百分點釐清數值含義。
 - [原始碼推導與限制](adamant_crit_chance_on_kill.md)。
+
+<a id="adamant_crits_rend"></a>
+## 制裁重擊(Prosecution Blow)
+
+- 描述鍵：`loc_talent_adamant_crits_rend_alt_desc`；hash：`7ccaaaa3`。
+- 結論：未見明確矛盾。繁中與英文均限定遠程爆擊撕裂；作用條件一致，公式為補充。
+- [原始碼推導與限制](adamant_crits_rend.md)。
 
 <a id="adamant_monster_hunter"></a>
 ## 巨獸獵人(Monstrosity Hunter)

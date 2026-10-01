@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/adamant_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10)。內部 tree version 19 不等於遊戲發行版號。
 
-完成 32／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 33／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -40,6 +40,7 @@
 | 技能 | [重如律法](adamant_heavy_attacks_increase_damage.md) / `adamant_heavy_attacks_increase_damage` | `node_44740858-05d7-46c6-a2f0-a51c3aadadaf` | 完成（核心靜態機制） |
 | 技能 | [毀滅打擊](adamant_melee_attacks_on_staggered_rend.md) / `adamant_melee_attacks_on_staggered_rend` | `node_f74129c0-c6ba-47d0-a058-315793b06763` | 完成（核心靜態機制） |
 | 技能 | [狂熱信仰](adamant_crit_chance_on_kill.md) / `adamant_crit_chance_on_kill` | `node_62deceb2-66cd-4494-b96d-27b9fcc8732b` | 完成（核心靜態機制） |
+| 技能 | [制裁重擊](adamant_crits_rend.md) / `adamant_crits_rend` | `node_939b77d7-9bd1-48a9-8ae6-66beae3686ec` | 完成（核心靜態機制） |
 | 技能 | [巨獸獵人](adamant_monster_hunter.md) / `adamant_monster_hunter` | `node_48e362cb-c6b4-4d38-a325-08667444b783` | 完成（核心靜態機制） |
 | 技能 | [惡徒退散](adamant_damage_vs_suppressed.md) / `adamant_damage_vs_suppressed` | `node_0bf17803-4dbf-4ffd-8c23-2115ca8b2515` | 完成（核心靜態機制） |
 | 技能 | [正當手段](adamant_stacking_damage.md) / `adamant_stacking_damage` | `node_51aaefd1-2772-4d9e-b458-80c449db677e` | 完成（核心靜態機制） |
