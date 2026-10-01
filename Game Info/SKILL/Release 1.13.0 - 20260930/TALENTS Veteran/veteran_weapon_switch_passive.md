@@ -41,6 +41,18 @@
 - 靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
 - 個別武器的爆擊連發長度與切換當影格的事件順序，需以該武器遊戲實測補驗；上述算例計算的是爆擊判定機率，不保證一輪多發射擊全數重新判定。
 
+## 遊戲本體繁中對照
+
+- 文本來源：本機Steam Build `25492122`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
+- 語系鍵：`loc_talent_veteran_weapon_switch_new_description`；hash：`4ead394a`；繁中entry_index：`5119`；英文entry_index：`5119`。以資源＋hash配對，已確認兩語系此hash各一筆。
+- 繁中問題片段：「每層效果使你的下一次射擊獲得」；同版英文對照片段：`as well as {ranged_crit_chance:%s} Ranged Critical Hit Chance on your next shot`。引文保留原始占位符，未冒充遊戲畫面的最終數字。
+- 判定：**明確繁中描述錯誤**。修飾範圍錯誤：英文next shot限定爆擊率，繁中把三項效果一併限定為下一次射擊。實作只有conditional crit讀取shot；attack/reload為常駐stat_buffs，受buff本身期間限制。
+- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不將未證實同版的實作差異單獨當成繁中錯譯。完整文本只留本機，Git僅保存必要短引文與追溯資料。
+- [完整比對範圍與版本限制](LOCALIZATION_COMPARISON.md)。
+
+- [公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第3082–3129行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3082-L3129)
+- [公開依據：scripts/settings/talent/talent_settings_veteran.lua，第46–50行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L46-L50)
+
 ## 圖示來源
 
 - [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/keystone/veteran_weapon_switch_passive.webp)；取得日期 2026-10-01。圖示只供呈現，不作機制證據。
