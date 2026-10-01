@@ -35,6 +35,7 @@
 | <img src="https://github.com/user-attachments/assets/5439d198-0b4c-4a05-ab95-fc67f67398c9" width="32" height="32" alt="超暴力天賦圖示"> [超暴力](#broker_passive_melee_damage_carry_over)<br>- Hyper-Violence | <ul><li>擊殺的溢出傷害有 25% 轉為固定近戰加傷，持續 1 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/90caf35d-4780-4f00-a9cc-636858cd091e" width="32" height="32" alt="劇毒菌株天賦圖示"> [劇毒菌株](#broker_passive_toxin_infected_enemies_take_increased_damage)<br>- Virulent Strain | <ul><li>你施加毒素時，使目標受到的傷害增加 10%，最多持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/06abfebe-3a5e-421b-b71a-35e5faee2767" width="32" height="32" alt="毒藥狂熱天賦圖示"> [毒藥狂熱](#broker_passive_damage_after_toxined_enemies)<br>- Toxin Mania | <ul><li>12.5 公尺內每名受毒素感染的敵人，提供 5% 傷害，最多 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/31efd90d-864c-4e6c-af06-b48d540b45b3" width="32" height="32" alt="連帶傷害天賦圖示"> [連帶傷害](#broker_passive_toxin_spread_on_kills)<br>- Splash Damage | <ul><li>近戰擊殺精英時，對其周圍 4 公尺內最多 10 名敵人施加 2 層毒素。</li></ul> | 技能 |
 
 ---
 
@@ -446,5 +447,20 @@
 - **傷害算例**：附近有 2 名感染敵人，增傷 10%，基礎 100 點變成 110；同階段原有 25% 時為 100 × (1 + 25% + 10%) = 135 點。
 
 [詳細資料](TALENTS%20Scum/broker_passive_damage_after_toxined_enemies.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_toxin_spread_on_kills"></a>
+### 連帶傷害(Splash Damage)
+
+<img src="https://github.com/user-attachments/assets/31efd90d-864c-4e6c-af06-b48d540b45b3" width="72" height="72" alt="連帶傷害天賦圖示">
+
+- **觸發方式**：以近戰擊殺精英敵人，向其周圍 4 公尺擴散毒素，最多選取 10 名敵人；死者不必原先感染毒素。
+
+- **層數限制**：本技能最多把同類毒素補到 2 層。原本 0 層變成 2 層、1 層補到 2 層；已達 2 層或更高時，只刷新毒素時間，不繼續加層。
+
+- **毒素算例**：每 0.35 秒依目前毒素層數造成一次傷害。2 層的輸入威力為 500 × 2 ÷ 30 ≈ 33.33，再依毒素曲線與護甲算傷害；不是直接造成 33.33 點傷害。
+
+[詳細資料](TALENTS%20Scum/broker_passive_toxin_spread_on_kills.md) · [返回目錄](#talent-index)
 
 ---

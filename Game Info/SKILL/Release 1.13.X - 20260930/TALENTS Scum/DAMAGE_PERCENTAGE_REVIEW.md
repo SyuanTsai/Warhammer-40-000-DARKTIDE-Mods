@@ -35,3 +35,4 @@
 | [超暴力](broker_passive_melee_damage_carry_over.md) | 擊殺的溢出傷害有 25% 轉為固定近戰加傷，持續 1 秒。；完整計算與適用限制見來源文件。 |
 | [劇毒菌株](broker_passive_toxin_infected_enemies_take_increased_damage.md) | 你施加毒素時，使目標受到的傷害增加 10%，最多持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [毒藥狂熱](broker_passive_damage_after_toxined_enemies.md) | 12.5 公尺內每名受毒素感染的敵人，提供 5% 傷害，最多 15%。；完整計算與適用限制見來源文件。 |
+| [連帶傷害](broker_passive_toxin_spread_on_kills.md) | 近戰擊殺精英時，對其周圍 4 公尺內最多 10 名敵人施加 2 層毒素。；完整計算與適用限制見來源文件。 |
