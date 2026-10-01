@@ -27,6 +27,7 @@
 | <img src="https://github.com/user-attachments/assets/e8b31492-509e-479a-9369-203e36e1e1e4" width="32" height="32" alt="衝擊加成天賦圖示"> [衝擊加成](#base_impact_node_buff_medium_1)<br>- Impact Boost | <ul><li>衝擊提高 25%，更容易使敵人踉蹌。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/170599ce-ad50-4760-93b2-da650c6deac8" width="32" height="32" alt="塑鋼裝甲天賦圖示"> [塑鋼裝甲](#adamant_plasteel_plates)<br>- Plasteel Plates | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9a87f145-d4a8-4554-b8ca-f5fbb2a58944" width="32" height="32" alt="追跡法務官天賦圖示"> [追跡法務官](#adamant_dodge_grants_damage)<br>- Arbites Revelatum | <ul><li>成功閃避敵人攻擊後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/59f1504d-8b25-40c7-a582-b5de1b3278cf" width="32" height="32" alt="罪孽判官天賦圖示"> [罪孽判官](#adamant_stacking_weakspot_strength)<br>- Soulguilt Scan | <ul><li>命中弱點後每層增加 2% 弱點威力，最多 8 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/88c5f583-d739-484e-a7cd-89b79a90334d" width="32" height="32" alt="恰如其分天賦圖示"> [恰如其分](#adamant_elite_special_kills_reload_speed)<br>- Judicious Efficiency | <ul><li>擊殺精英或專家敵人後，下次換彈速度提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8f0bcba7-48bd-4d61-ad19-b03a65160eb5" width="32" height="32" alt="行軍之志天賦圖示"> [行軍之志](#adamant_movement_speed_on_block)<br>- March | <ul><li>遠程攻擊命中敵人後，移動速度提高 15%，持續 3 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6d045fa3-97bc-4943-9e6e-0f703e68288d" width="32" height="32" alt="無處可逃天賦圖示"> [無處可逃](#adamant_elite_special_kills_offensive_boost)<br>- No Escape | <ul><li>擊殺精英或專家敵人後，傷害與移速提高 10%，持續 4 秒。</li></ul> | 技能 |
@@ -314,6 +315,21 @@
 - **傷害算例**：基礎 100 點傷害、無其他修正時變成 100 × (1 + 15%) = 115 點；同階段原有 25% 加成時，由 125 點變成 140 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_dodge_grants_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_stacking_weakspot_strength"></a>
+### 罪孽判官(Soulguilt Scan)
+
+<img src="https://github.com/user-attachments/assets/59f1504d-8b25-40c7-a582-b5de1b3278cf" width="72" height="72" alt="罪孽判官天賦圖示">
+
+- **疊層與刷新**：近戰或遠程命中弱點後獲得 1 層，每層增加 2% 弱點威力，最多 8 層。再次命中重設全部層數的 10 秒。
+
+- **威力算例**：只計這個威力階段，原本 500、滿層 16% 時為 500 × (1 + 8 × 2%) = 580；若已有同階段 20% 威力加成，則由 600 變成 680。
+
+- **傷害差異**：強化的是命中弱點時用於後續結算的威力，不是只把額外弱點傷害乘上 1.16。最終傷害仍須依武器傷害曲線、護甲、部位與其他加成計算。
+
+[詳細資料](TALENTS%20Arbites/adamant_stacking_weakspot_strength.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -27,6 +27,7 @@
 | [衝擊加成](base_impact_node_buff_medium_1.md) | 衝擊提高 25%，更容易使敵人踉蹌。；完整計算與適用限制見來源文件。 |
 | [塑鋼裝甲](adamant_plasteel_plates.md) | 最大韌性增加 25 點。；完整計算與適用限制見來源文件。 |
 | [追跡法務官](adamant_dodge_grants_damage.md) | 成功閃避敵人攻擊後，傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
+| [罪孽判官](adamant_stacking_weakspot_strength.md) | 命中弱點後每層增加 2% 弱點威力，最多 8 層，持續 10 秒。；完整計算與適用限制見來源文件。 |
 | [恰如其分](adamant_elite_special_kills_reload_speed.md) | 擊殺精英或專家敵人後，下次換彈速度提高 20%。；完整計算與適用限制見來源文件。 |
 | [行軍之志](adamant_movement_speed_on_block.md) | 遠程攻擊命中敵人後，移動速度提高 15%，持續 3 秒。；完整計算與適用限制見來源文件。 |
 | [無處可逃](adamant_elite_special_kills_offensive_boost.md) | 擊殺精英或專家敵人後，傷害與移速提高 10%，持續 4 秒。；完整計算與適用限制見來源文件。 |

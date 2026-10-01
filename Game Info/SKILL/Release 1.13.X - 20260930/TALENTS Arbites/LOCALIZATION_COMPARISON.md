@@ -29,6 +29,7 @@
 | [衝擊加成](#base_impact_node_buff_medium_1) | 未見明確矛盾 |
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
 | [追跡法務官](#adamant_dodge_grants_damage) | 未見明確矛盾 |
+| [罪孽判官](#adamant_stacking_weakspot_strength) | 未見明確矛盾 |
 | [恰如其分](#adamant_elite_special_kills_reload_speed) | 未見明確矛盾 |
 | [行軍之志](#adamant_movement_speed_on_block) | 未見明確矛盾 |
 | [無處可逃](#adamant_elite_special_kills_offensive_boost) | 未見明確矛盾 |
@@ -192,6 +193,13 @@
 - 描述鍵：`loc_talent_adamant_dodge_grants_damage_desc`；hash：`ad9cd3f2`。
 - 結論：未見明確矛盾。繁中「成功閃避攻擊」對應英文 Successful Dodge，無明確矛盾。
 - [原始碼推導與限制](adamant_dodge_grants_damage.md)。
+
+<a id="adamant_stacking_weakspot_strength"></a>
+## 罪孽判官(Soulguilt Scan)
+
+- 描述鍵：`loc_talent_adamant_stacking_weakspot_strength_duration_desc`；hash：`62e55f07`。
+- 結論：未見明確矛盾。繁中「弱點強化」與英文 Weakspot Strength一致；主文釐清與額外弱點傷害加成不同，未判誤譯。
+- [原始碼推導與限制](adamant_stacking_weakspot_strength.md)。
 
 <a id="adamant_elite_special_kills_reload_speed"></a>
 ## 恰如其分(Judicious Efficiency)
