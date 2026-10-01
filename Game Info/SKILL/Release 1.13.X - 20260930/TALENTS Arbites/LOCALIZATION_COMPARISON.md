@@ -50,6 +50,7 @@
 | [正當手段](#adamant_stacking_damage) | 未見明確矛盾 |
 | [壓制武力](#adamant_staggered_enemies_deal_less_damage) | 繁中原文勘誤 |
 | [震盪攻擊](#adamant_melee_weakspot_hits_count_as_stagger) | 未見明確矛盾 |
+| [針對弱者](#adamant_staggering_enemies_take_more_damage) | 未見明確矛盾 |
 | [還治其人之身](#adamant_perfect_block_damage_boost) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
@@ -349,6 +350,13 @@
 - 描述鍵：`loc_talent_adamant_melee_weakspot_hits_count_as_stagger_desc`；hash：`3be4daea`。
 - 結論：未見明確矛盾。繁中「視為踉蹌」與英文 count as Staggered一致，沒有宣稱強制打出踉蹌動畫。
 - [原始碼推導與限制](adamant_melee_weakspot_hits_count_as_stagger.md)。
+
+<a id="adamant_staggering_enemies_take_more_damage"></a>
+## 針對弱者(Target the Weak)
+
+- 描述鍵：`loc_talent_ogryn_big_bully_heavy_hits_new_desc`；hash：`45b6dfbf`。
+- 結論：未見明確矛盾。繁中「額外近戰傷害」與英文 more Melee Damage對象一致；推擊及其他玩家受益屬省略，不當錯誤。
+- [原始碼推導與限制](adamant_staggering_enemies_take_more_damage.md)。
 
 <a id="adamant_perfect_block_damage_boost"></a>
 ## 還治其人之身(Retaliatory Force)

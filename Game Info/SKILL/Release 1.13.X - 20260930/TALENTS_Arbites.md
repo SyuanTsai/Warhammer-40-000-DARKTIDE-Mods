@@ -48,6 +48,7 @@
 | <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="正當手段天賦圖示"> [正當手段](#adamant_stacking_damage)<br>- Justified Measures | <ul><li>攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/af381ce2-1360-49a1-931d-6db3fb174166" width="32" height="32" alt="壓制武力天賦圖示"> [壓制武力](#adamant_staggered_enemies_deal_less_damage)<br>- Suppression Force | <ul><li>以近戰或推擊命中處於踉蹌狀態的敵人，使其造成的傷害降低 20%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/2577c784-85c4-473c-b9ba-a88f8de35355" width="32" height="32" alt="震盪攻擊天賦圖示"> [震盪攻擊](#adamant_melee_weakspot_hits_count_as_stagger)<br>- Concussive | <ul><li>近戰命中弱點後，目標在 4 秒內視為處於踉蹌狀態。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/aa78a41a-3cea-4e8d-ba36-4496c3619be7" width="32" height="32" alt="針對弱者天賦圖示"> [針對弱者](#adamant_staggering_enemies_take_more_damage)<br>- Target the Weak | <ul><li>近戰或推擊命中處於踉蹌狀態的敵人，使其承受的近戰傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/96221430-4610-4bf3-9b19-4fd056c99e74" width="32" height="32" alt="還治其人之身天賦圖示"> [還治其人之身](#adamant_perfect_block_damage_boost)<br>- Retaliatory Force | <ul><li>格擋耐力消耗降低 15%；完美格擋後，傷害與攻速提高 15%，持續 8 秒。</li></ul> | 技能 |
 
 ---
@@ -609,6 +610,19 @@
 - **搭配算例**：搭配鎮壓異己的 10% 對踉蹌增傷，後續符合條件的基礎 100 點攻擊變成 100 × 1.1 = 110 點。單選本天賦不會自行增加傷害或強制敵人倒退。
 
 [詳細資料](TALENTS%20Arbites/adamant_melee_weakspot_hits_count_as_stagger.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_staggering_enemies_take_more_damage"></a>
+### 針對弱者(Target the Weak)
+
+<img src="https://github.com/user-attachments/assets/aa78a41a-3cea-4e8d-ba36-4496c3619be7" width="72" height="72" alt="針對弱者天賦圖示">
+
+- **運作與刷新**：近戰或推擊命中處於踉蹌狀態的敵人，接下來 5 秒使其承受的近戰傷害提高 15%；你與隊友皆可受益。再次觸發重設時間，不疊加幅度。
+
+- **傷害算例**：只計目標承傷階段，100 點近戰傷害變成 115 點。若攻擊者本身另有 25% 增傷，兩個階段相乘為 100 × 1.25 × 1.15 = 143.75 點；若是目標已有同階段 25% 承傷增加，則為 100 × (1 + 25% + 15%) = 140 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_staggering_enemies_take_more_damage.md) · [返回目錄](#talent-index)
 
 ---
 
