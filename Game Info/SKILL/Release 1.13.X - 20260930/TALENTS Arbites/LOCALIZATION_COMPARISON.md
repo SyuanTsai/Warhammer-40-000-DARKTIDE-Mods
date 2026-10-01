@@ -10,6 +10,7 @@
 |---|---|
 | [突破重圍](#adamant_charge) | 繁中原文勘誤 |
 | [天鷹使節](#adamant_area_buff_drone_improved) | 未見明確矛盾 |
+| [嗜血殺戮](#adamant_stance_dog_bloodlust) | 未見明確矛盾 |
 | [振奮朗誦](#adamant_drone_buff_talent) | 未見明確矛盾 |
 | [畏怯正義](#adamant_drone_debuff_talent) | 繁中原文勘誤 |
 | [懲惡揚善](#adamant_charge_toughness) | 未見明確矛盾 |
@@ -96,6 +97,13 @@
 - 描述鍵：`loc_talent_ability_area_buff_drone_new_improved_description`；hash：`1e02d48e`。
 - 結論：未見明確矛盾。繁中「每秒恢復韌性」「對暈眩、減速和壓制效果免疫」分別對應英文「Toughness per second」及「Immune to Stun, Slowdown, and Suppression」；兩文都指出敵人承受更多傷害。
 - [原始碼推導與限制](adamant_area_buff_drone_improved.md)。
+
+<a id="adamant_stance_dog_bloodlust"></a>
+## 嗜血殺戮(Bloodlust)
+
+- 描述鍵：`loc_talent_adamant_stance_bloodlust_desc`；hash：`bbba1e4b`。
+- 結論：未見明確矛盾。繁中「機械戰犬造成的傷害提高」與英文「Cyber-Mastiff has … Damage」都描述姿態期間獒犬獲得傷害加成；未見數值或觸發條件相反。
+- [原始碼推導與限制](adamant_stance_dog_bloodlust.md)。
 
 <a id="adamant_drone_buff_talent"></a>
 ## 振奮朗誦(Inspiring Recitation)
