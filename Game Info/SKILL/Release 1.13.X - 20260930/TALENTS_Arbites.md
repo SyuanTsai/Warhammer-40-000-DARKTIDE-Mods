@@ -26,6 +26,7 @@
 | <img src="https://github.com/user-attachments/assets/3ecc49e6-a4c7-4d77-926d-623e4f8f34f6" width="32" height="32" alt="鎖定目標天賦圖示"> [鎖定目標](#adamant_forceful_offensive)<br>- Targets Acquired | <ul><li>堅定不移 達 10 層時取得攻速與順劈加成。</li><li>離開滿層後加成再維持 3 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/bc3b59ed-a142-4807-86f9-f75d65b367b4" width="32" height="32" alt="法務官警覺天賦圖示"> [法務官警覺](#adamant_forceful_ability_damage)<br>- Arbites Vigilant | <ul><li>使用戰鬥技能時，將當前 堅定不移 層數轉成 12 秒威力加成。</li><li>最多 10 層各給 2.5% 威力，觸發會消耗 堅定不移 層數。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/62f41d0b-cd55-459d-b4d7-c8c155da410f" width="32" height="32" alt="審判之力天賦圖示"> [審判之力](#adamant_forceful_stagger_on_low_high)<br>- Judicial Force | <ul><li>堅定不移 從未滿升至 10 層，或從有層數降到 0 層時，會使附近敵人遭到爆炸踉蹌。</li><li>達到高層與歸零各自有 5 秒冷卻。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/7b782337-07db-4ff4-9a85-ba21d1fcfe6b" width="32" height="32" alt="能屈能伸天賦圖示"> [能屈能伸](#adamant_terminus_warrant_cdr)<br>- Obstinate | <ul><li>只有消耗滿層數（基礎 20 層）才會啟動冷卻恢復 效果。</li><li>效果 維持 12 秒，每秒恢復 0.33 秒的戰鬥技能資源；名目上最多回復 3.96 秒，並受剩餘冷卻上限限制。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="32" height="32" alt="效率殺手天賦圖示"> [效率殺手](#adamant_execution_order_crit)<br>- Efficient Killer | <ul><li>擊殺被標記敵人時，獲得 8 秒爆擊機率與爆擊傷害加成。</li><li>加成為 +10 個百分點爆擊機率與 +25% 額外爆擊傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="32" height="32" alt="生化武器關天賦圖示"> [生化武器關](#adamant_execution_order_cdr)<br>- Malocator | <ul><li>擊殺被標記敵人後，建立 8 秒戰鬥技能資源恢復效果。</li><li>每秒恢復 0.5 秒能力資源，名目上最多約 4 秒，受剩餘冷卻上限限制。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/ab53bec8-fd00-470c-8c5d-46cc58904f13" width="32" height="32" alt="罪不可赦天賦圖示"> [罪不可赦](#adamant_execution_order_rending)<br>- No Lenience | <ul><li>擊殺被標記敵人後，獲得 8 秒撕裂加成。</li><li>撕裂修正為 +10%，進入共用護甲傷害計算。</li></ul> | 鑰石 |
@@ -387,6 +388,19 @@
 - **冷卻算例**：滿層與歸零各有獨立的 5 秒冷卻。例如滿層震撼後 1 秒失去全部層數，仍可觸發歸零震撼；但同一種震撼需隔滿 5 秒才能再觸發。
 
 [詳細資料](TALENTS%20Arbites/adamant_forceful_stagger_on_low_high.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_terminus_warrant_cdr"></a>
+### 能屈能伸(Obstinate)
+
+<img src="https://github.com/user-attachments/assets/7b782337-07db-4ff4-9a85-ba21d1fcfe6b" width="72" height="72" alt="能屈能伸天賦圖示">
+
+- **觸發門檻**：消耗 終點站令狀 的完整 20 層時，才觸發「能屈能伸」；不足 20 層不會建立冷卻恢復 效果。
+
+- **冷卻算例**：效果持續 12 秒，每秒額外恢復 0.33 秒戰鬥技能冷卻，名目總量為 12 × 0.33 = 3.96 秒；仍有正常冷卻倒數，並以尚未恢復的部分為限。這不是立刻扣除剩餘冷卻的 33%。再次觸發刷新時間，不加快每秒返還量。
+
+[詳細資料](TALENTS%20Arbites/adamant_terminus_warrant_cdr.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -28,6 +28,7 @@
 | [鎖定目標](#adamant_forceful_offensive) | 未見明確矛盾 |
 | [法務官警覺](#adamant_forceful_ability_damage) | 未見明確矛盾 |
 | [審判之力](#adamant_forceful_stagger_on_low_high) | 未見明確矛盾 |
+| [能屈能伸](#adamant_terminus_warrant_cdr) | 未見明確矛盾 |
 | [效率殺手](#adamant_execution_order_crit) | 未見明確矛盾 |
 | [生化武器關](#adamant_execution_order_cdr) | 未見明確矛盾 |
 | [罪不可赦](#adamant_execution_order_rending) | 未見明確矛盾 |
@@ -228,6 +229,13 @@
 - 描述鍵：`loc_talent_adamant_forceful_stagger_on_low_high_desc`；hash：`ef289d31`。
 - 結論：未見明確矛盾。繁中與英文都列0／10層震撼與各自冷卻；2.5公尺範圍及門檻穿越判斷屬補充，未列為錯誤。
 - [原始碼推導與限制](adamant_forceful_stagger_on_low_high.md)。
+
+<a id="adamant_terminus_warrant_cdr"></a>
+## 能屈能伸(Obstinate)
+
+- 描述鍵：`loc_talent_adamant_terminus_warrant_cdr_desc`；hash：`1a4408d8`。
+- 結論：未見明確矛盾。繁中「每消耗 20 層，獲得 33%技能冷卻時間恢復，持續 12 秒」對應英文 “Spending 20 stacks grants 33% Ability Cooldown Regeneration, for 12s”；程式把它實作為每秒恢復 0.33 秒資源，文字內部沒有矛盾。
+- [原始碼推導與限制](adamant_terminus_warrant_cdr.md)。
 
 <a id="adamant_execution_order_crit"></a>
 ## 效率殺手(Efficient Killer)
