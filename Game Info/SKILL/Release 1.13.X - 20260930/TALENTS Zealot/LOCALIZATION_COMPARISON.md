@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [死戰到底](#zealot_resist_death) | 未見明確矛盾 |
+| [殉道](#zealot_martyrdom) | 未見明確矛盾 |
 | [吊命聖徒](#zealot_resist_death_heal) | 明確繁中誤譯 |
 | [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
 | [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
@@ -63,6 +64,13 @@
 - 描述鍵：`loc_talent_zealot_resist_death_base_desc`；hash：`0da0b898`。
 - 結論：未見明確矛盾。繁中與英文都描述致命傷害觸發、無法殺死效果及冷卻；起算細節省略屬描述不完整。
 - [原始碼推導與限制](zealot_resist_death.md)。
+
+<a id="zealot_martyrdom"></a>
+## 殉道(Martyrdom)
+
+- 描述鍵：`loc_talent_zealot_martyrdom_desc`；hash：`b90da3ce`。
+- 結論：未見明確矛盾。英文與繁中方向都是缺失生命傷口格提高傷害；中文若寫成每格 +10%、最多 5 格，與掛載 buff 一致。依傷口格計算的實作細節屬補充說明。
+- [原始碼推導與限制](zealot_martyrdom.md)。
 
 <a id="zealot_resist_death_heal"></a>
 ## 吊命聖徒(Holy Revenant)
