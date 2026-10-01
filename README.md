@@ -712,20 +712,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [BrokerAutoStim](https://www.nexusmods.com/warhammer40kdarktide/mods/655)
     在戰鬥中自動使用化學興奮劑，支援設定檔切換、取消動畫與戰鬥狀態檢查
-- MOD 網站最後更新日期：Last updated 30 September 2026, 12:10AM
-- MOD 版本：3.0
-- MOD 檔案名稱：BrokerAutoStim 655 3.0 2026-09-29T16-10Z ke28Welop.zip
-- 手動維護最後下載日期：2026-09-30
+- MOD 網站最後更新日期：Last updated 01 October 2026, 1:11AM
+- MOD 版本：3.1
+- MOD 檔案名稱：BrokerAutoStim 655 3.1 2026-09-30T17-11Z cwrBAw7dp.zip
+- 手動維護最後下載日期：2026-10-01
 - Nexus MOD ID: 655
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/655
-- Nexus page version: 3.0
-- Nexus last updated: 2026-09-29T16:10Z
-- Main file ID: 8546
-- Main file version: 3.0
-- Main file uploaded at UTC: 2026-09-29T16:10Z
-- Archive filename: BrokerAutoStim 655 3.0 2026-09-29T16-10Z ke28Welop.zip
-- Archive size bytes: 17585
-- Archive SHA-256: c46e88c50e44b16a39d55f608d6f55ae85bf2c30a9bace169b8a925409ceabfa
+- Nexus page version: 3.1
+- Nexus last updated: 2026-09-30T17:11Z
+- Main file ID: 8622
+- Main file version: 3.1
+- Main file uploaded at UTC: 2026-09-30T17:11Z
+- Archive filename: BrokerAutoStim 655 3.1 2026-09-30T17-11Z cwrBAw7dp.zip
+- Archive size bytes: 18674
+- Archive SHA-256: b697d89b90ec3a070d9a93e3f0a72b0b291324b8a72fb2e4b92ab00f16bc3e56
 - Acquisition method: manual-queue
 
 ### [TalentUI](https://www.nexusmods.com/warhammer40kdarktide/mods/683)
