@@ -29,6 +29,7 @@
 | <img src="https://github.com/user-attachments/assets/895c3ccd-387f-4862-9a2b-b429ff5d6432" width="32" height="32" alt="全神貫注天賦圖示"> [全神貫注](#ogryn_ally_movement_boost_on_ability)<br>- Get Stuck In | <ul><li>施放戰鬥技能後，你與協同隊友提高 20% 移動速度，持續 6 秒。</li><li>期間免疫暈眩與壓制。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bb088b60-c1e8-42a7-b68e-3ef59f5d9eb9" width="32" height="32" alt="利刃出鞘天賦圖示"> [利刃出鞘](#ogryn_windup_reduces_damage_taken)<br>- Implacable | <ul><li>近戰重擊蓄力期間，受到的傷害減少 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d80b562f-7fc2-4daf-85e4-ae25f8171a89" width="32" height="32" alt="誰敢攔我！天賦圖示"> [誰敢攔我！](#ogryn_windup_is_uninterruptible)<br>- No Stopping Me! | <ul><li>近戰重擊蓄力不易受打斷，並移除蓄力動作的移動減速。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/7e27b3b4-5eca-49b5-aafd-c8abc6635b14" width="32" height="32" alt="屠殺天賦圖示"> [屠殺](#ogryn_kills_grant_crit_chance)<br>- Massacre | <ul><li>每次擊殺增加 2 個百分點爆擊機率，最多 8 層，持續 12 秒。</li></ul> | 技能 |
 
 ---
 
@@ -378,5 +379,18 @@
 - **限制**：這不是無敵效果，蓄力時仍會受到傷害。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_windup_is_uninterruptible.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_kills_grant_crit_chance"></a>
+### 屠殺(Massacre)
+
+<img src="https://github.com/user-attachments/assets/7e27b3b4-5eca-49b5-aafd-c8abc6635b14" width="72" height="72" alt="屠殺天賦圖示">
+
+- **觸發與疊層**：擊殺敵人獲得一層，每層增加 2 個百分點爆擊機率，最多 8 層，持續 12 秒；再次擊殺刷新時間。
+
+- **機率算例**：原本 5% 爆擊機率，滿層變成 5% + 8 × 2% = 21%，不是 5% × 1.16。加成適用爆擊機率，不代表每次攻擊必定爆擊。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_kills_grant_crit_chance.md) · [返回目錄](#talent-index)
 
 ---

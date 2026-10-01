@@ -29,3 +29,4 @@
 | [全神貫注](ogryn_ally_movement_boost_on_ability.md) | 施放戰鬥技能後，你與協同隊友提高 20% 移動速度，持續 6 秒。；期間免疫暈眩與壓制。；完整計算與適用限制見來源文件。 |
 | [利刃出鞘](ogryn_windup_reduces_damage_taken.md) | 近戰重擊蓄力期間，受到的傷害減少 15%。；完整計算與適用限制見來源文件。 |
 | [誰敢攔我！](ogryn_windup_is_uninterruptible.md) | 近戰重擊蓄力不易受打斷，並移除蓄力動作的移動減速。；完整計算與適用限制見來源文件。 |
+| [屠殺](ogryn_kills_grant_crit_chance.md) | 每次擊殺增加 2 個百分點爆擊機率，最多 8 層，持續 12 秒。；完整計算與適用限制見來源文件。 |
