@@ -24,6 +24,16 @@
 - [scripts/extension_systems/buff/buffs/buff.lua，第 29–44 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L29-L44)
 - [scripts/extension_systems/buff/buff_extension_base.lua，第 439–457 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buff_extension_base.lua#L439-L457)
 
+## 百分比與實際傷害增幅
+
+- **程式推導**：目標端brittleness與攻擊者撕裂共同參與護甲倍率修正。玩家例固定非爆擊、非弱點、super_armor、護甲前傷害100、ADM=.5、無其他撕裂或後續倍率：四層.10使下一擊50→60（20%）；十六層.40使下一擊50→90（80%）。
+- 這不是把當次附加層數追溯加到造成該層的傷害上；例子明定為層數已存在後的下一擊。隊友使用不同武器或攻擊相同敵人的不同護甲部位，實際收益不一定相同。
+
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2518–2566 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2518-L2566)
+- [scripts/settings/buff/weapon_buff_templates.lua，第 366–376 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/weapon_buff_templates.lua#L366-L376)
+- [scripts/utilities/attack/damage_calculation.lua，第 629–660 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L629-L660)
+- [scripts/utilities/attack/damage_calculation.lua，第 69–95 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L69-L95)
+
 ## 算例條件與待確認事項
 
 - 玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
