@@ -27,6 +27,7 @@
 | [無限抑制器](#cryptic_melee_attacks_give_melee_attack_speed) | 未見明確矛盾 |
 | [電擊打擊導管](#cryptic_melee_crits_electrocute_first) | 未見明確矛盾 |
 | [槍械技師](#cryptic_auto_reload) | 未見明確矛盾 |
+| [暗殺協議](#cryptic_ranged_vs_bfg) | 未見明確矛盾 |
 | [系統電擊](#cryptic_electrocution_applies_brittleness) | 未見明確矛盾 |
 
 <a id="cryptic_crits_grant_tdr"></a>
@@ -163,6 +164,13 @@
 - 描述鍵：`loc_talent_cryptic_auto_reload_desc`；hash：`612ee334`。
 - 結論：未見明確矛盾。中英一致；補充首批第6秒、向上取整及備彈來源。
 - [原始碼推導與限制](cryptic_auto_reload.md)。
+
+<a id="cryptic_ranged_vs_bfg"></a>
+## 暗殺協議(Assassination Protocols)
+
+- 描述鍵：`loc_talent_cryptic_ranged_vs_bfg_desc`；hash：`01397401`。
+- 結論：未見明確矛盾。繁中與英文一致；補充遠程限制與加算公式。
+- [原始碼推導與限制](cryptic_ranged_vs_bfg.md)。
 
 <a id="cryptic_electrocution_applies_brittleness"></a>
 ## 系統電擊(System Shock)
