@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/b3086f22-3f24-417f-aaba-f59714897616" width="32" height="32" alt="如夢似幻天賦圖示"> [如夢似幻](#psyker_damage_to_peril_conversion)<br>- Just a Dream | <ul><li>反噬低於 97% 時減傷 25%，並依收到的傷害增加反噬。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/288f8a4c-fee3-4e56-8e0b-b2419e2a115b" width="32" height="32" alt="無形專注天賦圖示"> [無形專注](#psyker_damage_resistance_stun_immunity)<br>- Immaterial Focus | <ul><li>受到的傷害減少 10%。</li><li>反噬達 97% 時免疫暈眩；降離門檻後保留 4 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/57acd7a3-65a7-460c-876c-3153b63d69a3" width="32" height="32" alt="亞空間幽魂天賦圖示"> [亞空間幽魂](#psyker_stat_mix)<br>- Warp Ghost | <ul><li>耐力增加 2 點，韌性恢復量增加 25%。</li><li>反噬在自然消退的適用區段減慢 80%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/790d837c-239d-4d45-b4e8-c3c039df63ba" width="32" height="32" alt="靈魂穿透天賦圖示"> [靈魂穿透](#psyker_warp_attacks_rending)<br>- Penetration of the Soul | <ul><li>亞空間攻擊依目前反噬獲得撕裂，最高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e66044cc-0b83-4f85-86ff-84661f076941" width="32" height="32" alt="念力之握天賦圖示"> [念力之握](#psyker_increased_blitz_damage)<br>- Psykinetic Grip | <ul><li>顱腦崩裂、懲戒與靈能攻擊的傷害增加 20%。</li></ul> | 技能 |
 
 ---
@@ -522,6 +523,21 @@
 - **自然消退算例**：在同一適用反噬區段，原本每秒下降 5 個百分點，變成 5 × 0.2 = 1 個百分點；其他條件不變，同一段反噬消退約需 5 倍時間。
 
 [詳細資料](TALENTS%20Psyker/psyker_stat_mix.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_warp_attacks_rending"></a>
+### 靈魂穿透(Penetration of the Soul)
+
+<img src="https://github.com/user-attachments/assets/790d837c-239d-4d45-b4e8-c3c039df63ba" width="72" height="72" alt="靈魂穿透天賦圖示">
+
+- **運作方式**：亞空間攻擊依目前反噬獲得撕裂；反噬 50%／100% 時分別提供 10%／20% 撕裂。實際增傷取決於武器與敵人護甲。
+
+- **護甲算例**：只比較抗撕裂修正為 1 的護甲階段，排除弱點、爆擊與其他倍率。護甲前傷害 100、原護甲倍率 0.5，反噬 100% 時由 100 × 0.5 = 50，變成 100 × (0.5 + 0.2) = 70 點，實際提高 40%。
+
+- **不同目標**：同一 20% 撕裂，若原護甲倍率已為 1、超額撕裂換算係數為 0.25，則從 100 變成 100 × (1 + 0.2 × 0.25) = 105 點，只提高 5%。
+
+[詳細資料](TALENTS%20Psyker/psyker_warp_attacks_rending.md) · [返回目錄](#talent-index)
 
 ---
 

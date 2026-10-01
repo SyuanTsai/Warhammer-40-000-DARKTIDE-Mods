@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **81 個可選節點**，均為一點；同一配置最多分配 30 點。零點起始佔位 `not_selected` 不屬天賦效果，不列入 81 項。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36)。內部 tree version 26 不等於遊戲發行版號。
 
-完成 34／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 35／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -90,5 +90,5 @@
 | 技能 | [無形專注](psyker_damage_resistance_stun_immunity.md) / `psyker_damage_resistance_stun_immunity` | `node_fb6fc9c4-aed8-46c8-88a2-0ec1fa8e1eb0` | 完成（核心靜態機制） |
 | 技能 | [亞空間意志](psyker_warp_glass_cannon.md) / `psyker_warp_glass_cannon` | `node_42b4a214-4619-4b7a-9a92-b17b8ed1f10f` | 已定位；機制待核對 |
 | 技能 | [亞空間幽魂](psyker_stat_mix.md) / `psyker_stat_mix` | `node_61959df9-adf1-45a9-9e2f-4d9e3c7f8e00` | 完成（核心靜態機制） |
-| 技能 | [靈魂穿透](psyker_warp_attacks_rending.md) / `psyker_warp_attacks_rending` | `node_fdd4387e-788e-46ca-accb-c59f01e5f97d` | 已定位；機制待核對 |
+| 技能 | [靈魂穿透](psyker_warp_attacks_rending.md) / `psyker_warp_attacks_rending` | `node_fdd4387e-788e-46ca-accb-c59f01e5f97d` | 完成（核心靜態機制） |
 | 技能 | [念力之握](psyker_increased_blitz_damage.md) / `psyker_increased_blitz_damage` | `node_c63246bc-9c76-437f-be2a-c8072ecc474b` | 完成（核心靜態機制） |

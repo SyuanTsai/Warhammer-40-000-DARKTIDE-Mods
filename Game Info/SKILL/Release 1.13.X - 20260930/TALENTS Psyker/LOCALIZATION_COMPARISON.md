@@ -87,7 +87,7 @@
 | [無形專注](#psyker_damage_resistance_stun_immunity) | 未見明確矛盾 |
 | [亞空間意志](#psyker_warp_glass_cannon) | 已配對；機制待核對 |
 | [亞空間幽魂](#psyker_stat_mix) | 未見明確矛盾 |
-| [靈魂穿透](#psyker_warp_attacks_rending) | 已配對；機制待核對 |
+| [靈魂穿透](#psyker_warp_attacks_rending) | 未見明確矛盾 |
 | [念力之握](#psyker_increased_blitz_damage) | 繁中原文勘誤 |
 
 <a id="psyker_smite_on_hit"></a>
@@ -655,7 +655,7 @@
 ## 靈魂穿透(Penetration of the Soul)
 
 - 描述鍵：`loc_talent_psyker_warp_attacks_rending_alt_desc`；hash：`35bc88f1`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_warp_attacks_rending.md)。
 
 <a id="psyker_increased_blitz_damage"></a>

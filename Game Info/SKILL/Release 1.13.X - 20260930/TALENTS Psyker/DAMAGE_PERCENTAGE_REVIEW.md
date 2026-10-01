@@ -85,5 +85,5 @@
 | [無形專注](psyker_damage_resistance_stun_immunity.md) | 受到的傷害減少 10%。；反噬達 97% 時免疫暈眩；降離門檻後保留 4 秒。；完整計算與適用限制見來源文件。 |
 | [亞空間意志](psyker_warp_glass_cannon.md) | 機制與公式待核對。 |
 | [亞空間幽魂](psyker_stat_mix.md) | 耐力增加 2 點，韌性恢復量增加 25%。；反噬在自然消退的適用區段減慢 80%。；完整計算與適用限制見來源文件。 |
-| [靈魂穿透](psyker_warp_attacks_rending.md) | 機制與公式待核對。 |
+| [靈魂穿透](psyker_warp_attacks_rending.md) | 亞空間攻擊依目前反噬獲得撕裂，最高 20%。；完整計算與適用限制見來源文件。 |
 | [念力之握](psyker_increased_blitz_damage.md) | 顱腦崩裂、懲戒與靈能攻擊的傷害增加 20%。；完整計算與適用限制見來源文件。 |
