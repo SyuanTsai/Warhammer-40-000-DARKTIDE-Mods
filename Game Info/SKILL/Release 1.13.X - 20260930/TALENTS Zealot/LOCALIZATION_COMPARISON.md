@@ -36,6 +36,7 @@
 | [狂熱不懈](#zealot_sprint_improvements) | 未見明確矛盾 |
 | [無形之刃](#zealot_damage_vs_nonthreat) | 未見明確矛盾 |
 | [大師的反擊](#zealot_defensive_knockback) | 未見明確矛盾 |
+| [血色迷障](#zealot_bled_enemies_take_more_damage) | 未見明確矛盾 |
 | [背水一戰](#zealot_more_damage_when_low_on_stamina) | 未見明確矛盾 |
 | [刻不容緩](#zealot_melee_crits_restore_stamina) | 未見明確矛盾 |
 | [神恩庇護](#zealot_revive_speed) | 未見明確矛盾 |
@@ -243,6 +244,13 @@
 - 描述鍵：`loc_talent_zealot_3_tier_3_ability_1_description`；hash：`f3ca681a`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_defensive_knockback.md)。
+
+<a id="zealot_bled_enemies_take_more_damage"></a>
+## 血色迷障(Blinded by Blood)
+
+- 描述鍵：`loc_talent_zealot_bled_enemies_take_more_damage_desc`；hash：`fb00baf2`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_bled_enemies_take_more_damage.md)。
 
 <a id="zealot_more_damage_when_low_on_stamina"></a>
 ## 背水一戰(Desperation)

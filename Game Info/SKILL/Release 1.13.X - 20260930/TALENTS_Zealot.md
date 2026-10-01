@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/bcb76321-c69e-466f-b588-a894e8c63443" width="32" height="32" alt="狂熱不懈天賦圖示"> [狂熱不懈](#zealot_sprint_improvements)<br>- Relentless Fervor | <ul><li>衝刺速度提高 10%、耐力消耗降低 10%；連續衝刺 1 秒後免疫減速。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c97e932c-97b3-454c-9047-2145a5d9a49d" width="32" height="32" alt="無形之刃天賦圖示"> [無形之刃](#zealot_damage_vs_nonthreat)<br>- Unseen Blade | <ul><li>對目前未鎖定你的敵人，傷害提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/56d9b0f2-db5a-493b-aff8-2cd9699d4d96" width="32" height="32" alt="大師的反擊天賦圖示"> [大師的反擊](#zealot_defensive_knockback)<br>- The Master's Retribution | <ul><li>受到近戰有效命中時，朝攻擊者方向推開敵人；冷卻 8 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/4b9e6b94-1960-44a0-aca5-40446806c270" width="32" height="32" alt="血色迷障天賦圖示"> [血色迷障](#zealot_bled_enemies_take_more_damage)<br>- Blinded by Blood | <ul><li>你施加或刷新流血時，使敵人承受傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dbe8719f-76fb-444c-a79d-2bf116b628fb" width="32" height="32" alt="背水一戰天賦圖示"> [背水一戰](#zealot_more_damage_when_low_on_stamina)<br>- Desperation | <ul><li>耐力越低，近戰傷害越高；耐力耗盡時最多提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6406ef43-19df-4cab-9091-e5c490d72cef" width="32" height="32" alt="刻不容緩天賦圖示"> [刻不容緩](#zealot_melee_crits_restore_stamina)<br>- No Respite | <ul><li>近戰爆擊命中時恢復 10% 最大耐力；冷卻 1 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ef521c17-0aae-4e01-b54c-9a25d1f9d792" width="32" height="32" alt="神恩庇護天賦圖示"> [神恩庇護](#zealot_revive_speed)<br>- Providence | <ul><li>救起倒地隊友的速度提高 25%；協助隊友後，對方獲得移速與韌性減傷。</li></ul> | 技能 |
@@ -443,6 +444,21 @@
 - **冷卻算例**：第 0 秒觸發後，第 3 秒再次挨打不會再推擊，約第 8 秒才可再次觸發。它不會撤銷已受到的那次傷害。
 
 [詳細資料](TALENTS%20Zealot/zealot_defensive_knockback.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_bled_enemies_take_more_damage"></a>
+### 血色迷障(Blinded by Blood)
+
+<img src="https://github.com/user-attachments/assets/4b9e6b94-1960-44a0-aca5-40446806c270" width="72" height="72" alt="血色迷障天賦圖示">
+
+- **運作方式**：你對敵人施加、增加或刷新流血時，使該敵人受到的傷害提高 15%，持續 5 秒；隊友對同一敵人的傷害也會受益。
+
+- **持續方式**：增傷不累積層數，重新施加流血會刷新時間；不是只要看見正在流血的敵人就自動為它附加效果。
+
+- **傷害算例**：敵人原本承受 100 點傷害，變成 100 × 1.15 = 115 點。若你先有另一階段的 20% 傷害加成，則 100 × 1.2 × 1.15 = 138 點。
+
+[詳細資料](TALENTS%20Zealot/zealot_bled_enemies_take_more_damage.md) · [返回目錄](#talent-index)
 
 ---
 

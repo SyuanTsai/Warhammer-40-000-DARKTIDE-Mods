@@ -34,6 +34,7 @@
 | [狂熱不懈](zealot_sprint_improvements.md) | 衝刺速度提高 10%、耐力消耗降低 10%；連續衝刺 1 秒後免疫減速。；完整計算與適用限制見來源文件。 |
 | [無形之刃](zealot_damage_vs_nonthreat.md) | 對目前未鎖定你的敵人，傷害提高 20%。；完整計算與適用限制見來源文件。 |
 | [大師的反擊](zealot_defensive_knockback.md) | 受到近戰有效命中時，朝攻擊者方向推開敵人；冷卻 8 秒。；完整計算與適用限制見來源文件。 |
+| [血色迷障](zealot_bled_enemies_take_more_damage.md) | 你施加或刷新流血時，使敵人承受傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [背水一戰](zealot_more_damage_when_low_on_stamina.md) | 耐力越低，近戰傷害越高；耐力耗盡時最多提高 20%。；完整計算與適用限制見來源文件。 |
 | [刻不容緩](zealot_melee_crits_restore_stamina.md) | 近戰爆擊命中時恢復 10% 最大耐力；冷卻 1 秒。；完整計算與適用限制見來源文件。 |
 | [神恩庇護](zealot_revive_speed.md) | 救起倒地隊友的速度提高 25%；協助隊友後，對方獲得移速與韌性減傷。；完整計算與適用限制見來源文件。 |
