@@ -28,6 +28,7 @@
 | [生化武器關](#adamant_execution_order_cdr) | 未見明確矛盾 |
 | [罪不可赦](#adamant_execution_order_rending) | 未見明確矛盾 |
 | [殺戮協議](#adamant_execution_order_permastack) | 待同版核對 |
+| [不落人後](#adamant_pinning_dog_bonus_moving_towards) | 未見明確矛盾 |
 | [往前進攻！](#adamant_companion_focus_ranged) | 未見明確矛盾 |
 | [猛犬出擊](#adamant_companion_focus_elite) | 未見明確矛盾 |
 | [電子獒犬與人](#adamant_toughness_regen_near_companion) | 未見明確矛盾 |
@@ -223,6 +224,13 @@
 - 描述鍵：`loc_talent_execution_order_perma_buff_new_description`；hash：`aaa5ea87`。
 - 結論：待同版核對。繁中「巨獸」對應英文 “Monstrosities”，兩者一致；程式 stat 使用 tags.monster，是否涵蓋完全相同敵人集合尚未確認，故待同版核對。
 - [原始碼推導與限制](adamant_execution_order_permastack.md)。
+
+<a id="adamant_pinning_dog_bonus_moving_towards"></a>
+## 不落人後(Not Far Behind)
+
+- 描述鍵：`loc_talent_adamant_pinning_dog_bonus_moving_towards_description`；hash：`478147b4`。
+- 結論：未見明確矛盾。繁中「猛撲後移動速度提高 10%，傷害提高 10%，持續 5 秒」對應英文 “Gain 10% Movement Speed and 10% Damage for 5s after Pounce”；一致。
+- [原始碼推導與限制](adamant_pinning_dog_bonus_moving_towards.md)。
 
 <a id="adamant_companion_focus_ranged"></a>
 ## 往前進攻！(Go Get 'Em!)

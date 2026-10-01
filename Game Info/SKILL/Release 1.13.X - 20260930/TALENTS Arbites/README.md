@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/adamant_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10)。內部 tree version 19 不等於遊戲發行版號。
 
-完成 71／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 72／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -31,6 +31,7 @@
 | 鑰石 | [生化武器關](adamant_execution_order_cdr.md) / `adamant_execution_order_cdr` | `node_dbdb2b08-b8ce-4dc5-88c9-139f0486b54c` | 完成（核心靜態機制） |
 | 鑰石 | [罪不可赦](adamant_execution_order_rending.md) / `adamant_execution_order_rending` | `node_8abdbb78-a06d-4d97-959a-a46930ab0752` | 完成（核心靜態機制） |
 | 鑰石 | [殺戮協議](adamant_execution_order_permastack.md) / `adamant_execution_order_permastack` | `node_d6d7d5c6-b681-41e1-b6c1-05e35ebb9715` | 完成（核心靜態機制） |
+| 鑰石 | [不落人後](adamant_pinning_dog_bonus_moving_towards.md) / `adamant_pinning_dog_bonus_moving_towards` | `node_8cd57c7e-dccf-4dd5-9829-c953101e1d34` | 完成（核心靜態機制） |
 | 鑰石 | [往前進攻！](adamant_companion_focus_ranged.md) / `adamant_companion_focus_ranged` | `node_524d5b7c-7557-4a87-aa66-5ef726bdcf45` | 完成（核心靜態機制） |
 | 鑰石 | [猛犬出擊](adamant_companion_focus_elite.md) / `adamant_companion_focus_elite` | `node_44f3d117-9099-42ab-9b11-8ff7a5ef1a66` | 完成（核心靜態機制） |
 | 技能 | [電子獒犬與人](adamant_toughness_regen_near_companion.md) / `adamant_toughness_regen_near_companion` | `node_3684f20d-bb13-4f40-ba64-43d402eea435` | 完成（核心靜態機制） |

@@ -26,6 +26,7 @@
 | <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="32" height="32" alt="生化武器關天賦圖示"> [生化武器關](#adamant_execution_order_cdr)<br>- Malocator | <ul><li>擊殺被標記敵人後，建立 8 秒戰鬥技能資源恢復效果。</li><li>每秒恢復 0.5 秒能力資源，名目上最多約 4 秒，受剩餘冷卻上限限制。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/ab53bec8-fd00-470c-8c5d-46cc58904f13" width="32" height="32" alt="罪不可赦天賦圖示"> [罪不可赦](#adamant_execution_order_rending)<br>- No Lenience | <ul><li>擊殺被標記敵人後，獲得 8 秒撕裂加成。</li><li>撕裂修正為 +10%，進入共用護甲傷害計算。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/eeb40551-fbea-4de0-8e46-0a07e4bfcec6" width="32" height="32" alt="殺戮協議天賦圖示"> [殺戮協議](#adamant_execution_order_permastack)<br>- Keeping Protocol | <ul><li>每次擊殺被標記敵人，永久增加對怪獸的傷害與防禦，最多 30 層。</li><li>每層增加 1% 對怪獸傷害；怪獸打你的傷害逐層相乘降低。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/0633a2b7-e8e9-4215-85a9-f54ae4d95809" width="32" height="32" alt="不落人後天賦圖示"> [不落人後](#adamant_pinning_dog_bonus_moving_towards)<br>- Not Far Behind | <ul><li>每當電子獒犬發動猛撲，玩家取得 5 秒移動速度與傷害加成。</li><li>兩項加成各為 10%；再次觸發會刷新單層效果時間。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6208ebde-9eb1-4a4d-923c-823a0e511bf9" width="32" height="32" alt="往前進攻！天賦圖示"> [往前進攻！](#adamant_companion_focus_ranged)<br>- Go Get 'Em! | <ul><li>電子獒犬更偏好選擇遠程敵人，並對遠程敵人增加 50% 傷害。</li><li>選敵評分提高遠程敵人優先度，並擴大遠程焦點的選敵距離。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d61cee49-95ce-43fb-ae8a-b05ba598366b" width="32" height="32" alt="猛犬出擊天賦圖示"> [猛犬出擊](#adamant_companion_focus_elite)<br>- Unleashed Brutality | <ul><li>電子獒犬更偏好精英與專家敵人，並對兩類敵人增加 25% 傷害。</li><li>選敵評分提高精英與專家敵人的優先度。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a6716d2d-1100-4bbe-be59-683b5b9176b4" width="32" height="32" alt="電子獒犬與人天賦圖示"> [電子獒犬與人](#adamant_toughness_regen_near_companion)<br>- Man and Cyber-Mastiff | <ul><li>在自己的電子獒犬 8 公尺內，每秒恢復最大韌性的 5%。</li></ul> | 技能 |
@@ -376,6 +377,19 @@
 - **滿層算例**：30 層提供 +30% 對巨獸傷害；巨獸攻擊你的傷害倍率為 0.99^30 ≈ 0.740，約降低 26.0%（只計此效果）。例如基礎 100 點對巨獸傷害變成 130；巨獸原本造成 100 點傷害時，變成約 73.97 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_execution_order_permastack.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_pinning_dog_bonus_moving_towards"></a>
+### 不落人後(Not Far Behind)
+
+<img src="https://github.com/user-attachments/assets/0633a2b7-e8e9-4215-85a9-f54ae4d95809" width="72" height="72" alt="不落人後天賦圖示">
+
+- **觸發與持續**：電子獒犬每次猛撲時，玩家獲得 +10% 移動速度與 +10% 傷害，持續 5 秒。
+
+- **算例與刷新**：單計本效果，基礎 100 點傷害變成 110；已有同階段 25% 加成時為 135。原本每秒移動 5 公尺變成 5 × 1.1 = 5.5 公尺。再次撲擊會刷新 5 秒，不疊加幅度。
+
+[詳細資料](TALENTS%20Arbites/adamant_pinning_dog_bonus_moving_towards.md) · [返回目錄](#talent-index)
 
 ---
 
