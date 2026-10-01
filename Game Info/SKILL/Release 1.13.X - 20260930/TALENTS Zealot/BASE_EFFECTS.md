@@ -151,3 +151,38 @@
 - 本機 Steam Build 25492122 與固定公開來源尚未證實同版。
 
 ---
+
+<a id="zealot_more_toughness_on_melee"></a>
+## 近戰擊殺回復更多韌性
+
+- 天賦識別碼：`zealot_more_toughness_on_melee`。
+
+- **效果**：近戰擊殺的韌性恢復量提高 75%；單純命中不會觸發。
+
+- **恢復算例**：若未加成時一次近戰擊殺恢復 10 點，現在為 10 × (1 + 75%) = 17.5 點；若同階段另有 25% 恢復加成，則為 10 × (1 + 75% + 25%) = 20 點。
+
+- **恢復上限**：武器、最大韌性及其他恢復倍率仍會影響實際點數；只缺 8 點韌性時，就只能恢復 8 點。
+
+### 原始碼確認與程式推導
+
+- base_talent 的 passive 掛 zealot_increased_toughness_recovery_from_kills；buff template 將 talent_settings_2.toughness_1.toughness_melee_replenish 設為 toughness_melee_replenish stat buff。
+
+- 設定值為 0.75；韌性 extension 只有 recovery_type==toughness_replenish_types.melee_kill 時讀取 toughness_melee_replenish，再與 total toughness-replenish modifiers 合併。
+
+- 來源運算式把該 stat 值與其他 stat modifiers 合併；75% 是該 base stat 的來源顯示值，不可忽略其他 multiplier 或武器恢復係數。
+
+### 原始碼依據
+
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2841-L2864)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L344-L346)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L1440-L1446)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L223-L242)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L1005-L1011)
+
+### 待確認事項
+
+- 這是 recovery percentage 的算例；實際韌性點數取決於 max toughness、當前韌性損傷、武器 template recovery_percentage_modifiers 及其他 stat buffs。
+- 本機 Steam Build 25492122 與固定公開來源尚未證實同版。
+
+---
