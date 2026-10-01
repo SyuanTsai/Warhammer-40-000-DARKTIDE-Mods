@@ -9,6 +9,15 @@
 >
 # Warhammer-40-000-DARKTIDE-Mods
 
+
+## 公告與技能圖片保存
+
+公告及技能說明交由 [Media-Assets](https://github.com/SyuanTsai/Media-Assets#readme) 管理的圖片，只保存於公開 Issue 附件。編輯前先讀該 README，找到對應 Issue，將圖片上傳到本文或 comment，再使用 GitHub 產生的完整附件網址。
+
+Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖檔提交至 Media-Assets 或本專案的 main、master 或任何工作分支，也不得另存為 Git 備份。貼上原站或 `raw.githubusercontent.com` 圖片網址並不等於上傳附件。上傳遇到限制時保留來源 metadata 並回報，取得可用的附件上傳方式後再完成保存。
+
+可使用瀏覽器拖曳／貼上圖片，或支援 `--attach` 的官方 GitHub CLI。引用前核對匿名存取、Content-Type、原始尺寸及 SHA-256；替換時保留文章原有的 alt、顯示尺寸及格式。
+
 # 基本必須安裝
 
 ### [Darktide Mod Loader](https://www.nexusmods.com/warhammer40kdarktide/mods/19?tab=description)
