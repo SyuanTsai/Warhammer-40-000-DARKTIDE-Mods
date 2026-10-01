@@ -22,6 +22,7 @@
 | [沒甚麼，只是擦傷](#broker_passive_replenish_toughness_on_ranged_toughness_damage) | 未見明確矛盾 |
 | [狂轟猛射](#broker_passive_damage_on_reload) | 未見明確矛盾 |
 | [堅韌疾速](#broker_passive_stamina_grants_atk_speed) | 未見明確矛盾 |
+| [加重背刺](#broker_passive_ramping_backstabs) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -120,3 +121,10 @@
 - 描述鍵：`loc_talent_broker_passive_stamina_grants_atk_speed_desc`；hash：`15f411fc`。
 - 結論：未見明確矛盾。兩語都依目前耐力給予攻速；取整與程式上限為補充。
 - [原始碼推導與限制](broker_passive_stamina_grants_atk_speed.md)。
+
+<a id="broker_passive_ramping_backstabs"></a>
+## 加重背刺(Ramping Backstabs)
+
+- 描述鍵：`loc_talent_broker_passive_ramping_backstabs_desc`；hash：`2f7fcac8`。
+- 結論：未見明確矛盾。兩語皆為背刺提高強度、非背刺清空；威力與最終傷害的區別屬補充。
+- [原始碼推導與限制](broker_passive_ramping_backstabs.md)。

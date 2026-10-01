@@ -20,6 +20,7 @@
 | <img src="https://github.com/user-attachments/assets/ba3e0adf-5d95-459d-9ed4-f17e21febd90" width="32" height="32" alt="沒甚麼，只是擦傷天賦圖示"> [沒甚麼，只是擦傷](#broker_passive_replenish_toughness_on_ranged_toughness_damage)<br>- Tis but a Scratch | <ul><li>尚有韌性時受到遠程傷害，3 秒內恢復 30% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6849ad32-3ebc-4d11-b980-612b4d23fd94" width="32" height="32" alt="狂轟猛射天賦圖示"> [狂轟猛射](#broker_passive_damage_on_reload)<br>- Unload | <ul><li>換彈後 7 秒內，遠程傷害增加 2%；每消耗相當於彈匣 10% 的彈藥，再增加 2%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/13f03cfd-6e09-41fe-920e-ad116f1a1548" width="32" height="32" alt="堅韌疾速天賦圖示"> [堅韌疾速](#broker_passive_stamina_grants_atk_speed)<br>- Swift Endurance | <ul><li>每 1 點目前耐力，增加 2% 近戰攻擊速度；不足 1 點捨去。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/d6f72725-01aa-4bc8-aeca-5e76118c1a51" width="32" height="32" alt="加重背刺天賦圖示"> [加重背刺](#broker_passive_ramping_backstabs)<br>- Ramping Backstabs | <ul><li>每次近戰背刺後增加 10% 近戰威力，最多 5 層；非背刺近戰命中會清除。</li></ul> | 技能 |
 
 ---
 
@@ -218,5 +219,20 @@
 - **上限**：最多計入 30 點目前耐力，提供 60% 攻速；實際可取得的加成仍受你的耐力上限限制。
 
 [詳細資料](TALENTS%20Scum/broker_passive_stamina_grants_atk_speed.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_ramping_backstabs"></a>
+### 加重背刺(Ramping Backstabs)
+
+<img src="https://github.com/user-attachments/assets/d6f72725-01aa-4bc8-aeca-5e76118c1a51" width="72" height="72" alt="加重背刺天賦圖示">
+
+- **累積與移除**：近戰背刺後增加 1 層，每層 10% 近戰威力，最多 5 層；沒有固定倒數。近戰命中非背部目標時，全部清除。
+
+- **威力算例**：5 層共增加 50%。若進入此加成階段的威力為 500，則為 500 × 1.5 = 750；另有同階段 20% 威力時為 500 × (1 + 20% + 50%) = 850。
+
+- **傷害限制**：威力還會經過武器傷害、踉蹌及順劈曲線，不能直接把 50% 威力寫成所有武器最終傷害都提高 50%。
+
+[詳細資料](TALENTS%20Scum/broker_passive_ramping_backstabs.md) · [返回目錄](#talent-index)
 
 ---

@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 14／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 15／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -25,3 +25,4 @@
 | 技能 | [沒甚麼，只是擦傷](broker_passive_replenish_toughness_on_ranged_toughness_damage.md) / `broker_passive_replenish_toughness_on_ranged_toughness_damage` | `node_3d4045a2-3883-4d78-9bf7-ac097351162e` | 完成（核心靜態機制） |
 | 技能 | [狂轟猛射](broker_passive_damage_on_reload.md) / `broker_passive_damage_on_reload` | `node_ba99146a-4a89-452f-8b02-7d6d871b30dd` | 完成（核心靜態機制） |
 | 技能 | [堅韌疾速](broker_passive_stamina_grants_atk_speed.md) / `broker_passive_stamina_grants_atk_speed` | `node_ba662782-8e5c-4a86-8927-3127d7c3735c` | 完成（核心靜態機制） |
+| 技能 | [加重背刺](broker_passive_ramping_backstabs.md) / `broker_passive_ramping_backstabs` | `node_1e885682-6bee-46c1-9d23-21332ffd3b51` | 完成（核心靜態機制） |
