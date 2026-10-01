@@ -20,6 +20,7 @@
 | [漸進裝甲矩陣](#cryptic_stacking_tdr) | 未見明確矛盾 |
 | [報應導管](#cryptic_damage_vs_electrocuted_scaling_on_charge) | 未見明確矛盾 |
 | [電流標記陣列](#cryptic_elite_kills_damage) | 作用條件用語有誤 |
+| [自我修復教義](#cryptic_toughness_per_charge) | 未見明確矛盾 |
 | [絕境中繼](#cryptic_crit_chance_based_on_charge) | 未見明確矛盾 |
 | [弱點分析教義](#cryptic_afflicted_increased_damage) | 未見明確矛盾 |
 | [離格動作例程](#cryptic_mobile_defense) | 未見明確矛盾 |
@@ -122,6 +123,13 @@
 - 繁中原文短引：擊殺遠程精英時，傷害提高{damage:%s}，持續{duration:%s}秒。可疊加{stacks:%s}次，每次衰減一層。
 - 同源英文：Ranged Elite Kills increase Damage by {damage:%s} for {duration:%s}s. Stacks {stacks:%s} times. Stacks decay one at a time.
 - [原始碼推導與限制](cryptic_elite_kills_damage.md)。
+
+<a id="cryptic_toughness_per_charge"></a>
+## 自我修復教義(Auto-Repair Doctrines)
+
+- 描述鍵：`loc_talent_cryptic_toughness_per_charge_desc`；hash：`04db1c7b`。
+- 結論：未見明確矛盾。中英一致；補充以最大韌性與完整電容量為基準。
+- [原始碼推導與限制](cryptic_toughness_per_charge.md)。
 
 <a id="cryptic_crit_chance_based_on_charge"></a>
 ## 絕境中繼(Last Stand Relay)

@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/5208032b-aaaf-4801-b84c-6fdbaab1735b" width="32" height="32" alt="漸進裝甲矩陣天賦圖示"> [漸進裝甲矩陣](#cryptic_stacking_tdr)<br>- Progressive Plating Matrix | <ul><li>命中疊加韌性減傷，每層 2.5%</li><li>最多 6 層，持續 5 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/eb093286-7cce-40e8-b518-3b5bc16dd38d" width="32" height="32" alt="報應導管天賦圖示"> [報應導管](#cryptic_damage_vs_electrocuted_scaling_on_charge)<br>- Retribution Conduit | <ul><li>對電擊目標提高 10% 傷害</li><li>每份完整電容量再增加 5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/77cad8a5-5837-45fe-98a7-549e27e5d738" width="32" height="32" alt="電流標記陣列天賦圖示"> [電流標記陣列](#cryptic_elite_kills_damage)<br>- Galvanic Marking Array | <ul><li>以遠程攻擊擊殺精英，每次提高 5% 傷害</li><li>最多 4 層，每 15 秒衰減一層</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/003d8e80-1bb4-46b0-aad1-e2f6d78be693" width="32" height="32" alt="自我修復教義天賦圖示"> [自我修復教義](#cryptic_toughness_per_charge)<br>- Auto-Repair Doctrines | <ul><li>每秒恢復 3% 韌性</li><li>每份完整電容量再增加每秒 0.5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5e8556aa-e9d9-4400-a863-bb26a5f11e17" width="32" height="32" alt="絕境中繼天賦圖示"> [絕境中繼](#cryptic_crit_chance_based_on_charge)<br>- Last Stand Relay | <ul><li>爆擊率增加 6 個百分點</li><li>沒有完整電容量時提高至 10 個百分點</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4683657a-edf5-4420-b60f-68eddc85ef43" width="32" height="32" alt="弱點分析教義天賦圖示"> [弱點分析教義](#cryptic_afflicted_increased_damage)<br>- Weakness Analysis Doctrine | <ul><li>命中電擊、燃燒、靈魂之火、流血或中毒敵人</li><li>傷害提高 10%、持續 8 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bc0f3370-fa34-406f-9e0d-91e23b98f1f2" width="32" height="32" alt="離格動作例程天賦圖示"> [離格動作例程](#cryptic_mobile_defense)<br>- Ablative Motion Routines | <ul><li>有耐力衝刺或滑行時，承受傷害降低 25%</li></ul> | 技能 |
@@ -216,6 +217,21 @@
 - 遊戲繁中寫「擊殺遠程精英」，容易誤認為只限定持槍精英。此版本的條件是「以遠程攻擊擊殺精英」；用近戰擊殺持槍精英不符合這項條件。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_elite_kills_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_toughness_per_charge"></a>
+### 自我修復教義(Auto-Repair Doctrines)
+
+<img src="https://github.com/user-attachments/assets/003d8e80-1bb4-46b0-aad1-e2f6d78be693" width="72" height="72" alt="自我修復教義天賦圖示">
+
+- **恢復方式**：持續每秒恢復最大韌性的 3%；目前每保有 1 份完整電容量，每秒再多恢復最大韌性的 0.5%。
+
+- **恢復算例**：最大韌性 200、保有 3 份時，每秒恢復 200 × (3% + 3 × 0.5%) = 9 點；0 份時仍每秒恢復 200 × 3% = 6 點。
+
+- **例外**：未充滿的一份不計入；已滿韌性時不會超出上限。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_toughness_per_charge.md) · [返回目錄](#talent-index)
 
 ---
 

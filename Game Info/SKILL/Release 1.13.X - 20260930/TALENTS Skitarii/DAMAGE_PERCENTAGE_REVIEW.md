@@ -18,6 +18,7 @@
 | [漸進裝甲矩陣](cryptic_stacking_tdr.md) | 命中疊加韌性減傷，每層 2.5%；最多 6 層，持續 5 秒；完整計算與適用限制見來源文件。 |
 | [報應導管](cryptic_damage_vs_electrocuted_scaling_on_charge.md) | 對電擊目標提高 10% 傷害；每份完整電容量再增加 5%；完整計算與適用限制見來源文件。 |
 | [電流標記陣列](cryptic_elite_kills_damage.md) | 以遠程攻擊擊殺精英，每次提高 5% 傷害；最多 4 層，每 15 秒衰減一層；完整計算與適用限制見來源文件。 |
+| [自我修復教義](cryptic_toughness_per_charge.md) | 每秒恢復 3% 韌性；每份完整電容量再增加每秒 0.5%；完整計算與適用限制見來源文件。 |
 | [絕境中繼](cryptic_crit_chance_based_on_charge.md) | 爆擊率增加 6 個百分點；沒有完整電容量時提高至 10 個百分點；完整計算與適用限制見來源文件。 |
 | [弱點分析教義](cryptic_afflicted_increased_damage.md) | 命中電擊、燃燒、靈魂之火、流血或中毒敵人；傷害提高 10%、持續 8 秒；完整計算與適用限制見來源文件。 |
 | [離格動作例程](cryptic_mobile_defense.md) | 有耐力衝刺或滑行時，承受傷害降低 25%；完整計算與適用限制見來源文件。 |
