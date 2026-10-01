@@ -9,6 +9,7 @@
 ## 原始碼確認與程式推導
 
 - 基礎天賦 cryptic_coherency_regen_aura 掛載協同模板 cryptic_coherency_regen_aura，數值將 min_toughness_coherency_regen_rate_modifier 設為0.25。韌性擴充在戰鬥中檢查協同恢復修正，並以 max(該最小倍率減1, 0) 算出最低倍率；一般協同恢復速率乘0.25，再乘武器、站姿、其他韌性倍率等修正。仍要求有韌性缺額、恢復延遲已結束且沒有停用韌性恢復。協同系統建立 daisy-chain 時明確先加入自身單位；更新時把鏈內新增單位逐一送入 on_coherency_enter，而 UnitCoherencyExtension 會把傳入單位放入 in_coherence_units，再從該集合搜尋並啟用協同光環。因此施放者本身也在接收集合內，基礎光環會作用於自身和協同鏈內其他有效玩家。此節點的 coherency_id 與改良版相同，改良版 priority=1 高於基礎版 priority=2，兩者同時存在時每個接收者只會啟用優先級較高者。
+- 本機Steam Build25492122：描述鍵 `loc_talent_cryptic_coherency_regen_aura_desc`、同源中英hash `f34842d1` 已精確配對。同鍵中英均明確包括自己與協同隊友。固定程式的25%是一般協同恢復速率倍率，仍受恢復延遲與協同條件限制；沒有把省略計算判成誤譯。
 
 ## 原始碼依據
 
