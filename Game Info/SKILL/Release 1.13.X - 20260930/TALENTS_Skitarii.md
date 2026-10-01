@@ -14,6 +14,7 @@
 | <img src="https://github.com/user-attachments/assets/e70f3e4b-d2c2-4840-bc29-56ba85dd816d" width="32" height="32" alt="過載艾曼納圖斯力場天賦圖示"> [過載艾曼納圖斯力場](#cryptic_force_field_duration_increase)<br>- Overcharged Refraction Emitter | <ul><li>將艾曼納圖斯力場持續時間由8秒提高至12秒，並在持續時間中點額外引發一次電擊爆炸。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/9eb6e468-224f-4d7c-b696-cc58aa08f532" width="32" height="32" alt="動能排斥天賦圖示"> [動能排斥](#cryptic_force_field_capacitance_restore)<br>- Kinetic Repulsion | <ul><li>艾曼納圖斯力場吸收遠程攻擊時會恢復電容量。</li><li>每次吸收恢復0.025份，每次力場最多恢復0.75份。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/c365855a-e85f-4d0d-8156-4048ae9f7e02" width="32" height="32" alt="心智網指令天賦圖示"> [心智網指令](#cryptic_servo_skull_improved_tagging)<br>- Noospheric Command | <ul><li>標記敵人並下令攻擊，可使伺服頭骨短暫大幅加快射擊。</li><li>完整2秒加速消耗0.3份電容量；沒有最低電容量時不能啟動，訓練場例外。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/ba6e0fe8-b601-433e-a423-8a6b8ee7b79b" width="32" height="32" alt="電流抗性天賦圖示"> [電流抗性](#cryptic_force_field_arcs)<br>- Voltaic Resistance | <ul><li>艾曼納圖斯力場結束時，會按吸收的遠程攻擊次數向前方敵人發射1至4道電弧。</li><li>每道電弧都可連鎖攻擊附近敵人。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/eb879996-8768-4102-8799-0fecaf6f7a98" width="32" height="32" alt="修復協定天賦圖示"> [修復協定](#cryptic_precision_stance_toughness_suppression)<br>- Restoration Protocol | <ul><li>精準姿態啟動時清除壓制；姿態維持期間每秒恢復最大韌性的10%。</li><li>回復按最大韌性的比例計算，受一般韌性補充修正影響，且最多補到滿韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ac9ea4d6-352f-4ad1-95f2-a2de10d39d2d" width="32" height="32" alt="彈藥盤點之旨天賦圖示"> [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased)<br>- Writ of Ammunition Enumeration | <ul><li>精準姿態啟動時提高遠程射速15%；姿態連續維持滿4秒後提高至30%。</li><li>姿態結束會撤除此射速加成，4秒計時亦重置。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="32" height="32" alt="電流弧天賦圖示"> [電流弧](#cryptic_discharge_generates_arcs)<br>- Voltaic Arcs | <ul><li>電能發射器每消耗一道充能，額外釋放一道向前電弧；最多生成 5 道。</li><li>每道電弧從前方 12 公尺內的有效敵人起始，之後可鏈接附近敵人。</li></ul> | 能力 |
@@ -194,6 +195,21 @@
 - **搭配匠師伺服頭骨**：常駐射擊間隔減半與本效果相乘。例如原本3秒，常駐強化後為1.5秒，再啟動指令為3 × 0.5 × 0.15 = 0.225秒；這是射擊間隔的計算，實際攻擊仍受瞄準與目標條件限制。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_servo_skull_improved_tagging.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_force_field_arcs"></a>
+### 電流抗性(Voltaic Resistance)
+
+<img src="https://github.com/user-attachments/assets/ba6e0fe8-b601-433e-a423-8a6b8ee7b79b" width="72" height="72" alt="電流抗性天賦圖示">
+
+- **運作方式**：艾曼納圖斯力場結束時，依吸收的遠程攻擊次數發射電弧：0至6次發射1道、7至12次發射2道、13至18次發射3道、19次以上最多4道。
+
+- **算例**：即使沒有吸收遠程攻擊，力場到期時仍會嘗試發射1道；前方12公尺內有有效敵人時才會命中目標。
+
+- **運作方式**：每道電弧可在附近敵人間連鎖最多4次；實際連鎖仍取決於周圍是否有有效目標。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_force_field_arcs.md) · [返回目錄](#talent-index)
 
 ---
 

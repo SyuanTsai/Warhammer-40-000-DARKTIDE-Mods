@@ -15,6 +15,7 @@
 | [過載艾曼納圖斯力場](#cryptic_force_field_duration_increase) | 未見明確矛盾；補充機制與算例 |
 | [動能排斥](#cryptic_force_field_capacitance_restore) | 未見明確矛盾；補充機制與算例 |
 | [心智網指令](#cryptic_servo_skull_improved_tagging) | 未見明確矛盾；補充機制與算例 |
+| [電流抗性](#cryptic_force_field_arcs) | 未見明確矛盾；補充機制與算例 |
 | [修復協定](#cryptic_precision_stance_toughness_suppression) | 單位用語有誤 |
 | [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased) | 未見明確矛盾 |
 | [電流弧](#cryptic_discharge_generates_arcs) | 未見明確矛盾 |
@@ -133,6 +134,13 @@
 - 描述鍵：`loc_talent_cryptic_servo_skull_improved_tagging_fire_rate_cost_desc`；hash：`843cef80`。
 - 結論：未見明確矛盾；補充機制與算例。繁中描述有列出下令攻擊、持續2秒及0.3電容量，但程式的資源參數是 combat_ability charge percentage，換算為0.3份；程式射擊冷卻乘數0.15，語系格式值會換算為約567%攻擊速度。其餘門檻、訓練場例外及扣除調整屬未列明細節。Build 25492122 尚未確認與固定來源同版。
 - [原始碼推導與限制](cryptic_servo_skull_improved_tagging.md)。
+
+<a id="cryptic_force_field_arcs"></a>
+## 電流抗性(Voltaic Resistance)
+
+- 描述鍵：`loc_talent_cryptic_force_field_arcs_desc`；hash：`143e5c50`。
+- 結論：未見明確矛盾；補充機制與算例。固定原始碼確認按吸收遠程攻擊數以每6次取上限整數後限制1至4道；0次也會由下限算成1道，並在正常到期路徑進入找目標流程。繁中描述未列出整數門檻、最低值及前方12公尺目標條件，屬翻譯省略的實作細節，不列為錯誤。本機 Build 25492122 尚未確認與固定來源同版。
+- [原始碼推導與限制](cryptic_force_field_arcs.md)。
 
 <a id="cryptic_precision_stance_toughness_suppression"></a>
 ## 修復協定(Restoration Protocol)

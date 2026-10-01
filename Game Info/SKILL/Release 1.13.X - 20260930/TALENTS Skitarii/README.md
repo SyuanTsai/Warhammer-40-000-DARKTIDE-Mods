@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **97 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10)。內部 tree version 18 不等於遊戲發行版號。
 
-完成 76／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 77／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -18,6 +18,7 @@
 | 閃擊 | [過載艾曼納圖斯力場](cryptic_force_field_duration_increase.md) / `cryptic_force_field_duration_increase` | `node_c462607d-3464-41ba-b43c-6d210aa1d65f` | 完成（核心靜態機制） |
 | 閃擊 | [動能排斥](cryptic_force_field_capacitance_restore.md) / `cryptic_force_field_capacitance_restore` | `node_4a240e77-1a0d-4833-ad5c-82bec1eca8c2` | 完成（核心靜態機制） |
 | 閃擊 | [心智網指令](cryptic_servo_skull_improved_tagging.md) / `cryptic_servo_skull_improved_tagging` | `node_cc688d42-e7dd-45bb-81ec-df7c8d772e3f` | 完成（核心靜態機制） |
+| 閃擊 | [電流抗性](cryptic_force_field_arcs.md) / `cryptic_force_field_arcs` | `node_a2f854fa-6833-41cb-8022-e5a4617d8646` | 完成（核心靜態機制） |
 | 能力 | [修復協定](cryptic_precision_stance_toughness_suppression.md) / `cryptic_precision_stance_toughness_suppression` | `node_1f07ccdc-f96c-4700-ac3f-13fb3244419d` | 完成（核心靜態機制） |
 | 能力 | [彈藥盤點之旨](cryptic_precision_stance_fire_rate_increased.md) / `cryptic_precision_stance_fire_rate_increased` | `node_9f2a7af2-4bde-47c2-a856-379c9ca8e034` | 完成（核心靜態機制） |
 | 能力 | [電流弧](cryptic_discharge_generates_arcs.md) / `cryptic_discharge_generates_arcs` | `node_76d47f27-b1fe-4614-a013-9cdcfb6ac12b` | 完成（核心靜態機制） |
