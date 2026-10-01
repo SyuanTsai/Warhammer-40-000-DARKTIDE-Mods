@@ -11,6 +11,7 @@
 | [獻祭手雷](#zealot_flame_grenade) | 明確繁中誤譯 |
 | [信仰之刃](#zealot_throwing_knives) | 未見明確矛盾 |
 | [眩暈風暴手雷](#zealot_improved_stun_grenade) | 未見明確矛盾 |
+| [恩賜](#zealot_toughness_damage_reduction_coherency_improved) | 未見明確矛盾 |
 | [不屈靈魂合唱](#zealot_bolstering_prayer) | 待同版核對 |
 | [有信者之怒](#zealot_attack_speed_post_ability) | 跨來源待同版核對 |
 | [神聖事業](#zealot_channel_grants_toughness_damage_reduction) | 原文字串未精確配對 |
@@ -110,6 +111,13 @@
 - 描述鍵：`loc_zealot_improved_stun_grenade_desc`；hash：`35fbc631`。
 - 結論：未見明確矛盾。Build 25492122 的繁中和英文都說明震撼手雷及其升級範圍，沒有可確認的明確譯錯。
 - [原始碼推導與限制](zealot_improved_stun_grenade.md)。
+
+<a id="zealot_toughness_damage_reduction_coherency_improved"></a>
+## 恩賜(Benediction)
+
+- 描述鍵：`loc_talent_zealot_toughness_aura_efficiency_desc`；hash：`90d53110`。
+- 結論：未見明確矛盾。Build 25492122 的繁中與英文均描述持有者及協同盟友獲得韌性傷害降低；沒有可確認的明確譯錯。
+- [原始碼推導與限制](zealot_toughness_damage_reduction_coherency_improved.md)。
 
 <a id="zealot_bolstering_prayer"></a>
 ## 不屈靈魂合唱(Chorus of Spiritual Fortitude)
