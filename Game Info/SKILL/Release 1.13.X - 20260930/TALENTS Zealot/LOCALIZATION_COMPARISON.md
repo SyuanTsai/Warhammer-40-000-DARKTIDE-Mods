@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [獻祭手雷](#zealot_flame_grenade) | 明確繁中誤譯 |
+| [眩暈風暴手雷](#zealot_improved_stun_grenade) | 未見明確矛盾 |
 | [不屈靈魂合唱](#zealot_bolstering_prayer) | 待同版核對 |
 | [有信者之怒](#zealot_attack_speed_post_ability) | 跨來源待同版核對 |
 | [神聖事業](#zealot_channel_grants_toughness_damage_reduction) | 原文字串未精確配對 |
@@ -94,6 +95,13 @@
 - 繁中原文短引：投擲一枚手雷，在爆炸處形成一層燃燒的液體，燃燒並使敵人暈眩, 同時阻擋他們的道路。針對無護甲敵人最為有效。
 - 同源英文：Throw a grenade that leaves a layer of flaming liquid, Burning and Staggering enemies, and barring their path. Most effective against Unarmoured Enemies.
 - [原始碼推導與限制](zealot_flame_grenade.md)。
+
+<a id="zealot_improved_stun_grenade"></a>
+## 眩暈風暴手雷(Stunstorm Grenade)
+
+- 描述鍵：`loc_zealot_improved_stun_grenade_desc`；hash：`35fbc631`。
+- 結論：未見明確矛盾。Build 25492122 的繁中和英文都說明震撼手雷及其升級範圍，沒有可確認的明確譯錯。
+- [原始碼推導與限制](zealot_improved_stun_grenade.md)。
 
 <a id="zealot_bolstering_prayer"></a>
 ## 不屈靈魂合唱(Chorus of Spiritual Fortitude)

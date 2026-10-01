@@ -7,6 +7,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/aaab981f-d4ba-4278-b79d-873fccac1faa" width="32" height="32" alt="獻祭手雷天賦圖示"> [獻祭手雷](#zealot_flame_grenade)<br>- Immolation Grenade | <ul><li>最多攜帶 3 枚；引爆後留下持續 15 秒的火焰區域。</li><li>持續灼傷範圍內的敵人；傷害隨難度、護甲和每次隨機值改變。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/73777d2d-3727-47dc-8093-0d25ec6a3cfd" width="32" height="32" alt="眩暈風暴手雷天賦圖示"> [眩暈風暴手雷](#zealot_improved_stun_grenade)<br>- Stunstorm Grenade | <ul><li>震撼手雷的爆炸半徑增加 50%，最大半徑由 8 公尺提高為 12 公尺。</li><li>最多攜帶 3 枚；命中後附加持續 8 秒的電擊效果。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/4ae30922-3e39-4ded-8e19-35ec595befa0" width="32" height="32" alt="不屈靈魂合唱天賦圖示"> [不屈靈魂合唱](#zealot_bolstering_prayer)<br>- Chorus of Spiritual Fortitude | <ul><li>引導約 3.67 秒，開始時立即脈衝，之後每 0.8 秒一次；基礎冷卻 60 秒。</li><li>每次脈衝作用於本人與協同中的盟友，恢復韌性、提高暫時最大韌性，並賦予免死及眩暈免疫。</li><li>脈衝會踉蹌附近敵人；引導期間另持續恢復韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/bd841f6f-e0ff-4cfa-a3ac-f7d08bfbc80e" width="32" height="32" alt="有信者之怒天賦圖示"> [有信者之怒](#zealot_attack_speed_post_ability)<br>- Fury of the Faithful | <ul><li>向前衝刺，基礎冷卻 30 秒；開始時恢復最多相當於最大韌性 50% 的韌性。</li><li>衝刺後獲得 +20% 攻擊速度；描述顯示 10 秒，執行 buff 時長為 11 秒。</li><li>衝刺後的近戰 buff 最長 3 秒，下一次有效近戰命中獲得 +25% 近戰傷害、+100% 近戰暴擊機率與 +100% 近戰撕裂。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29" width="32" height="32" alt="神聖事業天賦圖示"> [神聖事業](#zealot_channel_grants_toughness_damage_reduction)<br>- Holy Cause | <ul><li>「神聖事業」讓合唱脈衝對本人與協同盟友疊加韌性傷害減免。</li><li>每次脈衝 +8% 韌性傷害減免，最多 5 層，即最高 40%；持續 10 秒，脈衝會刷新時間。</li><li>合唱約 3.67 秒、每 0.8 秒脈衝一次；約 5 次脈衝可累積到上限。</li></ul> | 能力 |
@@ -106,6 +107,25 @@
 - 繁中原文將英文「Burning and Staggering」寫成「燃燒並使敵人暈眩」；此處應為「燃燒並使敵人踉蹌」，不能把踉蹌當成眩暈。
 
 [詳細資料](TALENTS%20Zealot/zealot_flame_grenade.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_improved_stun_grenade"></a>
+### 眩暈風暴手雷(Stunstorm Grenade)
+
+<img src="https://github.com/user-attachments/assets/73777d2d-3727-47dc-8093-0d25ec6a3cfd" width="72" height="72" alt="眩暈風暴手雷天賦圖示">
+
+- **運作方式**：強化原有震撼手雷，爆炸半徑增加 50%；最多攜帶 3 枚，引信為 1.5 秒。
+
+- **範圍算例**：只有此天賦修正時，最大半徑為 8 × 1.5 = 12 公尺，近距離區域半徑為 2 × 1.5 = 3 公尺。範圍判定仍會受爆炸位置與遮蔽物影響。
+
+- **電擊效果**：命中敵人後附加 8 秒電擊，約每隔 0.3～0.8 秒結算一次；再次命中會刷新時間，同一效果不疊加成多層。實際能否持續控制敵人，仍取決於敵人的控制抗性。
+
+- **傷害算例**：只計電擊的週期傷害，沒有其他修正時，單次對無護甲部位為 8 × 0.5 = 4 點，對防彈護甲為 8 × 1 = 8 點；初次爆炸另計。
+
+- **例外**：已處於踉蹌狀態的瘟疫爆者不再承受這段週期電擊；這不代表牠完全免疫手雷的爆炸或控制。
+
+[詳細資料](TALENTS%20Zealot/zealot_improved_stun_grenade.md) · [返回目錄](#talent-index)
 
 ---
 

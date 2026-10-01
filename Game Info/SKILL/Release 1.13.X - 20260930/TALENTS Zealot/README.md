@@ -7,11 +7,12 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **82 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L3-L10)。內部 tree version 29 不等於遊戲發行版號。
 
-完成 77／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 78／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
 | 閃擊 | [獻祭手雷](zealot_flame_grenade.md) / `zealot_flame_grenade` | `node_998a79be-ed3f-4b78-acb5-cb788438a76c` | 完成（核心靜態機制） |
+| 閃擊 | [眩暈風暴手雷](zealot_improved_stun_grenade.md) / `zealot_improved_stun_grenade` | `node_efeefa9a-f503-46e7-afae-a61d76ad3a7e` | 完成（核心靜態機制） |
 | 能力 | [不屈靈魂合唱](zealot_bolstering_prayer.md) / `zealot_bolstering_prayer` | `node_c286494b-4e57-42a2-9c41-04809ee97c41` | 完成（核心靜態機制） |
 | 能力 | [有信者之怒](zealot_attack_speed_post_ability.md) / `zealot_attack_speed_post_ability` | `node_5bf70f4d-96f3-446a-8a74-f4b4db160455` | 完成（核心靜態機制） |
 | 能力 | [神聖事業](zealot_channel_grants_toughness_damage_reduction.md) / `zealot_channel_grants_toughness_damage_reduction` | `node_72c78ca8-a422-429a-90cf-b85d0b36aa19` | 完成（核心靜態機制） |
