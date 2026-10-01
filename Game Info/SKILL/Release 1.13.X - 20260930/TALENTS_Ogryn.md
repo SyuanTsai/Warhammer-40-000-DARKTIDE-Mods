@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/3d442f9a-0143-43d7-a6e2-10a5d6b8a9f8" width="32" height="32" alt="最強壯！天賦圖示"> [最強壯！](#ogryn_carapace_armor_add_stack_on_push)<br>- Strongest! | <ul><li>推搡至少一名敵人時，麻木恢復 1 層。</li><li>麻木最多 10 層；一次推搡推中多人也只恢復 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760" width="32" height="32" alt="子彈風暴天賦圖示"> [子彈風暴](#ogryn_blo_ally_ranged_buffs)<br>- Bulletstorm | <ul><li>觸發幸運子彈時，你和協同範圍內的隊友獲得 +15% 遠程傷害，持續 8 秒。</li><li>再次觸發會把效果時間重新延長為 8 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a9ec95cc-0b91-4558-81b5-faefcf1207d7" width="32" height="32" alt="激鬥戰火天賦圖示"> [激鬥戰火](#ogryn_blo_wield_speed)<br>- Heat of Battle | <ul><li>「激鬥戰火」讓爆限超載每層另增加 1.5% 遠程射速。</li><li>沿用遠程擊殺累積的 10 層、每次加層刷新 10 秒；滿層增加 15% 遠程射速。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5c8fc9b0-2f06-4311-87f7-511d4c6ce6d5" width="32" height="32" alt="退後！天賦圖示"> [退後！](#ogryn_blo_melee)<br>- Back Off! | <ul><li>近戰擊殺可提高下一次射擊觸發幸運子彈的機率，每層增加 10 個百分點。</li><li>最多累積 10 層；下一次射擊後清空，該次即使觸發幸運子彈而免耗彈藥也會消耗層數。</li></ul> | 鑰石 |
@@ -64,6 +65,21 @@
 ---
 
 ## 鑰石
+
+<a id="ogryn_carapace_armor_add_stack_on_push"></a>
+### 最強壯！(Strongest!)
+
+<img src="https://github.com/user-attachments/assets/3d442f9a-0143-43d7-a6e2-10a5d6b8a9f8" width="72" height="72" alt="最強壯！天賦圖示">
+
+- **生效條件**：選取「最強壯！」後，推搡必須實際推中至少一名敵人，才會恢復 1 層麻木。
+
+- **層數上限**：麻木最多 10 層；滿層時推搡不會超過上限。 推擊補層後，自然補層的 2 秒間隔會重新計時。
+
+- **算例**：6 層時推中 1 名或 3 名敵人，都恢復至 7 層；10 層時再推中敵人仍維持 10 層。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_carapace_armor_add_stack_on_push.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="ogryn_blo_ally_ranged_buffs"></a>
 ### 子彈風暴(Bulletstorm)

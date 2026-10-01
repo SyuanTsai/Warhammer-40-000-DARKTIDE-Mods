@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [最強壯！](#ogryn_carapace_armor_add_stack_on_push) | 未見明確矛盾 |
 | [子彈風暴](#ogryn_blo_ally_ranged_buffs) | 繁中描述錯誤 |
 | [激鬥戰火](#ogryn_blo_wield_speed) | 未見明確矛盾 |
 | [退後！](#ogryn_blo_melee) | 繁中描述錯誤 |
@@ -61,6 +62,13 @@
 | [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown) | 未見明確矛盾 |
 | [精準打擊](#ogryn_weakspot_damage) | 未見明確矛盾 |
 | [機動部署](#ogryn_bracing_reduces_damage_taken) | 未見明確矛盾 |
+
+<a id="ogryn_carapace_armor_add_stack_on_push"></a>
+## 最強壯！(Strongest!)
+
+- 描述鍵：`loc_talent_ogryn_carapace_armor_add_stack_on_push_desc`；hash：`60ac22bf`。
+- 結論：未見明確矛盾。繁中寫「推搡敵人恢復一層」，英文寫「Pushing Enemies restores one stack」；兩者都要求推搡敵人並說明恢復一層。
+- [原始碼推導與限制](ogryn_carapace_armor_add_stack_on_push.md)。
 
 <a id="ogryn_blo_ally_ranged_buffs"></a>
 ## 子彈風暴(Bulletstorm)
