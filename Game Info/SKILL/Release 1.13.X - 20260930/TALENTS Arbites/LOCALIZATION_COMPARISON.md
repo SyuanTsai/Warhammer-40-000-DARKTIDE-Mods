@@ -17,6 +17,7 @@
 | [交鋒](#adamant_charge_longer_distance) | 未見明確矛盾 |
 | [殺戮命令](#adamant_dog_damage_after_ability) | 未見明確矛盾 |
 | [孤狼](#adamant_disable_companion) | 未見明確矛盾 |
+| [效率殺手](#adamant_execution_order_crit) | 未見明確矛盾 |
 | [生化武器關](#adamant_execution_order_cdr) | 未見明確矛盾 |
 | [往前進攻！](#adamant_companion_focus_ranged) | 未見明確矛盾 |
 | [猛犬出擊](#adamant_companion_focus_elite) | 未見明確矛盾 |
@@ -136,6 +137,13 @@
 - 描述鍵：`loc_talent_adamant_disable_companion_replenish_split_desc`；hash：`fe3bded9`。
 - 結論：未見明確矛盾。同源繁中與英文的移除獒犬、個人增益與補充間隔一致；45／90秒都有實際消費路徑，另一個未使用的60秒欄位不構成文字矛盾。
 - [原始碼推導與限制](adamant_disable_companion.md)。
+
+<a id="adamant_execution_order_crit"></a>
+## 效率殺手(Efficient Killer)
+
+- 描述鍵：`loc_talent_execution_order_crit_description`；hash：`2b42cf3a`。
+- 結論：未見明確矛盾。繁中「擊殺被標記的目標時，獲得 10%暴擊機率與 25%暴擊傷害，持續 8 秒」對應英文 “Gain 10% Critical Hit Chance and 25% Critical Hit Damage on Marked Kill. Lasts 8s”；一致。
+- [原始碼推導與限制](adamant_execution_order_crit.md)。
 
 <a id="adamant_execution_order_cdr"></a>
 ## 生化武器關(Malocator)

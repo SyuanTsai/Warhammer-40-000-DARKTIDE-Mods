@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="32" height="32" alt="交鋒天賦圖示"> [交鋒](#adamant_charge_longer_distance)<br>- Engage | <ul><li>衝鋒距離由基礎 3.75 公尺增加 3.75 公尺，目標距離上限成為 7.5 公尺。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="32" height="32" alt="殺戮命令天賦圖示"> [殺戮命令](#adamant_dog_damage_after_ability)<br>- Kill Order | <ul><li>使用戰鬥技能後，電子獒犬傷害提高 50%，持續 12 秒；效果生效時再次使用戰鬥技能可刷新。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="孤狼天賦圖示"> [孤狼](#adamant_disable_companion)<br>- Lone Wolf | <ul><li>選取後伺服器端移除電子獒犬，改給自身傷害、攻速、韌性受傷倍率與閃擊充能補給。</li><li>一般手榴彈每 45 秒補 1 顆；使用震撼地雷時每 90 秒補 1 顆；補給只在有缺額時計時。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="32" height="32" alt="效率殺手天賦圖示"> [效率殺手](#adamant_execution_order_crit)<br>- Efficient Killer | <ul><li>擊殺被標記敵人時，獲得 8 秒爆擊機率與爆擊傷害加成。</li><li>加成為 +10 個百分點爆擊機率與 +25% 額外爆擊傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="32" height="32" alt="生化武器關天賦圖示"> [生化武器關](#adamant_execution_order_cdr)<br>- Malocator | <ul><li>擊殺被標記敵人後，建立 8 秒戰鬥技能資源恢復效果。</li><li>每秒恢復 0.5 秒能力資源，名目上最多約 4 秒，受剩餘冷卻上限限制。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6208ebde-9eb1-4a4d-923c-823a0e511bf9" width="32" height="32" alt="往前進攻！天賦圖示"> [往前進攻！](#adamant_companion_focus_ranged)<br>- Go Get 'Em! | <ul><li>電子獒犬更偏好選擇遠程敵人，並對遠程敵人增加 50% 傷害。</li><li>選敵評分提高遠程敵人優先度，並擴大遠程焦點的選敵距離。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d61cee49-95ce-43fb-ae8a-b05ba598366b" width="32" height="32" alt="猛犬出擊天賦圖示"> [猛犬出擊](#adamant_companion_focus_elite)<br>- Unleashed Brutality | <ul><li>電子獒犬更偏好精英與專家敵人，並對兩類敵人增加 25% 傷害。</li><li>選敵評分提高精英與專家敵人的優先度。</li></ul> | 鑰石 |
@@ -215,6 +216,21 @@
 - **補充算例**：一般手榴彈缺少至少 1 顆時，開始等 45 秒並補回 1 顆；震撼地雷缺額則等 90 秒。補回後重新等下一次，滿充能時不計時。
 
 [詳細資料](TALENTS%20Arbites/adamant_disable_companion.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_execution_order_crit"></a>
+### 效率殺手(Efficient Killer)
+
+<img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="72" height="72" alt="效率殺手天賦圖示">
+
+- **觸發與持續**：擊殺被標記敵人會觸發；效果持續 8 秒，重新觸發會刷新時間。
+
+- **爆擊機率**：增加 10 個百分點，例如原本 5% 變成 15%。
+
+- **爆擊傷害算例**：25% 加成作用於爆擊的額外傷害部分。若普攻 100、爆擊 150，則變成 100 + (150 − 100) × 1.25 = 162.5，整筆爆擊傷害實際提高約 8.33%；另一把武器若爆擊 200，則變成 225，提高 12.5%。武器與護甲不同，實際增幅也不同。
+
+[詳細資料](TALENTS%20Arbites/adamant_execution_order_crit.md) · [返回目錄](#talent-index)
 
 ---
 
