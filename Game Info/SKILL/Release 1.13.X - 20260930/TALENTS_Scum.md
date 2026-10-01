@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/6f9a1e1d-3722-4f74-98ff-a17aadbd2ce4" width="32" height="32" alt="能量爆發天賦圖示"> [能量爆發](#broker_passive_stun_immunity_on_toughness_broken)<br>- Burst of Energy | <ul><li>自身韌性耗盡時恢復 50% 最大韌性，免疫眩暈 6 秒；效果結束後冷卻 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ad899680-6ea8-486b-976c-e0e875026aa8" width="32" height="32" alt="韌性增幅天賦圖示"> [韌性增幅](#base_toughness_node_buff_medium_1)<br>- Toughness Boost | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/31e809e4-4465-4dde-9719-1f66f8face02" width="32" height="32" alt="恢復姿態天賦圖示"> [恢復姿態](#broker_passive_stamina_on_successful_dodge)<br>- Regained Posture | <ul><li>成功閃避時，恢復最大耐力的 10%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/a1732698-da8a-42ec-8f53-f0a57c964056" width="32" height="32" alt="奧客天賦圖示"> [奧客](#broker_passive_dodge_melee_on_slide)<br>- Slippery Customer | <ul><li>滑行時，視為正在閃避近戰攻擊。</li></ul> | 技能 |
 
 ---
 
@@ -154,5 +155,18 @@
 - **恢復算例**：最大耐力 5 點時，每次恢復 5 × 10% = 0.5 點；目前為 4.8 點時，實際只恢復 0.2 點。
 
 [詳細資料](TALENTS%20Scum/broker_passive_stamina_on_successful_dodge.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_dodge_melee_on_slide"></a>
+### 奧客(Slippery Customer)
+
+<img src="https://github.com/user-attachments/assets/a1732698-da8a-42ec-8f53-f0a57c964056" width="72" height="72" alt="奧客天賦圖示">
+
+- **運作方式**：滑行期間具有近戰閃避判定，敵人的近戰攻擊會依閃避規則處理；並非直接免疫所有傷害。
+
+- **觸發限制**：開始滑行不等於已成功避開攻擊。需要實際避開符合判定的攻擊，才會觸發成功閃避相關天賦。
+
+[詳細資料](TALENTS%20Scum/broker_passive_dodge_melee_on_slide.md) · [返回目錄](#talent-index)
 
 ---
