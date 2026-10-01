@@ -46,6 +46,7 @@
 | <img src="https://github.com/user-attachments/assets/83713f05-33fd-41c1-86f2-c536d7a1f06c" width="32" height="32" alt="心狠手辣天賦圖示"> [心狠手辣](#broker_passive_melee_crit_instakill)<br>- Hyper-Critical | <ul><li>近戰爆擊後，若人類體型敵人的剩餘生命少於該次傷害，立即處決；隊長除外。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/280d8610-ccf2-4be3-a05b-6f4a140f8b23" width="32" height="32" alt="以小搏大天賦圖示"> [以小搏大](#broker_passive_damage_vs_elites_monsters)<br>- Punching Above One's Weight | <ul><li>對精英及怪物的傷害增加 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bd4b828f-f439-429d-a682-c036774235f3" width="32" height="32" alt="甜蜜點天賦圖示"> [甜蜜點](#broker_passive_increased_weakspot_damage)<br>- The Sweet Spot | <ul><li>弱點命中的額外傷害部分增加 25%；實際總增幅依武器而變。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c19f893c-1a73-4111-b234-e675605b17b5" width="32" height="32" alt="延長藥效天賦圖示"> [延長藥效](#broker_passive_stimm_increased_duration)<br>- Long Lasting | <ul><li>興奮劑效果延長 5 秒。</li></ul> | 技能 |
 
 ---
 
@@ -610,5 +611,20 @@
 - **武器差異算例**：另一武器若一般部分 100、額外部分 300，原本 400，生效後為 100 + 300 × 1.25 = 475，總增幅為 18.75%。所以同一項 25% 弱點加成，在不同武器上不會固定增加相同的總傷害百分比。
 
 [詳細資料](TALENTS%20Scum/broker_passive_increased_weakspot_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_stimm_increased_duration"></a>
+### 延長藥效(Long Lasting)
+
+<img src="https://github.com/user-attachments/assets/c19f893c-1a73-4111-b234-e675605b17b5" width="72" height="72" alt="延長藥效天賦圖示">
+
+- **持續算例**：原本持續 15 秒的興奮劑，變成 15 + 5 = 20 秒；這是固定加 5 秒，不是增加 5%。
+
+- **冷卻影響**：巢都渣滓專用興奮劑在藥效期間暫停自然冷卻，因此藥效延長也會延後冷卻開始恢復的時間。
+
+- **適用限制**：延長具有持續效果的興奮劑；瞬間治療本身不會因此多治療 5 秒。
+
+[詳細資料](TALENTS%20Scum/broker_passive_stimm_increased_duration.md) · [返回目錄](#talent-index)
 
 ---
