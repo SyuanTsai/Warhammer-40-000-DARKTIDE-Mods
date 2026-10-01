@@ -33,6 +33,7 @@
 | [請求暫停](#broker_passive_reduced_toughness_damage_during_reload) | 未見明確矛盾 |
 | [街頭硬漢](#broker_passive_knockback_on_taking_melee_damage) | 未見明確矛盾 |
 | [蓄力殲滅](#broker_passive_crit_grants_damage) | 未見明確矛盾 |
+| [猛烈劈擊](#broker_passive_melee_cleave_on_melee_kill) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -210,3 +211,10 @@
 - 描述鍵：`loc_talent_broker_passive_crit_grants_damage_desc`；hash：`ef095720`。
 - 結論：未見明確矛盾。兩語均依當前爆擊機率產生近戰增傷，未見矛盾。
 - [原始碼推導與限制](broker_passive_crit_grants_damage.md)。
+
+<a id="broker_passive_melee_cleave_on_melee_kill"></a>
+## 猛烈劈擊(Battering Strikes)
+
+- 描述鍵：`loc_talent_broker_passive_melee_cleave_on_melee_kill_desc`；hash：`3e88fbf2`。
+- 結論：未見明確矛盾。兩語皆為近戰擊殺後疊加順劈，未見矛盾。
+- [原始碼推導與限制](broker_passive_melee_cleave_on_melee_kill.md)。

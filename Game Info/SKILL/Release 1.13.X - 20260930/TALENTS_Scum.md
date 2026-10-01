@@ -31,6 +31,7 @@
 | <img src="https://github.com/user-attachments/assets/d28213f3-85a5-4de7-a380-f3799f671cc8" width="32" height="32" alt="請求暫停天賦圖示"> [請求暫停](#broker_passive_reduced_toughness_damage_during_reload)<br>- Calling for a Time Out | <ul><li>換彈期間及結束後 4 秒，承受的韌性傷害減少 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/069e6733-6d1f-4859-a3a6-829d213fd0a1" width="32" height="32" alt="街頭硬漢天賦圖示"> [街頭硬漢](#broker_passive_knockback_on_taking_melee_damage)<br>- Street Tough | <ul><li>受到近戰命中時震退周圍 3 公尺敵人，移動速度增加 10%，持續 3 秒；冷卻 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/97f78fa5-afd9-4fe0-b24f-fe54147da399" width="32" height="32" alt="蓄力殲滅天賦圖示"> [蓄力殲滅](#broker_passive_crit_grants_damage)<br>- Channelled Devastation | <ul><li>每 1% 目前爆擊機率，提供 0.5% 近戰傷害，最多 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/23850be1-ea33-448c-93dc-409f21216ceb" width="32" height="32" alt="猛烈劈擊天賦圖示"> [猛烈劈擊](#broker_passive_melee_cleave_on_melee_kill)<br>- Battering Strikes | <ul><li>近戰擊殺後增加 10% 近戰順劈，持續 5 秒，最多 5 層。</li></ul> | 技能 |
 
 ---
 
@@ -384,5 +385,20 @@
 - **動態變化**：武器、暫時加成或爆擊機率改變時，近戰增傷也會更新。
 
 [詳細資料](TALENTS%20Scum/broker_passive_crit_grants_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_melee_cleave_on_melee_kill"></a>
+### 猛烈劈擊(Battering Strikes)
+
+<img src="https://github.com/user-attachments/assets/23850be1-ea33-448c-93dc-409f21216ceb" width="72" height="72" alt="猛烈劈擊天賦圖示">
+
+- **疊層方式**：每次近戰擊殺增加 1 層，每層增加 10% 傷害順劈能力，最多 5 層。再次觸發會刷新 5 秒持續時間。
+
+- **順劈算例**：5 層提供 50%。原本可穿過總質量 10 的目標，變成 10 × 1.5 = 15；能命中幾名敵人仍取決於各敵人的質量、護甲及武器限制。
+
+- **效果範圍**：增加傷害順劈容量，不等於每名敵人所受傷害增加 50%，也不直接提高踉蹌順劈容量。
+
+[詳細資料](TALENTS%20Scum/broker_passive_melee_cleave_on_melee_kill.md) · [返回目錄](#talent-index)
 
 ---

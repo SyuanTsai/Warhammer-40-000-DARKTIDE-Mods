@@ -31,3 +31,4 @@
 | [請求暫停](broker_passive_reduced_toughness_damage_during_reload.md) | 換彈期間及結束後 4 秒，承受的韌性傷害減少 25%。；完整計算與適用限制見來源文件。 |
 | [街頭硬漢](broker_passive_knockback_on_taking_melee_damage.md) | 受到近戰命中時震退周圍 3 公尺敵人，移動速度增加 10%，持續 3 秒；冷卻 8 秒。；完整計算與適用限制見來源文件。 |
 | [蓄力殲滅](broker_passive_crit_grants_damage.md) | 每 1% 目前爆擊機率，提供 0.5% 近戰傷害，最多 15%。；完整計算與適用限制見來源文件。 |
+| [猛烈劈擊](broker_passive_melee_cleave_on_melee_kill.md) | 近戰擊殺後增加 10% 近戰順劈，持續 5 秒，最多 5 層。；完整計算與適用限制見來源文件。 |
