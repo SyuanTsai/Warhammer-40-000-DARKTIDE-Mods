@@ -34,6 +34,7 @@
 | [街頭硬漢](#broker_passive_knockback_on_taking_melee_damage) | 未見明確矛盾 |
 | [蓄力殲滅](#broker_passive_crit_grants_damage) | 未見明確矛盾 |
 | [猛烈劈擊](#broker_passive_melee_cleave_on_melee_kill) | 未見明確矛盾 |
+| [超暴力](#broker_passive_melee_damage_carry_over) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -218,3 +219,10 @@
 - 描述鍵：`loc_talent_broker_passive_melee_cleave_on_melee_kill_desc`；hash：`3e88fbf2`。
 - 結論：未見明確矛盾。兩語皆為近戰擊殺後疊加順劈，未見矛盾。
 - [原始碼推導與限制](broker_passive_melee_cleave_on_melee_kill.md)。
+
+<a id="broker_passive_melee_damage_carry_over"></a>
+## 超暴力(Hyper-Violence)
+
+- 描述鍵：`loc_talent_broker_passive_melee_damage_carry_over_desc`；hash：`821fa540`。
+- 結論：未見明確矛盾。繁中「溢出傷害」與英文差額定義一致；續殺扣回目前加傷與替換規則為補充。
+- [原始碼推導與限制](broker_passive_melee_damage_carry_over.md)。

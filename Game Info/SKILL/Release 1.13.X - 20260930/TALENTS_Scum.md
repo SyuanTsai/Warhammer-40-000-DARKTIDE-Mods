@@ -32,6 +32,7 @@
 | <img src="https://github.com/user-attachments/assets/069e6733-6d1f-4859-a3a6-829d213fd0a1" width="32" height="32" alt="街頭硬漢天賦圖示"> [街頭硬漢](#broker_passive_knockback_on_taking_melee_damage)<br>- Street Tough | <ul><li>受到近戰命中時震退周圍 3 公尺敵人，移動速度增加 10%，持續 3 秒；冷卻 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/97f78fa5-afd9-4fe0-b24f-fe54147da399" width="32" height="32" alt="蓄力殲滅天賦圖示"> [蓄力殲滅](#broker_passive_crit_grants_damage)<br>- Channelled Devastation | <ul><li>每 1% 目前爆擊機率，提供 0.5% 近戰傷害，最多 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/23850be1-ea33-448c-93dc-409f21216ceb" width="32" height="32" alt="猛烈劈擊天賦圖示"> [猛烈劈擊](#broker_passive_melee_cleave_on_melee_kill)<br>- Battering Strikes | <ul><li>近戰擊殺後增加 10% 近戰順劈，持續 5 秒，最多 5 層。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/5439d198-0b4c-4a05-ab95-fc67f67398c9" width="32" height="32" alt="超暴力天賦圖示"> [超暴力](#broker_passive_melee_damage_carry_over)<br>- Hyper-Violence | <ul><li>擊殺的溢出傷害有 25% 轉為固定近戰加傷，持續 1 秒。</li></ul> | 技能 |
 
 ---
 
@@ -400,5 +401,20 @@
 - **效果範圍**：增加傷害順劈容量，不等於每名敵人所受傷害增加 50%，也不直接提高踉蹌順劈容量。
 
 [詳細資料](TALENTS%20Scum/broker_passive_melee_cleave_on_melee_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_melee_damage_carry_over"></a>
+### 超暴力(Hyper-Violence)
+
+<img src="https://github.com/user-attachments/assets/5439d198-0b4c-4a05-ab95-fc67f67398c9" width="72" height="72" alt="超暴力天賦圖示">
+
+- **運作方式**：擊殺敵人時，把超過敵人剩餘生命的傷害取 25%，作為近戰固定加傷，持續 1 秒。特殊直接斬殺不觸發。
+
+- **傷害算例**：造成 300 點傷害、敵人只剩 100 點生命，溢出 200，取得 200 × 25% = 50 點加傷；下一次近戰在此結算階段原為 100 點，變成 150 點。這是固定加傷，不是增加 50%。
+
+- **再次擊殺**：效果期間會先扣除目前加傷，再算新的 25%；只有新值更高才替換並刷新。已有 50 點加傷、下一次溢出 400 時，新值為 (400 − 50) × 25% = 87.5；若溢出僅 200，新值 37.5 較低，不會替換或刷新。
+
+[詳細資料](TALENTS%20Scum/broker_passive_melee_damage_carry_over.md) · [返回目錄](#talent-index)
 
 ---
