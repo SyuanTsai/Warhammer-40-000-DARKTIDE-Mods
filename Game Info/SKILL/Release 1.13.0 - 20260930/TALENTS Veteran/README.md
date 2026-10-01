@@ -6,7 +6,7 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 40／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 41／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -56,7 +56,7 @@
 | 技能 | [趁火打劫](veteran_crits_apply_rending.md) / `veteran_crits_apply_rending` | `node_a8044c1f-dda9-4a0b-b503-d549fd2ad5f9` | 完成（核心靜態機制） |
 | 技能 | [不拋棄不放棄](veteran_movement_speed_towards_downed.md) / `veteran_movement_speed_towards_downed` | `node_c6d92993-58ab-4f1c-ac76-0e3b36af29a5` | 完成（核心靜態機制） |
 | 技能 | [裂擊](veteran_rending_bonus.md) / `veteran_rending_bonus` | `node_c36508a3-b4f2-4b5a-837e-132101c8739d` | 完成（核心靜態機制） |
-| 技能 | 互惠互利 / `veteran_dodging_grants_crit` | `node_8c17e249-1082-43cd-82b1-42e18c7f29e8` | 待核對 |
+| 技能 | [互惠互利](veteran_dodging_grants_crit.md) / `veteran_dodging_grants_crit` | `node_8c17e249-1082-43cd-82b1-42e18c7f29e8` | 完成（核心靜態機制） |
 | 技能 | 靈活接敵 / `veteran_kill_grants_damage_to_other_slot` | `node_38aad78e-4d8f-4fba-b66c-947b4486f34e` | 待核對 |
 | 技能 | 鋸齒刀刃 / `veteran_hits_cause_bleed` | `node_9971a100-0ec5-4252-a20f-f33e94a34442` | 待核對 |
 | 技能 | 戰壕兵訓練 / `veteran_attack_speed` | `node_340ef70a-75c5-4a84-9627-6ccd00409d01` | 待核對 |
