@@ -16,6 +16,7 @@
 | [鐵血之志](#adamant_staggers_replenish_toughness) | 未見明確矛盾 |
 | [走一走治百病](#adamant_stamina_spent_replenish_toughness) | 未見明確矛盾 |
 | [堅忍不拔](#adamant_limit_dmg_taken_from_hits) | 未見明確矛盾 |
+| [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
 | [法務官之鎧](#adamant_armor) | 未見明確矛盾 |
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
 
@@ -74,6 +75,13 @@
 - 描述鍵：`loc_talent_adamant_limit_dmg_taken_from_hits_desc`；hash：`a25ab598`。
 - 結論：未見明確矛盾。繁中「生命值…」與英文 maximum Health Damage Taken 的數值欄均為number50，未見百分比符號誤譯；以更明確的50點說明。
 - [原始碼推導與限制](adamant_limit_dmg_taken_from_hits.md)。
+
+<a id="base_toughness_damage_reduction_node_buff_medium_1"></a>
+## 韌性減傷(Toughness Damage Reduction)
+
+- 描述鍵：`loc_talent_toughness_damage_reduction_medium_desc`；hash：`1272bcc0`。
+- 結論：未見明確矛盾。繁中「韌性減傷」與英文 Toughness Damage Reduction 一致；加算階段未在原文詳列。
+- [原始碼推導與限制](base_toughness_damage_reduction_node_buff_medium_1.md)。
 
 <a id="adamant_armor"></a>
 ## 法務官之鎧(Arbitrator Armour)

@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/adamant_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10)。內部 tree version 19 不等於遊戲發行版號。
 
-完成 10／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 11／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -19,5 +19,6 @@
 | 技能 | [鐵血之志](adamant_staggers_replenish_toughness.md) / `adamant_staggers_replenish_toughness` | `node_ff7e488d-67b2-4139-a794-6032177b6d56` | 完成（核心靜態機制） |
 | 技能 | [走一走治百病](adamant_stamina_spent_replenish_toughness.md) / `adamant_stamina_spent_replenish_toughness` | `node_89e56162-d28d-49d5-a01a-ca818154041f` | 完成（核心靜態機制） |
 | 技能 | [堅忍不拔](adamant_limit_dmg_taken_from_hits.md) / `adamant_limit_dmg_taken_from_hits` | `node_433d6dd9-c8c4-4f9b-8f0f-e86cc9e69c8a` | 完成（核心靜態機制） |
+| 技能 | [韌性減傷](base_toughness_damage_reduction_node_buff_medium_1.md) / `base_toughness_damage_reduction_node_buff_medium_1` | `node_6b1ed144-097b-4dd0-9fab-c56e5722ee5f` | 完成（核心靜態機制） |
 | 技能 | [法務官之鎧](adamant_armor.md) / `adamant_armor` | `node_1b027142-867d-492d-a12c-a31f83808c10` | 完成（核心靜態機制） |
 | 技能 | [塑鋼裝甲](adamant_plasteel_plates.md) / `adamant_plasteel_plates` | `node_49bbfafc-233f-4a23-9a72-0412b4fcf719` | 完成（核心靜態機制） |
