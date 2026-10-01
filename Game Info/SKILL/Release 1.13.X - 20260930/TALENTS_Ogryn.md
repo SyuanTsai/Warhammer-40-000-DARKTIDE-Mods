@@ -53,6 +53,7 @@
 | <img src="https://github.com/user-attachments/assets/5974d1c4-5b31-42b8-af90-022202c4614e" width="32" height="32" alt="熟能生巧天賦圖示"> [熟能生巧](#ogryn_wield_speed_increase)<br>- Dedicated Practice | <ul><li>武器切換速度提高 35%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/eeae1229-b245-43fc-9840-960c36f5787e" width="32" height="32" alt="射盡殺戮天賦圖示"> [射盡殺戮](#ogryn_ranged_improves_melee)<br>- Spray and Slay | <ul><li>打空彈匣後，提高 15% 近戰傷害與 7.5% 近戰攻速，持續 6 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fdf1eb1f-b76f-4452-beac-f2205fc32d2b" width="32" height="32" alt="猛砸爆裂天賦圖示"> [猛砸爆裂](#ogryn_melee_improves_ranged)<br>- Bash and Blast | <ul><li>每次近戰擊殺增加 3% 遠程傷害，最多 5 層，持續 10 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/9e138d4c-f301-46c6-9eef-5aff038efc7c" width="32" height="32" alt="格鬥兵天賦圖示"> [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown)<br>- Bruiser | <ul><li>自己或協同隊友擊殺精英後，持續 4 秒額外恢復戰鬥技能冷卻。</li></ul> | 技能 |
 
 ---
 
@@ -764,5 +765,20 @@
 - **傷害算例**：滿層時，基礎 100 點遠程傷害變成 115 點；同階段另有 20% 加成時為 100 × (1 + 20% + 5 × 3%) = 135 點。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_melee_improves_ranged.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_ally_elite_kills_grant_cooldown"></a>
+### 格鬥兵(Bruiser)
+
+<img src="https://github.com/user-attachments/assets/9e138d4c-f301-46c6-9eef-5aff038efc7c" width="72" height="72" alt="格鬥兵天賦圖示">
+
+- **觸發方式**：自己或協同範圍內的隊友擊殺精英敵人後，4 秒內約每秒額外恢復 0.5 秒戰鬥技能冷卻。專家敵人若不屬於精英，不會觸發。
+
+- **刷新方式**：再次符合條件的擊殺刷新 4 秒，不會把每秒恢復量堆高；效果滿層僅一層。
+
+- **時間算例**：一般自然冷卻每秒恢復 1 秒，再加每次 0.5 秒補回；完整收到 4 次補回時，4 秒內共推進 4 + 4 × 0.5 = 6 秒冷卻，其中額外省下 2 秒。實際會受到冷卻是否已滿及更新時間點影響。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_ally_elite_kills_grant_cooldown.md) · [返回目錄](#talent-index)
 
 ---
