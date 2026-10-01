@@ -15,6 +15,7 @@
 | 光環 | [抵近殺敵(Close and Kill)](#veteran_movement_speed_coherency) | 你與協同範圍內的隊友移動速度增加 7.5%。 |
 | 光環 | [火力小分隊(Fire Team)](#veteran_increased_damage_coherency) | 你與協同範圍內的隊友傷害增加 7.5%。 |
 | 光環 | [生存專家(Survivalist)](#veteran_aura_gain_ammo_on_elite_kill_improved) | 你或擁有此光環效果的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備彈上限的彈藥。 |
+| 能力 | [火力齊射(Volley Fire)](#veteran_combat_ability_stance) | 立即切換至遠程武器，進入持續 6 秒的火力齊射；冷卻時間 30 秒。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
@@ -232,6 +233,27 @@
 ---
 
 ## 能力
+
+<a id="veteran_combat_ability_stance"></a>
+
+### 火力齊射(Volley Fire)
+
+<img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="72" height="72" alt="火力齊射天賦圖示">
+
+- **立即切換至遠程武器，進入持續 6 秒的火力齊射；冷卻時間 30 秒。**
+- 遠程傷害增加 **15%**，遠程弱點命中的額外傷害增加 **15%**，遠程衝擊增加 **50%**。
+- 散布降低 **38%**、後座力降低 **24%**、瞄準晃動降低 **60%**；期間免疫壓制、暈眩及減速等干擾。
+- 冷卻從施放時開始，姿態期間仍會計時。切換近戰武器不會自行結束姿態；倒地或受制時會結束。
+
+#### 傷害與冷卻算例
+
+- 單看遠程傷害加成，該階段基礎傷害 100，其他加成為零：`100 × 1.15 = 115 傷害`。
+- 弱點額外傷害另行計算：該部分原本為 40、沒有其他同類加成時，變為 `40 × 1.15 = 46`。
+- 施放後經過 6 秒，姿態結束；沒有其他冷卻效果時，還需約 `30 − 6 = 24 秒`再次使用。
+
+[詳細資料](TALENTS%20Veteran/veteran_combat_ability_stance.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="veteran_combat_ability_extra_charge"></a>
 

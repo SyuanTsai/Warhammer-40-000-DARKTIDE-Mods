@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_2_combat_ability` / `veteran_combat_ability_stance` - 火力齊射
+  - 英文對應：Volley Fire。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L206-L247)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_snipers_focus_increased_stacks` / `veteran_snipers_focus_increased_stacks` - 遠程刺客
   - 英文對應：Long Range Assassin。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2697-L2716)；此來源證明識別鍵與天賦關係。

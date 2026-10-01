@@ -6,7 +6,7 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 45／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 46／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -19,7 +19,7 @@
 | 光環 | [抵近殺敵](veteran_movement_speed_coherency.md) / `veteran_movement_speed_coherency` | `node_06b8c8de-0e09-40c9-af16-a6018e9984a8` | 完成（核心靜態機制） |
 | 光環 | [火力小分隊](veteran_increased_damage_coherency.md) / `veteran_increased_damage_coherency` | `node_bd398c77-960a-41f8-af1c-e4e15ef9ee7d` | 完成（核心靜態機制） |
 | 光環 | [生存專家](veteran_aura_gain_ammo_on_elite_kill_improved.md) / `veteran_aura_gain_ammo_on_elite_kill_improved` | `node_5ae6929c-f9fe-43b2-b2d9-079d6737de23` | 完成（核心靜態機制） |
-| 能力 | 火力齊射 / `veteran_combat_ability_stance` | `node_8376d017-537b-45f4-b3c5-e653fd1ac6d2` | 待核對 |
+| 能力 | [火力齊射](veteran_combat_ability_stance.md) / `veteran_combat_ability_stance` | `node_8376d017-537b-45f4-b3c5-e653fd1ac6d2` | 完成（核心靜態機制） |
 | 能力 | 滲透 / `veteran_invisibility_on_combat_ability` | `node_04923c84-a6e7-428b-9074-19b157f088bb` | 待核對 |
 | 能力 | 低調 / `veteran_reduced_threat_after_combat_ability` | `node_a85c31ac-40a1-48e3-8585-0e04d85adfcf` | 待核對 |
 | 能力 | 處決者姿態 / `veteran_combat_ability_elite_and_special_outlines` | `node_bbd51147-0e4f-4bec-a020-b23d16efb29a` | 待核對 |
