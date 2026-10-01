@@ -31,7 +31,7 @@
 | [現實錨點](#psyker_overcharge_reduced_warp_charge) | 已配對；機制待核對 |
 | [念力護盾](#psyker_combat_ability_force_field) | 已配對；機制待核對 |
 | [強化護盾](#psyker_shield_extra_charge) | 已配對；機制待核對 |
-| [庇護所](#psyker_boost_allies_in_sphere) | 已配對；機制待核對 |
+| [庇護所](#psyker_boost_allies_in_sphere) | 未見明確矛盾 |
 | [念力穹頂](#psyker_sphere_shield) | 已配對；機制待核對 |
 | [衰弱界線](#psyker_shield_stun_passive) | 已配對；機制待核對 |
 | [亞空間突破](#psyker_overcharge_stance_infinite_casting) | 已配對；機制待核對 |
@@ -255,7 +255,7 @@
 ## 庇護所(Sanctuary)
 
 - 描述鍵：`loc_talent_psyker_force_field_grants_toughness_desc`；hash：`fe5dbdd8`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源尚未確認同版。 詳細持續時間／觸發範圍以固定來源推導，仍須同版遊戲核對。
 - [原始碼推導與限制](psyker_boost_allies_in_sphere.md)。
 
 <a id="psyker_sphere_shield"></a>

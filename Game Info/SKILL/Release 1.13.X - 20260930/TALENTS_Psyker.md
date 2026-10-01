@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/61a749ff-c64c-47a7-8607-e19b59a688b3" width="32" height="32" alt="先知之眼天賦圖示"> [先知之眼](#psyker_cooldown_aura_improved)<br>- Seer's Presence | <ul><li>你與協同中的隊友的技能冷卻時間縮短 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="預兆天賦圖示"> [預兆](#psyker_aura_crit_chance_aura)<br>- Prescience | <ul><li>你與協同中的隊友的暴擊機率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="32" height="32" alt="靈能學者光環天賦圖示"> [靈能學者光環](#psyker_2_tier_3_name_2)<br>- Psykinetic's Aura | <ul><li>擊殺精英或專家後，加快能力冷卻</li><li>效果持續 3 秒</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0" width="32" height="32" alt="庇護所天賦圖示"> [庇護所](#psyker_boost_allies_in_sphere)<br>- Sanctuary | <ul><li>穹頂內每秒恢復 10% 最大韌性</li><li>消散時提供 50% 韌性減傷，持續 5 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="亞空間耗費天賦圖示"> [亞空間耗費](#psyker_toughness_on_melee)<br>- Warp Expenditure | <ul><li>近戰命中首個敵人，恢復 2.5% 最大韌性。</li><li>近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
@@ -217,6 +218,21 @@
 - **冷卻算例：**若倒數原剩 20 秒，在正常恢復 1 秒並觸發一次額外恢復後，變成 20 − 1 − 0.5 = 18.5 秒。
 
 [詳細資料](TALENTS%20Psyker/psyker_2_tier_3_name_2.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_boost_allies_in_sphere"></a>
+### 庇護所(Sanctuary)
+
+<img src="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0" width="72" height="72" alt="庇護所天賦圖示">
+
+- **運作方式：**搭配念力穹頂時，你與隊友待在球形護盾內，每秒恢復最大韌性的 10%。
+
+- **消散效果：**護盾消散時，仍在其中的玩家獲得 50% 韌性減傷，持續 5 秒；提早離開不會獲得這次減傷。
+
+- **恢復與減傷算例：**最大韌性 100 時，每秒恢復 100 × 10% = 10 點，3 秒最多恢復 30 點，以缺額為上限。減傷期間原本承受 40 點韌性傷害，變成 40 × 0.5 = 20 點。
+
+[詳細資料](TALENTS%20Psyker/psyker_boost_allies_in_sphere.md) · [返回目錄](#talent-index)
 
 ---
 

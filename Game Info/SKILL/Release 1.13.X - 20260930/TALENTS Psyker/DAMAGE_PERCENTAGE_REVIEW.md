@@ -29,7 +29,7 @@
 | [現實錨點](psyker_overcharge_reduced_warp_charge.md) | 機制與公式待核對。 |
 | [念力護盾](psyker_combat_ability_force_field.md) | 機制與公式待核對。 |
 | [強化護盾](psyker_shield_extra_charge.md) | 機制與公式待核對。 |
-| [庇護所](psyker_boost_allies_in_sphere.md) | 機制與公式待核對。 |
+| [庇護所](psyker_boost_allies_in_sphere.md) | 穹頂內每秒恢復 10% 最大韌性；消散時提供 50% 韌性減傷，持續 5 秒；完整計算與適用限制見來源文件。 |
 | [念力穹頂](psyker_sphere_shield.md) | 機制與公式待核對。 |
 | [衰弱界線](psyker_shield_stun_passive.md) | 機制與公式待核對。 |
 | [亞空間突破](psyker_overcharge_stance_infinite_casting.md) | 機制與公式待核對。 |
