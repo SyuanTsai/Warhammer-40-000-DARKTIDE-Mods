@@ -11,6 +11,7 @@
 | <img src="https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c" width="32" height="32" alt="痛楚爆發天賦圖示"> [痛楚爆發](#ogryn_carapace_armor_trigger_on_zero_stacks)<br>- Pained Outburst | <ul><li>麻木失去一層後降至 4 層或更低時，會擊退附近敵人並恢復最大韌性的 50%。</li><li>此效果每 30 秒最多觸發一次；擊退爆發不造成直接傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3d442f9a-0143-43d7-a6e2-10a5d6b8a9f8" width="32" height="32" alt="最強壯！天賦圖示"> [最強壯！](#ogryn_carapace_armor_add_stack_on_push)<br>- Strongest! | <ul><li>推搡至少一名敵人時，麻木恢復 1 層。</li><li>麻木最多 10 層；一次推搡推中多人也只恢復 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d6e55419-0e35-49cc-9bd6-163bdff037d4" width="32" height="32" alt="最堅韌！天賦圖示"> [最堅韌！](#ogryn_carapace_armor_more_toughness)<br>- Toughest! | <ul><li>「最堅韌！」讓麻木每層額外增加 2.5% 韌性恢復量。</li><li>與麻木本身每層 3% 相加；滿 10 層合計增加 55%。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/47256097-2109-4fe4-89b7-b4a224ff1200" width="32" height="32" alt="最大火力天賦圖示"> [最大火力](#ogryn_leadbelcher_cooldown_reduction)<br>- Maximum Firepower | <ul><li>幸運子彈觸發後，2.5 秒內約每秒額外恢復 1 秒戰鬥技能冷卻。</li><li>再次觸發刷新持續時間，不提高每次恢復量。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760" width="32" height="32" alt="子彈風暴天賦圖示"> [子彈風暴](#ogryn_blo_ally_ranged_buffs)<br>- Bulletstorm | <ul><li>觸發幸運子彈時，你和協同範圍內的隊友獲得 +15% 遠程傷害，持續 8 秒。</li><li>再次觸發會把效果時間重新延長為 8 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a9ec95cc-0b91-4558-81b5-faefcf1207d7" width="32" height="32" alt="激鬥戰火天賦圖示"> [激鬥戰火](#ogryn_blo_wield_speed)<br>- Heat of Battle | <ul><li>「激鬥戰火」讓爆限超載每層另增加 1.5% 遠程射速。</li><li>沿用遠程擊殺累積的 10 層、每次加層刷新 10 秒；滿層增加 15% 遠程射速。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5c8fc9b0-2f06-4311-87f7-511d4c6ce6d5" width="32" height="32" alt="退後！天賦圖示"> [退後！](#ogryn_blo_melee)<br>- Back Off! | <ul><li>近戰擊殺可提高下一次射擊觸發幸運子彈的機率，每層增加 10 個百分點。</li><li>最多累積 10 層；下一次射擊後清空，該次即使觸發幸運子彈而免耗彈藥也會消耗層數。</li></ul> | 鑰石 |
@@ -135,6 +136,21 @@
 - **算例**：10 層時恢復倍率為 1 + 10 × 5.5% = 1.55；原本恢復 20 點時，理論恢復 31 點，實際不超過缺少的韌性。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_carapace_armor_more_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_leadbelcher_cooldown_reduction"></a>
+### 最大火力(Maximum Firepower)
+
+<img src="https://github.com/user-attachments/assets/47256097-2109-4fe4-89b7-b4a224ff1200" width="72" height="72" alt="最大火力天賦圖示">
+
+- **觸發條件**：幸運子彈觸發時啟動；普通射擊不會觸發此效果。
+
+- **效果與刷新**：持續 2.5 秒，約每秒補回 1 秒戰鬥技能冷卻；再次觸發刷新 2.5 秒，不會逐次提高恢復量。
+
+- **時間算例**：完整收到兩次補回且冷卻尚未完成時，2.5 秒內共推進 2.5 + 2 × 1 = 4.5 秒冷卻。這筆補回按秒結算，不能直接把 2.5 秒當成完整的 5 秒進度。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_leadbelcher_cooldown_reduction.md) · [返回目錄](#talent-index)
 
 ---
 

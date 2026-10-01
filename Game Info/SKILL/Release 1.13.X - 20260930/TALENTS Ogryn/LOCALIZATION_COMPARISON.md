@@ -12,6 +12,7 @@
 | [痛楚爆發](#ogryn_carapace_armor_trigger_on_zero_stacks) | 跨來源待同版核對 |
 | [最強壯！](#ogryn_carapace_armor_add_stack_on_push) | 未見明確矛盾 |
 | [最堅韌！](#ogryn_carapace_armor_more_toughness) | 未見明確矛盾 |
+| [最大火力](#ogryn_leadbelcher_cooldown_reduction) | 未見明確矛盾 |
 | [子彈風暴](#ogryn_blo_ally_ranged_buffs) | 繁中描述錯誤 |
 | [激鬥戰火](#ogryn_blo_wield_speed) | 未見明確矛盾 |
 | [退後！](#ogryn_blo_melee) | 繁中描述錯誤 |
@@ -98,6 +99,13 @@
 - 描述鍵：`loc_talent_ogryn_carapace_armor_more_toughness_desc`；hash：`2fd914ff`。
 - 結論：未見明確矛盾。繁中寫「每層…使你獲得…韌性恢復」，英文寫「…grants … Toughness Replenishment per stack」；兩者都把韌性恢復加值連到麻木的每一層。
 - [原始碼推導與限制](ogryn_carapace_armor_more_toughness.md)。
+
+<a id="ogryn_leadbelcher_cooldown_reduction"></a>
+## 最大火力(Maximum Firepower)
+
+- 描述鍵：`loc_talent_ogryn_leadbelcher_grant_cooldown_reduction_desc`；hash：`5aacc61b`。
+- 結論：未見明確矛盾。繁中寫「技能冷卻縮減增加…，持續…秒」，英文寫「…Ability Cooldown Reduction for …s when Lucky Bullet triggers」；兩者都說明幸運子彈觸發時提高技能冷卻恢復，並給出相同持續時間。
+- [原始碼推導與限制](ogryn_leadbelcher_cooldown_reduction.md)。
 
 <a id="ogryn_blo_ally_ranged_buffs"></a>
 ## 子彈風暴(Bulletstorm)
