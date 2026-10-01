@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/9436a125-4e9f-4655-ae8f-4975db2f4af1" width="32" height="32" alt="麻木天賦圖示"> [麻木](#ogryn_carapace_armor)<br>- Feel No Pain | <ul><li>開始時有 10 層麻木；每層增加韌性恢復，並使韌性所受傷害再乘以 0.97。</li><li>受到有效傷害時最多每秒失去一層；未滿層時每隔 2 秒恢復一層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c" width="32" height="32" alt="痛楚爆發天賦圖示"> [痛楚爆發](#ogryn_carapace_armor_trigger_on_zero_stacks)<br>- Pained Outburst | <ul><li>麻木失去一層後降至 4 層或更低時，會擊退附近敵人並恢復最大韌性的 50%。</li><li>此效果每 30 秒最多觸發一次；擊退爆發不造成直接傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3d442f9a-0143-43d7-a6e2-10a5d6b8a9f8" width="32" height="32" alt="最強壯！天賦圖示"> [最強壯！](#ogryn_carapace_armor_add_stack_on_push)<br>- Strongest! | <ul><li>推搡至少一名敵人時，麻木恢復 1 層。</li><li>麻木最多 10 層；一次推搡推中多人也只恢復 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d6e55419-0e35-49cc-9bd6-163bdff037d4" width="32" height="32" alt="最堅韌！天賦圖示"> [最堅韌！](#ogryn_carapace_armor_more_toughness)<br>- Toughest! | <ul><li>「最堅韌！」讓麻木每層額外增加 2.5% 韌性恢復量。</li><li>與麻木本身每層 3% 相加；滿 10 層合計增加 55%。</li></ul> | 鑰石 |
@@ -67,6 +68,25 @@
 ---
 
 ## 鑰石
+
+<a id="ogryn_carapace_armor"></a>
+### 麻木(Feel No Pain)
+
+<img src="https://github.com/user-attachments/assets/9436a125-4e9f-4655-ae8f-4975db2f4af1" width="72" height="72" alt="麻木天賦圖示">
+
+- **初始與回復**：麻木開始時有 10 層；失層後，至少經過 2 秒才會恢復一層，且距上次加層也須超過 2 秒。
+
+- **受傷失層**：受到傷害或韌性吸收傷害時會失去一層；被格擋的攻擊不會移除麻木。同類受傷觸發最多每秒一次。
+
+- **每層效果**：每層使韌性恢復量增加 3%；韌性所受傷害依乘法降為原來的 97%。選「最堅韌！」時，每層再增加 2.5% 韌性恢復量。
+
+- **滿層算例**：10 層時，韌性恢復倍率為 1 + 10 × 3% = 1.30；搭配「最堅韌！」為 1.55。韌性傷害為 0.97^10 ≈ 0.737；原本 100 點韌性傷害約變成 73.7 點。 原本恢復 20 點時，滿層為 20 × 1.3 = 26 點；搭配最堅韌！則為 31 點，仍受缺額限制。
+
+- **倒地時**：倒地會清除目前麻木層數，之後再逐層恢復。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_carapace_armor.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="ogryn_carapace_armor_trigger_on_zero_stacks"></a>
 ### 痛楚爆發(Pained Outburst)

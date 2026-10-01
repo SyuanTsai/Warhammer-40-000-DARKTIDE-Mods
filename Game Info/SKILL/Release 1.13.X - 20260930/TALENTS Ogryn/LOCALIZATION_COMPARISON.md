@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [麻木](#ogryn_carapace_armor) | 跨來源待同版核對 |
 | [痛楚爆發](#ogryn_carapace_armor_trigger_on_zero_stacks) | 跨來源待同版核對 |
 | [最強壯！](#ogryn_carapace_armor_add_stack_on_push) | 未見明確矛盾 |
 | [最堅韌！](#ogryn_carapace_armor_more_toughness) | 未見明確矛盾 |
@@ -64,6 +65,13 @@
 | [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown) | 未見明確矛盾 |
 | [精準打擊](#ogryn_weakspot_damage) | 未見明確矛盾 |
 | [機動部署](#ogryn_bracing_reduces_damage_taken) | 未見明確矛盾 |
+
+<a id="ogryn_carapace_armor"></a>
+## 麻木(Feel No Pain)
+
+- 描述鍵：`loc_talent_ogryn_carapace_armor_any_damage_desc`；hash：`cae1c616`。
+- 結論：跨來源待同版核對。繁中寫「每層獲得…韌性恢復和…減傷」，英文寫「Each Stack grants … Toughness Replenishment and … Damage Reduction」；兩種文字都使用未指明傷害種類的減傷措辭。固定公開來源只降低韌性所受傷害，不降低生命值所受傷害；由於公開來源與本機 Build 25492122 未確認同版，這項範圍差異待核，不判為翻譯錯誤。
+- [原始碼推導與限制](ogryn_carapace_armor.md)。
 
 <a id="ogryn_carapace_armor_trigger_on_zero_stacks"></a>
 ## 痛楚爆發(Pained Outburst)
