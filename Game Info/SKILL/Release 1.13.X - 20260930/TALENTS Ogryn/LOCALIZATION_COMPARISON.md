@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [子彈風暴](#ogryn_blo_ally_ranged_buffs) | 繁中描述錯誤 |
+| [退後！](#ogryn_blo_melee) | 繁中描述錯誤 |
 | [最好的防禦](#ogryn_multi_heavy_toughness) | 未見明確矛盾 |
 | [碾碎它們！](#ogryn_single_heavy_toughness) | 未見明確矛盾 |
 | [關鍵人物](#ogryn_increased_coherency_toughness) | 未見明確矛盾 |
@@ -68,6 +69,15 @@
 - 繁中原文短引：幸運子彈命中時，自身與協同中的盟友的遠程傷害提高{ranged_damage:%s}，持續{duration:%s}秒。
 - 同源英文：{ranged_damage:%s} Ranged Damage to you and Allies in Coherency on Lucky Bullet. Lasts {duration:%s}s.
 - [原始碼推導與限制](ogryn_blo_ally_ranged_buffs.md)。
+
+<a id="ogryn_blo_melee"></a>
+## 退後！(Back Off!)
+
+- 描述鍵：`loc_talent_ogryn_blo_melee_desc`；hash：`d4561ed1`。
+- 結論：繁中描述錯誤。同源英文是在「近戰擊殺」時增加「下次射擊」的幸運子彈機率；繁中卻寫成擊殺後「近戰攻擊有機率」產生效果，把觸發條件與機率作用位置譯錯。固定程式在近戰擊殺時必定加一層，並非再做10%加層判定。
+- 繁中原文短引：擊殺敵人後，近戰攻擊有{chance:%s}機率使下次射擊觸發幸運子彈，可堆疊{stacks:%s}次。
+- 同源英文：On Killing Melee Attack gain {chance:%s} chance to trigger Lucky Bullet on next Shot. Stacks {stacks:%s} times.
+- [原始碼推導與限制](ogryn_blo_melee.md)。
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)

@@ -8,6 +8,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760" width="32" height="32" alt="子彈風暴天賦圖示"> [子彈風暴](#ogryn_blo_ally_ranged_buffs)<br>- Bulletstorm | <ul><li>觸發幸運子彈時，你和協同範圍內的隊友獲得 +15% 遠程傷害，持續 8 秒。</li><li>再次觸發會把效果時間重新延長為 8 秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/5c8fc9b0-2f06-4311-87f7-511d4c6ce6d5" width="32" height="32" alt="退後！天賦圖示"> [退後！](#ogryn_blo_melee)<br>- Back Off! | <ul><li>近戰擊殺可提高下一次射擊觸發幸運子彈的機率，每層增加 10 個百分點。</li><li>最多累積 10 層；下一次射擊後清空，該次即使觸發幸運子彈而免耗彈藥也會消耗層數。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/67294825-4742-461c-8445-8eabf69981d3" width="32" height="32" alt="最好的防禦天賦圖示"> [最好的防禦](#ogryn_multi_heavy_toughness)<br>- The Best Defence | <ul><li>一次近戰攻擊命中至少 2 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bdf5653a-6df6-4998-a781-ae623083055a" width="32" height="32" alt="碾碎它們！天賦圖示"> [碾碎它們！](#ogryn_single_heavy_toughness)<br>- Smash 'Em! | <ul><li>一次近戰攻擊命中恰好 1 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/47f9eea2-c58f-4ed3-8678-e42d2ec1701f" width="32" height="32" alt="關鍵人物天賦圖示"> [關鍵人物](#ogryn_increased_coherency_toughness)<br>- Lynchpin | <ul><li>自身的協同韌性恢復速度提高 100%。</li></ul> | 技能 |
@@ -81,6 +82,27 @@
 - 繁中「幸運子彈命中時」比英文及程式條件多出命中限制。建議改為「觸發幸運子彈時」，避免玩家誤以為必須打中敵人。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_blo_ally_ranged_buffs.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_blo_melee"></a>
+### 退後！(Back Off!)
+
+<img src="https://github.com/user-attachments/assets/5c8fc9b0-2f06-4311-87f7-511d4c6ce6d5" width="72" height="72" alt="退後！天賦圖示">
+
+- **累積條件**：近戰擊殺時增加 1 層；同一揮擊即使擊殺多名敵人也最多增加 1 層。
+
+- **額外機率**：每層增加 10 個百分點，最多 10 層；這項加值會加在爆限超載的 15% 基礎機率上。
+
+- **消耗與算例**：下一次射擊後清空層數，免費的幸運子彈也會消耗。5 層把基礎機率提高至 15% + 5 × 10% = 65%；9 層已達 105%，因此必定觸發。層數沒有固定倒數。
+
+- **機率限制**：未達必定觸發前，遊戲會依先前判定調整連續觸發情形，不能把每發都當成互相獨立的固定機率。
+
+#### 繁中原文勘誤
+
+- 建議改為「近戰攻擊擊殺敵人時，獲得{chance:%s}機率使下次射擊觸發幸運子彈，可堆疊{stacks:%s}次。」以明確表示機率加值來自近戰擊殺，並作用於下一次射擊。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_blo_melee.md) · [返回目錄](#talent-index)
 
 ---
 
