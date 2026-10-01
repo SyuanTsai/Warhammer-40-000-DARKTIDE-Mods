@@ -19,6 +19,7 @@
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
 | 鑰石 | [視野狹窄(Tunnel Vision)](#veteran_snipers_focus_toughness_bonus) | 每層狙擊專注使韌性恢復量增加 4%。 |
+| 鑰石 | [遠程刺客(Long Range Assassin)](#veteran_snipers_focus_increased_stacks) | 狙擊專注的效果上限由 10 層提高至 15 層。 |
 | 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
 | 技能 | [戰術裝填(Tactical Reload)](#veteran_faster_reload_on_non_empty_clips) | 彈匣還有彈藥時開始裝填，裝填速度增加 25%。 |
 | 技能 | [齊射能手(Volley Adept)](#veteran_reload_speed_on_elite_kill) | 擊殺精英或專家敵人後，下一次裝填速度增加 30%。 |
@@ -310,6 +311,25 @@
 - 最大耐力 6：每次遠程弱點擊殺恢復 `6 × 10% = 0.6`；只缺 0.2 時，實際恢復 **0.2**。
 
 [詳細資料](TALENTS%20Veteran/veteran_snipers_focus_toughness_bonus.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_snipers_focus_increased_stacks"></a>
+
+### 遠程刺客(Long Range Assassin)
+
+<img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="72" height="72" alt="遠程刺客天賦圖示">
+
+- **狙擊專注的效果上限由 10 層提高至 15 層。**
+- 每層效果與刷新方式不變；滲透盔甲仍在 10 層觸發。
+
+#### 滿層算例
+
+- 十五層提供 `15 × 7.5% = 112.5%` 遠程爆擊／弱點額外傷害加成，以及 `15 × 1% = 15%` 裝填速度。
+- 假設基礎部分 100、爆擊或弱點額外部分 40，沒有其他加成：`100 + 40 × (1 + 112.5%) = 185 傷害`。
+- 原本裝填 4 秒：`4 ÷ 1.15 ≈ 3.48 秒`。
+
+[詳細資料](TALENTS%20Veteran/veteran_snipers_focus_increased_stacks.md) · [返回目錄](#talent-index)
 
 ---
 
