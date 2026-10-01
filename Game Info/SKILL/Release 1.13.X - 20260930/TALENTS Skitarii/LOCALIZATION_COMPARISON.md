@@ -39,6 +39,7 @@
 | [暗殺協議](#cryptic_ranged_vs_bfg) | 未見明確矛盾 |
 | [系統電擊](#cryptic_electrocution_applies_brittleness) | 未見明確矛盾 |
 | [彈藥預知](#cryptic_ammo_reserve) | 未見明確矛盾 |
+| [電能修復](#cryptic_coherency_toughness_on_ability) | 未見明確矛盾 |
 | [適應性戰鬥校準](#cryptic_cleave_and_impact) | 未見明確矛盾 |
 | [數據感應協定](#cryptic_ally_coherency_defenses) | 受益對象用語有誤 |
 
@@ -260,6 +261,13 @@
 - 描述鍵：`loc_talent_cryptic_ammo_reserve_desc`；hash：`bf4067b1`。
 - 結論：未見明確矛盾。中英皆為彈藥儲備；補充為容量上限與取整。
 - [原始碼推導與限制](cryptic_ammo_reserve.md)。
+
+<a id="cryptic_coherency_toughness_on_ability"></a>
+## 電能修復(Voltaic Restoration)
+
+- 描述鍵：`loc_talent_cryptic_coherency_toughness_on_ability_desc`；hash：`5c2bb368`。
+- 結論：未見明確矛盾。繁中與英文一致；補充戰鬥能力與各自最大韌性。
+- [原始碼推導與限制](cryptic_coherency_toughness_on_ability.md)。
 
 <a id="cryptic_cleave_and_impact"></a>
 ## 適應性戰鬥校準(Adaptive Combat Calibration)
