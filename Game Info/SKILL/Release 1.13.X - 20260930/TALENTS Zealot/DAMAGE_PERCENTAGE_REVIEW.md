@@ -22,4 +22,5 @@
 | [輕蔑之盾](zealot_ally_damage_taken_reduced.md) | 你或隊友生命受傷後，受傷者獲得 60% 減傷，持續 4 秒；觸發冷卻 8 秒。；完整計算與適用限制見來源文件。 |
 | [褻瀆必懲](zealot_push_attacks_attack_speed.md) | 推擊後的追加攻擊命中時，近戰攻速提高 10%，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [勃然大怒](zealot_damage_boosts_movement.md) | 受傷後移動速度提高 15%，持續 2 秒。；免疫一般受擊造成的減速與踉蹌。；完整計算與適用限制見來源文件。 |
+| [反制護盾](zealot_stamina_on_block_break.md) | 格擋被打破時恢復 50% 最大耐力，冷卻 12 秒。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_4.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |
