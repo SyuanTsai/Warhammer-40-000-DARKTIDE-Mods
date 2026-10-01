@@ -20,6 +20,7 @@
 | <img src="https://github.com/user-attachments/assets/1a42e740-0c91-48e5-9092-e88d3f06b532" width="32" height="32" alt="貼身火力天賦圖示"> [貼身火力](#ogryn_special_ammo)<br>- Point-Blank Barrage | <ul><li>切換並裝填遠程武器，12 秒內射速提高 25%、換彈速度提高 65%。</li><li>近距離傷害提高 15%，架槍減速減半；結束時返還計入彈藥的 50%。</li><li>基礎冷卻 60 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0932d1f6-96b1-47d9-ad81-861fe9914d9a" width="32" height="32" alt="跺殺之靴天賦圖示"> [跺殺之靴](#ogryn_charge_toughness)<br>- Stomping Boots | <ul><li>衝鋒期間每次撞中敵人，恢復最大韌性的 10%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9194fb70-c794-460d-af2a-068ae6c4fd31" width="32" height="32" alt="粉碎天賦圖示"> [粉碎](#ogryn_charge_applies_bleed)<br>- Pulverise | <ul><li>衝鋒命中施加 5 層流血；同一衝鋒對同一敵人只施加一次。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/a6d612af-aed7-465e-aa07-e23fc7255876" width="32" height="32" alt="再來天賦圖示"> [再來](#ogryn_taunt_staggers_reduce_cooldown)<br>- Go Again! | <ul><li>近戰或推擊造成踉蹌，恢復 1.5% 技能充能；每 0.1 秒最多一次。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/708231ab-86cd-44b4-8f01-0d0fe8413ede" width="32" height="32" alt="槍林彈雨天賦圖示"> [槍林彈雨](#ogryn_special_ammo_armor_pen)<br>- Hail of Fire | <ul><li>貼身火力期間，遠程傷害提高 15%，並獲得 15% 撕裂。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/6f504222-c9bf-4dff-a549-138c3be3bde4" width="32" height="32" alt="集火射擊天賦圖示"> [集火射擊](#ogryn_special_ammo_fire_shots)<br>- Light 'em Up | <ul><li>貼身火力期間，遠程命中施加 4 層燃燒，最多補至 16 層。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/594ab4d6-12e3-4941-bf1a-c5812b128b23" width="32" height="32" alt="重要干擾天賦圖示"> [重要干擾](#ogryn_taunt_damage_taken_increase)<br>- Valuable Distraction | <ul><li>忠誠守護者使受影響敵人承受的傷害提高 20%，持續 15 秒。</li></ul> | 能力 |
@@ -307,6 +308,19 @@
 - **傷害算例**：只計無護甲且沒有其他修正，5 層每次流血傷害為 87.5 × (5 ÷ 16)² × [3 − 2 × (5 ÷ 16)] ≈ 20.29 點；8 層為 43.75 點。流血層數與傷害不是單純等比例增加。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_charge_applies_bleed.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_taunt_staggers_reduce_cooldown"></a>
+### 再來(Go Again!)
+
+<img src="https://github.com/user-attachments/assets/a6d612af-aed7-465e-aa07-e23fc7255876" width="72" height="72" alt="再來天賦圖示">
+
+- **觸發方式**：近戰或推擊使敵人踉蹌時，恢復戰鬥技能一格充能的 1.5%；兩次觸發至少間隔 0.1 秒。遠程命中與嘲諷本身不觸發。
+
+- **冷卻算例**：忠誠守護者的基礎冷卻為 50 秒，一次有效觸發補回 50 × 1.5% = 0.75 秒；10 次共補回 7.5 秒，另加期間自然恢復的冷卻。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_taunt_staggers_reduce_cooldown.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -21,6 +21,7 @@
 | [貼身火力](#ogryn_special_ammo) | 未見明確矛盾 |
 | [跺殺之靴](#ogryn_charge_toughness) | 未見明確矛盾 |
 | [粉碎](#ogryn_charge_applies_bleed) | 未見明確矛盾 |
+| [再來](#ogryn_taunt_staggers_reduce_cooldown) | 未見明確矛盾 |
 | [槍林彈雨](#ogryn_special_ammo_armor_pen) | 未見明確矛盾 |
 | [集火射擊](#ogryn_special_ammo_fire_shots) | 未見明確矛盾 |
 | [重要干擾](#ogryn_taunt_damage_taken_increase) | 未見明確矛盾 |
@@ -184,6 +185,13 @@
 - 描述鍵：`loc_talent_ogryn_bleed_on_bull_rush_desc`；hash：`5f1e4b89`。
 - 結論：未見明確矛盾。繁中原文「被衝鋒命中的敵人疊加5層流血」與英文原文「對衝鋒命中的敵人施加5層流血」指向同一觸發與層數；原文沒有說每個目標只觸發一次或傷害刻度，這些是實作補充而非翻譯矛盾。此配對的 Build 25492122 與公開原始碼 SHA 版本關係未確認，跨版差異待核。
 - [原始碼推導與限制](ogryn_charge_applies_bleed.md)。
+
+<a id="ogryn_taunt_staggers_reduce_cooldown"></a>
+## 再來(Go Again!)
+
+- 描述鍵：`loc_talent_ogryn_taunt_stagger_cd_description`；hash：`7bd31d11`。
+- 結論：未見明確矛盾。繁中原文「造成敵人暈眩使冷卻時間縮短」與英文原文「Staggering an Enemy replenishes Cooldown」都要求先使敵人踉蹌再回復戰鬥能力冷卻；實作以近戰或推擊踉蹌觸發1.5%。中文使用「暈眩」而英文用「Stagger」，但效果方向一致，沒有明確相反描述；版本配對待核。
+- [原始碼推導與限制](ogryn_taunt_staggers_reduce_cooldown.md)。
 
 <a id="ogryn_special_ammo_armor_pen"></a>
 ## 槍林彈雨(Hail of Fire)

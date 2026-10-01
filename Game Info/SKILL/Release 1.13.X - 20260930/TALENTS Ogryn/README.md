@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L3-L10)。內部 tree version 25 不等於遊戲發行版號。
 
-完成 85／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 86／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -24,6 +24,7 @@
 | 能力 | [貼身火力](ogryn_special_ammo.md) / `ogryn_special_ammo` | `node_2febaa70-bba7-407d-8b22-c1160bd4c271` | 完成（核心靜態機制） |
 | 能力 | [跺殺之靴](ogryn_charge_toughness.md) / `ogryn_charge_toughness` | `node_6639c593-e867-4ee5-9536-b01124b5aa53` | 完成（核心靜態機制） |
 | 能力 | [粉碎](ogryn_charge_applies_bleed.md) / `ogryn_charge_applies_bleed` | `node_c8dc2052-517d-42cf-84e5-ff8161b2f99f` | 完成（核心靜態機制） |
+| 能力 | [再來](ogryn_taunt_staggers_reduce_cooldown.md) / `ogryn_taunt_staggers_reduce_cooldown` | `node_7600d19e-f407-41d6-853d-2bcd13a7a9c8` | 完成（核心靜態機制） |
 | 能力 | [槍林彈雨](ogryn_special_ammo_armor_pen.md) / `ogryn_special_ammo_armor_pen` | `node_d2b60f6e-1db0-4ccd-b239-75926acb7839` | 完成（核心靜態機制） |
 | 能力 | [集火射擊](ogryn_special_ammo_fire_shots.md) / `ogryn_special_ammo_fire_shots` | `node_e4a4e00d-fd7d-49a8-a67e-7a09372c77da` | 完成（核心靜態機制） |
 | 能力 | [重要干擾](ogryn_taunt_damage_taken_increase.md) / `ogryn_taunt_damage_taken_increase` | `node_2eef5b19-a13a-4f02-92f6-850ce20bb84f` | 完成（核心靜態機制） |
