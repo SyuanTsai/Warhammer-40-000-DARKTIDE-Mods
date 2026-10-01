@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/ddd7895f-a971-4cdf-99bd-3f536cab3f8a" width="32" height="32" alt="動能釋放天賦圖示"> [動能釋放](#psyker_aura_damage_vs_elites)<br>- Kinetic Presence | <ul><li>你與協同中的隊友對精英敵人造成的傷害提高 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/61a749ff-c64c-47a7-8607-e19b59a688b3" width="32" height="32" alt="先知之眼天賦圖示"> [先知之眼](#psyker_cooldown_aura_improved)<br>- Seer's Presence | <ul><li>你與協同中的隊友的技能冷卻時間縮短 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="預兆天賦圖示"> [預兆](#psyker_aura_crit_chance_aura)<br>- Prescience | <ul><li>你與協同中的隊友的暴擊機率增加 5 個百分點。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="32" height="32" alt="靈能學者光環天賦圖示"> [靈能學者光環](#psyker_2_tier_3_name_2)<br>- Psykinetic's Aura | <ul><li>擊殺精英或專家後，加快能力冷卻</li><li>效果持續 3 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="亞空間耗費天賦圖示"> [亞空間耗費](#psyker_toughness_on_melee)<br>- Warp Expenditure | <ul><li>近戰命中首個敵人，恢復 2.5% 最大韌性。</li><li>近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
@@ -198,6 +199,24 @@
 - **機率算例**：原本 10% 爆擊機率變成 10% + 5% = 15%；不是 10% × 1.05 = 10.5%。
 
 [詳細資料](TALENTS%20Psyker/psyker_aura_crit_chance_aura.md) · [返回目錄](#talent-index)
+
+---
+
+
+---
+
+## 能力
+
+<a id="psyker_2_tier_3_name_2"></a>
+### 靈能學者光環(Psykinetic's Aura)
+
+<img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="72" height="72" alt="靈能學者光環天賦圖示">
+
+- **觸發方式：**親自擊殺精英或專家敵人後，3 秒內每隔約 1 秒額外減少 0.5 秒戰鬥能力冷卻。再次觸發會重設效果時間，不會提高每次減少的數值。
+
+- **冷卻算例：**若倒數原剩 20 秒，在正常恢復 1 秒並觸發一次額外恢復後，變成 20 − 1 − 0.5 = 18.5 秒。
+
+[詳細資料](TALENTS%20Psyker/psyker_2_tier_3_name_2.md) · [返回目錄](#talent-index)
 
 ---
 

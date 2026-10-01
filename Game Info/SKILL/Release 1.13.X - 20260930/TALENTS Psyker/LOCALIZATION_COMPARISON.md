@@ -27,7 +27,7 @@
 | [蔓延火焰](#psyker_warpfire_on_shout) | 已配對；機制待核對 |
 | [預知未來](#psyker_overcharge_weakspot_kill_bonuses) | 已配對；機制待核對 |
 | [亞空間加速](#psyker_overcharge_increased_movement_speed) | 已配對；機制待核對 |
-| [靈能學者光環](#psyker_2_tier_3_name_2) | 已配對；機制待核對 |
+| [靈能學者光環](#psyker_2_tier_3_name_2) | 未見明確矛盾 |
 | [現實錨點](#psyker_overcharge_reduced_warp_charge) | 已配對；機制待核對 |
 | [念力護盾](#psyker_combat_ability_force_field) | 已配對；機制待核對 |
 | [強化護盾](#psyker_shield_extra_charge) | 已配對；機制待核對 |
@@ -227,7 +227,7 @@
 ## 靈能學者光環(Psykinetic's Aura)
 
 - 描述鍵：`loc_talent_psyker_cooldown_on_elite_kills_desc`；hash：`eaf79e38`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源尚未確認同版。 詳細持續時間／觸發範圍以固定來源推導，仍須同版遊戲核對。
 - [原始碼推導與限制](psyker_2_tier_3_name_2.md)。
 
 <a id="psyker_overcharge_reduced_warp_charge"></a>
