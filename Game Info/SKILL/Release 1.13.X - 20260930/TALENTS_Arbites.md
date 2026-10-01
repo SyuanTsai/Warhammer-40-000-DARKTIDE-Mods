@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/bff83e5a-48a0-4f4c-b280-3093df526c5d" width="32" height="32" alt="重如律法天賦圖示"> [重如律法](#adamant_heavy_attacks_increase_damage)<br>- Weight of the Lex | <ul><li>近戰重擊命中後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/62b4954d-42c3-4eab-a6ea-a17719414e19" width="32" height="32" alt="巨獸獵人天賦圖示"> [巨獸獵人](#adamant_monster_hunter)<br>- Monstrosity Hunter | <ul><li>對歐格林與巨獸造成的傷害提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="惡徒退散天賦圖示"> [惡徒退散](#adamant_damage_vs_suppressed)<br>- Cower, Miscreants! | <ul><li>對受壓制敵人的傷害提高 25%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="正當手段天賦圖示"> [正當手段](#adamant_stacking_damage)<br>- Justified Measures | <ul><li>攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。</li></ul> | 技能 |
 
 ---
 
@@ -382,5 +383,18 @@
 - **作用範圍**：近戰與遠程皆可；目標未受壓制時不生效。
 
 [詳細資料](TALENTS%20Arbites/adamant_damage_vs_suppressed.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_stacking_damage"></a>
+### 正當手段(Justified Measures)
+
+<img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="72" height="72" alt="正當手段天賦圖示">
+
+- **疊層與刷新**：每次攻擊命中第一個目標後獲得 1 層，每層提高 2% 傷害，最多 5 層。再次觸發重設全部層數的 5 秒持續時間；同一擊掃中後續目標不再加層。
+
+- **傷害算例**：滿層為 5 × 2% = 10%，基礎 100 點傷害變成 110 點；同階段原有 25% 加成時，125 點變成 135 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_stacking_damage.md) · [返回目錄](#talent-index)
 
 ---

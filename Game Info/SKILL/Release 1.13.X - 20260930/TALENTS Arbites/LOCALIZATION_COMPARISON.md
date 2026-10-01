@@ -35,6 +35,7 @@
 | [重如律法](#adamant_heavy_attacks_increase_damage) | 未見明確矛盾 |
 | [巨獸獵人](#adamant_monster_hunter) | 未見明確矛盾 |
 | [惡徒退散](#adamant_damage_vs_suppressed) | 未見明確矛盾 |
+| [正當手段](#adamant_stacking_damage) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
@@ -224,3 +225,10 @@
 - 描述鍵：`loc_talent_adamant_damage_vs_suppressed_desc`；hash：`0e174b92`。
 - 結論：未見明確矛盾。繁中「被壓制的敵人」與英文 Suppressed Enemies對象一致。
 - [原始碼推導與限制](adamant_damage_vs_suppressed.md)。
+
+<a id="adamant_stacking_damage"></a>
+## 正當手段(Justified Measures)
+
+- 描述鍵：`loc_talent_adamant_stacking_damage_desc`；hash：`8191a7bf`。
+- 結論：未見明確矛盾。繁中「攻擊命中後」與英文 on Successful Attack一致；首目標限制屬補充。
+- [原始碼推導與限制](adamant_stacking_damage.md)。
