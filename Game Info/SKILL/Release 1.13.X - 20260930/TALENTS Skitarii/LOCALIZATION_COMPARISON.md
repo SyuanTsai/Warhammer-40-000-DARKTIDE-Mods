@@ -23,6 +23,7 @@
 | [弱點分析教義](#cryptic_afflicted_increased_damage) | 未見明確矛盾 |
 | [離格動作例程](#cryptic_mobile_defense) | 未見明確矛盾 |
 | [能量溢流](#cryptic_shared_toughness) | 未見明確矛盾 |
+| [目標殲滅回饋](#cryptic_stun_suppression_immune) | 未見明確矛盾 |
 | [二元彈道協議](#cryptic_elite_kills_toughness) | 未見明確矛盾 |
 | [力量分配致動器](#cryptic_push_stagger_stamina) | 未見明確矛盾 |
 | [卓越追蹤聖歌](#cryptic_no_braced_movement_penalty) | 未見明確矛盾 |
@@ -140,6 +141,13 @@
 - 描述鍵：`loc_talent_cryptic_shared_toughness_desc`；hash：`0f1a34d2`。
 - 結論：未見明確矛盾。英文each與繁中所有皆可包含逐人獲得；補充不平分、部分補滿不觸發，不當成錯誤。
 - [原始碼推導與限制](cryptic_shared_toughness.md)。
+
+<a id="cryptic_stun_suppression_immune"></a>
+## 目標殲滅回饋(Target-Neutralization Feedback)
+
+- 描述鍵：`loc_talent_cryptic_stun_suppression_immune_desc`；hash：`38272d6c`。
+- 結論：未見明確矛盾。中英「眩暈／Stun」為概括詞；以實際keyword區分一般受擊硬直與強制控制，不列誤譯。
+- [原始碼推導與限制](cryptic_stun_suppression_immune.md)。
 
 <a id="cryptic_elite_kills_toughness"></a>
 ## 二元彈道協議(Binary Ballistics Protocol)
