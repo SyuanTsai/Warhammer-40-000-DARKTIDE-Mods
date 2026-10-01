@@ -1,11 +1,42 @@
-# 蓄力打擊(Charged Strike)：來源與待確認事項
+# 蓄力打擊(Charged Strike)：原始碼依據
 
-[返回技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_chain_lightning_heavy_attacks)
+[返回玩家說明](../TALENTS_Psyker.md#psyker_chain_lightning_heavy_attacks)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_chain_lightning_heavy_attacks)
 
-- 狀態：已完成節點與原文定位；機制、公式及勘誤尚待核對。
-- 本機原文：Steam Build `25492122`，`ui` 資源，繁中／英文按相同 hash 配對。
-- 天賦：`psyker_chain_lightning_heavy_attacks`；分類：閃擊；節點類型：`tactical_modifier`。
-- 來源：[當前樹節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1949-L1971)；[天賦定義與顯示參數](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2519-L2529)。
-- 名稱鍵：`loc_talent_psyker_chain_lightning_heavy_attacks`；本機遊戲名稱：蓄力打擊。
-- 描述鍵：`loc_talent_psyker_chain_lightning_damage_heavy_attacks_desc`；`ui` 描述 hash：`e84d2a21`。
-- 比對狀態：繁中／英文已配對；效果與勘誤待逐項核對。
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`psyker_chain_lightning_heavy_attacks`；名稱鍵：`loc_talent_psyker_chain_lightning_heavy_attacks`；描述鍵：`loc_talent_psyker_chain_lightning_damage_heavy_attacks_desc`。
+- 節點：`node_d958faa6-e3ea-4c79-bc84-3477063b09f7`；分類：閃擊；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- 固定原始碼 SHA 419fe18d414a618ce0474bd015bab470afb446d6。此天賦掛載命中觸發效果，並以 CheckProcFunctions.on_heavy_hit 篩選重擊。觸發後，命中目標被加上 psyker_heavy_swings_shock；若同時擁有衰弱詛咒，則改用 psyker_heavy_swings_shock_improved。兩者由短暫電擊效果模板複製而來，duration=2，max_stacks=1，並以 psyker_heavy_swings_shock 傷害設定造成電擊期間的持續傷害。此天賦本身不提供固定的近戰傷害加成。
+
+## 原始碼依據
+
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1949–1971](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1949-L1971)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：2519–2529](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2519-L2529)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：3518–3537](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L3518-L3537)
+- [scripts/settings/buff/weapon_buff_templates.lua：1088–1132](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/weapon_buff_templates.lua#L1088-L1132)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：2519–2529](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2519-L2529)
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1949–1971](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1949-L1971)
+
+## 算例條件與待確認事項
+
+- **搭配衰弱詛咒**：這 2 秒電擊也會使目標受到的傷害增加 10%。只比較該承傷倍率，原本 100 點傷害變成 100 × 1.1 = 110 點。
+- 若同時選取衰弱詛咒，目標會改用強化電擊版本並承受該天賦的全來源增傷；未選取時只有電擊與持續傷害。
+- 目標電擊效果的最大疊層為 1；傷害量仍依目標、攻擊狀態與傷害設定變動，原始碼片段未給可套用所有敵人的固定數值。
+- 固定 SHA 與本機遊戲 Build 25492122 尚未核實為同版，跨版本細節待同版核對；未做遊戲內測試。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`e84d2a21`。
+- 本地繁中說明列出近戰重擊電擊並造成傷害，與固定原始碼的重擊命中觸發及兩秒持續傷害效果相符。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/tactical_modifier/psyker_chain_lightning_heavy_attacks.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_chain_lightning_heavy_attacks:node_d958faa6-e3ea-4c79-bc84-3477063b09f7`。
+- 格式：image/webp；288×288；8754 bytes。
+- SHA-256：`de24fc0273bca19f149459b9eabc207b5d4b6a5cb283305cc61ef41e6f49f55a`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e)。附件已下載比對位元組與 SHA-256。
