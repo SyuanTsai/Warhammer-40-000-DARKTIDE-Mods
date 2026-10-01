@@ -47,7 +47,7 @@
 | <img src="https://github.com/user-attachments/assets/3ec21db4-4013-4522-850f-14c583e25ea7" width="32" height="32" alt="爆破小隊天賦圖示"> [爆破小隊](#veteran_aura_elite_kills_restore_grenade)<br>- Demolition Team | <ul><li>你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a5b64063-ac9d-404d-98ac-528f24aafb65" width="32" height="32" alt="戰術裝填天賦圖示"> [戰術裝填](#veteran_faster_reload_on_non_empty_clips)<br>- Tactical Reload | <ul><li>彈匣還有彈藥時開始裝填，裝填速度增加 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/009ef44a-cf3d-44cf-ac8b-cda57c6fd83d" width="32" height="32" alt="齊射能手天賦圖示"> [齊射能手](#veteran_reload_speed_on_elite_kill)<br>- Volley Adept | <ul><li>擊殺精英或專家敵人後，下一次裝填速度增加 30%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="堅定不移天賦圖示"> [堅定不移](#veteran_increased_weakspot_damage)<br>- Precision Strikes | <ul><li>弱點命中的額外傷害增加 30%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="堅定不移天賦圖示"> [堅定不移](#veteran_increased_weakspot_damage)<br>- Precision Strikes | <ul><li>弱點命中的額外傷害加成 +30%；整次命中的增幅依武器、目標與既有加成而變。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7be19cb4-a1cb-4211-b9f2-d754f3c95b6c" width="32" height="32" alt="亡命之徒天賦圖示"> [亡命之徒](#veteran_increased_melee_crit_chance_and_melee_finesse)<br>- Desperado | <ul><li>近戰爆擊率增加 10 個百分點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d6402640-110e-4d25-b1b3-780a49b1c4e1" width="32" height="32" alt="嗜血天賦圖示"> [嗜血](#veteran_all_kills_replenish_toughness)<br>- Out for Blood | <ul><li>每次擊殺額外恢復 5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dca385d7-a54e-4bf5-b67d-f3d29ef82234" width="32" height="32" alt="遊擊者天賦圖示"> [遊擊者](#veteran_increase_damage_after_sprinting)<br>- Skirmisher | <ul><li>衝刺或滑行時持續累積傷害加成，每層增加 6.25%，最多 4 層。</li></ul> | 技能 |
@@ -833,12 +833,19 @@
 
 <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="72" height="72" alt="堅定不移天賦圖示">
 
-- **弱點命中的額外傷害增加 30%。**
-- 近戰與遠程均適用；加成作用於弱點額外傷害，基礎傷害部分不增加。
+- **弱點命中的額外傷害加成增加 30%；近戰與遠程均適用。**
+
+- **實際增幅**：只加強弱點命中的額外傷害，基礎部分不變。額外傷害占比越高，整次命中的增幅越大；武器、攻擊方式、目標護甲與既有加成都會影響結果。
 
 #### 傷害算例
 
-- 假設基礎部分 100、弱點額外部分 40，其他倍率為 1：原本 `100 + 40 = 140`，點選後 `100 + 40 × 1.3 = 152 傷害`。
+- **弱點額外傷害為 100**：假設未爆擊、基礎部分 100、沒有其他加成，原本 `100 + 100 = 200 點`；點選後 `100 + 100 × 1.3 = 230 點`。實際增加 `(230 − 200) ÷ 200 = 15%`。
+
+- **弱點額外傷害為 200**：同樣基礎部分 100，原本 `100 + 200 = 300 點`；點選後 `100 + 200 × 1.3 = 360 點`。實際增加 `(360 − 300) ÷ 300 = 20%`。
+
+- **已有同階段加成**：基礎與未加成的弱點額外部分各 100，原有 25% 額外傷害加成時，由 `100 + 100 × 1.25 = 225 點` 變成 `100 + 100 × (1 + 25% + 30%) = 255 點`；實際增加 `30 ÷ 225 ≈ 13.33%`。
+
+- **比較武器時**：上述 15% 與 20% 是假設算例，不是盧修斯或自動槍的固定增幅。應以相同武器、攻擊／蓄力方式、敵人、弱點部位、距離及爆擊狀態，比較點選前後的傷害；不要直接把打身體的傷害當成弱點命中的基礎部分。
 
 [詳細資料](TALENTS%20Veteran/veteran_increased_weakspot_damage.md) · [返回目錄](#talent-index)
 
