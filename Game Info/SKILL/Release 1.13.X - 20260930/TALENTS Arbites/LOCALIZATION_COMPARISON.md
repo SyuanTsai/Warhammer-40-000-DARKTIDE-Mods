@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [突破重圍](#adamant_charge) | 繁中原文勘誤 |
 | [天鷹使節](#adamant_area_buff_drone_improved) | 未見明確矛盾 |
 | [懲惡揚善](#adamant_charge_toughness) | 未見明確矛盾 |
 | [針鋒相對](#adamant_charge_cooldown_reduction) | 未見明確矛盾 |
@@ -61,6 +62,15 @@
 | [震盪攻擊](#adamant_melee_weakspot_hits_count_as_stagger) | 未見明確矛盾 |
 | [針對弱者](#adamant_staggering_enemies_take_more_damage) | 未見明確矛盾 |
 | [還治其人之身](#adamant_perfect_block_damage_boost) | 未見明確矛盾 |
+
+<a id="adamant_charge"></a>
+## 突破重圍(Break the Line)
+
+- 描述鍵：`loc_ability_adamant_charge_blocking_desc`；hash：`b214fa7a`。
+- 結論：繁中原文勘誤。繁中寫「踉蹌的機率提高」，英文寫「causing high Stagger」。固定來源的收尾效果是對多數未踉蹌目標強制重度踉蹌，並非提高機率；其餘「視為處於格擋狀態」與「count as Blocking」一致。
+- 繁中原文短引：上前猛砸，使前方的敵人踉蹌的機率提高，且傷害提高{damage:%s}，衝擊效果{stagger:%s}，持續{duration:%s}秒。進行猛砸期間，你將被視為處於格擋狀態。
+- 同源英文：Step forward and Bash, causing high Stagger to enemies in front of you, and gain {damage:%s} Damage, {stagger:%s} Impact, for {duration:%s}s. During the Bash you count as Blocking.
+- [原始碼推導與限制](adamant_charge.md)。
 
 <a id="adamant_area_buff_drone_improved"></a>
 ## 天鷹使節(Nuncio-Aquila)
