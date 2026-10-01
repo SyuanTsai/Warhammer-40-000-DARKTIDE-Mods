@@ -9,8 +9,8 @@
 ## 原始碼確認與程式推導
 
 - tank settings damage_taken_multiplier=.8、toughness_damage_taken_multiplier=.75、damage_taken_while_dodging=.5、dodge_linger_duration=.25。
-- conditional_stat_buffs在Dodge.is_dodging時套用.5；on_dodge_end另啟動.25秒proc_stat_buffs。若上一閃避的尾段與下一次閃避條件重疊，兩份.5可能同時存在；此情境未實測，不把40%倍率當所有連續閃避的唯一結果。
-- static_movement_reduction_multiplier=0只消除weapon_template.static_speed_reduction_mod的減速差值，其他weapon_action/alternate_fire乘数獨立。
+- conditional_stat_buffs 在 Dodge.is_dodging 時套用 0.5；on_dodge_end 另啟動 0.25 秒 proc_stat_buffs。ProcBuff 先呼叫父類別計算一般／條件屬性，再加入有效的 proc 屬性。damage_taken_multiplier 屬乘法型，因此上一閃避的尾段與下一次閃避重疊時，兩份 0.5 相乘；一般傷害倍率為 0.8 × 0.5 × 0.5 = 0.2，韌性再乘 0.75 為 0.15。這是程式推導，未作遊戲內測量。
+- static_movement_reduction_multiplier=0只消除weapon_template.static_speed_reduction_mod的減速差值，其他weapon_action/alternate_fire乘數獨立。
 
 ## 原始碼依據
 
@@ -21,6 +21,9 @@
 - [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_taken_calculation.lua#L223-L258)
 - [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L467-L504)
 - [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L689-L727)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/proc_buff.lua#L288-L299)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L775-L775)
 
 ## 算例與待確認事項
 
