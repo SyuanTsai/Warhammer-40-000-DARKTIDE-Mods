@@ -9,7 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [動能撕裂者](#psyker_smite_on_hit) | 跨版本待同版核對 |
-| [顱腦崩裂](#psyker_brain_burst_improved) | 已配對；機制待核對 |
+| [顱腦崩裂](#psyker_brain_burst_improved) | 未見已確認矛盾 |
 | [靈能攻擊](#psyker_grenade_throwing_knives) | 描述方向吻合，細節未列盡 |
 | [乙太碎片](#psyker_throwing_knives_piercing) | 描述不完整，未見已確認矛盾 |
 | [懲戒](#psyker_grenade_chain_lightning) | 未見已確認矛盾 |
@@ -101,7 +101,7 @@
 ## 顱腦崩裂(Brain Rupture)
 
 - 描述鍵：`loc_talent_psyker_brain_burst_improved_description`；hash：`681e4980`。
-- 已配對原文，機制待核對。
+- 結論：未見已確認矛盾。核對到的繁中原文以顱腦崩裂作為 Brain Rupture 名稱，並以參數呈現傷害增幅；固定來源確認倍率為 1.5。Build 25492122 與此來源版本未證實相同，跨版本細節仍待同版核對。
 - [原始碼推導與限制](psyker_brain_burst_improved.md)。
 
 <a id="psyker_grenade_throwing_knives"></a>

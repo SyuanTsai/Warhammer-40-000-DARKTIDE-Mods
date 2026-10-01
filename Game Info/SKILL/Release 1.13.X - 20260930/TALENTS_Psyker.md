@@ -8,6 +8,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/2e792f27-7daf-4ce9-abcc-9d92ded0985c" width="32" height="32" alt="動能撕裂者天賦圖示"> [動能撕裂者](#psyker_smite_on_hit)<br>- Kinetic Flayer | <ul><li>命中仍存活的精英、專家敵人或巨獸時觸發顱腦崩裂，冷卻 12 秒。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/215cb557-8544-4d05-876a-871e70dc093a" width="32" height="32" alt="顱腦崩裂天賦圖示"> [顱腦崩裂](#psyker_brain_burst_improved)<br>- Brain Rupture | <ul><li>蓄力後攻擊單一敵人</li><li>比基礎閃擊增加 50% 傷害</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/a0c17626-2777-4302-bc7e-9b3a48aadcd0" width="32" height="32" alt="靈能攻擊天賦圖示"> [靈能攻擊](#psyker_grenade_throwing_knives)<br>- Assail | <ul><li>投擲追蹤敵人的靈能碎片；可瞄準指定目標。</li><li>最多保留 10 次，每 3 秒恢復一次。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/ae86e2bb-6971-4dfe-b678-0aa814ccdfa1" width="32" height="32" alt="乙太碎片天賦圖示"> [乙太碎片](#psyker_throwing_knives_piercing)<br>- Ethereal Shards | <ul><li>靈能攻擊的傷害及撞擊穿透容量增加 50%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/981d6617-da53-4f4d-8c85-c2e64dddab43" width="32" height="32" alt="懲戒天賦圖示"> [懲戒](#psyker_grenade_chain_lightning)<br>- Smite | <ul><li>持續電擊目標並向附近敵人傳導</li><li>蓄力施放可加快擴散及傷害提升</li></ul> | 閃擊 |
@@ -92,6 +93,23 @@
 - **冷卻算例**：第 0 秒觸發後，第 11 秒的命中仍不能再次觸發；12 秒冷卻結束後的下一次合格命中才會觸發。
 
 [詳細資料](TALENTS%20Psyker/psyker_smite_on_hit.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_brain_burst_improved"></a>
+### 顱腦崩裂(Brain Rupture)
+
+<img src="https://github.com/user-attachments/assets/215cb557-8544-4d05-876a-871e70dc093a" width="72" height="72" alt="顱腦崩裂天賦圖示">
+
+- **運作方式**：蓄積靈能力量後攻擊單一敵人，傷害比原本的基礎閃擊提高 50%。
+
+- **蓄力方式**：可先蓄力再找目標，約 3 秒充滿；先鎖定目標再蓄力的模式約 2 秒充滿，鎖定後可移開準星。時間會受蓄力速度加成影響。
+
+- **反噬算例**：沒有其他修正時，兩種模式蓄滿約增加 20 個反噬百分點，成功攻擊再增加 25 個百分點，共約 20 + 25 = 45 個百分點。滿蓄後繼續維持，每秒再增加約 9 個百分點。
+
+- **傷害算例**：固定同一目標、蓄力程度與其他加成，原本造成 100 點傷害的攻擊，變成 100 × 1.5 = 150 點。此數字用來說明倍率；實際傷害仍依護甲與攻擊條件變動。
+
+[詳細資料](TALENTS%20Psyker/psyker_brain_burst_improved.md) · [返回目錄](#talent-index)
 
 ---
 

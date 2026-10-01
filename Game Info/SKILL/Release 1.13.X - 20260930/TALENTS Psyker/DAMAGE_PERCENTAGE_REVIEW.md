@@ -7,7 +7,7 @@
 | 技能 | 本次核對內容 |
 |---|---|
 | [動能撕裂者](psyker_smite_on_hit.md) | 命中仍存活的精英、專家敵人或巨獸時觸發顱腦崩裂，冷卻 12 秒。；完整計算與適用限制見來源文件。 |
-| [顱腦崩裂](psyker_brain_burst_improved.md) | 機制與公式待核對。 |
+| [顱腦崩裂](psyker_brain_burst_improved.md) | 蓄力後攻擊單一敵人；比基礎閃擊增加 50% 傷害；完整計算與適用限制見來源文件。 |
 | [靈能攻擊](psyker_grenade_throwing_knives.md) | 投擲追蹤敵人的靈能碎片；可瞄準指定目標。；最多保留 10 次，每 3 秒恢復一次。；完整計算與適用限制見來源文件。 |
 | [乙太碎片](psyker_throwing_knives_piercing.md) | 靈能攻擊的傷害及撞擊穿透容量增加 50%。；完整計算與適用限制見來源文件。 |
 | [懲戒](psyker_grenade_chain_lightning.md) | 持續電擊目標並向附近敵人傳導；蓄力施放可加快擴散及傷害提升；完整計算與適用限制見來源文件。 |
