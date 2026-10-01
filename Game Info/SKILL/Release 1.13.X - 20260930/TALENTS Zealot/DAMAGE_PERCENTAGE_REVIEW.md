@@ -28,4 +28,5 @@
 | [信仰狂亂](zealot_attack_speed.md) | 近戰攻速提高 10%，移動速度提高 5%。；完整計算與適用限制見來源文件。 |
 | [信仰之勇](zealot_additional_wounds.md) | 傷口數增加 2 格；不增加最大生命。；完整計算與適用限制見來源文件。 |
 | [鮮血受膏](zealot_increase_ranged_close_damage.md) | 持用遠程武器時，近距離傷害最多提高 25%；距離增加時遞減。；完整計算與適用限制見來源文件。 |
+| [不屈之志](zealot_uninterruptible_no_slow_heavies.md) | 重擊蓄力時免疫一般踉蹌，並取消蓄力動作本身的移動減速。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_4.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |

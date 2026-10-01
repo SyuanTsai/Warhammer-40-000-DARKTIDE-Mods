@@ -28,6 +28,7 @@
 | <img src="https://github.com/user-attachments/assets/c184be29-e45d-4968-acc5-ae67779d90cc" width="32" height="32" alt="信仰狂亂天賦圖示"> [信仰狂亂](#zealot_attack_speed)<br>- Faithful Frenzy | <ul><li>近戰攻速提高 10%，移動速度提高 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/793e953e-5b99-416a-99c8-c6d185df7cc9" width="32" height="32" alt="信仰之勇天賦圖示"> [信仰之勇](#zealot_additional_wounds)<br>- Faith's Fortitude | <ul><li>傷口數增加 2 格；不增加最大生命。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f1f336d8-dc80-46a3-b756-2df08b26f541" width="32" height="32" alt="鮮血受膏天賦圖示"> [鮮血受膏](#zealot_increase_ranged_close_damage)<br>- Anoint in Blood | <ul><li>持用遠程武器時，近距離傷害最多提高 25%；距離增加時遞減。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/7af1f56a-9932-428e-91c5-47b14836d6cb" width="32" height="32" alt="不屈之志天賦圖示"> [不屈之志](#zealot_uninterruptible_no_slow_heavies)<br>- Unfaltering | <ul><li>重擊蓄力時免疫一般踉蹌，並取消蓄力動作本身的移動減速。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -341,6 +342,21 @@
 - **其他加成**：本項與同階段傷害加成相加；武器自身隨距離衰減的傷害另算，不能把上面的固定 100 當成所有距離的實測傷害。
 
 [詳細資料](TALENTS%20Zealot/zealot_increase_ranged_close_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_uninterruptible_no_slow_heavies"></a>
+### 不屈之志(Unfaltering)
+
+<img src="https://github.com/user-attachments/assets/7af1f56a-9932-428e-91c5-47b14836d6cb" width="72" height="72" alt="不屈之志天賦圖示">
+
+- **運作方式**：重擊蓄力期間，免疫一般受擊踉蹌與動作中斷，並取消這個蓄力動作本身的移動減速；揮出後不再符合蓄力條件。
+
+- **速度算例**：基礎移速 5 公尺／秒，某蓄力原本使移速乘 0.5，通常只能走 2.5 公尺／秒；本天賦取消該動作的減速後可維持 5 公尺／秒。其他來源的速度修正仍另算。
+
+- **控制例外**：不等於免疫所有擊退、捕網或撲倒，也不能阻止明確無視免疫的攻擊。
+
+[詳細資料](TALENTS%20Zealot/zealot_uninterruptible_no_slow_heavies.md) · [返回目錄](#talent-index)
 
 ---
 
