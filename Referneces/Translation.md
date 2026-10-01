@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_hits_cause_bleed` / `veteran_hits_cause_bleed` - 鋸齒刀刃
+  - 英文對應：Serrated Blade。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1772-L1827)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_kill_grants_damage_to_other_slot` / `veteran_kill_grants_damage_to_other_slot` - 靈活接敵
   - 英文對應：Agile Engagement。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1828-L1870)；此來源證明識別鍵與天賦關係。

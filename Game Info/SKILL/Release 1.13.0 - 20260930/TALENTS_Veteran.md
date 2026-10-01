@@ -36,6 +36,7 @@
 | 技能 | [裂擊(Rending Strikes)](#veteran_rending_bonus) | 武器獲得 10% 撕裂。 |
 | 技能 | [互惠互利(Reciprocity)](#veteran_dodging_grants_crit) | 每次成功閃避攻擊，爆擊率增加 5 個百分點，最多 5 層。 |
 | 技能 | [靈活接敵(Agile Engagement)](#veteran_kill_grants_damage_to_other_slot) | 近戰擊殺使遠程傷害增加 25%；遠程擊殺使近戰傷害增加 25%。 |
+| 技能 | [鋸齒刀刃(Serrated Blade)](#veteran_hits_cause_bleed) | 近戰命中造成傷害後，對仍存活的敵人施加 2 層流血。 |
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
@@ -636,6 +637,25 @@
 - 第 0 秒近戰擊殺、第 4 秒再次近戰擊殺：遠程增傷延長至約第 `4 + 6 = 10 秒`。
 
 [詳細資料](TALENTS%20Veteran/veteran_kill_grants_damage_to_other_slot.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_hits_cause_bleed"></a>
+
+### 鋸齒刀刃(Serrated Blade)
+
+<img src="https://github.com/user-attachments/assets/8378bd8a-7c90-41fd-83c7-40c135c75caa" width="72" height="72" alt="鋸齒刀刃天賦圖示">
+
+- **近戰命中造成傷害後，對仍存活的敵人施加 2 層流血。**
+- 流血最多 **16 層**，約每 **0.5 秒**造成傷害。再次施加刷新 **1.5 秒**計時；未再施加時，到期後每次傷害跳動減少一層。
+
+#### 疊層與傷害算例
+
+- 不計期間掉層，連續命中四次可累積 `2 × 4 = 8 層`。
+- 對無甲目標、沒有其他加成時，八層每次流血傷害為 `175 × [(8 ÷ 16)² × (3 − 2 × 8 ÷ 16)] × 0.5 = 43.75`。
+- 兩層同條件約為 **3.76 傷害／次**；流血按曲線增強，八層不是兩層傷害的四倍。
+
+[詳細資料](TALENTS%20Veteran/veteran_hits_cause_bleed.md) · [返回目錄](#talent-index)
 
 ---
 
