@@ -33,6 +33,7 @@
 | [死忠](#zealot_fanatic_rage_toughness_on_max) | 未見明確矛盾 |
 | [正義勇士](#zealot_fanatic_rage_improved) | 未見明確矛盾 |
 | [迅疾狂熱](#zealot_shared_fanatic_rage) | 跨來源待同版核對 |
+| [治癒詩頌](#zealot_martyrdom_toughness_modifier) | 明確繁中誤譯 |
 | [永恆](#zealot_quickness_increased_duration) | 未見明確矛盾 |
 | [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
 | [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
@@ -263,6 +264,15 @@
 - 描述鍵：`loc_talent_zealot_shared_fanatic_rage_new_desc`；hash：`95bbc544`。
 - 結論：跨來源待同版核對。英繁中都寫隊友在個人熾熱虔誠有效時取得暴擊率；程式是開始 Fury 時套用一次8秒共享 buff，個人 Fury 刷新不會重跑分發。若這份本地化與所固定程式碼同版，持續效果時間可能與文案「while active」不一致；版本尚未確認前保留待核。
 - [原始碼推導與限制](zealot_shared_fanatic_rage.md)。
+
+<a id="zealot_martyrdom_toughness_modifier"></a>
+## 治癒詩頌(Restorative Verses)
+
+- 描述鍵：`loc_talent_zealot_martyrdom_toughness_modifier_upd_desc`；hash：`d473a3ea`。
+- 結論：明確繁中誤譯。繁中寫成「每疊加一層會恢復5%韌性」，把效率提升誤成直接回復；英文為 Toughness Replenishment，執行時掛載 toughness_replenish_modifier 並隨失去傷口格插值。應改為「每層提高韌性回復效率5%」一類表述。
+- 繁中原文短引：每疊加一層，{talent_name:%s}會恢復{toughness_modifier:%s}韌性。
+- 同源英文：{talent_name:%s} grants {toughness_modifier:%s} Toughness Replenishment per stack.
+- [原始碼推導與限制](zealot_martyrdom_toughness_modifier.md)。
 
 <a id="zealot_quickness_increased_duration"></a>
 ## 永恆(Eternal)

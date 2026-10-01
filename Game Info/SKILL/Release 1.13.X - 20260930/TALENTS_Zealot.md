@@ -31,6 +31,7 @@
 | <img src="https://github.com/user-attachments/assets/0fd06e0a-ef14-4228-8cd5-02980c989f05" width="32" height="32" alt="死忠天賦圖示"> [死忠](#zealot_fanatic_rage_toughness_on_max)<br>- Stalwart | <ul><li>觸發狂怒時恢復相當於最大韌性的 50%；狂怒期間且計數維持 25 層時，韌性承傷降低 25%，每秒恢復最大韌性的 2%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9d85e538-7fb1-4308-99b9-7ed9408eead2" width="32" height="32" alt="正義勇士天賦圖示"> [正義勇士](#zealot_fanatic_rage_improved)<br>- Righteous Warrior | <ul><li>狂怒的爆擊率加成由 15 提高至 25 個百分點。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d1133aca-9af8-4b47-934f-d073de0d4e1c" width="32" height="32" alt="迅疾狂熱天賦圖示"> [迅疾狂熱](#zealot_shared_fanatic_rage)<br>- Infectious Zeal | <ul><li>狂怒開始時，當下協同隊友增加 10 個百分點爆擊率，持續 8 秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/5ac46e08-8f7b-4828-8bfa-e47c240e113b" width="32" height="32" alt="治癒詩頌天賦圖示"> [治癒詩頌](#zealot_martyrdom_toughness_modifier)<br>- Restorative Verses | <ul><li>殉道每缺少一格完整傷口，提高 5%韌性恢復效率，最多計 5 格、最高+25%。</li><li>效果改變韌性恢復效率，不會直接給予一筆韌性。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="32" height="32" alt="永恆天賦圖示"> [永恆](#zealot_quickness_increased_duration)<br>- Eternal | <ul><li>命定審判的啟動增益持續時間由 6 秒延長至 10 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="狂熱朝聖者天賦圖示"> [狂熱朝聖者](#zealot_resist_death_ability)<br>- Zealous Pilgrim | <ul><li>使用戰鬥技能後獲得 4 秒免死效果。</li><li>隱身技能在退出隱身後生效；聖物技能在卸下聖物後生效。</li><li>無法殺死期間，傷害及攻擊速度各提高 10%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="天災天賦圖示"> [天災](#zealot_crits_apply_bleed)<br>- Scourge | <ul><li>近戰爆擊施加 2 層流血；攻擊流血敵人增加近戰爆擊率。</li></ul> | 技能 |
@@ -482,6 +483,23 @@
 - **持續限制**：你之後刷新自己的狂怒，不會同步延長這次已給隊友的 8 秒；效果期間才進入協同範圍的隊友，也不會立即補發。
 
 [詳細資料](TALENTS%20Zealot/zealot_shared_fanatic_rage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_martyrdom_toughness_modifier"></a>
+### 治癒詩頌(Restorative Verses)
+
+<img src="https://github.com/user-attachments/assets/5ac46e08-8f7b-4828-8bfa-e47c240e113b" width="72" height="72" alt="治癒詩頌天賦圖示">
+
+- **運作方式**：每失去一整格生命，韌性恢復量增加 5%，最多 5 層、25%；需要原本有恢復韌性的來源才有效，不會因獲得層數直接補韌性。
+
+- **恢復算例**：某效果原本補 10 點韌性，2 層時為 10 × (1 + 2 × 5%) = 11 點；5 層時為 12.5 點。若另有同階段 20% 恢復加成，滿層為 10 × (1 + 20% + 25%) = 14.5 點，仍受韌性缺額限制。
+
+#### 繁中原文勘誤
+
+- 原文寫「每層會恢復韌性」，容易誤認為取得層數就立即恢復；實際是每層增加 5% 韌性恢復量，須透過其他恢復來源生效。
+
+[詳細資料](TALENTS%20Zealot/zealot_martyrdom_toughness_modifier.md) · [返回目錄](#talent-index)
 
 ---
 
