@@ -19,6 +19,7 @@
 | [電容回收迴路](#cryptic_multi_hits_grant_power) | 未見明確矛盾 |
 | [鋼鐵富足](#cryptic_chordclaw_capacitance_restoration) | 未見明確矛盾 |
 | [千刀萬剮](#cryptic_chordclaw_consecutive_bonus) | 未見明確矛盾 |
+| [洞察之眼](#cryptic_precision_stance_crit_cleave) | 未見明確矛盾 |
 | [削切協議](#cryptic_dissector) | 未見明確矛盾；補充計算與限制 |
 | [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
 | [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
@@ -155,6 +156,13 @@
 - 描述鍵：`loc_talent_cryptic_chordclaw_consecutive_bonus_desc`；hash：`0ec90e2e`。
 - 結論：未見明確矛盾。inventory 中英的使用條件、每層20%傷害、5秒及最多3層與原始設定一致；層數在技能啟動時增加、只作用於弦爪屬程式實作範圍的補充說明。
 - [原始碼推導與限制](cryptic_chordclaw_consecutive_bonus.md)。
+
+<a id="cryptic_precision_stance_crit_cleave"></a>
+## 洞察之眼(Piercing Sight)
+
+- 描述鍵：`loc_talent_cryptic_precision_stance_crit_cleave_desc`；hash：`f7e91cd6`。
+- 結論：未見明確矛盾。inventory 的中英文均說明啟動時+30%遠程穿透、+15%暴擊，滿4秒後為+60%及+30%；與兩組條件式模板的設定相符。穿透計算方式未載於本地化，但沒有明確相反描述。
+- [原始碼推導與限制](cryptic_precision_stance_crit_cleave.md)。
 
 <a id="cryptic_dissector"></a>
 ## 削切協議(Flensing Protocols)
