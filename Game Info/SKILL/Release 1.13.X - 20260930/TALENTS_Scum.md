@@ -8,6 +8,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/fd2156cb-6e65-4214-bd01-ab0b28665714" width="32" height="32" alt="擊暈天賦圖示"> [擊暈](#broker_blitz_flash_grenade_improved)<br>- Blackout | <ul><li>快速投擲的擊退手雷，最多攜帶 5 顆；每 20 次近距離擊殺恢復 1 顆。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/3b4df232-3b49-4f84-98c0-2b3e8828f917" width="32" height="32" alt="炸彈使者天賦圖示"> [炸彈使者](#broker_blitz_missile_launcher)<br>- Boom Bringer | <ul><li>發射高威力飛彈，最多 2 枚；爆炸基礎半徑 7 公尺。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/7d3c5999-8823-4b54-9204-6e22637bc851" width="32" height="32" alt="化學手榴彈天賦圖示"> [化學手榴彈](#broker_blitz_tox_grenade)<br>- Chem Grenade | <ul><li>投擲化學手榴彈，留下 15 秒毒區，最多攜帶 2 顆。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="特提恩是迎賓天賦圖示"> [特提恩是迎賓](#broker_passive_first_target_damage)<br>- A Tertium Welcome | <ul><li>每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="打你的臉天賦圖示"> [打你的臉](#broker_passive_close_ranged_damage)<br>- In Your Face | <ul><li>手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。</li></ul> | 技能 |
@@ -91,6 +92,23 @@
 - **彈藥方式**：最多攜帶 2 枚，額外彈藥袋提高至 3 枚。取代原本擊暈手雷後，不再靠每 20 次近距離擊殺補充。
 
 [詳細資料](TALENTS%20Scum/broker_blitz_missile_launcher.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_blitz_tox_grenade"></a>
+### 化學手榴彈(Chem Grenade)
+
+<img src="https://github.com/user-attachments/assets/7d3c5999-8823-4b54-9204-6e22637bc851" width="72" height="72" alt="化學手榴彈天賦圖示">
+
+- **毒區效果**：爆炸後留下持續 15 秒的毒區，實際形狀依地形擴散；站在其中的敵人每 0.35 秒增加 1 層同類毒素，由毒區最多補到 6 層。
+
+- **毒傷算例**：6 層毒素每次結算的輸入威力為 500 × 6 ÷ 30 = 100，再依毒素曲線與護甲計算。其他手段可把相同毒素疊至更高，不能把 6 層當作所有毒素的總上限。
+
+- **附帶效果**：毒區會使敵人更容易被近戰順劈穿過，並附加死亡爆炸。死亡爆炸標記持續 12 秒，在標記有效時死亡會引爆，範圍 2.5 公尺；因此離開毒區後仍可能引爆。
+
+- **彈藥方式**：最多 2 顆，搭配額外彈藥袋變成 3 顆；不保留擊暈手雷的近距離擊殺補充。
+
+[詳細資料](TALENTS%20Scum/broker_blitz_tox_grenade.md) · [返回目錄](#talent-index)
 
 ---
 
