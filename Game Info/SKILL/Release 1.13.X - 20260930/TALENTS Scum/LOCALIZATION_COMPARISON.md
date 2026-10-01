@@ -13,6 +13,7 @@
 | [打你的臉](#broker_passive_close_ranged_damage) | 未見明確矛盾 |
 | [精準暴力](#broker_passive_restore_toughness_on_weakspot_kill) | 未見明確矛盾 |
 | [特提恩之聲](#broker_passive_restore_toughness_on_close_ranged_kill) | 未見明確矛盾 |
+| [翩翩蝶舞](#broker_passive_ninja_grants_crit_chance) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -48,3 +49,10 @@
 - 描述鍵：`loc_talent_broker_passive_restore_toughness_on_close_ranged_kill_desc`；hash：`7f8728ae`。
 - 結論：未見明確矛盾。繁中與英文皆寫遠程擊殺及8%／15%恢復；兩者省略近距離限制，屬描述不完整，不列勘誤。
 - [原始碼推導與限制](broker_passive_restore_toughness_on_close_ranged_kill.md)。
+
+<a id="broker_passive_ninja_grants_crit_chance"></a>
+## 翩翩蝶舞(Float Like a Butterfly)
+
+- 描述鍵：`loc_talent_broker_passive_ninja_grants_crit_chance_desc`；hash：`43d506f8`。
+- 結論：未見明確矛盾。繁中與英文皆為完美格擋或成功閃避提高爆擊機率，未見矛盾。
+- [原始碼推導與限制](broker_passive_ninja_grants_crit_chance.md)。

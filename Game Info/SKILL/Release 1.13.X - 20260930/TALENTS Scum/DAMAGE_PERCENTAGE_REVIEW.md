@@ -11,3 +11,4 @@
 | [打你的臉](broker_passive_close_ranged_damage.md) | 手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。；完整計算與適用限制見來源文件。 |
 | [精準暴力](broker_passive_restore_toughness_on_weakspot_kill.md) | 近戰命中恢復 4% 最大韌性；爆擊或弱點改為 8%，爆擊弱點為 12%。；完整計算與適用限制見來源文件。 |
 | [特提恩之聲](broker_passive_restore_toughness_on_close_ranged_kill.md) | 在 12.5 公尺內遠程擊殺恢復 8% 最大韌性；精英與專家改為 15%。；完整計算與適用限制見來源文件。 |
+| [翩翩蝶舞](broker_passive_ninja_grants_crit_chance.md) | 成功閃避或完美格擋後，爆擊機率增加 20 個百分點，持續 3 秒。；完整計算與適用限制見來源文件。 |
