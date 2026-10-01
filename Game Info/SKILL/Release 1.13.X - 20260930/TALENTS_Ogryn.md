@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/5c8fc9b0-2f06-4311-87f7-511d4c6ce6d5" width="32" height="32" alt="退後！天賦圖示"> [退後！](#ogryn_blo_melee)<br>- Back Off! | <ul><li>近戰擊殺可提高下一次射擊觸發幸運子彈的機率，每層增加 10 個百分點。</li><li>最多累積 10 層；下一次射擊後清空，該次即使觸發幸運子彈而免耗彈藥也會消耗層數。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9c42800c-a3bc-469c-be04-1231b90bca3b" width="32" height="32" alt="強力劈砍天賦圖示"> [強力劈砍](#ogryn_heavy_hitter_cleave)<br>- Great Cleaver | <ul><li>重拳出擊每層增加 12.5% 近戰順劈容量。</li><li>最多 8 層；滿層使可順劈容量加倍。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/82795688-8a0b-4db1-871c-1302a8f33299" width="32" height="32" alt="越戰越勇天賦圖示"> [越戰越勇](#ogryn_heavy_hitter_max_stacks_improves_toughness)<br>- Unstoppable | <ul><li>重拳出擊每層使近戰擊殺恢復的韌性額外增加 15%。</li><li>最多 8 層；滿層時，近戰擊殺恢復量為基礎值的 2.2 倍。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/e8883b71-72ad-4780-92e7-395f6a32ead8" width="32" height="32" alt="震撼衝擊天賦圖示"> [震撼衝擊](#ogryn_heavy_hitter_stagger)<br>- Impactful | <ul><li>重拳出擊每層增加 7.5% 近戰衝擊效果。</li><li>最多 8 層；滿層增加 60% 近戰衝擊。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/93481225-465f-4750-a4f3-28602e723b40" width="32" height="32" alt="熱身完畢天賦圖示"> [熱身完畢](#ogryn_heavy_hitter_max_stacks_improves_attack_speed)<br>- Just Getting Started! | <ul><li>「熱身完畢！」在重拳出擊達到 8 層時增加 10% 攻擊速度。</li><li>重拳出擊低於 8 層後，額外攻速消失。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/67294825-4742-461c-8445-8eabf69981d3" width="32" height="32" alt="最好的防禦天賦圖示"> [最好的防禦](#ogryn_multi_heavy_toughness)<br>- The Best Defence | <ul><li>一次近戰攻擊命中至少 2 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bdf5653a-6df6-4998-a781-ae623083055a" width="32" height="32" alt="碾碎它們！天賦圖示"> [碾碎它們！](#ogryn_single_heavy_toughness)<br>- Smash 'Em! | <ul><li>一次近戰攻擊命中恰好 1 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
@@ -220,6 +221,21 @@
 - **算例**：基礎近戰擊殺恢復 10 點時，8 層恢復 10 × (1 + 8 × 15%) = 22 點，仍受缺少韌性限制。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_heavy_hitter_max_stacks_improves_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_heavy_hitter_stagger"></a>
+### 震撼衝擊(Impactful)
+
+<img src="https://github.com/user-attachments/assets/e8883b71-72ad-4780-92e7-395f6a32ead8" width="72" height="72" alt="震撼衝擊天賦圖示">
+
+- **生效條件**：近戰衝擊加成隨重拳出擊目前層數增加；本節點不會另外累積層數。
+
+- **公式與上限**：每層增加 7.5%，最多 8 層；滿層將近戰衝擊效果提高 60%。
+
+- **算例**：4 層增加 30%；若一次攻擊的基礎衝擊值為 100，滿 8 層時為 100 × 1.6 = 160。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_heavy_hitter_stagger.md) · [返回目錄](#talent-index)
 
 ---
 

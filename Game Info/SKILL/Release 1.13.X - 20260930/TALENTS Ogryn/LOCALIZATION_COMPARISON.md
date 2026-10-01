@@ -17,6 +17,7 @@
 | [退後！](#ogryn_blo_melee) | 繁中描述錯誤 |
 | [強力劈砍](#ogryn_heavy_hitter_cleave) | 未見明確矛盾 |
 | [越戰越勇](#ogryn_heavy_hitter_max_stacks_improves_toughness) | 未見明確矛盾 |
+| [震撼衝擊](#ogryn_heavy_hitter_stagger) | 未見明確矛盾 |
 | [熱身完畢](#ogryn_heavy_hitter_max_stacks_improves_attack_speed) | 未見明確矛盾 |
 | [最好的防禦](#ogryn_multi_heavy_toughness) | 未見明確矛盾 |
 | [碾碎它們！](#ogryn_single_heavy_toughness) | 未見明確矛盾 |
@@ -135,6 +136,13 @@
 - 描述鍵：`loc_talent_ogryn_heavy_hitter_max_stacks_improves_toughness_new_description`；hash：`e1a057de`。
 - 結論：未見明確矛盾。繁中寫「近戰擊殺時額外恢復…韌性」，英文寫「Toughness replenished from Melee Kills for each stack」；兩者都明確限定近戰擊殺恢復。固定來源的韌性恢復程式亦只在近戰擊殺類型套用此加成。
 - [原始碼推導與限制](ogryn_heavy_hitter_max_stacks_improves_toughness.md)。
+
+<a id="ogryn_heavy_hitter_stagger"></a>
+## 震撼衝擊(Impactful)
+
+- 描述鍵：`loc_talent_ogryn_passive_heavy_hitter_stagger_desc`；hash：`657b35a0`。
+- 結論：未見明確矛盾。繁中寫「額外增加…衝擊效果」，英文寫「also grants … Impact for each stack」；兩者都將衝擊加值連到重拳出擊每一層。
+- [原始碼推導與限制](ogryn_heavy_hitter_stagger.md)。
 
 <a id="ogryn_heavy_hitter_max_stacks_improves_attack_speed"></a>
 ## 熱身完畢(Just Getting Started!)
