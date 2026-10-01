@@ -35,6 +35,7 @@
 | [蓄力殲滅](#broker_passive_crit_grants_damage) | 未見明確矛盾 |
 | [猛烈劈擊](#broker_passive_melee_cleave_on_melee_kill) | 未見明確矛盾 |
 | [超暴力](#broker_passive_melee_damage_carry_over) | 未見明確矛盾 |
+| [劇毒菌株](#broker_passive_toxin_infected_enemies_take_increased_damage) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -226,3 +227,10 @@
 - 描述鍵：`loc_talent_broker_passive_melee_damage_carry_over_desc`；hash：`821fa540`。
 - 結論：未見明確矛盾。繁中「溢出傷害」與英文差額定義一致；續殺扣回目前加傷與替換規則為補充。
 - [原始碼推導與限制](broker_passive_melee_damage_carry_over.md)。
+
+<a id="broker_passive_toxin_infected_enemies_take_increased_damage"></a>
+## 劇毒菌株(Virulent Strain)
+
+- 描述鍵：`loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage_desc`；hash：`b7e6d44b`。
+- 結論：未見明確矛盾。繁中與英文都描述感染後受到傷害增加；提前結束及疊層為補充。
+- [原始碼推導與限制](broker_passive_toxin_infected_enemies_take_increased_damage.md)。

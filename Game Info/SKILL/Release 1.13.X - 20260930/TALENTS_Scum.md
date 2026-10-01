@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/97f78fa5-afd9-4fe0-b24f-fe54147da399" width="32" height="32" alt="蓄力殲滅天賦圖示"> [蓄力殲滅](#broker_passive_crit_grants_damage)<br>- Channelled Devastation | <ul><li>每 1% 目前爆擊機率，提供 0.5% 近戰傷害，最多 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/23850be1-ea33-448c-93dc-409f21216ceb" width="32" height="32" alt="猛烈劈擊天賦圖示"> [猛烈劈擊](#broker_passive_melee_cleave_on_melee_kill)<br>- Battering Strikes | <ul><li>近戰擊殺後增加 10% 近戰順劈，持續 5 秒，最多 5 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5439d198-0b4c-4a05-ab95-fc67f67398c9" width="32" height="32" alt="超暴力天賦圖示"> [超暴力](#broker_passive_melee_damage_carry_over)<br>- Hyper-Violence | <ul><li>擊殺的溢出傷害有 25% 轉為固定近戰加傷，持續 1 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/90caf35d-4780-4f00-a9cc-636858cd091e" width="32" height="32" alt="劇毒菌株天賦圖示"> [劇毒菌株](#broker_passive_toxin_infected_enemies_take_increased_damage)<br>- Virulent Strain | <ul><li>你施加毒素時，使目標受到的傷害增加 10%，最多持續 5 秒。</li></ul> | 技能 |
 
 ---
 
@@ -416,5 +417,20 @@
 - **再次擊殺**：效果期間會先扣除目前加傷，再算新的 25%；只有新值更高才替換並刷新。已有 50 點加傷、下一次溢出 400 時，新值為 (400 − 50) × 25% = 87.5；若溢出僅 200，新值 37.5 較低，不會替換或刷新。
 
 [詳細資料](TALENTS%20Scum/broker_passive_melee_damage_carry_over.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_toxin_infected_enemies_take_increased_damage"></a>
+### 劇毒菌株(Virulent Strain)
+
+<img src="https://github.com/user-attachments/assets/90caf35d-4780-4f00-a9cc-636858cd091e" width="72" height="72" alt="劇毒菌株天賦圖示">
+
+- **運作方式**：你對敵人新增毒素或增加毒素層數時，使其承受的各來源傷害增加 10%；重新觸發刷新 5 秒時間，不疊加幅度。
+
+- **持續限制**：若毒素提前消失，易傷也會提前結束，並非保證持續完整 5 秒。
+
+- **傷害算例**：原本造成 100 點傷害，單計易傷變成 110；若攻擊者另有 25% 增傷，則為 100 × 1.25 × 1.1 = 137.5 點。若目標原本另有同階段 20% 易傷，則該階段為 1 + 20% + 10% = 1.3 倍。
+
+[詳細資料](TALENTS%20Scum/broker_passive_toxin_infected_enemies_take_increased_damage.md) · [返回目錄](#talent-index)
 
 ---
