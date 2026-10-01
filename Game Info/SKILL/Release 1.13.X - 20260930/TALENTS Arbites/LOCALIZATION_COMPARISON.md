@@ -231,7 +231,7 @@
 ## 處刑命令(Execution Order)
 
 - 描述鍵：`loc_talent_execution_order_description`；hash：`720bc321`。
-- 結論：待同版核對。繁中「擊殺被標記的敵人會恢復…韌性」對應英文 “Killing a marked enemy replenishes… Toughness”；自身和戰犬 buff 文字也對應。兩種文字都稱攻擊標記敵人後提升戰犬傷害，但程式只檢查 initial_pounce，來源版本尚未核同版。
+- 結論：待同版核對。繁中與同源英文的擊殺恢復、玩家與獒犬增益一致。兩者概稱獒犬攻擊標記目標後增傷；固定實作的命中分支只接受 initial_pounce，對歐格林與巨獸的持續壓制也帶此旗標，標記擊殺另可給予增益。命中條件的文字邊界待同版核對。
 - [原始碼推導與限制](adamant_execution_order.md)。
 
 <a id="adamant_terminus_warrant"></a>

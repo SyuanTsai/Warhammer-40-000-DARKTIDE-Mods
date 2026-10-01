@@ -11,7 +11,7 @@
 
 - selector query40m、dot>.5與LoS；monster/captain/cultist_captain走instant_type分支，不需t>next_t。選中第一個合格項即break，不能據chosen_distance宣稱最近。已標記排除候選但未清除其他標記；移除須超40m、在背後且非aggroed。
 - on_hit 只有 server 處理。標記目標死亡才進入 _execution_order_proc：恢復 0.15 最大韌性、建立本人的 8 秒 +10% damage／+10% attack speed buff，並在已選升級時建立相應 child buff。 _execution_order_proc同時給companion buff；on_minion_death直接return，故不是全隊任意擊殺。
-- dog 分支檢查 companion hit 的 damage_profile.initial_pounce，且 victim 仍在標記 targets/deleted_units 中，才建立 8 秒 companion_damage_modifier=1.5 buff。共享 damage_calculation 會把 owner 的 companion_damage_modifier 加入 companion 的傷害 stat。
+- dog 分支檢查 companion hit 的 damage_profile.initial_pounce，且 victim 仍在標記 targets/deleted_units 中，才建立 8 秒 companion_damage_modifier=1.5 buff。共享 damage_calculation 會把 owner 的 companion_damage_modifier 加入 companion 的傷害 stat。 此旗標也存在於對歐格林與巨獸的持續壓制 profile，不能僅按名稱推斷每次撲擊只觸發一次；標記擊殺另有獨立路徑給予同一犬增益。
 
 ## 原始碼依據
 
@@ -34,14 +34,14 @@
 - 最大韌性 100、被標記敵人被擊殺且韌性缺額至少 15 時，恢復 15 點；自身 +10% 傷害和攻速到 8 秒到期。
 - 戰犬對標記目標作初次 pounce 命中後，若符合程式條件，狗的傷害 modifier 為 1+1.5，即基礎傷害的 2.5 倍，維持 8 秒。
 - 機制來源固定為公開 Aussiemon/Darktide-Source-Code SHA 419fe18d414a618ce0474bd015bab470afb446d6；inventory 的繁中與英文文字未證實與此程式碼同版。程式實作和文字措辭如有差異，先列跨版本待核，不直接判為翻譯錯誤。
-- 繁中／英文寫狗在 attacking 後獲得加成；此固定 source 只在 companion initial_pounce hit 標記目標時觸發，視為實作差異待核。
+- 文字概稱獒犬攻擊標記敵人後增傷；固定實作的命中分支要求 initial_pounce，對歐格林與巨獸的後續攻擊亦帶此旗標。標記擊殺另可給予同一增益；命中條件的文字邊界留待同版核對。
 - 「定期標記」不是無條件每 3 秒標記：必須有符合範圍、方位、視線與目標類別的候選敵人。
 - 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`720bc321`。
-- 繁中「擊殺被標記的敵人會恢復…韌性」對應英文 “Killing a marked enemy replenishes… Toughness”；自身和戰犬 buff 文字也對應。兩種文字都稱攻擊標記敵人後提升戰犬傷害，但程式只檢查 initial_pounce，來源版本尚未核同版。
+- 繁中與同源英文的擊殺恢復、玩家與獒犬增益一致。兩者概稱獒犬攻擊標記目標後增傷；固定實作的命中分支只接受 initial_pounce，對歐格林與巨獸的持續壓制也帶此旗標，標記擊殺另可給予增益。命中條件的文字邊界待同版核對。
 
 ## 圖示來源
 
