@@ -1,0 +1,37 @@
+# 大爆炸(Big Boom)：原始碼依據
+
+[返回玩家說明](../TALENTS_Ogryn.md#ogryn_increase_explosion_radius)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_increase_explosion_radius)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`ogryn_increase_explosion_radius`；名稱鍵：`loc_talent_ogryn_increase_explosion_radius`；描述鍵：`loc_talent_ogryn_increase_explosion_radius_desc`。
+- 節點：`node_1af9b61a-cb71-4510-9513-f46c0d73a4b0`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- explosion_radius_modifier .275；Explosion._calculate_radii對radius與close_radius同乘累加modifier。
+
+## 原始碼依據
+
+- [scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：761–768](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L761-L768)
+- [scripts/utilities/attack/explosion.lua：470–503](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/explosion.lua#L470-L503)
+- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：1824–1847](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1824-L1847)
+- [scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：1129–1154](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L1129-L1154)
+
+## 算例條件與待確認事項
+
+- **範圍算例**：原半徑 4 公尺，變成 4 × 1.275 = 5.1 公尺；以沒有遮擋的平面圓形估算，面積變成原本的 1.275² ≈ 1.626 倍，約增加 62.6%。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`15f7867d`。
+- 核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_increase_explosion_radius.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_increase_explosion_radius:node_1af9b61a-cb71-4510-9513-f46c0d73a4b0`。
+- 格式：image/webp；288×288；5962 bytes。
+- SHA-256：`f62bf482169fcd9683822a68bf5827058c91741074d87b058152b51fdf13e67b`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)；[公開圖片](https://github.com/user-attachments/assets/c6421034-209b-4fab-857d-541fa0667d8b)。附件已下載比對位元組與 SHA-256。

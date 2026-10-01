@@ -1,0 +1,40 @@
+# 堅不可摧(Unbreakable)：原始碼依據
+
+[返回玩家說明](../TALENTS_Ogryn.md#ogryn_block_all_attacks)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_block_all_attacks)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`ogryn_block_all_attacks`；名稱鍵：`loc_talent_ogryn_block_all_attacks`；描述鍵：`loc_talent_ogryn_block_all_attacks_variant_desc`。
+- 節點：`node_abc9d2b7-97eb-4431-9596-61435a15bff7`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- 掛載perfect版，is_perfect_blocking才給block_unblockable；on_perfect_block加damage_boost max1 duration5 melee_damage.2，sweep_finish退出。
+
+## 原始碼依據
+
+- [scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：3463–3509](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L3463-L3509)
+- [scripts/settings/talent/talent_settings_ogryn.lua：164–167](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_ogryn.lua#L164-L167)
+- [scripts/utilities/attack/block.lua：90–125](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/block.lua#L90-L125)
+- [scripts/utilities/attack/block.lua：252–273](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/block.lua#L252-L273)
+- [scripts/utilities/attack/damage_calculation.lua：278–300](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L278-L300)
+- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：2491–2506](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2491-L2506)
+- [scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：1694–1718](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L1694-L1718)
+
+## 算例條件與待確認事項
+
+- **傷害算例**：基礎 100 點變成 120 點；同階段原有 30% 增傷時為 100 × (1 + 30% + 20%) = 150 點。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`b565afeb`。
+- 核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_block_all_attacks.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_block_all_attacks:node_abc9d2b7-97eb-4431-9596-61435a15bff7`。
+- 格式：image/webp；288×288；5716 bytes。
+- SHA-256：`3434b4c0ecc082ed11b76b2602af38544e59b63e6ed698ceebe9b2ac3ca865a8`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)；[公開圖片](https://github.com/user-attachments/assets/3ff7d7eb-6206-4d77-91c5-483259320072)。附件已下載比對位元組與 SHA-256。
