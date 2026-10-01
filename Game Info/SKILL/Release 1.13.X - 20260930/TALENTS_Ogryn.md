@@ -54,6 +54,7 @@
 | <img src="https://github.com/user-attachments/assets/eeae1229-b245-43fc-9840-960c36f5787e" width="32" height="32" alt="射盡殺戮天賦圖示"> [射盡殺戮](#ogryn_ranged_improves_melee)<br>- Spray and Slay | <ul><li>打空彈匣後，提高 15% 近戰傷害與 7.5% 近戰攻速，持續 6 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fdf1eb1f-b76f-4452-beac-f2205fc32d2b" width="32" height="32" alt="猛砸爆裂天賦圖示"> [猛砸爆裂](#ogryn_melee_improves_ranged)<br>- Bash and Blast | <ul><li>每次近戰擊殺增加 3% 遠程傷害，最多 5 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9e138d4c-f301-46c6-9eef-5aff038efc7c" width="32" height="32" alt="格鬥兵天賦圖示"> [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown)<br>- Bruiser | <ul><li>自己或協同隊友擊殺精英後，持續 4 秒額外恢復戰鬥技能冷卻。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/dae8db6d-b212-4abd-a84b-246c0910e0b3" width="32" height="32" alt="精準打擊天賦圖示"> [精準打擊](#ogryn_weakspot_damage)<br>- Strike True | <ul><li>近戰命中弱點時，威力提高 10%。</li></ul> | 技能 |
 
 ---
 
@@ -780,5 +781,20 @@
 - **時間算例**：一般自然冷卻每秒恢復 1 秒，再加每次 0.5 秒補回；完整收到 4 次補回時，4 秒內共推進 4 + 4 × 0.5 = 6 秒冷卻，其中額外省下 2 秒。實際會受到冷卻是否已滿及更新時間點影響。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_ally_elite_kills_grant_cooldown.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_weakspot_damage"></a>
+### 精準打擊(Strike True)
+
+<img src="https://github.com/user-attachments/assets/dae8db6d-b212-4abd-a84b-246c0910e0b3" width="72" height="72" alt="精準打擊天賦圖示">
+
+- **效果**：近戰命中敵人弱點時，該次攻擊威力提高 10%；不影響遠程弱點命中，也不提高未命中弱點的近戰攻擊。
+
+- **威力算例**：原威力 500，命中弱點時變成 500 × 1.1 = 550；若同階段已有 20% 威力加成，則為 500 × (1 + 20% + 10%) = 650。
+
+- **傷害計算**：這項加成作用在威力，再交給武器的傷害、衝擊力等曲線計算；它與只增加弱點額外傷害的效果不同，不應直接把最終傷害固定乘 1.1。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_weakspot_damage.md) · [返回目錄](#talent-index)
 
 ---
