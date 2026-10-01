@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **81 個可選節點**，均為一點；同一配置最多分配 30 點。零點起始佔位 `not_selected` 不屬天賦效果，不列入 81 項。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36)。內部 tree version 26 不等於遊戲發行版號。
 
-完成 35／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 36／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -64,7 +64,7 @@
 | 技能 | [野火](psyker_spread_warpfire_on_kill.md) / `psyker_spread_warpfire_on_kill` | `node_ebeb44ed-54d4-44f6-a211-f7060668f98a` | 完成（核心靜態機制） |
 | 技能 | [思維活躍](psyker_venting_improvements.md) / `psyker_venting_improvements` | `node_dafc9b1b-859e-44df-bea9-33fecbd3afc7` | 完成（核心靜態機制） |
 | 技能 | [惡意攻勢](psyker_kills_stack_other_weapon_damage.md) / `psyker_kills_stack_other_weapon_damage` | `node_8e7a1179-6cbd-4f0d-9992-a0ca5282b30b` | 完成（核心靜態機制） |
-| 技能 | [亞空間強化](psyker_warp_charge_reduces_toughness_damage_taken.md) / `psyker_warp_charge_reduces_toughness_damage_taken` | `node_1943527f-b930-43f0-98b6-340d14d596d5` | 已定位；機制待核對 |
+| 技能 | [亞空間強化](psyker_warp_charge_reduces_toughness_damage_taken.md) / `psyker_warp_charge_reduces_toughness_damage_taken` | `node_1943527f-b930-43f0-98b6-340d14d596d5` | 完成（核心靜態機制） |
 | 技能 | [看破](psyker_improved_dodge.md) / `psyker_improved_dodge` | `node_1c28e8f1-c647-401d-80f1-38263a6b616b` | 完成（核心靜態機制） |
 | 技能 | [反射閃避](psyker_dodge_after_crits.md) / `psyker_dodge_after_crits` | `node_b64d3e49-d2d6-4565-8195-fba8f68d014c` | 完成（核心靜態機制） |
 | 技能 | [穩固](psyker_increased_vent_speed.md) / `psyker_increased_vent_speed` | `node_57581786-6c2f-45d1-a396-8e58299d84d8` | 完成（核心靜態機制） |

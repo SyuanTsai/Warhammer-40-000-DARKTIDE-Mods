@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/1e6189fe-4a6e-4fda-bbe9-e2a38c75ff2a" width="32" height="32" alt="野火天賦圖示"> [野火](#psyker_spread_warpfire_on_kill)<br>- Wildfire | <ul><li>受你的靈魂之火影響的敵人死亡時，向 5 公尺內敵人分配最多 4 層靈魂之火。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/86748037-d25a-449c-881a-b80060374012" width="32" height="32" alt="思維活躍天賦圖示"> [思維活躍](#psyker_venting_improvements)<br>- Mind in Motion | <ul><li>平息反噬與裝填不再造成各自的移動減速。</li><li>移動速度增加 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cc72c2ff-3d22-42e0-be1d-69a9f4d7cb22" width="32" height="32" alt="惡意攻勢天賦圖示"> [惡意攻勢](#psyker_kills_stack_other_weapon_damage)<br>- Malefic Momentum | <ul><li>非亞空間擊殺強化亞空間傷害；亞空間擊殺強化非亞空間傷害。</li><li>每層 5%，各最多 5 層，持續 10 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/68726dca-2cf0-40d6-bfe6-eccecc659446" width="32" height="32" alt="亞空間強化天賦圖示"> [亞空間強化](#psyker_warp_charge_reduces_toughness_damage_taken)<br>- One with the Warp | <ul><li>依目前反噬獲得 10%～33% 韌性減傷。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/80b2261c-4df6-4531-b9c1-bf67fbbbdcee" width="32" height="32" alt="看破天賦圖示"> [看破](#psyker_improved_dodge)<br>- Anticipation | <ul><li>有效閃避次數增加 1 次；閃避保護的延續時間增加 50%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/946f549a-ed56-4711-aee8-39ce35a0a6b1" width="32" height="32" alt="反射閃避天賦圖示"> [反射閃避](#psyker_dodge_after_crits)<br>- Empathic Evasion | <ul><li>爆擊命中後，1 秒內對遠程攻擊視為正在閃避。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/86582600-a30d-4e5a-b87b-ae33b2e78746" width="32" height="32" alt="穩固天賦圖示"> [穩固](#psyker_increased_vent_speed)<br>- Solidity | <ul><li>平息反噬的時間倍率變成 0.7。</li></ul> | 技能 |
@@ -192,6 +193,19 @@
 - **傷害算例**：只比較此增傷階段，其餘倍率固定為 1。基準 100 點、無其他加成時，100 × (1 + 25%) = 125 點；原有 25% 同階段加成時，從 125 變成 100 × (1 + 25% + 25%) = 150 點。
 
 [詳細資料](TALENTS%20Psyker/psyker_kills_stack_other_weapon_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_warp_charge_reduces_toughness_damage_taken"></a>
+### 亞空間強化(One with the Warp)
+
+<img src="https://github.com/user-attachments/assets/68726dca-2cf0-40d6-bfe6-eccecc659446" width="72" height="72" alt="亞空間強化天賦圖示">
+
+- **運作方式**：反噬越高，韌性減傷越強。反噬 0% 時減少 10%，100% 時減少 33%，中間等比例變化。
+
+- **減傷算例**：反噬 50% 時，減傷為 10% + (33% − 10%) × 50% = 21.5%。原本 100 點韌性傷害變成 100 × 0.785 = 78.5 點；另有獨立 20% 減傷時為 78.5 × 0.8 = 62.8 點。此項不降低生命傷害。
+
+[詳細資料](TALENTS%20Psyker/psyker_warp_charge_reduces_toughness_damage_taken.md) · [返回目錄](#talent-index)
 
 ---
 
