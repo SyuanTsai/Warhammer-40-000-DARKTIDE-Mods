@@ -13,6 +13,7 @@
 | [關鍵人物](#ogryn_increased_coherency_toughness) | 未見明確矛盾 |
 | [射不停](#ogryn_reload_speed_on_empty) | 未見明確矛盾 |
 | [怒不可遏](#ogryn_more_hits_more_damage) | 未見明確矛盾 |
+| [重量級](#ogryn_ogryn_killer) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -48,3 +49,10 @@
 - 描述鍵：`loc_talent_ogryn_damage_per_enemy_hit_previous_new_desc`；hash：`cc7b987b`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_more_hits_more_damage.md)。
+
+<a id="ogryn_ogryn_killer"></a>
+## 重量級(Heavyweight)
+
+- 描述鍵：`loc_talent_ogryn_ogryn_fighter_desc`；hash：`d9a22157`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_ogryn_killer.md)。

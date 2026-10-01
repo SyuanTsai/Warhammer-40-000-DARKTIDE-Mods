@@ -11,6 +11,7 @@
 | <img src="https://github.com/user-attachments/assets/47f9eea2-c58f-4ed3-8678-e42d2ec1701f" width="32" height="32" alt="關鍵人物天賦圖示"> [關鍵人物](#ogryn_increased_coherency_toughness)<br>- Lynchpin | <ul><li>自身的協同韌性恢復速度提高 100%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f61476bf-8738-40b1-8c66-63980d690cc7" width="32" height="32" alt="射不停天賦圖示"> [射不停](#ogryn_reload_speed_on_empty)<br>- Keep Shooting | <ul><li>彈匣清空後開始換彈，換彈速度提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/aeba8245-43aa-438c-9357-a7ac4556a98d" width="32" height="32" alt="怒不可遏天賦圖示"> [怒不可遏](#ogryn_more_hits_more_damage)<br>- Furious | <ul><li>前一次近戰攻擊每命中 1 名敵人，下次近戰傷害增加 3%，最多 30%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c006f0e1-3f32-4dcc-891a-8c44b4ebe6df" width="32" height="32" alt="重量級天賦圖示"> [重量級](#ogryn_ogryn_killer)<br>- Heavyweight | <ul><li>對堡壘、碾壓者、收割者與瘟疫歐格林造成的傷害提高 30%。</li><li>受到這些敵人的傷害降低 30%。</li></ul> | 技能 |
 
 ---
 
@@ -88,5 +89,20 @@
 - **更新方式**：每次揮擊結束都用該次命中數取代舊效果，不是持續累加。空揮後歸零；命中 4 名後再只命中 1 名，下一次就只保留 3%。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_more_hits_more_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_ogryn_killer"></a>
+### 重量級(Heavyweight)
+
+<img src="https://github.com/user-attachments/assets/c006f0e1-3f32-4dcc-891a-8c44b4ebe6df" width="72" height="72" alt="重量級天賦圖示">
+
+- **效果**：對堡壘、碾壓者、收割者及瘟疫歐格林造成的傷害提高 30%，受到牠們的傷害降低 30%；近戰與遠程皆適用。
+
+- **傷害算例**：只看傷害加成階段，100 × (1 + 30%) = 130 點；同階段原有 20% 增傷時為 150 點。受到原本 100 點傷害時，套用本天賦後為 100 × 0.7 = 70 點，其他減傷另算。
+
+- **對象限制**：這不是對所有大型敵人或所有巨獸的通用加成。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_ogryn_killer.md) · [返回目錄](#talent-index)
 
 ---
