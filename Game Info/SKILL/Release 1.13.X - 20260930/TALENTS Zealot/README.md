@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **82 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L3-L10)。內部 tree version 29 不等於遊戲發行版號。
 
-完成 66／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 67／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -22,6 +22,7 @@
 | 能力 | [殉道者之願](zealot_restore_stealth_cd_on_damage.md) / `zealot_restore_stealth_cd_on_damage` | `node_5a6a015e-77a8-4675-a51b-7fd233eb1b26` | 完成（核心靜態機制） |
 | 能力 | [虔誠刺客](zealot_backstab_kills_restore_cd.md) / `zealot_backstab_kills_restore_cd` | `node_5321e553-acec-4b27-9d43-a5af507fa953` | 完成（核心靜態機制） |
 | 能力 | [死亡禱文](zealot_crits_grant_cd.md) / `zealot_crits_grant_cd` | `node_5e1591e1-f942-4d8d-9b53-0d11864a59ef` | 完成（核心靜態機制） |
+| 能力 | [無盡狂怒](zealot_fotf_refund_cooldown.md) / `zealot_fotf_refund_cooldown` | `node_1a024b73-36a7-4c24-a4be-f9844f422b4f` | 完成（核心靜態機制） |
 | 鑰石 | [死戰到底](zealot_resist_death.md) / `zealot_resist_death` | `node_0581bad8-f8c0-4321-a90b-756013fd3981` | 完成（核心靜態機制） |
 | 鑰石 | [殉道](zealot_martyrdom.md) / `zealot_martyrdom` | `node_00de95af-259d-4c82-ae16-91fa3b533ed9` | 完成（核心靜態機制） |
 | 鑰石 | [不滅意志](zealot_martyrdom_grants_toughness.md) / `zealot_martyrdom_grants_toughness` | `node_2d176f63-527c-4758-a1c1-eed8dfd6ac78` | 完成（核心靜態機制） |

@@ -19,6 +19,7 @@
 | [殉道者之願](#zealot_restore_stealth_cd_on_damage) | 未見明確矛盾 |
 | [虔誠刺客](#zealot_backstab_kills_restore_cd) | 未見明確矛盾 |
 | [死亡禱文](#zealot_crits_grant_cd) | 未見明確矛盾 |
+| [無盡狂怒](#zealot_fotf_refund_cooldown) | 明確繁中誤譯 |
 | [死戰到底](#zealot_resist_death) | 未見明確矛盾 |
 | [殉道](#zealot_martyrdom) | 未見明確矛盾 |
 | [不滅意志](#zealot_martyrdom_grants_toughness) | 未見明確矛盾 |
@@ -153,6 +154,15 @@
 - 描述鍵：`loc_talent_maniac_cooldown_on_melee_crits_buff_desc`；hash：`ec418944`。
 - 結論：未見明確矛盾。同一hash的繁中與英文作用方向相符；補足觸發、疊層、恢復量與實際計算，不把原文省略當錯誤。
 - [原始碼推導與限制](zealot_crits_grant_cd.md)。
+
+<a id="zealot_fotf_refund_cooldown"></a>
+## 無盡狂怒(Unrelenting Fury)
+
+- 描述鍵：`loc_talent_zealot_fotf_refund_cooldown_desc`；hash：`0dec8750`。
+- 結論：明確繁中誤譯。inventory 同一雙語文字的繁中額外標「秒」，英文未指定秒；固定 SHA 也把值格式化為百分比且按充能成本百分比返還。
+- 繁中原文短引：使用{talent_name:%s}後{duration:%s}秒內擊殺精英或專家敵人，可恢復{cooldown:%s}秒技能冷卻時間。每次使用最多觸發一次。
+- 同源英文：Killing an Elite or Specialist within {duration:%s}s of using {talent_name:%s} restores {cooldown:%s} Ability Cooldown. Maximum once per use.
+- [原始碼推導與限制](zealot_fotf_refund_cooldown.md)。
 
 <a id="zealot_resist_death"></a>
 ## 死戰到底(Until Death)
