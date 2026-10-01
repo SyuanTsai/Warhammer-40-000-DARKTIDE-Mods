@@ -16,6 +16,7 @@
 | [懲戒者姿態](#zealot_momentum_toughness_replenish) | 未見明確矛盾 |
 | [飄忽身形](#zealot_quickness_passive_dodge_stacks) | 未見明確矛盾 |
 | [吊命聖徒](#zealot_resist_death_heal) | 明確繁中誤譯 |
+| [永恆](#zealot_quickness_increased_duration) | 未見明確矛盾 |
 | [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
 | [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
 | [背刺者](#zealot_backstab_damage) | 未見明確矛盾 |
@@ -120,6 +121,13 @@
 - 繁中原文短引：觸發{talent_name:%s}會將附近敵人擊退。此外，處於無法殺死狀態時，您會根據造成的傷害恢復生命值，最多可恢復最大生命值的{max_health:%s}。近戰傷害造成的生命值恢復量為近戰傷害的{multiplier:%s}倍。
 - 同源英文：Triggering {talent_name:%s} knocks nearby enemies back. In addition, while Unkillable, you heal based on the Damage you deal up to a maximum of {max_health:%s} Max Health. Melee Damage dealt heals for {multiplier:%s} times that amount.
 - [原始碼推導與限制](zealot_resist_death_heal.md)。
+
+<a id="zealot_quickness_increased_duration"></a>
+## 永恆(Eternal)
+
+- 描述鍵：`loc_talent_zealot_quickness_increased_duration_desc`；hash：`ffd6bfbb`。
+- 結論：未見明確矛盾。遊戲繁中「持續時間延長至 10 秒」與英文一致；原始碼 talent name 有舊的閃避文字，但正式本地化描述與實際特殊規則都指向持續時間。
+- [原始碼推導與限制](zealot_quickness_increased_duration.md)。
 
 <a id="zealot_resist_death_ability"></a>
 ## 狂熱朝聖者(Zealous Pilgrim)

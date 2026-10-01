@@ -14,6 +14,7 @@
 | <img src="https://github.com/user-attachments/assets/54fb5877-384e-4378-885f-95cb1daed864" width="32" height="32" alt="懲戒者姿態天賦圖示"> [懲戒者姿態](#zealot_momentum_toughness_replenish)<br>- Retributor's Stance | <ul><li>命定審判增益期間，每層每秒恢復最大韌性的 0.5%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/b51610bf-5b84-45d0-97fe-abedede00719" width="32" height="32" alt="飄忽身形天賦圖示"> [飄忽身形](#zealot_quickness_passive_dodge_stacks)<br>- Inebriate's Poise | <ul><li>成功閃避時額外獲得 3 層命定審判勢能。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab" width="32" height="32" alt="吊命聖徒天賦圖示"> [吊命聖徒](#zealot_resist_death_heal)<br>- Holy Revenant | <ul><li>死戰到底觸發時擊退附近敵人。</li><li>免死期間按造成傷害累積治療額度；近戰換算率為一般傷害的 3 倍。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="32" height="32" alt="永恆天賦圖示"> [永恆](#zealot_quickness_increased_duration)<br>- Eternal | <ul><li>命定審判的啟動增益持續時間由 6 秒延長至 10 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="狂熱朝聖者天賦圖示"> [狂熱朝聖者](#zealot_resist_death_ability)<br>- Zealous Pilgrim | <ul><li>使用戰鬥技能後獲得 4 秒免死效果。</li><li>隱身技能在退出隱身後生效；聖物技能在卸下聖物後生效。</li><li>無法殺死期間，傷害及攻擊速度各提高 10%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="天災天賦圖示"> [天災](#zealot_crits_apply_bleed)<br>- Scourge | <ul><li>近戰爆擊施加 2 層流血；攻擊流血敵人增加近戰爆擊率。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="背刺者天賦圖示"> [背刺者](#zealot_backstab_damage)<br>- Backstabber | <ul><li>近戰背刺與遠程側襲傷害增加 25%。</li></ul> | 技能 |
@@ -180,6 +181,19 @@
 - 繁中寫成「生命恢復量為近戰傷害的 3 倍」容易被讀成造成 100 傷害就補 300 生命；實際是近戰的治療換算率為一般傷害的 3 倍，即 0.7% × 3 = 2.1%，之後再按累積額度與上限計算。
 
 [詳細資料](TALENTS%20Zealot/zealot_resist_death_heal.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_quickness_increased_duration"></a>
+### 永恆(Eternal)
+
+<img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="72" height="72" alt="永恆天賦圖示">
+
+- **效果**：命定審判啟動增益的持續時間延長至 10 秒。
+
+- **持續算例**：第 0 秒命中啟動後，原本約第 6 秒結束，改為約第 10 秒結束；期間命中仍不會刷新本輪加成。持續時間增加 4 秒，層數與每層加成不變。
+
+[詳細資料](TALENTS%20Zealot/zealot_quickness_increased_duration.md) · [返回目錄](#talent-index)
 
 ---
 

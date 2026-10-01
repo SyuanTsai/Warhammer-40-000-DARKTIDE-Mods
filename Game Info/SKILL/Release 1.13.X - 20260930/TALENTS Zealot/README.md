@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **82 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L3-L10)。內部 tree version 29 不等於遊戲發行版號。
 
-完成 54／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 55／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -19,6 +19,7 @@
 | 鑰石 | [懲戒者姿態](zealot_momentum_toughness_replenish.md) / `zealot_momentum_toughness_replenish` | `node_1473ca58-1a77-4543-b2e5-9c4491d240c8` | 完成（核心靜態機制） |
 | 鑰石 | [飄忽身形](zealot_quickness_passive_dodge_stacks.md) / `zealot_quickness_passive_dodge_stacks` | `node_4edf073e-7aa4-4234-9d90-c0551ccdfb32` | 完成（核心靜態機制） |
 | 鑰石 | [吊命聖徒](zealot_resist_death_heal.md) / `zealot_resist_death_heal` | `node_18bc94af-2948-4b9a-84e8-5c9408b37343` | 完成（核心靜態機制） |
+| 鑰石 | [永恆](zealot_quickness_increased_duration.md) / `zealot_quickness_increased_duration` | `node_8b72c79c-2b0f-4081-b919-f730aaee433d` | 完成（核心靜態機制） |
 | 鑰石 | [狂熱朝聖者](zealot_resist_death_ability.md) / `zealot_resist_death_ability` | `node_3483d4d7-3f13-48de-8055-ecfc04d70aae` | 完成（核心靜態機制） |
 | 技能 | [天災](zealot_crits_apply_bleed.md) / `zealot_crits_apply_bleed` | `node_0e6bc32b-bdab-4856-94e7-f141355cc9a0` | 完成（核心靜態機制） |
 | 技能 | [背刺者](zealot_backstab_damage.md) / `zealot_backstab_damage` | `node_36d9319a-e724-493d-baf1-efdbd77f736c` | 完成（核心靜態機制） |
