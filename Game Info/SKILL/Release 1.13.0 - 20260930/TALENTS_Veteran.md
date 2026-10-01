@@ -17,6 +17,7 @@
 | 光環 | [生存專家(Survivalist)](#veteran_aura_gain_ammo_on_elite_kill_improved) | 你或擁有此光環效果的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備彈上限的彈藥。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
+| 技能 | [戰術裝填(Tactical Reload)](#veteran_faster_reload_on_non_empty_clips) | 彈匣還有彈藥時開始裝填，裝填速度增加 25%。 |
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
@@ -257,6 +258,23 @@
 - 上限 4 顆、目前 3 顆時，成功觸發後變為 `min(3 + 1, 4) = 4 顆`。
 
 [詳細資料](TALENTS%20Veteran/veteran_aura_elite_kills_restore_grenade.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_faster_reload_on_non_empty_clips"></a>
+
+### 戰術裝填(Tactical Reload)
+
+<img src="https://github.com/user-attachments/assets/a5b64063-ac9d-404d-98ac-528f24aafb65" width="72" height="72" alt="戰術裝填天賦圖示">
+
+- **彈匣還有彈藥時開始裝填，裝填速度增加 25%。**
+- 這次裝填期間保留加成；空彈匣開始裝填時不生效。
+
+#### 裝填算例
+
+- 原本裝填需 4 秒，沒有其他加成：`4 ÷ (1 + 25%) = 3.2 秒`，縮短 **0.8 秒**。
+
+[詳細資料](TALENTS%20Veteran/veteran_faster_reload_on_non_empty_clips.md) · [返回目錄](#talent-index)
 
 ---
 
