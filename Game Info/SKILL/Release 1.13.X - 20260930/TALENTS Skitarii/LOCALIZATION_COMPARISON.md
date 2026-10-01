@@ -19,6 +19,7 @@
 | [二元彈道協議](#cryptic_elite_kills_toughness) | 未見明確矛盾 |
 | [液壓衝擊](#cryptic_better_heavies) | 未見明確矛盾 |
 | [混合戰鬥契約](#cryptic_hybrid_damage) | 未見明確矛盾 |
+| [無限抑制器](#cryptic_melee_attacks_give_melee_attack_speed) | 未見明確矛盾 |
 | [槍械技師](#cryptic_auto_reload) | 未見明確矛盾 |
 | [系統電擊](#cryptic_electrocution_applies_brittleness) | 未見明確矛盾 |
 
@@ -100,6 +101,13 @@
 - 描述鍵：`loc_talent_cryptic_hybrid_damage_desc`；hash：`dc9f61eb`。
 - 結論：未見明確矛盾。中英文一致；補充各自計時與不同攻擊類型不交叉相加。
 - [原始碼推導與限制](cryptic_hybrid_damage.md)。
+
+<a id="cryptic_melee_attacks_give_melee_attack_speed"></a>
+## 無限抑制器(Uncapped Arrestor)
+
+- 描述鍵：`loc_talent_cryptic_melee_attacks_give_melee_attack_speed_desc`；hash：`ff4edf3b`。
+- 結論：未見明確矛盾。雙語一致；補充每次揮擊一層與速率轉時間公式。
+- [原始碼推導與限制](cryptic_melee_attacks_give_melee_attack_speed.md)。
 
 <a id="cryptic_auto_reload"></a>
 ## 槍械技師(Gunsmith)

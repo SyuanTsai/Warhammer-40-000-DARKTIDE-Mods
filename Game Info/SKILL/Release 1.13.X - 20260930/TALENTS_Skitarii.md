@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/79eb4aea-82d8-46fb-add1-a4ded8e41cce" width="32" height="32" alt="二元彈道協議天賦圖示"> [二元彈道協議](#cryptic_elite_kills_toughness)<br>- Binary Ballistics Protocol | <ul><li>擊殺精英後，3 秒內恢復 15% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d01cfadc-7ba2-4505-b70a-11c22405645a" width="32" height="32" alt="液壓衝擊天賦圖示"> [液壓衝擊](#cryptic_better_heavies)<br>- Hydraulic Impact | <ul><li>蓄力近戰攻擊時不易被一般受擊打斷</li><li>近戰重擊傷害提高 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f8248e1e-3923-42b3-9afb-abed0c3ac1e9" width="32" height="32" alt="混合戰鬥契約天賦圖示"> [混合戰鬥契約](#cryptic_hybrid_damage)<br>- Hybrid Combat Covenant | <ul><li>近戰擊殺提高遠程傷害，遠程擊殺提高近戰傷害</li><li>每層 3%，各最多 5 層，每 8 秒衰減一層</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/8c6107b2-c1ee-4fa6-9465-919f3c4d9d8b" width="32" height="32" alt="無限抑制器天賦圖示"> [無限抑制器](#cryptic_melee_attacks_give_melee_attack_speed)<br>- Uncapped Arrestor | <ul><li>近戰攻擊命中後，每次增加 2.5% 近戰攻速</li><li>最多 5 層，持續 3 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6e39714f-23a2-4d43-b5ae-6cfe4fa9b214" width="32" height="32" alt="槍械技師天賦圖示"> [槍械技師](#cryptic_auto_reload)<br>- Gunsmith | <ul><li>裝填速度提高 15%</li><li>停止射擊 5 秒後，每秒從備彈填入彈匣容量的 7.5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="32" height="32" alt="系統電擊天賦圖示"> [系統電擊](#cryptic_electrocution_applies_brittleness)<br>- System Shock | <ul><li>施加或刷新電擊時增加 3 層脆弱</li><li>每層 2.5%，持續 5 秒</li></ul> | 技能 |
 
@@ -190,6 +191,21 @@
 - **傷害算例**：5 層遠程增傷為 15%，基礎射擊 100 → 115。即使同時也有 5 層近戰增傷，這一發射擊仍只吃遠程的 15%。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_hybrid_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_melee_attacks_give_melee_attack_speed"></a>
+### 無限抑制器(Uncapped Arrestor)
+
+<img src="https://github.com/user-attachments/assets/8c6107b2-c1ee-4fa6-9465-919f3c4d9d8b" width="72" height="72" alt="無限抑制器天賦圖示">
+
+- **疊層方式**：一次近戰揮擊有打中敵人，就增加 1 層近戰攻速；打中多人仍只加 1 層。每層 2.5%，最多 5 層。
+
+- **持續時間**：每次觸發刷新 3 秒，超過 3 秒未再觸發便失去效果。
+
+- **攻速算例**：5 層提高 12.5% 攻速；若受攻速影響的攻擊動作原需 1 秒，則為 1 ÷ 1.125 ≈ 0.889 秒，實際整套連段還包含其他動作。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_melee_attacks_give_melee_attack_speed.md) · [返回目錄](#talent-index)
 
 ---
 
