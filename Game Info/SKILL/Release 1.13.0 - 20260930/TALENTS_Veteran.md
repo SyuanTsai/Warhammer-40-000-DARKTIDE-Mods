@@ -18,6 +18,7 @@
 | 能力 | [火力齊射(Volley Fire)](#veteran_combat_ability_stance) | 立即切換至遠程武器，進入持續 6 秒的火力齊射；冷卻時間 30 秒。 |
 | 能力 | [滲透(Infiltrate)](#veteran_invisibility_on_combat_ability) | 立即回滿自身韌性，並隱身最多 8 秒；冷卻時間 40 秒。 |
 | 能力 | [低調(Low Profile)](#veteran_reduced_threat_after_combat_ability) | 使用戰鬥能力後，敵人選你為目標的仇恨權重降低 90%，持續 10 秒。 |
+| 能力 | [處決者姿態(Executioner's Stance)](#veteran_combat_ability_elite_and_special_outlines) | 強化火力齊射：遠程傷害與遠程弱點額外傷害加成各提高至 25%，遠程衝擊加成提高至 100%。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
@@ -295,6 +296,27 @@
 - 第 3 秒解除滲透，效果保留至約第 `3 + 10 = 13 秒`。
 
 [詳細資料](TALENTS%20Veteran/veteran_reduced_threat_after_combat_ability.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_combat_ability_elite_and_special_outlines"></a>
+
+### 處決者姿態(Executioner's Stance)
+
+<img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="72" height="72" alt="處決者姿態天賦圖示">
+
+- **強化火力齊射：遠程傷害與遠程弱點額外傷害加成各提高至 25%，遠程衝擊加成提高至 100%。**
+- 姿態持續 **6 秒**、冷卻 **30 秒**；期間每秒恢復 **10% 最大韌性**。
+- 顯示精英與專家敵人的輪廓；歐格林、巨獸與首領須搭配「敵人越大...」才能納入。一般精英限約 50 公尺內，專家不受這項距離限制。
+- 擊殺符合輪廓種類的敵人，將姿態重新刷新為 6 秒。冷卻持續計時；散布、後座力與晃動改善沿用火力齊射。
+
+#### 傷害、恢復與刷新算例
+
+- 單看遠程傷害階段，基礎傷害 100 且無其他加成：`100 × 1.25 = 125 傷害`。
+- 最大韌性 100、缺額足夠且無恢復加成：每秒 `100 × 10% = 10 點`，完整 6 秒約恢復 `10 × 6 = 60 點`。
+- 第 4 秒完成合資格擊殺，姿態維持至約第 `4 + 6 = 10 秒`。
+
+[詳細資料](TALENTS%20Veteran/veteran_combat_ability_elite_and_special_outlines.md) · [返回目錄](#talent-index)
 
 ---
 
