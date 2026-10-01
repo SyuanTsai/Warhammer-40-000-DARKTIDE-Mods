@@ -40,3 +40,4 @@
 | [頭腦簡單](ogryn_corruption_resistance.md) | 受到的腐敗減少 40%。；完整計算與適用限制見來源文件。 |
 | [專注鬥士](ogryn_melee_attacks_give_mtdr.md) | 每次近戰揮擊命中後獲得 4% 近戰減傷，最多 5 層。；完整計算與適用限制見來源文件。 |
 | [蠻橫之力](ogryn_pushing_applies_brittleness.md) | 推擊施加 4 層脆弱，合計 10%，持續 5 秒。；完整計算與適用限制見來源文件。 |
+| [火力全開](ogryn_explosions_burn.md) | 爆炸施加 1 層燃燒，爆炸中心區域改為 2 層，最多 8 層。；完整計算與適用限制見來源文件。 |

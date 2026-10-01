@@ -42,6 +42,7 @@
 | [頭腦簡單](#ogryn_corruption_resistance) | 未見明確矛盾 |
 | [專注鬥士](#ogryn_melee_attacks_give_mtdr) | 跨來源待同版核對 |
 | [蠻橫之力](#ogryn_pushing_applies_brittleness) | 未見明確矛盾 |
+| [火力全開](#ogryn_explosions_burn) | 繁中描述錯誤 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -284,3 +285,12 @@
 - 描述鍵：`loc_talent_ogryn_pushing_applies_brittlenes_desc`；hash：`f63bfc12`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_pushing_applies_brittleness.md)。
+
+<a id="ogryn_explosions_burn"></a>
+## 火力全開(Fire Away)
+
+- 描述鍵：`loc_talent_ogryn_explosions_burn_close_desc`；hash：`2024bc9e`。
+- 結論：繁中描述錯誤。英文近距離為2層總量，繁中「增加2層」容易讀成1+2；實作close_stacks是替換非相加。
+- 繁中原文短引：你的爆炸會施加{stacks:%s}層燃燒效果。近距離時增加{more_stacks:%s}層，最多可堆疊{max_stacks:%s}層。
+- 同源英文：Your Explosions apply {stacks:%s} Stack(s) of Burn. {more_stacks:%s} Stack(s) if close range. Max Stacks {max_stacks:%s}.
+- [原始碼推導與限制](ogryn_explosions_burn.md)。

@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/c5cc14b1-1227-4449-a1d9-de912e048e6e" width="32" height="32" alt="頭腦簡單天賦圖示"> [頭腦簡單](#ogryn_corruption_resistance)<br>- Simple Minded | <ul><li>受到的腐敗減少 40%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fca0827b-6dac-4c44-b92e-8aba309ff4ca" width="32" height="32" alt="專注鬥士天賦圖示"> [專注鬥士](#ogryn_melee_attacks_give_mtdr)<br>- Focused Fighter | <ul><li>每次近戰揮擊命中後獲得 4% 近戰減傷，最多 5 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/024bec9b-772c-4313-b7b8-d119efdcf8f1" width="32" height="32" alt="蠻橫之力天賦圖示"> [蠻橫之力](#ogryn_pushing_applies_brittleness)<br>- Brutish Strength | <ul><li>推擊施加 4 層脆弱，合計 10%，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c78dbead-adf5-4b9e-9629-9a3a0a93ae8c" width="32" height="32" alt="火力全開天賦圖示"> [火力全開](#ogryn_explosions_burn)<br>- Fire Away | <ul><li>爆炸施加 1 層燃燒，爆炸中心區域改為 2 層，最多 8 層。</li></ul> | 技能 |
 
 ---
 
@@ -554,5 +555,26 @@
 - **傷害算例**：假設對甲殼護甲的原倍率為 0.5、基礎傷害 100，一次推擊後為 100 × (0.5 + 4 × 2.5%) = 60 點；滿 16 層為 90 點。超過護甲倍率 1 的部分另按超額撕裂規則計算。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_pushing_applies_brittleness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_explosions_burn"></a>
+### 火力全開(Fire Away)
+
+<img src="https://github.com/user-attachments/assets/c78dbead-adf5-4b9e-9629-9a3a0a93ae8c" width="72" height="72" alt="火力全開天賦圖示">
+
+- **觸發方式**：爆炸對敵人造成傷害且敵人仍存活時，施加 1 層燃燒；命中該次爆炸的中心區域時改為 2 層，並非另外加 2 層。動力槌的特定爆炸不觸發。
+
+- **疊層與時間**：本天賦可把燃燒補至 8 層；再次觸發會刷新 4 秒維持時間，已達 8 層也能刷新。約每 0.5 秒造成一次傷害，維持時間結束後逐次移除層數。
+
+- **傷害公式**：只計無護甲且沒有其他修正，每次燃燒傷害為 600 × (層數 ÷ 31)² × [3 − 2 × (層數 ÷ 31)]；分母採共用燃燒的 31 層上限，不是本天賦可施加的 8 層。
+
+- **傷害算例**：2 層約造成 7.17 點、8 層約 99.25 點／次；實際值會受護甲與其他增傷影響，也不能把單次傷害當成完整持續期間的總傷害。
+
+#### 繁中原文勘誤
+
+- 原文「近距離時增加 2 層」會讓人誤以為合計 3 層；實際是在爆炸中心區域改為施加 2 層。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_explosions_burn.md) · [返回目錄](#talent-index)
 
 ---
