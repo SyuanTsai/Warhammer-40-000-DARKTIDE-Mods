@@ -12,6 +12,7 @@
 | <img src="https://github.com/user-attachments/assets/b74a0dba-64ed-40b6-b630-792c413387cd" width="32" height="32" alt="電能驅動天賦圖示"> [電能驅動](#cryptic_discharge_attack_speed_increase)<br>- Voltaic Motivator | <ul><li>每次使用電能發射器後，攻擊速度提高 5% 基礎值，再按消耗充能每道增加 5%。</li><li>加成持續 15 秒；消耗 1、2、3 道時，總加成分別為 10%、15%、20%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/dd369366-6fa1-4e92-bd7b-c92f5bf8023a" width="32" height="32" alt="電流超載天賦圖示"> [電流超載](#cryptic_discharge_toughness)<br>- Voltaic Overcharge | <ul><li>電流發射器每消耗一道充能，立即恢復最大韌性的25%；電流爆炸每命中一名存活敵人，再恢復最大韌性的1%。</li><li>恢復量會受韌性補充修正影響，並且不能超過當前缺少的韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/c63720c4-df53-4c05-9881-cd6a6bf33c79" width="32" height="32" alt="通量導管蓄積天賦圖示"> [通量導管蓄積](#cryptic_crits_grant_power)<br>- Flux Conduit Build-Up | <ul><li>暴擊後4秒內加快電容量恢復；基本速率下，額外恢復單份電容量的5%。</li><li>4秒內再次暴擊會刷新回復期間；回復倍率固定，不會因多次暴擊而疊高。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/833b596d-dbc9-49fe-9f90-436140e700ed" width="32" height="32" alt="反應爐線圈充能天賦圖示"> [反應爐線圈充能](#cryptic_weakspot_kills_grant_power)<br>- Reactor Coil Recharge | <ul><li>弱點擊殺恢復目前戰鬥能力單份充能成本的2%；以50點為一份時，每次恢復1點電容量。</li><li>恢復量會保留為小數進度；未達下一份完整充能前不會增加可用份數。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/39f22717-a782-4201-b5b3-f63a166bedd1" width="32" height="32" alt="強化能量循環天賦圖示"> [強化能量循環](#cryptic_increased_passive_cooldown_regen)<br>- Augmented Power-Cycle | <ul><li>每秒額外恢復單道充能需求的1%電容量；依此電能發射器基準，回充速度由每秒1提高至1.5。</li><li>在沒有其他消耗或回充修正時，一道充能約33.3秒回滿，三道由空回滿約100秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/856a3399-5f26-40e1-988e-8960086a92c9" width="32" height="32" alt="削切協議天賦圖示"> [削切協議](#cryptic_dissector)<br>- Flensing Protocols | <ul><li>初始6層，每層傷害增加2.5%、韌性傷害減免2.5%；滿層各為15%。</li><li>受到生命或韌性傷害時失去1層，每秒最多一次；精英或專家擊殺補2層，並恢復最大韌性15%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5" width="32" height="32" alt="極限電容天賦圖示"> [極限電容](#cryptic_redline)<br>- Redline Capacitors | <ul><li>每消耗或補回一份戰鬥技能充能，獲得5%韌性傷害減免與5%電容量自然恢復加成；最多4層。</li><li>新增層會重設12秒倒數，之後每12秒失去1層；戰鬥技能充能上限增加1份。</li></ul> | 鑰石 |
@@ -164,6 +165,19 @@
 - **恢復算例**：單份電容量為50點時，額外恢復50 × 5% = 2.5點，分4秒恢復；加上原本每秒1點，4秒共恢復4 × (1 + 2.5 ÷ 4) = 6.5點。再次暴擊會延長這段加速期間。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_crits_grant_power.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_weakspot_kills_grant_power"></a>
+### 反應爐線圈充能(Reactor Coil Recharge)
+
+<img src="https://github.com/user-attachments/assets/833b596d-dbc9-49fe-9f90-436140e700ed" width="72" height="72" alt="反應爐線圈充能天賦圖示">
+
+- **運作方式**：以弱點命中並擊殺敵人時，恢復目前戰鬥能力單份成本的2%電容量；每份成本50點時，每次弱點擊殺恢復1點。
+
+- **運作方式**：電容量進度會累積；每50點形成一份完整充能，未滿50點前仍保留進度。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_weakspot_kills_grant_power.md) · [返回目錄](#talent-index)
 
 ---
 

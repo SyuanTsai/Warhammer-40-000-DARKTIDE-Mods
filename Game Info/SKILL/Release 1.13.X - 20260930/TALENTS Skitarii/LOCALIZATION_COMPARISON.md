@@ -14,6 +14,7 @@
 | [電能驅動](#cryptic_discharge_attack_speed_increase) | 未見明確矛盾 |
 | [電流超載](#cryptic_discharge_toughness) | 未見明確矛盾 |
 | [通量導管蓄積](#cryptic_crits_grant_power) | 未見明確矛盾 |
+| [反應爐線圈充能](#cryptic_weakspot_kills_grant_power) | 未見明確矛盾 |
 | [強化能量循環](#cryptic_increased_passive_cooldown_regen) | 未見明確矛盾 |
 | [削切協議](#cryptic_dissector) | 未見明確矛盾；補充計算與限制 |
 | [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
@@ -116,6 +117,13 @@
 - 描述鍵：`loc_talent_cryptic_crits_grant_power_desc`；hash：`10f2fa54`。
 - 結論：未見明確矛盾。inventory 的繁中與英文都寫明暴擊觸發、產生電容量並持續4秒，與來源每次暴擊啟動4秒回復期間一致。累積方式及回復率折算是程式細節，原文省略不構成矛盾。
 - [原始碼推導與限制](cryptic_crits_grant_power.md)。
+
+<a id="cryptic_weakspot_kills_grant_power"></a>
+## 反應爐線圈充能(Reactor Coil Recharge)
+
+- 描述鍵：`loc_talent_cryptic_weakspot_kills_grant_power_desc`；hash：`7e092f5a`。
+- 結論：未見明確矛盾。繁中與英文都寫明弱點擊殺產生2%電容量，與來源每次成功弱點擊殺恢復0.02份單次成本相符。百分比以單份成本計而非總資源池，是來源函式的基準說明；本地化未寫此基準不算明確衝突。
+- [原始碼推導與限制](cryptic_weakspot_kills_grant_power.md)。
 
 <a id="cryptic_increased_passive_cooldown_regen"></a>
 ## 強化能量循環(Augmented Power-Cycle)
