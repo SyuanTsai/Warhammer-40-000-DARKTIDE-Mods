@@ -40,3 +40,4 @@
 | [電能修復](cryptic_coherency_toughness_on_ability.md) | 使用戰鬥能力，為自己與協同隊友恢復 20% 韌性；完整計算與適用限制見來源文件。 |
 | [適應性戰鬥校準](cryptic_cleave_and_impact.md) | 韌性高於 50%：近戰順劈提高 30%；韌性不高於 50%：近戰衝擊提高 30%；完整計算與適用限制見來源文件。 |
 | [數據感應協定](cryptic_ally_coherency_defenses.md) | 你或協同隊友受到韌性傷害，受傷者恢復 25% 耐力；受到生命傷害則恢復 25% 韌性，兩類各冷卻 15 秒；完整計算與適用限制見來源文件。 |
+| [抗腐護符](cryptic_corruption_resistance_doom.md) | 受到的腐敗減少 90%；每 20 秒付出基準 1 點腐敗代價；完整計算與適用限制見來源文件。 |

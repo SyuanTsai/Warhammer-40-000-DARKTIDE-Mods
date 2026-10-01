@@ -42,6 +42,7 @@
 | [電能修復](#cryptic_coherency_toughness_on_ability) | 未見明確矛盾 |
 | [適應性戰鬥校準](#cryptic_cleave_and_impact) | 未見明確矛盾 |
 | [數據感應協定](#cryptic_ally_coherency_defenses) | 受益對象用語有誤 |
+| [抗腐護符](#cryptic_corruption_resistance_doom) | 未見明確矛盾 |
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
@@ -284,3 +285,10 @@
 - 繁中原文短引：當你或協同中的盟友受到韌性傷害時，盟友恢復{stamina:%s}耐力。冷卻時間{stamina_cd:%s}秒。
 - 同源英文：When you or an Ally in Coherency take toughness damage, they restore {stamina:%s} Stamina. {stamina_cd:%s}s Cooldown.
 - [原始碼推導與限制](cryptic_ally_coherency_defenses.md)。
+
+<a id="cryptic_corruption_resistance_doom"></a>
+## 抗腐護符(Ablative Wards)
+
+- 描述鍵：`loc_talent_cryptic_corruption_resistance_doom_desc`；hash：`ed668132`。
+- 結論：未見明確矛盾。中英文一致；補充代價先抵銷自身抗性、其他倍率仍可影響。
+- [原始碼推導與限制](cryptic_corruption_resistance_doom.md)。

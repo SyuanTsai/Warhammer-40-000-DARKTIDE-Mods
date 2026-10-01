@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/bb7b86c4-512f-495f-a82a-7011cae498d6" width="32" height="32" alt="電能修復天賦圖示"> [電能修復](#cryptic_coherency_toughness_on_ability)<br>- Voltaic Restoration | <ul><li>使用戰鬥能力，為自己與協同隊友恢復 20% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="適應性戰鬥校準天賦圖示"> [適應性戰鬥校準](#cryptic_cleave_and_impact)<br>- Adaptive Combat Calibration | <ul><li>韌性高於 50%：近戰順劈提高 30%</li><li>韌性不高於 50%：近戰衝擊提高 30%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0bbe1f46-d58e-414d-9ab3-1c8ed0170a41" width="32" height="32" alt="數據感應協定天賦圖示"> [數據感應協定](#cryptic_ally_coherency_defenses)<br>- Data Sensor Protocol | <ul><li>你或協同隊友受到韌性傷害，受傷者恢復 25% 耐力</li><li>受到生命傷害則恢復 25% 韌性，兩類各冷卻 15 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/1c4ea759-440c-48dd-bc21-3bc8303683d5" width="32" height="32" alt="抗腐護符天賦圖示"> [抗腐護符](#cryptic_corruption_resistance_doom)<br>- Ablative Wards | <ul><li>受到的腐敗減少 90%</li><li>每 20 秒付出基準 1 點腐敗代價</li></ul> | 技能 |
 
 ---
 
@@ -560,5 +561,22 @@
 - 原文寫「當你或……盟友受到傷害時，盟友恢復……」。正確受益者是受到那次傷害的人：你受傷就恢復自己，隊友受傷就恢復該隊友，不是把恢復量轉給其他盟友。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_ally_coherency_defenses.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_corruption_resistance_doom"></a>
+### 抗腐護符(Ablative Wards)
+
+<img src="https://github.com/user-attachments/assets/1c4ea759-440c-48dd-bc21-3bc8303683d5" width="72" height="72" alt="抗腐護符天賦圖示">
+
+- **防禦效果**：一般受到的腐敗量減少 90%。例如同條件原本增加 10 點腐敗，單靠這項抗性會變成 10 × 0.10 = 1 點。
+
+- **週期代價**：每 20 秒自行受到基準 1 點腐敗；這筆代價已抵銷本天賦自己的 90% 抗性，因此不能再把它算成 0.1 點。
+
+- **代價算例**：沒有其他修正、全程存活且不需要救援時，60 秒會發生 3 次，共增加 3 點基準腐敗。倒地或被制伏等需要援助的狀態會跳過當次。
+
+- **其他效果**：額外減傷、腐敗抗性等仍可能影響實際代價；這項天賦不會清除已累積的腐敗。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_corruption_resistance_doom.md) · [返回目錄](#talent-index)
 
 ---
