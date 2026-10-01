@@ -27,6 +27,7 @@
 | [嘎嘎！](#ogryn_fully_charged_attacks_gain_damage_and_stagger) | 未見明確矛盾 |
 | [毀滅之樂](#ogryn_nearby_bleeds_reduce_damage_taken) | 未見明確矛盾 |
 | [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
+| [相親相愛好夥伴！](#ogryn_damage_taken_by_all_increases_strength_tdr) | 繁中描述錯誤 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -160,3 +161,12 @@
 - 描述鍵：`loc_talent_toughness_damage_reduction_medium_desc`；hash：`1272bcc0`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](base_toughness_damage_reduction_node_buff_medium_1.md)。
+
+<a id="ogryn_damage_taken_by_all_increases_strength_tdr"></a>
+## 相親相愛好夥伴！(No Hurting Friends!)
+
+- 描述鍵：`loc_talent_ogryn_damage_taken_by_all_increases_strength_tdr_desc`；hash：`05e8af7e`。
+- 結論：繁中描述錯誤。繁中多出「生命值受到傷害」限制，同源英文只說Damage Taken；固定程式也明確包含僅扣韌性的事件。此為觸發條件被譯窄，不是未列細節。
+- 繁中原文短引：當自身或協同中的盟友生命值受到傷害時，威力提高{strength:%s}，最多可堆疊{stacks:%s}層，持續{duration:%s}秒。滿層時韌性減傷提高{tdr:%s}。
+- 同源英文：{strength:%s} Strength on Damage Taken by you or Allies in Coherency. {stacks:%s} Max Stacks. Lasts {duration:%s}s. {tdr:%s} Toughness Damage Reduction on Max Stacks.
+- [原始碼推導與限制](ogryn_damage_taken_by_all_increases_strength_tdr.md)。

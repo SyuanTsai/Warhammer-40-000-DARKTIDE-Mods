@@ -25,6 +25,7 @@
 | <img src="https://github.com/user-attachments/assets/e9d72852-9fa6-4e02-aded-e261adb660f0" width="32" height="32" alt="嘎嘎！天賦圖示"> [嘎嘎！](#ogryn_fully_charged_attacks_gain_damage_and_stagger)<br>- Crunch! | <ul><li>蓄力累積近戰傷害與衝擊力，每層 7.5%，最多 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/669fb8b0-a444-4216-abe1-74f4acc4af85" width="32" height="32" alt="毀滅之樂天賦圖示"> [毀滅之樂](#ogryn_nearby_bleeds_reduce_damage_taken)<br>- Delight in Destruction | <ul><li>8 公尺內每名流血敵人提供 5% 減傷，最多 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a51567af-44cb-46ba-9908-3e3502dcbcdb" width="32" height="32" alt="韌性減傷天賦圖示"> [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1)<br>- Toughness Damage Reduction | <ul><li>韌性傷害減免增加 10 個百分點。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/9af41f8c-0f0e-4b2b-965e-c0d01fea2746" width="32" height="32" alt="相親相愛好夥伴！天賦圖示"> [相親相愛好夥伴！](#ogryn_damage_taken_by_all_increases_strength_tdr)<br>- No Hurting Friends! | <ul><li>自己或協同隊友受傷時，每層增加 2% 威力，最多 5 層。</li><li>滿層額外減少 15% 韌性傷害。</li></ul> | 技能 |
 
 ---
 
@@ -310,5 +311,26 @@
 - **減傷算例**：只計此加成，100 點韌性傷害變成 100 × (1 − 10%) = 90 點；若同一計算階段已有 20% 減傷，則為 100 × (1 − 20% − 10%) = 70 點。其他獨立減傷倍率另行相乘。
 
 [詳細資料](TALENTS%20Ogryn/base_toughness_damage_reduction_node_buff_medium_1.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_damage_taken_by_all_increases_strength_tdr"></a>
+### 相親相愛好夥伴！(No Hurting Friends!)
+
+<img src="https://github.com/user-attachments/assets/9af41f8c-0f0e-4b2b-965e-c0d01fea2746" width="72" height="72" alt="相親相愛好夥伴！天賦圖示">
+
+- **觸發方式**：你或協同範圍內的隊友受到傷害時，你獲得一層威力加成；只扣韌性、沒有扣生命也能觸發。
+
+- **疊層與時間**：每層提高 2% 威力，最多 5 層、合計 10%，持續 10 秒；再次觸發會刷新時間。滿 5 層時額外獲得 15% 韌性減傷，層數不再滿時便失效。
+
+- **威力算例**：只計此加成，威力 500 變成 500 × (1 + 5 × 2%) = 550。威力會影響傷害、衝擊力與順劈；實際傷害還需套用武器曲線與目標護甲，不能一律把最終傷害乘 1.1。
+
+- **減傷算例**：滿層後，此階段原本承受的 100 點韌性傷害變成 100 × 0.85 = 85 點；與另一個獨立 20% 減傷共存時為 68 點。
+
+#### 繁中原文勘誤
+
+- 原文寫「生命值受到傷害」才觸發，限制過窄；只受到韌性傷害也能累積層數，不必先損失生命。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_damage_taken_by_all_increases_strength_tdr.md) · [返回目錄](#talent-index)
 
 ---
