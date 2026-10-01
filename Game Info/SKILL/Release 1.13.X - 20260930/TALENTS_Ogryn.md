@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/582a28cf-14c5-4757-a51c-cb5924dbf0a3" width="32" height="32" alt="不屈不撓天賦圖示"> [不屈不撓](#ogryn_longer_charge)<br>- Indomitable | <ul><li>衝鋒最遠 24 公尺，撞到巨獸停止；基礎冷卻 25 秒。</li><li>結束後 5 秒，近戰攻速與移速提高 25%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0932d1f6-96b1-47d9-ad81-861fe9914d9a" width="32" height="32" alt="跺殺之靴天賦圖示"> [跺殺之靴](#ogryn_charge_toughness)<br>- Stomping Boots | <ul><li>衝鋒期間每次撞中敵人，恢復最大韌性的 10%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9194fb70-c794-460d-af2a-068ae6c4fd31" width="32" height="32" alt="粉碎天賦圖示"> [粉碎](#ogryn_charge_applies_bleed)<br>- Pulverise | <ul><li>衝鋒命中施加 5 層流血；同一衝鋒對同一敵人只施加一次。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/708231ab-86cd-44b4-8f01-0d0fe8413ede" width="32" height="32" alt="槍林彈雨天賦圖示"> [槍林彈雨](#ogryn_special_ammo_armor_pen)<br>- Hail of Fire | <ul><li>貼身火力期間，遠程傷害提高 15%，並獲得 15% 撕裂。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/53442500-ad2a-446b-9f9b-0d26aa2438d9" width="32" height="32" alt="壯膽子彈天賦圖示"> [壯膽子彈](#ogryn_ranged_stance_toughness_regen)<br>- Bullet Bravado | <ul><li>貼身火力期間，每次射擊恢復 2.5% 最大韌性，換彈恢復 15%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/fa5d9c18-f792-4a86-812f-8547ba3cf89e" width="32" height="32" alt="踐踏天賦圖示"> [踐踏](#ogryn_charge_trample)<br>- Trample | <ul><li>衝鋒命中每次增加 2.5% 傷害，最多 20 層、50%，持續 10 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ea712cab-0dd4-47fa-a2c5-98edb7e41783" width="32" height="32" alt="爆限超載天賦圖示"> [爆限超載](#ogryn_leadbelcher_no_ammo_chance)<br>- Burst Limiter Override | <ul><li>遠程攻擊有 15% 基礎機率觸發幸運子彈，觸發的射擊不消耗彈藥。</li><li>遠程擊殺每層增加 2% 遠程傷害，最多 10 層；加層時刷新 10 秒期限。</li></ul> | 鑰石 |
@@ -269,6 +270,21 @@
 - **傷害算例**：只計無護甲且沒有其他修正，5 層每次流血傷害為 87.5 × (5 ÷ 16)² × [3 − 2 × (5 ÷ 16)] ≈ 20.29 點；8 層為 43.75 點。流血層數與傷害不是單純等比例增加。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_charge_applies_bleed.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_special_ammo_armor_pen"></a>
+### 槍林彈雨(Hail of Fire)
+
+<img src="https://github.com/user-attachments/assets/708231ab-86cd-44b4-8f01-0d0fe8413ede" width="72" height="72" alt="槍林彈雨天賦圖示">
+
+- **生效條件**：貼身火力的 12 秒效果期間，遠程傷害提高 15%，並獲得 15% 撕裂。
+
+- **傷害算例**：假設基礎傷害 100、對甲殼護甲原倍率 0.5，且忽略其他修正，原本為 50 點；同時計入本天賦的增傷與撕裂後，100 × 1.15 × (0.5 + 0.15) = 74.75 點。
+
+- **護甲差異**：撕裂改善武器對特定護甲的傷害倍率；原倍率已達 1 時，超額部分只取四分之一。因此不能把撕裂也當成所有最終傷害一律提高 15%。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_special_ammo_armor_pen.md) · [返回目錄](#talent-index)
 
 ---
 

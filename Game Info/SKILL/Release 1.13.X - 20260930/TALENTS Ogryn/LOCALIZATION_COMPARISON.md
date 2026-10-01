@@ -19,6 +19,7 @@
 | [不屈不撓](#ogryn_longer_charge) | 未見明確矛盾 |
 | [跺殺之靴](#ogryn_charge_toughness) | 未見明確矛盾 |
 | [粉碎](#ogryn_charge_applies_bleed) | 未見明確矛盾 |
+| [槍林彈雨](#ogryn_special_ammo_armor_pen) | 未見明確矛盾 |
 | [壯膽子彈](#ogryn_ranged_stance_toughness_regen) | 未見明確矛盾 |
 | [踐踏](#ogryn_charge_trample) | 未見明確矛盾 |
 | [爆限超載](#ogryn_leadbelcher_no_ammo_chance) | 未見明確矛盾 |
@@ -164,6 +165,13 @@
 - 描述鍵：`loc_talent_ogryn_bleed_on_bull_rush_desc`；hash：`5f1e4b89`。
 - 結論：未見明確矛盾。繁中原文「被衝鋒命中的敵人疊加5層流血」與英文原文「對衝鋒命中的敵人施加5層流血」指向同一觸發與層數；原文沒有說每個目標只觸發一次或傷害刻度，這些是實作補充而非翻譯矛盾。此配對的 Build 25492122 與公開原始碼 SHA 版本關係未確認，跨版差異待核。
 - [原始碼推導與限制](ogryn_charge_applies_bleed.md)。
+
+<a id="ogryn_special_ammo_armor_pen"></a>
+## 槍林彈雨(Hail of Fire)
+
+- 描述鍵：`loc_talent_ogryn_special_ammo_armor_pen_new_desc`；hash：`5f4e17cf`。
+- 結論：未見明確矛盾。繁中原文「附加15%撕裂效果並提高15%傷害」與英文原文「15% Rending and 15% Damage」都把兩項加成限定在姿態啟動時的遠程攻擊，數字與條件相符；裝甲倍率算例是把程式的撕裂消費端補出來，原文省略公式不構成翻譯矛盾。Build 25492122 與公開 SHA 版本對應未確認，跨版差異待核。
+- [原始碼推導與限制](ogryn_special_ammo_armor_pen.md)。
 
 <a id="ogryn_ranged_stance_toughness_regen"></a>
 ## 壯膽子彈(Bullet Bravado)
