@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_weapon_switch` / `veteran_weapon_switch_passive` - 武器專家
+  - 英文對應：Weapons Specialist。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2717-L2826)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_allies_share_toughness` / `veteran_allies_in_coherency_share_toughness_gain` - 天生領袖
   - 英文對應：Born Leader。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2341-L2361)；此來源證明識別鍵與天賦關係。

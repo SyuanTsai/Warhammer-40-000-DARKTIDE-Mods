@@ -24,6 +24,7 @@
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
 | 鑰石 | [視野狹窄(Tunnel Vision)](#veteran_snipers_focus_toughness_bonus) | 每層狙擊專注使韌性恢復量增加 4%。 |
 | 鑰石 | [遠程刺客(Long Range Assassin)](#veteran_snipers_focus_increased_stacks) | 狙擊專注的效果上限由 10 層提高至 15 層。 |
+| 鑰石 | [武器專家(Weapons Specialist)](#veteran_weapon_switch_passive) | 切換至遠程武器：手持近戰武器時，每次擊殺累積 1 層，最多 10 層。切出遠程武器後，消耗所有層數，每層提高 2% 遠程攻擊速度與裝填速度，持續 10 秒；再切換武器會提前結束。 |
 | 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
 | 技能 | [戰術裝填(Tactical Reload)](#veteran_faster_reload_on_non_empty_clips) | 彈匣還有彈藥時開始裝填，裝填速度增加 25%。 |
 | 技能 | [齊射能手(Volley Adept)](#veteran_reload_speed_on_elite_kill) | 擊殺精英或專家敵人後，下一次裝填速度增加 30%。 |
@@ -427,6 +428,22 @@
 - 原本裝填 4 秒：`4 ÷ 1.15 ≈ 3.48 秒`。
 
 [詳細資料](TALENTS%20Veteran/veteran_snipers_focus_increased_stacks.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_weapon_switch_passive"></a>
+
+### 武器專家(Weapons Specialist)
+
+<img src="https://github.com/user-attachments/assets/80917bab-ea62-4a9a-a0fa-f9b443ee1b0b" width="72" height="72" alt="武器專家天賦圖示">
+
+- **切換至遠程武器：**手持近戰武器時，每次擊殺累積 1 層，最多 10 層。切出遠程武器後，消耗所有層數，每層提高 2% 遠程攻擊速度與裝填速度，持續 10 秒；再切換武器會提前結束。
+- **首輪射擊：**每層另提高 33 個百分點的遠程爆擊率，首次射擊後移除這項加成，攻速與裝填加成仍保留。原本 10% 爆擊率時，1 層為 `10% + 33% = 43%`，3 層為 `min(10% + 3 × 33%, 100%) = 100%`。
+- **切換至近戰武器：**手持遠程武器時擊殺至少 1 名敵人，再切出近戰武器，可獲得 15% 近戰攻擊速度、10% 閃避速度與 10% 閃避距離，持續 10 秒；再切換武器會提前結束。這一側最多儲存 1 層。
+- **速度算例：**10 層提供 `10 × 2% = 20%` 遠程攻速與裝填速度。不計其他加成，原本 3 秒的裝填動作變成 `3 ÷ 1.2 = 2.5 秒`；近戰原本 1 秒的攻擊動作變成 `1 ÷ 1.15 ≈ 0.87 秒`。
+- **累積條件：**擊殺算在哪一側，取決於敵人死亡時你手持的武器；持續傷害或先前投出的手榴彈擊殺，也依當時手持的武器累積。
+
+[詳細資料](TALENTS%20Veteran/veteran_weapon_switch_passive.md) · [返回目錄](#talent-index)
 
 ---
 
