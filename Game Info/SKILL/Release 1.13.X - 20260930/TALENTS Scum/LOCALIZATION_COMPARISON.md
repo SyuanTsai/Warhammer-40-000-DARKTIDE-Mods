@@ -47,6 +47,7 @@
 | [趁人之危](#broker_passive_damage_vs_heavy_staggered) | 未見明確矛盾 |
 | [心狠手辣](#broker_passive_melee_crit_instakill) | 未見明確矛盾 |
 | [以小搏大](#broker_passive_damage_vs_elites_monsters) | 未見明確矛盾 |
+| [甜蜜點](#broker_passive_increased_weakspot_damage) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -322,3 +323,10 @@
 - 描述鍵：`loc_talent_broker_passive_damage_vs_elites_monsters_desc`；hash：`a7b80936`。
 - 結論：未見明確矛盾。兩語皆為精英與怪物增傷，未見矛盾。
 - [原始碼推導與限制](broker_passive_damage_vs_elites_monsters.md)。
+
+<a id="broker_passive_increased_weakspot_damage"></a>
+## 甜蜜點(The Sweet Spot)
+
+- 描述鍵：`loc_talent_broker_passive_increased_weakspot_damage_desc`；hash：`54b98b85`。
+- 結論：未見明確矛盾。繁中與英文都簡寫弱點傷害，公式缺漏不是描述錯誤；補上不同武器的總增幅差異。
+- [原始碼推導與限制](broker_passive_increased_weakspot_damage.md)。

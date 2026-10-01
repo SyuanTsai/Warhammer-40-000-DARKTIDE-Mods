@@ -45,6 +45,7 @@
 | <img src="https://github.com/user-attachments/assets/d6795940-e616-410f-b56b-76593e8a12eb" width="32" height="32" alt="趁人之危天賦圖示"> [趁人之危](#broker_passive_damage_vs_heavy_staggered)<br>- Cheap Shots | <ul><li>對踉蹌敵人增傷 10%；中度或重度踉蹌改為 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/83713f05-33fd-41c1-86f2-c536d7a1f06c" width="32" height="32" alt="心狠手辣天賦圖示"> [心狠手辣](#broker_passive_melee_crit_instakill)<br>- Hyper-Critical | <ul><li>近戰爆擊後，若人類體型敵人的剩餘生命少於該次傷害，立即處決；隊長除外。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/280d8610-ccf2-4be3-a05b-6f4a140f8b23" width="32" height="32" alt="以小搏大天賦圖示"> [以小搏大](#broker_passive_damage_vs_elites_monsters)<br>- Punching Above One's Weight | <ul><li>對精英及怪物的傷害增加 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/bd4b828f-f439-429d-a682-c036774235f3" width="32" height="32" alt="甜蜜點天賦圖示"> [甜蜜點](#broker_passive_increased_weakspot_damage)<br>- The Sweet Spot | <ul><li>弱點命中的額外傷害部分增加 25%；實際總增幅依武器而變。</li></ul> | 技能 |
 
 ---
 
@@ -594,5 +595,20 @@
 - **傷害算例**：基礎 100 點變成 115；若已有同階段 25% 增傷，則為 100 × (1 + 25% + 15%) = 140 點。
 
 [詳細資料](TALENTS%20Scum/broker_passive_damage_vs_elites_monsters.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_increased_weakspot_damage"></a>
+### 甜蜜點(The Sweet Spot)
+
+<img src="https://github.com/user-attachments/assets/bd4b828f-f439-429d-a682-c036774235f3" width="72" height="72" alt="甜蜜點天賦圖示">
+
+- **計算方式**：命中弱點時，增加的是弱點／精準命中的額外傷害部分，不是整筆傷害再乘 1.25。武器、護甲、攻擊方式及是否爆擊都可能改變這部分占比。
+
+- **傷害算例**：假設一般部分 100、弱點額外部分 100，原本合計 200；加成後為 100 + 100 × 1.25 = 225，總傷害增加 12.5%。
+
+- **武器差異算例**：另一武器若一般部分 100、額外部分 300，原本 400，生效後為 100 + 300 × 1.25 = 475，總增幅為 18.75%。所以同一項 25% 弱點加成，在不同武器上不會固定增加相同的總傷害百分比。
+
+[詳細資料](TALENTS%20Scum/broker_passive_increased_weakspot_damage.md) · [返回目錄](#talent-index)
 
 ---
