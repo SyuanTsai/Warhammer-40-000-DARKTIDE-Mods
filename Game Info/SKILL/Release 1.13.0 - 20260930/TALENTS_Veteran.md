@@ -6,6 +6,7 @@
 
 | 分類 | 技能 | 主要效果 |
 |---|---|---|
+| 閃擊 | [擲彈兵(Grenadier)](#veteran_extra_grenade) | 手雷攜帶上限增加 1 顆。 |
 | 閃擊 | [炸藥儲備(Demolition Stockpile)](#veteran_replenish_grenades) | 定期補回手雷 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
@@ -15,6 +16,24 @@
 ---
 
 ## 閃擊
+
+<a id="veteran_extra_grenade"></a>
+
+### 擲彈兵(Grenadier)
+
+<img src="https://github.com/user-attachments/assets/2bec21d1-d677-4386-942d-2c2697c285d1" width="72" height="72" alt="擲彈兵天賦圖示">
+
+- **手雷攜帶上限增加 1 顆。**
+- 每次投擲有 **20% 機率**額外投出 1 顆，不多消耗手雷；適用於三種老兵手雷。
+
+#### 容量與機率算例
+
+- 原本可帶 3 顆，點選後為 `3 + 1 = 4 顆`。
+- 投擲 10 次，額外手雷的期望數為 `10 × 20% = 2 顆`；機率獨立判定，不保證每 5 次必定觸發。
+
+[詳細資料](TALENTS%20Veteran/veteran_extra_grenade.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="veteran_replenish_grenades"></a>
 
