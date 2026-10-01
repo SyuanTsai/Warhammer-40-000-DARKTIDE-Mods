@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_ability_marksman` / `veteran_increased_weakspot_power_after_combat_ability` - 鷹眼
+  - 英文對應：Marksman。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1345-L1389)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_survivalist_passive` / `veteran_survivalist_passive` - 生存專家（基礎被動）
   - 英文對應：Survivalist Passive。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
   - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1417-L1436)。
