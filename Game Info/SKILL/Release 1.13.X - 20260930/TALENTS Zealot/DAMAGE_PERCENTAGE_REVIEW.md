@@ -31,4 +31,5 @@
 | [不屈之志](zealot_uninterruptible_no_slow_heavies.md) | 重擊蓄力時免疫一般踉蹌，並取消蓄力動作本身的移動減速。；完整計算與適用限制見來源文件。 |
 | [靈活還擊](zealot_stacking_melee_damage_after_dodge.md) | 成功閃避後近戰傷害每層提高 5%，最多 3 層，持續 8 秒。；完整計算與適用限制見來源文件。 |
 | [狂熱不懈](zealot_sprint_improvements.md) | 衝刺速度提高 10%、耐力消耗降低 10%；連續衝刺 1 秒後免疫減速。；完整計算與適用限制見來源文件。 |
+| [無形之刃](zealot_damage_vs_nonthreat.md) | 對目前未鎖定你的敵人，傷害提高 20%。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_4.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |

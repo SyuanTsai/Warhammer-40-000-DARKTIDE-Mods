@@ -31,6 +31,7 @@
 | <img src="https://github.com/user-attachments/assets/7af1f56a-9932-428e-91c5-47b14836d6cb" width="32" height="32" alt="不屈之志天賦圖示"> [不屈之志](#zealot_uninterruptible_no_slow_heavies)<br>- Unfaltering | <ul><li>重擊蓄力時免疫一般踉蹌，並取消蓄力動作本身的移動減速。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7a00054d-1b7e-448e-a9f3-eee60922b19e" width="32" height="32" alt="靈活還擊天賦圖示"> [靈活還擊](#zealot_stacking_melee_damage_after_dodge)<br>- Riposte | <ul><li>成功閃避後近戰傷害每層提高 5%，最多 3 層，持續 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bcb76321-c69e-466f-b588-a894e8c63443" width="32" height="32" alt="狂熱不懈天賦圖示"> [狂熱不懈](#zealot_sprint_improvements)<br>- Relentless Fervor | <ul><li>衝刺速度提高 10%、耐力消耗降低 10%；連續衝刺 1 秒後免疫減速。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c97e932c-97b3-454c-9047-2145a5d9a49d" width="32" height="32" alt="無形之刃天賦圖示"> [無形之刃](#zealot_damage_vs_nonthreat)<br>- Unseen Blade | <ul><li>對目前未鎖定你的敵人，傷害提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -385,6 +386,19 @@
 - **速度與消耗算例**：若原本衝刺速度為 6 公尺／秒、每秒消耗 2 點耐力，只計此天賦後為 6 × 1.1 = 6.6 公尺／秒、2 × 0.9 = 1.8 點耐力／秒。
 
 [詳細資料](TALENTS%20Zealot/zealot_sprint_improvements.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_damage_vs_nonthreat"></a>
+### 無形之刃(Unseen Blade)
+
+<img src="https://github.com/user-attachments/assets/c97e932c-97b3-454c-9047-2145a5d9a49d" width="72" height="72" alt="無形之刃天賦圖示">
+
+- **運作方式**：攻擊目前沒有把你當成目標的敵人，傷害提高 20%；近戰與遠程皆可套用。
+
+- **傷害算例**：只計本天賦，100 × 1.2 = 120 點；若已有同階段 25% 增傷，則是 100 × (1 + 25% + 20%) = 145 點。敵人改為鎖定你後，這項條件增傷就不成立。
+
+[詳細資料](TALENTS%20Zealot/zealot_damage_vs_nonthreat.md) · [返回目錄](#talent-index)
 
 ---
 
