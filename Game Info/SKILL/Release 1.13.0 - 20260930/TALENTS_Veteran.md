@@ -18,6 +18,7 @@
 | 技能 | [行雲流水(One Motion)](#veteran_reduce_swap_time) | 武器切換速度增加 50%。 |
 | 技能 | [幹掉它！(Bring it Down!)](#veteran_big_game_hunter) | 對歐格林與巨獸的傷害增加 20%。 |
 | 技能 | [優越情節(Superiority Complex)](#veteran_increase_damage_vs_elites) | 增加對精英敵人的傷害 |
+| 技能 | [靈活應對(Duck and Dive)](#veteran_dodging_grants_stamina) | 移動速度增加 5%。 |
 | 技能 | [鋼鐵意志(Iron Will)](#veteran_tdr_on_high_toughness) | 目前韌性高於最大韌性的 75% 時，韌性受到的傷害降低 50%。 |
 | 技能 | [荷槍實彈(Lock and Load)](#veteran_clip_size) | 彈匣容量增加 25%。 |
 | 技能 | [讓他們全趴下！(Keep Their Heads Down!)](#veteran_increase_suppression) | 造成的壓制效果增加 75%。 |
@@ -266,6 +267,24 @@
 - 若已有 **25% 同類傷害加成**：原傷害為 `100 × 1.25 = 125`；點選本天賦後為 `100 × (1 + 25% + 15%) = 140`，增加 **15 傷害**。
 
 [詳細資料](TALENTS%20Veteran/veteran_increase_damage_vs_elites.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_dodging_grants_stamina"></a>
+
+### 靈活應對(Duck and Dive)
+
+<img src="https://github.com/user-attachments/assets/8567315b-bea7-4be4-aaec-22d7096945a9" width="72" height="72" alt="靈活應對天賦圖示">
+
+- **移動速度增加 5%。**
+- 成功躲過遠程攻擊時，恢復 **30% 最大耐力**；此恢復每 **3 秒**最多觸發一次。
+
+#### 恢復算例
+
+- 最大耐力 6，觸發時恢復 `6 × 30% = 1.8`。目前已有 5 時，僅補到 6，實際恢復 **1**。
+- 原本移速 5 公尺／秒，只計此天賦為 `5 × 1.05 = 5.25 公尺／秒`。
+
+[詳細資料](TALENTS%20Veteran/veteran_dodging_grants_stamina.md) · [返回目錄](#talent-index)
 
 ---
 

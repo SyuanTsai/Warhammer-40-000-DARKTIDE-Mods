@@ -6,7 +6,7 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 18／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 19／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -80,7 +80,7 @@
 | 技能 | 死亡射手 / `veteran_ads_drain_stamina` | `node_7adfbd19-7df3-4337-875b-2a9dfa00d378` | 待核對 |
 | 技能 | [幹掉它！](veteran_big_game_hunter.md) / `veteran_big_game_hunter` | `node_181e4412-cb3f-4b80-b3f9-10c5bb61d022` | 完成（核心靜態機制） |
 | 技能 | [優越情節](veteran_increase_damage_vs_elites.md) / `veteran_increase_damage_vs_elites` | `node_06272211-2d9a-47c7-bf84-8e7ea1eb8a01` | 完成（核心靜態機制） |
-| 技能 | 靈活應對 / `veteran_dodging_grants_stamina` | `node_e17c1b44-cbfd-4f58-bc7e-dc80ff90fbcc` | 待核對 |
+| 技能 | [靈活應對](veteran_dodging_grants_stamina.md) / `veteran_dodging_grants_stamina` | `node_e17c1b44-cbfd-4f58-bc7e-dc80ff90fbcc` | 完成（核心靜態機制） |
 | 技能 | [鋼鐵意志](veteran_tdr_on_high_toughness.md) / `veteran_tdr_on_high_toughness` | `node_60000569-87a7-4c75-874b-02b86af43f52` | 完成（核心靜態機制） |
 | 技能 | [荷槍實彈](veteran_clip_size.md) / `veteran_clip_size` | `node_891f1d0a-96ac-40b0-8a37-7dd491212599` | 完成（核心靜態機制） |
 | 技能 | [讓他們全趴下！](veteran_increase_suppression.md) / `veteran_increase_suppression` | `node_a3f092bc-651f-457d-9791-9c38ff2b99fd` | 完成（核心靜態機制） |
