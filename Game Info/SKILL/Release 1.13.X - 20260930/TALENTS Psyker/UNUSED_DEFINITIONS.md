@@ -1,6 +1,6 @@
-# 靈能者：基礎效果與未直接使用定義
+# 靈能者：未直接用於當前技能樹的定義
 
-[返回技術索引](README.md)
+[返回技術索引](README.md)｜[角色基礎效果](BASE_EFFECTS.md)
 
 ## 計數邊界
 
@@ -8,18 +8,7 @@
 - 其餘 20 項中，4 項列於職業基礎天賦，另外 16 項未直接出現在當前技能樹。
 - 「未直接出現在樹中」只描述節點引用結果；不表示相關增益效果或特殊規則沒有被其他技能使用。仍須追查所有引用，不能逕稱已停用。
 
-## 4 項職業基礎效果
-
-[職業基礎天賦清單](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)。獨立於 81 個可選節點，後續需核對替換條件、初始能力與反噬系統。
-
-| 定義 | 來源 | 狀態 |
-|---|---|---|
-| `psyker_combat_ability_shout` | [天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L113-L131) | 已定位；機制待核對 |
-| `psyker_grenade_smite` | [天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L185-L198) | 已定位；機制待核對 |
-| `psyker_aura_ability_cooldown` | [天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L850-L868) | 已定位；機制待核對 |
-| `psyker_peril_passive` | [天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2606-L2627) | 已定位；機制待核對 |
-
-## 16 項未直接出現在當前技能樹的定義
+## 16 項待查定義
 
 | 定義 | 來源 | 狀態 |
 |---|---|---|
@@ -39,11 +28,3 @@
 | `psyker_soulblaze_reduces_damage_taken` | [天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2431-L2467) | 待核對間接引用與用途 |
 | `psyker_ranged_crits_vent` | [天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2468-L2494) | 待核對間接引用與用途 |
 | `psyker_force_staff_wield_speed` | [天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2576-L2591) | 待核對間接引用與用途 |
-
-## 3 項通用屬性節點
-
-| 天賦 | 來源 |
-|---|---|
-| `base_toughness_node_buff_medium_5` | [通用定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L278-L301) |
-| `base_toughness_node_buff_medium_4` | [通用定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L254-L277) |
-| `base_toughness_damage_reduction_node_buff_medium_1` | [通用定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L437-L463) |
