@@ -27,7 +27,7 @@
 | <img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="32" height="32" alt="處刑命令天賦圖示"> [處刑命令](#adamant_execution_order)<br>- Execution Order | <ul><li>自動標記前方 40 公尺內的精英、專家或頭目。</li><li>你或電子獒犬擊殺標記目標後，恢復 15% 最大韌性，並獲得 8 秒傷害與攻速加成。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/47d0c2b2-0d8e-4906-a528-48f9488353e9" width="32" height="32" alt="終點站令狀天賦圖示"> [終點站令狀](#adamant_terminus_warrant)<br>- Terminus Warrant | <ul><li>遠程每發每個命中敵人建立近戰正義層數，弱點命中改為給 3 層；近戰命中建立遠程正義層數，各最多 20 層。</li><li>切換至對應武器時消耗層數並啟動固定 12 秒增益。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/b838686c-aaa0-49a2-bbea-fc9e074bb6cf" width="32" height="32" alt="堅定不移天賦圖示"> [堅定不移](#adamant_forceful)<br>- Forceful | <ul><li>踉蹌命中或格擋可累積最多 10 層，每層增加 5% 衝擊並降低受傷倍率。</li><li>層數共用 5 秒時間；受傷每 0.25 秒最多移除 1 層。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="孤狼天賦圖示"> [孤狼](#adamant_disable_companion)<br>- Lone Wolf | <ul><li>選取後伺服器端移除電子獒犬，改給自身傷害、攻速、韌性受傷倍率與閃擊充能補給。</li><li>一般手榴彈每 45 秒補 1 顆；使用震撼地雷時每 90 秒補 1 顆；補給只在有缺額時計時。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="孤狼天賦圖示"> [孤狼](#adamant_disable_companion)<br>- Lone Wolf | <ul><li>移除電子獒犬，換取 +20% 傷害、+10% 攻擊速度、15% 韌性減傷與額外 1 次閃擊攜帶量。</li><li>缺少手榴彈時每 45 秒補 1 枚；電能地雷則每 90 秒補 1 枚。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/1016875d-cc4c-44f2-8a06-c93155d482d4" width="32" height="32" alt="律法之志天賦圖示"> [律法之志](#adamant_forceful_toughness_regen_per_stack)<br>- Will of the Lex | <ul><li>選取後 堅定不移 每層每秒恢復 0.5% 最大韌性。</li><li>效果隨 堅定不移 層數逐秒累積，最多 10 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/92922b1c-4991-480e-86af-e050b9faa496" width="32" height="32" alt="堅定意志天賦圖示"> [堅定意志](#adamant_forceful_stun_immune_and_block_all)<br>- Adamant Will | <ul><li>堅定不移 維持滿層時取得免暈與減速免疫。</li><li>離開滿層後效果再維持 3 秒；完美格擋時額外允許格擋不可格擋攻擊。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3ecc49e6-a4c7-4d77-926d-623e4f8f34f6" width="32" height="32" alt="鎖定目標天賦圖示"> [鎖定目標](#adamant_forceful_offensive)<br>- Targets Acquired | <ul><li>堅定不移 達 10 層時取得攻速與順劈加成。</li><li>離開滿層後加成再維持 3 秒。</li></ul> | 鑰石 |
@@ -454,7 +454,7 @@
 
 - **傷害與速度算例**：單計本技能，100 點傷害變成 100 × 1.2 = 120；同階段已有 25% 增傷時為 145。原本 1 秒的可加速攻擊動作為 1 ÷ 1.1 ≈ 0.91 秒；100 點韌性傷害變成 85，若已有同階段 10% 韌性減傷則變成 75。
 
-- **補充算例**：一般手榴彈缺少至少 1 顆時，開始等 45 秒並補回 1 顆；震撼地雷缺額則等 90 秒。補回後重新等下一次，滿充能時不計時。
+- **補充算例**：一般手榴彈缺少至少 1 顆時，開始等 45 秒並補回 1 顆；電能地雷缺額則等 90 秒。補回後重新等下一次，滿充能時不計時。
 
 [詳細資料](TALENTS%20Arbites/adamant_disable_companion.md) · [返回目錄](#talent-index)
 
