@@ -21,6 +21,7 @@
 | <img src="https://github.com/user-attachments/assets/9194fb70-c794-460d-af2a-068ae6c4fd31" width="32" height="32" alt="粉碎天賦圖示"> [粉碎](#ogryn_charge_applies_bleed)<br>- Pulverise | <ul><li>衝鋒命中施加 5 層流血；同一衝鋒對同一敵人只施加一次。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/708231ab-86cd-44b4-8f01-0d0fe8413ede" width="32" height="32" alt="槍林彈雨天賦圖示"> [槍林彈雨](#ogryn_special_ammo_armor_pen)<br>- Hail of Fire | <ul><li>貼身火力期間，遠程傷害提高 15%，並獲得 15% 撕裂。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/6f504222-c9bf-4dff-a549-138c3be3bde4" width="32" height="32" alt="集火射擊天賦圖示"> [集火射擊](#ogryn_special_ammo_fire_shots)<br>- Light 'em Up | <ul><li>貼身火力期間，遠程命中施加 4 層燃燒，最多補至 16 層。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/594ab4d6-12e3-4941-bf1a-c5812b128b23" width="32" height="32" alt="重要干擾天賦圖示"> [重要干擾](#ogryn_taunt_damage_taken_increase)<br>- Valuable Distraction | <ul><li>忠誠守護者使受影響敵人承受的傷害提高 20%，持續 15 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/53442500-ad2a-446b-9f9b-0d26aa2438d9" width="32" height="32" alt="壯膽子彈天賦圖示"> [壯膽子彈](#ogryn_ranged_stance_toughness_regen)<br>- Bullet Bravado | <ul><li>貼身火力期間，每次射擊恢復 2.5% 最大韌性，換彈恢復 15%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/fa5d9c18-f792-4a86-812f-8547ba3cf89e" width="32" height="32" alt="踐踏天賦圖示"> [踐踏](#ogryn_charge_trample)<br>- Trample | <ul><li>衝鋒命中每次增加 2.5% 傷害，最多 20 層、50%，持續 10 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ea712cab-0dd4-47fa-a2c5-98edb7e41783" width="32" height="32" alt="爆限超載天賦圖示"> [爆限超載](#ogryn_leadbelcher_no_ammo_chance)<br>- Burst Limiter Override | <ul><li>遠程攻擊有 15% 基礎機率觸發幸運子彈，觸發的射擊不消耗彈藥。</li><li>遠程擊殺每層增加 2% 遠程傷害，最多 10 層；加層時刷新 10 秒期限。</li></ul> | 鑰石 |
@@ -319,6 +320,19 @@
 - **傷害算例**：只計無護甲且無其他修正，每次燃燒傷害為 600 × (層數 ÷ 31)² × [3 − 2 × (層數 ÷ 31)]。4 層約 27.39 點，16 層約 314.51 點；這是單次結算，並非整段燃燒的總傷害。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_special_ammo_fire_shots.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_taunt_damage_taken_increase"></a>
+### 重要干擾(Valuable Distraction)
+
+<img src="https://github.com/user-attachments/assets/594ab4d6-12e3-4941-bf1a-c5812b128b23" width="72" height="72" alt="重要干擾天賦圖示">
+
+- **效果與持續**：受到忠誠守護者嘲諷波影響的敵人，15 秒內承受所有來源的傷害提高 20%；自己與隊友都能受益。後續嘲諷波可刷新時間，不疊加百分比。
+
+- **傷害算例**：其他條件固定，原本 100 點傷害變成 100 × 1.2 = 120 點。若敵人同時受到削弱敵人的 15% 承傷加成，兩項處於不同階段，為 100 × 1.15 × 1.2 = 138 點。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_taunt_damage_taken_increase.md) · [返回目錄](#talent-index)
 
 ---
 

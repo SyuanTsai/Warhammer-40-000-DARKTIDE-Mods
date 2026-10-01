@@ -22,6 +22,7 @@
 | [粉碎](#ogryn_charge_applies_bleed) | 未見明確矛盾 |
 | [槍林彈雨](#ogryn_special_ammo_armor_pen) | 未見明確矛盾 |
 | [集火射擊](#ogryn_special_ammo_fire_shots) | 未見明確矛盾 |
+| [重要干擾](#ogryn_taunt_damage_taken_increase) | 未見明確矛盾 |
 | [壯膽子彈](#ogryn_ranged_stance_toughness_regen) | 未見明確矛盾 |
 | [踐踏](#ogryn_charge_trample) | 未見明確矛盾 |
 | [爆限超載](#ogryn_leadbelcher_no_ammo_chance) | 未見明確矛盾 |
@@ -188,6 +189,13 @@
 - 描述鍵：`loc_talent_ogryn_special_ammo_fire_shots_new_desc`；hash：`a391c6e8`。
 - 結論：未見明確矛盾。繁中原文說遠程攻擊加4層、最多16層；英文原文同樣列出每次遠程攻擊加4層與16層上限，層數與適用期間一致。兩種原文都省略每0.5秒的傷害和到期衰減，不能因此判成翻譯錯誤；Build 25492122 與公開 SHA 的版本對應仍待核。
 - [原始碼推導與限制](ogryn_special_ammo_fire_shots.md)。
+
+<a id="ogryn_taunt_damage_taken_increase"></a>
+## 重要干擾(Valuable Distraction)
+
+- 描述鍵：`loc_talent_ogryn_taunt_damage_taken_increase_description`；hash：`07b19158`。
+- 結論：未見明確矛盾。繁中原文說被忠誠守護者影響的敵人「承受所有來源的基礎傷害增加20%」；英文原文同樣說受影響敵人承受所有來源的基礎傷害增加20%。程式套用1.2承傷倍率與15秒刷新，是原文未展開的計算方式；兩種描述沒有明確衝突，Build 25492122 對應公開 SHA 的版本關係待核。
+- [原始碼推導與限制](ogryn_taunt_damage_taken_increase.md)。
 
 <a id="ogryn_ranged_stance_toughness_regen"></a>
 ## 壯膽子彈(Bullet Bravado)
