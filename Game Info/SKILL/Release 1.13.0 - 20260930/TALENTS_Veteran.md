@@ -17,6 +17,7 @@
 | 光環 | [生存專家(Survivalist)](#veteran_aura_gain_ammo_on_elite_kill_improved) | 你或擁有此光環效果的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備彈上限的彈藥。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
+| 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
 | 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
 | 技能 | [戰術裝填(Tactical Reload)](#veteran_faster_reload_on_non_empty_clips) | 彈匣還有彈藥時開始裝填，裝填速度增加 25%。 |
 | 技能 | [齊射能手(Volley Adept)](#veteran_reload_speed_on_elite_kill) | 擊殺精英或專家敵人後，下一次裝填速度增加 30%。 |
@@ -271,6 +272,24 @@
 - 只有 3 層且不再刷新時：約第 5 秒剩 2 層、第 10 秒剩 1 層、第 15 秒歸零。
 
 [詳細資料](TALENTS%20Veteran/veteran_snipers_focus.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_snipers_focus_rending_bonus"></a>
+
+### 滲透盔甲(Chink in their Armour)
+
+<img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="72" height="72" alt="滲透盔甲天賦圖示">
+
+- **狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。**
+- 搭配遠程刺客後，觸發門檻仍為 10 層。
+
+#### 護甲與傷害算例
+
+- 假設基礎傷害 100、對某甲殼護甲的傷害倍率原為 0.5，且沒有其他加成：`100 × (0.5 + 0.15) = 65 傷害`，原本為 50。
+- 若另有 10% 撕裂，同一條件為 `100 × (0.5 + 0.15 + 0.1) = 75 傷害`。
+
+[詳細資料](TALENTS%20Veteran/veteran_snipers_focus_rending_bonus.md) · [返回目錄](#talent-index)
 
 ---
 

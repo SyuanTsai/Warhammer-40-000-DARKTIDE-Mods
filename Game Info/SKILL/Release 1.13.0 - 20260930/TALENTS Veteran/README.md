@@ -6,7 +6,7 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 42／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 43／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -35,7 +35,7 @@
 | 能力 | 肉搏戰 / `veteran_increased_close_damage_after_combat_ability` | `node_7c08ee90-6528-4188-915f-41e330db49f5` | 待核對 |
 | 能力 | 敵人越大... / `veteran_combat_ability_ogryn_outlines` | `node_c9c09c7f-211c-4cf3-8192-2d532bcaffee` | 待核對 |
 | 鑰石 | [狙擊專注](veteran_snipers_focus.md) / `veteran_snipers_focus` | `node_548adb63-0554-4ab5-a044-439fd851c521` | 完成（核心靜態機制） |
-| 鑰石 | 滲透盔甲 / `veteran_snipers_focus_rending_bonus` | `node_11a4a71d-e135-4842-a90d-8cf96e5ee5a8` | 待核對 |
+| 鑰石 | [滲透盔甲](veteran_snipers_focus_rending_bonus.md) / `veteran_snipers_focus_rending_bonus` | `node_11a4a71d-e135-4842-a90d-8cf96e5ee5a8` | 完成（核心靜態機制） |
 | 鑰石 | 視野狹窄 / `veteran_snipers_focus_toughness_bonus` | `node_efbff75c-83c1-4310-a721-4bce3583cb3e` | 待核對 |
 | 鑰石 | 遠程刺客 / `veteran_snipers_focus_increased_stacks` | `node_c426c7f4-97d1-4176-810c-9dd935ef89cd` | 待核對 |
 | 鑰石 | 武器專家 / `veteran_weapon_switch_passive` | `node_09bb7c07-c733-4d08-9387-50f404da5ce5` | 待核對 |
