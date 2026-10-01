@@ -21,7 +21,7 @@
 | [先知之眼](#psyker_cooldown_aura_improved) | 未見已確認矛盾 |
 | [預兆](#psyker_aura_crit_chance_aura) | 未見已確認矛盾 |
 | [靈能尖嘯](#psyker_shout_vent_warp_charge) | 已配對；機制待核對 |
-| [占卜者的注視](#psyker_combat_ability_stance) | 已配對；機制待核對 |
+| [占卜者的注視](#psyker_combat_ability_stance) | 明確翻譯錯誤 |
 | [平靜迸發](#psyker_shout_reduces_warp_charge_generation) | 已配對；機制待核對 |
 | [亞空間爆發](#psyker_discharge_damage_debuff) | 已配對；機制待核對 |
 | [蔓延火焰](#psyker_warpfire_on_shout) | 已配對；機制待核對 |
@@ -185,7 +185,9 @@
 ## 占卜者的注視(Scrier's Gaze)
 
 - 描述鍵：`loc_talent_psyker_combat_ability_overcharge_stance_improved_description`；hash：`00d42220`。
-- 已配對原文，機制待核對。
+- 結論：明確翻譯錯誤。原文將注視寫成「進入／離開注視範圍」，容易誤解成地面區域；同源英文與實作均指角色進入／結束注視狀態。
+- 繁中原文短引：觸發占卜師的注視。進入占卜師的注視範圍後，平息{vent:%s}反噬並獲得{base_damage:%s}附加傷害、{crit_chance:%s}暴擊機率、{weakspot_damage:%s}弱點傷害、{tdr:%s}韌性減傷以及壓制免疫，同時每秒恢復{toughness:%s}韌性。
+- 同源英文：Triggers Scrier's Gaze. When entering Scrier's Gaze you Quell {vent:%s} Peril as well as gain {base_damage:%s} Damage, {crit_chance:%s} Critical Chance, {weakspot_damage:%s} Weakspot Damage, {tdr:%s} Toughness Damage Reduction, and Suppression Immunity. You also replenish {toughness:%s} Toughness each second.
 - [原始碼推導與限制](psyker_combat_ability_stance.md)。
 
 <a id="psyker_shout_reduces_warp_charge_generation"></a>
