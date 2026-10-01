@@ -23,6 +23,7 @@
 | <img src="https://github.com/user-attachments/assets/57a54ed7-4f34-449f-9f2d-eb401a97b51a" width="32" height="32" alt="韌性減傷天賦圖示"> [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1)<br>- Toughness Damage Reduction | <ul><li>韌性減傷增加 10 個百分點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c8b43c74-3790-440f-8610-db321e11da83" width="32" height="32" alt="亞空間分裂天賦圖示"> [亞空間分裂](#psyker_cleave_from_peril)<br>- Warp Splitting | <ul><li>依目前反噬增加傷害順劈能力，最高增加 100%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f3235e60-41ff-4e15-81eb-172af5ec1f2e" width="32" height="32" alt="脆弱心智天賦圖示"> [脆弱心智](#psyker_damage_vs_ogryns_and_monsters)<br>- Vulnerable Minds | <ul><li>對歐格林與巨獸的傷害增加 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="32" height="32" alt="聚焦亞空間天賦圖示"> [聚焦亞空間](#psyker_increased_warp_damage)<br>- Focused Warp | <ul><li>亞空間傷害增加 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6b51b11f-eed5-45f3-b539-6b4502778099" width="32" height="32" alt="結晶意志天賦圖示"> [結晶意志](#psyker_alternative_peril_explosion)<br>- Crystalline Will | <ul><li>反噬爆炸傷害增加 100%，半徑增加 25%。</li><li>以移除一格傷痕代替通常的爆炸倒地；爆炸擊殺精英可免除此代價。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a3ca9930-1aef-4718-9463-1b5da02a5b6b" width="32" height="32" alt="靈能引導天賦圖示"> [靈能引導](#psyker_force_staff_bonus)<br>- Channeled Force | <ul><li>高蓄力後，主要法杖攻擊增傷 20%，持續 5 秒。</li><li>主要攻擊後，次要法杖攻擊增傷 10%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f556046f-b193-4776-963d-798307d2c36a" width="32" height="32" alt="亞空間震波天賦圖示"> [亞空間震波](#psyker_force_staff_quick_attack_bonus)<br>- Empyric Shock | <ul><li>力場法杖主要攻擊命中，使目標受到的亞空間傷害每層乘 1.06。</li><li>最多 5 層，持續 10 秒。</li></ul> | 技能 |
@@ -265,6 +266,19 @@
 - **傷害算例**：只比較此增傷階段，其餘倍率固定為 1。基準 100 點、無其他加成時，100 × (1 + 20%) = 120 點；原有 25% 同階段加成時，從 125 變成 100 × (1 + 25% + 20%) = 145 點。
 
 [詳細資料](TALENTS%20Psyker/psyker_damage_vs_ogryns_and_monsters.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_increased_warp_damage"></a>
+### 聚焦亞空間(Focused Warp)
+
+<img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="72" height="72" alt="聚焦亞空間天賦圖示">
+
+- **運作方式**：亞空間傷害增加 15%。適用與否取決於攻擊的傷害類型，不是看武器名稱。
+
+- **傷害算例**：只比較此增傷階段，其餘倍率固定為 1。基準 100 點、無其他加成時，100 × (1 + 15%) = 115 點；原有 25% 同階段加成時，從 125 變成 100 × (1 + 25% + 15%) = 140 點。
+
+[詳細資料](TALENTS%20Psyker/psyker_increased_warp_damage.md) · [返回目錄](#talent-index)
 
 ---
 

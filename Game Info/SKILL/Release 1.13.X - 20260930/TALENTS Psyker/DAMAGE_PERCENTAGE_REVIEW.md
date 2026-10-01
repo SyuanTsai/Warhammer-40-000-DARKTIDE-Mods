@@ -75,7 +75,7 @@
 | [汲魂者](psyker_killing_enemy_with_warpfire_boosts.md) | 機制與公式待核對。 |
 | [骨折後遺症](psyker_melee_weaving.md) | 機制與公式待核對。 |
 | [脆弱心智](psyker_damage_vs_ogryns_and_monsters.md) | 對歐格林與巨獸的傷害增加 20%。；完整計算與適用限制見來源文件。 |
-| [聚焦亞空間](psyker_increased_warp_damage.md) | 機制與公式待核對。 |
+| [聚焦亞空間](psyker_increased_warp_damage.md) | 亞空間傷害增加 15%。；完整計算與適用限制見來源文件。 |
 | [反噬平衡](psyker_weapon_attacks_peril_equilibrium.md) | 機制與公式待核對。 |
 | [武器在手，信心我有。](psyker_reload_speed_warp_charge.md) | 機制與公式待核對。 |
 | [結晶意志](psyker_alternative_peril_explosion.md) | 反噬爆炸傷害增加 100%，半徑增加 25%。；以移除一格傷痕代替通常的爆炸倒地；爆炸擊殺精英可免除此代價。；完整計算與適用限制見來源文件。 |
