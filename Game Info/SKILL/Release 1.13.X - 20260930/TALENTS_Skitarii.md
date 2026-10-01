@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/4683657a-edf5-4420-b60f-68eddc85ef43" width="32" height="32" alt="弱點分析教義天賦圖示"> [弱點分析教義](#cryptic_afflicted_increased_damage)<br>- Weakness Analysis Doctrine | <ul><li>命中電擊、燃燒、靈魂之火、流血或中毒敵人</li><li>傷害提高 10%、持續 8 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bc0f3370-fa34-406f-9e0d-91e23b98f1f2" width="32" height="32" alt="離格動作例程天賦圖示"> [離格動作例程](#cryptic_mobile_defense)<br>- Ablative Motion Routines | <ul><li>有耐力衝刺或滑行時，承受傷害降低 25%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/79eb4aea-82d8-46fb-add1-a4ded8e41cce" width="32" height="32" alt="二元彈道協議天賦圖示"> [二元彈道協議](#cryptic_elite_kills_toughness)<br>- Binary Ballistics Protocol | <ul><li>擊殺精英後，3 秒內恢復 15% 韌性</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/29715f83-8068-4375-9aa9-d00c34e8d8f3" width="32" height="32" alt="卓越追蹤聖歌天賦圖示"> [卓越追蹤聖歌](#cryptic_no_braced_movement_penalty)<br>- Superior Tracking Litanies | <ul><li>架槍／瞄準的移動速度懲罰減半</li><li>射擊散布降低 45%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d01cfadc-7ba2-4505-b70a-11c22405645a" width="32" height="32" alt="液壓衝擊天賦圖示"> [液壓衝擊](#cryptic_better_heavies)<br>- Hydraulic Impact | <ul><li>蓄力近戰攻擊時不易被一般受擊打斷</li><li>近戰重擊傷害提高 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f8248e1e-3923-42b3-9afb-abed0c3ac1e9" width="32" height="32" alt="混合戰鬥契約天賦圖示"> [混合戰鬥契約](#cryptic_hybrid_damage)<br>- Hybrid Combat Covenant | <ul><li>近戰擊殺提高遠程傷害，遠程擊殺提高近戰傷害</li><li>每層 3%，各最多 5 層，每 8 秒衰減一層</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8c6107b2-c1ee-4fa6-9465-919f3c4d9d8b" width="32" height="32" alt="無限抑制器天賦圖示"> [無限抑制器](#cryptic_melee_attacks_give_melee_attack_speed)<br>- Uncapped Arrestor | <ul><li>近戰攻擊命中後，每次增加 2.5% 近戰攻速</li><li>最多 5 層，持續 3 秒</li></ul> | 技能 |
@@ -194,6 +195,21 @@
 - **恢復算例**：最大韌性 200，每秒 200 × 15% ÷ 3 = 10 點，完整 3 秒共 30 點；若第 2 秒再次觸發，連續 5 秒共可恢復 50 點。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_elite_kills_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_no_braced_movement_penalty"></a>
+### 卓越追蹤聖歌(Superior Tracking Litanies)
+
+<img src="https://github.com/user-attachments/assets/29715f83-8068-4375-9aa9-d00c34e8d8f3" width="72" height="72" alt="卓越追蹤聖歌天賦圖示">
+
+- **移動效果**：架槍或瞄準時，把原有移動減速幅度減半。
+
+- **移動算例**：原本速度為正常移動的 60%，減速幅度是 40%；生效後為 1 − 40% × 0.5 = 80% 正常速度。
+
+- **散布效果**：常駐減少 45% 射擊散布，無須先架槍。例如同條件散布為 10，且無其他散布加成時，變成 10 × (1 − 45%) = 5.5。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_no_braced_movement_penalty.md) · [返回目錄](#talent-index)
 
 ---
 

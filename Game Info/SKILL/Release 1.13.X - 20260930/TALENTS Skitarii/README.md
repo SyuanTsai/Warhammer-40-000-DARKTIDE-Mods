@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **97 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10)。內部 tree version 18 不等於遊戲發行版號。
 
-完成 17／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 18／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -22,6 +22,7 @@
 | 技能 | [弱點分析教義](cryptic_afflicted_increased_damage.md) / `cryptic_afflicted_increased_damage` | `node_e725d712-ad48-46eb-b3a4-e760e83e2e9b` | 完成（核心靜態機制） |
 | 技能 | [離格動作例程](cryptic_mobile_defense.md) / `cryptic_mobile_defense` | `node_1c3959c9-9a0a-428b-9064-e5dd92d9044a` | 完成（核心靜態機制） |
 | 技能 | [二元彈道協議](cryptic_elite_kills_toughness.md) / `cryptic_elite_kills_toughness` | `node_baf3690d-c727-4388-ba24-bb4c55ef6699` | 完成（核心靜態機制） |
+| 技能 | [卓越追蹤聖歌](cryptic_no_braced_movement_penalty.md) / `cryptic_no_braced_movement_penalty` | `node_f8cb2f49-4d9d-4b86-90fb-d0446febb49d` | 完成（核心靜態機制） |
 | 技能 | [液壓衝擊](cryptic_better_heavies.md) / `cryptic_better_heavies` | `node_8ed6b0bc-2308-4f95-af4e-4a0c955cd364` | 完成（核心靜態機制） |
 | 技能 | [混合戰鬥契約](cryptic_hybrid_damage.md) / `cryptic_hybrid_damage` | `node_fc9c8c0d-a7fc-4c81-8e39-bdddf1b0078c` | 完成（核心靜態機制） |
 | 技能 | [無限抑制器](cryptic_melee_attacks_give_melee_attack_speed.md) / `cryptic_melee_attacks_give_melee_attack_speed` | `node_f5562b92-4ae9-48d4-8334-06be09bef3ca` | 完成（核心靜態機制） |

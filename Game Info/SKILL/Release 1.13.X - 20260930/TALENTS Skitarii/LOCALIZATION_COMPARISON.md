@@ -19,6 +19,7 @@
 | [弱點分析教義](#cryptic_afflicted_increased_damage) | 未見明確矛盾 |
 | [離格動作例程](#cryptic_mobile_defense) | 未見明確矛盾 |
 | [二元彈道協議](#cryptic_elite_kills_toughness) | 未見明確矛盾 |
+| [卓越追蹤聖歌](#cryptic_no_braced_movement_penalty) | 未見明確矛盾 |
 | [液壓衝擊](#cryptic_better_heavies) | 未見明確矛盾 |
 | [混合戰鬥契約](#cryptic_hybrid_damage) | 未見明確矛盾 |
 | [無限抑制器](#cryptic_melee_attacks_give_melee_attack_speed) | 未見明確矛盾 |
@@ -104,6 +105,13 @@
 - 描述鍵：`loc_talent_cryptic_elite_kills_toughness_desc`；hash：`46309d46`。
 - 結論：未見明確矛盾。繁中與英文一致；補充持續恢復與刷新。
 - [原始碼推導與限制](cryptic_elite_kills_toughness.md)。
+
+<a id="cryptic_no_braced_movement_penalty"></a>
+## 卓越追蹤聖歌(Superior Tracking Litanies)
+
+- 描述鍵：`loc_talent_cryptic_no_braced_movement_penalty_desc`；hash：`f793a029`。
+- 結論：未見明確矛盾。繁中占位值含負號，與英文一致；補充減少的是減速幅度且散布常駐，不列誤譯。
+- [原始碼推導與限制](cryptic_no_braced_movement_penalty.md)。
 
 <a id="cryptic_better_heavies"></a>
 ## 液壓衝擊(Hydraulic Impact)
