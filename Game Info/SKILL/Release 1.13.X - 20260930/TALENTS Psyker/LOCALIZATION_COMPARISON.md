@@ -69,7 +69,7 @@
 | [精確瞄準](#psyker_guaranteed_crit_on_multiple_weakspot_hits) | 已配對；機制待核對 |
 | [傀儡師](#psyker_coherency_aura_size_increase) | 已配對；機制待核對 |
 | [動能偏斜](#psyker_block_costs_warp_charge) | 已配對；機制待核對 |
-| [韌性增幅](#base_toughness_node_buff_medium_5) | 已配對；機制待核對 |
+| [韌性增幅](#base_toughness_node_buff_medium_5) | 未見明確矛盾 |
 | [韌性增幅](#base_toughness_node_buff_medium_4) | 未見明確矛盾 |
 | [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
 | [迅雷之勢](#psyker_melee_attack_speed) | 已配對；機制待核對 |
@@ -521,7 +521,7 @@
 ## 韌性增幅(Toughness Boost)
 
 - 描述鍵：`loc_talent_toughness_boost_medium_desc`；hash：`329702b6`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](base_toughness_node_buff_medium_5.md)。
 
 <a id="base_toughness_node_buff_medium_4"></a>

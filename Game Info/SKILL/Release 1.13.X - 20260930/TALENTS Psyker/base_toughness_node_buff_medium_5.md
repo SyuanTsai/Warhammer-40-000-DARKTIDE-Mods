@@ -1,11 +1,37 @@
-# 韌性增幅(Toughness Boost)：來源與待確認事項
+# 韌性增幅(Toughness Boost)：原始碼依據
 
-[返回技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#base_toughness_node_buff_medium_5)
+[返回玩家說明](../TALENTS_Psyker.md#base_toughness_node_buff_medium_5)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#base_toughness_node_buff_medium_5)
 
-- 狀態：已完成節點與原文定位；機制、公式及勘誤尚待核對。
-- 本機原文：Steam Build `25492122`，`ui` 資源，繁中／英文按相同 hash 配對。
-- 天賦：`base_toughness_node_buff_medium_5`；分類：技能；節點類型：`stat`。
-- 來源：[當前樹節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1206-L1234)；[天賦定義與顯示參數](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L278-L301)。
-- 名稱鍵：`loc_talent_toughness_boost_medium`；本機遊戲名稱：韌性增幅。
-- 描述鍵：`loc_talent_toughness_boost_medium_desc`；`ui` 描述 hash：`329702b6`。
-- 比對狀態：繁中／英文已配對；效果與勘誤待逐項核對。
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`base_toughness_node_buff_medium_5`；名稱鍵：`loc_talent_toughness_boost_medium`；描述鍵：`loc_talent_toughness_boost_medium_desc`。
+- 節點：`node_0bbf73c4-d47e-4205-b8a3-1ee5879708cb`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- base talent 對應 player_toughness_node_buff_medium_4/5，兩者clone medium_1，普通一點值toughness=15。最大韌性先加flat toughness，再乘toughness_bonus，最後ceil。
+
+## 原始碼依據
+
+- [scripts/settings/buff/player_buff_templates.lua：366–398](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/player_buff_templates.lua#L366-L398)
+- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：79–88](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L79-L88)
+- [scripts/settings/ability/archetype_talents/talents/base_talents.lua：278–301](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L278-L301)
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1206–1234](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1206-L1234)
+
+## 算例條件與待確認事項
+
+- **韌性算例**：沒有其他修正時，最大韌性 100 變成 100 + 15 = 115 點；選取另一個同效果節點後為 130 點。這是增加最大值，不是持續恢復韌性。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`329702b6`。
+- 核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/stat/base_toughness_node_buff_medium_5.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:base_toughness_node_buff_medium_5:node_0bbf73c4-d47e-4205-b8a3-1ee5879708cb`。
+- 格式：image/webp；288×288；4428 bytes。
+- SHA-256：`2c0b1f33804d13d580ac4f509d01684e8ee0245f2fcfd26bbdbef6b8d420df0f`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928034845)；[公開圖片](https://github.com/user-attachments/assets/3d86850d-c891-443c-8f80-2f01ad34bdff)。附件已下載比對位元組與 SHA-256。

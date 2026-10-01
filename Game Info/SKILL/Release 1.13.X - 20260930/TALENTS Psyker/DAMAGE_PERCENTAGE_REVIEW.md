@@ -67,7 +67,7 @@
 | [精確瞄準](psyker_guaranteed_crit_on_multiple_weakspot_hits.md) | 機制與公式待核對。 |
 | [傀儡師](psyker_coherency_aura_size_increase.md) | 機制與公式待核對。 |
 | [動能偏斜](psyker_block_costs_warp_charge.md) | 機制與公式待核對。 |
-| [韌性增幅](base_toughness_node_buff_medium_5.md) | 機制與公式待核對。 |
+| [韌性增幅](base_toughness_node_buff_medium_5.md) | 最大韌性增加 15 點。；完整計算與適用限制見來源文件。 |
 | [韌性增幅](base_toughness_node_buff_medium_4.md) | 最大韌性增加 15 點。；完整計算與適用限制見來源文件。 |
 | [韌性減傷](base_toughness_damage_reduction_node_buff_medium_1.md) | 韌性減傷增加 10 個百分點。；完整計算與適用限制見來源文件。 |
 | [迅雷之勢](psyker_melee_attack_speed.md) | 機制與公式待核對。 |
