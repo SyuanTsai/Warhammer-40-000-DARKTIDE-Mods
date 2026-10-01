@@ -39,6 +39,7 @@
 | <img src="https://github.com/user-attachments/assets/e650aa60-14d1-446d-9fa3-fed8dd633716" width="32" height="32" alt="制裁重擊天賦圖示"> [制裁重擊](#adamant_crits_rend)<br>- Prosecution Blow | <ul><li>遠程爆擊獲得 20% 撕裂。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cd883557-4048-43f0-a3b7-3a90bbc6ffe8" width="32" height="32" alt="街頭妙招天賦圖示"> [街頭妙招](#adamant_dodge_improvement)<br>- Street Smarts | <ul><li>有效閃避次數增加 1 次；近戰閃避結束後的判定寬限延長 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/62b4954d-42c3-4eab-a6ea-a17719414e19" width="32" height="32" alt="巨獸獵人天賦圖示"> [巨獸獵人](#adamant_monster_hunter)<br>- Monstrosity Hunter | <ul><li>對歐格林與巨獸造成的傷害提高 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc" width="32" height="32" alt="帝皇之拳天賦圖示"> [帝皇之拳](#adamant_first_melee_hit_increased_damage)<br>- The Emperor's Fist | <ul><li>每次近戰揮擊的第一個命中目標，傷害提高 15%、衝擊提高 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47" width="32" height="32" alt="擊殺順序天賦圖示"> [擊殺順序](#adamant_increased_damage_to_high_health)<br>- Target Priority | <ul><li>對生命值高於 75% 的敵人，傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/03af9ca3-e4f4-4383-9650-f8ac659cfadd" width="32" height="32" alt="秉賦為先天賦圖示"> [秉賦為先](#adamant_clip_size)<br>- Priority Endowment | <ul><li>彈匣容量提高 15%，容量向上取整數。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="惡徒退散天賦圖示"> [惡徒退散](#adamant_damage_vs_suppressed)<br>- Cower, Miscreants! | <ul><li>對受壓制敵人的傷害提高 25%。</li></ul> | 技能 |
@@ -483,6 +484,19 @@
 - **作用範圍**：近戰與遠程皆可；敵人同時符合兩種類型也只套用一次加成。
 
 [詳細資料](TALENTS%20Arbites/adamant_monster_hunter.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_first_melee_hit_increased_damage"></a>
+### 帝皇之拳(The Emperor's Fist)
+
+<img src="https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc" width="72" height="72" alt="帝皇之拳天賦圖示">
+
+- **觸發方式**：近戰揮擊的第一個命中目標獲得 15% 近戰增傷與 30% 衝擊；命中後消耗，下一次揮擊重新獲得。
+
+- **分項算例**：單計增傷，原本 100 點近戰傷害變成 115 點；原本 100 單位踉蹌強度變成 130。已有同階段 25% 增傷時，傷害為 100 × (1 + 25% + 15%) = 140 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_first_melee_hit_increased_damage.md) · [返回目錄](#talent-index)
 
 ---
 

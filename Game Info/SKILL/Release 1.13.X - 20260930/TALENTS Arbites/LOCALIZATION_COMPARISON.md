@@ -41,6 +41,7 @@
 | [制裁重擊](#adamant_crits_rend) | 未見明確矛盾 |
 | [街頭妙招](#adamant_dodge_improvement) | 繁中原文勘誤 |
 | [巨獸獵人](#adamant_monster_hunter) | 未見明確矛盾 |
+| [帝皇之拳](#adamant_first_melee_hit_increased_damage) | 未見明確矛盾 |
 | [擊殺順序](#adamant_increased_damage_to_high_health) | 未見明確矛盾 |
 | [秉賦為先](#adamant_clip_size) | 未見明確矛盾 |
 | [惡徒退散](#adamant_damage_vs_suppressed) | 未見明確矛盾 |
@@ -279,6 +280,13 @@
 - 描述鍵：`loc_talent_adamant_monster_hunter_desc`；hash：`7ec647c9`。
 - 結論：未見明確矛盾。繁中「歐格林和巨獸」對應英文 Ogryns and Monstrosities，沒有重複計算兩份加成的依據。
 - [原始碼推導與限制](adamant_monster_hunter.md)。
+
+<a id="adamant_first_melee_hit_increased_damage"></a>
+## 帝皇之拳(The Emperor's Fist)
+
+- 描述鍵：`loc_talent_adamant_first_melee_hit_increased_damage_desc`；hash：`b13d7bb8`。
+- 結論：未見明確矛盾。繁中「每次攻擊命中的第一個敵人」與英文 first Enemy hit with each attack一致；先後事件為補充。
+- [原始碼推導與限制](adamant_first_melee_hit_increased_damage.md)。
 
 <a id="adamant_increased_damage_to_high_health"></a>
 ## 擊殺順序(Target Priority)
