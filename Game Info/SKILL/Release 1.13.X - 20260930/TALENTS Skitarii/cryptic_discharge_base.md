@@ -12,6 +12,7 @@
 - 基礎能力動作 action_activate 在開始時消耗成本。ActionCrypticDischarge 以消耗份數選 base、base_two、base_three 爆炸模板。半徑 6/9/12 公尺。
 - 每份充能資源成本為 general combat ability cooldown 50 秒，底層自然回復 1 資源點/秒；故一整份需 50 秒、三份空槽補滿需 150 秒。
 - 放電爆炸 damage profile 的 attack 與 impact power distribution 均為 0；explosion on-hit 套用 cryptic_discharge_shock，持續 2 秒並以 0.3–0.8 秒間隔執行電擊傷害。傷害 profile 採 default power curve、attack power 25、impact power 100，故沒有固定敵人生命值傷害可由此技能定義單獨給出。
+- 本機Steam Build25492122：描述鍵 `loc_talent_cryptic_discharge_base_desc`、同源中英hash `a2ee7263` 已精確配對。同鍵中英均列出電擊與1／2／3份充能對應的範圍；固定程式為6／9／12公尺、2秒電擊。未展開充能上限與直接爆炸傷害為零，不算錯誤。
 
 ## 原始碼依據
 
