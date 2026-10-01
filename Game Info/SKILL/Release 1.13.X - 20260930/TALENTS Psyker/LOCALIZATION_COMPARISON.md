@@ -55,7 +55,7 @@
 | [心如止水](#psyker_toughness_on_vent) | 已配對；機制待核對 |
 | [亞空間耗費](#psyker_toughness_on_melee) | 已配對；機制待核對 |
 | [堅毅](#psyker_crits_regen_toughness_movement_speed) | 未見明確矛盾 |
-| [險惡燃燒](#psyker_elite_kills_add_warpfire) | 已配對；機制待核對 |
+| [險惡燃燒](#psyker_elite_kills_add_warpfire) | 未見明確矛盾 |
 | [戰鬥冥想](#psyker_chance_to_vent_on_kill) | 未見明確矛盾 |
 | [完美時機](#psyker_crits_empower_next_attack) | 未見明確矛盾 |
 | [野火](#psyker_spread_warpfire_on_kill) | 已配對；機制待核對 |
@@ -423,7 +423,7 @@
 ## 險惡燃燒(Perilous Combustion)
 
 - 描述鍵：`loc_talent_psyker_elite_and_special_kills_add_warpfire_desc`；hash：`c4294372`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_elite_kills_add_warpfire.md)。
 
 <a id="psyker_chance_to_vent_on_kill"></a>
