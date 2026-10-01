@@ -27,6 +27,7 @@
 | <img src="https://github.com/user-attachments/assets/a51567af-44cb-46ba-9908-3e3502dcbcdb" width="32" height="32" alt="韌性減傷天賦圖示"> [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1)<br>- Toughness Damage Reduction | <ul><li>韌性傷害減免增加 10 個百分點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9af41f8c-0f0e-4b2b-965e-c0d01fea2746" width="32" height="32" alt="相親相愛好夥伴！天賦圖示"> [相親相愛好夥伴！](#ogryn_damage_taken_by_all_increases_strength_tdr)<br>- No Hurting Friends! | <ul><li>自己或協同隊友受傷時，每層增加 2% 威力，最多 5 層。</li><li>滿層額外減少 15% 韌性傷害。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/895c3ccd-387f-4862-9a2b-b429ff5d6432" width="32" height="32" alt="全神貫注天賦圖示"> [全神貫注](#ogryn_ally_movement_boost_on_ability)<br>- Get Stuck In | <ul><li>施放戰鬥技能後，你與協同隊友提高 20% 移動速度，持續 6 秒。</li><li>期間免疫暈眩與壓制。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/bb088b60-c1e8-42a7-b68e-3ef59f5d9eb9" width="32" height="32" alt="利刃出鞘天賦圖示"> [利刃出鞘](#ogryn_windup_reduces_damage_taken)<br>- Implacable | <ul><li>近戰重擊蓄力期間，受到的傷害減少 15%。</li></ul> | 技能 |
 
 ---
 
@@ -348,5 +349,18 @@
 - **速度算例**：原本每秒移動 5 公尺，只有此加成時為 5 × (1 + 20%) = 6 公尺／秒。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_ally_movement_boost_on_ability.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_windup_reduces_damage_taken"></a>
+### 利刃出鞘(Implacable)
+
+<img src="https://github.com/user-attachments/assets/bb088b60-c1e8-42a7-b68e-3ef59f5d9eb9" width="72" height="72" alt="利刃出鞘天賦圖示">
+
+- **生效條件**：近戰重擊蓄力時獲得 15% 減傷；結束蓄力後便不再套用，不會讓後續整段揮擊自動保有加成。
+
+- **減傷算例**：只計此效果，100 點傷害變成 100 × 0.85 = 85 點；另有獨立 20% 減傷時為 100 × 0.85 × 0.8 = 68 點。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_windup_reduces_damage_taken.md) · [返回目錄](#talent-index)
 
 ---

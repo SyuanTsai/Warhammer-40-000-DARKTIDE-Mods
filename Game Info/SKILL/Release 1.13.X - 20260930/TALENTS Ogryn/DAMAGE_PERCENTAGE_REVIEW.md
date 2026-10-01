@@ -27,3 +27,4 @@
 | [韌性減傷](base_toughness_damage_reduction_node_buff_medium_1.md) | 韌性傷害減免增加 10 個百分點。；完整計算與適用限制見來源文件。 |
 | [相親相愛好夥伴！](ogryn_damage_taken_by_all_increases_strength_tdr.md) | 自己或協同隊友受傷時，每層增加 2% 威力，最多 5 層。；滿層額外減少 15% 韌性傷害。；完整計算與適用限制見來源文件。 |
 | [全神貫注](ogryn_ally_movement_boost_on_ability.md) | 施放戰鬥技能後，你與協同隊友提高 20% 移動速度，持續 6 秒。；期間免疫暈眩與壓制。；完整計算與適用限制見來源文件。 |
+| [利刃出鞘](ogryn_windup_reduces_damage_taken.md) | 近戰重擊蓄力期間，受到的傷害減少 15%。；完整計算與適用限制見來源文件。 |
