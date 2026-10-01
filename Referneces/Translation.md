@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_movement_speed_coherency` / `veteran_movement_speed_coherency` - 抵近殺敵
+  - 英文對應：Close and Kill。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L721-L745)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_damage_coherency` / `veteran_increased_damage_coherency` - 火力小分隊
   - 英文對應：Fire Team。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L696-L720)；此來源證明識別鍵與天賦關係。

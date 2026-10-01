@@ -8,6 +8,7 @@
 |---|---|---|
 | 閃擊 | [擲彈兵(Grenadier)](#veteran_extra_grenade) | 手雷攜帶上限增加 1 顆。 |
 | 閃擊 | [炸藥儲備(Demolition Stockpile)](#veteran_replenish_grenades) | 定期補回手雷 |
+| 光環 | [抵近殺敵(Close and Kill)](#veteran_movement_speed_coherency) | 你與協同範圍內的隊友移動速度增加 7.5%。 |
 | 光環 | [火力小分隊(Fire Team)](#veteran_increased_damage_coherency) | 你與協同範圍內的隊友傷害增加 7.5%。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
@@ -58,6 +59,23 @@
 ---
 
 ## 光環
+
+<a id="veteran_movement_speed_coherency"></a>
+
+### 抵近殺敵(Close and Kill)
+
+<img src="https://github.com/user-attachments/assets/f8c278c8-72a1-476c-93d1-6656268ba8e4" width="72" height="72" alt="抵近殺敵天賦圖示">
+
+- **你與協同範圍內的隊友移動速度增加 7.5%。**
+- 同一種光環不重複疊加；取代你的拾荒者光環。
+
+#### 移動算例
+
+- 不計其他移速效果，原本每秒移動 5 公尺：`5 × (1 + 7.5%) = 5.375 公尺／秒`。
+
+[詳細資料](TALENTS%20Veteran/veteran_movement_speed_coherency.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="veteran_increased_damage_coherency"></a>
 
