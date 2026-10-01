@@ -30,6 +30,7 @@
 | <img src="https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc" width="32" height="32" alt="熾熱虔誠天賦圖示"> [熾熱虔誠](#zealot_fanatic_rage)<br>- Blazing Piety | <ul><li>附近敵人死亡與自身爆擊累積狂怒；25 層時提高 15 個百分點爆擊率，持續 8 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/0fd06e0a-ef14-4228-8cd5-02980c989f05" width="32" height="32" alt="死忠天賦圖示"> [死忠](#zealot_fanatic_rage_toughness_on_max)<br>- Stalwart | <ul><li>觸發狂怒時恢復相當於最大韌性的 50%；狂怒期間且計數維持 25 層時，韌性承傷降低 25%，每秒恢復最大韌性的 2%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9d85e538-7fb1-4308-99b9-7ed9408eead2" width="32" height="32" alt="正義勇士天賦圖示"> [正義勇士](#zealot_fanatic_rage_improved)<br>- Righteous Warrior | <ul><li>狂怒的爆擊率加成由 15 提高至 25 個百分點。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/d1133aca-9af8-4b47-934f-d073de0d4e1c" width="32" height="32" alt="迅疾狂熱天賦圖示"> [迅疾狂熱](#zealot_shared_fanatic_rage)<br>- Infectious Zeal | <ul><li>狂怒開始時，當下協同隊友增加 10 個百分點爆擊率，持續 8 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="32" height="32" alt="永恆天賦圖示"> [永恆](#zealot_quickness_increased_duration)<br>- Eternal | <ul><li>命定審判的啟動增益持續時間由 6 秒延長至 10 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="狂熱朝聖者天賦圖示"> [狂熱朝聖者](#zealot_resist_death_ability)<br>- Zealous Pilgrim | <ul><li>使用戰鬥技能後獲得 4 秒免死效果。</li><li>隱身技能在退出隱身後生效；聖物技能在卸下聖物後生效。</li><li>無法殺死期間，傷害及攻擊速度各提高 10%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="天災天賦圖示"> [天災](#zealot_crits_apply_bleed)<br>- Scourge | <ul><li>近戰爆擊施加 2 層流血；攻擊流血敵人增加近戰爆擊率。</li></ul> | 技能 |
@@ -466,6 +467,21 @@
 - **爆擊率算例**：原本爆擊率 5%，搭配此升級進入狂怒後為 5% + 15% + 10% = 30%。這是追加機率，不是把原本 5% 乘以 1.25。
 
 [詳細資料](TALENTS%20Zealot/zealot_fanatic_rage_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_shared_fanatic_rage"></a>
+### 迅疾狂熱(Infectious Zeal)
+
+<img src="https://github.com/user-attachments/assets/d1133aca-9af8-4b47-934f-d073de0d4e1c" width="72" height="72" alt="迅疾狂熱天賦圖示">
+
+- **運作方式**：熾熱虔誠開始時，當下協同範圍內的其他隊友獲得 10 個百分點爆擊率，持續 8 秒；這份共享加成不再給你自己。
+
+- **爆擊率算例**：隊友原本 5%，效果期間變成 5% + 10% = 15%。你的「正義勇士」不會把隊友這份 10 個百分點一起提高。
+
+- **持續限制**：你之後刷新自己的狂怒，不會同步延長這次已給隊友的 8 秒；效果期間才進入協同範圍的隊友，也不會立即補發。
+
+[詳細資料](TALENTS%20Zealot/zealot_shared_fanatic_rage.md) · [返回目錄](#talent-index)
 
 ---
 

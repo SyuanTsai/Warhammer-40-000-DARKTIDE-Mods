@@ -32,6 +32,7 @@
 | [熾熱虔誠](#zealot_fanatic_rage) | 未見明確矛盾 |
 | [死忠](#zealot_fanatic_rage_toughness_on_max) | 未見明確矛盾 |
 | [正義勇士](#zealot_fanatic_rage_improved) | 未見明確矛盾 |
+| [迅疾狂熱](#zealot_shared_fanatic_rage) | 跨來源待同版核對 |
 | [永恆](#zealot_quickness_increased_duration) | 未見明確矛盾 |
 | [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
 | [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
@@ -255,6 +256,13 @@
 - 描述鍵：`loc_talent_zealot_fanatic_rage_improved_desc`；hash：`cde6c5ff`。
 - 結論：未見明確矛盾。繁中與英文都描述此升級提高熾熱虔誠提供的暴擊率；以百分點與總和表達是為免誤讀。
 - [原始碼推導與限制](zealot_fanatic_rage_improved.md)。
+
+<a id="zealot_shared_fanatic_rage"></a>
+## 迅疾狂熱(Infectious Zeal)
+
+- 描述鍵：`loc_talent_zealot_shared_fanatic_rage_new_desc`；hash：`95bbc544`。
+- 結論：跨來源待同版核對。英繁中都寫隊友在個人熾熱虔誠有效時取得暴擊率；程式是開始 Fury 時套用一次8秒共享 buff，個人 Fury 刷新不會重跑分發。若這份本地化與所固定程式碼同版，持續效果時間可能與文案「while active」不一致；版本尚未確認前保留待核。
+- [原始碼推導與限制](zealot_shared_fanatic_rage.md)。
 
 <a id="zealot_quickness_increased_duration"></a>
 ## 永恆(Eternal)
