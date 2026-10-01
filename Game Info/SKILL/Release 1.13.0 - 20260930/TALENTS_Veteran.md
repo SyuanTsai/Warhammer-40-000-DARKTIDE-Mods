@@ -19,7 +19,7 @@
 | 能力 | [滲透(Infiltrate)](#veteran_invisibility_on_combat_ability) | 立即回滿自身韌性，並隱身最多 8 秒；冷卻時間 40 秒。 |
 | 能力 | [低調(Low Profile)](#veteran_reduced_threat_after_combat_ability) | 使用戰鬥能力後，敵人選你為目標的仇恨權重降低 90%，持續 10 秒。 |
 | 能力 | [處決者姿態(Executioner's Stance)](#veteran_combat_ability_elite_and_special_outlines) | 強化火力齊射：遠程傷害與遠程弱點額外傷害加成各提高至 25%，遠程衝擊加成提高至 100%。 |
-| 能力 | [目標引導增強(Enhanced Target Priority)](#veteran_combat_ability_coherency_outlines) | 效果：啟動處決者姿態時，協同範圍內的隊友也會看見菁英與特殊敵人的輪廓，持續 5 秒。你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。 |
+| 能力 | [目標引導增強(Enhanced Target Priority)](#veteran_combat_ability_coherency_outlines) | 效果：啟動處決者姿態時，協同範圍內的隊友也會看見精英與專家敵人的輪廓，持續 5 秒。你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。 |
 | 能力 | [火力反擊(Counter-Fire)](#veteran_combat_ability_ranged_roamer_outlines) | 效果：處決者姿態會額外標出一般射手與潛行者，例如血痂射手、渣滓潛行者。啟動或刷新輪廓時，這些敵人必須在你 50 公尺內。 |
 | 能力 | [獵手決意(Hunter's Resolve)](#veteran_toughness_bonus_leaving_invisibility) | 效果：啟動滲透時，受到的韌性傷害降低 50%；隱身期間持續生效，解除隱身後再維持 10 秒。 |
 | 能力 | [戰術意識(Tactical Awareness)](#veteran_elite_kills_reduce_cooldown) | 觸發方式：擊殺特殊敵人後，獲得 3 秒的冷卻恢復效果：每秒額外恢復 1 秒戰鬥能力冷卻。一般菁英不會觸發。 |
@@ -354,8 +354,8 @@
 
 <img src="https://github.com/user-attachments/assets/2afc79fa-02f2-4943-b4e7-abe35435f7bd" width="72" height="72" alt="目標引導增強天賦圖示">
 
-- **效果：**啟動處決者姿態時，協同範圍內的隊友也會看見菁英與特殊敵人的輪廓，持續 5 秒。你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。
-- **顯示範圍：**菁英必須距離看見輪廓的隊友不到 50 公尺；特殊敵人不受這項距離限制。一般射手、歐格林、怪物與首領的額外輪廓不會透過這個效果分享。
+- **效果：**啟動處決者姿態時，協同範圍內的隊友也會看見精英與專家敵人的輪廓，持續 5 秒。你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。
+- **顯示範圍：**精英必須距離看見輪廓的隊友不到 50 公尺；專家敵人不受這項距離限制。一般射手、歐格林、怪物與首領的額外輪廓不會透過這個效果分享。
 - **時間算例：**啟動時提供一次，若 4 秒後擊殺符合條件的敵人並刷新姿態，隊友的輪廓時間重回 5 秒，約可看見至第 9 秒。
 
 [詳細資料](TALENTS%20Veteran/veteran_combat_ability_coherency_outlines.md) · [返回目錄](#talent-index)
