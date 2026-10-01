@@ -12,3 +12,4 @@
 | [繩之以法](adamant_elite_special_kills_replenish_toughness.md) | 擊殺精英或專家敵人，立即恢復最大韌性的 10%，接著 4 秒再恢復 10%。；完整計算與適用限制見來源文件。 |
 | [近在眉睫](adamant_close_kills_restore_toughness.md) | 在 12.5 公尺內擊殺敵人，恢復最大韌性的 5%。；完整計算與適用限制見來源文件。 |
 | [鐵血之志](adamant_staggers_replenish_toughness.md) | 近戰攻擊的第一個命中目標受到踉蹌時，恢復最大韌性的 7.5%。；完整計算與適用限制見來源文件。 |
+| [走一走治百病](adamant_stamina_spent_replenish_toughness.md) | 每累計消耗 1 點耐力，在 3 秒內恢復最大韌性的 10%。；完整計算與適用限制見來源文件。 |

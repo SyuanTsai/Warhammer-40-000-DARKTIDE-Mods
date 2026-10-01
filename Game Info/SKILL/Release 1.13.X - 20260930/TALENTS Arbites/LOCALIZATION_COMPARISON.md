@@ -14,6 +14,7 @@
 | [繩之以法](#adamant_elite_special_kills_replenish_toughness) | 未見明確矛盾 |
 | [近在眉睫](#adamant_close_kills_restore_toughness) | 未見明確矛盾 |
 | [鐵血之志](#adamant_staggers_replenish_toughness) | 未見明確矛盾 |
+| [走一走治百病](#adamant_stamina_spent_replenish_toughness) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
@@ -56,3 +57,10 @@
 - 描述鍵：`loc_talent_adamant_staggers_replenish_toughness_melee_desc`；hash：`050254b5`。
 - 結論：未見明確矛盾。繁中「近戰攻擊使敵人踉蹌」與英文 Staggering Melee Attack 一致；未列首目標與天賦互動不算錯誤。
 - [原始碼推導與限制](adamant_staggers_replenish_toughness.md)。
+
+<a id="adamant_stamina_spent_replenish_toughness"></a>
+## 走一走治百病(Walk It Off)
+
+- 描述鍵：`loc_talent_adamant_stamina_spent_replenish_toughness_desc`；hash：`5bfeac39`。
+- 結論：未見明確矛盾。繁中「消耗…在…秒內恢復」與英文 Spending／over 一致；刷新不疊速是原文未寫的機制。
+- [原始碼推導與限制](adamant_stamina_spent_replenish_toughness.md)。
