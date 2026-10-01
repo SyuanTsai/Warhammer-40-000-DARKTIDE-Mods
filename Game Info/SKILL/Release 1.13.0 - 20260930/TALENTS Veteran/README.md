@@ -6,7 +6,7 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 55／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 56／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -65,7 +65,7 @@
 | 技能 | [喘息片刻](veteran_replenish_toughness_outside_melee.md) / `veteran_replenish_toughness_outside_melee` | `node_3a5e822f-27dd-4ec0-ab2f-ee8638d959af` | 完成（核心靜態機制） |
 | 技能 | [首輪齊射](veteran_bonus_crit_chance_on_ammo.md) / `veteran_bonus_crit_chance_on_ammo` | `node_40c7bc1e-e4a2-40c1-ab28-459d599cc30b` | 完成（核心靜態機制） |
 | 技能 | [殺戮地帶](veteran_ranged_power_out_of_melee.md) / `veteran_ranged_power_out_of_melee` | `node_b0c4f49c-fd47-4b1c-9279-82e12dc3ac7d` | 完成（核心靜態機制） |
-| 技能 | 突擊隊 / `veteran_no_ammo_consumption_on_lasweapon_crit` | `node_d195ddb0-73e5-4774-8bd7-e8f93e1e7ab2` | 待核對 |
+| 技能 | [突擊隊](veteran_no_ammo_consumption_on_lasweapon_crit.md) / `veteran_no_ammo_consumption_on_lasweapon_crit` | `node_d195ddb0-73e5-4774-8bd7-e8f93e1e7ab2` | 完成（核心靜態機制） |
 | 技能 | 凋零烈焰 / `veteran_increased_ranged_cleave` | `node_92ce0aa9-e7c8-4620-9ad3-de2cedbf9431` | 待核對 |
 | 技能 | [振奮擊倒](veteran_replenish_toughness_on_weakspot_kill.md) / `veteran_replenish_toughness_on_weakspot_kill` | `node_f0744989-1f87-4da4-aa97-30a821197ed9` | 完成（核心靜態機制） |
 | 技能 | 全副武裝 / `veteran_ammo_increase` | `node_c56789ed-287a-4fe0-9e94-f50ffabe1992` | 待核對 |

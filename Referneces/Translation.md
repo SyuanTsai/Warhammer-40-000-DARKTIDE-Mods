@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_no_ammo_consumption_on_lasweapon_crit` / `veteran_no_ammo_consumption_on_lasweapon_crit` - 突擊隊
+  - 英文對應：Shock Trooper。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1628-L1637)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_bonus_crit_chance_on_ammo` / `veteran_bonus_crit_chance_on_ammo` - 首輪齊射
   - 英文對應：Opening Salvo。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1588-L1627)；此來源證明識別鍵與天賦關係。

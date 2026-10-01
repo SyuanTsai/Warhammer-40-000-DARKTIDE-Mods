@@ -43,6 +43,7 @@
 | 技能 | [喘息片刻(Catch a Breath)](#veteran_replenish_toughness_outside_melee) | 超過 5 秒未受到近戰命中時，每秒恢復 5% 最大韌性。 |
 | 技能 | [首輪齊射(Opening Salvo)](#veteran_bonus_crit_chance_on_ammo) | 彈匣剩餘彈藥至少 80% 時，遠程爆擊率增加 10 個百分點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
+| 技能 | [突擊隊(Shock Trooper)](#veteran_no_ammo_consumption_on_lasweapon_crit) | 雷射武器的爆擊射擊不消耗彈藥。 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
 | 技能 | [臨場發揮(Field Improvisation)](#veteran_better_deployables) | 小隊的彈藥箱也能補滿可補給的手雷。 |
 | 技能 | [火力掩護(Covering Fire)](#veteran_replenish_toughness_and_boost_allies) | 遠程擊殺敵人時，可為該敵人附近的 1 名隊友恢復 15% 最大韌性，並使其傷害增加 15%，持續 6 秒。 |
@@ -770,6 +771,23 @@
 - 若已有 **25% 同類傷害加成**：原傷害為 `100 × 1.25 = 125`；效果生效後為 `100 × (1 + 25% + 15%) = 140`，增加 **15 傷害**。
 
 [詳細資料](TALENTS%20Veteran/veteran_ranged_power_out_of_melee.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_no_ammo_consumption_on_lasweapon_crit"></a>
+
+### 突擊隊(Shock Trooper)
+
+<img src="https://github.com/user-attachments/assets/cba2a46d-298c-434a-883d-e048f5ede32d" width="72" height="72" alt="突擊隊天賦圖示">
+
+- **雷射武器的爆擊射擊不消耗彈藥。**
+- 手持該武器且彈匣至少還有 1 發時生效；不必命中敵人。空彈匣無法靠此效果開火。
+
+#### 彈藥算例
+
+- 假設每次射擊原本消耗 1 發，10 次射擊中有 3 次爆擊：共消耗 `(10 − 3) × 1 + 3 × 0 = 7 發`。
+
+[詳細資料](TALENTS%20Veteran/veteran_no_ammo_consumption_on_lasweapon_crit.md) · [返回目錄](#talent-index)
 
 ---
 
