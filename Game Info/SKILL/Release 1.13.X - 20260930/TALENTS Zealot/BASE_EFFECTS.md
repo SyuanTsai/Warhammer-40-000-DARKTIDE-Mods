@@ -110,3 +110,44 @@
 - 本機 Steam Build 25492122 與固定公開來源尚未證實同版。
 
 ---
+
+<a id="zealot_toughness_damage_coherency"></a>
+## 基礎韌性減傷光環
+
+- 天賦識別碼：`zealot_toughness_damage_coherency`。
+
+- **效果**：你與協同範圍內的隊友，受到的韌性傷害降低 7.5%。
+
+- **算例**：100 × (1 − 7.5%) = 92.5 點韌性傷害；不直接減少生命傷害。
+
+- **替換與疊加**：恩賜取代此光環，改為 15% 減傷；不能將兩者相加成 22.5%，多個相同光環也不重複累加。
+
+### 原始碼確認與程式推導
+
+- base_talent 定義把 zealot_coherency_toughness_damage_resistance 設為 coherency buff；0.925 由 talent_settings_2.coherency.toughness_damage_taken_multiplier 提供，定義格式化為 1−0.925=7.5%。
+
+- buff template max_stacks=talent_settings_2.coherency.max_stacks=1、coherency_id=zelot_maniac_coherency_aura、priority=2；改良模板沿用同一 ID 並以 priority=1 勝出。
+
+- coherency daisy-chain 建立時把 unit 自己加入集合；同一 ID 的 buff 由 selector 選擇 priority 數字較小者。
+
+- 接收端若帶有 prevent_coherency_buffs_from_other_players keyword，通用 coherency selector 只採用同一位玩家來源的 aura；這是一般接收端例外，不是此 base aura 賦予的效果。
+
+### 原始碼依據
+
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L779-L801)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L325-L328)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L3283-L3356)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/coherency/coherency_system.lua#L188-L195)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/coherency/unit_coherency_extension.lua#L256-L311)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L779-L827)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L319-L328)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L381-L384)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_taken_calculation.lua#L234-L255)
+
+### 待確認事項
+
+- 100×0.925 是隔離此 aura 的算例；不表示遊戲會在所有來源中以同一順序或同一聚合方式計算其他減傷。
+- 本機 Steam Build 25492122 與固定公開來源尚未證實同版。
+
+---
