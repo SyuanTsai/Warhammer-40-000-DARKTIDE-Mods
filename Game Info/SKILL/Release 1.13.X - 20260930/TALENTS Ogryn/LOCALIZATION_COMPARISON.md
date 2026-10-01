@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [投彈完畢！](#ogryn_box_explodes) | 未見明確矛盾 |
+| [破片炸彈](#ogryn_grenade_frag) | 未見明確矛盾 |
 | [超巨量傷害箱](#ogryn_big_box_of_hurt_more_bombs) | 未見明確矛盾 |
 | [破骨者之環](#ogryn_melee_damage_coherency_improved) | 未見明確矛盾 |
 | [優勝劣汰](#ogryn_damage_vs_suppressed_coherency) | 未見明確矛盾 |
@@ -86,6 +87,13 @@
 - 描述鍵：`loc_talent_bonebreaker_grenade_super_armor_explosion_desc`；hash：`a06fe566`。
 - 結論：未見明確矛盾。同 hash a06fe566 的中英文都描述手雷箱擊中敵人後破開、在目標周圍散出手雷，且是基礎手雷箱的強化版；程式將基礎數量設為 6，數量修改器另加 3。傷害與引信數值是來源補充，不是原文逐字列出的內容。本機 Build 25492122 的繁中與英文文字以相同 hash 配對；公開固定 SHA 是否對應同一 Build 尚未確認。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_box_explodes.md)。
+
+<a id="ogryn_grenade_frag"></a>
+## 破片炸彈(Frag Bomb)
+
+- 描述鍵：`loc_ability_ogryn_grenade_demolition_instakill_desc`；hash：`802d500b`。
+- 結論：未見明確矛盾。同 hash 802d500b 的繁中與英文均說明爆炸半徑 16 公尺、爆心傷害較高，並將必殺對象限定為人類大小且非連長。來源同時設定半徑 16／近距離 2，並將巨獸、連長與歐格林排除在即死標記之外；原文沒有提供具體傷害公式，不視為錯誤。本機 Build 25492122 的繁中與英文文字以相同 hash 配對；公開固定 SHA 是否對應同一 Build 尚未確認。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- [原始碼推導與限制](ogryn_grenade_frag.md)。
 
 <a id="ogryn_big_box_of_hurt_more_bombs"></a>
 ## 超巨量傷害箱(Bigger Box of Hurt)

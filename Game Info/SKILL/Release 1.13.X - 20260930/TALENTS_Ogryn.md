@@ -8,6 +8,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/a7e97984-e57a-4028-ab1b-6e89a0e42fdf" width="32" height="32" alt="投彈完畢！天賦圖示"> [投彈完畢！](#ogryn_box_explodes)<br>- Bombs Away! | <ul><li>選擇「投彈完畢！」後，手雷箱命中敵人會破開並散出 6 顆手雷；搭配「超巨量傷害箱」時為 9 顆。</li><li>最多攜帶 3 箱；散出的手雷各自倒數引爆。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/ce691c05-0701-4539-921b-620c90189fa2" width="32" height="32" alt="破片炸彈天賦圖示"> [破片炸彈](#ogryn_grenade_frag)<br>- Frag Bomb | <ul><li>爆炸半徑 16 公尺，中心 2 公尺傷害較高；最多攜帶 1 顆。</li><li>對符合條件的普通敵人直接致命；巨獸、連長與歐格林按傷害計算。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/13c08b08-ef80-4f04-8a70-cddfa4db7389" width="32" height="32" alt="超巨量傷害箱天賦圖示"> [超巨量傷害箱](#ogryn_big_box_of_hurt_more_bombs)<br>- Bigger Box of Hurt | <ul><li>「超巨量傷害箱」讓「投彈完畢！」命中後散出的手雷增加 3 顆。</li><li>基礎 6 顆加上 3 顆後為 9 顆；增加的是散出數量，不會增加手雷箱的投擲充能。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/78f209fd-3e8b-456d-954d-c67fdf6e23ee" width="32" height="32" alt="破骨者之環天賦圖示"> [破骨者之環](#ogryn_melee_damage_coherency_improved)<br>- Bonebreaker's Aura | <ul><li>「破骨者之環」使你和協同範圍內隊友的近戰攻擊傷害提高 10%。</li><li>這是基礎近戰光環的強化版本，採用 10% 數值，不會再把基礎 7.5% 額外相加。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/4b71152f-747b-450c-9d3a-82a313fc8360" width="32" height="32" alt="優勝劣汰天賦圖示"> [優勝劣汰](#ogryn_damage_vs_suppressed_coherency)<br>- Coward Culling | <ul><li>「優勝劣汰」使你和協同範圍內隊友對受壓制敵人的傷害提高 20%；另使你造成的壓制提高 25%。</li></ul> | 光環 |
@@ -99,6 +100,23 @@
 - **子手雷算例**：一般子手雷爆炸半徑 8 公尺、中心 2 公尺；不計其他修正，中心對無甲目標每顆造成 10 × 1 = 10 點，甲殼為 10 × 0.2 = 2 點。6 顆全部在中心命中同一無甲目標時為 60 點，並不把箱體的 1850 點傷害複製到每顆手雷。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_box_explodes.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_grenade_frag"></a>
+### 破片炸彈(Frag Bomb)
+
+<img src="https://github.com/user-attachments/assets/ce691c05-0701-4539-921b-620c90189fa2" width="72" height="72" alt="破片炸彈天賦圖示">
+
+- **爆炸距離**：爆心 2 公尺內使用近距離傷害設定；2 至 16 公尺之間套用外圍衰減。
+
+- **傷害算例**：只計中心 2 公尺內的一般傷害、標準威力與無其他修正，無甲傷害部分為 1500 × 1 = 1500 點；甲殼倍率取範圍中點 1.025 時，為 1500 × 1.025 = 1537.5 點。符合必殺條件的敵人另依必殺效果處理。
+
+- **引信時序**：未碰撞時約 2 秒引爆；碰撞會重設計時，改採約 0.9 秒的撞擊引信。連續彈跳可能再次重設時間，不能把 2 秒當成每次投出的固定爆炸時刻。
+
+- **補給與必殺**：最多攜帶 1 顆，需要手雷補給，不會按秒自動補充。爆炸命中符合條件的普通敵人會直接致命；巨獸、連長與歐格林不適用這項必殺。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_grenade_frag.md) · [返回目錄](#talent-index)
 
 ---
 
