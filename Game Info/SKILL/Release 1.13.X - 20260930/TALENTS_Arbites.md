@@ -6,6 +6,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="天鷹使節天賦圖示"> [天鷹使節](#adamant_area_buff_drone_improved)<br>- Nuncio-Aquila | <ul><li>部署阿奎拉傳令機，持續 20 秒並影響周圍 7.5 公尺；冷卻 60 秒，單次充能。</li><li>強化版讓盟友每秒恢復 7.5% 韌性，並提高壓制與衝擊、降低後座力，同時免疫暈眩、減速與壓制。</li><li>範圍內敵人受到的傷害提高 15%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/a6716d2d-1100-4bbe-be59-683b5b9176b4" width="32" height="32" alt="電子獒犬與人天賦圖示"> [電子獒犬與人](#adamant_toughness_regen_near_companion)<br>- Man and Cyber-Mastiff | <ul><li>在自己的電子獒犬 8 公尺內，每秒恢復最大韌性的 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/82a4d2c5-a0aa-4c05-a8ea-e03bc0e4932b" width="32" height="32" alt="凋零烈焰天賦圖示"> [凋零烈焰](#adamant_damage_after_reloading)<br>- Withering Fire | <ul><li>換彈後，遠程傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0f0f19ee-07a9-47a6-9acf-599b809569a4" width="32" height="32" alt="審判之錘天賦圖示"> [審判之錘](#adamant_multiple_hits_attack_speed)<br>- Hammer of Judgement | <ul><li>同一次近戰攻擊命中至少 3 名敵人，近戰攻速提高 10%，持續 3 秒。</li></ul> | 技能 |
@@ -55,6 +56,26 @@
 | <img src="https://github.com/user-attachments/assets/2577c784-85c4-473c-b9ba-a88f8de35355" width="32" height="32" alt="震盪攻擊天賦圖示"> [震盪攻擊](#adamant_melee_weakspot_hits_count_as_stagger)<br>- Concussive | <ul><li>近戰命中弱點後，目標在 4 秒內視為處於踉蹌狀態。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/aa78a41a-3cea-4e8d-ba36-4496c3619be7" width="32" height="32" alt="針對弱者天賦圖示"> [針對弱者](#adamant_staggering_enemies_take_more_damage)<br>- Target the Weak | <ul><li>近戰或推擊命中處於踉蹌狀態的敵人，使其承受的近戰傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/96221430-4610-4bf3-9b19-4fd056c99e74" width="32" height="32" alt="還治其人之身天賦圖示"> [還治其人之身](#adamant_perfect_block_damage_boost)<br>- Retaliatory Force | <ul><li>格擋耐力消耗降低 15%；完美格擋後，傷害與攻速提高 15%，持續 8 秒。</li></ul> | 技能 |
+
+---
+
+## 能力
+
+<a id="adamant_area_buff_drone_improved"></a>
+### 天鷹使節(Nuncio-Aquila)
+
+<img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="72" height="72" alt="天鷹使節天賦圖示">
+
+- **部署與冷卻**：瞄準後朝指定方向部署；快速點按會在自身位置部署並跟隨你。傳令機持續 20 秒，範圍 7.5 公尺，冷卻 60 秒。
+
+- **盟友支援**：強化版每秒恢復最大韌性的 7.5%，並提高壓制與衝擊各 30%、降低後座力 25%；同時免疫暈眩、減速及壓制。例如在範圍內連續 2 秒，理論恢復 15% 最大韌性，實際恢復以缺少的韌性為限。
+
+- **敵人受制**：範圍內敵人受到的傷害提高 15%；例如其他條件相同時，原本 100 點傷害按 1.15 倍計算為 115 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_area_buff_drone_improved.md) · [返回目錄](#talent-index)
+
+---
+
 
 ---
 

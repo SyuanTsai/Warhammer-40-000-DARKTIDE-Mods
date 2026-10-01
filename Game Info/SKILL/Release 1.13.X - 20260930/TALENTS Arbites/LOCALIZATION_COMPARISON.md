@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [天鷹使節](#adamant_area_buff_drone_improved) | 未見明確矛盾 |
 | [電子獒犬與人](#adamant_toughness_regen_near_companion) | 未見明確矛盾 |
 | [凋零烈焰](#adamant_damage_after_reloading) | 未見明確矛盾 |
 | [審判之錘](#adamant_multiple_hits_attack_speed) | 未見明確矛盾 |
@@ -57,6 +58,13 @@
 | [震盪攻擊](#adamant_melee_weakspot_hits_count_as_stagger) | 未見明確矛盾 |
 | [針對弱者](#adamant_staggering_enemies_take_more_damage) | 未見明確矛盾 |
 | [還治其人之身](#adamant_perfect_block_damage_boost) | 未見明確矛盾 |
+
+<a id="adamant_area_buff_drone_improved"></a>
+## 天鷹使節(Nuncio-Aquila)
+
+- 描述鍵：`loc_talent_ability_area_buff_drone_new_improved_description`；hash：`1e02d48e`。
+- 結論：未見明確矛盾。繁中「每秒恢復韌性」「對暈眩、減速和壓制效果免疫」分別對應英文「Toughness per second」及「Immune to Stun, Slowdown, and Suppression」；兩文都指出敵人承受更多傷害。
+- [原始碼推導與限制](adamant_area_buff_drone_improved.md)。
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
