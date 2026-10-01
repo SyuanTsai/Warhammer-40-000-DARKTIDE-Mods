@@ -11,6 +11,7 @@
 | <img src="https://github.com/user-attachments/assets/0f0f19ee-07a9-47a6-9acf-599b809569a4" width="32" height="32" alt="審判之錘天賦圖示"> [審判之錘](#adamant_multiple_hits_attack_speed)<br>- Hammer of Judgement | <ul><li>同一次近戰攻擊命中至少 3 名敵人，近戰攻速提高 10%，持續 3 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fc3f3a29-7b71-45d4-aec6-c72036ba9831" width="32" height="32" alt="繩之以法天賦圖示"> [繩之以法](#adamant_elite_special_kills_replenish_toughness)<br>- Target Neutralised | <ul><li>擊殺精英或專家敵人，立即恢復最大韌性的 10%，接著 4 秒再恢復 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/3098a511-fa0f-444e-a9e2-8e6591688115" width="32" height="32" alt="近在眉睫天賦圖示"> [近在眉睫](#adamant_close_kills_restore_toughness)<br>- Up Close | <ul><li>在 12.5 公尺內擊殺敵人，恢復最大韌性的 5%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/898ad4c6-3f99-404d-8ff9-b15a9820f8e9" width="32" height="32" alt="鐵血之志天賦圖示"> [鐵血之志](#adamant_staggers_replenish_toughness)<br>- Force of Will | <ul><li>近戰攻擊的第一個命中目標受到踉蹌時，恢復最大韌性的 7.5%。</li></ul> | 技能 |
 
 ---
 
@@ -78,5 +79,18 @@
 - **恢復算例**：最大韌性 100、沒有其他恢復加成時，每次恢復 100 × 5% = 5 點；目前 98 點時只能補 2 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_close_kills_restore_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_staggers_replenish_toughness"></a>
+### 鐵血之志(Force of Will)
+
+<img src="https://github.com/user-attachments/assets/898ad4c6-3f99-404d-8ff9-b15a9820f8e9" width="72" height="72" alt="鐵血之志天賦圖示">
+
+- **觸發方式**：近戰攻擊使第一個命中的敵人踉蹌時，恢復最大韌性的 7.5%；同一擊掃中更多敵人不增加次數。搭配震盪攻擊時，符合條件的近戰弱點命中也能觸發。
+
+- **恢復算例**：最大韌性 100、無其他恢復加成時，每次恢復 100 × 7.5% = 7.5 點；一擊掃中 3 名敵人仍最多恢復 7.5 點，並受缺額限制。
+
+[詳細資料](TALENTS%20Arbites/adamant_staggers_replenish_toughness.md) · [返回目錄](#talent-index)
 
 ---

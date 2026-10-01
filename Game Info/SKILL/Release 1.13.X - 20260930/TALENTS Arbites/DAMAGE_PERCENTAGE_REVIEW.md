@@ -11,3 +11,4 @@
 | [審判之錘](adamant_multiple_hits_attack_speed.md) | 同一次近戰攻擊命中至少 3 名敵人，近戰攻速提高 10%，持續 3 秒。；完整計算與適用限制見來源文件。 |
 | [繩之以法](adamant_elite_special_kills_replenish_toughness.md) | 擊殺精英或專家敵人，立即恢復最大韌性的 10%，接著 4 秒再恢復 10%。；完整計算與適用限制見來源文件。 |
 | [近在眉睫](adamant_close_kills_restore_toughness.md) | 在 12.5 公尺內擊殺敵人，恢復最大韌性的 5%。；完整計算與適用限制見來源文件。 |
+| [鐵血之志](adamant_staggers_replenish_toughness.md) | 近戰攻擊的第一個命中目標受到踉蹌時，恢復最大韌性的 7.5%。；完整計算與適用限制見來源文件。 |
