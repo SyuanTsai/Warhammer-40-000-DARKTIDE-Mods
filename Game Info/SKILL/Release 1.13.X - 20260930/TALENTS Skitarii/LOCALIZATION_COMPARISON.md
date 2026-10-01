@@ -35,6 +35,7 @@
 | [鋼鐵富足](#cryptic_chordclaw_capacitance_restoration) | 未見明確矛盾 |
 | [千刀萬剮](#cryptic_chordclaw_consecutive_bonus) | 未見明確矛盾 |
 | [洞察之眼](#cryptic_precision_stance_crit_cleave) | 未見明確矛盾 |
+| [精算順序](#cryptic_precision_stance_damage_on_elite_kill) | 未見明確矛盾 |
 | [削切協議](#cryptic_dissector) | 未見明確矛盾；補充計算與限制 |
 | [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
 | [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
@@ -287,6 +288,13 @@
 - 描述鍵：`loc_talent_cryptic_precision_stance_crit_cleave_desc`；hash：`f7e91cd6`。
 - 結論：未見明確矛盾。inventory 的中英文均說明啟動時+30%遠程穿透、+15%暴擊，滿4秒後為+60%及+30%；與兩組條件式模板的設定相符。穿透計算方式未載於本地化，但沒有明確相反描述。
 - [原始碼推導與限制](cryptic_precision_stance_crit_cleave.md)。
+
+<a id="cryptic_precision_stance_damage_on_elite_kill"></a>
+## 精算順序(Calculated Priority)
+
+- 描述鍵：`loc_talent_cryptic_precision_stance_damage_on_elite_kill_desc`；hash：`0da94924`。
+- 結論：未見明確矛盾。繁中與英文都說進階戰鬥教範啟動時，擊殺精英可疊加傷害，並列出每層數值、10秒及5層上限；來源碼另外要求擊殺由遠程攻擊造成。文字未列這項限制，但沒有否定它。
+- [原始碼推導與限制](cryptic_precision_stance_damage_on_elite_kill.md)。
 
 <a id="cryptic_dissector"></a>
 ## 削切協議(Flensing Protocols)

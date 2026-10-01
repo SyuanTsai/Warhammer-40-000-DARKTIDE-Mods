@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/756e60ad-5734-42a4-be62-759096344f67" width="32" height="32" alt="鋼鐵富足天賦圖示"> [鋼鐵富足](#cryptic_chordclaw_capacitance_restoration)<br>- Satiated Steel | <ul><li>弦爪造成近戰擊殺後，在5秒內額外恢復目前戰鬥能力單份成本的25%。</li><li>單份電容量50點時，完整5秒額外恢復12.5點；期間再擊殺會刷新時間，不疊加恢復速率。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/a4bee55e-0868-4104-89c8-e2009e89ae4d" width="32" height="32" alt="千刀萬剮天賦圖示"> [千刀萬剮](#cryptic_chordclaw_consecutive_bonus)<br>- Slice and Dice | <ul><li>每次啟動弦爪技能增加一層弦爪傷害加成，每層20%，上限3層。</li><li>每層持續5秒；新層加入時更新持續時間，最多提供60%弦爪傷害修正。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/bedef96d-1746-44a5-a482-1abe4e5e15c6" width="32" height="32" alt="洞察之眼天賦圖示"> [洞察之眼](#cryptic_precision_stance_crit_cleave)<br>- Piercing Sight | <ul><li>進階戰鬥教範啟用時，遠程順劈增加30%、遠程暴擊率增加15個百分點。</li><li>持續4秒後提高至60%順劈與30個百分點暴擊率；關閉能力即失去加成。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/9cbfaa3e-c8bf-42b8-98a4-5e5c6ee9c033" width="32" height="32" alt="精算順序天賦圖示"> [精算順序](#cryptic_precision_stance_damage_on_elite_kill)<br>- Calculated Priority | <ul><li>進階戰鬥教範啟動期間，以遠程攻擊擊殺精英會增加一層傷害加成。</li><li>每層提高5%傷害、持續10秒，最多5層；達到上限時最多為25%，再次取得層數會刷新持續時間。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/856a3399-5f26-40e1-988e-8960086a92c9" width="32" height="32" alt="削切協議天賦圖示"> [削切協議](#cryptic_dissector)<br>- Flensing Protocols | <ul><li>初始6層，每層傷害增加2.5%、韌性傷害減免2.5%；滿層各為15%。</li><li>受到生命或韌性傷害時失去1層，每秒最多一次；精英或專家擊殺補2層，並恢復最大韌性15%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5" width="32" height="32" alt="極限電容天賦圖示"> [極限電容](#cryptic_redline)<br>- Redline Capacitors | <ul><li>每消耗或補回一份戰鬥技能充能，獲得5%韌性傷害減免與5%電容量自然恢復加成；最多4層。</li><li>新增層會重設12秒倒數，之後每12秒失去1層；戰鬥技能充能上限增加1份。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3" width="32" height="32" alt="能量超載天賦圖示"> [能量超載](#cryptic_overload_keystone)<br>- Power Overload | <ul><li>你與協同中的隊友擊殺一般敵人獲得1層，精英或專家獲得2層；達30層觸發過載並歸零。</li><li>過載使你與協同中的隊友獲得15%傷害加成及15%韌性傷害減免，持續8秒。</li></ul> | 鑰石 |
@@ -524,6 +525,23 @@
 - **持續條件**：能力關閉後失去兩項加成；再次啟用需重新等待4秒。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_precision_stance_crit_cleave.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_precision_stance_damage_on_elite_kill"></a>
+### 精算順序(Calculated Priority)
+
+<img src="https://github.com/user-attachments/assets/9cbfaa3e-c8bf-42b8-98a4-5e5c6ee9c033" width="72" height="72" alt="精算順序天賦圖示">
+
+- **運作方式**：進階戰鬥教範啟動時，以遠程攻擊擊殺精英敵人可獲得一層5%傷害加成，持續10秒。
+
+- **運作方式**：最多累積5層，也就是5×5%=25%傷害加成；再次取得層數會刷新這項加成的10秒持續時間。
+
+- **傷害算例**：5層共增加5 × 5% = 25%。沒有其他加成時，100 × (1 + 25%) = 125點；若同階段原有20%，則為100 × (1 + 20% + 25%) = 145點。
+
+- **持續時間**：關閉能力後，已取得的增傷仍保留至自身10秒倒數結束；之後的擊殺不再增加此效果。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_precision_stance_damage_on_elite_kill.md) · [返回目錄](#talent-index)
 
 ---
 
