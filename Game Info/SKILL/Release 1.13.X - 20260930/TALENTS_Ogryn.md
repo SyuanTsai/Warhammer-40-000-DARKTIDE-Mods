@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/a9ec95cc-0b91-4558-81b5-faefcf1207d7" width="32" height="32" alt="激鬥戰火天賦圖示"> [激鬥戰火](#ogryn_blo_wield_speed)<br>- Heat of Battle | <ul><li>「激鬥戰火」讓爆限超載每層另增加 1.5% 遠程射速。</li><li>沿用遠程擊殺累積的 10 層、每次加層刷新 10 秒；滿層增加 15% 遠程射速。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5c8fc9b0-2f06-4311-87f7-511d4c6ce6d5" width="32" height="32" alt="退後！天賦圖示"> [退後！](#ogryn_blo_melee)<br>- Back Off! | <ul><li>近戰擊殺可提高下一次射擊觸發幸運子彈的機率，每層增加 10 個百分點。</li><li>最多累積 10 層；下一次射擊後清空，該次即使觸發幸運子彈而免耗彈藥也會消耗層數。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9c42800c-a3bc-469c-be04-1231b90bca3b" width="32" height="32" alt="強力劈砍天賦圖示"> [強力劈砍](#ogryn_heavy_hitter_cleave)<br>- Great Cleaver | <ul><li>重拳出擊每層增加 12.5% 近戰順劈容量。</li><li>最多 8 層；滿層使可順劈容量加倍。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/93481225-465f-4750-a4f3-28602e723b40" width="32" height="32" alt="熱身完畢天賦圖示"> [熱身完畢](#ogryn_heavy_hitter_max_stacks_improves_attack_speed)<br>- Just Getting Started! | <ul><li>「熱身完畢！」在重拳出擊達到 8 層時增加 10% 攻擊速度。</li><li>重拳出擊低於 8 層後，額外攻速消失。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/67294825-4742-461c-8445-8eabf69981d3" width="32" height="32" alt="最好的防禦天賦圖示"> [最好的防禦](#ogryn_multi_heavy_toughness)<br>- The Best Defence | <ul><li>一次近戰攻擊命中至少 2 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bdf5653a-6df6-4998-a781-ae623083055a" width="32" height="32" alt="碾碎它們！天賦圖示"> [碾碎它們！](#ogryn_single_heavy_toughness)<br>- Smash 'Em! | <ul><li>一次近戰攻擊命中恰好 1 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/47f9eea2-c58f-4ed3-8678-e42d2ec1701f" width="32" height="32" alt="關鍵人物天賦圖示"> [關鍵人物](#ogryn_increased_coherency_toughness)<br>- Lynchpin | <ul><li>自身的協同韌性恢復速度提高 100%。</li></ul> | 技能 |
@@ -203,6 +204,21 @@
 - **算例**：4 層增加 50%；滿 8 層時，若武器基礎順劈容量為 10，容量變為 10 × 2 = 20。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_heavy_hitter_cleave.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_heavy_hitter_max_stacks_improves_attack_speed"></a>
+### 熱身完畢(Just Getting Started!)
+
+<img src="https://github.com/user-attachments/assets/93481225-465f-4750-a4f3-28602e723b40" width="72" height="72" alt="熱身完畢天賦圖示">
+
+- **生效條件**：選取「熱身完畢！」並讓重拳出擊達到 8 層，才會獲得此效果。
+
+- **效果**：滿 8 層時增加 10% 攻擊速度；層數低於 8 後增益立即移除。
+
+- **算例**：若某次攻擊原本每秒一次，增加 10% 攻速後，間隔約為 1 ÷ 1.10 = 0.91 秒。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_heavy_hitter_max_stacks_improves_attack_speed.md) · [返回目錄](#talent-index)
 
 ---
 

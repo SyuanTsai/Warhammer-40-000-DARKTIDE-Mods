@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L3-L10)。內部 tree version 25 不等於遊戲發行版號。
 
-完成 58／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 59／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -19,6 +19,7 @@
 | 鑰石 | [激鬥戰火](ogryn_blo_wield_speed.md) / `ogryn_blo_wield_speed` | `node_19d2bd1b-f551-494a-afc5-cb511ae26574` | 完成（核心靜態機制） |
 | 鑰石 | [退後！](ogryn_blo_melee.md) / `ogryn_blo_melee` | `node_79b667e5-d2d2-4ea7-8fed-c24aaacbc86b` | 完成（核心靜態機制） |
 | 鑰石 | [強力劈砍](ogryn_heavy_hitter_cleave.md) / `ogryn_heavy_hitter_cleave` | `node_20a7071e-64d2-4850-b076-3e787bd9f1b1` | 完成（核心靜態機制） |
+| 鑰石 | [熱身完畢](ogryn_heavy_hitter_max_stacks_improves_attack_speed.md) / `ogryn_heavy_hitter_max_stacks_improves_attack_speed` | `node_09aa18e5-c980-46a8-89e9-8c93c778f69f` | 完成（核心靜態機制） |
 | 技能 | [最好的防禦](ogryn_multi_heavy_toughness.md) / `ogryn_multi_heavy_toughness` | `node_219a7391-b6de-459c-83fd-631421d4f150` | 完成（核心靜態機制） |
 | 技能 | [碾碎它們！](ogryn_single_heavy_toughness.md) / `ogryn_single_heavy_toughness` | `node_5e74a121-356d-454e-baca-0739626cbddd` | 完成（核心靜態機制） |
 | 技能 | [關鍵人物](ogryn_increased_coherency_toughness.md) / `ogryn_increased_coherency_toughness` | `node_e4d5b83c-4a0c-4080-9bfb-46f46fbbd8f3` | 完成（核心靜態機制） |
