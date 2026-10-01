@@ -29,3 +29,14 @@
 [原始碼依據與算例條件](adamant_command_dog_with_tag.md)
 
 ---
+
+<a id="adamant_companion_aura"></a>
+## 電子獒犬協同(Companion Aura)
+
+- **協同計算**：基礎被動讓你的電子獒犬加入協同判定，作為隊伍中的協同成員。
+
+- **基礎效果範圍**：此基礎光環本身沒有直接套用韌性減傷等數值；狗的協同資格與額外數值光環是不同效果。
+
+[原始碼依據與算例條件](adamant_companion_aura.md)
+
+---
