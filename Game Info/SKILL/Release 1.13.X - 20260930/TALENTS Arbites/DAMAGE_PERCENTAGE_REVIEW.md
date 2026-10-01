@@ -17,4 +17,5 @@
 | [韌性減傷](base_toughness_damage_reduction_node_buff_medium_1.md) | 韌性減傷增加 10 個百分點。；完整計算與適用限制見來源文件。 |
 | [法務官之鎧](adamant_armor.md) | 最大韌性增加 25 點。；完整計算與適用限制見來源文件。 |
 | [遠程傷害增幅](base_ranged_damage_node_buff_medium_1.md) | 遠程傷害提高 10%。；完整計算與適用限制見來源文件。 |
+| [近戰增幅](base_melee_damage_node_buff_medium_1.md) | 近戰傷害提高 10%。；完整計算與適用限制見來源文件。 |
 | [塑鋼裝甲](adamant_plasteel_plates.md) | 最大韌性增加 25 點。；完整計算與適用限制見來源文件。 |

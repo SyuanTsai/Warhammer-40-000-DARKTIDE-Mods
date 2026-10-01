@@ -19,6 +19,7 @@
 | [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
 | [法務官之鎧](#adamant_armor) | 未見明確矛盾 |
 | [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1) | 未見明確矛盾 |
+| [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
@@ -97,6 +98,13 @@
 - 描述鍵：`loc_talent_ranged_damage_medium_desc`；hash：`d752c671`。
 - 結論：未見明確矛盾。繁中與英文均為對應攻擊類型傷害加成，未見明確矛盾。
 - [原始碼推導與限制](base_ranged_damage_node_buff_medium_1.md)。
+
+<a id="base_melee_damage_node_buff_medium_1"></a>
+## 近戰增幅(Melee Damage Boost)
+
+- 描述鍵：`loc_talent_melee_damage_boost_medium_desc`；hash：`7b5da013`。
+- 結論：未見明確矛盾。繁中與英文均為對應攻擊類型傷害加成，未見明確矛盾。
+- [原始碼推導與限制](base_melee_damage_node_buff_medium_1.md)。
 
 <a id="adamant_plasteel_plates"></a>
 ## 塑鋼裝甲(Plasteel Plates)
