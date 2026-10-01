@@ -10,6 +10,7 @@
 |---|---|
 | [突破重圍](#adamant_charge) | 繁中原文勘誤 |
 | [天鷹使節](#adamant_area_buff_drone_improved) | 未見明確矛盾 |
+| [懲戒者姿態](#adamant_stance) | 未見明確矛盾 |
 | [蒙福軍武](#adamant_stance_ranged_kills_transfer_ammo) | 待同版核對 |
 | [處決令](#adamant_stance_elite_kills_stack_damage) | 未見明確矛盾 |
 | [嗜血殺戮](#adamant_stance_dog_bloodlust) | 未見明確矛盾 |
@@ -99,6 +100,13 @@
 - 描述鍵：`loc_talent_ability_area_buff_drone_new_improved_description`；hash：`1e02d48e`。
 - 結論：未見明確矛盾。繁中「每秒恢復韌性」「對暈眩、減速和壓制效果免疫」分別對應英文「Toughness per second」及「Immune to Stun, Slowdown, and Suppression」；兩文都指出敵人承受更多傷害。
 - [原始碼推導與限制](adamant_area_buff_drone_improved.md)。
+
+<a id="adamant_stance"></a>
+## 懲戒者姿態(Castigator's Stance)
+
+- 描述鍵：`loc_talent_adamant_stance_ability_power_description`；hash：`b712c4e8`。
+- 結論：未見明確矛盾。繁中「受到的傷害減少」與英文「Reduced Damage Taken」一致；兩者也都指出姿態有移動加成、動作減速降低、無法衝刺及啟動時恢復全部韌性。
+- [原始碼推導與限制](adamant_stance.md)。
 
 <a id="adamant_stance_ranged_kills_transfer_ammo"></a>
 ## 蒙福軍武(Blessed Armament)

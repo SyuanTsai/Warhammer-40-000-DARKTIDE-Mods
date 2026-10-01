@@ -7,12 +7,13 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/adamant_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10)。內部 tree version 19 不等於遊戲發行版號。
 
-完成 75／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 76／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
 | 能力 | [突破重圍](adamant_charge.md) / `adamant_charge` | `node_db2750a5-ac31-469f-8e7d-294b6c750b35` | 完成（核心靜態機制） |
 | 能力 | [天鷹使節](adamant_area_buff_drone_improved.md) / `adamant_area_buff_drone_improved` | `node_ccb98e10-453f-425b-8242-9d264faf7b25` | 完成（核心靜態機制） |
+| 能力 | [懲戒者姿態](adamant_stance.md) / `adamant_stance` | `node_f1a66593-132e-4464-9c20-c7a7cf79a4b0` | 完成（核心靜態機制） |
 | 能力 | [蒙福軍武](adamant_stance_ranged_kills_transfer_ammo.md) / `adamant_stance_ranged_kills_transfer_ammo` | `node_c7200201-5541-4b79-bb97-f866d4859bd7` | 完成（核心靜態機制） |
 | 能力 | [處決令](adamant_stance_elite_kills_stack_damage.md) / `adamant_stance_elite_kills_stack_damage` | `node_7de43e6e-167c-4e17-9975-e23e5ef390ec` | 完成（核心靜態機制） |
 | 能力 | [嗜血殺戮](adamant_stance_dog_bloodlust.md) / `adamant_stance_dog_bloodlust` | `node_cbd2062a-c53b-47d8-a07c-3868aa343031` | 完成（核心靜態機制） |

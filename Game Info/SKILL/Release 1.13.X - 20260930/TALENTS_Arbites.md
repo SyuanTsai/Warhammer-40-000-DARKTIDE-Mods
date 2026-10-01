@@ -8,6 +8,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="32" height="32" alt="突破重圍天賦圖示"> [突破重圍](#adamant_charge)<br>- Break the Line | <ul><li>向前猛砸並衝入敵陣；猛砸期間視為格擋，結束後獲得 6 秒傷害與衝擊加成。</li><li>基礎冷卻 20 秒，單次充能。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="天鷹使節天賦圖示"> [天鷹使節](#adamant_area_buff_drone_improved)<br>- Nuncio-Aquila | <ul><li>部署阿奎拉傳令機，持續 20 秒並影響周圍 7.5 公尺；冷卻 60 秒，單次充能。</li><li>強化版讓盟友每秒恢復 7.5% 韌性，並提高壓制與衝擊、降低後座力，同時免疫暈眩、減速與壓制。</li><li>範圍內敵人受到的傷害提高 15%。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/4eb18874-83b0-4e2f-bf2b-c91001a15371" width="32" height="32" alt="懲戒者姿態天賦圖示"> [懲戒者姿態](#adamant_stance)<br>- Castigator's Stance | <ul><li>啟動時恢復全部韌性；進入 10 秒姿態，移動速度提高 15%、威力提高 20%、受到的傷害減少 70%，但不能衝刺。</li><li>冷卻 50 秒，單次充能；姿態結束後，傷害減免再延續 2 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/8c312d8e-8b49-45cd-828e-62cffc6d0a25" width="32" height="32" alt="蒙福軍武天賦圖示"> [蒙福軍武](#adamant_stance_ranged_kills_transfer_ammo)<br>- Blessed Armament | <ul><li>處於懲戒者姿態時，遠程擊殺會從備彈補入彈匣容量的 10%，無條件進位，彈匣不足時只補缺口。</li><li>能力姿態持續 10 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/f7454987-ea7e-474e-bb22-3c3ead9adb1b" width="32" height="32" alt="處決令天賦圖示"> [處決令](#adamant_stance_elite_kills_stack_damage)<br>- Writ of Execution | <ul><li>處於懲戒者姿態時，每擊殺一名精英或專家敵人，傷害提高 7.5%，持續 12 秒，最多 6 層。</li><li>滿層提供 45% 傷害加成；已取得的增益可在姿態結束後繼續倒數。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/27a74ed8-eb51-4774-ae8e-2089aa7b1686" width="32" height="32" alt="嗜血殺戮天賦圖示"> [嗜血殺戮](#adamant_stance_dog_bloodlust)<br>- Bloodlust | <ul><li>啟動懲戒者姿態後，電子獒犬造成的傷害提高 75%，效果維持姿態的 10 秒。</li></ul> | 能力 |
@@ -117,6 +118,23 @@
 - **敵人受制**：範圍內敵人受到的傷害提高 15%；例如其他條件相同時，原本 100 點傷害按 1.15 倍計算為 115 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_area_buff_drone_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_stance"></a>
+### 懲戒者姿態(Castigator's Stance)
+
+<img src="https://github.com/user-attachments/assets/4eb18874-83b0-4e2f-bf2b-c91001a15371" width="72" height="72" alt="懲戒者姿態天賦圖示">
+
+- **啟動與恢復**：啟動時恢復全部韌性；姿態持續 10 秒，基礎冷卻 50 秒。
+
+- **姿態效果**：移動速度提高 15%、威力提高 20%，受到的傷害倍率降至 0.3（減少 70%）；武器動作造成的移動懲罰歸零，但無法衝刺。
+
+- **算例**：韌性由 40/100 啟動時補至 100/100；若原始傷害為 100，單看此技能的 0.3 倍承受倍率，結算為 30。姿態結束後傷害減免另維持 2 秒。
+
+- **威力與移動算例**：單計本效果，原本 500 的威力變成 500 × 1.2 = 600；原本每秒移動 5 公尺變成 5 × 1.15 = 5.75 公尺。威力會再進入傷害、衝擊與順劈的各自公式，不能把三者都直接視為增加 20%。
+
+[詳細資料](TALENTS%20Arbites/adamant_stance.md) · [返回目錄](#talent-index)
 
 ---
 
