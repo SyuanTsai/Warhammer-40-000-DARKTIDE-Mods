@@ -29,6 +29,7 @@
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
 | [追跡法務官](#adamant_dodge_grants_damage) | 未見明確矛盾 |
 | [恰如其分](#adamant_elite_special_kills_reload_speed) | 未見明確矛盾 |
+| [行軍之志](#adamant_movement_speed_on_block) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
@@ -176,3 +177,10 @@
 - 描述鍵：`loc_talent_adamant_elite_special_kills_reload_speed_desc`；hash：`79ad9249`。
 - 結論：未見明確矛盾。繁中「下次換彈」與英文 next reload一致；逐發裝填的消耗時點屬補充。
 - [原始碼推導與限制](adamant_elite_special_kills_reload_speed.md)。
+
+<a id="adamant_movement_speed_on_block"></a>
+## 行軍之志(March)
+
+- 描述鍵：`loc_talent_adamant_movement_speed_on_block_alt_desc`；hash：`f2ea4140`。
+- 結論：未見明確矛盾。繁中「遠程命中」與英文 Ranged Hit 一致；不能因識別碼帶block誤寫成格擋。
+- [原始碼推導與限制](adamant_movement_speed_on_block.md)。
