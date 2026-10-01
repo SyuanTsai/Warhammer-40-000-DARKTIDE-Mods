@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/af78e688-7708-4d00-88f0-913478235d41" width="32" height="32" alt="韌性減傷天賦圖示"> [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1)<br>- Toughness Damage Reduction | <ul><li>韌性減傷增加 10 個百分點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d25eaf26-cb8b-4009-80ac-af75d049fb9f" width="32" height="32" alt="法務官之鎧天賦圖示"> [法務官之鎧](#adamant_armor)<br>- Arbitrator Armour | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/90c9bff4-baf3-4b53-b160-16945870dd88" width="32" height="32" alt="彈藥腰帶天賦圖示"> [彈藥腰帶](#adamant_ammo_belt)<br>- Ammo Belt | <ul><li>備用彈藥容量提高 25%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/4232eef3-1499-4f4c-b2e3-d1416db2ec8e" width="32" height="32" alt="呼吸器天賦圖示"> [呼吸器](#adamant_rebreather)<br>- Rebreather | <ul><li>承受的腐敗降低 20%，毒氣傷害降低 75%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/62b0bee6-3606-40bc-9d78-06f072535e59" width="32" height="32" alt="遠程傷害增幅天賦圖示"> [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1)<br>- Ranged Damage Boost | <ul><li>遠程傷害提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8c224499-f2ca-420c-bcf6-39034e6a35b2" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/170599ce-ad50-4760-93b2-da650c6deac8" width="32" height="32" alt="塑鋼裝甲天賦圖示"> [塑鋼裝甲](#adamant_plasteel_plates)<br>- Plasteel Plates | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
@@ -165,6 +166,19 @@
 - **作用範圍**：增加備彈上限，不增加彈匣容量。
 
 [詳細資料](TALENTS%20Arbites/adamant_ammo_belt.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_rebreather"></a>
+### 呼吸器(Rebreather)
+
+<img src="https://github.com/user-attachments/assets/4232eef3-1499-4f4c-b2e3-d1416db2ec8e" width="72" height="72" alt="呼吸器天賦圖示">
+
+- **腐敗算例**：單計腐敗抗性，原本增加 20 點腐敗時，變成 20 × 0.8 = 16 點。
+
+- **毒氣算例**：單計毒氣減傷，原本造成 100 點傷害的毒氣變成 100 × 0.25 = 25 點；這兩種效果分別作用於腐敗與傷害階段。
+
+[詳細資料](TALENTS%20Arbites/adamant_rebreather.md) · [返回目錄](#talent-index)
 
 ---
 

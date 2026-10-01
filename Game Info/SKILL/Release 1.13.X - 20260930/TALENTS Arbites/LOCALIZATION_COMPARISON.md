@@ -19,6 +19,7 @@
 | [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
 | [法務官之鎧](#adamant_armor) | 未見明確矛盾 |
 | [彈藥腰帶](#adamant_ammo_belt) | 未見明確矛盾 |
+| [呼吸器](#adamant_rebreather) | 未見明確矛盾 |
 | [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
@@ -99,6 +100,13 @@
 - 描述鍵：`loc_talent_adamant_ammo_belt_desc`；hash：`76199c1c`。
 - 結論：未見明確矛盾。繁中「彈藥容量」與英文 Ammo Capacity 相符；實作限定備彈是資訊補充，不列錯誤。
 - [原始碼推導與限制](adamant_ammo_belt.md)。
+
+<a id="adamant_rebreather"></a>
+## 呼吸器(Rebreather)
+
+- 描述鍵：`loc_talent_adamant_rebreather_desc`；hash：`0e416297`。
+- 結論：未見明確矛盾。繁中腐敗抗性／毒氣減傷與英文兩項對象一致；格式以1−倍率輸出20%及75%。
+- [原始碼推導與限制](adamant_rebreather.md)。
 
 <a id="base_ranged_damage_node_buff_medium_1"></a>
 ## 遠程傷害增幅(Ranged Damage Boost)
