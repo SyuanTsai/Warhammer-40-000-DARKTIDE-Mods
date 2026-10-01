@@ -16,6 +16,7 @@
 | [通量導管蓄積](#cryptic_crits_grant_power) | 未見明確矛盾 |
 | [反應爐線圈充能](#cryptic_weakspot_kills_grant_power) | 未見明確矛盾 |
 | [強化能量循環](#cryptic_increased_passive_cooldown_regen) | 未見明確矛盾 |
+| [電容回收迴路](#cryptic_multi_hits_grant_power) | 未見明確矛盾 |
 | [削切協議](#cryptic_dissector) | 未見明確矛盾；補充計算與限制 |
 | [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
 | [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
@@ -131,6 +132,13 @@
 - 描述鍵：`loc_talent_cryptic_increased_passive_cooldown_regen_desc`；hash：`34a7eed6`。
 - 結論：未見明確矛盾。已逐項比對本機同一描述鍵的繁中與英文，觸發、作用方向及數值占位一致；主文補充實際分母、時間與限制，省略細節不列錯誤。
 - [原始碼推導與限制](cryptic_increased_passive_cooldown_regen.md)。
+
+<a id="cryptic_multi_hits_grant_power"></a>
+## 電容回收迴路(Capacitor Reclamation Loop)
+
+- 描述鍵：`loc_talent_cryptic_multi_hits_grant_power_desc`；hash：`998c8ded`。
+- 結論：未見明確矛盾。繁中與英文均寫同一次攻擊命中3名以上敵人後恢復1%，與程式在命中第3個目標時觸發一次相符。0.25秒間隔及1%以單份成本為基準，是原文省略的程式細節，沒有相反描述。
+- [原始碼推導與限制](cryptic_multi_hits_grant_power.md)。
 
 <a id="cryptic_dissector"></a>
 ## 削切協議(Flensing Protocols)
