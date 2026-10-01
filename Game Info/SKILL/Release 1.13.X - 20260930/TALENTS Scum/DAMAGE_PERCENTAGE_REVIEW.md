@@ -99,6 +99,7 @@
 | [抗焦慮藥 II](broker_stimm_concentration_2.md) | 戰鬥能力恢復速度增加 6.25%。；完整計算與適用限制見來源文件。 |
 | [抗焦慮藥 III](broker_stimm_concentration_3.md) | 戰鬥能力恢復速度增加 6.25%。；完整計算與適用限制見來源文件。 |
 | [抗焦慮藥 IV](broker_stimm_concentration_4.md) | 戰鬥能力恢復速度增加 6.25%。；完整計算與適用限制見來源文件。 |
+| [抗焦慮藥 V](broker_stimm_concentration_5a.md) | 戰鬥能力恢復速度增加 25%。；完整計算與適用限制見來源文件。 |
 | [激勵 I](broker_stimm_celerity_1.md) | 攻擊速度增加 4%。；武器切換速度增加 25%。；完整計算與適用限制見來源文件。 |
 | [狂熱](broker_stimm_celerity_5c.md) | 移速與閃避距離增加 10%，閃避速度乘以 1.1；有效閃避次數恢復等待縮短 10%。；完整計算與適用限制見來源文件。 |
 | [激勵 II](broker_stimm_celerity_2.md) | 攻擊速度增加 4%。；武器切換速度增加 25%。；耐力消耗減少 15%。；完整計算與適用限制見來源文件。 |
