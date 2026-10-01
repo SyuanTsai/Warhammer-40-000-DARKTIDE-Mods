@@ -9,6 +9,7 @@
 | <img src="https://github.com/user-attachments/assets/aa116dc7-88d2-450b-bcff-c2dc0bb6b4c0" width="32" height="32" alt="遠程引爆天賦圖示"> [遠程引爆](#adamant_whistle)<br>- Remote Detonation | <ul><li>瞄準並指定敵人後吹響指令，電子獒犬會撲向該目標；指令結算時，以戰犬位置同時觸發電擊呼喊與爆炸。</li><li>最多 2 次充能；每次消耗 1 次，基礎冷卻 50 秒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/9f134d52-bce2-4365-b74c-f93550febf29" width="32" height="32" alt="法務官手榴彈天賦圖示"> [法務官手榴彈](#adamant_grenade_improved)<br>- Arbites Grenade | <ul><li>法務官手榴彈在碰撞時引爆，若未碰撞則引信為 2 秒；最多 4 枚，比基礎手榴彈多 1 枚。</li><li>手榴彈擊殺追蹤器會記錄 0.25 秒內的三殺成就進度；不會因此返還手榴彈。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/db0783ea-1312-4fed-a430-c1be9a87d2e1" width="32" height="32" alt="電能地雷天賦圖示"> [電能地雷](#adamant_shock_mine)<br>- Voltaic Shock Mine | <ul><li>部署後約 1 秒啟動；偵測到敵人後，對 3 公尺內敵人持續施加電擊，作用 15 秒。</li><li>最多攜帶 2 枚；單次電擊維持 3 秒。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/ab5c4535-3182-4aa9-a388-faffff1d0faa" width="32" height="32" alt="小隊之友天賦圖示"> [小隊之友](#adamant_companion_coherency)<br>- Part of the Squad | <ul><li>電子獒犬計入小隊協同；你和協同中的盟友額外減少 7.5% 韌性傷害。</li><li>以單獨這份效果估算，100 點韌性傷害會減為 92.5 點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="32" height="32" alt="突破重圍天賦圖示"> [突破重圍](#adamant_charge)<br>- Break the Line | <ul><li>向前猛砸並衝入敵陣；猛砸期間視為格擋，結束後獲得 6 秒傷害與衝擊加成。</li><li>基礎冷卻 20 秒，單次充能。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="天鷹使節天賦圖示"> [天鷹使節](#adamant_area_buff_drone_improved)<br>- Nuncio-Aquila | <ul><li>部署阿奎拉傳令機，持續 20 秒並影響周圍 7.5 公尺；冷卻 60 秒，單次充能。</li><li>強化版讓盟友每秒恢復 7.5% 韌性，並提高壓制與衝擊、降低後座力，同時免疫暈眩、減速與壓制。</li><li>範圍內敵人受到的傷害提高 15%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/4eb18874-83b0-4e2f-bf2b-c91001a15371" width="32" height="32" alt="懲戒者姿態天賦圖示"> [懲戒者姿態](#adamant_stance)<br>- Castigator's Stance | <ul><li>啟動時恢復全部韌性；進入 10 秒姿態，移動速度提高 15%、威力提高 20%、受到的傷害減少 70%，但不能衝刺。</li><li>冷卻 50 秒，單次充能；姿態結束後，傷害減免再延續 2 秒。</li></ul> | 能力 |
@@ -144,6 +145,24 @@
 - 原文「落地後立即引爆」應為落地後啟動，接著對範圍內敵人持續施加電擊；不是落地瞬間一次爆炸就結束。
 
 [詳細資料](TALENTS%20Arbites/adamant_shock_mine.md) · [返回目錄](#talent-index)
+
+---
+
+
+---
+
+## 光環
+
+<a id="adamant_companion_coherency"></a>
+### 小隊之友(Part of the Squad)
+
+<img src="https://github.com/user-attachments/assets/ab5c4535-3182-4aa9-a388-faffff1d0faa" width="72" height="72" alt="小隊之友天賦圖示">
+
+- **戰犬計入協同**：電子獒犬會被視為小隊協同的一員。
+
+- **韌性防護**：你和協同中的盟友額外獲得 7.5% 韌性傷害減免；只計此效果時，原本 100 點韌性傷害變成 100 × (1 − 0.075) = 92.5 點。若同階段已有 10% 韌性減傷，則為 100 × (1 − 10% − 7.5%) = 82.5 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_companion_coherency.md) · [返回目錄](#talent-index)
 
 ---
 

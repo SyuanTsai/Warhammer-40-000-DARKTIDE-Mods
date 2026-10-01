@@ -11,6 +11,7 @@
 | [遠程引爆](#adamant_whistle) | 未見明確矛盾 |
 | [法務官手榴彈](#adamant_grenade_improved) | 未見明確矛盾 |
 | [電能地雷](#adamant_shock_mine) | 繁中原文勘誤 |
+| [小隊之友](#adamant_companion_coherency) | 未見明確矛盾 |
 | [突破重圍](#adamant_charge) | 繁中原文勘誤 |
 | [天鷹使節](#adamant_area_buff_drone_improved) | 未見明確矛盾 |
 | [懲戒者姿態](#adamant_stance) | 未見明確矛盾 |
@@ -114,6 +115,13 @@
 - 繁中原文短引：扔出一枚落地後立即引爆的{talent_name:%s}。
 - 同源英文：Throw a {talent_name:%s} that activates as it lands.
 - [原始碼推導與限制](adamant_shock_mine.md)。
+
+<a id="adamant_companion_coherency"></a>
+## 小隊之友(Part of the Squad)
+
+- 描述鍵：`loc_talent_adamant_companion_coherency_alt_desc`；hash：`360f5bca`。
+- 結論：未見明確矛盾。繁中寫明機械戰犬計入協同、你和協同盟友獲得額外 7.5% 韌性減傷；英文也描述 Cyber-Mastiff counts towards unit Coherency 並給 Coherency Allies additional 7.5% Toughness Damage Reduction。數值與實際掛載的 -0.075 韌性受傷修正相符。
+- [原始碼推導與限制](adamant_companion_coherency.md)。
 
 <a id="adamant_charge"></a>
 ## 突破重圍(Break the Line)
