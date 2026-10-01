@@ -32,3 +32,12 @@
 [原始碼依據與算例條件](veteran_cover_peeking.md)
 
 ---
+
+## 壓制免疫(Suppression Immunity)
+
+- 不會因敵人的火力壓制而累積壓制效果。
+- 這項免疫不會減少被子彈命中的傷害，也不代表免疫擊退、倒地或其他控制。
+
+[原始碼依據與算例條件](veteran_supression_immunity.md)
+
+---

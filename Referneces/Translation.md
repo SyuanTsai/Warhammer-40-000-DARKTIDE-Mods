@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_supression_immunity` / `veteran_supression_immunity` - 壓制免疫
+  - 英文對應：Suppression Immunity。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1390-L1399)。
+
 - `loc_talent_veteran_cover_peeking` / `veteran_cover_peeking` - 掩體探身
   - 英文對應：Cover Peeking。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
   - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2575-L2584)。
