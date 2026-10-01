@@ -30,6 +30,7 @@
 | <img src="https://github.com/user-attachments/assets/f1f336d8-dc80-46a3-b756-2df08b26f541" width="32" height="32" alt="鮮血受膏天賦圖示"> [鮮血受膏](#zealot_increase_ranged_close_damage)<br>- Anoint in Blood | <ul><li>持用遠程武器時，近距離傷害最多提高 25%；距離增加時遞減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7af1f56a-9932-428e-91c5-47b14836d6cb" width="32" height="32" alt="不屈之志天賦圖示"> [不屈之志](#zealot_uninterruptible_no_slow_heavies)<br>- Unfaltering | <ul><li>重擊蓄力時免疫一般踉蹌，並取消蓄力動作本身的移動減速。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7a00054d-1b7e-448e-a9f3-eee60922b19e" width="32" height="32" alt="靈活還擊天賦圖示"> [靈活還擊](#zealot_stacking_melee_damage_after_dodge)<br>- Riposte | <ul><li>成功閃避後近戰傷害每層提高 5%，最多 3 層，持續 8 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/bcb76321-c69e-466f-b588-a894e8c63443" width="32" height="32" alt="狂熱不懈天賦圖示"> [狂熱不懈](#zealot_sprint_improvements)<br>- Relentless Fervor | <ul><li>衝刺速度提高 10%、耐力消耗降低 10%；連續衝刺 1 秒後免疫減速。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -371,6 +372,19 @@
 - **傷害算例**：3 層共 15%，基礎 100 點變成 100 × (1 + 3 × 5%) = 115 點；已有同階段 20% 加成時，則是 100 × (1 + 20% + 15%) = 135 點。
 
 [詳細資料](TALENTS%20Zealot/zealot_stacking_melee_damage_after_dodge.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_sprint_improvements"></a>
+### 狂熱不懈(Relentless Fervor)
+
+<img src="https://github.com/user-attachments/assets/bcb76321-c69e-466f-b588-a894e8c63443" width="72" height="72" alt="狂熱不懈天賦圖示">
+
+- **運作方式**：衝刺速度提高 10%，衝刺耐力消耗降低 10%。連續衝刺滿 1 秒後免疫減速，停止衝刺就失去這項免疫；下次衝刺重新計時。
+
+- **速度與消耗算例**：若原本衝刺速度為 6 公尺／秒、每秒消耗 2 點耐力，只計此天賦後為 6 × 1.1 = 6.6 公尺／秒、2 × 0.9 = 1.8 點耐力／秒。
+
+[詳細資料](TALENTS%20Zealot/zealot_sprint_improvements.md) · [返回目錄](#talent-index)
 
 ---
 

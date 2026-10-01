@@ -32,6 +32,7 @@
 | [鮮血受膏](#zealot_increase_ranged_close_damage) | 未見明確矛盾 |
 | [不屈之志](#zealot_uninterruptible_no_slow_heavies) | 未見明確矛盾 |
 | [靈活還擊](#zealot_stacking_melee_damage_after_dodge) | 未見明確矛盾 |
+| [狂熱不懈](#zealot_sprint_improvements) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_4) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
@@ -203,6 +204,13 @@
 - 描述鍵：`loc_talent_zealot_stacking_melee_damage_after_dodge_desc`；hash：`b421dbe6`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_stacking_melee_damage_after_dodge.md)。
+
+<a id="zealot_sprint_improvements"></a>
+## 狂熱不懈(Relentless Fervor)
+
+- 描述鍵：`loc_talent_zealot_sprint_improvements_alt_desc`；hash：`490f7206`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_sprint_improvements.md)。
 
 <a id="base_melee_damage_node_buff_medium_4"></a>
 ## 近戰增幅(Melee Damage Boost)
