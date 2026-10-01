@@ -6,6 +6,8 @@
 - [靈能者完整天賦說明](TALENTS_Psyker.md)
 - [狂信徒完整天賦說明](TALENTS_Zealot.md)
 - [歐格林完整天賦說明](TALENTS_Ogryn.md)
+- [法務官完整天賦說明](TALENTS_Arbites.md)
+- [法務官來源、公式與技術索引](TALENTS%20Arbites/README.md)
 - [歐格林來源、公式與技術索引](TALENTS%20Ogryn/README.md)
 - [狂信徒來源、公式與技術索引](TALENTS%20Zealot/README.md)
 - [靈能者來源、公式與技術索引](TALENTS%20Psyker/README.md)
@@ -536,3 +538,119 @@
 | 基礎：基礎減傷與閃避防護 / `ogryn_base_tank_passive` | `ecc2983340e92f9f5c6c21e00307ab4cdc87c2ea` |
 | 基礎：閃避撞擊 / `ogryn_dodge_stagger` | `0c0c4f57b6ec7f91b05dcf85fa895dc04cd302e1` |
 | 基礎：卓越氣場(Towering Presence) / `ogryn_coherency_radius_increase` | `c029ea59e731b640fa69800a09a27645ff54a861` |
+
+## 法務官完成範圍
+
+| 分類 | 完成／當前節點 |
+|---|---|
+| 閃擊 | 3／3 |
+| 光環 | 3／3 |
+| 能力與升級 | 12／12 |
+| 鑰石與升級 | 19／19 |
+| 技能（含 5 個共用屬性節點） | 49／49 |
+| 合計 | **86／86** |
+
+- 沿用老兵主頁、三欄目錄、圖示尺寸、條列算例及逐技能來源文件。86 個節點均有獨立本機提交；單一配置最多分配 30 點，不能同時選滿。零點起始佔位沒有技能效果，不列入計數。
+- [5 項角色基礎效果](TALENTS%20Arbites/BASE_EFFECTS.md)另列並逐項提交。126 個法務官定義中，81 個由技能樹直接使用、5 個屬基礎配置，另 [40 個未被兩份清單直接引用](TALENTS%20Arbites/UNUSED_DEFINITIONS.md)。技能樹還使用 5 個共用屬性定義，合計 86 個可選節點。
+- [繁中原文比對](TALENTS%20Arbites/LOCALIZATION_COMPARISON.md)覆蓋 86 組同鍵／hash 的本機繁中與英文：6 項勘誤放在對應技能下，5 項待同版核對。未列公式或機制細節不視為錯誤。
+- [百分比與算例盤點](TALENTS%20Arbites/DAMAGE_PERCENTAGE_REVIEW.md)涵蓋 86 項，區分堅定不移逐層減傷、巨獸增傷加算、爆擊額外部分、威力、護甲撕裂、自然冷卻與額外恢復。
+- 電子獒犬相關機制追到擁有者事件與攻擊設定；初次撲擊旗標亦存在於對歐格林與巨獸的持續壓制。標記指令已追完玩家輸入、職業標記、獒犬指令管理與選敵流程。
+- 86 張圖示只保存在 [Media-Assets Issue #11](https://github.com/SyuanTsai/Media-Assets/issues/11) 附件；逐張公開下載核對位元組與 SHA-256。主頁目錄 32×32、內文 72×72，來源紀錄放在子文件。
+- 詞表新增「遠程傷害增幅」「順劈加成」「衝擊加成」並列待確認。圖片與完整擷取文本未提交 Git；Extracted Text 維持本機忽略。未修改 MOD Lua、遊戲來源或其他職業文件。
+- 固定機制來源為 Release 1.13.0，本機文字為 Build 25492122，尚未證實同版。未進行遊戲內測試；仍需同版核對獒犬攻擊描述邊界、逐次遠程擊殺補彈、下次近戰受擊減傷的實際作用範圍，以及天鷹使節敵方攻速數值。
+
+### 法務官逐項本機提交
+
+| 項目 | 首次文件提交 | 最近修訂提交 |
+|---|---|---|
+| 遠程引爆 / `adamant_whistle` | `6349c48ae7ff297af74f32b19f509875c3534c34` | `607a141f409addc0c747c9847ac1d9c6b2f3586d` |
+| 法務官手榴彈 / `adamant_grenade_improved` | `05cce7d4b6bf400d088d36284743c0faba7bb07e` | `28cfd417c588cf6663ca01319340bab500015ceb` |
+| 電能地雷 / `adamant_shock_mine` | `867259bb45ae5db50493b9434250a92186b8e6b6` | `867259bb45ae5db50493b9434250a92186b8e6b6` |
+| 小隊之友 / `adamant_companion_coherency` | `f4a596173ac610ac78656395aa7b0de7e3959af1` | `f4a596173ac610ac78656395aa7b0de7e3959af1` |
+| 雷厲風行 / `adamant_reload_speed_aura` | `22f804d54751d836cfadb6a76e1c2dd1c4b45d3a` | `22f804d54751d836cfadb6a76e1c2dd1c4b45d3a` |
+| 鎮壓異己 / `adamant_damage_vs_staggered_aura` | `71a1397fcc62d1967a2d69631db1792f15d586ab` | `71a1397fcc62d1967a2d69631db1792f15d586ab` |
+| 突破重圍 / `adamant_charge` | `8e23795dd7a7f424012f77b9384c03c1664d3c04` | `0058d30c002f6a7920b50640543448e5fdd4b104` |
+| 天鷹使節 / `adamant_area_buff_drone_improved` | `29a947565aa7514ade8f648dc0f741dfe1b0f501` | `c421c9abeecc710550dc180ecaed24539bcf0cda` |
+| 懲戒者姿態 / `adamant_stance` | `ea26a5957e5d4c255733a8b1167dc640aabeab9f` | `ea26a5957e5d4c255733a8b1167dc640aabeab9f` |
+| 蒙福軍武 / `adamant_stance_ranged_kills_transfer_ammo` | `168e8cdfb3eed938475c15a0006495324aa5941c` | `168e8cdfb3eed938475c15a0006495324aa5941c` |
+| 處決令 / `adamant_stance_elite_kills_stack_damage` | `e1e706bcf32badc679a49dc49e0e8a8da32ae64d` | `e1e706bcf32badc679a49dc49e0e8a8da32ae64d` |
+| 嗜血殺戮 / `adamant_stance_dog_bloodlust` | `c3c72c431f87fe73113a2d75d32e6a644c86eac7` | `c3c72c431f87fe73113a2d75d32e6a644c86eac7` |
+| 振奮朗誦 / `adamant_drone_buff_talent` | `031af568b1a6c8a4f09b9e815eb08959c3c8b173` | `7f80ef147f9148f67513f6139eda8848bf11d7cf` |
+| 畏怯正義 / `adamant_drone_debuff_talent` | `784d3891940d8b638639a37ec4c7ea930a398bf9` | `82ad36fabc72a8f2e1db3c1ad2cbf179109bf426` |
+| 懲惡揚善 / `adamant_charge_toughness` | `21bdbae82990de39c7cacb960ad1c7473e1dbb9d` | `21bdbae82990de39c7cacb960ad1c7473e1dbb9d` |
+| 針鋒相對 / `adamant_charge_cooldown_reduction` | `a96ca50f8ff7f49f374ef381506b64e1744fae7e` | `a96ca50f8ff7f49f374ef381506b64e1744fae7e` |
+| 交鋒 / `adamant_charge_longer_distance` | `a0f48e212710f38c92bca83e8ff47bf5b9260562` | `a0f48e212710f38c92bca83e8ff47bf5b9260562` |
+| 殺戮命令 / `adamant_dog_damage_after_ability` | `9965779bbd5fb003160be18b21c80f8dd82cf3dd` | `9965779bbd5fb003160be18b21c80f8dd82cf3dd` |
+| 處刑命令 / `adamant_execution_order` | `b7c06532ff0e6c23563116b15048710ca0980050` | `ebb208fbbad2008a4b79a697e7a77ce7358c1f03` |
+| 終點站令狀 / `adamant_terminus_warrant` | `572d0c2e04946cc9f6924d6094928992c4982162` | `53929561701dd728bbe20539575846f031842342` |
+| 堅定不移 / `adamant_forceful` | `9dfc25c5b6b4c9ac9e37e69e0f5ab479fade7810` | `9dfc25c5b6b4c9ac9e37e69e0f5ab479fade7810` |
+| 孤狼 / `adamant_disable_companion` | `11b259af99a4f6234a3532ca732fe90df489a0f1` | `0ed51b7cbd3538f7de1374281051ba317610bd91` |
+| 律法之志 / `adamant_forceful_toughness_regen_per_stack` | `631e0d3f75df2d38270303a44e90852480f62fb0` | `72f118fc43b209d35bf6fa2b6f35ed6d3d921842` |
+| 堅定意志 / `adamant_forceful_stun_immune_and_block_all` | `957e59bebdd03e3658ff7683ee2d72636fa69476` | `d8517d5c8f1577d6c43b993215edd9c6cc9a28e0` |
+| 鎖定目標 / `adamant_forceful_offensive` | `679f14104b0b0df76df3721cf15020c648e20bf7` | `782d3b2390495ce1a1f4b85c2e3b13f4406326af` |
+| 法務官警覺 / `adamant_forceful_ability_damage` | `18b54f58e4e934db19809f139e85cae08eb375cb` | `c7b280019e78ac1fca265287778635b79e915aa6` |
+| 審判之力 / `adamant_forceful_stagger_on_low_high` | `4ba1231ab3747156b16f60271b6facd14f6237b9` | `b41fcd1c20c590beeee1659dac218a5b28855b50` |
+| 能屈能伸 / `adamant_terminus_warrant_cdr` | `56dbcafeb226b76491b7dc6de7b6025d6d093964` | `e8e9b8dd233fcd6ec32de5aa9ee49c5635ae2b2c` |
+| 終端律令 / `adamant_terminus_warrant_support` | `9eb1503c03e3890a66290bd3e844266229a4662e` | `9a1e5632d57827535f0039f3c6ff797a09090287` |
+| 效率殺手 / `adamant_execution_order_crit` | `daeac2ddffb9dcae39010b4a2ba841a26cf8e1cd` | `daeac2ddffb9dcae39010b4a2ba841a26cf8e1cd` |
+| 生化武器關 / `adamant_execution_order_cdr` | `0a3ed52090aec2cc5f854d88b8ae558a134a0dee` | `9c60ae239d454080b6b1c70360cf93511e0ee82a` |
+| 罪不可赦 / `adamant_execution_order_rending` | `4f488ff9f32be39b7ce14f27b7c191bb397e780c` | `4f488ff9f32be39b7ce14f27b7c191bb397e780c` |
+| 殺戮協議 / `adamant_execution_order_permastack` | `ef36ad864f69d1b4dd3201590042ee6ad9d999d8` | `7af2cfbc69ca1c6ca3fd22cfe692ffc49c7c390a` |
+| 不落人後 / `adamant_pinning_dog_bonus_moving_towards` | `2ef9e690ccd968c00c95ea69c558b2b6029e5789` | `2ef9e690ccd968c00c95ea69c558b2b6029e5789` |
+| 往前進攻！ / `adamant_companion_focus_ranged` | `6dd3b63cf079f1cf6fcc212af04df45309c1d263` | `6dd3b63cf079f1cf6fcc212af04df45309c1d263` |
+| 猛犬出擊 / `adamant_companion_focus_elite` | `d7ff8d0f48c22065e9a326700cd55ca878c30d8b` | `d7ff8d0f48c22065e9a326700cd55ca878c30d8b` |
+| 審判之旨 / `adamant_terminus_warrant_improved_combined` | `c15800f2cafde68c4cf2415b0c6a1991ffdcf16f` | `d3346a12040afb7bfadfef4368480d1939fa78b1` |
+| 電子獒犬與人 / `adamant_toughness_regen_near_companion` | `d27b76992725a91a990dc694917f6f636f34678a` | `d27b76992725a91a990dc694917f6f636f34678a` |
+| 凋零烈焰 / `adamant_damage_after_reloading` | `313ed4f0711af3b2a6587053405a771981490ed2` | `313ed4f0711af3b2a6587053405a771981490ed2` |
+| 審判之錘 / `adamant_multiple_hits_attack_speed` | `f17c938147768211751fa24da165329e8d297f59` | `f17c938147768211751fa24da165329e8d297f59` |
+| 繩之以法 / `adamant_elite_special_kills_replenish_toughness` | `783f3a10e12a08cf844a1e16dda05317dbcd1ee8` | `783f3a10e12a08cf844a1e16dda05317dbcd1ee8` |
+| 近在眉睫 / `adamant_close_kills_restore_toughness` | `c277477215760f31cf0c0b0641ff2f53dbc41935` | `c277477215760f31cf0c0b0641ff2f53dbc41935` |
+| 鐵血之志 / `adamant_staggers_replenish_toughness` | `2effa874b89fd8bfdc3ac1bedc5718594860748c` | `2effa874b89fd8bfdc3ac1bedc5718594860748c` |
+| 電能獠牙 / `adamant_dog_attacks_electrocute` | `727cfc7cf58e734b97dfd18cd914155b4eced5cf` | `727cfc7cf58e734b97dfd18cd914155b4eced5cf` |
+| 走一走治百病 / `adamant_stamina_spent_replenish_toughness` | `ce9d704897c1d5af85562120e90fe1124bc750ef` | `ce9d704897c1d5af85562120e90fe1124bc750ef` |
+| 堅忍不拔 / `adamant_limit_dmg_taken_from_hits` | `85358f71c58a74fa95e31f530ccee7a16471a2eb` | `85358f71c58a74fa95e31f530ccee7a16471a2eb` |
+| 韌性減傷 / `base_toughness_damage_reduction_node_buff_medium_1` | `9e9e045667b464cf7aaf85f7a136f989227e370d` | `9e9e045667b464cf7aaf85f7a136f989227e370d` |
+| 法務官之鎧 / `adamant_armor` | `77b40f48a1b153758af5214b92edbace6d53d88c` | `77b40f48a1b153758af5214b92edbace6d53d88c` |
+| 彈藥腰帶 / `adamant_ammo_belt` | `4b9327d88f88ca0ff7885dddb84b00909c1fbe44` | `4b9327d88f88ca0ff7885dddb84b00909c1fbe44` |
+| 呼吸器 / `adamant_rebreather` | `89c8fcf00993991330906c86c7cf657c53570178` | `89c8fcf00993991330906c86c7cf657c53570178` |
+| 苛政壓制 / `adamant_hitting_multiple_gives_tdr` | `ea47978da94aa532e5acb98edf6f4a4ee2acd719` | `ea47978da94aa532e5acb98edf6f4a4ee2acd719` |
+| 遠程傷害增幅 / `base_ranged_damage_node_buff_medium_1` | `d891e5450de1c1532a9750de4c4f9c729128fc7a` | `d891e5450de1c1532a9750de4c4f9c729128fc7a` |
+| 近戰增幅 / `base_melee_damage_node_buff_medium_1` | `3163872d328967b7f4b6e36333b3ebc726109c2e` | `3163872d328967b7f4b6e36333b3ebc726109c2e` |
+| 重顎獠牙 / `adamant_dog_pounces_bleed_nearby` | `763e99b97fefb7ecc1dbbd1d12318fb41bf54a66` | `763e99b97fefb7ecc1dbbd1d12318fb41bf54a66` |
+| 勢如破竹 / `adamant_damage_reduction_after_elite_kill` | `5e8c89b4b9c50121151152aad41f06ca702f510e` | `5e8c89b4b9c50121151152aad41f06ca702f510e` |
+| 堅守陣線 / `adamant_staggers_reduce_damage_taken` | `5bcb810cf2bdabaa325e0d029610265b4dde576e` | `5bcb810cf2bdabaa325e0d029610265b4dde576e` |
+| 順劈加成 / `base_cleave_node_buff_medium_1` | `b491ef285abc139edc8bbaa121bb7c2a3ce6dcf8` | `b491ef285abc139edc8bbaa121bb7c2a3ce6dcf8` |
+| 衝擊加成 / `base_impact_node_buff_medium_1` | `4043b780cbcb7c9fb84271e62528044dde81c21f` | `4043b780cbcb7c9fb84271e62528044dde81c21f` |
+| 塑鋼裝甲 / `adamant_plasteel_plates` | `f4b8d405602b071b7baac843dbe86772f1493699` | `f4b8d405602b071b7baac843dbe86772f1493699` |
+| 鋒利獠牙 / `adamant_dog_applies_brittleness` | `c950e404d2e084cb24c354ad1249a1b2e995cfaf` | `c950e404d2e084cb24c354ad1249a1b2e995cfaf` |
+| 追跡法務官 / `adamant_dodge_grants_damage` | `2db7f48cf825891ff9bda86a11de97c82e6ffbf4` | `2db7f48cf825891ff9bda86a11de97c82e6ffbf4` |
+| 罪孽判官 / `adamant_stacking_weakspot_strength` | `9c729f8ec7483bc87950bb4373495e6dc0620501` | `9c729f8ec7483bc87950bb4373495e6dc0620501` |
+| 恰如其分 / `adamant_elite_special_kills_reload_speed` | `9055683eac81de0a8b2a083d83567861ba9ac418` | `9055683eac81de0a8b2a083d83567861ba9ac418` |
+| 行軍之志 / `adamant_movement_speed_on_block` | `732b128e2d51d0cbfd3521d407de9836ed6bb450` | `732b128e2d51d0cbfd3521d407de9836ed6bb450` |
+| 無處可逃 / `adamant_elite_special_kills_offensive_boost` | `afcb72fcc85446a837b7055fb78a385ee151b025` | `afcb72fcc85446a837b7055fb78a385ee151b025` |
+| 兵敗如山倒 / `adamant_cleave_after_push` | `3123dbc3636311aa839edfb67014840b158f0203` | `3123dbc3636311aa839edfb67014840b158f0203` |
+| 盾型裝甲 / `adamant_shield_plates` | `d8cde24d83d66cc608ea3b3ccf6f2e2837039240` | `d8cde24d83d66cc608ea3b3ccf6f2e2837039240` |
+| 重如律法 / `adamant_heavy_attacks_increase_damage` | `5133848d0ec1cbd53ac028551eebbe4997aac5b9` | `5133848d0ec1cbd53ac028551eebbe4997aac5b9` |
+| 毀滅打擊 / `adamant_melee_attacks_on_staggered_rend` | `04dccacff9b6712c3addaa317bce914a1a65dabd` | `04dccacff9b6712c3addaa317bce914a1a65dabd` |
+| 狂熱信仰 / `adamant_crit_chance_on_kill` | `470f477a75721de8abb26934af489cf3b7ec00f4` | `470f477a75721de8abb26934af489cf3b7ec00f4` |
+| 制裁重擊 / `adamant_crits_rend` | `e0c9caf8b2e4cb43d9212dcdb84d3a144f6106f7` | `e0c9caf8b2e4cb43d9212dcdb84d3a144f6106f7` |
+| 街頭妙招 / `adamant_dodge_improvement` | `27ba65448396251e367eef518c02b002d4bfae14` | `27ba65448396251e367eef518c02b002d4bfae14` |
+| 巨獸獵人 / `adamant_monster_hunter` | `e149a58d76f1c0da0bf049440d3d5fd47f52b446` | `e149a58d76f1c0da0bf049440d3d5fd47f52b446` |
+| 帝皇之拳 / `adamant_first_melee_hit_increased_damage` | `6a9776274ff122e7c946bdf6308ea0bf0bb5d245` | `6a9776274ff122e7c946bdf6308ea0bf0bb5d245` |
+| 篩選目標 / `adamant_pinning_dog_elite_damage` | `1c4ebd27591f078d48f49ebcf9551598cf65ff2a` | `1c4ebd27591f078d48f49ebcf9551598cf65ff2a` |
+| 擊殺順序 / `adamant_increased_damage_to_high_health` | `988efc48f545c54fef51be7b12f3eb9458252e38` | `988efc48f545c54fef51be7b12f3eb9458252e38` |
+| 猛犬氣場 / `adamant_pinning_dog_kills_buff_allies` | `6ea6289e3c3e61807243f3244d3b7b7a57a4308a` | `6ea6289e3c3e61807243f3244d3b7b7a57a4308a` |
+| 迅疾走位 / `adamant_sprinting_sliding` | `6a5461a98cfd87dd604c7eb46a02be94b277c48d` | `6a5461a98cfd87dd604c7eb46a02be94b277c48d` |
+| 最後通牒 / `adamant_ranged_damage_on_melee_stagger` | `533afbf9a65ebbd3f09827ac60e18bef1a396dc2` | `533afbf9a65ebbd3f09827ac60e18bef1a396dc2` |
+| 秉賦為先 / `adamant_clip_size` | `2540f61110c51f139f4c3a7e0134b3b390c47ef3` | `2540f61110c51f139f4c3a7e0134b3b390c47ef3` |
+| 惡徒退散 / `adamant_damage_vs_suppressed` | `35017225262c0e0910cd3727bf1f46e915abe78d` | `35017225262c0e0910cd3727bf1f46e915abe78d` |
+| 正當手段 / `adamant_stacking_damage` | `08284988174da39e1c013d14b454be45b7e82235` | `08284988174da39e1c013d14b454be45b7e82235` |
+| 壓制武力 / `adamant_staggered_enemies_deal_less_damage` | `4576db7dc28fa7b89756e4d6107caa559e1cfe0e` | `4576db7dc28fa7b89756e4d6107caa559e1cfe0e` |
+| 震盪攻擊 / `adamant_melee_weakspot_hits_count_as_stagger` | `a2d45d4296adfee56476a9160e1cc593375198b7` | `a2d45d4296adfee56476a9160e1cc593375198b7` |
+| 針對弱者 / `adamant_staggering_enemies_take_more_damage` | `e2f8531ccab70ec17bf65e74ce80c85a98134722` | `e2f8531ccab70ec17bf65e74ce80c85a98134722` |
+| 還治其人之身 / `adamant_perfect_block_damage_boost` | `049c490640513962de372738bc14aae73837421d` | `049c490640513962de372738bc14aae73837421d` |
+| 基礎：天鷹使節(Nuncio-Aquila) / `adamant_area_buff_drone` | `91b58e44beaa2c5d070d2bb329d8704ef092963a` | `91b58e44beaa2c5d070d2bb329d8704ef092963a` |
+| 基礎：電子獒犬標記指令 / `adamant_command_dog_with_tag` | `20daa32dfdd2c9ccc657c29b1d8b9d9889fcf222` | `20daa32dfdd2c9ccc657c29b1d8b9d9889fcf222` |
+| 基礎：電子獒犬協同(Companion Aura) / `adamant_companion_aura` | `3520d953423f9374736d5d583e702090bba9ba5a` | `3520d953423f9374736d5d583e702090bba9ba5a` |
+| 基礎：電子獒犬等級增傷(Companion Damage per Level) / `adamant_companion_damage_per_level` | `6ca92daae3bc0ff4e7c18ff7e5d4667e84b48a50` | `6ca92daae3bc0ff4e7c18ff7e5d4667e84b48a50` |
+| 基礎：法務官手榴彈(Arbites Grenade) / `adamant_grenade` | `a809d0c29c6485f2f8df25f83994c1a4179caf51` | `a809d0c29c6485f2f8df25f83994c1a4179caf51` |
