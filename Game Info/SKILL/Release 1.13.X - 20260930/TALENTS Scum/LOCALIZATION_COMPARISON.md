@@ -115,6 +115,7 @@
 | [激勵 V](#broker_stimm_celerity_5a) | 未見明確中英矛盾 |
 | [恢復](#broker_stimm_durability_5b) | 未見明確中英矛盾 |
 | [狂熱](#broker_stimm_concentration_5b) | 待同版核對：文字75%，固定實作56.25% |
+| [集中藥](#broker_stimm_concentration_5c) | 待同版核對：文字75%，固定實作56.25% |
 | [反射](#broker_stimm_celerity_5b) | 未見明確中英矛盾 |
 
 <a id="broker_blitz_flash_grenade_improved"></a>
@@ -869,6 +870,13 @@
 - 描述鍵：`loc_talent_buff_cooldown_on_melee_kills`；hash：`9c1a429b`。
 - 結論：待同版核對：文字75%，固定實作56.25%。同源繁中與英文都使用cooldown=75%參數；固定Buff數值.75又乘配方倍率.75，實際.5625。兩語一致，不能當作繁中翻譯錯誤。
 - [原始碼推導與限制](broker_stimm_concentration_5b.md)。
+
+<a id="broker_stimm_concentration_5c"></a>
+## 集中藥(Klay)
+
+- 描述鍵：`loc_talent_buff_cooldown_on_ranged_kills`；hash：`676aa37d`。
+- 結論：待同版核對：文字75%，固定實作56.25%。同源繁中與英文都使用cooldown=75%參數；固定Buff數值.75又乘配方倍率.75，實際.5625。兩語一致，不能當作繁中翻譯錯誤。
+- [原始碼推導與限制](broker_stimm_concentration_5c.md)。
 
 <a id="broker_stimm_celerity_5b"></a>
 ## 反射(Reflex)

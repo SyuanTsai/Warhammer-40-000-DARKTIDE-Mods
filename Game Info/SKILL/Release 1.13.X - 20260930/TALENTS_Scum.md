@@ -114,6 +114,7 @@
 | <img src="https://github.com/user-attachments/assets/ed3da982-a076-4b67-a1ca-c889ede0ba70" width="32" height="32" alt="激勵 V天賦圖示"> [激勵 V](#broker_stimm_celerity_5a)<br>- Spur V | <ul><li>攻擊速度再增加 4%，並免疫暈眩與減速。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/f238889d-d7aa-45e0-8d16-9726389c7fe8" width="32" height="32" alt="恢復天賦圖示"> [恢復](#broker_stimm_durability_5b)<br>- Regain | <ul><li>藥效期間每秒恢復最大韌性的 5%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/77f46379-3f89-4c81-8240-a0dc288fb868" width="32" height="32" alt="狂熱天賦圖示"> [狂熱](#broker_stimm_concentration_5b)<br>- Hypex | <ul><li>藥效期間近戰擊殺後，戰鬥能力恢復速度額外增加 56.25%，持續 1 秒。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/9707e711-9e62-4b88-9102-fe83ffa29cda" width="32" height="32" alt="集中藥天賦圖示"> [集中藥](#broker_stimm_concentration_5c)<br>- Klay | <ul><li>藥效期間遠程擊殺後，戰鬥能力恢復速度額外增加 56.25%，持續 1 秒。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/21b33eec-94cc-4cea-b531-1ff788ff6bc9" width="32" height="32" alt="反射天賦圖示"> [反射](#broker_stimm_celerity_5b)<br>- Reflex | <ul><li>換彈速度增加 30%，後座不穩定度累積降低 50%。</li></ul> | 興奮劑配方 |
 
 ---
@@ -1843,6 +1844,25 @@
 - **恢復範圍**：只加快戰鬥能力的恢復，不加快專用興奮劑本身；能力自然恢復暫停時，不會自行開始倒數。
 
 [詳細資料](TALENTS%20Scum/broker_stimm_concentration_5b.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_stimm_concentration_5c"></a>
+### 集中藥(Klay)
+
+<img src="https://github.com/user-attachments/assets/9707e711-9e62-4b88-9102-fe83ffa29cda" width="72" height="72" alt="集中藥天賦圖示">
+
+- **配方成本**：5 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
+
+- **觸發方式**：興奮劑生效期間，以遠程攻擊擊殺敵人後，戰鬥能力恢復速度額外增加 56.25%，持續 1 秒。
+
+- **刷新方式**：再次合格擊殺會重新計時 1 秒，不會疊成兩份加成。
+
+- **恢復算例**：前置抗焦慮藥 I～IV 提供 25%，再加這項 56.25%，該秒恢復倍率為 1 + 25% + 56.25% = 1.8125。原本每秒回復 1 秒冷卻，現在該秒回復 1.8125 秒。
+
+- **恢復範圍**：只加快戰鬥能力的恢復，不加快專用興奮劑本身；能力自然恢復暫停時，不會自行開始倒數。
+
+[詳細資料](TALENTS%20Scum/broker_stimm_concentration_5c.md) · [返回目錄](#talent-index)
 
 ---
 
