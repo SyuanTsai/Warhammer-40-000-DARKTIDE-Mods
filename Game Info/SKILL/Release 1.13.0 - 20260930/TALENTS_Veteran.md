@@ -16,6 +16,7 @@
 | 光環 | [火力小分隊(Fire Team)](#veteran_increased_damage_coherency) | 你與協同範圍內的隊友傷害增加 7.5%。 |
 | 光環 | [生存專家(Survivalist)](#veteran_aura_gain_ammo_on_elite_kill_improved) | 你或擁有此光環效果的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備彈上限的彈藥。 |
 | 能力 | [火力齊射(Volley Fire)](#veteran_combat_ability_stance) | 立即切換至遠程武器，進入持續 6 秒的火力齊射；冷卻時間 30 秒。 |
+| 能力 | [滲透(Infiltrate)](#veteran_invisibility_on_combat_ability) | 立即回滿自身韌性，並隱身最多 8 秒；冷卻時間 40 秒。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
@@ -252,6 +253,27 @@
 - 施放後經過 6 秒，姿態結束；沒有其他冷卻效果時，還需約 `30 − 6 = 24 秒`再次使用。
 
 [詳細資料](TALENTS%20Veteran/veteran_combat_ability_stance.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_invisibility_on_combat_ability"></a>
+
+### 滲透(Infiltrate)
+
+<img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="72" height="72" alt="滲透天賦圖示">
+
+- **立即回滿自身韌性，並隱身最多 8 秒；冷卻時間 40 秒。**
+- 隱身時移動速度增加 **25%**。傷害增加 **30%**，並在解除隱身後保留 **8 秒**。
+- 一般開火、近戰命中、投擲手雷或完成救援互動會提早解除隱身。已施加的流血、燃燒等持續傷害不會單憑傷害跳動解除隱身。
+- 解除隱身時，對周圍約 **6 公尺**的敵人施加踉蹌與壓制。冷卻從施放時開始，隱身期間仍會計時。
+
+#### 恢復、傷害與時間算例
+
+- 目前韌性 30／100，施放後回至 100，恢復 `100 − 30 = 70 點`。
+- 只計這次增傷，基礎傷害 100：`100 × 1.3 = 130 傷害`。
+- 若第 3 秒解除隱身，增傷維持到約第 `3 + 8 = 11 秒`；此時距離能力冷卻完成仍約有 `40 − 11 = 29 秒`。
+
+[詳細資料](TALENTS%20Veteran/veteran_invisibility_on_combat_ability.md) · [返回目錄](#talent-index)
 
 ---
 
