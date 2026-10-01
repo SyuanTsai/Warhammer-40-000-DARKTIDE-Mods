@@ -19,6 +19,7 @@
 | <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="預兆天賦圖示"> [預兆](#psyker_aura_crit_chance_aura)<br>- Prescience | <ul><li>你與協同中的隊友的暴擊機率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a" width="32" height="32" alt="占卜者的注視天賦圖示"> [占卜者的注視](#psyker_combat_ability_stance)<br>- Scrier's Gaze | <ul><li>傷害、爆擊與弱點加成，並恢復韌性</li><li>反噬達 100% 結束；累積增傷保留 10 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/8a145b7f-771a-42b6-a809-56650cd24f7e" width="32" height="32" alt="亞空間爆發天賦圖示"> [亞空間爆發](#psyker_discharge_damage_debuff)<br>- Warp Rupture | <ul><li>尖嘯命中的敵人傷害降低 10%</li><li>受到傷害提高 10%，持續 8 秒</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/f9987bfc-f9d7-48d8-9431-8c361223c50e" width="32" height="32" alt="亞空間加速天賦圖示"> [亞空間加速](#psyker_overcharge_increased_movement_speed)<br>- Warp Speed | <ul><li>注視期間增加 20% 移動速度</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="32" height="32" alt="靈能學者光環天賦圖示"> [靈能學者光環](#psyker_2_tier_3_name_2)<br>- Psykinetic's Aura | <ul><li>擊殺精英或專家後，加快能力冷卻</li><li>效果持續 3 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="32" height="32" alt="念力護盾天賦圖示"> [念力護盾](#psyker_combat_ability_force_field)<br>- Telekine Shield | <ul><li>展開護盾，阻擋敵方遠程攻擊</li><li>最長 17.5 秒；冷卻 40 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0" width="32" height="32" alt="庇護所天賦圖示"> [庇護所](#psyker_boost_allies_in_sphere)<br>- Sanctuary | <ul><li>穹頂內每秒恢復 10% 最大韌性</li><li>消散時提供 50% 韌性減傷，持續 5 秒</li></ul> | 能力 |
@@ -246,6 +247,19 @@
 - **傷害算例：**不計其他加成，敵人原本造成 100 點傷害會變成 100 × 0.9 = 90 點；原本承受 100 點則變成 100 × 1.1 = 110 點。
 
 [詳細資料](TALENTS%20Psyker/psyker_discharge_damage_debuff.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_overcharge_increased_movement_speed"></a>
+### 亞空間加速(Warp Speed)
+
+<img src="https://github.com/user-attachments/assets/f9987bfc-f9d7-48d8-9431-8c361223c50e" width="72" height="72" alt="亞空間加速天賦圖示">
+
+- **運作方式：**占卜者的注視生效期間，移動速度增加 20%；注視結束後不再提供此加成。
+
+- **速度算例：**只看此效果，原本每秒移動 5 公尺，變成 5 × (1 + 20%) = 6 公尺。
+
+[詳細資料](TALENTS%20Psyker/psyker_overcharge_increased_movement_speed.md) · [返回目錄](#talent-index)
 
 ---
 

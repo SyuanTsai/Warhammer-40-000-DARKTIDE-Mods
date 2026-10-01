@@ -24,7 +24,7 @@
 | [亞空間爆發](psyker_discharge_damage_debuff.md) | 尖嘯命中的敵人傷害降低 10%；受到傷害提高 10%，持續 8 秒；完整計算與適用限制見來源文件。 |
 | [蔓延火焰](psyker_warpfire_on_shout.md) | 機制與公式待核對。 |
 | [預知未來](psyker_overcharge_weakspot_kill_bonuses.md) | 機制與公式待核對。 |
-| [亞空間加速](psyker_overcharge_increased_movement_speed.md) | 機制與公式待核對。 |
+| [亞空間加速](psyker_overcharge_increased_movement_speed.md) | 注視期間增加 20% 移動速度；完整計算與適用限制見來源文件。 |
 | [靈能學者光環](psyker_2_tier_3_name_2.md) | 擊殺精英或專家後，加快能力冷卻；效果持續 3 秒；完整計算與適用限制見來源文件。 |
 | [現實錨點](psyker_overcharge_reduced_warp_charge.md) | 機制與公式待核對。 |
 | [念力護盾](psyker_combat_ability_force_field.md) | 展開護盾，阻擋敵方遠程攻擊；最長 17.5 秒；冷卻 40 秒；完整計算與適用限制見來源文件。 |
