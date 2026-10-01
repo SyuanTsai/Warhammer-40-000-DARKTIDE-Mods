@@ -83,3 +83,30 @@ psyker_grenade_smite只提供PlayerAbilities.psyker_smite；能力max_charges=0�
 - 本機 Steam Build 25492122 與固定公開來源尚未證實同版；原始碼舊註解不當成已驗證的遊戲文字。
 
 ---
+
+<a id="psyker_aura_ability_cooldown"></a>
+## 基礎光環
+
+- 天賦識別碼：`psyker_aura_ability_cooldown`。
+
+- 你與協同範圍內隊友的戰鬥能力冷卻縮短 7.5%；同一光環不重複疊加。
+- 只計此效果，40 秒冷卻變成 40 × (1 − 7.5%) = 37 秒。先知之眼替換為 10% 縮減時，則為 36 秒，不能把兩者加成相加。
+
+### 原始碼確認與程式推導
+
+psyker_archetype.lua 將 psyker_aura_ability_cooldown 列為 tier 1 基礎天賦。talent definition 以 coherency 模板連結 psyker_aura_ability_cooldown。模板設定 coherency_id、光環分類、max_stacks=talent_settings_3.coherency.max_stacks，並將 combat_ability_resource_cost_per_use_modifier 設為 -0.075；目前最大層數為 1。這表示每次戰鬥能力使用所需的冷卻資源減少 7.5%。
+
+### 原始碼依據
+
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L59-L61)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L850-L868)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2625-L2643)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L305-L309)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1428-L1459)
+
+### 待確認事項
+
+- 此數值來自 resource cost modifier；不同能力的充能、額外修正與實際恢復流程可能改變體感冷卻時間。
+- 本機 Steam Build 25492122 與固定公開來源尚未證實同版；原始碼舊註解不當成已驗證的遊戲文字。
+
+---
