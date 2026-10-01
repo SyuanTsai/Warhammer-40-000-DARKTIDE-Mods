@@ -13,6 +13,7 @@
 | [醫療伺服頭骨](#cryptic_servo_skull_inject_ally) | 未見明確矛盾；補充機制與算例 |
 | [匠師伺服頭骨](#cryptic_servo_skull_improved) | 未見明確矛盾；補充機制與算例 |
 | [過載艾曼納圖斯力場](#cryptic_force_field_duration_increase) | 未見明確矛盾；補充機制與算例 |
+| [動能排斥](#cryptic_force_field_capacitance_restore) | 未見明確矛盾；補充機制與算例 |
 | [心智網指令](#cryptic_servo_skull_improved_tagging) | 未見明確矛盾；補充機制與算例 |
 | [修復協定](#cryptic_precision_stance_toughness_suppression) | 單位用語有誤 |
 | [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased) | 未見明確矛盾 |
@@ -118,6 +119,13 @@
 - 描述鍵：`loc_talent_cryptic_force_field_duration_increase_desc`；hash：`edf9be63`。
 - 結論：未見明確矛盾；補充機制與算例。本分析固定於指定原始碼 SHA；本機 Build 25492122 的繁中說明與來源實作尚未確認為同一 Build。已依來源確認12秒與一次中點爆炸，未將更完整的時間線省略視為翻譯錯誤。
 - [原始碼推導與限制](cryptic_force_field_duration_increase.md)。
+
+<a id="cryptic_force_field_capacitance_restore"></a>
+## 動能排斥(Kinetic Repulsion)
+
+- 描述鍵：`loc_talent_cryptic_force_field_capacitance_restore`；hash：`e9096586`。
+- 結論：未見明確矛盾；補充機制與算例。固定原始碼顯示每次合格攻擊恢復0.025、單次力場累計最多0.75，並恢復戰鬥技能資源；本機 Build 25492122 尚未與固定 SHA 確認同版。繁中描述所省略的攻擊分類與消耗端屬補充細節，不按明確翻譯錯誤處理。
+- [原始碼推導與限制](cryptic_force_field_capacitance_restore.md)。
 
 <a id="cryptic_servo_skull_improved_tagging"></a>
 ## 心智網指令(Noospheric Command)

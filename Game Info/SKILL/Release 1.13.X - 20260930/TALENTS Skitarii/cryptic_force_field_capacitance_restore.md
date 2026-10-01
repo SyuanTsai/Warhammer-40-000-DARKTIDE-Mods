@@ -1,0 +1,43 @@
+# 動能排斥(Kinetic Repulsion)：原始碼依據
+
+[返回玩家說明](../TALENTS_Skitarii.md#cryptic_force_field_capacitance_restore)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_force_field_capacitance_restore)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`cryptic_force_field_capacitance_restore`；名稱鍵：`loc_talent_cryptic_force_field_health_damage_limit`；描述鍵：`loc_talent_cryptic_force_field_capacitance_restore`。
+- 節點：`node_4a240e77-1a0d-4833-ad5c-82bec1eca8c2`；分類：閃擊；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- 這個節點掛載 special rule cryptic_force_field_generates_capacitance_based_on_hits_blocked。力場的 health extension 僅在 attack_type 為 ranged，或 damage_profile.count_as_ranged_attack 為真時增加攻擊計數並進入恢復分支；每次最多增加0.025，單一力場物件的 _capacitance_restored 累積上限為0.75，建立下一個力場物件時歸零。恢復呼叫明確指定 combat_ability 並使用 restore_ability_charge_percentage，因此百分比以一格戰鬥技能充能資源成本為基準，再由共用能力資源系統限制在最大資源內；不是補充閃擊欄位的力場使用次數，也不是按傷害量恢復。若同時擁有「電流抗性」，兩項效果共用相同的遠程攻擊吸收判定，但各自記錄不同資源／輸出。
+
+## 原始碼依據
+
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：892–919](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L892-L919)
+- [scripts/settings/talent/talent_settings_cryptic.lua：164–180](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L164-L180)
+- [scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：24–39](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L24-L39)
+- [scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：68–100](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L68-L100)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1102](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1317–1320](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1317-L1320)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：892–919](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L892-L919)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1912–1935](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1912-L1935)
+
+## 算例條件與待確認事項
+
+- 每次遠程攻擊吸收恢復0.025份電容量，最多0.75份；30次達到上限。
+- 只計遠程攻擊或被標記為遠程的攻擊，不按傷害量計；每次力場最多恢復0.75份。
+- 恢復對象是 combat_ability 電容量，不是艾曼納圖斯力場的使用次數。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`e9096586`。
+- 固定原始碼顯示每次合格攻擊恢復0.025、單次力場累計最多0.75，並恢復戰鬥技能資源；本機 Build 25492122 尚未與固定 SHA 確認同版。繁中描述所省略的攻擊分類與消耗端屬補充細節，不按明確翻譯錯誤處理。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_force_field_capacitance_restore.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
+- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_force_field_capacitance_restore:node_4a240e77-1a0d-4833-ad5c-82bec1eca8c2`。
+- 格式：image/webp；288×288；4386 bytes。
+- SHA-256：`e363f0e10029521b58243be398e8cd1c63c28161f615f102113cd7194ab619bf`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)；[公開圖片](https://github.com/user-attachments/assets/9eb6e468-224f-4d7c-b696-cc58aa08f532)。附件已下載比對位元組與 SHA-256。
