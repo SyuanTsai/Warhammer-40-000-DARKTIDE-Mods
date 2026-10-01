@@ -15,6 +15,7 @@
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
+| 技能 | [求勝心(Competitive Urge)](#veteran_ally_kills_increase_damage) | 隊友擊殺敵人時，有 2.5% 機率使你的傷害、近戰衝擊與壓制效果增加 20%，持續 8 秒。 |
 | 技能 | [擊殺紀錄(Confirmed Kill)](#veteran_elite_kills_replenish_toughness) | 擊殺精英或專家敵人，立即恢復 10% 最大韌性。 |
 | 技能 | [密集隊形訓練(Close Order Drill)](#veteran_reduced_toughness_damage_in_coherency) | 協同範圍內每有 1 名隊友，韌性減傷增加 11%；3 名隊友時達到 33%。 |
 | 技能 | [遠射(Longshot)](#veteran_increased_damage_based_on_range) | 遠程傷害增加 10%；距離越遠，額外再增加最多 15%。 |
@@ -216,6 +217,24 @@
 - 三層後未再觸發：約 **8 秒**後剩 2 層、**16 秒**後剩 1 層、**24 秒**後效果結束。
 
 [詳細資料](TALENTS%20Veteran/veteran_replenish_toughness_on_weakspot_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_ally_kills_increase_damage"></a>
+
+### 求勝心(Competitive Urge)
+
+<img src="https://github.com/user-attachments/assets/284f479c-7f5d-463f-bf50-1003d34b9f5b" width="72" height="72" alt="求勝心天賦圖示">
+
+- **隊友擊殺敵人時，有 2.5% 機率使你的傷害、近戰衝擊與壓制效果增加 20%，持續 8 秒。**
+- 效果不疊層；再次觸發會刷新 8 秒。
+
+#### 傷害與機率算例
+
+- 只計此增益，100 傷害變為 `100 × 1.2 = 120`。
+- 40 次合資格擊殺的期望觸發次數為 `40 × 2.5% = 1 次`，不是保底；第 6 秒再觸發時，持續至約第 `6 + 8 = 14 秒`。
+
+[詳細資料](TALENTS%20Veteran/veteran_ally_kills_increase_damage.md) · [返回目錄](#talent-index)
 
 ---
 

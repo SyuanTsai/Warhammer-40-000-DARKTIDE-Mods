@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_ally_kills_increase_damage` / `veteran_ally_kills_increase_damage` - 求勝心
+  - 英文對應：Competitive Urge。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L775-L830)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_toughness_on_elite_kill` / `veteran_elite_kills_replenish_toughness` - 擊殺紀錄
   - 英文對應：Confirmed Kill。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1480-L1503)；此來源證明識別鍵與天賦關係。
