@@ -10,7 +10,7 @@
 |---|---|
 | [動能撕裂者](#psyker_smite_on_hit) | 已配對；機制待核對 |
 | [顱腦崩裂](#psyker_brain_burst_improved) | 已配對；機制待核對 |
-| [靈能攻擊](#psyker_grenade_throwing_knives) | 已配對；機制待核對 |
+| [靈能攻擊](#psyker_grenade_throwing_knives) | 描述方向吻合，細節未列盡 |
 | [乙太碎片](#psyker_throwing_knives_piercing) | 已配對；機制待核對 |
 | [懲戒](#psyker_grenade_chain_lightning) | 已配對；機制待核對 |
 | [動能共鳴](#psyker_ability_increase_brain_burst_speed) | 效果方向吻合，算例補足速度換算 |
@@ -108,7 +108,7 @@
 ## 靈能攻擊(Assail)
 
 - 描述鍵：`loc_ability_psyker_blitz_throwing_knives_description`；hash：`72fc17b1`。
-- 已配對原文，機制待核對。
+- 結論：描述方向吻合，細節未列盡。繁中原文描述追蹤投射物及甲殼護甲效果較差；原文未列使用次數、資源恢復及瞄準投擲的不同設定，這些屬描述不完整，沒有足以判定翻譯方向錯誤的證據。
 - [原始碼推導與限制](psyker_grenade_throwing_knives.md)。
 
 <a id="psyker_throwing_knives_piercing"></a>

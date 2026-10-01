@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/a0c17626-2777-4302-bc7e-9b3a48aadcd0" width="32" height="32" alt="靈能攻擊天賦圖示"> [靈能攻擊](#psyker_grenade_throwing_knives)<br>- Assail | <ul><li>投擲追蹤敵人的靈能碎片；可瞄準指定目標。</li><li>最多保留 10 次，每 3 秒恢復一次。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9" width="32" height="32" alt="動能共鳴天賦圖示"> [動能共鳴](#psyker_ability_increase_brain_burst_speed)<br>- Kinetic Resonance | <ul><li>使用戰鬥能力後 10 秒內，顱腦崩裂蓄力速度增加 75%，反噬產生量減少 50%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/0519f0ec-0ce9-4846-8ed4-95a0b9c092de" width="32" height="32" alt="衰弱詛咒天賦圖示"> [衰弱詛咒](#psyker_chain_lightning_improved_target_buff)<br>- Enfeeble | <ul><li>你電擊的敵人受到所有來源的傷害提高 10%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e" width="32" height="32" alt="蓄力打擊天賦圖示"> [蓄力打擊](#psyker_chain_lightning_heavy_attacks)<br>- Charged Strike | <ul><li>近戰重擊命中後使敵人電擊 2 秒，電擊期間造成持續傷害。</li></ul> | 閃擊 |
@@ -55,6 +56,25 @@
 ---
 
 ## 閃擊
+
+<a id="psyker_grenade_throwing_knives"></a>
+### 靈能攻擊(Assail)
+
+<img src="https://github.com/user-attachments/assets/a0c17626-2777-4302-bc7e-9b3a48aadcd0" width="72" height="72" alt="靈能攻擊天賦圖示">
+
+- **運作方式**：投擲追蹤目標的靈能碎片；瞄準後可指定敵人，投射速度提高。
+
+- **使用與恢復**：最多保留 10 次使用次數，每次消耗一次，基礎每 3 秒補回一次。各次使用共用恢復進度，依序補回。
+
+- **恢復算例**：無其他恢復修正、從 0 次且無剩餘進度開始，第 3 秒補回 1 次、第 6 秒補回 2 次，補滿 10 次需 3 × 10 = 30 秒。
+
+- **傷害限制**：命中部位、目標護甲及穿透順序會影響傷害；後續穿透目標不能直接套用第一名敵人的傷害。
+
+- **反噬消耗：**一般投擲增加 10 個反噬百分點，瞄準投擲增加 25 個百分點；例如原有 40%，分別變成 50% 或 65%。其他反噬生成修正另外套用。
+
+[詳細資料](TALENTS%20Psyker/psyker_grenade_throwing_knives.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="psyker_ability_increase_brain_burst_speed"></a>
 ### 動能共鳴(Kinetic Resonance)
