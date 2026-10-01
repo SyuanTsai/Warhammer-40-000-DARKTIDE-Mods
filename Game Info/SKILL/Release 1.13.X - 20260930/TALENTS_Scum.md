@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/f92b996b-c59e-4d6b-90ac-a31046be1abd" width="32" height="32" alt="塗讀武裝天賦圖示"> [塗讀武裝](#broker_passive_melee_attacks_apply_toxin)<br>- Coated Weaponry | <ul><li>近戰爆擊命中時，施加 1 層毒素。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6125da40-9e12-4107-bb5b-a8aa330a4b89" width="32" height="32" alt="隨身毒素天賦圖示"> [隨身毒素](#broker_passive_blitz_inflicts_toxin)<br>- Pocket Toxin | <ul><li>閃擊爆炸額外施毒：致盲手雷 3 層、飛彈 6 層、化學手雷 10 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/28aafc63-bbd4-4097-a93f-3fb0d62f8710" width="32" height="32" alt="精準投毒天賦圖示"> [精準投毒](#broker_passive_reduced_damage_by_toxined)<br>- Targeted Toxin | <ul><li>你感染的敵人造成傷害降低 15%；怪物與指定頭目改為降低 30%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/0d36baca-b919-457c-890e-535a0ce33236" width="32" height="32" alt="毒性再生天賦圖示"> [毒性再生](#broker_passive_replenish_toughness_while_toxined_enemies_in_proximity)<br>- Toxic Renewal | <ul><li>15 公尺內每名感染毒素的敵人，每秒恢復 1% 最大韌性，最多計 10 名。</li></ul> | 技能 |
 
 ---
 
@@ -522,5 +523,18 @@
 - **減傷算例**：該敵人原本造成 100 點傷害，單計本效果變成 85；適用 30% 的頭目則為 70。這是降低敵人的輸出，隊友受到該敵人攻擊時也能受益。
 
 [詳細資料](TALENTS%20Scum/broker_passive_reduced_damage_by_toxined.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_replenish_toughness_while_toxined_enemies_in_proximity"></a>
+### 毒性再生(Toxic Renewal)
+
+<img src="https://github.com/user-attachments/assets/0d36baca-b919-457c-890e-535a0ce33236" width="72" height="72" alt="毒性再生天賦圖示">
+
+- **恢復方式**：周圍 15 公尺內，每有一名受毒素感染的敵人，每秒恢復最大韌性的 1%；最多 10 名，不要求由你施毒。
+
+- **恢復算例**：最大韌性 100、附近 4 名感染敵人，每秒恢復 100 × 4 × 1% = 4 點；10 名或更多時，每秒最多 10 點。只缺 3 點時實際只補 3 點。
+
+[詳細資料](TALENTS%20Scum/broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md) · [返回目錄](#talent-index)
 
 ---

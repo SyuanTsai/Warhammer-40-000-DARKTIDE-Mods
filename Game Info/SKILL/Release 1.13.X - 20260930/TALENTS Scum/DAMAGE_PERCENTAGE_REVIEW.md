@@ -40,3 +40,4 @@
 | [塗讀武裝](broker_passive_melee_attacks_apply_toxin.md) | 近戰爆擊命中時，施加 1 層毒素。；完整計算與適用限制見來源文件。 |
 | [隨身毒素](broker_passive_blitz_inflicts_toxin.md) | 閃擊爆炸額外施毒：致盲手雷 3 層、飛彈 6 層、化學手雷 10 層。；完整計算與適用限制見來源文件。 |
 | [精準投毒](broker_passive_reduced_damage_by_toxined.md) | 你感染的敵人造成傷害降低 15%；怪物與指定頭目改為降低 30%。；完整計算與適用限制見來源文件。 |
+| [毒性再生](broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md) | 15 公尺內每名感染毒素的敵人，每秒恢復 1% 最大韌性，最多計 10 名。；完整計算與適用限制見來源文件。 |

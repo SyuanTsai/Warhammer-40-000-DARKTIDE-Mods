@@ -42,6 +42,7 @@
 | [塗讀武裝](#broker_passive_melee_attacks_apply_toxin) | 未見明確矛盾 |
 | [隨身毒素](#broker_passive_blitz_inflicts_toxin) | 未見明確矛盾 |
 | [精準投毒](#broker_passive_reduced_damage_by_toxined) | 未見明確矛盾 |
+| [毒性再生](#broker_passive_replenish_toughness_while_toxined_enemies_in_proximity) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -282,3 +283,10 @@
 - 描述鍵：`loc_talent_broker_passive_reduced_damage_by_toxined_desc`；hash：`615c771b`。
 - 結論：未見明確矛盾。英文寫你感染、繁中省略施毒者；屬條件不完整，依規則不列誤譯。
 - [原始碼推導與限制](broker_passive_reduced_damage_by_toxined.md)。
+
+<a id="broker_passive_replenish_toughness_while_toxined_enemies_in_proximity"></a>
+## 毒性再生(Toxic Renewal)
+
+- 描述鍵：`loc_talent_broker_passive_replenish_toughness_while_toxined_enemies_in_proximity_desc`；hash：`c1d98f78`。
+- 結論：未見明確矛盾。兩語均描述範圍、間隔、每敵人恢復量與上限，未見矛盾。
+- [原始碼推導與限制](broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md)。

@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 34／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 35／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -45,3 +45,4 @@
 | 技能 | [塗讀武裝](broker_passive_melee_attacks_apply_toxin.md) / `broker_passive_melee_attacks_apply_toxin` | `node_82e26378-1ad7-41c9-bd62-db6fee2779f7` | 完成（核心靜態機制） |
 | 技能 | [隨身毒素](broker_passive_blitz_inflicts_toxin.md) / `broker_passive_blitz_inflicts_toxin` | `node_d45a4b7d-86c8-4c79-aa87-a8294787f0ad` | 完成（核心靜態機制） |
 | 技能 | [精準投毒](broker_passive_reduced_damage_by_toxined.md) / `broker_passive_reduced_damage_by_toxined` | `node_088ae839-61d1-45c5-9656-582439b3b638` | 完成（核心靜態機制） |
+| 技能 | [毒性再生](broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md) / `broker_passive_replenish_toughness_while_toxined_enemies_in_proximity` | `node_b2bbbec7-1551-42ea-9d9b-9771eda40654` | 完成（核心靜態機制） |
