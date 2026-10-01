@@ -18,3 +18,4 @@
 | [重毆](ogryn_heavy_bleeds.md) | 造成傷害的近戰命中施加 1 層流血，重擊改為 4 層。；完整計算與適用限制見來源文件。 |
 | [沉重打擊](ogryn_staggering_increases_damage.md) | 近戰或推擊使敵人踉蹌後，其受到的近戰傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [勢不可擋](ogryn_movement_speed_after_ranged_kills.md) | 遠程擊殺後，移動速度提高 20%，持續 3 秒。；完整計算與適用限制見來源文件。 |
+| [彈藥儲存包](ogryn_increased_ammo_reserve.md) | 備彈容量增加 25%，不增加彈匣容量。；完整計算與適用限制見來源文件。 |

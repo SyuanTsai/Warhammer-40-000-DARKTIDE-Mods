@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/dbfbaef7-b829-41cf-96cb-a9d09192cfbd" width="32" height="32" alt="重毆天賦圖示"> [重毆](#ogryn_heavy_bleeds)<br>- Batter | <ul><li>造成傷害的近戰命中施加 1 層流血，重擊改為 4 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/206be198-2a5f-426f-944a-8d85fd74f1d6" width="32" height="32" alt="沉重打擊天賦圖示"> [沉重打擊](#ogryn_staggering_increases_damage)<br>- Hard Knocks | <ul><li>近戰或推擊使敵人踉蹌後，其受到的近戰傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/01fd23cb-46d2-41fa-bfc3-d8b1d17f43a3" width="32" height="32" alt="勢不可擋天賦圖示"> [勢不可擋](#ogryn_movement_speed_after_ranged_kills)<br>- Unstoppable Momentum | <ul><li>遠程擊殺後，移動速度提高 20%，持續 3 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/fab49cb9-e155-47d2-8b8c-2ad8235a0f48" width="32" height="32" alt="彈藥儲存包天賦圖示"> [彈藥儲存包](#ogryn_increased_ammo_reserve)<br>- Ammo Stash | <ul><li>備彈容量增加 25%，不增加彈匣容量。</li></ul> | 技能 |
 
 ---
 
@@ -200,5 +201,20 @@
 - **速度算例**：原本每秒移動 5 公尺，沒有其他修正時變成 5 × 1.2 = 6 公尺／秒；已有同階段 10% 加成時，則為 5 × (1 + 10% + 20%) = 6.5 公尺／秒。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_movement_speed_after_ranged_kills.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_increased_ammo_reserve"></a>
+### 彈藥儲存包(Ammo Stash)
+
+<img src="https://github.com/user-attachments/assets/fab49cb9-e155-47d2-8b8c-2ad8235a0f48" width="72" height="72" alt="彈藥儲存包天賦圖示">
+
+- **效果**：武器備彈上限增加 25%；彈匣容量不因此增加。
+
+- **容量算例**：原備彈上限 200，變成 200 × (1 + 25%) = 250 發；若原上限 101，則 101 × 1.25 = 126.25，無條件捨去小數後為 126 發。
+
+- **計算方式**：其他同階段備彈容量加成相加；依最大備彈比例提供的補給，也會按提高後的上限計算。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_increased_ammo_reserve.md) · [返回目錄](#talent-index)
 
 ---
