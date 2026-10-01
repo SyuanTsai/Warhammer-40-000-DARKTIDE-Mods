@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 固定原始碼 SHA 419fe18d414a618ce0474bd015bab470afb446d6。懲戒左鍵快速動作與右鍵蓄力動作使用不同連鎖時程。每個表列先限制由準星取得的直接根目標數；後續跳躍是各根目標另行向附近敵人擴展，受獨立 max_jumps_at_time、半徑、角度、視線與存活條件限制。電擊效果是 interval buff：每次 tick 間隔在 0.1–0.3 秒間隨機，平均約 0.2 秒；起始攻擊時間會按目標 hit mass 延後，公式為 clamp((target_hit_mass - 1) × 0.1, 0, 2)。tick 傷害在伺服器端使用 500 power level、電擊傷害設定與該目標電擊開始後的時間計算；基礎施放在 5 秒內、蓄力施放在 2 秒內把 charge level 從 0 推到 1，傷害設定的 power-level scalar 由 0.4 線性升至 1。反噬在基礎連鎖啟動後先以 0.75%/0.1 秒累積；充能到滿後按 22.5%/秒累積。蓄力前置動作的模板為 0.8 秒充能、完整該階段增加 5%；所有反噬推導假設沒有其他修正，實際動作時長及增益會改變累積值。
+- 固定原始碼 SHA 419fe18d414a618ce0474bd015bab470afb446d6。懲戒左鍵快速動作與右鍵蓄力動作使用不同連鎖時程。每個表列先限制由準星取得的直接根目標數；後續跳躍是各根目標另行向附近敵人擴展，受獨立 max_jumps_at_time、半徑、角度、視線與存活條件限制。電擊效果是 interval buff：每次 tick 間隔在 0.1–0.3 秒間隨機，平均約 0.2 秒；起始攻擊時間會按目標 hit mass 延後，公式為 clamp((target_hit_mass - 1) × hit_mass_cost, 0, 2)：快速電擊的 hit_mass_cost=0.1，蓄力電擊為0.05。例：hit mass=3 時分別延後0.2秒與0.1秒。直接根目標與後續跳躍的表格時間均相對於動作開始，程式依 time_in_action >= 時間門檻選上限。tick 傷害在伺服器端使用 500 power level、電擊傷害設定與該目標電擊開始後的時間計算；基礎施放在 5 秒內、蓄力施放在 2 秒內把 charge level 從 0 推到 1，傷害設定的 power-level scalar 由 0.4 線性升至 1。反噬在基礎連鎖啟動後先以 0.75%/0.1 秒累積；充能到滿後按 22.5%/秒累積。蓄力前置動作的模板為 0.8 秒充能、完整該階段增加 5%；所有反噬推導假設沒有其他修正，實際動作時長及增益會改變累積值。
 
 ## 原始碼依據
 
@@ -32,6 +32,8 @@
 - [scripts/utilities/attack/power_level.lua：122–134](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/power_level.lua#L122-L134)
 - [scripts/utilities/warp_charge.lua：116–141](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/warp_charge.lua#L116-L141)
 - [scripts/utilities/shared_overheat_and_warp_charge_functions.lua：26–41](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/shared_overheat_and_warp_charge_functions.lua#L26-L41)
+- [scripts/utilities/action/chain_lightning.lua：408–435](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/action/chain_lightning.lua#L408-L435)
+- [scripts/utilities/action/chain_lightning.lua：456–483](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/action/chain_lightning.lua#L456-L483)
 - [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：199–230](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L199-L230)
 - [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：340–372](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L340-L372)
 
