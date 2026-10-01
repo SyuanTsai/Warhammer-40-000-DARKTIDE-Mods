@@ -45,6 +45,7 @@
 | [莫比亞導體](#cryptic_damage_on_ability) | 未見明確矛盾 |
 | [適應性戰鬥校準](#cryptic_cleave_and_impact) | 未見明確矛盾 |
 | [卓越防禦記憶模組](#cryptic_ranged_stacking_toughness) | 未見明確矛盾 |
+| [標記優先聖詩](#cryptic_specials_marking) | 未見明確矛盾 |
 | [守護協議](#cryptic_disabled_allies_defense) | 未見明確矛盾 |
 | [數據感應協定](#cryptic_ally_coherency_defenses) | 受益對象用語有誤 |
 | [精準戰鬥探測儀](#cryptic_next_hit_all_damage_on_dodge) | 未見明確矛盾 |
@@ -312,6 +313,13 @@
 - 描述鍵：`loc_talent_cryptic_ranged_stacking_toughness_desc`；hash：`057bb0ce`。
 - 結論：未見明確矛盾。中英文一致；補充刷新與上限。
 - [原始碼推導與限制](cryptic_ranged_stacking_toughness.md)。
+
+<a id="cryptic_specials_marking"></a>
+## 標記優先聖詩(Target Prioritization Psalms)
+
+- 描述鍵：`loc_talent_cryptic_specials_marking_desc`；hash：`5d780574`。
+- 結論：未見明確矛盾。中英Marked/標記均為概括用字；補充實際為輪廓，不列誤譯。
+- [原始碼推導與限制](cryptic_specials_marking.md)。
 
 <a id="cryptic_disabled_allies_defense"></a>
 ## 守護協議(Protectorate Protocol)

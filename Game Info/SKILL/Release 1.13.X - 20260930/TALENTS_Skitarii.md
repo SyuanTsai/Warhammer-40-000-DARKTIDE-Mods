@@ -43,6 +43,7 @@
 | <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="莫比亞導體天賦圖示"> [莫比亞導體](#cryptic_damage_on_ability)<br>- Moebian Conductor | <ul><li>啟動戰鬥能力後，傷害提高 15%、持續 10 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="適應性戰鬥校準天賦圖示"> [適應性戰鬥校準](#cryptic_cleave_and_impact)<br>- Adaptive Combat Calibration | <ul><li>韌性高於 50%：近戰順劈提高 30%</li><li>韌性不高於 50%：近戰衝擊提高 30%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/deb63065-b15d-498f-a16c-ec7726ca6a22" width="32" height="32" alt="卓越防禦記憶模組天賦圖示"> [卓越防禦記憶模組](#cryptic_ranged_stacking_toughness)<br>- Superior Defence Engrams | <ul><li>遠程擊殺疊層，每層每秒恢復 1% 韌性</li><li>最多 5 層，持續 8 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/f821891a-e246-41c9-ae45-97f93d0b8547" width="32" height="32" alt="標記優先聖詩天賦圖示"> [標記優先聖詩](#cryptic_specials_marking)<br>- Target Prioritization Psalms | <ul><li>顯示 12.5 公尺內專家敵人的輪廓</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/53a3e76f-67fe-4d9e-bff5-7aafaee21065" width="32" height="32" alt="守護協議天賦圖示"> [守護協議](#cryptic_disabled_allies_defense)<br>- Protectorate Protocol | <ul><li>協同隊友失去行動能力時，受到傷害降低 25%</li><li>親自救援後，再給 6 秒減傷與一般硬直免疫</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0bbe1f46-d58e-414d-9ab3-1c8ed0170a41" width="32" height="32" alt="數據感應協定天賦圖示"> [數據感應協定](#cryptic_ally_coherency_defenses)<br>- Data Sensor Protocol | <ul><li>你或協同隊友受到韌性傷害，受傷者恢復 25% 耐力</li><li>受到生命傷害則恢復 25% 韌性，兩類各冷卻 15 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a18e19ec-6cad-4a2c-996b-6e7eddf47195" width="32" height="32" alt="精準戰鬥探測儀天賦圖示"> [精準戰鬥探測儀](#cryptic_next_hit_all_damage_on_dodge)<br>- Precision Combat Augurs | <ul><li>成功閃避後，下次近戰攻擊或射擊傷害提高 15%</li></ul> | 技能 |
@@ -608,6 +609,21 @@
 - **恢復算例**：最大韌性 200、5 層時，每秒恢復 200 × 5 × 1% = 10 點；維持滿層 8 秒共可恢復 80 點，最多補到上限。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_ranged_stacking_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_specials_marking"></a>
+### 標記優先聖詩(Target Prioritization Psalms)
+
+<img src="https://github.com/user-attachments/assets/f821891a-e246-41c9-ae45-97f93d0b8547" width="72" height="72" alt="標記優先聖詩天賦圖示">
+
+- **運作方式**：附近 12.5 公尺內存活的專家敵人會顯示輪廓；不必手動標記。
+
+- **更新方式**：約每 0.25 秒更新一次，敵人離開範圍或死亡後移除輪廓。
+
+- **標記區別**：這是敵人輪廓提示，本身沒有增傷、充能或額外手動標記獎勵。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_specials_marking.md) · [返回目錄](#talent-index)
 
 ---
 
