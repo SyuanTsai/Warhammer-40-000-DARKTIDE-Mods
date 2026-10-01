@@ -11,6 +11,7 @@
 | <img src="https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573" width="32" height="32" alt="懲惡揚善天賦圖示"> [懲惡揚善](#adamant_charge_toughness)<br>- Commendation from Condemnation | <ul><li>衝鋒擊中精英、專家或巨獸時，每名不同目標恢復 20% 韌性與 15% 耐力。</li><li>單次衝鋒最多恢復 100% 韌性及 75% 耐力；同一敵人不重複計算。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/d2b1945d-2300-4993-a649-00c1e3858e0d" width="32" height="32" alt="針鋒相對天賦圖示"> [針鋒相對](#adamant_charge_cooldown_reduction)<br>- Targeted Brutality | <ul><li>衝鋒每次有效命中一般敵人返還 0.5 秒戰鬥技能冷卻；命中精英、專家或巨獸返還 1 秒。</li><li>單次衝鋒最多返還 5 秒冷卻。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="32" height="32" alt="交鋒天賦圖示"> [交鋒](#adamant_charge_longer_distance)<br>- Engage | <ul><li>衝鋒距離由基礎 3.75 公尺增加 3.75 公尺，目標距離上限成為 7.5 公尺。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="32" height="32" alt="殺戮命令天賦圖示"> [殺戮命令](#adamant_dog_damage_after_ability)<br>- Kill Order | <ul><li>使用戰鬥技能後，電子獒犬傷害提高 50%，持續 12 秒；效果生效時再次使用戰鬥技能可刷新。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="孤狼天賦圖示"> [孤狼](#adamant_disable_companion)<br>- Lone Wolf | <ul><li>選取後伺服器端移除電子獒犬，改給自身傷害、攻速、韌性受傷倍率與閃擊充能補給。</li><li>一般手榴彈每 45 秒補 1 顆；使用震撼地雷時每 90 秒補 1 顆；補給只在有缺額時計時。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6208ebde-9eb1-4a4d-923c-823a0e511bf9" width="32" height="32" alt="往前進攻！天賦圖示"> [往前進攻！](#adamant_companion_focus_ranged)<br>- Go Get 'Em! | <ul><li>電子獒犬更偏好選擇遠程敵人，並對遠程敵人增加 50% 傷害。</li><li>選敵評分提高遠程敵人優先度，並擴大遠程焦點的選敵距離。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d61cee49-95ce-43fb-ae8a-b05ba598366b" width="32" height="32" alt="猛犬出擊天賦圖示"> [猛犬出擊](#adamant_companion_focus_elite)<br>- Unleashed Brutality | <ul><li>電子獒犬更偏好精英與專家敵人，並對兩類敵人增加 25% 傷害。</li><li>選敵評分提高精英與專家敵人的優先度。</li></ul> | 鑰石 |
@@ -142,6 +143,21 @@
 - **算例**：3.75 公尺基礎距離 + 3.75 公尺增幅 = 7.5 公尺。實際位移可能因路徑碰撞或中途取消而縮短。
 
 [詳細資料](TALENTS%20Arbites/adamant_charge_longer_distance.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_dog_damage_after_ability"></a>
+### 殺戮命令(Kill Order)
+
+<img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="72" height="72" alt="殺戮命令天賦圖示">
+
+- **啟動效果**：使用戰鬥技能後，電子獒犬獲得 +50% 傷害，持續 12 秒。
+
+- **算例**：電子獒犬原本造成 100 點非流血傷害時，單看此升級為 100×(1+50%)=150 點；若「嗜血殺戮」的 +75% 同時生效且兩者同層累加，則為 100×(1+50%+75%)=225 點，尚未計入敵人防禦。
+
+- **刷新與限制**：再次使用戰鬥技能會重設 12 秒，不會讓這項加成自行疊層；流血傷害不吃這項犬傷害加成。
+
+[詳細資料](TALENTS%20Arbites/adamant_dog_damage_after_ability.md) · [返回目錄](#talent-index)
 
 ---
 

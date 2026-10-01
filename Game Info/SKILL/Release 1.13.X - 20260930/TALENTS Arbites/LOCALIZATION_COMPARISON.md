@@ -13,6 +13,7 @@
 | [懲惡揚善](#adamant_charge_toughness) | 未見明確矛盾 |
 | [針鋒相對](#adamant_charge_cooldown_reduction) | 未見明確矛盾 |
 | [交鋒](#adamant_charge_longer_distance) | 未見明確矛盾 |
+| [殺戮命令](#adamant_dog_damage_after_ability) | 未見明確矛盾 |
 | [孤狼](#adamant_disable_companion) | 未見明確矛盾 |
 | [往前進攻！](#adamant_companion_focus_ranged) | 未見明確矛盾 |
 | [猛犬出擊](#adamant_companion_focus_elite) | 未見明確矛盾 |
@@ -102,6 +103,13 @@
 - 描述鍵：`loc_talent_adamant_charge_longer_distance_desc`；hash：`3945c4ac`。
 - 結論：未見明確矛盾。繁中「距離延長至…公尺」對應英文「distance … increased to …m」；兩者都描述增加後的總距離。
 - [原始碼推導與限制](adamant_charge_longer_distance.md)。
+
+<a id="adamant_dog_damage_after_ability"></a>
+## 殺戮命令(Kill Order)
+
+- 描述鍵：`loc_talent_adamant_dog_damage_after_ability_desc`；hash：`9f9da5ce`。
+- 結論：未見明確矛盾。繁中「使用戰鬥技能後…傷害加成，持續…秒」對應英文「Damage for your Cyber Mastiff…after using your Combat Ability」；觸發、對象與時間一致。
+- [原始碼推導與限制](adamant_dog_damage_after_ability.md)。
 
 <a id="adamant_disable_companion"></a>
 ## 孤狼(Lone Wolf)
