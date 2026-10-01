@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [獻祭手雷](#zealot_flame_grenade) | 明確繁中誤譯 |
 | [不屈靈魂合唱](#zealot_bolstering_prayer) | 待同版核對 |
 | [有信者之怒](#zealot_attack_speed_post_ability) | 跨來源待同版核對 |
 | [神聖事業](#zealot_channel_grants_toughness_damage_reduction) | 原文字串未精確配對 |
@@ -84,6 +85,15 @@
 | [為您撐腰](#zealot_melee_kills_restore_toughness_to_target) | 未見明確矛盾 |
 | [淨化仇恨](#zealot_dmg_vs_burning_electrocuted) | 未見明確矛盾 |
 | [死亡之舞](#zealot_improved_weapon_handling_after_dodge) | 未見明確矛盾 |
+
+<a id="zealot_flame_grenade"></a>
+## 獻祭手雷(Immolation Grenade)
+
+- 描述鍵：`loc_talent_ability_fire_grenade_desc`；hash：`5b720fa5`。
+- 結論：明確繁中誤譯。Build 25492122 對照字串中，英文為 Burning and Staggering，繁中譯成「燃燒並使敵人暈眩」；Translation.md 將 Stagger/Staggering 對應為「踉蹌」，將 Stun 對應為「眩暈」。這是詞義明確不符，但該 build 文字只供翻譯比較，不作機制依據。
+- 繁中原文短引：投擲一枚手雷，在爆炸處形成一層燃燒的液體，燃燒並使敵人暈眩, 同時阻擋他們的道路。針對無護甲敵人最為有效。
+- 同源英文：Throw a grenade that leaves a layer of flaming liquid, Burning and Staggering enemies, and barring their path. Most effective against Unarmoured Enemies.
+- [原始碼推導與限制](zealot_flame_grenade.md)。
 
 <a id="zealot_bolstering_prayer"></a>
 ## 不屈靈魂合唱(Chorus of Spiritual Fortitude)

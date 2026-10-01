@@ -6,6 +6,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/aaab981f-d4ba-4278-b79d-873fccac1faa" width="32" height="32" alt="獻祭手雷天賦圖示"> [獻祭手雷](#zealot_flame_grenade)<br>- Immolation Grenade | <ul><li>最多攜帶 3 枚；引爆後留下持續 15 秒的火焰區域。</li><li>持續灼傷範圍內的敵人；傷害隨難度、護甲和每次隨機值改變。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/4ae30922-3e39-4ded-8e19-35ec595befa0" width="32" height="32" alt="不屈靈魂合唱天賦圖示"> [不屈靈魂合唱](#zealot_bolstering_prayer)<br>- Chorus of Spiritual Fortitude | <ul><li>引導約 3.67 秒，開始時立即脈衝，之後每 0.8 秒一次；基礎冷卻 60 秒。</li><li>每次脈衝作用於本人與協同中的盟友，恢復韌性、提高暫時最大韌性，並賦予免死及眩暈免疫。</li><li>脈衝會踉蹌附近敵人；引導期間另持續恢復韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/bd841f6f-e0ff-4cfa-a3ac-f7d08bfbc80e" width="32" height="32" alt="有信者之怒天賦圖示"> [有信者之怒](#zealot_attack_speed_post_ability)<br>- Fury of the Faithful | <ul><li>向前衝刺，基礎冷卻 30 秒；開始時恢復最多相當於最大韌性 50% 的韌性。</li><li>衝刺後獲得 +20% 攻擊速度；描述顯示 10 秒，執行 buff 時長為 11 秒。</li><li>衝刺後的近戰 buff 最長 3 秒，下一次有效近戰命中獲得 +25% 近戰傷害、+100% 近戰暴擊機率與 +100% 近戰撕裂。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29" width="32" height="32" alt="神聖事業天賦圖示"> [神聖事業](#zealot_channel_grants_toughness_damage_reduction)<br>- Holy Cause | <ul><li>「神聖事業」讓合唱脈衝對本人與協同盟友疊加韌性傷害減免。</li><li>每次脈衝 +8% 韌性傷害減免，最多 5 層，即最高 40%；持續 10 秒，脈衝會刷新時間。</li><li>合唱約 3.67 秒、每 0.8 秒脈衝一次；約 5 次脈衝可累積到上限。</li></ul> | 能力 |
@@ -82,6 +83,32 @@
 | <img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="32" height="32" alt="為您撐腰天賦圖示"> [為您撐腰](#zealot_melee_kills_restore_toughness_to_target)<br>- Got Your Back | <ul><li>近戰擊殺正鎖定隊友的敵人，替隊友恢復 7.5% 最大韌性，自己額外恢復 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8137f892-5370-4a69-b790-556f579414d2" width="32" height="32" alt="淨化仇恨天賦圖示"> [淨化仇恨](#zealot_dmg_vs_burning_electrocuted)<br>- Purifying Hatred | <ul><li>對燃燒或遭電擊的敵人增加 15% 傷害；兩者同時成立可合計 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a007251f-9a21-4822-b2e4-38eac8e0ae56" width="32" height="32" alt="死亡之舞天賦圖示"> [死亡之舞](#zealot_improved_weapon_handling_after_dodge)<br>- Dance of Death | <ul><li>成功閃避後，散布降低 75%、後座累積降低 50%，持續 3 秒。</li></ul> | 技能 |
+
+---
+
+## 閃擊
+
+<a id="zealot_flame_grenade"></a>
+### 獻祭手雷(Immolation Grenade)
+
+<img src="https://github.com/user-attachments/assets/aaab981f-d4ba-4278-b79d-873fccac1faa" width="72" height="72" alt="獻祭手雷天賦圖示">
+
+- **運作方式**：最多攜帶 3 枚；引信為 1.7 秒。引爆時先造成爆炸傷害，接著留下持續 15 秒的火焰區域。
+
+- **持續傷害**：火焰範圍內的敵人每隔約 0.5～1.25 秒受到一次燃燒傷害；每次傷害另在該難度基準的 50%～150% 之間隨機取值。離開火焰後，還會留下持續 1 秒的餘火效果。
+
+- **傷害算例**：假設該難度下，無護甲敵人的單次燃燒基準為 100 點，且沒有其他增傷或減傷，隨機結果為 50% 時造成 100 × 0.5 = 50 點；150% 時則為 100 × 1.5 = 150 點。同條件下，防彈護甲的基準為 75 點，甲殼護甲為 5 點。
+
+- **計算限制**：初次爆炸、站在火焰中的燃燒、離開後的餘火是分開計算的效果。每次傷害與間隔都會變動，不能把上述單次數字直接當成每秒傷害。
+
+#### 繁中原文勘誤
+
+- 繁中原文將英文「Burning and Staggering」寫成「燃燒並使敵人暈眩」；此處應為「燃燒並使敵人踉蹌」，不能把踉蹌當成眩暈。
+
+[詳細資料](TALENTS%20Zealot/zealot_flame_grenade.md) · [返回目錄](#talent-index)
+
+---
+
 
 ---
 
