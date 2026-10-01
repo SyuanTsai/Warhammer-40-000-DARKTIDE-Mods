@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/96e3fb15-c1fd-4702-a6ef-0f69b10931fe" width="32" height="32" alt="資源最佳化聖歌天賦圖示"> [資源最佳化聖歌](#cryptic_redline_extra_max_stacks)<br>- Resource Optimisation Canticles | <ul><li>使戰鬥技能最大充能再增加1道，並將極限電容層數上限由4層提高至5層。</li><li>極限電容每層的韌性減傷仍依原本5%步進；5層時承受的韌性傷害為原始值的75%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/de2e3c8c-8b4c-4859-87d0-c1416c07ef5c" width="32" height="32" alt="強化電容協議天賦圖示"> [強化電容協議](#cryptic_dissector_ability_stacks)<br>- Enhanced Capacitance Protocols | <ul><li>使用戰鬥能力時，將削切協議補至目前上限。</li><li>層數仍沿用削切協議的受傷失層規則，並保留其每層傷害與韌性減傷。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="32" height="32" alt="崇高意圖天賦圖示"> [崇高意圖](#cryptic_dissector_power)<br>- Higher Purpose | <ul><li>精英或專家擊殺額外回復戰鬥技能充能資源2.5%；這是加在護教軍原有的精英／專家擊殺4%回復上，合計6.5%。</li><li>以單份充能為基準；進階戰鬥教範啟用期間不會觸發。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/d199d3e7-4b94-4288-bf17-acbd915bdeaf" width="32" height="32" alt="脈衝延伸天賦圖示"> [脈衝延伸](#cryptic_redline_toughness)<br>- Surge-Extension | <ul><li>每次補回或消耗戰鬥技能充能，在5秒內恢復最大韌性的25%。</li><li>再次觸發會刷新恢復期間，不提高每秒恢復速率；一次變動多份充能仍只觸發一次。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="能量載分配鏈路天賦圖示"> [能量載分配鏈路](#cryptic_crits_grant_tdr)<br>- Power Redistribution Uplink | <ul><li>爆擊命中後，3 秒內恢復 7.5% 韌性</li><li>期間承受的韌性傷害降低 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ea4be2ad-8b84-4e83-a056-993beed7b39c" width="32" height="32" alt="適應性戰鬥記憶體天賦圖示"> [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break)<br>- Adaptive Combat Engram | <ul><li>韌性耗盡後，減少 30% 承受傷害、持續 5 秒</li><li>效果結束後冷卻 15 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4738c3e6-2609-414c-9c00-f50fea4dcef3" width="32" height="32" alt="閃避伺服恢復天賦圖示"> [閃避伺服恢復](#cryptic_successful_dodge_stamina)<br>- Evasive Servo Recovery | <ul><li>成功閃避恢復 10% 耐力</li></ul> | 技能 |
@@ -634,6 +635,21 @@
 - **例外**：「進階戰鬥教範」啟用期間，職業原本的擊殺回充與本天賦的額外回充都會暫停。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_dissector_power.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_redline_toughness"></a>
+### 脈衝延伸(Surge-Extension)
+
+<img src="https://github.com/user-attachments/assets/d199d3e7-4b94-4288-bf17-acbd915bdeaf" width="72" height="72" alt="脈衝延伸天賦圖示">
+
+- **觸發方式**：每次補回或消耗戰鬥技能充能，開始一段5秒韌性恢復；極限電容已達層數上限時仍可觸發。
+
+- **恢復量**：基礎總量為最大韌性的25%，平均每秒5%；例如最大韌性100時，基礎速率是每秒5點，5秒合計25點。
+
+- **再次觸發**：恢復尚未完成時再次觸發，會重新開始5秒倒數並重設剩餘恢復量；若一次充能變化讓極限電容增加2層，仍只啟動一次25%恢復，不是50%。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_redline_toughness.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -42,6 +42,7 @@
 | [資源最佳化聖歌](#cryptic_redline_extra_max_stacks) | 未見明確矛盾 |
 | [強化電容協議](#cryptic_dissector_ability_stacks) | 未見明確矛盾；補充計算與限制 |
 | [崇高意圖](#cryptic_dissector_power) | 未見明確矛盾；補充計算與限制 |
+| [脈衝延伸](#cryptic_redline_toughness) | 未見明確矛盾 |
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
 | [閃避伺服恢復](#cryptic_successful_dodge_stamina) | 未見明確矛盾 |
@@ -332,6 +333,13 @@
 - 描述鍵：`loc_talent_cryptic_dissector_power_desc`；hash：`2baab5a1`。
 - 結論：未見明確矛盾；補充計算與限制。繁中與英文說明精英／專家擊殺額外恢復2.5%電容量；固定版確認額外值並加到職業既有4%精英／專家回復上。中英皆用additional，6.5%總值與單充能分母屬程式推導，不是文字誤譯。
 - [原始碼推導與限制](cryptic_dissector_power.md)。
+
+<a id="cryptic_redline_toughness"></a>
+## 脈衝延伸(Surge-Extension)
+
+- 描述鍵：`loc_talent_cryptic_redline_toughness_clarified_desc`；hash：`5f6b15fb`。
+- 結論：未見明確矛盾。繁中與英文都表示獲得極限電容層數時恢復25%韌性、持續5秒，固定版設定與模板採用相同總量和時間。程式按充能變化事件觸發，且單一事件即使增加多層也只啟動一次恢復；這是實際觸發粒度的補充，未發現足以判定為誤譯的相反描述。
+- [原始碼推導與限制](cryptic_redline_toughness.md)。
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
