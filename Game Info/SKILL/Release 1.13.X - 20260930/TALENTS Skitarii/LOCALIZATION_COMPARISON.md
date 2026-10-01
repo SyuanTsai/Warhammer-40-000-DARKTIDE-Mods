@@ -16,6 +16,7 @@
 | [電流標記陣列](#cryptic_elite_kills_damage) | 作用條件用語有誤 |
 | [絕境中繼](#cryptic_crit_chance_based_on_charge) | 未見明確矛盾 |
 | [弱點分析教義](#cryptic_afflicted_increased_damage) | 未見明確矛盾 |
+| [二元彈道協議](#cryptic_elite_kills_toughness) | 未見明確矛盾 |
 | [液壓衝擊](#cryptic_better_heavies) | 未見明確矛盾 |
 | [槍械技師](#cryptic_auto_reload) | 未見明確矛盾 |
 | [系統電擊](#cryptic_electrocution_applies_brittleness) | 未見明確矛盾 |
@@ -77,6 +78,13 @@
 - 描述鍵：`loc_talent_cryptic_afflicted_increased_damage_desc`；hash：`70e7ba50`。
 - 結論：未見明確矛盾。繁中與英文一致；補充加成作用在自己與刷新方式。
 - [原始碼推導與限制](cryptic_afflicted_increased_damage.md)。
+
+<a id="cryptic_elite_kills_toughness"></a>
+## 二元彈道協議(Binary Ballistics Protocol)
+
+- 描述鍵：`loc_talent_cryptic_elite_kills_toughness_desc`；hash：`46309d46`。
+- 結論：未見明確矛盾。繁中與英文一致；補充持續恢復與刷新。
+- [原始碼推導與限制](cryptic_elite_kills_toughness.md)。
 
 <a id="cryptic_better_heavies"></a>
 ## 液壓衝擊(Hydraulic Impact)

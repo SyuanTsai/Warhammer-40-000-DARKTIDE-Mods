@@ -14,6 +14,7 @@
 | [電流標記陣列](cryptic_elite_kills_damage.md) | 以遠程攻擊擊殺精英，每次提高 5% 傷害；最多 4 層，每 15 秒衰減一層；完整計算與適用限制見來源文件。 |
 | [絕境中繼](cryptic_crit_chance_based_on_charge.md) | 爆擊率增加 6 個百分點；沒有完整電容量時提高至 10 個百分點；完整計算與適用限制見來源文件。 |
 | [弱點分析教義](cryptic_afflicted_increased_damage.md) | 命中電擊、燃燒、靈魂之火、流血或中毒敵人；傷害提高 10%、持續 8 秒；完整計算與適用限制見來源文件。 |
+| [二元彈道協議](cryptic_elite_kills_toughness.md) | 擊殺精英後，3 秒內恢復 15% 韌性；完整計算與適用限制見來源文件。 |
 | [液壓衝擊](cryptic_better_heavies.md) | 蓄力近戰攻擊時不易被一般受擊打斷；近戰重擊傷害提高 15%；完整計算與適用限制見來源文件。 |
 | [槍械技師](cryptic_auto_reload.md) | 裝填速度提高 15%；停止射擊 5 秒後，每秒從備彈填入彈匣容量的 7.5%；完整計算與適用限制見來源文件。 |
 | [系統電擊](cryptic_electrocution_applies_brittleness.md) | 施加或刷新電擊時增加 3 層脆弱；每層 2.5%，持續 5 秒；完整計算與適用限制見來源文件。 |

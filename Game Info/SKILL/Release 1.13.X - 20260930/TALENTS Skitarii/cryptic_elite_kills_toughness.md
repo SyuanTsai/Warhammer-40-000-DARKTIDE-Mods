@@ -1,0 +1,40 @@
+# 二元彈道協議(Binary Ballistics Protocol)：原始碼依據
+
+[返回玩家說明](../TALENTS_Skitarii.md#cryptic_elite_kills_toughness)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_elite_kills_toughness)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`cryptic_elite_kills_toughness`；名稱鍵：`loc_talent_cryptic_elite_kills_toughness`；描述鍵：`loc_talent_cryptic_elite_kills_toughness_desc`。
+- 節點：`node_baf3690d-c727-4388-ba24-bb4c55ef6699`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- on_kill只經on_elite_kill，沒有ranged過濾；allow_proc_while_active，update速率0.15/3。
+
+## 原始碼依據
+
+- [scripts/settings/buff/helper_functions/check_proc_functions.lua：96–109](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L96-L109)
+- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–285](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
+- [scripts/settings/talent/talent_settings_cryptic.lua：402–405](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L402-L405)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：2244–2272](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L2244-L2272)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1817–1835](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1817-L1835)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：808–834](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L808-L834)
+
+## 算例條件與待確認事項
+
+- **恢復算例**：最大韌性 200，每秒 200 × 15% ÷ 3 = 10 點，完整 3 秒共 30 點；若第 2 秒再次觸發，連續 5 秒共可恢復 50 點。
+- 韌性恢復以最大值計算，可受恢復加成影響且補到上限為止；算例固定無其他恢復加成。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`46309d46`。
+- 繁中與英文一致；補充持續恢復與刷新。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/default/cryptic_elite_kills_toughness.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
+- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_elite_kills_toughness:node_baf3690d-c727-4388-ba24-bb4c55ef6699`。
+- 格式：image/webp；288×288；6416 bytes。
+- SHA-256：`1291af28d1cf2073948cf8be3bcb6a07d1323a7a0beecc691ec01075d5498b81`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935653628)；[公開圖片](https://github.com/user-attachments/assets/79eb4aea-82d8-46fb-add1-a4ded8e41cce)。附件已下載比對位元組與 SHA-256。
