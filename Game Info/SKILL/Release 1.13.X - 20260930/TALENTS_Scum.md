@@ -22,6 +22,7 @@
 | <img src="https://github.com/user-attachments/assets/74d4304b-23f7-4666-879b-62c727596b69" width="32" height="32" alt="專注凝神天賦圖示"> [專注凝神](#broker_ability_focus_sub_3)<br>- Focused Resolve | <ul><li>專注期間的近距離遠程擊殺可恢復技能冷卻：一般擊殺 0.5 秒，精英或專家擊殺 1 秒；每次專注最多恢復 5 秒。</li><li>按 45 秒基礎冷卻及每秒自然充能 1 計，恢復至上限相當於最多補回 5 秒資源；不計其他修正，專注結束後自然充能剩 40 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="精準獵殺天賦圖示"> [精準獵殺](#broker_ability_focus_sub_2)<br>- Pick Your Targets | <ul><li>專注期間遠程攻擊加算 +15% 撕裂修正；近距離遠程擊殺每次另疊 3% 遠程傷害，最多 5 層（+15%），每層持續 3 秒並可由新擊殺刷新。</li><li>此撕裂加成作用於護甲計算，擊殺疊層是遠程傷害加算；只計滿層效果時，基礎100點遠程傷害變為115點。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3" width="32" height="32" alt="熟練部署天賦圖示"> [熟練部署](#broker_ability_stimm_field_sub_3)<br>- Practiced Deployment | <ul><li>取得新的可用興奮劑時，補滿一次興奮劑補給的能力充能；能力最多 1 次充能，已滿時不會再增加。</li><li>程式每 0.5 秒檢查興奮劑欄位或自身興奮劑充能是否變為可用，因此觸發會在下一次檢查時補滿。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d" width="32" height="32" alt="腎上腺素狂暴天賦圖示"> [腎上腺素狂暴](#broker_keystone_adrenaline_junkie)<br>- Adrenaline Frenzy | <ul><li>近戰命中獲得 1 層腎上腺素；近戰爆擊額外獲得 1 層。</li><li>2 秒內未獲得新層時，每 2 秒失去 1 層；最多 30 層。</li><li>達 30 層時清除腎上腺素並觸發 10 秒狂暴：近戰攻速 +10%、近戰傷害 +25%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448" width="32" height="32" alt="腎上腺素刺客天賦圖示"> [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1)<br>- Adrenaline Assassin | <ul><li>選用腎上腺素刺客後，一般非弱點近戰命中不給層；近戰弱點命中共給 3 層。</li><li>爆擊仍額外加 1 層，因此近戰弱點爆擊共給 4 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c" width="32" height="32" alt="振奮怒火天賦圖示"> [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3)<br>- Stoked Rage | <ul><li>腎上腺素狂暴的持續時間由 10 秒提高至 20 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce" width="32" height="32" alt="腎上腺素突破天賦圖示"> [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5)<br>- Adrenaline Unbound | <ul><li>狂暴期間每秒恢復最大韌性的 5%。</li></ul> | 鑰石 |
@@ -349,6 +350,25 @@
 ---
 
 ## 鑰石
+
+<a id="broker_keystone_adrenaline_junkie"></a>
+### 腎上腺素狂暴(Adrenaline Frenzy)
+
+<img src="https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d" width="72" height="72" alt="腎上腺素狂暴天賦圖示">
+
+- **觸發**：每次近戰命中獲得 1 層；爆擊在這 1 層之外再加 1 層，所以近戰爆擊一次共得 2 層。
+
+- **層數與衰退**：最多 30 層。每次加層會重設 2 秒計時；若期間沒再加層，先失去 1 層，再從該次移除起重設計時，之後每 2 秒再失去 1 層。
+
+- **達上限**：第 30 層觸發狂暴，腎上腺素堆疊清除。狂暴持續 10 秒，重新觸發時會刷新時間。
+
+- **狂暴速度**：近戰攻速加法倍率從 1 變成 1.1；原本 1 秒的受影響動作約為 1 ÷ 1.1 = 0.91 秒。
+
+- **狂暴傷害**：近戰傷害 +25% 屬加法傷害修正；單計此項，基礎 100 點成為 125 點。
+
+[詳細資料](TALENTS%20Scum/broker_keystone_adrenaline_junkie.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="broker_keystone_adrenaline_junkie_sub_1"></a>
 ### 腎上腺素刺客(Adrenaline Assassin)
