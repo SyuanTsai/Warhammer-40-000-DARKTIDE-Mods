@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 79／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 80／109 項核心靜態機制核對（主天賦、配方與啟用節點）。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -90,3 +90,4 @@
 | 技能 | [巢都格鬥家](broker_passive_dr_damage_tradeoff_on_stamina.md) / `broker_passive_dr_damage_tradeoff_on_stamina` | `node_9fd091a0-462c-42cb-917a-ba7755c9fc94` | 完成（核心靜態機制） |
 | 技能 | [順手牽羊](broker_passive_low_ammo_regen.md) / `broker_passive_low_ammo_regen` | `node_21d23a99-f022-4bb4-831a-e2c1da111e98` | 完成（核心靜態機制） |
 | 技能 | [趁勝追擊](broker_passive_cleave_on_cleave.md) / `broker_passive_cleave_on_cleave` | `node_32ac314d-2d6e-421b-8ced-27ce00dc62e5` | 完成（核心靜態機制） |
+| 興奮劑配方 | [裝備財閥特殊裝備](broker_stimm_activation_talent.md) / `broker_stimm_activation_talent` | `node_5c2139f8-0686-42f5-97fe-9b65e547e649` | 完成（核心靜態機制） |

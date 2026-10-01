@@ -87,6 +87,7 @@
 | [巢都格鬥家](#broker_passive_dr_damage_tradeoff_on_stamina) | 未見明確矛盾 |
 | [順手牽羊](#broker_passive_low_ammo_regen) | 未見明確矛盾 |
 | [趁勝追擊](#broker_passive_cleave_on_cleave) | 未見明確矛盾 |
+| [裝備財閥特殊裝備](#broker_stimm_activation_talent) | 未見明確中英矛盾 |
 
 <a id="broker_blitz_flash_grenade_improved"></a>
 ## 擊暈(Blackout)
@@ -644,3 +645,10 @@
 - 描述鍵：`loc_talent_broker_passive_cleave_on_cleave_desc`；hash：`04b9c8f2`。
 - 結論：未見明確矛盾。兩語均為一次命中至少3名後，下次攻擊增加順劈；消耗事件的細節為補充。
 - [原始碼推導與限制](broker_passive_cleave_on_cleave.md)。
+
+<a id="broker_stimm_activation_talent"></a>
+## 裝備財閥特殊裝備(Equip Cartel Special)
+
+- 描述鍵：`loc_talent_broker_stimm_activation_talent_desc`；hash：`95c45406`。
+- 結論：未見明確中英矛盾。同鍵文字說明裝備專用興奮劑。固定版中央起始圖示無點選動作；裝備條件實際取決於是否選取任何配方。這是介面操作補充，不列繁中誤譯。
+- [原始碼推導與限制](broker_stimm_activation_talent.md)。

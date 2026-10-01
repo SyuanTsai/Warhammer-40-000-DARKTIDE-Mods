@@ -85,3 +85,4 @@
 | [巢都格鬥家](broker_passive_dr_damage_tradeoff_on_stamina.md) | 耐力越滿，減傷越高；耐力越低，近戰增傷越高，兩者各最多 20%。；完整計算與適用限制見來源文件。 |
 | [順手牽羊](broker_passive_low_ammo_regen.md) | 備用彈藥低於 20% 時，近戰擊殺精英或專家會補到 20%。；完整計算與適用限制見來源文件。 |
 | [趁勝追擊](broker_passive_cleave_on_cleave.md) | 單次近戰命中至少 3 名敵人，獲得 50% 額外順劈供下一次攻擊使用。；完整計算與適用限制見來源文件。 |
+| [裝備財閥特殊裝備](broker_stimm_activation_talent.md) | 分配興奮劑配方後，裝備可自動恢復的專用興奮劑；配方共用 30 點額度。；完整計算與適用限制見來源文件。 |

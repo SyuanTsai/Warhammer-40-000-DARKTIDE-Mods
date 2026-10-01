@@ -1,5 +1,6 @@
 # 巢都渣滓天賦：Release 1.13.0
 
+[角色基礎效果](TALENTS%20Scum/BASE_EFFECTS.md)
 
 <a id="talent-index"></a>
 ## 技能目錄
@@ -85,6 +86,7 @@
 | <img src="https://github.com/user-attachments/assets/5cb31261-7422-451a-9aac-d1c38b48c802" width="32" height="32" alt="巢都格鬥家天賦圖示"> [巢都格鬥家](#broker_passive_dr_damage_tradeoff_on_stamina)<br>- Hive City Brawler | <ul><li>耐力越滿，減傷越高；耐力越低，近戰增傷越高，兩者各最多 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/3247cd98-e623-4d24-a821-db3f3a6ee20a" width="32" height="32" alt="順手牽羊天賦圖示"> [順手牽羊](#broker_passive_low_ammo_regen)<br>- Pickpocket | <ul><li>備用彈藥低於 20% 時，近戰擊殺精英或專家會補到 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6fa27fb0-2d79-43fc-b74a-d64da58773f6" width="32" height="32" alt="趁勝追擊天賦圖示"> [趁勝追擊](#broker_passive_cleave_on_cleave)<br>- Battering Momentum | <ul><li>單次近戰命中至少 3 名敵人，獲得 50% 額外順劈供下一次攻擊使用。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/51c007e0-bed4-4759-a369-04ab37032369" width="32" height="32" alt="裝備財閥特殊裝備天賦圖示"> [裝備財閥特殊裝備](#broker_stimm_activation_talent)<br>- Equip Cartel Special | <ul><li>分配興奮劑配方後，裝備可自動恢復的專用興奮劑；配方共用 30 點額度。</li></ul> | 興奮劑配方 |
 
 ---
 
@@ -1294,5 +1296,27 @@
 - **持續限制**：沒有固定秒數倒數；此效果由後續命中消耗，不是持續提高所有攻擊的傷害。
 
 [詳細資料](TALENTS%20Scum/broker_passive_cleave_on_cleave.md) · [返回目錄](#talent-index)
+
+---
+
+
+---
+
+## 興奮劑配方
+
+<a id="broker_stimm_activation_talent"></a>
+### 裝備財閥特殊裝備(Equip Cartel Special)
+
+<img src="https://github.com/user-attachments/assets/51c007e0-bed4-4759-a369-04ab37032369" width="72" height="72" alt="裝備財閥特殊裝備天賦圖示">
+
+- **裝備方式**：在興奮劑配方中選取至少一項效果，即可裝備專用興奮劑；中央圖示本身不消耗點數。
+
+- **配方與效果**：配方共用 30 點，每個配方各花費 1～5 點。使用後，已選配方共同生效 15 秒；神佑興奮劑可再延長 5 秒。
+
+- **恢復時間**：藥效結束後才開始恢復。配方共花費 P 點時，基礎恢復秒數為「15 + 60 × (P − 1) ÷ 29」，有小數就無條件進位；1 點為 15 秒，15 點為 44 秒，30 點為 75 秒。
+
+- **完整週期算例**：配方花費 30 點、不計其他恢復效果，注射後先生效 15 秒，再恢復 75 秒，合計 15 + 75 = 90 秒可再次使用。
+
+[詳細資料](TALENTS%20Scum/broker_stimm_activation_talent.md) · [返回目錄](#talent-index)
 
 ---
