@@ -18,6 +18,7 @@
 | [堅忍不拔](#adamant_limit_dmg_taken_from_hits) | 未見明確矛盾 |
 | [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
 | [法務官之鎧](#adamant_armor) | 未見明確矛盾 |
+| [彈藥腰帶](#adamant_ammo_belt) | 未見明確矛盾 |
 | [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
@@ -91,6 +92,13 @@
 - 描述鍵：`loc_talent_adamant_armor_desc`；hash：`0604ced3`。
 - 結論：未見明確矛盾。繁中「韌性提高」與英文 Toughness 的number25一致；百分比順序是補充。
 - [原始碼推導與限制](adamant_armor.md)。
+
+<a id="adamant_ammo_belt"></a>
+## 彈藥腰帶(Ammo Belt)
+
+- 描述鍵：`loc_talent_adamant_ammo_belt_desc`；hash：`76199c1c`。
+- 結論：未見明確矛盾。繁中「彈藥容量」與英文 Ammo Capacity 相符；實作限定備彈是資訊補充，不列錯誤。
+- [原始碼推導與限制](adamant_ammo_belt.md)。
 
 <a id="base_ranged_damage_node_buff_medium_1"></a>
 ## 遠程傷害增幅(Ranged Damage Boost)
