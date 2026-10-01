@@ -13,7 +13,7 @@
 | [懲戒](psyker_grenade_chain_lightning.md) | 機制與公式待核對。 |
 | [動能共鳴](psyker_ability_increase_brain_burst_speed.md) | 使用戰鬥能力後 10 秒內，顱腦崩裂蓄力速度增加 75%，反噬產生量減少 50%。；完整計算與適用限制見來源文件。 |
 | [迅捷碎片](psyker_throwing_knives_cast_speed.md) | 機制與公式待核對。 |
-| [衰弱詛咒](psyker_chain_lightning_improved_target_buff.md) | 機制與公式待核對。 |
+| [衰弱詛咒](psyker_chain_lightning_improved_target_buff.md) | 你電擊的敵人受到所有來源的傷害提高 10%。；完整計算與適用限制見來源文件。 |
 | [蓄力打擊](psyker_chain_lightning_heavy_attacks.md) | 近戰重擊命中後使敵人電擊 2 秒，電擊期間造成持續傷害。；完整計算與適用限制見來源文件。 |
 | [動能釋放](psyker_aura_damage_vs_elites.md) | 你與協同中的隊友對精英敵人造成的傷害提高 10%。；完整計算與適用限制見來源文件。 |
 | [先知之眼](psyker_cooldown_aura_improved.md) | 機制與公式待核對。 |

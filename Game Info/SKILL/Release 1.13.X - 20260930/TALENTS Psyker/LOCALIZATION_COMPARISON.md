@@ -15,7 +15,7 @@
 | [懲戒](#psyker_grenade_chain_lightning) | 已配對；機制待核對 |
 | [動能共鳴](#psyker_ability_increase_brain_burst_speed) | 效果方向吻合，算例補足速度換算 |
 | [迅捷碎片](#psyker_throwing_knives_cast_speed) | 已配對；機制待核對 |
-| [衰弱詛咒](#psyker_chain_lightning_improved_target_buff) | 已配對；機制待核對 |
+| [衰弱詛咒](#psyker_chain_lightning_improved_target_buff) | 未見已確認矛盾 |
 | [蓄力打擊](#psyker_chain_lightning_heavy_attacks) | 未見已確認矛盾 |
 | [動能釋放](#psyker_aura_damage_vs_elites) | 未見已確認矛盾 |
 | [先知之眼](#psyker_cooldown_aura_improved) | 已配對；機制待核對 |
@@ -143,7 +143,7 @@
 ## 衰弱詛咒(Enfeeble)
 
 - 描述鍵：`loc_talent_psyker_chain_lightning_improved_target_buff_alt_description`；hash：`da40a0a2`。
-- 已配對原文，機制待核對。
+- 結論：未見已確認矛盾。本地繁中說明指出遭你電擊的敵人會受到所有來源的基礎傷害增加；固定來源設定的強化倍率為 1.1，並由目標承受傷害倍率進入共用傷害計算。
 - [原始碼推導與限制](psyker_chain_lightning_improved_target_buff.md)。
 
 <a id="psyker_chain_lightning_heavy_attacks"></a>

@@ -8,6 +8,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9" width="32" height="32" alt="動能共鳴天賦圖示"> [動能共鳴](#psyker_ability_increase_brain_burst_speed)<br>- Kinetic Resonance | <ul><li>使用戰鬥能力後 10 秒內，顱腦崩裂蓄力速度增加 75%，反噬產生量減少 50%。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/0519f0ec-0ce9-4846-8ed4-95a0b9c092de" width="32" height="32" alt="衰弱詛咒天賦圖示"> [衰弱詛咒](#psyker_chain_lightning_improved_target_buff)<br>- Enfeeble | <ul><li>你電擊的敵人受到所有來源的傷害提高 10%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e" width="32" height="32" alt="蓄力打擊天賦圖示"> [蓄力打擊](#psyker_chain_lightning_heavy_attacks)<br>- Charged Strike | <ul><li>近戰重擊命中後使敵人電擊 2 秒，電擊期間造成持續傷害。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/ddd7895f-a971-4cdf-99bd-3f536cab3f8a" width="32" height="32" alt="動能釋放天賦圖示"> [動能釋放](#psyker_aura_damage_vs_elites)<br>- Kinetic Presence | <ul><li>你與協同中的隊友對精英敵人造成的傷害提高 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="預兆天賦圖示"> [預兆](#psyker_aura_crit_chance_aura)<br>- Prescience | <ul><li>你與協同中的隊友的暴擊機率增加 5 個百分點。</li></ul> | 光環 |
@@ -64,6 +65,19 @@
 - **蓄力算例**：假設原蓄力需 2 秒、無其他加成，2 ÷ 1.75 ≈ 1.14 秒；原本產生 10 個百分點反噬，則變成 10 × 0.5 = 5 個百分點。
 
 [詳細資料](TALENTS%20Psyker/psyker_ability_increase_brain_burst_speed.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_chain_lightning_improved_target_buff"></a>
+### 衰弱詛咒(Enfeeble)
+
+<img src="https://github.com/user-attachments/assets/0519f0ec-0ce9-4846-8ed4-95a0b9c092de" width="72" height="72" alt="衰弱詛咒天賦圖示">
+
+- **運作方式**：被你的懲戒電擊的敵人，受到的傷害增加 10%；隊友攻擊也能受益。搭配蓄力打擊時，近戰重擊施加的電擊也有同樣效果。
+
+- **傷害算例**：只比較此目標承傷倍率、其他條件相同，原本受到 100 點傷害變成 100 × 1.1 = 110 點；電擊效果移除後，這項加成結束。
+
+[詳細資料](TALENTS%20Psyker/psyker_chain_lightning_improved_target_buff.md) · [返回目錄](#talent-index)
 
 ---
 
