@@ -22,6 +22,7 @@
 | <img src="https://github.com/user-attachments/assets/92db3e61-eb2d-4af5-b9a7-3a1bab73234a" width="32" height="32" alt="韌性增幅天賦圖示"> [韌性增幅](#base_toughness_node_buff_medium_4)<br>- Toughness Boost | <ul><li>最大韌性增加 15 點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/57a54ed7-4f34-449f-9f2d-eb401a97b51a" width="32" height="32" alt="韌性減傷天賦圖示"> [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1)<br>- Toughness Damage Reduction | <ul><li>韌性減傷增加 10 個百分點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c8b43c74-3790-440f-8610-db321e11da83" width="32" height="32" alt="亞空間分裂天賦圖示"> [亞空間分裂](#psyker_cleave_from_peril)<br>- Warp Splitting | <ul><li>依目前反噬增加傷害順劈能力，最高增加 100%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/444fd0d1-2a66-48f9-b841-f7bf1bcc6ccf" width="32" height="32" alt="汲魂者天賦圖示"> [汲魂者](#psyker_killing_enemy_with_warpfire_boosts)<br>- Souldrinker | <ul><li>受靈魂之火影響的敵人死亡後，5 秒內恢復韌性並增加 5 個百分點爆擊機率。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f3235e60-41ff-4e15-81eb-172af5ec1f2e" width="32" height="32" alt="脆弱心智天賦圖示"> [脆弱心智](#psyker_damage_vs_ogryns_and_monsters)<br>- Vulnerable Minds | <ul><li>對歐格林與巨獸的傷害增加 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="32" height="32" alt="聚焦亞空間天賦圖示"> [聚焦亞空間](#psyker_increased_warp_damage)<br>- Focused Warp | <ul><li>亞空間傷害增加 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6b51b11f-eed5-45f3-b539-6b4502778099" width="32" height="32" alt="結晶意志天賦圖示"> [結晶意志](#psyker_alternative_peril_explosion)<br>- Crystalline Will | <ul><li>反噬爆炸傷害增加 100%，半徑增加 25%。</li><li>以移除一格傷痕代替通常的爆炸倒地；爆炸擊殺精英可免除此代價。</li></ul> | 技能 |
@@ -253,6 +254,21 @@
 - 繁中「順劈攻擊傷害」把順劈能力寫成傷害增幅；英文是 Cleave，實際提高能穿過的敵人質量上限，不是直接提高每次命中的傷害。
 
 [詳細資料](TALENTS%20Psyker/psyker_cleave_from_peril.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_killing_enemy_with_warpfire_boosts"></a>
+### 汲魂者(Souldrinker)
+
+<img src="https://github.com/user-attachments/assets/444fd0d1-2a66-48f9-b841-f7bf1bcc6ccf" width="72" height="72" alt="汲魂者天賦圖示">
+
+- **觸發方式**：受靈魂之火影響的敵人死亡，或你以靈魂之火擊殺敵人後，5 秒內恢復 15% 最大韌性，爆擊機率增加 5 個百分點。
+
+- **刷新方式**：再次觸發會重設 5 秒，恢復速度與爆擊機率不累加。
+
+- **恢復與機率算例**：最大韌性 100、缺額足夠且沒有其他修正時，每秒恢復 100 × 15% ÷ 5 = 3 點；原本 10% 爆擊機率變成 10% + 5% = 15%。
+
+[詳細資料](TALENTS%20Psyker/psyker_killing_enemy_with_warpfire_boosts.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -74,7 +74,7 @@
 | [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
 | [迅雷之勢](#psyker_melee_attack_speed) | 已配對；機制待核對 |
 | [亞空間分裂](#psyker_cleave_from_peril) | 繁中原文勘誤 |
-| [汲魂者](#psyker_killing_enemy_with_warpfire_boosts) | 已配對；機制待核對 |
+| [汲魂者](#psyker_killing_enemy_with_warpfire_boosts) | 未見明確矛盾 |
 | [骨折後遺症](#psyker_melee_weaving) | 已配對；機制待核對 |
 | [脆弱心智](#psyker_damage_vs_ogryns_and_monsters) | 未見明確矛盾 |
 | [聚焦亞空間](#psyker_increased_warp_damage) | 未見明確矛盾 |
@@ -562,7 +562,7 @@
 ## 汲魂者(Souldrinker)
 
 - 描述鍵：`loc_talent_psyker_killing_enemy_with_warpfire_boosts_duration_desc`；hash：`3db8d226`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_killing_enemy_with_warpfire_boosts.md)。
 
 <a id="psyker_melee_weaving"></a>

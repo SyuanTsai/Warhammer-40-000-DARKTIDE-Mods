@@ -72,7 +72,7 @@
 | [韌性減傷](base_toughness_damage_reduction_node_buff_medium_1.md) | 韌性減傷增加 10 個百分點。；完整計算與適用限制見來源文件。 |
 | [迅雷之勢](psyker_melee_attack_speed.md) | 機制與公式待核對。 |
 | [亞空間分裂](psyker_cleave_from_peril.md) | 依目前反噬增加傷害順劈能力，最高增加 100%。；完整計算與適用限制見來源文件。 |
-| [汲魂者](psyker_killing_enemy_with_warpfire_boosts.md) | 機制與公式待核對。 |
+| [汲魂者](psyker_killing_enemy_with_warpfire_boosts.md) | 受靈魂之火影響的敵人死亡後，5 秒內恢復韌性並增加 5 個百分點爆擊機率。；完整計算與適用限制見來源文件。 |
 | [骨折後遺症](psyker_melee_weaving.md) | 機制與公式待核對。 |
 | [脆弱心智](psyker_damage_vs_ogryns_and_monsters.md) | 對歐格林與巨獸的傷害增加 20%。；完整計算與適用限制見來源文件。 |
 | [聚焦亞空間](psyker_increased_warp_damage.md) | 亞空間傷害增加 15%。；完整計算與適用限制見來源文件。 |
