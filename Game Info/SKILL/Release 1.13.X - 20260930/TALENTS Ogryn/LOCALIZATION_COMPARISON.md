@@ -16,6 +16,7 @@
 | [破骨者之環](#ogryn_melee_damage_coherency_improved) | 未見明確矛盾 |
 | [優勝劣汰](#ogryn_damage_vs_suppressed_coherency) | 未見明確矛盾 |
 | [跟緊我！](#ogryn_toughness_regen_aura) | 未見明確矛盾 |
+| [跺殺之靴](#ogryn_charge_toughness) | 未見明確矛盾 |
 | [粉碎](#ogryn_charge_applies_bleed) | 未見明確矛盾 |
 | [爆限超載](#ogryn_leadbelcher_no_ammo_chance) | 未見明確矛盾 |
 | [麻木](#ogryn_carapace_armor) | 跨來源待同版核對 |
@@ -139,6 +140,13 @@
 - 描述鍵：`loc_talent_ogryn_toughness_regen_aura_desc`；hash：`89218b06`。
 - 結論：未見明確矛盾。同 hash 89218b06 的繁中與英文都說明你與協同盟友獲得韌性恢復加成，未宣稱光環會自動恢復韌性。原始設定提高的是恢復量修正，而自然恢復使用另一個速率屬性。本機 Build 25492122 的繁中與英文文字以相同 hash 配對；公開固定 SHA 是否對應同一 Build 尚未確認。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_toughness_regen_aura.md)。
+
+<a id="ogryn_charge_toughness"></a>
+## 跺殺之靴(Stomping Boots)
+
+- 描述鍵：`loc_talent_ogryn_toughness_on_bull_rush_desc`；hash：`59b32c78`。
+- 結論：未見明確矛盾。繁中原文「每次使用衝鋒成功命中敵人可恢復10%韌性」和英文原文「每名被衝鋒命中的敵人恢復10%韌性」都將回復綁定在衝鋒命中，數值一致。原文未區分最大韌性百分比或韌性缺口上限，這是恢復函式的實作細節；Build 25492122 對應公開 SHA 的版本尚未確認。
+- [原始碼推導與限制](ogryn_charge_toughness.md)。
 
 <a id="ogryn_charge_applies_bleed"></a>
 ## 粉碎(Pulverise)
