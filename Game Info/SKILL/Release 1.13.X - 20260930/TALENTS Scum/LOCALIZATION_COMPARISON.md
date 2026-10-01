@@ -11,6 +11,7 @@
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
 | [特提恩是迎賓](#broker_passive_first_target_damage) | 未見明確矛盾 |
 | [打你的臉](#broker_passive_close_ranged_damage) | 未見明確矛盾 |
+| [精準暴力](#broker_passive_restore_toughness_on_weakspot_kill) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -32,3 +33,10 @@
 - 描述鍵：`loc_talent_broker_passive_close_ranged_damage_desc`；hash：`be48df80`。
 - 結論：未見明確矛盾。繁中與英文的近遠端值及距離一致；兩文概括為遠程傷害，固定實作依手持遠程欄位啟用。此條件補充不當成明確誤譯。
 - [原始碼推導與限制](broker_passive_close_ranged_damage.md)。
+
+<a id="broker_passive_restore_toughness_on_weakspot_kill"></a>
+## 精準暴力(Precision Violence)
+
+- 描述鍵：`loc_talent_broker_passive_restore_toughness_on_weakspot_kill_desc`；hash：`d91c10cd`。
+- 結論：未見明確矛盾。同源繁中與英文的三種比例一致；未交代同次揮擊去重及更高比例再恢復屬補充。
+- [原始碼推導與限制](broker_passive_restore_toughness_on_weakspot_kill.md)。

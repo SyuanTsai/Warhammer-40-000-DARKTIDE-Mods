@@ -9,3 +9,4 @@
 | [快速且致命](broker_passive_close_range_damage_on_dodge.md) | 成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。；完整計算與適用限制見來源文件。 |
 | [特提恩是迎賓](broker_passive_first_target_damage.md) | 每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。；完整計算與適用限制見來源文件。 |
 | [打你的臉](broker_passive_close_ranged_damage.md) | 手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。；完整計算與適用限制見來源文件。 |
+| [精準暴力](broker_passive_restore_toughness_on_weakspot_kill.md) | 近戰命中恢復 4% 最大韌性；爆擊或弱點改為 8%，爆擊弱點為 12%。；完整計算與適用限制見來源文件。 |
