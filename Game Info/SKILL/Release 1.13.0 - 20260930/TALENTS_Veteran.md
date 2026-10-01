@@ -14,6 +14,7 @@
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
+| 技能 | [行雲流水(One Motion)](#veteran_reduce_swap_time) | 武器切換速度增加 50%。 |
 | 技能 | [優越情節(Superiority Complex)](#veteran_increase_damage_vs_elites) | 增加對精英敵人的傷害 |
 | 技能 | [近戰傷害提升(Melee Damage Boost)](#base_melee_damage_node_buff_high_2) | 近戰傷害增加 15%。 |
 | 技能 | [韌性減傷(Toughness Damage Reduction)](#base_toughness_damage_reduction_node_buff_medium_1) | 韌性受到的傷害降低 10%。 |
@@ -186,6 +187,23 @@
 - 三層後未再觸發：約 **8 秒**後剩 2 層、**16 秒**後剩 1 層、**24 秒**後效果結束。
 
 [詳細資料](TALENTS%20Veteran/veteran_replenish_toughness_on_weakspot_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_reduce_swap_time"></a>
+
+### 行雲流水(One Motion)
+
+<img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="72" height="72" alt="行雲流水天賦圖示">
+
+- **武器切換速度增加 50%。**
+
+#### 時間算例
+
+- 假設原本切換動作耗時 0.9 秒，沒有其他速度加成：`0.9 ÷ (1 + 50%) = 0.6 秒`。
+- 這段動作縮短約 33.3%；不會連帶加速裝填或攻擊。
+
+[詳細資料](TALENTS%20Veteran/veteran_reduce_swap_time.md) · [返回目錄](#talent-index)
 
 ---
 
