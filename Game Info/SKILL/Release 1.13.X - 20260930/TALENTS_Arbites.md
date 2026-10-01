@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/62b4954d-42c3-4eab-a6ea-a17719414e19" width="32" height="32" alt="巨獸獵人天賦圖示"> [巨獸獵人](#adamant_monster_hunter)<br>- Monstrosity Hunter | <ul><li>對歐格林與巨獸造成的傷害提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc" width="32" height="32" alt="帝皇之拳天賦圖示"> [帝皇之拳](#adamant_first_melee_hit_increased_damage)<br>- The Emperor's Fist | <ul><li>每次近戰揮擊的第一個命中目標，傷害提高 15%、衝擊提高 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47" width="32" height="32" alt="擊殺順序天賦圖示"> [擊殺順序](#adamant_increased_damage_to_high_health)<br>- Target Priority | <ul><li>對生命值高於 75% 的敵人，傷害提高 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/8a0b3c73-0e7e-4d31-9f7d-385634eae6e3" width="32" height="32" alt="迅疾走位天賦圖示"> [迅疾走位](#adamant_sprinting_sliding)<br>- Rapid Movement | <ul><li>滑行結束後，衝刺速度提高 5%，持續 5 秒；擊殺恢復最大耐力的 5%，冷卻 0.75 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/03af9ca3-e4f4-4383-9650-f8ac659cfadd" width="32" height="32" alt="秉賦為先天賦圖示"> [秉賦為先](#adamant_clip_size)<br>- Priority Endowment | <ul><li>彈匣容量提高 15%，容量向上取整數。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="惡徒退散天賦圖示"> [惡徒退散](#adamant_damage_vs_suppressed)<br>- Cower, Miscreants! | <ul><li>對受壓制敵人的傷害提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="正當手段天賦圖示"> [正當手段](#adamant_stacking_damage)<br>- Justified Measures | <ul><li>攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。</li></ul> | 技能 |
@@ -510,6 +511,19 @@
 - **傷害算例**：目標最大生命 1000、目前 800 時，基礎 100 點傷害變成 100 × 1.15 = 115 點；目前 750 時仍為 100 點。已有同階段 25% 加成且門檻成立時，125 點變成 140 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_increased_damage_to_high_health.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_sprinting_sliding"></a>
+### 迅疾走位(Rapid Movement)
+
+<img src="https://github.com/user-attachments/assets/8a0b3c73-0e7e-4d31-9f7d-385634eae6e3" width="72" height="72" alt="迅疾走位天賦圖示">
+
+- **滑行加速**：滑行結束後，衝刺速度提高 5%，持續 5 秒；再次滑行可刷新。例如原本每秒衝刺 6 公尺，單計本效果為 6 × 1.05 = 6.3 公尺。
+
+- **擊殺恢復**：擊殺敵人恢復最大耐力的 5%，每 0.75 秒最多觸發一次；不需要先滑行。最大耐力 6 點時，每次為 6 × 5% = 0.3 點，最多補滿。
+
+[詳細資料](TALENTS%20Arbites/adamant_sprinting_sliding.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -41,6 +41,7 @@
 | [巨獸獵人](adamant_monster_hunter.md) | 對歐格林與巨獸造成的傷害提高 20%。；完整計算與適用限制見來源文件。 |
 | [帝皇之拳](adamant_first_melee_hit_increased_damage.md) | 每次近戰揮擊的第一個命中目標，傷害提高 15%、衝擊提高 30%。；完整計算與適用限制見來源文件。 |
 | [擊殺順序](adamant_increased_damage_to_high_health.md) | 對生命值高於 75% 的敵人，傷害提高 15%。；完整計算與適用限制見來源文件。 |
+| [迅疾走位](adamant_sprinting_sliding.md) | 滑行結束後，衝刺速度提高 5%，持續 5 秒；擊殺恢復最大耐力的 5%，冷卻 0.75 秒。；完整計算與適用限制見來源文件。 |
 | [秉賦為先](adamant_clip_size.md) | 彈匣容量提高 15%，容量向上取整數。；完整計算與適用限制見來源文件。 |
 | [惡徒退散](adamant_damage_vs_suppressed.md) | 對受壓制敵人的傷害提高 25%。；完整計算與適用限制見來源文件。 |
 | [正當手段](adamant_stacking_damage.md) | 攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。；完整計算與適用限制見來源文件。 |

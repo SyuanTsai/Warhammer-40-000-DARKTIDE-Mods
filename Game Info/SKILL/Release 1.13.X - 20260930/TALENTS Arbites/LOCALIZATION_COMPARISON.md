@@ -43,6 +43,7 @@
 | [巨獸獵人](#adamant_monster_hunter) | 未見明確矛盾 |
 | [帝皇之拳](#adamant_first_melee_hit_increased_damage) | 未見明確矛盾 |
 | [擊殺順序](#adamant_increased_damage_to_high_health) | 未見明確矛盾 |
+| [迅疾走位](#adamant_sprinting_sliding) | 未見明確矛盾 |
 | [秉賦為先](#adamant_clip_size) | 未見明確矛盾 |
 | [惡徒退散](#adamant_damage_vs_suppressed) | 未見明確矛盾 |
 | [正當手段](#adamant_stacking_damage) | 未見明確矛盾 |
@@ -294,6 +295,13 @@
 - 描述鍵：`loc_talent_adamant_increased_damage_to_high_health_desc`；hash：`c5936e7c`。
 - 結論：未見明確矛盾。繁中「高於…生命值」與英文 above…Health一致；「造成…傷害」較不清楚，但未單憑措辭判錯，主文明寫加成及門檻。
 - [原始碼推導與限制](adamant_increased_damage_to_high_health.md)。
+
+<a id="adamant_sprinting_sliding"></a>
+## 迅疾走位(Rapid Movement)
+
+- 描述鍵：`loc_talent_adamant_sprinting_sliding_description`；hash：`1469331e`。
+- 結論：未見明確矛盾。繁中滑行加速、擊殺耐力與英文一致；0.75秒只限制擊殺恢復，屬範圍補充。
+- [原始碼推導與限制](adamant_sprinting_sliding.md)。
 
 <a id="adamant_clip_size"></a>
 ## 秉賦為先(Priority Endowment)
