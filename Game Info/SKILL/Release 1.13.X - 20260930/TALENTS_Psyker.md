@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/ddd7895f-a971-4cdf-99bd-3f536cab3f8a" width="32" height="32" alt="動能釋放天賦圖示"> [動能釋放](#psyker_aura_damage_vs_elites)<br>- Kinetic Presence | <ul><li>你與協同中的隊友對精英敵人造成的傷害提高 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/61a749ff-c64c-47a7-8607-e19b59a688b3" width="32" height="32" alt="先知之眼天賦圖示"> [先知之眼](#psyker_cooldown_aura_improved)<br>- Seer's Presence | <ul><li>你與協同中的隊友的技能冷卻時間縮短 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="預兆天賦圖示"> [預兆](#psyker_aura_crit_chance_aura)<br>- Prescience | <ul><li>你與協同中的隊友的暴擊機率增加 5 個百分點。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/d0500b6b-c91c-4c34-857a-6c144800fe37" width="32" height="32" alt="靈能尖嘯天賦圖示"> [靈能尖嘯](#psyker_shout_vent_warp_charge)<br>- Venting Shriek | <ul><li>前方衝擊使敵人踉蹌</li><li>平息 50 個反噬百分點；冷卻 30 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a" width="32" height="32" alt="占卜者的注視天賦圖示"> [占卜者的注視](#psyker_combat_ability_stance)<br>- Scrier's Gaze | <ul><li>傷害、爆擊與弱點加成，並恢復韌性</li><li>反噬達 100% 結束；累積增傷保留 10 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b89da8f0-2d3d-4a87-bc92-43e2438e28c8" width="32" height="32" alt="平靜迸發天賦圖示"> [平靜迸發](#psyker_shout_reduces_warp_charge_generation)<br>- Becalming Eruption | <ul><li>尖嘯每命中一名敵人，降低反噬生成</li><li>最多 25 層，持續 5 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/8a145b7f-771a-42b6-a809-56650cd24f7e" width="32" height="32" alt="亞空間爆發天賦圖示"> [亞空間爆發](#psyker_discharge_damage_debuff)<br>- Warp Rupture | <ul><li>尖嘯命中的敵人傷害降低 10%</li><li>受到傷害提高 10%，持續 8 秒</li></ul> | 能力 |
@@ -217,6 +218,19 @@
 ---
 
 ## 能力
+
+<a id="psyker_shout_vent_warp_charge"></a>
+### 靈能尖嘯(Venting Shriek)
+
+<img src="https://github.com/user-attachments/assets/d0500b6b-c91c-4c34-857a-6c144800fe37" width="72" height="72" alt="靈能尖嘯天賦圖示">
+
+- **運作方式：**向前方釋放亞空間衝擊，使敵人踉蹌，並立即平息 50 個反噬百分點。基礎冷卻為 30 秒。
+
+- **反噬算例：**80% − 50 個百分點 = 30%；原有 40% 時則降至 0%，最低不會小於零。
+
+[詳細資料](TALENTS%20Psyker/psyker_shout_vent_warp_charge.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="psyker_combat_ability_stance"></a>
 ### 占卜者的注視(Scrier's Gaze)

@@ -18,7 +18,7 @@
 | [動能釋放](psyker_aura_damage_vs_elites.md) | 你與協同中的隊友對精英敵人造成的傷害提高 10%。；完整計算與適用限制見來源文件。 |
 | [先知之眼](psyker_cooldown_aura_improved.md) | 你與協同中的隊友的技能冷卻時間縮短 10%。；完整計算與適用限制見來源文件。 |
 | [預兆](psyker_aura_crit_chance_aura.md) | 你與協同中的隊友的暴擊機率增加 5 個百分點。；完整計算與適用限制見來源文件。 |
-| [靈能尖嘯](psyker_shout_vent_warp_charge.md) | 機制與公式待核對。 |
+| [靈能尖嘯](psyker_shout_vent_warp_charge.md) | 前方衝擊使敵人踉蹌；平息 50 個反噬百分點；冷卻 30 秒；完整計算與適用限制見來源文件。 |
 | [占卜者的注視](psyker_combat_ability_stance.md) | 傷害、爆擊與弱點加成，並恢復韌性；反噬達 100% 結束；累積增傷保留 10 秒；完整計算與適用限制見來源文件。 |
 | [平靜迸發](psyker_shout_reduces_warp_charge_generation.md) | 尖嘯每命中一名敵人，降低反噬生成；最多 25 層，持續 5 秒；完整計算與適用限制見來源文件。 |
 | [亞空間爆發](psyker_discharge_damage_debuff.md) | 尖嘯命中的敵人傷害降低 10%；受到傷害提高 10%，持續 8 秒；完整計算與適用限制見來源文件。 |

@@ -20,7 +20,7 @@
 | [動能釋放](#psyker_aura_damage_vs_elites) | 未見已確認矛盾 |
 | [先知之眼](#psyker_cooldown_aura_improved) | 未見已確認矛盾 |
 | [預兆](#psyker_aura_crit_chance_aura) | 未見已確認矛盾 |
-| [靈能尖嘯](#psyker_shout_vent_warp_charge) | 已配對；機制待核對 |
+| [靈能尖嘯](#psyker_shout_vent_warp_charge) | 未見明確矛盾 |
 | [占卜者的注視](#psyker_combat_ability_stance) | 明確翻譯錯誤 |
 | [平靜迸發](#psyker_shout_reduces_warp_charge_generation) | 未見明確矛盾 |
 | [亞空間爆發](#psyker_discharge_damage_debuff) | 未見明確矛盾 |
@@ -178,7 +178,7 @@
 ## 靈能尖嘯(Venting Shriek)
 
 - 描述鍵：`loc_talent_psyker_shout_vent_warp_charge_description`；hash：`7d4501be`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源尚未確認同版。
 - [原始碼推導與限制](psyker_shout_vent_warp_charge.md)。
 
 <a id="psyker_combat_ability_stance"></a>
