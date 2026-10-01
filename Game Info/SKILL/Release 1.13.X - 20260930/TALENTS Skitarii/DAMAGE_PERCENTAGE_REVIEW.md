@@ -13,6 +13,7 @@
 | [過載轉移晶格](cryptic_electrocution_defense.md) | 遭近戰傷害時電擊攻擊者周圍 2.5 公尺敵人；冷卻 15 秒；完整計算與適用限制見來源文件。 |
 | [電擊破壞協定](cryptic_pushing_grants_cleave.md) | 推中敵人後，近戰順劈提高 50%、持續 8 秒；完整計算與適用限制見來源文件。 |
 | [輻射槽](cryptic_stacking_ranged_damage.md) | 停止射擊 1 秒獲得 10% 遠程增傷；2 秒達上限 20%，再次射擊後重算；完整計算與適用限制見來源文件。 |
+| [漸進裝甲矩陣](cryptic_stacking_tdr.md) | 命中疊加韌性減傷，每層 2.5%；最多 6 層，持續 5 秒；完整計算與適用限制見來源文件。 |
 | [報應導管](cryptic_damage_vs_electrocuted_scaling_on_charge.md) | 對電擊目標提高 10% 傷害；每份完整電容量再增加 5%；完整計算與適用限制見來源文件。 |
 | [電流標記陣列](cryptic_elite_kills_damage.md) | 以遠程攻擊擊殺精英，每次提高 5% 傷害；最多 4 層，每 15 秒衰減一層；完整計算與適用限制見來源文件。 |
 | [絕境中繼](cryptic_crit_chance_based_on_charge.md) | 爆擊率增加 6 個百分點；沒有完整電容量時提高至 10 個百分點；完整計算與適用限制見來源文件。 |

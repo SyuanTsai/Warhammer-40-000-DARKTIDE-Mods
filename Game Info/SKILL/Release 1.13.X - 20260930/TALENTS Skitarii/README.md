@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **97 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10)。內部 tree version 18 不等於遊戲發行版號。
 
-完成 23／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 24／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -18,6 +18,7 @@
 | 技能 | [過載轉移晶格](cryptic_electrocution_defense.md) / `cryptic_electrocution_defense` | `node_e0953fb3-717d-40b6-9af8-c3dc03597315` | 完成（核心靜態機制） |
 | 技能 | [電擊破壞協定](cryptic_pushing_grants_cleave.md) / `cryptic_pushing_grants_cleave` | `node_3d85c249-b115-4ae9-8601-3c529b91c855` | 完成（核心靜態機制） |
 | 技能 | [輻射槽](cryptic_stacking_ranged_damage.md) / `cryptic_stacking_ranged_damage` | `node_2da404f3-b540-4bfd-bdda-0ad5654eafce` | 完成（核心靜態機制） |
+| 技能 | [漸進裝甲矩陣](cryptic_stacking_tdr.md) / `cryptic_stacking_tdr` | `node_853d22e7-bdc0-495e-ab44-7c5699dcf0f6` | 完成（核心靜態機制） |
 | 技能 | [報應導管](cryptic_damage_vs_electrocuted_scaling_on_charge.md) / `cryptic_damage_vs_electrocuted_scaling_on_charge` | `node_e58ba04c-1e81-4f25-bea9-38a0ee1e62f5` | 完成（核心靜態機制） |
 | 技能 | [電流標記陣列](cryptic_elite_kills_damage.md) / `cryptic_elite_kills_damage` | `node_29b1d9ec-b4e1-4045-a28d-45732f7521a8` | 完成（核心靜態機制） |
 | 技能 | [絕境中繼](cryptic_crit_chance_based_on_charge.md) / `cryptic_crit_chance_based_on_charge` | `node_4d6556fa-f80a-4e6d-9c7d-a217abe950ee` | 完成（核心靜態機制） |

@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/74c8388d-8388-4646-8a91-0eb056656036" width="32" height="32" alt="過載轉移晶格天賦圖示"> [過載轉移晶格](#cryptic_electrocution_defense)<br>- Overcharge Transfer Lattice | <ul><li>遭近戰傷害時電擊攻擊者周圍 2.5 公尺敵人</li><li>冷卻 15 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dca309fd-773f-4a07-a659-cfb320cd14a9" width="32" height="32" alt="電擊破壞協定天賦圖示"> [電擊破壞協定](#cryptic_pushing_grants_cleave)<br>- Shockline Breach Protocol | <ul><li>推中敵人後，近戰順劈提高 50%、持續 8 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/26c97989-2f88-46ee-9bf3-f9f02b09c0f3" width="32" height="32" alt="輻射槽天賦圖示"> [輻射槽](#cryptic_stacking_ranged_damage)<br>- Rad-Sink | <ul><li>停止射擊 1 秒獲得 10% 遠程增傷</li><li>2 秒達上限 20%，再次射擊後重算</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/5208032b-aaaf-4801-b84c-6fdbaab1735b" width="32" height="32" alt="漸進裝甲矩陣天賦圖示"> [漸進裝甲矩陣](#cryptic_stacking_tdr)<br>- Progressive Plating Matrix | <ul><li>命中疊加韌性減傷，每層 2.5%</li><li>最多 6 層，持續 5 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/eb093286-7cce-40e8-b518-3b5bc16dd38d" width="32" height="32" alt="報應導管天賦圖示"> [報應導管](#cryptic_damage_vs_electrocuted_scaling_on_charge)<br>- Retribution Conduit | <ul><li>對電擊目標提高 10% 傷害</li><li>每份完整電容量再增加 5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/77cad8a5-5837-45fe-98a7-549e27e5d738" width="32" height="32" alt="電流標記陣列天賦圖示"> [電流標記陣列](#cryptic_elite_kills_damage)<br>- Galvanic Marking Array | <ul><li>以遠程攻擊擊殺精英，每次提高 5% 傷害</li><li>最多 4 層，每 15 秒衰減一層</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5e8556aa-e9d9-4400-a863-bb26a5f11e17" width="32" height="32" alt="絕境中繼天賦圖示"> [絕境中繼](#cryptic_crit_chance_based_on_charge)<br>- Last Stand Relay | <ul><li>爆擊率增加 6 個百分點</li><li>沒有完整電容量時提高至 10 個百分點</li></ul> | 技能 |
@@ -134,6 +135,21 @@
 - **傷害算例**：基礎傷害 100 時，一層為 100 × 1.10 = 110，兩層為 100 × 1.20 = 120；若原有 25% 同階段加成，兩層為 100 × (1 + 25% + 20%) = 145。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_stacking_ranged_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_stacking_tdr"></a>
+### 漸進裝甲矩陣(Progressive Plating Matrix)
+
+<img src="https://github.com/user-attachments/assets/5208032b-aaaf-4801-b84c-6fdbaab1735b" width="72" height="72" alt="漸進裝甲矩陣天賦圖示">
+
+- **疊層方式**：一次攻擊命中首名目標後獲得 1 層，每層減少 2.5% 韌性傷害，最多 6 層；同一攻擊打中多人只加一層。
+
+- **持續時間**：每次觸發刷新 5 秒，期間未再觸發便失去效果。
+
+- **減傷算例**：6 層提供 6 × 2.5% = 15% 減傷，原本 100 點韌性傷害變成 85；再配合另一項獨立 20% 減傷，則 100 × 0.85 × 0.80 = 68 點。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_stacking_tdr.md) · [返回目錄](#talent-index)
 
 ---
 
