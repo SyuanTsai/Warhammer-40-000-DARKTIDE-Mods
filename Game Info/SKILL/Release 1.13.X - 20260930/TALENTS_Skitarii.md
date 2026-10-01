@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="32" height="32" alt="系統電擊天賦圖示"> [系統電擊](#cryptic_electrocution_applies_brittleness)<br>- System Shock | <ul><li>施加或刷新電擊時增加 3 層脆弱</li><li>每層 2.5%，持續 5 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d265085f-7abd-4433-adc1-3f0276351436" width="32" height="32" alt="彈藥預知天賦圖示"> [彈藥預知](#cryptic_ammo_reserve)<br>- Ammo-Cell Augury | <ul><li>儲備彈藥上限增加 25%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bb7b86c4-512f-495f-a82a-7011cae498d6" width="32" height="32" alt="電能修復天賦圖示"> [電能修復](#cryptic_coherency_toughness_on_ability)<br>- Voltaic Restoration | <ul><li>使用戰鬥能力，為自己與協同隊友恢復 20% 韌性</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/5330c87c-7abe-4993-8eb2-5cb11586c013" width="32" height="32" alt="彈藥補給艙天賦圖示"> [彈藥補給艙](#cryptic_passive_ammo_replenishment)<br>- Ammunition-Restoration Pod | <ul><li>每 15 秒恢復儲備彈藥上限的 1%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="莫比亞導體天賦圖示"> [莫比亞導體](#cryptic_damage_on_ability)<br>- Moebian Conductor | <ul><li>啟動戰鬥能力後，傷害提高 15%、持續 10 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="適應性戰鬥校準天賦圖示"> [適應性戰鬥校準](#cryptic_cleave_and_impact)<br>- Adaptive Combat Calibration | <ul><li>韌性高於 50%：近戰順劈提高 30%</li><li>韌性不高於 50%：近戰衝擊提高 30%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/53a3e76f-67fe-4d9e-bff5-7aafaee21065" width="32" height="32" alt="守護協議天賦圖示"> [守護協議](#cryptic_disabled_allies_defense)<br>- Protectorate Protocol | <ul><li>協同隊友失去行動能力時，受到傷害降低 25%</li><li>親自救援後，再給 6 秒減傷與一般硬直免疫</li></ul> | 技能 |
@@ -529,6 +530,21 @@
 - **計次方式**：按能力啟動次數恢復；一次消耗 3 份電容量不會改成恢復 60%。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_coherency_toughness_on_ability.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_passive_ammo_replenishment"></a>
+### 彈藥補給艙(Ammunition-Restoration Pod)
+
+<img src="https://github.com/user-attachments/assets/5330c87c-7abe-4993-8eb2-5cb11586c013" width="72" height="72" alt="彈藥補給艙天賦圖示">
+
+- **補彈方式**：每 15 秒補回最大儲備彈藥的 1%，加入備彈，不直接填進彈匣。
+
+- **取整算例**：儲備上限 250 發，每次累計 250 × 1% = 2.5 發；先補 2 發並保留 0.5，下次合計補 3 發。連續四次共補 10 發。
+
+- **上限與例外**：備彈還會預留填滿空缺彈匣的量；整把武器已滿時不能無限累積。沒有彈藥儲備的武器不會因此獲得彈藥。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_passive_ammo_replenishment.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -40,6 +40,7 @@
 | [系統電擊](#cryptic_electrocution_applies_brittleness) | 未見明確矛盾 |
 | [彈藥預知](#cryptic_ammo_reserve) | 未見明確矛盾 |
 | [電能修復](#cryptic_coherency_toughness_on_ability) | 未見明確矛盾 |
+| [彈藥補給艙](#cryptic_passive_ammo_replenishment) | 未見明確矛盾 |
 | [莫比亞導體](#cryptic_damage_on_ability) | 未見明確矛盾 |
 | [適應性戰鬥校準](#cryptic_cleave_and_impact) | 未見明確矛盾 |
 | [守護協議](#cryptic_disabled_allies_defense) | 未見明確矛盾 |
@@ -273,6 +274,13 @@
 - 描述鍵：`loc_talent_cryptic_coherency_toughness_on_ability_desc`；hash：`5c2bb368`。
 - 結論：未見明確矛盾。繁中與英文一致；補充戰鬥能力與各自最大韌性。
 - [原始碼推導與限制](cryptic_coherency_toughness_on_ability.md)。
+
+<a id="cryptic_passive_ammo_replenishment"></a>
+## 彈藥補給艙(Ammunition-Restoration Pod)
+
+- 描述鍵：`loc_talent_cryptic_passive_ammo_replenishment_desc`；hash：`41aa3ba1`。
+- 結論：未見明確矛盾。雙語一致；補充小數累計及備彈/彈匣區分。
+- [原始碼推導與限制](cryptic_passive_ammo_replenishment.md)。
 
 <a id="cryptic_damage_on_ability"></a>
 ## 莫比亞導體(Moebian Conductor)
