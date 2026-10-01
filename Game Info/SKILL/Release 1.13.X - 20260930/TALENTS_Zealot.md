@@ -9,6 +9,7 @@
 | <img src="https://github.com/user-attachments/assets/4ae30922-3e39-4ded-8e19-35ec595befa0" width="32" height="32" alt="不屈靈魂合唱天賦圖示"> [不屈靈魂合唱](#zealot_bolstering_prayer)<br>- Chorus of Spiritual Fortitude | <ul><li>引導約 3.67 秒，開始時立即脈衝，之後每 0.8 秒一次；基礎冷卻 60 秒。</li><li>每次脈衝作用於本人與協同中的盟友，恢復韌性、提高暫時最大韌性，並賦予免死及眩暈免疫。</li><li>脈衝會踉蹌附近敵人；引導期間另持續恢復韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29" width="32" height="32" alt="神聖事業天賦圖示"> [神聖事業](#zealot_channel_grants_toughness_damage_reduction)<br>- Holy Cause | <ul><li>「神聖事業」讓合唱脈衝對本人與協同盟友疊加韌性傷害減免。</li><li>每次脈衝 +8% 韌性傷害減免，最多 5 層，即最高 40%；持續 10 秒，脈衝會刷新時間。</li><li>合唱約 3.67 秒、每 0.8 秒脈衝一次；約 5 次脈衝可累積到上限。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/1abe7e62-3810-4680-9c49-7f6091782ab6" width="32" height="32" alt="教宗之喚天賦圖示"> [教宗之喚](#zealot_channel_grants_damage)<br>- Ecclesiarch's Call | <ul><li>「教宗之喚」使合唱每次脈衝為本人與協同盟友增加 +6% 傷害。</li><li>最多疊加 5 層，理論上限 +30%；每層 buff 持續 10 秒，重複脈衝刷新時間。</li><li>合唱約 3.67 秒、每 0.8 秒脈衝，通常單次引導可觸發 5 次。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/35487761-88d3-4091-ac1b-bde3020e300e" width="32" height="32" alt="倍增狂熱天賦圖示"> [倍增狂熱](#zealot_additional_charge_of_ability)<br>- Redoubled Zeal | <ul><li>「倍增狂熱」把有信者之怒的戰鬥技能最大充能數從 1 提升為 2。</li><li>每次充能仍需 30 點共享冷卻資源、以每秒 1 點恢復；用完兩次後約 30 秒回一格、60 秒回滿。</li><li>額外充能只套用衝刺技能，不會增加不屈靈魂合唱或隱秘領域的充能。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="死戰到底天賦圖示"> [死戰到底](#zealot_resist_death)<br>- Until Death | <ul><li>承受致命傷害時獲得 8 秒免死效果。</li><li>效果結束後冷卻 120 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="殉道天賦圖示"> [殉道](#zealot_martyrdom)<br>- Martyrdom | <ul><li>每失去一整格生命，近戰傷害增加 10%，最多 5 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="32" height="32" alt="不滅意志天賦圖示"> [不滅意志](#zealot_martyrdom_grants_toughness)<br>- I Shall Not Fall | <ul><li>殉道每缺少一格生命傷口，韌性承傷降低 7.5%，最多 5 格。</li></ul> | 鑰石 |
@@ -119,6 +120,21 @@
 - 繁中原文的「疊加次數」誤用了傷害百分比欄位；正確是最多 5 層，每層增加 6% 傷害。
 
 [詳細資料](TALENTS%20Zealot/zealot_channel_grants_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_additional_charge_of_ability"></a>
+### 倍增狂熱(Redoubled Zeal)
+
+<img src="https://github.com/user-attachments/assets/35487761-88d3-4091-ac1b-bde3020e300e" width="72" height="72" alt="倍增狂熱天賦圖示">
+
+- **充能方式**：有信者之怒可儲存 2 次使用。每次消耗一格，自然恢復一格約需 30 秒。
+
+- **冷卻算例**：連續用完兩次後，約 30 秒恢復第一格、約 60 秒回滿兩格；兩次使用共用同一個冷卻資源，並不是等 30 秒就同時補滿兩格。若只用一次，只需補回該次消耗。
+
+- **適用能力**：這項升級只作用於有信者之怒。
+
+[詳細資料](TALENTS%20Zealot/zealot_additional_charge_of_ability.md) · [返回目錄](#talent-index)
 
 ---
 

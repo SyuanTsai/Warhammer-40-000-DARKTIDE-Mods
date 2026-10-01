@@ -11,6 +11,7 @@
 | [不屈靈魂合唱](#zealot_bolstering_prayer) | 待同版核對 |
 | [神聖事業](#zealot_channel_grants_toughness_damage_reduction) | 原文字串未精確配對 |
 | [教宗之喚](#zealot_channel_grants_damage) | 明確繁中誤譯 |
+| [倍增狂熱](#zealot_additional_charge_of_ability) | 未見明確矛盾 |
 | [死戰到底](#zealot_resist_death) | 未見明確矛盾 |
 | [殉道](#zealot_martyrdom) | 未見明確矛盾 |
 | [不滅意志](#zealot_martyrdom_grants_toughness) | 未見明確矛盾 |
@@ -89,6 +90,13 @@
 - 繁中原文短引：每次脈衝都會為您與處於凝聚狀態的盟友賦予{damage:%s}傷害。疊加{damage:%s}次。持續{duration:%s}秒。
 - 同源英文：Each pulse grants {damage:%s} Damage to you and Allies in Coherency. Stacking {stacks:%s} times. Lasts {duration:%s}s.
 - [原始碼推導與限制](zealot_channel_grants_damage.md)。
+
+<a id="zealot_additional_charge_of_ability"></a>
+## 倍增狂熱(Redoubled Zeal)
+
+- 描述鍵：`loc_talent_zealot_dash_has_more_charges_desc`；hash：`13ade9bb`。
+- 結論：未見明確矛盾。同hash兩語皆表示能力增加至2次充能；共享資源與回充時序屬原文省略，不列錯誤。
+- [原始碼推導與限制](zealot_additional_charge_of_ability.md)。
 
 <a id="zealot_resist_death"></a>
 ## 死戰到底(Until Death)
