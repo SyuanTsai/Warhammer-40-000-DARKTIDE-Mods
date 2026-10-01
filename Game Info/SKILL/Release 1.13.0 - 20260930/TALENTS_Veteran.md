@@ -22,6 +22,7 @@
 | 技能 | [堅定不移(Precision Strikes)](#veteran_increased_weakspot_damage) | 弱點命中的額外傷害增加 30%。 |
 | 技能 | [亡命之徒(Desperado)](#veteran_increased_melee_crit_chance_and_melee_finesse) | 近戰爆擊率增加 10 個百分點。 |
 | 技能 | [嗜血(Out for Blood)](#veteran_all_kills_replenish_toughness) | 每次擊殺額外恢復 5% 最大韌性。 |
+| 技能 | [遊擊者(Skirmisher)](#veteran_increase_damage_after_sprinting) | 衝刺或滑行時持續累積傷害加成，每層增加 6.25%，最多 4 層。 |
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
@@ -350,6 +351,25 @@
 - 目前 98／100 時，實際恢復 `min(5, 100 − 98) = 2 點`。
 
 [詳細資料](TALENTS%20Veteran/veteran_all_kills_replenish_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_increase_damage_after_sprinting"></a>
+
+### 遊擊者(Skirmisher)
+
+<img src="https://github.com/user-attachments/assets/dca385d7-a54e-4bf5-b67d-f3d29ef82234" width="72" height="72" alt="遊擊者天賦圖示">
+
+- **衝刺或滑行時持續累積傷害加成，每層增加 6.25%，最多 4 層。**
+- 持續動作時約每秒增加 1 層；停下再衝刺，通常約半秒即可取得下一層。
+- 獲得新層會刷新 **10 秒**持續時間；滿層繼續衝刺仍可刷新。停止刷新後，時間到即失去加成。
+
+#### 疊層與傷害算例
+
+- 四層合計 `6.25% × 4 = 25%`。
+- 只計此加成，基礎傷害 100：`100 × (1 + 4 × 6.25%) = 125 傷害`。
+
+[詳細資料](TALENTS%20Veteran/veteran_increase_damage_after_sprinting.md) · [返回目錄](#talent-index)
 
 ---
 

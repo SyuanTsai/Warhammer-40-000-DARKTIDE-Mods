@@ -6,7 +6,7 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 36／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 37／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -52,7 +52,7 @@
 | 技能 | [堅定不移](veteran_increased_weakspot_damage.md) / `veteran_increased_weakspot_damage` | `node_a6dcece9-435c-4d88-83a6-8c58bd9240b9` | 完成（核心靜態機制） |
 | 技能 | [亡命之徒](veteran_increased_melee_crit_chance_and_melee_finesse.md) / `veteran_increased_melee_crit_chance_and_melee_finesse` | `node_7e94349b-d6c6-446e-bb39-0b367f6477bf` | 完成（核心靜態機制） |
 | 技能 | [嗜血](veteran_all_kills_replenish_toughness.md) / `veteran_all_kills_replenish_toughness` | `node_06b90705-95b0-44bd-b357-bbb061cf0cb4` | 完成（核心靜態機制） |
-| 技能 | 遊擊者 / `veteran_increase_damage_after_sprinting` | `node_39129a53-b8c1-4d7e-82bd-e2b9d49315a1` | 待核對 |
+| 技能 | [遊擊者](veteran_increase_damage_after_sprinting.md) / `veteran_increase_damage_after_sprinting` | `node_39129a53-b8c1-4d7e-82bd-e2b9d49315a1` | 完成（核心靜態機制） |
 | 技能 | 趁火打劫 / `veteran_crits_apply_rending` | `node_a8044c1f-dda9-4a0b-b503-d549fd2ad5f9` | 待核對 |
 | 技能 | 不拋棄不放棄 / `veteran_movement_speed_towards_downed` | `node_c6d92993-58ab-4f1c-ac76-0e3b36af29a5` | 待核對 |
 | 技能 | 裂擊 / `veteran_rending_bonus` | `node_c36508a3-b4f2-4b5a-837e-132101c8739d` | 待核對 |
