@@ -28,6 +28,7 @@
 | 能力 | [責任與榮譽(Duty and Honour)](#veteran_combat_ability_increase_and_restore_toughness_to_coherency) | 效果：施放發號施令時，你與協同範圍內的隊友獲得額外 75 點最大韌性，持續 10 秒；目前韌性也增加 75 點。你自己還會受到發號施令的回滿效果。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 能力 | [肉搏戰(Close Quarters Killzone)](#veteran_increased_close_damage_after_combat_ability) | 效果：使用戰鬥能力後，提高對近距離敵人造成的傷害，持續 10 秒。滲透則從隱身期間開始生效，解除隱身後再持續 10 秒。 |
+| 能力 | [敵人越大...(The Bigger they Are ...)](#veteran_combat_ability_ogryn_outlines) | 效果：處決者姿態的每次持續時間從 6 秒延長至 9 秒，並額外標出歐格林、怪物與首領的輪廓。 |
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
 | 鑰石 | [視野狹窄(Tunnel Vision)](#veteran_snipers_focus_toughness_bonus) | 每層狙擊專注使韌性恢復量增加 4%。 |
@@ -482,6 +483,21 @@
 - **重複施放：**不疊層；已開始的 10 秒倒數不會因效果期間再次施放而重設。
 
 [詳細資料](TALENTS%20Veteran/veteran_increased_close_damage_after_combat_ability.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_combat_ability_ogryn_outlines"></a>
+
+### 敵人越大...(The Bigger they Are ...)
+
+<img src="https://github.com/user-attachments/assets/0df9e7bd-7394-4f93-ba54-f8f6d2884d02" width="72" height="72" alt="敵人越大...天賦圖示">
+
+- **效果：**處決者姿態的每次持續時間從 6 秒延長至 9 秒，並額外標出歐格林、怪物與首領的輪廓。
+- **輪廓距離：**啟動或刷新輪廓時，上述敵人通常必須距離你不到 50 公尺；特殊敵人不受這項距離限制。
+- **延長姿態：**擊殺這些新增的目標類型，也會把姿態時間重設為完整 9 秒。
+- **時間算例：**啟動 7 秒後擊殺一名符合條件的敵人，原本剩餘 2 秒會回到 9 秒，約可持續至第 16 秒。
+
+[詳細資料](TALENTS%20Veteran/veteran_combat_ability_ogryn_outlines.md) · [返回目錄](#talent-index)
 
 ---
 
