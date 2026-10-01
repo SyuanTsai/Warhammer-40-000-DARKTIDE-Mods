@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/2ea26a3b-1222-4c56-8120-26a65b4595fa" width="32" height="32" alt="傲慢天賦圖示"> [傲慢](#zealot_weakspot_damage_reduction)<br>- Hubris | <ul><li>弱點擊殺後減傷 15%，持續 4 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="32" height="32" alt="頭號目標天賦圖示"> [頭號目標](#zealot_elite_kills_empowers)<br>- Prime Target | <ul><li>擊殺精英後增傷 10%，並在 5 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/5d469457-ce3e-4c4f-ac25-c0759b30b61f" width="32" height="32" alt="敵後行動天賦圖示"> [敵後行動](#zealot_suppress_on_backstab_kill)<br>- Behind the Lines | <ul><li>重擊背刺擊殺後，壓制自身 8 公尺內的敵人；冷卻 5 秒。</li></ul> | 技能 |
 
 ---
 
@@ -514,5 +515,20 @@
 - **傷害與恢復算例**：基礎 100 點傷害變成 100 × 1.1 = 110 點；最大韌性 100 時，每秒補 100 × 15% ÷ 5 = 3 點。第 3 秒重新觸發、之後完整持續到第 8 秒，合計可補 24 點，仍以韌性缺額為限。
 
 [詳細資料](TALENTS%20Zealot/zealot_elite_kills_empowers.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_suppress_on_backstab_kill"></a>
+### 敵後行動(Behind the Lines)
+
+<img src="https://github.com/user-attachments/assets/5d469457-ce3e-4c4f-ac25-c0759b30b61f" width="72" height="72" alt="敵後行動天賦圖示">
+
+- **觸發方式**：用近戰重擊從背後擊殺敵人後，壓制你周圍 8 公尺內可受壓制的敵人；冷卻 5 秒。範圍以你的位置為中心。
+
+- **作用限制**：離你越遠，壓制量越低；敵人的壓制抗性與行為各不相同，不保證所有敵人都停止攻擊，也不造成額外傷害。
+
+- **冷卻算例**：第 0 秒觸發後，第 2 秒再次重擊背刺擊殺不會再觸發；約第 5 秒起才可再次生效。
+
+[詳細資料](TALENTS%20Zealot/zealot_suppress_on_backstab_kill.md) · [返回目錄](#talent-index)
 
 ---

@@ -42,6 +42,7 @@
 | [傲慢](#zealot_weakspot_damage_reduction) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_4) | 未見明確矛盾 |
 | [頭號目標](#zealot_elite_kills_empowers) | 未見明確矛盾 |
+| [敵後行動](#zealot_suppress_on_backstab_kill) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
 ## 背刺者(Backstabber)
@@ -282,3 +283,10 @@
 - 描述鍵：`loc_talent_zealot_elite_kills_empowers_desc`；hash：`3d3cbd01`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_elite_kills_empowers.md)。
+
+<a id="zealot_suppress_on_backstab_kill"></a>
+## 敵後行動(Behind the Lines)
+
+- 描述鍵：`loc_talent_zealot_suppress_on_backstab_kill_desc`；hash：`2ae92ad1`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_suppress_on_backstab_kill.md)。
