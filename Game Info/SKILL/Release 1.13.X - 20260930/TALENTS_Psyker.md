@@ -25,6 +25,7 @@
 | <img src="https://github.com/user-attachments/assets/ac3d53fd-1b36-40d7-8ee1-275804b29c63" width="32" height="32" alt="迅雷之勢天賦圖示"> [迅雷之勢](#psyker_melee_attack_speed)<br>- Lightning Speed | <ul><li>近戰攻擊速度增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c8b43c74-3790-440f-8610-db321e11da83" width="32" height="32" alt="亞空間分裂天賦圖示"> [亞空間分裂](#psyker_cleave_from_peril)<br>- Warp Splitting | <ul><li>依目前反噬增加傷害順劈能力，最高增加 100%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/444fd0d1-2a66-48f9-b841-f7bf1bcc6ccf" width="32" height="32" alt="汲魂者天賦圖示"> [汲魂者](#psyker_killing_enemy_with_warpfire_boosts)<br>- Souldrinker | <ul><li>受靈魂之火影響的敵人死亡後，5 秒內恢復韌性並增加 5 個百分點爆擊機率。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/efceab94-6c34-43bc-a8ed-6d06fbf269b1" width="32" height="32" alt="骨折後遺症天賦圖示"> [骨折後遺症](#psyker_melee_weaving)<br>- By Crack of Bone | <ul><li>近戰弱點擊殺降低 10 個百分點反噬。</li><li>之後 4 秒反噬產生量減少 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f3235e60-41ff-4e15-81eb-172af5ec1f2e" width="32" height="32" alt="脆弱心智天賦圖示"> [脆弱心智](#psyker_damage_vs_ogryns_and_monsters)<br>- Vulnerable Minds | <ul><li>對歐格林與巨獸的傷害增加 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="32" height="32" alt="聚焦亞空間天賦圖示"> [聚焦亞空間](#psyker_increased_warp_damage)<br>- Focused Warp | <ul><li>亞空間傷害增加 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6b51b11f-eed5-45f3-b539-6b4502778099" width="32" height="32" alt="結晶意志天賦圖示"> [結晶意志](#psyker_alternative_peril_explosion)<br>- Crystalline Will | <ul><li>反噬爆炸傷害增加 100%，半徑增加 25%。</li><li>以移除一格傷痕代替通常的爆炸倒地；爆炸擊殺精英可免除此代價。</li></ul> | 技能 |
@@ -299,6 +300,19 @@
 - **恢復與機率算例**：最大韌性 100、缺額足夠且沒有其他修正時，每秒恢復 100 × 15% ÷ 5 = 3 點；原本 10% 爆擊機率變成 10% + 5% = 15%。
 
 [詳細資料](TALENTS%20Psyker/psyker_killing_enemy_with_warpfire_boosts.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_melee_weaving"></a>
+### 骨折後遺症(By Crack of Bone)
+
+<img src="https://github.com/user-attachments/assets/efceab94-6c34-43bc-a8ed-6d06fbf269b1" width="72" height="72" alt="骨折後遺症天賦圖示">
+
+- **觸發方式**：以近戰攻擊命中弱點並擊殺敵人，降低 10 個百分點反噬；之後 4 秒內，反噬產生量減少 20%。再次觸發會刷新時間。
+
+- **反噬算例**：反噬 60% 時觸發，降到 50%；期間原本產生 20 個百分點的攻擊，改為 20 × 0.8 = 16 個百分點。
+
+[詳細資料](TALENTS%20Psyker/psyker_melee_weaving.md) · [返回目錄](#talent-index)
 
 ---
 

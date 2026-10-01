@@ -75,7 +75,7 @@
 | [迅雷之勢](#psyker_melee_attack_speed) | 未見明確矛盾 |
 | [亞空間分裂](#psyker_cleave_from_peril) | 繁中原文勘誤 |
 | [汲魂者](#psyker_killing_enemy_with_warpfire_boosts) | 未見明確矛盾 |
-| [骨折後遺症](#psyker_melee_weaving) | 已配對；機制待核對 |
+| [骨折後遺症](#psyker_melee_weaving) | 未見明確矛盾 |
 | [脆弱心智](#psyker_damage_vs_ogryns_and_monsters) | 未見明確矛盾 |
 | [聚焦亞空間](#psyker_increased_warp_damage) | 未見明確矛盾 |
 | [反噬平衡](#psyker_weapon_attacks_peril_equilibrium) | 已配對；機制待核對 |
@@ -569,7 +569,7 @@
 ## 骨折後遺症(By Crack of Bone)
 
 - 描述鍵：`loc_talent_psyker_melee_weaving_desc`；hash：`9a0cbda1`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_melee_weaving.md)。
 
 <a id="psyker_damage_vs_ogryns_and_monsters"></a>
