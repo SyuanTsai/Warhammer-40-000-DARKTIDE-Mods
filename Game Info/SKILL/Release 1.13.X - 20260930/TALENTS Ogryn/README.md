@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L3-L10)。內部 tree version 25 不等於遊戲發行版號。
 
-完成 76／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 77／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -21,6 +21,7 @@
 | 光環 | [跟緊我！](ogryn_toughness_regen_aura.md) / `ogryn_toughness_regen_aura` | `node_8d3ffc06-6e43-4888-bddb-adae115908fa` | 完成（核心靜態機制） |
 | 能力 | [跺殺之靴](ogryn_charge_toughness.md) / `ogryn_charge_toughness` | `node_6639c593-e867-4ee5-9536-b01124b5aa53` | 完成（核心靜態機制） |
 | 能力 | [粉碎](ogryn_charge_applies_bleed.md) / `ogryn_charge_applies_bleed` | `node_c8dc2052-517d-42cf-84e5-ff8161b2f99f` | 完成（核心靜態機制） |
+| 能力 | [踐踏](ogryn_charge_trample.md) / `ogryn_charge_trample` | `node_b3d3d2eb-a57e-4c0e-bc45-5d0c41b94135` | 完成（核心靜態機制） |
 | 鑰石 | [爆限超載](ogryn_leadbelcher_no_ammo_chance.md) / `ogryn_leadbelcher_no_ammo_chance` | `node_e64ae2d0-e20a-486a-8cf6-9208cb9dd9e6` | 完成（核心靜態機制） |
 | 鑰石 | [麻木](ogryn_carapace_armor.md) / `ogryn_carapace_armor` | `node_916ca2ec-b1d0-41c4-807b-a250950f9d5b` | 完成（核心靜態機制） |
 | 鑰石 | [重拳出擊](ogryn_passive_heavy_hitter.md) / `ogryn_passive_heavy_hitter` | `node_894ba06e-9e23-480b-9674-a1f4df246824` | 完成（核心靜態機制） |

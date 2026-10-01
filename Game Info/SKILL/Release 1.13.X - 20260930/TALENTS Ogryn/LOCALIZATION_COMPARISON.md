@@ -18,6 +18,7 @@
 | [跟緊我！](#ogryn_toughness_regen_aura) | 未見明確矛盾 |
 | [跺殺之靴](#ogryn_charge_toughness) | 未見明確矛盾 |
 | [粉碎](#ogryn_charge_applies_bleed) | 未見明確矛盾 |
+| [踐踏](#ogryn_charge_trample) | 未見明確矛盾 |
 | [爆限超載](#ogryn_leadbelcher_no_ammo_chance) | 未見明確矛盾 |
 | [麻木](#ogryn_carapace_armor) | 跨來源待同版核對 |
 | [重拳出擊](#ogryn_passive_heavy_hitter) | 未見明確矛盾 |
@@ -154,6 +155,13 @@
 - 描述鍵：`loc_talent_ogryn_bleed_on_bull_rush_desc`；hash：`5f1e4b89`。
 - 結論：未見明確矛盾。繁中原文「被衝鋒命中的敵人疊加5層流血」與英文原文「對衝鋒命中的敵人施加5層流血」指向同一觸發與層數；原文沒有說每個目標只觸發一次或傷害刻度，這些是實作補充而非翻譯矛盾。此配對的 Build 25492122 與公開原始碼 SHA 版本關係未確認，跨版差異待核。
 - [原始碼推導與限制](ogryn_charge_applies_bleed.md)。
+
+<a id="ogryn_charge_trample"></a>
+## 踐踏(Trample)
+
+- 描述鍵：`loc_talent_ogryn_ability_charge_trample_desc`；hash：`fd34bb5c`。
+- 結論：未見明確矛盾。繁中原文「命中的每個敵人都會使你獲得一層」與英文原文「for each enemy hit gain a stack」都按衝鋒命中敵人取得一層；兩種原文同樣列出每層傷害、10秒與20層上限，公式算例是將其轉成實際倍率，未發現明確矛盾。版本配對仍待核。
+- [原始碼推導與限制](ogryn_charge_trample.md)。
 
 <a id="ogryn_leadbelcher_no_ammo_chance"></a>
 ## 爆限超載(Burst Limiter Override)
