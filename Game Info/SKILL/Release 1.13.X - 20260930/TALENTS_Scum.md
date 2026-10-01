@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/7fc85ba0-f7e6-4aba-a966-638511f2c713" width="32" height="32" alt="惡棍天賦圖示"> [惡棍](#broker_coherency_melee_damage)<br>- Ruffian | <ul><li>你與協同中的隊友，近戰傷害增加 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="32" height="32" alt="無政府主義者天賦圖示"> [無政府主義者](#broker_coherency_anarchist)<br>- Anarchist | <ul><li>你與協同中的隊友，爆擊機率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7" width="32" height="32" alt="強化亡命之徒天賦圖示"> [強化亡命之徒](#broker_ability_focus_improved)<br>- Enhanced Desperado | <ul><li>啟動後自動切換並裝填遠程武器，進入 10 秒專注狀態；此時遠程攻擊視同成功閃避，衝刺不耗耐力，衝刺速度加算 +20%。</li><li>標示 12.5 公尺內可標記的敵人；以遠程武器近距離擊殺標記目標可延長狀態，初始每次 +1 秒，經過 20 秒後延長量逐段縮小。</li><li>基礎冷卻 45 秒；狀態存續期間自然充能暫停，狀態結束後才恢復。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/74d4304b-23f7-4666-879b-62c727596b69" width="32" height="32" alt="專注凝神天賦圖示"> [專注凝神](#broker_ability_focus_sub_3)<br>- Focused Resolve | <ul><li>專注期間的近距離遠程擊殺可恢復技能冷卻：一般擊殺 0.5 秒，精英或專家擊殺 1 秒；每次專注最多恢復 5 秒。</li><li>按 45 秒基礎冷卻及每秒自然充能 1 計，恢復至上限相當於最多補回 5 秒資源；不計其他修正，專注結束後自然充能剩 40 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="精準獵殺天賦圖示"> [精準獵殺](#broker_ability_focus_sub_2)<br>- Pick Your Targets | <ul><li>專注期間遠程攻擊加算 +15% 撕裂修正；近距離遠程擊殺每次另疊 3% 遠程傷害，最多 5 層（+15%），每層持續 3 秒並可由新擊殺刷新。</li><li>此撕裂加成作用於護甲計算，擊殺疊層是遠程傷害加算；只計滿層效果時，基礎100點遠程傷害變為115點。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="特提恩是迎賓天賦圖示"> [特提恩是迎賓](#broker_passive_first_target_damage)<br>- A Tertium Welcome | <ul><li>每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。</li></ul> | 技能 |
@@ -186,6 +187,23 @@
 - **彈藥與冷卻**：狀態期間重新裝填不扣彈藥儲備；基礎冷卻 45 秒的自然充能在狀態結束後才開始恢復，延長的狀態時間也會延後冷卻恢復。 結束時，會依剩餘備彈重新結算彈匣；狀態內的免費子彈不會整匣保留。
 
 [詳細資料](TALENTS%20Scum/broker_ability_focus_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_ability_focus_sub_3"></a>
+### 專注凝神(Focused Resolve)
+
+<img src="https://github.com/user-attachments/assets/74d4304b-23f7-4666-879b-62c727596b69" width="72" height="72" alt="專注凝神天賦圖示">
+
+- **恢復量**：專注期間，近距離遠程擊殺一般敵人恢復 0.5 秒技能冷卻；擊殺精英或專家恢復 1 秒。
+
+- **恢復上限**：每次專注最多恢復 5 秒，等於最多 10 次一般擊殺或 5 次精英／專家擊殺；混合擊殺累計到 5 秒即停止恢復。
+
+- **冷卻算例**：技能每秒自然充能 1，基礎冷卻 45 秒；達到 5 秒恢復上限後，專注結束再自然充能約需 45−5=40 秒。專注期間冷卻自然充能暫停，但擊殺恢復會直接補入充能。
+
+- **針槍毒素例外**：在專注期間被指定針槍遠程命中追蹤的敵人，也可能以近距離毒素死亡觸發恢復；一般中毒死亡不會一概觸發。
+
+[詳細資料](TALENTS%20Scum/broker_ability_focus_sub_3.md) · [返回目錄](#talent-index)
 
 ---
 

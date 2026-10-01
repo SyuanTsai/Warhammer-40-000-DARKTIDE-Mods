@@ -15,6 +15,7 @@
 | [惡棍](#broker_coherency_melee_damage) | 未見明確矛盾 |
 | [無政府主義者](#broker_coherency_anarchist) | 未見明確矛盾 |
 | [強化亡命之徒](#broker_ability_focus_improved) | 未見明確中英矛盾 |
+| [專注凝神](#broker_ability_focus_sub_3) | 未見中英翻譯差異（觸發條件由程式補充） |
 | [精準獵殺](#broker_ability_focus_sub_2) | 未見明確中英矛盾 |
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
 | [特提恩是迎賓](#broker_passive_first_target_damage) | 未見明確矛盾 |
@@ -112,6 +113,13 @@
 - 描述鍵：`loc_talent_broker_ability_focus_improved_desc`；hash：`a1148a57`。
 - 結論：未見明確中英矛盾。繁中與英文都描述遠程攻擊視同閃避、衝刺免耗耐力並加速、近距離標記與遠程擊殺延長；固定版本設定值與計時邏輯相符。針槍毒素的額外追蹤條件是程式補充，原文省略不作勘誤。
 - [原始碼推導與限制](broker_ability_focus_improved.md)。
+
+<a id="broker_ability_focus_sub_3"></a>
+## 專注凝神(Focused Resolve)
+
+- 描述鍵：`loc_talent_broker_ability_focus_sub_3_desc`；hash：`5ba532cd`。
+- 結論：未見中英翻譯差異（觸發條件由程式補充）。繁中與英文都寫標記敵人擊殺恢復0.5秒、精英或專家恢復1秒、上限5秒，數值相符。固定版本程式的普通擊殺檢查是近距離遠程擊殺，沒有另外檢查標記旗標；針槍毒素死亡是有追蹤及距離條件的特例，原文省略不等於翻譯錯誤。
+- [原始碼推導與限制](broker_ability_focus_sub_3.md)。
 
 <a id="broker_ability_focus_sub_2"></a>
 ## 精準獵殺(Pick Your Targets)
