@@ -36,6 +36,7 @@
 | [猛烈劈擊](#broker_passive_melee_cleave_on_melee_kill) | 未見明確矛盾 |
 | [超暴力](#broker_passive_melee_damage_carry_over) | 未見明確矛盾 |
 | [劇毒菌株](#broker_passive_toxin_infected_enemies_take_increased_damage) | 未見明確矛盾 |
+| [毒藥狂熱](#broker_passive_damage_after_toxined_enemies) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -234,3 +235,10 @@
 - 描述鍵：`loc_talent_broker_passive_toxin_infected_enemies_take_increased_damage_desc`；hash：`b7e6d44b`。
 - 結論：未見明確矛盾。繁中與英文都描述感染後受到傷害增加；提前結束及疊層為補充。
 - [原始碼推導與限制](broker_passive_toxin_infected_enemies_take_increased_damage.md)。
+
+<a id="broker_passive_damage_after_toxined_enemies"></a>
+## 毒藥狂熱(Toxin Mania)
+
+- 描述鍵：`loc_talent_broker_damage_after_toxined_enemies_desc`；hash：`f70dc769`。
+- 結論：未見明確矛盾。兩語都按附近感染敵人數量增傷，距離及來源不限為補充。
+- [原始碼推導與限制](broker_passive_damage_after_toxined_enemies.md)。

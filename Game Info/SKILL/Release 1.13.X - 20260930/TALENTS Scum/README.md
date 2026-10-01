@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 28／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 29／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -39,3 +39,4 @@
 | 技能 | [猛烈劈擊](broker_passive_melee_cleave_on_melee_kill.md) / `broker_passive_melee_cleave_on_melee_kill` | `node_43d46f72-28f5-4330-8a30-6fb2f1bc94db` | 完成（核心靜態機制） |
 | 技能 | [超暴力](broker_passive_melee_damage_carry_over.md) / `broker_passive_melee_damage_carry_over` | `node_ca3fd6b8-f002-4e51-875d-a234a153d071` | 完成（核心靜態機制） |
 | 技能 | [劇毒菌株](broker_passive_toxin_infected_enemies_take_increased_damage.md) / `broker_passive_toxin_infected_enemies_take_increased_damage` | `node_735140ff-109a-4bc2-a2b9-761614c238cc` | 完成（核心靜態機制） |
+| 技能 | [毒藥狂熱](broker_passive_damage_after_toxined_enemies.md) / `broker_passive_damage_after_toxined_enemies` | `node_45324e02-771e-4f7d-8743-d306bcf106d2` | 完成（核心靜態機制） |

@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/23850be1-ea33-448c-93dc-409f21216ceb" width="32" height="32" alt="猛烈劈擊天賦圖示"> [猛烈劈擊](#broker_passive_melee_cleave_on_melee_kill)<br>- Battering Strikes | <ul><li>近戰擊殺後增加 10% 近戰順劈，持續 5 秒，最多 5 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5439d198-0b4c-4a05-ab95-fc67f67398c9" width="32" height="32" alt="超暴力天賦圖示"> [超暴力](#broker_passive_melee_damage_carry_over)<br>- Hyper-Violence | <ul><li>擊殺的溢出傷害有 25% 轉為固定近戰加傷，持續 1 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/90caf35d-4780-4f00-a9cc-636858cd091e" width="32" height="32" alt="劇毒菌株天賦圖示"> [劇毒菌株](#broker_passive_toxin_infected_enemies_take_increased_damage)<br>- Virulent Strain | <ul><li>你施加毒素時，使目標受到的傷害增加 10%，最多持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/06abfebe-3a5e-421b-b71a-35e5faee2767" width="32" height="32" alt="毒藥狂熱天賦圖示"> [毒藥狂熱](#broker_passive_damage_after_toxined_enemies)<br>- Toxin Mania | <ul><li>12.5 公尺內每名受毒素感染的敵人，提供 5% 傷害，最多 15%。</li></ul> | 技能 |
 
 ---
 
@@ -432,5 +433,18 @@
 - **傷害算例**：原本造成 100 點傷害，單計易傷變成 110；若攻擊者另有 25% 增傷，則為 100 × 1.25 × 1.1 = 137.5 點。若目標原本另有同階段 20% 易傷，則該階段為 1 + 20% + 10% = 1.3 倍。
 
 [詳細資料](TALENTS%20Scum/broker_passive_toxin_infected_enemies_take_increased_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_damage_after_toxined_enemies"></a>
+### 毒藥狂熱(Toxin Mania)
+
+<img src="https://github.com/user-attachments/assets/06abfebe-3a5e-421b-b71a-35e5faee2767" width="72" height="72" alt="毒藥狂熱天賦圖示">
+
+- **計算方式**：依周圍 12.5 公尺內受毒素感染的敵人數量，每名增加 5% 傷害，3 名即達 15% 上限；不要求由你施毒。敵人離開或失去毒素後，加成會隨之降低。
+
+- **傷害算例**：附近有 2 名感染敵人，增傷 10%，基礎 100 點變成 110；同階段原有 25% 時為 100 × (1 + 25% + 10%) = 135 點。
+
+[詳細資料](TALENTS%20Scum/broker_passive_damage_after_toxined_enemies.md) · [返回目錄](#talent-index)
 
 ---
