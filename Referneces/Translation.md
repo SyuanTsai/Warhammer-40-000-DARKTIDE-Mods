@@ -1706,3 +1706,5 @@
 - Spur IV - 激勵 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L534-L544)）
 
 - Reflex - 反射（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L550-L557)）
+
+- Fervor - 狂熱（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L558-L580)）

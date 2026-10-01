@@ -89,6 +89,7 @@
 | [趁勝追擊](#broker_passive_cleave_on_cleave) | 未見明確矛盾 |
 | [裝備財閥特殊裝備](#broker_stimm_activation_talent) | 未見明確中英矛盾 |
 | [激勵 I](#broker_stimm_celerity_1) | 未見明確中英矛盾 |
+| [狂熱](#broker_stimm_celerity_5c) | 未見明確中英矛盾 |
 | [激勵 II](#broker_stimm_celerity_2) | 未見明確中英矛盾 |
 | [激勵 III](#broker_stimm_celerity_3) | 未見明確中英矛盾 |
 | [激勵 IV](#broker_stimm_celerity_4) | 未見明確中英矛盾 |
@@ -664,6 +665,13 @@
 - 描述鍵：`loc_talent_stat_attack_speed / loc_talent_stat_wield_speed`；hash：`a2530496 / d0347040`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
 - [原始碼推導與限制](broker_stimm_celerity_1.md)。
+
+<a id="broker_stimm_celerity_5c"></a>
+## 狂熱(Fervor)
+
+- 描述鍵：`loc_talent_stat_movement_speed / loc_talent_stat_dodge_distance_modifier / loc_talent_stat_dodge_speed_multiplier / loc_talent_stat_dodge_cooldown_reset_modifier`；hash：`090b8be4 / ac38ced9 / f5994101 / 1863559c`。
+- 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
+- [原始碼推導與限制](broker_stimm_celerity_5c.md)。
 
 <a id="broker_stimm_celerity_2"></a>
 ## 激勵 II(Spur II)
