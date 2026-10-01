@@ -26,6 +26,7 @@
 | <img src="https://github.com/user-attachments/assets/c3cdd1a9-e1eb-4e29-9a5e-6bae44c280a4" width="32" height="32" alt="毒性陷阱天賦圖示"> [毒性陷阱](#broker_ability_stimm_field_sub_2)<br>- Booby Trap | <ul><li>場域持續時間正常結束時爆炸；3公尺範圍內受到爆炸傷害的敵人會附加 7 層毒素。</li><li>爆炸以破片傷害計算；遭提前取消或場域尚未到期時，不會觸發這次爆炸。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/4575cb9c-10e2-489c-8b4f-0b8f4eda154d" width="32" height="32" alt="靈巧天賦圖示"> [靈巧](#broker_passive_improved_dodges)<br>- Nimble | <ul><li>閃避移動速度提高 25%，閃避後仍被判定為閃避的時間增加 0.15 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d" width="32" height="32" alt="腎上腺素狂暴天賦圖示"> [腎上腺素狂暴](#broker_keystone_adrenaline_junkie)<br>- Adrenaline Frenzy | <ul><li>近戰命中獲得 1 層腎上腺素；近戰爆擊額外獲得 1 層。</li><li>2 秒內未獲得新層時，每 2 秒失去 1 層；最多 30 層。</li><li>達 30 層時清除腎上腺素並觸發 10 秒狂暴：近戰攻速 +10%、近戰傷害 +25%。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/6cc42ba2-04c8-4a98-ae3e-5341b777ccdd" width="32" height="32" alt="兀鷲印記天賦圖示"> [兀鷲印記](#broker_keystone_vultures_mark_on_kill)<br>- Vulture's Mark | <ul><li>遠程擊殺精英或專家可累積印記，持續 8 秒、最多 3 層；每層增加 5% 遠程傷害、5 個百分點遠程爆擊率與 5% 移動速度。</li><li>有 3 層時再以遠程攻擊擊殺精英或專家，回復自己與協同範圍內的隊友最大韌性的 15%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9b42d72f-2429-446a-bf75-d5d87db98b36" width="32" height="32" alt="化學性依賴天賦圖示"> [化學性依賴](#broker_keystone_chemical_dependency)<br>- Chemical Dependency | <ul><li>使用興奮劑取得 1 層化學依賴性，每層提高戰鬥技能資源回充速度 10%。</li><li>最多 3 層，每層持續 90 秒；沒有新層時每 90 秒衰退 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/b7fff291-d5f3-4213-bfef-8b28b8065889" width="32" height="32" alt="化學強化天賦圖示"> [化學強化](#broker_keystone_chemical_dependency_sub_1)<br>- Chem Enhanced | <ul><li>每層化學依賴性額外增加 5 個百分點的爆擊率。</li><li>3 層時共增加 15 個百分點；這是爆擊機率，不是爆擊傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6c334888-08bb-4567-a6a2-1c4b4750409b" width="32" height="32" alt="化學增強天賦圖示"> [化學增強](#broker_keystone_chemical_dependency_sub_2)<br>- Chem Fortified | <ul><li>使用興奮劑時恢復最大韌性的 50%。</li><li>每層化學依賴性使承受的韌性傷害乘以 0.95；3 層合計使韌性傷害約降低 14.26%。</li></ul> | 鑰石 |
@@ -422,6 +423,27 @@
 - **狂暴傷害**：近戰傷害 +25% 屬加法傷害修正；單計此項，基礎 100 點成為 125 點。
 
 [詳細資料](TALENTS%20Scum/broker_keystone_adrenaline_junkie.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_keystone_vultures_mark_on_kill"></a>
+### 兀鷲印記(Vulture's Mark)
+
+<img src="https://github.com/user-attachments/assets/6cc42ba2-04c8-4a98-ae3e-5341b777ccdd" width="72" height="72" alt="兀鷲印記天賦圖示">
+
+- **取得印記**：以遠程攻擊擊殺精英或專家敵人，取得 1 層，持續 8 秒；再次取得會增加層數並重設共享計時，最多 3 層。沒有新層時，最後一次取得後 8 秒印記全數消失。
+
+- **每層加成**：每層增加 5% 遠程傷害、5 個百分點遠程爆擊率與 5% 移動速度。3 層時分別為 +15%、+15 個百分點、+15%。
+
+- **滿層回韌性**：3 層期間，每次再以遠程攻擊擊殺精英或專家，回復自己與協同範圍內的隊友最大韌性的 15%；實際回補不超過各自韌性缺額。
+
+- **武器例外**：以毒針手槍造成近距離 毒素擊殺取得印記：需先以遠程武器槽的毒針手槍 命中精英／專家並在其毒素效果仍有效時，由毒素在近距離造成死亡。
+
+- **傷害算例**：無其他修正時，基礎遠程傷害 100 在 3 層下為 100×(1+3×0.05)=115；同階段已有 +20% 時為 100×(1+0.20+0.15)=135。
+
+- **回韌性算例**：最大韌性 100 且缺額至少 15 時，滿層遠程精英／專家擊殺回補 100×0.15=15 點。
+
+[詳細資料](TALENTS%20Scum/broker_keystone_vultures_mark_on_kill.md) · [返回目錄](#talent-index)
 
 ---
 

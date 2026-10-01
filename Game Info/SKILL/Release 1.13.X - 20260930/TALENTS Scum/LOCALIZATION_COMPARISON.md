@@ -28,6 +28,7 @@
 | [毒性陷阱](#broker_ability_stimm_field_sub_2) | 未見明確中英矛盾 |
 | [靈巧](#broker_passive_improved_dodges) | 未見明確矛盾 |
 | [腎上腺素狂暴](#broker_keystone_adrenaline_junkie) | 未見明確矛盾 |
+| [兀鷲印記](#broker_keystone_vultures_mark_on_kill) | 未見明確矛盾 |
 | [化學性依賴](#broker_keystone_chemical_dependency) | 未見明確矛盾 |
 | [化學強化](#broker_keystone_chemical_dependency_sub_1) | 未見明確矛盾 |
 | [化學增強](#broker_keystone_chemical_dependency_sub_2) | 未見明確矛盾 |
@@ -225,6 +226,13 @@
 - 描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_desc`；hash：`b4493ff1`。
 - 結論：未見明確矛盾。繁中與英文一致描述近戰命中、暴擊額外層、2 秒失層、30 層門檻及 10 秒近戰攻速／傷害增益；實際層數與刷新細節由固定版本的 buff 消費邏輯補足。
 - [原始碼推導與限制](broker_keystone_adrenaline_junkie.md)。
+
+<a id="broker_keystone_vultures_mark_on_kill"></a>
+## 兀鷲印記(Vulture's Mark)
+
+- 描述鍵：`loc_talent_broker_keystone_vultures_mark_on_kill_desc`；hash：`5b5c21fe`。
+- 結論：未見明確矛盾。繁中與英文一致描述遠程擊殺精英／專家後取得印記、每層三項 5% 加成及滿層回韌性。程式另有 Needlepistol 近距離毒素死亡路徑，屬文字省略的特殊實作，不與標準描述衝突。
+- [原始碼推導與限制](broker_keystone_vultures_mark_on_kill.md)。
 
 <a id="broker_keystone_chemical_dependency"></a>
 ## 化學性依賴(Chemical Dependency)
