@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_toughness_damage_reduction_per_ally` / `veteran_reduced_toughness_damage_in_coherency` - 密集隊形訓練
+  - 英文對應：Close Order Drill。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1437-L1456)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_block_break_gives_tdr` / `veteran_tdr_on_high_toughness` - 鋼鐵意志
   - 英文對應：Iron Will。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2245-L2272)；此來源證明識別鍵與天賦關係。

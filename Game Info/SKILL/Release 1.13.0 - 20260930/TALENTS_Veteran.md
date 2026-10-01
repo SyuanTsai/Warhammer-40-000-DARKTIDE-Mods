@@ -14,6 +14,7 @@
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
+| 技能 | [密集隊形訓練(Close Order Drill)](#veteran_reduced_toughness_damage_in_coherency) | 協同範圍內每有 1 名隊友，韌性減傷增加 11%；3 名隊友時達到 33%。 |
 | 技能 | [行雲流水(One Motion)](#veteran_reduce_swap_time) | 武器切換速度增加 50%。 |
 | 技能 | [幹掉它！(Bring it Down!)](#veteran_big_game_hunter) | 對歐格林與巨獸的傷害增加 20%。 |
 | 技能 | [優越情節(Superiority Complex)](#veteran_increase_damage_vs_elites) | 增加對精英敵人的傷害 |
@@ -190,6 +191,24 @@
 - 三層後未再觸發：約 **8 秒**後剩 2 層、**16 秒**後剩 1 層、**24 秒**後效果結束。
 
 [詳細資料](TALENTS%20Veteran/veteran_replenish_toughness_on_weakspot_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_reduced_toughness_damage_in_coherency"></a>
+
+### 密集隊形訓練(Close Order Drill)
+
+<img src="https://github.com/user-attachments/assets/139120eb-e9c5-41ea-b87c-bf4737b53f49" width="72" height="72" alt="密集隊形訓練天賦圖示">
+
+- **協同範圍內每有 1 名隊友，韌性減傷增加 11%；3 名隊友時達到 33%。**
+- 隊友離開協同範圍時，依目前人數重新計算。
+
+#### 減傷算例
+
+- 原本受到 100 韌性傷害，1／2／3 名隊友時分別為 `100 × 0.89 = 89`、`100 × 0.78 = 78`、`100 × 0.67 = 67`。
+- 3 人協同並同時觸發鋼鐵意志：`100 × 0.67 × 0.5 = 33.5`。
+
+[詳細資料](TALENTS%20Veteran/veteran_reduced_toughness_damage_in_coherency.md) · [返回目錄](#talent-index)
 
 ---
 
