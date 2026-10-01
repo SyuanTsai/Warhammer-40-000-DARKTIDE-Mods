@@ -15,6 +15,7 @@
 | [特提恩之聲](#broker_passive_restore_toughness_on_close_ranged_kill) | 未見明確矛盾 |
 | [翩翩蝶舞](#broker_passive_ninja_grants_crit_chance) | 未見明確矛盾 |
 | [快速裝填](#broker_passive_reload_speed_on_close_kill) | 未見明確矛盾 |
+| [能量爆發](#broker_passive_stun_immunity_on_toughness_broken) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -64,3 +65,10 @@
 - 描述鍵：`loc_talent_broker_passive_reload_speed_on_close_kill_desc`；hash：`f9ccd2c5`。
 - 結論：未見明確矛盾。同源英文限定Close Ranged Kill；繁中省略遠程且參數位置不順，但仍可理解為近距離擊殺後加快換彈，依規則不將省略或措辭不佳判成明確勘誤。
 - [原始碼推導與限制](broker_passive_reload_speed_on_close_kill.md)。
+
+<a id="broker_passive_stun_immunity_on_toughness_broken"></a>
+## 能量爆發(Burst of Energy)
+
+- 描述鍵：`loc_talent_broker_passive_stun_immunity_on_toughness_broken_desc`；hash：`261ee901`。
+- 結論：未見明確矛盾。繁中與英文均列6秒免暈、50%韌性及10秒冷卻；未說明冷卻起算點屬補充，不列錯誤。
+- [原始碼推導與限制](broker_passive_stun_immunity_on_toughness_broken.md)。

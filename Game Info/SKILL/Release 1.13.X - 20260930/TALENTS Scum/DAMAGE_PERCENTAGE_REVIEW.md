@@ -13,3 +13,4 @@
 | [特提恩之聲](broker_passive_restore_toughness_on_close_ranged_kill.md) | 在 12.5 公尺內遠程擊殺恢復 8% 最大韌性；精英與專家改為 15%。；完整計算與適用限制見來源文件。 |
 | [翩翩蝶舞](broker_passive_ninja_grants_crit_chance.md) | 成功閃避或完美格擋後，爆擊機率增加 20 個百分點，持續 3 秒。；完整計算與適用限制見來源文件。 |
 | [快速裝填](broker_passive_reload_speed_on_close_kill.md) | 12.5 公尺內的遠程擊殺，使換彈速度提高 30%，持續 8 秒。；完整計算與適用限制見來源文件。 |
+| [能量爆發](broker_passive_stun_immunity_on_toughness_broken.md) | 自身韌性耗盡時恢復 50% 最大韌性，免疫眩暈 6 秒；效果結束後冷卻 10 秒。；完整計算與適用限制見來源文件。 |
