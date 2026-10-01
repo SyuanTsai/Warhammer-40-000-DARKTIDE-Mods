@@ -35,6 +35,7 @@
 | <img src="https://github.com/user-attachments/assets/56d9b0f2-db5a-493b-aff8-2cd9699d4d96" width="32" height="32" alt="大師的反擊天賦圖示"> [大師的反擊](#zealot_defensive_knockback)<br>- The Master's Retribution | <ul><li>受到近戰有效命中時，朝攻擊者方向推開敵人；冷卻 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dbe8719f-76fb-444c-a79d-2bf116b628fb" width="32" height="32" alt="背水一戰天賦圖示"> [背水一戰](#zealot_more_damage_when_low_on_stamina)<br>- Desperation | <ul><li>耐力越低，近戰傷害越高；耐力耗盡時最多提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6406ef43-19df-4cab-9091-e5c490d72cef" width="32" height="32" alt="刻不容緩天賦圖示"> [刻不容緩](#zealot_melee_crits_restore_stamina)<br>- No Respite | <ul><li>近戰爆擊命中時恢復 10% 最大耐力；冷卻 1 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/ef521c17-0aae-4e01-b54c-9a25d1f9d792" width="32" height="32" alt="神恩庇護天賦圖示"> [神恩庇護](#zealot_revive_speed)<br>- Providence | <ul><li>救起倒地隊友的速度提高 25%；協助隊友後，對方獲得移速與韌性減傷。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -443,6 +444,19 @@
 - **恢復算例**：最大耐力 6，每次補 6 × 10% = 0.6 點；若只缺 0.2 點，就只恢復 0.2 點。一次橫掃爆擊命中多個敵人，仍受 1 秒冷卻限制。
 
 [詳細資料](TALENTS%20Zealot/zealot_melee_crits_restore_stamina.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_revive_speed"></a>
+### 神恩庇護(Providence)
+
+<img src="https://github.com/user-attachments/assets/ef521c17-0aae-4e01-b54c-9a25d1f9d792" width="72" height="72" alt="神恩庇護天賦圖示">
+
+- **運作方式**：救起倒地隊友的速度提高 25%。完成救起、救援、拉起懸掛隊友或移除捕網後，該隊友獲得 10% 移動速度與 15% 韌性減傷，持續 5 秒。
+
+- **效果算例**：受幫助隊友原本移速 5 公尺／秒，只計這份加成後為 5 × 1.1 = 5.5；原本 100 點韌性傷害變成 100 × 0.85 = 85 點。效果給被協助的隊友，不是給你自己。
+
+[詳細資料](TALENTS%20Zealot/zealot_revive_speed.md) · [返回目錄](#talent-index)
 
 ---
 
