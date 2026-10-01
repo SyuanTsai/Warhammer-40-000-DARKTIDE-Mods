@@ -1,11 +1,58 @@
-# 靈能強化(Empowered Psionics)：來源與待確認事項
+# 靈能強化(Empowered Psionics)：原始碼依據
 
-[返回技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_empowered_ability)
+[返回玩家說明](../TALENTS_Psyker.md#psyker_empowered_ability)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_empowered_ability)
 
-- 狀態：已完成節點與原文定位；機制、公式及勘誤尚待核對。
-- 本機原文：Steam Build `25492122`，`ui` 資源，繁中／英文按相同 hash 配對。
-- 天賦：`psyker_empowered_ability`；分類：鑰石；節點類型：`keystone`。
-- 來源：[當前樹節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1296-L1325)；[天賦定義與顯示參數](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L616-L721)。
-- 名稱鍵：`loc_talent_psyker_empowered_ability`；本機遊戲名稱：靈能強化。
-- 描述鍵：`loc_talent_psyker_empowered_ability_description`；`ui` 描述 hash：`8b4a7ea9`。
-- 比對狀態：繁中／英文已配對；效果與勘誤待逐項核對。
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`psyker_empowered_ability`；名稱鍵：`loc_talent_psyker_empowered_ability`；描述鍵：`loc_talent_psyker_empowered_ability_description`。
+- 節點：`node_8d367c1d-ce78-44f3-a7b8-6a4b55341929`；分類：鑰石；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- 內部charges基礎cap1；on_hit機率.1後再check on_kill，取得+1且clamp上限。無duration，不會自然到期；visual_buff的額外一層與max_stat_stacks=1不能解讀為第二次可用強化。
+- smite_damage+.5與同階段damage加算，smite_damage_multiplier=1.5來自顱腦崩裂本身，是另一乘算項。smite_attack_speed+.5由ActionSmiteTargeting使用charge_time/attack_speed，故時間除以1.5；天賦format_values稱施放時間減半，與執行公式有落差。
+- chain_lightning_damage+2與一般傷害同階段加算；chain_lightning_jump_time_multiplier=.5。開始施放時可取得吸血閃電恢復，結束時扣強化層。
+- Assail強化先由weapon template keyword選擇piercing projectile，普通首目標attack distribution225改350、瞄準380改500；attack/impact cleave由2改4，各命中順序的attack distribution另有不同，不是所有目標固定相同增幅。這些power distribution值需經共用傷害結算，不直接視為最終傷害。
+- ActionSpawnProjectile在fire_time付款前發現psyker_empowered_grenade且action_settings.psyker_smite時跳過_pay_for_projectile，但仍_proc_buffs；因此免除本次投擲次數和反噬付款，on_shoot_projectile仍讓內部強化charges減1。技能說明「不耗充能」與扣強化層並不矛盾，兩者是不同資源。
+
+## 原始碼依據
+
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：616–721](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L616-L721)
+- [scripts/settings/talent/talent_settings_psyker.lua：310–315](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L310-L315)
+- [scripts/settings/talent/talent_settings_psyker.lua：340–341](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L340-L341)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：2245–2269](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2245-L2269)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：2271–2387](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2271-L2387)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：2388–2487](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2388-L2487)
+- [scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua：12–20](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua#L12-L20)
+- [scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua：56–65](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua#L56-L65)
+- [scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua：16–34](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua#L16-L34)
+- [scripts/settings/projectile/player_projectile_templates.lua：567–619](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/projectile/player_projectile_templates.lua#L567-L619)
+- [scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua：288–393](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua#L288-L393)
+- [scripts/extension_systems/weapon/actions/action_spawn_projectile.lua：218–244](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_spawn_projectile.lua#L218-L244)
+- [scripts/extension_systems/weapon/actions/action_smite_targeting.lua：153–162](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_smite_targeting.lua#L153-L162)
+- [scripts/utilities/attack/damage_calculation.lua：507–525](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L507-L525)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：616–721](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L616-L721)
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1296–1325](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1296-L1325)
+
+## 算例條件與待確認事項
+
+- **顱腦崩裂**：不產生反噬，傷害增加 50%，蓄力速度增加 50%。沒有其他增傷時，100 × 1.5 = 150 點；原本 2 秒蓄力變成 2 ÷ 1.5 ≈ 1.33 秒，約縮短 33.3%。
+- **懲戒**：傷害增加 200%，敵人間的傳導間隔減半。沒有其他增傷時，100 × (1 + 200%) = 300 點；0.3 秒傳導間隔變成 0.3 × 0.5 = 0.15 秒。
+- **靈能攻擊**：不產生反噬、不消耗投擲次數，並提高傷害與穿透能力；仍會消耗一層靈能強化。穿透容量由 2 提高至 4，是 4 ÷ 2 = 2 倍；實際能貫穿的敵人數量依敵人與命中條件而變。
+- **機率算例**：每次皆有空位可儲存時，100 次擊殺的期望取得次數為 100 × 10% = 10 次；不是每十次擊殺保證觸發。
+- 強化顱腦崩裂的顯示參數稱施放時間減少50%，執行是速度增加50%（時間÷1.5）；繁中與英文同樣寫時間減少，屬來源差異，尚未核成同版，不列繁中誤譯。
+- 蓄力時間仍受其他速度與動作修正影響；傷害算例假設該階段沒有其他加成。靈能攻擊的不同命中順序與護甲仍需分別結算。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`8b4a7ea9`。
+- 繁中與英文都將顱腦崩裂加成稱施放時間減少；固定原始碼實際按蓄力速度+50%計算。雙語一致的跨來源差異留待同版核對；Assail免投擲次數與消耗強化層屬兩種資源，不判為矛盾。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/keystone/psyker_empowered_ability.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_empowered_ability:node_8d367c1d-ce78-44f3-a7b8-6a4b55341929`。
+- 格式：image/webp；288×288；5906 bytes。
+- SHA-256：`cf1587b1a0fb300ea1086c6e4b24887ea382daa725ee2516cee67d4d48561475`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/d3625057-f314-491b-8a34-84789ec38342)。附件已下載比對位元組與 SHA-256。

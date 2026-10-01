@@ -36,6 +36,7 @@
 | <img src="https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8" width="32" height="32" alt="亞空間突破天賦圖示"> [亞空間突破](#psyker_overcharge_stance_infinite_casting)<br>- Warp Unbound | <ul><li>注視結束後仍能免於反噬超載</li><li>保護持續 11.5 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/07eff6fd-5c1a-49f2-8a72-d689ec6bb42e" width="32" height="32" alt="亞空間虹吸天賦圖示"> [亞空間虹吸](#psyker_passive_souls_from_elite_kills)<br>- Warp Siphon | <ul><li>擊殺精英或專家取得亞空間充能</li><li>每層增加 4% 傷害；施放能力消耗充能並縮短冷卻</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/885fdda1-bcf2-4502-97e0-7eaead2392e0" width="32" height="32" alt="擾動命運天賦圖示"> [擾動命運](#psyker_new_mark_passive)<br>- Disrupt Destiny | <ul><li>擊殺標記目標，疊加傷害、弱點與爆擊加成</li><li>並恢復韌性、短暫提高移動速度</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/d3625057-f314-491b-8a34-84789ec38342" width="32" height="32" alt="靈能強化天賦圖示"> [靈能強化](#psyker_empowered_ability)<br>- Empowered Psionics | <ul><li>擊殺有 10% 機率強化下一次閃擊</li><li>依閃擊種類提高傷害、加快蓄力或免除消耗</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/333bcafc-3c34-4b47-bb5b-658c9cd2b777" width="32" height="32" alt="平心靜氣天賦圖示"> [平心靜氣](#psyker_reduced_warp_charge_cost_and_venting_speed)<br>- Inner Tranquility | <ul><li>每層亞空間充能降低反噬生成 8%</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/00ae8b19-169d-4eec-94e2-89c3cf851d08" width="32" height="32" alt="吸精奪萃天賦圖示"> [吸精奪萃](#psyker_toughness_on_soul)<br>- Essence Harvest | <ul><li>取得亞空間充能後，5 秒恢復 30% 最大韌性</li><li>再次取得會刷新持續時間</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/827d3ef0-dce8-4cb8-8af1-c5ad142d4ec1" width="32" height="32" alt="生物磁石天賦圖示"> [生物磁石](#psyker_empowered_grenades_passive_improved)<br>- Bio-Lodestone | <ul><li>擊殺取得靈能強化的機率由 10% 提高至 15%</li></ul> | 鑰石 |
@@ -531,6 +532,25 @@
 - **刷新與衰減**：精準加成共用 5 秒倒數。新增層數，或已有層數時命中仍存活的標記目標或首領，都會重設倒數。到期只掉一層，再倒數 5 秒；例如 3 層且未再刷新，約在 5、10、15 秒依序降至 2、1、0 層。
 
 [詳細資料](TALENTS%20Psyker/psyker_new_mark_passive.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_empowered_ability"></a>
+### 靈能強化(Empowered Psionics)
+
+<img src="https://github.com/user-attachments/assets/d3625057-f314-491b-8a34-84789ec38342" width="72" height="72" alt="靈能強化天賦圖示">
+
+- **取得與消耗**：擊殺敵人有 10% 機率獲得一層靈能強化，基礎最多存一層。每次強化閃擊消耗一層；懲戒在該次持續施放結束時扣除。
+
+- **顱腦崩裂**：不產生反噬，傷害增加 50%，蓄力速度增加 50%。沒有其他增傷時，100 × 1.5 = 150 點；原本 2 秒蓄力變成 2 ÷ 1.5 ≈ 1.33 秒，約縮短 33.3%。
+
+- **懲戒**：傷害增加 200%，敵人間的傳導間隔減半。沒有其他增傷時，100 × (1 + 200%) = 300 點；0.3 秒傳導間隔變成 0.3 × 0.5 = 0.15 秒。
+
+- **靈能攻擊**：不產生反噬、不消耗投擲次數，並提高傷害與穿透能力；仍會消耗一層靈能強化。穿透容量由 2 提高至 4，是 4 ÷ 2 = 2 倍；實際能貫穿的敵人數量依敵人與命中條件而變。
+
+- **機率算例**：每次皆有空位可儲存時，100 次擊殺的期望取得次數為 100 × 10% = 10 次；不是每十次擊殺保證觸發。
+
+[詳細資料](TALENTS%20Psyker/psyker_empowered_ability.md) · [返回目錄](#talent-index)
 
 ---
 

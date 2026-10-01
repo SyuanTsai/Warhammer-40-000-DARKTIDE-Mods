@@ -37,7 +37,7 @@
 | [亞空間突破](#psyker_overcharge_stance_infinite_casting) | 未見明確矛盾 |
 | [亞空間虹吸](#psyker_passive_souls_from_elite_kills) | 未見明確矛盾 |
 | [擾動命運](#psyker_new_mark_passive) | 待同版核對 |
-| [靈能強化](#psyker_empowered_ability) | 已配對；機制待核對 |
+| [靈能強化](#psyker_empowered_ability) | 待同版核對 |
 | [平心靜氣](#psyker_reduced_warp_charge_cost_and_venting_speed) | 未見明確矛盾 |
 | [吸精奪萃](#psyker_toughness_on_soul) | 未見明確矛盾 |
 | [生物磁石](#psyker_empowered_grenades_passive_improved) | 未見明確矛盾 |
@@ -301,7 +301,7 @@
 ## 靈能強化(Empowered Psionics)
 
 - 描述鍵：`loc_talent_psyker_empowered_ability_description`；hash：`8b4a7ea9`。
-- 已配對原文，機制待核對。
+- 結論：待同版核對。繁中與英文都將顱腦崩裂加成稱施放時間減少；固定原始碼實際按蓄力速度+50%計算。雙語一致的跨來源差異留待同版核對；Assail免投擲次數與消耗強化層屬兩種資源，不判為矛盾。
 - [原始碼推導與限制](psyker_empowered_ability.md)。
 
 <a id="psyker_reduced_warp_charge_cost_and_venting_speed"></a>

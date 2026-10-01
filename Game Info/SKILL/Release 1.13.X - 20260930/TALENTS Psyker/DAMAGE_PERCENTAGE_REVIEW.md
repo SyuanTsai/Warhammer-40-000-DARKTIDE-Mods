@@ -35,7 +35,7 @@
 | [亞空間突破](psyker_overcharge_stance_infinite_casting.md) | 注視結束後仍能免於反噬超載；保護持續 11.5 秒；完整計算與適用限制見來源文件。 |
 | [亞空間虹吸](psyker_passive_souls_from_elite_kills.md) | 擊殺精英或專家取得亞空間充能；每層增加 4% 傷害；施放能力消耗充能並縮短冷卻；完整計算與適用限制見來源文件。 |
 | [擾動命運](psyker_new_mark_passive.md) | 擊殺標記目標，疊加傷害、弱點與爆擊加成；並恢復韌性、短暫提高移動速度；完整計算與適用限制見來源文件。 |
-| [靈能強化](psyker_empowered_ability.md) | 機制與公式待核對。 |
+| [靈能強化](psyker_empowered_ability.md) | 擊殺有 10% 機率強化下一次閃擊；依閃擊種類提高傷害、加快蓄力或免除消耗；完整計算與適用限制見來源文件。 |
 | [平心靜氣](psyker_reduced_warp_charge_cost_and_venting_speed.md) | 每層亞空間充能降低反噬生成 8%；完整計算與適用限制見來源文件。 |
 | [吸精奪萃](psyker_toughness_on_soul.md) | 取得亞空間充能後，5 秒恢復 30% 最大韌性；再次取得會刷新持續時間；完整計算與適用限制見來源文件。 |
 | [生物磁石](psyker_empowered_grenades_passive_improved.md) | 擊殺取得靈能強化的機率由 10% 提高至 15%；完整計算與適用限制見來源文件。 |
