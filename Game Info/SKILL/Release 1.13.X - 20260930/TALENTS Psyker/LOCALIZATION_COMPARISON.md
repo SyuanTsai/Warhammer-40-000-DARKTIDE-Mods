@@ -67,7 +67,7 @@
 | [穩固](#psyker_increased_vent_speed) | 已配對；機制待核對 |
 | [亞空間騎士](#psyker_damage_based_on_warp_charge) | 已配對；機制待核對 |
 | [精確瞄準](#psyker_guaranteed_crit_on_multiple_weakspot_hits) | 已配對；機制待核對 |
-| [傀儡師](#psyker_coherency_aura_size_increase) | 已配對；機制待核對 |
+| [傀儡師](#psyker_coherency_aura_size_increase) | 繁中原文勘誤 |
 | [動能偏斜](#psyker_block_costs_warp_charge) | 未見明確矛盾 |
 | [韌性增幅](#base_toughness_node_buff_medium_5) | 未見明確矛盾 |
 | [韌性增幅](#base_toughness_node_buff_medium_4) | 未見明確矛盾 |
@@ -507,7 +507,9 @@
 ## 傀儡師(Puppet Master)
 
 - 描述鍵：`loc_talent_psyker_coherency_size_increase_description`；hash：`5556945e`。
-- 已配對原文，機制待核對。
+- 結論：繁中原文勘誤。繁中「光環範圍變為{radius_modifier}倍」混用倍率與增加量；實際效果是半徑增加 75%，也就是原本的 1.75 倍。
+- 繁中原文短引：你的協同光環範圍變為{radius_modifier:%s}倍。
+- 同源英文：{radius_modifier:%s} Radius for your Coherency Aura.
 - [原始碼推導與限制](psyker_coherency_aura_size_increase.md)。
 
 <a id="psyker_block_costs_warp_charge"></a>
