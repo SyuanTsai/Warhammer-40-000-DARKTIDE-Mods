@@ -14,6 +14,7 @@
 | <img src="https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760" width="32" height="32" alt="子彈風暴天賦圖示"> [子彈風暴](#ogryn_blo_ally_ranged_buffs)<br>- Bulletstorm | <ul><li>觸發幸運子彈時，你和協同範圍內的隊友獲得 +15% 遠程傷害，持續 8 秒。</li><li>再次觸發會把效果時間重新延長為 8 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a9ec95cc-0b91-4558-81b5-faefcf1207d7" width="32" height="32" alt="激鬥戰火天賦圖示"> [激鬥戰火](#ogryn_blo_wield_speed)<br>- Heat of Battle | <ul><li>「激鬥戰火」讓爆限超載每層另增加 1.5% 遠程射速。</li><li>沿用遠程擊殺累積的 10 層、每次加層刷新 10 秒；滿層增加 15% 遠程射速。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5c8fc9b0-2f06-4311-87f7-511d4c6ce6d5" width="32" height="32" alt="退後！天賦圖示"> [退後！](#ogryn_blo_melee)<br>- Back Off! | <ul><li>近戰擊殺可提高下一次射擊觸發幸運子彈的機率，每層增加 10 個百分點。</li><li>最多累積 10 層；下一次射擊後清空，該次即使觸發幸運子彈而免耗彈藥也會消耗層數。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/83bead6b-330f-466e-8c25-c7d383843b1c" width="32" height="32" alt="毫髮無傷天賦圖示"> [毫髮無傷](#ogryn_heavy_hitter_tdr)<br>- Don't Feel a Thing | <ul><li>重拳出擊每層降低 1.25% 韌性所受傷害。</li><li>滿 8 層時，韌性所受傷害降低 10%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9c42800c-a3bc-469c-be04-1231b90bca3b" width="32" height="32" alt="強力劈砍天賦圖示"> [強力劈砍](#ogryn_heavy_hitter_cleave)<br>- Great Cleaver | <ul><li>重拳出擊每層增加 12.5% 近戰順劈容量。</li><li>最多 8 層；滿層使可順劈容量加倍。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/82795688-8a0b-4db1-871c-1302a8f33299" width="32" height="32" alt="越戰越勇天賦圖示"> [越戰越勇](#ogryn_heavy_hitter_max_stacks_improves_toughness)<br>- Unstoppable | <ul><li>重拳出擊每層使近戰擊殺恢復的韌性額外增加 15%。</li><li>最多 8 層；滿層時，近戰擊殺恢復量為基礎值的 2.2 倍。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/e8883b71-72ad-4780-92e7-395f6a32ead8" width="32" height="32" alt="震撼衝擊天賦圖示"> [震撼衝擊](#ogryn_heavy_hitter_stagger)<br>- Impactful | <ul><li>重拳出擊每層增加 7.5% 近戰衝擊效果。</li><li>最多 8 層；滿層增加 60% 近戰衝擊。</li></ul> | 鑰石 |
@@ -191,6 +192,21 @@
 - 建議改為「近戰攻擊擊殺敵人時，獲得{chance:%s}機率使下次射擊觸發幸運子彈，可堆疊{stacks:%s}次。」以明確表示機率加值來自近戰擊殺，並作用於下一次射擊。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_blo_melee.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_heavy_hitter_tdr"></a>
+### 毫髮無傷(Don't Feel a Thing)
+
+<img src="https://github.com/user-attachments/assets/83bead6b-330f-466e-8c25-c7d383843b1c" width="72" height="72" alt="毫髮無傷天賦圖示">
+
+- **生效條件**：此減傷隨重拳出擊層數變化；層數下降時減傷也跟著降低。
+
+- **公式與上限**：每層使韌性傷害剩餘倍率降低 1.25%，最多 8 層；滿層承受原韌性傷害的 90%。
+
+- **算例**：4 層時倍率為 0.95，原本 100 點韌性傷害變成 95 點；8 層時 100 點變成 90 點。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_heavy_hitter_tdr.md) · [返回目錄](#talent-index)
 
 ---
 

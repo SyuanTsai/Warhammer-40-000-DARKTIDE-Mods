@@ -15,6 +15,7 @@
 | [子彈風暴](#ogryn_blo_ally_ranged_buffs) | 繁中描述錯誤 |
 | [激鬥戰火](#ogryn_blo_wield_speed) | 未見明確矛盾 |
 | [退後！](#ogryn_blo_melee) | 繁中描述錯誤 |
+| [毫髮無傷](#ogryn_heavy_hitter_tdr) | 未見明確矛盾 |
 | [強力劈砍](#ogryn_heavy_hitter_cleave) | 未見明確矛盾 |
 | [越戰越勇](#ogryn_heavy_hitter_max_stacks_improves_toughness) | 未見明確矛盾 |
 | [震撼衝擊](#ogryn_heavy_hitter_stagger) | 未見明確矛盾 |
@@ -122,6 +123,13 @@
 - 繁中原文短引：擊殺敵人後，近戰攻擊有{chance:%s}機率使下次射擊觸發幸運子彈，可堆疊{stacks:%s}次。
 - 同源英文：On Killing Melee Attack gain {chance:%s} chance to trigger Lucky Bullet on next Shot. Stacks {stacks:%s} times.
 - [原始碼推導與限制](ogryn_blo_melee.md)。
+
+<a id="ogryn_heavy_hitter_tdr"></a>
+## 毫髮無傷(Don't Feel a Thing)
+
+- 描述鍵：`loc_talent_ogryn_passive_heavy_hitter_tdr_desc`；hash：`063dfc94`。
+- 結論：未見明確矛盾。繁中寫「額外增加…韌性減傷效果」，英文寫「also grants … Toughness Damage Reduction for each stack」；兩者都表示每層增加韌性減傷。
+- [原始碼推導與限制](ogryn_heavy_hitter_tdr.md)。
 
 <a id="ogryn_heavy_hitter_cleave"></a>
 ## 強力劈砍(Great Cleaver)
