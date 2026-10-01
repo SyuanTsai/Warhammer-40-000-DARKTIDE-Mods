@@ -15,6 +15,7 @@
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
 | 技能 | [優越情節(Superiority Complex)](#veteran_increase_damage_vs_elites) | 增加對精英敵人的傷害 |
+| 技能 | [近戰傷害提升(Melee Damage Boost)](#base_melee_damage_node_buff_high_2) | 近戰傷害增加 15%。 |
 
 ---
 
@@ -204,5 +205,22 @@
 - 若已有 **25% 同類傷害加成**：原傷害為 `100 × 1.25 = 125`；點選本天賦後為 `100 × (1 + 25% + 15%) = 140`，增加 **15 傷害**。
 
 [詳細資料](TALENTS%20Veteran/veteran_increase_damage_vs_elites.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="base_melee_damage_node_buff_high_2"></a>
+
+### 近戰傷害提升(Melee Damage Boost)
+
+<img src="https://github.com/user-attachments/assets/b0fb41b1-81da-4263-8d21-101a3af0cbdb" width="72" height="72" alt="近戰傷害提升天賦圖示">
+
+- **近戰傷害增加 15%。**
+
+#### 傷害算例
+
+- 只計此天賦，基礎近戰傷害 100：`100 × 1.15 = 115 傷害`。
+- 同階段已有 25% 加成：`100 × (1 + 25% + 15%) = 140 傷害`。
+
+[詳細資料](TALENTS%20Veteran/base_melee_damage_node_buff_high_2.md) · [返回目錄](#talent-index)
 
 ---
