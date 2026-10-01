@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-coherency priority2替換基礎aura；buff proc由被賦予此buff的擊殺者unit執行，for其coherency集合Ammo.add_to_all_slots(0.005)。cooldown5；check只驗tags，proc_func內才檢查attacking_unit==unit，ProcBuff會在proc_func返回後照樣設active_start_time，因此收到其他合資格死亡事件時可能消耗冷卻而未補彈；不是保證所有全圖精英死亡都給彈。Ammo只以max_ammo_reserve乘percent，floor並保留小數；上限受備彈+彈匣缺額。自身survivalist_passive另於特殊/精英自殺判定補0.01。
+coherency priority2替換基礎aura；buff proc由被賦予此buff的擊殺者unit執行，for其coherency集合Ammo.add_to_all_slots(0.005)。cooldown5；check只驗tags，proc_func內才檢查attacking_unit==unit，ProcBuff會在proc_func返回後照樣設active_start_time，因此收到其他合資格死亡事件時可能消耗冷卻而未補彈；不是保證所有全圖精英死亡都給彈。Ammo只以max_ammo_reserve乘percent，floor並保留小數；上限受備彈+彈匣缺額。自身survivalist_passive另於本人擊殺專家／精英時補0.01。
 
 ## 原始碼依據
 
