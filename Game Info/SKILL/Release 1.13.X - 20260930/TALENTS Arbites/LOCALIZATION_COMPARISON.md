@@ -15,6 +15,7 @@
 | [近在眉睫](#adamant_close_kills_restore_toughness) | 未見明確矛盾 |
 | [鐵血之志](#adamant_staggers_replenish_toughness) | 未見明確矛盾 |
 | [走一走治百病](#adamant_stamina_spent_replenish_toughness) | 未見明確矛盾 |
+| [堅忍不拔](#adamant_limit_dmg_taken_from_hits) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
@@ -64,3 +65,10 @@
 - 描述鍵：`loc_talent_adamant_stamina_spent_replenish_toughness_desc`；hash：`5bfeac39`。
 - 結論：未見明確矛盾。繁中「消耗…在…秒內恢復」與英文 Spending／over 一致；刷新不疊速是原文未寫的機制。
 - [原始碼推導與限制](adamant_stamina_spent_replenish_toughness.md)。
+
+<a id="adamant_limit_dmg_taken_from_hits"></a>
+## 堅忍不拔(True Grit)
+
+- 描述鍵：`loc_talent_adamant_limit_dmg_taken_from_hits_desc`；hash：`a25ab598`。
+- 結論：未見明確矛盾。繁中「生命值…」與英文 maximum Health Damage Taken 的數值欄均為number50，未見百分比符號誤譯；以更明確的50點說明。
+- [原始碼推導與限制](adamant_limit_dmg_taken_from_hits.md)。

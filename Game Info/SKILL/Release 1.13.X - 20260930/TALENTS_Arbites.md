@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/3098a511-fa0f-444e-a9e2-8e6591688115" width="32" height="32" alt="近在眉睫天賦圖示"> [近在眉睫](#adamant_close_kills_restore_toughness)<br>- Up Close | <ul><li>在 12.5 公尺內擊殺敵人，恢復最大韌性的 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/898ad4c6-3f99-404d-8ff9-b15a9820f8e9" width="32" height="32" alt="鐵血之志天賦圖示"> [鐵血之志](#adamant_staggers_replenish_toughness)<br>- Force of Will | <ul><li>近戰攻擊的第一個命中目標受到踉蹌時，恢復最大韌性的 7.5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4c4b06a3-049f-4272-b1d2-a8a472f541b0" width="32" height="32" alt="走一走治百病天賦圖示"> [走一走治百病](#adamant_stamina_spent_replenish_toughness)<br>- Walk It Off | <ul><li>每累計消耗 1 點耐力，在 3 秒內恢復最大韌性的 10%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/d4c3f66c-8fa8-419f-8a46-f94c842a9b4e" width="32" height="32" alt="堅忍不拔天賦圖示"> [堅忍不拔](#adamant_limit_dmg_taken_from_hits)<br>- True Grit | <ul><li>單次攻擊造成的生命傷害上限為 50 點；不阻止必殺效果。</li></ul> | 技能 |
 
 ---
 
@@ -106,5 +107,18 @@
 - **恢復算例**：最大韌性 100、缺額足夠且沒有其他恢復加成，每秒約恢復 100 × 10% ÷ 3 = 3.33 點。啟動 2 秒後再次觸發並持續至結束，共約恢復 3.33 × 5 = 16.67 點，而非瞬間補 20 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_stamina_spent_replenish_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_limit_dmg_taken_from_hits"></a>
+### 堅忍不拔(True Grit)
+
+<img src="https://github.com/user-attachments/assets/d4c3f66c-8fa8-419f-8a46-f94c842a9b4e" width="72" height="72" alt="堅忍不拔天賦圖示">
+
+- **防護方式**：一般攻擊對你造成的單次生命傷害上限為 50 點；不限制韌性傷害，也不能擋住必殺效果。
+
+- **傷害算例**：其他生命減傷已結算後，原本要承受 120 點時變成 min(120, 50) = 50 點；原本 30 點仍是 30 點。這是固定上限，不是 50% 減傷。
+
+[詳細資料](TALENTS%20Arbites/adamant_limit_dmg_taken_from_hits.md) · [返回目錄](#talent-index)
 
 ---
