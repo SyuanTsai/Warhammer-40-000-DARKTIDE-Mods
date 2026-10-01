@@ -11,7 +11,7 @@
 | [動能撕裂者](#psyker_smite_on_hit) | 跨版本待同版核對 |
 | [顱腦崩裂](#psyker_brain_burst_improved) | 已配對；機制待核對 |
 | [靈能攻擊](#psyker_grenade_throwing_knives) | 描述方向吻合，細節未列盡 |
-| [乙太碎片](#psyker_throwing_knives_piercing) | 已配對；機制待核對 |
+| [乙太碎片](#psyker_throwing_knives_piercing) | 描述不完整，未見已確認矛盾 |
 | [懲戒](#psyker_grenade_chain_lightning) | 已配對；機制待核對 |
 | [動能共鳴](#psyker_ability_increase_brain_burst_speed) | 效果方向吻合，算例補足速度換算 |
 | [迅捷碎片](#psyker_throwing_knives_cast_speed) | 描述吻合，部分格式參數是未掛載殘留 |
@@ -115,7 +115,7 @@
 ## 乙太碎片(Ethereal Shards)
 
 - 描述鍵：`loc_talent_psyker_throwing_knives_pierce_description`；hash：`392c597f`。
-- 已配對原文，機制待核對。
+- 結論：描述不完整，未見已確認矛盾。繁中原文只說投射物能擊穿額外目標，沒有提供 hit-mass 的量、上限公式或保證增加的目標數。原始碼沒有固定的 +1 目標值；這種省略屬描述不完整。
 - [原始碼推導與限制](psyker_throwing_knives_piercing.md)。
 
 <a id="psyker_grenade_chain_lightning"></a>

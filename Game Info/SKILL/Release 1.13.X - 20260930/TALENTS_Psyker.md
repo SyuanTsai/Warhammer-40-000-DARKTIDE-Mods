@@ -9,6 +9,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/2e792f27-7daf-4ce9-abcc-9d92ded0985c" width="32" height="32" alt="動能撕裂者天賦圖示"> [動能撕裂者](#psyker_smite_on_hit)<br>- Kinetic Flayer | <ul><li>命中仍存活的精英、專家敵人或巨獸時觸發顱腦崩裂，冷卻 12 秒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/a0c17626-2777-4302-bc7e-9b3a48aadcd0" width="32" height="32" alt="靈能攻擊天賦圖示"> [靈能攻擊](#psyker_grenade_throwing_knives)<br>- Assail | <ul><li>投擲追蹤敵人的靈能碎片；可瞄準指定目標。</li><li>最多保留 10 次，每 3 秒恢復一次。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/ae86e2bb-6971-4dfe-b678-0aa814ccdfa1" width="32" height="32" alt="乙太碎片天賦圖示"> [乙太碎片](#psyker_throwing_knives_piercing)<br>- Ethereal Shards | <ul><li>靈能攻擊的傷害及撞擊穿透容量增加 50%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9" width="32" height="32" alt="動能共鳴天賦圖示"> [動能共鳴](#psyker_ability_increase_brain_burst_speed)<br>- Kinetic Resonance | <ul><li>使用戰鬥能力後 10 秒內，顱腦崩裂蓄力速度增加 75%，反噬產生量減少 50%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/7db7b0d7-3d96-4b42-8f50-f9112f80badc" width="32" height="32" alt="迅捷碎片天賦圖示"> [迅捷碎片](#psyker_throwing_knives_cast_speed)<br>- Quick Shards | <ul><li>靈能攻擊的次數恢復速率增加 30%；基礎每次恢復由 3 秒縮短至約 2.31 秒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/0519f0ec-0ce9-4846-8ed4-95a0b9c092de" width="32" height="32" alt="衰弱詛咒天賦圖示"> [衰弱詛咒](#psyker_chain_lightning_improved_target_buff)<br>- Enfeeble | <ul><li>你電擊的敵人受到所有來源的傷害提高 10%。</li></ul> | 閃擊 |
@@ -88,6 +89,19 @@
 - **反噬消耗：**一般投擲增加 10 個反噬百分點，瞄準投擲增加 25 個百分點；例如原有 40%，分別變成 50% 或 65%。其他反噬生成修正另外套用。
 
 [詳細資料](TALENTS%20Psyker/psyker_grenade_throwing_knives.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_throwing_knives_piercing"></a>
+### 乙太碎片(Ethereal Shards)
+
+<img src="https://github.com/user-attachments/assets/ae86e2bb-6971-4dfe-b678-0aa814ccdfa1" width="72" height="72" alt="乙太碎片天賦圖示">
+
+- **運作方式**：靈能攻擊的傷害及撞擊穿透容量增加 50%，能穿過更多敵人。
+
+- **穿透算例**：無其他穿透修正，原本可穿過 2 個質量單位，變成 2 × 1.5 = 3 個質量單位。敵人質量不同，不等於固定多打 1 名敵人。
+
+[詳細資料](TALENTS%20Psyker/psyker_throwing_knives_piercing.md) · [返回目錄](#talent-index)
 
 ---
 
