@@ -7,6 +7,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="死戰到底天賦圖示"> [死戰到底](#zealot_resist_death)<br>- Until Death | <ul><li>承受致命傷害時獲得 8 秒免死效果。</li><li>效果結束後冷卻 120 秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab" width="32" height="32" alt="吊命聖徒天賦圖示"> [吊命聖徒](#zealot_resist_death_heal)<br>- Holy Revenant | <ul><li>死戰到底觸發時擊退附近敵人。</li><li>免死期間按造成傷害累積治療額度；近戰換算率為一般傷害的 3 倍。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="狂熱朝聖者天賦圖示"> [狂熱朝聖者](#zealot_resist_death_ability)<br>- Zealous Pilgrim | <ul><li>使用戰鬥技能後獲得 4 秒免死效果。</li><li>隱身技能在退出隱身後生效；聖物技能在卸下聖物後生效。</li><li>無法殺死期間，傷害及攻擊速度各提高 10%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="天災天賦圖示"> [天災](#zealot_crits_apply_bleed)<br>- Scourge | <ul><li>近戰爆擊施加 2 層流血；攻擊流血敵人增加近戰爆擊率。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="背刺者天賦圖示"> [背刺者](#zealot_backstab_damage)<br>- Backstabber | <ul><li>近戰背刺與遠程側襲傷害增加 25%。</li></ul> | 技能 |
@@ -68,6 +69,27 @@
 - **冷卻算例**：8 秒效果結束後，再冷卻 120 秒；第 0 秒觸發，約第 8 秒效果結束，約第 128 秒才再次可用。已處於其他免死效果時，不會再觸發本天賦。
 
 [詳細資料](TALENTS%20Zealot/zealot_resist_death.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_resist_death_heal"></a>
+### 吊命聖徒(Holy Revenant)
+
+<img src="https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab" width="72" height="72" alt="吊命聖徒天賦圖示">
+
+- **觸發效果**：死戰到底因致命傷害觸發時，擊退周圍 3.5 公尺內的敵人；實際踉蹌仍受敵人抗性影響。
+
+- **生命恢復**：免死期間，每次造成傷害都增加可用治療量：一般傷害的 0.7%，近戰則為 2.1%。每次符合條件的傷害，也會再次用目前累積額度恢復生命；已用過的額度不會扣掉。
+
+- **恢復算例**：假設累積額度原本為 0、沒有其他治療修正，連續兩次各造成 100 點近戰傷害，第一次累積並補 100 × 0.7% × 3 = 2.1 點；第二次額度增至 4.2，再補 4.2 點，合計 6.3 點。
+
+- **上限**：每次計算的治療量，最多補到最大生命的 25%；例如最大生命 100、目前 24，該次最多先算 1 點。其他治療倍率會在之後套用，仍不能清除腐敗。這不是整場只能恢復 25 點。
+
+#### 繁中原文勘誤
+
+- 繁中寫成「生命恢復量為近戰傷害的 3 倍」容易被讀成造成 100 傷害就補 300 生命；實際是近戰的治療換算率為一般傷害的 3 倍，即 0.7% × 3 = 2.1%，之後再按累積額度與上限計算。
+
+[詳細資料](TALENTS%20Zealot/zealot_resist_death_heal.md) · [返回目錄](#talent-index)
 
 ---
 

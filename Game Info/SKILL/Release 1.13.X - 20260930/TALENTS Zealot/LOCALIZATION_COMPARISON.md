@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [死戰到底](#zealot_resist_death) | 未見明確矛盾 |
+| [吊命聖徒](#zealot_resist_death_heal) | 明確繁中誤譯 |
 | [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
 | [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
 | [背刺者](#zealot_backstab_damage) | 未見明確矛盾 |
@@ -62,6 +63,15 @@
 - 描述鍵：`loc_talent_zealot_resist_death_base_desc`；hash：`0da0b898`。
 - 結論：未見明確矛盾。繁中與英文都描述致命傷害觸發、無法殺死效果及冷卻；起算細節省略屬描述不完整。
 - [原始碼推導與限制](zealot_resist_death.md)。
+
+<a id="zealot_resist_death_heal"></a>
+## 吊命聖徒(Holy Revenant)
+
+- 描述鍵：`loc_talent_zealot_resist_death_heal_desc`；hash：`7e66622d`。
+- 結論：明確繁中誤譯。同hash英文 times that amount 的比較對象是治療量；繁中明確改成近戰傷害的倍數，將倍率的作用對象譯錯。另25%額度如何封頂屬實作補充，不把原文省略列為錯誤。
+- 繁中原文短引：觸發{talent_name:%s}會將附近敵人擊退。此外，處於無法殺死狀態時，您會根據造成的傷害恢復生命值，最多可恢復最大生命值的{max_health:%s}。近戰傷害造成的生命值恢復量為近戰傷害的{multiplier:%s}倍。
+- 同源英文：Triggering {talent_name:%s} knocks nearby enemies back. In addition, while Unkillable, you heal based on the Damage you deal up to a maximum of {max_health:%s} Max Health. Melee Damage dealt heals for {multiplier:%s} times that amount.
+- [原始碼推導與限制](zealot_resist_death_heal.md)。
 
 <a id="zealot_resist_death_ability"></a>
 ## 狂熱朝聖者(Zealous Pilgrim)
