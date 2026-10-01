@@ -10,6 +10,7 @@
 |---|---|
 | [死戰到底](#zealot_resist_death) | 未見明確矛盾 |
 | [殉道](#zealot_martyrdom) | 未見明確矛盾 |
+| [狂燥之心](#zealot_martyrdom_grants_attack_speed) | 未見明確矛盾 |
 | [吊命聖徒](#zealot_resist_death_heal) | 明確繁中誤譯 |
 | [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
 | [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
@@ -71,6 +72,13 @@
 - 描述鍵：`loc_talent_zealot_martyrdom_desc`；hash：`b90da3ce`。
 - 結論：未見明確矛盾。英文與繁中方向都是缺失生命傷口格提高傷害；中文若寫成每格 +10%、最多 5 格，與掛載 buff 一致。依傷口格計算的實作細節屬補充說明。
 - [原始碼推導與限制](zealot_martyrdom.md)。
+
+<a id="zealot_martyrdom_grants_attack_speed"></a>
+## 狂燥之心(Maniac)
+
+- 描述鍵：`loc_talent_zealot_attack_speed_per_martyrdom_upd_desc`；hash：`b83c3710`。
+- 結論：未見明確矛盾。原文與繁中指向殉道層數提供攻擊速度；程式明確限定為近戰攻擊速度，缺失傷口格和數值補充不構成矛盾。
+- [原始碼推導與限制](zealot_martyrdom_grants_attack_speed.md)。
 
 <a id="zealot_resist_death_heal"></a>
 ## 吊命聖徒(Holy Revenant)
