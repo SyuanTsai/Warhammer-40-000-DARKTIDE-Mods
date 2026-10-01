@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/ee98056a-b754-4821-9542-717ef68c944a" width="32" height="32" alt="猛擊天賦圖示"> [猛擊](#ogryn_melee_stagger)<br>- Slam | <ul><li>近戰衝擊提高 25%；近戰或推擊使敵人踉蹌時恢復 5% 耐力。</li><li>耐力恢復有 0.75 秒冷卻。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/53e0b90e-52dc-4a4a-953c-b235753aa97a" width="32" height="32" alt="削弱敵人天賦圖示"> [削弱敵人](#ogryn_targets_recieve_damage_taken_increase_debuff)<br>- Soften Them Up | <ul><li>近戰造成傷害後，使存活敵人在 5 秒內受到的傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/72cbf891-ecd4-425c-8d46-97cb4d4863f9" width="32" height="32" alt="堅韌不屈天賦圖示"> [堅韌不屈](#ogryn_toughness_on_low_health)<br>- Too Stubborn to Die | <ul><li>生命低於 50% 時，韌性恢復量提高 100%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/dbfbaef7-b829-41cf-96cb-a9d09192cfbd" width="32" height="32" alt="重毆天賦圖示"> [重毆](#ogryn_heavy_bleeds)<br>- Batter | <ul><li>造成傷害的近戰命中施加 1 層流血，重擊改為 4 層。</li></ul> | 技能 |
 
 ---
 
@@ -152,5 +153,22 @@
 - **作用範圍**：增加會套用韌性恢復加成的回復量；這不會自行產生一筆恢復，也不是讓所有協同自然恢復速度加倍。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_toughness_on_low_health.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_heavy_bleeds"></a>
+### 重毆(Batter)
+
+<img src="https://github.com/user-attachments/assets/dbfbaef7-b829-41cf-96cb-a9d09192cfbd" width="72" height="72" alt="重毆天賦圖示">
+
+- **觸發方式**：近戰對敵人造成傷害且敵人仍存活時，施加 1 層流血；重擊一次施加 4 層，最多累積 16 層。
+
+- **疊層與時間**：再次施加會增加層數並刷新 1.5 秒維持時間。流血每約 0.5 秒造成傷害；停止補層、維持時間結束後，每次結算逐漸移除 1 層。
+
+- **傷害公式**：流血傷害隨層數非線性提高。只計無護甲且沒有其他修正，每次傷害為 87.5 × (層數 ÷ 16)² × [3 − 2 × (層數 ÷ 16)]。
+
+- **傷害算例**：4 層時為 87.5 × 0.25² × 2.5 ≈ 13.67 點；8 層為 43.75 點，16 層為 87.5 點。因此 8 層不是 4 層傷害的兩倍。其他護甲與增傷會改變結果。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_heavy_bleeds.md) · [返回目錄](#talent-index)
 
 ---

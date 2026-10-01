@@ -17,6 +17,7 @@
 | [猛擊](#ogryn_melee_stagger) | 未見明確矛盾 |
 | [削弱敵人](#ogryn_targets_recieve_damage_taken_increase_debuff) | 未見明確矛盾 |
 | [堅韌不屈](#ogryn_toughness_on_low_health) | 未見明確矛盾 |
+| [重毆](#ogryn_heavy_bleeds) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -80,3 +81,10 @@
 - 描述鍵：`loc_talent_ogryn_toughness_gain_increase_on_low_health_desc`；hash：`191ac350`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_toughness_on_low_health.md)。
+
+<a id="ogryn_heavy_bleeds"></a>
+## 重毆(Batter)
+
+- 描述鍵：`loc_talent_ogryn_heavy_bleeds_new_desc`；hash：`8ad425e7`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_heavy_bleeds.md)。
