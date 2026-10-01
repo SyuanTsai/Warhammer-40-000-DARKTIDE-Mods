@@ -6,6 +6,7 @@
 
 | 分類 | 技能 | 主要效果 |
 |---|---|---|
+| 閃擊 | [煙霧手雷(Smoke Grenade)](#veteran_smoke_grenade) | 投出煙霧手雷，約 1.5 秒後展開持續 15 秒的煙霧。 |
 | 閃擊 | [擲彈兵(Grenadier)](#veteran_extra_grenade) | 手雷攜帶上限增加 1 顆。 |
 | 閃擊 | [炸藥儲備(Demolition Stockpile)](#veteran_replenish_grenades) | 定期補回手雷 |
 | 光環 | [抵近殺敵(Close and Kill)](#veteran_movement_speed_coherency) | 你與協同範圍內的隊友移動速度增加 7.5%。 |
@@ -35,6 +36,25 @@
 ---
 
 ## 閃擊
+
+<a id="veteran_smoke_grenade"></a>
+
+### 煙霧手雷(Smoke Grenade)
+
+<img src="https://github.com/user-attachments/assets/7b9b7141-a7fa-4f3b-944f-5f1141cdc04e" width="72" height="72" alt="煙霧手雷天賦圖示">
+
+- **投出煙霧手雷，約 1.5 秒後展開持續 15 秒的煙霧。**
+- 最多攜帶 **3 顆**。煙霧中央 4.5 公尺範圍可遮斷敵人視線；效果外緣為 5.5 公尺。
+- 在煙霧中獲得掩蔽，離開後保留約 0.5 秒。煙霧不等同於無敵，已射出的攻擊仍可能命中。
+
+#### 持續時間算例
+
+- 沒有延長效果時，投出至煙霧結束約為 `1.5 + 15 = 16.5 秒`。
+- 搭配手雷專家，煙霧持續 `15 × (1 + 100%) = 30 秒`，引信時間不變。
+
+[詳細資料](TALENTS%20Veteran/veteran_smoke_grenade.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="veteran_extra_grenade"></a>
 
