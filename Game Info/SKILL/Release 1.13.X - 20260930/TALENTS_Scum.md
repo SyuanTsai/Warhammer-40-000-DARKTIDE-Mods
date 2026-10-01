@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/31efd90d-864c-4e6c-af06-b48d540b45b3" width="32" height="32" alt="連帶傷害天賦圖示"> [連帶傷害](#broker_passive_toxin_spread_on_kills)<br>- Splash Damage | <ul><li>近戰擊殺精英時，對其周圍 4 公尺內最多 10 名敵人施加 2 層毒素。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/88f63a37-5b06-4bf2-93a5-95c9f3c98c48" width="32" height="32" alt="額外彈藥袋天賦圖示"> [額外彈藥袋](#broker_passive_increased_blitz_ammo)<br>- Extra Pouches | <ul><li>閃擊攜帶上限增加 1 次。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f92b996b-c59e-4d6b-90ac-a31046be1abd" width="32" height="32" alt="塗讀武裝天賦圖示"> [塗讀武裝](#broker_passive_melee_attacks_apply_toxin)<br>- Coated Weaponry | <ul><li>近戰爆擊命中時，施加 1 層毒素。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/6125da40-9e12-4107-bb5b-a8aa330a4b89" width="32" height="32" alt="隨身毒素天賦圖示"> [隨身毒素](#broker_passive_blitz_inflicts_toxin)<br>- Pocket Toxin | <ul><li>閃擊爆炸額外施毒：致盲手雷 3 層、飛彈 6 層、化學手雷 10 層。</li></ul> | 技能 |
 
 ---
 
@@ -492,5 +493,20 @@
 - **衰退方式**：停止補毒後，先等待基礎 2.6 秒，再隨毒素傷害週期逐層衰退；重新施毒會刷新等待時間。
 
 [詳細資料](TALENTS%20Scum/broker_passive_melee_attacks_apply_toxin.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_blitz_inflicts_toxin"></a>
+### 隨身毒素(Pocket Toxin)
+
+<img src="https://github.com/user-attachments/assets/6125da40-9e12-4107-bb5b-a8aa330a4b89" width="72" height="72" alt="隨身毒素天賦圖示">
+
+- **施加層數**：擊暈的爆炸增加 3 層；炸彈使者增加 6 層；化學手榴彈增加 10 層。必須由閃擊爆炸命中，不是所有爆炸都適用。
+
+- **疊層算例**：敵人已有 2 層相同毒素，再被提供 6 層的爆炸命中，變成 2 + 6 = 8 層；最多 30 層，重新施加會刷新時間。
+
+- **傷害運作**：相同毒素每 0.35 秒結算一次，8 層輸入威力為 500 × 8 ÷ 30 ≈ 133.33，再依毒素曲線與護甲計算。
+
+[詳細資料](TALENTS%20Scum/broker_passive_blitz_inflicts_toxin.md) · [返回目錄](#talent-index)
 
 ---

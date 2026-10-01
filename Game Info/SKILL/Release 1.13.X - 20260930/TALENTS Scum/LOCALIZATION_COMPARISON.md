@@ -40,6 +40,7 @@
 | [連帶傷害](#broker_passive_toxin_spread_on_kills) | 未見明確矛盾 |
 | [額外彈藥袋](#broker_passive_increased_blitz_ammo) | 未見明確矛盾 |
 | [塗讀武裝](#broker_passive_melee_attacks_apply_toxin) | 未見明確矛盾 |
+| [隨身毒素](#broker_passive_blitz_inflicts_toxin) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -266,3 +267,10 @@
 - 描述鍵：`loc_talent_broker_passive_melee_attacks_apply_toxin_desc`；hash：`4108cdaa`。
 - 結論：未見明確矛盾。繁中與英文皆為近戰爆擊施加毒素，未見矛盾。
 - [原始碼推導與限制](broker_passive_melee_attacks_apply_toxin.md)。
+
+<a id="broker_passive_blitz_inflicts_toxin"></a>
+## 隨身毒素(Pocket Toxin)
+
+- 描述鍵：`loc_talent_broker_passive_blitz_inflicts_toxin_desc_02`；hash：`8757c0f2`。
+- 結論：未見明確矛盾。兩語按閃擊種類列出施毒層數，未見矛盾。
+- [原始碼推導與限制](broker_passive_blitz_inflicts_toxin.md)。
