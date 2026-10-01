@@ -33,6 +33,7 @@
 | [行軍之志](#adamant_movement_speed_on_block) | 未見明確矛盾 |
 | [無處可逃](#adamant_elite_special_kills_offensive_boost) | 未見明確矛盾 |
 | [兵敗如山倒](#adamant_cleave_after_push) | 未見明確矛盾 |
+| [盾型裝甲](#adamant_shield_plates) | 未見明確矛盾 |
 | [重如律法](#adamant_heavy_attacks_increase_damage) | 未見明確矛盾 |
 | [巨獸獵人](#adamant_monster_hunter) | 未見明確矛盾 |
 | [惡徒退散](#adamant_damage_vs_suppressed) | 未見明確矛盾 |
@@ -212,6 +213,13 @@
 - 描述鍵：`loc_talent_adamant_cleave_after_push_desc`；hash：`1389250b`。
 - 結論：未見明確矛盾。繁中「推擊後…順劈」與英文 Pushing grants Cleave 一致；需要命中及只強化傷害容量屬未列細節。
 - [原始碼推導與限制](adamant_cleave_after_push.md)。
+
+<a id="adamant_shield_plates"></a>
+## 盾型裝甲(Shield Plates)
+
+- 描述鍵：`loc_talent_adamant_shield_plates_alt_desc`；hash：`0ce5d555`。
+- 結論：未見明確矛盾。繁中格擋／完美格擋兩份恢復與英文一致；1秒冷卻僅套完美格擋即補，原文未拆清楚屬補充。
+- [原始碼推導與限制](adamant_shield_plates.md)。
 
 <a id="adamant_heavy_attacks_increase_damage"></a>
 ## 重如律法(Weight of the Lex)

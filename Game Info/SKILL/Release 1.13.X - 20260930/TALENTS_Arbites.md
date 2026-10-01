@@ -31,6 +31,7 @@
 | <img src="https://github.com/user-attachments/assets/8f0bcba7-48bd-4d61-ad19-b03a65160eb5" width="32" height="32" alt="行軍之志天賦圖示"> [行軍之志](#adamant_movement_speed_on_block)<br>- March | <ul><li>遠程攻擊命中敵人後，移動速度提高 15%，持續 3 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6d045fa3-97bc-4943-9e6e-0f703e68288d" width="32" height="32" alt="無處可逃天賦圖示"> [無處可逃](#adamant_elite_special_kills_offensive_boost)<br>- No Escape | <ul><li>擊殺精英或專家敵人後，傷害與移速提高 10%，持續 4 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7b24cc5d-1975-4762-8b77-8899c0713175" width="32" height="32" alt="兵敗如山倒天賦圖示"> [兵敗如山倒](#adamant_cleave_after_push)<br>- Drive them Back | <ul><li>推擊命中敵人後，近戰傷害的順劈容量提高 75%，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/e51d3184-42e7-434f-8369-0ae7a6568619" width="32" height="32" alt="盾型裝甲天賦圖示"> [盾型裝甲](#adamant_shield_plates)<br>- Shield Plates | <ul><li>格擋後 3 秒恢復最大韌性的 15%；完美格擋另立即恢復 10%，這份立即恢復有 1 秒冷卻。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bff83e5a-48a0-4f4c-b280-3093df526c5d" width="32" height="32" alt="重如律法天賦圖示"> [重如律法](#adamant_heavy_attacks_increase_damage)<br>- Weight of the Lex | <ul><li>近戰重擊命中後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/62b4954d-42c3-4eab-a6ea-a17719414e19" width="32" height="32" alt="巨獸獵人天賦圖示"> [巨獸獵人](#adamant_monster_hunter)<br>- Monstrosity Hunter | <ul><li>對歐格林與巨獸造成的傷害提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="惡徒退散天賦圖示"> [惡徒退散](#adamant_damage_vs_suppressed)<br>- Cower, Miscreants! | <ul><li>對受壓制敵人的傷害提高 25%。</li></ul> | 技能 |
@@ -358,6 +359,21 @@
 - **順劈算例**：原本可穿過 10 單位敵人質量，單計此效果變成 10 × 1.75 = 17.5 單位。這是傷害穿透容量，不會一併增加踉蹌穿透容量。
 
 [詳細資料](TALENTS%20Arbites/adamant_cleave_after_push.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_shield_plates"></a>
+### 盾型裝甲(Shield Plates)
+
+<img src="https://github.com/user-attachments/assets/e51d3184-42e7-434f-8369-0ae7a6568619" width="72" height="72" alt="盾型裝甲天賦圖示">
+
+- **格擋恢復**：格擋攻擊後，3 秒內持續恢復最大韌性的 15%；再次格擋刷新時間，不提高每秒恢復速率。
+
+- **完美格擋**：另立即恢復最大韌性的 10%，每次需間隔超過 1 秒；持續恢復不受這個冷卻限制。
+
+- **恢復算例**：最大韌性 100、缺額足夠且沒有其他恢復加成，一次同時觸發兩份效果的完美格擋，共恢復 100 × 10% + 100 × 15% = 25 點；其中 10 點立即補回、15 點分 3 秒補回。
+
+[詳細資料](TALENTS%20Arbites/adamant_shield_plates.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/adamant_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10)。內部 tree version 19 不等於遊戲發行版號。
 
-完成 29／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 30／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -36,6 +36,7 @@
 | 技能 | [行軍之志](adamant_movement_speed_on_block.md) / `adamant_movement_speed_on_block` | `node_b93d4978-d0c5-4257-8725-9a1b20596f93` | 完成（核心靜態機制） |
 | 技能 | [無處可逃](adamant_elite_special_kills_offensive_boost.md) / `adamant_elite_special_kills_offensive_boost` | `node_a9e22eac-7d0d-4567-ae6c-e7be34534eaa` | 完成（核心靜態機制） |
 | 技能 | [兵敗如山倒](adamant_cleave_after_push.md) / `adamant_cleave_after_push` | `node_b4b7879c-20cc-40d3-ac4f-955b154a16e7` | 完成（核心靜態機制） |
+| 技能 | [盾型裝甲](adamant_shield_plates.md) / `adamant_shield_plates` | `node_2c04a28e-bcad-4554-b738-37f89f37eee2` | 完成（核心靜態機制） |
 | 技能 | [重如律法](adamant_heavy_attacks_increase_damage.md) / `adamant_heavy_attacks_increase_damage` | `node_44740858-05d7-46c6-a2f0-a51c3aadadaf` | 完成（核心靜態機制） |
 | 技能 | [巨獸獵人](adamant_monster_hunter.md) / `adamant_monster_hunter` | `node_48e362cb-c6b4-4d38-a325-08667444b783` | 完成（核心靜態機制） |
 | 技能 | [惡徒退散](adamant_damage_vs_suppressed.md) / `adamant_damage_vs_suppressed` | `node_0bf17803-4dbf-4ffd-8c23-2115ca8b2515` | 完成（核心靜態機制） |
