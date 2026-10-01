@@ -17,6 +17,7 @@
 | [心智網指令](#cryptic_servo_skull_improved_tagging) | 未見明確矛盾；補充機制與算例 |
 | [電流抗性](#cryptic_force_field_arcs) | 未見明確矛盾；補充機制與算例 |
 | [復甦](#cryptic_coherency_regen_aura_improved) | 未見明確矛盾；補充恢復倍率 |
+| [彈藥存放](#cryptic_ammo_aura) | 待同版核對 |
 | [修復協定](#cryptic_precision_stance_toughness_suppression) | 單位用語有誤 |
 | [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased) | 未見明確矛盾 |
 | [電流弧](#cryptic_discharge_generates_arcs) | 未見明確矛盾 |
@@ -149,6 +150,13 @@
 - 描述鍵：`loc_talent_cryptic_coherency_regen_aura_improved_desc`；hash：`a053ecfc`。
 - 結論：未見明確矛盾；補充恢復倍率。同鍵中英均描述敵人接近時仍可進行協同韌性恢復；程式補明一般恢復速率乘基礎25%／改良50%、本人亦在協同接收集合，以及恢復延遲仍有效。文字未逐一列出不算錯誤。
 - [原始碼推導與限制](cryptic_coherency_regen_aura_improved.md)。
+
+<a id="cryptic_ammo_aura"></a>
+## 彈藥存放(Ammunition Deposit)
+
+- 描述鍵：`loc_talent_cryptic_ammo_aura_toughness_desc`；hash：`cc394399`。
+- 結論：待同版核對。繁中描述列出自身韌性及自己與協同隊友的儲備彈藥增加。固定原始碼確認自身獲得25點韌性，且 ammo_reserve_capacity +15% 會發給全部人類玩家而無協同判斷；Build 25492122 尚未確認與固定來源同版，先記錄實作範圍差異，不判為錯譯。
+- [原始碼推導與限制](cryptic_ammo_aura.md)。
 
 <a id="cryptic_precision_stance_toughness_suppression"></a>
 ## 修復協定(Restoration Protocol)

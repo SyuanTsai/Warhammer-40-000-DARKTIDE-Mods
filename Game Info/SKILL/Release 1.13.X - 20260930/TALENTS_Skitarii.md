@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/c365855a-e85f-4d0d-8156-4048ae9f7e02" width="32" height="32" alt="心智網指令天賦圖示"> [心智網指令](#cryptic_servo_skull_improved_tagging)<br>- Noospheric Command | <ul><li>標記敵人並下令攻擊，可使伺服頭骨短暫大幅加快射擊。</li><li>完整2秒加速消耗0.3份電容量；沒有最低電容量時不能啟動，訓練場例外。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/ba6e0fe8-b601-433e-a423-8a6b8ee7b79b" width="32" height="32" alt="電流抗性天賦圖示"> [電流抗性](#cryptic_force_field_arcs)<br>- Voltaic Resistance | <ul><li>艾曼納圖斯力場結束時，會按吸收的遠程攻擊次數向前方敵人發射1至4道電弧。</li><li>每道電弧都可連鎖攻擊附近敵人。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/7090c8fb-aaaa-4015-a5c1-21e7093507be" width="32" height="32" alt="復甦天賦圖示"> [復甦](#cryptic_coherency_regen_aura_improved)<br>- Resurgence | <ul><li>獲得25點韌性，且你與協同範圍內隊友在戰鬥中的協同韌性恢復至少為一般速率的50%。</li><li>協同恢復最低倍率可在附近有敵人時生效。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/59dcc637-0b0f-4f3b-8e79-f4fdf53b6cef" width="32" height="32" alt="彈藥存放天賦圖示"> [彈藥存放](#cryptic_ammo_aura)<br>- Ammunition Deposit | <ul><li>你獲得25點韌性，任務中的玩家獲得15%儲備彈藥容量。</li><li>備彈容量效果不受協同距離限制；多名隊友選用時不重複加成。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/eb879996-8768-4102-8799-0fecaf6f7a98" width="32" height="32" alt="修復協定天賦圖示"> [修復協定](#cryptic_precision_stance_toughness_suppression)<br>- Restoration Protocol | <ul><li>進階戰鬥教範啟動時清除壓制；能力維持期間每秒恢復最大韌性的10%。</li><li>回復按最大韌性的比例計算，受一般韌性補充修正影響，且最多補到滿韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ac9ea4d6-352f-4ad1-95f2-a2de10d39d2d" width="32" height="32" alt="彈藥盤點之旨天賦圖示"> [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased)<br>- Writ of Ammunition Enumeration | <ul><li>進階戰鬥教範啟動時提高遠程射速15%；能力連續維持滿4秒後提高至30%。</li><li>能力結束會撤除此射速加成，4秒計時亦重置。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="32" height="32" alt="電流弧天賦圖示"> [電流弧](#cryptic_discharge_generates_arcs)<br>- Voltaic Arcs | <ul><li>電能發射器每消耗一份充能，額外釋放一道向前電弧；一次最多消耗3份，因此一般使用最多3道。</li><li>每道電弧從前方 12 公尺內的有效敵人起始，之後可鏈接附近敵人。</li></ul> | 能力 |
@@ -231,6 +232,21 @@
 - **恢復條件**：仍須等受傷後的韌性恢復延遲結束，並保有正常的協同恢復；本效果不會取消恢復延遲，也不會讓韌性超過上限。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_coherency_regen_aura_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_ammo_aura"></a>
+### 彈藥存放(Ammunition Deposit)
+
+<img src="https://github.com/user-attachments/assets/59dcc637-0b0f-4f3b-8e79-f4fdf53b6cef" width="72" height="72" alt="彈藥存放天賦圖示">
+
+- **運作方式**：獲得25點韌性；儲備彈藥容量提高15%。
+
+- **算例**：若某武器原本可攜帶200發儲備彈藥，容量增加15%後為230發；目前儲備數也會依容量倍率調整。
+
+- **作用範圍**：彈藥容量加成提供給你與任務中由玩家操控的隊友，不要求待在協同範圍內；多名隊友選用這項天賦，容量加成仍為15%。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_ammo_aura.md) · [返回目錄](#talent-index)
 
 ---
 
