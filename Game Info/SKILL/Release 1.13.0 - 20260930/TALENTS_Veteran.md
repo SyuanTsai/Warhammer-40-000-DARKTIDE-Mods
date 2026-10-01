@@ -15,6 +15,7 @@
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
+| 技能 | [擊殺紀錄(Confirmed Kill)](#veteran_elite_kills_replenish_toughness) | 擊殺精英或專家敵人，立即恢復 10% 最大韌性。 |
 | 技能 | [密集隊形訓練(Close Order Drill)](#veteran_reduced_toughness_damage_in_coherency) | 協同範圍內每有 1 名隊友，韌性減傷增加 11%；3 名隊友時達到 33%。 |
 | 技能 | [遠射(Longshot)](#veteran_increased_damage_based_on_range) | 遠程傷害增加 10%；距離越遠，額外再增加最多 15%。 |
 | 技能 | [行雲流水(One Motion)](#veteran_reduce_swap_time) | 武器切換速度增加 50%。 |
@@ -215,6 +216,24 @@
 - 三層後未再觸發：約 **8 秒**後剩 2 層、**16 秒**後剩 1 層、**24 秒**後效果結束。
 
 [詳細資料](TALENTS%20Veteran/veteran_replenish_toughness_on_weakspot_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_elite_kills_replenish_toughness"></a>
+
+### 擊殺紀錄(Confirmed Kill)
+
+<img src="https://github.com/user-attachments/assets/706a5b5b-5f7b-43bc-bbd0-7debf024671b" width="72" height="72" alt="擊殺紀錄天賦圖示">
+
+- **擊殺精英或專家敵人，立即恢復 10% 最大韌性。**
+- 接下來 **10 秒**，每秒再恢復 **2% 最大韌性**；多次擊殺的持續恢復各自生效。
+
+#### 韌性恢復算例
+
+- 最大韌性 100 且缺額足夠：立即恢復 `100 × 10% = 10`，再恢復 `100 × 2% × 10 = 20`，單次合計 **30**。
+- 兩次持續效果重疊時，每秒恢復 `100 × 2% × 2 = 4`；任一效果滿 10 秒即結束。恢復不超過最大韌性。
+
+[詳細資料](TALENTS%20Veteran/veteran_elite_kills_replenish_toughness.md) · [返回目錄](#talent-index)
 
 ---
 
