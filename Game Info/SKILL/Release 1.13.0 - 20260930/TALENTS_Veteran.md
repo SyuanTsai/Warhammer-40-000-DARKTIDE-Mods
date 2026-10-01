@@ -11,6 +11,7 @@
 | 閃擊 | [手雷專家(Grenade Tinkerer)](#veteran_improved_grenades) | 粉碎者破片手雷：爆炸傷害增加 25%，爆炸半徑增加 25%。 |
 | 閃擊 | [穿甲手雷(Krak Grenade)](#veteran_krak_grenade) | 投出會追向合適裝甲目標、並黏附其身上的穿甲手雷。 |
 | 閃擊 | [炸藥儲備(Demolition Stockpile)](#veteran_replenish_grenades) | 定期補回手雷 |
+| 閃擊 | [粉碎者破片手雷(Shredder Frag Grenade)](#veteran_grenade_apply_bleed) | 破片手雷爆炸造成傷害後，對仍存活的敵人施加 6 層流血。 |
 | 光環 | [抵近殺敵(Close and Kill)](#veteran_movement_speed_coherency) | 你與協同範圍內的隊友移動速度增加 7.5%。 |
 | 光環 | [火力小分隊(Fire Team)](#veteran_increased_damage_coherency) | 你與協同範圍內的隊友傷害增加 7.5%。 |
 | 光環 | [生存專家(Survivalist)](#veteran_aura_gain_ammo_on_elite_kill_improved) | 你或擁有此光環效果的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備彈上限的彈藥。 |
@@ -136,6 +137,26 @@
 - 破片手雷已倒數 30 秒，再投擲 1 顆：再等約 `60 − 30 = 30 秒` 補回第 1 顆，之後再等約 60 秒補回第 2 顆。
 
 [詳細資料](TALENTS%20Veteran/veteran_replenish_grenades.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_grenade_apply_bleed"></a>
+
+### 粉碎者破片手雷(Shredder Frag Grenade)
+
+<img src="https://github.com/user-attachments/assets/6fa67f08-3b19-4bee-8a32-d5815db7297f" width="72" height="72" alt="粉碎者破片手雷天賦圖示">
+
+- **破片手雷爆炸造成傷害後，對仍存活的敵人施加 6 層流血。**
+- 最多攜帶 **3 顆**；約 **1.7 秒**後爆炸。爆炸中心區為 **2 公尺**，外圈延伸至 **10 公尺**，外圈傷害逐漸降低。
+- 流血最多 **16 層**，約每 **0.5 秒**造成一次傷害；再次施加會刷新 1.5 秒計時，未再施加時到期後逐次掉層。
+
+#### 爆炸與流血算例
+
+- 中心爆炸、無其他加成：無甲目標為 **500**；甲殼護甲倍率 0.2，得到 `500 × 0.2 = 100 傷害`。
+- 三顆皆對同一存活敵人成功施加流血，層數依序為 `6 → 12 → min(18, 16) = 16`。
+- 流血按層數曲線增強。只計流血本身、無甲目標，6 層每次傷害約為 `175 × [(6 ÷ 16)² × (3 − 2 × 6 ÷ 16)] × 0.5 ≈ 27.69`；16 層為 `175 × 1 × 0.5 = 87.5`。
+
+[詳細資料](TALENTS%20Veteran/veteran_grenade_apply_bleed.md) · [返回目錄](#talent-index)
 
 ---
 
