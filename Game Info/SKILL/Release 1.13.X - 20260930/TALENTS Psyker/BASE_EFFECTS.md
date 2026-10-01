@@ -33,3 +33,53 @@ psyker_archetype.lua 的 base_talents 將該定義放入戰鬥能力槽。psyker
 - 本機 Steam Build 25492122 與固定公開來源尚未證實同版；原始碼舊註解不當成已驗證的遊戲文字。
 
 ---
+
+<a id="psyker_grenade_smite"></a>
+## 基礎閃擊
+
+- 天賦識別碼：`psyker_grenade_smite`。
+
+- 蓄力後攻擊單一敵人，是顱腦崩裂強化前的基礎能力；不使用靈能攻擊的十發投擲次數。
+- 可先蓄力再找目標，基礎約 3 秒充滿；先鎖定再蓄力約 2 秒。沒有其他修正時，蓄滿約增加 20 個反噬百分點，成功攻擊再增加 25 個百分點，合計約 45 個百分點。
+- 顱腦崩裂會另乘 1.5 傷害倍率：固定相同條件，基礎版本若造成 100 點，強化版則為 100 × 1.5 = 150 點。
+
+### 原始碼確認與程式推導
+
+psyker_grenade_smite只提供PlayerAbilities.psyker_smite；能力max_charges=0、only_uses_charges=true不是十發投擲物。與顱腦崩裂共用psyker_smite武器、鎖定、蓄力和反噬流程，差別是未掛載smite_damage_multiplier=1.5被動。完整動作追蹤見[顱腦崩裂來源](psyker_brain_burst_improved.md)。
+
+### 原始碼依據
+
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L55-L58)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L185-L198)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua#L106-L118)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L255-L284)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L231-L265)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L528-L534)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/grenades/psyker_smite.lua#L535-L577)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L507-L519)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/grenades/psyker_smite.lua#L314-L333)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/grenades/psyker_smite.lua#L391-L405)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/grenades/psyker_smite.lua#L443-L448)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/grenades/psyker_smite.lua#L459-L478)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/grenades/psyker_smite.lua#L535-L563)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_handling_templates/weapon_charge_templates.lua#L136-L154)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_smite_targeting.lua#L41-L60)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_smite_targeting.lua#L69-L124)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_smite_targeting.lua#L153-L172)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/modules/psyker_smite_targeting_action_module.lua#L32-L66)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/modules/charge_action_module.lua#L20-L67)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/modules/warp_charge_action_module.lua#L19-L39)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_damage_target.lua#L57-L102)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_damage_target.lua#L169-L178)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/warp_charge.lua#L58-L85)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/warp_charge.lua#L116-L139)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/shared_overheat_and_warp_charge_functions.lua#L5-L8)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/shared_overheat_and_warp_charge_functions.lua#L26-L41)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua#L143-L184)
+
+### 待確認事項
+
+- 傷害與反噬例固定無其他加成；基礎能力與選取強化後的傷害不得混用。
+- 本機 Steam Build 25492122 與固定公開來源尚未證實同版；原始碼舊註解不當成已驗證的遊戲文字。
+
+---
