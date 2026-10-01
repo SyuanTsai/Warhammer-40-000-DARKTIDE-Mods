@@ -14,6 +14,7 @@
 | [持續突擊](#zealot_hits_grant_stacking_damage) | 未見明確矛盾 |
 | [堅韌信仰](#zealot_crits_reduce_toughness_damage) | 未見明確矛盾 |
 | [精力復甦](#zealot_toughness_on_dodge) | 未見明確矛盾 |
+| [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
 ## 背刺者(Backstabber)
@@ -56,3 +57,10 @@
 - 描述鍵：`loc_talent_zealot_toughness_on_dodge_desc`；hash：`7b3709d4`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_toughness_on_dodge.md)。
+
+<a id="base_melee_damage_node_buff_medium_1"></a>
+## 近戰增幅(Melee Damage Boost)
+
+- 描述鍵：`loc_talent_melee_damage_boost_medium_desc`；hash：`7b5da013`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](base_melee_damage_node_buff_medium_1.md)。
