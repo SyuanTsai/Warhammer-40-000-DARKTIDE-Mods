@@ -57,7 +57,7 @@
 | [堅毅](#psyker_crits_regen_toughness_movement_speed) | 已配對；機制待核對 |
 | [險惡燃燒](#psyker_elite_kills_add_warpfire) | 已配對；機制待核對 |
 | [戰鬥冥想](#psyker_chance_to_vent_on_kill) | 未見明確矛盾 |
-| [完美時機](#psyker_crits_empower_next_attack) | 已配對；機制待核對 |
+| [完美時機](#psyker_crits_empower_next_attack) | 未見明確矛盾 |
 | [野火](#psyker_spread_warpfire_on_kill) | 已配對；機制待核對 |
 | [思維活躍](#psyker_venting_improvements) | 已配對；機制待核對 |
 | [惡意攻勢](#psyker_kills_stack_other_weapon_damage) | 已配對；機制待核對 |
@@ -437,7 +437,7 @@
 ## 完美時機(Perfect Timing)
 
 - 描述鍵：`loc_talent_psyker_damage_on_crit_stacking_desc`；hash：`62b2dfb3`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_crits_empower_next_attack.md)。
 
 <a id="psyker_spread_warpfire_on_kill"></a>

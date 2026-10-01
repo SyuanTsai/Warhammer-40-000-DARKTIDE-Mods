@@ -55,7 +55,7 @@
 | [堅毅](psyker_crits_regen_toughness_movement_speed.md) | 機制與公式待核對。 |
 | [險惡燃燒](psyker_elite_kills_add_warpfire.md) | 機制與公式待核對。 |
 | [戰鬥冥想](psyker_chance_to_vent_on_kill.md) | 反噬產生量減少 10%。；擊殺有 10% 機率降低 10 個百分點反噬。；完整計算與適用限制見來源文件。 |
-| [完美時機](psyker_crits_empower_next_attack.md) | 機制與公式待核對。 |
+| [完美時機](psyker_crits_empower_next_attack.md) | 爆擊命中增加 3% 傷害，最多 5 層，持續 10 秒。；完整計算與適用限制見來源文件。 |
 | [野火](psyker_spread_warpfire_on_kill.md) | 機制與公式待核對。 |
 | [思維活躍](psyker_venting_improvements.md) | 機制與公式待核對。 |
 | [惡意攻勢](psyker_kills_stack_other_weapon_damage.md) | 機制與公式待核對。 |
