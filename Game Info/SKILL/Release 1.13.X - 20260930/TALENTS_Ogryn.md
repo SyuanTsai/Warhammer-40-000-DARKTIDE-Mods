@@ -43,6 +43,7 @@
 | <img src="https://github.com/user-attachments/assets/c78dbead-adf5-4b9e-9629-9a3a0a93ae8c" width="32" height="32" alt="火力全開天賦圖示"> [火力全開](#ogryn_explosions_burn)<br>- Fire Away | <ul><li>爆炸施加 1 層燃燒，爆炸中心區域改為 2 層，最多 8 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/3ff7d7eb-6206-4d77-91c5-483259320072" width="32" height="32" alt="堅不可摧天賦圖示"> [堅不可摧](#ogryn_block_all_attacks)<br>- Unbreakable | <ul><li>完美格擋可擋下原本不可格擋的近戰攻擊。</li><li>完美格擋後，下一次近戰傷害提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/15edb762-d209-407d-8bd5-fc0672bd5ef8" width="32" height="32" alt="士氣高昂天賦圖示"> [士氣高昂](#ogryn_damage_reduction_on_high_stamina)<br>- Pumped Up | <ul><li>耐力高於 75% 時，受到的傷害減少 12.5%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/de5091de-3dd6-455b-875a-55228eb4d67e" width="32" height="32" alt="好運連連天賦圖示"> [好運連連](#ogryn_crit_damage_increase)<br>- Lucky Streak | <ul><li>爆擊時，額外傷害部分增加 75%。</li></ul> | 技能 |
 
 ---
 
@@ -606,5 +607,20 @@
 - **減傷算例**：此階段原本 100 點傷害變成 100 × 0.875 = 87.5 點；若另有獨立 20% 減傷，則為 100 × 0.875 × 0.8 = 70 點。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_damage_reduction_on_high_stamina.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_crit_damage_increase"></a>
+### 好運連連(Lucky Streak)
+
+<img src="https://github.com/user-attachments/assets/de5091de-3dd6-455b-875a-55228eb4d67e" width="72" height="72" alt="好運連連天賦圖示">
+
+- **效果**：爆擊時提高額外傷害部分 75%，不提高爆擊機率，也不是將整筆爆擊傷害乘 1.75。不同武器、護甲與命中部位的額外傷害占比不同，因此實際增幅也不同。
+
+- **傷害算例**：假設固定條件下，原傷害由 100 點基礎與 50 點爆擊額外傷害組成，原本合計 150 點；生效後為 100 + 50 × 1.75 = 187.5 點，相對提高 25%。若額外部分只有 20 點，則由 120 變成 135 點，只提高 12.5%。
+
+- **爆擊弱點**：同時爆擊並命中弱點時，程式會先計算共用的額外傷害，再套入爆擊與弱點相關加成；不能把爆擊與弱點倍率各乘一次。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_crit_damage_increase.md) · [返回目錄](#talent-index)
 
 ---

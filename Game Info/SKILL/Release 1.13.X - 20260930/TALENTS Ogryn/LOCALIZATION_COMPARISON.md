@@ -45,6 +45,7 @@
 | [火力全開](#ogryn_explosions_burn) | 繁中描述錯誤 |
 | [堅不可摧](#ogryn_block_all_attacks) | 未見明確矛盾 |
 | [士氣高昂](#ogryn_damage_reduction_on_high_stamina) | 未見明確矛盾 |
+| [好運連連](#ogryn_crit_damage_increase) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -310,3 +311,10 @@
 - 描述鍵：`loc_talent_ogryn_damage_reduction_on_high_stamina_desc`；hash：`ab8d5e62`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_damage_reduction_on_high_stamina.md)。
+
+<a id="ogryn_crit_damage_increase"></a>
+## 好運連連(Lucky Streak)
+
+- 描述鍵：`loc_talent_ogryn_crit_damage_increase_desc`；hash：`c90c5cb1`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_crit_damage_increase.md)。
