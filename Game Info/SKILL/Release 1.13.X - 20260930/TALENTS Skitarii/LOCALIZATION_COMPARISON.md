@@ -10,6 +10,7 @@
 |---|---|
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [弱點分析教義](#cryptic_afflicted_increased_damage) | 未見明確矛盾 |
+| [槍械技師](#cryptic_auto_reload) | 未見明確矛盾 |
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
@@ -24,3 +25,10 @@
 - 描述鍵：`loc_talent_cryptic_afflicted_increased_damage_desc`；hash：`70e7ba50`。
 - 結論：未見明確矛盾。繁中與英文一致；補充加成作用在自己與刷新方式。
 - [原始碼推導與限制](cryptic_afflicted_increased_damage.md)。
+
+<a id="cryptic_auto_reload"></a>
+## 槍械技師(Gunsmith)
+
+- 描述鍵：`loc_talent_cryptic_auto_reload_desc`；hash：`612ee334`。
+- 結論：未見明確矛盾。中英一致；補充首批第6秒、向上取整及備彈來源。
+- [原始碼推導與限制](cryptic_auto_reload.md)。
