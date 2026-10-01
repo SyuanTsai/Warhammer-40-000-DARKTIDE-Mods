@@ -8,6 +8,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="能量載分配鏈路天賦圖示"> [能量載分配鏈路](#cryptic_crits_grant_tdr)<br>- Power Redistribution Uplink | <ul><li>爆擊命中後，3 秒內恢復 7.5% 韌性</li><li>期間承受的韌性傷害降低 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ea4be2ad-8b84-4e83-a056-993beed7b39c" width="32" height="32" alt="適應性戰鬥記憶體天賦圖示"> [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break)<br>- Adaptive Combat Engram | <ul><li>韌性耗盡後，減少 30% 承受傷害、持續 5 秒</li><li>效果結束後冷卻 15 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/4738c3e6-2609-414c-9c00-f50fea4dcef3" width="32" height="32" alt="閃避伺服恢復天賦圖示"> [閃避伺服恢復](#cryptic_successful_dodge_stamina)<br>- Evasive Servo Recovery | <ul><li>成功閃避恢復 10% 耐力</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d9876bb9-a417-45e8-814c-acbc24233120" width="32" height="32" alt="歐姆尼賽亞充能聖歌天賦圖示"> [歐姆尼賽亞充能聖歌](#cryptic_multi_hits_restore_toughness)<br>- Omnissian Recharge Litany | <ul><li>單次攻擊命中至少 3 名敵人</li><li>3 秒內恢復 10% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8f013bd2-f685-4be4-8678-11ac630d6659" width="32" height="32" alt="原初動力導流天賦圖示"> [原初動力導流](#cryptic_stamina_increases_damage)<br>- Channelled Motive Force | <ul><li>累計消耗 1 格耐力，傷害提高 15%、持續 4 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/98a10c08-52e1-47bf-a288-a2043ba40a63" width="32" height="32" alt="熵能轉移天賦圖示"> [熵能轉移](#cryptic_electrocution_toughness)<br>- Entropic Transfer | <ul><li>施加或刷新電擊後，4 秒內恢復 12% 韌性</li></ul> | 技能 |
@@ -64,6 +65,19 @@
 - **減傷算例**：沒有其他減傷時，100 × (1 − 30%) = 70 點；若另有獨立的 25% 減傷，則是 100 × 0.70 × 0.75 = 52.5 點。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_dr_on_toughness_break.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_successful_dodge_stamina"></a>
+### 閃避伺服恢復(Evasive Servo Recovery)
+
+<img src="https://github.com/user-attachments/assets/4738c3e6-2609-414c-9c00-f50fea4dcef3" width="72" height="72" alt="閃避伺服恢復天賦圖示">
+
+- **觸發方式**：成功閃避敵人的攻擊，立即恢復最大耐力的 10%；單純按下閃避但沒有避開攻擊不算。
+
+- **恢復算例**：最大耐力 5 格時，每次恢復 5 × 10% = 0.5 格；目前 4.8 格則只補到 5 格。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_successful_dodge_stamina.md) · [返回目錄](#talent-index)
 
 ---
 

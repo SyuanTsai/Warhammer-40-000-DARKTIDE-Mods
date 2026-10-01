@@ -10,6 +10,7 @@
 |---|---|
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
+| [閃避伺服恢復](#cryptic_successful_dodge_stamina) | 未見明確矛盾 |
 | [歐姆尼賽亞充能聖歌](#cryptic_multi_hits_restore_toughness) | 未見明確矛盾 |
 | [原初動力導流](#cryptic_stamina_increases_damage) | 未見明確矛盾 |
 | [熵能轉移](#cryptic_electrocution_toughness) | 未見明確矛盾 |
@@ -48,6 +49,13 @@
 - 描述鍵：`loc_talent_cryptic_dr_on_toughness_break_desc`；hash：`05a4e1a1`。
 - 結論：待同版核對。中英都把15秒寫成觸發間隔，但固定來源採5秒效果後加15秒冷卻。屬雙語文字與來源實作差異，尚未確認同版，不能定為繁中誤譯。
 - [原始碼推導與限制](cryptic_dr_on_toughness_break.md)。
+
+<a id="cryptic_successful_dodge_stamina"></a>
+## 閃避伺服恢復(Evasive Servo Recovery)
+
+- 描述鍵：`loc_talent_cryptic_successful_dodge_stamina_desc`；hash：`99f3c08d`。
+- 結論：未見明確矛盾。繁中與英文條件及恢復方向一致；補充以最大耐力為分母。
+- [原始碼推導與限制](cryptic_successful_dodge_stamina.md)。
 
 <a id="cryptic_multi_hits_restore_toughness"></a>
 ## 歐姆尼賽亞充能聖歌(Omnissian Recharge Litany)

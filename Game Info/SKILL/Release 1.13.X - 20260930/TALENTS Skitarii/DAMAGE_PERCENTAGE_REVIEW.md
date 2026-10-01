@@ -8,6 +8,7 @@
 |---|---|
 | [能量載分配鏈路](cryptic_crits_grant_tdr.md) | 爆擊命中後，3 秒內恢復 7.5% 韌性；期間承受的韌性傷害降低 15%；完整計算與適用限制見來源文件。 |
 | [適應性戰鬥記憶體](cryptic_dr_on_toughness_break.md) | 韌性耗盡後，減少 30% 承受傷害、持續 5 秒；效果結束後冷卻 15 秒；完整計算與適用限制見來源文件。 |
+| [閃避伺服恢復](cryptic_successful_dodge_stamina.md) | 成功閃避恢復 10% 耐力；完整計算與適用限制見來源文件。 |
 | [歐姆尼賽亞充能聖歌](cryptic_multi_hits_restore_toughness.md) | 單次攻擊命中至少 3 名敵人；3 秒內恢復 10% 韌性；完整計算與適用限制見來源文件。 |
 | [原初動力導流](cryptic_stamina_increases_damage.md) | 累計消耗 1 格耐力，傷害提高 15%、持續 4 秒；完整計算與適用限制見來源文件。 |
 | [熵能轉移](cryptic_electrocution_toughness.md) | 施加或刷新電擊後，4 秒內恢復 12% 韌性；完整計算與適用限制見來源文件。 |
