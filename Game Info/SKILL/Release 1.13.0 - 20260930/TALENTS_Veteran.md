@@ -16,6 +16,7 @@
 | 光環 | [火力小分隊(Fire Team)](#veteran_increased_damage_coherency) | 你與協同範圍內的隊友傷害增加 7.5%。 |
 | 光環 | [生存專家(Survivalist)](#veteran_aura_gain_ammo_on_elite_kill_improved) | 你或擁有此光環效果的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備彈上限的彈藥。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
+| 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
 | 技能 | [戰術裝填(Tactical Reload)](#veteran_faster_reload_on_non_empty_clips) | 彈匣還有彈藥時開始裝填，裝填速度增加 25%。 |
 | 技能 | [齊射能手(Volley Adept)](#veteran_reload_speed_on_elite_kill) | 擊殺精英或專家敵人後，下一次裝填速度增加 30%。 |
@@ -247,6 +248,29 @@
 - 首次施放後經過 20 秒，再用掉第 2 次：距離恢復 1 次仍需約 `53.2 − 20 = 33.2 秒`。
 
 [詳細資料](TALENTS%20Veteran/veteran_combat_ability_extra_charge.md) · [返回目錄](#talent-index)
+
+---
+
+## 鑰石
+
+<a id="veteran_snipers_focus"></a>
+
+### 狙擊專注(Marksman's Focus)
+
+<img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="72" height="72" alt="狙擊專注天賦圖示">
+
+- **遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。**
+- 效果最多按 **10 層**計算。已有層數時，任何弱點命中都能刷新 **5 秒**持續時間；近戰弱點命中也可刷新，但不增加層數。
+- 未再刷新時，約每 5 秒減少 1 層；移動本身不消耗層數。
+
+#### 傷害、裝填與衰減算例
+
+- 十層為 `10 × 7.5% = 75%` 額外傷害加成，裝填速度 `10 × 1% = 10%`。
+- 假設基礎部分 100、遠程爆擊或弱點額外部分 40，無其他加成：`100 + 40 × (1 + 75%) = 170 傷害`，原本為 140。
+- 原本裝填 4 秒：`4 ÷ 1.1 ≈ 3.64 秒`。
+- 只有 3 層且不再刷新時：約第 5 秒剩 2 層、第 10 秒剩 1 層、第 15 秒歸零。
+
+[詳細資料](TALENTS%20Veteran/veteran_snipers_focus.md) · [返回目錄](#talent-index)
 
 ---
 
