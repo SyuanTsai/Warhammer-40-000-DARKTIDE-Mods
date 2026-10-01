@@ -110,3 +110,33 @@ psyker_archetype.lua 將 psyker_aura_ability_cooldown 列為 tier 1 基礎天賦
 - 本機 Steam Build 25492122 與固定公開來源尚未證實同版；原始碼舊註解不當成已驗證的遊戲文字。
 
 ---
+
+<a id="psyker_peril_passive"></a>
+## 反噬系統
+
+- 天賦識別碼：`psyker_peril_passive`。
+
+- 反噬上限為 100%，以 97% 作為高反噬門檻。反噬增加會延後自然消退；停止增加且回到待機狀態後，等待約 3 秒才開始自然消退。
+- 3 秒是等待時間，不是從 100% 清空的時間。消退速率依反噬區間、武器與加成而變；也可主動平息。
+- 超載並非單看「已到 100%」：即時增加路徑會在原本已達 100% 且再次增加時判定爆炸；持續施放路徑另檢查目前與開始時反噬。免於超載的效果另行處理。
+
+### 原始碼確認與程式推導
+
+psyker_peril_passive 本身提供顯示用格式值；主要執行參數在 archetype_warp_charge_templates.psyker。WarpCharge.update_observer 用 last_charge_at_t + auto_vent_delay 判斷等待是否結束，並要求 current_percentage>0、state=idle、等待期已過。Psyker 設定 auto_vent_delay=3。WarpCharge.check_new_state 在 current_percentage>=1 且 starting_percentage>=1 時將狀態轉為 exploding；模板將 critical_threshold 和 extreme_threshold 設為 0.97。
+
+### 原始碼依據
+
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L62-L64)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2606-L2627)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/warp_charge/archetype_warp_charge_templates.lua#L35-L49)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/warp_charge.lua#L28-L38)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/warp_charge.lua#L187-L237)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/shared_overheat_and_warp_charge_functions.lua#L5-L14)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/shared_overheat_and_warp_charge_functions.lua#L44-L70)
+
+### 待確認事項
+
+- 自動消散速度會依反噬區間、武器設定與其他修正變動；本檔不推算固定清空秒數。100% 爆炸判定同時檢查 current_percentage 與 starting_percentage。
+- 本機 Steam Build 25492122 與固定公開來源尚未證實同版；原始碼舊註解不當成已驗證的遊戲文字。
+
+---
