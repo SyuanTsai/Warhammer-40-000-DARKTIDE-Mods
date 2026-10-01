@@ -16,6 +16,7 @@
 | [破骨者之環](#ogryn_melee_damage_coherency_improved) | 未見明確矛盾 |
 | [優勝劣汰](#ogryn_damage_vs_suppressed_coherency) | 未見明確矛盾 |
 | [跟緊我！](#ogryn_toughness_regen_aura) | 未見明確矛盾 |
+| [忠誠守護者](#ogryn_taunt_shout) | 未見明確矛盾 |
 | [不屈不撓](#ogryn_longer_charge) | 未見明確矛盾 |
 | [貼身火力](#ogryn_special_ammo) | 未見明確矛盾 |
 | [跺殺之靴](#ogryn_charge_toughness) | 未見明確矛盾 |
@@ -148,6 +149,13 @@
 - 描述鍵：`loc_talent_ogryn_toughness_regen_aura_desc`；hash：`89218b06`。
 - 結論：未見明確矛盾。同 hash 89218b06 的繁中與英文都說明你與協同盟友獲得韌性恢復加成，未宣稱光環會自動恢復韌性。原始設定提高的是恢復量修正，而自然恢復使用另一個速率屬性。本機 Build 25492122 的繁中與英文文字以相同 hash 配對；公開固定 SHA 是否對應同一 Build 尚未確認。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_toughness_regen_aura.md)。
+
+<a id="ogryn_taunt_shout"></a>
+## 忠誠守護者(Loyal Protector)
+
+- 描述鍵：`loc_ability_ogryn_taunt_shout_new_desc`；hash：`b6bbba98`。
+- 結論：未見明確矛盾。繁中原文寫「吸引他們的炮火」；英文原文更明確寫成讓其「只攻擊你」，但兩者指向嘲諷敵人、範圍與持續時間相同，沒有相反效果。3秒與6秒重複施放的文字也相符；Build 25492122 與公開 SHA 的版本關係待核。
+- [原始碼推導與限制](ogryn_taunt_shout.md)。
 
 <a id="ogryn_longer_charge"></a>
 ## 不屈不撓(Indomitable)

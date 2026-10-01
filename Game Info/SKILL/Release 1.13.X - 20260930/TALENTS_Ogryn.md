@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/78f209fd-3e8b-456d-954d-c67fdf6e23ee" width="32" height="32" alt="破骨者之環天賦圖示"> [破骨者之環](#ogryn_melee_damage_coherency_improved)<br>- Bonebreaker's Aura | <ul><li>「破骨者之環」使你和協同範圍內隊友的近戰攻擊傷害提高 10%。</li><li>這是基礎近戰光環的強化版本，採用 10% 數值，不會再把基礎 7.5% 額外相加。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/4b71152f-747b-450c-9d3a-82a313fc8360" width="32" height="32" alt="優勝劣汰天賦圖示"> [優勝劣汰](#ogryn_damage_vs_suppressed_coherency)<br>- Coward Culling | <ul><li>「優勝劣汰」使你和協同範圍內隊友對受壓制敵人的傷害提高 20%；另使你造成的壓制提高 25%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/014cd689-2381-43e8-9241-b0a13af77036" width="32" height="32" alt="跟緊我！天賦圖示"> [跟緊我！](#ogryn_toughness_regen_aura)<br>- Stay Close! | <ul><li>「跟緊我！」使你和協同範圍內隊友符合條件的韌性恢復量提高 20%。</li><li>這項效果提高每次恢復量，不會自行啟動韌性恢復，也不會把自然恢復速度提高 20%。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/01a8e7be-dff3-4d81-a426-5e38ae352606" width="32" height="32" alt="忠誠守護者天賦圖示"> [忠誠守護者](#ogryn_taunt_shout)<br>- Loyal Protector | <ul><li>嘲諷周圍 12 公尺敵人 15 秒；第 3、6 秒再次施放。</li><li>只有首次造成踉蹌；基礎冷卻 50 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/582a28cf-14c5-4757-a51c-cb5924dbf0a3" width="32" height="32" alt="不屈不撓天賦圖示"> [不屈不撓](#ogryn_longer_charge)<br>- Indomitable | <ul><li>衝鋒最遠 24 公尺，撞到巨獸停止；基礎冷卻 25 秒。</li><li>結束後 5 秒，近戰攻速與移速提高 25%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/1a42e740-0c91-48e5-9092-e88d3f06b532" width="32" height="32" alt="貼身火力天賦圖示"> [貼身火力](#ogryn_special_ammo)<br>- Point-Blank Barrage | <ul><li>切換並裝填遠程武器，12 秒內射速提高 25%、換彈速度提高 65%。</li><li>近距離傷害提高 15%，架槍減速減半；結束時返還計入彈藥的 50%。</li><li>基礎冷卻 60 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0932d1f6-96b1-47d9-ad81-861fe9914d9a" width="32" height="32" alt="跺殺之靴天賦圖示"> [跺殺之靴](#ogryn_charge_toughness)<br>- Stomping Boots | <ul><li>衝鋒期間每次撞中敵人，恢復最大韌性的 10%。</li></ul> | 能力 |
@@ -233,6 +234,21 @@
 ---
 
 ## 能力
+
+<a id="ogryn_taunt_shout"></a>
+### 忠誠守護者(Loyal Protector)
+
+<img src="https://github.com/user-attachments/assets/01a8e7be-dff3-4d81-a426-5e38ae352606" width="72" height="72" alt="忠誠守護者天賦圖示">
+
+- **嘲諷效果**：嘲諷周圍 12 公尺內的敵人，使其優先攻擊你，持續 15 秒。首次施放也會使敵人踉蹌；惡魔宿主等被排除的敵人不受影響。
+
+- **重複施放**：第 3 秒、第 6 秒各以你當時的位置再發出一次嘲諷，這兩次不再造成踉蹌；再次影響同一敵人會重設 15 秒時間。
+
+- **時間算例**：敵人在第 0、3、6 秒都位於範圍內，最後一次嘲諷可持續至第 6 + 15 = 21 秒。能力基礎冷卻 50 秒，只有一層充能。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_taunt_shout.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="ogryn_longer_charge"></a>
 ### 不屈不撓(Indomitable)
