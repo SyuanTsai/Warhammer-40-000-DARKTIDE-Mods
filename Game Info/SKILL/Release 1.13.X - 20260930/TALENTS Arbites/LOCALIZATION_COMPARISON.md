@@ -10,6 +10,7 @@
 |---|---|
 | [遠程引爆](#adamant_whistle) | 未見明確矛盾 |
 | [法務官手榴彈](#adamant_grenade_improved) | 未見明確矛盾 |
+| [電能地雷](#adamant_shock_mine) | 繁中原文勘誤 |
 | [突破重圍](#adamant_charge) | 繁中原文勘誤 |
 | [天鷹使節](#adamant_area_buff_drone_improved) | 未見明確矛盾 |
 | [懲戒者姿態](#adamant_stance) | 未見明確矛盾 |
@@ -104,6 +105,15 @@
 - 描述鍵：`loc_talent_ability_adamant_grenade_improved_description`；hash：`6a2ea9db`。
 - 結論：未見明確矛盾。同源繁中與英文均描述手榴彈及強化後攜帶上限，未見中英矛盾；碰撞引爆與保險引信的精確流程另按固定來源補充。
 - [原始碼推導與限制](adamant_grenade_improved.md)。
+
+<a id="adamant_shock_mine"></a>
+## 電能地雷(Voltaic Shock Mine)
+
+- 描述鍵：`loc_talent_ability_shock_mine_description`；hash：`d710719f`。
+- 結論：繁中原文勘誤。繁中把英文 activates as it lands（落地啟動）寫為「落地後立即引爆」，混淆進入持續電擊狀態與立即爆炸。啟動1秒、待機及作用時間細節另依固定來源核對。
+- 繁中原文短引：扔出一枚落地後立即引爆的{talent_name:%s}。
+- 同源英文：Throw a {talent_name:%s} that activates as it lands.
+- [原始碼推導與限制](adamant_shock_mine.md)。
 
 <a id="adamant_charge"></a>
 ## 突破重圍(Break the Line)

@@ -8,6 +8,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/aa116dc7-88d2-450b-bcff-c2dc0bb6b4c0" width="32" height="32" alt="遠程引爆天賦圖示"> [遠程引爆](#adamant_whistle)<br>- Remote Detonation | <ul><li>瞄準並指定敵人後吹響指令，電子獒犬會撲向該目標；指令結算時，以戰犬位置同時觸發電擊呼喊與爆炸。</li><li>最多 2 次充能；每次消耗 1 次，基礎冷卻 50 秒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/9f134d52-bce2-4365-b74c-f93550febf29" width="32" height="32" alt="法務官手榴彈天賦圖示"> [法務官手榴彈](#adamant_grenade_improved)<br>- Arbites Grenade | <ul><li>法務官手榴彈在碰撞時引爆，若未碰撞則引信為 2 秒；最多 4 枚，比基礎手榴彈多 1 枚。</li><li>手榴彈擊殺追蹤器會記錄 0.25 秒內的三殺成就進度；不會因此返還手榴彈。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/db0783ea-1312-4fed-a430-c1be9a87d2e1" width="32" height="32" alt="電能地雷天賦圖示"> [電能地雷](#adamant_shock_mine)<br>- Voltaic Shock Mine | <ul><li>部署後約 1 秒啟動；偵測到敵人後，對 3 公尺內敵人持續施加電擊，作用 15 秒。</li><li>最多攜帶 2 枚；單次電擊維持 3 秒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="32" height="32" alt="突破重圍天賦圖示"> [突破重圍](#adamant_charge)<br>- Break the Line | <ul><li>向前猛砸並衝入敵陣；猛砸期間視為格擋，結束後獲得 6 秒傷害與衝擊加成。</li><li>基礎冷卻 20 秒，單次充能。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="天鷹使節天賦圖示"> [天鷹使節](#adamant_area_buff_drone_improved)<br>- Nuncio-Aquila | <ul><li>部署阿奎拉傳令機，持續 20 秒並影響周圍 7.5 公尺；冷卻 60 秒，單次充能。</li><li>強化版讓盟友每秒恢復 7.5% 韌性，並提高壓制與衝擊、降低後座力，同時免疫暈眩、減速與壓制。</li><li>範圍內敵人受到的傷害提高 15%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/4eb18874-83b0-4e2f-bf2b-c91001a15371" width="32" height="32" alt="懲戒者姿態天賦圖示"> [懲戒者姿態](#adamant_stance)<br>- Castigator's Stance | <ul><li>啟動時恢復全部韌性；進入 10 秒姿態，移動速度提高 15%、威力提高 20%、受到的傷害減少 70%，但不能衝刺。</li><li>冷卻 50 秒，單次充能；姿態結束後，傷害減免再延續 2 秒。</li></ul> | 能力 |
@@ -122,6 +123,27 @@
 - **攜帶與補充**：最多 4 枚，比基礎版本的 3 枚多 1 枚；投出一枚少一枚，不會自行按冷卻補回。搭配孤狼時，上限變成 5 枚，缺少手榴彈時每 45 秒補回 1 枚。
 
 [詳細資料](TALENTS%20Arbites/adamant_grenade_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_shock_mine"></a>
+### 電能地雷(Voltaic Shock Mine)
+
+<img src="https://github.com/user-attachments/assets/db0783ea-1312-4fed-a430-c1be9a87d2e1" width="72" height="72" alt="電能地雷天賦圖示">
+
+- **部署與待機**：落地部署後約 1 秒啟動，偵測半徑 3 公尺。尚未遇敵時可待機約 150 秒；首次偵測到存活敵人後，開始 15 秒的作用時間。
+
+- **電擊方式**：每 0.2 秒重新搜尋目標，優先略過已受電擊的敵人。單次電擊維持 3 秒；目標離開範圍後，已施加的電擊仍會持續到期，留在範圍內則可在電擊解除後再次受到影響。
+
+- **傷害算例**：電擊每 0.3～0.8 秒隨機結算一次。單計護甲、無其他修正時，無甲基準為 8 × 0.5 = 4 點，防彈與硬殼護甲基準為 8 × 1 = 8 點；跳數不固定，不能直接乘固定次數當總傷害。
+
+- **攜帶與補充**：最多 2 枚，使用後不會自行按冷卻補充；搭配孤狼時，上限為 3 枚，缺少地雷時每 90 秒補回 1 枚。
+
+#### 繁中原文勘誤
+
+- 原文「落地後立即引爆」應為落地後啟動，接著對範圍內敵人持續施加電擊；不是落地瞬間一次爆炸就結束。
+
+[詳細資料](TALENTS%20Arbites/adamant_shock_mine.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -7,12 +7,13 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/adamant_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10)。內部 tree version 19 不等於遊戲發行版號。
 
-完成 82／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 83／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
 | 閃擊 | [遠程引爆](adamant_whistle.md) / `adamant_whistle` | `node_2d88b9f8-d7dc-402f-8c33-9d836f577ec6` | 完成（核心靜態機制） |
 | 閃擊 | [法務官手榴彈](adamant_grenade_improved.md) / `adamant_grenade_improved` | `node_44cf93b1-fbc8-48a4-ba29-40c84aa6051f` | 完成（核心靜態機制） |
+| 閃擊 | [電能地雷](adamant_shock_mine.md) / `adamant_shock_mine` | `node_ff1dbe2a-92b6-46f8-9c71-dc777431a537` | 完成（核心靜態機制） |
 | 能力 | [突破重圍](adamant_charge.md) / `adamant_charge` | `node_db2750a5-ac31-469f-8e7d-294b6c750b35` | 完成（核心靜態機制） |
 | 能力 | [天鷹使節](adamant_area_buff_drone_improved.md) / `adamant_area_buff_drone_improved` | `node_ccb98e10-453f-425b-8242-9d264faf7b25` | 完成（核心靜態機制） |
 | 能力 | [懲戒者姿態](adamant_stance.md) / `adamant_stance` | `node_f1a66593-132e-4464-9c20-c7a7cf79a4b0` | 完成（核心靜態機制） |
