@@ -36,6 +36,7 @@
 | [不落人後](#adamant_pinning_dog_bonus_moving_towards) | 未見明確矛盾 |
 | [往前進攻！](#adamant_companion_focus_ranged) | 未見明確矛盾 |
 | [猛犬出擊](#adamant_companion_focus_elite) | 未見明確矛盾 |
+| [審判之旨](#adamant_terminus_warrant_improved_combined) | 未見明確矛盾 |
 | [電子獒犬與人](#adamant_toughness_regen_near_companion) | 未見明確矛盾 |
 | [凋零烈焰](#adamant_damage_after_reloading) | 未見明確矛盾 |
 | [審判之錘](#adamant_multiple_hits_attack_speed) | 未見明確矛盾 |
@@ -285,6 +286,13 @@
 - 描述鍵：`loc_talent_adamant_cyber_mastiff_elites_desc`；hash：`596a5388`。
 - 結論：未見明確矛盾。繁中「優先攻擊精英和專家敵人，對其造成 25%傷害」對應英文 “prioritises Elite and Specialist Enemies, and deals 25% Damage to them”；一致。
 - [原始碼推導與限制](adamant_companion_focus_elite.md)。
+
+<a id="adamant_terminus_warrant_improved_combined"></a>
+## 審判之旨(Writ of Judgement)
+
+- 描述鍵：`loc_talent_adamant_terminus_warrant_improved_combined_desc`；hash：`fadfe4d8`。
+- 結論：未見明確矛盾。繁中「每消耗 20 層時，獲得 10%近戰與遠程攻擊速度，以及 10%暴擊機率，持續 12 秒」對應英文 “Spending 20 stacks grants 10% Melee and Ranged Attack Speed as well as 10% Critical Hit Chance for 12s”；一致。
+- [原始碼推導與限制](adamant_terminus_warrant_improved_combined.md)。
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)

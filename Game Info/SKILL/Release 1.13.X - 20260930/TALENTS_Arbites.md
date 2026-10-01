@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/0633a2b7-e8e9-4215-85a9-f54ae4d95809" width="32" height="32" alt="不落人後天賦圖示"> [不落人後](#adamant_pinning_dog_bonus_moving_towards)<br>- Not Far Behind | <ul><li>每當電子獒犬發動猛撲，玩家取得 5 秒移動速度與傷害加成。</li><li>兩項加成各為 10%；再次觸發會刷新單層效果時間。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6208ebde-9eb1-4a4d-923c-823a0e511bf9" width="32" height="32" alt="往前進攻！天賦圖示"> [往前進攻！](#adamant_companion_focus_ranged)<br>- Go Get 'Em! | <ul><li>電子獒犬更偏好選擇遠程敵人，並對遠程敵人增加 50% 傷害。</li><li>選敵評分提高遠程敵人優先度，並擴大遠程焦點的選敵距離。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d61cee49-95ce-43fb-ae8a-b05ba598366b" width="32" height="32" alt="猛犬出擊天賦圖示"> [猛犬出擊](#adamant_companion_focus_elite)<br>- Unleashed Brutality | <ul><li>電子獒犬更偏好精英與專家敵人，並對兩類敵人增加 25% 傷害。</li><li>選敵評分提高精英與專家敵人的優先度。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/34f0ccb1-7c44-4aaf-a697-e0ef2b6f2c0e" width="32" height="32" alt="審判之旨天賦圖示"> [審判之旨](#adamant_terminus_warrant_improved_combined)<br>- Writ of Judgement | <ul><li>完整消耗 20 層近戰正義或遠程正義時，獲得雙持武器攻速與爆擊機率加成。</li><li>加成為 +10% 近戰與遠程攻速、+10% 爆擊機率，持續 12 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a6716d2d-1100-4bbe-be59-683b5b9176b4" width="32" height="32" alt="電子獒犬與人天賦圖示"> [電子獒犬與人](#adamant_toughness_regen_near_companion)<br>- Man and Cyber-Mastiff | <ul><li>在自己的電子獒犬 8 公尺內，每秒恢復最大韌性的 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/82a4d2c5-a0aa-4c05-a8ea-e03bc0e4932b" width="32" height="32" alt="凋零烈焰天賦圖示"> [凋零烈焰](#adamant_damage_after_reloading)<br>- Withering Fire | <ul><li>換彈後，遠程傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0f0f19ee-07a9-47a6-9acf-599b809569a4" width="32" height="32" alt="審判之錘天賦圖示"> [審判之錘](#adamant_multiple_hits_attack_speed)<br>- Hammer of Judgement | <ul><li>同一次近戰攻擊命中至少 3 名敵人，近戰攻速提高 10%，持續 3 秒。</li></ul> | 技能 |
@@ -494,6 +495,19 @@
 - **傷害算例**：對精英與專家敵人，犬傷害增加 25%。單計這項加成，基礎 100 點變成 125；若已有同階段 25% 加成，則為 100 × (1 + 25% + 25%) = 150 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_companion_focus_elite.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_terminus_warrant_improved_combined"></a>
+### 審判之旨(Writ of Judgement)
+
+<img src="https://github.com/user-attachments/assets/34f0ccb1-7c44-4aaf-a697-e0ef2b6f2c0e" width="72" height="72" alt="審判之旨天賦圖示">
+
+- **觸發門檻**：消耗時至少持有完整 20 層，才能觸發「審判之旨」；以未滿層數切換不觸發。
+
+- **加成與算例**：持續 12 秒，近戰與遠程攻速各提高 10%，爆擊機率增加 10 個百分點。例如原本 5% 爆擊率變成 15%；1 秒的可加速動作需 1 ÷ 1.1 ≈ 0.91 秒。再次觸發刷新時間，不疊加幅度。
+
+[詳細資料](TALENTS%20Arbites/adamant_terminus_warrant_improved_combined.md) · [返回目錄](#talent-index)
 
 ---
 

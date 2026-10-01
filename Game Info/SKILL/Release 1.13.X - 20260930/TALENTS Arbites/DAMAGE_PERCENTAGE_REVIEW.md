@@ -34,6 +34,7 @@
 | [不落人後](adamant_pinning_dog_bonus_moving_towards.md) | 每當電子獒犬發動猛撲，玩家取得 5 秒移動速度與傷害加成。；兩項加成各為 10%；再次觸發會刷新單層效果時間。；完整計算與適用限制見來源文件。 |
 | [往前進攻！](adamant_companion_focus_ranged.md) | 電子獒犬更偏好選擇遠程敵人，並對遠程敵人增加 50% 傷害。；選敵評分提高遠程敵人優先度，並擴大遠程焦點的選敵距離。；完整計算與適用限制見來源文件。 |
 | [猛犬出擊](adamant_companion_focus_elite.md) | 電子獒犬更偏好精英與專家敵人，並對兩類敵人增加 25% 傷害。；選敵評分提高精英與專家敵人的優先度。；完整計算與適用限制見來源文件。 |
+| [審判之旨](adamant_terminus_warrant_improved_combined.md) | 完整消耗 20 層近戰正義或遠程正義時，獲得雙持武器攻速與爆擊機率加成。；加成為 +10% 近戰與遠程攻速、+10% 爆擊機率，持續 12 秒。；完整計算與適用限制見來源文件。 |
 | [電子獒犬與人](adamant_toughness_regen_near_companion.md) | 在自己的電子獒犬 8 公尺內，每秒恢復最大韌性的 5%。；完整計算與適用限制見來源文件。 |
 | [凋零烈焰](adamant_damage_after_reloading.md) | 換彈後，遠程傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [審判之錘](adamant_multiple_hits_attack_speed.md) | 同一次近戰攻擊命中至少 3 名敵人，近戰攻速提高 10%，持續 3 秒。；完整計算與適用限制見來源文件。 |
