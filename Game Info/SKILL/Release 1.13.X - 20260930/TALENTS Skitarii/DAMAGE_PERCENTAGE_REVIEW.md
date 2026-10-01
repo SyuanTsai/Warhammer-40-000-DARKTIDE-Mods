@@ -18,5 +18,6 @@
 | [液壓衝擊](cryptic_better_heavies.md) | 蓄力近戰攻擊時不易被一般受擊打斷；近戰重擊傷害提高 15%；完整計算與適用限制見來源文件。 |
 | [混合戰鬥契約](cryptic_hybrid_damage.md) | 近戰擊殺提高遠程傷害，遠程擊殺提高近戰傷害；每層 3%，各最多 5 層，每 8 秒衰減一層；完整計算與適用限制見來源文件。 |
 | [無限抑制器](cryptic_melee_attacks_give_melee_attack_speed.md) | 近戰攻擊命中後，每次增加 2.5% 近戰攻速；最多 5 層，持續 3 秒；完整計算與適用限制見來源文件。 |
+| [電擊打擊導管](cryptic_melee_crits_electrocute_first.md) | 近戰爆擊會電擊第一個命中目標；完整計算與適用限制見來源文件。 |
 | [槍械技師](cryptic_auto_reload.md) | 裝填速度提高 15%；停止射擊 5 秒後，每秒從備彈填入彈匣容量的 7.5%；完整計算與適用限制見來源文件。 |
 | [系統電擊](cryptic_electrocution_applies_brittleness.md) | 施加或刷新電擊時增加 3 層脆弱；每層 2.5%，持續 5 秒；完整計算與適用限制見來源文件。 |

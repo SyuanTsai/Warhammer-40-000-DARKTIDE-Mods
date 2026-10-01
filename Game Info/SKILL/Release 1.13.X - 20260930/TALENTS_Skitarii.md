@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/d01cfadc-7ba2-4505-b70a-11c22405645a" width="32" height="32" alt="液壓衝擊天賦圖示"> [液壓衝擊](#cryptic_better_heavies)<br>- Hydraulic Impact | <ul><li>蓄力近戰攻擊時不易被一般受擊打斷</li><li>近戰重擊傷害提高 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f8248e1e-3923-42b3-9afb-abed0c3ac1e9" width="32" height="32" alt="混合戰鬥契約天賦圖示"> [混合戰鬥契約](#cryptic_hybrid_damage)<br>- Hybrid Combat Covenant | <ul><li>近戰擊殺提高遠程傷害，遠程擊殺提高近戰傷害</li><li>每層 3%，各最多 5 層，每 8 秒衰減一層</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8c6107b2-c1ee-4fa6-9465-919f3c4d9d8b" width="32" height="32" alt="無限抑制器天賦圖示"> [無限抑制器](#cryptic_melee_attacks_give_melee_attack_speed)<br>- Uncapped Arrestor | <ul><li>近戰攻擊命中後，每次增加 2.5% 近戰攻速</li><li>最多 5 層，持續 3 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/a754db43-e82a-44d0-af91-ea8d874d8c3c" width="32" height="32" alt="電擊打擊導管天賦圖示"> [電擊打擊導管](#cryptic_melee_crits_electrocute_first)<br>- Electro-Strike Conduit | <ul><li>近戰爆擊會電擊第一個命中目標</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6e39714f-23a2-4d43-b5ae-6cfe4fa9b214" width="32" height="32" alt="槍械技師天賦圖示"> [槍械技師](#cryptic_auto_reload)<br>- Gunsmith | <ul><li>裝填速度提高 15%</li><li>停止射擊 5 秒後，每秒從備彈填入彈匣容量的 7.5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="32" height="32" alt="系統電擊天賦圖示"> [系統電擊](#cryptic_electrocution_applies_brittleness)<br>- System Shock | <ul><li>施加或刷新電擊時增加 3 層脆弱</li><li>每層 2.5%，持續 5 秒</li></ul> | 技能 |
 
@@ -206,6 +207,21 @@
 - **攻速算例**：5 層提高 12.5% 攻速；若受攻速影響的攻擊動作原需 1 秒，則為 1 ÷ 1.125 ≈ 0.889 秒，實際整套連段還包含其他動作。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_melee_attacks_give_melee_attack_speed.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_melee_crits_electrocute_first"></a>
+### 電擊打擊導管(Electro-Strike Conduit)
+
+<img src="https://github.com/user-attachments/assets/a754db43-e82a-44d0-af91-ea8d874d8c3c" width="72" height="72" alt="電擊打擊導管天賦圖示">
+
+- **觸發方式**：近戰爆擊命中時，對這次揮擊的第一個目標施加電擊；目標需在命中後仍存活。
+
+- **電擊方式**：電擊狀態維持 3 秒，再次施加會刷新時間，不會因同次順劈擊中 5 人就讓 5 人都電擊。
+
+- **例外**：沒有額外觸發冷卻；各敵人是否能被持續控住，仍取決於敵人自身的抗性。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_melee_crits_electrocute_first.md) · [返回目錄](#talent-index)
 
 ---
 

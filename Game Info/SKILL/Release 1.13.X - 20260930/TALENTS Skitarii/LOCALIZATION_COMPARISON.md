@@ -20,6 +20,7 @@
 | [液壓衝擊](#cryptic_better_heavies) | 未見明確矛盾 |
 | [混合戰鬥契約](#cryptic_hybrid_damage) | 未見明確矛盾 |
 | [無限抑制器](#cryptic_melee_attacks_give_melee_attack_speed) | 未見明確矛盾 |
+| [電擊打擊導管](#cryptic_melee_crits_electrocute_first) | 未見明確矛盾 |
 | [槍械技師](#cryptic_auto_reload) | 未見明確矛盾 |
 | [系統電擊](#cryptic_electrocution_applies_brittleness) | 未見明確矛盾 |
 
@@ -108,6 +109,13 @@
 - 描述鍵：`loc_talent_cryptic_melee_attacks_give_melee_attack_speed_desc`；hash：`ff4edf3b`。
 - 結論：未見明確矛盾。雙語一致；補充每次揮擊一層與速率轉時間公式。
 - [原始碼推導與限制](cryptic_melee_attacks_give_melee_attack_speed.md)。
+
+<a id="cryptic_melee_crits_electrocute_first"></a>
+## 電擊打擊導管(Electro-Strike Conduit)
+
+- 描述鍵：`loc_talent_cryptic_melee_crits_electrocute_first_desc`；hash：`3fc35e67`。
+- 結論：未見明確矛盾。中英一致；補充首名目標存活條件及電擊期限。
+- [原始碼推導與限制](cryptic_melee_crits_electrocute_first.md)。
 
 <a id="cryptic_auto_reload"></a>
 ## 槍械技師(Gunsmith)
