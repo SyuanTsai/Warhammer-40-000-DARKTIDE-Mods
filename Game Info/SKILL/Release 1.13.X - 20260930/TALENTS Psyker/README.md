@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **81 個可選節點**，均為一點；同一配置最多分配 30 點。零點起始佔位 `not_selected` 不屬天賦效果，不列入 81 項。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36)。內部 tree version 26 不等於遊戲發行版號。
 
-完成 71／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 72／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -46,7 +46,7 @@
 | 鑰石 | [生物磁石](psyker_empowered_grenades_passive_improved.md) / `psyker_empowered_grenades_passive_improved` | `node_0bb80aeb-f367-4e65-bcb5-04e91aad3c23` | 完成（核心靜態機制） |
 | 鑰石 | [吸血閃電](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md) / `psyker_empowered_chain_lightnings_replenish_toughness_to_allies` | `node_8ff8fcfb-3f13-497f-9288-0afc05b5cb55` | 完成（核心靜態機制） |
 | 鑰石 | [吞靈強擊](psyker_empowered_ability_on_elite_kills.md) / `psyker_empowered_ability_on_elite_kills` | `node_a5fc8414-3a27-4c9b-833c-a5b6c1836a86` | 完成（核心靜態機制） |
-| 鑰石 | [完美主義](psyker_mark_increased_max_stacks.md) / `psyker_mark_increased_max_stacks` | `node_31fbc1eb-b397-449d-adb8-f5c9adb5d883` | 已定位；機制待核對 |
+| 鑰石 | [完美主義](psyker_mark_increased_max_stacks.md) / `psyker_mark_increased_max_stacks` | `node_31fbc1eb-b397-449d-adb8-f5c9adb5d883` | 完成（核心靜態機制） |
 | 鑰石 | [盜竊天命](psyker_mark_kills_can_vent.md) / `psyker_mark_kills_can_vent` | `node_4941c66a-d4ff-4dca-917f-a6bbf2bbdbfc` | 已定位；機制待核對 |
 | 鑰石 | [持久影響](psyker_mark_increased_duration.md) / `psyker_mark_increased_duration` | `node_0ee8a9f7-a62a-4bd7-996e-050a9f445d10` | 已定位；機制待核對 |
 | 鑰石 | [充能完畢](psyker_empowered_grenades_increased_max_stacks.md) / `psyker_empowered_grenades_increased_max_stacks` | `node_56a1da66-78b5-4f11-8b20-967dc92650da` | 已定位；機制待核對 |
