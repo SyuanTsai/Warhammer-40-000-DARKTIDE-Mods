@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/0849a882-e966-43d8-8786-554a7a657ee2" width="32" height="32" alt="恢復信仰天賦圖示"> [恢復信仰](#zealot_heal_part_of_damage_taken)<br>- Restoring Faith | <ul><li>生命受傷後，逐步恢復該次傷害的 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ba989f49-6c6c-4457-bc33-f09ab8342c1f" width="32" height="32" alt="為了帝皇天賦圖示"> [為了帝皇](#zealot_reduced_damage_on_wound)<br>- Bleed for the Emperor | <ul><li>單次生命傷害若會跨過下一個傷口分界，該次生命傷害降低 40%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/eb0f681c-574a-447c-b917-9413f146fd72" width="32" height="32" alt="惡毒贈禮天賦圖示"> [惡毒贈禮](#zealot_toughness_on_heavy_kills)<br>- Vicious Offering | <ul><li>重擊擊殺敵人時，額外恢復 10% 最大韌性。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/f86258bf-77ad-44c3-99b0-628042e47315" width="32" height="32" alt="韌性減傷天賦圖示"> [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1)<br>- Toughness Damage Reduction | <ul><li>韌性受到的傷害降低 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -177,6 +178,19 @@
 - 原文寫「重攻擊命中後恢復」，但需要重擊「擊殺」敵人才會恢復；單純命中不會觸發。
 
 [詳細資料](TALENTS%20Zealot/zealot_toughness_on_heavy_kills.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="base_toughness_damage_reduction_node_buff_medium_1"></a>
+### 韌性減傷(Toughness Damage Reduction)
+
+<img src="https://github.com/user-attachments/assets/f86258bf-77ad-44c3-99b0-628042e47315" width="72" height="72" alt="韌性減傷天賦圖示">
+
+- **運作方式**：韌性受到的傷害降低 10%。
+
+- **減傷算例**：沒有其他加成時，100 × (1 − 10%) = 90 點韌性傷害。若已有同一加算階段的 20% 韌性減傷，則為 100 × (1 − 20% − 10%) = 70 點；獨立乘算的減傷效果另行相乘。
+
+[詳細資料](TALENTS%20Zealot/base_toughness_damage_reduction_node_buff_medium_1.md) · [返回目錄](#talent-index)
 
 ---
 
