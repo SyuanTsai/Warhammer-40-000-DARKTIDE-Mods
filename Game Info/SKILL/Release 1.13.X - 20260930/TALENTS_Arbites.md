@@ -36,7 +36,7 @@
 | <img src="https://github.com/user-attachments/assets/7b782337-07db-4ff4-9a85-ba21d1fcfe6b" width="32" height="32" alt="能屈能伸天賦圖示"> [能屈能伸](#adamant_terminus_warrant_cdr)<br>- Obstinate | <ul><li>只有消耗滿層數（基礎 20 層）才會啟動冷卻恢復 效果。</li><li>效果 維持 12 秒，每秒恢復 0.33 秒的戰鬥技能資源；名目上最多回復 3.96 秒，並受剩餘冷卻上限限制。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/053a0db6-481b-4944-9077-d1d9a05759dd" width="32" height="32" alt="終端律令天賦圖示"> [終端律令](#adamant_terminus_warrant_support)<br>- Terminal Decree | <ul><li>每次消耗 終點站令狀 層數時，按實際消耗層數恢復自身與協同範圍內隊友韌性。</li><li>每層恢復最大韌性的 1%；基礎上限 20 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="32" height="32" alt="效率殺手天賦圖示"> [效率殺手](#adamant_execution_order_crit)<br>- Efficient Killer | <ul><li>擊殺被標記敵人時，獲得 8 秒爆擊機率與爆擊傷害加成。</li><li>加成為 +10 個百分點爆擊機率與 +25% 額外爆擊傷害。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="32" height="32" alt="生化武器關天賦圖示"> [生化武器關](#adamant_execution_order_cdr)<br>- Malocator | <ul><li>擊殺被標記敵人後，建立 8 秒戰鬥技能資源恢復效果。</li><li>每秒恢復 0.5 秒能力資源，名目上最多約 4 秒，受剩餘冷卻上限限制。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="32" height="32" alt="生化武器關天賦圖示"> [生化武器關](#adamant_execution_order_cdr)<br>- Malocator | <ul><li>你或自己的電子獒犬擊殺標記目標後，8 秒內每秒額外恢復 0.5 秒戰鬥技能冷卻。</li><li>再次觸發刷新時間；名目額外恢復總量為 4 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/ab53bec8-fd00-470c-8c5d-46cc58904f13" width="32" height="32" alt="罪不可赦天賦圖示"> [罪不可赦](#adamant_execution_order_rending)<br>- No Lenience | <ul><li>擊殺被標記敵人後，獲得 8 秒撕裂加成。</li><li>撕裂修正為 +10%，進入共用護甲傷害計算。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/eeb40551-fbea-4de0-8e46-0a07e4bfcec6" width="32" height="32" alt="殺戮協議天賦圖示"> [殺戮協議](#adamant_execution_order_permastack)<br>- Keeping Protocol | <ul><li>每次擊殺被標記敵人，永久增加對怪獸的傷害與防禦，最多 30 層。</li><li>每層增加 1% 對怪獸傷害；怪獸打你的傷害逐層相乘降低。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/0633a2b7-e8e9-4215-85a9-f54ae4d95809" width="32" height="32" alt="不落人後天賦圖示"> [不落人後](#adamant_pinning_dog_bonus_moving_towards)<br>- Not Far Behind | <ul><li>每當電子獒犬發動猛撲，玩家取得 5 秒移動速度與傷害加成。</li><li>兩項加成各為 10%；再次觸發會刷新單層效果時間。</li></ul> | 鑰石 |
@@ -571,9 +571,9 @@
 
 <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="72" height="72" alt="生化武器關天賦圖示">
 
-- **觸發與持續**：擊殺被標記敵人會建立 8 秒冷卻恢復效果。
+- **觸發與持續**：你或自己的電子獒犬擊殺標記目標，獲得 8 秒額外冷卻恢復。
 
-- **冷卻算例**：效果持續 8 秒，每秒額外恢復 0.5 秒戰鬥技能冷卻，名目總量為 8 × 0.5 = 4 秒；仍有正常冷卻倒數，並以尚未恢復的部分為限。這不是立刻扣除剩餘冷卻的 50%。再次觸發刷新時間，不加快每秒返還量。
+- **冷卻算例**：每秒額外恢復 0.5 秒，8 秒名目總量為 4 秒。若開始時還需冷卻 20 秒，經過 8 秒並收到 8 次恢復，剩餘為 20 − 8 − 8 × 0.5 = 8 秒。實際以未恢復的冷卻為限；到期更新順序可能少一次恢復。再次觸發只刷新時間，不加快恢復速度。
 
 [詳細資料](TALENTS%20Arbites/adamant_execution_order_cdr.md) · [返回目錄](#talent-index)
 
