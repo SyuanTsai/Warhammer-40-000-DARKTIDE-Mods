@@ -4,6 +4,8 @@
 
 - [老兵完整天賦說明](TALENTS_Veteran.md)
 - [靈能者完整天賦說明](TALENTS_Psyker.md)
+- [狂信徒完整天賦說明](TALENTS_Zealot.md)
+- [狂信徒來源、公式與技術索引](TALENTS%20Zealot/README.md)
 - [靈能者來源、公式與技術索引](TALENTS%20Psyker/README.md)
 - [角色基礎效果](TALENTS%20Veteran/BASE_EFFECTS.md)
 - [逐項原始碼、公式與待確認事項](TALENTS%20Veteran/README.md)
@@ -57,6 +59,25 @@
 - 所有機制以固定公開 SHA 為證據。文字 Build 與公開來源尚未核成同版；尚未遊戲內測試。優先實測項目：動能撕裂者的高反噬限制、平息速度顯示值、擾動命運的選敵與遠程閃避宣告、靈能強化的蓄力顯示值，以及涅槃的尾刀條件。
 - 81 張 288×288 WebP 圖示保存於 [Media-Assets Issue #7](https://github.com/SyuanTsai/Media-Assets/issues/7)，主頁目錄 32×32、內文 72×72。附件已逐張以公開讀取比對位元組大小與 SHA-256；來源、取得日期與附件網址寫在各來源子文件。Games Lantern 只用於取得圖示。
 - 圖檔未提交 Git。遊戲完整擷取文字仍保留本機 `Extracted Text`，由 ignore 排除；未修改 MOD Lua 或遊戲原始碼。名稱沿用翻譯表，不以此宣稱是官方譯名。
+
+## 狂信徒完成範圍
+
+| 分類 | 完成／當前節點 |
+|---|---|
+| 閃擊 | 3／3 |
+| 光環 | 3／3 |
+| 能力與升級 | 13／13 |
+| 鑰石與升級 | 18／18 |
+| 技能（含 3 個屬性節點） | 45／45 |
+| 合計 | **82／82** |
+
+- 沿用老兵的檔名、目錄三欄、圖示尺寸、條列式效果與算例、逐技能來源子文件及四份附錄。82 個可選節點與 4 項基礎效果均已各自建立本機提交；目錄只呈現玩家需要的效果。
+- [4 項基礎效果](TALENTS%20Zealot/BASE_EFFECTS.md)另列，不混入 82 個可選節點；[47 項未直接使用的定義](TALENTS%20Zealot/UNUSED_DEFINITIONS.md)區分 2 項仍被現行技能引用的底層效果、1 項只重用名稱，以及 44 項未找到目前入口掛載的定義。
+- [原文比較](TALENTS%20Zealot/LOCALIZATION_COMPARISON.md)有 81 項同鍵／hash 的繁中與英文配對。8 項明確誤譯列在技能下；7 項待核；66 項未見明確矛盾。神聖事業的原始描述鍵無法精確命中，不拿相近文字代替。
+- [82 項百分比盤點](TALENTS%20Zealot/DAMAGE_PERCENTAGE_REVIEW.md)保留傷害、回復、充能與速度算例，區分同階段加算、獨立倍率、最大韌性與缺額、靈巧額外傷害，以及依序回復的雙充能。
+- 82 張圖示只保存在 [Media-Assets Issue #8](https://github.com/SyuanTsai/Media-Assets/issues/8) 附件；原圖與公開附件已逐張核對位元組及 SHA-256。圖片未加入 Git，擷取文本仍在本機忽略目錄。
+- 新增 7 個詞表名稱並保留待確認狀態；未修改既有名稱或 MOD Lua。未指定舊版，不執行版本差異比較；本機文字 Build 與公開來源尚未核成同版，未進行遊戲內測試。
+- 優先待核：基礎與強化衝鋒共用攻速效果、合唱的顯示回復值與多段回復時序、輕蔑之盾的作用距離、近身回復對大型敵人的計數、共享狂怒的到期刷新，以及熱忱與大師級隱身的帶符號措辭。
 
 ## 老兵證據與驗證限制
 
@@ -298,3 +319,101 @@
 | `psyker_aura_ability_cooldown` | `a8eae6068280f220a29410ed4a2911caf7769171` |
 | `psyker_grenade_smite` | `8e214437ea00a8e7e30655994db274ba2710f3c8` |
 | `psyker_combat_ability_shout` | `9673f92ba66106990f7b9a84966f49a04e538ba7` |
+
+## 狂信徒本機提交
+
+分支維持 `Feature/Skill-Reverse-engineering`；本次起點為 `d76df73f57d0e8a61eea014d0993e69f747cfdbf`。下表記錄每項首次完成的提交；後續文案修正保留在原分支的追加提交中，未改寫歷史。
+
+| 分類 | 技能／talent ID | 首次完成 commit |
+|---|---|---|
+| 閃擊 | [獻祭手雷](TALENTS%20Zealot/zealot_flame_grenade.md) / `zealot_flame_grenade` | `f16ab368f57235b1c3366c2fc0a198c523851e5c` |
+| 閃擊 | [信仰之刃](TALENTS%20Zealot/zealot_throwing_knives.md) / `zealot_throwing_knives` | `86bbd1cace9103a82932d25285f76649730f081c` |
+| 閃擊 | [眩暈風暴手雷](TALENTS%20Zealot/zealot_improved_stun_grenade.md) / `zealot_improved_stun_grenade` | `85a04f18235002c17ada9795c2082d1584d5f9f4` |
+| 光環 | [恩賜](TALENTS%20Zealot/zealot_toughness_damage_reduction_coherency_improved.md) / `zealot_toughness_damage_reduction_coherency_improved` | `86b06125f313dcf54d4263981036288d31a53940` |
+| 光環 | [純潔信標](TALENTS%20Zealot/zealot_corruption_healing_coherency_improved.md) / `zealot_corruption_healing_coherency_improved` | `38ba7d30f849401496e3405e7c6b9252cf5ca426` |
+| 光環 | [熱忱](TALENTS%20Zealot/zealot_stamina_cost_multiplier_aura.md) / `zealot_stamina_cost_multiplier_aura` | `25f4033cae599f95d33b90ff404eb1fb4fa3adeb` |
+| 能力 | [不屈靈魂合唱](TALENTS%20Zealot/zealot_bolstering_prayer.md) / `zealot_bolstering_prayer` | `32f53c6ce5076f47f19289459a99f666398d8ddf` |
+| 能力 | [有信者之怒](TALENTS%20Zealot/zealot_attack_speed_post_ability.md) / `zealot_attack_speed_post_ability` | `ef8a5ee0d9d86ba62340fb45eae5590d327f412b` |
+| 能力 | [神聖事業](TALENTS%20Zealot/zealot_channel_grants_toughness_damage_reduction.md) / `zealot_channel_grants_toughness_damage_reduction` | `19166851cb2ef06fbf647673b029508504e23832` |
+| 能力 | [教宗之喚](TALENTS%20Zealot/zealot_channel_grants_damage.md) / `zealot_channel_grants_damage` | `e2b1bbee422a14377202b9dc4ed2f193f740f2d7` |
+| 能力 | [倍增狂熱](TALENTS%20Zealot/zealot_additional_charge_of_ability.md) / `zealot_additional_charge_of_ability` | `2b9aeccf6bc9f25a192fbfb1c943207389082acc` |
+| 能力 | [隱秘領域](TALENTS%20Zealot/zealot_stealth.md) / `zealot_stealth` | `bbb890fdab0c6b648f31689eac90d04e44b3e3f9` |
+| 能力 | [大師級隱秘領域](TALENTS%20Zealot/zealot_increased_duration.md) / `zealot_increased_duration` | `229199b3a96fba179379278aead6b546a5b22f0b` |
+| 能力 | [振奮啟示](TALENTS%20Zealot/zealot_leaving_stealth_restores_toughness.md) / `zealot_leaving_stealth_restores_toughness` | `afb6bd960b19732d877903a23d8b08c18411ee8f` |
+| 能力 | [殉道者之願](TALENTS%20Zealot/zealot_restore_stealth_cd_on_damage.md) / `zealot_restore_stealth_cd_on_damage` | `599800d1ef8ab53150f485f616a5e402a8e2df10` |
+| 能力 | [虔誠刺客](TALENTS%20Zealot/zealot_backstab_kills_restore_cd.md) / `zealot_backstab_kills_restore_cd` | `5e5ac72439ae90c153710a753fc3d116fd55b0ad` |
+| 能力 | [死亡禱文](TALENTS%20Zealot/zealot_crits_grant_cd.md) / `zealot_crits_grant_cd` | `527e3d14f72ad95b45c69b66a3efd51c2fcd6464` |
+| 能力 | [無盡狂怒](TALENTS%20Zealot/zealot_fotf_refund_cooldown.md) / `zealot_fotf_refund_cooldown` | `6934dca693d420bb3a6dec5f0a44f61a0d65a6f8` |
+| 能力 | [完美主義者](TALENTS%20Zealot/zealot_stealth_cooldown_regeneration.md) / `zealot_stealth_cooldown_regeneration` | `cbc9ac784f86b2a101fa9f64030b996754b8f601` |
+| 鑰石 | [死戰到底](TALENTS%20Zealot/zealot_resist_death.md) / `zealot_resist_death` | `7dce859ec263af5feb4c5ede560bbeef72d466c2` |
+| 鑰石 | [殉道](TALENTS%20Zealot/zealot_martyrdom.md) / `zealot_martyrdom` | `93b6999647270a952e1f2e11b1cf4d06fd39b835` |
+| 鑰石 | [不滅意志](TALENTS%20Zealot/zealot_martyrdom_grants_toughness.md) / `zealot_martyrdom_grants_toughness` | `16a6512655ae8fc405085780c598ddf4cafa2a09` |
+| 鑰石 | [狂燥之心](TALENTS%20Zealot/zealot_martyrdom_grants_attack_speed.md) / `zealot_martyrdom_grants_attack_speed` | `616d0fe2f466cbc0fdbc55cd81508f776021b125` |
+| 鑰石 | [命定審判](TALENTS%20Zealot/zealot_quickness_passive.md) / `zealot_quickness_passive` | `7a6333038175e4a5e8262bc23c1ccab3b49ad7e3` |
+| 鑰石 | [懲戒者姿態](TALENTS%20Zealot/zealot_momentum_toughness_replenish.md) / `zealot_momentum_toughness_replenish` | `0070d89a7d14dd983aef1f05518afbfd682141f6` |
+| 鑰石 | [飄忽身形](TALENTS%20Zealot/zealot_quickness_passive_dodge_stacks.md) / `zealot_quickness_passive_dodge_stacks` | `50f59c62b829c1e1c07a6a2eae801b99941e46a2` |
+| 鑰石 | [吊命聖徒](TALENTS%20Zealot/zealot_resist_death_heal.md) / `zealot_resist_death_heal` | `8fe3b414b4e41a1974e251266ba22327188415b7` |
+| 鑰石 | [熾熱虔誠](TALENTS%20Zealot/zealot_fanatic_rage.md) / `zealot_fanatic_rage` | `d2cc0cb1b2971157e8426f672b1c03eaf02ac854` |
+| 鑰石 | [死忠](TALENTS%20Zealot/zealot_fanatic_rage_toughness_on_max.md) / `zealot_fanatic_rage_toughness_on_max` | `1d52bd31d7c70fd01fd7083cd335694cf974b291` |
+| 鑰石 | [正義勇士](TALENTS%20Zealot/zealot_fanatic_rage_improved.md) / `zealot_fanatic_rage_improved` | `765d97521141ceef6964b71274dcd5945e8b1aae` |
+| 鑰石 | [迅疾狂熱](TALENTS%20Zealot/zealot_shared_fanatic_rage.md) / `zealot_shared_fanatic_rage` | `7f20259f8e2a0ce0acf89ee6029a8cb87e357be6` |
+| 鑰石 | [治癒詩頌](TALENTS%20Zealot/zealot_martyrdom_toughness_modifier.md) / `zealot_martyrdom_toughness_modifier` | `adb9e38e089397db4da9111e60b7faf639ddd989` |
+| 鑰石 | [永恆](TALENTS%20Zealot/zealot_quickness_increased_duration.md) / `zealot_quickness_increased_duration` | `aaa83b577e937b976de4a29d3ce2d6094e7f1f70` |
+| 鑰石 | [危境之際](TALENTS%20Zealot/zealot_corruption_resistance_stacking.md) / `zealot_corruption_resistance_stacking` | `e954856897a6585ca92da99dbc0eb39b09c6d959` |
+| 鑰石 | [狂熱朝聖者](TALENTS%20Zealot/zealot_resist_death_ability.md) / `zealot_resist_death_ability` | `5bd101de91b377287554ebb643e3f1a2f8f6eb07` |
+| 鑰石 | [烈焰與怒火](TALENTS%20Zealot/zealot_resist_death_fire.md) / `zealot_resist_death_fire` | `f45ab63a4c9591fe241607aca3bf0553a9c404cb` |
+| 鑰石 | [復活](TALENTS%20Zealot/zealot_resist_death_golden_toughness.md) / `zealot_resist_death_golden_toughness` | `5aadaa2b9fca324cbf37beb5a556fbcc7f064938` |
+| 技能 | [天災](TALENTS%20Zealot/zealot_crits_apply_bleed.md) / `zealot_crits_apply_bleed` | `575126b6f56cb94157ebd8d12d94fd9514f69a60` |
+| 技能 | [背刺者](TALENTS%20Zealot/zealot_backstab_damage.md) / `zealot_backstab_damage` | `a09fa6246ca11c11d393a87c12e1977e7ee523b5` |
+| 技能 | [蔑視](TALENTS%20Zealot/zealot_multi_hits_increase_damage.md) / `zealot_multi_hits_increase_damage` | `e8ba7ee2babb756ed41f048127e945f7f7b8f6e1` |
+| 技能 | [淨化不潔](TALENTS%20Zealot/zealot_increased_damage_vs_resilient.md) / `zealot_increased_damage_vs_resilient` | `b7d996cf003815d3bb6c1ee8479ec8962df796ab` |
+| 技能 | [持續突擊](TALENTS%20Zealot/zealot_hits_grant_stacking_damage.md) / `zealot_hits_grant_stacking_damage` | `c2f09d8a9f9f5ae87178d7985a7acaf122f165f1` |
+| 技能 | [堅韌信仰](TALENTS%20Zealot/zealot_crits_reduce_toughness_damage.md) / `zealot_crits_reduce_toughness_damage` | `a213f8048f8c540a25c7e95bb97549069840ed4b` |
+| 技能 | [精力復甦](TALENTS%20Zealot/zealot_toughness_on_dodge.md) / `zealot_toughness_on_dodge` | `884ed6849fe2b04ca131200f6661976b87b2199e` |
+| 技能 | [近戰增幅](TALENTS%20Zealot/base_melee_damage_node_buff_medium_1.md) / `base_melee_damage_node_buff_medium_1` | `42ff7a4377bb8a176b681292bfb3c7d5f98cb0d0` |
+| 技能 | [泰拉之音](TALENTS%20Zealot/zealot_toughness_while_shooting.md) / `zealot_toughness_while_shooting` | `9e68222864a4940ac7bb9bd4e9f4c13e8781ba80` |
+| 技能 | [恢復信仰](TALENTS%20Zealot/zealot_heal_part_of_damage_taken.md) / `zealot_heal_part_of_damage_taken` | `071fac600b1bfc37b883c248f00c6c2dd26e77f8` |
+| 技能 | [為了帝皇](TALENTS%20Zealot/zealot_reduced_damage_on_wound.md) / `zealot_reduced_damage_on_wound` | `ccb7d1aa0d3b6f95e85ebecb85001c7b40405138` |
+| 技能 | [惡毒贈禮](TALENTS%20Zealot/zealot_toughness_on_heavy_kills.md) / `zealot_toughness_on_heavy_kills` | `5667c2991feecffcd60cdaff689e6f0e9f438f94` |
+| 技能 | [韌性減傷](TALENTS%20Zealot/base_toughness_damage_reduction_node_buff_medium_1.md) / `base_toughness_damage_reduction_node_buff_medium_1` | `3112935eb502314ef1e99220f700fdf92da5e27d` |
+| 技能 | [決鬥者](TALENTS%20Zealot/zealot_increased_crit_and_weakspot_damage_after_dodge.md) / `zealot_increased_crit_and_weakspot_damage_after_dodge` | `b117d0ac425571dd3fea365fddc10174783654c6` |
+| 技能 | [輕蔑之盾](TALENTS%20Zealot/zealot_ally_damage_taken_reduced.md) / `zealot_ally_damage_taken_reduced` | `031aa2f152be88440befb707fad89a3772b6a8ac` |
+| 技能 | [褻瀆必懲](TALENTS%20Zealot/zealot_push_attacks_attack_speed.md) / `zealot_push_attacks_attack_speed` | `cc2b62431a7292a14ceb901ccd6f7169f29243d8` |
+| 技能 | [勃然大怒](TALENTS%20Zealot/zealot_damage_boosts_movement.md) / `zealot_damage_boosts_movement` | `a43e413c277ff37bcb047825581eb426bcebec02` |
+| 技能 | [反制護盾](TALENTS%20Zealot/zealot_stamina_on_block_break.md) / `zealot_stamina_on_block_break` | `4c44bae76960fe9550566450ce5912ee5248ba6f` |
+| 技能 | [四平八穩](TALENTS%20Zealot/zealot_reduced_damage_after_dodge.md) / `zealot_reduced_damage_after_dodge` | `b2571934949141d2dbd2196bb63067621b82a851` |
+| 技能 | [內憂外患](TALENTS%20Zealot/zealot_toughness_in_melee.md) / `zealot_toughness_in_melee` | `7574a3cd4a948f99205612b569ad0ea8d576b72c` |
+| 技能 | [信仰狂亂](TALENTS%20Zealot/zealot_attack_speed.md) / `zealot_attack_speed` | `55e344f64797071c12c8d9046058368bc291c055` |
+| 技能 | [信仰之勇](TALENTS%20Zealot/zealot_additional_wounds.md) / `zealot_additional_wounds` | `6ddab0b5ea70714d6bf98bb6b92d84a1c4a9c87a` |
+| 技能 | [鮮血受膏](TALENTS%20Zealot/zealot_increase_ranged_close_damage.md) / `zealot_increase_ranged_close_damage` | `7e0b498d521399f3df18e3e4c6c5427966cee1ee` |
+| 技能 | [不屈之志](TALENTS%20Zealot/zealot_uninterruptible_no_slow_heavies.md) / `zealot_uninterruptible_no_slow_heavies` | `f4813686123031b4f286702bd19c6f08dc1b500d` |
+| 技能 | [靈活還擊](TALENTS%20Zealot/zealot_stacking_melee_damage_after_dodge.md) / `zealot_stacking_melee_damage_after_dodge` | `81adb26277c52e257dc1cb2c5dfccc2b07144616` |
+| 技能 | [狂熱不懈](TALENTS%20Zealot/zealot_sprint_improvements.md) / `zealot_sprint_improvements` | `da4842f546d1aea1244ed15aebdee978b538ef77` |
+| 技能 | [無形之刃](TALENTS%20Zealot/zealot_damage_vs_nonthreat.md) / `zealot_damage_vs_nonthreat` | `67c39eab92327722a54949e585551ff0b2b89fdf` |
+| 技能 | [大師的反擊](TALENTS%20Zealot/zealot_defensive_knockback.md) / `zealot_defensive_knockback` | `845b3c717754f990af50756def506bf973a2e5df` |
+| 技能 | [血色迷障](TALENTS%20Zealot/zealot_bled_enemies_take_more_damage.md) / `zealot_bled_enemies_take_more_damage` | `9a92659eefdff2c5d13c23855b045e298fc7d085` |
+| 技能 | [背水一戰](TALENTS%20Zealot/zealot_more_damage_when_low_on_stamina.md) / `zealot_more_damage_when_low_on_stamina` | `f2fd564bc25c92149bcd265dcff5754f54f99352` |
+| 技能 | [刻不容緩](TALENTS%20Zealot/zealot_melee_crits_restore_stamina.md) / `zealot_melee_crits_restore_stamina` | `f79a5507caf2dcf934142e8ab606e66503e719e2` |
+| 技能 | [神恩庇護](TALENTS%20Zealot/zealot_revive_speed.md) / `zealot_revive_speed` | `e98fa1f47e235f43310de9f3f01bb146215f6a3c` |
+| 技能 | [弒除瀆者](TALENTS%20Zealot/zealot_damage_vs_elites.md) / `zealot_damage_vs_elites` | `c3db3aa1179c8d8b1f72893f5dacf6f4d77965e6` |
+| 技能 | [傲慢](TALENTS%20Zealot/zealot_weakspot_damage_reduction.md) / `zealot_weakspot_damage_reduction` | `d6a8d7e97bc25089b496b2c6a4289ca94f2cad0b` |
+| 技能 | [近戰增幅](TALENTS%20Zealot/base_melee_damage_node_buff_medium_4.md) / `base_melee_damage_node_buff_medium_4` | `d3b8fe1629615a7b055a1ad196d3f57b1ef3fd92` |
+| 技能 | [頭號目標](TALENTS%20Zealot/zealot_elite_kills_empowers.md) / `zealot_elite_kills_empowers` | `c76d02ecbe970b7e2ca718061144abce05e091b6` |
+| 技能 | [敵後行動](TALENTS%20Zealot/zealot_suppress_on_backstab_kill.md) / `zealot_suppress_on_backstab_kill` | `0ef6d0fe5bc209ebd99790684f9534bda4ff900b` |
+| 技能 | [殺戮時刻](TALENTS%20Zealot/zealot_backstab_periodic_damage.md) / `zealot_backstab_periodic_damage` | `972a47245d4b9fad1cdf221de1e2891ff67eab28` |
+| 技能 | [逆境而上](TALENTS%20Zealot/zealot_offensive_vs_many.md) / `zealot_offensive_vs_many` | `b13403169104521326f3084590d0889ff8b6ab70` |
+| 技能 | [自掏腰包](TALENTS%20Zealot/zealot_reload_from_melee.md) / `zealot_reload_from_melee` | `83847a00d22ffeb75c6999040ace3850e99db8ee` |
+| 技能 | [排隊等候](TALENTS%20Zealot/zealot_reduced_damage_from_ranged.md) / `zealot_reduced_damage_from_ranged` | `55289d7756ca49db760fa971b43f2c441bd634e8` |
+| 技能 | [神聖工具](TALENTS%20Zealot/zealot_weapon_special_damage.md) / `zealot_weapon_special_damage` | `e634366287754496046d9a339f0d42af5c8325a3` |
+| 技能 | [為您撐腰](TALENTS%20Zealot/zealot_melee_kills_restore_toughness_to_target.md) / `zealot_melee_kills_restore_toughness_to_target` | `072a8389be99dd5dfe68ea7a0e1480b9417e64b0` |
+| 技能 | [淨化仇恨](TALENTS%20Zealot/zealot_dmg_vs_burning_electrocuted.md) / `zealot_dmg_vs_burning_electrocuted` | `35b37db8fe8202859e251e5c739bfc323c7f631c` |
+| 技能 | [死亡之舞](TALENTS%20Zealot/zealot_improved_weapon_handling_after_dodge.md) / `zealot_improved_weapon_handling_after_dodge` | `7ad1bb3e473f4335798799c465b902fcad6ce79d` |
+
+### 狂信徒基礎效果提交
+
+| talent ID | 提交 |
+|---|---|
+| `zealot_dash` | `b6508221e3aa44f15afbf45e00c8f66068f54739` |
+| `zealot_shock_grenade` | `f5a5f7d4c7a08f72bf1eb4d8764f0e64248396c1` |
+| `zealot_toughness_damage_coherency` | `4da24e8b1fc229775547da03d8831f43a71076d1` |
+| `zealot_more_toughness_on_melee` | `957d5da7321b55662150f07885bc0fcd36b0996b` |
