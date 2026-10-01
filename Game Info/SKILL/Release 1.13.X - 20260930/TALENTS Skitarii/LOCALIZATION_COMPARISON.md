@@ -10,6 +10,7 @@
 |---|---|
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
+| [熵能轉移](#cryptic_electrocution_toughness) | 未見明確矛盾 |
 | [過載轉移晶格](#cryptic_electrocution_defense) | 未見明確矛盾 |
 | [報應導管](#cryptic_damage_vs_electrocuted_scaling_on_charge) | 未見明確矛盾 |
 | [絕境中繼](#cryptic_crit_chance_based_on_charge) | 未見明確矛盾 |
@@ -31,6 +32,13 @@
 - 描述鍵：`loc_talent_cryptic_dr_on_toughness_break_desc`；hash：`05a4e1a1`。
 - 結論：待同版核對。中英都把15秒寫成觸發間隔，但固定來源採5秒效果後加15秒冷卻。屬雙語文字與來源實作差異，尚未確認同版，不能定為繁中誤譯。
 - [原始碼推導與限制](cryptic_dr_on_toughness_break.md)。
+
+<a id="cryptic_electrocution_toughness"></a>
+## 熵能轉移(Entropic Transfer)
+
+- 描述鍵：`loc_talent_cryptic_electrocution_toughness_desc`；hash：`f4493647`。
+- 結論：未見明確矛盾。中英條件一致；新增與刷新電擊、持續恢復速率為補充。
+- [原始碼推導與限制](cryptic_electrocution_toughness.md)。
 
 <a id="cryptic_electrocution_defense"></a>
 ## 過載轉移晶格(Overcharge Transfer Lattice)

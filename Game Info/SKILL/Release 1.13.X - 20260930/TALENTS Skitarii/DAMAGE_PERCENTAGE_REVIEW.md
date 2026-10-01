@@ -8,6 +8,7 @@
 |---|---|
 | [能量載分配鏈路](cryptic_crits_grant_tdr.md) | 爆擊命中後，3 秒內恢復 7.5% 韌性；期間承受的韌性傷害降低 15%；完整計算與適用限制見來源文件。 |
 | [適應性戰鬥記憶體](cryptic_dr_on_toughness_break.md) | 韌性耗盡後，減少 30% 承受傷害、持續 5 秒；效果結束後冷卻 15 秒；完整計算與適用限制見來源文件。 |
+| [熵能轉移](cryptic_electrocution_toughness.md) | 施加或刷新電擊後，4 秒內恢復 12% 韌性；完整計算與適用限制見來源文件。 |
 | [過載轉移晶格](cryptic_electrocution_defense.md) | 遭近戰傷害時電擊攻擊者周圍 2.5 公尺敵人；冷卻 15 秒；完整計算與適用限制見來源文件。 |
 | [報應導管](cryptic_damage_vs_electrocuted_scaling_on_charge.md) | 對電擊目標提高 10% 傷害；每份完整電容量再增加 5%；完整計算與適用限制見來源文件。 |
 | [絕境中繼](cryptic_crit_chance_based_on_charge.md) | 爆擊率增加 6 個百分點；沒有完整電容量時提高至 10 個百分點；完整計算與適用限制見來源文件。 |
