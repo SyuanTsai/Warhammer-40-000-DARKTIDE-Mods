@@ -6,6 +6,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/4ae30922-3e39-4ded-8e19-35ec595befa0" width="32" height="32" alt="不屈靈魂合唱天賦圖示"> [不屈靈魂合唱](#zealot_bolstering_prayer)<br>- Chorus of Spiritual Fortitude | <ul><li>引導約 3.67 秒，開始時立即脈衝，之後每 0.8 秒一次；基礎冷卻 60 秒。</li><li>每次脈衝作用於本人與協同中的盟友，恢復韌性、提高暫時最大韌性，並賦予免死及眩暈免疫。</li><li>脈衝會踉蹌附近敵人；引導期間另持續恢復韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="死戰到底天賦圖示"> [死戰到底](#zealot_resist_death)<br>- Until Death | <ul><li>承受致命傷害時獲得 8 秒免死效果。</li><li>效果結束後冷卻 120 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="殉道天賦圖示"> [殉道](#zealot_martyrdom)<br>- Martyrdom | <ul><li>每失去一整格生命，近戰傷害增加 10%，最多 5 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="32" height="32" alt="不滅意志天賦圖示"> [不滅意志](#zealot_martyrdom_grants_toughness)<br>- I Shall Not Fall | <ul><li>殉道每缺少一格生命傷口，韌性承傷降低 7.5%，最多 5 格。</li></ul> | 鑰石 |
@@ -61,6 +62,30 @@
 | <img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="32" height="32" alt="為您撐腰天賦圖示"> [為您撐腰](#zealot_melee_kills_restore_toughness_to_target)<br>- Got Your Back | <ul><li>近戰擊殺正鎖定隊友的敵人，替隊友恢復 7.5% 最大韌性，自己額外恢復 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8137f892-5370-4a69-b790-556f579414d2" width="32" height="32" alt="淨化仇恨天賦圖示"> [淨化仇恨](#zealot_dmg_vs_burning_electrocuted)<br>- Purifying Hatred | <ul><li>對燃燒或遭電擊的敵人增加 15% 傷害；兩者同時成立可合計 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a007251f-9a21-4822-b2e4-38eac8e0ae56" width="32" height="32" alt="死亡之舞天賦圖示"> [死亡之舞](#zealot_improved_weapon_handling_after_dodge)<br>- Dance of Death | <ul><li>成功閃避後，散布降低 75%、後座累積降低 50%，持續 3 秒。</li></ul> | 技能 |
+
+---
+
+## 能力
+
+<a id="zealot_bolstering_prayer"></a>
+### 不屈靈魂合唱(Chorus of Spiritual Fortitude)
+
+<img src="https://github.com/user-attachments/assets/4ae30922-3e39-4ded-8e19-35ec595befa0" width="72" height="72" alt="不屈靈魂合唱天賦圖示">
+
+- **引導方式**：舉起聖物引導約 3.67 秒，開始時立即釋放脈衝，之後每 0.8 秒一次；完整引導約有 5 次脈衝，影響你與協同範圍內的隊友。
+
+- **韌性恢復**：每次脈衝恢復當時最大韌性的 20%；引導期間另外每秒恢復 25% 最大韌性。每次脈衝再增加 15 點最大韌性，最多 5 層、共 75 點，最後一次脈衝後持續 10 秒。
+
+- **恢復算例**：忽略脈衝間的持續恢復，最大韌性 100、目前 40，第一次脈衝先補 100 × 20% = 20 點，再增加 15 點上限及目前值，成為 75／115。之後每秒恢復量也按當時上限計算，例如上限 115 時為 115 × 25% = 28.75 點。
+
+- **保護與控場**：每次脈衝提供 1.5 秒免死與一般踉蹌免疫，並使附近可受影響的敵人踉蹌、受到壓制；免死不代表不會受傷。
+
+- **冷卻**：基礎冷卻 60 秒、1 次充能。持有聖物時暫停自然回充，收起後才開始恢復；提早中止會減少脈衝次數。
+
+[詳細資料](TALENTS%20Zealot/zealot_bolstering_prayer.md) · [返回目錄](#talent-index)
+
+---
+
 
 ---
 

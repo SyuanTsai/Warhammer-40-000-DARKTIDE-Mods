@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [不屈靈魂合唱](#zealot_bolstering_prayer) | 待同版核對 |
 | [死戰到底](#zealot_resist_death) | 未見明確矛盾 |
 | [殉道](#zealot_martyrdom) | 未見明確矛盾 |
 | [不滅意志](#zealot_martyrdom_grants_toughness) | 未見明確矛盾 |
@@ -63,6 +64,13 @@
 | [為您撐腰](#zealot_melee_kills_restore_toughness_to_target) | 未見明確矛盾 |
 | [淨化仇恨](#zealot_dmg_vs_burning_electrocuted) | 未見明確矛盾 |
 | [死亡之舞](#zealot_improved_weapon_handling_after_dodge) | 未見明確矛盾 |
+
+<a id="zealot_bolstering_prayer"></a>
+## 不屈靈魂合唱(Chorus of Spiritual Fortitude)
+
+- 描述鍵：`loc_talent_zealot_bolstering_prayer_expanded_description`；hash：`ae04279a`。
+- 結論：待同版核對。inventory 的 Build 25492122 未證明與固定公開 SHA 同版；固定 SHA 的 format_values 合計 45%，實際動作則分成 20% 每脈衝與 25%/秒，暫不把跨版或描述差異判為譯文錯誤。
+- [原始碼推導與限制](zealot_bolstering_prayer.md)。
 
 <a id="zealot_resist_death"></a>
 ## 死戰到底(Until Death)
