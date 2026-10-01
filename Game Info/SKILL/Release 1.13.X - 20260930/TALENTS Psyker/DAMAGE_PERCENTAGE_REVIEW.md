@@ -61,7 +61,7 @@
 | [惡意攻勢](psyker_kills_stack_other_weapon_damage.md) | 機制與公式待核對。 |
 | [亞空間強化](psyker_warp_charge_reduces_toughness_damage_taken.md) | 機制與公式待核對。 |
 | [看破](psyker_improved_dodge.md) | 機制與公式待核對。 |
-| [反射閃避](psyker_dodge_after_crits.md) | 機制與公式待核對。 |
+| [反射閃避](psyker_dodge_after_crits.md) | 爆擊命中後，1 秒內對遠程攻擊視為正在閃避。；完整計算與適用限制見來源文件。 |
 | [穩固](psyker_increased_vent_speed.md) | 機制與公式待核對。 |
 | [亞空間騎士](psyker_damage_based_on_warp_charge.md) | 依目前反噬提高傷害，最高增加 20%。；完整計算與適用限制見來源文件。 |
 | [精確瞄準](psyker_guaranteed_crit_on_multiple_weakspot_hits.md) | 機制與公式待核對。 |

@@ -63,7 +63,7 @@
 | [惡意攻勢](#psyker_kills_stack_other_weapon_damage) | 已配對；機制待核對 |
 | [亞空間強化](#psyker_warp_charge_reduces_toughness_damage_taken) | 已配對；機制待核對 |
 | [看破](#psyker_improved_dodge) | 已配對；機制待核對 |
-| [反射閃避](#psyker_dodge_after_crits) | 已配對；機制待核對 |
+| [反射閃避](#psyker_dodge_after_crits) | 未見明確矛盾 |
 | [穩固](#psyker_increased_vent_speed) | 已配對；機制待核對 |
 | [亞空間騎士](#psyker_damage_based_on_warp_charge) | 未見明確矛盾 |
 | [精確瞄準](#psyker_guaranteed_crit_on_multiple_weakspot_hits) | 已配對；機制待核對 |
@@ -479,7 +479,7 @@
 ## 反射閃避(Empathic Evasion)
 
 - 描述鍵：`loc_talent_psyker_dodge_after_crits_description`；hash：`654d056c`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_dodge_after_crits.md)。
 
 <a id="psyker_increased_vent_speed"></a>
