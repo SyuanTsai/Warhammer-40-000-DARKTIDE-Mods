@@ -13,6 +13,7 @@
 | [化學手榴彈](#broker_blitz_tox_grenade) | 未見明確矛盾 |
 | [精進神射手](#broker_aura_gunslinger_improved) | 未見明確矛盾 |
 | [惡棍](#broker_coherency_melee_damage) | 未見明確矛盾 |
+| [無政府主義者](#broker_coherency_anarchist) | 未見明確矛盾 |
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
 | [特提恩是迎賓](#broker_passive_first_target_damage) | 未見明確矛盾 |
 | [打你的臉](#broker_passive_close_ranged_damage) | 未見明確矛盾 |
@@ -95,6 +96,13 @@
 - 描述鍵：`loc_talent_broker_aura_ruffian_desc`；hash：`a241f5b9`。
 - 結論：未見明確矛盾。繁中與英文均為協同近戰增傷，未見矛盾。
 - [原始碼推導與限制](broker_coherency_melee_damage.md)。
+
+<a id="broker_coherency_anarchist"></a>
+## 無政府主義者(Anarchist)
+
+- 描述鍵：`loc_talent_broker_aura_anarchist_desc`；hash：`d1ab227e`。
+- 結論：未見明確矛盾。繁中與英文均為協同爆擊機率提升，未見矛盾。
+- [原始碼推導與限制](broker_coherency_anarchist.md)。
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)

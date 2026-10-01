@@ -11,6 +11,7 @@
 | <img src="https://github.com/user-attachments/assets/7d3c5999-8823-4b54-9204-6e22637bc851" width="32" height="32" alt="化學手榴彈天賦圖示"> [化學手榴彈](#broker_blitz_tox_grenade)<br>- Chem Grenade | <ul><li>投擲化學手榴彈，留下 15 秒毒區，最多攜帶 2 顆。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/3927d1d0-9e15-4b96-9a91-00f0503e338c" width="32" height="32" alt="精進神射手天賦圖示"> [精進神射手](#broker_aura_gunslinger_improved)<br>- Gunslinger Improved | <ul><li>協同中的成員拾取彈藥時，各成員額外取得相當於該補給 10% 的彈藥。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/7fc85ba0-f7e6-4aba-a966-638511f2c713" width="32" height="32" alt="惡棍天賦圖示"> [惡棍](#broker_coherency_melee_damage)<br>- Ruffian | <ul><li>你與協同中的隊友，近戰傷害增加 10%。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="32" height="32" alt="無政府主義者天賦圖示"> [無政府主義者](#broker_coherency_anarchist)<br>- Anarchist | <ul><li>你與協同中的隊友，爆擊機率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="特提恩是迎賓天賦圖示"> [特提恩是迎賓](#broker_passive_first_target_damage)<br>- A Tertium Welcome | <ul><li>每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="打你的臉天賦圖示"> [打你的臉](#broker_passive_close_ranged_damage)<br>- In Your Face | <ul><li>手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。</li></ul> | 技能 |
@@ -146,6 +147,19 @@
 - **傷害算例**：基礎 100 點近戰傷害變成 110；同階段另有 25% 時為 100 × (1 + 25% + 10%) = 135 點。
 
 [詳細資料](TALENTS%20Scum/broker_coherency_melee_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_coherency_anarchist"></a>
+### 無政府主義者(Anarchist)
+
+<img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="72" height="72" alt="無政府主義者天賦圖示">
+
+- **作用範圍**：你與協同中的隊友取得額外爆擊機率；同名光環不重複疊加。
+
+- **機率算例**：原本 10% 變成 10% + 5% = 15%，原本 25% 則變成 30%。
+
+[詳細資料](TALENTS%20Scum/broker_coherency_anarchist.md) · [返回目錄](#talent-index)
 
 ---
 
