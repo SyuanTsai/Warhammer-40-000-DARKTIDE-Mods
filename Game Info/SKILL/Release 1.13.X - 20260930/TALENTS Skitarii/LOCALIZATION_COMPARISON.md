@@ -10,6 +10,7 @@
 |---|---|
 | [電流弧](#cryptic_discharge_generates_arcs) | 未見明確矛盾 |
 | [電能驅動](#cryptic_discharge_attack_speed_increase) | 未見明確矛盾 |
+| [電流超載](#cryptic_discharge_toughness) | 未見明確矛盾 |
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
 | [閃避伺服恢復](#cryptic_successful_dodge_stamina) | 未見明確矛盾 |
@@ -74,6 +75,13 @@
 - 描述鍵：`loc_talent_cryptic_discharge_attack_speed_bonus_desc`；hash：`204600f6`。
 - 結論：未見明確矛盾。已逐項比對本機同一描述鍵的繁中與英文，觸發、作用方向及數值占位一致；主文補充實際分母、時間與限制，省略細節不列錯誤。
 - [原始碼推導與限制](cryptic_discharge_attack_speed_increase.md)。
+
+<a id="cryptic_discharge_toughness"></a>
+## 電流超載(Voltaic Overcharge)
+
+- 描述鍵：`loc_talent_cryptic_discharge_toughness_per_charge_desc`；hash：`c12213ad`。
+- 結論：未見明確矛盾。已逐項比對本機同一描述鍵的繁中與英文，觸發、作用方向及數值占位一致；主文補充實際分母、時間與限制，省略細節不列錯誤。
+- [原始碼推導與限制](cryptic_discharge_toughness.md)。
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
