@@ -50,6 +50,7 @@
 | <img src="https://github.com/user-attachments/assets/6f1ead13-0e28-4983-86e7-44478bd76cdc" width="32" height="32" alt="神佑興奮劑天賦圖示"> [神佑興奮劑](#broker_passive_stimm_cleanse_on_kill)<br>- Blessed Stimms | <ul><li>興奮劑生效時，每次擊殺清除最大生命 1% 的腐敗；每次用藥以 50% 為停止門檻。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5cb31261-7422-451a-9aac-d1c38b48c802" width="32" height="32" alt="巢都格鬥家天賦圖示"> [巢都格鬥家](#broker_passive_dr_damage_tradeoff_on_stamina)<br>- Hive City Brawler | <ul><li>耐力越滿，減傷越高；耐力越低，近戰增傷越高，兩者各最多 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/3247cd98-e623-4d24-a821-db3f3a6ee20a" width="32" height="32" alt="順手牽羊天賦圖示"> [順手牽羊](#broker_passive_low_ammo_regen)<br>- Pickpocket | <ul><li>備用彈藥低於 20% 時，近戰擊殺精英或專家會補到 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/6fa27fb0-2d79-43fc-b74a-d64da58773f6" width="32" height="32" alt="趁勝追擊天賦圖示"> [趁勝追擊](#broker_passive_cleave_on_cleave)<br>- Battering Momentum | <ul><li>單次近戰命中至少 3 名敵人，獲得 50% 額外順劈供下一次攻擊使用。</li></ul> | 技能 |
 
 ---
 
@@ -674,5 +675,20 @@
 - **補充算例**：備用上限 150，門檻為 ⌊150 × 20%⌋ = 30 發。目前 8 發時補 22 發到 30；已有 30 發則不觸發。上限 37 時，門檻取整為 7 發。
 
 [詳細資料](TALENTS%20Scum/broker_passive_low_ammo_regen.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_cleave_on_cleave"></a>
+### 趁勝追擊(Battering Momentum)
+
+<img src="https://github.com/user-attachments/assets/6fa27fb0-2d79-43fc-b74a-d64da58773f6" width="72" height="72" alt="趁勝追擊天賦圖示">
+
+- **觸發方式**：同次近戰攻擊命中第 3 名敵人時，取得 50% 傷害與踉蹌順劈加成。下一次攻擊開始命中時會消耗；若再次達到 3 名，可重新取得。
+
+- **順劈算例**：原本傷害順劈容量 10、踉蹌順劈容量 8，分別變成 10 × 1.5 = 15、8 × 1.5 = 12。實際命中人數仍取決於敵人質量與武器限制。
+
+- **持續限制**：沒有固定秒數倒數；此效果由後續命中消耗，不是持續提高所有攻擊的傷害。
+
+[詳細資料](TALENTS%20Scum/broker_passive_cleave_on_cleave.md) · [返回目錄](#talent-index)
 
 ---

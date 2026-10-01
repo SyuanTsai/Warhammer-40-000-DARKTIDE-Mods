@@ -52,6 +52,7 @@
 | [神佑興奮劑](#broker_passive_stimm_cleanse_on_kill) | 未見明確矛盾 |
 | [巢都格鬥家](#broker_passive_dr_damage_tradeoff_on_stamina) | 未見明確矛盾 |
 | [順手牽羊](#broker_passive_low_ammo_regen) | 未見明確矛盾 |
+| [趁勝追擊](#broker_passive_cleave_on_cleave) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -362,3 +363,10 @@
 - 描述鍵：`loc_talent_broker_passive_low_ammo_regen_desc_04`；hash：`aa6ac8e6`。
 - 結論：未見明確矛盾。兩語均為低於門檻才補到門檻，未見矛盾。
 - [原始碼推導與限制](broker_passive_low_ammo_regen.md)。
+
+<a id="broker_passive_cleave_on_cleave"></a>
+## 趁勝追擊(Battering Momentum)
+
+- 描述鍵：`loc_talent_broker_passive_cleave_on_cleave_desc`；hash：`04b9c8f2`。
+- 結論：未見明確矛盾。兩語均為一次命中至少3名後，下次攻擊增加順劈；消耗事件的細節為補充。
+- [原始碼推導與限制](broker_passive_cleave_on_cleave.md)。
