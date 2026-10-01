@@ -16,6 +16,7 @@
 | [針鋒相對](#adamant_charge_cooldown_reduction) | 未見明確矛盾 |
 | [交鋒](#adamant_charge_longer_distance) | 未見明確矛盾 |
 | [殺戮命令](#adamant_dog_damage_after_ability) | 未見明確矛盾 |
+| [處刑命令](#adamant_execution_order) | 待同版核對 |
 | [孤狼](#adamant_disable_companion) | 未見明確矛盾 |
 | [效率殺手](#adamant_execution_order_crit) | 未見明確矛盾 |
 | [生化武器關](#adamant_execution_order_cdr) | 未見明確矛盾 |
@@ -132,6 +133,13 @@
 - 描述鍵：`loc_talent_adamant_dog_damage_after_ability_desc`；hash：`9f9da5ce`。
 - 結論：未見明確矛盾。繁中「使用戰鬥技能後…傷害加成，持續…秒」對應英文「Damage for your Cyber Mastiff…after using your Combat Ability」；觸發、對象與時間一致。
 - [原始碼推導與限制](adamant_dog_damage_after_ability.md)。
+
+<a id="adamant_execution_order"></a>
+## 處刑命令(Execution Order)
+
+- 描述鍵：`loc_talent_execution_order_description`；hash：`720bc321`。
+- 結論：待同版核對。繁中「擊殺被標記的敵人會恢復…韌性」對應英文 “Killing a marked enemy replenishes… Toughness”；自身和戰犬 buff 文字也對應。兩種文字都稱攻擊標記敵人後提升戰犬傷害，但程式只檢查 initial_pounce，來源版本尚未核同版。
+- [原始碼推導與限制](adamant_execution_order.md)。
 
 <a id="adamant_disable_companion"></a>
 ## 孤狼(Lone Wolf)

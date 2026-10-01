@@ -14,6 +14,7 @@
 | <img src="https://github.com/user-attachments/assets/d2b1945d-2300-4993-a649-00c1e3858e0d" width="32" height="32" alt="針鋒相對天賦圖示"> [針鋒相對](#adamant_charge_cooldown_reduction)<br>- Targeted Brutality | <ul><li>衝鋒每次有效命中一般敵人返還 0.5 秒戰鬥技能冷卻；命中精英、專家或巨獸返還 1 秒。</li><li>單次衝鋒最多返還 5 秒冷卻。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="32" height="32" alt="交鋒天賦圖示"> [交鋒](#adamant_charge_longer_distance)<br>- Engage | <ul><li>衝鋒距離由基礎 3.75 公尺增加 3.75 公尺，目標距離上限成為 7.5 公尺。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="32" height="32" alt="殺戮命令天賦圖示"> [殺戮命令](#adamant_dog_damage_after_ability)<br>- Kill Order | <ul><li>使用戰鬥技能後，電子獒犬傷害提高 50%，持續 12 秒；效果生效時再次使用戰鬥技能可刷新。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="32" height="32" alt="處刑命令天賦圖示"> [處刑命令](#adamant_execution_order)<br>- Execution Order | <ul><li>自動標記前方 40 公尺內的精英、專家或頭目。</li><li>你或電子獒犬擊殺標記目標後，恢復 15% 最大韌性，並獲得 8 秒傷害與攻速加成。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="孤狼天賦圖示"> [孤狼](#adamant_disable_companion)<br>- Lone Wolf | <ul><li>選取後伺服器端移除電子獒犬，改給自身傷害、攻速、韌性受傷倍率與閃擊充能補給。</li><li>一般手榴彈每 45 秒補 1 顆；使用震撼地雷時每 90 秒補 1 顆；補給只在有缺額時計時。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="32" height="32" alt="效率殺手天賦圖示"> [效率殺手](#adamant_execution_order_crit)<br>- Efficient Killer | <ul><li>擊殺被標記敵人時，獲得 8 秒爆擊機率與爆擊傷害加成。</li><li>加成為 +10 個百分點爆擊機率與 +25% 額外爆擊傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="32" height="32" alt="生化武器關天賦圖示"> [生化武器關](#adamant_execution_order_cdr)<br>- Malocator | <ul><li>擊殺被標記敵人後，建立 8 秒戰鬥技能資源恢復效果。</li><li>每秒恢復 0.5 秒能力資源，名目上最多約 4 秒，受剩餘冷卻上限限制。</li></ul> | 鑰石 |
@@ -205,6 +206,23 @@
 ---
 
 ## 鑰石
+
+<a id="adamant_execution_order"></a>
+### 處刑命令(Execution Order)
+
+<img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="72" height="72" alt="處刑命令天賦圖示">
+
+- **自動標記**：選取前方 40 公尺內、有視線的精英、專家或頭目。一般精英與專家標記後需隔 3 秒才可再選；巨獸與頭目不受這個等待時間限制。可同時保留多個標記。
+
+- **擊殺效果**：你或自己的電子獒犬擊殺標記目標，恢復最大韌性的 15%，並使你傷害與攻擊速度各提高 10%，電子獒犬直接傷害提高 150%，持續 8 秒。再次觸發刷新時間，不疊加幅度；其他隊友單獨擊殺不會觸發。
+
+- **獒犬撲擊**：獒犬初次撲擊標記目標，也能取得 8 秒的 150% 犬傷害加成；對歐格林與巨獸的後續壓制攻擊也可刷新。此犬傷害加成不套用於流血。
+
+- **算例**：最大韌性 100 時恢復 15 點，最多補滿。單計增傷，玩家基礎 100 點變成 110，獒犬基礎 100 點變成 250；玩家已有同階段 25% 增傷時為 100 × (1 + 25% + 10%) = 135。可加速的 1 秒攻擊動作則為 1 ÷ 1.1 ≈ 0.91 秒。
+
+[詳細資料](TALENTS%20Arbites/adamant_execution_order.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="adamant_disable_companion"></a>
 ### 孤狼(Lone Wolf)
