@@ -35,7 +35,7 @@
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="狙擊專注天賦圖示"> [狙擊專注](#veteran_snipers_focus)<br>- Marksman's Focus | <ul><li>遠程弱點擊殺獲得 3 層狙擊專注，每層增加 7.5% 遠程爆擊／弱點額外傷害加成與 1% 裝填速度。</li><li>額外傷害加成不等於整次命中的增幅。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="32" height="32" alt="滲透盔甲天賦圖示"> [滲透盔甲](#veteran_snipers_focus_rending_bonus)<br>- Chink in their Armour | <ul><li>狙擊專注達到 10 層時，獲得 15% 撕裂；</li><li>低於 10 層後失效。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f" width="32" height="32" alt="視野狹窄天賦圖示"> [視野狹窄](#veteran_snipers_focus_toughness_bonus)<br>- Tunnel Vision | <ul><li>每層狙擊專注使韌性恢復量增加 4%。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="遠程刺客天賦圖示"> [遠程刺客](#veteran_snipers_focus_increased_stacks)<br>- Long Range Assassin | <ul><li>狙擊專注的效果上限由 10 層提高至 15 層。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="遠程刺客天賦圖示"> [遠程刺客](#veteran_snipers_focus_increased_stacks)<br>- Long Range Assassin | <ul><li>狙擊專注的效果上限由 10 層提高至 15 層。</li><li>滿層 112.5% 加成只作用於遠程爆擊／弱點額外傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/80917bab-ea62-4a9a-a0fa-f9b443ee1b0b" width="32" height="32" alt="武器專家天賦圖示"> [武器專家](#veteran_weapon_switch_passive)<br>- Weapons Specialist | <ul><li>切換至遠程武器：手持近戰武器時，每次擊殺累積 1 層，最多 10 層。</li><li>切出遠程武器後，消耗所有層數，每層提高 2% 遠程攻擊速度與裝填速度，持續 10 秒；</li><li>再切換武器會提前結束。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a6e24eb8-063a-45a5-8796-acde81d1f734" width="32" height="32" alt="時刻警覺天賦圖示"> [時刻警覺](#veteran_weapon_switch_replenish_toughness)<br>- On Your Toes | <ul><li>觸發方式：儲存至少 1 層武器專家的加成後，切換至對應武器，恢復 20% 最大韌性。</li><li>恢復量固定，不隨層數增加。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/842c2a40-8bb4-45fa-a1e2-672fedf80d78" width="32" height="32" alt="有備無患天賦圖示"> [有備無患](#veteran_weapon_switch_replenish_ammo)<br>- Always Prepared | <ul><li>觸發方式：手持近戰武器擊殺、儲存武器專家的層數後，切出遠程武器，會把備用彈藥移入彈匣。</li><li>層數越多，補入量越多。</li></ul> | 鑰石 |
@@ -631,12 +631,17 @@
 
 - **狙擊專注的效果上限由 10 層提高至 15 層。**
 - 每層效果與刷新方式不變；滲透盔甲仍在 10 層觸發。
+- 滿層的 112.5% 加成作用於遠程爆擊或弱點命中的額外傷害部分；整次命中的增幅隨武器、目標與既有加成而變。
 
 #### 滿層算例
 
-- 十五層提供 `15 × 7.5% = 112.5%` 遠程爆擊／弱點額外傷害加成，以及 `15 × 1% = 15%` 裝填速度。
-- 假設基礎部分 100、爆擊或弱點額外部分 40，沒有其他加成：`100 + 40 × (1 + 112.5%) = 185 傷害`。
-- 原本裝填 4 秒：`4 ÷ 1.15 ≈ 3.48 秒`。
+- **十五層效果**：額外傷害加成為 `15 × 7.5% = 112.5%`，裝填速度加成為 `15 × 1% = 15%`。
+
+- **相對零層**：假設未爆擊的遠程弱點命中，基礎部分 100、未加成的額外部分 40，沒有其他加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × (1 + 112.5%) = 185 點`；增加 `45 ÷ 140 ≈ 32.14%`。
+
+- **相對原本十層上限**：同一算例，十層為 `100 + 40 × 1.75 = 170 點`，十五層為 185 點；升級並疊滿後再增加 `15 ÷ 170 ≈ 8.82%`。
+
+- **裝填時間**：原本裝填 4 秒，無其他裝填加成時，`4 ÷ 1.15 ≈ 3.48 秒`。
 
 [詳細資料](TALENTS%20Veteran/veteran_snipers_focus_increased_stacks.md) · [返回目錄](#talent-index)
 
