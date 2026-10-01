@@ -14,6 +14,7 @@
 | <img src="https://github.com/user-attachments/assets/7d6f33d9-5ed5-49d9-9f4c-333565e17216" width="32" height="32" alt="精力復甦天賦圖示"> [精力復甦](#zealot_toughness_on_dodge)<br>- Second Wind | <ul><li>成功閃避攻擊後恢復 15% 最大韌性，觸發冷卻 0.5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/79a0a582-a493-49eb-a470-ab7ed7e7f782" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fb4eb2d4-1dee-4596-8262-2c99311be059" width="32" height="32" alt="泰拉之音天賦圖示"> [泰拉之音](#zealot_toughness_while_shooting)<br>- The Voice of Terra | <ul><li>射擊期間每秒恢復 10% 最大韌性，停火後再持續 0.5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/0849a882-e966-43d8-8786-554a7a657ee2" width="32" height="32" alt="恢復信仰天賦圖示"> [恢復信仰](#zealot_heal_part_of_damage_taken)<br>- Restoring Faith | <ul><li>生命受傷後，逐步恢復該次傷害的 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -125,6 +126,23 @@
 - **恢復算例**：最大韌性 100、沒有其他恢復加成且持續射擊 2 秒，停火後的 0.5 秒也完整生效，合計 100 × 10% × (2 + 0.5) = 25 點。以缺少的韌性為上限。
 
 [詳細資料](TALENTS%20Zealot/zealot_toughness_while_shooting.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_heal_part_of_damage_taken"></a>
+### 恢復信仰(Restoring Faith)
+
+<img src="https://github.com/user-attachments/assets/0849a882-e966-43d8-8786-554a7a657ee2" width="72" height="72" alt="恢復信仰天賦圖示">
+
+- **運作方式**：生命受到傷害後，在約 4 秒內逐步恢復該次生命傷害的 20%；韌性受損不列入恢復量。
+
+- **再次受傷**：新的受傷會增加另一份恢復量，不會清掉尚未恢復的部分。
+
+- **恢復算例**：沒有其他治療修正，一次失去 50 點生命，總計可恢復 50 × 20% = 10 點，平均每秒約 2.5 點。恢復期間再受 30 點傷害，另增加 6 點待恢復量。
+
+- **恢復上限**：只能補回可治療的生命缺額，不能清除腐敗占用的生命上限。
+
+[詳細資料](TALENTS%20Zealot/zealot_heal_part_of_damage_taken.md) · [返回目錄](#talent-index)
 
 ---
 

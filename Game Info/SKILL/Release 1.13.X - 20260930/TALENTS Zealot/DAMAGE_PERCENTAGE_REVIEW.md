@@ -14,4 +14,5 @@
 | [精力復甦](zealot_toughness_on_dodge.md) | 成功閃避攻擊後恢復 15% 最大韌性，觸發冷卻 0.5 秒。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_1.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |
 | [泰拉之音](zealot_toughness_while_shooting.md) | 射擊期間每秒恢復 10% 最大韌性，停火後再持續 0.5 秒。；完整計算與適用限制見來源文件。 |
+| [恢復信仰](zealot_heal_part_of_damage_taken.md) | 生命受傷後，逐步恢復該次傷害的 20%。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_4.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |
