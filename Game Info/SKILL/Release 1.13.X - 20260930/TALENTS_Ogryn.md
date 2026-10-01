@@ -44,6 +44,7 @@
 | <img src="https://github.com/user-attachments/assets/3ff7d7eb-6206-4d77-91c5-483259320072" width="32" height="32" alt="堅不可摧天賦圖示"> [堅不可摧](#ogryn_block_all_attacks)<br>- Unbreakable | <ul><li>完美格擋可擋下原本不可格擋的近戰攻擊。</li><li>完美格擋後，下一次近戰傷害提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/15edb762-d209-407d-8bd5-fc0672bd5ef8" width="32" height="32" alt="士氣高昂天賦圖示"> [士氣高昂](#ogryn_damage_reduction_on_high_stamina)<br>- Pumped Up | <ul><li>耐力高於 75% 時，受到的傷害減少 12.5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/de5091de-3dd6-455b-875a-55228eb4d67e" width="32" height="32" alt="好運連連天賦圖示"> [好運連連](#ogryn_crit_damage_increase)<br>- Lucky Streak | <ul><li>爆擊時，額外傷害部分增加 75%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/5f6d651a-4c88-40ea-a96b-3133459df2f4" width="32" height="32" alt="狂暴猛擊天賦圖示"> [狂暴猛擊](#ogryn_stacking_attack_speed)<br>- Frenzied Blows | <ul><li>連續近戰命中從第二次起累積攻速，每層 2.5%，最多 5 層。</li></ul> | 技能 |
 
 ---
 
@@ -622,5 +623,20 @@
 - **爆擊弱點**：同時爆擊並命中弱點時，程式會先計算共用的額外傷害，再套入爆擊與弱點相關加成；不能把爆擊與弱點倍率各乘一次。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_crit_damage_increase.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_stacking_attack_speed"></a>
+### 狂暴猛擊(Frenzied Blows)
+
+<img src="https://github.com/user-attachments/assets/5f6d651a-4c88-40ea-a96b-3133459df2f4" width="72" height="72" alt="狂暴猛擊天賦圖示">
+
+- **獲得層數**：連續近戰揮擊命中敵人，從第二次成功揮擊開始，每次增加一層；同一揮擊命中多人仍只加一層。
+
+- **持續與中斷**：每層提高 2.5% 近戰攻速，最多 5 層、合計 12.5%，持續 5 秒；續命中可刷新時間，揮空會清除加成並重置連擊。
+
+- **速度算例**：滿層時，受攻速影響的 1 秒動作變成 1 ÷ (1 + 5 × 2.5%) ≈ 0.889 秒；不是直接縮短 12.5% 至 0.875 秒。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_stacking_attack_speed.md) · [返回目錄](#talent-index)
 
 ---
