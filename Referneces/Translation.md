@@ -827,6 +827,338 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_ability_marksman` / `veteran_increased_weakspot_power_after_combat_ability` - 鷹眼
+  - 英文對應：Marksman。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1345-L1389)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_survivalist_passive` / `veteran_survivalist_passive` - 生存專家（基礎被動）
+  - 英文對應：Survivalist Passive。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1417-L1436)。
+
+- `loc_talent_veteran_base_ranged_damage` / `veteran_base_ranged_damage` - 基礎遠程傷害加成
+  - 英文對應：Increased Ranged Damage。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1400-L1416)。
+
+- `loc_talent_veteran_supression_immunity` / `veteran_supression_immunity` - 壓制免疫
+  - 英文對應：Suppression Immunity。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1390-L1399)。
+
+- `loc_talent_veteran_cover_peeking` / `veteran_cover_peeking` - 掩體探身
+  - 英文對應：Cover Peeking。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2575-L2584)。
+
+- `loc_talent_veteran_elite_kills_grant_ammo_coop` / `veteran_aura_gain_ammo_on_elite_kill` - 拾荒者
+  - 英文對應：Scavenger。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L646-L666)。
+
+- `loc_ability_frag_grenade` / `veteran_frag_grenade` - 破片手雷
+  - 英文對應：Frag Grenade。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L33-L42)。
+
+- `loc_talent_ranger_volley_fire_big_game_hunter` / `veteran_combat_ability_ogryn_outlines` - 敵人越大...
+  - 英文對應：The Bigger they Are ...。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L373-L405)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_ability_assault` / `veteran_increased_close_damage_after_combat_ability` - 肉搏戰
+  - 英文對應：Close Quarters Killzone。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1303-L1344)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency` / `veteran_combat_ability_increase_and_restore_toughness_to_coherency` - 責任與榮譽
+  - 英文對應：Duty and Honour。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L480-L517)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_combat_ability_revives` / `veteran_combat_ability_revive_nearby_allies` - 只有死亡，職責才會終結
+  - 英文對應：Only In Death Does Duty End。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L565-L605)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_combat_ability_stagger_nearby_enemies` / `veteran_combat_ability_stagger_nearby_enemies` - 發號施令
+  - 英文對應：Voice of Command。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L538-L564)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_elite_kills_reduce_cooldown` / `veteran_elite_kills_reduce_cooldown` - 戰術意識
+  - 英文對應：Tactical Awareness。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L746-L774)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_toughness_bonus_leaving_invisibility` / `veteran_toughness_bonus_leaving_invisibility` - 獵手決意
+  - 英文對應：Hunter's Resolve。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2155-L2195)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_combat_ability_ranged_enemies_outlines` / `veteran_combat_ability_ranged_roamer_outlines` - 火力反擊
+  - 英文對應：Counter-Fire。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L353-L372)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_combat_ability_coherency_outlines` / `veteran_combat_ability_coherency_outlines` - 目標引導增強
+  - 英文對應：Enhanced Target Priority。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L406-L429)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_improved_tag_more_damage` / `veteran_improved_tag_more_damage` - 集中火力
+  - 英文對應：Focused Fire。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3075-L3096)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_improved_tag_dead_coherency_bonus` / `veteran_improved_tag_dead_coherency_bonus` - 轉移火力！
+  - 英文對應：Redirect Fire!。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3041-L3074)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_improved_tag_dead_bonus` / `veteran_improved_tag_dead_bonus` - 目標擊倒！
+  - 英文對應：Target Down!。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3021-L3040)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_improved_tag` / `veteran_improved_tag` - 鎖定目標
+  - 英文對應：Focus Target!。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2978-L3020)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_weapon_switch_replenish_stamina` / `veteran_weapon_switch_replenish_stamina` - 活力煥發
+  - 英文對應：Invigorated。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2827-L2872)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_weapon_switch_replenish_ammo` / `veteran_weapon_switch_replenish_ammo` - 有備無患
+  - 英文對應：Always Prepared。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2873-L2888)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_weapon_switch_replenish_toughness` / `veteran_weapon_switch_replenish_toughness` - 時刻警覺
+  - 英文對應：On Your Toes。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2958-L2977)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_weapon_switch` / `veteran_weapon_switch_passive` - 武器專家
+  - 英文對應：Weapons Specialist。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2717-L2826)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_allies_share_toughness` / `veteran_allies_in_coherency_share_toughness_gain` - 天生領袖
+  - 英文對應：Born Leader。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2341-L2361)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_ammo_increase` / `veteran_ammo_increase` - 全副武裝
+  - 英文對應：Fully Loaded。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2503-L2526)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_increased_ranged_cleave` / `veteran_increased_ranged_cleave` - 凋零烈焰
+  - 英文對應：Withering Fire。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3136-L3151)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_no_ammo_consumption_on_lasweapon_crit` / `veteran_no_ammo_consumption_on_lasweapon_crit` - 突擊隊
+  - 英文對應：Shock Trooper。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1628-L1637)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_bonus_crit_chance_on_ammo` / `veteran_bonus_crit_chance_on_ammo` - 首輪齊射
+  - 英文對應：Opening Salvo。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1588-L1627)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_replenish_toughness_outside_melee` / `veteran_replenish_toughness_outside_melee` - 喘息片刻
+  - 英文對應：Catch a Breath。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2379-L2402)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_continous_hits_apply_rending` / `veteran_continous_hits_apply_rending` - 猛攻
+  - 英文對應：Onslaught。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1136-L1179)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_attack_speed` / `veteran_attack_speed` - 戰壕兵訓練
+  - 英文對應：Trench Fighter Drill。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2551-L2574)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_hits_cause_bleed` / `veteran_hits_cause_bleed` - 鋸齒刀刃
+  - 英文對應：Serrated Blade。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1772-L1827)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_kill_grants_damage_to_other_slot` / `veteran_kill_grants_damage_to_other_slot` - 靈活接敵
+  - 英文對應：Agile Engagement。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1828-L1870)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_combat_ability_elite_and_special_outlines` / `veteran_combat_ability_elite_and_special_outlines` - 處決者姿態
+  - 英文對應：Executioner's Stance。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L290-L352)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_reduced_threat_after_combat_ability` / `veteran_reduced_threat_after_combat_ability` - 低調
+  - 英文對應：Low Profile。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1268-L1302)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_invisibility_on_combat_ability` / `veteran_invisibility_on_combat_ability` - 滲透
+  - 英文對應：Infiltrate。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2032-L2113)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_2_combat_ability` / `veteran_combat_ability_stance` - 火力齊射
+  - 英文對應：Volley Fire。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L206-L247)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_snipers_focus_increased_stacks` / `veteran_snipers_focus_increased_stacks` - 遠程刺客
+  - 英文對應：Long Range Assassin。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2697-L2716)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_snipers_focus_toughness_bonus` / `veteran_snipers_focus_toughness_bonus` - 視野狹窄
+  - 英文對應：Tunnel Vision。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2656-L2676)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_snipers_focus_rending_bonus` / `veteran_snipers_focus_rending_bonus` - 滲透盔甲
+  - 英文對應：Chink in their Armour。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2627-L2655)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_snipers_focus` / `veteran_snipers_focus` - 狙擊專注
+  - 英文對應：Marksman's Focus。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2585-L2626)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_dodging_grants_crit` / `veteran_dodging_grants_crit` - 互惠互利
+  - 英文對應：Reciprocity。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1180-L1224)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_rending_bonus` / `veteran_rending_bonus` - 裂擊
+  - 英文對應：Rending Strikes。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2433-L2456)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_movement_speed_towards_downed` / `veteran_movement_speed_towards_downed` - 不拋棄不放棄
+  - 英文對應：Leave No One Behind。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1709-L1749)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_crits_rend` / `veteran_crits_apply_rending` - 趁火打劫
+  - 英文對應：Exploit Weakness。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1102-L1135)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_damage_damage_after_sprinting` / `veteran_increase_damage_after_sprinting` - 遊擊者
+  - 英文對應：Skirmisher。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L943-L986)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_all_kills_replenish_toughness` / `veteran_all_kills_replenish_toughness` - 嗜血
+  - 英文對應：Out for Blood。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1457-L1479)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_increased_melee_crit_chance_and_melee_finesse` / `veteran_increased_melee_crit_chance_and_melee_finesse` - 亡命之徒
+  - 英文對應：Desperado。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1925-L1966)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_increased_weakspot_damage` / `veteran_increased_weakspot_damage` - 堅定不移
+  - 英文對應：Precision Strikes。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1004-L1020)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_reload_speed_on_elite_kill` / `veteran_reload_speed_on_elite_kill` - 齊射能手
+  - 英文對應：Volley Adept。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L987-L1003)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_ranger_reload_speed_empty_mag` / `veteran_faster_reload_on_non_empty_clips` - 戰術裝填
+  - 英文對應：Tactical Reload。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2362-L2378)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_grenade_apply_bleed` / `veteran_grenade_apply_bleed` - 粉碎者破片手雷
+  - 英文對應：Shredder Frag Grenade。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1021-L1074)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_elite_kills_grant_ammo_coop_improved` / `veteran_aura_gain_ammo_on_elite_kill_improved` - 生存專家
+  - 英文對應：Survivalist。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L667-L695)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_better_deployables` / `veteran_better_deployables` - 臨場發揮
+  - 英文對應：Field Improvisation。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1967-L1987)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_ability_krak_grenade` / `veteran_krak_grenade` - 穿甲手雷
+  - 英文對應：Krak Grenade。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L43-L64)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_improved_grenades` / `veteran_improved_grenades` - 手雷專家
+  - 英文對應：Grenade Tinkerer。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L128-L205)；此來源證明識別鍵與天賦關係。
+
+- `loc_ability_smoke_grenade` / `veteran_smoke_grenade` - 煙霧手雷
+  - 英文對應：Smoke Grenade。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L65-L84)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_replenish_toughness_and_boost_allies` / `veteran_replenish_toughness_and_boost_allies` - 火力掩護
+  - 英文對應：Covering Fire。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2273-L2301)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_ally_kills_increase_damage` / `veteran_ally_kills_increase_damage` - 求勝心
+  - 英文對應：Competitive Urge。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L775-L830)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_toughness_on_elite_kill` / `veteran_elite_kills_replenish_toughness` - 擊殺紀錄
+  - 英文對應：Confirmed Kill。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1480-L1503)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_ranger_grenade_on_elite_kills_coop` / `veteran_aura_elite_kills_restore_grenade` - 爆破小隊
+  - 英文對應：Demolition Team。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2196-L2211)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_ranger_ads_drains_stamina_boost` / `veteran_ads_drain_stamina` - 死亡射手
+  - 英文對應：Deadshot。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L248-L278)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_increased_damage_based_on_range` / `veteran_increased_damage_based_on_range` - 遠射
+  - 英文對應：Longshot。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L831-L865)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_ranger_stamina_on_ranged_dodge` / `veteran_dodging_grants_stamina` - 靈活應對
+  - 英文對應：Duck and Dive。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1750-L1771)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_2_tier_1_name_3` / `veteran_increased_damage_when_flanking` - 秘密特工
+  - 英文對應：Covert Operative。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3113-L3135)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_2_tier_2_name_2` / `veteran_clip_size` - 荷槍實彈
+  - 英文對應：Lock and Load。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3097-L3112)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_toughness_damage_reduction_per_ally` / `veteran_reduced_toughness_damage_in_coherency` - 密集隊形訓練
+  - 英文對應：Close Order Drill。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1437-L1456)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_block_break_gives_tdr` / `veteran_tdr_on_high_toughness` - 鋼鐵意志
+  - 英文對應：Iron Will。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2245-L2272)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_big_game_hunter` / `veteran_big_game_hunter` - 幹掉它！
+  - 英文對應：Bring it Down!。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1075-L1101)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_increase_suppression` / `veteran_increase_suppression` - 讓他們全趴下！
+  - 英文對應：Keep Their Heads Down!。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L866-L892)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_reduce_swap_time` / `veteran_reduce_swap_time` - 行雲流水
+  - 英文對應：One Motion。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1898-L1924)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_toughness_damage_reduction_medium` / `base_toughness_damage_reduction_node_buff_medium_1` - 韌性減傷
+  - 英文對應：Toughness Damage Reduction。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L437-L463)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_melee_damage_boost_medium` / `base_melee_damage_node_buff_high_2` - 近戰傷害提升
+  - 英文對應：Melee Damage Boost。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1181-L1204)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_toughness_boost_medium` / `base_toughness_node_buff_medium_2` - 韌性提升
+  - 英文對應：Toughness Boost。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L206-L229)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_movement_speed_coherency` / `veteran_movement_speed_coherency` - 抵近殺敵
+  - 英文對應：Close and Kill。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L721-L745)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_damage_coherency` / `veteran_increased_damage_coherency` - 火力小分隊
+  - 英文對應：Fire Team。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L696-L720)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_extra_grenade` / `veteran_extra_grenade` - 擲彈兵
+  - 英文對應：Grenadier。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L85-L127)；此來源證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_increase_damage_vs_elites` / `veteran_increase_damage_vs_elites` - 優越情節
+  - 狀態：暫定 key 對應，待使用者確認；沿用既有 Superiority Complex 譯名，不宣稱官方名稱。
+  - 來源：[Release 1.13.0 天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L893-L916)；來源僅證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_combat_ability_extra_charge` / `veteran_combat_ability_extra_charge` - 掩護射擊
+  - 狀態：暫定 key 對應，待使用者確認；沿用既有 Overwatch 譯名，不宣稱官方名稱。
+  - 來源：[Release 1.13.0 天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L606-L644)；來源僅證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_toughness_on_weakspot_kill` / `veteran_replenish_toughness_on_weakspot_kill` - 振奮擊倒
+  - 狀態：暫定 key 對應，待使用者確認；沿用既有 Exhilarating Takedown 譯名，不宣稱官方名稱。
+  - 來源：[Release 1.13.0 天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2302-L2340)；來源僅證明識別鍵與天賦關係。
+
+- `loc_talent_veteran_ranged_power_out_of_melee` / `veteran_ranged_power_out_of_melee` - 殺戮地帶
+  - 狀態：暫定 key 對應，待使用者確認；沿用既有 Kill Zone 譯名，不宣稱官方名稱。
+  - 來源：[Release 1.13.0 talent 定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1530-L1560)；來源僅證明 key 與 talent 關係。
+
+- `loc_talent_ranger_replenish_grenade` / `veteran_replenish_grenades` - 炸藥儲備
+  - 狀態：暫定 key 對應，待使用者確認；沿用既有 Demolition Stockpile 譯名，不宣稱官方名稱。
+  - 來源：[Release 1.13.0 talent 定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1988-L2030)。來源證明 key 與 talent 關係，不證明英文顯示名或官方繁體譯名。
+
 #### 老兵天賦
 
 ##### 閃擊
