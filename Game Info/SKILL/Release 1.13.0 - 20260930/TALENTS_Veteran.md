@@ -41,6 +41,7 @@
 | 技能 | [猛攻(Onslaught)](#veteran_continous_hits_apply_rending) | 連續命中同一個仍存活的敵人，從第二次攻擊起，每次施加 1 層脆弱。 |
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [喘息片刻(Catch a Breath)](#veteran_replenish_toughness_outside_melee) | 超過 5 秒未受到近戰命中時，每秒恢復 5% 最大韌性。 |
+| 技能 | [首輪齊射(Opening Salvo)](#veteran_bonus_crit_chance_on_ammo) | 彈匣剩餘彈藥至少 80% 時，遠程爆擊率增加 10 個百分點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
 | 技能 | [臨場發揮(Field Improvisation)](#veteran_better_deployables) | 小隊的彈藥箱也能補滿可補給的手雷。 |
@@ -731,6 +732,24 @@
 - 目前 98／100 時，最多只恢復 `100 − 98 = 2 點`。
 
 [詳細資料](TALENTS%20Veteran/veteran_replenish_toughness_outside_melee.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_bonus_crit_chance_on_ammo"></a>
+
+### 首輪齊射(Opening Salvo)
+
+<img src="https://github.com/user-attachments/assets/4193f147-bd40-49f8-92d4-a2b83fa1ad5b" width="72" height="72" alt="首輪齊射天賦圖示">
+
+- **彈匣剩餘彈藥至少 80% 時，遠程爆擊率增加 10 個百分點。**
+- 必須手持遠程武器；備彈數量不影響這個門檻。
+
+#### 門檻與爆擊率算例
+
+- 彈匣容量 30 發：`30 × 80% = 24 發`，24 發仍生效，23 發不生效。
+- 原本爆擊率 10%，生效時為 `10% + 10% = 20%`。
+
+[詳細資料](TALENTS%20Veteran/veteran_bonus_crit_chance_on_ammo.md) · [返回目錄](#talent-index)
 
 ---
 
