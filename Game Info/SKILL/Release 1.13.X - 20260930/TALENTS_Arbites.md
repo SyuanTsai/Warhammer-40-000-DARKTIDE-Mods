@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="32" height="32" alt="交鋒天賦圖示"> [交鋒](#adamant_charge_longer_distance)<br>- Engage | <ul><li>衝鋒距離由基礎 3.75 公尺增加 3.75 公尺，目標距離上限成為 7.5 公尺。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="32" height="32" alt="殺戮命令天賦圖示"> [殺戮命令](#adamant_dog_damage_after_ability)<br>- Kill Order | <ul><li>使用戰鬥技能後，電子獒犬傷害提高 50%，持續 12 秒；效果生效時再次使用戰鬥技能可刷新。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="32" height="32" alt="處刑命令天賦圖示"> [處刑命令](#adamant_execution_order)<br>- Execution Order | <ul><li>自動標記前方 40 公尺內的精英、專家或頭目。</li><li>你或電子獒犬擊殺標記目標後，恢復 15% 最大韌性，並獲得 8 秒傷害與攻速加成。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/b838686c-aaa0-49a2-bbea-fc9e074bb6cf" width="32" height="32" alt="堅定不移天賦圖示"> [堅定不移](#adamant_forceful)<br>- Forceful | <ul><li>踉蹌命中或格擋可累積最多 10 層，每層增加 5% 衝擊並降低受傷倍率。</li><li>層數共用 5 秒時間；受傷每 0.25 秒最多移除 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="孤狼天賦圖示"> [孤狼](#adamant_disable_companion)<br>- Lone Wolf | <ul><li>選取後伺服器端移除電子獒犬，改給自身傷害、攻速、韌性受傷倍率與閃擊充能補給。</li><li>一般手榴彈每 45 秒補 1 顆；使用震撼地雷時每 90 秒補 1 顆；補給只在有缺額時計時。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/1016875d-cc4c-44f2-8a06-c93155d482d4" width="32" height="32" alt="律法之志天賦圖示"> [律法之志](#adamant_forceful_toughness_regen_per_stack)<br>- Will of the Lex | <ul><li>選取後 堅定不移 每層每秒恢復 0.5% 最大韌性。</li><li>效果隨 堅定不移 層數逐秒累積，最多 10 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/92922b1c-4991-480e-86af-e050b9faa496" width="32" height="32" alt="堅定意志天賦圖示"> [堅定意志](#adamant_forceful_stun_immune_and_block_all)<br>- Adamant Will | <ul><li>堅定不移 維持滿層時取得免暈與減速免疫。</li><li>離開滿層後效果再維持 3 秒；完美格擋時額外允許格擋不可格擋攻擊。</li></ul> | 鑰石 |
@@ -226,6 +227,21 @@
 - **算例**：最大韌性 100 時恢復 15 點，最多補滿。單計增傷，玩家基礎 100 點變成 110，獒犬基礎 100 點變成 250；玩家已有同階段 25% 增傷時為 100 × (1 + 25% + 10%) = 135。可加速的 1 秒攻擊動作則為 1 ÷ 1.1 ≈ 0.91 秒。
 
 [詳細資料](TALENTS%20Arbites/adamant_execution_order.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_forceful"></a>
+### 堅定不移(Forceful)
+
+<img src="https://github.com/user-attachments/assets/b838686c-aaa0-49a2-bbea-fc9e074bb6cf" width="72" height="72" alt="堅定不移天賦圖示">
+
+- **取得與刷新**：攻擊第一個命中目標並使其踉蹌，或成功格擋，可獲得 1 層，最多 10 層；電子獒犬的命中不計。層數共用 5 秒，新增或因受傷減少層數時重設時間。
+
+- **受傷移除**：收到正值傷害或韌性吸收傷害時，每 0.25 秒最多移除 1 層；被格擋的事件不移除。
+
+- **滿層算例**：每層給 +5% 衝擊，10 層合計 +50%。每層傷害倍率為 0.975，10 層依共用堆層規則計為 0.975^10 ≈ 0.776，約比基準傷害少 22.4%；這是乘算結果，並非直接相加成 25%。例如原本 100 點傷害，滿層為 100 × 0.975¹⁰ ≈ 77.63 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_forceful.md) · [返回目錄](#talent-index)
 
 ---
 

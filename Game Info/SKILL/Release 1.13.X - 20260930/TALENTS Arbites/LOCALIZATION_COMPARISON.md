@@ -17,6 +17,7 @@
 | [交鋒](#adamant_charge_longer_distance) | 未見明確矛盾 |
 | [殺戮命令](#adamant_dog_damage_after_ability) | 未見明確矛盾 |
 | [處刑命令](#adamant_execution_order) | 待同版核對 |
+| [堅定不移](#adamant_forceful) | 未見明確矛盾 |
 | [孤狼](#adamant_disable_companion) | 未見明確矛盾 |
 | [律法之志](#adamant_forceful_toughness_regen_per_stack) | 未見明確矛盾 |
 | [堅定意志](#adamant_forceful_stun_immune_and_block_all) | 未見明確矛盾 |
@@ -145,6 +146,13 @@
 - 描述鍵：`loc_talent_execution_order_description`；hash：`720bc321`。
 - 結論：待同版核對。繁中「擊殺被標記的敵人會恢復…韌性」對應英文 “Killing a marked enemy replenishes… Toughness”；自身和戰犬 buff 文字也對應。兩種文字都稱攻擊標記敵人後提升戰犬傷害，但程式只檢查 initial_pounce，來源版本尚未核同版。
 - [原始碼推導與限制](adamant_execution_order.md)。
+
+<a id="adamant_forceful"></a>
+## 堅定不移(Forceful)
+
+- 描述鍵：`loc_talent_adamant_forceful_base_alt_desc`；hash：`bcf0df40`。
+- 結論：未見明確矛盾。繁中「使敵人踉蹌或格擋攻擊時會獲得…層數」對應英文 “Staggering Hits and Blocked Attacks grant Stacks”；兩者都寫每層持續、可堆疊與受傷移除，沒有同源中英矛盾。
+- [原始碼推導與限制](adamant_forceful.md)。
 
 <a id="adamant_disable_companion"></a>
 ## 孤狼(Lone Wolf)
