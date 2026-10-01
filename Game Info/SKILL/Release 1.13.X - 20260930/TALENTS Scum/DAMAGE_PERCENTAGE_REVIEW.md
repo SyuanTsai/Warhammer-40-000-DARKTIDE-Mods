@@ -91,6 +91,7 @@
 | [野火 II](broker_stimm_combat_2.md) | 威力增加 4%。；完整計算與適用限制見來源文件。 |
 | [野火 III](broker_stimm_combat_3.md) | 威力增加 4%。；完整計算與適用限制見來源文件。 |
 | [狂怒 I](broker_stimm_combat_4b.md) | 威力增加 4%。；護甲撕裂增加 5%。；完整計算與適用限制見來源文件。 |
+| [狂怒 II](broker_stimm_combat_5b.md) | 威力增加 4%。；護甲撕裂增加 10%。；完整計算與適用限制見來源文件。 |
 | [野火 V](broker_stimm_combat_5a.md) | 威力增加 4%。；弱點與爆擊額外傷害增加 25%。；完整計算與適用限制見來源文件。 |
 | [獵鷹蕈劑 I](broker_stimm_combat_4c.md) | 威力增加 4%。；爆擊機率增加 5 個百分點。；完整計算與適用限制見來源文件。 |
 | [激勵 I](broker_stimm_celerity_1.md) | 攻擊速度增加 4%。；武器切換速度增加 25%。；完整計算與適用限制見來源文件。 |
