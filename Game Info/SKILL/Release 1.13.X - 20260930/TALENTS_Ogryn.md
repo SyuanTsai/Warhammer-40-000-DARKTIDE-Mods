@@ -32,6 +32,7 @@
 | <img src="https://github.com/user-attachments/assets/7e27b3b4-5eca-49b5-aafd-c8abc6635b14" width="32" height="32" alt="屠殺天賦圖示"> [屠殺](#ogryn_kills_grant_crit_chance)<br>- Massacre | <ul><li>每次擊殺增加 2 個百分點爆擊機率，最多 8 層，持續 12 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5d6152a6-dedb-49c4-a7d2-328d082084c0" width="32" height="32" alt="報復時間天賦圖示"> [報復時間](#ogryn_revenge_damage)<br>- Payback Time | <ul><li>成功閃避近戰攻擊，或被近戰命中後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0eb640b4-e206-4d0b-a982-f74b33baf5b2" width="32" height="32" alt="主宰天賦圖示"> [主宰](#ogryn_rending_on_elite_kills)<br>- Dominate | <ul><li>擊殺精英後獲得 15% 撕裂，持續 10 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/27fcc279-9828-4df7-b895-04956bb2463b" width="32" height="32" alt="換彈完畢天賦圖示"> [換彈完畢](#ogryn_reloading_grants_damage)<br>- Reloaded and Ready | <ul><li>換彈後，遠程傷害提高 15%，持續 8 秒。</li></ul> | 技能 |
 
 ---
 
@@ -428,5 +429,18 @@
 - 原文在撕裂百分比後加上「倍」，單位錯誤。效果是獲得 15% 撕裂，並不是撕裂變成 15 倍。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_rending_on_elite_kills.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_reloading_grants_damage"></a>
+### 換彈完畢(Reloaded and Ready)
+
+<img src="https://github.com/user-attachments/assets/27fcc279-9828-4df7-b895-04956bb2463b" width="72" height="72" alt="換彈完畢天賦圖示">
+
+- **觸發方式**：換彈觸發後獲得 15% 遠程傷害，持續 8 秒；再次換彈可刷新時間，不會堆成多層。
+
+- **傷害算例**：基礎 100 點遠程傷害變成 115 點；同階段已有 20% 加成時為 100 × (1 + 20% + 15%) = 135 點。近戰傷害不受此加成影響。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_reloading_grants_damage.md) · [返回目錄](#talent-index)
 
 ---

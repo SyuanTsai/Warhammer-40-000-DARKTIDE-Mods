@@ -32,3 +32,4 @@
 | [屠殺](ogryn_kills_grant_crit_chance.md) | 每次擊殺增加 2 個百分點爆擊機率，最多 8 層，持續 12 秒。；完整計算與適用限制見來源文件。 |
 | [報復時間](ogryn_revenge_damage.md) | 成功閃避近戰攻擊，或被近戰命中後，傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [主宰](ogryn_rending_on_elite_kills.md) | 擊殺精英後獲得 15% 撕裂，持續 10 秒。；完整計算與適用限制見來源文件。 |
+| [換彈完畢](ogryn_reloading_grants_damage.md) | 換彈後，遠程傷害提高 15%，持續 8 秒。；完整計算與適用限制見來源文件。 |

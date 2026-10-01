@@ -34,6 +34,7 @@
 | [屠殺](#ogryn_kills_grant_crit_chance) | 未見明確矛盾 |
 | [報復時間](#ogryn_revenge_damage) | 跨來源待同版核對 |
 | [主宰](#ogryn_rending_on_elite_kills) | 繁中描述錯誤 |
+| [換彈完畢](#ogryn_reloading_grants_damage) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -220,3 +221,10 @@
 - 繁中原文短引：擊殺精英敵人後持續{rending_multiplier:%s}倍撕裂{duration:%s}秒。
 - 同源英文：{rending_multiplier:%s} Rending for {duration:%s}s on Elite Kill.
 - [原始碼推導與限制](ogryn_rending_on_elite_kills.md)。
+
+<a id="ogryn_reloading_grants_damage"></a>
+## 換彈完畢(Reloaded and Ready)
+
+- 描述鍵：`loc_talent_ogryn_ranged_damage_on_reload_desc`；hash：`a8bc8a04`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_reloading_grants_damage.md)。
