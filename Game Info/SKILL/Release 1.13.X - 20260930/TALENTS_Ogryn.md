@@ -14,6 +14,7 @@
 | <img src="https://github.com/user-attachments/assets/c006f0e1-3f32-4dcc-891a-8c44b4ebe6df" width="32" height="32" alt="重量級天賦圖示"> [重量級](#ogryn_ogryn_killer)<br>- Heavyweight | <ul><li>對堡壘、碾壓者、收割者與瘟疫歐格林造成的傷害提高 30%。</li><li>受到這些敵人的傷害降低 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ee98056a-b754-4821-9542-717ef68c944a" width="32" height="32" alt="猛擊天賦圖示"> [猛擊](#ogryn_melee_stagger)<br>- Slam | <ul><li>近戰衝擊提高 25%；近戰或推擊使敵人踉蹌時恢復 5% 耐力。</li><li>耐力恢復有 0.75 秒冷卻。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/53e0b90e-52dc-4a4a-953c-b235753aa97a" width="32" height="32" alt="削弱敵人天賦圖示"> [削弱敵人](#ogryn_targets_recieve_damage_taken_increase_debuff)<br>- Soften Them Up | <ul><li>近戰造成傷害後，使存活敵人在 5 秒內受到的傷害提高 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/72cbf891-ecd4-425c-8d46-97cb4d4863f9" width="32" height="32" alt="堅韌不屈天賦圖示"> [堅韌不屈](#ogryn_toughness_on_low_health)<br>- Too Stubborn to Die | <ul><li>生命低於 50% 時，韌性恢復量提高 100%。</li></ul> | 技能 |
 
 ---
 
@@ -136,5 +137,20 @@
 - **傷害算例**：效果已施加後，原本 100 點傷害變成 100 × (1 + 15%) = 115 點；若同一承傷階段另有 20% 加成，則為 135 點。首次觸發的那一擊不會追溯重算。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_targets_recieve_damage_taken_increase_debuff.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_toughness_on_low_health"></a>
+### 堅韌不屈(Too Stubborn to Die)
+
+<img src="https://github.com/user-attachments/assets/72cbf891-ecd4-425c-8d46-97cb4d4863f9" width="72" height="72" alt="堅韌不屈天賦圖示">
+
+- **生效條件**：生命低於上限的 50% 時，韌性恢復量增加 100%；恰好 50% 時尚未生效，恢復到門檻以上便失去加成。
+
+- **恢復算例**：原本恢復 15 點，沒有其他修正時變成 15 × (1 + 100%) = 30 點；若同階段已有 20% 加成，則由 18 點變成 33 點。實際仍以缺少的韌性為上限。
+
+- **作用範圍**：增加會套用韌性恢復加成的回復量；這不會自行產生一筆恢復，也不是讓所有協同自然恢復速度加倍。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_toughness_on_low_health.md) · [返回目錄](#talent-index)
 
 ---
