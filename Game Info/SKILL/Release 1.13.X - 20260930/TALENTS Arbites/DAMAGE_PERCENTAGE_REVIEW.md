@@ -28,6 +28,7 @@
 | [順劈加成](base_cleave_node_buff_medium_1.md) | 傷害與踉蹌的順劈容量提高 25%。；完整計算與適用限制見來源文件。 |
 | [衝擊加成](base_impact_node_buff_medium_1.md) | 衝擊提高 25%，更容易使敵人踉蹌。；完整計算與適用限制見來源文件。 |
 | [塑鋼裝甲](adamant_plasteel_plates.md) | 最大韌性增加 25 點。；完整計算與適用限制見來源文件。 |
+| [鋒利獠牙](adamant_dog_applies_brittleness.md) | 電子獒犬的撲擊施加 15% 脆弱，持續 5 秒；共用脆弱上限 40%。；完整計算與適用限制見來源文件。 |
 | [追跡法務官](adamant_dodge_grants_damage.md) | 成功閃避敵人攻擊後，傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [罪孽判官](adamant_stacking_weakspot_strength.md) | 命中弱點後每層增加 2% 弱點威力，最多 8 層，持續 10 秒。；完整計算與適用限制見來源文件。 |
 | [恰如其分](adamant_elite_special_kills_reload_speed.md) | 擊殺精英或專家敵人後，下次換彈速度提高 20%。；完整計算與適用限制見來源文件。 |

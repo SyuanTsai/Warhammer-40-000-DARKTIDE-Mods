@@ -30,6 +30,7 @@
 | [順劈加成](#base_cleave_node_buff_medium_1) | 未見明確矛盾 |
 | [衝擊加成](#base_impact_node_buff_medium_1) | 未見明確矛盾 |
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
+| [鋒利獠牙](#adamant_dog_applies_brittleness) | 未見明確矛盾 |
 | [追跡法務官](#adamant_dodge_grants_damage) | 未見明確矛盾 |
 | [罪孽判官](#adamant_stacking_weakspot_strength) | 未見明確矛盾 |
 | [恰如其分](#adamant_elite_special_kills_reload_speed) | 未見明確矛盾 |
@@ -208,6 +209,13 @@
 - 描述鍵：`loc_talent_adamant_plasteel_plates_desc`；hash：`a25db61a`。
 - 結論：未見明確矛盾。繁中「韌性提高」與英文 Toughness 的number25一致；百分比順序是補充。
 - [原始碼推導與限制](adamant_plasteel_plates.md)。
+
+<a id="adamant_dog_applies_brittleness"></a>
+## 鋒利獠牙(Serrated Maw)
+
+- 描述鍵：`loc_talent_adamant_dog_applies_brittleness_desc`；hash：`c858c05f`。
+- 結論：未見明確矛盾。繁中與英文的脆弱效果一致；層數換算及護甲依賴是機制補充，未列錯誤。
+- [原始碼推導與限制](adamant_dog_applies_brittleness.md)。
 
 <a id="adamant_dodge_grants_damage"></a>
 ## 追跡法務官(Arbites Revelatum)

@@ -28,6 +28,7 @@
 | <img src="https://github.com/user-attachments/assets/d3fa1c73-0a49-42ab-920c-11b7238af849" width="32" height="32" alt="順劈加成天賦圖示"> [順劈加成](#base_cleave_node_buff_medium_1)<br>- Cleave Boost | <ul><li>傷害與踉蹌的順劈容量提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e8b31492-509e-479a-9369-203e36e1e1e4" width="32" height="32" alt="衝擊加成天賦圖示"> [衝擊加成](#base_impact_node_buff_medium_1)<br>- Impact Boost | <ul><li>衝擊提高 25%，更容易使敵人踉蹌。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/170599ce-ad50-4760-93b2-da650c6deac8" width="32" height="32" alt="塑鋼裝甲天賦圖示"> [塑鋼裝甲](#adamant_plasteel_plates)<br>- Plasteel Plates | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/5df365c7-8213-4c06-acc5-2b00f0cda022" width="32" height="32" alt="鋒利獠牙天賦圖示"> [鋒利獠牙](#adamant_dog_applies_brittleness)<br>- Serrated Maw | <ul><li>電子獒犬的撲擊施加 15% 脆弱，持續 5 秒；共用脆弱上限 40%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9a87f145-d4a8-4554-b8ca-f5fbb2a58944" width="32" height="32" alt="追跡法務官天賦圖示"> [追跡法務官](#adamant_dodge_grants_damage)<br>- Arbites Revelatum | <ul><li>成功閃避敵人攻擊後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/59f1504d-8b25-40c7-a582-b5de1b3278cf" width="32" height="32" alt="罪孽判官天賦圖示"> [罪孽判官](#adamant_stacking_weakspot_strength)<br>- Soulguilt Scan | <ul><li>命中弱點後每層增加 2% 弱點威力，最多 8 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/88c5f583-d739-484e-a7cd-89b79a90334d" width="32" height="32" alt="恰如其分天賦圖示"> [恰如其分](#adamant_elite_special_kills_reload_speed)<br>- Judicious Efficiency | <ul><li>擊殺精英或專家敵人後，下次換彈速度提高 20%。</li></ul> | 技能 |
@@ -340,6 +341,21 @@
 - **加成順序**：這 25 點先加入基礎韌性，再套用最大韌性百分比加成。例如另有 20% 最大韌性加成，為 (100 + 25) × 1.2 = 150 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_plasteel_plates.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_dog_applies_brittleness"></a>
+### 鋒利獠牙(Serrated Maw)
+
+<img src="https://github.com/user-attachments/assets/5df365c7-8213-4c06-acc5-2b00f0cda022" width="72" height="72" alt="鋒利獠牙天賦圖示">
+
+- **觸發與疊層**：電子獒犬的初次撲擊命中施加 15% 脆弱，持續 5 秒；對歐格林與巨獸的壓制攻擊也可繼續施加。脆弱每層 2.5%，一次 6 層，共用 16 層上限，也就是最多 40%。再次施加會刷新全部層數的時間。
+
+- **隊伍效益**：脆弱留在敵人身上，因此隊友攻擊該目標也可受益；實際增傷取決於攻擊原有的護甲傷害係數。
+
+- **傷害算例**：若基礎傷害 100、原本護甲係數 0.5，傷害為 50；加入 15% 脆弱後，變成 100 × (0.5 + 0.15) = 65，實際提高 30%。若該護甲適用超額破甲轉換、原本係數已達 1，則為 100 × (1 + 0.15 × 0.25) = 103.75，並非固定增加 15% 最終傷害。
+
+[詳細資料](TALENTS%20Arbites/adamant_dog_applies_brittleness.md) · [返回目錄](#talent-index)
 
 ---
 
