@@ -100,6 +100,7 @@
 | [抗焦慮藥 I](#broker_stimm_concentration_1) | 未見明確中英矛盾 |
 | [抗焦慮藥 II](#broker_stimm_concentration_2) | 未見明確中英矛盾 |
 | [抗焦慮藥 III](#broker_stimm_concentration_3) | 未見明確中英矛盾 |
+| [抗焦慮藥 IV](#broker_stimm_concentration_4) | 未見明確中英矛盾 |
 | [激勵 I](#broker_stimm_celerity_1) | 未見明確中英矛盾 |
 | [狂熱](#broker_stimm_celerity_5c) | 未見明確中英矛盾 |
 | [激勵 II](#broker_stimm_celerity_2) | 未見明確中英矛盾 |
@@ -754,6 +755,13 @@
 - 描述鍵：`loc_talent_stat_combat_ability_cooldown_regen_modifier`；hash：`04d3484f`。
 - 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
 - [原始碼推導與限制](broker_stimm_concentration_3.md)。
+
+<a id="broker_stimm_concentration_4"></a>
+## 抗焦慮藥 IV(Kalma IV)
+
+- 描述鍵：`loc_talent_stat_combat_ability_cooldown_regen_modifier`；hash：`04d3484f`。
+- 結論：未見明確中英矛盾。逐一以相同 hash 核對動態組成的中英屬性描述，數值依固定來源的 format_values 與實際結算。原文未附疊加公式與算例屬資訊省略，不列為錯誤。
+- [原始碼推導與限制](broker_stimm_concentration_4.md)。
 
 <a id="broker_stimm_celerity_1"></a>
 ## 激勵 I(Spur I)
