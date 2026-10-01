@@ -30,6 +30,7 @@
 | [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [強效毒藥](#base_toxin_power_boost_1) | 未見明確矛盾 |
 | [黏黏手](#broker_passive_reduce_swap_time) | 未見明確矛盾 |
+| [請求暫停](#broker_passive_reduced_toughness_damage_during_reload) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -186,3 +187,10 @@
 - 描述鍵：`loc_talent_broker_passive_reduce_swap_time_desc`；hash：`dd6f6b11`。
 - 結論：未見明確矛盾。兩語均描述切換速度、腰射或架槍的後座力及散佈，未見矛盾。
 - [原始碼推導與限制](broker_passive_reduce_swap_time.md)。
+
+<a id="broker_passive_reduced_toughness_damage_during_reload"></a>
+## 請求暫停(Calling for a Time Out)
+
+- 描述鍵：`loc_talent_broker_passive_reduced_toughness_damage_during_reload_desc`；hash：`b4e891ca`。
+- 結論：未見明確矛盾。繁中語序較不順，但與英文同為換彈期間及之後的韌性減傷，不列勘誤。
+- [原始碼推導與限制](broker_passive_reduced_toughness_damage_during_reload.md)。
