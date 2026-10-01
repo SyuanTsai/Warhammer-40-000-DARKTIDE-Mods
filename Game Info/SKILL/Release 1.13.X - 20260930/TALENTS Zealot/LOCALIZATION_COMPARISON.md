@@ -29,6 +29,7 @@
 | [內憂外患](#zealot_toughness_in_melee) | 跨來源待同版核對 |
 | [信仰狂亂](#zealot_attack_speed) | 未見明確矛盾 |
 | [信仰之勇](#zealot_additional_wounds) | 未見明確矛盾 |
+| [鮮血受膏](#zealot_increase_ranged_close_damage) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_4) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
@@ -179,6 +180,13 @@
 - 描述鍵：`loc_talent_zealot_3_tier_1_ability_3_description`；hash：`029afb2e`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_additional_wounds.md)。
+
+<a id="zealot_increase_ranged_close_damage"></a>
+## 鮮血受膏(Anoint in Blood)
+
+- 描述鍵：`loc_talent_zealot_ranged_damage_increased_to_close_desc`；hash：`7504148a`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_increase_ranged_close_damage.md)。
 
 <a id="base_melee_damage_node_buff_medium_4"></a>
 ## 近戰增幅(Melee Damage Boost)

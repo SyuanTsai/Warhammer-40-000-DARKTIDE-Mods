@@ -27,6 +27,7 @@
 | <img src="https://github.com/user-attachments/assets/fbb6b38f-57a3-4659-bf32-04d1edc4d989" width="32" height="32" alt="內憂外患天賦圖示"> [內憂外患](#zealot_toughness_in_melee)<br>- Enemies Within, Enemies Without | <ul><li>5 公尺內有敵人時，持續恢復韌性；每秒最高 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c184be29-e45d-4968-acc5-ae67779d90cc" width="32" height="32" alt="信仰狂亂天賦圖示"> [信仰狂亂](#zealot_attack_speed)<br>- Faithful Frenzy | <ul><li>近戰攻速提高 10%，移動速度提高 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/793e953e-5b99-416a-99c8-c6d185df7cc9" width="32" height="32" alt="信仰之勇天賦圖示"> [信仰之勇](#zealot_additional_wounds)<br>- Faith's Fortitude | <ul><li>傷口數增加 2 格；不增加最大生命。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/f1f336d8-dc80-46a3-b756-2df08b26f541" width="32" height="32" alt="鮮血受膏天賦圖示"> [鮮血受膏](#zealot_increase_ranged_close_damage)<br>- Anoint in Blood | <ul><li>持用遠程武器時，近距離傷害最多提高 25%；距離增加時遞減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -325,6 +326,21 @@
 - **傷口算例**：最大生命 200、原本 2 格傷口時，每格 200 ÷ 2 = 100；選取後變成 4 格，每格 200 ÷ 4 = 50。它不會把生命值加到 400。
 
 [詳細資料](TALENTS%20Zealot/zealot_additional_wounds.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_increase_ranged_close_damage"></a>
+### 鮮血受膏(Anoint in Blood)
+
+<img src="https://github.com/user-attachments/assets/f1f336d8-dc80-46a3-b756-2df08b26f541" width="72" height="72" alt="鮮血受膏天賦圖示">
+
+- **運作方式**：持用遠程武器時，對 12.5 公尺內的目標最多增加 25% 傷害；超過 12.5 公尺後逐步降低，30 公尺起沒有這項加成。
+
+- **距離算例**：固定其他條件，基礎 100 點傷害，在 12.5 公尺內為 100 × 1.25 = 125；在 16.875 公尺，加成為 25% × [1 − √((16.875 − 12.5) ÷ 17.5)] = 12.5%，所以是 112.5 點。
+
+- **其他加成**：本項與同階段傷害加成相加；武器自身隨距離衰減的傷害另算，不能把上面的固定 100 當成所有距離的實測傷害。
+
+[詳細資料](TALENTS%20Zealot/zealot_increase_ranged_close_damage.md) · [返回目錄](#talent-index)
 
 ---
 

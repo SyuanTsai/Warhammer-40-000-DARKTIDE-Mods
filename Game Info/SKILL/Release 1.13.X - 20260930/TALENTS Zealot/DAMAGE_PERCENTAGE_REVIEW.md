@@ -27,4 +27,5 @@
 | [內憂外患](zealot_toughness_in_melee.md) | 5 公尺內有敵人時，持續恢復韌性；每秒最高 7.5% 最大韌性。；完整計算與適用限制見來源文件。 |
 | [信仰狂亂](zealot_attack_speed.md) | 近戰攻速提高 10%，移動速度提高 5%。；完整計算與適用限制見來源文件。 |
 | [信仰之勇](zealot_additional_wounds.md) | 傷口數增加 2 格；不增加最大生命。；完整計算與適用限制見來源文件。 |
+| [鮮血受膏](zealot_increase_ranged_close_damage.md) | 持用遠程武器時，近距離傷害最多提高 25%；距離增加時遞減。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_4.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |
