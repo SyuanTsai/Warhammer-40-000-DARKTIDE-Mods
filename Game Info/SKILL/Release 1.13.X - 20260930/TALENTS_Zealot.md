@@ -50,6 +50,7 @@
 | <img src="https://github.com/user-attachments/assets/28bd1a77-6a4b-44e5-b46c-1d1a334479e7" width="32" height="32" alt="神聖工具天賦圖示"> [神聖工具](#zealot_weapon_special_damage)<br>- Holy Tools | <ul><li>啟動近戰武器特殊動作後，5 秒內下一次近戰攻擊增傷 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="32" height="32" alt="為您撐腰天賦圖示"> [為您撐腰](#zealot_melee_kills_restore_toughness_to_target)<br>- Got Your Back | <ul><li>近戰擊殺正鎖定隊友的敵人，替隊友恢復 7.5% 最大韌性，自己額外恢復 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8137f892-5370-4a69-b790-556f579414d2" width="32" height="32" alt="淨化仇恨天賦圖示"> [淨化仇恨](#zealot_dmg_vs_burning_electrocuted)<br>- Purifying Hatred | <ul><li>對燃燒或遭電擊的敵人增加 15% 傷害；兩者同時成立可合計 30%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/a007251f-9a21-4822-b2e4-38eac8e0ae56" width="32" height="32" alt="死亡之舞天賦圖示"> [死亡之舞](#zealot_improved_weapon_handling_after_dodge)<br>- Dance of Death | <ul><li>成功閃避後，散布降低 75%、後座累積降低 50%，持續 3 秒。</li></ul> | 技能 |
 
 ---
 
@@ -676,5 +677,20 @@
 - **傷害算例**：基礎 100 點、僅符合其中一項時為 100 × 1.15 = 115；兩者皆符合時為 100 × (1 + 15% + 15%) = 130 點。其他同階段增傷也先相加。
 
 [詳細資料](TALENTS%20Zealot/zealot_dmg_vs_burning_electrocuted.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_improved_weapon_handling_after_dodge"></a>
+### 死亡之舞(Dance of Death)
+
+<img src="https://github.com/user-attachments/assets/a007251f-9a21-4822-b2e4-38eac8e0ae56" width="72" height="72" alt="死亡之舞天賦圖示">
+
+- **運作方式**：成功閃避攻擊後，子彈散布降低 75%、後座不穩定度的累積降低 50%，持續 3 秒；再次成功閃避會刷新時間。
+
+- **散布算例**：只計本效果，原本 4 度的受影響散布角變成 4 × 0.25 = 1 度。這不代表命中率固定提高 75%。
+
+- **後座算例**：每次原本增加 0.2 的不穩定度，變成 0.2 × 0.5 = 0.1；恢復時的衰減速度則乘 1 ÷ 0.5 = 2。實際準星偏移仍依武器後座曲線，不能保證所有畫面晃動直接減半。
+
+[詳細資料](TALENTS%20Zealot/zealot_improved_weapon_handling_after_dodge.md) · [返回目錄](#talent-index)
 
 ---
