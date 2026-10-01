@@ -29,3 +29,4 @@
 | [恰如其分](adamant_elite_special_kills_reload_speed.md) | 擊殺精英或專家敵人後，下次換彈速度提高 20%。；完整計算與適用限制見來源文件。 |
 | [行軍之志](adamant_movement_speed_on_block.md) | 遠程攻擊命中敵人後，移動速度提高 15%，持續 3 秒。；完整計算與適用限制見來源文件。 |
 | [無處可逃](adamant_elite_special_kills_offensive_boost.md) | 擊殺精英或專家敵人後，傷害與移速提高 10%，持續 4 秒。；完整計算與適用限制見來源文件。 |
+| [兵敗如山倒](adamant_cleave_after_push.md) | 推擊命中敵人後，近戰傷害的順劈容量提高 75%，持續 5 秒。；完整計算與適用限制見來源文件。 |

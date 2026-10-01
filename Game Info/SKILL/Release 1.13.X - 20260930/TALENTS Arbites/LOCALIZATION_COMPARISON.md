@@ -31,6 +31,7 @@
 | [恰如其分](#adamant_elite_special_kills_reload_speed) | 未見明確矛盾 |
 | [行軍之志](#adamant_movement_speed_on_block) | 未見明確矛盾 |
 | [無處可逃](#adamant_elite_special_kills_offensive_boost) | 未見明確矛盾 |
+| [兵敗如山倒](#adamant_cleave_after_push) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
@@ -192,3 +193,10 @@
 - 描述鍵：`loc_talent_adamant_elite_special_kills_offensive_boost_alt_desc`；hash：`ea8040eb`。
 - 結論：未見明確矛盾。繁中「傷害加成與移動速度」對應英文 Damage and Movement Speed，觸發及持續時間一致。
 - [原始碼推導與限制](adamant_elite_special_kills_offensive_boost.md)。
+
+<a id="adamant_cleave_after_push"></a>
+## 兵敗如山倒(Drive them Back)
+
+- 描述鍵：`loc_talent_adamant_cleave_after_push_desc`；hash：`1389250b`。
+- 結論：未見明確矛盾。繁中「推擊後…順劈」與英文 Pushing grants Cleave 一致；需要命中及只強化傷害容量屬未列細節。
+- [原始碼推導與限制](adamant_cleave_after_push.md)。

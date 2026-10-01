@@ -29,6 +29,7 @@
 | <img src="https://github.com/user-attachments/assets/88c5f583-d739-484e-a7cd-89b79a90334d" width="32" height="32" alt="恰如其分天賦圖示"> [恰如其分](#adamant_elite_special_kills_reload_speed)<br>- Judicious Efficiency | <ul><li>擊殺精英或專家敵人後，下次換彈速度提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8f0bcba7-48bd-4d61-ad19-b03a65160eb5" width="32" height="32" alt="行軍之志天賦圖示"> [行軍之志](#adamant_movement_speed_on_block)<br>- March | <ul><li>遠程攻擊命中敵人後，移動速度提高 15%，持續 3 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6d045fa3-97bc-4943-9e6e-0f703e68288d" width="32" height="32" alt="無處可逃天賦圖示"> [無處可逃](#adamant_elite_special_kills_offensive_boost)<br>- No Escape | <ul><li>擊殺精英或專家敵人後，傷害與移速提高 10%，持續 4 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/7b24cc5d-1975-4762-8b77-8899c0713175" width="32" height="32" alt="兵敗如山倒天賦圖示"> [兵敗如山倒](#adamant_cleave_after_push)<br>- Drive them Back | <ul><li>推擊命中敵人後，近戰傷害的順劈容量提高 75%，持續 5 秒。</li></ul> | 技能 |
 
 ---
 
@@ -326,5 +327,18 @@
 - **效果算例**：單計本效果，100 點傷害變成 110 點；每秒移動 5 公尺變成 5 × 1.1 = 5.5 公尺。若已有同階段 25% 增傷，則為 100 × (1 + 25% + 10%) = 135 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_elite_special_kills_offensive_boost.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_cleave_after_push"></a>
+### 兵敗如山倒(Drive them Back)
+
+<img src="https://github.com/user-attachments/assets/7b24cc5d-1975-4762-8b77-8899c0713175" width="72" height="72" alt="兵敗如山倒天賦圖示">
+
+- **觸發與刷新**：推擊至少命中一名敵人後，近戰傷害的順劈容量提高 75%，持續 5 秒；再次推中敵人重設時間。
+
+- **順劈算例**：原本可穿過 10 單位敵人質量，單計此效果變成 10 × 1.75 = 17.5 單位。這是傷害穿透容量，不會一併增加踉蹌穿透容量。
+
+[詳細資料](TALENTS%20Arbites/adamant_cleave_after_push.md) · [返回目錄](#talent-index)
 
 ---
