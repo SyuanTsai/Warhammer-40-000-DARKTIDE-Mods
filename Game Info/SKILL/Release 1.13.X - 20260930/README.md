@@ -761,7 +761,7 @@
 | 巢都格鬥家 / `broker_passive_dr_damage_tradeoff_on_stamina` | `ace3aabee6a2673be13ac7acb103a97f0ad12d92` | `ace3aabee6a2673be13ac7acb103a97f0ad12d92` |
 | 順手牽羊 / `broker_passive_low_ammo_regen` | `918e95ebeb37d4e0bfa19464c6e878ff5140b5b7` | `918e95ebeb37d4e0bfa19464c6e878ff5140b5b7` |
 | 趁勝追擊 / `broker_passive_cleave_on_cleave` | `c8025e8611ae400cc9e5c2f5e266638e2d183b28` | `c8025e8611ae400cc9e5c2f5e266638e2d183b28` |
-| 裝備財閥特殊裝備 / `broker_stimm_activation_talent` | `70c68446bf42e877689c7c62a56a0ca43ef99080` | `70c68446bf42e877689c7c62a56a0ca43ef99080` |
+| 裝備財閥特殊裝備 / `broker_stimm_activation_talent` | `70c68446bf42e877689c7c62a56a0ca43ef99080` | `2cf53dfe42b1ea69256bd2b41ac701549ad9bc31` |
 | 野火 I / `broker_stimm_combat_1` | `8b662f733a78a1ab6d470a4a87ec706f163853de` | `8b662f733a78a1ab6d470a4a87ec706f163853de` |
 | 野火 IV / `broker_stimm_combat_4a` | `1e2107cd9bd1eee1ef0c07423ab487f7af06b885` | `1e2107cd9bd1eee1ef0c07423ab487f7af06b885` |
 | 野火 II / `broker_stimm_combat_2` | `e6f9331f3e1476482e657ba12d6734f72b47fc06` | `e6f9331f3e1476482e657ba12d6734f72b47fc06` |
@@ -796,4 +796,4 @@
 | 基礎：神射手(Gunslinger)：基礎光環 / `broker_aura_gunslinger` | `b45774156f3d905e8e11d929e64ff6255d5eeadf` | `b45774156f3d905e8e11d929e64ff6255d5eeadf` |
 | 基礎：迅如疾風(Like the Wind)：基礎被動 / `broker_passive_improved_sprint_dodge` | `dc6fd96818a6990b0e462429eeded9c55f6e4636` | `0a01308b372f07db4e94f99f9244156d254a2b6e` |
 | 基礎：財閥專員(Cartel Special)：專用興奮劑 / `broker_stimm_description_talent` | `b2ca675696a65ea3f724b862e7df781a9f48b5f4` | `b2ca675696a65ea3f724b862e7df781a9f48b5f4` |
-| 基礎：專用興奮劑充能 / `broker_syringe` | `ee16a9afa9e49c320a6e249834cc33104131ed36` | `ee16a9afa9e49c320a6e249834cc33104131ed36` |
+| 基礎：專用興奮劑充能 / `broker_syringe` | `ee16a9afa9e49c320a6e249834cc33104131ed36` | `94acae4ef235082083406e5ea058c4226d3b51b0` |
