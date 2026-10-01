@@ -17,6 +17,7 @@
 | 技能 | [行雲流水(One Motion)](#veteran_reduce_swap_time) | 武器切換速度增加 50%。 |
 | 技能 | [幹掉它！(Bring it Down!)](#veteran_big_game_hunter) | 對歐格林與巨獸的傷害增加 20%。 |
 | 技能 | [優越情節(Superiority Complex)](#veteran_increase_damage_vs_elites) | 增加對精英敵人的傷害 |
+| 技能 | [鋼鐵意志(Iron Will)](#veteran_tdr_on_high_toughness) | 目前韌性高於最大韌性的 75% 時，韌性受到的傷害降低 50%。 |
 | 技能 | [讓他們全趴下！(Keep Their Heads Down!)](#veteran_increase_suppression) | 造成的壓制效果增加 75%。 |
 | 技能 | [近戰傷害提升(Melee Damage Boost)](#base_melee_damage_node_buff_high_2) | 近戰傷害增加 15%。 |
 | 技能 | [韌性減傷(Toughness Damage Reduction)](#base_toughness_damage_reduction_node_buff_medium_1) | 韌性受到的傷害降低 10%。 |
@@ -244,6 +245,24 @@
 - 若已有 **25% 同類傷害加成**：原傷害為 `100 × 1.25 = 125`；點選本天賦後為 `100 × (1 + 25% + 15%) = 140`，增加 **15 傷害**。
 
 [詳細資料](TALENTS%20Veteran/veteran_increase_damage_vs_elites.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_tdr_on_high_toughness"></a>
+
+### 鋼鐵意志(Iron Will)
+
+<img src="https://github.com/user-attachments/assets/d56c3a6f-0fed-4e37-bb08-aa3c87f5624d" width="72" height="72" alt="鋼鐵意志天賦圖示">
+
+- **目前韌性高於最大韌性的 75% 時，韌性受到的傷害降低 50%。**
+- 韌性恰好等於 75% 時不生效；補回門檻以上即可重新生效。
+
+#### 減傷算例
+
+- 最大韌性 200，生效條件為目前韌性高於 `200 × 75% = 150`。
+- 生效時原本 40 點韌性傷害變為 `40 × 0.5 = 20`；另有獨立 10% 減傷時為 `40 × 0.5 × 0.9 = 18`。
+
+[詳細資料](TALENTS%20Veteran/veteran_tdr_on_high_toughness.md) · [返回目錄](#talent-index)
 
 ---
 

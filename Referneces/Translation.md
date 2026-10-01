@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_block_break_gives_tdr` / `veteran_tdr_on_high_toughness` - 鋼鐵意志
+  - 英文對應：Iron Will。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2245-L2272)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_big_game_hunter` / `veteran_big_game_hunter` - 幹掉它！
   - 英文對應：Bring it Down!。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1075-L1101)；此來源證明識別鍵與天賦關係。
