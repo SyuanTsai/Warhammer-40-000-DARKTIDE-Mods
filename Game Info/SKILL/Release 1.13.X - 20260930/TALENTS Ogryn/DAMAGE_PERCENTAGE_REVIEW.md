@@ -23,3 +23,4 @@
 | [發現更多](ogryn_free_reload_after_ability.md) | 每約 15 秒恢復最大備彈的 1%。；完整計算與適用限制見來源文件。 |
 | [絕不屈服](ogryn_knocked_allies_grant_damage_reduction.md) | 20 公尺內每名需要救援的隊友提供 20% 減傷，最多 60%。；完整計算與適用限制見來源文件。 |
 | [嘎嘎！](ogryn_fully_charged_attacks_gain_damage_and_stagger.md) | 蓄力累積近戰傷害與衝擊力，每層 7.5%，最多 30%。；完整計算與適用限制見來源文件。 |
+| [毀滅之樂](ogryn_nearby_bleeds_reduce_damage_taken.md) | 8 公尺內每名流血敵人提供 5% 減傷，最多 30%。；完整計算與適用限制見來源文件。 |

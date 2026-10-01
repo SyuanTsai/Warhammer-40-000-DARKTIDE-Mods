@@ -23,6 +23,7 @@
 | <img src="https://github.com/user-attachments/assets/5a19ac08-20bc-41ee-8af1-bbc6194fa852" width="32" height="32" alt="發現更多天賦圖示"> [發現更多](#ogryn_free_reload_after_ability)<br>- Found Some More | <ul><li>每約 15 秒恢復最大備彈的 1%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/58952102-1822-4093-81f9-48b8cbc8f8a7" width="32" height="32" alt="絕不屈服天賦圖示"> [絕不屈服](#ogryn_knocked_allies_grant_damage_reduction)<br>- Won't Give In | <ul><li>20 公尺內每名需要救援的隊友提供 20% 減傷，最多 60%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e9d72852-9fa6-4e02-aded-e261adb660f0" width="32" height="32" alt="嘎嘎！天賦圖示"> [嘎嘎！](#ogryn_fully_charged_attacks_gain_damage_and_stagger)<br>- Crunch! | <ul><li>蓄力累積近戰傷害與衝擊力，每層 7.5%，最多 30%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/669fb8b0-a444-4216-abe1-74f4acc4af85" width="32" height="32" alt="毀滅之樂天賦圖示"> [毀滅之樂](#ogryn_nearby_bleeds_reduce_damage_taken)<br>- Delight in Destruction | <ul><li>8 公尺內每名流血敵人提供 5% 減傷，最多 30%。</li></ul> | 技能 |
 
 ---
 
@@ -280,5 +281,20 @@
 - **衝擊力算例**：原本 100 點衝擊力，滿層為 130 點；是否使敵人踉蹌還取決於敵人門檻，不能把衝擊力直接當成傷害。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_fully_charged_attacks_gain_damage_and_stagger.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_nearby_bleeds_reduce_damage_taken"></a>
+### 毀滅之樂(Delight in Destruction)
+
+<img src="https://github.com/user-attachments/assets/669fb8b0-a444-4216-abe1-74f4acc4af85" width="72" height="72" alt="毀滅之樂天賦圖示">
+
+- **生效條件**：8 公尺內每名正在流血的敵人使你受到的傷害降低 5%，最多計入 6 名。隊友造成的流血也能生效，同一敵人有多層流血仍只算一名。
+
+- **減傷算例**：3 名提供 15% 減傷，100 點變成 85 點；6 名以上為 100 × (1 − 30%) = 70 點。若另有獨立 20% 減傷，則為 100 × 0.7 × 0.8 = 56 點。
+
+- **更新方式**：約每秒重新計算附近流血敵人；敵人死亡、流血結束或移出範圍後會失去對應加成。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_nearby_bleeds_reduce_damage_taken.md) · [返回目錄](#talent-index)
 
 ---
