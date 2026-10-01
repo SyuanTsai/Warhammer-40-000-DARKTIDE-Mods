@@ -10,6 +10,7 @@
 | [炸彈使者](broker_blitz_missile_launcher.md) | 發射高威力飛彈，最多 2 枚；爆炸基礎半徑 7 公尺。；完整計算與適用限制見來源文件。 |
 | [化學手榴彈](broker_blitz_tox_grenade.md) | 投擲化學手榴彈，留下 15 秒毒區，最多攜帶 2 顆。；完整計算與適用限制見來源文件。 |
 | [精進神射手](broker_aura_gunslinger_improved.md) | 協同中的成員拾取彈藥時，各成員額外取得相當於該補給 10% 的彈藥。；完整計算與適用限制見來源文件。 |
+| [惡棍](broker_coherency_melee_damage.md) | 你與協同中的隊友，近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |
 | [快速且致命](broker_passive_close_range_damage_on_dodge.md) | 成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。；完整計算與適用限制見來源文件。 |
 | [特提恩是迎賓](broker_passive_first_target_damage.md) | 每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。；完整計算與適用限制見來源文件。 |
 | [打你的臉](broker_passive_close_ranged_damage.md) | 手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。；完整計算與適用限制見來源文件。 |
