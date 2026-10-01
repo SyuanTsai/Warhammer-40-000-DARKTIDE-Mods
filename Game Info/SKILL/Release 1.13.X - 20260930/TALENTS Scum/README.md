@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 8／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 9／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -19,3 +19,4 @@
 | 技能 | [翩翩蝶舞](broker_passive_ninja_grants_crit_chance.md) / `broker_passive_ninja_grants_crit_chance` | `node_b2a0147e-0949-4501-8650-2b1ba64377a9` | 完成（核心靜態機制） |
 | 技能 | [快速裝填](broker_passive_reload_speed_on_close_kill.md) / `broker_passive_reload_speed_on_close_kill` | `node_11c062d4-c4be-4e96-b5f2-991bbedf2de3` | 完成（核心靜態機制） |
 | 技能 | [能量爆發](broker_passive_stun_immunity_on_toughness_broken.md) / `broker_passive_stun_immunity_on_toughness_broken` | `node_d774a7a8-87a2-4b0e-973e-5f735b67109f` | 完成（核心靜態機制） |
+| 技能 | [韌性增幅](base_toughness_node_buff_medium_1.md) / `base_toughness_node_buff_medium_1` | `node_8cfdec14-fd7f-49eb-94b4-40cb4a9016a1` | 完成（核心靜態機制） |

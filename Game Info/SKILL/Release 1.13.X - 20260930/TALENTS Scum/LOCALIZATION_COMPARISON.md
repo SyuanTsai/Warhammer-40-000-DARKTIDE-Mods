@@ -16,6 +16,7 @@
 | [翩翩蝶舞](#broker_passive_ninja_grants_crit_chance) | 未見明確矛盾 |
 | [快速裝填](#broker_passive_reload_speed_on_close_kill) | 未見明確矛盾 |
 | [能量爆發](#broker_passive_stun_immunity_on_toughness_broken) | 未見明確矛盾 |
+| [韌性增幅](#base_toughness_node_buff_medium_1) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -72,3 +73,10 @@
 - 描述鍵：`loc_talent_broker_passive_stun_immunity_on_toughness_broken_desc`；hash：`261ee901`。
 - 結論：未見明確矛盾。繁中與英文均列6秒免暈、50%韌性及10秒冷卻；未說明冷卻起算點屬補充，不列錯誤。
 - [原始碼推導與限制](broker_passive_stun_immunity_on_toughness_broken.md)。
+
+<a id="base_toughness_node_buff_medium_1"></a>
+## 韌性增幅(Toughness Boost)
+
+- 描述鍵：`loc_talent_toughness_boost_medium_desc`；hash：`329702b6`。
+- 結論：未見明確矛盾。同源繁中與英文都是最大韌性增加，未見明確矛盾。
+- [原始碼推導與限制](base_toughness_node_buff_medium_1.md)。
