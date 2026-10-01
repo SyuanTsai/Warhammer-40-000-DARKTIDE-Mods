@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/6a4875ee-4056-4964-ae36-846e598954bc" width="32" height="32" alt="電弧手榴彈天賦圖示"> [電弧手榴彈](#cryptic_grenade_ability_arc_grenade)<br>- Arc Grenades | <ul><li>投擲後造成10公尺電擊爆炸，最多以4個目標起始電弧並向附近敵人連鎖。</li><li>每擊殺一名精英或專家敵人，恢復0.04份電容量。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/0efafa0a-aad0-4bb8-869f-133db37cf152" width="32" height="32" alt="匠師伺服頭骨天賦圖示"> [匠師伺服頭骨](#cryptic_servo_skull_improved)<br>- Artificer Servo-Skull | <ul><li>伺服頭骨可常駐跟隨，並可受命射擊敵人或執行資料解碼。</li><li>基礎伺服頭骨強化效果改為永久生效；命中還會使敵人承受更多傷害並累積燃燒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/14c1a0d8-2916-40d7-a7e2-8572a0b3e6d2" width="32" height="32" alt="超載電弧手榴彈天賦圖示"> [超載電弧手榴彈](#cryptic_arc_grenades_brittleness)<br>- Overcharged Arc Grenades | <ul><li>電弧手榴彈最多增加2個起始電弧目標。</li><li>電弧連鎖命中的敵人獲得8層脆弱。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/501bab77-4618-480e-80e8-3abb022f6a68" width="32" height="32" alt="強化電弧手榴彈天賦圖示"> [強化電弧手榴彈](#cryptic_arc_grenades_weapon_malfunction)<br>- Enhanced Arc Grenades | <ul><li>電弧手榴彈及其電弧命中可令適用的遠程敵人武器故障。</li><li>武器故障通常持續12秒，敵人再受命中時會更新故障時間。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/e70f3e4b-d2c2-4840-bc29-56ba85dd816d" width="32" height="32" alt="過載艾曼納圖斯力場天賦圖示"> [過載艾曼納圖斯力場](#cryptic_force_field_duration_increase)<br>- Overcharged Refraction Emitter | <ul><li>將艾曼納圖斯力場持續時間由8秒提高至12秒，並在持續時間中點額外引發一次電擊爆炸。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/9eb6e468-224f-4d7c-b696-cc58aa08f532" width="32" height="32" alt="動能排斥天賦圖示"> [動能排斥](#cryptic_force_field_capacitance_restore)<br>- Kinetic Repulsion | <ul><li>艾曼納圖斯力場吸收遠程攻擊時會恢復電容量。</li><li>每次吸收恢復0.025份，每次力場最多恢復0.75份。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/c365855a-e85f-4d0d-8156-4048ae9f7e02" width="32" height="32" alt="心智網指令天賦圖示"> [心智網指令](#cryptic_servo_skull_improved_tagging)<br>- Noospheric Command | <ul><li>標記敵人並下令攻擊，可使伺服頭骨短暫大幅加快射擊。</li><li>完整2秒加速消耗0.3份電容量；沒有最低電容量時不能啟動，訓練場例外。</li></ul> | 閃擊 |
@@ -197,6 +198,21 @@
 - **傷害算例**：只比較護甲階段，假設護甲前100點、原倍率0.5且該護甲的撕裂係數為1，8層脆弱會讓傷害由100 × 0.5 = 50點提高至100 × (0.5 + 20%) = 70點。16層則為90點；跨過護甲倍率1時須另算。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_arc_grenades_brittleness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_arc_grenades_weapon_malfunction"></a>
+### 強化電弧手榴彈(Enhanced Arc Grenades)
+
+<img src="https://github.com/user-attachments/assets/501bab77-4618-480e-80e8-3abb022f6a68" width="72" height="72" alt="強化電弧手榴彈天賦圖示">
+
+- **運作方式**：電弧手榴彈爆炸或其電弧命中適用的遠程敵人時，會令其遠程武器故障，通常持續12秒。
+
+- **時間算例**：第0秒命中後，故障原訂第12秒結束；若第8秒再次命中，改至8 + 12 = 第20秒結束。部分敵人仍會改用近戰攻擊。
+
+- **運作方式**：標準電弧手榴彈爆炸半徑為10公尺；是否造成武器故障還取決於目標是否支援此狀態。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_arc_grenades_weapon_malfunction.md) · [返回目錄](#talent-index)
 
 ---
 

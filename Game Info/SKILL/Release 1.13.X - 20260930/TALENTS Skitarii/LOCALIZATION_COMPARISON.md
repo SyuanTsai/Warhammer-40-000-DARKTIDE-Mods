@@ -14,6 +14,7 @@
 | [電弧手榴彈](#cryptic_grenade_ability_arc_grenade) | 文字與程式目標排序待同版核對 |
 | [匠師伺服頭骨](#cryptic_servo_skull_improved) | 未見明確矛盾；補充機制與算例 |
 | [超載電弧手榴彈](#cryptic_arc_grenades_brittleness) | 未見明確矛盾；補充連鎖與脆弱計算 |
+| [強化電弧手榴彈](#cryptic_arc_grenades_weapon_malfunction) | 未見明確矛盾；補充刷新與目標限制 |
 | [過載艾曼納圖斯力場](#cryptic_force_field_duration_increase) | 未見明確矛盾；補充機制與算例 |
 | [動能排斥](#cryptic_force_field_capacitance_restore) | 未見明確矛盾；補充機制與算例 |
 | [心智網指令](#cryptic_servo_skull_improved_tagging) | 未見明確矛盾；補充機制與算例 |
@@ -140,6 +141,13 @@
 - 描述鍵：`loc_talent_cryptic_arc_grenades_brittleness_desc`；hash：`699afdc0`。
 - 結論：未見明確矛盾；補充連鎖與脆弱計算。繁中描述列出電弧目標增加2個及命中敵人施加8層、每層2.5%脆弱。程式確認額外數值加在起始目標上限，並在電弧連鎖節點加8層、每層2.5%且5秒；最大疊層為16層。Build 25492122 尚未確認與固定來源同版。
 - [原始碼推導與限制](cryptic_arc_grenades_brittleness.md)。
+
+<a id="cryptic_arc_grenades_weapon_malfunction"></a>
+## 強化電弧手榴彈(Enhanced Arc Grenades)
+
+- 描述鍵：`loc_talent_cryptic_arc_grenades_weapon_malfunction_larger_desc`；hash：`6282ba9c`。
+- 結論：未見明確矛盾；補充刷新與目標限制。繁中說明指出電弧手榴彈會令受影響的遠程敵人無法使用遠程武器12秒。固定來源確認直接爆炸及電弧連鎖命中可觸發武器故障，程式條件還要求目標具故障元件且存活；品種預設與目前列出的故障時長為12秒。Build 25492122 尚未確認與固定來源同版。
+- [原始碼推導與限制](cryptic_arc_grenades_weapon_malfunction.md)。
 
 <a id="cryptic_force_field_duration_increase"></a>
 ## 過載艾曼納圖斯力場(Overcharged Refraction Emitter)
