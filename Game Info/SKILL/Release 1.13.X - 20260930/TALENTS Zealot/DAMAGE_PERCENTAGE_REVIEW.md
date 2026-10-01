@@ -18,4 +18,5 @@
 | [為了帝皇](zealot_reduced_damage_on_wound.md) | 單次生命傷害若會跨過下一個傷口分界，該次生命傷害降低 40%。；完整計算與適用限制見來源文件。 |
 | [惡毒贈禮](zealot_toughness_on_heavy_kills.md) | 重擊擊殺敵人時，額外恢復 10% 最大韌性。；完整計算與適用限制見來源文件。 |
 | [韌性減傷](base_toughness_damage_reduction_node_buff_medium_1.md) | 韌性受到的傷害降低 10%。；完整計算與適用限制見來源文件。 |
+| [決鬥者](zealot_increased_crit_and_weakspot_damage_after_dodge.md) | 成功閃避後，弱點／爆擊的額外傷害增加 50%，持續 3 秒。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_4.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |

@@ -20,6 +20,7 @@
 | [為了帝皇](#zealot_reduced_damage_on_wound) | 未見明確矛盾 |
 | [惡毒贈禮](#zealot_toughness_on_heavy_kills) | 明確繁中誤譯 |
 | [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
+| [決鬥者](#zealot_increased_crit_and_weakspot_damage_after_dodge) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_4) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
@@ -107,6 +108,13 @@
 - 描述鍵：`loc_talent_toughness_damage_reduction_medium_desc`；hash：`1272bcc0`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](base_toughness_damage_reduction_node_buff_medium_1.md)。
+
+<a id="zealot_increased_crit_and_weakspot_damage_after_dodge"></a>
+## 決鬥者(Duellist)
+
+- 描述鍵：`loc_talent_zealot_duelist_new_desc`；hash：`b41ec4a9`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_increased_crit_and_weakspot_damage_after_dodge.md)。
 
 <a id="base_melee_damage_node_buff_medium_4"></a>
 ## 近戰增幅(Melee Damage Boost)
