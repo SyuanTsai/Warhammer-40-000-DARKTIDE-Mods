@@ -52,3 +52,4 @@
 | [休想再打中我......](ogryn_ranged_damage_immunity.md) | 受到遠程傷害後，獲得 20% 遠程減傷，持續 2.5 秒。；完整計算與適用限制見來源文件。 |
 | [熟能生巧](ogryn_wield_speed_increase.md) | 武器切換速度提高 35%。；完整計算與適用限制見來源文件。 |
 | [射盡殺戮](ogryn_ranged_improves_melee.md) | 打空彈匣後，提高 15% 近戰傷害與 7.5% 近戰攻速，持續 6 秒。；完整計算與適用限制見來源文件。 |
+| [猛砸爆裂](ogryn_melee_improves_ranged.md) | 每次近戰擊殺增加 3% 遠程傷害，最多 5 層，持續 10 秒。；完整計算與適用限制見來源文件。 |

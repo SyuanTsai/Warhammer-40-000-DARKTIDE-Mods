@@ -54,6 +54,7 @@
 | [休想再打中我......](#ogryn_ranged_damage_immunity) | 未見明確矛盾 |
 | [熟能生巧](#ogryn_wield_speed_increase) | 繁中描述錯誤 |
 | [射盡殺戮](#ogryn_ranged_improves_melee) | 未見明確矛盾 |
+| [猛砸爆裂](#ogryn_melee_improves_ranged) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -384,3 +385,10 @@
 - 描述鍵：`loc_talent_ogryn_ranged_improves_melee_desc`；hash：`7ba7e606`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_ranged_improves_melee.md)。
+
+<a id="ogryn_melee_improves_ranged"></a>
+## 猛砸爆裂(Bash and Blast)
+
+- 描述鍵：`loc_talent_ogryn_melee_improves_ranged_desc`；hash：`01fff66e`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_melee_improves_ranged.md)。

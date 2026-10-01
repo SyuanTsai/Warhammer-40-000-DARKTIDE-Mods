@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L3-L10)。內部 tree version 25 不等於遊戲發行版號。
 
-完成 46／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 47／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -57,3 +57,4 @@
 | 技能 | [休想再打中我......](ogryn_ranged_damage_immunity.md) / `ogryn_ranged_damage_immunity` | `node_8da16e7f-a2a1-4400-9b7e-e6ea62d8e57d` | 完成（核心靜態機制） |
 | 技能 | [熟能生巧](ogryn_wield_speed_increase.md) / `ogryn_wield_speed_increase` | `node_cc251802-f60d-41bf-9528-7428fa11391b` | 完成（核心靜態機制） |
 | 技能 | [射盡殺戮](ogryn_ranged_improves_melee.md) / `ogryn_ranged_improves_melee` | `node_fce211eb-69a1-47f3-a8c4-74589f2d1918` | 完成（核心靜態機制） |
+| 技能 | [猛砸爆裂](ogryn_melee_improves_ranged.md) / `ogryn_melee_improves_ranged` | `node_b8096b53-1713-464f-83f5-ea40310afd3b` | 完成（核心靜態機制） |

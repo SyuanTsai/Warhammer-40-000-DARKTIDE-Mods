@@ -52,6 +52,7 @@
 | <img src="https://github.com/user-attachments/assets/b7e2a92b-0a60-459a-87c9-6276b204f64e" width="32" height="32" alt="休想再打中我......天賦圖示"> [休想再打中我......](#ogryn_ranged_damage_immunity)<br>- Can't Hit Me...Again | <ul><li>受到遠程傷害後，獲得 20% 遠程減傷，持續 2.5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5974d1c4-5b31-42b8-af90-022202c4614e" width="32" height="32" alt="熟能生巧天賦圖示"> [熟能生巧](#ogryn_wield_speed_increase)<br>- Dedicated Practice | <ul><li>武器切換速度提高 35%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/eeae1229-b245-43fc-9840-960c36f5787e" width="32" height="32" alt="射盡殺戮天賦圖示"> [射盡殺戮](#ogryn_ranged_improves_melee)<br>- Spray and Slay | <ul><li>打空彈匣後，提高 15% 近戰傷害與 7.5% 近戰攻速，持續 6 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/fdf1eb1f-b76f-4452-beac-f2205fc32d2b" width="32" height="32" alt="猛砸爆裂天賦圖示"> [猛砸爆裂](#ogryn_melee_improves_ranged)<br>- Bash and Blast | <ul><li>每次近戰擊殺增加 3% 遠程傷害，最多 5 層，持續 10 秒。</li></ul> | 技能 |
 
 ---
 
@@ -750,5 +751,18 @@
 - **計算範例**：基礎 100 點近戰傷害變成 115 點；受攻速影響的 1 秒動作變成 1 ÷ 1.075 ≈ 0.930 秒。其他同階段傷害或速度加成各自相加。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_ranged_improves_melee.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_melee_improves_ranged"></a>
+### 猛砸爆裂(Bash and Blast)
+
+<img src="https://github.com/user-attachments/assets/fdf1eb1f-b76f-4452-beac-f2205fc32d2b" width="72" height="72" alt="猛砸爆裂天賦圖示">
+
+- **觸發與疊層**：近戰擊殺一名敵人獲得一層，每層增加 3% 遠程傷害，最多 5 層、合計 15%，持續 10 秒；再次近戰擊殺刷新時間。
+
+- **傷害算例**：滿層時，基礎 100 點遠程傷害變成 115 點；同階段另有 20% 加成時為 100 × (1 + 20% + 5 × 3%) = 135 點。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_melee_improves_ranged.md) · [返回目錄](#talent-index)
 
 ---
