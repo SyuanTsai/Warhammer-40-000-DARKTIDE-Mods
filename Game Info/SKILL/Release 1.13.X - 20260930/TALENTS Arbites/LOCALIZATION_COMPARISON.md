@@ -18,6 +18,7 @@
 | [殺戮命令](#adamant_dog_damage_after_ability) | 未見明確矛盾 |
 | [處刑命令](#adamant_execution_order) | 待同版核對 |
 | [孤狼](#adamant_disable_companion) | 未見明確矛盾 |
+| [鎖定目標](#adamant_forceful_offensive) | 未見明確矛盾 |
 | [法務官警覺](#adamant_forceful_ability_damage) | 未見明確矛盾 |
 | [效率殺手](#adamant_execution_order_crit) | 未見明確矛盾 |
 | [生化武器關](#adamant_execution_order_cdr) | 未見明確矛盾 |
@@ -148,6 +149,13 @@
 - 描述鍵：`loc_talent_adamant_disable_companion_replenish_split_desc`；hash：`fe3bded9`。
 - 結論：未見明確矛盾。同源繁中與英文的移除獒犬、個人增益與補充間隔一致；45／90秒都有實際消費路徑，另一個未使用的60秒欄位不構成文字矛盾。
 - [原始碼推導與限制](adamant_disable_companion.md)。
+
+<a id="adamant_forceful_offensive"></a>
+## 鎖定目標(Targets Acquired)
+
+- 描述鍵：`loc_talent_adamant_forceful_melee_alt_desc`；hash：`57827aa3`。
+- 結論：未見明確矛盾。繁中「疊滿層數時（以及後續的 3 秒內）獲得 10% 攻擊速度和 50% 順劈」對應英文 “While at Max Stacks, and for 3s afterwards, Gain 10% Attack Speed and 50% Cleave”；一致。
+- [原始碼推導與限制](adamant_forceful_offensive.md)。
 
 <a id="adamant_forceful_ability_damage"></a>
 ## 法務官警覺(Arbites Vigilant)
