@@ -25,6 +25,7 @@
 | <img src="https://github.com/user-attachments/assets/d3fa1c73-0a49-42ab-920c-11b7238af849" width="32" height="32" alt="順劈加成天賦圖示"> [順劈加成](#base_cleave_node_buff_medium_1)<br>- Cleave Boost | <ul><li>傷害與踉蹌的順劈容量提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e8b31492-509e-479a-9369-203e36e1e1e4" width="32" height="32" alt="衝擊加成天賦圖示"> [衝擊加成](#base_impact_node_buff_medium_1)<br>- Impact Boost | <ul><li>衝擊提高 25%，更容易使敵人踉蹌。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/170599ce-ad50-4760-93b2-da650c6deac8" width="32" height="32" alt="塑鋼裝甲天賦圖示"> [塑鋼裝甲](#adamant_plasteel_plates)<br>- Plasteel Plates | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/9a87f145-d4a8-4554-b8ca-f5fbb2a58944" width="32" height="32" alt="追跡法務官天賦圖示"> [追跡法務官](#adamant_dodge_grants_damage)<br>- Arbites Revelatum | <ul><li>成功閃避敵人攻擊後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 
 ---
 
@@ -270,5 +271,18 @@
 - **加成順序**：這 25 點先加入基礎韌性，再套用最大韌性百分比加成。例如另有 20% 最大韌性加成，為 (100 + 25) × 1.2 = 150 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_plasteel_plates.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_dodge_grants_damage"></a>
+### 追跡法務官(Arbites Revelatum)
+
+<img src="https://github.com/user-attachments/assets/9a87f145-d4a8-4554-b8ca-f5fbb2a58944" width="72" height="72" alt="追跡法務官天賦圖示">
+
+- **觸發與刷新**：成功閃避敵人的攻擊後，傷害提高 15%，持續 5 秒；再次成功閃避重設時間。只做出閃避動作不會觸發。
+
+- **傷害算例**：基礎 100 點傷害、無其他修正時變成 100 × (1 + 15%) = 115 點；同階段原有 25% 加成時，由 125 點變成 140 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_dodge_grants_damage.md) · [返回目錄](#talent-index)
 
 ---
