@@ -19,6 +19,7 @@
 | 技能 | [幹掉它！(Bring it Down!)](#veteran_big_game_hunter) | 對歐格林與巨獸的傷害增加 20%。 |
 | 技能 | [優越情節(Superiority Complex)](#veteran_increase_damage_vs_elites) | 增加對精英敵人的傷害 |
 | 技能 | [鋼鐵意志(Iron Will)](#veteran_tdr_on_high_toughness) | 目前韌性高於最大韌性的 75% 時，韌性受到的傷害降低 50%。 |
+| 技能 | [荷槍實彈(Lock and Load)](#veteran_clip_size) | 彈匣容量增加 25%。 |
 | 技能 | [讓他們全趴下！(Keep Their Heads Down!)](#veteran_increase_suppression) | 造成的壓制效果增加 75%。 |
 | 技能 | [近戰傷害提升(Melee Damage Boost)](#base_melee_damage_node_buff_high_2) | 近戰傷害增加 15%。 |
 | 技能 | [韌性減傷(Toughness Damage Reduction)](#base_toughness_damage_reduction_node_buff_medium_1) | 韌性受到的傷害降低 10%。 |
@@ -282,6 +283,24 @@
 - 生效時原本 40 點韌性傷害變為 `40 × 0.5 = 20`；另有獨立 10% 減傷時為 `40 × 0.5 × 0.9 = 18`。
 
 [詳細資料](TALENTS%20Veteran/veteran_tdr_on_high_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_clip_size"></a>
+
+### 荷槍實彈(Lock and Load)
+
+<img src="https://github.com/user-attachments/assets/6632d16b-faac-444e-8139-99057e2f613a" width="72" height="72" alt="荷槍實彈天賦圖示">
+
+- **彈匣容量增加 25%。**
+- 換算後不足 1 發的部分捨去；不直接增加備彈上限。
+
+#### 容量算例
+
+- 原本 40 發：`40 × 1.25 = 50 發`。
+- 原本 7 發：`7 × 1.25 = 8.75`，向下取整後為 **8 發**。
+
+[詳細資料](TALENTS%20Veteran/veteran_clip_size.md) · [返回目錄](#talent-index)
 
 ---
 
