@@ -46,7 +46,7 @@
 | [完美主義](#psyker_mark_increased_max_stacks) | 未見明確矛盾 |
 | [盜竊天命](#psyker_mark_kills_can_vent) | 未見明確矛盾 |
 | [持久影響](#psyker_mark_increased_duration) | 未見明確矛盾 |
-| [充能完畢](#psyker_empowered_grenades_increased_max_stacks) | 已配對；機制待核對 |
+| [充能完畢](#psyker_empowered_grenades_increased_max_stacks) | 未見明確矛盾 |
 | [涅槃](#psyker_warpfire_generate_souls) | 已配對；機制待核對 |
 | [靈能吸血鬼](#psyker_aura_souls_on_kill) | 已配對；機制待核對 |
 | [亞空間電池](#psyker_increased_max_souls) | 已配對；機制待核對 |
@@ -364,7 +364,7 @@
 ## 充能完畢(Charged Up)
 
 - 描述鍵：`loc_talent_psyker_increased_empowered_chain_lightning_stacks_description`；hash：`61957b58`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。同描述鍵的繁中與英文效果方向一致；未列完整公式與上限不視為誤譯。
 - [原始碼推導與限制](psyker_empowered_grenades_increased_max_stacks.md)。
 
 <a id="psyker_warpfire_generate_souls"></a>

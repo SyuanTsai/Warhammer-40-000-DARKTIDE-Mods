@@ -44,7 +44,7 @@
 | [完美主義](psyker_mark_increased_max_stacks.md) | 精準加成上限由 15 層提高至 25 層；完整計算與適用限制見來源文件。 |
 | [盜竊天命](psyker_mark_kills_can_vent.md) | 擊殺被標記的敵人，平息 5 個反噬百分點；完整計算與適用限制見來源文件。 |
 | [持久影響](psyker_mark_increased_duration.md) | 精準加成倒數由 5 秒延長至 10 秒；完整計算與適用限制見來源文件。 |
-| [充能完畢](psyker_empowered_grenades_increased_max_stacks.md) | 機制與公式待核對。 |
+| [充能完畢](psyker_empowered_grenades_increased_max_stacks.md) | 靈能強化最多儲存 3 層；完整計算與適用限制見來源文件。 |
 | [涅槃](psyker_warpfire_generate_souls.md) | 機制與公式待核對。 |
 | [靈能吸血鬼](psyker_aura_souls_on_kill.md) | 機制與公式待核對。 |
 | [亞空間電池](psyker_increased_max_souls.md) | 機制與公式待核對。 |
