@@ -18,6 +18,7 @@
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
 | 技能 | [戰術裝填(Tactical Reload)](#veteran_faster_reload_on_non_empty_clips) | 彈匣還有彈藥時開始裝填，裝填速度增加 25%。 |
+| 技能 | [齊射能手(Volley Adept)](#veteran_reload_speed_on_elite_kill) | 擊殺精英或專家敵人後，下一次裝填速度增加 30%。 |
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
@@ -275,6 +276,24 @@
 - 原本裝填需 4 秒，沒有其他加成：`4 ÷ (1 + 25%) = 3.2 秒`，縮短 **0.8 秒**。
 
 [詳細資料](TALENTS%20Veteran/veteran_faster_reload_on_non_empty_clips.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_reload_speed_on_elite_kill"></a>
+
+### 齊射能手(Volley Adept)
+
+<img src="https://github.com/user-attachments/assets/009ef44a-cf3d-44cf-ac8b-cda57c6fd83d" width="72" height="72" alt="齊射能手天賦圖示">
+
+- **擊殺精英或專家敵人後，下一次裝填速度增加 30%。**
+- 重複擊殺不累積次數。效果保留至裝填實際補入彈藥，並維持到該次裝填動作結束。
+
+#### 裝填算例
+
+- 原本裝填需 4 秒，只計此天賦：`4 ÷ 1.3 ≈ 3.08 秒`。
+- 與戰術裝填同時生效：`4 ÷ (1 + 30% + 25%) ≈ 2.58 秒`。
+
+[詳細資料](TALENTS%20Veteran/veteran_reload_speed_on_elite_kill.md) · [返回目錄](#talent-index)
 
 ---
 

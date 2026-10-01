@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_reload_speed_on_elite_kill` / `veteran_reload_speed_on_elite_kill` - 齊射能手
+  - 英文對應：Volley Adept。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L987-L1003)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_ranger_reload_speed_empty_mag` / `veteran_faster_reload_on_non_empty_clips` - 戰術裝填
   - 英文對應：Tactical Reload。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2362-L2378)；此來源證明識別鍵與天賦關係。
