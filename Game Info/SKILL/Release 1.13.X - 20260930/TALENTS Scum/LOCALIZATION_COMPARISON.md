@@ -17,6 +17,7 @@
 | [強化亡命之徒](#broker_ability_focus_improved) | 未見明確中英矛盾 |
 | [熔爐怒吼](#broker_ability_punk_rage_sub_2) | 未見明確中英矛盾 |
 | [凝聚殺意](#broker_ability_punk_rage_sub_1) | 未見明確中英矛盾 |
+| [沸騰之血](#broker_ability_punk_rage_sub_3) | 未見中英翻譯差異（攻擊間隔百分比與程式值不相符） |
 | [專注凝神](#broker_ability_focus_sub_3) | 未見中英翻譯差異（觸發條件由程式補充） |
 | [精準獵殺](#broker_ability_focus_sub_2) | 未見明確中英矛盾 |
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
@@ -129,6 +130,13 @@
 - 描述鍵：`loc_talent_broker_ability_punk_rage_sub_1_desc_02`；hash：`472cc8e5`。
 - 結論：未見明確中英矛盾。繁中與英文都將效果限制在怒火期間的近戰重攻擊，並描述撕裂；設定及傷害計算的適用條件一致。設定內另有0.5進度值，但不是原文翻譯差異。
 - [原始碼推導與限制](broker_ability_punk_rage_sub_1.md)。
+
+<a id="broker_ability_punk_rage_sub_3"></a>
+## 沸騰之血(Forge's Bellow)
+
+- 描述鍵：`loc_talent_broker_ability_punk_rage_sub_3_desc_02`；hash：`aa1fa2de`。
+- 結論：未見中英翻譯差異（攻擊間隔百分比與程式值不相符）。繁中與英文皆稱攻擊間隔增加50%，因此沒有兩語反向翻譯。固定版本程式卻把敵人 melee_attack_speed 設為-0.5；按速度倒數，單計此效果攻擊間隔約變兩倍（增加100%），另有遠程攻擊不受此近戰欄位影響。故記錄程式與文字數值落差，不填翻譯勘誤。
+- [原始碼推導與限制](broker_ability_punk_rage_sub_3.md)。
 
 <a id="broker_ability_focus_sub_3"></a>
 ## 專注凝神(Focused Resolve)
