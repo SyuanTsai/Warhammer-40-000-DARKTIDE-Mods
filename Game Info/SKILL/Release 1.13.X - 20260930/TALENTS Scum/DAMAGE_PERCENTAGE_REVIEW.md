@@ -21,3 +21,4 @@
 | [狂轟猛射](broker_passive_damage_on_reload.md) | 換彈後 7 秒內，遠程傷害增加 2%；每消耗相當於彈匣 10% 的彈藥，再增加 2%。；完整計算與適用限制見來源文件。 |
 | [堅韌疾速](broker_passive_stamina_grants_atk_speed.md) | 每 1 點目前耐力，增加 2% 近戰攻擊速度；不足 1 點捨去。；完整計算與適用限制見來源文件。 |
 | [加重背刺](broker_passive_ramping_backstabs.md) | 每次近戰背刺後增加 10% 近戰威力，最多 5 層；非背刺近戰命中會清除。；完整計算與適用限制見來源文件。 |
+| [移動目標](broker_passive_increased_ranged_dodges.md) | 手持遠程武器時，有效閃避次數增加 1 次。；完整計算與適用限制見來源文件。 |
