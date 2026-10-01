@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9" width="32" height="32" alt="動能共鳴天賦圖示"> [動能共鳴](#psyker_ability_increase_brain_burst_speed)<br>- Kinetic Resonance | <ul><li>使用戰鬥能力後 10 秒內，顱腦崩裂蓄力速度增加 75%，反噬產生量減少 50%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="亞空間耗費天賦圖示"> [亞空間耗費](#psyker_toughness_on_melee)<br>- Warp Expenditure | <ul><li>近戰命中首個敵人，恢復 2.5% 最大韌性。</li><li>近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
@@ -45,6 +46,24 @@
 | <img src="https://github.com/user-attachments/assets/57acd7a3-65a7-460c-876c-3153b63d69a3" width="32" height="32" alt="亞空間幽魂天賦圖示"> [亞空間幽魂](#psyker_stat_mix)<br>- Warp Ghost | <ul><li>耐力增加 2 點，韌性恢復量增加 25%。</li><li>反噬在自然消退的適用區段減慢 80%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/790d837c-239d-4d45-b4e8-c3c039df63ba" width="32" height="32" alt="靈魂穿透天賦圖示"> [靈魂穿透](#psyker_warp_attacks_rending)<br>- Penetration of the Soul | <ul><li>亞空間攻擊依目前反噬獲得撕裂，最高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e66044cc-0b83-4f85-86ff-84661f076941" width="32" height="32" alt="念力之握天賦圖示"> [念力之握](#psyker_increased_blitz_damage)<br>- Psykinetic Grip | <ul><li>顱腦崩裂、懲戒與靈能攻擊的傷害增加 20%。</li></ul> | 技能 |
+
+---
+
+## 閃擊
+
+<a id="psyker_ability_increase_brain_burst_speed"></a>
+### 動能共鳴(Kinetic Resonance)
+
+<img src="https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9" width="72" height="72" alt="動能共鳴天賦圖示">
+
+- **運作方式**：使用戰鬥能力後 10 秒內，顱腦崩裂蓄力速度增加 75%，產生的反噬減少 50%。
+
+- **蓄力算例**：假設原蓄力需 2 秒、無其他加成，2 ÷ 1.75 ≈ 1.14 秒；原本產生 10 個百分點反噬，則變成 10 × 0.5 = 5 個百分點。
+
+[詳細資料](TALENTS%20Psyker/psyker_ability_increase_brain_burst_speed.md) · [返回目錄](#talent-index)
+
+---
+
 
 ---
 

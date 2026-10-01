@@ -13,7 +13,7 @@
 | [靈能攻擊](#psyker_grenade_throwing_knives) | 已配對；機制待核對 |
 | [乙太碎片](#psyker_throwing_knives_piercing) | 已配對；機制待核對 |
 | [懲戒](#psyker_grenade_chain_lightning) | 已配對；機制待核對 |
-| [動能共鳴](#psyker_ability_increase_brain_burst_speed) | 已配對；機制待核對 |
+| [動能共鳴](#psyker_ability_increase_brain_burst_speed) | 效果方向吻合，算例補足速度換算 |
 | [迅捷碎片](#psyker_throwing_knives_cast_speed) | 已配對；機制待核對 |
 | [衰弱詛咒](#psyker_chain_lightning_improved_target_buff) | 已配對；機制待核對 |
 | [蓄力打擊](#psyker_chain_lightning_heavy_attacks) | 已配對；機制待核對 |
@@ -129,7 +129,7 @@
 ## 動能共鳴(Kinetic Resonance)
 
 - 描述鍵：`loc_talent_psyker_ability_increase_brain_burst_speed_desc`；hash：`ee94ffdd`。
-- 已配對原文，機制待核對。
+- 結論：效果方向吻合，算例補足速度換算。本機繁中原文指使用戰鬥技能後加快顱腦崩裂充能並降低反噬；固定來源值為 +75% 速度、生成量 ×0.5、持續 10 秒。速度提升不能直接當作充能秒數減少 75%，此為公式解讀補充。
 - [原始碼推導與限制](psyker_ability_increase_brain_burst_speed.md)。
 
 <a id="psyker_throwing_knives_cast_speed"></a>
