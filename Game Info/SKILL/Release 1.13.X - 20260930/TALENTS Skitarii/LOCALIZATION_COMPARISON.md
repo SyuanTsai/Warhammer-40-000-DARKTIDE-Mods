@@ -10,6 +10,7 @@
 |---|---|
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [弱點分析教義](#cryptic_afflicted_increased_damage) | 未見明確矛盾 |
+| [液壓衝擊](#cryptic_better_heavies) | 未見明確矛盾 |
 | [槍械技師](#cryptic_auto_reload) | 未見明確矛盾 |
 
 <a id="cryptic_crits_grant_tdr"></a>
@@ -25,6 +26,13 @@
 - 描述鍵：`loc_talent_cryptic_afflicted_increased_damage_desc`；hash：`70e7ba50`。
 - 結論：未見明確矛盾。繁中與英文一致；補充加成作用在自己與刷新方式。
 - [原始碼推導與限制](cryptic_afflicted_increased_damage.md)。
+
+<a id="cryptic_better_heavies"></a>
+## 液壓衝擊(Hydraulic Impact)
+
+- 描述鍵：`loc_talent_cryptic_better_heavies_desc`；hash：`668011b5`。
+- 結論：未見明確矛盾。中英一致；補充蓄力保護與重擊增傷的不同條件。
+- [原始碼推導與限制](cryptic_better_heavies.md)。
 
 <a id="cryptic_auto_reload"></a>
 ## 槍械技師(Gunsmith)
