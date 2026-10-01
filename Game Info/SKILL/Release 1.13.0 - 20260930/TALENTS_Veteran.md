@@ -17,7 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/f8c278c8-72a1-476c-93d1-6656268ba8e4" width="32" height="32" alt="抵近殺敵天賦圖示"> [抵近殺敵](#veteran_movement_speed_coherency)<br>- Close and Kill | <ul><li>你與協同範圍內的隊友移動速度增加 7.5%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/9a3da9ac-d8f1-4745-9af6-25852f52834a" width="32" height="32" alt="火力小分隊天賦圖示"> [火力小分隊](#veteran_increased_damage_coherency)<br>- Fire Team | <ul><li>你與協同範圍內的隊友傷害增加 7.5%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/c2dffa00-cd24-478f-96c7-4007f4239e6a" width="32" height="32" alt="生存專家天賦圖示"> [生存專家](#veteran_aura_gain_ammo_on_elite_kill_improved)<br>- Survivalist | <ul><li>你或擁有此光環效果的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備彈上限的彈藥。</li></ul> | 光環 |
-| <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="火力齊射天賦圖示"> [火力齊射](#veteran_combat_ability_stance)<br>- Volley Fire | <ul><li>立即切換至遠程武器，進入持續 6 秒的火力齊射；</li><li>冷卻時間 30 秒。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="火力齊射天賦圖示"> [火力齊射](#veteran_combat_ability_stance)<br>- Volley Fire | <ul><li>立即切換至遠程武器，姿態持續 6 秒，冷卻 30 秒。</li><li>遠程傷害 +15%、弱點額外傷害加成 +15%；兩項分別結算。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="滲透天賦圖示"> [滲透](#veteran_invisibility_on_combat_ability)<br>- Infiltrate | <ul><li>立即回滿自身韌性，並隱身最多 8 秒；</li><li>冷卻時間 40 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="低調天賦圖示"> [低調](#veteran_reduced_threat_after_combat_ability)<br>- Low Profile | <ul><li>使用戰鬥能力後，敵人選你為目標的仇恨權重降低 90%，持續 10 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="32" height="32" alt="處決者姿態天賦圖示"> [處決者姿態](#veteran_combat_ability_elite_and_special_outlines)<br>- Executioner's Stance | <ul><li>強化火力齊射：遠程傷害與遠程弱點額外傷害加成各提高至 25%，遠程衝擊加成提高至 100%。</li></ul> | 能力 |
@@ -274,15 +274,18 @@
 <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="72" height="72" alt="火力齊射天賦圖示">
 
 - **立即切換至遠程武器，進入持續 6 秒的火力齊射；冷卻時間 30 秒。**
-- 遠程傷害增加 **15%**，遠程弱點命中的額外傷害增加 **15%**，遠程衝擊增加 **50%**。
+- 遠程傷害增加 **15%**，遠程弱點命中的額外傷害加成增加 **15%**，遠程衝擊增加 **50%**。
+- 弱點加成只作用於額外傷害部分；整次弱點命中的增幅隨武器與目標而變，須連同遠程傷害加成分別計算。
 - 散布降低 **38%**、後座力降低 **24%**、瞄準晃動降低 **60%**；期間免疫壓制、暈眩及減速等干擾。
 - 冷卻從施放時開始，姿態期間仍會計時。切換近戰武器不會自行結束姿態；倒地或受制時會結束。
 
 #### 傷害與冷卻算例
 
-- 單看遠程傷害加成，該階段基礎傷害 100，其他加成為零：`100 × 1.15 = 115 傷害`。
-- 弱點額外傷害另行計算：該部分原本為 40、沒有其他同類加成時，變為 `40 × 1.15 = 46`。
-- 施放後經過 6 秒，姿態結束；沒有其他冷卻效果時，還需約 `30 − 6 = 24 秒`再次使用。
+- **遠程傷害**：單看遠程傷害階段，基礎傷害 100、無其他加成時，`100 × 1.15 = 115 點`。
+
+- **弱點額外傷害**：只比較弱點加成這一項，固定其他效果結算後的基礎部分 100、未加成的弱點額外部分 40，且未爆擊、無其他額外傷害加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × 1.15 = 146 點`，增加 `6 ÷ 140 ≈ 4.29%`。這不是整個火力齊射的總增幅；遠程傷害加成仍須另外納入。
+
+- **冷卻時間**：施放後經過 6 秒，姿態結束；沒有其他冷卻效果時，還需約 `30 − 6 = 24 秒`再次使用。
 
 [詳細資料](TALENTS%20Veteran/veteran_combat_ability_stance.md) · [返回目錄](#talent-index)
 
