@@ -35,6 +35,7 @@
 | <img src="https://github.com/user-attachments/assets/27fcc279-9828-4df7-b895-04956bb2463b" width="32" height="32" alt="換彈完畢天賦圖示"> [換彈完畢](#ogryn_reloading_grants_damage)<br>- Reloaded and Ready | <ul><li>換彈後，遠程傷害提高 15%，持續 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c6421034-209b-4fab-857d-541fa0667d8b" width="32" height="32" alt="大爆炸天賦圖示"> [大爆炸](#ogryn_increase_explosion_radius)<br>- Big Boom | <ul><li>爆炸半徑增加 27.5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/b35eb9be-169c-48cf-a295-329eae3a3610" width="32" height="32" alt="睚眥必報天賦圖示"> [睚眥必報](#ogryn_blocking_reduces_push_cost)<br>- No Pushover | <ul><li>每 8 秒可發動一次強化推擊，衝擊力增加 250%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/119478f3-6425-4e96-9f26-e0df95a4bf1e" width="32" height="32" alt="渴求關注天賦圖示"> [渴求關注](#ogryn_blocking_ranged_taunts)<br>- Attention Seeker | <ul><li>格擋敵人攻擊或推擊敵人，嘲諷該敵人 8 秒。</li></ul> | 技能 |
 
 ---
 
@@ -474,5 +475,20 @@
 - **消耗方式**：冷卻從推擊完成時計算，即使沒有推到敵人也會消耗這次強化。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_blocking_reduces_push_cost.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_blocking_ranged_taunts"></a>
+### 渴求關注(Attention Seeker)
+
+<img src="https://github.com/user-attachments/assets/119478f3-6425-4e96-9f26-e0df95a4bf1e" width="72" height="72" alt="渴求關注天賦圖示">
+
+- **觸發方式**：格擋敵人的攻擊，或推擊命中敵人時，使該敵人優先攻擊你，持續 8 秒。
+
+- **限制**：對怪物不生效；敵人已經受到嘲諷時，不會再次施加或刷新這個短暫嘲諷。
+
+- **時間範例**：第 0 秒首次嘲諷，第 4 秒再次推擊同一名仍受嘲諷的敵人，並不會把結束時間延到第 12 秒。若你死亡、無法被敵人察覺等，嘲諷可能提前結束。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_blocking_ranged_taunts.md) · [返回目錄](#talent-index)
 
 ---
