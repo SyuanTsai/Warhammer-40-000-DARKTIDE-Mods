@@ -17,6 +17,7 @@
 | [交鋒](#adamant_charge_longer_distance) | 未見明確矛盾 |
 | [殺戮命令](#adamant_dog_damage_after_ability) | 未見明確矛盾 |
 | [孤狼](#adamant_disable_companion) | 未見明確矛盾 |
+| [生化武器關](#adamant_execution_order_cdr) | 未見明確矛盾 |
 | [往前進攻！](#adamant_companion_focus_ranged) | 未見明確矛盾 |
 | [猛犬出擊](#adamant_companion_focus_elite) | 未見明確矛盾 |
 | [電子獒犬與人](#adamant_toughness_regen_near_companion) | 未見明確矛盾 |
@@ -135,6 +136,13 @@
 - 描述鍵：`loc_talent_adamant_disable_companion_replenish_split_desc`；hash：`fe3bded9`。
 - 結論：未見明確矛盾。同源繁中與英文的移除獒犬、個人增益與補充間隔一致；45／90秒都有實際消費路徑，另一個未使用的60秒欄位不構成文字矛盾。
 - [原始碼推導與限制](adamant_disable_companion.md)。
+
+<a id="adamant_execution_order_cdr"></a>
+## 生化武器關(Malocator)
+
+- 描述鍵：`loc_talent_execution_order_cdr_on_kill_description`；hash：`1cb35d28`。
+- 結論：未見明確矛盾。同源繁中與英文均為擊殺標記目標後增加冷卻恢復；實際持續8秒。另有未使用的cdr_time=3設定，但不構成文字或生效時間矛盾。
+- [原始碼推導與限制](adamant_execution_order_cdr.md)。
 
 <a id="adamant_companion_focus_ranged"></a>
 ## 往前進攻！(Go Get 'Em!)
