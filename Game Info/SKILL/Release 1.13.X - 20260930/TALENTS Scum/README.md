@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 12／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 13／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -23,3 +23,4 @@
 | 技能 | [恢復姿態](broker_passive_stamina_on_successful_dodge.md) / `broker_passive_stamina_on_successful_dodge` | `node_763f2b5b-964d-42a3-b4d7-4fca89c0e311` | 完成（核心靜態機制） |
 | 技能 | [奧客](broker_passive_dodge_melee_on_slide.md) / `broker_passive_dodge_melee_on_slide` | `node_5c6828fd-4ac1-427e-bd39-793677a16ccc` | 完成（核心靜態機制） |
 | 技能 | [沒甚麼，只是擦傷](broker_passive_replenish_toughness_on_ranged_toughness_damage.md) / `broker_passive_replenish_toughness_on_ranged_toughness_damage` | `node_3d4045a2-3883-4d78-9bf7-ac097351162e` | 完成（核心靜態機制） |
+| 技能 | [狂轟猛射](broker_passive_damage_on_reload.md) / `broker_passive_damage_on_reload` | `node_ba99146a-4a89-452f-8b02-7d6d871b30dd` | 完成（核心靜態機制） |

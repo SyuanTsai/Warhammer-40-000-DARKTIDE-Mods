@@ -20,6 +20,7 @@
 | [恢復姿態](#broker_passive_stamina_on_successful_dodge) | 未見明確矛盾 |
 | [奧客](#broker_passive_dodge_melee_on_slide) | 未見明確矛盾 |
 | [沒甚麼，只是擦傷](#broker_passive_replenish_toughness_on_ranged_toughness_damage) | 未見明確矛盾 |
+| [狂轟猛射](#broker_passive_damage_on_reload) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -104,3 +105,10 @@
 - 描述鍵：`loc_talent_broker_passive_replenish_toughness_on_ranged_toughness_damage_desc`；hash：`6f652e30`。
 - 結論：未見明確矛盾。兩語均描述遠程命中後恢復韌性；刷新與耗盡中止為補充，不列錯誤。
 - [原始碼推導與限制](broker_passive_replenish_toughness_on_ranged_toughness_damage.md)。
+
+<a id="broker_passive_damage_on_reload"></a>
+## 狂轟猛射(Unload)
+
+- 描述鍵：`loc_talent_broker_passive_damage_on_reload_desc`；hash：`6645de88`。
+- 結論：未見明確矛盾。兩語都提供換彈後按消耗彈藥增傷；重設與整段取整屬補充。
+- [原始碼推導與限制](broker_passive_damage_on_reload.md)。
