@@ -25,6 +25,7 @@
 | [精準獵殺](#broker_ability_focus_sub_2) | 未見明確中英矛盾 |
 | [熟練部署](#broker_ability_stimm_field_sub_3) | 未見翻譯差異（程式以半秒輪詢觸發） |
 | [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1) | 未見明確矛盾 |
+| [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3) | 未見明確矛盾 |
 | [腎上腺素懲戒者](#broker_keystone_adrenaline_junkie_sub_2) | 未見明確矛盾 |
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
 | [特提恩是迎賓](#broker_passive_first_target_damage) | 未見明確矛盾 |
@@ -192,6 +193,13 @@
 - 描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_1_desc`；hash：`02bab200`。
 - 結論：未見明確矛盾。繁中與英文都表示弱點命中額外給 2 層且一般近戰命中不再給基本層；原核心的暴擊額外層仍由同一處理流程保留。
 - [原始碼推導與限制](broker_keystone_adrenaline_junkie_sub_1.md)。
+
+<a id="broker_keystone_adrenaline_junkie_sub_3"></a>
+## 振奮怒火(Stoked Rage)
+
+- 描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_3_desc`；hash：`95b51a39`。
+- 結論：未見明確矛盾。繁中與英文均表示狂暴持續時間提升至 20 秒；程式以核心 10 秒及升級 20 秒的差額調整 buff 時長。
+- [原始碼推導與限制](broker_keystone_adrenaline_junkie_sub_3.md)。
 
 <a id="broker_keystone_adrenaline_junkie_sub_2"></a>
 ## 腎上腺素懲戒者(Adrenaline Smiter)

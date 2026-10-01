@@ -23,6 +23,7 @@
 | <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="精準獵殺天賦圖示"> [精準獵殺](#broker_ability_focus_sub_2)<br>- Pick Your Targets | <ul><li>專注期間遠程攻擊加算 +15% 撕裂修正；近距離遠程擊殺每次另疊 3% 遠程傷害，最多 5 層（+15%），每層持續 3 秒並可由新擊殺刷新。</li><li>此撕裂加成作用於護甲計算，擊殺疊層是遠程傷害加算；只計滿層效果時，基礎100點遠程傷害變為115點。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3" width="32" height="32" alt="熟練部署天賦圖示"> [熟練部署](#broker_ability_stimm_field_sub_3)<br>- Practiced Deployment | <ul><li>取得新的可用興奮劑時，補滿一次興奮劑補給的能力充能；能力最多 1 次充能，已滿時不會再增加。</li><li>程式每 0.5 秒檢查興奮劑欄位或自身興奮劑充能是否變為可用，因此觸發會在下一次檢查時補滿。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448" width="32" height="32" alt="腎上腺素刺客天賦圖示"> [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1)<br>- Adrenaline Assassin | <ul><li>選用腎上腺素刺客後，一般非弱點近戰命中不給層；近戰弱點命中共給 3 層。</li><li>爆擊仍額外加 1 層，因此近戰弱點爆擊共給 4 層。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c" width="32" height="32" alt="振奮怒火天賦圖示"> [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3)<br>- Stoked Rage | <ul><li>腎上腺素狂暴的持續時間由 10 秒提高至 20 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/29f93050-b0a8-48ca-88fe-2e40d9769a99" width="32" height="32" alt="腎上腺素懲戒者天賦圖示"> [腎上腺素懲戒者](#broker_keystone_adrenaline_junkie_sub_2)<br>- Adrenaline Smiter | <ul><li>只有近戰擊殺才會取得腎上腺素：一般擊殺額外 +4 層，精英擊殺再額外 +10 層。</li><li>非擊殺的近戰命中不給層；爆擊擊殺仍保留核心的額外 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="特提恩是迎賓天賦圖示"> [特提恩是迎賓](#broker_passive_first_target_damage)<br>- A Tertium Welcome | <ul><li>每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。</li></ul> | 技能 |
@@ -359,6 +360,21 @@
 - **弱點爆擊**：弱點命中的 3 層再加爆擊額外 1 層，共 4 層；仍受核心的 30 層上限及層數計時規則限制。
 
 [詳細資料](TALENTS%20Scum/broker_keystone_adrenaline_junkie_sub_1.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_keystone_adrenaline_junkie_sub_3"></a>
+### 振奮怒火(Stoked Rage)
+
+<img src="https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c" width="72" height="72" alt="振奮怒火天賦圖示">
+
+- **持續時間**：觸發狂暴後持續 20 秒，比核心的 10 秒多 10 秒。
+
+- **刷新**：重新達到 30 層再觸發狂暴時，狂暴仍只有一份；新觸發會把持續時間重設為 20 秒。
+
+- **不變部分**：此升級不改變腎上腺素的 2 秒堆疊計時、30 層上限或狂暴的攻速與傷害倍率。
+
+[詳細資料](TALENTS%20Scum/broker_keystone_adrenaline_junkie_sub_3.md) · [返回目錄](#talent-index)
 
 ---
 
