@@ -13,3 +13,4 @@
 | [弱點分析教義](cryptic_afflicted_increased_damage.md) | 命中電擊、燃燒、靈魂之火、流血或中毒敵人；傷害提高 10%、持續 8 秒；完整計算與適用限制見來源文件。 |
 | [液壓衝擊](cryptic_better_heavies.md) | 蓄力近戰攻擊時不易被一般受擊打斷；近戰重擊傷害提高 15%；完整計算與適用限制見來源文件。 |
 | [槍械技師](cryptic_auto_reload.md) | 裝填速度提高 15%；停止射擊 5 秒後，每秒從備彈填入彈匣容量的 7.5%；完整計算與適用限制見來源文件。 |
+| [系統電擊](cryptic_electrocution_applies_brittleness.md) | 施加或刷新電擊時增加 3 層脆弱；每層 2.5%，持續 5 秒；完整計算與適用限制見來源文件。 |

@@ -15,6 +15,7 @@
 | [弱點分析教義](#cryptic_afflicted_increased_damage) | 未見明確矛盾 |
 | [液壓衝擊](#cryptic_better_heavies) | 未見明確矛盾 |
 | [槍械技師](#cryptic_auto_reload) | 未見明確矛盾 |
+| [系統電擊](#cryptic_electrocution_applies_brittleness) | 未見明確矛盾 |
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
@@ -64,3 +65,10 @@
 - 描述鍵：`loc_talent_cryptic_auto_reload_desc`；hash：`612ee334`。
 - 結論：未見明確矛盾。中英一致；補充首批第6秒、向上取整及備彈來源。
 - [原始碼推導與限制](cryptic_auto_reload.md)。
+
+<a id="cryptic_electrocution_applies_brittleness"></a>
+## 系統電擊(System Shock)
+
+- 描述鍵：`loc_talent_cryptic_electrocution_applies_brittleness_desc`；hash：`47a5f3d9`。
+- 結論：未見明確矛盾。中英每次3層與2.5%一致；上限、持續及傷害公式為補充。
+- [原始碼推導與限制](cryptic_electrocution_applies_brittleness.md)。
