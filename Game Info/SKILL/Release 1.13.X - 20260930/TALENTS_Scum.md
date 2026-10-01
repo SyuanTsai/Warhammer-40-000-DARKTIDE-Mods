@@ -32,6 +32,7 @@
 | <img src="https://github.com/user-attachments/assets/6c334888-08bb-4567-a6a2-1c4b4750409b" width="32" height="32" alt="化學增強天賦圖示"> [化學增強](#broker_keystone_chemical_dependency_sub_2)<br>- Chem Fortified | <ul><li>使用興奮劑時恢復最大韌性的 50%。</li><li>每層化學依賴性使承受的韌性傷害乘以 0.95；3 層合計使韌性傷害約降低 14.26%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/51827890-e735-4220-8959-bf37381e0fc8" width="32" height="32" alt="化學藥劑全開天賦圖示"> [化學藥劑全開](#broker_keystone_chemical_dependency_sub_3)<br>- Maxed Out Chems | <ul><li>化學依賴性每層持續時間由 90 秒改為 60 秒，最多層數由 3 層增加至 4 層。</li><li>4 層時戰鬥技能資源回充倍率為 1.40；60 秒線性回充算例約縮至 42.86 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a887e60a-cbd4-4d49-8e44-20661f7f2dcb" width="32" height="32" alt="兀鷲推擊天賦圖示"> [兀鷲推擊](#broker_keystone_vultures_mark_aoe_stagger)<br>- Vulture's Push | <ul><li>以遠程攻擊擊殺精英或專家時，在自己周圍 3 公尺觸發爆炸，造成中等踉蹌與擊退。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/76cdf6df-d713-4085-8b29-fce2c1c64413" width="32" height="32" alt="堅毅獵手天賦圖示"> [堅毅獵手](#broker_keystone_vultures_mark_increased_duration)<br>- Patient Hunter | <ul><li>兀鷲印記的持續時間由 8 秒提高至 12 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448" width="32" height="32" alt="腎上腺素刺客天賦圖示"> [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1)<br>- Adrenaline Assassin | <ul><li>選用腎上腺素刺客後，一般非弱點近戰命中不給層；近戰弱點命中共給 3 層。</li><li>爆擊仍額外加 1 層，因此近戰弱點爆擊共給 4 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c" width="32" height="32" alt="振奮怒火天賦圖示"> [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3)<br>- Stoked Rage | <ul><li>腎上腺素狂暴的持續時間由 10 秒提高至 20 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce" width="32" height="32" alt="腎上腺素突破天賦圖示"> [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5)<br>- Adrenaline Unbound | <ul><li>狂暴期間每秒恢復最大韌性的 5%。</li></ul> | 鑰石 |
@@ -522,6 +523,23 @@
 - **目標差異**：實際能否推動敵人仍取決於其踉蹌抗性、護甲與當下狀態，無法保證中斷所有敵人的動作。
 
 [詳細資料](TALENTS%20Scum/broker_keystone_vultures_mark_aoe_stagger.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_keystone_vultures_mark_increased_duration"></a>
+### 堅毅獵手(Patient Hunter)
+
+<img src="https://github.com/user-attachments/assets/76cdf6df-d713-4085-8b29-fce2c1c64413" width="72" height="72" alt="堅毅獵手天賦圖示">
+
+- **持續時間**：每次取得兀鷲印記後，層數共享的計時為 12 秒，比核心的 8 秒多 4 秒。
+
+- **刷新**：新的兀鷲印記會增加層數並把共享計時重設為 12 秒；即使已達 3 層，再次符合條件也會刷新時間。
+
+- **衰退**：若沒有新印記，12 秒到期時現有印記層數一併消失。
+
+- **時間算例**：第一層在 0 秒取得，第二層在 6 秒取得後，計時重設為 12 秒；若之後無新印記，現有層數在第 18 秒到期。
+
+[詳細資料](TALENTS%20Scum/broker_keystone_vultures_mark_increased_duration.md) · [返回目錄](#talent-index)
 
 ---
 

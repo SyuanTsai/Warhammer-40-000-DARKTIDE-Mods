@@ -34,6 +34,7 @@
 | [化學增強](#broker_keystone_chemical_dependency_sub_2) | 未見明確矛盾 |
 | [化學藥劑全開](#broker_keystone_chemical_dependency_sub_3) | 未見明確矛盾 |
 | [兀鷲推擊](#broker_keystone_vultures_mark_aoe_stagger) | 未見明確矛盾 |
+| [堅毅獵手](#broker_keystone_vultures_mark_increased_duration) | 未見明確矛盾 |
 | [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1) | 未見明確矛盾 |
 | [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3) | 未見明確矛盾 |
 | [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5) | 未見明確矛盾 |
@@ -269,6 +270,13 @@
 - 描述鍵：`loc_talent_broker_keystone_vultures_mark_aoe_stagger_desc`；hash：`d98831c7`。
 - 結論：未見明確矛盾。繁中與英文都描述遠程擊殺精英／專家時推開附近敵人；程式設定 3 公尺爆炸及中等踉蹌，沒有直接攻擊傷害。
 - [原始碼推導與限制](broker_keystone_vultures_mark_aoe_stagger.md)。
+
+<a id="broker_keystone_vultures_mark_increased_duration"></a>
+## 堅毅獵手(Patient Hunter)
+
+- 描述鍵：`loc_talent_broker_keystone_vultures_mark_increased_duration_desc`；hash：`2a61076a`。
+- 結論：未見明確矛盾。繁中與英文都將兀鷲印記持續時間列為 12 秒；程式以核心 8 秒加上 4 秒差額實作，且每次新增／刷新堆疊會重設共享計時。
+- [原始碼推導與限制](broker_keystone_vultures_mark_increased_duration.md)。
 
 <a id="broker_keystone_adrenaline_junkie_sub_1"></a>
 ## 腎上腺素刺客(Adrenaline Assassin)
