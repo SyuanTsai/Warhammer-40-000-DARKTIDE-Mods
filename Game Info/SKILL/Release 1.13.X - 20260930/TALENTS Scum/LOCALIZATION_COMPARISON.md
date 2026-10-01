@@ -11,6 +11,7 @@
 | [擊暈](#broker_blitz_flash_grenade_improved) | 繁中原文誤譯 |
 | [炸彈使者](#broker_blitz_missile_launcher) | 未見明確矛盾 |
 | [化學手榴彈](#broker_blitz_tox_grenade) | 未見明確矛盾 |
+| [精進神射手](#broker_aura_gunslinger_improved) | 未見明確矛盾 |
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
 | [特提恩是迎賓](#broker_passive_first_target_damage) | 未見明確矛盾 |
 | [打你的臉](#broker_passive_close_ranged_damage) | 未見明確矛盾 |
@@ -79,6 +80,13 @@
 - 描述鍵：`loc_talent_broker_blitz_tox_grenade_desc_02`；hash：`cbe2dc42`。
 - 結論：未見明確矛盾。繁中與英文皆為15秒毒區、最多6層與死亡爆炸；離區後殘留效果為補充。
 - [原始碼推導與限制](broker_blitz_tox_grenade.md)。
+
+<a id="broker_aura_gunslinger_improved"></a>
+## 精進神射手(Gunslinger Improved)
+
+- 描述鍵：`loc_talent_broker_aura_gunslinger_improved_desc`；hash：`03a59c5c`。
+- 結論：未見明確矛盾。兩語皆說協同拾取分享10%；各人依容量換算是公式補充，特殊補給不讀modifier的程式例外留待場景驗證。
+- [原始碼推導與限制](broker_aura_gunslinger_improved.md)。
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)

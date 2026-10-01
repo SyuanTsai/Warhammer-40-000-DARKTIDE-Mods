@@ -9,6 +9,7 @@
 | <img src="https://github.com/user-attachments/assets/fd2156cb-6e65-4214-bd01-ab0b28665714" width="32" height="32" alt="擊暈天賦圖示"> [擊暈](#broker_blitz_flash_grenade_improved)<br>- Blackout | <ul><li>快速投擲的擊退手雷，最多攜帶 5 顆；每 20 次近距離擊殺恢復 1 顆。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/3b4df232-3b49-4f84-98c0-2b3e8828f917" width="32" height="32" alt="炸彈使者天賦圖示"> [炸彈使者](#broker_blitz_missile_launcher)<br>- Boom Bringer | <ul><li>發射高威力飛彈，最多 2 枚；爆炸基礎半徑 7 公尺。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/7d3c5999-8823-4b54-9204-6e22637bc851" width="32" height="32" alt="化學手榴彈天賦圖示"> [化學手榴彈](#broker_blitz_tox_grenade)<br>- Chem Grenade | <ul><li>投擲化學手榴彈，留下 15 秒毒區，最多攜帶 2 顆。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/3927d1d0-9e15-4b96-9a91-00f0503e338c" width="32" height="32" alt="精進神射手天賦圖示"> [精進神射手](#broker_aura_gunslinger_improved)<br>- Gunslinger Improved | <ul><li>協同中的成員拾取彈藥時，各成員額外取得相當於該補給 10% 的彈藥。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="特提恩是迎賓天賦圖示"> [特提恩是迎賓](#broker_passive_first_target_damage)<br>- A Tertium Welcome | <ul><li>每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="打你的臉天賦圖示"> [打你的臉](#broker_passive_close_ranged_damage)<br>- In Your Face | <ul><li>手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。</li></ul> | 技能 |
@@ -109,6 +110,28 @@
 - **彈藥方式**：最多 2 顆，搭配額外彈藥袋變成 3 顆；不保留擊暈手雷的近距離擊殺補充。
 
 [詳細資料](TALENTS%20Scum/broker_blitz_tox_grenade.md) · [返回目錄](#talent-index)
+
+---
+
+
+---
+
+## 光環
+
+<a id="broker_aura_gunslinger_improved"></a>
+### 精進神射手(Gunslinger Improved)
+
+<img src="https://github.com/user-attachments/assets/3927d1d0-9e15-4b96-9a91-00f0503e338c" width="72" height="72" alt="精進神射手天賦圖示">
+
+- **分享方式**：你或具有此光環的協同隊友拾取彈藥時，向該拾取者協同中的成員分享補給；每人依自己的武器容量換算，不是把拾取者拿到的發數平均分配。
+
+- **小彈藥算例**：小彈藥原補 15% 備彈，分享量為個人備彈上限 × 15% × 10%，無條件進位。上限 200 的隊友得到 3 發，上限 100 的隊友得到 ⌈1.5⌉ = 2 發。
+
+- **大彈藥與彈藥箱**：大彈藥原補 50%，上限 200 時分享 10 發。一般部署彈藥箱則以「備彈上限 + 彈匣容量」的 10% 計；例如 200 + 30，分享 23 發，仍受實際缺額限制。
+
+- **疊加限制**：相同光環不因多名玩家而重複疊加；此改良版的 10% 取代基本版 5%，分享出來的彈藥也不會再次觸發連鎖分享。
+
+[詳細資料](TALENTS%20Scum/broker_aura_gunslinger_improved.md) · [返回目錄](#talent-index)
 
 ---
 
