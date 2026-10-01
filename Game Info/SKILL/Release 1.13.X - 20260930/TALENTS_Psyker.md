@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/3c19e5ea-ccab-46a3-9763-c8d4075c6332" width="32" height="32" alt="完美時機天賦圖示"> [完美時機](#psyker_crits_empower_next_attack)<br>- Perfect Timing | <ul><li>爆擊命中增加 3% 傷害，最多 5 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/946f549a-ed56-4711-aee8-39ce35a0a6b1" width="32" height="32" alt="反射閃避天賦圖示"> [反射閃避](#psyker_dodge_after_crits)<br>- Empathic Evasion | <ul><li>爆擊命中後，1 秒內對遠程攻擊視為正在閃避。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8f79e11c-ea7c-4e52-957b-007bd85bcf1b" width="32" height="32" alt="亞空間騎士天賦圖示"> [亞空間騎士](#psyker_damage_based_on_warp_charge)<br>- Warp Rider | <ul><li>依目前反噬提高傷害，最高增加 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/4b242d12-87d5-44a8-a2aa-4c1a0f3a2376" width="32" height="32" alt="精確瞄準天賦圖示"> [精確瞄準](#psyker_guaranteed_crit_on_multiple_weakspot_hits)<br>- True Aim | <ul><li>累積 5 次有效弱點命中，使下一次遠程攻擊必定爆擊。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1561e519-2633-4a6f-af9f-fffe6a6c8a03" width="32" height="32" alt="傀儡師天賦圖示"> [傀儡師](#psyker_coherency_aura_size_increase)<br>- Puppet Master | <ul><li>協同範圍半徑增加 75%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e56e3649-507c-4ebb-94fc-58f7eff77aee" width="32" height="32" alt="動能偏斜天賦圖示"> [動能偏斜](#psyker_block_costs_warp_charge)<br>- Kinetic Deflection | <ul><li>反噬低於 97% 時，以增加反噬代替格擋耐力消耗。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/3d86850d-c891-443c-8f80-2f01ad34bdff" width="32" height="32" alt="韌性增幅天賦圖示"> [韌性增幅](#base_toughness_node_buff_medium_5)<br>- Toughness Boost | <ul><li>最大韌性增加 15 點。</li></ul> | 技能 |
@@ -115,6 +116,21 @@
 - **傷害算例**：反噬 50%、該階段基準傷害 100、其他倍率為 1 時，100 × (1 + 20% × 50%) = 110 點。若原有 25% 同階段加成，從 125 變成 135 點。
 
 [詳細資料](TALENTS%20Psyker/psyker_damage_based_on_warp_charge.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_guaranteed_crit_on_multiple_weakspot_hits"></a>
+### 精確瞄準(True Aim)
+
+<img src="https://github.com/user-attachments/assets/4b242d12-87d5-44a8-a2aa-4c1a0f3a2376" width="72" height="72" alt="精確瞄準天賦圖示">
+
+- **運作方式**：累積 5 次造成傷害的有效弱點命中後，下一次遠程攻擊必定爆擊，消耗這組累積。
+
+- **累積限制**：同一發投射物重複命中，以及一次攻擊順劈到的後續敵人，不能一律當成額外一次累積。
+
+- **算例**：從 0 層開始，五次各自有效的弱點命中為 1 → 2 → 3 → 4 → 5 層；之後觸發的遠程爆擊消耗這組效果。爆擊傷害仍依武器、部位與目標計算，不是固定雙倍。
+
+[詳細資料](TALENTS%20Psyker/psyker_guaranteed_crit_on_multiple_weakspot_hits.md) · [返回目錄](#talent-index)
 
 ---
 
