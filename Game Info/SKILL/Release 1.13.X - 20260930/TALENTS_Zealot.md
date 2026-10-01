@@ -28,6 +28,7 @@
 | <img src="https://github.com/user-attachments/assets/b51610bf-5b84-45d0-97fe-abedede00719" width="32" height="32" alt="飄忽身形天賦圖示"> [飄忽身形](#zealot_quickness_passive_dodge_stacks)<br>- Inebriate's Poise | <ul><li>成功閃避時額外獲得 3 層命定審判勢能。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab" width="32" height="32" alt="吊命聖徒天賦圖示"> [吊命聖徒](#zealot_resist_death_heal)<br>- Holy Revenant | <ul><li>死戰到底觸發時擊退附近敵人。</li><li>免死期間按造成傷害累積治療額度；近戰換算率為一般傷害的 3 倍。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc" width="32" height="32" alt="熾熱虔誠天賦圖示"> [熾熱虔誠](#zealot_fanatic_rage)<br>- Blazing Piety | <ul><li>附近敵人死亡與自身爆擊累積狂怒；25 層時提高 15 個百分點爆擊率，持續 8 秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/0fd06e0a-ef14-4228-8cd5-02980c989f05" width="32" height="32" alt="死忠天賦圖示"> [死忠](#zealot_fanatic_rage_toughness_on_max)<br>- Stalwart | <ul><li>觸發狂怒時恢復相當於最大韌性的 50%；狂怒期間且計數維持 25 層時，韌性承傷降低 25%，每秒恢復最大韌性的 2%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9d85e538-7fb1-4308-99b9-7ed9408eead2" width="32" height="32" alt="正義勇士天賦圖示"> [正義勇士](#zealot_fanatic_rage_improved)<br>- Righteous Warrior | <ul><li>狂怒的爆擊率加成由 15 提高至 25 個百分點。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="32" height="32" alt="永恆天賦圖示"> [永恆](#zealot_quickness_increased_duration)<br>- Eternal | <ul><li>命定審判的啟動增益持續時間由 6 秒延長至 10 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="狂熱朝聖者天賦圖示"> [狂熱朝聖者](#zealot_resist_death_ability)<br>- Zealous Pilgrim | <ul><li>使用戰鬥技能後獲得 4 秒免死效果。</li><li>隱身技能在退出隱身後生效；聖物技能在卸下聖物後生效。</li><li>無法殺死期間，傷害及攻擊速度各提高 10%。</li></ul> | 鑰石 |
@@ -437,6 +438,21 @@
 - **層數消退**：未進入狂怒時，連續 8 秒沒有新觸發便開始逐層下降；再次觸發重設等待時間。狂怒結束則清空計數，重新累積。
 
 [詳細資料](TALENTS%20Zealot/zealot_fanatic_rage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_fanatic_rage_toughness_on_max"></a>
+### 死忠(Stalwart)
+
+<img src="https://github.com/user-attachments/assets/0fd06e0a-ef14-4228-8cd5-02980c989f05" width="72" height="72" alt="死忠天賦圖示">
+
+- **觸發恢復**：首次進入狂怒時，立即恢復 50% 最大韌性；狂怒已生效時再次刷新，不會重複補這 50%。
+
+- **持續防護**：狂怒計數維持 25 層時，韌性減傷提高 25%，並每秒恢復 2% 最大韌性；計數離開滿層就停止這兩項效果。
+
+- **恢復與減傷算例**：最大韌性 100，啟動時最多補 50 點；滿層維持 8 秒另可補 100 × 2% × 8 = 16 點，均受缺額限制。原本 100 點韌性傷害變成 100 × 0.75 = 75 點。
+
+[詳細資料](TALENTS%20Zealot/zealot_fanatic_rage_toughness_on_max.md) · [返回目錄](#talent-index)
 
 ---
 
