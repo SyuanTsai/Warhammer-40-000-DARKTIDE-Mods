@@ -492,20 +492,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - 原版 MOD：[Ovenproof's Scoreboard Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/241)
 - MOD 網站最後更新日期：Last updated 22 February 2024, 10:22AM
 - MOD 版本：1.4.2
-- Patch 網站最後更新日期：Last updated 29 September 2026, 11:25PM
-- Patch 版本：1.14.0
-- MOD 檔案名稱：Ovenproof's Scoreboard Plugin - Community Patch 514 1.14.0 2026-09-29T15-25Z oudzUunMy.zip
-- 手動維護最後下載日期：2026-09-30
+- Patch 網站最後更新日期：Last updated 01 October 2026, 12:52AM
+- Patch 版本：1.14.1
+- MOD 檔案名稱：OvenProof's Scoreboard Plugin - Community Patch 514 1.14.1 2026-09-30T16-52Z yonmho6gN.zip
+- 手動維護最後下載日期：2026-10-01
 - Nexus MOD ID: 514
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/514
-- Nexus page version: 1.14.0
-- Nexus last updated: 2026-09-29T15:25Z
-- Main file ID: 8539
-- Main file version: 1.14.0
-- Main file uploaded at UTC: 2026-09-29T15:25Z
-- Archive filename: Ovenproof's Scoreboard Plugin - Community Patch 514 1.14.0 2026-09-29T15-25Z oudzUunMy.zip
-- Archive size bytes: 39412
-- Archive SHA-256: c293876f2b9c39f1446920d2288668f99136746581e5c264aec416c9e255db8f
+- Nexus page version: 1.14.1
+- Nexus last updated: 2026-09-30T16:52Z
+- Main file ID: 8620
+- Main file version: 1.14.1
+- Main file uploaded at UTC: 2026-09-30T16:52Z
+- Archive filename: OvenProof's Scoreboard Plugin - Community Patch 514 1.14.1 2026-09-30T16-52Z yonmho6gN.zip
+- Archive size bytes: 39295
+- Archive SHA-256: 31e2e362440ac63e1b85a88e4afe28bb4a8462de21b8252e8c842a127333ef51
 - Acquisition method: manual-queue
 - GitHub :
 - Source=>  https://github.com/Backup158/DarktideOvenproofScoreboardPluginPatch
