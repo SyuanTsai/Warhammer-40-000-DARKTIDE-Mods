@@ -8,6 +8,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="32" height="32" alt="突破重圍天賦圖示"> [突破重圍](#adamant_charge)<br>- Break the Line | <ul><li>向前猛砸並衝入敵陣；猛砸期間視為格擋，結束後獲得 6 秒傷害與衝擊加成。</li><li>基礎冷卻 20 秒，單次充能。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="天鷹使節天賦圖示"> [天鷹使節](#adamant_area_buff_drone_improved)<br>- Nuncio-Aquila | <ul><li>部署阿奎拉傳令機，持續 20 秒並影響周圍 7.5 公尺；冷卻 60 秒，單次充能。</li><li>強化版讓盟友每秒恢復 7.5% 韌性，並提高壓制與衝擊、降低後座力，同時免疫暈眩、減速與壓制。</li><li>範圍內敵人受到的傷害提高 15%。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/f7454987-ea7e-474e-bb22-3c3ead9adb1b" width="32" height="32" alt="處決令天賦圖示"> [處決令](#adamant_stance_elite_kills_stack_damage)<br>- Writ of Execution | <ul><li>處於懲戒者姿態時，每擊殺一名精英或專家敵人，傷害提高 7.5%，持續 12 秒，最多 6 層。</li><li>滿層提供 45% 傷害加成；已取得的增益可在姿態結束後繼續倒數。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/27a74ed8-eb51-4774-ae8e-2089aa7b1686" width="32" height="32" alt="嗜血殺戮天賦圖示"> [嗜血殺戮](#adamant_stance_dog_bloodlust)<br>- Bloodlust | <ul><li>啟動懲戒者姿態後，電子獒犬造成的傷害提高 75%，效果維持姿態的 10 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/53dd2864-62b6-4e6c-9d62-e79831b33c78" width="32" height="32" alt="振奮朗誦天賦圖示"> [振奮朗誦](#adamant_drone_buff_talent)<br>- Inspiring Recitation | <ul><li>受到阿奎拉傳令機影響的盟友，額外獲得 30% 韌性減傷、30% 復活速度及 10% 攻擊速度。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/483804fa-b052-4baa-b3d7-5e7dbfbe44f4" width="32" height="32" alt="畏怯正義天賦圖示"> [畏怯正義](#adamant_drone_debuff_talent)<br>- Fear of Justice | <ul><li>傳令機範圍內受影響敵人的近戰傷害降低 25%；近戰攻速的介面文字標示為攻速降低 50%。</li><li>固定來源中的實際近戰攻速修正為 −25%；按敵人攻擊動作的計時方式，攻擊間隔約延長 33%，介面標示與實作係數需同版核對。</li></ul> | 能力 |
@@ -115,6 +116,21 @@
 - **敵人受制**：範圍內敵人受到的傷害提高 15%；例如其他條件相同時，原本 100 點傷害按 1.15 倍計算為 115 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_area_buff_drone_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_stance_elite_kills_stack_damage"></a>
+### 處決令(Writ of Execution)
+
+<img src="https://github.com/user-attachments/assets/f7454987-ea7e-474e-bb22-3c3ead9adb1b" width="72" height="72" alt="處決令天賦圖示">
+
+- **觸發條件**：懲戒者姿態期間擊殺精英或專家敵人，每次獲得一層傷害加成。
+
+- **層數與時間**：每層 +7.5%，最多 6 層，每次疊加會刷新 12 秒持續時間。姿態結束後，已取得的層數仍依自己的剩餘時間到期。
+
+- **算例**：6 層為 6×7.5%=45%；以 100 點基準傷害及同一傷害層級另有 +25% 加成計算，100×(1+45%+25%)=170。
+
+[詳細資料](TALENTS%20Arbites/adamant_stance_elite_kills_stack_damage.md) · [返回目錄](#talent-index)
 
 ---
 

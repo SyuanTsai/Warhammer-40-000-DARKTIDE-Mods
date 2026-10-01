@@ -10,6 +10,7 @@
 |---|---|
 | [突破重圍](#adamant_charge) | 繁中原文勘誤 |
 | [天鷹使節](#adamant_area_buff_drone_improved) | 未見明確矛盾 |
+| [處決令](#adamant_stance_elite_kills_stack_damage) | 未見明確矛盾 |
 | [嗜血殺戮](#adamant_stance_dog_bloodlust) | 未見明確矛盾 |
 | [振奮朗誦](#adamant_drone_buff_talent) | 未見明確矛盾 |
 | [畏怯正義](#adamant_drone_debuff_talent) | 繁中原文勘誤 |
@@ -97,6 +98,13 @@
 - 描述鍵：`loc_talent_ability_area_buff_drone_new_improved_description`；hash：`1e02d48e`。
 - 結論：未見明確矛盾。繁中「每秒恢復韌性」「對暈眩、減速和壓制效果免疫」分別對應英文「Toughness per second」及「Immune to Stun, Slowdown, and Suppression」；兩文都指出敵人承受更多傷害。
 - [原始碼推導與限制](adamant_area_buff_drone_improved.md)。
+
+<a id="adamant_stance_elite_kills_stack_damage"></a>
+## 處決令(Writ of Execution)
+
+- 描述鍵：`loc_talent_adamant_stance_elite_kills_stack_damage_desc`；hash：`4b6af938`。
+- 結論：未見明確矛盾。繁中「每個精英或專家敵人」與英文「each Elite or Specialist Kill」一致；兩者都列出每層傷害、持續時間及層數上限。
+- [原始碼推導與限制](adamant_stance_elite_kills_stack_damage.md)。
 
 <a id="adamant_stance_dog_bloodlust"></a>
 ## 嗜血殺戮(Bloodlust)
