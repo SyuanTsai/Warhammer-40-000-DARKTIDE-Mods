@@ -24,6 +24,7 @@
 | [堅韌疾速](#broker_passive_stamina_grants_atk_speed) | 未見明確矛盾 |
 | [加重背刺](#broker_passive_ramping_backstabs) | 未見明確矛盾 |
 | [移動目標](#broker_passive_increased_ranged_dodges) | 未見明確矛盾 |
+| [樣本採集](#broker_passive_stimm_cd_on_kill) | 繁中原文誤譯 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -136,3 +137,12 @@
 - 描述鍵：`loc_talent_broker_passive_increased_ranged_dodges_desc`；hash：`a7db2b5d`。
 - 結論：未見明確矛盾。英文Effective Dodges與繁中「閃避效率」用詞不同；補清楚其為次數，依保守標準不把缺少量詞直接列為錯誤。
 - [原始碼推導與限制](broker_passive_increased_ranged_dodges.md)。
+
+<a id="broker_passive_stimm_cd_on_kill"></a>
+## 樣本採集(Sample Collector)
+
+- 描述鍵：`loc_talent_broker_passive_stimm_cd_seconds_on_kill_desc`；hash：`f234d4bf`。
+- 結論：繁中原文誤譯。同源繁中把{toxin}放在「擊殺…名受感染的敵人」的數量位置；英文是Toxined Enemy，參數代表毒素狀態而非人數。
+- 繁中原文短引：擊殺可縮減{stimm:%s}的冷卻時間{restore:%s}秒。擊殺{toxin:%s}名受感染的敵人，反而會恢復{restore_toxined:%s}秒。
+- 同源英文：Kills reduce {restore:%s}s of your {stimm:%s} Cooldown. Killing {toxin:%s} infected Enemies instead restores {restore_toxined:%s}s.
+- [原始碼推導與限制](broker_passive_stimm_cd_on_kill.md)。
