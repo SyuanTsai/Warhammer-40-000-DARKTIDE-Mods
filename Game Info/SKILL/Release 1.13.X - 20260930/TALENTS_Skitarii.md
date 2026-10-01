@@ -6,6 +6,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/b74a0dba-64ed-40b6-b630-792c413387cd" width="32" height="32" alt="電能驅動天賦圖示"> [電能驅動](#cryptic_discharge_attack_speed_increase)<br>- Voltaic Motivator | <ul><li>每次使用電能發射器後，攻擊速度提高 5% 基礎值，再按消耗充能每道增加 5%。</li><li>加成持續 15 秒；消耗 1、2、3 道時，總加成分別為 10%、15%、20%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="能量載分配鏈路天賦圖示"> [能量載分配鏈路](#cryptic_crits_grant_tdr)<br>- Power Redistribution Uplink | <ul><li>爆擊命中後，3 秒內恢復 7.5% 韌性</li><li>期間承受的韌性傷害降低 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ea4be2ad-8b84-4e83-a056-993beed7b39c" width="32" height="32" alt="適應性戰鬥記憶體天賦圖示"> [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break)<br>- Adaptive Combat Engram | <ul><li>韌性耗盡後，減少 30% 承受傷害、持續 5 秒</li><li>效果結束後冷卻 15 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4738c3e6-2609-414c-9c00-f50fea4dcef3" width="32" height="32" alt="閃避伺服恢復天賦圖示"> [閃避伺服恢復](#cryptic_successful_dodge_stamina)<br>- Evasive Servo Recovery | <ul><li>成功閃避恢復 10% 耐力</li></ul> | 技能 |
@@ -56,6 +57,24 @@
 | <img src="https://github.com/user-attachments/assets/80106b42-e788-43cb-a07a-ee69f668002f" width="32" height="32" alt="電流爆發天賦圖示"> [電流爆發](#cryptic_electrocution_push)<br>- Voltaic Burst | <ul><li>推擊造成踉蹌時施加電擊</li><li>冷卻 12 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1c4ea759-440c-48dd-bc21-3bc8303683d5" width="32" height="32" alt="抗腐護符天賦圖示"> [抗腐護符](#cryptic_corruption_resistance_doom)<br>- Ablative Wards | <ul><li>受到的腐敗減少 90%</li><li>每 20 秒付出基準 1 點腐敗代價</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a2e228da-729a-4b03-b07a-72bfaadf5dc3" width="32" height="32" alt="威脅偵測指令天賦圖示"> [威脅偵測指令](#cryptic_ranged_kills_tdr)<br>- Threat Detection Imperative | <ul><li>遠程擊殺每層減少 4% 韌性傷害</li><li>最多 5 層，每 8 秒衰減一層</li></ul> | 技能 |
+
+---
+
+## 能力
+
+<a id="cryptic_discharge_attack_speed_increase"></a>
+### 電能驅動(Voltaic Motivator)
+
+<img src="https://github.com/user-attachments/assets/b74a0dba-64ed-40b6-b630-792c413387cd" width="72" height="72" alt="電能驅動天賦圖示">
+
+- **運作方式**：使用電能發射器後，獲得 5% 攻擊速度，並按每份消耗的完整電容量再增加 5%，持續 15 秒。
+
+- **攻速算例**：消耗 1、2、3 份時，合計增加 10%、15%、20%。若受影響的攻擊動作原需 1 秒，消耗 3 份後為 1 ÷ 1.20 ≈ 0.833 秒。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_discharge_attack_speed_increase.md) · [返回目錄](#talent-index)
+
+---
+
 
 ---
 

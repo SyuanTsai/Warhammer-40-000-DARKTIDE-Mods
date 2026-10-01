@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [電能驅動](#cryptic_discharge_attack_speed_increase) | 未見明確矛盾 |
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
 | [閃避伺服恢復](#cryptic_successful_dodge_stamina) | 未見明確矛盾 |
@@ -58,6 +59,13 @@
 | [電流爆發](#cryptic_electrocution_push) | 未見明確矛盾 |
 | [抗腐護符](#cryptic_corruption_resistance_doom) | 未見明確矛盾 |
 | [威脅偵測指令](#cryptic_ranged_kills_tdr) | 未見明確矛盾 |
+
+<a id="cryptic_discharge_attack_speed_increase"></a>
+## 電能驅動(Voltaic Motivator)
+
+- 描述鍵：`loc_talent_cryptic_discharge_attack_speed_bonus_desc`；hash：`204600f6`。
+- 結論：未見明確矛盾。已逐項比對本機同一描述鍵的繁中與英文，觸發、作用方向及數值占位一致；主文補充實際分母、時間與限制，省略細節不列錯誤。
+- [原始碼推導與限制](cryptic_discharge_attack_speed_increase.md)。
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
