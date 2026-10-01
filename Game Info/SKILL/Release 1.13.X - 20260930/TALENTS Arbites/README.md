@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/adamant_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10)。內部 tree version 19 不等於遊戲發行版號。
 
-完成 56／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 57／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -16,6 +16,7 @@
 | 能力 | [懲惡揚善](adamant_charge_toughness.md) / `adamant_charge_toughness` | `node_b0947b3d-cb39-43c3-8922-1a9c48dfb8d8` | 完成（核心靜態機制） |
 | 能力 | [針鋒相對](adamant_charge_cooldown_reduction.md) / `adamant_charge_cooldown_reduction` | `node_ed72b6e9-1213-4760-bd1c-28c0f93c1f55` | 完成（核心靜態機制） |
 | 能力 | [交鋒](adamant_charge_longer_distance.md) / `adamant_charge_longer_distance` | `node_20638e8f-5c78-481c-a210-ec3fcdcd60e3` | 完成（核心靜態機制） |
+| 鑰石 | [孤狼](adamant_disable_companion.md) / `adamant_disable_companion` | `node_75d31c92-2869-4bbb-8f63-f0f7b9e15bdf` | 完成（核心靜態機制） |
 | 鑰石 | [往前進攻！](adamant_companion_focus_ranged.md) / `adamant_companion_focus_ranged` | `node_524d5b7c-7557-4a87-aa66-5ef726bdcf45` | 完成（核心靜態機制） |
 | 鑰石 | [猛犬出擊](adamant_companion_focus_elite.md) / `adamant_companion_focus_elite` | `node_44f3d117-9099-42ab-9b11-8ff7a5ef1a66` | 完成（核心靜態機制） |
 | 技能 | [電子獒犬與人](adamant_toughness_regen_near_companion.md) / `adamant_toughness_regen_near_companion` | `node_3684f20d-bb13-4f40-ba64-43d402eea435` | 完成（核心靜態機制） |

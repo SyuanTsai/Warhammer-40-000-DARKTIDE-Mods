@@ -13,6 +13,7 @@
 | [懲惡揚善](#adamant_charge_toughness) | 未見明確矛盾 |
 | [針鋒相對](#adamant_charge_cooldown_reduction) | 未見明確矛盾 |
 | [交鋒](#adamant_charge_longer_distance) | 未見明確矛盾 |
+| [孤狼](#adamant_disable_companion) | 未見明確矛盾 |
 | [往前進攻！](#adamant_companion_focus_ranged) | 未見明確矛盾 |
 | [猛犬出擊](#adamant_companion_focus_elite) | 未見明確矛盾 |
 | [電子獒犬與人](#adamant_toughness_regen_near_companion) | 未見明確矛盾 |
@@ -101,6 +102,13 @@
 - 描述鍵：`loc_talent_adamant_charge_longer_distance_desc`；hash：`3945c4ac`。
 - 結論：未見明確矛盾。繁中「距離延長至…公尺」對應英文「distance … increased to …m」；兩者都描述增加後的總距離。
 - [原始碼推導與限制](adamant_charge_longer_distance.md)。
+
+<a id="adamant_disable_companion"></a>
+## 孤狼(Lone Wolf)
+
+- 描述鍵：`loc_talent_adamant_disable_companion_replenish_split_desc`；hash：`fe3bded9`。
+- 結論：未見明確矛盾。同源繁中與英文的移除獒犬、個人增益與補充間隔一致；45／90秒都有實際消費路徑，另一個未使用的60秒欄位不構成文字矛盾。
+- [原始碼推導與限制](adamant_disable_companion.md)。
 
 <a id="adamant_companion_focus_ranged"></a>
 ## 往前進攻！(Go Get 'Em!)
