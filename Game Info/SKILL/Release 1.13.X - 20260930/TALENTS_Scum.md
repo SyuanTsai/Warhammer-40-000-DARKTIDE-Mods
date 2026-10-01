@@ -20,6 +20,7 @@
 | <img src="https://github.com/user-attachments/assets/040166f5-e6b1-4f43-ae17-2c21b8fd8014" width="32" height="32" alt="碎骨打擊天賦圖示"> [碎骨打擊](#broker_ability_punk_rage_sub_4)<br>- Boiling Blood | <ul><li>近戰命中帶有精英、專家、怪物或隊長標籤的敵人時，怒火延長 1 秒；這類命中的延長量在 30 秒前不遞減，之後每跨 30 秒減半。</li><li>一般敵人的命中仍依基本規則延長 0.3 秒，並在 20 秒後遞減；30 秒提升只套用於上述特殊敵人標籤。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/74d4304b-23f7-4666-879b-62c727596b69" width="32" height="32" alt="專注凝神天賦圖示"> [專注凝神](#broker_ability_focus_sub_3)<br>- Focused Resolve | <ul><li>專注期間的近距離遠程擊殺可恢復技能冷卻：一般擊殺 0.5 秒，精英或專家擊殺 1 秒；每次專注最多恢復 5 秒。</li><li>按 45 秒基礎冷卻及每秒自然充能 1 計，恢復至上限相當於最多補回 5 秒資源；不計其他修正，專注結束後自然充能剩 40 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="精準獵殺天賦圖示"> [精準獵殺](#broker_ability_focus_sub_2)<br>- Pick Your Targets | <ul><li>專注期間遠程攻擊加算 +15% 撕裂修正；近距離遠程擊殺每次另疊 3% 遠程傷害，最多 5 層（+15%），每層持續 3 秒並可由新擊殺刷新。</li><li>此撕裂加成作用於護甲計算，擊殺疊層是遠程傷害加算；只計滿層效果時，基礎100點遠程傷害變為115點。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3" width="32" height="32" alt="熟練部署天賦圖示"> [熟練部署](#broker_ability_stimm_field_sub_3)<br>- Practiced Deployment | <ul><li>取得新的可用興奮劑時，補滿一次興奮劑補給的能力充能；能力最多 1 次充能，已滿時不會再增加。</li><li>程式每 0.5 秒檢查興奮劑欄位或自身興奮劑充能是否變為可用，因此觸發會在下一次檢查時補滿。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="特提恩是迎賓天賦圖示"> [特提恩是迎賓](#broker_passive_first_target_damage)<br>- A Tertium Welcome | <ul><li>每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="打你的臉天賦圖示"> [打你的臉](#broker_passive_close_ranged_damage)<br>- In Your Face | <ul><li>手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。</li></ul> | 技能 |
@@ -303,6 +304,21 @@
 - **傷害算例**：只計滿 5 層時，基礎 100 點遠程傷害 × (1 + 5 × 0.03) = 115 點；其他遠程傷害修正會與此加算合併。
 
 [詳細資料](TALENTS%20Scum/broker_ability_focus_sub_2.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_ability_stimm_field_sub_3"></a>
+### 熟練部署(Practiced Deployment)
+
+<img src="https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3" width="72" height="72" alt="熟練部署天賦圖示">
+
+- **觸發時機**：新取得可用的興奮劑，或專用興奮劑恢復 1 次充能時，立即補滿化學性依賴的一次技能充能。
+
+- **充能上限**：此能力最多只有 1 次充能；已經可用時不會存下額外充能。若興奮劑已在欄位中，取得本天賦當下不會因既有物品立即觸發，程式等待新的可用狀態變化。
+
+- **時間算例**：技能還需 40 秒冷卻時觸發，即可直接再次使用；效果約在半秒內完成檢查。
+
+[詳細資料](TALENTS%20Scum/broker_ability_stimm_field_sub_3.md) · [返回目錄](#talent-index)
 
 ---
 

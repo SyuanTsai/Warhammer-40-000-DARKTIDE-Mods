@@ -22,6 +22,7 @@
 | [碎骨打擊](#broker_ability_punk_rage_sub_4) | 未見明確中英矛盾 |
 | [專注凝神](#broker_ability_focus_sub_3) | 未見中英翻譯差異（觸發條件由程式補充） |
 | [精準獵殺](#broker_ability_focus_sub_2) | 未見明確中英矛盾 |
+| [熟練部署](#broker_ability_stimm_field_sub_3) | 未見翻譯差異（程式以半秒輪詢觸發） |
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
 | [特提恩是迎賓](#broker_passive_first_target_damage) | 未見明確矛盾 |
 | [打你的臉](#broker_passive_close_ranged_damage) | 未見明確矛盾 |
@@ -167,6 +168,13 @@
 - 描述鍵：`loc_talent_broker_ability_focus_sub_2_desc`；hash：`4946598e`。
 - 結論：未見明確中英矛盾。繁中與英文都寫專注期間遠程攻擊加撕裂，並由擊殺累積遠程傷害、最多5層；設定數值為撕裂0.15、每層遠程傷害0.03、上限5層。近距離檢查與針槍追蹤是程式細節補充。
 - [原始碼推導與限制](broker_ability_focus_sub_2.md)。
+
+<a id="broker_ability_stimm_field_sub_3"></a>
+## 熟練部署(Practiced Deployment)
+
+- 描述鍵：`loc_talent_broker_ability_stimm_field_sub_3_desc`；hash：`88b27852`。
+- 結論：未見翻譯差異（程式以半秒輪詢觸發）。繁中與英文都表示取得可用興奮劑後可使能力準備就緒，觸發條件一致。固定版本實際以0.5秒間隔檢查，且只回復到充能上限；這是文案時序及充能上限補充，不構成中英矛盾。
+- [原始碼推導與限制](broker_ability_stimm_field_sub_3.md)。
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
