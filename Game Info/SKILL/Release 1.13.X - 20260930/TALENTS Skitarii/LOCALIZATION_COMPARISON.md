@@ -16,6 +16,7 @@
 | [動能排斥](#cryptic_force_field_capacitance_restore) | 未見明確矛盾；補充機制與算例 |
 | [心智網指令](#cryptic_servo_skull_improved_tagging) | 未見明確矛盾；補充機制與算例 |
 | [電流抗性](#cryptic_force_field_arcs) | 未見明確矛盾；補充機制與算例 |
+| [復甦](#cryptic_coherency_regen_aura_improved) | 未見明確矛盾；補充恢復倍率 |
 | [修復協定](#cryptic_precision_stance_toughness_suppression) | 單位用語有誤 |
 | [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased) | 未見明確矛盾 |
 | [電流弧](#cryptic_discharge_generates_arcs) | 未見明確矛盾 |
@@ -141,6 +142,13 @@
 - 描述鍵：`loc_talent_cryptic_force_field_arcs_desc`；hash：`143e5c50`。
 - 結論：未見明確矛盾；補充機制與算例。固定原始碼確認按吸收遠程攻擊數以每6次取上限整數後限制1至4道；0次也會由下限算成1道，並在正常到期路徑進入找目標流程。繁中描述未列出整數門檻、最低值及前方12公尺目標條件，屬翻譯省略的實作細節，不列為錯誤。本機 Build 25492122 尚未確認與固定來源同版。
 - [原始碼推導與限制](cryptic_force_field_arcs.md)。
+
+<a id="cryptic_coherency_regen_aura_improved"></a>
+## 復甦(Resurgence)
+
+- 描述鍵：`loc_talent_cryptic_coherency_regen_aura_improved_desc`；hash：`a053ecfc`。
+- 結論：未見明確矛盾；補充恢復倍率。同鍵中英均描述敵人接近時仍可進行協同韌性恢復；程式補明一般恢復速率乘基礎25%／改良50%、本人亦在協同接收集合，以及恢復延遲仍有效。文字未逐一列出不算錯誤。
+- [原始碼推導與限制](cryptic_coherency_regen_aura_improved.md)。
 
 <a id="cryptic_precision_stance_toughness_suppression"></a>
 ## 修復協定(Restoration Protocol)
