@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/78f209fd-3e8b-456d-954d-c67fdf6e23ee" width="32" height="32" alt="破骨者之環天賦圖示"> [破骨者之環](#ogryn_melee_damage_coherency_improved)<br>- Bonebreaker's Aura | <ul><li>「破骨者之環」使你和協同範圍內隊友的近戰攻擊傷害提高 10%。</li><li>這是基礎近戰光環的強化版本，採用 10% 數值，不會再把基礎 7.5% 額外相加。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/4b71152f-747b-450c-9d3a-82a313fc8360" width="32" height="32" alt="優勝劣汰天賦圖示"> [優勝劣汰](#ogryn_damage_vs_suppressed_coherency)<br>- Coward Culling | <ul><li>「優勝劣汰」使你和協同範圍內隊友對受壓制敵人的傷害提高 20%；另使你造成的壓制提高 25%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/014cd689-2381-43e8-9241-b0a13af77036" width="32" height="32" alt="跟緊我！天賦圖示"> [跟緊我！](#ogryn_toughness_regen_aura)<br>- Stay Close! | <ul><li>「跟緊我！」使你和協同範圍內隊友符合條件的韌性恢復量提高 20%。</li><li>這項效果提高每次恢復量，不會自行啟動韌性恢復，也不會把自然恢復速度提高 20%。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/9194fb70-c794-460d-af2a-068ae6c4fd31" width="32" height="32" alt="粉碎天賦圖示"> [粉碎](#ogryn_charge_applies_bleed)<br>- Pulverise | <ul><li>衝鋒命中施加 5 層流血；同一衝鋒對同一敵人只施加一次。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ea712cab-0dd4-47fa-a2c5-98edb7e41783" width="32" height="32" alt="爆限超載天賦圖示"> [爆限超載](#ogryn_leadbelcher_no_ammo_chance)<br>- Burst Limiter Override | <ul><li>遠程攻擊有 15% 基礎機率觸發幸運子彈，觸發的射擊不消耗彈藥。</li><li>遠程擊殺每層增加 2% 遠程傷害，最多 10 層；加層時刷新 10 秒期限。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9436a125-4e9f-4655-ae8f-4975db2f4af1" width="32" height="32" alt="麻木天賦圖示"> [麻木](#ogryn_carapace_armor)<br>- Feel No Pain | <ul><li>開始時有 10 層麻木；每層增加韌性恢復，並使韌性所受傷害再乘以 0.97。</li><li>受到有效傷害時最多每秒失去一層；未滿層時每隔 2 秒恢復一層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6ad5a8ad-f1c2-4c43-997a-02b89543ebd9" width="32" height="32" alt="重拳出擊天賦圖示"> [重拳出擊](#ogryn_passive_heavy_hitter)<br>- Heavy Hitter | <ul><li>近戰命中累積重拳出擊：一般命中增加 1 層，重擊命中增加 2 層。</li><li>每層增加 3% 近戰傷害，最多 8 層；新增層數會刷新 7.5 秒期限。</li></ul> | 鑰石 |
@@ -216,6 +217,26 @@
 - **疊層與冷卻**：光環效果最多 1 層，沒有獨立冷卻；它提高適用的恢復量，不會自行產生一筆恢復，也不提高協同自然恢復速度。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_toughness_regen_aura.md) · [返回目錄](#talent-index)
+
+---
+
+
+---
+
+## 能力
+
+<a id="ogryn_charge_applies_bleed"></a>
+### 粉碎(Pulverise)
+
+<img src="https://github.com/user-attachments/assets/9194fb70-c794-460d-af2a-068ae6c4fd31" width="72" height="72" alt="粉碎天賦圖示">
+
+- **觸發方式**：衝鋒命中仍存活的敵人時，對其施加 5 層流血；同一次衝鋒對同一敵人只施加一次。
+
+- **疊層與持續**：流血最多 16 層，再次施加刷新 1.5 秒維持時間；每約 0.5 秒造成一次傷害。停止補層、維持時間結束後，會逐次減少層數。
+
+- **傷害算例**：只計無護甲且沒有其他修正，5 層每次流血傷害為 87.5 × (5 ÷ 16)² × [3 − 2 × (5 ÷ 16)] ≈ 20.29 點；8 層為 43.75 點。流血層數與傷害不是單純等比例增加。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_charge_applies_bleed.md) · [返回目錄](#talent-index)
 
 ---
 
