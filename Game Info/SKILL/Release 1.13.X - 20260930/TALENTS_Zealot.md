@@ -11,6 +11,7 @@
 | <img src="https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29" width="32" height="32" alt="神聖事業天賦圖示"> [神聖事業](#zealot_channel_grants_toughness_damage_reduction)<br>- Holy Cause | <ul><li>「神聖事業」讓合唱脈衝對本人與協同盟友疊加韌性傷害減免。</li><li>每次脈衝 +8% 韌性傷害減免，最多 5 層，即最高 40%；持續 10 秒，脈衝會刷新時間。</li><li>合唱約 3.67 秒、每 0.8 秒脈衝一次；約 5 次脈衝可累積到上限。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/1abe7e62-3810-4680-9c49-7f6091782ab6" width="32" height="32" alt="教宗之喚天賦圖示"> [教宗之喚](#zealot_channel_grants_damage)<br>- Ecclesiarch's Call | <ul><li>「教宗之喚」使合唱每次脈衝為本人與協同盟友增加 +6% 傷害。</li><li>最多疊加 5 層，理論上限 +30%；每層 buff 持續 10 秒，重複脈衝刷新時間。</li><li>合唱約 3.67 秒、每 0.8 秒脈衝，通常單次引導可觸發 5 次。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/35487761-88d3-4091-ac1b-bde3020e300e" width="32" height="32" alt="倍增狂熱天賦圖示"> [倍增狂熱](#zealot_additional_charge_of_ability)<br>- Redoubled Zeal | <ul><li>「倍增狂熱」把有信者之怒的戰鬥技能最大充能數從 1 提升為 2。</li><li>每次充能仍需 30 點共享冷卻資源、以每秒 1 點恢復；用完兩次後約 30 秒回一格、60 秒回滿。</li><li>額外充能只套用衝刺技能，不會增加不屈靈魂合唱或隱秘領域的充能。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/313c803f-9a12-4470-9660-ce9a8fd308c9" width="32" height="32" alt="隱秘領域天賦圖示"> [隱秘領域](#zealot_stealth)<br>- Shroudfield | <ul><li>隱秘領域讓玩家隱形 3 秒，基礎冷卻 30 秒、單次充能。</li><li>潛行期間：+20% 移動速度、+100% 暴擊機率、+150% 靈巧／背刺／側襲傷害，以及 +100% 近戰撕裂。</li><li>自身攻擊或特定動作會結束潛行；傷害種類、命中結果及動作事件會經程式篩選。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="死戰到底天賦圖示"> [死戰到底](#zealot_resist_death)<br>- Until Death | <ul><li>承受致命傷害時獲得 8 秒免死效果。</li><li>效果結束後冷卻 120 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="殉道天賦圖示"> [殉道](#zealot_martyrdom)<br>- Martyrdom | <ul><li>每失去一整格生命，近戰傷害增加 10%，最多 5 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="32" height="32" alt="不滅意志天賦圖示"> [不滅意志](#zealot_martyrdom_grants_toughness)<br>- I Shall Not Fall | <ul><li>殉道每缺少一格生命傷口，韌性承傷降低 7.5%，最多 5 格。</li></ul> | 鑰石 |
@@ -157,6 +158,25 @@
 - **適用能力**：這項升級只作用於有信者之怒。
 
 [詳細資料](TALENTS%20Zealot/zealot_additional_charge_of_ability.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_stealth"></a>
+### 隱秘領域(Shroudfield)
+
+<img src="https://github.com/user-attachments/assets/313c803f-9a12-4470-9660-ce9a8fd308c9" width="72" height="72" alt="隱秘領域天賦圖示">
+
+- **運作方式**：進入隱身 3 秒，基礎冷卻 30 秒、1 次充能。期間移動速度提高 20%，爆擊率增加 100 個百分點，近戰撕裂提高 100%。
+
+- **傷害加成**：隱身期間，近戰背刺或遠程側襲傷害提高 150%；弱點／爆擊的額外傷害另提高 150%。背刺、側襲取決於攻擊種類與方向，不會同時把兩份 150% 加在同一次命中。
+
+- **靈巧傷害算例**：先固定攻擊種類、部位與護甲，只看靈巧加成；基礎部分 100、弱點／爆擊額外部分 50 時，由 150 變成 100 + 50 × (1 + 150%) = 225，整次增加 50%。額外部分若為 100，則由 200 變成 350，增加 75%。背刺與撕裂等其他因素另算。
+
+- **移速算例**：基礎 5 公尺／秒、沒有其他修正時，變成 5 × 1.2 = 6 公尺／秒。
+
+- **提早解除**：一般射擊、有效攻擊命中、投擲手雷或飛刀，以及完成救援等動作可解除隱身；既有流血、燃燒等持續傷害不會單獨解除。剛進入隱身約 0.5 秒內，部分沒有造成傷害的動作有寬限。
+
+[詳細資料](TALENTS%20Zealot/zealot_stealth.md) · [返回目錄](#talent-index)
 
 ---
 
