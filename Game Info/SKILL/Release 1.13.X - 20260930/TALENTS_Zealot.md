@@ -23,6 +23,7 @@
 | <img src="https://github.com/user-attachments/assets/a2373334-1398-4475-b263-5b2d56cf8b90" width="32" height="32" alt="褻瀆必懲天賦圖示"> [褻瀆必懲](#zealot_push_attacks_attack_speed)<br>- Punish Impiety | <ul><li>推擊後的追加攻擊命中時，近戰攻速提高 10%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/52db08a6-3729-466e-ac16-d02a1a7ebecb" width="32" height="32" alt="勃然大怒天賦圖示"> [勃然大怒](#zealot_damage_boosts_movement)<br>- Thy Wrath be Swift | <ul><li>受傷後移動速度提高 15%，持續 2 秒。</li><li>免疫一般受擊造成的減速與踉蹌。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/607612bf-67ee-475e-9a16-0b5541c7b4ea" width="32" height="32" alt="反制護盾天賦圖示"> [反制護盾](#zealot_stamina_on_block_break)<br>- Retaliatory Defence | <ul><li>格擋被打破時恢復 50% 最大耐力，冷卻 12 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/41e85f89-6787-4fe4-9fd7-a2382f2aa025" width="32" height="32" alt="四平八穩天賦圖示"> [四平八穩](#zealot_reduced_damage_after_dodge)<br>- Good Balance | <ul><li>成功閃避後減傷 25%，持續 2.5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -267,6 +268,19 @@
 - **恢復算例**：最大耐力為 6，破防耗盡至 0 時，補回 6 × 50% = 3；冷卻期間再次破防不會再補。
 
 [詳細資料](TALENTS%20Zealot/zealot_stamina_on_block_break.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_reduced_damage_after_dodge"></a>
+### 四平八穩(Good Balance)
+
+<img src="https://github.com/user-attachments/assets/41e85f89-6787-4fe4-9fd7-a2382f2aa025" width="72" height="72" alt="四平八穩天賦圖示">
+
+- **運作方式**：成功閃避攻擊後，受到的傷害降低 25%，持續 2.5 秒；再次成功閃避會刷新時間。
+
+- **減傷算例**：原本 100 點傷害變成 100 × 0.75 = 75 點。若另有獨立乘算的 40% 減傷，則為 100 × 0.75 × 0.6 = 45 點。
+
+[詳細資料](TALENTS%20Zealot/zealot_reduced_damage_after_dodge.md) · [返回目錄](#talent-index)
 
 ---
 

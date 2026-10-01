@@ -25,6 +25,7 @@
 | [褻瀆必懲](#zealot_push_attacks_attack_speed) | 未見明確矛盾 |
 | [勃然大怒](#zealot_damage_boosts_movement) | 未見明確矛盾 |
 | [反制護盾](#zealot_stamina_on_block_break) | 未見明確矛盾 |
+| [四平八穩](#zealot_reduced_damage_after_dodge) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_4) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
@@ -147,6 +148,13 @@
 - 描述鍵：`loc_talent_zealot_stamina_on_block_break_alt_desc`；hash：`2fb38d1a`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_stamina_on_block_break.md)。
+
+<a id="zealot_reduced_damage_after_dodge"></a>
+## 四平八穩(Good Balance)
+
+- 描述鍵：`loc_talent_reduced_damage_after_dodge_description`；hash：`d65317f7`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_reduced_damage_after_dodge.md)。
 
 <a id="base_melee_damage_node_buff_medium_4"></a>
 ## 近戰增幅(Melee Damage Boost)
