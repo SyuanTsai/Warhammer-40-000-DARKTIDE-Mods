@@ -44,6 +44,7 @@
 | 技能 | [首輪齊射(Opening Salvo)](#veteran_bonus_crit_chance_on_ammo) | 彈匣剩餘彈藥至少 80% 時，遠程爆擊率增加 10 個百分點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [突擊隊(Shock Trooper)](#veteran_no_ammo_consumption_on_lasweapon_crit) | 雷射武器的爆擊射擊不消耗彈藥。 |
+| 技能 | [凋零烈焰(Withering Fire)](#veteran_increased_ranged_cleave) | 遠程順劈攻擊的穿透能力增加 50%。 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
 | 技能 | [臨場發揮(Field Improvisation)](#veteran_better_deployables) | 小隊的彈藥箱也能補滿可補給的手雷。 |
 | 技能 | [火力掩護(Covering Fire)](#veteran_replenish_toughness_and_boost_allies) | 遠程擊殺敵人時，可為該敵人附近的 1 名隊友恢復 15% 最大韌性，並使其傷害增加 15%，持續 6 秒。 |
@@ -788,6 +789,24 @@
 - 假設每次射擊原本消耗 1 發，10 次射擊中有 3 次爆擊：共消耗 `(10 − 3) × 1 + 3 × 0 = 7 發`。
 
 [詳細資料](TALENTS%20Veteran/veteran_no_ammo_consumption_on_lasweapon_crit.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_increased_ranged_cleave"></a>
+
+### 凋零烈焰(Withering Fire)
+
+<img src="https://github.com/user-attachments/assets/ba2f9f5e-0466-433d-a93d-68b1f9606dd7" width="72" height="72" alt="凋零烈焰天賦圖示">
+
+- **遠程順劈攻擊的穿透能力增加 50%。**
+- 子彈能穿透多少敵人，仍由武器與各敵人的阻擋程度決定；不增加對單一目標的傷害。
+
+#### 穿透算例
+
+- 假設原本穿透能力為 6，只計此加成：`6 × 1.5 = 9`。
+- 這代表可承受更多穿透阻力，不能直接換算成固定多命中 50% 敵人。
+
+[詳細資料](TALENTS%20Veteran/veteran_increased_ranged_cleave.md) · [返回目錄](#talent-index)
 
 ---
 
