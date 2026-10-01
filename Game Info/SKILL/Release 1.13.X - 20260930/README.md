@@ -8,6 +8,8 @@
 - [歐格林完整天賦說明](TALENTS_Ogryn.md)
 - [法務官完整天賦說明](TALENTS_Arbites.md)
 - [巢都渣滓完整天賦說明](TALENTS_Scum.md)
+- [護教軍完整天賦說明](TALENTS_Skitarii.md)
+- [護教軍來源、公式與技術索引](TALENTS%20Skitarii/README.md)
 - [巢都渣滓來源、公式與技術索引](TALENTS%20Scum/README.md)
 - [法務官來源、公式與技術索引](TALENTS%20Arbites/README.md)
 - [歐格林來源、公式與技術索引](TALENTS%20Ogryn/README.md)
@@ -797,3 +799,128 @@
 | 基礎：迅如疾風(Like the Wind)：基礎被動 / `broker_passive_improved_sprint_dodge` | `dc6fd96818a6990b0e462429eeded9c55f6e4636` | `0a01308b372f07db4e94f99f9244156d254a2b6e` |
 | 基礎：財閥專員(Cartel Special)：專用興奮劑 / `broker_stimm_description_talent` | `b2ca675696a65ea3f724b862e7df781a9f48b5f4` | `b2ca675696a65ea3f724b862e7df781a9f48b5f4` |
 | 基礎：專用興奮劑充能 / `broker_syringe` | `ee16a9afa9e49c320a6e249834cc33104131ed36` | `94acae4ef235082083406e5ea058c4226d3b51b0` |
+
+## 護教軍完成範圍
+
+| 分類 | 完成／當前節點 |
+|---|---|
+| 閃擊 | 11／11 |
+| 光環 | 3／3 |
+| 能力與升級 | 18／18 |
+| 鑰石與升級 | 15／15 |
+| 技能 | 50／50 |
+| 合計 | **97／97** |
+
+- 採用老兵主頁、三欄目錄、條列效果、實際算例與逐技能來源文件。97項可選天賦及4項基礎效果均有各自本機提交；同一配置最多分配30點。
+- 固定來源的職業內部名稱為cryptic，文件沿用詞表「護教軍」與Skitarii命名。技能樹version18不是遊戲版本號；該職業未另指定專精／配方樹。
+- [4項基礎效果](TALENTS%20Skitarii/BASE_EFFECTS.md)分開列出；103項職業定義中，97項可選、4項基礎，另[2項未直接引用](TALENTS%20Skitarii/UNUSED_DEFINITIONS.md)。
+- [繁中原文比對](TALENTS%20Skitarii/LOCALIZATION_COMPARISON.md)涵蓋97組同鍵／hash中英文本；4項明確繁中勘誤放在相應技能下。省略細節不列錯誤。
+- [百分比盤點](TALENTS%20Skitarii/DAMAGE_PERCENTAGE_REVIEW.md)涵蓋全部97項；核對單份50點電容量、消耗上限、逐層衰減、直接恢復例外、韌性分享及弱點額外傷害。
+- 97張圖示保存在[Media-Assets Issue #13](https://github.com/SyuanTsai/Media-Assets/issues/13)，逐張公開下載比對位元組與SHA-256；目錄32×32、內文72×72。圖片與完整擷取文本不加入Git。
+- 固定機制來源Release1.13.0與本機文字Build25492122尚未確認同版。沒有遊戲內實測；目標篩選、操控與多人同步仍需同版實測。來源中未由現行技能樹啟用的分支不寫成可用效果。
+
+### 護教軍逐項本機提交
+
+| 項目 | 首次文件提交 | 最近修訂提交 |
+|---|---|---|
+| 整合型艾曼納圖斯力場 / `cryptic_grenade_ability_force_field` | `d6400dab837807155ed9995932bc5c2bde1fd6c5` | `d6400dab837807155ed9995932bc5c2bde1fd6c5` |
+| 滌罪伺服頭骨 / `cryptic_flamethrower` | `2f79935e4811626d5b9ee5612628c893645909bb` | `2f79935e4811626d5b9ee5612628c893645909bb` |
+| 醫療伺服頭骨 / `cryptic_servo_skull_inject_ally` | `767b706ab3b5f6cd27761d442b37dcb91eb14e7e` | `767b706ab3b5f6cd27761d442b37dcb91eb14e7e` |
+| 電弧手榴彈 / `cryptic_grenade_ability_arc_grenade` | `a8ab08b65ad4518ab22698ac27801f3fd147fe85` | `865309ee881759c1ca3d94ebcc3e5f5cf6e9bc95` |
+| 匠師伺服頭骨 / `cryptic_servo_skull_improved` | `4a4bfb968024efb72f680a85ec6c6393996bb6cf` | `4a4bfb968024efb72f680a85ec6c6393996bb6cf` |
+| 超載電弧手榴彈 / `cryptic_arc_grenades_brittleness` | `07fae052e5bc711130f84dee2c1a83a822bc68fb` | `07fae052e5bc711130f84dee2c1a83a822bc68fb` |
+| 強化電弧手榴彈 / `cryptic_arc_grenades_weapon_malfunction` | `f9f9994099c15aa3ebe903a97d0cc9a287974366` | `3d16fdb642b40107b702f3a62f729744609735b7` |
+| 過載艾曼納圖斯力場 / `cryptic_force_field_duration_increase` | `198b2b00dddf50306f60efe25deed9d8a9040ceb` | `198b2b00dddf50306f60efe25deed9d8a9040ceb` |
+| 動能排斥 / `cryptic_force_field_capacitance_restore` | `7e35893c4219565dc31a63b9a21bf787688b0492` | `7e35893c4219565dc31a63b9a21bf787688b0492` |
+| 心智網指令 / `cryptic_servo_skull_improved_tagging` | `0a0c0355d0a43238ed60cf720aa49521b88d6d32` | `0a0c0355d0a43238ed60cf720aa49521b88d6d32` |
+| 電流抗性 / `cryptic_force_field_arcs` | `ac17670adcb1151640a23760edc7d976817285c0` | `ac17670adcb1151640a23760edc7d976817285c0` |
+| 復甦 / `cryptic_coherency_regen_aura_improved` | `8f9144b1f66d1166fb0276bda0d15008ab99467d` | `8f9144b1f66d1166fb0276bda0d15008ab99467d` |
+| 彈藥存放 / `cryptic_ammo_aura` | `b455213a3b6f95368ac7c8072f0405fe382c79bd` | `ec33d6363d6f7608a27e19b5e3440d97c4e62fa7` |
+| 碎敵信條 / `cryptic_aura_weapon_improved` | `84fef58f3bd7dff95d896e0dd6e13809fedd1205` | `84fef58f3bd7dff95d896e0dd6e13809fedd1205` |
+| 弦爪重擊 / `cryptic_chordclaw` | `460c2794f0126159913fc0fe5778f51ac2607441` | `460c2794f0126159913fc0fe5778f51ac2607441` |
+| 修復協定 / `cryptic_precision_stance_toughness_suppression` | `c9f10b86271287cc7f5fda4296378e66b7f2e4a7` | `d7a0dd4945acebafda7a16680751f0b4402c8767` |
+| 彈藥盤點之旨 / `cryptic_precision_stance_fire_rate_increased` | `67ea5cc9960c90560f281355c55f07716cf58665` | `3641a902f1dd8d7a475b2c368eb5de9d30b6e324` |
+| 電流弧 / `cryptic_discharge_generates_arcs` | `5b39771f7b42e845564f8f1a3a61e2ed9088c903` | `a8680cb2ea3a4bda465b6ac50133c014d8fb51e1` |
+| 電能驅動 / `cryptic_discharge_attack_speed_increase` | `90c6a2b0e4e5d7da42abbe2df3e7cbfe1e55c70c` | `90c6a2b0e4e5d7da42abbe2df3e7cbfe1e55c70c` |
+| 電流超載 / `cryptic_discharge_toughness` | `045f4963fcaf540605d175af7dfa5786e6d39dce` | `bdcdb8e67cfcf45690d7c3d957089cb78560b9bb` |
+| 軸向斬擊 / `cryptic_chordclaw_horizontal_swipe` | `d5521b1f990b86090a11f3b5fa7552384a9a9647` | `b89a9e380d0e7aeac2f4f6db90af3b43364bafc8` |
+| 試探連擊 / `cryptic_chordclaw_quick_stab_combo` | `96bb40a41d901ee514ca4ae1fa726365baaa8f14` | `96bb40a41d901ee514ca4ae1fa726365baaa8f14` |
+| 通量導管蓄積 / `cryptic_crits_grant_power` | `8dd105d8dcead638fc0fa185541788c7af0ff0bf` | `8dd105d8dcead638fc0fa185541788c7af0ff0bf` |
+| 反應爐線圈充能 / `cryptic_weakspot_kills_grant_power` | `d75cc62f588bccd079113f39498a13d99d07a3f0` | `d75cc62f588bccd079113f39498a13d99d07a3f0` |
+| 強化能量循環 / `cryptic_increased_passive_cooldown_regen` | `0df2c98c743b026d84ef9403cfd27836cd2ab746` | `091a79595848a6de8a7f95493b8922c42ccd9811` |
+| 電容回收迴路 / `cryptic_multi_hits_grant_power` | `a1658c0409d21305a6e2b9774e6ab50483ba4c80` | `a1658c0409d21305a6e2b9774e6ab50483ba4c80` |
+| 電能發射器 / `cryptic_discharge` | `1b740467c9d55cf1b55e259208b53e9bef628db8` | `1b740467c9d55cf1b55e259208b53e9bef628db8` |
+| 進階戰鬥教範 / `cryptic_precision_stance` | `eec5d10d2962fa071850b4b8a075418085e5bd25` | `eec5d10d2962fa071850b4b8a075418085e5bd25` |
+| 鋼鐵富足 / `cryptic_chordclaw_capacitance_restoration` | `67746d27cb7284a1ae9bec0dc499acc945485bfa` | `67746d27cb7284a1ae9bec0dc499acc945485bfa` |
+| 千刀萬剮 / `cryptic_chordclaw_consecutive_bonus` | `a7fa3cb1da5eaa0d2b6eed974675c44ecc0a158a` | `a7fa3cb1da5eaa0d2b6eed974675c44ecc0a158a` |
+| 洞察之眼 / `cryptic_precision_stance_crit_cleave` | `70f9841b9333cfab39b3bf96f853d7cebac603b2` | `70f9841b9333cfab39b3bf96f853d7cebac603b2` |
+| 精算順序 / `cryptic_precision_stance_damage_on_elite_kill` | `b40a22e22efe9f0669eb0b55ba2f4fea886cd8fa` | `b40a22e22efe9f0669eb0b55ba2f4fea886cd8fa` |
+| 削切協議 / `cryptic_dissector` | `640f09c2d4df35c0376a479f44e75ebb144d86af` | `640f09c2d4df35c0376a479f44e75ebb144d86af` |
+| 極限電容 / `cryptic_redline` | `2720b5442982ec36ce33e7fe733115205e8dd3e1` | `2720b5442982ec36ce33e7fe733115205e8dd3e1` |
+| 能量超載 / `cryptic_overload_keystone` | `757d2fdd6e69676b2cf8d2d64a29b8239b236e5f` | `757d2fdd6e69676b2cf8d2d64a29b8239b236e5f` |
+| 爆擊能量過載 / `cryptic_overload_keystone_bigger_explosion` | `46d5f9198487547e77b9847bbd2f92e005d7806d` | `46d5f9198487547e77b9847bbd2f92e005d7806d` |
+| 振奮過載 / `cryptic_overload_keystone_toughness_stamina` | `687771d2ec0254d911d91dcbd199eeba6fab95c5` | `687771d2ec0254d911d91dcbd199eeba6fab95c5` |
+| 靜電電容消耗 / `cryptic_overload_keystone_permastack` | `61a2645f6333800b532cf9cf5ff87abb40611d2a` | `61a2645f6333800b532cf9cf5ff87abb40611d2a` |
+| 伺服肌腱湧動 / `cryptic_dissector_crit_attack_speed` | `196ba1293afdd7b50bba768d595bfb74b8ca7425` | `196ba1293afdd7b50bba768d595bfb74b8ca7425` |
+| 熟練解剖者 / `cryptic_dissector_max_stacks` | `bd23e927104cd3bf353d0bdcbbf9a3a5dc305344` | `bd23e927104cd3bf353d0bdcbbf9a3a5dc305344` |
+| 進階能量管理 / `cryptic_redline_strength` | `7171e256dc8b857d38c613431e2caa41fe412677` | `7171e256dc8b857d38c613431e2caa41fe412677` |
+| 電容極限覆寫 / `cryptic_redline_rending` | `c5a0654dd556d0dd32d9bae008d6604223980366` | `c5a0654dd556d0dd32d9bae008d6604223980366` |
+| 資源最佳化聖歌 / `cryptic_redline_extra_max_stacks` | `5f123d787fe887cb55b6b71facf3793291f95e90` | `5f123d787fe887cb55b6b71facf3793291f95e90` |
+| 強化電容協議 / `cryptic_dissector_ability_stacks` | `4ce18a3decb758535161a6e5e976d78365396db9` | `4ce18a3decb758535161a6e5e976d78365396db9` |
+| 動力驅動 / `cryptic_overload_keystone_abilities` | `2ad340db5d5901f931c17450289b9024ea9d4735` | `b7e76df37d50608c8121d23d96a7706f3e9e2ef9` |
+| 崇高意圖 / `cryptic_dissector_power` | `914e1057f2697c9c6c6edf651816c380e124f945` | `451034e08e8a8f0ff83a90a3bd9eb22f71ae7ef2` |
+| 脈衝延伸 / `cryptic_redline_toughness` | `8f81b1c8d22e0e2458ceba10ec144a81c6f75bff` | `8f81b1c8d22e0e2458ceba10ec144a81c6f75bff` |
+| 能量載分配鏈路 / `cryptic_crits_grant_tdr` | `0ecc9b4617dd16925cde1d6fcdfe53a130784c17` | `0ecc9b4617dd16925cde1d6fcdfe53a130784c17` |
+| 適應性戰鬥記憶體 / `cryptic_dr_on_toughness_break` | `5939c05f5f74e43d870ec625d3ed736ddf25e9e4` | `5939c05f5f74e43d870ec625d3ed736ddf25e9e4` |
+| 閃避伺服恢復 / `cryptic_successful_dodge_stamina` | `cddada0f7d3c23e83b953906dc1fe61f1fe04b42` | `cddada0f7d3c23e83b953906dc1fe61f1fe04b42` |
+| 歐姆尼賽亞充能聖歌 / `cryptic_multi_hits_restore_toughness` | `1247e4fc3163393ab08fa551393e3d36ec1b7ea6` | `1247e4fc3163393ab08fa551393e3d36ec1b7ea6` |
+| 原初動力導流 / `cryptic_stamina_increases_damage` | `73ca499aa4abef7be093035dfc38f783a1345847` | `73ca499aa4abef7be093035dfc38f783a1345847` |
+| 熵能轉移 / `cryptic_electrocution_toughness` | `ef4a93f16136148990a383160d34b6900b8c0a60` | `ef4a93f16136148990a383160d34b6900b8c0a60` |
+| 過載轉移晶格 / `cryptic_electrocution_defense` | `5a60b02503be9aea47947b057e09ce35f05dd7a8` | `5a60b02503be9aea47947b057e09ce35f05dd7a8` |
+| 精準思算機同步 / `cryptic_weakspot_damage` | `090c65af67ed8346dc5e414c3ed2610b6566b62b` | `090c65af67ed8346dc5e414c3ed2610b6566b62b` |
+| 電擊破壞協定 / `cryptic_pushing_grants_cleave` | `5fa539e5f3e56b1e405b837158420eebe7e8ef43` | `5fa539e5f3e56b1e405b837158420eebe7e8ef43` |
+| 輻射槽 / `cryptic_stacking_ranged_damage` | `19fbf540ef8381e114744e5a29e62ca0bae0496a` | `19fbf540ef8381e114744e5a29e62ca0bae0496a` |
+| 漸進裝甲矩陣 / `cryptic_stacking_tdr` | `8f0c9b18d71e6978402e13df26b5d1b53df5f10b` | `8f0c9b18d71e6978402e13df26b5d1b53df5f10b` |
+| 報應導管 / `cryptic_damage_vs_electrocuted_scaling_on_charge` | `16a4f93991f2ccf72454ffb9d02f40ddb215fcbb` | `16a4f93991f2ccf72454ffb9d02f40ddb215fcbb` |
+| 電流標記陣列 / `cryptic_elite_kills_damage` | `469a726de1df896e19a10697b8979d2e74e3cd1d` | `469a726de1df896e19a10697b8979d2e74e3cd1d` |
+| 自我修復教義 / `cryptic_toughness_per_charge` | `9e6aecee3c6671a4116f28ed0e5233481e8300ff` | `9e6aecee3c6671a4116f28ed0e5233481e8300ff` |
+| 絕境中繼 / `cryptic_crit_chance_based_on_charge` | `91223d281f7707211f6c569ee0f084fb7c7e7802` | `91223d281f7707211f6c569ee0f084fb7c7e7802` |
+| 弱點分析教義 / `cryptic_afflicted_increased_damage` | `fe7061651daf3cbde7f9dcdfa1494c5cdfcfda87` | `fe7061651daf3cbde7f9dcdfa1494c5cdfcfda87` |
+| 離格動作例程 / `cryptic_mobile_defense` | `022cbf5d32c40fa883a88a9e4bcba90238bc0ea7` | `022cbf5d32c40fa883a88a9e4bcba90238bc0ea7` |
+| 能量溢流 / `cryptic_shared_toughness` | `904bc672748d245ab8ae20eeb3f6df5b127d3126` | `904bc672748d245ab8ae20eeb3f6df5b127d3126` |
+| 目標殲滅回饋 / `cryptic_stun_suppression_immune` | `b37ec282a02e4ab5fd4d33ac2b13682ae2d1cce8` | `b37ec282a02e4ab5fd4d33ac2b13682ae2d1cce8` |
+| 二元彈道協議 / `cryptic_elite_kills_toughness` | `1001b9c1d6fbfd0de0ed68266bb2c4ebf496c6e1` | `1001b9c1d6fbfd0de0ed68266bb2c4ebf496c6e1` |
+| 力量分配致動器 / `cryptic_push_stagger_stamina` | `6a0195d16eef53ab975eb527daa996350d6507de` | `6a0195d16eef53ab975eb527daa996350d6507de` |
+| 卓越追蹤聖歌 / `cryptic_no_braced_movement_penalty` | `4c51111f445948c53f143828b306023b728c1a87` | `4c51111f445948c53f143828b306023b728c1a87` |
+| 液壓衝擊 / `cryptic_better_heavies` | `3cb937b6d9f1a638804bb4c60e9bcbe65445f10c` | `3cb937b6d9f1a638804bb4c60e9bcbe65445f10c` |
+| 混合戰鬥契約 / `cryptic_hybrid_damage` | `8e6ebe723feb9562898f7dfada490837cea1f5d7` | `8e6ebe723feb9562898f7dfada490837cea1f5d7` |
+| 動能分配器 / `cryptic_toughness_on_damage_taken` | `160e05bf99ffc9d928df0fa0aa08a274db4ea1da` | `9f5805609c47d0b654a474d01f413bbccfe1cab0` |
+| 無限抑制器 / `cryptic_melee_attacks_give_melee_attack_speed` | `7dedeb016d4791f6b943f0bebe9b4e82a0f5f599` | `7dedeb016d4791f6b943f0bebe9b4e82a0f5f599` |
+| 電擊打擊導管 / `cryptic_melee_crits_electrocute_first` | `37a92791aa895491ac308d4869b343db450840a0` | `37a92791aa895491ac308d4869b343db450840a0` |
+| 槍械技師 / `cryptic_auto_reload` | `f602b3accf0e10db16f091eaa202fbe71b425bae` | `f602b3accf0e10db16f091eaa202fbe71b425bae` |
+| 暗殺協議 / `cryptic_ranged_vs_bfg` | `b4e316c38ba6c1d1937d1b958fb2e75881bcf48e` | `b4e316c38ba6c1d1937d1b958fb2e75881bcf48e` |
+| 系統電擊 / `cryptic_electrocution_applies_brittleness` | `8adab9957859fdba23a2d0552616549987179564` | `8adab9957859fdba23a2d0552616549987179564` |
+| 彈藥預知 / `cryptic_ammo_reserve` | `14e06b17f3af6bbb642c1633c3b7c1b1b45ebffc` | `14e06b17f3af6bbb642c1633c3b7c1b1b45ebffc` |
+| 電能修復 / `cryptic_coherency_toughness_on_ability` | `a3d79130d6e75a3f2d55c284009cdf4dc21d16c4` | `a3d79130d6e75a3f2d55c284009cdf4dc21d16c4` |
+| 救贖教範 / `cryptic_revive_speed_and_dr` | `77e862816851081f46c7c7298c83281b9f8f93a3` | `77e862816851081f46c7c7298c83281b9f8f93a3` |
+| 彈藥補給艙 / `cryptic_passive_ammo_replenishment` | `bedb8cab7dfef8be23e978bf73b73563cf43f3c1` | `bedb8cab7dfef8be23e978bf73b73563cf43f3c1` |
+| 持續攻擊教義 / `cryptic_stacking_melee_damage` | `e059eb84f987e8620e11e01b430e0958dc7be129` | `e059eb84f987e8620e11e01b430e0958dc7be129` |
+| 鍍鋅精密塗層 / `cryptic_stun_dr_power` | `8799d2564e8e915371af0e97f211363a8f24ffe9` | `8799d2564e8e915371af0e97f211363a8f24ffe9` |
+| 莫比亞導體 / `cryptic_damage_on_ability` | `d3a056c1cb680c7701bf8a06f812d22590445ac7` | `d3a056c1cb680c7701bf8a06f812d22590445ac7` |
+| 伺服核心充能引擎 / `cryptic_weakspot_kills_restore_toughness` | `990125b064b87d0935d77ee7cb72ef2c74572317` | `990125b064b87d0935d77ee7cb72ef2c74572317` |
+| 適應性戰鬥校準 / `cryptic_cleave_and_impact` | `2861b75f2b4650e95d433131aa1544cd912281e3` | `2861b75f2b4650e95d433131aa1544cd912281e3` |
+| 剩餘電流緩衝 / `cryptic_tdr_based_on_charge` | `1c15e30e49e49031a7df8f4849b34629e1290e9c` | `1c15e30e49e49031a7df8f4849b34629e1290e9c` |
+| 卓越防禦記憶模組 / `cryptic_ranged_stacking_toughness` | `f8272fd64008abb9f2a6d6f879959a1ce77f9d66` | `f8272fd64008abb9f2a6d6f879959a1ce77f9d66` |
+| 標記優先聖詩 / `cryptic_specials_marking` | `ca366b2d229c36a9da3ff8fc32732460c7370d0f` | `ca366b2d229c36a9da3ff8fc32732460c7370d0f` |
+| 守護協議 / `cryptic_disabled_allies_defense` | `824cc7c7e1ff5bb6b93fb5cba746531ab4dc0449` | `824cc7c7e1ff5bb6b93fb5cba746531ab4dc0449` |
+| 數據感應協定 / `cryptic_ally_coherency_defenses` | `02fe50c98431e30ca805132844ef9e248fa11715` | `02fe50c98431e30ca805132844ef9e248fa11715` |
+| 序列充能 / `cryptic_strength_on_charge_gain` | `370fffc1a06cbadd3f7e11fe836ca7c6e7caa53e` | `370fffc1a06cbadd3f7e11fe836ca7c6e7caa53e` |
+| 屠殺協議 / `cryptic_toughness_replenishment_on_kill_bonus` | `86544def329ff1a594dbbb55d247f6a16e20d255` | `86544def329ff1a594dbbb55d247f6a16e20d255` |
+| 精準戰鬥探測儀 / `cryptic_next_hit_all_damage_on_dodge` | `f919ef52741da3218cf048d9e0362daef0618c0d` | `f919ef52741da3218cf048d9e0362daef0618c0d` |
+| 電流爆發 / `cryptic_electrocution_push` | `b4e1205ce1e77eb04b7e22750c1a9164be8d56b3` | `b4e1205ce1e77eb04b7e22750c1a9164be8d56b3` |
+| 抗腐護符 / `cryptic_corruption_resistance_doom` | `f96b92cc8fcaec62a992be87044768eaee06f07a` | `f96b92cc8fcaec62a992be87044768eaee06f07a` |
+| 威脅偵測指令 / `cryptic_ranged_kills_tdr` | `61c1c0560218a64cff7e57410910412f8855ebae` | `61c1c0560218a64cff7e57410910412f8855ebae` |
+| 基礎：電能擴張器(Voltaic Expander) / `cryptic_discharge_base` | `3274c88ddc2fdbe8aed18924075f4793dded858b` | `12527b6b1664cc7bf0c6b6260bd3ca217d09e96a` |
+| 基礎：動力引擎(Motive Engine) / `cryptic_passive_cooldown_regen` | `9479751babe21032df1d6ec072bdef7e5ef57047` | `378413d815557a33f04042b664302dedfa77199e` |
+| 基礎：伺服頭骨(Servo-Skull) / `cryptic_servo_skull_order` | `a71cb03ba2e5d5ddc6dadd42fdf3240dfba5a8d4` | `5f4f40be0f3f910be53400691e55708aa368cba8` |
+| 基礎：復甦（基礎光環）(Resurgence) / `cryptic_coherency_regen_aura` | `6ecb25f4121467bb6d090089125497680b14ef13` | `3803013931861a15f161c8a59a72e2a500415ada` |

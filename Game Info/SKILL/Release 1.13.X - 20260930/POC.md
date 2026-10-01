@@ -498,3 +498,69 @@
 ### 限制
 
 本機文字Build25492122尚未證明與固定公開來源同版；未進行遊戲內傷害、冷卻、操作或多人同步實測。Markdown解析已通過，未進行瀏覽器目視驗收；不同閱讀器仍可能有呈現差異。未指定舊版，未做版本差異比較。本輪只完成本機文件與提交。
+
+## 護教軍完整職業驗收
+
+### 覆蓋與證據
+
+- 97／97個可選節點、4項基礎效果均完成逐項來源說明與本機提交；另列2個未直接引用的定義。分類為閃擊11、光環3、能力18、鑰石15、技能50。
+- 97組本機繁中／英文依同鍵及hash比對，4項明確勘誤記在對應技能下；省略細節及跨版本差異不算繁中誤譯。
+- 固定機制來源Release1.13.0／419fe18d414a618ce0474bd015bab470afb446d6；已核對公開GitHub commit與tree，並逐檔比對固定Git物件文字（正規化CRLF）。本機文字Build25492122尚未確認同版。
+
+### 公式與邊界算例
+
+31項Python數值斷言通過。僅驗算已追到來源的公式，不執行遊戲Lua，也不代表遊戲內實測。
+
+| 案例與前提 | 公式 | 結果 |
+|---|---|---|
+| [鎖定姿態消耗2.05份的動力驅動](TALENTS%20Skitarii/cryptic_overload_keystone_abilities.md) | floor(0.25 + 1.6 + 0.2) × 5 | 10層；姿態結束時結算 |
+| [鎖定姿態僅消耗0.95份的動力驅動](TALENTS%20Skitarii/cryptic_overload_keystone_abilities.md) | floor(0.95) × 5 | 0層；不足1份不計 |
+| [永久減傷與超載減傷同時生效](TALENTS%20Skitarii/cryptic_overload_keystone_permastack.md) | 100 × 0.8 × 0.85 | 68點韌性傷害 |
+| [永久自然回充加速](TALENTS%20Skitarii/cryptic_overload_keystone_permastack.md) | 50 ÷ 1.25 | 單份40秒 |
+| [超載承傷提高](TALENTS%20Skitarii/cryptic_overload_keystone_bigger_explosion.md) | 100 × 1.15 | 115點 |
+| [單份自然恢復，無額外消耗](TALENTS%20Skitarii/cryptic_passive_cooldown_regen.md) | 50 ÷ 1 | 50秒 |
+| [三份充能從空補滿](TALENTS%20Skitarii/cryptic_passive_cooldown_regen.md) | 3 × 50 ÷ 1 | 150秒 |
+| [強化能量循環，單份自然恢復](TALENTS%20Skitarii/cryptic_increased_passive_cooldown_regen.md) | 50 ÷ (1 + 0.5) | 約33.33秒 |
+| [強化能量循環與4層極限電容均維持](TALENTS%20Skitarii/cryptic_redline.md) | 50 ÷ (1 + 0.5 + 4 × 0.05) | 約29.41秒；需持續維持層數 |
+| [精英擊殺加崇高意圖](TALENTS%20Skitarii/cryptic_dissector_power.md) | 50 × (4% + 2.5%) | 3.25點電容量 |
+| [單次弱點擊殺的額外回充](TALENTS%20Skitarii/cryptic_weakspot_kills_grant_power.md) | 50 × 2% | 1點電容量 |
+| [多目標命中回充](TALENTS%20Skitarii/cryptic_multi_hits_grant_power.md) | 50 × 1% | 0.5點電容量 |
+| [一次暴擊後完整4秒，無其他恢復或消耗](TALENTS%20Skitarii/cryptic_crits_grant_power.md) | 4 × (1 + 50 × 5% ÷ 4) | 共6.5點，其中額外2.5點 |
+| [弦爪擊殺後額外恢復，完整5秒](TALENTS%20Skitarii/cryptic_chordclaw_capacitance_restoration.md) | 50 × 25% | 12.5點；再擊殺刷新期間 |
+| [力場自然恢復三次](TALENTS%20Skitarii/cryptic_grenade_ability_force_field.md) | 75 × 3 | 225秒 |
+| [力場吸收10次遠程攻擊](TALENTS%20Skitarii/cryptic_force_field_capacitance_restore.md) | 50 × min(10 × 2.5%, 75%) | 12.5點電容量 |
+| [力場吸收31次，恢復封頂](TALENTS%20Skitarii/cryptic_force_field_capacitance_restore.md) | 50 × min(31 × 2.5%, 75%) | 37.5點電容量 |
+| [力場吸收0次，前方有有效目標](TALENTS%20Skitarii/cryptic_force_field_arcs.md) | clamp(ceil(0 ÷ 6), 1, 4) | 1道電弧 |
+| [力場吸收7次，前方目標足夠](TALENTS%20Skitarii/cryptic_force_field_arcs.md) | clamp(ceil(7 ÷ 6), 1, 4) | 2道電弧 |
+| [力場吸收19次，前方目標足夠](TALENTS%20Skitarii/cryptic_force_field_arcs.md) | clamp(ceil(19 ÷ 6), 1, 4) | 4道電弧 |
+| [基礎伺服頭骨至再次可用](TALENTS%20Skitarii/cryptic_servo_skull_order.md) | 8 + 16 | 24秒 |
+| [常駐與指令射擊加速，原間隔3秒](TALENTS%20Skitarii/cryptic_servo_skull_improved_tagging.md) | 3 × 0.5 × 0.15 | 0.225秒；實際攻擊另受瞄準限制 |
+| [醫療頭骨完整恢復，最大韌性100且缺額足夠](TALENTS%20Skitarii/cryptic_servo_skull_inject_ally.md) | 100 × 20% × 5 | 最多100點 |
+| [醫療頭骨韌性減傷，原100點](TALENTS%20Skitarii/cryptic_servo_skull_inject_ally.md) | 100 × 0.25 | 25點 |
+| [改良復甦，一般協同10點/秒](TALENTS%20Skitarii/cryptic_coherency_regen_aura_improved.md) | 10 × 50% | 每秒5點；恢復延遲仍生效 |
+| [彈藥容量101發](TALENTS%20Skitarii/cryptic_ammo_aura.md) | floor(101 × 1.15) | 116發 |
+| [削切協議6層的傷害，無其他加成](TALENTS%20Skitarii/cryptic_dissector.md) | 100 × (1 + 6 × 2.5%) | 115點 |
+| [削切協議8層的韌性承傷](TALENTS%20Skitarii/cryptic_dissector_max_stacks.md) | 100 × (1 − 8 × 2.5%) | 80點 |
+| [伺服肌腱湧動6層，原暴擊7.5%](TALENTS%20Skitarii/cryptic_dissector_crit_attack_speed.md) | 7.5% + 6 × 1.5% | 16.5% |
+| [弦爪三層增傷，隔離其他加成](TALENTS%20Skitarii/cryptic_chordclaw_consecutive_bonus.md) | 100 × (1 + 3 × 20%) | 160點 |
+| [橫掃第二目標，相同護甲部位與修正](TALENTS%20Skitarii/cryptic_chordclaw_horizontal_swipe.md) | 100 × 480 ÷ 500 | 第一名100點時，第二名96點 |
+
+### 流程邊界核對
+
+- 自然恢復、按單份成本直接恢復與能力維持耗電分開追查；單份比例恢復明確忽略資源恢復屬性加成。電能放電最多消耗3份，即使總上限已提高至4或5份。
+- 進階戰鬥教範的啟動費、持續耗電、射擊成本及換彈暫停分開計算；職業擊殺回充在該能力啟用期間停止。
+- 協同集合包含本人；彈藥存放另透過任務玩家清單分發，且多來源不重複增加15%。
+- 力場電弧依吸收次數向上取整並限制1至4道；可用目標不足時實際數量減少。類別中未由能力設定啟用的替代成本不當成玩家可用功能。
+- 弦爪連續出招與首次啟用分開；每次扣充能不等於每次都觸發所有「使用能力」效果。
+- 原始碼中未使用的格式數值、未被當前技能樹引用的定義，以及其他模式的效果都留在技術資料。
+
+### 文件與保存驗收
+
+- Markdown解析：97筆三欄目錄、97個技能段落、194個圖示；目錄32×32、內文72×72，無未解析的雙星號。
+- 998個相對連結／錨點及700組固定SHA來源行範圍通過，涵蓋70個來源檔。
+- 97張圖示只存Media-Assets Issue #13附件；全部公開下載並比對位元組與SHA-256。Git沒有新增圖檔、完整擷取文本或MOD Lua。
+- 檔案命名、五類章節、玩家／技術分層、基礎效果、排除清單、原文比對及百分比盤點沿用老兵結構；共用提示詞補入充能、同伴與光環的核對規則。
+
+### 限制
+
+未進行遊戲內傷害、冷卻、控制或多人同步實測；Markdown經解析驗收，未做瀏覽器目視驗收。本機文字與公開原始碼尚未確認同版；未指定舊版，本輪未作版本差異比較。
