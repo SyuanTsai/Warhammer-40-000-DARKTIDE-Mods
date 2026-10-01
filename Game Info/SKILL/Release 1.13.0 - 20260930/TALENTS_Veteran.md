@@ -26,6 +26,7 @@
 | 鑰石 | [遠程刺客(Long Range Assassin)](#veteran_snipers_focus_increased_stacks) | 狙擊專注的效果上限由 10 層提高至 15 層。 |
 | 鑰石 | [武器專家(Weapons Specialist)](#veteran_weapon_switch_passive) | 切換至遠程武器：手持近戰武器時，每次擊殺累積 1 層，最多 10 層。切出遠程武器後，消耗所有層數，每層提高 2% 遠程攻擊速度與裝填速度，持續 10 秒；再切換武器會提前結束。 |
 | 鑰石 | [時刻警覺(On Your Toes)](#veteran_weapon_switch_replenish_toughness) | 觸發方式：儲存至少 1 層武器專家的加成後，切換至對應武器，恢復 20% 最大韌性。恢復量固定，不隨層數增加。 |
+| 鑰石 | [有備無患(Always Prepared)](#veteran_weapon_switch_replenish_ammo) | 觸發方式：手持近戰武器擊殺、儲存武器專家的層數後，切出遠程武器，會把備用彈藥移入彈匣。層數越多，補入量越多。 |
 | 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
 | 技能 | [戰術裝填(Tactical Reload)](#veteran_faster_reload_on_non_empty_clips) | 彈匣還有彈藥時開始裝填，裝填速度增加 25%。 |
 | 技能 | [齊射能手(Volley Adept)](#veteran_reload_speed_on_elite_kill) | 擊殺精英或專家敵人後，下一次裝填速度增加 30%。 |
@@ -459,6 +460,21 @@
 - **恢復算例：**最大韌性 100 點時，每次恢復 `100 × 20% = 20 點`。目前有 90 點則只補到 100 點；上述數字未計其他韌性恢復加成。
 
 [詳細資料](TALENTS%20Veteran/veteran_weapon_switch_replenish_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_weapon_switch_replenish_ammo"></a>
+
+### 有備無患(Always Prepared)
+
+<img src="https://github.com/user-attachments/assets/842c2a40-8bb4-45fa-a1e2-672fedf80d78" width="72" height="72" alt="有備無患天賦圖示">
+
+- **觸發方式：**手持近戰武器擊殺、儲存武器專家的層數後，切出遠程武器，會把備用彈藥移入彈匣。層數越多，補入量越多。
+- **補彈公式：**`缺少的彈量 × 33% × 層數 ÷ 10`，結果向上取整，最高計算 10 層。
+- **算例：**彈匣缺 30 發時，5 層補 `30 × 0.33 × 5 ÷ 10 = 4.95`，向上取整為 5 發；10 層補 `30 × 0.33 = 9.9`，向上取整為 10 發。
+- **限制：**實際補入量不會超過備彈或彈匣缺口；若算出補 10 發、備彈只剩 3 發，就只補 3 發。
+
+[詳細資料](TALENTS%20Veteran/veteran_weapon_switch_replenish_ammo.md) · [返回目錄](#talent-index)
 
 ---
 

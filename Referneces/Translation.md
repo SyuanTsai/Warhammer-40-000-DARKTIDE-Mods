@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_weapon_switch_replenish_ammo` / `veteran_weapon_switch_replenish_ammo` - 有備無患
+  - 英文對應：Always Prepared。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2873-L2888)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_weapon_switch_replenish_toughness` / `veteran_weapon_switch_replenish_toughness` - 時刻警覺
   - 英文對應：On Your Toes。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2958-L2977)；此來源證明識別鍵與天賦關係。
