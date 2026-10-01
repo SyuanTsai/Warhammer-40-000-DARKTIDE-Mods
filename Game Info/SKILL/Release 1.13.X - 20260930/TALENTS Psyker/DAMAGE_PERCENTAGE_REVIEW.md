@@ -33,7 +33,7 @@
 | [念力穹頂](psyker_sphere_shield.md) | 護盾改為半徑 6 公尺的球形屏障；最長 25 秒；冷卻 60 秒；完整計算與適用限制見來源文件。 |
 | [衰弱界線](psyker_shield_stun_passive.md) | 穿越護盾的敵人有 20% 機率被電擊；專家與巨獸必定觸發；專家會損傷護盾；完整計算與適用限制見來源文件。 |
 | [亞空間突破](psyker_overcharge_stance_infinite_casting.md) | 注視結束後仍能免於反噬超載；保護持續 11.5 秒；完整計算與適用限制見來源文件。 |
-| [亞空間虹吸](psyker_passive_souls_from_elite_kills.md) | 機制與公式待核對。 |
+| [亞空間虹吸](psyker_passive_souls_from_elite_kills.md) | 擊殺精英或專家取得亞空間充能；每層增加 4% 傷害；施放能力消耗充能並縮短冷卻；完整計算與適用限制見來源文件。 |
 | [擾動命運](psyker_new_mark_passive.md) | 機制與公式待核對。 |
 | [靈能強化](psyker_empowered_ability.md) | 機制與公式待核對。 |
 | [平心靜氣](psyker_reduced_warp_charge_cost_and_venting_speed.md) | 機制與公式待核對。 |

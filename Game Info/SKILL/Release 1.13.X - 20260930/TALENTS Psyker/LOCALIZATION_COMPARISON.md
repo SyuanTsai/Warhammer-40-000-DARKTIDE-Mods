@@ -35,7 +35,7 @@
 | [念力穹頂](#psyker_sphere_shield) | 未見明確矛盾 |
 | [衰弱界線](#psyker_shield_stun_passive) | 未見明確矛盾 |
 | [亞空間突破](#psyker_overcharge_stance_infinite_casting) | 未見明確矛盾 |
-| [亞空間虹吸](#psyker_passive_souls_from_elite_kills) | 已配對；機制待核對 |
+| [亞空間虹吸](#psyker_passive_souls_from_elite_kills) | 未見明確矛盾 |
 | [擾動命運](#psyker_new_mark_passive) | 已配對；機制待核對 |
 | [靈能強化](#psyker_empowered_ability) | 已配對；機制待核對 |
 | [平心靜氣](#psyker_reduced_warp_charge_cost_and_venting_speed) | 已配對；機制待核對 |
@@ -287,7 +287,7 @@
 ## 亞空間虹吸(Warp Siphon)
 
 - 描述鍵：`loc_talent_psyker_souls_new_desc`；hash：`9ea525d4`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字尚未核實同版。
 - [原始碼推導與限制](psyker_passive_souls_from_elite_kills.md)。
 
 <a id="psyker_new_mark_passive"></a>

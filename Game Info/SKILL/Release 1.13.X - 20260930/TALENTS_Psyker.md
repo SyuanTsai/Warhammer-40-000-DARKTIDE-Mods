@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/60e6d4b2-0696-4215-8afd-8c9725d4801f" width="32" height="32" alt="念力穹頂天賦圖示"> [念力穹頂](#psyker_sphere_shield)<br>- Telekine Dome | <ul><li>護盾改為半徑 6 公尺的球形屏障</li><li>最長 25 秒；冷卻 60 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191" width="32" height="32" alt="衰弱界線天賦圖示"> [衰弱界線](#psyker_shield_stun_passive)<br>- Enervating Threshold | <ul><li>穿越護盾的敵人有 20% 機率被電擊</li><li>專家與巨獸必定觸發；專家會損傷護盾</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8" width="32" height="32" alt="亞空間突破天賦圖示"> [亞空間突破](#psyker_overcharge_stance_infinite_casting)<br>- Warp Unbound | <ul><li>注視結束後仍能免於反噬超載</li><li>保護持續 11.5 秒</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/07eff6fd-5c1a-49f2-8a72-d689ec6bb42e" width="32" height="32" alt="亞空間虹吸天賦圖示"> [亞空間虹吸](#psyker_passive_souls_from_elite_kills)<br>- Warp Siphon | <ul><li>擊殺精英或專家取得亞空間充能</li><li>每層增加 4% 傷害；施放能力消耗充能並縮短冷卻</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="亞空間耗費天賦圖示"> [亞空間耗費](#psyker_toughness_on_melee)<br>- Warp Expenditure | <ul><li>近戰命中首個敵人，恢復 2.5% 最大韌性。</li><li>近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
@@ -457,6 +458,28 @@
 - **持續時間**：10 秒離場效果加上 1.5 秒緩衝，共 10 + 1.5 = 11.5 秒。注視本身仍會在反噬達 100% 時結束。
 
 [詳細資料](TALENTS%20Psyker/psyker_overcharge_stance_infinite_casting.md) · [返回目錄](#talent-index)
+
+---
+
+
+---
+
+## 鑰石
+
+<a id="psyker_passive_souls_from_elite_kills"></a>
+### 亞空間虹吸(Warp Siphon)
+
+<img src="https://github.com/user-attachments/assets/07eff6fd-5c1a-49f2-8a72-d689ec6bb42e" width="72" height="72" alt="亞空間虹吸天賦圖示">
+
+- **取得與持續**：親自擊殺精英或專家敵人，獲得 1 層亞空間充能，最多 4 層，持續 25 秒。再次取得會刷新整組倒數；到期每次失去一層，再重新倒數 25 秒。
+
+- **傷害算例**：每層增加 4% 傷害。不計其他加成，4 層時 100 × (1 + 4% × 4) = 116 點；搭配亞空間電池達 6 層時則為 124 點。
+
+- **冷卻算例**：施放戰鬥能力會消耗全部充能，每層恢復該能力一次使用所需冷卻的 7.5%。以 30 秒冷卻、4 層計算，立即縮短 30 × 7.5% × 4 = 9 秒，剩約 21 秒。
+
+- **多次充能**：若能力能儲存多次使用次數，恢復量先補目前正在倒數的一格，超過一格所需的進度再往後補。
+
+[詳細資料](TALENTS%20Psyker/psyker_passive_souls_from_elite_kills.md) · [返回目錄](#talent-index)
 
 ---
 
