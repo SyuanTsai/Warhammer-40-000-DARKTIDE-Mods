@@ -39,6 +39,7 @@
 | [暗殺協議](#cryptic_ranged_vs_bfg) | 未見明確矛盾 |
 | [系統電擊](#cryptic_electrocution_applies_brittleness) | 未見明確矛盾 |
 | [彈藥預知](#cryptic_ammo_reserve) | 未見明確矛盾 |
+| [適應性戰鬥校準](#cryptic_cleave_and_impact) | 未見明確矛盾 |
 | [數據感應協定](#cryptic_ally_coherency_defenses) | 受益對象用語有誤 |
 
 <a id="cryptic_crits_grant_tdr"></a>
@@ -259,6 +260,13 @@
 - 描述鍵：`loc_talent_cryptic_ammo_reserve_desc`；hash：`bf4067b1`。
 - 結論：未見明確矛盾。中英皆為彈藥儲備；補充為容量上限與取整。
 - [原始碼推導與限制](cryptic_ammo_reserve.md)。
+
+<a id="cryptic_cleave_and_impact"></a>
+## 適應性戰鬥校準(Adaptive Combat Calibration)
+
+- 描述鍵：`loc_talent_cryptic_melee_cleave_and_impact_desc`；hash：`6d23edd0`。
+- 結論：未見明確矛盾。中英皆寫高於/低於，省略剛好50%的歸屬；作邊界補充，不列錯誤。
+- [原始碼推導與限制](cryptic_cleave_and_impact.md)。
 
 <a id="cryptic_ally_coherency_defenses"></a>
 ## 數據感應協定(Data Sensor Protocol)

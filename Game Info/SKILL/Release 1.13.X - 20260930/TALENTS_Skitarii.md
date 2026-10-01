@@ -37,6 +37,7 @@
 | <img src="https://github.com/user-attachments/assets/c9876de0-2e5d-4421-9bee-326ac0c92290" width="32" height="32" alt="暗殺協議天賦圖示"> [暗殺協議](#cryptic_ranged_vs_bfg)<br>- Assassination Protocols | <ul><li>對歐格林、怪獸與隊長的遠程傷害提高 25%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="32" height="32" alt="系統電擊天賦圖示"> [系統電擊](#cryptic_electrocution_applies_brittleness)<br>- System Shock | <ul><li>施加或刷新電擊時增加 3 層脆弱</li><li>每層 2.5%，持續 5 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d265085f-7abd-4433-adc1-3f0276351436" width="32" height="32" alt="彈藥預知天賦圖示"> [彈藥預知](#cryptic_ammo_reserve)<br>- Ammo-Cell Augury | <ul><li>儲備彈藥上限增加 25%</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="適應性戰鬥校準天賦圖示"> [適應性戰鬥校準](#cryptic_cleave_and_impact)<br>- Adaptive Combat Calibration | <ul><li>韌性高於 50%：近戰順劈提高 30%</li><li>韌性不高於 50%：近戰衝擊提高 30%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0bbe1f46-d58e-414d-9ab3-1c8ed0170a41" width="32" height="32" alt="數據感應協定天賦圖示"> [數據感應協定](#cryptic_ally_coherency_defenses)<br>- Data Sensor Protocol | <ul><li>你或協同隊友受到韌性傷害，受傷者恢復 25% 耐力</li><li>受到生命傷害則恢復 25% 韌性，兩類各冷卻 15 秒</li></ul> | 技能 |
 
 ---
@@ -507,6 +508,21 @@
 - **容量算例**：原儲備上限 200 發，變成 200 × (1 + 25%) = 250 發；原本 203 發則計算 253.75，取整為 253 發。若另有 15% 同類容量加成，200 × (1 + 25% + 15%) = 280 發。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_ammo_reserve.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_cleave_and_impact"></a>
+### 適應性戰鬥校準(Adaptive Combat Calibration)
+
+<img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="72" height="72" alt="適應性戰鬥校準天賦圖示">
+
+- **切換方式**：韌性高於上限的一半時，近戰順劈提高 30%；韌性等於或低於一半時，改為近戰衝擊提高 30%。
+
+- **邊界算例**：最大韌性 100，51 點享有順劈，50 點或49 點享有衝擊。順劈基準 10 → 10 × 1.30 = 13；衝擊基準 100 → 130。
+
+- **作用範圍**：順劈影響能穿過多少敵人，衝擊影響踉蹌；兩者不會同時生效，也不是直接加 30% 傷害。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_cleave_and_impact.md) · [返回目錄](#talent-index)
 
 ---
 
