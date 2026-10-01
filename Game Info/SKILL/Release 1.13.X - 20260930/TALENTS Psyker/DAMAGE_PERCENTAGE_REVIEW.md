@@ -48,7 +48,7 @@
 | [涅槃](psyker_warpfire_generate_souls.md) | 帶有靈魂之火的敵人死亡時，有 10% 機率取得亞空間充能；完整計算與適用限制見來源文件。 |
 | [靈能吸血鬼](psyker_aura_souls_on_kill.md) | 本人或協同隊友擊殺，有 4% 機率讓你獲得亞空間充能；完整計算與適用限制見來源文件。 |
 | [亞空間電池](psyker_increased_max_souls.md) | 亞空間充能上限由 4 層提高至 6 層；完整計算與適用限制見來源文件。 |
-| [殘忍命運](psyker_mark_weakspot_kills.md) | 機制與公式待核對。 |
+| [殘忍命運](psyker_mark_weakspot_kills.md) | 弱點擊殺標記目標時，一次獲得 3 層精準加成；完整計算與適用限制見來源文件。 |
 | [靈魂竊賊](psyker_toughness_on_warp_kill.md) | 亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。；完整計算與適用限制見來源文件。 |
 | [心如止水](psyker_toughness_on_vent.md) | 每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。；完整計算與適用限制見來源文件。 |
 | [亞空間耗費](psyker_toughness_on_melee.md) | 近戰命中首個敵人，恢復 2.5% 最大韌性。；近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。；完整計算與適用限制見來源文件。 |
