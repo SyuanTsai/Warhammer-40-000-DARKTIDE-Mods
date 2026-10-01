@@ -48,6 +48,7 @@
 | <img src="https://github.com/user-attachments/assets/e1dda6ab-d49e-4d08-bd44-f684dae4913f" width="32" height="32" alt="自掏腰包天賦圖示"> [自掏腰包](#zealot_reload_from_melee)<br>- Out of Pocket | <ul><li>近戰擊殺時，從備彈補回彈匣缺額的 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ec2c5209-fa69-4340-b6d9-bca627da0840" width="32" height="32" alt="排隊等候天賦圖示"> [排隊等候](#zealot_reduced_damage_from_ranged)<br>- Wait in Line | <ul><li>受到遠程攻擊時，傷害降低 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/28bd1a77-6a4b-44e5-b46c-1d1a334479e7" width="32" height="32" alt="神聖工具天賦圖示"> [神聖工具](#zealot_weapon_special_damage)<br>- Holy Tools | <ul><li>啟動近戰武器特殊動作後，5 秒內下一次近戰攻擊增傷 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="32" height="32" alt="為您撐腰天賦圖示"> [為您撐腰](#zealot_melee_kills_restore_toughness_to_target)<br>- Got Your Back | <ul><li>近戰擊殺正鎖定隊友的敵人，替隊友恢復 7.5% 最大韌性，自己額外恢復 5%。</li></ul> | 技能 |
 
 ---
 
@@ -646,5 +647,20 @@
 - **傷害算例**：基礎 100 點變成 100 × 1.2 = 120 點；已有同階段 25% 近戰增傷時，則 100 × (1 + 25% + 20%) = 145 點。一次橫掃的效果維持到該次揮擊結束。
 
 [詳細資料](TALENTS%20Zealot/zealot_weapon_special_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_melee_kills_restore_toughness_to_target"></a>
+### 為您撐腰(Got Your Back)
+
+<img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="72" height="72" alt="為您撐腰天賦圖示">
+
+- **觸發方式**：近戰擊殺正以另一名隊友為目標的敵人，該隊友恢復 7.5% 最大韌性，你額外恢復 5% 最大韌性；敵人鎖定你或沒有目標時不觸發。
+
+- **恢復算例**：隊友最大韌性 120、你為 100，隊友補 120 × 7.5% = 9 點，你額外補 100 × 5% = 5 點；雙方各自受恢復加成與韌性缺額限制，原本近戰擊殺恢復另算。
+
+- **距離條件**：本天賦沒有另加協同範圍限制，重點是被殺敵人當時鎖定的對象。
+
+[詳細資料](TALENTS%20Zealot/zealot_melee_kills_restore_toughness_to_target.md) · [返回目錄](#talent-index)
 
 ---

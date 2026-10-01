@@ -1666,3 +1666,5 @@
 - Wait in Line - 排隊等候（沿用本機繁中名稱，待使用者確認；`zealot_reduced_damage_from_ranged`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3230-L3248)）
 
 - Holy Tools - 神聖工具（沿用本機繁中名稱，待使用者確認；`zealot_weapon_special_damage`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3268-L3287)）
+
+- Got Your Back - 為您撐腰（沿用本機繁中名稱，待使用者確認；`zealot_melee_kills_restore_toughness_to_target`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3249-L3267)）

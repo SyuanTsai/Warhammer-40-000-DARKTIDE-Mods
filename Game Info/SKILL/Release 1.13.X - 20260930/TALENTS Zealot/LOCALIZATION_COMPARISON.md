@@ -50,6 +50,7 @@
 | [自掏腰包](#zealot_reload_from_melee) | 明確繁中誤譯 |
 | [排隊等候](#zealot_reduced_damage_from_ranged) | 未見明確矛盾 |
 | [神聖工具](#zealot_weapon_special_damage) | 未見明確矛盾 |
+| [為您撐腰](#zealot_melee_kills_restore_toughness_to_target) | 未見明確矛盾 |
 
 <a id="zealot_crits_apply_bleed"></a>
 ## 天災(Scourge)
@@ -348,3 +349,10 @@
 - 描述鍵：`loc_talent_zealot_weapon_special_damage_desc`；hash：`21bf1b41`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_weapon_special_damage.md)。
+
+<a id="zealot_melee_kills_restore_toughness_to_target"></a>
+## 為您撐腰(Got Your Back)
+
+- 描述鍵：`loc_talent_zealot_melee_kills_restore_toughness_to_target_desc`；hash：`185f78b2`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_melee_kills_restore_toughness_to_target.md)。
