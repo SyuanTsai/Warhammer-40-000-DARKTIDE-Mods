@@ -7,7 +7,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/aa116dc7-88d2-450b-bcff-c2dc0bb6b4c0" width="32" height="32" alt="遠程引爆天賦圖示"> [遠程引爆](#adamant_whistle)<br>- Remote Detonation | <ul><li>在電子獒犬所在處發動電擊與爆炸，並使受電擊敵人承受傷害提高 10%，持續 2 秒。</li><li>最多 2 次充能；每 50 秒恢復 1 次，兩次都用完需 100 秒補滿。</li></ul> | 閃擊 |
-| <img src="https://github.com/user-attachments/assets/9f134d52-bce2-4365-b74c-f93550febf29" width="32" height="32" alt="法務官手榴彈天賦圖示"> [法務官手榴彈](#adamant_grenade_improved)<br>- Arbites Grenade | <ul><li>法務官手榴彈在碰撞時引爆，若未碰撞則引信為 2 秒；最多 4 枚，比基礎手榴彈多 1 枚。</li><li>手榴彈擊殺追蹤器會記錄 0.25 秒內的三殺成就進度；不會因此返還手榴彈。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/9f134d52-bce2-4365-b74c-f93550febf29" width="32" height="32" alt="法務官手榴彈天賦圖示"> [法務官手榴彈](#adamant_grenade_improved)<br>- Arbites Grenade | <ul><li>碰撞引爆，爆炸半徑 10 公尺，中央 2.5 公尺傷害較高。</li><li>最多攜帶 4 枚，比基礎版本多 1 枚；不會自行按冷卻補回。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/db0783ea-1312-4fed-a430-c1be9a87d2e1" width="32" height="32" alt="電能地雷天賦圖示"> [電能地雷](#adamant_shock_mine)<br>- Voltaic Shock Mine | <ul><li>部署後約 1 秒啟動；偵測到敵人後，對 3 公尺內敵人持續施加電擊，作用 15 秒。</li><li>最多攜帶 2 枚；單次電擊維持 3 秒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/ab5c4535-3182-4aa9-a388-faffff1d0faa" width="32" height="32" alt="小隊之友天賦圖示"> [小隊之友](#adamant_companion_coherency)<br>- Part of the Squad | <ul><li>電子獒犬計入小隊協同；你和協同中的盟友額外減少 7.5% 韌性傷害。</li><li>以單獨這份效果估算，100 點韌性傷害會減為 92.5 點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/2f99cb20-a83e-4a7c-98ee-f43949811f84" width="32" height="32" alt="雷厲風行天賦圖示"> [雷厲風行](#adamant_reload_speed_aura)<br>- Ruthless Efficiency | <ul><li>你和協同中的盟友換彈速度提高 12.5%。</li><li>選用此光環時，電子獒犬不再計入協同成員。</li></ul> | 光環 |
