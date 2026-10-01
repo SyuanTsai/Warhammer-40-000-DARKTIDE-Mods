@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191" width="32" height="32" alt="衰弱界線天賦圖示"> [衰弱界線](#psyker_shield_stun_passive)<br>- Enervating Threshold | <ul><li>穿越護盾的敵人有 20% 機率被電擊</li><li>專家與巨獸必定觸發；專家會損傷護盾</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8" width="32" height="32" alt="亞空間突破天賦圖示"> [亞空間突破](#psyker_overcharge_stance_infinite_casting)<br>- Warp Unbound | <ul><li>注視結束後仍能免於反噬超載</li><li>保護持續 11.5 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/07eff6fd-5c1a-49f2-8a72-d689ec6bb42e" width="32" height="32" alt="亞空間虹吸天賦圖示"> [亞空間虹吸](#psyker_passive_souls_from_elite_kills)<br>- Warp Siphon | <ul><li>擊殺精英或專家取得亞空間充能</li><li>每層增加 4% 傷害；施放能力消耗充能並縮短冷卻</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/333bcafc-3c34-4b47-bb5b-658c9cd2b777" width="32" height="32" alt="平心靜氣天賦圖示"> [平心靜氣](#psyker_reduced_warp_charge_cost_and_venting_speed)<br>- Inner Tranquility | <ul><li>每層亞空間充能降低反噬生成 8%</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="亞空間耗費天賦圖示"> [亞空間耗費](#psyker_toughness_on_melee)<br>- Warp Expenditure | <ul><li>近戰命中首個敵人，恢復 2.5% 最大韌性。</li><li>近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
@@ -480,6 +481,19 @@
 - **多次充能**：若能力能儲存多次使用次數，恢復量先補目前正在倒數的一格，超過一格所需的進度再往後補。
 
 [詳細資料](TALENTS%20Psyker/psyker_passive_souls_from_elite_kills.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_reduced_warp_charge_cost_and_venting_speed"></a>
+### 平心靜氣(Inner Tranquility)
+
+<img src="https://github.com/user-attachments/assets/333bcafc-3c34-4b47-bb5b-658c9cd2b777" width="72" height="72" alt="平心靜氣天賦圖示">
+
+- **運作方式**：每層亞空間充能降低反噬生成量 8%；4 層共降低 32%，搭配亞空間電池達 6 層時共降低 48%。
+
+- **反噬算例**：原本增加 10 個反噬百分點，4 層時變成 10 × (1 − 8% × 4) = 6.8 個百分點；6 層時為 5.2 個百分點。其他生成修正另計。
+
+[詳細資料](TALENTS%20Psyker/psyker_reduced_warp_charge_cost_and_venting_speed.md) · [返回目錄](#talent-index)
 
 ---
 
