@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **82 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L3-L10)。內部 tree version 29 不等於遊戲發行版號。
 
-完成 43／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 44／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -54,3 +54,4 @@
 | 技能 | [排隊等候](zealot_reduced_damage_from_ranged.md) / `zealot_reduced_damage_from_ranged` | `node_dfa2e434-62d7-460d-b620-ae1ae2cb31f7` | 完成（核心靜態機制） |
 | 技能 | [神聖工具](zealot_weapon_special_damage.md) / `zealot_weapon_special_damage` | `node_4753943d-671c-4898-b061-b0d1f22accd5` | 完成（核心靜態機制） |
 | 技能 | [為您撐腰](zealot_melee_kills_restore_toughness_to_target.md) / `zealot_melee_kills_restore_toughness_to_target` | `node_c10e9c6e-1e1c-48db-8e08-f218097bdbdb` | 完成（核心靜態機制） |
+| 技能 | [淨化仇恨](zealot_dmg_vs_burning_electrocuted.md) / `zealot_dmg_vs_burning_electrocuted` | `node_85469f6c-0258-4ad5-82f5-9f23151c7b63` | 完成（核心靜態機制） |

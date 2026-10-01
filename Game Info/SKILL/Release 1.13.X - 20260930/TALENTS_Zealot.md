@@ -49,6 +49,7 @@
 | <img src="https://github.com/user-attachments/assets/ec2c5209-fa69-4340-b6d9-bca627da0840" width="32" height="32" alt="排隊等候天賦圖示"> [排隊等候](#zealot_reduced_damage_from_ranged)<br>- Wait in Line | <ul><li>受到遠程攻擊時，傷害降低 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/28bd1a77-6a4b-44e5-b46c-1d1a334479e7" width="32" height="32" alt="神聖工具天賦圖示"> [神聖工具](#zealot_weapon_special_damage)<br>- Holy Tools | <ul><li>啟動近戰武器特殊動作後，5 秒內下一次近戰攻擊增傷 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="32" height="32" alt="為您撐腰天賦圖示"> [為您撐腰](#zealot_melee_kills_restore_toughness_to_target)<br>- Got Your Back | <ul><li>近戰擊殺正鎖定隊友的敵人，替隊友恢復 7.5% 最大韌性，自己額外恢復 5%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/8137f892-5370-4a69-b790-556f579414d2" width="32" height="32" alt="淨化仇恨天賦圖示"> [淨化仇恨](#zealot_dmg_vs_burning_electrocuted)<br>- Purifying Hatred | <ul><li>對燃燒或遭電擊的敵人增加 15% 傷害；兩者同時成立可合計 30%。</li></ul> | 技能 |
 
 ---
 
@@ -662,5 +663,18 @@
 - **距離條件**：本天賦沒有另加協同範圍限制，重點是被殺敵人當時鎖定的對象。
 
 [詳細資料](TALENTS%20Zealot/zealot_melee_kills_restore_toughness_to_target.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_dmg_vs_burning_electrocuted"></a>
+### 淨化仇恨(Purifying Hatred)
+
+<img src="https://github.com/user-attachments/assets/8137f892-5370-4a69-b790-556f579414d2" width="72" height="72" alt="淨化仇恨天賦圖示">
+
+- **運作方式**：敵人燃燒時增加 15% 傷害，遭電擊時另增加 15%；兩個條件各自判斷，並非一定要同時燃燒與遭電擊才能生效。
+
+- **傷害算例**：基礎 100 點、僅符合其中一項時為 100 × 1.15 = 115；兩者皆符合時為 100 × (1 + 15% + 15%) = 130 點。其他同階段增傷也先相加。
+
+[詳細資料](TALENTS%20Zealot/zealot_dmg_vs_burning_electrocuted.md) · [返回目錄](#talent-index)
 
 ---
