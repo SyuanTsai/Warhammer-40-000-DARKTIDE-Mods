@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/61a749ff-c64c-47a7-8607-e19b59a688b3" width="32" height="32" alt="先知之眼天賦圖示"> [先知之眼](#psyker_cooldown_aura_improved)<br>- Seer's Presence | <ul><li>你與協同中的隊友的技能冷卻時間縮短 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="預兆天賦圖示"> [預兆](#psyker_aura_crit_chance_aura)<br>- Prescience | <ul><li>你與協同中的隊友的暴擊機率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="32" height="32" alt="靈能學者光環天賦圖示"> [靈能學者光環](#psyker_2_tier_3_name_2)<br>- Psykinetic's Aura | <ul><li>擊殺精英或專家後，加快能力冷卻</li><li>效果持續 3 秒</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="32" height="32" alt="念力護盾天賦圖示"> [念力護盾](#psyker_combat_ability_force_field)<br>- Telekine Shield | <ul><li>展開護盾，阻擋敵方遠程攻擊</li><li>最長 17.5 秒；冷卻 40 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0" width="32" height="32" alt="庇護所天賦圖示"> [庇護所](#psyker_boost_allies_in_sphere)<br>- Sanctuary | <ul><li>穹頂內每秒恢復 10% 最大韌性</li><li>消散時提供 50% 韌性減傷，持續 5 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
@@ -218,6 +219,21 @@
 - **冷卻算例：**若倒數原剩 20 秒，在正常恢復 1 秒並觸發一次額外恢復後，變成 20 − 1 − 0.5 = 18.5 秒。
 
 [詳細資料](TALENTS%20Psyker/psyker_2_tier_3_name_2.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_combat_ability_force_field"></a>
+### 念力護盾(Telekine Shield)
+
+<img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="72" height="72" alt="念力護盾天賦圖示">
+
+- **運作方式：**在身前展開一道靈能護盾，阻擋敵人的遠程攻擊，你與隊友仍可穿盾射擊。最長持續 17.5 秒，基礎冷卻 40 秒。
+
+- **護盾耐久：**護盾可承受 20 次有效扣除耐久的命中。每次扣除後，0.33 秒內不會再次扣除；大量攻擊可能讓護盾提早消失。
+
+- **耐久算例：**已發生 12 次有效扣除時，剩餘 20 − 12 = 8 次。此處計算的是護盾命中次數，與你的生命或韌性無關。
+
+[詳細資料](TALENTS%20Psyker/psyker_combat_ability_force_field.md) · [返回目錄](#talent-index)
 
 ---
 

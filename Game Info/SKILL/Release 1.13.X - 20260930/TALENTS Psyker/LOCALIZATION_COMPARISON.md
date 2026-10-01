@@ -29,7 +29,7 @@
 | [亞空間加速](#psyker_overcharge_increased_movement_speed) | 已配對；機制待核對 |
 | [靈能學者光環](#psyker_2_tier_3_name_2) | 未見明確矛盾 |
 | [現實錨點](#psyker_overcharge_reduced_warp_charge) | 已配對；機制待核對 |
-| [念力護盾](#psyker_combat_ability_force_field) | 已配對；機制待核對 |
+| [念力護盾](#psyker_combat_ability_force_field) | 未見明確矛盾 |
 | [強化護盾](#psyker_shield_extra_charge) | 已配對；機制待核對 |
 | [庇護所](#psyker_boost_allies_in_sphere) | 未見明確矛盾 |
 | [念力穹頂](#psyker_sphere_shield) | 已配對；機制待核對 |
@@ -241,7 +241,7 @@
 ## 念力護盾(Telekine Shield)
 
 - 描述鍵：`loc_talent_psyker_combat_ability_shield_description`；hash：`2d4c8bb1`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源尚未確認同版。
 - [原始碼推導與限制](psyker_combat_ability_force_field.md)。
 
 <a id="psyker_shield_extra_charge"></a>
