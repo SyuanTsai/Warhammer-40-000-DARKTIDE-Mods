@@ -21,6 +21,15 @@
 - [scripts/utilities/attack/damage_calculation.lua，第 69–87 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L69-L87)
 - [scripts/settings/damage/armor_settings.lua，第 8–19 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/armor_settings.lua#L8-L19)
 
+## 百分比與實際傷害增幅
+
+- **程式推導**：達10層的buff給rending_multiplier=.15。玩家例只隔離這項撕裂；固定非爆擊、非弱點、護甲前傷害100、super_armor，無後續倍率。ADM=.5時50→65（30%），ADM=.8時80→95（18.75%）；ADM=.5且已有.1撕裂時60→75（25%）。
+- 實際使用常伴隨狙擊專注，但finesse僅在爆擊或弱點命中時結算，因此以上非finesse攻擊可隔離護甲階段。爆擊/弱點時須再加入狙擊專注及其他finesse加成，不能把15%撕裂當成整筆增傷或把30%當作完整配置的固定收益。
+
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2903–2910 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2903-L2910)
+- [scripts/settings/damage/armor_settings.lua，第 8–19 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/armor_settings.lua#L8-L19)
+- [scripts/utilities/attack/damage_calculation.lua，第 69–95 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L69-L95)
+
 ## 算例條件與待確認事項
 
 - 玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。

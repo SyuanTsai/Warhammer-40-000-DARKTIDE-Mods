@@ -25,6 +25,16 @@
 - [scripts/utilities/attack/damage_calculation.lua，第 715–782 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L715-L782)
 - [scripts/extension_systems/ability/player_unit_ability_extension.lua，第 826–869 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L826-L869)
 
+## 百分比與實際傷害增幅
+
+- **原始碼確認**：升級模板寫入 combat_ability 與 combat_ability_base 的差值，各項傷害加成為 .25−.15=.10；總值為.25，不能將.15與.25相加成.40。
+- **程式推導**：玩家例分別隔離遠程傷害與弱點額外傷害的升級。前者115→125，增幅約8.70%；後者固定B=100、F=40、無其他finesse加成及爆擊，146→150，增幅約2.74%。兩者都不是能力總增幅，不可直接把兩個相對百分比相加；完整攻擊須沿damage_calculation順序重算。
+
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 296–341 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L296-L341)
+- [scripts/settings/talent/talent_settings_veteran.lua，第 72–99 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L72-L99)
+- [scripts/utilities/attack/damage_calculation.lua，第 60–95 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L60-L95)
+- [scripts/utilities/attack/damage_calculation.lua，第 672–782 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L672-L782)
+
 ## 算例條件與待確認事項
 
 - 玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。

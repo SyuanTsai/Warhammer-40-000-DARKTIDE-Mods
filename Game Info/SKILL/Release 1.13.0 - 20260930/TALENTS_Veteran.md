@@ -17,10 +17,10 @@
 | <img src="https://github.com/user-attachments/assets/f8c278c8-72a1-476c-93d1-6656268ba8e4" width="32" height="32" alt="抵近殺敵天賦圖示"> [抵近殺敵](#veteran_movement_speed_coherency)<br>- Close and Kill | <ul><li>你與協同範圍內的隊友移動速度增加 7.5%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/9a3da9ac-d8f1-4745-9af6-25852f52834a" width="32" height="32" alt="火力小分隊天賦圖示"> [火力小分隊](#veteran_increased_damage_coherency)<br>- Fire Team | <ul><li>你與協同範圍內的隊友傷害增加 7.5%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/c2dffa00-cd24-478f-96c7-4007f4239e6a" width="32" height="32" alt="生存專家天賦圖示"> [生存專家](#veteran_aura_gain_ammo_on_elite_kill_improved)<br>- Survivalist | <ul><li>你或擁有此光環效果的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備彈上限的彈藥。</li></ul> | 光環 |
-| <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="火力齊射天賦圖示"> [火力齊射](#veteran_combat_ability_stance)<br>- Volley Fire | <ul><li>立即切換至遠程武器，進入持續 6 秒的火力齊射；</li><li>冷卻時間 30 秒。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="火力齊射天賦圖示"> [火力齊射](#veteran_combat_ability_stance)<br>- Volley Fire | <ul><li>立即切換至遠程武器，姿態持續 6 秒，冷卻 30 秒。</li><li>遠程傷害 +15%、弱點額外傷害加成 +15%；兩項分別結算。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="滲透天賦圖示"> [滲透](#veteran_invisibility_on_combat_ability)<br>- Infiltrate | <ul><li>立即回滿自身韌性，並隱身最多 8 秒；</li><li>冷卻時間 40 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="低調天賦圖示"> [低調](#veteran_reduced_threat_after_combat_ability)<br>- Low Profile | <ul><li>使用戰鬥能力後，敵人選你為目標的仇恨權重降低 90%，持續 10 秒。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="32" height="32" alt="處決者姿態天賦圖示"> [處決者姿態](#veteran_combat_ability_elite_and_special_outlines)<br>- Executioner's Stance | <ul><li>強化火力齊射：遠程傷害與遠程弱點額外傷害加成各提高至 25%，遠程衝擊加成提高至 100%。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="32" height="32" alt="處決者姿態天賦圖示"> [處決者姿態](#veteran_combat_ability_elite_and_special_outlines)<br>- Executioner's Stance | <ul><li>強化火力齊射：遠程傷害與弱點額外傷害加成各提高至 25%，分別結算；遠程衝擊加成提高至 100%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/2afc79fa-02f2-4943-b4e7-abe35435f7bd" width="32" height="32" alt="目標引導增強天賦圖示"> [目標引導增強](#veteran_combat_ability_coherency_outlines)<br>- Enhanced Target Priority | <ul><li>效果：啟動處決者姿態時，協同範圍內的隊友也會看見精英與專家敵人的輪廓，持續 5 秒。</li><li>你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ca186661-9499-4f3f-9449-596caa35b7b6" width="32" height="32" alt="火力反擊天賦圖示"> [火力反擊](#veteran_combat_ability_ranged_roamer_outlines)<br>- Counter-Fire | <ul><li>效果：處決者姿態會額外標出一般射手與潛行者，例如血痂射手、渣滓潛行者。</li><li>啟動或刷新輪廓時，這些敵人必須在你 50 公尺內。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0c033c93-a850-4295-853d-10698ec96e89" width="32" height="32" alt="獵手決意天賦圖示"> [獵手決意](#veteran_toughness_bonus_leaving_invisibility)<br>- Hunter's Resolve | <ul><li>效果：啟動滲透時，受到的韌性傷害降低 50%；</li><li>隱身期間持續生效，解除隱身後再維持 10 秒。</li></ul> | 能力 |
@@ -32,10 +32,10 @@
 | <img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="32" height="32" alt="掩護射擊天賦圖示"> [掩護射擊](#veteran_combat_ability_extra_charge)<br>- Overwatch | <ul><li>滲透可保留兩次，冷卻時間增加</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/1181fe6e-4066-4d75-b996-a0eb01d7583d" width="32" height="32" alt="肉搏戰天賦圖示"> [肉搏戰](#veteran_increased_close_damage_after_combat_ability)<br>- Close Quarters Killzone | <ul><li>效果：使用戰鬥能力後，提高對近距離敵人造成的傷害，持續 10 秒。</li><li>滲透則從隱身期間開始生效，解除隱身後再持續 10 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0df9e7bd-7394-4f93-ba54-f8f6d2884d02" width="32" height="32" alt="敵人越大...天賦圖示"> [敵人越大...](#veteran_combat_ability_ogryn_outlines)<br>- The Bigger they Are ... | <ul><li>效果：處決者姿態的每次持續時間從 6 秒延長至 9 秒，並額外標出歐格林、怪物與首領的輪廓。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="狙擊專注天賦圖示"> [狙擊專注](#veteran_snipers_focus)<br>- Marksman's Focus | <ul><li>遠程弱點擊殺獲得 3 層狙擊專注；</li><li>每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="狙擊專注天賦圖示"> [狙擊專注](#veteran_snipers_focus)<br>- Marksman's Focus | <ul><li>遠程弱點擊殺獲得 3 層狙擊專注，每層增加 7.5% 遠程爆擊／弱點額外傷害加成與 1% 裝填速度。</li><li>額外傷害加成不等於整次命中的增幅。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="32" height="32" alt="滲透盔甲天賦圖示"> [滲透盔甲](#veteran_snipers_focus_rending_bonus)<br>- Chink in their Armour | <ul><li>狙擊專注達到 10 層時，獲得 15% 撕裂；</li><li>低於 10 層後失效。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f" width="32" height="32" alt="視野狹窄天賦圖示"> [視野狹窄](#veteran_snipers_focus_toughness_bonus)<br>- Tunnel Vision | <ul><li>每層狙擊專注使韌性恢復量增加 4%。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="遠程刺客天賦圖示"> [遠程刺客](#veteran_snipers_focus_increased_stacks)<br>- Long Range Assassin | <ul><li>狙擊專注的效果上限由 10 層提高至 15 層。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="遠程刺客天賦圖示"> [遠程刺客](#veteran_snipers_focus_increased_stacks)<br>- Long Range Assassin | <ul><li>狙擊專注的效果上限由 10 層提高至 15 層。</li><li>滿層 112.5% 加成只作用於遠程爆擊／弱點額外傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/80917bab-ea62-4a9a-a0fa-f9b443ee1b0b" width="32" height="32" alt="武器專家天賦圖示"> [武器專家](#veteran_weapon_switch_passive)<br>- Weapons Specialist | <ul><li>切換至遠程武器：手持近戰武器時，每次擊殺累積 1 層，最多 10 層。</li><li>切出遠程武器後，消耗所有層數，每層提高 2% 遠程攻擊速度與裝填速度，持續 10 秒；</li><li>再切換武器會提前結束。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a6e24eb8-063a-45a5-8796-acde81d1f734" width="32" height="32" alt="時刻警覺天賦圖示"> [時刻警覺](#veteran_weapon_switch_replenish_toughness)<br>- On Your Toes | <ul><li>觸發方式：儲存至少 1 層武器專家的加成後，切換至對應武器，恢復 20% 最大韌性。</li><li>恢復量固定，不隨層數增加。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/842c2a40-8bb4-45fa-a1e2-672fedf80d78" width="32" height="32" alt="有備無患天賦圖示"> [有備無患](#veteran_weapon_switch_replenish_ammo)<br>- Always Prepared | <ul><li>觸發方式：手持近戰武器擊殺、儲存武器專家的層數後，切出遠程武器，會把備用彈藥移入彈匣。</li><li>層數越多，補入量越多。</li></ul> | 鑰石 |
@@ -47,8 +47,8 @@
 | <img src="https://github.com/user-attachments/assets/3ec21db4-4013-4522-850f-14c583e25ea7" width="32" height="32" alt="爆破小隊天賦圖示"> [爆破小隊](#veteran_aura_elite_kills_restore_grenade)<br>- Demolition Team | <ul><li>你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a5b64063-ac9d-404d-98ac-528f24aafb65" width="32" height="32" alt="戰術裝填天賦圖示"> [戰術裝填](#veteran_faster_reload_on_non_empty_clips)<br>- Tactical Reload | <ul><li>彈匣還有彈藥時開始裝填，裝填速度增加 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/009ef44a-cf3d-44cf-ac8b-cda57c6fd83d" width="32" height="32" alt="齊射能手天賦圖示"> [齊射能手](#veteran_reload_speed_on_elite_kill)<br>- Volley Adept | <ul><li>擊殺精英或專家敵人後，下一次裝填速度增加 30%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="堅定不移天賦圖示"> [堅定不移](#veteran_increased_weakspot_damage)<br>- Precision Strikes | <ul><li>弱點命中的額外傷害增加 30%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/7be19cb4-a1cb-4211-b9f2-d754f3c95b6c" width="32" height="32" alt="亡命之徒天賦圖示"> [亡命之徒](#veteran_increased_melee_crit_chance_and_melee_finesse)<br>- Desperado | <ul><li>近戰爆擊率增加 10 個百分點。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="堅定不移天賦圖示"> [堅定不移](#veteran_increased_weakspot_damage)<br>- Precision Strikes | <ul><li>弱點命中的額外傷害加成 +30%；整次命中的增幅依武器、目標與既有加成而變。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/7be19cb4-a1cb-4211-b9f2-d754f3c95b6c" width="32" height="32" alt="亡命之徒天賦圖示"> [亡命之徒](#veteran_increased_melee_crit_chance_and_melee_finesse)<br>- Desperado | <ul><li>近戰爆擊率增加 10 個百分點。</li><li>近戰爆擊／弱點額外傷害加成 +25%，整次命中的增幅依武器與目標而變。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d6402640-110e-4d25-b1b3-780a49b1c4e1" width="32" height="32" alt="嗜血天賦圖示"> [嗜血](#veteran_all_kills_replenish_toughness)<br>- Out for Blood | <ul><li>每次擊殺額外恢復 5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dca385d7-a54e-4bf5-b67d-f3d29ef82234" width="32" height="32" alt="遊擊者天賦圖示"> [遊擊者](#veteran_increase_damage_after_sprinting)<br>- Skirmisher | <ul><li>衝刺或滑行時持續累積傷害加成，每層增加 6.25%，最多 4 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fd178238-be59-4c18-8631-12423f5506fb" width="32" height="32" alt="趁火打劫天賦圖示"> [趁火打劫](#veteran_crits_apply_rending)<br>- Exploit Weakness | <ul><li>近戰爆擊命中後，傷害增加 20%，持續 6 秒。</li></ul> | 技能 |
@@ -274,15 +274,18 @@
 <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="72" height="72" alt="火力齊射天賦圖示">
 
 - **立即切換至遠程武器，進入持續 6 秒的火力齊射；冷卻時間 30 秒。**
-- 遠程傷害增加 **15%**，遠程弱點命中的額外傷害增加 **15%**，遠程衝擊增加 **50%**。
+- 遠程傷害增加 **15%**，遠程弱點命中的額外傷害加成增加 **15%**，遠程衝擊增加 **50%**。
+- 弱點加成只作用於額外傷害部分；整次弱點命中的增幅隨武器與目標而變，須連同遠程傷害加成分別計算。
 - 散布降低 **38%**、後座力降低 **24%**、瞄準晃動降低 **60%**；期間免疫壓制、暈眩及減速等干擾。
 - 冷卻從施放時開始，姿態期間仍會計時。切換近戰武器不會自行結束姿態；倒地或受制時會結束。
 
 #### 傷害與冷卻算例
 
-- 單看遠程傷害加成，該階段基礎傷害 100，其他加成為零：`100 × 1.15 = 115 傷害`。
-- 弱點額外傷害另行計算：該部分原本為 40、沒有其他同類加成時，變為 `40 × 1.15 = 46`。
-- 施放後經過 6 秒，姿態結束；沒有其他冷卻效果時，還需約 `30 − 6 = 24 秒`再次使用。
+- **遠程傷害**：單看遠程傷害階段，基礎傷害 100、無其他加成時，`100 × 1.15 = 115 點`。
+
+- **弱點額外傷害**：只比較弱點加成這一項，固定其他效果結算後的基礎部分 100、未加成的弱點額外部分 40，且未爆擊、無其他額外傷害加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × 1.15 = 146 點`，增加 `6 ÷ 140 ≈ 4.29%`。這不是整個火力齊射的總增幅；遠程傷害加成仍須另外納入。
+
+- **冷卻時間**：施放後經過 6 秒，姿態結束；沒有其他冷卻效果時，還需約 `30 − 6 = 24 秒`再次使用。
 
 [詳細資料](TALENTS%20Veteran/veteran_combat_ability_stance.md) · [返回目錄](#talent-index)
 
@@ -336,15 +339,20 @@
 <img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="72" height="72" alt="處決者姿態天賦圖示">
 
 - **強化火力齊射：遠程傷害與遠程弱點額外傷害加成各提高至 25%，遠程衝擊加成提高至 100%。**
+- 兩項傷害加成各由 15% 提高至 25%，各增加 10 個百分點；弱點加成仍只強化額外傷害部分，整次命中的增幅依武器與目標而變。
 - 姿態持續 **6 秒**、冷卻 **30 秒**；期間每秒恢復 **10% 最大韌性**。
 - 顯示精英與專家敵人的輪廓；歐格林、巨獸與首領須搭配「敵人越大...」才能納入。一般精英限約 50 公尺內，專家不受這項距離限制。
 - 擊殺符合輪廓種類的敵人，將姿態重新刷新為 6 秒。冷卻持續計時；散布、後座力與晃動改善沿用火力齊射。
 
 #### 傷害、恢復與刷新算例
 
-- 單看遠程傷害階段，基礎傷害 100 且無其他加成：`100 × 1.25 = 125 傷害`。
-- 最大韌性 100、缺額足夠且無恢復加成：每秒 `100 × 10% = 10 點`，完整 6 秒約恢復 `10 × 6 = 60 點`。
-- 第 4 秒完成合資格擊殺，姿態維持至約第 `4 + 6 = 10 秒`。
+- **遠程傷害**：單看遠程傷害階段，基礎傷害 100 且無其他加成：火力齊射為 `100 × 1.15 = 115 點`，升級後為 `100 × 1.25 = 125 點`；相對於升級前增加 `10 ÷ 115 ≈ 8.70%`。
+
+- **弱點額外傷害**：只比較弱點加成的升級，固定其他效果結算後的基礎部分 100、未加成的弱點額外部分 40，且未爆擊、無其他額外傷害加成：由 `100 + 40 × 1.15 = 146 點` 變成 `100 + 40 × 1.25 = 150 點`，增加 `4 ÷ 146 ≈ 2.74%`。這只反映弱點加成由 15% 升至 25% 的差異，完整增幅還須納入遠程傷害的升級。
+
+- **韌性恢復**：最大韌性 100、缺額足夠且無恢復加成：每秒 `100 × 10% = 10 點`，完整 6 秒約恢復 `10 × 6 = 60 點`。
+
+- **刷新時間**：第 4 秒完成合資格擊殺，姿態維持至約第 `4 + 6 = 10 秒`。
 
 [詳細資料](TALENTS%20Veteran/veteran_combat_ability_elite_and_special_outlines.md) · [返回目錄](#talent-index)
 
@@ -460,9 +468,11 @@
 
 - **效果**：使用戰鬥能力後，命中弱點時的攻擊威力提高 20%，持續 10 秒；近戰與遠程攻擊皆可受益。使用滲透時，隱身期間便生效，解除隱身後再維持 10 秒。
 
+- **作用方式**：先提高這次弱點命中的攻擊威力，再計算傷害與踉蹌；與堅定不移只加強弱點額外傷害的方式不同。實際傷害增幅仍受武器設定、目標及其他威力加成影響。
+
 - **威力算例**：未計其他威力加成，原本 500 的攻擊威力變成 `500 × (1 + 20%) = 600`。這會提高該次弱點命中的基礎傷害及踉蹌力量。
 
-- **傷害算例**：以無甲目標、固定武器傷害設定，且不計其他部位與增傷倍率為例：原本基礎傷害階段為 100 點，生效後為 `100 × 1.2 = 120 點`。若原有同階段 25% 威力加成，則由 125 變成 `100 × (1 + 25% + 20%) = 145 點`。
+- **傷害算例**：只看基礎傷害階段，假設無甲目標、傷害隨威力成正比，且先不計弱點額外傷害與其他倍率：原本 100 點，生效後為 `100 × 1.2 = 120 點`。若原有同階段 25% 威力加成，則由 125 變成 `100 × (1 + 25% + 20%) = 145 點`，實際增加 `20 ÷ 125 = 16%`；整次弱點命中的傷害須繼續計算額外傷害及部位倍率。
 
 - **持續與重觸發**：不疊層；已開始的 10 秒倒數不會因效果期間再次施放而重設。例如第 4 秒再次施放，仍約在第一次倒數開始後第 10 秒結束。
 
@@ -557,16 +567,22 @@
 
 <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="72" height="72" alt="狙擊專注天賦圖示">
 
-- **遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。**
+- **遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害加成增加 7.5%，裝填速度增加 1%。**
+- 額外傷害加成不提高基礎部分；武器與目標不同，整次命中的增幅也會不同。同時爆擊並命中弱點時，這項加成只套用一次。
 - 效果最多按 **10 層**計算。已有層數時，任何弱點命中都能刷新 **5 秒**持續時間；近戰弱點命中也可刷新，但不增加層數。
 - 未再刷新時，約每 5 秒減少 1 層；移動本身不消耗層數。
 
 #### 傷害、裝填與衰減算例
 
-- 十層為 `10 × 7.5% = 75%` 額外傷害加成，裝填速度 `10 × 1% = 10%`。
-- 假設基礎部分 100、遠程爆擊或弱點額外部分 40，無其他加成：`100 + 40 × (1 + 75%) = 170 傷害`，原本為 140。
-- 原本裝填 4 秒：`4 ÷ 1.1 ≈ 3.64 秒`。
-- 只有 3 層且不再刷新時：約第 5 秒剩 2 層、第 10 秒剩 1 層、第 15 秒歸零。
+- **十層效果**：額外傷害加成為 `10 × 7.5% = 75%`，裝填速度加成為 `10 × 1% = 10%`。
+
+- **傷害增幅**：假設未爆擊的遠程弱點命中，基礎部分 100、未加成的額外部分 40，無其他加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × (1 + 75%) = 170 點`，整次命中增加 `30 ÷ 140 ≈ 21.43%`。若額外部分改為 100，同條件則為 `200 → 100 + 100 × 1.75 = 275 點`，增加 `75 ÷ 200 = 37.5%`。
+
+- **搭配堅定不移**：同樣未爆擊且命中弱點，基礎與未加成的額外部分各 100，無其他加成：`100 + 100 × (1 + 75% + 30%) = 305 點`。兩項加成在額外傷害部分相加。
+
+- **裝填時間**：原本裝填 4 秒，無其他裝填加成時，`4 ÷ 1.1 ≈ 3.64 秒`。
+
+- **層數衰減**：只有 3 層且不再刷新時：約第 5 秒剩 2 層、第 10 秒剩 1 層、第 15 秒歸零。
 
 [詳細資料](TALENTS%20Veteran/veteran_snipers_focus.md) · [返回目錄](#talent-index)
 
@@ -580,11 +596,17 @@
 
 - **狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。**
 - 搭配遠程刺客後，觸發門檻仍為 10 層。
+- 撕裂改善適用護甲的傷害倍率；實際增幅隨武器、目標護甲及已有撕裂而變。
 
 #### 護甲與傷害算例
 
-- 假設基礎傷害 100、對某甲殼護甲的傷害倍率原為 0.5，且沒有其他加成：`100 × (0.5 + 0.15) = 65 傷害`，原本為 50。
-- 若另有 10% 撕裂，同一條件為 `100 × (0.5 + 0.15 + 0.1) = 75 傷害`。
+- **原倍率為 0.5**：只比較撕裂，假設未爆擊、未命中弱點，護甲結算前傷害 100，對某甲殼護甲的原倍率為 0.5，無其他加成：由 `100 × 0.5 = 50 點` 變成 `100 × (0.5 + 0.15) = 65 點`，實際增加 `15 ÷ 50 = 30%`。
+
+- **原倍率為 0.8**：其餘條件相同，則由 80 變成 `100 × (0.8 + 0.15) = 95 點`，實際增加 `15 ÷ 80 = 18.75%`。
+
+- **已有 10% 撕裂**：原倍率 0.5 時，由 `100 × (0.5 + 0.1) = 60 點` 變成 `100 × (0.5 + 0.1 + 0.15) = 75 點`，這次增加 `15 ÷ 60 = 25%`。
+
+- **弱點或爆擊命中**：須繼續計算額外傷害，並納入狙擊專注的效果；上述算例不代表十層狙擊專注的總增幅。
 
 [詳細資料](TALENTS%20Veteran/veteran_snipers_focus_rending_bonus.md) · [返回目錄](#talent-index)
 
@@ -617,12 +639,17 @@
 
 - **狙擊專注的效果上限由 10 層提高至 15 層。**
 - 每層效果與刷新方式不變；滲透盔甲仍在 10 層觸發。
+- 滿層的 112.5% 加成作用於遠程爆擊或弱點命中的額外傷害部分；整次命中的增幅隨武器、目標與既有加成而變。
 
 #### 滿層算例
 
-- 十五層提供 `15 × 7.5% = 112.5%` 遠程爆擊／弱點額外傷害加成，以及 `15 × 1% = 15%` 裝填速度。
-- 假設基礎部分 100、爆擊或弱點額外部分 40，沒有其他加成：`100 + 40 × (1 + 112.5%) = 185 傷害`。
-- 原本裝填 4 秒：`4 ÷ 1.15 ≈ 3.48 秒`。
+- **十五層效果**：額外傷害加成為 `15 × 7.5% = 112.5%`，裝填速度加成為 `15 × 1% = 15%`。
+
+- **相對零層**：假設未爆擊的遠程弱點命中，基礎部分 100、未加成的額外部分 40，沒有其他加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × (1 + 112.5%) = 185 點`；增加 `45 ÷ 140 ≈ 32.14%`。
+
+- **相對原本十層上限**：同一算例，十層為 `100 + 40 × 1.75 = 170 點`，十五層為 185 點；升級並疊滿後再增加 `15 ÷ 170 ≈ 8.82%`。
+
+- **裝填時間**：原本裝填 4 秒，無其他裝填加成時，`4 ÷ 1.15 ≈ 3.48 秒`。
 
 [詳細資料](TALENTS%20Veteran/veteran_snipers_focus_increased_stacks.md) · [返回目錄](#talent-index)
 
@@ -833,12 +860,19 @@
 
 <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="72" height="72" alt="堅定不移天賦圖示">
 
-- **弱點命中的額外傷害增加 30%。**
-- 近戰與遠程均適用；加成作用於弱點額外傷害，基礎傷害部分不增加。
+- **弱點命中的額外傷害加成增加 30%；近戰與遠程均適用。**
+
+- **實際增幅**：只加強弱點命中的額外傷害，基礎部分不變。額外傷害占比越高，整次命中的增幅越大；武器、攻擊方式、目標護甲與既有加成都會影響結果。
 
 #### 傷害算例
 
-- 假設基礎部分 100、弱點額外部分 40，其他倍率為 1：原本 `100 + 40 = 140`，點選後 `100 + 40 × 1.3 = 152 傷害`。
+- **弱點額外傷害為 100**：假設未爆擊、基礎部分 100、沒有其他加成，原本 `100 + 100 = 200 點`；點選後 `100 + 100 × 1.3 = 230 點`。實際增加 `(230 − 200) ÷ 200 = 15%`。
+
+- **弱點額外傷害為 200**：同樣基礎部分 100，原本 `100 + 200 = 300 點`；點選後 `100 + 200 × 1.3 = 360 點`。實際增加 `(360 − 300) ÷ 300 = 20%`。
+
+- **已有同階段加成**：基礎與未加成的弱點額外部分各 100，原有 25% 額外傷害加成時，由 `100 + 100 × 1.25 = 225 點` 變成 `100 + 100 × (1 + 25% + 30%) = 255 點`；實際增加 `30 ÷ 225 ≈ 13.33%`。
+
+- **比較武器時**：上述 15% 與 20% 是假設算例，不是盧修斯或自動槍的固定增幅。應以相同武器、攻擊／蓄力方式、敵人、弱點部位、距離及爆擊狀態，比較點選前後的傷害；不要直接把打身體的傷害當成弱點命中的基礎部分。
 
 [詳細資料](TALENTS%20Veteran/veteran_increased_weakspot_damage.md) · [返回目錄](#talent-index)
 
@@ -851,12 +885,16 @@
 <img src="https://github.com/user-attachments/assets/7be19cb4-a1cb-4211-b9f2-d754f3c95b6c" width="72" height="72" alt="亡命之徒天賦圖示">
 
 - **近戰爆擊率增加 10 個百分點。**
-- **近戰爆擊或弱點命中的額外傷害增加 25%。**
+- **近戰爆擊或弱點命中的額外傷害加成增加 25%。**
+- 傷害加成只作用於額外部分，整次命中的增幅依武器與目標而變。同時爆擊並命中弱點時，這項 25% 加成只套用一次。
 
 #### 爆擊與傷害算例
 
-- 原本近戰爆擊率 10%：`10% + 10% = 20%`。
-- 假設基礎部分 100、爆擊或弱點額外部分 40，沒有其他加成：`100 + 40 × 1.25 = 150 傷害`，原本為 140。
+- **爆擊率**：原本近戰爆擊率 10%，點選後為 `10% + 10% = 20%`。
+
+- **單次傷害**：假設未爆擊的近戰弱點命中，基礎部分 100、未加成的額外部分 40，沒有其他加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × 1.25 = 150 點`，整次傷害增加 `10 ÷ 140 ≈ 7.14%`。
+
+- **額外傷害較高時**：若同條件的額外部分為 100，則由 200 變成 `100 + 100 × 1.25 = 225 點`，增加 `25 ÷ 200 = 12.5%`。這些算例只比較單次弱點傷害；持續攻擊的平均傷害還受爆擊率、弱點命中率與攻擊方式影響。
 
 [詳細資料](TALENTS%20Veteran/veteran_increased_melee_crit_chance_and_melee_finesse.md) · [返回目錄](#talent-index)
 
@@ -945,11 +983,15 @@
 
 - **武器獲得 10% 撕裂。**
 - 撕裂改善對裝甲等適用目標的傷害；無甲目標不受這項護甲修正影響。
+- 實際增幅取決於武器對該護甲的原傷害倍率與已有撕裂，不能直接將整筆傷害乘以 1.1。
 
 #### 護甲與傷害算例
 
-- 假設基礎傷害 100，對某甲殼護甲的原倍率為 0.5，沒有其他加成：由 `100 × 0.5 = 50` 變為 `100 × (0.5 + 0.1) = 60 傷害`。
-- 同一護甲的原倍率已達 1 時，超出的撕裂按四分之一換算：`100 × (1 + 0.1 × 0.25) = 102.5 傷害`。
+- **原倍率為 0.5**：假設未爆擊、未命中弱點，護甲結算前傷害 100，對某甲殼護甲的原倍率為 0.5，沒有其他加成：由 `100 × 0.5 = 50 點` 變成 `100 × (0.5 + 0.1) = 60 點`，實際增加 `10 ÷ 50 = 20%`。
+
+- **原倍率已達 1**：其餘條件相同，超出倍率 1 的撕裂按四分之一換算：由 100 變成 `100 × (1 + 0.1 × 0.25) = 102.5 點`，實際增加 `2.5 ÷ 100 = 2.5%`。
+
+- **弱點或爆擊命中**：以上只示範護甲結算；弱點與爆擊還有額外傷害計算，不能直接沿用這兩個百分比。
 
 [詳細資料](TALENTS%20Veteran/veteran_rending_bonus.md) · [返回目錄](#talent-index)
 
@@ -1034,13 +1076,17 @@
 
 - **連續命中同一個仍存活的敵人，從第二次攻擊起，每次施加 1 層脆弱。**
 - 每層使目標的護甲修正受到 **2.5%** 撕裂效果，最多 **16 層（40%）**；其他隊友攻擊此目標也能受益。
+- 實際增幅取決於攻擊者的武器、目標護甲與已有撕裂；滿層 40% 不是所有攻擊的最終傷害都增加 40%。
 - 近戰與遠程均可觸發，每次揮擊或射擊最多處理第一個有效命中；流血等持續傷害不疊層。
 - 持續 **5 秒**，新增層數刷新時間。改打另一個敵人後，須重新連續命中；射空本身不清除已追蹤的目標。
 
 #### 疊層與傷害算例
 
-- 對同一敵人完成五次合資格命中，第一下建立連續命中，後四下合計 `4 × 2.5% = 10%`。
-- 假設下一擊基礎傷害 100、對某甲殼護甲的原倍率為 0.5，無其他加成：`100 × (0.5 + 10%) = 60 傷害`，原本為 50。
+- **四層脆弱**：對同一敵人完成五次合資格命中，第一下建立連續命中，後四下合計 `4 × 2.5% = 10%`。
+
+- **四層後的下一擊**：假設未爆擊、未命中弱點，護甲結算前傷害 100，對某甲殼護甲的原倍率為 0.5，無其他加成：由 `100 × 0.5 = 50 點` 變成 `100 × (0.5 + 10%) = 60 點`，實際增加 `10 ÷ 50 = 20%`。
+
+- **十六層後的下一擊**：同條件為 `100 × (0.5 + 40%) = 90 點`，相對零層增加 `40 ÷ 50 = 80%`。這是此護甲倍率下的算例；換武器、換護甲，或改為弱點／爆擊命中，須重新計算。
 
 [詳細資料](TALENTS%20Veteran/veteran_continous_hits_apply_rending.md) · [返回目錄](#talent-index)
 

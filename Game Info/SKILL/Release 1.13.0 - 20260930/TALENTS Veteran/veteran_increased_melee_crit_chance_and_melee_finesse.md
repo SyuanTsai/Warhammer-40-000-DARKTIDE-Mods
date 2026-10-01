@@ -18,6 +18,15 @@ buff 同時設定 melee_critical_strike_chance = 0.10 與 melee_finesse_modifier
 - [scripts/settings/buff/buff_settings.lua，第 864–865 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L864-L865)
 - [scripts/utilities/attack/damage_calculation.lua，第 672–782 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L672-L782)
 
+## 百分比與實際傷害增幅
+
+- **原始碼確認**：melee_critical_strike_chance=.10與melee_finesse_modifier_bonus=.25是不同屬性，前者改機率、後者改額外傷害。
+- **程式推導**：玩家例固定未爆擊的近戰弱點命中、其他倍率為1，B=100、F=40時140→150（約7.14%）；F=100時200→225（12.5%）。不是整筆傷害固定+25%，也不是平均DPS增幅；平均值需要爆擊率、弱點命中率及各攻擊的傷害資料。
+- 命中同時為爆擊與弱點時，先計算合成的base_finesse_damage，再將melee_finesse_modifier_bonus加進同一multiplier一次，不能把25%因兩條件成立而重複套用。
+
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1012–1019 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1012-L1019)
+- [scripts/utilities/attack/damage_calculation.lua，第 672–782 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L672-L782)
+
 ## 算例條件與待確認事項
 
 - 玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
