@@ -32,6 +32,7 @@
 | <img src="https://github.com/user-attachments/assets/7a00054d-1b7e-448e-a9f3-eee60922b19e" width="32" height="32" alt="靈活還擊天賦圖示"> [靈活還擊](#zealot_stacking_melee_damage_after_dodge)<br>- Riposte | <ul><li>成功閃避後近戰傷害每層提高 5%，最多 3 層，持續 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bcb76321-c69e-466f-b588-a894e8c63443" width="32" height="32" alt="狂熱不懈天賦圖示"> [狂熱不懈](#zealot_sprint_improvements)<br>- Relentless Fervor | <ul><li>衝刺速度提高 10%、耐力消耗降低 10%；連續衝刺 1 秒後免疫減速。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c97e932c-97b3-454c-9047-2145a5d9a49d" width="32" height="32" alt="無形之刃天賦圖示"> [無形之刃](#zealot_damage_vs_nonthreat)<br>- Unseen Blade | <ul><li>對目前未鎖定你的敵人，傷害提高 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/56d9b0f2-db5a-493b-aff8-2cd9699d4d96" width="32" height="32" alt="大師的反擊天賦圖示"> [大師的反擊](#zealot_defensive_knockback)<br>- The Master's Retribution | <ul><li>受到近戰有效命中時，朝攻擊者方向推開敵人；冷卻 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -399,6 +400,21 @@
 - **傷害算例**：只計本天賦，100 × 1.2 = 120 點；若已有同階段 25% 增傷，則是 100 × (1 + 25% + 20%) = 145 點。敵人改為鎖定你後，這項條件增傷就不成立。
 
 [詳細資料](TALENTS%20Zealot/zealot_damage_vs_nonthreat.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_defensive_knockback"></a>
+### 大師的反擊(The Master's Retribution)
+
+<img src="https://github.com/user-attachments/assets/56d9b0f2-db5a-493b-aff8-2cd9699d4d96" width="72" height="72" alt="大師的反擊天賦圖示">
+
+- **觸發方式**：受到造成傷害的近戰命中時，朝攻擊者方向產生反擊推力；冷卻 8 秒。被控制而無法行動，或攻擊者已死亡時不會觸發。
+
+- **作用範圍**：推擊半徑 2.75 公尺，方向朝向攻擊者；效果受敵人的踉蹌抗性影響，不能保證把所有敵人推倒。
+
+- **冷卻算例**：第 0 秒觸發後，第 3 秒再次挨打不會再推擊，約第 8 秒才可再次觸發。它不會撤銷已受到的那次傷害。
+
+[詳細資料](TALENTS%20Zealot/zealot_defensive_knockback.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -34,6 +34,7 @@
 | [靈活還擊](#zealot_stacking_melee_damage_after_dodge) | 未見明確矛盾 |
 | [狂熱不懈](#zealot_sprint_improvements) | 未見明確矛盾 |
 | [無形之刃](#zealot_damage_vs_nonthreat) | 未見明確矛盾 |
+| [大師的反擊](#zealot_defensive_knockback) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_4) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
@@ -219,6 +220,13 @@
 - 描述鍵：`loc_talent_zealot_damage_vs_nonthreat_desc`；hash：`9ca32fdb`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_damage_vs_nonthreat.md)。
+
+<a id="zealot_defensive_knockback"></a>
+## 大師的反擊(The Master's Retribution)
+
+- 描述鍵：`loc_talent_zealot_3_tier_3_ability_1_description`；hash：`f3ca681a`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_defensive_knockback.md)。
 
 <a id="base_melee_damage_node_buff_medium_4"></a>
 ## 近戰增幅(Melee Damage Boost)
