@@ -35,6 +35,7 @@
 | <img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="32" height="32" alt="永恆天賦圖示"> [永恆](#zealot_quickness_increased_duration)<br>- Eternal | <ul><li>命定審判的啟動增益持續時間由 6 秒延長至 10 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9bc683a7-534a-4244-8381-1a6c0463003f" width="32" height="32" alt="危境之際天賦圖示"> [危境之際](#zealot_corruption_resistance_stacking)<br>- On the Brink | <ul><li>殉道每缺少一格完整傷口，腐敗傷害承受倍率降低 10%；最多計 5 格，最高降低 50%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="狂熱朝聖者天賦圖示"> [狂熱朝聖者](#zealot_resist_death_ability)<br>- Zealous Pilgrim | <ul><li>使用戰鬥技能後獲得 4 秒免死效果。</li><li>隱身技能在退出隱身後生效；聖物技能在卸下聖物後生效。</li><li>無法殺死期間，傷害及攻擊速度各提高 10%。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/f88c569e-c89d-4850-b84b-17c5af69faf0" width="32" height="32" alt="烈焰與怒火天賦圖示"> [烈焰與怒火](#zealot_resist_death_fire)<br>- Fire and Fury | <ul><li>免死期間的武器命中施加燃燒；近戰加 3 層、遠程加 1 層，本天賦加至最多 12 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/439077af-f74c-4c06-8a8a-dbeab52d9a53" width="32" height="32" alt="復活天賦圖示"> [復活](#zealot_resist_death_golden_toughness)<br>- Risen | <ul><li>免死期間，每秒增加 5 點最大韌性，最多 8 層、共 40 點；加成持續 5 秒。</li><li>最大韌性增加時，韌性傷害值不變，因此目前韌性也會同步增加。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="天災天賦圖示"> [天災](#zealot_crits_apply_bleed)<br>- Scourge | <ul><li>近戰爆擊施加 2 層流血；攻擊流血敵人增加近戰爆擊率。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="背刺者天賦圖示"> [背刺者](#zealot_backstab_damage)<br>- Backstabber | <ul><li>近戰背刺與遠程側襲傷害增加 25%。</li></ul> | 技能 |
@@ -543,6 +544,23 @@
 - **傷害與速度算例**：只計這項增益，基礎 100 點傷害變成 100 × 1.1 = 110 點；受攻速影響的 1 秒動作變成 1 ÷ 1.1 ≈ 0.909 秒。其他同階段加成先相加。
 
 [詳細資料](TALENTS%20Zealot/zealot_resist_death_ability.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_resist_death_fire"></a>
+### 烈焰與怒火(Fire and Fury)
+
+<img src="https://github.com/user-attachments/assets/f88c569e-c89d-4850-b84b-17c5af69faf0" width="72" height="72" alt="烈焰與怒火天賦圖示">
+
+- **觸發方式**：免死期間，武器命中存活敵人會施加燃燒；近戰每次增加 3 層，遠程每次增加 1 層。本天賦最多把該敵人的這種燃燒加至 12 層；其他來源仍可能加得更高。
+
+- **燃燒持續**：約每 0.5 秒結算一次，追加燃燒刷新 4 秒保留時間；到期後逐次結算、逐層消退。已有 12 層以上時，本天賦不再加層，只刷新時間。
+
+- **層數算例**：目標原本 0 層，連續 4 次近戰命中可達 4 × 3 = 12 層；接著再命中不會由本天賦升至 15 層。
+
+- **傷害算例**：固定無甲部位、沒有其他修正，3 層單次燃燒傷害為 400 × (3 ÷ 31)² × [3 − 2 × (3 ÷ 31)] × 1.5 ≈ 15.77 點；12 層約 200.11 點。這是單次結算，並非所有敵人的固定每秒傷害。
+
+[詳細資料](TALENTS%20Zealot/zealot_resist_death_fire.md) · [返回目錄](#talent-index)
 
 ---
 

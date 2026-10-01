@@ -37,6 +37,7 @@
 | [永恆](#zealot_quickness_increased_duration) | 未見明確矛盾 |
 | [危境之際](#zealot_corruption_resistance_stacking) | 未見明確矛盾 |
 | [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
+| [烈焰與怒火](#zealot_resist_death_fire) | 未見明確矛盾 |
 | [復活](#zealot_resist_death_golden_toughness) | 未見明確矛盾 |
 | [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
 | [背刺者](#zealot_backstab_damage) | 未見明確矛盾 |
@@ -296,6 +297,13 @@
 - 描述鍵：`loc_talent_zealot_resist_death_ability_offensive_desc`；hash：`ccea0bcc`。
 - 結論：未見明確矛盾。繁中與英文對使用技能、隱身/聖物起算時點及兩項增益的方向相符。
 - [原始碼推導與限制](zealot_resist_death_ability.md)。
+
+<a id="zealot_resist_death_fire"></a>
+## 烈焰與怒火(Fire and Fury)
+
+- 描述鍵：`loc_talent_zealot_resist_death_fire_desc`；hash：`2ee3f440`。
+- 結論：未見明確矛盾。繁中及英文都描述無法殺死期間由武器命中施加燃燒，方向與對象相同。燃燒層數、時長、tick 間隔及 power scaling 為原文未展開的機制細節。
+- [原始碼推導與限制](zealot_resist_death_fire.md)。
 
 <a id="zealot_resist_death_golden_toughness"></a>
 ## 復活(Risen)

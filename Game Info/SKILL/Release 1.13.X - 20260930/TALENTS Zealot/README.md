@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **82 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L3-L10)。內部 tree version 29 不等於遊戲發行版號。
 
-完成 75／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 76／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -40,6 +40,7 @@
 | 鑰石 | [永恆](zealot_quickness_increased_duration.md) / `zealot_quickness_increased_duration` | `node_8b72c79c-2b0f-4081-b919-f730aaee433d` | 完成（核心靜態機制） |
 | 鑰石 | [危境之際](zealot_corruption_resistance_stacking.md) / `zealot_corruption_resistance_stacking` | `node_ccd0b423-3a44-4f74-8339-7c7b65ba2d63` | 完成（核心靜態機制） |
 | 鑰石 | [狂熱朝聖者](zealot_resist_death_ability.md) / `zealot_resist_death_ability` | `node_3483d4d7-3f13-48de-8055-ecfc04d70aae` | 完成（核心靜態機制） |
+| 鑰石 | [烈焰與怒火](zealot_resist_death_fire.md) / `zealot_resist_death_fire` | `node_9ad99512-0439-46e8-8113-5d7de6d174da` | 完成（核心靜態機制） |
 | 鑰石 | [復活](zealot_resist_death_golden_toughness.md) / `zealot_resist_death_golden_toughness` | `node_2eb4f6f4-6d27-4ecd-a41c-bac7a014a6c0` | 完成（核心靜態機制） |
 | 技能 | [天災](zealot_crits_apply_bleed.md) / `zealot_crits_apply_bleed` | `node_0e6bc32b-bdab-4856-94e7-f141355cc9a0` | 完成（核心靜態機制） |
 | 技能 | [背刺者](zealot_backstab_damage.md) / `zealot_backstab_damage` | `node_36d9319a-e724-493d-baf1-efdbd77f736c` | 完成（核心靜態機制） |

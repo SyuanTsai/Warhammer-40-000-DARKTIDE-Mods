@@ -1674,3 +1674,5 @@
 - Zealous Pilgrim - 狂熱朝聖者（沿用本機繁中名稱，待使用者確認；`zealot_resist_death_ability`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3288-L3330)）
 
 - Risen - 復活（沿用本機繁中名稱，待使用者確認；`zealot_resist_death_golden_toughness`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3429-L3453)）
+
+- Fire and Fury - 烈焰與怒火（沿用本機繁中名稱，待使用者確認；`zealot_resist_death_fire`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3331-L3345)）
