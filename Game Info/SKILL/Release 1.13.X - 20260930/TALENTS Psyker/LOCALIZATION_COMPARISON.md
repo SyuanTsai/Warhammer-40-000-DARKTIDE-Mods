@@ -53,7 +53,7 @@
 | [殘忍命運](#psyker_mark_weakspot_kills) | 已配對；機制待核對 |
 | [靈魂竊賊](#psyker_toughness_on_warp_kill) | 已配對；機制待核對 |
 | [心如止水](#psyker_toughness_on_vent) | 已配對；機制待核對 |
-| [亞空間耗費](#psyker_toughness_on_melee) | 已配對；機制待核對 |
+| [亞空間耗費](#psyker_toughness_on_melee) | 未見明確矛盾 |
 | [堅毅](#psyker_crits_regen_toughness_movement_speed) | 未見明確矛盾 |
 | [險惡燃燒](#psyker_elite_kills_add_warpfire) | 未見明確矛盾 |
 | [戰鬥冥想](#psyker_chance_to_vent_on_kill) | 未見明確矛盾 |
@@ -409,7 +409,7 @@
 ## 亞空間耗費(Warp Expenditure)
 
 - 描述鍵：`loc_talent_psyker_toughness_on_melee_description`；hash：`3f010d59`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_toughness_on_melee.md)。
 
 <a id="psyker_crits_regen_toughness_movement_speed"></a>

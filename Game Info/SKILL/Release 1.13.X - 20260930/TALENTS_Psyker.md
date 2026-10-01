@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="亞空間耗費天賦圖示"> [亞空間耗費](#psyker_toughness_on_melee)<br>- Warp Expenditure | <ul><li>近戰命中首個敵人，恢復 2.5% 最大韌性。</li><li>近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/53013aa9-f833-431c-8b85-3e548dbc318c" width="32" height="32" alt="堅毅天賦圖示"> [堅毅](#psyker_crits_regen_toughness_movement_speed)<br>- Mettle | <ul><li>爆擊命中後持續恢復韌性，並增加 5% 移動速度。</li><li>移動加成最多 3 層、持續 4 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6cc7512d-8e6f-4261-88f3-c95089950934" width="32" height="32" alt="險惡燃燒天賦圖示"> [險惡燃燒](#psyker_elite_kills_add_warpfire)<br>- Perilous Combustion | <ul><li>擊殺精英或專家敵人，對死者周圍 4 公尺內敵人施加 2 層靈魂之火。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/69bdf081-b37e-479b-a157-f6e047efcfda" width="32" height="32" alt="戰鬥冥想天賦圖示"> [戰鬥冥想](#psyker_chance_to_vent_on_kill)<br>- Battle Meditation | <ul><li>反噬產生量減少 10%。</li><li>擊殺有 10% 機率降低 10 個百分點反噬。</li></ul> | 技能 |
@@ -41,6 +42,21 @@
 ---
 
 ## 技能
+
+<a id="psyker_toughness_on_melee"></a>
+### 亞空間耗費(Warp Expenditure)
+
+<img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="72" height="72" alt="亞空間耗費天賦圖示">
+
+- **普通命中**：近戰攻擊命中第一個敵人時，恢復 2.5% 最大韌性。
+
+- **弱點擊殺**：近戰命中弱點並擊殺敵人時，改為在 3 秒內恢復 15% 最大韌性；這次擊殺不再額外給予前述 2.5%。再次觸發會重設 3 秒，恢復速度不疊加。
+
+- **恢復算例**：最大韌性 100、沒有其他加成且缺額足夠，普通命中恢復 2.5 點；弱點擊殺每秒恢復 100 × 15% ÷ 3 = 5 點，持續 3 秒共 15 點。
+
+[詳細資料](TALENTS%20Psyker/psyker_toughness_on_melee.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="psyker_crits_regen_toughness_movement_speed"></a>
 ### 堅毅(Mettle)
