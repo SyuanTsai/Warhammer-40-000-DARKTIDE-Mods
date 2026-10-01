@@ -21,6 +21,7 @@
 | <img src="https://github.com/user-attachments/assets/fab49cb9-e155-47d2-8b8c-2ad8235a0f48" width="32" height="32" alt="彈藥儲存包天賦圖示"> [彈藥儲存包](#ogryn_increased_ammo_reserve)<br>- Ammo Stash | <ul><li>備彈容量增加 25%，不增加彈匣容量。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cf916d47-2e00-43d4-98b7-307222a056e6" width="32" height="32" alt="領跑者天賦圖示"> [領跑者](#ogryn_multi_hits_grant_reload_speed)<br>- Pacemaker | <ul><li>短時間命中至少 3 名不同敵人，下一次換彈速度提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5a19ac08-20bc-41ee-8af1-bbc6194fa852" width="32" height="32" alt="發現更多天賦圖示"> [發現更多](#ogryn_free_reload_after_ability)<br>- Found Some More | <ul><li>每約 15 秒恢復最大備彈的 1%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/58952102-1822-4093-81f9-48b8cbc8f8a7" width="32" height="32" alt="絕不屈服天賦圖示"> [絕不屈服](#ogryn_knocked_allies_grant_damage_reduction)<br>- Won't Give In | <ul><li>20 公尺內每名需要救援的隊友提供 20% 減傷，最多 60%。</li></ul> | 技能 |
 
 ---
 
@@ -248,5 +249,18 @@
 - **補給上限**：子彈加入備彈，不會直接裝入彈匣。彈匣尚未補滿時，可暫時把相同缺額存入備彈；彈匣與備彈總量仍不超過兩者容量合計。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_free_reload_after_ability.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_knocked_allies_grant_damage_reduction"></a>
+### 絕不屈服(Won't Give In)
+
+<img src="https://github.com/user-attachments/assets/58952102-1822-4093-81f9-48b8cbc8f8a7" width="72" height="72" alt="絕不屈服天賦圖示">
+
+- **生效條件**：距離未滿 20 公尺的隊友倒地、被制伏或懸掛邊緣等需要救援時，每人使你受到的傷害降低 20%；隊友獲救或離開範圍後，對應加成便消失。
+
+- **減傷算例**：有 1、2、3 名符合條件的隊友時，這一階段的 100 點傷害分別變成 80、60、40 點；三人合計為 100 × (1 − 3 × 20%) = 40 點。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_knocked_allies_grant_damage_reduction.md) · [返回目錄](#talent-index)
 
 ---
