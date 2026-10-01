@@ -74,7 +74,7 @@ return {
 	circumstance_offset_x = {
 		en = "Mission Circumstance X Offset",
 		["zh-cn"] = "任务词条 水平偏移左负右正",
-		["zh-tw"] = "任務詞綴 水平偏移（左負右正）",
+		["zh-tw"] = "任務特殊狀況 X 軸偏移（左負右正）",
 		ru = "Обстоятельства миссии - смещение по ширине",
 	},
 	circumstance_offset_y = {
@@ -104,19 +104,19 @@ return {
 	circumstance_description_font_size_description = {
 		en = "Default value is 24",
 		["zh-cn"] = "默认值为24",
-		["zh-tw"] = "預設值為24",
+		["zh-tw"] = "預設值為 24",
 		ru = "24 - значение по умолчанию",
 	},
 	danger_offset_x = {
 		en = "Mission Danger Info X Offset",
 		["zh-cn"] = "任务等级 水平偏移左负右正",
-		["zh-tw"] = "任務資訊 水平偏移（左負右正）",
+		["zh-tw"] = "任務危險資訊 X 軸偏移（左負右正）",
 		ru = "Инфо о опасностях миссии - смещение по ширине",
 	},
 	danger_offset_y = {
 		en = "Mission Danger Info Y Offset",
 		["zh-cn"] = "任务等级 垂直偏移上负下正",
-		["zh-tw"] = "任務危險資訊垂直偏移（上負下正）",
+		["zh-tw"] = "任務危險資訊 Y 軸偏移（上負下正）",
 		ru = "Инфо о опасностях миссии - смещение по высоте",
 	},
 
