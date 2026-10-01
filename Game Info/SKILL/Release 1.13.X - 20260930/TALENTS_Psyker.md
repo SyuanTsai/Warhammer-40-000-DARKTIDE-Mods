@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/69bdf081-b37e-479b-a157-f6e047efcfda" width="32" height="32" alt="戰鬥冥想天賦圖示"> [戰鬥冥想](#psyker_chance_to_vent_on_kill)<br>- Battle Meditation | <ul><li>反噬產生量減少 10%。</li><li>擊殺有 10% 機率降低 10 個百分點反噬。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/3c19e5ea-ccab-46a3-9763-c8d4075c6332" width="32" height="32" alt="完美時機天賦圖示"> [完美時機](#psyker_crits_empower_next_attack)<br>- Perfect Timing | <ul><li>爆擊命中增加 3% 傷害，最多 5 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1e6189fe-4a6e-4fda-bbe9-e2a38c75ff2a" width="32" height="32" alt="野火天賦圖示"> [野火](#psyker_spread_warpfire_on_kill)<br>- Wildfire | <ul><li>受你的靈魂之火影響的敵人死亡時，向 5 公尺內敵人分配最多 4 層靈魂之火。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/86748037-d25a-449c-881a-b80060374012" width="32" height="32" alt="思維活躍天賦圖示"> [思維活躍](#psyker_venting_improvements)<br>- Mind in Motion | <ul><li>平息反噬與裝填不再造成各自的移動減速。</li><li>移動速度增加 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cc72c2ff-3d22-42e0-be1d-69a9f4d7cb22" width="32" height="32" alt="惡意攻勢天賦圖示"> [惡意攻勢](#psyker_kills_stack_other_weapon_damage)<br>- Malefic Momentum | <ul><li>非亞空間擊殺強化亞空間傷害；亞空間擊殺強化非亞空間傷害。</li><li>每層 5%，各最多 5 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/80b2261c-4df6-4531-b9c1-bf67fbbbdcee" width="32" height="32" alt="看破天賦圖示"> [看破](#psyker_improved_dodge)<br>- Anticipation | <ul><li>有效閃避次數增加 1 次；閃避保護的延續時間增加 50%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/946f549a-ed56-4711-aee8-39ce35a0a6b1" width="32" height="32" alt="反射閃避天賦圖示"> [反射閃避](#psyker_dodge_after_crits)<br>- Empathic Evasion | <ul><li>爆擊命中後，1 秒內對遠程攻擊視為正在閃避。</li></ul> | 技能 |
@@ -162,6 +163,19 @@
 - 繁中「被你的靈魂之火灼燒而亡」把條件縮成火焰擊殺；英文及執行條件是敵人死亡時仍受你的靈魂之火影響，其他攻擊完成擊殺也可觸發。
 
 [詳細資料](TALENTS%20Psyker/psyker_spread_warpfire_on_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_venting_improvements"></a>
+### 思維活躍(Mind in Motion)
+
+<img src="https://github.com/user-attachments/assets/86748037-d25a-449c-881a-b80060374012" width="72" height="72" alt="思維活躍天賦圖示">
+
+- **運作方式**：移除平息反噬及裝填動作造成的移動減速，並增加 5% 移動速度。其他來源的緩速仍各自結算。
+
+- **移速算例**：無其他修正、該階段原本每秒移動 5 公尺時，5 × (1 + 5%) = 5.25 公尺。
+
+[詳細資料](TALENTS%20Psyker/psyker_venting_improvements.md) · [返回目錄](#talent-index)
 
 ---
 

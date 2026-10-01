@@ -59,7 +59,7 @@
 | [戰鬥冥想](#psyker_chance_to_vent_on_kill) | 未見明確矛盾 |
 | [完美時機](#psyker_crits_empower_next_attack) | 未見明確矛盾 |
 | [野火](#psyker_spread_warpfire_on_kill) | 繁中原文勘誤 |
-| [思維活躍](#psyker_venting_improvements) | 已配對；機制待核對 |
+| [思維活躍](#psyker_venting_improvements) | 未見明確矛盾 |
 | [惡意攻勢](#psyker_kills_stack_other_weapon_damage) | 未見明確矛盾 |
 | [亞空間強化](#psyker_warp_charge_reduces_toughness_damage_taken) | 已配對；機制待核對 |
 | [看破](#psyker_improved_dodge) | 繁中原文勘誤 |
@@ -453,7 +453,7 @@
 ## 思維活躍(Mind in Motion)
 
 - 描述鍵：`loc_talent_psyker_improved_venting_desc`；hash：`86b17787`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_venting_improvements.md)。
 
 <a id="psyker_kills_stack_other_weapon_damage"></a>

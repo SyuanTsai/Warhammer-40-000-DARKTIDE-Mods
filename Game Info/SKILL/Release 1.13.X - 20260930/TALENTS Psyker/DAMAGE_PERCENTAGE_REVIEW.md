@@ -57,7 +57,7 @@
 | [戰鬥冥想](psyker_chance_to_vent_on_kill.md) | 反噬產生量減少 10%。；擊殺有 10% 機率降低 10 個百分點反噬。；完整計算與適用限制見來源文件。 |
 | [完美時機](psyker_crits_empower_next_attack.md) | 爆擊命中增加 3% 傷害，最多 5 層，持續 10 秒。；完整計算與適用限制見來源文件。 |
 | [野火](psyker_spread_warpfire_on_kill.md) | 受你的靈魂之火影響的敵人死亡時，向 5 公尺內敵人分配最多 4 層靈魂之火。；完整計算與適用限制見來源文件。 |
-| [思維活躍](psyker_venting_improvements.md) | 機制與公式待核對。 |
+| [思維活躍](psyker_venting_improvements.md) | 平息反噬與裝填不再造成各自的移動減速。；移動速度增加 5%。；完整計算與適用限制見來源文件。 |
 | [惡意攻勢](psyker_kills_stack_other_weapon_damage.md) | 非亞空間擊殺強化亞空間傷害；亞空間擊殺強化非亞空間傷害。；每層 5%，各最多 5 層，持續 10 秒。；完整計算與適用限制見來源文件。 |
 | [亞空間強化](psyker_warp_charge_reduces_toughness_damage_taken.md) | 機制與公式待核對。 |
 | [看破](psyker_improved_dodge.md) | 有效閃避次數增加 1 次；閃避保護的延續時間增加 50%。；完整計算與適用限制見來源文件。 |
