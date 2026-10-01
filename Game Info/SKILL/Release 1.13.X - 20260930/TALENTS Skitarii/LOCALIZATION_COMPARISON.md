@@ -17,6 +17,7 @@
 | [反應爐線圈充能](#cryptic_weakspot_kills_grant_power) | 未見明確矛盾 |
 | [強化能量循環](#cryptic_increased_passive_cooldown_regen) | 未見明確矛盾 |
 | [電容回收迴路](#cryptic_multi_hits_grant_power) | 未見明確矛盾 |
+| [鋼鐵富足](#cryptic_chordclaw_capacitance_restoration) | 未見明確矛盾 |
 | [削切協議](#cryptic_dissector) | 未見明確矛盾；補充計算與限制 |
 | [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
 | [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
@@ -139,6 +140,13 @@
 - 描述鍵：`loc_talent_cryptic_multi_hits_grant_power_desc`；hash：`998c8ded`。
 - 結論：未見明確矛盾。繁中與英文均寫同一次攻擊命中3名以上敵人後恢復1%，與程式在命中第3個目標時觸發一次相符。0.25秒間隔及1%以單份成本為基準，是原文省略的程式細節，沒有相反描述。
 - [原始碼推導與限制](cryptic_multi_hits_grant_power.md)。
+
+<a id="cryptic_chordclaw_capacitance_restoration"></a>
+## 鋼鐵富足(Satiated Steel)
+
+- 描述鍵：`loc_talent_cryptic_chordclaw_capacitance_restoration_desc`；hash：`18058d13`。
+- 結論：未見明確矛盾。inventory 中英都表示弦爪擊殺後於5秒內恢復25%電容量，與來源觸發類型、25%總量及5秒回復視窗相符。觸發限於指定弦爪傷害類型，以及再觸發刷新而不疊倍率，是原文省略而非明確矛盾。
+- [原始碼推導與限制](cryptic_chordclaw_capacitance_restoration.md)。
 
 <a id="cryptic_dissector"></a>
 ## 削切協議(Flensing Protocols)
