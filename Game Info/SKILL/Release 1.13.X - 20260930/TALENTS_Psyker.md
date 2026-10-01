@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/2e792f27-7daf-4ce9-abcc-9d92ded0985c" width="32" height="32" alt="動能撕裂者天賦圖示"> [動能撕裂者](#psyker_smite_on_hit)<br>- Kinetic Flayer | <ul><li>命中仍存活的精英、專家敵人或巨獸時觸發顱腦崩裂，冷卻 12 秒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/a0c17626-2777-4302-bc7e-9b3a48aadcd0" width="32" height="32" alt="靈能攻擊天賦圖示"> [靈能攻擊](#psyker_grenade_throwing_knives)<br>- Assail | <ul><li>投擲追蹤敵人的靈能碎片；可瞄準指定目標。</li><li>最多保留 10 次，每 3 秒恢復一次。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9" width="32" height="32" alt="動能共鳴天賦圖示"> [動能共鳴](#psyker_ability_increase_brain_burst_speed)<br>- Kinetic Resonance | <ul><li>使用戰鬥能力後 10 秒內，顱腦崩裂蓄力速度增加 75%，反噬產生量減少 50%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/0519f0ec-0ce9-4846-8ed4-95a0b9c092de" width="32" height="32" alt="衰弱詛咒天賦圖示"> [衰弱詛咒](#psyker_chain_lightning_improved_target_buff)<br>- Enfeeble | <ul><li>你電擊的敵人受到所有來源的傷害提高 10%。</li></ul> | 閃擊 |
@@ -56,6 +57,19 @@
 ---
 
 ## 閃擊
+
+<a id="psyker_smite_on_hit"></a>
+### 動能撕裂者(Kinetic Flayer)
+
+<img src="https://github.com/user-attachments/assets/2e792f27-7daf-4ce9-abcc-9d92ded0985c" width="72" height="72" alt="動能撕裂者天賦圖示">
+
+- **觸發方式**：命中精英、專家敵人或巨獸並造成傷害，目標仍存活且天賦冷卻結束時，觸發一次顱腦崩裂。轟炸兵與場景物件不適用。
+
+- **冷卻算例**：第 0 秒觸發後，第 11 秒的命中仍不能再次觸發；12 秒冷卻結束後的下一次合格命中才會觸發。
+
+[詳細資料](TALENTS%20Psyker/psyker_smite_on_hit.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="psyker_grenade_throwing_knives"></a>
 ### 靈能攻擊(Assail)

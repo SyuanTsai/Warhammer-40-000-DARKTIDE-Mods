@@ -8,7 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
-| [動能撕裂者](#psyker_smite_on_hit) | 已配對；機制待核對 |
+| [動能撕裂者](#psyker_smite_on_hit) | 跨版本待同版核對 |
 | [顱腦崩裂](#psyker_brain_burst_improved) | 已配對；機制待核對 |
 | [靈能攻擊](#psyker_grenade_throwing_knives) | 描述方向吻合，細節未列盡 |
 | [乙太碎片](#psyker_throwing_knives_piercing) | 已配對；機制待核對 |
@@ -94,7 +94,7 @@
 ## 動能撕裂者(Kinetic Flayer)
 
 - 描述鍵：`loc_talent_psyker_smite_on_hit_special_elite_desc`；hash：`63bc627a`。
-- 已配對原文，機制待核對。
+- 結論：跨版本待同版核對。本機繁中描述稱反噬處於危險線以上時不觸發，但固定來源的完整檢查函式只驗證攻擊、傷害、敵人分類與存活狀態，沒有反噬條件。來源版本未與 Build 25492122 核實同版，因此不將此差異判為翻譯錯誤。另，原始碼參數為 1.0，表示合格命中在冷卻外觸發率 100%。
 - [原始碼推導與限制](psyker_smite_on_hit.md)。
 
 <a id="psyker_brain_burst_improved"></a>
