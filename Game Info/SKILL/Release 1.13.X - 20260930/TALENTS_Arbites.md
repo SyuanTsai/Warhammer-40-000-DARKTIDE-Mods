@@ -8,6 +8,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="天鷹使節天賦圖示"> [天鷹使節](#adamant_area_buff_drone_improved)<br>- Nuncio-Aquila | <ul><li>部署阿奎拉傳令機，持續 20 秒並影響周圍 7.5 公尺；冷卻 60 秒，單次充能。</li><li>強化版讓盟友每秒恢復 7.5% 韌性，並提高壓制與衝擊、降低後座力，同時免疫暈眩、減速與壓制。</li><li>範圍內敵人受到的傷害提高 15%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/d2b1945d-2300-4993-a649-00c1e3858e0d" width="32" height="32" alt="針鋒相對天賦圖示"> [針鋒相對](#adamant_charge_cooldown_reduction)<br>- Targeted Brutality | <ul><li>衝鋒每次有效命中一般敵人返還 0.5 秒戰鬥技能冷卻；命中精英、專家或巨獸返還 1 秒。</li><li>單次衝鋒最多返還 5 秒冷卻。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="32" height="32" alt="交鋒天賦圖示"> [交鋒](#adamant_charge_longer_distance)<br>- Engage | <ul><li>衝鋒距離由基礎 3.75 公尺增加 3.75 公尺，目標距離上限成為 7.5 公尺。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/a6716d2d-1100-4bbe-be59-683b5b9176b4" width="32" height="32" alt="電子獒犬與人天賦圖示"> [電子獒犬與人](#adamant_toughness_regen_near_companion)<br>- Man and Cyber-Mastiff | <ul><li>在自己的電子獒犬 8 公尺內，每秒恢復最大韌性的 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/82a4d2c5-a0aa-4c05-a8ea-e03bc0e4932b" width="32" height="32" alt="凋零烈焰天賦圖示"> [凋零烈焰](#adamant_damage_after_reloading)<br>- Withering Fire | <ul><li>換彈後，遠程傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0f0f19ee-07a9-47a6-9acf-599b809569a4" width="32" height="32" alt="審判之錘天賦圖示"> [審判之錘](#adamant_multiple_hits_attack_speed)<br>- Hammer of Judgement | <ul><li>同一次近戰攻擊命中至少 3 名敵人，近戰攻速提高 10%，持續 3 秒。</li></ul> | 技能 |
@@ -89,6 +90,19 @@
 - **算例**：6 次一般命中返還 6×0.5=3 秒，3 次高階目標命中返還 3×1=3 秒；合計 6 秒後按 5 秒上限結算，20 秒基礎冷卻最多因此返還 5 秒。
 
 [詳細資料](TALENTS%20Arbites/adamant_charge_cooldown_reduction.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_charge_longer_distance"></a>
+### 交鋒(Engage)
+
+<img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="72" height="72" alt="交鋒天賦圖示">
+
+- **衝鋒距離**：此升級替衝鋒增加 3.75 公尺距離，使基礎 3.75 公尺提高至 7.5 公尺。
+
+- **算例**：3.75 公尺基礎距離 + 3.75 公尺增幅 = 7.5 公尺。實際位移可能因路徑碰撞或中途取消而縮短。
+
+[詳細資料](TALENTS%20Arbites/adamant_charge_longer_distance.md) · [返回目錄](#talent-index)
 
 ---
 

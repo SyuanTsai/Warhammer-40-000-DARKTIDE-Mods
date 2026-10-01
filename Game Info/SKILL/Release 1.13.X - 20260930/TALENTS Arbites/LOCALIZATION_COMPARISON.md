@@ -10,6 +10,7 @@
 |---|---|
 | [天鷹使節](#adamant_area_buff_drone_improved) | 未見明確矛盾 |
 | [針鋒相對](#adamant_charge_cooldown_reduction) | 未見明確矛盾 |
+| [交鋒](#adamant_charge_longer_distance) | 未見明確矛盾 |
 | [電子獒犬與人](#adamant_toughness_regen_near_companion) | 未見明確矛盾 |
 | [凋零烈焰](#adamant_damage_after_reloading) | 未見明確矛盾 |
 | [審判之錘](#adamant_multiple_hits_attack_speed) | 未見明確矛盾 |
@@ -73,6 +74,13 @@
 - 描述鍵：`loc_talent_adamant_charge_cooldown_alt_description`；hash：`775c291d`。
 - 結論：未見明確矛盾。繁中「每次擊中敵人」與英文「for each hit」相同；精英、專家或巨獸提高返還量、以及 5 秒最高值亦一致。
 - [原始碼推導與限制](adamant_charge_cooldown_reduction.md)。
+
+<a id="adamant_charge_longer_distance"></a>
+## 交鋒(Engage)
+
+- 描述鍵：`loc_talent_adamant_charge_longer_distance_desc`；hash：`3945c4ac`。
+- 結論：未見明確矛盾。繁中「距離延長至…公尺」對應英文「distance … increased to …m」；兩者都描述增加後的總距離。
+- [原始碼推導與限制](adamant_charge_longer_distance.md)。
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
