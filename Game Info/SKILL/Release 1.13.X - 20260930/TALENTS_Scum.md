@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/51827890-e735-4220-8959-bf37381e0fc8" width="32" height="32" alt="化學藥劑全開天賦圖示"> [化學藥劑全開](#broker_keystone_chemical_dependency_sub_3)<br>- Maxed Out Chems | <ul><li>化學依賴性每層持續時間由 90 秒改為 60 秒，最多層數由 3 層增加至 4 層。</li><li>4 層時戰鬥技能資源回充倍率為 1.40；60 秒線性回充算例約縮至 42.86 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a887e60a-cbd4-4d49-8e44-20661f7f2dcb" width="32" height="32" alt="兀鷲推擊天賦圖示"> [兀鷲推擊](#broker_keystone_vultures_mark_aoe_stagger)<br>- Vulture's Push | <ul><li>以遠程攻擊擊殺精英或專家時，在自己周圍 3 公尺觸發爆炸，造成中等踉蹌與擊退。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/76cdf6df-d713-4085-8b29-fce2c1c64413" width="32" height="32" alt="堅毅獵手天賦圖示"> [堅毅獵手](#broker_keystone_vultures_mark_increased_duration)<br>- Patient Hunter | <ul><li>兀鷲印記的持續時間由 8 秒提高至 12 秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/00fcee1e-616c-4283-ade2-f67fc6657a7e" width="32" height="32" alt="兀鷲閃避天賦圖示"> [兀鷲閃避](#broker_keystone_vultures_mark_dodge_on_ranged_crit)<br>- Vulture's Dodge | <ul><li>遠程爆擊後 1 秒內，視為正在閃避近戰與遠程攻擊；再次爆擊刷新時間。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448" width="32" height="32" alt="腎上腺素刺客天賦圖示"> [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1)<br>- Adrenaline Assassin | <ul><li>選用腎上腺素刺客後，一般非弱點近戰命中不給層；近戰弱點命中共給 3 層。</li><li>爆擊仍額外加 1 層，因此近戰弱點爆擊共給 4 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c" width="32" height="32" alt="振奮怒火天賦圖示"> [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3)<br>- Stoked Rage | <ul><li>腎上腺素狂暴的持續時間由 10 秒提高至 20 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce" width="32" height="32" alt="腎上腺素突破天賦圖示"> [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5)<br>- Adrenaline Unbound | <ul><li>狂暴期間每秒恢復最大韌性的 5%。</li></ul> | 鑰石 |
@@ -540,6 +541,25 @@
 - **時間算例**：第一層在 0 秒取得，第二層在 6 秒取得後，計時重設為 12 秒；若之後無新印記，現有層數在第 18 秒到期。
 
 [詳細資料](TALENTS%20Scum/broker_keystone_vultures_mark_increased_duration.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_keystone_vultures_mark_dodge_on_ranged_crit"></a>
+### 兀鷲閃避(Vulture's Dodge)
+
+<img src="https://github.com/user-attachments/assets/00fcee1e-616c-4283-ade2-f67fc6657a7e" width="72" height="72" alt="兀鷲閃避天賦圖示">
+
+- **觸發**：造成遠程爆擊時觸發；一般遠程命中或近戰爆擊不會觸發。
+
+- **效果**：持續 1 秒，即使沒有按下閃避，也會被視為正在閃避近戰與遠程攻擊。仍須依各種攻擊的閃避規則判定結果，並非所有傷害都無效。
+
+- **刷新**：1 秒內再次遠程爆擊會重設 1 秒計時，不會累積多層。
+
+- **適用範圍**：此效果直接改變閃避判定，不增加實際閃避距離或移動速度，也不要求玩家正在做閃避動作。
+
+- **時間算例**：第 0 秒觸發，第 0.6 秒再度遠程爆擊後，效果延續至第 1.6 秒。
+
+[詳細資料](TALENTS%20Scum/broker_keystone_vultures_mark_dodge_on_ranged_crit.md) · [返回目錄](#talent-index)
 
 ---
 

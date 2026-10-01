@@ -35,6 +35,7 @@
 | [化學藥劑全開](#broker_keystone_chemical_dependency_sub_3) | 未見明確矛盾 |
 | [兀鷲推擊](#broker_keystone_vultures_mark_aoe_stagger) | 未見明確矛盾 |
 | [堅毅獵手](#broker_keystone_vultures_mark_increased_duration) | 未見明確矛盾 |
+| [兀鷲閃避](#broker_keystone_vultures_mark_dodge_on_ranged_crit) | 未見明確矛盾 |
 | [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1) | 未見明確矛盾 |
 | [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3) | 未見明確矛盾 |
 | [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5) | 未見明確矛盾 |
@@ -277,6 +278,13 @@
 - 描述鍵：`loc_talent_broker_keystone_vultures_mark_increased_duration_desc`；hash：`2a61076a`。
 - 結論：未見明確矛盾。繁中與英文都將兀鷲印記持續時間列為 12 秒；程式以核心 8 秒加上 4 秒差額實作，且每次新增／刷新堆疊會重設共享計時。
 - [原始碼推導與限制](broker_keystone_vultures_mark_increased_duration.md)。
+
+<a id="broker_keystone_vultures_mark_dodge_on_ranged_crit"></a>
+## 兀鷲閃避(Vulture's Dodge)
+
+- 描述鍵：`loc_talent_broker_keystone_vultures_mark_dodge_on_ranged_crit_desc`；hash：`c8880e0b`。
+- 結論：未見明確矛盾。繁中與英文稱「所有攻擊」視為閃避；本版 Dodge.is_dodging 的實際 keyword 分支覆蓋 melee、incapacitating_grab（依 melee 規則）及 ranged，並未設 count_as_dodge_vs_all，故解讀依該函式實際查詢的攻擊類型。
+- [原始碼推導與限制](broker_keystone_vultures_mark_dodge_on_ranged_crit.md)。
 
 <a id="broker_keystone_adrenaline_junkie_sub_1"></a>
 ## 腎上腺素刺客(Adrenaline Assassin)
