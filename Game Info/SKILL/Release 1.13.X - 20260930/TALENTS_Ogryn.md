@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/a7e97984-e57a-4028-ab1b-6e89a0e42fdf" width="32" height="32" alt="投彈完畢！天賦圖示"> [投彈完畢！](#ogryn_box_explodes)<br>- Bombs Away! | <ul><li>選擇「投彈完畢！」後，手雷箱命中敵人會破開並散出 6 顆手雷；搭配「超巨量傷害箱」時為 9 顆。</li><li>最多攜帶 3 箱；散出的手雷各自倒數引爆。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/13c08b08-ef80-4f04-8a70-cddfa4db7389" width="32" height="32" alt="超巨量傷害箱天賦圖示"> [超巨量傷害箱](#ogryn_big_box_of_hurt_more_bombs)<br>- Bigger Box of Hurt | <ul><li>「超巨量傷害箱」讓「投彈完畢！」命中後散出的手雷增加 3 顆。</li><li>基礎 6 顆加上 3 顆後為 9 顆；增加的是散出數量，不會增加手雷箱的投擲充能。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/78f209fd-3e8b-456d-954d-c67fdf6e23ee" width="32" height="32" alt="破骨者之環天賦圖示"> [破骨者之環](#ogryn_melee_damage_coherency_improved)<br>- Bonebreaker's Aura | <ul><li>「破骨者之環」使你和協同範圍內隊友的近戰攻擊傷害提高 10%。</li><li>這是基礎近戰光環的強化版本，採用 10% 數值，不會再把基礎 7.5% 額外相加。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/4b71152f-747b-450c-9d3a-82a313fc8360" width="32" height="32" alt="優勝劣汰天賦圖示"> [優勝劣汰](#ogryn_damage_vs_suppressed_coherency)<br>- Coward Culling | <ul><li>「優勝劣汰」使你和協同範圍內隊友對受壓制敵人的傷害提高 20%；另使你造成的壓制提高 25%。</li></ul> | 光環 |
@@ -81,6 +82,25 @@
 ---
 
 ## 閃擊
+
+<a id="ogryn_box_explodes"></a>
+### 投彈完畢！(Bombs Away!)
+
+<img src="https://github.com/user-attachments/assets/a7e97984-e57a-4028-ab1b-6e89a0e42fdf" width="72" height="72" alt="投彈完畢！天賦圖示">
+
+- **命中與散出**：手雷箱命中敵人後破開，基礎散出 6 顆；搭配「超巨量傷害箱」時，數量為 6 + 3 = 9 顆。
+
+- **直接命中算例**：按標準威力 500、近距離、沒有其他修正計算，手雷箱直接撞擊甲殼護甲的傷害為 1850 × 0.15 = 277.5 點；這只計箱子碰撞，不含散出手雷的爆炸。
+
+- **散出手雷引信**：一般 6 顆時，第 1 顆約在散出後 1.2–1.6 秒爆炸，第 6 顆約在 3.2–5.6 秒爆炸；若增加到 9 顆，第 9 顆的設定範圍為 4.4–8.0 秒。
+
+- **充能**：最多可投出 3 箱；每投出一箱消耗 1 次。能力沒有固定秒數的自動冷卻，缺少的充能須由補給或其他恢復效果補回。
+
+- **子手雷算例**：一般子手雷爆炸半徑 8 公尺、中心 2 公尺；不計其他修正，中心對無甲目標每顆造成 10 × 1 = 10 點，甲殼為 10 × 0.2 = 2 點。6 顆全部在中心命中同一無甲目標時為 60 點，並不把箱體的 1850 點傷害複製到每顆手雷。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_box_explodes.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="ogryn_big_box_of_hurt_more_bombs"></a>
 ### 超巨量傷害箱(Bigger Box of Hurt)
