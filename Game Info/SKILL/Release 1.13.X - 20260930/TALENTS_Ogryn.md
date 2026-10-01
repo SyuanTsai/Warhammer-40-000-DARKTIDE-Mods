@@ -7,6 +7,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/67294825-4742-461c-8445-8eabf69981d3" width="32" height="32" alt="最好的防禦天賦圖示"> [最好的防禦](#ogryn_multi_heavy_toughness)<br>- The Best Defence | <ul><li>一次近戰攻擊命中至少 2 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/bdf5653a-6df6-4998-a781-ae623083055a" width="32" height="32" alt="碾碎它們！天賦圖示"> [碾碎它們！](#ogryn_single_heavy_toughness)<br>- Smash 'Em! | <ul><li>一次近戰攻擊命中恰好 1 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
 
 ---
 
@@ -24,5 +25,20 @@
 - **結算方式**：每次揮擊符合條件就恢復一次，不會按同次攻擊命中的敵人數重複恢復；其他韌性恢復加成另算。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_multi_heavy_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_single_heavy_toughness"></a>
+### 碾碎它們！(Smash 'Em!)
+
+<img src="https://github.com/user-attachments/assets/bdf5653a-6df6-4998-a781-ae623083055a" width="72" height="72" alt="碾碎它們！天賦圖示">
+
+- **觸發方式**：一次近戰攻擊命中恰好 1 名敵人，該次揮擊結束時恢復 5% 最大韌性；重擊則恢復 15%，不要求擊殺。
+
+- **恢復算例**：最大韌性 100 時，一般攻擊恢復 100 × 5% = 5 點，重擊恢復 100 × 15% = 15 點；若目前 95，就只能補缺少的 5 點。
+
+- **結算方式**：每次揮擊符合條件就恢復一次，不會按同次攻擊命中的敵人數重複恢復；其他韌性恢復加成另算。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_single_heavy_toughness.md) · [返回目錄](#talent-index)
 
 ---

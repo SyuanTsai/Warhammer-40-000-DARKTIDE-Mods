@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [最好的防禦](#ogryn_multi_heavy_toughness) | 未見明確矛盾 |
+| [碾碎它們！](#ogryn_single_heavy_toughness) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -16,3 +17,10 @@
 - 描述鍵：`loc_talent_ogryn_toughness_on_multiple_new_desc`；hash：`bcffeeff`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_multi_heavy_toughness.md)。
+
+<a id="ogryn_single_heavy_toughness"></a>
+## 碾碎它們！(Smash 'Em!)
+
+- 描述鍵：`loc_talent_ogryn_toughness_on_single_heavy_new_desc`；hash：`3a1cc6f0`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_single_heavy_toughness.md)。
