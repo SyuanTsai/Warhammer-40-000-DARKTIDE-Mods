@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [擊暈](#broker_blitz_flash_grenade_improved) | 繁中原文誤譯 |
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
 | [特提恩是迎賓](#broker_passive_first_target_damage) | 未見明確矛盾 |
 | [打你的臉](#broker_passive_close_ranged_damage) | 未見明確矛盾 |
@@ -53,6 +54,15 @@
 | [巢都格鬥家](#broker_passive_dr_damage_tradeoff_on_stamina) | 未見明確矛盾 |
 | [順手牽羊](#broker_passive_low_ammo_regen) | 未見明確矛盾 |
 | [趁勝追擊](#broker_passive_cleave_on_cleave) | 未見明確矛盾 |
+
+<a id="broker_blitz_flash_grenade_improved"></a>
+## 擊暈(Blackout)
+
+- 描述鍵：`loc_talent_broker_blitz_flash_grenade_improved_desc`；hash：`44ce3a9a`。
+- 結論：繁中原文誤譯。繁中明寫每20次「近戰擊殺」，同源英文是Close Range Kills，固定程式亦不限定近戰。
+- 繁中原文短引：快速投擲手榴彈，可使敵人陷入踉蹌。
+- 同源英文：Quick to use Grenade that staggers enemies.
+- [原始碼推導與限制](broker_blitz_flash_grenade_improved.md)。
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)

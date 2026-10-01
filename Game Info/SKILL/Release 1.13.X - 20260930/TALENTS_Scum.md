@@ -6,6 +6,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/fd2156cb-6e65-4214-bd01-ab0b28665714" width="32" height="32" alt="擊暈天賦圖示"> [擊暈](#broker_blitz_flash_grenade_improved)<br>- Blackout | <ul><li>快速投擲的擊退手雷，最多攜帶 5 顆；每 20 次近距離擊殺恢復 1 顆。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="特提恩是迎賓天賦圖示"> [特提恩是迎賓](#broker_passive_first_target_damage)<br>- A Tertium Welcome | <ul><li>每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="打你的臉天賦圖示"> [打你的臉](#broker_passive_close_ranged_damage)<br>- In Your Face | <ul><li>手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。</li></ul> | 技能 |
@@ -51,6 +52,32 @@
 | <img src="https://github.com/user-attachments/assets/5cb31261-7422-451a-9aac-d1c38b48c802" width="32" height="32" alt="巢都格鬥家天賦圖示"> [巢都格鬥家](#broker_passive_dr_damage_tradeoff_on_stamina)<br>- Hive City Brawler | <ul><li>耐力越滿，減傷越高；耐力越低，近戰增傷越高，兩者各最多 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/3247cd98-e623-4d24-a821-db3f3a6ee20a" width="32" height="32" alt="順手牽羊天賦圖示"> [順手牽羊](#broker_passive_low_ammo_regen)<br>- Pickpocket | <ul><li>備用彈藥低於 20% 時，近戰擊殺精英或專家會補到 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6fa27fb0-2d79-43fc-b74a-d64da58773f6" width="32" height="32" alt="趁勝追擊天賦圖示"> [趁勝追擊](#broker_passive_cleave_on_cleave)<br>- Battering Momentum | <ul><li>單次近戰命中至少 3 名敵人，獲得 50% 額外順劈供下一次攻擊使用。</li></ul> | 技能 |
+
+---
+
+## 閃擊
+
+<a id="broker_blitz_flash_grenade_improved"></a>
+### 擊暈(Blackout)
+
+<img src="https://github.com/user-attachments/assets/fd2156cb-6e65-4214-bd01-ab0b28665714" width="72" height="72" alt="擊暈天賦圖示">
+
+- **控制範圍**：快速投擲手雷，爆炸影響半徑 3.5 公尺；2.25 公尺內的踉蹌威力較高。爆炸本身不造成生命傷害，主要用於打斷及擊退敵人。
+
+- **補充方式**：最多攜帶 5 顆。未滿容量時，每累計 20 次在 12.5 公尺內的擊殺，恢復 1 顆；近戰及遠程擊殺都可累計。攜帶已滿時不增加擊殺進度。
+
+- **補充算例**：目前有 2 顆、已累計 19 次，下一次符合距離的擊殺後變成 3 顆，進度歸零。搭配額外彈藥袋時，上限為 5 + 1 = 6 顆。
+
+- **毒針手槍例外**：先用毒針手槍命中並追蹤的敵人，若在近距離死於毒素，也可計入；一般遠距離毒殺不能直接套用此例外。
+
+#### 繁中原文勘誤
+
+- 繁中原文將「近距離擊殺」寫成「近戰擊殺」。12.5 公尺內的遠程擊殺也能累計手雷恢復進度。
+
+[詳細資料](TALENTS%20Scum/broker_blitz_flash_grenade_improved.md) · [返回目錄](#talent-index)
+
+---
+
 
 ---
 
