@@ -46,3 +46,4 @@
 | [殺戮時刻](zealot_backstab_periodic_damage.md) | 下一次有效近戰背刺增加 50% 傷害；觸發後冷卻 8 秒。；完整計算與適用限制見來源文件。 |
 | [逆境而上](zealot_offensive_vs_many.md) | 5 公尺內每 2 名敵人提供 2% 傷害與 10% 順劈能力，最多 5 層。；完整計算與適用限制見來源文件。 |
 | [自掏腰包](zealot_reload_from_melee.md) | 近戰擊殺時，從備彈補回彈匣缺額的 10%。；完整計算與適用限制見來源文件。 |
+| [排隊等候](zealot_reduced_damage_from_ranged.md) | 受到遠程攻擊時，傷害降低 20%。；完整計算與適用限制見來源文件。 |

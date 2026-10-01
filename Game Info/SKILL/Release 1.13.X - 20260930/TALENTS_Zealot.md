@@ -46,6 +46,7 @@
 | <img src="https://github.com/user-attachments/assets/4bf327a5-94f0-4af9-ad51-b3380308846e" width="32" height="32" alt="殺戮時刻天賦圖示"> [殺戮時刻](#zealot_backstab_periodic_damage)<br>- Time to Kill | <ul><li>下一次有效近戰背刺增加 50% 傷害；觸發後冷卻 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9b626554-120f-43b1-b152-bf21224b6a42" width="32" height="32" alt="逆境而上天賦圖示"> [逆境而上](#zealot_offensive_vs_many)<br>- Against the Odds | <ul><li>5 公尺內每 2 名敵人提供 2% 傷害與 10% 順劈能力，最多 5 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e1dda6ab-d49e-4d08-bd44-f684dae4913f" width="32" height="32" alt="自掏腰包天賦圖示"> [自掏腰包](#zealot_reload_from_melee)<br>- Out of Pocket | <ul><li>近戰擊殺時，從備彈補回彈匣缺額的 10%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/ec2c5209-fa69-4340-b6d9-bca627da0840" width="32" height="32" alt="排隊等候天賦圖示"> [排隊等候](#zealot_reduced_damage_from_ranged)<br>- Wait in Line | <ul><li>受到遠程攻擊時，傷害降低 20%。</li></ul> | 技能 |
 
 ---
 
@@ -618,5 +619,18 @@
 - 繁中原文寫成恢復「缺失彈藥儲備」；實際是消耗備彈、補入彈匣，不會增加備彈或總彈量。
 
 [詳細資料](TALENTS%20Zealot/zealot_reload_from_melee.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_reduced_damage_from_ranged"></a>
+### 排隊等候(Wait in Line)
+
+<img src="https://github.com/user-attachments/assets/ec2c5209-fa69-4340-b6d9-bca627da0840" width="72" height="72" alt="排隊等候天賦圖示">
+
+- **運作方式**：遠程攻擊造成的傷害降低 20%；判斷依攻擊種類，不是只看敵人是否拿槍。同一名槍手改用近戰時，不會因本天賦減傷。
+
+- **減傷算例**：只計本項，原本 100 點遠程傷害變成 100 × 0.8 = 80 點；另有獨立 25% 通用減傷時，為 100 × 0.8 × 0.75 = 60 點。
+
+[詳細資料](TALENTS%20Zealot/zealot_reduced_damage_from_ranged.md) · [返回目錄](#talent-index)
 
 ---
