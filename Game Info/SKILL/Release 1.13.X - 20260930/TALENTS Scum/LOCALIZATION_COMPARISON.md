@@ -26,6 +26,7 @@
 | [熟練部署](#broker_ability_stimm_field_sub_3) | 未見翻譯差異（程式以半秒輪詢觸發） |
 | [腎上腺素狂暴](#broker_keystone_adrenaline_junkie) | 未見明確矛盾 |
 | [化學強化](#broker_keystone_chemical_dependency_sub_1) | 未見明確矛盾 |
+| [化學增強](#broker_keystone_chemical_dependency_sub_2) | 未見明確矛盾 |
 | [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1) | 未見明確矛盾 |
 | [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3) | 未見明確矛盾 |
 | [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5) | 未見明確矛盾 |
@@ -204,6 +205,13 @@
 - 描述鍵：`loc_talent_broker_keystone_chemical_dependency_sub_1_desc`；hash：`3356ae07`。
 - 結論：未見明確矛盾。繁中與英文均表示每一層化學依賴性提升暴擊機率；程式值為每層 0.05，按層數加到通用暴擊率，而非暴擊傷害。
 - [原始碼推導與限制](broker_keystone_chemical_dependency_sub_1.md)。
+
+<a id="broker_keystone_chemical_dependency_sub_2"></a>
+## 化學增強(Chem Fortified)
+
+- 描述鍵：`loc_talent_broker_keystone_chemical_dependency_sub_2_desc`；hash：`bd5bf1c2`。
+- 結論：未見明確矛盾。繁中與英文都說使用興奮劑回補韌性、每層依賴效果提供韌性傷害減免；程式值為最大韌性的 50% 回補與每層 0.95 韌性傷害倍率。
+- [原始碼推導與限制](broker_keystone_chemical_dependency_sub_2.md)。
 
 <a id="broker_keystone_adrenaline_junkie_sub_1"></a>
 ## 腎上腺素刺客(Adrenaline Assassin)
