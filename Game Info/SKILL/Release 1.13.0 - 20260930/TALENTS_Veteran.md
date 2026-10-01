@@ -28,6 +28,7 @@
 | 鑰石 | [時刻警覺(On Your Toes)](#veteran_weapon_switch_replenish_toughness) | 觸發方式：儲存至少 1 層武器專家的加成後，切換至對應武器，恢復 20% 最大韌性。恢復量固定，不隨層數增加。 |
 | 鑰石 | [有備無患(Always Prepared)](#veteran_weapon_switch_replenish_ammo) | 觸發方式：手持近戰武器擊殺、儲存武器專家的層數後，切出遠程武器，會把備用彈藥移入彈匣。層數越多，補入量越多。 |
 | 鑰石 | [活力煥發(Invigorated)](#veteran_weapon_switch_replenish_stamina) | 觸發方式：手持遠程武器擊殺敵人、儲存武器專家的近戰加成後，切出近戰武器，恢復 20% 最大耐力，並在 3 秒內降低 25% 耐力消耗。 |
+| 鑰石 | [鎖定目標(Focus Target!)](#veteran_improved_tag) | 累積與標記：起始有 1 層，每 1.5 秒增加 1 層，最多 4 層。標記敵人時，依儲存的層數提高該敵人承受的傷害，自己和隊友的攻擊都能受益；成功套用後，儲存量重回 1 層。 |
 | 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
 | 技能 | [戰術裝填(Tactical Reload)](#veteran_faster_reload_on_non_empty_clips) | 彈匣還有彈藥時開始裝填，裝填速度增加 25%。 |
 | 技能 | [齊射能手(Volley Adept)](#veteran_reload_speed_on_elite_kill) | 擊殺精英或專家敵人後，下一次裝填速度增加 30%。 |
@@ -490,6 +491,22 @@
 - **算例：**最大耐力 6 點時，恢復 `6 × 20% = 1.2 點`，最多補到上限。原本消耗 2 點耐力的動作，在效果期間消耗 `2 × (1 − 25%) = 1.5 點`。
 
 [詳細資料](TALENTS%20Veteran/veteran_weapon_switch_replenish_stamina.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_improved_tag"></a>
+
+### 鎖定目標(Focus Target!)
+
+<img src="https://github.com/user-attachments/assets/85048589-7642-40e7-9d4b-ab325da2ea25" width="72" height="72" alt="鎖定目標天賦圖示">
+
+- **累積與標記：**起始有 1 層，每 1.5 秒增加 1 層，最多 4 層。標記敵人時，依儲存的層數提高該敵人承受的傷害，自己和隊友的攻擊都能受益；成功套用後，儲存量重回 1 層。
+- **傷害算例：**每層乘以 1.05。4 層時，原本 100 點傷害變成 `100 × 1.05⁴ ≈ 121.55 點`；從 1 層等到 4 層約需 `(4 − 1) × 1.5 = 4.5 秒`。
+- **更換與補強：**一次只能維持一名目標的增傷標記，持續 25 秒。再次標記同一敵人會重設 25 秒；只有新儲存量高於原標記層數時，才補上差額並重新從 1 層累積，不會把兩次層數直接相加。
+- **目標死亡：**目前標記的敵人死亡時，儲存量至少回到 2 層；若原本已超過 2 層，就保留原數量。改標另一名敵人會移除舊目標的增傷。
+- **補強算例：**先套用 2 層標記，再儲存到 4 層後重標，目標提升至 4 層；若只儲存到 1 層就重標，仍維持原來的 2 層，只延長時間。
+
+[詳細資料](TALENTS%20Veteran/veteran_improved_tag.md) · [返回目錄](#talent-index)
 
 ---
 
