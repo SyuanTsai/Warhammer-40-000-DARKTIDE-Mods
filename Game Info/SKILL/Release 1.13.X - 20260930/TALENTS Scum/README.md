@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 71／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 72／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -27,6 +27,7 @@
 | 能力 | [專注凝神](broker_ability_focus_sub_3.md) / `broker_ability_focus_sub_3` | `node_28d7a3c1-58af-42f2-99c4-70b734175557` | 完成（核心靜態機制） |
 | 能力 | [精準獵殺](broker_ability_focus_sub_2.md) / `broker_ability_focus_sub_2` | `node_276ffd37-efb4-4ced-b119-38aa2714359b` | 完成（核心靜態機制） |
 | 能力 | [熟練部署](broker_ability_stimm_field_sub_3.md) / `broker_ability_stimm_field_sub_3` | `node_c7a8a5c5-60d1-4c71-bc38-79121befb0c8` | 完成（核心靜態機制） |
+| 鑰石 | [靈巧](broker_passive_improved_dodges.md) / `broker_passive_improved_dodges` | `node_81fd0da4-87be-4750-a5b7-c51bb4eb9fef` | 完成（核心靜態機制） |
 | 鑰石 | [腎上腺素狂暴](broker_keystone_adrenaline_junkie.md) / `broker_keystone_adrenaline_junkie` | `node_887dd932-ea4e-42cb-b294-64f30771d7e0` | 完成（核心靜態機制） |
 | 鑰石 | [化學性依賴](broker_keystone_chemical_dependency.md) / `broker_keystone_chemical_dependency` | `node_3c497305-70ec-4d49-a1e8-2bc3fdc2504c` | 完成（核心靜態機制） |
 | 鑰石 | [化學強化](broker_keystone_chemical_dependency_sub_1.md) / `broker_keystone_chemical_dependency_sub_1` | `node_c557fdde-e5e1-4849-b9ba-1d5302550fb0` | 完成（核心靜態機制） |
