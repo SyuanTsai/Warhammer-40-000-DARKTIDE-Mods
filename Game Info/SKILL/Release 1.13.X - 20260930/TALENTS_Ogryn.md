@@ -37,6 +37,7 @@
 | <img src="https://github.com/user-attachments/assets/b35eb9be-169c-48cf-a295-329eae3a3610" width="32" height="32" alt="睚眥必報天賦圖示"> [睚眥必報](#ogryn_blocking_reduces_push_cost)<br>- No Pushover | <ul><li>每 8 秒可發動一次強化推擊，衝擊力增加 250%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/119478f3-6425-4e96-9f26-e0df95a4bf1e" width="32" height="32" alt="渴求關注天賦圖示"> [渴求關注](#ogryn_blocking_ranged_taunts)<br>- Attention Seeker | <ul><li>格擋敵人攻擊或推擊敵人，嘲諷該敵人 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d61a8184-294b-4ade-9847-3c5241828792" width="32" height="32" alt="為了小子們天賦圖示"> [為了小子們](#ogryn_protect_allies)<br>- For the Lil'Uns | <ul><li>隊友韌性破裂後，提高 10% 威力並獲得 25% 韌性減傷，持續 10 秒。</li><li>隊友倒地後，提高 25% 扶起速度並免疫暈眩，持續 10 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c5cc14b1-1227-4449-a1d9-de912e048e6e" width="32" height="32" alt="頭腦簡單天賦圖示"> [頭腦簡單](#ogryn_corruption_resistance)<br>- Simple Minded | <ul><li>受到的腐敗減少 40%。</li></ul> | 技能 |
 
 ---
 
@@ -508,5 +509,18 @@
 - **計算範例**：威力 500 變成 550；此階段 100 點韌性傷害變成 75 點。單計 25% 扶起速度，原本 5 秒變成 5 ÷ 1.25 = 4 秒；若同階段已有歐格林基礎 25% 扶起速度，則為 5 ÷ 1.5 ≈ 3.33 秒。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_protect_allies.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_corruption_resistance"></a>
+### 頭腦簡單(Simple Minded)
+
+<img src="https://github.com/user-attachments/assets/c5cc14b1-1227-4449-a1d9-de912e048e6e" width="72" height="72" alt="頭腦簡單天賦圖示">
+
+- **效果**：透過傷害結算受到的腐敗減少 40%，不會清除已累積的腐敗，也不是一般傷害減免。
+
+- **腐敗算例**：原本增加 20 點腐敗，變成 20 × 0.6 = 12 點；若另有獨立 20% 腐敗減免，則為 20 × 0.6 × 0.8 = 9.6 點。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_corruption_resistance.md) · [返回目錄](#talent-index)
 
 ---

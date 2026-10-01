@@ -39,6 +39,7 @@
 | [睚眥必報](#ogryn_blocking_reduces_push_cost) | 未見明確矛盾 |
 | [渴求關注](#ogryn_blocking_ranged_taunts) | 未見明確矛盾 |
 | [為了小子們](#ogryn_protect_allies) | 未見明確矛盾 |
+| [頭腦簡單](#ogryn_corruption_resistance) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -260,3 +261,10 @@
 - 描述鍵：`loc_talent_ogryn_protect_allies_desc`；hash：`67e1573d`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_protect_allies.md)。
+
+<a id="ogryn_corruption_resistance"></a>
+## 頭腦簡單(Simple Minded)
+
+- 描述鍵：`loc_talent_ogryn_corruption_resistance_desc`；hash：`ca230578`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_corruption_resistance.md)。
