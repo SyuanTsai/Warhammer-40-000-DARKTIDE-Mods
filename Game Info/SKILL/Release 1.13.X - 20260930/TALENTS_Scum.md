@@ -30,6 +30,7 @@
 | <img src="https://github.com/user-attachments/assets/2dfab969-4eb2-4181-aa52-7dc1c8c93f89" width="32" height="32" alt="黏黏手天賦圖示"> [黏黏手](#broker_passive_reduce_swap_time)<br>- Sticky Hands | <ul><li>武器切換速度增加 40%；腰射或架槍時降低 10% 後座力、30% 散佈。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d28213f3-85a5-4de7-a380-f3799f671cc8" width="32" height="32" alt="請求暫停天賦圖示"> [請求暫停](#broker_passive_reduced_toughness_damage_during_reload)<br>- Calling for a Time Out | <ul><li>換彈期間及結束後 4 秒，承受的韌性傷害減少 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/069e6733-6d1f-4859-a3a6-829d213fd0a1" width="32" height="32" alt="街頭硬漢天賦圖示"> [街頭硬漢](#broker_passive_knockback_on_taking_melee_damage)<br>- Street Tough | <ul><li>受到近戰命中時震退周圍 3 公尺敵人，移動速度增加 10%，持續 3 秒；冷卻 8 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/97f78fa5-afd9-4fe0-b24f-fe54147da399" width="32" height="32" alt="蓄力殲滅天賦圖示"> [蓄力殲滅](#broker_passive_crit_grants_damage)<br>- Channelled Devastation | <ul><li>每 1% 目前爆擊機率，提供 0.5% 近戰傷害，最多 15%。</li></ul> | 技能 |
 
 ---
 
@@ -368,5 +369,20 @@
 - **擊退限制**：震退本身不造成傷害，實際能否打斷敵人仍受敵人的踉蹌抗性及狀態影響。
 
 [詳細資料](TALENTS%20Scum/broker_passive_knockback_on_taking_melee_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_crit_grants_damage"></a>
+### 蓄力殲滅(Channelled Devastation)
+
+<img src="https://github.com/user-attachments/assets/97f78fa5-afd9-4fe0-b24f-fe54147da399" width="72" height="72" alt="蓄力殲滅天賦圖示">
+
+- **計算方式**：依目前爆擊機率，每完整 1 個百分點提供 0.5% 近戰傷害；最多計入 30 個百分點，合計 15%。不需要先打出爆擊，也不消耗爆擊機率。
+
+- **傷害算例**：爆擊機率 12.8%，取 12 段，增傷 12 × 0.5% = 6%；基礎 100 點變成 106。同階段另有 25% 增傷時為 100 × (1 + 25% + 6%) = 131 點。
+
+- **動態變化**：武器、暫時加成或爆擊機率改變時，近戰增傷也會更新。
+
+[詳細資料](TALENTS%20Scum/broker_passive_crit_grants_damage.md) · [返回目錄](#talent-index)
 
 ---

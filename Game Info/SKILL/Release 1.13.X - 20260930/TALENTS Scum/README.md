@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 24／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 25／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -35,3 +35,4 @@
 | 技能 | [黏黏手](broker_passive_reduce_swap_time.md) / `broker_passive_reduce_swap_time` | `node_977720e3-b06a-4dc7-b27c-497af87a0812` | 完成（核心靜態機制） |
 | 技能 | [請求暫停](broker_passive_reduced_toughness_damage_during_reload.md) / `broker_passive_reduced_toughness_damage_during_reload` | `node_2c613026-5cb8-44d3-aff8-29114f2f10b6` | 完成（核心靜態機制） |
 | 技能 | [街頭硬漢](broker_passive_knockback_on_taking_melee_damage.md) / `broker_passive_knockback_on_taking_melee_damage` | `node_c194e0f2-7b23-4667-bca2-57f4bdfa03cc` | 完成（核心靜態機制） |
+| 技能 | [蓄力殲滅](broker_passive_crit_grants_damage.md) / `broker_passive_crit_grants_damage` | `node_fac6179f-a86a-489f-bb1a-b9382fd6630a` | 完成（核心靜態機制） |
