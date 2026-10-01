@@ -10,6 +10,7 @@
 |---|---|
 | [滌罪伺服頭骨](#cryptic_flamethrower) | 未見明確矛盾；補充機制與算例 |
 | [醫療伺服頭骨](#cryptic_servo_skull_inject_ally) | 未見明確矛盾；補充機制與算例 |
+| [匠師伺服頭骨](#cryptic_servo_skull_improved) | 未見明確矛盾；補充機制與算例 |
 | [修復協定](#cryptic_precision_stance_toughness_suppression) | 單位用語有誤 |
 | [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased) | 未見明確矛盾 |
 | [電流弧](#cryptic_discharge_generates_arcs) | 未見明確矛盾 |
@@ -93,6 +94,13 @@
 - 描述鍵：`loc_talent_cryptic_servo_skull_inject_ally_revive_new_desc`；hash：`86ee1b55`。
 - 結論：未見明確矛盾；補充機制與算例。繁中描述已涵蓋救援、75%韌性承傷減免、每秒20%韌性恢復與5秒持續。程式確認承傷乘數0.25代表減免75%，並確認有效目標判斷與共用次數消耗；翻譯沒有列出這些條件屬機制省略。Build 25492122 尚未確認與固定來源同版。
 - [原始碼推導與限制](cryptic_servo_skull_inject_ally.md)。
+
+<a id="cryptic_servo_skull_improved"></a>
+## 匠師伺服頭骨(Artificer Servo-Skull)
+
+- 描述鍵：`loc_talent_cryptic_servo_skull_improved_clarified_desc`；hash：`4bb85179`。
+- 結論：未見明確矛盾；補充機制與算例。繁中描述已說明常駐頭骨、雙擊標記下令、攻擊與資料詢問，以及基礎閃擊加成常駐。程式核查補出25%傷害、0.5射擊冷卻倍率、命中後15%傷害承受增幅與燃燒上限等數值；屬說明未列出的實作細節，不判為錯譯。Build 25492122 尚未確認與固定來源同版。
+- [原始碼推導與限制](cryptic_servo_skull_improved.md)。
 
 <a id="cryptic_precision_stance_toughness_suppression"></a>
 ## 修復協定(Restoration Protocol)
