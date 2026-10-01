@@ -16,6 +16,7 @@
 | [激鬥戰火](#ogryn_blo_wield_speed) | 未見明確矛盾 |
 | [退後！](#ogryn_blo_melee) | 繁中描述錯誤 |
 | [強力劈砍](#ogryn_heavy_hitter_cleave) | 未見明確矛盾 |
+| [越戰越勇](#ogryn_heavy_hitter_max_stacks_improves_toughness) | 未見明確矛盾 |
 | [熱身完畢](#ogryn_heavy_hitter_max_stacks_improves_attack_speed) | 未見明確矛盾 |
 | [最好的防禦](#ogryn_multi_heavy_toughness) | 未見明確矛盾 |
 | [碾碎它們！](#ogryn_single_heavy_toughness) | 未見明確矛盾 |
@@ -127,6 +128,13 @@
 - 描述鍵：`loc_talent_ogryn_passive_heavy_hitter_cleave_desc`；hash：`7eed29b9`。
 - 結論：未見明確矛盾。繁中寫「額外增加…順劈效果」，英文寫「also grants … Cleave for each stack」；兩者都表示依重拳出擊層數增加順劈效果，沒有把它說成傷害加成。
 - [原始碼推導與限制](ogryn_heavy_hitter_cleave.md)。
+
+<a id="ogryn_heavy_hitter_max_stacks_improves_toughness"></a>
+## 越戰越勇(Unstoppable)
+
+- 描述鍵：`loc_talent_ogryn_heavy_hitter_max_stacks_improves_toughness_new_description`；hash：`e1a057de`。
+- 結論：未見明確矛盾。繁中寫「近戰擊殺時額外恢復…韌性」，英文寫「Toughness replenished from Melee Kills for each stack」；兩者都明確限定近戰擊殺恢復。固定來源的韌性恢復程式亦只在近戰擊殺類型套用此加成。
+- [原始碼推導與限制](ogryn_heavy_hitter_max_stacks_improves_toughness.md)。
 
 <a id="ogryn_heavy_hitter_max_stacks_improves_attack_speed"></a>
 ## 熱身完畢(Just Getting Started!)
