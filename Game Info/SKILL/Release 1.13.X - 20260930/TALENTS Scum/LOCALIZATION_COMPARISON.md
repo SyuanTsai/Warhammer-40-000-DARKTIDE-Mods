@@ -24,6 +24,7 @@
 | [專注凝神](#broker_ability_focus_sub_3) | 未見中英翻譯差異（觸發條件由程式補充） |
 | [精準獵殺](#broker_ability_focus_sub_2) | 未見明確中英矛盾 |
 | [熟練部署](#broker_ability_stimm_field_sub_3) | 未見翻譯差異（程式以半秒輪詢觸發） |
+| [速效型興奮劑](#broker_ability_stimm_field_sub_1) | 未見明確中英矛盾 |
 | [靈巧](#broker_passive_improved_dodges) | 未見明確矛盾 |
 | [腎上腺素狂暴](#broker_keystone_adrenaline_junkie) | 未見明確矛盾 |
 | [化學性依賴](#broker_keystone_chemical_dependency) | 未見明確矛盾 |
@@ -195,6 +196,13 @@
 - 描述鍵：`loc_talent_broker_ability_stimm_field_sub_3_desc`；hash：`88b27852`。
 - 結論：未見翻譯差異（程式以半秒輪詢觸發）。繁中與英文都表示取得可用興奮劑後可使能力準備就緒，觸發條件一致。固定版本實際以0.5秒間隔檢查，且只回復到充能上限；這是文案時序及充能上限補充，不構成中英矛盾。
 - [原始碼推導與限制](broker_ability_stimm_field_sub_3.md)。
+
+<a id="broker_ability_stimm_field_sub_1"></a>
+## 速效型興奮劑(Fast Acting Stimms)
+
+- 描述鍵：`loc_talent_broker_ability_stimm_field_sub_1_desc`；hash：`8022348e`。
+- 結論：未見明確中英矛盾。繁中與英文都描述場域縮短至5秒、離開後效果再持續15秒；固定版程式在離場與場域結束時都讓已套用效果延續15秒。冷卻在場域本體結束後恢復是程式補充。
+- [原始碼推導與限制](broker_ability_stimm_field_sub_1.md)。
 
 <a id="broker_passive_improved_dodges"></a>
 ## 靈巧(Nimble)
