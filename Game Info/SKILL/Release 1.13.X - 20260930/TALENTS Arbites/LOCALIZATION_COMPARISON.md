@@ -18,6 +18,7 @@
 | [殺戮命令](#adamant_dog_damage_after_ability) | 未見明確矛盾 |
 | [處刑命令](#adamant_execution_order) | 待同版核對 |
 | [孤狼](#adamant_disable_companion) | 未見明確矛盾 |
+| [律法之志](#adamant_forceful_toughness_regen_per_stack) | 未見明確矛盾 |
 | [堅定意志](#adamant_forceful_stun_immune_and_block_all) | 未見明確矛盾 |
 | [鎖定目標](#adamant_forceful_offensive) | 未見明確矛盾 |
 | [法務官警覺](#adamant_forceful_ability_damage) | 未見明確矛盾 |
@@ -151,6 +152,13 @@
 - 描述鍵：`loc_talent_adamant_disable_companion_replenish_split_desc`；hash：`fe3bded9`。
 - 結論：未見明確矛盾。同源繁中與英文的移除獒犬、個人增益與補充間隔一致；45／90秒都有實際消費路徑，另一個未使用的60秒欄位不構成文字矛盾。
 - [原始碼推導與限制](adamant_disable_companion.md)。
+
+<a id="adamant_forceful_toughness_regen_per_stack"></a>
+## 律法之志(Will of the Lex)
+
+- 描述鍵：`loc_talent_adamant_forceful_toughness_regen_per_stack_desc`；hash：`16db451b`。
+- 結論：未見明確矛盾。繁中「每層能夠使你每秒恢復…韌性」對應英文 “Replenish … Toughness each second per Stack”；兩者均表達逐層每秒恢復。
+- [原始碼推導與限制](adamant_forceful_toughness_regen_per_stack.md)。
 
 <a id="adamant_forceful_stun_immune_and_block_all"></a>
 ## 堅定意志(Adamant Will)
