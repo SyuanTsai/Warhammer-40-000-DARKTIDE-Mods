@@ -49,6 +49,7 @@
 | <img src="https://github.com/user-attachments/assets/d21c7405-647a-4da2-a396-16b9c5cd8819" width="32" height="32" alt="專注天賦圖示"> [專注](#ogryn_drain_stamina_for_handling)<br>- Concentrate | <ul><li>架槍時消耗耐力，降低 60% 晃動、20% 散布與 15% 後座力。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6fbf8a63-5e26-482f-9964-01eb0598b142" width="32" height="32" alt="大肌肌天賦圖示"> [大肌肌](#ogryn_damage_reduction_after_elite_kill)<br>- Strongman | <ul><li>擊殺精英或專家後，受到的傷害減少 10%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ce3b22d4-870e-4496-96fc-33601f9d9a62" width="32" height="32" alt="穩定握持天賦圖示"> [穩定握持](#ogryn_toughness_while_bracing)<br>- Steady Grip | <ul><li>架槍或射擊時，每秒恢復最大韌性的 12.5%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/b7e2a92b-0a60-459a-87c9-6276b204f64e" width="32" height="32" alt="休想再打中我......天賦圖示"> [休想再打中我......](#ogryn_ranged_damage_immunity)<br>- Can't Hit Me...Again | <ul><li>受到遠程傷害後，獲得 20% 遠程減傷，持續 2.5 秒。</li></ul> | 技能 |
 
 ---
 
@@ -700,5 +701,20 @@
 - **效果性質**：這是額外持續回復，不是讓原本的協同自然回復只提高 12.5%。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_toughness_while_bracing.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_ranged_damage_immunity"></a>
+### 休想再打中我......(Can't Hit Me...Again)
+
+<img src="https://github.com/user-attachments/assets/b7e2a92b-0a60-459a-87c9-6276b204f64e" width="72" height="72" alt="休想再打中我......天賦圖示">
+
+- **觸發方式**：自己受到遠程傷害後，獲得 20% 遠程減傷，持續 2.5 秒；僅扣韌性也能觸發。觸發的第一下已經結算，不會回頭減傷。
+
+- **持續與冷卻**：期間再次受擊不刷新；效果結束後進入 4 秒冷卻。若第 0 秒觸發，第 2.5 秒結束，第 6.5 秒才可再次觸發。
+
+- **減傷算例**：效果期間，此階段 100 點遠程傷害變成 80 點；近戰傷害不受這項減免影響。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_ranged_damage_immunity.md) · [返回目錄](#talent-index)
 
 ---
