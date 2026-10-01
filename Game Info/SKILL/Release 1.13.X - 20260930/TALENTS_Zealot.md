@@ -47,6 +47,7 @@
 | <img src="https://github.com/user-attachments/assets/9b626554-120f-43b1-b152-bf21224b6a42" width="32" height="32" alt="逆境而上天賦圖示"> [逆境而上](#zealot_offensive_vs_many)<br>- Against the Odds | <ul><li>5 公尺內每 2 名敵人提供 2% 傷害與 10% 順劈能力，最多 5 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e1dda6ab-d49e-4d08-bd44-f684dae4913f" width="32" height="32" alt="自掏腰包天賦圖示"> [自掏腰包](#zealot_reload_from_melee)<br>- Out of Pocket | <ul><li>近戰擊殺時，從備彈補回彈匣缺額的 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ec2c5209-fa69-4340-b6d9-bca627da0840" width="32" height="32" alt="排隊等候天賦圖示"> [排隊等候](#zealot_reduced_damage_from_ranged)<br>- Wait in Line | <ul><li>受到遠程攻擊時，傷害降低 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/28bd1a77-6a4b-44e5-b46c-1d1a334479e7" width="32" height="32" alt="神聖工具天賦圖示"> [神聖工具](#zealot_weapon_special_damage)<br>- Holy Tools | <ul><li>啟動近戰武器特殊動作後，5 秒內下一次近戰攻擊增傷 20%。</li></ul> | 技能 |
 
 ---
 
@@ -632,5 +633,18 @@
 - **減傷算例**：只計本項，原本 100 點遠程傷害變成 100 × 0.8 = 80 點；另有獨立 25% 通用減傷時，為 100 × 0.8 × 0.75 = 60 點。
 
 [詳細資料](TALENTS%20Zealot/zealot_reduced_damage_from_ranged.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_weapon_special_damage"></a>
+### 神聖工具(Holy Tools)
+
+<img src="https://github.com/user-attachments/assets/28bd1a77-6a4b-44e5-b46c-1d1a334479e7" width="72" height="72" alt="神聖工具天賦圖示">
+
+- **觸發方式**：啟動近戰武器的特殊動作後，5 秒內下一次近戰攻擊傷害增加 20%。這次攻擊結束就消耗效果，空揮也會消耗；期限內沒有揮擊則到期消失。
+
+- **傷害算例**：基礎 100 點變成 100 × 1.2 = 120 點；已有同階段 25% 近戰增傷時，則 100 × (1 + 25% + 20%) = 145 點。一次橫掃的效果維持到該次揮擊結束。
+
+[詳細資料](TALENTS%20Zealot/zealot_weapon_special_damage.md) · [返回目錄](#talent-index)
 
 ---

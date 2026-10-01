@@ -47,3 +47,4 @@
 | [逆境而上](zealot_offensive_vs_many.md) | 5 公尺內每 2 名敵人提供 2% 傷害與 10% 順劈能力，最多 5 層。；完整計算與適用限制見來源文件。 |
 | [自掏腰包](zealot_reload_from_melee.md) | 近戰擊殺時，從備彈補回彈匣缺額的 10%。；完整計算與適用限制見來源文件。 |
 | [排隊等候](zealot_reduced_damage_from_ranged.md) | 受到遠程攻擊時，傷害降低 20%。；完整計算與適用限制見來源文件。 |
+| [神聖工具](zealot_weapon_special_damage.md) | 啟動近戰武器特殊動作後，5 秒內下一次近戰攻擊增傷 20%。；完整計算與適用限制見來源文件。 |

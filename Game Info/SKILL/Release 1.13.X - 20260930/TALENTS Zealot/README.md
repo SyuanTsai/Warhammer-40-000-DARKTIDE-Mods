@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **82 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L3-L10)。內部 tree version 29 不等於遊戲發行版號。
 
-完成 41／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 42／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -52,3 +52,4 @@
 | 技能 | [逆境而上](zealot_offensive_vs_many.md) / `zealot_offensive_vs_many` | `node_5f6902c3-f9af-4bbf-b4ad-68a0d7da94a1` | 完成（核心靜態機制） |
 | 技能 | [自掏腰包](zealot_reload_from_melee.md) / `zealot_reload_from_melee` | `node_ce599414-0b4e-4aae-b521-ef5f375e1b74` | 完成（核心靜態機制） |
 | 技能 | [排隊等候](zealot_reduced_damage_from_ranged.md) / `zealot_reduced_damage_from_ranged` | `node_dfa2e434-62d7-460d-b620-ae1ae2cb31f7` | 完成（核心靜態機制） |
+| 技能 | [神聖工具](zealot_weapon_special_damage.md) / `zealot_weapon_special_damage` | `node_4753943d-671c-4898-b061-b0d1f22accd5` | 完成（核心靜態機制） |

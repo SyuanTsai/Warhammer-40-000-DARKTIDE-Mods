@@ -49,6 +49,7 @@
 | [逆境而上](#zealot_offensive_vs_many) | 未見明確矛盾 |
 | [自掏腰包](#zealot_reload_from_melee) | 明確繁中誤譯 |
 | [排隊等候](#zealot_reduced_damage_from_ranged) | 未見明確矛盾 |
+| [神聖工具](#zealot_weapon_special_damage) | 未見明確矛盾 |
 
 <a id="zealot_crits_apply_bleed"></a>
 ## 天災(Scourge)
@@ -340,3 +341,10 @@
 - 描述鍵：`loc_talent_zealot_reduced_damage_from_ranged_desc`；hash：`5dbe3a42`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_reduced_damage_from_ranged.md)。
+
+<a id="zealot_weapon_special_damage"></a>
+## 神聖工具(Holy Tools)
+
+- 描述鍵：`loc_talent_zealot_weapon_special_damage_desc`；hash：`21bf1b41`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_weapon_special_damage.md)。
