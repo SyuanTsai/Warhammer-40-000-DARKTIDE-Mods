@@ -46,6 +46,7 @@
 | <img src="https://github.com/user-attachments/assets/03af9ca3-e4f4-4383-9650-f8ac659cfadd" width="32" height="32" alt="秉賦為先天賦圖示"> [秉賦為先](#adamant_clip_size)<br>- Priority Endowment | <ul><li>彈匣容量提高 15%，容量向上取整數。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="惡徒退散天賦圖示"> [惡徒退散](#adamant_damage_vs_suppressed)<br>- Cower, Miscreants! | <ul><li>對受壓制敵人的傷害提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="正當手段天賦圖示"> [正當手段](#adamant_stacking_damage)<br>- Justified Measures | <ul><li>攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/af381ce2-1360-49a1-931d-6db3fb174166" width="32" height="32" alt="壓制武力天賦圖示"> [壓制武力](#adamant_staggered_enemies_deal_less_damage)<br>- Suppression Force | <ul><li>以近戰或推擊命中處於踉蹌狀態的敵人，使其造成的傷害降低 20%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/96221430-4610-4bf3-9b19-4fd056c99e74" width="32" height="32" alt="還治其人之身天賦圖示"> [還治其人之身](#adamant_perfect_block_damage_boost)<br>- Retaliatory Force | <ul><li>格擋耐力消耗降低 15%；完美格擋後，傷害與攻速提高 15%，持續 8 秒。</li></ul> | 技能 |
 
 ---
@@ -577,6 +578,23 @@
 - **傷害算例**：滿層為 5 × 2% = 10%，基礎 100 點傷害變成 110 點；同階段原有 25% 加成時，125 點變成 135 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_stacking_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_staggered_enemies_deal_less_damage"></a>
+### 壓制武力(Suppression Force)
+
+<img src="https://github.com/user-attachments/assets/af381ce2-1360-49a1-931d-6db3fb174166" width="72" height="72" alt="壓制武力天賦圖示">
+
+- **觸發與刷新**：近戰攻擊或推擊命中處於踉蹌狀態的敵人後，使其造成的傷害降低 20%，持續 5 秒；再次觸發重設時間，不累積倍率。
+
+- **傷害算例**：單計這項削弱，敵人原本造成 100 點傷害時變成 100 × (1 − 20%) = 80 點；這是削弱敵人的輸出，不是對敵人追加傷害。
+
+#### 繁中原文勘誤
+
+- 原文「對其造成…傷害」誤寫效果方向。正確效果是讓該敵人造成的傷害降低 20%，持續 5 秒，不是對其追加傷害。
+
+[詳細資料](TALENTS%20Arbites/adamant_staggered_enemies_deal_less_damage.md) · [返回目錄](#talent-index)
 
 ---
 

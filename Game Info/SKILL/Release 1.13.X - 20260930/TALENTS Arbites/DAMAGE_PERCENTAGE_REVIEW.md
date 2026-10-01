@@ -46,4 +46,5 @@
 | [秉賦為先](adamant_clip_size.md) | 彈匣容量提高 15%，容量向上取整數。；完整計算與適用限制見來源文件。 |
 | [惡徒退散](adamant_damage_vs_suppressed.md) | 對受壓制敵人的傷害提高 25%。；完整計算與適用限制見來源文件。 |
 | [正當手段](adamant_stacking_damage.md) | 攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。；完整計算與適用限制見來源文件。 |
+| [壓制武力](adamant_staggered_enemies_deal_less_damage.md) | 以近戰或推擊命中處於踉蹌狀態的敵人，使其造成的傷害降低 20%，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [還治其人之身](adamant_perfect_block_damage_boost.md) | 格擋耐力消耗降低 15%；完美格擋後，傷害與攻速提高 15%，持續 8 秒。；完整計算與適用限制見來源文件。 |

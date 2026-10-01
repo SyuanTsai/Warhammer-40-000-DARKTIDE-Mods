@@ -48,6 +48,7 @@
 | [秉賦為先](#adamant_clip_size) | 未見明確矛盾 |
 | [惡徒退散](#adamant_damage_vs_suppressed) | 未見明確矛盾 |
 | [正當手段](#adamant_stacking_damage) | 未見明確矛盾 |
+| [壓制武力](#adamant_staggered_enemies_deal_less_damage) | 繁中原文勘誤 |
 | [還治其人之身](#adamant_perfect_block_damage_boost) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
@@ -331,6 +332,15 @@
 - 描述鍵：`loc_talent_adamant_stacking_damage_desc`；hash：`8191a7bf`。
 - 結論：未見明確矛盾。繁中「攻擊命中後」與英文 on Successful Attack一致；首目標限制屬補充。
 - [原始碼推導與限制](adamant_stacking_damage.md)。
+
+<a id="adamant_staggered_enemies_deal_less_damage"></a>
+## 壓制武力(Suppression Force)
+
+- 描述鍵：`loc_talent_adamant_staggered_enemies_deal_less_damage_desc`；hash：`cd6418d9`。
+- 結論：繁中原文勘誤。同源繁中「對其造成…傷害」把作用方向反轉；英文 makes them deal…Damage是敵人輸出降低，實作在敵人身上設damage=-.2。
+- 繁中原文短引：使敵人踉蹌時，對其造成{damage:%s}傷害，持續{duration:%s}秒。
+- 同源英文：Staggering an Enemy makes them deal {damage:%s} Damage. Lasts {duration:%s}s.
+- [原始碼推導與限制](adamant_staggered_enemies_deal_less_damage.md)。
 
 <a id="adamant_perfect_block_damage_boost"></a>
 ## 還治其人之身(Retaliatory Force)
