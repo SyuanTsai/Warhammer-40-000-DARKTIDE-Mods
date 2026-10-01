@@ -25,6 +25,18 @@ coherency priority2替換基礎aura；buff proc由被賦予此buff的擊殺者un
 - 靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
 - 死亡事件接收次序可能先消耗光環冷卻，精確隊伍事件時序未經遊戲內驗證。
 
+## 遊戲本體繁中對照
+
+- 文本來源：本機Steam Build `25492122`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
+- 語系鍵：`loc_talent_veteran_elite_kills_grant_ammo_coop_improved_cd_desc`；hash：`c68ffc9a`；繁中entry_index：`12809`；英文entry_index：`12810`。以資源＋hash配對，已確認兩語系此hash各一筆。
+- 繁中問題片段：「發彈藥」；同版英文對照片段：`Replenish {ammo_2:%s} Ammo`。引文保留原始占位符，未冒充遊戲畫面的最終數字。
+- 判定：**明確繁中描述錯誤**。單位錯誤：ammo_2使用percentage，繁中卻接固定數量單位發。另少寫隊友擊殺也可觸發，屬不完整，不另外列為錯誤。
+- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不將未證實同版的實作差異單獨當成繁中錯譯。完整文本只留本機，Git僅保存必要短引文與追溯資料。
+- [完整比對範圍與版本限制](LOCALIZATION_COMPARISON.md)。
+
+- [公開依據：scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第677–688行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L677-L688)
+- [公開依據：scripts/settings/talent/talent_settings_veteran.lua，第105–109行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L105-L109)
+
 ## 圖示來源
 
 - [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/aura/veteran_aura_gain_ammo_on_elite_kill_improved.webp)；取得日期 2026-10-01。圖示只供呈現，不作機制證據。

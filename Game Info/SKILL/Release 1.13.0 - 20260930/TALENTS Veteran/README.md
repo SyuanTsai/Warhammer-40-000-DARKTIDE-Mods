@@ -2,7 +2,7 @@
 
 [返回玩家說明](../TALENTS_Veteran.md)｜[版本、日期與證據限制](../README.md)
 
-[77項百分比描述盤點](DAMAGE_PERCENTAGE_REVIEW.md)｜[角色基礎效果](BASE_EFFECTS.md)｜[未直接用於當前技能樹的定義](UNUSED_DEFINITIONS.md)
+[遊戲本體繁中描述比對](LOCALIZATION_COMPARISON.md)｜[77項百分比描述盤點](DAMAGE_PERCENTAGE_REVIEW.md)｜[角色基礎效果](BASE_EFFECTS.md)｜[未直接用於當前技能樹的定義](UNUSED_DEFINITIONS.md)
 
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **77 個節點**（76 個一點節點、1 個零點起始節點），同一配置最多分配 30 點；不是可同時選滿的 77 個天賦。
 

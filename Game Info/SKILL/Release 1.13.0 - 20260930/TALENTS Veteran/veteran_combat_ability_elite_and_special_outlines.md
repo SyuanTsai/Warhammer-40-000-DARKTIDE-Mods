@@ -40,6 +40,19 @@
 - 玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
 - 靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
 
+## 遊戲本體繁中對照
+
+- 文本來源：本機Steam Build `25492122`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
+- 語系鍵：`loc_talent_veteran_ranged_stance_toughness_description`；hash：`38234496`；繁中entry_index：`3638`；英文entry_index：`3638`。以資源＋hash配對，已確認兩語系此hash各一筆。
+- 繁中問題片段：「延長{refresh_duration:%s}秒」；同版英文對照片段：`refreshes the duration`。引文保留原始占位符，未冒充遊戲畫面的最終數字。
+- 判定：**明確繁中描述錯誤**。時間操作錯譯：同資源英文是refreshes，繁中譯為延長指定秒數，會把重設剩餘時間誤讀為在現有剩餘時間上加秒。
+- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不將未證實同版的實作差異單獨當成繁中錯譯。完整文本只留本機，Git僅保存必要短引文與追溯資料。
+- [完整比對範圍與版本限制](LOCALIZATION_COMPARISON.md)。
+
+- [公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第85–96行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L85-L96)
+- [公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第141–170行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L141-L170)
+- [公開依據：scripts/extension_systems/buff/buff_extension_base.lua，第439–457行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buff_extension_base.lua#L439-L457)
+
 ## 圖示來源
 
 - [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/ability/veteran_combat_ability_elite_and_special_outlines.webp)；取得日期 2026-10-01。圖示只供呈現，不作機制證據。

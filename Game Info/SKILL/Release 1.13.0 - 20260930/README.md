@@ -6,6 +6,7 @@
 - [角色基礎效果](TALENTS%20Veteran/BASE_EFFECTS.md)
 - [逐項原始碼、公式與待確認事項](TALENTS%20Veteran/README.md)
 - [未被當前技能樹直接使用的定義](TALENTS%20Veteran/UNUSED_DEFINITIONS.md)
+- [遊戲本體繁中描述比對與勘誤](TALENTS%20Veteran/LOCALIZATION_COMPARISON.md)
 - [77項百分比描述盤點](TALENTS%20Veteran/DAMAGE_PERCENTAGE_REVIEW.md)
 - [POC 與完整職業驗收](POC.md)
 - [可重用分析與描述提示詞](PROMPT.md)
@@ -38,7 +39,7 @@
 
 - 主控直接核對職業清單、技能樹、天賦、能力、增益與共用結算。跨檔案公式與顯示資料落差留在來源子文件；協助代理只提供唯讀草稿。
 - 主控 GPT-6 Astra／xhigh 由使用者確認；協助代理以工具指定 GPT-6 Luna／max。
-- 用詞依 `Referneces/Translation.md`。新識別鍵與中文名稱的對應已補入詞表、標為待確認；未宣稱已取得官方繁體語系文字。
+- 用詞依 `Referneces/Translation.md`。已取得本機Steam Build 25492122的遊戲本體繁中模板並完成77項描述比對；與公開原始碼版本的精確對應仍待核實。本次保留既有技能譯名，未以語系文字證明遊戲機制。
 - 已完成靜態條件追蹤、數值代入、Markdown 連結與固定來源行號核對。**尚未進行遊戲內測試**；伺服器更新時序、特定武器與敵人的呈現差異仍以各子文件限制為準。
 - 優先實測項目包括：救援呼喊的格式參數與未掛載增益、歐格林輪廓升級的空傷害表、隱身升級的自訂倒數、武器專家首輪爆擊連發，以及補彈光環的死亡事件與冷卻順序。主文採此固定 SHA 的執行結果。
 - MOD 只作依職業拆檔與排版參考，未作機制證據；未修改 MOD Lua 或遊戲原始碼。
@@ -52,7 +53,7 @@
 
 ## 本機提交
 
-初始交付分支：`Feature/Skill-Reverse-engineering`；完整職業續作基準：`de3968f295f072632c0b51acc1208f5691029461`。每項驗收後精確暫存並單獨提交。下表保留節點首次完成的提交；該批文件後續已經由 [PR #162](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/162) 合併。本次百分比描述修正在 `codex/veteran-damage-percentage-clarity` 分支，各技能修正另可沿來源子文件的 Git 歷史查閱。
+初始交付分支：`Feature/Skill-Reverse-engineering`；完整職業續作基準：`de3968f295f072632c0b51acc1208f5691029461`。每項驗收後精確暫存並單獨提交。下表保留節點首次完成的提交；該批文件後續已經由 [PR #162](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/162) 合併。百分比描述修正已由 [PR #163](https://github.com/SyuanTsai/Warhammer-40-000-DARKTIDE-Mods/pull/163) 合併。本次原文比對維持 `Feature/Skill-Reverse-engineering` 分支，各技能勘誤各自提交，可沿來源子文件的 Git 歷史查閱。
 
 | 分類 | 技能／talent ID | 首次完成 commit |
 |---|---|---|

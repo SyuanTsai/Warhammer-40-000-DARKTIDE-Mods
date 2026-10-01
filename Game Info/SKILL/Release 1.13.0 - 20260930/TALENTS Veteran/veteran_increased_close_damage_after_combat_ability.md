@@ -35,6 +35,18 @@
 - 玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
 - 靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
 
+## 遊戲本體繁中對照
+
+- 文本來源：本機Steam Build `25492122`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
+- 語系鍵：`loc_talent_veteran_ability_assault_desc`；hash：`1eb58318`；繁中entry_index：`2009`；英文entry_index：`2009`。以資源＋hash配對，已確認兩語系此hash各一筆。
+- 繁中問題片段：「近戰傷害加成」；同版英文對照片段：`Close Damage`。引文保留原始占位符，未冒充遊戲畫面的最終數字。
+- 判定：**明確繁中描述錯誤**。效果種類錯譯：Close Damage是依距離的damage_near，並非按近戰攻擊類型判斷的melee_damage。原文另稱離開潛行後才開始，與固定版本實作有差異，但此處只將近戰／近距離的同版語系差異列為勘誤。
+- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不將未證實同版的實作差異單獨當成繁中錯譯。完整文本只留本機，Git僅保存必要短引文與追溯資料。
+- [完整比對範圍與版本限制](LOCALIZATION_COMPARISON.md)。
+
+- [公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第2032–2047行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2032-L2047)
+- [公開依據：scripts/utilities/attack/damage_calculation.lua，第284–297行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L284-L297)
+
 ## 圖示來源
 
 - [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/ability_modifier/veteran_increased_close_damage_after_combat_ability.webp)；取得日期 2026-10-01。圖示只供呈現，不作機制證據。

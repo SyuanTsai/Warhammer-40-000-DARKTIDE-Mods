@@ -23,6 +23,20 @@ buff.wield_speed=0.5；ActionHandler列wield/unwield/ranged_wield等動作時計
 - 玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
 - 靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
 
+## 遊戲本體繁中對照
+
+- 文本來源：本機Steam Build `25492122`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
+- 語系鍵：`loc_talent_veteran_reduce_swap_time_desc`；hash：`8de5cb15`；繁中entry_index：`9185`；英文entry_index：`9186`。以資源＋hash配對，已確認兩語系此hash各一筆。
+- 繁中問題片段：「速度縮短為」；同版英文對照片段：`Weapon Swap Speed`。引文保留原始占位符，未冒充遊戲畫面的最終數字。
+- 判定：**明確繁中描述錯誤**。把速度加成寫成縮短為某比例：swap_speed格式帶正號，實作wield_speed=.5，時間除以速度倍率。屬計算量與操作錯誤，不是少寫詳細公式。
+- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不將未證實同版的實作差異單獨當成繁中錯譯。完整文本只留本機，Git僅保存必要短引文與追溯資料。
+- [完整比對範圍與版本限制](LOCALIZATION_COMPARISON.md)。
+
+- [公開依據：scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第1898–1924行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1898-L1924)
+- [公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第949–955行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L949-L955)
+- [公開依據：scripts/utilities/action/action_handler.lua，第345–365行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/action/action_handler.lua#L345-L365)
+- [公開依據：scripts/utilities/action/action_handler.lua，第375–400行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/action/action_handler.lua#L375-L400)
+
 ## 圖示來源
 
 - [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_reduce_swap_time.webp)；取得日期 2026-10-01。圖示只供呈現，不作機制證據。
