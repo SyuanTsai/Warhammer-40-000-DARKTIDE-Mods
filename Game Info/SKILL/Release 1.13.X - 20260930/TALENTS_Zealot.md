@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/064d2729-f3e2-4868-bc34-1bcf434d9f4d" width="32" height="32" alt="大師級隱秘領域天賦圖示"> [大師級隱秘領域](#zealot_increased_duration)<br>- Master-Crafted Shroudfield | <ul><li>大師級隱秘領域把隱秘領域持續時間由 3 秒延長 2 秒至 5 秒。</li><li>離開潛行時獲得 5 秒後續 buff：威脅權重乘以 0.25（降低 75%），背刺傷害 +50%。</li><li>後續 buff 只在脫離潛行時套用，並不延長隱形後的冷卻時間或額外提供隱身。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/d5730c05-1fc1-4fd5-9943-53bf390b9a7d" width="32" height="32" alt="振奮啟示天賦圖示"> [振奮啟示](#zealot_leaving_stealth_restores_toughness)<br>- Invigorating Revelation | <ul><li>振奮啟示在進入潛行時立即恢復最大韌性 50%。</li><li>離開潛行時獲得 8 秒防護；通用承受傷害倍率為 0.7，即該修正階段降低 30% 傷害。</li><li>韌性恢復發生在進入潛行，不是離開時；離開時套用的是減傷 buff。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9e0abda0-3593-44eb-8ca8-9a7f282bcfd8" width="32" height="32" alt="殉道者之願天賦圖示"> [殉道者之願](#zealot_restore_stealth_cd_on_damage)<br>- Martyr's Purpose | <ul><li>殉道者之願依目前缺失生命值，每秒額外恢復戰鬥技能冷卻資源，最高 +0.5/秒。</li><li>生命值高於 25% 時按缺失生命值線性縮放；生命值 ≤25% 時達最大額外回充。</li><li>這是週期讀取生命百分比的額外冷卻回充，不是每受到一次傷害就按傷害量直接返還冷卻。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/9768a27f-3a7b-47c7-a334-7f1f57db287a" width="32" height="32" alt="虔誠刺客天賦圖示"> [虔誠刺客](#zealot_backstab_kills_restore_cd)<br>- Pious Cut-Throat | <ul><li>虔誠刺客在近戰背刺或近戰弱點命中後，增加 +0.75 戰鬥技能冷卻回充/秒，持續 2 秒。</li><li>每次觸發建立或刷新 2 秒 buff；一次未被重設的完整期間通常提供約 1.5 點額外冷卻資源。</li><li>程式判定的是合格命中，不要求擊殺；天賦格式中未使用的 10% 欄位不是此效果。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="死戰到底天賦圖示"> [死戰到底](#zealot_resist_death)<br>- Until Death | <ul><li>承受致命傷害時獲得 8 秒免死效果。</li><li>效果結束後冷卻 120 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="殉道天賦圖示"> [殉道](#zealot_martyrdom)<br>- Martyrdom | <ul><li>每失去一整格生命，近戰傷害增加 10%，最多 5 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="32" height="32" alt="不滅意志天賦圖示"> [不滅意志](#zealot_martyrdom_grants_toughness)<br>- I Shall Not Fall | <ul><li>殉道每缺少一格生命傷口，韌性承傷降低 7.5%，最多 5 格。</li></ul> | 鑰石 |
@@ -225,6 +226,21 @@
 - **冷卻算例**：生命穩定在 50%、自然回充正常時，每秒合計 1 + 0.5 × 0.5 ÷ 0.75 ≈ 1.333 秒進度，30 秒技能約 22.5 秒回滿；生命在 25% 以下時為 30 ÷ 1.5 = 20 秒。實際按秒結算，可能略有時間差。
 
 [詳細資料](TALENTS%20Zealot/zealot_restore_stealth_cd_on_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_backstab_kills_restore_cd"></a>
+### 虔誠刺客(Pious Cut-Throat)
+
+<img src="https://github.com/user-attachments/assets/9768a27f-3a7b-47c7-a334-7f1f57db287a" width="72" height="72" alt="虔誠刺客天賦圖示">
+
+- **觸發方式**：近戰命中弱點或從背後命中敵人時，戰鬥技能在接下來 2 秒額外加快恢復；不需要擊殺，遠程弱點命中不會觸發。
+
+- **刷新方式**：再次觸發只刷新持續時間，不會把每秒恢復速度疊高；弱點與背刺同時成立也不是兩倍。
+
+- **冷卻算例**：每秒額外恢復相當於 0.75 秒基礎冷卻的進度；完整兩次結算共 0.75 × 2 = 1.5 秒。若自然回充也正常運作，同期約共推進 2 + 1.5 = 3.5 秒，充能已滿的部分不保留。
+
+[詳細資料](TALENTS%20Zealot/zealot_backstab_kills_restore_cd.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -17,6 +17,7 @@
 | [大師級隱秘領域](#zealot_increased_duration) | 措辭方向待同版核對 |
 | [振奮啟示](#zealot_leaving_stealth_restores_toughness) | 未見明確矛盾 |
 | [殉道者之願](#zealot_restore_stealth_cd_on_damage) | 未見明確矛盾 |
+| [虔誠刺客](#zealot_backstab_kills_restore_cd) | 未見明確矛盾 |
 | [死戰到底](#zealot_resist_death) | 未見明確矛盾 |
 | [殉道](#zealot_martyrdom) | 未見明確矛盾 |
 | [不滅意志](#zealot_martyrdom_grants_toughness) | 未見明確矛盾 |
@@ -137,6 +138,13 @@
 - 描述鍵：`loc_talent_zealot_damage_taken_restores_cd_new_description`；hash：`62f53f3a`。
 - 結論：未見明確矛盾。同一hash的繁中與英文作用方向相符；補足觸發、疊層、恢復量與實際計算，不把原文省略當錯誤。
 - [原始碼推導與限制](zealot_restore_stealth_cd_on_damage.md)。
+
+<a id="zealot_backstab_kills_restore_cd"></a>
+## 虔誠刺客(Pious Cut-Throat)
+
+- 描述鍵：`loc_talent_zealot_cooldown_on_backstab_weakspot_desc`；hash：`169457dc`。
+- 結論：未見明確矛盾。同一hash的繁中與英文作用方向相符；補足觸發、疊層、恢復量與實際計算，不把原文省略當錯誤。
+- [原始碼推導與限制](zealot_backstab_kills_restore_cd.md)。
 
 <a id="zealot_resist_death"></a>
 ## 死戰到底(Until Death)
