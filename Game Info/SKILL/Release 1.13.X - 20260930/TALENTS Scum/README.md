@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 38／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 39／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -49,3 +49,4 @@
 | 技能 | [軍火商](broker_passive_extended_mag.md) / `broker_passive_extended_mag` | `node_42f02425-b59e-44b5-8eac-c4ae72c9bc1a` | 完成（核心靜態機制） |
 | 技能 | [趁人之危](broker_passive_damage_vs_heavy_staggered.md) / `broker_passive_damage_vs_heavy_staggered` | `node_f8ac2c83-f6f8-40f2-958d-565a359f0607` | 完成（核心靜態機制） |
 | 技能 | [心狠手辣](broker_passive_melee_crit_instakill.md) / `broker_passive_melee_crit_instakill` | `node_d20bf7ae-9dcb-4dfe-b765-2c8db80bf91f` | 完成（核心靜態機制） |
+| 技能 | [以小搏大](broker_passive_damage_vs_elites_monsters.md) / `broker_passive_damage_vs_elites_monsters` | `node_596f2c9b-2980-4b96-8c2a-521611e83a65` | 完成（核心靜態機制） |

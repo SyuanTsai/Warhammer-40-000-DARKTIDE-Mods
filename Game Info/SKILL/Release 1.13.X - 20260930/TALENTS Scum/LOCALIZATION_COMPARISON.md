@@ -46,6 +46,7 @@
 | [軍火商](#broker_passive_extended_mag) | 未見明確矛盾 |
 | [趁人之危](#broker_passive_damage_vs_heavy_staggered) | 未見明確矛盾 |
 | [心狠手辣](#broker_passive_melee_crit_instakill) | 未見明確矛盾 |
+| [以小搏大](#broker_passive_damage_vs_elites_monsters) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -314,3 +315,10 @@
 - 描述鍵：`loc_talent_broker_passive_melee_crit_instakill_desc`；hash：`41e81648`。
 - 結論：未見明確矛盾。繁中省略近戰限定，屬不完整；英文的2倍門檻可用命中前生命解釋，不列明確誤譯。
 - [原始碼推導與限制](broker_passive_melee_crit_instakill.md)。
+
+<a id="broker_passive_damage_vs_elites_monsters"></a>
+## 以小搏大(Punching Above One's Weight)
+
+- 描述鍵：`loc_talent_broker_passive_damage_vs_elites_monsters_desc`；hash：`a7b80936`。
+- 結論：未見明確矛盾。兩語皆為精英與怪物增傷，未見矛盾。
+- [原始碼推導與限制](broker_passive_damage_vs_elites_monsters.md)。

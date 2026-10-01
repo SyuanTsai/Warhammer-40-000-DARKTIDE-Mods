@@ -44,6 +44,7 @@
 | <img src="https://github.com/user-attachments/assets/148db758-02d7-4855-9f45-badcabc7c8cf" width="32" height="32" alt="軍火商天賦圖示"> [軍火商](#broker_passive_extended_mag)<br>- Ammo Jack | <ul><li>彈匣容量增加 15%，結果無條件進位。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d6795940-e616-410f-b56b-76593e8a12eb" width="32" height="32" alt="趁人之危天賦圖示"> [趁人之危](#broker_passive_damage_vs_heavy_staggered)<br>- Cheap Shots | <ul><li>對踉蹌敵人增傷 10%；中度或重度踉蹌改為 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/83713f05-33fd-41c1-86f2-c536d7a1f06c" width="32" height="32" alt="心狠手辣天賦圖示"> [心狠手辣](#broker_passive_melee_crit_instakill)<br>- Hyper-Critical | <ul><li>近戰爆擊後，若人類體型敵人的剩餘生命少於該次傷害，立即處決；隊長除外。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/280d8610-ccf2-4be3-a05b-6f4a140f8b23" width="32" height="32" alt="以小搏大天賦圖示"> [以小搏大](#broker_passive_damage_vs_elites_monsters)<br>- Punching Above One's Weight | <ul><li>對精英及怪物的傷害增加 15%。</li></ul> | 技能 |
 
 ---
 
@@ -580,5 +581,18 @@
 - **兩倍傷害的意思**：在這次命中確實扣除相同傷害的前提下，等同命中前生命低於傷害的 2 倍；不是打完後剩餘生命低於 2 倍就處決。
 
 [詳細資料](TALENTS%20Scum/broker_passive_melee_crit_instakill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_damage_vs_elites_monsters"></a>
+### 以小搏大(Punching Above One's Weight)
+
+<img src="https://github.com/user-attachments/assets/280d8610-ccf2-4be3-a05b-6f4a140f8b23" width="72" height="72" alt="以小搏大天賦圖示">
+
+- **作用對象**：目標具精英或怪物分類時取得對應 15% 增傷；只具專家分類的敵人不會因此自動適用。
+
+- **傷害算例**：基礎 100 點變成 115；若已有同階段 25% 增傷，則為 100 × (1 + 25% + 15%) = 140 點。
+
+[詳細資料](TALENTS%20Scum/broker_passive_damage_vs_elites_monsters.md) · [返回目錄](#talent-index)
 
 ---

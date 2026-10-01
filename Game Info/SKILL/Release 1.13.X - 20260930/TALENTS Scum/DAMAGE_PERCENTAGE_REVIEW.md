@@ -44,3 +44,4 @@
 | [軍火商](broker_passive_extended_mag.md) | 彈匣容量增加 15%，結果無條件進位。；完整計算與適用限制見來源文件。 |
 | [趁人之危](broker_passive_damage_vs_heavy_staggered.md) | 對踉蹌敵人增傷 10%；中度或重度踉蹌改為 15%。；完整計算與適用限制見來源文件。 |
 | [心狠手辣](broker_passive_melee_crit_instakill.md) | 近戰爆擊後，若人類體型敵人的剩餘生命少於該次傷害，立即處決；隊長除外。；完整計算與適用限制見來源文件。 |
+| [以小搏大](broker_passive_damage_vs_elites_monsters.md) | 對精英及怪物的傷害增加 15%。；完整計算與適用限制見來源文件。 |
