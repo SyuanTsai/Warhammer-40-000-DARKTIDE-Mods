@@ -18,6 +18,7 @@
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
+| 技能 | [臨場發揮(Field Improvisation)](#veteran_better_deployables) | 小隊的彈藥箱也能補滿可補給的手雷。 |
 | 技能 | [火力掩護(Covering Fire)](#veteran_replenish_toughness_and_boost_allies) | 遠程擊殺敵人時，可為該敵人附近的 1 名隊友恢復 15% 最大韌性，並使其傷害增加 15%，持續 6 秒。 |
 | 技能 | [求勝心(Competitive Urge)](#veteran_ally_kills_increase_damage) | 隊友擊殺敵人時，有 2.5% 機率使你的傷害、近戰衝擊與壓制效果增加 20%，持續 8 秒。 |
 | 技能 | [擊殺紀錄(Confirmed Kill)](#veteran_elite_kills_replenish_toughness) | 擊殺精英或專家敵人，立即恢復 10% 最大韌性。 |
@@ -280,6 +281,26 @@
 - 三層後未再觸發：約 **8 秒**後剩 2 層、**16 秒**後剩 1 層、**24 秒**後效果結束。
 
 [詳細資料](TALENTS%20Veteran/veteran_replenish_toughness_on_weakspot_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_better_deployables"></a>
+
+### 臨場發揮(Field Improvisation)
+
+<img src="https://github.com/user-attachments/assets/aba3bef3-ec36-4b94-8097-95a2f43d593e" width="72" height="72" alt="臨場發揮天賦圖示">
+
+- **小隊的彈藥箱也能補滿可補給的手雷。**
+- **醫療箱治療速度提高 100%，並每秒恢復 1% 最大韌性。**
+- 醫療箱還能清除部分腐敗，但無法修復已失去的整段生命上限。隊友放置的補給箱也能獲得效果。
+
+#### 補給算例
+
+- 手雷上限 4 顆、剩餘 1 顆時，使用可補給手雷的彈藥箱，補回 `4 − 1 = 3 顆`。
+- 未倒地、最大生命 200：原本每秒 `200 × 6% = 12`，強化後為 `200 × 6% × 2 = 24 生命`。同一秒可減少的腐敗量為 `24 × 0.5 = 12`，仍受生命段限制。
+- 最大韌性 150：每秒恢復 `150 × 1% = 1.5`，最多補滿。
+
+[詳細資料](TALENTS%20Veteran/veteran_better_deployables.md) · [返回目錄](#talent-index)
 
 ---
 
