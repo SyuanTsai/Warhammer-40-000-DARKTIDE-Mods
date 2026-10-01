@@ -88,7 +88,7 @@
 | [亞空間意志](#psyker_warp_glass_cannon) | 已配對；機制待核對 |
 | [亞空間幽魂](#psyker_stat_mix) | 已配對；機制待核對 |
 | [靈魂穿透](#psyker_warp_attacks_rending) | 已配對；機制待核對 |
-| [念力之握](#psyker_increased_blitz_damage) | 已配對；機制待核對 |
+| [念力之握](#psyker_increased_blitz_damage) | 繁中原文勘誤 |
 
 <a id="psyker_smite_on_hit"></a>
 ## 動能撕裂者(Kinetic Flayer)
@@ -660,5 +660,7 @@
 ## 念力之握(Psykinetic Grip)
 
 - 描述鍵：`loc_talent_psyker_increased_blitz_damage_desc`；hash：`9b44cc81`。
-- 已配對原文，機制待核對。
+- 結論：繁中原文勘誤。繁中「對……造成的……傷害」把三種閃擊寫成受攻擊的對象；實際是提高顱腦崩裂、懲戒與靈能攻擊本身造成的傷害。
+- 繁中原文短引：對{blitz_one:%s}、{blitz_two:%s}和{blitz_three:%s}造成的{blitz_damage:%s}傷害
+- 同源英文：{blitz_damage:%s} Damage for {blitz_one:%s}, {blitz_two:%s}, and {blitz_three:%s}.
 - [原始碼推導與限制](psyker_increased_blitz_damage.md)。
