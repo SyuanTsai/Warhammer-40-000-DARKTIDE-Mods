@@ -24,6 +24,7 @@
 | 技能 | [嗜血(Out for Blood)](#veteran_all_kills_replenish_toughness) | 每次擊殺額外恢復 5% 最大韌性。 |
 | 技能 | [遊擊者(Skirmisher)](#veteran_increase_damage_after_sprinting) | 衝刺或滑行時持續累積傷害加成，每層增加 6.25%，最多 4 層。 |
 | 技能 | [趁火打劫(Exploit Weakness)](#veteran_crits_apply_rending) | 近戰爆擊命中後，傷害增加 20%，持續 6 秒。 |
+| 技能 | [不拋棄不放棄(Leave No One Behind)](#veteran_movement_speed_towards_downed) | 面向需要援助的隊友時，移動速度增加 20%，並免疫暈眩。 |
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
@@ -389,6 +390,26 @@
 - 第 4 秒再次觸發，持續至約第 `4 + 6 = 10 秒`。
 
 [詳細資料](TALENTS%20Veteran/veteran_crits_apply_rending.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_movement_speed_towards_downed"></a>
+
+### 不拋棄不放棄(Leave No One Behind)
+
+<img src="https://github.com/user-attachments/assets/a882268c-6f4f-42ee-8973-a64dd6e882e7" width="72" height="72" alt="不拋棄不放棄天賦圖示">
+
+- **面向需要援助的隊友時，移動速度增加 20%，並免疫暈眩。**
+- 隊友須位於視線方向左右各約 60 度內；不必正在向前移動。
+- 救起倒地隊友、拉起懸掛隊友、解網與營救速度增加 **20%**。
+- 你救起倒地隊友後，該隊友受到的傷害降低 **33%**，持續 **5 秒**。
+
+#### 救援與減傷算例
+
+- 假設救援原本需 6 秒，沒有其他速度加成：`6 ÷ 1.2 = 5 秒`。
+- 原本受到 100 傷害，只計救起後的減傷：`100 × 0.67 = 67 傷害`。
+
+[詳細資料](TALENTS%20Veteran/veteran_movement_speed_towards_downed.md) · [返回目錄](#talent-index)
 
 ---
 
