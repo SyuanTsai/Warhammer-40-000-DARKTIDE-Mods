@@ -25,6 +25,7 @@
 | [電流弧](#cryptic_discharge_generates_arcs) | 未見明確矛盾 |
 | [電能驅動](#cryptic_discharge_attack_speed_increase) | 未見明確矛盾 |
 | [電流超載](#cryptic_discharge_toughness) | 未見明確矛盾 |
+| [軸向斬擊](#cryptic_chordclaw_horizontal_swipe) | 未見明確矛盾 |
 | [通量導管蓄積](#cryptic_crits_grant_power) | 未見明確矛盾 |
 | [反應爐線圈充能](#cryptic_weakspot_kills_grant_power) | 未見明確矛盾 |
 | [強化能量循環](#cryptic_increased_passive_cooldown_regen) | 未見明確矛盾 |
@@ -210,6 +211,13 @@
 - 描述鍵：`loc_talent_cryptic_discharge_toughness_per_charge_desc`；hash：`c12213ad`。
 - 結論：未見明確矛盾。已逐項比對本機同一描述鍵的繁中與英文，觸發、作用方向及數值占位一致；主文補充實際分母、時間與限制，省略細節不列錯誤。
 - [原始碼推導與限制](cryptic_discharge_toughness.md)。
+
+<a id="cryptic_chordclaw_horizontal_swipe"></a>
+## 軸向斬擊(Axial Slash)
+
+- 描述鍵：`loc_talent_cryptic_chordclaw_horizontal_swipe_desc`；hash：`262d64b6`。
+- 結論：未見明確矛盾。inventory 中英都表示弦爪改用橫向橫掃，與特殊規則選取水平掃擊 action 相符。兩種本地化都未列攻擊力量表，屬未呈現內部數值，不能據此判為錯誤。
+- [原始碼推導與限制](cryptic_chordclaw_horizontal_swipe.md)。
 
 <a id="cryptic_crits_grant_power"></a>
 ## 通量導管蓄積(Flux Conduit Build-Up)

@@ -24,6 +24,7 @@
 | <img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="32" height="32" alt="電流弧天賦圖示"> [電流弧](#cryptic_discharge_generates_arcs)<br>- Voltaic Arcs | <ul><li>電能發射器每消耗一份充能，額外釋放一道向前電弧；一次最多消耗3份，因此一般使用最多3道。</li><li>每道電弧從前方 12 公尺內的有效敵人起始，之後可鏈接附近敵人。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b74a0dba-64ed-40b6-b630-792c413387cd" width="32" height="32" alt="電能驅動天賦圖示"> [電能驅動](#cryptic_discharge_attack_speed_increase)<br>- Voltaic Motivator | <ul><li>每次使用電能發射器後，攻擊速度提高 5% 基礎值，再按消耗充能每道增加 5%。</li><li>加成持續 15 秒；消耗 1、2、3 道時，總加成分別為 10%、15%、20%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/dd369366-6fa1-4e92-bd7b-c92f5bf8023a" width="32" height="32" alt="電流超載天賦圖示"> [電流超載](#cryptic_discharge_toughness)<br>- Voltaic Overcharge | <ul><li>電能發射器每消耗一份充能，立即恢復最大韌性的25%；電流爆炸每命中一名存活敵人，再恢復最大韌性的1%。</li><li>恢復量會受韌性補充修正影響，並且不能超過當前缺少的韌性。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/94595162-990c-418a-9bbc-9b3e90ed790b" width="32" height="32" alt="軸向斬擊天賦圖示"> [軸向斬擊](#cryptic_chordclaw_horizontal_swipe)<br>- Axial Slash | <ul><li>選取軸向斬擊後，弦爪能力攻擊改為橫向橫掃；該攻擊仍必定暴擊。</li><li>單次橫掃可命中多個目標，後續目標的傷害逐步降低。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/c63720c4-df53-4c05-9881-cd6a6bf33c79" width="32" height="32" alt="通量導管蓄積天賦圖示"> [通量導管蓄積](#cryptic_crits_grant_power)<br>- Flux Conduit Build-Up | <ul><li>暴擊後4秒內加快電容量恢復；基本速率下，額外恢復單份電容量的5%。</li><li>4秒內再次暴擊會刷新回復期間；回復倍率固定，不會因多次暴擊而疊高。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/833b596d-dbc9-49fe-9f90-436140e700ed" width="32" height="32" alt="反應爐線圈充能天賦圖示"> [反應爐線圈充能](#cryptic_weakspot_kills_grant_power)<br>- Reactor Coil Recharge | <ul><li>弱點擊殺恢復目前戰鬥能力單份充能成本的2%；以50點為一份時，每次恢復1點電容量。</li><li>恢復量會保留為小數進度；未達下一份完整充能前不會增加可用份數。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/39f22717-a782-4201-b5b3-f63a166bedd1" width="32" height="32" alt="強化能量循環天賦圖示"> [強化能量循環](#cryptic_increased_passive_cooldown_regen)<br>- Augmented Power-Cycle | <ul><li>電容量自然恢復由每秒單份的2%提高至3%；每份50點時，每秒由1點提高至1.5點。</li><li>在沒有其他消耗或回充修正時，一份充能約33.3秒回滿，三份由空回滿約100秒。</li></ul> | 能力 |
@@ -363,6 +364,21 @@
 - **恢復算例**：最大韌性 100、消耗 2 份並命中 5 名合格敵人時，100 × (2 × 25% + 5 × 1%) = 55 點；只缺 40 點就只補 40 點。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_discharge_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_chordclaw_horizontal_swipe"></a>
+### 軸向斬擊(Axial Slash)
+
+<img src="https://github.com/user-attachments/assets/94595162-990c-418a-9bbc-9b3e90ed790b" width="72" height="72" alt="軸向斬擊天賦圖示">
+
+- **運作方式**：選取軸向斬擊後，弦爪能力攻擊會由預設重刺改為橫向橫掃，仍必定暴擊。
+
+- **運作方式**：橫掃可依武器攻擊穿透設定命中多個目標；實際目標數與生命傷害會受目標及命中結果影響。
+
+- **目標順序算例**：只比較同部位、同護甲與相同修正的傷害分配，第二名相對第一名為480 ÷ 500 = 96%；若第一名受到100點，第二名為96點。第五名為100 × 360 ÷ 500 = 72點；實際結果仍依各目標條件計算。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_chordclaw_horizontal_swipe.md) · [返回目錄](#talent-index)
 
 ---
 
