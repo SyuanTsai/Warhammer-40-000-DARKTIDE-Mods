@@ -58,7 +58,7 @@
 | [險惡燃燒](#psyker_elite_kills_add_warpfire) | 未見明確矛盾 |
 | [戰鬥冥想](#psyker_chance_to_vent_on_kill) | 未見明確矛盾 |
 | [完美時機](#psyker_crits_empower_next_attack) | 未見明確矛盾 |
-| [野火](#psyker_spread_warpfire_on_kill) | 已配對；機制待核對 |
+| [野火](#psyker_spread_warpfire_on_kill) | 繁中原文勘誤 |
 | [思維活躍](#psyker_venting_improvements) | 已配對；機制待核對 |
 | [惡意攻勢](#psyker_kills_stack_other_weapon_damage) | 未見明確矛盾 |
 | [亞空間強化](#psyker_warp_charge_reduces_toughness_damage_taken) | 已配對；機制待核對 |
@@ -444,7 +444,9 @@
 ## 野火(Wildfire)
 
 - 描述鍵：`loc_talent_psyker_warpfire_spread_desc`；hash：`7f4f685e`。
-- 已配對原文，機制待核對。
+- 結論：繁中原文勘誤。繁中「被你的靈魂之火灼燒而亡」把條件縮成火焰擊殺；英文及執行條件是敵人死亡時仍受你的靈魂之火影響，其他攻擊完成擊殺也可觸發。
+- 繁中原文短引：敵人被你的靈魂之火灼燒而亡時，附近所有敵人疊加最多{stacks:%s}層靈魂之火。最大層數不超過死亡敵人已疊加的層數。
+- 同源英文：When an Enemy dies while affected by your Soulblaze, nearby Enemies each gain up to {stacks:%s} Stacks of Soulblaze. They cannot gain more stacks than the dying Enemy had.
 - [原始碼推導與限制](psyker_spread_warpfire_on_kill.md)。
 
 <a id="psyker_venting_improvements"></a>
