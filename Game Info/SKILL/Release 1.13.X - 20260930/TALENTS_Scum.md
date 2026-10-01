@@ -95,6 +95,7 @@
 | <img src="https://github.com/user-attachments/assets/ccb20931-8290-461a-babb-60380b406b9d" width="32" height="32" alt="狂怒 II天賦圖示"> [狂怒 II](#broker_stimm_combat_5b)<br>- Fury II | <ul><li>威力增加 4%。</li><li>護甲撕裂增加 10%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/eaa62b3f-dc32-4364-81c0-8aadbf77c9dc" width="32" height="32" alt="野火 V天賦圖示"> [野火 V](#broker_stimm_combat_5a)<br>- Wildfire V | <ul><li>威力增加 4%。</li><li>弱點與爆擊額外傷害增加 25%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/abb7491f-9991-4352-a6e7-46f5a34c1ee3" width="32" height="32" alt="獵鷹蕈劑 I天賦圖示"> [獵鷹蕈劑 I](#broker_stimm_combat_4c)<br>- Vultoprene I | <ul><li>威力增加 4%。</li><li>爆擊機率增加 5 個百分點。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/c91fbea3-470d-4fa1-ac50-d2ab5c741a35" width="32" height="32" alt="獵鷹蕈劑 II天賦圖示"> [獵鷹蕈劑 II](#broker_stimm_combat_5c)<br>- Vultoprene II | <ul><li>威力增加 4%。</li><li>爆擊機率增加 10 個百分點。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="32" height="32" alt="激勵 I天賦圖示"> [激勵 I](#broker_stimm_celerity_1)<br>- Spur I | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/12ddbfdc-82bd-4ece-ba73-e6550451e5a4" width="32" height="32" alt="狂熱天賦圖示"> [狂熱](#broker_stimm_celerity_5c)<br>- Fervor | <ul><li>移速與閃避距離增加 10%，閃避速度乘以 1.1；有效閃避次數恢復等待縮短 10%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="32" height="32" alt="激勵 II天賦圖示"> [激勵 II](#broker_stimm_celerity_2)<br>- Spur II | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
@@ -1472,6 +1473,25 @@
 - **爆擊算例**：原本 10%，僅本節點變成 10% + 5% = 15%；兩項合計為 25%，最終限制於 0%～100%。
 
 [詳細資料](TALENTS%20Scum/broker_stimm_combat_4c.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_stimm_combat_5c"></a>
+### 獵鷹蕈劑 II(Vultoprene II)
+
+<img src="https://github.com/user-attachments/assets/c91fbea3-470d-4fa1-ac50-d2ab5c741a35" width="72" height="72" alt="獵鷹蕈劑 II天賦圖示">
+
+- **配方成本**：5 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
+
+- **威力**：增加 4%，與前置配方及其他同階段威力加成相加。威力會再參與武器傷害、踉蹌及順劈計算。
+
+- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。
+
+- **爆擊機率**：增加 10 個百分點；獵鷹蕈劑 I、II 都選取時合計增加 15 個百分點。
+
+- **爆擊算例**：原本 10%，僅本節點變成 10% + 10% = 20%；兩項合計為 25%，最終限制於 0%～100%。
+
+[詳細資料](TALENTS%20Scum/broker_stimm_combat_5c.md) · [返回目錄](#talent-index)
 
 ---
 
