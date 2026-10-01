@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_all_kills_replenish_toughness` / `veteran_all_kills_replenish_toughness` - 嗜血
+  - 英文對應：Out for Blood。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1457-L1479)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_increased_melee_crit_chance_and_melee_finesse` / `veteran_increased_melee_crit_chance_and_melee_finesse` - 亡命之徒
   - 英文對應：Desperado。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1925-L1966)；此來源證明識別鍵與天賦關係。

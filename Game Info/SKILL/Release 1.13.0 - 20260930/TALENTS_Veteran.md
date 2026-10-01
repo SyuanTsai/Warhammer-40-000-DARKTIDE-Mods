@@ -21,6 +21,7 @@
 | 技能 | [齊射能手(Volley Adept)](#veteran_reload_speed_on_elite_kill) | 擊殺精英或專家敵人後，下一次裝填速度增加 30%。 |
 | 技能 | [堅定不移(Precision Strikes)](#veteran_increased_weakspot_damage) | 弱點命中的額外傷害增加 30%。 |
 | 技能 | [亡命之徒(Desperado)](#veteran_increased_melee_crit_chance_and_melee_finesse) | 近戰爆擊率增加 10 個百分點。 |
+| 技能 | [嗜血(Out for Blood)](#veteran_all_kills_replenish_toughness) | 每次擊殺額外恢復 5% 最大韌性。 |
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
@@ -331,6 +332,24 @@
 - 假設基礎部分 100、爆擊或弱點額外部分 40，沒有其他加成：`100 + 40 × 1.25 = 150 傷害`，原本為 140。
 
 [詳細資料](TALENTS%20Veteran/veteran_increased_melee_crit_chance_and_melee_finesse.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_all_kills_replenish_toughness"></a>
+
+### 嗜血(Out for Blood)
+
+<img src="https://github.com/user-attachments/assets/d6402640-110e-4d25-b1b3-780a49b1c4e1" width="72" height="72" alt="嗜血天賦圖示">
+
+- **每次擊殺額外恢復 5% 最大韌性。**
+- 近戰與遠程擊殺均可觸發；恢復不超過韌性上限。
+
+#### 恢復算例
+
+- 最大韌性 100，沒有其他恢復加成：`100 × 5% = 5 點`。
+- 目前 98／100 時，實際恢復 `min(5, 100 − 98) = 2 點`。
+
+[詳細資料](TALENTS%20Veteran/veteran_all_kills_replenish_toughness.md) · [返回目錄](#talent-index)
 
 ---
 
