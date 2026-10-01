@@ -13,6 +13,7 @@
 | [不滅意志](#zealot_martyrdom_grants_toughness) | 未見明確矛盾 |
 | [狂燥之心](#zealot_martyrdom_grants_attack_speed) | 未見明確矛盾 |
 | [命定審判](#zealot_quickness_passive) | 未見明確矛盾 |
+| [飄忽身形](#zealot_quickness_passive_dodge_stacks) | 未見明確矛盾 |
 | [吊命聖徒](#zealot_resist_death_heal) | 明確繁中誤譯 |
 | [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
 | [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
@@ -95,6 +96,13 @@
 - 描述鍵：`loc_talent_zealot_quickness_desc`；hash：`634bdcc4`。
 - 結論：未見明確矛盾。繁中及英文都表達移動累積、命中後獲得攻速／射速增益；精確距離、上限、觸發條件及額外 stat 由實作補足。
 - [原始碼推導與限制](zealot_quickness_passive.md)。
+
+<a id="zealot_quickness_passive_dodge_stacks"></a>
+## 飄忽身形(Inebriate's Poise)
+
+- 描述鍵：`loc_talent_zealot_quickness_dodge_stacks_desc`；hash：`6a266b91`。
+- 結論：未見明確矛盾。英文與繁中都指向成功閃避可取得 Quickness 層數；每次 3 層與共享上限是程式細節。
+- [原始碼推導與限制](zealot_quickness_passive_dodge_stacks.md)。
 
 <a id="zealot_resist_death_heal"></a>
 ## 吊命聖徒(Holy Revenant)
