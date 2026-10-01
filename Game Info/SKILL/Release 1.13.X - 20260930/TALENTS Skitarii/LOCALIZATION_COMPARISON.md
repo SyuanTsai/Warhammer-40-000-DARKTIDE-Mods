@@ -38,6 +38,7 @@
 | [槍械技師](#cryptic_auto_reload) | 未見明確矛盾 |
 | [暗殺協議](#cryptic_ranged_vs_bfg) | 未見明確矛盾 |
 | [系統電擊](#cryptic_electrocution_applies_brittleness) | 未見明確矛盾 |
+| [彈藥預知](#cryptic_ammo_reserve) | 未見明確矛盾 |
 | [數據感應協定](#cryptic_ally_coherency_defenses) | 受益對象用語有誤 |
 
 <a id="cryptic_crits_grant_tdr"></a>
@@ -251,6 +252,13 @@
 - 描述鍵：`loc_talent_cryptic_electrocution_applies_brittleness_desc`；hash：`47a5f3d9`。
 - 結論：未見明確矛盾。中英每次3層與2.5%一致；上限、持續及傷害公式為補充。
 - [原始碼推導與限制](cryptic_electrocution_applies_brittleness.md)。
+
+<a id="cryptic_ammo_reserve"></a>
+## 彈藥預知(Ammo-Cell Augury)
+
+- 描述鍵：`loc_talent_cryptic_ammo_reserve_desc`；hash：`bf4067b1`。
+- 結論：未見明確矛盾。中英皆為彈藥儲備；補充為容量上限與取整。
+- [原始碼推導與限制](cryptic_ammo_reserve.md)。
 
 <a id="cryptic_ally_coherency_defenses"></a>
 ## 數據感應協定(Data Sensor Protocol)

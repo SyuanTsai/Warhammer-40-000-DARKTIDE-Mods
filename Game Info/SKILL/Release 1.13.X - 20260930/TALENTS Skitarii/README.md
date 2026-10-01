@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **97 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10)。內部 tree version 18 不等於遊戲發行版號。
 
-完成 31／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 32／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -41,4 +41,5 @@
 | 技能 | [槍械技師](cryptic_auto_reload.md) / `cryptic_auto_reload` | `node_35eda8e9-ea9c-40b7-9ed5-85474173f23e` | 完成（核心靜態機制） |
 | 技能 | [暗殺協議](cryptic_ranged_vs_bfg.md) / `cryptic_ranged_vs_bfg` | `node_7d5dc6be-b293-4831-a12c-d79c725e5b7a` | 完成（核心靜態機制） |
 | 技能 | [系統電擊](cryptic_electrocution_applies_brittleness.md) / `cryptic_electrocution_applies_brittleness` | `node_1133b775-c6f7-4318-80a3-657a19b46604` | 完成（核心靜態機制） |
+| 技能 | [彈藥預知](cryptic_ammo_reserve.md) / `cryptic_ammo_reserve` | `node_d9ef86eb-7750-4ede-8067-2bea7a6a996f` | 完成（核心靜態機制） |
 | 技能 | [數據感應協定](cryptic_ally_coherency_defenses.md) / `cryptic_ally_coherency_defenses` | `node_f7b75f2e-e6df-4be2-855c-c05da6151f7b` | 完成（核心靜態機制） |
