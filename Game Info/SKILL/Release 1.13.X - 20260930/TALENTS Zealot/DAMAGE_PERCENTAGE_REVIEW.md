@@ -34,4 +34,5 @@
 | [無形之刃](zealot_damage_vs_nonthreat.md) | 對目前未鎖定你的敵人，傷害提高 20%。；完整計算與適用限制見來源文件。 |
 | [大師的反擊](zealot_defensive_knockback.md) | 受到近戰有效命中時，朝攻擊者方向推開敵人；冷卻 8 秒。；完整計算與適用限制見來源文件。 |
 | [背水一戰](zealot_more_damage_when_low_on_stamina.md) | 耐力越低，近戰傷害越高；耐力耗盡時最多提高 20%。；完整計算與適用限制見來源文件。 |
+| [刻不容緩](zealot_melee_crits_restore_stamina.md) | 近戰爆擊命中時恢復 10% 最大耐力；冷卻 1 秒。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_4.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |

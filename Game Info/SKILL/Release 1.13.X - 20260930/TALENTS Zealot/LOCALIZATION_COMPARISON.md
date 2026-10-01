@@ -36,6 +36,7 @@
 | [無形之刃](#zealot_damage_vs_nonthreat) | 未見明確矛盾 |
 | [大師的反擊](#zealot_defensive_knockback) | 未見明確矛盾 |
 | [背水一戰](#zealot_more_damage_when_low_on_stamina) | 未見明確矛盾 |
+| [刻不容緩](#zealot_melee_crits_restore_stamina) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_4) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
@@ -235,6 +236,13 @@
 - 描述鍵：`loc_talent_zealot_damage_based_on_stamina_desc`；hash：`3a2192a6`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_more_damage_when_low_on_stamina.md)。
+
+<a id="zealot_melee_crits_restore_stamina"></a>
+## 刻不容緩(No Respite)
+
+- 描述鍵：`loc_talent_zealot_melee_crits_restore_stamina_desc`；hash：`01adc74d`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_melee_crits_restore_stamina.md)。
 
 <a id="base_melee_damage_node_buff_medium_4"></a>
 ## 近戰增幅(Melee Damage Boost)

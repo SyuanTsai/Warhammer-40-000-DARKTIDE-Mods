@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/c97e932c-97b3-454c-9047-2145a5d9a49d" width="32" height="32" alt="無形之刃天賦圖示"> [無形之刃](#zealot_damage_vs_nonthreat)<br>- Unseen Blade | <ul><li>對目前未鎖定你的敵人，傷害提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/56d9b0f2-db5a-493b-aff8-2cd9699d4d96" width="32" height="32" alt="大師的反擊天賦圖示"> [大師的反擊](#zealot_defensive_knockback)<br>- The Master's Retribution | <ul><li>受到近戰有效命中時，朝攻擊者方向推開敵人；冷卻 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dbe8719f-76fb-444c-a79d-2bf116b628fb" width="32" height="32" alt="背水一戰天賦圖示"> [背水一戰](#zealot_more_damage_when_low_on_stamina)<br>- Desperation | <ul><li>耐力越低，近戰傷害越高；耐力耗盡時最多提高 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/6406ef43-19df-4cab-9091-e5c490d72cef" width="32" height="32" alt="刻不容緩天賦圖示"> [刻不容緩](#zealot_melee_crits_restore_stamina)<br>- No Respite | <ul><li>近戰爆擊命中時恢復 10% 最大耐力；冷卻 1 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -429,6 +430,19 @@
 - **傷害算例**：最大耐力 6、目前剩 2，已消耗 4 ÷ 6；增傷為 20% × 4 ÷ 6 ≈ 13.33%，基礎 100 點變成約 113.33 點。同階段其他近戰增傷先相加。
 
 [詳細資料](TALENTS%20Zealot/zealot_more_damage_when_low_on_stamina.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_melee_crits_restore_stamina"></a>
+### 刻不容緩(No Respite)
+
+<img src="https://github.com/user-attachments/assets/6406ef43-19df-4cab-9091-e5c490d72cef" width="72" height="72" alt="刻不容緩天賦圖示">
+
+- **觸發方式**：近戰爆擊命中時，恢復 10% 最大耐力；每秒最多觸發一次，不需要擊殺。
+
+- **恢復算例**：最大耐力 6，每次補 6 × 10% = 0.6 點；若只缺 0.2 點，就只恢復 0.2 點。一次橫掃爆擊命中多個敵人，仍受 1 秒冷卻限制。
+
+[詳細資料](TALENTS%20Zealot/zealot_melee_crits_restore_stamina.md) · [返回目錄](#talent-index)
 
 ---
 
