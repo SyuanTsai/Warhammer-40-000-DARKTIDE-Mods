@@ -11,6 +11,7 @@
 | [背刺者](#zealot_backstab_damage) | 未見明確矛盾 |
 | [蔑視](#zealot_multi_hits_increase_damage) | 未見明確矛盾 |
 | [淨化不潔](#zealot_increased_damage_vs_resilient) | 未見明確矛盾 |
+| [持續突擊](#zealot_hits_grant_stacking_damage) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
 ## 背刺者(Backstabber)
@@ -32,3 +33,10 @@
 - 描述鍵：`loc_talent_zealot_3_passive_2_description`；hash：`96b4257f`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_increased_damage_vs_resilient.md)。
+
+<a id="zealot_hits_grant_stacking_damage"></a>
+## 持續突擊(Sustained Assault)
+
+- 描述鍵：`loc_talent_zealot_increased_damage_stacks_on_hit_desc`；hash：`fa8c449f`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_hits_grant_stacking_damage.md)。

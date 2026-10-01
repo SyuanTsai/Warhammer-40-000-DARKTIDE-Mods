@@ -9,6 +9,7 @@
 | <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="背刺者天賦圖示"> [背刺者](#zealot_backstab_damage)<br>- Backstabber | <ul><li>近戰背刺與遠程側襲傷害增加 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/69a5f7ea-11bc-41ae-8758-86a14213a116" width="32" height="32" alt="蔑視天賦圖示"> [蔑視](#zealot_multi_hits_increase_damage)<br>- Disdain | <ul><li>上一次近戰揮擊每命中一名敵人，使下一次近戰傷害增加 5%，最多 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/162368d9-1a5d-4273-a2cd-4ab8c3c22a6d" width="32" height="32" alt="淨化不潔天賦圖示"> [淨化不潔](#zealot_increased_damage_vs_resilient)<br>- Purge the Unclean | <ul><li>對被感染及不屈護甲類型的傷害增加 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/9e5a26dc-8d4f-4c94-9dcd-fdc807cc1d48" width="32" height="32" alt="持續突擊天賦圖示"> [持續突擊](#zealot_hits_grant_stacking_damage)<br>- Sustained Assault | <ul><li>近戰命中增加 4% 近戰傷害，持續 5 秒，最多 5 層。</li></ul> | 技能 |
 
 ---
 
@@ -52,5 +53,18 @@
 - **傷害算例**：只看這項護甲類型加成，原有 100 點變成 100 × 1.20 = 120 點。若已有 10% 同類加成，則由 110 點變成 100 × (1 + 10% + 20%) = 130 點，新增收益約 18.18%。
 
 [詳細資料](TALENTS%20Zealot/zealot_increased_damage_vs_resilient.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_hits_grant_stacking_damage"></a>
+### 持續突擊(Sustained Assault)
+
+<img src="https://github.com/user-attachments/assets/9e5a26dc-8d4f-4c94-9dcd-fdc807cc1d48" width="72" height="72" alt="持續突擊天賦圖示">
+
+- **疊層與刷新**：近戰命中敵人後，增加一層 4% 近戰傷害，最多 5 層、20%。持續 5 秒，再次命中會刷新時間，滿層仍可刷新。
+
+- **傷害算例**：沒有其他加成，3 層使 100 × (1 + 3 × 4%) = 112 點；滿層為 120 點。原有同階段 25% 加成時，滿層則為 100 × (1 + 25% + 20%) = 145 點。
+
+[詳細資料](TALENTS%20Zealot/zealot_hits_grant_stacking_damage.md) · [返回目錄](#talent-index)
 
 ---
