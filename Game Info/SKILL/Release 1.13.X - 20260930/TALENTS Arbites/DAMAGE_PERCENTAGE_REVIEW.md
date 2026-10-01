@@ -36,6 +36,7 @@
 | [毀滅打擊](adamant_melee_attacks_on_staggered_rend.md) | 對踉蹌敵人的近戰攻擊獲得 15% 撕裂。；完整計算與適用限制見來源文件。 |
 | [狂熱信仰](adamant_crit_chance_on_kill.md) | 擊殺後每層增加 2 個百分點爆擊機率，最多 8 層，持續 10 秒。；完整計算與適用限制見來源文件。 |
 | [制裁重擊](adamant_crits_rend.md) | 遠程爆擊獲得 20% 撕裂。；完整計算與適用限制見來源文件。 |
+| [街頭妙招](adamant_dodge_improvement.md) | 有效閃避次數增加 1 次；近戰閃避結束後的判定寬限延長 25%。；完整計算與適用限制見來源文件。 |
 | [巨獸獵人](adamant_monster_hunter.md) | 對歐格林與巨獸造成的傷害提高 20%。；完整計算與適用限制見來源文件。 |
 | [惡徒退散](adamant_damage_vs_suppressed.md) | 對受壓制敵人的傷害提高 25%。；完整計算與適用限制見來源文件。 |
 | [正當手段](adamant_stacking_damage.md) | 攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。；完整計算與適用限制見來源文件。 |

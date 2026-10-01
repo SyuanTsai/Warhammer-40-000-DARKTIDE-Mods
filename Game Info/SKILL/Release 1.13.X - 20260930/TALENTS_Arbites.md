@@ -36,6 +36,7 @@
 | <img src="https://github.com/user-attachments/assets/fcb8d517-7a08-452a-a577-1ab15af469cb" width="32" height="32" alt="毀滅打擊天賦圖示"> [毀滅打擊](#adamant_melee_attacks_on_staggered_rend)<br>- Strike Down | <ul><li>對踉蹌敵人的近戰攻擊獲得 15% 撕裂。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c776951e-d8de-46cb-ad58-7c14af6b0997" width="32" height="32" alt="狂熱信仰天賦圖示"> [狂熱信仰](#adamant_crit_chance_on_kill)<br>- Zealous Dedication | <ul><li>擊殺後每層增加 2 個百分點爆擊機率，最多 8 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e650aa60-14d1-446d-9fa3-fed8dd633716" width="32" height="32" alt="制裁重擊天賦圖示"> [制裁重擊](#adamant_crits_rend)<br>- Prosecution Blow | <ul><li>遠程爆擊獲得 20% 撕裂。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/cd883557-4048-43f0-a3b7-3a90bbc6ffe8" width="32" height="32" alt="街頭妙招天賦圖示"> [街頭妙招](#adamant_dodge_improvement)<br>- Street Smarts | <ul><li>有效閃避次數增加 1 次；近戰閃避結束後的判定寬限延長 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/62b4954d-42c3-4eab-a6ea-a17719414e19" width="32" height="32" alt="巨獸獵人天賦圖示"> [巨獸獵人](#adamant_monster_hunter)<br>- Monstrosity Hunter | <ul><li>對歐格林與巨獸造成的傷害提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="惡徒退散天賦圖示"> [惡徒退散](#adamant_damage_vs_suppressed)<br>- Cower, Miscreants! | <ul><li>對受壓制敵人的傷害提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="正當手段天賦圖示"> [正當手段](#adamant_stacking_damage)<br>- Justified Measures | <ul><li>攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。</li></ul> | 技能 |
@@ -433,6 +434,23 @@
 - **超出護甲缺口**：若原甲殼倍率已達 1，超出部分只按四分之一換算；本項變成 100 × (1 + 0.2 × 0.25) = 105 點。不同武器與敵人的實際收益會不同。
 
 [詳細資料](TALENTS%20Arbites/adamant_crits_rend.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_dodge_improvement"></a>
+### 街頭妙招(Street Smarts)
+
+<img src="https://github.com/user-attachments/assets/cd883557-4048-43f0-a3b7-3a90bbc6ffe8" width="72" height="72" alt="街頭妙招天賦圖示">
+
+- **閃避次數**：有效閃避次數增加 1 次。例如武器原本可連續有效閃避 3 次，選取後為 3 + 1 = 4 次。
+
+- **判定時間**：近戰閃避結束後的判定寬限從 0.2 秒變成 0.2 × 1.25 = 0.25 秒，增加 0.05 秒；這不會把整段閃避動作加長 25%。
+
+#### 繁中原文勘誤
+
+- 原文「有效閃避次數增加至…次」應為「有效閃避次數增加 1 次」，不是將總次數改成 1 次。
+
+[詳細資料](TALENTS%20Arbites/adamant_dodge_improvement.md) · [返回目錄](#talent-index)
 
 ---
 

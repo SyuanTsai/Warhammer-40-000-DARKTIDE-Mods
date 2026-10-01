@@ -38,6 +38,7 @@
 | [毀滅打擊](#adamant_melee_attacks_on_staggered_rend) | 未見明確矛盾 |
 | [狂熱信仰](#adamant_crit_chance_on_kill) | 未見明確矛盾 |
 | [制裁重擊](#adamant_crits_rend) | 未見明確矛盾 |
+| [街頭妙招](#adamant_dodge_improvement) | 繁中原文勘誤 |
 | [巨獸獵人](#adamant_monster_hunter) | 未見明確矛盾 |
 | [惡徒退散](#adamant_damage_vs_suppressed) | 未見明確矛盾 |
 | [正當手段](#adamant_stacking_damage) | 未見明確矛盾 |
@@ -251,6 +252,15 @@
 - 描述鍵：`loc_talent_adamant_crits_rend_alt_desc`；hash：`7ccaaaa3`。
 - 結論：未見明確矛盾。繁中與英文均限定遠程爆擊撕裂；作用條件一致，公式為補充。
 - [原始碼推導與限制](adamant_crits_rend.md)。
+
+<a id="adamant_dodge_improvement"></a>
+## 街頭妙招(Street Smarts)
+
+- 描述鍵：`loc_talent_adamant_dodge_improvement_desc`；hash：`4de76f4a`。
+- 結論：繁中原文勘誤。同源繁中「增加至…次」將總量與增量混淆；英文 Increase…by…，程式extra_consecutive_dodges=1也為額外增加。時間寬限的實作限制另作說明。
+- 繁中原文短引：有效閃避次數增加至{dodge:%s}次，視為有效閃避的時間增加{dodge_duration:%s}。
+- 同源英文：Increase Effective Dodges by {dodge:%s} and time considered Dodging by {dodge_duration:%s}.
+- [原始碼推導與限制](adamant_dodge_improvement.md)。
 
 <a id="adamant_monster_hunter"></a>
 ## 巨獸獵人(Monstrosity Hunter)
