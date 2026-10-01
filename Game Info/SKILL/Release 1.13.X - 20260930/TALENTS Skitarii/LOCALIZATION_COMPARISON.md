@@ -11,6 +11,7 @@
 | [滌罪伺服頭骨](#cryptic_flamethrower) | 未見明確矛盾；補充機制與算例 |
 | [醫療伺服頭骨](#cryptic_servo_skull_inject_ally) | 未見明確矛盾；補充機制與算例 |
 | [匠師伺服頭骨](#cryptic_servo_skull_improved) | 未見明確矛盾；補充機制與算例 |
+| [心智網指令](#cryptic_servo_skull_improved_tagging) | 未見明確矛盾；補充機制與算例 |
 | [修復協定](#cryptic_precision_stance_toughness_suppression) | 單位用語有誤 |
 | [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased) | 未見明確矛盾 |
 | [電流弧](#cryptic_discharge_generates_arcs) | 未見明確矛盾 |
@@ -101,6 +102,13 @@
 - 描述鍵：`loc_talent_cryptic_servo_skull_improved_clarified_desc`；hash：`4bb85179`。
 - 結論：未見明確矛盾；補充機制與算例。繁中描述已說明常駐頭骨、雙擊標記下令、攻擊與資料詢問，以及基礎閃擊加成常駐。程式核查補出25%傷害、0.5射擊冷卻倍率、命中後15%傷害承受增幅與燃燒上限等數值；屬說明未列出的實作細節，不判為錯譯。Build 25492122 尚未確認與固定來源同版。
 - [原始碼推導與限制](cryptic_servo_skull_improved.md)。
+
+<a id="cryptic_servo_skull_improved_tagging"></a>
+## 心智網指令(Noospheric Command)
+
+- 描述鍵：`loc_talent_cryptic_servo_skull_improved_tagging_fire_rate_cost_desc`；hash：`843cef80`。
+- 結論：未見明確矛盾；補充機制與算例。繁中描述有列出下令攻擊、持續2秒及0.3電容量，但程式的資源參數是 combat_ability charge percentage，換算為0.3份；程式射擊冷卻乘數0.15，語系格式值會換算為約567%攻擊速度。其餘門檻、訓練場例外及扣除調整屬未列明細節。Build 25492122 尚未確認與固定來源同版。
+- [原始碼推導與限制](cryptic_servo_skull_improved_tagging.md)。
 
 <a id="cryptic_precision_stance_toughness_suppression"></a>
 ## 修復協定(Restoration Protocol)
