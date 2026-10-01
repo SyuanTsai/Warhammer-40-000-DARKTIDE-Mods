@@ -13,6 +13,7 @@
 | 閃擊 | [炸藥儲備(Demolition Stockpile)](#veteran_replenish_grenades) | 定期補回手雷 |
 | 光環 | [抵近殺敵(Close and Kill)](#veteran_movement_speed_coherency) | 你與協同範圍內的隊友移動速度增加 7.5%。 |
 | 光環 | [火力小分隊(Fire Team)](#veteran_increased_damage_coherency) | 你與協同範圍內的隊友傷害增加 7.5%。 |
+| 光環 | [生存專家(Survivalist)](#veteran_aura_gain_ammo_on_elite_kill_improved) | 你或擁有此光環效果的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備彈上限的彈藥。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
@@ -172,6 +173,26 @@
 - 同階段已有 25% 加成時：`100 × (1 + 25% + 7.5%) = 132.5 傷害`。
 
 [詳細資料](TALENTS%20Veteran/veteran_increased_damage_coherency.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_aura_gain_ammo_on_elite_kill_improved"></a>
+
+### 生存專家(Survivalist)
+
+<img src="https://github.com/user-attachments/assets/c2dffa00-cd24-478f-96c7-4007f4239e6a" width="72" height="72" alt="生存專家天賦圖示">
+
+- **你或擁有此光環效果的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備彈上限的彈藥。**
+- 光環補彈有 **5 秒冷卻**，取代拾荒者的 0.25% 光環。補彈進入備彈，不直接裝入彈匣。
+- 老兵自身的基礎補彈另行判定；不能把自己的總補彈量當成所有隊友都獲得的比例。
+
+#### 補彈算例
+
+- 備彈上限 400 且缺額足夠：光環每次補 `400 × 0.5% = 2 發`。
+- 上限 150：每次計算 `150 × 0.5% = 0.75 發`；小數累積保留，四次合計可補 **3 發**。
+- 自身基礎 1% 補彈與此光環同時成功時，上限 400 的老兵共補 `400 × (1% + 0.5%) = 6 發`；隊友只有此光環時獲得 **2 發**。
+
+[詳細資料](TALENTS%20Veteran/veteran_aura_gain_ammo_on_elite_kill_improved.md) · [返回目錄](#talent-index)
 
 ---
 
