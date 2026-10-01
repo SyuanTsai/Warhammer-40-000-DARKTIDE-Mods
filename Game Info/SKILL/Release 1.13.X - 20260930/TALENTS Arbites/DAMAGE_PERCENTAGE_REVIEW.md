@@ -12,6 +12,7 @@
 | [繩之以法](adamant_elite_special_kills_replenish_toughness.md) | 擊殺精英或專家敵人，立即恢復最大韌性的 10%，接著 4 秒再恢復 10%。；完整計算與適用限制見來源文件。 |
 | [近在眉睫](adamant_close_kills_restore_toughness.md) | 在 12.5 公尺內擊殺敵人，恢復最大韌性的 5%。；完整計算與適用限制見來源文件。 |
 | [鐵血之志](adamant_staggers_replenish_toughness.md) | 近戰攻擊的第一個命中目標受到踉蹌時，恢復最大韌性的 7.5%。；完整計算與適用限制見來源文件。 |
+| [電能獠牙](adamant_dog_attacks_electrocute.md) | 電子獒犬的撲擊與壓制攻擊會電擊目標，效果持續 5 秒，可刷新。；完整計算與適用限制見來源文件。 |
 | [走一走治百病](adamant_stamina_spent_replenish_toughness.md) | 每累計消耗 1 點耐力，在 3 秒內恢復最大韌性的 10%。；完整計算與適用限制見來源文件。 |
 | [堅忍不拔](adamant_limit_dmg_taken_from_hits.md) | 單次攻擊造成的生命傷害上限為 50 點；不阻止必殺效果。；完整計算與適用限制見來源文件。 |
 | [韌性減傷](base_toughness_damage_reduction_node_buff_medium_1.md) | 韌性減傷增加 10 個百分點。；完整計算與適用限制見來源文件。 |

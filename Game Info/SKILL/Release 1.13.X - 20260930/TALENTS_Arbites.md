@@ -12,6 +12,7 @@
 | <img src="https://github.com/user-attachments/assets/fc3f3a29-7b71-45d4-aec6-c72036ba9831" width="32" height="32" alt="繩之以法天賦圖示"> [繩之以法](#adamant_elite_special_kills_replenish_toughness)<br>- Target Neutralised | <ul><li>擊殺精英或專家敵人，立即恢復最大韌性的 10%，接著 4 秒再恢復 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/3098a511-fa0f-444e-a9e2-8e6591688115" width="32" height="32" alt="近在眉睫天賦圖示"> [近在眉睫](#adamant_close_kills_restore_toughness)<br>- Up Close | <ul><li>在 12.5 公尺內擊殺敵人，恢復最大韌性的 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/898ad4c6-3f99-404d-8ff9-b15a9820f8e9" width="32" height="32" alt="鐵血之志天賦圖示"> [鐵血之志](#adamant_staggers_replenish_toughness)<br>- Force of Will | <ul><li>近戰攻擊的第一個命中目標受到踉蹌時，恢復最大韌性的 7.5%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/4ce13efe-7a81-48cd-9bb6-47dfb55f63b8" width="32" height="32" alt="電能獠牙天賦圖示"> [電能獠牙](#adamant_dog_attacks_electrocute)<br>- Voltaic Mandibles Augment | <ul><li>電子獒犬的撲擊與壓制攻擊會電擊目標，效果持續 5 秒，可刷新。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4c4b06a3-049f-4272-b1d2-a8a472f541b0" width="32" height="32" alt="走一走治百病天賦圖示"> [走一走治百病](#adamant_stamina_spent_replenish_toughness)<br>- Walk It Off | <ul><li>每累計消耗 1 點耐力，在 3 秒內恢復最大韌性的 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d4c3f66c-8fa8-419f-8a46-f94c842a9b4e" width="32" height="32" alt="堅忍不拔天賦圖示"> [堅忍不拔](#adamant_limit_dmg_taken_from_hits)<br>- True Grit | <ul><li>單次攻擊造成的生命傷害上限為 50 點；不阻止必殺效果。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/af78e688-7708-4d00-88f0-913478235d41" width="32" height="32" alt="韌性減傷天賦圖示"> [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1)<br>- Toughness Damage Reduction | <ul><li>韌性減傷增加 10 個百分點。</li></ul> | 技能 |
@@ -130,6 +131,21 @@
 - **恢復算例**：最大韌性 100、無其他恢復加成時，每次恢復 100 × 7.5% = 7.5 點；一擊掃中 3 名敵人仍最多恢復 7.5 點，並受缺額限制。
 
 [詳細資料](TALENTS%20Arbites/adamant_staggers_replenish_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_dog_attacks_electrocute"></a>
+### 電能獠牙(Voltaic Mandibles Augment)
+
+<img src="https://github.com/user-attachments/assets/4ce13efe-7a81-48cd-9bb6-47dfb55f63b8" width="72" height="72" alt="電能獠牙天賦圖示">
+
+- **觸發與持續**：電子獒犬的撲擊與壓制攻擊命中後，目標受到電擊，持續 5 秒。持續攻擊可刷新時間，不會疊成多份電擊。
+
+- **傷害頻率**：電擊每次結算後，隨機隔 0.3～0.8 秒再結算；首次結算另有短暫的更新延遲。因此不能把 5 秒效果直接當成固定次數或固定每秒傷害。
+
+- **傷害算例**：未受其他加成、命中一般無甲部位時，單次基準電擊為 57.5 × 0.5 = 28.75 點；換成防彈護甲的基準係數 1，則為 57.5 點。實際仍受敵人部位、抗性與其他傷害加成影響。
+
+[詳細資料](TALENTS%20Arbites/adamant_dog_attacks_electrocute.md) · [返回目錄](#talent-index)
 
 ---
 

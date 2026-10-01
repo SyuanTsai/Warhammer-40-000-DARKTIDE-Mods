@@ -14,6 +14,7 @@
 | [繩之以法](#adamant_elite_special_kills_replenish_toughness) | 未見明確矛盾 |
 | [近在眉睫](#adamant_close_kills_restore_toughness) | 未見明確矛盾 |
 | [鐵血之志](#adamant_staggers_replenish_toughness) | 未見明確矛盾 |
+| [電能獠牙](#adamant_dog_attacks_electrocute) | 待同版核對 |
 | [走一走治百病](#adamant_stamina_spent_replenish_toughness) | 未見明確矛盾 |
 | [堅忍不拔](#adamant_limit_dmg_taken_from_hits) | 未見明確矛盾 |
 | [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
@@ -94,6 +95,13 @@
 - 描述鍵：`loc_talent_adamant_staggers_replenish_toughness_melee_desc`；hash：`050254b5`。
 - 結論：未見明確矛盾。繁中「近戰攻擊使敵人踉蹌」與英文 Staggering Melee Attack 一致；未列首目標與天賦互動不算錯誤。
 - [原始碼推導與限制](adamant_staggers_replenish_toughness.md)。
+
+<a id="adamant_dog_attacks_electrocute"></a>
+## 電能獠牙(Voltaic Mandibles Augment)
+
+- 描述鍵：`loc_talent_adamant_dog_attacks_electrocute_desc`；hash：`f2c7dafd`。
+- 結論：待同版核對。繁中與英文都概稱犬的攻擊；實作限定撲擊類傷害設定。觸發範圍的跨版本差異待核對，不直接當成誤譯。
+- [原始碼推導與限制](adamant_dog_attacks_electrocute.md)。
 
 <a id="adamant_stamina_spent_replenish_toughness"></a>
 ## 走一走治百病(Walk It Off)
