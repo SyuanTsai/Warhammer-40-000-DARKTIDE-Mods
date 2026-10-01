@@ -28,7 +28,7 @@
 | [靈能學者光環](psyker_2_tier_3_name_2.md) | 擊殺精英或專家後，加快能力冷卻；效果持續 3 秒；完整計算與適用限制見來源文件。 |
 | [現實錨點](psyker_overcharge_reduced_warp_charge.md) | 注視期間反噬生成減少 20%；平息所需時間縮短 30%；完整計算與適用限制見來源文件。 |
 | [念力護盾](psyker_combat_ability_force_field.md) | 展開護盾，阻擋敵方遠程攻擊；最長 17.5 秒；冷卻 40 秒；完整計算與適用限制見來源文件。 |
-| [強化護盾](psyker_shield_extra_charge.md) | 機制與公式待核對。 |
+| [強化護盾](psyker_shield_extra_charge.md) | 念力護盾最多儲存 2 次；每次充能需 40 秒，逐次恢復；完整計算與適用限制見來源文件。 |
 | [庇護所](psyker_boost_allies_in_sphere.md) | 穹頂內每秒恢復 10% 最大韌性；消散時提供 50% 韌性減傷，持續 5 秒；完整計算與適用限制見來源文件。 |
 | [念力穹頂](psyker_sphere_shield.md) | 機制與公式待核對。 |
 | [衰弱界線](psyker_shield_stun_passive.md) | 機制與公式待核對。 |
