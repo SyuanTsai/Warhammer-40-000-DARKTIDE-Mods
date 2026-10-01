@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [遠程引爆](#adamant_whistle) | 未見明確矛盾 |
 | [突破重圍](#adamant_charge) | 繁中原文勘誤 |
 | [天鷹使節](#adamant_area_buff_drone_improved) | 未見明確矛盾 |
 | [懲戒者姿態](#adamant_stance) | 未見明確矛盾 |
@@ -88,6 +89,13 @@
 | [震盪攻擊](#adamant_melee_weakspot_hits_count_as_stagger) | 未見明確矛盾 |
 | [針對弱者](#adamant_staggering_enemies_take_more_damage) | 未見明確矛盾 |
 | [還治其人之身](#adamant_perfect_block_damage_boost) | 未見明確矛盾 |
+
+<a id="adamant_whistle"></a>
+## 遠程引爆(Remote Detonation)
+
+- 描述鍵：`loc_talent_ability_detonate_description`；hash：`29c13c22`。
+- 結論：未見明確矛盾。同一 inventory 記錄的繁中寫「引爆機械戰犬的所在處，電擊附近的敵人並使其踉蹌」，英文寫「Cause an Explosion at your Cyber-Mastiff's Location. Staggering and Electrocuting nearby Enemies.」；兩者都涵蓋狗所在位置的爆炸、踉蹌及電擊。來源另外把效果拆成 5 公尺呼喊與半徑 4 公尺爆炸，並給出 2.5 秒踉蹌；原文省略這些細節不作錯譯。
+- [原始碼推導與限制](adamant_whistle.md)。
 
 <a id="adamant_charge"></a>
 ## 突破重圍(Break the Line)

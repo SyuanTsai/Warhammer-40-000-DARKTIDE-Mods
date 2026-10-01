@@ -6,6 +6,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/aa116dc7-88d2-450b-bcff-c2dc0bb6b4c0" width="32" height="32" alt="遠程引爆天賦圖示"> [遠程引爆](#adamant_whistle)<br>- Remote Detonation | <ul><li>瞄準並指定敵人後吹響指令，電子獒犬會撲向該目標；指令結算時，以戰犬位置同時觸發電擊呼喊與爆炸。</li><li>最多 2 次充能；每次消耗 1 次，基礎冷卻 50 秒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="32" height="32" alt="突破重圍天賦圖示"> [突破重圍](#adamant_charge)<br>- Break the Line | <ul><li>向前猛砸並衝入敵陣；猛砸期間視為格擋，結束後獲得 6 秒傷害與衝擊加成。</li><li>基礎冷卻 20 秒，單次充能。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="天鷹使節天賦圖示"> [天鷹使節](#adamant_area_buff_drone_improved)<br>- Nuncio-Aquila | <ul><li>部署阿奎拉傳令機，持續 20 秒並影響周圍 7.5 公尺；冷卻 60 秒，單次充能。</li><li>強化版讓盟友每秒恢復 7.5% 韌性，並提高壓制與衝擊、降低後座力，同時免疫暈眩、減速與壓制。</li><li>範圍內敵人受到的傷害提高 15%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/4eb18874-83b0-4e2f-bf2b-c91001a15371" width="32" height="32" alt="懲戒者姿態天賦圖示"> [懲戒者姿態](#adamant_stance)<br>- Castigator's Stance | <ul><li>啟動時恢復全部韌性；進入 10 秒姿態，移動速度提高 15%、威力提高 20%、受到的傷害減少 70%，但不能衝刺。</li><li>冷卻 50 秒，單次充能；姿態結束後，傷害減免再延續 2 秒。</li></ul> | 能力 |
@@ -86,6 +87,28 @@
 | <img src="https://github.com/user-attachments/assets/2577c784-85c4-473c-b9ba-a88f8de35355" width="32" height="32" alt="震盪攻擊天賦圖示"> [震盪攻擊](#adamant_melee_weakspot_hits_count_as_stagger)<br>- Concussive | <ul><li>近戰命中弱點後，目標在 4 秒內視為處於踉蹌狀態。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/aa78a41a-3cea-4e8d-ba36-4496c3619be7" width="32" height="32" alt="針對弱者天賦圖示"> [針對弱者](#adamant_staggering_enemies_take_more_damage)<br>- Target the Weak | <ul><li>近戰或推擊命中處於踉蹌狀態的敵人，使其承受的近戰傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/96221430-4610-4bf3-9b19-4fd056c99e74" width="32" height="32" alt="還治其人之身天賦圖示"> [還治其人之身](#adamant_perfect_block_damage_boost)<br>- Retaliatory Force | <ul><li>格擋耐力消耗降低 15%；完美格擋後，傷害與攻速提高 15%，持續 8 秒。</li></ul> | 技能 |
+
+---
+
+## 閃擊
+
+<a id="adamant_whistle"></a>
+### 遠程引爆(Remote Detonation)
+
+<img src="https://github.com/user-attachments/assets/aa116dc7-88d2-450b-bcff-c2dc0bb6b4c0" width="72" height="72" alt="遠程引爆天賦圖示">
+
+- **引爆位置與範圍**：啟動後約 0.3 秒，在電子獒犬當下位置引爆。5 公尺內施加電擊與 2.5 秒輕度踉蹌；爆炸傷害半徑為 4 公尺，中央 2 公尺傷害較高。
+
+- **電擊與承傷**：電擊狀態持續 2 秒，期間目標承受的傷害另乘 1.1。單計這項承傷增加，原本 100 點變成 110；若攻擊者另有 25% 增傷，則為 100 × 1.25 × 1.1 = 137.5。
+
+- **爆炸算例**：只計中央爆炸的護甲階段，無甲基準為 600 × 1 = 600，防彈護甲為 600 × 0.5 = 300。實際還需計入部位、遮蔽及電擊附帶的承傷效果。距離獒犬 4.5 公尺時，處於電擊範圍，但已超出爆炸傷害範圍。
+
+- **充能與冷卻**：最多 2 次，單次恢復需 50 秒。兩次共用同一個冷卻進度，依序補回；若短時間內用光兩次、沒有其他冷卻加成，約 50 秒先恢復一次、100 秒恢復兩次。
+
+[詳細資料](TALENTS%20Arbites/adamant_whistle.md) · [返回目錄](#talent-index)
+
+---
+
 
 ---
 
