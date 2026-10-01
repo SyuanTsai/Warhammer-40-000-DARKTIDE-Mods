@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/5e8556aa-e9d9-4400-a863-bb26a5f11e17" width="32" height="32" alt="絕境中繼天賦圖示"> [絕境中繼](#cryptic_crit_chance_based_on_charge)<br>- Last Stand Relay | <ul><li>爆擊率增加 6 個百分點</li><li>沒有完整電容量時提高至 10 個百分點</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4683657a-edf5-4420-b60f-68eddc85ef43" width="32" height="32" alt="弱點分析教義天賦圖示"> [弱點分析教義](#cryptic_afflicted_increased_damage)<br>- Weakness Analysis Doctrine | <ul><li>命中電擊、燃燒、靈魂之火、流血或中毒敵人</li><li>傷害提高 10%、持續 8 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bc0f3370-fa34-406f-9e0d-91e23b98f1f2" width="32" height="32" alt="離格動作例程天賦圖示"> [離格動作例程](#cryptic_mobile_defense)<br>- Ablative Motion Routines | <ul><li>有耐力衝刺或滑行時，承受傷害降低 25%</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/dbeb2660-6b6d-4b09-b33a-bd21aef50f59" width="32" height="32" alt="能量溢流天賦圖示"> [能量溢流](#cryptic_shared_toughness)<br>- Power Overflow | <ul><li>韌性已滿時，將恢復量的 25% 分享給每位協同隊友</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/79eb4aea-82d8-46fb-add1-a4ded8e41cce" width="32" height="32" alt="二元彈道協議天賦圖示"> [二元彈道協議](#cryptic_elite_kills_toughness)<br>- Binary Ballistics Protocol | <ul><li>擊殺精英後，3 秒內恢復 15% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6d7a17f5-be3e-4659-bc09-84cfb22bd20f" width="32" height="32" alt="力量分配致動器天賦圖示"> [力量分配致動器](#cryptic_push_stagger_stamina)<br>- Force Distribution Actuators | <ul><li>耐力至少 50% 時，推擊衝擊提高 75%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/29715f83-8068-4375-9aa9-d00c34e8d8f3" width="32" height="32" alt="卓越追蹤聖歌天賦圖示"> [卓越追蹤聖歌](#cryptic_no_braced_movement_penalty)<br>- Superior Tracking Litanies | <ul><li>架槍／瞄準的移動速度懲罰減半</li><li>射擊散布降低 45%</li></ul> | 技能 |
@@ -196,6 +197,21 @@
 - **結束條件**：離開上述狀態即失去效果，沒有額外延續時間。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_mobile_defense.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_shared_toughness"></a>
+### 能量溢流(Power Overflow)
+
+<img src="https://github.com/user-attachments/assets/dbeb2660-6b6d-4b09-b33a-bd21aef50f59" width="72" height="72" alt="能量溢流天賦圖示">
+
+- **觸發方式**：韌性原本已滿，下一次韌性恢復完全沒有補到自己時，將該次原定恢復量的 25% 分別給協同範圍內的每名隊友。
+
+- **分配算例**：自己已滿，接到原本會恢復 20 點的效果，每位隊友各獲得 20 × 25% = 5 點；3 名隊友合計可獲得 15 點，不是把 5 點平分。
+
+- **例外**：若自己還缺 2 點，這次恢復 20 點即使溢出 18 點，也不會分享。分享而來的恢復不能再轉送；隊友的恢復加成及韌性上限仍各自適用。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_shared_toughness.md) · [返回目錄](#talent-index)
 
 ---
 

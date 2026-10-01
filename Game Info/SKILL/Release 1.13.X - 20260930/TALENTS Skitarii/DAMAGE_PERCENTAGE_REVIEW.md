@@ -17,6 +17,7 @@
 | [絕境中繼](cryptic_crit_chance_based_on_charge.md) | 爆擊率增加 6 個百分點；沒有完整電容量時提高至 10 個百分點；完整計算與適用限制見來源文件。 |
 | [弱點分析教義](cryptic_afflicted_increased_damage.md) | 命中電擊、燃燒、靈魂之火、流血或中毒敵人；傷害提高 10%、持續 8 秒；完整計算與適用限制見來源文件。 |
 | [離格動作例程](cryptic_mobile_defense.md) | 有耐力衝刺或滑行時，承受傷害降低 25%；完整計算與適用限制見來源文件。 |
+| [能量溢流](cryptic_shared_toughness.md) | 韌性已滿時，將恢復量的 25% 分享給每位協同隊友；完整計算與適用限制見來源文件。 |
 | [二元彈道協議](cryptic_elite_kills_toughness.md) | 擊殺精英後，3 秒內恢復 15% 韌性；完整計算與適用限制見來源文件。 |
 | [力量分配致動器](cryptic_push_stagger_stamina.md) | 耐力至少 50% 時，推擊衝擊提高 75%；完整計算與適用限制見來源文件。 |
 | [卓越追蹤聖歌](cryptic_no_braced_movement_penalty.md) | 架槍／瞄準的移動速度懲罰減半；射擊散布降低 45%；完整計算與適用限制見來源文件。 |
