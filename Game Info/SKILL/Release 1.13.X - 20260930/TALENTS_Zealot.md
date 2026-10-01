@@ -19,6 +19,7 @@
 | <img src="https://github.com/user-attachments/assets/eb0f681c-574a-447c-b917-9413f146fd72" width="32" height="32" alt="惡毒贈禮天賦圖示"> [惡毒贈禮](#zealot_toughness_on_heavy_kills)<br>- Vicious Offering | <ul><li>重擊擊殺敵人時，額外恢復 10% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f86258bf-77ad-44c3-99b0-628042e47315" width="32" height="32" alt="韌性減傷天賦圖示"> [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1)<br>- Toughness Damage Reduction | <ul><li>韌性受到的傷害降低 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dcdcc79a-ad1b-4fb3-9ac1-a6fcc1a71a56" width="32" height="32" alt="決鬥者天賦圖示"> [決鬥者](#zealot_increased_crit_and_weakspot_damage_after_dodge)<br>- Duellist | <ul><li>成功閃避後，弱點／爆擊的額外傷害增加 50%，持續 3 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/42daeb1b-ec7d-4f9b-bc58-f89c1de5d9b4" width="32" height="32" alt="輕蔑之盾天賦圖示"> [輕蔑之盾](#zealot_ally_damage_taken_reduced)<br>- Shield of Contempt | <ul><li>你或隊友生命受傷後，受傷者獲得 60% 減傷，持續 4 秒；觸發冷卻 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -207,6 +208,21 @@
 - **既有加成**：基礎與額外部分皆為 100，原有 25% 同階段加成時，由 100 + 100 × 1.25 = 225 點，變成 100 + 100 × (1 + 25% + 50%) = 275 點，新增收益約 22.22%。
 
 [詳細資料](TALENTS%20Zealot/zealot_increased_crit_and_weakspot_damage_after_dodge.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_ally_damage_taken_reduced"></a>
+### 輕蔑之盾(Shield of Contempt)
+
+<img src="https://github.com/user-attachments/assets/42daeb1b-ec7d-4f9b-bc58-f89c1de5d9b4" width="72" height="72" alt="輕蔑之盾天賦圖示">
+
+- **運作方式**：你或隊友受到生命傷害後，受傷者獲得 60% 傷害減免，持續 4 秒。觸發這次效果的傷害已經結算，不會被這份新減傷倒扣。
+
+- **冷卻方式**：每名擁有此天賦的狂信徒共用一次 8 秒觸發冷卻；冷卻內另一名隊友受傷，不會再由同一份天賦施加效果。
+
+- **減傷算例**：只計這份效果，之後原本 100 點傷害變成 100 × 0.4 = 40 點。第 0 秒觸發時，效果約於第 4 秒結束，約第 8 秒才能再次觸發。
+
+[詳細資料](TALENTS%20Zealot/zealot_ally_damage_taken_reduced.md) · [返回目錄](#talent-index)
 
 ---
 
