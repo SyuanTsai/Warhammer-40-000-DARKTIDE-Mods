@@ -12,6 +12,7 @@
 | [法務官手榴彈](#adamant_grenade_improved) | 未見明確矛盾 |
 | [電能地雷](#adamant_shock_mine) | 繁中原文勘誤 |
 | [小隊之友](#adamant_companion_coherency) | 未見明確矛盾 |
+| [雷厲風行](#adamant_reload_speed_aura) | 未見明確矛盾 |
 | [突破重圍](#adamant_charge) | 繁中原文勘誤 |
 | [天鷹使節](#adamant_area_buff_drone_improved) | 未見明確矛盾 |
 | [懲戒者姿態](#adamant_stance) | 未見明確矛盾 |
@@ -122,6 +123,13 @@
 - 描述鍵：`loc_talent_adamant_companion_coherency_alt_desc`；hash：`360f5bca`。
 - 結論：未見明確矛盾。繁中寫明機械戰犬計入協同、你和協同盟友獲得額外 7.5% 韌性減傷；英文也描述 Cyber-Mastiff counts towards unit Coherency 並給 Coherency Allies additional 7.5% Toughness Damage Reduction。數值與實際掛載的 -0.075 韌性受傷修正相符。
 - [原始碼推導與限制](adamant_companion_coherency.md)。
+
+<a id="adamant_reload_speed_aura"></a>
+## 雷厲風行(Ruthless Efficiency)
+
+- 描述鍵：`loc_talent_adamant_reload_speed_aura_desc`；hash：`79c674a1`。
+- 結論：未見明確矛盾。繁中與英文都明確列出你和協同盟友獲得額外換彈速度；程式設定 +12.5% 相符。兩種文字未提到同一選項會停用戰犬的協同成員資格，這是額外程式效果的省略，不構成所述換彈效果矛盾。
+- [原始碼推導與限制](adamant_reload_speed_aura.md)。
 
 <a id="adamant_charge"></a>
 ## 突破重圍(Break the Line)
