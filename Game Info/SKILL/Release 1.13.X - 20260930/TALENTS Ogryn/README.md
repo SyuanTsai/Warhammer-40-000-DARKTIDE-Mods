@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L3-L10)。內部 tree version 25 不等於遊戲發行版號。
 
-完成 11／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 12／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -22,3 +22,4 @@
 | 技能 | [堅韌不屈](ogryn_toughness_on_low_health.md) / `ogryn_toughness_on_low_health` | `node_8f283711-065f-4147-af2b-ea22b8d6d9bf` | 完成（核心靜態機制） |
 | 技能 | [重毆](ogryn_heavy_bleeds.md) / `ogryn_heavy_bleeds` | `node_950e1baa-f9b8-4d12-a913-514249d4f38a` | 完成（核心靜態機制） |
 | 技能 | [沉重打擊](ogryn_staggering_increases_damage.md) / `ogryn_staggering_increases_damage` | `node_19bc7a64-5626-472e-9a1c-90f412545e96` | 完成（核心靜態機制） |
+| 技能 | [勢不可擋](ogryn_movement_speed_after_ranged_kills.md) / `ogryn_movement_speed_after_ranged_kills` | `node_a68be7fb-c454-4cfd-9ab9-626b1facc88b` | 完成（核心靜態機制） |

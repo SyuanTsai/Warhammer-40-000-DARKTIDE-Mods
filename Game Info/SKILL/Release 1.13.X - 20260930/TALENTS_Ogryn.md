@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/72cbf891-ecd4-425c-8d46-97cb4d4863f9" width="32" height="32" alt="堅韌不屈天賦圖示"> [堅韌不屈](#ogryn_toughness_on_low_health)<br>- Too Stubborn to Die | <ul><li>生命低於 50% 時，韌性恢復量提高 100%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dbfbaef7-b829-41cf-96cb-a9d09192cfbd" width="32" height="32" alt="重毆天賦圖示"> [重毆](#ogryn_heavy_bleeds)<br>- Batter | <ul><li>造成傷害的近戰命中施加 1 層流血，重擊改為 4 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/206be198-2a5f-426f-944a-8d85fd74f1d6" width="32" height="32" alt="沉重打擊天賦圖示"> [沉重打擊](#ogryn_staggering_increases_damage)<br>- Hard Knocks | <ul><li>近戰或推擊使敵人踉蹌後，其受到的近戰傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/01fd23cb-46d2-41fa-bfc3-d8b1d17f43a3" width="32" height="32" alt="勢不可擋天賦圖示"> [勢不可擋](#ogryn_movement_speed_after_ranged_kills)<br>- Unstoppable Momentum | <ul><li>遠程擊殺後，移動速度提高 20%，持續 3 秒。</li></ul> | 技能 |
 
 ---
 
@@ -186,5 +187,18 @@
 - **傷害算例**：基礎 100 點近戰傷害，只有此效果時為 115 點；與削弱敵人同時生效時為 100 × (1 + 15% + 15%) = 130 點。遠程不受本項近戰承傷加成影響。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_staggering_increases_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_movement_speed_after_ranged_kills"></a>
+### 勢不可擋(Unstoppable Momentum)
+
+<img src="https://github.com/user-attachments/assets/01fd23cb-46d2-41fa-bfc3-d8b1d17f43a3" width="72" height="72" alt="勢不可擋天賦圖示">
+
+- **觸發方式**：遠程擊殺敵人後，移動速度提高 20%，持續 3 秒；再次遠程擊殺會刷新時間，不會逐次提高速度。
+
+- **速度算例**：原本每秒移動 5 公尺，沒有其他修正時變成 5 × 1.2 = 6 公尺／秒；已有同階段 10% 加成時，則為 5 × (1 + 10% + 20%) = 6.5 公尺／秒。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_movement_speed_after_ranged_kills.md) · [返回目錄](#talent-index)
 
 ---

@@ -19,6 +19,7 @@
 | [堅韌不屈](#ogryn_toughness_on_low_health) | 未見明確矛盾 |
 | [重毆](#ogryn_heavy_bleeds) | 未見明確矛盾 |
 | [沉重打擊](#ogryn_staggering_increases_damage) | 未見明確矛盾 |
+| [勢不可擋](#ogryn_movement_speed_after_ranged_kills) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -96,3 +97,10 @@
 - 描述鍵：`loc_talent_ogryn_big_bully_heavy_hits_new_desc`；hash：`45b6dfbf`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_staggering_increases_damage.md)。
+
+<a id="ogryn_movement_speed_after_ranged_kills"></a>
+## 勢不可擋(Unstoppable Momentum)
+
+- 描述鍵：`loc_talent_ogryn_ranged_kill_grant_movement_speed_desc`；hash：`b22afedc`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_movement_speed_after_ranged_kills.md)。
