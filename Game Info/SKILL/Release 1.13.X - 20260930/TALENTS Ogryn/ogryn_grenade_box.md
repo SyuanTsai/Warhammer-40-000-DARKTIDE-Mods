@@ -10,6 +10,7 @@
 
 - 基礎能力max_charges3、only_uses_charges=true，投射物ogryn_grenade_box使用ogryn_grenade_box_impact，attack1850。
 - 雖然基礎投射物也宣告conditional_cluster，ProjectileDamageExtension只在擁有ogryn_basic_box_spawns_cluster時啟用；當前職業基礎清單沒有此關鍵字。
+- 此處限一般基礎配置；Hordes 的 hordes_buff_ogryn_basic_box_spawns_cluster 可另外授予 ogryn_basic_box_spawns_cluster，啟用基礎箱體的 conditional_cluster。不能將一般基礎配置的結論套用到所有模式。
 
 ## 原始碼依據
 
@@ -20,6 +21,7 @@
 - [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L683-L698)
 - [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L200-L209)
 - [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/hordes_buffs/hordes_legendary_buff_templates/hordes_legendary_ogryn_buff_templates.lua#L31-L40)
 
 ## 算例與待確認事項
 
