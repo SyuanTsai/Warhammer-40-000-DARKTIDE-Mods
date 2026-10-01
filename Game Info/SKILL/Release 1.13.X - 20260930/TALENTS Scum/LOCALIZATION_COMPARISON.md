@@ -25,6 +25,7 @@
 | [精準獵殺](#broker_ability_focus_sub_2) | 未見明確中英矛盾 |
 | [熟練部署](#broker_ability_stimm_field_sub_3) | 未見翻譯差異（程式以半秒輪詢觸發） |
 | [腎上腺素狂暴](#broker_keystone_adrenaline_junkie) | 未見明確矛盾 |
+| [化學性依賴](#broker_keystone_chemical_dependency) | 未見明確矛盾 |
 | [化學強化](#broker_keystone_chemical_dependency_sub_1) | 未見明確矛盾 |
 | [化學增強](#broker_keystone_chemical_dependency_sub_2) | 未見明確矛盾 |
 | [化學藥劑全開](#broker_keystone_chemical_dependency_sub_3) | 未見明確矛盾 |
@@ -199,6 +200,13 @@
 - 描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_desc`；hash：`b4493ff1`。
 - 結論：未見明確矛盾。繁中與英文一致描述近戰命中、暴擊額外層、2 秒失層、30 層門檻及 10 秒近戰攻速／傷害增益；實際層數與刷新細節由固定版本的 buff 消費邏輯補足。
 - [原始碼推導與限制](broker_keystone_adrenaline_junkie.md)。
+
+<a id="broker_keystone_chemical_dependency"></a>
+## 化學性依賴(Chemical Dependency)
+
+- 描述鍵：`loc_talent_broker_keystone_chemical_dependency_desc`；hash：`e80edf15`。
+- 結論：未見明確矛盾。繁中與英文一致描述使用興奮劑取得層數、每層的技能冷卻收益、上限與逐層衰退；程式把收益實作為戰鬥技能資源回充倍率，並由共用 syringe event 同時支援直接使用及 Stimm Field。
+- [原始碼推導與限制](broker_keystone_chemical_dependency.md)。
 
 <a id="broker_keystone_chemical_dependency_sub_1"></a>
 ## 化學強化(Chem Enhanced)

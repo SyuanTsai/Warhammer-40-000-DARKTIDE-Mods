@@ -23,6 +23,7 @@
 | <img src="https://github.com/user-attachments/assets/732d190b-365f-4815-9d94-bc136cafd423" width="32" height="32" alt="精準獵殺天賦圖示"> [精準獵殺](#broker_ability_focus_sub_2)<br>- Pick Your Targets | <ul><li>專注期間遠程攻擊加算 +15% 撕裂修正；近距離遠程擊殺每次另疊 3% 遠程傷害，最多 5 層（+15%），每層持續 3 秒並可由新擊殺刷新。</li><li>此撕裂加成作用於護甲計算，擊殺疊層是遠程傷害加算；只計滿層效果時，基礎100點遠程傷害變為115點。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3" width="32" height="32" alt="熟練部署天賦圖示"> [熟練部署](#broker_ability_stimm_field_sub_3)<br>- Practiced Deployment | <ul><li>取得新的可用興奮劑時，補滿一次興奮劑補給的能力充能；能力最多 1 次充能，已滿時不會再增加。</li><li>程式每 0.5 秒檢查興奮劑欄位或自身興奮劑充能是否變為可用，因此觸發會在下一次檢查時補滿。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d" width="32" height="32" alt="腎上腺素狂暴天賦圖示"> [腎上腺素狂暴](#broker_keystone_adrenaline_junkie)<br>- Adrenaline Frenzy | <ul><li>近戰命中獲得 1 層腎上腺素；近戰爆擊額外獲得 1 層。</li><li>2 秒內未獲得新層時，每 2 秒失去 1 層；最多 30 層。</li><li>達 30 層時清除腎上腺素並觸發 10 秒狂暴：近戰攻速 +10%、近戰傷害 +25%。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/9b42d72f-2429-446a-bf75-d5d87db98b36" width="32" height="32" alt="化學性依賴天賦圖示"> [化學性依賴](#broker_keystone_chemical_dependency)<br>- Chemical Dependency | <ul><li>使用興奮劑取得 1 層化學依賴性，每層提高戰鬥技能資源回充速度 10%。</li><li>最多 3 層，每層持續 90 秒；沒有新層時每 90 秒衰退 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/b7fff291-d5f3-4213-bfef-8b28b8065889" width="32" height="32" alt="化學強化天賦圖示"> [化學強化](#broker_keystone_chemical_dependency_sub_1)<br>- Chem Enhanced | <ul><li>每層化學依賴性額外增加 5 個百分點的爆擊率。</li><li>3 層時共增加 15 個百分點；這是爆擊機率，不是爆擊傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6c334888-08bb-4567-a6a2-1c4b4750409b" width="32" height="32" alt="化學增強天賦圖示"> [化學增強](#broker_keystone_chemical_dependency_sub_2)<br>- Chem Fortified | <ul><li>使用興奮劑時恢復最大韌性的 50%。</li><li>每層化學依賴性使承受的韌性傷害乘以 0.95；3 層合計使韌性傷害約降低 14.26%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/51827890-e735-4220-8959-bf37381e0fc8" width="32" height="32" alt="化學藥劑全開天賦圖示"> [化學藥劑全開](#broker_keystone_chemical_dependency_sub_3)<br>- Maxed Out Chems | <ul><li>化學依賴性每層持續時間由 90 秒改為 60 秒，最多層數由 3 層增加至 4 層。</li><li>4 層時戰鬥技能資源回充倍率為 1.40；60 秒線性回充算例約縮至 42.86 秒。</li></ul> | 鑰石 |
@@ -370,6 +371,23 @@
 - **狂暴傷害**：近戰傷害 +25% 屬加法傷害修正；單計此項，基礎 100 點成為 125 點。
 
 [詳細資料](TALENTS%20Scum/broker_keystone_adrenaline_junkie.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_keystone_chemical_dependency"></a>
+### 化學性依賴(Chemical Dependency)
+
+<img src="https://github.com/user-attachments/assets/9b42d72f-2429-446a-bf75-d5d87db98b36" width="72" height="72" alt="化學性依賴天賦圖示">
+
+- **觸發方式**：每次使用興奮劑取得 1 層；首次接受帶有興奮劑的化學性依賴場域效果，也會觸發。
+
+- **層數**：最多 3 層。每層增加 10% 戰鬥技能資源回充倍率，3 層時回充倍率為 1+3×0.10=1.30，即比基礎回充快 30%。
+
+- **時間**：基本每層持續 90 秒；新層會重設共享計時。90 秒內沒有新層時失去 1 層並重設計時，之後每 90 秒再失去 1 層。
+
+- **回充算例**：若原本需要 60 秒完成同一段戰鬥技能回充，且回充不中斷、沒有其他修正，3 層後約需 60÷1.30=46.15 秒。
+
+[詳細資料](TALENTS%20Scum/broker_keystone_chemical_dependency.md) · [返回目錄](#talent-index)
 
 ---
 
