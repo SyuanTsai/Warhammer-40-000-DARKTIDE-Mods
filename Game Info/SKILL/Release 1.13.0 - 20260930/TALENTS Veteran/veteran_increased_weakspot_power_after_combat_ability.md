@@ -46,6 +46,15 @@
 - [scripts/utilities/attack/damage_profile.lua，第 36–48 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_profile.lua#L36-L48)
 - [scripts/extension_systems/buff/buffs/buff.lua，第 619–639 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L619-L639)
 
+## 百分比與實際傷害增幅
+
+- **分類釐清**：weakspot_power_level_modifier=.20在PowerLevel階段生效，不是_finesse_boost_damage內的weakspot_damage。不能把堅定不移的0.30F/(B+F)公式直接套到鷹眼。
+- **程式推導**：沿用本文件已列的線性預設基準，原有25%威力時125→145，相對增幅20/125=16%；100→120只涵蓋無既有威力加成的基礎傷害階段。武器profile的min/max、finesse下限、護甲與命中部位仍須按完整流程計算，不能保證每把武器最終傷害都增加20%。
+
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2048–2063 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2048-L2063)
+- [scripts/utilities/attack/power_level.lua，第 26–91 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/power_level.lua#L26-L91)
+- [scripts/utilities/attack/damage_calculation.lua，第 219–228 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L219-L228)
+
 ## 算例條件與待確認事項
 
 - 玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
