@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [獻祭手雷](#zealot_flame_grenade) | 明確繁中誤譯 |
+| [信仰之刃](#zealot_throwing_knives) | 未見明確矛盾 |
 | [眩暈風暴手雷](#zealot_improved_stun_grenade) | 未見明確矛盾 |
 | [不屈靈魂合唱](#zealot_bolstering_prayer) | 待同版核對 |
 | [有信者之怒](#zealot_attack_speed_post_ability) | 跨來源待同版核對 |
@@ -95,6 +96,13 @@
 - 繁中原文短引：投擲一枚手雷，在爆炸處形成一層燃燒的液體，燃燒並使敵人暈眩, 同時阻擋他們的道路。針對無護甲敵人最為有效。
 - 同源英文：Throw a grenade that leaves a layer of flaming liquid, Burning and Staggering enemies, and barring their path. Most effective against Unarmoured Enemies.
 - [原始碼推導與限制](zealot_flame_grenade.md)。
+
+<a id="zealot_throwing_knives"></a>
+## 信仰之刃(Blades of Faith)
+
+- 描述鍵：`loc_ability_zealot_throwing_knifes_desc`；hash：`5c177ee2`。
+- 結論：未見明確矛盾。繁中與英文描述均提及近戰擊殺精英／專家補 1 把及彈藥箱補刀；來源中補給量依 pickup 設定變化，不足以判定「彈藥箱可補充」是翻譯錯誤。
+- [原始碼推導與限制](zealot_throwing_knives.md)。
 
 <a id="zealot_improved_stun_grenade"></a>
 ## 眩暈風暴手雷(Stunstorm Grenade)

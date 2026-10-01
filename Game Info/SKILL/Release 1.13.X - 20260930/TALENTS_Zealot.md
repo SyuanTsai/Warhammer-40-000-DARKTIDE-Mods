@@ -7,6 +7,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/aaab981f-d4ba-4278-b79d-873fccac1faa" width="32" height="32" alt="獻祭手雷天賦圖示"> [獻祭手雷](#zealot_flame_grenade)<br>- Immolation Grenade | <ul><li>最多攜帶 3 枚；引爆後留下持續 15 秒的火焰區域。</li><li>持續灼傷範圍內的敵人；傷害隨難度、護甲和每次隨機值改變。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/8d21cff6-d918-4e91-8426-b98634887a03" width="32" height="32" alt="信仰之刃天賦圖示"> [信仰之刃](#zealot_throwing_knives)<br>- Blades of Faith | <ul><li>以 12 把投擲刀取代手雷，可在衝刺時快速投擲。</li><li>近戰擊殺精英或專家敵人補 1 把；拾取彈藥也能補充。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/73777d2d-3727-47dc-8093-0d25ec6a3cfd" width="32" height="32" alt="眩暈風暴手雷天賦圖示"> [眩暈風暴手雷](#zealot_improved_stun_grenade)<br>- Stunstorm Grenade | <ul><li>震撼手雷的爆炸半徑增加 50%，最大半徑由 8 公尺提高為 12 公尺。</li><li>最多攜帶 3 枚；命中後附加持續 8 秒的電擊效果。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/4ae30922-3e39-4ded-8e19-35ec595befa0" width="32" height="32" alt="不屈靈魂合唱天賦圖示"> [不屈靈魂合唱](#zealot_bolstering_prayer)<br>- Chorus of Spiritual Fortitude | <ul><li>引導約 3.67 秒，開始時立即脈衝，之後每 0.8 秒一次；基礎冷卻 60 秒。</li><li>每次脈衝作用於本人與協同中的盟友，恢復韌性、提高暫時最大韌性，並賦予免死及眩暈免疫。</li><li>脈衝會踉蹌附近敵人；引導期間另持續恢復韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/bd841f6f-e0ff-4cfa-a3ac-f7d08bfbc80e" width="32" height="32" alt="有信者之怒天賦圖示"> [有信者之怒](#zealot_attack_speed_post_ability)<br>- Fury of the Faithful | <ul><li>向前衝刺，基礎冷卻 30 秒；開始時恢復最多相當於最大韌性 50% 的韌性。</li><li>衝刺後獲得 +20% 攻擊速度；描述顯示 10 秒，執行 buff 時長為 11 秒。</li><li>衝刺後的近戰 buff 最長 3 秒，下一次有效近戰命中獲得 +25% 近戰傷害、+100% 近戰暴擊機率與 +100% 近戰撕裂。</li></ul> | 能力 |
@@ -107,6 +108,25 @@
 - 繁中原文將英文「Burning and Staggering」寫成「燃燒並使敵人暈眩」；此處應為「燃燒並使敵人踉蹌」，不能把踉蹌當成眩暈。
 
 [詳細資料](TALENTS%20Zealot/zealot_flame_grenade.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_throwing_knives"></a>
+### 信仰之刃(Blades of Faith)
+
+<img src="https://github.com/user-attachments/assets/8d21cff6-d918-4e91-8426-b98634887a03" width="72" height="72" alt="信仰之刃天賦圖示">
+
+- **運作方式**：以投擲刀取代手雷，最多攜帶 12 把，可在衝刺時投擲。一般手雷補給無法補充投擲刀。
+
+- **傷害與護甲**：普通命中、沒有其他修正時，無護甲部位的基準傷害為 585 點；防彈護甲為 585 × 0.8 = 468 點，甲殼護甲的普通命中基準為 0。弱點、暴擊、穿甲與敵人部位會另改變結果，不能把 0 解讀為任何情況都無法傷害重甲敵人。
+
+- **近戰補充**：由你以近戰擊殺精英或專家敵人時，補回 1 把，最多補到 12 把。例如原有 11 把，完成一次合格擊殺後變成 11 + 1 = 12 把。
+
+- **彈藥補充算例**：沒有額外補給倍率時，小型彈藥補給回復 12 × 15% = 1.8，無條件進位為 2 把；大型彈藥補給為 12 × 50% = 6 把；部署式彈藥箱可補滿。任務的彈藥補給倍率會影響這些數量，最終仍不能超過 12 把。
+
+- **投擲時間**：標準動作在開始後 0.25 秒擲出，動作總長 0.55 秒；這不包含飛行時間。
+
+[詳細資料](TALENTS%20Zealot/zealot_throwing_knives.md) · [返回目錄](#talent-index)
 
 ---
 
