@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_ranger_ads_drains_stamina_boost` / `veteran_ads_drain_stamina` - 死亡射手
+  - 英文對應：Deadshot。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L248-L278)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_increased_damage_based_on_range` / `veteran_increased_damage_based_on_range` - 遠射
   - 英文對應：Longshot。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L831-L865)；此來源證明識別鍵與天賦關係。

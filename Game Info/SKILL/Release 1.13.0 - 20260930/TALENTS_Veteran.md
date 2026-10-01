@@ -17,6 +17,7 @@
 | 技能 | [密集隊形訓練(Close Order Drill)](#veteran_reduced_toughness_damage_in_coherency) | 協同範圍內每有 1 名隊友，韌性減傷增加 11%；3 名隊友時達到 33%。 |
 | 技能 | [遠射(Longshot)](#veteran_increased_damage_based_on_range) | 遠程傷害增加 10%；距離越遠，額外再增加最多 15%。 |
 | 技能 | [行雲流水(One Motion)](#veteran_reduce_swap_time) | 武器切換速度增加 50%。 |
+| 技能 | [死亡射手(Deadshot)](#veteran_ads_drain_stamina) | 瞄準且仍有耐力時，爆擊率增加 25 個百分點，瞄準晃動降低 60%。 |
 | 技能 | [幹掉它！(Bring it Down!)](#veteran_big_game_hunter) | 對歐格林與巨獸的傷害增加 20%。 |
 | 技能 | [優越情節(Superiority Complex)](#veteran_increase_damage_vs_elites) | 增加對精英敵人的傷害 |
 | 技能 | [靈活應對(Duck and Dive)](#veteran_dodging_grants_stamina) | 移動速度增加 5%。 |
@@ -248,6 +249,25 @@
 - 這段動作縮短約 33.3%；不會連帶加速裝填或攻擊。
 
 [詳細資料](TALENTS%20Veteran/veteran_reduce_swap_time.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_ads_drain_stamina"></a>
+
+### 死亡射手(Deadshot)
+
+<img src="https://github.com/user-attachments/assets/e65e3909-4dac-413f-827d-f5db9138e5e2" width="72" height="72" alt="死亡射手天賦圖示">
+
+- **瞄準且仍有耐力時，爆擊率增加 25 個百分點，瞄準晃動降低 60%。**
+- 同時降低散布 19%、後座力 12%。
+- 瞄準每秒消耗 **0.33 耐力**，每次射擊再消耗 **0.1 耐力**；耐力耗盡後失去上述加成。
+
+#### 耐力與爆擊率算例
+
+- 不計其他消耗，瞄準 5 秒並射擊 10 次：`0.33 × 5 + 0.1 × 10 = 2.65 耐力`。
+- 原本爆擊率 10%，生效後為 `10% + 25% = 35%`；晃動量原本為 1 時，變為 `1 × 0.4 = 0.4`。
+
+[詳細資料](TALENTS%20Veteran/veteran_ads_drain_stamina.md) · [返回目錄](#talent-index)
 
 ---
 
