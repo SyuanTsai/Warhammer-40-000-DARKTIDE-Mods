@@ -25,6 +25,7 @@
 | <img src="https://github.com/user-attachments/assets/607612bf-67ee-475e-9a16-0b5541c7b4ea" width="32" height="32" alt="反制護盾天賦圖示"> [反制護盾](#zealot_stamina_on_block_break)<br>- Retaliatory Defence | <ul><li>格擋被打破時恢復 50% 最大耐力，冷卻 12 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/41e85f89-6787-4fe4-9fd7-a2382f2aa025" width="32" height="32" alt="四平八穩天賦圖示"> [四平八穩](#zealot_reduced_damage_after_dodge)<br>- Good Balance | <ul><li>成功閃避後減傷 25%，持續 2.5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fbb6b38f-57a3-4659-bf32-04d1edc4d989" width="32" height="32" alt="內憂外患天賦圖示"> [內憂外患](#zealot_toughness_in_melee)<br>- Enemies Within, Enemies Without | <ul><li>5 公尺內有敵人時，持續恢復韌性；每秒最高 7.5% 最大韌性。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c184be29-e45d-4968-acc5-ae67779d90cc" width="32" height="32" alt="信仰狂亂天賦圖示"> [信仰狂亂](#zealot_attack_speed)<br>- Faithful Frenzy | <ul><li>近戰攻速提高 10%，移動速度提高 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -297,6 +298,19 @@
 - **大型敵人**：固定來源將巨獸與特定頭目按 6 名敵人計算，因此單獨一名即可達恢復上限。
 
 [詳細資料](TALENTS%20Zealot/zealot_toughness_in_melee.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_attack_speed"></a>
+### 信仰狂亂(Faithful Frenzy)
+
+<img src="https://github.com/user-attachments/assets/c184be29-e45d-4968-acc5-ae67779d90cc" width="72" height="72" alt="信仰狂亂天賦圖示">
+
+- **運作方式**：常駐增加 10% 近戰攻擊速度與 5% 移動速度。
+
+- **速度算例**：只計本天賦，原本 1 秒的受影響近戰動作變成 1 ÷ 1.1 ≈ 0.909 秒；基礎移速 5 公尺／秒變成 5 × 1.05 = 5.25 公尺／秒。其他同階段攻速先相加，再用總速度倍率換算時間。
+
+[詳細資料](TALENTS%20Zealot/zealot_attack_speed.md) · [返回目錄](#talent-index)
 
 ---
 

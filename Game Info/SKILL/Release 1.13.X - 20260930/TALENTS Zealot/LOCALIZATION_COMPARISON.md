@@ -27,6 +27,7 @@
 | [反制護盾](#zealot_stamina_on_block_break) | 未見明確矛盾 |
 | [四平八穩](#zealot_reduced_damage_after_dodge) | 未見明確矛盾 |
 | [內憂外患](#zealot_toughness_in_melee) | 跨來源待同版核對 |
+| [信仰狂亂](#zealot_attack_speed) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_4) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
@@ -163,6 +164,13 @@
 - 描述鍵：`loc_talent_zealot_toughness_near_enemies_desc`；hash：`fc8eff61`。
 - 結論：跨來源待同版核對。本機中英文皆寫巨獸按5名敵人；固定update先為每名敵人加1，再為巨獸或頭目加5，實際6。不是繁中單方翻錯，待同版確認。
 - [原始碼推導與限制](zealot_toughness_in_melee.md)。
+
+<a id="zealot_attack_speed"></a>
+## 信仰狂亂(Faithful Frenzy)
+
+- 描述鍵：`loc_talent_zealot_speed_desc`；hash：`6513bf51`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_attack_speed.md)。
 
 <a id="base_melee_damage_node_buff_medium_4"></a>
 ## 近戰增幅(Melee Damage Boost)
