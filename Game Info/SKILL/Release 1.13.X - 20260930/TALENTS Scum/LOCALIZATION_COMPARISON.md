@@ -10,6 +10,7 @@
 |---|---|
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
 | [特提恩是迎賓](#broker_passive_first_target_damage) | 未見明確矛盾 |
+| [打你的臉](#broker_passive_close_ranged_damage) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -24,3 +25,10 @@
 - 描述鍵：`loc_talent_broker_passive_first_target_damage_desc`；hash：`4ebbdbb2`。
 - 結論：未見明確矛盾。繁中與英文皆明確限定每次近戰攻擊的第一個目標，未見矛盾。
 - [原始碼推導與限制](broker_passive_first_target_damage.md)。
+
+<a id="broker_passive_close_ranged_damage"></a>
+## 打你的臉(In Your Face)
+
+- 描述鍵：`loc_talent_broker_passive_close_ranged_damage_desc`；hash：`be48df80`。
+- 結論：未見明確矛盾。繁中與英文的近遠端值及距離一致；兩文概括為遠程傷害，固定實作依手持遠程欄位啟用。此條件補充不當成明確誤譯。
+- [原始碼推導與限制](broker_passive_close_ranged_damage.md)。
