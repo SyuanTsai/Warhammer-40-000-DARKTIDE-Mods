@@ -14,3 +14,4 @@
 | [鐵血之志](adamant_staggers_replenish_toughness.md) | 近戰攻擊的第一個命中目標受到踉蹌時，恢復最大韌性的 7.5%。；完整計算與適用限制見來源文件。 |
 | [走一走治百病](adamant_stamina_spent_replenish_toughness.md) | 每累計消耗 1 點耐力，在 3 秒內恢復最大韌性的 10%。；完整計算與適用限制見來源文件。 |
 | [堅忍不拔](adamant_limit_dmg_taken_from_hits.md) | 單次攻擊造成的生命傷害上限為 50 點；不阻止必殺效果。；完整計算與適用限制見來源文件。 |
+| [法務官之鎧](adamant_armor.md) | 最大韌性增加 25 點。；完整計算與適用限制見來源文件。 |

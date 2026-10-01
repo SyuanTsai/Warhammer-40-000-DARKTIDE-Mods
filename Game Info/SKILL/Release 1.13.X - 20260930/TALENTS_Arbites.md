@@ -14,6 +14,7 @@
 | <img src="https://github.com/user-attachments/assets/898ad4c6-3f99-404d-8ff9-b15a9820f8e9" width="32" height="32" alt="鐵血之志天賦圖示"> [鐵血之志](#adamant_staggers_replenish_toughness)<br>- Force of Will | <ul><li>近戰攻擊的第一個命中目標受到踉蹌時，恢復最大韌性的 7.5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4c4b06a3-049f-4272-b1d2-a8a472f541b0" width="32" height="32" alt="走一走治百病天賦圖示"> [走一走治百病](#adamant_stamina_spent_replenish_toughness)<br>- Walk It Off | <ul><li>每累計消耗 1 點耐力，在 3 秒內恢復最大韌性的 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d4c3f66c-8fa8-419f-8a46-f94c842a9b4e" width="32" height="32" alt="堅忍不拔天賦圖示"> [堅忍不拔](#adamant_limit_dmg_taken_from_hits)<br>- True Grit | <ul><li>單次攻擊造成的生命傷害上限為 50 點；不阻止必殺效果。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/d25eaf26-cb8b-4009-80ac-af75d049fb9f" width="32" height="32" alt="法務官之鎧天賦圖示"> [法務官之鎧](#adamant_armor)<br>- Arbitrator Armour | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
 
 ---
 
@@ -120,5 +121,18 @@
 - **傷害算例**：其他生命減傷已結算後，原本要承受 120 點時變成 min(120, 50) = 50 點；原本 30 點仍是 30 點。這是固定上限，不是 50% 減傷。
 
 [詳細資料](TALENTS%20Arbites/adamant_limit_dmg_taken_from_hits.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_armor"></a>
+### 法務官之鎧(Arbitrator Armour)
+
+<img src="https://github.com/user-attachments/assets/d25eaf26-cb8b-4009-80ac-af75d049fb9f" width="72" height="72" alt="法務官之鎧天賦圖示">
+
+- **效果與算例**：最大韌性增加 25 點。原本 100 點、沒有百分比修正時，變成 100 + 25 = 125 點。
+
+- **加成順序**：這 25 點先加入基礎韌性，再套用最大韌性百分比加成。例如另有 20% 最大韌性加成，為 (100 + 25) × 1.2 = 150 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_armor.md) · [返回目錄](#talent-index)
 
 ---
