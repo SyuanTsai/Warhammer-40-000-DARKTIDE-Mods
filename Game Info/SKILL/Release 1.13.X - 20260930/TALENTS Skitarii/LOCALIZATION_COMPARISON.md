@@ -16,6 +16,7 @@
 | [強化能量循環](#cryptic_increased_passive_cooldown_regen) | 未見明確矛盾 |
 | [削切協議](#cryptic_dissector) | 未見明確矛盾；補充計算與限制 |
 | [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
+| [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
 | [閃避伺服恢復](#cryptic_successful_dodge_stamina) | 未見明確矛盾 |
@@ -124,6 +125,13 @@
 - 描述鍵：`loc_talent_cryptic_redline_charge_stacking_clarified_desc`；hash：`22a7f709`。
 - 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文都說明每次取得／消耗充能、5%韌性減傷與電容量生成、12秒、上限4層及額外最大充能。固定版將每層具體落在5%韌性承傷倍率步進與戰鬥技能資源回充倍率；直接回復是否吃倍率由實際回復路徑決定。未發現明確誤譯，UI未逐項展開不列錯誤。
 - [原始碼推導與限制](cryptic_redline.md)。
+
+<a id="cryptic_overload_keystone"></a>
+## 能量超載(Power Overload)
+
+- 描述鍵：`loc_talent_cryptic_overload_keystone_coherency_desc`；hash：`58d058f4`。
+- 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文均描述協同擊殺給層、一般1層／精英與專家2層、上限30、到頂重置以及8秒隊伍傷害與韌性減傷。固定版支持這些效果；傷害增量的單次事件溢出不保留屬UI省略細節，未發現明確誤譯。
+- [原始碼推導與限制](cryptic_overload_keystone.md)。
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
