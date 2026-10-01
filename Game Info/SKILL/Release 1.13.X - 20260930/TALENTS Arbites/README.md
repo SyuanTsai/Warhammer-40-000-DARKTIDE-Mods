@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/adamant_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10)。內部 tree version 19 不等於遊戲發行版號。
 
-完成 22／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 23／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -33,3 +33,4 @@
 | 技能 | [追跡法務官](adamant_dodge_grants_damage.md) / `adamant_dodge_grants_damage` | `node_bdab99db-3a50-4368-a9d7-7dc613f86f2d` | 完成（核心靜態機制） |
 | 技能 | [恰如其分](adamant_elite_special_kills_reload_speed.md) / `adamant_elite_special_kills_reload_speed` | `node_9b76913c-5597-404c-ae20-7f3e16ec9273` | 完成（核心靜態機制） |
 | 技能 | [行軍之志](adamant_movement_speed_on_block.md) / `adamant_movement_speed_on_block` | `node_b93d4978-d0c5-4257-8725-9a1b20596f93` | 完成（核心靜態機制） |
+| 技能 | [無處可逃](adamant_elite_special_kills_offensive_boost.md) / `adamant_elite_special_kills_offensive_boost` | `node_a9e22eac-7d0d-4567-ae6c-e7be34534eaa` | 完成（核心靜態機制） |

@@ -28,6 +28,7 @@
 | <img src="https://github.com/user-attachments/assets/9a87f145-d4a8-4554-b8ca-f5fbb2a58944" width="32" height="32" alt="追跡法務官天賦圖示"> [追跡法務官](#adamant_dodge_grants_damage)<br>- Arbites Revelatum | <ul><li>成功閃避敵人攻擊後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/88c5f583-d739-484e-a7cd-89b79a90334d" width="32" height="32" alt="恰如其分天賦圖示"> [恰如其分](#adamant_elite_special_kills_reload_speed)<br>- Judicious Efficiency | <ul><li>擊殺精英或專家敵人後，下次換彈速度提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8f0bcba7-48bd-4d61-ad19-b03a65160eb5" width="32" height="32" alt="行軍之志天賦圖示"> [行軍之志](#adamant_movement_speed_on_block)<br>- March | <ul><li>遠程攻擊命中敵人後，移動速度提高 15%，持續 3 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/6d045fa3-97bc-4943-9e6e-0f703e68288d" width="32" height="32" alt="無處可逃天賦圖示"> [無處可逃](#adamant_elite_special_kills_offensive_boost)<br>- No Escape | <ul><li>擊殺精英或專家敵人後，傷害與移速提高 10%，持續 4 秒。</li></ul> | 技能 |
 
 ---
 
@@ -312,5 +313,18 @@
 - **移速算例**：單計此倍率，原本每秒移動 5 公尺，變成 5 × 1.15 = 5.75 公尺；其他動作減速仍照常處理。
 
 [詳細資料](TALENTS%20Arbites/adamant_movement_speed_on_block.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_elite_special_kills_offensive_boost"></a>
+### 無處可逃(No Escape)
+
+<img src="https://github.com/user-attachments/assets/6d045fa3-97bc-4943-9e6e-0f703e68288d" width="72" height="72" alt="無處可逃天賦圖示">
+
+- **觸發與刷新**：擊殺精英或專家敵人後，傷害與移動速度提高 10%，持續 4 秒；再次擊殺重設時間。
+
+- **效果算例**：單計本效果，100 點傷害變成 110 點；每秒移動 5 公尺變成 5 × 1.1 = 5.5 公尺。若已有同階段 25% 增傷，則為 100 × (1 + 25% + 10%) = 135 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_elite_special_kills_offensive_boost.md) · [返回目錄](#talent-index)
 
 ---
