@@ -51,6 +51,7 @@
 | <img src="https://github.com/user-attachments/assets/ce3b22d4-870e-4496-96fc-33601f9d9a62" width="32" height="32" alt="穩定握持天賦圖示"> [穩定握持](#ogryn_toughness_while_bracing)<br>- Steady Grip | <ul><li>架槍或射擊時，每秒恢復最大韌性的 12.5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/b7e2a92b-0a60-459a-87c9-6276b204f64e" width="32" height="32" alt="休想再打中我......天賦圖示"> [休想再打中我......](#ogryn_ranged_damage_immunity)<br>- Can't Hit Me...Again | <ul><li>受到遠程傷害後，獲得 20% 遠程減傷，持續 2.5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5974d1c4-5b31-42b8-af90-022202c4614e" width="32" height="32" alt="熟能生巧天賦圖示"> [熟能生巧](#ogryn_wield_speed_increase)<br>- Dedicated Practice | <ul><li>武器切換速度提高 35%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/eeae1229-b245-43fc-9840-960c36f5787e" width="32" height="32" alt="射盡殺戮天賦圖示"> [射盡殺戮](#ogryn_ranged_improves_melee)<br>- Spray and Slay | <ul><li>打空彈匣後，提高 15% 近戰傷害與 7.5% 近戰攻速，持續 6 秒。</li></ul> | 技能 |
 
 ---
 
@@ -734,5 +735,20 @@
 - 原文「武器切換速度縮短為 +35%」混淆速度與時間。應為「武器切換速度提高 35%」，相同動作約需原時間的 74.1%。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_wield_speed_increase.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_ranged_improves_melee"></a>
+### 射盡殺戮(Spray and Slay)
+
+<img src="https://github.com/user-attachments/assets/eeae1229-b245-43fc-9840-960c36f5787e" width="72" height="72" alt="射盡殺戮天賦圖示">
+
+- **觸發方式**：消耗彈藥使目前武器的彈匣變空時，獲得 15% 近戰傷害與 7.5% 近戰攻速，持續 6 秒；之後切換近戰武器即可利用加成。
+
+- **疊層與刷新**：再次符合條件可刷新時間，百分比不會逐次堆疊；光是持續拿著空彈匣不會不停觸發。
+
+- **計算範例**：基礎 100 點近戰傷害變成 115 點；受攻速影響的 1 秒動作變成 1 ÷ 1.075 ≈ 0.930 秒。其他同階段傷害或速度加成各自相加。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_ranged_improves_melee.md) · [返回目錄](#talent-index)
 
 ---
