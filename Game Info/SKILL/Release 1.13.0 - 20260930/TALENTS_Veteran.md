@@ -38,6 +38,7 @@
 | 技能 | [靈活接敵(Agile Engagement)](#veteran_kill_grants_damage_to_other_slot) | 近戰擊殺使遠程傷害增加 25%；遠程擊殺使近戰傷害增加 25%。 |
 | 技能 | [鋸齒刀刃(Serrated Blade)](#veteran_hits_cause_bleed) | 近戰命中造成傷害後，對仍存活的敵人施加 2 層流血。 |
 | 技能 | [戰壕兵訓練(Trench Fighter Drill)](#veteran_attack_speed) | 近戰攻擊速度增加 10%。 |
+| 技能 | [猛攻(Onslaught)](#veteran_continous_hits_apply_rending) | 連續命中同一個仍存活的敵人，從第二次攻擊起，每次施加 1 層脆弱。 |
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
@@ -674,6 +675,26 @@
 - 這段動作縮短約 **9.1%**；實際連段速度仍取決於武器動作。
 
 [詳細資料](TALENTS%20Veteran/veteran_attack_speed.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_continous_hits_apply_rending"></a>
+
+### 猛攻(Onslaught)
+
+<img src="https://github.com/user-attachments/assets/0801494c-4548-4fcb-afe7-8a7c563ef396" width="72" height="72" alt="猛攻天賦圖示">
+
+- **連續命中同一個仍存活的敵人，從第二次攻擊起，每次施加 1 層脆弱。**
+- 每層使目標的護甲修正受到 **2.5%** 撕裂效果，最多 **16 層（40%）**；其他隊友攻擊此目標也能受益。
+- 近戰與遠程均可觸發，每次揮擊或射擊最多處理第一個有效命中；流血等持續傷害不疊層。
+- 持續 **5 秒**，新增層數刷新時間。改打另一個敵人後，須重新連續命中；射空本身不清除已追蹤的目標。
+
+#### 疊層與傷害算例
+
+- 對同一敵人完成五次合資格命中，第一下建立連續命中，後四下合計 `4 × 2.5% = 10%`。
+- 假設下一擊基礎傷害 100、對某甲殼護甲的原倍率為 0.5，無其他加成：`100 × (0.5 + 10%) = 60 傷害`，原本為 50。
+
+[詳細資料](TALENTS%20Veteran/veteran_continous_hits_apply_rending.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_continous_hits_apply_rending` / `veteran_continous_hits_apply_rending` - 猛攻
+  - 英文對應：Onslaught。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1136-L1179)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_attack_speed` / `veteran_attack_speed` - 戰壕兵訓練
   - 英文對應：Trench Fighter Drill。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2551-L2574)；此來源證明識別鍵與天賦關係。
