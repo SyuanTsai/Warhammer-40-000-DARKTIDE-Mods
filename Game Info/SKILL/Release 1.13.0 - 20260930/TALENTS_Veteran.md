@@ -16,6 +16,7 @@
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
 | 技能 | [行雲流水(One Motion)](#veteran_reduce_swap_time) | 武器切換速度增加 50%。 |
 | 技能 | [優越情節(Superiority Complex)](#veteran_increase_damage_vs_elites) | 增加對精英敵人的傷害 |
+| 技能 | [讓他們全趴下！(Keep Their Heads Down!)](#veteran_increase_suppression) | 造成的壓制效果增加 75%。 |
 | 技能 | [近戰傷害提升(Melee Damage Boost)](#base_melee_damage_node_buff_high_2) | 近戰傷害增加 15%。 |
 | 技能 | [韌性減傷(Toughness Damage Reduction)](#base_toughness_damage_reduction_node_buff_medium_1) | 韌性受到的傷害降低 10%。 |
 
@@ -224,6 +225,23 @@
 - 若已有 **25% 同類傷害加成**：原傷害為 `100 × 1.25 = 125`；點選本天賦後為 `100 × (1 + 25% + 15%) = 140`，增加 **15 傷害**。
 
 [詳細資料](TALENTS%20Veteran/veteran_increase_damage_vs_elites.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_increase_suppression"></a>
+
+### 讓他們全趴下！(Keep Their Heads Down!)
+
+<img src="https://github.com/user-attachments/assets/ae882322-f266-4e2c-8168-09f85a5c9285" width="72" height="72" alt="讓他們全趴下！天賦圖示">
+
+- **造成的壓制效果增加 75%。**
+
+#### 壓制算例
+
+- 假設一次攻擊原本產生 20 壓制值，只有此加成時：`20 × 1.75 = 35 壓制值`。
+- 壓制會影響敵人行動，不等同於增加 75% 傷害。
+
+[詳細資料](TALENTS%20Veteran/veteran_increase_suppression.md) · [返回目錄](#talent-index)
 
 ---
 

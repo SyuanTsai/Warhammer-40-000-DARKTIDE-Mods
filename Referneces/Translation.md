@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_increase_suppression` / `veteran_increase_suppression` - 讓他們全趴下！
+  - 英文對應：Keep Their Heads Down!。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L866-L892)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_reduce_swap_time` / `veteran_reduce_swap_time` - 行雲流水
   - 英文對應：One Motion。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1898-L1924)；此來源證明識別鍵與天賦關係。
