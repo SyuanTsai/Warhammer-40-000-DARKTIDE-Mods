@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **81 個可選節點**，均為一點；同一配置最多分配 30 點。零點起始佔位 `not_selected` 不屬天賦效果，不列入 81 項。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36)。內部 tree version 26 不等於遊戲發行版號。
 
-完成 39／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 40／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -22,7 +22,7 @@
 | 閃擊 | [蓄力打擊](psyker_chain_lightning_heavy_attacks.md) / `psyker_chain_lightning_heavy_attacks` | `node_d958faa6-e3ea-4c79-bc84-3477063b09f7` | 已定位；機制待核對 |
 | 光環 | [動能釋放](psyker_aura_damage_vs_elites.md) / `psyker_aura_damage_vs_elites` | `node_d323e130-860b-42f1-acd2-dc50cacde619` | 已定位；機制待核對 |
 | 光環 | [先知之眼](psyker_cooldown_aura_improved.md) / `psyker_cooldown_aura_improved` | `node_c2759b06-3158-4d95-a860-492fd3b6594e` | 已定位；機制待核對 |
-| 光環 | [預兆](psyker_aura_crit_chance_aura.md) / `psyker_aura_crit_chance_aura` | `node_592db669-6d46-45a9-aa87-c66bc5d52a53` | 已定位；機制待核對 |
+| 光環 | [預兆](psyker_aura_crit_chance_aura.md) / `psyker_aura_crit_chance_aura` | `node_592db669-6d46-45a9-aa87-c66bc5d52a53` | 完成（核心靜態機制） |
 | 能力 | [靈能尖嘯](psyker_shout_vent_warp_charge.md) / `psyker_shout_vent_warp_charge` | `node_650c5469-5194-4722-a4f8-7d62487039df` | 已定位；機制待核對 |
 | 能力 | [占卜者的注視](psyker_combat_ability_stance.md) / `psyker_combat_ability_stance` | `node_2a022d3f-fddf-4faf-a79d-c8fe6a18fe36` | 已定位；機制待核對 |
 | 能力 | [平靜迸發](psyker_shout_reduces_warp_charge_generation.md) / `psyker_shout_reduces_warp_charge_generation` | `node_b6b57be7-9aa8-483b-a127-6c1815d452a4` | 已定位；機制待核對 |

@@ -19,7 +19,7 @@
 | [蓄力打擊](#psyker_chain_lightning_heavy_attacks) | 已配對；機制待核對 |
 | [動能釋放](#psyker_aura_damage_vs_elites) | 已配對；機制待核對 |
 | [先知之眼](#psyker_cooldown_aura_improved) | 已配對；機制待核對 |
-| [預兆](#psyker_aura_crit_chance_aura) | 已配對；機制待核對 |
+| [預兆](#psyker_aura_crit_chance_aura) | 未見已確認矛盾 |
 | [靈能尖嘯](#psyker_shout_vent_warp_charge) | 已配對；機制待核對 |
 | [占卜者的注視](#psyker_combat_ability_stance) | 已配對；機制待核對 |
 | [平靜迸發](#psyker_shout_reduces_warp_charge_generation) | 已配對；機制待核對 |
@@ -171,7 +171,7 @@
 ## 預兆(Prescience)
 
 - 描述鍵：`loc_ability_psyker_gunslinger_aura_description`；hash：`a2000c1d`。
-- 已配對原文，機制待核對。
+- 結論：未見已確認矛盾。本地繁中說明將此效果描述為本人與協同隊友增加暴擊機率，固定原始碼的光環值為 0.05，暴擊計算以加法套用。
 - [原始碼推導與限制](psyker_aura_crit_chance_aura.md)。
 
 <a id="psyker_shout_vent_warp_charge"></a>

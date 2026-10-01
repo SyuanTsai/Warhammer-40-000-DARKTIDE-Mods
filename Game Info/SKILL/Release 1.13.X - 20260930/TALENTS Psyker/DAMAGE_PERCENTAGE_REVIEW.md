@@ -17,7 +17,7 @@
 | [蓄力打擊](psyker_chain_lightning_heavy_attacks.md) | 機制與公式待核對。 |
 | [動能釋放](psyker_aura_damage_vs_elites.md) | 機制與公式待核對。 |
 | [先知之眼](psyker_cooldown_aura_improved.md) | 機制與公式待核對。 |
-| [預兆](psyker_aura_crit_chance_aura.md) | 機制與公式待核對。 |
+| [預兆](psyker_aura_crit_chance_aura.md) | 你與協同中的隊友的暴擊機率增加 5 個百分點。；完整計算與適用限制見來源文件。 |
 | [靈能尖嘯](psyker_shout_vent_warp_charge.md) | 機制與公式待核對。 |
 | [占卜者的注視](psyker_combat_ability_stance.md) | 機制與公式待核對。 |
 | [平靜迸發](psyker_shout_reduces_warp_charge_generation.md) | 機制與公式待核對。 |
