@@ -28,6 +28,7 @@
 | [神經質](#broker_passive_improved_dodges_at_full_stamina) | 未見明確矛盾 |
 | [爆擊機率增幅](#base_crit_chance_node_buff_low_1) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
+| [強效毒藥](#base_toxin_power_boost_1) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -170,3 +171,10 @@
 - 描述鍵：`loc_talent_melee_damage_boost_medium_desc`；hash：`7b5da013`。
 - 結論：未見明確矛盾。兩語均為近戰傷害增加，未見矛盾。
 - [原始碼推導與限制](base_melee_damage_node_buff_medium_1.md)。
+
+<a id="base_toxin_power_boost_1"></a>
+## 強效毒藥(Potent Tox)
+
+- 描述鍵：`loc_talent_toxin_damage_boost_desc`；hash：`f89ff0b1`。
+- 結論：未見明確矛盾。兩語都是毒素強度，未見明確矛盾。
+- [原始碼推導與限制](base_toxin_power_boost_1.md)。

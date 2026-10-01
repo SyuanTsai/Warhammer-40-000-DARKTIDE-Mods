@@ -26,3 +26,4 @@
 | [神經質](broker_passive_improved_dodges_at_full_stamina.md) | 耐力至少 75% 時，有效閃避次數的恢復等待時間縮短 40%。；完整計算與適用限制見來源文件。 |
 | [爆擊機率增幅](base_crit_chance_node_buff_low_1.md) | 爆擊機率增加 5 個百分點。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_1.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |
+| [強效毒藥](base_toxin_power_boost_1.md) | 毒素威力增加 10%。；完整計算與適用限制見來源文件。 |
