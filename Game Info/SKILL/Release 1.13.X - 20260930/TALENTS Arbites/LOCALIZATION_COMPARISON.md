@@ -21,6 +21,7 @@
 | [交鋒](#adamant_charge_longer_distance) | 未見明確矛盾 |
 | [殺戮命令](#adamant_dog_damage_after_ability) | 未見明確矛盾 |
 | [處刑命令](#adamant_execution_order) | 待同版核對 |
+| [終點站令狀](#adamant_terminus_warrant) | 繁中原文勘誤 |
 | [堅定不移](#adamant_forceful) | 未見明確矛盾 |
 | [孤狼](#adamant_disable_companion) | 未見明確矛盾 |
 | [律法之志](#adamant_forceful_toughness_regen_per_stack) | 未見明確矛盾 |
@@ -182,6 +183,15 @@
 - 描述鍵：`loc_talent_execution_order_description`；hash：`720bc321`。
 - 結論：待同版核對。繁中「擊殺被標記的敵人會恢復…韌性」對應英文 “Killing a marked enemy replenishes… Toughness”；自身和戰犬 buff 文字也對應。兩種文字都稱攻擊標記敵人後提升戰犬傷害，但程式只檢查 initial_pounce，來源版本尚未核同版。
 - [原始碼推導與限制](adamant_execution_order.md)。
+
+<a id="adamant_terminus_warrant"></a>
+## 終點站令狀(Terminus Warrant)
+
+- 描述鍵：`loc_talent_adamant_terminus_warrant_new_desc`；hash：`26c20f58`。
+- 結論：繁中原文勘誤。同源繁中「弱點命中則額外堆疊」把英文 grant 3 stacks誤寫為一般1層之外再加3層；固定實作弱點分支直接取3，合計3而非4。
+- 繁中原文短引：遠程攻擊每命中一個敵人，可堆疊近戰正義層數（最多{max_stacks:%s}層），弱點命中則額外堆疊{weakspot_stacks:%s}層。切換主要武器會消耗你的近戰正義層數，並獲得{melee_strength:%s}近戰威力與{tdr:%s}韌性減傷，持續{melee_duration:%s}秒。
+- 同源英文：Ranged Attacks grant stacks of Melee Justice for each Enemy Hit (max {max_stacks:%s}), Weakspot hits grant {weakspot_stacks:%s} stacks. Wielding your Primary Weapon spends your Melee Justice stacks to grant you {melee_strength:%s} Melee Strength and {tdr:%s} Toughness Damage Reduction for {melee_duration:%s}s.
+- [原始碼推導與限制](adamant_terminus_warrant.md)。
 
 <a id="adamant_forceful"></a>
 ## 堅定不移(Forceful)

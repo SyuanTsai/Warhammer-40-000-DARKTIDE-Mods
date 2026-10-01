@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/adamant_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10)。內部 tree version 19 不等於遊戲發行版號。
 
-完成 79／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 80／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -24,6 +24,7 @@
 | 能力 | [交鋒](adamant_charge_longer_distance.md) / `adamant_charge_longer_distance` | `node_20638e8f-5c78-481c-a210-ec3fcdcd60e3` | 完成（核心靜態機制） |
 | 能力 | [殺戮命令](adamant_dog_damage_after_ability.md) / `adamant_dog_damage_after_ability` | `node_6f8fc4e4-c5cd-423f-b612-4eb26dc2dadb` | 完成（核心靜態機制） |
 | 鑰石 | [處刑命令](adamant_execution_order.md) / `adamant_execution_order` | `node_52c3f35e-7fe4-4321-a04c-2a51eccac74c` | 完成（核心靜態機制） |
+| 鑰石 | [終點站令狀](adamant_terminus_warrant.md) / `adamant_terminus_warrant` | `node_65d7f26b-711e-4ef9-ae0e-5bad2ac7a818` | 完成（核心靜態機制） |
 | 鑰石 | [堅定不移](adamant_forceful.md) / `adamant_forceful` | `node_23717e1a-a7ea-44f6-b168-9bd668cd29a3` | 完成（核心靜態機制） |
 | 鑰石 | [孤狼](adamant_disable_companion.md) / `adamant_disable_companion` | `node_75d31c92-2869-4bbb-8f63-f0f7b9e15bdf` | 完成（核心靜態機制） |
 | 鑰石 | [律法之志](adamant_forceful_toughness_regen_per_stack.md) / `adamant_forceful_toughness_regen_per_stack` | `node_26aa2932-e1d8-4b3b-9a28-f6d71f977f56` | 完成（核心靜態機制） |

@@ -19,6 +19,7 @@
 | <img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="32" height="32" alt="交鋒天賦圖示"> [交鋒](#adamant_charge_longer_distance)<br>- Engage | <ul><li>衝鋒距離由基礎 3.75 公尺增加 3.75 公尺，目標距離上限成為 7.5 公尺。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="32" height="32" alt="殺戮命令天賦圖示"> [殺戮命令](#adamant_dog_damage_after_ability)<br>- Kill Order | <ul><li>使用戰鬥技能後，電子獒犬傷害提高 50%，持續 12 秒；效果生效時再次使用戰鬥技能可刷新。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="32" height="32" alt="處刑命令天賦圖示"> [處刑命令](#adamant_execution_order)<br>- Execution Order | <ul><li>自動標記前方 40 公尺內的精英、專家或頭目。</li><li>你或電子獒犬擊殺標記目標後，恢復 15% 最大韌性，並獲得 8 秒傷害與攻速加成。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/47d0c2b2-0d8e-4906-a528-48f9488353e9" width="32" height="32" alt="終點站令狀天賦圖示"> [終點站令狀](#adamant_terminus_warrant)<br>- Terminus Warrant | <ul><li>遠程每發每個命中敵人建立近戰正義層數，弱點命中改為給 3 層；近戰命中建立遠程正義層數，各最多 20 層。</li><li>切換至對應武器時消耗層數並啟動固定 12 秒增益。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/b838686c-aaa0-49a2-bbea-fc9e074bb6cf" width="32" height="32" alt="堅定不移天賦圖示"> [堅定不移](#adamant_forceful)<br>- Forceful | <ul><li>踉蹌命中或格擋可累積最多 10 層，每層增加 5% 衝擊並降低受傷倍率。</li><li>層數共用 5 秒時間；受傷每 0.25 秒最多移除 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="孤狼天賦圖示"> [孤狼](#adamant_disable_companion)<br>- Lone Wolf | <ul><li>選取後伺服器端移除電子獒犬，改給自身傷害、攻速、韌性受傷倍率與閃擊充能補給。</li><li>一般手榴彈每 45 秒補 1 顆；使用震撼地雷時每 90 秒補 1 顆；補給只在有缺額時計時。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/1016875d-cc4c-44f2-8a06-c93155d482d4" width="32" height="32" alt="律法之志天賦圖示"> [律法之志](#adamant_forceful_toughness_regen_per_stack)<br>- Will of the Lex | <ul><li>選取後 堅定不移 每層每秒恢復 0.5% 最大韌性。</li><li>效果隨 堅定不移 層數逐秒累積，最多 10 層。</li></ul> | 鑰石 |
@@ -295,6 +296,27 @@
 - **算例**：最大韌性 100 時恢復 15 點，最多補滿。單計增傷，玩家基礎 100 點變成 110，獒犬基礎 100 點變成 250；玩家已有同階段 25% 增傷時為 100 × (1 + 25% + 10%) = 135。可加速的 1 秒攻擊動作則為 1 ÷ 1.1 ≈ 0.91 秒。
 
 [詳細資料](TALENTS%20Arbites/adamant_execution_order.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_terminus_warrant"></a>
+### 終點站令狀(Terminus Warrant)
+
+<img src="https://github.com/user-attachments/assets/47d0c2b2-0d8e-4906-a528-48f9488353e9" width="72" height="72" alt="終點站令狀天賦圖示">
+
+- **累積與上限**：遠程命中每個敵人給 1 層近戰正義；弱點命中該敵人給 3 層。每次射擊對同一目標只記一次，最多 20 層。近戰每次命中給 1 層遠程正義，最多 20 層。
+
+- **切換與消耗**：切換至近戰武器會消耗近戰正義，得到 12 秒 +10% 近戰威力與 20% 韌性受傷減免；切換至遠程武器會消耗遠程正義，得到 12 秒 +10% 遠程威力、+50% 壓制與 +50% 遠程順劈。這些核心增益是固定值，不隨消耗層數比例增減。
+
+- **韌性算例**：近戰效果 使韌性傷害倍率為 0.8，原本 100 點韌性傷害變成 80 點；只在 12 秒效果 存續期間套用。
+
+- **時間與威力算例**：再切換到另一類武器就會提前結束目前增益。威力單計本效果為 500 × 1.1 = 550；原有同階段 20% 威力時，則由 600 變成 650。累積 1 層與 20 層都能啟動核心固定加成，層數另影響搭配升級的效果。
+
+#### 繁中原文勘誤
+
+- 原文「弱點命中則額外堆疊 3 層」容易誤認為 1 + 3 = 4 層；正確是弱點命中合計獲得 3 層，取代一般命中的 1 層。
+
+[詳細資料](TALENTS%20Arbites/adamant_terminus_warrant.md) · [返回目錄](#talent-index)
 
 ---
 
