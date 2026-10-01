@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_reduced_threat_after_combat_ability` / `veteran_reduced_threat_after_combat_ability` - 低調
+  - 英文對應：Low Profile。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1268-L1302)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_invisibility_on_combat_ability` / `veteran_invisibility_on_combat_ability` - 滲透
   - 英文對應：Infiltrate。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2032-L2113)；此來源證明識別鍵與天賦關係。

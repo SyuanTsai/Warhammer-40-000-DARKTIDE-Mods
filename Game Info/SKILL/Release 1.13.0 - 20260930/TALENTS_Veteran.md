@@ -17,6 +17,7 @@
 | 光環 | [生存專家(Survivalist)](#veteran_aura_gain_ammo_on_elite_kill_improved) | 你或擁有此光環效果的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備彈上限的彈藥。 |
 | 能力 | [火力齊射(Volley Fire)](#veteran_combat_ability_stance) | 立即切換至遠程武器，進入持續 6 秒的火力齊射；冷卻時間 30 秒。 |
 | 能力 | [滲透(Infiltrate)](#veteran_invisibility_on_combat_ability) | 立即回滿自身韌性，並隱身最多 8 秒；冷卻時間 40 秒。 |
+| 能力 | [低調(Low Profile)](#veteran_reduced_threat_after_combat_ability) | 使用戰鬥能力後，敵人選你為目標的仇恨權重降低 90%，持續 10 秒。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
@@ -274,6 +275,26 @@
 - 若第 3 秒解除隱身，增傷維持到約第 `3 + 8 = 11 秒`；此時距離能力冷卻完成仍約有 `40 − 11 = 29 秒`。
 
 [詳細資料](TALENTS%20Veteran/veteran_invisibility_on_combat_ability.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_reduced_threat_after_combat_ability"></a>
+
+### 低調(Low Profile)
+
+<img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="72" height="72" alt="低調天賦圖示">
+
+- **使用戰鬥能力後，敵人選你為目標的仇恨權重降低 90%，持續 10 秒。**
+- 使用滲透時，隱身期間即生效，解除隱身後再保留 **10 秒**。
+- 效果不疊層；已開始 10 秒倒數後，再次施放不會重設這次倒數。
+- 敵人仍可能因距離、攻擊行為等條件選你為目標。
+
+#### 仇恨與時間算例
+
+- 假設其他選敵條件相同，該階段原權重 100：`100 × (1 − 90%) = 10`；這不代表只有 10% 機率被攻擊。
+- 第 3 秒解除滲透，效果保留至約第 `3 + 10 = 13 秒`。
+
+[詳細資料](TALENTS%20Veteran/veteran_reduced_threat_after_combat_ability.md) · [返回目錄](#talent-index)
 
 ---
 
