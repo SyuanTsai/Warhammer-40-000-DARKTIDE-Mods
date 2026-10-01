@@ -16,6 +16,7 @@
 | [破骨者之環](#ogryn_melee_damage_coherency_improved) | 未見明確矛盾 |
 | [優勝劣汰](#ogryn_damage_vs_suppressed_coherency) | 未見明確矛盾 |
 | [跟緊我！](#ogryn_toughness_regen_aura) | 未見明確矛盾 |
+| [不屈不撓](#ogryn_longer_charge) | 未見明確矛盾 |
 | [跺殺之靴](#ogryn_charge_toughness) | 未見明確矛盾 |
 | [粉碎](#ogryn_charge_applies_bleed) | 未見明確矛盾 |
 | [踐踏](#ogryn_charge_trample) | 未見明確矛盾 |
@@ -141,6 +142,13 @@
 - 描述鍵：`loc_talent_ogryn_toughness_regen_aura_desc`；hash：`89218b06`。
 - 結論：未見明確矛盾。同 hash 89218b06 的繁中與英文都說明你與協同盟友獲得韌性恢復加成，未宣稱光環會自動恢復韌性。原始設定提高的是恢復量修正，而自然恢復使用另一個速率屬性。本機 Build 25492122 的繁中與英文文字以相同 hash 配對；公開固定 SHA 是否對應同一 Build 尚未確認。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_toughness_regen_aura.md)。
+
+<a id="ogryn_longer_charge"></a>
+## 不屈不撓(Indomitable)
+
+- 描述鍵：`loc_talent_ogryn_bull_rush_distance_desc`；hash：`64c5f9de`。
+- 結論：未見明確矛盾。繁中原文稱衝鋒距離「增加至24」並說「撞到巨獸後衝鋒停止」；英文也寫距離增加至該值、碰撞巨獸時停止。兩種原文都列出5秒攻速與移速加成，沒有數值或效果方向衝突；衝鋒期間的基礎被動屬實作補充。Build 25492122 與公開 SHA 版本對應待核。
+- [原始碼推導與限制](ogryn_longer_charge.md)。
 
 <a id="ogryn_charge_toughness"></a>
 ## 跺殺之靴(Stomping Boots)

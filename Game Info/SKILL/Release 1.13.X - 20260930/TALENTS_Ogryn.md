@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/78f209fd-3e8b-456d-954d-c67fdf6e23ee" width="32" height="32" alt="破骨者之環天賦圖示"> [破骨者之環](#ogryn_melee_damage_coherency_improved)<br>- Bonebreaker's Aura | <ul><li>「破骨者之環」使你和協同範圍內隊友的近戰攻擊傷害提高 10%。</li><li>這是基礎近戰光環的強化版本，採用 10% 數值，不會再把基礎 7.5% 額外相加。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/4b71152f-747b-450c-9d3a-82a313fc8360" width="32" height="32" alt="優勝劣汰天賦圖示"> [優勝劣汰](#ogryn_damage_vs_suppressed_coherency)<br>- Coward Culling | <ul><li>「優勝劣汰」使你和協同範圍內隊友對受壓制敵人的傷害提高 20%；另使你造成的壓制提高 25%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/014cd689-2381-43e8-9241-b0a13af77036" width="32" height="32" alt="跟緊我！天賦圖示"> [跟緊我！](#ogryn_toughness_regen_aura)<br>- Stay Close! | <ul><li>「跟緊我！」使你和協同範圍內隊友符合條件的韌性恢復量提高 20%。</li><li>這項效果提高每次恢復量，不會自行啟動韌性恢復，也不會把自然恢復速度提高 20%。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/582a28cf-14c5-4757-a51c-cb5924dbf0a3" width="32" height="32" alt="不屈不撓天賦圖示"> [不屈不撓](#ogryn_longer_charge)<br>- Indomitable | <ul><li>衝鋒最遠 24 公尺，撞到巨獸停止；基礎冷卻 25 秒。</li><li>結束後 5 秒，近戰攻速與移速提高 25%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0932d1f6-96b1-47d9-ad81-861fe9914d9a" width="32" height="32" alt="跺殺之靴天賦圖示"> [跺殺之靴](#ogryn_charge_toughness)<br>- Stomping Boots | <ul><li>衝鋒期間每次撞中敵人，恢復最大韌性的 10%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9194fb70-c794-460d-af2a-068ae6c4fd31" width="32" height="32" alt="粉碎天賦圖示"> [粉碎](#ogryn_charge_applies_bleed)<br>- Pulverise | <ul><li>衝鋒命中施加 5 層流血；同一衝鋒對同一敵人只施加一次。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/fa5d9c18-f792-4a86-812f-8547ba3cf89e" width="32" height="32" alt="踐踏天賦圖示"> [踐踏](#ogryn_charge_trample)<br>- Trample | <ul><li>衝鋒命中每次增加 2.5% 傷害，最多 20 層、50%，持續 10 秒。</li></ul> | 能力 |
@@ -226,6 +227,21 @@
 ---
 
 ## 能力
+
+<a id="ogryn_longer_charge"></a>
+### 不屈不撓(Indomitable)
+
+<img src="https://github.com/user-attachments/assets/582a28cf-14c5-4757-a51c-cb5924dbf0a3" width="72" height="72" alt="不屈不撓天賦圖示">
+
+- **衝鋒與冷卻**：向前衝鋒，最大距離從 12 公尺提高為 12 × 2 = 24 公尺，撞開沿途敵人；撞到巨獸會停止，地形也會限制距離。只有一層充能，基礎冷卻 25 秒。
+
+- **衝鋒後增益**：衝鋒結束後，近戰攻速與移動速度提高 25%，持續 5 秒。受攻速控制的 1 秒動作變成 1 ÷ 1.25 = 0.8 秒；原本每秒移動 5 公尺，變成 6.25 公尺。
+
+- **衝鋒防護**：保留基礎衝鋒期間的 25% 減傷；只計這份效果，100 點傷害變成 75 點。衝撞與結束衝擊本身不直接造成生命傷害；粉碎提供的流血另外計算。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_longer_charge.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="ogryn_charge_toughness"></a>
 ### 跺殺之靴(Stomping Boots)
