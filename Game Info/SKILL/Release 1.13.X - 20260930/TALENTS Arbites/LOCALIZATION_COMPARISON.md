@@ -49,6 +49,7 @@
 | [惡徒退散](#adamant_damage_vs_suppressed) | 未見明確矛盾 |
 | [正當手段](#adamant_stacking_damage) | 未見明確矛盾 |
 | [壓制武力](#adamant_staggered_enemies_deal_less_damage) | 繁中原文勘誤 |
+| [震盪攻擊](#adamant_melee_weakspot_hits_count_as_stagger) | 未見明確矛盾 |
 | [還治其人之身](#adamant_perfect_block_damage_boost) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
@@ -341,6 +342,13 @@
 - 繁中原文短引：使敵人踉蹌時，對其造成{damage:%s}傷害，持續{duration:%s}秒。
 - 同源英文：Staggering an Enemy makes them deal {damage:%s} Damage. Lasts {duration:%s}s.
 - [原始碼推導與限制](adamant_staggered_enemies_deal_less_damage.md)。
+
+<a id="adamant_melee_weakspot_hits_count_as_stagger"></a>
+## 震盪攻擊(Concussive)
+
+- 描述鍵：`loc_talent_adamant_melee_weakspot_hits_count_as_stagger_desc`；hash：`3be4daea`。
+- 結論：未見明確矛盾。繁中「視為踉蹌」與英文 count as Staggered一致，沒有宣稱強制打出踉蹌動畫。
+- [原始碼推導與限制](adamant_melee_weakspot_hits_count_as_stagger.md)。
 
 <a id="adamant_perfect_block_damage_boost"></a>
 ## 還治其人之身(Retaliatory Force)

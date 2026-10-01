@@ -47,6 +47,7 @@
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="惡徒退散天賦圖示"> [惡徒退散](#adamant_damage_vs_suppressed)<br>- Cower, Miscreants! | <ul><li>對受壓制敵人的傷害提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="正當手段天賦圖示"> [正當手段](#adamant_stacking_damage)<br>- Justified Measures | <ul><li>攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/af381ce2-1360-49a1-931d-6db3fb174166" width="32" height="32" alt="壓制武力天賦圖示"> [壓制武力](#adamant_staggered_enemies_deal_less_damage)<br>- Suppression Force | <ul><li>以近戰或推擊命中處於踉蹌狀態的敵人，使其造成的傷害降低 20%，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/2577c784-85c4-473c-b9ba-a88f8de35355" width="32" height="32" alt="震盪攻擊天賦圖示"> [震盪攻擊](#adamant_melee_weakspot_hits_count_as_stagger)<br>- Concussive | <ul><li>近戰命中弱點後，目標在 4 秒內視為處於踉蹌狀態。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/96221430-4610-4bf3-9b19-4fd056c99e74" width="32" height="32" alt="還治其人之身天賦圖示"> [還治其人之身](#adamant_perfect_block_damage_boost)<br>- Retaliatory Force | <ul><li>格擋耐力消耗降低 15%；完美格擋後，傷害與攻速提高 15%，持續 8 秒。</li></ul> | 技能 |
 
 ---
@@ -595,6 +596,19 @@
 - 原文「對其造成…傷害」誤寫效果方向。正確效果是讓該敵人造成的傷害降低 20%，持續 5 秒，不是對其追加傷害。
 
 [詳細資料](TALENTS%20Arbites/adamant_staggered_enemies_deal_less_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_melee_weakspot_hits_count_as_stagger"></a>
+### 震盪攻擊(Concussive)
+
+<img src="https://github.com/user-attachments/assets/2577c784-85c4-473c-b9ba-a88f8de35355" width="72" height="72" alt="震盪攻擊天賦圖示">
+
+- **運作方式**：近戰命中弱點後，目標在 4 秒內會被相關天賦視為踉蹌；不必真的把敵人打退。再次命中可延續這項判定。
+
+- **搭配算例**：搭配鎮壓異己的 10% 對踉蹌增傷，後續符合條件的基礎 100 點攻擊變成 100 × 1.1 = 110 點。單選本天賦不會自行增加傷害或強制敵人倒退。
+
+[詳細資料](TALENTS%20Arbites/adamant_melee_weakspot_hits_count_as_stagger.md) · [返回目錄](#talent-index)
 
 ---
 
