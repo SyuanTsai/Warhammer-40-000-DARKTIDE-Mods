@@ -63,3 +63,16 @@
 [原始碼依據與算例條件](broker_passive_improved_sprint_dodge.md)
 
 ---
+
+<a id="broker_stimm_description_talent"></a>
+## 財閥專員(Cartel Special)：專用興奮劑
+
+- **調配方式**：在專用興奮劑配方中選擇效果；配方有獨立的 30 點額度，與一般天賦分開。
+
+- **裝備條件**：至少選擇一項配方，才會取得專用興奮劑。配方的效果會在使用興奮劑後生效。
+
+- **配方內容**：可搭配攻速、威力、韌性與戰鬥能力恢復等效果；詳細數值見[興奮劑配方](../TALENTS_Scum.md#broker_stimm_activation_talent)。
+
+[原始碼依據與算例條件](broker_stimm_description_talent.md)
+
+---

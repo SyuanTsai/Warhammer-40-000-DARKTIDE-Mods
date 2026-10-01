@@ -1724,3 +1724,5 @@
 - Kalma V - 抗焦慮藥 V（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L753-L757)）
 
 - Like the Wind - 迅如疾風（沿用本機繁中名稱，待使用者確認；`broker_passive_improved_sprint_dodge`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L65-L67)）
+
+- Cartel Special - 財閥專員（沿用本機繁中名稱，待使用者確認；`broker_stimm_description_talent`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L35-L89)）
