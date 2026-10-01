@@ -14,6 +14,7 @@
 | [熵能轉移](#cryptic_electrocution_toughness) | 未見明確矛盾 |
 | [過載轉移晶格](#cryptic_electrocution_defense) | 未見明確矛盾 |
 | [電擊破壞協定](#cryptic_pushing_grants_cleave) | 未見明確矛盾 |
+| [輻射槽](#cryptic_stacking_ranged_damage) | 待同版核對 |
 | [報應導管](#cryptic_damage_vs_electrocuted_scaling_on_charge) | 未見明確矛盾 |
 | [電流標記陣列](#cryptic_elite_kills_damage) | 作用條件用語有誤 |
 | [絕境中繼](#cryptic_crit_chance_based_on_charge) | 未見明確矛盾 |
@@ -72,6 +73,13 @@
 - 描述鍵：`loc_talent_cryptic_pushing_grants_cleave_alt_desc`；hash：`d5aece03`。
 - 結論：未見明確矛盾。繁中與英文一致；補充順劈的作用量。
 - [原始碼推導與限制](cryptic_pushing_grants_cleave.md)。
+
+<a id="cryptic_stacking_ranged_damage"></a>
+## 輻射槽(Rad-Sink)
+
+- 描述鍵：`loc_talent_cryptic_stacking_ranged_damage_desc`；hash：`0ff2b66e`。
+- 結論：待同版核對。雙語字面可讀成等待1秒後下一秒才加層；固定來源首層1秒。保留跨版本/顯示差異，不列繁中專屬勘誤。
+- [原始碼推導與限制](cryptic_stacking_ranged_damage.md)。
 
 <a id="cryptic_damage_vs_electrocuted_scaling_on_charge"></a>
 ## 報應導管(Retribution Conduit)
