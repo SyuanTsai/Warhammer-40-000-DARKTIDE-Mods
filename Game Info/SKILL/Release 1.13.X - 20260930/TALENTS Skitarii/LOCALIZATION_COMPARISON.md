@@ -10,6 +10,7 @@
 |---|---|
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
+| [歐姆尼賽亞充能聖歌](#cryptic_multi_hits_restore_toughness) | 未見明確矛盾 |
 | [熵能轉移](#cryptic_electrocution_toughness) | 未見明確矛盾 |
 | [過載轉移晶格](#cryptic_electrocution_defense) | 未見明確矛盾 |
 | [報應導管](#cryptic_damage_vs_electrocuted_scaling_on_charge) | 未見明確矛盾 |
@@ -38,6 +39,13 @@
 - 描述鍵：`loc_talent_cryptic_dr_on_toughness_break_desc`；hash：`05a4e1a1`。
 - 結論：待同版核對。中英都把15秒寫成觸發間隔，但固定來源採5秒效果後加15秒冷卻。屬雙語文字與來源實作差異，尚未確認同版，不能定為繁中誤譯。
 - [原始碼推導與限制](cryptic_dr_on_toughness_break.md)。
+
+<a id="cryptic_multi_hits_restore_toughness"></a>
+## 歐姆尼賽亞充能聖歌(Omnissian Recharge Litany)
+
+- 描述鍵：`loc_talent_cryptic_multi_hits_restore_toughness_desc`；hash：`6db4bbd5`。
+- 結論：未見明確矛盾。原文「3名以上」成立；補充第3次有效命中與觸發間隔，不屬誤譯。
+- [原始碼推導與限制](cryptic_multi_hits_restore_toughness.md)。
 
 <a id="cryptic_electrocution_toughness"></a>
 ## 熵能轉移(Entropic Transfer)

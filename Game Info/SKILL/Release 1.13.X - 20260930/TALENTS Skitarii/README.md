@@ -7,12 +7,13 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **97 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10)。內部 tree version 18 不等於遊戲發行版號。
 
-完成 16／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 17／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
 | 技能 | [能量載分配鏈路](cryptic_crits_grant_tdr.md) / `cryptic_crits_grant_tdr` | `node_6561d779-b477-4e35-a588-e74c910e92c9` | 完成（核心靜態機制） |
 | 技能 | [適應性戰鬥記憶體](cryptic_dr_on_toughness_break.md) / `cryptic_dr_on_toughness_break` | `node_3215cbda-7600-4e99-85d5-b29a6a22bc08` | 完成（核心靜態機制） |
+| 技能 | [歐姆尼賽亞充能聖歌](cryptic_multi_hits_restore_toughness.md) / `cryptic_multi_hits_restore_toughness` | `node_3dfdfc48-08a2-428d-8e64-f2a7d9e8a3d0` | 完成（核心靜態機制） |
 | 技能 | [熵能轉移](cryptic_electrocution_toughness.md) / `cryptic_electrocution_toughness` | `node_cd91dbac-9a28-4af5-ae75-7c8022169f5b` | 完成（核心靜態機制） |
 | 技能 | [過載轉移晶格](cryptic_electrocution_defense.md) / `cryptic_electrocution_defense` | `node_e0953fb3-717d-40b6-9af8-c3dc03597315` | 完成（核心靜態機制） |
 | 技能 | [報應導管](cryptic_damage_vs_electrocuted_scaling_on_charge.md) / `cryptic_damage_vs_electrocuted_scaling_on_charge` | `node_e58ba04c-1e81-4f25-bea9-38a0ee1e62f5` | 完成（核心靜態機制） |
