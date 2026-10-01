@@ -81,3 +81,14 @@
 [原始碼依據與算例條件](ogryn_dodge_stagger.md)
 
 ---
+
+<a id="ogryn_coherency_radius_increase"></a>
+## 卓越氣場(Towering Presence)
+
+- **協同範圍**：自身協同半徑增加 50%；光環的傷害或恢復百分比不因此增加。
+
+- **範圍算例**：若原協同半徑為 15 公尺，套用後為 15 × (1 + 50%) = 22.5 公尺。若同階段另有 25%，則為 15 × (1 + 50% + 25%) = 26.25 公尺。
+
+[原始碼依據與算例條件](ogryn_coherency_radius_increase.md)
+
+---
