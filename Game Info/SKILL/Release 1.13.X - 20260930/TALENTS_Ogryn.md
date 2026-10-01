@@ -23,6 +23,7 @@
 | <img src="https://github.com/user-attachments/assets/6f504222-c9bf-4dff-a549-138c3be3bde4" width="32" height="32" alt="集火射擊天賦圖示"> [集火射擊](#ogryn_special_ammo_fire_shots)<br>- Light 'em Up | <ul><li>貼身火力期間，遠程命中施加 4 層燃燒，最多補至 16 層。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/594ab4d6-12e3-4941-bf1a-c5812b128b23" width="32" height="32" alt="重要干擾天賦圖示"> [重要干擾](#ogryn_taunt_damage_taken_increase)<br>- Valuable Distraction | <ul><li>忠誠守護者使受影響敵人承受的傷害提高 20%，持續 15 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/53442500-ad2a-446b-9f9b-0d26aa2438d9" width="32" height="32" alt="壯膽子彈天賦圖示"> [壯膽子彈](#ogryn_ranged_stance_toughness_regen)<br>- Bullet Bravado | <ul><li>貼身火力期間，每次射擊恢復 2.5% 最大韌性，換彈恢復 15%。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/80ee299a-c486-4957-bf40-6b1d631fd748" width="32" height="32" alt="一點都不痛！天賦圖示"> [一點都不痛！](#ogryn_taunt_restore_toughness)<br>- No Pain! | <ul><li>每次嘲諷立即恢復 10% 最大韌性。</li><li>每名受影響敵人另提供每秒 0.5% 恢復，最多每秒 10%，持續 3.25 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/fa5d9c18-f792-4a86-812f-8547ba3cf89e" width="32" height="32" alt="踐踏天賦圖示"> [踐踏](#ogryn_charge_trample)<br>- Trample | <ul><li>衝鋒命中每次增加 2.5% 傷害，最多 20 層、50%，持續 10 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ea712cab-0dd4-47fa-a2c5-98edb7e41783" width="32" height="32" alt="爆限超載天賦圖示"> [爆限超載](#ogryn_leadbelcher_no_ammo_chance)<br>- Burst Limiter Override | <ul><li>遠程攻擊有 15% 基礎機率觸發幸運子彈，觸發的射擊不消耗彈藥。</li><li>遠程擊殺每層增加 2% 遠程傷害，最多 10 層；加層時刷新 10 秒期限。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9436a125-4e9f-4655-ae8f-4975db2f4af1" width="32" height="32" alt="麻木天賦圖示"> [麻木](#ogryn_carapace_armor)<br>- Feel No Pain | <ul><li>開始時有 10 層麻木；每層增加韌性恢復，並使韌性所受傷害再乘以 0.97。</li><li>受到有效傷害時最多每秒失去一層；未滿層時每隔 2 秒恢復一層。</li></ul> | 鑰石 |
@@ -348,6 +349,23 @@
 - **計數方式**：按射擊動作與換彈結算，並非每顆霰彈各恢復一次；連射、連發或特殊武器的射擊方式會影響實際觸發次數。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_ranged_stance_toughness_regen.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_taunt_restore_toughness"></a>
+### 一點都不痛！(No Pain!)
+
+<img src="https://github.com/user-attachments/assets/80ee299a-c486-4957-bf40-6b1d631fd748" width="72" height="72" alt="一點都不痛！天賦圖示">
+
+- **立即恢復**：忠誠守護者及第 3、6 秒的兩次重複嘲諷，每次立即恢復最大韌性的 10%，即使附近沒有敵人也會恢復。
+
+- **持續恢復**：每次嘲諷每影響一名敵人，增加一層每秒恢復最大韌性 0.5% 的效果，最多 20 層、每秒 10%；效果持續 3.25 秒，再次加層刷新時間。
+
+- **分段算例**：最大韌性 100，三次嘲諷各影響 4 名敵人，立即恢復合計 100 × 10% × 3 = 30 點；持續恢復層數依序為 4、8、12，每秒恢復 2、4、6 點。
+
+- **總量算例**：忽略更新誤差、期間一直有足夠缺額且沒有其他恢復加成時，前 3 秒回復 2 × 3 = 6 點、接著 3 秒回復 4 × 3 = 12 點、最後 3.25 秒回復 6 × 3.25 = 19.5 點；加上立即恢復共 67.5 點。實際仍受每個時間點的韌性缺額限制。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_taunt_restore_toughness.md) · [返回目錄](#talent-index)
 
 ---
 

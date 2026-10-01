@@ -24,6 +24,7 @@
 | [集火射擊](#ogryn_special_ammo_fire_shots) | 未見明確矛盾 |
 | [重要干擾](#ogryn_taunt_damage_taken_increase) | 未見明確矛盾 |
 | [壯膽子彈](#ogryn_ranged_stance_toughness_regen) | 未見明確矛盾 |
+| [一點都不痛！](#ogryn_taunt_restore_toughness) | 跨來源待同版核對 |
 | [踐踏](#ogryn_charge_trample) | 未見明確矛盾 |
 | [爆限超載](#ogryn_leadbelcher_no_ammo_chance) | 未見明確矛盾 |
 | [麻木](#ogryn_carapace_armor) | 跨來源待同版核對 |
@@ -203,6 +204,13 @@
 - 描述鍵：`loc_talent_ogryn_special_ammo_toughness_on_shot_and_reload_desc`；hash：`626514ed`。
 - 結論：未見明確矛盾。繁中原文逐字列出每發子彈回復2.5%韌性、每次換彈回復15%；英文原文對應列出每發射擊與每次換彈的相同數值。姿態啟動的自動換彈也會送出換彈事件，是消費端補充；數字與觸發沒有翻譯矛盾。版本對應仍待核。
 - [原始碼推導與限制](ogryn_ranged_stance_toughness_regen.md)。
+
+<a id="ogryn_taunt_restore_toughness"></a>
+## 一點都不痛！(No Pain!)
+
+- 描述鍵：`loc_talent_ogryn_taunt_restore_toughness_new_desc`；hash：`03dc3a99`。
+- 結論：跨來源待同版核對。同源繁中與英文的恢復條件、比例與上限一致。固定來源描述格式duration為3秒，執行buff為3.25秒；這是共同顯示值與實作差異，未核同版前不判為繁中誤譯。
+- [原始碼推導與限制](ogryn_taunt_restore_toughness.md)。
 
 <a id="ogryn_charge_trample"></a>
 ## 踐踏(Trample)
