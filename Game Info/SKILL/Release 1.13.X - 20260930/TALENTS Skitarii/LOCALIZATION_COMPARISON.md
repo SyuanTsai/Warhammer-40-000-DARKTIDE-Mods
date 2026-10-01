@@ -18,6 +18,7 @@
 | [強化能量循環](#cryptic_increased_passive_cooldown_regen) | 未見明確矛盾 |
 | [電容回收迴路](#cryptic_multi_hits_grant_power) | 未見明確矛盾 |
 | [鋼鐵富足](#cryptic_chordclaw_capacitance_restoration) | 未見明確矛盾 |
+| [千刀萬剮](#cryptic_chordclaw_consecutive_bonus) | 未見明確矛盾 |
 | [削切協議](#cryptic_dissector) | 未見明確矛盾；補充計算與限制 |
 | [極限電容](#cryptic_redline) | 未見明確矛盾；補充計算與限制 |
 | [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
@@ -147,6 +148,13 @@
 - 描述鍵：`loc_talent_cryptic_chordclaw_capacitance_restoration_desc`；hash：`18058d13`。
 - 結論：未見明確矛盾。inventory 中英都表示弦爪擊殺後於5秒內恢復25%電容量，與來源觸發類型、25%總量及5秒回復視窗相符。觸發限於指定弦爪傷害類型，以及再觸發刷新而不疊倍率，是原文省略而非明確矛盾。
 - [原始碼推導與限制](cryptic_chordclaw_capacitance_restoration.md)。
+
+<a id="cryptic_chordclaw_consecutive_bonus"></a>
+## 千刀萬剮(Slice and Dice)
+
+- 描述鍵：`loc_talent_cryptic_chordclaw_consecutive_bonus_desc`；hash：`0ec90e2e`。
+- 結論：未見明確矛盾。inventory 中英的使用條件、每層20%傷害、5秒及最多3層與原始設定一致；層數在技能啟動時增加、只作用於弦爪屬程式實作範圍的補充說明。
+- [原始碼推導與限制](cryptic_chordclaw_consecutive_bonus.md)。
 
 <a id="cryptic_dissector"></a>
 ## 削切協議(Flensing Protocols)
