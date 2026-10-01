@@ -25,6 +25,7 @@
 | 鑰石 | [視野狹窄(Tunnel Vision)](#veteran_snipers_focus_toughness_bonus) | 每層狙擊專注使韌性恢復量增加 4%。 |
 | 鑰石 | [遠程刺客(Long Range Assassin)](#veteran_snipers_focus_increased_stacks) | 狙擊專注的效果上限由 10 層提高至 15 層。 |
 | 鑰石 | [武器專家(Weapons Specialist)](#veteran_weapon_switch_passive) | 切換至遠程武器：手持近戰武器時，每次擊殺累積 1 層，最多 10 層。切出遠程武器後，消耗所有層數，每層提高 2% 遠程攻擊速度與裝填速度，持續 10 秒；再切換武器會提前結束。 |
+| 鑰石 | [時刻警覺(On Your Toes)](#veteran_weapon_switch_replenish_toughness) | 觸發方式：儲存至少 1 層武器專家的加成後，切換至對應武器，恢復 20% 最大韌性。恢復量固定，不隨層數增加。 |
 | 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
 | 技能 | [戰術裝填(Tactical Reload)](#veteran_faster_reload_on_non_empty_clips) | 彈匣還有彈藥時開始裝填，裝填速度增加 25%。 |
 | 技能 | [齊射能手(Volley Adept)](#veteran_reload_speed_on_elite_kill) | 擊殺精英或專家敵人後，下一次裝填速度增加 30%。 |
@@ -444,6 +445,20 @@
 - **累積條件：**擊殺算在哪一側，取決於敵人死亡時你手持的武器；持續傷害或先前投出的手榴彈擊殺，也依當時手持的武器累積。
 
 [詳細資料](TALENTS%20Veteran/veteran_weapon_switch_passive.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_weapon_switch_replenish_toughness"></a>
+
+### 時刻警覺(On Your Toes)
+
+<img src="https://github.com/user-attachments/assets/a6e24eb8-063a-45a5-8796-acde81d1f734" width="72" height="72" alt="時刻警覺天賦圖示">
+
+- **觸發方式：**儲存至少 1 層武器專家的加成後，切換至對應武器，恢復 20% 最大韌性。恢復量固定，不隨層數增加。
+- **冷卻：**切至遠程與切至近戰，各自有 3 秒冷卻。即使冷卻尚未結束，切換仍會用掉該側儲存的層數。
+- **恢復算例：**最大韌性 100 點時，每次恢復 `100 × 20% = 20 點`。目前有 90 點則只補到 100 點；上述數字未計其他韌性恢復加成。
+
+[詳細資料](TALENTS%20Veteran/veteran_weapon_switch_replenish_toughness.md) · [返回目錄](#talent-index)
 
 ---
 

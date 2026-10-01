@@ -6,7 +6,7 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 60／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 61／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -39,7 +39,7 @@
 | 鑰石 | [視野狹窄](veteran_snipers_focus_toughness_bonus.md) / `veteran_snipers_focus_toughness_bonus` | `node_efbff75c-83c1-4310-a721-4bce3583cb3e` | 完成（核心靜態機制） |
 | 鑰石 | [遠程刺客](veteran_snipers_focus_increased_stacks.md) / `veteran_snipers_focus_increased_stacks` | `node_c426c7f4-97d1-4176-810c-9dd935ef89cd` | 完成（核心靜態機制） |
 | 鑰石 | [武器專家](veteran_weapon_switch_passive.md) / `veteran_weapon_switch_passive` | `node_09bb7c07-c733-4d08-9387-50f404da5ce5` | 完成（核心靜態機制） |
-| 鑰石 | 時刻警覺 / `veteran_weapon_switch_replenish_toughness` | `node_18ddfb8a-8035-4232-90b2-c114a1451ac7` | 待核對 |
+| 鑰石 | [時刻警覺](veteran_weapon_switch_replenish_toughness.md) / `veteran_weapon_switch_replenish_toughness` | `node_18ddfb8a-8035-4232-90b2-c114a1451ac7` | 完成（核心靜態機制） |
 | 鑰石 | 有備無患 / `veteran_weapon_switch_replenish_ammo` | `node_265dcb9e-af95-4e79-8ccd-1591951ac6ac` | 待核對 |
 | 鑰石 | 活力煥發 / `veteran_weapon_switch_replenish_stamina` | `node_78c14d65-e167-4148-ac90-b53c00f2d4f4` | 待核對 |
 | 鑰石 | 鎖定目標 / `veteran_improved_tag` | `node_18f58702-92f4-4084-afc3-934731f36b83` | 待核對 |
