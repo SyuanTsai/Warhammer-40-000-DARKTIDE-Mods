@@ -7,12 +7,13 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **82 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L3-L10)。內部 tree version 29 不等於遊戲發行版號。
 
-完成 50／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 51／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
 | 鑰石 | [死戰到底](zealot_resist_death.md) / `zealot_resist_death` | `node_0581bad8-f8c0-4321-a90b-756013fd3981` | 完成（核心靜態機制） |
 | 鑰石 | [殉道](zealot_martyrdom.md) / `zealot_martyrdom` | `node_00de95af-259d-4c82-ae16-91fa3b533ed9` | 完成（核心靜態機制） |
+| 鑰石 | [不滅意志](zealot_martyrdom_grants_toughness.md) / `zealot_martyrdom_grants_toughness` | `node_2d176f63-527c-4758-a1c1-eed8dfd6ac78` | 完成（核心靜態機制） |
 | 鑰石 | [狂燥之心](zealot_martyrdom_grants_attack_speed.md) / `zealot_martyrdom_grants_attack_speed` | `node_9d8273b3-4c5d-4317-b480-54a125376f0d` | 完成（核心靜態機制） |
 | 鑰石 | [吊命聖徒](zealot_resist_death_heal.md) / `zealot_resist_death_heal` | `node_18bc94af-2948-4b9a-84e8-5c9408b37343` | 完成（核心靜態機制） |
 | 鑰石 | [狂熱朝聖者](zealot_resist_death_ability.md) / `zealot_resist_death_ability` | `node_3483d4d7-3f13-48de-8055-ecfc04d70aae` | 完成（核心靜態機制） |

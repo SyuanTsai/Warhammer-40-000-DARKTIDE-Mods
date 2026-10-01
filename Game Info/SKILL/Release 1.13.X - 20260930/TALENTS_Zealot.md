@@ -8,6 +8,7 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="死戰到底天賦圖示"> [死戰到底](#zealot_resist_death)<br>- Until Death | <ul><li>承受致命傷害時獲得 8 秒免死效果。</li><li>效果結束後冷卻 120 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="殉道天賦圖示"> [殉道](#zealot_martyrdom)<br>- Martyrdom | <ul><li>每失去一整格生命，近戰傷害增加 10%，最多 5 層。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="32" height="32" alt="不滅意志天賦圖示"> [不滅意志](#zealot_martyrdom_grants_toughness)<br>- I Shall Not Fall | <ul><li>殉道每缺少一格生命傷口，韌性承傷降低 7.5%，最多 5 格。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/2a096b34-3273-406a-82fc-23c774fcaedf" width="32" height="32" alt="狂燥之心天賦圖示"> [狂燥之心](#zealot_martyrdom_grants_attack_speed)<br>- Maniac | <ul><li>殉道每缺少一格生命傷口，近戰攻擊速度提高 6%，最多 5 格。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab" width="32" height="32" alt="吊命聖徒天賦圖示"> [吊命聖徒](#zealot_resist_death_heal)<br>- Holy Revenant | <ul><li>死戰到底觸發時擊退附近敵人。</li><li>免死期間按造成傷害累積治療額度；近戰換算率為一般傷害的 3 倍。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="狂熱朝聖者天賦圖示"> [狂熱朝聖者](#zealot_resist_death_ability)<br>- Zealous Pilgrim | <ul><li>使用戰鬥技能後獲得 4 秒免死效果。</li><li>隱身技能在退出隱身後生效；聖物技能在卸下聖物後生效。</li><li>無法殺死期間，傷害及攻擊速度各提高 10%。</li></ul> | 鑰石 |
@@ -86,6 +87,19 @@
 - **其他加成**：同樣 2 層、原本已有同階段 25% 近戰增傷時，為 100 × (1 + 25% + 20%) = 145 點。最多 5 層不代表任何傷口數都能在存活時達到滿層。
 
 [詳細資料](TALENTS%20Zealot/zealot_martyrdom.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_martyrdom_grants_toughness"></a>
+### 不滅意志(I Shall Not Fall)
+
+<img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="72" height="72" alt="不滅意志天賦圖示">
+
+- **效果**：每失去一格完整生命傷口，韌性承受的傷害降低 7.5%，最多計 5 格，最高降低 37.5%。
+
+- **減傷算例**：3 層為 22.5% 韌性減傷，100 × (1 − 22.5%) = 77.5 點；5 層為 62.5 點。若另有同階段 10% 韌性減傷，滿層時為 100 × (1 − 37.5% − 10%) = 52.5 點，獨立減傷再相乘。
+
+[詳細資料](TALENTS%20Zealot/zealot_martyrdom_grants_toughness.md) · [返回目錄](#talent-index)
 
 ---
 
