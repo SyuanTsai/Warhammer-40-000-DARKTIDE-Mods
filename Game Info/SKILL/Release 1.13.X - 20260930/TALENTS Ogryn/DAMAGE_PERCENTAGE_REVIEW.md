@@ -20,3 +20,4 @@
 | [勢不可擋](ogryn_movement_speed_after_ranged_kills.md) | 遠程擊殺後，移動速度提高 20%，持續 3 秒。；完整計算與適用限制見來源文件。 |
 | [彈藥儲存包](ogryn_increased_ammo_reserve.md) | 備彈容量增加 25%，不增加彈匣容量。；完整計算與適用限制見來源文件。 |
 | [領跑者](ogryn_multi_hits_grant_reload_speed.md) | 短時間命中至少 3 名不同敵人，下一次換彈速度提高 15%。；完整計算與適用限制見來源文件。 |
+| [發現更多](ogryn_free_reload_after_ability.md) | 每約 15 秒恢復最大備彈的 1%。；完整計算與適用限制見來源文件。 |

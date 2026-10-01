@@ -20,6 +20,7 @@
 | <img src="https://github.com/user-attachments/assets/01fd23cb-46d2-41fa-bfc3-d8b1d17f43a3" width="32" height="32" alt="勢不可擋天賦圖示"> [勢不可擋](#ogryn_movement_speed_after_ranged_kills)<br>- Unstoppable Momentum | <ul><li>遠程擊殺後，移動速度提高 20%，持續 3 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fab49cb9-e155-47d2-8b8c-2ad8235a0f48" width="32" height="32" alt="彈藥儲存包天賦圖示"> [彈藥儲存包](#ogryn_increased_ammo_reserve)<br>- Ammo Stash | <ul><li>備彈容量增加 25%，不增加彈匣容量。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cf916d47-2e00-43d4-98b7-307222a056e6" width="32" height="32" alt="領跑者天賦圖示"> [領跑者](#ogryn_multi_hits_grant_reload_speed)<br>- Pacemaker | <ul><li>短時間命中至少 3 名不同敵人，下一次換彈速度提高 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/5a19ac08-20bc-41ee-8af1-bbc6194fa852" width="32" height="32" alt="發現更多天賦圖示"> [發現更多](#ogryn_free_reload_after_ability)<br>- Found Some More | <ul><li>每約 15 秒恢復最大備彈的 1%。</li></ul> | 技能 |
 
 ---
 
@@ -232,5 +233,20 @@
 - **時間算例**：受換彈速度影響的 3 秒動作變成 3 ÷ 1.15 ≈ 2.61 秒；若同階段另有 20% 加成，則為 3 ÷ (1 + 15% + 20%) ≈ 2.22 秒。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_multi_hits_grant_reload_speed.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_free_reload_after_ability"></a>
+### 發現更多(Found Some More)
+
+<img src="https://github.com/user-attachments/assets/5a19ac08-20bc-41ee-8af1-bbc6194fa852" width="72" height="72" alt="發現更多天賦圖示">
+
+- **補給方式**：每約 15 秒補充備彈，基準為最大備彈的 1%；不需要施放戰鬥技能，也不需要換彈。
+
+- **整數算例**：最大備彈 200 時，每次補 200 × 1% = 2 發；最大備彈 75 時，每次累積 0.75 發，小數留到後續結算，前四次依序補 0、1、1、1 發，合計 3 發。
+
+- **補給上限**：子彈加入備彈，不會直接裝入彈匣。彈匣尚未補滿時，可暫時把相同缺額存入備彈；彈匣與備彈總量仍不超過兩者容量合計。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_free_reload_after_ability.md) · [返回目錄](#talent-index)
 
 ---
