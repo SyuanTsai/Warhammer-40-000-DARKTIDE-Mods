@@ -32,6 +32,7 @@
 | [行軍之志](#adamant_movement_speed_on_block) | 未見明確矛盾 |
 | [無處可逃](#adamant_elite_special_kills_offensive_boost) | 未見明確矛盾 |
 | [兵敗如山倒](#adamant_cleave_after_push) | 未見明確矛盾 |
+| [重如律法](#adamant_heavy_attacks_increase_damage) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
@@ -200,3 +201,10 @@
 - 描述鍵：`loc_talent_adamant_cleave_after_push_desc`；hash：`1389250b`。
 - 結論：未見明確矛盾。繁中「推擊後…順劈」與英文 Pushing grants Cleave 一致；需要命中及只強化傷害容量屬未列細節。
 - [原始碼推導與限制](adamant_cleave_after_push.md)。
+
+<a id="adamant_heavy_attacks_increase_damage"></a>
+## 重如律法(Weight of the Lex)
+
+- 描述鍵：`loc_talent_adamant_heavy_attacks_increase_damage_desc`；hash：`573a8877`。
+- 結論：未見明確矛盾。繁中「近戰重擊後」與英文 after Heavy Melee Attack一致；命中及揮擊結束時點屬補充。
+- [原始碼推導與限制](adamant_heavy_attacks_increase_damage.md)。
