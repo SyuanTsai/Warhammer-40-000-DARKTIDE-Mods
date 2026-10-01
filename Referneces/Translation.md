@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_elite_kills_reduce_cooldown` / `veteran_elite_kills_reduce_cooldown` - 戰術意識
+  - 英文對應：Tactical Awareness。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L746-L774)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_toughness_bonus_leaving_invisibility` / `veteran_toughness_bonus_leaving_invisibility` - 獵手決意
   - 英文對應：Hunter's Resolve。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2155-L2195)；此來源證明識別鍵與天賦關係。

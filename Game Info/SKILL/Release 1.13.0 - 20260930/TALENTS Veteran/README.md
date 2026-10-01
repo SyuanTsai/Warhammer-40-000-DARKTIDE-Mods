@@ -6,7 +6,7 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 70／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 71／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -26,7 +26,7 @@
 | 能力 | [目標引導增強](veteran_combat_ability_coherency_outlines.md) / `veteran_combat_ability_coherency_outlines` | `node_92793f3d-46d0-4a20-a4af-b5fe7ea28b22` | 完成（核心靜態機制） |
 | 能力 | [火力反擊](veteran_combat_ability_ranged_roamer_outlines.md) / `veteran_combat_ability_ranged_roamer_outlines` | `node_3843e597-be1c-44dc-b07f-e7b0b2f779dd` | 完成（核心靜態機制） |
 | 能力 | [獵手決意](veteran_toughness_bonus_leaving_invisibility.md) / `veteran_toughness_bonus_leaving_invisibility` | `node_af5f3f23-6829-4999-8cc8-b93639b6729d` | 完成（核心靜態機制） |
-| 能力 | 戰術意識 / `veteran_elite_kills_reduce_cooldown` | `node_efcadf37-2626-40eb-b9e5-5baecdcecd0a` | 待核對 |
+| 能力 | [戰術意識](veteran_elite_kills_reduce_cooldown.md) / `veteran_elite_kills_reduce_cooldown` | `node_efcadf37-2626-40eb-b9e5-5baecdcecd0a` | 完成（核心靜態機制） |
 | 能力 | 發號施令 / `veteran_combat_ability_stagger_nearby_enemies` | `node_73319c64-81e7-4234-8fb7-4e65ebb620f5` | 待核對 |
 | 能力 | 只有死亡，職責才會終結 / `veteran_combat_ability_revive_nearby_allies` | `node_5c3c2498-e9f8-497c-ad3a-a99d5ccfdefd` | 待核對 |
 | 能力 | 鷹眼 / `veteran_increased_weakspot_power_after_combat_ability` | `node_6dca445f-a83e-442c-89dd-04a1deb408ee` | 待核對 |

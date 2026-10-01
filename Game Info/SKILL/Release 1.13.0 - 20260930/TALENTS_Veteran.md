@@ -22,6 +22,7 @@
 | 能力 | [目標引導增強(Enhanced Target Priority)](#veteran_combat_ability_coherency_outlines) | 效果：啟動處決者姿態時，協同範圍內的隊友也會看見菁英與特殊敵人的輪廓，持續 5 秒。你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。 |
 | 能力 | [火力反擊(Counter-Fire)](#veteran_combat_ability_ranged_roamer_outlines) | 效果：處決者姿態會額外標出一般射手與潛行者，例如血痂射手、渣滓潛行者。啟動或刷新輪廓時，這些敵人必須在你 50 公尺內。 |
 | 能力 | [獵手決意(Hunter's Resolve)](#veteran_toughness_bonus_leaving_invisibility) | 效果：啟動滲透時，受到的韌性傷害降低 50%；隱身期間持續生效，解除隱身後再維持 10 秒。 |
+| 能力 | [戰術意識(Tactical Awareness)](#veteran_elite_kills_reduce_cooldown) | 觸發方式：擊殺特殊敵人後，獲得 3 秒的冷卻恢復效果：每秒額外恢復 1 秒戰鬥能力冷卻。一般菁英不會觸發。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
@@ -381,6 +382,21 @@
 - **多次施放：**若靠額外次數或縮短冷卻讓兩次效果重疊，兩份減傷各自計時並相乘；重疊時，原本 100 點韌性傷害變成 `100 × 0.5 × 0.5 = 25 點`。
 
 [詳細資料](TALENTS%20Veteran/veteran_toughness_bonus_leaving_invisibility.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_elite_kills_reduce_cooldown"></a>
+
+### 戰術意識(Tactical Awareness)
+
+<img src="https://github.com/user-attachments/assets/57d6b442-9cee-45c3-ba74-4a191649eddb" width="72" height="72" alt="戰術意識天賦圖示">
+
+- **觸發方式：**擊殺特殊敵人後，獲得 3 秒的冷卻恢復效果：每秒額外恢復 1 秒戰鬥能力冷卻。一般菁英不會觸發。
+- **連續擊殺：**效果不疊加恢復速度；期間再次擊殺特殊敵人，會把持續時間重設為 3 秒，原本的每秒恢復節奏繼續。
+- **冷卻算例：**觸發時還剩 25 秒冷卻，接下來約 3 秒內，自然冷卻前進 3 秒，天賦另外恢復 3 秒，因此剩餘 `25 − 3 − 3 = 19 秒`。
+- **上限：**能力恢復完成後，多出的恢復量不會儲存到下次施放；若有兩次使用次數，則繼續恢復尚缺的次數，直到全滿。
+
+[詳細資料](TALENTS%20Veteran/veteran_elite_kills_reduce_cooldown.md) · [返回目錄](#talent-index)
 
 ---
 
