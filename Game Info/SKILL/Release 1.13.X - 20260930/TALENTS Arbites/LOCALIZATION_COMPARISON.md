@@ -17,6 +17,7 @@
 | [走一走治百病](#adamant_stamina_spent_replenish_toughness) | 未見明確矛盾 |
 | [堅忍不拔](#adamant_limit_dmg_taken_from_hits) | 未見明確矛盾 |
 | [法務官之鎧](#adamant_armor) | 未見明確矛盾 |
+| [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
 ## 電子獒犬與人(Man and Cyber-Mastiff)
@@ -80,3 +81,10 @@
 - 描述鍵：`loc_talent_adamant_armor_desc`；hash：`0604ced3`。
 - 結論：未見明確矛盾。繁中「韌性提高」與英文 Toughness 的number25一致；百分比順序是補充。
 - [原始碼推導與限制](adamant_armor.md)。
+
+<a id="adamant_plasteel_plates"></a>
+## 塑鋼裝甲(Plasteel Plates)
+
+- 描述鍵：`loc_talent_adamant_plasteel_plates_desc`；hash：`a25db61a`。
+- 結論：未見明確矛盾。繁中「韌性提高」與英文 Toughness 的number25一致；百分比順序是補充。
+- [原始碼推導與限制](adamant_plasteel_plates.md)。
