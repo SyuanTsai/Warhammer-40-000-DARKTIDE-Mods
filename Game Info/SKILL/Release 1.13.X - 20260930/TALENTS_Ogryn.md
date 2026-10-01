@@ -36,6 +36,7 @@
 | <img src="https://github.com/user-attachments/assets/c6421034-209b-4fab-857d-541fa0667d8b" width="32" height="32" alt="大爆炸天賦圖示"> [大爆炸](#ogryn_increase_explosion_radius)<br>- Big Boom | <ul><li>爆炸半徑增加 27.5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/b35eb9be-169c-48cf-a295-329eae3a3610" width="32" height="32" alt="睚眥必報天賦圖示"> [睚眥必報](#ogryn_blocking_reduces_push_cost)<br>- No Pushover | <ul><li>每 8 秒可發動一次強化推擊，衝擊力增加 250%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/119478f3-6425-4e96-9f26-e0df95a4bf1e" width="32" height="32" alt="渴求關注天賦圖示"> [渴求關注](#ogryn_blocking_ranged_taunts)<br>- Attention Seeker | <ul><li>格擋敵人攻擊或推擊敵人，嘲諷該敵人 8 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/d61a8184-294b-4ade-9847-3c5241828792" width="32" height="32" alt="為了小子們天賦圖示"> [為了小子們](#ogryn_protect_allies)<br>- For the Lil'Uns | <ul><li>隊友韌性破裂後，提高 10% 威力並獲得 25% 韌性減傷，持續 10 秒。</li><li>隊友倒地後，提高 25% 扶起速度並免疫暈眩，持續 10 秒。</li></ul> | 技能 |
 
 ---
 
@@ -490,5 +491,22 @@
 - **時間範例**：第 0 秒首次嘲諷，第 4 秒再次推擊同一名仍受嘲諷的敵人，並不會把結束時間延到第 12 秒。若你死亡、無法被敵人察覺等，嘲諷可能提前結束。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_blocking_ranged_taunts.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_protect_allies"></a>
+### 為了小子們(For the Lil'Uns)
+
+<img src="https://github.com/user-attachments/assets/d61a8184-294b-4ade-9847-3c5241828792" width="72" height="72" alt="為了小子們天賦圖示">
+
+- **韌性破裂效果**：其他隊友韌性被擊破時，你提高 10% 威力，並減少 25% 韌性傷害，持續 10 秒；自己韌性破裂不觸發，沒有額外協同距離要求。
+
+- **持續與冷卻**：生效期間再次發生隊友韌性破裂可刷新 10 秒，效果結束後才進入 20 秒冷卻。例如第 0 秒觸發、未再刷新，效果於第 10 秒結束，第 30 秒可再次觸發。
+
+- **倒地救援效果**：其他隊友倒地時，獨立獲得 25% 扶起速度與暈眩免疫，持續 10 秒；再次觸發刷新時間，不受上面的 20 秒冷卻限制。
+
+- **計算範例**：威力 500 變成 550；此階段 100 點韌性傷害變成 75 點。單計 25% 扶起速度，原本 5 秒變成 5 ÷ 1.25 = 4 秒；若同階段已有歐格林基礎 25% 扶起速度，則為 5 ÷ 1.5 ≈ 3.33 秒。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_protect_allies.md) · [返回目錄](#talent-index)
 
 ---

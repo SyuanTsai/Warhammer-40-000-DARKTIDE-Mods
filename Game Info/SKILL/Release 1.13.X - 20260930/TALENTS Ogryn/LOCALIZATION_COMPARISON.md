@@ -38,6 +38,7 @@
 | [大爆炸](#ogryn_increase_explosion_radius) | 未見明確矛盾 |
 | [睚眥必報](#ogryn_blocking_reduces_push_cost) | 未見明確矛盾 |
 | [渴求關注](#ogryn_blocking_ranged_taunts) | 未見明確矛盾 |
+| [為了小子們](#ogryn_protect_allies) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -252,3 +253,10 @@
 - 描述鍵：`loc_talent_ranged_enemies_taunt_description`；hash：`a01a7f7f`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_blocking_ranged_taunts.md)。
+
+<a id="ogryn_protect_allies"></a>
+## 為了小子們(For the Lil'Uns)
+
+- 描述鍵：`loc_talent_ogryn_protect_allies_desc`；hash：`67e1573d`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_protect_allies.md)。
