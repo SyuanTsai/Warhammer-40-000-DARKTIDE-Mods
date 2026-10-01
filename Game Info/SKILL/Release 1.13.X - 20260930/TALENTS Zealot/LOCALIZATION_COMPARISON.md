@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [背刺者](#zealot_backstab_damage) | 未見明確矛盾 |
+| [蔑視](#zealot_multi_hits_increase_damage) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
 ## 背刺者(Backstabber)
@@ -16,3 +17,10 @@
 - 描述鍵：`loc_talent_zealot_backstab_flanking_damage_all_desc`；hash：`cbe3a511`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_backstab_damage.md)。
+
+<a id="zealot_multi_hits_increase_damage"></a>
+## 蔑視(Disdain)
+
+- 描述鍵：`loc_talent_zealot_3_tier_2_ability_1_description`；hash：`e1fe6b4c`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_multi_hits_increase_damage.md)。
