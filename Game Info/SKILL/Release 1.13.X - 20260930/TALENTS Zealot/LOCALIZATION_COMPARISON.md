@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [不屈靈魂合唱](#zealot_bolstering_prayer) | 待同版核對 |
+| [神聖事業](#zealot_channel_grants_toughness_damage_reduction) | 原文字串未精確配對 |
 | [教宗之喚](#zealot_channel_grants_damage) | 明確繁中誤譯 |
 | [死戰到底](#zealot_resist_death) | 未見明確矛盾 |
 | [殉道](#zealot_martyrdom) | 未見明確矛盾 |
@@ -72,6 +73,13 @@
 - 描述鍵：`loc_talent_zealot_bolstering_prayer_expanded_description`；hash：`ae04279a`。
 - 結論：待同版核對。inventory 的 Build 25492122 未證明與固定公開 SHA 同版；固定 SHA 的 format_values 合計 45%，實際動作則分成 20% 每脈衝與 25%/秒，暫不把跨版或描述差異判為譯文錯誤。
 - [原始碼推導與限制](zealot_bolstering_prayer.md)。
+
+<a id="zealot_channel_grants_toughness_damage_reduction"></a>
+## 神聖事業(Holy Cause)
+
+- 描述鍵：`loc_talent_zealot_zealot_channel_defensive_desc `；hash：``。
+- 結論：原文字串未精確配對。以 ability special rule、脈衝套用與 buff 數值可確認機制；inventory 對應描述為空，且 loc_talent_zealot_zealot_channel_defensive_desc 含重複 zealot 及尾空格，僅可列為原始鍵候選，不足以確認精確文案。
+- [原始碼推導與限制](zealot_channel_grants_toughness_damage_reduction.md)。
 
 <a id="zealot_channel_grants_damage"></a>
 ## 教宗之喚(Ecclesiarch's Call)

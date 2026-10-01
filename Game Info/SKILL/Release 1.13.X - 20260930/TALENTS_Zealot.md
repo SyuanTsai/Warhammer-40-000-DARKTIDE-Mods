@@ -7,6 +7,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/4ae30922-3e39-4ded-8e19-35ec595befa0" width="32" height="32" alt="不屈靈魂合唱天賦圖示"> [不屈靈魂合唱](#zealot_bolstering_prayer)<br>- Chorus of Spiritual Fortitude | <ul><li>引導約 3.67 秒，開始時立即脈衝，之後每 0.8 秒一次；基礎冷卻 60 秒。</li><li>每次脈衝作用於本人與協同中的盟友，恢復韌性、提高暫時最大韌性，並賦予免死及眩暈免疫。</li><li>脈衝會踉蹌附近敵人；引導期間另持續恢復韌性。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29" width="32" height="32" alt="神聖事業天賦圖示"> [神聖事業](#zealot_channel_grants_toughness_damage_reduction)<br>- Holy Cause | <ul><li>「神聖事業」讓合唱脈衝對本人與協同盟友疊加韌性傷害減免。</li><li>每次脈衝 +8% 韌性傷害減免，最多 5 層，即最高 40%；持續 10 秒，脈衝會刷新時間。</li><li>合唱約 3.67 秒、每 0.8 秒脈衝一次；約 5 次脈衝可累積到上限。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/1abe7e62-3810-4680-9c49-7f6091782ab6" width="32" height="32" alt="教宗之喚天賦圖示"> [教宗之喚](#zealot_channel_grants_damage)<br>- Ecclesiarch's Call | <ul><li>「教宗之喚」使合唱每次脈衝為本人與協同盟友增加 +6% 傷害。</li><li>最多疊加 5 層，理論上限 +30%；每層 buff 持續 10 秒，重複脈衝刷新時間。</li><li>合唱約 3.67 秒、每 0.8 秒脈衝，通常單次引導可觸發 5 次。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="死戰到底天賦圖示"> [死戰到底](#zealot_resist_death)<br>- Until Death | <ul><li>承受致命傷害時獲得 8 秒免死效果。</li><li>效果結束後冷卻 120 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="殉道天賦圖示"> [殉道](#zealot_martyrdom)<br>- Martyrdom | <ul><li>每失去一整格生命，近戰傷害增加 10%，最多 5 層。</li></ul> | 鑰石 |
@@ -84,6 +85,21 @@
 - **冷卻**：基礎冷卻 60 秒、1 次充能。持有聖物時暫停自然回充，收起後才開始恢復；提早中止會減少脈衝次數。
 
 [詳細資料](TALENTS%20Zealot/zealot_bolstering_prayer.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_channel_grants_toughness_damage_reduction"></a>
+### 神聖事業(Holy Cause)
+
+<img src="https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29" width="72" height="72" alt="神聖事業天賦圖示">
+
+- **運作方式**：不屈靈魂合唱的每次脈衝，為你與協同隊友增加 1 層韌性減傷，每層 8%，最多 5 層、40%。
+
+- **持續時間**：效果持續 10 秒，後續脈衝會刷新時間；提早中止引導可能無法達到 5 層。
+
+- **減傷算例**：滿層時，100 點韌性傷害變成 100 × (1 − 5 × 8%) = 60 點；另有獨立 25% 韌性減傷時，為 100 × 0.6 × 0.75 = 45 點。此項沒有直接降低生命傷害。
+
+[詳細資料](TALENTS%20Zealot/zealot_channel_grants_toughness_damage_reduction.md) · [返回目錄](#talent-index)
 
 ---
 
