@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [修復協定](#cryptic_precision_stance_toughness_suppression) | 單位用語有誤 |
 | [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased) | 未見明確矛盾 |
 | [電流弧](#cryptic_discharge_generates_arcs) | 未見明確矛盾 |
 | [電能驅動](#cryptic_discharge_attack_speed_increase) | 未見明確矛盾 |
@@ -63,6 +64,15 @@
 | [電流爆發](#cryptic_electrocution_push) | 未見明確矛盾 |
 | [抗腐護符](#cryptic_corruption_resistance_doom) | 未見明確矛盾 |
 | [威脅偵測指令](#cryptic_ranged_kills_tdr) | 未見明確矛盾 |
+
+<a id="cryptic_precision_stance_toughness_suppression"></a>
+## 修復協定(Restoration Protocol)
+
+- 描述鍵：`loc_talent_cryptic_precision_stance_toughness_suppression_desc`；hash：`e35e0d88`。
+- 結論：單位用語有誤。繁中在百分比占位之後再寫「點韌性」，英文未加point單位。format_type是percentage且實際replenish_percentage，應為最大韌性的10%，不是固定10點。
+- 繁中原文短引：{talent_name:%s}啟動時立即解除所有壓制效果，並在持續期間內每秒恢復{toughness:%s}點韌性。
+- 同源英文：{talent_name:%s} restores {toughness:%s} Toughness per second for the duration and instantly clears all Suppression on activation.
+- [原始碼推導與限制](cryptic_precision_stance_toughness_suppression.md)。
 
 <a id="cryptic_precision_stance_fire_rate_increased"></a>
 ## 彈藥盤點之旨(Writ of Ammunition Enumeration)

@@ -6,6 +6,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/eb879996-8768-4102-8799-0fecaf6f7a98" width="32" height="32" alt="修復協定天賦圖示"> [修復協定](#cryptic_precision_stance_toughness_suppression)<br>- Restoration Protocol | <ul><li>精準姿態啟動時清除壓制；姿態維持期間每秒恢復最大韌性的10%。</li><li>回復按最大韌性的比例計算，受一般韌性補充修正影響，且最多補到滿韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ac9ea4d6-352f-4ad1-95f2-a2de10d39d2d" width="32" height="32" alt="彈藥盤點之旨天賦圖示"> [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased)<br>- Writ of Ammunition Enumeration | <ul><li>精準姿態啟動時提高遠程射速15%；姿態連續維持滿4秒後提高至30%。</li><li>姿態結束會撤除此射速加成，4秒計時亦重置。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="32" height="32" alt="電流弧天賦圖示"> [電流弧](#cryptic_discharge_generates_arcs)<br>- Voltaic Arcs | <ul><li>電能發射器每消耗一道充能，額外釋放一道向前電弧；最多生成 5 道。</li><li>每道電弧從前方 12 公尺內的有效敵人起始，之後可鏈接附近敵人。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b74a0dba-64ed-40b6-b630-792c413387cd" width="32" height="32" alt="電能驅動天賦圖示"> [電能驅動](#cryptic_discharge_attack_speed_increase)<br>- Voltaic Motivator | <ul><li>每次使用電能發射器後，攻擊速度提高 5% 基礎值，再按消耗充能每道增加 5%。</li><li>加成持續 15 秒；消耗 1、2、3 道時，總加成分別為 10%、15%、20%。</li></ul> | 能力 |
@@ -65,6 +66,25 @@
 ---
 
 ## 能力
+
+<a id="cryptic_precision_stance_toughness_suppression"></a>
+### 修復協定(Restoration Protocol)
+
+<img src="https://github.com/user-attachments/assets/eb879996-8768-4102-8799-0fecaf6f7a98" width="72" height="72" alt="修復協定天賦圖示">
+
+- **啟動效果**：開啟進階戰鬥教範時，立即清除身上的壓制；這次清除不代表接下來全程免疫壓制。
+
+- **恢復方式**：架勢維持期間，每秒恢復最大韌性的 10%，直到架勢結束；仍受恢復加成與韌性上限影響。
+
+- **恢復算例**：最大韌性 150、沒有其他恢復加成時，每秒恢復 150 × 10% = 15 點，維持 4 秒可恢復 60 點。
+
+#### 繁中原文勘誤
+
+- 原文寫「每秒恢復{toughness}點韌性」，但此欄位本身是百分比；正確效果是每秒恢復最大韌性的10%。最大韌性150時為每秒15點，不是固定10點。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_precision_stance_toughness_suppression.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="cryptic_precision_stance_fire_rate_increased"></a>
 ### 彈藥盤點之旨(Writ of Ammunition Enumeration)

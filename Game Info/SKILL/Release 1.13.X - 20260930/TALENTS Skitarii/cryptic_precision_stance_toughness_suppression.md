@@ -1,0 +1,46 @@
+# 修復協定(Restoration Protocol)：原始碼依據
+
+[返回玩家說明](../TALENTS_Skitarii.md#cryptic_precision_stance_toughness_suppression)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_precision_stance_toughness_suppression)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`cryptic_precision_stance_toughness_suppression`；名稱鍵：`loc_talent_cryptic_precision_stance_toughness_suppression`；描述鍵：`loc_talent_cryptic_precision_stance_toughness_suppression_desc`。
+- 節點：`node_1f07ccdc-f96c-4700-ac3f-13fb3244419d`；分類：能力；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- 天賦透過 cryptic_precision_stance_restores_toughness 特殊規則啟用回復。姿態切換動作在啟動時呼叫 Suppression.clear_suppression；關閉姿態的分支直接移除姿態效果並返回，不執行這次清除。
+- 姿態效果的每秒回復率設定為0.1。每次更新以 0.1 × dt 作為最大韌性比例，呼叫 Toughness.replenish_percentage；此更新只在效果仍執行且持有遠程武器槽位時進入，換出該槽位會結束姿態效果。
+- 韌性擴充將回復比例乘最大韌性並套用韌性補充修正，以現存韌性缺口為上限；回復不會溢出滿值。
+
+## 原始碼依據
+
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：319–337](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L319-L337)
+- [scripts/settings/talent/talent_settings_cryptic.lua：98–109](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L98-L109)
+- [scripts/extension_systems/ability/actions/action_cryptic_precision_stance_toggle.lua：40–102](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_cryptic_precision_stance_toggle.lua#L40-L102)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：360–370](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L360-L370)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：520–534](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L520-L534)
+- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–285](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：319–337](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L319-L337)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：917–939](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L917-L939)
+
+## 算例條件與待確認事項
+
+- **恢復算例**：最大韌性 150、沒有其他恢復加成時，每秒恢復 150 × 10% = 15 點，維持 4 秒可恢復 60 點。
+- 10%以最大韌性為基準，不是無條件固定10點；最大韌性不同時，實際點數不同。
+- 姿態更新會按遊戲更新時間逐段補充，實際回復受姿態是否仍啟動、韌性補充修正、回復限制及缺口影響。
+- 固定來源提交與繁中 Build 25492122 是否同版仍待核對。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`e35e0d88`。
+- 繁中在百分比占位之後再寫「點韌性」，英文未加point單位。format_type是percentage且實際replenish_percentage，應為最大韌性的10%，不是固定10點。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability_modifier/cryptic_precision_stance_toughness_suppression.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
+- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_precision_stance_toughness_suppression:node_1f07ccdc-f96c-4700-ac3f-13fb3244419d`。
+- 格式：image/webp；288×288；5302 bytes。
+- SHA-256：`98cd9e598ef02bb0459c4e5439747f5417094e56deb8dad66d9ce7c5137d995d`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)；[公開圖片](https://github.com/user-attachments/assets/eb879996-8768-4102-8799-0fecaf6f7a98)。附件已下載比對位元組與 SHA-256。
