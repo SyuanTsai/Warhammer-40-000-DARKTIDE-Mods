@@ -20,7 +20,7 @@
 | [預兆](psyker_aura_crit_chance_aura.md) | 你與協同中的隊友的暴擊機率增加 5 個百分點。；完整計算與適用限制見來源文件。 |
 | [靈能尖嘯](psyker_shout_vent_warp_charge.md) | 機制與公式待核對。 |
 | [占卜者的注視](psyker_combat_ability_stance.md) | 傷害、爆擊與弱點加成，並恢復韌性；反噬達 100% 結束；累積增傷保留 10 秒；完整計算與適用限制見來源文件。 |
-| [平靜迸發](psyker_shout_reduces_warp_charge_generation.md) | 機制與公式待核對。 |
+| [平靜迸發](psyker_shout_reduces_warp_charge_generation.md) | 尖嘯每命中一名敵人，降低反噬生成；最多 25 層，持續 5 秒；完整計算與適用限制見來源文件。 |
 | [亞空間爆發](psyker_discharge_damage_debuff.md) | 尖嘯命中的敵人傷害降低 10%；受到傷害提高 10%，持續 8 秒；完整計算與適用限制見來源文件。 |
 | [蔓延火焰](psyker_warpfire_on_shout.md) | 機制與公式待核對。 |
 | [預知未來](psyker_overcharge_weakspot_kill_bonuses.md) | 注視增加靈巧傷害，最高 30%；弱點擊殺加快傷害疊層；完整計算與適用限制見來源文件。 |

@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/61a749ff-c64c-47a7-8607-e19b59a688b3" width="32" height="32" alt="先知之眼天賦圖示"> [先知之眼](#psyker_cooldown_aura_improved)<br>- Seer's Presence | <ul><li>你與協同中的隊友的技能冷卻時間縮短 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="預兆天賦圖示"> [預兆](#psyker_aura_crit_chance_aura)<br>- Prescience | <ul><li>你與協同中的隊友的暴擊機率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a" width="32" height="32" alt="占卜者的注視天賦圖示"> [占卜者的注視](#psyker_combat_ability_stance)<br>- Scrier's Gaze | <ul><li>傷害、爆擊與弱點加成，並恢復韌性</li><li>反噬達 100% 結束；累積增傷保留 10 秒</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/b89da8f0-2d3d-4a87-bc92-43e2438e28c8" width="32" height="32" alt="平靜迸發天賦圖示"> [平靜迸發](#psyker_shout_reduces_warp_charge_generation)<br>- Becalming Eruption | <ul><li>尖嘯每命中一名敵人，降低反噬生成</li><li>最多 25 層，持續 5 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/8a145b7f-771a-42b6-a809-56650cd24f7e" width="32" height="32" alt="亞空間爆發天賦圖示"> [亞空間爆發](#psyker_discharge_damage_debuff)<br>- Warp Rupture | <ul><li>尖嘯命中的敵人傷害降低 10%</li><li>受到傷害提高 10%，持續 8 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/41b92eae-77a3-481e-af12-783845ce49c4" width="32" height="32" alt="預知未來天賦圖示"> [預知未來](#psyker_overcharge_weakspot_kill_bonuses)<br>- Precognition | <ul><li>注視增加靈巧傷害，最高 30%</li><li>弱點擊殺加快傷害疊層</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/f9987bfc-f9d7-48d8-9431-8c361223c50e" width="32" height="32" alt="亞空間加速天賦圖示"> [亞空間加速](#psyker_overcharge_increased_movement_speed)<br>- Warp Speed | <ul><li>注視期間增加 20% 移動速度</li></ul> | 能力 |
@@ -239,6 +240,19 @@
 - 原文將注視寫成「進入／離開注視範圍」，容易誤解成地面區域；同源英文與實作均指角色進入／結束注視狀態。
 
 [詳細資料](TALENTS%20Psyker/psyker_combat_ability_stance.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_shout_reduces_warp_charge_generation"></a>
+### 平靜迸發(Becalming Eruption)
+
+<img src="https://github.com/user-attachments/assets/b89da8f0-2d3d-4a87-bc92-43e2438e28c8" width="72" height="72" alt="平靜迸發天賦圖示">
+
+- **觸發方式：**靈能尖嘯每命中一名敵人，就獲得一層降低反噬生成的效果，最多 25 層，持續 5 秒。
+
+- **疊層算例：**每層將生成量乘以 0.99。原本增加 10 個反噬百分點，10 層後為 10 × 0.99¹⁰ ≈ 9.04 個百分點；25 層為 10 × 0.99²⁵ ≈ 7.78 個百分點，約減少 22.22%。
+
+[詳細資料](TALENTS%20Psyker/psyker_shout_reduces_warp_charge_generation.md) · [返回目錄](#talent-index)
 
 ---
 
