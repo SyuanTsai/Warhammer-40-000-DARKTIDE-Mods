@@ -24,6 +24,7 @@
 | [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [勢如破竹](#adamant_damage_reduction_after_elite_kill) | 未見明確矛盾 |
+| [堅守陣線](#adamant_staggers_reduce_damage_taken) | 待同版核對 |
 | [順劈加成](#base_cleave_node_buff_medium_1) | 未見明確矛盾 |
 | [衝擊加成](#base_impact_node_buff_medium_1) | 未見明確矛盾 |
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
@@ -148,6 +149,13 @@
 - 描述鍵：`loc_talent_adamant_damage_reduction_after_elite_kill_desc`；hash：`368927ce`。
 - 結論：未見明確矛盾。繁中「擊殺精英或專家…傷害抗性」與英文相符，沒有把它寫成僅韌性抗性。
 - [原始碼推導與限制](adamant_damage_reduction_after_elite_kill.md)。
+
+<a id="adamant_staggers_reduce_damage_taken"></a>
+## 堅守陣線(Hold the Line)
+
+- 描述鍵：`loc_talent_adamant_staggers_reduce_damage_taken_alt_desc`；hash：`0f55ddc6`。
+- 結論：待同版核對。繁中「下次承受的近戰傷害」與英文 next Melee hit taken 相符；固定實作卻在存續期間套一般減傷、近戰命中才移除。列跨來源差異，不能單獨判為繁中誤譯。
+- [原始碼推導與限制](adamant_staggers_reduce_damage_taken.md)。
 
 <a id="base_cleave_node_buff_medium_1"></a>
 ## 順劈加成(Cleave Boost)

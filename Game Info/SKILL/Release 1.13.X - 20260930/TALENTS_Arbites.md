@@ -22,6 +22,7 @@
 | <img src="https://github.com/user-attachments/assets/62b0bee6-3606-40bc-9d78-06f072535e59" width="32" height="32" alt="遠程傷害增幅天賦圖示"> [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1)<br>- Ranged Damage Boost | <ul><li>遠程傷害提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8c224499-f2ca-420c-bcf6-39034e6a35b2" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d856ef6a-9f61-4b4a-b672-e60019dea866" width="32" height="32" alt="勢如破竹天賦圖示"> [勢如破竹](#adamant_damage_reduction_after_elite_kill)<br>- Imposing Force | <ul><li>擊殺精英或專家敵人後，獲得 25% 減傷，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/fd423ddb-0080-4603-8fd7-90257b583c3d" width="32" height="32" alt="堅守陣線天賦圖示"> [堅守陣線](#adamant_staggers_reduce_damage_taken)<br>- Hold the Line | <ul><li>使敵人踉蹌可累積減傷，最多 5 層、持續 8 秒；受到近戰命中後清除。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d3fa1c73-0a49-42ab-920c-11b7238af849" width="32" height="32" alt="順劈加成天賦圖示"> [順劈加成](#base_cleave_node_buff_medium_1)<br>- Cleave Boost | <ul><li>傷害與踉蹌的順劈容量提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e8b31492-509e-479a-9369-203e36e1e1e4" width="32" height="32" alt="衝擊加成天賦圖示"> [衝擊加成](#base_impact_node_buff_medium_1)<br>- Impact Boost | <ul><li>衝擊提高 25%，更容易使敵人踉蹌。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/170599ce-ad50-4760-93b2-da650c6deac8" width="32" height="32" alt="塑鋼裝甲天賦圖示"> [塑鋼裝甲](#adamant_plasteel_plates)<br>- Plasteel Plates | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
@@ -240,6 +241,19 @@
 - **減傷算例**：原本承受 100 點傷害時，單計本效果為 100 × 0.75 = 75 點；另有獨立 20% 減傷則為 100 × 0.75 × 0.8 = 60 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_damage_reduction_after_elite_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_staggers_reduce_damage_taken"></a>
+### 堅守陣線(Hold the Line)
+
+<img src="https://github.com/user-attachments/assets/fd423ddb-0080-4603-8fd7-90257b583c3d" width="72" height="72" alt="堅守陣線天賦圖示">
+
+- **疊層與消耗**：使一般敵人踉蹌獲得 1 層，使歐格林或巨獸踉蹌獲得 5 層，最多 5 層。再次觸發刷新 8 秒；受到近戰命中後清除全部層數。
+
+- **減傷算例**：每層讓承受傷害乘以 0.97。5 層時，100 × 0.97⁵ ≈ 85.87 點，約減少 14.13%。存續期間也減少遠程傷害；遠程命中不消耗層數。
+
+[詳細資料](TALENTS%20Arbites/adamant_staggers_reduce_damage_taken.md) · [返回目錄](#talent-index)
 
 ---
 

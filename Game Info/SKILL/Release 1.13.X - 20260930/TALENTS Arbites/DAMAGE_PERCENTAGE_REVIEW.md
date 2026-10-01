@@ -22,6 +22,7 @@
 | [遠程傷害增幅](base_ranged_damage_node_buff_medium_1.md) | 遠程傷害提高 10%。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_1.md) | 近戰傷害提高 10%。；完整計算與適用限制見來源文件。 |
 | [勢如破竹](adamant_damage_reduction_after_elite_kill.md) | 擊殺精英或專家敵人後，獲得 25% 減傷，持續 5 秒。；完整計算與適用限制見來源文件。 |
+| [堅守陣線](adamant_staggers_reduce_damage_taken.md) | 使敵人踉蹌可累積減傷，最多 5 層、持續 8 秒；受到近戰命中後清除。；完整計算與適用限制見來源文件。 |
 | [順劈加成](base_cleave_node_buff_medium_1.md) | 傷害與踉蹌的順劈容量提高 25%。；完整計算與適用限制見來源文件。 |
 | [衝擊加成](base_impact_node_buff_medium_1.md) | 衝擊提高 25%，更容易使敵人踉蹌。；完整計算與適用限制見來源文件。 |
 | [塑鋼裝甲](adamant_plasteel_plates.md) | 最大韌性增加 25 點。；完整計算與適用限制見來源文件。 |
