@@ -11,6 +11,7 @@
 | 光環 | [抵近殺敵(Close and Kill)](#veteran_movement_speed_coherency) | 你與協同範圍內的隊友移動速度增加 7.5%。 |
 | 光環 | [火力小分隊(Fire Team)](#veteran_increased_damage_coherency) | 你與協同範圍內的隊友傷害增加 7.5%。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
+| 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
@@ -132,6 +133,24 @@
 ---
 
 ## 技能
+
+<a id="veteran_aura_elite_kills_restore_grenade"></a>
+
+### 爆破小隊(Demolition Team)
+
+<img src="https://github.com/user-attachments/assets/3ec21db4-4013-4522-850f-14c583e25ea7" width="72" height="72" alt="爆破小隊天賦圖示">
+
+- **你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。**
+- 只補充你的手雷，最多補到攜帶上限。
+
+#### 機率算例
+
+- 每次合資格擊殺各自判定。20 次擊殺的期望補給量為 `20 × 5% = 1 顆`，不代表第 20 次必定補給。
+- 上限 4 顆、目前 3 顆時，成功觸發後變為 `min(3 + 1, 4) = 4 顆`。
+
+[詳細資料](TALENTS%20Veteran/veteran_aura_elite_kills_restore_grenade.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="base_toughness_node_buff_medium_2"></a>
 
