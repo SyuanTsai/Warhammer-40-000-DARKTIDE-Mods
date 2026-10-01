@@ -11,6 +11,7 @@
 
 - 生成器allow_proc_while_active=true；本模板設定cooldown=10，但ProcBuff只讀cooldown_duration，本固定來源中10秒未進入冷卻判定。
 - on_damage_taken需要attacked_unit==self與damage_amount>0，刷新toughness_left_to_restore=0.25與active5秒。
+- Damage.deal_damage把生命damage分量存為damage_amount；韌性另存toughness_damage_amount，本條件只看前者。
 
 ## 原始碼依據
 
@@ -19,6 +20,7 @@
 - [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–285](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
 - [scripts/settings/talent/talent_settings_cryptic.lua：579–583](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L579-L583)
 - [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：3130–3146](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L3130-L3146)
+- [scripts/utilities/attack/damage.lua：154–225](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage.lua#L154-L225)
 - [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：2318–2340](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L2318-L2340)
 - [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1290–1316](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1290-L1316)
 
