@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/9768a27f-3a7b-47c7-a334-7f1f57db287a" width="32" height="32" alt="虔誠刺客天賦圖示"> [虔誠刺客](#zealot_backstab_kills_restore_cd)<br>- Pious Cut-Throat | <ul><li>虔誠刺客在近戰背刺或近戰弱點命中後，增加 +0.75 戰鬥技能冷卻回充/秒，持續 2 秒。</li><li>每次觸發建立或刷新 2 秒 buff；一次未被重設的完整期間通常提供約 1.5 點額外冷卻資源。</li><li>程式判定的是合格命中，不要求擊殺；天賦格式中未使用的 10% 欄位不是此效果。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/e185301f-93c5-4f93-8c09-7aa351258173" width="32" height="32" alt="死亡禱文天賦圖示"> [死亡禱文](#zealot_crits_grant_cd)<br>- Invocation of Death | <ul><li>死亡禱文的近戰暴擊每次揮擊最多觸發一次，額外回充戰鬥技能冷卻。</li><li>觸發後 buff 持續 3.25 秒，每秒回充 1 點資源；通常可得到 +3 點額外資源，並與自然回充並行。</li><li>同一 sweep 內後續暴擊不重複啟動；新的 sweep 會重新開放一次觸發。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/d95452d2-3c7a-419f-9461-3d32dc95ce2f" width="32" height="32" alt="無盡狂怒天賦圖示"> [無盡狂怒](#zealot_fotf_refund_cooldown)<br>- Unrelenting Fury | <ul><li>無盡狂怒在使用有信者之怒後 5 秒內，若擊殺精英或專家敵人，可返還單次充能成本的 20%。</li><li>每次衝刺使用最多觸發一次；基礎單次充能成本 30 點時，返還 6 點資源，約等同 6 秒自然回充。</li><li>inventory 繁中在百分比值後加「秒」；固定 SHA 的 format 是 +20% 且 runtime 按充能比例返還，單位不應寫秒。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/8532537c-fff4-4014-8ee6-e16572b9cdeb" width="32" height="32" alt="完美主義者天賦圖示"> [完美主義者](#zealot_stealth_cooldown_regeneration)<br>- Perfectionist | <ul><li>完美主義者讓潛行期間的擊殺返還戰鬥技能充能資源；每次潛行期間最多成功返還一次。</li><li>巨獸返還單格充能資源的 50%，歐格林 30%，其他敵人 15%；有信者之怒式 30 點單格成本時分別是 15、9、4.5 點。</li><li>inventory 繁中在百分比值後加「秒」，但固定 SHA 將值格式化為百分比並按單次充能成本比例返還。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="死戰到底天賦圖示"> [死戰到底](#zealot_resist_death)<br>- Until Death | <ul><li>承受致命傷害時獲得 8 秒免死效果。</li><li>效果結束後冷卻 120 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="殉道天賦圖示"> [殉道](#zealot_martyrdom)<br>- Martyrdom | <ul><li>每失去一整格生命，近戰傷害增加 10%，最多 5 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="32" height="32" alt="不滅意志天賦圖示"> [不滅意志](#zealot_martyrdom_grants_toughness)<br>- I Shall Not Fall | <ul><li>殉道每缺少一格生命傷口，韌性承傷降低 7.5%，最多 5 格。</li></ul> | 鑰石 |
@@ -275,6 +276,25 @@
 - 原文在百分比返還數值後誤加「秒」；正確是返還一格充能的 20%，以 30 秒基礎冷卻換算為 6 秒進度。
 
 [詳細資料](TALENTS%20Zealot/zealot_fotf_refund_cooldown.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_stealth_cooldown_regeneration"></a>
+### 完美主義者(Perfectionist)
+
+<img src="https://github.com/user-attachments/assets/8532537c-fff4-4014-8ee6-e16572b9cdeb" width="72" height="72" alt="完美主義者天賦圖示">
+
+- **觸發方式**：在隱秘領域中，以會結束隱身的有效攻擊擊殺敵人，返還技能冷卻；每次隱身最多一次。既有流血、燃燒等持續傷害擊殺不會因此返還。
+
+- **返還比例**：巨獸返還一格充能的 50%，歐格林 30%，其他敵人 15%。
+
+- **冷卻算例**：隱秘領域基礎冷卻 30 秒，因此分別返還 30 × 50% = 15 秒、30 × 30% = 9 秒、30 × 15% = 4.5 秒的自然回充進度，仍以當前缺額為上限。
+
+#### 繁中原文勘誤
+
+- 繁中原文把巨獸、歐格林與其他敵人的返還比例加上「秒」；正確單位是單次充能的 50%、30%、15%，不是固定 50、30、15 秒。
+
+[詳細資料](TALENTS%20Zealot/zealot_stealth_cooldown_regeneration.md) · [返回目錄](#talent-index)
 
 ---
 

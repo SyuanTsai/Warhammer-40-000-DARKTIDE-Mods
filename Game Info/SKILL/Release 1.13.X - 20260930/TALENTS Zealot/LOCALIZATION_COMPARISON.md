@@ -20,6 +20,7 @@
 | [虔誠刺客](#zealot_backstab_kills_restore_cd) | 未見明確矛盾 |
 | [死亡禱文](#zealot_crits_grant_cd) | 未見明確矛盾 |
 | [無盡狂怒](#zealot_fotf_refund_cooldown) | 明確繁中誤譯 |
+| [完美主義者](#zealot_stealth_cooldown_regeneration) | 明確繁中誤譯 |
 | [死戰到底](#zealot_resist_death) | 未見明確矛盾 |
 | [殉道](#zealot_martyrdom) | 未見明確矛盾 |
 | [不滅意志](#zealot_martyrdom_grants_toughness) | 未見明確矛盾 |
@@ -163,6 +164,15 @@
 - 繁中原文短引：使用{talent_name:%s}後{duration:%s}秒內擊殺精英或專家敵人，可恢復{cooldown:%s}秒技能冷卻時間。每次使用最多觸發一次。
 - 同源英文：Killing an Elite or Specialist within {duration:%s}s of using {talent_name:%s} restores {cooldown:%s} Ability Cooldown. Maximum once per use.
 - [原始碼推導與限制](zealot_fotf_refund_cooldown.md)。
+
+<a id="zealot_stealth_cooldown_regeneration"></a>
+## 完美主義者(Perfectionist)
+
+- 描述鍵：`loc_talent_zealot_stealth_cooldown_regeneration_desc`；hash：`d641c97c`。
+- 結論：明確繁中誤譯。inventory 繁中在 50%/30%/15% 格式值後加入「秒」；固定 SHA 的 talent 將其格式化為 percentage，實際按單次充能成本比例返還。
+- 繁中原文短引：潛行擊殺可恢復技能冷卻時間。巨獸恢復{monster:%s}秒，歐格林恢復{ogryn:%s}秒，其他敵人恢復{other:%s}秒。
+- 同源英文：Restore Ability Cooldown on Stealth Kill. Monstrosities restore {monster:%s}, Ogryns restore {ogryn:%s}, and others restore {other:%s}.
+- [原始碼推導與限制](zealot_stealth_cooldown_regeneration.md)。
 
 <a id="zealot_resist_death"></a>
 ## 死戰到底(Until Death)
