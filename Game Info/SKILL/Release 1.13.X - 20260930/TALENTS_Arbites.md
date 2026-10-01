@@ -1,5 +1,7 @@
 # 法務官天賦：Release 1.13.0
 
+[角色基礎效果](TALENTS%20Arbites/BASE_EFFECTS.md)
+
 
 <a id="talent-index"></a>
 ## 技能目錄
