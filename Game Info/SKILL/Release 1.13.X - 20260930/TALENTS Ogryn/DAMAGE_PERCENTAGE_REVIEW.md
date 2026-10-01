@@ -26,3 +26,4 @@
 | [毀滅之樂](ogryn_nearby_bleeds_reduce_damage_taken.md) | 8 公尺內每名流血敵人提供 5% 減傷，最多 30%。；完整計算與適用限制見來源文件。 |
 | [韌性減傷](base_toughness_damage_reduction_node_buff_medium_1.md) | 韌性傷害減免增加 10 個百分點。；完整計算與適用限制見來源文件。 |
 | [相親相愛好夥伴！](ogryn_damage_taken_by_all_increases_strength_tdr.md) | 自己或協同隊友受傷時，每層增加 2% 威力，最多 5 層。；滿層額外減少 15% 韌性傷害。；完整計算與適用限制見來源文件。 |
+| [全神貫注](ogryn_ally_movement_boost_on_ability.md) | 施放戰鬥技能後，你與協同隊友提高 20% 移動速度，持續 6 秒。；期間免疫暈眩與壓制。；完整計算與適用限制見來源文件。 |

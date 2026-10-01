@@ -28,6 +28,7 @@
 | [毀滅之樂](#ogryn_nearby_bleeds_reduce_damage_taken) | 未見明確矛盾 |
 | [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
 | [相親相愛好夥伴！](#ogryn_damage_taken_by_all_increases_strength_tdr) | 繁中描述錯誤 |
+| [全神貫注](#ogryn_ally_movement_boost_on_ability) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -170,3 +171,10 @@
 - 繁中原文短引：當自身或協同中的盟友生命值受到傷害時，威力提高{strength:%s}，最多可堆疊{stacks:%s}層，持續{duration:%s}秒。滿層時韌性減傷提高{tdr:%s}。
 - 同源英文：{strength:%s} Strength on Damage Taken by you or Allies in Coherency. {stacks:%s} Max Stacks. Lasts {duration:%s}s. {tdr:%s} Toughness Damage Reduction on Max Stacks.
 - [原始碼推導與限制](ogryn_damage_taken_by_all_increases_strength_tdr.md)。
+
+<a id="ogryn_ally_movement_boost_on_ability"></a>
+## 全神貫注(Get Stuck In)
+
+- 描述鍵：`loc_talent_ogryn_ability_movement_speed_desc`；hash：`2156e8e1`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_ally_movement_boost_on_ability.md)。
