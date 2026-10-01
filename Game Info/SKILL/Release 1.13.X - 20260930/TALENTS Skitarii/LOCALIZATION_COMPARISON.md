@@ -45,6 +45,7 @@
 | [持續攻擊教義](#cryptic_stacking_melee_damage) | 未見明確矛盾 |
 | [鍍鋅精密塗層](#cryptic_stun_dr_power) | 未見明確矛盾 |
 | [莫比亞導體](#cryptic_damage_on_ability) | 未見明確矛盾 |
+| [伺服核心充能引擎](#cryptic_weakspot_kills_restore_toughness) | 未見明確矛盾 |
 | [適應性戰鬥校準](#cryptic_cleave_and_impact) | 未見明確矛盾 |
 | [剩餘電流緩衝](#cryptic_tdr_based_on_charge) | 未見明確矛盾 |
 | [卓越防禦記憶模組](#cryptic_ranged_stacking_toughness) | 未見明確矛盾 |
@@ -318,6 +319,13 @@
 - 描述鍵：`loc_talent_cryptic_damage_on_ability_desc`；hash：`d9e47181`。
 - 結論：未見明確矛盾。雙語一致；補充觸發種類、非按消耗份數加倍。
 - [原始碼推導與限制](cryptic_damage_on_ability.md)。
+
+<a id="cryptic_weakspot_kills_restore_toughness"></a>
+## 伺服核心充能引擎(Servo-Core Recharge Engine)
+
+- 描述鍵：`loc_talent_cryptic_weakspot_kills_restore_toughness_desc`；hash：`8c1c47d8`。
+- 結論：未見明確矛盾。中英文一致；補充最大韌性與立即恢復。
+- [原始碼推導與限制](cryptic_weakspot_kills_restore_toughness.md)。
 
 <a id="cryptic_cleave_and_impact"></a>
 ## 適應性戰鬥校準(Adaptive Combat Calibration)

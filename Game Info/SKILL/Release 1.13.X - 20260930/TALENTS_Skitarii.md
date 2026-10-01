@@ -43,6 +43,7 @@
 | <img src="https://github.com/user-attachments/assets/9e58fba3-e137-4f3e-89c3-ea7f5ebb0f24" width="32" height="32" alt="持續攻擊教義天賦圖示"> [持續攻擊教義](#cryptic_stacking_melee_damage)<br>- Sustained Assault Doctrine | <ul><li>近戰攻擊命中後，每次提高 3% 傷害</li><li>最多 5 層，持續 8 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e3f4e5a5-52c8-489e-a83f-3bf13c80eca8" width="32" height="32" alt="鍍鋅精密塗層天賦圖示"> [鍍鋅精密塗層](#cryptic_stun_dr_power)<br>- Galvanized Coating | <ul><li>常駐一般受擊硬直免疫與 15% 減傷</li><li>受到近戰傷害時消耗單份電容量的 7.5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="莫比亞導體天賦圖示"> [莫比亞導體](#cryptic_damage_on_ability)<br>- Moebian Conductor | <ul><li>啟動戰鬥能力後，傷害提高 15%、持續 10 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/233341e1-6bfd-4027-9641-610ec8733e45" width="32" height="32" alt="伺服核心充能引擎天賦圖示"> [伺服核心充能引擎](#cryptic_weakspot_kills_restore_toughness)<br>- Servo-Core Recharge Engine | <ul><li>弱點擊殺立即恢復 5% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="適應性戰鬥校準天賦圖示"> [適應性戰鬥校準](#cryptic_cleave_and_impact)<br>- Adaptive Combat Calibration | <ul><li>韌性高於 50%：近戰順劈提高 30%</li><li>韌性不高於 50%：近戰衝擊提高 30%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f34040ff-ebd0-4f7e-b857-4557ccdee00c" width="32" height="32" alt="剩餘電流緩衝天賦圖示"> [剩餘電流緩衝](#cryptic_tdr_based_on_charge)<br>- Residual Current Buffer | <ul><li>常駐 10% 韌性減傷</li><li>每份完整電容量再增加 2.5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/deb63065-b15d-498f-a16c-ec7726ca6a22" width="32" height="32" alt="卓越防禦記憶模組天賦圖示"> [卓越防禦記憶模組](#cryptic_ranged_stacking_toughness)<br>- Superior Defence Engrams | <ul><li>遠程擊殺疊層，每層每秒恢復 1% 韌性</li><li>最多 5 層，持續 8 秒</li></ul> | 技能 |
@@ -614,6 +615,19 @@
 - **傷害算例**：基礎傷害 100、有 25% 同階段加成時，100 × (1 + 25% + 15%) = 140 點。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_damage_on_ability.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_weakspot_kills_restore_toughness"></a>
+### 伺服核心充能引擎(Servo-Core Recharge Engine)
+
+<img src="https://github.com/user-attachments/assets/233341e1-6bfd-4027-9641-610ec8733e45" width="72" height="72" alt="伺服核心充能引擎天賦圖示">
+
+- **觸發方式**：以弱點命中擊殺敵人，立即恢復最大韌性的 5%；近戰與遠程皆可。
+
+- **恢復算例**：最大韌性 200 時，每次恢復 200 × 5% = 10 點；連續 3 次符合條件的擊殺可恢復 30 點，但最多補到上限。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_weakspot_kills_restore_toughness.md) · [返回目錄](#talent-index)
 
 ---
 

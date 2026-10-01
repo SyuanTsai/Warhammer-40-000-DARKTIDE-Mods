@@ -43,6 +43,7 @@
 | [持續攻擊教義](cryptic_stacking_melee_damage.md) | 近戰攻擊命中後，每次提高 3% 傷害；最多 5 層，持續 8 秒；完整計算與適用限制見來源文件。 |
 | [鍍鋅精密塗層](cryptic_stun_dr_power.md) | 常駐一般受擊硬直免疫與 15% 減傷；受到近戰傷害時消耗單份電容量的 7.5%；完整計算與適用限制見來源文件。 |
 | [莫比亞導體](cryptic_damage_on_ability.md) | 啟動戰鬥能力後，傷害提高 15%、持續 10 秒；完整計算與適用限制見來源文件。 |
+| [伺服核心充能引擎](cryptic_weakspot_kills_restore_toughness.md) | 弱點擊殺立即恢復 5% 韌性；完整計算與適用限制見來源文件。 |
 | [適應性戰鬥校準](cryptic_cleave_and_impact.md) | 韌性高於 50%：近戰順劈提高 30%；韌性不高於 50%：近戰衝擊提高 30%；完整計算與適用限制見來源文件。 |
 | [剩餘電流緩衝](cryptic_tdr_based_on_charge.md) | 常駐 10% 韌性減傷；每份完整電容量再增加 2.5%；完整計算與適用限制見來源文件。 |
 | [卓越防禦記憶模組](cryptic_ranged_stacking_toughness.md) | 遠程擊殺疊層，每層每秒恢復 1% 韌性；最多 5 層，持續 8 秒；完整計算與適用限制見來源文件。 |
