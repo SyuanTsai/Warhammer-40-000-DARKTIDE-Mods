@@ -40,6 +40,7 @@
 | [系統電擊](#cryptic_electrocution_applies_brittleness) | 未見明確矛盾 |
 | [彈藥預知](#cryptic_ammo_reserve) | 未見明確矛盾 |
 | [電能修復](#cryptic_coherency_toughness_on_ability) | 未見明確矛盾 |
+| [莫比亞導體](#cryptic_damage_on_ability) | 未見明確矛盾 |
 | [適應性戰鬥校準](#cryptic_cleave_and_impact) | 未見明確矛盾 |
 | [數據感應協定](#cryptic_ally_coherency_defenses) | 受益對象用語有誤 |
 | [抗腐護符](#cryptic_corruption_resistance_doom) | 未見明確矛盾 |
@@ -269,6 +270,13 @@
 - 描述鍵：`loc_talent_cryptic_coherency_toughness_on_ability_desc`；hash：`5c2bb368`。
 - 結論：未見明確矛盾。繁中與英文一致；補充戰鬥能力與各自最大韌性。
 - [原始碼推導與限制](cryptic_coherency_toughness_on_ability.md)。
+
+<a id="cryptic_damage_on_ability"></a>
+## 莫比亞導體(Moebian Conductor)
+
+- 描述鍵：`loc_talent_cryptic_damage_on_ability_desc`；hash：`d9e47181`。
+- 結論：未見明確矛盾。雙語一致；補充觸發種類、非按消耗份數加倍。
+- [原始碼推導與限制](cryptic_damage_on_ability.md)。
 
 <a id="cryptic_cleave_and_impact"></a>
 ## 適應性戰鬥校準(Adaptive Combat Calibration)

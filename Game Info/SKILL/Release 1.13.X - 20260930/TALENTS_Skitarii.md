@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/7f79455c-bf29-4b78-8706-dda075acb8d0" width="32" height="32" alt="系統電擊天賦圖示"> [系統電擊](#cryptic_electrocution_applies_brittleness)<br>- System Shock | <ul><li>施加或刷新電擊時增加 3 層脆弱</li><li>每層 2.5%，持續 5 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d265085f-7abd-4433-adc1-3f0276351436" width="32" height="32" alt="彈藥預知天賦圖示"> [彈藥預知](#cryptic_ammo_reserve)<br>- Ammo-Cell Augury | <ul><li>儲備彈藥上限增加 25%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bb7b86c4-512f-495f-a82a-7011cae498d6" width="32" height="32" alt="電能修復天賦圖示"> [電能修復](#cryptic_coherency_toughness_on_ability)<br>- Voltaic Restoration | <ul><li>使用戰鬥能力，為自己與協同隊友恢復 20% 韌性</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="莫比亞導體天賦圖示"> [莫比亞導體](#cryptic_damage_on_ability)<br>- Moebian Conductor | <ul><li>啟動戰鬥能力後，傷害提高 15%、持續 10 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="適應性戰鬥校準天賦圖示"> [適應性戰鬥校準](#cryptic_cleave_and_impact)<br>- Adaptive Combat Calibration | <ul><li>韌性高於 50%：近戰順劈提高 30%</li><li>韌性不高於 50%：近戰衝擊提高 30%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0bbe1f46-d58e-414d-9ab3-1c8ed0170a41" width="32" height="32" alt="數據感應協定天賦圖示"> [數據感應協定](#cryptic_ally_coherency_defenses)<br>- Data Sensor Protocol | <ul><li>你或協同隊友受到韌性傷害，受傷者恢復 25% 耐力</li><li>受到生命傷害則恢復 25% 韌性，兩類各冷卻 15 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1c4ea759-440c-48dd-bc21-3bc8303683d5" width="32" height="32" alt="抗腐護符天賦圖示"> [抗腐護符](#cryptic_corruption_resistance_doom)<br>- Ablative Wards | <ul><li>受到的腐敗減少 90%</li><li>每 20 秒付出基準 1 點腐敗代價</li></ul> | 技能 |
@@ -525,6 +526,21 @@
 - **計次方式**：按能力啟動次數恢復；一次消耗 3 份電容量不會改成恢復 60%。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_coherency_toughness_on_ability.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_damage_on_ability"></a>
+### 莫比亞導體(Moebian Conductor)
+
+<img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="72" height="72" alt="莫比亞導體天賦圖示">
+
+- **觸發方式**：啟動戰鬥能力後，傷害提高 15%，持續 10 秒；閃擊不觸發。
+
+- **刷新方式**：再次啟動只刷新 10 秒，不疊層；一次消耗多份電容量也仍是 15%。
+
+- **傷害算例**：基礎傷害 100、有 25% 同階段加成時，100 × (1 + 25% + 15%) = 140 點。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_damage_on_ability.md) · [返回目錄](#talent-index)
 
 ---
 
