@@ -10,6 +10,7 @@
 | <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="殉道天賦圖示"> [殉道](#zealot_martyrdom)<br>- Martyrdom | <ul><li>每失去一整格生命，近戰傷害增加 10%，最多 5 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="32" height="32" alt="不滅意志天賦圖示"> [不滅意志](#zealot_martyrdom_grants_toughness)<br>- I Shall Not Fall | <ul><li>殉道每缺少一格生命傷口，韌性承傷降低 7.5%，最多 5 格。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/2a096b34-3273-406a-82fc-23c774fcaedf" width="32" height="32" alt="狂燥之心天賦圖示"> [狂燥之心](#zealot_martyrdom_grants_attack_speed)<br>- Maniac | <ul><li>殉道每缺少一格生命傷口，近戰攻擊速度提高 6%，最多 5 格。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/0a442a9a-29b1-4a94-b85c-5772f9d85d7c" width="32" height="32" alt="命定審判天賦圖示"> [命定審判](#zealot_quickness_passive)<br>- Inexorable Judgement | <ul><li>移動每累積 5 公尺獲得 1 層勢能，最多 20 層；衝刺距離計雙倍。</li><li>命中時將目前層數轉為 6 秒增益；近戰或遠程命中皆可觸發。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab" width="32" height="32" alt="吊命聖徒天賦圖示"> [吊命聖徒](#zealot_resist_death_heal)<br>- Holy Revenant | <ul><li>死戰到底觸發時擊退附近敵人。</li><li>免死期間按造成傷害累積治療額度；近戰換算率為一般傷害的 3 倍。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="狂熱朝聖者天賦圖示"> [狂熱朝聖者](#zealot_resist_death_ability)<br>- Zealous Pilgrim | <ul><li>使用戰鬥技能後獲得 4 秒免死效果。</li><li>隱身技能在退出隱身後生效；聖物技能在卸下聖物後生效。</li><li>無法殺死期間，傷害及攻擊速度各提高 10%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="天災天賦圖示"> [天災](#zealot_crits_apply_bleed)<br>- Scourge | <ul><li>近戰爆擊施加 2 層流血；攻擊流血敵人增加近戰爆擊率。</li></ul> | 技能 |
@@ -113,6 +114,23 @@
 - **速度算例**：3 層增加 3 × 6% = 18% 近戰攻速，受影響的 1 秒動作變成 1 ÷ 1.18 ≈ 0.847 秒；5 層為 1 ÷ 1.3 ≈ 0.769 秒。其他同階段攻速先相加。
 
 [詳細資料](TALENTS%20Zealot/zealot_martyrdom_grants_attack_speed.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_quickness_passive"></a>
+### 命定審判(Inexorable Judgement)
+
+<img src="https://github.com/user-attachments/assets/0a442a9a-29b1-4a94-b85c-5772f9d85d7c" width="72" height="72" alt="命定審判天賦圖示">
+
+- **累積勢能**：移動每累積 5 公尺獲得 1 層勢能，最多 20 層；衝刺距離以雙倍計算，因此從 0 層到滿層需要一般移動 100 公尺，或衝刺 50 公尺。
+
+- **啟動方式**：近戰或遠程命中時，消耗當前勢能，換成持續 6 秒的加成。加成期間仍可累積下一輪勢能，但命中不會刷新、重新消耗或提高這一輪的層數。
+
+- **傷害與速度**：每層增加 1% 傷害、1% 近戰攻速及 1% 遠程攻速。滿 20 層時，基礎 100 點變成 100 × 1.2 = 120 點；受影響的 1 秒動作變成 1 ÷ 1.2 ≈ 0.833 秒。同階段其他加成先相加。
+
+- **閃避加成**：每層另增加 0.5% 閃避距離、縮短 1% 連續閃避次數的恢復時間，並把閃避速度乘 1.005。20 層時距離為 1.1 倍、次數恢復時間為 0.8 倍、速度約 1.005²⁰ ≈ 1.105 倍。
+
+[詳細資料](TALENTS%20Zealot/zealot_quickness_passive.md) · [返回目錄](#talent-index)
 
 ---
 

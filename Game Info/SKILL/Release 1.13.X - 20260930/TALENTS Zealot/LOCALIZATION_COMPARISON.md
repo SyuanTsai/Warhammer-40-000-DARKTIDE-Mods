@@ -12,6 +12,7 @@
 | [殉道](#zealot_martyrdom) | 未見明確矛盾 |
 | [不滅意志](#zealot_martyrdom_grants_toughness) | 未見明確矛盾 |
 | [狂燥之心](#zealot_martyrdom_grants_attack_speed) | 未見明確矛盾 |
+| [命定審判](#zealot_quickness_passive) | 未見明確矛盾 |
 | [吊命聖徒](#zealot_resist_death_heal) | 明確繁中誤譯 |
 | [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
 | [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
@@ -87,6 +88,13 @@
 - 描述鍵：`loc_talent_zealot_attack_speed_per_martyrdom_upd_desc`；hash：`b83c3710`。
 - 結論：未見明確矛盾。原文與繁中指向殉道層數提供攻擊速度；程式明確限定為近戰攻擊速度，缺失傷口格和數值補充不構成矛盾。
 - [原始碼推導與限制](zealot_martyrdom_grants_attack_speed.md)。
+
+<a id="zealot_quickness_passive"></a>
+## 命定審判(Inexorable Judgement)
+
+- 描述鍵：`loc_talent_zealot_quickness_desc`；hash：`634bdcc4`。
+- 結論：未見明確矛盾。繁中及英文都表達移動累積、命中後獲得攻速／射速增益；精確距離、上限、觸發條件及額外 stat 由實作補足。
+- [原始碼推導與限制](zealot_quickness_passive.md)。
 
 <a id="zealot_resist_death_heal"></a>
 ## 吊命聖徒(Holy Revenant)
