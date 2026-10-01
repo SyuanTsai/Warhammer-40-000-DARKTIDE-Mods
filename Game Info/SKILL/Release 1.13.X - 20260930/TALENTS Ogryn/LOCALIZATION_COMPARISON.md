@@ -47,6 +47,7 @@
 | [士氣高昂](#ogryn_damage_reduction_on_high_stamina) | 未見明確矛盾 |
 | [好運連連](#ogryn_crit_damage_increase) | 未見明確矛盾 |
 | [狂暴猛擊](#ogryn_stacking_attack_speed) | 未見明確矛盾 |
+| [擊潰他們](#ogryn_melee_damage_after_heavy) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -326,3 +327,10 @@
 - 描述鍵：`loc_talent_ogryn_stacking_attack_speed_desc`；hash：`2909d3df`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_stacking_attack_speed.md)。
+
+<a id="ogryn_melee_damage_after_heavy"></a>
+## 擊潰他們(Beat Them Back)
+
+- 描述鍵：`loc_talent_ogryn_melee_damage_after_heavy_desc`；hash：`ee301680`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_melee_damage_after_heavy.md)。

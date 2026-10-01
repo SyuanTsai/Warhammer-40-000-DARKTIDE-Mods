@@ -45,6 +45,7 @@
 | <img src="https://github.com/user-attachments/assets/15edb762-d209-407d-8bd5-fc0672bd5ef8" width="32" height="32" alt="士氣高昂天賦圖示"> [士氣高昂](#ogryn_damage_reduction_on_high_stamina)<br>- Pumped Up | <ul><li>耐力高於 75% 時，受到的傷害減少 12.5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/de5091de-3dd6-455b-875a-55228eb4d67e" width="32" height="32" alt="好運連連天賦圖示"> [好運連連](#ogryn_crit_damage_increase)<br>- Lucky Streak | <ul><li>爆擊時，額外傷害部分增加 75%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5f6d651a-4c88-40ea-a96b-3133459df2f4" width="32" height="32" alt="狂暴猛擊天賦圖示"> [狂暴猛擊](#ogryn_stacking_attack_speed)<br>- Frenzied Blows | <ul><li>連續近戰命中從第二次起累積攻速，每層 2.5%，最多 5 層。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/373afc07-72d5-4815-91c0-0e5d0d02d279" width="32" height="32" alt="擊潰他們天賦圖示"> [擊潰他們](#ogryn_melee_damage_after_heavy)<br>- Beat Them Back | <ul><li>重擊命中後，近戰傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 
 ---
 
@@ -638,5 +639,20 @@
 - **速度算例**：滿層時，受攻速影響的 1 秒動作變成 1 ÷ (1 + 5 × 2.5%) ≈ 0.889 秒；不是直接縮短 12.5% 至 0.875 秒。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_stacking_attack_speed.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_melee_damage_after_heavy"></a>
+### 擊潰他們(Beat Them Back)
+
+<img src="https://github.com/user-attachments/assets/373afc07-72d5-4815-91c0-0e5d0d02d279" width="72" height="72" alt="擊潰他們天賦圖示">
+
+- **觸發方式**：一次近戰重擊至少命中一名敵人，揮擊結束後獲得 15% 近戰傷害加成，持續 5 秒；觸發的那次重擊不會回頭補算加成。
+
+- **疊層與刷新**：再次重擊命中刷新時間，命中多人不會增加百分比；生效期間的一般近戰攻擊也能受益。
+
+- **傷害算例**：基礎 100 點變成 115 點；同階段已有 20% 時為 100 × (1 + 20% + 15%) = 135 點。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_melee_damage_after_heavy.md) · [返回目錄](#talent-index)
 
 ---

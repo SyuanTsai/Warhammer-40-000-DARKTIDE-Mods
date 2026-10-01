@@ -45,3 +45,4 @@
 | [士氣高昂](ogryn_damage_reduction_on_high_stamina.md) | 耐力高於 75% 時，受到的傷害減少 12.5%。；完整計算與適用限制見來源文件。 |
 | [好運連連](ogryn_crit_damage_increase.md) | 爆擊時，額外傷害部分增加 75%。；完整計算與適用限制見來源文件。 |
 | [狂暴猛擊](ogryn_stacking_attack_speed.md) | 連續近戰命中從第二次起累積攻速，每層 2.5%，最多 5 層。；完整計算與適用限制見來源文件。 |
+| [擊潰他們](ogryn_melee_damage_after_heavy.md) | 重擊命中後，近戰傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
