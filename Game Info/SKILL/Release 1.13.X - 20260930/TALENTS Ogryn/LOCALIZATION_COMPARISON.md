@@ -10,6 +10,7 @@
 |---|---|
 | [投彈完畢！](#ogryn_box_explodes) | 未見明確矛盾 |
 | [破片炸彈](#ogryn_grenade_frag) | 未見明確矛盾 |
+| [投石問路](#ogryn_grenade_friend_rock) | 未見明確矛盾 |
 | [超巨量傷害箱](#ogryn_big_box_of_hurt_more_bombs) | 未見明確矛盾 |
 | [破骨者之環](#ogryn_melee_damage_coherency_improved) | 未見明確矛盾 |
 | [優勝劣汰](#ogryn_damage_vs_suppressed_coherency) | 未見明確矛盾 |
@@ -94,6 +95,13 @@
 - 描述鍵：`loc_ability_ogryn_grenade_demolition_instakill_desc`；hash：`802d500b`。
 - 結論：未見明確矛盾。同 hash 802d500b 的繁中與英文均說明爆炸半徑 16 公尺、爆心傷害較高，並將必殺對象限定為人類大小且非連長。來源同時設定半徑 16／近距離 2，並將巨獸、連長與歐格林排除在即死標記之外；原文沒有提供具體傷害公式，不視為錯誤。本機 Build 25492122 的繁中與英文文字以相同 hash 配對；公開固定 SHA 是否對應同一 Build 尚未確認。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_grenade_frag.md)。
+
+<a id="ogryn_grenade_friend_rock"></a>
+## 投石問路(Big Friendly Rock)
+
+- 描述鍵：`loc_ability_ogryn_friend_rock_desc`；hash：`45cf696a`。
+- 結論：未見明確矛盾。同 hash 45cf696a 的繁中與英文都描述單一目標投擲、對甲殼與不屈敵人效果較弱、每 45 秒取得一顆且最多持有 4 顆；能力設定直接確認 45 秒與 4 顆上限，投射物則使用直接命中傷害。未列出傷害公式屬省略，不據此判為翻譯錯誤。本機 Build 25492122 的繁中與英文文字以相同 hash 配對；公開固定 SHA 是否對應同一 Build 尚未確認。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- [原始碼推導與限制](ogryn_grenade_friend_rock.md)。
 
 <a id="ogryn_big_box_of_hurt_more_bombs"></a>
 ## 超巨量傷害箱(Bigger Box of Hurt)
