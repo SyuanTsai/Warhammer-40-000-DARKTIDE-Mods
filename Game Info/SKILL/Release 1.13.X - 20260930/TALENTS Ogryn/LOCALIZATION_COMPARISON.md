@@ -13,6 +13,7 @@
 | [最強壯！](#ogryn_carapace_armor_add_stack_on_push) | 未見明確矛盾 |
 | [最堅韌！](#ogryn_carapace_armor_more_toughness) | 未見明確矛盾 |
 | [最大火力](#ogryn_leadbelcher_cooldown_reduction) | 未見明確矛盾 |
+| [好槍法](#ogryn_leadbelcher_crits) | 未見明確矛盾 |
 | [子彈風暴](#ogryn_blo_ally_ranged_buffs) | 繁中描述錯誤 |
 | [激鬥戰火](#ogryn_blo_wield_speed) | 未見明確矛盾 |
 | [退後！](#ogryn_blo_melee) | 繁中描述錯誤 |
@@ -106,6 +107,13 @@
 - 描述鍵：`loc_talent_ogryn_leadbelcher_grant_cooldown_reduction_desc`；hash：`5aacc61b`。
 - 結論：未見明確矛盾。繁中寫「技能冷卻縮減增加…，持續…秒」，英文寫「…Ability Cooldown Reduction for …s when Lucky Bullet triggers」；兩者都說明幸運子彈觸發時提高技能冷卻恢復，並給出相同持續時間。
 - [原始碼推導與限制](ogryn_leadbelcher_cooldown_reduction.md)。
+
+<a id="ogryn_leadbelcher_crits"></a>
+## 好槍法(Good Shootin')
+
+- 描述鍵：`loc_talent_ogryn_critical_leadbelcher_desc`；hash：`c346583c`。
+- 結論：未見明確矛盾。繁中寫「觸發幸運子彈（且命中）的射擊必定暴擊」，英文寫「The shot that triggers Lucky Bullet is a guaranteed Critical (if it Hits)」；兩者都要求該次射擊命中才形成暴擊命中。
+- [原始碼推導與限制](ogryn_leadbelcher_crits.md)。
 
 <a id="ogryn_blo_ally_ranged_buffs"></a>
 ## 子彈風暴(Bulletstorm)

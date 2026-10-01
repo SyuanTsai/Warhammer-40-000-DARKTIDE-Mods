@@ -12,6 +12,7 @@
 | <img src="https://github.com/user-attachments/assets/3d442f9a-0143-43d7-a6e2-10a5d6b8a9f8" width="32" height="32" alt="最強壯！天賦圖示"> [最強壯！](#ogryn_carapace_armor_add_stack_on_push)<br>- Strongest! | <ul><li>推搡至少一名敵人時，麻木恢復 1 層。</li><li>麻木最多 10 層；一次推搡推中多人也只恢復 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d6e55419-0e35-49cc-9bd6-163bdff037d4" width="32" height="32" alt="最堅韌！天賦圖示"> [最堅韌！](#ogryn_carapace_armor_more_toughness)<br>- Toughest! | <ul><li>「最堅韌！」讓麻木每層額外增加 2.5% 韌性恢復量。</li><li>與麻木本身每層 3% 相加；滿 10 層合計增加 55%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/47256097-2109-4fe4-89b7-b4a224ff1200" width="32" height="32" alt="最大火力天賦圖示"> [最大火力](#ogryn_leadbelcher_cooldown_reduction)<br>- Maximum Firepower | <ul><li>幸運子彈觸發後，2.5 秒內約每秒額外恢復 1 秒戰鬥技能冷卻。</li><li>再次觸發刷新持續時間，不提高每次恢復量。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/048770ea-349f-42a0-b5a1-c582fbfde7f8" width="32" height="32" alt="好槍法天賦圖示"> [好槍法](#ogryn_leadbelcher_crits)<br>- Good Shootin' | <ul><li>觸發幸運子彈的射擊命中時，該次攻擊必定爆擊。</li><li>沒有命中時不會造成爆擊命中；此效果不改變幸運子彈機率。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760" width="32" height="32" alt="子彈風暴天賦圖示"> [子彈風暴](#ogryn_blo_ally_ranged_buffs)<br>- Bulletstorm | <ul><li>觸發幸運子彈時，你和協同範圍內的隊友獲得 +15% 遠程傷害，持續 8 秒。</li><li>再次觸發會把效果時間重新延長為 8 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a9ec95cc-0b91-4558-81b5-faefcf1207d7" width="32" height="32" alt="激鬥戰火天賦圖示"> [激鬥戰火](#ogryn_blo_wield_speed)<br>- Heat of Battle | <ul><li>「激鬥戰火」讓爆限超載每層另增加 1.5% 遠程射速。</li><li>沿用遠程擊殺累積的 10 層、每次加層刷新 10 秒；滿層增加 15% 遠程射速。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5c8fc9b0-2f06-4311-87f7-511d4c6ce6d5" width="32" height="32" alt="退後！天賦圖示"> [退後！](#ogryn_blo_melee)<br>- Back Off! | <ul><li>近戰擊殺可提高下一次射擊觸發幸運子彈的機率，每層增加 10 個百分點。</li><li>最多累積 10 層；下一次射擊後清空，該次即使觸發幸運子彈而免耗彈藥也會消耗層數。</li></ul> | 鑰石 |
@@ -151,6 +152,21 @@
 - **時間算例**：完整收到兩次補回且冷卻尚未完成時，2.5 秒內共推進 2.5 + 2 × 1 = 4.5 秒冷卻。這筆補回按秒結算，不能直接把 2.5 秒當成完整的 5 秒進度。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_leadbelcher_cooldown_reduction.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_leadbelcher_crits"></a>
+### 好槍法(Good Shootin')
+
+<img src="https://github.com/user-attachments/assets/048770ea-349f-42a0-b5a1-c582fbfde7f8" width="72" height="72" alt="好槍法天賦圖示">
+
+- **生效條件**：必須先觸發幸運子彈，且該次射擊命中目標。
+
+- **效果範圍**：只有觸發幸運子彈的那次命中必定爆擊，不會使後續射擊也必定爆擊。
+
+- **傷害算例**：假設同一武器、護甲與部位下，普通傷害 100、爆擊額外傷害 50，幸運子彈命中時為 100 + 50 = 150 點。爆擊倍率依武器而異，並非一律兩倍；沒有命中就不造成傷害。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_leadbelcher_crits.md) · [返回目錄](#talent-index)
 
 ---
 
