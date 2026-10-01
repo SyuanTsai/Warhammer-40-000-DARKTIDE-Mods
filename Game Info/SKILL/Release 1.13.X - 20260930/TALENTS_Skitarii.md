@@ -9,6 +9,7 @@
 | <img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="32" height="32" alt="電流弧天賦圖示"> [電流弧](#cryptic_discharge_generates_arcs)<br>- Voltaic Arcs | <ul><li>電能發射器每消耗一道充能，額外釋放一道向前電弧；最多生成 5 道。</li><li>每道電弧從前方 12 公尺內的有效敵人起始，之後可鏈接附近敵人。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b74a0dba-64ed-40b6-b630-792c413387cd" width="32" height="32" alt="電能驅動天賦圖示"> [電能驅動](#cryptic_discharge_attack_speed_increase)<br>- Voltaic Motivator | <ul><li>每次使用電能發射器後，攻擊速度提高 5% 基礎值，再按消耗充能每道增加 5%。</li><li>加成持續 15 秒；消耗 1、2、3 道時，總加成分別為 10%、15%、20%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/dd369366-6fa1-4e92-bd7b-c92f5bf8023a" width="32" height="32" alt="電流超載天賦圖示"> [電流超載](#cryptic_discharge_toughness)<br>- Voltaic Overcharge | <ul><li>電流發射器每消耗一道充能，立即恢復最大韌性的25%；電流爆炸每命中一名存活敵人，再恢復最大韌性的1%。</li><li>恢復量會受韌性補充修正影響，並且不能超過當前缺少的韌性。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/39f22717-a782-4201-b5b3-f63a166bedd1" width="32" height="32" alt="強化能量循環天賦圖示"> [強化能量循環](#cryptic_increased_passive_cooldown_regen)<br>- Augmented Power-Cycle | <ul><li>每秒額外恢復單道充能需求的1%電容量；依此電能發射器基準，回充速度由每秒1提高至1.5。</li><li>在沒有其他消耗或回充修正時，一道充能約33.3秒回滿，三道由空回滿約100秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="能量載分配鏈路天賦圖示"> [能量載分配鏈路](#cryptic_crits_grant_tdr)<br>- Power Redistribution Uplink | <ul><li>爆擊命中後，3 秒內恢復 7.5% 韌性</li><li>期間承受的韌性傷害降低 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ea4be2ad-8b84-4e83-a056-993beed7b39c" width="32" height="32" alt="適應性戰鬥記憶體天賦圖示"> [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break)<br>- Adaptive Combat Engram | <ul><li>韌性耗盡後，減少 30% 承受傷害、持續 5 秒</li><li>效果結束後冷卻 15 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4738c3e6-2609-414c-9c00-f50fea4dcef3" width="32" height="32" alt="閃避伺服恢復天賦圖示"> [閃避伺服恢復](#cryptic_successful_dodge_stamina)<br>- Evasive Servo Recovery | <ul><li>成功閃避恢復 10% 耐力</li></ul> | 技能 |
@@ -104,6 +105,21 @@
 - **恢復算例**：最大韌性 100、消耗 2 份並命中 5 名合格敵人時，100 × (2 × 25% + 5 × 1%) = 55 點；只缺 40 點就只補 40 點。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_discharge_toughness.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_increased_passive_cooldown_regen"></a>
+### 強化能量循環(Augmented Power-Cycle)
+
+<img src="https://github.com/user-attachments/assets/39f22717-a782-4201-b5b3-f63a166bedd1" width="72" height="72" alt="強化能量循環天賦圖示">
+
+- **恢復方式**：每秒額外恢復單份電容量的 1%，使基礎自然恢復速率由每秒 2% 提高至 3%。
+
+- **時間算例**：沒有其他加成或持續消耗時，一份從空補滿需 100% ÷ 3% ≈ 33.33 秒，三份全空補滿需 300% ÷ 3% = 100 秒。
+
+- **搭配能力**：進階戰鬥教範啟動、維持與射擊都另有消耗，不能用上述補滿時間估算架勢可維持多久。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_increased_passive_cooldown_regen.md) · [返回目錄](#talent-index)
 
 ---
 
