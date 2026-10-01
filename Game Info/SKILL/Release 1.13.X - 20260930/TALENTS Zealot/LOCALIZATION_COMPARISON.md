@@ -13,6 +13,7 @@
 | [眩暈風暴手雷](#zealot_improved_stun_grenade) | 未見明確矛盾 |
 | [恩賜](#zealot_toughness_damage_reduction_coherency_improved) | 未見明確矛盾 |
 | [純潔信標](#zealot_corruption_healing_coherency_improved) | 未見明確矛盾 |
+| [熱忱](#zealot_stamina_cost_multiplier_aura) | 措辭待同版核對 |
 | [不屈靈魂合唱](#zealot_bolstering_prayer) | 待同版核對 |
 | [有信者之怒](#zealot_attack_speed_post_ability) | 跨來源待同版核對 |
 | [神聖事業](#zealot_channel_grants_toughness_damage_reduction) | 原文字串未精確配對 |
@@ -126,6 +127,13 @@
 - 描述鍵：`loc_talent_zealot_corruption_healing_coherency_improved_desc`；hash：`afc49dc9`。
 - 結論：未見明確矛盾。Build 25492122 中繁中「每秒淨化腐敗」與英文「Heal Corruption ... every 1s」方向一致；來源證明為固定值清除，未顯示清楚的翻譯錯誤。
 - [原始碼推導與限制](zealot_corruption_healing_coherency_improved.md)。
+
+<a id="zealot_stamina_cost_multiplier_aura"></a>
+## 熱忱(Zealous)
+
+- 描述鍵：`loc_talent_zealot_stamina_cost_multiplier_delay_aura_description`；hash：`2b5c13bc`。
+- 結論：措辭待同版核對。繁中寫「耐力消耗變為{stamina_cost_multiplier:%s}」，英文為帶符號的 Stamina Cost；固定來源會格式化為 −15%。機制為消耗乘 .85，但尚未確認該 Build 實際代入的文字，故將「變為」的措辭問題列為待核，不當成已完成的遊戲顯示勘誤。
+- [原始碼推導與限制](zealot_stamina_cost_multiplier_aura.md)。
 
 <a id="zealot_bolstering_prayer"></a>
 ## 不屈靈魂合唱(Chorus of Spiritual Fortitude)
