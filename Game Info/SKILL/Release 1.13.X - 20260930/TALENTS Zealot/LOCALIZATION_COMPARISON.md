@@ -46,6 +46,7 @@
 | [頭號目標](#zealot_elite_kills_empowers) | 未見明確矛盾 |
 | [敵後行動](#zealot_suppress_on_backstab_kill) | 未見明確矛盾 |
 | [殺戮時刻](#zealot_backstab_periodic_damage) | 未見明確矛盾 |
+| [逆境而上](#zealot_offensive_vs_many) | 未見明確矛盾 |
 
 <a id="zealot_crits_apply_bleed"></a>
 ## 天災(Scourge)
@@ -314,3 +315,10 @@
 - 描述鍵：`loc_talent_zealot_backstab_periodic_damage_desc`；hash：`f5f63199`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_backstab_periodic_damage.md)。
+
+<a id="zealot_offensive_vs_many"></a>
+## 逆境而上(Against the Odds)
+
+- 描述鍵：`loc_talent_zealot_offensive_vs_many_desc`；hash：`d2cd1130`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_offensive_vs_many.md)。

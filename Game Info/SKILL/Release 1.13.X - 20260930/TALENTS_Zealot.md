@@ -44,6 +44,7 @@
 | <img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="32" height="32" alt="頭號目標天賦圖示"> [頭號目標](#zealot_elite_kills_empowers)<br>- Prime Target | <ul><li>擊殺精英後增傷 10%，並在 5 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5d469457-ce3e-4c4f-ac25-c0759b30b61f" width="32" height="32" alt="敵後行動天賦圖示"> [敵後行動](#zealot_suppress_on_backstab_kill)<br>- Behind the Lines | <ul><li>重擊背刺擊殺後，壓制自身 8 公尺內的敵人；冷卻 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4bf327a5-94f0-4af9-ad51-b3380308846e" width="32" height="32" alt="殺戮時刻天賦圖示"> [殺戮時刻](#zealot_backstab_periodic_damage)<br>- Time to Kill | <ul><li>下一次有效近戰背刺增加 50% 傷害；觸發後冷卻 8 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/9b626554-120f-43b1-b152-bf21224b6a42" width="32" height="32" alt="逆境而上天賦圖示"> [逆境而上](#zealot_offensive_vs_many)<br>- Against the Odds | <ul><li>5 公尺內每 2 名敵人提供 2% 傷害與 10% 順劈能力，最多 5 層。</li></ul> | 技能 |
 
 ---
 
@@ -582,5 +583,20 @@
 - **方向限制**：必須是近戰命中敵人背後的有效角度；從背後射擊不算這項近戰背刺。
 
 [詳細資料](TALENTS%20Zealot/zealot_backstab_periodic_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_offensive_vs_many"></a>
+### 逆境而上(Against the Odds)
+
+<img src="https://github.com/user-attachments/assets/9b626554-120f-43b1-b152-bf21224b6a42" width="72" height="72" alt="逆境而上天賦圖示">
+
+- **疊層方式**：5 公尺內每有 2 名敵人，增加 2% 傷害與 10% 順劈能力；最多 5 層，需要 10 名敵人。敵人離開後，層數跟著下降；被控制而無法行動時暫停加成。
+
+- **傷害算例**：附近 6 名敵人為 3 層，基礎 100 點變成 100 × (1 + 3 × 2%) = 106 點；10 名以上最多 110 點。同階段其他傷害加成先相加。
+
+- **順劈算例**：原本可穿透的敵人體型總量為 10，3 層時變成 10 × (1 + 3 × 10%) = 13；滿層為 15。這是可穿透總量，不等於固定多命中 3 或 5 名敵人。
+
+[詳細資料](TALENTS%20Zealot/zealot_offensive_vs_many.md) · [返回目錄](#talent-index)
 
 ---
