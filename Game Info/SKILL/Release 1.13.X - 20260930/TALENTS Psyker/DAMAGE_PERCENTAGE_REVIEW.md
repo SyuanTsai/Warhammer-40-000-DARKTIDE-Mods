@@ -80,7 +80,7 @@
 | [武器在手，信心我有。](psyker_reload_speed_warp_charge.md) | 機制與公式待核對。 |
 | [結晶意志](psyker_alternative_peril_explosion.md) | 反噬爆炸傷害增加 100%，半徑增加 25%。；以移除一格傷痕代替通常的爆炸倒地；爆炸擊殺精英可免除此代價。；完整計算與適用限制見來源文件。 |
 | [靈能引導](psyker_force_staff_bonus.md) | 高蓄力後，主要法杖攻擊增傷 20%，持續 5 秒。；主要攻擊後，次要法杖攻擊增傷 10%，持續 5 秒。；完整計算與適用限制見來源文件。 |
-| [亞空間震波](psyker_force_staff_quick_attack_bonus.md) | 機制與公式待核對。 |
+| [亞空間震波](psyker_force_staff_quick_attack_bonus.md) | 力場法杖主要攻擊命中，使目標受到的亞空間傷害每層乘 1.06。；最多 5 層，持續 10 秒。；完整計算與適用限制見來源文件。 |
 | [如夢似幻](psyker_damage_to_peril_conversion.md) | 反噬低於 97% 時減傷 25%，並依收到的傷害增加反噬。；完整計算與適用限制見來源文件。 |
 | [無形專注](psyker_damage_resistance_stun_immunity.md) | 受到的傷害減少 10%。；反噬達 97% 時免疫暈眩；降離門檻後保留 4 秒。；完整計算與適用限制見來源文件。 |
 | [亞空間意志](psyker_warp_glass_cannon.md) | 機制與公式待核對。 |
