@@ -1696,3 +1696,5 @@
 - Potent Tox - 強效毒藥（沿用本機繁中名稱，待使用者確認；`base_toxin_power_boost_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1757-L1781)）
 
 - Equip Cartel Special - 裝備財閥特殊裝備（沿用本機繁中名稱，待使用者確認；`broker_stimm_activation_talent`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L3187-L3191)）
+
+- Spur I - 激勵 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L499-L507)）

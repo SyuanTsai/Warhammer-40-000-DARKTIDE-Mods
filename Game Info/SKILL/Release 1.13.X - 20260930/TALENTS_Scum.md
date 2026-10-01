@@ -87,6 +87,7 @@
 | <img src="https://github.com/user-attachments/assets/3247cd98-e623-4d24-a821-db3f3a6ee20a" width="32" height="32" alt="順手牽羊天賦圖示"> [順手牽羊](#broker_passive_low_ammo_regen)<br>- Pickpocket | <ul><li>備用彈藥低於 20% 時，近戰擊殺精英或專家會補到 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6fa27fb0-2d79-43fc-b74a-d64da58773f6" width="32" height="32" alt="趁勝追擊天賦圖示"> [趁勝追擊](#broker_passive_cleave_on_cleave)<br>- Battering Momentum | <ul><li>單次近戰命中至少 3 名敵人，獲得 50% 額外順劈供下一次攻擊使用。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/51c007e0-bed4-4759-a369-04ab37032369" width="32" height="32" alt="裝備財閥特殊裝備天賦圖示"> [裝備財閥特殊裝備](#broker_stimm_activation_talent)<br>- Equip Cartel Special | <ul><li>分配興奮劑配方後，裝備可自動恢復的專用興奮劑；配方共用 30 點額度。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="32" height="32" alt="激勵 I天賦圖示"> [激勵 I](#broker_stimm_celerity_1)<br>- Spur I | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li></ul> | 興奮劑配方 |
 
 ---
 
@@ -1318,5 +1319,24 @@
 - **完整週期算例**：配方花費 30 點、不計其他恢復效果，注射後先生效 15 秒，再恢復 75 秒，合計 15 + 75 = 90 秒可再次使用。
 
 [詳細資料](TALENTS%20Scum/broker_stimm_activation_talent.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_stimm_celerity_1"></a>
+### 激勵 I(Spur I)
+
+<img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="72" height="72" alt="激勵 I天賦圖示">
+
+- **配方成本**：1 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
+
+- **攻擊速度**：增加 4%，與其他攻速加成相加。
+
+- **武器切換**：切換速度增加 25%；同時選取激勵 I、II 時，共增加 50%。
+
+- **切換算例**：原本可加速的切換動作為 1 秒，僅此項時為 1 ÷ 1.25 = 0.8 秒；I、II 合計為 1 ÷ 1.5 ≈ 0.667 秒。
+
+- **攻速算例**：從激勵 I 選到本節點，共增加 4%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.04 ≈ 0.962 秒。
+
+[詳細資料](TALENTS%20Scum/broker_stimm_celerity_1.md) · [返回目錄](#talent-index)
 
 ---
