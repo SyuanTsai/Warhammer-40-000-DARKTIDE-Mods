@@ -4,7 +4,7 @@
 
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_ability_stimm_field_sub_3`；名稱鍵：`loc_talent_broker_ability_stimm_field_sub_3`；描述鍵：`loc_talent_broker_ability_stimm_field_sub_3_desc`。
-- 節點：`node_c7a8a5c5-60d1-4c71-bc38-79121befb0c8`；分類：能力；每節點一點。
+- 節點：`node_c7a8a5c5-60d1-4c71-bc38-79121befb0c8`；分類：能力；配點成本：1 點。
 - 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
