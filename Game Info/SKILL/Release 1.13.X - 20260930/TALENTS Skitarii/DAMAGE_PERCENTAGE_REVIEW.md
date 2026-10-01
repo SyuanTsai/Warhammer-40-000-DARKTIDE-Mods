@@ -11,6 +11,7 @@
 | [熵能轉移](cryptic_electrocution_toughness.md) | 施加或刷新電擊後，4 秒內恢復 12% 韌性；完整計算與適用限制見來源文件。 |
 | [過載轉移晶格](cryptic_electrocution_defense.md) | 遭近戰傷害時電擊攻擊者周圍 2.5 公尺敵人；冷卻 15 秒；完整計算與適用限制見來源文件。 |
 | [報應導管](cryptic_damage_vs_electrocuted_scaling_on_charge.md) | 對電擊目標提高 10% 傷害；每份完整電容量再增加 5%；完整計算與適用限制見來源文件。 |
+| [電流標記陣列](cryptic_elite_kills_damage.md) | 以遠程攻擊擊殺精英，每次提高 5% 傷害；最多 4 層，每 15 秒衰減一層；完整計算與適用限制見來源文件。 |
 | [絕境中繼](cryptic_crit_chance_based_on_charge.md) | 爆擊率增加 6 個百分點；沒有完整電容量時提高至 10 個百分點；完整計算與適用限制見來源文件。 |
 | [弱點分析教義](cryptic_afflicted_increased_damage.md) | 命中電擊、燃燒、靈魂之火、流血或中毒敵人；傷害提高 10%、持續 8 秒；完整計算與適用限制見來源文件。 |
 | [液壓衝擊](cryptic_better_heavies.md) | 蓄力近戰攻擊時不易被一般受擊打斷；近戰重擊傷害提高 15%；完整計算與適用限制見來源文件。 |
