@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/adamant_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10)。內部 tree version 19 不等於遊戲發行版號。
 
-完成 40／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 41／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -47,6 +47,7 @@
 | 技能 | [帝皇之拳](adamant_first_melee_hit_increased_damage.md) / `adamant_first_melee_hit_increased_damage` | `node_bf589f32-33d7-48d4-ae96-2ab3d6a63ee3` | 完成（核心靜態機制） |
 | 技能 | [擊殺順序](adamant_increased_damage_to_high_health.md) / `adamant_increased_damage_to_high_health` | `node_2eb48f41-2b1a-42ae-9f0c-e5c6210c9949` | 完成（核心靜態機制） |
 | 技能 | [迅疾走位](adamant_sprinting_sliding.md) / `adamant_sprinting_sliding` | `node_4e45edbc-7e9a-43b8-9078-8d8146ca4177` | 完成（核心靜態機制） |
+| 技能 | [最後通牒](adamant_ranged_damage_on_melee_stagger.md) / `adamant_ranged_damage_on_melee_stagger` | `node_8dfe9968-7413-4940-bd87-0a220eb821e7` | 完成（核心靜態機制） |
 | 技能 | [秉賦為先](adamant_clip_size.md) / `adamant_clip_size` | `node_5d52392f-6daa-479c-9104-67a901e69a32` | 完成（核心靜態機制） |
 | 技能 | [惡徒退散](adamant_damage_vs_suppressed.md) / `adamant_damage_vs_suppressed` | `node_0bf17803-4dbf-4ffd-8c23-2115ca8b2515` | 完成（核心靜態機制） |
 | 技能 | [正當手段](adamant_stacking_damage.md) / `adamant_stacking_damage` | `node_51aaefd1-2772-4d9e-b458-80c449db677e` | 完成（核心靜態機制） |

@@ -44,6 +44,7 @@
 | [帝皇之拳](#adamant_first_melee_hit_increased_damage) | 未見明確矛盾 |
 | [擊殺順序](#adamant_increased_damage_to_high_health) | 未見明確矛盾 |
 | [迅疾走位](#adamant_sprinting_sliding) | 未見明確矛盾 |
+| [最後通牒](#adamant_ranged_damage_on_melee_stagger) | 未見明確矛盾 |
 | [秉賦為先](#adamant_clip_size) | 未見明確矛盾 |
 | [惡徒退散](#adamant_damage_vs_suppressed) | 未見明確矛盾 |
 | [正當手段](#adamant_stacking_damage) | 未見明確矛盾 |
@@ -302,6 +303,13 @@
 - 描述鍵：`loc_talent_adamant_sprinting_sliding_description`；hash：`1469331e`。
 - 結論：未見明確矛盾。繁中滑行加速、擊殺耐力與英文一致；0.75秒只限制擊殺恢復，屬範圍補充。
 - [原始碼推導與限制](adamant_sprinting_sliding.md)。
+
+<a id="adamant_ranged_damage_on_melee_stagger"></a>
+## 最後通牒(Final Warning)
+
+- 描述鍵：`loc_talent_adamant_ranged_damage_on_melee_stagger_desc`；hash：`b76999a7`。
+- 結論：未見明確矛盾。繁中「近戰…踉蹌」對應英文 Melee Staggering Hits；推擊及弱點天賦互動未列不視為錯誤。
+- [原始碼推導與限制](adamant_ranged_damage_on_melee_stagger.md)。
 
 <a id="adamant_clip_size"></a>
 ## 秉賦為先(Priority Endowment)

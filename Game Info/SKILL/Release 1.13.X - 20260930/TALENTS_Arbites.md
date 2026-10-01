@@ -42,6 +42,7 @@
 | <img src="https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc" width="32" height="32" alt="帝皇之拳天賦圖示"> [帝皇之拳](#adamant_first_melee_hit_increased_damage)<br>- The Emperor's Fist | <ul><li>每次近戰揮擊的第一個命中目標，傷害提高 15%、衝擊提高 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47" width="32" height="32" alt="擊殺順序天賦圖示"> [擊殺順序](#adamant_increased_damage_to_high_health)<br>- Target Priority | <ul><li>對生命值高於 75% 的敵人，傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8a0b3c73-0e7e-4d31-9f7d-385634eae6e3" width="32" height="32" alt="迅疾走位天賦圖示"> [迅疾走位](#adamant_sprinting_sliding)<br>- Rapid Movement | <ul><li>滑行結束後，衝刺速度提高 5%，持續 5 秒；擊殺恢復最大耐力的 5%，冷卻 0.75 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/75cf7e7e-044e-432f-b7cb-b73e53164425" width="32" height="32" alt="最後通牒天賦圖示"> [最後通牒](#adamant_ranged_damage_on_melee_stagger)<br>- Final Warning | <ul><li>近戰或推擊使敵人踉蹌後，遠程傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/03af9ca3-e4f4-4383-9650-f8ac659cfadd" width="32" height="32" alt="秉賦為先天賦圖示"> [秉賦為先](#adamant_clip_size)<br>- Priority Endowment | <ul><li>彈匣容量提高 15%，容量向上取整數。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="惡徒退散天賦圖示"> [惡徒退散](#adamant_damage_vs_suppressed)<br>- Cower, Miscreants! | <ul><li>對受壓制敵人的傷害提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="正當手段天賦圖示"> [正當手段](#adamant_stacking_damage)<br>- Justified Measures | <ul><li>攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。</li></ul> | 技能 |
@@ -524,6 +525,19 @@
 - **擊殺恢復**：擊殺敵人恢復最大耐力的 5%，每 0.75 秒最多觸發一次；不需要先滑行。最大耐力 6 點時，每次為 6 × 5% = 0.3 點，最多補滿。
 
 [詳細資料](TALENTS%20Arbites/adamant_sprinting_sliding.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_ranged_damage_on_melee_stagger"></a>
+### 最後通牒(Final Warning)
+
+<img src="https://github.com/user-attachments/assets/75cf7e7e-044e-432f-b7cb-b73e53164425" width="72" height="72" alt="最後通牒天賦圖示">
+
+- **觸發與刷新**：近戰攻擊或推擊使敵人踉蹌後，遠程傷害提高 15%，持續 5 秒；再次觸發重設時間。搭配震盪攻擊，符合條件的近戰弱點命中也可觸發。
+
+- **傷害算例**：基礎 100 點遠程傷害變成 115 點；同階段原有 25% 加成時，由 125 點變成 100 × (1 + 25% + 15%) = 140 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_ranged_damage_on_melee_stagger.md) · [返回目錄](#talent-index)
 
 ---
 
