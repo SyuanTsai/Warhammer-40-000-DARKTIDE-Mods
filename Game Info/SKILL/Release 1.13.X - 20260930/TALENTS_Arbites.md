@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="32" height="32" alt="殺戮命令天賦圖示"> [殺戮命令](#adamant_dog_damage_after_ability)<br>- Kill Order | <ul><li>使用戰鬥技能後，電子獒犬傷害提高 50%，持續 12 秒；效果生效時再次使用戰鬥技能可刷新。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="32" height="32" alt="處刑命令天賦圖示"> [處刑命令](#adamant_execution_order)<br>- Execution Order | <ul><li>自動標記前方 40 公尺內的精英、專家或頭目。</li><li>你或電子獒犬擊殺標記目標後，恢復 15% 最大韌性，並獲得 8 秒傷害與攻速加成。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="孤狼天賦圖示"> [孤狼](#adamant_disable_companion)<br>- Lone Wolf | <ul><li>選取後伺服器端移除電子獒犬，改給自身傷害、攻速、韌性受傷倍率與閃擊充能補給。</li><li>一般手榴彈每 45 秒補 1 顆；使用震撼地雷時每 90 秒補 1 顆；補給只在有缺額時計時。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/bc3b59ed-a142-4807-86f9-f75d65b367b4" width="32" height="32" alt="法務官警覺天賦圖示"> [法務官警覺](#adamant_forceful_ability_damage)<br>- Arbites Vigilant | <ul><li>使用戰鬥技能時，將當前 堅定不移 層數轉成 12 秒威力加成。</li><li>最多 10 層各給 2.5% 威力，觸發會消耗 堅定不移 層數。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="32" height="32" alt="效率殺手天賦圖示"> [效率殺手](#adamant_execution_order_crit)<br>- Efficient Killer | <ul><li>擊殺被標記敵人時，獲得 8 秒爆擊機率與爆擊傷害加成。</li><li>加成為 +10 個百分點爆擊機率與 +25% 額外爆擊傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="32" height="32" alt="生化武器關天賦圖示"> [生化武器關](#adamant_execution_order_cdr)<br>- Malocator | <ul><li>擊殺被標記敵人後，建立 8 秒戰鬥技能資源恢復效果。</li><li>每秒恢復 0.5 秒能力資源，名目上最多約 4 秒，受剩餘冷卻上限限制。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/ab53bec8-fd00-470c-8c5d-46cc58904f13" width="32" height="32" alt="罪不可赦天賦圖示"> [罪不可赦](#adamant_execution_order_rending)<br>- No Lenience | <ul><li>擊殺被標記敵人後，獲得 8 秒撕裂加成。</li><li>撕裂修正為 +10%，進入共用護甲傷害計算。</li></ul> | 鑰石 |
@@ -236,6 +237,19 @@
 - **補充算例**：一般手榴彈缺少至少 1 顆時，開始等 45 秒並補回 1 顆；震撼地雷缺額則等 90 秒。補回後重新等下一次，滿充能時不計時。
 
 [詳細資料](TALENTS%20Arbites/adamant_disable_companion.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_forceful_ability_damage"></a>
+### 法務官警覺(Arbites Vigilant)
+
+<img src="https://github.com/user-attachments/assets/bc3b59ed-a142-4807-86f9-f75d65b367b4" width="72" height="72" alt="法務官警覺天賦圖示">
+
+- **觸發與消耗**：使用戰鬥技能時，消耗當下全部「堅定不移」層數，每層換成 2.5% 威力加成，持續 12 秒。
+
+- **威力算例**：6 層提供 15%，10 層提供 25%；單計本效果，500 威力在 10 層時變成 500 × 1.25 = 625。威力再經傷害、衝擊與順劈各自公式結算，不能直接把所有最終效果都乘 1.25。
+
+[詳細資料](TALENTS%20Arbites/adamant_forceful_ability_damage.md) · [返回目錄](#talent-index)
 
 ---
 
