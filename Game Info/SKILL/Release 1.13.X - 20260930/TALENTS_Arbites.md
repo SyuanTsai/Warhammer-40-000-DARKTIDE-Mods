@@ -45,6 +45,7 @@
 | <img src="https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc" width="32" height="32" alt="帝皇之拳天賦圖示"> [帝皇之拳](#adamant_first_melee_hit_increased_damage)<br>- The Emperor's Fist | <ul><li>每次近戰揮擊的第一個命中目標，傷害提高 15%、衝擊提高 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4b7cf064-ea83-4334-a484-a222e22af7a3" width="32" height="32" alt="篩選目標天賦圖示"> [篩選目標](#adamant_pinning_dog_elite_damage)<br>- Target Selection | <ul><li>擊殺自己的電子獒犬正在壓制的精英或專家敵人後，對精英與專家的傷害提高 15%，持續 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47" width="32" height="32" alt="擊殺順序天賦圖示"> [擊殺順序](#adamant_increased_damage_to_high_health)<br>- Target Priority | <ul><li>對生命值高於 75% 的敵人，傷害提高 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/fc2bbfe4-50b8-4c9c-b775-20f1c2c33792" width="32" height="32" alt="猛犬氣場天賦圖示"> [猛犬氣場](#adamant_pinning_dog_kills_buff_allies)<br>- Canine Morale | <ul><li>擊殺自己的電子獒犬正在壓制的敵人後，你與協同範圍內隊友獲得 20% 韌性減傷，並在 5 秒內恢復 10% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8a0b3c73-0e7e-4d31-9f7d-385634eae6e3" width="32" height="32" alt="迅疾走位天賦圖示"> [迅疾走位](#adamant_sprinting_sliding)<br>- Rapid Movement | <ul><li>滑行結束後，衝刺速度提高 5%，持續 5 秒；擊殺恢復最大耐力的 5%，冷卻 0.75 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/75cf7e7e-044e-432f-b7cb-b73e53164425" width="32" height="32" alt="最後通牒天賦圖示"> [最後通牒](#adamant_ranged_damage_on_melee_stagger)<br>- Final Warning | <ul><li>近戰或推擊使敵人踉蹌後，遠程傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/03af9ca3-e4f4-4383-9650-f8ac659cfadd" width="32" height="32" alt="秉賦為先天賦圖示"> [秉賦為先](#adamant_clip_size)<br>- Priority Endowment | <ul><li>彈匣容量提高 15%，容量向上取整數。</li></ul> | 技能 |
@@ -579,6 +580,21 @@
 - **傷害算例**：目標最大生命 1000、目前 800 時，基礎 100 點傷害變成 100 × 1.15 = 115 點；目前 750 時仍為 100 點。已有同階段 25% 加成且門檻成立時，125 點變成 140 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_increased_damage_to_high_health.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_pinning_dog_kills_buff_allies"></a>
+### 猛犬氣場(Canine Morale)
+
+<img src="https://github.com/user-attachments/assets/fc2bbfe4-50b8-4c9c-b775-20f1c2c33792" width="72" height="72" alt="猛犬氣場天賦圖示">
+
+- **觸發方式**：你或自己的電子獒犬擊殺牠正在壓制的敵人後，你與當時協同範圍內的隊友獲得效果；不限定精英或專家敵人。
+
+- **恢復與減傷**：持續 5 秒，承受的韌性傷害降低 20%，並每秒恢復最大韌性的 2%。再次觸發刷新時間，不增加恢復速率或疊加減傷。
+
+- **算例**：最大韌性 100 時，每秒恢復 100 × 10% ÷ 5 = 2 點，完整 5 秒共 10 點，最多補滿；只計本效果，原本 100 點韌性傷害變成 100 × 0.8 = 80 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_pinning_dog_kills_buff_allies.md) · [返回目錄](#talent-index)
 
 ---
 

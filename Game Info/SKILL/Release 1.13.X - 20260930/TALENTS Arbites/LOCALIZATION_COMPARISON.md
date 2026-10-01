@@ -47,6 +47,7 @@
 | [帝皇之拳](#adamant_first_melee_hit_increased_damage) | 未見明確矛盾 |
 | [篩選目標](#adamant_pinning_dog_elite_damage) | 未見明確矛盾 |
 | [擊殺順序](#adamant_increased_damage_to_high_health) | 未見明確矛盾 |
+| [猛犬氣場](#adamant_pinning_dog_kills_buff_allies) | 未見明確矛盾 |
 | [迅疾走位](#adamant_sprinting_sliding) | 未見明確矛盾 |
 | [最後通牒](#adamant_ranged_damage_on_melee_stagger) | 未見明確矛盾 |
 | [秉賦為先](#adamant_clip_size) | 未見明確矛盾 |
@@ -331,6 +332,13 @@
 - 描述鍵：`loc_talent_adamant_increased_damage_to_high_health_desc`；hash：`c5936e7c`。
 - 結論：未見明確矛盾。繁中「高於…生命值」與英文 above…Health一致；「造成…傷害」較不清楚，但未單憑措辭判錯，主文明寫加成及門檻。
 - [原始碼推導與限制](adamant_increased_damage_to_high_health.md)。
+
+<a id="adamant_pinning_dog_kills_buff_allies"></a>
+## 猛犬氣場(Canine Morale)
+
+- 描述鍵：`loc_talent_adamant_pinning_dog_kills_buff_allies_description`；hash：`6250ddd6`。
+- 結論：未見明確矛盾。繁中與英文的壓制中擊殺條件相符；犬本身的擊殺歸屬與時間刷新屬補充，不判為誤譯。
+- [原始碼推導與限制](adamant_pinning_dog_kills_buff_allies.md)。
 
 <a id="adamant_sprinting_sliding"></a>
 ## 迅疾走位(Rapid Movement)

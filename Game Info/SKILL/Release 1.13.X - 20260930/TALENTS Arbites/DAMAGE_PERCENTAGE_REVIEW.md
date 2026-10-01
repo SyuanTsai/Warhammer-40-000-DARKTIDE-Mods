@@ -45,6 +45,7 @@
 | [帝皇之拳](adamant_first_melee_hit_increased_damage.md) | 每次近戰揮擊的第一個命中目標，傷害提高 15%、衝擊提高 30%。；完整計算與適用限制見來源文件。 |
 | [篩選目標](adamant_pinning_dog_elite_damage.md) | 擊殺自己的電子獒犬正在壓制的精英或專家敵人後，對精英與專家的傷害提高 15%，持續 8 秒。；完整計算與適用限制見來源文件。 |
 | [擊殺順序](adamant_increased_damage_to_high_health.md) | 對生命值高於 75% 的敵人，傷害提高 15%。；完整計算與適用限制見來源文件。 |
+| [猛犬氣場](adamant_pinning_dog_kills_buff_allies.md) | 擊殺自己的電子獒犬正在壓制的敵人後，你與協同範圍內隊友獲得 20% 韌性減傷，並在 5 秒內恢復 10% 最大韌性。；完整計算與適用限制見來源文件。 |
 | [迅疾走位](adamant_sprinting_sliding.md) | 滑行結束後，衝刺速度提高 5%，持續 5 秒；擊殺恢復最大耐力的 5%，冷卻 0.75 秒。；完整計算與適用限制見來源文件。 |
 | [最後通牒](adamant_ranged_damage_on_melee_stagger.md) | 近戰或推擊使敵人踉蹌後，遠程傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [秉賦為先](adamant_clip_size.md) | 彈匣容量提高 15%，容量向上取整數。；完整計算與適用限制見來源文件。 |
