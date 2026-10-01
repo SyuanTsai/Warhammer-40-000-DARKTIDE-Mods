@@ -63,7 +63,7 @@
 | [看破](psyker_improved_dodge.md) | 機制與公式待核對。 |
 | [反射閃避](psyker_dodge_after_crits.md) | 機制與公式待核對。 |
 | [穩固](psyker_increased_vent_speed.md) | 機制與公式待核對。 |
-| [亞空間騎士](psyker_damage_based_on_warp_charge.md) | 機制與公式待核對。 |
+| [亞空間騎士](psyker_damage_based_on_warp_charge.md) | 依目前反噬提高傷害，最高增加 20%。；完整計算與適用限制見來源文件。 |
 | [精確瞄準](psyker_guaranteed_crit_on_multiple_weakspot_hits.md) | 機制與公式待核對。 |
 | [傀儡師](psyker_coherency_aura_size_increase.md) | 協同範圍半徑增加 75%。；完整計算與適用限制見來源文件。 |
 | [動能偏斜](psyker_block_costs_warp_charge.md) | 反噬低於 97% 時，以增加反噬代替格擋耐力消耗。；完整計算與適用限制見來源文件。 |
