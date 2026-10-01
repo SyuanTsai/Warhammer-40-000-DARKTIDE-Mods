@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/7fc85ba0-f7e6-4aba-a966-638511f2c713" width="32" height="32" alt="惡棍天賦圖示"> [惡棍](#broker_coherency_melee_damage)<br>- Ruffian | <ul><li>你與協同中的隊友，近戰傷害增加 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/213537c0-9bdc-49a7-9b60-67aaeb58f395" width="32" height="32" alt="無政府主義者天賦圖示"> [無政府主義者](#broker_coherency_anarchist)<br>- Anarchist | <ul><li>你與協同中的隊友，爆擊機率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/785f7b2c-0591-4cc4-b928-31c26b07d0f7" width="32" height="32" alt="強化亡命之徒天賦圖示"> [強化亡命之徒](#broker_ability_focus_improved)<br>- Enhanced Desperado | <ul><li>啟動後自動切換並裝填遠程武器，進入 10 秒專注狀態；此時遠程攻擊視同成功閃避，衝刺不耗耐力，衝刺速度加算 +20%。</li><li>標示 12.5 公尺內可標記的敵人；以遠程武器近距離擊殺標記目標可延長狀態，初始每次 +1 秒，經過 20 秒後延長量逐段縮小。</li><li>基礎冷卻 45 秒；狀態存續期間自然充能暫停，狀態結束後才恢復。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/ae8bc68a-7d1b-4ee7-8691-bed95ed8069d" width="32" height="32" alt="橫衝直撞！天賦圖示"> [橫衝直撞！](#broker_ability_punk_rage)<br>- Rampage! | <ul><li>啟動時恢復全部韌性並進入 10 秒怒火狀態；近戰威力等級加算 +35%、近戰攻擊速度加算 +20%，承受傷害乘以 0.75（只計此效果即減少 25%）。</li><li>近戰命中可延長狀態；前 20 秒每次延長 0.3 秒，之後每跨 20 秒延長量再減半。基礎冷卻 30 秒，狀態期間自然充能暫停。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/1a4c2d3b-dfba-4840-a85d-c8d5390e3a42" width="32" height="32" alt="熔爐怒吼天賦圖示"> [熔爐怒吼](#broker_ability_punk_rage_sub_2)<br>- Pulverising Strikes | <ul><li>怒火期間攻擊橫掃能力加算 +50%；另在怒火每存續約 1 秒累積一層近戰威力，每層 +2.5%，最多 10 層（+25%）。</li><li>與怒火基本 +35% 近戰威力等級合併時，只計這兩項最多為 +60% 威力等級修正，不等於 +60% 傷害。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/db7fee2b-9e46-49f1-a0ac-28cd6cea424f" width="32" height="32" alt="凝聚殺意天賦圖示"> [凝聚殺意](#broker_ability_punk_rage_sub_1)<br>- Channelled Aggression | <ul><li>怒火狀態期間，近戰重攻擊獲得加算 +25% 撕裂修正，作用於護甲穿透計算。</li><li>此效果檢查的是近戰重攻擊；撕裂修正不等於直接增加 25% 傷害。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/c23bede2-8365-4a28-9fcf-0aa91847923a" width="32" height="32" alt="沸騰之血天賦圖示"> [沸騰之血](#broker_ability_punk_rage_sub_3)<br>- Forge's Bellow | <ul><li>選用後，怒火開始與結束時各發動一次 4.5 公尺範圍怒吼；周遭敵人受到踉蹌。</li><li>每次怒吼使範圍內敵人的近戰攻擊速度加算 -50%，持續 5 秒；單計此減速時，原本 1 秒的攻擊間隔約成 2 秒。</li></ul> | 能力 |
@@ -191,6 +192,25 @@
 - **彈藥與冷卻**：狀態期間重新裝填不扣彈藥儲備；基礎冷卻 45 秒的自然充能在狀態結束後才開始恢復，延長的狀態時間也會延後冷卻恢復。 結束時，會依剩餘備彈重新結算彈匣；狀態內的免費子彈不會整匣保留。
 
 [詳細資料](TALENTS%20Scum/broker_ability_focus_improved.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_ability_punk_rage"></a>
+### 橫衝直撞！(Rampage!)
+
+<img src="https://github.com/user-attachments/assets/ae8bc68a-7d1b-4ee7-8691-bed95ed8069d" width="72" height="72" alt="橫衝直撞！天賦圖示">
+
+- **啟動效果**：啟動時恢復全部韌性並切換到近戰武器，進入基本 10 秒的怒火狀態。
+
+- **近戰威力與攻擊速度**：獲得加算 +35% 近戰威力等級及 +20% 近戰攻擊速度。威力等級會影響攻擊輸出與衝擊，不能直接當成同百分比的傷害；攻擊速度 +20% 只計此效果時，原本 1 秒的動作約為 1 ÷ 1.20 = 0.83 秒。 例如威力 500 變成 500 × 1.35 = 675，再套用武器傷害與踉蹌曲線。
+
+- **承受傷害**：承受傷害乘以 0.75；只計此效果時，100 點來襲傷害變為 100 × 0.75 = 75 點，也就是減少 25%。
+
+- **狀態延長**：每次近戰命中初始延長 0.3 秒；自啟動起經過 20 秒後，每跨 20 秒每次延長量再減半，例如第 20 至 40 秒為 0.15 秒、第 40 至 60 秒為 0.075 秒。這是逐次延長量遞減，不是 20 秒的總時長上限。
+
+- **免疫與冷卻**：怒火期間免疫眩暈與減速；狀態結束後，才開始恢復基礎 30 秒冷卻。
+
+[詳細資料](TALENTS%20Scum/broker_ability_punk_rage.md) · [返回目錄](#talent-index)
 
 ---
 

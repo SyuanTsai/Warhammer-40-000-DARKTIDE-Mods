@@ -15,6 +15,7 @@
 | [惡棍](#broker_coherency_melee_damage) | 未見明確矛盾 |
 | [無政府主義者](#broker_coherency_anarchist) | 未見明確矛盾 |
 | [強化亡命之徒](#broker_ability_focus_improved) | 未見明確中英矛盾 |
+| [橫衝直撞！](#broker_ability_punk_rage) | 未見中英翻譯差異（壓制免疫未由程式證實） |
 | [熔爐怒吼](#broker_ability_punk_rage_sub_2) | 未見明確中英矛盾 |
 | [凝聚殺意](#broker_ability_punk_rage_sub_1) | 未見明確中英矛盾 |
 | [沸騰之血](#broker_ability_punk_rage_sub_3) | 未見中英翻譯差異（攻擊間隔百分比與程式值不相符） |
@@ -117,6 +118,13 @@
 - 描述鍵：`loc_talent_broker_ability_focus_improved_desc`；hash：`a1148a57`。
 - 結論：未見明確中英矛盾。繁中與英文都描述遠程攻擊視同閃避、衝刺免耗耐力並加速、近距離標記與遠程擊殺延長；固定版本設定值與計時邏輯相符。針槍毒素的額外追蹤條件是程式補充，原文省略不作勘誤。
 - [原始碼推導與限制](broker_ability_focus_improved.md)。
+
+<a id="broker_ability_punk_rage"></a>
+## 橫衝直撞！(Rampage!)
+
+- 描述鍵：`loc_talent_broker_ability_punk_rage_desc_3`；hash：`be0f1026`。
+- 結論：未見中英翻譯差異（壓制免疫未由程式證實）。繁中與英文對恢復韌性、近戰威力、攻擊速度、減傷、近戰命中延長及冷卻值的描述一致；0.75 承傷倍率等於減傷25%。兩語都寫壓制免疫，但固定版本狀態未掛壓制免疫標記，記為程式與文案落差，非翻譯矛盾。
+- [原始碼推導與限制](broker_ability_punk_rage.md)。
 
 <a id="broker_ability_punk_rage_sub_2"></a>
 ## 熔爐怒吼(Pulverising Strikes)
