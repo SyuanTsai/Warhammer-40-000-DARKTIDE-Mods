@@ -91,6 +91,7 @@
 | <img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="32" height="32" alt="激勵 II天賦圖示"> [激勵 II](#broker_stimm_celerity_2)<br>- Spur II | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/27832b4a-d52a-49bb-a87e-2a3cd7fa4371" width="32" height="32" alt="激勵 III天賦圖示"> [激勵 III](#broker_stimm_celerity_3)<br>- Spur III | <ul><li>攻擊速度增加 4%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/c4f5bb04-c085-4d9d-8341-0346d3e6a173" width="32" height="32" alt="激勵 IV天賦圖示"> [激勵 IV](#broker_stimm_celerity_4)<br>- Spur IV | <ul><li>攻擊速度增加 4%。</li><li>耐力消耗減少 20%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/21b33eec-94cc-4cea-b531-1ff788ff6bc9" width="32" height="32" alt="反射天賦圖示"> [反射](#broker_stimm_celerity_5b)<br>- Reflex | <ul><li>換彈速度增加 30%，後座不穩定度累積降低 50%。</li></ul> | 興奮劑配方 |
 
 ---
 
@@ -1402,5 +1403,22 @@
 - **攻速算例**：從激勵 I 選到本節點，共增加 16%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.16 ≈ 0.862 秒。
 
 [詳細資料](TALENTS%20Scum/broker_stimm_celerity_4.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_stimm_celerity_5b"></a>
+### 反射(Reflex)
+
+<img src="https://github.com/user-attachments/assets/21b33eec-94cc-4cea-b531-1ff788ff6bc9" width="72" height="72" alt="反射天賦圖示">
+
+- **配方成本**：5 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
+
+- **換彈速度**：增加 30%；原本可加速的換彈動作為 2 秒時，變成 2 ÷ 1.3 ≈ 1.538 秒。
+
+- **後座控制**：射擊造成的後座不穩定度累積減少 50%，停止射擊後的不穩定度恢復速度提高。
+
+- **後座算例**：原每發增加 0.2 不穩定度，變成 0.2 × 0.5 = 0.1；原每秒消退 0.2，變成 0.2 ÷ 0.5 = 0.4。實際槍口偏移仍依武器後座曲線計算。
+
+[詳細資料](TALENTS%20Scum/broker_stimm_celerity_5b.md) · [返回目錄](#talent-index)
 
 ---
