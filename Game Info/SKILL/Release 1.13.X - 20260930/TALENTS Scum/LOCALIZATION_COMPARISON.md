@@ -26,6 +26,7 @@
 | [移動目標](#broker_passive_increased_ranged_dodges) | 未見明確矛盾 |
 | [樣本採集](#broker_passive_stimm_cd_on_kill) | 繁中原文誤譯 |
 | [神經質](#broker_passive_improved_dodges_at_full_stamina) | 未見明確矛盾 |
+| [爆擊機率增幅](#base_crit_chance_node_buff_low_1) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -154,3 +155,10 @@
 - 描述鍵：`loc_talent_broker_passive_improved_dodges_at_full_stamina_desc`；hash：`abe61ad9`。
 - 結論：未見明確矛盾。繁中與英文均寫「超過75%」，固定來源使用包含等於的>=。因兩種文字一致且來源未證實同版，記為邊界差異待同版核對，不列繁中誤譯。
 - [原始碼推導與限制](broker_passive_improved_dodges_at_full_stamina.md)。
+
+<a id="base_crit_chance_node_buff_low_1"></a>
+## 爆擊機率增幅(Critical Chance Boost)
+
+- 描述鍵：`loc_talent_crit_chance_low_desc`；hash：`3019333a`。
+- 結論：未見明確矛盾。兩語皆描述增加爆擊機率，未見矛盾。
+- [原始碼推導與限制](base_crit_chance_node_buff_low_1.md)。

@@ -24,3 +24,4 @@
 | [移動目標](broker_passive_increased_ranged_dodges.md) | 手持遠程武器時，有效閃避次數增加 1 次。；完整計算與適用限制見來源文件。 |
 | [樣本採集](broker_passive_stimm_cd_on_kill.md) | 每次擊殺縮短強化劑冷卻 0.5 秒；目標受毒素感染時改為 1 秒。；完整計算與適用限制見來源文件。 |
 | [神經質](broker_passive_improved_dodges_at_full_stamina.md) | 耐力至少 75% 時，有效閃避次數的恢復等待時間縮短 40%。；完整計算與適用限制見來源文件。 |
+| [爆擊機率增幅](base_crit_chance_node_buff_low_1.md) | 爆擊機率增加 5 個百分點。；完整計算與適用限制見來源文件。 |
