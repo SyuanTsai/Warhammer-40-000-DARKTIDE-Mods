@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/4b71152f-747b-450c-9d3a-82a313fc8360" width="32" height="32" alt="優勝劣汰天賦圖示"> [優勝劣汰](#ogryn_damage_vs_suppressed_coherency)<br>- Coward Culling | <ul><li>「優勝劣汰」使你和協同範圍內隊友對受壓制敵人的傷害提高 20%；另使你造成的壓制提高 25%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/014cd689-2381-43e8-9241-b0a13af77036" width="32" height="32" alt="跟緊我！天賦圖示"> [跟緊我！](#ogryn_toughness_regen_aura)<br>- Stay Close! | <ul><li>「跟緊我！」使你和協同範圍內隊友符合條件的韌性恢復量提高 20%。</li><li>這項效果提高每次恢復量，不會自行啟動韌性恢復，也不會把自然恢復速度提高 20%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/582a28cf-14c5-4757-a51c-cb5924dbf0a3" width="32" height="32" alt="不屈不撓天賦圖示"> [不屈不撓](#ogryn_longer_charge)<br>- Indomitable | <ul><li>衝鋒最遠 24 公尺，撞到巨獸停止；基礎冷卻 25 秒。</li><li>結束後 5 秒，近戰攻速與移速提高 25%。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/1a42e740-0c91-48e5-9092-e88d3f06b532" width="32" height="32" alt="貼身火力天賦圖示"> [貼身火力](#ogryn_special_ammo)<br>- Point-Blank Barrage | <ul><li>切換並裝填遠程武器，12 秒內射速提高 25%、換彈速度提高 65%。</li><li>近距離傷害提高 15%，架槍減速減半；結束時返還計入彈藥的 50%。</li><li>基礎冷卻 60 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0932d1f6-96b1-47d9-ad81-861fe9914d9a" width="32" height="32" alt="跺殺之靴天賦圖示"> [跺殺之靴](#ogryn_charge_toughness)<br>- Stomping Boots | <ul><li>衝鋒期間每次撞中敵人，恢復最大韌性的 10%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9194fb70-c794-460d-af2a-068ae6c4fd31" width="32" height="32" alt="粉碎天賦圖示"> [粉碎](#ogryn_charge_applies_bleed)<br>- Pulverise | <ul><li>衝鋒命中施加 5 層流血；同一衝鋒對同一敵人只施加一次。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/708231ab-86cd-44b4-8f01-0d0fe8413ede" width="32" height="32" alt="槍林彈雨天賦圖示"> [槍林彈雨](#ogryn_special_ammo_armor_pen)<br>- Hail of Fire | <ul><li>貼身火力期間，遠程傷害提高 15%，並獲得 15% 撕裂。</li></ul> | 能力 |
@@ -243,6 +244,23 @@
 - **衝鋒防護**：保留基礎衝鋒期間的 25% 減傷；只計這份效果，100 點傷害變成 75 點。衝撞與結束衝擊本身不直接造成生命傷害；粉碎提供的流血另外計算。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_longer_charge.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_special_ammo"></a>
+### 貼身火力(Point-Blank Barrage)
+
+<img src="https://github.com/user-attachments/assets/1a42e740-0c91-48e5-9092-e88d3f06b532" width="72" height="72" alt="貼身火力天賦圖示">
+
+- **啟動與冷卻**：切換至遠程武器，立即從備彈裝填彈匣；備彈不足時只能裝入剩餘彈藥。效果持續 12 秒，基礎冷卻 60 秒，只有一層充能。
+
+- **射速與換彈**：遠程射速提高 25%，換彈速度提高 65%。受速度控制的 1 秒射擊間隔變成 1 ÷ 1.25 = 0.8 秒；3 秒換彈動作變成 3 ÷ 1.65 ≈ 1.82 秒。
+
+- **近距離與移動**：持有遠程武器時，近距離傷害增加 15%，並減半架槍與武器動作的移動懲罰。例如原本減速 40%，現在減速 20%；原速 5 公尺／秒，減速後由 3 提高到 4 公尺／秒。
+
+- **彈藥返還**：效果結束時，依期間計入彈藥的 50% 補回備彈。例如計入 20 發，返還 20 × 50% = 10 發。幸運子彈省下的彈藥也列入計算，補回量仍受可攜帶總量限制。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_special_ammo.md) · [返回目錄](#talent-index)
 
 ---
 

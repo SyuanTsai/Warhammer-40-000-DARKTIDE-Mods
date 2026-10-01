@@ -17,6 +17,7 @@
 | [優勝劣汰](#ogryn_damage_vs_suppressed_coherency) | 未見明確矛盾 |
 | [跟緊我！](#ogryn_toughness_regen_aura) | 未見明確矛盾 |
 | [不屈不撓](#ogryn_longer_charge) | 未見明確矛盾 |
+| [貼身火力](#ogryn_special_ammo) | 未見明確矛盾 |
 | [跺殺之靴](#ogryn_charge_toughness) | 未見明確矛盾 |
 | [粉碎](#ogryn_charge_applies_bleed) | 未見明確矛盾 |
 | [槍林彈雨](#ogryn_special_ammo_armor_pen) | 未見明確矛盾 |
@@ -152,6 +153,13 @@
 - 描述鍵：`loc_talent_ogryn_bull_rush_distance_desc`；hash：`64c5f9de`。
 - 結論：未見明確矛盾。繁中原文稱衝鋒距離「增加至24」並說「撞到巨獸後衝鋒停止」；英文也寫距離增加至該值、碰撞巨獸時停止。兩種原文都列出5秒攻速與移速加成，沒有數值或效果方向衝突；衝鋒期間的基礎被動屬實作補充。Build 25492122 與公開 SHA 版本對應待核。
 - [原始碼推導與限制](ogryn_longer_charge.md)。
+
+<a id="ogryn_special_ammo"></a>
+## 貼身火力(Point-Blank Barrage)
+
+- 描述鍵：`loc_talent_ogryn_combat_ability_special_ammo_replenish_desc`；hash：`826d5678`。
+- 結論：未見明確矛盾。繁中原文與英文原文都寫明啟動時切換並裝填遠程武器、姿態期間提升射速及換彈速度、近距離增傷，並在結束時返還消耗彈藥的一半；所列冷卻也一致。免費射擊計數納入返還是程式的細節補充，不是兩種原文互相矛盾；Build 25492122 與公開 SHA 的版本關係待核。
+- [原始碼推導與限制](ogryn_special_ammo.md)。
 
 <a id="ogryn_charge_toughness"></a>
 ## 跺殺之靴(Stomping Boots)
