@@ -28,6 +28,7 @@
 | <img src="https://github.com/user-attachments/assets/b51610bf-5b84-45d0-97fe-abedede00719" width="32" height="32" alt="飄忽身形天賦圖示"> [飄忽身形](#zealot_quickness_passive_dodge_stacks)<br>- Inebriate's Poise | <ul><li>成功閃避時額外獲得 3 層命定審判勢能。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab" width="32" height="32" alt="吊命聖徒天賦圖示"> [吊命聖徒](#zealot_resist_death_heal)<br>- Holy Revenant | <ul><li>死戰到底觸發時擊退附近敵人。</li><li>免死期間按造成傷害累積治療額度；近戰換算率為一般傷害的 3 倍。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc" width="32" height="32" alt="熾熱虔誠天賦圖示"> [熾熱虔誠](#zealot_fanatic_rage)<br>- Blazing Piety | <ul><li>附近敵人死亡與自身爆擊累積狂怒；25 層時提高 15 個百分點爆擊率，持續 8 秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/9d85e538-7fb1-4308-99b9-7ed9408eead2" width="32" height="32" alt="正義勇士天賦圖示"> [正義勇士](#zealot_fanatic_rage_improved)<br>- Righteous Warrior | <ul><li>狂怒的爆擊率加成由 15 提高至 25 個百分點。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="32" height="32" alt="永恆天賦圖示"> [永恆](#zealot_quickness_increased_duration)<br>- Eternal | <ul><li>命定審判的啟動增益持續時間由 6 秒延長至 10 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="狂熱朝聖者天賦圖示"> [狂熱朝聖者](#zealot_resist_death_ability)<br>- Zealous Pilgrim | <ul><li>使用戰鬥技能後獲得 4 秒免死效果。</li><li>隱身技能在退出隱身後生效；聖物技能在卸下聖物後生效。</li><li>無法殺死期間，傷害及攻擊速度各提高 10%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="天災天賦圖示"> [天災](#zealot_crits_apply_bleed)<br>- Scourge | <ul><li>近戰爆擊施加 2 層流血；攻擊流血敵人增加近戰爆擊率。</li></ul> | 技能 |
@@ -436,6 +437,19 @@
 - **層數消退**：未進入狂怒時，連續 8 秒沒有新觸發便開始逐層下降；再次觸發重設等待時間。狂怒結束則清空計數，重新累積。
 
 [詳細資料](TALENTS%20Zealot/zealot_fanatic_rage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_fanatic_rage_improved"></a>
+### 正義勇士(Righteous Warrior)
+
+<img src="https://github.com/user-attachments/assets/9d85e538-7fb1-4308-99b9-7ed9408eead2" width="72" height="72" alt="正義勇士天賦圖示">
+
+- **運作方式**：熾熱虔誠啟動期間，額外增加 10 個百分點爆擊率；與原本的 15 個百分點合計為 25 個百分點。
+
+- **爆擊率算例**：原本爆擊率 5%，搭配此升級進入狂怒後為 5% + 15% + 10% = 30%。這是追加機率，不是把原本 5% 乘以 1.25。
+
+[詳細資料](TALENTS%20Zealot/zealot_fanatic_rage_improved.md) · [返回目錄](#talent-index)
 
 ---
 

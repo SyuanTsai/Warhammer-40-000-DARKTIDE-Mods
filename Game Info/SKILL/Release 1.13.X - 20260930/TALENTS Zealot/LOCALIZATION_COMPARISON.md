@@ -30,6 +30,7 @@
 | [飄忽身形](#zealot_quickness_passive_dodge_stacks) | 未見明確矛盾 |
 | [吊命聖徒](#zealot_resist_death_heal) | 明確繁中誤譯 |
 | [熾熱虔誠](#zealot_fanatic_rage) | 未見明確矛盾 |
+| [正義勇士](#zealot_fanatic_rage_improved) | 未見明確矛盾 |
 | [永恆](#zealot_quickness_increased_duration) | 未見明確矛盾 |
 | [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
 | [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
@@ -239,6 +240,13 @@
 - 描述鍵：`loc_talent_zealot_fanatic_rage_crit_desc`；hash：`c80efade`。
 - 結論：未見明確矛盾。中英文都表示敵人在範圍內死亡可累積到狂怒、暴擊也計入；小兵對象、共用層數、衰退及到期重置屬實作補足。
 - [原始碼推導與限制](zealot_fanatic_rage.md)。
+
+<a id="zealot_fanatic_rage_improved"></a>
+## 正義勇士(Righteous Warrior)
+
+- 描述鍵：`loc_talent_zealot_fanatic_rage_improved_desc`；hash：`cde6c5ff`。
+- 結論：未見明確矛盾。繁中與英文都描述此升級提高熾熱虔誠提供的暴擊率；以百分點與總和表達是為免誤讀。
+- [原始碼推導與限制](zealot_fanatic_rage_improved.md)。
 
 <a id="zealot_quickness_increased_duration"></a>
 ## 永恆(Eternal)
