@@ -39,6 +39,7 @@
 | [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed) | 未見明確矛盾；補充計算與限制 |
 | [熟練解剖者](#cryptic_dissector_max_stacks) | 未見明確矛盾；補充計算與限制 |
 | [進階能量管理](#cryptic_redline_strength) | 未見明確矛盾 |
+| [電容極限覆寫](#cryptic_redline_rending) | 繁中勘誤：層數與天賦名稱位置對調 |
 | [資源最佳化聖歌](#cryptic_redline_extra_max_stacks) | 未見明確矛盾 |
 | [強化電容協議](#cryptic_dissector_ability_stacks) | 未見明確矛盾；補充計算與限制 |
 | [崇高意圖](#cryptic_dissector_power) | 未見明確矛盾；補充計算與限制 |
@@ -312,6 +313,15 @@
 - 描述鍵：`loc_talent_cryptic_redline_strength_clarified_desc`；hash：`4e708242`。
 - 結論：未見明確矛盾。本機繁中與英文都描述使用能力時按當時持有的充能取得力量，並寫明持續時間；固定版依使用前充能數增加層數，每層套用5%威力等級修正、最多5層並刷新10秒。UI未直接說明該力量修正作用於威力等級，也未列出上限；這些是程式細節的補充，不構成明確翻譯錯誤。
 - [原始碼推導與限制](cryptic_redline_strength.md)。
+
+<a id="cryptic_redline_rending"></a>
+## 電容極限覆寫(Capacitory Limit Override)
+
+- 描述鍵：`loc_talent_cryptic_redline_rending_clarified_desc`；hash：`477f3a77`。
+- 結論：繁中勘誤：層數與天賦名稱位置對調。繁中字串把 {stacks} 放在主詞位置、{talent_name} 放在數量位置；代入後條件句錯置。同源英文與固定程式均為極限電容至少3層、獲得15%撕裂。這是同一語系資源內可確認的佔位位置錯誤，不是省略計算。
+- 繁中原文短引：在 {stacks:%s} 達到 {talent_name:%s} 層或以上時，獲得 {rending:%s} 撕裂效果。
+- 同源英文：{rending:%s} Rending while at {stacks:%s} {talent_name:%s} stacks or above.
+- [原始碼推導與限制](cryptic_redline_rending.md)。
 
 <a id="cryptic_redline_extra_max_stacks"></a>
 ## 資源最佳化聖歌(Resource Optimisation Canticles)

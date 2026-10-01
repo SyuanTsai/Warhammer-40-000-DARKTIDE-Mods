@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="32" height="32" alt="伺服肌腱湧動天賦圖示"> [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed)<br>- Servo-Sinew Surge | <ul><li>每層削切協議額外提供1.5%暴擊率與1.5%近戰攻擊速度；效果隨削切協議層數變動。</li><li>6層時增加9個百分點暴擊率與9%近戰攻速；8層時分別增加12個百分點與12%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444" width="32" height="32" alt="熟練解剖者天賦圖示"> [熟練解剖者](#cryptic_dissector_max_stacks)<br>- Honed Dissector | <ul><li>將削切協議層數上限從6提高到8；啟用時會直接從8層開始。</li><li>新增加的2層沿用原本每層傷害與韌性承傷步進，滿8層相當於傷害+20%、韌性承傷倍率0.80。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84" width="32" height="32" alt="進階能量管理天賦圖示"> [進階能量管理](#cryptic_redline_strength)<br>- Advanced Power Management | <ul><li>使用戰鬥技能時，依使用前持有的充能數增加力量效果；每份充能提供5%威力加成，效果最多累積5層並持續10秒。</li><li>新增加層會刷新10秒倒數；層數到達5層後不再增加，但後續觸發仍會刷新時間。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/bd0f7682-079c-4c61-bae6-b759aa2608e9" width="32" height="32" alt="電容極限覆寫天賦圖示"> [電容極限覆寫](#cryptic_redline_rending)<br>- Capacitory Limit Override | <ul><li>極限電容層數達3層時啟用 +15% 撕裂；低於3層時不提供此效果。</li><li>達門檻後效果固定為15%，第4層起不再增加。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96e3fb15-c1fd-4702-a6ef-0f69b10931fe" width="32" height="32" alt="資源最佳化聖歌天賦圖示"> [資源最佳化聖歌](#cryptic_redline_extra_max_stacks)<br>- Resource Optimisation Canticles | <ul><li>使戰鬥技能最大充能再增加1道，並將極限電容層數上限由4層提高至5層。</li><li>極限電容每層的韌性減傷仍依原本5%步進；5層時承受的韌性傷害為原始值的75%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/de2e3c8c-8b4c-4859-87d0-c1416c07ef5c" width="32" height="32" alt="強化電容協議天賦圖示"> [強化電容協議](#cryptic_dissector_ability_stacks)<br>- Enhanced Capacitance Protocols | <ul><li>使用戰鬥能力時，將削切協議補至目前上限。</li><li>層數仍沿用削切協議的受傷失層規則，並保留其每層傷害與韌性減傷。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="32" height="32" alt="崇高意圖天賦圖示"> [崇高意圖](#cryptic_dissector_power)<br>- Higher Purpose | <ul><li>精英或專家擊殺額外回復戰鬥技能充能資源2.5%；這是加在護教軍原有的精英／專家擊殺4%回復上，合計6.5%。</li><li>以單份充能為基準；進階戰鬥教範啟用期間不會觸發。</li></ul> | 鑰石 |
@@ -590,6 +591,25 @@
 - **搭配限制**：弦爪持續出招期間的再次發動不會重複觸發這項效果；需先結束弦爪，再次啟用能力。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_redline_strength.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_redline_rending"></a>
+### 電容極限覆寫(Capacitory Limit Override)
+
+<img src="https://github.com/user-attachments/assets/bd0f7682-079c-4c61-bae6-b759aa2608e9" width="72" height="72" alt="電容極限覆寫天賦圖示">
+
+- **觸發方式**：極限電容達3層或以上時生效；降到2層或更低時停止。
+
+- **效果**：獲得15%撕裂。第3、4層及額外層數時都是15%，不會按層數再累加。
+
+- **傷害算例**：只比較護甲階段，假設護甲前傷害100點、原護甲倍率0.5，且該類護甲的撕裂係數為1，原本100 × 0.5 = 50點，生效後為100 × (0.5 + 0.15) = 65點。此例增加30%傷害；不同護甲倍率會有不同收益，不能直接把所有傷害乘1.15。
+
+#### 繁中原文勘誤
+
+- 繁中原文將層數與天賦名稱的位置對調，代入後會變成「在3達到極限電容層或以上」。正確條件是「極限電容達3層或以上時，獲得15%撕裂」；同源英文的層數與名稱位置正確。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_redline_rending.md) · [返回目錄](#talent-index)
 
 ---
 
