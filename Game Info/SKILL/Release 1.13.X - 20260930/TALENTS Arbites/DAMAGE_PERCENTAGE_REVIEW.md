@@ -22,6 +22,7 @@
 | [苛政壓制](adamant_hitting_multiple_gives_tdr.md) | 同一次攻擊命中至少 3 名敵人，獲得 20% 韌性減傷，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [遠程傷害增幅](base_ranged_damage_node_buff_medium_1.md) | 遠程傷害提高 10%。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_1.md) | 近戰傷害提高 10%。；完整計算與適用限制見來源文件。 |
+| [重顎獠牙](adamant_dog_pounces_bleed_nearby.md) | 電子獒犬撲擊的周邊推撞，以及對歐格林／巨獸的壓制攻擊，可施加 6 層流血。；完整計算與適用限制見來源文件。 |
 | [勢如破竹](adamant_damage_reduction_after_elite_kill.md) | 擊殺精英或專家敵人後，獲得 25% 減傷，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [堅守陣線](adamant_staggers_reduce_damage_taken.md) | 使敵人踉蹌可累積減傷，最多 5 層、持續 8 秒；受到近戰命中後清除。；完整計算與適用限制見來源文件。 |
 | [順劈加成](base_cleave_node_buff_medium_1.md) | 傷害與踉蹌的順劈容量提高 25%。；完整計算與適用限制見來源文件。 |

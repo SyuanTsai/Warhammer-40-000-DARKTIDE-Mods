@@ -24,6 +24,7 @@
 | [苛政壓制](#adamant_hitting_multiple_gives_tdr) | 未見明確矛盾 |
 | [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
+| [重顎獠牙](#adamant_dog_pounces_bleed_nearby) | 未見明確矛盾 |
 | [勢如破竹](#adamant_damage_reduction_after_elite_kill) | 未見明確矛盾 |
 | [堅守陣線](#adamant_staggers_reduce_damage_taken) | 待同版核對 |
 | [順劈加成](#base_cleave_node_buff_medium_1) | 未見明確矛盾 |
@@ -165,6 +166,13 @@
 - 描述鍵：`loc_talent_melee_damage_boost_medium_desc`；hash：`7b5da013`。
 - 結論：未見明確矛盾。繁中與英文均為對應攻擊類型傷害加成，未見明確矛盾。
 - [原始碼推導與限制](base_melee_damage_node_buff_medium_1.md)。
+
+<a id="adamant_dog_pounces_bleed_nearby"></a>
+## 重顎獠牙(Razor-Jaw Augment)
+
+- 描述鍵：`loc_talent_adamant_dog_pounces_bleed_nearby_desc`；hash：`549c0cdb`。
+- 結論：未見明確矛盾。繁中與英文均描述撲擊周邊流血；對大型目標的攻擊旗標與非線性傷害為補充，不當成錯誤。
+- [原始碼推導與限制](adamant_dog_pounces_bleed_nearby.md)。
 
 <a id="adamant_damage_reduction_after_elite_kill"></a>
 ## 勢如破竹(Imposing Force)

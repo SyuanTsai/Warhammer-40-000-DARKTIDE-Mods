@@ -22,6 +22,7 @@
 | <img src="https://github.com/user-attachments/assets/02fd58ae-50fc-461f-879d-70d77a2aff44" width="32" height="32" alt="苛政壓制天賦圖示"> [苛政壓制](#adamant_hitting_multiple_gives_tdr)<br>- Suppression Protocols | <ul><li>同一次攻擊命中至少 3 名敵人，獲得 20% 韌性減傷，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/62b0bee6-3606-40bc-9d78-06f072535e59" width="32" height="32" alt="遠程傷害增幅天賦圖示"> [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1)<br>- Ranged Damage Boost | <ul><li>遠程傷害提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8c224499-f2ca-420c-bcf6-39034e6a35b2" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害提高 10%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/549d3657-c19a-49a6-b8ad-2c1e77080dfa" width="32" height="32" alt="重顎獠牙天賦圖示"> [重顎獠牙](#adamant_dog_pounces_bleed_nearby)<br>- Razor-Jaw Augment | <ul><li>電子獒犬撲擊的周邊推撞，以及對歐格林／巨獸的壓制攻擊，可施加 6 層流血。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d856ef6a-9f61-4b4a-b672-e60019dea866" width="32" height="32" alt="勢如破竹天賦圖示"> [勢如破竹](#adamant_damage_reduction_after_elite_kill)<br>- Imposing Force | <ul><li>擊殺精英或專家敵人後，獲得 25% 減傷，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fd423ddb-0080-4603-8fd7-90257b583c3d" width="32" height="32" alt="堅守陣線天賦圖示"> [堅守陣線](#adamant_staggers_reduce_damage_taken)<br>- Hold the Line | <ul><li>使敵人踉蹌可累積減傷，最多 5 層、持續 8 秒；受到近戰命中後清除。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d3fa1c73-0a49-42ab-920c-11b7238af849" width="32" height="32" alt="順劈加成天賦圖示"> [順劈加成](#base_cleave_node_buff_medium_1)<br>- Cleave Boost | <ul><li>傷害與踉蹌的順劈容量提高 25%。</li></ul> | 技能 |
@@ -259,6 +260,21 @@
 - **傷害算例**：沒有其他加成時，基礎 100 點近戰傷害變成 100 × (1 + 10%) = 110 點；原有同階段 25% 加成時，125 點變成 100 × (1 + 25% + 10%) = 135 點。
 
 [詳細資料](TALENTS%20Arbites/base_melee_damage_node_buff_medium_1.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_dog_pounces_bleed_nearby"></a>
+### 重顎獠牙(Razor-Jaw Augment)
+
+<img src="https://github.com/user-attachments/assets/549d3657-c19a-49a6-b8ad-2c1e77080dfa" width="72" height="72" alt="重顎獠牙天賦圖示">
+
+- **觸發與疊層**：電子獒犬撲擊時的周邊推撞命中，以及對歐格林或巨獸的壓制攻擊，各施加 6 層流血。流血共用 16 層上限，再次施加會增加層數並刷新維持時間。
+
+- **持續與衰退**：每 0.5 秒結算一次傷害；停止補上流血後，維持 1.5 秒，再於後續每次結算逐層減少。
+
+- **傷害算例**：在無甲、無其他修正的基準下，令層數比例為 n ÷ 16，每次傷害為 87.5 × (n ÷ 16)² × [3 − 2 × (n ÷ 16)]。6 層約 27.69 點，12 層約 73.83 點，16 層為 87.5 點；12 層並非 6 層傷害的兩倍。
+
+[詳細資料](TALENTS%20Arbites/adamant_dog_pounces_bleed_nearby.md) · [返回目錄](#talent-index)
 
 ---
 
