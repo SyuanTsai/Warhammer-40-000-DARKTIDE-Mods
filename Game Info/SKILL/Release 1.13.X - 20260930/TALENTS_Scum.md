@@ -27,6 +27,7 @@
 | <img src="https://github.com/user-attachments/assets/f936a91e-7097-49cc-b8f5-88dff18117eb" width="32" height="32" alt="爆擊機率增幅天賦圖示"> [爆擊機率增幅](#base_crit_chance_node_buff_low_1)<br>- Critical Chance Boost | <ul><li>爆擊機率增加 5 個百分點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fa269ae5-914c-4444-a713-88c4591a79d9" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/105c999d-8563-4033-aea2-15b5fc968cc4" width="32" height="32" alt="強效毒藥天賦圖示"> [強效毒藥](#base_toxin_power_boost_1)<br>- Potent Tox | <ul><li>毒素威力增加 10%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/2dfab969-4eb2-4181-aa52-7dc1c8c93f89" width="32" height="32" alt="黏黏手天賦圖示"> [黏黏手](#broker_passive_reduce_swap_time)<br>- Sticky Hands | <ul><li>武器切換速度增加 40%；腰射或架槍時降低 10% 後座力、30% 散佈。</li></ul> | 技能 |
 
 ---
 
@@ -320,5 +321,20 @@
 - **威力算例**：毒素輸入威力 500 時，單計此效果變成 500 × 1.1 = 550，再依毒素傷害曲線和敵人護甲計算；不能直接把每次毒傷都視為固定增加 10%。
 
 [詳細資料](TALENTS%20Scum/base_toxin_power_boost_1.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_reduce_swap_time"></a>
+### 黏黏手(Sticky Hands)
+
+<img src="https://github.com/user-attachments/assets/2dfab969-4eb2-4181-aa52-7dc1c8c93f89" width="72" height="72" alt="黏黏手天賦圖示">
+
+- **切換算例**：可加速的切換動作原需 1 秒，變成 1 ÷ 1.4 ≈ 0.71 秒。
+
+- **射擊控制**：腰射或架槍時，後座力修正為 0.9 倍、準星散佈為 0.7 倍；一般瞄準且未架槍時不取得這兩項加成。
+
+- **散佈算例**：單計此效果，原本 2 度的散佈角變成 2 × 0.7 = 1.4 度。後座力修正影響不穩定度累積與回復，實際鏡頭位移還取決於武器曲線。
+
+[詳細資料](TALENTS%20Scum/broker_passive_reduce_swap_time.md) · [返回目錄](#talent-index)
 
 ---
