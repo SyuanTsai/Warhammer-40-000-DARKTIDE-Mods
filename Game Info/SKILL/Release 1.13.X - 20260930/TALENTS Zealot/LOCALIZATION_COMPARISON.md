@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [天災](#zealot_crits_apply_bleed) | 未見明確矛盾 |
 | [背刺者](#zealot_backstab_damage) | 未見明確矛盾 |
 | [蔑視](#zealot_multi_hits_increase_damage) | 未見明確矛盾 |
 | [淨化不潔](#zealot_increased_damage_vs_resilient) | 未見明確矛盾 |
@@ -44,6 +45,13 @@
 | [頭號目標](#zealot_elite_kills_empowers) | 未見明確矛盾 |
 | [敵後行動](#zealot_suppress_on_backstab_kill) | 未見明確矛盾 |
 | [殺戮時刻](#zealot_backstab_periodic_damage) | 未見明確矛盾 |
+
+<a id="zealot_crits_apply_bleed"></a>
+## 天災(Scourge)
+
+- 描述鍵：`loc_talent_zealot_bleed_melee_crit_chance_desc`；hash：`cddf2bee`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_crits_apply_bleed.md)。
 
 <a id="zealot_backstab_damage"></a>
 ## 背刺者(Backstabber)

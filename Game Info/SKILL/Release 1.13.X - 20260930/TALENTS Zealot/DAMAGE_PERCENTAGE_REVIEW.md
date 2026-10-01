@@ -6,6 +6,7 @@
 
 | 技能 | 本次核對內容 |
 |---|---|
+| [天災](zealot_crits_apply_bleed.md) | 近戰爆擊施加 2 層流血；攻擊流血敵人增加近戰爆擊率。；完整計算與適用限制見來源文件。 |
 | [背刺者](zealot_backstab_damage.md) | 近戰背刺與遠程側襲傷害增加 25%。；完整計算與適用限制見來源文件。 |
 | [蔑視](zealot_multi_hits_increase_damage.md) | 上一次近戰揮擊每命中一名敵人，使下一次近戰傷害增加 5%，最多 25%。；完整計算與適用限制見來源文件。 |
 | [淨化不潔](zealot_increased_damage_vs_resilient.md) | 對被感染及不屈護甲類型的傷害增加 20%。；完整計算與適用限制見來源文件。 |
