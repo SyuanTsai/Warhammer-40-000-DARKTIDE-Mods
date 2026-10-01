@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/c3395dd2-63a2-430a-9eec-fb9ecd995308" width="32" height="32" alt="堅韌信仰天賦圖示"> [堅韌信仰](#zealot_crits_reduce_toughness_damage)<br>- Enduring Faith | <ul><li>爆擊命中後，韌性受到的傷害降低 40%，持續 4 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7d6f33d9-5ed5-49d9-9f4c-333565e17216" width="32" height="32" alt="精力復甦天賦圖示"> [精力復甦](#zealot_toughness_on_dodge)<br>- Second Wind | <ul><li>成功閃避攻擊後恢復 15% 最大韌性，觸發冷卻 0.5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/79a0a582-a493-49eb-a470-ab7ed7e7f782" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
 
@@ -110,5 +111,18 @@
 - **傷害算例**：沒有其他加成，100 × (1 + 10%) = 110 點；兩個節點皆選取時為 120 點。已有 25% 同階段加成，再選一個節點則是 100 × (1 + 25% + 10%) = 135 點。
 
 [詳細資料](TALENTS%20Zealot/base_melee_damage_node_buff_medium_1.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="base_melee_damage_node_buff_medium_4"></a>
+### 近戰增幅(Melee Damage Boost)
+
+<img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="72" height="72" alt="近戰增幅天賦圖示">
+
+- **運作方式**：近戰傷害增加 10%。兩個同名節點各自提供加成，皆選取時合計增加 20%。
+
+- **傷害算例**：沒有其他加成，100 × (1 + 10%) = 110 點；兩個節點皆選取時為 120 點。已有 25% 同階段加成，再選一個節點則是 100 × (1 + 25% + 10%) = 135 點。
+
+[詳細資料](TALENTS%20Zealot/base_melee_damage_node_buff_medium_4.md) · [返回目錄](#talent-index)
 
 ---

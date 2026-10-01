@@ -13,3 +13,4 @@
 | [堅韌信仰](zealot_crits_reduce_toughness_damage.md) | 爆擊命中後，韌性受到的傷害降低 40%，持續 4 秒。；完整計算與適用限制見來源文件。 |
 | [精力復甦](zealot_toughness_on_dodge.md) | 成功閃避攻擊後恢復 15% 最大韌性，觸發冷卻 0.5 秒。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_1.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |
+| [近戰增幅](base_melee_damage_node_buff_medium_4.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |
