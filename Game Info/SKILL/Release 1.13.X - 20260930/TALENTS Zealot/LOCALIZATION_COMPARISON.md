@@ -13,6 +13,7 @@
 | [不滅意志](#zealot_martyrdom_grants_toughness) | 未見明確矛盾 |
 | [狂燥之心](#zealot_martyrdom_grants_attack_speed) | 未見明確矛盾 |
 | [命定審判](#zealot_quickness_passive) | 未見明確矛盾 |
+| [懲戒者姿態](#zealot_momentum_toughness_replenish) | 未見明確矛盾 |
 | [飄忽身形](#zealot_quickness_passive_dodge_stacks) | 未見明確矛盾 |
 | [吊命聖徒](#zealot_resist_death_heal) | 明確繁中誤譯 |
 | [狂熱朝聖者](#zealot_resist_death_ability) | 未見明確矛盾 |
@@ -96,6 +97,13 @@
 - 描述鍵：`loc_talent_zealot_quickness_desc`；hash：`634bdcc4`。
 - 結論：未見明確矛盾。繁中及英文都表達移動累積、命中後獲得攻速／射速增益；精確距離、上限、觸發條件及額外 stat 由實作補足。
 - [原始碼推導與限制](zealot_quickness_passive.md)。
+
+<a id="zealot_momentum_toughness_replenish"></a>
+## 懲戒者姿態(Retributor's Stance)
+
+- 描述鍵：`loc_talent_zealot_momentum_toughness_replenish_desc`；hash：`11690b77`。
+- 結論：未見明確矛盾。兩種語言都表示 Quickness 層數會帶來韌性回復；逐層每秒 0.5% 與只在 active buff 期間生效是實作細節。
+- [原始碼推導與限制](zealot_momentum_toughness_replenish.md)。
 
 <a id="zealot_quickness_passive_dodge_stacks"></a>
 ## 飄忽身形(Inebriate's Poise)
