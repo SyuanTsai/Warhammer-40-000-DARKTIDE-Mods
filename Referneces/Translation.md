@@ -1716,3 +1716,5 @@
 - Kalma I - 抗焦慮藥 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L733-L737)）
 
 - Kalma II - 抗焦慮藥 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L738-L742)）
+
+- Kalma III - 抗焦慮藥 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L743-L747)）
