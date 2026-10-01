@@ -16,7 +16,7 @@
 | [動能共鳴](#psyker_ability_increase_brain_burst_speed) | 效果方向吻合，算例補足速度換算 |
 | [迅捷碎片](#psyker_throwing_knives_cast_speed) | 已配對；機制待核對 |
 | [衰弱詛咒](#psyker_chain_lightning_improved_target_buff) | 已配對；機制待核對 |
-| [蓄力打擊](#psyker_chain_lightning_heavy_attacks) | 已配對；機制待核對 |
+| [蓄力打擊](#psyker_chain_lightning_heavy_attacks) | 未見已確認矛盾 |
 | [動能釋放](#psyker_aura_damage_vs_elites) | 未見已確認矛盾 |
 | [先知之眼](#psyker_cooldown_aura_improved) | 已配對；機制待核對 |
 | [預兆](#psyker_aura_crit_chance_aura) | 未見已確認矛盾 |
@@ -150,7 +150,7 @@
 ## 蓄力打擊(Charged Strike)
 
 - 描述鍵：`loc_talent_psyker_chain_lightning_damage_heavy_attacks_desc`；hash：`e84d2a21`。
-- 已配對原文，機制待核對。
+- 結論：未見已確認矛盾。本地繁中說明列出近戰重擊電擊並造成傷害，與固定原始碼的重擊命中觸發及兩秒持續傷害效果相符。
 - [原始碼推導與限制](psyker_chain_lightning_heavy_attacks.md)。
 
 <a id="psyker_aura_damage_vs_elites"></a>

@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **81 個可選節點**，均為一點；同一配置最多分配 30 點。零點起始佔位 `not_selected` 不屬天賦效果，不列入 81 項。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36)。內部 tree version 26 不等於遊戲發行版號。
 
-完成 41／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 42／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -19,7 +19,7 @@
 | 閃擊 | [動能共鳴](psyker_ability_increase_brain_burst_speed.md) / `psyker_ability_increase_brain_burst_speed` | `node_d0f28c39-50b3-4f6f-893f-52e71aaba392` | 完成（核心靜態機制） |
 | 閃擊 | [迅捷碎片](psyker_throwing_knives_cast_speed.md) / `psyker_throwing_knives_cast_speed` | `node_a0e99f21-5abe-407d-a328-c955e9cc27f2` | 已定位；機制待核對 |
 | 閃擊 | [衰弱詛咒](psyker_chain_lightning_improved_target_buff.md) / `psyker_chain_lightning_improved_target_buff` | `node_8da8c02b-211b-48bc-a170-f06b79b545b9` | 已定位；機制待核對 |
-| 閃擊 | [蓄力打擊](psyker_chain_lightning_heavy_attacks.md) / `psyker_chain_lightning_heavy_attacks` | `node_d958faa6-e3ea-4c79-bc84-3477063b09f7` | 已定位；機制待核對 |
+| 閃擊 | [蓄力打擊](psyker_chain_lightning_heavy_attacks.md) / `psyker_chain_lightning_heavy_attacks` | `node_d958faa6-e3ea-4c79-bc84-3477063b09f7` | 完成（核心靜態機制） |
 | 光環 | [動能釋放](psyker_aura_damage_vs_elites.md) / `psyker_aura_damage_vs_elites` | `node_d323e130-860b-42f1-acd2-dc50cacde619` | 完成（核心靜態機制） |
 | 光環 | [先知之眼](psyker_cooldown_aura_improved.md) / `psyker_cooldown_aura_improved` | `node_c2759b06-3158-4d95-a860-492fd3b6594e` | 已定位；機制待核對 |
 | 光環 | [預兆](psyker_aura_crit_chance_aura.md) / `psyker_aura_crit_chance_aura` | `node_592db669-6d46-45a9-aa87-c66bc5d52a53` | 完成（核心靜態機制） |

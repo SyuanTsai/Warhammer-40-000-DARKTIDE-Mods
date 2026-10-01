@@ -8,6 +8,7 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9" width="32" height="32" alt="動能共鳴天賦圖示"> [動能共鳴](#psyker_ability_increase_brain_burst_speed)<br>- Kinetic Resonance | <ul><li>使用戰鬥能力後 10 秒內，顱腦崩裂蓄力速度增加 75%，反噬產生量減少 50%。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e" width="32" height="32" alt="蓄力打擊天賦圖示"> [蓄力打擊](#psyker_chain_lightning_heavy_attacks)<br>- Charged Strike | <ul><li>近戰重擊命中後使敵人電擊 2 秒，電擊期間造成持續傷害。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/ddd7895f-a971-4cdf-99bd-3f536cab3f8a" width="32" height="32" alt="動能釋放天賦圖示"> [動能釋放](#psyker_aura_damage_vs_elites)<br>- Kinetic Presence | <ul><li>你與協同中的隊友對精英敵人造成的傷害提高 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="預兆天賦圖示"> [預兆](#psyker_aura_crit_chance_aura)<br>- Prescience | <ul><li>你與協同中的隊友的暴擊機率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
@@ -63,6 +64,19 @@
 - **蓄力算例**：假設原蓄力需 2 秒、無其他加成，2 ÷ 1.75 ≈ 1.14 秒；原本產生 10 個百分點反噬，則變成 10 × 0.5 = 5 個百分點。
 
 [詳細資料](TALENTS%20Psyker/psyker_ability_increase_brain_burst_speed.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_chain_lightning_heavy_attacks"></a>
+### 蓄力打擊(Charged Strike)
+
+<img src="https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e" width="72" height="72" alt="蓄力打擊天賦圖示">
+
+- **觸發方式**：近戰重擊命中敵人後，使其電擊 2 秒，期間造成持續傷害。
+
+- **搭配衰弱詛咒**：這 2 秒電擊也會使目標受到的傷害增加 10%。只比較該承傷倍率，原本 100 點傷害變成 100 × 1.1 = 110 點。
+
+[詳細資料](TALENTS%20Psyker/psyker_chain_lightning_heavy_attacks.md) · [返回目錄](#talent-index)
 
 ---
 
