@@ -11,6 +11,7 @@
 | [突破重圍](#adamant_charge) | 繁中原文勘誤 |
 | [天鷹使節](#adamant_area_buff_drone_improved) | 未見明確矛盾 |
 | [振奮朗誦](#adamant_drone_buff_talent) | 未見明確矛盾 |
+| [畏怯正義](#adamant_drone_debuff_talent) | 繁中原文勘誤 |
 | [懲惡揚善](#adamant_charge_toughness) | 未見明確矛盾 |
 | [針鋒相對](#adamant_charge_cooldown_reduction) | 未見明確矛盾 |
 | [交鋒](#adamant_charge_longer_distance) | 未見明確矛盾 |
@@ -90,6 +91,15 @@
 - 描述鍵：`loc_talent_adamant_drone_buff_talent_alt_desc`；hash：`b7d2618a`。
 - 結論：未見明確矛盾。繁中「韌性減傷、復活速度提高、攻擊速度提高」分別對應英文「Toughness Damage Reduction, Revive Speed, Attack Speed」；各數值一致。
 - [原始碼推導與限制](adamant_drone_buff_talent.md)。
+
+<a id="adamant_drone_debuff_talent"></a>
+## 畏怯正義(Fear of Justice)
+
+- 描述鍵：`loc_talent_adamant_drone_debuff_talent_desc`；hash：`b1b69549`。
+- 結論：繁中原文勘誤。繁中寫「攻擊速度降低 50%」，英文寫「time between … attacks, is increased by 50%」。固定來源的介面格式值是 50%，但實際近戰攻速 stat 設為 −25%，敵人行為按攻速倍率反算時間約延長 33%；目前有實作與文字差異，公開提交與遊戲文本版本尚待核對。
+- 繁中原文短引：敵人的近戰攻擊受到影響時，攻擊速度降低{attack_speed_reduction:%s}，近戰攻擊所造成的傷害也會降低{damage_reduction:%s}。
+- 同源英文：The time between affected Enemies' Melee Attacks, is increased by {attack_speed_reduction:%s}, and their Melee Attacks deal {damage_reduction:%s} less Damage.
+- [原始碼推導與限制](adamant_drone_debuff_talent.md)。
 
 <a id="adamant_charge_toughness"></a>
 ## 懲惡揚善(Commendation from Condemnation)

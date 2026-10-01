@@ -9,6 +9,7 @@
 | <img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="32" height="32" alt="突破重圍天賦圖示"> [突破重圍](#adamant_charge)<br>- Break the Line | <ul><li>向前猛砸並衝入敵陣；猛砸期間視為格擋，結束後獲得 6 秒傷害與衝擊加成。</li><li>基礎冷卻 20 秒，單次充能。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="天鷹使節天賦圖示"> [天鷹使節](#adamant_area_buff_drone_improved)<br>- Nuncio-Aquila | <ul><li>部署阿奎拉傳令機，持續 20 秒並影響周圍 7.5 公尺；冷卻 60 秒，單次充能。</li><li>強化版讓盟友每秒恢復 7.5% 韌性，並提高壓制與衝擊、降低後座力，同時免疫暈眩、減速與壓制。</li><li>範圍內敵人受到的傷害提高 15%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/53dd2864-62b6-4e6c-9d62-e79831b33c78" width="32" height="32" alt="振奮朗誦天賦圖示"> [振奮朗誦](#adamant_drone_buff_talent)<br>- Inspiring Recitation | <ul><li>受到阿奎拉傳令機影響的盟友，額外獲得 30% 韌性減傷、30% 復活速度及 10% 攻擊速度。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/483804fa-b052-4baa-b3d7-5e7dbfbe44f4" width="32" height="32" alt="畏怯正義天賦圖示"> [畏怯正義](#adamant_drone_debuff_talent)<br>- Fear of Justice | <ul><li>傳令機範圍內受影響敵人的近戰傷害降低 25%；近戰攻速的介面文字標示為攻速降低 50%。</li><li>固定來源中的實際近戰攻速修正為 −25%；按敵人攻擊動作的計時方式，攻擊間隔約延長 33%，介面標示與實作係數需同版核對。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573" width="32" height="32" alt="懲惡揚善天賦圖示"> [懲惡揚善](#adamant_charge_toughness)<br>- Commendation from Condemnation | <ul><li>衝鋒擊中精英、專家或巨獸時，每名不同目標恢復 20% 韌性與 15% 耐力。</li><li>單次衝鋒最多恢復 100% 韌性及 75% 耐力；同一敵人不重複計算。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/d2b1945d-2300-4993-a649-00c1e3858e0d" width="32" height="32" alt="針鋒相對天賦圖示"> [針鋒相對](#adamant_charge_cooldown_reduction)<br>- Targeted Brutality | <ul><li>衝鋒每次有效命中一般敵人返還 0.5 秒戰鬥技能冷卻；命中精英、專家或巨獸返還 1 秒。</li><li>單次衝鋒最多返還 5 秒冷卻。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="32" height="32" alt="交鋒天賦圖示"> [交鋒](#adamant_charge_longer_distance)<br>- Engage | <ul><li>衝鋒距離由基礎 3.75 公尺增加 3.75 公尺，目標距離上限成為 7.5 公尺。</li></ul> | 能力 |
@@ -116,6 +117,25 @@
 - **速度算例**：單計本效果，原本 5 秒的救援需 5 ÷ 1.3 ≈ 3.85 秒；原本 1 秒的可加速攻擊動作需 1 ÷ 1.1 ≈ 0.91 秒。離開傳令機範圍後失去這些加成。
 
 [詳細資料](TALENTS%20Arbites/adamant_drone_buff_talent.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_drone_debuff_talent"></a>
+### 畏怯正義(Fear of Justice)
+
+<img src="https://github.com/user-attachments/assets/483804fa-b052-4baa-b3d7-5e7dbfbe44f4" width="72" height="72" alt="畏怯正義天賦圖示">
+
+- **近戰傷害**：受傳令機影響的敵人，近戰傷害降低 25%。例如原本 100 點近戰傷害，僅計此效果後為 100×(1−25%)=75 點。
+
+- **近戰攻速算例**：敵人的近戰攻速降低 25%。在未碰到動作最短時間限制時，原本 1 秒的動作變成 1 ÷ 0.75 ≈ 1.33 秒，也就是時間增加約 33.3%。
+
+- **生效範圍**：此減益依附傳令機區域；敵人離開影響範圍後移除。
+
+#### 繁中原文勘誤
+
+- 繁中把英文的「攻擊間隔增加 50%」寫成「攻擊速度降低 50%」，兩者不等價：1 秒間隔增加 50% 是 1.5 秒，相當於速度降低約 33.3%；速度降低 50% 則需 2 秒。另有程式實作與原文數值差異，詳見來源文件。
+
+[詳細資料](TALENTS%20Arbites/adamant_drone_debuff_talent.md) · [返回目錄](#talent-index)
 
 ---
 
