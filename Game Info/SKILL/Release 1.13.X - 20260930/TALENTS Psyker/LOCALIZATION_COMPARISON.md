@@ -68,7 +68,7 @@
 | [亞空間騎士](#psyker_damage_based_on_warp_charge) | 已配對；機制待核對 |
 | [精確瞄準](#psyker_guaranteed_crit_on_multiple_weakspot_hits) | 已配對；機制待核對 |
 | [傀儡師](#psyker_coherency_aura_size_increase) | 已配對；機制待核對 |
-| [動能偏斜](#psyker_block_costs_warp_charge) | 已配對；機制待核對 |
+| [動能偏斜](#psyker_block_costs_warp_charge) | 未見明確矛盾 |
 | [韌性增幅](#base_toughness_node_buff_medium_5) | 未見明確矛盾 |
 | [韌性增幅](#base_toughness_node_buff_medium_4) | 未見明確矛盾 |
 | [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
@@ -514,7 +514,7 @@
 ## 動能偏斜(Kinetic Deflection)
 
 - 描述鍵：`loc_talent_psyker_block_costs_warp_charge_desc`；hash：`136ee48b`。
-- 已配對原文，機制待核對。
+- 結論：未見明確矛盾。核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
 - [原始碼推導與限制](psyker_block_costs_warp_charge.md)。
 
 <a id="base_toughness_node_buff_medium_5"></a>

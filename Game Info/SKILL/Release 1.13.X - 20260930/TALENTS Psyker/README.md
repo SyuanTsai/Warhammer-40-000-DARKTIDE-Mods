@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **81 個可選節點**，均為一點；同一配置最多分配 30 點。零點起始佔位 `not_selected` 不屬天賦效果，不列入 81 項。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/psyker_archetype.lua#L48-L65)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L3-L36)。內部 tree version 26 不等於遊戲發行版號。
 
-完成 4／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 5／81 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -71,7 +71,7 @@
 | 技能 | [亞空間騎士](psyker_damage_based_on_warp_charge.md) / `psyker_damage_based_on_warp_charge` | `node_502ba655-95d9-419a-a825-c688915e2983` | 已定位；機制待核對 |
 | 技能 | [精確瞄準](psyker_guaranteed_crit_on_multiple_weakspot_hits.md) / `psyker_guaranteed_crit_on_multiple_weakspot_hits` | `node_9674b583-7566-4f0c-a334-99e83f4715b2` | 已定位；機制待核對 |
 | 技能 | [傀儡師](psyker_coherency_aura_size_increase.md) / `psyker_coherency_aura_size_increase` | `node_b2a9dab7-310f-4938-a070-97187d356f75` | 已定位；機制待核對 |
-| 技能 | [動能偏斜](psyker_block_costs_warp_charge.md) / `psyker_block_costs_warp_charge` | `node_59a39703-43ce-432e-b853-c80517a08947` | 已定位；機制待核對 |
+| 技能 | [動能偏斜](psyker_block_costs_warp_charge.md) / `psyker_block_costs_warp_charge` | `node_59a39703-43ce-432e-b853-c80517a08947` | 完成（核心靜態機制） |
 | 技能 | [韌性增幅](base_toughness_node_buff_medium_5.md) / `base_toughness_node_buff_medium_5` | `node_0bbf73c4-d47e-4205-b8a3-1ee5879708cb` | 完成（核心靜態機制） |
 | 技能 | [韌性增幅](base_toughness_node_buff_medium_4.md) / `base_toughness_node_buff_medium_4` | `node_7b4e0ecc-fba4-418c-a34c-8ae1739e341c` | 完成（核心靜態機制） |
 | 技能 | [韌性減傷](base_toughness_damage_reduction_node_buff_medium_1.md) / `base_toughness_damage_reduction_node_buff_medium_1` | `node_9049de9c-7aef-4bda-bc26-2892d147c486` | 完成（核心靜態機制） |
