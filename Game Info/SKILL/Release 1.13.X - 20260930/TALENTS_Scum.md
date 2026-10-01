@@ -25,6 +25,7 @@
 | <img src="https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d" width="32" height="32" alt="腎上腺素狂暴天賦圖示"> [腎上腺素狂暴](#broker_keystone_adrenaline_junkie)<br>- Adrenaline Frenzy | <ul><li>近戰命中獲得 1 層腎上腺素；近戰爆擊額外獲得 1 層。</li><li>2 秒內未獲得新層時，每 2 秒失去 1 層；最多 30 層。</li><li>達 30 層時清除腎上腺素並觸發 10 秒狂暴：近戰攻速 +10%、近戰傷害 +25%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/b7fff291-d5f3-4213-bfef-8b28b8065889" width="32" height="32" alt="化學強化天賦圖示"> [化學強化](#broker_keystone_chemical_dependency_sub_1)<br>- Chem Enhanced | <ul><li>每層化學依賴性額外增加 5 個百分點的爆擊率。</li><li>3 層時共增加 15 個百分點；這是爆擊機率，不是爆擊傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6c334888-08bb-4567-a6a2-1c4b4750409b" width="32" height="32" alt="化學增強天賦圖示"> [化學增強](#broker_keystone_chemical_dependency_sub_2)<br>- Chem Fortified | <ul><li>使用興奮劑時恢復最大韌性的 50%。</li><li>每層化學依賴性使承受的韌性傷害乘以 0.95；3 層合計使韌性傷害約降低 14.26%。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/51827890-e735-4220-8959-bf37381e0fc8" width="32" height="32" alt="化學藥劑全開天賦圖示"> [化學藥劑全開](#broker_keystone_chemical_dependency_sub_3)<br>- Maxed Out Chems | <ul><li>化學依賴性每層持續時間由 90 秒改為 60 秒，最多層數由 3 層增加至 4 層。</li><li>4 層時戰鬥技能資源回充倍率為 1.40；60 秒線性回充算例約縮至 42.86 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448" width="32" height="32" alt="腎上腺素刺客天賦圖示"> [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1)<br>- Adrenaline Assassin | <ul><li>選用腎上腺素刺客後，一般非弱點近戰命中不給層；近戰弱點命中共給 3 層。</li><li>爆擊仍額外加 1 層，因此近戰弱點爆擊共給 4 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c" width="32" height="32" alt="振奮怒火天賦圖示"> [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3)<br>- Stoked Rage | <ul><li>腎上腺素狂暴的持續時間由 10 秒提高至 20 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce" width="32" height="32" alt="腎上腺素突破天賦圖示"> [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5)<br>- Adrenaline Unbound | <ul><li>狂暴期間每秒恢復最大韌性的 5%。</li></ul> | 鑰石 |
@@ -399,6 +400,21 @@
 - **滿層時**：即使依賴層數已達上限，再次使用興奮劑仍能恢復韌性，並刷新層數時間。
 
 [詳細資料](TALENTS%20Scum/broker_keystone_chemical_dependency_sub_2.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_keystone_chemical_dependency_sub_3"></a>
+### 化學藥劑全開(Maxed Out Chems)
+
+<img src="https://github.com/user-attachments/assets/51827890-e735-4220-8959-bf37381e0fc8" width="72" height="72" alt="化學藥劑全開天賦圖示">
+
+- **持續時間與上限**：每層計時改為 60 秒，堆疊上限改為 4 層；相較核心，單次計時減少 30 秒並多 1 層。
+
+- **回充**：每層核心的 +10% 戰鬥技能資源回充仍有效；4 層倍率為 1+4×0.10=1.40。 原本 60 秒的連續冷卻恢復，變成 60 ÷ 1.4 ≈ 42.86 秒。
+
+- **刷新與衰退**：新使用興奮劑會重設共享計時；若沒有新層，60 秒後失去 1 層，再每 60 秒失去 1 層。達 4 層後再使用不會增加第 5 層，但會刷新時間。
+
+[詳細資料](TALENTS%20Scum/broker_keystone_chemical_dependency_sub_3.md) · [返回目錄](#talent-index)
 
 ---
 

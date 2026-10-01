@@ -27,6 +27,7 @@
 | [腎上腺素狂暴](#broker_keystone_adrenaline_junkie) | 未見明確矛盾 |
 | [化學強化](#broker_keystone_chemical_dependency_sub_1) | 未見明確矛盾 |
 | [化學增強](#broker_keystone_chemical_dependency_sub_2) | 未見明確矛盾 |
+| [化學藥劑全開](#broker_keystone_chemical_dependency_sub_3) | 未見明確矛盾 |
 | [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1) | 未見明確矛盾 |
 | [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3) | 未見明確矛盾 |
 | [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5) | 未見明確矛盾 |
@@ -212,6 +213,13 @@
 - 描述鍵：`loc_talent_broker_keystone_chemical_dependency_sub_2_desc`；hash：`bd5bf1c2`。
 - 結論：未見明確矛盾。繁中與英文都說使用興奮劑回補韌性、每層依賴效果提供韌性傷害減免；程式值為最大韌性的 50% 回補與每層 0.95 韌性傷害倍率。
 - [原始碼推導與限制](broker_keystone_chemical_dependency_sub_2.md)。
+
+<a id="broker_keystone_chemical_dependency_sub_3"></a>
+## 化學藥劑全開(Maxed Out Chems)
+
+- 描述鍵：`loc_talent_broker_keystone_chemical_dependency_sub_3_desc`；hash：`80f78eef`。
+- 結論：未見明確矛盾。繁中與英文都指出每層改為 60 秒並將上限提高到 4；程式透過增加堆疊上限並把核心 90 秒時長減少 30 秒實作。
+- [原始碼推導與限制](broker_keystone_chemical_dependency_sub_3.md)。
 
 <a id="broker_keystone_adrenaline_junkie_sub_1"></a>
 ## 腎上腺素刺客(Adrenaline Assassin)
