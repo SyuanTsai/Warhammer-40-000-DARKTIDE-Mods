@@ -11,6 +11,7 @@
 | <img src="https://github.com/user-attachments/assets/db0783ea-1312-4fed-a430-c1be9a87d2e1" width="32" height="32" alt="電能地雷天賦圖示"> [電能地雷](#adamant_shock_mine)<br>- Voltaic Shock Mine | <ul><li>部署後約 1 秒啟動；偵測到敵人後，對 3 公尺內敵人持續施加電擊，作用 15 秒。</li><li>最多攜帶 2 枚；單次電擊維持 3 秒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/ab5c4535-3182-4aa9-a388-faffff1d0faa" width="32" height="32" alt="小隊之友天賦圖示"> [小隊之友](#adamant_companion_coherency)<br>- Part of the Squad | <ul><li>電子獒犬計入小隊協同；你和協同中的盟友額外減少 7.5% 韌性傷害。</li><li>以單獨這份效果估算，100 點韌性傷害會減為 92.5 點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/2f99cb20-a83e-4a7c-98ee-f43949811f84" width="32" height="32" alt="雷厲風行天賦圖示"> [雷厲風行](#adamant_reload_speed_aura)<br>- Ruthless Efficiency | <ul><li>你和協同中的盟友換彈速度提高 12.5%。</li><li>選用此光環時，電子獒犬不再計入協同成員。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/57af1e74-7cc5-45bb-a332-11d2e5fde909" width="32" height="32" alt="鎮壓異己天賦圖示"> [鎮壓異己](#adamant_damage_vs_staggered_aura)<br>- Breaking Dissent | <ul><li>你和協同中的盟友對踉蹌敵人的傷害提高 10%。</li><li>只計此效果時，原本 100 點傷害會提高到 110 點；目標未踉蹌時不加成。</li><li>選用此光環時，電子獒犬不再計入協同成員。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="32" height="32" alt="突破重圍天賦圖示"> [突破重圍](#adamant_charge)<br>- Break the Line | <ul><li>向前猛砸並衝入敵陣；猛砸期間視為格擋，結束後獲得 6 秒傷害與衝擊加成。</li><li>基礎冷卻 20 秒，單次充能。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="天鷹使節天賦圖示"> [天鷹使節](#adamant_area_buff_drone_improved)<br>- Nuncio-Aquila | <ul><li>部署阿奎拉傳令機，持續 20 秒並影響周圍 7.5 公尺；冷卻 60 秒，單次充能。</li><li>強化版讓盟友每秒恢復 7.5% 韌性，並提高壓制與衝擊、降低後座力，同時免疫暈眩、減速與壓制。</li><li>範圍內敵人受到的傷害提高 15%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/4eb18874-83b0-4e2f-bf2b-c91001a15371" width="32" height="32" alt="懲戒者姿態天賦圖示"> [懲戒者姿態](#adamant_stance)<br>- Castigator's Stance | <ul><li>啟動時恢復全部韌性；進入 10 秒姿態，移動速度提高 15%、威力提高 20%、受到的傷害減少 70%，但不能衝刺。</li><li>冷卻 50 秒，單次充能；姿態結束後，傷害減免再延續 2 秒。</li></ul> | 能力 |
@@ -177,6 +178,21 @@
 - **協同判定**：此光環選項會讓電子獒犬不再計入小隊協同；盟友仍須符合一般協同條件才會取得換彈加成。
 
 [詳細資料](TALENTS%20Arbites/adamant_reload_speed_aura.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_damage_vs_staggered_aura"></a>
+### 鎮壓異己(Breaking Dissent)
+
+<img src="https://github.com/user-attachments/assets/57af1e74-7cc5-45bb-a332-11d2e5fde909" width="72" height="72" alt="鎮壓異己天賦圖示">
+
+- **生效條件**：目標必須處於踉蹌狀態；你和協同中的盟友對該目標造成額外 10% 傷害。
+
+- **傷害算例**：對踉蹌敵人原本造成 100 點傷害，只計此光環時為 100 × (1 + 0.10) = 110 點；對未踉蹌敵人仍是 100 點。同階段已有 25% 增傷時，對符合條件的敵人為 100 × (1 + 25% + 10%) = 135 點。
+
+- **協同判定**：此光環選項會讓電子獒犬不再計入小隊協同；盟友仍須符合一般協同條件才會取得加成。
+
+[詳細資料](TALENTS%20Arbites/adamant_damage_vs_staggered_aura.md) · [返回目錄](#talent-index)
 
 ---
 
