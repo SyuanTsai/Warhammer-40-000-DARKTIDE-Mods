@@ -30,6 +30,7 @@
 | [卓越追蹤聖歌](#cryptic_no_braced_movement_penalty) | 未見明確矛盾 |
 | [液壓衝擊](#cryptic_better_heavies) | 未見明確矛盾 |
 | [混合戰鬥契約](#cryptic_hybrid_damage) | 未見明確矛盾 |
+| [動能分配器](#cryptic_toughness_on_damage_taken) | 待同版核對 |
 | [無限抑制器](#cryptic_melee_attacks_give_melee_attack_speed) | 未見明確矛盾 |
 | [電擊打擊導管](#cryptic_melee_crits_electrocute_first) | 未見明確矛盾 |
 | [槍械技師](#cryptic_auto_reload) | 未見明確矛盾 |
@@ -191,6 +192,13 @@
 - 描述鍵：`loc_talent_cryptic_hybrid_damage_desc`；hash：`dc9f61eb`。
 - 結論：未見明確矛盾。中英文一致；補充各自計時與不同攻擊類型不交叉相加。
 - [原始碼推導與限制](cryptic_hybrid_damage.md)。
+
+<a id="cryptic_toughness_on_damage_taken"></a>
+## 動能分配器(Kinetic Energy Distributors)
+
+- 描述鍵：`loc_talent_cryptic_toughness_on_damage_taken_desc`；hash：`655fac7c`。
+- 結論：待同版核對。中英均宣稱10秒冷卻，固定來源寫入未被ProcBuff使用的cooldown欄位。屬共同文字/實作落差，非繁中誤譯；待相同版本遊戲驗證。
+- [原始碼推導與限制](cryptic_toughness_on_damage_taken.md)。
 
 <a id="cryptic_melee_attacks_give_melee_attack_speed"></a>
 ## 無限抑制器(Uncapped Arrestor)
