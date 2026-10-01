@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 81／109 項核心靜態機制核對（主天賦、配方與啟用節點）。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 82／109 項核心靜態機制核對（主天賦、配方與啟用節點）。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -92,3 +92,4 @@
 | 技能 | [趁勝追擊](broker_passive_cleave_on_cleave.md) / `broker_passive_cleave_on_cleave` | `node_32ac314d-2d6e-421b-8ced-27ce00dc62e5` | 完成（核心靜態機制） |
 | 興奮劑配方 | [裝備財閥特殊裝備](broker_stimm_activation_talent.md) / `broker_stimm_activation_talent` | `node_5c2139f8-0686-42f5-97fe-9b65e547e649` | 完成（核心靜態機制） |
 | 興奮劑配方 | [激勵 I](broker_stimm_celerity_1.md) / `broker_stimm_celerity_1` | `node_52ffe54b-abcd-469a-9376-64b387582546` | 完成（核心靜態機制） |
+| 興奮劑配方 | [激勵 II](broker_stimm_celerity_2.md) / `broker_stimm_celerity_2` | `node_1431c326-ad53-4c00-afc8-088f0ef8c197` | 完成（核心靜態機制） |
