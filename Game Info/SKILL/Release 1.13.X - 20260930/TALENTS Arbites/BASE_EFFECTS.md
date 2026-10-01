@@ -40,3 +40,14 @@
 [原始碼依據與算例條件](adamant_companion_aura.md)
 
 ---
+
+<a id="adamant_companion_damage_per_level"></a>
+## 電子獒犬等級增傷(Companion Damage per Level)
+
+- **等級增傷**：電子獒犬的非流血傷害，每滿 5 級便增加基準傷害的 1/6；1–4 級為 1 倍，10 級為約 1.33 倍，30 級為 2 倍。
+
+- **傷害算例**：其他條件相同、低等級時造成 100 點的攻擊，在 10 級變成 100 × (1 + 2 ÷ 6) ≈ 133.33 點，30 級則為 100 × 2 = 200 點。流血傷害不套用此倍率。
+
+[原始碼依據與算例條件](adamant_companion_damage_per_level.md)
+
+---
