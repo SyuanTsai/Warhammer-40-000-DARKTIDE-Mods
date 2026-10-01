@@ -1,0 +1,38 @@
+# 軍火商(Ammo Jack)：原始碼依據
+
+[返回玩家說明](../TALENTS_Scum.md#broker_passive_extended_mag)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_passive_extended_mag)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`broker_passive_extended_mag`；名稱鍵：`loc_talent_broker_passive_extended_mag`；描述鍵：`loc_talent_broker_passive_extended_mag_desc`。
+- 節點：`node_42f02425-b59e-44b5-8eac-c4ae72c9bc1a`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- clip_size_modifier=.15；weapon extension持續更新用ceil(base_max_clip*modifier)，目前彈藥按原比例floor轉換。裝備初始化另有floor，但正常更新再對齊ceil容量。
+
+## 原始碼依據
+
+- [scripts/extension_systems/weapon/player_unit_weapon_extension.lua：1428–1452](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L1428-L1452)
+- [scripts/settings/talent/talent_settings_broker.lua：313–315](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L313-L315)
+- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：1342–1348](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L1342-L1348)
+- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：1395–1410](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1395-L1410)
+- [scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：1429–1455](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L1429-L1455)
+
+## 算例條件與待確認事項
+
+- **容量算例**：原本 30 發，變成 ⌈30 × 1.15⌉ = 35 發；原本 7 發，變成 ⌈7 × 1.15⌉ = 9 發。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`414a3799`。
+- 兩語均明確寫出無條件進位，未見矛盾。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_extended_mag.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_passive_extended_mag:node_42f02425-b59e-44b5-8eac-c4ae72c9bc1a`。
+- 格式：image/webp；288×288；5714 bytes。
+- SHA-256：`19929ad173a2e192b78ee70616ac7e3ae2c709614153b604c6c4653a42f0cc2a`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933987866)；[公開圖片](https://github.com/user-attachments/assets/148db758-02d7-4855-9f45-badcabc7c8cf)。附件已下載比對位元組與 SHA-256。

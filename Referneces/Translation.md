@@ -1688,3 +1688,59 @@
 - Cleave Boost - 順劈加成（沿用本機繁中名稱，待使用者確認；`base_cleave_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1013-L1036)）
 
 - Impact Boost - 衝擊加成（沿用本機繁中名稱，待使用者確認；`base_impact_node_buff_medium_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L989-L1012)）
+
+### 巢都渣滓新增名稱（待確認）
+
+- Critical Chance Boost - 爆擊機率增幅（沿用本機繁中名稱，待使用者確認；`base_crit_chance_node_buff_low_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L2622-L2645)）
+
+- Potent Tox - 強效毒藥（沿用本機繁中名稱，待使用者確認；`base_toxin_power_boost_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/base_talents.lua#L1757-L1781)）
+
+- Equip Cartel Special - 裝備財閥特殊裝備（沿用本機繁中名稱，待使用者確認；`broker_stimm_activation_talent`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L3187-L3191)）
+
+- Spur I - 激勵 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L499-L507)）
+
+- Spur II - 激勵 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L508-L522)）
+
+- Spur III - 激勵 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L523-L533)）
+
+- Spur IV - 激勵 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L534-L544)）
+
+- Reflex - 反射（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L550-L557)）
+
+- Fervor - 狂熱（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L558-L580)）
+
+- Vultoprene I - 獵鷹蕈劑 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_combat_4c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L632-L640)）
+
+- Vultoprene II - 獵鷹蕈劑 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_combat_5c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L641-L649)）
+
+- Kalma I - 抗焦慮藥 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L733-L737)）
+
+- Kalma II - 抗焦慮藥 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L738-L742)）
+
+- Kalma III - 抗焦慮藥 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L743-L747)）
+
+- Kalma IV - 抗焦慮藥 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L748-L752)）
+
+- Kalma V - 抗焦慮藥 V（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L753-L757)）
+
+- Like the Wind - 迅如疾風（沿用本機繁中名稱，待使用者確認；`broker_passive_improved_sprint_dodge`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L65-L67)）
+
+- Cartel Special - 財閥專員（沿用本機繁中名稱，待使用者確認；`broker_stimm_description_talent`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L35-L89)）
+
+- Barrage I - 彈幕 I（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_1`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L650-L666)）
+
+- Barrage II - 彈幕 II（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_2`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L667-L683)）
+
+- Barrage III - 彈幕 III（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_3`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L684-L700)）
+
+- Barrage IV - 彈幕 IV（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_4`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L701-L717)）
+
+- Tank - 坦克（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L718-L722)）
+
+- Regain - 恢復（沿用本機繁中名稱，待使用者確認；`broker_stimm_durability_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L723-L732)）
+
+- Spur V - 激勵 V（沿用本機繁中名稱，待使用者確認；`broker_stimm_celerity_5a`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L545-L549)）
+
+- Hypex - 狂熱（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_5b`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L758-L768)）
+
+- Klay - 集中藥（沿用本機繁中名稱，待使用者確認；`broker_stimm_concentration_5c`；[固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L769-L781)）

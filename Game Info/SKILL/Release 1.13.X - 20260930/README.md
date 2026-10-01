@@ -7,6 +7,8 @@
 - [狂信徒完整天賦說明](TALENTS_Zealot.md)
 - [歐格林完整天賦說明](TALENTS_Ogryn.md)
 - [法務官完整天賦說明](TALENTS_Arbites.md)
+- [巢都渣滓完整天賦說明](TALENTS_Scum.md)
+- [巢都渣滓來源、公式與技術索引](TALENTS%20Scum/README.md)
 - [法務官來源、公式與技術索引](TALENTS%20Arbites/README.md)
 - [歐格林來源、公式與技術索引](TALENTS%20Ogryn/README.md)
 - [狂信徒來源、公式與技術索引](TALENTS%20Zealot/README.md)
@@ -654,3 +656,144 @@
 | 基礎：電子獒犬協同(Companion Aura) / `adamant_companion_aura` | `3520d953423f9374736d5d583e702090bba9ba5a` | `3520d953423f9374736d5d583e702090bba9ba5a` |
 | 基礎：電子獒犬等級增傷(Companion Damage per Level) / `adamant_companion_damage_per_level` | `6ca92daae3bc0ff4e7c18ff7e5d4667e84b48a50` | `6ca92daae3bc0ff4e7c18ff7e5d4667e84b48a50` |
 | 基礎：法務官手榴彈(Arbites Grenade) / `adamant_grenade` | `a809d0c29c6485f2f8df25f83994c1a4179caf51` | `a809d0c29c6485f2f8df25f83994c1a4179caf51` |
+
+## 巢都渣滓完成範圍
+
+| 分類 | 完成／當前節點 |
+|---|---|
+| 閃擊 | 3／3 |
+| 光環 | 3／3 |
+| 能力與升級 | 12／12 |
+| 鑰石與升級 | 16／16 |
+| 技能（含4個共用屬性節點） | 45／45 |
+| 主天賦合計 | **79／79** |
+| 獨立興奮劑配方 | **29／29** |
+| 配方樹零點起始說明 | 1／1 |
+
+- 主頁沿用老兵的三欄目錄、32／72像素圖示、技能標題、條列公式與每技能來源子文件；獨立興奮劑樹接續在五類主天賦之後，同樣使用既定格式。主天賦與配方分別使用各自30點額度。
+- [5項基礎效果與1項條件式興奮劑](TALENTS%20Scum/BASE_EFFECTS.md)另列；[32個未被清單直接引用的定義](TALENTS%20Scum/UNUSED_DEFINITIONS.md)與仍使用的同名Buff區分。
+- [繁中比對](TALENTS%20Scum/LOCALIZATION_COMPARISON.md)：主天賦79組、配方29組及起始說明1組；配方另核對54個中英同hash標籤。共2項明確繁中勘誤；省略公式或條件不算錯誤。基礎5組另列，條件式針筒沒有獨立描述鍵。
+- [百分比盤點](TALENTS%20Scum/DAMAGE_PERCENTAGE_REVIEW.md)涵蓋109項。弱點增幅只作用於額外部分，武器原倍率不同會有不同實際增幅；配方恢復速度不可直接當成冷卻時間減少相同比例。
+- 濃度末端兩個擊殺配方的文字參數75%，固定實作為56.25%；與壓制免疫、敵人攻速、腐敗停止門檻及閃避覆蓋範圍的落差一起留在技術比對，未冒充已完成同版遊戲勘誤。
+- 109張圖示只保存在 [Media-Assets Issue #12](https://github.com/SyuanTsai/Media-Assets/issues/12) 附件；逐張公開下載驗證內容與SHA-256。圖片和完整擷取文本未提交Git，Extracted Text維持本機忽略。
+- 固定公開來源為Release 1.13.0，提交日期2026-09-29T17:45:01Z；完整SHA `419fe18d414a618ce0474bd015bab470afb446d6`。本機文字Build25492122尚未確認與來源同版；未指定舊版，未做版本差異比較，未進行遊戲內測試。
+
+### 巢都渣滓逐項本機提交
+
+| 項目 | 首次文件提交 | 最近修訂提交 |
+|---|---|---|
+| 擊暈 / `broker_blitz_flash_grenade_improved` | `65602069059a523946380f1f702f4b241bc682eb` | `65602069059a523946380f1f702f4b241bc682eb` |
+| 炸彈使者 / `broker_blitz_missile_launcher` | `adbae0920cc96d6dbdebe85dbd86453dd5e2e6c4` | `adbae0920cc96d6dbdebe85dbd86453dd5e2e6c4` |
+| 化學手榴彈 / `broker_blitz_tox_grenade` | `122b7bc106a7f966ad40bea1c4a17723dfc3cab3` | `122b7bc106a7f966ad40bea1c4a17723dfc3cab3` |
+| 精進神射手 / `broker_aura_gunslinger_improved` | `399c4d91f8b489072aa7b25dfb2338e4501dbc88` | `399c4d91f8b489072aa7b25dfb2338e4501dbc88` |
+| 惡棍 / `broker_coherency_melee_damage` | `0f1f19a7b22565c3aab1970654571adaf50dbc22` | `0f1f19a7b22565c3aab1970654571adaf50dbc22` |
+| 無政府主義者 / `broker_coherency_anarchist` | `baed009909b4171ed74f7b9e66a1af8bd7b963c1` | `baed009909b4171ed74f7b9e66a1af8bd7b963c1` |
+| 強化亡命之徒 / `broker_ability_focus_improved` | `a0f1938b5c8f951216edfed5d26ad40f02261e36` | `a0f1938b5c8f951216edfed5d26ad40f02261e36` |
+| 化學性依賴 / `broker_ability_stimm_field` | `44d206186da40e3eb84d17ca32356dfc72ac9b8c` | `44d206186da40e3eb84d17ca32356dfc72ac9b8c` |
+| 橫衝直撞！ / `broker_ability_punk_rage` | `65506b021ddc59a76961850fe84c9a539f8394ac` | `65506b021ddc59a76961850fe84c9a539f8394ac` |
+| 熔爐怒吼 / `broker_ability_punk_rage_sub_2` | `1d40a17401ed41f923de220d08470a08c535fecc` | `1d40a17401ed41f923de220d08470a08c535fecc` |
+| 凝聚殺意 / `broker_ability_punk_rage_sub_1` | `1c1e38c4cbc670c09b9e29db905f2a0d69b8326d` | `1c1e38c4cbc670c09b9e29db905f2a0d69b8326d` |
+| 沸騰之血 / `broker_ability_punk_rage_sub_3` | `2b497f5fb37a6ecff370a21d3047d22d06f06344` | `2b497f5fb37a6ecff370a21d3047d22d06f06344` |
+| 碎骨打擊 / `broker_ability_punk_rage_sub_4` | `8dfdb6582d0e8a0232f6cdc4e13ec7b2c093e473` | `8dfdb6582d0e8a0232f6cdc4e13ec7b2c093e473` |
+| 專注凝神 / `broker_ability_focus_sub_3` | `112e9d68bfef01fd22ef3e7babd1a1ced6a22b25` | `112e9d68bfef01fd22ef3e7babd1a1ced6a22b25` |
+| 精準獵殺 / `broker_ability_focus_sub_2` | `619750ead3191afa81e4c30442ac683db053ceeb` | `619750ead3191afa81e4c30442ac683db053ceeb` |
+| 熟練部署 / `broker_ability_stimm_field_sub_3` | `d07179e1b71a0cd7f182c95224913609f895fdc5` | `efc8e0fcb38df5e810b6783aadf3d13542555147` |
+| 速效型興奮劑 / `broker_ability_stimm_field_sub_1` | `412e131780ca003eee396c257b31c6d59cdf524c` | `412e131780ca003eee396c257b31c6d59cdf524c` |
+| 毒性陷阱 / `broker_ability_stimm_field_sub_2` | `9dfec6e4ff266e4e5726f6d93ab2dcb85bcb3dae` | `9dfec6e4ff266e4e5726f6d93ab2dcb85bcb3dae` |
+| 靈巧 / `broker_passive_improved_dodges` | `87120d094e4ece78d7ab0b20c4afb7a9c65e92a7` | `87120d094e4ece78d7ab0b20c4afb7a9c65e92a7` |
+| 腎上腺素狂暴 / `broker_keystone_adrenaline_junkie` | `c27ba4e3cb74921af0b8478023c254b640620ad6` | `c27ba4e3cb74921af0b8478023c254b640620ad6` |
+| 兀鷲印記 / `broker_keystone_vultures_mark_on_kill` | `4d635da16d764d56eb748bc6527589d14215e920` | `4d635da16d764d56eb748bc6527589d14215e920` |
+| 化學性依賴 / `broker_keystone_chemical_dependency` | `4c6351b64fc3888af4a2a4a47c3cd85de815282e` | `4c6351b64fc3888af4a2a4a47c3cd85de815282e` |
+| 化學強化 / `broker_keystone_chemical_dependency_sub_1` | `b22dc544f916d0144cb15099b992f8c213d36861` | `b22dc544f916d0144cb15099b992f8c213d36861` |
+| 化學增強 / `broker_keystone_chemical_dependency_sub_2` | `4dbc10e407a737fb2778fce99d5cc83951094f92` | `4dbc10e407a737fb2778fce99d5cc83951094f92` |
+| 化學藥劑全開 / `broker_keystone_chemical_dependency_sub_3` | `9716cd42e99f0c3f070b9c942bc3619523c02296` | `9716cd42e99f0c3f070b9c942bc3619523c02296` |
+| 兀鷲推擊 / `broker_keystone_vultures_mark_aoe_stagger` | `3655c342d4dbcb50696965cf965285344d093e3c` | `3655c342d4dbcb50696965cf965285344d093e3c` |
+| 堅毅獵手 / `broker_keystone_vultures_mark_increased_duration` | `a5398a540df2eb06ae3d9f4223bb3b566f6876a5` | `a5398a540df2eb06ae3d9f4223bb3b566f6876a5` |
+| 兀鷲閃避 / `broker_keystone_vultures_mark_dodge_on_ranged_crit` | `fc487a75c8ec315a1abb314db5b4f08fae18ee13` | `fc487a75c8ec315a1abb314db5b4f08fae18ee13` |
+| 腎上腺素刺客 / `broker_keystone_adrenaline_junkie_sub_1` | `a418da8ef7221318cf43875b3793cc05d3007fa8` | `a418da8ef7221318cf43875b3793cc05d3007fa8` |
+| 振奮怒火 / `broker_keystone_adrenaline_junkie_sub_3` | `549effa1b6473cbd608d213399a86d264e9f6321` | `549effa1b6473cbd608d213399a86d264e9f6321` |
+| 腎上腺素突破 / `broker_keystone_adrenaline_junkie_sub_5` | `9bb8718303822383fb7741d6ebb57ca4ca8d4e0d` | `9bb8718303822383fb7741d6ebb57ca4ca8d4e0d` |
+| 失控攻擊 / `broker_keystone_adrenaline_junkie_sub_4` | `67b538b820f034b5cf0cffaf98ad8deec1a39971` | `67b538b820f034b5cf0cffaf98ad8deec1a39971` |
+| 腎上腺素懲戒者 / `broker_keystone_adrenaline_junkie_sub_2` | `21d74fdb08afe10748c0591a1453caa4c90b57bd` | `21d74fdb08afe10748c0591a1453caa4c90b57bd` |
+| 過街老鼠 / `broker_passive_longer_dodges` | `f254a2d0e78ffd2855496e67f4ce116d38dd48aa` | `f254a2d0e78ffd2855496e67f4ce116d38dd48aa` |
+| 快速且致命 / `broker_passive_close_range_damage_on_dodge` | `b9fe5e60c66272a2a0679bb079821e98ba437e1c` | `b9fe5e60c66272a2a0679bb079821e98ba437e1c` |
+| 特提恩是迎賓 / `broker_passive_first_target_damage` | `60d3c0141b8f3d230269cc8311835fcd4f0b5d2c` | `60d3c0141b8f3d230269cc8311835fcd4f0b5d2c` |
+| 打你的臉 / `broker_passive_close_ranged_damage` | `ed69b1e55ee8ecff21876549445a452cd9eee342` | `ed69b1e55ee8ecff21876549445a452cd9eee342` |
+| 精準暴力 / `broker_passive_restore_toughness_on_weakspot_kill` | `57d801153df56614f83e59d5c56687e854043747` | `57d801153df56614f83e59d5c56687e854043747` |
+| 特提恩之聲 / `broker_passive_restore_toughness_on_close_ranged_kill` | `8c63b8edbe9a74be8b57d008e53335bee08b4c2a` | `8c63b8edbe9a74be8b57d008e53335bee08b4c2a` |
+| 翩翩蝶舞 / `broker_passive_ninja_grants_crit_chance` | `9f3ac5a2e2ac2ec3714709823796ecb799704dd5` | `9f3ac5a2e2ac2ec3714709823796ecb799704dd5` |
+| 快速裝填 / `broker_passive_reload_speed_on_close_kill` | `817efcdad68bd76c819de84a4c5a321be962d3f8` | `817efcdad68bd76c819de84a4c5a321be962d3f8` |
+| 能量爆發 / `broker_passive_stun_immunity_on_toughness_broken` | `6233216e22726671dd762255c6ac665b5498ca3a` | `6233216e22726671dd762255c6ac665b5498ca3a` |
+| 韌性增幅 / `base_toughness_node_buff_medium_1` | `d619e942ac84560c4cac2a174ff5e23a8189cd50` | `d619e942ac84560c4cac2a174ff5e23a8189cd50` |
+| 恢復姿態 / `broker_passive_stamina_on_successful_dodge` | `9b8a136581563c3716430989a86eec8cc48a965e` | `9b8a136581563c3716430989a86eec8cc48a965e` |
+| 奧客 / `broker_passive_dodge_melee_on_slide` | `6e721262659b7f073bf597cd10a85da3b8176216` | `6e721262659b7f073bf597cd10a85da3b8176216` |
+| 沒甚麼，只是擦傷 / `broker_passive_replenish_toughness_on_ranged_toughness_damage` | `5b3cf115d51a4f71652e596a4ebed0cbef7da12f` | `5b3cf115d51a4f71652e596a4ebed0cbef7da12f` |
+| 狂轟猛射 / `broker_passive_damage_on_reload` | `48c89afceaac6098f32591b29f1147d543018708` | `48c89afceaac6098f32591b29f1147d543018708` |
+| 堅韌疾速 / `broker_passive_stamina_grants_atk_speed` | `72e6c0b3a61061fc788aaebab1d18d365cebf41a` | `72e6c0b3a61061fc788aaebab1d18d365cebf41a` |
+| 加重背刺 / `broker_passive_ramping_backstabs` | `0fdfbd8992a58de51f37b6fa4451aa42109d937a` | `0fdfbd8992a58de51f37b6fa4451aa42109d937a` |
+| 移動目標 / `broker_passive_increased_ranged_dodges` | `ca8a2f2c4aef7bd31c2561749045700aed25b426` | `ca8a2f2c4aef7bd31c2561749045700aed25b426` |
+| 樣本採集 / `broker_passive_stimm_cd_on_kill` | `0d99570c816e544600edad39f07ac0ca9993ee43` | `7c9192b5c9636a92b95350372df36e6c79418db8` |
+| 神經質 / `broker_passive_improved_dodges_at_full_stamina` | `597274df05577196cbc71f57b6fc339c663d765f` | `597274df05577196cbc71f57b6fc339c663d765f` |
+| 爆擊機率增幅 / `base_crit_chance_node_buff_low_1` | `9ab1b20bfb157e402df25a3355047cd16542edef` | `9ab1b20bfb157e402df25a3355047cd16542edef` |
+| 近戰增幅 / `base_melee_damage_node_buff_medium_1` | `60ecf320f1cfdfe50f16a6a08c76b0968b406763` | `60ecf320f1cfdfe50f16a6a08c76b0968b406763` |
+| 強效毒藥 / `base_toxin_power_boost_1` | `f9121c3eeb5e7f8b7ff57a492f5e66e8f1fd35ea` | `f9121c3eeb5e7f8b7ff57a492f5e66e8f1fd35ea` |
+| 黏黏手 / `broker_passive_reduce_swap_time` | `edbe274dc77c0715b0ce8ccc3d7f8c39ca166fd0` | `edbe274dc77c0715b0ce8ccc3d7f8c39ca166fd0` |
+| 請求暫停 / `broker_passive_reduced_toughness_damage_during_reload` | `85f8a689ebe04f8ae9ea2dd33804aa8d5c1af093` | `85f8a689ebe04f8ae9ea2dd33804aa8d5c1af093` |
+| 街頭硬漢 / `broker_passive_knockback_on_taking_melee_damage` | `98e2d100b32bc1cc8d1af5af06526a332f9dc3e1` | `98e2d100b32bc1cc8d1af5af06526a332f9dc3e1` |
+| 蓄力殲滅 / `broker_passive_crit_grants_damage` | `c6f075bd58cea791cd77cb64bd239799c587f392` | `c6f075bd58cea791cd77cb64bd239799c587f392` |
+| 猛烈劈擊 / `broker_passive_melee_cleave_on_melee_kill` | `a2b341ce84d83166d1a7bff3a94c6f3014af1598` | `a2b341ce84d83166d1a7bff3a94c6f3014af1598` |
+| 超暴力 / `broker_passive_melee_damage_carry_over` | `4ac74fa78d16850eb7fdd5e02b7d7496126294f9` | `4ac74fa78d16850eb7fdd5e02b7d7496126294f9` |
+| 劇毒菌株 / `broker_passive_toxin_infected_enemies_take_increased_damage` | `7531a2e5d73445840763521e0c2f8b1ef75cbead` | `7531a2e5d73445840763521e0c2f8b1ef75cbead` |
+| 毒藥狂熱 / `broker_passive_damage_after_toxined_enemies` | `ff3468b077718a85523c705fa54380922ca67726` | `ff3468b077718a85523c705fa54380922ca67726` |
+| 連帶傷害 / `broker_passive_toxin_spread_on_kills` | `484124d7fdf4e7fe4e26ff5634e5d484540c7972` | `484124d7fdf4e7fe4e26ff5634e5d484540c7972` |
+| 額外彈藥袋 / `broker_passive_increased_blitz_ammo` | `85dc2905f25bae08fbfa89a936d031ee2c6aeb57` | `85dc2905f25bae08fbfa89a936d031ee2c6aeb57` |
+| 塗讀武裝 / `broker_passive_melee_attacks_apply_toxin` | `f3997b38ac7763b4e89b440d3c9d733a22b79ec7` | `f3997b38ac7763b4e89b440d3c9d733a22b79ec7` |
+| 隨身毒素 / `broker_passive_blitz_inflicts_toxin` | `6a54b51aec52b0760f167460d80b45565e45832f` | `1d26c891fdf414d2be76498351bb169f15b8b017` |
+| 精準投毒 / `broker_passive_reduced_damage_by_toxined` | `f395371e0e8915e1e9ee284723a345493e754a9d` | `f395371e0e8915e1e9ee284723a345493e754a9d` |
+| 毒性再生 / `broker_passive_replenish_toughness_while_toxined_enemies_in_proximity` | `05558970cca8c4fa166d3f8802d7b1df03f39194` | `05558970cca8c4fa166d3f8802d7b1df03f39194` |
+| 軍火商 / `broker_passive_extended_mag` | `924c54556af101a8376fd5f223d2987f7312f685` | `924c54556af101a8376fd5f223d2987f7312f685` |
+| 趁人之危 / `broker_passive_damage_vs_heavy_staggered` | `0e2fd197a5b068a59fba22677365f128ab6ad8a2` | `0e2fd197a5b068a59fba22677365f128ab6ad8a2` |
+| 心狠手辣 / `broker_passive_melee_crit_instakill` | `735d3a4237d25382f376cf3ad893a5f23506acf3` | `735d3a4237d25382f376cf3ad893a5f23506acf3` |
+| 以小搏大 / `broker_passive_damage_vs_elites_monsters` | `09f5be920b6b3cb85c854887aef58148cc2da37c` | `09f5be920b6b3cb85c854887aef58148cc2da37c` |
+| 甜蜜點 / `broker_passive_increased_weakspot_damage` | `a542001767e54be5b6a85f437e9e91e91cc3e3a3` | `a542001767e54be5b6a85f437e9e91e91cc3e3a3` |
+| 延長藥效 / `broker_passive_stimm_increased_duration` | `2ed39683b1b9ff227f6231a42cb4e386fcacdbb0` | `2ed39683b1b9ff227f6231a42cb4e386fcacdbb0` |
+| 神佑興奮劑 / `broker_passive_stimm_cleanse_on_kill` | `cf6d8b82411eaaa4942f9a42ad4207b8823a1c2b` | `cf6d8b82411eaaa4942f9a42ad4207b8823a1c2b` |
+| 巢都格鬥家 / `broker_passive_dr_damage_tradeoff_on_stamina` | `ace3aabee6a2673be13ac7acb103a97f0ad12d92` | `ace3aabee6a2673be13ac7acb103a97f0ad12d92` |
+| 順手牽羊 / `broker_passive_low_ammo_regen` | `918e95ebeb37d4e0bfa19464c6e878ff5140b5b7` | `918e95ebeb37d4e0bfa19464c6e878ff5140b5b7` |
+| 趁勝追擊 / `broker_passive_cleave_on_cleave` | `c8025e8611ae400cc9e5c2f5e266638e2d183b28` | `c8025e8611ae400cc9e5c2f5e266638e2d183b28` |
+| 裝備財閥特殊裝備 / `broker_stimm_activation_talent` | `70c68446bf42e877689c7c62a56a0ca43ef99080` | `2cf53dfe42b1ea69256bd2b41ac701549ad9bc31` |
+| 野火 I / `broker_stimm_combat_1` | `8b662f733a78a1ab6d470a4a87ec706f163853de` | `8b662f733a78a1ab6d470a4a87ec706f163853de` |
+| 野火 IV / `broker_stimm_combat_4a` | `1e2107cd9bd1eee1ef0c07423ab487f7af06b885` | `1e2107cd9bd1eee1ef0c07423ab487f7af06b885` |
+| 野火 II / `broker_stimm_combat_2` | `e6f9331f3e1476482e657ba12d6734f72b47fc06` | `e6f9331f3e1476482e657ba12d6734f72b47fc06` |
+| 野火 III / `broker_stimm_combat_3` | `079f63381bb668d932017fb2ae24e9a5c6a2de4d` | `079f63381bb668d932017fb2ae24e9a5c6a2de4d` |
+| 狂怒 I / `broker_stimm_combat_4b` | `97084d9bfbed1cc9fc58e818e7dd19c840a01958` | `97084d9bfbed1cc9fc58e818e7dd19c840a01958` |
+| 狂怒 II / `broker_stimm_combat_5b` | `bbd025c2a9e020d4545b0d3ab949d2b2dba106d5` | `bbd025c2a9e020d4545b0d3ab949d2b2dba106d5` |
+| 野火 V / `broker_stimm_combat_5a` | `114bf2a934ee32216bdb08d51e78e68686543f5b` | `114bf2a934ee32216bdb08d51e78e68686543f5b` |
+| 獵鷹蕈劑 I / `broker_stimm_combat_4c` | `04143a30700d38a8c667a4f26171201231d399e2` | `04143a30700d38a8c667a4f26171201231d399e2` |
+| 獵鷹蕈劑 II / `broker_stimm_combat_5c` | `7487da24edfd14377efa3c3e152f4803674fdf8e` | `7487da24edfd14377efa3c3e152f4803674fdf8e` |
+| 抗焦慮藥 I / `broker_stimm_concentration_1` | `18d172a12044b87e8a85e2ee3c26adc854a804a9` | `18d172a12044b87e8a85e2ee3c26adc854a804a9` |
+| 抗焦慮藥 II / `broker_stimm_concentration_2` | `cf6434e14c4d933ab74989f84e866f8dbc34e59b` | `cf6434e14c4d933ab74989f84e866f8dbc34e59b` |
+| 抗焦慮藥 III / `broker_stimm_concentration_3` | `0d5b391112cc5f8dad4544a07a5612517bc2c232` | `0d5b391112cc5f8dad4544a07a5612517bc2c232` |
+| 抗焦慮藥 IV / `broker_stimm_concentration_4` | `5ef041b5460dd4b01a1ef2035eaa92809d9488eb` | `5ef041b5460dd4b01a1ef2035eaa92809d9488eb` |
+| 抗焦慮藥 V / `broker_stimm_concentration_5a` | `97ba323a6bb456318d56091005f7d4da5ae41518` | `97ba323a6bb456318d56091005f7d4da5ae41518` |
+| 彈幕 I / `broker_stimm_durability_1` | `9e74152912f68e1c411ea460f1122da0a605f289` | `9e74152912f68e1c411ea460f1122da0a605f289` |
+| 彈幕 II / `broker_stimm_durability_2` | `771c8a970a6590a6a61e1d63c8b96500f15ac958` | `771c8a970a6590a6a61e1d63c8b96500f15ac958` |
+| 彈幕 III / `broker_stimm_durability_3` | `a4eba9c956aa73b15fa73aca7406d4315f9ef769` | `a4eba9c956aa73b15fa73aca7406d4315f9ef769` |
+| 彈幕 IV / `broker_stimm_durability_4` | `ec9d33b0588f850a6e3cb7a478d881027beaec01` | `ec9d33b0588f850a6e3cb7a478d881027beaec01` |
+| 坦克 / `broker_stimm_durability_5a` | `f5ec9ca99bdc0f4a21b3afafcc74d6deca7394b6` | `f5ec9ca99bdc0f4a21b3afafcc74d6deca7394b6` |
+| 激勵 I / `broker_stimm_celerity_1` | `d35c98c5e9443af4d95cf26ab5701c2d74c2de40` | `d35c98c5e9443af4d95cf26ab5701c2d74c2de40` |
+| 狂熱 / `broker_stimm_celerity_5c` | `2cc7e88e93b658725d9be8836d8c8aa95009f0c9` | `2cc7e88e93b658725d9be8836d8c8aa95009f0c9` |
+| 激勵 II / `broker_stimm_celerity_2` | `548356d4ea9b90cea4f5a73b5659f4c95216a144` | `548356d4ea9b90cea4f5a73b5659f4c95216a144` |
+| 激勵 III / `broker_stimm_celerity_3` | `c5a398108d8fd6d93c8eadfd49cf51758436039d` | `c5a398108d8fd6d93c8eadfd49cf51758436039d` |
+| 激勵 IV / `broker_stimm_celerity_4` | `1cad823f23a12389febb98b441fd00062a501ad3` | `1cad823f23a12389febb98b441fd00062a501ad3` |
+| 激勵 V / `broker_stimm_celerity_5a` | `a1843e95d6e71da3b50fd53ea43a73d0266371b9` | `a1843e95d6e71da3b50fd53ea43a73d0266371b9` |
+| 恢復 / `broker_stimm_durability_5b` | `dbfb57d2aa17e8ad9a7147522c8654f2c0001557` | `dbfb57d2aa17e8ad9a7147522c8654f2c0001557` |
+| 狂熱 / `broker_stimm_concentration_5b` | `62060dd0be13248913ffd6ae1855122996c64c80` | `62060dd0be13248913ffd6ae1855122996c64c80` |
+| 集中藥 / `broker_stimm_concentration_5c` | `02f01113c5634197f683db0965d8ef20c22556c8` | `02f01113c5634197f683db0965d8ef20c22556c8` |
+| 反射 / `broker_stimm_celerity_5b` | `01e4058f161ebf068876e42b7e7e6f21ad0fc1d6` | `01e4058f161ebf068876e42b7e7e6f21ad0fc1d6` |
+| 基礎：亡命之徒(Desperado)：基礎戰鬥能力 / `broker_ability_focus` | `b7d1c1b4d7cc9132a9a9a536570e7006a4fa4243` | `574d7306fc0aec0f7e23200b92a573461174d238` |
+| 基礎：閃光彈(Blinder)：基礎閃擊 / `broker_blitz_flash_grenade` | `4b9f719a126c02b273a8873a4643764f9d05587d` | `4b9f719a126c02b273a8873a4643764f9d05587d` |
+| 基礎：神射手(Gunslinger)：基礎光環 / `broker_aura_gunslinger` | `b45774156f3d905e8e11d929e64ff6255d5eeadf` | `b45774156f3d905e8e11d929e64ff6255d5eeadf` |
+| 基礎：迅如疾風(Like the Wind)：基礎被動 / `broker_passive_improved_sprint_dodge` | `dc6fd96818a6990b0e462429eeded9c55f6e4636` | `0a01308b372f07db4e94f99f9244156d254a2b6e` |
+| 基礎：財閥專員(Cartel Special)：專用興奮劑 / `broker_stimm_description_talent` | `b2ca675696a65ea3f724b862e7df781a9f48b5f4` | `b2ca675696a65ea3f724b862e7df781a9f48b5f4` |
+| 基礎：專用興奮劑充能 / `broker_syringe` | `ee16a9afa9e49c320a6e249834cc33104131ed36` | `94acae4ef235082083406e5ea058c4226d3b51b0` |

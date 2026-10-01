@@ -434,3 +434,67 @@
 ### 驗證限制
 
 固定公開來源為Release 1.13.0，本機文本為Build 25492122，尚未證實同版。未進行遊戲內傷害、計時、操作與多人同步測試；未進行瀏覽器目視驗收，Markdown解析不保證所有閱讀器呈現一致。未指定舊版，沒有版本差異比較。本輪只建立本機文件與提交。
+
+## 巢都渣滓完整職業驗收
+
+### 覆蓋與方法
+
+- 主天賦79／79、獨立配方29／29、零點起始說明1／1；另有5項角色基礎與1項條件式興奮劑。逐項來源文件與本機提交已建置，32項未直接引用的定義另列。
+- 主天賦79組、起始1組以及配方54個動態組成標籤均以同鍵／hash比對繁中與英文；2項明確繁中勘誤放在技能下。基礎5組另核對，條件式針筒無description。
+- 唯一機制依據：公開來源Release1.13.0／419fe18d414a618ce0474bd015bab470afb446d6。下列重算用Python數值斷言驗證算術，不執行遊戲Lua，亦非遊戲內測試。
+
+### 公式與邊界算例
+
+28項數值斷言通過；每列連到包含固定來源行號與前提的技術文件。
+
+| 案例與前提 | 代入公式 | 結果 |
+|---|---|---|
+| [同階段近距離增傷，100且原加25%](TALENTS%20Scum/broker_passive_close_range_damage_on_dodge.md) | 100 × (1 + 25% + 15%) | 140點 |
+| [弱點額外傷害25%，普通100、弱點200](TALENTS%20Scum/broker_passive_increased_weakspot_damage.md) | 100 + (200 − 100) × 1.25 | 225點；總增幅12.5% |
+| [相同額外增幅，普通100、弱點400](TALENTS%20Scum/broker_passive_increased_weakspot_damage.md) | 100 + (400 − 100) × 1.25 | 475點；總增幅18.75% |
+| [化學依賴3層，原冷卻60秒且倍率全程有效](TALENTS%20Scum/broker_keystone_chemical_dependency.md) | 60 ÷ (1 + 3 × 10%) | 約46.15秒 |
+| [化學依賴3層韌性減傷，原傷100](TALENTS%20Scum/broker_keystone_chemical_dependency_sub_2.md) | 100 × 0.95³ | 85.7375點；減傷14.2625% |
+| [兀鷲3層遠程傷害，基準100](TALENTS%20Scum/broker_keystone_vultures_mark_on_kill.md) | 100 × (1 + 3 × 5%) | 115點 |
+| [兀鷲3層，原爆擊率10%](TALENTS%20Scum/broker_keystone_vultures_mark_on_kill.md) | 10% + 3 × 5% | 25% |
+| [毒性陷阱內圈無甲基準](TALENTS%20Scum/broker_ability_stimm_field_sub_2.md) | 20 × 500 × 300 ÷ 10000 | 300點，不含後續毒素 |
+| [速效型場域至再次可用，無其他修正](TALENTS%20Scum/broker_ability_stimm_field_sub_1.md) | 5 + 60 | 65秒，延續效果不延後回充 |
+| [興奮劑1點配方，藥效後恢復](TALENTS%20Scum/broker_stimm_activation_talent.md) | ceil(15 + 60 × 0 ÷ 29) | 15秒 |
+| [興奮劑15點配方，藥效後恢復](TALENTS%20Scum/broker_stimm_activation_talent.md) | ceil(15 + 60 × 14 ÷ 29) | 44秒 |
+| [興奮劑30點完整週期，無其他修正](TALENTS%20Scum/broker_stimm_activation_talent.md) | 15 + ceil(15 + 60 × 29 ÷ 29) | 90秒 |
+| [耐力配方II、III、IV，原消耗10](TALENTS%20Scum/broker_stimm_celerity_4.md) | 10 × 0.85 × 0.85 × 0.8 | 5.78點 |
+| [攻速配方I～IV，原可加速動作1秒](TALENTS%20Scum/broker_stimm_celerity_4.md) | 1 ÷ (1 + 4 × 4%) | 約0.862秒 |
+| [野火V路徑，原威力500](TALENTS%20Scum/broker_stimm_combat_5a.md) | 500 × (1 + 5 × 4%) | 600威力，後續再套武器曲線 |
+| [野火IV、V額外傷害，普通100原弱點200](TALENTS%20Scum/broker_stimm_combat_5a.md) | 100 + 100 × (1 + 10% + 25%) | 235點，先固定威力 |
+| [兩個撕裂配方，護甲前100、係數0.5](TALENTS%20Scum/broker_stimm_combat_5b.md) | 100 × (0.5 + 5% + 10%) | 65點，未跨護甲係數1 |
+| [耐久I～IV承傷，原100](TALENTS%20Scum/broker_stimm_durability_4.md) | 100 × 0.96⁴ | 84.934656點；約15.07%減傷 |
+| [耐久I～IV一次恢復，最大韌性100](TALENTS%20Scum/broker_stimm_durability_4.md) | 100 × (4 × 6.25%) × (1 + 4 × 5%) | 30點，仍以缺額為限 |
+| [加坦克配方，一次恢復最大韌性100](TALENTS%20Scum/broker_stimm_durability_5a.md) | 100 × 25% × (1 + 20% + 30%) | 37.5點，假設恢復修正已生效 |
+| [恢復配方加前置20%恢復，最大韌性100](TALENTS%20Scum/broker_stimm_durability_5b.md) | 100 × 5% × 1.2 | 每次6點 |
+| [抗焦慮藥V路徑，15秒持續恢復](TALENTS%20Scum/broker_stimm_concentration_5a.md) | 15 × (1 + 4 × 6.25% + 25%) | 15秒中恢復22.5秒冷卻 |
+| [同上，原剩60秒的藥效結束剩餘量](TALENTS%20Scum/broker_stimm_concentration_5a.md) | 60 − 22.5 | 剩37.5秒，再以正常速度恢復 |
+| [擊殺觸發配方實際額外恢復倍率](TALENTS%20Scum/broker_stimm_concentration_5b.md) | 75% × 75% | 56.25%，不是75% |
+| [擊殺觸發加前置4節點，持續1秒](TALENTS%20Scum/broker_stimm_concentration_5c.md) | 1 × (1 + 4 × 6.25% + 56.25%) | 該秒恢復1.8125秒冷卻 |
+| [反射換彈，原可加速部分2秒](TALENTS%20Scum/broker_stimm_celerity_5b.md) | 2 ÷ 1.3 | 約1.538秒 |
+| [反射後座不穩定度增加量，原0.2](TALENTS%20Scum/broker_stimm_celerity_5b.md) | 0.2 × 0.5 | 0.1，不等於槍口偏移減半 |
+| [閃避恢復，原等待1秒](TALENTS%20Scum/broker_stimm_celerity_5c.md) | 1 × (1 − 10%) | 0.9秒，不是兩次閃避基本間隔 |
+
+### 機制邊界核對
+
+- 閃擊補充只在數量未滿時累積近距離擊殺；已滿時不累積新進度。毒針手槍延遲毒殺另有先前命中、毒素仍有效與死亡距離限制。
+- 狀態延長隨已經過時間折減；自然冷卻從狀態結束起算，額外恢復不可與自然倒數混為一談。
+- 兀鷲印記共用到期時間；腎上腺素與化學依賴的移層刷新規則不同，按各自模板和共用Buff移層實作區分。
+- 配方點數是購買成本，不是可重複投入的等級。動態屬性對一般加成相加，對耐力消耗與減傷等乘法類型相乘；不能單憑顯示百分比直接相加。
+- 興奮劑效果存在時暫停本身恢復；戰鬥能力恢復配方只改戰鬥能力的倍率，不能當成興奮劑本身恢復速度。
+- 韌性回復以最大值乘比例，再乘恢復修正並限於缺額；持續恢復的首次／最後一次受固定更新時序影響，不宣稱每次用藥必定取得固定總量。
+- 繁中、英文與固定程式的共同落差分開記錄，尤其75%文字與56.25%實作、壓制免疫、攻速與攻擊間隔、腐敗停止門檻及「所有攻擊」的閃避範圍。
+
+### 結構與保存驗收
+
+- Markdown解析通過：109筆三欄目錄、109個技能標題、218個圖片元素、374個粗體欄首；無殘留未解析雙星號。
+- 1131個相對連結／錨點與617組固定SHA來源行範圍核對通過，涵蓋68個來源檔。
+- 109張圖示公開附件逐張下載比對位元組與SHA-256，僅保存於Media-Assets Issue #12；Git變更沒有圖檔、完整擷取文本或MOD Lua。
+- 沿用老兵主文件及來源子文件結構；已更新共用README、POC及PROMPT的獨立配方樹規則。工作分支維持Feature/Skill-Reverse-engineering。
+
+### 限制
+
+本機文字Build25492122尚未證明與固定公開來源同版；未進行遊戲內傷害、冷卻、操作或多人同步實測。Markdown解析已通過，未進行瀏覽器目視驗收；不同閱讀器仍可能有呈現差異。未指定舊版，未做版本差異比較。本輪只完成本機文件與提交。
