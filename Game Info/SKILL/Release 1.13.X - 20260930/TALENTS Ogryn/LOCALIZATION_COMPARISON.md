@@ -24,6 +24,7 @@
 | [領跑者](#ogryn_multi_hits_grant_reload_speed) | 跨來源待同版核對 |
 | [發現更多](#ogryn_free_reload_after_ability) | 未見明確矛盾 |
 | [絕不屈服](#ogryn_knocked_allies_grant_damage_reduction) | 未見明確矛盾 |
+| [嘎嘎！](#ogryn_fully_charged_attacks_gain_damage_and_stagger) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -136,3 +137,10 @@
 - 描述鍵：`loc_talent_ogryn_tanky_with_downed_allies_desc`；hash：`3845cefa`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_knocked_allies_grant_damage_reduction.md)。
+
+<a id="ogryn_fully_charged_attacks_gain_damage_and_stagger"></a>
+## 嘎嘎！(Crunch!)
+
+- 描述鍵：`loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger_new_desc`；hash：`d8632c1b`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_fully_charged_attacks_gain_damage_and_stagger.md)。

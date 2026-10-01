@@ -22,3 +22,4 @@
 | [領跑者](ogryn_multi_hits_grant_reload_speed.md) | 短時間命中至少 3 名不同敵人，下一次換彈速度提高 15%。；完整計算與適用限制見來源文件。 |
 | [發現更多](ogryn_free_reload_after_ability.md) | 每約 15 秒恢復最大備彈的 1%。；完整計算與適用限制見來源文件。 |
 | [絕不屈服](ogryn_knocked_allies_grant_damage_reduction.md) | 20 公尺內每名需要救援的隊友提供 20% 減傷，最多 60%。；完整計算與適用限制見來源文件。 |
+| [嘎嘎！](ogryn_fully_charged_attacks_gain_damage_and_stagger.md) | 蓄力累積近戰傷害與衝擊力，每層 7.5%，最多 30%。；完整計算與適用限制見來源文件。 |

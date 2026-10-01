@@ -22,6 +22,7 @@
 | <img src="https://github.com/user-attachments/assets/cf916d47-2e00-43d4-98b7-307222a056e6" width="32" height="32" alt="領跑者天賦圖示"> [領跑者](#ogryn_multi_hits_grant_reload_speed)<br>- Pacemaker | <ul><li>短時間命中至少 3 名不同敵人，下一次換彈速度提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5a19ac08-20bc-41ee-8af1-bbc6194fa852" width="32" height="32" alt="發現更多天賦圖示"> [發現更多](#ogryn_free_reload_after_ability)<br>- Found Some More | <ul><li>每約 15 秒恢復最大備彈的 1%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/58952102-1822-4093-81f9-48b8cbc8f8a7" width="32" height="32" alt="絕不屈服天賦圖示"> [絕不屈服](#ogryn_knocked_allies_grant_damage_reduction)<br>- Won't Give In | <ul><li>20 公尺內每名需要救援的隊友提供 20% 減傷，最多 60%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/e9d72852-9fa6-4e02-aded-e261adb660f0" width="32" height="32" alt="嘎嘎！天賦圖示"> [嘎嘎！](#ogryn_fully_charged_attacks_gain_damage_and_stagger)<br>- Crunch! | <ul><li>蓄力累積近戰傷害與衝擊力，每層 7.5%，最多 30%。</li></ul> | 技能 |
 
 ---
 
@@ -262,5 +263,22 @@
 - **減傷算例**：有 1、2、3 名符合條件的隊友時，這一階段的 100 點傷害分別變成 80、60、40 點；三人合計為 100 × (1 − 3 × 20%) = 40 點。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_knocked_allies_grant_damage_reduction.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_fully_charged_attacks_gain_damage_and_stagger"></a>
+### 嘎嘎！(Crunch!)
+
+<img src="https://github.com/user-attachments/assets/e9d72852-9fa6-4e02-aded-e261adb660f0" width="72" height="72" alt="嘎嘎！天賦圖示">
+
+- **蓄力效果**：重擊蓄力可累積 4 層加成，每層增加 7.5% 近戰傷害與衝擊力；蓄力到自動出手時會補至滿層。
+
+- **持續方式**：加成用於這次揮擊，揮擊完成後移除。疊層起點取決於武器的蓄力動作，之後預設每 0.25 秒加一層，不是所有武器都從按鍵瞬間開始計時。
+
+- **傷害算例**：基礎 100 點傷害，4 層提供 4 × 7.5% = 30%，沒有其他加成時為 130 點；同階段原有 20% 時為 100 × (1 + 20% + 30%) = 150 點。
+
+- **衝擊力算例**：原本 100 點衝擊力，滿層為 130 點；是否使敵人踉蹌還取決於敵人門檻，不能把衝擊力直接當成傷害。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_fully_charged_attacks_gain_damage_and_stagger.md) · [返回目錄](#talent-index)
 
 ---
