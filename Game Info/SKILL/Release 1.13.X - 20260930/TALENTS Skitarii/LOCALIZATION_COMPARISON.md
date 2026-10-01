@@ -44,6 +44,7 @@
 | [適應性戰鬥校準](#cryptic_cleave_and_impact) | 未見明確矛盾 |
 | [守護協議](#cryptic_disabled_allies_defense) | 未見明確矛盾 |
 | [數據感應協定](#cryptic_ally_coherency_defenses) | 受益對象用語有誤 |
+| [電流爆發](#cryptic_electrocution_push) | 未見明確矛盾 |
 | [抗腐護符](#cryptic_corruption_resistance_doom) | 未見明確矛盾 |
 
 <a id="cryptic_crits_grant_tdr"></a>
@@ -301,6 +302,13 @@
 - 繁中原文短引：當你或協同中的盟友受到韌性傷害時，盟友恢復{stamina:%s}耐力。冷卻時間{stamina_cd:%s}秒。
 - 同源英文：When you or an Ally in Coherency take toughness damage, they restore {stamina:%s} Stamina. {stamina_cd:%s}s Cooldown.
 - [原始碼推導與限制](cryptic_ally_coherency_defenses.md)。
+
+<a id="cryptic_electrocution_push"></a>
+## 電流爆發(Voltaic Burst)
+
+- 描述鍵：`loc_talent_cryptic_electrocution_push_desc`；hash：`642d90e7`。
+- 結論：未見明確矛盾。中英一致；補充整次推擊共享冷卻與開始時間。
+- [原始碼推導與限制](cryptic_electrocution_push.md)。
 
 <a id="cryptic_corruption_resistance_doom"></a>
 ## 抗腐護符(Ablative Wards)
