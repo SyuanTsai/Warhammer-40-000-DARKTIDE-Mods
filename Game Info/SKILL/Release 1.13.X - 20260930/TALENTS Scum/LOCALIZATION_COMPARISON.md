@@ -19,6 +19,7 @@
 | [韌性增幅](#base_toughness_node_buff_medium_1) | 未見明確矛盾 |
 | [恢復姿態](#broker_passive_stamina_on_successful_dodge) | 未見明確矛盾 |
 | [奧客](#broker_passive_dodge_melee_on_slide) | 未見明確矛盾 |
+| [沒甚麼，只是擦傷](#broker_passive_replenish_toughness_on_ranged_toughness_damage) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -96,3 +97,10 @@
 - 描述鍵：`loc_talent_broker_passive_dodge_melee_on_slide_desc`；hash：`2eb1aa86`。
 - 結論：未見明確矛盾。繁中用「視作閃避成功」、英文為count as Dodging；說明補清楚狀態與實際成功事件的差異，暫不將措辭本身定為明確勘誤。
 - [原始碼推導與限制](broker_passive_dodge_melee_on_slide.md)。
+
+<a id="broker_passive_replenish_toughness_on_ranged_toughness_damage"></a>
+## 沒甚麼，只是擦傷(Tis but a Scratch)
+
+- 描述鍵：`loc_talent_broker_passive_replenish_toughness_on_ranged_toughness_damage_desc`；hash：`6f652e30`。
+- 結論：未見明確矛盾。兩語均描述遠程命中後恢復韌性；刷新與耗盡中止為補充，不列錯誤。
+- [原始碼推導與限制](broker_passive_replenish_toughness_on_ranged_toughness_damage.md)。

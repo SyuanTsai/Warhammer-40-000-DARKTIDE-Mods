@@ -17,3 +17,4 @@
 | [韌性增幅](base_toughness_node_buff_medium_1.md) | 最大韌性增加 25 點。；完整計算與適用限制見來源文件。 |
 | [恢復姿態](broker_passive_stamina_on_successful_dodge.md) | 成功閃避時，恢復最大耐力的 10%。；完整計算與適用限制見來源文件。 |
 | [奧客](broker_passive_dodge_melee_on_slide.md) | 滑行時，視為正在閃避近戰攻擊。；完整計算與適用限制見來源文件。 |
+| [沒甚麼，只是擦傷](broker_passive_replenish_toughness_on_ranged_toughness_damage.md) | 尚有韌性時受到遠程傷害，3 秒內恢復 30% 最大韌性。；完整計算與適用限制見來源文件。 |
