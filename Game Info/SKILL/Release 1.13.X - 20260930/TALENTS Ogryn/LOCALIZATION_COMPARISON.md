@@ -1,0 +1,18 @@
+# 歐格林：遊戲本體繁中描述比對
+
+[返回玩家說明](../TALENTS_Ogryn.md)｜[技術索引](README.md)
+
+- 原文：本機 Steam Build 25492122，2026-10-01 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本只留在本機已忽略的 Extracted Text。
+- 機制：Release 1.13.0／`419fe18d414a618ce0474bd015bab470afb446d6`。兩來源尚未確認同版；跨版實作差異留待同版核對。
+- 只有明確的效果方向、作用對象或數量／單位矛盾列為勘誤；省略機制或算例不算錯誤。
+
+| 技能 | 結論 |
+|---|---|
+| [最好的防禦](#ogryn_multi_heavy_toughness) | 未見明確矛盾 |
+
+<a id="ogryn_multi_heavy_toughness"></a>
+## 最好的防禦(The Best Defence)
+
+- 描述鍵：`loc_talent_ogryn_toughness_on_multiple_new_desc`；hash：`bcffeeff`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_multi_heavy_toughness.md)。
