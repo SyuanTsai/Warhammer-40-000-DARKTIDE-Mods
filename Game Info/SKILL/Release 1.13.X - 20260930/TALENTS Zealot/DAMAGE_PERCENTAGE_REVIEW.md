@@ -11,3 +11,4 @@
 | [淨化不潔](zealot_increased_damage_vs_resilient.md) | 對被感染及不屈護甲類型的傷害增加 20%。；完整計算與適用限制見來源文件。 |
 | [持續突擊](zealot_hits_grant_stacking_damage.md) | 近戰命中增加 4% 近戰傷害，持續 5 秒，最多 5 層。；完整計算與適用限制見來源文件。 |
 | [堅韌信仰](zealot_crits_reduce_toughness_damage.md) | 爆擊命中後，韌性受到的傷害降低 40%，持續 4 秒。；完整計算與適用限制見來源文件。 |
+| [精力復甦](zealot_toughness_on_dodge.md) | 成功閃避攻擊後恢復 15% 最大韌性，觸發冷卻 0.5 秒。；完整計算與適用限制見來源文件。 |

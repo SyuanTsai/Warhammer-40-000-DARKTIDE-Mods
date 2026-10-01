@@ -1,0 +1,37 @@
+# 精力復甦(Second Wind)：原始碼依據
+
+[返回玩家說明](../TALENTS_Zealot.md#zealot_toughness_on_dodge)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_toughness_on_dodge)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`zealot_toughness_on_dodge`；名稱鍵：`loc_talent_zealot_toughness_on_dodge`；描述鍵：`loc_talent_zealot_toughness_on_dodge_desc`。
+- 節點：`node_7e007113-75ff-4081-af02-5512abe200dc`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- 模板訂閱on_successful_dodge，cooldown_duration=.5，toughness_percentage=.15；對持有者呼叫Toughness.replenish_percentage而非固定15點。通用恢復方法依最大韌性及恢復量屬性再限制缺額。
+
+## 原始碼依據
+
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：499–512](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L499-L512)
+- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–285](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2911–2932](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2911-L2932)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：259–290](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L259-L290)
+
+## 算例條件與待確認事項
+
+- **恢復算例**：最大韌性 100、沒有其他恢復加成時，一次補 100 × 15% = 15 點；目前已有 95 點則只能補 5 點，恢復至上限。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`7b3709d4`。
+- 核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/default/zealot_toughness_on_dodge.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_toughness_on_dodge:node_7e007113-75ff-4081-af02-5512abe200dc`。
+- 格式：image/webp；288×288；4496 bytes。
+- SHA-256：`49bcf2580c272026e065346100c1ca44d5fb6221156efa7fca2561f0580d37be`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929296872)；[公開圖片](https://github.com/user-attachments/assets/7d6f33d9-5ed5-49d9-9f4c-333565e17216)。附件已下載比對位元組與 SHA-256。

@@ -13,6 +13,7 @@
 | [淨化不潔](#zealot_increased_damage_vs_resilient) | 未見明確矛盾 |
 | [持續突擊](#zealot_hits_grant_stacking_damage) | 未見明確矛盾 |
 | [堅韌信仰](#zealot_crits_reduce_toughness_damage) | 未見明確矛盾 |
+| [精力復甦](#zealot_toughness_on_dodge) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
 ## 背刺者(Backstabber)
@@ -48,3 +49,10 @@
 - 描述鍵：`loc_talent_zealot_toughness_melee_effectiveness_desc`；hash：`56b689eb`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_crits_reduce_toughness_damage.md)。
+
+<a id="zealot_toughness_on_dodge"></a>
+## 精力復甦(Second Wind)
+
+- 描述鍵：`loc_talent_zealot_toughness_on_dodge_desc`；hash：`7b3709d4`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_toughness_on_dodge.md)。
