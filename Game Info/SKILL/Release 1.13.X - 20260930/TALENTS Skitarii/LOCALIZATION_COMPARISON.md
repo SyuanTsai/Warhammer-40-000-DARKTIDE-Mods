@@ -11,6 +11,7 @@
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
 | [歐姆尼賽亞充能聖歌](#cryptic_multi_hits_restore_toughness) | 未見明確矛盾 |
+| [原初動力導流](#cryptic_stamina_increases_damage) | 未見明確矛盾 |
 | [熵能轉移](#cryptic_electrocution_toughness) | 未見明確矛盾 |
 | [過載轉移晶格](#cryptic_electrocution_defense) | 未見明確矛盾 |
 | [電擊破壞協定](#cryptic_pushing_grants_cleave) | 未見明確矛盾 |
@@ -53,6 +54,13 @@
 - 描述鍵：`loc_talent_cryptic_multi_hits_restore_toughness_desc`；hash：`6db4bbd5`。
 - 結論：未見明確矛盾。原文「3名以上」成立；補充第3次有效命中與觸發間隔，不屬誤譯。
 - [原始碼推導與限制](cryptic_multi_hits_restore_toughness.md)。
+
+<a id="cryptic_stamina_increases_damage"></a>
+## 原初動力導流(Channelled Motive Force)
+
+- 描述鍵：`loc_talent_cryptic_stamina_increases_damage_desc`；hash：`0a1fb7eb`。
+- 結論：未見明確矛盾。中英一致；補充單位為耐力格、可分次累計。
+- [原始碼推導與限制](cryptic_stamina_increases_damage.md)。
 
 <a id="cryptic_electrocution_toughness"></a>
 ## 熵能轉移(Entropic Transfer)
