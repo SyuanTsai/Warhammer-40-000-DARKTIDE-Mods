@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_elite_kills_grant_ammo_coop` / `veteran_aura_gain_ammo_on_elite_kill` - 拾荒者
+  - 英文對應：Scavenger。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
+  - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L646-L666)。
+
 - `loc_ability_frag_grenade` / `veteran_frag_grenade` - 破片手雷
   - 英文對應：Frag Grenade。狀態：暫定，待使用者確認；基礎效果的描述性名稱不宣稱為官方繁體名稱。
   - 來源：[固定版本基礎天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L33-L42)。
