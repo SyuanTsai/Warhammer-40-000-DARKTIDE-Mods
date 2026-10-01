@@ -9,6 +9,7 @@
 | 技能 | 結論 |
 |---|---|
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
+| [特提恩是迎賓](#broker_passive_first_target_damage) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -16,3 +17,10 @@
 - 描述鍵：`loc_talent_broker_passive_close_range_damage_on_dodge_desc`；hash：`0410a6ec`。
 - 結論：未見明確矛盾。同源繁中與英文均描述成功閃避後近距離增傷；未列距離衰減公式屬補充，不列勘誤。
 - [原始碼推導與限制](broker_passive_close_range_damage_on_dodge.md)。
+
+<a id="broker_passive_first_target_damage"></a>
+## 特提恩是迎賓(A Tertium Welcome)
+
+- 描述鍵：`loc_talent_broker_passive_first_target_damage_desc`；hash：`4ebbdbb2`。
+- 結論：未見明確矛盾。繁中與英文皆明確限定每次近戰攻擊的第一個目標，未見矛盾。
+- [原始碼推導與限制](broker_passive_first_target_damage.md)。
