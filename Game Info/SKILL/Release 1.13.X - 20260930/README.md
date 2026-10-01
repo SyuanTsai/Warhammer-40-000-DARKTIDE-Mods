@@ -5,6 +5,8 @@
 - [老兵完整天賦說明](TALENTS_Veteran.md)
 - [靈能者完整天賦說明](TALENTS_Psyker.md)
 - [狂信徒完整天賦說明](TALENTS_Zealot.md)
+- [歐格林完整天賦說明](TALENTS_Ogryn.md)
+- [歐格林來源、公式與技術索引](TALENTS%20Ogryn/README.md)
 - [狂信徒來源、公式與技術索引](TALENTS%20Zealot/README.md)
 - [靈能者來源、公式與技術索引](TALENTS%20Psyker/README.md)
 - [角色基礎效果](TALENTS%20Veteran/BASE_EFFECTS.md)
@@ -417,3 +419,120 @@
 | `zealot_shock_grenade` | `f5a5f7d4c7a08f72bf1eb4d8764f0e64248396c1` |
 | `zealot_toughness_damage_coherency` | `4da24e8b1fc229775547da03d8831f43a71076d1` |
 | `zealot_more_toughness_on_melee` | `957d5da7321b55662150f07885bc0fcd36b0996b` |
+
+## 歐格林完成範圍
+
+| 分類 | 完成／當前節點 |
+|---|---|
+| 閃擊與升級 | 5／5 |
+| 光環 | 3／3 |
+| 能力與升級 | 12／12 |
+| 鑰石與升級 | 16／16 |
+| 技能（含 1 個屬性節點） | 50／50 |
+| 合計 | **86／86** |
+
+- 沿用老兵主頁、三欄目錄、圖示尺寸、條列算例與逐技能來源子文件。86 個一點節點均有獨立本機提交；單一配置最多分配 30 點，不能同時選滿。零點起始佔位沒有技能效果，不列入計數。
+- [7 項角色基礎效果](TALENTS%20Ogryn/BASE_EFFECTS.md)另列，並各自附來源子文件。職業定義共 109 項，可選樹使用其中 85 項及 1 項通用屬性定義；另有 7 項基礎配置及 [17 項未直接使用的定義](TALENTS%20Ogryn/UNUSED_DEFINITIONS.md)。
+- [繁中原文比對](TALENTS%20Ogryn/LOCALIZATION_COMPARISON.md)覆蓋 86 組同鍵／hash 的本機繁中與英文：6 項勘誤附在技能下；7 項跨來源差異待同版核對。未列公式或實作細節不視為錯誤。
+- [86 項百分比與算例盤點](TALENTS%20Ogryn/DAMAGE_PERCENTAGE_REVIEW.md)區分麻木逐層乘算、重拳出擊傷害加算、威力與最終傷害、爆擊額外部分、撕裂依護甲倍率變動，以及逐秒冷卻恢復。
+- 86 張圖示只保存在 [Media-Assets Issue #10](https://github.com/SyuanTsai/Media-Assets/issues/10) 附件；逐張公開下載核對位元組大小與 SHA-256。主頁目錄 32×32、內文 72×72；來源和雜湊保留在技能子文件。
+- 詞表新增「Found Some More－發現更多」並標待確認。圖片與完整擷取文本未提交 Git；Extracted Text 維持本機忽略。未修改 MOD Lua、遊戲來源或其他職業文件。
+- 機制來源固定為 Release 1.13.0；本機文字為 Build 25492122，兩者尚未證實同版，未執行遊戲內測試。優先核對：麻木爆發門檻、隊友受擊清除近戰減傷、換彈加速的多目標窗口、免費射擊的彈藥返還，以及多位歐格林共用層數比例的影響。
+
+### 歐格林逐項本機提交
+
+| 項目 | 首次文件提交 |
+|---|---|
+| 投彈完畢！ / `ogryn_box_explodes` | `60096bf257aa30a6bdebeefd98488e96703d655e` |
+| 破片炸彈 / `ogryn_grenade_frag` | `7bfe4d945b6fb4d05d6ab8ea52d567477b5cfbd2` |
+| 投石問路 / `ogryn_grenade_friend_rock` | `e9fc79d4c83ab35afae7bd5c90e3bf4713982d7b` |
+| 那下不算！ / `ogryn_replenish_rock_on_miss` | `36d9915588286cfca0a714e501627f89b6ac2e63` |
+| 超巨量傷害箱 / `ogryn_big_box_of_hurt_more_bombs` | `7d21e1812a2e1d9c1cd44bbab60c5091fcada11c` |
+| 破骨者之環 / `ogryn_melee_damage_coherency_improved` | `3981cccb979b816cb3a4642ffc3d4f417e11467d` |
+| 優勝劣汰 / `ogryn_damage_vs_suppressed_coherency` | `a11581cff1a90719f2a3992eb6d19c6561756c29` |
+| 跟緊我！ / `ogryn_toughness_regen_aura` | `a4fcd7936abd10b5ba7ed240ca8d81b0a1216a67` |
+| 忠誠守護者 / `ogryn_taunt_shout` | `c0994a23a24e66cb83c4de0d47d28cb90e0fd92f` |
+| 不屈不撓 / `ogryn_longer_charge` | `8ff436064c47a4dcc87b89ffd6dec7ae4f6a1257` |
+| 貼身火力 / `ogryn_special_ammo` | `d06f7ce1ab070d6f790963c4e9e76edbf4bfa466` |
+| 跺殺之靴 / `ogryn_charge_toughness` | `a0d23af3420493ed4ce816054de3f50885244c14` |
+| 粉碎 / `ogryn_charge_applies_bleed` | `b06faf6b60524ec9706c82faa113a0cc4734b70d` |
+| 再來 / `ogryn_taunt_staggers_reduce_cooldown` | `f4ed6c4943ee1d37f19a0aca3d5e7c31de2493c7` |
+| 槍林彈雨 / `ogryn_special_ammo_armor_pen` | `f8f5855ce9eb7cabf00cc24d2e1a5f7cec7536ed` |
+| 集火射擊 / `ogryn_special_ammo_fire_shots` | `80e8086a2c35118c90bfacb8b6ed4e09f25ddaf4` |
+| 重要干擾 / `ogryn_taunt_damage_taken_increase` | `0a84ad86e81dfe40a68be926527532efa348427f` |
+| 壯膽子彈 / `ogryn_ranged_stance_toughness_regen` | `a28a5279869b21e37404a071528ec177e496685f` |
+| 一點都不痛！ / `ogryn_taunt_restore_toughness` | `2ce8884ab67d7723c45302d82f3e64a84a5dae64` |
+| 踐踏 / `ogryn_charge_trample` | `5bc6b1b32c47bc1236938720851a65dbf05589e6` |
+| 爆限超載 / `ogryn_leadbelcher_no_ammo_chance` | `916efb84f2cd272887e3804d7495aa01efc7ec93` |
+| 麻木 / `ogryn_carapace_armor` | `1ffb4a3fb6c872e466f601fe0b6d5a7752e4de5f` |
+| 重拳出擊 / `ogryn_passive_heavy_hitter` | `405471c94dfef890bd426f5d374f0b6224a961df` |
+| 痛楚爆發 / `ogryn_carapace_armor_trigger_on_zero_stacks` | `a20471ac9a713dcd5fbdd35ccc370d0858a19a17` |
+| 最強壯！ / `ogryn_carapace_armor_add_stack_on_push` | `e2402a5b7fdfb987ed4df62af9588bb97d40df46` |
+| 最堅韌！ / `ogryn_carapace_armor_more_toughness` | `ad2178d740bbc086454a34a8790f82e912c7412b` |
+| 最大火力 / `ogryn_leadbelcher_cooldown_reduction` | `62503c0a7de79cd13bcaff4743a119ce7bc0039b` |
+| 好槍法 / `ogryn_leadbelcher_crits` | `130c378265321260c7c4a9b3394d8c6f549a58db` |
+| 子彈風暴 / `ogryn_blo_ally_ranged_buffs` | `05990013d08489a5c2b39d087b326ee1205eeb2e` |
+| 激鬥戰火 / `ogryn_blo_wield_speed` | `9795cf88086a71bda4ef578f90e94a8c976b9031` |
+| 退後！ / `ogryn_blo_melee` | `5688da3c328105fb3664313e87edd9f544dc5604` |
+| 毫髮無傷 / `ogryn_heavy_hitter_tdr` | `6519bf60e1f0ce2dd423555ddfa39307b7111e0c` |
+| 強力劈砍 / `ogryn_heavy_hitter_cleave` | `e4e67919b6057b3f2eb7bda16266a73f6651e009` |
+| 越戰越勇 / `ogryn_heavy_hitter_max_stacks_improves_toughness` | `d7117b1a510604fc84b75a50e8c8de48ab968337` |
+| 震撼衝擊 / `ogryn_heavy_hitter_stagger` | `655a87292a437015c7e9edd63d367b8f7311500d` |
+| 熱身完畢 / `ogryn_heavy_hitter_max_stacks_improves_attack_speed` | `775ad751a0836beb7b6351eae2f5643ecdc12959` |
+| 最好的防禦 / `ogryn_multi_heavy_toughness` | `2f449b7bd622646eaf28b22ee0679ab25c6c0445` |
+| 碾碎它們！ / `ogryn_single_heavy_toughness` | `3d7ac6514a8e62f59d441a1a1594d9c4b7c21a5c` |
+| 關鍵人物 / `ogryn_increased_coherency_toughness` | `d7d080b86bc31b657843f66d2b6e12faec929659` |
+| 射不停 / `ogryn_reload_speed_on_empty` | `3589ba305e1f803e0b854e8a52b073a9237d8045` |
+| 怒不可遏 / `ogryn_more_hits_more_damage` | `83df320d968861c76d8ddece12fd41223636b3fd` |
+| 重量級 / `ogryn_ogryn_killer` | `731d3557047320bd7b05e11bd9a0232d217350b3` |
+| 猛擊 / `ogryn_melee_stagger` | `6312556c3559c3b149d3240c636ad804ce6d6658` |
+| 削弱敵人 / `ogryn_targets_recieve_damage_taken_increase_debuff` | `a758ed1b8364afac6288861139a7ab0184dd246a` |
+| 堅韌不屈 / `ogryn_toughness_on_low_health` | `e3c5d5b4699a28cba7d0834711ca32a4869c821a` |
+| 重毆 / `ogryn_heavy_bleeds` | `bffd21e9e53261271534842aa29b161006dc854b` |
+| 沉重打擊 / `ogryn_staggering_increases_damage` | `67fc732b6b2712eee1c1ca77a3c25fa4dd496b47` |
+| 勢不可擋 / `ogryn_movement_speed_after_ranged_kills` | `8f1aaffd76977d578931a3aa2d4138c2b5c8620a` |
+| 彈藥儲存包 / `ogryn_increased_ammo_reserve` | `beb0fe1b80ecbb0008c2344f105ab7caf1947130` |
+| 領跑者 / `ogryn_multi_hits_grant_reload_speed` | `923aa88f2918d793b6fc4af506af7394b74572e1` |
+| 發現更多 / `ogryn_free_reload_after_ability` | `740e9e029138aedd4b04b1b51776511e215f92e9` |
+| 絕不屈服 / `ogryn_knocked_allies_grant_damage_reduction` | `48199777950219b6e8cd2c56bc9350a35ed6a10d` |
+| 嘎嘎！ / `ogryn_fully_charged_attacks_gain_damage_and_stagger` | `fa9326969665a57f88e9d076a7f97146d83f1754` |
+| 毀滅之樂 / `ogryn_nearby_bleeds_reduce_damage_taken` | `d6cfceb867523071da9e28c3d77b8d67ba1505d7` |
+| 韌性減傷 / `base_toughness_damage_reduction_node_buff_medium_1` | `6a128eeeefa2268ee6d707792cc5d663d75d5e11` |
+| 相親相愛好夥伴！ / `ogryn_damage_taken_by_all_increases_strength_tdr` | `a4a8f21bf4174666664c318fce894f4d2569c21d` |
+| 全神貫注 / `ogryn_ally_movement_boost_on_ability` | `a614b161f39458c5057e44a0843f42d41e6d01f7` |
+| 利刃出鞘 / `ogryn_windup_reduces_damage_taken` | `9a2fa63b342c10edfe2d0dabe6c84b3ff7f1f0cf` |
+| 誰敢攔我！ / `ogryn_windup_is_uninterruptible` | `c06f3e8bf3e2380688c3bbd84cff2be74e2fa54b` |
+| 屠殺 / `ogryn_kills_grant_crit_chance` | `2aa50da56c6e5d467047e984f824f6ab504853e8` |
+| 報復時間 / `ogryn_revenge_damage` | `71875414452a98f65503e1b243bb7189068d0572` |
+| 主宰 / `ogryn_rending_on_elite_kills` | `fe7e10ede2de3fc5d2df8e882cb96a9e71e67367` |
+| 換彈完畢 / `ogryn_reloading_grants_damage` | `a019802160a1cb285492be9492cf049dabca5b0c` |
+| 大爆炸 / `ogryn_increase_explosion_radius` | `4469723c4ce00f41fb381da565b984ad144f51a1` |
+| 睚眥必報 / `ogryn_blocking_reduces_push_cost` | `d0b96b0ad0827a1e8d806ba7b3b3436b8d43536a` |
+| 渴求關注 / `ogryn_blocking_ranged_taunts` | `b4bfd95b9a2cee8703bd6aa9059fa2ff69bfebb9` |
+| 為了小子們 / `ogryn_protect_allies` | `988753e941881c6791dd870af64f43e96e0e71f6` |
+| 頭腦簡單 / `ogryn_corruption_resistance` | `d04cd5e80d39fcacdcc5b72b6e7bd898b488a207` |
+| 專注鬥士 / `ogryn_melee_attacks_give_mtdr` | `d168f5e8e700ff129af5a8be3307a983cefbadf5` |
+| 蠻橫之力 / `ogryn_pushing_applies_brittleness` | `c9c1f49b066f19b4fa9fa2d68a9ecb5d7b73f2c2` |
+| 火力全開 / `ogryn_explosions_burn` | `df6bc4a7e8fd09470e4436e57d1451d1bad5c00d` |
+| 堅不可摧 / `ogryn_block_all_attacks` | `ac1fccdace13dc8efd26ae1c4b1d16d51f60a5a6` |
+| 士氣高昂 / `ogryn_damage_reduction_on_high_stamina` | `ab352992c6028debacefa4bace5f23d9f80a7197` |
+| 好運連連 / `ogryn_crit_damage_increase` | `80f366ffd69eb7829b2bd928c6c8cb7247ca7d4d` |
+| 狂暴猛擊 / `ogryn_stacking_attack_speed` | `0ed4b805363dc34a1a77c27d3eed93871eb01006` |
+| 擊潰他們 / `ogryn_melee_damage_after_heavy` | `54d205576b96f488a3206af9b2aead7d1b610813` |
+| 專注 / `ogryn_drain_stamina_for_handling` | `2d316dca7dde0c0559fa810b7080bdf248375b0e` |
+| 大肌肌 / `ogryn_damage_reduction_after_elite_kill` | `cdad81113a1a88b850c859a700a01344bb2eaa9b` |
+| 穩定握持 / `ogryn_toughness_while_bracing` | `5e3bd44aff91aa88aa57a25678d5b916c32bb93a` |
+| 休想再打中我...... / `ogryn_ranged_damage_immunity` | `7d6b5058eff48f58deec04e68d913771976c6b6d` |
+| 熟能生巧 / `ogryn_wield_speed_increase` | `5994dbb3c35ab940ed22562a7bcb5d493e821d05` |
+| 射盡殺戮 / `ogryn_ranged_improves_melee` | `65e835f8c94385fa60941a7d68b36f8c17a3bc01` |
+| 猛砸爆裂 / `ogryn_melee_improves_ranged` | `cd0e99010637032664ceb2e9c933f7ccd9dbf9af` |
+| 格鬥兵 / `ogryn_ally_elite_kills_grant_cooldown` | `36ae10bee3d9b5d2d1dcb73803f700c126888f71` |
+| 精準打擊 / `ogryn_weakspot_damage` | `6a9221585eefd7cb5310a195af969e66bfa6d27f` |
+| 機動部署 / `ogryn_bracing_reduces_damage_taken` | `9b79e409d67332e6d34fa904d679a53b02ee4b63` |
+| 基礎：蠻牛衝撞(Bull Rush) / `ogryn_charge` | `6831ff5a0fd84e2780e94110888a0a0adb966ea0` |
+| 基礎：巨量傷害盒(Big Box of Hurt) / `ogryn_grenade_box` | `6bf568aca5f4ba822a01909ccfd87fbe2f761912` |
+| 基礎：威嚇氣場(Intimidating Presence) / `ogryn_melee_damage_coherency` | `73acfefcf4e024fdc179be327689600e60cd47d4` |
+| 基礎：救援時不可打斷 / `ogryn_helping_hand` | `da775d627f6db67d1bbfa4ba9407b5f5108d6ad6` |
+| 基礎：基礎減傷與閃避防護 / `ogryn_base_tank_passive` | `ecc2983340e92f9f5c6c21e00307ab4cdc87c2ea` |
+| 基礎：閃避撞擊 / `ogryn_dodge_stagger` | `0c0c4f57b6ec7f91b05dcf85fa895dc04cd302e1` |
+| 基礎：卓越氣場(Towering Presence) / `ogryn_coherency_radius_increase` | `c029ea59e731b640fa69800a09a27645ff54a861` |
