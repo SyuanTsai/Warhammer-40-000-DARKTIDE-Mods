@@ -72,7 +72,7 @@
 | [連帶傷害](broker_passive_toxin_spread_on_kills.md) | 近戰擊殺精英時，對其周圍 4 公尺內最多 10 名敵人施加 2 層毒素。；完整計算與適用限制見來源文件。 |
 | [額外彈藥袋](broker_passive_increased_blitz_ammo.md) | 閃擊攜帶上限增加 1 次。；完整計算與適用限制見來源文件。 |
 | [塗讀武裝](broker_passive_melee_attacks_apply_toxin.md) | 近戰爆擊命中時，施加 1 層毒素。；完整計算與適用限制見來源文件。 |
-| [隨身毒素](broker_passive_blitz_inflicts_toxin.md) | 閃擊爆炸額外施毒：致盲手雷 3 層、飛彈 6 層、化學手雷 10 層。；完整計算與適用限制見來源文件。 |
+| [隨身毒素](broker_passive_blitz_inflicts_toxin.md) | 閃擊爆炸額外施毒：擊暈手雷 3 層、飛彈 6 層、化學手雷 10 層。；完整計算與適用限制見來源文件。 |
 | [精準投毒](broker_passive_reduced_damage_by_toxined.md) | 你感染的敵人造成傷害降低 15%；怪物與指定頭目改為降低 30%。；完整計算與適用限制見來源文件。 |
 | [毒性再生](broker_passive_replenish_toughness_while_toxined_enemies_in_proximity.md) | 15 公尺內每名感染毒素的敵人，每秒恢復 1% 最大韌性，最多計 10 名。；完整計算與適用限制見來源文件。 |
 | [軍火商](broker_passive_extended_mag.md) | 彈匣容量增加 15%，結果無條件進位。；完整計算與適用限制見來源文件。 |
