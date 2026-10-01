@@ -27,6 +27,7 @@
 | [樣本採集](#broker_passive_stimm_cd_on_kill) | 繁中原文誤譯 |
 | [神經質](#broker_passive_improved_dodges_at_full_stamina) | 未見明確矛盾 |
 | [爆擊機率增幅](#base_crit_chance_node_buff_low_1) | 未見明確矛盾 |
+| [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -162,3 +163,10 @@
 - 描述鍵：`loc_talent_crit_chance_low_desc`；hash：`3019333a`。
 - 結論：未見明確矛盾。兩語皆描述增加爆擊機率，未見矛盾。
 - [原始碼推導與限制](base_crit_chance_node_buff_low_1.md)。
+
+<a id="base_melee_damage_node_buff_medium_1"></a>
+## 近戰增幅(Melee Damage Boost)
+
+- 描述鍵：`loc_talent_melee_damage_boost_medium_desc`；hash：`7b5da013`。
+- 結論：未見明確矛盾。兩語均為近戰傷害增加，未見矛盾。
+- [原始碼推導與限制](base_melee_damage_node_buff_medium_1.md)。

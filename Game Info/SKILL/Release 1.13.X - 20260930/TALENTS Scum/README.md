@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 19／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 20／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -30,3 +30,4 @@
 | 技能 | [樣本採集](broker_passive_stimm_cd_on_kill.md) / `broker_passive_stimm_cd_on_kill` | `node_a43d9e96-9651-4ff6-8627-49dbd87e668b` | 完成（核心靜態機制） |
 | 技能 | [神經質](broker_passive_improved_dodges_at_full_stamina.md) / `broker_passive_improved_dodges_at_full_stamina` | `node_c8272e59-a92d-4d10-b768-fc7539d3886f` | 完成（核心靜態機制） |
 | 技能 | [爆擊機率增幅](base_crit_chance_node_buff_low_1.md) / `base_crit_chance_node_buff_low_1` | `node_089c4280-425c-40cd-8ec6-0aa812fe11ff` | 完成（核心靜態機制） |
+| 技能 | [近戰增幅](base_melee_damage_node_buff_medium_1.md) / `base_melee_damage_node_buff_medium_1` | `node_6f1aae37-5d5d-4aa5-9028-60ef0c7afa29` | 完成（核心靜態機制） |
