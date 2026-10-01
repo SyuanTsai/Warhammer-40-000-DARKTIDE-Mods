@@ -36,4 +36,5 @@
 | [背水一戰](zealot_more_damage_when_low_on_stamina.md) | 耐力越低，近戰傷害越高；耐力耗盡時最多提高 20%。；完整計算與適用限制見來源文件。 |
 | [刻不容緩](zealot_melee_crits_restore_stamina.md) | 近戰爆擊命中時恢復 10% 最大耐力；冷卻 1 秒。；完整計算與適用限制見來源文件。 |
 | [神恩庇護](zealot_revive_speed.md) | 救起倒地隊友的速度提高 25%；協助隊友後，對方獲得移速與韌性減傷。；完整計算與適用限制見來源文件。 |
+| [弒除瀆者](zealot_damage_vs_elites.md) | 對精英敵人的傷害提高 15%。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_4.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |

@@ -38,6 +38,7 @@
 | [背水一戰](#zealot_more_damage_when_low_on_stamina) | 未見明確矛盾 |
 | [刻不容緩](#zealot_melee_crits_restore_stamina) | 未見明確矛盾 |
 | [神恩庇護](#zealot_revive_speed) | 未見明確矛盾 |
+| [弒除瀆者](#zealot_damage_vs_elites) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_4) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
@@ -251,6 +252,13 @@
 - 描述鍵：`loc_talent_zealot_revive_speed_desc`；hash：`6421ecda`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_revive_speed.md)。
+
+<a id="zealot_damage_vs_elites"></a>
+## 弒除瀆者(Abolish Blasphemers)
+
+- 描述鍵：`loc_talent_zealot_damage_vs_elites_desc`；hash：`43f97b1b`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](zealot_damage_vs_elites.md)。
 
 <a id="base_melee_damage_node_buff_medium_4"></a>
 ## 近戰增幅(Melee Damage Boost)

@@ -36,6 +36,7 @@
 | <img src="https://github.com/user-attachments/assets/dbe8719f-76fb-444c-a79d-2bf116b628fb" width="32" height="32" alt="背水一戰天賦圖示"> [背水一戰](#zealot_more_damage_when_low_on_stamina)<br>- Desperation | <ul><li>耐力越低，近戰傷害越高；耐力耗盡時最多提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6406ef43-19df-4cab-9091-e5c490d72cef" width="32" height="32" alt="刻不容緩天賦圖示"> [刻不容緩](#zealot_melee_crits_restore_stamina)<br>- No Respite | <ul><li>近戰爆擊命中時恢復 10% 最大耐力；冷卻 1 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ef521c17-0aae-4e01-b54c-9a25d1f9d792" width="32" height="32" alt="神恩庇護天賦圖示"> [神恩庇護](#zealot_revive_speed)<br>- Providence | <ul><li>救起倒地隊友的速度提高 25%；協助隊友後，對方獲得移速與韌性減傷。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/9b7dda36-1d18-41b4-9e28-3cfd26f0ad66" width="32" height="32" alt="弒除瀆者天賦圖示"> [弒除瀆者](#zealot_damage_vs_elites)<br>- Abolish Blasphemers | <ul><li>對精英敵人的傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 
 ---
@@ -457,6 +458,19 @@
 - **效果算例**：受幫助隊友原本移速 5 公尺／秒，只計這份加成後為 5 × 1.1 = 5.5；原本 100 點韌性傷害變成 100 × 0.85 = 85 點。效果給被協助的隊友，不是給你自己。
 
 [詳細資料](TALENTS%20Zealot/zealot_revive_speed.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_damage_vs_elites"></a>
+### 弒除瀆者(Abolish Blasphemers)
+
+<img src="https://github.com/user-attachments/assets/9b7dda36-1d18-41b4-9e28-3cfd26f0ad66" width="72" height="72" alt="弒除瀆者天賦圖示">
+
+- **運作方式**：對精英敵人造成的傷害提高 15%，近戰與遠程皆適用；這個條件不等於所有特殊敵人或頭目。
+
+- **傷害算例**：100 × 1.15 = 115 點；若已有同階段 20% 傷害加成，則是 100 × (1 + 20% + 15%) = 135 點。
+
+[詳細資料](TALENTS%20Zealot/zealot_damage_vs_elites.md) · [返回目錄](#talent-index)
 
 ---
 
