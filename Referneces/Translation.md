@@ -611,6 +611,9 @@
 - Warp Ghost - 亞空間幽魂
 - Tranquility Through Slaughter - 殺無赦，心祥和
 - Surety of Arms - 武器在手，信心我有。
+- Focused Warp - 聚焦亞空間（暫定，待使用者確認；名稱鍵 `loc_talent_psyker_increased_warp_damage`；本機遊戲繁中名稱為「聚焦次元」，暫定譯名沿用詞表的亞空間用詞；[原始碼對應](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2648-L2671)）
+- Peril Equilibrium - 反噬平衡（暫定，待使用者確認；名稱鍵 `loc_talent_psyker_weapon_attacks_peril_equilibrium`；本機遊戲繁中名稱為「危險平衡」，暫定譯名沿用詞表的反噬用詞；[原始碼對應](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2628-L2647)）
+- Psykinetic Grip - 念力之握（暫定，待使用者確認；名稱鍵 `loc_talent_psyker_increased_blitz_damage`；沿用本機遊戲繁中名稱；[原始碼對應](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2672-L2700)）
 
 ### Ogryn - 歐格林
 
