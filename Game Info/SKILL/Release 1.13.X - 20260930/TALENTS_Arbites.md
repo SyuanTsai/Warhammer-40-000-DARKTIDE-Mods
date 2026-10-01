@@ -16,6 +16,7 @@
 | <img src="https://github.com/user-attachments/assets/d4c3f66c-8fa8-419f-8a46-f94c842a9b4e" width="32" height="32" alt="堅忍不拔天賦圖示"> [堅忍不拔](#adamant_limit_dmg_taken_from_hits)<br>- True Grit | <ul><li>單次攻擊造成的生命傷害上限為 50 點；不阻止必殺效果。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/af78e688-7708-4d00-88f0-913478235d41" width="32" height="32" alt="韌性減傷天賦圖示"> [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1)<br>- Toughness Damage Reduction | <ul><li>韌性減傷增加 10 個百分點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d25eaf26-cb8b-4009-80ac-af75d049fb9f" width="32" height="32" alt="法務官之鎧天賦圖示"> [法務官之鎧](#adamant_armor)<br>- Arbitrator Armour | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/62b0bee6-3606-40bc-9d78-06f072535e59" width="32" height="32" alt="遠程傷害增幅天賦圖示"> [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1)<br>- Ranged Damage Boost | <ul><li>遠程傷害提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/170599ce-ad50-4760-93b2-da650c6deac8" width="32" height="32" alt="塑鋼裝甲天賦圖示"> [塑鋼裝甲](#adamant_plasteel_plates)<br>- Plasteel Plates | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
 
 ---
@@ -149,6 +150,17 @@
 - **加成順序**：這 25 點先加入基礎韌性，再套用最大韌性百分比加成。例如另有 20% 最大韌性加成，為 (100 + 25) × 1.2 = 150 點。
 
 [詳細資料](TALENTS%20Arbites/adamant_armor.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="base_ranged_damage_node_buff_medium_1"></a>
+### 遠程傷害增幅(Ranged Damage Boost)
+
+<img src="https://github.com/user-attachments/assets/62b0bee6-3606-40bc-9d78-06f072535e59" width="72" height="72" alt="遠程傷害增幅天賦圖示">
+
+- **傷害算例**：沒有其他加成時，基礎 100 點遠程傷害變成 100 × (1 + 10%) = 110 點；原有同階段 25% 加成時，125 點變成 100 × (1 + 25% + 10%) = 135 點。
+
+[詳細資料](TALENTS%20Arbites/base_ranged_damage_node_buff_medium_1.md) · [返回目錄](#talent-index)
 
 ---
 

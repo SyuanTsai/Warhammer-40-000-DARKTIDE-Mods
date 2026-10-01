@@ -18,6 +18,7 @@
 | [堅忍不拔](#adamant_limit_dmg_taken_from_hits) | 未見明確矛盾 |
 | [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1) | 未見明確矛盾 |
 | [法務官之鎧](#adamant_armor) | 未見明確矛盾 |
+| [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
 
 <a id="adamant_toughness_regen_near_companion"></a>
@@ -89,6 +90,13 @@
 - 描述鍵：`loc_talent_adamant_armor_desc`；hash：`0604ced3`。
 - 結論：未見明確矛盾。繁中「韌性提高」與英文 Toughness 的number25一致；百分比順序是補充。
 - [原始碼推導與限制](adamant_armor.md)。
+
+<a id="base_ranged_damage_node_buff_medium_1"></a>
+## 遠程傷害增幅(Ranged Damage Boost)
+
+- 描述鍵：`loc_talent_ranged_damage_medium_desc`；hash：`d752c671`。
+- 結論：未見明確矛盾。繁中與英文均為對應攻擊類型傷害加成，未見明確矛盾。
+- [原始碼推導與限制](base_ranged_damage_node_buff_medium_1.md)。
 
 <a id="adamant_plasteel_plates"></a>
 ## 塑鋼裝甲(Plasteel Plates)
