@@ -47,6 +47,7 @@
 | 技能 | [凋零烈焰(Withering Fire)](#veteran_increased_ranged_cleave) | 遠程順劈攻擊的穿透能力增加 50%。 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
 | 技能 | [全副武裝(Fully Loaded)](#veteran_ammo_increase) | 備彈上限增加 25%。 |
+| 技能 | [天生領袖(Born Leader)](#veteran_allies_in_coherency_share_toughness_gain) | 協同半徑增加 50%。 |
 | 技能 | [臨場發揮(Field Improvisation)](#veteran_better_deployables) | 小隊的彈藥箱也能補滿可補給的手雷。 |
 | 技能 | [火力掩護(Covering Fire)](#veteran_replenish_toughness_and_boost_allies) | 遠程擊殺敵人時，可為該敵人附近的 1 名隊友恢復 15% 最大韌性，並使其傷害增加 15%，持續 6 秒。 |
 | 技能 | [求勝心(Competitive Urge)](#veteran_ally_kills_increase_damage) | 隊友擊殺敵人時，有 2.5% 機率使你的傷害、近戰衝擊與壓制效果增加 20%，持續 8 秒。 |
@@ -855,6 +856,27 @@
 - 原本 150 發：`150 × 1.25 = 187.5`，向下取整為 **187 發**。
 
 [詳細資料](TALENTS%20Veteran/veteran_ammo_increase.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_allies_in_coherency_share_toughness_gain"></a>
+
+### 天生領袖(Born Leader)
+
+<img src="https://github.com/user-attachments/assets/1a08688e-e370-4eac-a27e-fd48da3b3965" width="72" height="72" alt="天生領袖天賦圖示">
+
+- **協同半徑增加 50%。**
+- 你觸發韌性恢復時，協同範圍內的其他隊友各恢復該次恢復量的 **20%**。
+- 即使你已接近滿韌性或完全補滿，仍依這次原本應恢復的量計算分享。隊友各自的恢復加成與韌性上限仍適用。
+- 分享所得的韌性不會再次分享。
+
+#### 範圍與恢復算例
+
+- 假設原本協同半徑 8 公尺，沒有其他範圍加成：`8 × 1.5 = 12 公尺`。
+- 這次原本應恢復 20 點、自己只缺 2 點：自己實際補 2，各隊友仍獲得 `20 × 20% = 4 點`。
+- 某隊友另有 25% 恢復量加成時，該隊友可恢復 `4 × 1.25 = 5 點`，最多補至自身上限。
+
+[詳細資料](TALENTS%20Veteran/veteran_allies_in_coherency_share_toughness_gain.md) · [返回目錄](#talent-index)
 
 ---
 

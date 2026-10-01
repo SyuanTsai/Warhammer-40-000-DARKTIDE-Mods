@@ -6,7 +6,7 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 58／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 59／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -69,7 +69,7 @@
 | 技能 | [凋零烈焰](veteran_increased_ranged_cleave.md) / `veteran_increased_ranged_cleave` | `node_92ce0aa9-e7c8-4620-9ad3-de2cedbf9431` | 完成（核心靜態機制） |
 | 技能 | [振奮擊倒](veteran_replenish_toughness_on_weakspot_kill.md) / `veteran_replenish_toughness_on_weakspot_kill` | `node_f0744989-1f87-4da4-aa97-30a821197ed9` | 完成（核心靜態機制） |
 | 技能 | [全副武裝](veteran_ammo_increase.md) / `veteran_ammo_increase` | `node_c56789ed-287a-4fe0-9e94-f50ffabe1992` | 完成（核心靜態機制） |
-| 技能 | 天生領袖 / `veteran_allies_in_coherency_share_toughness_gain` | `node_7163a098-c55a-47f0-a861-38509acc0d44` | 待核對 |
+| 技能 | [天生領袖](veteran_allies_in_coherency_share_toughness_gain.md) / `veteran_allies_in_coherency_share_toughness_gain` | `node_7163a098-c55a-47f0-a861-38509acc0d44` | 完成（核心靜態機制） |
 | 技能 | [臨場發揮](veteran_better_deployables.md) / `veteran_better_deployables` | `node_51cd0e84-38e8-4df8-b703-bf34e5b166eb` | 完成（核心靜態機制） |
 | 技能 | [火力掩護](veteran_replenish_toughness_and_boost_allies.md) / `veteran_replenish_toughness_and_boost_allies` | `node_f607f1a6-5fe0-4814-b534-4177cbe9b2c0` | 完成（核心靜態機制） |
 | 技能 | [求勝心](veteran_ally_kills_increase_damage.md) / `veteran_ally_kills_increase_damage` | `node_7faaad0d-aebf-44f2-ba30-6a23ce68d320` | 完成（核心靜態機制） |
