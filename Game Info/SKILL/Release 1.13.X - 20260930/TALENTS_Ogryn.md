@@ -1,11 +1,13 @@
 # 歐格林天賦：Release 1.13.0
 
+[角色基礎效果](TALENTS%20Ogryn/BASE_EFFECTS.md)
 
 <a id="talent-index"></a>
 ## 技能目錄
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760" width="32" height="32" alt="子彈風暴天賦圖示"> [子彈風暴](#ogryn_blo_ally_ranged_buffs)<br>- Bulletstorm | <ul><li>觸發幸運子彈時，你和協同範圍內的隊友獲得 +15% 遠程傷害，持續 8 秒。</li><li>再次觸發會把效果時間重新延長為 8 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/67294825-4742-461c-8445-8eabf69981d3" width="32" height="32" alt="最好的防禦天賦圖示"> [最好的防禦](#ogryn_multi_heavy_toughness)<br>- The Best Defence | <ul><li>一次近戰攻擊命中至少 2 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bdf5653a-6df6-4998-a781-ae623083055a" width="32" height="32" alt="碾碎它們！天賦圖示"> [碾碎它們！](#ogryn_single_heavy_toughness)<br>- Smash 'Em! | <ul><li>一次近戰攻擊命中恰好 1 名敵人時，恢復 5% 最大韌性。</li><li>重擊符合條件時，改為恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/47f9eea2-c58f-4ed3-8678-e42d2ec1701f" width="32" height="32" alt="關鍵人物天賦圖示"> [關鍵人物](#ogryn_increased_coherency_toughness)<br>- Lynchpin | <ul><li>自身的協同韌性恢復速度提高 100%。</li></ul> | 技能 |
@@ -56,6 +58,32 @@
 | <img src="https://github.com/user-attachments/assets/9e138d4c-f301-46c6-9eef-5aff038efc7c" width="32" height="32" alt="格鬥兵天賦圖示"> [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown)<br>- Bruiser | <ul><li>自己或協同隊友擊殺精英後，持續 4 秒額外恢復戰鬥技能冷卻。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dae8db6d-b212-4abd-a84b-246c0910e0b3" width="32" height="32" alt="精準打擊天賦圖示"> [精準打擊](#ogryn_weakspot_damage)<br>- Strike True | <ul><li>近戰命中弱點時，威力提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/38b1d6e0-b6a5-4692-92a2-fe6caf0b9083" width="32" height="32" alt="機動部署天賦圖示"> [機動部署](#ogryn_bracing_reduces_damage_taken)<br>- Mobile Emplacement | <ul><li>架槍或射擊期間，受到的傷害減少 25%。</li></ul> | 技能 |
+
+---
+
+## 鑰石
+
+<a id="ogryn_blo_ally_ranged_buffs"></a>
+### 子彈風暴(Bulletstorm)
+
+<img src="https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760" width="72" height="72" alt="子彈風暴天賦圖示">
+
+- **觸發條件**：幸運子彈觸發即可生效，不要求射擊命中敵人。
+
+- **效果範圍**：你本人和協同範圍內的隊友都獲得 +15% 遠程傷害，持續 8 秒；重複觸發會刷新時間。
+
+- **算例**：第 0 秒觸發後，第 6 秒再次觸發，增益會再維持 8 秒，直到第 14 秒。
+
+- **傷害算例**：基礎 100 點遠程傷害變成 100 × (1 + 15%) = 115 點；同階段另有 20% 時為 135 點。增傷不累積層數。
+
+#### 繁中原文勘誤
+
+- 繁中「幸運子彈命中時」比英文及程式條件多出命中限制。建議改為「觸發幸運子彈時」，避免玩家誤以為必須打中敵人。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_blo_ally_ranged_buffs.md) · [返回目錄](#talent-index)
+
+---
+
 
 ---
 

@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [子彈風暴](#ogryn_blo_ally_ranged_buffs) | 繁中描述錯誤 |
 | [最好的防禦](#ogryn_multi_heavy_toughness) | 未見明確矛盾 |
 | [碾碎它們！](#ogryn_single_heavy_toughness) | 未見明確矛盾 |
 | [關鍵人物](#ogryn_increased_coherency_toughness) | 未見明確矛盾 |
@@ -58,6 +59,15 @@
 | [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown) | 未見明確矛盾 |
 | [精準打擊](#ogryn_weakspot_damage) | 未見明確矛盾 |
 | [機動部署](#ogryn_bracing_reduces_damage_taken) | 未見明確矛盾 |
+
+<a id="ogryn_blo_ally_ranged_buffs"></a>
+## 子彈風暴(Bulletstorm)
+
+- 描述鍵：`loc_talent_ogryn_blo_ally_ranged_buffs_desc`；hash：`99f32156`。
+- 結論：繁中描述錯誤。繁中寫「幸運子彈命中時」，英文寫「on Lucky Bullet」；固定來源只檢查是否觸發幸運子彈，不檢查是否命中。繁中因此多出命中條件。
+- 繁中原文短引：幸運子彈命中時，自身與協同中的盟友的遠程傷害提高{ranged_damage:%s}，持續{duration:%s}秒。
+- 同源英文：{ranged_damage:%s} Ranged Damage to you and Allies in Coherency on Lucky Bullet. Lasts {duration:%s}s.
+- [原始碼推導與限制](ogryn_blo_ally_ranged_buffs.md)。
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
