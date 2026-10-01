@@ -13,6 +13,7 @@
 | [原初動力導流](cryptic_stamina_increases_damage.md) | 累計消耗 1 格耐力，傷害提高 15%、持續 4 秒；完整計算與適用限制見來源文件。 |
 | [熵能轉移](cryptic_electrocution_toughness.md) | 施加或刷新電擊後，4 秒內恢復 12% 韌性；完整計算與適用限制見來源文件。 |
 | [過載轉移晶格](cryptic_electrocution_defense.md) | 遭近戰傷害時電擊攻擊者周圍 2.5 公尺敵人；冷卻 15 秒；完整計算與適用限制見來源文件。 |
+| [精準思算機同步](cryptic_weakspot_damage.md) | 弱點額外傷害提高 25%；實際增幅隨武器與命中條件改變；完整計算與適用限制見來源文件。 |
 | [電擊破壞協定](cryptic_pushing_grants_cleave.md) | 推中敵人後，近戰順劈提高 50%、持續 8 秒；完整計算與適用限制見來源文件。 |
 | [輻射槽](cryptic_stacking_ranged_damage.md) | 停止射擊 1 秒獲得 10% 遠程增傷；2 秒達上限 20%，再次射擊後重算；完整計算與適用限制見來源文件。 |
 | [漸進裝甲矩陣](cryptic_stacking_tdr.md) | 命中疊加韌性減傷，每層 2.5%；最多 6 層，持續 5 秒；完整計算與適用限制見來源文件。 |

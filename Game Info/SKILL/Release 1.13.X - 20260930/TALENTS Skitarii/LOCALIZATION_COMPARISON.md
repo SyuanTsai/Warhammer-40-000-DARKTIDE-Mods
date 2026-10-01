@@ -15,6 +15,7 @@
 | [原初動力導流](#cryptic_stamina_increases_damage) | 未見明確矛盾 |
 | [熵能轉移](#cryptic_electrocution_toughness) | 未見明確矛盾 |
 | [過載轉移晶格](#cryptic_electrocution_defense) | 未見明確矛盾 |
+| [精準思算機同步](#cryptic_weakspot_damage) | 未見明確矛盾 |
 | [電擊破壞協定](#cryptic_pushing_grants_cleave) | 未見明確矛盾 |
 | [輻射槽](#cryptic_stacking_ranged_damage) | 待同版核對 |
 | [漸進裝甲矩陣](#cryptic_stacking_tdr) | 未見明確矛盾 |
@@ -86,6 +87,13 @@
 - 描述鍵：`loc_talent_cryptic_electrocution_defense_desc`；hash：`b02129e2`。
 - 結論：未見明確矛盾。中英文範圍中心都是攻擊者；補充造成傷害與冷卻條件。
 - [原始碼推導與限制](cryptic_electrocution_defense.md)。
+
+<a id="cryptic_weakspot_damage"></a>
+## 精準思算機同步(Sureshot Cogitator Sync)
+
+- 描述鍵：`loc_talent_cryptic_weakspot_damage_desc`；hash：`6cd677cf`。
+- 結論：未見明確矛盾。原文弱點傷害為簡寫；缺少額外傷害分量與武器差異不列為錯誤。
+- [原始碼推導與限制](cryptic_weakspot_damage.md)。
 
 <a id="cryptic_pushing_grants_cleave"></a>
 ## 電擊破壞協定(Shockline Breach Protocol)

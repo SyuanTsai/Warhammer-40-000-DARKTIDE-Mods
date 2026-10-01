@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/8f013bd2-f685-4be4-8678-11ac630d6659" width="32" height="32" alt="原初動力導流天賦圖示"> [原初動力導流](#cryptic_stamina_increases_damage)<br>- Channelled Motive Force | <ul><li>累計消耗 1 格耐力，傷害提高 15%、持續 4 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/98a10c08-52e1-47bf-a288-a2043ba40a63" width="32" height="32" alt="熵能轉移天賦圖示"> [熵能轉移](#cryptic_electrocution_toughness)<br>- Entropic Transfer | <ul><li>施加或刷新電擊後，4 秒內恢復 12% 韌性</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/74c8388d-8388-4646-8a91-0eb056656036" width="32" height="32" alt="過載轉移晶格天賦圖示"> [過載轉移晶格](#cryptic_electrocution_defense)<br>- Overcharge Transfer Lattice | <ul><li>遭近戰傷害時電擊攻擊者周圍 2.5 公尺敵人</li><li>冷卻 15 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/4d3197de-7f15-46b8-9df6-153fd0f94642" width="32" height="32" alt="精準思算機同步天賦圖示"> [精準思算機同步](#cryptic_weakspot_damage)<br>- Sureshot Cogitator Sync | <ul><li>弱點額外傷害提高 25%</li><li>實際增幅隨武器與命中條件改變</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dca309fd-773f-4a07-a659-cfb320cd14a9" width="32" height="32" alt="電擊破壞協定天賦圖示"> [電擊破壞協定](#cryptic_pushing_grants_cleave)<br>- Shockline Breach Protocol | <ul><li>推中敵人後，近戰順劈提高 50%、持續 8 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/26c97989-2f88-46ee-9bf3-f9f02b09c0f3" width="32" height="32" alt="輻射槽天賦圖示"> [輻射槽](#cryptic_stacking_ranged_damage)<br>- Rad-Sink | <ul><li>停止射擊 1 秒獲得 10% 遠程增傷</li><li>2 秒達上限 20%，再次射擊後重算</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5208032b-aaaf-4801-b84c-6fdbaab1735b" width="32" height="32" alt="漸進裝甲矩陣天賦圖示"> [漸進裝甲矩陣](#cryptic_stacking_tdr)<br>- Progressive Plating Matrix | <ul><li>命中疊加韌性減傷，每層 2.5%</li><li>最多 6 層，持續 5 秒</li></ul> | 技能 |
@@ -140,6 +141,23 @@
 - **冷卻方式**：觸發後冷卻 15 秒。例如第 0 秒觸發，第 10 秒再被打不會重複發動，第 15 秒後再次受到符合條件的攻擊才會發動。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_electrocution_defense.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_weakspot_damage"></a>
+### 精準思算機同步(Sureshot Cogitator Sync)
+
+<img src="https://github.com/user-attachments/assets/4d3197de-7f15-46b8-9df6-153fd0f94642" width="72" height="72" alt="精準思算機同步天賦圖示">
+
+- **運作方式**：提高 25% 弱點命中的額外傷害部分，近戰與遠程均適用。
+
+- **傷害算例**：同一攻擊的基礎部分為 100、弱點額外部分為 100 時，原傷害 200 → 100 + 100 × 1.25 = 225，整筆增加 12.5%。若額外部分為 200，則 300 → 100 + 200 × 1.25 = 350，增加約 16.67%。
+
+- **武器差異**：弱點額外傷害占比越大，整筆傷害增幅越大；武器型號、蓄力、目標護甲、部位及爆擊都會改變結果。
+
+- **其他加成**：若弱點額外部分已有 20% 同階段加成，則 100 + 100 × (1 + 20% + 25%) = 245；原本為 220，這次增加約 11.36%。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_weakspot_damage.md) · [返回目錄](#talent-index)
 
 ---
 
