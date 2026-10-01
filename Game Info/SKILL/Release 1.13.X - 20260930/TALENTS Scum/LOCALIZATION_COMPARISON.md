@@ -39,6 +39,7 @@
 | [毒藥狂熱](#broker_passive_damage_after_toxined_enemies) | 未見明確矛盾 |
 | [連帶傷害](#broker_passive_toxin_spread_on_kills) | 未見明確矛盾 |
 | [額外彈藥袋](#broker_passive_increased_blitz_ammo) | 未見明確矛盾 |
+| [塗讀武裝](#broker_passive_melee_attacks_apply_toxin) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -258,3 +259,10 @@
 - 描述鍵：`loc_talent_broker_passive_increased_blitz_ammo_desc`；hash：`0e811057`。
 - 結論：未見明確矛盾。兩語均為增加閃擊充能數量，未見矛盾。
 - [原始碼推導與限制](broker_passive_increased_blitz_ammo.md)。
+
+<a id="broker_passive_melee_attacks_apply_toxin"></a>
+## 塗讀武裝(Coated Weaponry)
+
+- 描述鍵：`loc_talent_broker_passive_melee_attacks_apply_toxin_desc`；hash：`4108cdaa`。
+- 結論：未見明確矛盾。繁中與英文皆為近戰爆擊施加毒素，未見矛盾。
+- [原始碼推導與限制](broker_passive_melee_attacks_apply_toxin.md)。

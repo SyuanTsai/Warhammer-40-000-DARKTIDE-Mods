@@ -37,3 +37,4 @@
 | [毒藥狂熱](broker_passive_damage_after_toxined_enemies.md) | 12.5 公尺內每名受毒素感染的敵人，提供 5% 傷害，最多 15%。；完整計算與適用限制見來源文件。 |
 | [連帶傷害](broker_passive_toxin_spread_on_kills.md) | 近戰擊殺精英時，對其周圍 4 公尺內最多 10 名敵人施加 2 層毒素。；完整計算與適用限制見來源文件。 |
 | [額外彈藥袋](broker_passive_increased_blitz_ammo.md) | 閃擊攜帶上限增加 1 次。；完整計算與適用限制見來源文件。 |
+| [塗讀武裝](broker_passive_melee_attacks_apply_toxin.md) | 近戰爆擊命中時，施加 1 層毒素。；完整計算與適用限制見來源文件。 |

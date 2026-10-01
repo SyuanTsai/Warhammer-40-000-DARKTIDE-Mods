@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 31／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 32／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -42,3 +42,4 @@
 | 技能 | [毒藥狂熱](broker_passive_damage_after_toxined_enemies.md) / `broker_passive_damage_after_toxined_enemies` | `node_45324e02-771e-4f7d-8743-d306bcf106d2` | 完成（核心靜態機制） |
 | 技能 | [連帶傷害](broker_passive_toxin_spread_on_kills.md) / `broker_passive_toxin_spread_on_kills` | `node_50641b61-dfb0-4865-87e7-30e4dd71acdc` | 完成（核心靜態機制） |
 | 技能 | [額外彈藥袋](broker_passive_increased_blitz_ammo.md) / `broker_passive_increased_blitz_ammo` | `node_38569366-6b83-4815-a1e7-ca4f41f4a366` | 完成（核心靜態機制） |
+| 技能 | [塗讀武裝](broker_passive_melee_attacks_apply_toxin.md) / `broker_passive_melee_attacks_apply_toxin` | `node_82e26378-1ad7-41c9-bd62-db6fee2779f7` | 完成（核心靜態機制） |

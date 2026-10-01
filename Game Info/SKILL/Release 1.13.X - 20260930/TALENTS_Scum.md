@@ -37,6 +37,7 @@
 | <img src="https://github.com/user-attachments/assets/06abfebe-3a5e-421b-b71a-35e5faee2767" width="32" height="32" alt="毒藥狂熱天賦圖示"> [毒藥狂熱](#broker_passive_damage_after_toxined_enemies)<br>- Toxin Mania | <ul><li>12.5 公尺內每名受毒素感染的敵人，提供 5% 傷害，最多 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/31efd90d-864c-4e6c-af06-b48d540b45b3" width="32" height="32" alt="連帶傷害天賦圖示"> [連帶傷害](#broker_passive_toxin_spread_on_kills)<br>- Splash Damage | <ul><li>近戰擊殺精英時，對其周圍 4 公尺內最多 10 名敵人施加 2 層毒素。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/88f63a37-5b06-4bf2-93a5-95c9f3c98c48" width="32" height="32" alt="額外彈藥袋天賦圖示"> [額外彈藥袋](#broker_passive_increased_blitz_ammo)<br>- Extra Pouches | <ul><li>閃擊攜帶上限增加 1 次。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/f92b996b-c59e-4d6b-90ac-a31046be1abd" width="32" height="32" alt="塗讀武裝天賦圖示"> [塗讀武裝](#broker_passive_melee_attacks_apply_toxin)<br>- Coated Weaponry | <ul><li>近戰爆擊命中時，施加 1 層毒素。</li></ul> | 技能 |
 
 ---
 
@@ -476,5 +477,20 @@
 - **效果範圍**：提高攜帶容量，不代表每次使用後會自動再生 1 次。
 
 [詳細資料](TALENTS%20Scum/broker_passive_increased_blitz_ammo.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_melee_attacks_apply_toxin"></a>
+### 塗讀武裝(Coated Weaponry)
+
+<img src="https://github.com/user-attachments/assets/f92b996b-c59e-4d6b-90ac-a31046be1abd" width="72" height="72" alt="塗讀武裝天賦圖示">
+
+- **疊層方式**：每次近戰爆擊命中，對該敵人增加 1 層同類毒素，並刷新毒素時間；與其他施加相同毒素的手段共用 30 層上限。
+
+- **傷害運作**：毒素每 0.35 秒結算一次。3 層的輸入威力為 500 × 3 ÷ 30 = 50，再依傷害曲線與敵人護甲換算。層數增加會提高威力，不能把威力直接當傷害。
+
+- **衰退方式**：停止補毒後，先等待基礎 2.6 秒，再隨毒素傷害週期逐層衰退；重新施毒會刷新等待時間。
+
+[詳細資料](TALENTS%20Scum/broker_passive_melee_attacks_apply_toxin.md) · [返回目錄](#talent-index)
 
 ---
