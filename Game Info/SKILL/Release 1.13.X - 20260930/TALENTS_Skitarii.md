@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3" width="32" height="32" alt="能量超載天賦圖示"> [能量超載](#cryptic_overload_keystone)<br>- Power Overload | <ul><li>你與協同中的隊友擊殺一般敵人獲得1層，精英或專家獲得2層；達30層觸發過載並歸零。</li><li>過載使你與協同中的隊友獲得15%傷害加成及15%韌性傷害減免，持續8秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="32" height="32" alt="伺服肌腱湧動天賦圖示"> [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed)<br>- Servo-Sinew Surge | <ul><li>每層削切協議額外提供1.5%暴擊率與1.5%近戰攻擊速度；效果隨削切協議層數變動。</li><li>6層時增加9個百分點暴擊率與9%近戰攻速；8層時分別增加12個百分點與12%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444" width="32" height="32" alt="熟練解剖者天賦圖示"> [熟練解剖者](#cryptic_dissector_max_stacks)<br>- Honed Dissector | <ul><li>將削切協議層數上限從6提高到8；啟用時會直接從8層開始。</li><li>新增加的2層沿用原本每層傷害與韌性承傷步進，滿8層相當於傷害+20%、韌性承傷倍率0.80。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="32" height="32" alt="崇高意圖天賦圖示"> [崇高意圖](#cryptic_dissector_power)<br>- Higher Purpose | <ul><li>精英或專家擊殺額外回復戰鬥技能充能資源2.5%；這是加在護教軍原有的精英／專家擊殺4%回復上，合計6.5%。</li><li>回復百分比以單一充能的資源成本為分母；此回復路徑忽略其他回復倍率。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="能量載分配鏈路天賦圖示"> [能量載分配鏈路](#cryptic_crits_grant_tdr)<br>- Power Redistribution Uplink | <ul><li>爆擊命中後，3 秒內恢復 7.5% 韌性</li><li>期間承受的韌性傷害降低 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ea4be2ad-8b84-4e83-a056-993beed7b39c" width="32" height="32" alt="適應性戰鬥記憶體天賦圖示"> [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break)<br>- Adaptive Combat Engram | <ul><li>韌性耗盡後，減少 30% 承受傷害、持續 5 秒</li><li>效果結束後冷卻 15 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4738c3e6-2609-414c-9c00-f50fea4dcef3" width="32" height="32" alt="閃避伺服恢復天賦圖示"> [閃避伺服恢復](#cryptic_successful_dodge_stamina)<br>- Evasive Servo Recovery | <ul><li>成功閃避恢復 10% 耐力</li></ul> | 技能 |
@@ -251,6 +252,21 @@
 - **算例**：每層傷害+2.5%，所以8層時傷害+20%；韌性承傷倍率為1−0.025×8=0.80。沒有其他增傷時，100點基礎攻擊傷害變成120點；若承受100點原始韌性傷害，實際為80點。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_dissector_max_stacks.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_dissector_power"></a>
+### 崇高意圖(Higher Purpose)
+
+<img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="72" height="72" alt="崇高意圖天賦圖示">
+
+- **觸發方式**：擊殺精英或專家敵人時，額外回復一份戰鬥技能充能成本的2.5%；加上職業原有4%回復後，該擊殺共回復6.5%。
+
+- **算例**：若單份充能成本為50點，額外2.5%是1.25點；原有4%為2點，合計回復3.25點。這些資源先累積進充能條，未必當場增加一整份可用充能。
+
+- **例外**：「進階戰鬥教範」啟用期間，職業原本的擊殺回充與本天賦的額外回充都會暫停。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_dissector_power.md) · [返回目錄](#talent-index)
 
 ---
 

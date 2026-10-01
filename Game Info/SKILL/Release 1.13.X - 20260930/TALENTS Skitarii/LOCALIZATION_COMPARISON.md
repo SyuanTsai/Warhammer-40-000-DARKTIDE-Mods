@@ -19,6 +19,7 @@
 | [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
 | [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed) | 未見明確矛盾；補充計算與限制 |
 | [熟練解剖者](#cryptic_dissector_max_stacks) | 未見明確矛盾；補充計算與限制 |
+| [崇高意圖](#cryptic_dissector_power) | 未見明確矛盾；補充計算與限制 |
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
 | [閃避伺服恢復](#cryptic_successful_dodge_stamina) | 未見明確矛盾 |
@@ -148,6 +149,13 @@
 - 描述鍵：`loc_talent_cryptic_dissector_max_stacks_desc`；hash：`52304209`。
 - 結論：未見明確矛盾；補充計算與限制。繁中與英文都說明上限提高到8；固定版基礎6層加2層，文字一致。啟用時初始滿層及其既有每層效果是程式補充，不屬誤譯。
 - [原始碼推導與限制](cryptic_dissector_max_stacks.md)。
+
+<a id="cryptic_dissector_power"></a>
+## 崇高意圖(Higher Purpose)
+
+- 描述鍵：`loc_talent_cryptic_dissector_power_desc`；hash：`2baab5a1`。
+- 結論：未見明確矛盾；補充計算與限制。繁中與英文說明精英／專家擊殺額外恢復2.5%電容量；固定版確認額外值並加到職業既有4%精英／專家回復上。中英皆用additional，6.5%總值與單充能分母屬程式推導，不是文字誤譯。
+- [原始碼推導與限制](cryptic_dissector_power.md)。
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
