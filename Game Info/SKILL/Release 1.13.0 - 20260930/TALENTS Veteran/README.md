@@ -6,7 +6,7 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 74／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 75／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -32,7 +32,7 @@
 | 能力 | 鷹眼 / `veteran_increased_weakspot_power_after_combat_ability` | `node_6dca445f-a83e-442c-89dd-04a1deb408ee` | 待核對 |
 | 能力 | [責任與榮譽](veteran_combat_ability_increase_and_restore_toughness_to_coherency.md) / `veteran_combat_ability_increase_and_restore_toughness_to_coherency` | `node_66fbd2b5-f51e-4e1e-a77f-ae8aa2687303` | 完成（核心靜態機制） |
 | 能力 | [掩護射擊](veteran_combat_ability_extra_charge.md) / `veteran_combat_ability_extra_charge` | `node_6469a1ec-589f-49a3-a53e-3676c3181dad` | 完成（核心靜態機制） |
-| 能力 | 肉搏戰 / `veteran_increased_close_damage_after_combat_ability` | `node_7c08ee90-6528-4188-915f-41e330db49f5` | 待核對 |
+| 能力 | [肉搏戰](veteran_increased_close_damage_after_combat_ability.md) / `veteran_increased_close_damage_after_combat_ability` | `node_7c08ee90-6528-4188-915f-41e330db49f5` | 完成（核心靜態機制） |
 | 能力 | 敵人越大... / `veteran_combat_ability_ogryn_outlines` | `node_c9c09c7f-211c-4cf3-8192-2d532bcaffee` | 待核對 |
 | 鑰石 | [狙擊專注](veteran_snipers_focus.md) / `veteran_snipers_focus` | `node_548adb63-0554-4ab5-a044-439fd851c521` | 完成（核心靜態機制） |
 | 鑰石 | [滲透盔甲](veteran_snipers_focus_rending_bonus.md) / `veteran_snipers_focus_rending_bonus` | `node_11a4a71d-e135-4842-a90d-8cf96e5ee5a8` | 完成（核心靜態機制） |

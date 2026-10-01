@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_ability_assault` / `veteran_increased_close_damage_after_combat_ability` - 肉搏戰
+  - 英文對應：Close Quarters Killzone。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1303-L1344)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_combat_ability_increase_and_restore_toughness_to_coherency` / `veteran_combat_ability_increase_and_restore_toughness_to_coherency` - 責任與榮譽
   - 英文對應：Duty and Honour。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L480-L517)；此來源證明識別鍵與天賦關係。

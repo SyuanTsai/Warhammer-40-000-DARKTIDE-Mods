@@ -27,6 +27,7 @@
 | 能力 | [只有死亡，職責才會終結(Only In Death Does Duty End)](#veteran_combat_ability_revive_nearby_allies) | 效果：發號施令可以立即扶起周圍 9 公尺內倒地的隊友，無須逐一按住救援。一次施放可扶起範圍內多名倒地隊友。 |
 | 能力 | [責任與榮譽(Duty and Honour)](#veteran_combat_ability_increase_and_restore_toughness_to_coherency) | 效果：施放發號施令時，你與協同範圍內的隊友獲得額外 75 點最大韌性，持續 10 秒；目前韌性也增加 75 點。你自己還會受到發號施令的回滿效果。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
+| 能力 | [肉搏戰(Close Quarters Killzone)](#veteran_increased_close_damage_after_combat_ability) | 效果：使用戰鬥能力後，提高對近距離敵人造成的傷害，持續 10 秒。滲透則從隱身期間開始生效，解除隱身後再持續 10 秒。 |
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
 | 鑰石 | [視野狹窄(Tunnel Vision)](#veteran_snipers_focus_toughness_bonus) | 每層狙擊專注使韌性恢復量增加 4%。 |
@@ -465,6 +466,22 @@
 - 首次施放後經過 20 秒，再用掉第 2 次：距離恢復 1 次仍需約 `53.2 − 20 = 33.2 秒`。
 
 [詳細資料](TALENTS%20Veteran/veteran_combat_ability_extra_charge.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_increased_close_damage_after_combat_ability"></a>
+
+### 肉搏戰(Close Quarters Killzone)
+
+<img src="https://github.com/user-attachments/assets/1181fe6e-4066-4d75-b996-a0eb01d7583d" width="72" height="72" alt="肉搏戰天賦圖示">
+
+- **效果：**使用戰鬥能力後，提高對近距離敵人造成的傷害，持續 10 秒。滲透則從隱身期間開始生效，解除隱身後再持續 10 秒。
+- **距離加成：**12.5 公尺內增加 15% 傷害；超過 12.5 公尺後逐漸減弱，到 30 公尺歸零。近戰與遠程攻擊皆可受益。
+- **傷害算例：**12.5 公尺內，基礎 100 點變成 `100 × (1 + 15%) = 115 點`。16.875 公尺時，加成為 `15% × (1 − √((16.875 − 12.5) ÷ 17.5)) = 7.5%`，因此為 107.5 點。
+- **與其他增傷合併：**若同一階段原有 25% 加成，近距離時為 `100 × (1 + 25% + 15%) = 140 點`。
+- **重複施放：**不疊層；已開始的 10 秒倒數不會因效果期間再次施放而重設。
+
+[詳細資料](TALENTS%20Veteran/veteran_increased_close_damage_after_combat_ability.md) · [返回目錄](#talent-index)
 
 ---
 
