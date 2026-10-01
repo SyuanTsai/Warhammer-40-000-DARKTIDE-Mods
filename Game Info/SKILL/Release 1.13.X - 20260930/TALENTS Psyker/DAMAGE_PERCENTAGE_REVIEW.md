@@ -50,7 +50,7 @@
 | [亞空間電池](psyker_increased_max_souls.md) | 機制與公式待核對。 |
 | [殘忍命運](psyker_mark_weakspot_kills.md) | 機制與公式待核對。 |
 | [靈魂竊賊](psyker_toughness_on_warp_kill.md) | 機制與公式待核對。 |
-| [心如止水](psyker_toughness_on_vent.md) | 機制與公式待核對。 |
+| [心如止水](psyker_toughness_on_vent.md) | 每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。；完整計算與適用限制見來源文件。 |
 | [亞空間耗費](psyker_toughness_on_melee.md) | 近戰命中首個敵人，恢復 2.5% 最大韌性。；近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。；完整計算與適用限制見來源文件。 |
 | [堅毅](psyker_crits_regen_toughness_movement_speed.md) | 爆擊命中後持續恢復韌性，並增加 5% 移動速度。；移動加成最多 3 層、持續 4 秒。；完整計算與適用限制見來源文件。 |
 | [險惡燃燒](psyker_elite_kills_add_warpfire.md) | 擊殺精英或專家敵人，對死者周圍 4 公尺內敵人施加 2 層靈魂之火。；完整計算與適用限制見來源文件。 |

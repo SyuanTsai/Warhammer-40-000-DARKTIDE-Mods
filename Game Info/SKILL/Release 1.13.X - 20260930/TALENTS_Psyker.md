@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="亞空間耗費天賦圖示"> [亞空間耗費](#psyker_toughness_on_melee)<br>- Warp Expenditure | <ul><li>近戰命中首個敵人，恢復 2.5% 最大韌性。</li><li>近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/53013aa9-f833-431c-8b85-3e548dbc318c" width="32" height="32" alt="堅毅天賦圖示"> [堅毅](#psyker_crits_regen_toughness_movement_speed)<br>- Mettle | <ul><li>爆擊命中後持續恢復韌性，並增加 5% 移動速度。</li><li>移動加成最多 3 層、持續 4 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6cc7512d-8e6f-4261-88f3-c95089950934" width="32" height="32" alt="險惡燃燒天賦圖示"> [險惡燃燒](#psyker_elite_kills_add_warpfire)<br>- Perilous Combustion | <ul><li>擊殺精英或專家敵人，對死者周圍 4 公尺內敵人施加 2 層靈魂之火。</li></ul> | 技能 |
@@ -42,6 +43,19 @@
 ---
 
 ## 技能
+
+<a id="psyker_toughness_on_vent"></a>
+### 心如止水(Quietude)
+
+<img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="72" height="72" alt="心如止水天賦圖示">
+
+- **運作方式**：反噬上升或下降都會恢復韌性。每變動 10 個百分點，恢復 4% 最大韌性，依實際變動量計算。
+
+- **恢復算例**：最大韌性 100、無其他恢復加成，反噬從 40% 升到 60%，恢復 100 × 20% × 0.4 = 8 點；之後從 60% 降到 50%，再恢復 100 × 10% × 0.4 = 4 點。韌性滿額時不會超補。
+
+[詳細資料](TALENTS%20Psyker/psyker_toughness_on_vent.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="psyker_toughness_on_melee"></a>
 ### 亞空間耗費(Warp Expenditure)

@@ -1,11 +1,38 @@
-# 心如止水(Quietude)：來源與待確認事項
+# 心如止水(Quietude)：原始碼依據
 
-[返回技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_toughness_on_vent)
+[返回玩家說明](../TALENTS_Psyker.md#psyker_toughness_on_vent)｜[技術索引](README.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_toughness_on_vent)
 
-- 狀態：已完成節點與原文定位；機制、公式及勘誤尚待核對。
-- 本機原文：Steam Build `25492122`，`ui` 資源，繁中／英文按相同 hash 配對。
-- 天賦：`psyker_toughness_on_vent`；分類：技能；節點類型：`default`。
-- 來源：[當前樹節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L63-L89)；[天賦定義與顯示參數](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L980-L1008)。
-- 名稱鍵：`loc_talent_psyker_toughness_from_vent`；本機遊戲名稱：心如止水。
-- 描述鍵：`loc_talent_psyker_toughness_from_vent_and_gen_desc`；`ui` 描述 hash：`50f8f0f2`。
-- 比對狀態：繁中／英文已配對；效果與勘誤待逐項核對。
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`psyker_toughness_on_vent`；名稱鍵：`loc_talent_psyker_toughness_from_vent`；描述鍵：`loc_talent_psyker_toughness_from_vent_and_gen_desc`。
+- 節點：`node_0866df78-dac3-46dc-9af6-30119a64acbe`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- 節點同時掛 generation 與 vent 兩個模板；前者處理負 percentage_change、後者正值。恢復比例為 abs(old−new)×.4，不是目前反噬乘.4。format_values 對 toughness 的 value_manipulation 與實際公式需分開記錄。
+
+## 原始碼依據
+
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1449–1484](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1449-L1484)
+- [scripts/settings/talent/talent_settings_psyker.lua：202–204](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L202-L204)
+- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–285](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：980–1008](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L980-L1008)
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：63–89](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L63-L89)
+
+## 算例條件與待確認事項
+
+- **恢復算例**：最大韌性 100、無其他恢復加成，反噬從 40% 升到 60%，恢復 100 × 20% × 0.4 = 8 點；之後從 60% 降到 50%，再恢復 100 × 10% × 0.4 = 4 點。韌性滿額時不會超補。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源尚未確認同版。僅有跨版本數值或實作差異不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`50f8f0f2`。
+- 核對同一 ui 資源及 hash 的繁中、英文文字與本頁核心效果；省略公式或例外不列為錯誤。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/default/psyker_toughness_on_vent.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_toughness_on_vent:node_0866df78-dac3-46dc-9af6-30119a64acbe`。
+- 格式：image/webp；288×288；4292 bytes。
+- SHA-256：`4f506cb377141170476d576c7eafb7d7bc60625fd06f55fc0399f97a467af3a4`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928034845)；[公開圖片](https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197)。附件已下載比對位元組與 SHA-256。
