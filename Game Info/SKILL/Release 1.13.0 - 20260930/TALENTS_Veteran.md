@@ -32,7 +32,7 @@
 | <img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="32" height="32" alt="掩護射擊天賦圖示"> [掩護射擊](#veteran_combat_ability_extra_charge)<br>- Overwatch | <ul><li>滲透可保留兩次，冷卻時間增加</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/1181fe6e-4066-4d75-b996-a0eb01d7583d" width="32" height="32" alt="肉搏戰天賦圖示"> [肉搏戰](#veteran_increased_close_damage_after_combat_ability)<br>- Close Quarters Killzone | <ul><li>效果：使用戰鬥能力後，提高對近距離敵人造成的傷害，持續 10 秒。</li><li>滲透則從隱身期間開始生效，解除隱身後再持續 10 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0df9e7bd-7394-4f93-ba54-f8f6d2884d02" width="32" height="32" alt="敵人越大...天賦圖示"> [敵人越大...](#veteran_combat_ability_ogryn_outlines)<br>- The Bigger they Are ... | <ul><li>效果：處決者姿態的每次持續時間從 6 秒延長至 9 秒，並額外標出歐格林、怪物與首領的輪廓。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="狙擊專注天賦圖示"> [狙擊專注](#veteran_snipers_focus)<br>- Marksman's Focus | <ul><li>遠程弱點擊殺獲得 3 層狙擊專注；</li><li>每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="狙擊專注天賦圖示"> [狙擊專注](#veteran_snipers_focus)<br>- Marksman's Focus | <ul><li>遠程弱點擊殺獲得 3 層狙擊專注，每層增加 7.5% 遠程爆擊／弱點額外傷害加成與 1% 裝填速度。</li><li>額外傷害加成不等於整次命中的增幅。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="32" height="32" alt="滲透盔甲天賦圖示"> [滲透盔甲](#veteran_snipers_focus_rending_bonus)<br>- Chink in their Armour | <ul><li>狙擊專注達到 10 層時，獲得 15% 撕裂；</li><li>低於 10 層後失效。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f" width="32" height="32" alt="視野狹窄天賦圖示"> [視野狹窄](#veteran_snipers_focus_toughness_bonus)<br>- Tunnel Vision | <ul><li>每層狙擊專注使韌性恢復量增加 4%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="遠程刺客天賦圖示"> [遠程刺客](#veteran_snipers_focus_increased_stacks)<br>- Long Range Assassin | <ul><li>狙擊專注的效果上限由 10 層提高至 15 層。</li></ul> | 鑰石 |
@@ -565,16 +565,22 @@
 
 <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="72" height="72" alt="狙擊專注天賦圖示">
 
-- **遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。**
+- **遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害加成增加 7.5%，裝填速度增加 1%。**
+- 額外傷害加成不提高基礎部分；武器與目標不同，整次命中的增幅也會不同。同時爆擊並命中弱點時，這項加成只套用一次。
 - 效果最多按 **10 層**計算。已有層數時，任何弱點命中都能刷新 **5 秒**持續時間；近戰弱點命中也可刷新，但不增加層數。
 - 未再刷新時，約每 5 秒減少 1 層；移動本身不消耗層數。
 
 #### 傷害、裝填與衰減算例
 
-- 十層為 `10 × 7.5% = 75%` 額外傷害加成，裝填速度 `10 × 1% = 10%`。
-- 假設基礎部分 100、遠程爆擊或弱點額外部分 40，無其他加成：`100 + 40 × (1 + 75%) = 170 傷害`，原本為 140。
-- 原本裝填 4 秒：`4 ÷ 1.1 ≈ 3.64 秒`。
-- 只有 3 層且不再刷新時：約第 5 秒剩 2 層、第 10 秒剩 1 層、第 15 秒歸零。
+- **十層效果**：額外傷害加成為 `10 × 7.5% = 75%`，裝填速度加成為 `10 × 1% = 10%`。
+
+- **傷害增幅**：假設未爆擊的遠程弱點命中，基礎部分 100、未加成的額外部分 40，無其他加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × (1 + 75%) = 170 點`，整次命中增加 `30 ÷ 140 ≈ 21.43%`。若額外部分改為 100，同條件則為 `200 → 100 + 100 × 1.75 = 275 點`，增加 `75 ÷ 200 = 37.5%`。
+
+- **搭配堅定不移**：同樣未爆擊且命中弱點，基礎與未加成的額外部分各 100，無其他加成：`100 + 100 × (1 + 75% + 30%) = 305 點`。兩項加成在額外傷害部分相加。
+
+- **裝填時間**：原本裝填 4 秒，無其他裝填加成時，`4 ÷ 1.1 ≈ 3.64 秒`。
+
+- **層數衰減**：只有 3 層且不再刷新時：約第 5 秒剩 2 層、第 10 秒剩 1 層、第 15 秒歸零。
 
 [詳細資料](TALENTS%20Veteran/veteran_snipers_focus.md) · [返回目錄](#talent-index)
 
