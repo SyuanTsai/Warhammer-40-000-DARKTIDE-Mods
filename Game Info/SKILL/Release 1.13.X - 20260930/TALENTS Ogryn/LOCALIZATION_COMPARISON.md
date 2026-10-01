@@ -20,6 +20,7 @@
 | [跺殺之靴](#ogryn_charge_toughness) | 未見明確矛盾 |
 | [粉碎](#ogryn_charge_applies_bleed) | 未見明確矛盾 |
 | [槍林彈雨](#ogryn_special_ammo_armor_pen) | 未見明確矛盾 |
+| [集火射擊](#ogryn_special_ammo_fire_shots) | 未見明確矛盾 |
 | [壯膽子彈](#ogryn_ranged_stance_toughness_regen) | 未見明確矛盾 |
 | [踐踏](#ogryn_charge_trample) | 未見明確矛盾 |
 | [爆限超載](#ogryn_leadbelcher_no_ammo_chance) | 未見明確矛盾 |
@@ -172,6 +173,13 @@
 - 描述鍵：`loc_talent_ogryn_special_ammo_armor_pen_new_desc`；hash：`5f4e17cf`。
 - 結論：未見明確矛盾。繁中原文「附加15%撕裂效果並提高15%傷害」與英文原文「15% Rending and 15% Damage」都把兩項加成限定在姿態啟動時的遠程攻擊，數字與條件相符；裝甲倍率算例是把程式的撕裂消費端補出來，原文省略公式不構成翻譯矛盾。Build 25492122 與公開 SHA 版本對應未確認，跨版差異待核。
 - [原始碼推導與限制](ogryn_special_ammo_armor_pen.md)。
+
+<a id="ogryn_special_ammo_fire_shots"></a>
+## 集火射擊(Light 'em Up)
+
+- 描述鍵：`loc_talent_ogryn_special_ammo_fire_shots_new_desc`；hash：`a391c6e8`。
+- 結論：未見明確矛盾。繁中原文說遠程攻擊加4層、最多16層；英文原文同樣列出每次遠程攻擊加4層與16層上限，層數與適用期間一致。兩種原文都省略每0.5秒的傷害和到期衰減，不能因此判成翻譯錯誤；Build 25492122 與公開 SHA 的版本對應仍待核。
+- [原始碼推導與限制](ogryn_special_ammo_fire_shots.md)。
 
 <a id="ogryn_ranged_stance_toughness_regen"></a>
 ## 壯膽子彈(Bullet Bravado)
