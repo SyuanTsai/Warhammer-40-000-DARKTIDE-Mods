@@ -9,6 +9,7 @@
 | 閃擊 | [煙霧手雷(Smoke Grenade)](#veteran_smoke_grenade) | 投出煙霧手雷，約 1.5 秒後展開持續 15 秒的煙霧。 |
 | 閃擊 | [擲彈兵(Grenadier)](#veteran_extra_grenade) | 手雷攜帶上限增加 1 顆。 |
 | 閃擊 | [手雷專家(Grenade Tinkerer)](#veteran_improved_grenades) | 粉碎者破片手雷：爆炸傷害增加 25%，爆炸半徑增加 25%。 |
+| 閃擊 | [穿甲手雷(Krak Grenade)](#veteran_krak_grenade) | 投出會追向合適裝甲目標、並黏附其身上的穿甲手雷。 |
 | 閃擊 | [炸藥儲備(Demolition Stockpile)](#veteran_replenish_grenades) | 定期補回手雷 |
 | 光環 | [抵近殺敵(Close and Kill)](#veteran_movement_speed_coherency) | 你與協同範圍內的隊友移動速度增加 7.5%。 |
 | 光環 | [火力小分隊(Fire Team)](#veteran_increased_damage_coherency) | 你與協同範圍內的隊友傷害增加 7.5%。 |
@@ -92,6 +93,26 @@
 - 傷害仍受距離、護甲及其他加成影響；流血傷害不套用破片爆炸的 25% 加成。
 
 [詳細資料](TALENTS%20Veteran/veteran_improved_grenades.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_krak_grenade"></a>
+
+### 穿甲手雷(Krak Grenade)
+
+<img src="https://github.com/user-attachments/assets/b0967626-73da-49a8-a1b9-1f4d6c1daffa" width="72" height="72" alt="穿甲手雷天賦圖示">
+
+- **投出會追向合適裝甲目標、並黏附其身上的穿甲手雷。**
+- 最多攜帶 **3 顆**。碰撞或黏附後約 **1 秒**引爆；未碰撞時，飛行約 2 秒後開始 1 秒引信。
+- 爆炸中心 **1.5 公尺內**傷害最高，外圈延伸至 **5 公尺**；中心爆炸可穿過盾牌。
+
+#### 傷害與計時算例
+
+- 中心爆炸、無其他加成、非首領、一般受擊部位：無甲目標為 **2,400**；甲殼護甲倍率為 2，得到 `2,400 × 2 = 4,800 傷害`。
+- 在投出後 0.4 秒黏附，約在 `0.4 + 1 = 1.4 秒`爆炸；實際時間會受遊戲更新影響。
+- 首領與爆炸外圈有另外的傷害計算，不能把 4,800 當成所有命中的固定傷害。
+
+[詳細資料](TALENTS%20Veteran/veteran_krak_grenade.md) · [返回目錄](#talent-index)
 
 ---
 

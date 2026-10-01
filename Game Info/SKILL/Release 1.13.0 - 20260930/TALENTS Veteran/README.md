@@ -6,14 +6,14 @@
 
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
-完成 27／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
+完成 28／77 項核心靜態機制核對。名稱沿用翻譯表；識別鍵對應暫定，尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
 | 閃擊 | [煙霧手雷](veteran_smoke_grenade.md) / `veteran_smoke_grenade` | `node_4bde1a72-40bd-46ad-950f-8546a48ccb9f` | 完成（核心靜態機制） |
 | 閃擊 | [擲彈兵](veteran_extra_grenade.md) / `veteran_extra_grenade` | `node_8c9efccd-3b95-45aa-a620-98f9d4d7133e` | 完成（核心靜態機制） |
 | 閃擊 | [手雷專家](veteran_improved_grenades.md) / `veteran_improved_grenades` | `node_5888acc4-4572-49ef-b277-f38b174bb166` | 完成（核心靜態機制） |
-| 閃擊 | 穿甲手雷 / `veteran_krak_grenade` | `node_29b3560b-2a50-46cd-b0bb-352b34897c49` | 待核對 |
+| 閃擊 | [穿甲手雷](veteran_krak_grenade.md) / `veteran_krak_grenade` | `node_29b3560b-2a50-46cd-b0bb-352b34897c49` | 完成（核心靜態機制） |
 | 閃擊 | [炸藥儲備](veteran_replenish_grenades.md) / `veteran_replenish_grenades` | `node_8acdddd9-366b-4601-bf16-13574eb1cb24` | 完成（核心靜態機制） |
 | 閃擊 | 粉碎者破片手雷 / `veteran_grenade_apply_bleed` | `node_0800a598-65f0-4293-a838-43c21ce1849c` | 待核對 |
 | 光環 | [抵近殺敵](veteran_movement_speed_coherency.md) / `veteran_movement_speed_coherency` | `node_06b8c8de-0e09-40c9-af16-a6018e9984a8` | 完成（核心靜態機制） |
