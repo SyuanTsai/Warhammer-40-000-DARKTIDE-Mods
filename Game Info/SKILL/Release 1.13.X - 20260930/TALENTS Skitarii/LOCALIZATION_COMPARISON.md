@@ -52,6 +52,7 @@
 | [守護協議](#cryptic_disabled_allies_defense) | 未見明確矛盾 |
 | [數據感應協定](#cryptic_ally_coherency_defenses) | 受益對象用語有誤 |
 | [序列充能](#cryptic_strength_on_charge_gain) | 未見明確矛盾 |
+| [屠殺協議](#cryptic_toughness_replenishment_on_kill_bonus) | 容易誤讀；補充說明 |
 | [精準戰鬥探測儀](#cryptic_next_hit_all_damage_on_dodge) | 未見明確矛盾 |
 | [電流爆發](#cryptic_electrocution_push) | 未見明確矛盾 |
 | [抗腐護符](#cryptic_corruption_resistance_doom) | 未見明確矛盾 |
@@ -368,6 +369,13 @@
 - 描述鍵：`loc_talent_cryptic_strength_on_charge_gain_desc`；hash：`9e3a3df6`。
 - 結論：未見明確矛盾。繁中力量與英文Strength對應威力效果；補充完整份數及結算量。
 - [原始碼推導與限制](cryptic_strength_on_charge_gain.md)。
+
+<a id="cryptic_toughness_replenishment_on_kill_bonus"></a>
+## 屠殺協議(Slaughter Protocol)
+
+- 描述鍵：`loc_talent_cryptic_toughness_replenishment_on_kill_bonus_desc`；hash：`583f2cab`。
+- 結論：容易誤讀；補充說明。中英都簡寫為近戰擊殺韌性恢復加成，未明言以最大韌性為分母，因此不判為錯誤；主文補充是提高原有恢復量。
+- [原始碼推導與限制](cryptic_toughness_replenishment_on_kill_bonus.md)。
 
 <a id="cryptic_next_hit_all_damage_on_dodge"></a>
 ## 精準戰鬥探測儀(Precision Combat Augurs)

@@ -50,6 +50,7 @@
 | <img src="https://github.com/user-attachments/assets/53a3e76f-67fe-4d9e-bff5-7aafaee21065" width="32" height="32" alt="守護協議天賦圖示"> [守護協議](#cryptic_disabled_allies_defense)<br>- Protectorate Protocol | <ul><li>協同隊友失去行動能力時，受到傷害降低 25%</li><li>親自救援後，再給 6 秒減傷與一般硬直免疫</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0bbe1f46-d58e-414d-9ab3-1c8ed0170a41" width="32" height="32" alt="數據感應協定天賦圖示"> [數據感應協定](#cryptic_ally_coherency_defenses)<br>- Data Sensor Protocol | <ul><li>你或協同隊友受到韌性傷害，受傷者恢復 25% 耐力</li><li>受到生命傷害則恢復 25% 韌性，兩類各冷卻 15 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0a7a0b4b-9d65-4b36-9825-ed610ad0a3ae" width="32" height="32" alt="序列充能天賦圖示"> [序列充能](#cryptic_strength_on_charge_gain)<br>- Sequenced Charge | <ul><li>獲得完整電容量時，威力提高 12.5%、持續 10 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/b22c3c3e-70a0-4411-99a5-63bcf1a6fa5a" width="32" height="32" alt="屠殺協議天賦圖示"> [屠殺協議](#cryptic_toughness_replenishment_on_kill_bonus)<br>- Slaughter Protocol | <ul><li>近戰擊殺的原有韌性恢復量提高 25%</li><li>沒有完整電容量時提高至 50%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a18e19ec-6cad-4a2c-996b-6e7eddf47195" width="32" height="32" alt="精準戰鬥探測儀天賦圖示"> [精準戰鬥探測儀](#cryptic_next_hit_all_damage_on_dodge)<br>- Precision Combat Augurs | <ul><li>成功閃避後，下次近戰攻擊或射擊傷害提高 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/80106b42-e788-43cb-a07a-ee69f668002f" width="32" height="32" alt="電流爆發天賦圖示"> [電流爆發](#cryptic_electrocution_push)<br>- Voltaic Burst | <ul><li>推擊造成踉蹌時施加電擊</li><li>冷卻 12 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1c4ea759-440c-48dd-bc21-3bc8303683d5" width="32" height="32" alt="抗腐護符天賦圖示"> [抗腐護符](#cryptic_corruption_resistance_doom)<br>- Ablative Wards | <ul><li>受到的腐敗減少 90%</li><li>每 20 秒付出基準 1 點腐敗代價</li></ul> | 技能 |
@@ -726,6 +727,21 @@
 - **作用範圍**：威力會參與傷害、衝擊與順劈計算；實際數值還要套武器與目標條件，不能直接視為所有最終傷害都增加 12.5%。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_strength_on_charge_gain.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_toughness_replenishment_on_kill_bonus"></a>
+### 屠殺協議(Slaughter Protocol)
+
+<img src="https://github.com/user-attachments/assets/b22c3c3e-70a0-4411-99a5-63bcf1a6fa5a" width="72" height="72" alt="屠殺協議天賦圖示">
+
+- **運作方式**：提高近戰擊殺原本會恢復的韌性量，常態增加 25%；沒有任何完整電容量時改為增加 50%。
+
+- **恢復算例**：若一次近戰擊殺原本恢復 5 點韌性，常態變成 5 × 1.25 = 6.25 點；0 份電容量時為 5 × 1.50 = 7.5 點。
+
+- **其他加成**：若原有 20% 同階段韌性恢復加成，0 份時為 5 × (1 + 20% + 50%) = 8.5 點，最多補到上限。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_toughness_replenishment_on_kill_bonus.md) · [返回目錄](#talent-index)
 
 ---
 
