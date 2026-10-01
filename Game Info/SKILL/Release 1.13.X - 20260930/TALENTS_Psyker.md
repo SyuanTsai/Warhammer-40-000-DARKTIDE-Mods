@@ -35,6 +35,7 @@
 | <img src="https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191" width="32" height="32" alt="衰弱界線天賦圖示"> [衰弱界線](#psyker_shield_stun_passive)<br>- Enervating Threshold | <ul><li>穿越護盾的敵人有 20% 機率被電擊</li><li>專家與巨獸必定觸發；專家會損傷護盾</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8" width="32" height="32" alt="亞空間突破天賦圖示"> [亞空間突破](#psyker_overcharge_stance_infinite_casting)<br>- Warp Unbound | <ul><li>注視結束後仍能免於反噬超載</li><li>保護持續 11.5 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/07eff6fd-5c1a-49f2-8a72-d689ec6bb42e" width="32" height="32" alt="亞空間虹吸天賦圖示"> [亞空間虹吸](#psyker_passive_souls_from_elite_kills)<br>- Warp Siphon | <ul><li>擊殺精英或專家取得亞空間充能</li><li>每層增加 4% 傷害；施放能力消耗充能並縮短冷卻</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/885fdda1-bcf2-4502-97e0-7eaead2392e0" width="32" height="32" alt="擾動命運天賦圖示"> [擾動命運](#psyker_new_mark_passive)<br>- Disrupt Destiny | <ul><li>擊殺標記目標，疊加傷害、弱點與爆擊加成</li><li>並恢復韌性、短暫提高移動速度</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/333bcafc-3c34-4b47-bb5b-658c9cd2b777" width="32" height="32" alt="平心靜氣天賦圖示"> [平心靜氣](#psyker_reduced_warp_charge_cost_and_venting_speed)<br>- Inner Tranquility | <ul><li>每層亞空間充能降低反噬生成 8%</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/00ae8b19-169d-4eec-94e2-89c3cf851d08" width="32" height="32" alt="吸精奪萃天賦圖示"> [吸精奪萃](#psyker_toughness_on_soul)<br>- Essence Harvest | <ul><li>取得亞空間充能後，5 秒恢復 30% 最大韌性</li><li>再次取得會刷新持續時間</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/827d3ef0-dce8-4cb8-8af1-c5ad142d4ec1" width="32" height="32" alt="生物磁石天賦圖示"> [生物磁石](#psyker_empowered_grenades_passive_improved)<br>- Bio-Lodestone | <ul><li>擊殺取得靈能強化的機率由 10% 提高至 15%</li></ul> | 鑰石 |
@@ -511,6 +512,25 @@
 - **多次充能**：若能力能儲存多次使用次數，恢復量先補目前正在倒數的一格，超過一格所需的進度再往後補。
 
 [詳細資料](TALENTS%20Psyker/psyker_passive_souls_from_elite_kills.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="psyker_new_mark_passive"></a>
+### 擾動命運(Disrupt Destiny)
+
+<img src="https://github.com/user-attachments/assets/885fdda1-bcf2-4502-97e0-7eaead2392e0" width="72" height="72" alt="擾動命運天賦圖示">
+
+- **標記與取得**：標記前方 40 公尺內、有視線且可被標記的敵人。親自擊殺目前標記的敵人，取得一層精準加成，最多 15 層。
+
+- **每層效果**：一般傷害增加 1%、爆擊額外傷害增加 2%、弱點額外傷害增加 2.5%。15 層分別為 15%、30%、37.5%。
+
+- **傷害算例**：只計一般增傷，100 × (1 + 15%) = 115 點。再看弱點這一項：假設同次命中已算入一般增傷後，基礎部分為 100、弱點額外部分為 50，加上 37.5% 弱點加成後為 100 + 50 × 1.375 = 168.75 點，相較這一階段原有 150 點增加 12.5%。武器的額外傷害比例不同，整次命中的增幅也不同。
+
+- **恢復與移速**：擊殺標記目標後，2.5 秒內恢復最大韌性的 25%，移動速度提高 20%，持續 2.5 秒。最大韌性 100 時，總共恢復 25 點，相當於每秒 25 ÷ 2.5 = 10 點，以缺額為上限。
+
+- **刷新與衰減**：精準加成共用 5 秒倒數。新增層數，或已有層數時命中仍存活的標記目標或首領，都會重設倒數。到期只掉一層，再倒數 5 秒；例如 3 層且未再刷新，約在 5、10、15 秒依序降至 2、1、0 層。
+
+[詳細資料](TALENTS%20Psyker/psyker_new_mark_passive.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -36,7 +36,7 @@
 | [衰弱界線](#psyker_shield_stun_passive) | 未見明確矛盾 |
 | [亞空間突破](#psyker_overcharge_stance_infinite_casting) | 未見明確矛盾 |
 | [亞空間虹吸](#psyker_passive_souls_from_elite_kills) | 未見明確矛盾 |
-| [擾動命運](#psyker_new_mark_passive) | 已配對；機制待核對 |
+| [擾動命運](#psyker_new_mark_passive) | 待同版核對 |
 | [靈能強化](#psyker_empowered_ability) | 已配對；機制待核對 |
 | [平心靜氣](#psyker_reduced_warp_charge_cost_and_venting_speed) | 未見明確矛盾 |
 | [吸精奪萃](#psyker_toughness_on_soul) | 未見明確矛盾 |
@@ -294,7 +294,7 @@
 ## 擾動命運(Disrupt Destiny)
 
 - 描述鍵：`loc_talent_psyker_marked_enemies_passive_updated_desc`；hash：`cfa752d8`。
-- 已配對原文，機制待核對。
+- 結論：待同版核對。現有本地化說明寫成每秒機率標記；源碼選敵邏輯則依可標記敵種、前向視角及視線條件挑選，逐秒只是目標狀態檢查／重選節奏。因 Build 25492122 尚未證實與此 source SHA 同版，先保留差異待同版核對。
 - [原始碼推導與限制](psyker_new_mark_passive.md)。
 
 <a id="psyker_empowered_ability"></a>
