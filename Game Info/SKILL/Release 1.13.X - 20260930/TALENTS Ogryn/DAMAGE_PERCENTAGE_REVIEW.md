@@ -10,3 +10,4 @@
 | [碾碎它們！](ogryn_single_heavy_toughness.md) | 一次近戰攻擊命中恰好 1 名敵人時，恢復 5% 最大韌性。；重擊符合條件時，改為恢復 15% 最大韌性。；完整計算與適用限制見來源文件。 |
 | [關鍵人物](ogryn_increased_coherency_toughness.md) | 自身的協同韌性恢復速度提高 100%。；完整計算與適用限制見來源文件。 |
 | [射不停](ogryn_reload_speed_on_empty.md) | 彈匣清空後開始換彈，換彈速度提高 20%。；完整計算與適用限制見來源文件。 |
+| [怒不可遏](ogryn_more_hits_more_damage.md) | 前一次近戰攻擊每命中 1 名敵人，下次近戰傷害增加 3%，最多 30%。；完整計算與適用限制見來源文件。 |
