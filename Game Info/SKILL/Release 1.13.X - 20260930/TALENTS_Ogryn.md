@@ -12,6 +12,7 @@
 | <img src="https://github.com/user-attachments/assets/f61476bf-8738-40b1-8c66-63980d690cc7" width="32" height="32" alt="射不停天賦圖示"> [射不停](#ogryn_reload_speed_on_empty)<br>- Keep Shooting | <ul><li>彈匣清空後開始換彈，換彈速度提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/aeba8245-43aa-438c-9357-a7ac4556a98d" width="32" height="32" alt="怒不可遏天賦圖示"> [怒不可遏](#ogryn_more_hits_more_damage)<br>- Furious | <ul><li>前一次近戰攻擊每命中 1 名敵人，下次近戰傷害增加 3%，最多 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c006f0e1-3f32-4dcc-891a-8c44b4ebe6df" width="32" height="32" alt="重量級天賦圖示"> [重量級](#ogryn_ogryn_killer)<br>- Heavyweight | <ul><li>對堡壘、碾壓者、收割者與瘟疫歐格林造成的傷害提高 30%。</li><li>受到這些敵人的傷害降低 30%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/ee98056a-b754-4821-9542-717ef68c944a" width="32" height="32" alt="猛擊天賦圖示"> [猛擊](#ogryn_melee_stagger)<br>- Slam | <ul><li>近戰衝擊提高 25%；近戰或推擊使敵人踉蹌時恢復 5% 耐力。</li><li>耐力恢復有 0.75 秒冷卻。</li></ul> | 技能 |
 
 ---
 
@@ -104,5 +105,20 @@
 - **對象限制**：這不是對所有大型敵人或所有巨獸的通用加成。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_ogryn_killer.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_melee_stagger"></a>
+### 猛擊(Slam)
+
+<img src="https://github.com/user-attachments/assets/ee98056a-b754-4821-9542-717ef68c944a" width="72" height="72" alt="猛擊天賦圖示">
+
+- **衝擊加成**：近戰衝擊提高 25%，加強使敵人踉蹌的效果；這項加成不直接增加生命傷害。
+
+- **耐力恢復**：近戰命中或推擊成功使敵人踉蹌時，恢復 5% 最大耐力；兩次恢復至少間隔 0.75 秒。單純命中但未造成踉蹌不會恢復。
+
+- **算例**：最大耐力 8 時，每次恢復 8 × 5% = 0.4；只缺 0.2 就只補 0.2。只計衝擊階段，基準 100 變成 100 × 1.25 = 125，實際能否踉蹌仍取決於敵人與攻擊。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_melee_stagger.md) · [返回目錄](#talent-index)
 
 ---
