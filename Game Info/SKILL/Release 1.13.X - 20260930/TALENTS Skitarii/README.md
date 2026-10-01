@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **97 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10)。內部 tree version 18 不等於遊戲發行版號。
 
-完成 91／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 92／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -50,6 +50,7 @@
 | 鑰石 | [電容極限覆寫](cryptic_redline_rending.md) / `cryptic_redline_rending` | `node_251b440a-215d-43dd-971f-a57d019e75ad` | 完成（核心靜態機制） |
 | 鑰石 | [資源最佳化聖歌](cryptic_redline_extra_max_stacks.md) / `cryptic_redline_extra_max_stacks` | `node_ba657afe-4100-4881-98a2-20c43f4e0a16` | 完成（核心靜態機制） |
 | 鑰石 | [強化電容協議](cryptic_dissector_ability_stacks.md) / `cryptic_dissector_ability_stacks` | `node_dc1911a1-3b00-44d2-b830-00c0b18ed2e9` | 完成（核心靜態機制） |
+| 鑰石 | [動力驅動](cryptic_overload_keystone_abilities.md) / `cryptic_overload_keystone_abilities` | `node_1291b67e-1c33-4fc0-833a-7656d99a79d4` | 完成（核心靜態機制） |
 | 鑰石 | [崇高意圖](cryptic_dissector_power.md) / `cryptic_dissector_power` | `node_ce7afddd-b252-4604-a423-da685ffa5410` | 完成（核心靜態機制） |
 | 鑰石 | [脈衝延伸](cryptic_redline_toughness.md) / `cryptic_redline_toughness` | `node_d8193dca-b6d3-428a-b970-654b16fda839` | 完成（核心靜態機制） |
 | 技能 | [能量載分配鏈路](cryptic_crits_grant_tdr.md) / `cryptic_crits_grant_tdr` | `node_6561d779-b477-4e35-a588-e74c910e92c9` | 完成（核心靜態機制） |

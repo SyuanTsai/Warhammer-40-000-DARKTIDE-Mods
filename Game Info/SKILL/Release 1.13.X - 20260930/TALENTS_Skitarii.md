@@ -46,6 +46,7 @@
 | <img src="https://github.com/user-attachments/assets/bd0f7682-079c-4c61-bae6-b759aa2608e9" width="32" height="32" alt="電容極限覆寫天賦圖示"> [電容極限覆寫](#cryptic_redline_rending)<br>- Capacitory Limit Override | <ul><li>極限電容層數達3層時啟用 +15% 撕裂；低於3層時不提供此效果。</li><li>達門檻後效果固定為15%，第4層起不再增加。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96e3fb15-c1fd-4702-a6ef-0f69b10931fe" width="32" height="32" alt="資源最佳化聖歌天賦圖示"> [資源最佳化聖歌](#cryptic_redline_extra_max_stacks)<br>- Resource Optimisation Canticles | <ul><li>使戰鬥技能最大充能再增加1道，並將極限電容層數上限由4層提高至5層。</li><li>極限電容每層的韌性減傷仍依原本5%步進；5層時承受的韌性傷害為原始值的75%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/de2e3c8c-8b4c-4859-87d0-c1416c07ef5c" width="32" height="32" alt="強化電容協議天賦圖示"> [強化電容協議](#cryptic_dissector_ability_stacks)<br>- Enhanced Capacitance Protocols | <ul><li>使用戰鬥能力時，將削切協議補至目前上限。</li><li>層數仍沿用削切協議的受傷失層規則，並保留其每層傷害與韌性減傷。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/d7c8f168-1f4e-42cc-a3d7-926d3b4382f1" width="32" height="32" alt="動力驅動天賦圖示"> [動力驅動](#cryptic_overload_keystone_abilities)<br>- Powerdrive | <ul><li>每消耗完整1份戰鬥技能充能，增加5層能量超載；鎖定姿態在結束時結算。</li><li>弦爪連續出招期間，只有首次啟用計入；累積達30層便觸發超載並歸零。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="32" height="32" alt="崇高意圖天賦圖示"> [崇高意圖](#cryptic_dissector_power)<br>- Higher Purpose | <ul><li>精英或專家擊殺額外回復戰鬥技能充能資源2.5%；這是加在護教軍原有的精英／專家擊殺4%回復上，合計6.5%。</li><li>以單份充能為基準；進階戰鬥教範啟用期間不會觸發。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d199d3e7-4b94-4288-bf17-acbd915bdeaf" width="32" height="32" alt="脈衝延伸天賦圖示"> [脈衝延伸](#cryptic_redline_toughness)<br>- Surge-Extension | <ul><li>每次補回或消耗戰鬥技能充能，在5秒內恢復最大韌性的25%。</li><li>再次觸發會刷新恢復期間，不提高每秒恢復速率；一次變動多份充能仍只觸發一次。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="能量載分配鏈路天賦圖示"> [能量載分配鏈路](#cryptic_crits_grant_tdr)<br>- Power Redistribution Uplink | <ul><li>爆擊命中後，3 秒內恢復 7.5% 韌性</li><li>期間承受的韌性傷害降低 15%</li></ul> | 技能 |
@@ -734,6 +735,23 @@
 - **算例**：基礎上限6層時，若剩3層，下一次能力使用會補回3層至6層；若已滿6層，使用能力不會超過上限。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_dissector_ability_stacks.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_overload_keystone_abilities"></a>
+### 動力驅動(Powerdrive)
+
+<img src="https://github.com/user-attachments/assets/d7c8f168-1f4e-42cc-a3d7-926d3b4382f1" width="72" height="72" alt="動力驅動天賦圖示">
+
+- **觸發方式**：使用電能發射器時，每消耗1份充能增加5層能量超載；弦爪只有首次啟用計入，持續出招期間再消耗充能不會再次加層。
+
+- **搭配鎖定姿態**：結束姿態時，合計啟動、維持與射擊消耗的充能，每完整1份增加5層；不足1份的餘數不計入。
+
+- **充能算例**：一次姿態消耗啟動0.25份、維持1.6份、射擊0.2份，合計2.05份；取完整2份，增加2 × 5 = 10層。途中恢復的充能不會扣回已累計的消耗量。
+
+- **超載算例**：原有22層，消耗2份充能再增加10層，22 + 10 = 32層，立刻觸發一次超載並歸零；超過門檻的2層不保留。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_overload_keystone_abilities.md) · [返回目錄](#talent-index)
 
 ---
 

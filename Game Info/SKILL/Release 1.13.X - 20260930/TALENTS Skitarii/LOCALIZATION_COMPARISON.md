@@ -47,6 +47,7 @@
 | [電容極限覆寫](#cryptic_redline_rending) | 繁中勘誤：層數與天賦名稱位置對調 |
 | [資源最佳化聖歌](#cryptic_redline_extra_max_stacks) | 未見明確矛盾 |
 | [強化電容協議](#cryptic_dissector_ability_stacks) | 未見明確矛盾；補充計算與限制 |
+| [動力驅動](#cryptic_overload_keystone_abilities) | 未見明確矛盾 |
 | [崇高意圖](#cryptic_dissector_power) | 未見明確矛盾；補充計算與限制 |
 | [脈衝延伸](#cryptic_redline_toughness) | 未見明確矛盾 |
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
@@ -376,6 +377,13 @@
 - 描述鍵：`loc_talent_cryptic_dissector_ability_stacks_desc`；hash：`39219dd5`。
 - 結論：未見明確矛盾；補充計算與限制。繁中與英文皆寫使用能力補滿所有層數；固定版依缺少層數補至max，未發現誤譯。
 - [原始碼推導與限制](cryptic_dissector_ability_stacks.md)。
+
+<a id="cryptic_overload_keystone_abilities"></a>
+## 動力驅動(Powerdrive)
+
+- 描述鍵：`loc_talent_cryptic_overload_keystone_abilities_desc`；hash：`6c9f2d5b`。
+- 結論：未見明確矛盾。繁中與英文均概述每份消耗增加5層。固定版一般使用按 ability_cost 計算，鎖定姿態改在結束時按累計消耗取整；弦爪連續使用有只計首次的限制。這是兩種語言均未詳述的實作差異，留待同版實測，不列為繁中誤譯。
+- [原始碼推導與限制](cryptic_overload_keystone_abilities.md)。
 
 <a id="cryptic_dissector_power"></a>
 ## 崇高意圖(Higher Purpose)
