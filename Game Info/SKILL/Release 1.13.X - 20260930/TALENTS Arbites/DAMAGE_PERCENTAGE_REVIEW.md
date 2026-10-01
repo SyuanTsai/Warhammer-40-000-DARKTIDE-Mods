@@ -18,6 +18,7 @@
 | [法務官之鎧](adamant_armor.md) | 最大韌性增加 25 點。；完整計算與適用限制見來源文件。 |
 | [彈藥腰帶](adamant_ammo_belt.md) | 備用彈藥容量提高 25%。；完整計算與適用限制見來源文件。 |
 | [呼吸器](adamant_rebreather.md) | 承受的腐敗降低 20%，毒氣傷害降低 75%。；完整計算與適用限制見來源文件。 |
+| [苛政壓制](adamant_hitting_multiple_gives_tdr.md) | 同一次攻擊命中至少 3 名敵人，獲得 20% 韌性減傷，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [遠程傷害增幅](base_ranged_damage_node_buff_medium_1.md) | 遠程傷害提高 10%。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_1.md) | 近戰傷害提高 10%。；完整計算與適用限制見來源文件。 |
 | [塑鋼裝甲](adamant_plasteel_plates.md) | 最大韌性增加 25 點。；完整計算與適用限制見來源文件。 |

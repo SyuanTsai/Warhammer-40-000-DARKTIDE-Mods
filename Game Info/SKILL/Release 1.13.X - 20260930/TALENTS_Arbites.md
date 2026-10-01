@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/d25eaf26-cb8b-4009-80ac-af75d049fb9f" width="32" height="32" alt="法務官之鎧天賦圖示"> [法務官之鎧](#adamant_armor)<br>- Arbitrator Armour | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/90c9bff4-baf3-4b53-b160-16945870dd88" width="32" height="32" alt="彈藥腰帶天賦圖示"> [彈藥腰帶](#adamant_ammo_belt)<br>- Ammo Belt | <ul><li>備用彈藥容量提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4232eef3-1499-4f4c-b2e3-d1416db2ec8e" width="32" height="32" alt="呼吸器天賦圖示"> [呼吸器](#adamant_rebreather)<br>- Rebreather | <ul><li>承受的腐敗降低 20%，毒氣傷害降低 75%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/02fd58ae-50fc-461f-879d-70d77a2aff44" width="32" height="32" alt="苛政壓制天賦圖示"> [苛政壓制](#adamant_hitting_multiple_gives_tdr)<br>- Suppression Protocols | <ul><li>同一次攻擊命中至少 3 名敵人，獲得 20% 韌性減傷，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/62b0bee6-3606-40bc-9d78-06f072535e59" width="32" height="32" alt="遠程傷害增幅天賦圖示"> [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1)<br>- Ranged Damage Boost | <ul><li>遠程傷害提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8c224499-f2ca-420c-bcf6-39034e6a35b2" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/170599ce-ad50-4760-93b2-da650c6deac8" width="32" height="32" alt="塑鋼裝甲天賦圖示"> [塑鋼裝甲](#adamant_plasteel_plates)<br>- Plasteel Plates | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
@@ -179,6 +180,19 @@
 - **毒氣算例**：單計毒氣減傷，原本造成 100 點傷害的毒氣變成 100 × 0.25 = 25 點；這兩種效果分別作用於腐敗與傷害階段。
 
 [詳細資料](TALENTS%20Arbites/adamant_rebreather.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="adamant_hitting_multiple_gives_tdr"></a>
+### 苛政壓制(Suppression Protocols)
+
+<img src="https://github.com/user-attachments/assets/02fd58ae-50fc-461f-879d-70d77a2aff44" width="72" height="72" alt="苛政壓制天賦圖示">
+
+- **觸發與刷新**：一次攻擊命中第 3 名敵人時，獲得 20% 韌性減傷，持續 5 秒；近戰與遠程皆可，再次觸發重設時間。
+
+- **減傷算例**：單計這項效果，100 點韌性傷害變成 100 × 0.8 = 80 點；另有獨立 10% 韌性減傷時，為 100 × 0.8 × 0.9 = 72 點。
+
+[詳細資料](TALENTS%20Arbites/adamant_hitting_multiple_gives_tdr.md) · [返回目錄](#talent-index)
 
 ---
 

@@ -20,6 +20,7 @@
 | [法務官之鎧](#adamant_armor) | 未見明確矛盾 |
 | [彈藥腰帶](#adamant_ammo_belt) | 未見明確矛盾 |
 | [呼吸器](#adamant_rebreather) | 未見明確矛盾 |
+| [苛政壓制](#adamant_hitting_multiple_gives_tdr) | 未見明確矛盾 |
 | [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_1) | 未見明確矛盾 |
 | [塑鋼裝甲](#adamant_plasteel_plates) | 未見明確矛盾 |
@@ -107,6 +108,13 @@
 - 描述鍵：`loc_talent_adamant_rebreather_desc`；hash：`0e416297`。
 - 結論：未見明確矛盾。繁中腐敗抗性／毒氣減傷與英文兩項對象一致；格式以1−倍率輸出20%及75%。
 - [原始碼推導與限制](adamant_rebreather.md)。
+
+<a id="adamant_hitting_multiple_gives_tdr"></a>
+## 苛政壓制(Suppression Protocols)
+
+- 描述鍵：`loc_talent_adamant_hitting_multiple_gives_tdr_desc`；hash：`2e6f11ec`。
+- 結論：未見明確矛盾。繁中「一擊…以上」與英文 Hitting…or more…an Attack 一致，門檻及韌性作用對象一致。
+- [原始碼推導與限制](adamant_hitting_multiple_gives_tdr.md)。
 
 <a id="base_ranged_damage_node_buff_medium_1"></a>
 ## 遠程傷害增幅(Ranged Damage Boost)
