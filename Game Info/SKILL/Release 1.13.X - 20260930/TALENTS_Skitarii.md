@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/a86f113d-1a3e-4fc6-b1d1-24fe727b118d" width="32" height="32" alt="救贖教範天賦圖示"> [救贖教範](#cryptic_revive_speed_and_dr)<br>- Salvation Doctrine | <ul><li>援助隊友時減少 25% 承受傷害</li><li>援助速度提高 25%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5330c87c-7abe-4993-8eb2-5cb11586c013" width="32" height="32" alt="彈藥補給艙天賦圖示"> [彈藥補給艙](#cryptic_passive_ammo_replenishment)<br>- Ammunition-Restoration Pod | <ul><li>每 15 秒恢復儲備彈藥上限的 1%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9e58fba3-e137-4f3e-89c3-ea7f5ebb0f24" width="32" height="32" alt="持續攻擊教義天賦圖示"> [持續攻擊教義](#cryptic_stacking_melee_damage)<br>- Sustained Assault Doctrine | <ul><li>近戰攻擊命中後，每次提高 3% 傷害</li><li>最多 5 層，持續 8 秒</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/e3f4e5a5-52c8-489e-a83f-3bf13c80eca8" width="32" height="32" alt="鍍鋅精密塗層天賦圖示"> [鍍鋅精密塗層](#cryptic_stun_dr_power)<br>- Galvanized Coating | <ul><li>常駐一般受擊硬直免疫與 15% 減傷</li><li>受到近戰傷害時消耗單份電容量的 7.5%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/78378820-be56-4a92-bd07-f6275c55fa47" width="32" height="32" alt="莫比亞導體天賦圖示"> [莫比亞導體](#cryptic_damage_on_ability)<br>- Moebian Conductor | <ul><li>啟動戰鬥能力後，傷害提高 15%、持續 10 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e" width="32" height="32" alt="適應性戰鬥校準天賦圖示"> [適應性戰鬥校準](#cryptic_cleave_and_impact)<br>- Adaptive Combat Calibration | <ul><li>韌性高於 50%：近戰順劈提高 30%</li><li>韌性不高於 50%：近戰衝擊提高 30%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/deb63065-b15d-498f-a16c-ec7726ca6a22" width="32" height="32" alt="卓越防禦記憶模組天賦圖示"> [卓越防禦記憶模組](#cryptic_ranged_stacking_toughness)<br>- Superior Defence Engrams | <ul><li>遠程擊殺疊層，每層每秒恢復 1% 韌性</li><li>最多 5 層，持續 8 秒</li></ul> | 技能 |
@@ -581,6 +582,21 @@
 - **傷害算例**：5 層提供 15%，基礎傷害 100 → 115；若原有 25% 同階段加成，100 × (1 + 25% + 15%) = 140。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_stacking_melee_damage.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_stun_dr_power"></a>
+### 鍍鋅精密塗層(Galvanized Coating)
+
+<img src="https://github.com/user-attachments/assets/e3f4e5a5-52c8-489e-a83f-3bf13c80eca8" width="72" height="72" alt="鍍鋅精密塗層天賦圖示">
+
+- **防禦效果**：免疫一般受擊硬直，並減少 15% 承受傷害；即使電容量不足，這兩項防禦仍保留。
+
+- **資源代價**：受到近戰傷害時，消耗一份電容量的 7.5%；只扣現有資源，不會扣成負數。已被制伏時不再收取這筆代價。
+
+- **計算算例**：單份電容量的基礎恢復時間為 50 秒，7.5% 等同 50 × 7.5% = 3.75 秒自然恢復量。原本 100 點傷害則變成 100 × 0.85 = 85 點。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_stun_dr_power.md) · [返回目錄](#talent-index)
 
 ---
 

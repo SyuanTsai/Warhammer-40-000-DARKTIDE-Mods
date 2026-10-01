@@ -43,6 +43,7 @@
 | [救贖教範](#cryptic_revive_speed_and_dr) | 未見明確矛盾 |
 | [彈藥補給艙](#cryptic_passive_ammo_replenishment) | 未見明確矛盾 |
 | [持續攻擊教義](#cryptic_stacking_melee_damage) | 未見明確矛盾 |
+| [鍍鋅精密塗層](#cryptic_stun_dr_power) | 未見明確矛盾 |
 | [莫比亞導體](#cryptic_damage_on_ability) | 未見明確矛盾 |
 | [適應性戰鬥校準](#cryptic_cleave_and_impact) | 未見明確矛盾 |
 | [卓越防禦記憶模組](#cryptic_ranged_stacking_toughness) | 未見明確矛盾 |
@@ -301,6 +302,13 @@
 - 描述鍵：`loc_talent_cryptic_stacking_melee_damage_desc`；hash：`32d4da44`。
 - 結論：未見明確矛盾。雙語均為Damage/傷害，未限定僅近戰增傷；補充跨攻擊類型。
 - [原始碼推導與限制](cryptic_stacking_melee_damage.md)。
+
+<a id="cryptic_stun_dr_power"></a>
+## 鍍鋅精密塗層(Galvanized Coating)
+
+- 描述鍵：`loc_talent_cryptic_stun_dr_power_desc`；hash：`bb527abc`。
+- 結論：未見明確矛盾。原文一致；補充零電容量仍有防禦與單份百分比。
+- [原始碼推導與限制](cryptic_stun_dr_power.md)。
 
 <a id="cryptic_damage_on_ability"></a>
 ## 莫比亞導體(Moebian Conductor)
