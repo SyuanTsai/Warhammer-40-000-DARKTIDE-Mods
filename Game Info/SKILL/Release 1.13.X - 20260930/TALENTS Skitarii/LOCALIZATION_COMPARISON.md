@@ -19,6 +19,7 @@
 | [能量超載](#cryptic_overload_keystone) | 未見明確矛盾；補充計算與限制 |
 | [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed) | 未見明確矛盾；補充計算與限制 |
 | [熟練解剖者](#cryptic_dissector_max_stacks) | 未見明確矛盾；補充計算與限制 |
+| [強化電容協議](#cryptic_dissector_ability_stacks) | 未見明確矛盾；補充計算與限制 |
 | [崇高意圖](#cryptic_dissector_power) | 未見明確矛盾；補充計算與限制 |
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
 | [適應性戰鬥記憶體](#cryptic_dr_on_toughness_break) | 待同版核對 |
@@ -149,6 +150,13 @@
 - 描述鍵：`loc_talent_cryptic_dissector_max_stacks_desc`；hash：`52304209`。
 - 結論：未見明確矛盾；補充計算與限制。繁中與英文都說明上限提高到8；固定版基礎6層加2層，文字一致。啟用時初始滿層及其既有每層效果是程式補充，不屬誤譯。
 - [原始碼推導與限制](cryptic_dissector_max_stacks.md)。
+
+<a id="cryptic_dissector_ability_stacks"></a>
+## 強化電容協議(Enhanced Capacitance Protocols)
+
+- 描述鍵：`loc_talent_cryptic_dissector_ability_stacks_desc`；hash：`39219dd5`。
+- 結論：未見明確矛盾；補充計算與限制。繁中與英文皆寫使用能力補滿所有層數；固定版依缺少層數補至max，未發現誤譯。
+- [原始碼推導與限制](cryptic_dissector_ability_stacks.md)。
 
 <a id="cryptic_dissector_power"></a>
 ## 崇高意圖(Higher Purpose)
