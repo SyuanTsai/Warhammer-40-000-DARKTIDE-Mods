@@ -23,6 +23,7 @@
 | 能力 | [火力反擊(Counter-Fire)](#veteran_combat_ability_ranged_roamer_outlines) | 效果：處決者姿態會額外標出一般射手與潛行者，例如血痂射手、渣滓潛行者。啟動或刷新輪廓時，這些敵人必須在你 50 公尺內。 |
 | 能力 | [獵手決意(Hunter's Resolve)](#veteran_toughness_bonus_leaving_invisibility) | 效果：啟動滲透時，受到的韌性傷害降低 50%；隱身期間持續生效，解除隱身後再維持 10 秒。 |
 | 能力 | [戰術意識(Tactical Awareness)](#veteran_elite_kills_reduce_cooldown) | 觸發方式：擊殺特殊敵人後，獲得 3 秒的冷卻恢復效果：每秒額外恢復 1 秒戰鬥能力冷卻。一般菁英不會觸發。 |
+| 能力 | [發號施令(Voice of Command)](#veteran_combat_ability_stagger_nearby_enemies) | 施放效果：大聲呼喊，使周圍 9 公尺內的敵人踉蹌，並立即回滿自己的韌性。 |
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
@@ -397,6 +398,21 @@
 - **上限：**能力恢復完成後，多出的恢復量不會儲存到下次施放；若有兩次使用次數，則繼續恢復尚缺的次數，直到全滿。
 
 [詳細資料](TALENTS%20Veteran/veteran_elite_kills_reduce_cooldown.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_combat_ability_stagger_nearby_enemies"></a>
+
+### 發號施令(Voice of Command)
+
+<img src="https://github.com/user-attachments/assets/73961902-95ea-4316-bda1-13b23dac1789" width="72" height="72" alt="發號施令天賦圖示">
+
+- **施放效果：**大聲呼喊，使周圍 9 公尺內的敵人踉蹌，並立即回滿自己的韌性。
+- **冷卻：**基礎冷卻 40 秒，從施放時開始計算。
+- **恢復算例：**最大韌性 100 點、目前剩 30 點時，施放後回到 100 點，補回 `100 − 30 = 70 點`。
+- **範圍與限制：**距離 8 公尺的敵人位於作用範圍，10 公尺則超出範圍。實際踉蹌反應會受到敵人種類及當下狀態影響。
+
+[詳細資料](TALENTS%20Veteran/veteran_combat_ability_stagger_nearby_enemies.md) · [返回目錄](#talent-index)
 
 ---
 
