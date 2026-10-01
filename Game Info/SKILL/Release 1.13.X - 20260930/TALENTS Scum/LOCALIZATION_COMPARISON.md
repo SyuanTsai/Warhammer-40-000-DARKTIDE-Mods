@@ -14,6 +14,7 @@
 | [精準暴力](#broker_passive_restore_toughness_on_weakspot_kill) | 未見明確矛盾 |
 | [特提恩之聲](#broker_passive_restore_toughness_on_close_ranged_kill) | 未見明確矛盾 |
 | [翩翩蝶舞](#broker_passive_ninja_grants_crit_chance) | 未見明確矛盾 |
+| [快速裝填](#broker_passive_reload_speed_on_close_kill) | 未見明確矛盾 |
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
@@ -56,3 +57,10 @@
 - 描述鍵：`loc_talent_broker_passive_ninja_grants_crit_chance_desc`；hash：`43d506f8`。
 - 結論：未見明確矛盾。繁中與英文皆為完美格擋或成功閃避提高爆擊機率，未見矛盾。
 - [原始碼推導與限制](broker_passive_ninja_grants_crit_chance.md)。
+
+<a id="broker_passive_reload_speed_on_close_kill"></a>
+## 快速裝填(Speedloader)
+
+- 描述鍵：`loc_talent_broker_passive_reload_speed_on_close_kill_desc`；hash：`f9ccd2c5`。
+- 結論：未見明確矛盾。同源英文限定Close Ranged Kill；繁中省略遠程且參數位置不順，但仍可理解為近距離擊殺後加快換彈，依規則不將省略或措辭不佳判成明確勘誤。
+- [原始碼推導與限制](broker_passive_reload_speed_on_close_kill.md)。
