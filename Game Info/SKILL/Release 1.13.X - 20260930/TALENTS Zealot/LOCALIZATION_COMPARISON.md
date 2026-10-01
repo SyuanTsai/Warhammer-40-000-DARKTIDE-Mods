@@ -18,6 +18,7 @@
 | [泰拉之音](#zealot_toughness_while_shooting) | 未見明確矛盾 |
 | [恢復信仰](#zealot_heal_part_of_damage_taken) | 未見明確矛盾 |
 | [為了帝皇](#zealot_reduced_damage_on_wound) | 未見明確矛盾 |
+| [惡毒贈禮](#zealot_toughness_on_heavy_kills) | 明確繁中誤譯 |
 | [近戰增幅](#base_melee_damage_node_buff_medium_4) | 未見明確矛盾 |
 
 <a id="zealot_backstab_damage"></a>
@@ -89,6 +90,15 @@
 - 描述鍵：`loc_talent_zealot_3_tier_3_ability_2_description`；hash：`4cc48983`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](zealot_reduced_damage_on_wound.md)。
+
+<a id="zealot_toughness_on_heavy_kills"></a>
+## 惡毒贈禮(Vicious Offering)
+
+- 描述鍵：`loc_talent_zealot_toughness_on_heavy_kills_desc`；hash：`d50c0dd8`。
+- 結論：明確繁中誤譯。同一描述鍵的英文為 Heavy Attack Kill，繁中卻寫命中；固定實作也是 on_kill 再檢查重擊，必要擊殺條件被翻錯。
+- 繁中原文短引：重攻擊命中後恢復{toughness:%s}韌性。
+- 同源英文：Replenish {toughness:%s} Toughness on Heavy Attack Kill.
+- [原始碼推導與限制](zealot_toughness_on_heavy_kills.md)。
 
 <a id="base_melee_damage_node_buff_medium_4"></a>
 ## 近戰增幅(Melee Damage Boost)

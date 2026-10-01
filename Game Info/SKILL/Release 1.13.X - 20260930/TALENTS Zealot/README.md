@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **82 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/zealot_archetype.lua#L50-L64)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L3-L10)。內部 tree version 29 不等於遊戲發行版號。
 
-完成 11／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 12／82 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -21,4 +21,5 @@
 | 技能 | [泰拉之音](zealot_toughness_while_shooting.md) / `zealot_toughness_while_shooting` | `node_b5ef81ae-d72f-4e83-8fd4-077fad7f6fe0` | 完成（核心靜態機制） |
 | 技能 | [恢復信仰](zealot_heal_part_of_damage_taken.md) / `zealot_heal_part_of_damage_taken` | `node_53add57a-526d-4fc6-b8b2-1899b30b37a8` | 完成（核心靜態機制） |
 | 技能 | [為了帝皇](zealot_reduced_damage_on_wound.md) / `zealot_reduced_damage_on_wound` | `node_a5510705-1db7-4086-aa35-04833ebb8527` | 完成（核心靜態機制） |
+| 技能 | [惡毒贈禮](zealot_toughness_on_heavy_kills.md) / `zealot_toughness_on_heavy_kills` | `node_b71544c5-61d9-4c06-8de3-0b834357c0c9` | 完成（核心靜態機制） |
 | 技能 | [近戰增幅](base_melee_damage_node_buff_medium_4.md) / `base_melee_damage_node_buff_medium_4` | `node_94333107-ec28-44ca-b37e-2f714fc57ed5` | 完成（核心靜態機制） |

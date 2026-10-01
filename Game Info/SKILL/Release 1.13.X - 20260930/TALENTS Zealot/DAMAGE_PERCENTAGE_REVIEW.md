@@ -16,4 +16,5 @@
 | [泰拉之音](zealot_toughness_while_shooting.md) | 射擊期間每秒恢復 10% 最大韌性，停火後再持續 0.5 秒。；完整計算與適用限制見來源文件。 |
 | [恢復信仰](zealot_heal_part_of_damage_taken.md) | 生命受傷後，逐步恢復該次傷害的 20%。；完整計算與適用限制見來源文件。 |
 | [為了帝皇](zealot_reduced_damage_on_wound.md) | 單次生命傷害若會跨過下一個傷口分界，該次生命傷害降低 40%。；完整計算與適用限制見來源文件。 |
+| [惡毒贈禮](zealot_toughness_on_heavy_kills.md) | 重擊擊殺敵人時，額外恢復 10% 最大韌性。；完整計算與適用限制見來源文件。 |
 | [近戰增幅](base_melee_damage_node_buff_medium_4.md) | 近戰傷害增加 10%。；完整計算與適用限制見來源文件。 |
