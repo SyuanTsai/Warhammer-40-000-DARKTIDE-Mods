@@ -7,10 +7,11 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **97 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10)。內部 tree version 18 不等於遊戲發行版號。
 
-完成 54／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 55／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
+| 能力 | [彈藥盤點之旨](cryptic_precision_stance_fire_rate_increased.md) / `cryptic_precision_stance_fire_rate_increased` | `node_9f2a7af2-4bde-47c2-a856-379c9ca8e034` | 完成（核心靜態機制） |
 | 能力 | [電流弧](cryptic_discharge_generates_arcs.md) / `cryptic_discharge_generates_arcs` | `node_76d47f27-b1fe-4614-a013-9cdcfb6ac12b` | 完成（核心靜態機制） |
 | 能力 | [電能驅動](cryptic_discharge_attack_speed_increase.md) / `cryptic_discharge_attack_speed_increase` | `node_1ce53612-4ce0-40b6-8769-abcae20328b9` | 完成（核心靜態機制） |
 | 能力 | [電流超載](cryptic_discharge_toughness.md) / `cryptic_discharge_toughness` | `node_d155b2e2-8498-41eb-81ed-4fa5b708132e` | 完成（核心靜態機制） |

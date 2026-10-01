@@ -6,6 +6,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/ac9ea4d6-352f-4ad1-95f2-a2de10d39d2d" width="32" height="32" alt="彈藥盤點之旨天賦圖示"> [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased)<br>- Writ of Ammunition Enumeration | <ul><li>精準姿態啟動時提高遠程射速15%；姿態連續維持滿4秒後提高至30%。</li><li>姿態結束會撤除此射速加成，4秒計時亦重置。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad" width="32" height="32" alt="電流弧天賦圖示"> [電流弧](#cryptic_discharge_generates_arcs)<br>- Voltaic Arcs | <ul><li>電能發射器每消耗一道充能，額外釋放一道向前電弧；最多生成 5 道。</li><li>每道電弧從前方 12 公尺內的有效敵人起始，之後可鏈接附近敵人。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b74a0dba-64ed-40b6-b630-792c413387cd" width="32" height="32" alt="電能驅動天賦圖示"> [電能驅動](#cryptic_discharge_attack_speed_increase)<br>- Voltaic Motivator | <ul><li>每次使用電能發射器後，攻擊速度提高 5% 基礎值，再按消耗充能每道增加 5%。</li><li>加成持續 15 秒；消耗 1、2、3 道時，總加成分別為 10%、15%、20%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/dd369366-6fa1-4e92-bd7b-c92f5bf8023a" width="32" height="32" alt="電流超載天賦圖示"> [電流超載](#cryptic_discharge_toughness)<br>- Voltaic Overcharge | <ul><li>電流發射器每消耗一道充能，立即恢復最大韌性的25%；電流爆炸每命中一名存活敵人，再恢復最大韌性的1%。</li><li>恢復量會受韌性補充修正影響，並且不能超過當前缺少的韌性。</li></ul> | 能力 |
@@ -64,6 +65,21 @@
 ---
 
 ## 能力
+
+<a id="cryptic_precision_stance_fire_rate_increased"></a>
+### 彈藥盤點之旨(Writ of Ammunition Enumeration)
+
+<img src="https://github.com/user-attachments/assets/ac9ea4d6-352f-4ad1-95f2-a2de10d39d2d" width="72" height="72" alt="彈藥盤點之旨天賦圖示">
+
+- **運作方式**：進階戰鬥教範啟動期間，遠程射速提高 15%；連續維持 4 秒後，提高至總共 30%。
+
+- **重置條件**：離開架勢後加成消失；重新啟動會從 15% 開始重新計算 4 秒。
+
+- **射速算例**：原本每秒 5 發，單看受此倍率影響的射速，初期為 5 × 1.15 = 5.75 發／秒；4 秒後為 5 × 1.30 = 6.5 發／秒。其他動作與武器限制另計。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_precision_stance_fire_rate_increased.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="cryptic_discharge_generates_arcs"></a>
 ### 電流弧(Voltaic Arcs)

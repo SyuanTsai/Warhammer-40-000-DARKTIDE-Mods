@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [彈藥盤點之旨](#cryptic_precision_stance_fire_rate_increased) | 未見明確矛盾 |
 | [電流弧](#cryptic_discharge_generates_arcs) | 未見明確矛盾 |
 | [電能驅動](#cryptic_discharge_attack_speed_increase) | 未見明確矛盾 |
 | [電流超載](#cryptic_discharge_toughness) | 未見明確矛盾 |
@@ -62,6 +63,13 @@
 | [電流爆發](#cryptic_electrocution_push) | 未見明確矛盾 |
 | [抗腐護符](#cryptic_corruption_resistance_doom) | 未見明確矛盾 |
 | [威脅偵測指令](#cryptic_ranged_kills_tdr) | 未見明確矛盾 |
+
+<a id="cryptic_precision_stance_fire_rate_increased"></a>
+## 彈藥盤點之旨(Writ of Ammunition Enumeration)
+
+- 描述鍵：`loc_talent_cryptic_precision_stance_fire_rate_increased_desc`；hash：`305b77d8`。
+- 結論：未見明確矛盾。已逐項比對本機同一描述鍵的繁中與英文，觸發、作用方向及數值占位一致；主文補充實際分母、時間與限制，省略細節不列錯誤。
+- [原始碼推導與限制](cryptic_precision_stance_fire_rate_increased.md)。
 
 <a id="cryptic_discharge_generates_arcs"></a>
 ## 電流弧(Voltaic Arcs)
