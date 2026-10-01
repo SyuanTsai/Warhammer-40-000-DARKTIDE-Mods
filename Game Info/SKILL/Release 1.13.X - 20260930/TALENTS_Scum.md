@@ -29,6 +29,7 @@
 | <img src="https://github.com/user-attachments/assets/105c999d-8563-4033-aea2-15b5fc968cc4" width="32" height="32" alt="強效毒藥天賦圖示"> [強效毒藥](#base_toxin_power_boost_1)<br>- Potent Tox | <ul><li>毒素威力增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/2dfab969-4eb2-4181-aa52-7dc1c8c93f89" width="32" height="32" alt="黏黏手天賦圖示"> [黏黏手](#broker_passive_reduce_swap_time)<br>- Sticky Hands | <ul><li>武器切換速度增加 40%；腰射或架槍時降低 10% 後座力、30% 散佈。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d28213f3-85a5-4de7-a380-f3799f671cc8" width="32" height="32" alt="請求暫停天賦圖示"> [請求暫停](#broker_passive_reduced_toughness_damage_during_reload)<br>- Calling for a Time Out | <ul><li>換彈期間及結束後 4 秒，承受的韌性傷害減少 25%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/069e6733-6d1f-4859-a3a6-829d213fd0a1" width="32" height="32" alt="街頭硬漢天賦圖示"> [街頭硬漢](#broker_passive_knockback_on_taking_melee_damage)<br>- Street Tough | <ul><li>受到近戰命中時震退周圍 3 公尺敵人，移動速度增加 10%，持續 3 秒；冷卻 8 秒。</li></ul> | 技能 |
 
 ---
 
@@ -352,5 +353,20 @@
 - **作用範圍**：只減少韌性受到的傷害，不直接把生命傷害一併減少 25%。
 
 [詳細資料](TALENTS%20Scum/broker_passive_reduced_toughness_damage_during_reload.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_knockback_on_taking_melee_damage"></a>
+### 街頭硬漢(Street Tough)
+
+<img src="https://github.com/user-attachments/assets/069e6733-6d1f-4859-a3a6-829d213fd0a1" width="72" height="72" alt="街頭硬漢天賦圖示">
+
+- **觸發方式**：受到近戰命中時，對周圍 3 公尺內敵人造成擊退，並提高 10% 移動速度，持續 3 秒；使你失去行動能力的敵人所發動的近戰攻擊不觸發。
+
+- **冷卻與算例**：觸發後冷卻 8 秒；單計本效果，移速 5 公尺／秒變成 5 × 1.1 = 5.5 公尺／秒。
+
+- **擊退限制**：震退本身不造成傷害，實際能否打斷敵人仍受敵人的踉蹌抗性及狀態影響。
+
+[詳細資料](TALENTS%20Scum/broker_passive_knockback_on_taking_melee_damage.md) · [返回目錄](#talent-index)
 
 ---

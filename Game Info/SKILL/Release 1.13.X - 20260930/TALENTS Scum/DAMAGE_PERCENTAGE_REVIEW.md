@@ -29,3 +29,4 @@
 | [強效毒藥](base_toxin_power_boost_1.md) | 毒素威力增加 10%。；完整計算與適用限制見來源文件。 |
 | [黏黏手](broker_passive_reduce_swap_time.md) | 武器切換速度增加 40%；腰射或架槍時降低 10% 後座力、30% 散佈。；完整計算與適用限制見來源文件。 |
 | [請求暫停](broker_passive_reduced_toughness_damage_during_reload.md) | 換彈期間及結束後 4 秒，承受的韌性傷害減少 25%。；完整計算與適用限制見來源文件。 |
+| [街頭硬漢](broker_passive_knockback_on_taking_melee_damage.md) | 受到近戰命中時震退周圍 3 公尺敵人，移動速度增加 10%，持續 3 秒；冷卻 8 秒。；完整計算與適用限制見來源文件。 |
