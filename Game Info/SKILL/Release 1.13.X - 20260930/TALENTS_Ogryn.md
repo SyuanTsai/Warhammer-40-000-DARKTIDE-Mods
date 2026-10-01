@@ -47,6 +47,7 @@
 | <img src="https://github.com/user-attachments/assets/5f6d651a-4c88-40ea-a96b-3133459df2f4" width="32" height="32" alt="狂暴猛擊天賦圖示"> [狂暴猛擊](#ogryn_stacking_attack_speed)<br>- Frenzied Blows | <ul><li>連續近戰命中從第二次起累積攻速，每層 2.5%，最多 5 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/373afc07-72d5-4815-91c0-0e5d0d02d279" width="32" height="32" alt="擊潰他們天賦圖示"> [擊潰他們](#ogryn_melee_damage_after_heavy)<br>- Beat Them Back | <ul><li>重擊命中後，近戰傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d21c7405-647a-4da2-a396-16b9c5cd8819" width="32" height="32" alt="專注天賦圖示"> [專注](#ogryn_drain_stamina_for_handling)<br>- Concentrate | <ul><li>架槍時消耗耐力，降低 60% 晃動、20% 散布與 15% 後座力。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/6fbf8a63-5e26-482f-9964-01eb0598b142" width="32" height="32" alt="大肌肌天賦圖示"> [大肌肌](#ogryn_damage_reduction_after_elite_kill)<br>- Strongman | <ul><li>擊殺精英或專家後，受到的傷害減少 10%，持續 5 秒。</li></ul> | 技能 |
 
 ---
 
@@ -670,5 +671,18 @@
 - **操控算例**：隔離其他修正，原本各為 100 的晃動、散布與後座力參數，分別變成 40、80、85。這些是操控參數，不代表命中率固定提高相同百分比。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_drain_stamina_for_handling.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_damage_reduction_after_elite_kill"></a>
+### 大肌肌(Strongman)
+
+<img src="https://github.com/user-attachments/assets/6fbf8a63-5e26-482f-9964-01eb0598b142" width="72" height="72" alt="大肌肌天賦圖示">
+
+- **觸發方式**：擊殺精英或專家敵人後，獲得 10% 傷害減免，持續 5 秒；再次符合條件的擊殺刷新時間，不累積多層。
+
+- **減傷算例**：只計此效果，100 點變成 90 點；另有獨立 20% 減傷時為 100 × 0.9 × 0.8 = 72 點。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_damage_reduction_after_elite_kill.md) · [返回目錄](#talent-index)
 
 ---

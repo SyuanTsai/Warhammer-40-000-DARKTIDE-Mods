@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L3-L10)。內部 tree version 25 不等於遊戲發行版號。
 
-完成 41／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 42／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -52,3 +52,4 @@
 | 技能 | [狂暴猛擊](ogryn_stacking_attack_speed.md) / `ogryn_stacking_attack_speed` | `node_e7226bdd-5733-49a0-9b8a-d938c1526a3c` | 完成（核心靜態機制） |
 | 技能 | [擊潰他們](ogryn_melee_damage_after_heavy.md) / `ogryn_melee_damage_after_heavy` | `node_61ced339-890a-4513-942d-0a003e0b1217` | 完成（核心靜態機制） |
 | 技能 | [專注](ogryn_drain_stamina_for_handling.md) / `ogryn_drain_stamina_for_handling` | `node_dfe735e6-ea36-4f63-9274-fe85bd09f32b` | 完成（核心靜態機制） |
+| 技能 | [大肌肌](ogryn_damage_reduction_after_elite_kill.md) / `ogryn_damage_reduction_after_elite_kill` | `node_848294a5-dd6e-4636-8990-f059c331ebb3` | 完成（核心靜態機制） |
