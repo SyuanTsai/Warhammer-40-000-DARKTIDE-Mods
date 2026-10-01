@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/13c08b08-ef80-4f04-8a70-cddfa4db7389" width="32" height="32" alt="超巨量傷害箱天賦圖示"> [超巨量傷害箱](#ogryn_big_box_of_hurt_more_bombs)<br>- Bigger Box of Hurt | <ul><li>「超巨量傷害箱」讓「投彈完畢！」命中後散出的手雷增加 3 顆。</li><li>基礎 6 顆加上 3 顆後為 9 顆；增加的是散出數量，不會增加手雷箱的投擲充能。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/78f209fd-3e8b-456d-954d-c67fdf6e23ee" width="32" height="32" alt="破骨者之環天賦圖示"> [破骨者之環](#ogryn_melee_damage_coherency_improved)<br>- Bonebreaker's Aura | <ul><li>「破骨者之環」使你和協同範圍內隊友的近戰攻擊傷害提高 10%。</li><li>這是基礎近戰光環的強化版本，採用 10% 數值，不會再把基礎 7.5% 額外相加。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/4b71152f-747b-450c-9d3a-82a313fc8360" width="32" height="32" alt="優勝劣汰天賦圖示"> [優勝劣汰](#ogryn_damage_vs_suppressed_coherency)<br>- Coward Culling | <ul><li>「優勝劣汰」使你和協同範圍內隊友對受壓制敵人的傷害提高 20%；另使你造成的壓制提高 25%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/014cd689-2381-43e8-9241-b0a13af77036" width="32" height="32" alt="跟緊我！天賦圖示"> [跟緊我！](#ogryn_toughness_regen_aura)<br>- Stay Close! | <ul><li>「跟緊我！」使你和協同範圍內隊友符合條件的韌性恢復量提高 20%。</li><li>這項效果提高每次恢復量，不會自行啟動韌性恢復，也不會把自然恢復速度提高 20%。</li></ul> | 光環 |
@@ -76,6 +77,26 @@
 | <img src="https://github.com/user-attachments/assets/9e138d4c-f301-46c6-9eef-5aff038efc7c" width="32" height="32" alt="格鬥兵天賦圖示"> [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown)<br>- Bruiser | <ul><li>自己或協同隊友擊殺精英後，持續 4 秒額外恢復戰鬥技能冷卻。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dae8db6d-b212-4abd-a84b-246c0910e0b3" width="32" height="32" alt="精準打擊天賦圖示"> [精準打擊](#ogryn_weakspot_damage)<br>- Strike True | <ul><li>近戰命中弱點時，威力提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/38b1d6e0-b6a5-4692-92a2-fe6caf0b9083" width="32" height="32" alt="機動部署天賦圖示"> [機動部署](#ogryn_bracing_reduces_damage_taken)<br>- Mobile Emplacement | <ul><li>架槍或射擊期間，受到的傷害減少 25%。</li></ul> | 技能 |
+
+---
+
+## 閃擊
+
+<a id="ogryn_big_box_of_hurt_more_bombs"></a>
+### 超巨量傷害箱(Bigger Box of Hurt)
+
+<img src="https://github.com/user-attachments/assets/13c08b08-ef80-4f04-8a70-cddfa4db7389" width="72" height="72" alt="超巨量傷害箱天賦圖示">
+
+- **數量算例**：手雷箱基礎散出 6 顆；選取此天賦後多 3 顆，合計為 6 + 3 = 9 顆。
+
+- **作用範圍**：這項效果只增加手雷箱散出的手雷數量，不會額外提供一種手雷能力。
+
+- **疊層與冷卻**：此天賦只有一個效果，不會因同一次命中重複累加；手雷箱仍最多有 3 次投擲充能。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_big_box_of_hurt_more_bombs.md) · [返回目錄](#talent-index)
+
+---
+
 
 ---
 

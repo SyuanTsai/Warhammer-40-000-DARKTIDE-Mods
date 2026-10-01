@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [超巨量傷害箱](#ogryn_big_box_of_hurt_more_bombs) | 未見明確矛盾 |
 | [破骨者之環](#ogryn_melee_damage_coherency_improved) | 未見明確矛盾 |
 | [優勝劣汰](#ogryn_damage_vs_suppressed_coherency) | 未見明確矛盾 |
 | [跟緊我！](#ogryn_toughness_regen_aura) | 未見明確矛盾 |
@@ -77,6 +78,13 @@
 | [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown) | 未見明確矛盾 |
 | [精準打擊](#ogryn_weakspot_damage) | 未見明確矛盾 |
 | [機動部署](#ogryn_bracing_reduces_damage_taken) | 未見明確矛盾 |
+
+<a id="ogryn_big_box_of_hurt_more_bombs"></a>
+## 超巨量傷害箱(Bigger Box of Hurt)
+
+- 描述鍵：`loc_talent_ogryn_big_box_of_hurt_more_bombs_desc`；hash：`858b20e9`。
+- 結論：未見明確矛盾。同 hash 858b20e9 的繁中與英文都只說釋出 3 顆手雷；天賦設定明確把 3 加到手雷箱的基礎 6 顆，因此本草稿將實際生成數寫為 9 顆。原文沒有重述基礎 6 顆屬資訊省略，不列為誤譯。本機 Build 25492122 的繁中與英文文字以相同 hash 配對；公開固定 SHA 是否對應同一 Build 尚未確認。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- [原始碼推導與限制](ogryn_big_box_of_hurt_more_bombs.md)。
 
 <a id="ogryn_melee_damage_coherency_improved"></a>
 ## 破骨者之環(Bonebreaker's Aura)
