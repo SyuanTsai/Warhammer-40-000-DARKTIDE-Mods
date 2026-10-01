@@ -21,6 +21,7 @@
 | [沉重打擊](#ogryn_staggering_increases_damage) | 未見明確矛盾 |
 | [勢不可擋](#ogryn_movement_speed_after_ranged_kills) | 未見明確矛盾 |
 | [彈藥儲存包](#ogryn_increased_ammo_reserve) | 未見明確矛盾 |
+| [領跑者](#ogryn_multi_hits_grant_reload_speed) | 跨來源待同版核對 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -112,3 +113,10 @@
 - 描述鍵：`loc_talent_ogryn_increased_ammo_desc`；hash：`1a862478`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_increased_ammo_reserve.md)。
+
+<a id="ogryn_multi_hits_grant_reload_speed"></a>
+## 領跑者(Pacemaker)
+
+- 描述鍵：`loc_talent_ogryn_reload_speed_on_multiple_hits_new_desc`；hash：`61042337`。
+- 結論：跨來源待同版核對。繁中與同源英文都寫單次攻擊；固定公開實作採0.5秒目標去重窗口，沒有同次攻擊識別限制。兩來源未證實同版，未將此列為繁中誤譯。
+- [原始碼推導與限制](ogryn_multi_hits_grant_reload_speed.md)。

@@ -19,6 +19,7 @@
 | <img src="https://github.com/user-attachments/assets/206be198-2a5f-426f-944a-8d85fd74f1d6" width="32" height="32" alt="沉重打擊天賦圖示"> [沉重打擊](#ogryn_staggering_increases_damage)<br>- Hard Knocks | <ul><li>近戰或推擊使敵人踉蹌後，其受到的近戰傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/01fd23cb-46d2-41fa-bfc3-d8b1d17f43a3" width="32" height="32" alt="勢不可擋天賦圖示"> [勢不可擋](#ogryn_movement_speed_after_ranged_kills)<br>- Unstoppable Momentum | <ul><li>遠程擊殺後，移動速度提高 20%，持續 3 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fab49cb9-e155-47d2-8b8c-2ad8235a0f48" width="32" height="32" alt="彈藥儲存包天賦圖示"> [彈藥儲存包](#ogryn_increased_ammo_reserve)<br>- Ammo Stash | <ul><li>備彈容量增加 25%，不增加彈匣容量。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/cf916d47-2e00-43d4-98b7-307222a056e6" width="32" height="32" alt="領跑者天賦圖示"> [領跑者](#ogryn_multi_hits_grant_reload_speed)<br>- Pacemaker | <ul><li>短時間命中至少 3 名不同敵人，下一次換彈速度提高 15%。</li></ul> | 技能 |
 
 ---
 
@@ -216,5 +217,20 @@
 - **計算方式**：其他同階段備彈容量加成相加；依最大備彈比例提供的補給，也會按提高後的上限計算。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_increased_ammo_reserve.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_multi_hits_grant_reload_speed"></a>
+### 領跑者(Pacemaker)
+
+<img src="https://github.com/user-attachments/assets/cf916d47-2e00-43d4-98b7-307222a056e6" width="72" height="72" alt="領跑者天賦圖示">
+
+- **觸發方式**：在約 0.5 秒內命中至少 3 名不同敵人，獲得下一次換彈速度提高 15% 的效果。近戰與遠程命中都能累計，同一敵人重複命中不會當成多人。
+
+- **消耗方式**：加成保留到下一次換彈結束，再移除；重複觸發不會把速度加成疊成 30%。
+
+- **時間算例**：受換彈速度影響的 3 秒動作變成 3 ÷ 1.15 ≈ 2.61 秒；若同階段另有 20% 加成，則為 3 ÷ (1 + 15% + 20%) ≈ 2.22 秒。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_multi_hits_grant_reload_speed.md) · [返回目錄](#talent-index)
 
 ---
