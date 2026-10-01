@@ -46,3 +46,4 @@
 | [精準戰鬥探測儀](cryptic_next_hit_all_damage_on_dodge.md) | 成功閃避後，下次近戰攻擊或射擊傷害提高 15%；完整計算與適用限制見來源文件。 |
 | [電流爆發](cryptic_electrocution_push.md) | 推擊造成踉蹌時施加電擊；冷卻 12 秒；完整計算與適用限制見來源文件。 |
 | [抗腐護符](cryptic_corruption_resistance_doom.md) | 受到的腐敗減少 90%；每 20 秒付出基準 1 點腐敗代價；完整計算與適用限制見來源文件。 |
+| [威脅偵測指令](cryptic_ranged_kills_tdr.md) | 遠程擊殺每層減少 4% 韌性傷害；最多 5 層，每 8 秒衰減一層；完整計算與適用限制見來源文件。 |

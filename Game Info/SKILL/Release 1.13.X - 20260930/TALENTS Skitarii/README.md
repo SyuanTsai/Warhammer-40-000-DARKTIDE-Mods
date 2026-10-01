@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **97 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/cryptic_archetype.lua#L55-L84)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L3-L10)。內部 tree version 18 不等於遊戲發行版號。
 
-完成 40／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 41／97 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -51,3 +51,4 @@
 | 技能 | [精準戰鬥探測儀](cryptic_next_hit_all_damage_on_dodge.md) / `cryptic_next_hit_all_damage_on_dodge` | `node_43262e68-cd8e-491e-8bd5-f0b4164fa561` | 完成（核心靜態機制） |
 | 技能 | [電流爆發](cryptic_electrocution_push.md) / `cryptic_electrocution_push` | `node_4f58a882-02f4-4d7d-99f4-d2f5a996a632` | 完成（核心靜態機制） |
 | 技能 | [抗腐護符](cryptic_corruption_resistance_doom.md) / `cryptic_corruption_resistance_doom` | `node_a3520b96-61cf-4da2-9b35-e4846de85f5e` | 完成（核心靜態機制） |
+| 技能 | [威脅偵測指令](cryptic_ranged_kills_tdr.md) / `cryptic_ranged_kills_tdr` | `node_8bd02750-e89f-4b2c-8de2-ba4ccba29e99` | 完成（核心靜態機制） |

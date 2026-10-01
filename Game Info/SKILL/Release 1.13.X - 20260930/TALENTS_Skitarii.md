@@ -46,6 +46,7 @@
 | <img src="https://github.com/user-attachments/assets/a18e19ec-6cad-4a2c-996b-6e7eddf47195" width="32" height="32" alt="精準戰鬥探測儀天賦圖示"> [精準戰鬥探測儀](#cryptic_next_hit_all_damage_on_dodge)<br>- Precision Combat Augurs | <ul><li>成功閃避後，下次近戰攻擊或射擊傷害提高 15%</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/80106b42-e788-43cb-a07a-ee69f668002f" width="32" height="32" alt="電流爆發天賦圖示"> [電流爆發](#cryptic_electrocution_push)<br>- Voltaic Burst | <ul><li>推擊造成踉蹌時施加電擊</li><li>冷卻 12 秒</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1c4ea759-440c-48dd-bc21-3bc8303683d5" width="32" height="32" alt="抗腐護符天賦圖示"> [抗腐護符](#cryptic_corruption_resistance_doom)<br>- Ablative Wards | <ul><li>受到的腐敗減少 90%</li><li>每 20 秒付出基準 1 點腐敗代價</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/a2e228da-729a-4b03-b07a-72bfaadf5dc3" width="32" height="32" alt="威脅偵測指令天賦圖示"> [威脅偵測指令](#cryptic_ranged_kills_tdr)<br>- Threat Detection Imperative | <ul><li>遠程擊殺每層減少 4% 韌性傷害</li><li>最多 5 層，每 8 秒衰減一層</li></ul> | 技能 |
 
 ---
 
@@ -658,5 +659,20 @@
 - **其他效果**：額外減傷、腐敗抗性等仍可能影響實際代價；這項天賦不會清除已累積的腐敗。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_corruption_resistance_doom.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_ranged_kills_tdr"></a>
+### 威脅偵測指令(Threat Detection Imperative)
+
+<img src="https://github.com/user-attachments/assets/a2e228da-729a-4b03-b07a-72bfaadf5dc3" width="72" height="72" alt="威脅偵測指令天賦圖示">
+
+- **疊層方式**：遠程擊殺敵人獲得 1 層，每層提供 4% 韌性傷害減免，最多 5 層。再次觸發會刷新 8 秒。
+
+- **衰減方式**：沒有再擊殺時，每 8 秒少一層；從 5 層開始，8、16、24、32、40 秒後依序剩 4、3、2、1、0 層。
+
+- **減傷算例**：5 層合計 20%，原本 100 點韌性傷害變成 100 × (1 − 5 × 4%) = 80；另有獨立 15% 減傷時，80 × 0.85 = 68 點。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_ranged_kills_tdr.md) · [返回目錄](#talent-index)
 
 ---

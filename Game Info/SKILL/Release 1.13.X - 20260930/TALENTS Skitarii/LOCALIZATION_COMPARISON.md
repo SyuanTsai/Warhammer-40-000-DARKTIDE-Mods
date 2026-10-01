@@ -48,6 +48,7 @@
 | [精準戰鬥探測儀](#cryptic_next_hit_all_damage_on_dodge) | 未見明確矛盾 |
 | [電流爆發](#cryptic_electrocution_push) | 未見明確矛盾 |
 | [抗腐護符](#cryptic_corruption_resistance_doom) | 未見明確矛盾 |
+| [威脅偵測指令](#cryptic_ranged_kills_tdr) | 未見明確矛盾 |
 
 <a id="cryptic_crits_grant_tdr"></a>
 ## 能量載分配鏈路(Power Redistribution Uplink)
@@ -332,3 +333,10 @@
 - 描述鍵：`loc_talent_cryptic_corruption_resistance_doom_desc`；hash：`ed668132`。
 - 結論：未見明確矛盾。中英文一致；補充代價先抵銷自身抗性、其他倍率仍可影響。
 - [原始碼推導與限制](cryptic_corruption_resistance_doom.md)。
+
+<a id="cryptic_ranged_kills_tdr"></a>
+## 威脅偵測指令(Threat Detection Imperative)
+
+- 描述鍵：`loc_talent_cryptic_ranged_kills_tdr_desc`；hash：`3a7d18c1`。
+- 結論：未見明確矛盾。雙語一致；補充逐層時間軸與同技能加算。
+- [原始碼推導與限制](cryptic_ranged_kills_tdr.md)。
