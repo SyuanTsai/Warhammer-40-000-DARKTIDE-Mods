@@ -21,6 +21,7 @@
 | 技能 | [鋼鐵意志(Iron Will)](#veteran_tdr_on_high_toughness) | 目前韌性高於最大韌性的 75% 時，韌性受到的傷害降低 50%。 |
 | 技能 | [荷槍實彈(Lock and Load)](#veteran_clip_size) | 彈匣容量增加 25%。 |
 | 技能 | [讓他們全趴下！(Keep Their Heads Down!)](#veteran_increase_suppression) | 造成的壓制效果增加 75%。 |
+| 技能 | [秘密特工(Covert Operative)](#veteran_increased_damage_when_flanking) | 從敵人的後半側以遠程攻擊命中時，傷害增加 30%。 |
 | 技能 | [近戰傷害提升(Melee Damage Boost)](#base_melee_damage_node_buff_high_2) | 近戰傷害增加 15%。 |
 | 技能 | [韌性減傷(Toughness Damage Reduction)](#base_toughness_damage_reduction_node_buff_medium_1) | 韌性受到的傷害降低 10%。 |
 
@@ -318,6 +319,23 @@
 - 壓制會影響敵人行動，不等同於增加 75% 傷害。
 
 [詳細資料](TALENTS%20Veteran/veteran_increase_suppression.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_increased_damage_when_flanking"></a>
+
+### 秘密特工(Covert Operative)
+
+<img src="https://github.com/user-attachments/assets/e836f77f-9bb2-4b87-938a-3bab63656ff1" width="72" height="72" alt="秘密特工天賦圖示">
+
+- **從敵人的後半側以遠程攻擊命中時，傷害增加 30%。**
+- 正側面交界不算；近戰攻擊不適用。
+
+#### 傷害算例
+
+- 假設其他計算已得到 100 傷害，且沒有額外背刺傷害：`100 + 100 × 30% = 130 傷害`。
+
+[詳細資料](TALENTS%20Veteran/veteran_increased_damage_when_flanking.md) · [返回目錄](#talent-index)
 
 ---
 

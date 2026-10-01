@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_2_tier_1_name_3` / `veteran_increased_damage_when_flanking` - 秘密特工
+  - 英文對應：Covert Operative。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3113-L3135)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_2_tier_2_name_2` / `veteran_clip_size` - 荷槍實彈
   - 英文對應：Lock and Load。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3097-L3112)；此來源證明識別鍵與天賦關係。
