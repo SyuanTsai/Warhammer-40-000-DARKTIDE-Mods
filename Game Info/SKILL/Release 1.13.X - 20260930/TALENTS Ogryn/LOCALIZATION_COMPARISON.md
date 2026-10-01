@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [爆限超載](#ogryn_leadbelcher_no_ammo_chance) | 未見明確矛盾 |
 | [麻木](#ogryn_carapace_armor) | 跨來源待同版核對 |
 | [痛楚爆發](#ogryn_carapace_armor_trigger_on_zero_stacks) | 跨來源待同版核對 |
 | [最強壯！](#ogryn_carapace_armor_add_stack_on_push) | 未見明確矛盾 |
@@ -72,6 +73,13 @@
 | [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown) | 未見明確矛盾 |
 | [精準打擊](#ogryn_weakspot_damage) | 未見明確矛盾 |
 | [機動部署](#ogryn_bracing_reduces_damage_taken) | 未見明確矛盾 |
+
+<a id="ogryn_leadbelcher_no_ammo_chance"></a>
+## 爆限超載(Burst Limiter Override)
+
+- 描述鍵：`loc_talent_ogryn_blo_new_alt_desc`；hash：`1b448166`。
+- 結論：未見明確矛盾。繁中寫「遠程攻擊有…機率觸發幸運子彈，且不會消耗彈藥」及「遠程擊殺可提高…遠程傷害」，英文寫「chance of triggering Lucky Bullet and not consuming Ammo」及「gain … Ranged Damage on Ranged Kills」；觸發與擊殺兩部分的條件和效果相符。
+- [原始碼推導與限制](ogryn_leadbelcher_no_ammo_chance.md)。
 
 <a id="ogryn_carapace_armor"></a>
 ## 麻木(Feel No Pain)

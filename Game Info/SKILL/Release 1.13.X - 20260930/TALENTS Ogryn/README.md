@@ -7,10 +7,11 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **86 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/ogryn_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L3-L10)。內部 tree version 25 不等於遊戲發行版號。
 
-完成 64／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 65／86 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
+| 鑰石 | [爆限超載](ogryn_leadbelcher_no_ammo_chance.md) / `ogryn_leadbelcher_no_ammo_chance` | `node_e64ae2d0-e20a-486a-8cf6-9208cb9dd9e6` | 完成（核心靜態機制） |
 | 鑰石 | [麻木](ogryn_carapace_armor.md) / `ogryn_carapace_armor` | `node_916ca2ec-b1d0-41c4-807b-a250950f9d5b` | 完成（核心靜態機制） |
 | 鑰石 | [痛楚爆發](ogryn_carapace_armor_trigger_on_zero_stacks.md) / `ogryn_carapace_armor_trigger_on_zero_stacks` | `node_a919d7de-281e-485f-aabb-5d7c18d3aa4c` | 完成（核心靜態機制） |
 | 鑰石 | [最強壯！](ogryn_carapace_armor_add_stack_on_push.md) / `ogryn_carapace_armor_add_stack_on_push` | `node_74124e64-9e74-4e38-a5ce-0ab0a8516736` | 完成（核心靜態機制） |

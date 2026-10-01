@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/ea712cab-0dd4-47fa-a2c5-98edb7e41783" width="32" height="32" alt="爆限超載天賦圖示"> [爆限超載](#ogryn_leadbelcher_no_ammo_chance)<br>- Burst Limiter Override | <ul><li>遠程攻擊有 15% 基礎機率觸發幸運子彈，觸發的射擊不消耗彈藥。</li><li>遠程擊殺每層增加 2% 遠程傷害，最多 10 層；加層時刷新 10 秒期限。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9436a125-4e9f-4655-ae8f-4975db2f4af1" width="32" height="32" alt="麻木天賦圖示"> [麻木](#ogryn_carapace_armor)<br>- Feel No Pain | <ul><li>開始時有 10 層麻木；每層增加韌性恢復，並使韌性所受傷害再乘以 0.97。</li><li>受到有效傷害時最多每秒失去一層；未滿層時每隔 2 秒恢復一層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c" width="32" height="32" alt="痛楚爆發天賦圖示"> [痛楚爆發](#ogryn_carapace_armor_trigger_on_zero_stacks)<br>- Pained Outburst | <ul><li>麻木失去一層後降至 4 層或更低時，會擊退附近敵人並恢復最大韌性的 50%。</li><li>此效果每 30 秒最多觸發一次；擊退爆發不造成直接傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3d442f9a-0143-43d7-a6e2-10a5d6b8a9f8" width="32" height="32" alt="最強壯！天賦圖示"> [最強壯！](#ogryn_carapace_armor_add_stack_on_push)<br>- Strongest! | <ul><li>推搡至少一名敵人時，麻木恢復 1 層。</li><li>麻木最多 10 層；一次推搡推中多人也只恢復 1 層。</li></ul> | 鑰石 |
@@ -75,6 +76,21 @@
 ---
 
 ## 鑰石
+
+<a id="ogryn_leadbelcher_no_ammo_chance"></a>
+### 爆限超載(Burst Limiter Override)
+
+<img src="https://github.com/user-attachments/assets/ea712cab-0dd4-47fa-a2c5-98edb7e41783" width="72" height="72" alt="爆限超載天賦圖示">
+
+- **幸運子彈**：有彈藥的遠程攻擊以 15% 基礎機率判定；觸發時該次射擊不消耗彈藥。 例如原本耗用 1 發，觸發後改為 0 發；機率會依先前判定調整，不是每發互相獨立擲骰。
+
+- **擊殺增傷**：遠程擊殺增加一層，每層提高 2% 遠程傷害，最多 10 層；再次擊殺會刷新 10 秒期限。
+
+- **算例**：5 次遠程擊殺增加 10% 遠程傷害；滿 10 層增加 20%，若基礎傷害為 100，則為 100 × 1.20 = 120。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_leadbelcher_no_ammo_chance.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="ogryn_carapace_armor"></a>
 ### 麻木(Feel No Pain)
