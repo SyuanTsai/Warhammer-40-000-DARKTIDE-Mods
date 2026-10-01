@@ -20,7 +20,7 @@
 | <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="火力齊射天賦圖示"> [火力齊射](#veteran_combat_ability_stance)<br>- Volley Fire | <ul><li>立即切換至遠程武器，姿態持續 6 秒，冷卻 30 秒。</li><li>遠程傷害 +15%、弱點額外傷害加成 +15%；兩項分別結算。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="滲透天賦圖示"> [滲透](#veteran_invisibility_on_combat_ability)<br>- Infiltrate | <ul><li>立即回滿自身韌性，並隱身最多 8 秒；</li><li>冷卻時間 40 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="低調天賦圖示"> [低調](#veteran_reduced_threat_after_combat_ability)<br>- Low Profile | <ul><li>使用戰鬥能力後，敵人選你為目標的仇恨權重降低 90%，持續 10 秒。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="32" height="32" alt="處決者姿態天賦圖示"> [處決者姿態](#veteran_combat_ability_elite_and_special_outlines)<br>- Executioner's Stance | <ul><li>強化火力齊射：遠程傷害與遠程弱點額外傷害加成各提高至 25%，遠程衝擊加成提高至 100%。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="32" height="32" alt="處決者姿態天賦圖示"> [處決者姿態](#veteran_combat_ability_elite_and_special_outlines)<br>- Executioner's Stance | <ul><li>強化火力齊射：遠程傷害與弱點額外傷害加成各提高至 25%，分別結算；遠程衝擊加成提高至 100%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/2afc79fa-02f2-4943-b4e7-abe35435f7bd" width="32" height="32" alt="目標引導增強天賦圖示"> [目標引導增強](#veteran_combat_ability_coherency_outlines)<br>- Enhanced Target Priority | <ul><li>效果：啟動處決者姿態時，協同範圍內的隊友也會看見精英與專家敵人的輪廓，持續 5 秒。</li><li>你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ca186661-9499-4f3f-9449-596caa35b7b6" width="32" height="32" alt="火力反擊天賦圖示"> [火力反擊](#veteran_combat_ability_ranged_roamer_outlines)<br>- Counter-Fire | <ul><li>效果：處決者姿態會額外標出一般射手與潛行者，例如血痂射手、渣滓潛行者。</li><li>啟動或刷新輪廓時，這些敵人必須在你 50 公尺內。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0c033c93-a850-4295-853d-10698ec96e89" width="32" height="32" alt="獵手決意天賦圖示"> [獵手決意](#veteran_toughness_bonus_leaving_invisibility)<br>- Hunter's Resolve | <ul><li>效果：啟動滲透時，受到的韌性傷害降低 50%；</li><li>隱身期間持續生效，解除隱身後再維持 10 秒。</li></ul> | 能力 |
@@ -339,15 +339,20 @@
 <img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="72" height="72" alt="處決者姿態天賦圖示">
 
 - **強化火力齊射：遠程傷害與遠程弱點額外傷害加成各提高至 25%，遠程衝擊加成提高至 100%。**
+- 兩項傷害加成各由 15% 提高至 25%，各增加 10 個百分點；弱點加成仍只強化額外傷害部分，整次命中的增幅依武器與目標而變。
 - 姿態持續 **6 秒**、冷卻 **30 秒**；期間每秒恢復 **10% 最大韌性**。
 - 顯示精英與專家敵人的輪廓；歐格林、巨獸與首領須搭配「敵人越大...」才能納入。一般精英限約 50 公尺內，專家不受這項距離限制。
 - 擊殺符合輪廓種類的敵人，將姿態重新刷新為 6 秒。冷卻持續計時；散布、後座力與晃動改善沿用火力齊射。
 
 #### 傷害、恢復與刷新算例
 
-- 單看遠程傷害階段，基礎傷害 100 且無其他加成：`100 × 1.25 = 125 傷害`。
-- 最大韌性 100、缺額足夠且無恢復加成：每秒 `100 × 10% = 10 點`，完整 6 秒約恢復 `10 × 6 = 60 點`。
-- 第 4 秒完成合資格擊殺，姿態維持至約第 `4 + 6 = 10 秒`。
+- **遠程傷害**：單看遠程傷害階段，基礎傷害 100 且無其他加成：火力齊射為 `100 × 1.15 = 115 點`，升級後為 `100 × 1.25 = 125 點`；相對於升級前增加 `10 ÷ 115 ≈ 8.70%`。
+
+- **弱點額外傷害**：只比較弱點加成的升級，固定其他效果結算後的基礎部分 100、未加成的弱點額外部分 40，且未爆擊、無其他額外傷害加成：由 `100 + 40 × 1.15 = 146 點` 變成 `100 + 40 × 1.25 = 150 點`，增加 `4 ÷ 146 ≈ 2.74%`。這只反映弱點加成由 15% 升至 25% 的差異，完整增幅還須納入遠程傷害的升級。
+
+- **韌性恢復**：最大韌性 100、缺額足夠且無恢復加成：每秒 `100 × 10% = 10 點`，完整 6 秒約恢復 `10 × 6 = 60 點`。
+
+- **刷新時間**：第 4 秒完成合資格擊殺，姿態維持至約第 `4 + 6 = 10 秒`。
 
 [詳細資料](TALENTS%20Veteran/veteran_combat_ability_elite_and_special_outlines.md) · [返回目錄](#talent-index)
 
