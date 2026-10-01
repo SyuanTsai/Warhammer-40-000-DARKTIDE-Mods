@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/35487761-88d3-4091-ac1b-bde3020e300e" width="32" height="32" alt="倍增狂熱天賦圖示"> [倍增狂熱](#zealot_additional_charge_of_ability)<br>- Redoubled Zeal | <ul><li>「倍增狂熱」把有信者之怒的戰鬥技能最大充能數從 1 提升為 2。</li><li>每次充能仍需 30 點共享冷卻資源、以每秒 1 點恢復；用完兩次後約 30 秒回一格、60 秒回滿。</li><li>額外充能只套用衝刺技能，不會增加不屈靈魂合唱或隱秘領域的充能。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/313c803f-9a12-4470-9660-ce9a8fd308c9" width="32" height="32" alt="隱秘領域天賦圖示"> [隱秘領域](#zealot_stealth)<br>- Shroudfield | <ul><li>隱秘領域讓玩家隱形 3 秒，基礎冷卻 30 秒、單次充能。</li><li>潛行期間：+20% 移動速度、+100% 暴擊機率、+150% 靈巧／背刺／側襲傷害，以及 +100% 近戰撕裂。</li><li>自身攻擊或特定動作會結束潛行；傷害種類、命中結果及動作事件會經程式篩選。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/064d2729-f3e2-4868-bc34-1bcf434d9f4d" width="32" height="32" alt="大師級隱秘領域天賦圖示"> [大師級隱秘領域](#zealot_increased_duration)<br>- Master-Crafted Shroudfield | <ul><li>大師級隱秘領域把隱秘領域持續時間由 3 秒延長 2 秒至 5 秒。</li><li>離開潛行時獲得 5 秒後續 buff：威脅權重乘以 0.25（降低 75%），背刺傷害 +50%。</li><li>後續 buff 只在脫離潛行時套用，並不延長隱形後的冷卻時間或額外提供隱身。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/d5730c05-1fc1-4fd5-9943-53bf390b9a7d" width="32" height="32" alt="振奮啟示天賦圖示"> [振奮啟示](#zealot_leaving_stealth_restores_toughness)<br>- Invigorating Revelation | <ul><li>振奮啟示在進入潛行時立即恢復最大韌性 50%。</li><li>離開潛行時獲得 8 秒防護；通用承受傷害倍率為 0.7，即該修正階段降低 30% 傷害。</li><li>韌性恢復發生在進入潛行，不是離開時；離開時套用的是減傷 buff。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="死戰到底天賦圖示"> [死戰到底](#zealot_resist_death)<br>- Until Death | <ul><li>承受致命傷害時獲得 8 秒免死效果。</li><li>效果結束後冷卻 120 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="殉道天賦圖示"> [殉道](#zealot_martyrdom)<br>- Martyrdom | <ul><li>每失去一整格生命，近戰傷害增加 10%，最多 5 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="32" height="32" alt="不滅意志天賦圖示"> [不滅意志](#zealot_martyrdom_grants_toughness)<br>- I Shall Not Fall | <ul><li>殉道每缺少一格生命傷口，韌性承傷降低 7.5%，最多 5 格。</li></ul> | 鑰石 |
@@ -193,6 +194,21 @@
 - **傷害與威脅算例**：固定其他條件，背刺階段基準 100 點變成 100 × 1.5 = 150；已有同階段 20% 背刺加成時為 170 點。原本威脅權重 100 變成 100 × 0.25 = 25，並不代表敵人鎖定你的機率固定剩 25%。
 
 [詳細資料](TALENTS%20Zealot/zealot_increased_duration.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_leaving_stealth_restores_toughness"></a>
+### 振奮啟示(Invigorating Revelation)
+
+<img src="https://github.com/user-attachments/assets/d5730c05-1fc1-4fd5-9943-53bf390b9a7d" width="72" height="72" alt="振奮啟示天賦圖示">
+
+- **韌性恢復**：進入隱秘領域時，立即恢復 50% 最大韌性；離開隱身時不會再補一次。
+
+- **減傷效果**：離開隱身後獲得 30% 傷害減免，持續 8 秒。
+
+- **恢復與減傷算例**：最大韌性 100、目前 20，進入時補 100 × 50% = 50 點至 70；若只缺 30 點就只補 30 點。離開後原本 100 點傷害變成 100 × 0.7 = 70；另有獨立 25% 減傷時為 52.5 點。
+
+[詳細資料](TALENTS%20Zealot/zealot_leaving_stealth_restores_toughness.md) · [返回目錄](#talent-index)
 
 ---
 
