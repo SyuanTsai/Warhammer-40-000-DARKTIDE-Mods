@@ -14,6 +14,7 @@
 | [教宗之喚](#zealot_channel_grants_damage) | 明確繁中誤譯 |
 | [倍增狂熱](#zealot_additional_charge_of_ability) | 未見明確矛盾 |
 | [隱秘領域](#zealot_stealth) | 未見明確矛盾 |
+| [大師級隱秘領域](#zealot_increased_duration) | 措辭方向待同版核對 |
 | [死戰到底](#zealot_resist_death) | 未見明確矛盾 |
 | [殉道](#zealot_martyrdom) | 未見明確矛盾 |
 | [不滅意志](#zealot_martyrdom_grants_toughness) | 未見明確矛盾 |
@@ -113,6 +114,13 @@
 - 描述鍵：`loc_ability_zealot_stealth_rending_description`；hash：`644f101d`。
 - 結論：未見明確矛盾。同一hash的繁中與英文作用方向相符；補足觸發、疊層、恢復量與實際計算，不把原文省略當錯誤。
 - [原始碼推導與限制](zealot_stealth.md)。
+
+<a id="zealot_increased_duration"></a>
+## 大師級隱秘領域(Master-Crafted Shroudfield)
+
+- 描述鍵：`loc_talent_zealot_stealth_duration_threat_damage_desc`；hash：`f25397d4`。
+- 結論：措辭方向待同版核對。同hash英文明為gain帶符號的Threat，繁中預先寫提高；固定來源格式參數是−75%，實作倍率.25，故主文寫降低75%。尚無同版本最終格式化畫面，保留為措辭疑點，不當成已證實的遊戲顯示錯誤。
+- [原始碼推導與限制](zealot_increased_duration.md)。
 
 <a id="zealot_resist_death"></a>
 ## 死戰到底(Until Death)
