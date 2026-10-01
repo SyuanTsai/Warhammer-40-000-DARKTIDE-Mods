@@ -25,6 +25,7 @@
 | 技能 | [遊擊者(Skirmisher)](#veteran_increase_damage_after_sprinting) | 衝刺或滑行時持續累積傷害加成，每層增加 6.25%，最多 4 層。 |
 | 技能 | [趁火打劫(Exploit Weakness)](#veteran_crits_apply_rending) | 近戰爆擊命中後，傷害增加 20%，持續 6 秒。 |
 | 技能 | [不拋棄不放棄(Leave No One Behind)](#veteran_movement_speed_towards_downed) | 面向需要援助的隊友時，移動速度增加 20%，並免疫暈眩。 |
+| 技能 | [裂擊(Rending Strikes)](#veteran_rending_bonus) | 武器獲得 10% 撕裂。 |
 | 技能 | [韌性提升(Toughness Boost)](#base_toughness_node_buff_medium_2) | 最大韌性增加 25 點。 |
 | 技能 | [殺戮地帶(Kill Zone)](#veteran_ranged_power_out_of_melee) | 未被近戰命中一段時間後，增加遠程傷害 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
@@ -410,6 +411,24 @@
 - 原本受到 100 傷害，只計救起後的減傷：`100 × 0.67 = 67 傷害`。
 
 [詳細資料](TALENTS%20Veteran/veteran_movement_speed_towards_downed.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_rending_bonus"></a>
+
+### 裂擊(Rending Strikes)
+
+<img src="https://github.com/user-attachments/assets/cc7841b0-9637-4d35-8bca-c2c418798875" width="72" height="72" alt="裂擊天賦圖示">
+
+- **武器獲得 10% 撕裂。**
+- 撕裂改善對裝甲等適用目標的傷害；無甲目標不受這項護甲修正影響。
+
+#### 護甲與傷害算例
+
+- 假設基礎傷害 100，對某甲殼護甲的原倍率為 0.5，沒有其他加成：由 `100 × 0.5 = 50` 變為 `100 × (0.5 + 0.1) = 60 傷害`。
+- 同一護甲的原倍率已達 1 時，超出的撕裂按四分之一換算：`100 × (1 + 0.1 × 0.25) = 102.5 傷害`。
+
+[詳細資料](TALENTS%20Veteran/veteran_rending_bonus.md) · [返回目錄](#talent-index)
 
 ---
 

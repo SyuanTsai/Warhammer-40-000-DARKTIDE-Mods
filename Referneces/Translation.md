@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_rending_bonus` / `veteran_rending_bonus` - 裂擊
+  - 英文對應：Rending Strikes。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2433-L2456)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_movement_speed_towards_downed` / `veteran_movement_speed_towards_downed` - 不拋棄不放棄
   - 英文對應：Leave No One Behind。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1709-L1749)；此來源證明識別鍵與天賦關係。
