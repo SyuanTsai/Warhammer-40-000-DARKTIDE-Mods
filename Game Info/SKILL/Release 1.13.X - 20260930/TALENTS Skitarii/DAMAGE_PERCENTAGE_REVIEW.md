@@ -47,6 +47,7 @@
 | [標記優先聖詩](cryptic_specials_marking.md) | 顯示 12.5 公尺內專家敵人的輪廓；完整計算與適用限制見來源文件。 |
 | [守護協議](cryptic_disabled_allies_defense.md) | 協同隊友失去行動能力時，受到傷害降低 25%；親自救援後，再給 6 秒減傷與一般硬直免疫；完整計算與適用限制見來源文件。 |
 | [數據感應協定](cryptic_ally_coherency_defenses.md) | 你或協同隊友受到韌性傷害，受傷者恢復 25% 耐力；受到生命傷害則恢復 25% 韌性，兩類各冷卻 15 秒；完整計算與適用限制見來源文件。 |
+| [序列充能](cryptic_strength_on_charge_gain.md) | 獲得完整電容量時，威力提高 12.5%、持續 10 秒；完整計算與適用限制見來源文件。 |
 | [精準戰鬥探測儀](cryptic_next_hit_all_damage_on_dodge.md) | 成功閃避後，下次近戰攻擊或射擊傷害提高 15%；完整計算與適用限制見來源文件。 |
 | [電流爆發](cryptic_electrocution_push.md) | 推擊造成踉蹌時施加電擊；冷卻 12 秒；完整計算與適用限制見來源文件。 |
 | [抗腐護符](cryptic_corruption_resistance_doom.md) | 受到的腐敗減少 90%；每 20 秒付出基準 1 點腐敗代價；完整計算與適用限制見來源文件。 |

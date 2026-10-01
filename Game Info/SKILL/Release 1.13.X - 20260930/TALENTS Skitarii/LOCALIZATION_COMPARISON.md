@@ -49,6 +49,7 @@
 | [標記優先聖詩](#cryptic_specials_marking) | 未見明確矛盾 |
 | [守護協議](#cryptic_disabled_allies_defense) | 未見明確矛盾 |
 | [數據感應協定](#cryptic_ally_coherency_defenses) | 受益對象用語有誤 |
+| [序列充能](#cryptic_strength_on_charge_gain) | 未見明確矛盾 |
 | [精準戰鬥探測儀](#cryptic_next_hit_all_damage_on_dodge) | 未見明確矛盾 |
 | [電流爆發](#cryptic_electrocution_push) | 未見明確矛盾 |
 | [抗腐護符](#cryptic_corruption_resistance_doom) | 未見明確矛盾 |
@@ -344,6 +345,13 @@
 - 繁中原文短引：當你或協同中的盟友受到韌性傷害時，盟友恢復{stamina:%s}耐力。冷卻時間{stamina_cd:%s}秒。
 - 同源英文：When you or an Ally in Coherency take toughness damage, they restore {stamina:%s} Stamina. {stamina_cd:%s}s Cooldown.
 - [原始碼推導與限制](cryptic_ally_coherency_defenses.md)。
+
+<a id="cryptic_strength_on_charge_gain"></a>
+## 序列充能(Sequenced Charge)
+
+- 描述鍵：`loc_talent_cryptic_strength_on_charge_gain_desc`；hash：`9e3a3df6`。
+- 結論：未見明確矛盾。繁中力量與英文Strength對應威力效果；補充完整份數及結算量。
+- [原始碼推導與限制](cryptic_strength_on_charge_gain.md)。
 
 <a id="cryptic_next_hit_all_damage_on_dodge"></a>
 ## 精準戰鬥探測儀(Precision Combat Augurs)
