@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce" width="32" height="32" alt="腎上腺素突破天賦圖示"> [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5)<br>- Adrenaline Unbound | <ul><li>狂暴期間每秒恢復最大韌性的 5%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/2b1aa9f6-20e2-4d38-b2fb-6af765a426ca" width="32" height="32" alt="失控攻擊天賦圖示"> [失控攻擊](#broker_keystone_adrenaline_junkie_sub_4)<br>- Uncontrolled Aggression | <ul><li>每層腎上腺素的持續時間由 2 秒提高至 4 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/29f93050-b0a8-48ca-88fe-2e40d9769a99" width="32" height="32" alt="腎上腺素懲戒者天賦圖示"> [腎上腺素懲戒者](#broker_keystone_adrenaline_junkie_sub_2)<br>- Adrenaline Smiter | <ul><li>只有近戰擊殺才會取得腎上腺素：一般擊殺額外 +4 層，精英擊殺再額外 +10 層。</li><li>非擊殺的近戰命中不給層；爆擊擊殺仍保留核心的額外 1 層。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/8f760271-d6e2-4a80-88ef-01c7007941dc" width="32" height="32" alt="過街老鼠天賦圖示"> [過街老鼠](#broker_passive_longer_dodges)<br>- Alley Rat | <ul><li>閃避距離提高 50%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852" width="32" height="32" alt="快速且致命天賦圖示"> [快速且致命](#broker_passive_close_range_damage_on_dodge)<br>- Quick and Deadly | <ul><li>成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16" width="32" height="32" alt="特提恩是迎賓天賦圖示"> [特提恩是迎賓](#broker_passive_first_target_damage)<br>- A Tertium Welcome | <ul><li>每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/caab00a6-dc0b-49ff-9d76-836ed680d22f" width="32" height="32" alt="打你的臉天賦圖示"> [打你的臉](#broker_passive_close_ranged_damage)<br>- In Your Face | <ul><li>手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。</li></ul> | 技能 |
@@ -526,6 +527,21 @@
 - **精英判定**：額外 10 層只看精英分類；只有專家分類的敵人不算此精英加成。
 
 [詳細資料](TALENTS%20Scum/broker_keystone_adrenaline_junkie_sub_2.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_passive_longer_dodges"></a>
+### 過街老鼠(Alley Rat)
+
+<img src="https://github.com/user-attachments/assets/8f760271-d6e2-4a80-88ef-01c7007941dc" width="72" height="72" alt="過街老鼠天賦圖示">
+
+- **距離加成**：閃避距離增加 50%。
+
+- **距離算例**：以職業基礎 2.5 公尺，且沒有武器修正或連續閃避衰減計算，變成 2.5 × 1.5 = 3.75 公尺。
+
+- **實際距離**：武器的閃避設定、連續閃避衰減，以及攻擊狀態仍會影響最終移動距離。
+
+[詳細資料](TALENTS%20Scum/broker_passive_longer_dodges.md) · [返回目錄](#talent-index)
 
 ---
 

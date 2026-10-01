@@ -33,6 +33,7 @@
 | [腎上腺素突破](broker_keystone_adrenaline_junkie_sub_5.md) | 狂暴期間每秒恢復最大韌性的 5%。；完整計算與適用限制見來源文件。 |
 | [失控攻擊](broker_keystone_adrenaline_junkie_sub_4.md) | 每層腎上腺素的持續時間由 2 秒提高至 4 秒。；完整計算與適用限制見來源文件。 |
 | [腎上腺素懲戒者](broker_keystone_adrenaline_junkie_sub_2.md) | 只有近戰擊殺才會取得腎上腺素：一般擊殺額外 +4 層，精英擊殺再額外 +10 層。；非擊殺的近戰命中不給層；爆擊擊殺仍保留核心的額外 1 層。；完整計算與適用限制見來源文件。 |
+| [過街老鼠](broker_passive_longer_dodges.md) | 閃避距離提高 50%。；完整計算與適用限制見來源文件。 |
 | [快速且致命](broker_passive_close_range_damage_on_dodge.md) | 成功閃避後，近距離傷害增加 15%，持續 3 秒；加成隨距離衰減。；完整計算與適用限制見來源文件。 |
 | [特提恩是迎賓](broker_passive_first_target_damage.md) | 每次近戰攻擊命中的第一名敵人，受到的近戰傷害提高 15%。；完整計算與適用限制見來源文件。 |
 | [打你的臉](broker_passive_close_ranged_damage.md) | 手持遠程武器時，12.5 公尺內增傷 25%，逐步衰減至 30 公尺外的 10%。；完整計算與適用限制見來源文件。 |

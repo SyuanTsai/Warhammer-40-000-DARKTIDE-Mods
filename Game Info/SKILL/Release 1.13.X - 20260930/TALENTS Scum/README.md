@@ -7,7 +7,7 @@
 固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **79 個可選節點**，均為一點；同一配置最多分配 30 點。
 [職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/broker_archetype.lua#L50-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L3-L10)。內部 tree version 15 不等於遊戲發行版號。
 
-完成 72／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
+完成 73／79 項核心靜態機制核對。名稱沿用翻譯表；尚未進行遊戲內驗證。
 
 | 分類 | 繁中名稱 / talent ID | node ID | 狀態 |
 |---|---|---|---|
@@ -38,6 +38,7 @@
 | 鑰石 | [腎上腺素突破](broker_keystone_adrenaline_junkie_sub_5.md) / `broker_keystone_adrenaline_junkie_sub_5` | `node_084b7585-f08d-497a-939b-848ffcb58960` | 完成（核心靜態機制） |
 | 鑰石 | [失控攻擊](broker_keystone_adrenaline_junkie_sub_4.md) / `broker_keystone_adrenaline_junkie_sub_4` | `node_43d2abfa-c6f8-4ab7-8469-148b526040c2` | 完成（核心靜態機制） |
 | 鑰石 | [腎上腺素懲戒者](broker_keystone_adrenaline_junkie_sub_2.md) / `broker_keystone_adrenaline_junkie_sub_2` | `node_8277fab7-51c3-4697-aa79-d80ddcb6060e` | 完成（核心靜態機制） |
+| 鑰石 | [過街老鼠](broker_passive_longer_dodges.md) / `broker_passive_longer_dodges` | `node_f6f53560-cd00-4602-9903-4961484ade18` | 完成（核心靜態機制） |
 | 技能 | [快速且致命](broker_passive_close_range_damage_on_dodge.md) / `broker_passive_close_range_damage_on_dodge` | `node_a8bc4def-415e-4b1b-9b1d-6f2783c5323d` | 完成（核心靜態機制） |
 | 技能 | [特提恩是迎賓](broker_passive_first_target_damage.md) / `broker_passive_first_target_damage` | `node_546ca755-3d86-41f5-bfc3-01a388f9471a` | 完成（核心靜態機制） |
 | 技能 | [打你的臉](broker_passive_close_ranged_damage.md) / `broker_passive_close_ranged_damage` | `node_61e47549-aaca-4298-977e-ece3e68e2372` | 完成（核心靜態機制） |

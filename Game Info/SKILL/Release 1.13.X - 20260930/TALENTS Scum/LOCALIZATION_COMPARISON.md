@@ -35,6 +35,7 @@
 | [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5) | 未見明確矛盾 |
 | [失控攻擊](#broker_keystone_adrenaline_junkie_sub_4) | 未見明確矛盾 |
 | [腎上腺素懲戒者](#broker_keystone_adrenaline_junkie_sub_2) | 未見明確矛盾 |
+| [過街老鼠](#broker_passive_longer_dodges) | 未見明確矛盾 |
 | [快速且致命](#broker_passive_close_range_damage_on_dodge) | 未見明確矛盾 |
 | [特提恩是迎賓](#broker_passive_first_target_damage) | 未見明確矛盾 |
 | [打你的臉](#broker_passive_close_ranged_damage) | 未見明確矛盾 |
@@ -271,6 +272,13 @@
 - 描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_2_desc`；hash：`e0b9d68a`。
 - 結論：未見明確矛盾。繁中與英文都把額外層限定於擊殺，並排除非擊殺命中；程式另確認一般擊殺 +4、elite tag 擊殺再 +10，暴擊的核心額外層仍保留。
 - [原始碼推導與限制](broker_keystone_adrenaline_junkie_sub_2.md)。
+
+<a id="broker_passive_longer_dodges"></a>
+## 過街老鼠(Alley Rat)
+
+- 描述鍵：`loc_talent_broker_passive_longer_dodges_desc`；hash：`22b08fe3`。
+- 結論：未見明確矛盾。繁中「閃避距離」與英文 Dodge Distance 指向同一 stat；程式在基準倍率上增加 50%，實際閃避距離按完整距離公式計算。
+- [原始碼推導與限制](broker_passive_longer_dodges.md)。
 
 <a id="broker_passive_close_range_damage_on_dodge"></a>
 ## 快速且致命(Quick and Deadly)
