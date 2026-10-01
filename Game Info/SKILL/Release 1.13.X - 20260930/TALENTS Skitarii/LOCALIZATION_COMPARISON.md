@@ -39,6 +39,7 @@
 | [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed) | 未見明確矛盾；補充計算與限制 |
 | [熟練解剖者](#cryptic_dissector_max_stacks) | 未見明確矛盾；補充計算與限制 |
 | [進階能量管理](#cryptic_redline_strength) | 未見明確矛盾 |
+| [資源最佳化聖歌](#cryptic_redline_extra_max_stacks) | 未見明確矛盾 |
 | [強化電容協議](#cryptic_dissector_ability_stacks) | 未見明確矛盾；補充計算與限制 |
 | [崇高意圖](#cryptic_dissector_power) | 未見明確矛盾；補充計算與限制 |
 | [能量載分配鏈路](#cryptic_crits_grant_tdr) | 未見明確矛盾 |
@@ -310,6 +311,13 @@
 - 描述鍵：`loc_talent_cryptic_redline_strength_clarified_desc`；hash：`4e708242`。
 - 結論：未見明確矛盾。本機繁中與英文都描述使用能力時按當時持有的充能取得力量，並寫明持續時間；固定版依使用前充能數增加層數，每層套用5%威力等級修正、最多5層並刷新10秒。UI未直接說明該力量修正作用於威力等級，也未列出上限；這些是程式細節的補充，不構成明確翻譯錯誤。
 - [原始碼推導與限制](cryptic_redline_strength.md)。
+
+<a id="cryptic_redline_extra_max_stacks"></a>
+## 資源最佳化聖歌(Resource Optimisation Canticles)
+
+- 描述鍵：`loc_talent_cryptic_redline_stacks_clarified_desc`；hash：`b176ca53`。
+- 結論：未見明確矛盾。繁中與英文都列出戰鬥技能最大充能與極限電容最大層數各增加1；固定版設定分別為 +1 ability_extra_charges 與 +1 額外極限電容層數。根鑰石原有 +1 最大充能屬於前置效果，UI在本修正正文中未重述不算翻譯錯誤。
+- [原始碼推導與限制](cryptic_redline_extra_max_stacks.md)。
 
 <a id="cryptic_dissector_ability_stacks"></a>
 ## 強化電容協議(Enhanced Capacitance Protocols)

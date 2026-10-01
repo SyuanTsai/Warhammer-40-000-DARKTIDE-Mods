@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402" width="32" height="32" alt="伺服肌腱湧動天賦圖示"> [伺服肌腱湧動](#cryptic_dissector_crit_attack_speed)<br>- Servo-Sinew Surge | <ul><li>每層削切協議額外提供1.5%暴擊率與1.5%近戰攻擊速度；效果隨削切協議層數變動。</li><li>6層時增加9個百分點暴擊率與9%近戰攻速；8層時分別增加12個百分點與12%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444" width="32" height="32" alt="熟練解剖者天賦圖示"> [熟練解剖者](#cryptic_dissector_max_stacks)<br>- Honed Dissector | <ul><li>將削切協議層數上限從6提高到8；啟用時會直接從8層開始。</li><li>新增加的2層沿用原本每層傷害與韌性承傷步進，滿8層相當於傷害+20%、韌性承傷倍率0.80。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84" width="32" height="32" alt="進階能量管理天賦圖示"> [進階能量管理](#cryptic_redline_strength)<br>- Advanced Power Management | <ul><li>使用戰鬥技能時，依使用前持有的充能數增加力量效果；每份充能提供5%威力加成，效果最多累積5層並持續10秒。</li><li>新增加層會刷新10秒倒數；層數到達5層後不再增加，但後續觸發仍會刷新時間。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/96e3fb15-c1fd-4702-a6ef-0f69b10931fe" width="32" height="32" alt="資源最佳化聖歌天賦圖示"> [資源最佳化聖歌](#cryptic_redline_extra_max_stacks)<br>- Resource Optimisation Canticles | <ul><li>使戰鬥技能最大充能再增加1道，並將極限電容層數上限由4層提高至5層。</li><li>極限電容每層的韌性減傷仍依原本5%步進；5層時承受的韌性傷害為原始值的75%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/de2e3c8c-8b4c-4859-87d0-c1416c07ef5c" width="32" height="32" alt="強化電容協議天賦圖示"> [強化電容協議](#cryptic_dissector_ability_stacks)<br>- Enhanced Capacitance Protocols | <ul><li>使用戰鬥能力時，將削切協議補至目前上限。</li><li>層數仍沿用削切協議的受傷失層規則，並保留其每層傷害與韌性減傷。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca" width="32" height="32" alt="崇高意圖天賦圖示"> [崇高意圖](#cryptic_dissector_power)<br>- Higher Purpose | <ul><li>精英或專家擊殺額外回復戰鬥技能充能資源2.5%；這是加在護教軍原有的精英／專家擊殺4%回復上，合計6.5%。</li><li>以單份充能為基準；進階戰鬥教範啟用期間不會觸發。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/6ce866b5-8bad-4668-94c0-c0c6c5a06944" width="32" height="32" alt="能量載分配鏈路天賦圖示"> [能量載分配鏈路](#cryptic_crits_grant_tdr)<br>- Power Redistribution Uplink | <ul><li>爆擊命中後，3 秒內恢復 7.5% 韌性</li><li>期間承受的韌性傷害降低 15%</li></ul> | 技能 |
@@ -588,6 +589,23 @@
 - **搭配限制**：弦爪持續出招期間的再次發動不會重複觸發這項效果；需先結束弦爪，再次啟用能力。
 
 [詳細資料](TALENTS%20Skitarii/cryptic_redline_strength.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="cryptic_redline_extra_max_stacks"></a>
+### 資源最佳化聖歌(Resource Optimisation Canticles)
+
+<img src="https://github.com/user-attachments/assets/96e3fb15-c1fd-4702-a6ef-0f69b10931fe" width="72" height="72" alt="資源最佳化聖歌天賦圖示">
+
+- **效果**：戰鬥技能最大充能增加1道，極限電容的最大層數也增加1層，從4層變為5層。
+
+- **充能算例**：護教軍戰鬥能力基礎上限3份，「極限電容」增加1份，本天賦再增加1份，合計3 + 1 + 1 = 5份。電能發射器每次仍最多消耗3份。
+
+- **減傷算例**：極限電容達5層時，韌性承傷倍率為0.75；若一次攻擊原本會對韌性造成100點傷害，套用後承受75點。
+
+- **恢復算例**：極限電容5層時，自然恢復速率增加25%；沒有其他修正時，每秒由單份的2%提高至2% × 1.25 = 2.5%。
+
+[詳細資料](TALENTS%20Skitarii/cryptic_redline_extra_max_stacks.md) · [返回目錄](#talent-index)
 
 ---
 
