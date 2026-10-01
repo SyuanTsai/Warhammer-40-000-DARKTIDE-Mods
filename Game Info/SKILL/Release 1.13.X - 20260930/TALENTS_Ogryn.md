@@ -50,6 +50,7 @@
 | <img src="https://github.com/user-attachments/assets/6fbf8a63-5e26-482f-9964-01eb0598b142" width="32" height="32" alt="大肌肌天賦圖示"> [大肌肌](#ogryn_damage_reduction_after_elite_kill)<br>- Strongman | <ul><li>擊殺精英或專家後，受到的傷害減少 10%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ce3b22d4-870e-4496-96fc-33601f9d9a62" width="32" height="32" alt="穩定握持天賦圖示"> [穩定握持](#ogryn_toughness_while_bracing)<br>- Steady Grip | <ul><li>架槍或射擊時，每秒恢復最大韌性的 12.5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/b7e2a92b-0a60-459a-87c9-6276b204f64e" width="32" height="32" alt="休想再打中我......天賦圖示"> [休想再打中我......](#ogryn_ranged_damage_immunity)<br>- Can't Hit Me...Again | <ul><li>受到遠程傷害後，獲得 20% 遠程減傷，持續 2.5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/5974d1c4-5b31-42b8-af90-022202c4614e" width="32" height="32" alt="熟能生巧天賦圖示"> [熟能生巧](#ogryn_wield_speed_increase)<br>- Dedicated Practice | <ul><li>武器切換速度提高 35%。</li></ul> | 技能 |
 
 ---
 
@@ -716,5 +717,22 @@
 - **減傷算例**：效果期間，此階段 100 點遠程傷害變成 80 點；近戰傷害不受這項減免影響。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_ranged_damage_immunity.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_wield_speed_increase"></a>
+### 熟能生巧(Dedicated Practice)
+
+<img src="https://github.com/user-attachments/assets/5974d1c4-5b31-42b8-af90-022202c4614e" width="72" height="72" alt="熟能生巧天賦圖示">
+
+- **效果**：提高 35% 武器切換速度，減少受這項速度控制的拔出武器動作時間；不提高換彈速度。
+
+- **時間算例**：原本 1 秒的動作變成 1 ÷ 1.35 ≈ 0.741 秒，約縮短 25.9%；不是縮短至原本的 35%，也不是直接減少 35% 時間。
+
+#### 繁中原文勘誤
+
+- 原文「武器切換速度縮短為 +35%」混淆速度與時間。應為「武器切換速度提高 35%」，相同動作約需原時間的 74.1%。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_wield_speed_increase.md) · [返回目錄](#talent-index)
 
 ---

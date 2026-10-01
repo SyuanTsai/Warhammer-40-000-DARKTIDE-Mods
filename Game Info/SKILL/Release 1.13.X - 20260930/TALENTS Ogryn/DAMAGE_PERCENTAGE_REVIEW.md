@@ -50,3 +50,4 @@
 | [大肌肌](ogryn_damage_reduction_after_elite_kill.md) | 擊殺精英或專家後，受到的傷害減少 10%，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [穩定握持](ogryn_toughness_while_bracing.md) | 架槍或射擊時，每秒恢復最大韌性的 12.5%。；完整計算與適用限制見來源文件。 |
 | [休想再打中我......](ogryn_ranged_damage_immunity.md) | 受到遠程傷害後，獲得 20% 遠程減傷，持續 2.5 秒。；完整計算與適用限制見來源文件。 |
+| [熟能生巧](ogryn_wield_speed_increase.md) | 武器切換速度提高 35%。；完整計算與適用限制見來源文件。 |

@@ -52,6 +52,7 @@
 | [大肌肌](#ogryn_damage_reduction_after_elite_kill) | 未見明確矛盾 |
 | [穩定握持](#ogryn_toughness_while_bracing) | 未見明確矛盾 |
 | [休想再打中我......](#ogryn_ranged_damage_immunity) | 未見明確矛盾 |
+| [熟能生巧](#ogryn_wield_speed_increase) | 繁中描述錯誤 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -366,3 +367,12 @@
 - 描述鍵：`loc_talent_ogryn_ranged_damage_immunity_desc`；hash：`5b06263e`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_ranged_damage_immunity.md)。
+
+<a id="ogryn_wield_speed_increase"></a>
+## 熟能生巧(Dedicated Practice)
+
+- 描述鍵：`loc_talent_ogryn_wield_speed_increase_desc`；hash：`6349b08e`。
+- 結論：繁中描述錯誤。英文是增加Weapon Swap Speed，繁中寫「縮短為」把速度增幅誤當時間剩餘比例；不是單純省略公式。
+- 繁中原文短引：武器切換速度縮短為{wield_speed:%s}。
+- 同源英文：{wield_speed:%s} Weapon Swap Speed.
+- [原始碼推導與限制](ogryn_wield_speed_increase.md)。
