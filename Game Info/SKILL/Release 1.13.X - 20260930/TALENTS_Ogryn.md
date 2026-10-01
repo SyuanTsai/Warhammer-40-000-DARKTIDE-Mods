@@ -48,6 +48,7 @@
 | <img src="https://github.com/user-attachments/assets/373afc07-72d5-4815-91c0-0e5d0d02d279" width="32" height="32" alt="擊潰他們天賦圖示"> [擊潰他們](#ogryn_melee_damage_after_heavy)<br>- Beat Them Back | <ul><li>重擊命中後，近戰傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d21c7405-647a-4da2-a396-16b9c5cd8819" width="32" height="32" alt="專注天賦圖示"> [專注](#ogryn_drain_stamina_for_handling)<br>- Concentrate | <ul><li>架槍時消耗耐力，降低 60% 晃動、20% 散布與 15% 後座力。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6fbf8a63-5e26-482f-9964-01eb0598b142" width="32" height="32" alt="大肌肌天賦圖示"> [大肌肌](#ogryn_damage_reduction_after_elite_kill)<br>- Strongman | <ul><li>擊殺精英或專家後，受到的傷害減少 10%，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/ce3b22d4-870e-4496-96fc-33601f9d9a62" width="32" height="32" alt="穩定握持天賦圖示"> [穩定握持](#ogryn_toughness_while_bracing)<br>- Steady Grip | <ul><li>架槍或射擊時，每秒恢復最大韌性的 12.5%。</li></ul> | 技能 |
 
 ---
 
@@ -684,5 +685,20 @@
 - **減傷算例**：只計此效果，100 點變成 90 點；另有獨立 20% 減傷時為 100 × 0.9 × 0.8 = 72 點。
 
 [詳細資料](TALENTS%20Ogryn/ogryn_damage_reduction_after_elite_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="ogryn_toughness_while_bracing"></a>
+### 穩定握持(Steady Grip)
+
+<img src="https://github.com/user-attachments/assets/ce3b22d4-870e-4496-96fc-33601f9d9a62" width="72" height="72" alt="穩定握持天賦圖示">
+
+- **恢復條件**：架起遠程武器或正在射擊時，持續恢復韌性；射擊停止後仍保留約 0.5 秒的射擊判定。
+
+- **恢復算例**：最大韌性 200 時，每秒基礎恢復 200 × 12.5% = 25 點；持續 2 秒共 50 點。韌性恢復加成可再修正回復量，且不會超過缺少的韌性。
+
+- **效果性質**：這是額外持續回復，不是讓原本的協同自然回復只提高 12.5%。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_toughness_while_bracing.md) · [返回目錄](#talent-index)
 
 ---

@@ -50,6 +50,7 @@
 | [擊潰他們](#ogryn_melee_damage_after_heavy) | 未見明確矛盾 |
 | [專注](#ogryn_drain_stamina_for_handling) | 未見明確矛盾 |
 | [大肌肌](#ogryn_damage_reduction_after_elite_kill) | 未見明確矛盾 |
+| [穩定握持](#ogryn_toughness_while_bracing) | 未見明確矛盾 |
 
 <a id="ogryn_multi_heavy_toughness"></a>
 ## 最好的防禦(The Best Defence)
@@ -350,3 +351,10 @@
 - 描述鍵：`loc_talent_ogryn_damage_reduction_after_elite_kill_desc`；hash：`fb76eb37`。
 - 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
 - [原始碼推導與限制](ogryn_damage_reduction_after_elite_kill.md)。
+
+<a id="ogryn_toughness_while_bracing"></a>
+## 穩定握持(Steady Grip)
+
+- 描述鍵：`loc_talent_ogryn_toughness_regen_while_bracing_or_shooting_desc`；hash：`c73dc498`。
+- 結論：未見明確矛盾。核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+- [原始碼推導與限制](ogryn_toughness_while_bracing.md)。

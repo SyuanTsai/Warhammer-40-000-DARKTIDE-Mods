@@ -48,3 +48,4 @@
 | [擊潰他們](ogryn_melee_damage_after_heavy.md) | 重擊命中後，近戰傷害提高 15%，持續 5 秒。；完整計算與適用限制見來源文件。 |
 | [專注](ogryn_drain_stamina_for_handling.md) | 架槍時消耗耐力，降低 60% 晃動、20% 散布與 15% 後座力。；完整計算與適用限制見來源文件。 |
 | [大肌肌](ogryn_damage_reduction_after_elite_kill.md) | 擊殺精英或專家後，受到的傷害減少 10%，持續 5 秒。；完整計算與適用限制見來源文件。 |
+| [穩定握持](ogryn_toughness_while_bracing.md) | 架槍或射擊時，每秒恢復最大韌性的 12.5%。；完整計算與適用限制見來源文件。 |
