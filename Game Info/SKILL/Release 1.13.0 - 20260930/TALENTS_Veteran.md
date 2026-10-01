@@ -18,6 +18,7 @@
 | 能力 | [掩護射擊(Overwatch)](#veteran_combat_ability_extra_charge) | 滲透可保留兩次，冷卻時間增加 |
 | 鑰石 | [狙擊專注(Marksman's Focus)](#veteran_snipers_focus) | 遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程爆擊或弱點命中的額外傷害增加 7.5%，裝填速度增加 1%。 |
 | 鑰石 | [滲透盔甲(Chink in their Armour)](#veteran_snipers_focus_rending_bonus) | 狙擊專注達到 10 層時，獲得 15% 撕裂；低於 10 層後失效。 |
+| 鑰石 | [視野狹窄(Tunnel Vision)](#veteran_snipers_focus_toughness_bonus) | 每層狙擊專注使韌性恢復量增加 4%。 |
 | 技能 | [爆破小隊(Demolition Team)](#veteran_aura_elite_kills_restore_grenade) | 你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。 |
 | 技能 | [戰術裝填(Tactical Reload)](#veteran_faster_reload_on_non_empty_clips) | 彈匣還有彈藥時開始裝填，裝填速度增加 25%。 |
 | 技能 | [齊射能手(Volley Adept)](#veteran_reload_speed_on_elite_kill) | 擊殺精英或專家敵人後，下一次裝填速度增加 30%。 |
@@ -290,6 +291,25 @@
 - 若另有 10% 撕裂，同一條件為 `100 × (0.5 + 0.15 + 0.1) = 75 傷害`。
 
 [詳細資料](TALENTS%20Veteran/veteran_snipers_focus_rending_bonus.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_snipers_focus_toughness_bonus"></a>
+
+### 視野狹窄(Tunnel Vision)
+
+<img src="https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f" width="72" height="72" alt="視野狹窄天賦圖示">
+
+- **每層狙擊專注使韌性恢復量增加 4%。**
+- **遠程弱點擊殺恢復 10% 最大耐力。**
+- 一般韌性恢復可受益；明確忽略恢復加成的效果不適用。韌性與耐力都不能超過各自上限。
+
+#### 恢復算例
+
+- 原本恢復 20 點韌性，五層且沒有其他恢復加成：`20 × (1 + 5 × 4%) = 24 點`。
+- 最大耐力 6：每次遠程弱點擊殺恢復 `6 × 10% = 0.6`；只缺 0.2 時，實際恢復 **0.2**。
+
+[詳細資料](TALENTS%20Veteran/veteran_snipers_focus_toughness_bonus.md) · [返回目錄](#talent-index)
 
 ---
 
