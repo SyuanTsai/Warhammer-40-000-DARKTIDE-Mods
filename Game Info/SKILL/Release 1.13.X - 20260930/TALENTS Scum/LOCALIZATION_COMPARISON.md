@@ -25,6 +25,7 @@
 | [精準獵殺](#broker_ability_focus_sub_2) | 未見明確中英矛盾 |
 | [熟練部署](#broker_ability_stimm_field_sub_3) | 未見翻譯差異（程式以半秒輪詢觸發） |
 | [腎上腺素狂暴](#broker_keystone_adrenaline_junkie) | 未見明確矛盾 |
+| [化學強化](#broker_keystone_chemical_dependency_sub_1) | 未見明確矛盾 |
 | [腎上腺素刺客](#broker_keystone_adrenaline_junkie_sub_1) | 未見明確矛盾 |
 | [振奮怒火](#broker_keystone_adrenaline_junkie_sub_3) | 未見明確矛盾 |
 | [腎上腺素突破](#broker_keystone_adrenaline_junkie_sub_5) | 未見明確矛盾 |
@@ -196,6 +197,13 @@
 - 描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_desc`；hash：`b4493ff1`。
 - 結論：未見明確矛盾。繁中與英文一致描述近戰命中、暴擊額外層、2 秒失層、30 層門檻及 10 秒近戰攻速／傷害增益；實際層數與刷新細節由固定版本的 buff 消費邏輯補足。
 - [原始碼推導與限制](broker_keystone_adrenaline_junkie.md)。
+
+<a id="broker_keystone_chemical_dependency_sub_1"></a>
+## 化學強化(Chem Enhanced)
+
+- 描述鍵：`loc_talent_broker_keystone_chemical_dependency_sub_1_desc`；hash：`3356ae07`。
+- 結論：未見明確矛盾。繁中與英文均表示每一層化學依賴性提升暴擊機率；程式值為每層 0.05，按層數加到通用暴擊率，而非暴擊傷害。
+- [原始碼推導與限制](broker_keystone_chemical_dependency_sub_1.md)。
 
 <a id="broker_keystone_adrenaline_junkie_sub_1"></a>
 ## 腎上腺素刺客(Adrenaline Assassin)
