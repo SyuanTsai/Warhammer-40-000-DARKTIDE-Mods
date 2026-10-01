@@ -39,6 +39,7 @@
 | <img src="https://github.com/user-attachments/assets/9b7dda36-1d18-41b4-9e28-3cfd26f0ad66" width="32" height="32" alt="弒除瀆者天賦圖示"> [弒除瀆者](#zealot_damage_vs_elites)<br>- Abolish Blasphemers | <ul><li>對精英敵人的傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/2ea26a3b-1222-4c56-8120-26a65b4595fa" width="32" height="32" alt="傲慢天賦圖示"> [傲慢](#zealot_weakspot_damage_reduction)<br>- Hubris | <ul><li>弱點擊殺後減傷 15%，持續 4 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="32" height="32" alt="頭號目標天賦圖示"> [頭號目標](#zealot_elite_kills_empowers)<br>- Prime Target | <ul><li>擊殺精英後增傷 10%，並在 5 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
 
 ---
 
@@ -498,5 +499,20 @@
 - **傷害算例**：沒有其他加成，100 × (1 + 10%) = 110 點；兩個節點皆選取時為 120 點。已有 25% 同階段加成，再選一個節點則是 100 × (1 + 25% + 10%) = 135 點。
 
 [詳細資料](TALENTS%20Zealot/base_melee_damage_node_buff_medium_4.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="zealot_elite_kills_empowers"></a>
+### 頭號目標(Prime Target)
+
+<img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="72" height="72" alt="頭號目標天賦圖示">
+
+- **觸發方式**：擊殺精英敵人後，傷害提高 10%，持續 5 秒；期間每秒恢復 3% 最大韌性，完整 5 秒共 15%。
+
+- **刷新方式**：再次擊殺精英會刷新 5 秒，不會疊加增傷或每秒恢復速度。
+
+- **傷害與恢復算例**：基礎 100 點傷害變成 100 × 1.1 = 110 點；最大韌性 100 時，每秒補 100 × 15% ÷ 5 = 3 點。第 3 秒重新觸發、之後完整持續到第 8 秒，合計可補 24 點，仍以韌性缺額為限。
+
+[詳細資料](TALENTS%20Zealot/zealot_elite_kills_empowers.md) · [返回目錄](#talent-index)
 
 ---
