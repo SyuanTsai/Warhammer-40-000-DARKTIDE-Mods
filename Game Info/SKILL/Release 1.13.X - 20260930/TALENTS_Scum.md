@@ -91,6 +91,7 @@
 | <img src="https://github.com/user-attachments/assets/b90d885e-2e9a-43e7-9b64-d42447b285f9" width="32" height="32" alt="野火 IV天賦圖示"> [野火 IV](#broker_stimm_combat_4a)<br>- Wildfire IV | <ul><li>威力增加 4%。</li><li>弱點與爆擊額外傷害增加 10%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/e53e3328-a026-4e3c-8e91-c63cd69522c6" width="32" height="32" alt="野火 II天賦圖示"> [野火 II](#broker_stimm_combat_2)<br>- Wildfire II | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/58b8efb6-6c10-4795-8046-33bb49eee893" width="32" height="32" alt="野火 III天賦圖示"> [野火 III](#broker_stimm_combat_3)<br>- Wildfire III | <ul><li>威力增加 4%。</li></ul> | 興奮劑配方 |
+| <img src="https://github.com/user-attachments/assets/1db9427d-9c25-4096-898f-57089a300fce" width="32" height="32" alt="狂怒 I天賦圖示"> [狂怒 I](#broker_stimm_combat_4b)<br>- Fury I | <ul><li>威力增加 4%。</li><li>護甲撕裂增加 5%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/6b1d7464-dc75-4f26-91d7-08e79fe94125" width="32" height="32" alt="激勵 I天賦圖示"> [激勵 I](#broker_stimm_celerity_1)<br>- Spur I | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/12ddbfdc-82bd-4ece-ba73-e6550451e5a4" width="32" height="32" alt="狂熱天賦圖示"> [狂熱](#broker_stimm_celerity_5c)<br>- Fervor | <ul><li>移速與閃避距離增加 10%，閃避速度乘以 1.1；有效閃避次數恢復等待縮短 10%。</li></ul> | 興奮劑配方 |
 | <img src="https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772" width="32" height="32" alt="激勵 II天賦圖示"> [激勵 II](#broker_stimm_celerity_2)<br>- Spur II | <ul><li>攻擊速度增加 4%。</li><li>武器切換速度增加 25%。</li><li>耐力消耗減少 15%。</li></ul> | 興奮劑配方 |
@@ -1392,6 +1393,25 @@
 - **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 3 個威力節點時，為 500 × (1 + 3 × 4%) = 560。
 
 [詳細資料](TALENTS%20Scum/broker_stimm_combat_3.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="broker_stimm_combat_4b"></a>
+### 狂怒 I(Fury I)
+
+<img src="https://github.com/user-attachments/assets/1db9427d-9c25-4096-898f-57089a300fce" width="72" height="72" alt="狂怒 I天賦圖示">
+
+- **配方成本**：4 點；選取後，使用專用興奮劑時生效，基本持續 15 秒。
+
+- **威力**：增加 4%，與前置配方及其他同階段威力加成相加。威力會再參與武器傷害、踉蹌及順劈計算。
+
+- **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 4 個威力節點時，為 500 × (1 + 4 × 4%) = 580。
+
+- **護甲撕裂**：增加 5% 護甲撕裂；狂怒 I、II 都選取時合計 15%。
+
+- **護甲算例**：固定其他條件，護甲前 100 點、原護甲係數 0.5 時，僅本節點為 100 × (0.5 + 0.05) = 55 點。兩項合計則為 100 × (0.5 + 0.15) = 65 點。
+
+[詳細資料](TALENTS%20Scum/broker_stimm_combat_4b.md) · [返回目錄](#talent-index)
 
 ---
 
