@@ -53,21 +53,21 @@ return {
 	},
 	mission_offset_x = {
 		en = "Map Name X Offset",
-        ["zh-cn"] = "地图标题 水平偏移左负右正",
 		["zh-tw"] = "地圖名稱 X 軸偏移（左負右正）",
+		["zh-cn"] = "地图标题 水平偏移左负右正",
 		ru = "Название карты - смещение по ширине",
 	},
 	mission_offset_y = {
 		en = "Map Name Y Offset",
-        ["zh-cn"] = "地图标题 垂直偏移上负下正",
 		["zh-tw"] = "地圖名稱 Y 軸偏移（上負下正）",
+		["zh-cn"] = "地图标题 垂直偏移上负下正",
 		ru = "Название карты - смещение по высоте",
 	},
 
 	-- 任务
 	mission_info = {
 		en = "Mission Information",
-        ["zh-cn"] = "任务信息",
+		["zh-cn"] = "任务信息",
 		["zh-tw"] = "任務資訊",
 		ru = "Информация о миссии",
 	},
@@ -79,26 +79,26 @@ return {
 	},
 	circumstance_offset_y = {
 		en = "Mission Circumstance Y Offset",
-        ["zh-cn"] = "任务词条 垂直偏移上负下正",
 		["zh-tw"] = "任務特殊狀況 Y 軸偏移（上負下正）",
+		["zh-cn"] = "任务词条 垂直偏移上负下正",
 		ru = "Обстоятельства миссии - смещение по высоте",
 	},
 	circumstance_name_font_size = {
 		en = "Circumstance Title Font Size",
-        ["zh-cn"] = "任务词条 标题字体大小",
 		["zh-tw"] = "特殊狀況標題字體大小",
+		["zh-cn"] = "任务词条 标题字体大小",
 		ru = "Размер шрифта заголовка обстоятельства миссии",
 	},
 	circumstance_name_font_size_description = {
 		en = "Default value is 24",
-        ["zh-cn"] = "默认值为24",
 		["zh-tw"] = "預設值為 24",
+		["zh-cn"] = "默认值为24",
 		ru = "24 - значение по умолчанию",
 	},
 	circumstance_description_font_size = {
 		en = "Circumstance Description Font Size",
-        ["zh-cn"] = "任务词条 描述字体大小",
 		["zh-tw"] = "特殊狀況描述字體大小",
+		["zh-cn"] = "任务词条 描述字体大小",
 		ru = "Размер шрифта описания обстоятельства миссии",
 	},
 	circumstance_description_font_size_description = {
@@ -115,7 +115,7 @@ return {
 	},
 	danger_offset_y = {
 		en = "Mission Danger Info Y Offset",
-        ["zh-cn"] = "任务等级 垂直偏移上负下正",
+		["zh-cn"] = "任务等级 垂直偏移上负下正",
 		["zh-tw"] = "任務危險資訊 Y 軸偏移（上負下正）",
 		ru = "Инфо о опасностях миссии - смещение по высоте",
 	},
@@ -123,50 +123,50 @@ return {
 	-- 浩劫
 	havoc_info = {
 		en = "Havoc Information",
-        ["zh-cn"] = "浩劫信息",
+		["zh-cn"] = "浩劫信息",
 		["zh-tw"] = "浩劫資訊",
 		ru = "Информация о Хавоке",
 	},
 	havoc_offset_x = {
 		en = "Havoc Circumstance X Offset",
-        ["zh-cn"] = "浩劫词条 水平偏移左负右正",
 		["zh-tw"] = "浩劫詞條 X 軸偏移（左負右正）",
+		["zh-cn"] = "浩劫词条 水平偏移左负右正",
 		ru = "Обстоятельства Хавока - смещение по ширине",
 	},
 	havoc_offset_y = {
 		en = "Havoc Circumstance Y Offset",
-        ["zh-cn"] = "浩劫词条 垂直偏移上负下正",
 		["zh-tw"] = "浩劫詞條 Y 軸偏移（上負下正）",
+		["zh-cn"] = "浩劫词条 垂直偏移上负下正",
 		ru = "Обстоятельства Хавока - смещение по высоте",
 	},
 	havoc_name_font_size = {
 		en = "Havoc Title Font Size",
-        ["zh-cn"] = "浩劫词条 标题字体大小",
 		["zh-tw"] = "浩劫標題字體大小",
+		["zh-cn"] = "浩劫词条 标题字体大小",
 		ru = "Размер шрифта заголовка Хавока",
 	},
 	havoc_name_font_size_description = {
 		en = "Default value is 24",
-        ["zh-cn"] = "默认值为24",
 		["zh-tw"] = "預設值為 24",
+		["zh-cn"] = "默认值为24",
 		ru = "24 - значение по умолчанию",
 	},
 	havoc_description_font_size = {
 		en = "Havoc Description Font Size",
-        ["zh-cn"] = "浩劫词条 描述字体大小",
 		["zh-tw"] = "浩劫描述字體大小",
+		["zh-cn"] = "浩劫词条 描述字体大小",
 		ru = "Размер шрифта описания Хавока",
 	},
 	havoc_description_font_size_description = {
 		en = "Default value is 20",
-        ["zh-cn"] = "默认值为20",
 		["zh-tw"] = "預設值為 20",
+		["zh-cn"] = "默认值为20",
 		ru = "20 - значение по умолчанию",
 	},
 	havoc_rank_offset_x = {
 		en = "Havoc Rank X Offset",
-        ["zh-cn"] = "浩劫等级 水平偏移左负右正",
 		["zh-tw"] = "浩劫等級 X 軸偏移（左負右正）",
+		["zh-cn"] = "浩劫等级 水平偏移左负右正",
 		ru = "Ранг Хавока - смещение по ширине",
 	},
 	havoc_rank_offset_y = {
@@ -179,31 +179,31 @@ return {
 	-- 材料
 	material_info = {
 		en = "Materials Information",
-        ["zh-cn"] = "材料信息",
+		["zh-cn"] = "材料信息",
 		["zh-tw"] = "材料資訊",
 		ru = "Информация о ресурсах",
 	},
 	plasteel_offset_x = {
 		en = "Plasteel X Offset",
-        ["zh-cn"] = "塑钢 水平偏移左负右正",
+		["zh-cn"] = "塑钢 水平偏移左负右正",
 		["zh-tw"] = "塑鋼 水平偏移（左負右正）",
 		ru = "Пласталь - смещение по ширине",
 	},
 	plasteel_offset_y = {
 		en = "Plasteel Y Offset",
-        ["zh-cn"] = "塑钢 垂直偏移上负下正",
+		["zh-cn"] = "塑钢 垂直偏移上负下正",
 		["zh-tw"] = "塑鋼 垂直偏移（上負下正）",
 		ru = "Пласталь - смещение по высоте",
 	},
 	diamantine_offset_x = {
 		en = "Diamantine X Offset",
-        ["zh-cn"] = "金刚砂 水平偏移左负右正",
+		["zh-cn"] = "金刚砂 水平偏移左负右正",
 		["zh-tw"] = "金剛晶石 水平偏移（左負右正）",
 		ru = "Диамантин - смещение по ширине",
 	},
 	diamantine_offset_y = {
 		en = "Diamantine Y Offset",
-        ["zh-cn"] = "金刚砂 垂直偏移上负下正",
+		["zh-cn"] = "金刚砂 垂直偏移上负下正",
 		["zh-tw"] = "金剛晶石 垂直偏移（上負下正）",
 		ru = "Диамантин - смещение по высоте",
 	},
@@ -217,21 +217,21 @@ return {
 	},
 	right_board_offset_x = {
 		en = "Right Board X Offset",
-        ["zh-cn"] = "任务板 水平偏移左负右正",
 		["zh-tw"] = "右側面板 X 軸偏移（左負右正）",
+		["zh-cn"] = "任务板 水平偏移左负右正",
 		ru = "Правая панель - смещение по ширине",
 	},
 	right_board_offset_y = {
 		en = "Right Board Y Offset",
-        ["zh-cn"] = "任务板 垂直偏移上负下正",
 		["zh-tw"] = "右側面板 Y 軸偏移（上負下正）",
+		["zh-cn"] = "任务板 垂直偏移上负下正",
 		ru = "Правая панель - смещение по высоте",
 	},
 	
 	-- 计分板
 	scoreboard = {
 		en = "Scoreboard Information",
-        ["zh-cn"] = "计分板信息",
+		["zh-cn"] = "计分板信息",
 		["zh-tw"] = "計分板資訊",
 		ru = "Информация о Таблице результатов",
 	},
@@ -243,20 +243,20 @@ return {
 	},
 	scoreboard_offset_x = {
 		en = "Scoreboard X Offset",
-        ["zh-cn"] = "计分板 水平偏移左负右正",
 		["zh-tw"] = "計分板 X 軸偏移（左負右正）",
+		["zh-cn"] = "计分板 水平偏移左负右正",
 		ru = "Таблица результатов - смещение по ширине",
 	},
 	scoreboard_offset_y = {
 		en = "Scoreboard Y Offset",
-        ["zh-cn"] = "计分板 垂直偏移上负下正",
 		["zh-tw"] = "計分板 Y 軸偏移（上負下正）",
+		["zh-cn"] = "计分板 垂直偏移上负下正",
 		ru = "Таблица результатов - смещение по высоте",
 	},
 	scoreboard_offset_y_description = { 
 		en = " If you don't have scoreboard, this will not affect anything", 
-        ["zh-cn"] = "如果你没有计分板mod，滑轮不会有任何效果",
 		["zh-tw"] = "如果你沒有計分板 mod，此設定不會有任何效果",
+		["zh-cn"] = "如果你没有计分板mod，滑轮不会有任何效果",
 		ru = "Если у вас нет Таблицы результатов, эта настройка ни на что не повлияет",
 	},
 }
