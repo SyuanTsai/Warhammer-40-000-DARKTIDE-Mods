@@ -827,6 +827,10 @@
 
 #### 老兵專有名詞
 
+- `loc_talent_veteran_ammo_increase` / `veteran_ammo_increase` - 全副武裝
+  - 英文對應：Fully Loaded。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
+  - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2503-L2526)；此來源證明識別鍵與天賦關係。
+
 - `loc_talent_veteran_increased_ranged_cleave` / `veteran_increased_ranged_cleave` - 凋零烈焰
   - 英文對應：Withering Fire。狀態：暫定，待使用者確認；不宣稱官方繁體名稱。
   - 來源：[固定版本天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3136-L3151)；此來源證明識別鍵與天賦關係。

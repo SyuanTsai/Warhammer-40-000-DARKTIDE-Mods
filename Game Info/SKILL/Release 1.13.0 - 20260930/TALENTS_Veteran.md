@@ -46,6 +46,7 @@
 | 技能 | [突擊隊(Shock Trooper)](#veteran_no_ammo_consumption_on_lasweapon_crit) | 雷射武器的爆擊射擊不消耗彈藥。 |
 | 技能 | [凋零烈焰(Withering Fire)](#veteran_increased_ranged_cleave) | 遠程順劈攻擊的穿透能力增加 50%。 |
 | 技能 | [振奮擊倒(Exhilarating Takedown)](#veteran_replenish_toughness_on_weakspot_kill) | 遠程弱點擊殺恢復韌性並累積減傷 |
+| 技能 | [全副武裝(Fully Loaded)](#veteran_ammo_increase) | 備彈上限增加 25%。 |
 | 技能 | [臨場發揮(Field Improvisation)](#veteran_better_deployables) | 小隊的彈藥箱也能補滿可補給的手雷。 |
 | 技能 | [火力掩護(Covering Fire)](#veteran_replenish_toughness_and_boost_allies) | 遠程擊殺敵人時，可為該敵人附近的 1 名隊友恢復 15% 最大韌性，並使其傷害增加 15%，持續 6 秒。 |
 | 技能 | [求勝心(Competitive Urge)](#veteran_ally_kills_increase_damage) | 隊友擊殺敵人時，有 2.5% 機率使你的傷害、近戰衝擊與壓制效果增加 20%，持續 8 秒。 |
@@ -836,6 +837,24 @@
 - 三層後未再觸發：約 **8 秒**後剩 2 層、**16 秒**後剩 1 層、**24 秒**後效果結束。
 
 [詳細資料](TALENTS%20Veteran/veteran_replenish_toughness_on_weakspot_kill.md) · [返回目錄](#talent-index)
+
+---
+
+<a id="veteran_ammo_increase"></a>
+
+### 全副武裝(Fully Loaded)
+
+<img src="https://github.com/user-attachments/assets/4087a451-e4ae-429b-afe6-75369e2903f3" width="72" height="72" alt="全副武裝天賦圖示">
+
+- **備彈上限增加 25%。**
+- 不增加彈匣容量；不足一發的小數捨去。
+
+#### 容量算例
+
+- 原本備彈上限 100 發：`100 × 1.25 = 125 發`。
+- 原本 150 發：`150 × 1.25 = 187.5`，向下取整為 **187 發**。
+
+[詳細資料](TALENTS%20Veteran/veteran_ammo_increase.md) · [返回目錄](#talent-index)
 
 ---
 
