@@ -7,6 +7,7 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c" width="32" height="32" alt="痛楚爆發天賦圖示"> [痛楚爆發](#ogryn_carapace_armor_trigger_on_zero_stacks)<br>- Pained Outburst | <ul><li>麻木失去一層後降至 4 層或更低時，會擊退附近敵人並恢復最大韌性的 50%。</li><li>此效果每 30 秒最多觸發一次；擊退爆發不造成直接傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3d442f9a-0143-43d7-a6e2-10a5d6b8a9f8" width="32" height="32" alt="最強壯！天賦圖示"> [最強壯！](#ogryn_carapace_armor_add_stack_on_push)<br>- Strongest! | <ul><li>推搡至少一名敵人時，麻木恢復 1 層。</li><li>麻木最多 10 層；一次推搡推中多人也只恢復 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d6e55419-0e35-49cc-9bd6-163bdff037d4" width="32" height="32" alt="最堅韌！天賦圖示"> [最堅韌！](#ogryn_carapace_armor_more_toughness)<br>- Toughest! | <ul><li>「最堅韌！」讓麻木每層額外增加 2.5% 韌性恢復量。</li><li>與麻木本身每層 3% 相加；滿 10 層合計增加 55%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760" width="32" height="32" alt="子彈風暴天賦圖示"> [子彈風暴](#ogryn_blo_ally_ranged_buffs)<br>- Bulletstorm | <ul><li>觸發幸運子彈時，你和協同範圍內的隊友獲得 +15% 遠程傷害，持續 8 秒。</li><li>再次觸發會把效果時間重新延長為 8 秒。</li></ul> | 鑰石 |
@@ -66,6 +67,21 @@
 ---
 
 ## 鑰石
+
+<a id="ogryn_carapace_armor_trigger_on_zero_stacks"></a>
+### 痛楚爆發(Pained Outburst)
+
+<img src="https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c" width="72" height="72" alt="痛楚爆發天賦圖示">
+
+- **觸發條件**：選取「痛楚爆發」後，麻木失去一層並降至可見 4 層或更低，且距上次觸發至少 30 秒時，才會觸發。
+
+- **效果**：擊退自身 2.5 公尺內的敵人，並恢復最大韌性的 50%；這是擊退爆發，不會直接造成傷害。恢復量會套用麻木的韌性恢復加成，且不超過缺少的韌性。
+
+- **算例**：失層後剩 4 層、未選「最堅韌！」時，基本恢復量為最大韌性的 50% × (1 + 4 × 3%) = 56%，再受缺少韌性限制。 例如最大韌性 100 且缺額足夠，可恢復 100 × 56% = 56 點；倒地時不提供這筆恢復。
+
+[詳細資料](TALENTS%20Ogryn/ogryn_carapace_armor_trigger_on_zero_stacks.md) · [返回目錄](#talent-index)
+
+---
 
 <a id="ogryn_carapace_armor_add_stack_on_push"></a>
 ### 最強壯！(Strongest!)

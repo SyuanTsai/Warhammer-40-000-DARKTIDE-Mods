@@ -8,6 +8,7 @@
 
 | 技能 | 結論 |
 |---|---|
+| [痛楚爆發](#ogryn_carapace_armor_trigger_on_zero_stacks) | 跨來源待同版核對 |
 | [最強壯！](#ogryn_carapace_armor_add_stack_on_push) | 未見明確矛盾 |
 | [最堅韌！](#ogryn_carapace_armor_more_toughness) | 未見明確矛盾 |
 | [子彈風暴](#ogryn_blo_ally_ranged_buffs) | 繁中描述錯誤 |
@@ -63,6 +64,13 @@
 | [格鬥兵](#ogryn_ally_elite_kills_grant_cooldown) | 未見明確矛盾 |
 | [精準打擊](#ogryn_weakspot_damage) | 未見明確矛盾 |
 | [機動部署](#ogryn_bracing_reduces_damage_taken) | 未見明確矛盾 |
+
+<a id="ogryn_carapace_armor_trigger_on_zero_stacks"></a>
+## 痛楚爆發(Pained Outburst)
+
+- 描述鍵：`loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_new_desc`；hash：`d03260f0`。
+- 結論：跨來源待同版核對。繁中寫「當…層數達…層以下時」，英文寫「reaches … stacks or below」，兩種本機文字都表示 5 層或以下。固定公開來源在失去一層後檢查內部層數，換算為玩家可見 4 層或更低；公開來源與本機 Build 25492122 未確認同版，因此保留待核，不判為翻譯錯誤。
+- [原始碼推導與限制](ogryn_carapace_armor_trigger_on_zero_stacks.md)。
 
 <a id="ogryn_carapace_armor_add_stack_on_push"></a>
 ## 最強壯！(Strongest!)
