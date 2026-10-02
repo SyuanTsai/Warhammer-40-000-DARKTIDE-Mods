@@ -47,7 +47,7 @@ return {
 	-- 地图标题
 	map_info = {
 		en = "Map Information",
-        ["zh-cn"] = "地图信息",
+		["zh-cn"] = "地图信息",
 		["zh-tw"] = "地圖資訊",
 		ru = "Информация о карте",
 	},

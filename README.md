@@ -520,20 +520,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Better Hud Info View](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
     浩劫HUD資訊
-- MOD 網站最後更新日期：Last updated 01 October 2026, 11:42AM
-- MOD 版本：1.5.2
-- MOD 檔案名稱：better_hud_info_view 511 1.5.2 2026-10-01T03-42Z ke28WeliD.zip
-- 手動維護最後下載日期：2026-10-01
+- MOD 網站最後更新日期：Last updated 01 October 2026, 11:13PM
+- MOD 版本：1.6
+- MOD 檔案名稱：Better Hud Info View 511 1.6 2026-10-01T15-13Z q4A7x4GUb.zip
+- 手動維護最後下載日期：2026-10-02
 - Nexus MOD ID: 511
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/511
-- Nexus page version: 1.5.2
-- Nexus last updated: 2026-10-01T03:42Z
-- Main file ID: 8649
-- Main file version: 1.5.2
-- Main file uploaded at UTC: 2026-10-01T03:42Z
-- Archive filename: better_hud_info_view 511 1.5.2 2026-10-01T03-42Z ke28WeliD.zip
-- Archive size bytes: 7948
-- Archive SHA-256: 22d8f287551113adcb4710a67f105db09785150f594f4c46f73bfbf334c6e870
+- Nexus page version: 1.6
+- Nexus last updated: 2026-10-01T15:13Z
+- Main file ID: 8665
+- Main file version: 1.6
+- Main file uploaded at UTC: 2026-10-01T15:13Z
+- Archive filename: Better Hud Info View 511 1.6 2026-10-01T15-13Z q4A7x4GUb.zip
+- Archive size bytes: 8396
+- Archive SHA-256: d6c1da684017c3c5b75490c9d3899d9ce1587d0d3c2637fe7822b11bd2ab5b5d
 - Acquisition method: manual-queue
 
 ### [Recolor Boss Health Bars](https://www.nexusmods.com/warhammer40kdarktide/mods/314)
