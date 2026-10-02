@@ -2,9 +2,9 @@
 
 [返回玩家說明](README.md#veteran_weapon_switch_replenish_toughness)｜[技術索引](SOURCE_INDEX.md)
 
-- 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`veteran_weapon_switch_replenish_toughness`；名稱鍵：`loc_talent_veteran_weapon_switch_replenish_toughness`；描述鍵：`loc_talent_veteran_weapon_switch_replenish_toughness_description`。
-- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1840-L1862)：`keystone_modifier`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2958-L2977)。
+- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1840-L1862)：`keystone_modifier`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2958-L2977)。
 - 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
 此 modifier 設定 restore_toughness；on_wield_ranged 僅在 ranged_stacks>0 且 t>last_ranged_toughness+3 時回復，on_wield_melee 對 melee_stacks 與 last_melee_toughness 做相同檢查。兩方向使用獨立計時器。呼叫 Toughness.replenish_percentage(unit,.2,false,...)，非每層增加；切換後仍清空相應累積層數。回復受韌性缺口限制。
@@ -13,11 +13,11 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 2958–2977 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2958-L2977)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2912–2915 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2912-L2915)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 3013–3045 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3013-L3045)
-- [scripts/utilities/toughness/toughness.lua，第 16–24 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/toughness/toughness.lua#L16-L24)
-- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua，第 253–285 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
+- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 2958–2977 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2958-L2977)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2912–2915 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2912-L2915)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 3013–3045 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3013-L3045)
+- [scripts/utilities/toughness/toughness.lua，第 16–24 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/toughness/toughness.lua#L16-L24)
+- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua，第 253–285 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
 
 ## 算例條件與待確認事項
 

@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#zealot_fanatic_rage_toughness_on_max)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_fanatic_rage_toughness_on_max)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`zealot_fanatic_rage_toughness_on_max`；名稱鍵：`loc_talent_zealot_fanatic_rage_toughness`；描述鍵：`loc_talent_zealot_fanatic_rage_toughness_replenish_desc`。
 - 節點：`node_e079e0d7-8d4b-45de-8e6b-5ed57f82c641`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -16,22 +16,22 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：1139–1177](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1139-L1177)
-- [scripts/settings/talent/talent_settings_zealot.lua：459–468](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L459-L468)
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：774–919](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L774-L919)
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：921–978](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L921-L978)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1330–1353](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1330-L1353)
-- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–285](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
-- [scripts/utilities/attack/damage_taken_calculation.lua：223–258](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_taken_calculation.lua#L223-L258)
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：1139–1177](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1139-L1177)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1330–1353](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1330-L1353)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：1139–1177](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1139-L1177)
+- [scripts/settings/talent/talent_settings_zealot.lua：459–468](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L459-L468)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：774–919](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L774-L919)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：921–978](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L921-L978)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1330–1353](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1330-L1353)
+- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–285](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
+- [scripts/utilities/attack/damage_taken_calculation.lua：223–258](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_taken_calculation.lua#L223-L258)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：1139–1177](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1139-L1177)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1330–1353](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1330-L1353)
 
 ## 算例條件與待確認事項
 
 - **恢復與減傷算例**：最大韌性 100，啟動時最多補 50 點；滿層維持 8 秒另可補 100 × 2% × 8 = 16 點，均受缺額限制。原本 100 點韌性傷害變成 100 × 0.75 = 75 點。
 - 靜態例子假設最大韌性100且沒有同時受到傷害；遊戲中韌性上限、承傷與其他回復來源會改變實際結果。
 - 繁中與英文寫狂怒啟動時觸發一次50%回復；程式限制為 Fury buff 原本不活動時，且週期效果要 resource 保持滿層。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

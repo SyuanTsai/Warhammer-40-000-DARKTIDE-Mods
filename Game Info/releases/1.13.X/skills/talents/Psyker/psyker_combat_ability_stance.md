@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#psyker_combat_ability_stance)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_combat_ability_stance)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`psyker_combat_ability_stance`；名稱鍵：`loc_talent_psyker_combat_ability_overcharge_stance`；描述鍵：`loc_talent_psyker_combat_ability_overcharge_stance_improved_description`。
 - 節點：`node_2a022d3f-fddf-4faf-a79d-c8fe6a18fe36`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -13,22 +13,22 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：37–112](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L37-L112)
-- [scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua：78–105](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua#L78-L105)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1024–1079](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1024-L1079)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1093–1149](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1093-L1149)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1169–1199](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1169-L1199)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1227–1244](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1227-L1244)
-- [scripts/settings/talent/talent_settings_psyker.lua：5–15](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L5-L15)
-- [scripts/settings/talent/talent_settings_psyker.lua：133–135](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L133-L135)
-- [scripts/utilities/attack/damage_calculation.lua：65–95](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L65-L95)
-- [scripts/utilities/attack/damage_calculation.lua：232–242](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L232-L242)
-- [scripts/utilities/attack/damage_calculation.lua：672–711](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L672-L711)
-- [scripts/utilities/attack/damage_calculation.lua：715–724](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L715-L724)
-- [scripts/utilities/attack/damage_calculation.lua：717–724](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L717-L724)
-- [scripts/utilities/attack/damage_calculation.lua：772–782](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L772-L782)
-- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：37–112](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L37-L112)
-- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：482–514](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L482-L514)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：37–112](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L37-L112)
+- [scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua：78–105](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua#L78-L105)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1024–1079](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1024-L1079)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1093–1149](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1093-L1149)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1169–1199](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1169-L1199)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1227–1244](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1227-L1244)
+- [scripts/settings/talent/talent_settings_psyker.lua：5–15](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L5-L15)
+- [scripts/settings/talent/talent_settings_psyker.lua：133–135](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L133-L135)
+- [scripts/utilities/attack/damage_calculation.lua：65–95](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L65-L95)
+- [scripts/utilities/attack/damage_calculation.lua：232–242](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L232-L242)
+- [scripts/utilities/attack/damage_calculation.lua：672–711](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L711)
+- [scripts/utilities/attack/damage_calculation.lua：715–724](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L715-L724)
+- [scripts/utilities/attack/damage_calculation.lua：717–724](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L717-L724)
+- [scripts/utilities/attack/damage_calculation.lua：772–782](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L772-L782)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：37–112](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L37-L112)
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：482–514](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L482-L514)
 
 ## 算例條件與待確認事項
 
@@ -37,8 +37,8 @@
 - **恢復與爆擊算例**：最大韌性 100 時，每秒恢復 100 × 2.5% = 2.5 點，以缺少的韌性為上限；原有 5% 爆擊率變成 5% + 20% = 25%。
 - 實際注視長短由反噬累積、武器動作、擊殺及其他修正共同決定；30層上限不保證能達成。
 - 弱點傷害欄只在弱點命中參與；完整攻擊結果要按武器、敵人和攻擊類型計算，這裡分開示範各項加成。
-- 遊戲文本Build25492122與公開source commit版本對應為1.13.0；公開程式碼中的註解固定8秒與執行時100%反噬結束條件不同，採執行邏輯並待同版確認。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲文本Build25606770與公開source commit版本對應為1.13.1；公開程式碼中的註解固定8秒與執行時100%反噬結束條件不同，採執行邏輯並待遊戲內確認。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

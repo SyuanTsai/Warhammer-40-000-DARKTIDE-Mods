@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#adamant_staggers_replenish_toughness)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_staggers_replenish_toughness)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`adamant_staggers_replenish_toughness`；名稱鍵：`loc_talent_adamant_staggers_replenish_toughness`；描述鍵：`loc_talent_adamant_staggers_replenish_toughness_melee_desc`。
 - 節點：`node_ff7e488d-67b2-4139-a794-6032177b6d56`；分類：技能；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -13,17 +13,17 @@
 
 ## 原始碼依據
 
-- [scripts/settings/buff/helper_functions/check_proc_functions.lua：543–558](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L543-L558)
-- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–279](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L279)
-- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：2306–2323](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L2306-L2323)
-- [scripts/settings/talent/talent_settings_adamant.lua：146–148](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_adamant.lua#L146-L148)
-- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：1072–1086](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1072-L1086)
-- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：557–585](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L557-L585)
+- [scripts/settings/buff/helper_functions/check_proc_functions.lua：543–558](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L543-L558)
+- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–279](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L279)
+- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：2306–2323](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L2306-L2323)
+- [scripts/settings/talent/talent_settings_adamant.lua：146–148](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L146-L148)
+- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：1072–1086](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1072-L1086)
+- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：557–585](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L557-L585)
 
 ## 算例條件與待確認事項
 
 - **恢復算例**：最大韌性 100、無其他恢復加成時，每次恢復 100 × 7.5% = 7.5 點；一擊掃中 3 名敵人仍最多恢復 7.5 點，並受缺額限制。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

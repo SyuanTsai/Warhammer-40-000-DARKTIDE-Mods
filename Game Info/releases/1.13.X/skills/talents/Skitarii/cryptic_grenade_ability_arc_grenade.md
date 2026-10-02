@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_grenade_ability_arc_grenade)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_grenade_ability_arc_grenade)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_grenade_ability_arc_grenade`；名稱鍵：`loc_talent_cryptic_arc_grenades`；描述鍵：`loc_talent_cryptic_arc_grenades_capacitance_gain_desc`。
 - 節點：`node_a09226d4-6e29-4806-982f-f00da2c2ec60`；分類：閃擊；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -14,23 +14,23 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：920–961](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L920-L961)
-- [scripts/settings/talent/talent_settings_cryptic.lua：185–194](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L185-L194)
-- [scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua：195–208](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L195-L208)
-- [scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua：482–545](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L482-L545)
-- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua：21–56](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua#L21-L56)
-- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua：58–124](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua#L58-L124)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1301–1331](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1301-L1331)
-- [scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua：532–600](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L532-L600)
-- [scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua：482–520](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L482-L520)
-- [scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：1204–1250](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L1204-L1250)
-- [scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：1724–1819](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L1724-L1819)
-- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua：59–80](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua#L59-L80)
-- [scripts/settings/buff/weapon_buff_templates.lua：2689–2733](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/weapon_buff_templates.lua#L2689-L2733)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1332–1343](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1332-L1343)
-- [scripts/utilities/attack/attack.lua：577–622](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/attack.lua#L577-L622)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：920–961](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L920-L961)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1649–1677](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1649-L1677)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：920–961](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L920-L961)
+- [scripts/settings/talent/talent_settings_cryptic.lua：185–194](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L185-L194)
+- [scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua：195–208](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L195-L208)
+- [scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua：482–545](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L482-L545)
+- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua：21–56](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua#L21-L56)
+- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua：58–124](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua#L58-L124)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1301–1331](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1301-L1331)
+- [scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua：532–600](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L532-L600)
+- [scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua：482–520](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L482-L520)
+- [scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：1204–1250](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L1204-L1250)
+- [scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：1724–1819](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L1724-L1819)
+- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua：59–80](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua#L59-L80)
+- [scripts/settings/buff/weapon_buff_templates.lua：2689–2733](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L2689-L2733)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1332–1343](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1332-L1343)
+- [scripts/utilities/attack/attack.lua：577–622](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attack.lua#L577-L622)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：920–961](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L920-L961)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1649–1677](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1649-L1677)
 
 ## 算例條件與待確認事項
 
@@ -41,7 +41,7 @@
 - 傷害設定中的 attack／impact power distribution、威力等級及護甲修正不能直接視為對所有敵人固定扣除的生命值。若要給具名敵人的實際數值，需另追該敵人的護甲、命中部位及完整傷害結算。
 - duration 1.1 與 interval 0.2 足以確認是重複結算，但不能只用兩數相除宣稱固定觸發次數；伺服器更新時序亦會影響最後次結算。
 - 此補充說明電弧手榴彈的傷害結構及其對武器故障觸發的限制；不是遊戲內實測。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

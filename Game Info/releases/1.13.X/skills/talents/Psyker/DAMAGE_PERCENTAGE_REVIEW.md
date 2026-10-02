@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)｜[描述規則](../../../../../../AI Prompt/Game-Info-Workflow.md)
 
-- 盤點日期：2026-10-01；固定來源 Release 1.13.0／`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 固定來源 Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 範圍：81 個當前可選節點，核對主頁效果、算例與逐項來源。下表摘錄各項計算基準；完整觸發條件與限制見來源子文件。
 - 本次是靜態公式與描述驗收，尚未完成遊戲內測試；未指定武器、蓄力或敵人時，不宣稱所有武器具有相同最終增幅。
 
@@ -14,11 +14,11 @@
 - 持續恢復按最大韌性計算、受缺額限制；同一持續恢復效果刷新時間，不代表恢復速率疊加。
 - 層數加算與逐層乘算分開核對。例如每層生成量乘 0.99，25 層是 `0.99²⁵ ≈ 77.78%`，不是降低 25%。
 
-- [一般傷害階段](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L232-L245)
-- [弱點、爆擊與靈巧的額外傷害](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L672-L782)
-- [蓄力速度換算](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_smite_targeting.lua#L153-L162)
-- [逐層屬性運算](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L689-L729)
-- [韌性恢復](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
+- [一般傷害階段](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L232-L245)
+- [弱點、爆擊與靈巧的額外傷害](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L782)
+- [蓄力速度換算](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_smite_targeting.lua#L153-L162)
+- [逐層屬性運算](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L729)
+- [韌性恢復](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
 
 ## 81 項逐項結果
 

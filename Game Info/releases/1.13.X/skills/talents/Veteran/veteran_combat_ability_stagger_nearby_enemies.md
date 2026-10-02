@@ -2,9 +2,9 @@
 
 [返回玩家說明](README.md#veteran_combat_ability_stagger_nearby_enemies)｜[技術索引](SOURCE_INDEX.md)
 
-- 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`veteran_combat_ability_stagger_nearby_enemies`；名稱鍵：`loc_talent_veteran_combat_ability_stagger_nearby_enemies`；描述鍵：`loc_talent_veteran_combat_ability_stagger_nearby_enemies_description`。
-- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1057-L1087)：`ability`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L538-L564)。
+- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1057-L1087)：`ability`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L538-L564)。
 - 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
 ## 呼喊與冷卻
@@ -16,17 +16,17 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 538–564 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L538-L564)
-- [scripts/settings/ability/ability_templates/veteran_combat_ability.lua，第 5–100 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/ability_templates/veteran_combat_ability.lua#L5-L100)
-- [scripts/settings/talent/talent_settings_veteran.lua，第 182–198 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L182-L198)
-- [scripts/settings/ability/shout_target_templates.lua，第 51–65 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/shout_target_templates.lua#L51-L65)
-- [scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua，第 52–91 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua#L52-L91)
-- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua，第 325–340 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L325-L340)
-- [scripts/settings/talent/talent_settings_veteran.lua，第 195–201 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L195-L201)
-- [scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua，第 7–24 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L7-L24)
-- [scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua，第 81–87 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L81-L87)
-- [scripts/settings/ability/ability_templates/veteran_combat_ability.lua，第 90–106 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/ability_templates/veteran_combat_ability.lua#L90-L106)
-- [scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua，第 137–149 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua#L137-L149)
+- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 538–564 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L538-L564)
+- [scripts/settings/ability/ability_templates/veteran_combat_ability.lua，第 5–100 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/ability_templates/veteran_combat_ability.lua#L5-L100)
+- [scripts/settings/talent/talent_settings_veteran.lua，第 182–198 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L182-L198)
+- [scripts/settings/ability/shout_target_templates.lua，第 51–65 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/shout_target_templates.lua#L51-L65)
+- [scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua，第 52–91 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua#L52-L91)
+- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua，第 325–340 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L325-L340)
+- [scripts/settings/talent/talent_settings_veteran.lua，第 195–201 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L195-L201)
+- [scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua，第 7–24 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L7-L24)
+- [scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua，第 81–87 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L81-L87)
+- [scripts/settings/ability/ability_templates/veteran_combat_ability.lua，第 90–106 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/ability_templates/veteran_combat_ability.lua#L90-L106)
+- [scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua，第 137–149 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua#L137-L149)
 
 ## 算例條件與待確認事項
 

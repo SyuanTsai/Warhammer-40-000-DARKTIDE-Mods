@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#broker_ability_focus_improved)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_ability_focus_improved)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`broker_ability_focus_improved`；名稱鍵：`loc_talent_broker_ability_focus_improved`；描述鍵：`loc_talent_broker_ability_focus_improved_desc`。
 - 節點：`node_4fa187c3-c910-4e93-b982-cc2e68d2515b`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -18,26 +18,26 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：104–151](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L104-L151)
-- [scripts/settings/talent/talent_settings_broker.lua：119–141](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L119-L141)
-- [scripts/settings/ability/player_abilities/abilities/broker_abilities.lua：37–65](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/broker_abilities.lua#L37-L65)
-- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：67–180](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L67-L180)
-- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：243–485](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L243-L485)
-- [scripts/settings/buff/broker_buff_utils.lua：99–190](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/broker_buff_utils.lua#L99-L190)
-- [scripts/settings/buff/helper_functions/check_proc_functions.lua：306–318](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L306-L318)
-- [scripts/settings/buff/helper_functions/check_proc_functions.lua：777–792](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L777-L792)
-- [scripts/settings/damage/damage_settings.lua：18–23](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_settings.lua#L18-L23)
-- [scripts/settings/buff/buff_settings.lua：977–978](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L977-L978)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：839–884](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L884)
-- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：104–151](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L104-L151)
-- [scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：578–607](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L578-L607)
+- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：104–151](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L104-L151)
+- [scripts/settings/talent/talent_settings_broker.lua：119–141](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L119-L141)
+- [scripts/settings/ability/player_abilities/abilities/broker_abilities.lua：37–65](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/broker_abilities.lua#L37-L65)
+- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：67–180](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L67-L180)
+- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：243–485](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L243-L485)
+- [scripts/settings/buff/broker_buff_utils.lua：99–190](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/broker_buff_utils.lua#L99-L190)
+- [scripts/settings/buff/helper_functions/check_proc_functions.lua：306–318](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L306-L318)
+- [scripts/settings/buff/helper_functions/check_proc_functions.lua：777–792](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L777-L792)
+- [scripts/settings/damage/damage_settings.lua：18–23](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_settings.lua#L18-L23)
+- [scripts/settings/buff/buff_settings.lua：977–978](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L977-L978)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：839–884](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L884)
+- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：104–151](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L104-L151)
+- [scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：578–607](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L578-L607)
 
 ## 算例條件與待確認事項
 
 - **算例**：只計此技能時，100 × (1 + 20%) = 120 衝刺速度；每次擊殺延長量在 20 秒後為 1 ÷ 5 = 0.2 秒，在 40 秒後為 1 ÷ 5² = 0.04 秒。
 - 12.5 公尺近距離檢查使用攻擊者位置與命中點／死亡位置；不可把「毒素擊殺」單獨當成充分條件。
 - 文本列有基礎冷卻，但實際冷卻還受狀態持續時間暫停影響；若擊殺延長狀態，恢復時間相應往後。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

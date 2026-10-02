@@ -2,23 +2,23 @@
 
 [返回玩家說明](README.md#veteran_increased_ranged_cleave)｜[技術索引](SOURCE_INDEX.md)
 
-- 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`veteran_increased_ranged_cleave`；名稱鍵：`loc_talent_veteran_increased_ranged_cleave`；描述鍵：`loc_talent_veteran_increased_ranged_cleave_desc`。
-- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L804-L831)：`default`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3136-L3151)。
+- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L804-L831)：`default`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3136-L3151)。
 - 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
 ## 原始碼確認與程式推導
 
-talent_settings.cleave=.5，buff 將 .5 加至以 1 為基底的 ranged_max_hit_mass_attack_modifier，因此遠程攻擊 modifier=1.5。damage_profile.max_hit_mass 對遠程 attack mass 使用該 modifier；示例假設原預算6，6×1.5=9。[天賦與 buff](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3136-L3151) → [設定值與套用欄位](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L61-L63) → [ranged hit-mass 計算](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_profile.lua#L36-L80)；stat 類型以 additive multiplier 為基底。[stat 型別](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L951-L957)。
+talent_settings.cleave=.5，buff 將 .5 加至以 1 為基底的 ranged_max_hit_mass_attack_modifier，因此遠程攻擊 modifier=1.5。damage_profile.max_hit_mass 對遠程 attack mass 使用該 modifier；示例假設原預算6，6×1.5=9。[天賦與 buff](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3136-L3151) → [設定值與套用欄位](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L61-L63) → [ranged hit-mass 計算](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_profile.lua#L36-L80)；stat 類型以 additive multiplier 為基底。[stat 型別](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L951-L957)。
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 3136–3151 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3136-L3151)
-- [scripts/settings/talent/talent_settings_veteran.lua，第 61–63 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L61-L63)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 3522–3528 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3522-L3528)
-- [scripts/utilities/attack/damage_profile.lua，第 36–80 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_profile.lua#L36-L80)
-- [scripts/settings/buff/buff_settings.lua，第 951–957 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L951-L957)
-- [scripts/settings/buff/buff_settings.lua，第 1048–1058 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L1048-L1058)
+- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 3136–3151 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L3136-L3151)
+- [scripts/settings/talent/talent_settings_veteran.lua，第 61–63 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L61-L63)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 3522–3528 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3522-L3528)
+- [scripts/utilities/attack/damage_profile.lua，第 36–80 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_profile.lua#L36-L80)
+- [scripts/settings/buff/buff_settings.lua，第 951–957 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L951-L957)
+- [scripts/settings/buff/buff_settings.lua，第 1048–1058 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L1048-L1058)
 
 ## 算例條件與待確認事項
 

@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#adamant_forceful_stagger_on_low_high)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_forceful_stagger_on_low_high)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`adamant_forceful_stagger_on_low_high`；名稱鍵：`loc_talent_adamant_forceful_melee`；描述鍵：`loc_talent_adamant_forceful_stagger_on_low_high_desc`。
 - 節點：`node_deba29d6-030f-474a-9992-b6c75ee570bf`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -14,20 +14,20 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：1603–1625](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1603-L1625)
-- [scripts/settings/talent/talent_settings_adamant.lua：268–284](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_adamant.lua#L268-L284)
-- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：1451–1475](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L1451-L1475)
-- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：1435–1449](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L1435-L1449)
-- [scripts/settings/damage/explosion_templates/player_explosion_templates.lua：147–163](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L147-L163)
-- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：1603–1625](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1603-L1625)
-- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：986–1009](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L986-L1009)
+- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：1603–1625](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1603-L1625)
+- [scripts/settings/talent/talent_settings_adamant.lua：268–284](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L268-L284)
+- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：1451–1475](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L1451-L1475)
+- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：1435–1449](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L1435-L1449)
+- [scripts/settings/damage/explosion_templates/player_explosion_templates.lua：147–163](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L147-L163)
+- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：1603–1625](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L1603-L1625)
+- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：986–1009](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L986-L1009)
 
 ## 算例條件與待確認事項
 
 - 從 9 層升至 10 層觸發高層爆炸；之後若降至 0 層，低層計時器獨立檢查是否已過 5 秒。
-- 機制來源固定為公開 Aussiemon/Darktide-Source-Code SHA 419fe18d414a618ce0474bd015bab470afb446d6；inventory 的繁中與英文文字未證實與此程式碼同版。程式實作和文字措辭如有差異，先列跨版本待核，不直接判為翻譯錯誤。
+- 機制來源固定為公開 Aussiemon/Darktide-Source-Code SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；繁中、英文模板與程式來源皆為1.13.1；遊戲內最終顯示仍待核對。程式實作和文字措辭如有差異，先列文字與實作差異待核，不直接判為翻譯錯誤。
 - 描述寫「使敵人踉蹌」；程式同時以攻擊 profile 建立爆炸。其實際傷害與踉蹌依 profile、目標與共用爆炸結算決定，文字版本待遊戲內核對。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

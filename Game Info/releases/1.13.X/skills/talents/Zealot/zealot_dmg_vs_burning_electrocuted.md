@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#zealot_dmg_vs_burning_electrocuted)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_dmg_vs_burning_electrocuted)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`zealot_dmg_vs_burning_electrocuted`；名稱鍵：`loc_talent_zealot_dmg_vs_burning_electrocuted`；描述鍵：`loc_talent_zealot_dmg_vs_burning_electrocuted_desc`。
 - 節點：`node_85469f6c-0258-4ad5-82f5-9f23151c7b63`；分類：技能；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -14,16 +14,16 @@
 
 ## 原始碼依據
 
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4721–4728](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4721-L4728)
-- [scripts/settings/talent/talent_settings_zealot.lua：236–238](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L236-L238)
-- [scripts/utilities/attack/damage_calculation.lua：354–365](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L354-L365)
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3214–3229](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3214-L3229)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：2134–2156](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L2134-L2156)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4721–4728](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4721-L4728)
+- [scripts/settings/talent/talent_settings_zealot.lua：236–238](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L236-L238)
+- [scripts/utilities/attack/damage_calculation.lua：354–365](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L354-L365)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3214–3229](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3214-L3229)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：2134–2156](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L2134-L2156)
 
 ## 算例條件與待確認事項
 
 - **傷害算例**：基礎 100 點、僅符合其中一項時為 100 × 1.15 = 115；兩者皆符合時為 100 × (1 + 15% + 15%) = 130 點。其他同階段增傷也先相加。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

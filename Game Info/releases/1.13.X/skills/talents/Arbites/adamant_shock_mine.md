@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#adamant_shock_mine)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_shock_mine)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`adamant_shock_mine`；名稱鍵：`loc_talent_ability_shock_mine`；描述鍵：`loc_talent_ability_shock_mine_description`。
 - 節點：`node_ff1dbe2a-92b6-46f8-9c71-dc777431a537`；分類：閃擊；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,26 +15,26 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：469–502](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L469-L502)
-- [scripts/settings/talent/talent_settings_adamant.lua：84–87](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_adamant.lua#L84-L87)
-- [scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua：135–146](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua#L135-L146)
-- [scripts/settings/projectile/player_projectile_templates.lua：1083–1148](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/projectile/player_projectile_templates.lua#L1083-L1148)
-- [scripts/settings/buff/weapon_buff_templates.lua：475–510](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/weapon_buff_templates.lua#L475-L510)
-- [scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_shock_mine.lua：34–45](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_shock_mine.lua#L34-L45)
-- [scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_shock_mine.lua：77–216](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_shock_mine.lua#L77-L216)
-- [scripts/extension_systems/projectile_damage/projectile_damage_extension.lua：149–168](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L149-L168)
-- [scripts/settings/buff/weapon_buff_templates.lua：504–537](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/weapon_buff_templates.lua#L504-L537)
-- [scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：648–690](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L648-L690)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：839–869](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L869)
-- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：469–502](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L469-L502)
-- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：382–410](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L382-L410)
+- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：469–502](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L469-L502)
+- [scripts/settings/talent/talent_settings_adamant.lua：84–87](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L84-L87)
+- [scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua：135–146](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua#L135-L146)
+- [scripts/settings/projectile/player_projectile_templates.lua：1083–1148](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/player_projectile_templates.lua#L1083-L1148)
+- [scripts/settings/buff/weapon_buff_templates.lua：475–510](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L475-L510)
+- [scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_shock_mine.lua：34–45](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_shock_mine.lua#L34-L45)
+- [scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_shock_mine.lua：77–216](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_shock_mine.lua#L77-L216)
+- [scripts/extension_systems/projectile_damage/projectile_damage_extension.lua：149–168](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L149-L168)
+- [scripts/settings/buff/weapon_buff_templates.lua：504–537](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L504-L537)
+- [scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：648–690](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L648-L690)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：839–869](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L869)
+- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：469–502](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L469-L502)
+- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：382–410](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L382-L410)
 
 ## 算例條件與待確認事項
 
 - **傷害算例**：電擊每 0.3～0.8 秒隨機結算一次。單計護甲、無其他修正時，無甲基準為 8 × 0.5 = 4 點，防彈與硬殼護甲基準為 8 × 1 = 8 點；跳數不固定，不能直接乘固定次數當總傷害。
 - 原文未列地雷的逐跳傷害；本分析不以電擊持續時間乘上固定跳數推算總傷害。
 - 部署設定的 life_time=150 與投射物 fuse_time=15 屬不同層級計時欄位；未把它們混成相同的可視持續時間。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

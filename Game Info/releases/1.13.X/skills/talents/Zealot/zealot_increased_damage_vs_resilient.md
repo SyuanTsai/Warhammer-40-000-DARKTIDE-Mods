@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#zealot_increased_damage_vs_resilient)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_increased_damage_vs_resilient)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`zealot_increased_damage_vs_resilient`；名稱鍵：`loc_talent_zealot_3_passive_2`；描述鍵：`loc_talent_zealot_3_passive_2_description`。
 - 節點：`node_a827f270-b198-4fa8-be77-59feaebb2fc1`；分類：技能；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -13,16 +13,16 @@
 
 ## 原始碼依據
 
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：1000–1010](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L1000-L1010)
-- [scripts/settings/talent/talent_settings_zealot.lua：469–472](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L469-L472)
-- [scripts/utilities/attack/damage_calculation.lua：192–205](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L192-L205)
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：1363–1379](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1363-L1379)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：122–151](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L122-L151)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：1000–1010](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L1000-L1010)
+- [scripts/settings/talent/talent_settings_zealot.lua：469–472](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L469-L472)
+- [scripts/utilities/attack/damage_calculation.lua：192–205](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L192-L205)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：1363–1379](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L1363-L1379)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：122–151](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L122-L151)
 
 ## 算例條件與待確認事項
 
 - **傷害算例**：只看這項護甲類型加成，原有 100 點變成 100 × 1.20 = 120 點。若已有 10% 同類加成，則由 110 點變成 100 × (1 + 10% + 20%) = 130 點，新增收益約 18.18%。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

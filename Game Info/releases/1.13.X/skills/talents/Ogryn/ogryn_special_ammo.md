@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#ogryn_special_ammo)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_special_ammo)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`ogryn_special_ammo`；名稱鍵：`loc_talent_ogryn_combat_ability_special_ammo`；描述鍵：`loc_talent_ogryn_combat_ability_special_ammo_replenish_desc`。
 - 節點：`node_2febaa70-bba7-407d-8b22-c1160bd4c271`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -16,31 +16,31 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：296–361](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L296-L361)
-- [scripts/settings/talent/talent_settings_ogryn.lua：194–203](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_ogryn.lua#L194-L203)
-- [scripts/settings/talent/talent_settings_ogryn.lua：271–282](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_ogryn.lua#L271-L282)
-- [scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua：93–110](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua#L93-L110)
-- [scripts/settings/ability/ability_templates/ogryn_gunlugger_stance.lua：17–41](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/ability_templates/ogryn_gunlugger_stance.lua#L17-L41)
-- [scripts/extension_systems/ability/actions/action_stance_change.lua：111–155](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_stance_change.lua#L111-L155)
-- [scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：1851–1927](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L1851-L1927)
-- [scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：3750–3761](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L3750-L3761)
-- [scripts/extension_systems/ability/actions/action_stance_change.lua：108–150](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_stance_change.lua#L108-L150)
-- [scripts/utilities/ammo.lua：530–577](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/ammo.lua#L530-L577)
-- [scripts/extension_systems/weapon/actions/action_shoot.lua：1239–1249](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_shoot.lua#L1239-L1249)
-- [scripts/utilities/action/action_handler.lua：397–429](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/action/action_handler.lua#L397-L429)
-- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：296–361](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L296-L361)
-- [scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：1215–1243](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L1215-L1243)
+- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：296–361](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L296-L361)
+- [scripts/settings/talent/talent_settings_ogryn.lua：194–203](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_ogryn.lua#L194-L203)
+- [scripts/settings/talent/talent_settings_ogryn.lua：271–282](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_ogryn.lua#L271-L282)
+- [scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua：93–110](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua#L93-L110)
+- [scripts/settings/ability/ability_templates/ogryn_gunlugger_stance.lua：17–41](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/ability_templates/ogryn_gunlugger_stance.lua#L17-L41)
+- [scripts/extension_systems/ability/actions/action_stance_change.lua：111–155](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_stance_change.lua#L111-L155)
+- [scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：1851–1927](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L1851-L1927)
+- [scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：3750–3761](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L3750-L3761)
+- [scripts/extension_systems/ability/actions/action_stance_change.lua：108–150](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_stance_change.lua#L108-L150)
+- [scripts/utilities/ammo.lua：530–577](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/ammo.lua#L530-L577)
+- [scripts/extension_systems/weapon/actions/action_shoot.lua：1239–1249](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_shoot.lua#L1239-L1249)
+- [scripts/utilities/action/action_handler.lua：397–429](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/action_handler.lua#L397-L429)
+- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：296–361](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L296-L361)
+- [scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：1215–1243](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L1215-L1243)
 
 ## 算例條件與待確認事項
 
 - 換彈時間例子以單純1.65倍換彈速度計算；動畫、武器裝填流程和其他屬性可能改變實際耗時。
 - 返還量來自事件累計並加到武器彈藥槽；可用備彈上限可能使實際增加量低於計算值。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`826d5678`。
-- 繁中原文與英文原文都寫明啟動時切換並裝填遠程武器、姿態期間提升射速及換彈速度、近距離增傷，並在結束時返還消耗彈藥的一半；所列冷卻也一致。免費射擊計數納入返還是程式的細節補充，不是兩種原文互相矛盾；Build 25492122 與公開 SHA 的版本關係待核。
+- 繁中原文與英文原文都寫明啟動時切換並裝填遠程武器、姿態期間提升射速及換彈速度、近距離增傷，並在結束時返還消耗彈藥的一半；所列冷卻也一致。免費射擊計數納入返還是程式的細節補充，不是兩種原文互相矛盾；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 
 ## 圖示來源
 

@@ -2,7 +2,7 @@
 
 [返回基礎效果](BASE_EFFECTS.md#adamant_companion_damage_per_level)｜[技術索引](SOURCE_INDEX.md)
 
-- 固定來源：Release 1.13.0／`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 固定來源：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 基礎天賦：`adamant_companion_damage_per_level`；不占可選天賦點數。
 - 證據程度：原始碼確認與程式推導，未進行遊戲內測試。
 
@@ -15,17 +15,17 @@
 
 ## 原始碼依據
 
-- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/adamant_archetype.lua#L63-L65)
-- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L21-L29)
-- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L64-L85)
-- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L265-L276)
-- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/adamant_damage_profile_templates.lua#L181-L235)
-- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/adamant_damage_profile_templates.lua#L236-L287)
-- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/behavior/nodes/actions/bt_companion_target_pounced_action.lua#L45-L85)
-- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/behavior/nodes/actions/bt_companion_target_pounced_action.lua#L140-L183)
-- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/breed/breeds/cultist/cultist_melee_breed.lua#L391-L399)
-- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/breed/breeds/cultist/cultist_mutant_breed.lua#L421-L430)
-- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/breed/breeds/chaos/chaos_spawn_breed.lua#L461-L469)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/adamant_archetype.lua#L63-L65)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L21-L29)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L64-L85)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L265-L276)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/adamant_damage_profile_templates.lua#L181-L235)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/adamant_damage_profile_templates.lua#L236-L287)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/behavior/nodes/actions/bt_companion_target_pounced_action.lua#L45-L85)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/behavior/nodes/actions/bt_companion_target_pounced_action.lua#L140-L183)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/breed/breeds/cultist/cultist_melee_breed.lua#L391-L399)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/breed/breeds/cultist/cultist_mutant_breed.lua#L421-L430)
+- [固定版本來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/breed/breeds/chaos/chaos_spawn_breed.lua#L461-L469)
 
 ## 算例與待確認事項
 
@@ -34,4 +34,4 @@
 - 撲擊 profile 的 100/200/300 是 attack power distribution 設定，不能當成造成 100/200/300 點生命傷害。
 - 等級倍率只套在非 bleeding 的 companion damage path；流血 DoT 不吃這份 companion_damage_multiplier。
 - Ogryn 與 monster profile 有 initial_pounce、dog_bleed 標記；人形 profile 沒有這兩個標記。實際流血施加還受獨立被動條件控制。
-- 本機文字 Build 25492122 與固定公開來源版本對應為1.13.0。
+- 本機文字 Build 25606770 與固定公開來源版本對應為1.13.1。

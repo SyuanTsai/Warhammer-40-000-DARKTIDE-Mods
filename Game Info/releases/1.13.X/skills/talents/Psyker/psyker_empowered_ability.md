@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#psyker_empowered_ability)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_empowered_ability)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`psyker_empowered_ability`；名稱鍵：`loc_talent_psyker_empowered_ability`；描述鍵：`loc_talent_psyker_empowered_ability_description`。
 - 節點：`node_8d367c1d-ce78-44f3-a7b8-6a4b55341929`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -17,25 +17,25 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：616–721](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L616-L721)
-- [scripts/settings/talent/talent_settings_psyker.lua：310–315](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L310-L315)
-- [scripts/settings/talent/talent_settings_psyker.lua：340–341](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L340-L341)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：2245–2269](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2245-L2269)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：2271–2387](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2271-L2387)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：2388–2487](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2388-L2487)
-- [scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua：12–20](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua#L12-L20)
-- [scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua：56–65](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua#L56-L65)
-- [scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua：16–34](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua#L16-L34)
-- [scripts/settings/projectile/player_projectile_templates.lua：567–619](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/projectile/player_projectile_templates.lua#L567-L619)
-- [scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua：288–393](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua#L288-L393)
-- [scripts/extension_systems/weapon/actions/action_spawn_projectile.lua：218–244](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_spawn_projectile.lua#L218-L244)
-- [scripts/extension_systems/weapon/actions/action_smite_targeting.lua：153–162](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_smite_targeting.lua#L153-L162)
-- [scripts/utilities/attack/damage_calculation.lua：507–525](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L507-L525)
-- [scripts/utilities/action/chain_lightning.lua：455–497](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/action/chain_lightning.lua#L455-L497)
-- [scripts/extension_systems/weapon/actions/action_chain_lightning.lua：451–475](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_chain_lightning.lua#L451-L475)
-- [scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua：82–89](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua#L82-L89)
-- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：616–721](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L616-L721)
-- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1296–1325](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1296-L1325)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：616–721](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L616-L721)
+- [scripts/settings/talent/talent_settings_psyker.lua：310–315](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L310-L315)
+- [scripts/settings/talent/talent_settings_psyker.lua：340–341](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L340-L341)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：2245–2269](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2245-L2269)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：2271–2387](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2271-L2387)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：2388–2487](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2388-L2487)
+- [scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua：12–20](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua#L12-L20)
+- [scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua：56–65](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua#L56-L65)
+- [scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua：16–34](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua#L16-L34)
+- [scripts/settings/projectile/player_projectile_templates.lua：567–619](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/player_projectile_templates.lua#L567-L619)
+- [scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua：288–393](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua#L288-L393)
+- [scripts/extension_systems/weapon/actions/action_spawn_projectile.lua：218–244](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_spawn_projectile.lua#L218-L244)
+- [scripts/extension_systems/weapon/actions/action_smite_targeting.lua：153–162](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_smite_targeting.lua#L153-L162)
+- [scripts/utilities/attack/damage_calculation.lua：507–525](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L507-L525)
+- [scripts/utilities/action/chain_lightning.lua：455–497](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/chain_lightning.lua#L455-L497)
+- [scripts/extension_systems/weapon/actions/action_chain_lightning.lua：451–475](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_chain_lightning.lua#L451-L475)
+- [scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua：82–89](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua#L82-L89)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：616–721](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L616-L721)
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1296–1325](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1296-L1325)
 
 ## 算例條件與待確認事項
 
@@ -43,10 +43,10 @@
 - **懲戒**：傷害增加 200%。沒有其他增傷時，100 × (1 + 200%) = 300 點。
 - **靈能攻擊**：不產生反噬、不消耗投擲次數，並提高傷害與穿透能力；仍會消耗一層靈能強化。穿透容量由 2 提高至 4，是 4 ÷ 2 = 2 倍；實際能貫穿的敵人數量依敵人與命中條件而變。
 - **機率算例**：每次皆有空位可儲存時，100 次擊殺的期望取得次數為 100 × 10% = 10 次；不是每十次擊殺保證觸發。
-- 強化顱腦崩裂的顯示參數稱施放時間減少50%，執行是速度增加50%（時間÷1.5）；繁中與英文同樣寫時間減少，屬來源差異，版本對應為1.13.0，不列繁中誤譯。
+- 強化顱腦崩裂的顯示參數稱施放時間減少50%，執行是速度增加50%（時間÷1.5）；繁中與英文同樣寫時間減少，屬來源差異，版本對應為1.13.1，不列繁中誤譯。
 - 蓄力時間仍受其他速度與動作修正影響；傷害算例假設該階段沒有其他加成。靈能攻擊的不同命中順序與護甲仍需分別結算。
-- 懲戒傳導加快的顯示值與使用端短路判定不一致；此版本執行路徑未將.5套至明定的.3秒間隔，待同版遊戲核對。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 懲戒傳導加快的顯示值與使用端短路判定不一致；此版本執行路徑未將.5套至明定的.3秒間隔，待遊戲內核對。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

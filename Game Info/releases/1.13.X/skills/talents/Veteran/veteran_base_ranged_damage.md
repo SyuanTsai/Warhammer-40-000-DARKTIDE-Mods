@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。基礎天賦 `veteran_base_ranged_damage`；名稱鍵 `loc_talent_veteran_base_ranged_damage`；描述鍵 `loc_talent_veteran_base_ranged_damage_desc`。
+- 固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。基礎天賦 `veteran_base_ranged_damage`；名稱鍵 `loc_talent_veteran_base_ranged_damage`；描述鍵 `loc_talent_veteran_base_ranged_damage_desc`。
 - 由職業基礎清單啟用，不是77個技能樹節點之外的額外可選節點。
 
 - 職業基礎被動掛 veteran_base_ranged_damage，設定 ranged_damage=.25。
@@ -17,13 +17,13 @@
 
 ## 原始碼依據
 
-- [scripts/settings/archetype/archetypes/veteran_archetype.lua，第 50–74 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L50-L74)
-- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 1400–1416 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1400-L1416)
-- [scripts/settings/talent/talent_settings_veteran.lua，第 64–66 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L64-L66)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2122–2131 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2122-L2131)
-- [scripts/settings/buff/buff_settings.lua，第 943–944 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L943-L944)
-- [scripts/utilities/attack/damage_calculation.lua，第 232–242 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L232-L242)
-- [scripts/utilities/attack/damage_calculation.lua，第 317–319 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L317-L319)
+- [scripts/settings/archetype/archetypes/veteran_archetype.lua，第 50–74 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/veteran_archetype.lua#L50-L74)
+- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 1400–1416 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1400-L1416)
+- [scripts/settings/talent/talent_settings_veteran.lua，第 64–66 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L64-L66)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2122–2131 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2122-L2131)
+- [scripts/settings/buff/buff_settings.lua，第 943–944 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L943-L944)
+- [scripts/utilities/attack/damage_calculation.lua，第 232–242 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L232-L242)
+- [scripts/utilities/attack/damage_calculation.lua，第 317–319 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L317-L319)
 
 ## 圖示來源
 

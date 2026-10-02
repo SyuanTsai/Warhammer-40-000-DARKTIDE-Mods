@@ -2,9 +2,9 @@
 
 [返回玩家說明](README.md#veteran_toughness_bonus_leaving_invisibility)｜[技術索引](SOURCE_INDEX.md)
 
-- 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`veteran_toughness_bonus_leaving_invisibility`；名稱鍵：`loc_talent_veteran_toughness_bonus_leaving_invisibility`；描述鍵：`loc_talent_veteran_toughness_bonus_leaving_invisibility_desc`。
-- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L886-L909)：`ability_modifier`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2155-L2195)。
+- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L886-L909)：`ability_modifier`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2155-L2195)。
 - 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
 ## 開始時間、結束時間與多份效果
@@ -16,13 +16,13 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 2155–2195 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2155-L2195)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1096–1108 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1096-L1108)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1215–1217 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1215-L1217)
-- [scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua，第 7–27 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua#L7-L27)
-- [scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua，第 30–44 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua#L30-L44)
-- [scripts/extension_systems/buff/buff_extension_base.lua，第 439–484 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buff_extension_base.lua#L439-L484)
-- [scripts/settings/buff/buff_settings.lua，第 1002–1003 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L1002-L1003)
+- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 2155–2195 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2155-L2195)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1096–1108 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1096-L1108)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1215–1217 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1215-L1217)
+- [scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua，第 7–27 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua#L7-L27)
+- [scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua，第 30–44 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua#L30-L44)
+- [scripts/extension_systems/buff/buff_extension_base.lua，第 439–484 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L439-L484)
+- [scripts/settings/buff/buff_settings.lua，第 1002–1003 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L1002-L1003)
 
 ## 算例條件與待確認事項
 

@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#zealot_stealth_cooldown_regeneration)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_stealth_cooldown_regeneration)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`zealot_stealth_cooldown_regeneration`；名稱鍵：`loc_talent_zealot_stealth_increased_damage`；描述鍵：`loc_talent_zealot_stealth_cooldown_regeneration_desc`。
 - 節點：`node_de287eb8-d0e5-46ab-98c2-d71496a3bd4a`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -16,16 +16,16 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2438–2460](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2438-L2460)
-- [scripts/settings/talent/talent_settings_zealot.lua：149–153](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L149-L153)
-- [scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua：60–76](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua#L60-L76)
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4241–4267](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4241-L4267)
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4280–4295](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4280-L4295)
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：2735–2786](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L2735-L2786)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1102](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1437–1461](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1437-L1461)
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2438–2460](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2438-L2460)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1865–1889](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1865-L1889)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2438–2460](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2438-L2460)
+- [scripts/settings/talent/talent_settings_zealot.lua：149–153](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L149-L153)
+- [scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua：60–76](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua#L60-L76)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4241–4267](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4241-L4267)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4280–4295](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4280-L4295)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：2735–2786](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L2735-L2786)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1102](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1437–1461](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1437-L1461)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：2438–2460](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L2438-L2460)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1865–1889](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1865-L1889)
 
 ## 算例條件與待確認事項
 
@@ -33,7 +33,7 @@
 - 擊殺必須在隱形 buff 仍活躍時被 proc；離開潛行後的擊殺不適用。
 - 每次潛行一次是成功恢復後鎖定；沒有可恢復空間或缺少目標 breed 資訊時，程式結果可能不同。
 - 名稱相似的 `zealot_stealth_cooldown_regeneration` buff 模板不是該 talent 的附加 passive，不能拿它的 1 秒 cooldown_duration 推成此 talent 每秒可返還一次。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

@@ -2,8 +2,8 @@
 
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
-- 原文：本機 Steam Build 25492122，2026-10-01 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25492122_1.13.0/，整個 Build 目錄受 Git 忽略。
-- 機制：Release 1.13.0／`419fe18d414a618ce0474bd015bab470afb446d6`。兩來源版本對應為1.13.0；跨版實作差異留待遊戲內核對。
+- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
+- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文本與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
 - 只有明確的效果方向、作用對象或數量／單位矛盾列為勘誤；省略機制或算例不算錯誤。
 
 - 覆蓋 86／86 組同鍵／hash 描述：6 項繁中勘誤、5 項待遊戲內核對、75 項未見明確矛盾。「畏怯正義」另有攻速數值的跨來源差異，與其翻譯語意勘誤分開說明。
@@ -196,7 +196,7 @@
 ## 畏怯正義(Fear of Justice)
 
 - 描述鍵：`loc_talent_adamant_drone_debuff_talent_desc`；hash：`b1b69549`。
-- 結論：繁中原文勘誤。繁中寫「攻擊速度降低 50%」，英文寫「time between … attacks, is increased by 50%」。固定來源的介面格式值是 50%，但實際近戰攻速 stat 設為 −25%，敵人行為按攻速倍率反算時間約延長 33%；目前有實作與文字差異，公開提交與遊戲文本版本尚待核對。
+- 結論：繁中原文勘誤。繁中寫「攻擊速度降低 50%」，英文寫「time between … attacks, is increased by 50%」。固定來源的介面格式值是 50%，但實際近戰攻速 stat 設為 −25%，敵人行為按攻速倍率反算時間約延長 33%；目前有實作與文字差異；兩來源皆為1.13.1，實際表現待遊戲內核對。
 - 繁中原文短引：敵人的近戰攻擊受到影響時，攻擊速度降低{attack_speed_reduction:%s}，近戰攻擊所造成的傷害也會降低{damage_reduction:%s}。
 - 同源英文：The time between affected Enemies' Melee Attacks, is increased by {attack_speed_reduction:%s}, and their Melee Attacks deal {damage_reduction:%s} less Damage.
 - [原始碼推導與限制](adamant_drone_debuff_talent.md)。

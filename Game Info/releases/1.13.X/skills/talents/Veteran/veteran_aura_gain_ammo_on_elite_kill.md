@@ -10,7 +10,7 @@
 
 ## 原始碼確認與程式推導
 
-- 固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。基礎天賦 `veteran_aura_gain_ammo_on_elite_kill`；名稱鍵 `loc_talent_veteran_elite_kills_grant_ammo_coop`；描述鍵 `loc_talent_veteran_elite_kills_grant_ammo_coop_cd_desc`。
+- 固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。基礎天賦 `veteran_aura_gain_ammo_on_elite_kill`；名稱鍵 `loc_talent_veteran_elite_kills_grant_ammo_coop`；描述鍵 `loc_talent_veteran_elite_kills_grant_ammo_coop_cd_desc`。
 - 由職業基礎清單啟用，不是77個技能樹節點之外的額外可選節點。
 
 - 基礎 aura identifier=veteran_aura、priority=1；改良版相同identifier、priority=2，選用時取高優先序，並非兩個比例相加。
@@ -21,15 +21,15 @@
 
 ## 原始碼依據
 
-- [scripts/settings/archetype/archetypes/veteran_archetype.lua，第 50–74 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L50-L74)
-- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 646–666 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L646-L666)
-- [scripts/settings/talent/talent_settings_veteran.lua，第 105–109 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L105-L109)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1488–1596 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1488-L1596)
-- [scripts/settings/buff/helper_functions/check_proc_functions.lua，第 196–206 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L196-L206)
-- [scripts/extension_systems/buff/buffs/proc_buff.lua，第 310–350 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/proc_buff.lua#L310-L350)
-- [scripts/extension_systems/coherency/coherency_system.lua，第 188–255 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/coherency/coherency_system.lua#L188-L255)
-- [scripts/utilities/ammo.lua，第 494–529 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/ammo.lua#L494-L529)
-- [scripts/extension_systems/coherency/unit_coherency_extension.lua，第 256–311 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/coherency/unit_coherency_extension.lua#L256-L311)
+- [scripts/settings/archetype/archetypes/veteran_archetype.lua，第 50–74 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/veteran_archetype.lua#L50-L74)
+- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 646–666 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L646-L666)
+- [scripts/settings/talent/talent_settings_veteran.lua，第 105–109 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L105-L109)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1488–1596 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1488-L1596)
+- [scripts/settings/buff/helper_functions/check_proc_functions.lua，第 196–206 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L196-L206)
+- [scripts/extension_systems/buff/buffs/proc_buff.lua，第 310–350 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L310-L350)
+- [scripts/extension_systems/coherency/coherency_system.lua，第 188–255 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/coherency_system.lua#L188-L255)
+- [scripts/utilities/ammo.lua，第 494–529 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/ammo.lua#L494-L529)
+- [scripts/extension_systems/coherency/unit_coherency_extension.lua，第 256–311 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/unit_coherency_extension.lua#L256-L311)
 
 ## 圖示來源
 

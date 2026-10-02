@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#broker_ability_punk_rage_sub_3)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_ability_punk_rage_sub_3)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`broker_ability_punk_rage_sub_3`；名稱鍵：`loc_talent_broker_ability_punk_rage_sub_3`；描述鍵：`loc_talent_broker_ability_punk_rage_sub_3_desc_02`。
 - 節點：`node_32f5f38d-828f-4993-8fcf-ebd1f1f30199`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,23 +15,23 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：425–455](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L425-L455)
-- [scripts/settings/talent/talent_settings_broker.lua：142–168](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L142-L168)
-- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：488–541](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L488-L541)
-- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：615–646](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L615-L646)
-- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：715–729](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L715-L729)
-- [scripts/settings/ability/shout_target_templates.lua：35–45](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/shout_target_templates.lua#L35-L45)
-- [scripts/settings/buff/buff_settings.lua：860–864](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L860-L864)
-- [scripts/extension_systems/behavior/nodes/actions/bt_melee_attack_action.lua：259–278](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/behavior/nodes/actions/bt_melee_attack_action.lua#L259-L278)
-- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：425–455](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L425-L455)
-- [scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：1949–1971](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L1949-L1971)
+- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：425–455](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L425-L455)
+- [scripts/settings/talent/talent_settings_broker.lua：142–168](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L142-L168)
+- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：488–541](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L488-L541)
+- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：615–646](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L615-L646)
+- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：715–729](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L715-L729)
+- [scripts/settings/ability/shout_target_templates.lua：35–45](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/shout_target_templates.lua#L35-L45)
+- [scripts/settings/buff/buff_settings.lua：860–864](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L860-L864)
+- [scripts/extension_systems/behavior/nodes/actions/bt_melee_attack_action.lua：259–278](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/behavior/nodes/actions/bt_melee_attack_action.lua#L259-L278)
+- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：425–455](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L425-L455)
+- [scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：1949–1971](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L1949-L1971)
 
 ## 算例條件與待確認事項
 
 - **速度算例**：減速前近戰攻擊間隔若為 1 秒，攻擊速度倍率變成 1−0.5=0.5，間隔估算為 1/0.5=2 秒，增加100%。
 - 5秒是敵人減速 debuff 的持續時間；怒火基本持續10秒，實際可能因近戰命中延長。
 - 攻擊間隔算例只計此攻速修正，實際敵人動作仍受原始攻擊動畫與其他修正影響。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

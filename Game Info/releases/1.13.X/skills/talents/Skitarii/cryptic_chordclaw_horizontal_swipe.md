@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_chordclaw_horizontal_swipe)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_chordclaw_horizontal_swipe)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_chordclaw_horizontal_swipe`；名稱鍵：`loc_talent_cryptic_chordclaw_horizontal_swipe`；描述鍵：`loc_talent_cryptic_chordclaw_horizontal_swipe_desc`。
 - 節點：`node_9d962b30-33ec-48bc-915f-f19f4a2d8ed2`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -16,16 +16,16 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：513–522](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L513-L522)
-- [scripts/settings/equipment/weapon_action_handler_data.lua：697–710](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_action_handler_data.lua#L697-L710)
-- [scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua：561–575](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua#L561-L575)
-- [scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua：739–751](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua#L739-L751)
-- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：459–527](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L459-L527)
-- [scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua：663–751](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua#L663-L751)
-- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：459–550](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L459-L550)
-- [scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua：1007–1039](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua#L1007-L1039)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：513–522](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L513-L522)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1147–1170](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1147-L1170)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：513–522](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L513-L522)
+- [scripts/settings/equipment/weapon_action_handler_data.lua：697–710](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_action_handler_data.lua#L697-L710)
+- [scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua：561–575](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua#L561-L575)
+- [scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua：739–751](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua#L739-L751)
+- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：459–527](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L459-L527)
+- [scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua：663–751](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua#L663-L751)
+- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：459–550](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L459-L550)
+- [scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua：1007–1039](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua#L1007-L1039)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：513–522](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L513-L522)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1147–1170](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1147-L1170)
 
 ## 算例條件與待確認事項
 
@@ -34,7 +34,7 @@
 - 天賦描述未提供固定傷害數字；來源傷害設定檔的 power distribution 會再經目標、防護與命中計算，不能當作生命傷害。
 - 攻擊鏈是否命中多個目標由掃掠、穿透與敵人位置決定，不保證每次都命中 profile 所列全部目標。
 - 繁中與英文只描述新增橫掃動作，與來源 action 分支一致；額外的攻擊設定檔細節為原文省略，未見明確矛盾。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

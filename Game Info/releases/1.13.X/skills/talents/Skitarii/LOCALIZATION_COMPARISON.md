@@ -2,8 +2,8 @@
 
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
-- 原文：本機 Steam Build 25492122，2026-10-01 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25492122_1.13.0/，整個 Build 目錄受 Git 忽略。
-- 機制：Release 1.13.0／`419fe18d414a618ce0474bd015bab470afb446d6`。兩來源版本對應為1.13.0；跨版實作差異留待遊戲內核對。
+- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
+- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文本與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
 - 只有明確的效果方向、作用對象或數量／單位矛盾列為勘誤；省略機制或算例不算錯誤。
 
 - 覆蓋97／97組同鍵／hash中英描述；4項明確繁中勘誤已放在對應技能下。其他項目的機制省略、措辭易誤讀或跨來源落差另列，不當成繁中錯誤。
@@ -119,14 +119,14 @@
 ## 滌罪伺服頭骨(Purgator Servo-Skull)
 
 - 描述鍵：`loc_talent_cryptic_servo_skull_flamethrower_new_desc`；hash：`e66555ce`。
-- 結論：未見明確矛盾；補充機制與算例。繁中描述已涵蓋額外噴火頭骨、落點部署、兩種射擊模式與雙選增加使用次數。固定來源另證明每次噴火消耗共用手榴彈能力1次、15秒動作與10公尺射程；屬翻譯省略的機制細節，不判為錯譯。Build 25492122 版本對應為1.13.0。
+- 結論：未見明確矛盾；補充機制與算例。繁中描述已涵蓋額外噴火頭骨、落點部署、兩種射擊模式與雙選增加使用次數。固定來源另證明每次噴火消耗共用手榴彈能力1次、15秒動作與10公尺射程；屬翻譯省略的機制細節，不判為錯譯。Build 25606770 版本對應為1.13.1。
 - [原始碼推導與限制](cryptic_flamethrower.md)。
 
 <a id="cryptic_servo_skull_inject_ally"></a>
 ## 醫療伺服頭骨(Medicae Servo-Skull)
 
 - 描述鍵：`loc_talent_cryptic_servo_skull_inject_ally_revive_new_desc`；hash：`86ee1b55`。
-- 結論：未見明確矛盾；補充機制與算例。繁中描述已涵蓋救援、75%韌性承傷減免、每秒20%韌性恢復與5秒持續。程式確認承傷乘數0.25代表減免75%，並確認有效目標判斷與共用次數消耗；翻譯沒有列出這些條件屬機制省略。Build 25492122 版本對應為1.13.0。
+- 結論：未見明確矛盾；補充機制與算例。繁中描述已涵蓋救援、75%韌性承傷減免、每秒20%韌性恢復與5秒持續。程式確認承傷乘數0.25代表減免75%，並確認有效目標判斷與共用次數消耗；翻譯沒有列出這些條件屬機制省略。Build 25606770 版本對應為1.13.1。
 - [原始碼推導與限制](cryptic_servo_skull_inject_ally.md)。
 
 <a id="cryptic_grenade_ability_arc_grenade"></a>
@@ -140,49 +140,49 @@
 ## 匠師伺服頭骨(Artificer Servo-Skull)
 
 - 描述鍵：`loc_talent_cryptic_servo_skull_improved_clarified_desc`；hash：`4bb85179`。
-- 結論：未見明確矛盾；補充機制與算例。繁中描述已說明常駐頭骨、雙擊標記下令、攻擊與資料詢問，以及基礎閃擊加成常駐。程式核查補出25%傷害、0.5射擊冷卻倍率、命中後15%傷害承受增幅與燃燒上限等數值；屬說明未列出的實作細節，不判為錯譯。Build 25492122 版本對應為1.13.0。
+- 結論：未見明確矛盾；補充機制與算例。繁中描述已說明常駐頭骨、雙擊標記下令、攻擊與資料詢問，以及基礎閃擊加成常駐。程式核查補出25%傷害、0.5射擊冷卻倍率、命中後15%傷害承受增幅與燃燒上限等數值；屬說明未列出的實作細節，不判為錯譯。Build 25606770 版本對應為1.13.1。
 - [原始碼推導與限制](cryptic_servo_skull_improved.md)。
 
 <a id="cryptic_arc_grenades_brittleness"></a>
 ## 超載電弧手榴彈(Overcharged Arc Grenades)
 
 - 描述鍵：`loc_talent_cryptic_arc_grenades_brittleness_desc`；hash：`699afdc0`。
-- 結論：未見明確矛盾；補充連鎖與脆弱計算。繁中描述列出電弧目標增加2個及命中敵人施加8層、每層2.5%脆弱。程式確認額外數值加在起始目標上限，並在電弧連鎖節點加8層、每層2.5%且5秒；最大疊層為16層。Build 25492122 版本對應為1.13.0。
+- 結論：未見明確矛盾；補充連鎖與脆弱計算。繁中描述列出電弧目標增加2個及命中敵人施加8層、每層2.5%脆弱。程式確認額外數值加在起始目標上限，並在電弧連鎖節點加8層、每層2.5%且5秒；最大疊層為16層。Build 25606770 版本對應為1.13.1。
 - [原始碼推導與限制](cryptic_arc_grenades_brittleness.md)。
 
 <a id="cryptic_arc_grenades_weapon_malfunction"></a>
 ## 強化電弧手榴彈(Enhanced Arc Grenades)
 
 - 描述鍵：`loc_talent_cryptic_arc_grenades_weapon_malfunction_larger_desc`；hash：`6282ba9c`。
-- 結論：未見明確矛盾；補充刷新與目標限制。繁中說明指出電弧手榴彈會令受影響的遠程敵人無法使用遠程武器12秒。固定來源確認直接爆炸及電弧連鎖命中可觸發武器故障，程式條件還要求目標具故障元件且存活；品種預設與目前列出的故障時長為12秒。Build 25492122 版本對應為1.13.0。
+- 結論：未見明確矛盾；補充刷新與目標限制。繁中說明指出電弧手榴彈會令受影響的遠程敵人無法使用遠程武器12秒。固定來源確認直接爆炸及電弧連鎖命中可觸發武器故障，程式條件還要求目標具故障元件且存活；品種預設與目前列出的故障時長為12秒。Build 25606770 版本對應為1.13.1。
 - [原始碼推導與限制](cryptic_arc_grenades_weapon_malfunction.md)。
 
 <a id="cryptic_force_field_duration_increase"></a>
 ## 過載艾曼納圖斯力場(Overcharged Refraction Emitter)
 
 - 描述鍵：`loc_talent_cryptic_force_field_duration_increase_desc`；hash：`edf9be63`。
-- 結論：未見明確矛盾；補充機制與算例。本分析固定於指定原始碼 SHA；本機 Build 25492122 的繁中說明與來源實作尚未確認為同一 Build。已依來源確認12秒與一次中點爆炸，未將更完整的時間線省略視為翻譯錯誤。
+- 結論：未見明確矛盾；補充機制與算例。本分析固定於指定原始碼 SHA；本機 Build 25606770 的繁中說明與來源實作尚未確認為同一 Build。已依來源確認12秒與一次中點爆炸，未將更完整的時間線省略視為翻譯錯誤。
 - [原始碼推導與限制](cryptic_force_field_duration_increase.md)。
 
 <a id="cryptic_force_field_capacitance_restore"></a>
 ## 動能排斥(Kinetic Repulsion)
 
 - 描述鍵：`loc_talent_cryptic_force_field_capacitance_restore`；hash：`e9096586`。
-- 結論：未見明確矛盾；補充機制與算例。固定原始碼顯示每次合格攻擊恢復0.025、單次力場累計最多0.75，並恢復戰鬥技能資源；本機 Build 25492122 尚未與固定 SHA 確認同版。繁中描述所省略的攻擊分類與消耗端屬補充細節，不按明確翻譯錯誤處理。
+- 結論：未見明確矛盾；補充機制與算例。固定原始碼顯示每次合格攻擊恢復0.025、單次力場累計最多0.75，並恢復戰鬥技能資源；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。繁中描述所省略的攻擊分類與消耗端屬補充細節，不按明確翻譯錯誤處理。
 - [原始碼推導與限制](cryptic_force_field_capacitance_restore.md)。
 
 <a id="cryptic_servo_skull_improved_tagging"></a>
 ## 心智網指令(Noospheric Command)
 
 - 描述鍵：`loc_talent_cryptic_servo_skull_improved_tagging_fire_rate_cost_desc`；hash：`843cef80`。
-- 結論：未見明確矛盾；補充機制與算例。繁中描述有列出下令攻擊、持續2秒及0.3電容量，但程式的資源參數是 combat_ability charge percentage，換算為0.3份；程式射擊冷卻乘數0.15，語系格式值會換算為約567%攻擊速度。其餘門檻、訓練場例外及扣除調整屬未列明細節。Build 25492122 版本對應為1.13.0。
+- 結論：未見明確矛盾；補充機制與算例。繁中描述有列出下令攻擊、持續2秒及0.3電容量，但程式的資源參數是 combat_ability charge percentage，換算為0.3份；程式射擊冷卻乘數0.15，語系格式值會換算為約567%攻擊速度。其餘門檻、訓練場例外及扣除調整屬未列明細節。Build 25606770 版本對應為1.13.1。
 - [原始碼推導與限制](cryptic_servo_skull_improved_tagging.md)。
 
 <a id="cryptic_force_field_arcs"></a>
 ## 電流抗性(Voltaic Resistance)
 
 - 描述鍵：`loc_talent_cryptic_force_field_arcs_desc`；hash：`143e5c50`。
-- 結論：未見明確矛盾；補充機制與算例。固定原始碼確認按吸收遠程攻擊數以每6次取上限整數後限制1至4道；0次也會由下限算成1道，並在正常到期路徑進入找目標流程。繁中描述未列出整數門檻、最低值及前方12公尺目標條件，屬翻譯省略的實作細節，不列為錯誤。本機 Build 25492122 版本對應為1.13.0。
+- 結論：未見明確矛盾；補充機制與算例。固定原始碼確認按吸收遠程攻擊數以每6次取上限整數後限制1至4道；0次也會由下限算成1道，並在正常到期路徑進入找目標流程。繁中描述未列出整數門檻、最低值及前方12公尺目標條件，屬翻譯省略的實作細節，不列為錯誤。本機 Build 25606770 版本對應為1.13.1。
 - [原始碼推導與限制](cryptic_force_field_arcs.md)。
 
 <a id="cryptic_coherency_regen_aura_improved"></a>
@@ -196,14 +196,14 @@
 ## 彈藥存放(Ammunition Deposit)
 
 - 描述鍵：`loc_talent_cryptic_ammo_aura_toughness_desc`；hash：`cc394399`。
-- 結論：待遊戲內核對。繁中描述列出自身韌性及自己與協同隊友的儲備彈藥增加。固定原始碼確認自身獲得25點韌性，且 ammo_reserve_capacity +15% 會發給全部人類玩家而無協同判斷；Build 25492122 版本對應為1.13.0，先記錄實作範圍差異，不判為錯譯。
+- 結論：待遊戲內核對。繁中描述列出自身韌性及自己與協同隊友的儲備彈藥增加。固定原始碼確認自身獲得25點韌性，且 ammo_reserve_capacity +15% 會發給全部人類玩家而無協同判斷；Build 25606770 版本對應為1.13.1，先記錄實作範圍差異，不判為錯譯。
 - [原始碼推導與限制](cryptic_ammo_aura.md)。
 
 <a id="cryptic_aura_weapon_improved"></a>
 ## 碎敵信條(Foe-Render Creed)
 
 - 描述鍵：`loc_talent_cryptic_aura_weapon_improved_desc`；hash：`6d4feb19`。
-- 結論：未見明確矛盾；補充計算。繁中描述列出自身+25韌性及協同隊友的順劈、撕裂效果。固定來源的協同鏈包含施放者本人，故自身也取得15%順劈最大命中質量與7.5%撕裂；未明寫自身受光環效果屬描述省略。Build 25492122 版本對應為1.13.0。
+- 結論：未見明確矛盾；補充計算。繁中描述列出自身+25韌性及協同隊友的順劈、撕裂效果。固定來源的協同鏈包含施放者本人，故自身也取得15%順劈最大命中質量與7.5%撕裂；未明寫自身受光環效果屬描述省略。Build 25606770 版本對應為1.13.1。
 - [原始碼推導與限制](cryptic_aura_weapon_improved.md)。
 
 <a id="cryptic_chordclaw"></a>
@@ -424,7 +424,7 @@
 ## 動力驅動(Powerdrive)
 
 - 描述鍵：`loc_talent_cryptic_overload_keystone_abilities_desc`；hash：`6c9f2d5b`。
-- 結論：未見明確矛盾。繁中與英文均概述每份消耗增加5層。固定版一般使用按 ability_cost 計算，鎖定姿態改在結束時按累計消耗取整；弦爪連續使用有只計首次的限制。這是兩種語言均未詳述的實作差異，留待同版實測，不列為繁中誤譯。
+- 結論：未見明確矛盾。繁中與英文均概述每份消耗增加5層。固定版一般使用按 ability_cost 計算，鎖定姿態改在結束時按累計消耗取整；弦爪連續使用有只計首次的限制。這是兩種語言均未詳述的實作差異，留待遊戲內實測，不列為繁中誤譯。
 - [原始碼推導與限制](cryptic_overload_keystone_abilities.md)。
 
 <a id="cryptic_dissector_power"></a>
@@ -452,7 +452,7 @@
 ## 適應性戰鬥記憶體(Adaptive Combat Engram)
 
 - 描述鍵：`loc_talent_cryptic_dr_on_toughness_break_desc`；hash：`05a4e1a1`。
-- 結論：待遊戲內核對。中英都把15秒寫成觸發間隔，但固定來源採5秒效果後加15秒冷卻。屬雙語文字與來源實作差異，版本對應為1.13.0，不能定為繁中誤譯。
+- 結論：待遊戲內核對。中英都把15秒寫成觸發間隔，但固定來源採5秒效果後加15秒冷卻。屬雙語文字與來源實作差異，版本對應為1.13.1，不能定為繁中誤譯。
 - [原始碼推導與限制](cryptic_dr_on_toughness_break.md)。
 
 <a id="cryptic_successful_dodge_stamina"></a>
@@ -615,7 +615,7 @@
 ## 動能分配器(Kinetic Energy Distributors)
 
 - 描述鍵：`loc_talent_cryptic_toughness_on_damage_taken_desc`；hash：`655fac7c`。
-- 結論：待遊戲內核對。中英均宣稱10秒冷卻，固定來源寫入未被ProcBuff使用的cooldown欄位。屬共同文字/實作落差，非繁中誤譯；待相同版本遊戲驗證。
+- 結論：待遊戲內核對。中英均宣稱10秒冷卻，固定來源寫入未被ProcBuff使用的cooldown欄位。屬共同文字/實作落差，非繁中誤譯；待遊戲內驗證。
 - [原始碼推導與限制](cryptic_toughness_on_damage_taken.md)。
 
 <a id="cryptic_melee_attacks_give_melee_attack_speed"></a>

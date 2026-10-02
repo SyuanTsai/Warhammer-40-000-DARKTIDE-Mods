@@ -2,9 +2,9 @@
 
 [返回玩家說明](README.md#veteran_increased_weakspot_power_after_combat_ability)｜[技術索引](SOURCE_INDEX.md)
 
-- 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`veteran_increased_weakspot_power_after_combat_ability`；名稱鍵：`loc_talent_veteran_ability_marksman`；描述鍵：`loc_talent_veteran_ability_marksman_desc`。
-- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1199-L1226)：`ability_modifier`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1345-L1389)。
+- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1199-L1226)：`ability_modifier`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1345-L1389)。
 - 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
 ## 觸發與計時
@@ -22,38 +22,38 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 1345–1389 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1345-L1389)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1977–2014 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1977-L2014)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2048–2063 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2048-L2063)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1227–1229 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1227-L1229)
-- [scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua，第 15–44 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua#L15-L44)
-- [scripts/utilities/attack/power_level.lua，第 26–59 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/power_level.lua#L26-L59)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2048–2063 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2048-L2063)
-- [scripts/settings/buff/buff_settings.lua，第 1030–1057 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L1030-L1057)
-- [scripts/extension_systems/buff/buffs/buff.lua，第 689–727 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L689-L727)
-- [scripts/utilities/attack/power_level.lua，第 21–23 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/power_level.lua#L21-L23)
-- [scripts/utilities/attack/power_level.lua，第 25–91 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/power_level.lua#L25-L91)
-- [scripts/utilities/attack/damage_profile.lua，第 29–34 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_profile.lua#L29-L34)
-- [scripts/utilities/attack/damage_profile.lua，第 386–445 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_profile.lua#L386-L445)
-- [scripts/utilities/attack/damage_calculation.lua，第 219–228 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L219-L228)
-- [scripts/utilities/attack/damage_calculation.lua，第 587–615 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L587-L615)
-- [scripts/utilities/attack/damage_calculation.lua，第 672–710 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L672-L710)
-- [scripts/settings/damage/power_level_settings.lua，第 7–25 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/power_level_settings.lua#L7-L25)
-- [scripts/settings/damage/power_level_settings.lua，第 55–62 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/power_level_settings.lua#L55-L62)
-- [scripts/settings/damage/power_level_settings.lua，第 89–122 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/power_level_settings.lua#L89-L122)
-- [scripts/settings/damage/power_level_settings.lua，第 93–114 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/power_level_settings.lua#L93-L114)
-- [scripts/utilities/attack/stagger_calculation.lua，第 67–92 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/stagger_calculation.lua#L67-L92)
-- [scripts/utilities/attack/damage_profile.lua，第 36–48 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_profile.lua#L36-L48)
-- [scripts/extension_systems/buff/buffs/buff.lua，第 619–639 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/buff.lua#L619-L639)
+- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 1345–1389 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1345-L1389)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1977–2014 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1977-L2014)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2048–2063 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2048-L2063)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1227–1229 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1227-L1229)
+- [scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua，第 15–44 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua#L15-L44)
+- [scripts/utilities/attack/power_level.lua，第 26–59 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L26-L59)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2048–2063 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2048-L2063)
+- [scripts/settings/buff/buff_settings.lua，第 1030–1057 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L1030-L1057)
+- [scripts/extension_systems/buff/buffs/buff.lua，第 689–727 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L727)
+- [scripts/utilities/attack/power_level.lua，第 21–23 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L21-L23)
+- [scripts/utilities/attack/power_level.lua，第 25–91 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L25-L91)
+- [scripts/utilities/attack/damage_profile.lua，第 29–34 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_profile.lua#L29-L34)
+- [scripts/utilities/attack/damage_profile.lua，第 386–445 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_profile.lua#L386-L445)
+- [scripts/utilities/attack/damage_calculation.lua，第 219–228 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L219-L228)
+- [scripts/utilities/attack/damage_calculation.lua，第 587–615 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L587-L615)
+- [scripts/utilities/attack/damage_calculation.lua，第 672–710 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L710)
+- [scripts/settings/damage/power_level_settings.lua，第 7–25 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/power_level_settings.lua#L7-L25)
+- [scripts/settings/damage/power_level_settings.lua，第 55–62 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/power_level_settings.lua#L55-L62)
+- [scripts/settings/damage/power_level_settings.lua，第 89–122 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/power_level_settings.lua#L89-L122)
+- [scripts/settings/damage/power_level_settings.lua，第 93–114 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/power_level_settings.lua#L93-L114)
+- [scripts/utilities/attack/stagger_calculation.lua，第 67–92 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/stagger_calculation.lua#L67-L92)
+- [scripts/utilities/attack/damage_profile.lua，第 36–48 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_profile.lua#L36-L48)
+- [scripts/extension_systems/buff/buffs/buff.lua，第 619–639 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L619-L639)
 
 ## 百分比與實際傷害增幅
 
 - **分類釐清**：weakspot_power_level_modifier=.20在PowerLevel階段生效，不是_finesse_boost_damage內的weakspot_damage。不能把堅定不移的0.30F/(B+F)公式直接套到鷹眼。
 - **程式推導**：沿用本文件已列的線性預設基準，原有25%威力時125→145，相對增幅20/125=16%；100→120只涵蓋無既有威力加成的基礎傷害階段。武器profile的min/max、finesse下限、護甲與命中部位仍須按完整流程計算，不能保證每把武器最終傷害都增加20%。
 
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2048–2063 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2048-L2063)
-- [scripts/utilities/attack/power_level.lua，第 26–91 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/power_level.lua#L26-L91)
-- [scripts/utilities/attack/damage_calculation.lua，第 219–228 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L219-L228)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2048–2063 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2048-L2063)
+- [scripts/utilities/attack/power_level.lua，第 26–91 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L26-L91)
+- [scripts/utilities/attack/damage_calculation.lua，第 219–228 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L219-L228)
 
 ## 算例條件與待確認事項
 

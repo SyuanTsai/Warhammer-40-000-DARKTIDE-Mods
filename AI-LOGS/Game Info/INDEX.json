@@ -570,6 +570,62 @@
       "path": "AI-LOGS/Game Info/changes/2026-10-02-IGNORE_RULES.json",
       "date": "2026-10-02",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/2026-10-02-1.13.1_SOURCE_COMPARISON",
+      "kind": "audit",
+      "scope": "releases/1.13.X/skills",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/2026-10-02-1.13.1_SOURCE_COMPARISON.json",
+      "date": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/2026-10-02-1.13.1_TEXT_COMPARISON",
+      "kind": "audit",
+      "scope": "releases/1.13.X/skills",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/2026-10-02-1.13.1_TEXT_COMPARISON.json",
+      "date": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/2026-10-02-1.13.1_CAVEAT_UPDATE",
+      "kind": "revision",
+      "scope": "releases/1.13.X/skills",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/2026-10-02-1.13.1_CAVEAT_UPDATE.json",
+      "date": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/2026-10-02-1.13.1_UPDATE",
+      "kind": "audit",
+      "scope": "releases/1.13.X/skills",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/2026-10-02-1.13.1_UPDATE.json",
+      "date": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/2026-10-02-1.13.1_UPDATE-report",
+      "kind": "update",
+      "scope": "releases/1.13.X/skills",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/2026-10-02-1.13.1_UPDATE.md",
+      "date": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "local/releases/1.13.X/skills/1.13.1-update/snapshot_manifest",
+      "kind": "snapshot",
+      "scope": "releases/1.13.X/skills",
+      "path": "AI-LOGS/Game Info/local/releases/1.13.X/skills/1.13.1-update/snapshot_manifest.json",
+      "date": "2026-10-02",
+      "storage": "local"
+    },
+    {
+      "id": "local/releases/1.13.X/skills/1.13.1-update/publication",
+      "kind": "publication",
+      "scope": "releases/1.13.X/skills",
+      "path": "AI-LOGS/Game Info/local/releases/1.13.X/skills/1.13.1-update/publication.json",
+      "date": "2026-10-02",
+      "storage": "local"
     }
   ],
   "pending": [

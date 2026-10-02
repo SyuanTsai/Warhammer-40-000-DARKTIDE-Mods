@@ -1,0 +1,1382 @@
+{
+  "baseline": "419fe18d414a618ce0474bd015bab470afb446d6",
+  "target": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "cited_source_files": [
+    {
+      "path": "scripts/extension_systems/ability/actions/action_activate_force_shield.lua",
+      "old_blob": "262623d6bf883d065d32c46184615123ba965f35",
+      "new_blob": "262623d6bf883d065d32c46184615123ba965f35"
+    },
+    {
+      "path": "scripts/extension_systems/ability/actions/action_cryptic_discharge.lua",
+      "old_blob": "ff045bcdb078de24fbaba43621f98697e85e675b",
+      "new_blob": "ff045bcdb078de24fbaba43621f98697e85e675b"
+    },
+    {
+      "path": "scripts/extension_systems/ability/actions/action_cryptic_precision_stance_toggle.lua",
+      "old_blob": "3b8381808332c9d28faeaea6a476a683a624215f",
+      "new_blob": "3b8381808332c9d28faeaea6a476a683a624215f"
+    },
+    {
+      "path": "scripts/extension_systems/ability/actions/action_ogryn_shout.lua",
+      "old_blob": "6a4f8644a1534bce3dc30e856c6b952a39ca2ff2",
+      "new_blob": "6a4f8644a1534bce3dc30e856c6b952a39ca2ff2"
+    },
+    {
+      "path": "scripts/extension_systems/ability/actions/action_order_companion.lua",
+      "old_blob": "3e02241855073b0be36008c73744fb80fcb5e514",
+      "new_blob": "3e02241855073b0be36008c73744fb80fcb5e514"
+    },
+    {
+      "path": "scripts/extension_systems/ability/actions/action_psyker_shout.lua",
+      "old_blob": "cf2c92355de46206a4512bb8f2d2d07dbe1b52e9",
+      "new_blob": "cf2c92355de46206a4512bb8f2d2d07dbe1b52e9"
+    },
+    {
+      "path": "scripts/extension_systems/ability/actions/action_stance_change.lua",
+      "old_blob": "7382f3f5a6042f441773fc8c9e09e30ac21f4199",
+      "new_blob": "7382f3f5a6042f441773fc8c9e09e30ac21f4199"
+    },
+    {
+      "path": "scripts/extension_systems/ability/actions/action_veteran_combat_ability.lua",
+      "old_blob": "fc1400d1c6a048c7cad83458abbf21470e72dc58",
+      "new_blob": "fc1400d1c6a048c7cad83458abbf21470e72dc58"
+    },
+    {
+      "path": "scripts/extension_systems/ability/player_unit_ability_extension.lua",
+      "old_blob": "8f332b550e0af2779b2ad08f7a02919e1721d86e",
+      "new_blob": "8f332b550e0af2779b2ad08f7a02919e1721d86e"
+    },
+    {
+      "path": "scripts/extension_systems/ability/utilities/shout_ability.lua",
+      "old_blob": "686493ebadc3643fd7c73d3179464de58bb9d638",
+      "new_blob": "686493ebadc3643fd7c73d3179464de58bb9d638"
+    },
+    {
+      "path": "scripts/extension_systems/behavior/nodes/actions/bt_companion_target_pounced_action.lua",
+      "old_blob": "b7db972d39ccec6f76c132642a8baba2d018000c",
+      "new_blob": "b7db972d39ccec6f76c132642a8baba2d018000c"
+    },
+    {
+      "path": "scripts/extension_systems/behavior/nodes/actions/bt_melee_attack_action.lua",
+      "old_blob": "e8a93b6e2ca06f359822d511b76935946392a042",
+      "new_blob": "e8a93b6e2ca06f359822d511b76935946392a042"
+    },
+    {
+      "path": "scripts/extension_systems/behavior/nodes/actions/bt_shoot_action.lua",
+      "old_blob": "94fbf56f17712f46726e900021df3dc2fa5ea6da",
+      "new_blob": "94fbf56f17712f46726e900021df3dc2fa5ea6da"
+    },
+    {
+      "path": "scripts/extension_systems/buff/buff_extension_base.lua",
+      "old_blob": "66f3735dc685b2e288bde9d6070fce5bc4ae8274",
+      "new_blob": "66f3735dc685b2e288bde9d6070fce5bc4ae8274"
+    },
+    {
+      "path": "scripts/extension_systems/buff/buffs/buff.lua",
+      "old_blob": "c531e97091012c0bc06f57ee52d1fc24a42b8f2c",
+      "new_blob": "c531e97091012c0bc06f57ee52d1fc24a42b8f2c"
+    },
+    {
+      "path": "scripts/extension_systems/buff/buffs/interval_buff.lua",
+      "old_blob": "83a420b75f19444eb43424a1089f96abf69d959d",
+      "new_blob": "83a420b75f19444eb43424a1089f96abf69d959d"
+    },
+    {
+      "path": "scripts/extension_systems/buff/buffs/parent_proc_buff.lua",
+      "old_blob": "c2d8354119e52863bad3d1313e76874ec5e28a84",
+      "new_blob": "c2d8354119e52863bad3d1313e76874ec5e28a84"
+    },
+    {
+      "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+      "old_blob": "7d8f7ccf41416fffb93155664562ff25917552fa",
+      "new_blob": "7d8f7ccf41416fffb93155664562ff25917552fa"
+    },
+    {
+      "path": "scripts/extension_systems/buff/buffs/stepped_stat_buff.lua",
+      "old_blob": "0744af659ac57d42c3a53ea6c3d4bf8a016d7c8d",
+      "new_blob": "0744af659ac57d42c3a53ea6c3d4bf8a016d7c8d"
+    },
+    {
+      "path": "scripts/extension_systems/buff/buffs/veteran_stealth_bonuses_buff.lua",
+      "old_blob": "97f1f060e0adf8d21325b0696b813108a279ad78",
+      "new_blob": "97f1f060e0adf8d21325b0696b813108a279ad78"
+    },
+    {
+      "path": "scripts/extension_systems/buff/player_unit_buff_extension.lua",
+      "old_blob": "badff53b6c1cc98a40cbbd54733b9d07692e99aa",
+      "new_blob": "badff53b6c1cc98a40cbbd54733b9d07692e99aa"
+    },
+    {
+      "path": "scripts/extension_systems/character_state_machine/character_states/player_character_state_dodging.lua",
+      "old_blob": "d51bf9090aa37e9afad30cb37375e6553288bb65",
+      "new_blob": "d51bf9090aa37e9afad30cb37375e6553288bb65"
+    },
+    {
+      "path": "scripts/extension_systems/character_state_machine/character_states/player_character_state_lunging.lua",
+      "old_blob": "3a927fd444a9859c4008c9268be261293c83e672",
+      "new_blob": "3a927fd444a9859c4008c9268be261293c83e672"
+    },
+    {
+      "path": "scripts/extension_systems/character_state_machine/character_states/player_character_state_sprinting.lua",
+      "old_blob": "ff6a0fe7dc08dad551e21732bb7676d18b0d9e9c",
+      "new_blob": "ff6a0fe7dc08dad551e21732bb7676d18b0d9e9c"
+    },
+    {
+      "path": "scripts/extension_systems/character_state_machine/character_states/player_character_state_walking.lua",
+      "old_blob": "cb39964a3d373fad09141dd9dfcfc4619e26c19e",
+      "new_blob": "cb39964a3d373fad09141dd9dfcfc4619e26c19e"
+    },
+    {
+      "path": "scripts/extension_systems/character_state_machine/character_states/utilities/dodge.lua",
+      "old_blob": "c9758cdb34bd5bdb27f3b52bc7848217653d9f35",
+      "new_blob": "c9758cdb34bd5bdb27f3b52bc7848217653d9f35"
+    },
+    {
+      "path": "scripts/extension_systems/character_state_machine/character_states/utilities/push.lua",
+      "old_blob": "6dc07ab7a27b41bb51ed53ac3b1d4a4f0d822937",
+      "new_blob": "6dc07ab7a27b41bb51ed53ac3b1d4a4f0d822937"
+    },
+    {
+      "path": "scripts/extension_systems/character_state_machine/character_states/utilities/sprint.lua",
+      "old_blob": "56987f164fee835edc9c9055c3afb644e91e2406",
+      "new_blob": "56987f164fee835edc9c9055c3afb644e91e2406"
+    },
+    {
+      "path": "scripts/extension_systems/coherency/coherency_system.lua",
+      "old_blob": "01ad1bd2662018136bbe27e4b9b6783212f5a406",
+      "new_blob": "01ad1bd2662018136bbe27e4b9b6783212f5a406"
+    },
+    {
+      "path": "scripts/extension_systems/coherency/coherency_utils.lua",
+      "old_blob": "0de7009b76dc211e001a574d57c564e6a2b78480",
+      "new_blob": "0de7009b76dc211e001a574d57c564e6a2b78480"
+    },
+    {
+      "path": "scripts/extension_systems/coherency/companion_coherency_extension.lua",
+      "old_blob": "36d8f8f1ee69cf5b3fc5e99d4452a8ebef6530f5",
+      "new_blob": "36d8f8f1ee69cf5b3fc5e99d4452a8ebef6530f5"
+    },
+    {
+      "path": "scripts/extension_systems/coherency/unit_coherency_extension.lua",
+      "old_blob": "e87c60b1521191e868a4d10f2789fd22674c8c21",
+      "new_blob": "e87c60b1521191e868a4d10f2789fd22674c8c21"
+    },
+    {
+      "path": "scripts/extension_systems/companion_tag_manager/companion_tag_manager_base_extension.lua",
+      "old_blob": "cbe509da16a8f0f2f67f9f1c785976c77371d8f0",
+      "new_blob": "cbe509da16a8f0f2f67f9f1c785976c77371d8f0"
+    },
+    {
+      "path": "scripts/extension_systems/companion_tag_manager/companion_tag_manager_dog_extension.lua",
+      "old_blob": "3b73c2fb90f575122418caa4f7be95acd1de13e0",
+      "new_blob": "3b73c2fb90f575122418caa4f7be95acd1de13e0"
+    },
+    {
+      "path": "scripts/extension_systems/force_field/cryptic_personal_force_field_unit_extension.lua",
+      "old_blob": "1236d716867326c2f2b7d6486bbc4a72b9e76c32",
+      "new_blob": "1236d716867326c2f2b7d6486bbc4a72b9e76c32"
+    },
+    {
+      "path": "scripts/extension_systems/force_field/force_field_system.lua",
+      "old_blob": "ba69542fad77f94a48e36ec22066ad9d920dd07d",
+      "new_blob": "ba69542fad77f94a48e36ec22066ad9d920dd07d"
+    },
+    {
+      "path": "scripts/extension_systems/force_field/psyker_force_field_unit_extension.lua",
+      "old_blob": "a274cfe574d8e9bbae5550feed8e745dd586dc1d",
+      "new_blob": "a274cfe574d8e9bbae5550feed8e745dd586dc1d"
+    },
+    {
+      "path": "scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua",
+      "old_blob": "7623dd02a9b00ea5edac0ca9c98267a3a543a1b4",
+      "new_blob": "7623dd02a9b00ea5edac0ca9c98267a3a543a1b4"
+    },
+    {
+      "path": "scripts/extension_systems/health/player_unit_health_extension.lua",
+      "old_blob": "200ea21bdbc6067df99ac26455b6ada52f95f473",
+      "new_blob": "200ea21bdbc6067df99ac26455b6ada52f95f473"
+    },
+    {
+      "path": "scripts/extension_systems/health/psyker_force_field_unit_health_extension.lua",
+      "old_blob": "f323a6727e161462458c9fda9196ed121adbc6e2",
+      "new_blob": "f323a6727e161462458c9fda9196ed121adbc6e2"
+    },
+    {
+      "path": "scripts/extension_systems/interaction/interactions/ammunition_interaction.lua",
+      "old_blob": "d7c51aacf1d42159926846b14a1d59a3a7968c8f",
+      "new_blob": "d7c51aacf1d42159926846b14a1d59a3a7968c8f"
+    },
+    {
+      "path": "scripts/extension_systems/interaction/interactions/grenade_interaction.lua",
+      "old_blob": "8fcebdbc0a614992b92d93104569afe8f616835b",
+      "new_blob": "8fcebdbc0a614992b92d93104569afe8f616835b"
+    },
+    {
+      "path": "scripts/extension_systems/interaction/interactor_extension.lua",
+      "old_blob": "e172ca79e2cedf032e4634bfcf27a84f297f6460",
+      "new_blob": "e172ca79e2cedf032e4634bfcf27a84f297f6460"
+    },
+    {
+      "path": "scripts/extension_systems/locomotion/utilities/true_flight_functions/true_flight_krak_grenade.lua",
+      "old_blob": "ea3e65252971b9c3b6c67b8d0f79e3cb2e6ad63d",
+      "new_blob": "ea3e65252971b9c3b6c67b8d0f79e3cb2e6ad63d"
+    },
+    {
+      "path": "scripts/extension_systems/perception/target_selection_templates/companion_dog_target_selection_template.lua",
+      "old_blob": "98f3b199a45c4aa10217db48376ec8299b651293",
+      "new_blob": "98f3b199a45c4aa10217db48376ec8299b651293"
+    },
+    {
+      "path": "scripts/extension_systems/projectile_damage/projectile_damage_extension.lua",
+      "old_blob": "63125e3a5ed3fbf9a1dacb6e8a873d96776c1cb2",
+      "new_blob": "63125e3a5ed3fbf9a1dacb6e8a873d96776c1cb2"
+    },
+    {
+      "path": "scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_area_buff_drone.lua",
+      "old_blob": "490b300cdfbd2cae2e95a35745b05754c1cca6b5",
+      "new_blob": "490b300cdfbd2cae2e95a35745b05754c1cca6b5"
+    },
+    {
+      "path": "scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_broker_stimm_field.lua",
+      "old_blob": "c1c1b445a14ec9d973ef9401376c6bc9f13e7c58",
+      "new_blob": "c1c1b445a14ec9d973ef9401376c6bc9f13e7c58"
+    },
+    {
+      "path": "scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_heal.lua",
+      "old_blob": "b0f1c68478693ada5e8d2fb601c46b22d68edbd0",
+      "new_blob": "b0f1c68478693ada5e8d2fb601c46b22d68edbd0"
+    },
+    {
+      "path": "scripts/extension_systems/proximity/side_relation_gameplay_logic/proximity_shock_mine.lua",
+      "old_blob": "9eecedb20c13178e6be745cdda44af1d37a447ae",
+      "new_blob": "9eecedb20c13178e6be745cdda44af1d37a447ae"
+    },
+    {
+      "path": "scripts/extension_systems/recoil/player_unit_weapon_recoil_extension.lua",
+      "old_blob": "1df890258364d0151515fd899508f15269a9718d",
+      "new_blob": "1df890258364d0151515fd899508f15269a9718d"
+    },
+    {
+      "path": "scripts/extension_systems/smart_tag/smart_tag_extension.lua",
+      "old_blob": "1fb36accf8077fe2889cf881226222d3833ec1a1",
+      "new_blob": "1fb36accf8077fe2889cf881226222d3833ec1a1"
+    },
+    {
+      "path": "scripts/extension_systems/smoke_fog/smoke_fog_extension.lua",
+      "old_blob": "d154305e8cfc65a742a713cc39b9a40933ca59ba",
+      "new_blob": "d154305e8cfc65a742a713cc39b9a40933ca59ba"
+    },
+    {
+      "path": "scripts/extension_systems/smoke_fog/smoke_fog_system.lua",
+      "old_blob": "ecaddc6985d0b0c6d1b50c1d2b2c4fce2a209775",
+      "new_blob": "ecaddc6985d0b0c6d1b50c1d2b2c4fce2a209775"
+    },
+    {
+      "path": "scripts/extension_systems/spread/player_unit_weapon_spread_extension.lua",
+      "old_blob": "27c51d44f9bdfa012e949502904e05a2425e0a97",
+      "new_blob": "27c51d44f9bdfa012e949502904e05a2425e0a97"
+    },
+    {
+      "path": "scripts/extension_systems/suppression/player_suppression_extension.lua",
+      "old_blob": "65ac37173b3ad7a84ff50a825d234c54264a39cf",
+      "new_blob": "65ac37173b3ad7a84ff50a825d234c54264a39cf"
+    },
+    {
+      "path": "scripts/extension_systems/talent/player_unit_talent_extension.lua",
+      "old_blob": "4dbd3fe2b15979207d4f9bae29a86f6ed743a5ef",
+      "new_blob": "4dbd3fe2b15979207d4f9bae29a86f6ed743a5ef"
+    },
+    {
+      "path": "scripts/extension_systems/toughness/player_unit_toughness_extension.lua",
+      "old_blob": "550a8e6538f4f854235443f922337f3382a3b411",
+      "new_blob": "550a8e6538f4f854235443f922337f3382a3b411"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_ability_base.lua",
+      "old_blob": "14a8fa524025dda6bbc19b3ddb6f35e275b84906",
+      "new_blob": "14a8fa524025dda6bbc19b3ddb6f35e275b84906"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_chain_lightning.lua",
+      "old_blob": "149e83d68bbd05ca2554eef18efcb231340b0a02",
+      "new_blob": "149e83d68bbd05ca2554eef18efcb231340b0a02"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_cryptic_chordclaw_activation.lua",
+      "old_blob": "1da6a0e17ece91952478f5b99ed81596a75fb55f",
+      "new_blob": "1da6a0e17ece91952478f5b99ed81596a75fb55f"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_damage_target.lua",
+      "old_blob": "893011d7446d0ee3b4e6791bb8f5845c8daf4265",
+      "new_blob": "893011d7446d0ee3b4e6791bb8f5845c8daf4265"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_overload_explosion.lua",
+      "old_blob": "28d29f9ab744618258bd85e48c4f6a781bb182c2",
+      "new_blob": "28d29f9ab744618258bd85e48c4f6a781bb182c2"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_reload_state.lua",
+      "old_blob": "9b71a66efb5335feb19381147efe14022795a147",
+      "new_blob": "9b71a66efb5335feb19381147efe14022795a147"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_shoot.lua",
+      "old_blob": "0e28dbdb9522bc6b2e37c4e9ee883234a8a24287",
+      "new_blob": "0e28dbdb9522bc6b2e37c4e9ee883234a8a24287"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_shoot_hit_scan.lua",
+      "old_blob": "ba2857e1a731e35b56bd9757e15bf9332311bcbf",
+      "new_blob": "ba2857e1a731e35b56bd9757e15bf9332311bcbf"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_smite_targeting.lua",
+      "old_blob": "47c655fe4fe405532c417cdbd1122c400220744b",
+      "new_blob": "47c655fe4fe405532c417cdbd1122c400220744b"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_spawn_projectile.lua",
+      "old_blob": "bb61134b5631ea04872092a215e5ddaf247df25d",
+      "new_blob": "bb61134b5631ea04872092a215e5ddaf247df25d"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_sweep.lua",
+      "old_blob": "07fcad4c1f4a276bf1c0764d23d0ec2154bc60fa",
+      "new_blob": "07fcad4c1f4a276bf1c0764d23d0ec2154bc60fa"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_throw_grenade.lua",
+      "old_blob": "1464c097aa6ad979187eab915681424f2ad0f79e",
+      "new_blob": "1464c097aa6ad979187eab915681424f2ad0f79e"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_use_syringe.lua",
+      "old_blob": "89acfb5ffbe4d26c2613706ec58d5f48f965db93",
+      "new_blob": "89acfb5ffbe4d26c2613706ec58d5f48f965db93"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_weapon_base.lua",
+      "old_blob": "d2325c14d15b2ebb3405257a2d4f1dd58a07ee67",
+      "new_blob": "d2325c14d15b2ebb3405257a2d4f1dd58a07ee67"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_windup.lua",
+      "old_blob": "bd8d2b0086397c6ef71847f207d0f182521f14c5",
+      "new_blob": "bd8d2b0086397c6ef71847f207d0f182521f14c5"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/action_zealot_channel.lua",
+      "old_blob": "3daac08c17daead074ee02996d9cba5b60962856",
+      "new_blob": "3daac08c17daead074ee02996d9cba5b60962856"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/modules/adamant_whistle_targeting_action_module.lua",
+      "old_blob": "6127c191ab406dc357640b9003d2e77157fb242c",
+      "new_blob": "6127c191ab406dc357640b9003d2e77157fb242c"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/modules/charge_action_module.lua",
+      "old_blob": "97a088567030c6dcfee114158ab9a065a8e7a923",
+      "new_blob": "97a088567030c6dcfee114158ab9a065a8e7a923"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/modules/psyker_smite_targeting_action_module.lua",
+      "old_blob": "383d5b48cc38be66730bb1e31ea597c1cd675e61",
+      "new_blob": "383d5b48cc38be66730bb1e31ea597c1cd675e61"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/actions/modules/warp_charge_action_module.lua",
+      "old_blob": "f2e3f34a6a0f8859dd7ea14f4647daf2e936fb95",
+      "new_blob": "f2e3f34a6a0f8859dd7ea14f4647daf2e936fb95"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+      "old_blob": "1a53136ce5968ccf5afec4b7d8cea373cd55c86a",
+      "new_blob": "1a53136ce5968ccf5afec4b7d8cea373cd55c86a"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/weapon_action_movement.lua",
+      "old_blob": "ad7702a2e7211124626821fb0679977748a445e3",
+      "new_blob": "ad7702a2e7211124626821fb0679977748a445e3"
+    },
+    {
+      "path": "scripts/extension_systems/weapon/weapon_system.lua",
+      "old_blob": "bd9c1c08f4e44acc188d2d97c1dc8e0ae0ab415f",
+      "new_blob": "bd9c1c08f4e44acc188d2d97c1dc8e0ae0ab415f"
+    },
+    {
+      "path": "scripts/foundation/utilities/table.lua",
+      "old_blob": "1880a25d8b944c841c76531e9650d8355441b46e",
+      "new_blob": "1880a25d8b944c841c76531e9650d8355441b46e"
+    },
+    {
+      "path": "scripts/managers/minion/minion_death_manager.lua",
+      "old_blob": "cf9080f407cb19c178cf50e59a06227c8517b88e",
+      "new_blob": "cf9080f407cb19c178cf50e59a06227c8517b88e"
+    },
+    {
+      "path": "scripts/settings/ability/ability_action_handler_data.lua",
+      "old_blob": "229cb9b7421af4a3429ea45163d8d409e1a8dcb5",
+      "new_blob": "229cb9b7421af4a3429ea45163d8d409e1a8dcb5"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/adamant_charge.lua",
+      "old_blob": "48a9cafc02d5eaf1c061886ab05859e4c922f8c4",
+      "new_blob": "48a9cafc02d5eaf1c061886ab05859e4c922f8c4"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/adamant_stance.lua",
+      "old_blob": "977165d9d9fc7ad66f4cafec5735d54e3ce14d58",
+      "new_blob": "977165d9d9fc7ad66f4cafec5735d54e3ce14d58"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/adamant_whistle.lua",
+      "old_blob": "8f87246d6dc2dd5242729678f7710a58c4dba016",
+      "new_blob": "8f87246d6dc2dd5242729678f7710a58c4dba016"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/broker_focus.lua",
+      "old_blob": "31c37384f5a1359efcb40466b87c0bef2989e799",
+      "new_blob": "31c37384f5a1359efcb40466b87c0bef2989e799"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/broker_punk_rage.lua",
+      "old_blob": "b943fcf2f7c79f6fa2ee4651aef3921ee066c9ed",
+      "new_blob": "b943fcf2f7c79f6fa2ee4651aef3921ee066c9ed"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/cryptic_chordclaw.lua",
+      "old_blob": "57ebf5b2034f5bc0d876631362485bbe298c3df5",
+      "new_blob": "57ebf5b2034f5bc0d876631362485bbe298c3df5"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/cryptic_discharge.lua",
+      "old_blob": "3c4502e62b42887598953517457df422ab3ea2a8",
+      "new_blob": "3c4502e62b42887598953517457df422ab3ea2a8"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/cryptic_discharge_base.lua",
+      "old_blob": "f0e03025e897d5fad059dcd37050a5a0ef6b153b",
+      "new_blob": "f0e03025e897d5fad059dcd37050a5a0ef6b153b"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/cryptic_force_field.lua",
+      "old_blob": "2232c0dd86fb1626d9b341477075198fa148cda3",
+      "new_blob": "2232c0dd86fb1626d9b341477075198fa148cda3"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/cryptic_precision_stance.lua",
+      "old_blob": "496e51b17208a1f591d7be3af4a8bc7e908798d1",
+      "new_blob": "496e51b17208a1f591d7be3af4a8bc7e908798d1"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/cryptic_servo_skull_order_base.lua",
+      "old_blob": "bfd3558bdae7fba98f697f057acad5a256eee42e",
+      "new_blob": "bfd3558bdae7fba98f697f057acad5a256eee42e"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/ogryn_gunlugger_stance.lua",
+      "old_blob": "2900818da4f537bc55073376538c583a37d45fc4",
+      "new_blob": "2900818da4f537bc55073376538c583a37d45fc4"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/ogryn_taunt_shout.lua",
+      "old_blob": "606c97de1b5cbf02371c19d3b0f2c2fb6f50c880",
+      "new_blob": "606c97de1b5cbf02371c19d3b0f2c2fb6f50c880"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/veteran_combat_ability.lua",
+      "old_blob": "4ae78f626047b1a126536fca0d3c7e8ff9f753fa",
+      "new_blob": "4ae78f626047b1a126536fca0d3c7e8ff9f753fa"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/veteran_stealth_combat_ability.lua",
+      "old_blob": "8fa7d2060592f272fdf66759babd48dfa8adcc08",
+      "new_blob": "8fa7d2060592f272fdf66759babd48dfa8adcc08"
+    },
+    {
+      "path": "scripts/settings/ability/ability_templates/zealot_dash.lua",
+      "old_blob": "653297b5a424a75188f199a530c1c6f3ce8d297e",
+      "new_blob": "653297b5a424a75188f199a530c1c6f3ce8d297e"
+    },
+    {
+      "path": "scripts/settings/ability/archetype_talents/talents/adamant_talents.lua",
+      "old_blob": "fa3db6fc68c48f3a10a43ac88d9ef3d947a97d74",
+      "new_blob": "fa3db6fc68c48f3a10a43ac88d9ef3d947a97d74"
+    },
+    {
+      "path": "scripts/settings/ability/archetype_talents/talents/base_talents.lua",
+      "old_blob": "3483a5c376c1d652a5c4a54ed977b35a7a0935e6",
+      "new_blob": "3483a5c376c1d652a5c4a54ed977b35a7a0935e6"
+    },
+    {
+      "path": "scripts/settings/ability/archetype_talents/talents/broker_talents.lua",
+      "old_blob": "eb6002d7944c6f50aa3cd973c32e5427aa23c6b8",
+      "new_blob": "eb6002d7944c6f50aa3cd973c32e5427aa23c6b8"
+    },
+    {
+      "path": "scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua",
+      "old_blob": "3edbfc8e53dcad0698c9952ad9b45df1da9a5b11",
+      "new_blob": "3edbfc8e53dcad0698c9952ad9b45df1da9a5b11"
+    },
+    {
+      "path": "scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua",
+      "old_blob": "5b97074b6523ef40d2c4ab53c3fc407cb4db2c50",
+      "new_blob": "5b97074b6523ef40d2c4ab53c3fc407cb4db2c50"
+    },
+    {
+      "path": "scripts/settings/ability/archetype_talents/talents/psyker_talents.lua",
+      "old_blob": "10c18111bd0aa5283511a6b78b8244d041182c33",
+      "new_blob": "10c18111bd0aa5283511a6b78b8244d041182c33"
+    },
+    {
+      "path": "scripts/settings/ability/archetype_talents/talents/veteran_talents.lua",
+      "old_blob": "abc07ecb7eeecc72e403e51da667f405d9306d08",
+      "new_blob": "abc07ecb7eeecc72e403e51da667f405d9306d08"
+    },
+    {
+      "path": "scripts/settings/ability/archetype_talents/talents/zealot_talents.lua",
+      "old_blob": "3fd4a54cbbffec473c178cc945663ed788e1dc91",
+      "new_blob": "3fd4a54cbbffec473c178cc945663ed788e1dc91"
+    },
+    {
+      "path": "scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua",
+      "old_blob": "68a1a153b1372c5f06219cc091925842f2328d1b",
+      "new_blob": "68a1a153b1372c5f06219cc091925842f2328d1b"
+    },
+    {
+      "path": "scripts/settings/ability/player_abilities/abilities/broker_abilities.lua",
+      "old_blob": "3a45707445beccaeec4bcc7044b1bee1f64e2baf",
+      "new_blob": "3a45707445beccaeec4bcc7044b1bee1f64e2baf"
+    },
+    {
+      "path": "scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua",
+      "old_blob": "e1c4dc8bb5e44f3febb5814b5dd352eb5fdb9d0d",
+      "new_blob": "e1c4dc8bb5e44f3febb5814b5dd352eb5fdb9d0d"
+    },
+    {
+      "path": "scripts/settings/ability/player_abilities/abilities/ogryn_abilities.lua",
+      "old_blob": "1340aa780c6c573e78a75b40264fa60936a07226",
+      "new_blob": "1340aa780c6c573e78a75b40264fa60936a07226"
+    },
+    {
+      "path": "scripts/settings/ability/player_abilities/abilities/psyker_abilities.lua",
+      "old_blob": "fb1626cbfe5dcc01f6733434557515fa3026e26a",
+      "new_blob": "fb1626cbfe5dcc01f6733434557515fa3026e26a"
+    },
+    {
+      "path": "scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua",
+      "old_blob": "8d3a7afb5ffaacae8619545d4274a1eab08dc09a",
+      "new_blob": "8d3a7afb5ffaacae8619545d4274a1eab08dc09a"
+    },
+    {
+      "path": "scripts/settings/ability/player_abilities/abilities/zealot_abilities.lua",
+      "old_blob": "0cbedc7af4d9307a2da5cc0d00443e1ae31aaf7c",
+      "new_blob": "0cbedc7af4d9307a2da5cc0d00443e1ae31aaf7c"
+    },
+    {
+      "path": "scripts/settings/ability/shout_target_templates.lua",
+      "old_blob": "e667452214abcc41df525da5a90067a3a5d1871a",
+      "new_blob": "e667452214abcc41df525da5a90067a3a5d1871a"
+    },
+    {
+      "path": "scripts/settings/archetype/archetypes/adamant_archetype.lua",
+      "old_blob": "9fca86468d2a6f0e2a54cd4526fe0546f2155ee8",
+      "new_blob": "9fca86468d2a6f0e2a54cd4526fe0546f2155ee8"
+    },
+    {
+      "path": "scripts/settings/archetype/archetypes/broker_archetype.lua",
+      "old_blob": "9f06eb7657998bb83318ba16ab285d4c2244dd7e",
+      "new_blob": "9f06eb7657998bb83318ba16ab285d4c2244dd7e"
+    },
+    {
+      "path": "scripts/settings/archetype/archetypes/cryptic_archetype.lua",
+      "old_blob": "c57b30d5525a3bb890adcd55b0099e5710c0a54c",
+      "new_blob": "c57b30d5525a3bb890adcd55b0099e5710c0a54c"
+    },
+    {
+      "path": "scripts/settings/archetype/archetypes/ogryn_archetype.lua",
+      "old_blob": "acf93a104828114b2fdb7551085c6712581513a8",
+      "new_blob": "acf93a104828114b2fdb7551085c6712581513a8"
+    },
+    {
+      "path": "scripts/settings/archetype/archetypes/psyker_archetype.lua",
+      "old_blob": "e878a1fa859dd4df675eb1c33f8f3c8198b923e8",
+      "new_blob": "e878a1fa859dd4df675eb1c33f8f3c8198b923e8"
+    },
+    {
+      "path": "scripts/settings/archetype/archetypes/veteran_archetype.lua",
+      "old_blob": "b6b5672cfcbe5c1acec2ebf799d16a0ea980f131",
+      "new_blob": "b6b5672cfcbe5c1acec2ebf799d16a0ea980f131"
+    },
+    {
+      "path": "scripts/settings/archetype/archetypes/zealot_archetype.lua",
+      "old_blob": "628539ebb9f683b84d532c902af20666bfafd6e4",
+      "new_blob": "628539ebb9f683b84d532c902af20666bfafd6e4"
+    },
+    {
+      "path": "scripts/settings/breed/breed_actions/companion/companion_dog_actions.lua",
+      "old_blob": "bdb4dbe46aa4b4f7bccd8d8f08ea4dcd9ce3bedf",
+      "new_blob": "bdb4dbe46aa4b4f7bccd8d8f08ea4dcd9ce3bedf"
+    },
+    {
+      "path": "scripts/settings/breed/breed_actions/companion/companion_servo_skull_actions.lua",
+      "old_blob": "e0b7c1c5e68c1960529b0a8d4e152eccb5b69848",
+      "new_blob": "e0b7c1c5e68c1960529b0a8d4e152eccb5b69848"
+    },
+    {
+      "path": "scripts/settings/breed/breed_shoot_templates/companion/companion_servo_skull_shoot_templates.lua",
+      "old_blob": "381c2a3308625af7820bf1a540c71589043c25a9",
+      "new_blob": "381c2a3308625af7820bf1a540c71589043c25a9"
+    },
+    {
+      "path": "scripts/settings/breed/breeds/chaos/chaos_plague_ogryn_breed.lua",
+      "old_blob": "37377df40d74cb86eaac8a9b46cd3ec904542306",
+      "new_blob": "37377df40d74cb86eaac8a9b46cd3ec904542306"
+    },
+    {
+      "path": "scripts/settings/breed/breeds/chaos/chaos_spawn_breed.lua",
+      "old_blob": "ea9a19b4c2ffbcfd273555e0da4f0a5cb9097c22",
+      "new_blob": "ea9a19b4c2ffbcfd273555e0da4f0a5cb9097c22"
+    },
+    {
+      "path": "scripts/settings/breed/breeds/cultist/cultist_assault_breed.lua",
+      "old_blob": "a60440b18bb600ecf337f278080aa47dc6047ce0",
+      "new_blob": "a60440b18bb600ecf337f278080aa47dc6047ce0"
+    },
+    {
+      "path": "scripts/settings/breed/breeds/cultist/cultist_melee_breed.lua",
+      "old_blob": "3c28f85800f662b6f584a917b825581727811472",
+      "new_blob": "3c28f85800f662b6f584a917b825581727811472"
+    },
+    {
+      "path": "scripts/settings/breed/breeds/cultist/cultist_mutant_breed.lua",
+      "old_blob": "cb474121e3b45f79bb8f7641f7ecc2e998965b09",
+      "new_blob": "cb474121e3b45f79bb8f7641f7ecc2e998965b09"
+    },
+    {
+      "path": "scripts/settings/breed/breeds/renegade/renegade_rifleman_breed.lua",
+      "old_blob": "fbd09fbdcad9d8cda60a14205a174026a1f8c0d6",
+      "new_blob": "fbd09fbdcad9d8cda60a14205a174026a1f8c0d6"
+    },
+    {
+      "path": "scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua",
+      "old_blob": "b32c329bd7a922d34dd4b631491349499ec552c2",
+      "new_blob": "b32c329bd7a922d34dd4b631491349499ec552c2"
+    },
+    {
+      "path": "scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua",
+      "old_blob": "b6e80ecb0ce24a1b5692943427fc62f4d2f1512c",
+      "new_blob": "b6e80ecb0ce24a1b5692943427fc62f4d2f1512c"
+    },
+    {
+      "path": "scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua",
+      "old_blob": "d463c1d7c0169af728d4d6301a73445c881907c4",
+      "new_blob": "d463c1d7c0169af728d4d6301a73445c881907c4"
+    },
+    {
+      "path": "scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua",
+      "old_blob": "c935b46161a63f4ee70c7d6fa2383d0d6d52993a",
+      "new_blob": "c935b46161a63f4ee70c7d6fa2383d0d6d52993a"
+    },
+    {
+      "path": "scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua",
+      "old_blob": "a4c87abf254c520ad57bd09df718d6ac458dd7d5",
+      "new_blob": "a4c87abf254c520ad57bd09df718d6ac458dd7d5"
+    },
+    {
+      "path": "scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua",
+      "old_blob": "ff3f9156b4e8b1a9e93b430fc475ada17485b962",
+      "new_blob": "ff3f9156b4e8b1a9e93b430fc475ada17485b962"
+    },
+    {
+      "path": "scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua",
+      "old_blob": "a46baf264ba4ed4ee41ee9380cbc81ace4901b9f",
+      "new_blob": "a46baf264ba4ed4ee41ee9380cbc81ace4901b9f"
+    },
+    {
+      "path": "scripts/settings/buff/broker_buff_utils.lua",
+      "old_blob": "4d0aa52cc9531fb6ff1eacfdd32a4b0a92ff3f15",
+      "new_blob": "4d0aa52cc9531fb6ff1eacfdd32a4b0a92ff3f15"
+    },
+    {
+      "path": "scripts/settings/buff/buff_settings.lua",
+      "old_blob": "6435c325f74e67d20d903d4eeeaab02e867b05ab",
+      "new_blob": "6435c325f74e67d20d903d4eeeaab02e867b05ab"
+    },
+    {
+      "path": "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+      "old_blob": "e49d5a809863718096b3c0ebc5d9ccf16decfc96",
+      "new_blob": "e49d5a809863718096b3c0ebc5d9ccf16decfc96"
+    },
+    {
+      "path": "scripts/settings/buff/hordes_buffs/hordes_legendary_buff_templates/hordes_legendary_ogryn_buff_templates.lua",
+      "old_blob": "04cda523c41e60fb1c20890272a74d5f7b9b6932",
+      "new_blob": "04cda523c41e60fb1c20890272a74d5f7b9b6932"
+    },
+    {
+      "path": "scripts/settings/buff/liquid_area_buff_templates.lua",
+      "old_blob": "5e211fdb16503ccac0264caf67d52bd6fdb7ca1e",
+      "new_blob": "5e211fdb16503ccac0264caf67d52bd6fdb7ca1e"
+    },
+    {
+      "path": "scripts/settings/buff/player_buff_templates.lua",
+      "old_blob": "d6acd604589eb684c334e9740be2957bd50c5f59",
+      "new_blob": "d6acd604589eb684c334e9740be2957bd50c5f59"
+    },
+    {
+      "path": "scripts/settings/buff/syringe_buff_templates.lua",
+      "old_blob": "60bc615eaf3210d78deb12f29ad039d2ba97cae8",
+      "new_blob": "60bc615eaf3210d78deb12f29ad039d2ba97cae8"
+    },
+    {
+      "path": "scripts/settings/buff/weapon_buff_templates.lua",
+      "old_blob": "f9c4eb7a3ad9563ee734d554f5646e8f2318bf06",
+      "new_blob": "f9c4eb7a3ad9563ee734d554f5646e8f2318bf06"
+    },
+    {
+      "path": "scripts/settings/companion/companion_servo_skull_settings.lua",
+      "old_blob": "309669a3532e8425f5df832cd1b86b69d9981a70",
+      "new_blob": "309669a3532e8425f5df832cd1b86b69d9981a70"
+    },
+    {
+      "path": "scripts/settings/damage/armor_settings.lua",
+      "old_blob": "7b5a86e7b40bfd42c3732b410a7785eb30c68c2d",
+      "new_blob": "7b5a86e7b40bfd42c3732b410a7785eb30c68c2d"
+    },
+    {
+      "path": "scripts/settings/damage/damage_profile_settings.lua",
+      "old_blob": "9298f8cdc27aa0323a9eff76c286cecb6350b9b1",
+      "new_blob": "9298f8cdc27aa0323a9eff76c286cecb6350b9b1"
+    },
+    {
+      "path": "scripts/settings/damage/damage_profiles/archetypes/adamant_damage_profile_templates.lua",
+      "old_blob": "a7b3b29b7a1827ad2c1f4da559c3cc888c1d25dc",
+      "new_blob": "a7b3b29b7a1827ad2c1f4da559c3cc888c1d25dc"
+    },
+    {
+      "path": "scripts/settings/damage/damage_profiles/archetypes/broker_damage_profile_templates.lua",
+      "old_blob": "16356f4d288eb90a342f72756bcca3530bceaa72",
+      "new_blob": "16356f4d288eb90a342f72756bcca3530bceaa72"
+    },
+    {
+      "path": "scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua",
+      "old_blob": "0c4800aa577aeab38fcf01a3fd9b80704a9721c6",
+      "new_blob": "0c4800aa577aeab38fcf01a3fd9b80704a9721c6"
+    },
+    {
+      "path": "scripts/settings/damage/damage_profiles/archetypes/ogryn_damage_profile_templates.lua",
+      "old_blob": "1e14c9788adc483440dda4da015acba16b0021dc",
+      "new_blob": "1e14c9788adc483440dda4da015acba16b0021dc"
+    },
+    {
+      "path": "scripts/settings/damage/damage_profiles/archetypes/psyker_damage_profile_templates.lua",
+      "old_blob": "bf3cfb8939ca682cc1604d9d5cb37b506d11a19d",
+      "new_blob": "bf3cfb8939ca682cc1604d9d5cb37b506d11a19d"
+    },
+    {
+      "path": "scripts/settings/damage/damage_profiles/archetypes/zealot_damage_profile_templates.lua",
+      "old_blob": "aea961f096cc9d22df99474dd6a9a5004fee1265",
+      "new_blob": "aea961f096cc9d22df99474dd6a9a5004fee1265"
+    },
+    {
+      "path": "scripts/settings/damage/damage_profiles/buff_damage_profile_templates.lua",
+      "old_blob": "3b921a49d960bfbb287f20e4504a1fa1285a5022",
+      "new_blob": "3b921a49d960bfbb287f20e4504a1fa1285a5022"
+    },
+    {
+      "path": "scripts/settings/damage/damage_profiles/common_damage_profile_templates.lua",
+      "old_blob": "ec53c5cc2ca01fc8b4669a725a3badbd044bd3a3",
+      "new_blob": "ec53c5cc2ca01fc8b4669a725a3badbd044bd3a3"
+    },
+    {
+      "path": "scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua",
+      "old_blob": "dc0e1d7e9fca40d8c28216d712d50aa6c6f0554b",
+      "new_blob": "dc0e1d7e9fca40d8c28216d712d50aa6c6f0554b"
+    },
+    {
+      "path": "scripts/settings/damage/damage_profiles/grenade_damage_profile_templates.lua",
+      "old_blob": "23d9f7b063911d51844872260ff10f57fc611e4c",
+      "new_blob": "23d9f7b063911d51844872260ff10f57fc611e4c"
+    },
+    {
+      "path": "scripts/settings/damage/damage_profiles/minion_damage_profile_templates.lua",
+      "old_blob": "92b0fa8b874124c1f4548a1a32916f1a24806cd7",
+      "new_blob": "92b0fa8b874124c1f4548a1a32916f1a24806cd7"
+    },
+    {
+      "path": "scripts/settings/damage/damage_settings.lua",
+      "old_blob": "2bc9fdd7032134ba2f61f4bbc525eb61a7e068c2",
+      "new_blob": "2bc9fdd7032134ba2f61f4bbc525eb61a7e068c2"
+    },
+    {
+      "path": "scripts/settings/damage/explosion_templates/player_explosion_templates.lua",
+      "old_blob": "6ef40ca9ff5a8274fb6669d60cc1d77ea2ec7be2",
+      "new_blob": "6ef40ca9ff5a8274fb6669d60cc1d77ea2ec7be2"
+    },
+    {
+      "path": "scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua",
+      "old_blob": "626281addaa0ec89e43bf4349cea3e6fe83b36ae",
+      "new_blob": "626281addaa0ec89e43bf4349cea3e6fe83b36ae"
+    },
+    {
+      "path": "scripts/settings/damage/explosion_templates/player_weapon_explosion_templates.lua",
+      "old_blob": "42b8ee54d1f3c8dd4501964cf235bb8b293ffc30",
+      "new_blob": "42b8ee54d1f3c8dd4501964cf235bb8b293ffc30"
+    },
+    {
+      "path": "scripts/settings/damage/power_level_settings.lua",
+      "old_blob": "f9157c551008b6a034d59cc7734dfe51606777bd",
+      "new_blob": "f9157c551008b6a034d59cc7734dfe51606777bd"
+    },
+    {
+      "path": "scripts/settings/deployables/templates/broker_stimm_field_crate.lua",
+      "old_blob": "db08bcdd3e2e2b954b428b0b01c3f31513751bc5",
+      "new_blob": "db08bcdd3e2e2b954b428b0b01c3f31513751bc5"
+    },
+    {
+      "path": "scripts/settings/deployables/templates/medical_crate.lua",
+      "old_blob": "ddaf61632c0c5aa717dd785da9571637b9ff103d",
+      "new_blob": "ddaf61632c0c5aa717dd785da9571637b9ff103d"
+    },
+    {
+      "path": "scripts/settings/dodge/archetype_dodge_templates.lua",
+      "old_blob": "de11a505537356a823dc5153309dc2ed4aa962a6",
+      "new_blob": "de11a505537356a823dc5153309dc2ed4aa962a6"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_action_handler_data.lua",
+      "old_blob": "44ff59e061fba3f91bae28d0db72ed34295a15c1",
+      "new_blob": "44ff59e061fba3f91bae28d0db72ed34295a15c1"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_handling_templates/weapon_charge_templates.lua",
+      "old_blob": "8c0d08ae230c2db8b9fd28741daa57a188e544e7",
+      "new_blob": "8c0d08ae230c2db8b9fd28741daa57a188e544e7"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_templates/base_template_settings.lua",
+      "old_blob": "1508db5c7254d3af4934bffaadd07dc2f26cd11e",
+      "new_blob": "1508db5c7254d3af4934bffaadd07dc2f26cd11e"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_templates/combat_abilities/adamant_area_buff_drone.lua",
+      "old_blob": "c4a6541a4aec402b32ebb2a2c3a59deb08be969f",
+      "new_blob": "c4a6541a4aec402b32ebb2a2c3a59deb08be969f"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_templates/combat_abilities/broker_stimm_field.lua",
+      "old_blob": "845f6d842cab0748c92bb44d4c688358b1e0588d",
+      "new_blob": "845f6d842cab0748c92bb44d4c688358b1e0588d"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_templates/combat_abilities/cryptic_transonic_claw.lua",
+      "old_blob": "78687282061814ab4c933b3cd0317d4f583d358a",
+      "new_blob": "78687282061814ab4c933b3cd0317d4f583d358a"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_templates/combat_abilities/zealot_relic.lua",
+      "old_blob": "9d52ed9ee33a39cf21a7141470b27d1a0d10c236",
+      "new_blob": "9d52ed9ee33a39cf21a7141470b27d1a0d10c236"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+      "old_blob": "9b7dfcedbefac0ba16a4b44feadf5cfc6f97b59e",
+      "new_blob": "9b7dfcedbefac0ba16a4b44feadf5cfc6f97b59e"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_templates/grenades/psyker_chain_lightning.lua",
+      "old_blob": "ce73ff15a0e4110b683bd4400c3cb95a9a29dff9",
+      "new_blob": "ce73ff15a0e4110b683bd4400c3cb95a9a29dff9"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_templates/grenades/psyker_smite.lua",
+      "old_blob": "09bae668c991438b9b72e9ef0549cc650bcd6ccd",
+      "new_blob": "09bae668c991438b9b72e9ef0549cc650bcd6ccd"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_templates/grenades/psyker_throwing_knives.lua",
+      "old_blob": "be0fd83b39dd019b56e43ff887eb45388c802330",
+      "new_blob": "be0fd83b39dd019b56e43ff887eb45388c802330"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_templates/pocketables/syringe_broker_pocketable.lua",
+      "old_blob": "d59335f39490722e4cbb70042115ecce19fe1fdc",
+      "new_blob": "d59335f39490722e4cbb70042115ecce19fe1fdc"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_templates/power_mauls/settings_templates/power_maul_damage_profile_templates.lua",
+      "old_blob": "222dce52ce57184da4ba651cc61a7c4f1a5c09f4",
+      "new_blob": "222dce52ce57184da4ba651cc61a7c4f1a5c09f4"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m1.lua",
+      "old_blob": "f58c23c4dc956544b59212984395c9a62d1003df",
+      "new_blob": "f58c23c4dc956544b59212984395c9a62d1003df"
+    },
+    {
+      "path": "scripts/settings/equipment/weapon_templates/weapon_tweak_template_settings.lua",
+      "old_blob": "3940525de4acbdf7803f3b9cd5ec61d55c4c8b53",
+      "new_blob": "3940525de4acbdf7803f3b9cd5ec61d55c4c8b53"
+    },
+    {
+      "path": "scripts/settings/fx/effect_templates/arc_chain_lightning_source/arc_grenade_chain_lightning_source.lua",
+      "old_blob": "027b2f9e4c43bb336b4ebd41f5dca01a9bb76b56",
+      "new_blob": "027b2f9e4c43bb336b4ebd41f5dca01a9bb76b56"
+    },
+    {
+      "path": "scripts/settings/fx/effect_templates/arc_chain_lightning_source/discharge_ability_arc_chain_lightning_source.lua",
+      "old_blob": "c11757435f7a6213efab46d43e62702df537b70b",
+      "new_blob": "c11757435f7a6213efab46d43e62702df537b70b"
+    },
+    {
+      "path": "scripts/settings/fx/effect_templates/arc_chain_lightning_source/force_field_arc_chain_lightning_source.lua",
+      "old_blob": "7cd9cde8108531a1ae266098c0f4f6b011102669",
+      "new_blob": "7cd9cde8108531a1ae266098c0f4f6b011102669"
+    },
+    {
+      "path": "scripts/settings/interaction/interaction_settings.lua",
+      "old_blob": "fb7fb7fd965d4d4725fe8fa68cb2e5d3c793561c",
+      "new_blob": "fb7fb7fd965d4d4725fe8fa68cb2e5d3c793561c"
+    },
+    {
+      "path": "scripts/settings/liquid_area/liquid_area_templates/player_liquid_area_templates.lua",
+      "old_blob": "4eab81fbb1016b82a7308807b7d2839dd94348bd",
+      "new_blob": "4eab81fbb1016b82a7308807b7d2839dd94348bd"
+    },
+    {
+      "path": "scripts/settings/lunge/adamant_lunge_templates.lua",
+      "old_blob": "a82f86cbb111f4c4764cf72ea4ad6afc58d7d284",
+      "new_blob": "a82f86cbb111f4c4764cf72ea4ad6afc58d7d284"
+    },
+    {
+      "path": "scripts/settings/lunge/ogryn_lunge_templates.lua",
+      "old_blob": "26209237dbb03d3e06d7b7009a6718442b50d085",
+      "new_blob": "26209237dbb03d3e06d7b7009a6718442b50d085"
+    },
+    {
+      "path": "scripts/settings/lunge/zealot_lunge_templates.lua",
+      "old_blob": "8d966e14b2de5bfb5f564cc83f58208cb830cd1b",
+      "new_blob": "8d966e14b2de5bfb5f564cc83f58208cb830cd1b"
+    },
+    {
+      "path": "scripts/settings/outline/outline_settings.lua",
+      "old_blob": "513b7b2da9d17406ed9c697d3c6e495d34cabe31",
+      "new_blob": "513b7b2da9d17406ed9c697d3c6e495d34cabe31"
+    },
+    {
+      "path": "scripts/settings/pickup/pickups/consumable/large_clip_pickup.lua",
+      "old_blob": "1a1b24393ecb8a1c7d167b1149919ba496cfdbda",
+      "new_blob": "1a1b24393ecb8a1c7d167b1149919ba496cfdbda"
+    },
+    {
+      "path": "scripts/settings/pickup/pickups/consumable/small_clip_pickup.lua",
+      "old_blob": "208923f54355c8565e97aa3a5dc8dc47eda74cd6",
+      "new_blob": "208923f54355c8565e97aa3a5dc8dc47eda74cd6"
+    },
+    {
+      "path": "scripts/settings/pickup/pickups/deployable/ammo_cache_deployable_pickup.lua",
+      "old_blob": "95ac2e94bdd8f6659a1501bb0e24a241a8f5de29",
+      "new_blob": "95ac2e94bdd8f6659a1501bb0e24a241a8f5de29"
+    },
+    {
+      "path": "scripts/settings/pickup/pickups/level/large_ammunition_crate_pickup.lua",
+      "old_blob": "051b683d2bb5cded22fa78f7d2a5c59ee2912d4e",
+      "new_blob": "051b683d2bb5cded22fa78f7d2a5c59ee2912d4e"
+    },
+    {
+      "path": "scripts/settings/projectile/player_projectile_templates.lua",
+      "old_blob": "a7c649e689c646fdd782f4033066c34fee17a8a1",
+      "new_blob": "a7c649e689c646fdd782f4033066c34fee17a8a1"
+    },
+    {
+      "path": "scripts/settings/projectile/true_flight_templates.lua",
+      "old_blob": "ccd3740351e6cd0e3ab6572c76915097585bc0cf",
+      "new_blob": "ccd3740351e6cd0e3ab6572c76915097585bc0cf"
+    },
+    {
+      "path": "scripts/settings/projectile_locomotion/templates/grenade_projectile_locomotion_templates.lua",
+      "old_blob": "e4a03dbd72c56ffa5164a6a214749b912219a778",
+      "new_blob": "e4a03dbd72c56ffa5164a6a214749b912219a778"
+    },
+    {
+      "path": "scripts/settings/smart_tag/double_tag/adamant_double_tag_settings.lua",
+      "old_blob": "8c8c2c11fd38fd285aa7869b1f16616db921e561",
+      "new_blob": "8c8c2c11fd38fd285aa7869b1f16616db921e561"
+    },
+    {
+      "path": "scripts/settings/smart_tag/double_tag/adamant_double_tag_templates.lua",
+      "old_blob": "6926e80d48e0db432dfd369681f19056e8128b2b",
+      "new_blob": "6926e80d48e0db432dfd369681f19056e8128b2b"
+    },
+    {
+      "path": "scripts/settings/smart_tag/double_tag/cryptic_double_tag_templates.lua",
+      "old_blob": "488bc378b4f047dd0ea39babad0c4a2a8a35211a",
+      "new_blob": "488bc378b4f047dd0ea39babad0c4a2a8a35211a"
+    },
+    {
+      "path": "scripts/settings/smart_tag/double_tag_settings.lua",
+      "old_blob": "c7963ab0f74326347ae21e1c1337c2ddb08923e1",
+      "new_blob": "c7963ab0f74326347ae21e1c1337c2ddb08923e1"
+    },
+    {
+      "path": "scripts/settings/smart_tag/smart_tag_settings.lua",
+      "old_blob": "9c0ba0bc5112d00dad8a5f2945e6ef1acd98cb4b",
+      "new_blob": "9c0ba0bc5112d00dad8a5f2945e6ef1acd98cb4b"
+    },
+    {
+      "path": "scripts/settings/talent/talent_settings_adamant.lua",
+      "old_blob": "d30a3686716faf859b62e49d413b3eef0f46d0e7",
+      "new_blob": "d30a3686716faf859b62e49d413b3eef0f46d0e7"
+    },
+    {
+      "path": "scripts/settings/talent/talent_settings_broker.lua",
+      "old_blob": "8b3741fae58a4668bb9d81fed447ca71a0c03b12",
+      "new_blob": "8b3741fae58a4668bb9d81fed447ca71a0c03b12"
+    },
+    {
+      "path": "scripts/settings/talent/talent_settings_cryptic.lua",
+      "old_blob": "ce85843efdfb1afd5915332abbfa7f454ab0330a",
+      "new_blob": "ce85843efdfb1afd5915332abbfa7f454ab0330a"
+    },
+    {
+      "path": "scripts/settings/talent/talent_settings_ogryn.lua",
+      "old_blob": "f22c977ef640a06046831c3a3549f1beec4d2e08",
+      "new_blob": "f22c977ef640a06046831c3a3549f1beec4d2e08"
+    },
+    {
+      "path": "scripts/settings/talent/talent_settings_psyker.lua",
+      "old_blob": "a66f3a1a5b4f3cf605281d9dd1948faeca529c69",
+      "new_blob": "a66f3a1a5b4f3cf605281d9dd1948faeca529c69"
+    },
+    {
+      "path": "scripts/settings/talent/talent_settings_veteran.lua",
+      "old_blob": "d2ed82e7578a61c62a67f1a0f400fb3ca987cc64",
+      "new_blob": "d2ed82e7578a61c62a67f1a0f400fb3ca987cc64"
+    },
+    {
+      "path": "scripts/settings/talent/talent_settings_zealot.lua",
+      "old_blob": "50f80994c58cbfd17b98a242a3e9c6d90e9a89cb",
+      "new_blob": "50f80994c58cbfd17b98a242a3e9c6d90e9a89cb"
+    },
+    {
+      "path": "scripts/settings/warp_charge/archetype_warp_charge_templates.lua",
+      "old_blob": "0a16de577f25fac074c7fdb9b88e33d16c2c230d",
+      "new_blob": "0a16de577f25fac074c7fdb9b88e33d16c2c230d"
+    },
+    {
+      "path": "scripts/ui/hud/elements/smart_tagging/hud_element_smart_tagging.lua",
+      "old_blob": "4522b785ee8c235c09f53164ea14ebff4ea6d1ea",
+      "new_blob": "4522b785ee8c235c09f53164ea14ebff4ea6d1ea"
+    },
+    {
+      "path": "scripts/ui/hud/elements/tactical_overlay/hud_element_tactical_overlay.lua",
+      "old_blob": "e05a3ff83505bc761a74c108f09201991af1f7f3",
+      "new_blob": "e05a3ff83505bc761a74c108f09201991af1f7f3"
+    },
+    {
+      "path": "scripts/ui/views/broker_stimm_builder_view/broker_stimm_builder_view.lua",
+      "old_blob": "b1d3258a691417c268ab7314cf9c47303831c9dc",
+      "new_blob": "b1d3258a691417c268ab7314cf9c47303831c9dc"
+    },
+    {
+      "path": "scripts/ui/views/broker_stimm_builder_view/layouts/broker_stimm_tree.lua",
+      "old_blob": "4723dc00351ebb31f1a359d7a0a03e817687f31d",
+      "new_blob": "4723dc00351ebb31f1a359d7a0a03e817687f31d"
+    },
+    {
+      "path": "scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua",
+      "old_blob": "db605772612b7e0977e58abd72278ea49bed0007",
+      "new_blob": "db605772612b7e0977e58abd72278ea49bed0007"
+    },
+    {
+      "path": "scripts/ui/views/talent_builder_view/layouts/broker_tree.lua",
+      "old_blob": "49592736954bde3daa15688fe77994040b7295aa",
+      "new_blob": "49592736954bde3daa15688fe77994040b7295aa"
+    },
+    {
+      "path": "scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua",
+      "old_blob": "9c047bb503109cc8e773146ca52577c72daea86b",
+      "new_blob": "9c047bb503109cc8e773146ca52577c72daea86b"
+    },
+    {
+      "path": "scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua",
+      "old_blob": "9f49987a24ab3fe7f532db6bee19a254cf705efd",
+      "new_blob": "9f49987a24ab3fe7f532db6bee19a254cf705efd"
+    },
+    {
+      "path": "scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua",
+      "old_blob": "657003b3b9c92f83fb7dedf7fb5b1d91360049f2",
+      "new_blob": "657003b3b9c92f83fb7dedf7fb5b1d91360049f2"
+    },
+    {
+      "path": "scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua",
+      "old_blob": "d82ca2d05ea9f851b940b38bd1d0e7d6a7d928f6",
+      "new_blob": "d82ca2d05ea9f851b940b38bd1d0e7d6a7d928f6"
+    },
+    {
+      "path": "scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua",
+      "old_blob": "7139207ee3e502e687aa9610ce8c5d94a513d2d9",
+      "new_blob": "7139207ee3e502e687aa9610ce8c5d94a513d2d9"
+    },
+    {
+      "path": "scripts/ui/views/talent_builder_view/utilities/talent_layout_parser.lua",
+      "old_blob": "1cd7b67b1069b12325b58f48f5c8f66afbbbaff1",
+      "new_blob": "1cd7b67b1069b12325b58f48f5c8f66afbbbaff1"
+    },
+    {
+      "path": "scripts/utilities/action/action_handler.lua",
+      "old_blob": "6d98d8185d07a33c658a529e418f86f37c60720c",
+      "new_blob": "6d98d8185d07a33c658a529e418f86f37c60720c"
+    },
+    {
+      "path": "scripts/utilities/action/chain_lightning.lua",
+      "old_blob": "097b183b8314f9f20275010a3ab63e54d2159c8a",
+      "new_blob": "097b183b8314f9f20275010a3ab63e54d2159c8a"
+    },
+    {
+      "path": "scripts/utilities/alternate_fire.lua",
+      "old_blob": "11c96c8dcd1c03afb459908401f288ae988e71d3",
+      "new_blob": "11c96c8dcd1c03afb459908401f288ae988e71d3"
+    },
+    {
+      "path": "scripts/utilities/ammo.lua",
+      "old_blob": "cb4c792129aa79ec75c72b02e544dc4061ec250d",
+      "new_blob": "cb4c792129aa79ec75c72b02e544dc4061ec250d"
+    },
+    {
+      "path": "scripts/utilities/attack/attack.lua",
+      "old_blob": "9814ac9f53184acb3af7d64a2cdd56a12657f27a",
+      "new_blob": "9814ac9f53184acb3af7d64a2cdd56a12657f27a"
+    },
+    {
+      "path": "scripts/utilities/attack/attack_positioning.lua",
+      "old_blob": "c52f8e198fc8e46e3284ca7f598644f9246284e5",
+      "new_blob": "c52f8e198fc8e46e3284ca7f598644f9246284e5"
+    },
+    {
+      "path": "scripts/utilities/attack/attacking_unit_resolver.lua",
+      "old_blob": "e89e1b12f134e493567bb7846dd6c5f9f7615d0b",
+      "new_blob": "e89e1b12f134e493567bb7846dd6c5f9f7615d0b"
+    },
+    {
+      "path": "scripts/utilities/attack/block.lua",
+      "old_blob": "ce66b118009f01fa0162db10e34421f9fec30c90",
+      "new_blob": "ce66b118009f01fa0162db10e34421f9fec30c90"
+    },
+    {
+      "path": "scripts/utilities/attack/critical_strike.lua",
+      "old_blob": "2a6127e81515392ea41b1ab2fd1622878db4e216",
+      "new_blob": "2a6127e81515392ea41b1ab2fd1622878db4e216"
+    },
+    {
+      "path": "scripts/utilities/attack/damage.lua",
+      "old_blob": "e0248e1bea94755d4e537d6f1cf0b277c01c0a25",
+      "new_blob": "e0248e1bea94755d4e537d6f1cf0b277c01c0a25"
+    },
+    {
+      "path": "scripts/utilities/attack/damage_calculation.lua",
+      "old_blob": "0befe848712f85d0ae723168d8807d04b6aa280c",
+      "new_blob": "0befe848712f85d0ae723168d8807d04b6aa280c"
+    },
+    {
+      "path": "scripts/utilities/attack/damage_profile.lua",
+      "old_blob": "affe91f44392e5ef1996a9b617bc59d9d1487beb",
+      "new_blob": "affe91f44392e5ef1996a9b617bc59d9d1487beb"
+    },
+    {
+      "path": "scripts/utilities/attack/damage_taken_calculation.lua",
+      "old_blob": "d3b5cb87ee0f77e16e13107fae068b182d6f3fa9",
+      "new_blob": "d3b5cb87ee0f77e16e13107fae068b182d6f3fa9"
+    },
+    {
+      "path": "scripts/utilities/attack/explosion.lua",
+      "old_blob": "839e99d436e1b0c87e96966cb884e310d1fdbf66",
+      "new_blob": "839e99d436e1b0c87e96966cb884e310d1fdbf66"
+    },
+    {
+      "path": "scripts/utilities/attack/player_unit_status.lua",
+      "old_blob": "9eadf4e7f1b74b4b0f7fe1dbdb45dda460be1568",
+      "new_blob": "9eadf4e7f1b74b4b0f7fe1dbdb45dda460be1568"
+    },
+    {
+      "path": "scripts/utilities/attack/power_level.lua",
+      "old_blob": "d8f909a028feb1511d9042ca265898ec75b1e17b",
+      "new_blob": "d8f909a028feb1511d9042ca265898ec75b1e17b"
+    },
+    {
+      "path": "scripts/utilities/attack/stagger_calculation.lua",
+      "old_blob": "79f7dc4845c9a1737d18904276cf264479f2983c",
+      "new_blob": "79f7dc4845c9a1737d18904276cf264479f2983c"
+    },
+    {
+      "path": "scripts/utilities/attack/stamina.lua",
+      "old_blob": "c4b76ee403e7621539068396be323e38ea064412",
+      "new_blob": "c4b76ee403e7621539068396be323e38ea064412"
+    },
+    {
+      "path": "scripts/utilities/attack/stun.lua",
+      "old_blob": "f39f6ded4af68753ca05d94cfc3c1887eedd556e",
+      "new_blob": "f39f6ded4af68753ca05d94cfc3c1887eedd556e"
+    },
+    {
+      "path": "scripts/utilities/attack/suppression.lua",
+      "old_blob": "eee9fb87a997062e22857040ef3e6cdb0dc3477e",
+      "new_blob": "eee9fb87a997062e22857040ef3e6cdb0dc3477e"
+    },
+    {
+      "path": "scripts/utilities/character_sheet.lua",
+      "old_blob": "2e189c1ef60584d2e9a531c95a4b1f9bbfa360cf",
+      "new_blob": "2e189c1ef60584d2e9a531c95a4b1f9bbfa360cf"
+    },
+    {
+      "path": "scripts/utilities/companion/companion_servo_skull_ability.lua",
+      "old_blob": "97eafe082008f0fa5a091faf69aa4b03439588c0",
+      "new_blob": "97eafe082008f0fa5a091faf69aa4b03439588c0"
+    },
+    {
+      "path": "scripts/utilities/health.lua",
+      "old_blob": "86ed5c273abe8fe318885584fa212ddbf53be486",
+      "new_blob": "86ed5c273abe8fe318885584fa212ddbf53be486"
+    },
+    {
+      "path": "scripts/utilities/minion_state.lua",
+      "old_blob": "e5a96a94f38e7ace2fee9119515ff5557f1e0ad6",
+      "new_blob": "e5a96a94f38e7ace2fee9119515ff5557f1e0ad6"
+    },
+    {
+      "path": "scripts/utilities/minion_target_selection.lua",
+      "old_blob": "dd5d83d4568ef0b7634b8f0887c3e8ff0931b98f",
+      "new_blob": "dd5d83d4568ef0b7634b8f0887c3e8ff0931b98f"
+    },
+    {
+      "path": "scripts/utilities/player_state/lunge.lua",
+      "old_blob": "6d6db34f040e2e5564a3d6eaa3cf610769e816a1",
+      "new_blob": "6d6db34f040e2e5564a3d6eaa3cf610769e816a1"
+    },
+    {
+      "path": "scripts/utilities/player_talents/player_talents.lua",
+      "old_blob": "d10b0670915d530b0e5cb4b9480654a3f350b507",
+      "new_blob": "d10b0670915d530b0e5cb4b9480654a3f350b507"
+    },
+    {
+      "path": "scripts/utilities/player_unit_peeking.lua",
+      "old_blob": "10c44787998848a9002d2c1a446f589768a2c209",
+      "new_blob": "10c44787998848a9002d2c1a446f589768a2c209"
+    },
+    {
+      "path": "scripts/utilities/pseudo_random_distribution.lua",
+      "old_blob": "25b520848b70fcb2de4786d1b144b077d43cf920",
+      "new_blob": "25b520848b70fcb2de4786d1b144b077d43cf920"
+    },
+    {
+      "path": "scripts/utilities/shared_overheat_and_warp_charge_functions.lua",
+      "old_blob": "b55bc8f7fa0235e81d4df4c02e6c7323f3f4f2d2",
+      "new_blob": "b55bc8f7fa0235e81d4df4c02e6c7323f3f4f2d2"
+    },
+    {
+      "path": "scripts/utilities/spawn_companions_from_talent.lua",
+      "old_blob": "3cba747b9ef0d9bffcfde3238ca3cae75e2fca93",
+      "new_blob": "3cba747b9ef0d9bffcfde3238ca3cae75e2fca93"
+    },
+    {
+      "path": "scripts/utilities/toughness/toughness.lua",
+      "old_blob": "be87db9a5f5d155eecf443ed3cdbf7b1b1fa21b8",
+      "new_blob": "be87db9a5f5d155eecf443ed3cdbf7b1b1fa21b8"
+    },
+    {
+      "path": "scripts/utilities/warp_charge.lua",
+      "old_blob": "18b479af32968f8ba5f5e93b042fb3da616b7389",
+      "new_blob": "18b479af32968f8ba5f5e93b042fb3da616b7389"
+    }
+  ],
+  "line_ranges": 3986,
+  "direct_and_shared_source_areas": [
+    {
+      "path": "scripts/settings/archetype/",
+      "files": 9,
+      "changed_files": 0
+    },
+    {
+      "path": "scripts/settings/ability/archetype_talents/",
+      "files": 9,
+      "changed_files": 0
+    },
+    {
+      "path": "scripts/settings/ability/player_abilities/",
+      "files": 8,
+      "changed_files": 0
+    },
+    {
+      "path": "scripts/settings/talent/",
+      "files": 9,
+      "changed_files": 0
+    },
+    {
+      "path": "scripts/settings/buff/",
+      "files": 144,
+      "changed_files": 0
+    },
+    {
+      "path": "scripts/ui/views/talent_builder_view/layouts/",
+      "files": 7,
+      "changed_files": 0
+    },
+    {
+      "path": "scripts/extension_systems/ability/",
+      "files": 29,
+      "changed_files": 0
+    },
+    {
+      "path": "scripts/extension_systems/buff/",
+      "files": 29,
+      "changed_files": 0
+    },
+    {
+      "path": "scripts/utilities/attack/",
+      "files": 32,
+      "changed_files": 0
+    }
+  ],
+  "all_source_changes": [
+    {
+      "status": "A",
+      "path": "CONTRIBUTING.md"
+    },
+    {
+      "status": "M",
+      "path": "README.md"
+    },
+    {
+      "status": "M",
+      "path": "scripts/foundation/utilities/parameters/default_dev_parameters.lua"
+    },
+    {
+      "status": "M",
+      "path": "scripts/foundation/utilities/parameters/default_game_parameters.lua"
+    },
+    {
+      "status": "M",
+      "path": "scripts/managers/game_mode/game_modes/game_mode_survival.lua"
+    },
+    {
+      "status": "M",
+      "path": "scripts/managers/pacing/bosses/spillway_wizard.lua"
+    },
+    {
+      "status": "M",
+      "path": "scripts/settings/mutator/templates/mutator_havoc_templates.lua"
+    },
+    {
+      "status": "M",
+      "path": "scripts/ui/views/training_grounds_options_view/training_grounds_options_view.lua"
+    },
+    {
+      "status": "M",
+      "path": "scripts/utilities/stage_hazards/wizard_teeth_stage_hazard.lua"
+    }
+  ]
+}

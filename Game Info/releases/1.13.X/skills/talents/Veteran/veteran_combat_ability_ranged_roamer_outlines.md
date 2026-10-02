@@ -2,9 +2,9 @@
 
 [返回玩家說明](README.md#veteran_combat_ability_ranged_roamer_outlines)｜[技術索引](SOURCE_INDEX.md)
 
-- 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`veteran_combat_ability_ranged_roamer_outlines`；名稱鍵：`loc_talent_veteran_combat_ability_ranged_enemies_outlines`；描述鍵：`loc_talent_veteran_combat_ability_ranged_enemies_outlines_description`。
-- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L832-L857)：`ability_modifier`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L353-L372)。
+- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L832-L857)：`ability_modifier`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L353-L372)。
 - 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
 ## 額外目標與刷新
@@ -16,13 +16,13 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 353–372 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L353-L372)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 374–477 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L374-L477)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 129–198 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L129-L198)
-- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 222–223 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L222-L223)
-- [scripts/settings/talent/talent_settings_veteran.lua，第 78–99 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L78-L99)
-- [scripts/settings/breed/breeds/renegade/renegade_rifleman_breed.lua，第 45–71 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/breed/breeds/renegade/renegade_rifleman_breed.lua#L45-L71)
-- [scripts/settings/breed/breeds/cultist/cultist_assault_breed.lua，第 45–69 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/breed/breeds/cultist/cultist_assault_breed.lua#L45-L69)
+- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 353–372 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L353-L372)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 374–477 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L374-L477)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 129–198 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L129-L198)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 222–223 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L222-L223)
+- [scripts/settings/talent/talent_settings_veteran.lua，第 78–99 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L78-L99)
+- [scripts/settings/breed/breeds/renegade/renegade_rifleman_breed.lua，第 45–71 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/breed/breeds/renegade/renegade_rifleman_breed.lua#L45-L71)
+- [scripts/settings/breed/breeds/cultist/cultist_assault_breed.lua，第 45–69 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/breed/breeds/cultist/cultist_assault_breed.lua#L45-L69)
 
 ## 算例條件與待確認事項
 

@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。基礎天賦 `veteran_cover_peeking`；名稱鍵 `loc_talent_veteran_cover_peeking`；描述鍵 `loc_talent_veteran_cover_peeking_description`。
+- 固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。基礎天賦 `veteran_cover_peeking`；名稱鍵 `loc_talent_veteran_cover_peeking`；描述鍵 `loc_talent_veteran_cover_peeking_description`。
 - 由職業基礎清單啟用，不是77個技能樹節點之外的額外可選節點。
 
 - veteran_cover_peeking special rule 是 can_peek 的必要條件，另要求 significant obstacle in front 與 is_crouching。
@@ -18,11 +18,11 @@
 
 ## 原始碼依據
 
-- [scripts/settings/archetype/archetypes/veteran_archetype.lua，第 50–74 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L50-L74)
-- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 2575–2584 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2575-L2584)
-- [scripts/utilities/player_unit_peeking.lua，第 40–92 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/player_unit_peeking.lua#L40-L92)
-- [scripts/utilities/alternate_fire.lua，第 43–51 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/alternate_fire.lua#L43-L51)
-- [scripts/utilities/alternate_fire.lua，第 73–82 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/alternate_fire.lua#L73-L82)
+- [scripts/settings/archetype/archetypes/veteran_archetype.lua，第 50–74 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/veteran_archetype.lua#L50-L74)
+- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 2575–2584 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2575-L2584)
+- [scripts/utilities/player_unit_peeking.lua，第 40–92 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/player_unit_peeking.lua#L40-L92)
+- [scripts/utilities/alternate_fire.lua，第 43–51 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/alternate_fire.lua#L43-L51)
+- [scripts/utilities/alternate_fire.lua，第 73–82 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/alternate_fire.lua#L73-L82)
 
 ## 圖示來源
 

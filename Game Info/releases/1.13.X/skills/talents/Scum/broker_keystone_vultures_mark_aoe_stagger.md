@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#broker_keystone_vultures_mark_aoe_stagger)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_keystone_vultures_mark_aoe_stagger)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`broker_keystone_vultures_mark_aoe_stagger`；名稱鍵：`loc_talent_broker_keystone_vultures_mark_aoe_stagger`；描述鍵：`loc_talent_broker_keystone_vultures_mark_aoe_stagger_desc`。
 - 節點：`node_c2a46314-e334-402f-a37d-12e5f58d1594`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,14 +15,14 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2426–2434](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2426-L2434)
-- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3432–3450](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3432-L3450)
-- [scripts/settings/buff/helper_functions/check_proc_functions.lua：120–145](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L120-L145)
-- [scripts/settings/buff/helper_functions/check_proc_functions.lua：216–224](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L216-L224)
-- [scripts/settings/damage/explosion_templates/player_explosion_templates.lua：228–239](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L228-L239)
-- [scripts/settings/damage/damage_profiles/archetypes/broker_damage_profile_templates.lua：499–531](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/broker_damage_profile_templates.lua#L499-L531)
-- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2426–2434](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2426-L2434)
-- [scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：1635–1657](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L1635-L1657)
+- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2426–2434](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2426-L2434)
+- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3432–3450](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3432-L3450)
+- [scripts/settings/buff/helper_functions/check_proc_functions.lua：120–145](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L120-L145)
+- [scripts/settings/buff/helper_functions/check_proc_functions.lua：216–224](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L216-L224)
+- [scripts/settings/damage/explosion_templates/player_explosion_templates.lua：228–239](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L228-L239)
+- [scripts/settings/damage/damage_profiles/archetypes/broker_damage_profile_templates.lua：499–531](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/broker_damage_profile_templates.lua#L499-L531)
+- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：2426–2434](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L2426-L2434)
+- [scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：1635–1657](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L1635-L1657)
 
 ## 算例條件與待確認事項
 
@@ -30,7 +30,7 @@
 - **Impact 算例**：設定基礎 impact 0.55；套用超級護甲係數 0.1 後為 0.55×0.1=0.055（未計其他 power 或 stagger 修正）。
 - 半徑內是否被擊退或踉蹌仍受目標的 stagger resistance、護甲及其他狀態修正影響。
 - 只監聽 on_kill 並要求遠程擊殺；毒針手槍 毒素 on_minion_death 的印記特例不會自動滿足此升級的 on_kill handler。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

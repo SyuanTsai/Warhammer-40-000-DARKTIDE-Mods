@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#broker_ability_punk_rage_sub_4)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_ability_punk_rage_sub_4)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`broker_ability_punk_rage_sub_4`；名稱鍵：`loc_talent_broker_ability_punk_rage_sub_4`；描述鍵：`loc_talent_broker_ability_punk_rage_sub_4_desc`。
 - 節點：`node_8efd6143-4d2d-4bd8-a40d-229263fccfd1`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,19 +15,19 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：456–494](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L456-L494)
-- [scripts/settings/talent/talent_settings_broker.lua：142–168](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L142-L168)
-- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：243–253](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L243-L253)
-- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：683–701](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L683-L701)
-- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：456–494](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L456-L494)
-- [scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：1972–1994](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L1972-L1994)
+- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：456–494](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L456-L494)
+- [scripts/settings/talent/talent_settings_broker.lua：142–168](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L142-L168)
+- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：243–253](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L243-L253)
+- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：683–701](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L683-L701)
+- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：456–494](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L456-L494)
+- [scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：1972–1994](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L1972-L1994)
 
 ## 算例條件與待確認事項
 
 - **延長量算例**：特殊敵人命中在啟動後30秒內加1秒；跨過30秒後為1÷2=0.5秒；跨過60秒後為1÷2²=0.25秒。普通敵人則在20秒後按0.3÷2=0.15秒遞減。
 - 30秒遞減門檻只用於帶 elite、special、monster 或 captain 標籤的目標命中，並未改變一般敵人命中的基礎延長。
 - 延長是每次近戰命中增加的持續時間，30秒不是怒火總長度上限。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

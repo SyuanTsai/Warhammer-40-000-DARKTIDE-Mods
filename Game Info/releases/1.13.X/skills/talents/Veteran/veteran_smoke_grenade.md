@@ -2,9 +2,9 @@
 
 [返回玩家說明](README.md#veteran_smoke_grenade)｜[技術索引](SOURCE_INDEX.md)
 
-- 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`veteran_smoke_grenade`；名稱鍵：`loc_ability_smoke_grenade`；描述鍵：`loc_ability_smoke_grenade_description`。
-- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L266-L294)：`tactical`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L65-L84)。
+- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L266-L294)：`tactical`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L65-L84)。
 - 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
 ## 原始碼確認與程式推導
@@ -13,14 +13,14 @@ talent置換為smoke ability，max3只耗charges。spawn parameters覆蓋SmokeFo
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 65–84 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L65-L84)
-- [scripts/settings/projectile/player_projectile_templates.lua，第 734–759 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/projectile/player_projectile_templates.lua#L734-L759)
-- [scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua，第 39–50 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L39-L50)
-- [scripts/settings/talent/talent_settings_veteran.lua，第 9–11 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L9-L11)
-- [scripts/extension_systems/smoke_fog/smoke_fog_extension.lua，第 29–62 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/smoke_fog/smoke_fog_extension.lua#L29-L62)
-- [scripts/extension_systems/smoke_fog/smoke_fog_system.lua，第 220–284 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/smoke_fog/smoke_fog_system.lua#L220-L284)
-- [scripts/settings/buff/weapon_buff_templates.lua，第 1271–1298 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/weapon_buff_templates.lua#L1271-L1298)
-- [scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua，第 258–280 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L258-L280)
+- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 65–84 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L65-L84)
+- [scripts/settings/projectile/player_projectile_templates.lua，第 734–759 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/player_projectile_templates.lua#L734-L759)
+- [scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua，第 39–50 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/veteran_abilities.lua#L39-L50)
+- [scripts/settings/talent/talent_settings_veteran.lua，第 9–11 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_veteran.lua#L9-L11)
+- [scripts/extension_systems/smoke_fog/smoke_fog_extension.lua，第 29–62 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/smoke_fog/smoke_fog_extension.lua#L29-L62)
+- [scripts/extension_systems/smoke_fog/smoke_fog_system.lua，第 220–284 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/smoke_fog/smoke_fog_system.lua#L220-L284)
+- [scripts/settings/buff/weapon_buff_templates.lua，第 1271–1298 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L1271-L1298)
+- [scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua，第 258–280 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L258-L280)
 
 ## 算例條件與待確認事項
 

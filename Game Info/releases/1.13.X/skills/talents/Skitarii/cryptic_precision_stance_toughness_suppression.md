@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_precision_stance_toughness_suppression)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_precision_stance_toughness_suppression)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_precision_stance_toughness_suppression`；名稱鍵：`loc_talent_cryptic_precision_stance_toughness_suppression`；描述鍵：`loc_talent_cryptic_precision_stance_toughness_suppression_desc`。
 - 節點：`node_1f07ccdc-f96c-4700-ac3f-13fb3244419d`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,22 +15,22 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：319–337](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L319-L337)
-- [scripts/settings/talent/talent_settings_cryptic.lua：98–109](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L98-L109)
-- [scripts/extension_systems/ability/actions/action_cryptic_precision_stance_toggle.lua：40–102](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_cryptic_precision_stance_toggle.lua#L40-L102)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：360–370](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L360-L370)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：520–534](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L520-L534)
-- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–285](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：319–337](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L319-L337)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：917–939](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L917-L939)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：319–337](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L319-L337)
+- [scripts/settings/talent/talent_settings_cryptic.lua：98–109](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L98-L109)
+- [scripts/extension_systems/ability/actions/action_cryptic_precision_stance_toggle.lua：40–102](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_cryptic_precision_stance_toggle.lua#L40-L102)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：360–370](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L360-L370)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：520–534](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L520-L534)
+- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–285](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：319–337](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L319-L337)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：917–939](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L917-L939)
 
 ## 算例條件與待確認事項
 
 - **恢復算例**：最大韌性 150、沒有其他恢復加成時，每秒恢復 150 × 10% = 15 點，維持 4 秒可恢復 60 點。
 - 10%以最大韌性為基準，不是無條件固定10點；最大韌性不同時，實際點數不同。
 - 姿態更新會按遊戲更新時間逐段補充，實際回復受姿態是否仍啟動、韌性補充修正、回復限制及缺口影響。
-- 固定來源提交與繁中 Build 25492122 是否同版仍待核對。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

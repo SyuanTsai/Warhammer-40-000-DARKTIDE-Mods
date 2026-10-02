@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_dissector_ability_stacks)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_dissector_ability_stacks)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_dissector_ability_stacks`；名稱鍵：`loc_talent_cryptic_dissector_ability`；描述鍵：`loc_talent_cryptic_dissector_ability_stacks_desc`。
 - 節點：`node_dc1911a1-3b00-44d2-b830-00c0b18ed2e9`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -14,21 +14,21 @@
 
 ## 原始碼依據
 
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1774–1796](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1774-L1796)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1200–1210](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1200-L1210)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1412–1431](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1412-L1431)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1465–1477](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1465-L1477)
-- [scripts/extension_systems/weapon/actions/action_ability_base.lua：25–65](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_ability_base.lua#L25-L65)
-- [scripts/extension_systems/ability/actions/action_cryptic_discharge.lua：69–80](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_cryptic_discharge.lua#L69-L80)
-- [scripts/extension_systems/ability/actions/action_cryptic_precision_stance_toggle.lua：104–114](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_cryptic_precision_stance_toggle.lua#L104-L114)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1200–1210](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1200-L1210)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1774–1796](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1774-L1796)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1774–1796](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1774-L1796)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1200–1210](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1200-L1210)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1412–1431](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1412-L1431)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1465–1477](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1465-L1477)
+- [scripts/extension_systems/weapon/actions/action_ability_base.lua：25–65](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_ability_base.lua#L25-L65)
+- [scripts/extension_systems/ability/actions/action_cryptic_discharge.lua：69–80](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_cryptic_discharge.lua#L69-L80)
+- [scripts/extension_systems/ability/actions/action_cryptic_precision_stance_toggle.lua：104–114](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_cryptic_precision_stance_toggle.lua#L104-L114)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1200–1210](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1200-L1210)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1774–1796](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1774-L1796)
 
 ## 算例條件與待確認事項
 
 - 靜態推演：目前3/6層時使用能力並觸發on_combat_ability，補上3層成6/6；滿層時缺層為0，不新增。
 - 效果取決於能力動作有送出on_combat_ability事件；能力本身是否另有消耗充能不改變補到上限的計算。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_discharge_toughness)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_discharge_toughness)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_discharge_toughness`；名稱鍵：`loc_talent_cryptic_discharge_toughness`；描述鍵：`loc_talent_cryptic_discharge_toughness_per_charge_desc`。
 - 節點：`node_d155b2e2-8498-41eb-81ed-4fa5b708132e`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,13 +15,13 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：195–221](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L195-L221)
-- [scripts/settings/talent/talent_settings_cryptic.lua：88–91](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L88-L91)
-- [scripts/extension_systems/ability/actions/action_cryptic_discharge.lua：88–110](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_cryptic_discharge.lua#L88-L110)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：866–879](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L866-L879)
-- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–285](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：195–221](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L195-L221)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1078–1100](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1078-L1100)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：195–221](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L195-L221)
+- [scripts/settings/talent/talent_settings_cryptic.lua：88–91](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L88-L91)
+- [scripts/extension_systems/ability/actions/action_cryptic_discharge.lua：88–110](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_cryptic_discharge.lua#L88-L110)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：866–879](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L866-L879)
+- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：253–285](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L253-L285)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：195–221](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L195-L221)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1078–1100](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1078-L1100)
 
 ## 算例條件與待確認事項
 
@@ -29,8 +29,8 @@
 - 每次使用效果採用完整充能數；充能資源中的小數進度不算作已消耗的一道完整充能。
 - 每命中恢復只核對目標存活及特定傷害設定檔，未核對生命傷害量；勿把它解讀為每次都造成固定傷害或每個被爆炸波及單位必定受傷。
 - 韌性回復受角色韌性補充修正、回復限制及剩餘缺口影響；示例假設沒有額外修正。
-- 固定來源提交與繁中 Build 25492122 是否同版仍待核對。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

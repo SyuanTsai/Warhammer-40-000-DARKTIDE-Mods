@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#broker_ability_stimm_field_sub_3)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_ability_stimm_field_sub_3)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`broker_ability_stimm_field_sub_3`；名稱鍵：`loc_talent_broker_ability_stimm_field_sub_3`；描述鍵：`loc_talent_broker_ability_stimm_field_sub_3_desc`。
 - 節點：`node_c7a8a5c5-60d1-4c71-bc38-79121befb0c8`；分類：能力；配點成本：1 點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,21 +15,21 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：573–587](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L573-L587)
-- [scripts/settings/talent/talent_settings_broker.lua：170–188](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L170-L188)
-- [scripts/settings/ability/player_abilities/abilities/broker_abilities.lua：98–112](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/broker_abilities.lua#L98-L112)
-- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3830–3872](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3830-L3872)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1102](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1127–1165](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1127-L1165)
-- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：573–587](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L573-L587)
-- [scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：2071–2093](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L2071-L2093)
+- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：573–587](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L573-L587)
+- [scripts/settings/talent/talent_settings_broker.lua：170–188](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_broker.lua#L170-L188)
+- [scripts/settings/ability/player_abilities/abilities/broker_abilities.lua：98–112](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/broker_abilities.lua#L98-L112)
+- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：3830–3872](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L3830-L3872)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1102](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1127–1165](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1127-L1165)
+- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：573–587](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L573-L587)
+- [scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：2071–2093](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L2071-L2093)
 
 ## 算例條件與待確認事項
 
 - **充能算例**：一次觸發把一個缺少的能力充能成本比例補回；60秒冷卻期間即使只剩部分未充滿，也會補至單次充能上限。
 - 常駐效果以0.5秒間隔檢查新狀態；已持有興奮劑時不會因首次讀取而立即觸發。
 - 能力最多1次充能，無法將多次觸發累積成超過上限的充能。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

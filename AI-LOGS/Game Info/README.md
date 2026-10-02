@@ -6,6 +6,8 @@ Game Info保存遊戲知識，本目錄保存分析與維護歷程。歷史紀�
 
 ## 分類
 
+- [1.13.1天賦更新](releases/1.13.X/skills/2026-10-02-1.13.1_UPDATE.md)
+
 - [忽略規則調整](changes/2026-10-02-IGNORE_RULES.json)
 
 - [1.13.X提交與分析歷程](releases/1.13.X/HISTORY.md)

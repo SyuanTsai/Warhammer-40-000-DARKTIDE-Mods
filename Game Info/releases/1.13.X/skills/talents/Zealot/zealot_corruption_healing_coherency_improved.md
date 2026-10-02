@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#zealot_corruption_healing_coherency_improved)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_corruption_healing_coherency_improved)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`zealot_corruption_healing_coherency_improved`；名稱鍵：`loc_talent_zealot_corruption_healing_coherency_improved`；描述鍵：`loc_talent_zealot_corruption_healing_coherency_improved_desc`。
 - 節點：`node_69985978-58fd-4215-9404-5ebfe1869483`；分類：光環；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -18,15 +18,15 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：828–859](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L828-L859)
-- [scripts/settings/talent/talent_settings_zealot.lua：452–458](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L452-L458)
-- [scripts/settings/talent/talent_settings_zealot.lua：514–518](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L514-L518)
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：1014–1090](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L1014-L1090)
-- [scripts/extension_systems/coherency/coherency_system.lua：188–195](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/coherency/coherency_system.lua#L188-L195)
-- [scripts/extension_systems/coherency/unit_coherency_extension.lua：256–311](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/coherency/unit_coherency_extension.lua#L256-L311)
-- [scripts/extension_systems/health/player_unit_health_extension.lua：270–286](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/health/player_unit_health_extension.lua#L270-L286)
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：839–859](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L839-L859)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：514–539](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L514-L539)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：828–859](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L828-L859)
+- [scripts/settings/talent/talent_settings_zealot.lua：452–458](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L452-L458)
+- [scripts/settings/talent/talent_settings_zealot.lua：514–518](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L514-L518)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：1014–1090](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L1014-L1090)
+- [scripts/extension_systems/coherency/coherency_system.lua：188–195](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/coherency_system.lua#L188-L195)
+- [scripts/extension_systems/coherency/unit_coherency_extension.lua：256–311](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/unit_coherency_extension.lua#L256-L311)
+- [scripts/extension_systems/health/player_unit_health_extension.lua：270–286](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/health/player_unit_health_extension.lua#L270-L286)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：839–859](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L839-L859)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：514–539](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L514-L539)
 
 ## 算例條件與待確認事項
 
@@ -35,12 +35,12 @@
 - interval=1 秒只說明週期設定；此研究沒有在執行遊戲中測試施加 aura 後第一個 tick 的相位或延遲。
 - 「heal corruption」不代表回復所有已失去生命；它只透過 reduce_permanent_damage 處理永久腐敗傷害。
 - 範例假設沒有其他腐敗變動，且傷口 floor 不攔截清除。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`afc49dc9`。
-- Build 25492122 中繁中「每秒淨化腐敗」與英文「Heal Corruption ... every 1s」方向一致；來源證明為固定值清除，未顯示清楚的翻譯錯誤。
+- Build 25606770 中繁中「每秒淨化腐敗」與英文「Heal Corruption ... every 1s」方向一致；來源證明為固定值清除，未顯示清楚的翻譯錯誤。
 
 ## 圖示來源
 

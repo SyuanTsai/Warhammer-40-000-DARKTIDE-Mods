@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_discharge_generates_arcs)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_discharge_generates_arcs)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_discharge_generates_arcs`；名稱鍵：`loc_talent_cryptic_discharge_arc_bonus`；描述鍵：`loc_talent_cryptic_discharge_arc_bonus_desc`。
 - 節點：`node_76d47f27-b1fe-4614-a013-9cdcfb6ac12b`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,22 +15,22 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：222–239](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L222-L239)
-- [scripts/settings/talent/talent_settings_cryptic.lua：90–96](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L90-L96)
-- [scripts/extension_systems/ability/actions/action_cryptic_discharge.lua：89–143](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_cryptic_discharge.lua#L89-L143)
-- [scripts/extension_systems/ability/actions/action_cryptic_discharge.lua：143–188](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_cryptic_discharge.lua#L143-L188)
-- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/discharge_ability_arc_chain_lightning_source.lua：16–47](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/fx/effect_templates/arc_chain_lightning_source/discharge_ability_arc_chain_lightning_source.lua#L16-L47)
-- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/discharge_ability_arc_chain_lightning_source.lua：100–144](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/fx/effect_templates/arc_chain_lightning_source/discharge_ability_arc_chain_lightning_source.lua#L100-L144)
-- [scripts/settings/buff/weapon_buff_templates.lua：2752–2798](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/weapon_buff_templates.lua#L2752-L2798)
-- [scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：1820–1822](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L1820-L1822)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：222–240](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L222-L240)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1032–1054](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1032-L1054)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：222–239](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L222-L239)
+- [scripts/settings/talent/talent_settings_cryptic.lua：90–96](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L90-L96)
+- [scripts/extension_systems/ability/actions/action_cryptic_discharge.lua：89–143](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_cryptic_discharge.lua#L89-L143)
+- [scripts/extension_systems/ability/actions/action_cryptic_discharge.lua：143–188](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_cryptic_discharge.lua#L143-L188)
+- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/discharge_ability_arc_chain_lightning_source.lua：16–47](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/fx/effect_templates/arc_chain_lightning_source/discharge_ability_arc_chain_lightning_source.lua#L16-L47)
+- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/discharge_ability_arc_chain_lightning_source.lua：100–144](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/fx/effect_templates/arc_chain_lightning_source/discharge_ability_arc_chain_lightning_source.lua#L100-L144)
+- [scripts/settings/buff/weapon_buff_templates.lua：2752–2798](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L2752-L2798)
+- [scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：1820–1822](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L1820-L1822)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：222–240](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L222-L240)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1032–1054](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1032-L1054)
 
 ## 算例條件與待確認事項
 
 - 電弧數以消耗充能計，最多 5 道；實際鏈接目標數受附近可用敵人及鏈接驗證限制。
 - 各次傷害依目標與傷害階段計算，來源未提供可套用所有敵人的單一總傷害。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

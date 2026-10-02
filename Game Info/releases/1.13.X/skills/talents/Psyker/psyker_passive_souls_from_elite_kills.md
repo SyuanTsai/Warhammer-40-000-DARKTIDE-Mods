@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#psyker_passive_souls_from_elite_kills)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_passive_souls_from_elite_kills)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`psyker_passive_souls_from_elite_kills`；名稱鍵：`loc_talent_psyker_souls`；描述鍵：`loc_talent_psyker_souls_new_desc`。
 - 節點：`node_25c8ee81-d16b-4d5b-b0fa-fc1e7b40c26f`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -16,21 +16,21 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：410–460](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L410-L460)
-- [scripts/settings/talent/talent_settings_psyker.lua：180–186](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L180-L186)
-- [scripts/settings/talent/talent_settings_psyker.lua：241–255](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L241-L255)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：115–121](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L115-L121)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：141–160](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L141-L160)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：189–215](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L189-L215)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：217–228](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L217-L228)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：297–361](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L297-L361)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1528–1548](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1528-L1548)
-- [scripts/extension_systems/buff/buff_extension_base.lua：434–462](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buff_extension_base.lua#L434-L462)
-- [scripts/extension_systems/buff/buff_extension_base.lua：560–589](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buff_extension_base.lua#L560-L589)
-- [scripts/extension_systems/buff/buff_extension_base.lua：635–663](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buff_extension_base.lua#L635-L663)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1102](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102)
-- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：410–460](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L410-L460)
-- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1235–1265](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1235-L1265)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：410–460](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L410-L460)
+- [scripts/settings/talent/talent_settings_psyker.lua：180–186](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L180-L186)
+- [scripts/settings/talent/talent_settings_psyker.lua：241–255](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L241-L255)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：115–121](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L115-L121)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：141–160](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L141-L160)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：189–215](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L189-L215)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：217–228](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L217-L228)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：297–361](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L297-L361)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1528–1548](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1528-L1548)
+- [scripts/extension_systems/buff/buff_extension_base.lua：434–462](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L434-L462)
+- [scripts/extension_systems/buff/buff_extension_base.lua：560–589](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L560-L589)
+- [scripts/extension_systems/buff/buff_extension_base.lua：635–663](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buff_extension_base.lua#L635-L663)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1102](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：410–460](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L410-L460)
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1235–1265](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1235-L1265)
 
 ## 算例條件與待確認事項
 
@@ -39,13 +39,13 @@
 - 「每層 +4%」是一般傷害加成；實際傷害仍受武器、目標護甲、攻擊類型與其他加成影響。
 - 冷卻秒數換算假設該技能每格充能冷卻時間固定為指定值；程式實際回復單次充能的能力資源比例。
 - 每次擊殺增加 2 層是其他天賦效果，不屬於本鑰石的基礎觸發。
-- 來源 SHA 與本機 Build 25492122 版本對應為1.13.0。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 來源 SHA 與本機 Build 25606770 版本對應為1.13.1。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`9ea525d4`。
-- 同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.0。
+- 同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.1。
 
 ## 圖示來源
 

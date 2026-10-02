@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#psyker_mark_kills_can_vent)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_mark_kills_can_vent)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`psyker_mark_kills_can_vent`；名稱鍵：`loc_talent_psyker_mark_kills_can_vent`；描述鍵：`loc_talent_psyker_mark_kills_can_vent_description`。
 - 節點：`node_4941c66a-d4ff-4dca-917f-a6bbf2bbdbfc`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -13,19 +13,19 @@
 
 ## 原始碼依據
 
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：734–755](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L734-L755)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：765–771](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L765-L771)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：832–839](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L832-L839)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：896–904](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L896-L904)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：924–943](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L924-L943)
-- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：2185–2220](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2185-L2220)
-- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1475–1497](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1475-L1497)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：734–755](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L734-L755)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：765–771](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L765-L771)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：832–839](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L832-L839)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：896–904](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L896-L904)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：924–943](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L924-L943)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：2185–2220](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L2185-L2220)
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1475–1497](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1475-L1497)
 
 ## 算例條件與待確認事項
 
 - **反噬算例**：原有 60% 反噬時，變成 60% − 5 個百分點 = 55%；原有 3% 時則降至 0%。
-- 算例假設沒有其他修正，尚未遊戲內驗證；本機文字與固定來源版本對應為1.13.0。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 算例假設沒有其他修正，尚未遊戲內驗證；本機文字與固定來源版本對應為1.13.1。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

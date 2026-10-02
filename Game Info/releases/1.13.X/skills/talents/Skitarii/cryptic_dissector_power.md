@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_dissector_power)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_dissector_power)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_dissector_power`；名稱鍵：`loc_talent_cryptic_dissector_power`；描述鍵：`loc_talent_cryptic_dissector_power_desc`。
 - 節點：`node_ce7afddd-b252-4604-a423-da685ffa5410`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,16 +15,16 @@
 
 ## 原始碼依據
 
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1820–1842](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1820-L1842)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1211–1231](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1211-L1231)
-- [scripts/settings/talent/talent_settings_cryptic.lua：19–22](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L19-L22)
-- [scripts/settings/talent/talent_settings_cryptic.lua：251–263](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L251-L263)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：298–342](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L298-L342)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1102](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102)
-- [scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua：70–115](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L70-L115)
-- [scripts/settings/talent/talent_settings_cryptic.lua：3–18](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L3-L18)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1211–1231](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1211-L1231)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1820–1842](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1820-L1842)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1820–1842](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1820-L1842)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1211–1231](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1211-L1231)
+- [scripts/settings/talent/talent_settings_cryptic.lua：19–22](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L19-L22)
+- [scripts/settings/talent/talent_settings_cryptic.lua：251–263](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L251-L263)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：298–342](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L298-L342)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1081–1102](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1081-L1102)
+- [scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua：70–115](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L70-L115)
+- [scripts/settings/talent/talent_settings_cryptic.lua：3–18](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L3-L18)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1211–1231](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1211-L1231)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1820–1842](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1820-L1842)
 
 ## 算例條件與待確認事項
 
@@ -32,7 +32,7 @@
 - 總6.5%由固定職業擊殺回復4%與本修改器額外2.5%相加；不可只把額外值寫成總回復。
 - 百分比依單一充能成本計算，不依全部充能總池。restore_ability_charge_percentage忽略stat buffs，所以此回復不受紅線回復倍率放大。
 - precision stance keyword會使整個擊殺回復proc提前return。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

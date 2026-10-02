@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_chordclaw_consecutive_bonus)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_chordclaw_consecutive_bonus)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_chordclaw_consecutive_bonus`；名稱鍵：`loc_talent_cryptic_chordclaw_consecutive_bonus`；描述鍵：`loc_talent_cryptic_chordclaw_consecutive_bonus_desc`。
 - 節點：`node_5313efe8-b680-4879-8b64-65e9996ff694`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,16 +15,16 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：546–568](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L546-L568)
-- [scripts/settings/talent/talent_settings_cryptic.lua：158–162](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L158-L162)
-- [scripts/extension_systems/weapon/actions/action_cryptic_chordclaw_activation.lua：27–46](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_cryptic_chordclaw_activation.lua#L27-L46)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：982–998](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L982-L998)
-- [scripts/settings/buff/buff_settings.lua：762–762](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L762-L762)
-- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：190–212](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L190-L212)
-- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：325–340](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L325-L340)
-- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：536–550](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L536-L550)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：546–568](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L546-L568)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：2269–2292](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L2269-L2292)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：546–568](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L546-L568)
+- [scripts/settings/talent/talent_settings_cryptic.lua：158–162](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L158-L162)
+- [scripts/extension_systems/weapon/actions/action_cryptic_chordclaw_activation.lua：27–46](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_cryptic_chordclaw_activation.lua#L27-L46)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：982–998](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L982-L998)
+- [scripts/settings/buff/buff_settings.lua：762–762](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L762-L762)
+- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：190–212](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L190-L212)
+- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：325–340](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L325-L340)
+- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：536–550](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L536-L550)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：546–568](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L546-L568)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：2269–2292](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L2269-L2292)
 
 ## 算例條件與待確認事項
 
@@ -33,7 +33,7 @@
 - 每次啟動加一層，不是每次弦爪命中加一層；最多3層，層數不會因再次啟動超過上限。
 - 20%是弦爪攻擊計算修正，不是固定增加20生命傷害；示例中的100為基準示意。
 - 繁中與英文均寫每次使用弦爪技能、傷害提高20%、5秒、最多3層；來源的層數上限與持續時間一致。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

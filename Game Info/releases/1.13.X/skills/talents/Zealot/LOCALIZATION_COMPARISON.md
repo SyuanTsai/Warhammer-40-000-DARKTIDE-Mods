@@ -2,11 +2,11 @@
 
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
-- 原文：本機 Steam Build 25492122，2026-10-01 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25492122_1.13.0/，整個 Build 目錄受 Git 忽略。
-- 機制：Release 1.13.0／`419fe18d414a618ce0474bd015bab470afb446d6`。兩來源版本對應為1.13.0；跨版實作差異留待遊戲內核對。
+- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
+- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文本與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
 - 只有明確的效果方向、作用對象或數量／單位矛盾列為勘誤；省略機制或算例不算錯誤。
 
-- 82 項中，81 項精確配對同一 ui 資源鍵與 hash；「神聖事業」的描述鍵未命中。8 項明確繁中誤譯、7 項待同版或顯示代入核對、66 項未見明確矛盾；缺少說明不當成錯誤。
+- 82 項中，81 項精確配對同一 ui 資源鍵與 hash；「神聖事業」的描述鍵未命中。8 項明確繁中誤譯、7 項待遊戲內或顯示代入核對、66 項未見明確矛盾；缺少說明不當成錯誤。
 
 | 技能 | 結論 |
 |---|---|
@@ -97,7 +97,7 @@
 ## 獻祭手雷(Immolation Grenade)
 
 - 描述鍵：`loc_talent_ability_fire_grenade_desc`；hash：`5b720fa5`。
-- 結論：明確繁中誤譯。Build 25492122 對照字串中，英文為 Burning and Staggering，繁中譯成「燃燒並使敵人暈眩」；Translation.md 將 Stagger/Staggering 對應為「踉蹌」，將 Stun 對應為「眩暈」。這是詞義明確不符，但該 build 文字只供翻譯比較，不作機制依據。
+- 結論：明確繁中誤譯。Build 25606770 對照字串中，英文為 Burning and Staggering，繁中譯成「燃燒並使敵人暈眩」；Translation.md 將 Stagger/Staggering 對應為「踉蹌」，將 Stun 對應為「眩暈」。這是詞義明確不符，但該 build 文字只供翻譯比較，不作機制依據。
 - 繁中原文短引：投擲一枚手雷，在爆炸處形成一層燃燒的液體，燃燒並使敵人暈眩, 同時阻擋他們的道路。針對無護甲敵人最為有效。
 - 同源英文：Throw a grenade that leaves a layer of flaming liquid, Burning and Staggering enemies, and barring their path. Most effective against Unarmoured Enemies.
 - [原始碼推導與限制](zealot_flame_grenade.md)。
@@ -113,21 +113,21 @@
 ## 眩暈風暴手雷(Stunstorm Grenade)
 
 - 描述鍵：`loc_zealot_improved_stun_grenade_desc`；hash：`35fbc631`。
-- 結論：未見明確矛盾。Build 25492122 的繁中和英文都說明震撼手雷及其升級範圍，沒有可確認的明確譯錯。
+- 結論：未見明確矛盾。Build 25606770 的繁中和英文都說明震撼手雷及其升級範圍，沒有可確認的明確譯錯。
 - [原始碼推導與限制](zealot_improved_stun_grenade.md)。
 
 <a id="zealot_toughness_damage_reduction_coherency_improved"></a>
 ## 恩賜(Benediction)
 
 - 描述鍵：`loc_talent_zealot_toughness_aura_efficiency_desc`；hash：`90d53110`。
-- 結論：未見明確矛盾。Build 25492122 的繁中與英文均描述持有者及協同盟友獲得韌性傷害降低；沒有可確認的明確譯錯。
+- 結論：未見明確矛盾。Build 25606770 的繁中與英文均描述持有者及協同盟友獲得韌性傷害降低；沒有可確認的明確譯錯。
 - [原始碼推導與限制](zealot_toughness_damage_reduction_coherency_improved.md)。
 
 <a id="zealot_corruption_healing_coherency_improved"></a>
 ## 純潔信標(Beacon of Purity)
 
 - 描述鍵：`loc_talent_zealot_corruption_healing_coherency_improved_desc`；hash：`afc49dc9`。
-- 結論：未見明確矛盾。Build 25492122 中繁中「每秒淨化腐敗」與英文「Heal Corruption ... every 1s」方向一致；來源證明為固定值清除，未顯示清楚的翻譯錯誤。
+- 結論：未見明確矛盾。Build 25606770 中繁中「每秒淨化腐敗」與英文「Heal Corruption ... every 1s」方向一致；來源證明為固定值清除，未顯示清楚的翻譯錯誤。
 - [原始碼推導與限制](zealot_corruption_healing_coherency_improved.md)。
 
 <a id="zealot_stamina_cost_multiplier_aura"></a>
@@ -141,14 +141,14 @@
 ## 不屈靈魂合唱(Chorus of Spiritual Fortitude)
 
 - 描述鍵：`loc_talent_zealot_bolstering_prayer_expanded_description`；hash：`ae04279a`。
-- 結論：待遊戲內核對。inventory 的 Build 25492122 未證明與固定公開 SHA 同版；固定 SHA 的 format_values 合計 45%，實際動作則分成 20% 每脈衝與 25%/秒，暫不把跨版或描述差異判為譯文錯誤。
+- 結論：待遊戲內核對。文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對；固定 SHA 的 format_values 合計 45%，實際動作則分成 20% 每脈衝與 25%/秒，暫不把文字與實作差異判為譯文錯誤。
 - [原始碼推導與限制](zealot_bolstering_prayer.md)。
 
 <a id="zealot_attack_speed_post_ability"></a>
 ## 有信者之怒(Fury of the Faithful)
 
 - 描述鍵：`loc_talent_zealot_attack_speed_after_dash_new_desc`；hash：`f5695318`。
-- 結論：跨來源待遊戲內核對。繁中與英文皆用同一time欄位；固定來源顯示參數10秒，但buff duration為10+1=11秒，尚未同版遊戲介面確認。兩語效果方向相符，非繁中單方誤譯。
+- 結論：跨來源待遊戲內核對。繁中與英文皆用同一time欄位；固定來源顯示參數10秒，但buff duration為10+1=11秒，尚未遊戲內確認顯示。兩語效果方向相符，非繁中單方誤譯。
 - [原始碼推導與限制](zealot_attack_speed_post_ability.md)。
 
 <a id="zealot_channel_grants_toughness_damage_reduction"></a>
@@ -185,7 +185,7 @@
 ## 大師級隱秘領域(Master-Crafted Shroudfield)
 
 - 描述鍵：`loc_talent_zealot_stealth_duration_threat_damage_desc`；hash：`f25397d4`。
-- 結論：措辭方向待遊戲內核對。同hash英文明為gain帶符號的Threat，繁中預先寫提高；固定來源格式參數是−75%，實作倍率.25，故主文寫降低75%。尚無同版本最終格式化畫面，保留為措辭疑點，不當成已證實的遊戲顯示錯誤。
+- 結論：措辭方向待遊戲內核對。同hash英文明為gain帶符號的Threat，繁中預先寫提高；固定來源格式參數是−75%，實作倍率.25，故主文寫降低75%。尚無遊戲內最終格式化畫面，保留為措辭疑點，不當成已證實的遊戲顯示錯誤。
 - [原始碼推導與限制](zealot_increased_duration.md)。
 
 <a id="zealot_leaving_stealth_restores_toughness"></a>
@@ -317,7 +317,7 @@
 ## 迅疾狂熱(Infectious Zeal)
 
 - 描述鍵：`loc_talent_zealot_shared_fanatic_rage_new_desc`；hash：`95bbc544`。
-- 結論：跨來源待遊戲內核對。英繁中都寫隊友在個人熾熱虔誠有效時取得暴擊率；程式是開始 Fury 時套用一次8秒共享 buff，個人 Fury 刷新不會重跑分發。若這份本地化與所固定程式碼同版，持續效果時間可能與文案「while active」不一致；版本尚未確認前保留待核。
+- 結論：跨來源待遊戲內核對。英繁中都寫隊友在個人熾熱虔誠有效時取得暴擊率；程式是開始 Fury 時套用一次8秒共享 buff，個人 Fury 刷新不會重跑分發。依1.13.1固定程式碼，持續效果時間可能與文案「while active」不一致；實際持續時間仍待遊戲內核對。
 - [原始碼推導與限制](zealot_shared_fanatic_rage.md)。
 
 <a id="zealot_martyrdom_toughness_modifier"></a>
@@ -468,7 +468,7 @@
 ## 輕蔑之盾(Shield of Contempt)
 
 - 描述鍵：`loc_talent_zealot_3_tier_4_ability_3_description`；hash：`96972711`。
-- 結論：跨來源待遊戲內核對。繁中與英文皆指協同成員；固定來源的on_damage_taken廣播及本模板未做協同檢查。這是跨來源範圍差異，版本未證實一致，不列翻譯錯誤。
+- 結論：跨來源待遊戲內核對。繁中與英文皆指協同成員；固定來源的on_damage_taken廣播及本模板未做協同檢查。這是跨來源範圍差異，實際範圍待遊戲內核對，不單憑此判定翻譯錯誤。
 - [原始碼推導與限制](zealot_ally_damage_taken_reduced.md)。
 
 <a id="zealot_push_attacks_attack_speed"></a>
@@ -503,7 +503,7 @@
 ## 內憂外患(Enemies Within, Enemies Without)
 
 - 描述鍵：`loc_talent_zealot_toughness_near_enemies_desc`；hash：`fc8eff61`。
-- 結論：跨來源待遊戲內核對。本機中英文皆寫巨獸按5名敵人；固定update先為每名敵人加1，再為巨獸或頭目加5，實際6。不是繁中單方翻錯，待同版確認。
+- 結論：跨來源待遊戲內核對。本機中英文皆寫巨獸按5名敵人；固定update先為每名敵人加1，再為巨獸或頭目加5，實際6。不是繁中單方翻錯，待遊戲內確認。
 - [原始碼推導與限制](zealot_toughness_in_melee.md)。
 
 <a id="zealot_attack_speed"></a>

@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#zealot_resist_death_heal)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_resist_death_heal)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`zealot_resist_death_heal`；名稱鍵：`loc_talent_zealot_heal_during_resist_death`；描述鍵：`loc_talent_zealot_resist_death_heal_desc`。
 - 節點：`node_18bc94af-2948-4b9a-84e8-5c9408b37343`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -17,22 +17,22 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3346–3380](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3346-L3380)
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：3491–3551](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L3491-L3551)
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4960–5018](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4960-L5018)
-- [scripts/settings/damage/explosion_templates/player_explosion_templates.lua：130–146](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L130-L146)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1270–1295](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1270-L1295)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1990–2012](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1990-L2012)
-- [scripts/extension_systems/health/player_unit_health_extension.lua：212–251](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/health/player_unit_health_extension.lua#L212-L251)
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3346–3380](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3346-L3380)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1270–1295](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1270-L1295)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3346–3380](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3346-L3380)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：3491–3551](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L3491-L3551)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4960–5018](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4960-L5018)
+- [scripts/settings/damage/explosion_templates/player_explosion_templates.lua：130–146](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L130-L146)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1270–1295](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1270-L1295)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1990–2012](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1990-L2012)
+- [scripts/extension_systems/health/player_unit_health_extension.lua：212–251](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/health/player_unit_health_extension.lua#L212-L251)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3346–3380](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3346-L3380)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1270–1295](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1270-L1295)
 
 ## 算例條件與待確認事項
 
 - **恢復算例**：假設累積額度原本為 0、沒有其他治療修正，連續兩次各造成 100 點近戰傷害，第一次累積並補 100 × 0.7% × 3 = 2.1 點；第二次額度增至 4.2，再補 4.2 點，合計 6.3 點。
 - 恢復只在任何來源的 `unkillable` 關鍵字存在時累積；此升級與 Zealous Pilgrim 互斥。
 - 恢復池恢復後不清零；不要把 format_values 的25%欄位當成每次效果或累計總治療量。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#zealot_stamina_cost_multiplier_aura)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_stamina_cost_multiplier_aura)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`zealot_stamina_cost_multiplier_aura`；名稱鍵：`loc_talent_zealot_stamina_cost_multiplier_aura`；描述鍵：`loc_talent_zealot_stamina_cost_multiplier_delay_aura_description`。
 - 節點：`node_a943bfdb-5117-4252-a3bb-ecaf704d5b9d`；分類：光環；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -19,17 +19,17 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：860–883](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L860-L883)
-- [scripts/settings/talent/talent_settings_zealot.lua：99–102](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L99-L102)
-- [scripts/settings/talent/talent_settings_zealot.lua：319–328](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L319-L328)
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：3408–3425](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L3408-L3425)
-- [scripts/extension_systems/coherency/coherency_system.lua：188–195](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/coherency/coherency_system.lua#L188-L195)
-- [scripts/extension_systems/coherency/unit_coherency_extension.lua：256–311](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/coherency/unit_coherency_extension.lua#L256-L311)
-- [scripts/ui/hud/elements/tactical_overlay/hud_element_tactical_overlay.lua：393–449](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/hud/elements/tactical_overlay/hud_element_tactical_overlay.lua#L393-L449)
-- [scripts/utilities/attack/stamina.lua：14–60](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/stamina.lua#L14-L60)
-- [scripts/utilities/attack/stamina.lua：121–148](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/stamina.lua#L121-L148)
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：860–883](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L860-L883)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1450–1476](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1450-L1476)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：860–883](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L860-L883)
+- [scripts/settings/talent/talent_settings_zealot.lua：99–102](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L99-L102)
+- [scripts/settings/talent/talent_settings_zealot.lua：319–328](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L319-L328)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：3408–3425](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L3408-L3425)
+- [scripts/extension_systems/coherency/coherency_system.lua：188–195](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/coherency_system.lua#L188-L195)
+- [scripts/extension_systems/coherency/unit_coherency_extension.lua：256–311](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/unit_coherency_extension.lua#L256-L311)
+- [scripts/ui/hud/elements/tactical_overlay/hud_element_tactical_overlay.lua：393–449](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/hud/elements/tactical_overlay/hud_element_tactical_overlay.lua#L393-L449)
+- [scripts/utilities/attack/stamina.lua：14–60](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/stamina.lua#L14-L60)
+- [scripts/utilities/attack/stamina.lua：121–148](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/stamina.lua#L121-L148)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：860–883](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L860-L883)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1450–1476](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1450-L1476)
 
 ## 算例條件與待確認事項
 
@@ -37,7 +37,7 @@
 - 若某動作原恢復延遲為 0.50 秒，單獨加上 −0.15 秒修正後是 0.35 秒。
 - 耐力算例未計其他裝備或天賦；恢復暫停狀態仍可阻止回復。
 - related_talents 的對應疑點只記錄於技術文件，不當作已確認的玩家端錯誤。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

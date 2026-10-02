@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#zealot_reload_from_melee)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_reload_from_melee)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`zealot_reload_from_melee`；名稱鍵：`loc_talent_zealot_reload_from_backstab`；描述鍵：`loc_talent_zealot_reload_from_melee_desc`。
 - 節點：`node_ce599414-0b4e-4aae-b521-ef5f375e1b74`；分類：技能；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -14,17 +14,17 @@
 
 ## 原始碼依據
 
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4681–4720](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4681-L4720)
-- [scripts/settings/talent/talent_settings_zealot.lua：233–235](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L233-L235)
-- [scripts/utilities/ammo.lua：202–217](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/ammo.lua#L202-L217)
-- [scripts/utilities/ammo.lua：452–465](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/ammo.lua#L452-L465)
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3184–3198](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3184-L3198)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：2037–2059](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L2037-L2059)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4681–4720](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4681-L4720)
+- [scripts/settings/talent/talent_settings_zealot.lua：233–235](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L233-L235)
+- [scripts/utilities/ammo.lua：202–217](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/ammo.lua#L202-L217)
+- [scripts/utilities/ammo.lua：452–465](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/ammo.lua#L452-L465)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3184–3198](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3184-L3198)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：2037–2059](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L2037-L2059)
 
 ## 算例條件與待確認事項
 
 - **裝填算例**：彈匣上限 30、目前 10 發，缺少 20 發，擊殺後從備彈移入 20 × 10% = 2 發，變成 12 發。下次缺 18 發，計入 1.8 發，本次移入 1 發，剩下的 0.8 累積到後續擊殺。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#ogryn_blo_melee)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_blo_melee)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`ogryn_blo_melee`；名稱鍵：`loc_talent_ogryn_blo_melee`；描述鍵：`loc_talent_ogryn_blo_melee_desc`。
 - 節點：`node_79b667e5-d2d2-4ea7-8fed-c24aaacbc86b`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -14,21 +14,21 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：2456–2475](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2456-L2475)
-- [scripts/settings/talent/talent_settings_ogryn.lua：168–171](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_ogryn.lua#L168-L171)
-- [scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：3517–3566](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L3517-L3566)
-- [scripts/extension_systems/weapon/actions/action_weapon_base.lua：186–214](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_weapon_base.lua#L186-L214)
-- [scripts/settings/buff/helper_functions/check_proc_functions.lua：226–236](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L226-L236)
-- [scripts/utilities/pseudo_random_distribution.lua：7–12](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/pseudo_random_distribution.lua#L7-L12)
-- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：2456–2475](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2456-L2475)
-- [scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：1952–1975](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L1952-L1975)
+- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：2456–2475](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2456-L2475)
+- [scripts/settings/talent/talent_settings_ogryn.lua：168–171](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_ogryn.lua#L168-L171)
+- [scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：3517–3566](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L3517-L3566)
+- [scripts/extension_systems/weapon/actions/action_weapon_base.lua：186–214](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_weapon_base.lua#L186-L214)
+- [scripts/settings/buff/helper_functions/check_proc_functions.lua：226–236](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L226-L236)
+- [scripts/utilities/pseudo_random_distribution.lua：7–12](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/pseudo_random_distribution.lua#L7-L12)
+- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：2456–2475](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2456-L2475)
+- [scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：1952–1975](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L1952-L1975)
 
 ## 算例條件與待確認事項
 
 - **消耗與算例**：下一次射擊後清空層數，免費的幸運子彈也會消耗。5 層把基礎機率提高至 15% + 5 × 10% = 65%；9 層已達 105%，因此必定觸發。層數沒有固定倒數。
-- 機制核對至指定公開來源 SHA 419fe18d414a618ce0474bd015bab470afb446d6；本機 Build 25492122 的中英文字串與公開來源版本對應為1.13.0，文字與實作差異待遊戲內核對。
+- 機制核對至指定公開來源 SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；本機 Build 25606770 的中英文字串與公開來源版本對應為1.13.1，文字與實作差異待遊戲內核對。
 - 層數沒有時間期限；它們由下一次 ammo-consumed 事件消耗。多名敵人被同一個近戰 sweep 擊殺時仍至多加一層。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

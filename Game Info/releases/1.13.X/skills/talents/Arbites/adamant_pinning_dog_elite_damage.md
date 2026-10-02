@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#adamant_pinning_dog_elite_damage)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_pinning_dog_elite_damage)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`adamant_pinning_dog_elite_damage`；名稱鍵：`loc_talent_adamant_pinning_dog_elite_damage`；描述鍵：`loc_talent_adamant_pinning_dog_elite_damage_description`。
 - 節點：`node_021a58e4-4b06-40cb-b978-3823adbd5a15`；分類：技能；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -14,23 +14,23 @@
 
 ## 原始碼依據
 
-- [scripts/utilities/attack/attack.lua：216–223](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/attack.lua#L216-L223)
-- [scripts/utilities/attack/attack.lua：669–709](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/attack.lua#L669-L709)
-- [scripts/utilities/attack/attacking_unit_resolver.lua：33–43](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/attacking_unit_resolver.lua#L33-L43)
-- [scripts/extension_systems/behavior/nodes/actions/bt_companion_target_pounced_action.lua：202–232](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/behavior/nodes/actions/bt_companion_target_pounced_action.lua#L202-L232)
-- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：2783–2798](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L2783-L2798)
-- [scripts/settings/buff/helper_functions/check_proc_functions.lua：120–133](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L120-L133)
-- [scripts/utilities/attack/damage_calculation.lua：334–355](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L334-L355)
-- [scripts/settings/talent/talent_settings_adamant.lua：454–457](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_adamant.lua#L454-L457)
-- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：2749–2782](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L2749-L2782)
-- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：2893–2912](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2893-L2912)
-- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：2043–2069](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L2043-L2069)
+- [scripts/utilities/attack/attack.lua：216–223](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attack.lua#L216-L223)
+- [scripts/utilities/attack/attack.lua：669–709](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attack.lua#L669-L709)
+- [scripts/utilities/attack/attacking_unit_resolver.lua：33–43](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attacking_unit_resolver.lua#L33-L43)
+- [scripts/extension_systems/behavior/nodes/actions/bt_companion_target_pounced_action.lua：202–232](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/behavior/nodes/actions/bt_companion_target_pounced_action.lua#L202-L232)
+- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：2783–2798](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L2783-L2798)
+- [scripts/settings/buff/helper_functions/check_proc_functions.lua：120–133](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/check_proc_functions.lua#L120-L133)
+- [scripts/utilities/attack/damage_calculation.lua：334–355](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L334-L355)
+- [scripts/settings/talent/talent_settings_adamant.lua：454–457](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L454-L457)
+- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：2749–2782](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L2749-L2782)
+- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：2893–2912](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2893-L2912)
+- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：2043–2069](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L2043-L2069)
 
 ## 算例條件與待確認事項
 
 - **傷害算例**：對符合條件的目標，基礎 100 點傷害變成 115 點；同階段已有 25% 加成時，則為 100 × (1 + 25% + 15%) = 140 點。
 - 若壓制解除與死亡發生在同一更新，觸發仍取決於事件處理順序；未進行遊戲內邊界測試。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#zealot_restore_stealth_cd_on_damage)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_restore_stealth_cd_on_damage)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`zealot_restore_stealth_cd_on_damage`；名稱鍵：`loc_talent_zealot_damage_taken_restores_cd`；描述鍵：`loc_talent_zealot_damage_taken_restores_cd_new_description`。
 - 節點：`node_5a6a015e-77a8-4675-a51b-7fd233eb1b26`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -16,13 +16,13 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：632–656](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L632-L656)
-- [scripts/settings/talent/talent_settings_zealot.lua：548–552](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L548-L552)
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：2512–2549](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L2512-L2549)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：773–875](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L773-L875)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1437–1461](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1437-L1461)
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：632–656](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L632-L656)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：973–999](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L973-L999)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：632–656](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L632-L656)
+- [scripts/settings/talent/talent_settings_zealot.lua：548–552](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L548-L552)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：2512–2549](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L2512-L2549)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：773–875](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L773-L875)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1437–1461](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1437-L1461)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：632–656](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L632-L656)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：973–999](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L973-L999)
 
 ## 算例條件與待確認事項
 
@@ -30,7 +30,7 @@
 - 天賦值只表示額外回充；實際總回充還要加自然恢復及其他冷卻修正。
 - 計時器每秒取樣，因此生命剛跨過門檻的效果不一定在同一畫格即時套用。
 - inventory 的繁中描述說明以失去生命值為依據；source 顯示其運作不是按單次受擊的傷害量直接換算冷卻，二者語義並無直接衝突，先不判勘誤。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

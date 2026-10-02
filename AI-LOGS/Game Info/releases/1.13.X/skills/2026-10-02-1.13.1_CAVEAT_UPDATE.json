@@ -1,0 +1,539 @@
+{
+  "date": "2026-10-02",
+  "scope": "1.13.1 current source documents",
+  "reason": "Same release verified; runtime and final UI formatting remain untested. No translation classification or talent formula is changed.",
+  "files": [
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_area_buff_drone_improved.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_charge.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_charge_cooldown_reduction.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_charge_longer_distance.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_charge_toughness.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_disable_companion.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_dog_damage_after_ability.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_drone_buff_talent.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_drone_debuff_talent.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_execution_order.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_forceful.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_forceful_ability_damage.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_forceful_offensive.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_forceful_stagger_on_low_high.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_forceful_stun_immune_and_block_all.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_forceful_toughness_regen_per_stack.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_stance.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_stance_dog_bloodlust.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_stance_elite_kills_stack_damage.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_stance_ranged_kills_transfer_ammo.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_terminus_warrant.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_terminus_warrant_cdr.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_terminus_warrant_improved_combined.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_terminus_warrant_support.md",
+    "Game Info/releases/1.13.X/skills/talents/Arbites/LOCALIZATION_COMPARISON.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/LOCALIZATION_COMPARISON.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_big_box_of_hurt_more_bombs.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_box_explodes.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_carapace_armor.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_carapace_armor_trigger_on_zero_stacks.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_charge_applies_bleed.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_charge_toughness.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_charge_trample.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_damage_vs_suppressed_coherency.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_grenade_frag.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_grenade_friend_rock.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_longer_charge.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_melee_damage_coherency_improved.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_multi_hits_grant_reload_speed.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_ranged_stance_toughness_regen.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_replenish_rock_on_miss.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_revenge_damage.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_special_ammo.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_special_ammo_armor_pen.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_special_ammo_fire_shots.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_taunt_restore_toughness.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_taunt_shout.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_taunt_staggers_reduce_cooldown.md",
+    "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_toughness_regen_aura.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/BASE_EFFECTS.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/LOCALIZATION_COMPARISON.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_2_tier_3_name_2.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_aura_crit_chance_aura.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_aura_damage_vs_elites.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_boost_allies_in_sphere.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_brain_burst_improved.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_chain_lightning_heavy_attacks.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_chain_lightning_improved_target_buff.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_combat_ability_force_field.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_combat_ability_stance.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_cooldown_aura_improved.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_discharge_damage_debuff.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_empowered_ability.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_empowered_ability_on_elite_kills.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_empowered_grenades_passive_improved.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_grenade_chain_lightning.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_increased_vent_speed.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_new_mark_passive.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_overcharge_increased_movement_speed.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_overcharge_reduced_warp_charge.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_overcharge_stance_infinite_casting.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_overcharge_weakspot_kill_bonuses.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_shield_extra_charge.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_shield_stun_passive.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_shout_reduces_warp_charge_generation.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_smite_on_hit.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_sphere_shield.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_spread_warpfire_on_kill.md",
+    "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_warpfire_on_shout.md",
+    "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_improved_dodges_at_full_stamina.md",
+    "Game Info/releases/1.13.X/skills/talents/Scum/broker_passive_stimm_cleanse_on_kill.md",
+    "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5b.md",
+    "Game Info/releases/1.13.X/skills/talents/Scum/broker_stimm_concentration_5c.md",
+    "Game Info/releases/1.13.X/skills/talents/Scum/LOCALIZATION_COMPARISON.md",
+    "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_discharge_attack_speed_increase.md",
+    "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_discharge_toughness.md",
+    "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_force_field_capacitance_restore.md",
+    "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_increased_passive_cooldown_regen.md",
+    "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_overload_keystone_abilities.md",
+    "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_precision_stance_fire_rate_increased.md",
+    "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_precision_stance_toughness_suppression.md",
+    "Game Info/releases/1.13.X/skills/talents/Skitarii/cryptic_toughness_on_damage_taken.md",
+    "Game Info/releases/1.13.X/skills/talents/Skitarii/LOCALIZATION_COMPARISON.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/LOCALIZATION_COMPARISON.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_ads_drain_stamina.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_aura_gain_ammo_on_elite_kill_improved.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_elite_and_special_outlines.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_extra_charge.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_dodging_grants_stamina.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_improved_grenades.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_improved_tag_dead_coherency_bonus.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_increased_close_damage_after_combat_ability.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_increase_damage_vs_elites.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_ranged_power_out_of_melee.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_reduce_swap_time.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_replenish_grenades.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_replenish_toughness_on_weakspot_kill.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_snipers_focus_toughness_bonus.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_weapon_switch_passive.md",
+    "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_weapon_switch_replenish_ammo.md",
+    "Game Info/releases/1.13.X/skills/talents/Zealot/BASE_EFFECTS.md",
+    "Game Info/releases/1.13.X/skills/talents/Zealot/LOCALIZATION_COMPARISON.md",
+    "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_ally_damage_taken_reduced.md",
+    "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_attack_speed_post_ability.md",
+    "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_bolstering_prayer.md",
+    "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_flame_grenade.md",
+    "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_increased_duration.md",
+    "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_leaving_stealth_restores_toughness.md",
+    "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_reduced_damage_after_dodge.md",
+    "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_shared_fanatic_rage.md",
+    "Game Info/releases/1.13.X/skills/talents/Zealot/zealot_toughness_in_melee.md"
+  ],
+  "replacements": [
+    {
+      "before": "本機遊戲 build 與公開來源提交的版本對應尚待核對",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 12
+    },
+    {
+      "before": "inventory 的繁中與英文文字未證實與此程式碼同版",
+      "after": "繁中、英文模板與程式來源皆為1.13.1；遊戲內最終顯示仍待核對",
+      "occurrences": 12
+    },
+    {
+      "before": "目前有實作與文字差異，公開提交與遊戲文本版本尚待核對",
+      "after": "目前有實作與文字差異；兩來源皆為1.13.1，實際表現待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "待同版確認",
+      "after": "待遊戲內確認",
+      "occurrences": 4
+    },
+    {
+      "before": "兩來源未證實同版，未將此列為繁中誤譯",
+      "after": "兩來源皆為1.13.1；實際表現待遊戲內核對，未將此列為繁中誤譯",
+      "occurrences": 2
+    },
+    {
+      "before": "未確認版本一致，不判為繁中誤譯",
+      "after": "實際表現待遊戲內核對，不單憑此判定繁中誤譯",
+      "occurrences": 2
+    },
+    {
+      "before": "來源未核同版，保留差異，不列繁中誤譯",
+      "after": "實際表現待遊戲內核對，保留差異，不列繁中誤譯",
+      "occurrences": 2
+    },
+    {
+      "before": "此配對的 Build 25606770 與公開原始碼 SHA 版本關係未確認，跨版差異待核",
+      "after": "此配對的文本與公開原始碼皆為1.13.1；差異待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "Build 25606770 與公開 SHA 版本對應未確認，跨版差異待核",
+      "after": "文本與程式來源皆為1.13.1；差異待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "由於公開來源與本機 Build 25606770 版本對應為1.13.1，這項範圍差異待核，不判為翻譯錯誤",
+      "after": "文本與程式來源皆為1.13.1；這項範圍差異待遊戲內核對，不單憑此判定翻譯錯誤",
+      "occurrences": 2
+    },
+    {
+      "before": "公開來源與本機 Build 25606770 版本對應為1.13.1，因此保留待核，不判為翻譯錯誤",
+      "after": "文本與程式來源皆為1.13.1；實際表現待遊戲內核對，不單憑此判定翻譯錯誤",
+      "occurrences": 2
+    },
+    {
+      "before": "未核同版前不判為繁中誤譯",
+      "after": "實際顯示待遊戲內核對，不單憑此判定繁中誤譯",
+      "occurrences": 2
+    },
+    {
+      "before": "公開固定 SHA 是否對應同一 Build 尚未確認",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 14
+    },
+    {
+      "before": "Build 25606770 對應公開 SHA 的版本尚未確認",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "Build 25606770 與公開 SHA 的版本對應仍待核",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "Build 25606770 與公開 SHA 的版本關係待核",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 4
+    },
+    {
+      "before": "Build 25606770 與公開 SHA 版本對應待核",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "版本對應仍待核",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "版本配對仍待核",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "版本配對待核",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "固定公開來源只降低韌性傷害，是否為跨版本差異尚待核實",
+      "after": "固定公開來源只降低韌性傷害；文字與實際行為的差異待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "公開來源與本機 Build 25606770 版本對應為1.13.1，這項差異待核",
+      "after": "文本與程式來源皆為1.13.1；這項差異待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "兩来源同版未證實",
+      "after": "實際觸發條件待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "應把兩者差異留待 Build25606770 同版核對",
+      "after": "兩者差異仍需遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "來源版本未與 Build 25606770 核實同版，因此不將此差異判為翻譯錯誤",
+      "after": "文本與程式來源皆為1.13.1；此差異仍待遊戲內核對，不單憑此判定翻譯錯誤",
+      "occurrences": 2
+    },
+    {
+      "before": "兩者版本未對齊，不直接判定繁中誤譯",
+      "after": "兩來源皆為1.13.1；實際表現待遊戲內核對，不直接判定繁中誤譯",
+      "occurrences": 2
+    },
+    {
+      "before": "因 Build 25606770 尚未證實與此 source SHA 同版，先保留差異待遊戲內核對",
+      "after": "文本與程式來源皆為1.13.1；先保留差異待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "Build 25606770 與此來源版本未證實相同，跨版本細節仍待遊戲內核對",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "Build25606770 與此來源版本是否一致仍待核對",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "固定 SHA 與本機遊戲 Build 25606770 尚未核實為同版，跨版本細節待遊戲內核對",
+      "after": "文本與程式來源皆為1.13.1；實際表現待遊戲內核對",
+      "occurrences": 6
+    },
+    {
+      "before": "版本同版性待核",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "來源 SHA 與本機遊戲 Build 25606770 尚未核實為同版",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "本機 Build 25606770 與固定 source SHA 7e662fcda16219d775b84af50322be2e9cd9d62e 尚未核實為同版",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "Build25606770 與source commit同版性待核",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "Build25606770 與原始碼 commit 同版性未確認",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "待同版遊戲核對",
+      "after": "待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "Build 25606770 是否與本機 source SHA 同版仍待確認",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "遊戲 build 同版關係未核",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "本機遊戲 Build 25606770 尚未核對與 source SHA 同版",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "Build25606770 與公開source commit 同版性待核",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "遊戲 Build25606770 與公開source commit 同版性待核",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "Build25606770同版性待核",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 3
+    },
+    {
+      "before": "Build同版未確認前，不能把某一override視作所有版本/配置都固定使用",
+      "after": "尚未在遊戲內確認各配置時，不能把某一override視作所有配置都固定使用",
+      "occurrences": 1
+    },
+    {
+      "before": "Build 25606770 與來源 SHA 未核實同版，先列跨版本差異待遊戲內核對，不判定本機遊戲文案有錯",
+      "after": "文本與程式來源皆為1.13.1；此差異待遊戲內核對，不直接判定遊戲文案有錯",
+      "occurrences": 1
+    },
+    {
+      "before": "由於本機 Build 25606770 尚未證明與該 SHA 同版，這一處保留跨版本待確認",
+      "after": "文本與程式來源皆為1.13.1；這一處保留待遊戲內確認",
+      "occurrences": 1
+    },
+    {
+      "before": "本機game build與source commit未證實同版",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "這一點待Build與源碼同版核對",
+      "after": "這一點待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "遊戲 build 與 source commit 同版性待核",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "因兩種文字一致且來源未證實同版",
+      "after": "因兩種文字一致，且實際行為尚待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "未做同版遊戲內驗證",
+      "after": "未做遊戲內驗證",
+      "occurrences": 2
+    },
+    {
+      "before": "未確認本機文字與來源同版",
+      "after": "實際數值尚待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "目前 Build 25606770 與來源是否同版未核實",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "固定來源提交與繁中 Build 25606770 是否同版仍待核對",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 4
+    },
+    {
+      "before": "本機 Build 25606770 尚未與固定 SHA 確認同版",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "留待同版實測",
+      "after": "留待遊戲內實測",
+      "occurrences": 2
+    },
+    {
+      "before": "待相同版本遊戲驗證",
+      "after": "待遊戲內驗證",
+      "occurrences": 2
+    },
+    {
+      "before": "未證實安裝版同一實作",
+      "after": "尚未遊戲內確認實際取整",
+      "occurrences": 1
+    },
+    {
+      "before": "須取得同版腳本或實測確認",
+      "after": "須遊戲內實測確認",
+      "occurrences": 1
+    },
+    {
+      "before": "待版本確認的生效時間差異",
+      "after": "待遊戲內確認的生效時間差異",
+      "occurrences": 1
+    },
+    {
+      "before": "不將未證實同版的實作差異單獨當成繁中錯譯",
+      "after": "不單憑文字與實作的差異判定繁中錯譯",
+      "occurrences": 12
+    },
+    {
+      "before": "尚未核實實際繁體語系字串",
+      "after": "已比對本體繁中模板，最終格式化顯示仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "未取得官方繁體語系字串",
+      "after": "已比對本體繁中模板；最終格式化顯示仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "未取得語系字串本體，不能宣稱遊戲介面必定顯示錯誤",
+      "after": "已取得本體語系模板；尚未核對最終格式化畫面，不能宣稱遊戲介面必定顯示錯誤",
+      "occurrences": 1
+    },
+    {
+      "before": "未取得實際語系字串，不能宣稱遊戲介面必定錯誤",
+      "after": "已取得本體語系模板；尚未核對最終格式化畫面，不能宣稱遊戲介面必定錯誤",
+      "occurrences": 1
+    },
+    {
+      "before": "與本機文字版本仍待核成同版",
+      "after": "與本機文字的顯示差異仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "版本未證實一致，不列翻譯錯誤",
+      "after": "實際範圍待遊戲內核對，不單憑此判定翻譯錯誤",
+      "occurrences": 2
+    },
+    {
+      "before": "若這份本地化與所固定程式碼同版，持續效果時間可能與文案",
+      "after": "依1.13.1固定程式碼，持續效果時間可能與文案",
+      "occurrences": 2
+    },
+    {
+      "before": "版本尚未確認前保留待核",
+      "after": "實際持續時間仍待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "跨版或描述差異",
+      "after": "文字與實作差異",
+      "occurrences": 2
+    },
+    {
+      "before": "inventory 的 Build 25606770 未證明與固定公開 SHA 同版",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 2
+    },
+    {
+      "before": "尚無同版本最終格式化畫面",
+      "after": "尚無遊戲內最終格式化畫面",
+      "occurrences": 2
+    },
+    {
+      "before": "尚未同版遊戲介面確認",
+      "after": "尚未遊戲內確認顯示",
+      "occurrences": 2
+    },
+    {
+      "before": "來源版本尚未對上，列待遊戲內核對，不列繁中誤譯",
+      "after": "文本與程式來源皆為1.13.1；實際行為待遊戲內核對，不列繁中誤譯",
+      "occurrences": 1
+    },
+    {
+      "before": "庫存 Build 25606770 的描述文字與固定公開 SHA 尚未證明同版",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "且本次固定來源未能證明與 Build 25606770 同版，因此不據此判定該句錯誤",
+      "after": "但尚未逐一實測不同護甲，因此不據此判定該句錯誤",
+      "occurrences": 1
+    },
+    {
+      "before": "由於 Build 25606770 尚未證明同版，此處記錄數值解讀，不直接提出本地化勘誤",
+      "after": "最終格式化畫面尚未核對；此處記錄數值解讀，不直接提出本地化勘誤",
+      "occurrences": 1
+    },
+    {
+      "before": "版本未核實",
+      "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+      "occurrences": 1
+    },
+    {
+      "before": "尚無同版遊戲畫面",
+      "after": "尚無遊戲內畫面",
+      "occurrences": 1
+    },
+    {
+      "before": "待同版遊戲介面確認",
+      "after": "待遊戲內確認顯示",
+      "occurrences": 1
+    },
+    {
+      "before": "與同版遊戲確認",
+      "after": "與遊戲內表現確認",
+      "occurrences": 1
+    }
+  ],
+  "final_additional_replacement": {
+    "before": "Build 25606770 對應公開 SHA 的版本關係待核",
+    "after": "文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對",
+    "files": [
+      "Game Info/releases/1.13.X/skills/talents/Ogryn/LOCALIZATION_COMPARISON.md",
+      "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_taunt_damage_taken_increase.md"
+    ]
+  }
+}

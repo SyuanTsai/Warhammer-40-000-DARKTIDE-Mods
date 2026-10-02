@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#zealot_quickness_passive)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_quickness_passive)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`zealot_quickness_passive`；名稱鍵：`loc_talent_zealot_quickness`；描述鍵：`loc_talent_zealot_quickness_desc`。
 - 節點：`node_86295aae-d8b7-4c66-9862-29d98ae57798`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -16,14 +16,14 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：945–1010](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L945-L1010)
-- [scripts/settings/talent/talent_settings_zealot.lua：556–561](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L556-L561)
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：165–312](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L165-L312)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1164–1197](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1164-L1197)
-- [scripts/utilities/action/action_handler.lua：356–429](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/action/action_handler.lua#L356-L429)
-- [scripts/extension_systems/character_state_machine/character_states/player_character_state_dodging.lua：253–267](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/character_state_machine/character_states/player_character_state_dodging.lua#L253-L267)
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：945–1010](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L945-L1010)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1164–1197](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1164-L1197)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：945–1010](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L945-L1010)
+- [scripts/settings/talent/talent_settings_zealot.lua：556–561](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L556-L561)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：165–312](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L165-L312)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1164–1197](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1164-L1197)
+- [scripts/utilities/action/action_handler.lua：356–429](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/action_handler.lua#L356-L429)
+- [scripts/extension_systems/character_state_machine/character_states/player_character_state_dodging.lua：253–267](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/character_state_machine/character_states/player_character_state_dodging.lua#L253-L267)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：945–1010](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L945-L1010)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：1164–1197](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L1164-L1197)
 
 ## 算例條件與待確認事項
 
@@ -31,7 +31,7 @@
 - 成功閃避本身不增加基礎 Quickness 計數，須選用閃避升級才會增加。
 - 傷害與攻速示例未包括其他來源修正；active buff 的閃避 stat 不等於額外閃避次數。
 - 距離由角色 locomotion 速度逐幀累計，例子忽略取樣精度與伺服器更新差異。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

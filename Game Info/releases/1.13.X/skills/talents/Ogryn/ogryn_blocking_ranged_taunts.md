@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#ogryn_blocking_ranged_taunts)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_blocking_ranged_taunts)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`ogryn_blocking_ranged_taunts`；名稱鍵：`loc_talent_ranged_enemies_taunt`；描述鍵：`loc_talent_ranged_enemies_taunt_description`。
 - 節點：`node_60907136-b068-4b78-9e88-200e0abbf64f`；分類：技能；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -13,14 +13,14 @@
 
 ## 原始碼依據
 
-- [scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：489–526](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L489-L526)
-- [scripts/settings/buff/weapon_buff_templates.lua：1204–1270](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/weapon_buff_templates.lua#L1204-L1270)
-- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：1008–1029](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1008-L1029)
-- [scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：1473–1497](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L1473-L1497)
+- [scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：489–526](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L489-L526)
+- [scripts/settings/buff/weapon_buff_templates.lua：1204–1270](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L1204-L1270)
+- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：1008–1029](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L1008-L1029)
+- [scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：1473–1497](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L1473-L1497)
 
 ## 算例條件與待確認事項
 
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

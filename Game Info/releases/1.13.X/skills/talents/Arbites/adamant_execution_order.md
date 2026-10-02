@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#adamant_execution_order)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_execution_order)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`adamant_execution_order`；名稱鍵：`loc_talent_adamant_exterminator`；描述鍵：`loc_talent_execution_order_description`。
 - 節點：`node_52c3f35e-7fe4-4321-a04c-2a51eccac74c`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,28 +15,28 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：2132–2165](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2132-L2165)
-- [scripts/settings/talent/talent_settings_adamant.lua：102–119](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_adamant.lua#L102-L119)
-- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：845–955](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L845-L955)
-- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：958–990](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L958-L990)
-- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：991–1097](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L991-L1097)
-- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：1098–1122](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L1098-L1122)
-- [scripts/utilities/toughness/toughness.lua：16–35](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/toughness/toughness.lua#L16-L35)
-- [scripts/utilities/attack/damage_calculation.lua：265–276](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L265-L276)
-- [scripts/utilities/action/action_handler.lua：356–428](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/action/action_handler.lua#L356-L428)
-- [scripts/utilities/attack/damage_calculation.lua：236–276](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L236-L276)
-- [scripts/settings/damage/damage_profiles/archetypes/adamant_damage_profile_templates.lua：227–240](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/adamant_damage_profile_templates.lua#L227-L240)
-- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：2132–2165](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2132-L2165)
-- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：91–122](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L91-L122)
+- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：2132–2165](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2132-L2165)
+- [scripts/settings/talent/talent_settings_adamant.lua：102–119](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L102-L119)
+- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：845–955](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L845-L955)
+- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：958–990](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L958-L990)
+- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：991–1097](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L991-L1097)
+- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：1098–1122](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L1098-L1122)
+- [scripts/utilities/toughness/toughness.lua：16–35](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/toughness/toughness.lua#L16-L35)
+- [scripts/utilities/attack/damage_calculation.lua：265–276](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L265-L276)
+- [scripts/utilities/action/action_handler.lua：356–428](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/action_handler.lua#L356-L428)
+- [scripts/utilities/attack/damage_calculation.lua：236–276](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L236-L276)
+- [scripts/settings/damage/damage_profiles/archetypes/adamant_damage_profile_templates.lua：227–240](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/adamant_damage_profile_templates.lua#L227-L240)
+- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：2132–2165](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2132-L2165)
+- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：91–122](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L91-L122)
 
 ## 算例條件與待確認事項
 
 - 最大韌性 100、被標記敵人被擊殺且韌性缺額至少 15 時，恢復 15 點；自身 +10% 傷害和攻速到 8 秒到期。
 - 戰犬對標記目標作初次 pounce 命中後，若符合程式條件，狗的傷害 modifier 為 1+1.5，即基礎傷害的 2.5 倍，維持 8 秒。
-- 機制來源固定為公開 Aussiemon/Darktide-Source-Code SHA 419fe18d414a618ce0474bd015bab470afb446d6；inventory 的繁中與英文文字未證實與此程式碼同版。程式實作和文字措辭如有差異，先列跨版本待核，不直接判為翻譯錯誤。
+- 機制來源固定為公開 Aussiemon/Darktide-Source-Code SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；繁中、英文模板與程式來源皆為1.13.1；遊戲內最終顯示仍待核對。程式實作和文字措辭如有差異，先列文字與實作差異待核，不直接判為翻譯錯誤。
 - 文字概稱獒犬攻擊標記敵人後增傷；固定實作的命中分支要求 initial_pounce，對歐格林與巨獸的後續攻擊亦帶此旗標。標記擊殺另可給予同一增益；命中條件的文字邊界留待遊戲內核對。
 - 「定期標記」不是無條件每 3 秒標記：必須有符合範圍、方位、視線與目標類別的候選敵人。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

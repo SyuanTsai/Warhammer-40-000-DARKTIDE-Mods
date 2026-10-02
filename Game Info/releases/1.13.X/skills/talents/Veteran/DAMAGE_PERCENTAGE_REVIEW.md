@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)｜[描述規則](../../../../../../AI Prompt/Game-Info-Workflow.md)
 
-- 盤點日期：2026-10-01。固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`，沿用 Release 1.13.0 文件範圍。
+- 固定來源 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`，沿用 Release 1.13.1 文件範圍。
 - 範圍：逐項閱讀77個當前節點的玩家效果、目錄與算例，檢查百分比作用對象、比較分母、加算／乘算、武器差異、速度／時間及恢復基準。另重讀下列10項相關的共用結算與增益實作。
 - 結果：6項額外傷害描述補強，4項相鄰的威力／撕裂描述補強；其餘67項未發現本次同類表達問題，保留既有說明。這不是77項機制全部重新逆向，也不是遊戲內測試。
 - 沒有指定武器型號、攻擊／蓄力方式與測試目標，因此不判定盧修斯固定增加15%，也不判定所有自動槍都更高。
@@ -13,11 +13,11 @@
 - B和F使用同一次命中的護甲、部位、武器傷害設定、爆擊及其他攻擊條件；不能把身體傷害直接視為弱點命中的B。姿態的一般遠程增傷會先影響上游，分項例不能冒充完整能力結果。
 - 威力影響輸入及傷害曲線；撕裂修正護甲倍率。兩者都不能直接套用只增加F的公式。
 
-- [傷害結算順序](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L60-L109)
-- [額外傷害與同階段加成](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L672-L782)
-- [威力加成](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/power_level.lua#L26-L91)
-- [護甲與撕裂](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L69-L95)
-- [護甲類型的撕裂係數](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/armor_settings.lua#L8-L19)
+- [傷害結算順序](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L60-L109)
+- [額外傷害與同階段加成](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L782)
+- [威力加成](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/power_level.lua#L26-L91)
+- [護甲與撕裂](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L69-L95)
+- [護甲類型的撕裂係數](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/armor_settings.lua#L8-L19)
 
 ## 77項逐項結果
 

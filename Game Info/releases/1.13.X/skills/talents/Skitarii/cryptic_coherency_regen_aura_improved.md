@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_coherency_regen_aura_improved)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_coherency_regen_aura_improved)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_coherency_regen_aura_improved`；名稱鍵：`loc_talent_cryptic_coherency_regen_aura`；描述鍵：`loc_talent_cryptic_coherency_regen_aura_improved_desc`。
 - 節點：`node_e9138b1a-56be-4048-bdfa-e8c1e7ede57d`；分類：光環；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -13,16 +13,16 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1034–1058](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1034-L1058)
-- [scripts/settings/talent/talent_settings_cryptic.lua：35–38](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L35-L38)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：270–297](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L270-L297)
-- [scripts/settings/buff/buff_settings.lua：888–888](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L888-L888)
-- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：116–149](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L116-L149)
-- [scripts/extension_systems/coherency/coherency_system.lua：187–251](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/coherency/coherency_system.lua#L187-L251)
-- [scripts/extension_systems/coherency/unit_coherency_extension.lua：200–214](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/coherency/unit_coherency_extension.lua#L200-L214)
-- [scripts/extension_systems/coherency/unit_coherency_extension.lua：279–311](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/coherency/unit_coherency_extension.lua#L279-L311)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1034–1058](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1034-L1058)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：38–62](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L38-L62)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1034–1058](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1034-L1058)
+- [scripts/settings/talent/talent_settings_cryptic.lua：35–38](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L35-L38)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：270–297](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L270-L297)
+- [scripts/settings/buff/buff_settings.lua：888–888](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L888-L888)
+- [scripts/extension_systems/toughness/player_unit_toughness_extension.lua：116–149](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/toughness/player_unit_toughness_extension.lua#L116-L149)
+- [scripts/extension_systems/coherency/coherency_system.lua：187–251](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/coherency_system.lua#L187-L251)
+- [scripts/extension_systems/coherency/unit_coherency_extension.lua：200–214](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/unit_coherency_extension.lua#L200-L214)
+- [scripts/extension_systems/coherency/unit_coherency_extension.lua：279–311](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/coherency/unit_coherency_extension.lua#L279-L311)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1034–1058](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1034-L1058)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：38–62](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L38-L62)
 
 ## 算例條件與待確認事項
 
@@ -30,7 +30,7 @@
 - 50%是一般協同韌性恢復速率的最低倍率，不是每秒恢復最大韌性的50%，也不是一次回復50點。
 - 每位接收者仍受其自身武器、移動、其他恢復修正、恢復延遲與韌性上限影響。
 - 個人+25點韌性是施放者的被動加成；協同恢復光環則作用於自身與協同鏈內隊友。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

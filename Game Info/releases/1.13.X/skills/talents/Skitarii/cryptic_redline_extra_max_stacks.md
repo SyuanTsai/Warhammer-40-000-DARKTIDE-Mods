@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_redline_extra_max_stacks)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_redline_extra_max_stacks)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_redline_extra_max_stacks`；名稱鍵：`loc_talent_cryptic_power_generation_capacitance_for_charge`；描述鍵：`loc_talent_cryptic_redline_stacks_clarified_desc`。
 - 節點：`node_ba657afe-4100-4881-98a2-20c43f4e0a16`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,15 +15,15 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1452–1481](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1452-L1481)
-- [scripts/settings/talent/talent_settings_cryptic.lua：331–345](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L331-L345)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1868–1936](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1868-L1936)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1967–1973](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1967-L1973)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：734–770](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L734-L770)
-- [scripts/settings/buff/buff_settings.lua：692–692](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L692-L692)
-- [scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua：70–168](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L70-L168)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1452–1481](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1452-L1481)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1241–1263](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1241-L1263)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1452–1481](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1452-L1481)
+- [scripts/settings/talent/talent_settings_cryptic.lua：331–345](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L331-L345)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1868–1936](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1868-L1936)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1967–1973](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1967-L1973)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：734–770](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L734-L770)
+- [scripts/settings/buff/buff_settings.lua：692–692](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L692-L692)
+- [scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua：70–168](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L70-L168)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1452–1481](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1452-L1481)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1241–1263](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1241-L1263)
 
 ## 算例條件與待確認事項
 
@@ -32,7 +32,7 @@
 - 充能上限只增加於以戰鬥技能充能系統管理的技能；實際數值取決於該技能原本的充能上限。
 - 5層時的減傷按韌性承傷計算，不代表生命傷害也會降低25%。
 - 以上為固定版程式碼的靜態推演，未在遊戲內實測。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

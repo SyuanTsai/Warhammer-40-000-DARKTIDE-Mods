@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_redline_rending)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_redline_rending)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_redline_rending`；名稱鍵：`loc_talent_cryptic_power_generation_capacitance_bonuses`；描述鍵：`loc_talent_cryptic_redline_rending_clarified_desc`。
 - 節點：`node_251b440a-215d-43dd-971f-a57d019e75ad`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,13 +15,13 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1506–1530](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1506-L1530)
-- [scripts/settings/talent/talent_settings_cryptic.lua：350–353](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L350-L353)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1868–1900](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1868-L1900)
-- [scripts/settings/buff/buff_settings.lua：961–961](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L961-L961)
-- [scripts/utilities/attack/damage_calculation.lua：122–247](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L122-L247)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1506–1530](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1506-L1530)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1218–1240](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1218-L1240)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1506–1530](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1506-L1530)
+- [scripts/settings/talent/talent_settings_cryptic.lua：350–353](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L350-L353)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1868–1900](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1868-L1900)
+- [scripts/settings/buff/buff_settings.lua：961–961](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L961-L961)
+- [scripts/utilities/attack/damage_calculation.lua：122–247](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L122-L247)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1506–1530](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1506-L1530)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1218–1240](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1218-L1240)
 
 ## 算例條件與待確認事項
 
@@ -29,7 +29,7 @@
 - 這是撕裂修正，不是對全部傷害直接乘以1.15。
 - 效果只取決於是否達到3層；超過門檻不會增加撕裂數值。
 - 以上為固定版程式碼的靜態推演，未在遊戲內實測。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

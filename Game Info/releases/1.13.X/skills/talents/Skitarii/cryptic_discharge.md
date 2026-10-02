@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_discharge)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_discharge)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_discharge`；名稱鍵：`loc_talent_cryptic_discharge`；描述鍵：`loc_talent_cryptic_discharge_desc`。
 - 節點：`node_202342c8-045c-486b-aa66-75d636866621`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -17,24 +17,24 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：105–161](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L105-L161)
-- [scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua：93–115](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L93-L115)
-- [scripts/settings/ability/ability_templates/cryptic_discharge.lua：22–38](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/ability_templates/cryptic_discharge.lua#L22-L38)
-- [scripts/extension_systems/weapon/actions/action_ability_base.lua：25–39](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/actions/action_ability_base.lua#L25-L39)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1487–1511](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1487-L1511)
-- [scripts/extension_systems/ability/actions/action_cryptic_discharge.lua：35–130](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_cryptic_discharge.lua#L35-L130)
-- [scripts/extension_systems/ability/actions/action_cryptic_discharge.lua：137–185](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_cryptic_discharge.lua#L137-L185)
-- [scripts/settings/talent/talent_settings_cryptic.lua：69–96](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L69-L96)
-- [scripts/settings/damage/explosion_templates/player_explosion_templates.lua：252–277](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L252-L277)
-- [scripts/settings/damage/explosion_templates/player_explosion_templates.lua：322–336](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L322-L336)
-- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：551–640](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L551-L640)
-- [scripts/settings/buff/weapon_buff_templates.lua：2882–2929](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/weapon_buff_templates.lua#L2882-L2929)
-- [scripts/settings/buff/weapon_buff_templates.lua：2948–2994](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/weapon_buff_templates.lua#L2948-L2994)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：778–841](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L778-L841)
-- [scripts/utilities/minion_state.lua：111–139](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/minion_state.lua#L111-L139)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：773–879](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L773-L879)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：105–161](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L105-L161)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1713–1743](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1713-L1743)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：105–161](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L105-L161)
+- [scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua：93–115](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/cryptic_abilities.lua#L93-L115)
+- [scripts/settings/ability/ability_templates/cryptic_discharge.lua：22–38](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/ability_templates/cryptic_discharge.lua#L22-L38)
+- [scripts/extension_systems/weapon/actions/action_ability_base.lua：25–39](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_ability_base.lua#L25-L39)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：1487–1511](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L1487-L1511)
+- [scripts/extension_systems/ability/actions/action_cryptic_discharge.lua：35–130](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_cryptic_discharge.lua#L35-L130)
+- [scripts/extension_systems/ability/actions/action_cryptic_discharge.lua：137–185](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_cryptic_discharge.lua#L137-L185)
+- [scripts/settings/talent/talent_settings_cryptic.lua：69–96](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L69-L96)
+- [scripts/settings/damage/explosion_templates/player_explosion_templates.lua：252–277](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L252-L277)
+- [scripts/settings/damage/explosion_templates/player_explosion_templates.lua：322–336](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L322-L336)
+- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：551–640](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L551-L640)
+- [scripts/settings/buff/weapon_buff_templates.lua：2882–2929](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L2882-L2929)
+- [scripts/settings/buff/weapon_buff_templates.lua：2948–2994](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_buff_templates.lua#L2948-L2994)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：778–841](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L778-L841)
+- [scripts/utilities/minion_state.lua：111–139](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/minion_state.lua#L111-L139)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：773–879](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L773-L879)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：105–161](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L105-L161)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：1713–1743](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L1713-L1743)
 
 ## 算例條件與待確認事項
 
@@ -44,7 +44,7 @@
 - 技能資料可確認傷害模板、電擊持續時間與跳傷間隔，不能推出對所有敵人相同的生命傷害總值或固定跳數。
 - 武器故障爆炸的傷害威力為0；狀態是否影響目標取決於敵人是否具有相應武器狀態元件，時間可能由敵人種類覆寫預設12秒。
 - 5份電容量容量提高不代表本次技能能扣5份；本技能 player ability 的單次成本上限明確為3份。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

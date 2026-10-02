@@ -8,17 +8,16 @@
 - **只有正反效果、作用對象、資源方向、物理量／單位、時間操作等明確矛盾才列勘誤。描述不完整不算錯誤。** 省略公式、上限、冷卻、爆擊／弱點結算、恢復基準或特殊互動，只作補充差異。
 - 繁中與英文按`content/localization/ui + hash`配對，每個目標hash在兩個語言各一筆；不靠行號或中文名稱猜測對應。英文僅協助辨識譯意，機制證據仍使用固定公開原始碼。
 - 原始模板中的占位符尚未在遊戲執行期代入。本次核對疑點相關的格式參數，不宣稱已還原77項遊戲畫面的完整最終文字。
-- 結果：**12項繁中勘誤**已加在各技能正文下；**4項跨來源實作差異待遊戲內核對**，未標為遊戲原文錯誤；其餘**61項未判錯**。肉搏戰同時存在一項已確認翻譯問題與一項待版本確認的生效時間差異，逐項統計列在12項中。
+- 結果：**12項繁中勘誤**已加在各技能正文下；**4項跨來源實作差異待遊戲內核對**，未標為遊戲原文錯誤；其餘**61項未判錯**。肉搏戰同時存在一項已確認翻譯問題與一項待遊戲內確認的生效時間差異，逐項統計列在12項中。
 
 ## 本機文本證據
 
-- 本機遊戲：`<遊戲安裝目錄>`；擷取日期：2026-10-01；Steam Build：`25492122`。
-- 完整匯出目錄：Repository內的`Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0`，維持Git忽略；本文件只保存比對結論、識別碼及必要短引文，不提交完整語系文本。
-- 固定機制來源：Release 1.13.0，SHA `419fe18d414a618ce0474bd015bab470afb446d6`。**版本Steam Build 25492122對應1.13.0**；個別文字與實作差異仍待遊戲內核對，省略細節不列為翻譯錯誤。
-- 執行檔版本`1.3.802.934`／`0.0.3.0 (e802934)`不能直接當成Release 1.13.0的版本證明；未進行遊戲內畫面或行為實測。
+- 本機遊戲：`<遊戲安裝目錄>`；擷取日期：2026-10-02；Steam Build：`25606770`。
+- 完整匯出目錄：Repository內的`Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1`，維持Git忽略；本文件只保存比對結論、識別碼及必要短引文，不提交完整語系文本。
+- 固定機制來源：Release 1.13.1，SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`。**版本Steam Build 25606770對應1.13.1**；個別文字與實作差異仍待遊戲內核對，省略細節不列為翻譯錯誤。
 
-- `zh-tw/ui.jsonl` SHA-256：`f2591d75ed1495b8a7314cf0c41817d7ef0645040bdafa5fe76e62a279b06844`。
-- `en/ui.jsonl` SHA-256：`5cbed45e2cc4815c0e9be3b247c046de82d193c5e0481a56858526853eb8bdfc`。
+- `zh-tw/ui.jsonl` SHA-256：`15efa95c6ff87e99fbdfd4e0a6c282de94b2f1c5a21eac327c48a87399185f3c`。
+- `en/ui.jsonl` SHA-256：`fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668`。
 
 ## 逐項比對結果
 
@@ -35,7 +34,7 @@
 | [抵近殺敵](veteran_movement_speed_coherency.md) | `8234f832` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
 | [火力小分隊](veteran_increased_damage_coherency.md) | `9a17fbd0` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
 | [生存專家](veteran_aura_gain_ammo_on_elite_kill_improved.md) | `c68ffc9a` | 繁中勘誤 | 單位錯誤：ammo_2使用percentage，繁中卻接固定數量單位發。另少寫隊友擊殺也可觸發，屬不完整，不另外列為錯誤。 |
-| [火力齊射](veteran_combat_ability_stance.md) | `a34966f2` | 待遊戲內核對 | 文本使用傷害／弱點傷害占位符；1.13.0格式參數各取25%，起始增益各為15%。需核對安裝版格式參數及執行邏輯，未直接標原文數字錯誤。 |
+| [火力齊射](veteran_combat_ability_stance.md) | `a34966f2` | 待遊戲內核對 | 文本使用傷害／弱點傷害占位符；1.13.1格式參數各取25%，起始增益各為15%。需核對安裝版格式參數及執行邏輯，未直接標原文數字錯誤。 |
 | [滲透](veteran_invisibility_on_combat_ability.md) | `957cbfa6` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
 | [低調](veteran_reduced_threat_after_combat_ability.md) | `7d63094b` | 未判錯 | 少寫隱身期間已生效及其他能力觸發，沒有明確排他說法；不因範圍較簡略判錯。 |
 | [處決者姿態](veteran_combat_ability_elite_and_special_outlines.md) | `38234496` | 繁中勘誤 | 時間操作錯譯：同資源英文是refreshes，繁中譯為延長指定秒數，會把重設剩餘時間誤讀為在現有剩餘時間上加秒。 |
@@ -98,7 +97,7 @@
 | [優越情節](veteran_increase_damage_vs_elites.md) | `db5e86d9` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
 | [靈活應對](veteran_dodging_grants_stamina.md) | `76c89d3d` | 繁中勘誤 | 資源操作錯譯：實作為Stamina.add_stamina_percent，參數.3；英文Stamina on avoiding與繁中耐力消耗不同。漏寫3秒冷卻屬不完整，不列為另一項錯誤。 |
 | [鋼鐵意志](veteran_tdr_on_high_toughness.md) | `9702d945` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
-| [荷槍實彈](veteran_clip_size.md) | `5f584f5e` | 待遊戲內核對 | 中英模板都說向上取整；固定版本武器初始化使用floor向下取整。兩者有明確跨來源矛盾，但未證實安裝版同一實作，不直接標遊戲原文錯誤。 |
+| [荷槍實彈](veteran_clip_size.md) | `5f584f5e` | 待遊戲內核對 | 中英模板都說向上取整；固定版本武器初始化使用floor向下取整。兩者有明確跨來源矛盾，但尚未遊戲內確認實際取整，不直接標遊戲原文錯誤。 |
 | [讓他們全趴下！](veteran_increase_suppression.md) | `dcdb4dab` | 未判錯 | 原文提遠程壓制，未明說其他來源不適用；不因範圍較簡略判錯。 |
 | [秘密特工](veteran_increased_damage_when_flanking.md) | `19928629` | 未判錯 | 背刺／後半側為位置術語差異，原文仍是遠程攻擊；未見明確數值或效果方向矛盾。 |
 | [近戰傷害提升](base_melee_damage_node_buff_high_2.md) | `7b5da013` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
@@ -106,13 +105,13 @@
 
 ## 未放入玩家主頁的跨來源差異
 
-- **火力齊射**：繁中與英文均使用同組數值占位符，沒有獨立寫死25%。1.13.0格式參數取25%，起始能力實際加成15%；仍須對上安裝版的格式與增益，不能僅依固定公開版本推定遊戲畫面必然顯示錯誤。
-- **鷹眼／肉搏戰**：中英模板都把滲透的加成寫為解除潛行後生效；1.13.0在隱身開始加入增益。這是明確的文本／固定版本實作差異，但不是已證實的繁中獨有翻譯錯誤。肉搏戰的「近戰」錯譯則另行勘誤。
-- **荷槍實彈**：兩種語言都寫向上取整，固定版本武器初始化採向下取整；須取得同版腳本或實測確認。現有玩家文案沿用其已標示的1.13.0機制，未反過來將本文的向下取整當成原文引句。
-- **火力掩護**：兩種語言都描述範圍內盟友；1.13.0只選一名隊友並有選人距離疑點。列為待遊戲內核對，不用模型推測判定哪一版本的玩家畫面或行為。
+- **火力齊射**：繁中與英文均使用同組數值占位符，沒有獨立寫死25%。1.13.1格式參數取25%，起始能力實際加成15%；仍須對上安裝版的格式與增益，不能僅依固定公開版本推定遊戲畫面必然顯示錯誤。
+- **鷹眼／肉搏戰**：中英模板都把滲透的加成寫為解除潛行後生效；1.13.1在隱身開始加入增益。這是明確的文本／固定版本實作差異，但不是已證實的繁中獨有翻譯錯誤。肉搏戰的「近戰」錯譯則另行勘誤。
+- **荷槍實彈**：兩種語言都寫向上取整，固定版本武器初始化採向下取整；須遊戲內實測確認。現有玩家文案沿用其已標示的1.13.1機制，未反過來將本文的向下取整當成原文引句。
+- **火力掩護**：兩種語言都描述範圍內盟友；1.13.1只選一名隊友並有選人距離疑點。列為待遊戲內核對，不用模型推測判定哪一版本的玩家畫面或行為。
 
-- [火力齊射的格式與起始增益引用](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L206-L245)
-- [姿態實際加成](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L296-L323)
-- [隱身開始加入肉搏戰／鷹眼](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1223-L1229)
-- [彈匣初始化取整](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L1326-L1346)
-- [火力掩護選人與效果](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1597-L1673)
+- [火力齊射的格式與起始增益引用](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L206-L245)
+- [姿態實際加成](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L296-L323)
+- [隱身開始加入肉搏戰／鷹眼](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1223-L1229)
+- [彈匣初始化取整](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L1326-L1346)
+- [火力掩護選人與效果](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1597-L1673)

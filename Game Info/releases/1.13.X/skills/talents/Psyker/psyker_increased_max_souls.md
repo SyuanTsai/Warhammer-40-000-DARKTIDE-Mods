@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#psyker_increased_max_souls)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_increased_max_souls)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`psyker_increased_max_souls`；名稱鍵：`loc_talent_psyker_increased_souls`；描述鍵：`loc_talent_psyker_increased_souls_desc`。
 - 節點：`node_0eee06a4-3acd-4b44-ae64-61376c34b3da`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -13,19 +13,19 @@
 
 ## 原始碼依據
 
-- [scripts/settings/talent/talent_settings_psyker.lua：241–243](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L241-L243)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：98–121](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L98-L121)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：322–361](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L322-L361)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1528–1548](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1528-L1548)
-- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：1676–1691](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1676-L1691)
-- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1598–1624](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1598-L1624)
+- [scripts/settings/talent/talent_settings_psyker.lua：241–243](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L241-L243)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：98–121](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L98-L121)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：322–361](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L322-L361)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：1528–1548](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L1528-L1548)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：1676–1691](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1676-L1691)
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1598–1624](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1598-L1624)
 
 ## 算例條件與待確認事項
 
 - **傷害算例**：6 層共增加 6 × 4% = 24% 傷害；沒有其他加成時，100 × 1.24 = 124 點。相較原本 4 層的 116 點，增加 8 點。
 - **冷卻算例**：6 層恢復一次能力冷卻的 6 × 7.5% = 45%；以 30 秒計算，恢復 13.5 秒。
-- 算例假設沒有其他修正，尚未遊戲內驗證；本機文字與固定來源版本對應為1.13.0。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 算例假設沒有其他修正，尚未遊戲內驗證；本機文字與固定來源版本對應為1.13.1。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

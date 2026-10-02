@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#adamant_sprinting_sliding)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_sprinting_sliding)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`adamant_sprinting_sliding`；名稱鍵：`loc_talent_adamant_sprinting_sliding`；描述鍵：`loc_talent_adamant_sprinting_sliding_description`。
 - 節點：`node_4e45edbc-7e9a-43b8-9078-8d8146ca4177`；分類：技能；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -13,18 +13,18 @@
 
 ## 原始碼依據
 
-- [scripts/utilities/attack/stamina.lua：102–119](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/stamina.lua#L102-L119)
-- [scripts/extension_systems/character_state_machine/character_states/player_character_state_sprinting.lua：149–163](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/character_state_machine/character_states/player_character_state_sprinting.lua#L149-L163)
-- [scripts/extension_systems/buff/buffs/proc_buff.lua：144–184](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/proc_buff.lua#L144-L184)
-- [scripts/settings/talent/talent_settings_adamant.lua：473–478](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_adamant.lua#L473-L478)
-- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：3005–3022](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L3005-L3022)
-- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：3023–3035](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L3023-L3035)
-- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：2981–3015](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2981-L3015)
-- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：2122–2146](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L2122-L2146)
+- [scripts/utilities/attack/stamina.lua：102–119](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/stamina.lua#L102-L119)
+- [scripts/extension_systems/character_state_machine/character_states/player_character_state_sprinting.lua：149–163](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/character_state_machine/character_states/player_character_state_sprinting.lua#L149-L163)
+- [scripts/extension_systems/buff/buffs/proc_buff.lua：144–184](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L144-L184)
+- [scripts/settings/talent/talent_settings_adamant.lua：473–478](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L473-L478)
+- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：3005–3022](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L3005-L3022)
+- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：3023–3035](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L3023-L3035)
+- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：2981–3015](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L2981-L3015)
+- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：2122–2146](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L2122-L2146)
 
 ## 算例條件與待確認事項
 
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

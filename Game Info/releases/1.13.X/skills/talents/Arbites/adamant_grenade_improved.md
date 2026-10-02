@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#adamant_grenade_improved)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#adamant_grenade_improved)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`adamant_grenade_improved`；名稱鍵：`loc_talent_ability_adamant_grenade_improved`；描述鍵：`loc_talent_ability_adamant_grenade_improved_description`。
 - 節點：`node_44cf93b1-fbc8-48a4-ba29-40c84aa6051f`；分類：閃擊；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -19,25 +19,25 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：403–436](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L403-L436)
-- [scripts/settings/talent/talent_settings_adamant.lua：95–100](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_adamant.lua#L95-L100)
-- [scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua：93–116](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua#L93-L116)
-- [scripts/settings/projectile/player_projectile_templates.lua：1053–1082](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/projectile/player_projectile_templates.lua#L1053-L1082)
-- [scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua：377–403](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L377-L403)
-- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：384–423](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L384-L423)
-- [scripts/extension_systems/projectile_damage/projectile_damage_extension.lua：232–350](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L232-L350)
-- [scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：691–814](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L691-L814)
-- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：2155–2233](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L2155-L2233)
-- [scripts/extension_systems/ability/player_unit_ability_extension.lua：839–869](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L869)
-- [scripts/extension_systems/weapon/weapon_system.lua：270–329](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/weapon_system.lua#L270-L329)
-- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：403–436](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L403-L436)
-- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：227–266](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L227-L266)
+- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：403–436](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L403-L436)
+- [scripts/settings/talent/talent_settings_adamant.lua：95–100](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_adamant.lua#L95-L100)
+- [scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua：93–116](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/player_abilities/abilities/adamant_abilities.lua#L93-L116)
+- [scripts/settings/projectile/player_projectile_templates.lua：1053–1082](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/projectile/player_projectile_templates.lua#L1053-L1082)
+- [scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua：377–403](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_grenade_explosion_templates.lua#L377-L403)
+- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：384–423](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L384-L423)
+- [scripts/extension_systems/projectile_damage/projectile_damage_extension.lua：232–350](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/projectile_damage/projectile_damage_extension.lua#L232-L350)
+- [scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua：691–814](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua#L691-L814)
+- [scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua：2155–2233](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/adamant_buff_templates.lua#L2155-L2233)
+- [scripts/extension_systems/ability/player_unit_ability_extension.lua：839–869](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/player_unit_ability_extension.lua#L839-L869)
+- [scripts/extension_systems/weapon/weapon_system.lua：270–329](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/weapon_system.lua#L270-L329)
+- [scripts/settings/ability/archetype_talents/talents/adamant_talents.lua：403–436](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/adamant_talents.lua#L403-L436)
+- [scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua：227–266](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L227-L266)
 
 ## 算例條件與待確認事項
 
 - **傷害算例**：只計爆炸中央的護甲階段，基準傷害 1,500 對無甲為 1,500 × 1 = 1,500，對防彈護甲為 1,500 × 0.5 = 750，對硬殼護甲為 1,500 × 0.2 = 300。實際還需計入命中部位、爆炸遮蔽及其他增減傷。
 - 爆炸算例是護甲階段靜態基準，不是遊戲內實測；碰撞引信0仍受固定更新與延遲補償影響。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

@@ -4,9 +4,9 @@
 
 [遊戲本體繁中描述比對](LOCALIZATION_COMPARISON.md)｜[77項百分比描述盤點](DAMAGE_PERCENTAGE_REVIEW.md)｜[角色基礎效果](BASE_EFFECTS.md)｜[未直接用於當前技能樹的定義](UNUSED_DEFINITIONS.md)
 
-固定來源 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。技能樹共 **77 個節點**（76 個一點節點、1 個零點起始節點），同一配置最多分配 30 點；不是可同時選滿的 77 個天賦。
+固定來源 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。技能樹共 **77 個節點**（76 個一點節點、1 個零點起始節點），同一配置最多分配 30 點；不是可同時選滿的 77 個天賦。
 
-[職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
+[職業與基礎天賦](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/veteran_archetype.lua#L40-L74)；[技能樹設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L3-L10)。內部 tree version 34 不等於遊戲發行版號。
 
 名稱沿用翻譯表；機制為固定版本的程式分析，未進行遊戲內驗證。
 

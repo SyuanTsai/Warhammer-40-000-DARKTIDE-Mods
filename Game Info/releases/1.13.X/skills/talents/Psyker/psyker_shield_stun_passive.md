@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#psyker_shield_stun_passive)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#psyker_shield_stun_passive)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`psyker_shield_stun_passive`；名稱鍵：`loc_talent_psyker_force_field_stun_increased`；描述鍵：`loc_talent_psyker_force_field_stun_increased_new_description`。
 - 節點：`node_959bd205-bf6c-48fc-ab14-f59364fedd6c`；分類：能力；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -13,26 +13,26 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：1351–1374](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1351-L1374)
-- [scripts/settings/talent/talent_settings_psyker.lua：342–346](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_psyker.lua#L342-L346)
-- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：2491–2538](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2491-L2538)
-- [scripts/extension_systems/force_field/force_field_system.lua：185–253](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/force_field/force_field_system.lua#L185-L253)
-- [scripts/extension_systems/health/psyker_force_field_unit_health_extension.lua：46–99](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/health/psyker_force_field_unit_health_extension.lua#L46-L99)
-- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：1351–1374](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1351-L1374)
-- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1183–1205](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1183-L1205)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：1351–1374](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1351-L1374)
+- [scripts/settings/talent/talent_settings_psyker.lua：342–346](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_psyker.lua#L342-L346)
+- [scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua：2491–2538](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/psyker_buff_templates.lua#L2491-L2538)
+- [scripts/extension_systems/force_field/force_field_system.lua：185–253](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/force_field/force_field_system.lua#L185-L253)
+- [scripts/extension_systems/health/psyker_force_field_unit_health_extension.lua：46–99](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/health/psyker_force_field_unit_health_extension.lua#L46-L99)
+- [scripts/settings/ability/archetype_talents/talents/psyker_talents.lua：1351–1374](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/psyker_talents.lua#L1351-L1374)
+- [scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua：1183–1205](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/psyker_tree.lua#L1183-L1205)
 
 ## 算例條件與待確認事項
 
 - 忽略隨機抽樣誤差，目標確實觸碰/穿越自己的護盾。 一般敵人單次觸發率20%；special或monster標記目標使用100%機率。 一般敵人平均約五次有效觸碰中一次電擊；專家或巨獸每次都會觸發。
 - 程式碼按敵人標籤分類；並非所有「精英」敵人都必然是special或monster。
 - 事件依護盾接觸/穿越觸發，不等於敵人在任意距離靠近就觸發。
-- source標註普通敵人與特殊敵人的具體定義是tag；Build25492122同版性待核。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- source標註普通敵人與特殊敵人的具體定義是tag；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`900d2430`。
-- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
+- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
 
 ## 圖示來源
 

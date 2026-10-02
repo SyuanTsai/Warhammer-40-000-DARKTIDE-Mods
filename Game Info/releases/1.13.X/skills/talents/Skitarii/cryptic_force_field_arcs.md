@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_force_field_arcs)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_force_field_arcs)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_force_field_arcs`；名稱鍵：`loc_talent_cryptic_force_field_arcs`；描述鍵：`loc_talent_cryptic_force_field_arcs_desc`。
 - 節點：`node_a2f854fa-6833-41cb-8022-e5a4617d8646`；分類：閃擊；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -13,18 +13,18 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：876–891](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L876-L891)
-- [scripts/settings/talent/talent_settings_cryptic.lua：164–176](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L164-L176)
-- [scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：24–39](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L24-L39)
-- [scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：80–100](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L80-L100)
-- [scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：141–196](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L141-L196)
-- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/force_field_arc_chain_lightning_source.lua：21–40](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/fx/effect_templates/arc_chain_lightning_source/force_field_arc_chain_lightning_source.lua#L21-L40)
-- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/force_field_arc_chain_lightning_source.lua：42–55](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/fx/effect_templates/arc_chain_lightning_source/force_field_arc_chain_lightning_source.lua#L42-L55)
-- [scripts/extension_systems/ability/actions/action_activate_force_shield.lua：103–125](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_activate_force_shield.lua#L103-L125)
-- [scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：56–64](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L56-L64)
-- [scripts/extension_systems/ability/actions/action_activate_force_shield.lua：103–114](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/ability/actions/action_activate_force_shield.lua#L103-L114)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：876–891](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L876-L891)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：2530–2553](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L2530-L2553)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：876–891](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L876-L891)
+- [scripts/settings/talent/talent_settings_cryptic.lua：164–176](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L164-L176)
+- [scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：24–39](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L24-L39)
+- [scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：80–100](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L80-L100)
+- [scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：141–196](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L141-L196)
+- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/force_field_arc_chain_lightning_source.lua：21–40](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/fx/effect_templates/arc_chain_lightning_source/force_field_arc_chain_lightning_source.lua#L21-L40)
+- [scripts/settings/fx/effect_templates/arc_chain_lightning_source/force_field_arc_chain_lightning_source.lua：42–55](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/fx/effect_templates/arc_chain_lightning_source/force_field_arc_chain_lightning_source.lua#L42-L55)
+- [scripts/extension_systems/ability/actions/action_activate_force_shield.lua：103–125](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_activate_force_shield.lua#L103-L125)
+- [scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua：56–64](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/health/cryptic_personal_force_field_unit_health_extension.lua#L56-L64)
+- [scripts/extension_systems/ability/actions/action_activate_force_shield.lua：103–114](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/ability/actions/action_activate_force_shield.lua#L103-L114)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：876–891](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L876-L891)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：2530–2553](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L2530-L2553)
 
 ## 算例條件與待確認事項
 
@@ -32,12 +32,12 @@
 - 0次吸收會由下限 clamp 成1道，且到期時會執行尋找目標；若前方12公尺內沒有存活且可指定敵人，實際沒有電弧目標。
 - 只計遠程攻擊或被標記為遠程的攻擊，不按攻擊傷害量計數。
 - 額外連鎖受有效目標、連鎖距離與4次跳躍上限影響。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`143e5c50`。
-- 固定原始碼確認按吸收遠程攻擊數以每6次取上限整數後限制1至4道；0次也會由下限算成1道，並在正常到期路徑進入找目標流程。繁中描述未列出整數門檻、最低值及前方12公尺目標條件，屬翻譯省略的實作細節，不列為錯誤。本機 Build 25492122 版本對應為1.13.0。
+- 固定原始碼確認按吸收遠程攻擊數以每6次取上限整數後限制1至4道；0次也會由下限算成1道，並在正常到期路徑進入找目標流程。繁中描述未列出整數門檻、最低值及前方12公尺目標條件，屬翻譯省略的實作細節，不列為錯誤。本機 Build 25606770 版本對應為1.13.1。
 
 ## 圖示來源
 

@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#cryptic_overload_keystone_bigger_explosion)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#cryptic_overload_keystone_bigger_explosion)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`cryptic_overload_keystone_bigger_explosion`；名稱鍵：`loc_talent_cryptic_overload_keystone_bigger_explosion`；描述鍵：`loc_talent_cryptic_overload_keystone_bigger_explosion_desc`。
 - 節點：`node_18456fa4-d46f-4a4e-ae55-1c1e9c09befd`；分類：鑰石；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -15,15 +15,15 @@
 
 ## 原始碼依據
 
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1284–1305](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1284-L1305)
-- [scripts/settings/talent/talent_settings_cryptic.lua：264–270](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_cryptic.lua#L264-L270)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1540–1548](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1540-L1548)
-- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1809–1821](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1809-L1821)
-- [scripts/settings/damage/explosion_templates/player_explosion_templates.lua：299–309](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L299-L309)
-- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：791–835](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L791-L835)
-- [scripts/settings/buff/buff_settings.lua：775–775](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/buff_settings.lua#L775-L775)
-- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1284–1305](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1284-L1305)
-- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：963–985](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L963-L985)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1284–1305](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1284-L1305)
+- [scripts/settings/talent/talent_settings_cryptic.lua：264–270](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_cryptic.lua#L264-L270)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1540–1548](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1540-L1548)
+- [scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua：1809–1821](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/cryptic_buff_templates.lua#L1809-L1821)
+- [scripts/settings/damage/explosion_templates/player_explosion_templates.lua：299–309](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/explosion_templates/player_explosion_templates.lua#L299-L309)
+- [scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua：791–835](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/damage_profiles/archetypes/cryptic_damage_profile_templates.lua#L791-L835)
+- [scripts/settings/buff/buff_settings.lua：775–775](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L775-L775)
+- [scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua：1284–1305](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L1284-L1305)
+- [scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua：963–985](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/cryptic_tree.lua#L963-L985)
 
 ## 算例條件與待確認事項
 
@@ -31,7 +31,7 @@
 - 半徑8是固定版設定值；本機文字以近戰範圍描述，沒有列出數值半徑。
 - 承傷提高作用於被爆炸命中的敵人，不會提高未被命中的敵人所受傷害。
 - 以上為固定版程式碼的靜態推演，未在遊戲內實測。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 

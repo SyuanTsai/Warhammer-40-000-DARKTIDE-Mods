@@ -2,13 +2,13 @@
 
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
-- 原文：本機 Steam Build 25492122，2026-10-01 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25492122_1.13.0/，整個 Build 目錄受 Git 忽略。
-- 機制：Release 1.13.0／`419fe18d414a618ce0474bd015bab470afb446d6`。兩來源版本對應為1.13.0；跨版實作差異留待遊戲內核對。
+- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
+- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文本與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
 - 只有明確的效果方向、作用對象或數量／單位矛盾列為勘誤；省略機制或算例不算錯誤。
 
 | 技能 | 結論 |
 |---|---|
-| [動能撕裂者](#psyker_smite_on_hit) | 跨版本待遊戲內核對 |
+| [動能撕裂者](#psyker_smite_on_hit) | 文字與實作差異待遊戲內核對 |
 | [顱腦崩裂](#psyker_brain_burst_improved) | 未見已確認矛盾 |
 | [靈能攻擊](#psyker_grenade_throwing_knives) | 描述方向吻合，細節未列盡 |
 | [乙太碎片](#psyker_throwing_knives_piercing) | 描述不完整，未見已確認矛盾 |
@@ -94,14 +94,14 @@
 ## 動能撕裂者(Kinetic Flayer)
 
 - 描述鍵：`loc_talent_psyker_smite_on_hit_special_elite_desc`；hash：`63bc627a`。
-- 結論：跨版本待遊戲內核對。本機繁中描述稱反噬處於危險線以上時不觸發，但固定來源的完整檢查函式只驗證攻擊、傷害、敵人分類與存活狀態，沒有反噬條件。來源版本未與 Build 25492122 核實同版，因此不將此差異判為翻譯錯誤。另，原始碼參數為 1.0，表示合格命中在冷卻外觸發率 100%。
+- 結論：文字與實作差異待遊戲內核對。本機繁中描述稱反噬處於危險線以上時不觸發，但固定來源的完整檢查函式只驗證攻擊、傷害、敵人分類與存活狀態，沒有反噬條件。文本與程式來源皆為1.13.1；此差異仍待遊戲內核對，不單憑此判定翻譯錯誤。另，原始碼參數為 1.0，表示合格命中在冷卻外觸發率 100%。
 - [原始碼推導與限制](psyker_smite_on_hit.md)。
 
 <a id="psyker_brain_burst_improved"></a>
 ## 顱腦崩裂(Brain Rupture)
 
 - 描述鍵：`loc_talent_psyker_brain_burst_improved_description`；hash：`681e4980`。
-- 結論：未見已確認矛盾。核對到的繁中原文以顱腦崩裂作為 Brain Rupture 名稱，並以參數呈現傷害增幅；固定來源確認倍率為 1.5。Build 25492122 與此來源版本未證實相同，跨版本細節仍待遊戲內核對。
+- 結論：未見已確認矛盾。核對到的繁中原文以顱腦崩裂作為 Brain Rupture 名稱，並以參數呈現傷害增幅；固定來源確認倍率為 1.5。文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](psyker_brain_burst_improved.md)。
 
 <a id="psyker_grenade_throwing_knives"></a>
@@ -178,7 +178,7 @@
 ## 靈能尖嘯(Venting Shriek)
 
 - 描述鍵：`loc_talent_psyker_shout_vent_warp_charge_description`；hash：`7d4501be`。
-- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
 - [原始碼推導與限制](psyker_shout_vent_warp_charge.md)。
 
 <a id="psyker_combat_ability_stance"></a>
@@ -194,42 +194,42 @@
 ## 平靜迸發(Becalming Eruption)
 
 - 描述鍵：`loc_talent_psyker_shout_reduces_warp_charge_generation_description`；hash：`57df8e08`。
-- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
 - [原始碼推導與限制](psyker_shout_reduces_warp_charge_generation.md)。
 
 <a id="psyker_discharge_damage_debuff"></a>
 ## 亞空間爆發(Warp Rupture)
 
 - 描述鍵：`loc_talent_psyker_discharge_damage_debuff_description`；hash：`c5561004`。
-- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
 - [原始碼推導與限制](psyker_discharge_damage_debuff.md)。
 
 <a id="psyker_warpfire_on_shout"></a>
 ## 蔓延火焰(Creeping Flames)
 
 - 描述鍵：`loc_talent_psyker_warpfire_on_shout_desc`；hash：`8ec3e5f7`。
-- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
 - [原始碼推導與限制](psyker_warpfire_on_shout.md)。
 
 <a id="psyker_overcharge_weakspot_kill_bonuses"></a>
 ## 預知未來(Precognition)
 
 - 描述鍵：`loc_ability_psyker_overcharge_weakspot_description`；hash：`492219ab`。
-- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
 - [原始碼推導與限制](psyker_overcharge_weakspot_kill_bonuses.md)。
 
 <a id="psyker_overcharge_increased_movement_speed"></a>
 ## 亞空間加速(Warp Speed)
 
 - 描述鍵：`loc_ability_psyker_overcharge_movement_speed_description`；hash：`5f1da172`。
-- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
 - [原始碼推導與限制](psyker_overcharge_increased_movement_speed.md)。
 
 <a id="psyker_2_tier_3_name_2"></a>
 ## 靈能學者光環(Psykinetic's Aura)
 
 - 描述鍵：`loc_talent_psyker_cooldown_on_elite_kills_desc`；hash：`eaf79e38`。
-- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。 詳細持續時間／觸發範圍以固定來源推導，仍須同版遊戲核對。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。 詳細持續時間／觸發範圍以固定來源推導，仍須同版遊戲核對。
 - [原始碼推導與限制](psyker_2_tier_3_name_2.md)。
 
 <a id="psyker_overcharge_reduced_warp_charge"></a>
@@ -245,56 +245,56 @@
 ## 念力護盾(Telekine Shield)
 
 - 描述鍵：`loc_talent_psyker_combat_ability_shield_description`；hash：`2d4c8bb1`。
-- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
 - [原始碼推導與限制](psyker_combat_ability_force_field.md)。
 
 <a id="psyker_shield_extra_charge"></a>
 ## 強化護盾(Bolstered Shield)
 
 - 描述鍵：`loc_talent_psyker_force_field_charges_description`；hash：`5d19ee30`。
-- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
 - [原始碼推導與限制](psyker_shield_extra_charge.md)。
 
 <a id="psyker_boost_allies_in_sphere"></a>
 ## 庇護所(Sanctuary)
 
 - 描述鍵：`loc_talent_psyker_force_field_grants_toughness_desc`；hash：`fe5dbdd8`。
-- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。 詳細持續時間／觸發範圍以固定來源推導，仍須同版遊戲核對。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。 詳細持續時間／觸發範圍以固定來源推導，仍須同版遊戲核對。
 - [原始碼推導與限制](psyker_boost_allies_in_sphere.md)。
 
 <a id="psyker_sphere_shield"></a>
 ## 念力穹頂(Telekine Dome)
 
 - 描述鍵：`loc_talent_psyker_force_field_dome_increased_cd_desc`；hash：`0b13a4ee`。
-- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
 - [原始碼推導與限制](psyker_sphere_shield.md)。
 
 <a id="psyker_shield_stun_passive"></a>
 ## 衰弱界線(Enervating Threshold)
 
 - 描述鍵：`loc_talent_psyker_force_field_stun_increased_new_description`；hash：`900d2430`。
-- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。
 - [原始碼推導與限制](psyker_shield_stun_passive.md)。
 
 <a id="psyker_overcharge_stance_infinite_casting"></a>
 ## 亞空間突破(Warp Unbound)
 
 - 描述鍵：`loc_talent_psyker_overcharge_infinite_casting_desc`；hash：`10334171`。
-- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。 詳細持續時間／觸發範圍以固定來源推導，仍須同版遊戲核對。
+- 結論：未見明確矛盾。同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.1。 詳細持續時間／觸發範圍以固定來源推導，仍須同版遊戲核對。
 - [原始碼推導與限制](psyker_overcharge_stance_infinite_casting.md)。
 
 <a id="psyker_passive_souls_from_elite_kills"></a>
 ## 亞空間虹吸(Warp Siphon)
 
 - 描述鍵：`loc_talent_psyker_souls_new_desc`；hash：`9ea525d4`。
-- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.0。
+- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.1。
 - [原始碼推導與限制](psyker_passive_souls_from_elite_kills.md)。
 
 <a id="psyker_new_mark_passive"></a>
 ## 擾動命運(Disrupt Destiny)
 
 - 描述鍵：`loc_talent_psyker_marked_enemies_passive_updated_desc`；hash：`cfa752d8`。
-- 結論：待遊戲內核對。現有本地化說明寫成每秒機率標記；源碼選敵邏輯則依可標記敵種、前向視角及視線條件挑選，逐秒只是目標狀態檢查／重選節奏。因 Build 25492122 尚未證實與此 source SHA 同版，先保留差異待遊戲內核對。
+- 結論：待遊戲內核對。現有本地化說明寫成每秒機率標記；源碼選敵邏輯則依可標記敵種、前向視角及視線條件挑選，逐秒只是目標狀態檢查／重選節奏。文本與程式來源皆為1.13.1；先保留差異待遊戲內核對。
 - [原始碼推導與限制](psyker_new_mark_passive.md)。
 
 <a id="psyker_empowered_ability"></a>
@@ -308,35 +308,35 @@
 ## 平心靜氣(Inner Tranquility)
 
 - 描述鍵：`loc_talent_psyker_reduced_warp_charge_cost_venting_speed_desc`；hash：`e3048a81`。
-- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.0。
+- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.1。
 - [原始碼推導與限制](psyker_reduced_warp_charge_cost_and_venting_speed.md)。
 
 <a id="psyker_toughness_on_soul"></a>
 ## 吸精奪萃(Essence Harvest)
 
 - 描述鍵：`loc_talent_psyker_toughness_regen_on_soul_desc`；hash：`fc9f3c0b`。
-- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.0。
+- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.1。
 - [原始碼推導與限制](psyker_toughness_on_soul.md)。
 
 <a id="psyker_empowered_grenades_passive_improved"></a>
 ## 生物磁石(Bio-Lodestone)
 
 - 描述鍵：`loc_talent_psyker_increase_empower_chain_lighting_chance_description`；hash：`542f4465`。
-- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.0。
+- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.1。
 - [原始碼推導與限制](psyker_empowered_grenades_passive_improved.md)。
 
 <a id="psyker_empowered_chain_lightnings_replenish_toughness_to_allies"></a>
 ## 吸血閃電(Psychic Leeching)
 
 - 描述鍵：`loc_talent_psyker_empowered_chain_lightnings_replenish_toughness_to_allies_description`；hash：`0f6ef5af`。
-- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.0。
+- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.1。
 - [原始碼推導與限制](psyker_empowered_chain_lightnings_replenish_toughness_to_allies.md)。
 
 <a id="psyker_empowered_ability_on_elite_kills"></a>
 ## 吞靈強擊(Overpowering Souls)
 
 - 描述鍵：`loc_talent_psyker_empowered_ability_on_elite_kills_description`；hash：`23c36e9e`。
-- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.0。
+- 結論：未見明確矛盾。同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.1。
 - [原始碼推導與限制](psyker_empowered_ability_on_elite_kills.md)。
 
 <a id="psyker_mark_increased_max_stacks"></a>
@@ -494,7 +494,7 @@
 ## 穩固(Solidity)
 
 - 描述鍵：`loc_talent_psyker_increased_vent_speed_description`；hash：`479e9713`。
-- 結論：待遊戲內核對。本機用語為平息速度，固定源碼把.7套到時間與間隔。兩者版本未對齊，不直接判定繁中誤譯。
+- 結論：待遊戲內核對。本機用語為平息速度，固定源碼把.7套到時間與間隔。兩來源皆為1.13.1；實際表現待遊戲內核對，不直接判定繁中誤譯。
 - [原始碼推導與限制](psyker_increased_vent_speed.md)。
 
 <a id="psyker_damage_based_on_warp_charge"></a>

@@ -24,6 +24,6 @@
 
 1.13.1對應[官方Hotfix公告](https://forums.fatsharkgames.com/t/hotfix-1-13-1-patch-notes/126162)。文本擷取日期不等於遊戲發布日期；名稱字典的原始碼SHA也不等於文本版本。
 
-技能機制仍依Release 1.13.0的[固定公開原始碼](https://github.com/Aussiemon/Darktide-Source-Code/commit/419fe18d414a618ce0474bd015bab470afb446d6)。文字未修改不能證明程式實作相同。
+技能機制依Release 1.13.1的[固定公開原始碼](https://github.com/Aussiemon/Darktide-Source-Code/commit/7e662fcda16219d775b84af50322be2e9cd9d62e)。天賦及相關結算與1.13.0相同，詳見[天賦差異](../skills/TALENT_CHANGES_1.13.0_TO_1.13.1.md)。
 
 完整Build批次及ZIP保持本機保存，全部受Git忽略。

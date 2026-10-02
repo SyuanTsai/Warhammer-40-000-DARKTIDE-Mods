@@ -2,6 +2,8 @@
 
 [版本資訊](../README.md)｜[所有版本](../../../README.md)
 
+[1.13.0 → 1.13.1天賦差異](TALENT_CHANGES_1.13.0_TO_1.13.1.md)
+
 ## 職業天賦
 
 - [法務官](talents/Arbites/README.md) · [來源與技術索引](talents/Arbites/SOURCE_INDEX.md)

@@ -2,7 +2,7 @@
 
 [返回玩家說明](README.md#zealot_reduced_damage_on_wound)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_reduced_damage_on_wound)
 
-- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 來源版本：Release 1.13.1；固定 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
 - 天賦：`zealot_reduced_damage_on_wound`；名稱鍵：`loc_talent_zealot_3_tier_3_ability_2`；描述鍵：`loc_talent_zealot_3_tier_3_ability_2_description`。
 - 節點：`node_a5510705-1db7-4086-aa35-04833ebb8527`；分類：技能；每節點一點。
 - 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
@@ -13,17 +13,17 @@
 
 ## 原始碼依據
 
-- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：752–763](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L752-L763)
-- [scripts/settings/talent/talent_settings_zealot.lua：503–505](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L503-L505)
-- [scripts/utilities/attack/damage_taken_calculation.lua：366–393](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_taken_calculation.lua#L366-L393)
-- [scripts/utilities/health.lua：129–136](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/health.lua#L129-L136)
-- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3099–3114](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3099-L3114)
-- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：373–398](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L373-L398)
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：752–763](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L752-L763)
+- [scripts/settings/talent/talent_settings_zealot.lua：503–505](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/talent/talent_settings_zealot.lua#L503-L505)
+- [scripts/utilities/attack/damage_taken_calculation.lua：366–393](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_taken_calculation.lua#L366-L393)
+- [scripts/utilities/health.lua：129–136](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/health.lua#L129-L136)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3099–3114](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3099-L3114)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：373–398](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L373-L398)
 
 ## 算例條件與待確認事項
 
 - **傷害算例**：最大生命 200、共 4 格傷口，每格 50。現在有 120 點生命，下一條分界是 100；原本 30 點傷害會跨過分界，因此變成 30 × 0.6 = 18 點，受擊後剩 102 點。
-- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
