@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_combat_ability_charge_replenished觸發單一ProcBuff，不按params.num_charges_gained乘層；power_level_modifier0.125 active10 allow刷新。
+- on_combat_ability_charge_replenished觸發單一ProcBuff，不按params.num_charges_gained乘層；power_level_modifier0.125 active10 allow重新計時。
 - power_type_curve結果乘PowerLevel.power_level_buff_modifier，各type再進模板輸出。
 
 ## 原始碼依據

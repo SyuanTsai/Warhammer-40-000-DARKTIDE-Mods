@@ -9,9 +9,9 @@
 
 ## 原始碼確認與程式推導
 
-- 主 proc 監聽 on_hit、on_wield_melee、on_wield_ranged、on_shoot。遠程 hit 以每發射擊中的 attacked_unit table 去重，弱點給 3 層、一般給 1 層；on_shoot 清空去重表。近戰 hit 每次建立 1 個 ranged justice stack。
+- 主 proc 監聽 on_hit、on_wield_melee、on_wield_ranged、on_shoot。遠距 hit 以每發射擊中的 attacked_unit table 去重，弱點給 3 層、一般給 1 層；on_shoot 清空去重表。近戰 hit 每次建立 1 個 ranged justice stack。
 - on_wield_melee 時若存在 melee justice id，建立近戰 stat buff；on_wield_ranged 同理消耗 ranged justice。justice tracker 在對應 stat buff 啟用時條件退出，或失去 keystone 時退出。base stack cap=20。
-- 核心 stat buff duration=12：近戰為 melee_power_level_modifier=0.10、toughness_damage_taken_multiplier=0.8；遠程為 ranged_power_level_modifier=0.10、suppression_dealt=0.5、ranged_max_hit_mass_attack_modifier=0.5。
+- 核心 stat buff duration=12：近戰為 melee_power_level_modifier=0.10、toughness_damage_taken_multiplier=0.8；遠距為 ranged_power_level_modifier=0.10、suppression_dealt=0.5、ranged_max_hit_mass_attack_modifier=0.5。
 
 ## 原始碼依據
 
@@ -27,9 +27,9 @@
 
 ## 算例條件與待確認事項
 
-- 遠程弱點命中 5 次且各次符合計數條件，取得 15 層；再以一般命中取得 5 層達到 20。切至近戰武器時消耗全部層數並取得 12 秒固定近戰增益。
+- 遠距弱點命中 5 次且各次符合計數條件，取得 15 層；再以一般命中取得 5 層達到 20。切至近戰武器時消耗全部層數並取得 12 秒固定近戰增益。
 - 機制來源固定為公開 Aussiemon/Darktide-Source-Code SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；繁中、英文模板與程式來源皆為1.13.1；遊戲內最終顯示仍待核對。程式實作和文字措辭如有差異，先列文字與實作差異待核，不直接判為翻譯錯誤。
-- 核心上限為 20 層；升級另提供全隊韌性恢復、逐秒冷卻恢復，或近戰與遠程攻速及爆擊機率，見相應來源子文件。
+- 核心上限為 20 層；升級另提供全隊韌性恢復、逐秒冷卻恢復，或近戰與遠距攻速及爆擊機率，見相應來源子文件。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

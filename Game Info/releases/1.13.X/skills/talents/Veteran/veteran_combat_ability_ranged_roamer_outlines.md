@@ -9,8 +9,8 @@
 
 ## 額外目標與刷新
 
-- 此節點只加入 veteran_combat_ability_ranged_roamer_outlines special rule。_can_show_outline 在規則啟用時接受 breed.volley_fire_target；仍先排除未啟用的 ogryn／monster／captain 類。普通遠程敵人對應例包括 renegade_rifleman 與 cultist_assault。
-- _start_outlines 對非 special 候選要求距離平方 <50²；此距離只用於建立可見輪廓清單。stance_master.check_proc_func 的延長判定只有本人擊殺及 _can_show_outline，不要求遠程攻擊、實際輪廓已顯示或符合 50 公尺。
+- 此節點只加入 veteran_combat_ability_ranged_roamer_outlines special rule。_can_show_outline 在規則啟用時接受 breed.volley_fire_target；仍先排除未啟用的 ogryn／monster／captain 類。普通遠距敵人對應例包括 renegade_rifleman 與 cultist_assault。
+- _start_outlines 對非 special 候選要求距離平方 <50²；此距離只用於建立可見輪廓清單。stance_master.check_proc_func 的延長判定只有本人擊殺及 _can_show_outline，不要求遠距攻擊、實際輪廓已顯示或符合 50 公尺。
 - 符合擊殺時重新加入 stance_master 同名 buff，refresh_duration_on_stack 把有效期重新設為完整 6 秒；ogryn_outlines 對應的 master 複製模板則是 9 秒。
 - 節點 name 中的 weakspot 字樣與任何未接入的 format 值，都不能作為新增弱點傷害的依據；可執行效果為目標類型擴充。
 

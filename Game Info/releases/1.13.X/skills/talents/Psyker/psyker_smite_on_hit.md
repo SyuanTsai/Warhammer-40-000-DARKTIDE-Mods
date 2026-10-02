@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 固定 source SHA 7e662fcda16219d775b84af50322be2e9cd9d62e。技能樹將此節點置於 Brain Rupture 閃擊的子項。天賦設定 smite_chance=1、cooldown=12；proc template 對 proc_events.on_hit 使用該 1.0 事件率並設 12 秒 cooldown_duration。自訂 check_proc_func 要求 attack_type 存在、damage 不為 0、目標有 breed 且存活，並至少有 elite/special/monster 標籤；另排除 bomber、prop、living prop。成功後記錄目標，再以 psyker_smite_kill damage profile、damage_type=smite 執行攻擊。共用傷害公式會依 smite damage type 套用 smite_damage_multiplier，因此同時具備 Brain Rupture buff 時，觸發傷害也會進入該倍率結算。檢查完整 check_proc_func 與 proc_func 未找到 critical-peril 或 warp-charge 門檻；文本與程式來源皆為1.13.1；這一處保留待遊戲內確認。
+- 固定 source SHA 7e662fcda16219d775b84af50322be2e9cd9d62e。技能樹將此節點置於 Brain Rupture 閃擊的子項。天賦設定 smite_chance=1、cooldown=12；proc template 對 proc_events.on_hit 使用該 1.0 事件率並設 12 秒 cooldown_duration。自訂 check_proc_func 要求 attack_type 存在、damage 不為 0、目標有 breed 且存活，並至少有 elite/special/monster 標籤；另排除 bomber、prop、living prop。成功後記錄目標，再以 psyker_smite_kill damage profile、damage_type=smite 執行攻擊。共用傷害公式會依 smite damage type 套用 smite_damage_multiplier，因此同時具備 Brain Rupture buff 時，觸發傷害也會進入該倍率結算。檢查完整 check_proc_func 與 proc_func 未找到 critical-peril 或 warp-charge 門檻；文字與程式來源皆為1.13.1；這一處保留待遊戲內確認。
 
 ## 原始碼依據
 
@@ -23,16 +23,16 @@
 
 ## 算例條件與待確認事項
 
-- 冷卻剛結束，目標存活且有精英標籤，攻擊造成非零傷害。 t=0 秒的合格命中觸發；t=11 秒的合格命中仍在 12 秒冷卻內；t≥12 秒後的下一次合格命中可再次觸發。 觸發受冷卻限制；合格命中的設定事件率為 1.0（100%）。
+- 冷卻剛結束，目標存活且有菁英標籤，攻擊造成非零傷害。 t=0 秒的合格命中觸發；t=11 秒的合格命中仍在 12 秒冷卻內；t≥12 秒後的下一次合格命中可再次觸發。 觸發受冷卻限制；合格命中的設定事件率為 1.0（100%）。
 - 觸發攻擊傷害會依目標、觸發攻擊與 Brain Rupture 傷害倍率計算，沒有單一固定傷害值。
-- 固定來源的觸發檢查未實作繁中描述所稱的臨界反噬排除；文本與程式來源皆為1.13.1；此差異待遊戲內核對，不直接判定遊戲文案有錯。
+- 固定來源的觸發檢查未實作繁中描述所稱的臨界反噬排除；文字與程式來源皆為1.13.1；此差異待遊戲內核對，不直接判定遊戲文案有錯。
 - 靜態原始碼推導，未做遊戲內觸發測試。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`63bc627a`。
-- 本機繁中描述稱反噬處於危險線以上時不觸發，但固定來源的完整檢查函式只驗證攻擊、傷害、敵人分類與存活狀態，沒有反噬條件。文本與程式來源皆為1.13.1；此差異仍待遊戲內核對，不單憑此判定翻譯錯誤。另，原始碼參數為 1.0，表示合格命中在冷卻外觸發率 100%。
+- 本機繁中描述稱反噬處於危險線以上時不觸發，但固定來源的完整檢查函式只驗證攻擊、傷害、敵人分類與存活狀態，沒有反噬條件。文字與程式來源皆為1.13.1；此差異仍待遊戲內核對，不單憑此判定翻譯錯誤。另，原始碼參數為 1.0，表示合格命中在冷卻外觸發率 100%。
 
 ## 圖示來源
 

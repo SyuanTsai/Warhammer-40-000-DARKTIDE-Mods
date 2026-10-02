@@ -10,7 +10,7 @@
 ## 原始碼確認與程式推導
 
 - clonebase ammo_share=.1/coherencypriority1優先於base2。同coherency_id只取最低priority的一份。
-- on_ammo_pickup複製pickupdata改modifier=.1，對拾取者in_coherence_units呼叫Ammo.add_ammo_using_pickup_data(...,true)防遞迴。每人ammo_amount_func重算自身容量。
+- on_ammo_pickup複製pickupdata改modifier=.1，對撿取者in_coherence_units呼叫Ammo.add_ammo_using_pickup_data(...,true)防遞迴。每人ammo_amount_func重算自身容量。
 - 例外：large_ammunition_crate_pickup忽略modifier，若該來源發出相同pickup事件，會按全容量計；不宣稱所有場景補給都嚴格10%。
 
 ## 原始碼依據
@@ -28,14 +28,14 @@
 
 ## 算例條件與待確認事項
 
-- **小彈藥算例**：小彈藥原補 15% 備彈，分享量為個人備彈上限 × 15% × 10%，無條件進位。上限 200 的隊友得到 3 發，上限 100 的隊友得到 ⌈1.5⌉ = 2 發。
+- **小彈藥算例**：小彈藥原補 15% 備用彈藥，分享量為個人備用彈藥上限 × 15% × 10%，無條件進位。上限 200 的隊友得到 3 發，上限 100 的隊友得到 ⌈1.5⌉ = 2 發。
 - 特殊關卡大型彈藥箱是否經相同事件，以及分享實際行為未做遊戲內驗證。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`03a59c5c`。
-- 兩語皆說協同拾取分享10%；各人依容量換算是公式補充，特殊補給不讀modifier的程式例外留待場景驗證。
+- 兩語皆說協同撿取分享10%；各人依容量換算是公式補充，特殊補給不讀modifier的程式例外留待場景驗證。
 
 ## 圖示來源
 

@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-buff 要求 wielded_slot=slot_secondary，並比較 current_ammo_in_clips / max_ammo_in_clips >= .8；條件成立時加 ranged_critical_strike_chance=.10。例：30 發彈匣需至少 24 發。天賦的 ammo 顯示值來自 1−.8=20%，不是起始前 10%。[天賦顯示／buff 連結](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1588-L1627) → [彈匣比例與遠程暴擊條件](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L561-L593)。
+buff 要求 wielded_slot=slot_secondary，並比較 current_ammo_in_clips / max_ammo_in_clips >= .8；條件成立時加 ranged_critical_strike_chance=.10。例：30 發彈匣需至少 24 發。天賦的 ammo 顯示值來自 1−.8=20%，不是起始前 10%。[天賦顯示／buff 連結](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1588-L1627) → [彈匣比例與遠距爆擊條件](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L561-L593)。
 
 ## 原始碼依據
 

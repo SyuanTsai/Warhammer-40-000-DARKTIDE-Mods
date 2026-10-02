@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-天賦連結兩個 proc buff：on_melee_kill → ranged_damage +.25；on_ranged_kill → melee_damage +.25；active_duration=6，allow_proc_while_active=true，所以再次觸發會刷新效果而非增加層數。算例依 damage 加算倍率，100×1.25=125。[天賦連結](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1828-L1870) → [近戰／遠程擊殺 buff](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L956-L991) → [active proc 處理](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L304-L355)。
+天賦連結兩個 proc buff：on_melee_kill → ranged_damage +.25；on_ranged_kill → melee_damage +.25；active_duration=6，allow_proc_while_active=true，所以再次觸發會重設效果的持續時間而非增加層數。算例依 damage 加算倍率，100×1.25=125。[天賦連結](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1828-L1870) → [近戰／遠距擊殺 buff](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L956-L991) → [active proc 處理](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/proc_buff.lua#L304-L355)。
 
 ## 原始碼依據
 

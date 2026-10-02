@@ -11,7 +11,7 @@
 
 - 此升級授予 `zealot_preacher_spread_fanatic_rage` special rule。個人 Fury buff 的 start_func 在伺服器端檢查該規則，並呼叫 `CoherencyUtils.add_buff_to_all_in_coherency(unit, buff_name, t, true)`；helper 的 true 參數將自己排除。
 - 施加的是獨立 `zealot_fanatic_rage_shared` buff，duration=8、max_stacks=1，提供 `offensive_2.crit_chance=0.10`。共享值沒有讀取正義勇士的+10% special rule，故盟友仍固定+10%。
-- 個人 Fury buff 的 start_func 只在 buff 初次建立時跑；滿層後重新加入會由 max-stack refresh 路徑刷新個人 Fury start time，而不會重跑 start_func。共享 buff 因此可能在個人 Fury 被刷新時仍按首次套用時間於8秒後結束。
+- 個人 Fury buff 的 start_func 只在 buff 初次建立時跑；滿層後重新加入會由 max-stack refresh 路徑重新計時個人 Fury start time，而不會重跑 start_func。共享 buff 因此可能在個人 Fury 被重新計時時仍按首次套用時間於8秒後結束。
 - 本節點無單獨冷卻或層數；共享隊友集合是在 Fury buff 開始時按當下協同名單取得，不會在效果期間持續掃描補給新隊友。
 
 ## 原始碼依據
@@ -28,15 +28,15 @@
 ## 算例條件與待確認事項
 
 - **爆擊率算例**：隊友原本 5%，效果期間變成 5% + 10% = 15%。你的「正義勇士」不會把隊友這份 10 個百分點一起提高。
-- 這段時間差是由原始碼的啟動回呼與刷新路徑推導，未在遊戲內實測；應以固定 SHA 原始碼描述並與遊戲內表現確認。
+- 這段時間差是由原始碼的啟動回呼與重新計時路徑推導，未在遊戲內實測；應以固定 SHA 原始碼描述並與遊戲內表現確認。
 - 程式只對當下協同集合呼叫加 buff；玩家中途進出協同的處理不由本節點持續監控。
-- 若盟友自己也有可堆疊暴擊率的來源，最終暴擊率另行計算。
+- 若盟友自己也有可堆疊爆擊率的來源，最終爆擊率另行計算。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`95bbc544`。
-- 英繁中都寫隊友在個人熾熱虔誠有效時取得暴擊率；程式是開始 Fury 時套用一次8秒共享 buff，個人 Fury 刷新不會重跑分發。依1.13.1固定程式碼，持續效果時間可能與文案「while active」不一致；實際持續時間仍待遊戲內核對。
+- 英繁中都寫隊友在個人熾熱虔誠有效時取得爆擊率；程式是開始 Fury 時套用一次8秒共享 buff，個人 Fury 重新計時不會重跑分發。依1.13.1固定程式碼，持續效果時間可能與文案「while active」不一致；實際持續時間仍待遊戲內核對。
 
 ## 圖示來源
 

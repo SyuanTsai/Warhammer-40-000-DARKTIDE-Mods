@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 當前action.kind==windup才通過conditional_stat_buffs_func，conditional_keywords沿用此條件；給uninterruptible、stun_immune，weapon_action_movespeed_reduction_multiplier=0。動作移速公式先取1−movement_mod，再乘reduction_multiplier，所以只清除此動作的減速。
+- 目前action.kind==windup才通過conditional_stat_buffs_func，conditional_keywords沿用此條件；給uninterruptible、stun_immune，weapon_action_movespeed_reduction_multiplier=0。動作移速公式先取1−movement_mod，再乘reduction_multiplier，所以只清除此動作的減速。
 
 ## 原始碼依據
 

@@ -11,8 +11,8 @@
 
 - 固定 source SHA 7e662fcda16219d775b84af50322be2e9cd9d62e。技能樹將 psyker_brain_burst_improved 定為 tactical 且放入 exclusive_group=blitz；其天賦定義掛載 psyker_brain_burst_improved buff。Buff 將 stat_buffs.smite_damage_multiplier 設為 1.5。實際單體能力採 psyker_smite 武器模板，蓄力後以 damage_profile=psyker_smite_kill、damage_type=smite 造成傷害；共用 damage_calculation.lua 只在 damage_type 為 smite 時讀取此 multiplier，將 damage_multiplier 乘 1.5。故在其他輸入與倍率固定時，100 × 1.5 = 150，屬 50% 傷害增加，不是額外加 50 點固定傷害。
 - 此檔補充 Brain Rupture 的本體，不替代節點增傷資料。固定 source SHA 7e662fcda16219d775b84af50322be2e9cd9d62e。一般 action_charge_target 的 charge template 為 psyker_smite_charge，含 charge_on_action_start=true；其一般 charge_time 未指定，ActionSmiteTargeting 對 kill_charge 預設 3 秒，再除以 smite_attack_speed。其 targeting 未設定 sticky_targeting 或 target_locked；target finder 因而會跟著 smart-targeting 更新目標。一般模式在尚無目標時仍符合 target_charge 且非 target_locked 的更新條件，所以蓄力與反噬可以先開始。
-- 替代 action_charge_target_sticky 使用 sticky_targeting=true、target_locked=true、charge_time=2、attack_target_time=1，並指定 psyker_smite_lock_target。蓄力等級的充滿時間為 2 秒（假設 smite_attack_speed=1），但反噬每秒速率取 charge template 的 warp_charge_percent / charge_duration，即 0.30/3=10%/秒；充滿後切換為 full_charge_warp_charge_percent=9%/秒。因 target_locked 模式只在有目標時更新蓄力／過載，沒有可鎖目標時不會預先蓄力；取得有效目標後 sticky targeting 不會隨瞄準切換。若目標可受 Smite stagger，黏鎖滿 1 秒會執行一次小幅硬直。
-- action_charge_target_lock_on 是從一般蓄力 action 的 charge_power_lock_on 鏈接到的鎖定分支，要求已有有效 Smite 目標，使用 sticky targeting 和 psyker_smite_lock_target，並在鎖定超過 0.25 秒時施加一次小幅硬直。它未指定 charge_time，故新蓄力時預設 3 秒；一般蓄力鏈入時，ActionSmiteTargeting 讀取 is_chain_action 與當前 charge_level，ChargeActionModule 再調整 charge_start_time 以接續該等級。目標改變時 target_locked 分支會重設該次蓄力計時。
+- 替代 action_charge_target_sticky 使用 sticky_targeting=true、target_locked=true、charge_time=2、attack_target_time=1，並指定 psyker_smite_lock_target。蓄力等級的充滿時間為 2 秒（假設 smite_attack_speed=1），但反噬每秒速率取 charge template 的 warp_charge_percent / charge_duration，即 0.30/3=10%/秒；充滿後切換為 full_charge_warp_charge_percent=9%/秒。因 target_locked 模式只在有目標時更新蓄力／過載，沒有可鎖目標時不會預先蓄力；取得有效目標後 sticky targeting 不會隨瞄準切換。若目標可受 Smite stagger，黏鎖滿 1 秒會執行一次小幅僵直。
+- action_charge_target_lock_on 是從一般蓄力 action 的 charge_power_lock_on 鏈接到的鎖定分支，要求已有有效 Smite 目標，使用 sticky targeting 和 psyker_smite_lock_target，並在鎖定超過 0.25 秒時施加一次小幅僵直。它未指定 charge_time，故新蓄力時預設 3 秒；一般蓄力鏈入時，ActionSmiteTargeting 讀取 is_chain_action 與目前 charge_level，ChargeActionModule 再調整 charge_start_time 以接續該等級。目標改變時 target_locked 分支會重設該次蓄力計時。
 - 釋放 action_use_power 的 fire_time=0.2 秒、total_time=0.8 秒，消耗蓄力等級並以 psyker_smite_kill profile 對目前目標執行單體攻擊。成功造成傷害後才付款；本動作使用 psyker_smite_use_power charge template，其 warp_charge_percent=0.25 且沒有 use_charge=true。WarpCharge.increase_immediate 只有在 charge template.use_charge 為真時才把成本乘 charge_level，因此命中時這 25% 是固定基礎成本，不隨蓄力等級縮放。空放或未實際造成傷害不會走此命中付款分支。
 - 計算例（無 buff/stat 修正、smite_attack_speed=1）：一般蓄力 0→1 秒約為 charge_level 0→1/3，反噬由 0→6.67%；2 秒為 charge_level 約 2/3、反噬約 13.33%；3 秒滿蓄時約 20%。若持續滿蓄 1 秒，再增加約 9%。此時成功命中會固定再加 25%，合計約 45%（若再多持續滿蓄 1 秒則約 54%）。黏鎖模式取得目標後 0→1→2 秒，蓄力約 0→1/2→1，反噬約 0→10→20%；2 秒滿蓄成功命中後同樣約 45%。這些百分比是原始模板的估算，buff/stat 會乘入實際成本。攻擊 profile 的 attack/impact power distribution 為 900/55；最終傷害仍依目標護甲、部位、蓄力等級與其他倍率計算。
 
@@ -54,17 +54,17 @@
 - 替代黏鎖模式；無 buff/stat 修正；smite_attack_speed=1；已先取得有效目標。 2 秒充能：0.30 × (2/3) = 20%；滿蓄命中：固定 +0.25；合計約 45%。 蓄力等級約 2 秒充滿；成功命中後基礎總反噬約 45%。
 - 比較純蓄力階段，不含命中成本，無 buff/stat 修正。 一般：1 秒約 +6.67%、2 秒 +13.33%、3 秒 +20%；滿蓄後每秒 +9%。黏鎖：1 秒約 +10%、2 秒 +20%；滿蓄後每秒 +9%。 兩種模式的滿蓄時間不同，模板分母仍為 3 秒；滿蓄後都改採 9%/秒。
 - 100 是用來說明倍率的假設基準，不是所有武器、敵人或蓄力等級的實際固定傷害。
-- 靜態原始碼推導，未做遊戲內傷害測試。文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 靜態原始碼推導，未做遊戲內傷害測試。文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - charge_time 會受 smite_attack_speed 影響；ChargeActionModule 也會乘 charge_up_time。Peril 會受 warp_charge_amount、warp_charge_over_time_amount、psyker_smite_cost_multiplier 等 stat/buff 影響。時間與百分比算例均是假設值。
 - 普通模式可先蓄力是由一般模式的更新條件推導；黏鎖模式必須取得有效目標才更新 charge/overload。移動、目標消失／改變、暈眩、網路同步或遊戲內版本差異可能改變實際流程。
 - 傷害 profile 的 power distribution 不是對所有敵人的固定傷害；實際值取決於蓄力等級、目標護甲/部位與 damage modifiers。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對；目前記錄為文字與實作差異待核對，不能據此判定任一描述錯誤。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對；目前記錄為文字與實作差異待核對，不能據此判定任一描述錯誤。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`681e4980`。
-- 核對到的繁中原文以顱腦崩裂作為 Brain Rupture 名稱，並以參數呈現傷害增幅；固定來源確認倍率為 1.5。文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 核對到的繁中原文以顱腦崩裂作為 Brain Rupture 名稱，並以參數呈現傷害增幅；固定來源確認倍率為 1.5。文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 
 ## 圖示來源
 

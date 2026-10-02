@@ -9,9 +9,9 @@
 
 ## 原始碼確認與程式推導
 
-主增益的 on_hit 分支先要求 hit_weakspot。只有 attack_result=died 且 attack_type=ranged 時新增3層；其他弱點命中僅在已有層數時刷新，沒有再排除近戰。每層 ranged_finesse_modifier_bonus=0.075 由統一 finesse 結算用於遠程爆擊或弱點額外部分；reload_speed=0.01。不能寫成非致死弱點命中也新增層數，或只增加弱點傷害。
+主增益的 on_hit 分支先要求 hit_weakspot。只有 attack_result=died 且 attack_type=ranged 時新增3層；其他弱點命中僅在已有層數時重新計時，沒有再排除近戰。每層 ranged_finesse_modifier_bonus=0.075 由統一 finesse 結算用於遠距爆擊或弱點額外部分；reload_speed=0.01。不能寫成非致死弱點命中也新增層數，或只增加弱點傷害。
 
-stat_buff_stacking_count 將屬性層數限制在10；max_stacks_cap=31 是內部原始層數硬上限。超出的原始層數不提高傷害或裝填速度。duration=5、refresh_duration_on_stack=true、refresh_duration_on_remove_stack=true；共用移除函式在有效上限內移除一層後刷新起始時間，形成逐層衰減。高於有效上限的原始索引會先被清除，不能把31層當成31份增益。主文三層衰減算例避開溢位情況。
+stat_buff_stacking_count 將屬性層數限制在10；max_stacks_cap=31 是內部原始層數硬上限。超出的原始層數不提高傷害或裝填速度。duration=5、refresh_duration_on_stack=true、refresh_duration_on_remove_stack=true；共用移除函式在有效上限內移除一層後重設起始時間，形成逐層衰減。高於有效上限的原始索引會先被清除，不能把31層當成31份增益。主文三層衰減算例避開溢位情況。
 
 天賦 format_values 尚留 grace_time=6、grace_time_hit=3，但實際本增益使用5秒；沒有依移動直接消耗層數的分支。
 

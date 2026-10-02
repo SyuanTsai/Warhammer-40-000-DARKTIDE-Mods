@@ -11,7 +11,7 @@
 
 - 天賦 passive 套用 zealot_combat_ability_crits_reduce_cooldown。父 proc buff 監聽 on_hit 與 on_sweep_start；on_hit 只有 template_data.active 時才檢查 on_melee_crit_hit，且玩家須擁有 combat_ability。成功後將 active=false 並加入 zealot_crits_cooldown_buff；下一次 sweep_start 才重置 active=true。
 - 冷卻 buff duration=talent_settings.crits_grants_cd.duration=3.25 秒。start_func 設 timer=fixed time+1；update_func 每次 timer 到期恢復 1.0 點戰鬥技能資源並將 timer 加 1 秒。
-- 按每秒計時，在一次觸發後約 +1、+2、+3 秒有 3 筆；duration 3.25s 留有第三筆的時間。外部同 sweep 的多個暴擊不另開 buff。
+- 按每秒計時，在一次觸發後約 +1、+2、+3 秒有 3 筆；duration 3.25s 留有第三筆的時間。外部同 sweep 的多個爆擊不另開 buff。
 - 基礎自然回充與此額外 restore_ability_resource 並行，且充能資源池有上限。
 
 ## 原始碼依據
@@ -29,9 +29,9 @@
 ## 算例條件與待確認事項
 
 - **冷卻算例**：每秒額外恢復相當於 1 秒基礎冷卻的進度。單次完整效果通常在約第 1、2、3 秒各恢復一次，共額外 3 秒；自然回充正常時，這 3 秒合計約推進 6 秒冷卻。
-- 每次命中的暴擊機率、sweep 拆分方式及攻擊是否被遊戲判為 melee crit 影響觸發頻率。
+- 每次命中的爆擊機率、sweep 拆分方式及攻擊是否被遊戲判為 melee crit 影響觸發頻率。
 - buff 內部為 3.25 秒，但格式 num_decimals=0，不能只依介面整數顯示推出執行長度正好 3 秒。
-- 相同 buff 重複添加會刷新 duration，但自訂 timer 不由 refresh_func 重設；精確密集觸發下的 tick 相位會影響實際總回充。
+- 相同 buff 重複添加會重新計時 duration，但自訂 timer 不由 refresh_func 重設；精確密集觸發下的 tick 相位會影響實際總回充。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

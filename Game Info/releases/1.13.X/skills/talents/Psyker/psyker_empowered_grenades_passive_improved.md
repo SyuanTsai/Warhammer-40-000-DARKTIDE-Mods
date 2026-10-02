@@ -11,7 +11,7 @@
 
 - 此 modifier 複製 Empowered Psionics 的 proc_buff，將 proc_events.on_hit 從 0.10 替換成 talent_settings_3.spec_passive_2.empowered_chain_lightning_chance=0.15。
 - 共用 on_hit handler 另外執行 CheckProcFunctions.on_kill(params)；不是每次命中必然觸發，且只有成功擊殺才呼叫增加充能函式。
-- 若同時選 Overpowering Souls，精英擊殺改走保證充能的 on_kill 事件；一般 on_hit 路徑會排除該精英，避免同一精英擊殺另外再走 15% proc。
+- 若同時選 Overpowering Souls，菁英擊殺改走保證充能的 on_kill 事件；一般 on_hit 路徑會排除該菁英，避免同一菁英擊殺另外再走 15% proc。
 
 ## 原始碼依據
 
@@ -27,7 +27,7 @@
 - **機率算例**：每次都有空位可儲存時，100 次擊殺的期望取得次數由 100 × 10% = 10 次，提高至 100 × 15% = 15 次。隨機結果不保證剛好等於期望值。
 - 如果充能已滿，成功 proc 會受 charge cap 限制而不增加可儲存層數。
 - 期望值例子假設每次擊殺有空位且機率獨立；遊戲隨機結果不保證平均值。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

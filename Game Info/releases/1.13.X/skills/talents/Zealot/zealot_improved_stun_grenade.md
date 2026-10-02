@@ -12,7 +12,7 @@
 - Talent definition 的 format_values.radius 讀取 stat_buffs.explosion_radius_modifier_shock；buff 設定把該 stat 設為 0.5。
 - shock_grenade explosion template 的 radius=8、close_radius=2、min_radius=4、min_close_radius=2。Explosion.apply_stat_radius_modifier 以原值 + (stat_buff−1) 後乘半徑，故倍率為 1.5；最大半徑 12、近距半徑 3、最小半徑 6、最小近距半徑 3。
 - shock grenade 投射物引信為 1.5 秒並使用 shock_grenade explosion template；能力上限從 talent_settings_2.grenade.max_charges 讀取，設定值為 3。
-- 命中附加 shock_grenade_interval：duration=8、max_stacks=1、max_stacks_cap=1、刷新持續時間；interval 設定範圍為 0.3–0.8 秒，週期傷害為 electrocution。
+- 命中附加 shock_grenade_interval：duration=8、max_stacks=1、max_stacks_cap=1、重設持續時間；interval 設定範圍為 0.3–0.8 秒，週期傷害為 electrocution。
 - 電擊週期以 DEFAULT_POWER_LEVEL=500、attack=8，無護甲 ADM=.5，推得隔離傷害 20 × (500 × 8 / 10000) × .5=4；防彈 ADM=1 時為 8。impact=100 用於踉蹌計算，不能混入生命傷害。
 
 ## 原始碼依據
@@ -41,13 +41,13 @@
 - 投出 1 枚後若剩 2 枚，該升級不會把剩餘充能提高到 3 以上；基礎上限仍為 3。
 - 來源的 radius 數值是爆炸模板半徑設定；實際命中仍依爆炸系統的目標檢測及距離計算。
 - 0.3–0.8 秒是週期 interval 的設定範圍，不是保證每個敵人每次都按固定相同間隔受傷。
-- 被排除的是週期電擊傷害對已 staggered 的 Poxwalker Bomber；不要把此例外擴大寫成該敵人完全免疫手雷的爆炸或控制。
+- 被排除的是週期電擊傷害對已 staggered 的 Poxwalker Bomber；不要把此例外擴大寫成該敵人完全免疫手榴彈的爆炸或控制。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`35fbc631`。
-- Build 25606770 的繁中和英文都說明震撼手雷及其升級範圍，沒有可確認的明確譯錯。
+- Build 25606770 的繁中和英文都說明震撼手榴彈及其升級範圍，沒有可確認的明確譯錯。
 
 ## 圖示來源
 

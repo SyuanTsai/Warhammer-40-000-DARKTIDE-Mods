@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-buff 同時設定 melee_critical_strike_chance = 0.10 與 melee_finesse_modifier_bonus = 0.25。共用公式將近戰 finesse bonus 加入暴擊／弱點 finesse modifier，而非直接乘整筆傷害。算例：既有 finesse component 40 × (1+.25)=50。[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1925-L1966) → [buff 數值](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1012-L1019) → [共用 finesse 傷害計算](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L782)。
+buff 同時設定 melee_critical_strike_chance = 0.10 與 melee_finesse_modifier_bonus = 0.25。共用公式將近戰 finesse bonus 加入爆擊／弱點 finesse modifier，而非直接乘整筆傷害。算例：既有 finesse component 40 × (1+.25)=50。[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1925-L1966) → [buff 數值](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1012-L1019) → [共用 finesse 傷害計算](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L782)。
 
 ## 原始碼依據
 

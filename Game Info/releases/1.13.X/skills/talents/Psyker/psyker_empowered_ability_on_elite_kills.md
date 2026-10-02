@@ -10,7 +10,7 @@
 ## 原始碼確認與程式推導
 
 - modifier 啟用 psyker_empowered_grenades_stack_on_elite_kills special rule。Buff 初始化時讀取此 flag；on_kill handler 要求 flag 為 true 且 params.tags.elite 才增加一層。
-- 基礎 on_hit handler 先確認是擊殺；若 elite guarantee flag 開啟且該擊殺具有 elite tag，會 return，避免精英再觸發一般機率路徑。其他擊殺仍由基礎 10% 路徑判斷。
+- 基礎 on_hit handler 先確認是擊殺；若 elite guarantee flag 開啟且該擊殺具有 elite tag，會 return，避免菁英再觸發一般機率路徑。其他擊殺仍由基礎 10% 路徑判斷。
 - 增加充能共用 clamped charge counter；滿層時保證事件不會超過設定上限。
 
 ## 原始碼依據
@@ -25,10 +25,10 @@
 
 ## 算例條件與待確認事項
 
-- **層數算例**：原有 0 層時擊殺一名精英，變成 1 層；基礎上限為 1 層，已滿層時再擊殺不會變成 2 層。搭配充能完畢後，上限提高至 3 層。
-- 專家敵人與精英是不同 tag 判斷；此 modifier 的保證條件只讀 params.tags.elite。
+- **層數算例**：原有 0 層時擊殺一名菁英，變成 1 層；基礎上限為 1 層，已滿層時再擊殺不會變成 2 層。搭配充能完畢後，上限提高至 3 層。
+- 專家敵人與菁英是不同 tag 判斷；此 modifier 的保證條件只讀 params.tags.elite。
 - 充能上限另受 Charged Up modifier 影響。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

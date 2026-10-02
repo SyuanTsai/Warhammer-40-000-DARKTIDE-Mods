@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 目前樹節點掛載 `zealot_resist_death_leech` 被動與 `zealot_resist_death_staggers` special rule。`on_damage_dealt` 時只有玩家持有 `unkillable` 關鍵字才處理；恢復池按 `params.damage*0.007` 計算，近戰再乘3，因此每100傷害的比例為遠程/其他攻擊0.7生命、近戰2.1生命。
+- 目前樹節點掛載 `zealot_resist_death_leech` 被動與 `zealot_resist_death_staggers` special rule。`on_damage_dealt` 時只有玩家持有 `unkillable` 關鍵字才處理；恢復池按 `params.damage*0.007` 計算，近戰再乘3，因此每100傷害的比例為遠距/其他攻擊0.7生命、近戰2.1生命。
 - `heal_amount` 在被動啟動時設為0，符合條件的傷害會累積；生命值達最大值25%時不立即恢復。低於25%時，以 `max_health*0.25-current_health` 封頂後呼叫 `Health.add`。程式限制的是恢復後的目前生命值上限25%，不是總治療量上限；恢復池不會在恢復後扣除。
 - 致命觸發時，基礎 buff 讀取 `zealot_resist_death_staggers`，在玩家位置呼叫無傷害擊退爆炸；半徑3.5公尺、damage profile 為 `no_damage_knock`。
 - Holy Revenant 與 Zealous Pilgrim 同屬 `exclusive_group=resist_death_1`，兩節點互斥。

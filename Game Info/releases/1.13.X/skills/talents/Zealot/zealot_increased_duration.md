@@ -12,7 +12,7 @@
 - 此天賦節點指向 PlayerAbilities.zealot_invisibility_improved；ability clone 的 invisibility buff 使用 duration=talent_settings.zealot_increased_duration.duration，設定為 5 秒。節點格式值 duration=2 表示比原本 duration=3 增加 2 秒。
 - zealot_invisibility.stop_func 檢查 special_rules.zealot_increased_duration，並在離開隱形時加上 zealot_decrease_threat_increase_backstab_damage。
 - 離開潛行後的 buff duration=5、stat_buffs.threat_weight_multiplier=0.25、backstab_damage=0.5。威脅欄位是倍率，0.25 表示保留四分之一威脅權重（降低 75%），不是增加 25% 威脅；背刺傷害則為 +50%。
-- 後續 buff max_stacks=1 並 refresh_duration_on_stack=true。再次離開潛行再次施加時可刷新其時間；此 buff 不修改 combat ability resource 或 invisibility 冷卻。
+- 後續 buff max_stacks=1 並 refresh_duration_on_stack=true。再次離開潛行再次施加時可重設其持續時間；此 buff 不修改 combat ability resource 或 invisibility 冷卻。
 
 ## 原始碼依據
 

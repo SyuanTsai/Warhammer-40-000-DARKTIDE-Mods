@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- talent 提供 adamant_companion_ranged_focus special rule 與 adamant_companion_focus_ranged stat buff。selector 讀取 special rule，對遠程目標 threatVal 加 ranged_focus_weight=10，並使用較大的 close/far distance。
+- talent 提供 adamant_companion_ranged_focus special rule 與 adamant_companion_focus_ranged stat buff。selector 讀取 special rule，對遠距目標 threatVal 加 ranged_focus_weight=10，並使用較大的 close/far distance。
 - stat buff 提供 companion_damage_vs_ranged=0.50。共用傷害計算只在 attacker 為 companion 且目標帶 far 或 ranged 分類時，讀取 owner 的此項 stat 並加入傷害修正。
 - 程式碼核對固定至公開 Aussiemon/Darktide-Source-Code SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；此公開程式碼與本機繁中／英文文字版本對應為1.13.1。
 
@@ -29,7 +29,7 @@
 ## 算例條件與待確認事項
 
 - 只計此天賦時，對 ranged 目標的 100 點基礎戰犬傷害成為 150 點；其他目標類型不套用這項專屬加成。
-- 選敵權重與地形、距離、仇恨、視線及其他目標權重共同比較；加權不保證牠只攻擊遠程敵人。
+- 選敵權重與地形、距離、仇恨、視線及其他目標權重共同比較；加權不保證牠只攻擊遠距敵人。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

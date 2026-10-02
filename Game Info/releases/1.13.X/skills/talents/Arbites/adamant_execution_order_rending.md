@@ -10,7 +10,7 @@
 ## 原始碼確認與程式推導
 
 - 標記目標死亡時，_execution_order_proc 在升級 special rule 存在時建立 adamant_execution_order_rending。效果持續 8 秒、最多 1 層，stat_buffs.rending_multiplier=0.10。
-- 共用 _rending_multiplier 讀取 attacker_stat_buffs.rending_multiplier，並與 brittleness、攻擊類型、暴擊、背刺、目標踉蹌等修正合併，最後 clamp 至 1。
+- 共用 _rending_multiplier 讀取 attacker_stat_buffs.rending_multiplier，並與 brittleness、攻擊類型、爆擊、背刺、目標踉蹌等修正合併，最後 clamp 至 1。
 - 程式碼核對固定至公開 Aussiemon/Darktide-Source-Code SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；此公開程式碼與本機繁中／英文文字版本對應為1.13.1。
 
 ## 原始碼依據
@@ -28,7 +28,7 @@
 ## 算例條件與待確認事項
 
 - 標記擊殺後 8 秒內撕裂修正額外取得 0.10；若共用公式已到 1.0 上限，此加成不會使最終值超過 1。
-- 撕裂不等同無條件增加 10% 最終傷害；收益視目標護甲與共用撕裂上限而定。
+- 撕裂不等同無條件增加 10% 最終傷害；增幅視目標護甲與共用撕裂上限而定。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

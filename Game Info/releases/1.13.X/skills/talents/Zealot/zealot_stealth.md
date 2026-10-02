@@ -11,7 +11,7 @@
 
 - PlayerAbilities.zealot_invisibility 以 zealot_invisibility buff 為 ability template，設定 cooldown=30、max_charges=1、resource_cost_per_charge=30、resource_regen_per_second=1；基礎 buff duration=3。
 - buff stat_buffs 明確為 movement_speed=0.2、critical_strike_chance=1、finesse_modifier_bonus=1.5、backstab_damage=1.5、flanking_damage=1.5、melee_rending_multiplier=1，並帶 invisible、allow_backstabbing、allow_flanking keywords。
-- buff 接收 on_shoot、on_hit、on_revive、on_rescue、on_pull_up、on_remove_net、on_action_start 等事件。proc 僅處理本人的事件，忽略列出的持續傷害類型；傷害為 0 且非 toughness_absorbed 結果會略過。action_name 篩選允許手雷與投擲小刀動作進入解除流程。啟動後前 0.5 秒另有 exit_grace 避免非傷害事件立即剝除。
+- buff 接收 on_shoot、on_hit、on_revive、on_rescue、on_pull_up、on_remove_net、on_action_start 等事件。proc 僅處理本人的事件，忽略列出的持續傷害類型；傷害為 0 且非 toughness_absorbed 結果會略過。action_name 篩選允許手榴彈與投擲小刀動作進入解除流程。啟動後前 0.5 秒另有 exit_grace 避免非傷害事件立即剝除。
 - 天賦格式值直接從 buff template 讀取；未裝延長天賦時，冷卻 30 秒。
 
 ## 原始碼依據
@@ -30,7 +30,7 @@
 
 - **靈巧傷害算例**：先固定攻擊種類、部位與護甲，只看靈巧加成；基礎部分 100、弱點／爆擊額外部分 50 時，由 150 變成 100 + 50 × (1 + 150%) = 225，整次增加 50%。額外部分若為 100，則由 200 變成 350，增加 75%。背刺與撕裂等其他因素另算。
 - **移速算例**：基礎 5 公尺／秒、沒有其他修正時，變成 5 × 1.2 = 6 公尺／秒。
-- 這些是 stat modifier，不能直接相加成一個總傷害倍率；暴擊、靈巧、背刺、側襲及撕裂在不同結算條件／階段生效。
+- 這些是 stat modifier，不能直接相加成一個總傷害倍率；爆擊、靈巧、背刺、側襲及撕裂在不同結算條件／階段生效。
 - 程式中的 proc filters 表明，特定傷害類型、零傷害結果、他人造成的事件及未允許的 action_name 可能不會使潛行退出；以簡述涵蓋主要行為，避免把所有事件都當成同一觸發。
 - 冷卻恢復可由其他天賦返還或加速；30 秒是未受額外修正的基礎資源成本與自然恢復估算。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。

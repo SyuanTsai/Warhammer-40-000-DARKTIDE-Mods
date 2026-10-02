@@ -10,7 +10,7 @@
 ## 原始碼確認與程式推導
 
 - 本配方 cost=max_points，因此只購買一次，並非可重複點選的等級數。已選的前置配方仍同時生效；各節點效果依 stat 類型加算或乘算。
-- 每個選中配方各建立一個broker_syringe_toughness_restore，首次有效更新呼叫replenish_percentage(.0625)。first_time_affected=false時預先標為procced，場域同次反覆進出不會一直給首次回復。倒地時暫緩此一次回復。
+- 每個選中配方各建立一個broker_syringe_toughness_restore，首次有效更新呼叫replenish_percentage(.0625)。first_time_affected=false時預先標為procced，場域同次反覆進出不會一直給首次恢復。倒地時暫緩此一次恢復。
 - toughness_replenish_modifier每節點+.05，damage_taken_multiplier每節點.96；前者相加、後者相乘。recover_percentage_toughness會再乘total recovery modifier且限制於韌性缺額。
 
 ## 原始碼依據
@@ -31,7 +31,7 @@
 
 - **減傷算例**：從彈幕 I 選到本節點，共 2 項減傷相乘。原本承受 100 點時，變成 100 × 0.96^2 ≈ 92.160 點。
 - **恢復算例**：最大韌性 100，前置配方與本節點的恢復加成都生效時，使用後恢復 100 × (2 × 6.25%) × (1 + 2 × 5%) = 13.75 點；實際仍受缺額限制。
-- 一次回復算例假設配方恢復修正已套用且玩家未倒地；實際同步與套用時序未以遊戲驗證。
+- 一次恢復算例假設配方恢復修正已套用且玩家未倒地；實際同步與套用時序未以遊戲驗證。
 - 同一使用者的配方由 syringe_broker_buff 讀取並共同套用；場域分享時依提供者配方，外部控制的持續時間另按場域設定。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 

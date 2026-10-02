@@ -38,7 +38,7 @@
 ## 原文核對
 
 - 對應 hash：`cae1c616`。
-- 繁中寫「每層獲得…韌性恢復和…減傷」，英文寫「Each Stack grants … Toughness Replenishment and … Damage Reduction」；兩種文字都使用未指明傷害種類的減傷措辭。固定公開來源只降低韌性所受傷害，不降低生命值所受傷害；文本與程式來源皆為1.13.1；這項範圍差異待遊戲內核對，不單憑此判定翻譯錯誤。
+- 繁中寫「每層獲得…韌性恢復和…減傷」，英文寫「Each Stack grants … Toughness Replenishment and … Damage Reduction」；兩種文字都使用未指明傷害種類的減傷措辭。固定公開來源只降低韌性所受傷害，不降低生命值所受傷害；文字與程式來源皆為1.13.1；這項範圍差異待遊戲內核對，不單憑此判定翻譯錯誤。
 
 ## 圖示來源
 

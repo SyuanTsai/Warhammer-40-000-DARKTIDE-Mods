@@ -9,11 +9,11 @@
 
 ## 原始碼確認與程式推導
 
-- 設定 duration=8、max_stacks=3；每層 stat buffs 為 ranged_damage=0.05、ranged_critical_strike_chance=0.05、movement_speed=0.05。傷害與移動速度屬 additive_multiplier，遠程爆擊率是 value；buff 統計依 stack count 重複套用。
+- 設定 duration=8、max_stacks=3；每層 stat buffs 為 ranged_damage=0.05、ranged_critical_strike_chance=0.05、movement_speed=0.05。傷害與移動速度屬 additive_multiplier，遠距爆擊率是 value；buff 統計依 stack count 重複套用。
 - 標準取得條件在 on_kill 同時要求 attack_result=died、elite 或 special tag，以及 attack_type=ranged 或 damage_profile.count_as_ranged_attack。取得時加入 vultures_mark stack。
 - vultures_mark 設 refresh_duration_on_stack=true，沒有 refresh_duration_on_remove_stack；新增層重設共享計時。堆疊到期時，stack buff 的共同 duration 結束並清除剩餘層。若選 Patient Hunter，buff start_func 把 8 秒增加到 12 秒。
 - 滿層回韌性由 vultures_mark 自己監聽 on_kill；check 同時要求 at_max_stacks、elite/special kill、ranged kill，之後對 coherency_extension:in_coherence_units() 逐一呼叫 replenish_percentage(0.15)。
-- 特例路徑使用 BrokerBuffUtils 標記副手槽兩款 毒針手槍 對精英／專家造成的 ranged 命中；若被標記目標以 toxin 傷害在 DamageSettings.ranged_close_squared 內死亡，on_minion_death 也會加一層 mark。
+- 特例路徑使用 BrokerBuffUtils 標記副手槽兩款 毒針手槍 對菁英／專家造成的 ranged 命中；若被標記目標以 toxin 傷害在 DamageSettings.ranged_close_squared 內死亡，on_minion_death 也會加一層 mark。
 
 ## 原始碼依據
 
@@ -38,18 +38,18 @@
 
 ## 算例條件與待確認事項
 
-- **傷害算例**：無其他修正時，基礎遠程傷害 100 在 3 層下為 100×(1+3×0.05)=115；同階段已有 +20% 時為 100×(1+0.20+0.15)=135。
-- **爆擊率算例**：Broker 基礎 10% 加 3 層×5 個百分點，未計武器與其他修正為 25% 遠程爆擊率。
-- **回韌性算例**：最大韌性 100 且缺額至少 15 時，滿層遠程精英／專家擊殺回補 100×0.15=15 點。
-- 傷害與爆擊率示例未計武器、目標護甲、距離、命中部位及其他修正；遠程傷害加成併入傷害計算的加法項，爆擊機率則與遠程專屬及武器加成相加後限制在 0%–100%。
+- **傷害算例**：無其他修正時，基礎遠距傷害 100 在 3 層下為 100×(1+3×0.05)=115；同階段已有 +20% 時為 100×(1+0.20+0.15)=135。
+- **爆擊率算例**：Broker 基礎 10% 加 3 層×5 個百分點，未計武器與其他修正為 25% 遠距爆擊率。
+- **回韌性算例**：最大韌性 100 且缺額至少 15 時，滿層遠距菁英／專家擊殺回補 100×0.15=15 點。
+- 傷害與爆擊率示例未計武器、目標護甲、距離、命中部位及其他修正；遠距傷害加成併入傷害計算的加法項，爆擊機率則與遠距專屬及武器加成相加後限制在 0%–100%。
 - 滿層回補只由印記 buff 的 at_max_stacks + elite/special + ranged kill 條件觸發；未滿 3 層時擊殺不會回補。
-- 毒針手槍 毒素例外要求特定武器、槽位、先前標記及近距離毒素死亡條件；一般 ranged kill 的規則仍是直接擊殺精英或專家。
+- 毒針手槍 毒素例外要求特定武器、槽位、先前標記及近距離毒素死亡條件；一般 ranged kill 的規則仍是直接擊殺菁英或專家。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`5b5c21fe`。
-- 繁中與英文一致描述遠程擊殺精英／專家後取得印記、每層三項 5% 加成及滿層回韌性。程式另有 Needlepistol 近距離毒素死亡路徑，屬文字省略的特殊實作，不與標準描述衝突。
+- 繁中與英文一致描述遠距擊殺菁英／專家後取得印記、每層三項 5% 加成及滿層回韌性。程式另有 Needlepistol 近距離毒素死亡路徑，屬文字省略的特殊實作，不與標準描述衝突。
 
 ## 圖示來源
 

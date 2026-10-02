@@ -11,7 +11,7 @@
 
 - talent_settings_3.spec_passive_1.toughness_for_allies=0.2；modifier 開啟 special_rule psyker_empowered_grenades_toughness_on_attack。
 - 強化 buff 處理 Smite projectile／smite damage event 時先嘗試消耗充能；成功後若 modifier 生效，遍歷 coherency_extension:in_coherence_units() 並對每名單位 replenish_percentage(...,0.2)。
-- 連鎖閃電 start event 只在 charges>=1 時走韌性回復；charge 消耗留在 on_chain_lightning_finish。兩個事件都不依命中目標數重複回復。
+- 連鎖閃電 start event 只在 charges>=1 時走韌性恢復；charge 消耗留在 on_chain_lightning_finish。兩個事件都不依命中目標數重複恢復。
 
 ## 原始碼依據
 
@@ -29,7 +29,7 @@
 - 實際恢復量不能超過各單位當下的韌性缺口。
 - 被遍歷對象以協同系統傳回的 in_coherence_units 集合為準；此稿依天賦文字稱呼玩家及協同隊友，不枚舉各種協同資格邊界。
 - 需要先有靈能強化充能；沒有充能時不觸發這組強化韌性效果。
-- 文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

@@ -28,7 +28,7 @@
 
 - 在 20 層消耗時啟動 12 秒：+10% melee attack speed、+10% ranged attack speed、+10% critical strike chance。
 - 機制來源固定為公開 Aussiemon/Darktide-Source-Code SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；繁中、英文模板與程式來源皆為1.13.1；遊戲內最終顯示仍待核對。程式實作和文字措辭如有差異，先列文字與實作差異待核，不直接判為翻譯錯誤。
-- 這個 buff 與 Terminus 核心增益可同次啟動；最終攻擊速度與暴擊結果由共用 stat 與武器結算決定。
+- 這個 buff 與 Terminus 核心增益可同次啟動；最終攻擊速度與爆擊結果由共用 stat 與武器結算決定。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

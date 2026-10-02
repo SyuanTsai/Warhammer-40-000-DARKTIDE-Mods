@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- extra_max_amount_of_grenades=1，broker各手雷／飛彈launcher ability用stat_buff相加到max_charges。
+- extra_max_amount_of_grenades=1，broker各手榴彈／飛彈launcher ability用stat_buff相加到max_charges。
 
 ## 原始碼依據
 

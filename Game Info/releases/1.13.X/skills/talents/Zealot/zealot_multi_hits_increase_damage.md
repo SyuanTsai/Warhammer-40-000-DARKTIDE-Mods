@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_sweep_finish 直接把 params.num_hit_units 寫入 hits；lerp=clamp(hits/5,0,1)，melee_damage上限.05*5=.25。沒有duration，也沒有每次命中逐步增強當前揮擊的程式；揮擊結束才替換下一擊使用的值。
+- on_sweep_finish 直接把 params.num_hit_units 寫入 hits；lerp=clamp(hits/5,0,1)，melee_damage上限.05*5=.25。沒有duration，也沒有每次命中逐步增強目前揮擊的程式；揮擊結束才替換下一擊使用的值。
 
 ## 原始碼依據
 

@@ -2,8 +2,8 @@
 
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
-- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
-- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文本與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
+- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文字存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
+- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文字與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
 - 只有明確的效果方向、作用對象或數量／單位矛盾列為勘誤；省略機制或算例不算錯誤。
 
 - 覆蓋 86／86 個同鍵／hash 描述：6 項繁中勘誤、7 項跨來源待核、73 項未見明確矛盾。
@@ -101,21 +101,21 @@
 ## 投彈完畢！(Bombs Away!)
 
 - 描述鍵：`loc_talent_bonebreaker_grenade_super_armor_explosion_desc`；hash：`a06fe566`。
-- 結論：未見明確矛盾。同 hash a06fe566 的中英文都描述手雷箱擊中敵人後破開、在目標周圍散出手雷，且是基礎手雷箱的強化版；程式將基礎數量設為 6，數量修改器另加 3。傷害與引信數值是來源補充，不是原文逐字列出的內容。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- 結論：未見明確矛盾。同 hash a06fe566 的中英文都描述手榴彈箱擊中敵人後破開、在目標周圍散出手榴彈，且是基礎手榴彈箱的強化版；程式將基礎數量設為 6，數量修改器另加 3。傷害與引信數值是來源補充，不是原文逐字列出的內容。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_box_explodes.md)。
 
 <a id="ogryn_grenade_frag"></a>
 ## 破片炸彈(Frag Bomb)
 
 - 描述鍵：`loc_ability_ogryn_grenade_demolition_instakill_desc`；hash：`802d500b`。
-- 結論：未見明確矛盾。同 hash 802d500b 的繁中與英文均說明爆炸半徑 16 公尺、爆心傷害較高，並將必殺對象限定為人類大小且非連長。來源同時設定半徑 16／近距離 2，並將巨獸、連長與歐格林排除在即死標記之外；原文沒有提供具體傷害公式，不視為錯誤。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- 結論：未見明確矛盾。同 hash 802d500b 的繁中與英文均說明爆炸半徑 16 公尺、爆心傷害較高，並將必殺對象限定為人類大小且非連長。來源同時設定半徑 16／近距離 2，並將巨獸、連長與歐格林排除在即死標記之外；原文沒有提供具體傷害公式，不視為錯誤。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_grenade_frag.md)。
 
 <a id="ogryn_grenade_friend_rock"></a>
 ## 投石問路(Big Friendly Rock)
 
 - 描述鍵：`loc_ability_ogryn_friend_rock_desc`；hash：`45cf696a`。
-- 結論：未見明確矛盾。同 hash 45cf696a 的繁中與英文都描述單一目標投擲、對甲殼與不屈敵人效果較弱、每 45 秒取得一顆且最多持有 4 顆；能力設定直接確認 45 秒與 4 顆上限，投射物則使用直接命中傷害。未列出傷害公式屬省略，不據此判為翻譯錯誤。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- 結論：未見明確矛盾。同 hash 45cf696a 的繁中與英文都描述單一目標投擲、對甲殼與不屈敵人效果較弱、每 45 秒取得一顆且最多持有 4 顆；能力設定直接確認 45 秒與 4 顆上限，投射物則使用直接命中傷害。未列出傷害公式屬省略，不據此判為翻譯錯誤。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_grenade_friend_rock.md)。
 
 <a id="ogryn_replenish_rock_on_miss"></a>
@@ -129,98 +129,98 @@
 ## 超巨量傷害箱(Bigger Box of Hurt)
 
 - 描述鍵：`loc_talent_ogryn_big_box_of_hurt_more_bombs_desc`；hash：`858b20e9`。
-- 結論：未見明確矛盾。同 hash 858b20e9 的繁中與英文都只說釋出 3 顆手雷；天賦設定明確把 3 加到手雷箱的基礎 6 顆，因此本草稿將實際生成數寫為 9 顆。原文沒有重述基礎 6 顆屬資訊省略，不列為誤譯。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- 結論：未見明確矛盾。同 hash 858b20e9 的繁中與英文都只說釋出 3 顆手榴彈；天賦設定明確把 3 加到手榴彈箱的基礎 6 顆，因此本草稿將實際生成數寫為 9 顆。原文沒有重述基礎 6 顆屬資訊省略，不列為誤譯。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_big_box_of_hurt_more_bombs.md)。
 
 <a id="ogryn_melee_damage_coherency_improved"></a>
 ## 破骨者之環(Bonebreaker's Aura)
 
 - 描述鍵：`loc_talent_damage_aura_improved_new`；hash：`68da370d`。
-- 結論：未見明確矛盾。同 hash 68da370d 的繁中與英文都寫明你和協同盟友獲得近戰攻擊傷害加成，並指出此節點強化基礎近戰光環；設定值由基礎 7.5% 改為強化版 10%，因此不將兩者相加。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- 結論：未見明確矛盾。同 hash 68da370d 的繁中與英文都寫明你和協同盟友獲得近戰攻擊傷害加成，並指出此節點強化基礎近戰光環；設定值由基礎 7.5% 改為強化版 10%，因此不將兩者相加。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_melee_damage_coherency_improved.md)。
 
 <a id="ogryn_damage_vs_suppressed_coherency"></a>
 ## 優勝劣汰(Coward Culling)
 
 - 描述鍵：`loc_talent_ogryn_damage_vs_suppressed_new_desc`；hash：`4e68c42c`。
-- 結論：未見明確矛盾。同 hash 4e68c42c 的中英文都明列你與協同盟友對受壓制敵人的傷害加成，以及持有者造成的壓制數值；設定分別為 +20% 傷害與 +25% 壓制，兩者作用對象不同。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- 結論：未見明確矛盾。同 hash 4e68c42c 的中英文都明列你與協同盟友對受壓制敵人的傷害加成，以及持有者造成的壓制數值；設定分別為 +20% 傷害與 +25% 壓制，兩者作用對象不同。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_damage_vs_suppressed_coherency.md)。
 
 <a id="ogryn_toughness_regen_aura"></a>
 ## 跟緊我！(Stay Close!)
 
 - 描述鍵：`loc_talent_ogryn_toughness_regen_aura_desc`；hash：`89218b06`。
-- 結論：未見明確矛盾。同 hash 89218b06 的繁中與英文都說明你與協同盟友獲得韌性恢復加成，未宣稱光環會自動恢復韌性。原始設定提高的是恢復量修正，而自然恢復使用另一個速率屬性。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- 結論：未見明確矛盾。同 hash 89218b06 的繁中與英文都說明你與協同盟友獲得韌性恢復加成，未宣稱光環會自動恢復韌性。原始設定提高的是恢復量修正，而自然恢復使用另一個速率屬性。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_toughness_regen_aura.md)。
 
 <a id="ogryn_taunt_shout"></a>
 ## 忠誠守護者(Loyal Protector)
 
 - 描述鍵：`loc_ability_ogryn_taunt_shout_new_desc`；hash：`b6bbba98`。
-- 結論：未見明確矛盾。繁中原文寫「吸引他們的炮火」；英文原文更明確寫成讓其「只攻擊你」，但兩者指向嘲諷敵人、範圍與持續時間相同，沒有相反效果。3秒與6秒重複施放的文字也相符；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文寫「吸引他們的炮火」；英文原文更明確寫成讓其「只攻擊你」，但兩者指向嘲諷敵人、範圍與持續時間相同，沒有相反效果。3秒與6秒重複施放的文字也相符；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](ogryn_taunt_shout.md)。
 
 <a id="ogryn_longer_charge"></a>
 ## 不屈不撓(Indomitable)
 
 - 描述鍵：`loc_talent_ogryn_bull_rush_distance_desc`；hash：`64c5f9de`。
-- 結論：未見明確矛盾。繁中原文稱衝鋒距離「增加至24」並說「撞到巨獸後衝鋒停止」；英文也寫距離增加至該值、碰撞巨獸時停止。兩種原文都列出5秒攻速與移速加成，沒有數值或效果方向衝突；衝鋒期間的基礎被動屬實作補充。文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文稱衝鋒距離「增加至24」並說「撞到巨獸後衝鋒停止」；英文也寫距離增加至該值、碰撞巨獸時停止。兩種原文都列出5秒攻速與移速加成，沒有數值或效果方向衝突；衝鋒期間的基礎被動屬實作補充。文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](ogryn_longer_charge.md)。
 
 <a id="ogryn_special_ammo"></a>
 ## 貼身火力(Point-Blank Barrage)
 
 - 描述鍵：`loc_talent_ogryn_combat_ability_special_ammo_replenish_desc`；hash：`826d5678`。
-- 結論：未見明確矛盾。繁中原文與英文原文都寫明啟動時切換並裝填遠程武器、姿態期間提升射速及換彈速度、近距離增傷，並在結束時返還消耗彈藥的一半；所列冷卻也一致。免費射擊計數納入返還是程式的細節補充，不是兩種原文互相矛盾；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文與英文原文都寫明啟動時切換並裝填遠距武器、姿態期間提升射速及換彈速度、近距離增傷，並在結束時返還消耗彈藥的一半；所列冷卻也一致。免費射擊計數納入返還是程式的細節補充，不是兩種原文互相矛盾；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](ogryn_special_ammo.md)。
 
 <a id="ogryn_charge_toughness"></a>
 ## 跺殺之靴(Stomping Boots)
 
 - 描述鍵：`loc_talent_ogryn_toughness_on_bull_rush_desc`；hash：`59b32c78`。
-- 結論：未見明確矛盾。繁中原文「每次使用衝鋒成功命中敵人可恢復10%韌性」和英文原文「每名被衝鋒命中的敵人恢復10%韌性」都將回復綁定在衝鋒命中，數值一致。原文未區分最大韌性百分比或韌性缺口上限，這是恢復函式的實作細節；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文「每次使用衝鋒成功命中敵人可恢復10%韌性」和英文原文「每名被衝鋒命中的敵人恢復10%韌性」都將恢復綁定在衝鋒命中，數值一致。原文未區分最大韌性百分比或韌性缺口上限，這是恢復函式的實作細節；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](ogryn_charge_toughness.md)。
 
 <a id="ogryn_charge_applies_bleed"></a>
 ## 粉碎(Pulverise)
 
 - 描述鍵：`loc_talent_ogryn_bleed_on_bull_rush_desc`；hash：`5f1e4b89`。
-- 結論：未見明確矛盾。繁中原文「被衝鋒命中的敵人疊加5層流血」與英文原文「對衝鋒命中的敵人施加5層流血」指向同一觸發與層數；原文沒有說每個目標只觸發一次或傷害刻度，這些是實作補充而非翻譯矛盾。此配對的文本與公開原始碼皆為1.13.1；差異待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文「被衝鋒命中的敵人疊加5層流血」與英文原文「對衝鋒命中的敵人施加5層流血」指向同一觸發與層數；原文沒有說每個目標只觸發一次或傷害刻度，這些是實作補充而非翻譯矛盾。此配對的文字與公開原始碼皆為1.13.1；差異待遊戲內核對。
 - [原始碼推導與限制](ogryn_charge_applies_bleed.md)。
 
 <a id="ogryn_taunt_staggers_reduce_cooldown"></a>
 ## 再來(Go Again!)
 
 - 描述鍵：`loc_talent_ogryn_taunt_stagger_cd_description`；hash：`7bd31d11`。
-- 結論：未見明確矛盾。繁中原文「造成敵人暈眩使冷卻時間縮短」與英文原文「Staggering an Enemy replenishes Cooldown」都要求先使敵人踉蹌再回復戰鬥能力冷卻；實作以近戰或推擊踉蹌觸發1.5%。中文使用「暈眩」而英文用「Stagger」，但效果方向一致，沒有明確相反描述；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文「造成敵人暈眩使冷卻時間縮短」與英文原文「Staggering an Enemy replenishes Cooldown」都要求先使敵人踉蹌再恢復戰鬥能力冷卻；實作以近戰或推擊踉蹌觸發1.5%。中文使用「暈眩」而英文用「Stagger」，但效果方向一致，沒有明確相反描述；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](ogryn_taunt_staggers_reduce_cooldown.md)。
 
 <a id="ogryn_special_ammo_armor_pen"></a>
 ## 槍林彈雨(Hail of Fire)
 
 - 描述鍵：`loc_talent_ogryn_special_ammo_armor_pen_new_desc`；hash：`5f4e17cf`。
-- 結論：未見明確矛盾。繁中原文「附加15%撕裂效果並提高15%傷害」與英文原文「15% Rending and 15% Damage」都把兩項加成限定在姿態啟動時的遠程攻擊，數字與條件相符；裝甲倍率算例是把程式的撕裂消費端補出來，原文省略公式不構成翻譯矛盾。文本與程式來源皆為1.13.1；差異待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文「附加15%撕裂效果並提高15%傷害」與英文原文「15% Rending and 15% Damage」都把兩項加成限定在姿態啟動時的遠距攻擊，數字與條件相符；裝甲倍率算例是把程式的撕裂消費端補出來，原文省略公式不構成翻譯矛盾。文字與程式來源皆為1.13.1；差異待遊戲內核對。
 - [原始碼推導與限制](ogryn_special_ammo_armor_pen.md)。
 
 <a id="ogryn_special_ammo_fire_shots"></a>
 ## 集火射擊(Light 'em Up)
 
 - 描述鍵：`loc_talent_ogryn_special_ammo_fire_shots_new_desc`；hash：`a391c6e8`。
-- 結論：未見明確矛盾。繁中原文說遠程攻擊加4層、最多16層；英文原文同樣列出每次遠程攻擊加4層與16層上限，層數與適用期間一致。兩種原文都省略每0.5秒的傷害和到期衰減，不能因此判成翻譯錯誤；文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文說遠距攻擊加4層、最多16層；英文原文同樣列出每次遠距攻擊加4層與16層上限，層數與適用期間一致。兩種原文都省略每0.5秒的傷害和到期衰減，不能因此判成翻譯錯誤；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](ogryn_special_ammo_fire_shots.md)。
 
 <a id="ogryn_taunt_damage_taken_increase"></a>
 ## 重要干擾(Valuable Distraction)
 
 - 描述鍵：`loc_talent_ogryn_taunt_damage_taken_increase_description`；hash：`07b19158`。
-- 結論：未見明確矛盾。繁中原文說被忠誠守護者影響的敵人「承受所有來源的基礎傷害增加20%」；英文原文同樣說受影響敵人承受所有來源的基礎傷害增加20%。程式套用1.2承傷倍率與15秒刷新，是原文未展開的計算方式；兩種描述沒有明確衝突，文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文說被忠誠守護者影響的敵人「承受所有來源的基礎傷害增加20%」；英文原文同樣說受影響敵人承受所有來源的基礎傷害增加20%。程式套用1.2承傷倍率與15秒重新計時，是原文未展開的計算方式；兩種描述沒有明確衝突，文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](ogryn_taunt_damage_taken_increase.md)。
 
 <a id="ogryn_ranged_stance_toughness_regen"></a>
 ## 壯膽子彈(Bullet Bravado)
 
 - 描述鍵：`loc_talent_ogryn_special_ammo_toughness_on_shot_and_reload_desc`；hash：`626514ed`。
-- 結論：未見明確矛盾。繁中原文逐字列出每發子彈回復2.5%韌性、每次換彈回復15%；英文原文對應列出每發射擊與每次換彈的相同數值。姿態啟動的自動換彈也會送出換彈事件，是消費端補充；數字與觸發沒有翻譯矛盾。文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文逐字列出每發子彈恢復2.5%韌性、每次換彈恢復15%；英文原文對應列出每發射擊與每次換彈的相同數值。姿態啟動的自動換彈也會送出換彈事件，是消費端補充；數字與觸發沒有翻譯矛盾。文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](ogryn_ranged_stance_toughness_regen.md)。
 
 <a id="ogryn_taunt_restore_toughness"></a>
@@ -234,7 +234,7 @@
 ## 踐踏(Trample)
 
 - 描述鍵：`loc_talent_ogryn_ability_charge_trample_desc`；hash：`fd34bb5c`。
-- 結論：未見明確矛盾。繁中原文「命中的每個敵人都會使你獲得一層」與英文原文「for each enemy hit gain a stack」都按衝鋒命中敵人取得一層；兩種原文同樣列出每層傷害、10秒與20層上限，公式算例是將其轉成實際倍率，未發現明確矛盾。文本與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文「命中的每個敵人都會使你獲得一層」與英文原文「for each enemy hit gain a stack」都按衝鋒命中敵人取得一層；兩種原文同樣列出每層傷害、10秒與20層上限，公式算例是將其轉成實際倍率，未發現明確矛盾。文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](ogryn_charge_trample.md)。
 
 <a id="ogryn_leadbelcher_no_ammo_chance"></a>
@@ -248,7 +248,7 @@
 ## 麻木(Feel No Pain)
 
 - 描述鍵：`loc_talent_ogryn_carapace_armor_any_damage_desc`；hash：`cae1c616`。
-- 結論：跨來源待遊戲內核對。繁中寫「每層獲得…韌性恢復和…減傷」，英文寫「Each Stack grants … Toughness Replenishment and … Damage Reduction」；兩種文字都使用未指明傷害種類的減傷措辭。固定公開來源只降低韌性所受傷害，不降低生命值所受傷害；文本與程式來源皆為1.13.1；這項範圍差異待遊戲內核對，不單憑此判定翻譯錯誤。
+- 結論：跨來源待遊戲內核對。繁中寫「每層獲得…韌性恢復和…減傷」，英文寫「Each Stack grants … Toughness Replenishment and … Damage Reduction」；兩種文字都使用未指明傷害種類的減傷措辭。固定公開來源只降低韌性所受傷害，不降低生命值所受傷害；文字與程式來源皆為1.13.1；這項範圍差異待遊戲內核對，不單憑此判定翻譯錯誤。
 - [原始碼推導與限制](ogryn_carapace_armor.md)。
 
 <a id="ogryn_passive_heavy_hitter"></a>
@@ -262,7 +262,7 @@
 ## 痛楚爆發(Pained Outburst)
 
 - 描述鍵：`loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_new_desc`；hash：`d03260f0`。
-- 結論：跨來源待遊戲內核對。繁中寫「當…層數達…層以下時」，英文寫「reaches … stacks or below」，兩種本機文字都表示 5 層或以下。固定公開來源在失去一層後檢查內部層數，換算為玩家可見 4 層或更低；文本與程式來源皆為1.13.1；實際表現待遊戲內核對，不單憑此判定翻譯錯誤。
+- 結論：跨來源待遊戲內核對。繁中寫「當…層數達…層以下時」，英文寫「reaches … stacks or below」，兩種本機文字都表示 5 層或以下。固定公開來源在失去一層後檢查內部層數，換算為玩家可見 4 層或更低；文字與程式來源皆為1.13.1；實際表現待遊戲內核對，不單憑此判定翻譯錯誤。
 - [原始碼推導與限制](ogryn_carapace_armor_trigger_on_zero_stacks.md)。
 
 <a id="ogryn_carapace_armor_add_stack_on_push"></a>
@@ -290,7 +290,7 @@
 ## 好槍法(Good Shootin')
 
 - 描述鍵：`loc_talent_ogryn_critical_leadbelcher_desc`；hash：`c346583c`。
-- 結論：未見明確矛盾。繁中寫「觸發幸運子彈（且命中）的射擊必定暴擊」，英文寫「The shot that triggers Lucky Bullet is a guaranteed Critical (if it Hits)」；兩者都要求該次射擊命中才形成暴擊命中。
+- 結論：未見明確矛盾。繁中寫「觸發幸運子彈（且命中）的射擊必定暴擊」，英文寫「The shot that triggers Lucky Bullet is a guaranteed Critical (if it Hits)」；兩者都要求該次射擊命中才形成爆擊命中。
 - [原始碼推導與限制](ogryn_leadbelcher_crits.md)。
 
 <a id="ogryn_blo_ally_ranged_buffs"></a>
@@ -298,7 +298,7 @@
 
 - 描述鍵：`loc_talent_ogryn_blo_ally_ranged_buffs_desc`；hash：`99f32156`。
 - 結論：繁中描述錯誤。繁中寫「幸運子彈命中時」，英文寫「on Lucky Bullet」；固定來源只檢查是否觸發幸運子彈，不檢查是否命中。繁中因此多出命中條件。
-- 繁中原文短引：幸運子彈命中時，自身與協同中的盟友的遠程傷害提高{ranged_damage:%s}，持續{duration:%s}秒。
+- 繁中原文短引：幸運子彈命中時，自身與協同中的盟友的遠距傷害提高{ranged_damage:%s}，持續{duration:%s}秒。
 - 同源英文：{ranged_damage:%s} Ranged Damage to you and Allies in Coherency on Lucky Bullet. Lasts {duration:%s}s.
 - [原始碼推導與限制](ogryn_blo_ally_ranged_buffs.md)。
 
@@ -534,8 +534,8 @@
 ## 主宰(Dominate)
 
 - 描述鍵：`loc_talent_ogryn_rending_on_elite_kills_desc`；hash：`4203de9c`。
-- 結論：繁中描述錯誤。同一占位符格式為百分比，繁中卻加上「倍撕裂」，英文無倍數單位；把15%撕裂寫成倍數會誤導。
-- 繁中原文短引：擊殺精英敵人後持續{rending_multiplier:%s}倍撕裂{duration:%s}秒。
+- 結論：繁中描述錯誤。同一預留符號格式為百分比，繁中卻加上「倍撕裂」，英文無倍數單位；把15%撕裂寫成倍數會誤導。
+- 繁中原文短引：擊殺菁英敵人後持續{rending_multiplier:%s}倍撕裂{duration:%s}秒。
 - 同源英文：{rending_multiplier:%s} Rending for {duration:%s}s on Elite Kill.
 - [原始碼推導與限制](ogryn_rending_on_elite_kills.md)。
 

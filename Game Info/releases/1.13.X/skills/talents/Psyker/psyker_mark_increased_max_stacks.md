@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- start_func 優先選 increased_stacks 變體；clone 基礎加成後 max_stacks=25，其餘 damage=.01、critical_strike_damage=.02、weakspot_damage=.025、duration=5 與刷新旗標不變。
+- start_func 優先選 increased_stacks 變體；clone 基礎加成後 max_stacks=25，其餘 damage=.01、critical_strike_damage=.02、weakspot_damage=.025、duration=5 與重新計時旗標不變。
 
 ## 原始碼依據
 

@@ -9,7 +9,7 @@
 ## 原始碼確認與程式推導
 
 - ogryn_passive_revive以interactiontype pull_up/remove_net/rescue/revive判斷，同時提供uninterruptible與push_speed_modifier=-.9。
-- Push共用結算把推動速度乘push_speed_modifier；這是角色被推動的速度，不是你推擊敵人的動作速度。舊ogryn_base_passive_revive的25%revive/assist不在當前基礎列表。
+- Push共用結算把推動速度乘push_speed_modifier；這是角色被推動的速度，不是你推擊敵人的動作速度。舊ogryn_base_passive_revive的25%revive/assist不在目前基礎列表。
 
 ## 原始碼依據
 

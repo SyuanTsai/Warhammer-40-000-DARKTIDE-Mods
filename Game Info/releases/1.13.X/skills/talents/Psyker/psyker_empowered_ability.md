@@ -13,7 +13,7 @@
 - smite_damage+.5與同階段damage加算，smite_damage_multiplier=1.5來自顱腦崩裂本身，是另一乘算項。smite_attack_speed+.5由ActionSmiteTargeting使用charge_time/attack_speed，故時間除以1.5；天賦format_values稱施放時間減半，與執行公式有落差。
 - Assail強化先由weapon template keyword選擇piercing projectile，普通首目標attack distribution225改350、瞄準380改500；attack/impact cleave由2改4，各命中順序的attack distribution另有不同，不是所有目標固定相同增幅。這些power distribution值需經共用傷害結算，不直接視為最終傷害。
 - ActionSpawnProjectile在fire_time付款前發現psyker_empowered_grenade且action_settings.psyker_smite時跳過_pay_for_projectile，但仍_proc_buffs；因此免除本次投擲次數和反噬付款，on_shoot_projectile仍讓內部強化charges減1。技能說明「不耗充能」與扣強化層並不矛盾，兩者是不同資源。
-- chain_lightning_damage+2與一般傷害同階段加算；chain_lightning_jump_time_multiplier=.5雖被宣告，但chain_lightning.lua494寫為chain_settings.jump_time or DEFAULT_JUMP_TIME * stat_buff_jump_time。當前快放、蓄力及直接尋敵模板均明定jump_time=.3，因此此路徑取.3，不套用.5；ActionChainLightning以回傳值設下一次跳躍時間。不能把.3×.5=.15當成本版已生效結果。
+- chain_lightning_damage+2與一般傷害同階段加算；chain_lightning_jump_time_multiplier=.5雖被宣告，但chain_lightning.lua494寫為chain_settings.jump_time or DEFAULT_JUMP_TIME * stat_buff_jump_time。目前快放、蓄力及直接尋敵模板均明定jump_time=.3，因此此路徑取.3，不套用.5；ActionChainLightning以回傳值設下一次跳躍時間。不能把.3×.5=.15當成本版已生效結果。
 
 ## 原始碼依據
 

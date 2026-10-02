@@ -11,7 +11,7 @@
 
 - 天賦 special_rule ogryn_combat_armor_pierce 使姿態 start_func 加入 armor_pierce proc buff；該 buff 在姿態12秒內將 shared settings 的0.15寫入 ranged_damage 與 ranged_rending_multiplier。
 - 撕裂消費端 damage_calculation._rending_multiplier 將 ranged_rending_multiplier 納入攻擊者總撕裂；其後按目標護甲類型套用 rending_armor_type_multiplier。armored 類型的倍率為1、overdamage係數為0.25。
-- 一般未另設攻擊護甲倍率時，power_level_settings.default_armor_damage_modifier 對 armored attack 為0.5。無其他撕裂時，新增0.15後 armor_damage_modifier_lost=0.5，大於 rending_multiplier=0.15，公式走 armor_damage_modifier+rending_multiplier，得到0.65；再獨立套用+15%遠程傷害。
+- 一般未另設攻擊護甲倍率時，power_level_settings.default_armor_damage_modifier 對 armored attack 為0.5。無其他撕裂時，新增0.15後 armor_damage_modifier_lost=0.5，大於 rending_multiplier=0.15，公式走 armor_damage_modifier+rending_multiplier，得到0.65；再獨立套用+15%遠距傷害。
 
 ## 原始碼依據
 
@@ -35,14 +35,14 @@
 ## 算例條件與待確認事項
 
 - **傷害算例**：假設基礎傷害 100、對甲殼護甲原倍率 0.5，且忽略其他修正，原本為 50 點；同時計入本天賦的增傷與撕裂後，100 × 1.15 × (0.5 + 0.15) = 74.75 點。
-- 算例假設目標為裝甲類型、基礎護甲倍率0.5，且沒有其他撕裂、暴擊、弱點或傷害修正；不同武器的護甲倍率與其他屬性會改變結果。
+- 算例假設目標為裝甲類型、基礎護甲倍率0.5，且沒有其他撕裂、爆擊、弱點或傷害修正；不同武器的護甲倍率與其他屬性會改變結果。
 - 15%撕裂是撕裂計算的加成，不等於對所有護甲固定增加15%最終生命傷害。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`5f4e17cf`。
-- 繁中原文「附加15%撕裂效果並提高15%傷害」與英文原文「15% Rending and 15% Damage」都把兩項加成限定在姿態啟動時的遠程攻擊，數字與條件相符；裝甲倍率算例是把程式的撕裂消費端補出來，原文省略公式不構成翻譯矛盾。文本與程式來源皆為1.13.1；差異待遊戲內核對。
+- 繁中原文「附加15%撕裂效果並提高15%傷害」與英文原文「15% Rending and 15% Damage」都把兩項加成限定在姿態啟動時的遠距攻擊，數字與條件相符；裝甲倍率算例是把程式的撕裂消費端補出來，原文省略公式不構成翻譯矛盾。文字與程式來源皆為1.13.1；差異待遊戲內核對。
 
 ## 圖示來源
 

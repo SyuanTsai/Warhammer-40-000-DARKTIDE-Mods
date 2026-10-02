@@ -8,9 +8,9 @@
 
 ## 原始碼確認與程式推導
 
-- 巢都渣滓的 base_talents 預設選入 broker_ability_focus，指定 slot_combat_ability；天賦定義連到 PlayerAbilities.broker_ability_focus。該能力要求遠程武器，使用 broker_focus 能力模板，容量 1、每秒自然回充 1 點、每次消耗 45 點資源，並以 broker_focus_stance 作為冷卻暫停的追蹤效果。
+- 巢都渣滓的 base_talents 預設選入 broker_ability_focus，指定 slot_combat_ability；天賦定義連到 PlayerAbilities.broker_ability_focus。該能力要求遠距武器，使用 broker_focus 能力模板，容量 1、每秒自然回充 1 點、每次消耗 45 點資源，並以 broker_focus_stance 作為冷卻暫停的追蹤效果。
 - 按下能力鍵會執行 stance_change：切換至 slot_secondary、在動作起始消耗能力、補回韌性，並套用 broker_focus_stance。buff 持續 10 秒；其 stat_buffs 將 sprint_movement_speed 設為 +0.20、sprinting_cost_multiplier 設為 0，並附上 count_as_dodge_vs_ranged、suppression_immune 兩個關鍵字。
-- buff 開始時把遠程武器現有彈匣轉入備用彈藥、將彈匣裝滿，並暫時允許免費彈藥轉移；結束時關閉免費轉移、清出當前彈匣，再把其彈藥依一般規則轉回彈匣。這是能力期間可不扣備用彈藥裝填的來源。
+- buff 開始時把遠距武器現有彈匣轉入備用彈藥、將彈匣裝滿，並暫時允許免費彈藥轉移；結束時關閉免費轉移、清出目前彈匣，再把其彈藥依一般規則轉回彈匣。這是能力期間可不扣備用彈藥裝填的來源。
 - **亡命之徒**基礎版的擊殺處理不延長持續時間或標記敵人：共同 buff 的擊殺處理會先檢查 broker_focus_improved；沒有該強化特性便立即返回。
 
 ## 原始碼依據

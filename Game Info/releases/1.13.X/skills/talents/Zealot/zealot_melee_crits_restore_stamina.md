@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- on_hit配on_crit_melee，cooldown1，Stamina.add_stamina_percent(.1)依最大耐力回復再夾上限。
+- on_hit配on_crit_melee，cooldown1，Stamina.add_stamina_percent(.1)依最大耐力恢復再夾上限。
 
 ## 原始碼依據
 

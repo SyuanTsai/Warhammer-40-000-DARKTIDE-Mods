@@ -12,7 +12,7 @@
 - tag 死亡事件依 stacks_applied，對每名 in_coherence_units 成員加入對應數量的 allied_buff；CoherencySystem 的集合包含 owner，所以本人也能受益。
 - 基礎 template duration=10、max_stacks=4、refresh_duration_on_stack=true、damage=.025。另選集中火力改用 max_stacks=6 的複製模板，單層值仍為 .025。
 - 既有同名 buff 會增加層數並 set_start_time(t)，stat_buff_stacking_count 把有效層數限制於 max_stacks。再次擊倒標記目標是累加至上限，不是以新目標的較少層數覆蓋舊效果。
-- damage 是 additive_multiplier，N 層增加 .025N，與同階段一般、近戰／遠程等增傷相加。100×(1+.25+.025×4)=135；不能把原有125再乘1.10。
+- damage 是 additive_multiplier，N 層增加 .025N，與同階段一般、近戰／遠距等增傷相加。100×(1+.25+.025×4)=135；不能把原有125再乘1.10。
 
 ## 原始碼依據
 
@@ -34,11 +34,11 @@
 
 ## 遊戲本體繁中對照
 
-- 文本來源：本機Steam Build `25606770`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
+- 文字來源：本機Steam Build `25606770`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
 - 語系鍵：`loc_talent_veteran_improved_tag_dead_coherency_bonus_description`；hash：`df1f9c55`；繁中entry_index：`14467`；英文entry_index：`14468`。以資源＋hash配對，已確認兩語系此hash各一筆。
 - 繁中問題片段：「減傷{damage:%s}」；同版英文對照片段：`grant {damage:%s} Damage`。引文保留原始占位符，未冒充遊戲畫面的最終數字。
 - 判定：**明確繁中描述錯誤**。效果方向錯譯：同版英文為grant Damage，實作寫入damage=.025；不是damage_taken或toughness_damage_taken。
-- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文本只留本機，Git僅保存必要短引文與追溯資料。
+- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文字只留本機，Git僅保存必要短引文與追溯資料。
 - [完整比對範圍與版本限制](LOCALIZATION_COMPARISON.md)。
 
 - [公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第3487–3504行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L3487-L3504)

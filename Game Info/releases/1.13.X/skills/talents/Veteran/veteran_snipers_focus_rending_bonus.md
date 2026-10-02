@@ -24,7 +24,7 @@
 ## 百分比與實際傷害增幅
 
 - **程式推導**：達10層的buff給rending_multiplier=.15。玩家例只隔離這項撕裂；固定非爆擊、非弱點、護甲前傷害100、super_armor，無後續倍率。ADM=.5時50→65（30%），ADM=.8時80→95（18.75%）；ADM=.5且已有.1撕裂時60→75（25%）。
-- 實際使用常伴隨狙擊專注，但finesse僅在爆擊或弱點命中時結算，因此以上非finesse攻擊可隔離護甲階段。爆擊/弱點時須再加入狙擊專注及其他finesse加成，不能把15%撕裂當成整筆增傷或把30%當作完整配置的固定收益。
+- 實際使用常伴隨狙擊專注，但finesse僅在爆擊或弱點命中時結算，因此以上非finesse攻擊可隔離護甲階段。爆擊/弱點時須再加入狙擊專注及其他finesse加成，不能把15%撕裂當成整筆增傷或把30%當作完整配置的固定增幅。
 
 - [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2903–2910 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2903-L2910)
 - [scripts/settings/damage/armor_settings.lua，第 8–19 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/armor_settings.lua#L8-L19)

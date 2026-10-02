@@ -9,9 +9,9 @@
 
 ## 原始碼確認與程式推導
 
-- talent_settings 設 sub_2_kill_additional_grant=4、sub_2_kill_additional_elite_grant=10。啟用 extra_killing_blow_stacks special rule 後，on_hit handler 直接返回；on_kill handler先跑核心命中／暴擊給層，再加 4 層，若 CheckProcFunctions.on_elite_kill 為真再加 10 層。
-- 共用 proc check 要求 attack_type=melee，故此項只計近戰擊殺。on_elite_kill 同時要求 attack_result=died 及 params.tags.elite；它不把單有 special 標籤的擊殺視為精英。
-- 新增層仍加到核心的 broker_keystone_adrenaline_junkie_stack，遵守其 30 層上限、刷新計時、逐層衰退及達上限觸發狂暴規則。
+- talent_settings 設 sub_2_kill_additional_grant=4、sub_2_kill_additional_elite_grant=10。啟用 extra_killing_blow_stacks special rule 後，on_hit handler 直接返回；on_kill handler先跑核心命中／爆擊給層，再加 4 層，若 CheckProcFunctions.on_elite_kill 為真再加 10 層。
+- 共用 proc check 要求 attack_type=melee，故此項只計近戰擊殺。on_elite_kill 同時要求 attack_result=died 及 params.tags.elite；它不把單有 special 標籤的擊殺視為菁英。
+- 新增層仍加到核心的 broker_keystone_adrenaline_junkie_stack，遵守其 30 層上限、重設計時、逐層衰退及達上限觸發狂暴規則。
 
 ## 原始碼依據
 
@@ -29,15 +29,15 @@
 
 ## 算例條件與待確認事項
 
-- **擊殺算例**：一般非暴擊近戰擊殺為 1+4=5 層；一般暴擊近戰擊殺為 1+1+4=6 層；非暴擊精英擊殺為 1+4+10=15 層；暴擊精英擊殺為 1+1+4+10=16 層。
+- **擊殺算例**：一般非爆擊近戰擊殺為 1+4=5 層；一般爆擊近戰擊殺為 1+1+4=6 層；非爆擊菁英擊殺為 1+4+10=15 層；爆擊菁英擊殺為 1+1+4+10=16 層。
 - 層數算例假設核心 keystone 生效且尚未達 30 層上限；若同時選取其他 Adrenaline 特殊規則，命中層數會依其條件另外計算。
-- 精英 +10 由 elite 標籤判定；不等同於所有專家／special 敵人。
+- 菁英 +10 由 elite 標籤判定；不等同於所有專家／special 敵人。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`e0b9d68a`。
-- 繁中與英文都把額外層限定於擊殺，並排除非擊殺命中；程式另確認一般擊殺 +4、elite tag 擊殺再 +10，暴擊的核心額外層仍保留。
+- 繁中與英文都把額外層限定於擊殺，並排除非擊殺命中；程式另確認一般擊殺 +4、elite tag 擊殺再 +10，爆擊的核心額外層仍保留。
 
 ## 圖示來源
 

@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 當前節點一點，使用tier1的toughness_damage_taken_modifier=-.1；結算modifier與其他同階段修正相加，再乘toughness_damage_taken_multiplier。
+- 目前節點一點，使用tier1的toughness_damage_taken_modifier=-.1；結算modifier與其他同階段修正相加，再乘toughness_damage_taken_multiplier。
 
 ## 原始碼依據
 

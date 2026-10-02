@@ -9,7 +9,7 @@
 ## 原始碼確認與程式推導
 
 - 基礎能力max_charges3、only_uses_charges=true，投射物ogryn_grenade_box使用ogryn_grenade_box_impact，attack1850。
-- 雖然基礎投射物也宣告conditional_cluster，ProjectileDamageExtension只在擁有ogryn_basic_box_spawns_cluster時啟用；當前職業基礎清單沒有此關鍵字。
+- 雖然基礎投射物也宣告conditional_cluster，ProjectileDamageExtension只在擁有ogryn_basic_box_spawns_cluster時啟用；目前職業基礎清單沒有此關鍵字。
 - 此處限一般基礎配置；Hordes 的 hordes_buff_ogryn_basic_box_spawns_cluster 可另外授予 ogryn_basic_box_spawns_cluster，啟用基礎箱體的 conditional_cluster。不能將一般基礎配置的結論套用到所有模式。
 
 ## 原始碼依據
@@ -26,5 +26,5 @@
 ## 算例與待確認事項
 
 - **傷害算例**：只計箱體直接命中、未爆擊也未命中弱點，沒有其他加成時，無護甲目標為 1850 × 1 = 1850 點；甲殼護甲為 1850 × 0.15 = 277.5 點。
-- 傷害例不含部位、護甲額外減傷、暴擊、弱點與其他天賦；未做遊戲內傷害測量。
+- 傷害例不含部位、護甲額外減傷、爆擊、弱點與其他天賦；未做遊戲內傷害測量。
 - 本機文字 Build 25606770 與固定公開來源版本對應為1.13.1。

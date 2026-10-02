@@ -4,9 +4,9 @@
 
 ## 運作方式
 
-- 親自擊殺精英或專家敵人時，補充自己最大備彈量的 1%，每 5 秒最多觸發一次。
-- 最大備彈 400 發時，一次補充 `400 × 1% = 4 發`。不足一發的部分累積到後續補給；直接補入備彈，不會裝填。
-- 這份個人補給與拾荒者／生存專家光環分開計算。若1%被動與0.5%光環同次觸發，最大備彈400發時，本人合計得到 `400 × (1% + 0.5%) = 6 發`，仍受可補充彈量上限限制。
+- 親自擊殺菁英或專家敵人時，補充自己最大備用彈藥量的 1%，每 5 秒最多觸發一次。
+- 最大備用彈藥 400 發時，一次補充 `400 × 1% = 4 發`。不足一發的部分累積到後續補給；直接補入備用彈藥，不會裝填。
+- 這份個人補給與拾荒者／生存專家光環分開計算。若1%被動與0.5%光環同次觸發，最大備用彈藥400發時，本人合計得到 `400 × (1% + 0.5%) = 6 發`，仍受可補充彈量上限限制。
 
 ## 原始碼確認與程式推導
 
@@ -15,7 +15,7 @@
 
 - 職業基礎清單直接啟用 veteran_survivalist_passive，與光環不是同一個identifier。template使用on_kill、cooldown_duration=5；實際後一個check_proc_func覆蓋前者，檢查tags.elite or tags.special。on_kill本身由本人攻擊造成死亡時發送，params.tags包含目標分類。
 - 伺服器proc只對template_context.unit呼叫Ammo.add_to_all_slots(.01)，不分享給隊友。
-- 每槽floor(max_reserve×.01+carryover)，餘數保留；備彈上限允許到max_reserve+missing_clip。與光環共享每槽餘數記帳，但各自buff冷卻。
+- 每槽floor(max_reserve×.01+carryover)，餘數保留；備用彈藥上限允許到max_reserve+missing_clip。與光環共享每槽餘數記帳，但各自buff冷卻。
 - 名稱採識別碼的描述性暫譯；原定義殘留name="Increased Ranged Damage"，不能據此寫成另一份傷害加成。
 
 

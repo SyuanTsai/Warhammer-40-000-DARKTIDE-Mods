@@ -7,5 +7,5 @@
 
 | 定義 | 來源 | 處理 |
 |---|---|---|
-| `cryptic_force_field_health_damage_limit` | [天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L856-L875) | 保留技術盤點，不加入當前可選技能目錄 |
-| `cryptic_precision_stance_reload_speed_delayed` | [天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L373-L404) | 保留技術盤點，不加入當前可選技能目錄 |
+| `cryptic_force_field_health_damage_limit` | [天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L856-L875) | 保留技術盤點，不加入目前可選技能目錄 |
+| `cryptic_precision_stance_reload_speed_delayed` | [天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/cryptic_talents.lua#L373-L404) | 保留技術盤點，不加入目前可選技能目錄 |

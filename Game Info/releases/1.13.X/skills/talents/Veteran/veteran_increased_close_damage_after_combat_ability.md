@@ -37,11 +37,11 @@
 
 ## 遊戲本體繁中對照
 
-- 文本來源：本機Steam Build `25606770`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
+- 文字來源：本機Steam Build `25606770`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
 - 語系鍵：`loc_talent_veteran_ability_assault_desc`；hash：`1eb58318`；繁中entry_index：`2009`；英文entry_index：`2009`。以資源＋hash配對，已確認兩語系此hash各一筆。
 - 繁中問題片段：「近戰傷害加成」；同版英文對照片段：`Close Damage`。引文保留原始占位符，未冒充遊戲畫面的最終數字。
 - 判定：**明確繁中描述錯誤**。效果種類錯譯：Close Damage是依距離的damage_near，並非按近戰攻擊類型判斷的melee_damage。原文另稱離開潛行後才開始，與固定版本實作有差異，但此處只將近戰／近距離的同版語系差異列為勘誤。
-- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文本只留本機，Git僅保存必要短引文與追溯資料。
+- 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文字只留本機，Git僅保存必要短引文與追溯資料。
 - [完整比對範圍與版本限制](LOCALIZATION_COMPARISON.md)。
 
 - [公開依據：scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第2032–2047行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2032-L2047)

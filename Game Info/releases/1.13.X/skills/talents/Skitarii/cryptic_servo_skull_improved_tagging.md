@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 特長加入 cryptic_servo_skull_improved_tagging 規則。有效射擊命令需要頭骨存活、敵人存活，且頭骨處於 following、following_shooting 或 following_shooting_ability 狀態；一般遊戲需至少0.3份 combat_ability 電容量，training_grounds 不受最低門檻限制。開始下令時把頭骨設為 following_shooting_ability，並向頭骨加入 cryptic_servo_skull_tagging_buff；其持續時間2秒，minion_shoot_cooldown_modifier=0.15。射擊動作將冷卻乘以該值，因此冷卻剩15%（縮短85%，頻率約為原本6.67倍）。設定的完整使用成本為0.3份 combat_ability 電容量；已有同一加速效果時，程式依該效果的持續進度計算本次額外扣除值。所有這些電容量皆屬 combat_ability 資源，與噴火／醫療頭骨共用的 grenade_ability 使用次數分開。 minion_shoot_cooldown_modifier 為 multiplicative_multiplier；與永久強化0.5相乘，3秒×0.5×0.15=0.225秒。沒有既有效果時duration_progress回傳0，成本0.3；已有剩餘時長時依1-progress計價，再刷新2秒。
+- 特長加入 cryptic_servo_skull_improved_tagging 規則。有效射擊命令需要頭骨存活、敵人存活，且頭骨處於 following、following_shooting 或 following_shooting_ability 狀態；一般遊戲需至少0.3份 combat_ability 電容量，training_grounds 不受最低門檻限制。開始下令時把頭骨設為 following_shooting_ability，並向頭骨加入 cryptic_servo_skull_tagging_buff；其持續時間2秒，minion_shoot_cooldown_modifier=0.15。射擊動作將冷卻乘以該值，因此冷卻剩15%（縮短85%，頻率約為原本6.67倍）。設定的完整使用成本為0.3份 combat_ability 電容量；已有同一加速效果時，程式依該效果的持續進度計算本次額外扣除值。所有這些電容量皆屬 combat_ability 資源，與噴火／醫療頭骨共用的 grenade_ability 使用次數分開。 minion_shoot_cooldown_modifier 為 multiplicative_multiplier；與永久強化0.5相乘，3秒×0.5×0.15=0.225秒。沒有既有效果時duration_progress回傳0，成本0.3；已有剩餘時長時依1-progress計價，再重設2秒倒數。
 
 ## 原始碼依據
 

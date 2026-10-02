@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 伺服器 update 只檢查shooting或t<=shooting_end_time+.5，逐幀以.1*dt呼叫replenish_percentage。target_slot_secondary只用於is_active/HUD，不是執行恢復的必要條件；不把切換武器後.5秒尾段錯寫成必須持續握住遠程武器。
+- 伺服器 update 只檢查shooting或t<=shooting_end_time+.5，逐幀以.1*dt呼叫replenish_percentage。target_slot_secondary只用於is_active/HUD，不是執行恢復的必要條件；不把切換武器後.5秒尾段錯寫成必須持續握住遠距武器。
 
 ## 原始碼依據
 

@@ -11,7 +11,7 @@
 
 - broker_stimm_field_explode 規則讓 ProximityBrokerStimmField 在 destroy 收尾時檢查 is_job_completed；只有場域已達 life_time、工作正常完成時才生成 ExplosionTemplates.broker_stimm_field。未完成或取消的工作不通過該條件。
 - 爆炸半徑3公尺，damage_type=grenade_frag，使用一般/近距離傷害模板；profile on_damage_dealt 設 neurotoxin_interval_buff3=7。Attack.execute 僅在造成正傷害且有目標 buff extension 時處理傷害後 buff，再用 add_internally_controlled_buff_with_stacks 精確加入7層。
-- neurotoxin_interval_buff3 是毒素間隔 buff，duration=2.6秒、interval=0.35秒、最多30層、疊層刷新持續時間。7層是爆炸命中時加入的疊層數，不等於7次傷害或直接7倍傷害。
+- neurotoxin_interval_buff3 是毒素間隔 buff，duration=2.6秒、interval=0.35秒、最多30層、疊層重設持續時間。7層是爆炸命中時加入的疊層數，不等於7次傷害或直接7倍傷害。
 - 場域工作的結束會解除能力資源暫停；冷卻60秒自然充能從部署物工作結束後恢復。此爆炸一次性，不以冷卻額外扣除或縮短。
 
 ## 原始碼依據

@@ -2,8 +2,8 @@
 
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
-- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
-- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文本與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
+- 原文：本機 Steam Build 25606770，2026-10-02 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文字存於本版本 source/SteamBuild_25606770_1.13.1/，整個 Build 目錄受 Git 忽略。
+- 機制：Release 1.13.1／`7e662fcda16219d775b84af50322be2e9cd9d62e`。文字與程式來源皆為1.13.1；文字與實作的差異仍需遊戲內核對。
 - 只有明確的效果方向、作用對象或數量／單位矛盾列為勘誤；省略機制或算例不算錯誤。
 
 - 主天賦79組、起始說明1組與配方29組都已核對：配方描述由54個中英同hash的屬性／效果標籤組成，並依固定來源參數代入；未用名稱相近的文字代替。共2項明確繁中勘誤，均列在主頁對應技能下。
@@ -147,7 +147,7 @@
 ## 精進神射手(Gunslinger Improved)
 
 - 描述鍵：`loc_talent_broker_aura_gunslinger_improved_desc`；hash：`03a59c5c`。
-- 結論：未見明確矛盾。兩語皆說協同拾取分享10%；各人依容量換算是公式補充，特殊補給不讀modifier的程式例外留待場景驗證。
+- 結論：未見明確矛盾。兩語皆說協同撿取分享10%；各人依容量換算是公式補充，特殊補給不讀modifier的程式例外留待場景驗證。
 - [原始碼推導與限制](broker_aura_gunslinger_improved.md)。
 
 <a id="broker_coherency_melee_damage"></a>
@@ -168,7 +168,7 @@
 ## 強化亡命之徒(Enhanced Desperado)
 
 - 描述鍵：`loc_talent_broker_ability_focus_improved_desc`；hash：`a1148a57`。
-- 結論：未見明確中英矛盾。繁中與英文都描述遠程攻擊視同閃避、衝刺免耗耐力並加速、近距離標記與遠程擊殺延長；固定版本設定值與計時邏輯相符。針槍毒素的額外追蹤條件是程式補充，原文省略不作勘誤。
+- 結論：未見明確中英矛盾。繁中與英文都描述遠距攻擊視同閃避、衝刺免耗耐力並加速、近距離標記與遠距擊殺延長；固定版本設定值與計時邏輯相符。針槍毒素的額外追蹤條件是程式補充，原文省略不作勘誤。
 - [原始碼推導與限制](broker_ability_focus_improved.md)。
 
 <a id="broker_ability_stimm_field"></a>
@@ -203,35 +203,35 @@
 ## 沸騰之血(Forge's Bellow)
 
 - 描述鍵：`loc_talent_broker_ability_punk_rage_sub_3_desc_02`；hash：`aa1fa2de`。
-- 結論：未見中英翻譯差異（攻擊間隔百分比與程式值不相符）。繁中與英文皆稱攻擊間隔增加50%，因此沒有兩語反向翻譯。固定版本程式卻把敵人 melee_attack_speed 設為-0.5；按速度倒數，單計此效果攻擊間隔約變兩倍（增加100%），另有遠程攻擊不受此近戰欄位影響。故記錄程式與文字數值落差，不填翻譯勘誤。
+- 結論：未見中英翻譯差異（攻擊間隔百分比與程式值不相符）。繁中與英文皆稱攻擊間隔增加50%，因此沒有兩語反向翻譯。固定版本程式卻把敵人 melee_attack_speed 設為-0.5；按速度倒數，單計此效果攻擊間隔約變兩倍（增加100%），另有遠距攻擊不受此近戰欄位影響。故記錄程式與文字數值落差，不填翻譯勘誤。
 - [原始碼推導與限制](broker_ability_punk_rage_sub_3.md)。
 
 <a id="broker_ability_punk_rage_sub_4"></a>
 ## 碎骨打擊(Boiling Blood)
 
 - 描述鍵：`loc_talent_broker_ability_punk_rage_sub_4_desc`；hash：`43686b03`。
-- 結論：未見明確中英矛盾。繁中與英文都描述精英／怪物命中可延長1秒、遞減門檻延至30秒；程式證據確認特殊標籤命中使用該值。專家與隊長標籤也適用是程式補充，不是原文反向。
+- 結論：未見明確中英矛盾。繁中與英文都描述菁英／怪物命中可延長1秒、遞減門檻延至30秒；程式證據確認特殊標籤命中使用該值。專家與隊長標籤也適用是程式補充，不是原文反向。
 - [原始碼推導與限制](broker_ability_punk_rage_sub_4.md)。
 
 <a id="broker_ability_focus_sub_3"></a>
 ## 專注凝神(Focused Resolve)
 
 - 描述鍵：`loc_talent_broker_ability_focus_sub_3_desc`；hash：`5ba532cd`。
-- 結論：未見中英翻譯差異（觸發條件由程式補充）。繁中與英文都寫標記敵人擊殺恢復0.5秒、精英或專家恢復1秒、上限5秒，數值相符。固定版本程式的普通擊殺檢查是近距離遠程擊殺，沒有另外檢查標記旗標；針槍毒素死亡是有追蹤及距離條件的特例，原文省略不等於翻譯錯誤。
+- 結論：未見中英翻譯差異（觸發條件由程式補充）。繁中與英文都寫標記敵人擊殺恢復0.5秒、菁英或專家恢復1秒、上限5秒，數值相符。固定版本程式的普通擊殺檢查是近距離遠距擊殺，沒有另外檢查標記旗標；針槍毒素死亡是有追蹤及距離條件的特例，原文省略不等於翻譯錯誤。
 - [原始碼推導與限制](broker_ability_focus_sub_3.md)。
 
 <a id="broker_ability_focus_sub_2"></a>
 ## 精準獵殺(Pick Your Targets)
 
 - 描述鍵：`loc_talent_broker_ability_focus_sub_2_desc`；hash：`4946598e`。
-- 結論：未見明確中英矛盾。繁中與英文都寫專注期間遠程攻擊加撕裂，並由擊殺累積遠程傷害、最多5層；設定數值為撕裂0.15、每層遠程傷害0.03、上限5層。近距離檢查與針槍追蹤是程式細節補充。
+- 結論：未見明確中英矛盾。繁中與英文都寫專注期間遠距攻擊加撕裂，並由擊殺累積遠距傷害、最多5層；設定數值為撕裂0.15、每層遠距傷害0.03、上限5層。近距離檢查與針槍追蹤是程式細節補充。
 - [原始碼推導與限制](broker_ability_focus_sub_2.md)。
 
 <a id="broker_ability_stimm_field_sub_3"></a>
 ## 熟練部署(Practiced Deployment)
 
 - 描述鍵：`loc_talent_broker_ability_stimm_field_sub_3_desc`；hash：`88b27852`。
-- 結論：未見翻譯差異（程式以半秒輪詢觸發）。繁中與英文都表示取得可用興奮劑後可使能力準備就緒，觸發條件一致。固定版本實際以0.5秒間隔檢查，且只回復到充能上限；這是文案時序及充能上限補充，不構成中英矛盾。
+- 結論：未見翻譯差異（程式以半秒輪詢觸發）。繁中與英文都表示取得可用興奮劑後可使能力準備就緒，觸發條件一致。固定版本實際以0.5秒間隔檢查，且只恢復到充能上限；這是文案時序及充能上限補充，不構成中英矛盾。
 - [原始碼推導與限制](broker_ability_stimm_field_sub_3.md)。
 
 <a id="broker_ability_stimm_field_sub_1"></a>
@@ -259,28 +259,28 @@
 ## 腎上腺素狂暴(Adrenaline Frenzy)
 
 - 描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_desc`；hash：`b4493ff1`。
-- 結論：未見明確矛盾。繁中與英文一致描述近戰命中、暴擊額外層、2 秒失層、30 層門檻及 10 秒近戰攻速／傷害增益；實際層數與刷新細節由固定版本的 buff 消費邏輯補足。
+- 結論：未見明確矛盾。繁中與英文一致描述近戰命中、爆擊額外層、2 秒失層、30 層門檻及 10 秒近戰攻速／傷害增益；實際層數與重新計時細節由固定版本的 buff 消費邏輯補足。
 - [原始碼推導與限制](broker_keystone_adrenaline_junkie.md)。
 
 <a id="broker_keystone_vultures_mark_on_kill"></a>
 ## 兀鷲印記(Vulture's Mark)
 
 - 描述鍵：`loc_talent_broker_keystone_vultures_mark_on_kill_desc`；hash：`5b5c21fe`。
-- 結論：未見明確矛盾。繁中與英文一致描述遠程擊殺精英／專家後取得印記、每層三項 5% 加成及滿層回韌性。程式另有 Needlepistol 近距離毒素死亡路徑，屬文字省略的特殊實作，不與標準描述衝突。
+- 結論：未見明確矛盾。繁中與英文一致描述遠距擊殺菁英／專家後取得印記、每層三項 5% 加成及滿層回韌性。程式另有 Needlepistol 近距離毒素死亡路徑，屬文字省略的特殊實作，不與標準描述衝突。
 - [原始碼推導與限制](broker_keystone_vultures_mark_on_kill.md)。
 
 <a id="broker_keystone_chemical_dependency"></a>
 ## 化學性依賴(Chemical Dependency)
 
 - 描述鍵：`loc_talent_broker_keystone_chemical_dependency_desc`；hash：`e80edf15`。
-- 結論：未見明確矛盾。繁中與英文一致描述使用興奮劑取得層數、每層的技能冷卻收益、上限與逐層衰退；程式把收益實作為戰鬥技能資源回充倍率，並由共用 syringe event 同時支援直接使用及 Stimm Field。
+- 結論：未見明確矛盾。繁中與英文一致描述使用興奮劑取得層數、每層的技能冷卻增幅、上限與逐層衰退；程式把增幅實作為戰鬥技能資源回充倍率，並由共用 syringe event 同時支援直接使用及 Stimm Field。
 - [原始碼推導與限制](broker_keystone_chemical_dependency.md)。
 
 <a id="broker_keystone_chemical_dependency_sub_1"></a>
 ## 化學強化(Chem Enhanced)
 
 - 描述鍵：`loc_talent_broker_keystone_chemical_dependency_sub_1_desc`；hash：`3356ae07`。
-- 結論：未見明確矛盾。繁中與英文均表示每一層化學依賴性提升暴擊機率；程式值為每層 0.05，按層數加到通用暴擊率，而非暴擊傷害。
+- 結論：未見明確矛盾。繁中與英文均表示每一層化學依賴性提升爆擊機率；程式值為每層 0.05，按層數加到通用爆擊率，而非爆擊傷害。
 - [原始碼推導與限制](broker_keystone_chemical_dependency_sub_1.md)。
 
 <a id="broker_keystone_chemical_dependency_sub_2"></a>
@@ -301,14 +301,14 @@
 ## 兀鷲推擊(Vulture's Push)
 
 - 描述鍵：`loc_talent_broker_keystone_vultures_mark_aoe_stagger_desc`；hash：`d98831c7`。
-- 結論：未見明確矛盾。繁中與英文都描述遠程擊殺精英／專家時推開附近敵人；程式設定 3 公尺爆炸及中等踉蹌，沒有直接攻擊傷害。
+- 結論：未見明確矛盾。繁中與英文都描述遠距擊殺菁英／專家時推開附近敵人；程式設定 3 公尺爆炸及中等踉蹌，沒有直接攻擊傷害。
 - [原始碼推導與限制](broker_keystone_vultures_mark_aoe_stagger.md)。
 
 <a id="broker_keystone_vultures_mark_increased_duration"></a>
 ## 堅毅獵手(Patient Hunter)
 
 - 描述鍵：`loc_talent_broker_keystone_vultures_mark_increased_duration_desc`；hash：`2a61076a`。
-- 結論：未見明確矛盾。繁中與英文都將兀鷲印記持續時間列為 12 秒；程式以核心 8 秒加上 4 秒差額實作，且每次新增／刷新堆疊會重設共享計時。
+- 結論：未見明確矛盾。繁中與英文都將兀鷲印記持續時間列為 12 秒；程式以核心 8 秒加上 4 秒差額實作，且每次新增堆疊或重設持續時間會重設共享計時。
 - [原始碼推導與限制](broker_keystone_vultures_mark_increased_duration.md)。
 
 <a id="broker_keystone_vultures_mark_dodge_on_ranged_crit"></a>
@@ -322,7 +322,7 @@
 ## 腎上腺素刺客(Adrenaline Assassin)
 
 - 描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_1_desc`；hash：`02bab200`。
-- 結論：未見明確矛盾。繁中與英文都表示弱點命中額外給 2 層且一般近戰命中不再給基本層；原核心的暴擊額外層仍由同一處理流程保留。
+- 結論：未見明確矛盾。繁中與英文都表示弱點命中額外給 2 層且一般近戰命中不再給基本層；原核心的爆擊額外層仍由同一處理流程保留。
 - [原始碼推導與限制](broker_keystone_adrenaline_junkie_sub_1.md)。
 
 <a id="broker_keystone_adrenaline_junkie_sub_3"></a>
@@ -350,7 +350,7 @@
 ## 腎上腺素懲戒者(Adrenaline Smiter)
 
 - 描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_2_desc`；hash：`e0b9d68a`。
-- 結論：未見明確矛盾。繁中與英文都把額外層限定於擊殺，並排除非擊殺命中；程式另確認一般擊殺 +4、elite tag 擊殺再 +10，暴擊的核心額外層仍保留。
+- 結論：未見明確矛盾。繁中與英文都把額外層限定於擊殺，並排除非擊殺命中；程式另確認一般擊殺 +4、elite tag 擊殺再 +10，爆擊的核心額外層仍保留。
 - [原始碼推導與限制](broker_keystone_adrenaline_junkie_sub_2.md)。
 
 <a id="broker_passive_longer_dodges"></a>
@@ -378,7 +378,7 @@
 ## 打你的臉(In Your Face)
 
 - 描述鍵：`loc_talent_broker_passive_close_ranged_damage_desc`；hash：`be48df80`。
-- 結論：未見明確矛盾。繁中與英文的近遠端值及距離一致；兩文概括為遠程傷害，固定實作依手持遠程欄位啟用。此條件補充不當成明確誤譯。
+- 結論：未見明確矛盾。繁中與英文的近遠端值及距離一致；兩文概括為遠距傷害，固定實作依手持遠距欄位啟用。此條件補充不當成明確誤譯。
 - [原始碼推導與限制](broker_passive_close_ranged_damage.md)。
 
 <a id="broker_passive_restore_toughness_on_weakspot_kill"></a>
@@ -392,7 +392,7 @@
 ## 特提恩之聲(Voice of Tertium)
 
 - 描述鍵：`loc_talent_broker_passive_restore_toughness_on_close_ranged_kill_desc`；hash：`7f8728ae`。
-- 結論：未見明確矛盾。繁中與英文皆寫遠程擊殺及8%／15%恢復；兩者省略近距離限制，屬描述不完整，不列勘誤。
+- 結論：未見明確矛盾。繁中與英文皆寫遠距擊殺及8%／15%恢復；兩者省略近距離限制，屬描述不完整，不列勘誤。
 - [原始碼推導與限制](broker_passive_restore_toughness_on_close_ranged_kill.md)。
 
 <a id="broker_passive_ninja_grants_crit_chance"></a>
@@ -406,7 +406,7 @@
 ## 快速裝填(Speedloader)
 
 - 描述鍵：`loc_talent_broker_passive_reload_speed_on_close_kill_desc`；hash：`f9ccd2c5`。
-- 結論：未見明確矛盾。同源英文限定Close Ranged Kill；繁中省略遠程且參數位置不順，但仍可理解為近距離擊殺後加快換彈，依規則不將省略或措辭不佳判成明確勘誤。
+- 結論：未見明確矛盾。同源英文限定Close Ranged Kill；繁中省略遠距且參數位置不順，但仍可理解為近距離擊殺後加快換彈，依規則不將省略或措辭不佳判成明確勘誤。
 - [原始碼推導與限制](broker_passive_reload_speed_on_close_kill.md)。
 
 <a id="broker_passive_stun_immunity_on_toughness_broken"></a>
@@ -441,7 +441,7 @@
 ## 沒甚麼，只是擦傷(Tis but a Scratch)
 
 - 描述鍵：`loc_talent_broker_passive_replenish_toughness_on_ranged_toughness_damage_desc`；hash：`6f652e30`。
-- 結論：未見明確矛盾。兩語均描述遠程命中後恢復韌性；刷新與耗盡中止為補充，不列錯誤。
+- 結論：未見明確矛盾。兩語均描述遠距命中後恢復韌性；重新計時與耗盡中止為補充，不列錯誤。
 - [原始碼推導與限制](broker_passive_replenish_toughness_on_ranged_toughness_damage.md)。
 
 <a id="broker_passive_damage_on_reload"></a>
@@ -534,7 +534,7 @@
 ## 蓄力殲滅(Channelled Devastation)
 
 - 描述鍵：`loc_talent_broker_passive_crit_grants_damage_desc`；hash：`ef095720`。
-- 結論：未見明確矛盾。兩語均依當前爆擊機率產生近戰增傷，未見矛盾。
+- 結論：未見明確矛盾。兩語均依目前爆擊機率產生近戰增傷，未見矛盾。
 - [原始碼推導與限制](broker_passive_crit_grants_damage.md)。
 
 <a id="broker_passive_melee_cleave_on_melee_kill"></a>
@@ -569,7 +569,7 @@
 ## 連帶傷害(Splash Damage)
 
 - 描述鍵：`loc_talent_broker_passive_toxin_spread_on_kills_desc_02`；hash：`a94fd4a3`。
-- 結論：未見明確矛盾。兩語均為近戰擊殺精英後擴散；對已感染目標的2層門檻屬補充。
+- 結論：未見明確矛盾。兩語均為近戰擊殺菁英後擴散；對已感染目標的2層門檻屬補充。
 - [原始碼推導與限制](broker_passive_toxin_spread_on_kills.md)。
 
 <a id="broker_passive_increased_blitz_ammo"></a>
@@ -632,7 +632,7 @@
 ## 以小搏大(Punching Above One's Weight)
 
 - 描述鍵：`loc_talent_broker_passive_damage_vs_elites_monsters_desc`；hash：`a7b80936`。
-- 結論：未見明確矛盾。兩語皆為精英與怪物增傷，未見矛盾。
+- 結論：未見明確矛盾。兩語皆為菁英與怪物增傷，未見矛盾。
 - [原始碼推導與限制](broker_passive_damage_vs_elites_monsters.md)。
 
 <a id="broker_passive_increased_weakspot_damage"></a>
@@ -775,7 +775,7 @@
 | 組成描述鍵 / hash | 繁中原文 | 同源英文 |
 |---|---|---|
 | `loc_talent_stat_power_level` / `f8a49d31` | {power_level:%s}力量。 | {power_level:%s} Strength. |
-| `loc_talent_stat_critical_strike_chance` / `a4e46663` | {critical_strike_chance:%s}暴擊機率。 | {critical_strike_chance:%s} Critical Strike Chance. |
+| `loc_talent_stat_critical_strike_chance` / `a4e46663` | {critical_strike_chance:%s}爆擊機率。 | {critical_strike_chance:%s} Critical Strike Chance. |
 
 <a id="broker_stimm_combat_5c"></a>
 ## 獵鷹蕈劑 II(Vultoprene II)
@@ -787,7 +787,7 @@
 | 組成描述鍵 / hash | 繁中原文 | 同源英文 |
 |---|---|---|
 | `loc_talent_stat_power_level` / `f8a49d31` | {power_level:%s}力量。 | {power_level:%s} Strength. |
-| `loc_talent_stat_critical_strike_chance` / `a4e46663` | {critical_strike_chance:%s}暴擊機率。 | {critical_strike_chance:%s} Critical Strike Chance. |
+| `loc_talent_stat_critical_strike_chance` / `a4e46663` | {critical_strike_chance:%s}爆擊機率。 | {critical_strike_chance:%s} Critical Strike Chance. |
 
 <a id="broker_stimm_concentration_1"></a>
 ## 抗焦慮藥 I(Kalma I)
@@ -1014,7 +1014,7 @@
 
 | 組成描述鍵 / hash | 繁中原文 | 同源英文 |
 |---|---|---|
-| `loc_talent_buff_cooldown_on_ranged_kills` / `676aa37d` | 效果持續期間，遠程擊殺可獲得{cooldown:%s}冷卻時間恢復速度，持續{duration:%s}秒。 | While active, Ranged Kills grant {cooldown:%s} Ability Cooldown Regeneration for {duration:%s}s. |
+| `loc_talent_buff_cooldown_on_ranged_kills` / `676aa37d` | 效果持續期間，遠距擊殺可獲得{cooldown:%s}冷卻時間恢復速度，持續{duration:%s}秒。 | While active, Ranged Kills grant {cooldown:%s} Ability Cooldown Regeneration for {duration:%s}s. |
 
 <a id="broker_stimm_celerity_5b"></a>
 ## 反射(Reflex)
@@ -1034,8 +1034,8 @@
 
 - [橫衝直撞！](broker_ability_punk_rage.md)：兩語均寫壓制免疫，固定狀態未掛對應免疫；主頁只列能由程式確認的效果。
 - [熔爐怒吼](broker_ability_punk_rage_sub_2.md)：兩語寫敵人攻擊間隔增加50%；固定程式為攻速減50%，無其他修正時1秒動作變2秒。
-- [神佑興奮劑](broker_passive_stimm_cleanse_on_kill.md)：50%為停止判定門檻，最後一次回復可能越過門檻，並非強制把累計量截在50%。
-- [兀鷲閃避](broker_keystone_vultures_mark_dodge_on_ranged_crit.md)：原文概括所有攻擊；固定關鍵字只涵蓋近戰、採近戰規則的擒抱與遠程閃避判定，不代表所有傷害無效。
+- [神佑興奮劑](broker_passive_stimm_cleanse_on_kill.md)：50%為停止判定門檻，最後一次恢復可能越過門檻，並非強制把累計量截在50%。
+- [兀鷲閃避](broker_keystone_vultures_mark_dodge_on_ranged_crit.md)：原文概括所有攻擊；固定關鍵字只涵蓋近戰、採近戰規則的擒抱與遠距閃避判定，不代表所有傷害無效。
 - [狂熱](broker_stimm_concentration_5b.md)：顯示參數75%，固定版實際0.75×0.75=56.25%。
 - [集中藥](broker_stimm_concentration_5c.md)：顯示參數75%，固定版實際0.75×0.75=56.25%。
 

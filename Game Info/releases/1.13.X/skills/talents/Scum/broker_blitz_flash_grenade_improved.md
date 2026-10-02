@@ -9,9 +9,9 @@
 
 ## 原始碼確認與程式推導
 
-- 改良節點只替換PlayerAbility到5充能；原本base的quick_flash_grenade specialrule與blitz_charge_on_kill仍存在。改選飛彈／毒手雷會以identifier移除它們。
+- 改良節點只替換PlayerAbility到5充能；原本base的quick_flash_grenade specialrule與blitz_charge_on_kill仍存在。改選飛彈／毒手榴彈會以identifier移除它們。
 - 普通on_close_kill不限定melee；滿充能時函式不增加tracked_kills。針槍特例距離依params.attacking_unit計，不另驗證最後owner。
-- 爆炸近外圈attack distribution及ADM均0；碰撞另有impact profile，因此主文只說爆炸不傷害，不能說整顆手雷任何命中皆無傷。
+- 爆炸近外圈attack distribution及ADM均0；碰撞另有impact profile，因此主文只說爆炸不傷害，不能說整顆手榴彈任何命中皆無傷。
 
 ## 原始碼依據
 

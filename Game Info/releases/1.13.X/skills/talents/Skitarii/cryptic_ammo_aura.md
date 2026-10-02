@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 天賦加入 cryptic_coherency_empty 協同標記並對施放者掛載 cryptic_ammo_aura 被動，後者提供 toughness=25。該被動的 start_func 由伺服器列舉 Managers.player:human_players()，逐一給每位有存活玩家單位的玩家 cryptic_ammo_aura_effect；沒有檢查 coherency、距離或隊伍鏈。效果模板的每一階增加 ammo_reserve_capacity=0.15，stat buff 為 additive_multiplier。PlayerUnitWeaponExtension 將總倍率乘到各武器的目前及最大儲備彈藥，因此基礎倍率1加0.15後為1.15；例如101 × 1.15 = 116.15，向下取整為116發。後續加入任務的人類玩家也會由 player_spawned_func 接收效果。結束時程式移除曾給出的效果。現有本地天賦字串說「你與協同中的盟友」，但固定來源的彈藥效果分發是任務玩家範圍而非協同檢查；版本對應為1.13.1。 stepped_stat_buff 的 min_max_step_func回傳0,1，且各階表值均0.15，因此多來源仍只取單階15%，不是多名隊友各加15%。
+- 天賦加入 cryptic_coherency_empty 協同標記並對施放者掛載 cryptic_ammo_aura 被動，後者提供 toughness=25。該被動的 start_func 由伺服器列舉 Managers.player:human_players()，逐一給每位有存活玩家單位的玩家 cryptic_ammo_aura_effect；沒有檢查 coherency、距離或隊伍鏈。效果模板的每一階增加 ammo_reserve_capacity=0.15，stat buff 為 additive_multiplier。PlayerUnitWeaponExtension 將總倍率乘到各武器的目前及最大儲備用彈藥藥，因此基礎倍率1加0.15後為1.15；例如101 × 1.15 = 116.15，向下取整為116發。後續加入任務的人類玩家也會由 player_spawned_func 接收效果。結束時程式移除曾給出的效果。現有本地天賦字串說「你與協同中的盟友」，但固定來源的彈藥效果分發是任務玩家範圍而非協同檢查；版本對應為1.13.1。 stepped_stat_buff 的 min_max_step_func回傳0,1，且各階表值均0.15，因此多來源仍只取單階15%，不是多名隊友各加15%。
 
 ## 原始碼依據
 
@@ -35,7 +35,7 @@
 ## 原文核對
 
 - 對應 hash：`cc394399`。
-- 繁中描述列出自身韌性及自己與協同隊友的儲備彈藥增加。固定原始碼確認自身獲得25點韌性，且 ammo_reserve_capacity +15% 會發給全部人類玩家而無協同判斷；Build 25606770 版本對應為1.13.1，先記錄實作範圍差異，不判為錯譯。
+- 繁中描述列出自身韌性及自己與協同隊友的儲備用彈藥藥增加。固定原始碼確認自身獲得25點韌性，且 ammo_reserve_capacity +15% 會發給全部人類玩家而無協同判斷；Build 25606770 版本對應為1.13.1，先記錄實作範圍差異，不判為錯譯。
 
 ## 圖示來源
 

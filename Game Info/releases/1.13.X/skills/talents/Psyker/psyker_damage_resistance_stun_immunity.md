@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- damage_taken_multiplier=.9無條件；conditional keyword stun_immune 由current>=.97判定，從true變false時加入4秒buff，max_stacks1刷新。stun免疫不可推成抓取或所有控制免疫。
+- damage_taken_multiplier=.9無條件；conditional keyword stun_immune 由current>=.97判定，從true變false時加入4秒buff，max_stacks1重新計時。stun免疫不可推成抓取或所有控制免疫。
 
 ## 原始碼依據
 
