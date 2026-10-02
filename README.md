@@ -259,20 +259,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Markers Improved All-in-One](https://www.nexusmods.com/warhammer40kdarktide/mods/447)
     標記一體化 整合包
-- MOD 網站最後更新日期：Last updated 30 September 2026, 2:23AM
-- MOD 版本：2.15.4
-- MOD 檔案名稱：Markers Improved All-in-One 447 2.15.4 2026-09-29T18-23Z UszQnsmmV.zip
-- 手動維護最後下載日期：2026-09-30
+- MOD 網站最後更新日期：Last updated 01 October 2026, 4:14AM
+- MOD 版本：2.15.5
+- MOD 檔案名稱：Markers Improved All-in-One 447 2.15.5 2026-09-30T20-14Z 95Dkb5SI0.zip
+- 手動維護最後下載日期：2026-10-01
 - Nexus MOD ID: `447`
 - Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/447`
-- Nexus page version: `2.15.4`
-- Nexus last updated: `2026-09-29T18:23Z`
-- Main file ID: `8561`
-- Main file version: `2.15.4`
-- Main file uploaded at UTC: `2026-09-29T18:23Z`
-- Archive filename: `Markers Improved All-in-One 447 2.15.4 2026-09-29T18-23Z UszQnsmmV.zip`
-- Archive size bytes: `112576`
-- Archive SHA-256: `cb89d3c5409c16b9d9c7c144b3af7c153079f52ae425e19fb93cef443fe96297`
+- Nexus page version: `2.15.5`
+- Nexus last updated: `2026-09-30T20:14Z`
+- Main file ID: `8634`
+- Main file version: `2.15.5`
+- Main file uploaded at UTC: `2026-09-30T20:14Z`
+- Archive filename: `Markers Improved All-in-One 447 2.15.5 2026-09-30T20-14Z 95Dkb5SI0.zip`
+- Archive size bytes: `111841`
+- Archive SHA-256: `9d58cb7618ce3cb84bd57d4838d8c112ece79d5cf2d83d8353bec2fd4bfa8d84`
 - Acquisition method: `manual-queue`
 
 ### [Danger Zone](https://www.nexusmods.com/warhammer40kdarktide/mods/440)
@@ -492,20 +492,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - 原版 MOD：[Ovenproof's Scoreboard Plugin](https://www.nexusmods.com/warhammer40kdarktide/mods/241)
 - MOD 網站最後更新日期：Last updated 22 February 2024, 10:22AM
 - MOD 版本：1.4.2
-- Patch 網站最後更新日期：Last updated 29 September 2026, 11:25PM
-- Patch 版本：1.14.0
-- MOD 檔案名稱：Ovenproof's Scoreboard Plugin - Community Patch 514 1.14.0 2026-09-29T15-25Z oudzUunMy.zip
-- 手動維護最後下載日期：2026-09-30
+- Patch 網站最後更新日期：Last updated 01 October 2026, 12:52AM
+- Patch 版本：1.14.1
+- MOD 檔案名稱：OvenProof's Scoreboard Plugin - Community Patch 514 1.14.1 2026-09-30T16-52Z yonmho6gN.zip
+- 手動維護最後下載日期：2026-10-01
 - Nexus MOD ID: 514
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/514
-- Nexus page version: 1.14.0
-- Nexus last updated: 2026-09-29T15:25Z
-- Main file ID: 8539
-- Main file version: 1.14.0
-- Main file uploaded at UTC: 2026-09-29T15:25Z
-- Archive filename: Ovenproof's Scoreboard Plugin - Community Patch 514 1.14.0 2026-09-29T15-25Z oudzUunMy.zip
-- Archive size bytes: 39412
-- Archive SHA-256: c293876f2b9c39f1446920d2288668f99136746581e5c264aec416c9e255db8f
+- Nexus page version: 1.14.1
+- Nexus last updated: 2026-09-30T16:52Z
+- Main file ID: 8620
+- Main file version: 1.14.1
+- Main file uploaded at UTC: 2026-09-30T16:52Z
+- Archive filename: OvenProof's Scoreboard Plugin - Community Patch 514 1.14.1 2026-09-30T16-52Z yonmho6gN.zip
+- Archive size bytes: 39295
+- Archive SHA-256: 31e2e362440ac63e1b85a88e4afe28bb4a8462de21b8252e8c842a127333ef51
 - Acquisition method: manual-queue
 - GitHub :
 - Source=>  https://github.com/Backup158/DarktideOvenproofScoreboardPluginPatch
@@ -520,10 +520,21 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Better Hud Info View](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
     浩劫HUD資訊
-- MOD 網站最後更新日期：Last updated 19 July 2025, 9:22PM
-- MOD 版本：1.5
-- MOD 檔案名稱：better_hud_info_view-511-1-5-1752931365
-- 手動維護最後下載日期：2025-07-20
+- MOD 網站最後更新日期：Last updated 01 October 2026, 11:42AM
+- MOD 版本：1.5.2
+- MOD 檔案名稱：better_hud_info_view 511 1.5.2 2026-10-01T03-42Z ke28WeliD.zip
+- 手動維護最後下載日期：2026-10-01
+- Nexus MOD ID: 511
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/511
+- Nexus page version: 1.5.2
+- Nexus last updated: 2026-10-01T03:42Z
+- Main file ID: 8649
+- Main file version: 1.5.2
+- Main file uploaded at UTC: 2026-10-01T03:42Z
+- Archive filename: better_hud_info_view 511 1.5.2 2026-10-01T03-42Z ke28WeliD.zip
+- Archive size bytes: 7948
+- Archive SHA-256: 22d8f287551113adcb4710a67f105db09785150f594f4c46f73bfbf334c6e870
+- Acquisition method: manual-queue
 
 ### [Recolor Boss Health Bars](https://www.nexusmods.com/warhammer40kdarktide/mods/314)
     重著色BOSS血條
@@ -712,20 +723,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [BrokerAutoStim](https://www.nexusmods.com/warhammer40kdarktide/mods/655)
     在戰鬥中自動使用化學興奮劑，支援設定檔切換、取消動畫與戰鬥狀態檢查
-- MOD 網站最後更新日期：Last updated 30 September 2026, 12:10AM
-- MOD 版本：3.0
-- MOD 檔案名稱：BrokerAutoStim 655 3.0 2026-09-29T16-10Z ke28Welop.zip
-- 手動維護最後下載日期：2026-09-30
+- MOD 網站最後更新日期：Last updated 01 October 2026, 1:11AM
+- MOD 版本：3.1
+- MOD 檔案名稱：BrokerAutoStim 655 3.1 2026-09-30T17-11Z cwrBAw7dp.zip
+- 手動維護最後下載日期：2026-10-01
 - Nexus MOD ID: 655
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/655
-- Nexus page version: 3.0
-- Nexus last updated: 2026-09-29T16:10Z
-- Main file ID: 8546
-- Main file version: 3.0
-- Main file uploaded at UTC: 2026-09-29T16:10Z
-- Archive filename: BrokerAutoStim 655 3.0 2026-09-29T16-10Z ke28Welop.zip
-- Archive size bytes: 17585
-- Archive SHA-256: c46e88c50e44b16a39d55f608d6f55ae85bf2c30a9bace169b8a925409ceabfa
+- Nexus page version: 3.1
+- Nexus last updated: 2026-09-30T17:11Z
+- Main file ID: 8622
+- Main file version: 3.1
+- Main file uploaded at UTC: 2026-09-30T17:11Z
+- Archive filename: BrokerAutoStim 655 3.1 2026-09-30T17-11Z cwrBAw7dp.zip
+- Archive size bytes: 18674
+- Archive SHA-256: b697d89b90ec3a070d9a93e3f0a72b0b291324b8a72fb2e4b92ab00f16bc3e56
 - Acquisition method: manual-queue
 
 ### [TalentUI](https://www.nexusmods.com/warhammer40kdarktide/mods/683)
