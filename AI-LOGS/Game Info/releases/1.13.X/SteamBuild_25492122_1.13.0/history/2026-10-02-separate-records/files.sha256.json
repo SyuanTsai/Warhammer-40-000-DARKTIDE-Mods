@@ -1,0 +1,115 @@
+{
+  "scope": "privacy-cleaned complete RAW batch; excludes this manifest itself and ZIP/archive receipt",
+  "files": [
+    {
+      "path": "bundle_inventory.json.gz",
+      "size": 294774,
+      "sha256": "7a6f5c0561e27a169919c5c4b750a8efcb87d6b9023ce2f04e97f6015902bb13"
+    },
+    {
+      "path": "cleanup.json",
+      "size": 1144,
+      "sha256": "579d35689084bbb1f5b7552c4d09f9dc5d0475917d745012f478298483aa8cc0"
+    },
+    {
+      "path": "decode.log",
+      "size": 2228,
+      "sha256": "70142c42ed267ac90416e98d54f6ca4329f96280a2cd06d792e3c5949311a39d"
+    },
+    {
+      "path": "extraction.log",
+      "size": 2307,
+      "sha256": "862e69ff9bcda9f3f88bbd8339a82a6f9e8f9ba7a46fdfa4a04365118805e4b4"
+    },
+    {
+      "path": "extraction_summary.json",
+      "size": 15023,
+      "sha256": "da51d0551f8d183c369ecbdc33d781c80cc1fdf9a0404063adfa5f69ace01052"
+    },
+    {
+      "path": "files_before_cleanup.sha256.json",
+      "size": 18481,
+      "sha256": "a14231c7c9e157b797fd2dd14f403db2673cb781c8b82ced84de36f4cc53ac61"
+    },
+    {
+      "path": "privacy.json",
+      "size": 365,
+      "sha256": "7e90fea05db5e6377abf095e0978c43347941468a8a751711631a244d3a57a50"
+    },
+    {
+      "path": "provenance.json",
+      "size": 1899,
+      "sha256": "48f9d06b62d5b6d1f16020a901d9ce4f8dddad550c4d4d0abec7d629661fb8ba"
+    },
+    {
+      "path": "raw/0274a4645de05a96.strings",
+      "size": 107298655,
+      "sha256": "179adb37a7cd4abefbe230ecfb4980a995d8989c574e931d147b05ea6df35159"
+    },
+    {
+      "path": "raw/63564edcb7c3c5ee.strings",
+      "size": 13437000,
+      "sha256": "0725e163501abeb807ea8056598edf5eea9033a3c0fef846052085aaa029e098"
+    },
+    {
+      "path": "raw/9a115e3b8c025ae3.strings",
+      "size": 606,
+      "sha256": "4696f36721cd2473a547ae08ca902eda8bd78f0a5beffefb075e4b2e1c4506e9"
+    },
+    {
+      "path": "raw/f1e50e33afca75ad.strings",
+      "size": 14333118,
+      "sha256": "0a17a3b69bafd94616127a7eead14285158916afef54f85c4c8b516d0e124163"
+    },
+    {
+      "path": "README.md",
+      "size": 5475,
+      "sha256": "2a904b2582bb6755bf93591ab1e83ccebcc052502049e21290b39c365ef91f89"
+    },
+    {
+      "path": "resolved_keys.json",
+      "size": 582063,
+      "sha256": "9b3dd049f3807cc8af386fb48bd0bed5e5d5d06bda41a5b2ee1303c998c4e2c7"
+    },
+    {
+      "path": "restoration_manifest.json",
+      "size": 17135,
+      "sha256": "11736c662e353d690025aafe97eaaaa3345047dbe8f9c07491b7ebae09da8761"
+    },
+    {
+      "path": "restoration_validation.json",
+      "size": 150,
+      "sha256": "0d402cc2ebfe6b45d95f621e2662bd1037f5b6171630fe87a354d1f27a3f59a5"
+    },
+    {
+      "path": "RESTORE.md",
+      "size": 2776,
+      "sha256": "35c2b562b70c0ad8cb64b627b823e18671d18a6c0f96a568cdbed99e4d374db7"
+    },
+    {
+      "path": "restore_exports.py",
+      "size": 4992,
+      "sha256": "ca7076864efc994402c40eaa869c777301cea459b6d4e7ff4326480d7fbd19b4"
+    },
+    {
+      "path": "tools/README.md",
+      "size": 2763,
+      "sha256": "a36518c9d018292b37fd592c8d8c8a97682b5fc0f372380a7d59257ccb0bfbe7"
+    },
+    {
+      "path": "validation.json",
+      "size": 305,
+      "sha256": "552ef132be6960383cc8d45510aa50f25e1df40c57ecfb077354dc71d3cfdbec"
+    },
+    {
+      "path": "verify_exports.py",
+      "size": 1892,
+      "sha256": "64eaa52f29ff5876261e49a4bcbbc83bcdb85b435189fca723f2eeefb85cb170"
+    },
+    {
+      "path": "workspace_relocation.json",
+      "size": 269,
+      "sha256": "f2674e32d629ceef21ff6fb52b215684b1615ec68b3c3dec1293d90f17dabfea"
+    }
+  ]
+}

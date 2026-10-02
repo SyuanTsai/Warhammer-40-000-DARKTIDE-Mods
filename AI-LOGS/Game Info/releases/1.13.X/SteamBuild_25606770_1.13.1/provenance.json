@@ -1,0 +1,86 @@
+{
+  "collected_at": "2026-10-02T10:10:42.148113+08:00",
+  "game_path": "<GAME>",
+  "steam_build_id": "25606770",
+  "release_label": "Release 1.13.1",
+  "release_basis": {
+    "official_patch_notes": "https://forums.fatsharkgames.com/t/hotfix-1-13-1-patch-notes/126162",
+    "basis": "Installed Steam build after the official 2026-10-01 Hotfix 1.13.1; user requested this version."
+  },
+  "steam_install_state": {
+    "appid": "1361210",
+    "name": "Warhammer 40,000: Darktide",
+    "buildid": "25606770",
+    "TargetBuildID": "25606770",
+    "StateFlags": "4",
+    "LastUpdated": "1790849281",
+    "BytesToDownload": "97337696",
+    "BytesDownloaded": "97337696",
+    "BytesToStage": "145957003",
+    "BytesStaged": "145957003"
+  },
+  "appmanifest_sha256_before": "a02dd79eb226a2f5b412c94b8a9d4f2a48d46ccaa09ba1a1d00d00c1adc6e1b3",
+  "bundle_files_scanned": 15737,
+  "tool_release": "0.7.2",
+  "tool_self_reported_version": "0.7.1",
+  "tool_url": "https://github.com/manshanko/limn/releases/tag/0.7.2",
+  "tool_exe_sha256": "03ea9ad220e3d217414362b365acc64b0e47a37adaf7cf5f478b0c68c6a5ec67",
+  "command": [
+    "limn.exe",
+    "-i",
+    "<GAME>\\bundle",
+    "-o",
+    "raw",
+    "--dump-raw",
+    "-j",
+    "4",
+    "strings"
+  ],
+  "source_files": [
+    {
+      "path": "<GAME>/binaries/Darktide.exe",
+      "size": 19912328,
+      "sha256": "28b843bc2905faaa0f27329d68e5de989df908f2552d80bf2b3c79b86e259775"
+    },
+    {
+      "path": "<GAME>/binaries/oo2core_9_win64.dll",
+      "size": 645120,
+      "sha256": "8595a4795f1e0c7f548598f3e2aa528b6be5456c6d934c665182eaecb04156c0"
+    },
+    {
+      "path": "<GAME>/bundle/bundle_database.data",
+      "size": 16421304,
+      "sha256": "d891a89e3f380bd13cdc0453d81a062b27ba2c82b9d2a6ff255abe987faa65b7"
+    },
+    {
+      "path": "<GAME>/bundle/metadata_database.db",
+      "size": 118784,
+      "sha256": "9cf9cba19822f4dd4e26577e8b0d4a76d91e559b215a5eff1a0222793528c099"
+    }
+  ],
+  "status": "extracted",
+  "appmanifest_sha256_after": "a02dd79eb226a2f5b412c94b8a9d4f2a48d46ccaa09ba1a1d00d00c1adc6e1b3",
+  "source_files_unchanged": true,
+  "completed_at": "2026-10-02T10:10:55.622699+08:00",
+  "inventory_files": 242950,
+  "decoded_records": 2222730,
+  "comparison_baseline": "../SteamBuild_25492122_1.13.0",
+  "validation_status": "passed",
+  "language_mapping_verification": {
+    "basis": "Compared original variant codes and order for all resources and inspected new zh-tw, en and variant-0008 text samples.",
+    "status": "same mapping as 1.13.0"
+  },
+  "current_data_dir": ".",
+  "layout_relocation": {
+    "from": "extracted-text",
+    "to": ".",
+    "files_moved": 119,
+    "all_file_sha256_unchanged_before_metadata_updates": true,
+    "reason": "User requested complete text exports directly in the SteamBuild batch; no extracted-text directory."
+  },
+  "local_path_redaction": {
+    "date": "2026-10-02",
+    "game_path_placeholder": "<GAME>",
+    "basis": "Removed local usernames, checkout locations and installation locations; relative resource paths and source SHA-256 retained."
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "date": "2026-10-02",
+  "kind": "separate-maintenance-records",
+  "moves": [
+    {
+      "from": "Game Info/docs/DIRECTORY_MIGRATION.md",
+      "to": "AI-LOGS/Game Info/changes/DIRECTORY_MIGRATION.md"
+    },
+    {
+      "from": "Game Info/docs/PRIVACY_CHECK.md",
+      "to": "AI-LOGS/Game Info/audits/2026-10-02-PRIVACY_CHECK.md"
+    },
+    {
+      "from": "Game Info/prompts/PROMPT.md",
+      "to": "AI Prompt/Game-Info-Workflow.md"
+    },
+    {
+      "from": "Game Info/tools/decode_strings.py",
+      "to": "scripts/game-info/decode_strings.py"
+    },
+    {
+      "from": "Game Info/tools/README.md",
+      "to": "scripts/game-info/README.md"
+    },
+    {
+      "from": "Game Info/tools/validate_game_info.py",
+      "to": "scripts/game-info/validate_game_info.py"
+    },
+    {
+      "from": "Game Info/tools/vendor/limn/README.md",
+      "to": "scripts/game-info/vendor/limn/README.md"
+    },
+    {
+      "from": "Game Info/tools/verify_exports.py",
+      "to": "scripts/game-info/verify_exports.py"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/compare_text_exports.py",
+      "to": "scripts/game-info/compare_text_exports.py"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/archive.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/archive.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/bundle_inventory.json.gz",
+      "to": "AI-LOGS/Game Info/local/releases/1.13.X/SteamBuild_25492122_1.13.0/bundle_inventory.json.gz"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/cleanup.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/cleanup.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/decode.log",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/decode.log"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/extraction.log",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/extraction.log"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/files_before_cleanup.sha256.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/files_before_cleanup.sha256.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/privacy.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/privacy.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/provenance.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/provenance.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/restoration_validation.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/restoration_validation.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/tools",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/tools"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/validation.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/validation.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/verify_exports.py",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/verify_exports.py"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/workspace_relocation.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/workspace_relocation.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/archive.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/archive.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/archive_before_cleanup.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/archive_before_cleanup.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/bundle_inventory.json.gz",
+      "to": "AI-LOGS/Game Info/local/releases/1.13.X/SteamBuild_25606770_1.13.1/bundle_inventory.json.gz"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/cleanup.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/cleanup.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/extraction.log",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/extraction.log"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/files_before_cleanup.sha256.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/files_before_cleanup.sha256.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/privacy.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/privacy.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/provenance.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/provenance.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/restoration_validation.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/restoration_validation.json"
+    },
+    {
+      "from": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/validation.json",
+      "to": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/validation.json"
+    }
+  ],
+  "historical_documents": [
+    {
+      "original": "Game Info/releases/1.13.X/README.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/HISTORY.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/docs/POC.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/ACCEPTANCE_HISTORY.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/source/README.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/TEXT_SOURCE_HISTORY.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/source/RESTORE_TEXT.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/RESTORATION_HISTORY.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/source/TEXT_DIFF_1.13.0_TO_1.13.1.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/TEXT_COMPARISON_HISTORY.md"
+    },
+    {
+      "original": "Game Info/README.md",
+      "record": "AI-LOGS/Game Info/changes/GAME_INFO_INDEX_HISTORY.md"
+    },
+    {
+      "original": "Game Info/docs/POC.md",
+      "record": "AI-LOGS/Game Info/changes/POC_INDEX_HISTORY.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/README.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/history/2026-10-02-separate-records/README.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/RESTORE.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/history/2026-10-02-separate-records/RESTORE.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/README.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/history/2026-10-02-separate-records/README.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/RESTORE.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/history/2026-10-02-separate-records/RESTORE.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/skills/talents/Arbites/SOURCE_INDEX.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/Arbites/SOURCE_INVENTORY_HISTORY.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/skills/talents/Ogryn/SOURCE_INDEX.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/Ogryn/SOURCE_INVENTORY_HISTORY.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/skills/talents/Psyker/SOURCE_INDEX.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/Psyker/SOURCE_INVENTORY_HISTORY.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/skills/talents/Scum/SOURCE_INDEX.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/Scum/SOURCE_INVENTORY_HISTORY.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/skills/talents/Skitarii/SOURCE_INDEX.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/Skitarii/SOURCE_INVENTORY_HISTORY.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/skills/talents/Veteran/SOURCE_INDEX.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/Veteran/SOURCE_INVENTORY_HISTORY.md"
+    },
+    {
+      "original": "Game Info/releases/1.13.X/skills/talents/Zealot/SOURCE_INDEX.md",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/Zealot/SOURCE_INVENTORY_HISTORY.md"
+    }
+  ],
+  "per_class_records": {
+    "shared": 1,
+    "Arbites": 97,
+    "Ogryn": 99,
+    "Psyker": 87,
+    "Scum": 121,
+    "Skitarii": 107,
+    "Veteran": 89,
+    "Zealot": 88
+  },
+  "baseline": "AI-LOGS/Game Info/local/2026-10-02-separate-records/inventory.json",
+  "git_index_unchanged": true
+}

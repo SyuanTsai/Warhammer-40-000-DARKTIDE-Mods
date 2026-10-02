@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-02",
+  "kept_complete_raw_resources": 4,
+  "removed_generated_export_files": 104,
+  "removed_export_bytes": 417098418,
+  "offline_restore_validation": {
+    "status": "passed",
+    "restored_files": 104,
+    "records": 2222587,
+    "all_original_sha256_match": true,
+    "output_dir": "_restore-check"
+  },
+  "compressed_inventory": {
+    "original_bytes": 1134981,
+    "compressed_bytes": 294774,
+    "original_sha256": "9666fe3f8a06e22976a14b7f32f94d5bc8b9744c50b26e99a5838788c43c8937"
+  },
+  "raw_files": [
+    {
+      "path": "raw\\0274a4645de05a96.strings",
+      "sha256": "179adb37a7cd4abefbe230ecfb4980a995d8989c574e931d147b05ea6df35159"
+    },
+    {
+      "path": "raw\\63564edcb7c3c5ee.strings",
+      "sha256": "0725e163501abeb807ea8056598edf5eea9033a3c0fef846052085aaa029e098"
+    },
+    {
+      "path": "raw\\9a115e3b8c025ae3.strings",
+      "sha256": "4696f36721cd2473a547ae08ca902eda8bd78f0a5beffefb075e4b2e1c4506e9"
+    },
+    {
+      "path": "raw\\f1e50e33afca75ad.strings",
+      "sha256": "0a17a3b69bafd94616127a7eead14285158916afef54f85c4c8b516d0e124163"
+    }
+  ]
+}

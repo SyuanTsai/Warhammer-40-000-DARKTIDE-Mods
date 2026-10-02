@@ -1,0 +1,9 @@
+{
+  "archive": "SteamBuild_25606770_1.13.1.zip",
+  "size": 191725263,
+  "sha256": "c4fe381298384aa9d0c2b09491e8d8df6c45292bc9e496506cffaf1c928d4736",
+  "files": 119,
+  "all_entry_sha256_match": true,
+  "contains_complete_text_exports": true,
+  "text_records": 2222730
+}

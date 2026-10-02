@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-02",
+  "format": "complete-raw-independent-restoration-no-operation-records",
+  "path": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/SteamBuild_25492122_1.13.0.zip",
+  "size": 55788804,
+  "sha256": "eee430220c52686b5ab6b92e5808fd6971e9d875741afd70f5122084d34e8739",
+  "files": 11,
+  "text_records": 2222587,
+  "all_entry_sha256_match": true,
+  "restoration_core_sha256_unchanged": true,
+  "cloud_replacement_required": true,
+  "cloud_content_sha256_verified": false
+}

@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-02",
+  "kind": "ignore-rules-maintenance",
+  "removed": [
+    "/Game Info/Extracted Text/"
+  ],
+  "retained": [
+    "/Game Info/releases/*/source/SteamBuild_*/"
+  ],
+  "reason": "Legacy extracted-text directory no longer exists; complete SteamBuild batches stay local under each release. Knowledge documents and small maintenance records remain eligible for Git.",
+  "checks": [
+    {
+      "path": "Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/raw/0274a4645de05a96.strings",
+      "ignored": true,
+      "passed": true
+    },
+    {
+      "path": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/SteamBuild_25606770_1.13.1.zip",
+      "ignored": true,
+      "passed": true
+    },
+    {
+      "path": "Game Info/releases/1.14.X/source/SteamBuild_99999999_1.14.0/jsonl/zh-tw/ui.jsonl",
+      "ignored": true,
+      "passed": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/verification/test.json",
+      "ignored": true,
+      "passed": true
+    },
+    {
+      "path": "scripts/game-info/vendor/limn/limn.exe",
+      "ignored": true,
+      "passed": true
+    },
+    {
+      "path": "scripts/game-info/tests/__pycache__/test_validate_game_info.pyc",
+      "ignored": true,
+      "passed": true
+    },
+    {
+      "path": "Game Info/releases/1.13.X/source/README.md",
+      "ignored": false,
+      "passed": true
+    },
+    {
+      "path": "Game Info/releases/1.13.X/skills/talents/Veteran/README.md",
+      "ignored": false,
+      "passed": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/README.md",
+      "ignored": false,
+      "passed": true
+    },
+    {
+      "path": "AI Prompt/Game-Info-Workflow.md",
+      "ignored": false,
+      "passed": true
+    },
+    {
+      "path": "scripts/game-info/validate_game_info.py",
+      "ignored": false,
+      "passed": true
+    }
+  ],
+  "git_index_unchanged": true
+}

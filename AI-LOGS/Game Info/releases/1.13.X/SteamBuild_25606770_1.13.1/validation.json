@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "verified_records": 2222730,
+  "raw_files": 4,
+  "jsonl_files": 52,
+  "checks": [
+    "raw SHA-256",
+    "variant and record counts",
+    "entry index and hash",
+    "every UTF-8 byte including annotations/null suffix",
+    "no omitted or extra JSONL records"
+  ]
+}

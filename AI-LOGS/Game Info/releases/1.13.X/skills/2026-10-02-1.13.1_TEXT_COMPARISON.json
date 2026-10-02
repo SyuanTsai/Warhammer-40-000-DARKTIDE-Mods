@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-02",
+  "baseline": {
+    "version": "1.13.0",
+    "steam_build": 25492122
+  },
+  "target": {
+    "version": "1.13.1",
+    "steam_build": 25606770
+  },
+  "resource": "content/localization/ui",
+  "hashes_present": 1202,
+  "locale_hash_groups": 2404,
+  "changed_groups": [],
+  "comparison_method": "Exact multiset of raw UTF-8 payloads including NUL annotations, selected by document hashes and source localization keys",
+  "locales": {
+    "en": {
+      "groups": 1202,
+      "baseline_payload_manifest_sha256": "08123c173efdf6782ddeaa7aa196de24c70cf2dd2a306b4db61a4df199004fac",
+      "target_payload_manifest_sha256": "08123c173efdf6782ddeaa7aa196de24c70cf2dd2a306b4db61a4df199004fac"
+    },
+    "zh-tw": {
+      "groups": 1202,
+      "baseline_payload_manifest_sha256": "8c0ceeaba819732963d1921c1726316b17350725d17c457ea3c72f197ed7b7fc",
+      "target_payload_manifest_sha256": "8c0ceeaba819732963d1921c1726316b17350725d17c457ea3c72f197ed7b7fc"
+    }
+  },
+  "keys_not_resolved_in_frozen_dictionary": [
+    "loc_string",
+    "loc_talent_keyword_slowdown_immune",
+    "loc_talent_keyword_stun_immune",
+    "loc_talent_stat_attack_speed",
+    "loc_talent_stat_combat_ability_cooldown_regen_modifier",
+    "loc_talent_stat_critical_strike_chance",
+    "loc_talent_stat_damage_taken_multiplier",
+    "loc_talent_stat_dodge_cooldown_reset_modifier",
+    "loc_talent_stat_dodge_distance_modifier",
+    "loc_talent_stat_dodge_speed_multiplier",
+    "loc_talent_stat_finesse_modifier_bonus",
+    "loc_talent_stat_movement_speed",
+    "loc_talent_stat_power_level",
+    "loc_talent_stat_recoil_modifier",
+    "loc_talent_stat_reload_speed",
+    "loc_talent_stat_rending_multiplier",
+    "loc_talent_stat_stamina_cost_multiplier",
+    "loc_talent_stat_toughness_replenish_modifier",
+    "loc_talent_stat_wield_speed",
+    "loc_talent_zealot_zealot_channel_defensive_desc"
+  ],
+  "unresolved_key_limit": "These frozen dictionaries cannot resolve every token mentioned in source documents. No text is inferred for absent keys; this is a pre-existing coverage limit, not a newly changed talent."
+}

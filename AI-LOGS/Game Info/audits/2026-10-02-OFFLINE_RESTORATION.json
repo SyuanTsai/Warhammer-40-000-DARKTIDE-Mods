@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-02",
+  "method": "extract each standalone ZIP; execute bundled restore; independently compare all original export hashes",
+  "unchanged_protected_inputs": 16,
+  "batches": [
+    {
+      "batch": "SteamBuild_25492122_1.13.0",
+      "zip_sha256": "eee430220c52686b5ab6b92e5808fd6971e9d875741afd70f5122084d34e8739",
+      "file_counts": {
+        "jsonl": 52,
+        "txt": 52
+      },
+      "original_export_sha256_matches": 104,
+      "restoration": {
+        "status": "passed",
+        "restored_files": 104,
+        "records": 2222587,
+        "all_original_sha256_match": true,
+        "output_dir": "AI-LOGS/Game Info/local/verification/SteamBuild_25492122_1.13.0/SteamBuild_25492122_1.13.0"
+      }
+    },
+    {
+      "batch": "SteamBuild_25606770_1.13.1",
+      "zip_sha256": "e5bfbedbead71249fe86c42865a0c14542c1689b6cb5217ff69b0d541f02b378",
+      "file_counts": {
+        "jsonl": 52,
+        "txt": 52
+      },
+      "original_export_sha256_matches": 104,
+      "restoration": {
+        "status": "passed",
+        "restored_files": 104,
+        "records": 2222730,
+        "all_original_sha256_match": true,
+        "output_dir": "AI-LOGS/Game Info/local/verification/SteamBuild_25606770_1.13.1/SteamBuild_25606770_1.13.1"
+      }
+    }
+  ]
+}
