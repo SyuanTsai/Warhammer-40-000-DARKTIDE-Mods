@@ -27,8 +27,10 @@
 | 圖片儲存庫 | `SyuanTsai/Media-Assets` |
 | 圖片保存 | 公開 GitHub Issue 本文或留言中的附件；保存與驗證完成後關閉為 Completed |
 | 公告檔名 | `公告/YYYY-MM-DD_<版本或主題>_繁中翻譯.md` |
-| 工作分支 | 如 `docs/hotfix-<版本>-zh-tw`；依本次主題命名並先查重 |
+| 工作分支 | `docs/<公告主題識別碼>-zh-tw`；依原文類型、版本或主題命名並先查重 |
 | 交付 | 完整公告、圖片 Issue 索引、非 Draft PR、驗證摘要 |
+
+分支名稱依公告內容選擇，例如版本更新用 `docs/patch-1.13.0-zh-tw`、熱修用 `docs/hotfix-1.13.1-zh-tw`、特色介紹用 `docs/spillway-level-visual-design-zh-tw`；其他類型使用能識別主題的名稱。
 
 日期依原文實際發布日期命名，不以翻譯執行日代替。文中需要換算活動時間時使用 `Asia/Taipei`，保留原時區與換算結果。圖片 Issue 標題的日期使用首次建立日，後續補圖不改日期。
 
