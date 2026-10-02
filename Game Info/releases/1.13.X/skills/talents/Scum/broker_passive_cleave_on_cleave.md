@@ -1,0 +1,40 @@
+# 趁勝追擊(Battering Momentum)：原始碼依據
+
+[返回玩家說明](README.md#broker_passive_cleave_on_cleave)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_passive_cleave_on_cleave)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`broker_passive_cleave_on_cleave`；名稱鍵：`loc_talent_broker_passive_cleave_on_cleave`；描述鍵：`loc_talent_broker_passive_cleave_on_cleave_desc`。
+- 節點：`node_32ac314d-2d6e-421b-8ced-27ce00dc62e5`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- on_melee_hit的target_number>=3且未procced時加子Buff；target_number<3重設procced。
+- child max_hit_mass_attack/impact_modifier=.5，on_hit且target_number<3時remove_on_proc。子Buff消耗判斷不限近戰；同一次順劈的取值時機受攻擊流程影響，不擅自保證在原次後段完全不生效。
+
+## 原始碼依據
+
+- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：2296–2310](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L2296-L2310)
+- [scripts/utilities/attack/damage_profile.lua：42–64](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_profile.lua#L42-L64)
+- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：2276–2295](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L2276-L2295)
+- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：1864–1896](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L1864-L1896)
+- [scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：2168–2195](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L2168-L2195)
+
+## 算例條件與待確認事項
+
+- **順劈算例**：原本傷害順劈容量 10、踉蹌順劈容量 8，分別變成 10 × 1.5 = 15、8 × 1.5 = 12。實際命中人數仍取決於敵人質量與武器限制。
+- 同次攻擊後段是否已讀到新加成，以及不同武器的順劈取樣時機，未做遊戲內驗證。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`04b9c8f2`。
+- 兩語均為一次命中至少3名後，下次攻擊增加順劈；消耗事件的細節為補充。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_cleave_on_cleave.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_passive_cleave_on_cleave:node_32ac314d-2d6e-421b-8ced-27ce00dc62e5`。
+- 格式：image/webp；288×288；6280 bytes。
+- SHA-256：`a769a82eea8397205ba036e097e6be82e550859c3581259e4336fb9f9b007552`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933987866)；[公開圖片](https://github.com/user-attachments/assets/6fa27fb0-2d79-43fc-b74a-d64da58773f6)。附件已下載比對位元組與 SHA-256。

@@ -1,0 +1,40 @@
+# 自掏腰包(Out of Pocket)：原始碼依據
+
+[返回玩家說明](README.md#zealot_reload_from_melee)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#zealot_reload_from_melee)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`zealot_reload_from_melee`；名稱鍵：`loc_talent_zealot_reload_from_backstab`；描述鍵：`loc_talent_zealot_reload_from_melee_desc`。
+- 節點：`node_ce599414-0b4e-4aae-b521-ef5f375e1b74`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- on_melee_kill後missing_ammo_in_clips*.1加入ammo_pool，floor後transfer_from_reserve_to_clip，扣掉floor數量而非實際移入數，因此備彈不足時不保留未轉入整數額度。Ammo共用free_ammunition_transfer或infinite_ammo模式是例外，不適用一般有限備彈算例。
+- 同hash英文明確from your Reserve，繁中卻寫恢復缺失彈藥儲備，顛倒移入方向，屬明確譯義錯誤。
+
+## 原始碼依據
+
+- [scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua：4681–4720](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/zealot_buff_templates.lua#L4681-L4720)
+- [scripts/settings/talent/talent_settings_zealot.lua：233–235](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_zealot.lua#L233-L235)
+- [scripts/utilities/ammo.lua：202–217](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/ammo.lua#L202-L217)
+- [scripts/utilities/ammo.lua：452–465](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/ammo.lua#L452-L465)
+- [scripts/settings/ability/archetype_talents/talents/zealot_talents.lua：3184–3198](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/zealot_talents.lua#L3184-L3198)
+- [scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua：2037–2059](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/zealot_tree.lua#L2037-L2059)
+
+## 算例條件與待確認事項
+
+- **裝填算例**：彈匣上限 30、目前 10 發，缺少 20 發，擊殺後從備彈移入 20 × 10% = 2 發，變成 12 發。下次缺 18 發，計入 1.8 發，本次移入 1 發，剩下的 0.8 累積到後續擊殺。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`730a8c75`。
+- 同源英文from your Reserve表明備彈是來源；繁中將彈藥儲備寫成恢復對象。實作transfer_from_reserve_to_clip也確認由備彈移入彈匣。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/default/zealot_reload_from_melee.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_reload_from_melee:node_ce599414-0b4e-4aae-b521-ef5f375e1b74`。
+- 格式：image/webp；288×288；5604 bytes。
+- SHA-256：`b9bd5f017260aa92d11052dbf7ddfba75d8c70f1834156c8c5f2a6853a0f7535`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929296872)；[公開圖片](https://github.com/user-attachments/assets/e1dda6ab-d49e-4d08-bd44-f684dae4913f)。附件已下載比對位元組與 SHA-256。

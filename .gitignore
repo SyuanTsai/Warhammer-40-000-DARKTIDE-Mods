@@ -8,3 +8,5 @@ AGENTS.md
 .github/AI-Rules
 .github/copilot-instructions.md
 /Game Info/Extracted Text/
+/Game Info/releases/*/source/SteamBuild_*/
+/Game Info/tools/vendor/limn/limn.exe

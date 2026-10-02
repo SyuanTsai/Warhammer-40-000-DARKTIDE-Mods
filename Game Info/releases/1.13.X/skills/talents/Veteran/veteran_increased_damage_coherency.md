@@ -1,0 +1,31 @@
+# 火力小分隊(Fire Team)：原始碼依據
+
+[返回玩家說明](README.md#veteran_increased_damage_coherency)｜[技術索引](SOURCE_INDEX.md)
+
+- 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`veteran_increased_damage_coherency`；名稱鍵：`loc_talent_veteran_damage_coherency`；描述鍵：`loc_talent_veteran_damage_coherency_desc`。
+- [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1173-L1198)：`aura`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L696-L720)。
+- 狀態：完成核心靜態機制核對；名稱對應暫定，未進行遊戲內驗證。
+
+## 原始碼確認與程式推導
+
+coherency identifier veteran_aura、priority2 取代 priority1 基礎光環；buff.damage=0.075、max_stacks1。damage 加算至同一傷害階段。
+
+## 原始碼依據
+
+- [scripts/settings/ability/archetype_talents/talents/veteran_talents.lua，第 696–720 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L696-L720)
+- [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 830–847 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L830-L847)
+- [scripts/utilities/attack/damage_calculation.lua，第 232–242 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L232-L242)
+- [scripts/extension_systems/coherency/unit_coherency_extension.lua，第 256–311 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/coherency/unit_coherency_extension.lua#L256-L311)
+
+## 算例條件與待確認事項
+
+- 玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
+- 靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/aura/veteran_increased_damage_coherency.webp)；取得日期 2026-10-01。圖示只供呈現，不作機制證據。
+- 天賦與節點：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_increased_damage_coherency:node_bd398c77-960a-41f8-af1c-e4e15ef9ee7d`，已核對固定版本節點。
+- WebP，288 × 288，5236 bytes；SHA-256：`691888a8cdefd1b7ad5f8d43cc4822acdaa4861d426e3cba5a953f55e25d9bf4`。
+- 保存在 [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234) 的 [圖片附件](https://github.com/user-attachments/assets/9a3da9ac-d8f1-4745-9af6-25852f52834a)；附件下載後的雜湊與大小均與原圖一致。圖檔不加入 Git 分支。

@@ -1,0 +1,40 @@
+# 蠻橫之力(Brutish Strength)：原始碼依據
+
+[返回玩家說明](README.md#ogryn_pushing_applies_brittleness)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#ogryn_pushing_applies_brittleness)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`ogryn_pushing_applies_brittleness`；名稱鍵：`loc_talent_ogryn_pushing_applies_brittlenes`；描述鍵：`loc_talent_ogryn_pushing_applies_brittlenes_desc`。
+- 節點：`node_11f1b2c0-3982-411e-b0fd-9f51ef609d6c`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- on_push_hit adds rending_debuff4；通用duration5 max/cap16 refresh .025每層；target rending與attacker rending合算。
+
+## 原始碼依據
+
+- [scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua：3401–3422](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/ogryn_buff_templates.lua#L3401-L3422)
+- [scripts/settings/talent/talent_settings_ogryn.lua：147–149](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_ogryn.lua#L147-L149)
+- [scripts/settings/buff/weapon_buff_templates.lua：366–376](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/weapon_buff_templates.lua#L366-L376)
+- [scripts/utilities/attack/damage_calculation.lua：64–84](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L64-L84)
+- [scripts/utilities/attack/damage_calculation.lua：629–660](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L629-L660)
+- [scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua：2476–2490](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/ogryn_talents.lua#L2476-L2490)
+- [scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua：1648–1670](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/ogryn_tree.lua#L1648-L1670)
+
+## 算例條件與待確認事項
+
+- **傷害算例**：假設對甲殼護甲的原倍率為 0.5、基礎傷害 100，一次推擊後為 100 × (0.5 + 4 × 2.5%) = 60 點；滿 16 層為 90 點。超過護甲倍率 1 的部分另按超額撕裂規則計算。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`f63bfc12`。
+- 核對同一描述鍵／hash 的繁中與英文，效果方向未見明確翻譯矛盾；未列公式、上限或細部限制不算錯誤。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_pushing_applies_brittleness.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_pushing_applies_brittleness:node_11f1b2c0-3982-411e-b0fd-9f51ef609d6c`。
+- 格式：image/webp；288×288；6170 bytes。
+- SHA-256：`087822557d92f63e69be28d400e66e15d3ff0342cf27805f316c613fee2addc0`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)；[公開圖片](https://github.com/user-attachments/assets/024bec9b-772c-4313-b7b8-d119efdcf8f1)。附件已下載比對位元組與 SHA-256。

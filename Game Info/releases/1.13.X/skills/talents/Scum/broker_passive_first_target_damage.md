@@ -1,0 +1,38 @@
+# 特提恩是迎賓(A Tertium Welcome)：原始碼依據
+
+[返回玩家說明](README.md#broker_passive_first_target_damage)｜[技術索引](SOURCE_INDEX.md)｜[原文比對](LOCALIZATION_COMPARISON.md#broker_passive_first_target_damage)
+
+- 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
+- 天賦：`broker_passive_first_target_damage`；名稱鍵：`loc_talent_broker_passive_first_target_damage`；描述鍵：`loc_talent_broker_passive_first_target_damage_desc`。
+- 節點：`node_546ca755-3d86-41f5-bfc3-01a388f9471a`；分類：技能；每節點一點。
+- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+
+## 原始碼確認與程式推導
+
+- 常駐first_target_melee_damage_modifier=.15；damage_calculation要求is_first_target且is_melee_attack才加入傷害加算。沒有層數、時間或冷卻。
+
+## 原始碼依據
+
+- [scripts/utilities/attack/damage_calculation.lua：299–305](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/attack/damage_calculation.lua#L299-L305)
+- [scripts/settings/talent/talent_settings_broker.lua：220–222](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_broker.lua#L220-L222)
+- [scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua：983–989](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/broker_buff_templates.lua#L983-L989)
+- [scripts/settings/ability/archetype_talents/talents/broker_talents.lua：859–874](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/broker_talents.lua#L859-L874)
+- [scripts/ui/views/talent_builder_view/layouts/broker_tree.lua：36–62](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/broker_tree.lua#L36-L62)
+
+## 算例條件與待確認事項
+
+- **傷害算例**：第一個目標的基礎傷害若為 100，單計此效果變成 100 × 1.15 = 115；已有同階段 25% 增傷則為 100 × (1 + 25% + 15%) = 140 點。
+- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+
+## 原文核對
+
+- 對應 hash：`4ebbdbb2`。
+- 繁中與英文皆明確限定每次近戰攻擊的第一個目標，未見矛盾。
+
+## 圖示來源
+
+- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_first_target_damage.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
+- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_passive_first_target_damage:node_546ca755-3d86-41f5-bfc3-01a388f9471a`。
+- 格式：image/webp；288×288；5726 bytes。
+- SHA-256：`6365e05fd8aa6e366b03c10c0067dcb9d470f008ce93ec7d7388cca2dde2d7c1`。
+- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/e5936fa1-2583-4575-a968-aa37e1096a16)。附件已下載比對位元組與 SHA-256。
