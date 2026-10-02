@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_stimm_concentration_1`；名稱鍵：`loc_talent_broker_stimm_concentration_a`；描述鍵：`loc_talent_stat_combat_ability_cooldown_regen_modifier`。
 - 節點：`node_c23ee23e-1dc5-4a85-abb3-d0bd53d7b7bc`；分類：興奮劑配方；配點成本：1 點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -28,7 +28,7 @@
 - **持續恢復算例**：從抗焦慮藥 I 選到本節點時，總加成為 6.25%。原本每秒恢復 1 秒冷卻，現在每秒恢復 1.0625 秒；15 秒藥效內共恢復 15 × 1.0625 = 15.9375 秒。
 - **剩餘時間算例**：原剩 60 秒，且能力正在正常恢復，15 秒藥效結束後還剩 60 − 15.9375 = 44.0625 秒；之後恢復原速。
 - 同一使用者的配方由 syringe_broker_buff 讀取並共同套用；場域分享時依提供者配方，外部控制的持續時間另按場域設定。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -37,8 +37,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/broker_stimm/broker_stimm_concentration_1.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:broker_stimm_tree:broker_stimm_concentration_1:node_c23ee23e-1dc5-4a85-abb3-d0bd53d7b7bc`。
-- 格式：image/webp；288×288；3270 bytes。
-- SHA-256：`7bfeb619ce9189384711a0532669c5564d26a349b89677dc7328cff127ebb307`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5934604124)；[公開圖片](https://github.com/user-attachments/assets/b6316199-6d72-4db3-8be6-a74600e54b2f)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/broker_stimm/broker_stimm_concentration_1.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5934604124)｜[圖片附件](https://github.com/user-attachments/assets/b6316199-6d72-4db3-8be6-a74600e54b2f)
+
+圖片僅供技能辨識，不作機制證據。
+

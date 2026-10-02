@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_discharge`；名稱鍵：`loc_talent_cryptic_discharge`；描述鍵：`loc_talent_cryptic_discharge_desc`。
 - 節點：`node_202342c8-045c-486b-aa66-75d636866621`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -44,7 +44,7 @@
 - 技能資料可確認傷害模板、電擊持續時間與跳傷間隔，不能推出對所有敵人相同的生命傷害總值或固定跳數。
 - 武器故障爆炸的傷害威力為0；狀態是否影響目標取決於敵人是否具有相應武器狀態元件，時間可能由敵人種類覆寫預設12秒。
 - 5份電容量容量提高不代表本次技能能扣5份；本技能 player ability 的單次成本上限明確為3份。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -53,8 +53,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability/cryptic_discharge.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_discharge:node_202342c8-045c-486b-aa66-75d636866621`。
-- 格式：image/webp；288×288；7122 bytes。
-- SHA-256：`9590b66db59b15c4d5275ac39e2afd9bb3fbe8a064ba326854e9be0d4d92bdfe`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)；[公開圖片](https://github.com/user-attachments/assets/637d6e54-1c81-434d-b5bc-d779d4d8674b)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability/cryptic_discharge.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)｜[圖片附件](https://github.com/user-attachments/assets/637d6e54-1c81-434d-b5bc-d779d4d8674b)
+
+圖片僅供技能辨識，不作機制證據。
+

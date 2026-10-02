@@ -5,13 +5,13 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_companion_focus_elite`；名稱鍵：`loc_talent_adamant_cyber_mastiff_elites`；描述鍵：`loc_talent_adamant_cyber_mastiff_elites_desc`。
 - 節點：`node_44f3d117-9099-42ab-9b11-8ff7a5ef1a66`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
 - talent special rule adamant_companion_elite_focus 由 companion dog target selector 讀取。selector 對 tags.elite 與 tags.special 分別加權 10。
 - passive stat buff 同時提供 companion_damage_vs_elites=0.25 與 companion_damage_vs_special=0.25。共用 damage_calculation 依 companion attacker 與目標 tags 讀取 owner 對應 modifier。
-- 程式碼核對固定至公開 Aussiemon/Darktide-Source-Code SHA 419fe18d414a618ce0474bd015bab470afb446d6；此公開程式碼與本機繁中／英文文字版本對應由使用者於2026-10-02確認。
+- 程式碼核對固定至公開 Aussiemon/Darktide-Source-Code SHA 419fe18d414a618ce0474bd015bab470afb446d6；此公開程式碼與本機繁中／英文文字版本對應為1.13.0。
 
 ## 原始碼依據
 
@@ -28,7 +28,7 @@
 
 - 對帶 elite 或 special 標籤的目標，單獨計此天賦時 100 點基礎戰犬傷害變成 125 點。
 - 精英與專家標籤依敵人 breed 判定；兩個分類同時存在時的 modifier 疊加需由實際目標標籤與共用 stat 結算決定。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -37,8 +37,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/keystone/adamant_companion_focus_elite.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_companion_focus_elite:node_44f3d117-9099-42ab-9b11-8ff7a5ef1a66`。
-- 格式：image/webp；288×288；5406 bytes。
-- SHA-256：`48ce4041c1bbc6571568ee1580141736aee14bb5823fc0f1f57e47113906f35e`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/d61cee49-95ce-43fb-ae8a-b05ba598366b)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/keystone/adamant_companion_focus_elite.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/d61cee49-95ce-43fb-ae8a-b05ba598366b)
+
+圖片僅供技能辨識，不作機制證據。
+

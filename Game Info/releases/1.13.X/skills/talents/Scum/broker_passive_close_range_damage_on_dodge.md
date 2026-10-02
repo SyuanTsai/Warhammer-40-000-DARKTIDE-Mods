@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_passive_close_range_damage_on_dodge`；名稱鍵：`loc_talent_broker_passive_close_range_damage_on_dodge`；描述鍵：`loc_talent_broker_passive_close_range_damage_on_dodge_desc`。
 - 節點：`node_a8bc4def-415e-4b1b-9b1d-6f2783c5323d`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -27,7 +27,7 @@
 
 - **距離算例**：加成從 12.5 公尺以外逐步降低，到 30 公尺歸零。距離 16.875 公尺時，比例為 √((16.875 − 12.5) ÷ 17.5) = 0.5，加成剩 15% × (1 − 0.5) = 7.5%；基礎 100 點變成 107.5 點。
 - **近距離算例**：單計本效果，基礎 100 點變成 115；已有同階段 25% 增傷時為 100 × (1 + 25% + 15%) = 140 點。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -36,8 +36,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_close_range_damage_on_dodge.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_passive_close_range_damage_on_dodge:node_a8bc4def-415e-4b1b-9b1d-6f2783c5323d`。
-- 格式：image/webp；288×288；6628 bytes。
-- SHA-256：`682a009c384f32ab95a611262e7db10671a67fff7a07bf535d10e3310c26746c`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_close_range_damage_on_dodge.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/b19ca7bc-4348-455c-ae43-c3cf7a8b0852)
+
+圖片僅供技能辨識，不作機制證據。
+

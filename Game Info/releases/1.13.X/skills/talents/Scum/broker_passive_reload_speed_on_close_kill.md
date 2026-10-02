@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_passive_reload_speed_on_close_kill`；名稱鍵：`loc_talent_broker_passive_reload_speed_on_close_kill`；描述鍵：`loc_talent_broker_passive_reload_speed_on_close_kill_desc`。
 - 節點：`node_11c062d4-c4be-4e96-b5f2-991bbedf2de3`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -28,7 +28,7 @@
 
 - **時間算例**：原本可加速的換彈動作需 2 秒，單計此效果變成 2 ÷ 1.3 ≈ 1.54 秒；已有 20% 同階段換彈速度時，則為 2 ÷ (1 + 20% + 30%) ≈ 1.33 秒。
 - 特殊毒素死亡分支依事件中的攻擊者計距，不保證等於擁有者站位；多人歸屬與邊界未實測。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -37,8 +37,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_reload_speed_on_close_kill.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_passive_reload_speed_on_close_kill:node_11c062d4-c4be-4e96-b5f2-991bbedf2de3`。
-- 格式：image/webp；288×288；6610 bytes。
-- SHA-256：`00d584ab312a9128019263b210fbce74ea251b853343df564a3063ae2e05af18`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933987866)；[公開圖片](https://github.com/user-attachments/assets/139c3b2c-0d64-4a99-89fb-a19e5ec4cc6e)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_reload_speed_on_close_kill.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933987866)｜[圖片附件](https://github.com/user-attachments/assets/139c3b2c-0d64-4a99-89fb-a19e5ec4cc6e)
+
+圖片僅供技能辨識，不作機制證據。
+

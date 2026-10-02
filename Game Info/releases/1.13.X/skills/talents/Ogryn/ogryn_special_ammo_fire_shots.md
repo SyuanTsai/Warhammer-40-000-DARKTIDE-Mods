@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_special_ammo_fire_shots`；名稱鍵：`loc_talent_ogryn_special_ammo_fire_shots`；描述鍵：`loc_talent_ogryn_special_ammo_fire_shots_new_desc`。
 - 節點：`node_e4a4e00d-fd7d-49a8-a67e-7a09372c77da`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -42,7 +42,7 @@
 - **傷害算例**：只計無護甲且無其他修正，每次燃燒傷害為 600 × (層數 ÷ 31)² × [3 − 2 × (層數 ÷ 31)]。4 層約 27.39 點，16 層約 314.51 點；這是單次結算，並非整段燃燒的總傷害。
 - 層數上限計入目標身上的其他燃燒來源；實際生命傷害受目標護甲與傷害計算影響，強度輸入不是固定生命傷害。
 - 燃燒延長可受施加者的燃燒持續時間屬性影響；約12秒是假設沒有額外延長。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -51,8 +51,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/ability_modifier/ogryn_special_ammo_fire_shots.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_special_ammo_fire_shots:node_e4a4e00d-fd7d-49a8-a67e-7a09372c77da`。
-- 格式：image/webp；288×288；7216 bytes。
-- SHA-256：`5251204c00ac2d6d28f13d9e405d7387c0bc5adc2b5e5e3e90b4df45ba296e8c`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/6f504222-c9bf-4dff-a549-138c3be3bde4)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/ability_modifier/ogryn_special_ammo_fire_shots.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/6f504222-c9bf-4dff-a549-138c3be3bde4)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_offensive_vs_many`；名稱鍵：`loc_talent_zealot_offensive_vs_many`；描述鍵：`loc_talent_zealot_offensive_vs_many_desc`。
 - 節點：`node_5f6902c3-f9af-4bbf-b4ad-68a0d7da94a1`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,7 +24,7 @@
 - **傷害算例**：附近 6 名敵人為 3 層，基礎 100 點變成 100 × (1 + 3 × 2%) = 106 點；10 名以上最多 110 點。同階段其他傷害加成先相加。
 - **順劈算例**：原本可穿透的敵人體型總量為 10，3 層時變成 10 × (1 + 3 × 10%) = 13；滿層為 15。這是可穿透總量，不等於固定多命中 3 或 5 名敵人。
 - 順劈例子只示範體型額度，護甲、武器、敵人体型與順劈傷害分布仍影響實際命中。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -33,8 +33,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/default/zealot_offensive_vs_many.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_offensive_vs_many:node_5f6902c3-f9af-4bbf-b4ad-68a0d7da94a1`。
-- 格式：image/webp；288×288；5634 bytes。
-- SHA-256：`c6c1a4a1346fbfa3e03b3c9dc2544a8ed55256eef55d075d5ed31419d9ebb4db`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929296872)；[公開圖片](https://github.com/user-attachments/assets/9b626554-120f-43b1-b152-bf21224b6a42)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/default/zealot_offensive_vs_many.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929296872)｜[圖片附件](https://github.com/user-attachments/assets/9b626554-120f-43b1-b152-bf21224b6a42)
+
+圖片僅供技能辨識，不作機制證據。
+

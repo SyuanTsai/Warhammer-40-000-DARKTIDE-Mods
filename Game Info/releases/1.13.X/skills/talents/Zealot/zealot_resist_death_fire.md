@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_resist_death_fire`；名稱鍵：`loc_talent_zealot_resist_death_fire`；描述鍵：`loc_talent_zealot_resist_death_fire_desc`。
 - 節點：`node_9ad99512-0439-46e8-8113-5d7de6d174da`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -39,7 +39,7 @@
 - 約167是 burn tick 使用的 power_level，不是對所有敵人的固定生命值傷害；profile 會依敵人類型與目標 boost curve 得出實際結果。
 - 0.5秒 tick 節奏是程式定時器推導；更新步長可能使實際執行落在定時點之後。
 - 「持有無法殺死」是檢查玩家 buff 關鍵字，因此實際上任何授予 `unkillable` 的來源都可能開啟此效果；列出的 Resist Death 子升級與基礎效果只是常見來源。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -48,8 +48,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_resist_death_fire.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_resist_death_fire:node_9ad99512-0439-46e8-8113-5d7de6d174da`。
-- 格式：image/webp；288×288；5040 bytes。
-- SHA-256：`9e1e360ab810981c6493ad495642d7c91aaed341f138e3d51376b2749cb7d050`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/f88c569e-c89d-4850-b84b-17c5af69faf0)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_resist_death_fire.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/f88c569e-c89d-4850-b84b-17c5af69faf0)
+
+圖片僅供技能辨識，不作機制證據。
+

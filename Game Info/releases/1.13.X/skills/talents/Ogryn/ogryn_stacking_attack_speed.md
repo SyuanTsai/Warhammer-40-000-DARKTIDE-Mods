@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_stacking_attack_speed`；名稱鍵：`loc_talent_ogryn_stacking_attack_speed_name`；描述鍵：`loc_talent_ogryn_stacking_attack_speed_desc`。
 - 節點：`node_e7226bdd-5733-49a0-9b8a-d938c1526a3c`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -22,7 +22,7 @@
 ## 算例條件與待確認事項
 
 - **速度算例**：滿層時，受攻速影響的 1 秒動作變成 1 ÷ (1 + 5 × 2.5%) ≈ 0.889 秒；不是直接縮短 12.5% 至 0.875 秒。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -31,8 +31,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_stacking_attack_speed.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_stacking_attack_speed:node_e7226bdd-5733-49a0-9b8a-d938c1526a3c`。
-- 格式：image/webp；288×288；6150 bytes。
-- SHA-256：`2b75e6feb46e79c860806ae960d76f27fd3eeac780987f6ec224c17070947e9b`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)；[公開圖片](https://github.com/user-attachments/assets/5f6d651a-4c88-40ea-a96b-3133459df2f4)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_stacking_attack_speed.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)｜[圖片附件](https://github.com/user-attachments/assets/5f6d651a-4c88-40ea-a96b-3133459df2f4)
+
+圖片僅供技能辨識，不作機制證據。
+

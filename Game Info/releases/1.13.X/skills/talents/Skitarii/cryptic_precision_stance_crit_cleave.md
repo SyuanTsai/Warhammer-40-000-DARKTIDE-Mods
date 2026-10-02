@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_precision_stance_crit_cleave`；名稱鍵：`loc_talent_cryptic_precision_stance_crit_cleave`；描述鍵：`loc_talent_cryptic_precision_stance_crit_cleave_desc`。
 - 節點：`node_bbc91e02-a605-4136-8d58-f767ac08da21`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -31,7 +31,7 @@
 - 額外效果在啟動滿4秒後才生效；能力一旦關閉，計時歸零且加成撤除。
 - 遠程穿透的百分比不能直接換算為固定額外目標數。
 - 繁中與英文都列出啟動初期與4秒後的兩組數值，與來源設定一致；中英均未說明穿透內部以攻擊質量修正計算，屬原文省略。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -40,8 +40,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability_modifier/cryptic_precision_stance_crit_cleave.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_precision_stance_crit_cleave:node_bbc91e02-a605-4136-8d58-f767ac08da21`。
-- 格式：image/webp；288×288；6560 bytes。
-- SHA-256：`d59a8c8f5583b8676a62e82ed0c56233d5ce1a0dca6fed65473c504ef46f5bda`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)；[公開圖片](https://github.com/user-attachments/assets/bedef96d-1746-44a5-a482-1abe4e5e15c6)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability_modifier/cryptic_precision_stance_crit_cleave.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)｜[圖片附件](https://github.com/user-attachments/assets/bedef96d-1746-44a5-a482-1abe4e5e15c6)
+
+圖片僅供技能辨識，不作機制證據。
+

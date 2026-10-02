@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_drone_debuff_talent`；名稱鍵：`loc_talent_adamant_drone_debuff_talent`；描述鍵：`loc_talent_adamant_drone_debuff_talent_desc`。
 - 節點：`node_99a483b6-3ac6-42da-b2ab-b0d3dcc062e9`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,7 +33,7 @@
 - 若攻速倍率為 0.75，1 秒基準動作時間÷0.75≈1.33 秒；相當於間隔延長約 33%，介面標示 50% 的差異待核。
 - 攻速例子忽略敵人近戰動作的最低時間門檻、其他攻速修正及遊戲版本差異；程式係數與介面顯示值不一致，不能直接將介面 50% 當作每次攻擊的實際延遲比例。
 - 本機遊戲 build 與公開來源提交的版本對應尚待核對；數值與行為按固定來源提交說明。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -42,8 +42,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/ability_modifier/adamant_drone_debuff_talent.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_drone_debuff_talent:node_99a483b6-3ac6-42da-b2ab-b0d3dcc062e9`。
-- 格式：image/webp；288×288；6486 bytes。
-- SHA-256：`dcb73887af34357ea0c9092d6c802a38a63e7c5bcc492ddebab59b52fbc823eb`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/483804fa-b052-4baa-b3d7-5e7dbfbe44f4)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/ability_modifier/adamant_drone_debuff_talent.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/483804fa-b052-4baa-b3d7-5e7dbfbe44f4)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_dog_attacks_electrocute`；名稱鍵：`loc_talent_adamant_dog_attacks_electrocute`；描述鍵：`loc_talent_adamant_dog_attacks_electrocute_desc`。
 - 節點：`node_4c33cf5f-8516-4c2d-bc50-7afd037eb239`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -34,7 +34,7 @@
 
 - **傷害算例**：未受其他加成、命中一般無甲部位時，單次基準電擊為 57.5 × 0.5 = 28.75 點；換成防彈護甲的基準係數 1，則為 57.5 點。實際仍受敵人部位、抗性與其他傷害加成影響。
 - 電擊狀態與各敵人的實際控制反應仍須遊戲內確認；interrupter例外不擅自對應未核實的敵人名稱。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -43,8 +43,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_dog_attacks_electrocute.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_dog_attacks_electrocute:node_4c33cf5f-8516-4c2d-bc50-7afd037eb239`。
-- 格式：image/webp；288×288；5232 bytes。
-- SHA-256：`08f22cc8379b014d760210d662266b232974bf8773d3b45f2b1b4237e9aaaa00`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932563852)；[公開圖片](https://github.com/user-attachments/assets/4ce13efe-7a81-48cd-9bb6-47dfb55f63b8)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_dog_attacks_electrocute.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932563852)｜[圖片附件](https://github.com/user-attachments/assets/4ce13efe-7a81-48cd-9bb6-47dfb55f63b8)
+
+圖片僅供技能辨識，不作機制證據。
+

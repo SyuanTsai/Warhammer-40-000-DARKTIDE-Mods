@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_grenade_frag`；名稱鍵：`loc_ability_ogryn_grenade_demolition`；描述鍵：`loc_ability_ogryn_grenade_demolition_instakill_desc`。
 - 節點：`node_4b421360-1595-4f94-bcf1-e4a715b9dbca`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -40,7 +40,7 @@
 - 以上傷害為固定來源參數推導，假設標準威力 500、目標位於近距離爆心區且沒有其他增益、弱點或部位修正；外圍爆炸會衰減。
 - 即死標記與傷害設定來自程式；沒有以遊戲實測驗證特殊敵人的完整名單或每個命中部位的表現。
 - 投射物計時依固定更新、碰撞時刻與伺服器同步執行；本稿描述來源路徑，不宣稱毫秒級爆炸時刻。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -49,8 +49,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/tactical/ogryn_grenade_frag.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_grenade_frag:node_4b421360-1595-4f94-bcf1-e4a715b9dbca`。
-- 格式：image/webp；288×288；6954 bytes。
-- SHA-256：`de77f933b5548632fcc8ecea0df9bcd221d4f33d3bd56ebbc06d4c46df427f6b`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/ce691c05-0701-4539-921b-620c90189fa2)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/tactical/ogryn_grenade_frag.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/ce691c05-0701-4539-921b-620c90189fa2)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_melee_weakspot_hits_count_as_stagger`；名稱鍵：`loc_talent_adamant_melee_weakspot_hits_count_as_stagger`；描述鍵：`loc_talent_adamant_melee_weakspot_hits_count_as_stagger_desc`。
 - 節點：`node_46db21b8-af36-49bf-a4b3-8a79d303edb2`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -25,7 +25,7 @@
 ## 算例條件與待確認事項
 
 - **搭配算例**：搭配鎮壓異己的 10% 對踉蹌增傷，後續符合條件的基礎 100 點攻擊變成 100 × 1.1 = 110 點。單選本天賦不會自行增加傷害或強制敵人倒退。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -34,8 +34,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_melee_weakspot_hits_count_as_stagger.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_melee_weakspot_hits_count_as_stagger:node_46db21b8-af36-49bf-a4b3-8a79d303edb2`。
-- 格式：image/webp；288×288；6480 bytes。
-- SHA-256：`c6b4ac0bb76de278265080c2e553f5c35e5137b7b57e2300641af11025aeea21`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932563852)；[公開圖片](https://github.com/user-attachments/assets/2577c784-85c4-473c-b9ba-a88f8de35355)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_melee_weakspot_hits_count_as_stagger.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932563852)｜[圖片附件](https://github.com/user-attachments/assets/2577c784-85c4-473c-b9ba-a88f8de35355)
+
+圖片僅供技能辨識，不作機制證據。
+

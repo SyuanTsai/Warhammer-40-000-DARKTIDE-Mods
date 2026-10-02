@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_toughness_on_soul`；名稱鍵：`loc_talent_psyker_toughness_regen_on_soul`；描述鍵：`loc_talent_psyker_toughness_regen_on_soul_desc`。
 - 節點：`node_cec906f5-721d-46dd-95e9-78b903190c9d`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -29,18 +29,17 @@
 - **恢復算例**：最大韌性 100 時，每秒恢復 100 × 30% ÷ 5 = 6 點；完整持續 5 秒共 30 點。若只缺 12 點，實際最多補回 12 點。
 - 韌性已滿時，實際有效恢復會受韌性上限限制；例子假設有足夠韌性缺口。
 - 再次獲魂時不會立即補 30%；它重設持續時間並維持逐秒恢復。
-- 來源 SHA 與遊戲 Build 25492122 版本對應由使用者於2026-10-02確認。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 來源 SHA 與遊戲 Build 25492122 版本對應為1.13.0。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`fc9f3c0b`。
-- 同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應由使用者於2026-10-02確認。
+- 同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/keystone_modifier/psyker_toughness_on_soul.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_toughness_on_soul:node_cec906f5-721d-46dd-95e9-78b903190c9d`。
-- 格式：image/webp；288×288；4102 bytes。
-- SHA-256：`00671c39a79a395e458f411b45b4635a3c8e9c2001e460a70217ae1a6da596f6`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/00ae8b19-169d-4eec-94e2-89c3cf851d08)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/keystone_modifier/psyker_toughness_on_soul.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/00ae8b19-169d-4eec-94e2-89c3cf851d08)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_corruption_healing_coherency_improved`；名稱鍵：`loc_talent_zealot_corruption_healing_coherency_improved`；描述鍵：`loc_talent_zealot_corruption_healing_coherency_improved_desc`。
 - 節點：`node_69985978-58fd-4215-9404-5ebfe1869483`；分類：光環；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -35,7 +35,7 @@
 - interval=1 秒只說明週期設定；此研究沒有在執行遊戲中測試施加 aura 後第一個 tick 的相位或延遲。
 - 「heal corruption」不代表回復所有已失去生命；它只透過 reduce_permanent_damage 處理永久腐敗傷害。
 - 範例假設沒有其他腐敗變動，且傷口 floor 不攔截清除。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -44,8 +44,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/aura/zealot_corruption_healing_coherency_improved.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_corruption_healing_coherency_improved:node_69985978-58fd-4215-9404-5ebfe1869483`。
-- 格式：image/webp；288×288；5776 bytes。
-- SHA-256：`e28142ece0b238e52bfd2d9c6d90f89f8285707df8916c16f700f61c6ea3bdd0`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/ac37d3b8-a749-4604-98ba-2781c220761f)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/aura/zealot_corruption_healing_coherency_improved.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/ac37d3b8-a749-4604-98ba-2781c220761f)
+
+圖片僅供技能辨識，不作機制證據。
+

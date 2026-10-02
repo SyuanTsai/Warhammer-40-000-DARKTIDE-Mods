@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_multi_hits_grant_reload_speed`；名稱鍵：`loc_talent_ogryn_reload_speed_on_multiple_hits`；描述鍵：`loc_talent_ogryn_reload_speed_on_multiple_hits_new_desc`。
 - 節點：`node_65087f4f-47f2-428b-8c72-a5120e1116ac`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,7 +24,7 @@
 
 - **時間算例**：受換彈速度影響的 3 秒動作變成 3 ÷ 1.15 ≈ 2.61 秒；若同階段另有 20% 加成，則為 3 ÷ (1 + 15% + 20%) ≈ 2.22 秒。
 - 原文只說單次攻擊命中多人；此SHA依0.5秒內不同目標計數，跨來源限制待遊戲內核對。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -33,8 +33,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_multi_hits_grant_reload_speed.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_multi_hits_grant_reload_speed:node_65087f4f-47f2-428b-8c72-a5120e1116ac`。
-- 格式：image/webp；288×288；6036 bytes。
-- SHA-256：`a425bf19865688233dd6228e5643a0a1667d88a616a9f2d1af9b37537c415d2e`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)；[公開圖片](https://github.com/user-attachments/assets/cf916d47-2e00-43d4-98b7-307222a056e6)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_multi_hits_grant_reload_speed.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)｜[圖片附件](https://github.com/user-attachments/assets/cf916d47-2e00-43d4-98b7-307222a056e6)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_attack_speed_post_ability`；名稱鍵：`loc_talent_maniac_attack_speed_after_dash`；描述鍵：`loc_talent_zealot_attack_speed_after_dash_new_desc`。
 - 節點：`node_5bf70f4d-96f3-446a-8a74-f4b4db160455`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,7 +33,7 @@
 - 程式中的 lunge distance、target distance 是衝刺與選敵設定，不代表可在所有地形穩定移動同樣距離。
 - 攻速 buff 的 +1 秒是模板內部 duration；跨版本描述、HUD 顯示與可感知時長仍待遊戲內核對。
 - 近戰 buff 的「下一次」應理解為符合 on_melee_hit 篩選的命中；推擊與遠程攻擊不觸發消耗。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -42,8 +42,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability/zealot_attack_speed_post_ability.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_attack_speed_post_ability:node_5bf70f4d-96f3-446a-8a74-f4b4db160455`。
-- 格式：image/webp；288×288；4910 bytes。
-- SHA-256：`4678fb4d62a41cdc9c3c4daa79044f33f0e1a70af54faaeff80b104cf9ca3806`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/bd841f6f-e0ff-4cfa-a3ac-f7d08bfbc80e)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability/zealot_attack_speed_post_ability.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/bd841f6f-e0ff-4cfa-a3ac-f7d08bfbc80e)
+
+圖片僅供技能辨識，不作機制證據。
+

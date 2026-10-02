@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_keystone_adrenaline_junkie_sub_1`；名稱鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_1`；描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_1_desc`。
 - 節點：`node_ec8f7ffd-0a53-4d62-b0a7-d1c1e5254bcd`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -29,7 +29,7 @@
 - **層數算例**：非弱點非暴擊命中 0 層；非弱點暴擊 0+1=1 層；弱點非暴擊 1+2=3 層；弱點暴擊 1+2+1=4 層。
 - 升級條件只計近戰命中；遠程弱點命中不經此 keystone 的 melee-hit 檢查。
 - 30 層上限可能使實得層數低於單次命中的計算值；已達上限後不會再提高。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -38,8 +38,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_adrenaline_junkie_sub_1.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_keystone_adrenaline_junkie_sub_1:node_ec8f7ffd-0a53-4d62-b0a7-d1c1e5254bcd`。
-- 格式：image/webp；288×288；4264 bytes。
-- SHA-256：`224ced9308811cd64e240b2f533bbe215d0afedf20152d930ebef83b9048d10a`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_adrenaline_junkie_sub_1.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/f2c76ddc-b60e-49ee-9e7c-1d94981a7448)
+
+圖片僅供技能辨識，不作機制證據。
+

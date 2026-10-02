@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_dissector_power`；名稱鍵：`loc_talent_cryptic_dissector_power`；描述鍵：`loc_talent_cryptic_dissector_power_desc`。
 - 節點：`node_ce7afddd-b252-4604-a423-da685ffa5410`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -32,7 +32,7 @@
 - 總6.5%由固定職業擊殺回復4%與本修改器額外2.5%相加；不可只把額外值寫成總回復。
 - 百分比依單一充能成本計算，不依全部充能總池。restore_ability_charge_percentage忽略stat buffs，所以此回復不受紅線回復倍率放大。
 - precision stance keyword會使整個擊殺回復proc提前return。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -41,8 +41,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_dissector_power.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_dissector_power:node_ce7afddd-b252-4604-a423-da685ffa5410`。
-- 格式：image/webp；288×288；5300 bytes。
-- SHA-256：`3e7ae6649a2aaa44d9142b61667f4f665031a5678f58a59bcf6b0a8b0e4e706b`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528)；[公開圖片](https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_dissector_power.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528)｜[圖片附件](https://github.com/user-attachments/assets/e1ca03f4-8152-4fa6-9b43-0780a40ae7ca)
+
+圖片僅供技能辨識，不作機制證據。
+

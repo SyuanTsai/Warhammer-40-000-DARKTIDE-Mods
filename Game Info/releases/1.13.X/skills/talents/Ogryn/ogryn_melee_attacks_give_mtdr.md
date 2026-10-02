@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_melee_attacks_give_mtdr`；名稱鍵：`loc_talent_ogryn_melee_attacks_give_mtdr_name`；描述鍵：`loc_talent_ogryn_melee_attacks_give_mtdr_desc`。
 - 節點：`node_bbd8f036-4fd4-4438-bc14-bb08632c7b09`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -26,18 +26,17 @@
 ## 算例條件與待確認事項
 
 - **減傷算例**：每層乘上 0.96，5 層時為 100 × 0.96⁵ ≈ 81.54 點，合計約減少 18.46%，不是直接減少 20%。
-- 公開實作的全隊清除條件與原文的一般受傷說法有落差；兩來源版本對應由使用者於2026-10-02確認，不列繁中誤譯。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 公開實作的全隊清除條件與原文的一般受傷說法有落差；兩來源版本對應為1.13.0，不列繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`7ced0743`。
-- 同源中英都描述受到近戰傷害後清層；固定公開實作使用全隊傷害事件且沒有本人篩選，隊友受傷亦會清除。兩來源版本對應由使用者於2026-10-02確認，不列繁中誤譯。
+- 同源中英都描述受到近戰傷害後清層；固定公開實作使用全隊傷害事件且沒有本人篩選，隊友受傷亦會清除。兩來源版本對應為1.13.0，不列繁中誤譯。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_melee_attacks_give_mtdr.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_melee_attacks_give_mtdr:node_bbd8f036-4fd4-4438-bc14-bb08632c7b09`。
-- 格式：image/webp；288×288；4890 bytes。
-- SHA-256：`10b6a2fc50ddb4d78b60c268c856b28a33a2add2b796489dc6a23080b66c5e3a`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)；[公開圖片](https://github.com/user-attachments/assets/fca0827b-6dac-4c44-b92e-8aba309ff4ca)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_melee_attacks_give_mtdr.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)｜[圖片附件](https://github.com/user-attachments/assets/fca0827b-6dac-4c44-b92e-8aba309ff4ca)
+
+圖片僅供技能辨識，不作機制證據。
+

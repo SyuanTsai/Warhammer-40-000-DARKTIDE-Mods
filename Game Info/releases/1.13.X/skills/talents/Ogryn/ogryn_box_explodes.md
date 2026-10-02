@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_box_explodes`；名稱鍵：`loc_talent_bonebreaker_grenade_super_armor_explosion`；描述鍵：`loc_talent_bonebreaker_grenade_super_armor_explosion_desc`。
 - 節點：`node_3e19fd5d-9d22-4e5c-8981-be97b1de8854`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -34,7 +34,7 @@
 - **子手雷算例**：一般子手雷爆炸半徑 8 公尺、中心 2 公尺；不計其他修正，中心對無甲目標每顆造成 10 × 1 = 10 點，甲殼為 10 × 0.2 = 2 點。6 顆全部在中心命中同一無甲目標時為 60 點，並不把箱體的 1850 點傷害複製到每顆手雷。
 - 直接命中算例只計箱體碰撞，未計爆炸手雷；總傷害會受散布、各自爆炸距離、護甲、命中部位與目標狀態影響。
 - 引信時間是來源設定與生成程式的靜態推導；伺服器更新時序及特殊投射物類型會影響遊戲中的實際呈現。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -43,8 +43,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/tactical/ogryn_box_explodes.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_box_explodes:node_3e19fd5d-9d22-4e5c-8981-be97b1de8854`。
-- 格式：image/webp；288×288；4928 bytes。
-- SHA-256：`ee0152e6d045368d296e933428e056e1fc47bfcc745d6a847db211e465fb0088`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/a7e97984-e57a-4028-ab1b-6e89a0e42fdf)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/tactical/ogryn_box_explodes.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/a7e97984-e57a-4028-ab1b-6e89a0e42fdf)
+
+圖片僅供技能辨識，不作機制證據。
+

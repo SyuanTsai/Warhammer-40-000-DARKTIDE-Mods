@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_empowered_grenades_passive_improved`；名稱鍵：`loc_talent_psyker_increase_empower_chain_lighting_chance`；描述鍵：`loc_talent_psyker_increase_empower_chain_lighting_chance_description`。
 - 節點：`node_0bb80aeb-f367-4e65-bcb5-04e91aad3c23`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -28,17 +28,16 @@
 - 如果充能已滿，成功 proc 會受 charge cap 限制而不增加可儲存層數。
 - 期望值例子假設每次擊殺有空位且機率獨立；遊戲隨機結果不保證平均值。
 - 本機遊戲 Build 25492122 尚未核對與 source SHA 同版。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`542f4465`。
-- 同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應由使用者於2026-10-02確認。
+- 同描述鍵的本機繁中與英文效果方向一致。補充公式、恢復上限與事件時序屬描述不完整；公開來源與遊戲文字版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/keystone_modifier/psyker_empowered_grenades_passive_improved.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_empowered_grenades_passive_improved:node_0bb80aeb-f367-4e65-bcb5-04e91aad3c23`。
-- 格式：image/webp；288×288；3596 bytes。
-- SHA-256：`d4170930f458350746f9458e1e68ba640d33c3ab1ee9ae420c25287e42f7c02b`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/827d3ef0-dce8-4cb8-8af1-c5ad142d4ec1)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/keystone_modifier/psyker_empowered_grenades_passive_improved.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/827d3ef0-dce8-4cb8-8af1-c5ad142d4ec1)
+
+圖片僅供技能辨識，不作機制證據。
+

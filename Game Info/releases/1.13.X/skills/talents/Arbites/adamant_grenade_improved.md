@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_grenade_improved`；名稱鍵：`loc_talent_ability_adamant_grenade_improved`；描述鍵：`loc_talent_ability_adamant_grenade_improved_description`。
 - 節點：`node_44cf93b1-fbc8-48a4-ba29-40c84aa6051f`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -37,7 +37,7 @@
 
 - **傷害算例**：只計爆炸中央的護甲階段，基準傷害 1,500 對無甲為 1,500 × 1 = 1,500，對防彈護甲為 1,500 × 0.5 = 750，對硬殼護甲為 1,500 × 0.2 = 300。實際還需計入命中部位、爆炸遮蔽及其他增減傷。
 - 爆炸算例是護甲階段靜態基準，不是遊戲內實測；碰撞引信0仍受固定更新與延遲補償影響。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -46,8 +46,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/tactical/adamant_grenade_improved.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_grenade_improved:node_44cf93b1-fbc8-48a4-ba29-40c84aa6051f`。
-- 格式：image/webp；288×288；4774 bytes。
-- SHA-256：`07fff165141a1b1cf2031a6576a807e56b388eaa7390a44f2e596bcc142b0b3f`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/9f134d52-bce2-4365-b74c-f93550febf29)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/tactical/adamant_grenade_improved.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/9f134d52-bce2-4365-b74c-f93550febf29)
+
+圖片僅供技能辨識，不作機制證據。
+

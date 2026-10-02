@@ -1,0 +1,582 @@
+{
+  "schema_version": 1,
+  "path_base": "repository-root",
+  "knowledge_root": "Game Info",
+  "workflow": "AI Prompt/Game-Info-Workflow.md",
+  "tools_root": "scripts/game-info",
+  "records": [
+    {
+      "id": "audits/2026-10-02-OFFLINE_RESTORATION",
+      "kind": "audit",
+      "scope": "audits",
+      "path": "AI-LOGS/Game Info/audits/2026-10-02-OFFLINE_RESTORATION.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "audits/2026-10-02-PRIVACY_CHECK",
+      "kind": "audit",
+      "scope": "audits",
+      "path": "AI-LOGS/Game Info/audits/2026-10-02-PRIVACY_CHECK.md",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "audits/2026-10-02-SEPARATION_CHECK",
+      "kind": "audit",
+      "scope": "audits",
+      "path": "AI-LOGS/Game Info/audits/2026-10-02-SEPARATION_CHECK.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "changes/2026-10-02-SEPARATION",
+      "kind": "migration",
+      "scope": "changes",
+      "path": "AI-LOGS/Game Info/changes/2026-10-02-SEPARATION.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "changes/DIRECTORY_MIGRATION",
+      "kind": "migration",
+      "scope": "changes",
+      "path": "AI-LOGS/Game Info/changes/DIRECTORY_MIGRATION.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "changes/GAME_INFO_INDEX_HISTORY",
+      "kind": "migration",
+      "scope": "changes",
+      "path": "AI-LOGS/Game Info/changes/GAME_INFO_INDEX_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "changes/POC_INDEX_HISTORY",
+      "kind": "migration",
+      "scope": "changes",
+      "path": "AI-LOGS/Game Info/changes/POC_INDEX_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/CLOUD_ARCHIVES",
+      "kind": "record",
+      "scope": "releases/1.13.X",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/CLOUD_ARCHIVES.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/HISTORY",
+      "kind": "history",
+      "scope": "releases/1.13.X",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/RESTORATION_HISTORY",
+      "kind": "history",
+      "scope": "releases/1.13.X",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/RESTORATION_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/ACCEPTANCE_HISTORY",
+      "kind": "history",
+      "scope": "releases/1.13.X/skills",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/ACCEPTANCE_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Arbites/2026-10-02-SEPARATED_RECORDS",
+      "kind": "record",
+      "scope": "releases/1.13.X/skills/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Arbites/2026-10-02-SEPARATED_RECORDS.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Arbites/SOURCE_INVENTORY_HISTORY",
+      "kind": "history",
+      "scope": "releases/1.13.X/skills/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Arbites/SOURCE_INVENTORY_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Ogryn/2026-10-02-SEPARATED_RECORDS",
+      "kind": "record",
+      "scope": "releases/1.13.X/skills/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Ogryn/2026-10-02-SEPARATED_RECORDS.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Ogryn/SOURCE_INVENTORY_HISTORY",
+      "kind": "history",
+      "scope": "releases/1.13.X/skills/Ogryn",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Ogryn/SOURCE_INVENTORY_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Psyker/2026-10-02-SEPARATED_RECORDS",
+      "kind": "record",
+      "scope": "releases/1.13.X/skills/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Psyker/2026-10-02-SEPARATED_RECORDS.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Psyker/SOURCE_INVENTORY_HISTORY",
+      "kind": "history",
+      "scope": "releases/1.13.X/skills/Psyker",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Psyker/SOURCE_INVENTORY_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Scum/2026-10-02-SEPARATED_RECORDS",
+      "kind": "record",
+      "scope": "releases/1.13.X/skills/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Scum/2026-10-02-SEPARATED_RECORDS.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Scum/SOURCE_INVENTORY_HISTORY",
+      "kind": "history",
+      "scope": "releases/1.13.X/skills/Scum",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Scum/SOURCE_INVENTORY_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/shared/2026-10-02-SEPARATED_RECORDS",
+      "kind": "record",
+      "scope": "releases/1.13.X/skills/shared",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/shared/2026-10-02-SEPARATED_RECORDS.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Skitarii/2026-10-02-SEPARATED_RECORDS",
+      "kind": "record",
+      "scope": "releases/1.13.X/skills/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Skitarii/2026-10-02-SEPARATED_RECORDS.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Skitarii/SOURCE_INVENTORY_HISTORY",
+      "kind": "history",
+      "scope": "releases/1.13.X/skills/Skitarii",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Skitarii/SOURCE_INVENTORY_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Veteran/2026-10-02-SEPARATED_RECORDS",
+      "kind": "record",
+      "scope": "releases/1.13.X/skills/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Veteran/2026-10-02-SEPARATED_RECORDS.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Veteran/LOCALIZATION_ACCEPTANCE_HISTORY",
+      "kind": "history",
+      "scope": "releases/1.13.X/skills/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Veteran/LOCALIZATION_ACCEPTANCE_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Veteran/SOURCE_INVENTORY_HISTORY",
+      "kind": "history",
+      "scope": "releases/1.13.X/skills/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Veteran/SOURCE_INVENTORY_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Zealot/2026-10-02-SEPARATED_RECORDS",
+      "kind": "record",
+      "scope": "releases/1.13.X/skills/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Zealot/2026-10-02-SEPARATED_RECORDS.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/Zealot/SOURCE_INVENTORY_HISTORY",
+      "kind": "history",
+      "scope": "releases/1.13.X/skills/Zealot",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/Zealot/SOURCE_INVENTORY_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/archive-2026-10-02-records-separated",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/archive-2026-10-02-records-separated.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/archive",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/archive.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/cleanup",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/cleanup.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/decode",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/decode.log",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/extraction",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/extraction.log",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/files_before_cleanup.sha256",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/files_before_cleanup.sha256.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/history/2026-10-02-separate-records/files.sha256",
+      "kind": "history",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0/history/2026-10-02-separate-records",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/history/2026-10-02-separate-records/files.sha256.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/history/2026-10-02-separate-records/RESTORE",
+      "kind": "history",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0/history/2026-10-02-separate-records",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/history/2026-10-02-separate-records/RESTORE.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/privacy",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/privacy.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/provenance",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/provenance.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/restoration_validation",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/restoration_validation.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/validation",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/validation.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/verify_exports",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/verify_exports.py",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25492122_1.13.0/workspace_relocation",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25492122_1.13.0",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/workspace_relocation.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25606770_1.13.1/archive-2026-10-02-records-separated",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25606770_1.13.1",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/archive-2026-10-02-records-separated.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25606770_1.13.1/archive",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25606770_1.13.1",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/archive.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25606770_1.13.1/archive_before_cleanup",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25606770_1.13.1",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/archive_before_cleanup.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25606770_1.13.1/cleanup",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25606770_1.13.1",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/cleanup.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25606770_1.13.1/extraction",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25606770_1.13.1",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/extraction.log",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25606770_1.13.1/files_before_cleanup.sha256",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25606770_1.13.1",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/files_before_cleanup.sha256.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25606770_1.13.1/history/2026-10-02-separate-records/files.sha256",
+      "kind": "history",
+      "scope": "releases/1.13.X/SteamBuild_25606770_1.13.1/history/2026-10-02-separate-records",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/history/2026-10-02-separate-records/files.sha256.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25606770_1.13.1/history/2026-10-02-separate-records/RESTORE",
+      "kind": "history",
+      "scope": "releases/1.13.X/SteamBuild_25606770_1.13.1/history/2026-10-02-separate-records",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/history/2026-10-02-separate-records/RESTORE.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25606770_1.13.1/privacy",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25606770_1.13.1",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/privacy.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25606770_1.13.1/provenance",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25606770_1.13.1",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/provenance.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25606770_1.13.1/restoration_validation",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25606770_1.13.1",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/restoration_validation.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/SteamBuild_25606770_1.13.1/validation",
+      "kind": "record",
+      "scope": "releases/1.13.X/SteamBuild_25606770_1.13.1",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/validation.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/TEXT_COMPARISON_HISTORY",
+      "kind": "history",
+      "scope": "releases/1.13.X",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/TEXT_COMPARISON_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/TEXT_SOURCE_HISTORY",
+      "kind": "history",
+      "scope": "releases/1.13.X",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/TEXT_SOURCE_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "local/2026-10-02-separate-records/inventory.json",
+      "kind": "local-inventory",
+      "scope": "local/2026-10-02-separate-records",
+      "path": "AI-LOGS/Game Info/local/2026-10-02-separate-records/inventory.json",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "local"
+    },
+    {
+      "id": "local/2026-10-02-separate-records/git-index-before.txt",
+      "kind": "local-inventory",
+      "scope": "local/2026-10-02-separate-records",
+      "path": "AI-LOGS/Game Info/local/2026-10-02-separate-records/git-index-before.txt",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "local"
+    },
+    {
+      "id": "local/releases/1.13.X/SteamBuild_25492122_1.13.0/bundle_inventory.json.gz",
+      "kind": "local-inventory",
+      "scope": "local/releases/1.13.X/SteamBuild_25492122_1.13.0",
+      "path": "AI-LOGS/Game Info/local/releases/1.13.X/SteamBuild_25492122_1.13.0/bundle_inventory.json.gz",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "local"
+    },
+    {
+      "id": "local/releases/1.13.X/SteamBuild_25606770_1.13.1/bundle_inventory.json.gz",
+      "kind": "local-inventory",
+      "scope": "local/releases/1.13.X/SteamBuild_25606770_1.13.1",
+      "path": "AI-LOGS/Game Info/local/releases/1.13.X/SteamBuild_25606770_1.13.1/bundle_inventory.json.gz",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "local"
+    },
+    {
+      "id": "changes/TOOLS_README_HISTORY",
+      "kind": "history",
+      "scope": "changes",
+      "path": "AI-LOGS/Game Info/changes/TOOLS_README_HISTORY.md",
+      "date": null,
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "changes/2026-10-02-RECORD_SEPARATION",
+      "kind": "migration",
+      "scope": "changes",
+      "path": "AI-LOGS/Game Info/changes/2026-10-02-RECORD_SEPARATION.md",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "audits/2026-10-02-FINAL_CHECK",
+      "kind": "audit",
+      "scope": "audits",
+      "path": "AI-LOGS/Game Info/audits/2026-10-02-FINAL_CHECK.json",
+      "date": "2026-10-02",
+      "relocated_on": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "changes/2026-10-02-IGNORE_RULES",
+      "kind": "migration",
+      "scope": "changes",
+      "path": "AI-LOGS/Game Info/changes/2026-10-02-IGNORE_RULES.json",
+      "date": "2026-10-02",
+      "storage": "git"
+    }
+  ],
+  "pending": [
+    {
+      "scope": "releases/1.13.X/source",
+      "task": "replace both cloud ZIPs after record separation",
+      "details": "AI-LOGS/Game Info/releases/1.13.X/CLOUD_ARCHIVES.json"
+    }
+  ]
+}

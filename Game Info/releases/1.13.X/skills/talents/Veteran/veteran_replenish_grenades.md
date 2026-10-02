@@ -6,7 +6,7 @@
 
 - 名稱 key：`loc_talent_ranger_replenish_grenade`；描述 key：`loc_talent_veteran_grenade_regeneration_per_grenade_desc`。中文沿用詞表 `Demolition Stockpile - 炸藥儲備`，key 對應暫定、待使用者確認。
 - 節點類型 `tactical_modifier`，花費 1 點，上限 1 點。因此歸入閃擊升級，而非光環或獨立手雷替換。[節點定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1111-L1141)。
-- 狀態：**完成（核心靜態機制）**；非遊戲內驗證。
+- 本文為程式分析，未進行遊戲內驗證。
 
 **原始碼確認 — 引用與作用對象**：天賦的被動效果安裝 `veteran_grenade_replenishment`；天賦系統將被動效果加入持有者的增益效果系統，再操作 `template_context.unit` 的 `grenade_ability`。因此補給持有者自己，不是協同隊友或地面彈藥。[天賦與顯示參數](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1988-L2030)、[被動效果安裝](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/talent/player_unit_talent_extension.lua#L164-L175)、[持有者及種類選擇](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1813-L1841)。
 
@@ -26,7 +26,7 @@
 
 ## 圖示來源
 
-- 圖示取自 [Games Lantern 編輯器](https://darktide.gameslantern.com/build-editor)的公開資料，取得日期為 2026-10-01；[原始圖片](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/tactical_modifier/veteran_replenish_grenades.webp)。
-- 天賦與節點對應：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_replenish_grenades:node_8acdddd9-366b-4601-bf16-13574eb1cb24`；與[固定版本節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1111-L1141)核對。來源原始碼提供圖示路徑，但不含圖片檔。
-- 原始圖片為 288 × 288 WebP，3502 bytes；SHA-256：`eb6b53cc5b461f6e26a97868f0b69c3f7b7317cf1bd4841b94ee3ea33c911a62`。
-- 圖片保存在 [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6) 的 [GitHub 圖片附件](https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf)，主頁引用此附件；圖檔不加入 Git 分支。已核對附件的 SHA-256 與檔案大小，均與原圖一致。圖片僅用於視覺呈現，不作技能機制證據。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/tactical_modifier/veteran_replenish_grenades.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/6)｜[圖片附件](https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf)
+
+圖片僅供技能辨識，不作機制證據。
+

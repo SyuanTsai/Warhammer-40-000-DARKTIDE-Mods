@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_passive_restore_toughness_on_close_ranged_kill`；名稱鍵：`loc_talent_broker_passive_restore_toughness_on_close_ranged_kill`；描述鍵：`loc_talent_broker_passive_restore_toughness_on_close_ranged_kill_desc`。
 - 節點：`node_8d67a080-fc70-4749-9f1e-75b1d158f0f5`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -26,7 +26,7 @@
 ## 算例條件與待確認事項
 
 - **恢復算例**：最大韌性 100 時，一般敵人恢復 8 點、精英或專家恢復 15 點；目前已有 95 點時，兩者實際都只補 5 點。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -35,8 +35,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_restore_toughness_on_close_ranged_kill.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_passive_restore_toughness_on_close_ranged_kill:node_8d67a080-fc70-4749-9f1e-75b1d158f0f5`。
-- 格式：image/webp；288×288；5974 bytes。
-- SHA-256：`eb70358e8ca0ae6ae89bc975242356e444797c5e5b28155e63bafd2834efcbad`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/04100618-a87c-416c-8e22-3c1eb01aa7ab)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_restore_toughness_on_close_ranged_kill.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/04100618-a87c-416c-8e22-3c1eb01aa7ab)
+
+圖片僅供技能辨識，不作機制證據。
+

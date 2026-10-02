@@ -1,0 +1,9 @@
+{
+  "checked_on": "2026-10-02",
+  "raw_text_records_checked": 2222730,
+  "raw_payload_format": "UTF-8 text and annotations parsed per record; arbitrary binary byte matches not treated as text",
+  "raw_sha256_unchanged": true,
+  "local_private_paths_removed": true,
+  "public_source_links_retained": true,
+  "credentials_or_user_account_ids_found": false
+}

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_blitz_missile_launcher`；名稱鍵：`loc_talent_broker_blitz_missile_launcher`；描述鍵：`loc_talent_broker_blitz_missile_launcher_desc`。
 - 節點：`node_71b9436c-eebd-417b-b666-9df1a19c2db7`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,7 +33,7 @@
 
 - **傷害算例**：以未受其他修正、未衰減的內圈爆炸計，基礎傷害為 20 × (500 × 2800 ÷ 10000) = 2800。打到無甲部位套 1.25 倍為 3500，甲殼部位套 2.4 倍為 6720。這些數字不含飛彈直擊、部位、敵人特殊減傷或其他天賦。
 - 距離衰減、直擊部位及敵人減傷未以遊戲實測取得完整傷害表。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -42,8 +42,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/tactical/broker_blitz_missile_launcher.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_blitz_missile_launcher:node_71b9436c-eebd-417b-b666-9df1a19c2db7`。
-- 格式：image/webp；288×288；3440 bytes。
-- SHA-256：`1fd73921bf9dbd22a53ec02bbbd86e04387034bf98971f94edabccec1722978e`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/3b4df232-3b49-4f84-98c0-2b3e8828f917)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/tactical/broker_blitz_missile_launcher.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/3b4df232-3b49-4f84-98c0-2b3e8828f917)
+
+圖片僅供技能辨識，不作機制證據。
+

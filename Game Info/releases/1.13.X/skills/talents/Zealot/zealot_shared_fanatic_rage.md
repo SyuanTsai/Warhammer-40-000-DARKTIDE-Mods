@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_shared_fanatic_rage`；名稱鍵：`loc_talent_zealot_shared_fanatic_rage`；描述鍵：`loc_talent_zealot_shared_fanatic_rage_new_desc`。
 - 節點：`node_2a3a12a6-983c-4998-8541-83e9266b031d`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -31,7 +31,7 @@
 - 這段時間差是由原始碼的啟動回呼與刷新路徑推導，未在遊戲內實測；應以固定 SHA 原始碼描述並與同版遊戲確認。
 - 程式只對當下協同集合呼叫加 buff；玩家中途進出協同的處理不由本節點持續監控。
 - 若盟友自己也有可堆疊暴擊率的來源，最終暴擊率另行計算。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -40,8 +40,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_shared_fanatic_rage.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_shared_fanatic_rage:node_2a3a12a6-983c-4998-8541-83e9266b031d`。
-- 格式：image/webp；288×288；5404 bytes。
-- SHA-256：`90cc861e8616e46bcc369d6e26fb84b63147308099741c3c732ca58b14471a72`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/d1133aca-9af8-4b47-934f-d073de0d4e1c)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_shared_fanatic_rage.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/d1133aca-9af8-4b47-934f-d073de0d4e1c)
+
+圖片僅供技能辨識，不作機制證據。
+

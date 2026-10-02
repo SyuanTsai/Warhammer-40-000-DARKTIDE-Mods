@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_overload_keystone`；名稱鍵：`loc_talent_cryptic_overload_keystone`；描述鍵：`loc_talent_cryptic_overload_keystone_coherency_desc`。
 - 節點：`node_2b657eae-4687-4860-a0c8-d87ac8266e32`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -41,7 +41,7 @@
 - 未選爆擊能量過載時，核心觸發分支播放效果與音效，不建立敵方傷害爆炸；敵方電擊與承傷削弱屬於該修改器。
 - 每個隊伍增益只對觸發當下協同集合中的非 companion 單位施加；重複觸發會刷新既有8秒增益。
 - 靜態推演依固定原始碼完成，未在遊戲內實測。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -50,8 +50,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone/cryptic_overload_keystone.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_overload_keystone:node_2b657eae-4687-4860-a0c8-d87ac8266e32`。
-- 格式：image/webp；288×288；6986 bytes。
-- SHA-256：`7e63d96b5e13d14f3c49da90cd6373614660ffca6c81c17a15583ed0d008c654`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)；[公開圖片](https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone/cryptic_overload_keystone.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)｜[圖片附件](https://github.com/user-attachments/assets/1f613b73-cb4f-4b13-8c3e-2355fe567ba3)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_stamina_increases_damage`；名稱鍵：`loc_talent_cryptic_stamina_increases_damage`；描述鍵：`loc_talent_cryptic_stamina_increases_damage_desc`。
 - 節點：`node_a33d4e99-fff1-4e68-a431-b76674437dfd`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,7 +24,7 @@
 ## 算例條件與待確認事項
 
 - **傷害算例**：消耗 0.4 格，再消耗 0.6 格即可觸發。假設基礎傷害 100、同階段原有 25% 加成，結果為 100 × (1 + 25% + 15%) = 140 點。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -33,8 +33,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/default/cryptic_stamina_increases_damage.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_stamina_increases_damage:node_a33d4e99-fff1-4e68-a431-b76674437dfd`。
-- 格式：image/webp；288×288；3950 bytes。
-- SHA-256：`7a1b4bb9c3af976cac2d481df2c425941fa06002c8df8475750efe67b9280474`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528)；[公開圖片](https://github.com/user-attachments/assets/8f013bd2-f685-4be4-8678-11ac630d6659)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/default/cryptic_stamina_increases_damage.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528)｜[圖片附件](https://github.com/user-attachments/assets/8f013bd2-f685-4be4-8678-11ac630d6659)
+
+圖片僅供技能辨識，不作機制證據。
+

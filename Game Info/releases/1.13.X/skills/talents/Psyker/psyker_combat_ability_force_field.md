@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_combat_ability_force_field`；名稱鍵：`loc_talent_psyker_combat_ability_shield`；描述鍵：`loc_talent_psyker_combat_ability_shield_description`。
 - 節點：`node_ba340289-3623-4920-b6cb-0a665eff8c0e`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -28,17 +28,16 @@
 - 各種攻擊如何碰撞或被護盾阻擋仍取決於場景與攻擊類型；此處只說明護盾耐久計算。
 - 耐久欄位是獨立物件生命值，不等於玩家韌性；護盾失效也不直接代表玩家韌性耗盡。
 - Build25492122 與source commit同版性待核。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`2d4c8bb1`。
-- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應由使用者於2026-10-02確認。
+- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability/psyker_combat_ability_force_field.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_combat_ability_force_field:node_ba340289-3623-4920-b6cb-0a665eff8c0e`。
-- 格式：image/webp；288×288；4342 bytes。
-- SHA-256：`b06cc0bad19d819277e0c254b465d14c79c5c0417a2ee38d6557726487f1faf3`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability/psyker_combat_ability_force_field.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f)
+
+圖片僅供技能辨識，不作機制證據。
+

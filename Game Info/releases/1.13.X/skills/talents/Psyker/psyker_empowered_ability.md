@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_empowered_ability`；名稱鍵：`loc_talent_psyker_empowered_ability`；描述鍵：`loc_talent_psyker_empowered_ability_description`。
 - 節點：`node_8d367c1d-ce78-44f3-a7b8-6a4b55341929`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -43,10 +43,10 @@
 - **懲戒**：傷害增加 200%。沒有其他增傷時，100 × (1 + 200%) = 300 點。
 - **靈能攻擊**：不產生反噬、不消耗投擲次數，並提高傷害與穿透能力；仍會消耗一層靈能強化。穿透容量由 2 提高至 4，是 4 ÷ 2 = 2 倍；實際能貫穿的敵人數量依敵人與命中條件而變。
 - **機率算例**：每次皆有空位可儲存時，100 次擊殺的期望取得次數為 100 × 10% = 10 次；不是每十次擊殺保證觸發。
-- 強化顱腦崩裂的顯示參數稱施放時間減少50%，執行是速度增加50%（時間÷1.5）；繁中與英文同樣寫時間減少，屬來源差異，版本對應由使用者於2026-10-02確認，不列繁中誤譯。
+- 強化顱腦崩裂的顯示參數稱施放時間減少50%，執行是速度增加50%（時間÷1.5）；繁中與英文同樣寫時間減少，屬來源差異，版本對應為1.13.0，不列繁中誤譯。
 - 蓄力時間仍受其他速度與動作修正影響；傷害算例假設該階段沒有其他加成。靈能攻擊的不同命中順序與護甲仍需分別結算。
 - 懲戒傳導加快的顯示值與使用端短路判定不一致；此版本執行路徑未將.5套至明定的.3秒間隔，待同版遊戲核對。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -55,8 +55,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/keystone/psyker_empowered_ability.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_empowered_ability:node_8d367c1d-ce78-44f3-a7b8-6a4b55341929`。
-- 格式：image/webp；288×288；5906 bytes。
-- SHA-256：`cf1587b1a0fb300ea1086c6e4b24887ea382daa725ee2516cee67d4d48561475`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/d3625057-f314-491b-8a34-84789ec38342)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/keystone/psyker_empowered_ability.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/d3625057-f314-491b-8a34-84789ec38342)
+
+圖片僅供技能辨識，不作機制證據。
+

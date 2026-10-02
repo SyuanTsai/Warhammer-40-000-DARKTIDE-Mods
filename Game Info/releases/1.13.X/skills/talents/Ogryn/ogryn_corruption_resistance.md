@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_corruption_resistance`；名稱鍵：`loc_talent_ogryn_corruption_resistance_name`；描述鍵：`loc_talent_ogryn_corruption_resistance_desc`。
 - 節點：`node_fda3d772-6d7d-4571-bf2b-80a14bbad5f9`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -23,7 +23,7 @@
 
 - **腐敗算例**：原本增加 20 點腐敗，變成 20 × 0.6 = 12 點；若另有獨立 20% 腐敗減免，則為 20 × 0.6 × 0.8 = 9.6 點。
 - 範例只涵蓋讀取corruption_taken_multiplier的傷害流程；不可推論會改變所有劇本直接設定的腐敗。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -32,8 +32,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_corruption_resistance.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_corruption_resistance:node_fda3d772-6d7d-4571-bf2b-80a14bbad5f9`。
-- 格式：image/webp；288×288；5980 bytes。
-- SHA-256：`624ea4835c8915cd4c351b96259e564cb01c146c2a6178acb42eb5c34e5913d9`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)；[公開圖片](https://github.com/user-attachments/assets/c5cc14b1-1227-4449-a1d9-de912e048e6e)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_corruption_resistance.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)｜[圖片附件](https://github.com/user-attachments/assets/c5cc14b1-1227-4449-a1d9-de912e048e6e)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_heavy_hitter_max_stacks_improves_attack_speed`；名稱鍵：`loc_talent_ogryn_heavy_hitter_max_stacks_improves_attack_speed`；描述鍵：`loc_talent_ogryn_heavy_hitter_max_stacks_improves_attack_speed_description`。
 - 節點：`node_09aa18e5-c980-46a8-89e9-8c93c778f69f`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,10 +24,10 @@
 ## 算例條件與待確認事項
 
 - **算例**：若某次攻擊原本每秒一次，增加 10% 攻速後，間隔約為 1 ÷ 1.10 = 0.91 秒。
-- 機制核對至指定公開來源 SHA 419fe18d414a618ce0474bd015bab470afb446d6；本機 Build 25492122 的中英文字串與公開來源版本對應由使用者於2026-10-02確認，文字與實作差異待遊戲內核對。
+- 機制核對至指定公開來源 SHA 419fe18d414a618ce0474bd015bab470afb446d6；本機 Build 25492122 的中英文字串與公開來源版本對應為1.13.0，文字與實作差異待遊戲內核對。
 - 此節點的門檻是滿 8 層，攻速沒有額外層數或冷卻；它跟著 Heavy Hitter 的 7.5 秒層數期限。
 - 重拳出擊的層數比例heavy_hitter_lerp_value為模組區域共用變數；多位歐格林同場時的更新互動未實測，主頁算例固定單一角色。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -36,8 +36,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/keystone_modifier/ogryn_heavy_hitter_max_stacks_improves_attack_speed.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_heavy_hitter_max_stacks_improves_attack_speed:node_09aa18e5-c980-46a8-89e9-8c93c778f69f`。
-- 格式：image/webp；288×288；5604 bytes。
-- SHA-256：`7f0f55536688071708a1db7594a7ee8e1885276bc80697fe8780a7cc0123b4d2`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/93481225-465f-4750-a4f3-28602e723b40)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/keystone_modifier/ogryn_heavy_hitter_max_stacks_improves_attack_speed.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/93481225-465f-4750-a4f3-28602e723b40)
+
+圖片僅供技能辨識，不作機制證據。
+

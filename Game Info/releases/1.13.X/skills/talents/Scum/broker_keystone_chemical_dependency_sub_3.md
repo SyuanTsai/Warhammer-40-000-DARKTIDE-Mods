@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_keystone_chemical_dependency_sub_3`；名稱鍵：`loc_talent_broker_keystone_chemical_dependency_sub_3`；描述鍵：`loc_talent_broker_keystone_chemical_dependency_sub_3_desc`。
 - 節點：`node_2459c212-b00a-43ce-a3b6-ad55e67605ed`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -32,7 +32,7 @@
 - **衰退算例**：最後一次使用興奮劑後 60 秒移除 1 層；若仍無新層，再過 60 秒移除下一層。
 - 回充時間示例假設回充不中斷、使用純基礎回充率且沒有其他修正；技能資源暫停或其他修正會改變實際時間。
 - 新增第 4 層會延長依賴效果，卻把單層計時從 90 秒縮短為 60 秒；層數仍一次衰退一層。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -41,8 +41,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_chemical_dependency_sub_3.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_keystone_chemical_dependency_sub_3:node_2459c212-b00a-43ce-a3b6-ad55e67605ed`。
-- 格式：image/webp；288×288；5882 bytes。
-- SHA-256：`376642f205f6324d27172e265246e61b009eca4e5ada92a2d24380c717a680c5`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/51827890-e735-4220-8959-bf37381e0fc8)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_chemical_dependency_sub_3.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/51827890-e735-4220-8959-bf37381e0fc8)
+
+圖片僅供技能辨識，不作機制證據。
+

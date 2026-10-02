@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_throwing_knives`；名稱鍵：`loc_ability_zealot_throwing_knifes`；描述鍵：`loc_ability_zealot_throwing_knifes_desc`。
 - 節點：`node_f830003e-bb99-448f-aac6-f8a4dbf61d50`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -50,7 +50,7 @@
 - 補刀要求擊殺判定成功、攻擊類型為 melee，且目標符合 elite 或 special 分類；近戰命中、助攻或遠程擊殺不等於必定補刀。
 - 彈藥補刀量取決於拾取物自己的 ammo_amount_func；不能把所有彈藥箱都寫成固定補 1 把。
 - Build 25492122 的英文與繁中都描述彈藥箱補刀及對 Carapace 較弱；沒有足以判定明確翻譯錯誤的差異。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -59,8 +59,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/tactical/zealot_throwing_knives.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_throwing_knives:node_f830003e-bb99-448f-aac6-f8a4dbf61d50`。
-- 格式：image/webp；288×288；4150 bytes。
-- SHA-256：`2475b61ff7ef725b1901e8ff791533cb98866f80e8e4d25751366b11983dedc7`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/8d21cff6-d918-4e91-8426-b98634887a03)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/tactical/zealot_throwing_knives.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/8d21cff6-d918-4e91-8426-b98634887a03)
+
+圖片僅供技能辨識，不作機制證據。
+

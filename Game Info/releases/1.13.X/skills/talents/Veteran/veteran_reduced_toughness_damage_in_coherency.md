@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`veteran_reduced_toughness_damage_in_coherency`；名稱鍵：`loc_talent_veteran_toughness_damage_reduction_per_ally`；描述鍵：`loc_talent_veteran_toughness_damage_reduction_per_ally_description`。
 - [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1356-L1386)：`default`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1437-L1456)。
-- 狀態：完成核心靜態機制核對；名稱對應暫定，未進行遊戲內驗證。
+- 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
 ## 原始碼確認與程式推導
 
@@ -25,7 +25,7 @@ num_units_in_coherency()-1排除自己，上限3；lerp(1,0.67,n/3)，所以每�
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_reduced_toughness_damage_in_coherency.webp)；取得日期 2026-10-01。圖示只供呈現，不作機制證據。
-- 天賦與節點：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_reduced_toughness_damage_in_coherency:node_90d61df3-340c-4ddf-b802-ef29d3878e0c`，已核對固定版本節點。
-- WebP，288 × 288，6278 bytes；SHA-256：`4462a96a4c42a8931c4a9997594e3ff74b49d6727bf2cd0e4ce990f85f7ece9b`。
-- 保存在 [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234) 的 [圖片附件](https://github.com/user-attachments/assets/139120eb-e9c5-41ea-b87c-bf4737b53f49)；附件下載後的雜湊與大小均與原圖一致。圖檔不加入 Git 分支。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_reduced_toughness_damage_in_coherency.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234)｜[圖片附件](https://github.com/user-attachments/assets/139120eb-e9c5-41ea-b87c-bf4737b53f49)
+
+圖片僅供技能辨識，不作機制證據。
+

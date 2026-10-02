@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_stealth_cooldown_regeneration`；名稱鍵：`loc_talent_zealot_stealth_increased_damage`；描述鍵：`loc_talent_zealot_stealth_cooldown_regeneration_desc`。
 - 節點：`node_de287eb8-d0e5-46ab-98c2-d71496a3bd4a`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,7 +33,7 @@
 - 擊殺必須在隱形 buff 仍活躍時被 proc；離開潛行後的擊殺不適用。
 - 每次潛行一次是成功恢復後鎖定；沒有可恢復空間或缺少目標 breed 資訊時，程式結果可能不同。
 - 名稱相似的 `zealot_stealth_cooldown_regeneration` buff 模板不是該 talent 的附加 passive，不能拿它的 1 秒 cooldown_duration 推成此 talent 每秒可返還一次。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -42,8 +42,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_stealth_cooldown_regeneration.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_stealth_cooldown_regeneration:node_de287eb8-d0e5-46ab-98c2-d71496a3bd4a`。
-- 格式：image/webp；288×288；6318 bytes。
-- SHA-256：`af61754d2f9407b7a46850f68d0dadcd3363e8b9f2f8fc78a0f1a4a865222565`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/8532537c-fff4-4014-8ee6-e16572b9cdeb)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_stealth_cooldown_regeneration.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/8532537c-fff4-4014-8ee6-e16572b9cdeb)
+
+圖片僅供技能辨識，不作機制證據。
+

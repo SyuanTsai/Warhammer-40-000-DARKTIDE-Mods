@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_fully_charged_attacks_gain_damage_and_stagger`；名稱鍵：`loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger`；描述鍵：`loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger_new_desc`。
 - 節點：`node_49ec4564-0c9a-4bb4-815e-b023b090d05d`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -26,7 +26,7 @@
 
 - **傷害算例**：基礎 100 點傷害，4 層提供 4 × 7.5% = 30%，沒有其他加成時為 130 點；同階段原有 20% 時為 100 × (1 + 20% + 30%) = 150 點。
 - **衝擊力算例**：原本 100 點衝擊力，滿層為 130 點；是否使敵人踉蹌還取決於敵人門檻，不能把衝擊力直接當成傷害。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -35,8 +35,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_fully_charged_attacks_gain_damage_and_stagger.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_fully_charged_attacks_gain_damage_and_stagger:node_49ec4564-0c9a-4bb4-815e-b023b090d05d`。
-- 格式：image/webp；288×288；5496 bytes。
-- SHA-256：`4c156226f9359a4dba06f4a5b5d9133c21b51fe0183722ae89befa137c6667b7`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)；[公開圖片](https://github.com/user-attachments/assets/e9d72852-9fa6-4e02-aded-e261adb660f0)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_fully_charged_attacks_gain_damage_and_stagger.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)｜[圖片附件](https://github.com/user-attachments/assets/e9d72852-9fa6-4e02-aded-e261adb660f0)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_stimm_durability_4`；名稱鍵：`loc_talent_broker_stimm_durability_a`；描述鍵：`loc_talent_stat_toughness_replenish_modifier / loc_talent_stat_damage_taken_multiplier / loc_talent_buff_toughness_on_stimm`。
 - 節點：`node_d98eed0c-f566-4d14-a4fc-b2f1d4d45639`；分類：興奮劑配方；配點成本：4 點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,7 +33,7 @@
 - **恢復算例**：最大韌性 100，前置配方與本節點的恢復加成都生效時，使用後恢復 100 × (4 × 6.25%) × (1 + 4 × 5%) = 30 點；實際仍受缺額限制。
 - 一次回復算例假設配方恢復修正已套用且玩家未倒地；實際同步與套用時序未以遊戲驗證。
 - 同一使用者的配方由 syringe_broker_buff 讀取並共同套用；場域分享時依提供者配方，外部控制的持續時間另按場域設定。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -42,8 +42,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/broker_stimm/broker_stimm_durability_4.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:broker_stimm_tree:broker_stimm_durability_4:node_d98eed0c-f566-4d14-a4fc-b2f1d4d45639`。
-- 格式：image/webp；288×288；2734 bytes。
-- SHA-256：`211bb199fa3d0dcc47af32928135ee4276f832f28cabe03839e324dcf9639cd3`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5934604124)；[公開圖片](https://github.com/user-attachments/assets/e60164c9-4f04-46ed-afe0-0a71e33582f1)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/broker_stimm/broker_stimm_durability_4.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5934604124)｜[圖片附件](https://github.com/user-attachments/assets/e60164c9-4f04-46ed-afe0-0a71e33582f1)
+
+圖片僅供技能辨識，不作機制證據。
+

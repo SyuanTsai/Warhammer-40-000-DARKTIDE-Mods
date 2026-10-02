@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_increased_coherency_toughness`；名稱鍵：`loc_talent_ogryn_coherency_toughness_increase`；描述鍵：`loc_talent_ogryn_coherency_toughness_increase_desc`。
 - 節點：`node_e4d5b83c-4a0c-4080-9bfb-46f46fbbd8f3`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,7 +24,7 @@
 ## 算例條件與待確認事項
 
 - **恢復算例**：其餘條件相同，原本每秒恢復 5 點，變成 5 × (1 + 100%) = 10 點；若同階段原有 20% 加成，則由 6 點變成 5 × (1 + 20% + 100%) = 11 點。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -33,8 +33,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_increased_coherency_toughness.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_increased_coherency_toughness:node_e4d5b83c-4a0c-4080-9bfb-46f46fbbd8f3`。
-- 格式：image/webp；288×288；4962 bytes。
-- SHA-256：`3c92e6d06c211c2556b7c06b1d2328664667937badf9e37b6de3793757400949`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/47f9eea2-c58f-4ed3-8678-e42d2ec1701f)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_increased_coherency_toughness.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/47f9eea2-c58f-4ed3-8678-e42d2ec1701f)
+
+圖片僅供技能辨識，不作機制證據。
+

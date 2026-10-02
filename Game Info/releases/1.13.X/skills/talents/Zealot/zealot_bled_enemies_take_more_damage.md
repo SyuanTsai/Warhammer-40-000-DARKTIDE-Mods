@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_bled_enemies_take_more_damage`；名稱鍵：`loc_talent_zealot_bled_enemies_take_more_damage`；描述鍵：`loc_talent_zealot_bled_enemies_take_more_damage_desc`。
 - 節點：`node_3f11f576-443e-42b0-b6f9-cedcafb6a224`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -26,7 +26,7 @@
 
 - **傷害算例**：敵人原本承受 100 點傷害，變成 100 × 1.15 = 115 點。若你先有另一階段的 20% 傷害加成，則 100 × 1.2 × 1.15 = 138 點。
 - 是否接收到事件由施加來源的buff事件發送決定；不把全場任意隊友的流血概括成自動觸發。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -35,8 +35,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/default/zealot_bled_enemies_take_more_damage.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_bled_enemies_take_more_damage:node_3f11f576-443e-42b0-b6f9-cedcafb6a224`。
-- 格式：image/webp；288×288；5510 bytes。
-- SHA-256：`71413a72680165161f8a54e45c64d89b44bb04855a53d67178a790f7322aa3fa`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929296872)；[公開圖片](https://github.com/user-attachments/assets/4b9e6b94-1960-44a0-aca5-40446806c270)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/default/zealot_bled_enemies_take_more_damage.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929296872)｜[圖片附件](https://github.com/user-attachments/assets/4b9e6b94-1960-44a0-aca5-40446806c270)
+
+圖片僅供技能辨識，不作機制證據。
+

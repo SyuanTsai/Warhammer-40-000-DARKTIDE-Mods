@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_carapace_armor_trigger_on_zero_stacks`；名稱鍵：`loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks`；描述鍵：`loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_new_desc`。
 - 節點：`node_a919d7de-281e-485f-aabb-5d7c18d3aa4c`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -29,20 +29,19 @@
 ## 算例條件與待確認事項
 
 - **算例**：失層後剩 4 層、未選「最堅韌！」時，基本恢復量為最大韌性的 50% × (1 + 4 × 3%) = 56%，再受缺少韌性限制。 例如最大韌性 100 且缺額足夠，可恢復 100 × 56% = 56 點；倒地時不提供這筆恢復。
-- 機制核對至指定公開來源 SHA 419fe18d414a618ce0474bd015bab470afb446d6；本機 Build 25492122 的中英文字串與公開來源版本對應由使用者於2026-10-02確認，文字與實作差異待遊戲內核對。
+- 機制核對至指定公開來源 SHA 419fe18d414a618ce0474bd015bab470afb446d6；本機 Build 25492122 的中英文字串與公開來源版本對應為1.13.0，文字與實作差異待遊戲內核對。
 - 程式檢查內部子層數而非扣除 stack offset 後的可見層數。角色倒地時仍建立爆炸，但起始函式略過韌性恢復。30 秒是唯一 buff 的存續時間；冷卻過後仍須再有一次子層移除才會觸發。
-- 中英文字都寫 5 層或以下；固定來源在失層回呼時檢查的數值換算成玩家可見層數是 4 層或更低。公開來源與本機 Build 25492122 版本對應由使用者於2026-10-02確認，這項差異待核。固定來源使用的爆發設定對護甲的直接傷害倍率皆為 0，效果是擊退而非造成傷害。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 中英文字都寫 5 層或以下；固定來源在失層回呼時檢查的數值換算成玩家可見層數是 4 層或更低。公開來源與本機 Build 25492122 版本對應為1.13.0，這項差異待核。固定來源使用的爆發設定對護甲的直接傷害倍率皆為 0，效果是擊退而非造成傷害。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`d03260f0`。
-- 繁中寫「當…層數達…層以下時」，英文寫「reaches … stacks or below」，兩種本機文字都表示 5 層或以下。固定公開來源在失去一層後檢查內部層數，換算為玩家可見 4 層或更低；公開來源與本機 Build 25492122 版本對應由使用者於2026-10-02確認，因此保留待核，不判為翻譯錯誤。
+- 繁中寫「當…層數達…層以下時」，英文寫「reaches … stacks or below」，兩種本機文字都表示 5 層或以下。固定公開來源在失去一層後檢查內部層數，換算為玩家可見 4 層或更低；公開來源與本機 Build 25492122 版本對應為1.13.0，因此保留待核，不判為翻譯錯誤。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/keystone_modifier/ogryn_carapace_armor_trigger_on_zero_stacks.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_carapace_armor_trigger_on_zero_stacks:node_a919d7de-281e-485f-aabb-5d7c18d3aa4c`。
-- 格式：image/webp；288×288；5372 bytes。
-- SHA-256：`c08cb0400f254a82b083c2f6a2fbf7c67b3f3928d5fb6b5f39efc5a9ea5c4b40`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/keystone_modifier/ogryn_carapace_armor_trigger_on_zero_stacks.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_ability_punk_rage_sub_2`；名稱鍵：`loc_talent_broker_ability_punk_rage_sub_2`；描述鍵：`loc_talent_broker_ability_punk_rage_sub_2_desc`。
 - 節點：`node_0625b695-b695-49f5-9050-551fbd7e9699`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,7 +33,7 @@
 - **算例**：10 層 × 每層 2.5% = 25%；與主怒火的 35% 加算後為 60% 近戰威力等級修正。
 - 橫掃與衝擊的重量修正影響命中／穿透能力，不應換算成固定額外目標數或直接傷害百分比。
 - 滿 10 層所需時間與怒火實際結束時間會受近戰延長及更新時點影響；不能假設每次使用都必定在基本 10 秒內達到完整上限。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -42,8 +42,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability_modifier/broker_ability_punk_rage_sub_2.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_ability_punk_rage_sub_2:node_0625b695-b695-49f5-9050-551fbd7e9699`。
-- 格式：image/webp；288×288；5738 bytes。
-- SHA-256：`6fd0ceb6fc752730abb7fa82abe85346bac7028deed7ae4853e3b49e1d6753ae`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/1a4c2d3b-dfba-4840-a85d-c8d5390e3a42)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability_modifier/broker_ability_punk_rage_sub_2.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/1a4c2d3b-dfba-4840-a85d-c8d5390e3a42)
+
+圖片僅供技能辨識，不作機制證據。
+

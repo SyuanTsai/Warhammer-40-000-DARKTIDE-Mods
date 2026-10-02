@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_toughness_regen_near_companion`；名稱鍵：`loc_talent_adamant_toughness_regen_near_companion`；描述鍵：`loc_talent_adamant_toughness_regen_near_companion_desc`。
 - 節點：`node_3684f20d-bb13-4f40-ba64-43d402eea435`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,7 +24,7 @@
 
 - **恢復算例**：最大韌性 100、沒有其他恢復加成且缺額足夠時，每秒恢復 100 × 5% = 5 點；3 秒共 15 點。若只缺 2 點，就只能補 2 點。
 - 未驗證電子獒犬移除或重生當下的is_active殘留；主文不宣稱跨此邊界仍精確停止。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -33,8 +33,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_toughness_regen_near_companion.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_toughness_regen_near_companion:node_3684f20d-bb13-4f40-ba64-43d402eea435`。
-- 格式：image/webp；288×288；6382 bytes。
-- SHA-256：`2fc65f2bc43aa9877c8cabe22d8d1157529484d343fe81d7beb7d7457248cf66`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/a6716d2d-1100-4bbe-be59-683b5b9176b4)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_toughness_regen_near_companion.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/a6716d2d-1100-4bbe-be59-683b5b9176b4)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_ally_movement_boost_on_ability`；名稱鍵：`loc_talent_ogryn_bull_rush_movement_speed`；描述鍵：`loc_talent_ogryn_ability_movement_speed_desc`。
 - 節點：`node_439226f9-4126-4a4c-9a7e-58850b64f4c1`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -22,7 +22,7 @@
 ## 算例條件與待確認事項
 
 - **速度算例**：原本每秒移動 5 公尺，只有此加成時為 5 × (1 + 20%) = 6 公尺／秒。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -31,8 +31,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_ally_movement_boost_on_ability.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_ally_movement_boost_on_ability:node_439226f9-4126-4a4c-9a7e-58850b64f4c1`。
-- 格式：image/webp；288×288；5502 bytes。
-- SHA-256：`9c8071e36f12464db8049dbf9ba5ceb587a89ff3922400b8d90e2877c9460f55`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)；[公開圖片](https://github.com/user-attachments/assets/895c3ccd-387f-4862-9a2b-b429ff5d6432)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_ally_movement_boost_on_ability.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)｜[圖片附件](https://github.com/user-attachments/assets/895c3ccd-387f-4862-9a2b-b429ff5d6432)
+
+圖片僅供技能辨識，不作機制證據。
+

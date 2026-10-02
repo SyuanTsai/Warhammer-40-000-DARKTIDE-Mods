@@ -1,6 +1,6 @@
 # 共用工具
 
-[所有版本](../README.md)｜[分析提示詞](../prompts/PROMPT.md)
+[所有版本](../../../Game%20Info/README.md)｜[分析提示詞](../../../AI%20Prompt/Game-Info-Workflow.md)
 
 資料目錄與原始碼目錄由參數指定，可用於各版本；工具所在位置不再決定輸出版本。
 
@@ -30,4 +30,4 @@ python "Game Info/tools/validate_game_info.py" --root "Game Info"
 
 ## 本機第三方擷取工具
 
-原有 limn 執行檔與說明移至 `vendor/limn/`；執行檔仍保持 Git 忽略，沒有重新下載或安裝。[原工具說明](vendor/limn/README.md)。取得版本、自報版本與雜湊保留在各批資料 provenance.json。
+原有 limn 執行檔與說明移至 `vendor/limn/`；執行檔仍保持 Git 忽略，沒有重新下載或安裝。[原工具說明](../../../scripts/game-info/vendor/limn/README.md)。取得版本、自報版本與雜湊保留在各批資料 provenance.json。

@@ -34,4 +34,4 @@
 - 撲擊 profile 的 100/200/300 是 attack power distribution 設定，不能當成造成 100/200/300 點生命傷害。
 - 等級倍率只套在非 bleeding 的 companion damage path；流血 DoT 不吃這份 companion_damage_multiplier。
 - Ogryn 與 monster profile 有 initial_pounce、dog_bleed 標記；人形 profile 沒有這兩個標記。實際流血施加還受獨立被動條件控制。
-- 本機文字 Build 25492122 與固定公開來源版本對應由使用者於2026-10-02確認。
+- 本機文字 Build 25492122 與固定公開來源版本對應為1.13.0。

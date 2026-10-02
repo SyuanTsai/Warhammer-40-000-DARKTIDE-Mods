@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_quickness_passive`；名稱鍵：`loc_talent_zealot_quickness`；描述鍵：`loc_talent_zealot_quickness_desc`。
 - 節點：`node_86295aae-d8b7-4c66-9862-29d98ae57798`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -31,7 +31,7 @@
 - 成功閃避本身不增加基礎 Quickness 計數，須選用閃避升級才會增加。
 - 傷害與攻速示例未包括其他來源修正；active buff 的閃避 stat 不等於額外閃避次數。
 - 距離由角色 locomotion 速度逐幀累計，例子忽略取樣精度與伺服器更新差異。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -40,8 +40,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone/zealot_quickness_passive.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_quickness_passive:node_86295aae-d8b7-4c66-9862-29d98ae57798`。
-- 格式：image/webp；288×288；4932 bytes。
-- SHA-256：`d6f0e4c34f038910a951a80b2d20990a6786c82fa7d781acb7f99c6adfc75b83`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/0a442a9a-29b1-4a94-b85c-5772f9d85d7c)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone/zealot_quickness_passive.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/0a442a9a-29b1-4a94-b85c-5772f9d85d7c)
+
+圖片僅供技能辨識，不作機制證據。
+

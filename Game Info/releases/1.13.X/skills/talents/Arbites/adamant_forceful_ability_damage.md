@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_forceful_ability_damage`；名稱鍵：`loc_talent_adamant_forceful_refresh_on_ability`；描述鍵：`loc_talent_adamant_forceful_ability_damage`。
 - 節點：`node_284a6993-4069-480f-be4b-ad6bb34c6739`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 - 10 層 × 2.5% = +25% 威力，持續 12 秒；5 層則為 +12.5%。
 - 機制來源固定為公開 Aussiemon/Darktide-Source-Code SHA 419fe18d414a618ce0474bd015bab470afb446d6；inventory 的繁中與英文文字未證實與此程式碼同版。程式實作和文字措辭如有差異，先列跨版本待核，不直接判為翻譯錯誤。
 - 威力 modifier 如何改變特定武器／技能的最終傷害仍由共用傷害與攻擊類型公式決定。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/keystone_modifier/adamant_forceful_ability_damage.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_forceful_ability_damage:node_284a6993-4069-480f-be4b-ad6bb34c6739`。
-- 格式：image/webp；288×288；4590 bytes。
-- SHA-256：`605e859789e7522cd1480255682129ce30927bea74b8460c50554d2f732b3bd8`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/bc3b59ed-a142-4807-86f9-f75d65b367b4)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/keystone_modifier/adamant_forceful_ability_damage.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/bc3b59ed-a142-4807-86f9-f75d65b367b4)
+
+圖片僅供技能辨識，不作機制證據。
+

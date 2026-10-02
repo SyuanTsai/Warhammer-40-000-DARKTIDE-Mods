@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_drain_stamina_for_handling`；名稱鍵：`loc_talent_ogryn_drain_stamina_for_handling`；描述鍵：`loc_talent_ogryn_drain_stamina_for_handling_desc`。
 - 節點：`node_dfe735e6-ea36-4f63-9274-fe85bd09f32b`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,7 +24,7 @@
 
 - **操控算例**：隔離其他修正，原本各為 100 的晃動、散布與後座力參數，分別變成 40、80、85。這些是操控參數，不代表命中率固定提高相同百分比。
 - 操控量到實際準心與後座表現還受武器曲線影響；不將操控參數百分比當成固定角度。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -33,8 +33,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_drain_stamina_for_handling.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_drain_stamina_for_handling:node_dfe735e6-ea36-4f63-9274-fe85bd09f32b`。
-- 格式：image/webp；288×288；6660 bytes。
-- SHA-256：`543bf78c74e31679a3852a17cdcfe7f9a1f3ededae3091b336769658f251e4de`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)；[公開圖片](https://github.com/user-attachments/assets/d21c7405-647a-4da2-a396-16b9c5cd8819)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_drain_stamina_for_handling.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)｜[圖片附件](https://github.com/user-attachments/assets/d21c7405-647a-4da2-a396-16b9c5cd8819)
+
+圖片僅供技能辨識，不作機制證據。
+

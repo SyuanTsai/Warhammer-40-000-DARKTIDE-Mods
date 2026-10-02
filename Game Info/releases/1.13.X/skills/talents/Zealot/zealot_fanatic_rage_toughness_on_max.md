@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_fanatic_rage_toughness_on_max`；名稱鍵：`loc_talent_zealot_fanatic_rage_toughness`；描述鍵：`loc_talent_zealot_fanatic_rage_toughness_replenish_desc`。
 - 節點：`node_e079e0d7-8d4b-45de-8e6b-5ed57f82c641`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -31,7 +31,7 @@
 - **恢復與減傷算例**：最大韌性 100，啟動時最多補 50 點；滿層維持 8 秒另可補 100 × 2% × 8 = 16 點，均受缺額限制。原本 100 點韌性傷害變成 100 × 0.75 = 75 點。
 - 靜態例子假設最大韌性100且沒有同時受到傷害；遊戲中韌性上限、承傷與其他回復來源會改變實際結果。
 - 繁中與英文寫狂怒啟動時觸發一次50%回復；程式限制為 Fury buff 原本不活動時，且週期效果要 resource 保持滿層。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -40,8 +40,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_fanatic_rage_toughness_on_max.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_fanatic_rage_toughness_on_max:node_e079e0d7-8d4b-45de-8e6b-5ed57f82c641`。
-- 格式：image/webp；288×288；4928 bytes。
-- SHA-256：`2333e4dca6eefc4db69ae97bf4f3589aaaf659ecd746986abb5cacc111682390`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/0fd06e0a-ef14-4228-8cd5-02980c989f05)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_fanatic_rage_toughness_on_max.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/0fd06e0a-ef14-4228-8cd5-02980c989f05)
+
+圖片僅供技能辨識，不作機制證據。
+

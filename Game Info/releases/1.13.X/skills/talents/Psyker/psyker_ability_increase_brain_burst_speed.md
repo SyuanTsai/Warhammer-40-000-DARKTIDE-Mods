@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_ability_increase_brain_burst_speed`；名稱鍵：`loc_talent_psyker_ability_increase_brain_burst_speed`；描述鍵：`loc_talent_psyker_ability_increase_brain_burst_speed_desc`。
 - 節點：`node_d0f28c39-50b3-4f6f-893f-52e71aaba392`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -29,8 +29,8 @@
 - 鎖定充能原需 2 秒，僅計本天賦，其他倍率不變。 2 秒 ÷ (1 + 75%) = 2 ÷ 1.75 ≈ 1.14 秒。 充能速度為原來的 1.75 倍，充能時間約縮短 42.86%。
 - 同一招原本會生成 10 點反噬，僅計本天賦。 10 × 0.5 = 5 點反噬。 反噬生成量減半。
 - 2 秒與 10 點反噬是用來展示公式的假設值；實際充能時間依使用的鎖定動作與其他速度修正而變，實際反噬量依該次 charge template 與現有倍率而變。
-- 10 秒為 buff 設定持續時間；靜態推演，未在遊戲內量測。Build 25492122 與固定來源 SHA 版本對應由使用者於2026-10-02確認。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 10 秒為 buff 設定持續時間；靜態推演，未在遊戲內量測。Build 25492122 與固定來源 SHA 版本對應為1.13.0。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/tactical_modifier/psyker_ability_increase_brain_burst_speed.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_ability_increase_brain_burst_speed:node_d0f28c39-50b3-4f6f-893f-52e71aaba392`。
-- 格式：image/webp；288×288；3754 bytes。
-- SHA-256：`004167555dbda569905b070b092f237dc69cad9d58382cfe50323da36e2b3d30`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/tactical_modifier/psyker_ability_increase_brain_burst_speed.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9)
+
+圖片僅供技能辨識，不作機制證據。
+

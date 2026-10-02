@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_resist_death_heal`；名稱鍵：`loc_talent_zealot_heal_during_resist_death`；描述鍵：`loc_talent_zealot_resist_death_heal_desc`。
 - 節點：`node_18bc94af-2948-4b9a-84e8-5c9408b37343`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -32,7 +32,7 @@
 - **恢復算例**：假設累積額度原本為 0、沒有其他治療修正，連續兩次各造成 100 點近戰傷害，第一次累積並補 100 × 0.7% × 3 = 2.1 點；第二次額度增至 4.2，再補 4.2 點，合計 6.3 點。
 - 恢復只在任何來源的 `unkillable` 關鍵字存在時累積；此升級與 Zealous Pilgrim 互斥。
 - 恢復池恢復後不清零；不要把 format_values 的25%欄位當成每次效果或累計總治療量。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -41,8 +41,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_resist_death_heal.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_resist_death_heal:node_18bc94af-2948-4b9a-84e8-5c9408b37343`。
-- 格式：image/webp；288×288；4828 bytes。
-- SHA-256：`c45de179512072fea1cc747b5b73eb883f8905de3add0b569993499a741d0236`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_resist_death_heal.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab)
+
+圖片僅供技能辨識，不作機制證據。
+

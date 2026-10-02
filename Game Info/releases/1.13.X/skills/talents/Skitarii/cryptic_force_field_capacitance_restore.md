@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_force_field_capacitance_restore`；名稱鍵：`loc_talent_cryptic_force_field_health_damage_limit`；描述鍵：`loc_talent_cryptic_force_field_capacitance_restore`。
 - 節點：`node_4a240e77-1a0d-4833-ad5c-82bec1eca8c2`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -27,7 +27,7 @@
 - 每次遠程攻擊吸收恢復0.025份電容量，最多0.75份；30次達到上限。
 - 只計遠程攻擊或被標記為遠程的攻擊，不按傷害量計；每次力場最多恢復0.75份。
 - 恢復對象是 combat_ability 電容量，不是艾曼納圖斯力場的使用次數。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -36,8 +36,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_force_field_capacitance_restore.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_force_field_capacitance_restore:node_4a240e77-1a0d-4833-ad5c-82bec1eca8c2`。
-- 格式：image/webp；288×288；4386 bytes。
-- SHA-256：`e363f0e10029521b58243be398e8cd1c63c28161f615f102113cd7194ab619bf`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)；[公開圖片](https://github.com/user-attachments/assets/9eb6e468-224f-4d7c-b696-cc58aa08f532)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_force_field_capacitance_restore.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)｜[圖片附件](https://github.com/user-attachments/assets/9eb6e468-224f-4d7c-b696-cc58aa08f532)
+
+圖片僅供技能辨識，不作機制證據。
+

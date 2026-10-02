@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`veteran_snipers_focus_toughness_bonus`；名稱鍵：`loc_talent_veteran_snipers_focus_toughness_bonus`；描述鍵：`loc_talent_veteran_snipers_focus_stamina_bonus_desc`。
 - [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1764-L1786)：`keystone_modifier`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2656-L2676)。
-- 狀態：完成核心靜態機制核對；名稱對應暫定，未進行遊戲內驗證。
+- 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
 ## 原始碼確認與程式推導
 
@@ -38,7 +38,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/keystone_modifier/veteran_snipers_focus_toughness_bonus.webp)；取得日期 2026-10-01。圖示只供呈現，不作機制證據。
-- 天賦與節點：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_snipers_focus_toughness_bonus:node_efbff75c-83c1-4310-a721-4bce3583cb3e`，已核對固定版本節點。
-- WebP，288 × 288，4852 bytes；SHA-256：`26d7919b141ae1692388e0c284e6f8274c14e3a05ccf56a25ce5d9dcc50725bb`。
-- 保存在 [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234) 的 [圖片附件](https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f)；附件下載後的雜湊與大小均與原圖一致。圖檔不加入 Git 分支。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/keystone_modifier/veteran_snipers_focus_toughness_bonus.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234)｜[圖片附件](https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f)
+
+圖片僅供技能辨識，不作機制證據。
+

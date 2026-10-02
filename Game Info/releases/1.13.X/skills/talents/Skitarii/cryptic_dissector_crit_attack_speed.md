@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_dissector_crit_attack_speed`；名稱鍵：`loc_talent_cryptic_dissector_finesse`；描述鍵：`loc_talent_cryptic_dissector_crit_attack_speed_desc`。
 - 節點：`node_aafbd29f-1545-4e6c-bcee-660f62f96f95`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -31,7 +31,7 @@
 - 靜態推演：6層×每層0.015=0.09，故額外暴擊率為9個百分點、近戰攻擊速度為+9%；若8層則各為12%。
 - 加成跟隨削切協議層數；承受傷害造成失層時會同步降低。
 - 暴擊率是增加百分點，近戰攻擊速度是倍率增幅；近戰攻速不改變單次命中傷害。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -40,8 +40,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_dissector_crit_attack_speed.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_dissector_crit_attack_speed:node_aafbd29f-1545-4e6c-bcee-660f62f96f95`。
-- 格式：image/webp；288×288；5284 bytes。
-- SHA-256：`272ff1249381b5cf364ea230747856270a2cf7a7e81fd9e8f9b1d7cf9061eea2`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)；[公開圖片](https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_dissector_crit_attack_speed.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)｜[圖片附件](https://github.com/user-attachments/assets/08678745-4375-4d48-bdde-6fbc209d6402)
+
+圖片僅供技能辨識，不作機制證據。
+

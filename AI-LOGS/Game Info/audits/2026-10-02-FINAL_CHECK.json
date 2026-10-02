@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-02",
+  "baseline_files_accounted_for": 756,
+  "missing_files": 0,
+  "player_pages_sha256_unchanged": 7,
+  "protected_restoration_inputs_unchanged": 16,
+  "standalone_zip_original_exports_verified": 208,
+  "current_old_path_references": 0,
+  "private_pattern_hits": 0,
+  "metadata_files_scanned": 786,
+  "zip_entries_scanned": 24,
+  "privacy_scope": "Current knowledge, version records, workflow, utility source and ZIP metadata; complete RAW unchanged from previously audited data",
+  "tool_unit_tests": {
+    "passed": 2,
+    "failed": 0
+  },
+  "markdown_roots": {
+    "Game Info": {
+      "files": 703,
+      "local_references": 6401,
+      "errors": 0
+    },
+    "AI-LOGS/Game Info": {
+      "files": 27,
+      "local_references": 1135,
+      "errors": 0
+    },
+    "AI Prompt": {
+      "files": 2,
+      "local_references": 2,
+      "errors": 0
+    },
+    "scripts/game-info": {
+      "files": 2,
+      "local_references": 3,
+      "errors": 0
+    }
+  },
+  "remote_urls": "retained, not re-fetched in this organization task",
+  "git_index_unchanged": true
+}

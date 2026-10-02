@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_shield_stun_passive`；名稱鍵：`loc_talent_psyker_force_field_stun_increased`；描述鍵：`loc_talent_psyker_force_field_stun_increased_new_description`。
 - 節點：`node_959bd205-bf6c-48fc-ab14-f59364fedd6c`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -27,17 +27,16 @@
 - 程式碼按敵人標籤分類；並非所有「精英」敵人都必然是special或monster。
 - 事件依護盾接觸/穿越觸發，不等於敵人在任意距離靠近就觸發。
 - source標註普通敵人與特殊敵人的具體定義是tag；Build25492122同版性待核。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`900d2430`。
-- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應由使用者於2026-10-02確認。
+- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_shield_stun_passive.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_shield_stun_passive:node_959bd205-bf6c-48fc-ab14-f59364fedd6c`。
-- 格式：image/webp；288×288；5396 bytes。
-- SHA-256：`f17be7c148e2a268fab70b51859fb6d7a127b6f5ee56cc0f6d1d1e3b5afae768`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_shield_stun_passive.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191)
+
+圖片僅供技能辨識，不作機制證據。
+

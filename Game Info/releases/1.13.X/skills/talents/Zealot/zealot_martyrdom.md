@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_martyrdom`；名稱鍵：`loc_talent_zealot_martyrdom`；描述鍵：`loc_talent_zealot_martyrdom_desc`。
 - 節點：`node_00de95af-259d-4c82-ae16-91fa3b533ed9`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -31,7 +31,7 @@
 - **其他加成**：同樣 2 層、原本已有同階段 25% 近戰增傷時，為 100 × (1 + 25% + 20%) = 145 點。最多 5 層不代表任何傷口數都能在存活時達到滿層。
 - 示例採假設值說明公式；實際格寬由該角色當前最大生命值與最大傷口數決定。
 - 同一份原始碼的 `health_step=0.15` 是未被這條計算路徑使用的設定，不能用來推導 15% 缺血門檻。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -40,8 +40,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone/zealot_martyrdom.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_martyrdom:node_00de95af-259d-4c82-ae16-91fa3b533ed9`。
-- 格式：image/webp；288×288；4510 bytes。
-- SHA-256：`40a2a90365513023258f8e47378b45ace1ed335bc23698a0f8d7191e1ff3f5be`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone/zealot_martyrdom.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da)
+
+圖片僅供技能辨識，不作機制證據。
+

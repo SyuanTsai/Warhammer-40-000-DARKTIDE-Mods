@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_martyrdom_toughness_modifier`；名稱鍵：`loc_talent_zealot_martyrdom_toughness_modifier`；描述鍵：`loc_talent_zealot_martyrdom_toughness_modifier_upd_desc`。
 - 節點：`node_4db4d1f1-d5b8-4d3f-a352-b50194ef96e4`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 - **恢復算例**：某效果原本補 10 點韌性，2 層時為 10 × (1 + 2 × 5%) = 11 點；5 層時為 12.5 點。若另有同階段 20% 恢復加成，滿層為 10 × (1 + 20% + 25%) = 14.5 點，仍受韌性缺額限制。
 - 示例說明加到回復效率的 modifier，不計入其他回復修正的最後合併公式。
 - 每格的傷口格寬由實際最大生命值與最大傷口數決定；設定中的 `health_step=.15` 未被目前計算路徑讀取。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_martyrdom_toughness_modifier.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_martyrdom_toughness_modifier:node_4db4d1f1-d5b8-4d3f-a352-b50194ef96e4`。
-- 格式：image/webp；288×288；6454 bytes。
-- SHA-256：`53f3228900983bb5aad7016d56c5ebe136ca0669bbf3a7472eebec99b26ba4ab`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/5ac46e08-8f7b-4828-8bfa-e47c240e113b)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_martyrdom_toughness_modifier.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/5ac46e08-8f7b-4828-8bfa-e47c240e113b)
+
+圖片僅供技能辨識，不作機制證據。
+

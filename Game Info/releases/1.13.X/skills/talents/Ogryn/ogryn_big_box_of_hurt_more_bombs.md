@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_big_box_of_hurt_more_bombs`；名稱鍵：`loc_talent_ogryn_big_box_of_hurt_more_bombs`；描述鍵：`loc_talent_ogryn_big_box_of_hurt_more_bombs_desc`。
 - 節點：`node_28631a03-da8c-4125-8151-10ac4db22fae`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -29,7 +29,7 @@
 - **數量算例**：手雷箱基礎散出 6 顆；選取此天賦後多 3 顆，合計為 6 + 3 = 9 顆。
 - 若「驚喜箱」關鍵字生效，來源程式會從多種子投射物清單選擇類型；沒有該關鍵字時才使用一般集束手雷。
 - 總傷害仍取決於散布、命中、爆炸距離、目標護甲與其他傷害修正。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -38,8 +38,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/tactical_modifier/ogryn_big_box_of_hurt_more_bombs.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_big_box_of_hurt_more_bombs:node_28631a03-da8c-4125-8151-10ac4db22fae`。
-- 格式：image/webp；288×288；6152 bytes。
-- SHA-256：`25079dfbf57a3c6e316f8cda7387c441b9f0e554bd30822185fddb4da408f10a`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/13c08b08-ef80-4f04-8a70-cddfa4db7389)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/tactical_modifier/ogryn_big_box_of_hurt_more_bombs.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/13c08b08-ef80-4f04-8a70-cddfa4db7389)
+
+圖片僅供技能辨識，不作機制證據。
+

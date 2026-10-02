@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_chordclaw_consecutive_bonus`；名稱鍵：`loc_talent_cryptic_chordclaw_consecutive_bonus`；描述鍵：`loc_talent_cryptic_chordclaw_consecutive_bonus_desc`。
 - 節點：`node_5313efe8-b680-4879-8b64-65e9996ff694`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,7 +33,7 @@
 - 每次啟動加一層，不是每次弦爪命中加一層；最多3層，層數不會因再次啟動超過上限。
 - 20%是弦爪攻擊計算修正，不是固定增加20生命傷害；示例中的100為基準示意。
 - 繁中與英文均寫每次使用弦爪技能、傷害提高20%、5秒、最多3層；來源的層數上限與持續時間一致。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -42,8 +42,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability_modifier/cryptic_chordclaw_consecutive_bonus.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_chordclaw_consecutive_bonus:node_5313efe8-b680-4879-8b64-65e9996ff694`。
-- 格式：image/webp；288×288；4574 bytes。
-- SHA-256：`49392986d7fdfbba8007e7cb83229ad6ecd93e6f6273a30fa52f66fd45313f9e`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)；[公開圖片](https://github.com/user-attachments/assets/a4bee55e-0868-4104-89c8-e2009e89ae4d)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability_modifier/cryptic_chordclaw_consecutive_bonus.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)｜[圖片附件](https://github.com/user-attachments/assets/a4bee55e-0868-4104-89c8-e2009e89ae4d)
+
+圖片僅供技能辨識，不作機制證據。
+

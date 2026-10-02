@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_melee_attacks_on_staggered_rend`；名稱鍵：`loc_talent_adamant_melee_attacks_on_staggered_rend`；描述鍵：`loc_talent_adamant_melee_attacks_on_staggered_rend_alt_desc`。
 - 節點：`node_f74129c0-c6ba-47d0-a058-315793b06763`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,7 +24,7 @@
 ## 算例條件與待確認事項
 
 - **護甲算例**：先隔離護甲階段，假設傷害基準 100、甲殼護甲倍率 0.5，原本 50 點變成 100 × (0.5 + 0.15) = 65 點，此階段提高 30%。其他爆擊、弱點與增傷再依各自階段計算。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -33,8 +33,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_melee_attacks_on_staggered_rend.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_melee_attacks_on_staggered_rend:node_f74129c0-c6ba-47d0-a058-315793b06763`。
-- 格式：image/webp；288×288；6474 bytes。
-- SHA-256：`6ad92c5239f91de722b24d0923109bd06efbd00d872f5ae4cb7a0b7b9641f6b9`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932563852)；[公開圖片](https://github.com/user-attachments/assets/fcb8d517-7a08-452a-a577-1ab15af469cb)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_melee_attacks_on_staggered_rend.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932563852)｜[圖片附件](https://github.com/user-attachments/assets/fcb8d517-7a08-452a-a577-1ab15af469cb)
+
+圖片僅供技能辨識，不作機制證據。
+

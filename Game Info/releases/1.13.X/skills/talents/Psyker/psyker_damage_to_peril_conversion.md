@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_damage_to_peril_conversion`；名稱鍵：`loc_talent_psyker_damage_to_peril_conversion`；描述鍵：`loc_talent_psyker_damage_to_peril_conversion_desc`。
 - 節點：`node_eaba4084-d11f-424a-872b-69ee649bdd44`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,7 +24,7 @@
 - **減傷算例**：只比較此減傷階段，原本 100 點傷害變成 100 × 0.75 = 75 點。
 - **反噬算例**：若該次回報的生命與韌性傷害合計 40 點、無其他反噬修正，增加 40 × 0.25 = 10 個百分點反噬；原為 50% 時到 60%，原為 92% 時最多到 97%。
 - params.damage_amount是傷害路徑給出的damage，不是直接讀取前後生命差；混合生命/韌性命中須依完整傷害路徑計算。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -33,8 +33,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/default/psyker_damage_to_peril_conversion.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_damage_to_peril_conversion:node_eaba4084-d11f-424a-872b-69ee649bdd44`。
-- 格式：image/webp；288×288；5330 bytes。
-- SHA-256：`f87db1ab4993d29041d636c3b85a92441475e059de7c22fc5112d2b583a7f3b3`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928034845)；[公開圖片](https://github.com/user-attachments/assets/b3086f22-3f24-417f-aaba-f59714897616)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/default/psyker_damage_to_peril_conversion.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928034845)｜[圖片附件](https://github.com/user-attachments/assets/b3086f22-3f24-417f-aaba-f59714897616)
+
+圖片僅供技能辨識，不作機制證據。
+

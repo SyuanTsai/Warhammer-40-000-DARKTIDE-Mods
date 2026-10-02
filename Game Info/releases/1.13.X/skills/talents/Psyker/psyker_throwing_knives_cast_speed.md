@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_throwing_knives_cast_speed`；名稱鍵：`loc_talent_psyker_throwing_knives_reduced_cooldown`；描述鍵：`loc_talent_psyker_throwing_knives_cast_speed_description`。
 - 節點：`node_a0e99f21-5abe-407d-a328-c955e9cc27f2`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -28,8 +28,8 @@
 - Assail 使用次數消耗 3 點資源、基礎恢復率 1 點/秒；只計 Quick Shards，沒有其他平速或暫停恢復的效果。 3 ÷ (1 × 1.3) = 2.3077 秒；相較 3 ÷ 1 = 3 秒，等待時間減少 (3 − 2.3077) ÷ 3 ≈ 23.08%。 恢復速率增加 30%，不代表每次等待時間減少 30%。
 - 3 秒是 Assail 的基礎資源恢復時間；實際時間會受其他資源恢復修正與恢復暫停影響。
 - stacking-speed buff 留存定義不等於目前節點效果；本項以節點實際 passive 掛載作判定。
-- 來源 SHA 與本機 Build 25492122 版本對應由使用者於2026-10-02確認。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 來源 SHA 與本機 Build 25492122 版本對應為1.13.0。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -38,8 +38,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/tactical_modifier/psyker_throwing_knives_cast_speed.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_throwing_knives_cast_speed:node_a0e99f21-5abe-407d-a328-c955e9cc27f2`。
-- 格式：image/webp；288×288；4520 bytes。
-- SHA-256：`738a07dd2668fff718602f13275c9a2cc9feb0964a3cfe903b05d16c3effc745`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/7db7b0d7-3d96-4b42-8f50-f9112f80badc)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/tactical_modifier/psyker_throwing_knives_cast_speed.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/7db7b0d7-3d96-4b42-8f50-f9112f80badc)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_corruption_resistance_stacking`；名稱鍵：`loc_talent_zealot_corruption_resistance_stacking`；描述鍵：`loc_talent_zealot_corruption_resistance_stacking_desc`。
 - 節點：`node_ccd0b423-3a44-4f74-8339-7c7b65ba2d63`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 - **腐敗算例**：原本會獲得 20 點腐敗，3 層時為 20 × (1 − 3 × 10%) = 14 點；5 層時為 10 點。其他腐敗倍率另相乘，不會因此免疫所有腐敗來源。
 - 示例只計算本節點給的腐敗傷害倍率，未合併其他承傷修正。
 - 繁中及英文的「抗性」是效果描述；程式實際調整 corruption_taken_multiplier，應避免擴寫成免疫或腐敗上限減少。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_corruption_resistance_stacking.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_corruption_resistance_stacking:node_ccd0b423-3a44-4f74-8339-7c7b65ba2d63`。
-- 格式：image/webp；288×288；4792 bytes。
-- SHA-256：`183eb385a278f0c4da99a3d38a79184cbf030c2d42bbdf40bb4cfaf1f4cc15e1`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/9bc683a7-534a-4244-8381-1a6c0463003f)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_corruption_resistance_stacking.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/9bc683a7-534a-4244-8381-1a6c0463003f)
+
+圖片僅供技能辨識，不作機制證據。
+

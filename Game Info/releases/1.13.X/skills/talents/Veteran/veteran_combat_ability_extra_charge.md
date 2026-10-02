@@ -20,7 +20,7 @@
 
 ## 圖示來源
 
-- 圖示取自 [Games Lantern 編輯器](https://darktide.gameslantern.com/build-editor)的公開資料，取得日期為 2026-10-01；[原始圖片](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/ability_modifier/veteran_combat_ability_extra_charge.webp)。
-- 天賦與節點對應：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_combat_ability_extra_charge:node_6469a1ec-589f-49a3-a53e-3676c3181dad`；與[固定版本節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1333-L1355)核對。來源原始碼提供圖示路徑，但不含圖片檔。
-- 原始圖片為 288 × 288 WebP，5758 bytes；SHA-256：`53175748e3bd3e442f5a1d8a8af2958f1b718dfb95df8707f67b9d68adfb6edd`。
-- 圖片保存在 [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6) 的 [GitHub 圖片附件](https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df)，主頁引用此附件；圖檔不加入 Git 分支。已核對附件的 SHA-256 與檔案大小，均與原圖一致。圖片僅用於視覺呈現，不作技能機制證據。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/ability_modifier/veteran_combat_ability_extra_charge.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/6)｜[圖片附件](https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`veteran_weapon_switch_passive`；名稱鍵：`loc_talent_veteran_weapon_switch`；描述鍵：`loc_talent_veteran_weapon_switch_new_description`。
 - [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1811-L1839)：`keystone`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2717-L2826)。
-- 狀態：完成核心靜態機制核對；名稱對應暫定，未進行遊戲內驗證。
+- 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
 ## 觸發、層數與公式
 
@@ -55,7 +55,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/keystone/veteran_weapon_switch_passive.webp)；取得日期 2026-10-01。圖示只供呈現，不作機制證據。
-- 天賦與節點：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_weapon_switch_passive:node_09bb7c07-c733-4d08-9387-50f404da5ce5`，已核對固定版本節點。
-- WebP，288 × 288，3880 bytes；SHA-256：`fd4a001cd01da0380a8100381cad6f19150a1ea1ce9448c204685377de49bf4e`。
-- 保存在 [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234) 的 [圖片附件](https://github.com/user-attachments/assets/80917bab-ea62-4a9a-a0fa-f9b443ee1b0b)；附件下載後的雜湊與大小均與原圖一致。圖檔不加入 Git 分支。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/keystone/veteran_weapon_switch_passive.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234)｜[圖片附件](https://github.com/user-attachments/assets/80917bab-ea62-4a9a-a0fa-f9b443ee1b0b)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_weakspot_kills_grant_power`；名稱鍵：`loc_talent_cryptic_weakspot_kills_grant_power`；描述鍵：`loc_talent_cryptic_weakspot_kills_grant_power_desc`。
 - 節點：`node_ade5d487-8fea-4bdd-8a72-ee470110c2a9`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -32,7 +32,7 @@
 - 2%以單份充能成本為基準，不是最大三份資源池的2%；增加充能上限不會提高這筆恢復量；只有單份成本變更才會改變每次恢復點數。
 - 只在命中弱點且該擊殺事件判為敵人死亡時恢復；普通擊殺或非弱點擊殺不觸發。
 - inventory 繁中與英文未明示「2%」的成本基準，依來源回充函式判定；文本未限定基準屬資訊省略，不單獨判作矛盾。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -41,8 +41,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability_modifier/cryptic_weakspot_kills_grant_power.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_weakspot_kills_grant_power:node_ade5d487-8fea-4bdd-8a72-ee470110c2a9`。
-- 格式：image/webp；288×288；5392 bytes。
-- SHA-256：`c0e0f716b59e0d653738fd10d6ba5662c2e6ec17e9ddb00f347b3aaae49238d8`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)；[公開圖片](https://github.com/user-attachments/assets/833b596d-dbc9-49fe-9f90-436140e700ed)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability_modifier/cryptic_weakspot_kills_grant_power.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)｜[圖片附件](https://github.com/user-attachments/assets/833b596d-dbc9-49fe-9f90-436140e700ed)
+
+圖片僅供技能辨識，不作機制證據。
+

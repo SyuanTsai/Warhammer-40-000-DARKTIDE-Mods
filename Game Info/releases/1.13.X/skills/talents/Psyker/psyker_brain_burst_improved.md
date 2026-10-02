@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_brain_burst_improved`；名稱鍵：`loc_talent_psyker_brain_burst_improved`；描述鍵：`loc_talent_psyker_brain_burst_improved_description`。
 - 節點：`node_58a8d92f-0b8c-43c4-ac80-f0c597fffc54`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -59,7 +59,7 @@
 - 普通模式可先蓄力是由一般模式的更新條件推導；黏鎖模式必須取得有效目標才更新 charge/overload。移動、目標消失／改變、暈眩、網路同步或遊戲內版本差異可能改變實際流程。
 - 傷害 profile 的 power distribution 不是對所有敵人的固定傷害；實際值取決於蓄力等級、目標護甲/部位與 damage modifiers。
 - 本機 Build 25492122 與固定 source SHA 419fe18d414a618ce0474bd015bab470afb446d6 尚未核實為同版；目前記錄為跨版本待核對，不能據此判定任一描述錯誤。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -68,8 +68,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/tactical/psyker_brain_burst_improved.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_brain_burst_improved:node_58a8d92f-0b8c-43c4-ac80-f0c597fffc54`。
-- 格式：image/webp；288×288；3592 bytes。
-- SHA-256：`c7108d278db6f11879e14bef968565c8309f9114437387864720674070674103`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/215cb557-8544-4d05-876a-871e70dc093a)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/tactical/psyker_brain_burst_improved.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/215cb557-8544-4d05-876a-871e70dc093a)
+
+圖片僅供技能辨識，不作機制證據。
+

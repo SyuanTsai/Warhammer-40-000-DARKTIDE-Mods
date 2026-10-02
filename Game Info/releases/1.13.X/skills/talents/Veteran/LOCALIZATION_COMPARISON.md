@@ -12,9 +12,9 @@
 
 ## 本機文本證據
 
-- 本機遊戲：`D:\SteamLibrary\steamapps\common\Warhammer 40,000 DARKTIDE`；擷取日期：2026-10-01；Steam Build：`25492122`。
-- 完整匯出目錄：Repository內的`Game Info/releases/1.13.X/source/SteamBuild_25492122/extracted-text`，維持Git忽略；本文件只保存比對結論、識別碼及必要短引文，不提交完整語系文本。
-- 固定機制來源：Release 1.13.0，SHA `419fe18d414a618ce0474bd015bab470afb446d6`。**使用者已於2026-10-02確認Steam Build 25492122對應1.13.0**；個別文字與實作差異仍待遊戲內核對，省略細節不列為翻譯錯誤。
+- 本機遊戲：`<遊戲安裝目錄>`；擷取日期：2026-10-01；Steam Build：`25492122`。
+- 完整匯出目錄：Repository內的`Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0`，維持Git忽略；本文件只保存比對結論、識別碼及必要短引文，不提交完整語系文本。
+- 固定機制來源：Release 1.13.0，SHA `419fe18d414a618ce0474bd015bab470afb446d6`。**版本Steam Build 25492122對應1.13.0**；個別文字與實作差異仍待遊戲內核對，省略細節不列為翻譯錯誤。
 - 執行檔版本`1.3.802.934`／`0.0.3.0 (e802934)`不能直接當成Release 1.13.0的版本證明；未進行遊戲內畫面或行為實測。
 
 - `zh-tw/ui.jsonl` SHA-256：`f2591d75ed1495b8a7314cf0c41817d7ef0645040bdafa5fe76e62a279b06844`。
@@ -116,7 +116,3 @@
 - [隱身開始加入肉搏戰／鷹眼](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1223-L1229)
 - [彈匣初始化取整](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L1326-L1346)
 - [火力掩護選人與效果](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1597-L1673)
-
-## 驗收
-
-77組描述鍵與中英文hash配對唯一；玩家主頁只在12個已確認項目新增勘誤，其餘65個技能段落保留。完整文本未加入Git，新增引文均可回查本機JSONL。數值、連結與Markdown解析驗收見POC紀錄。

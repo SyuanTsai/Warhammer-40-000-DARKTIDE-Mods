@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_blo_wield_speed`；名稱鍵：`loc_talent_ogryn_blo_wield_speed`；描述鍵：`loc_talent_ogryn_blo_fire_rate_desc`。
 - 節點：`node_19d2bd1b-f551-494a-afc5-cb511ae26574`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,10 +24,10 @@
 ## 算例條件與待確認事項
 
 - **算例**：6 層增加 9% 遠程射速；滿 10 層增加 15%。若基礎連射間隔為 1 秒，滿層後約為 1 ÷ 1.15 = 0.87 秒。
-- 機制核對至指定公開來源 SHA 419fe18d414a618ce0474bd015bab470afb446d6；本機 Build 25492122 的中英文字串與公開來源版本對應由使用者於2026-10-02確認，文字與實作差異待遊戲內核對。
+- 機制核對至指定公開來源 SHA 419fe18d414a618ce0474bd015bab470afb446d6；本機 Build 25492122 的中英文字串與公開來源版本對應為1.13.0，文字與實作差異待遊戲內核對。
 - 「激鬥戰火」節點的實際加成是遠程射速；連射間隔按攻擊速度倒數縮短。
 - blo_passive_lerp_value為模組共用比例；多位歐格林同場時的交互更新未實測。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -36,8 +36,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/keystone_modifier/ogryn_blo_wield_speed.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_blo_wield_speed:node_19d2bd1b-f551-494a-afc5-cb511ae26574`。
-- 格式：image/webp；288×288；6126 bytes。
-- SHA-256：`13431934c0f363d4c8df4f45abc22184e4593029a537c3bdbac6ddedf7629b44`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/a9ec95cc-0b91-4558-81b5-faefcf1207d7)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/keystone_modifier/ogryn_blo_wield_speed.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/a9ec95cc-0b91-4558-81b5-faefcf1207d7)
+
+圖片僅供技能辨識，不作機制證據。
+

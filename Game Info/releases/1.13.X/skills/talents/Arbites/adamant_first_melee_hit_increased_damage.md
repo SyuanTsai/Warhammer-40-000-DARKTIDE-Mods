@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_first_melee_hit_increased_damage`；名稱鍵：`loc_talent_adamant_first_melee_hit_increased_damage`；描述鍵：`loc_talent_adamant_first_melee_hit_increased_damage_desc`。
 - 節點：`node_bf589f32-33d7-48d4-ae96-2ab3d6a63ee3`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,7 +24,7 @@
 
 - **分項算例**：單計增傷，原本 100 點近戰傷害變成 115 點；原本 100 單位踉蹌強度變成 130。已有同階段 25% 增傷時，傷害為 100 × (1 + 25% + 15%) = 140 點。
 - 同一更新內多目標的事件處理時序未在遊戲內測試；主文按揮擊開始／首次命中後解除的實作意圖說明。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -33,8 +33,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_first_melee_hit_increased_damage.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_first_melee_hit_increased_damage:node_bf589f32-33d7-48d4-ae96-2ab3d6a63ee3`。
-- 格式：image/webp；288×288；5172 bytes。
-- SHA-256：`8a851741673fee05416c0df426f6d2667a18bc88a9e47f3bf2c15f6d95a3b950`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932563852)；[公開圖片](https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_first_melee_hit_increased_damage.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932563852)｜[圖片附件](https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc)
+
+圖片僅供技能辨識，不作機制證據。
+

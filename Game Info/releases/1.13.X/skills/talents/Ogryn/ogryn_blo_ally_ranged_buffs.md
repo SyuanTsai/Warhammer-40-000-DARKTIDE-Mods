@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_blo_ally_ranged_buffs`；名稱鍵：`loc_talent_ogryn_blo_ally_ranged_buffs`；描述鍵：`loc_talent_ogryn_blo_ally_ranged_buffs_desc`。
 - 節點：`node_e189b488-7881-4acf-ad96-3a90b6913e49`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -27,9 +27,9 @@
 
 - **算例**：第 0 秒觸發後，第 6 秒再次觸發，增益會再維持 8 秒，直到第 14 秒。
 - **傷害算例**：基礎 100 點遠程傷害變成 100 × (1 + 15%) = 115 點；同階段另有 20% 時為 135 點。增傷不累積層數。
-- 機制核對至指定公開來源 SHA 419fe18d414a618ce0474bd015bab470afb446d6；本機 Build 25492122 的中英文字串與公開來源版本對應由使用者於2026-10-02確認，文字與實作差異待遊戲內核對。
+- 機制核對至指定公開來源 SHA 419fe18d414a618ce0474bd015bab470afb446d6；本機 Build 25492122 的中英文字串與公開來源版本對應為1.13.0，文字與實作差異待遊戲內核對。
 - 繁中寫「幸運子彈命中時」，但同組英文寫的是「on Lucky Bullet」；指定來源的觸發條件只看幸運子彈標記，未檢查命中。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -38,8 +38,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/keystone_modifier/ogryn_blo_ally_ranged_buffs.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_blo_ally_ranged_buffs:node_e189b488-7881-4acf-ad96-3a90b6913e49`。
-- 格式：image/webp；288×288；5222 bytes。
-- SHA-256：`c894159ba0ac3141dcb2499d68542621317f2d608c63d0e0425a9ad580197b8f`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/keystone_modifier/ogryn_blo_ally_ranged_buffs.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_stimm_celerity_2`；名稱鍵：`loc_talent_broker_stimm_celerity_a`；描述鍵：`loc_talent_stat_attack_speed / loc_talent_stat_wield_speed / loc_talent_stat_stamina_cost_multiplier`。
 - 節點：`node_1431c326-ad53-4c00-afc8-088f0ef8c197`；分類：興奮劑配方；配點成本：2 點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -34,7 +34,7 @@
 - **攻速算例**：從激勵 I 選到本節點，共增加 8%；原本可加速的 1 秒攻擊動作變成 1 ÷ 1.08 ≈ 0.926 秒。
 - 攻擊速度只縮短採用相應速度倍率的動作段，不能保證每種武器的所有動作都同比縮短。
 - 同一使用者的配方由 syringe_broker_buff 讀取並共同套用；場域分享時依提供者配方，外部控制的持續時間另按場域設定。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -43,8 +43,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/broker_stimm/broker_stimm_celerity_2.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:broker_stimm_tree:broker_stimm_celerity_2:node_1431c326-ad53-4c00-afc8-088f0ef8c197`。
-- 格式：image/webp；288×288；2462 bytes。
-- SHA-256：`e3f63ae33aa2f19e943364e36aa2be5888ac0a2436c238c8fb617cd5c0c576a6`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5934604124)；[公開圖片](https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/broker_stimm/broker_stimm_celerity_2.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5934604124)｜[圖片附件](https://github.com/user-attachments/assets/bfb821b6-f80f-4c08-842f-b3f7000ac772)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_keystone_vultures_mark_aoe_stagger`；名稱鍵：`loc_talent_broker_keystone_vultures_mark_aoe_stagger`；描述鍵：`loc_talent_broker_keystone_vultures_mark_aoe_stagger_desc`。
 - 節點：`node_c2a46314-e334-402f-a37d-12e5f58d1594`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 - **Impact 算例**：設定基礎 impact 0.55；套用超級護甲係數 0.1 後為 0.55×0.1=0.055（未計其他 power 或 stagger 修正）。
 - 半徑內是否被擊退或踉蹌仍受目標的 stagger resistance、護甲及其他狀態修正影響。
 - 只監聽 on_kill 並要求遠程擊殺；毒針手槍 毒素 on_minion_death 的印記特例不會自動滿足此升級的 on_kill handler。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_vultures_mark_aoe_stagger.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_keystone_vultures_mark_aoe_stagger:node_c2a46314-e334-402f-a37d-12e5f58d1594`。
-- 格式：image/webp；288×288；5660 bytes。
-- SHA-256：`6773e5e5076cff3af79fceeb25782d836eb77e90b474be3dceace13bbb86cb9f`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/a887e60a-cbd4-4d49-8e44-20661f7f2dcb)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_vultures_mark_aoe_stagger.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/a887e60a-cbd4-4d49-8e44-20661f7f2dcb)
+
+圖片僅供技能辨識，不作機制證據。
+

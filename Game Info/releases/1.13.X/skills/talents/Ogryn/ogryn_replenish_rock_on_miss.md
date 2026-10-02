@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_replenish_rock_on_miss`；名稱鍵：`loc_talent_ogryn_replenish_rock_on_miss_name`；描述鍵：`loc_talent_ogryn_replenish_rock_on_miss_desc`。
 - 節點：`node_699c29c6-383b-478b-a462-792679f03b8c`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -31,7 +31,7 @@
 - **冷卻算例**：從前一次返還起算 5 秒；若第二顆岩石在第 4 秒結束飛行，即使符合返還條件也不會恢復。以投射物結束時計算，不只比較兩次按下投擲的時間。
 - 觸發以投射物結束時回報的命中與弱點計數為準；普通敵人命中但沒有弱點命中不等於未命中。
 - 此效果每次補 1 顆，不會超過岩石能力目前的充能上限。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -40,8 +40,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/tactical_modifier/ogryn_replenish_rock_on_miss.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_replenish_rock_on_miss:node_699c29c6-383b-478b-a462-792679f03b8c`。
-- 格式：image/webp；288×288；4894 bytes。
-- SHA-256：`5bacc278d31d251461377d4d886ae91cda2a65ea13b1d97ef1bad1a9755175e2`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/3d000b06-db5c-4ff3-96c9-54d09216587d)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/tactical_modifier/ogryn_replenish_rock_on_miss.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/3d000b06-db5c-4ff3-96c9-54d09216587d)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_additional_charge_of_ability`；名稱鍵：`loc_talent_zealot_dash_has_more_charges`；描述鍵：`loc_talent_zealot_dash_has_more_charges_desc`。
 - 節點：`node_f562ee33-5fec-4016-a312-d10e7af1cd32`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 - 上述時間是假設自然回充沒有被其他機制暫停、加速或返還；實際 HUD 冷卻還會受戰鬥技能冷卻效果影響。
 - 此能力有 2 格上限；超額返還不會保存成第 3 格。
 - 這是充能池的回充時間，不代表技能動畫、衝刺距離或每次使用後必須等待固定獨立倒數。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_additional_charge_of_ability.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_additional_charge_of_ability:node_f562ee33-5fec-4016-a312-d10e7af1cd32`。
-- 格式：image/webp；288×288；5202 bytes。
-- SHA-256：`bc3433142f5dabcffcf8197665c437fb690a82564a872c4c636970f8f23d8bf0`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/35487761-88d3-4091-ac1b-bde3020e300e)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_additional_charge_of_ability.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/35487761-88d3-4091-ac1b-bde3020e300e)
+
+圖片僅供技能辨識，不作機制證據。
+

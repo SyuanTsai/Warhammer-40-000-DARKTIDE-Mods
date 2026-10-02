@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_flamethrower`；名稱鍵：`loc_talent_cryptic_servo_skull_flamethrower`；描述鍵：`loc_talent_cryptic_servo_skull_flamethrower_new_desc`。
 - 節點：`node_5b3ac425-e484-4aeb-83c9-19ceefa75f2d`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,17 +33,16 @@
 - 噴火下令需要有有效地面位置、存活且正在跟隨的噴火頭骨，並至少剩1次手榴彈能力使用次數。
 - 圈形／錐形模式分別使用 circle／cone；火焰射程上限10公尺，動作最長15秒。
 - 增加的2次使用次數以醫療特長也已選取為條件，並加在共用能力上限；此程式分支沒有給單獨噴火特長增加次數。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`e66555ce`。
-- 繁中描述已涵蓋額外噴火頭骨、落點部署、兩種射擊模式與雙選增加使用次數。固定來源另證明每次噴火消耗共用手榴彈能力1次、15秒動作與10公尺射程；屬翻譯省略的機制細節，不判為錯譯。Build 25492122 版本對應由使用者於2026-10-02確認。
+- 繁中描述已涵蓋額外噴火頭骨、落點部署、兩種射擊模式與雙選增加使用次數。固定來源另證明每次噴火消耗共用手榴彈能力1次、15秒動作與10公尺射程；屬翻譯省略的機制細節，不判為錯譯。Build 25492122 版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_flamethrower.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_flamethrower:node_5b3ac425-e484-4aeb-83c9-19ceefa75f2d`。
-- 格式：image/webp；288×288；5002 bytes。
-- SHA-256：`5f072f932d17b98c87971f50645d0352a6eb665120c56328c4fdaf5f21584eae`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)；[公開圖片](https://github.com/user-attachments/assets/295017d9-50cd-4797-8b33-bd3627a7139f)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_flamethrower.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)｜[圖片附件](https://github.com/user-attachments/assets/295017d9-50cd-4797-8b33-bd3627a7139f)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_improved_stun_grenade`；名稱鍵：`loc_zealot_improved_stun_grenade`；描述鍵：`loc_zealot_improved_stun_grenade_desc`。
 - 節點：`node_efeefa9a-f503-46e7-afae-a61d76ad3a7e`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -42,7 +42,7 @@
 - 來源的 radius 數值是爆炸模板半徑設定；實際命中仍依爆炸系統的目標檢測及距離計算。
 - 0.3–0.8 秒是週期 interval 的設定範圍，不是保證每個敵人每次都按固定相同間隔受傷。
 - 被排除的是週期電擊傷害對已 staggered 的 Poxwalker Bomber；不要把此例外擴大寫成該敵人完全免疫手雷的爆炸或控制。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -51,8 +51,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/tactical/zealot_improved_stun_grenade.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_improved_stun_grenade:node_efeefa9a-f503-46e7-afae-a61d76ad3a7e`。
-- 格式：image/webp；288×288；4932 bytes。
-- SHA-256：`b4e2c9460db8773761e1c5ac42c22e189a81ae3a9c94f267450a6f6b1c1a2307`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/73777d2d-3727-47dc-8093-0d25ec6a3cfd)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/tactical/zealot_improved_stun_grenade.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/73777d2d-3727-47dc-8093-0d25ec6a3cfd)
+
+圖片僅供技能辨識，不作機制證據。
+

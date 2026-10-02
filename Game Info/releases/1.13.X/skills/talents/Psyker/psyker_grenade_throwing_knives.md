@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_grenade_throwing_knives`；名稱鍵：`loc_ability_psyker_blitz_throwing_knives`；描述鍵：`loc_ability_psyker_blitz_throwing_knives_description`。
 - 節點：`node_35ce2086-9081-49c7-9703-f3c07eb0be86`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 
 - **恢復算例**：無其他恢復修正、從 0 次且無剩餘進度開始，第 3 秒補回 1 次、第 6 秒補回 2 次，補滿 10 次需 3 × 10 = 30 秒。
 - 傷害算式須固定目標護甲、部位、普通或瞄準投擲、命中順序及其他加成；沒有單一適用所有目標的傷害值。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/tactical/psyker_grenade_throwing_knives.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_grenade_throwing_knives:node_35ce2086-9081-49c7-9703-f3c07eb0be86`。
-- 格式：image/webp；288×288；4448 bytes。
-- SHA-256：`78e88dc02085b02d7b7311ac15e9dd2002fc6e1ce1977a3113f60c129bbbf8a8`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/a0c17626-2777-4302-bc7e-9b3a48aadcd0)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/tactical/psyker_grenade_throwing_knives.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/a0c17626-2777-4302-bc7e-9b3a48aadcd0)
+
+圖片僅供技能辨識，不作機制證據。
+

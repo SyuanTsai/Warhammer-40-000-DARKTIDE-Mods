@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_stimm_combat_5a`；名稱鍵：`loc_talent_broker_stimm_combat_a`；描述鍵：`loc_talent_stat_power_level / loc_talent_stat_finesse_modifier_bonus`。
 - 節點：`node_2d8bcc20-0d76-462f-bf28-a3d82ccd1c06`；分類：興奮劑配方；配點成本：5 點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -29,7 +29,7 @@
 - **威力算例**：僅此節點時，500 × (1 + 4%) = 520。從野火 I 選到此層共 5 個威力節點時，為 500 × (1 + 5 × 4%) = 600。
 - **額外傷害算例**：先固定威力與其他條件，普通傷害 100、原弱點傷害 200 時，本節點將結果變為 100 + (200 − 100) × 1.25 = 225，整筆傷害提高 12.5%。野火 IV、V 的這項加成合計 35%，同例為 235。
 - 同一使用者的配方由 syringe_broker_buff 讀取並共同套用；場域分享時依提供者配方，外部控制的持續時間另按場域設定。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -38,8 +38,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/broker_stimm/broker_stimm_combat_5a.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:broker_stimm_tree:broker_stimm_combat_5a:node_2d8bcc20-0d76-462f-bf28-a3d82ccd1c06`。
-- 格式：image/webp；288×288；3126 bytes。
-- SHA-256：`bc1c3a7818f1f0172193ff1f2e2fdbc15eb2ba45d3e86619b658b8db4b406ab4`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5934604124)；[公開圖片](https://github.com/user-attachments/assets/eaa62b3f-dc32-4364-81c0-8aadbf77c9dc)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/broker_stimm/broker_stimm_combat_5a.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5934604124)｜[圖片附件](https://github.com/user-attachments/assets/eaa62b3f-dc32-4364-81c0-8aadbf77c9dc)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -1,0 +1,10 @@
+{
+  "from": "Game Info/Extracted Text/Steam Build 25492122",
+  "to": "Game Info/releases/1.13.X/source/SteamBuild_25492122/extracted-text",
+  "original_files": 121,
+  "byte_identical": 119,
+  "metadata_updated": [
+    "provenance.json",
+    "README.md"
+  ]
+}

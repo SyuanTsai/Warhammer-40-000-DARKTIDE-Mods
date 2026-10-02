@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_toughness_while_bracing`；名稱鍵：`loc_talent_ogryn_toughness_regen_while_bracing`；描述鍵：`loc_talent_ogryn_toughness_regen_while_bracing_or_shooting_desc`。
 - 節點：`node_242b8a28-11b1-4dd3-b008-591072dae869`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -23,7 +23,7 @@
 
 - **恢復算例**：最大韌性 200 時，每秒基礎恢復 200 × 12.5% = 25 點；持續 2 秒共 50 點。韌性恢復加成可再修正回復量，且不會超過缺少的韌性。
 - 切武器時alternate_fire/shooting狀態清理時序未做遊戲實測，不宣稱切換後必定立即停止回復。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -32,8 +32,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_toughness_while_bracing.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_toughness_while_bracing:node_242b8a28-11b1-4dd3-b008-591072dae869`。
-- 格式：image/webp；288×288；4782 bytes。
-- SHA-256：`6291c4b0a52b9ce1ed16d9c608b3058e272f17520c07575065aed5a5d384bace`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)；[公開圖片](https://github.com/user-attachments/assets/ce3b22d4-870e-4496-96fc-33601f9d9a62)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_toughness_while_bracing.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)｜[圖片附件](https://github.com/user-attachments/assets/ce3b22d4-870e-4496-96fc-33601f9d9a62)
+
+圖片僅供技能辨識，不作機制證據。
+

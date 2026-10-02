@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_arc_grenades_weapon_malfunction`；名稱鍵：`loc_talent_cryptic_arc_grenades_weapon_malfunction`；描述鍵：`loc_talent_cryptic_arc_grenades_weapon_malfunction_larger_desc`。
 - 節點：`node_6810a9ea-3e9e-4b7f-8b19-576d774fea40`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -39,17 +39,16 @@
 - 傷害設定中的 attack／impact power distribution、威力等級及護甲修正不能直接視為對所有敵人固定扣除的生命值。若要給具名敵人的實際數值，需另追該敵人的護甲、命中部位及完整傷害結算。
 - duration 1.1 與 interval 0.2 足以確認是重複結算，但不能只用兩數相除宣稱固定觸發次數；伺服器更新時序亦會影響最後次結算。
 - 此補充說明電弧手榴彈的傷害結構及其對武器故障觸發的限制；不是遊戲內實測。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`6282ba9c`。
-- 繁中說明指出電弧手榴彈會令受影響的遠程敵人無法使用遠程武器12秒。固定來源確認直接爆炸及電弧連鎖命中可觸發武器故障，程式條件還要求目標具故障元件且存活；品種預設與目前列出的故障時長為12秒。Build 25492122 版本對應由使用者於2026-10-02確認。
+- 繁中說明指出電弧手榴彈會令受影響的遠程敵人無法使用遠程武器12秒。固定來源確認直接爆炸及電弧連鎖命中可觸發武器故障，程式條件還要求目標具故障元件且存活；品種預設與目前列出的故障時長為12秒。Build 25492122 版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_arc_grenades_weapon_malfunction.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_arc_grenades_weapon_malfunction:node_6810a9ea-3e9e-4b7f-8b19-576d774fea40`。
-- 格式：image/webp；288×288；4610 bytes。
-- SHA-256：`9af870c7aaa3cd70144a768698b2eabcc33956f5d9c53605cc40ea62e51a3295`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)；[公開圖片](https://github.com/user-attachments/assets/501bab77-4618-480e-80e8-3abb022f6a68)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_arc_grenades_weapon_malfunction.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)｜[圖片附件](https://github.com/user-attachments/assets/501bab77-4618-480e-80e8-3abb022f6a68)
+
+圖片僅供技能辨識，不作機制證據。
+

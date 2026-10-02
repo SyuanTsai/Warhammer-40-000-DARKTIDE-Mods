@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_fotf_refund_cooldown`；名稱鍵：`loc_talent_zealot_dash_increased_duration`；描述鍵：`loc_talent_zealot_fotf_refund_cooldown_desc`。
 - 節點：`node_1a024b73-36a7-4c24-a4be-f9844f422b4f`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -32,7 +32,7 @@
 - 精英/專家類型依遊戲的 breed tag 與擊殺結果判定；僅造成傷害或擊倒不等於已擊殺。
 - 5 秒窗口由技能衝刺 buff 開始時加入，使用後最初的 lunge/setup 時序可能有極短延遲。
 - inventory 中文把 `{cooldown}` 格式值寫成「秒」，但固定 SHA 格式化為百分比，runtime 也是按單格 charge cost 的比例返還；同一 hash 下英文字串未寫秒，屬明確單位差異。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -41,8 +41,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_fotf_refund_cooldown.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_fotf_refund_cooldown:node_1a024b73-36a7-4c24-a4be-f9844f422b4f`。
-- 格式：image/webp；288×288；4592 bytes。
-- SHA-256：`7877fd51741a5accb0ab5492f6796517dfe024ae82bb4725b89581f391a49f24`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/d95452d2-3c7a-419f-9461-3d32dc95ce2f)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_fotf_refund_cooldown.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/d95452d2-3c7a-419f-9461-3d32dc95ce2f)
+
+圖片僅供技能辨識，不作機制證據。
+

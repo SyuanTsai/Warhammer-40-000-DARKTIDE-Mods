@@ -1,0 +1,57 @@
+{
+  "collected_at": "2026-10-01T11:27:38.110658+08:00",
+  "game_path": "<GAME>",
+  "steam_build_id": "25492122",
+  "release_label": "Release 1.13.0",
+  "bundle_files_scanned": 15737,
+  "tool_release": "0.7.2",
+  "tool_self_reported_version": "0.7.1",
+  "tool_url": "https://github.com/manshanko/limn/releases/tag/0.7.2",
+  "tool_exe_sha256": "03ea9ad220e3d217414362b365acc64b0e47a37adaf7cf5f478b0c68c6a5ec67",
+  "tool_archive_sha256": "df89b4ffc0ef9a5ce00f339078f174a7ac9c5dfa29b1e34fba260fbdb9d1c997",
+  "command": [
+    "limn.exe",
+    "-i",
+    "<GAME>\\bundle",
+    "-o",
+    "raw",
+    "--dump-raw",
+    "-j",
+    "4",
+    "strings"
+  ],
+  "source_files": [
+    {
+      "path": "<GAME>/binaries/Darktide.exe",
+      "size": 19912328,
+      "sha256": "28b843bc2905faaa0f27329d68e5de989df908f2552d80bf2b3c79b86e259775"
+    },
+    {
+      "path": "<GAME>/binaries/oo2core_9_win64.dll",
+      "size": 645120,
+      "sha256": "8595a4795f1e0c7f548598f3e2aa528b6be5456c6d934c665182eaecb04156c0"
+    },
+    {
+      "path": "<GAME>/bundle/bundle_database.data",
+      "size": 16421304,
+      "sha256": "6d10040ca1559c6f4ba6d0c66a50538458bd3a42c0b604437c766d7d2b3ad71e"
+    },
+    {
+      "path": "<GAME>/bundle/metadata_database.db",
+      "size": 118784,
+      "sha256": "6bb9297c4d6cccd5bd8525f16a1bd997075e92307ae68d45812149cc9da22897"
+    }
+  ],
+  "original_release_label": "尚未核實與公開原始碼 Release 1.13.0 的精確版本對應",
+  "release_confirmation": {
+    "steam_build_id": "25492122",
+    "game_version": "1.13.0",
+    "confirmed_by": "user",
+    "confirmed_on": "2026-10-02"
+  },
+  "local_path_redaction": {
+    "date": "2026-10-02",
+    "game_path_placeholder": "<GAME>",
+    "basis": "Removed local usernames, checkout locations and installation locations; relative resource paths and source SHA-256 retained."
+  }
+}

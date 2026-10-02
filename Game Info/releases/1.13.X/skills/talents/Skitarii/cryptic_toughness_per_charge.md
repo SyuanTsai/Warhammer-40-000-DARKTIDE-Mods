@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_toughness_per_charge`；名稱鍵：`loc_talent_cryptic_toughness_per_charge`；描述鍵：`loc_talent_cryptic_toughness_per_charge_desc`。
 - 節點：`node_04679cd0-b399-4ced-a6e8-e655bf0c3b06`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,7 +24,7 @@
 
 - **恢復算例**：最大韌性 200、保有 3 份時，每秒恢復 200 × (3% + 3 × 0.5%) = 9 點；0 份時仍每秒恢復 200 × 3% = 6 點。
 - 韌性恢復以最大值計算，可受恢復加成影響且補到上限為止；算例固定無其他恢復加成。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -33,8 +33,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/default/cryptic_toughness_per_charge.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_toughness_per_charge:node_04679cd0-b399-4ced-a6e8-e655bf0c3b06`。
-- 格式：image/webp；288×288；4252 bytes。
-- SHA-256：`e0a038e098c327fad8c85bbe68bb60268cc264c80b016c824690edc4acec80d3`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528)；[公開圖片](https://github.com/user-attachments/assets/003d8e80-1bb4-46b0-aad1-e2f6d78be693)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/default/cryptic_toughness_per_charge.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528)｜[圖片附件](https://github.com/user-attachments/assets/003d8e80-1bb4-46b0-aad1-e2f6d78be693)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_bolstering_prayer`；名稱鍵：`loc_talent_zealot_bolstering_prayer`；描述鍵：`loc_talent_zealot_bolstering_prayer_expanded_description`。
 - 節點：`node_c286494b-4e57-42a2-9c41-04809ee97c41`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -37,7 +37,7 @@
 - 實際韌性恢復會受當下最大韌性、缺額、回復增益與恢復封鎖影響；暫時最大韌性會逐次提高後續恢復的基準。
 - 庫存 Build 25492122 的描述文字與固定公開 SHA 尚未證明同版；45% 格式合計與執行碼的分拆記為待遊戲內核對，不判繁中勘誤。
 - 不包含 Hordes 額外關鍵字帶來的腐敗治療；該效果需另有外部 buff keyword。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -46,8 +46,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability/zealot_bolstering_prayer.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_bolstering_prayer:node_c286494b-4e57-42a2-9c41-04809ee97c41`。
-- 格式：image/webp；288×288；5012 bytes。
-- SHA-256：`d357f0c27cff005a4a5fac9c4d785f69a9663b1bbfc76f7bd79a11c8cb35bc08`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/4ae30922-3e39-4ded-8e19-35ec595befa0)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability/zealot_bolstering_prayer.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/4ae30922-3e39-4ded-8e19-35ec595befa0)
+
+圖片僅供技能辨識，不作機制證據。
+

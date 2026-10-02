@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_increased_duration`；名稱鍵：`loc_talent_zealot_increased_stealth_duration`；描述鍵：`loc_talent_zealot_stealth_duration_threat_damage_desc`。
 - 節點：`node_374f4845-26ff-40f4-a893-75b4e4ac324d`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -32,7 +32,7 @@
 - threat_weight_multiplier 只描述威脅權重修正，實際敵人選擇目標仍受其 AI、距離、視線和其他威脅來源影響。
 - 描述格式的 `{duration}` 是 2 秒增量，buff template 的 duration=5 是延長後總長度；兩者不可混讀。
 - inventory 中文將威脅欄寫成「提高」但固定 SHA 的 format 前綴是負號且威脅倍率為 0.25；由於 Build 25492122 尚未證明同版，此處記錄數值解讀，不直接提出本地化勘誤。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -41,8 +41,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_increased_duration.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_increased_duration:node_374f4845-26ff-40f4-a893-75b4e4ac324d`。
-- 格式：image/webp；288×288；6024 bytes。
-- SHA-256：`23aa991dc9505598485721b739f34391bdde3c7da96d2336230527ac7b4030dc`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/064d2729-f3e2-4868-bc34-1bcf434d9f4d)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_increased_duration.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/064d2729-f3e2-4868-bc34-1bcf434d9f4d)
+
+圖片僅供技能辨識，不作機制證據。
+

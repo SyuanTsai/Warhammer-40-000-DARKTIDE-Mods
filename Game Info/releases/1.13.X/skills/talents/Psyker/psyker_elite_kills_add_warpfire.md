@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_elite_kills_add_warpfire`；名稱鍵：`loc_talent_psyker_elite_kills_add_warpfire`；描述鍵：`loc_talent_psyker_elite_and_special_kills_add_warpfire_desc`。
 - 節點：`node_dbf51b8d-f6d8-418b-a1dc-29435eea34b0`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,7 +24,7 @@
 - **層數算例**：附近敵人原本沒有靈魂之火時，獲得 2 層；原本有 3 層時，變成 3 + 2 = 5 層。傷害會隨層數非線性成長，5 層不是 1 層傷害的 5 倍。
 - 程式只在warpfire且attack_type缺失時排除，不能單看damage_type就聲稱所有靈魂之火擊殺不觸發。
 - 持續傷害層數各自移除與實際整段傷害需固定敵人護甲與後續補層再計算。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -33,8 +33,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/default/psyker_elite_kills_add_warpfire.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_elite_kills_add_warpfire:node_dbf51b8d-f6d8-418b-a1dc-29435eea34b0`。
-- 格式：image/webp；288×288；7064 bytes。
-- SHA-256：`28e1b10583cd8ae5791d96cd9bf7d4ce817b468ba685121549ffa8fafcb9ebd8`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928034845)；[公開圖片](https://github.com/user-attachments/assets/6cc7512d-8e6f-4261-88f3-c95089950934)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/default/psyker_elite_kills_add_warpfire.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928034845)｜[圖片附件](https://github.com/user-attachments/assets/6cc7512d-8e6f-4261-88f3-c95089950934)
+
+圖片僅供技能辨識，不作機制證據。
+

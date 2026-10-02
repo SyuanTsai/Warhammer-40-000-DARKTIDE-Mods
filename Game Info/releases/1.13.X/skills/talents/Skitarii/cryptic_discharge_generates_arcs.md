@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_discharge_generates_arcs`；名稱鍵：`loc_talent_cryptic_discharge_arc_bonus`；描述鍵：`loc_talent_cryptic_discharge_arc_bonus_desc`。
 - 節點：`node_76d47f27-b1fe-4614-a013-9cdcfb6ac12b`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 
 - 電弧數以消耗充能計，最多 5 道；實際鏈接目標數受附近可用敵人及鏈接驗證限制。
 - 各次傷害依目標與傷害階段計算，來源未提供可套用所有敵人的單一總傷害。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability_modifier/cryptic_discharge_generates_arcs.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_discharge_generates_arcs:node_76d47f27-b1fe-4614-a013-9cdcfb6ac12b`。
-- 格式：image/webp；288×288；5672 bytes。
-- SHA-256：`d58b0fc63302239dd83bb120855291b9382b6b732e1f1e0e37d228fcf32fe8f6`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)；[公開圖片](https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/ability_modifier/cryptic_discharge_generates_arcs.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)｜[圖片附件](https://github.com/user-attachments/assets/9d074da8-541c-4fec-bc2b-47e53be42bad)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_passive_heavy_hitter`；名稱鍵：`loc_talent_ogryn_passive_heavy_hitter`；描述鍵：`loc_talent_ogryn_passive_heavy_hitter_new_desc`。
 - 節點：`node_894ba06e-9e23-480b-9674-a1f4df246824`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -25,10 +25,10 @@
 ## 算例條件與待確認事項
 
 - **刷新與算例**：每次新增層數都會刷新 7.5 秒期限。4 次一般命中可增加 12%；滿 8 層時，基礎近戰傷害 100 變成 100 × (1 + 24%) = 124。
-- 機制核對至指定公開來源 SHA 419fe18d414a618ce0474bd015bab470afb446d6；本機 Build 25492122 的中英文字串與公開來源版本對應由使用者於2026-10-02確認，文字與實作差異待遊戲內核對。
+- 機制核對至指定公開來源 SHA 419fe18d414a618ce0474bd015bab470afb446d6；本機 Build 25492122 的中英文字串與公開來源版本對應為1.13.0，文字與實作差異待遊戲內核對。
 - 順劈同一揮擊的後續命中不會重複給層；天賦與 buff 沒有 ProcBuff cooldown，層數的 7.5 秒計時靠加層刷新。
 - 重拳出擊的層數比例heavy_hitter_lerp_value為模組區域共用變數；多位歐格林同場時的更新互動未實測，主頁算例固定單一角色。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -37,8 +37,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/keystone/ogryn_passive_heavy_hitter.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_passive_heavy_hitter:node_894ba06e-9e23-480b-9674-a1f4df246824`。
-- 格式：image/webp；288×288；5644 bytes。
-- SHA-256：`9e2c8f3def62043f9fd08ce07111e3ef0846b081c88717059c7f771b3ca6957f`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/6ad5a8ad-f1c2-4c43-997a-02b89543ebd9)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/keystone/ogryn_passive_heavy_hitter.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/6ad5a8ad-f1c2-4c43-997a-02b89543ebd9)
+
+圖片僅供技能辨識，不作機制證據。
+

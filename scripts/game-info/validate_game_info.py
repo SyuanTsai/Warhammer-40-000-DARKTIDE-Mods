@@ -45,11 +45,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, required=True, help="Game Info directory")
     parser.add_argument("--include-local-source", action="store_true", help="Also check ignored source/vendor READMEs")
+    parser.add_argument("--exclude-dir", action="append", default=[], help="Directory component to skip; repeat as needed")
     args = parser.parse_args()
     root = args.root.resolve()
     if not root.is_dir():
         parser.error("--root must be an existing directory")
-    files = sorted(p for p in root.rglob("*.md") if args.include_local_source or not ({"Extracted Text", "extracted-text", "vendor"} & set(p.relative_to(root).parts)))
+    excluded = set(args.exclude_dir)
+    if not args.include_local_source:
+        excluded.update({"Extracted Text", "extracted-text", "vendor"})
+    files = sorted(p for p in root.rglob("*.md") if not (excluded & set(p.relative_to(root).parts)))
     errors, cache, local_count, remote_count = [], {}, 0, 0
     for path in files:
         for dest in destinations(path.read_text(encoding="utf-8-sig")):

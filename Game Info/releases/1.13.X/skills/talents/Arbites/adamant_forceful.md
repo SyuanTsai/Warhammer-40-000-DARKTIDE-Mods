@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_forceful`；名稱鍵：`loc_talent_adamant_forceful`；描述鍵：`loc_talent_adamant_forceful_base_alt_desc`。
 - 節點：`node_23717e1a-a7ea-44f6-b168-9bd668cd29a3`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -32,7 +32,7 @@
 - 10 層：衝擊修正 10 × 0.05 = +0.50；受傷倍率 0.975^10 ≈ 0.776，約 77.6 點傷害／原 100 點。
 - 機制來源固定為公開 Aussiemon/Darktide-Source-Code SHA 419fe18d414a618ce0474bd015bab470afb446d6；inventory 的繁中與英文文字未證實與此程式碼同版。程式實作和文字措辭如有差異，先列跨版本待核，不直接判為翻譯錯誤。
 - 乘算算例只計 Forceful 本身；其他傷害修正、傷害類型與遊戲中額外倍率會再進入共用公式。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -41,8 +41,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/keystone/adamant_forceful.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_forceful:node_23717e1a-a7ea-44f6-b168-9bd668cd29a3`。
-- 格式：image/webp；288×288；5592 bytes。
-- SHA-256：`d7a7d45c0d4343a0624e0d6f021cb087f1ee5368088d37b31c6707487b1b697a`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/b838686c-aaa0-49a2-bbea-fc9e074bb6cf)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/keystone/adamant_forceful.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/b838686c-aaa0-49a2-bbea-fc9e074bb6cf)
+
+圖片僅供技能辨識，不作機制證據。
+

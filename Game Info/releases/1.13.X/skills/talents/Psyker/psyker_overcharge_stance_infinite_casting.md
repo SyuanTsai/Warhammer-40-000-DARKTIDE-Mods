@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_overcharge_stance_infinite_casting`；名稱鍵：`loc_talent_psyker_overcharge_infinite_casting`；描述鍵：`loc_talent_psyker_overcharge_infinite_casting_desc`。
 - 節點：`node_012fb3aa-bcfb-429b-8bd9-376cd7ad7915`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -27,17 +27,16 @@
 - 本天賦不阻止注視期間反噬上升，也不改變100%反噬結束注視的條件。
 - 此保護時間是停止注視後的11.5秒，不是啟動期間再多11.5秒。
 - 超載防護之外的技能/攻擊效果未由本source片段證明，不延伸描述。Build25492122同版性待核。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`10334171`。
-- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應由使用者於2026-10-02確認。 詳細持續時間／觸發範圍以固定來源推導，仍須同版遊戲核對。
+- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。 詳細持續時間／觸發範圍以固定來源推導，仍須同版遊戲核對。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_overcharge_stance_infinite_casting.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_overcharge_stance_infinite_casting:node_012fb3aa-bcfb-429b-8bd9-376cd7ad7915`。
-- 格式：image/webp；288×288；8290 bytes。
-- SHA-256：`48be9a38ddfbe3a383575d8dd27c7bfbc75326b2d2e8dac99206f43c2caf5eb8`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_overcharge_stance_infinite_casting.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8)
+
+圖片僅供技能辨識，不作機制證據。
+

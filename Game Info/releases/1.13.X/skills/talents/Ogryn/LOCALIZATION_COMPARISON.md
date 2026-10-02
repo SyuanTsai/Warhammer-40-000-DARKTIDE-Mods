@@ -2,8 +2,8 @@
 
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
-- 原文：本機 Steam Build 25492122，2026-10-01 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25492122/extracted-text/，整個 Build 目錄受 Git 忽略。
-- 機制：Release 1.13.0／`419fe18d414a618ce0474bd015bab470afb446d6`。兩來源版本對應由使用者於2026-10-02確認；跨版實作差異留待遊戲內核對。
+- 原文：本機 Steam Build 25492122，2026-10-01 擷取，ui 資源；繁中與英文依同一描述鍵／hash 配對。完整文本存於本版本 source/SteamBuild_25492122_1.13.0/，整個 Build 目錄受 Git 忽略。
+- 機制：Release 1.13.0／`419fe18d414a618ce0474bd015bab470afb446d6`。兩來源版本對應為1.13.0；跨版實作差異留待遊戲內核對。
 - 只有明確的效果方向、作用對象或數量／單位矛盾列為勘誤；省略機制或算例不算錯誤。
 
 - 覆蓋 86／86 個同鍵／hash 描述：6 項繁中勘誤、7 項跨來源待核、73 項未見明確矛盾。
@@ -248,7 +248,7 @@
 ## 麻木(Feel No Pain)
 
 - 描述鍵：`loc_talent_ogryn_carapace_armor_any_damage_desc`；hash：`cae1c616`。
-- 結論：跨來源待遊戲內核對。繁中寫「每層獲得…韌性恢復和…減傷」，英文寫「Each Stack grants … Toughness Replenishment and … Damage Reduction」；兩種文字都使用未指明傷害種類的減傷措辭。固定公開來源只降低韌性所受傷害，不降低生命值所受傷害；由於公開來源與本機 Build 25492122 版本對應由使用者於2026-10-02確認，這項範圍差異待核，不判為翻譯錯誤。
+- 結論：跨來源待遊戲內核對。繁中寫「每層獲得…韌性恢復和…減傷」，英文寫「Each Stack grants … Toughness Replenishment and … Damage Reduction」；兩種文字都使用未指明傷害種類的減傷措辭。固定公開來源只降低韌性所受傷害，不降低生命值所受傷害；由於公開來源與本機 Build 25492122 版本對應為1.13.0，這項範圍差異待核，不判為翻譯錯誤。
 - [原始碼推導與限制](ogryn_carapace_armor.md)。
 
 <a id="ogryn_passive_heavy_hitter"></a>
@@ -262,7 +262,7 @@
 ## 痛楚爆發(Pained Outburst)
 
 - 描述鍵：`loc_talent_ogryn_carapace_armor_trigger_on_zero_stacks_new_desc`；hash：`d03260f0`。
-- 結論：跨來源待遊戲內核對。繁中寫「當…層數達…層以下時」，英文寫「reaches … stacks or below」，兩種本機文字都表示 5 層或以下。固定公開來源在失去一層後檢查內部層數，換算為玩家可見 4 層或更低；公開來源與本機 Build 25492122 版本對應由使用者於2026-10-02確認，因此保留待核，不判為翻譯錯誤。
+- 結論：跨來源待遊戲內核對。繁中寫「當…層數達…層以下時」，英文寫「reaches … stacks or below」，兩種本機文字都表示 5 層或以下。固定公開來源在失去一層後檢查內部層數，換算為玩家可見 4 層或更低；公開來源與本機 Build 25492122 版本對應為1.13.0，因此保留待核，不判為翻譯錯誤。
 - [原始碼推導與限制](ogryn_carapace_armor_trigger_on_zero_stacks.md)。
 
 <a id="ogryn_carapace_armor_add_stack_on_push"></a>
@@ -585,7 +585,7 @@
 ## 專注鬥士(Focused Fighter)
 
 - 描述鍵：`loc_talent_ogryn_melee_attacks_give_mtdr_desc`；hash：`7ced0743`。
-- 結論：跨來源待遊戲內核對。同源中英都描述受到近戰傷害後清層；固定公開實作使用全隊傷害事件且沒有本人篩選，隊友受傷亦會清除。兩來源版本對應由使用者於2026-10-02確認，不列繁中誤譯。
+- 結論：跨來源待遊戲內核對。同源中英都描述受到近戰傷害後清層；固定公開實作使用全隊傷害事件且沒有本人篩選，隊友受傷亦會清除。兩來源版本對應為1.13.0，不列繁中誤譯。
 - [原始碼推導與限制](ogryn_melee_attacks_give_mtdr.md)。
 
 <a id="ogryn_pushing_applies_brittleness"></a>

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_channel_grants_toughness_damage_reduction`；名稱鍵：`loc_talent_zealot_zealot_channel_grants_defensive_buff`；描述鍵：`loc_talent_zealot_zealot_channel_defensive_desc `。
 - 節點：`node_72c78ca8-a422-429a-90cf-b85d0b36aa19`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -32,7 +32,7 @@
 - 這是韌性傷害的乘數，不等同於生命傷害減免；也不代表所有 damage_taken_multiplier 結算階段都受益。
 - 若離開協同範圍、buff 遭移除或受到其他系統的限制，實際堆疊／減傷可能低於理論上限。
 - 原描述定位鍵含重複 zealot 並帶結尾空格，固定 source tree 無法精確配對本節點描述原文；不得以相近鍵冒充精確定位。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -41,8 +41,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_channel_grants_toughness_damage_reduction.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_channel_grants_toughness_damage_reduction:node_72c78ca8-a422-429a-90cf-b85d0b36aa19`。
-- 格式：image/webp；288×288；4930 bytes。
-- SHA-256：`eb517ae83f26ab88fa1d3c718fb0d2242b993a74f33cc17605b71e1cafd0b36c`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_channel_grants_toughness_damage_reduction.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29)
+
+圖片僅供技能辨識，不作機制證據。
+

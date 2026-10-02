@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_ability_stimm_field`；名稱鍵：`loc_talent_broker_ability_stimm_field`；描述鍵：`loc_talent_broker_ability_stimm_field_desc_3`。
 - 節點：`node_e341cdcf-7254-4ac0-9f37-cb056b00d14d`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -37,7 +37,7 @@
 - **算例**：20 秒場域以每 0.25 秒移除 0.5 點腐敗，格式值為 20 ÷ 0.25 × 0.5 = 40 點；這是目標有足夠腐敗可供移除時的上限。
 - 40 點是格式值推算的最大腐敗治療量，不代表所有隊友都會實際治療到 40 點；已無可移除腐敗時不會治療出額外生命。
 - 分享的興奮劑效果取決於放置時攜帶的興奮劑類型及可用使用次數。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -46,8 +46,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability/broker_ability_stimm_field.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_ability_stimm_field:node_e341cdcf-7254-4ac0-9f37-cb056b00d14d`。
-- 格式：image/webp；288×288；5330 bytes。
-- SHA-256：`1acb3db77928af59c5ae864cc14aef619d2be47e95fe921d393b8d44a799a4da`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/70eb922d-eda2-4ed7-b945-ed3b305b10a6)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability/broker_ability_stimm_field.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/70eb922d-eda2-4ed7-b945-ed3b305b10a6)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -1,0 +1,115 @@
+{
+  "scope": "privacy-cleaned complete RAW batch; excludes this manifest itself and ZIP/archive receipt",
+  "files": [
+    {
+      "path": "archive_before_cleanup.json",
+      "size": 279,
+      "sha256": "4b71d02cce5458948c482bff4c90a3c0e88f40cd41569c8ba847812dcad36422"
+    },
+    {
+      "path": "bundle_inventory.json.gz",
+      "size": 4432922,
+      "sha256": "027f3d0f1dae229f6648528dc3ce83792adcaac16db447acb571c1872bf4bb0e"
+    },
+    {
+      "path": "cleanup.json",
+      "size": 1146,
+      "sha256": "0d907bae43bb77968260225343143aa58b5fbc22d0036bbd0a2a63ba3490bd13"
+    },
+    {
+      "path": "compare_text_exports.py",
+      "size": 4974,
+      "sha256": "d3142596091e02dce186fc3cf05cc513d94c77237c591ec9eae2246d89e59784"
+    },
+    {
+      "path": "extraction.log",
+      "size": 1401,
+      "sha256": "477c0f925eb78cd12e43922a942e80742c7d9c7983178c496c33581413e2773d"
+    },
+    {
+      "path": "extraction_summary.json",
+      "size": 15023,
+      "sha256": "02a71c49f81eb959d590732a11eae40ce75fcfbb71aeffd812dc6af1152a57aa"
+    },
+    {
+      "path": "files_before_cleanup.sha256.json",
+      "size": 19458,
+      "sha256": "a43506841cf366279a35a05b8e2df1c8ecf03ce25c78ed286031ebc4d78e90ad"
+    },
+    {
+      "path": "privacy.json",
+      "size": 365,
+      "sha256": "5c92de78efe9112f63dde4fbd88c477d4c0c2b743b9df7250f4ec1ec5135a52a"
+    },
+    {
+      "path": "provenance.json",
+      "size": 3143,
+      "sha256": "b184d3247844be71cb4a49e43a4577d6176c5f21652702bacabb83ad55807b08"
+    },
+    {
+      "path": "raw/0274a4645de05a96.strings",
+      "size": 107298651,
+      "sha256": "55cdf2804ce030496105f1e3270a5c12f491a0b4aae8d98caea11f23a5db122b"
+    },
+    {
+      "path": "raw/63564edcb7c3c5ee.strings",
+      "size": 13440499,
+      "sha256": "fa7a2017a8ecf5343fb7f4753e4c00af9429af1fe53d2177bde1710b6fddf26d"
+    },
+    {
+      "path": "raw/9a115e3b8c025ae3.strings",
+      "size": 606,
+      "sha256": "4696f36721cd2473a547ae08ca902eda8bd78f0a5beffefb075e4b2e1c4506e9"
+    },
+    {
+      "path": "raw/f1e50e33afca75ad.strings",
+      "size": 14336811,
+      "sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026"
+    },
+    {
+      "path": "README.md",
+      "size": 1478,
+      "sha256": "7f7e5cd6f5ac60b304fea199882b657f0836964d06a84eb14a7cd63ac52e8029"
+    },
+    {
+      "path": "resolved_keys.json",
+      "size": 582121,
+      "sha256": "32126eef30c37c35db6de12808d0eab6061b533db8a4a3c42eec3c3433527781"
+    },
+    {
+      "path": "restoration_manifest.json",
+      "size": 17135,
+      "sha256": "c61c8cc121c1ffa9a126f578d1a96541283f4eb012b3b971bc09e970e86c6762"
+    },
+    {
+      "path": "restoration_validation.json",
+      "size": 150,
+      "sha256": "482d2390042068de1b5c30f8efb6ef7d8578ca75eb39af766f9c602fe9558950"
+    },
+    {
+      "path": "RESTORE.md",
+      "size": 2776,
+      "sha256": "35c2b562b70c0ad8cb64b627b823e18671d18a6c0f96a568cdbed99e4d374db7"
+    },
+    {
+      "path": "restore_exports.py",
+      "size": 4992,
+      "sha256": "ca7076864efc994402c40eaa869c777301cea459b6d4e7ff4326480d7fbd19b4"
+    },
+    {
+      "path": "text_diff.json",
+      "size": 100504,
+      "sha256": "229d95eade17611e1b6f4706f69c3d74ce79c0780acdf8ce15e6df3ab4832f9d"
+    },
+    {
+      "path": "TEXT_DIFF_FULL.md",
+      "size": 46774,
+      "sha256": "ce76d07b8db9614bfb1125cbf2e9aa7021e03cbdf0c72017183a48a610ae0366"
+    },
+    {
+      "path": "validation.json",
+      "size": 305,
+      "sha256": "0b1ad59f4b7c8c86357d07fd3b1ac8539996f69e3c16992390f9223aeeede285"
+    }
+  ]
+}

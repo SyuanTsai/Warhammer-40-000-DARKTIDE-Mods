@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_servo_skull_improved_tagging`；名稱鍵：`loc_talent_cryptic_servo_skull_improved_tagging`；描述鍵：`loc_talent_cryptic_servo_skull_improved_tagging_fire_rate_cost_desc`。
 - 節點：`node_cc688d42-e7dd-45bb-81ec-df7c8d772e3f`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -34,17 +34,16 @@
 - 加速效果只在改良標記特長啟用且伺服頭骨命令有效時觸發；不改變噴火與醫療頭骨共用的手榴彈能力使用次數。
 - 0.15是射擊冷卻乘數，表示冷卻剩15%、減少85%；玩家介面將此值換算成約567%攻擊速度增幅。
 - 施放時會依同一加速效果剩餘時長調整電容量扣除；持續時間上限為2秒。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`843cef80`。
-- 繁中描述有列出下令攻擊、持續2秒及0.3電容量，但程式的資源參數是 combat_ability charge percentage，換算為0.3份；程式射擊冷卻乘數0.15，語系格式值會換算為約567%攻擊速度。其餘門檻、訓練場例外及扣除調整屬未列明細節。Build 25492122 版本對應由使用者於2026-10-02確認。
+- 繁中描述有列出下令攻擊、持續2秒及0.3電容量，但程式的資源參數是 combat_ability charge percentage，換算為0.3份；程式射擊冷卻乘數0.15，語系格式值會換算為約567%攻擊速度。其餘門檻、訓練場例外及扣除調整屬未列明細節。Build 25492122 版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_servo_skull_improved_tagging.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_servo_skull_improved_tagging:node_cc688d42-e7dd-45bb-81ec-df7c8d772e3f`。
-- 格式：image/webp；288×288；4334 bytes。
-- SHA-256：`276ab5e4052c9cd218ae29a5ad70742d2a08709ae687c316045c824295e6e808`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)；[公開圖片](https://github.com/user-attachments/assets/c365855a-e85f-4d0d-8156-4048ae9f7e02)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_servo_skull_improved_tagging.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)｜[圖片附件](https://github.com/user-attachments/assets/c365855a-e85f-4d0d-8156-4048ae9f7e02)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_keystone_vultures_mark_increased_duration`；名稱鍵：`loc_talent_broker_keystone_vultures_mark_increased_duration`；描述鍵：`loc_talent_broker_keystone_vultures_mark_increased_duration_desc`。
 - 節點：`node_aab0fcfa-aa2c-4f06-bed9-dd6903333cf0`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -31,7 +31,7 @@
 - **上限算例**：已有 3 層時，第 4 次合格擊殺不增加第 4 層，但會刷新 12 秒計時。
 - 延長的是印記 buff 的共享時長；不提高 3 層上限，也不改變每層屬性加成或滿層回韌性的條件。
 - 此項不延長兀鷲閃避升級所觸發的短暫閃避 buff。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -40,8 +40,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_vultures_mark_increased_duration.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_keystone_vultures_mark_increased_duration:node_aab0fcfa-aa2c-4f06-bed9-dd6903333cf0`。
-- 格式：image/webp；288×288；5084 bytes。
-- SHA-256：`fceeb779b5661acfafaaf2afb2123aaf3af9d0a31c411aa24d5ec3e7ec767738`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/76cdf6df-d713-4085-8b29-fce2c1c64413)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_vultures_mark_increased_duration.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/76cdf6df-d713-4085-8b29-fce2c1c64413)
+
+圖片僅供技能辨識，不作機制證據。
+

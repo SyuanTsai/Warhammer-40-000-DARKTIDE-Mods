@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_taunt_shout`；名稱鍵：`loc_ability_ogryn_taunt_shout`；描述鍵：`loc_ability_ogryn_taunt_shout_new_desc`。
 - 節點：`node_1642abd3-b5d6-4332-83d0-aec599fd3dca`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,7 +33,7 @@
 - **時間算例**：敵人在第 0、3、6 秒都位於範圍內，最後一次嘲諷可持續至第 6 + 15 = 21 秒。能力基礎冷卻 50 秒，只有一層充能。
 - 半徑只查詢合格敵人；部分特殊敵人依目標設定被排除或不接受嘲諷。
 - 重複脈衝的時間以遊戲更新時點為準。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -42,8 +42,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/ability/ogryn_taunt_shout.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_taunt_shout:node_1642abd3-b5d6-4332-83d0-aec599fd3dca`。
-- 格式：image/webp；288×288；4668 bytes。
-- SHA-256：`3fdb63034d90e0c159b8920cfdbb7b7abd12db6bf2f4490d9e77d8fd895b73c5`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/01a8e7be-dff3-4d81-a426-5e38ae352606)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/ability/ogryn_taunt_shout.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/01a8e7be-dff3-4d81-a426-5e38ae352606)
+
+圖片僅供技能辨識，不作機制證據。
+

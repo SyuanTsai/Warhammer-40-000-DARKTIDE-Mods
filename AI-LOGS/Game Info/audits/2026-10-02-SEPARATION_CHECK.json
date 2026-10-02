@@ -1,0 +1,156 @@
+{
+  "date": "2026-10-02",
+  "player_documents": [
+    {
+      "class": "Arbites",
+      "sha256_unchanged": true
+    },
+    {
+      "class": "Ogryn",
+      "sha256_unchanged": true
+    },
+    {
+      "class": "Psyker",
+      "sha256_unchanged": true
+    },
+    {
+      "class": "Scum",
+      "sha256_unchanged": true
+    },
+    {
+      "class": "Skitarii",
+      "sha256_unchanged": true
+    },
+    {
+      "class": "Veteran",
+      "sha256_unchanged": true
+    },
+    {
+      "class": "Zealot",
+      "sha256_unchanged": true
+    }
+  ],
+  "moved_non_markdown_files": [
+    {
+      "path": "scripts/game-info/decode_strings.py",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "scripts/game-info/validate_game_info.py",
+      "sha256_unchanged": false,
+      "intentional_change": "add --exclude-dir; two tests passed"
+    },
+    {
+      "path": "scripts/game-info/verify_exports.py",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "scripts/game-info/compare_text_exports.py",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/archive.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/releases/1.13.X/SteamBuild_25492122_1.13.0/bundle_inventory.json.gz",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/cleanup.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/decode.log",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/extraction.log",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/files_before_cleanup.sha256.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/privacy.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/provenance.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/restoration_validation.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/validation.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/verify_exports.py",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25492122_1.13.0/workspace_relocation.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/archive.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/archive_before_cleanup.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/local/releases/1.13.X/SteamBuild_25606770_1.13.1/bundle_inventory.json.gz",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/cleanup.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/extraction.log",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/files_before_cleanup.sha256.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/privacy.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/provenance.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/restoration_validation.json",
+      "sha256_unchanged": true
+    },
+    {
+      "path": "AI-LOGS/Game Info/releases/1.13.X/SteamBuild_25606770_1.13.1/validation.json",
+      "sha256_unchanged": true
+    }
+  ],
+  "updated_skill_source_documents": 666,
+  "git_index_unchanged": true,
+  "empty_legacy_directories_removed": [
+    "Game Info/tools",
+    "Game Info/prompts",
+    "Game Info/SKILL"
+  ],
+  "tool_tests": {
+    "total": 2,
+    "passed": 2
+  },
+  "restoration_report": "AI-LOGS/Game Info/audits/2026-10-02-OFFLINE_RESTORATION.json",
+  "limitations": [
+    "Remote image and code URLs retained; not re-fetched for this directory cleanup",
+    "Cloud archives need replacement with current local ZIPs"
+  ]
+}

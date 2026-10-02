@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`veteran_increase_damage_after_sprinting`；名稱鍵：`loc_talent_veteran_damage_damage_after_sprinting`；描述鍵：`loc_talent_veteran_damage_damage_after_sprinting_or_sliding_desc`。
 - [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L212-L241)：`default`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L943-L986)。
-- 狀態：完成核心靜態機制核對；名稱對應暫定，未進行遊戲內驗證。
+- 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
 ## 原始碼確認與程式推導
 
@@ -32,7 +32,7 @@ buff 每累積約 1 秒的 sprinting 或 sliding time 便加一層內部 damage 
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_increase_damage_after_sprinting.webp)；取得日期 2026-10-01。圖示只供呈現，不作機制證據。
-- 天賦與節點：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_increase_damage_after_sprinting:node_39129a53-b8c1-4d7e-82bd-e2b9d49315a1`，已核對固定版本節點。
-- WebP，288 × 288，4836 bytes；SHA-256：`90256db7bf0de7b766304bc08ce349db5ac9f86aa9896c0f6713c565796c6181`。
-- 保存在 [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922922455) 的 [圖片附件](https://github.com/user-attachments/assets/dca385d7-a54e-4bf5-b67d-f3d29ef82234)；附件下載後的雜湊與大小均與原圖一致。圖檔不加入 Git 分支。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_increase_damage_after_sprinting.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922922455)｜[圖片附件](https://github.com/user-attachments/assets/dca385d7-a54e-4bf5-b67d-f3d29ef82234)
+
+圖片僅供技能辨識，不作機制證據。
+

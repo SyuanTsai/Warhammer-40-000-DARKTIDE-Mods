@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_dissector_max_stacks`；名稱鍵：`loc_talent_cryptic_dissector_max_stacks`；描述鍵：`loc_talent_cryptic_dissector_max_stacks_desc`。
 - 節點：`node_dcc243dd-aaf5-41cd-be8c-5db40d46967f`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -27,7 +27,7 @@
 - 靜態推演：6+2=8層；8×2.5%=20%傷害增幅，100點基礎傷害變成120點。韌性承傷倍率為1−0.025×8=0.80，100點原始韌性傷害變成80點。
 - 只提高削切協議上限，不提高單層數值，也不更改受傷失層、精英／專家擊殺補層或擊殺韌性恢復規則。
 - 傷害算例假設沒有其他傷害修正；韌性算例假設沒有其他減傷。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -36,8 +36,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_dissector_max_stacks.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_dissector_max_stacks:node_dcc243dd-aaf5-41cd-be8c-5db40d46967f`。
-- 格式：image/webp；288×288；4122 bytes。
-- SHA-256：`ddac24fe0e8ac871ce45f70b211e33373835349a54a3987717a2845382bfe5e5`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528)；[公開圖片](https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_dissector_max_stacks.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528)｜[圖片附件](https://github.com/user-attachments/assets/17ab9d2c-793b-40c4-83bd-cb3c4bdee444)
+
+圖片僅供技能辨識，不作機制證據。
+

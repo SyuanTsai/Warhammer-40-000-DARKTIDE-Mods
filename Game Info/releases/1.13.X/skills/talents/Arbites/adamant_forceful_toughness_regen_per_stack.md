@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_forceful_toughness_regen_per_stack`；名稱鍵：`loc_talent_adamant_forceful_toughness_regen`；描述鍵：`loc_talent_adamant_forceful_toughness_regen_per_stack_desc`。
 - 節點：`node_26aa2932-e1d8-4b3b-9a28-f6d71f977f56`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -27,7 +27,7 @@
 - 最大韌性 100、Forceful 10 層：每秒 100 × 0.005 × 10 = 5 點；韌性只缺 3 點時最多補 3 點。
 - 機制來源固定為公開 Aussiemon/Darktide-Source-Code SHA 419fe18d414a618ce0474bd015bab470afb446d6；inventory 的繁中與英文文字未證實與此程式碼同版。程式實作和文字措辭如有差異，先列跨版本待核，不直接判為翻譯錯誤。
 - 恢復按 update 的 dt 累計並受韌性缺額、韌性恢復修正與恢復封鎖規則影響。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -36,8 +36,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/keystone_modifier/adamant_forceful_toughness_regen_per_stack.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_forceful_toughness_regen_per_stack:node_26aa2932-e1d8-4b3b-9a28-f6d71f977f56`。
-- 格式：image/webp；288×288；5984 bytes。
-- SHA-256：`a53255f42bc2e339366196fc279a653524ea8994c51b53ae7b5b94cf0ec404ea`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/1016875d-cc4c-44f2-8a06-c93155d482d4)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/keystone_modifier/adamant_forceful_toughness_regen_per_stack.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/1016875d-cc4c-44f2-8a06-c93155d482d4)
+
+圖片僅供技能辨識，不作機制證據。
+

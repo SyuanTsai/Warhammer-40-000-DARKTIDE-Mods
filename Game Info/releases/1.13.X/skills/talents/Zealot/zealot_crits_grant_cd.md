@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_crits_grant_cd`；名稱鍵：`loc_talent_maniac_cooldown_on_melee_crits`；描述鍵：`loc_talent_maniac_cooldown_on_melee_crits_buff_desc`。
 - 節點：`node_5e1591e1-f942-4d8d-9b53-0d11864a59ef`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -32,7 +32,7 @@
 - 每次命中的暴擊機率、sweep 拆分方式及攻擊是否被遊戲判為 melee crit 影響觸發頻率。
 - buff 內部為 3.25 秒，但格式 num_decimals=0，不能只依介面整數顯示推出執行長度正好 3 秒。
 - 相同 buff 重複添加會刷新 duration，但自訂 timer 不由 refresh_func 重設；精確密集觸發下的 tick 相位會影響實際總回充。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -41,8 +41,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_crits_grant_cd.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_crits_grant_cd:node_5e1591e1-f942-4d8d-9b53-0d11864a59ef`。
-- 格式：image/webp；288×288；5394 bytes。
-- SHA-256：`3893fbc4639345a40e3c733e61d2dc475449f842454733a6ad835e0f16a57bac`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/e185301f-93c5-4f93-8c09-7aa351258173)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_crits_grant_cd.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/e185301f-93c5-4f93-8c09-7aa351258173)
+
+圖片僅供技能辨識，不作機制證據。
+

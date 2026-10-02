@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_keystone_adrenaline_junkie`；名稱鍵：`loc_talent_broker_keystone_adrenaline_junkie`；描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_desc`。
 - 節點：`node_887dd932-ea4e-42cb-b294-64f30771d7e0`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -40,7 +40,7 @@
 - **狂暴算例**：攻速倍率 1+0.10=1.10，1 秒動作約 1/1.10=0.91 秒；傷害單計此項為 100×(1+0.25)=125，同階段已有 20% 時為 100×(1+0.20+0.25)=145。
 - 近戰傷害算例只表達 damage_calculation 的傷害加法修正階段；武器傷害、部位、護甲、暴擊、弱點與承傷修正仍會影響最終數值。
 - 實際攻擊時間還受武器動作與其他速度修正影響；0.91 秒是單計 +10% 速度的比例示例。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -49,8 +49,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone/broker_keystone_adrenaline_junkie.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_keystone_adrenaline_junkie:node_887dd932-ea4e-42cb-b294-64f30771d7e0`。
-- 格式：image/webp；288×288；4850 bytes。
-- SHA-256：`d8d0a985a4983e39909be89504db405d3c9d73bf3d0ff9cef16f13d0ca1f7173`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone/broker_keystone_adrenaline_junkie.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/2b18473f-9818-4d07-98ab-b4c7995dbf8d)
+
+圖片僅供技能辨識，不作機制證據。
+

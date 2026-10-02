@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_toughness_regen_aura`；名稱鍵：`loc_talent_ogryn_toughness_regen_aura`；描述鍵：`loc_talent_ogryn_toughness_regen_aura_desc`。
 - 節點：`node_8d3ffc06-6e43-4888-bddb-adae115908fa`；分類：光環；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 - **恢復算例**：可套用此效果的一筆 15 點韌性恢復，在沒有其他修正時為 15 × (1 + 20%) = 18 點。
 - 這是韌性恢復量修正，不代表協同自然韌性恢復速度也提高 20%；忽略增益效果的恢復路徑會跳過此修正。
 - 最終恢復量仍受可恢復缺口與其他恢復修正影響。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/aura/ogryn_toughness_regen_aura.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_toughness_regen_aura:node_8d3ffc06-6e43-4888-bddb-adae115908fa`。
-- 格式：image/webp；288×288；4930 bytes。
-- SHA-256：`9c35c98a19e2c42c9a7a5881b37cdf2eab87e7439d53c5d9db08389734334b72`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/014cd689-2381-43e8-9241-b0a13af77036)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/aura/ogryn_toughness_regen_aura.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/014cd689-2381-43e8-9241-b0a13af77036)
+
+圖片僅供技能辨識，不作機制證據。
+

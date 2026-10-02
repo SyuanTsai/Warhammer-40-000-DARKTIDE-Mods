@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_warpfire_on_shout`；名稱鍵：`loc_talent_psyker_warpfire_on_shout`；描述鍵：`loc_talent_psyker_warpfire_on_shout_desc`。
 - 節點：`node_400d79d6-4aaa-47e4-b9c4-127b79ef639a`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -27,17 +27,16 @@
 - 程式碼排除沉睡中的惡魔宿主，並要求目標存活；一般文字的「命中目標」不應被理解為無條件所有單位。
 - 此內容只計算層數，不推論靈魂之火每秒傷害、持續時間、傳播或堆疊刷新規則。
 - 遊戲 build 與 source commit 同版性待核。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`8ec3e5f7`。
-- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應由使用者於2026-10-02確認。
+- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_warpfire_on_shout.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_warpfire_on_shout:node_400d79d6-4aaa-47e4-b9c4-127b79ef639a`。
-- 格式：image/webp；288×288；7460 bytes。
-- SHA-256：`cd62e11ae4c815fca02078646366624beced9832771b2bd500723c560da925d5`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/65f7ef9b-5b0d-458e-bc7d-5aea8e948e14)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_warpfire_on_shout.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/65f7ef9b-5b0d-458e-bc7d-5aea8e948e14)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_keystone_adrenaline_junkie_sub_4`；名稱鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_4`；描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_4_desc`。
 - 節點：`node_43d2abfa-c6f8-4ab7-8469-148b526040c2`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -28,7 +28,7 @@
 - **計時算例**：若在 0 秒取得 3 層，並且之後沒有新層，4 秒後先失去 1 層，8 秒後再失去 1 層；取得新層會把下一次衰退時間重設為 4 秒。
 - 此升級延長每層的共享計時，不提高 30 層上限，也不改變取得層數或狂暴持續時間。
 - 到達 30 層會觸發核心的清除流程；此時不再按 4 秒間隔逐層衰退。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -37,8 +37,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_adrenaline_junkie_sub_4.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_keystone_adrenaline_junkie_sub_4:node_43d2abfa-c6f8-4ab7-8469-148b526040c2`。
-- 格式：image/webp；288×288；3498 bytes。
-- SHA-256：`30ac5152abf3d878f7280a7ca4b5369c5603df7a4fe248f6a2b85f57e49ec993`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/2b1aa9f6-20e2-4d38-b2fb-6af765a426ca)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_adrenaline_junkie_sub_4.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/2b1aa9f6-20e2-4d38-b2fb-6af765a426ca)
+
+圖片僅供技能辨識，不作機制證據。
+

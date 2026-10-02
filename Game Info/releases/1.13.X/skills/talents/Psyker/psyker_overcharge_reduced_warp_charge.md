@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_overcharge_reduced_warp_charge`；名稱鍵：`loc_ability_psyker_overcharge_reduced_warp_charge`；描述鍵：`loc_ability_psyker_overcharge_reduced_warp_charge_vent_speed_description`。
 - 節點：`node_79ffb5f6-b82f-47c0-8eeb-5e28dcb2766a`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -28,7 +28,7 @@
 - 平息時間算例忽略反噬減少的離散級距、動作中斷、武器個別修正和其它速度效果；具體實戰時間仍會變動。
 - 兩項條件只在占卜者的注視關鍵狀態啟用，不包含離場後10秒傷害增益。
 - 遊戲 Build25492122 與公開source commit 同版性待核。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -37,8 +37,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_overcharge_reduced_warp_charge.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_overcharge_reduced_warp_charge:node_79ffb5f6-b82f-47c0-8eeb-5e28dcb2766a`。
-- 格式：image/webp；288×288；4854 bytes。
-- SHA-256：`b50a536a235cd1f875b65a924c5f268ccea1fce3c595a1eae3460cf110d8a83b`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/123c7e4e-3844-4ff0-94c0-5cf7f7772b8f)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_overcharge_reduced_warp_charge.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/123c7e4e-3844-4ff0-94c0-5cf7f7772b8f)
+
+圖片僅供技能辨識，不作機制證據。
+

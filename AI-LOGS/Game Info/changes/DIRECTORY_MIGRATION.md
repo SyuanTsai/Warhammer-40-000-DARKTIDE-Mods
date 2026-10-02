@@ -18,7 +18,7 @@
 
 ## 文本來源搬移
 
-使用者於2026-10-02確認 Steam Build 25492122 對應1.13.0後，已將整批本機文本搬至 `Game Info/releases/1.13.X/source/SteamBuild_25492122/extracted-text/`。[版本來源說明](../releases/1.13.X/source/README.md)記錄確認依據；provenance.json 保留原始標記並新增版本確認資料。
+使用者於2026-10-02確認 Steam Build 25492122 對應1.13.0後，已將整批本機文本搬至 `Game Info/releases/1.13.X/source/SteamBuild_25492122/extracted-text/`。[版本來源說明](../../../Game Info/releases/1.13.X/source/README.md)記錄確認依據；provenance.json 保留原始標記並新增版本確認資料。
 
 整個 Build 目錄受 Git 忽略。本批 variant-0008 的執行期用途仍未確認，資料原樣保留；這不影響它隨完整擷取批次搬移。
 
@@ -39,3 +39,7 @@
 ## 版本確認後的更新
 
 來源批次118個本機檔案已完整搬移。除來源 README 的導覽、provenance.json 的使用者確認資料及 relocation.json 的搬移紀錄外，其他115個檔案 SHA-256 全部一致；RAW、JSONL、TXT沒有改動。各職業來源附錄的版本限制已同步更新，個別機制疑點保留待遊戲內核對，不因版本確認改判翻譯錯誤。
+
+## 後續本機來源批次
+
+2026-10-02依主要工作區現況，1.13.0資料已使用`Game Info/releases/1.13.X/source/SteamBuild_25492122_1.13.0/`，內容直接位於批次根目錄；上方搬移對照保留當次歷史位置。現行索引與各職業來源引用已改為實際路徑。1.13.1另建`SteamBuild_25606770_1.13.1/`，不覆寫1.13.0；兩批都受Git忽略。[文本差異與來源紀錄](../../../Game Info/releases/1.13.X/source/TEXT_DIFF_1.13.0_TO_1.13.1.md)。

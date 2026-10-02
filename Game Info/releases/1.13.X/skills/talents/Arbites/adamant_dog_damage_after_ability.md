@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_dog_damage_after_ability`；名稱鍵：`loc_talent_adamant_dog_damage_after_ability`；描述鍵：`loc_talent_adamant_dog_damage_after_ability_desc`。
 - 節點：`node_6f8fc4e4-c5cd-423f-b612-4eb26dc2dadb`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 - 單獨效果：100×(1+50%)=150。與姿態 +75% 獒犬傷害同時生效：100×(1+50%+75%)=225。
 - 主人傷害修正只套用於電子獒犬的非流血傷害；實際結果受敵人防禦及其餘傷害修正影響。
 - 本機遊戲 build 與公開來源提交的版本對應尚待核對；數值與行為按固定來源提交說明。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/ability_modifier/adamant_dog_damage_after_ability.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_dog_damage_after_ability:node_6f8fc4e4-c5cd-423f-b612-4eb26dc2dadb`。
-- 格式：image/webp；288×288；5276 bytes。
-- SHA-256：`beb416098d0abe38837033db73f1b090052e316538b3518fe12ffc87b8950e55`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/ability_modifier/adamant_dog_damage_after_ability.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315)
+
+圖片僅供技能辨識，不作機制證據。
+

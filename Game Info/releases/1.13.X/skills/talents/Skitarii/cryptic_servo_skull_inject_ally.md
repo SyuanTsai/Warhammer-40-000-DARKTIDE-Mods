@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_servo_skull_inject_ally`；名稱鍵：`loc_talent_cryptic_servo_skull_inject_ally`；描述鍵：`loc_talent_cryptic_servo_skull_inject_ally_revive_new_desc`。
 - 節點：`node_f09fc8b6-be58-4bca-8d9c-b4ed66c72473`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -36,17 +36,16 @@
 - 只可指定目前需要盟友協助、且未吊掛邊緣或已進入其他協助狀態的玩家隊友；頭骨還必須存活並處於跟隨狀態。
 - 每秒恢復量以受援者最大韌性為基準，實際恢復會受韌性上限影響。
 - 固定來源定義 +50 韌性與立即恢復最大韌性50%的格式值，但醫療頭骨執行路徑未讀取它們；實際確認到的是每秒恢復20%與韌性承傷乘數0.25。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`86ee1b55`。
-- 繁中描述已涵蓋救援、75%韌性承傷減免、每秒20%韌性恢復與5秒持續。程式確認承傷乘數0.25代表減免75%，並確認有效目標判斷與共用次數消耗；翻譯沒有列出這些條件屬機制省略。Build 25492122 版本對應由使用者於2026-10-02確認。
+- 繁中描述已涵蓋救援、75%韌性承傷減免、每秒20%韌性恢復與5秒持續。程式確認承傷乘數0.25代表減免75%，並確認有效目標判斷與共用次數消耗；翻譯沒有列出這些條件屬機制省略。Build 25492122 版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_servo_skull_inject_ally.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_servo_skull_inject_ally:node_f09fc8b6-be58-4bca-8d9c-b4ed66c72473`。
-- 格式：image/webp；288×288；5322 bytes。
-- SHA-256：`29fa2877fb233f6617b1ab5672bb86dbb524cfaf394450a85e1bb5dee5e65afe`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)；[公開圖片](https://github.com/user-attachments/assets/adeeeef3-0c2e-450a-974b-66ce6c6366bd)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_servo_skull_inject_ally.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)｜[圖片附件](https://github.com/user-attachments/assets/adeeeef3-0c2e-450a-974b-66ce6c6366bd)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_redline`；名稱鍵：`loc_talent_cryptic_power_generation`；描述鍵：`loc_talent_cryptic_redline_charge_stacking_clarified_desc`。
 - 節點：`node_4c399707-0cd3-4618-af06-a16a6cf05d28`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -44,7 +44,7 @@
 - 事件指向戰鬥技能充能，不應與閃擊充能或一般資源名稱混為一談；達上限的事件仍可刷新持續時間。
 - 回充速度+20%不等同冷卻時間直接減少20%；實際秒數還受技能基礎資源速率、其他增益、暫停條件及資源上限影響。直接回復是否受加成依回復路徑決定；例如 Higher Purpose 使用的 restore_ability_charge_percentage 會忽略 stat buffs。
 - 以上是固定原始碼的靜態推演，未在遊戲內實測。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -53,8 +53,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone/cryptic_redline.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_redline:node_4c399707-0cd3-4618-af06-a16a6cf05d28`。
-- 格式：image/webp；288×288；6184 bytes。
-- SHA-256：`27385c4c46a6691a606853c66222cf4a4497fbfaf9013e31aa152f99e0908b77`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)；[公開圖片](https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone/cryptic_redline.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)｜[圖片附件](https://github.com/user-attachments/assets/55fe932f-c298-4b33-ad21-efab7b9244e5)
+
+圖片僅供技能辨識，不作機制證據。
+

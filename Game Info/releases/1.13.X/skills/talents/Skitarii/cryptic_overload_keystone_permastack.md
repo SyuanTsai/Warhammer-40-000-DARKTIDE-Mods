@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_overload_keystone_permastack`；名稱鍵：`loc_talent_cryptic_overload_keystone_permastack`；描述鍵：`loc_talent_cryptic_overload_keystone_permastack_desc`。
 - 節點：`node_50941b31-87cd-4b4e-86f1-25c09ee86bb5`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -38,7 +38,7 @@
 - 超載次數以實際觸發次數計算，不是擊殺數或累積層數；溢出層數也不會多算超載次數。
 - 回充秒數僅適用於所舉50點、1點/秒且回充未暫停的示例；其他技能的基礎資源與額外修正可能不同。
 - 固定版確認加成 buff 無時間倒數，且停止鑰石被動時會清除；死亡時的整體重置流程不由此模板單獨證明。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -47,8 +47,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_overload_keystone_permastack.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_overload_keystone_permastack:node_50941b31-87cd-4b4e-86f1-25c09ee86bb5`。
-- 格式：image/webp；288×288；5894 bytes。
-- SHA-256：`87eced99752aaaa692ce565c2ebdfd4d63a75a9c788fd6831c209adfcf6cc31e`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)；[公開圖片](https://github.com/user-attachments/assets/f0977f9f-2eb1-458a-a2c1-5e5642a284aa)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_overload_keystone_permastack.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935640756)｜[圖片附件](https://github.com/user-attachments/assets/f0977f9f-2eb1-458a-a2c1-5e5642a284aa)
+
+圖片僅供技能辨識，不作機制證據。
+

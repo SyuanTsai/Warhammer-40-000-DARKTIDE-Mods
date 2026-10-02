@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_charge_toughness`；名稱鍵：`loc_talent_ogryn_toughness_on_bull_rush`；描述鍵：`loc_talent_ogryn_toughness_on_bull_rush_desc`。
 - 節點：`node_6639c593-e867-4ee5-9536-b01124b5aa53`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -27,7 +27,7 @@
 
 - **恢復算例**：最大韌性 100、連續撞中 3 次且缺額足夠時，恢復 100 × 10% × 3 = 30 點；若只缺 20 點，就只能補 20 點。其他韌性恢復加成另算。
 - 命中必須發生在衝鋒狀態且攻擊傷害類型屬衝鋒；已滿韌性不會保留溢出回復。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -36,8 +36,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/ability_modifier/ogryn_charge_toughness.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_charge_toughness:node_6639c593-e867-4ee5-9536-b01124b5aa53`。
-- 格式：image/webp；288×288；5272 bytes。
-- SHA-256：`d1f412ff81a69f8d2aebaa78093d253a83b583d42341ef31b8027b18f7a0f0e4`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/0932d1f6-96b1-47d9-ad81-861fe9914d9a)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/ability_modifier/ogryn_charge_toughness.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/0932d1f6-96b1-47d9-ad81-861fe9914d9a)
+
+圖片僅供技能辨識，不作機制證據。
+

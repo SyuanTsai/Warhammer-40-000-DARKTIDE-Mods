@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_damage_vs_staggered_aura`；名稱鍵：`loc_talent_adamant_damage_vs_staggered_aura`；描述鍵：`loc_talent_adamant_damage_vs_staggered_aura_alt_desc`。
 - 節點：`node_6857741a-5da7-40c1-871b-4b62f91a52ea`；分類：光環；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -29,7 +29,7 @@
 - **傷害算例**：對踉蹌敵人原本造成 100 點傷害，只計此光環時為 100 × (1 + 0.10) = 110 點；對未踉蹌敵人仍是 100 點。同階段已有 25% 增傷時，對符合條件的敵人為 100 × (1 + 25% + 10%) = 135 點。
 - 來源使用踉蹌狀態作為傷害條件，不等同於只對受擊前一瞬間出現踉蹌的目標生效；遊戲內狀態時長和其他傷害修正會影響實際輸出。
 - 額外 10% 屬加法傷害修正項；有其他增傷時的最終總倍率須按傷害計算流程合併，不能把每個百分比都視為依序相乘。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -38,8 +38,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/aura/adamant_damage_vs_staggered_aura.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_damage_vs_staggered_aura:node_6857741a-5da7-40c1-871b-4b62f91a52ea`。
-- 格式：image/webp；288×288；6940 bytes。
-- SHA-256：`9259c8254f4b21739f897ac022862e6a5fb754697b3a986281f81de6fcb29aea`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/57af1e74-7cc5-45bb-a332-11d2e5fde909)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/aura/adamant_damage_vs_staggered_aura.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/57af1e74-7cc5-45bb-a332-11d2e5fde909)
+
+圖片僅供技能辨識，不作機制證據。
+

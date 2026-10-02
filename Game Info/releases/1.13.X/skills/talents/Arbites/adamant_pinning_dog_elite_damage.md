@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_pinning_dog_elite_damage`；名稱鍵：`loc_talent_adamant_pinning_dog_elite_damage`；描述鍵：`loc_talent_adamant_pinning_dog_elite_damage_description`。
 - 節點：`node_021a58e4-4b06-40cb-b978-3823adbd5a15`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 
 - **傷害算例**：對符合條件的目標，基礎 100 點傷害變成 115 點；同階段已有 25% 加成時，則為 100 × (1 + 25% + 15%) = 140 點。
 - 若壓制解除與死亡發生在同一更新，觸發仍取決於事件處理順序；未進行遊戲內邊界測試。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_pinning_dog_elite_damage.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_pinning_dog_elite_damage:node_021a58e4-4b06-40cb-b978-3823adbd5a15`。
-- 格式：image/webp；288×288；5382 bytes。
-- SHA-256：`2018839f4fe22e4479eb2fbf4b40d9138057a75cb6beb3570c04a92a40ffe26f`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932563852)；[公開圖片](https://github.com/user-attachments/assets/4b7cf064-ea83-4334-a484-a222e22af7a3)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/default/adamant_pinning_dog_elite_damage.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932563852)｜[圖片附件](https://github.com/user-attachments/assets/4b7cf064-ea83-4334-a484-a222e22af7a3)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_fanatic_rage`；名稱鍵：`loc_talent_zealot_fanatic_rage`；描述鍵：`loc_talent_zealot_fanatic_rage_crit_desc`。
 - 節點：`node_9e19621f-a49c-46a1-837a-056d1ea935bb`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 - 距離條件依事件位置與玩家位置計算；若事件沒有位置，程式以玩家位置作為事件位置。
 - 衰退間隔公式描述程式排程，實際節奏受伺服器更新步長影響。
 - 暴擊層數要求該核心鑰石授予的 special rule；此處按目前主鑰石定義描述。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone/zealot_fanatic_rage.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_fanatic_rage:node_9e19621f-a49c-46a1-837a-056d1ea935bb`。
-- 格式：image/webp；288×288；4190 bytes。
-- SHA-256：`3fcce1c4f4c09839cf618ed920b4d6ce7da939c2d34f24c65ba60945a4c14f50`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone/zealot_fanatic_rage.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc)
+
+圖片僅供技能辨識，不作機制證據。
+

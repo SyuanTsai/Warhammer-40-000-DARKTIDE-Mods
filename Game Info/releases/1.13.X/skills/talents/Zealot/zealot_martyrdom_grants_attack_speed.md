@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_martyrdom_grants_attack_speed`；名稱鍵：`loc_talent_zealot_attack_speed_per_martyrdom`；描述鍵：`loc_talent_zealot_attack_speed_per_martyrdom_upd_desc`。
 - 節點：`node_9d8273b3-4c5d-4317-b480-54a125376f0d`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -28,7 +28,7 @@
 - **速度算例**：3 層增加 3 × 6% = 18% 近戰攻速，受影響的 1 秒動作變成 1 ÷ 1.18 ≈ 0.847 秒；5 層為 1 ÷ 1.3 ≈ 0.769 秒。其他同階段攻速先相加。
 - 示例未計入其他攻擊速度修正及最終動作速度計算。
 - 失去的傷口格數依當前最大生命與最大傷口數計算；不代表每缺固定百分比血量增加一層。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -37,8 +37,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_martyrdom_grants_attack_speed.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_martyrdom_grants_attack_speed:node_9d8273b3-4c5d-4317-b480-54a125376f0d`。
-- 格式：image/webp；288×288；4302 bytes。
-- SHA-256：`aa330470a5138efb77107910c2dec4547c5efc8bb214d23b0900993956a7823f`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/2a096b34-3273-406a-82fc-23c774fcaedf)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/keystone_modifier/zealot_martyrdom_grants_attack_speed.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/2a096b34-3273-406a-82fc-23c774fcaedf)
+
+圖片僅供技能辨識，不作機制證據。
+

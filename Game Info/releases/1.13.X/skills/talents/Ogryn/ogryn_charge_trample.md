@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_charge_trample`；名稱鍵：`loc_talent_ogryn_ability_charge_trample`；描述鍵：`loc_talent_ogryn_ability_charge_trample_desc`。
 - 節點：`node_b3d3d2eb-a57e-4c0e-bc45-5d0c41b94135`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -27,7 +27,7 @@
 - **傷害算例**：4 次命中提供 10%，基礎 100 點變成 100 × (1 + 4 × 2.5%) = 110 點；滿 20 層為 150 點。若同階段另有 20% 增傷，滿層為 170 點。
 - 疊層由有效衝鋒命中事件觸發；若一次衝鋒對同一敵人產生多個命中事件，程式沒有額外目標去重。
 - 傷害加成套用於基礎傷害；最終傷害仍受武器、護甲與其他傷害修正影響。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -36,8 +36,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/ability_modifier/ogryn_charge_trample.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_charge_trample:node_b3d3d2eb-a57e-4c0e-bc45-5d0c41b94135`。
-- 格式：image/webp；288×288；4804 bytes。
-- SHA-256：`26a3214779a962afb27095afad67b1d8f507114485979342bbc366eab5528977`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/fa5d9c18-f792-4a86-812f-8547ba3cf89e)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/ability_modifier/ogryn_charge_trample.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/fa5d9c18-f792-4a86-812f-8547ba3cf89e)
+
+圖片僅供技能辨識，不作機制證據。
+

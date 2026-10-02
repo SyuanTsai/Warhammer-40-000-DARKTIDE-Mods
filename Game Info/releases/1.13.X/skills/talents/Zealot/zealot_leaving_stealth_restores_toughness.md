@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_leaving_stealth_restores_toughness`；名稱鍵：`loc_talent_zealot_leaving_stealth_restores_toughness`；描述鍵：`loc_talent_zealot_stealth_toughness_dr_desc`。
 - 節點：`node_d4c52149-9efe-492d-947e-f4c9e1b4bef7`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -31,7 +31,7 @@
 - 通用 damage_taken_multiplier 與敵人攻擊傷害、護甲、格擋、韌性轉移等其他階段仍共同結算，不能保證最終受到的每種傷害都恰好少 30%。
 - 離開潛行後的 8 秒計時從該 buff 加入時起算；若效果遭外部移除或被其他能力互動，實際存續會改變。
 - 目前 inventory 文字指明韌性恢復及離開潛行減傷，固定 SHA 的時序一致；版本未核實。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -40,8 +40,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_leaving_stealth_restores_toughness.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_leaving_stealth_restores_toughness:node_d4c52149-9efe-492d-947e-f4c9e1b4bef7`。
-- 格式：image/webp；288×288；5808 bytes。
-- SHA-256：`bf50c51395cdda63404e3ed4abb8e0e4214a8fe13fa97ceddf1953370fad7475`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/d5730c05-1fc1-4fd5-9943-53bf390b9a7d)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_leaving_stealth_restores_toughness.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/d5730c05-1fc1-4fd5-9943-53bf390b9a7d)
+
+圖片僅供技能辨識，不作機制證據。
+

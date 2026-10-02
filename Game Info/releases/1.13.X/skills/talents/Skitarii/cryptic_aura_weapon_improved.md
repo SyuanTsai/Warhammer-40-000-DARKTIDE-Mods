@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_aura_weapon_improved`；名稱鍵：`loc_talent_cryptic_aura_weapon_improved`；描述鍵：`loc_talent_cryptic_aura_weapon_improved_desc`。
 - 節點：`node_9317a30a-682c-4b3f-ac86-83a2bf829f87`；分類：光環；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,17 +33,16 @@
 - 只有自身獲得+25點韌性；順劈和撕裂加成由協同光環提供給施放者本人及其協同鏈內隊友。
 - 15%是順劈最大命中質量加成，並非直接增加15%命中敵人數；實際可命中數還取決於敵人質量與武器攻擊資料。
 - 7.5%撕裂是撕裂乘數加成；不等同於直接增加7.5%最終傷害。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`6d4feb19`。
-- 繁中描述列出自身+25韌性及協同隊友的順劈、撕裂效果。固定來源的協同鏈包含施放者本人，故自身也取得15%順劈最大命中質量與7.5%撕裂；未明寫自身受光環效果屬描述省略。Build 25492122 版本對應由使用者於2026-10-02確認。
+- 繁中描述列出自身+25韌性及協同隊友的順劈、撕裂效果。固定來源的協同鏈包含施放者本人，故自身也取得15%順劈最大命中質量與7.5%撕裂；未明寫自身受光環效果屬描述省略。Build 25492122 版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/aura/cryptic_aura_weapon_improved.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_aura_weapon_improved:node_9317a30a-682c-4b3f-ac86-83a2bf829f87`。
-- 格式：image/webp；288×288；7356 bytes。
-- SHA-256：`fe86abe3c018e1352cdaa844f81821eb09e48b4d6fbaabc70338d86666e9b7f1`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)；[公開圖片](https://github.com/user-attachments/assets/a48f1d74-488a-42d3-a59d-33d55135dad2)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/aura/cryptic_aura_weapon_improved.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)｜[圖片附件](https://github.com/user-attachments/assets/a48f1d74-488a-42d3-a59d-33d55135dad2)
+
+圖片僅供技能辨識，不作機制證據。
+

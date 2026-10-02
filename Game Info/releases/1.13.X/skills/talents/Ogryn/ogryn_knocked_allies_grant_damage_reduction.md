@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_knocked_allies_grant_damage_reduction`；名稱鍵：`loc_talent_ogryn_tanky_with_downed_allies`；描述鍵：`loc_talent_ogryn_tanky_with_downed_allies_desc`。
 - 節點：`node_361c0f03-d3f0-47a9-8669-2f71f6c2b5a1`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,7 +24,7 @@
 ## 算例條件與待確認事項
 
 - **減傷算例**：有 1、2、3 名符合條件的隊友時，這一階段的 100 點傷害分別變成 80、60、40 點；三人合計為 100 × (1 − 3 × 20%) = 40 點。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -33,8 +33,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_knocked_allies_grant_damage_reduction.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_knocked_allies_grant_damage_reduction:node_361c0f03-d3f0-47a9-8669-2f71f6c2b5a1`。
-- 格式：image/webp；288×288；5062 bytes。
-- SHA-256：`1f351d5ebc9907754d09143ab04a9f2da98c9c578864a669fd767da755a63092`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)；[公開圖片](https://github.com/user-attachments/assets/58952102-1822-4093-81f9-48b8cbc8f8a7)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_knocked_allies_grant_damage_reduction.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)｜[圖片附件](https://github.com/user-attachments/assets/58952102-1822-4093-81f9-48b8cbc8f8a7)
+
+圖片僅供技能辨識，不作機制證據。
+

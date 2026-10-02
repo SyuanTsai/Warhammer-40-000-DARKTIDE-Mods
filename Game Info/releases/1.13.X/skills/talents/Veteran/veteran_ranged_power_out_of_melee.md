@@ -6,7 +6,7 @@
 
 - 名稱 key：`loc_talent_veteran_ranged_power_out_of_melee`；描述 key：`loc_talent_veteran_ranged_power_out_of_melee_new_desc`。中文沿用詞表 Kill Zone 譯名，key 對應暫定、待使用者確認。
 - 節點 `node_b0c4f49c-fd47-4b1c-9279-82e12dc3ac7d`，`default`，1 點，上限 1。來源見[節點來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L691-L720)。無 ability 替換、疊層或獨有互斥宣告。
-- 狀態：**完成（核心靜態機制）**。
+- 本文為程式分析，未進行遊戲內驗證。
 
 **原始碼確認 — 條件與持續**：talent 安裝同名 passive Buff；訂閱 `on_player_hit_received`，只在 `attack_type == melee` 且 `attacked_unit` 是自己時，寫入 `last_hit_t=t`。固定更新以 `t > last_hit_t + 8` 決定是否提供 `ranged_damage=0.15`。沒有附近敵人查詢、擊殺、暴擊、協同或距離門檻，也沒有疊層；生效後持續到下一個合格命中令條件失效。這是本人傷害 stat，不直接施加隊友。[talent 與舊顯示資料](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1530-L1560)、[Buff 完整邏輯](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L680-L719)、[8 秒設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/talent/talent_settings_veteran.lua#L191-L193)、[近戰判斷](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/buff/helper_functions/check_proc_functions.lua#L368-L370)。
 
@@ -32,7 +32,7 @@
 
 ## 圖示來源
 
-- 圖示取自 [Games Lantern 編輯器](https://darktide.gameslantern.com/build-editor)的公開資料，取得日期為 2026-10-01；[原始圖片](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_ranged_power_out_of_melee.webp)。
-- 天賦與節點對應：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_ranged_power_out_of_melee:node_b0c4f49c-fd47-4b1c-9279-82e12dc3ac7d`；與[固定版本節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L691-L720)核對。來源原始碼提供圖示路徑，但不含圖片檔。
-- 原始圖片為 288 × 288 WebP，4726 bytes；SHA-256：`52a9ca53b86c95279d44bb47d35df4ea94b268bee43bb59da8129e4e5661bc18`。
-- 圖片保存在 [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6) 的 [GitHub 圖片附件](https://github.com/user-attachments/assets/8cc616f0-d225-4b5f-81a4-8780f478d471)，主頁引用此附件；圖檔不加入 Git 分支。已核對附件的 SHA-256 與檔案大小，均與原圖一致。圖片僅用於視覺呈現，不作技能機制證據。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_ranged_power_out_of_melee.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/6)｜[圖片附件](https://github.com/user-attachments/assets/8cc616f0-d225-4b5f-81a4-8780f478d471)
+
+圖片僅供技能辨識，不作機制證據。
+

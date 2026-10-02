@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_area_buff_drone_improved`；名稱鍵：`loc_talent_ability_area_buff_drone`；描述鍵：`loc_talent_ability_area_buff_drone_new_improved_description`。
 - 節點：`node_ccb98e10-453f-425b-8242-9d264faf7b25`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,7 +33,7 @@
 - 敵方受到傷害倍率 1.15；基準傷害 100×1.15=115，尚未計入其他傷害修正。
 - 韌性逐秒恢復，超過目前缺少量的部分不會形成超額韌性；離開半徑後區域邏輯會移除效果。
 - 本機遊戲 build 與公開來源提交的版本對應尚待核對；數值與行為按固定來源提交說明。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -42,8 +42,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/ability/adamant_area_buff_drone_improved.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_area_buff_drone_improved:node_ccb98e10-453f-425b-8242-9d264faf7b25`。
-- 格式：image/webp；288×288；6202 bytes。
-- SHA-256：`48939486094af72817592055ab9c9652e2715b48372f3e86cdf61e4c6cdfae82`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/ability/adamant_area_buff_drone_improved.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353)
+
+圖片僅供技能辨識，不作機制證據。
+

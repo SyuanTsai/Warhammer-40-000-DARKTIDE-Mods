@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_whistle`；名稱鍵：`loc_talent_ability_detonate`；描述鍵：`loc_talent_ability_detonate_description`。
 - 節點：`node_2d88b9f8-d7dc-402f-8c33-9d836f577ec6`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -37,7 +37,7 @@
 
 - **爆炸算例**：只計中央爆炸的護甲階段，無甲基準為 600 × 1 = 600，防彈護甲為 600 × 0.5 = 300。實際還需計入部位、遮蔽及電擊附帶的承傷效果。距離獒犬 4.5 公尺時，處於電擊範圍，但已超出爆炸傷害範圍。
 - 爆炸算例只示範中央profile的護甲階段，未計部位、遮蔽、電擊附加承傷與其他加成。未把未掛載的targeting模組當成可用操作。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -46,8 +46,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/tactical/adamant_whistle.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_whistle:node_2d88b9f8-d7dc-402f-8c33-9d836f577ec6`。
-- 格式：image/webp；288×288；5368 bytes。
-- SHA-256：`f920e0f0549a73d906498039982cfa78bd3f3ed6a3e4bca54b0c450c9ff583dd`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/aa116dc7-88d2-450b-bcff-c2dc0bb6b4c0)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/tactical/adamant_whistle.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/aa116dc7-88d2-450b-bcff-c2dc0bb6b4c0)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_charge_toughness`；名稱鍵：`loc_talent_adamant_charge_toughness_name`；描述鍵：`loc_talent_adamant_charge_toughness_alt_description`。
 - 節點：`node_b0947b3d-cb39-43c3-8922-1a9c48dfb8d8`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -32,7 +32,7 @@
 - 3 名不同合格目標：韌性 3×20%=60%；耐力 3×15%=45%。5 名以上仍最多恢復 100% 韌性及 75% 耐力。
 - 一次衝鋒中的重複命中同一目標不會再次計數；超過目前缺少的韌性或耐力部分不會形成超額資源。
 - 本機遊戲 build 與公開來源提交的版本對應尚待核對；數值與行為按固定來源提交說明。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -41,8 +41,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/ability_modifier/adamant_charge_toughness.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_charge_toughness:node_b0947b3d-cb39-43c3-8922-1a9c48dfb8d8`。
-- 格式：image/webp；288×288；6802 bytes。
-- SHA-256：`da774ac969daf2944bc1a77aeea206ffbe9712d6061f8aaad95085473169ee05`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/ability_modifier/adamant_charge_toughness.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573)
+
+圖片僅供技能辨識，不作機制證據。
+

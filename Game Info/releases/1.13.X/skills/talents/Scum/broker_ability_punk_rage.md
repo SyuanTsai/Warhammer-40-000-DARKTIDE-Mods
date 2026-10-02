@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_ability_punk_rage`；名稱鍵：`loc_talent_broker_ability_punk_rage`；描述鍵：`loc_talent_broker_ability_punk_rage_desc_3`。
 - 節點：`node_a24b4ec0-aec0-45a1-b746-05dbd671e2e2`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -34,7 +34,7 @@
 - **算例**：只計怒火效果時，來襲 100 點傷害 × 0.75 = 75 點；攻擊速度修正使原本 1 秒的攻擊動作約為 1/1.2=0.83 秒。延長量在啟動後 20 秒為 0.3/2=0.15 秒，40 秒後為 0.3/2²=0.075 秒。
 - +35% 是近戰威力等級修正，不等於 +35% 最終傷害；武器、目標護甲及其他修正會影響最後傷害。
 - 固定版本的狀態 buff 有眩暈與減速免疫，但壓制處理另查 suppression_immune；本 buff 未加入該效果。中英原文一致提及壓制免疫，因此未寫翻譯勘誤。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -43,8 +43,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability/broker_ability_punk_rage.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_ability_punk_rage:node_a24b4ec0-aec0-45a1-b746-05dbd671e2e2`。
-- 格式：image/webp；288×288；5838 bytes。
-- SHA-256：`053f3f8cf809f86ddb8d79fb7ecb1dc6cc1e80b67b52202f251dbe73ab0002fa`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/ae8bc68a-7d1b-4ee7-8691-bed95ed8069d)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability/broker_ability_punk_rage.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/ae8bc68a-7d1b-4ee7-8691-bed95ed8069d)
+
+圖片僅供技能辨識，不作機制證據。
+

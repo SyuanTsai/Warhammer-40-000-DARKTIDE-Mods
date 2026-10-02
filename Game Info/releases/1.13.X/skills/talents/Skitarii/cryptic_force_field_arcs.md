@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_force_field_arcs`；名稱鍵：`loc_talent_cryptic_force_field_arcs`；描述鍵：`loc_talent_cryptic_force_field_arcs_desc`。
 - 節點：`node_a2f854fa-6833-41cb-8022-e5a4617d8646`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -32,17 +32,16 @@
 - 0次吸收會由下限 clamp 成1道，且到期時會執行尋找目標；若前方12公尺內沒有存活且可指定敵人，實際沒有電弧目標。
 - 只計遠程攻擊或被標記為遠程的攻擊，不按攻擊傷害量計數。
 - 額外連鎖受有效目標、連鎖距離與4次跳躍上限影響。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`143e5c50`。
-- 固定原始碼確認按吸收遠程攻擊數以每6次取上限整數後限制1至4道；0次也會由下限算成1道，並在正常到期路徑進入找目標流程。繁中描述未列出整數門檻、最低值及前方12公尺目標條件，屬翻譯省略的實作細節，不列為錯誤。本機 Build 25492122 版本對應由使用者於2026-10-02確認。
+- 固定原始碼確認按吸收遠程攻擊數以每6次取上限整數後限制1至4道；0次也會由下限算成1道，並在正常到期路徑進入找目標流程。繁中描述未列出整數門檻、最低值及前方12公尺目標條件，屬翻譯省略的實作細節，不列為錯誤。本機 Build 25492122 版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_force_field_arcs.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_force_field_arcs:node_a2f854fa-6833-41cb-8022-e5a4617d8646`。
-- 格式：image/webp；288×288；5910 bytes。
-- SHA-256：`97114a13c2b32acbbe0784ebbd457979292d265e77dc7705feba743e1f394a73`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)；[公開圖片](https://github.com/user-attachments/assets/ba6e0fe8-b601-433e-a423-8a6b8ee7b79b)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical_modifier/cryptic_force_field_arcs.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)｜[圖片附件](https://github.com/user-attachments/assets/ba6e0fe8-b601-433e-a423-8a6b8ee7b79b)
+
+圖片僅供技能辨識，不作機制證據。
+

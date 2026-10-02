@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_stealth`；名稱鍵：`loc_ability_zealot_stealth`；描述鍵：`loc_ability_zealot_stealth_rending_description`。
 - 節點：`node_f1b10508-b92d-45c4-8661-941d3eadac13`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,7 +33,7 @@
 - 這些是 stat modifier，不能直接相加成一個總傷害倍率；暴擊、靈巧、背刺、側襲及撕裂在不同結算條件／階段生效。
 - 程式中的 proc filters 表明，特定傷害類型、零傷害結果、他人造成的事件及未允許的 action_name 可能不會使潛行退出；以簡述涵蓋主要行為，避免把所有事件都當成同一觸發。
 - 冷卻恢復可由其他天賦返還或加速；30 秒是未受額外修正的基礎資源成本與自然恢復估算。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -42,8 +42,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability/zealot_stealth.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_stealth:node_f1b10508-b92d-45c4-8661-941d3eadac13`。
-- 格式：image/webp；288×288；5572 bytes。
-- SHA-256：`4bcc14b576201c259c43ee27e4d7bb081577134af3895b5ba003d4b4ecdc1623`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/313c803f-9a12-4470-9660-ce9a8fd308c9)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability/zealot_stealth.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/313c803f-9a12-4470-9660-ce9a8fd308c9)
+
+圖片僅供技能辨識，不作機制證據。
+

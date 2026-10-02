@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_melee_kills_restore_toughness_to_target`；名稱鍵：`loc_talent_zealot_melee_kills_restore_toughness_to_target`；描述鍵：`loc_talent_zealot_melee_kills_restore_toughness_to_target_desc`。
 - 節點：`node_c10e9c6e-1e1c-48db-8e08-f218097bdbdb`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -23,7 +23,7 @@
 ## 算例條件與待確認事項
 
 - **恢復算例**：隊友最大韌性 120、你為 100，隊友補 120 × 7.5% = 9 點，你額外補 100 × 5% = 5 點；雙方各自受恢復加成與韌性缺額限制，原本近戰擊殺恢復另算。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -32,8 +32,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/default/zealot_melee_kills_restore_toughness_to_target.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_melee_kills_restore_toughness_to_target:node_c10e9c6e-1e1c-48db-8e08-f218097bdbdb`。
-- 格式：image/webp；288×288；5692 bytes。
-- SHA-256：`1edb3cf8251f668d3d31270b11c35eca0e829920ca37a45613a3fb30259eee77`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929296872)；[公開圖片](https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/default/zealot_melee_kills_restore_toughness_to_target.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929296872)｜[圖片附件](https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0)
+
+圖片僅供技能辨識，不作機制證據。
+

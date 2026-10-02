@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_keystone_chemical_dependency_sub_2`；名稱鍵：`loc_talent_broker_keystone_chemical_dependency_sub_2`；描述鍵：`loc_talent_broker_keystone_chemical_dependency_sub_2_desc`。
 - 節點：`node_29d36ca3-ef53-4d5b-980d-0d0353cf8541`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,7 +33,7 @@
 - **韌性減傷算例**：原本承受 100 點韌性傷害，3 層時為 100×0.95³=85.74 點；減少約 14.26 點。
 - 回補量受當前韌性缺額與其他韌性回補修正影響；韌性滿時不會超過上限。
 - 0.95³ 是三層此項修正的結果；其他韌性傷害倍率仍會再按遊戲的傷害公式合併，效果只作用於韌性傷害。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -42,8 +42,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_chemical_dependency_sub_2.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_keystone_chemical_dependency_sub_2:node_29d36ca3-ef53-4d5b-980d-0d0353cf8541`。
-- 格式：image/webp；288×288；6074 bytes。
-- SHA-256：`c37c439ea34d3d2138fb8897d3c4a4be95a93bc8466a0645d897343d72862b25`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/6c334888-08bb-4567-a6a2-1c4b4750409b)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_chemical_dependency_sub_2.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/6c334888-08bb-4567-a6a2-1c4b4750409b)
+
+圖片僅供技能辨識，不作機制證據。
+

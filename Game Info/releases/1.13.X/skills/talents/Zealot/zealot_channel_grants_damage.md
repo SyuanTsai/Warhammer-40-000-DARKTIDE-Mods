@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_channel_grants_damage`；名稱鍵：`loc_talent_zealot_zealot_channel_grants_offensive_buff`；描述鍵：`loc_talent_zealot_zealot_channel_offensive_desc`。
 - 節點：`node_518fc5ca-a334-46b2-9177-42cc04f43002`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -31,8 +31,8 @@
 - **傷害算例**：滿層時，基礎 100 點變成 100 × (1 + 5 × 6%) = 130 點；若原本已有同階段 25% 加成，則是 100 × (1 + 25% + 30%) = 155 點。
 - damage 是全域傷害 stat 修正，具體與其他來源的加成、乘數及傷害階段如何合併，需依各武器傷害結算確認。
 - Buff 持續 10 秒並由後續層數刷新；若沒有再次脈衝，最後一次施加後倒數到期。
-- 來源版本與 inventory Build 25492122 版本對應由使用者於2026-10-02確認，因此不將格式值或顯示小數差異當成翻譯錯誤。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 來源版本與 inventory Build 25492122 版本對應為1.13.0，因此不將格式值或顯示小數差異當成翻譯錯誤。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -41,8 +41,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_channel_grants_damage.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_channel_grants_damage:node_518fc5ca-a334-46b2-9177-42cc04f43002`。
-- 格式：image/webp；288×288；5550 bytes。
-- SHA-256：`2c2b4794790c257b5a6823ad1bc440e1fd65f6f84716f67d3aa7cd45ca691b58`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/1abe7e62-3810-4680-9c49-7f6091782ab6)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_channel_grants_damage.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/1abe7e62-3810-4680-9c49-7f6091782ab6)
+
+圖片僅供技能辨識，不作機制證據。
+

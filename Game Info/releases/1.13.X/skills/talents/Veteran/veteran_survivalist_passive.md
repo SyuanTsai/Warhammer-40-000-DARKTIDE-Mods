@@ -30,7 +30,7 @@
 - [scripts/utilities/ammo.lua，第 494–529 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/utilities/ammo.lua#L494-L529)
 - [scripts/extension_systems/buff/buffs/proc_buff.lua，第 150–181 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/extension_systems/buff/buffs/proc_buff.lua#L150-L181)
 
-## 限制與圖示
+## 圖示來源
 
-- 機制為固定版本的靜態核對與公式推導，未進行遊戲內測試；名稱與語系鍵對應待使用者確認。
-- 原始碼只有圖示材質路徑；本次取得的 Games Lantern 編輯器資料沒有這個基礎天賦識別碼，因此不借用其他天賦圖示冒充。77個技能樹節點的圖示另依各自來源文件記錄。
+圖片僅供技能辨識，不作機制證據。
+

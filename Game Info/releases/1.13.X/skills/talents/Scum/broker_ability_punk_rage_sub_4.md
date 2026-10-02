@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_ability_punk_rage_sub_4`；名稱鍵：`loc_talent_broker_ability_punk_rage_sub_4`；描述鍵：`loc_talent_broker_ability_punk_rage_sub_4_desc`。
 - 節點：`node_8efd6143-4d2d-4bd8-a40d-229263fccfd1`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -27,7 +27,7 @@
 - **延長量算例**：特殊敵人命中在啟動後30秒內加1秒；跨過30秒後為1÷2=0.5秒；跨過60秒後為1÷2²=0.25秒。普通敵人則在20秒後按0.3÷2=0.15秒遞減。
 - 30秒遞減門檻只用於帶 elite、special、monster 或 captain 標籤的目標命中，並未改變一般敵人命中的基礎延長。
 - 延長是每次近戰命中增加的持續時間，30秒不是怒火總長度上限。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -36,8 +36,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability_modifier/broker_ability_punk_rage_sub_4.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_ability_punk_rage_sub_4:node_8efd6143-4d2d-4bd8-a40d-229263fccfd1`。
-- 格式：image/webp；288×288；5684 bytes。
-- SHA-256：`9d07bf79c84f40162c80156d2e33429c6a5e29d89a08af201579be65b4fe2f72`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/040166f5-e6b1-4f43-ae17-2c21b8fd8014)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability_modifier/broker_ability_punk_rage_sub_4.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/040166f5-e6b1-4f43-ae17-2c21b8fd8014)
+
+圖片僅供技能辨識，不作機制證據。
+

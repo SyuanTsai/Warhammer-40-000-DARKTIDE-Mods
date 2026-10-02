@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_ranged_improves_melee`；名稱鍵：`loc_talent_ogryn_ranged_improves_melee`；描述鍵：`loc_talent_ogryn_ranged_improves_melee_desc`。
 - 節點：`node_fce211eb-69a1-47f3-a8c4-74589f2d1918`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -23,7 +23,7 @@
 
 ## 算例條件與待確認事項
 
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -32,8 +32,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_ranged_improves_melee.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_ranged_improves_melee:node_fce211eb-69a1-47f3-a8c4-74589f2d1918`。
-- 格式：image/webp；288×288；6920 bytes。
-- SHA-256：`fa558b1b36eeeecd96383f0de83ccf02ffd7130882750bb8432a089b6d161c3b`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)；[公開圖片](https://github.com/user-attachments/assets/eeae1229-b245-43fc-9840-960c36f5787e)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/default/ogryn_ranged_improves_melee.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931394406)｜[圖片附件](https://github.com/user-attachments/assets/eeae1229-b245-43fc-9840-960c36f5787e)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_ranged_stance_toughness_regen`；名稱鍵：`loc_talent_ogryn_special_ammo_toughness`；描述鍵：`loc_talent_ogryn_special_ammo_toughness_on_shot_and_reload_desc`。
 - 節點：`node_3c6f836b-d499-4457-959c-8c519347d3c3`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 - **恢復算例**：最大韌性 100、沒有其他加成，射擊 4 次後換彈一次，恢復 100 × (4 × 2.5% + 15%) = 25 點；只缺 10 點就只能補 10 點。
 - 射擊回復來自射擊與發射事件；不同武器可能送出不同事件，實際回復次數依武器事件流程而定。
 - 韌性已滿時，回復只會補到上限，不會累積溢出。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/ability_modifier/ogryn_ranged_stance_toughness_regen.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_ranged_stance_toughness_regen:node_3c6f836b-d499-4457-959c-8c519347d3c3`。
-- 格式：image/webp；288×288；5706 bytes。
-- SHA-256：`15560bdfd30991666e3d9e10384906165ee5af4cf63d3f6914703dc49845f6dc`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/53442500-ad2a-446b-9f9b-0d26aa2438d9)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/ability_modifier/ogryn_ranged_stance_toughness_regen.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/53442500-ad2a-446b-9f9b-0d26aa2438d9)
+
+圖片僅供技能辨識，不作機制證據。
+

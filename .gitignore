@@ -7,6 +7,13 @@ AI Auto Update/
 AGENTS.md
 .github/AI-Rules
 .github/copilot-instructions.md
-/Game Info/Extracted Text/
+
+# 完整遊戲文本與封存包：依版本保存，整個 SteamBuild 批次不納入 Git
 /Game Info/releases/*/source/SteamBuild_*/
-/Game Info/tools/vendor/limn/limn.exe
+
+# 本機維護紀錄、快照及復原暫存
+/AI-LOGS/Game Info/local/
+
+# 本機工具執行檔與 Python 快取
+/scripts/game-info/vendor/limn/limn.exe
+/scripts/game-info/**/__pycache__/

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_keystone_adrenaline_junkie_sub_5`；名稱鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_5`；描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_5_desc`。
 - 節點：`node_084b7585-f08d-497a-939b-848ffcb58960`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -29,7 +29,7 @@
 - **恢復算例**：最大韌性 100 且至少缺 5 點、沒有其他韌性恢復修正時，一次 tick 為 100 × 0.05 = 5 點；若只缺 3 點，實際最多補 3 點。
 - 每秒 5% 按最大韌性計算，不是按缺失韌性計算；實際補量會受其他恢復修正影響，且不會超過最大韌性。
 - 此升級只在 Frenzy buff 活躍時恢復韌性；Frenzy 持續多久仍由核心或延長狂暴升級決定。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -38,8 +38,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_adrenaline_junkie_sub_5.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_keystone_adrenaline_junkie_sub_5:node_084b7585-f08d-497a-939b-848ffcb58960`。
-- 格式：image/webp；288×288；6066 bytes。
-- SHA-256：`8fbbdd29a8aee25b6ea2a60eb4bb9f0b215eed472307ac434688d5366f7defd8`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_adrenaline_junkie_sub_5.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/49a6640b-2259-4b1b-9fd1-634da02747ce)
+
+圖片僅供技能辨識，不作機制證據。
+

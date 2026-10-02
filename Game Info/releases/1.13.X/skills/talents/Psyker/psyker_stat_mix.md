@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_stat_mix`；名稱鍵：`loc_talent_psyker_stat_mix`；描述鍵：`loc_talent_psyker_stat_mix_desc`。
 - 節點：`node_61959df9-adf1-45a9-9e2f-4d9e3c7f8e00`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -25,7 +25,7 @@
 
 - **恢復算例**：沒有其他加成時，原本恢復 10 點韌性變成 10 × 1.25 = 12.5 點；原有 20% 同類恢復加成時，10 × (1 + 20% + 25%) = 14.5 點。
 - **自然消退算例**：在同一適用反噬區段，原本每秒下降 5 個百分點，變成 5 × 0.2 = 1 個百分點；其他條件不變，同一段反噬消退約需 5 倍時間。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -34,8 +34,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/default/psyker_stat_mix.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_stat_mix:node_61959df9-adf1-45a9-9e2f-4d9e3c7f8e00`。
-- 格式：image/webp；288×288；4226 bytes。
-- SHA-256：`6faef2225e02efca353c6798c20d314b7e25d2669785c7099bc2454186b20fdb`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928034845)；[公開圖片](https://github.com/user-attachments/assets/57acd7a3-65a7-460c-876c-3153b63d69a3)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/default/psyker_stat_mix.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928034845)｜[圖片附件](https://github.com/user-attachments/assets/57acd7a3-65a7-460c-876c-3153b63d69a3)
+
+圖片僅供技能辨識，不作機制證據。
+

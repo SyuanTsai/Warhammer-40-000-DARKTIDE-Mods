@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_combat_ability_stance`；名稱鍵：`loc_talent_psyker_combat_ability_overcharge_stance`；描述鍵：`loc_talent_psyker_combat_ability_overcharge_stance_improved_description`。
 - 節點：`node_2a022d3f-fddf-4faf-a79d-c8fe6a18fe36`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -37,8 +37,8 @@
 - **恢復與爆擊算例**：最大韌性 100 時，每秒恢復 100 × 2.5% = 2.5 點，以缺少的韌性為上限；原有 5% 爆擊率變成 5% + 20% = 25%。
 - 實際注視長短由反噬累積、武器動作、擊殺及其他修正共同決定；30層上限不保證能達成。
 - 弱點傷害欄只在弱點命中參與；完整攻擊結果要按武器、敵人和攻擊類型計算，這裡分開示範各項加成。
-- 遊戲文本Build25492122與公開source commit版本對應由使用者於2026-10-02確認；公開程式碼中的註解固定8秒與執行時100%反噬結束條件不同，採執行邏輯並待同版確認。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲文本Build25492122與公開source commit版本對應為1.13.0；公開程式碼中的註解固定8秒與執行時100%反噬結束條件不同，採執行邏輯並待同版確認。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -47,8 +47,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability/psyker_combat_ability_stance.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_combat_ability_stance:node_2a022d3f-fddf-4faf-a79d-c8fe6a18fe36`。
-- 格式：image/webp；288×288；5166 bytes。
-- SHA-256：`b482c03706eccc8034d6ba288755a33b276ee31a56b1d29d96e4c35437701bdd`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability/psyker_combat_ability_stance.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a)
+
+圖片僅供技能辨識，不作機制證據。
+

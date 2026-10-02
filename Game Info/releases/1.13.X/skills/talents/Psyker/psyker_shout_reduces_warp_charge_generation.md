@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_shout_reduces_warp_charge_generation`；名稱鍵：`loc_talent_psyker_shout_reduces_warp_charge_generation`；描述鍵：`loc_talent_psyker_shout_reduces_warp_charge_generation_description`。
 - 節點：`node_b6b57be7-9aa8-483b-a127-6c1815d452a4`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -31,17 +31,16 @@
 - 尖嘯命中數取決於動作的目標篩選，且受25層上限限制；未核實同一目標在某些特殊碰撞下的重複計數。
 - buff 還有0.98的 tier override；若客戶端 Build25492122 使用不同 tier/配置，數值算例不能直接套用，須同版核對。
 - 反噬生成 stat 與反噬平息不是同一效果；本天賦不直接減少已累積反噬。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`57df8e08`。
-- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應由使用者於2026-10-02確認。
+- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_shout_reduces_warp_charge_generation.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_shout_reduces_warp_charge_generation:node_b6b57be7-9aa8-483b-a127-6c1815d452a4`。
-- 格式：image/webp；288×288；5666 bytes。
-- SHA-256：`ba5b68f00914780591baa7f0f1445027c81343a9d76fcabbf1a102a819064db1`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/b89da8f0-2d3d-4a87-bc92-43e2438e28c8)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_shout_reduces_warp_charge_generation.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/b89da8f0-2d3d-4a87-bc92-43e2438e28c8)
+
+圖片僅供技能辨識，不作機制證據。
+

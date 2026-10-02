@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_servo_skull_improved`；名稱鍵：`loc_talent_cryptic_servo_skull_improved`；描述鍵：`loc_talent_cryptic_servo_skull_improved_clarified_desc`。
 - 節點：`node_15960c27-305b-4ad6-8cb9-1ceec79789b9`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -33,17 +33,16 @@
 - 命令射擊需要頭骨存活、目標存活且頭骨處於可下令狀態；未被激怒的巫妖宿主不接受此攻擊命令。
 - 額外15%傷害承受效果只由伺服頭骨命中觸發，持續5秒，單一目標最多一層並在命中時刷新。
 - 技能值0.5是射擊冷卻乘數，故冷卻減半；不等同傷害增加。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`4bb85179`。
-- 繁中描述已說明常駐頭骨、雙擊標記下令、攻擊與資料詢問，以及基礎閃擊加成常駐。程式核查補出25%傷害、0.5射擊冷卻倍率、命中後15%傷害承受增幅與燃燒上限等數值；屬說明未列出的實作細節，不判為錯譯。Build 25492122 版本對應由使用者於2026-10-02確認。
+- 繁中描述已說明常駐頭骨、雙擊標記下令、攻擊與資料詢問，以及基礎閃擊加成常駐。程式核查補出25%傷害、0.5射擊冷卻倍率、命中後15%傷害承受增幅與燃燒上限等數值；屬說明未列出的實作細節，不判為錯譯。Build 25492122 版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical/cryptic_servo_skull_improved.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_servo_skull_improved:node_15960c27-305b-4ad6-8cb9-1ceec79789b9`。
-- 格式：image/webp；288×288；5204 bytes。
-- SHA-256：`bbb64aa3bfd689b7eb5265972b0ff2195425ab0e827483ba74ce1b990b429b10`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)；[公開圖片](https://github.com/user-attachments/assets/0efafa0a-aad0-4bb8-869f-133db37cf152)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/tactical/cryptic_servo_skull_improved.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)｜[圖片附件](https://github.com/user-attachments/assets/0efafa0a-aad0-4bb8-869f-133db37cf152)
+
+圖片僅供技能辨識，不作機制證據。
+

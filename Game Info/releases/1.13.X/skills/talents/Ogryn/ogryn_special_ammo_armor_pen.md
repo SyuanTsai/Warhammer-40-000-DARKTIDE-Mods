@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`ogryn_special_ammo_armor_pen`；名稱鍵：`loc_talent_ogryn_special_ammo_armor_pen`；描述鍵：`loc_talent_ogryn_special_ammo_armor_pen_new_desc`。
 - 節點：`node_d2b60f6e-1db0-4ccd-b239-75926acb7839`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -37,7 +37,7 @@
 - **傷害算例**：假設基礎傷害 100、對甲殼護甲原倍率 0.5，且忽略其他修正，原本為 50 點；同時計入本天賦的增傷與撕裂後，100 × 1.15 × (0.5 + 0.15) = 74.75 點。
 - 算例假設目標為裝甲類型、基礎護甲倍率0.5，且沒有其他撕裂、暴擊、弱點或傷害修正；不同武器的護甲倍率與其他屬性會改變結果。
 - 15%撕裂是撕裂計算的加成，不等於對所有護甲固定增加15%最終生命傷害。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -46,8 +46,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/ability_modifier/ogryn_special_ammo_armor_pen.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`98f706b3-b156-4966-9174-fb9938458ce2:default:ogryn_special_ammo_armor_pen:node_d2b60f6e-1db0-4ccd-b239-75926acb7839`。
-- 格式：image/webp；288×288；4484 bytes。
-- SHA-256：`039c2d77cc6bc6bcc974b8017074b7af14c7e2819b03ce5bea5a4347e9214e8c`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)；[公開圖片](https://github.com/user-attachments/assets/708231ab-86cd-44b4-8f01-0d0fe8413ede)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/ogryn/ability_modifier/ogryn_special_ammo_armor_pen.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/10#issuecomment-5931383354)｜[圖片附件](https://github.com/user-attachments/assets/708231ab-86cd-44b4-8f01-0d0fe8413ede)
+
+圖片僅供技能辨識，不作機制證據。
+

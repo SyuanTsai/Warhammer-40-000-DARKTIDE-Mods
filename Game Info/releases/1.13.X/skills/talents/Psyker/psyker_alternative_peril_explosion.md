@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_alternative_peril_explosion`；名稱鍵：`loc_talent_psyker_alternative_peril_explosion`；描述鍵：`loc_talent_psyker_alternative_peril_explosion_new_desc`。
 - 節點：`node_25ffe424-4f39-4206-8304-66333fe44fa5`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -26,7 +26,7 @@
 - **傷害與範圍算例**：只比較這兩項修正，原本 100 點爆炸傷害變成 100 × 2 = 200 點；原爆炸半徑 10 公尺變成 10 × 1.25 = 12.5 公尺。實際傷害仍受距離衰減與敵人護甲影響。
 - 源碼延遲判斷寫成t <= damage_t（不是>=）；是否會因更新幀延遲而漏結算及連續爆炸殘留旗標，未遊戲實測。
 - 傷痕移除對當前生命上限與治療站恢復的完整互動，不從天賦敘述推定。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -35,8 +35,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/default/psyker_alternative_peril_explosion.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_alternative_peril_explosion:node_25ffe424-4f39-4206-8304-66333fe44fa5`。
-- 格式：image/webp；288×288；6326 bytes。
-- SHA-256：`d92b3be567e12921750170ce8b24feed108546ade625301156e1fb7ceef4e291`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928034845)；[公開圖片](https://github.com/user-attachments/assets/6b51b11f-eed5-45f3-b539-6b4502778099)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/default/psyker_alternative_peril_explosion.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928034845)｜[圖片附件](https://github.com/user-attachments/assets/6b51b11f-eed5-45f3-b539-6b4502778099)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -1,0 +1,22 @@
+{
+  "archive": "SteamBuild_25492122_1.13.0.zip",
+  "format": "privacy-cleaned-compact-complete-raw-and-offline-restoration",
+  "size": 56099536,
+  "sha256": "08e2292a278f69480495b628db2def05e01c5398ca02397742e4fe3f6a5f63a1",
+  "files": 23,
+  "all_entry_sha256_match": true,
+  "contains_complete_raw_text": true,
+  "raw_resources": 4,
+  "text_records": 2222587,
+  "restoration_core_sha256_unchanged": true,
+  "privacy_cleaned_on": "2026-10-02",
+  "cloud_replacement_required": false,
+  "prior_cloud_archive_size": 56329722,
+  "prior_cloud_archive_sha256": "c28570c843df057576d287bc493a34197435d868d86fb37907a4966fe16a2655",
+  "cloud_metadata_check": {
+    "filename_and_size_match": true,
+    "size": 56099536,
+    "modified_time_utc": "2026-10-02T02:57:20.719Z",
+    "content_sha256_verified": false
+  }
+}

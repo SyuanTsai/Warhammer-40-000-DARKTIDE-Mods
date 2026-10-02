@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_cleave_and_impact`；名稱鍵：`loc_talent_cryptic_cleave_and_impact`；描述鍵：`loc_talent_cryptic_melee_cleave_and_impact_desc`。
 - 節點：`node_ec45bdd9-6470-4bfb-85de-26897fdaac5c`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -24,7 +24,7 @@
 ## 算例條件與待確認事項
 
 - **邊界算例**：最大韌性 100，51 點享有順劈，50 點或49 點享有衝擊。順劈基準 10 → 10 × 1.30 = 13；衝擊基準 100 → 130。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -33,8 +33,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/default/cryptic_cleave_and_impact.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_cleave_and_impact:node_ec45bdd9-6470-4bfb-85de-26897fdaac5c`。
-- 格式：image/webp；288×288；6594 bytes。
-- SHA-256：`b425f3a291fe4df38caf1894b42daecb952d83f34e934cfece37e7a22ee340e1`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935653628)；[公開圖片](https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/default/cryptic_cleave_and_impact.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935653628)｜[圖片附件](https://github.com/user-attachments/assets/ed3453a6-4290-4ca6-a37e-0d19046b048e)
+
+圖片僅供技能辨識，不作機制證據。
+

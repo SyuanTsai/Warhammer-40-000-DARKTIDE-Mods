@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_sphere_shield`；名稱鍵：`loc_talent_psyker_force_field_dome`；描述鍵：`loc_talent_psyker_force_field_dome_increased_cd_desc`。
 - 節點：`node_b965d30f-4412-43e5-856a-c571751925a7`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -29,17 +29,16 @@
 - 半徑以程式常數計算，碰撞判定會加上玩家單位半徑；6公尺不是所有角色外緣的精確邊界。
 - 形狀/阻擋規則按遊戲中屏障碰撞運作；此草稿不推論對每種敵方攻擊或地形的結果。
 - 本機game build與source commit未證實同版。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`0b13a4ee`。
-- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應由使用者於2026-10-02確認。
+- 同一描述鍵的繁中與英文效果方向一致；未說明的公式、時序與額外條件屬描述不完整，不列為誤譯。與公開來源版本對應為1.13.0。
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_sphere_shield.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_sphere_shield:node_b965d30f-4412-43e5-856a-c571751925a7`。
-- 格式：image/webp；288×288；4608 bytes。
-- SHA-256：`cef58cd46da7333154eab17ee6800b006fbe2f9add485e170a4a27cfc7d3298a`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/60e6d4b2-0696-4215-8afd-8c9725d4801f)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/ability_modifier/psyker_sphere_shield.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/60e6d4b2-0696-4215-8afd-8c9725d4801f)
+
+圖片僅供技能辨識，不作機制證據。
+

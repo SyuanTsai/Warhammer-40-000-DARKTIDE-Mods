@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_ability_stimm_field_sub_1`；名稱鍵：`loc_talent_broker_ability_stimm_field_sub_1`；描述鍵：`loc_talent_broker_ability_stimm_field_sub_1_desc`。
 - 節點：`node_9abd28ea-b786-4e90-a185-4afabef584ec`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -31,7 +31,7 @@
 - **冷卻算例**：基本場域5秒結束後恢復60秒自然充能，總計約5+60=65秒。隊友的場域效果可以再留15秒，但這不會延後場域冷卻。
 - 15秒延續是離場或場域結束後身上效果的剩餘時間，不表示部署物本身再存在15秒。
 - 冷卻以場域 job 結束作為恢復自然充能條件，沒有把效果延續時間加進暫停時長。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -40,8 +40,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability_modifier/broker_ability_stimm_field_sub_1.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_ability_stimm_field_sub_1:node_9abd28ea-b786-4e90-a185-4afabef584ec`。
-- 格式：image/webp；288×288；4768 bytes。
-- SHA-256：`80c76789af7c86d6f9a25b81c288bac9ea48feb710a22189ec6fc2c9d35505ab`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/4ea2874c-338f-42ec-95cb-9f4c08e64794)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability_modifier/broker_ability_stimm_field_sub_1.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/4ea2874c-338f-42ec-95cb-9f4c08e64794)
+
+圖片僅供技能辨識，不作機制證據。
+

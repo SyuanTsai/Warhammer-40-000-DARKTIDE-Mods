@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_guaranteed_crit_on_multiple_weakspot_hits`；名稱鍵：`loc_talent_psyker_weakspot_grants_crit`；描述鍵：`loc_talent_psyker_weakspot_grants_crit_once_description`。
 - 節點：`node_9674b583-7566-4f0c-a334-99e83f4715b2`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -21,7 +21,7 @@
 
 - **算例**：從 0 層開始，五次各自有效的弱點命中為 1 → 2 → 3 → 4 → 5 層；之後觸發的遠程爆擊消耗這組效果。爆擊傷害仍依武器、部位與目標計算，不是固定雙倍。
 - 連發武器是否保留同次爆擊序列依各武器共用爆擊設定，不把一次消耗等同只一顆子彈。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -30,8 +30,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/default/psyker_guaranteed_crit_on_multiple_weakspot_hits.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_guaranteed_crit_on_multiple_weakspot_hits:node_9674b583-7566-4f0c-a334-99e83f4715b2`。
-- 格式：image/webp；288×288；4712 bytes。
-- SHA-256：`c4000c8a4b9e3f14ecf180685aee68d46d6efc0f9d460c72f106df96211f71ce`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928034845)；[公開圖片](https://github.com/user-attachments/assets/4b242d12-87d5-44a8-a2aa-4c1a0f3a2376)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/default/psyker_guaranteed_crit_on_multiple_weakspot_hits.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928034845)｜[圖片附件](https://github.com/user-attachments/assets/4b242d12-87d5-44a8-a2aa-4c1a0f3a2376)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_disable_companion`；名稱鍵：`loc_talent_adamant_disable_companion`；描述鍵：`loc_talent_adamant_disable_companion_replenish_split_desc`。
 - 節點：`node_75d31c92-2869-4bbb-8f63-f0f7b9e15bdf`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -34,7 +34,7 @@
 - 缺少 2 顆手榴彈時，第一顆在 45 秒補回，第二顆再按下一輪 45 秒計時；震撼地雷套用 90 秒間隔。
 - 機制來源固定為公開 Aussiemon/Darktide-Source-Code SHA 419fe18d414a618ce0474bd015bab470afb446d6；inventory 的繁中與英文文字未證實與此程式碼同版。程式實作和文字措辭如有差異，先列跨版本待核，不直接判為翻譯錯誤。
 - talent settings 的 60 秒 blitz_replenish_time 在此模板沒有消費點，可能是未使用欄位或跨版本殘留；保留待核。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -43,8 +43,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/keystone/adamant_disable_companion.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_disable_companion:node_75d31c92-2869-4bbb-8f63-f0f7b9e15bdf`。
-- 格式：image/webp；288×288；5156 bytes。
-- SHA-256：`efaf2f22e2876c125c5d80ad546344ce16ed988b110907b7064743e110b639ba`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/keystone/adamant_disable_companion.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8)
+
+圖片僅供技能辨識，不作機制證據。
+

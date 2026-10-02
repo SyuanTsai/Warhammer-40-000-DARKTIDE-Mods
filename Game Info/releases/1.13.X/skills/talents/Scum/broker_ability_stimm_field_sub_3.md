@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_ability_stimm_field_sub_3`；名稱鍵：`loc_talent_broker_ability_stimm_field_sub_3`；描述鍵：`loc_talent_broker_ability_stimm_field_sub_3_desc`。
 - 節點：`node_c7a8a5c5-60d1-4c71-bc38-79121befb0c8`；分類：能力；配點成本：1 點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -29,7 +29,7 @@
 - **充能算例**：一次觸發把一個缺少的能力充能成本比例補回；60秒冷卻期間即使只剩部分未充滿，也會補至單次充能上限。
 - 常駐效果以0.5秒間隔檢查新狀態；已持有興奮劑時不會因首次讀取而立即觸發。
 - 能力最多1次充能，無法將多次觸發累積成超過上限的充能。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -38,8 +38,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability_modifier/broker_ability_stimm_field_sub_3.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_ability_stimm_field_sub_3:node_c7a8a5c5-60d1-4c71-bc38-79121befb0c8`。
-- 格式：image/webp；288×288；5654 bytes。
-- SHA-256：`67f491ee2236f4e5cd2f1aae9b4a45feae095651d015dc01e624712951c06395`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/ability_modifier/broker_ability_stimm_field_sub_3.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/c0ce43c8-1324-4c26-8319-c1f12c28fbb3)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_passive_longer_dodges`；名稱鍵：`loc_talent_broker_passive_longer_dodges`；描述鍵：`loc_talent_broker_passive_longer_dodges_desc`。
 - 節點：`node_f6f53560-cd00-4602-9903-4961484ade18`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -29,7 +29,7 @@
 - **距離算例**：2.5 m × (1 + 0.50) = 3.75 m；若同時有連續閃避衰減 0.8，則 2.5 × 1.5 × 0.8 = 3.0 m。
 - 3.75 m 是使用 Broker 基礎距離且沒有武器覆寫、連續閃避衰減或黏著修正的算例；實戰最終距離還會乘上這些因子。
 - 此天賦增加距離倍率，不增加閃避速度倍率、可連續閃避次數或判定時間。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -38,8 +38,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_passive_longer_dodges.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_passive_longer_dodges:node_f6f53560-cd00-4602-9903-4961484ade18`。
-- 格式：image/webp；288×288；4226 bytes。
-- SHA-256：`8d40c2fac5692fb0436caf87652fa6c4dedacdb87c9913a29fcd8988a869e9da`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/8f760271-d6e2-4a80-88ef-01c7007941dc)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_passive_longer_dodges.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/8f760271-d6e2-4a80-88ef-01c7007941dc)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_stimm_activation_talent`；名稱鍵：`loc_talent_broker_stimm_activation_talent`；描述鍵：`loc_talent_broker_stimm_activation_talent_desc`。
 - 節點：`node_5c2139f8-0686-42f5-97fe-9b65e547e649`；分類：興奮劑配方；配點成本：0 點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -32,7 +32,7 @@
 - P=15：ceil(15+60×14/29)=44秒。P=30：75秒；包含基本15秒藥效後為90秒。
 - 15秒藥效為直接注射的基本時間；化學性依賴場域由其外部控制的持續／延續時間決定。
 - 起始節點不是另一個可升級配方，不計入29個配方節點。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -41,8 +41,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/start/broker_stimm_activation_talent.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:broker_stimm_tree:broker_stimm_activation_talent:node_5c2139f8-0686-42f5-97fe-9b65e547e649`。
-- 格式：image/webp；288×288；6130 bytes。
-- SHA-256：`5653b7a541bd890d08052aad75c76cd40e97edf1a28429eb9371b7ef58cc8924`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5934604124)；[公開圖片](https://github.com/user-attachments/assets/51c007e0-bed4-4759-a369-04ab37032369)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/start/broker_stimm_activation_talent.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5934604124)｜[圖片附件](https://github.com/user-attachments/assets/51c007e0-bed4-4759-a369-04ab37032369)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_keystone_vultures_mark_dodge_on_ranged_crit`；名稱鍵：`loc_talent_broker_keystone_vultures_mark_dodge_on_ranged_crit`；描述鍵：`loc_talent_broker_keystone_vultures_mark_dodge_on_ranged_crit_desc`。
 - 節點：`node_7c3d0b39-9457-4c3e-a4f6-3334c6d07b96`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 - **判定算例**：buff 活躍時，Dodge.is_dodging 對 melee、incapacitating_grab 與 ranged 類型會由對應 keyword 回傳為閃避。
 - 實際攻擊是否被閃避，取決於該攻擊是否呼叫並採用 Dodge.is_dodging 判定；此 buff 本身不改變攻擊傷害或移動狀態。
 - 此 buff 沒有 count_as_dodge_vs_all；它只命中 Dodge.is_dodging 的 melee、incapacitating_grab（使用 melee 規則）及 ranged 分支，其他攻擊類型若不採這些分支不會因此算作閃避。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_vultures_mark_dodge_on_ranged_crit.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_keystone_vultures_mark_dodge_on_ranged_crit:node_7c3d0b39-9457-4c3e-a4f6-3334c6d07b96`。
-- 格式：image/webp；288×288；6014 bytes。
-- SHA-256：`ab0eddd58ef696002a38cccaa5ae8aaf6ee996c8094072d4909a1daddd7a7d74`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/00fcee1e-616c-4283-ade2-f67fc6657a7e)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_vultures_mark_dodge_on_ranged_crit.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/00fcee1e-616c-4283-ade2-f67fc6657a7e)
+
+圖片僅供技能辨識，不作機制證據。
+

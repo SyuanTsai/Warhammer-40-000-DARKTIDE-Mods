@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_keystone_adrenaline_junkie_sub_3`；名稱鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_3`；描述鍵：`loc_talent_broker_keystone_adrenaline_junkie_sub_3_desc`。
 - 節點：`node_4943dd3d-899a-44ad-a876-da513a6f3b01`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -28,7 +28,7 @@
 - **時間算例**：10 秒基礎狂暴加上升級差額 (20−10) 秒，得到 20 秒；在第 18 秒重新觸發時，計時重設，狂暴再持續 20 秒。
 - 此升級只改狂暴 buff 時長；觸發頻率仍取決於取得 30 層腎上腺素的速度。
 - 實際增益仍受其他同時生效的攻速及傷害修正影響。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -37,8 +37,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_adrenaline_junkie_sub_3.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_keystone_adrenaline_junkie_sub_3:node_4943dd3d-899a-44ad-a876-da513a6f3b01`。
-- 格式：image/webp；288×288；5102 bytes。
-- SHA-256：`9d84c57331efd7afed590d126bfb24a9146e7292aa171bdcb7f0d9656dbcb01d`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/keystone_modifier/broker_keystone_adrenaline_junkie_sub_3.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/72d38f70-b406-41ca-a04b-2bcdadfec50c)
+
+圖片僅供技能辨識，不作機制證據。
+

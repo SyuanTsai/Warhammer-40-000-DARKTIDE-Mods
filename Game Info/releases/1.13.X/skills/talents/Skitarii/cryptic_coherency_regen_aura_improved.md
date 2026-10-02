@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_coherency_regen_aura_improved`；名稱鍵：`loc_talent_cryptic_coherency_regen_aura`；描述鍵：`loc_talent_cryptic_coherency_regen_aura_improved_desc`。
 - 節點：`node_e9138b1a-56be-4048-bdfa-e8c1e7ede57d`；分類：光環；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 - 50%是一般協同韌性恢復速率的最低倍率，不是每秒恢復最大韌性的50%，也不是一次回復50點。
 - 每位接收者仍受其自身武器、移動、其他恢復修正、恢復延遲與韌性上限影響。
 - 個人+25點韌性是施放者的被動加成；協同恢復光環則作用於自身與協同鏈內隊友。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/aura/cryptic_coherency_regen_aura_improved.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_coherency_regen_aura_improved:node_e9138b1a-56be-4048-bdfa-e8c1e7ede57d`。
-- 格式：image/webp；288×288；6176 bytes。
-- SHA-256：`89664b60bb29691200cbd5f62fd50d98d7beb57a126aacaf5dd05a2bd5ec69dd`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)；[公開圖片](https://github.com/user-attachments/assets/7090c8fb-aaaa-4015-a5c1-21e7093507be)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/aura/cryptic_coherency_regen_aura_improved.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935585681)｜[圖片附件](https://github.com/user-attachments/assets/7090c8fb-aaaa-4015-a5c1-21e7093507be)
+
+圖片僅供技能辨識，不作機制證據。
+

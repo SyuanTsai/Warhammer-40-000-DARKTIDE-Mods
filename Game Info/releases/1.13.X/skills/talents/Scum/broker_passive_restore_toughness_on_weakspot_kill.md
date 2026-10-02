@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_passive_restore_toughness_on_weakspot_kill`；名稱鍵：`loc_talent_broker_passive_restore_toughness_on_weakspot_kill`；描述鍵：`loc_talent_broker_passive_restore_toughness_on_weakspot_kill_desc`。
 - 節點：`node_46a6b70d-17b4-4088-af93-c3af18887046`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -26,7 +26,7 @@
 
 - **恢復算例**：最大韌性 100，依序命中一般目標及弱點，會先恢復 4 點、再恢復 8 點，合計 12 點；若同次還有爆擊弱點命中，則可再恢復 12 點。每次仍以缺額為限，例如只缺 5 點時最多補 5 點。
 - 多目標例子假設target_index依序增加且命中資料符合列出的部位／爆擊條件；順劈結算與事件排序未做遊戲內測試。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -35,8 +35,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_restore_toughness_on_weakspot_kill.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_passive_restore_toughness_on_weakspot_kill:node_46a6b70d-17b4-4088-af93-c3af18887046`。
-- 格式：image/webp；288×288；5208 bytes。
-- SHA-256：`c0d35b6dfbc8f253ccfce07f96624ffb7d5459f6ba7065c3f5e52bde3989caad`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)；[公開圖片](https://github.com/user-attachments/assets/596d2151-a0bd-4b71-9305-805caed18fcc)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_restore_toughness_on_weakspot_kill.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933978534)｜[圖片附件](https://github.com/user-attachments/assets/596d2151-a0bd-4b71-9305-805caed18fcc)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_redline_strength`；名稱鍵：`loc_talent_cryptic_power_generation_toughness`；描述鍵：`loc_talent_cryptic_redline_strength_clarified_desc`。
 - 節點：`node_3257b11f-d4b3-4657-9a70-e6ca255c1a73`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -32,7 +32,7 @@
 - 以戰鬥技能使用前仍持有的充能數決定加層數；不是依本次技能消耗的充能數計算。
 - 威力等級不是最終傷害百分比；最終傷害會依攻擊種類、傷害設定、護甲及其他修正計算。
 - 以上為固定版程式碼的靜態推演，未在遊戲內實測。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -41,8 +41,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_redline_strength.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_redline_strength:node_3257b11f-d4b3-4657-9a70-e6ca255c1a73`。
-- 格式：image/webp；288×288；3916 bytes。
-- SHA-256：`f5c1c20b9a2690fbef3c361680eaca3014af6f1a4c18dbba9f898f35537e4efd`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528)；[公開圖片](https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_redline_strength.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528)｜[圖片附件](https://github.com/user-attachments/assets/0fead35c-7d81-43dc-be42-f88f95123f84)
+
+圖片僅供技能辨識，不作機制證據。
+

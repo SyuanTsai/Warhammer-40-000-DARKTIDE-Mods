@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`adamant_shock_mine`；名稱鍵：`loc_talent_ability_shock_mine`；描述鍵：`loc_talent_ability_shock_mine_description`。
 - 節點：`node_ff1dbe2a-92b6-46f8-9c71-dc777431a537`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -34,7 +34,7 @@
 - **傷害算例**：電擊每 0.3～0.8 秒隨機結算一次。單計護甲、無其他修正時，無甲基準為 8 × 0.5 = 4 點，防彈與硬殼護甲基準為 8 × 1 = 8 點；跳數不固定，不能直接乘固定次數當總傷害。
 - 原文未列地雷的逐跳傷害；本分析不以電擊持續時間乘上固定跳數推算總傷害。
 - 部署設定的 life_time=150 與投射物 fuse_time=15 屬不同層級計時欄位；未把它們混成相同的可視持續時間。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -43,8 +43,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/tactical/adamant_shock_mine.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`9efa67f3-972c-4f23-8792-234de6ef41ba:default:adamant_shock_mine:node_ff1dbe2a-92b6-46f8-9c71-dc777431a537`。
-- 格式：image/webp；288×288；4220 bytes。
-- SHA-256：`c95647a9e762cc40bcb0a98b660cc8d023bd1fa4f488efaadd233f42626a7c2a`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)；[公開圖片](https://github.com/user-attachments/assets/db0783ea-1312-4fed-a430-c1be9a87d2e1)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/adamant/tactical/adamant_shock_mine.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/11#issuecomment-5932554216)｜[圖片附件](https://github.com/user-attachments/assets/db0783ea-1312-4fed-a430-c1be9a87d2e1)
+
+圖片僅供技能辨識，不作機制證據。
+

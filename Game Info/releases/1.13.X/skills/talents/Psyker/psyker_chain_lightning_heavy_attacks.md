@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_chain_lightning_heavy_attacks`；名稱鍵：`loc_talent_psyker_chain_lightning_heavy_attacks`；描述鍵：`loc_talent_psyker_chain_lightning_damage_heavy_attacks_desc`。
 - 節點：`node_d958faa6-e3ea-4c79-bc84-3477063b09f7`；分類：閃擊；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -26,7 +26,7 @@
 - 若同時選取衰弱詛咒，目標會改用強化電擊版本並承受該天賦的全來源增傷；未選取時只有電擊與持續傷害。
 - 目標電擊效果的最大疊層為 1；傷害量仍依目標、攻擊狀態與傷害設定變動，原始碼片段未給可套用所有敵人的固定數值。
 - 固定 SHA 與本機遊戲 Build 25492122 尚未核實為同版，跨版本細節待遊戲內核對；未做遊戲內測試。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -35,8 +35,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/tactical_modifier/psyker_chain_lightning_heavy_attacks.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_chain_lightning_heavy_attacks:node_d958faa6-e3ea-4c79-bc84-3477063b09f7`。
-- 格式：image/webp；288×288；8754 bytes。
-- SHA-256：`de24fc0273bca19f149459b9eabc207b5d4b6a5cb283305cc61ef41e6f49f55a`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/tactical_modifier/psyker_chain_lightning_heavy_attacks.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e)
+
+圖片僅供技能辨識，不作機制證據。
+

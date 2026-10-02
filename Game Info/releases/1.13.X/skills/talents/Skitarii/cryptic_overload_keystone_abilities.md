@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`cryptic_overload_keystone_abilities`；名稱鍵：`loc_talent_cryptic_overload_keystone_abilities`；描述鍵：`loc_talent_cryptic_overload_keystone_abilities_desc`。
 - 節點：`node_1291b67e-1c33-4fc0-833a-7656d99a79d4`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -36,7 +36,7 @@
 - 靜態推演：根鑰石目前22層，使用消耗2道充能的技能後新增10層；合計32達到30門檻，觸發一次並清空，超出的2層不保留。
 - 鎖定姿態結束時另行結算；弦爪持續出招期間的後續消耗不計入。
 - 跨過30層只觸發一次並歸零，溢出的層數不留下。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -45,8 +45,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_overload_keystone_abilities.webp)；下載日期 2026-10-02。只供圖示呈現，不作機制證據。
-- 對應鍵：`a1d5a0b6-f7ee-46ad-8098-c703e0e56111:default:cryptic_overload_keystone_abilities:node_1291b67e-1c33-4fc0-833a-7656d99a79d4`。
-- 格式：image/webp；288×288；5050 bytes。
-- SHA-256：`5cee781536329a1af93349a5f76cade0b22f98c053dcbeafe17513a8896bb071`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528)；[公開圖片](https://github.com/user-attachments/assets/d7c8f168-1f4e-42cc-a3d7-926d3b4382f1)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/cryptic/keystone_modifier/cryptic_overload_keystone_abilities.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/13#issuecomment-5935647528)｜[圖片附件](https://github.com/user-attachments/assets/d7c8f168-1f4e-42cc-a3d7-926d3b4382f1)
+
+圖片僅供技能辨識，不作機制證據。
+

@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_restore_stealth_cd_on_damage`；名稱鍵：`loc_talent_zealot_damage_taken_restores_cd`；描述鍵：`loc_talent_zealot_damage_taken_restores_cd_new_description`。
 - 節點：`node_5a6a015e-77a8-4675-a51b-7fd233eb1b26`；分類：能力；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -30,7 +30,7 @@
 - 天賦值只表示額外回充；實際總回充還要加自然恢復及其他冷卻修正。
 - 計時器每秒取樣，因此生命剛跨過門檻的效果不一定在同一畫格即時套用。
 - inventory 的繁中描述說明以失去生命值為依據；source 顯示其運作不是按單次受擊的傷害量直接換算冷卻，二者語義並無直接衝突，先不判勘誤。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -39,8 +39,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_restore_stealth_cd_on_damage.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_restore_stealth_cd_on_damage:node_5a6a015e-77a8-4675-a51b-7fd233eb1b26`。
-- 格式：image/webp；288×288；4938 bytes。
-- SHA-256：`77ca2935e81975ffb9ed18227fb3b27ffce824edabc247500aab28c4ccccbe06`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)；[公開圖片](https://github.com/user-attachments/assets/9e0abda0-3593-44eb-8ca8-9a7f282bcfd8)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/ability_modifier/zealot_restore_stealth_cd_on_damage.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929289315)｜[圖片附件](https://github.com/user-attachments/assets/9e0abda0-3593-44eb-8ca8-9a7f282bcfd8)
+
+圖片僅供技能辨識，不作機制證據。
+

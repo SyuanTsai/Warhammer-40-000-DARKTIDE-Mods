@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`broker_passive_melee_attacks_apply_toxin`；名稱鍵：`loc_talent_broker_passive_melee_attacks_apply_toxin`；描述鍵：`loc_talent_broker_passive_melee_attacks_apply_toxin_desc`。
 - 節點：`node_82e26378-1ad7-41c9-bd62-db6fee2779f7`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -21,7 +21,7 @@
 
 ## 算例條件與待確認事項
 
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -30,8 +30,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_melee_attacks_apply_toxin.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`a06367b5-5f6a-4385-bffa-b0d2e3db957d:default:broker_passive_melee_attacks_apply_toxin:node_82e26378-1ad7-41c9-bd62-db6fee2779f7`。
-- 格式：image/webp；288×288；5364 bytes。
-- SHA-256：`6692fe75845559b56661bde969ec9a794259bf7aa46664840c70fba67c8f3c4d`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933987866)；[公開圖片](https://github.com/user-attachments/assets/f92b996b-c59e-4d6b-90ac-a31046be1abd)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/broker/default/broker_passive_melee_attacks_apply_toxin.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/12#issuecomment-5933987866)｜[圖片附件](https://github.com/user-attachments/assets/f92b996b-c59e-4d6b-90ac-a31046be1abd)
+
+圖片僅供技能辨識，不作機制證據。
+

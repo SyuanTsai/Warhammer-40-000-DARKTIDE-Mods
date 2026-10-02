@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`zealot_heal_part_of_damage_taken`；名稱鍵：`loc_talent_zealot_heal_damage_taken`；描述鍵：`loc_talent_zealot_heal_damage_taken_desc`。
 - 節點：`node_53add57a-526d-4fc6-b8b2-1899b30b37a8`；分類：技能；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -26,7 +26,7 @@
 
 - **恢復算例**：沒有其他治療修正，一次失去 50 點生命，總計可恢復 50 × 20% = 10 點，平均每秒約 2.5 點。恢復期間再受 30 點傷害，另增加 6 點待恢復量。
 - 實際恢復節奏依固定更新時間步長而變；文件以96次恢復的總量核對，不宣稱精確實測秒數。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -35,8 +35,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/default/zealot_heal_part_of_damage_taken.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`188bcdf8-6a48-4eb3-8fe3-d039b2865db0:default:zealot_heal_part_of_damage_taken:node_53add57a-526d-4fc6-b8b2-1899b30b37a8`。
-- 格式：image/webp；288×288；4964 bytes。
-- SHA-256：`67f5d209ba81f545e4a08c7db04357f12d5c557ea89972f54f13cde3d6a22bcd`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929296872)；[公開圖片](https://github.com/user-attachments/assets/0849a882-e966-43d8-8786-554a7a657ee2)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/zealot/default/zealot_heal_part_of_damage_taken.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/8#issuecomment-5929296872)｜[圖片附件](https://github.com/user-attachments/assets/0849a882-e966-43d8-8786-554a7a657ee2)
+
+圖片僅供技能辨識，不作機制證據。
+

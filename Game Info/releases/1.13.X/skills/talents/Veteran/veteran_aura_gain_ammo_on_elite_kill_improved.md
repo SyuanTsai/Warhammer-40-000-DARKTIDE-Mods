@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`veteran_aura_gain_ammo_on_elite_kill_improved`；名稱鍵：`loc_talent_veteran_elite_kills_grant_ammo_coop_improved`；描述鍵：`loc_talent_veteran_elite_kills_grant_ammo_coop_improved_cd_desc`。
 - [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L1497-L1523)：`aura`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L667-L695)。
-- 狀態：完成核心靜態機制核對；名稱對應暫定，未進行遊戲內驗證。
+- 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
 ## 原始碼確認與程式推導
 
@@ -39,7 +39,7 @@ coherency priority2替換基礎aura；buff proc由被賦予此buff的擊殺者un
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/aura/veteran_aura_gain_ammo_on_elite_kill_improved.webp)；取得日期 2026-10-01。圖示只供呈現，不作機制證據。
-- 天賦與節點：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_aura_gain_ammo_on_elite_kill_improved:node_5ae6929c-f9fe-43b2-b2d9-079d6737de23`，已核對固定版本節點。
-- WebP，288 × 288，5802 bytes；SHA-256：`582b321c7db3d2573ed9def8f4448b43db1b20fda341b8c0e02a9874318d15fc`。
-- 保存在 [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234) 的 [圖片附件](https://github.com/user-attachments/assets/c2dffa00-cd24-478f-96c7-4007f4239e6a)；附件下載後的雜湊與大小均與原圖一致。圖檔不加入 Git 分支。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/aura/veteran_aura_gain_ammo_on_elite_kill_improved.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922929234)｜[圖片附件](https://github.com/user-attachments/assets/c2dffa00-cd24-478f-96c7-4007f4239e6a)
+
+圖片僅供技能辨識，不作機制證據。
+

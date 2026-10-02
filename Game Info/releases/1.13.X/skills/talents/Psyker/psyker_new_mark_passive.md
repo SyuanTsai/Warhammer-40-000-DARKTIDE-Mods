@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；固定 SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`psyker_new_mark_passive`；名稱鍵：`loc_talent_psyker_marked_enemies_passive`；描述鍵：`loc_talent_psyker_marked_enemies_passive_updated_desc`。
 - 節點：`node_44ce21ca-9b23-46b9-a6df-eae7ee03114b`；分類：鑰石；每節點一點。
-- 證據程度：核心靜態機制已核對；以下算例屬程式推導，未進行遊戲內測試。
+- 證據程度：原始碼確認／程式推導；以下算例屬程式推導，未進行遊戲內測試。
 
 ## 原始碼確認與程式推導
 
@@ -47,9 +47,9 @@
 - 新增層或合格的非擊殺命中會刷新整組計時；到期只掉一層並重啟剩餘層倒數。
 - 同時爆擊／弱點的傷害算例假設直擊與 finesse 額外傷害各 100，且沒有護甲曲線與其他加成，不能當作所有武器的固定最終傷害。
 - 其他天賦可把上限改為25、持續時間改為10秒，或讓弱點擊殺一次給3層；這些 modifier 的變體另行記錄。
-- source SHA 與本機 Build 25492122 版本對應由使用者於2026-10-02確認。
+- source SHA 與本機 Build 25492122 版本對應為1.13.0。
 - 同時爆擊並命中弱點時，兩種額外加成於共同finesse階段相加；沒有命中條件的加成不生效。遠程閃避keyword宣告未符合陣列格式，遊戲內表現留待確認。
-- 本機原文為 Steam Build 25492122、ui 資源；與固定公開來源版本對應由使用者於2026-10-02確認。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
+- 遊戲原文：1.13.0／Steam Build 25492122 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
@@ -58,8 +58,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/keystone/psyker_new_mark_passive.webp)；下載日期 2026-10-01。只供圖示呈現，不作機制證據。
-- 對應鍵：`2e785dba-f1bf-4b88-adf4-7e6b40592fca:default:psyker_new_mark_passive:node_44ce21ca-9b23-46b9-a6df-eae7ee03114b`。
-- 格式：image/webp；288×288；5634 bytes。
-- SHA-256：`768dbb81636f0647f03160ea9ca389fe17f5a7b336f349046c5fc5a818449933`。
-- [Issue 附件紀錄](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)；[公開圖片](https://github.com/user-attachments/assets/885fdda1-bcf2-4502-97e0-7eaead2392e0)。附件已下載比對位元組與 SHA-256。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/psyker/keystone/psyker_new_mark_passive.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/7#issuecomment-5928024966)｜[圖片附件](https://github.com/user-attachments/assets/885fdda1-bcf2-4502-97e0-7eaead2392e0)
+
+圖片僅供技能辨識，不作機制證據。
+

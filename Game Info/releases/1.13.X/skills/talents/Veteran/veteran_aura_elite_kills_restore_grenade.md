@@ -5,7 +5,7 @@
 - 來源版本：Release 1.13.0；SHA：`419fe18d414a618ce0474bd015bab470afb446d6`。
 - 天賦：`veteran_aura_elite_kills_restore_grenade`；名稱鍵：`loc_talent_ranger_grenade_on_elite_kills_coop`；描述鍵：`loc_talent_veteran_grenade_on_elite_kills_coop_desc`。
 - [節點](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/ui/views/talent_builder_view/layouts/veteran_tree.lua#L37-L66)：`default`，花費 1 點；[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/419fe18d414a618ce0474bd015bab470afb446d6/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L2196-L2211)。
-- 狀態：完成核心靜態機制核對；名稱對應暫定，未進行遊戲內驗證。
+- 名稱對應沿用翻譯表；未進行遊戲內驗證。
 
 ## 原始碼確認與程式推導
 
@@ -25,7 +25,7 @@
 
 ## 圖示來源
 
-- [Games Lantern 原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_aura_elite_kills_restore_grenade.webp)；取得日期 2026-10-01。圖示只供呈現，不作機制證據。
-- 天賦與節點：`914459f6-eb99-4e97-9106-0dd374107069:default:veteran_aura_elite_kills_restore_grenade:node_743e6ff1-6bb2-4816-9270-ef9c92d9d376`，已核對固定版本節點。
-- WebP，288 × 288，6148 bytes；SHA-256：`ea9044deaa47681633e9593bb999606a3e57a7b5f00bce2872b469cc6c7ddbe6`。
-- 保存在 [Media-Assets Issue #6](https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922922455) 的 [圖片附件](https://github.com/user-attachments/assets/3ec21db4-4013-4522-850f-14c583e25ea7)；附件下載後的雜湊與大小均與原圖一致。圖檔不加入 Git 分支。
+[原圖](https://gameslantern.com/storage/sites/darktide/exporter/talents/veteran/default/veteran_aura_elite_kills_restore_grenade.webp)｜[圖片來源 Issue](https://github.com/SyuanTsai/Media-Assets/issues/6#issuecomment-5922922455)｜[圖片附件](https://github.com/user-attachments/assets/3ec21db4-4013-4522-850f-14c583e25ea7)
+
+圖片僅供技能辨識，不作機制證據。
+
