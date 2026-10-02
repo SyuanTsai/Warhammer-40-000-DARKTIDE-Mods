@@ -1069,6 +1069,25 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - 手動維護最後下載日期：2026-09-02
 
 
+### [Simple Assets](https://www.nexusmods.com/warhammer40kdarktide/mods/1008)
+    Spidey Sense 的依賴MOD
+- MOD 網站最後更新日期：Last updated 26 August 2026, 4:39AM
+- MOD 版本：2.0.0
+- MOD 檔案名稱：SimpleAssets 1008 2.0.0 2026-08-25T20-39Z ufCjsfdVf.zip
+- 手動維護最後下載日期：2026-10-02
+- Nexus MOD ID: `1008`
+- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/1008`
+- Nexus page version: `2.0.0`
+- Nexus last updated: `2026-08-25T20:39Z`
+- Main file ID: `7761`
+- Main file version: `2.0.0`
+- Main file uploaded at UTC: `2026-08-25T20:39Z`
+- Archive filename: `SimpleAssets 1008 2.0.0 2026-08-25T20-39Z ufCjsfdVf.zip`
+- Archive size bytes: `3691870`
+- Archive SHA-256: `6df8cd4aa91587626883aab641f954ddb7072f7926834f90f0c49e87df5f1f19`
+- Acquisition method: `manual-queue`
+
+
 # 移除的MOD
 
 ### [Curios Auspex](https://www.nexusmods.com/warhammer40kdarktide/mods/1226)
