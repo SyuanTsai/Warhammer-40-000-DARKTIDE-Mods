@@ -706,10 +706,21 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [VFX Swapper](https://www.nexusmods.com/warhammer40kdarktide/mods/678)
     修改特效的顯示方式
-- MOD 網站最後更新日期：Last updated 30 September 2026, 4:52AM
-- MOD 版本：1.3
-- MOD 檔案名稱：Vfx Swapper 678 1.3 2026-09-29T20-52Z RZfXOZuui
-- 手動維護最後下載日期：2026-09-30
+- MOD 網站最後更新日期：Last updated 02 October 2026, 4:01AM
+- MOD 版本：1.3.1
+- MOD 檔案名稱：Vfx Swapper 678 1.3.1 2026-10-01T20-01Z iYOupY30h.zip
+- 手動維護最後下載日期：2026-10-02
+- Nexus MOD ID: 678
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/678
+- Nexus page version: 1.3.1
+- Nexus last updated: 2026-10-01T20:01Z
+- Main file ID: 8678
+- Main file version: 1.3.1
+- Main file uploaded at UTC: 2026-10-01T20:01Z
+- Archive filename: Vfx Swapper 678 1.3.1 2026-10-01T20-01Z iYOupY30h.zip
+- Archive size bytes: 26086
+- Archive SHA-256: 032068645e1d7a0d0d69cadde02c77431d1e6a99b2cf815a9efa653de488dfe6
+- Acquisition method: manual-queue
 
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
     記分板
