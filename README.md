@@ -436,10 +436,21 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Guarantee Ability Activation](https://www.nexusmods.com/warhammer40kdarktide/mods/336)
     防止取消大絕
-- MOD 網站最後更新日期：Last updated 08 July 2026, 11:57PM
-- MOD 版本：1.4.1
-- MOD 檔案名稱：Guarantee Ability Activation 336 1.4.1 2026-07-08T15-57Z cwrBAw7Y1
-- 手動維護最後下載日期：2026-07-08
+- MOD 網站最後更新日期：Last updated 02 October 2026, 1:02AM
+- MOD 版本：1.4.2
+- MOD 檔案名稱：Guarantee Ability Activation 336 1.4.2 2026-10-01T17-02Z Z1K0I1fFq.zip
+- 手動維護最後下載日期：2026-10-02
+- Nexus MOD ID: 336
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/336
+- Nexus page version: 1.4.2
+- Nexus last updated: 2026-10-01T17:02Z
+- Main file ID: 8671
+- Main file version: 1.4.2
+- Main file uploaded at UTC: 2026-10-01T17:02Z
+- Archive filename: Guarantee Ability Activation 336 1.4.2 2026-10-01T17-02Z Z1K0I1fFq.zip
+- Archive size bytes: 7005
+- Archive SHA-256: 659e2f0227a18b243ecd4241f688eb493158ca42d5519f93f1ddb8eaee52487a
+- Acquisition method: manual-queue
 
 ### [Custom HUD](https://www.nexusmods.com/warhammer40kdarktide/mods/10)
     客製化UI
