@@ -259,20 +259,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Markers Improved All-in-One](https://www.nexusmods.com/warhammer40kdarktide/mods/447)
     標記一體化 整合包
-- MOD 網站最後更新日期：Last updated 01 October 2026, 4:14AM
-- MOD 版本：2.15.5
-- MOD 檔案名稱：Markers Improved All-in-One 447 2.15.5 2026-09-30T20-14Z 95Dkb5SI0.zip
-- 手動維護最後下載日期：2026-10-01
+- MOD 網站最後更新日期：Last updated 02 October 2026, 4:08AM
+- MOD 版本：2.15.6
+- MOD 檔案名稱：Markers Improved All-in-One 447 2.15.6 2026-10-01T20-08Z 6nFZanYhW.zip
+- 手動維護最後下載日期：2026-10-02
 - Nexus MOD ID: `447`
 - Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/447`
-- Nexus page version: `2.15.5`
-- Nexus last updated: `2026-09-30T20:14Z`
-- Main file ID: `8634`
-- Main file version: `2.15.5`
-- Main file uploaded at UTC: `2026-09-30T20:14Z`
-- Archive filename: `Markers Improved All-in-One 447 2.15.5 2026-09-30T20-14Z 95Dkb5SI0.zip`
-- Archive size bytes: `111841`
-- Archive SHA-256: `9d58cb7618ce3cb84bd57d4838d8c112ece79d5cf2d83d8353bec2fd4bfa8d84`
+- Nexus page version: `2.15.6`
+- Nexus last updated: `2026-10-01T20:08Z`
+- Main file ID: `8679`
+- Main file version: `2.15.6`
+- Main file uploaded at UTC: `2026-10-01T20:08Z`
+- Archive filename: `Markers Improved All-in-One 447 2.15.6 2026-10-01T20-08Z 6nFZanYhW.zip`
+- Archive size bytes: `111975`
+- Archive SHA-256: `85b59c07e57ea2e557c1d42bd33b1603cda1582a48962d46527a27d36b3c6bca`
 - Acquisition method: `manual-queue`
 
 ### [Danger Zone](https://www.nexusmods.com/warhammer40kdarktide/mods/440)
@@ -436,10 +436,21 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Guarantee Ability Activation](https://www.nexusmods.com/warhammer40kdarktide/mods/336)
     防止取消大絕
-- MOD 網站最後更新日期：Last updated 08 July 2026, 11:57PM
-- MOD 版本：1.4.1
-- MOD 檔案名稱：Guarantee Ability Activation 336 1.4.1 2026-07-08T15-57Z cwrBAw7Y1
-- 手動維護最後下載日期：2026-07-08
+- MOD 網站最後更新日期：Last updated 02 October 2026, 1:02AM
+- MOD 版本：1.4.2
+- MOD 檔案名稱：Guarantee Ability Activation 336 1.4.2 2026-10-01T17-02Z Z1K0I1fFq.zip
+- 手動維護最後下載日期：2026-10-02
+- Nexus MOD ID: 336
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/336
+- Nexus page version: 1.4.2
+- Nexus last updated: 2026-10-01T17:02Z
+- Main file ID: 8671
+- Main file version: 1.4.2
+- Main file uploaded at UTC: 2026-10-01T17:02Z
+- Archive filename: Guarantee Ability Activation 336 1.4.2 2026-10-01T17-02Z Z1K0I1fFq.zip
+- Archive size bytes: 7005
+- Archive SHA-256: 659e2f0227a18b243ecd4241f688eb493158ca42d5519f93f1ddb8eaee52487a
+- Acquisition method: manual-queue
 
 ### [Custom HUD](https://www.nexusmods.com/warhammer40kdarktide/mods/10)
     客製化UI
@@ -520,20 +531,20 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [Better Hud Info View](https://www.nexusmods.com/warhammer40kdarktide/mods/511)
     浩劫HUD資訊
-- MOD 網站最後更新日期：Last updated 01 October 2026, 11:42AM
-- MOD 版本：1.5.2
-- MOD 檔案名稱：better_hud_info_view 511 1.5.2 2026-10-01T03-42Z ke28WeliD.zip
-- 手動維護最後下載日期：2026-10-01
+- MOD 網站最後更新日期：Last updated 01 October 2026, 11:13PM
+- MOD 版本：1.6
+- MOD 檔案名稱：Better Hud Info View 511 1.6 2026-10-01T15-13Z q4A7x4GUb.zip
+- 手動維護最後下載日期：2026-10-02
 - Nexus MOD ID: 511
 - Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/511
-- Nexus page version: 1.5.2
-- Nexus last updated: 2026-10-01T03:42Z
-- Main file ID: 8649
-- Main file version: 1.5.2
-- Main file uploaded at UTC: 2026-10-01T03:42Z
-- Archive filename: better_hud_info_view 511 1.5.2 2026-10-01T03-42Z ke28WeliD.zip
-- Archive size bytes: 7948
-- Archive SHA-256: 22d8f287551113adcb4710a67f105db09785150f594f4c46f73bfbf334c6e870
+- Nexus page version: 1.6
+- Nexus last updated: 2026-10-01T15:13Z
+- Main file ID: 8665
+- Main file version: 1.6
+- Main file uploaded at UTC: 2026-10-01T15:13Z
+- Archive filename: Better Hud Info View 511 1.6 2026-10-01T15-13Z q4A7x4GUb.zip
+- Archive size bytes: 8396
+- Archive SHA-256: d6c1da684017c3c5b75490c9d3899d9ce1587d0d3c2637fe7822b11bd2ab5b5d
 - Acquisition method: manual-queue
 
 ### [Recolor Boss Health Bars](https://www.nexusmods.com/warhammer40kdarktide/mods/314)
@@ -695,10 +706,21 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 
 ### [VFX Swapper](https://www.nexusmods.com/warhammer40kdarktide/mods/678)
     修改特效的顯示方式
-- MOD 網站最後更新日期：Last updated 30 September 2026, 4:52AM
-- MOD 版本：1.3
-- MOD 檔案名稱：Vfx Swapper 678 1.3 2026-09-29T20-52Z RZfXOZuui
-- 手動維護最後下載日期：2026-09-30
+- MOD 網站最後更新日期：Last updated 02 October 2026, 4:01AM
+- MOD 版本：1.3.1
+- MOD 檔案名稱：Vfx Swapper 678 1.3.1 2026-10-01T20-01Z iYOupY30h.zip
+- 手動維護最後下載日期：2026-10-02
+- Nexus MOD ID: 678
+- Nexus URL: https://www.nexusmods.com/warhammer40kdarktide/mods/678
+- Nexus page version: 1.3.1
+- Nexus last updated: 2026-10-01T20:01Z
+- Main file ID: 8678
+- Main file version: 1.3.1
+- Main file uploaded at UTC: 2026-10-01T20:01Z
+- Archive filename: Vfx Swapper 678 1.3.1 2026-10-01T20-01Z iYOupY30h.zip
+- Archive size bytes: 26086
+- Archive SHA-256: 032068645e1d7a0d0d69cadde02c77431d1e6a99b2cf815a9efa653de488dfe6
+- Acquisition method: manual-queue
 
 ### [CombatStats](https://www.nexusmods.com/warhammer40kdarktide/mods/661)
     記分板
@@ -1045,6 +1067,25 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - MOD 版本：3.1.4
 - MOD 檔案名稱：NoBrainer 896 3.1.4 2026-08-28T19-13Z 3OsdoOUuY
 - 手動維護最後下載日期：2026-09-02
+
+
+### [Simple Assets](https://www.nexusmods.com/warhammer40kdarktide/mods/1008)
+    Spidey Sense 的依賴MOD
+- MOD 網站最後更新日期：Last updated 26 August 2026, 4:39AM
+- MOD 版本：2.0.0
+- MOD 檔案名稱：SimpleAssets 1008 2.0.0 2026-08-25T20-39Z ufCjsfdVf.zip
+- 手動維護最後下載日期：2026-10-02
+- Nexus MOD ID: `1008`
+- Nexus URL: `https://www.nexusmods.com/warhammer40kdarktide/mods/1008`
+- Nexus page version: `2.0.0`
+- Nexus last updated: `2026-08-25T20:39Z`
+- Main file ID: `7761`
+- Main file version: `2.0.0`
+- Main file uploaded at UTC: `2026-08-25T20:39Z`
+- Archive filename: `SimpleAssets 1008 2.0.0 2026-08-25T20-39Z ufCjsfdVf.zip`
+- Archive size bytes: `3691870`
+- Archive SHA-256: `6df8cd4aa91587626883aab641f954ddb7072f7926834f90f0c49e87df5f1f19`
+- Acquisition method: `manual-queue`
 
 
 # 移除的MOD
