@@ -1,0 +1,124 @@
+{
+  "date": "2026-10-02",
+  "kind": "plan-revision",
+  "plan": "AI-LOGS/Game Info/plans/2026-10-02-BLESSINGS_TRANSLATION_PLAN.md",
+  "user_requirement": "Use verified Traditional Chinese weapon names for directories; inspect Enhanced_descriptions blessing organization",
+  "before_snapshot": "AI-LOGS/Game Info/local/plans/2026-10-02-BLESSINGS_NAME_REVISION/before.md",
+  "before_sha256": "da628a0a7f61ed36669fdec738188bc14308dd81e77562d3e751e8322fdf84d2",
+  "after_sha256": "88ca6b27df48bd914f174256eec9cb72007812aa5e394355218cb38b1133575e",
+  "mod_references": [
+    {
+      "path": "Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/WEAPONS_Blessings_Perks.lua",
+      "sha256": "aa7230fabc9b184f8d820ecf854feb5cacff1c3ff1b74883336e0854b6ab78d9",
+      "inspected_ranges": [
+        [
+          462,
+          547
+        ],
+        [
+          1960,
+          1987
+        ]
+      ]
+    },
+    {
+      "path": "Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/NAMES_Talents_Blessings.lua",
+      "sha256": "c5aee49e8f5f6d62e8dcac96778f5e0f3d49da4d42e7c504ed1c2517f4c97266",
+      "inspected_ranges": [
+        [
+          38,
+          100
+        ]
+      ]
+    },
+    {
+      "path": "Warhammer 40,000 DARKTIDE/mods/Enhanced_descriptions/Main_Modules/NAMES_Enemies_Weapons.lua",
+      "sha256": "5b006bc551ddfa2a8f812e2b52eafd4b16b0833ab477ee1f1d74b91e4a4cb2c5",
+      "inspected_ranges": [
+        [
+          38,
+          54
+        ]
+      ]
+    }
+  ],
+  "weapon_name_evidence": {
+    "version": "1.13.1",
+    "steam_build": 25606770,
+    "resource": "content/localization/items",
+    "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+    "resolved_key_dictionary_sha256": "32126eef30c37c35db6de12808d0eab6061b533db8a4a3c42eec3c3433527781",
+    "paired_names": [
+      {
+        "locale": "en",
+        "hash": "32df9bd5",
+        "keys": [
+          "loc_weapon_family_ogryn_heavystubber_p1_m1"
+        ],
+        "value": "Twin-Linked Heavy Stubber",
+        "payload_sha256": "fd5b8fe42721cf82a30277d4e4556ec4cd13532dd910a6811486f0cd7e13dc75"
+      },
+      {
+        "locale": "en",
+        "hash": "34539726",
+        "keys": [
+          "loc_weapon_family_combataxe_p1_m1"
+        ],
+        "value": "Combat Axe",
+        "payload_sha256": "66c5f1ee034427e79eefdf1072959fc7851ecaac5a32bea66a715376380da8dc"
+      },
+      {
+        "locale": "en",
+        "hash": "e4751f57",
+        "keys": [
+          "loc_weapon_family_autogun_p1_m1"
+        ],
+        "value": "Infantry Autogun",
+        "payload_sha256": "d722a35a7dd29bdf17274168999d926a50bdcf4481aa93e396bca2bfe5a8f095"
+      },
+      {
+        "locale": "zh-tw",
+        "hash": "32df9bd5",
+        "keys": [
+          "loc_weapon_family_ogryn_heavystubber_p1_m1"
+        ],
+        "value": "雙鏈重型機槍",
+        "payload_sha256": "e42ee77437c8474c663174e1c91412dddaeef257735c53d255ba77f22f850c4d"
+      },
+      {
+        "locale": "zh-tw",
+        "hash": "34539726",
+        "keys": [
+          "loc_weapon_family_combataxe_p1_m1"
+        ],
+        "value": "戰鬥斧",
+        "payload_sha256": "9d8bd217b8c816f4e4ef5f946922626d744aec63699ac4577b779f0e5e6311a0"
+      },
+      {
+        "locale": "zh-tw",
+        "hash": "e4751f57",
+        "keys": [
+          "loc_weapon_family_autogun_p1_m1"
+        ],
+        "value": "步兵自動槍",
+        "payload_sha256": "5838fae80b3003b32bae37c59b7e3d10e6c928a99a51f8aeb64c81f7a9058e39"
+      }
+    ]
+  },
+  "limits": [
+    "Only the three directory examples have been checked here; complete weapon/blessing inventory remains pending",
+    "MOD descriptions and comments are organizational clues, not mechanic evidence"
+  ],
+  "mod_and_glossary_modified": false,
+  "formal_blessing_directories_created": false,
+  "validation": {
+    "markdown_files": 30,
+    "local_references": 1158,
+    "remote_references": 57,
+    "link_errors": [],
+    "registry_records": 73,
+    "registry_paths_present": true,
+    "git_index_preserved": true,
+    "diff_check": "passed"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-02",
+  "kind": "plan-revision",
+  "plan": "AI-LOGS/Game Info/plans/2026-10-02-BLESSINGS_TRANSLATION_PLAN.md",
+  "previous_revision": "AI-LOGS/Game Info/plans/2026-10-02-BLESSINGS_NAME_REVISION.json",
+  "before_snapshot": "AI-LOGS/Game Info/local/plans/2026-10-02-BLESSINGS_STRUCTURE_REVISION/before.md",
+  "before_sha256": "88ca6b27df48bd914f174256eec9cb72007812aa5e394355218cb38b1133575e",
+  "after_sha256": "9d984f9b668b46322ee6c35db37740e246adcd2a084a0df9b5edbc0405c4e476",
+  "user_requirement": "Many-to-many blessing and weapon lookup, retaining correct Traditional Chinese weapon names",
+  "design": [
+    "One complete page per verified blessing identity",
+    "Melee and ranged indexes reference shared blessing pages",
+    "Traditional Chinese weapon pages list available blessings by mark and tier",
+    "Variants preserve weapon-specific mechanics and values",
+    "One verified mapping dataset under Game Info drives both lookup directions"
+  ],
+  "implemented_scope": "Documentation plan only; no actual blessing relationship data or empty directories created",
+  "pending": [
+    "Complete entity and relation inventory",
+    "Six unique blessing samples including at least two multi-weapon blessings",
+    "Formal knowledge pages and mapping data"
+  ],
+  "validation": {
+    "markdown_files": 30,
+    "local_references": 1159,
+    "remote_references": 57,
+    "link_errors": [],
+    "registry_records": 75,
+    "registry_paths_present": true,
+    "snapshot_ignored": true,
+    "git_index_preserved": true,
+    "diff_check": "passed",
+    "relation_consistency_check": "planned only; no populated relation dataset exists yet"
+  }
+}

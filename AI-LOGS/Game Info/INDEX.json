@@ -626,6 +626,46 @@
       "path": "AI-LOGS/Game Info/local/releases/1.13.X/skills/1.13.1-update/publication.json",
       "date": "2026-10-02",
       "storage": "local"
+    },
+    {
+      "id": "plans/2026-10-02-BLESSINGS_TRANSLATION_PLAN",
+      "kind": "plan",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/plans/2026-10-02-BLESSINGS_TRANSLATION_PLAN.md",
+      "date": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "plans/2026-10-02-BLESSINGS_NAME_REVISION",
+      "kind": "revision",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/plans/2026-10-02-BLESSINGS_NAME_REVISION.json",
+      "date": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "local/plans/2026-10-02-BLESSINGS_NAME_REVISION/before",
+      "kind": "snapshot",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/local/plans/2026-10-02-BLESSINGS_NAME_REVISION/before.md",
+      "date": "2026-10-02",
+      "storage": "local"
+    },
+    {
+      "id": "plans/2026-10-02-BLESSINGS_STRUCTURE_REVISION",
+      "kind": "revision",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/plans/2026-10-02-BLESSINGS_STRUCTURE_REVISION.json",
+      "date": "2026-10-02",
+      "storage": "git"
+    },
+    {
+      "id": "local/plans/2026-10-02-BLESSINGS_STRUCTURE_REVISION/before",
+      "kind": "snapshot",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/local/plans/2026-10-02-BLESSINGS_STRUCTURE_REVISION/before.md",
+      "date": "2026-10-02",
+      "storage": "local"
     }
   ],
   "pending": [
@@ -633,6 +673,11 @@
       "scope": "releases/1.13.X/source",
       "task": "replace both cloud ZIPs after record separation",
       "details": "AI-LOGS/Game Info/releases/1.13.X/CLOUD_ARCHIVES.json"
+    },
+    {
+      "scope": "releases/1.13.X/blessings",
+      "task": "plan only: unique blessing and weapon inventory, shared many-to-many mapping, then six unique samples with multi-weapon variants; implementation not started",
+      "details": "AI-LOGS/Game Info/plans/2026-10-02-BLESSINGS_TRANSLATION_PLAN.md"
     }
   ]
 }
