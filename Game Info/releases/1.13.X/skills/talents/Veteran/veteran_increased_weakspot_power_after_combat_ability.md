@@ -16,7 +16,7 @@
 
 - weakspot_power_level_modifier 是 additive_multiplier；PowerLevel.power_level_buff_modifier 只在 weakspot_or_nil 時納入，與其他同階段威力加成相加。曲線預設 ratio=10、native_ratio=10，故此例500經曲線仍為500，再乘1.2成600。
 - 使用遊戲預設 attack distribution=100、無甲ADM=1、damage_output=0..20、max_power_level=10000、命中區倍率1，並排除額外finesse與其他傷害倍率的基礎階段：原值20×(500×100)/10000=100；加入天賦20×(600×100)/10000=120。已有25%威力時由100×1.25=125變為100×1.45=145。
-- 這是固定參數的可重算基準，並非具名武器實測，也不是在所有其他威力加成之外再乘最終傷害1.2。實際弱點、爆擊及部位結算仍要繼續沿用該武器公式。
+- 這是固定參數的可重算基準，並非具名武器實測，也不是在所有其他威力加成之外再乘最終傷害1.2。實際弱點、暴擊及部位結算仍要繼續沿用該武器公式。
 - StaggerCalculation 將hit_weakspot傳入impact威力計算。預設impact distribution=5、無甲stagger output0..20、其餘倍率1：20×(500×5)/10000=5，加入本效果後為20×(600×5)/10000=6。之後仍會經敵人抗性、門檻與狀態判定，不等於踉蹌時間增加20%。
 - DamageProfile.max_hit_mass 在cleave威力計算中明確傳weakspot=nil，本buff不增加cleave budget。
 

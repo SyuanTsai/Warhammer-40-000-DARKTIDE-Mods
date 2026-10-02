@@ -26,7 +26,7 @@
 
 ## 百分比與實際傷害增幅
 
-- **程式推導**：目標端brittleness與攻擊者撕裂共同參與護甲倍率修正。玩家例固定非爆擊、非弱點、super_armor、護甲前傷害100、ADM=.5、無其他撕裂或後續倍率：四層.10使下一擊50→60（20%）；十六層.40使下一擊50→90（80%）。
+- **程式推導**：目標端brittleness與攻擊者撕裂共同參與護甲倍率修正。玩家例固定非暴擊、非弱點、super_armor、護甲前傷害100、ADM=.5、無其他撕裂或後續倍率：四層.10使下一擊50→60（20%）；十六層.40使下一擊50→90（80%）。
 - 這不是把當次附加層數追溯加到造成該層的傷害上；例子明定為層數已存在後的下一擊。隊友使用不同武器或攻擊相同敵人的不同護甲部位，實際增幅不一定相同。
 
 - [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 2518–2566 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2518-L2566)

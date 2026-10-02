@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- proc_buff active_duration=1、proc_keywords=count_as_dodge_vs_ranged。事件入口為爆擊旗標與 on_hit；共用 proc_buff 決定 active 時間重新計時。
+- proc_buff active_duration=1、proc_keywords=count_as_dodge_vs_ranged。事件入口為暴擊旗標與 on_hit；共用 proc_buff 決定 active 時間重新計時。
 
 ## 原始碼依據
 
@@ -20,7 +20,7 @@
 ## 算例條件與待確認事項
 
 - **時間算例**：第 0 秒觸發，效果持續到約第 1 秒；第 0.6 秒再觸發，延續到約第 1.6 秒。
-- 各遠距傷害是否採用 dodge 判定須依攻擊實作，不能一概視為免疫。
+- 各遠程傷害是否採用 dodge 判定須依攻擊實作，不能一概視為免疫。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

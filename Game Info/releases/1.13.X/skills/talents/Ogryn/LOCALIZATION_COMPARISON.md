@@ -101,7 +101,7 @@
 ## 投彈完畢！(Bombs Away!)
 
 - 描述鍵：`loc_talent_bonebreaker_grenade_super_armor_explosion_desc`；hash：`a06fe566`。
-- 結論：未見明確矛盾。同 hash a06fe566 的中英文都描述手榴彈箱擊中敵人後破開、在目標周圍散出手榴彈，且是基礎手榴彈箱的強化版；程式將基礎數量設為 6，數量修改器另加 3。傷害與引信數值是來源補充，不是原文逐字列出的內容。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- 結論：未見明確矛盾。同 hash a06fe566 的中英文都描述手雷箱擊中敵人後破開、在目標周圍散出手雷，且是基礎手雷箱的強化版；程式將基礎數量設為 6，數量修改器另加 3。傷害與引信數值是來源補充，不是原文逐字列出的內容。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_box_explodes.md)。
 
 <a id="ogryn_grenade_frag"></a>
@@ -129,7 +129,7 @@
 ## 超巨量傷害箱(Bigger Box of Hurt)
 
 - 描述鍵：`loc_talent_ogryn_big_box_of_hurt_more_bombs_desc`；hash：`858b20e9`。
-- 結論：未見明確矛盾。同 hash 858b20e9 的繁中與英文都只說釋出 3 顆手榴彈；天賦設定明確把 3 加到手榴彈箱的基礎 6 顆，因此本草稿將實際生成數寫為 9 顆。原文沒有重述基礎 6 顆屬資訊省略，不列為誤譯。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
+- 結論：未見明確矛盾。同 hash 858b20e9 的繁中與英文都只說釋出 3 顆手雷；天賦設定明確把 3 加到手雷箱的基礎 6 顆，因此本草稿將實際生成數寫為 9 顆。原文沒有重述基礎 6 顆屬資訊省略，不列為誤譯。本機 Build 25606770 的繁中與英文文字以相同 hash 配對；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。未列出的數值、公式或限制屬省略，不據此判為誤譯。
 - [原始碼推導與限制](ogryn_big_box_of_hurt_more_bombs.md)。
 
 <a id="ogryn_melee_damage_coherency_improved"></a>
@@ -171,7 +171,7 @@
 ## 貼身火力(Point-Blank Barrage)
 
 - 描述鍵：`loc_talent_ogryn_combat_ability_special_ammo_replenish_desc`；hash：`826d5678`。
-- 結論：未見明確矛盾。繁中原文與英文原文都寫明啟動時切換並裝填遠距武器、姿態期間提升射速及換彈速度、近距離增傷，並在結束時返還消耗彈藥的一半；所列冷卻也一致。免費射擊計數納入返還是程式的細節補充，不是兩種原文互相矛盾；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文與英文原文都寫明啟動時切換並裝填遠程武器、姿態期間提升射速及換彈速度、近距離增傷，並在結束時返還消耗彈藥的一半；所列冷卻也一致。免費射擊計數納入返還是程式的細節補充，不是兩種原文互相矛盾；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](ogryn_special_ammo.md)。
 
 <a id="ogryn_charge_toughness"></a>
@@ -192,21 +192,21 @@
 ## 再來(Go Again!)
 
 - 描述鍵：`loc_talent_ogryn_taunt_stagger_cd_description`；hash：`7bd31d11`。
-- 結論：未見明確矛盾。繁中原文「造成敵人暈眩使冷卻時間縮短」與英文原文「Staggering an Enemy replenishes Cooldown」都要求先使敵人踉蹌再恢復戰鬥能力冷卻；實作以近戰或推擊踉蹌觸發1.5%。中文使用「暈眩」而英文用「Stagger」，但效果方向一致，沒有明確相反描述；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文「造成敵人暈眩使冷卻時間縮短」與英文原文「Staggering an Enemy replenishes Cooldown」都要求先使敵人踉蹌再恢復戰鬥技能冷卻；實作以近戰或推擊踉蹌觸發1.5%。中文使用「暈眩」而英文用「Stagger」，但效果方向一致，沒有明確相反描述；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](ogryn_taunt_staggers_reduce_cooldown.md)。
 
 <a id="ogryn_special_ammo_armor_pen"></a>
 ## 槍林彈雨(Hail of Fire)
 
 - 描述鍵：`loc_talent_ogryn_special_ammo_armor_pen_new_desc`；hash：`5f4e17cf`。
-- 結論：未見明確矛盾。繁中原文「附加15%撕裂效果並提高15%傷害」與英文原文「15% Rending and 15% Damage」都把兩項加成限定在姿態啟動時的遠距攻擊，數字與條件相符；裝甲倍率算例是把程式的撕裂消費端補出來，原文省略公式不構成翻譯矛盾。文字與程式來源皆為1.13.1；差異待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文「附加15%撕裂效果並提高15%傷害」與英文原文「15% Rending and 15% Damage」都把兩項加成限定在姿態啟動時的遠程攻擊，數字與條件相符；裝甲倍率算例是把程式的撕裂消費端補出來，原文省略公式不構成翻譯矛盾。文字與程式來源皆為1.13.1；差異待遊戲內核對。
 - [原始碼推導與限制](ogryn_special_ammo_armor_pen.md)。
 
 <a id="ogryn_special_ammo_fire_shots"></a>
 ## 集火射擊(Light 'em Up)
 
 - 描述鍵：`loc_talent_ogryn_special_ammo_fire_shots_new_desc`；hash：`a391c6e8`。
-- 結論：未見明確矛盾。繁中原文說遠距攻擊加4層、最多16層；英文原文同樣列出每次遠距攻擊加4層與16層上限，層數與適用期間一致。兩種原文都省略每0.5秒的傷害和到期衰減，不能因此判成翻譯錯誤；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 結論：未見明確矛盾。繁中原文說遠程攻擊加4層、最多16層；英文原文同樣列出每次遠程攻擊加4層與16層上限，層數與適用期間一致。兩種原文都省略每0.5秒的傷害和到期衰減，不能因此判成翻譯錯誤；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - [原始碼推導與限制](ogryn_special_ammo_fire_shots.md)。
 
 <a id="ogryn_taunt_damage_taken_increase"></a>
@@ -290,7 +290,7 @@
 ## 好槍法(Good Shootin')
 
 - 描述鍵：`loc_talent_ogryn_critical_leadbelcher_desc`；hash：`c346583c`。
-- 結論：未見明確矛盾。繁中寫「觸發幸運子彈（且命中）的射擊必定暴擊」，英文寫「The shot that triggers Lucky Bullet is a guaranteed Critical (if it Hits)」；兩者都要求該次射擊命中才形成爆擊命中。
+- 結論：未見明確矛盾。繁中寫「觸發幸運子彈（且命中）的射擊必定暴擊」，英文寫「The shot that triggers Lucky Bullet is a guaranteed Critical (if it Hits)」；兩者都要求該次射擊命中才形成暴擊命中。
 - [原始碼推導與限制](ogryn_leadbelcher_crits.md)。
 
 <a id="ogryn_blo_ally_ranged_buffs"></a>
@@ -298,7 +298,7 @@
 
 - 描述鍵：`loc_talent_ogryn_blo_ally_ranged_buffs_desc`；hash：`99f32156`。
 - 結論：繁中描述錯誤。繁中寫「幸運子彈命中時」，英文寫「on Lucky Bullet」；固定來源只檢查是否觸發幸運子彈，不檢查是否命中。繁中因此多出命中條件。
-- 繁中原文短引：幸運子彈命中時，自身與協同中的盟友的遠距傷害提高{ranged_damage:%s}，持續{duration:%s}秒。
+- 繁中原文短引：幸運子彈命中時，自身與協同中的盟友的遠程傷害提高{ranged_damage:%s}，持續{duration:%s}秒。
 - 同源英文：{ranged_damage:%s} Ranged Damage to you and Allies in Coherency on Lucky Bullet. Lasts {duration:%s}s.
 - [原始碼推導與限制](ogryn_blo_ally_ranged_buffs.md)。
 
@@ -535,7 +535,7 @@
 
 - 描述鍵：`loc_talent_ogryn_rending_on_elite_kills_desc`；hash：`4203de9c`。
 - 結論：繁中描述錯誤。同一預留符號格式為百分比，繁中卻加上「倍撕裂」，英文無倍數單位；把15%撕裂寫成倍數會誤導。
-- 繁中原文短引：擊殺菁英敵人後持續{rending_multiplier:%s}倍撕裂{duration:%s}秒。
+- 繁中原文短引：擊殺精英敵人後持續{rending_multiplier:%s}倍撕裂{duration:%s}秒。
 - 同源英文：{rending_multiplier:%s} Rending for {duration:%s}s on Elite Kill.
 - [原始碼推導與限制](ogryn_rending_on_elite_kills.md)。
 

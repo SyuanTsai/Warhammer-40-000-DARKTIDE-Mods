@@ -16,7 +16,7 @@
 
 ### 原始碼確認與程式推導
 
-psyker_archetype.lua 的 base_talents 將該定義放入戰鬥能力槽。psyker_talents.lua 把定義綁定到 PlayerAbilities.psyker_discharge_shout，該能力使用 psyker_shout 模板。talent_settings_psyker.lua 將 warpcharge_vent_base 設為 0.1；action_psyker_shout.lua 取用此值呼叫 WarpCharge.decrease_immediate。WarpCharge.decrease_immediate 將輸入值從 current_percentage 扣除，因此 60% 反噬在沒有其他修正時會變成 50%。
+psyker_archetype.lua 的 base_talents 將該定義放入戰鬥技能槽。psyker_talents.lua 把定義綁定到 PlayerAbilities.psyker_discharge_shout，該能力使用 psyker_shout 模板。talent_settings_psyker.lua 將 warpcharge_vent_base 設為 0.1；action_psyker_shout.lua 取用此值呼叫 WarpCharge.decrease_immediate。WarpCharge.decrease_immediate 將輸入值從 current_percentage 扣除，因此 60% 反噬在沒有其他修正時會變成 50%。
 
 ### 原始碼依據
 
@@ -89,12 +89,12 @@ psyker_grenade_smite只提供PlayerAbilities.psyker_smite；能力max_charges=0�
 
 - 天賦識別碼：`psyker_aura_ability_cooldown`。
 
-- 你與協同範圍內隊友的戰鬥能力冷卻縮短 7.5%；同一光環不重複套用。
+- 你與協同範圍內隊友的戰鬥技能冷卻縮短 7.5%；同一光環不重複套用。
 - 只計此效果，40 秒冷卻變成 40 × (1 − 7.5%) = 37 秒。先知之眼替換為 10% 縮減時，則為 36 秒，不能把兩者加成相加。
 
 ### 原始碼確認與程式推導
 
-psyker_archetype.lua 將 psyker_aura_ability_cooldown 列為 tier 1 基礎天賦。talent definition 以 coherency 模板連結 psyker_aura_ability_cooldown。模板設定 coherency_id、光環分類、max_stacks=talent_settings_3.coherency.max_stacks，並將 combat_ability_resource_cost_per_use_modifier 設為 -0.075；目前最大層數為 1。這表示每次戰鬥能力使用所需的冷卻資源減少 7.5%。
+psyker_archetype.lua 將 psyker_aura_ability_cooldown 列為 tier 1 基礎天賦。talent definition 以 coherency 模板連結 psyker_aura_ability_cooldown。模板設定 coherency_id、光環分類、max_stacks=talent_settings_3.coherency.max_stacks，並將 combat_ability_resource_cost_per_use_modifier 設為 -0.075；目前最大層數為 1。這表示每次戰鬥技能使用所需的冷卻資源減少 7.5%。
 
 ### 原始碼依據
 

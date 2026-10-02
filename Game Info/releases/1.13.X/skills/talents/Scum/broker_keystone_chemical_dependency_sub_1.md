@@ -10,7 +10,7 @@
 ## 原始碼確認與程式推導
 
 - 升級 special rule 開啟 stack buff 的 conditional_stat_buffs.critical_strike_chance；該 stat 值為 0.05，stat type 是 value，Buff._calculate_stat_buffs 依 stack count 重複相加，因此每層 +0.05、3 層 +0.15。
-- CriticalStrike.chance 的計算為 clamp(base_chance + generic critical_strike_chance + 近戰或遠距專屬 chance + weapon modifier, 0, 1)。Broker archetype base_critical_strike_chance=0.10；故只有此升級與 3 層時為 0.10+3×0.05=0.25。
+- CriticalStrike.chance 的計算為 clamp(base_chance + generic critical_strike_chance + 近戰或遠程專屬 chance + weapon modifier, 0, 1)。Broker archetype base_critical_strike_chance=0.10；故只有此升級與 3 層時為 0.10+3×0.05=0.25。
 - 此升級只切換 conditional critical-strike-chance stat；堆疊持續時間、上限、回充倍率與逐層衰退均由核心 Chemical Dependency buff 控制。
 
 ## 原始碼依據
@@ -29,14 +29,14 @@
 
 - **爆擊率算例**：Broker 基礎 10%＋3 層×5 個百分點=25%，再加武器或其他天賦修正後才套用 0%–100% 上下限。
 - **層數算例**：1 層為 +5 個百分點、2 層 +10 個百分點、3 層 +15 個百分點。
-- 25% 算例尚未計入武器 handling template、近戰／遠距專屬爆擊率及其他天賦修正；最終機率會被限制在 0% 到 100%。
-- 此項提供爆擊機率，不是每次攻擊保證爆擊，也不改變爆擊傷害倍率。
+- 25% 算例尚未計入武器 handling template、近戰／遠程專屬爆擊率及其他天賦修正；最終機率會被限制在 0% 到 100%。
+- 此項提供爆擊率，不是每次攻擊保證暴擊，也不改變暴擊傷害倍率。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`3356ae07`。
-- 繁中與英文均表示每一層化學依賴性提升爆擊機率；程式值為每層 0.05，按層數加到通用爆擊率，而非爆擊傷害。
+- 繁中與英文均表示每一層化學依賴性提升爆擊率；程式值為每層 0.05，按層數加到通用爆擊率，而非暴擊傷害。
 
 ## 圖示來源
 

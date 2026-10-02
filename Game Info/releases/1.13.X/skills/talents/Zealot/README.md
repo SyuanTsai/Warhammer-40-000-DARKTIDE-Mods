@@ -9,13 +9,13 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/aaab981f-d4ba-4278-b79d-873fccac1faa" width="32" height="32" alt="獻祭手雷天賦圖示"> [獻祭手雷](#zealot_flame_grenade)<br>- Immolation Grenade | <ul><li>最多攜帶 3 枚；引爆後留下持續 15 秒的火焰區域。</li><li>持續灼傷範圍內的敵人；傷害隨難度、護甲和每次隨機值改變。</li></ul> | 閃擊 |
-| <img src="https://github.com/user-attachments/assets/8d21cff6-d918-4e91-8426-b98634887a03" width="32" height="32" alt="信仰之刃天賦圖示"> [信仰之刃](#zealot_throwing_knives)<br>- Blades of Faith | <ul><li>以 12 把投擲刀取代手榴彈，可在衝刺時快速投擲。</li><li>近戰擊殺菁英或專家敵人補 1 把；撿取彈藥也能補充。</li></ul> | 閃擊 |
-| <img src="https://github.com/user-attachments/assets/73777d2d-3727-47dc-8093-0d25ec6a3cfd" width="32" height="32" alt="眩暈風暴手雷天賦圖示"> [眩暈風暴手雷](#zealot_improved_stun_grenade)<br>- Stunstorm Grenade | <ul><li>震撼手榴彈的爆炸半徑增加 50%，最大半徑由 8 公尺提高為 12 公尺。</li><li>最多攜帶 3 枚；命中後附加持續 8 秒的電擊效果。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/8d21cff6-d918-4e91-8426-b98634887a03" width="32" height="32" alt="信仰之刃天賦圖示"> [信仰之刃](#zealot_throwing_knives)<br>- Blades of Faith | <ul><li>以 12 把投擲刀取代手雷，可在衝刺時快速投擲。</li><li>近戰擊殺精英或專家敵人補 1 把；撿取彈藥也能補充。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/73777d2d-3727-47dc-8093-0d25ec6a3cfd" width="32" height="32" alt="眩暈風暴手雷天賦圖示"> [眩暈風暴手雷](#zealot_improved_stun_grenade)<br>- Stunstorm Grenade | <ul><li>震撼手雷的爆炸半徑增加 50%，最大半徑由 8 公尺提高為 12 公尺。</li><li>最多攜帶 3 枚；命中後附加持續 8 秒的電擊效果。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/da0a72a9-f944-4291-a753-a8c87b696ad5" width="32" height="32" alt="恩賜天賦圖示"> [恩賜](#zealot_toughness_damage_reduction_coherency_improved)<br>- Benediction | <ul><li>你與協同範圍內的隊友受到的韌性傷害降低 15%。</li><li>取代原有的 7.5% 光環；相同光環不重複套用。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/ac37d3b8-a749-4604-98ba-2781c220761f" width="32" height="32" alt="純潔信標天賦圖示"> [純潔信標](#zealot_corruption_healing_coherency_improved)<br>- Beacon of Purity | <ul><li>每秒為你與協同範圍內的隊友清除 1.5 點腐敗。</li><li>只清除目前傷口內的腐敗，不能恢復已失去的完整傷口。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/9e356573-f707-473e-8a64-943ae670aeeb" width="32" height="32" alt="熱忱天賦圖示"> [熱忱](#zealot_stamina_cost_multiplier_aura)<br>- Zealous | <ul><li>你與協同範圍內的隊友，耐力消耗降低 15%。</li><li>耐力開始恢復前的等待時間縮短 0.15 秒。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/4ae30922-3e39-4ded-8e19-35ec595befa0" width="32" height="32" alt="不屈靈魂合唱天賦圖示"> [不屈靈魂合唱](#zealot_bolstering_prayer)<br>- Chorus of Spiritual Fortitude | <ul><li>引導約 3.67 秒，完整引導約有 5 次脈衝；基礎冷卻 60 秒。</li><li>為你與協同隊友恢復韌性、暫時提高韌性上限，並提供短暫免死及一般踉蹌免疫。</li><li>脈衝使附近敵人踉蹌並壓制敵人。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/bd841f6f-e0ff-4cfa-a3ac-f7d08bfbc80e" width="32" height="32" alt="有信者之怒天賦圖示"> [有信者之怒](#zealot_attack_speed_post_ability)<br>- Fury of the Faithful | <ul><li>向前衝鋒，恢復 50% 最大韌性；基礎冷卻 30 秒。</li><li>攻擊速度提高 20%，持續約 11 秒。</li><li>3 秒內下一次合格近戰命中增加 25% 傷害、必定爆擊並獲得 100% 撕裂。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/bd841f6f-e0ff-4cfa-a3ac-f7d08bfbc80e" width="32" height="32" alt="有信者之怒天賦圖示"> [有信者之怒](#zealot_attack_speed_post_ability)<br>- Fury of the Faithful | <ul><li>向前衝鋒，恢復 50% 最大韌性；基礎冷卻 30 秒。</li><li>攻擊速度提高 20%，持續約 11 秒。</li><li>3 秒內下一次合格近戰命中增加 25% 傷害、必定暴擊並獲得 100% 撕裂。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/1ca3f2a1-fbd3-41f7-83f3-895522b50b29" width="32" height="32" alt="神聖事業天賦圖示"> [神聖事業](#zealot_channel_grants_toughness_damage_reduction)<br>- Holy Cause | <ul><li>合唱每次脈衝增加 8% 韌性減傷，最多 5 層、40%。</li><li>作用於你與協同隊友；持續 10 秒，後續脈衝重新計時。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/1abe7e62-3810-4680-9c49-7f6091782ab6" width="32" height="32" alt="教宗之喚天賦圖示"> [教宗之喚](#zealot_channel_grants_damage)<br>- Ecclesiarch's Call | <ul><li>合唱每次脈衝增加 6% 傷害，最多 5 層、30%。</li><li>作用於你與協同隊友；持續 10 秒，後續脈衝重新計時。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/35487761-88d3-4091-ac1b-bde3020e300e" width="32" height="32" alt="倍增狂熱天賦圖示"> [倍增狂熱](#zealot_additional_charge_of_ability)<br>- Redoubled Zeal | <ul><li>有信者之怒可儲存 2 次使用。</li><li>用完兩次後依序恢復：約 30 秒回一格、60 秒回滿。</li></ul> | 能力 |
@@ -25,17 +25,17 @@
 | <img src="https://github.com/user-attachments/assets/9e0abda0-3593-44eb-8ca8-9a7f282bcfd8" width="32" height="32" alt="殉道者之願天賦圖示"> [殉道者之願](#zealot_restore_stealth_cd_on_damage)<br>- Martyr's Purpose | <ul><li>生命越低，戰鬥技能冷卻恢復越快。</li><li>生命剩 25% 或更低時達上限，每秒額外恢復相當於 0.5 秒的基礎冷卻。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/9768a27f-3a7b-47c7-a334-7f1f57db287a" width="32" height="32" alt="虔誠刺客天賦圖示"> [虔誠刺客](#zealot_backstab_kills_restore_cd)<br>- Pious Cut-Throat | <ul><li>近戰背刺或弱點命中後，接下來 2 秒加快技能冷卻恢復，不要求擊殺。</li><li>每秒額外恢復相當於 0.75 秒的基礎冷卻；再次命中只重新計時。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/e185301f-93c5-4f93-8c09-7aa351258173" width="32" height="32" alt="死亡禱文天賦圖示"> [死亡禱文](#zealot_crits_grant_cd)<br>- Invocation of Death | <ul><li>近戰爆擊命中後，加快技能冷卻恢復約 3.25 秒；每次揮擊最多觸發一次。</li><li>每秒額外恢復相當於 1 秒的基礎冷卻；再次觸發只重新計時。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/d95452d2-3c7a-419f-9461-3d32dc95ce2f" width="32" height="32" alt="無盡狂怒天賦圖示"> [無盡狂怒](#zealot_fotf_refund_cooldown)<br>- Unrelenting Fury | <ul><li>有信者之怒施放後 5 秒內擊殺菁英或專家，返還單次充能的 20%。</li><li>每次施放最多一次；30 秒基礎冷卻可返還 6 秒進度。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/d95452d2-3c7a-419f-9461-3d32dc95ce2f" width="32" height="32" alt="無盡狂怒天賦圖示"> [無盡狂怒](#zealot_fotf_refund_cooldown)<br>- Unrelenting Fury | <ul><li>有信者之怒施放後 5 秒內擊殺精英或專家，返還單次充能的 20%。</li><li>每次施放最多一次；30 秒基礎冷卻可返還 6 秒進度。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/8532537c-fff4-4014-8ee6-e16572b9cdeb" width="32" height="32" alt="完美主義者天賦圖示"> [完美主義者](#zealot_stealth_cooldown_regeneration)<br>- Perfectionist | <ul><li>隱身中以解除隱身的攻擊擊殺敵人，返還技能冷卻，每次隱身最多一次。</li><li>巨獸返還 50%、歐格林 30%、其他敵人 15%；30 秒冷卻分別返還 15、9、4.5 秒進度。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/382b6c6a-80b7-4c64-81f9-63d37df43671" width="32" height="32" alt="死戰到底天賦圖示"> [死戰到底](#zealot_resist_death)<br>- Until Death | <ul><li>承受致命傷害時獲得 8 秒免死效果。</li><li>效果結束後冷卻 120 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/5ac2048f-e48f-49ea-b739-e9c3301e66da" width="32" height="32" alt="殉道天賦圖示"> [殉道](#zealot_martyrdom)<br>- Martyrdom | <ul><li>每失去一整格生命，近戰傷害增加 10%，最多 5 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3e61d06f-e542-40cc-acf4-88e2493cc594" width="32" height="32" alt="不滅意志天賦圖示"> [不滅意志](#zealot_martyrdom_grants_toughness)<br>- I Shall Not Fall | <ul><li>殉道每缺少一格生命傷口，韌性承傷降低 7.5%，最多 5 格。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/2a096b34-3273-406a-82fc-23c774fcaedf" width="32" height="32" alt="狂燥之心天賦圖示"> [狂燥之心](#zealot_martyrdom_grants_attack_speed)<br>- Maniac | <ul><li>殉道每缺少一格生命傷口，近戰攻擊速度提高 6%，最多 5 格。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/0a442a9a-29b1-4a94-b85c-5772f9d85d7c" width="32" height="32" alt="命定審判天賦圖示"> [命定審判](#zealot_quickness_passive)<br>- Inexorable Judgement | <ul><li>移動每累積 5 公尺獲得 1 層勢能，最多 20 層；衝刺距離計雙倍。</li><li>命中時將目前層數轉為 6 秒增益；近戰或遠距命中皆可觸發。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/0a442a9a-29b1-4a94-b85c-5772f9d85d7c" width="32" height="32" alt="命定審判天賦圖示"> [命定審判](#zealot_quickness_passive)<br>- Inexorable Judgement | <ul><li>移動每累積 5 公尺獲得 1 層勢能，最多 20 層；衝刺距離計雙倍。</li><li>命中時將目前層數轉為 6 秒增益；近戰或遠程命中皆可觸發。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/54fb5877-384e-4378-885f-95cb1daed864" width="32" height="32" alt="懲戒者姿態天賦圖示"> [懲戒者姿態](#zealot_momentum_toughness_replenish)<br>- Retributor's Stance | <ul><li>命定審判增益期間，每層每秒恢復最大韌性的 0.5%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/b51610bf-5b84-45d0-97fe-abedede00719" width="32" height="32" alt="飄忽身形天賦圖示"> [飄忽身形](#zealot_quickness_passive_dodge_stacks)<br>- Inebriate's Poise | <ul><li>成功閃避時額外獲得 3 層命定審判勢能。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9f0fd090-59a4-4098-b4ed-c2bdfa7d1eab" width="32" height="32" alt="吊命聖徒天賦圖示"> [吊命聖徒](#zealot_resist_death_heal)<br>- Holy Revenant | <ul><li>死戰到底觸發時擊退附近敵人。</li><li>免死期間按造成傷害累積治療額度；近戰換算率為一般傷害的 3 倍。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc" width="32" height="32" alt="熾熱虔誠天賦圖示"> [熾熱虔誠](#zealot_fanatic_rage)<br>- Blazing Piety | <ul><li>附近敵人死亡與自身爆擊累積狂怒；25 層時提高 15 個百分點爆擊率，持續 8 秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc" width="32" height="32" alt="熾熱虔誠天賦圖示"> [熾熱虔誠](#zealot_fanatic_rage)<br>- Blazing Piety | <ul><li>附近敵人死亡與自身暴擊累積狂怒；25 層時提高 15 個百分點爆擊率，持續 8 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/0fd06e0a-ef14-4228-8cd5-02980c989f05" width="32" height="32" alt="死忠天賦圖示"> [死忠](#zealot_fanatic_rage_toughness_on_max)<br>- Stalwart | <ul><li>觸發狂怒時恢復相當於最大韌性的 50%；狂怒期間且計數維持 25 層時，韌性承傷降低 25%，每秒恢復最大韌性的 2%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9d85e538-7fb1-4308-99b9-7ed9408eead2" width="32" height="32" alt="正義勇士天賦圖示"> [正義勇士](#zealot_fanatic_rage_improved)<br>- Righteous Warrior | <ul><li>狂怒的爆擊率加成由 15 提高至 25 個百分點。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d1133aca-9af8-4b47-934f-d073de0d4e1c" width="32" height="32" alt="迅疾狂熱天賦圖示"> [迅疾狂熱](#zealot_shared_fanatic_rage)<br>- Infectious Zeal | <ul><li>狂怒開始時，當下協同隊友增加 10 個百分點爆擊率，持續 8 秒。</li></ul> | 鑰石 |
@@ -43,14 +43,14 @@
 | <img src="https://github.com/user-attachments/assets/aee84e86-4f0b-4d69-87e7-9602f27396e2" width="32" height="32" alt="永恆天賦圖示"> [永恆](#zealot_quickness_increased_duration)<br>- Eternal | <ul><li>命定審判的啟動增益持續時間由 6 秒延長至 10 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/9bc683a7-534a-4244-8381-1a6c0463003f" width="32" height="32" alt="危境之際天賦圖示"> [危境之際](#zealot_corruption_resistance_stacking)<br>- On the Brink | <ul><li>殉道每缺少一格完整傷口，腐敗傷害承受倍率降低 10%；最多計 5 格，最高降低 50%。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/121a9a79-f78e-4274-a0ac-4a1683244ae7" width="32" height="32" alt="狂熱朝聖者天賦圖示"> [狂熱朝聖者](#zealot_resist_death_ability)<br>- Zealous Pilgrim | <ul><li>使用戰鬥技能後獲得 4 秒免死效果。</li><li>隱身技能在退出隱身後生效；聖物技能在卸下聖物後生效。</li><li>無法殺死期間，傷害及攻擊速度各提高 10%。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/f88c569e-c89d-4850-b84b-17c5af69faf0" width="32" height="32" alt="烈焰與怒火天賦圖示"> [烈焰與怒火](#zealot_resist_death_fire)<br>- Fire and Fury | <ul><li>免死期間的武器命中施加燃燒；近戰加 3 層、遠距加 1 層，本天賦加至最多 12 層。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/f88c569e-c89d-4850-b84b-17c5af69faf0" width="32" height="32" alt="烈焰與怒火天賦圖示"> [烈焰與怒火](#zealot_resist_death_fire)<br>- Fire and Fury | <ul><li>免死期間的武器命中施加燃燒；近戰加 3 層、遠程加 1 層，本天賦加至最多 12 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/439077af-f74c-4c06-8a8a-dbeab52d9a53" width="32" height="32" alt="復活天賦圖示"> [復活](#zealot_resist_death_golden_toughness)<br>- Risen | <ul><li>免死期間，每秒增加 5 點最大韌性，最多 8 層、共 40 點；加成持續 5 秒。</li><li>最大韌性增加時，韌性傷害值不變，因此目前韌性也會同步增加。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/96dc3500-2674-43bb-9fa9-10992eb3bcb8" width="32" height="32" alt="天災天賦圖示"> [天災](#zealot_crits_apply_bleed)<br>- Scourge | <ul><li>近戰爆擊施加 2 層流血；攻擊流血敵人增加近戰爆擊率。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="背刺者天賦圖示"> [背刺者](#zealot_backstab_damage)<br>- Backstabber | <ul><li>近戰背刺與遠距側襲傷害增加 25%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="32" height="32" alt="背刺者天賦圖示"> [背刺者](#zealot_backstab_damage)<br>- Backstabber | <ul><li>近戰背刺與遠程側襲傷害增加 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/69a5f7ea-11bc-41ae-8758-86a14213a116" width="32" height="32" alt="蔑視天賦圖示"> [蔑視](#zealot_multi_hits_increase_damage)<br>- Disdain | <ul><li>上一次近戰揮擊每命中一名敵人，使下一次近戰傷害增加 5%，最多 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/162368d9-1a5d-4273-a2cd-4ab8c3c22a6d" width="32" height="32" alt="淨化不潔天賦圖示"> [淨化不潔](#zealot_increased_damage_vs_resilient)<br>- Purge the Unclean | <ul><li>對被感染及不屈護甲類型的傷害增加 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9e5a26dc-8d4f-4c94-9dcd-fdc807cc1d48" width="32" height="32" alt="持續突擊天賦圖示"> [持續突擊](#zealot_hits_grant_stacking_damage)<br>- Sustained Assault | <ul><li>近戰命中增加 4% 近戰傷害，持續 5 秒，最多 5 層。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/c3395dd2-63a2-430a-9eec-fb9ecd995308" width="32" height="32" alt="堅韌信仰天賦圖示"> [堅韌信仰](#zealot_crits_reduce_toughness_damage)<br>- Enduring Faith | <ul><li>爆擊命中後，韌性受到的傷害降低 40%，持續 4 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c3395dd2-63a2-430a-9eec-fb9ecd995308" width="32" height="32" alt="堅韌信仰天賦圖示"> [堅韌信仰](#zealot_crits_reduce_toughness_damage)<br>- Enduring Faith | <ul><li>暴擊命中後，韌性受到的傷害降低 40%，持續 4 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7d6f33d9-5ed5-49d9-9f4c-333565e17216" width="32" height="32" alt="精力復甦天賦圖示"> [精力復甦](#zealot_toughness_on_dodge)<br>- Second Wind | <ul><li>成功閃避攻擊後恢復 15% 最大韌性，觸發冷卻 0.5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/79a0a582-a493-49eb-a470-ab7ed7e7f782" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fb4eb2d4-1dee-4596-8262-2c99311be059" width="32" height="32" alt="泰拉之音天賦圖示"> [泰拉之音](#zealot_toughness_while_shooting)<br>- The Voice of Terra | <ul><li>射擊期間每秒恢復 10% 最大韌性，停火後再持續 0.5 秒。</li></ul> | 技能 |
@@ -58,7 +58,7 @@
 | <img src="https://github.com/user-attachments/assets/ba989f49-6c6c-4457-bc33-f09ab8342c1f" width="32" height="32" alt="為了帝皇天賦圖示"> [為了帝皇](#zealot_reduced_damage_on_wound)<br>- Bleed for the Emperor | <ul><li>單次生命傷害若會跨過下一個傷口分界，該次生命傷害降低 40%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/eb0f681c-574a-447c-b917-9413f146fd72" width="32" height="32" alt="惡毒贈禮天賦圖示"> [惡毒贈禮](#zealot_toughness_on_heavy_kills)<br>- Vicious Offering | <ul><li>重擊擊殺敵人時，額外恢復 10% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f86258bf-77ad-44c3-99b0-628042e47315" width="32" height="32" alt="韌性減傷天賦圖示"> [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1)<br>- Toughness Damage Reduction | <ul><li>韌性受到的傷害降低 10%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/dcdcc79a-ad1b-4fb3-9ac1-a6fcc1a71a56" width="32" height="32" alt="決鬥者天賦圖示"> [決鬥者](#zealot_increased_crit_and_weakspot_damage_after_dodge)<br>- Duellist | <ul><li>成功閃避後，弱點／爆擊的額外傷害增加 50%，持續 3 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/dcdcc79a-ad1b-4fb3-9ac1-a6fcc1a71a56" width="32" height="32" alt="決鬥者天賦圖示"> [決鬥者](#zealot_increased_crit_and_weakspot_damage_after_dodge)<br>- Duellist | <ul><li>成功閃避後，弱點／暴擊的額外傷害增加 50%，持續 3 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/42daeb1b-ec7d-4f9b-bc58-f89c1de5d9b4" width="32" height="32" alt="輕蔑之盾天賦圖示"> [輕蔑之盾](#zealot_ally_damage_taken_reduced)<br>- Shield of Contempt | <ul><li>你或隊友生命受傷後，受傷者獲得 60% 減傷，持續 4 秒；觸發冷卻 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a2373334-1398-4475-b263-5b2d56cf8b90" width="32" height="32" alt="褻瀆必懲天賦圖示"> [褻瀆必懲](#zealot_push_attacks_attack_speed)<br>- Punish Impiety | <ul><li>推擊後的追加攻擊命中時，近戰攻速提高 10%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/52db08a6-3729-466e-ac16-d02a1a7ebecb" width="32" height="32" alt="勃然大怒天賦圖示"> [勃然大怒](#zealot_damage_boosts_movement)<br>- Thy Wrath be Swift | <ul><li>受傷後移動速度提高 15%，持續 2 秒。</li><li>免疫一般受擊造成的減速與踉蹌。</li></ul> | 技能 |
@@ -67,7 +67,7 @@
 | <img src="https://github.com/user-attachments/assets/fbb6b38f-57a3-4659-bf32-04d1edc4d989" width="32" height="32" alt="內憂外患天賦圖示"> [內憂外患](#zealot_toughness_in_melee)<br>- Enemies Within, Enemies Without | <ul><li>5 公尺內有敵人時，持續恢復韌性；每秒最高 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c184be29-e45d-4968-acc5-ae67779d90cc" width="32" height="32" alt="信仰狂亂天賦圖示"> [信仰狂亂](#zealot_attack_speed)<br>- Faithful Frenzy | <ul><li>近戰攻速提高 10%，移動速度提高 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/793e953e-5b99-416a-99c8-c6d185df7cc9" width="32" height="32" alt="信仰之勇天賦圖示"> [信仰之勇](#zealot_additional_wounds)<br>- Faith's Fortitude | <ul><li>傷口數增加 2 格；不增加最大生命。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/f1f336d8-dc80-46a3-b756-2df08b26f541" width="32" height="32" alt="鮮血受膏天賦圖示"> [鮮血受膏](#zealot_increase_ranged_close_damage)<br>- Anoint in Blood | <ul><li>持用遠距武器時，近距離傷害最多提高 25%；距離增加時遞減。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/f1f336d8-dc80-46a3-b756-2df08b26f541" width="32" height="32" alt="鮮血受膏天賦圖示"> [鮮血受膏](#zealot_increase_ranged_close_damage)<br>- Anoint in Blood | <ul><li>持用遠程武器時，近距離傷害最多提高 25%；距離增加時遞減。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7af1f56a-9932-428e-91c5-47b14836d6cb" width="32" height="32" alt="不屈之志天賦圖示"> [不屈之志](#zealot_uninterruptible_no_slow_heavies)<br>- Unfaltering | <ul><li>重擊蓄力時免疫一般踉蹌，並取消蓄力動作本身的移動減速。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7a00054d-1b7e-448e-a9f3-eee60922b19e" width="32" height="32" alt="靈活還擊天賦圖示"> [靈活還擊](#zealot_stacking_melee_damage_after_dodge)<br>- Riposte | <ul><li>成功閃避後近戰傷害每層提高 5%，最多 3 層，持續 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bcb76321-c69e-466f-b588-a894e8c63443" width="32" height="32" alt="狂熱不懈天賦圖示"> [狂熱不懈](#zealot_sprint_improvements)<br>- Relentless Fervor | <ul><li>衝刺速度提高 10%、耐力消耗降低 10%；連續衝刺 1 秒後免疫減速。</li></ul> | 技能 |
@@ -77,15 +77,15 @@
 | <img src="https://github.com/user-attachments/assets/dbe8719f-76fb-444c-a79d-2bf116b628fb" width="32" height="32" alt="背水一戰天賦圖示"> [背水一戰](#zealot_more_damage_when_low_on_stamina)<br>- Desperation | <ul><li>耐力越低，近戰傷害越高；耐力耗盡時最多提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6406ef43-19df-4cab-9091-e5c490d72cef" width="32" height="32" alt="刻不容緩天賦圖示"> [刻不容緩](#zealot_melee_crits_restore_stamina)<br>- No Respite | <ul><li>近戰爆擊命中時恢復 10% 最大耐力；冷卻 1 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ef521c17-0aae-4e01-b54c-9a25d1f9d792" width="32" height="32" alt="神恩庇護天賦圖示"> [神恩庇護](#zealot_revive_speed)<br>- Providence | <ul><li>救起倒地隊友的速度提高 25%；協助隊友後，對方獲得移速與韌性減傷。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/9b7dda36-1d18-41b4-9e28-3cfd26f0ad66" width="32" height="32" alt="弒除瀆者天賦圖示"> [弒除瀆者](#zealot_damage_vs_elites)<br>- Abolish Blasphemers | <ul><li>對菁英敵人的傷害提高 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/9b7dda36-1d18-41b4-9e28-3cfd26f0ad66" width="32" height="32" alt="弒除瀆者天賦圖示"> [弒除瀆者](#zealot_damage_vs_elites)<br>- Abolish Blasphemers | <ul><li>對精英敵人的傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/2ea26a3b-1222-4c56-8120-26a65b4595fa" width="32" height="32" alt="傲慢天賦圖示"> [傲慢](#zealot_weakspot_damage_reduction)<br>- Hubris | <ul><li>弱點擊殺後減傷 15%，持續 4 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0c800eb0-7fc1-4c5c-b3c2-67d20a7db2ff" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_4)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 10%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="32" height="32" alt="頭號目標天賦圖示"> [頭號目標](#zealot_elite_kills_empowers)<br>- Prime Target | <ul><li>擊殺菁英後增傷 10%，並在 5 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="32" height="32" alt="頭號目標天賦圖示"> [頭號目標](#zealot_elite_kills_empowers)<br>- Prime Target | <ul><li>擊殺精英後增傷 10%，並在 5 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5d469457-ce3e-4c4f-ac25-c0759b30b61f" width="32" height="32" alt="敵後行動天賦圖示"> [敵後行動](#zealot_suppress_on_backstab_kill)<br>- Behind the Lines | <ul><li>重擊背刺擊殺後，壓制自身 8 公尺內的敵人；冷卻 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4bf327a5-94f0-4af9-ad51-b3380308846e" width="32" height="32" alt="殺戮時刻天賦圖示"> [殺戮時刻](#zealot_backstab_periodic_damage)<br>- Time to Kill | <ul><li>下一次有效近戰背刺增加 50% 傷害；觸發後冷卻 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9b626554-120f-43b1-b152-bf21224b6a42" width="32" height="32" alt="逆境而上天賦圖示"> [逆境而上](#zealot_offensive_vs_many)<br>- Against the Odds | <ul><li>5 公尺內每 2 名敵人提供 2% 傷害與 10% 順劈能力，最多 5 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e1dda6ab-d49e-4d08-bd44-f684dae4913f" width="32" height="32" alt="自掏腰包天賦圖示"> [自掏腰包](#zealot_reload_from_melee)<br>- Out of Pocket | <ul><li>近戰擊殺時，從備用彈藥補回彈匣缺額的 10%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/ec2c5209-fa69-4340-b6d9-bca627da0840" width="32" height="32" alt="排隊等候天賦圖示"> [排隊等候](#zealot_reduced_damage_from_ranged)<br>- Wait in Line | <ul><li>受到遠距攻擊時，傷害降低 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/ec2c5209-fa69-4340-b6d9-bca627da0840" width="32" height="32" alt="排隊等候天賦圖示"> [排隊等候](#zealot_reduced_damage_from_ranged)<br>- Wait in Line | <ul><li>受到遠程攻擊時，傷害降低 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/28bd1a77-6a4b-44e5-b46c-1d1a334479e7" width="32" height="32" alt="神聖工具天賦圖示"> [神聖工具](#zealot_weapon_special_damage)<br>- Holy Tools | <ul><li>啟動近戰武器特殊動作後，5 秒內下一次近戰攻擊增傷 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5ddb9790-0039-4a22-97e6-8ff7c82719c0" width="32" height="32" alt="為您撐腰天賦圖示"> [為您撐腰](#zealot_melee_kills_restore_toughness_to_target)<br>- Got Your Back | <ul><li>近戰擊殺正鎖定隊友的敵人，替隊友恢復 7.5% 最大韌性，自己額外恢復 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8137f892-5370-4a69-b790-556f579414d2" width="32" height="32" alt="淨化仇恨天賦圖示"> [淨化仇恨](#zealot_dmg_vs_burning_electrocuted)<br>- Purifying Hatred | <ul><li>對燃燒或遭電擊的敵人增加 15% 傷害；兩者同時成立可合計 30%。</li></ul> | 技能 |
@@ -110,7 +110,7 @@
 
 #### 繁中原文勘誤
 
-- 繁中原文將英文「Burning and Staggering」寫成「燃燒並使敵人暈眩」；此處應為「燃燒並使敵人踉蹌」，不能把踉蹌當成暈眩。
+- 繁中原文將英文「Burning and Staggering」寫成「燃燒並使敵人暈眩」；此處應為「燃燒並使敵人踉蹌」，不能把踉蹌當成眩暈。
 
 [詳細資料](zealot_flame_grenade.md) · [返回目錄](#talent-index)
 
@@ -121,11 +121,11 @@
 
 <img src="https://github.com/user-attachments/assets/8d21cff6-d918-4e91-8426-b98634887a03" width="72" height="72" alt="信仰之刃天賦圖示">
 
-- **運作方式**：以投擲刀取代手榴彈，最多攜帶 12 把，可在衝刺時投擲。一般手榴彈補給無法補充投擲刀。
+- **運作方式**：以投擲刀取代手雷，最多攜帶 12 把，可在衝刺時投擲。一般手雷補給無法補充投擲刀。
 
-- **傷害與護甲**：普通命中、沒有其他修正時，無護甲部位的基準傷害為 585 點；防彈護甲為 585 × 0.8 = 468 點，甲殼護甲的普通命中基準為 0。弱點、爆擊、穿甲與敵人部位會另改變結果，不能把 0 解讀為任何情況都無法傷害重甲敵人。
+- **傷害與護甲**：普通命中、沒有其他修正時，無護甲部位的基準傷害為 585 點；防彈護甲為 585 × 0.8 = 468 點，甲殼護甲的普通命中基準為 0。弱點、暴擊、穿甲與敵人部位會另改變結果，不能把 0 解讀為任何情況都無法傷害重甲敵人。
 
-- **近戰補充**：由你以近戰擊殺菁英或專家敵人時，補回 1 把，最多補到 12 把。例如原有 11 把，完成一次合格擊殺後變成 11 + 1 = 12 把。
+- **近戰補充**：由你以近戰擊殺精英或專家敵人時，補回 1 把，最多補到 12 把。例如原有 11 把，完成一次合格擊殺後變成 11 + 1 = 12 把。
 
 - **彈藥補充算例**：沒有額外補給倍率時，小型彈藥補給恢復 12 × 15% = 1.8，無條件進位為 2 把；大型彈藥補給為 12 × 50% = 6 把；部署式彈藥箱可補滿。任務的彈藥補給倍率會影響這些數量，最終仍不能超過 12 把。
 
@@ -140,7 +140,7 @@
 
 <img src="https://github.com/user-attachments/assets/73777d2d-3727-47dc-8093-0d25ec6a3cfd" width="72" height="72" alt="眩暈風暴手雷天賦圖示">
 
-- **運作方式**：強化原有震撼手榴彈，爆炸半徑增加 50%；最多攜帶 3 枚，引信為 1.5 秒。
+- **運作方式**：強化原有震撼手雷，爆炸半徑增加 50%；最多攜帶 3 枚，引信為 1.5 秒。
 
 - **範圍算例**：只有此天賦修正時，最大半徑為 8 × 1.5 = 12 公尺，近距離區域半徑為 2 × 1.5 = 3 公尺。範圍判定仍會受爆炸位置與遮蔽物影響。
 
@@ -148,7 +148,7 @@
 
 - **傷害算例**：只計電擊的週期傷害，沒有其他修正時，單次對無護甲部位為 8 × 0.5 = 4 點，對防彈護甲為 8 × 1 = 8 點；初次爆炸另計。
 
-- **例外**：已處於踉蹌狀態的瘟疫爆者不再承受這段週期電擊；這不代表牠完全免疫手榴彈的爆炸或控制。
+- **例外**：已處於踉蹌狀態的瘟疫爆者不再承受這段週期電擊；這不代表牠完全免疫手雷的爆炸或控制。
 
 [詳細資料](zealot_improved_stun_grenade.md) · [返回目錄](#talent-index)
 
@@ -243,9 +243,9 @@
 
 - **攻速加成**：獲得 20% 攻擊速度，生效約 11 秒。只計這份加成，受影響的 1 秒動作變成 1 ÷ 1.2 ≈ 0.833 秒；再次施放會重設效果的持續時間。
 
-- **下一次近戰命中**：3 秒內的下一次合格近戰命中增加 25% 近戰傷害、必定爆擊，並獲得 100% 近戰撕裂；推擊與遠距命中不消耗這次強化。
+- **下一次近戰命中**：3 秒內的下一次合格近戰命中增加 25% 近戰傷害、必定暴擊，並獲得 100% 近戰撕裂；推擊與遠程命中不消耗這次強化。
 
-- **傷害算例**：先只看近戰傷害階段，基礎 100 點變成 100 × 1.25 = 125 點；已有同階段 20% 增傷時則為 145 點。爆擊的額外傷害與撕裂對護甲的影響另算，不能把 125 當成所有武器的最終傷害。
+- **傷害算例**：先只看近戰傷害階段，基礎 100 點變成 100 × 1.25 = 125 點；已有同階段 20% 增傷時則為 145 點。暴擊的額外傷害與撕裂對護甲的影響另算，不能把 125 當成所有武器的最終傷害。
 
 - **特殊攻擊**：部分武器啟動特殊效果、並持續黏著敵人攻擊時，可保留強化到該段攻擊結束；實際行為依武器而定。
 
@@ -309,13 +309,13 @@
 
 - **運作方式**：進入隱身 3 秒，基礎冷卻 30 秒、1 次充能。期間移動速度提高 20%，爆擊率增加 100 個百分點，近戰撕裂提高 100%。
 
-- **傷害加成**：隱身期間，近戰背刺或遠距側襲傷害提高 150%；弱點／爆擊的額外傷害另提高 150%。背刺、側襲取決於攻擊種類與方向，不會同時把兩份 150% 加在同一次命中。
+- **傷害加成**：隱身期間，近戰背刺或遠程側襲傷害提高 150%；弱點／暴擊的額外傷害另提高 150%。背刺、側襲取決於攻擊種類與方向，不會同時把兩份 150% 加在同一次命中。
 
-- **靈巧傷害算例**：先固定攻擊種類、部位與護甲，只看靈巧加成；基礎部分 100、弱點／爆擊額外部分 50 時，由 150 變成 100 + 50 × (1 + 150%) = 225，整次增加 50%。額外部分若為 100，則由 200 變成 350，增加 75%。背刺與撕裂等其他因素另算。
+- **靈巧傷害算例**：先固定攻擊種類、部位與護甲，只看靈巧加成；基礎部分 100、弱點／暴擊額外部分 50 時，由 150 變成 100 + 50 × (1 + 150%) = 225，整次增加 50%。額外部分若為 100，則由 200 變成 350，增加 75%。背刺與撕裂等其他因素另算。
 
 - **移速算例**：基礎 5 公尺／秒、沒有其他修正時，變成 5 × 1.2 = 6 公尺／秒。
 
-- **提早解除**：一般射擊、有效攻擊命中、投擲手榴彈或飛刀，以及完成救援等動作可解除隱身；既有流血、燃燒等持續傷害不會單獨解除。剛進入隱身約 0.5 秒內，部分沒有造成傷害的動作有寬限。
+- **提早解除**：一般射擊、有效攻擊命中、投擲手雷或飛刀，以及完成救援等動作可解除隱身；既有流血、燃燒等持續傷害不會單獨解除。剛進入隱身約 0.5 秒內，部分沒有造成傷害的動作有寬限。
 
 [詳細資料](zealot_stealth.md) · [返回目錄](#talent-index)
 
@@ -371,7 +371,7 @@
 
 <img src="https://github.com/user-attachments/assets/9768a27f-3a7b-47c7-a334-7f1f57db287a" width="72" height="72" alt="虔誠刺客天賦圖示">
 
-- **觸發方式**：近戰命中弱點或從背後命中敵人時，戰鬥技能在接下來 2 秒額外加快恢復；不需要擊殺，遠距弱點命中不會觸發。
+- **觸發方式**：近戰命中弱點或從背後命中敵人時，戰鬥技能在接下來 2 秒額外加快恢復；不需要擊殺，遠程弱點命中不會觸發。
 
 - **重新計時方式**：再次觸發只重設持續時間，不會把每秒恢復速度疊高；弱點與背刺同時成立也不是兩倍。
 
@@ -388,7 +388,7 @@
 
 - **觸發方式**：近戰爆擊命中後，戰鬥技能在約 3.25 秒內加快恢復；同一次揮擊命中多個敵人，最多觸發一次。
 
-- **重新計時方式**：下一次揮擊再次爆擊可重新計時；每秒額外恢復速度不疊加。
+- **重新計時方式**：下一次揮擊再次暴擊可重新計時；每秒額外恢復速度不疊加。
 
 - **冷卻算例**：每秒額外恢復相當於 1 秒基礎冷卻的進度。單次完整效果通常在約第 1、2、3 秒各恢復一次，共額外 3 秒；自然回充正常時，這 3 秒合計約推進 6 秒冷卻。
 
@@ -401,7 +401,7 @@
 
 <img src="https://github.com/user-attachments/assets/d95452d2-3c7a-419f-9461-3d32dc95ce2f" width="72" height="72" alt="無盡狂怒天賦圖示">
 
-- **觸發方式**：使用有信者之怒後 5 秒內，擊殺菁英或專家敵人，返還單次充能所需冷卻的 20%；每次使用最多返還一次。
+- **觸發方式**：使用有信者之怒後 5 秒內，擊殺精英或專家敵人，返還單次充能所需冷卻的 20%；每次使用最多返還一次。
 
 - **冷卻算例**：基礎冷卻 30 秒時，返還 30 × 20% = 6 秒的自然回充進度；若還差 4 秒就回滿，只能補足缺少的部分。雙充能仍按一格計算，不會改成 60 × 20% = 12 秒。
 
@@ -498,9 +498,9 @@
 
 - **累積勢能**：移動每累積 5 公尺獲得 1 層勢能，最多 20 層；衝刺距離以雙倍計算，因此從 0 層到滿層需要一般移動 100 公尺，或衝刺 50 公尺。
 
-- **啟動方式**：近戰或遠距命中時，消耗目前勢能，換成持續 6 秒的加成。加成期間仍可累積下一輪勢能，但命中不會重新計時、重新消耗或提高這一輪的層數。
+- **啟動方式**：近戰或遠程命中時，消耗目前勢能，換成持續 6 秒的加成。加成期間仍可累積下一輪勢能，但命中不會重新計時、重新消耗或提高這一輪的層數。
 
-- **傷害與速度**：每層增加 1% 傷害、1% 近戰攻速及 1% 遠距攻速。滿 20 層時，基礎 100 點變成 100 × 1.2 = 120 點；受影響的 1 秒動作變成 1 ÷ 1.2 ≈ 0.833 秒。同階段其他加成先相加。
+- **傷害與速度**：每層增加 1% 傷害、1% 近戰攻速及 1% 遠程攻速。滿 20 層時，基礎 100 點變成 100 × 1.2 = 120 點；受影響的 1 秒動作變成 1 ÷ 1.2 ≈ 0.833 秒。同階段其他加成先相加。
 
 - **閃避加成**：每層另增加 0.5% 閃避距離、縮短 1% 連續閃避次數的恢復時間，並把閃避速度乘 1.005。20 層時距離為 1.1 倍、次數恢復時間為 0.8 倍、速度約 1.005²⁰ ≈ 1.105 倍。
 
@@ -560,11 +560,11 @@
 
 <img src="https://github.com/user-attachments/assets/7e8dfc94-5f9b-4292-a4e6-8190bebb48bc" width="72" height="72" alt="熾熱虔誠天賦圖示">
 
-- **累積方式**：25 公尺內每有一名敵人死亡，獲得 1 層；你自己的爆擊命中也獲得 1 層，近戰與遠距皆可，不要求由你擊殺附近死亡的敵人。
+- **累積方式**：25 公尺內每有一名敵人死亡，獲得 1 層；你自己的暴擊命中也獲得 1 層，近戰與遠程皆可，不要求由你擊殺附近死亡的敵人。
 
 - **狂怒效果**：累積 25 層後進入狂怒，爆擊率增加 15 個百分點，持續 8 秒；滿層後繼續觸發會重新計時。
 
-- **爆擊率算例**：原本爆擊率 5%，狂怒時變成 5% + 15% = 20%，不是 5% × 1.15。附近死亡與爆擊命中各自計數，因此爆擊擊殺可能同時符合兩項。
+- **爆擊率算例**：原本爆擊率 5%，狂怒時變成 5% + 15% = 20%，不是 5% × 1.15。附近死亡與暴擊命中各自計數，因此暴擊擊殺可能同時符合兩項。
 
 - **層數消退**：未進入狂怒時，連續 8 秒沒有新觸發便開始逐層下降；再次觸發重設等待時間。狂怒結束則清空計數，重新累積。
 
@@ -678,7 +678,7 @@
 
 <img src="https://github.com/user-attachments/assets/f88c569e-c89d-4850-b84b-17c5af69faf0" width="72" height="72" alt="烈焰與怒火天賦圖示">
 
-- **觸發方式**：免死期間，武器命中存活敵人會施加燃燒；近戰每次增加 3 層，遠距每次增加 1 層。本天賦最多把該敵人的這種燃燒加至 12 層；其他來源仍可能加得更高。
+- **觸發方式**：免死期間，武器命中存活敵人會施加燃燒；近戰每次增加 3 層，遠程每次增加 1 層。本天賦最多把該敵人的這種燃燒加至 12 層；其他來源仍可能加得更高。
 
 - **燃燒持續**：約每 0.5 秒結算一次，追加燃燒重設 4 秒保留時間；到期後逐次結算、逐層消退。已有 12 層以上時，本天賦不再加層，只重新計時。
 
@@ -719,7 +719,7 @@
 
 - **施加流血**：近戰爆擊造成傷害且敵人仍存活時，施加 2 層流血。近戰命中已流血的敵人時，獲得 1 層近戰爆擊率加成，每層增加 10 個百分點，最多 3 層，持續 3 秒；再次觸發會重新計時。
 
-- **觸發順序**：先檢查敵人是否已流血，再施加本次爆擊的流血。因此，對未流血敵人的第一次爆擊，不會僅因這次新加的流血就同時獲得爆擊率加成。近戰擊殺流血敵人的事件也可提供加成。
+- **觸發順序**：先檢查敵人是否已流血，再施加本次暴擊的流血。因此，對未流血敵人的第一次暴擊，不會僅因這次新加的流血就同時獲得爆擊率加成。近戰擊殺流血敵人的事件也可提供加成。
 
 - **爆擊率算例**：原本近戰爆擊率 5%，滿 3 層後為 5% + 3 × 10% = 35%，不是 5% × 1.3。
 
@@ -736,7 +736,7 @@
 
 <img src="https://github.com/user-attachments/assets/86a86e7f-6fc0-4eda-81e8-f13519f3cb8c" width="72" height="72" alt="背刺者天賦圖示">
 
-- **運作方式**：從敵人背後約 120 度扇形內近戰命中，或從敵人後半側以遠距攻擊命中時，傷害增加 25%。
+- **運作方式**：從敵人背後約 120 度扇形內近戰命中，或從敵人後半側以遠程攻擊命中時，傷害增加 25%。
 
 - **傷害算例**：固定相同武器、護甲及命中部位，沒有其他背刺／側襲加成時，該階段 100 點變成 100 × (1 + 25%) = 125 點。已有 20% 同類加成時，則由 120 點變成 100 × (1 + 20% + 25%) = 145 點，實際增幅約 20.83%。
 
@@ -790,9 +790,9 @@
 
 <img src="https://github.com/user-attachments/assets/c3395dd2-63a2-430a-9eec-fb9ecd995308" width="72" height="72" alt="堅韌信仰天賦圖示">
 
-- **運作方式**：爆擊命中後，韌性受到的傷害降低 40%，持續 4 秒；近戰與遠距爆擊都可觸發。
+- **運作方式**：暴擊命中後，韌性受到的傷害降低 40%，持續 4 秒；近戰與遠程暴擊都可觸發。
 
-- **重新計時方式**：再次爆擊命中會重設 4 秒倒數，不重複套用多份減傷。
+- **重新計時方式**：再次暴擊命中會重設 4 秒倒數，不重複套用多份減傷。
 
 - **減傷算例**：只計此效果，原有 100 點韌性傷害變成 100 × 0.6 = 60 點。若另有獨立的 10% 韌性減傷，則為 100 × 0.6 × 0.9 = 54 點，共降低 46%；這不是生命減傷。
 
@@ -906,9 +906,9 @@
 
 <img src="https://github.com/user-attachments/assets/dcdcc79a-ad1b-4fb3-9ac1-a6fcc1a71a56" width="72" height="72" alt="決鬥者天賦圖示">
 
-- **運作方式**：成功閃避攻擊後，靈巧傷害增加 50%，持續 3 秒；再次成功閃避會重新計時。此加成只加強弱點／爆擊的額外傷害，實際整次命中增幅依武器及目標而變。
+- **運作方式**：成功閃避攻擊後，靈巧傷害增加 50%，持續 3 秒；再次成功閃避會重新計時。此加成只加強弱點／暴擊的額外傷害，實際整次命中增幅依武器及目標而變。
 
-- **弱點算例**：固定未爆擊、沒有其他加成，基礎部分 100、弱點額外部分 50，原有 150 點變成 100 + 50 × 1.5 = 175 點，整次增加約 16.67%。額外部分若為 100，則 200 → 250 點，增加 25%。
+- **弱點算例**：固定未暴擊、沒有其他加成，基礎部分 100、弱點額外部分 50，原有 150 點變成 100 + 50 × 1.5 = 175 點，整次增加約 16.67%。額外部分若為 100，則 200 → 250 點，增加 25%。
 
 - **既有加成**：基礎與額外部分皆為 100，原有 25% 同階段加成時，由 100 + 100 × 1.25 = 225 點，變成 100 + 100 × (1 + 25% + 50%) = 275 點，實際增幅約 22.22%。
 
@@ -1031,7 +1031,7 @@
 
 <img src="https://github.com/user-attachments/assets/f1f336d8-dc80-46a3-b756-2df08b26f541" width="72" height="72" alt="鮮血受膏天賦圖示">
 
-- **運作方式**：持用遠距武器時，對 12.5 公尺內的目標最多增加 25% 傷害；超過 12.5 公尺後逐步降低，30 公尺起沒有這項加成。
+- **運作方式**：持用遠程武器時，對 12.5 公尺內的目標最多增加 25% 傷害；超過 12.5 公尺後逐步降低，30 公尺起沒有這項加成。
 
 - **距離算例**：固定其他條件，基礎 100 點傷害，在 12.5 公尺內為 100 × 1.25 = 125；在 16.875 公尺，加成為 25% × [1 − √((16.875 − 12.5) ÷ 17.5)] = 12.5%，所以是 112.5 點。
 
@@ -1087,7 +1087,7 @@
 
 <img src="https://github.com/user-attachments/assets/c97e932c-97b3-454c-9047-2145a5d9a49d" width="72" height="72" alt="無形之刃天賦圖示">
 
-- **運作方式**：攻擊目前沒有把你當成目標的敵人，傷害提高 20%；近戰與遠距皆可套用。
+- **運作方式**：攻擊目前沒有把你當成目標的敵人，傷害提高 20%；近戰與遠程皆可套用。
 
 - **傷害算例**：只計本天賦，100 × 1.2 = 120 點；若已有同階段 25% 增傷，則是 100 × (1 + 25% + 20%) = 145 點。敵人改為鎖定你後，這項條件增傷就不成立。
 
@@ -1145,7 +1145,7 @@
 
 - **觸發方式**：近戰爆擊命中時，恢復 10% 最大耐力；每秒最多觸發一次，不需要擊殺。
 
-- **恢復算例**：最大耐力 6，每次補 6 × 10% = 0.6 點；若只缺 0.2 點，就只恢復 0.2 點。一次橫掃爆擊命中多個敵人，仍受 1 秒冷卻限制。
+- **恢復算例**：最大耐力 6，每次補 6 × 10% = 0.6 點；若只缺 0.2 點，就只恢復 0.2 點。一次橫掃暴擊命中多個敵人，仍受 1 秒冷卻限制。
 
 [詳細資料](zealot_melee_crits_restore_stamina.md) · [返回目錄](#talent-index)
 
@@ -1169,7 +1169,7 @@
 
 <img src="https://github.com/user-attachments/assets/9b7dda36-1d18-41b4-9e28-3cfd26f0ad66" width="72" height="72" alt="弒除瀆者天賦圖示">
 
-- **運作方式**：對菁英敵人造成的傷害提高 15%，近戰與遠距皆適用；這個條件不等於所有特殊敵人或頭目。
+- **運作方式**：對精英敵人造成的傷害提高 15%，近戰與遠程皆適用；這個條件不等於所有特殊敵人或頭目。
 
 - **傷害算例**：100 × 1.15 = 115 點；若已有同階段 20% 傷害加成，則是 100 × (1 + 20% + 15%) = 135 點。
 
@@ -1182,7 +1182,7 @@
 
 <img src="https://github.com/user-attachments/assets/2ea26a3b-1222-4c56-8120-26a65b4595fa" width="72" height="72" alt="傲慢天賦圖示">
 
-- **觸發方式**：命中弱點並擊殺敵人後，受到的傷害降低 15%，持續 4 秒；近戰與遠距皆可，單純命中弱點不會觸發。
+- **觸發方式**：命中弱點並擊殺敵人後，受到的傷害降低 15%，持續 4 秒；近戰與遠程皆可，單純命中弱點不會觸發。
 
 - **持續與算例**：效果不累積層數，再次觸發會重新計時。只計本天賦時，100 × 0.85 = 85 點傷害；另有獨立 25% 減傷時為 100 × 0.85 × 0.75 = 63.75 點。
 
@@ -1208,9 +1208,9 @@
 
 <img src="https://github.com/user-attachments/assets/e3c3d16b-83a0-4dfb-a797-080ed9e63c4b" width="72" height="72" alt="頭號目標天賦圖示">
 
-- **觸發方式**：擊殺菁英敵人後，傷害提高 10%，持續 5 秒；期間每秒恢復 3% 最大韌性，完整 5 秒共 15%。
+- **觸發方式**：擊殺精英敵人後，傷害提高 10%，持續 5 秒；期間每秒恢復 3% 最大韌性，完整 5 秒共 15%。
 
-- **重新計時方式**：再次擊殺菁英會重設 5 秒倒數，不會疊加增傷或每秒恢復速度。
+- **重新計時方式**：再次擊殺精英會重設 5 秒倒數，不會疊加增傷或每秒恢復速度。
 
 - **傷害與恢復算例**：基礎 100 點傷害變成 100 × 1.1 = 110 點；最大韌性 100 時，每秒補 100 × 15% ÷ 5 = 3 點。第 3 秒重新觸發、之後完整持續到第 8 秒，合計可補 24 點，仍以韌性缺額為限。
 
@@ -1287,9 +1287,9 @@
 
 <img src="https://github.com/user-attachments/assets/ec2c5209-fa69-4340-b6d9-bca627da0840" width="72" height="72" alt="排隊等候天賦圖示">
 
-- **運作方式**：遠距攻擊造成的傷害降低 20%；判斷依攻擊種類，不是只看敵人是否拿槍。同一名槍手改用近戰時，不會因本天賦減傷。
+- **運作方式**：遠程攻擊造成的傷害降低 20%；判斷依攻擊種類，不是只看敵人是否拿槍。同一名槍手改用近戰時，不會因本天賦減傷。
 
-- **減傷算例**：只計本項，原本 100 點遠距傷害變成 100 × 0.8 = 80 點；另有獨立 25% 通用減傷時，為 100 × 0.8 × 0.75 = 60 點。
+- **減傷算例**：只計本項，原本 100 點遠程傷害變成 100 × 0.8 = 80 點；另有獨立 25% 通用減傷時，為 100 × 0.8 × 0.75 = 60 點。
 
 [詳細資料](zealot_reduced_damage_from_ranged.md) · [返回目錄](#talent-index)
 

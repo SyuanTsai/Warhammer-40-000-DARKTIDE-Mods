@@ -122,7 +122,7 @@
 ## 懲戒(Smite)
 
 - 描述鍵：`loc_ability_psyker_chain_lightning_description`；hash：`837f8e7f`。
-- 結論：未見已確認矛盾。本地繁中說明的鎖定、暈眩、鄰近擴散與蓄力效果均可由固定來源確認；此草稿進一步把直接根目標上限、後續跳躍、電擊 tick 與反噬成本分開說明，沒有把內部時程誤寫成必定命中數。
+- 結論：未見已確認矛盾。本地繁中說明的鎖定、眩暈、鄰近擴散與蓄力效果均可由固定來源確認；此草稿進一步把直接根目標上限、後續跳躍、電擊 tick 與反噬成本分開說明，沒有把內部時程誤寫成必定命中數。
 - [原始碼推導與限制](psyker_grenade_chain_lightning.md)。
 
 <a id="psyker_ability_increase_brain_burst_speed"></a>
@@ -157,7 +157,7 @@
 ## 動能釋放(Kinetic Presence)
 
 - 描述鍵：`loc_talent_psyker_base_3_description`；hash：`4fad8ca6`。
-- 結論：未見已確認矛盾。本地繁中說明的受益者為自己與協同隊友，目標為菁英敵人，增幅由固定原始碼確認為 10%。
+- 結論：未見已確認矛盾。本地繁中說明的受益者為自己與協同隊友，目標為精英敵人，增幅由固定原始碼確認為 10%。
 - [原始碼推導與限制](psyker_aura_damage_vs_elites.md)。
 
 <a id="psyker_cooldown_aura_improved"></a>
@@ -171,7 +171,7 @@
 ## 預兆(Prescience)
 
 - 描述鍵：`loc_ability_psyker_gunslinger_aura_description`；hash：`a2000c1d`。
-- 結論：未見已確認矛盾。本地繁中說明將此效果描述為本人與協同隊友增加爆擊機率，固定原始碼的光環值為 0.05，爆擊計算以加法套用。
+- 結論：未見已確認矛盾。本地繁中說明將此效果描述為本人與協同隊友增加爆擊率，固定原始碼的光環值為 0.05，暴擊計算以加法套用。
 - [原始碼推導與限制](psyker_aura_crit_chance_aura.md)。
 
 <a id="psyker_shout_vent_warp_charge"></a>
@@ -186,7 +186,7 @@
 
 - 描述鍵：`loc_talent_psyker_combat_ability_overcharge_stance_improved_description`；hash：`00d42220`。
 - 結論：明確翻譯錯誤。原文將注視寫成「進入／離開注視範圍」，容易誤解成地面區域；同源英文與實作均指角色進入／結束注視狀態。
-- 繁中原文短引：觸發占卜師的注視。進入占卜師的注視範圍後，平息{vent:%s}反噬並獲得{base_damage:%s}附加傷害、{crit_chance:%s}爆擊機率、{weakspot_damage:%s}弱點傷害、{tdr:%s}韌性減傷以及壓制免疫，同時每秒恢復{toughness:%s}韌性。
+- 繁中原文短引：觸發占卜師的注視。進入占卜師的注視範圍後，平息{vent:%s}反噬並獲得{base_damage:%s}附加傷害、{crit_chance:%s}爆擊率、{weakspot_damage:%s}弱點傷害、{tdr:%s}韌性減傷以及壓制免疫，同時每秒恢復{toughness:%s}韌性。
 - 同源英文：Triggers Scrier's Gaze. When entering Scrier's Gaze you Quell {vent:%s} Peril as well as gain {base_damage:%s} Damage, {crit_chance:%s} Critical Chance, {weakspot_damage:%s} Weakspot Damage, {tdr:%s} Toughness Damage Reduction, and Suppression Immunity. You also replenish {toughness:%s} Toughness each second.
 - [原始碼推導與限制](psyker_combat_ability_stance.md)。
 

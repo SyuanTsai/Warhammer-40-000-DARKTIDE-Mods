@@ -14,8 +14,8 @@
 
 ## 距離公式
 
-- 共用 damage_calculation 將 damage_near 與遠距加成依 sqrt(clamp((distance−12.5)/17.5,0,1)) 插值，再加到一般傷害倍率；damage_near 本身沒有 ranged-only 條件。此天賦的獨立貢獻為 .15×(1−sqrt(clamp((d−12.5)/17.5,0,1)))。
-- d≤12.5→.15；d=16.875→.075；d≥30→0。公式中的distance若呼叫端未提供，預設0。其他天賦的遠距加成另按同一插值合併。
+- 共用 damage_calculation 將 damage_near 與遠程加成依 sqrt(clamp((distance−12.5)/17.5,0,1)) 插值，再加到一般傷害倍率；damage_near 本身沒有 ranged-only 條件。此天賦的獨立貢獻為 .15×(1−sqrt(clamp((d−12.5)/17.5,0,1)))。
+- d≤12.5→.15；d=16.875→.075；d≥30→0。公式中的distance若呼叫端未提供，預設0。其他天賦的遠程加成另按同一插值合併。
 - 算例基礎100、沒有其他加成：100×1.15=115。已有同階段25%時100×1.40=140。
 
 ## 原始碼依據

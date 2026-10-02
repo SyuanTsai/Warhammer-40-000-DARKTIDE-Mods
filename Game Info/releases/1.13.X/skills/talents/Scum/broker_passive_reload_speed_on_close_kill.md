@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 遠距近距離on_kill套effect buff，effect duration8/max1/refresh=true，reload_speed=.3。
+- 遠程近距離on_kill套effect buff，effect duration8/max1/refresh=true，reload_speed=.3。
 - 另有needlepistol_p1_m1/m2專用on_hit標記：須server、ranged、手持secondary且目標活著。追蹤持續到toxin關鍵字消失後超過1frame；on_minion_death只檢查已標記、damage_type=toxin、params.attacking_unit到死亡位置<=12.5，不另驗證最後傷害owner。
 
 ## 原始碼依據
@@ -33,7 +33,7 @@
 ## 原文核對
 
 - 對應 hash：`f9ccd2c5`。
-- 同源英文限定Close Ranged Kill；繁中省略遠距且參數位置不順，但仍可理解為近距離擊殺後加快換彈，依規則不將省略或措辭不佳判成明確勘誤。
+- 同源英文限定Close Ranged Kill；繁中省略遠程且參數位置不順，但仍可理解為近距離擊殺後加快換彈，依規則不將省略或措辭不佳判成明確勘誤。
 
 ## 圖示來源
 

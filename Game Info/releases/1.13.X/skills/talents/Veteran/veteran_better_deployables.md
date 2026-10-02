@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-keyword improved_medical_crate/improved_ammo_pickups；ammo interaction掃全side.player_units，不要求持有人放置或在協同內。medkit初始化掃全隊keyword並快取，heal_multiplier2、permanent_damage_multiplier0.5、toughness0.01/s。醫療箱半徑3、基礎heal_rate0.06，reserve500/time300不因技能擴大；倒地另乘0.1治療速度。reduce_permanent_damage保留已失去wound之固定腐敗下限。禁止撿手榴彈職業依special_rule另行排除。
+keyword improved_medical_crate/improved_ammo_pickups；ammo interaction掃全side.player_units，不要求持有人放置或在協同內。medkit初始化掃全隊keyword並快取，heal_multiplier2、permanent_damage_multiplier0.5、toughness0.01/s。醫療箱半徑3、基礎heal_rate0.06，reserve500/time300不因技能擴大；倒地另乘0.1治療速度。reduce_permanent_damage保留已失去wound之固定腐敗下限。禁止撿手雷職業依special_rule另行排除。
 
 ## 原始碼依據
 

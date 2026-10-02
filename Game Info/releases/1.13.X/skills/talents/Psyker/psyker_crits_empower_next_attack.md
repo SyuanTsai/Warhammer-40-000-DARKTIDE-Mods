@@ -21,7 +21,7 @@
 ## 算例條件與待確認事項
 
 - **傷害算例**：只比較此增傷階段，其餘倍率固定為 1。基準 100 點、無其他加成時，100 × (1 + 15%) = 115 點；原有 25% 同階段加成時，從 125 變成 100 × (1 + 25% + 15%) = 140 點。
-- on_hit 的入口有 params.is_critical_strike，但實際 specific_proc_func 檢查 template_data.crit 或 template_context.is_critical_strike；直接標示為爆擊的特殊命中是否都有對應事件，仍需逐武器實測，不保證每一顆爆擊彈丸獨立加層。
+- on_hit 的入口有 params.is_critical_strike，但實際 specific_proc_func 檢查 template_data.crit 或 template_context.is_critical_strike；直接標示為暴擊的特殊命中是否都有對應事件，仍需逐武器實測，不保證每一顆暴擊彈丸獨立加層。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

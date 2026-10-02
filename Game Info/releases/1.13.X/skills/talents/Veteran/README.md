@@ -10,80 +10,80 @@
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/7b9b7141-a7fa-4f3b-944f-5f1141cdc04e" width="32" height="32" alt="煙霧手雷天賦圖示"> [煙霧手雷](#veteran_smoke_grenade)<br>- Smoke Grenade | <ul><li>投出煙霧手雷，約 1.5 秒後展開持續 15 秒的煙霧。</li></ul> | 閃擊 |
-| <img src="https://github.com/user-attachments/assets/2bec21d1-d677-4386-942d-2c2697c285d1" width="32" height="32" alt="擲彈兵天賦圖示"> [擲彈兵](#veteran_extra_grenade)<br>- Grenadier | <ul><li>手榴彈攜帶上限增加 1 顆。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/2bec21d1-d677-4386-942d-2c2697c285d1" width="32" height="32" alt="擲彈兵天賦圖示"> [擲彈兵](#veteran_extra_grenade)<br>- Grenadier | <ul><li>手雷攜帶上限增加 1 顆。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/5179b403-3945-41a4-9c68-5278b6968c24" width="32" height="32" alt="手雷專家天賦圖示"> [手雷專家](#veteran_improved_grenades)<br>- Grenade Tinkerer | <ul><li>粉碎者破片手雷：爆炸傷害增加 25%，爆炸半徑增加 25%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/b0967626-73da-49a8-a1b9-1f4d6c1daffa" width="32" height="32" alt="穿甲手雷天賦圖示"> [穿甲手雷](#veteran_krak_grenade)<br>- Krak Grenade | <ul><li>投出會追向合適裝甲目標、並黏附其身上的穿甲手雷。</li></ul> | 閃擊 |
-| <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="炸藥儲備天賦圖示"> [炸藥儲備](#veteran_replenish_grenades)<br>- Demolition Stockpile | <ul><li>定期補回手榴彈</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="炸藥儲備天賦圖示"> [炸藥儲備](#veteran_replenish_grenades)<br>- Demolition Stockpile | <ul><li>定期補回手雷</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/6fa67f08-3b19-4bee-8a32-d5815db7297f" width="32" height="32" alt="粉碎者破片手雷天賦圖示"> [粉碎者破片手雷](#veteran_grenade_apply_bleed)<br>- Shredder Frag Grenade | <ul><li>破片手雷爆炸造成傷害後，對仍存活的敵人施加 6 層流血。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/f8c278c8-72a1-476c-93d1-6656268ba8e4" width="32" height="32" alt="抵近殺敵天賦圖示"> [抵近殺敵](#veteran_movement_speed_coherency)<br>- Close and Kill | <ul><li>你與協同範圍內的隊友移動速度增加 7.5%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/9a3da9ac-d8f1-4745-9af6-25852f52834a" width="32" height="32" alt="火力小分隊天賦圖示"> [火力小分隊](#veteran_increased_damage_coherency)<br>- Fire Team | <ul><li>你與協同範圍內的隊友傷害增加 7.5%。</li></ul> | 光環 |
-| <img src="https://github.com/user-attachments/assets/c2dffa00-cd24-478f-96c7-4007f4239e6a" width="32" height="32" alt="生存專家天賦圖示"> [生存專家](#veteran_aura_gain_ammo_on_elite_kill_improved)<br>- Survivalist | <ul><li>你或擁有此光環效果的隊友擊殺菁英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備用彈藥上限的彈藥。</li></ul> | 光環 |
-| <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="火力齊射天賦圖示"> [火力齊射](#veteran_combat_ability_stance)<br>- Volley Fire | <ul><li>立即切換至遠距武器，姿態持續 6 秒，冷卻 30 秒。</li><li>遠距傷害 +15%、弱點額外傷害加成 +15%；兩項分別結算。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/c2dffa00-cd24-478f-96c7-4007f4239e6a" width="32" height="32" alt="生存專家天賦圖示"> [生存專家](#veteran_aura_gain_ammo_on_elite_kill_improved)<br>- Survivalist | <ul><li>你或擁有此光環效果的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備用彈藥上限的彈藥。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="火力齊射天賦圖示"> [火力齊射](#veteran_combat_ability_stance)<br>- Volley Fire | <ul><li>立即切換至遠程武器，姿態持續 6 秒，冷卻 30 秒。</li><li>遠程傷害 +15%、弱點額外傷害加成 +15%；兩項分別結算。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="滲透天賦圖示"> [滲透](#veteran_invisibility_on_combat_ability)<br>- Infiltrate | <ul><li>立即回滿自身韌性，並隱身最多 8 秒；</li><li>冷卻時間 40 秒。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="低調天賦圖示"> [低調](#veteran_reduced_threat_after_combat_ability)<br>- Low Profile | <ul><li>使用戰鬥能力後，敵人選你為目標的仇恨權重降低 90%，持續 10 秒。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="32" height="32" alt="處決者姿態天賦圖示"> [處決者姿態](#veteran_combat_ability_elite_and_special_outlines)<br>- Executioner's Stance | <ul><li>強化火力齊射：遠距傷害與弱點額外傷害加成各提高至 25%，分別結算；遠距衝擊加成提高至 100%。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/2afc79fa-02f2-4943-b4e7-abe35435f7bd" width="32" height="32" alt="目標引導增強天賦圖示"> [目標引導增強](#veteran_combat_ability_coherency_outlines)<br>- Enhanced Target Priority | <ul><li>效果：啟動處決者姿態時，協同範圍內的隊友也會看見菁英與專家敵人的輪廓，持續 5 秒。</li><li>你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="低調天賦圖示"> [低調](#veteran_reduced_threat_after_combat_ability)<br>- Low Profile | <ul><li>使用戰鬥技能後，敵人選你為目標的仇恨權重降低 90%，持續 10 秒。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="32" height="32" alt="處決者姿態天賦圖示"> [處決者姿態](#veteran_combat_ability_elite_and_special_outlines)<br>- Executioner's Stance | <ul><li>強化火力齊射：遠程傷害與弱點額外傷害加成各提高至 25%，分別結算；遠程衝擊加成提高至 100%。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/2afc79fa-02f2-4943-b4e7-abe35435f7bd" width="32" height="32" alt="目標引導增強天賦圖示"> [目標引導增強](#veteran_combat_ability_coherency_outlines)<br>- Enhanced Target Priority | <ul><li>效果：啟動處決者姿態時，協同範圍內的隊友也會看見精英與專家敵人的輪廓，持續 5 秒。</li><li>你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/ca186661-9499-4f3f-9449-596caa35b7b6" width="32" height="32" alt="火力反擊天賦圖示"> [火力反擊](#veteran_combat_ability_ranged_roamer_outlines)<br>- Counter-Fire | <ul><li>效果：處決者姿態會額外標出一般射手與潛行者，例如血痂射手、渣滓潛行者。</li><li>啟動或更新輪廓時，這些敵人必須在你 50 公尺內。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0c033c93-a850-4295-853d-10698ec96e89" width="32" height="32" alt="獵手決意天賦圖示"> [獵手決意](#veteran_toughness_bonus_leaving_invisibility)<br>- Hunter's Resolve | <ul><li>效果：啟動滲透時，受到的韌性傷害降低 50%；</li><li>隱身期間持續生效，解除隱身後再維持 10 秒。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/57d6b442-9cee-45c3-ba74-4a191649eddb" width="32" height="32" alt="戰術意識天賦圖示"> [戰術意識](#veteran_elite_kills_reduce_cooldown)<br>- Tactical Awareness | <ul><li>觸發方式：擊殺專家敵人後，獲得 3 秒的冷卻恢復效果：每秒額外恢復 1 秒戰鬥能力冷卻。</li><li>一般菁英不會觸發。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/57d6b442-9cee-45c3-ba74-4a191649eddb" width="32" height="32" alt="戰術意識天賦圖示"> [戰術意識](#veteran_elite_kills_reduce_cooldown)<br>- Tactical Awareness | <ul><li>觸發方式：擊殺專家敵人後，獲得 3 秒的冷卻恢復效果：每秒額外恢復 1 秒戰鬥技能冷卻。</li><li>一般精英不會觸發。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/73961902-95ea-4316-bda1-13b23dac1789" width="32" height="32" alt="發號施令天賦圖示"> [發號施令](#veteran_combat_ability_stagger_nearby_enemies)<br>- Voice of Command | <ul><li>施放效果：大聲呼喊，使周圍 9 公尺內的敵人踉蹌，並立即回滿自己的韌性。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/a8bcdde1-34e3-449d-9b46-e9130865b285" width="32" height="32" alt="只有死亡，職責才會終結天賦圖示"> [只有死亡，職責才會終結](#veteran_combat_ability_revive_nearby_allies)<br>- Only In Death Does Duty End | <ul><li>效果：發號施令可以立即扶起周圍 9 公尺內倒地的隊友，無須逐一按住救援。</li><li>一次施放可扶起範圍內多名倒地隊友。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/fc16005a-fb09-4db6-bd15-e18d45c6d935" width="32" height="32" alt="鷹眼天賦圖示"> [鷹眼](#veteran_increased_weakspot_power_after_combat_ability)<br>- Marksman | <ul><li>效果：使用戰鬥能力後，命中弱點時的攻擊威力提高 20%，持續 10 秒；</li><li>近戰與遠距攻擊皆可受益。</li><li>使用滲透時，隱身期間便生效，解除隱身後再維持 10 秒。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/fc16005a-fb09-4db6-bd15-e18d45c6d935" width="32" height="32" alt="鷹眼天賦圖示"> [鷹眼](#veteran_increased_weakspot_power_after_combat_ability)<br>- Marksman | <ul><li>效果：使用戰鬥技能後，命中弱點時的攻擊威力提高 20%，持續 10 秒；</li><li>近戰與遠程攻擊皆可受益。</li><li>使用滲透時，隱身期間便生效，解除隱身後再維持 10 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/56d61b06-dd20-4832-8293-0220d1f3960c" width="32" height="32" alt="責任與榮譽天賦圖示"> [責任與榮譽](#veteran_combat_ability_increase_and_restore_toughness_to_coherency)<br>- Duty and Honour | <ul><li>效果：施放發號施令時，你與協同範圍內的隊友獲得額外 75 點最大韌性，持續 10 秒；</li><li>目前韌性也增加 75 點。</li><li>你自己還會受到發號施令的回滿效果。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="32" height="32" alt="掩護射擊天賦圖示"> [掩護射擊](#veteran_combat_ability_extra_charge)<br>- Overwatch | <ul><li>滲透可保留兩次，冷卻時間增加</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/1181fe6e-4066-4d75-b996-a0eb01d7583d" width="32" height="32" alt="肉搏戰天賦圖示"> [肉搏戰](#veteran_increased_close_damage_after_combat_ability)<br>- Close Quarters Killzone | <ul><li>效果：使用戰鬥能力後，提高對近距離敵人造成的傷害，持續 10 秒。</li><li>滲透則從隱身期間開始生效，解除隱身後再持續 10 秒。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/1181fe6e-4066-4d75-b996-a0eb01d7583d" width="32" height="32" alt="肉搏戰天賦圖示"> [肉搏戰](#veteran_increased_close_damage_after_combat_ability)<br>- Close Quarters Killzone | <ul><li>效果：使用戰鬥技能後，提高對近距離敵人造成的傷害，持續 10 秒。</li><li>滲透則從隱身期間開始生效，解除隱身後再持續 10 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0df9e7bd-7394-4f93-ba54-f8f6d2884d02" width="32" height="32" alt="敵人越大...天賦圖示"> [敵人越大...](#veteran_combat_ability_ogryn_outlines)<br>- The Bigger they Are ... | <ul><li>效果：處決者姿態的每次持續時間從 6 秒延長至 9 秒，並額外標出歐格林、怪物與首領的輪廓。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="狙擊專注天賦圖示"> [狙擊專注](#veteran_snipers_focus)<br>- Marksman's Focus | <ul><li>遠距弱點擊殺獲得 3 層狙擊專注，每層增加 7.5% 遠距爆擊／弱點額外傷害加成與 1% 裝填速度。</li><li>額外傷害加成不等於整次命中的增幅。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="狙擊專注天賦圖示"> [狙擊專注](#veteran_snipers_focus)<br>- Marksman's Focus | <ul><li>遠程弱點擊殺獲得 3 層狙擊專注，每層增加 7.5% 遠程暴擊／弱點額外傷害加成與 1% 裝填速度。</li><li>額外傷害加成不等於整次命中的增幅。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="32" height="32" alt="滲透盔甲天賦圖示"> [滲透盔甲](#veteran_snipers_focus_rending_bonus)<br>- Chink in their Armour | <ul><li>狙擊專注達到 10 層時，獲得 15% 撕裂；</li><li>低於 10 層後失效。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f" width="32" height="32" alt="視野狹窄天賦圖示"> [視野狹窄](#veteran_snipers_focus_toughness_bonus)<br>- Tunnel Vision | <ul><li>每層狙擊專注使韌性恢復量增加 4%。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="遠程刺客天賦圖示"> [遠程刺客](#veteran_snipers_focus_increased_stacks)<br>- Long Range Assassin | <ul><li>狙擊專注的效果上限由 10 層提高至 15 層。</li><li>滿層 112.5% 加成只作用於遠距爆擊／弱點額外傷害。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/80917bab-ea62-4a9a-a0fa-f9b443ee1b0b" width="32" height="32" alt="武器專家天賦圖示"> [武器專家](#veteran_weapon_switch_passive)<br>- Weapons Specialist | <ul><li>切換至遠距武器：手持近戰武器時，每次擊殺累積 1 層，最多 10 層。</li><li>切出遠距武器後，消耗所有層數，每層提高 2% 遠距攻擊速度與裝填速度，持續 10 秒；</li><li>再切換武器會提前結束。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="遠程刺客天賦圖示"> [遠程刺客](#veteran_snipers_focus_increased_stacks)<br>- Long Range Assassin | <ul><li>狙擊專注的效果上限由 10 層提高至 15 層。</li><li>滿層 112.5% 加成只作用於遠程暴擊／弱點額外傷害。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/80917bab-ea62-4a9a-a0fa-f9b443ee1b0b" width="32" height="32" alt="武器專家天賦圖示"> [武器專家](#veteran_weapon_switch_passive)<br>- Weapons Specialist | <ul><li>切換至遠程武器：手持近戰武器時，每次擊殺累積 1 層，最多 10 層。</li><li>切出遠程武器後，消耗所有層數，每層提高 2% 遠程攻擊速度與裝填速度，持續 10 秒；</li><li>再切換武器會提前結束。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a6e24eb8-063a-45a5-8796-acde81d1f734" width="32" height="32" alt="時刻警覺天賦圖示"> [時刻警覺](#veteran_weapon_switch_replenish_toughness)<br>- On Your Toes | <ul><li>觸發方式：儲存至少 1 層武器專家的加成後，切換至對應武器，恢復 20% 最大韌性。</li><li>恢復量固定，不隨層數增加。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/842c2a40-8bb4-45fa-a1e2-672fedf80d78" width="32" height="32" alt="有備無患天賦圖示"> [有備無患](#veteran_weapon_switch_replenish_ammo)<br>- Always Prepared | <ul><li>觸發方式：手持近戰武器擊殺、儲存武器專家的層數後，切出遠距武器，會把備用彈藥移入彈匣。</li><li>層數越多，補入量越多。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/bc2a44d8-866d-4f29-a680-f84e98b72b01" width="32" height="32" alt="活力煥發天賦圖示"> [活力煥發](#veteran_weapon_switch_replenish_stamina)<br>- Invigorated | <ul><li>觸發方式：手持遠距武器擊殺敵人、儲存武器專家的近戰加成後，切出近戰武器，恢復 20% 最大耐力，並在 3 秒內降低 25% 耐力消耗。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/842c2a40-8bb4-45fa-a1e2-672fedf80d78" width="32" height="32" alt="有備無患天賦圖示"> [有備無患](#veteran_weapon_switch_replenish_ammo)<br>- Always Prepared | <ul><li>觸發方式：手持近戰武器擊殺、儲存武器專家的層數後，切出遠程武器，會把備用彈藥移入彈匣。</li><li>層數越多，補入量越多。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/bc2a44d8-866d-4f29-a680-f84e98b72b01" width="32" height="32" alt="活力煥發天賦圖示"> [活力煥發](#veteran_weapon_switch_replenish_stamina)<br>- Invigorated | <ul><li>觸發方式：手持遠程武器擊殺敵人、儲存武器專家的近戰加成後，切出近戰武器，恢復 20% 最大耐力，並在 3 秒內降低 25% 耐力消耗。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/85048589-7642-40e7-9d4b-ab325da2ea25" width="32" height="32" alt="鎖定目標天賦圖示"> [鎖定目標](#veteran_improved_tag)<br>- Focus Target! | <ul><li>累積與標記：起始有 1 層，每 1.5 秒增加 1 層，最多 4 層。</li><li>標記敵人時，依儲存的層數提高該敵人承受的傷害，自己和隊友的攻擊都能受益；</li><li>成功套用後，儲存量重回 1 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/47cc6995-f2fa-407d-9cb0-4dd91fcdc10d" width="32" height="32" alt="目標擊倒！天賦圖示"> [目標擊倒！](#veteran_improved_tag_dead_bonus)<br>- Target Down! | <ul><li>觸發方式：目前被鎖定目標標記的敵人死亡時，你與協同範圍內的隊友恢復韌性及耐力，不要求由你親自擊殺。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/48ecea96-bdaa-49e6-b9b7-ee3ac26fc1c5" width="32" height="32" alt="轉移火力！天賦圖示"> [轉移火力！](#veteran_improved_tag_dead_coherency_bonus)<br>- Redirect Fire! | <ul><li>觸發方式：目前被鎖定目標標記的敵人死亡時，你與協同範圍內的隊友獲得傷害加成，持續 10 秒，不要求由你親自擊殺。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a95c5ea6-546f-462d-a073-56f9d1a21103" width="32" height="32" alt="集中火力天賦圖示"> [集中火力](#veteran_improved_tag_more_damage)<br>- Focused Fire | <ul><li>效果：鎖定目標可儲存的層數從 4 層提高至 6 層，每層仍讓目標承受的傷害乘以 1.05。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/3ec21db4-4013-4522-850f-14c583e25ea7" width="32" height="32" alt="爆破小隊天賦圖示"> [爆破小隊](#veteran_aura_elite_kills_restore_grenade)<br>- Demolition Team | <ul><li>你或協同範圍內的隊友擊殺菁英或專家敵人時，有 5% 機率為你補充 1 顆手榴彈。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/3ec21db4-4013-4522-850f-14c583e25ea7" width="32" height="32" alt="爆破小隊天賦圖示"> [爆破小隊](#veteran_aura_elite_kills_restore_grenade)<br>- Demolition Team | <ul><li>你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a5b64063-ac9d-404d-98ac-528f24aafb65" width="32" height="32" alt="戰術裝填天賦圖示"> [戰術裝填](#veteran_faster_reload_on_non_empty_clips)<br>- Tactical Reload | <ul><li>彈匣還有彈藥時開始裝填，裝填速度增加 25%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/009ef44a-cf3d-44cf-ac8b-cda57c6fd83d" width="32" height="32" alt="齊射能手天賦圖示"> [齊射能手](#veteran_reload_speed_on_elite_kill)<br>- Volley Adept | <ul><li>擊殺菁英或專家敵人後，下一次裝填速度增加 30%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/009ef44a-cf3d-44cf-ac8b-cda57c6fd83d" width="32" height="32" alt="齊射能手天賦圖示"> [齊射能手](#veteran_reload_speed_on_elite_kill)<br>- Volley Adept | <ul><li>擊殺精英或專家敵人後，下一次裝填速度增加 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="堅定不移天賦圖示"> [堅定不移](#veteran_increased_weakspot_damage)<br>- Precision Strikes | <ul><li>弱點命中的額外傷害加成 +30%；整次命中的增幅依武器、目標與既有加成而變。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7be19cb4-a1cb-4211-b9f2-d754f3c95b6c" width="32" height="32" alt="亡命之徒天賦圖示"> [亡命之徒](#veteran_increased_melee_crit_chance_and_melee_finesse)<br>- Desperado | <ul><li>近戰爆擊率增加 10 個百分點。</li><li>近戰爆擊／弱點額外傷害加成 +25%，整次命中的增幅依武器與目標而變。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d6402640-110e-4d25-b1b3-780a49b1c4e1" width="32" height="32" alt="嗜血天賦圖示"> [嗜血](#veteran_all_kills_replenish_toughness)<br>- Out for Blood | <ul><li>每次擊殺額外恢復 5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/dca385d7-a54e-4bf5-b67d-f3d29ef82234" width="32" height="32" alt="遊擊者天賦圖示"> [遊擊者](#veteran_increase_damage_after_sprinting)<br>- Skirmisher | <ul><li>衝刺或滑行時持續累積傷害加成，每層增加 6.25%，最多 4 層。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fd178238-be59-4c18-8631-12423f5506fb" width="32" height="32" alt="趁火打劫天賦圖示"> [趁火打劫](#veteran_crits_apply_rending)<br>- Exploit Weakness | <ul><li>近戰爆擊命中後，傷害增加 20%，持續 6 秒。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/a882268c-6f4f-42ee-8973-a64dd6e882e7" width="32" height="32" alt="不拋棄不放棄天賦圖示"> [不拋棄不放棄](#veteran_movement_speed_towards_downed)<br>- Leave No One Behind | <ul><li>面向需要援助的隊友時，移動速度增加 20%，並免疫暈眩。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/a882268c-6f4f-42ee-8973-a64dd6e882e7" width="32" height="32" alt="不拋棄不放棄天賦圖示"> [不拋棄不放棄](#veteran_movement_speed_towards_downed)<br>- Leave No One Behind | <ul><li>面向需要援助的隊友時，移動速度增加 20%，並免疫眩暈。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cc7841b0-9637-4d35-8bca-c2c418798875" width="32" height="32" alt="裂擊天賦圖示"> [裂擊](#veteran_rending_bonus)<br>- Rending Strikes | <ul><li>武器獲得 10% 撕裂。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/980ba0fa-2a34-4f97-b592-05651671933b" width="32" height="32" alt="互惠互利天賦圖示"> [互惠互利](#veteran_dodging_grants_crit)<br>- Reciprocity | <ul><li>每次成功閃避攻擊，爆擊率增加 5 個百分點，最多 5 層。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/a7c3f5a6-113a-404a-873d-985481ec316b" width="32" height="32" alt="靈活接敵天賦圖示"> [靈活接敵](#veteran_kill_grants_damage_to_other_slot)<br>- Agile Engagement | <ul><li>近戰擊殺使遠距傷害增加 25%；</li><li>遠距擊殺使近戰傷害增加 25%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/a7c3f5a6-113a-404a-873d-985481ec316b" width="32" height="32" alt="靈活接敵天賦圖示"> [靈活接敵](#veteran_kill_grants_damage_to_other_slot)<br>- Agile Engagement | <ul><li>近戰擊殺使遠程傷害增加 25%；</li><li>遠程擊殺使近戰傷害增加 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8378bd8a-7c90-41fd-83c7-40c135c75caa" width="32" height="32" alt="鋸齒刀刃天賦圖示"> [鋸齒刀刃](#veteran_hits_cause_bleed)<br>- Serrated Blade | <ul><li>近戰命中造成傷害後，對仍存活的敵人施加 2 層流血。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="戰壕兵訓練天賦圖示"> [戰壕兵訓練](#veteran_attack_speed)<br>- Trench Fighter Drill | <ul><li>近戰攻擊速度增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0801494c-4548-4fcb-afe7-8a7c563ef396" width="32" height="32" alt="猛攻天賦圖示"> [猛攻](#veteran_continous_hits_apply_rending)<br>- Onslaught | <ul><li>連續命中同一個仍存活的敵人，從第二次攻擊起，每次施加 1 層脆弱。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1ef34fb3-ac4e-47d1-b7c1-0d13f10e3173" width="32" height="32" alt="韌性提升天賦圖示"> [韌性提升](#base_toughness_node_buff_medium_2)<br>- Toughness Boost | <ul><li>最大韌性增加 25 點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/19c86987-5e48-4eeb-9385-33697b9d99b0" width="32" height="32" alt="喘息片刻天賦圖示"> [喘息片刻](#veteran_replenish_toughness_outside_melee)<br>- Catch a Breath | <ul><li>超過 5 秒未受到近戰命中時，每秒恢復 5% 最大韌性。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/4193f147-bd40-49f8-92d4-a2b83fa1ad5b" width="32" height="32" alt="首輪齊射天賦圖示"> [首輪齊射](#veteran_bonus_crit_chance_on_ammo)<br>- Opening Salvo | <ul><li>彈匣剩餘彈藥至少 80% 時，遠距爆擊率增加 10 個百分點。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/8cc616f0-d225-4b5f-81a4-8780f478d471" width="32" height="32" alt="殺戮地帶天賦圖示"> [殺戮地帶](#veteran_ranged_power_out_of_melee)<br>- Kill Zone | <ul><li>未被近戰命中一段時間後，增加遠距傷害</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/cba2a46d-298c-434a-883d-e048f5ede32d" width="32" height="32" alt="突擊隊天賦圖示"> [突擊隊](#veteran_no_ammo_consumption_on_lasweapon_crit)<br>- Shock Trooper | <ul><li>雷射武器的爆擊射擊不消耗彈藥。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/ba2f9f5e-0466-433d-a93d-68b1f9606dd7" width="32" height="32" alt="凋零烈焰天賦圖示"> [凋零烈焰](#veteran_increased_ranged_cleave)<br>- Withering Fire | <ul><li>遠距順劈攻擊的穿透能力增加 50%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907" width="32" height="32" alt="振奮擊倒天賦圖示"> [振奮擊倒](#veteran_replenish_toughness_on_weakspot_kill)<br>- Exhilarating Takedown | <ul><li>遠距弱點擊殺恢復韌性並累積減傷</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/4193f147-bd40-49f8-92d4-a2b83fa1ad5b" width="32" height="32" alt="首輪齊射天賦圖示"> [首輪齊射](#veteran_bonus_crit_chance_on_ammo)<br>- Opening Salvo | <ul><li>彈匣剩餘彈藥至少 80% 時，遠程爆擊率增加 10 個百分點。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/8cc616f0-d225-4b5f-81a4-8780f478d471" width="32" height="32" alt="殺戮地帶天賦圖示"> [殺戮地帶](#veteran_ranged_power_out_of_melee)<br>- Kill Zone | <ul><li>未被近戰命中一段時間後，增加遠程傷害</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/cba2a46d-298c-434a-883d-e048f5ede32d" width="32" height="32" alt="突擊隊天賦圖示"> [突擊隊](#veteran_no_ammo_consumption_on_lasweapon_crit)<br>- Shock Trooper | <ul><li>雷射武器的暴擊射擊不消耗彈藥。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/ba2f9f5e-0466-433d-a93d-68b1f9606dd7" width="32" height="32" alt="凋零烈焰天賦圖示"> [凋零烈焰](#veteran_increased_ranged_cleave)<br>- Withering Fire | <ul><li>遠程順劈攻擊的穿透能力增加 50%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907" width="32" height="32" alt="振奮擊倒天賦圖示"> [振奮擊倒](#veteran_replenish_toughness_on_weakspot_kill)<br>- Exhilarating Takedown | <ul><li>遠程弱點擊殺恢復韌性並累積減傷</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4087a451-e4ae-429b-afe6-75369e2903f3" width="32" height="32" alt="全副武裝天賦圖示"> [全副武裝](#veteran_ammo_increase)<br>- Fully Loaded | <ul><li>備用彈藥上限增加 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1a08688e-e370-4eac-a27e-fd48da3b3965" width="32" height="32" alt="天生領袖天賦圖示"> [天生領袖](#veteran_allies_in_coherency_share_toughness_gain)<br>- Born Leader | <ul><li>協同半徑增加 50%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/aba3bef3-ec36-4b94-8097-95a2f43d593e" width="32" height="32" alt="臨場發揮天賦圖示"> [臨場發揮](#veteran_better_deployables)<br>- Field Improvisation | <ul><li>小隊的彈藥箱也能補滿可補給的手榴彈。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/8c1dadf2-9263-4efa-a710-9da08a41eb3e" width="32" height="32" alt="火力掩護天賦圖示"> [火力掩護](#veteran_replenish_toughness_and_boost_allies)<br>- Covering Fire | <ul><li>遠距擊殺敵人時，可為該敵人附近的 1 名隊友恢復 15% 最大韌性，並使其傷害增加 15%，持續 6 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/aba3bef3-ec36-4b94-8097-95a2f43d593e" width="32" height="32" alt="臨場發揮天賦圖示"> [臨場發揮](#veteran_better_deployables)<br>- Field Improvisation | <ul><li>小隊的彈藥箱也能補滿可補給的手雷。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/8c1dadf2-9263-4efa-a710-9da08a41eb3e" width="32" height="32" alt="火力掩護天賦圖示"> [火力掩護](#veteran_replenish_toughness_and_boost_allies)<br>- Covering Fire | <ul><li>遠程擊殺敵人時，可為該敵人附近的 1 名隊友恢復 15% 最大韌性，並使其傷害增加 15%，持續 6 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/284f479c-7f5d-463f-bf50-1003d34b9f5b" width="32" height="32" alt="求勝心天賦圖示"> [求勝心](#veteran_ally_kills_increase_damage)<br>- Competitive Urge | <ul><li>隊友擊殺敵人時，有 2.5% 機率使你的傷害、近戰衝擊與壓制效果增加 20%，持續 8 秒。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/706a5b5b-5f7b-43bc-bbd0-7debf024671b" width="32" height="32" alt="擊殺紀錄天賦圖示"> [擊殺紀錄](#veteran_elite_kills_replenish_toughness)<br>- Confirmed Kill | <ul><li>擊殺菁英或專家敵人，立即恢復 10% 最大韌性。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/706a5b5b-5f7b-43bc-bbd0-7debf024671b" width="32" height="32" alt="擊殺紀錄天賦圖示"> [擊殺紀錄](#veteran_elite_kills_replenish_toughness)<br>- Confirmed Kill | <ul><li>擊殺精英或專家敵人，立即恢復 10% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/139120eb-e9c5-41ea-b87c-bf4737b53f49" width="32" height="32" alt="密集隊形訓練天賦圖示"> [密集隊形訓練](#veteran_reduced_toughness_damage_in_coherency)<br>- Close Order Drill | <ul><li>協同範圍內每有 1 名隊友，韌性減傷增加 11%；</li><li>3 名隊友時達到 33%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/f7517509-e85f-47fb-b775-234a6aa0950a" width="32" height="32" alt="遠射天賦圖示"> [遠射](#veteran_increased_damage_based_on_range)<br>- Longshot | <ul><li>遠距傷害增加 10%；</li><li>距離越遠，額外再增加最多 15%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/f7517509-e85f-47fb-b775-234a6aa0950a" width="32" height="32" alt="遠射天賦圖示"> [遠射](#veteran_increased_damage_based_on_range)<br>- Longshot | <ul><li>遠程傷害增加 10%；</li><li>距離越遠，額外再增加最多 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="行雲流水天賦圖示"> [行雲流水](#veteran_reduce_swap_time)<br>- One Motion | <ul><li>武器切換速度增加 50%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e65e3909-4dac-413f-827d-f5db9138e5e2" width="32" height="32" alt="死亡射手天賦圖示"> [死亡射手](#veteran_ads_drain_stamina)<br>- Deadshot | <ul><li>瞄準且仍有耐力時，爆擊率增加 25 個百分點，瞄準晃動降低 60%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fc1e80c9-c17b-4e96-909d-bab403221f03" width="32" height="32" alt="幹掉它！天賦圖示"> [幹掉它！](#veteran_big_game_hunter)<br>- Bring it Down! | <ul><li>對歐格林與巨獸的傷害增加 20%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/915cdbef-5b88-4d3b-a4f1-e29e8a8f0f07" width="32" height="32" alt="優越情節天賦圖示"> [優越情節](#veteran_increase_damage_vs_elites)<br>- Superiority Complex | <ul><li>增加對菁英敵人的傷害</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/915cdbef-5b88-4d3b-a4f1-e29e8a8f0f07" width="32" height="32" alt="優越情節天賦圖示"> [優越情節](#veteran_increase_damage_vs_elites)<br>- Superiority Complex | <ul><li>增加對精英敵人的傷害</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8567315b-bea7-4be4-aaec-22d7096945a9" width="32" height="32" alt="靈活應對天賦圖示"> [靈活應對](#veteran_dodging_grants_stamina)<br>- Duck and Dive | <ul><li>移動速度增加 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d56c3a6f-0fed-4e37-bb08-aa3c87f5624d" width="32" height="32" alt="鋼鐵意志天賦圖示"> [鋼鐵意志](#veteran_tdr_on_high_toughness)<br>- Iron Will | <ul><li>目前韌性高於最大韌性的 75% 時，韌性受到的傷害降低 50%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6632d16b-faac-444e-8139-99057e2f613a" width="32" height="32" alt="荷槍實彈天賦圖示"> [荷槍實彈](#veteran_clip_size)<br>- Lock and Load | <ul><li>彈匣容量增加 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ae882322-f266-4e2c-8168-09f85a5c9285" width="32" height="32" alt="讓他們全趴下！天賦圖示"> [讓他們全趴下！](#veteran_increase_suppression)<br>- Keep Their Heads Down! | <ul><li>造成的壓制效果增加 75%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/e836f77f-9bb2-4b87-938a-3bab63656ff1" width="32" height="32" alt="秘密特工天賦圖示"> [秘密特工](#veteran_increased_damage_when_flanking)<br>- Covert Operative | <ul><li>從敵人的後半側以遠距攻擊命中時，傷害增加 30%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/e836f77f-9bb2-4b87-938a-3bab63656ff1" width="32" height="32" alt="秘密特工天賦圖示"> [秘密特工](#veteran_increased_damage_when_flanking)<br>- Covert Operative | <ul><li>從敵人的後半側以遠程攻擊命中時，傷害增加 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/b0fb41b1-81da-4263-8d21-101a3af0cbdb" width="32" height="32" alt="近戰傷害提升天賦圖示"> [近戰傷害提升](#base_melee_damage_node_buff_high_2)<br>- Melee Damage Boost | <ul><li>近戰傷害增加 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/20744626-5cef-4e5c-afef-0474fde5a4b5" width="32" height="32" alt="韌性減傷天賦圖示"> [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1)<br>- Toughness Damage Reduction | <ul><li>韌性受到的傷害降低 10%。</li></ul> | 技能 |
 
@@ -116,13 +116,13 @@
 
 <img src="https://github.com/user-attachments/assets/2bec21d1-d677-4386-942d-2c2697c285d1" width="72" height="72" alt="擲彈兵天賦圖示">
 
-- **手榴彈攜帶上限增加 1 顆。**
-- 每次投擲有 **20% 機率**額外投出 1 顆，不多消耗手榴彈；適用於三種老兵手榴彈。
+- **手雷攜帶上限增加 1 顆。**
+- 每次投擲有 **20% 機率**額外投出 1 顆，不多消耗手雷；適用於三種老兵手雷。
 
 #### 容量與機率算例
 
 - 原本可帶 3 顆，點選後為 `3 + 1 = 4 顆`。
-- 投擲 10 次，額外手榴彈的期望數為 `10 × 20% = 2 顆`；機率獨立判定，不保證每 5 次必定觸發。
+- 投擲 10 次，額外手雷的期望數為 `10 × 20% = 2 顆`；機率獨立判定，不保證每 5 次必定觸發。
 
 [詳細資料](veteran_extra_grenade.md) · [返回目錄](#talent-index)
 
@@ -178,11 +178,11 @@
 
 <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="72" height="72" alt="炸藥儲備天賦圖示">
 
-- 手榴彈未滿時，定期補充 **1 顆手榴彈**。
+- 手雷未滿時，定期補充 **1 顆手雷**。
 - **粉碎者破片手雷、煙霧手雷：60 秒。**
 - **穿甲手雷：90 秒。**
-- 投擲手榴彈不會重置補給倒數；手榴彈補滿時，清除倒數進度。
-- 每次補充 1 顆後，若手榴彈仍未補滿，重新開始下一輪倒數。
+- 投擲手雷不會重置補給倒數；手雷補滿時，清除倒數進度。
+- 每次補充 1 顆後，若手雷仍未補滿，重新開始下一輪倒數。
 
 #### 補給範例
 
@@ -256,7 +256,7 @@
 
 <img src="https://github.com/user-attachments/assets/c2dffa00-cd24-478f-96c7-4007f4239e6a" width="72" height="72" alt="生存專家天賦圖示">
 
-- **你或擁有此光環效果的隊友擊殺菁英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備用彈藥上限的彈藥。**
+- **你或擁有此光環效果的隊友擊殺精英、專家敵人時，為擊殺者及其協同範圍內的隊友補充 0.5% 備用彈藥上限的彈藥。**
 - 光環補彈有 **5 秒冷卻**，取代拾荒者的 0.25% 光環。補彈進入備用彈藥，不直接裝入彈匣。
 - 老兵自身的基礎補彈另行判定；不能把自己的總補彈量當成所有隊友都獲得的比例。
 
@@ -282,17 +282,17 @@
 
 <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="72" height="72" alt="火力齊射天賦圖示">
 
-- **立即切換至遠距武器，進入持續 6 秒的火力齊射；冷卻時間 30 秒。**
-- 遠距傷害增加 **15%**，遠距弱點命中的額外傷害加成增加 **15%**，遠距衝擊增加 **50%**。
-- 弱點加成只作用於額外傷害部分；整次弱點命中的增幅隨武器與目標而變，須連同遠距傷害加成分別計算。
-- 散布降低 **38%**、後座力降低 **24%**、瞄準晃動降低 **60%**；期間免疫壓制、暈眩及減速等干擾。
+- **立即切換至遠程武器，進入持續 6 秒的火力齊射；冷卻時間 30 秒。**
+- 遠程傷害增加 **15%**，遠程弱點命中的額外傷害加成增加 **15%**，遠程衝擊增加 **50%**。
+- 弱點加成只作用於額外傷害部分；整次弱點命中的增幅隨武器與目標而變，須連同遠程傷害加成分別計算。
+- 散布降低 **38%**、後座力降低 **24%**、瞄準晃動降低 **60%**；期間免疫壓制、眩暈及減速等干擾。
 - 冷卻從施放時開始，姿態期間仍會計時。切換近戰武器不會自行結束姿態；倒地或受制時會結束。
 
 #### 傷害與冷卻算例
 
-- **遠距傷害**：單看遠距傷害階段，基礎傷害 100、無其他加成時，`100 × 1.15 = 115 點`。
+- **遠程傷害**：單看遠程傷害階段，基礎傷害 100、無其他加成時，`100 × 1.15 = 115 點`。
 
-- **弱點額外傷害**：只比較弱點加成這一項，固定其他效果結算後的基礎部分 100、未加成的弱點額外部分 40，且未爆擊、無其他額外傷害加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × 1.15 = 146 點`，增加 `6 ÷ 140 ≈ 4.29%`。這不是整個火力齊射的總增幅；遠距傷害加成仍須另外納入。
+- **弱點額外傷害**：只比較弱點加成這一項，固定其他效果結算後的基礎部分 100、未加成的弱點額外部分 40，且未暴擊、無其他額外傷害加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × 1.15 = 146 點`，增加 `6 ÷ 140 ≈ 4.29%`。這不是整個火力齊射的總增幅；遠程傷害加成仍須另外納入。
 
 - **冷卻時間**：施放後經過 6 秒，姿態結束；沒有其他冷卻效果時，還需約 `30 − 6 = 24 秒`再次使用。
 
@@ -308,7 +308,7 @@
 
 - **立即回滿自身韌性，並隱身最多 8 秒；冷卻時間 40 秒。**
 - 隱身時移動速度增加 **25%**。傷害增加 **30%**，並在解除隱身後保留 **8 秒**。
-- 一般開火、近戰命中、投擲手榴彈或完成救援互動會提早解除隱身。已施加的流血、燃燒等持續傷害不會單憑傷害跳動解除隱身。
+- 一般開火、近戰命中、投擲手雷或完成救援互動會提早解除隱身。已施加的流血、燃燒等持續傷害不會單憑傷害跳動解除隱身。
 - 解除隱身時，對周圍約 **6 公尺**的敵人施加踉蹌與壓制。冷卻從施放時開始，隱身期間仍會計時。
 
 #### 恢復、傷害與時間算例
@@ -327,7 +327,7 @@
 
 <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="72" height="72" alt="低調天賦圖示">
 
-- **使用戰鬥能力後，敵人選你為目標的仇恨權重降低 90%，持續 10 秒。**
+- **使用戰鬥技能後，敵人選你為目標的仇恨權重降低 90%，持續 10 秒。**
 - 使用滲透時，隱身期間即生效，解除隱身後再保留 **10 秒**。
 - 效果不疊層；已開始 10 秒倒數後，再次施放不會重設這次倒數。
 - 敵人仍可能因距離、攻擊行為等條件選你為目標。
@@ -347,17 +347,17 @@
 
 <img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="72" height="72" alt="處決者姿態天賦圖示">
 
-- **強化火力齊射：遠距傷害與遠距弱點額外傷害加成各提高至 25%，遠距衝擊加成提高至 100%。**
+- **強化火力齊射：遠程傷害與遠程弱點額外傷害加成各提高至 25%，遠程衝擊加成提高至 100%。**
 - 兩項傷害加成各由 15% 提高至 25%，各增加 10 個百分點；弱點加成仍只強化額外傷害部分，整次命中的增幅依武器與目標而變。
 - 姿態持續 **6 秒**、冷卻 **30 秒**；期間每秒恢復 **10% 最大韌性**。
-- 顯示菁英與專家敵人的輪廓；歐格林、巨獸與首領須搭配「敵人越大...」才能納入。一般菁英限約 50 公尺內，專家不受這項距離限制。
+- 顯示精英與專家敵人的輪廓；歐格林、巨獸與首領須搭配「敵人越大...」才能納入。一般精英限約 50 公尺內，專家不受這項距離限制。
 - 擊殺符合輪廓種類的敵人，將姿態持續時間重設為 6 秒。冷卻持續計時；散布、後座力與晃動改善沿用火力齊射。
 
 #### 傷害、恢復與刷新算例
 
-- **遠距傷害**：單看遠距傷害階段，基礎傷害 100 且無其他加成：火力齊射為 `100 × 1.15 = 115 點`，升級後為 `100 × 1.25 = 125 點`；相對於升級前增加 `10 ÷ 115 ≈ 8.70%`。
+- **遠程傷害**：單看遠程傷害階段，基礎傷害 100 且無其他加成：火力齊射為 `100 × 1.15 = 115 點`，升級後為 `100 × 1.25 = 125 點`；相對於升級前增加 `10 ÷ 115 ≈ 8.70%`。
 
-- **弱點額外傷害**：只比較弱點加成的升級，固定其他效果結算後的基礎部分 100、未加成的弱點額外部分 40，且未爆擊、無其他額外傷害加成：由 `100 + 40 × 1.15 = 146 點` 變成 `100 + 40 × 1.25 = 150 點`，增加 `4 ÷ 146 ≈ 2.74%`。這只反映弱點加成由 15% 升至 25% 的差異，完整增幅還須納入遠距傷害的升級。
+- **弱點額外傷害**：只比較弱點加成的升級，固定其他效果結算後的基礎部分 100、未加成的弱點額外部分 40，且未暴擊、無其他額外傷害加成：由 `100 + 40 × 1.15 = 146 點` 變成 `100 + 40 × 1.25 = 150 點`，增加 `4 ÷ 146 ≈ 2.74%`。這只反映弱點加成由 15% 升至 25% 的差異，完整增幅還須納入遠程傷害的升級。
 
 - **韌性恢復**：最大韌性 100、缺額足夠且無恢復加成：每秒 `100 × 10% = 10 點`，完整 6 秒約恢復 `10 × 6 = 60 點`。
 
@@ -377,9 +377,9 @@
 
 <img src="https://github.com/user-attachments/assets/2afc79fa-02f2-4943-b4e7-abe35435f7bd" width="72" height="72" alt="目標引導增強天賦圖示">
 
-- **效果**：啟動處決者姿態時，協同範圍內的隊友也會看見菁英與專家敵人的輪廓，持續 5 秒。你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。
+- **效果**：啟動處決者姿態時，協同範圍內的隊友也會看見精英與專家敵人的輪廓，持續 5 秒。你擊殺符合條件的敵人、延長姿態時，也會重新為當時處於協同範圍的隊友提供 5 秒輪廓。
 
-- **顯示範圍**：菁英必須距離看見輪廓的隊友不到 50 公尺；專家敵人不受這項距離限制。一般射手、歐格林、怪物與首領的額外輪廓不會透過這個效果分享。
+- **顯示範圍**：精英必須距離看見輪廓的隊友不到 50 公尺；專家敵人不受這項距離限制。一般射手、歐格林、怪物與首領的額外輪廓不會透過這個效果分享。
 
 - **時間算例**：啟動時提供一次，若 4 秒後擊殺符合條件的敵人並重新計時姿態，隊友的輪廓時間重回 5 秒，約可看見至第 9 秒。
 
@@ -427,7 +427,7 @@
 
 <img src="https://github.com/user-attachments/assets/57d6b442-9cee-45c3-ba74-4a191649eddb" width="72" height="72" alt="戰術意識天賦圖示">
 
-- **觸發方式**：擊殺專家敵人後，獲得 3 秒的冷卻恢復效果：每秒額外恢復 1 秒戰鬥能力冷卻。一般菁英不會觸發。
+- **觸發方式**：擊殺專家敵人後，獲得 3 秒的冷卻恢復效果：每秒額外恢復 1 秒戰鬥技能冷卻。一般精英不會觸發。
 
 - **連續擊殺**：效果不疊加恢復速度；期間再次擊殺專家敵人，會把持續時間重設為 3 秒，原本的每秒恢復節奏繼續。
 
@@ -479,7 +479,7 @@
 
 <img src="https://github.com/user-attachments/assets/fc16005a-fb09-4db6-bd15-e18d45c6d935" width="72" height="72" alt="鷹眼天賦圖示">
 
-- **效果**：使用戰鬥能力後，命中弱點時的攻擊威力提高 20%，持續 10 秒；近戰與遠距攻擊皆可受益。使用滲透時，隱身期間便生效，解除隱身後再維持 10 秒。
+- **效果**：使用戰鬥技能後，命中弱點時的攻擊威力提高 20%，持續 10 秒；近戰與遠程攻擊皆可受益。使用滲透時，隱身期間便生效，解除隱身後再維持 10 秒。
 
 - **作用方式**：先提高這次弱點命中的攻擊威力，再計算傷害與踉蹌；與堅定不移只加強弱點額外傷害的方式不同。實際傷害增幅仍受武器設定、目標及其他威力加成影響。
 
@@ -540,9 +540,9 @@
 
 <img src="https://github.com/user-attachments/assets/1181fe6e-4066-4d75-b996-a0eb01d7583d" width="72" height="72" alt="肉搏戰天賦圖示">
 
-- **效果**：使用戰鬥能力後，提高對近距離敵人造成的傷害，持續 10 秒。滲透則從隱身期間開始生效，解除隱身後再持續 10 秒。
+- **效果**：使用戰鬥技能後，提高對近距離敵人造成的傷害，持續 10 秒。滲透則從隱身期間開始生效，解除隱身後再持續 10 秒。
 
-- **距離加成**：12.5 公尺內增加 15% 傷害；超過 12.5 公尺後逐漸減弱，到 30 公尺歸零。近戰與遠距攻擊皆可受益。
+- **距離加成**：12.5 公尺內增加 15% 傷害；超過 12.5 公尺後逐漸減弱，到 30 公尺歸零。近戰與遠程攻擊皆可受益。
 
 - **傷害算例**：12.5 公尺內，基礎 100 點變成 `100 × (1 + 15%) = 115 點`。16.875 公尺時，加成為 `15% × (1 − √((16.875 − 12.5) ÷ 17.5)) = 7.5%`，因此為 107.5 點。
 
@@ -584,8 +584,8 @@
 
 <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="72" height="72" alt="狙擊專注天賦圖示">
 
-- **遠距弱點擊殺獲得 3 層狙擊專注；每層使遠距爆擊或弱點命中的額外傷害加成增加 7.5%，裝填速度增加 1%。**
-- 額外傷害加成不提高基礎部分；武器與目標不同，整次命中的增幅也會不同。同時爆擊並命中弱點時，這項加成只套用一次。
+- **遠程弱點擊殺獲得 3 層狙擊專注；每層使遠程暴擊或弱點命中的額外傷害加成增加 7.5%，裝填速度增加 1%。**
+- 額外傷害加成不提高基礎部分；武器與目標不同，整次命中的增幅也會不同。同時暴擊並命中弱點時，這項加成只套用一次。
 - 效果最多按 **10 層**計算。已有層數時，任何弱點命中都能重設 **5 秒**持續時間；近戰弱點命中也可重新計時，但不增加層數。
 - 未再觸發重新計時時，約每 5 秒減少 1 層；移動本身不消耗層數。
 
@@ -593,9 +593,9 @@
 
 - **十層效果**：額外傷害加成為 `10 × 7.5% = 75%`，裝填速度加成為 `10 × 1% = 10%`。
 
-- **傷害增幅**：假設未爆擊的遠距弱點命中，基礎部分 100、未加成的額外部分 40，無其他加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × (1 + 75%) = 170 點`，整次命中增加 `30 ÷ 140 ≈ 21.43%`。若額外部分改為 100，同條件則為 `200 → 100 + 100 × 1.75 = 275 點`，增加 `75 ÷ 200 = 37.5%`。
+- **傷害增幅**：假設未暴擊的遠程弱點命中，基礎部分 100、未加成的額外部分 40，無其他加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × (1 + 75%) = 170 點`，整次命中增加 `30 ÷ 140 ≈ 21.43%`。若額外部分改為 100，同條件則為 `200 → 100 + 100 × 1.75 = 275 點`，增加 `75 ÷ 200 = 37.5%`。
 
-- **搭配堅定不移**：同樣未爆擊且命中弱點，基礎與未加成的額外部分各 100，無其他加成：`100 + 100 × (1 + 75% + 30%) = 305 點`。兩項加成在額外傷害部分相加。
+- **搭配堅定不移**：同樣未暴擊且命中弱點，基礎與未加成的額外部分各 100，無其他加成：`100 + 100 × (1 + 75% + 30%) = 305 點`。兩項加成在額外傷害部分相加。
 
 - **裝填時間**：原本裝填 4 秒，無其他裝填加成時，`4 ÷ 1.1 ≈ 3.64 秒`。
 
@@ -617,13 +617,13 @@
 
 #### 護甲與傷害算例
 
-- **原倍率為 0.5**：只比較撕裂，假設未爆擊、未命中弱點，護甲結算前傷害 100，對某甲殼護甲的原倍率為 0.5，無其他加成：由 `100 × 0.5 = 50 點` 變成 `100 × (0.5 + 0.15) = 65 點`，實際增加 `15 ÷ 50 = 30%`。
+- **原倍率為 0.5**：只比較撕裂，假設未暴擊、未命中弱點，護甲結算前傷害 100，對某甲殼護甲的原倍率為 0.5，無其他加成：由 `100 × 0.5 = 50 點` 變成 `100 × (0.5 + 0.15) = 65 點`，實際增加 `15 ÷ 50 = 30%`。
 
 - **原倍率為 0.8**：其餘條件相同，則由 80 變成 `100 × (0.8 + 0.15) = 95 點`，實際增加 `15 ÷ 80 = 18.75%`。
 
 - **已有 10% 撕裂**：原倍率 0.5 時，由 `100 × (0.5 + 0.1) = 60 點` 變成 `100 × (0.5 + 0.1 + 0.15) = 75 點`，這次增加 `15 ÷ 60 = 25%`。
 
-- **弱點或爆擊命中**：須繼續計算額外傷害，並納入狙擊專注的效果；上述算例不代表十層狙擊專注的總增幅。
+- **弱點或暴擊命中**：須繼續計算額外傷害，並納入狙擊專注的效果；上述算例不代表十層狙擊專注的總增幅。
 
 [詳細資料](veteran_snipers_focus_rending_bonus.md) · [返回目錄](#talent-index)
 
@@ -636,13 +636,13 @@
 <img src="https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f" width="72" height="72" alt="視野狹窄天賦圖示">
 
 - **每層狙擊專注使韌性恢復量增加 4%。**
-- **遠距弱點擊殺恢復 10% 最大耐力。**
+- **遠程弱點擊殺恢復 10% 最大耐力。**
 - 一般韌性恢復可受益；明確忽略恢復加成的效果不適用。韌性與耐力都不能超過各自上限。
 
 #### 恢復算例
 
 - 原本恢復 20 點韌性，五層且沒有其他恢復加成：`20 × (1 + 5 × 4%) = 24 點`。
-- 最大耐力 6：每次遠距弱點擊殺恢復 `6 × 10% = 0.6`；只缺 0.2 時，實際恢復 **0.2**。
+- 最大耐力 6：每次遠程弱點擊殺恢復 `6 × 10% = 0.6`；只缺 0.2 時，實際恢復 **0.2**。
 
 #### 繁中原文勘誤
 
@@ -660,13 +660,13 @@
 
 - **狙擊專注的效果上限由 10 層提高至 15 層。**
 - 每層效果與重新計時方式不變；滲透盔甲仍在 10 層觸發。
-- 滿層的 112.5% 加成作用於遠距爆擊或弱點命中的額外傷害部分；整次命中的增幅隨武器、目標與既有加成而變。
+- 滿層的 112.5% 加成作用於遠程暴擊或弱點命中的額外傷害部分；整次命中的增幅隨武器、目標與既有加成而變。
 
 #### 滿層算例
 
 - **十五層效果**：額外傷害加成為 `15 × 7.5% = 112.5%`，裝填速度加成為 `15 × 1% = 15%`。
 
-- **相對零層**：假設未爆擊的遠距弱點命中，基礎部分 100、未加成的額外部分 40，沒有其他加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × (1 + 112.5%) = 185 點`；增加 `45 ÷ 140 ≈ 32.14%`。
+- **相對零層**：假設未暴擊的遠程弱點命中，基礎部分 100、未加成的額外部分 40，沒有其他加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × (1 + 112.5%) = 185 點`；增加 `45 ÷ 140 ≈ 32.14%`。
 
 - **相對原本十層上限**：同一算例，十層為 `100 + 40 × 1.75 = 170 點`，十五層為 185 點；升級並疊滿後再增加 `15 ÷ 170 ≈ 8.82%`。
 
@@ -682,19 +682,19 @@
 
 <img src="https://github.com/user-attachments/assets/80917bab-ea62-4a9a-a0fa-f9b443ee1b0b" width="72" height="72" alt="武器專家天賦圖示">
 
-- **切換至遠距武器**：手持近戰武器時，每次擊殺累積 1 層，最多 10 層。切出遠距武器後，消耗所有層數，每層提高 2% 遠距攻擊速度與裝填速度，持續 10 秒；再切換武器會提前結束。
+- **切換至遠程武器**：手持近戰武器時，每次擊殺累積 1 層，最多 10 層。切出遠程武器後，消耗所有層數，每層提高 2% 遠程攻擊速度與裝填速度，持續 10 秒；再切換武器會提前結束。
 
-- **首輪射擊**：每層另提高 33 個百分點的遠距爆擊率，首次射擊後移除這項加成，攻速與裝填加成仍保留。原本 10% 爆擊率時，1 層為 `10% + 33% = 43%`，3 層為 `min(10% + 3 × 33%, 100%) = 100%`。
+- **首輪射擊**：每層另提高 33 個百分點的遠程爆擊率，首次射擊後移除這項加成，攻速與裝填加成仍保留。原本 10% 爆擊率時，1 層為 `10% + 33% = 43%`，3 層為 `min(10% + 3 × 33%, 100%) = 100%`。
 
-- **切換至近戰武器**：手持遠距武器時擊殺至少 1 名敵人，再切出近戰武器，可獲得 15% 近戰攻擊速度、10% 閃避速度與 10% 閃避距離，持續 10 秒；再切換武器會提前結束。這一側最多儲存 1 層。
+- **切換至近戰武器**：手持遠程武器時擊殺至少 1 名敵人，再切出近戰武器，可獲得 15% 近戰攻擊速度、10% 閃避速度與 10% 閃避距離，持續 10 秒；再切換武器會提前結束。這一側最多儲存 1 層。
 
-- **速度算例**：10 層提供 `10 × 2% = 20%` 遠距攻速與裝填速度。不計其他加成，原本 3 秒的裝填動作變成 `3 ÷ 1.2 = 2.5 秒`；近戰原本 1 秒的攻擊動作變成 `1 ÷ 1.15 ≈ 0.87 秒`。
+- **速度算例**：10 層提供 `10 × 2% = 20%` 遠程攻速與裝填速度。不計其他加成，原本 3 秒的裝填動作變成 `3 ÷ 1.2 = 2.5 秒`；近戰原本 1 秒的攻擊動作變成 `1 ÷ 1.15 ≈ 0.87 秒`。
 
-- **累積條件**：擊殺算在哪一側，取決於敵人死亡時你手持的武器；持續傷害或先前投出的手榴彈擊殺，也依當時手持的武器累積。
+- **累積條件**：擊殺算在哪一側，取決於敵人死亡時你手持的武器；持續傷害或先前投出的手雷擊殺，也依當時手持的武器累積。
 
 #### 繁中原文勘誤
 
-- 原文把遠距攻速、裝填速度與爆擊率都放在「下一次射擊」之下。**只有額外爆擊率在首次射擊後移除**；遠距攻速與裝填速度仍保留至 10 秒效果結束，或切換武器時結束。
+- 原文把遠程攻速、裝填速度與爆擊率都放在「下一次射擊」之下。**只有額外爆擊率在首次射擊後移除**；遠程攻速與裝填速度仍保留至 10 秒效果結束，或切換武器時結束。
 
 [詳細資料](veteran_weapon_switch_passive.md) · [返回目錄](#talent-index)
 
@@ -708,7 +708,7 @@
 
 - **觸發方式**：儲存至少 1 層武器專家的加成後，切換至對應武器，恢復 20% 最大韌性。恢復量固定，不隨層數增加。
 
-- **冷卻**：切至遠距與切至近戰，各自有 3 秒冷卻。即使冷卻尚未結束，切換仍會用掉該側儲存的層數。
+- **冷卻**：切至遠程與切至近戰，各自有 3 秒冷卻。即使冷卻尚未結束，切換仍會用掉該側儲存的層數。
 
 - **恢復算例**：最大韌性 100 點時，每次恢復 `100 × 20% = 20 點`。目前有 90 點則只補到 100 點；上述數字未計其他韌性恢復加成。
 
@@ -722,7 +722,7 @@
 
 <img src="https://github.com/user-attachments/assets/842c2a40-8bb4-45fa-a1e2-672fedf80d78" width="72" height="72" alt="有備無患天賦圖示">
 
-- **觸發方式**：手持近戰武器擊殺、儲存武器專家的層數後，切出遠距武器，會把備用彈藥移入彈匣。層數越多，補入量越多。
+- **觸發方式**：手持近戰武器擊殺、儲存武器專家的層數後，切出遠程武器，會把備用彈藥移入彈匣。層數越多，補入量越多。
 
 - **補彈公式**：`缺少的彈量 × 33% × 層數 ÷ 10`，結果向上取整，最高計算 10 層。
 
@@ -744,7 +744,7 @@
 
 <img src="https://github.com/user-attachments/assets/bc2a44d8-866d-4f29-a680-f84e98b72b01" width="72" height="72" alt="活力煥發天賦圖示">
 
-- **觸發方式**：手持遠距武器擊殺敵人、儲存武器專家的近戰加成後，切出近戰武器，恢復 20% 最大耐力，並在 3 秒內降低 25% 耐力消耗。
+- **觸發方式**：手持遠程武器擊殺敵人、儲存武器專家的近戰加成後，切出近戰武器，恢復 20% 最大耐力，並在 3 秒內降低 25% 耐力消耗。
 
 - **持續與重觸發**：減少耐力消耗的效果不因再次切換武器而提前結束；重新符合擊殺與切換條件時，恢復耐力並把 3 秒持續時間重設。
 
@@ -840,8 +840,8 @@
 
 <img src="https://github.com/user-attachments/assets/3ec21db4-4013-4522-850f-14c583e25ea7" width="72" height="72" alt="爆破小隊天賦圖示">
 
-- **你或協同範圍內的隊友擊殺菁英或專家敵人時，有 5% 機率為你補充 1 顆手榴彈。**
-- 只補充你的手榴彈，最多補到攜帶上限。
+- **你或協同範圍內的隊友擊殺精英或專家敵人時，有 5% 機率為你補充 1 顆手雷。**
+- 只補充你的手雷，最多補到攜帶上限。
 
 #### 機率算例
 
@@ -875,7 +875,7 @@
 
 <img src="https://github.com/user-attachments/assets/009ef44a-cf3d-44cf-ac8b-cda57c6fd83d" width="72" height="72" alt="齊射能手天賦圖示">
 
-- **擊殺菁英或專家敵人後，下一次裝填速度增加 30%。**
+- **擊殺精英或專家敵人後，下一次裝填速度增加 30%。**
 - 重複擊殺不累積次數。效果保留至裝填實際補入彈藥，並維持到該次裝填動作結束。
 
 #### 裝填算例
@@ -893,19 +893,19 @@
 
 <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="72" height="72" alt="堅定不移天賦圖示">
 
-- **弱點命中的額外傷害加成增加 30%；近戰與遠距均適用。**
+- **弱點命中的額外傷害加成增加 30%；近戰與遠程均適用。**
 
 - **實際增幅**：只加強弱點命中的額外傷害，基礎部分不變。額外傷害占比越高，整次命中的增幅越大；武器、攻擊方式、目標護甲與既有加成都會影響結果。
 
 #### 傷害算例
 
-- **弱點額外傷害為 100**：假設未爆擊、基礎部分 100、沒有其他加成，原本 `100 + 100 = 200 點`；點選後 `100 + 100 × 1.3 = 230 點`。實際增加 `(230 − 200) ÷ 200 = 15%`。
+- **弱點額外傷害為 100**：假設未暴擊、基礎部分 100、沒有其他加成，原本 `100 + 100 = 200 點`；點選後 `100 + 100 × 1.3 = 230 點`。實際增加 `(230 − 200) ÷ 200 = 15%`。
 
 - **弱點額外傷害為 200**：同樣基礎部分 100，原本 `100 + 200 = 300 點`；點選後 `100 + 200 × 1.3 = 360 點`。實際增加 `(360 − 300) ÷ 300 = 20%`。
 
 - **已有同階段加成**：基礎與未加成的弱點額外部分各 100，原有 25% 額外傷害加成時，由 `100 + 100 × 1.25 = 225 點` 變成 `100 + 100 × (1 + 25% + 30%) = 255 點`；實際增加 `30 ÷ 225 ≈ 13.33%`。
 
-- **比較武器時**：上述 15% 與 20% 是假設算例，不是盧修斯或自動槍的固定增幅。應以相同武器、攻擊／蓄力方式、敵人、弱點部位、距離及爆擊狀態，比較點選前後的傷害；不要直接把打身體的傷害當成弱點命中的基礎部分。
+- **比較武器時**：上述 15% 與 20% 是假設算例，不是盧修斯或自動槍的固定增幅。應以相同武器、攻擊／蓄力方式、敵人、弱點部位、距離及暴擊狀態，比較點選前後的傷害；不要直接把打身體的傷害當成弱點命中的基礎部分。
 
 [詳細資料](veteran_increased_weakspot_damage.md) · [返回目錄](#talent-index)
 
@@ -919,13 +919,13 @@
 
 - **近戰爆擊率增加 10 個百分點。**
 - **近戰爆擊或弱點命中的額外傷害加成增加 25%。**
-- 傷害加成只作用於額外部分，整次命中的增幅依武器與目標而變。同時爆擊並命中弱點時，這項 25% 加成只套用一次。
+- 傷害加成只作用於額外部分，整次命中的增幅依武器與目標而變。同時暴擊並命中弱點時，這項 25% 加成只套用一次。
 
 #### 爆擊與傷害算例
 
 - **爆擊率**：原本近戰爆擊率 10%，點選後為 `10% + 10% = 20%`。
 
-- **單次傷害**：假設未爆擊的近戰弱點命中，基礎部分 100、未加成的額外部分 40，沒有其他加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × 1.25 = 150 點`，整次傷害增加 `10 ÷ 140 ≈ 7.14%`。
+- **單次傷害**：假設未暴擊的近戰弱點命中，基礎部分 100、未加成的額外部分 40，沒有其他加成：由 `100 + 40 = 140 點` 變成 `100 + 40 × 1.25 = 150 點`，整次傷害增加 `10 ÷ 140 ≈ 7.14%`。
 
 - **額外傷害較高時**：若同條件的額外部分為 100，則由 200 變成 `100 + 100 × 1.25 = 225 點`，增加 `25 ÷ 200 = 12.5%`。這些算例只比較單次弱點傷害；持續攻擊的平均傷害還受爆擊率、弱點命中率與攻擊方式影響。
 
@@ -940,7 +940,7 @@
 <img src="https://github.com/user-attachments/assets/d6402640-110e-4d25-b1b3-780a49b1c4e1" width="72" height="72" alt="嗜血天賦圖示">
 
 - **每次擊殺額外恢復 5% 最大韌性。**
-- 近戰與遠距擊殺均可觸發；恢復不超過韌性上限。
+- 近戰與遠程擊殺均可觸發；恢復不超過韌性上限。
 
 #### 恢復算例
 
@@ -977,7 +977,7 @@
 <img src="https://github.com/user-attachments/assets/fd178238-be59-4c18-8631-12423f5506fb" width="72" height="72" alt="趁火打劫天賦圖示">
 
 - **近戰爆擊命中後，傷害增加 20%，持續 6 秒。**
-- 期間的近戰與遠距傷害均可受益；再次近戰爆擊會重新計時，不累積加成。
+- 期間的近戰與遠程傷害均可受益；再次近戰爆擊會重新計時，不累積加成。
 
 #### 傷害與持續時間算例
 
@@ -994,7 +994,7 @@
 
 <img src="https://github.com/user-attachments/assets/a882268c-6f4f-42ee-8973-a64dd6e882e7" width="72" height="72" alt="不拋棄不放棄天賦圖示">
 
-- **面向需要援助的隊友時，移動速度增加 20%，並免疫暈眩。**
+- **面向需要援助的隊友時，移動速度增加 20%，並免疫眩暈。**
 - 隊友須位於視線方向左右各約 60 度內；不必正在向前移動。
 - 救起倒地隊友、拉起懸掛隊友、解網與營救速度增加 **20%**。
 - 你救起倒地隊友後，該隊友受到的傷害降低 **33%**，持續 **5 秒**。
@@ -1020,11 +1020,11 @@
 
 #### 護甲與傷害算例
 
-- **原倍率為 0.5**：假設未爆擊、未命中弱點，護甲結算前傷害 100，對某甲殼護甲的原倍率為 0.5，沒有其他加成：由 `100 × 0.5 = 50 點` 變成 `100 × (0.5 + 0.1) = 60 點`，實際增加 `10 ÷ 50 = 20%`。
+- **原倍率為 0.5**：假設未暴擊、未命中弱點，護甲結算前傷害 100，對某甲殼護甲的原倍率為 0.5，沒有其他加成：由 `100 × 0.5 = 50 點` 變成 `100 × (0.5 + 0.1) = 60 點`，實際增加 `10 ÷ 50 = 20%`。
 
 - **原倍率已達 1**：其餘條件相同，超出倍率 1 的撕裂按四分之一換算：由 100 變成 `100 × (1 + 0.1 × 0.25) = 102.5 點`，實際增加 `2.5 ÷ 100 = 2.5%`。
 
-- **弱點或爆擊命中**：以上只示範護甲結算；弱點與爆擊還有額外傷害計算，不能直接沿用這兩個百分比。
+- **弱點或暴擊命中**：以上只示範護甲結算；弱點與暴擊還有額外傷害計算，不能直接沿用這兩個百分比。
 
 [詳細資料](veteran_rending_bonus.md) · [返回目錄](#talent-index)
 
@@ -1053,13 +1053,13 @@
 
 <img src="https://github.com/user-attachments/assets/a7c3f5a6-113a-404a-873d-985481ec316b" width="72" height="72" alt="靈活接敵天賦圖示">
 
-- **近戰擊殺使遠距傷害增加 25%；遠距擊殺使近戰傷害增加 25%。**
+- **近戰擊殺使遠程傷害增加 25%；遠程擊殺使近戰傷害增加 25%。**
 - 兩種加成各持續 **6 秒**，可同時存在；同類擊殺重設對應的持續時間，不疊層。
 
 #### 傷害與時間算例
 
 - 只計此加成，另一類攻擊基礎傷害 100：`100 × 1.25 = 125 傷害`。
-- 第 0 秒近戰擊殺、第 4 秒再次近戰擊殺：遠距增傷延長至約第 `4 + 6 = 10 秒`。
+- 第 0 秒近戰擊殺、第 4 秒再次近戰擊殺：遠程增傷延長至約第 `4 + 6 = 10 秒`。
 
 [詳細資料](veteran_kill_grants_damage_to_other_slot.md) · [返回目錄](#talent-index)
 
@@ -1110,16 +1110,16 @@
 - **連續命中同一個仍存活的敵人，從第二次攻擊起，每次施加 1 層脆弱。**
 - 每層使目標的護甲修正受到 **2.5%** 撕裂效果，最多 **16 層（40%）**；其他隊友攻擊此目標也能受益。
 - 實際增幅取決於攻擊者的武器、目標護甲與已有撕裂；滿層 40% 不是所有攻擊的最終傷害都增加 40%。
-- 近戰與遠距均可觸發，每次揮擊或射擊最多處理第一個有效命中；流血等持續傷害不疊層。
+- 近戰與遠程均可觸發，每次揮擊或射擊最多處理第一個有效命中；流血等持續傷害不疊層。
 - 持續 **5 秒**，新增層數重新計時。改打另一個敵人後，須重新連續命中；射空本身不清除已追蹤的目標。
 
 #### 疊層與傷害算例
 
 - **四層脆弱**：對同一敵人完成五次合資格命中，第一下建立連續命中，後四下合計 `4 × 2.5% = 10%`。
 
-- **四層後的下一擊**：假設未爆擊、未命中弱點，護甲結算前傷害 100，對某甲殼護甲的原倍率為 0.5，無其他加成：由 `100 × 0.5 = 50 點` 變成 `100 × (0.5 + 10%) = 60 點`，實際增加 `10 ÷ 50 = 20%`。
+- **四層後的下一擊**：假設未暴擊、未命中弱點，護甲結算前傷害 100，對某甲殼護甲的原倍率為 0.5，無其他加成：由 `100 × 0.5 = 50 點` 變成 `100 × (0.5 + 10%) = 60 點`，實際增加 `10 ÷ 50 = 20%`。
 
-- **十六層後的下一擊**：同條件為 `100 × (0.5 + 40%) = 90 點`，相對零層增加 `40 ÷ 50 = 80%`。這是此護甲倍率下的算例；換武器、換護甲，或改為弱點／爆擊命中，須重新計算。
+- **十六層後的下一擊**：同條件為 `100 × (0.5 + 40%) = 90 點`，相對零層增加 `40 ÷ 50 = 80%`。這是此護甲倍率下的算例；換武器、換護甲，或改為弱點／暴擊命中，須重新計算。
 
 [詳細資料](veteran_continous_hits_apply_rending.md) · [返回目錄](#talent-index)
 
@@ -1149,7 +1149,7 @@
 <img src="https://github.com/user-attachments/assets/19c86987-5e48-4eeb-9385-33697b9d99b0" width="72" height="72" alt="喘息片刻天賦圖示">
 
 - **超過 5 秒未受到近戰命中時，每秒恢復 5% 最大韌性。**
-- 再次被近戰命中會中斷恢復，並重新等待 5 秒；敵人靠近、自己近戰攻擊或受到遠距命中不會單憑這些行為中斷。
+- 再次被近戰命中會中斷恢復，並重新等待 5 秒；敵人靠近、自己近戰攻擊或受到遠程命中不會單憑這些行為中斷。
 
 #### 恢復算例
 
@@ -1166,8 +1166,8 @@
 
 <img src="https://github.com/user-attachments/assets/4193f147-bd40-49f8-92d4-a2b83fa1ad5b" width="72" height="72" alt="首輪齊射天賦圖示">
 
-- **彈匣剩餘彈藥至少 80% 時，遠距爆擊率增加 10 個百分點。**
-- 必須手持遠距武器；備用彈藥數量不影響這個門檻。
+- **彈匣剩餘彈藥至少 80% 時，遠程爆擊率增加 10 個百分點。**
+- 必須手持遠程武器；備用彈藥數量不影響這個門檻。
 
 #### 門檻與爆擊率算例
 
@@ -1184,9 +1184,9 @@
 
 <img src="https://github.com/user-attachments/assets/8cc616f0-d225-4b5f-81a4-8780f478d471" width="72" height="72" alt="殺戮地帶天賦圖示">
 
-- **超過 8 秒未受到近戰命中時，遠距傷害增加 15%。**
+- **超過 8 秒未受到近戰命中時，遠程傷害增加 15%。**
 - 再次受到近戰命中時，效果中斷並重新計時。
-- 敵人靠近、自己進行近戰攻擊或受到遠距命中，不會中斷效果。
+- 敵人靠近、自己進行近戰攻擊或受到遠程命中，不會中斷效果。
 
 #### 傷害計算
 
@@ -1208,12 +1208,12 @@
 
 <img src="https://github.com/user-attachments/assets/cba2a46d-298c-434a-883d-e048f5ede32d" width="72" height="72" alt="突擊隊天賦圖示">
 
-- **雷射武器的爆擊射擊不消耗彈藥。**
+- **雷射武器的暴擊射擊不消耗彈藥。**
 - 手持該武器且彈匣至少還有 1 發時生效；不必命中敵人。空彈匣無法靠此效果開火。
 
 #### 彈藥算例
 
-- 假設每次射擊原本消耗 1 發，10 次射擊中有 3 次爆擊：共消耗 `(10 − 3) × 1 + 3 × 0 = 7 發`。
+- 假設每次射擊原本消耗 1 發，10 次射擊中有 3 次暴擊：共消耗 `(10 − 3) × 1 + 3 × 0 = 7 發`。
 
 [詳細資料](veteran_no_ammo_consumption_on_lasweapon_crit.md) · [返回目錄](#talent-index)
 
@@ -1225,7 +1225,7 @@
 
 <img src="https://github.com/user-attachments/assets/ba2f9f5e-0466-433d-a93d-68b1f9606dd7" width="72" height="72" alt="凋零烈焰天賦圖示">
 
-- **遠距順劈攻擊的穿透能力增加 50%。**
+- **遠程順劈攻擊的穿透能力增加 50%。**
 - 子彈能穿透多少敵人，仍由武器與各敵人的阻擋程度決定；不增加對單一目標的傷害。
 
 #### 穿透算例
@@ -1243,9 +1243,9 @@
 
 <img src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907" width="72" height="72" alt="振奮擊倒天賦圖示">
 
-- **遠距弱點擊殺恢復 15% 最大韌性，並獲得 1 層韌性減傷，最多 3 層。**
+- **遠程弱點擊殺恢復 15% 最大韌性，並獲得 1 層韌性減傷，最多 3 層。**
 - 每層使韌性受到的傷害降低 **10%**，各層減傷相乘；三層合計降低 **27.1%**。
-- 每次遠距弱點擊殺重設 **8 秒**持續時間。期間未再次觸發，約每 8 秒減少 1 層。
+- 每次遠程弱點擊殺重設 **8 秒**持續時間。期間未再次觸發，約每 8 秒減少 1 層。
 - 韌性已滿時，仍可獲得減傷並重設持續時間。
 
 #### 韌性恢復
@@ -1311,13 +1311,13 @@
 
 <img src="https://github.com/user-attachments/assets/aba3bef3-ec36-4b94-8097-95a2f43d593e" width="72" height="72" alt="臨場發揮天賦圖示">
 
-- **小隊的彈藥箱也能補滿可補給的手榴彈。**
+- **小隊的彈藥箱也能補滿可補給的手雷。**
 - **醫療箱治療速度提高 100%，並每秒恢復 1% 最大韌性。**
 - 醫療箱還能清除部分腐敗，但無法修復已失去的整段生命上限。隊友放置的補給箱也能獲得效果。
 
 #### 補給算例
 
-- 手榴彈上限 4 顆、剩餘 1 顆時，使用可補給手榴彈的彈藥箱，補回 `4 − 1 = 3 顆`。
+- 手雷上限 4 顆、剩餘 1 顆時，使用可補給手雷的彈藥箱，補回 `4 − 1 = 3 顆`。
 - 未倒地、最大生命 200：原本每秒 `200 × 6% = 12`，強化後為 `200 × 6% × 2 = 24 生命`。同一秒可減少的腐敗量為 `24 × 0.5 = 12`，仍受生命段限制。
 - 最大韌性 150：每秒恢復 `150 × 1% = 1.5`，最多補滿。
 
@@ -1331,7 +1331,7 @@
 
 <img src="https://github.com/user-attachments/assets/8c1dadf2-9263-4efa-a710-9da08a41eb3e" width="72" height="72" alt="火力掩護天賦圖示">
 
-- **遠距擊殺敵人時，可為該敵人附近的 1 名隊友恢復 15% 最大韌性，並使其傷害增加 15%，持續 6 秒。**
+- **遠程擊殺敵人時，可為該敵人附近的 1 名隊友恢復 15% 最大韌性，並使其傷害增加 15%，持續 6 秒。**
 - 不作用於自己。再次獲得傷害加成時重設持續時間，不疊層。
 - 搜尋起始範圍為 8 公尺；多名隊友同時在附近時，選人與範圍判定存在異常，不能保證選到最近的一人。
 
@@ -1368,7 +1368,7 @@
 
 <img src="https://github.com/user-attachments/assets/706a5b5b-5f7b-43bc-bbd0-7debf024671b" width="72" height="72" alt="擊殺紀錄天賦圖示">
 
-- **擊殺菁英或專家敵人，立即恢復 10% 最大韌性。**
+- **擊殺精英或專家敵人，立即恢復 10% 最大韌性。**
 - 接下來 **10 秒**，每秒再恢復 **2% 最大韌性**；多次擊殺的持續恢復各自生效。
 
 #### 韌性恢復算例
@@ -1404,7 +1404,7 @@
 
 <img src="https://github.com/user-attachments/assets/f7517509-e85f-47fb-b775-234a6aa0950a" width="72" height="72" alt="遠射天賦圖示">
 
-- **遠距傷害增加 10%；距離越遠，額外再增加最多 15%。**
+- **遠程傷害增加 10%；距離越遠，額外再增加最多 15%。**
 - 12.5 公尺內為 10%；30 公尺起達到合計 25%。中間距離依平方根曲線增加。
 
 #### 距離與傷害算例
@@ -1467,7 +1467,7 @@
 <img src="https://github.com/user-attachments/assets/fc1e80c9-c17b-4e96-909d-bab403221f03" width="72" height="72" alt="幹掉它！天賦圖示">
 
 - **對歐格林與巨獸的傷害增加 20%。**
-- 近戰與遠距攻擊均適用。
+- 近戰與遠程攻擊均適用。
 
 #### 傷害算例
 
@@ -1484,14 +1484,14 @@
 
 <img src="https://github.com/user-attachments/assets/915cdbef-5b88-4d3b-a4f1-e29e8a8f0f07" width="72" height="72" alt="優越情節天賦圖示">
 
-- **對菁英敵人的傷害增加 15%。**
-- 近戰與遠距攻擊均適用。
-- 僅具有專家分類、沒有菁英分類的敵人，不適用此加成。
+- **對精英敵人的傷害增加 15%。**
+- 近戰與遠程攻擊均適用。
+- 僅具有專家分類、沒有精英分類的敵人，不適用此加成。
 
 #### 傷害計算
 
 - 此加成與其他同類傷害加成相加。
-- 以對菁英敵人的基礎傷害 **100**、不計其他傷害倍率為例：`100 × (1 + 15%) = 115 傷害`。
+- 以對精英敵人的基礎傷害 **100**、不計其他傷害倍率為例：`100 × (1 + 15%) = 115 傷害`。
 - 若已有 **25% 同類傷害加成**：原傷害為 `100 × 1.25 = 125`；點選本天賦後為 `100 × (1 + 25% + 15%) = 140`，增加 **15 傷害**。
 
 [詳細資料](veteran_increase_damage_vs_elites.md) · [返回目錄](#talent-index)
@@ -1505,7 +1505,7 @@
 <img src="https://github.com/user-attachments/assets/8567315b-bea7-4be4-aaec-22d7096945a9" width="72" height="72" alt="靈活應對天賦圖示">
 
 - **移動速度增加 5%。**
-- 成功躲過遠距攻擊時，恢復 **30% 最大耐力**；此恢復每 **3 秒**最多觸發一次。
+- 成功躲過遠程攻擊時，恢復 **30% 最大耐力**；此恢復每 **3 秒**最多觸發一次。
 
 #### 恢復算例
 
@@ -1514,7 +1514,7 @@
 
 #### 繁中原文勘誤
 
-- 原文寫成「耐力消耗」，應為 **成功躲過遠距攻擊時恢復 30% 最大耐力**；這項效果不是增加或減少該動作的耐力消耗。
+- 原文寫成「耐力消耗」，應為 **成功躲過遠程攻擊時恢復 30% 最大耐力**；這項效果不是增加或減少該動作的耐力消耗。
 
 [詳細資料](veteran_dodging_grants_stamina.md) · [返回目錄](#talent-index)
 
@@ -1579,7 +1579,7 @@
 
 <img src="https://github.com/user-attachments/assets/e836f77f-9bb2-4b87-938a-3bab63656ff1" width="72" height="72" alt="秘密特工天賦圖示">
 
-- **從敵人的後半側以遠距攻擊命中時，傷害增加 30%。**
+- **從敵人的後半側以遠程攻擊命中時，傷害增加 30%。**
 - 正側面交界不算；近戰攻擊不適用。
 
 #### 傷害算例

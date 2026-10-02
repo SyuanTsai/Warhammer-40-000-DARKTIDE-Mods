@@ -10,7 +10,7 @@
 ## 原始碼確認與程式推導
 
 - 標記目標死亡時，_execution_order_proc 讀取此升級 special rule，若已選取便建立 adamant_execution_order_crit。效果上限 1 層、持續 8 秒，提供 critical_strike_chance=0.10 與 critical_strike_damage=0.25；重複觸發重新計時。
-- CriticalStrike.chance 把 critical_strike_chance 加到職業基礎與武器額外爆擊機率後 clamp 至 0..1；爆擊傷害由共用 damage calculation 讀取 critical_strike_damage。
+- CriticalStrike.chance 把 critical_strike_chance 加到職業基礎與武器額外爆擊率後 clamp 至 0..1；暴擊傷害由共用 damage calculation 讀取 critical_strike_damage。
 - 程式碼核對固定至公開 Aussiemon/Darktide-Source-Code SHA 7e662fcda16219d775b84af50322be2e9cd9d62e；此公開程式碼與本機繁中／英文文字版本對應為1.13.1。
 
 ## 原始碼依據
@@ -27,8 +27,8 @@
 
 ## 算例條件與待確認事項
 
-- 基礎爆擊機率 5% 時，加成單獨貢獻 +10 個百分點，結果為 15%；最終值仍受武器加成與 100% 上限影響。
-- 爆擊傷害最終數值仍受近戰／遠距專屬修正、武器與傷害公式影響。
+- 基礎爆擊率 5% 時，加成單獨貢獻 +10 個百分點，結果為 15%；最終值仍受武器加成與 100% 上限影響。
+- 暴擊傷害最終數值仍受近戰／遠程專屬修正、武器與傷害公式影響。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-成功閃避事件觸發內部 buff，每層設定 critical_strike_chance = .05，max stacks=5、duration=8、疊層時重新計時 timer。此為爆擊機率 value stat 加算百分點，不是相對乘算 5%。[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1180-L1224) → [成功閃避事件、持續與層數](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2590-L2615)。
+成功閃避事件觸發內部 buff，每層設定 critical_strike_chance = .05，max stacks=5、duration=8、疊層時重新計時 timer。此為爆擊率 value stat 加算百分點，不是相對乘算 5%。[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1180-L1224) → [成功閃避事件、持續與層數](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L2590-L2615)。
 
 ## 原始碼依據
 

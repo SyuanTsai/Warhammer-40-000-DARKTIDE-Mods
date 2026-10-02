@@ -11,7 +11,7 @@
 
 - 此修改器啟用 special_rule cryptic_dissector_increased_cooldown_gained_on_elite_or_special_kills。cryptic_ability_recharge 的擊殺處理先採 base=2%或elite/special=4%；選用此rule時只把elite/special值加0.025，得到6.5%。
 - 恢復呼叫 restore_ability_charge_percentage(COMBAT_ABILITY_TYPE, cooldown_to_restore)。PlayerUnitAbilityExtension以resource_cost_per_charge乘此比例，而不是max_ability_resource整池；helper把ignore_stat_buffs設為true，因此紅線的resource_restored_modifier及其他stat buff不再乘一次。若單份成本50點，6.5%=3.25資源點，其中本修改器單獨增加1.25點。
-- 擊殺proc在偵測到 cryptic_precision_stance keyword 時先return，故該姿態期間一般擊殺2%、菁英／專家總6.5%都不會恢復。
+- 擊殺proc在偵測到 cryptic_precision_stance keyword 時先return，故該姿態期間一般擊殺2%、精英／專家總6.5%都不會恢復。
 
 ## 原始碼依據
 
@@ -28,7 +28,7 @@
 
 ## 算例條件與待確認事項
 
-- 靜態推演：單份成本50點時，本修改器增加50×0.025=1.25點。菁英／專家擊殺原本4%恢復50×0.04=2點，加入後總計50×0.065=3.25點；恢復不足一整份時只增加進度。
+- 靜態推演：單份成本50點時，本修改器增加50×0.025=1.25點。精英／專家擊殺原本4%恢復50×0.04=2點，加入後總計50×0.065=3.25點；恢復不足一整份時只增加進度。
 - 總6.5%由固定職業擊殺恢復4%與本修改器額外2.5%相加；不可只把額外值寫成總恢復。
 - 百分比依單一充能成本計算，不依全部充能總池。restore_ability_charge_percentage忽略stat buffs，所以此恢復不受紅線恢復倍率放大。
 - precision stance keyword會使整個擊殺恢復proc提前return。
@@ -37,7 +37,7 @@
 ## 原文核對
 
 - 對應 hash：`2baab5a1`。
-- 繁中與英文說明菁英／專家擊殺額外恢復2.5%電容量；固定版確認額外值並加到職業既有4%菁英／專家恢復上。中英皆用additional，6.5%總值與單充能分母屬程式推導，不是文字誤譯。
+- 繁中與英文說明精英／專家擊殺額外恢復2.5%電容量；固定版確認額外值並加到職業既有4%精英／專家恢復上。中英皆用additional，6.5%總值與單充能分母屬程式推導，不是文字誤譯。
 
 ## 圖示來源
 

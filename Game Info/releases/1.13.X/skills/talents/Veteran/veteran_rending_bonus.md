@@ -21,8 +21,8 @@
 
 ## 百分比與實際傷害增幅
 
-- **程式推導**：玩家例排除爆擊、弱點及後續倍率，固定護甲結算前傷害100，armor_type=super_armor。ADM=.5、rending由0到.1時50→60（20%）；ADM=1時100→102.5（2.5%）。同一10%撕裂不等於固定10%整筆增傷。
-- 護甲倍率未達1的部分先補足差額，超出部分按overdamage_rending_multiplier=.25換算；unarmored沒有rending_armor_type_multiplier，故此護甲修正為0。爆擊/弱點時後續_finesse_boost_damage也使用rending後damage及rending_damage，需另算完整攻擊。
+- **程式推導**：玩家例排除暴擊、弱點及後續倍率，固定護甲結算前傷害100，armor_type=super_armor。ADM=.5、rending由0到.1時50→60（20%）；ADM=1時100→102.5（2.5%）。同一10%撕裂不等於固定10%整筆增傷。
+- 護甲倍率未達1的部分先補足差額，超出部分按overdamage_rending_multiplier=.25換算；unarmored沒有rending_armor_type_multiplier，故此護甲修正為0。暴擊/弱點時後續_finesse_boost_damage也使用rending後damage及rending_damage，需另算完整攻擊。
 
 - [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1027–1033 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1027-L1033)
 - [scripts/settings/damage/armor_settings.lua，第 8–19 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/damage/armor_settings.lua#L8-L19)

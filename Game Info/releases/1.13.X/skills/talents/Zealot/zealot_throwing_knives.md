@@ -14,7 +14,7 @@
 - 傷害範本對 super_armor 設 no_damage，carapace 常落入此護甲類別；最終傷害仍受命中目標的實際護甲部位及其他攻擊計算影響。
 - 補刀被動監聽近戰擊殺並呼叫 check_proc_func；helper 要求攻擊結果為 died 且 attack_type 為 melee，並判斷目標屬 elite 或 special，成功才 restore 1 grenade ability charge。
 - ammo interaction 對帶 ammo_pickups_refills_grenades 特例的能力，取 pickup_data.ammo_amount_func(max_grenade_charges, 0, pickup_data) 並將新充能數夾在最大值內；大型彈藥箱的函式以最大備用彈藥量作為補給量。
-- ProjectileDamageExtension 使用 DEFAULT_POWER_LEVEL=500 呼叫 Attack.execute；傷害 profile attack=585。固定 charge=1、無其他修正時，20×(500×585/10000)=585；再乘部位護甲 ADM。弱點／爆擊增傷另走 finesse 流程。
+- ProjectileDamageExtension 使用 DEFAULT_POWER_LEVEL=500 呼叫 Attack.execute；傷害 profile attack=585。固定 charge=1、無其他修正時，20×(500×585/10000)=585；再乘部位護甲 ADM。弱點／暴擊增傷另走 finesse 流程。
 - 彈藥互動先讀 difficulty ammo_modifier，再把最大刀量 12 當作 max_ammunition_reserve 傳入各 pickup 函式。small_clip ceil(.15×m×12)，large_clip ceil(.5×m×12)，deployable ceil(m×12)；m=1 時分別 2、6、12。
 
 ## 原始碼依據
@@ -45,9 +45,9 @@
 
 ## 算例條件與待確認事項
 
-- 585×.8=468；此為無爆擊、無弱點、無穿甲及其他修正的防彈護甲普通命中。
+- 585×.8=468；此為無暴擊、無弱點、無穿甲及其他修正的防彈護甲普通命中。
 - 剩 8 把時，m=1 的小補給增加 2 變 10，大補給增加 6 但封頂為 12。
-- 補刀要求擊殺判定成功、攻擊類型為 melee，且目標符合 elite 或 special 分類；近戰命中、助攻或遠距擊殺不等於必定補刀。
+- 補刀要求擊殺判定成功、攻擊類型為 melee，且目標符合 elite 或 special 分類；近戰命中、助攻或遠程擊殺不等於必定補刀。
 - 彈藥補刀量取決於撿取物自己的 ammo_amount_func；不能把所有彈藥箱都寫成固定補 1 把。
 - Build 25606770 的英文與繁中都描述彈藥箱補刀及對 Carapace 較弱；沒有足以判定明確翻譯錯誤的差異。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
@@ -55,7 +55,7 @@
 ## 原文核對
 
 - 對應 hash：`5c177ee2`。
-- 繁中與英文描述均提及近戰擊殺菁英／專家補 1 把及彈藥箱補刀；來源中補給量依 pickup 設定變化，不足以判定「彈藥箱可補充」是翻譯錯誤。
+- 繁中與英文描述均提及近戰擊殺精英／專家補 1 把及彈藥箱補刀；來源中補給量依 pickup 設定變化，不足以判定「彈藥箱可補充」是翻譯錯誤。
 
 ## 圖示來源
 

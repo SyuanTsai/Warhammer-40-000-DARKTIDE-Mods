@@ -112,14 +112,14 @@
 ## 整合型艾曼納圖斯力場(Integrated Refraction Emitter)
 
 - 描述鍵：`loc_talent_cryptic_grenade_ability_force_field_cooldown_desc`；hash：`1988edfa`。
-- 結論：未見明確矛盾；補充機制與算例。本機中英均描述吸收遠距攻擊、8秒持續、3次使用及75秒恢復。來源補明5公尺起訖電擊、共用恢復進度；未展開這些細節不視為錯譯。
+- 結論：未見明確矛盾；補充機制與算例。本機中英均描述吸收遠程攻擊、8秒持續、3次使用及75秒恢復。來源補明5公尺起訖電擊、共用恢復進度；未展開這些細節不視為錯譯。
 - [原始碼推導與限制](cryptic_grenade_ability_force_field.md)。
 
 <a id="cryptic_flamethrower"></a>
 ## 滌罪伺服頭骨(Purgator Servo-Skull)
 
 - 描述鍵：`loc_talent_cryptic_servo_skull_flamethrower_new_desc`；hash：`e66555ce`。
-- 結論：未見明確矛盾；補充機制與算例。繁中描述已涵蓋額外噴火頭骨、落點部署、兩種射擊模式與雙選增加使用次數。固定來源另證明每次噴火消耗共用手榴彈能力1次、15秒動作與10公尺射程；屬翻譯省略的機制細節，不判為錯譯。Build 25606770 版本對應為1.13.1。
+- 結論：未見明確矛盾；補充機制與算例。繁中描述已涵蓋額外噴火頭骨、落點部署、兩種射擊模式與雙選增加使用次數。固定來源另證明每次噴火消耗共用手雷能力1次、15秒動作與10公尺射程；屬翻譯省略的機制細節，不判為錯譯。Build 25606770 版本對應為1.13.1。
 - [原始碼推導與限制](cryptic_flamethrower.md)。
 
 <a id="cryptic_servo_skull_inject_ally"></a>
@@ -133,7 +133,7 @@
 ## 電弧手榴彈(Arc Grenades)
 
 - 描述鍵：`loc_talent_cryptic_arc_grenades_capacitance_gain_desc`；hash：`22344160`。
-- 結論：文字與程式目標排序待遊戲內核對。繁中與英文都概括優先披甲與專家；固定程式先指定4個品種，再篩菁英及其他目標，兩處菁英判斷的欄位亦不同。先記錄來源差異，不單獨判定繁中錯譯。電弧數與擊殺電容量相符。
+- 結論：文字與程式目標排序待遊戲內核對。繁中與英文都概括優先披甲與專家；固定程式先指定4個品種，再篩精英及其他目標，兩處精英判斷的欄位亦不同。先記錄來源差異，不單獨判定繁中錯譯。電弧數與擊殺電容量相符。
 - [原始碼推導與限制](cryptic_grenade_ability_arc_grenade.md)。
 
 <a id="cryptic_servo_skull_improved"></a>
@@ -154,7 +154,7 @@
 ## 強化電弧手榴彈(Enhanced Arc Grenades)
 
 - 描述鍵：`loc_talent_cryptic_arc_grenades_weapon_malfunction_larger_desc`；hash：`6282ba9c`。
-- 結論：未見明確矛盾；補充重新計時與目標限制。繁中說明指出電弧手榴彈會令受影響的遠距敵人無法使用遠距武器12秒。固定來源確認直接爆炸及電弧連鎖命中可觸發武器故障，程式條件還要求目標具故障元件且存活；品種預設與目前列出的故障時長為12秒。Build 25606770 版本對應為1.13.1。
+- 結論：未見明確矛盾；補充重新計時與目標限制。繁中說明指出電弧手榴彈會令受影響的遠程敵人無法使用遠程武器12秒。固定來源確認直接爆炸及電弧連鎖命中可觸發武器故障，程式條件還要求目標具故障元件且存活；品種預設與目前列出的故障時長為12秒。Build 25606770 版本對應為1.13.1。
 - [原始碼推導與限制](cryptic_arc_grenades_weapon_malfunction.md)。
 
 <a id="cryptic_force_field_duration_increase"></a>
@@ -182,7 +182,7 @@
 ## 電流抗性(Voltaic Resistance)
 
 - 描述鍵：`loc_talent_cryptic_force_field_arcs_desc`；hash：`143e5c50`。
-- 結論：未見明確矛盾；補充機制與算例。固定原始碼確認按吸收遠距攻擊數以每6次取上限整數後限制1至4道；0次也會由下限算成1道，並在正常到期路徑進入找目標流程。繁中描述未列出整數門檻、最低值及前方12公尺目標條件，屬翻譯省略的實作細節，不列為錯誤。本機 Build 25606770 版本對應為1.13.1。
+- 結論：未見明確矛盾；補充機制與算例。固定原始碼確認按吸收遠程攻擊數以每6次取上限整數後限制1至4道；0次也會由下限算成1道，並在正常到期路徑進入找目標流程。繁中描述未列出整數門檻、最低值及前方12公尺目標條件，屬翻譯省略的實作細節，不列為錯誤。本機 Build 25606770 版本對應為1.13.1。
 - [原始碼推導與限制](cryptic_force_field_arcs.md)。
 
 <a id="cryptic_coherency_regen_aura_improved"></a>
@@ -210,7 +210,7 @@
 ## 弦爪重擊(Chordclaw Strike)
 
 - 描述鍵：`loc_talent_cryptic_chordclaw_desc`；hash：`df29b524`。
-- 結論：未見明確矛盾。繁中與英文均列出強力重型近戰攻擊、必定爆擊及+50%撕裂，與攻擊 action 與能力效果一致。來源還對啟動期間提供近戰傷害及暈眩免疫；本地化沒有逐一列出這些額外效果，不視為相反說明。
+- 結論：未見明確矛盾。繁中與英文均列出強力重型近戰攻擊、必定暴擊及+50%撕裂，與攻擊 action 與能力效果一致。來源還對啟動期間提供近戰傷害及眩暈免疫；本地化沒有逐一列出這些額外效果，不視為相反說明。
 - [原始碼推導與限制](cryptic_chordclaw.md)。
 
 <a id="cryptic_precision_stance_toughness_suppression"></a>
@@ -268,7 +268,7 @@
 ## 通量導管蓄積(Flux Conduit Build-Up)
 
 - 描述鍵：`loc_talent_cryptic_crits_grant_power_desc`；hash：`10f2fa54`。
-- 結論：未見明確矛盾。inventory 的繁中與英文都寫明爆擊觸發、產生電容量並持續4秒，與來源每次爆擊啟動4秒恢復期間一致。累積方式及恢復率折算是程式細節，原文省略不構成矛盾。
+- 結論：未見明確矛盾。inventory 的繁中與英文都寫明暴擊觸發、產生電容量並持續4秒，與來源每次暴擊啟動4秒恢復期間一致。累積方式及恢復率折算是程式細節，原文省略不構成矛盾。
 - [原始碼推導與限制](cryptic_crits_grant_power.md)。
 
 <a id="cryptic_weakspot_kills_grant_power"></a>
@@ -324,21 +324,21 @@
 ## 洞察之眼(Piercing Sight)
 
 - 描述鍵：`loc_talent_cryptic_precision_stance_crit_cleave_desc`；hash：`f7e91cd6`。
-- 結論：未見明確矛盾。inventory 的中英文均說明啟動時+30%遠距穿透、+15%爆擊，滿4秒後為+60%及+30%；與兩組條件式模板的設定相符。穿透計算方式未載於本地化，但沒有明確相反描述。
+- 結論：未見明確矛盾。inventory 的中英文均說明啟動時+30%遠程穿透、+15%暴擊，滿4秒後為+60%及+30%；與兩組條件式模板的設定相符。穿透計算方式未載於本地化，但沒有明確相反描述。
 - [原始碼推導與限制](cryptic_precision_stance_crit_cleave.md)。
 
 <a id="cryptic_precision_stance_damage_on_elite_kill"></a>
 ## 精算順序(Calculated Priority)
 
 - 描述鍵：`loc_talent_cryptic_precision_stance_damage_on_elite_kill_desc`；hash：`0da94924`。
-- 結論：未見明確矛盾。繁中與英文都說進階戰鬥教範啟動時，擊殺菁英可疊加傷害，並列出每層數值、10秒及5層上限；來源碼另外要求擊殺由遠距攻擊造成。文字未列這項限制，但沒有否定它。
+- 結論：未見明確矛盾。繁中與英文都說進階戰鬥教範啟動時，擊殺精英可疊加傷害，並列出每層數值、10秒及5層上限；來源碼另外要求擊殺由遠程攻擊造成。文字未列這項限制，但沒有否定它。
 - [原始碼推導與限制](cryptic_precision_stance_damage_on_elite_kill.md)。
 
 <a id="cryptic_dissector"></a>
 ## 削切協議(Flensing Protocols)
 
 - 描述鍵：`loc_talent_cryptic_dissector_desc`；hash：`3e2c62db`。
-- 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文都說明上限6層、每層傷害與韌性減傷2.5%、受傷每秒最多失1層、菁英／專家擊殺補2層並恢復15%韌性。固定版支持數值與觸發；啟用時從滿層開始，以及滿層擊殺仍回韌性，是UI未展開的實作細節，不屬誤譯。
+- 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文都說明上限6層、每層傷害與韌性減傷2.5%、受傷每秒最多失1層、精英／專家擊殺補2層並恢復15%韌性。固定版支持數值與觸發；啟用時從滿層開始，以及滿層擊殺仍回韌性，是UI未展開的實作細節，不屬誤譯。
 - [原始碼推導與限制](cryptic_dissector.md)。
 
 <a id="cryptic_redline"></a>
@@ -352,7 +352,7 @@
 ## 能量超載(Power Overload)
 
 - 描述鍵：`loc_talent_cryptic_overload_keystone_coherency_desc`；hash：`58d058f4`。
-- 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文均描述協同擊殺給層、一般1層／菁英與專家2層、上限30、到頂重置以及8秒隊伍傷害與韌性減傷。固定版支持這些效果；傷害增量的單次事件溢出不保留屬UI省略細節，未發現明確誤譯。
+- 結論：未見明確矛盾；補充計算與限制。inventory 的繁中與英文均描述協同擊殺給層、一般1層／精英與專家2層、上限30、到頂重置以及8秒隊伍傷害與韌性減傷。固定版支持這些效果；傷害增量的單次事件溢出不保留屬UI省略細節，未發現明確誤譯。
 - [原始碼推導與限制](cryptic_overload_keystone.md)。
 
 <a id="cryptic_overload_keystone_bigger_explosion"></a>
@@ -431,7 +431,7 @@
 ## 崇高意圖(Higher Purpose)
 
 - 描述鍵：`loc_talent_cryptic_dissector_power_desc`；hash：`2baab5a1`。
-- 結論：未見明確矛盾；補充計算與限制。繁中與英文說明菁英／專家擊殺額外恢復2.5%電容量；固定版確認額外值並加到職業既有4%菁英／專家恢復上。中英皆用additional，6.5%總值與單充能分母屬程式推導，不是文字誤譯。
+- 結論：未見明確矛盾；補充計算與限制。繁中與英文說明精英／專家擊殺額外恢復2.5%電容量；固定版確認額外值並加到職業既有4%精英／專家恢復上。中英皆用additional，6.5%總值與單充能分母屬程式推導，不是文字誤譯。
 - [原始碼推導與限制](cryptic_dissector_power.md)。
 
 <a id="cryptic_redline_toughness"></a>
@@ -529,8 +529,8 @@
 ## 電流標記陣列(Galvanic Marking Array)
 
 - 描述鍵：`loc_talent_cryptic_elite_kills_damage_desc`；hash：`768f2807`。
-- 結論：作用條件用語有誤。繁中「擊殺遠程精英」把遠距修飾成敵人類型，與來源的遠距擊殺條件不同；英文Ranged Elite Kills需按攻擊方式理解。
-- 繁中原文短引：擊殺遠距菁英時，傷害提高{damage:%s}，持續{duration:%s}秒。可疊加{stacks:%s}次，每次衰減一層。
+- 結論：作用條件用語有誤。繁中「擊殺遠程精英」把遠程修飾成敵人類型，與來源的遠程擊殺條件不同；英文Ranged Elite Kills需按攻擊方式理解。
+- 繁中原文短引：擊殺遠程精英時，傷害提高{damage:%s}，持續{duration:%s}秒。可疊加{stacks:%s}次，每次衰減一層。
 - 同源英文：Ranged Elite Kills increase Damage by {damage:%s} for {duration:%s}s. Stacks {stacks:%s} times. Stacks decay one at a time.
 - [原始碼推導與限制](cryptic_elite_kills_damage.md)。
 
@@ -643,7 +643,7 @@
 ## 暗殺協議(Assassination Protocols)
 
 - 描述鍵：`loc_talent_cryptic_ranged_vs_bfg_desc`；hash：`01397401`。
-- 結論：未見明確矛盾。繁中與英文一致；補充遠距限制與加算公式。
+- 結論：未見明確矛盾。繁中與英文一致；補充遠程限制與加算公式。
 - [原始碼推導與限制](cryptic_ranged_vs_bfg.md)。
 
 <a id="cryptic_electrocution_applies_brittleness"></a>
@@ -664,7 +664,7 @@
 ## 電能修復(Voltaic Restoration)
 
 - 描述鍵：`loc_talent_cryptic_coherency_toughness_on_ability_desc`；hash：`5c2bb368`。
-- 結論：未見明確矛盾。繁中與英文一致；補充戰鬥能力與各自最大韌性。
+- 結論：未見明確矛盾。繁中與英文一致；補充戰鬥技能與各自最大韌性。
 - [原始碼推導與限制](cryptic_coherency_toughness_on_ability.md)。
 
 <a id="cryptic_revive_speed_and_dr"></a>

@@ -12,7 +12,7 @@
 - 技能樹節點掛載 `zealot_martyrdom_base`。Buff 每次更新讀取 `damage_taken` 與 `permanent_damage_taken`，取兩者較大值，再由 Health.calculate_num_segments 以每格最大生命值（max_health/max_wounds）換算剩餘傷口；失去格數再以 5 封頂。
 - 基礎效果每格 +10% 傷害、最多 5 格。這是依失去的完整生命格數即時縮放，不是需要擊殺或手動疊層的計時 buff。
 - `health_step=0.15` 雖出現在設定表，但此值在目前實際 buff 計算中沒有被讀取；不能據此寫成每缺 15% 生命就獲得一層。
-- 生效stat為melee_damage，不能把主頁寫成近戰與遠距通用增傷。
+- 生效stat為melee_damage，不能把主頁寫成近戰與遠程通用增傷。
 
 ## 原始碼依據
 

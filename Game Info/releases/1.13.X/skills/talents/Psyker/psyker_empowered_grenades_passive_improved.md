@@ -11,7 +11,7 @@
 
 - 此 modifier 複製 Empowered Psionics 的 proc_buff，將 proc_events.on_hit 從 0.10 替換成 talent_settings_3.spec_passive_2.empowered_chain_lightning_chance=0.15。
 - 共用 on_hit handler 另外執行 CheckProcFunctions.on_kill(params)；不是每次命中必然觸發，且只有成功擊殺才呼叫增加充能函式。
-- 若同時選 Overpowering Souls，菁英擊殺改走保證充能的 on_kill 事件；一般 on_hit 路徑會排除該菁英，避免同一菁英擊殺另外再走 15% proc。
+- 若同時選 Overpowering Souls，精英擊殺改走保證充能的 on_kill 事件；一般 on_hit 路徑會排除該精英，避免同一精英擊殺另外再走 15% proc。
 
 ## 原始碼依據
 

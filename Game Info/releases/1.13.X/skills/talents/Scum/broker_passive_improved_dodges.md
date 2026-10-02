@@ -11,7 +11,7 @@
 
 - talent_settings 設 dodge_speed_multiplier=1.25、dodge_linger_time=0.15；buff template 將兩值分別掛到 stat_buffs.dodge_speed_multiplier 與 stat_buffs.dodge_linger_time。
 - dodge_speed_multiplier 在 buff_settings 登記為 multiplicative_multiplier。閃避狀態更新將基準曲線速度乘上該倍率；估算閃避總時間也逐固定時間步累加位移至目標距離，因此在路徑不變時，時間約按 1/1.25 縮短。
-- Dodge.is_dodging 對近戰／擒抱使用 archetype 的基礎 dodge_linger_time，遠距不使用基礎值；兩者之後都加上 stat_buffs.dodge_linger_time。Broker 基礎值為 0.25 秒，因此近戰／擒抱為 0.40 秒，遠距為 0.15 秒。
+- Dodge.is_dodging 對近戰／擒抱使用 archetype 的基礎 dodge_linger_time，遠程不使用基礎值；兩者之後都加上 stat_buffs.dodge_linger_time。Broker 基礎值為 0.25 秒，因此近戰／擒抱為 0.40 秒，遠程為 0.15 秒。
 
 ## 原始碼依據
 
@@ -30,7 +30,7 @@
 ## 算例條件與待確認事項
 
 - **速度算例**：基準閃避速度 4 m/s 時，4 × 1.25 = 5 m/s；同一段路徑的時間約縮為原來的 0.8 倍。
-- **判定時間算例**：Broker 近戰／擒抱為 0.25 + 0.15 = 0.40 秒；遠距判定窗口為 0 + 0.15 = 0.15 秒。
+- **判定時間算例**：Broker 近戰／擒抱為 0.25 + 0.15 = 0.40 秒；遠程判定窗口為 0 + 0.15 = 0.15 秒。
 - 速度算例假設只套用此倍率；基礎閃避曲線、武器設定與其他修正會改變實際速度及總動作時間。
 - 判定窗口代表攻擊判定將角色視為正在閃避；各攻擊是否採用閃避規則仍由攻擊類型與攻擊邏輯決定。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。

@@ -56,7 +56,7 @@
 - 100 是用來說明倍率的假設基準，不是所有武器、敵人或蓄力等級的實際固定傷害。
 - 靜態原始碼推導，未做遊戲內傷害測試。文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 - charge_time 會受 smite_attack_speed 影響；ChargeActionModule 也會乘 charge_up_time。Peril 會受 warp_charge_amount、warp_charge_over_time_amount、psyker_smite_cost_multiplier 等 stat/buff 影響。時間與百分比算例均是假設值。
-- 普通模式可先蓄力是由一般模式的更新條件推導；黏鎖模式必須取得有效目標才更新 charge/overload。移動、目標消失／改變、暈眩、網路同步或遊戲內版本差異可能改變實際流程。
+- 普通模式可先蓄力是由一般模式的更新條件推導；黏鎖模式必須取得有效目標才更新 charge/overload。移動、目標消失／改變、眩暈、網路同步或遊戲內版本差異可能改變實際流程。
 - 傷害 profile 的 power distribution 不是對所有敵人的固定傷害；實際值取決於蓄力等級、目標護甲/部位與 damage modifiers。
 - 文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對；目前記錄為文字與實作差異待核對，不能據此判定任一描述錯誤。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。

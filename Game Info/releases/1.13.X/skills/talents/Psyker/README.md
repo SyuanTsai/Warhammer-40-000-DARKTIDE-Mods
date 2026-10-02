@@ -8,41 +8,41 @@
 
 | 技能 | 主要效果 | 分類 |
 |---|---|---|
-| <img src="https://github.com/user-attachments/assets/2e792f27-7daf-4ce9-abcc-9d92ded0985c" width="32" height="32" alt="動能撕裂者天賦圖示"> [動能撕裂者](#psyker_smite_on_hit)<br>- Kinetic Flayer | <ul><li>命中仍存活的菁英、專家敵人或巨獸時觸發顱腦崩裂，冷卻 12 秒。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/2e792f27-7daf-4ce9-abcc-9d92ded0985c" width="32" height="32" alt="動能撕裂者天賦圖示"> [動能撕裂者](#psyker_smite_on_hit)<br>- Kinetic Flayer | <ul><li>命中仍存活的精英、專家敵人或巨獸時觸發顱腦崩裂，冷卻 12 秒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/215cb557-8544-4d05-876a-871e70dc093a" width="32" height="32" alt="顱腦崩裂天賦圖示"> [顱腦崩裂](#psyker_brain_burst_improved)<br>- Brain Rupture | <ul><li>蓄力後攻擊單一敵人</li><li>比基礎閃擊增加 50% 傷害</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/a0c17626-2777-4302-bc7e-9b3a48aadcd0" width="32" height="32" alt="靈能攻擊天賦圖示"> [靈能攻擊](#psyker_grenade_throwing_knives)<br>- Assail | <ul><li>投擲追蹤敵人的靈能碎片；可瞄準指定目標。</li><li>最多保留 10 次，每 3 秒恢復一次。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/ae86e2bb-6971-4dfe-b678-0aa814ccdfa1" width="32" height="32" alt="乙太碎片天賦圖示"> [乙太碎片](#psyker_throwing_knives_piercing)<br>- Ethereal Shards | <ul><li>靈能攻擊的傷害及撞擊穿透容量增加 50%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/981d6617-da53-4f4d-8c85-c2e64dddab43" width="32" height="32" alt="懲戒天賦圖示"> [懲戒](#psyker_grenade_chain_lightning)<br>- Smite | <ul><li>持續電擊目標並向附近敵人傳導</li><li>蓄力施放可加快擴散及傷害提升</li></ul> | 閃擊 |
-| <img src="https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9" width="32" height="32" alt="動能共鳴天賦圖示"> [動能共鳴](#psyker_ability_increase_brain_burst_speed)<br>- Kinetic Resonance | <ul><li>使用戰鬥能力後 10 秒內，顱腦崩裂蓄力速度增加 75%，反噬產生量減少 50%。</li></ul> | 閃擊 |
+| <img src="https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9" width="32" height="32" alt="動能共鳴天賦圖示"> [動能共鳴](#psyker_ability_increase_brain_burst_speed)<br>- Kinetic Resonance | <ul><li>使用戰鬥技能後 10 秒內，顱腦崩裂蓄力速度增加 75%，反噬產生量減少 50%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/7db7b0d7-3d96-4b42-8f50-f9112f80badc" width="32" height="32" alt="迅捷碎片天賦圖示"> [迅捷碎片](#psyker_throwing_knives_cast_speed)<br>- Quick Shards | <ul><li>靈能攻擊的次數恢復速率增加 30%；基礎每次恢復由 3 秒縮短至約 2.31 秒。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/0519f0ec-0ce9-4846-8ed4-95a0b9c092de" width="32" height="32" alt="衰弱詛咒天賦圖示"> [衰弱詛咒](#psyker_chain_lightning_improved_target_buff)<br>- Enfeeble | <ul><li>你電擊的敵人受到所有來源的傷害提高 10%。</li></ul> | 閃擊 |
 | <img src="https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e" width="32" height="32" alt="蓄力打擊天賦圖示"> [蓄力打擊](#psyker_chain_lightning_heavy_attacks)<br>- Charged Strike | <ul><li>近戰重擊命中後使敵人電擊 2 秒，電擊期間造成持續傷害。</li></ul> | 閃擊 |
-| <img src="https://github.com/user-attachments/assets/ddd7895f-a971-4cdf-99bd-3f536cab3f8a" width="32" height="32" alt="動能釋放天賦圖示"> [動能釋放](#psyker_aura_damage_vs_elites)<br>- Kinetic Presence | <ul><li>你與協同中的隊友對菁英敵人造成的傷害提高 10%。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/ddd7895f-a971-4cdf-99bd-3f536cab3f8a" width="32" height="32" alt="動能釋放天賦圖示"> [動能釋放](#psyker_aura_damage_vs_elites)<br>- Kinetic Presence | <ul><li>你與協同中的隊友對精英敵人造成的傷害提高 10%。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/61a749ff-c64c-47a7-8607-e19b59a688b3" width="32" height="32" alt="先知之眼天賦圖示"> [先知之眼](#psyker_cooldown_aura_improved)<br>- Seer's Presence | <ul><li>你與協同中的隊友的技能冷卻時間縮短 10%。</li></ul> | 光環 |
-| <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="預兆天賦圖示"> [預兆](#psyker_aura_crit_chance_aura)<br>- Prescience | <ul><li>你與協同中的隊友的爆擊機率增加 5 個百分點。</li></ul> | 光環 |
+| <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="預兆天賦圖示"> [預兆](#psyker_aura_crit_chance_aura)<br>- Prescience | <ul><li>你與協同中的隊友的爆擊率增加 5 個百分點。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/d0500b6b-c91c-4c34-857a-6c144800fe37" width="32" height="32" alt="靈能尖嘯天賦圖示"> [靈能尖嘯](#psyker_shout_vent_warp_charge)<br>- Venting Shriek | <ul><li>前方衝擊使敵人踉蹌</li><li>平息 50 個反噬百分點；冷卻 30 秒</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a" width="32" height="32" alt="占卜者的注視天賦圖示"> [占卜者的注視](#psyker_combat_ability_stance)<br>- Scrier's Gaze | <ul><li>傷害、爆擊與弱點加成，並恢復韌性</li><li>反噬達 100% 結束；累積增傷保留 10 秒</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a" width="32" height="32" alt="占卜者的注視天賦圖示"> [占卜者的注視](#psyker_combat_ability_stance)<br>- Scrier's Gaze | <ul><li>傷害、暴擊與弱點加成，並恢復韌性</li><li>反噬達 100% 結束；累積增傷保留 10 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/b89da8f0-2d3d-4a87-bc92-43e2438e28c8" width="32" height="32" alt="平靜迸發天賦圖示"> [平靜迸發](#psyker_shout_reduces_warp_charge_generation)<br>- Becalming Eruption | <ul><li>尖嘯每命中一名敵人，降低反噬生成</li><li>最多 25 層，持續 5 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/8a145b7f-771a-42b6-a809-56650cd24f7e" width="32" height="32" alt="亞空間爆發天賦圖示"> [亞空間爆發](#psyker_discharge_damage_debuff)<br>- Warp Rupture | <ul><li>尖嘯命中的敵人傷害降低 10%</li><li>受到傷害提高 10%，持續 8 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/65f7ef9b-5b0d-458e-bc7d-5aea8e948e14" width="32" height="32" alt="蔓延火焰天賦圖示"> [蔓延火焰](#psyker_warpfire_on_shout)<br>- Creeping Flames | <ul><li>尖嘯依反噬值施加靈魂之火</li><li>每個命中目標獲得 1 至 6 層</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/41b92eae-77a3-481e-af12-783845ce49c4" width="32" height="32" alt="預知未來天賦圖示"> [預知未來](#psyker_overcharge_weakspot_kill_bonuses)<br>- Precognition | <ul><li>注視增加靈巧傷害，最高 30%</li><li>弱點擊殺加快傷害疊層</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/f9987bfc-f9d7-48d8-9431-8c361223c50e" width="32" height="32" alt="亞空間加速天賦圖示"> [亞空間加速](#psyker_overcharge_increased_movement_speed)<br>- Warp Speed | <ul><li>注視期間增加 20% 移動速度</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="32" height="32" alt="靈能學者光環天賦圖示"> [靈能學者光環](#psyker_2_tier_3_name_2)<br>- Psykinetic's Aura | <ul><li>擊殺菁英或專家後，加快能力冷卻</li><li>效果持續 3 秒</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="32" height="32" alt="靈能學者光環天賦圖示"> [靈能學者光環](#psyker_2_tier_3_name_2)<br>- Psykinetic's Aura | <ul><li>擊殺精英或專家後，加快能力冷卻</li><li>效果持續 3 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/123c7e4e-3844-4ff0-94c0-5cf7f7772b8f" width="32" height="32" alt="現實錨點天賦圖示"> [現實錨點](#psyker_overcharge_reduced_warp_charge)<br>- Reality Anchor | <ul><li>注視期間反噬生成減少 20%</li><li>平息所需時間縮短 30%</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="32" height="32" alt="念力護盾天賦圖示"> [念力護盾](#psyker_combat_ability_force_field)<br>- Telekine Shield | <ul><li>展開護盾，阻擋敵方遠距攻擊</li><li>最長 17.5 秒；冷卻 40 秒</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="32" height="32" alt="念力護盾天賦圖示"> [念力護盾](#psyker_combat_ability_force_field)<br>- Telekine Shield | <ul><li>展開護盾，阻擋敵方遠程攻擊</li><li>最長 17.5 秒；冷卻 40 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/72b10287-7ce1-47a1-a57f-a88c56c51f9f" width="32" height="32" alt="強化護盾天賦圖示"> [強化護盾](#psyker_shield_extra_charge)<br>- Bolstered Shield | <ul><li>念力護盾最多儲存 2 次</li><li>每次充能需 40 秒，逐次恢復</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0" width="32" height="32" alt="庇護所天賦圖示"> [庇護所](#psyker_boost_allies_in_sphere)<br>- Sanctuary | <ul><li>穹頂內每秒恢復 10% 最大韌性</li><li>消散時提供 50% 韌性減傷，持續 5 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/60e6d4b2-0696-4215-8afd-8c9725d4801f" width="32" height="32" alt="念力穹頂天賦圖示"> [念力穹頂](#psyker_sphere_shield)<br>- Telekine Dome | <ul><li>護盾改為半徑 6 公尺的球形屏障</li><li>最長 25 秒；冷卻 60 秒</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191" width="32" height="32" alt="衰弱界線天賦圖示"> [衰弱界線](#psyker_shield_stun_passive)<br>- Enervating Threshold | <ul><li>穿越護盾的敵人有 20% 機率被電擊</li><li>專家與巨獸必定觸發；專家會損傷護盾</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8" width="32" height="32" alt="亞空間突破天賦圖示"> [亞空間突破](#psyker_overcharge_stance_infinite_casting)<br>- Warp Unbound | <ul><li>注視結束後仍能免於反噬超載</li><li>保護持續 11.5 秒</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/07eff6fd-5c1a-49f2-8a72-d689ec6bb42e" width="32" height="32" alt="亞空間虹吸天賦圖示"> [亞空間虹吸](#psyker_passive_souls_from_elite_kills)<br>- Warp Siphon | <ul><li>擊殺菁英或專家取得亞空間充能</li><li>每層增加 4% 傷害；施放能力消耗充能並縮短冷卻</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/885fdda1-bcf2-4502-97e0-7eaead2392e0" width="32" height="32" alt="擾動命運天賦圖示"> [擾動命運](#psyker_new_mark_passive)<br>- Disrupt Destiny | <ul><li>擊殺標記目標，累積傷害、弱點與爆擊加成</li><li>並恢復韌性、短暫提高移動速度</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/07eff6fd-5c1a-49f2-8a72-d689ec6bb42e" width="32" height="32" alt="亞空間虹吸天賦圖示"> [亞空間虹吸](#psyker_passive_souls_from_elite_kills)<br>- Warp Siphon | <ul><li>擊殺精英或專家取得亞空間充能</li><li>每層增加 4% 傷害；施放能力消耗充能並縮短冷卻</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/885fdda1-bcf2-4502-97e0-7eaead2392e0" width="32" height="32" alt="擾動命運天賦圖示"> [擾動命運](#psyker_new_mark_passive)<br>- Disrupt Destiny | <ul><li>擊殺標記目標，累積傷害、弱點與暴擊加成</li><li>並恢復韌性、短暫提高移動速度</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d3625057-f314-491b-8a34-84789ec38342" width="32" height="32" alt="靈能強化天賦圖示"> [靈能強化](#psyker_empowered_ability)<br>- Empowered Psionics | <ul><li>擊殺有 10% 機率強化下一次閃擊</li><li>依閃擊種類提高傷害、加快蓄力或免除消耗</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/333bcafc-3c34-4b47-bb5b-658c9cd2b777" width="32" height="32" alt="平心靜氣天賦圖示"> [平心靜氣](#psyker_reduced_warp_charge_cost_and_venting_speed)<br>- Inner Tranquility | <ul><li>每層亞空間充能降低反噬生成 8%</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/00ae8b19-169d-4eec-94e2-89c3cf851d08" width="32" height="32" alt="吸精奪萃天賦圖示"> [吸精奪萃](#psyker_toughness_on_soul)<br>- Essence Harvest | <ul><li>取得亞空間充能後，5 秒恢復 30% 最大韌性</li><li>再次取得會重設持續時間</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/827d3ef0-dce8-4cb8-8af1-c5ad142d4ec1" width="32" height="32" alt="生物磁石天賦圖示"> [生物磁石](#psyker_empowered_grenades_passive_improved)<br>- Bio-Lodestone | <ul><li>擊殺取得靈能強化的機率由 10% 提高至 15%</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/38c99293-d836-4a4e-91fb-1f6a65a848f8" width="32" height="32" alt="吸血閃電天賦圖示"> [吸血閃電](#psyker_empowered_chain_lightnings_replenish_toughness_to_allies)<br>- Psychic Leeching | <ul><li>使用強化閃擊，恢復本人與協同隊友 20% 最大韌性</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/6312d53d-fec2-44c3-b04e-778d2e74e232" width="32" height="32" alt="吞靈強擊天賦圖示"> [吞靈強擊](#psyker_empowered_ability_on_elite_kills)<br>- Overpowering Souls | <ul><li>擊殺菁英必定取得一層靈能強化</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/6312d53d-fec2-44c3-b04e-778d2e74e232" width="32" height="32" alt="吞靈強擊天賦圖示"> [吞靈強擊](#psyker_empowered_ability_on_elite_kills)<br>- Overpowering Souls | <ul><li>擊殺精英必定取得一層靈能強化</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d2ef8713-7c0b-4dec-b13a-7f9e6a294435" width="32" height="32" alt="完美主義天賦圖示"> [完美主義](#psyker_mark_increased_max_stacks)<br>- Perfectionism | <ul><li>精準加成上限由 15 層提高至 25 層</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/06e543d8-85dd-455b-8ac2-3f9f29b03cf1" width="32" height="32" alt="盜竊天命天賦圖示"> [盜竊天命](#psyker_mark_kills_can_vent)<br>- Purloin Providence | <ul><li>擊殺被標記的敵人，平息 5 個反噬百分點</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/d2b37d6f-6054-462c-ba12-5583c59bceb8" width="32" height="32" alt="持久影響天賦圖示"> [持久影響](#psyker_mark_increased_duration)<br>- Lingering Influence | <ul><li>精準加成倒數由 5 秒延長至 10 秒</li></ul> | 鑰石 |
@@ -54,19 +54,19 @@
 | <img src="https://github.com/user-attachments/assets/800b3bd1-a9a6-48ba-961c-66e12b256f37" width="32" height="32" alt="靈魂竊賊天賦圖示"> [靈魂竊賊](#psyker_toughness_on_warp_kill)<br>- Soulstealer | <ul><li>亞空間攻擊擊殺敵人時，恢復 7.5% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/12e587e5-b69a-49cd-8d0f-a8280b832197" width="32" height="32" alt="心如止水天賦圖示"> [心如止水](#psyker_toughness_on_vent)<br>- Quietude | <ul><li>每產生或降低 10 個百分點的反噬，恢復 4% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cb5dcadd-924f-442d-a21f-cb8f873b182d" width="32" height="32" alt="亞空間耗費天賦圖示"> [亞空間耗費](#psyker_toughness_on_melee)<br>- Warp Expenditure | <ul><li>近戰命中首個敵人，恢復 2.5% 最大韌性。</li><li>近戰弱點擊殺改為在 3 秒內恢復 15% 最大韌性。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/53013aa9-f833-431c-8b85-3e548dbc318c" width="32" height="32" alt="堅毅天賦圖示"> [堅毅](#psyker_crits_regen_toughness_movement_speed)<br>- Mettle | <ul><li>爆擊命中後持續恢復韌性，並增加 5% 移動速度。</li><li>移動加成最多 3 層、持續 4 秒。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/6cc7512d-8e6f-4261-88f3-c95089950934" width="32" height="32" alt="險惡燃燒天賦圖示"> [險惡燃燒](#psyker_elite_kills_add_warpfire)<br>- Perilous Combustion | <ul><li>擊殺菁英或專家敵人，對死者周圍 4 公尺內敵人施加 2 層靈魂之火。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/53013aa9-f833-431c-8b85-3e548dbc318c" width="32" height="32" alt="堅毅天賦圖示"> [堅毅](#psyker_crits_regen_toughness_movement_speed)<br>- Mettle | <ul><li>暴擊命中後持續恢復韌性，並增加 5% 移動速度。</li><li>移動加成最多 3 層、持續 4 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/6cc7512d-8e6f-4261-88f3-c95089950934" width="32" height="32" alt="險惡燃燒天賦圖示"> [險惡燃燒](#psyker_elite_kills_add_warpfire)<br>- Perilous Combustion | <ul><li>擊殺精英或專家敵人，對死者周圍 4 公尺內敵人施加 2 層靈魂之火。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/69bdf081-b37e-479b-a157-f6e047efcfda" width="32" height="32" alt="戰鬥冥想天賦圖示"> [戰鬥冥想](#psyker_chance_to_vent_on_kill)<br>- Battle Meditation | <ul><li>反噬產生量減少 10%。</li><li>擊殺有 10% 機率降低 10 個百分點反噬。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/3c19e5ea-ccab-46a3-9763-c8d4075c6332" width="32" height="32" alt="完美時機天賦圖示"> [完美時機](#psyker_crits_empower_next_attack)<br>- Perfect Timing | <ul><li>爆擊命中增加 3% 傷害，最多 5 層，持續 10 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/3c19e5ea-ccab-46a3-9763-c8d4075c6332" width="32" height="32" alt="完美時機天賦圖示"> [完美時機](#psyker_crits_empower_next_attack)<br>- Perfect Timing | <ul><li>暴擊命中增加 3% 傷害，最多 5 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1e6189fe-4a6e-4fda-bbe9-e2a38c75ff2a" width="32" height="32" alt="野火天賦圖示"> [野火](#psyker_spread_warpfire_on_kill)<br>- Wildfire | <ul><li>受你的靈魂之火影響的敵人死亡時，向 5 公尺內敵人分配最多 4 層靈魂之火。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/86748037-d25a-449c-881a-b80060374012" width="32" height="32" alt="思維活躍天賦圖示"> [思維活躍](#psyker_venting_improvements)<br>- Mind in Motion | <ul><li>平息反噬與裝填不再造成各自的移動減速。</li><li>移動速度增加 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cc72c2ff-3d22-42e0-be1d-69a9f4d7cb22" width="32" height="32" alt="惡意攻勢天賦圖示"> [惡意攻勢](#psyker_kills_stack_other_weapon_damage)<br>- Malefic Momentum | <ul><li>非亞空間擊殺強化亞空間傷害；亞空間擊殺強化非亞空間傷害。</li><li>每層 5%，各最多 5 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/68726dca-2cf0-40d6-bfe6-eccecc659446" width="32" height="32" alt="亞空間強化天賦圖示"> [亞空間強化](#psyker_warp_charge_reduces_toughness_damage_taken)<br>- One with the Warp | <ul><li>依目前反噬獲得 10%～33% 韌性減傷。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/80b2261c-4df6-4531-b9c1-bf67fbbbdcee" width="32" height="32" alt="看破天賦圖示"> [看破](#psyker_improved_dodge)<br>- Anticipation | <ul><li>有效閃避次數增加 1 次；閃避保護的延續時間增加 50%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/946f549a-ed56-4711-aee8-39ce35a0a6b1" width="32" height="32" alt="反射閃避天賦圖示"> [反射閃避](#psyker_dodge_after_crits)<br>- Empathic Evasion | <ul><li>爆擊命中後，1 秒內對遠距攻擊視為正在閃避。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/946f549a-ed56-4711-aee8-39ce35a0a6b1" width="32" height="32" alt="反射閃避天賦圖示"> [反射閃避](#psyker_dodge_after_crits)<br>- Empathic Evasion | <ul><li>暴擊命中後，1 秒內對遠程攻擊視為正在閃避。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/86582600-a30d-4e5a-b87b-ae33b2e78746" width="32" height="32" alt="穩固天賦圖示"> [穩固](#psyker_increased_vent_speed)<br>- Solidity | <ul><li>平息反噬的時間倍率變成 0.7。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8f79e11c-ea7c-4e52-957b-007bd85bcf1b" width="32" height="32" alt="亞空間騎士天賦圖示"> [亞空間騎士](#psyker_damage_based_on_warp_charge)<br>- Warp Rider | <ul><li>依目前反噬提高傷害，最高增加 20%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/4b242d12-87d5-44a8-a2aa-4c1a0f3a2376" width="32" height="32" alt="精確瞄準天賦圖示"> [精確瞄準](#psyker_guaranteed_crit_on_multiple_weakspot_hits)<br>- True Aim | <ul><li>累積 5 次有效弱點命中，使下一次遠距攻擊必定爆擊。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/4b242d12-87d5-44a8-a2aa-4c1a0f3a2376" width="32" height="32" alt="精確瞄準天賦圖示"> [精確瞄準](#psyker_guaranteed_crit_on_multiple_weakspot_hits)<br>- True Aim | <ul><li>累積 5 次有效弱點命中，使下一次遠程攻擊必定暴擊。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/1561e519-2633-4a6f-af9f-fffe6a6c8a03" width="32" height="32" alt="傀儡師天賦圖示"> [傀儡師](#psyker_coherency_aura_size_increase)<br>- Puppet Master | <ul><li>協同範圍半徑增加 75%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e56e3649-507c-4ebb-94fc-58f7eff77aee" width="32" height="32" alt="動能偏斜天賦圖示"> [動能偏斜](#psyker_block_costs_warp_charge)<br>- Kinetic Deflection | <ul><li>反噬低於 97% 時，以增加反噬代替格擋耐力消耗。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/3d86850d-c891-443c-8f80-2f01ad34bdff" width="32" height="32" alt="韌性增幅天賦圖示"> [韌性增幅](#base_toughness_node_buff_medium_5)<br>- Toughness Boost | <ul><li>最大韌性增加 15 點。</li></ul> | 技能 |
@@ -74,17 +74,17 @@
 | <img src="https://github.com/user-attachments/assets/57a54ed7-4f34-449f-9f2d-eb401a97b51a" width="32" height="32" alt="韌性減傷天賦圖示"> [韌性減傷](#base_toughness_damage_reduction_node_buff_medium_1)<br>- Toughness Damage Reduction | <ul><li>韌性減傷增加 10 個百分點。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/ac3d53fd-1b36-40d7-8ee1-275804b29c63" width="32" height="32" alt="迅雷之勢天賦圖示"> [迅雷之勢](#psyker_melee_attack_speed)<br>- Lightning Speed | <ul><li>近戰攻擊速度增加 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/c8b43c74-3790-440f-8610-db321e11da83" width="32" height="32" alt="亞空間分裂天賦圖示"> [亞空間分裂](#psyker_cleave_from_peril)<br>- Warp Splitting | <ul><li>依目前反噬增加傷害順劈能力，最高增加 100%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/444fd0d1-2a66-48f9-b841-f7bf1bcc6ccf" width="32" height="32" alt="汲魂者天賦圖示"> [汲魂者](#psyker_killing_enemy_with_warpfire_boosts)<br>- Souldrinker | <ul><li>受靈魂之火影響的敵人死亡後，5 秒內恢復韌性並增加 5 個百分點爆擊機率。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/444fd0d1-2a66-48f9-b841-f7bf1bcc6ccf" width="32" height="32" alt="汲魂者天賦圖示"> [汲魂者](#psyker_killing_enemy_with_warpfire_boosts)<br>- Souldrinker | <ul><li>受靈魂之火影響的敵人死亡後，5 秒內恢復韌性並增加 5 個百分點爆擊率。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/efceab94-6c34-43bc-a8ed-6d06fbf269b1" width="32" height="32" alt="骨折後遺症天賦圖示"> [骨折後遺症](#psyker_melee_weaving)<br>- By Crack of Bone | <ul><li>近戰弱點擊殺降低 10 個百分點反噬。</li><li>之後 4 秒反噬產生量減少 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f3235e60-41ff-4e15-81eb-172af5ec1f2e" width="32" height="32" alt="脆弱心智天賦圖示"> [脆弱心智](#psyker_damage_vs_ogryns_and_monsters)<br>- Vulnerable Minds | <ul><li>對歐格林與巨獸的傷害增加 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/eeeb7b3b-f3bc-4509-b50f-edc7787cb0e7" width="32" height="32" alt="聚焦亞空間天賦圖示"> [聚焦亞空間](#psyker_increased_warp_damage)<br>- Focused Warp | <ul><li>亞空間傷害增加 15%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/c84a6cc0-5f99-4eee-a394-9b234a1fa5dd" width="32" height="32" alt="反噬平衡天賦圖示"> [反噬平衡](#psyker_weapon_attacks_peril_equilibrium)<br>- Peril Equilibrium | <ul><li>非亞空間近戰或遠距命中造成傷害時，反噬增加 2 個百分點，最高到 75%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c84a6cc0-5f99-4eee-a394-9b234a1fa5dd" width="32" height="32" alt="反噬平衡天賦圖示"> [反噬平衡](#psyker_weapon_attacks_peril_equilibrium)<br>- Peril Equilibrium | <ul><li>非亞空間近戰或遠程命中造成傷害時，反噬增加 2 個百分點，最高到 75%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/5bac250d-4cc2-48b2-9832-8408652cec12" width="32" height="32" alt="武器在手，信心我有。天賦圖示"> [武器在手，信心我有。](#psyker_reload_speed_warp_charge)<br>- Surety of Arms | <ul><li>反噬不高於 80% 時，裝填速度增加 30%。</li><li>補滿一整個彈匣產生 15 個百分點反噬，按實際補彈比例計算。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/6b51b11f-eed5-45f3-b539-6b4502778099" width="32" height="32" alt="結晶意志天賦圖示"> [結晶意志](#psyker_alternative_peril_explosion)<br>- Crystalline Will | <ul><li>反噬爆炸傷害增加 100%，半徑增加 25%。</li><li>以移除一格傷痕代替通常的爆炸倒地；爆炸擊殺菁英可免除此代價。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/6b51b11f-eed5-45f3-b539-6b4502778099" width="32" height="32" alt="結晶意志天賦圖示"> [結晶意志](#psyker_alternative_peril_explosion)<br>- Crystalline Will | <ul><li>反噬爆炸傷害增加 100%，半徑增加 25%。</li><li>以移除一格傷痕代替通常的爆炸倒地；爆炸擊殺精英可免除此代價。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a3ca9930-1aef-4718-9463-1b5da02a5b6b" width="32" height="32" alt="靈能引導天賦圖示"> [靈能引導](#psyker_force_staff_bonus)<br>- Channeled Force | <ul><li>高蓄力後，主要法杖攻擊增傷 20%，持續 5 秒。</li><li>主要攻擊後，次要法杖攻擊增傷 10%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/f556046f-b193-4776-963d-798307d2c36a" width="32" height="32" alt="亞空間震波天賦圖示"> [亞空間震波](#psyker_force_staff_quick_attack_bonus)<br>- Empyric Shock | <ul><li>力場法杖主要攻擊命中，使目標受到的亞空間傷害每層乘 1.06。</li><li>最多 5 層，持續 10 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/b3086f22-3f24-417f-aaba-f59714897616" width="32" height="32" alt="如夢似幻天賦圖示"> [如夢似幻](#psyker_damage_to_peril_conversion)<br>- Just a Dream | <ul><li>反噬低於 97% 時減傷 25%，並依收到的傷害增加反噬。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/288f8a4c-fee3-4e56-8e0b-b2419e2a115b" width="32" height="32" alt="無形專注天賦圖示"> [無形專注](#psyker_damage_resistance_stun_immunity)<br>- Immaterial Focus | <ul><li>受到的傷害減少 10%。</li><li>反噬達 97% 時免疫暈眩；降離門檻後保留 4 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/288f8a4c-fee3-4e56-8e0b-b2419e2a115b" width="32" height="32" alt="無形專注天賦圖示"> [無形專注](#psyker_damage_resistance_stun_immunity)<br>- Immaterial Focus | <ul><li>受到的傷害減少 10%。</li><li>反噬達 97% 時免疫眩暈；降離門檻後保留 4 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/49c99b4c-1fdc-4355-900d-2e4b4c733ba8" width="32" height="32" alt="亞空間意志天賦圖示"> [亞空間意志](#psyker_warp_glass_cannon)<br>- Empyric Resolve | <ul><li>反噬產生量減少 40%，韌性恢復量減少 30%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/57acd7a3-65a7-460c-876c-3153b63d69a3" width="32" height="32" alt="亞空間幽魂天賦圖示"> [亞空間幽魂](#psyker_stat_mix)<br>- Warp Ghost | <ul><li>耐力增加 2 點，韌性恢復量增加 25%。</li><li>反噬在自然消退的適用區段減慢 80%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/790d837c-239d-4d45-b4e8-c3c039df63ba" width="32" height="32" alt="靈魂穿透天賦圖示"> [靈魂穿透](#psyker_warp_attacks_rending)<br>- Penetration of the Soul | <ul><li>亞空間攻擊依目前反噬獲得撕裂，最高 20%。</li></ul> | 技能 |
@@ -99,7 +99,7 @@
 
 <img src="https://github.com/user-attachments/assets/2e792f27-7daf-4ce9-abcc-9d92ded0985c" width="72" height="72" alt="動能撕裂者天賦圖示">
 
-- **觸發方式**：命中菁英、專家敵人或巨獸並造成傷害，目標仍存活且天賦冷卻結束時，觸發一次顱腦崩裂。轟炸兵與場景物件不適用。
+- **觸發方式**：命中精英、專家敵人或巨獸並造成傷害，目標仍存活且天賦冷卻結束時，觸發一次顱腦崩裂。轟炸兵與場景物件不適用。
 
 - **冷卻算例**：第 0 秒觸發後，第 11 秒的命中仍不能再次觸發；12 秒冷卻結束後的下一次合格命中才會觸發。
 
@@ -178,7 +178,7 @@
 
 <img src="https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9" width="72" height="72" alt="動能共鳴天賦圖示">
 
-- **運作方式**：使用戰鬥能力後 10 秒內，顱腦崩裂蓄力速度增加 75%，產生的反噬減少 50%。
+- **運作方式**：使用戰鬥技能後 10 秒內，顱腦崩裂蓄力速度增加 75%，產生的反噬減少 50%。
 
 - **蓄力算例**：假設原蓄力需 2 秒、無其他加成，2 ÷ 1.75 ≈ 1.14 秒；原本產生 10 個百分點反噬，則變成 10 × 0.5 = 5 個百分點。
 
@@ -235,9 +235,9 @@
 
 <img src="https://github.com/user-attachments/assets/ddd7895f-a971-4cdf-99bd-3f536cab3f8a" width="72" height="72" alt="動能釋放天賦圖示">
 
-- **光環效果**：你與協同範圍內的隊友對菁英敵人的傷害增加 10%。同一光環不重複疊層。
+- **光環效果**：你與協同範圍內的隊友對精英敵人的傷害增加 10%。同一光環不重複疊層。
 
-- **傷害算例**：只比較此階段，基準 100 點、沒有其他加成時，100 × 1.1 = 110 點；已有 25% 同階段加成時，由 125 變成 100 × (1 + 25% + 10%) = 135 點。非菁英敵人不享有此加成。
+- **傷害算例**：只比較此階段，基準 100 點、沒有其他加成時，100 × 1.1 = 110 點；已有 25% 同階段加成時，由 125 變成 100 × (1 + 25% + 10%) = 135 點。非精英敵人不享有此加成。
 
 [詳細資料](psyker_aura_damage_vs_elites.md) · [返回目錄](#talent-index)
 
@@ -248,7 +248,7 @@
 
 <img src="https://github.com/user-attachments/assets/61a749ff-c64c-47a7-8607-e19b59a688b3" width="72" height="72" alt="先知之眼天賦圖示">
 
-- **光環效果**：你與協同範圍內的隊友，戰鬥能力冷卻時間縮短 10%。同一光環不重複疊層。
+- **光環效果**：你與協同範圍內的隊友，戰鬥技能冷卻時間縮短 10%。同一光環不重複疊層。
 
 - **冷卻算例**：恢復速率固定且沒有其他修正，原本需 40 秒，改為 40 × (1 − 10%) = 36 秒；原本需 60 秒則改為 54 秒。
 
@@ -261,9 +261,9 @@
 
 <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="72" height="72" alt="預兆天賦圖示">
 
-- **光環效果**：你與協同範圍內的隊友，爆擊機率增加 5 個百分點。同一光環不重複疊層。
+- **光環效果**：你與協同範圍內的隊友，爆擊率增加 5 個百分點。同一光環不重複疊層。
 
-- **機率算例**：原本 10% 爆擊機率變成 10% + 5% = 15%；不是 10% × 1.05 = 10.5%。
+- **機率算例**：原本 10% 爆擊率變成 10% + 5% = 15%；不是 10% × 1.05 = 10.5%。
 
 [詳細資料](psyker_aura_crit_chance_aura.md) · [返回目錄](#talent-index)
 
@@ -296,11 +296,11 @@
 
 - **持續效果**：每秒累積 1% 傷害加成，最多 30%；每秒恢復最大韌性的 2.5%。反噬會持續上升，擊殺可暫時減緩累積。反噬達 100% 時注視結束，累積的傷害加成再保留 10 秒。
 
-- **傷害算例**：不計其他加成，滿層時非爆擊、非弱點的 100 點傷害變成 100 × (1 + 10% + 30%) = 140 點；結束後只保留累積的 30%，因此是 130 點。
+- **傷害算例**：不計其他加成，滿層時非暴擊、非弱點的 100 點傷害變成 100 × (1 + 10% + 30%) = 140 點；結束後只保留累積的 30%，因此是 130 點。
 
 - **弱點算例**：只看弱點加成這一項，假設一般傷害 100、弱點額外傷害 50，原有 150 點會變成 100 + 50 × 1.10 = 155 點，整次命中約增加 3.33%；注視的其他增傷另計。
 
-- **恢復與爆擊算例**：最大韌性 100 時，每秒恢復 100 × 2.5% = 2.5 點，以缺少的韌性為上限；原有 5% 爆擊率變成 5% + 20% = 25%。
+- **恢復與暴擊算例**：最大韌性 100 時，每秒恢復 100 × 2.5% = 2.5 點，以缺少的韌性為上限；原有 5% 爆擊率變成 5% + 20% = 25%。
 
 - **冷卻**：基礎冷卻 25 秒；注視生效期間暫停恢復，結束後才繼續倒數。
 
@@ -360,7 +360,7 @@
 
 - **疊層算例**：注視累積 8 層時完成一次弱點擊殺，變成 8 + 1 = 9 層；不會因此延長注視的實際持續時間。
 
-- **傷害算例**：靈巧加成作用於弱點或爆擊的額外傷害。只看 30% 靈巧加成，假設一般傷害 100、額外傷害 50，150 點會變成 100 + 50 × 1.30 = 165 點，整次命中增加 10%；注視的其他加成另計。
+- **傷害算例**：靈巧加成作用於弱點或暴擊的額外傷害。只看 30% 靈巧加成，假設一般傷害 100、額外傷害 50，150 點會變成 100 + 50 × 1.30 = 165 點，整次命中增加 10%；注視的其他加成另計。
 
 [詳細資料](psyker_overcharge_weakspot_kill_bonuses.md) · [返回目錄](#talent-index)
 
@@ -384,7 +384,7 @@
 
 <img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="72" height="72" alt="靈能學者光環天賦圖示">
 
-- **觸發方式**：親自擊殺菁英或專家敵人後，3 秒內每隔約 1 秒額外減少 0.5 秒戰鬥能力冷卻。再次觸發會重設效果時間，不會提高每次減少的數值。
+- **觸發方式**：親自擊殺精英或專家敵人後，3 秒內每隔約 1 秒額外減少 0.5 秒戰鬥技能冷卻。再次觸發會重設效果時間，不會提高每次減少的數值。
 
 - **冷卻算例**：若倒數原剩 20 秒，在正常恢復 1 秒並觸發一次額外恢復後，變成 20 − 1 − 0.5 = 18.5 秒。
 
@@ -418,7 +418,7 @@
 
 <img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="72" height="72" alt="念力護盾天賦圖示">
 
-- **運作方式**：在身前展開一道靈能護盾，阻擋敵人的遠距攻擊，你與隊友仍可穿盾射擊。最長持續 17.5 秒，基礎冷卻 40 秒。
+- **運作方式**：在身前展開一道靈能護盾，阻擋敵人的遠程攻擊，你與隊友仍可穿盾射擊。最長持續 17.5 秒，基礎冷卻 40 秒。
 
 - **護盾耐久**：護盾可承受 20 次有效扣除耐久的命中。每次扣除後，0.33 秒內不會再次扣除；大量攻擊可能讓護盾提早消失。
 
@@ -507,11 +507,11 @@
 
 <img src="https://github.com/user-attachments/assets/07eff6fd-5c1a-49f2-8a72-d689ec6bb42e" width="72" height="72" alt="亞空間虹吸天賦圖示">
 
-- **取得與持續**：親自擊殺菁英或專家敵人，獲得 1 層亞空間充能，最多 4 層，持續 25 秒。再次取得會重設整組倒數；到期每次失去一層，再重新倒數 25 秒。
+- **取得與持續**：親自擊殺精英或專家敵人，獲得 1 層亞空間充能，最多 4 層，持續 25 秒。再次取得會重設整組倒數；到期每次失去一層，再重新倒數 25 秒。
 
 - **傷害算例**：每層增加 4% 傷害。不計其他加成，4 層時 100 × (1 + 4% × 4) = 116 點；搭配亞空間電池達 6 層時則為 124 點。
 
-- **冷卻算例**：施放戰鬥能力會消耗全部充能，每層恢復該能力一次使用所需冷卻的 7.5%。以 30 秒冷卻、4 層計算，立即縮短 30 × 7.5% × 4 = 9 秒，剩約 21 秒。
+- **冷卻算例**：施放戰鬥技能會消耗全部充能，每層恢復該能力一次使用所需冷卻的 7.5%。以 30 秒冷卻、4 層計算，立即縮短 30 × 7.5% × 4 = 9 秒，剩約 21 秒。
 
 - **多次充能**：若能力能儲存多次使用次數，恢復量先補目前正在倒數的一格，超過一格所需的進度再往後補。
 
@@ -526,7 +526,7 @@
 
 - **標記與取得**：標記前方 40 公尺內、有視線且可被標記的敵人。親自擊殺目前標記的敵人，取得一層精準加成，最多 15 層。
 
-- **每層效果**：一般傷害增加 1%、爆擊額外傷害增加 2%、弱點額外傷害增加 2.5%。15 層分別為 15%、30%、37.5%。
+- **每層效果**：一般傷害增加 1%、暴擊額外傷害增加 2%、弱點額外傷害增加 2.5%。15 層分別為 15%、30%、37.5%。
 
 - **傷害算例**：只計一般增傷，100 × (1 + 15%) = 115 點。再看弱點這一項：假設同次命中已算入一般增傷後，基礎部分為 100、弱點額外部分為 50，加上 37.5% 弱點加成後為 100 + 50 × 1.375 = 168.75 點，相較這一階段原有 150 點增加 12.5%。武器的額外傷害比例不同，整次命中的增幅也不同。
 
@@ -614,9 +614,9 @@
 
 <img src="https://github.com/user-attachments/assets/6312d53d-fec2-44c3-b04e-778d2e74e232" width="72" height="72" alt="吞靈強擊天賦圖示">
 
-- **觸發方式**：擊殺菁英敵人時，必定取得 1 層靈能強化。專家敵人與一般敵人仍沿用原本的取得機率。
+- **觸發方式**：擊殺精英敵人時，必定取得 1 層靈能強化。專家敵人與一般敵人仍沿用原本的取得機率。
 
-- **層數算例**：原有 0 層時擊殺一名菁英，變成 1 層；基礎上限為 1 層，已滿層時再擊殺不會變成 2 層。搭配充能完畢後，上限提高至 3 層。
+- **層數算例**：原有 0 層時擊殺一名精英，變成 1 層；基礎上限為 1 層，已滿層時再擊殺不會變成 2 層。搭配充能完畢後，上限提高至 3 層。
 
 [詳細資料](psyker_empowered_ability_on_elite_kills.md) · [返回目錄](#talent-index)
 
@@ -629,7 +629,7 @@
 
 - **運作方式**：擾動命運的精準加成上限，由 15 層提高至 25 層；每層效果及每 5 秒衰減一層的規則不變。
 
-- **傷害算例**：25 層提供 25% 一般傷害、50% 爆擊額外傷害與 62.5% 弱點額外傷害。只計一般傷害，100 × (1 + 25%) = 125 點；弱點與爆擊的額外部分需依武器另外計算。
+- **傷害算例**：25 層提供 25% 一般傷害、50% 暴擊額外傷害與 62.5% 弱點額外傷害。只計一般傷害，100 × (1 + 25%) = 125 點；弱點與暴擊的額外部分需依武器另外計算。
 
 - **選擇限制**：與「持久影響」只能擇一選取。
 
@@ -787,7 +787,7 @@
 
 <img src="https://github.com/user-attachments/assets/53013aa9-f833-431c-8b85-3e548dbc318c" width="72" height="72" alt="堅毅天賦圖示">
 
-- **觸發方式**：爆擊命中後，4 秒內恢復 10% 最大韌性，並增加 5% 移動速度。
+- **觸發方式**：暴擊命中後，4 秒內恢復 10% 最大韌性，並增加 5% 移動速度。
 
 - **疊層與重新計時**：移動速度最多 3 層，合計增加 15%；再次觸發重設 4 秒。韌性維持每秒恢復 2.5% 最大值，不隨移動速度層數倍增。
 
@@ -802,7 +802,7 @@
 
 <img src="https://github.com/user-attachments/assets/6cc7512d-8e6f-4261-88f3-c95089950934" width="72" height="72" alt="險惡燃燒天賦圖示">
 
-- **觸發方式**：擊殺菁英或專家敵人，對死者周圍 4 公尺內的敵人施加 2 層靈魂之火。
+- **觸發方式**：擊殺精英或專家敵人，對死者周圍 4 公尺內的敵人施加 2 層靈魂之火。
 
 - **層數算例**：附近敵人原本沒有靈魂之火時，獲得 2 層；原本有 3 層時，變成 3 + 2 = 5 層。傷害會隨層數非線性成長，5 層不是 1 層傷害的 5 倍。
 
@@ -832,7 +832,7 @@
 
 <img src="https://github.com/user-attachments/assets/3c19e5ea-ccab-46a3-9763-c8d4075c6332" width="72" height="72" alt="完美時機天賦圖示">
 
-- **運作方式**：爆擊命中後獲得 1 層增傷，每層增加 3% 傷害，最多 5 層。
+- **運作方式**：暴擊命中後獲得 1 層增傷，每層增加 3% 傷害，最多 5 層。
 
 - **疊層與重新計時**：持續 10 秒，再次觸發會重設持續時間；滿層增加 15% 傷害。
 
@@ -924,11 +924,11 @@
 
 <img src="https://github.com/user-attachments/assets/946f549a-ed56-4711-aee8-39ce35a0a6b1" width="72" height="72" alt="反射閃避天賦圖示">
 
-- **運作方式**：爆擊命中後，1 秒內對遠距攻擊視為正在閃避；再次觸發會重設時間。
+- **運作方式**：暴擊命中後，1 秒內對遠程攻擊視為正在閃避；再次觸發會重設時間。
 
 - **時間算例**：第 0 秒觸發，效果持續到約第 1 秒；第 0.6 秒再觸發，延續到約第 1.6 秒。
 
-- **適用範圍**：這是遠距閃避判定，不提供近戰無敵，也不能把所有爆炸、地面火焰都當成可免疫的遠距命中。
+- **適用範圍**：這是遠程閃避判定，不提供近戰無敵，也不能把所有爆炸、地面火焰都當成可免疫的遠程命中。
 
 [詳細資料](psyker_dodge_after_crits.md) · [返回目錄](#talent-index)
 
@@ -965,11 +965,11 @@
 
 <img src="https://github.com/user-attachments/assets/4b242d12-87d5-44a8-a2aa-4c1a0f3a2376" width="72" height="72" alt="精確瞄準天賦圖示">
 
-- **運作方式**：累積 5 次造成傷害的有效弱點命中後，下一次遠距攻擊必定爆擊，消耗這組累積。
+- **運作方式**：累積 5 次造成傷害的有效弱點命中後，下一次遠程攻擊必定暴擊，消耗這組累積。
 
 - **累積限制**：同一發投射物重複命中，以及一次攻擊順劈到的後續敵人，不能一律當成額外一次累積。
 
-- **算例**：從 0 層開始，五次各自有效的弱點命中為 1 → 2 → 3 → 4 → 5 層；之後觸發的遠距爆擊消耗這組效果。爆擊傷害仍依武器、部位與目標計算，不是固定雙倍。
+- **算例**：從 0 層開始，五次各自有效的弱點命中為 1 → 2 → 3 → 4 → 5 層；之後觸發的遠程暴擊消耗這組效果。暴擊傷害仍依武器、部位與目標計算，不是固定雙倍。
 
 [詳細資料](psyker_guaranteed_crit_on_multiple_weakspot_hits.md) · [返回目錄](#talent-index)
 
@@ -1081,11 +1081,11 @@
 
 <img src="https://github.com/user-attachments/assets/444fd0d1-2a66-48f9-b841-f7bf1bcc6ccf" width="72" height="72" alt="汲魂者天賦圖示">
 
-- **觸發方式**：受靈魂之火影響的敵人死亡，或你以靈魂之火擊殺敵人後，5 秒內恢復 15% 最大韌性，爆擊機率增加 5 個百分點。
+- **觸發方式**：受靈魂之火影響的敵人死亡，或你以靈魂之火擊殺敵人後，5 秒內恢復 15% 最大韌性，爆擊率增加 5 個百分點。
 
-- **重新計時方式**：再次觸發會重設 5 秒，恢復速度與爆擊機率不累加。
+- **重新計時方式**：再次觸發會重設 5 秒，恢復速度與爆擊率不累加。
 
-- **恢復與機率算例**：最大韌性 100、缺額足夠且沒有其他修正時，每秒恢復 100 × 15% ÷ 5 = 3 點；原本 10% 爆擊機率變成 10% + 5% = 15%。
+- **恢復與機率算例**：最大韌性 100、缺額足夠且沒有其他修正時，每秒恢復 100 × 15% ÷ 5 = 3 點；原本 10% 爆擊率變成 10% + 5% = 15%。
 
 [詳細資料](psyker_killing_enemy_with_warpfire_boosts.md) · [返回目錄](#talent-index)
 
@@ -1135,7 +1135,7 @@
 
 <img src="https://github.com/user-attachments/assets/c84a6cc0-5f99-4eee-a394-9b234a1fa5dd" width="72" height="72" alt="反噬平衡天賦圖示">
 
-- **運作方式**：以非亞空間的近戰或遠距攻擊命中並造成傷害，每次增加 2 個百分點反噬，最多加到 75%。已達 75% 時不再增加，也不會把更高的反噬往下降。
+- **運作方式**：以非亞空間的近戰或遠程攻擊命中並造成傷害，每次增加 2 個百分點反噬，最多加到 75%。已達 75% 時不再增加，也不會把更高的反噬往下降。
 
 - **反噬算例**：反噬 70% 時連續觸發三次，70% → 72% → 74% → 75%；原本 90% 時仍為 90%。
 
@@ -1165,7 +1165,7 @@
 
 - **爆炸效果**：反噬爆炸傷害增加 100%、半徑增加 25%，並改變爆炸後的生存代價。
 
-- **傷痕代價**：爆炸後通常移除一格傷痕；只剩一格時會死亡。若這次爆炸擊殺菁英敵人，免除該次傷痕代價。
+- **傷痕代價**：爆炸後通常移除一格傷痕；只剩一格時會死亡。若這次爆炸擊殺精英敵人，免除該次傷痕代價。
 
 - **傷害與範圍算例**：只比較這兩項修正，原本 100 點爆炸傷害變成 100 × 2 = 200 點；原爆炸半徑 10 公尺變成 10 × 1.25 = 12.5 公尺。實際傷害仍受距離衰減與敵人護甲影響。
 
@@ -1223,7 +1223,7 @@
 
 <img src="https://github.com/user-attachments/assets/288f8a4c-fee3-4e56-8e0b-b2419e2a115b" width="72" height="72" alt="無形專注天賦圖示">
 
-- **運作方式**：受到的傷害減少 10%。反噬達 97% 時免疫暈眩；降到 97% 以下後，免疫效果再持續 4 秒。
+- **運作方式**：受到的傷害減少 10%。反噬達 97% 時免疫眩暈；降到 97% 以下後，免疫效果再持續 4 秒。
 
 - **減傷算例**：只比較此減傷階段，100 點傷害變成 100 × 0.9 = 90 點。若另有獨立 20% 減傷，則為 100 × 0.8 × 0.9 = 72 點，合計減少 28%。
 
@@ -1268,7 +1268,7 @@
 
 - **運作方式**：亞空間攻擊依目前反噬獲得撕裂；反噬 50%／100% 時分別提供 10%／20% 撕裂。實際增傷取決於武器與敵人護甲。
 
-- **護甲算例**：只比較抗撕裂修正為 1 的護甲階段，排除弱點、爆擊與其他倍率。護甲前傷害 100、原護甲倍率 0.5，反噬 100% 時由 100 × 0.5 = 50，變成 100 × (0.5 + 0.2) = 70 點，實際提高 40%。
+- **護甲算例**：只比較抗撕裂修正為 1 的護甲階段，排除弱點、暴擊與其他倍率。護甲前傷害 100、原護甲倍率 0.5，反噬 100% 時由 100 × 0.5 = 50，變成 100 × (0.5 + 0.2) = 70 點，實際提高 40%。
 
 - **不同目標**：同一 20% 撕裂，若原護甲倍率已為 1、超額撕裂換算係數為 0.25，則從 100 變成 100 × (1 + 0.2 × 0.25) = 105 點，只提高 5%。
 

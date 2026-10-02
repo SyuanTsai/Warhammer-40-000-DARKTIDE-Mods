@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-movement_speed放stat_buffs，常駐而非躲避後短暫獲得。on_ranged_dodge恢復stamina_percent0.3，cooldown_duration3；動作必須真正產生躲避遠距命中事件，不能只按閃避鍵。
+movement_speed放stat_buffs，常駐而非躲避後短暫獲得。on_ranged_dodge恢復stamina_percent0.3，cooldown_duration3；動作必須真正產生躲避遠程命中事件，不能只按閃避鍵。
 
 ## 原始碼依據
 

@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-特殊規則同時啟用每有效層 toughness_replenish_modifier=0.04，及遠距弱點擊殺分支的 Stamina.add_stamina_percent(unit,0.1)。韌性恢復透過 recover_percentage_toughness 乘上恢復加成；ignore_stat_buffs=true 的呼叫不套用。耐力以最大值乘百分比，補至最大值為止。前者是恢復量加成，不是每層立即回4%韌性；後者只限遠距弱點擊殺。
+特殊規則同時啟用每有效層 toughness_replenish_modifier=0.04，及遠程弱點擊殺分支的 Stamina.add_stamina_percent(unit,0.1)。韌性恢復透過 recover_percentage_toughness 乘上恢復加成；ignore_stat_buffs=true 的呼叫不套用。耐力以最大值乘百分比，補至最大值為止。前者是恢復量加成，不是每層立即回4%韌性；後者只限遠程弱點擊殺。
 
 ## 原始碼依據
 
@@ -29,7 +29,7 @@
 - 文字來源：本機Steam Build `25606770`，`content/localization/ui`，2026-10-01擷取；不是MOD文字。
 - 語系鍵：`loc_talent_veteran_snipers_focus_stamina_bonus_desc`；hash：`a8372526`；繁中entry_index：`10826`；英文entry_index：`10827`。以資源＋hash配對，已確認兩語系此hash各一筆。
 - 繁中問題片段：「每層專注恢復」；同版英文對照片段：`Toughness Replenishment for each stack`。引文保留原始占位符，未冒充遊戲畫面的最終數字。
-- 判定：**明確繁中描述錯誤**。把恢復量修正譯成直接恢復：每層寫入toughness_replenish_modifier=.04，由已存在的恢復事件乘入；不是每層發出一次韌性恢復。遠距擊殺限定的省略另視為不完整。
+- 判定：**明確繁中描述錯誤**。把恢復量修正譯成直接恢復：每層寫入toughness_replenish_modifier=.04，由已存在的恢復事件乘入；不是每層發出一次韌性恢復。遠程擊殺限定的省略另視為不完整。
 - 本項由同一份擷取資源的中英語義差異定位，再核對固定公開版本的格式／機制；不單憑文字與實作的差異判定繁中錯譯。完整文字只留本機，Git僅保存必要短引文與追溯資料。
 - [完整比對範圍與版本限制](LOCALIZATION_COMPARISON.md)。
 

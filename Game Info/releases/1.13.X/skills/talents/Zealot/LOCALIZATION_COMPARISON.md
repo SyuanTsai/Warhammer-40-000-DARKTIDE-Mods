@@ -98,7 +98,7 @@
 
 - 描述鍵：`loc_talent_ability_fire_grenade_desc`；hash：`5b720fa5`。
 - 結論：明確繁中誤譯。Build 25606770 對照字串中，英文為 Burning and Staggering，繁中譯成「燃燒並使敵人暈眩」；Translation.md 將 Stagger/Staggering 對應為「踉蹌」，將 Stun 對應為「眩暈」。這是詞義明確不符，但該 build 文字只供翻譯比較，不作機制依據。
-- 繁中原文短引：投擲一枚手榴彈，在爆炸處形成一層燃燒的液體，燃燒並使敵人暈眩, 同時阻擋他們的道路。針對無護甲敵人最為有效。
+- 繁中原文短引：投擲一枚手雷，在爆炸處形成一層燃燒的液體，燃燒並使敵人眩暈, 同時阻擋他們的道路。針對無護甲敵人最為有效。
 - 同源英文：Throw a grenade that leaves a layer of flaming liquid, Burning and Staggering enemies, and barring their path. Most effective against Unarmoured Enemies.
 - [原始碼推導與限制](zealot_flame_grenade.md)。
 
@@ -106,14 +106,14 @@
 ## 信仰之刃(Blades of Faith)
 
 - 描述鍵：`loc_ability_zealot_throwing_knifes_desc`；hash：`5c177ee2`。
-- 結論：未見明確矛盾。繁中與英文描述均提及近戰擊殺菁英／專家補 1 把及彈藥箱補刀；來源中補給量依 pickup 設定變化，不足以判定「彈藥箱可補充」是翻譯錯誤。
+- 結論：未見明確矛盾。繁中與英文描述均提及近戰擊殺精英／專家補 1 把及彈藥箱補刀；來源中補給量依 pickup 設定變化，不足以判定「彈藥箱可補充」是翻譯錯誤。
 - [原始碼推導與限制](zealot_throwing_knives.md)。
 
 <a id="zealot_improved_stun_grenade"></a>
 ## 眩暈風暴手雷(Stunstorm Grenade)
 
 - 描述鍵：`loc_zealot_improved_stun_grenade_desc`；hash：`35fbc631`。
-- 結論：未見明確矛盾。Build 25606770 的繁中和英文都說明震撼手榴彈及其升級範圍，沒有可確認的明確譯錯。
+- 結論：未見明確矛盾。Build 25606770 的繁中和英文都說明震撼手雷及其升級範圍，沒有可確認的明確譯錯。
 - [原始碼推導與限制](zealot_improved_stun_grenade.md)。
 
 <a id="zealot_toughness_damage_reduction_coherency_improved"></a>
@@ -221,7 +221,7 @@
 
 - 描述鍵：`loc_talent_zealot_fotf_refund_cooldown_desc`；hash：`0dec8750`。
 - 結論：明確繁中誤譯。inventory 同一雙語文字的繁中額外標「秒」，英文未指定秒；固定 SHA 也把值格式化為百分比且按充能成本百分比返還。
-- 繁中原文短引：使用{talent_name:%s}後{duration:%s}秒內擊殺菁英或專家敵人，可恢復{cooldown:%s}秒技能冷卻時間。每次使用最多觸發一次。
+- 繁中原文短引：使用{talent_name:%s}後{duration:%s}秒內擊殺精英或專家敵人，可恢復{cooldown:%s}秒技能冷卻時間。每次使用最多觸發一次。
 - 同源英文：Killing an Elite or Specialist within {duration:%s}s of using {talent_name:%s} restores {cooldown:%s} Ability Cooldown. Maximum once per use.
 - [原始碼推導與限制](zealot_fotf_refund_cooldown.md)。
 
@@ -296,7 +296,7 @@
 ## 熾熱虔誠(Blazing Piety)
 
 - 描述鍵：`loc_talent_zealot_fanatic_rage_crit_desc`；hash：`c80efade`。
-- 結論：未見明確矛盾。中英文都表示敵人在範圍內死亡可累積到狂怒、爆擊也計入；小兵對象、共用層數、衰退及到期重置屬實作補足。
+- 結論：未見明確矛盾。中英文都表示敵人在範圍內死亡可累積到狂怒、暴擊也計入；小兵對象、共用層數、衰退及到期重置屬實作補足。
 - [原始碼推導與限制](zealot_fanatic_rage.md)。
 
 <a id="zealot_fanatic_rage_toughness_on_max"></a>

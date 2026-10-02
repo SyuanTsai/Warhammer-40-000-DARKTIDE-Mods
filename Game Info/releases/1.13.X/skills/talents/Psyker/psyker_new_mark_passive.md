@@ -14,9 +14,9 @@
 - on_hit 處理先要求 attacking_unit 等於玩家自身，再要求 attack_result 為 died 且 victim_unit 等於 current_target；滿足後才發放移速／韌性 buff 與一層精準度，然後從命中位置重新選敵。
 - 若不是擊殺，玩家攻擊目前標記目標或符合 boss tags 的目標時，只要已有精準層數便呼叫 refresh_duration_of_stacking_buff，重新計時堆疊 buff 持續時間。
 - 精準 buff duration=5、max_stacks=15，且 refresh_duration_on_stack 與 refresh_duration_on_remove_stack 均為 true。到期堆疊移除一層後會將剩餘堆疊的 start time 重設，因此逐層衰減，不是各層獨立計時。
-- 傷害計算先將一般傷害 buff 套到 base damage，再額外計算 finesse boost；弱點與爆擊加成只在條件成立時套用，兩者同時成立時，finesse multiplier 內的弱點與爆擊增幅相加。
+- 傷害計算先將一般傷害 buff 套到 base damage，再額外計算 finesse boost；弱點與暴擊加成只在條件成立時套用，兩者同時成立時，finesse multiplier 內的弱點與暴擊增幅相加。
 - 獎勵buff韌性恢復率為.25/2.5每秒，移速+.2、持續2.5秒。
-- 遠距閃避標記使用{[keywords.count_as_dodge_vs_ranged]=true}字典；table.enum值為字串，而Buff初始化取#template.keywords、更新按數字索引讀取。因此該宣告不能作為已生效遠距閃避的證據，玩家說明不列此效果。
+- 遠程閃避標記使用{[keywords.count_as_dodge_vs_ranged]=true}字典；table.enum值為字串，而Buff初始化取#template.keywords、更新按數字索引讀取。因此該宣告不能作為已生效遠程閃避的證據，玩家說明不列此效果。
 
 ## 原始碼依據
 
@@ -45,10 +45,10 @@
 - **重新計時與衰減**：精準加成共用 5 秒倒數。新增層數，或已有層數時命中仍存活的標記目標或首領，都會重設倒數。到期只掉一層，再倒數 5 秒；例如 3 層且未再觸發重新計時，約在 5、10、15 秒依序降至 2、1、0 層。
 - breed.psyker_mark_target 決定哪些敵種可成為候選；玩家文案只寫「可被標記的敵人」，不逐種列名。
 - 新增層或合格的非擊殺命中會重設整組計時；到期只掉一層並重啟剩餘層倒數。
-- 同時爆擊／弱點的傷害算例假設直擊與 finesse 額外傷害各 100，且沒有護甲曲線與其他加成，不能當作所有武器的固定最終傷害。
+- 同時暴擊／弱點的傷害算例假設直擊與 finesse 額外傷害各 100，且沒有護甲曲線與其他加成，不能當作所有武器的固定最終傷害。
 - 其他天賦可把上限改為25、持續時間改為10秒，或讓弱點擊殺一次給3層；這些 modifier 的變體另行記錄。
 - source SHA 與本機 Build 25606770 版本對應為1.13.1。
-- 同時爆擊並命中弱點時，兩種額外加成於共同finesse階段相加；沒有命中條件的加成不生效。遠距閃避keyword宣告未符合陣列格式，遊戲內表現留待確認。
+- 同時暴擊並命中弱點時，兩種額外加成於共同finesse階段相加；沒有命中條件的加成不生效。遠程閃避keyword宣告未符合陣列格式，遊戲內表現留待確認。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對

@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 天賦 special_rule 在 ogryn_ranged_stance.start_func 中加入 ogryn_ranged_stance_fire_shots；proc 僅接受遠距命中存活 minion，並於每次射擊對同一 attacked_unit 去重。
+- 天賦 special_rule 在 ogryn_ranged_stance.start_func 中加入 ogryn_ranged_stance_fire_shots；proc 僅接受遠程命中存活 minion，並於每次射擊對同一 attacked_unit 去重。
 - 每次命中最多加入 talent_settings.combat_ability_1.num_stacks=4；總層數上限為 max_stacks=16。到上限時呼叫 refresh_duration_of_stacking_buff。
 - 通用 flamer_assault 為 interval_buff，duration=4、interval=0.5、interval_stack_removal=true、max_stacks=31、refresh_duration_on_stack=true；每跳 n=current_stack_count，power_level=500×(n/31)^2×(3−2n/31)，再以 DamageProfileTemplates.burning 執行傷害。Ogryn天賦把實際層數限制在16，故4層輸入約22.83、16層約262.09。
 - Buff到期後依 interval_buff 的移除流程每0.5秒減一層；最後一層在4秒計時後再經約0.5秒間隔移除，16層總清空約12秒。天賦名稱文字提到15%射速，但此燃燒節點只處理燃燒；射速加成來自姿態本身。
@@ -47,7 +47,7 @@
 ## 原文核對
 
 - 對應 hash：`a391c6e8`。
-- 繁中原文說遠距攻擊加4層、最多16層；英文原文同樣列出每次遠距攻擊加4層與16層上限，層數與適用期間一致。兩種原文都省略每0.5秒的傷害和到期衰減，不能因此判成翻譯錯誤；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
+- 繁中原文說遠程攻擊加4層、最多16層；英文原文同樣列出每次遠程攻擊加4層與16層上限，層數與適用期間一致。兩種原文都省略每0.5秒的傷害和到期衰減，不能因此判成翻譯錯誤；文字與程式來源皆為1.13.1；實際表現仍待遊戲內核對。
 
 ## 圖示來源
 

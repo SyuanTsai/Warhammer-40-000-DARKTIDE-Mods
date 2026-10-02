@@ -12,7 +12,7 @@
 - tag 死亡事件依 stacks_applied，對每名 in_coherence_units 成員加入對應數量的 allied_buff；CoherencySystem 的集合包含 owner，所以本人也能受益。
 - 基礎 template duration=10、max_stacks=4、refresh_duration_on_stack=true、damage=.025。另選集中火力改用 max_stacks=6 的複製模板，單層值仍為 .025。
 - 既有同名 buff 會增加層數並 set_start_time(t)，stat_buff_stacking_count 把有效層數限制於 max_stacks。再次擊倒標記目標是累加至上限，不是以新目標的較少層數覆蓋舊效果。
-- damage 是 additive_multiplier，N 層增加 .025N，與同階段一般、近戰／遠距等增傷相加。100×(1+.25+.025×4)=135；不能把原有125再乘1.10。
+- damage 是 additive_multiplier，N 層增加 .025N，與同階段一般、近戰／遠程等增傷相加。100×(1+.25+.025×4)=135；不能把原有125再乘1.10。
 
 ## 原始碼依據
 

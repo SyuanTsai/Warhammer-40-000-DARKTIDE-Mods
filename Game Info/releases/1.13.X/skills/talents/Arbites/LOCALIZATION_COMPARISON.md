@@ -108,7 +108,7 @@
 ## 法務官手榴彈(Arbites Grenade)
 
 - 描述鍵：`loc_talent_ability_adamant_grenade_improved_description`；hash：`6a2ea9db`。
-- 結論：未見明確矛盾。同源繁中與英文均描述手榴彈及強化後攜帶上限，未見中英矛盾；碰撞引爆與保險引信的精確流程另按固定來源補充。
+- 結論：未見明確矛盾。同源繁中與英文均描述手雷及強化後攜帶上限，未見中英矛盾；碰撞引爆與保險引信的精確流程另按固定來源補充。
 - [原始碼推導與限制](adamant_grenade_improved.md)。
 
 <a id="adamant_shock_mine"></a>
@@ -212,7 +212,7 @@
 ## 針鋒相對(Targeted Brutality)
 
 - 描述鍵：`loc_talent_adamant_charge_cooldown_alt_description`；hash：`775c291d`。
-- 結論：未見明確矛盾。繁中「每次擊中敵人」與英文「for each hit」相同；菁英、專家或巨獸提高返還量、以及 5 秒最高值亦一致。
+- 結論：未見明確矛盾。繁中「每次擊中敵人」與英文「for each hit」相同；精英、專家或巨獸提高返還量、以及 5 秒最高值亦一致。
 - [原始碼推導與限制](adamant_charge_cooldown_reduction.md)。
 
 <a id="adamant_charge_longer_distance"></a>
@@ -241,7 +241,7 @@
 
 - 描述鍵：`loc_talent_adamant_terminus_warrant_new_desc`；hash：`26c20f58`。
 - 結論：繁中原文勘誤。同源繁中「弱點命中則額外堆疊」把英文 grant 3 stacks誤寫為一般1層之外再加3層；固定實作弱點分支直接取3，合計3而非4。
-- 繁中原文短引：遠距攻擊每命中一個敵人，可堆疊近戰正義層數（最多{max_stacks:%s}層），弱點命中則額外堆疊{weakspot_stacks:%s}層。切換主要武器會消耗你的近戰正義層數，並獲得{melee_strength:%s}近戰威力與{tdr:%s}韌性減傷，持續{melee_duration:%s}秒。
+- 繁中原文短引：遠程攻擊每命中一個敵人，可堆疊近戰正義層數（最多{max_stacks:%s}層），弱點命中則額外堆疊{weakspot_stacks:%s}層。切換主要武器會消耗你的近戰正義層數，並獲得{melee_strength:%s}近戰威力與{tdr:%s}韌性減傷，持續{melee_duration:%s}秒。
 - 同源英文：Ranged Attacks grant stacks of Melee Justice for each Enemy Hit (max {max_stacks:%s}), Weakspot hits grant {weakspot_stacks:%s} stacks. Wielding your Primary Weapon spends your Melee Justice stacks to grant you {melee_strength:%s} Melee Strength and {tdr:%s} Toughness Damage Reduction for {melee_duration:%s}s.
 - [原始碼推導與限制](adamant_terminus_warrant.md)。
 
@@ -599,7 +599,7 @@
 ## 制裁重擊(Prosecution Blow)
 
 - 描述鍵：`loc_talent_adamant_crits_rend_alt_desc`；hash：`7ccaaaa3`。
-- 結論：未見明確矛盾。繁中與英文均限定遠距爆擊撕裂；作用條件一致，公式為補充。
+- 結論：未見明確矛盾。繁中與英文均限定遠程暴擊撕裂；作用條件一致，公式為補充。
 - [原始碼推導與限制](adamant_crits_rend.md)。
 
 <a id="adamant_dodge_improvement"></a>

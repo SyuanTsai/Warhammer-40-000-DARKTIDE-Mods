@@ -5,7 +5,7 @@
 ## 判定方式與範圍
 
 - 逐項比對77個目前節點：本頁玩家說明、遊戲本體繁中模板、同一資源的英文模板；77個描述鍵均核對固定原始碼的天賦定義（74個老兵定義及3個通用屬性定義）。
-- **只有正反效果、作用對象、資源方向、物理量／單位、時間操作等明確矛盾才列勘誤。描述不完整不算錯誤。** 省略公式、上限、冷卻、爆擊／弱點結算、恢復基準或特殊互動，只作補充差異。
+- **只有正反效果、作用對象、資源方向、物理量／單位、時間操作等明確矛盾才列勘誤。描述不完整不算錯誤。** 省略公式、上限、冷卻、暴擊／弱點結算、恢復基準或特殊互動，只作補充差異。
 - 繁中與英文按`content/localization/ui + hash`配對，每個目標hash在兩個語言各一筆；不靠行號或中文名稱猜測對應。英文僅協助辨識譯意，機制證據仍使用固定公開原始碼。
 - 原始模板中的預留符號尚未在遊戲執行期代入。本次核對疑點相關的格式參數，不宣稱已還原77項遊戲畫面的完整最終文字。
 - 結果：**12項繁中勘誤**已加在各技能正文下；**4項跨來源實作差異待遊戲內核對**，未標為遊戲原文錯誤；其餘**61項未判錯**。肉搏戰同時存在一項已確認翻譯問題與一項待遊戲內確認的生效時間差異，逐項統計列在12項中。
@@ -42,7 +42,7 @@
 | [火力反擊](veteran_combat_ability_ranged_roamer_outlines.md) | `cc0d22dd` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
 | [獵手決意](veteran_toughness_bonus_leaving_invisibility.md) | `59344e21` | 未判錯 | 原文說離開潛行後有減傷，未明說隱身期間沒有；少寫較早生效的期間視為不完整。 |
 | [戰術意識](veteran_elite_kills_reduce_cooldown.md) | `83519bd4` | 未判錯 | 目前模板已寫專家擊殺與冷卻恢復，不因talent識別碼含elite而判原文錯誤。 |
-| [發號施令](veteran_combat_ability_stagger_nearby_enemies.md) | `e3ff1400` | 未判錯 | Stagger譯為暈眩屬術語取法；本頁用踉蹌並補敵人抗性，不直接列為效果錯誤。 |
+| [發號施令](veteran_combat_ability_stagger_nearby_enemies.md) | `e3ff1400` | 未判錯 | Stagger譯為眩暈屬術語取法；本頁用踉蹌並補敵人抗性，不直接列為效果錯誤。 |
 | [只有死亡，職責才會終結](veteran_combat_ability_revive_nearby_allies.md) | `1ae25548` | 未判錯 | 模板只有扶起倒地盟友，沒有冷卻增加／範圍降低；殘留格式參數不構成原文錯誤。 |
 | [鷹眼](veteran_increased_weakspot_power_after_combat_ability.md) | `94eac308` | 待遊戲內核對 | 中英模板都說滲透於離開潛行後生效；固定版本在隱身開始加入增益。屬文字／實作差異，待遊戲內核對，未作繁中錯譯註記。 |
 | [責任與榮譽](veteran_combat_ability_increase_and_restore_toughness_to_coherency.md) | `b4e057ef` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
@@ -51,7 +51,7 @@
 | [敵人越大...](veteran_combat_ability_ogryn_outlines.md) | `3a6dce0c` | 未判錯 | 模板只有輪廓與時間，沒有額外25%傷害；殘留格式參數不構成原文錯誤。 |
 | [狙擊專注](veteran_snipers_focus.md) | `bd7cf7c2` | 未判錯 | 目前模板已寫弱點擊殺、弱點命中重新計時與逐層衰減；沒有舊移動耗層文字，不能以未使用的grace_time參數推定原文錯誤。 |
 | [滲透盔甲](veteran_snipers_focus_rending_bonus.md) | `9b41f430` | 未判錯 | 十層門檻及撕裂效果相容；未展開護甲結算不是錯誤。 |
-| [視野狹窄](veteran_snipers_focus_toughness_bonus.md) | `a8372526` | 繁中勘誤 | 把恢復量修正譯成直接恢復：每層寫入toughness_replenish_modifier=.04，由已存在的恢復事件乘入；不是每層發出一次韌性恢復。遠距擊殺限定的省略另視為不完整。 |
+| [視野狹窄](veteran_snipers_focus_toughness_bonus.md) | `a8372526` | 繁中勘誤 | 把恢復量修正譯成直接恢復：每層寫入toughness_replenish_modifier=.04，由已存在的恢復事件乘入；不是每層發出一次韌性恢復。遠程擊殺限定的省略另視為不完整。 |
 | [遠程刺客](veteran_snipers_focus_increased_stacks.md) | `c41d398b` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
 | [武器專家](veteran_weapon_switch_passive.md) | `4ead394a` | 繁中勘誤 | 修飾範圍錯誤：英文next shot限定爆擊率，繁中把三項效果一併限定為下一次射擊。實作只有conditional crit讀取shot；attack/reload為常駐stat_buffs，受buff本身期間限制。 |
 | [時刻警覺](veteran_weapon_switch_replenish_toughness.md) | `9a112db1` | 未判錯 | 省略各側獨立冷卻，不等於宣稱共用冷卻；不判錯。 |
@@ -65,7 +65,7 @@
 | [戰術裝填](veteran_faster_reload_on_non_empty_clips.md) | `09e8437d` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
 | [齊射能手](veteran_reload_speed_on_elite_kill.md) | `7c429a4b` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
 | [堅定不移](veteran_increased_weakspot_damage.md) | `8c42b6fb` | 未判錯 | 只寫弱點傷害加成；沒有宣稱所有武器最終傷害固定提高30%。未解釋額外部分／公式屬不完整，不判錯。 |
-| [亡命之徒](veteran_increased_melee_crit_chance_and_melee_finesse.md) | `0ffe42c2` | 未判錯 | 爆擊機率與靈巧加成相容；沒有展開額外傷害公式屬不完整。 |
+| [亡命之徒](veteran_increased_melee_crit_chance_and_melee_finesse.md) | `0ffe42c2` | 未判錯 | 爆擊率與靈巧加成相容；沒有展開額外傷害公式屬不完整。 |
 | [嗜血](veteran_all_kills_replenish_toughness.md) | `a8f7b6af` | 未判錯 | 繁中少寫英文additional，但所列擊殺恢復仍成立；不把省略基礎恢復的區別當成錯誤。 |
 | [遊擊者](veteran_increase_damage_after_sprinting.md) | `dc400859` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
 | [趁火打劫](veteran_crits_apply_rending.md) | `e32d7197` | 未判錯 | 目前模板已改為近戰爆擊後增傷；內部識別碼含rending不是目前原文。 |
@@ -98,8 +98,8 @@
 | [靈活應對](veteran_dodging_grants_stamina.md) | `76c89d3d` | 繁中勘誤 | 資源操作錯譯：實作為Stamina.add_stamina_percent，參數.3；英文Stamina on avoiding與繁中耐力消耗不同。漏寫3秒冷卻屬不完整，不列為另一項錯誤。 |
 | [鋼鐵意志](veteran_tdr_on_high_toughness.md) | `9702d945` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
 | [荷槍實彈](veteran_clip_size.md) | `5f584f5e` | 待遊戲內核對 | 中英模板都說向上取整；固定版本武器初始化使用floor向下取整。兩者有明確跨來源矛盾，但尚未遊戲內確認實際取整，不直接標遊戲原文錯誤。 |
-| [讓他們全趴下！](veteran_increase_suppression.md) | `dcdb4dab` | 未判錯 | 原文提遠距壓制，未明說其他來源不適用；不因範圍較簡略判錯。 |
-| [秘密特工](veteran_increased_damage_when_flanking.md) | `19928629` | 未判錯 | 背刺／後半側為位置術語差異，原文仍是遠距攻擊；未見明確數值或效果方向矛盾。 |
+| [讓他們全趴下！](veteran_increase_suppression.md) | `dcdb4dab` | 未判錯 | 原文提遠程壓制，未明說其他來源不適用；不因範圍較簡略判錯。 |
+| [秘密特工](veteran_increased_damage_when_flanking.md) | `19928629` | 未判錯 | 背刺／後半側為位置術語差異，原文仍是遠程攻擊；未見明確數值或效果方向矛盾。 |
 | [近戰傷害提升](base_melee_damage_node_buff_high_2.md) | `7b5da013` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
 | [韌性減傷](base_toughness_damage_reduction_node_buff_medium_1.md) | `1272bcc0` | 未判錯 | 原文與本頁核心效果相容；本頁補充觸發細節、限制或算例，不將較簡短視為錯誤。 |
 

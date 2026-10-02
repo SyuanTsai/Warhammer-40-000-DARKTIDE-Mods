@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-buff 同時設定 melee_critical_strike_chance = 0.10 與 melee_finesse_modifier_bonus = 0.25。共用公式將近戰 finesse bonus 加入爆擊／弱點 finesse modifier，而非直接乘整筆傷害。算例：既有 finesse component 40 × (1+.25)=50。[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1925-L1966) → [buff 數值](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1012-L1019) → [共用 finesse 傷害計算](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L782)。
+buff 同時設定 melee_critical_strike_chance = 0.10 與 melee_finesse_modifier_bonus = 0.25。共用公式將近戰 finesse bonus 加入暴擊／弱點 finesse modifier，而非直接乘整筆傷害。算例：既有 finesse component 40 × (1+.25)=50。[天賦定義](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ability/archetype_talents/talents/veteran_talents.lua#L1925-L1966) → [buff 數值](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1012-L1019) → [共用 finesse 傷害計算](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L782)。
 
 ## 原始碼依據
 
@@ -21,8 +21,8 @@ buff 同時設定 melee_critical_strike_chance = 0.10 與 melee_finesse_modifier
 ## 百分比與實際傷害增幅
 
 - **原始碼確認**：melee_critical_strike_chance=.10與melee_finesse_modifier_bonus=.25是不同屬性，前者改機率、後者改額外傷害。
-- **程式推導**：玩家例固定未爆擊的近戰弱點命中、其他倍率為1，B=100、F=40時140→150（約7.14%）；F=100時200→225（12.5%）。不是整筆傷害固定+25%，也不是平均DPS增幅；平均值需要爆擊率、弱點命中率及各攻擊的傷害資料。
-- 命中同時為爆擊與弱點時，先計算合成的base_finesse_damage，再將melee_finesse_modifier_bonus加進同一multiplier一次，不能把25%因兩條件成立而重複套用。
+- **程式推導**：玩家例固定未暴擊的近戰弱點命中、其他倍率為1，B=100、F=40時140→150（約7.14%）；F=100時200→225（12.5%）。不是整筆傷害固定+25%，也不是平均DPS增幅；平均值需要爆擊率、弱點命中率及各攻擊的傷害資料。
+- 命中同時為暴擊與弱點時，先計算合成的base_finesse_damage，再將melee_finesse_modifier_bonus加進同一multiplier一次，不能把25%因兩條件成立而重複套用。
 
 - [scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua，第 1012–1019 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/archetype_buff_templates/veteran_buff_templates.lua#L1012-L1019)
 - [scripts/utilities/attack/damage_calculation.lua，第 672–782 行](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L672-L782)

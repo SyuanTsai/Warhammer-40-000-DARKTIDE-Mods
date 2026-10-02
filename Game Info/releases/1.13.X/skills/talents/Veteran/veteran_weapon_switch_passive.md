@@ -10,9 +10,9 @@
 ## 觸發、層數與公式
 
 - on_kill 讀取當下 inventory_component.wielded_slot，不檢查 params.attack_type。slot_primary 累積 ranged_stacks，最多 10；slot_secondary 累積 melee_stacks，最多 1。對應 on_wield 依儲存層數建立增益後清空儲存量。沒有擊殺層數時，with_stacks 的 1..n 迴圈不會建立增益。
-- 遠距增益 duration=10、max_stacks=max_stacks_cap=10；每層 ranged_attack_speed=.02、reload_speed=.02。conditional ranged_critical_strike_chance=.33 同樣經 Buff._calculate_stat_buffs 的逐層迴圈合併，**不是整個效果固定 +33 個百分點**。n 層增加 .33n，CriticalStrike.chance 把總機率限制於 0..1。
-- 非自動射擊在 ActionShoot 啟動時判定爆擊；自動射擊進入 prepare_shooting 時判定。HitScan 先讀取並結算爆擊，再發送 on_shoot；該事件令 shot=true，使下一次屬性彙整移除額外爆擊率。因此首次射擊能使用此機率；某些自動武器會保留已擲出的爆擊連發結果，不能把「機率加成移除」解讀為後續所有子彈必定非爆擊。
-- 遠距／近戰增益各在離開 slot_secondary／slot_primary 時結束。近戰 buff max_stacks=1、duration=10，melee_attack_speed=.15、dodge_speed_multiplier=1.1、dodge_distance_modifier=.1。
+- 遠程增益 duration=10、max_stacks=max_stacks_cap=10；每層 ranged_attack_speed=.02、reload_speed=.02。conditional ranged_critical_strike_chance=.33 同樣經 Buff._calculate_stat_buffs 的逐層迴圈合併，**不是整個效果固定 +33 個百分點**。n 層增加 .33n，CriticalStrike.chance 把總機率限制於 0..1。
+- 非自動射擊在 ActionShoot 啟動時判定暴擊；自動射擊進入 prepare_shooting 時判定。HitScan 先讀取並結算暴擊，再發送 on_shoot；該事件令 shot=true，使下一次屬性彙整移除額外爆擊率。因此首次射擊能使用此機率；某些自動武器會保留已擲出的暴擊連發結果，不能把「機率加成移除」解讀為後續所有子彈必定非暴擊。
+- 遠程／近戰增益各在離開 slot_secondary／slot_primary 時結束。近戰 buff max_stacks=1、duration=10，melee_attack_speed=.15、dodge_speed_multiplier=1.1、dodge_distance_modifier=.1。
 - 動作速度加成與同階段速度修正相加；算例假定沒有其他速度加成，動作時間以原時間除以速度倍率。閃避距離原值 3 公尺則為 3×1.1=3.3 公尺。
 
 ## 原始碼依據
@@ -39,7 +39,7 @@
 
 - 玩家頁算例按列出的基礎值及條件計算；未列出的加成、護甲、部位、距離及遊戲更新誤差不納入。
 - 靜態推導不等同遊戲實測；名稱識別鍵與既有譯名的對應仍待使用者確認。
-- 個別武器的爆擊連發長度與切換當影格的事件順序，需以該武器遊戲實測補驗；上述算例計算的是爆擊判定機率，不保證一輪多發射擊全數重新判定。
+- 個別武器的暴擊連發長度與切換當影格的事件順序，需以該武器遊戲實測補驗；上述算例計算的是暴擊判定機率，不保證一輪多發射擊全數重新判定。
 
 ## 遊戲本體繁中對照
 

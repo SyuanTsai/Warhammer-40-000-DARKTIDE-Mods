@@ -10,7 +10,7 @@
 ## 原始碼確認與程式推導
 
 - 升級啟用 special rule broker_keystone_adrenaline_junkie_no_regular_stacks；基礎 regular_grant=1 改為 sub_1_regular_grant=0。
-- 當命中為弱點時，proc 設定 stacks_to_grant=regular_grant+sub_1_weakspot_additional_grant=1+2=3；接著不論是否弱點，若 params.is_critical_strike 為真，再加 crit_grant=1。因此弱點爆擊=3+1=4，非弱點爆擊=0+1=1。
+- 當命中為弱點時，proc 設定 stacks_to_grant=regular_grant+sub_1_weakspot_additional_grant=1+2=3；接著不論是否弱點，若 params.is_critical_strike 為真，再加 crit_grant=1。因此弱點暴擊=3+1=4，非弱點暴擊=0+1=1。
 - 此升級只替換獲得腎上腺素層數的條件；達 30 層後觸發的狂暴內容與核心相同。
 
 ## 原始碼依據
@@ -26,15 +26,15 @@
 
 ## 算例條件與待確認事項
 
-- **層數算例**：非弱點非爆擊命中 0 層；非弱點爆擊 0+1=1 層；弱點非爆擊 1+2=3 層；弱點爆擊 1+2+1=4 層。
-- 升級條件只計近戰命中；遠距弱點命中不經此 keystone 的 melee-hit 檢查。
+- **層數算例**：非弱點非暴擊命中 0 層；非弱點暴擊 0+1=1 層；弱點非暴擊 1+2=3 層；弱點暴擊 1+2+1=4 層。
+- 升級條件只計近戰命中；遠程弱點命中不經此 keystone 的 melee-hit 檢查。
 - 30 層上限可能使實得層數低於單次命中的計算值；已達上限後不會再提高。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 
 ## 原文核對
 
 - 對應 hash：`02bab200`。
-- 繁中與英文都表示弱點命中額外給 2 層且一般近戰命中不再給基本層；原核心的爆擊額外層仍由同一處理流程保留。
+- 繁中與英文都表示弱點命中額外給 2 層且一般近戰命中不再給基本層；原核心的暴擊額外層仍由同一處理流程保留。
 
 ## 圖示來源
 

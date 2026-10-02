@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 這個節點掛載 special rule cryptic_force_field_generates_capacitance_based_on_hits_blocked。力場的 health extension 僅在 attack_type 為 ranged，或 damage_profile.count_as_ranged_attack 為真時增加攻擊計數並進入恢復分支；每次最多增加0.025，單一力場物件的 _capacitance_restored 累積上限為0.75，建立下一個力場物件時歸零。恢復呼叫明確指定 combat_ability 並使用 restore_ability_charge_percentage，因此百分比以一格戰鬥技能充能資源成本為基準，再由共用能力資源系統限制在最大資源內；不是補充閃擊欄位的力場使用次數，也不是按傷害量恢復。若同時擁有「電流抗性」，兩項效果共用相同的遠距攻擊吸收判定，但各自記錄不同資源／輸出。
+- 這個節點掛載 special rule cryptic_force_field_generates_capacitance_based_on_hits_blocked。力場的 health extension 僅在 attack_type 為 ranged，或 damage_profile.count_as_ranged_attack 為真時增加攻擊計數並進入恢復分支；每次最多增加0.025，單一力場物件的 _capacitance_restored 累積上限為0.75，建立下一個力場物件時歸零。恢復呼叫明確指定 combat_ability 並使用 restore_ability_charge_percentage，因此百分比以一格戰鬥技能充能資源成本為基準，再由共用能力資源系統限制在最大資源內；不是補充閃擊欄位的力場使用次數，也不是按傷害量恢復。若同時擁有「電流抗性」，兩項效果共用相同的遠程攻擊吸收判定，但各自記錄不同資源／輸出。
 
 ## 原始碼依據
 
@@ -24,8 +24,8 @@
 
 ## 算例條件與待確認事項
 
-- 每次遠距攻擊吸收恢復0.025份電容量，最多0.75份；30次達到上限。
-- 只計遠距攻擊或被標記為遠距的攻擊，不按傷害量計；每次力場最多恢復0.75份。
+- 每次遠程攻擊吸收恢復0.025份電容量，最多0.75份；30次達到上限。
+- 只計遠程攻擊或被標記為遠程的攻擊，不按傷害量計；每次力場最多恢復0.75份。
 - 恢復對象是 combat_ability 電容量，不是艾曼納圖斯力場的使用次數。
 - 遊戲原文：1.13.1／Steam Build 25606770 的 ui 資源。描述與實作的差異仍需遊戲內核對；省略細節不列為繁中誤譯。
 

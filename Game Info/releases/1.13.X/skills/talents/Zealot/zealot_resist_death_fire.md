@@ -9,7 +9,7 @@
 
 ## 原始碼確認與程式推導
 
-- 被動 `zealot_resist_death_fire` 只處理 melee/ranged `on_hit`，要求目標仍存活且玩家有 `unkillable` 關鍵字；近戰與遠距分別嘗試加3與1層，共用目標上的 `flamer_assault`，talent 上限為12。未滿時只補入不超上限的層數；已滿時呼叫 refresh_duration_of_stacking_buff。
+- 被動 `zealot_resist_death_fire` 只處理 melee/ranged `on_hit`，要求目標仍存活且玩家有 `unkillable` 關鍵字；近戰與遠程分別嘗試加3與1層，共用目標上的 `flamer_assault`，talent 上限為12。未滿時只補入不超上限的層數；已滿時呼叫 refresh_duration_of_stacking_buff。
 - `flamer_assault` 是 interval buff：單層 duration=4 秒、interval=0.5 秒、refresh_duration_on_stack=true，最多31層。因點燃升級把此 buff 封頂於12層，其他來源可使實際層數不同；每次觸發新增層也重設 buff duration。
 - 每次 tick 設 x=current_stack_count/31，smooth=x²×(3−2x)，再送出 power_level=500×smooth 的 `DamageProfileTemplates.burning` 攻擊。燃燒 profile 的 attack power_distribution=400、toughness_multiplier=3、ignore_shield=true，並套用 default target boost curve；因此不能把 layer count 直接換成固定生命值傷害。
 - IntervalBuff 在尚未另行指定 start_interval_on_apply 時，第一次 interval 以0.5秒排定，之後每0.5秒呼叫 interval_func；4秒 duration 及持續加層重新計時共同決定 tick 時間窗。

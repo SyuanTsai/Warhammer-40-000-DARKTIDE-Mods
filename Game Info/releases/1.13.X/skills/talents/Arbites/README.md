@@ -16,21 +16,21 @@
 | <img src="https://github.com/user-attachments/assets/2f99cb20-a83e-4a7c-98ee-f43949811f84" width="32" height="32" alt="雷厲風行天賦圖示"> [雷厲風行](#adamant_reload_speed_aura)<br>- Ruthless Efficiency | <ul><li>你和協同中的盟友換彈速度提高 12.5%。</li><li>選用此光環時，電子獒犬不再計入協同成員。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/57af1e74-7cc5-45bb-a332-11d2e5fde909" width="32" height="32" alt="鎮壓異己天賦圖示"> [鎮壓異己](#adamant_damage_vs_staggered_aura)<br>- Breaking Dissent | <ul><li>你和協同中的盟友對踉蹌敵人的傷害提高 10%。</li><li>只計此效果時，原本 100 點傷害會提高到 110 點；目標未踉蹌時不加成。</li><li>選用此光環時，電子獒犬不再計入協同成員。</li></ul> | 光環 |
 | <img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="32" height="32" alt="突破重圍天賦圖示"> [突破重圍](#adamant_charge)<br>- Break the Line | <ul><li>向前猛砸並衝入敵陣；猛砸期間視為格擋，結束後獲得 6 秒傷害與衝擊加成。</li><li>基礎冷卻 20 秒，單次充能。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="天鷹使節天賦圖示"> [天鷹使節](#adamant_area_buff_drone_improved)<br>- Nuncio-Aquila | <ul><li>部署天鷹使節，持續 20 秒並影響周圍 7.5 公尺；冷卻 60 秒，單次充能。</li><li>強化版讓盟友每秒恢復 7.5% 韌性，並提高壓制與衝擊、降低後座力，同時免疫暈眩、減速與壓制。</li><li>範圍內敵人受到的傷害提高 15%。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="天鷹使節天賦圖示"> [天鷹使節](#adamant_area_buff_drone_improved)<br>- Nuncio-Aquila | <ul><li>部署天鷹使節，持續 20 秒並影響周圍 7.5 公尺；冷卻 60 秒，單次充能。</li><li>強化版讓盟友每秒恢復 7.5% 韌性，並提高壓制與衝擊、降低後座力，同時免疫眩暈、減速與壓制。</li><li>範圍內敵人受到的傷害提高 15%。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/4eb18874-83b0-4e2f-bf2b-c91001a15371" width="32" height="32" alt="懲戒者姿態天賦圖示"> [懲戒者姿態](#adamant_stance)<br>- Castigator's Stance | <ul><li>啟動時恢復全部韌性；進入 10 秒姿態，移動速度提高 15%、威力提高 20%、受到的傷害減少 70%，但不能衝刺。</li><li>冷卻 50 秒，單次充能；姿態結束後，傷害減免再延續 2 秒。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/8c312d8e-8b49-45cd-828e-62cffc6d0a25" width="32" height="32" alt="蒙福軍武天賦圖示"> [蒙福軍武](#adamant_stance_ranged_kills_transfer_ammo)<br>- Blessed Armament | <ul><li>處於懲戒者姿態時，遠距擊殺會從備用彈藥補入彈匣容量的 10%，無條件進位，彈匣不足時只補缺口。</li><li>能力姿態持續 10 秒。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/f7454987-ea7e-474e-bb22-3c3ead9adb1b" width="32" height="32" alt="處決令天賦圖示"> [處決令](#adamant_stance_elite_kills_stack_damage)<br>- Writ of Execution | <ul><li>處於懲戒者姿態時，每擊殺一名菁英或專家敵人，傷害提高 7.5%，持續 12 秒，最多 6 層。</li><li>滿層提供 45% 傷害加成；已取得的增益可在姿態結束後繼續倒數。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/8c312d8e-8b49-45cd-828e-62cffc6d0a25" width="32" height="32" alt="蒙福軍武天賦圖示"> [蒙福軍武](#adamant_stance_ranged_kills_transfer_ammo)<br>- Blessed Armament | <ul><li>處於懲戒者姿態時，遠程擊殺會從備用彈藥補入彈匣容量的 10%，無條件進位，彈匣不足時只補缺口。</li><li>能力姿態持續 10 秒。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/f7454987-ea7e-474e-bb22-3c3ead9adb1b" width="32" height="32" alt="處決令天賦圖示"> [處決令](#adamant_stance_elite_kills_stack_damage)<br>- Writ of Execution | <ul><li>處於懲戒者姿態時，每擊殺一名精英或專家敵人，傷害提高 7.5%，持續 12 秒，最多 6 層。</li><li>滿層提供 45% 傷害加成；已取得的增益可在姿態結束後繼續倒數。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/27a74ed8-eb51-4774-ae8e-2089aa7b1686" width="32" height="32" alt="嗜血殺戮天賦圖示"> [嗜血殺戮](#adamant_stance_dog_bloodlust)<br>- Bloodlust | <ul><li>啟動懲戒者姿態後，電子獒犬造成的傷害提高 75%，效果維持姿態的 10 秒。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/53dd2864-62b6-4e6c-9d62-e79831b33c78" width="32" height="32" alt="振奮朗誦天賦圖示"> [振奮朗誦](#adamant_drone_buff_talent)<br>- Inspiring Recitation | <ul><li>天鷹使節範圍內的友方額外獲得 30% 韌性減傷、30% 救援速度及 10% 攻擊速度。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/483804fa-b052-4baa-b3d7-5e7dbfbe44f4" width="32" height="32" alt="畏怯正義天賦圖示"> [畏怯正義](#adamant_drone_debuff_talent)<br>- Fear of Justice | <ul><li>天鷹使節範圍內敵人的近戰傷害與近戰攻擊速度各降低 25%。</li><li>單計本效果，原本 1 秒的可調整攻擊動作需約 1.33 秒。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573" width="32" height="32" alt="懲惡揚善天賦圖示"> [懲惡揚善](#adamant_charge_toughness)<br>- Commendation from Condemnation | <ul><li>衝鋒擊中菁英、專家或巨獸時，每名不同目標恢復 20% 韌性與 15% 耐力。</li><li>單次衝鋒最多恢復 100% 韌性及 75% 耐力；同一敵人不重複計算。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/d2b1945d-2300-4993-a649-00c1e3858e0d" width="32" height="32" alt="針鋒相對天賦圖示"> [針鋒相對](#adamant_charge_cooldown_reduction)<br>- Targeted Brutality | <ul><li>衝鋒每次有效命中一般敵人返還 0.5 秒戰鬥技能冷卻；命中菁英、專家或巨獸返還 1 秒。</li><li>單次衝鋒最多返還 5 秒冷卻。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573" width="32" height="32" alt="懲惡揚善天賦圖示"> [懲惡揚善](#adamant_charge_toughness)<br>- Commendation from Condemnation | <ul><li>衝鋒擊中精英、專家或巨獸時，每名不同目標恢復 20% 韌性與 15% 耐力。</li><li>單次衝鋒最多恢復 100% 韌性及 75% 耐力；同一敵人不重複計算。</li></ul> | 能力 |
+| <img src="https://github.com/user-attachments/assets/d2b1945d-2300-4993-a649-00c1e3858e0d" width="32" height="32" alt="針鋒相對天賦圖示"> [針鋒相對](#adamant_charge_cooldown_reduction)<br>- Targeted Brutality | <ul><li>衝鋒每次有效命中一般敵人返還 0.5 秒戰鬥技能冷卻；命中精英、專家或巨獸返還 1 秒。</li><li>單次衝鋒最多返還 5 秒冷卻。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="32" height="32" alt="交鋒天賦圖示"> [交鋒](#adamant_charge_longer_distance)<br>- Engage | <ul><li>衝鋒距離由基礎 3.75 公尺增加 3.75 公尺，目標距離上限成為 7.5 公尺。</li></ul> | 能力 |
 | <img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="32" height="32" alt="殺戮命令天賦圖示"> [殺戮命令](#adamant_dog_damage_after_ability)<br>- Kill Order | <ul><li>使用戰鬥技能後，電子獒犬傷害提高 50%，持續 12 秒；效果生效時再次使用戰鬥技能可重新計時。</li></ul> | 能力 |
-| <img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="32" height="32" alt="處刑命令天賦圖示"> [處刑命令](#adamant_execution_order)<br>- Execution Order | <ul><li>自動標記前方 40 公尺內的菁英、專家或頭目。</li><li>你或電子獒犬擊殺標記目標後，恢復 15% 最大韌性，並獲得 8 秒傷害與攻速加成。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/47d0c2b2-0d8e-4906-a528-48f9488353e9" width="32" height="32" alt="終點站令狀天賦圖示"> [終點站令狀](#adamant_terminus_warrant)<br>- Terminus Warrant | <ul><li>遠距每發每個命中敵人建立近戰正義層數，弱點命中改為給 3 層；近戰命中建立遠距正義層數，各最多 20 層。</li><li>切換至對應武器時消耗層數並啟動固定 12 秒增益。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="32" height="32" alt="處刑命令天賦圖示"> [處刑命令](#adamant_execution_order)<br>- Execution Order | <ul><li>自動標記前方 40 公尺內的精英、專家或頭目。</li><li>你或電子獒犬擊殺標記目標後，恢復 15% 最大韌性，並獲得 8 秒傷害與攻速加成。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/47d0c2b2-0d8e-4906-a528-48f9488353e9" width="32" height="32" alt="終點站令狀天賦圖示"> [終點站令狀](#adamant_terminus_warrant)<br>- Terminus Warrant | <ul><li>遠程每發每個命中敵人建立近戰正義層數，弱點命中改為給 3 層；近戰命中建立遠程正義層數，各最多 20 層。</li><li>切換至對應武器時消耗層數並啟動固定 12 秒增益。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/b838686c-aaa0-49a2-bbea-fc9e074bb6cf" width="32" height="32" alt="堅定不移天賦圖示"> [堅定不移](#adamant_forceful)<br>- Forceful | <ul><li>踉蹌命中或格擋可累積最多 10 層，每層增加 5% 衝擊並降低受傷倍率。</li><li>層數共用 5 秒時間；受傷每 0.25 秒最多移除 1 層。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="孤狼天賦圖示"> [孤狼](#adamant_disable_companion)<br>- Lone Wolf | <ul><li>移除電子獒犬，換取 +20% 傷害、+10% 攻擊速度、15% 韌性減傷與額外 1 次閃擊攜帶量。</li><li>缺少手榴彈時每 45 秒補 1 枚；電能地雷則每 90 秒補 1 枚。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="孤狼天賦圖示"> [孤狼](#adamant_disable_companion)<br>- Lone Wolf | <ul><li>移除電子獒犬，換取 +20% 傷害、+10% 攻擊速度、15% 韌性減傷與額外 1 次閃擊攜帶量。</li><li>缺少手雷時每 45 秒補 1 枚；電能地雷則每 90 秒補 1 枚。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/1016875d-cc4c-44f2-8a06-c93155d482d4" width="32" height="32" alt="律法之志天賦圖示"> [律法之志](#adamant_forceful_toughness_regen_per_stack)<br>- Will of the Lex | <ul><li>選取後堅定不移每層每秒恢復 0.5% 最大韌性。</li><li>效果隨堅定不移層數逐秒累積，最多 10 層。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/92922b1c-4991-480e-86af-e050b9faa496" width="32" height="32" alt="堅定意志天賦圖示"> [堅定意志](#adamant_forceful_stun_immune_and_block_all)<br>- Adamant Will | <ul><li>堅定不移維持滿層時取得免暈與減速免疫。</li><li>離開滿層後效果再維持 3 秒；完美格擋時額外允許格擋不可格擋攻擊。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/3ecc49e6-a4c7-4d77-926d-623e4f8f34f6" width="32" height="32" alt="鎖定目標天賦圖示"> [鎖定目標](#adamant_forceful_offensive)<br>- Targets Acquired | <ul><li>堅定不移達 10 層時取得攻速與順劈加成。</li><li>離開滿層後加成再維持 3 秒。</li></ul> | 鑰石 |
@@ -38,18 +38,18 @@
 | <img src="https://github.com/user-attachments/assets/62f41d0b-cd55-459d-b4d7-c8c155da410f" width="32" height="32" alt="審判之力天賦圖示"> [審判之力](#adamant_forceful_stagger_on_low_high)<br>- Judicial Force | <ul><li>堅定不移從未滿升至 10 層，或從有層數降到 0 層時，會使附近敵人遭到爆炸踉蹌。</li><li>達到高層與歸零各自有 5 秒冷卻。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/7b782337-07db-4ff4-9a85-ba21d1fcfe6b" width="32" height="32" alt="能屈能伸天賦圖示"> [能屈能伸](#adamant_terminus_warrant_cdr)<br>- Obstinate | <ul><li>消耗完整 20 層正義後，12 秒內每秒額外恢復 0.33 秒戰鬥技能冷卻。</li><li>再次觸發重新計時；名目額外恢復總量為 3.96 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/053a0db6-481b-4944-9077-d1d9a05759dd" width="32" height="32" alt="終端律令天賦圖示"> [終端律令](#adamant_terminus_warrant_support)<br>- Terminal Decree | <ul><li>每次消耗終點站令狀層數時，按實際消耗層數恢復自身與協同範圍內隊友韌性。</li><li>每層恢復最大韌性的 1%；基礎上限 20 層。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="32" height="32" alt="效率殺手天賦圖示"> [效率殺手](#adamant_execution_order_crit)<br>- Efficient Killer | <ul><li>擊殺被標記敵人時，獲得 8 秒爆擊機率與爆擊傷害加成。</li><li>加成為 +10 個百分點爆擊機率與 +25% 額外爆擊傷害。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="32" height="32" alt="效率殺手天賦圖示"> [效率殺手](#adamant_execution_order_crit)<br>- Efficient Killer | <ul><li>擊殺被標記敵人時，獲得 8 秒爆擊率與暴擊傷害加成。</li><li>加成為 +10 個百分點爆擊率與 +25% 額外暴擊傷害。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="32" height="32" alt="生化武器關天賦圖示"> [生化武器關](#adamant_execution_order_cdr)<br>- Malocator | <ul><li>你或自己的電子獒犬擊殺標記目標後，8 秒內每秒額外恢復 0.5 秒戰鬥技能冷卻。</li><li>再次觸發重新計時；名目額外恢復總量為 4 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/ab53bec8-fd00-470c-8c5d-46cc58904f13" width="32" height="32" alt="罪不可赦天賦圖示"> [罪不可赦](#adamant_execution_order_rending)<br>- No Lenience | <ul><li>擊殺被標記敵人後，獲得 8 秒撕裂加成。</li><li>撕裂修正為 +10%，進入共用護甲傷害計算。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/eeb40551-fbea-4de0-8e46-0a07e4bfcec6" width="32" height="32" alt="殺戮協議天賦圖示"> [殺戮協議](#adamant_execution_order_permastack)<br>- Keeping Protocol | <ul><li>每次擊殺被標記敵人，永久增加對巨獸的傷害與防禦，最多 30 層。</li><li>每層增加 1% 對巨獸傷害；巨獸打你的傷害逐層相乘降低。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/0633a2b7-e8e9-4215-85a9-f54ae4d95809" width="32" height="32" alt="不落人後天賦圖示"> [不落人後](#adamant_pinning_dog_bonus_moving_towards)<br>- Not Far Behind | <ul><li>每當電子獒犬發動猛撲，玩家取得 5 秒移動速度與傷害加成。</li><li>兩項加成各為 10%；再次觸發會重新計時單層效果時間。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/6208ebde-9eb1-4a4d-923c-823a0e511bf9" width="32" height="32" alt="往前進攻！天賦圖示"> [往前進攻！](#adamant_companion_focus_ranged)<br>- Go Get 'Em! | <ul><li>電子獒犬更偏好選擇遠距敵人，並對遠距敵人增加 50% 傷害。</li><li>選敵評分提高遠距敵人優先度，並擴大遠距焦點的選敵距離。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/d61cee49-95ce-43fb-ae8a-b05ba598366b" width="32" height="32" alt="猛犬出擊天賦圖示"> [猛犬出擊](#adamant_companion_focus_elite)<br>- Unleashed Brutality | <ul><li>電子獒犬更偏好菁英與專家敵人，並對兩類敵人增加 25% 傷害。</li><li>選敵評分提高菁英與專家敵人的優先度。</li></ul> | 鑰石 |
-| <img src="https://github.com/user-attachments/assets/34f0ccb1-7c44-4aaf-a697-e0ef2b6f2c0e" width="32" height="32" alt="審判之旨天賦圖示"> [審判之旨](#adamant_terminus_warrant_improved_combined)<br>- Writ of Judgement | <ul><li>完整消耗 20 層近戰正義或遠距正義後，近戰與遠距攻擊速度各提高 10%，爆擊機率增加 10 個百分點，持續 12 秒。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/6208ebde-9eb1-4a4d-923c-823a0e511bf9" width="32" height="32" alt="往前進攻！天賦圖示"> [往前進攻！](#adamant_companion_focus_ranged)<br>- Go Get 'Em! | <ul><li>電子獒犬更偏好選擇遠程敵人，並對遠程敵人增加 50% 傷害。</li><li>選敵評分提高遠程敵人優先度，並擴大遠程焦點的選敵距離。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/d61cee49-95ce-43fb-ae8a-b05ba598366b" width="32" height="32" alt="猛犬出擊天賦圖示"> [猛犬出擊](#adamant_companion_focus_elite)<br>- Unleashed Brutality | <ul><li>電子獒犬更偏好精英與專家敵人，並對兩類敵人增加 25% 傷害。</li><li>選敵評分提高精英與專家敵人的優先度。</li></ul> | 鑰石 |
+| <img src="https://github.com/user-attachments/assets/34f0ccb1-7c44-4aaf-a697-e0ef2b6f2c0e" width="32" height="32" alt="審判之旨天賦圖示"> [審判之旨](#adamant_terminus_warrant_improved_combined)<br>- Writ of Judgement | <ul><li>完整消耗 20 層近戰正義或遠程正義後，近戰與遠程攻擊速度各提高 10%，爆擊率增加 10 個百分點，持續 12 秒。</li></ul> | 鑰石 |
 | <img src="https://github.com/user-attachments/assets/a6716d2d-1100-4bbe-be59-683b5b9176b4" width="32" height="32" alt="電子獒犬與人天賦圖示"> [電子獒犬與人](#adamant_toughness_regen_near_companion)<br>- Man and Cyber-Mastiff | <ul><li>在自己的電子獒犬 8 公尺內，每秒恢復最大韌性的 5%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/82a4d2c5-a0aa-4c05-a8ea-e03bc0e4932b" width="32" height="32" alt="凋零烈焰天賦圖示"> [凋零烈焰](#adamant_damage_after_reloading)<br>- Withering Fire | <ul><li>換彈後，遠距傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/82a4d2c5-a0aa-4c05-a8ea-e03bc0e4932b" width="32" height="32" alt="凋零烈焰天賦圖示"> [凋零烈焰](#adamant_damage_after_reloading)<br>- Withering Fire | <ul><li>換彈後，遠程傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/0f0f19ee-07a9-47a6-9acf-599b809569a4" width="32" height="32" alt="審判之錘天賦圖示"> [審判之錘](#adamant_multiple_hits_attack_speed)<br>- Hammer of Judgement | <ul><li>同一次近戰攻擊命中至少 3 名敵人，近戰攻速提高 10%，持續 3 秒。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/fc3f3a29-7b71-45d4-aec6-c72036ba9831" width="32" height="32" alt="繩之以法天賦圖示"> [繩之以法](#adamant_elite_special_kills_replenish_toughness)<br>- Target Neutralised | <ul><li>擊殺菁英或專家敵人，立即恢復最大韌性的 10%，接著 4 秒再恢復 10%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/fc3f3a29-7b71-45d4-aec6-c72036ba9831" width="32" height="32" alt="繩之以法天賦圖示"> [繩之以法](#adamant_elite_special_kills_replenish_toughness)<br>- Target Neutralised | <ul><li>擊殺精英或專家敵人，立即恢復最大韌性的 10%，接著 4 秒再恢復 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/3098a511-fa0f-444e-a9e2-8e6591688115" width="32" height="32" alt="近在眉睫天賦圖示"> [近在眉睫](#adamant_close_kills_restore_toughness)<br>- Up Close | <ul><li>在 12.5 公尺內擊殺敵人，恢復最大韌性的 5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/898ad4c6-3f99-404d-8ff9-b15a9820f8e9" width="32" height="32" alt="鐵血之志天賦圖示"> [鐵血之志](#adamant_staggers_replenish_toughness)<br>- Force of Will | <ul><li>近戰攻擊的第一個命中目標受到踉蹌時，恢復最大韌性的 7.5%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4ce13efe-7a81-48cd-9bb6-47dfb55f63b8" width="32" height="32" alt="電能獠牙天賦圖示"> [電能獠牙](#adamant_dog_attacks_electrocute)<br>- Voltaic Mandibles Augment | <ul><li>電子獒犬的撲擊與壓制攻擊會電擊目標，效果持續 5 秒，可重新計時。</li></ul> | 技能 |
@@ -60,10 +60,10 @@
 | <img src="https://github.com/user-attachments/assets/90c9bff4-baf3-4b53-b160-16945870dd88" width="32" height="32" alt="彈藥腰帶天賦圖示"> [彈藥腰帶](#adamant_ammo_belt)<br>- Ammo Belt | <ul><li>備用彈藥容量提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/4232eef3-1499-4f4c-b2e3-d1416db2ec8e" width="32" height="32" alt="呼吸器天賦圖示"> [呼吸器](#adamant_rebreather)<br>- Rebreather | <ul><li>承受的腐敗降低 20%，毒氣傷害降低 75%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/02fd58ae-50fc-461f-879d-70d77a2aff44" width="32" height="32" alt="苛政壓制天賦圖示"> [苛政壓制](#adamant_hitting_multiple_gives_tdr)<br>- Suppression Protocols | <ul><li>同一次攻擊命中至少 3 名敵人，獲得 20% 韌性減傷，持續 5 秒。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/62b0bee6-3606-40bc-9d78-06f072535e59" width="32" height="32" alt="遠程傷害增幅天賦圖示"> [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1)<br>- Ranged Damage Boost | <ul><li>遠距傷害提高 10%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/62b0bee6-3606-40bc-9d78-06f072535e59" width="32" height="32" alt="遠程傷害增幅天賦圖示"> [遠程傷害增幅](#base_ranged_damage_node_buff_medium_1)<br>- Ranged Damage Boost | <ul><li>遠程傷害提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8c224499-f2ca-420c-bcf6-39034e6a35b2" width="32" height="32" alt="近戰增幅天賦圖示"> [近戰增幅](#base_melee_damage_node_buff_medium_1)<br>- Melee Damage Boost | <ul><li>近戰傷害提高 10%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/549d3657-c19a-49a6-b8ad-2c1e77080dfa" width="32" height="32" alt="重顎獠牙天賦圖示"> [重顎獠牙](#adamant_dog_pounces_bleed_nearby)<br>- Razor-Jaw Augment | <ul><li>電子獒犬撲擊的周邊推撞，以及對歐格林／巨獸的壓制攻擊，可施加 6 層流血。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/d856ef6a-9f61-4b4a-b672-e60019dea866" width="32" height="32" alt="勢如破竹天賦圖示"> [勢如破竹](#adamant_damage_reduction_after_elite_kill)<br>- Imposing Force | <ul><li>擊殺菁英或專家敵人後，獲得 25% 減傷，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/d856ef6a-9f61-4b4a-b672-e60019dea866" width="32" height="32" alt="勢如破竹天賦圖示"> [勢如破竹](#adamant_damage_reduction_after_elite_kill)<br>- Imposing Force | <ul><li>擊殺精英或專家敵人後，獲得 25% 減傷，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fd423ddb-0080-4603-8fd7-90257b583c3d" width="32" height="32" alt="堅守陣線天賦圖示"> [堅守陣線](#adamant_staggers_reduce_damage_taken)<br>- Hold the Line | <ul><li>使敵人踉蹌可累積減傷，最多 5 層、持續 8 秒；受到近戰命中後清除。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d3fa1c73-0a49-42ab-920c-11b7238af849" width="32" height="32" alt="順劈加成天賦圖示"> [順劈加成](#base_cleave_node_buff_medium_1)<br>- Cleave Boost | <ul><li>傷害與踉蹌的順劈容量提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e8b31492-509e-479a-9369-203e36e1e1e4" width="32" height="32" alt="衝擊加成天賦圖示"> [衝擊加成](#base_impact_node_buff_medium_1)<br>- Impact Boost | <ul><li>衝擊提高 25%，更容易使敵人踉蹌。</li></ul> | 技能 |
@@ -71,23 +71,23 @@
 | <img src="https://github.com/user-attachments/assets/5df365c7-8213-4c06-acc5-2b00f0cda022" width="32" height="32" alt="鋒利獠牙天賦圖示"> [鋒利獠牙](#adamant_dog_applies_brittleness)<br>- Serrated Maw | <ul><li>電子獒犬的撲擊施加 15% 脆弱，持續 5 秒；共用脆弱上限 40%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/9a87f145-d4a8-4554-b8ca-f5fbb2a58944" width="32" height="32" alt="追跡法務官天賦圖示"> [追跡法務官](#adamant_dodge_grants_damage)<br>- Arbites Revelatum | <ul><li>成功閃避敵人攻擊後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/59f1504d-8b25-40c7-a582-b5de1b3278cf" width="32" height="32" alt="罪孽判官天賦圖示"> [罪孽判官](#adamant_stacking_weakspot_strength)<br>- Soulguilt Scan | <ul><li>命中弱點後每層增加 2% 弱點威力，最多 8 層，持續 10 秒。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/88c5f583-d739-484e-a7cd-89b79a90334d" width="32" height="32" alt="恰如其分天賦圖示"> [恰如其分](#adamant_elite_special_kills_reload_speed)<br>- Judicious Efficiency | <ul><li>擊殺菁英或專家敵人後，下次換彈速度提高 20%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/8f0bcba7-48bd-4d61-ad19-b03a65160eb5" width="32" height="32" alt="行軍之志天賦圖示"> [行軍之志](#adamant_movement_speed_on_block)<br>- March | <ul><li>遠距攻擊命中敵人後，移動速度提高 15%，持續 3 秒。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/6d045fa3-97bc-4943-9e6e-0f703e68288d" width="32" height="32" alt="無處可逃天賦圖示"> [無處可逃](#adamant_elite_special_kills_offensive_boost)<br>- No Escape | <ul><li>擊殺菁英或專家敵人後，傷害與移速提高 10%，持續 4 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/88c5f583-d739-484e-a7cd-89b79a90334d" width="32" height="32" alt="恰如其分天賦圖示"> [恰如其分](#adamant_elite_special_kills_reload_speed)<br>- Judicious Efficiency | <ul><li>擊殺精英或專家敵人後，下次換彈速度提高 20%。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/8f0bcba7-48bd-4d61-ad19-b03a65160eb5" width="32" height="32" alt="行軍之志天賦圖示"> [行軍之志](#adamant_movement_speed_on_block)<br>- March | <ul><li>遠程攻擊命中敵人後，移動速度提高 15%，持續 3 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/6d045fa3-97bc-4943-9e6e-0f703e68288d" width="32" height="32" alt="無處可逃天賦圖示"> [無處可逃](#adamant_elite_special_kills_offensive_boost)<br>- No Escape | <ul><li>擊殺精英或專家敵人後，傷害與移速提高 10%，持續 4 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/7b24cc5d-1975-4762-8b77-8899c0713175" width="32" height="32" alt="兵敗如山倒天賦圖示"> [兵敗如山倒](#adamant_cleave_after_push)<br>- Drive them Back | <ul><li>推擊命中敵人後，近戰傷害的順劈容量提高 75%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/e51d3184-42e7-434f-8369-0ae7a6568619" width="32" height="32" alt="盾型裝甲天賦圖示"> [盾型裝甲](#adamant_shield_plates)<br>- Shield Plates | <ul><li>格擋後 3 秒恢復最大韌性的 15%；完美格擋另立即恢復 10%，這份立即恢復有 1 秒冷卻。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/bff83e5a-48a0-4f4c-b280-3093df526c5d" width="32" height="32" alt="重如律法天賦圖示"> [重如律法](#adamant_heavy_attacks_increase_damage)<br>- Weight of the Lex | <ul><li>近戰重擊命中後，傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fcb8d517-7a08-452a-a577-1ab15af469cb" width="32" height="32" alt="毀滅打擊天賦圖示"> [毀滅打擊](#adamant_melee_attacks_on_staggered_rend)<br>- Strike Down | <ul><li>對踉蹌敵人的近戰攻擊獲得 15% 撕裂。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/c776951e-d8de-46cb-ad58-7c14af6b0997" width="32" height="32" alt="狂熱信仰天賦圖示"> [狂熱信仰](#adamant_crit_chance_on_kill)<br>- Zealous Dedication | <ul><li>擊殺後每層增加 2 個百分點爆擊機率，最多 8 層，持續 10 秒。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/e650aa60-14d1-446d-9fa3-fed8dd633716" width="32" height="32" alt="制裁重擊天賦圖示"> [制裁重擊](#adamant_crits_rend)<br>- Prosecution Blow | <ul><li>遠距爆擊獲得 20% 撕裂。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/c776951e-d8de-46cb-ad58-7c14af6b0997" width="32" height="32" alt="狂熱信仰天賦圖示"> [狂熱信仰](#adamant_crit_chance_on_kill)<br>- Zealous Dedication | <ul><li>擊殺後每層增加 2 個百分點爆擊率，最多 8 層，持續 10 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/e650aa60-14d1-446d-9fa3-fed8dd633716" width="32" height="32" alt="制裁重擊天賦圖示"> [制裁重擊](#adamant_crits_rend)<br>- Prosecution Blow | <ul><li>遠程暴擊獲得 20% 撕裂。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/cd883557-4048-43f0-a3b7-3a90bbc6ffe8" width="32" height="32" alt="街頭妙招天賦圖示"> [街頭妙招](#adamant_dodge_improvement)<br>- Street Smarts | <ul><li>有效閃避次數增加 1 次；近戰閃避結束後的判定寬限延長 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/62b4954d-42c3-4eab-a6ea-a17719414e19" width="32" height="32" alt="巨獸獵人天賦圖示"> [巨獸獵人](#adamant_monster_hunter)<br>- Monstrosity Hunter | <ul><li>對歐格林與巨獸造成的傷害提高 20%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc" width="32" height="32" alt="帝皇之拳天賦圖示"> [帝皇之拳](#adamant_first_melee_hit_increased_damage)<br>- The Emperor's Fist | <ul><li>每次近戰揮擊的第一個命中目標，傷害提高 15%、衝擊提高 30%。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/4b7cf064-ea83-4334-a484-a222e22af7a3" width="32" height="32" alt="篩選目標天賦圖示"> [篩選目標](#adamant_pinning_dog_elite_damage)<br>- Target Selection | <ul><li>擊殺自己的電子獒犬正在壓制的菁英或專家敵人後，對菁英與專家的傷害提高 15%，持續 8 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/4b7cf064-ea83-4334-a484-a222e22af7a3" width="32" height="32" alt="篩選目標天賦圖示"> [篩選目標](#adamant_pinning_dog_elite_damage)<br>- Target Selection | <ul><li>擊殺自己的電子獒犬正在壓制的精英或專家敵人後，對精英與專家的傷害提高 15%，持續 8 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47" width="32" height="32" alt="擊殺順序天賦圖示"> [擊殺順序](#adamant_increased_damage_to_high_health)<br>- Target Priority | <ul><li>對生命值高於 75% 的敵人，傷害提高 15%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/fc2bbfe4-50b8-4c9c-b775-20f1c2c33792" width="32" height="32" alt="猛犬氣場天賦圖示"> [猛犬氣場](#adamant_pinning_dog_kills_buff_allies)<br>- Canine Morale | <ul><li>擊殺自己的電子獒犬正在壓制的敵人後，你與協同範圍內隊友獲得 20% 韌性減傷，並在 5 秒內恢復 10% 最大韌性。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/8a0b3c73-0e7e-4d31-9f7d-385634eae6e3" width="32" height="32" alt="迅疾走位天賦圖示"> [迅疾走位](#adamant_sprinting_sliding)<br>- Rapid Movement | <ul><li>滑行結束後，衝刺速度提高 5%，持續 5 秒；擊殺恢復最大耐力的 5%，冷卻 0.75 秒。</li></ul> | 技能 |
-| <img src="https://github.com/user-attachments/assets/75cf7e7e-044e-432f-b7cb-b73e53164425" width="32" height="32" alt="最後通牒天賦圖示"> [最後通牒](#adamant_ranged_damage_on_melee_stagger)<br>- Final Warning | <ul><li>近戰或推擊使敵人踉蹌後，遠距傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
+| <img src="https://github.com/user-attachments/assets/75cf7e7e-044e-432f-b7cb-b73e53164425" width="32" height="32" alt="最後通牒天賦圖示"> [最後通牒](#adamant_ranged_damage_on_melee_stagger)<br>- Final Warning | <ul><li>近戰或推擊使敵人踉蹌後，遠程傷害提高 15%，持續 5 秒。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/03af9ca3-e4f4-4383-9650-f8ac659cfadd" width="32" height="32" alt="秉賦為先天賦圖示"> [秉賦為先](#adamant_clip_size)<br>- Priority Endowment | <ul><li>彈匣容量提高 15%，容量向上取整數。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="惡徒退散天賦圖示"> [惡徒退散](#adamant_damage_vs_suppressed)<br>- Cower, Miscreants! | <ul><li>對受壓制敵人的傷害提高 25%。</li></ul> | 技能 |
 | <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="正當手段天賦圖示"> [正當手段](#adamant_stacking_damage)<br>- Justified Measures | <ul><li>攻擊命中首個目標後，每層增加 2% 傷害，最多 5 層，持續 5 秒。</li></ul> | 技能 |
@@ -126,7 +126,7 @@
 
 - **傷害算例**：只計爆炸中央的護甲階段，基準傷害 1,500 對無甲為 1,500 × 1 = 1,500，對防彈護甲為 1,500 × 0.5 = 750，對硬殼護甲為 1,500 × 0.2 = 300。實際還需計入命中部位、爆炸遮蔽及其他增減傷。
 
-- **攜帶與補充**：最多 4 枚，比基礎版本的 3 枚多 1 枚；投出一枚少一枚，不會自行按冷卻補回。搭配孤狼時，上限變成 5 枚，缺少手榴彈時每 45 秒補回 1 枚。
+- **攜帶與補充**：最多 4 枚，比基礎版本的 3 枚多 1 枚；投出一枚少一枚，不會自行按冷卻補回。搭配孤狼時，上限變成 5 枚，缺少手雷時每 45 秒補回 1 枚。
 
 [詳細資料](adamant_grenade_improved.md) · [返回目錄](#talent-index)
 
@@ -230,7 +230,7 @@
 
 - **部署與冷卻**：瞄準後朝指定方向部署；快速點按會在自身位置部署並跟隨你。傳令機持續 20 秒，範圍 7.5 公尺，冷卻 60 秒。
 
-- **盟友支援**：強化版每秒恢復最大韌性的 7.5%，並提高壓制與衝擊各 30%、降低後座力 25%；同時免疫暈眩、減速及壓制。例如在範圍內連續 2 秒，理論恢復 15% 最大韌性，實際恢復以缺少的韌性為限。
+- **盟友支援**：強化版每秒恢復最大韌性的 7.5%，並提高壓制與衝擊各 30%、降低後座力 25%；同時免疫眩暈、減速及壓制。例如在範圍內連續 2 秒，理論恢復 15% 最大韌性，實際恢復以缺少的韌性為限。
 
 - **敵人受制**：範圍內敵人受到的傷害提高 15%；例如其他條件相同時，原本 100 點傷害按 1.15 倍計算為 115 點。
 
@@ -260,7 +260,7 @@
 
 <img src="https://github.com/user-attachments/assets/8c312d8e-8b49-45cd-828e-62cffc6d0a25" width="72" height="72" alt="蒙福軍武天賦圖示">
 
-- **觸發條件**：只有在懲戒者姿態期間，遠距擊殺才會補彈；子彈從備用彈藥轉入彈匣。
+- **觸發條件**：只有在懲戒者姿態期間，遠程擊殺才會補彈；子彈從備用彈藥轉入彈匣。
 
 - **補彈算法**：每次觸發以彈匣容量的 10% 計算並無條件進位。例如容量 30 發，計算為 30×10%=3 發；若只缺 1 發，就只補 1 發。備用彈藥不足時只轉入剩餘彈藥，不會憑空產生子彈。
 
@@ -275,7 +275,7 @@
 
 <img src="https://github.com/user-attachments/assets/f7454987-ea7e-474e-bb22-3c3ead9adb1b" width="72" height="72" alt="處決令天賦圖示">
 
-- **觸發條件**：懲戒者姿態期間擊殺菁英或專家敵人，每次獲得一層傷害加成。
+- **觸發條件**：懲戒者姿態期間擊殺精英或專家敵人，每次獲得一層傷害加成。
 
 - **層數與時間**：每層 +7.5%，最多 6 層，每次增加層數會重設 12 秒持續時間。姿態結束後，已取得的層數仍依自己的剩餘時間到期。
 
@@ -337,7 +337,7 @@
 
 <img src="https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573" width="72" height="72" alt="懲惡揚善天賦圖示">
 
-- **觸發條件**：衝鋒擊中菁英、專家或巨獸時，依不同敵人計算；同一目標在一次衝鋒中只計一次。
+- **觸發條件**：衝鋒擊中精英、專家或巨獸時，依不同敵人計算；同一目標在一次衝鋒中只計一次。
 
 - **恢復量與上限**：衝鋒結束時一起恢復；每名不同目標恢復最大韌性的 20% 與最大耐力的 15%，最多恢復 100% 最大韌性、75% 最大耐力，均不超過目前缺額。
 
@@ -352,7 +352,7 @@
 
 <img src="https://github.com/user-attachments/assets/d2b1945d-2300-4993-a649-00c1e3858e0d" width="72" height="72" alt="針鋒相對天賦圖示">
 
-- **冷卻返還**：衝鋒命中一般敵人，每次返還 0.5 秒戰鬥技能冷卻；命中菁英、專家或巨獸，每次返還 1 秒。
+- **冷卻返還**：衝鋒命中一般敵人，每次返還 0.5 秒戰鬥技能冷卻；命中精英、專家或巨獸，每次返還 1 秒。
 
 - **結算與上限**：衝鋒結束時返還，一次最多 5 秒，以尚未恢復的冷卻為限；這項返還按命中事件累計，沒有像韌性恢復升級那樣排除重複目標。
 
@@ -400,7 +400,7 @@
 
 <img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="72" height="72" alt="處刑命令天賦圖示">
 
-- **自動標記**：選取前方 40 公尺內、有視線的菁英、專家或頭目。一般菁英與專家標記後需隔 3 秒才可再選；巨獸與頭目不受這個等待時間限制。可同時保留多個標記。
+- **自動標記**：選取前方 40 公尺內、有視線的精英、專家或頭目。一般精英與專家標記後需隔 3 秒才可再選；巨獸與頭目不受這個等待時間限制。可同時保留多個標記。
 
 - **擊殺效果**：你或自己的電子獒犬擊殺標記目標，恢復最大韌性的 15%，並使你傷害與攻擊速度各提高 10%，電子獒犬直接傷害提高 150%，持續 8 秒。再次觸發重新計時，不累加幅度；其他隊友單獨擊殺不會觸發。
 
@@ -417,9 +417,9 @@
 
 <img src="https://github.com/user-attachments/assets/47d0c2b2-0d8e-4906-a528-48f9488353e9" width="72" height="72" alt="終點站令狀天賦圖示">
 
-- **累積與上限**：遠距命中每個敵人給 1 層近戰正義；弱點命中該敵人給 3 層。每次射擊對同一目標只記一次，最多 20 層。近戰每次命中給 1 層遠距正義，最多 20 層。
+- **累積與上限**：遠程命中每個敵人給 1 層近戰正義；弱點命中該敵人給 3 層。每次射擊對同一目標只記一次，最多 20 層。近戰每次命中給 1 層遠程正義，最多 20 層。
 
-- **切換與消耗**：切換至近戰武器會消耗近戰正義，得到 12 秒 +10% 近戰威力與 20% 韌性受傷減免；切換至遠距武器會消耗遠距正義，得到 12 秒 +10% 遠距威力、+50% 壓制與 +50% 遠距順劈。這些核心增益是固定值，不隨消耗層數比例增減。
+- **切換與消耗**：切換至近戰武器會消耗近戰正義，得到 12 秒 +10% 近戰威力與 20% 韌性受傷減免；切換至遠程武器會消耗遠程正義，得到 12 秒 +10% 遠程威力、+50% 壓制與 +50% 遠程順劈。這些核心增益是固定值，不隨消耗層數比例增減。
 
 - **韌性算例**：近戰效果使韌性傷害倍率為 0.8，原本 100 點韌性傷害變成 80 點；只在 12 秒效果存續期間套用。
 
@@ -457,7 +457,7 @@
 
 - **傷害與速度算例**：單計本技能，100 點傷害變成 100 × 1.2 = 120；同階段已有 25% 增傷時為 145。原本 1 秒的可加速攻擊動作為 1 ÷ 1.1 ≈ 0.91 秒；100 點韌性傷害變成 85，若已有同階段 10% 韌性減傷則變成 75。
 
-- **補充算例**：一般手榴彈缺少至少 1 顆時，開始等 45 秒並補回 1 顆；電能地雷缺額則等 90 秒。補回後重新等下一次，滿充能時不計時。
+- **補充算例**：一般手雷缺少至少 1 顆時，開始等 45 秒並補回 1 顆；電能地雷缺額則等 90 秒。補回後重新等下一次，滿充能時不計時。
 
 [詳細資料](adamant_disable_companion.md) · [返回目錄](#talent-index)
 
@@ -481,7 +481,7 @@
 
 <img src="https://github.com/user-attachments/assets/92922b1c-4991-480e-86af-e050b9faa496" width="72" height="72" alt="堅定意志天賦圖示">
 
-- **觸發與持續**：堅定不移到達 10 層時啟用免疫暈眩與減速；離開滿層後再維持 3 秒。
+- **觸發與持續**：堅定不移到達 10 層時啟用免疫眩暈與減速；離開滿層後再維持 3 秒。
 
 - **完美格擋**：效果期間，完美格擋可擋下原本不可格擋的攻擊；一般格擋不會因此獲得相同能力。此效果仍需符合攻擊的格擋判定，不等於全程無敵。
 
@@ -546,7 +546,7 @@
 
 <img src="https://github.com/user-attachments/assets/053a0db6-481b-4944-9077-d1d9a05759dd" width="72" height="72" alt="終端律令天賦圖示">
 
-- **觸發與對象**：消耗近戰正義或遠距正義時，自己和協同範圍內盟友都恢復韌性；少於 20 層時按實際消耗層數算。
+- **觸發與對象**：消耗近戰正義或遠程正義時，自己和協同範圍內盟友都恢復韌性；少於 20 層時按實際消耗層數算。
 
 - **恢復算例**：每層恢復最大韌性的 1%；消耗 20 層可恢復 20%。最大韌性為 100 時是 20 點，若只消耗 7 層則是 7 點；每人仍受自身韌性缺額上限限制。
 
@@ -561,9 +561,9 @@
 
 - **觸發與持續**：擊殺被標記敵人會觸發；效果持續 8 秒，重新觸發會重新計時。
 
-- **爆擊機率**：增加 10 個百分點，例如原本 5% 變成 15%。
+- **爆擊率**：增加 10 個百分點，例如原本 5% 變成 15%。
 
-- **爆擊傷害算例**：25% 加成作用於爆擊的額外傷害部分。若普攻 100、爆擊 150，則變成 100 + (150 − 100) × 1.25 = 162.5，整筆爆擊傷害實際提高約 8.33%；另一把武器若爆擊 200，則變成 225，提高 12.5%。武器與護甲不同，實際增幅也不同。
+- **暴擊傷害算例**：25% 加成作用於暴擊的額外傷害部分。若普攻 100、暴擊 150，則變成 100 + (150 − 100) × 1.25 = 162.5，整筆暴擊傷害實際提高約 8.33%；另一把武器若暴擊 200，則變成 225，提高 12.5%。武器與護甲不同，實際增幅也不同。
 
 [詳細資料](adamant_execution_order_crit.md) · [返回目錄](#talent-index)
 
@@ -626,9 +626,9 @@
 
 <img src="https://github.com/user-attachments/assets/6208ebde-9eb1-4a4d-923c-823a0e511bf9" width="72" height="72" alt="往前進攻！天賦圖示">
 
-- **選敵優先度**：電子獒犬更優先攻擊遠距敵人；距離、敵人威脅與目前目標仍會影響選擇，不保證每次都選這類敵人。
+- **選敵優先度**：電子獒犬更優先攻擊遠程敵人；距離、敵人威脅與目前目標仍會影響選擇，不保證每次都選這類敵人。
 
-- **傷害算例**：對遠距敵人，犬傷害增加 50%。單計這項加成，基礎 100 點變成 150；若已有同階段 25% 加成，則為 100 × (1 + 25% + 50%) = 175 點。
+- **傷害算例**：對遠程敵人，犬傷害增加 50%。單計這項加成，基礎 100 點變成 150；若已有同階段 25% 加成，則為 100 × (1 + 25% + 50%) = 175 點。
 
 [詳細資料](adamant_companion_focus_ranged.md) · [返回目錄](#talent-index)
 
@@ -639,9 +639,9 @@
 
 <img src="https://github.com/user-attachments/assets/d61cee49-95ce-43fb-ae8a-b05ba598366b" width="72" height="72" alt="猛犬出擊天賦圖示">
 
-- **選敵優先度**：電子獒犬更優先攻擊菁英與專家敵人；距離、敵人威脅與目前目標仍會影響選擇，不保證每次都選這類敵人。
+- **選敵優先度**：電子獒犬更優先攻擊精英與專家敵人；距離、敵人威脅與目前目標仍會影響選擇，不保證每次都選這類敵人。
 
-- **傷害算例**：對菁英與專家敵人，犬傷害增加 25%。單計這項加成，基礎 100 點變成 125；若已有同階段 25% 加成，則為 100 × (1 + 25% + 25%) = 150 點。
+- **傷害算例**：對精英與專家敵人，犬傷害增加 25%。單計這項加成，基礎 100 點變成 125；若已有同階段 25% 加成，則為 100 × (1 + 25% + 25%) = 150 點。
 
 [詳細資料](adamant_companion_focus_elite.md) · [返回目錄](#talent-index)
 
@@ -654,7 +654,7 @@
 
 - **觸發門檻**：消耗時至少持有完整 20 層，才能觸發「審判之旨」；以未滿層數切換不觸發。
 
-- **加成與算例**：持續 12 秒，近戰與遠距攻速各提高 10%，爆擊機率增加 10 個百分點。例如原本 5% 爆擊率變成 15%；1 秒的可加速動作需 1 ÷ 1.1 ≈ 0.91 秒。再次觸發重新計時，不累加幅度。
+- **加成與算例**：持續 12 秒，近戰與遠程攻速各提高 10%，爆擊率增加 10 個百分點。例如原本 5% 爆擊率變成 15%；1 秒的可加速動作需 1 ÷ 1.1 ≈ 0.91 秒。再次觸發重新計時，不累加幅度。
 
 [詳細資料](adamant_terminus_warrant_improved_combined.md) · [返回目錄](#talent-index)
 
@@ -683,7 +683,7 @@
 
 <img src="https://github.com/user-attachments/assets/82a4d2c5-a0aa-4c05-a8ea-e03bc0e4932b" width="72" height="72" alt="凋零烈焰天賦圖示">
 
-- **觸發與重新計時**：完成換彈後，遠距傷害提高 15%，持續 5 秒。再次換彈重設時間，不累積增傷層數。
+- **觸發與重新計時**：完成換彈後，遠程傷害提高 15%，持續 5 秒。再次換彈重設時間，不累積增傷層數。
 
 - **傷害算例**：單計此階段，基礎 100 點變成 100 × (1 + 15%) = 115 點；原有 25% 同階段加成時，125 點變成 100 × (1 + 25% + 15%) = 140 點。
 
@@ -709,7 +709,7 @@
 
 <img src="https://github.com/user-attachments/assets/fc3f3a29-7b71-45d4-aec6-c72036ba9831" width="72" height="72" alt="繩之以法天賦圖示">
 
-- **恢復方式**：擊殺菁英或專家敵人，立即恢復最大韌性的 10%；接著 4 秒每秒再恢復 2.5%。連續擊殺各自提供一份持續恢復。
+- **恢復方式**：擊殺精英或專家敵人，立即恢復最大韌性的 10%；接著 4 秒每秒再恢復 2.5%。連續擊殺各自提供一份持續恢復。
 
 - **恢復算例**：最大韌性 100、缺額足夠且沒有其他恢復加成，一次擊殺共恢復 100 × 10% + 100 × 2.5% × 4 = 20 點。兩次擊殺的持續恢復重疊時，每秒共 5 點；實際補量不超過缺額。
 
@@ -722,7 +722,7 @@
 
 <img src="https://github.com/user-attachments/assets/3098a511-fa0f-444e-a9e2-8e6591688115" width="72" height="72" alt="近在眉睫天賦圖示">
 
-- **觸發方式**：擊殺距離自己 12.5 公尺內的敵人，恢復最大韌性的 5%；近戰與遠距擊殺皆可。
+- **觸發方式**：擊殺距離自己 12.5 公尺內的敵人，恢復最大韌性的 5%；近戰與遠程擊殺皆可。
 
 - **恢復算例**：最大韌性 100、沒有其他恢復加成時，每次恢復 100 × 5% = 5 點；目前 98 點時只能補 2 點。
 
@@ -841,7 +841,7 @@
 
 <img src="https://github.com/user-attachments/assets/02fd58ae-50fc-461f-879d-70d77a2aff44" width="72" height="72" alt="苛政壓制天賦圖示">
 
-- **觸發與重新計時**：一次攻擊命中第 3 名敵人時，獲得 20% 韌性減傷，持續 5 秒；近戰與遠距皆可，再次觸發重設時間。
+- **觸發與重新計時**：一次攻擊命中第 3 名敵人時，獲得 20% 韌性減傷，持續 5 秒；近戰與遠程皆可，再次觸發重設時間。
 
 - **減傷算例**：單計這項效果，100 點韌性傷害變成 100 × 0.8 = 80 點；另有獨立 10% 韌性減傷時，為 100 × 0.8 × 0.9 = 72 點。
 
@@ -854,7 +854,7 @@
 
 <img src="https://github.com/user-attachments/assets/62b0bee6-3606-40bc-9d78-06f072535e59" width="72" height="72" alt="遠程傷害增幅天賦圖示">
 
-- **傷害算例**：沒有其他加成時，基礎 100 點遠距傷害變成 100 × (1 + 10%) = 110 點；原有同階段 25% 加成時，125 點變成 100 × (1 + 25% + 10%) = 135 點。
+- **傷害算例**：沒有其他加成時，基礎 100 點遠程傷害變成 100 × (1 + 10%) = 110 點；原有同階段 25% 加成時，125 點變成 100 × (1 + 25% + 10%) = 135 點。
 
 [詳細資料](base_ranged_damage_node_buff_medium_1.md) · [返回目錄](#talent-index)
 
@@ -891,7 +891,7 @@
 
 <img src="https://github.com/user-attachments/assets/d856ef6a-9f61-4b4a-b672-e60019dea866" width="72" height="72" alt="勢如破竹天賦圖示">
 
-- **觸發與重新計時**：擊殺菁英或專家敵人後，承受傷害降低 25%，持續 5 秒；再次擊殺重設時間，不累積倍率。
+- **觸發與重新計時**：擊殺精英或專家敵人後，承受傷害降低 25%，持續 5 秒；再次擊殺重設時間，不累積倍率。
 
 - **減傷算例**：原本承受 100 點傷害時，單計本效果為 100 × 0.75 = 75 點；另有獨立 20% 減傷則為 100 × 0.75 × 0.8 = 60 點。
 
@@ -906,7 +906,7 @@
 
 - **疊層與消耗**：使一般敵人踉蹌獲得 1 層，使歐格林或巨獸踉蹌獲得 5 層，最多 5 層。再次觸發重設 8 秒倒數；受到近戰命中後清除全部層數。
 
-- **減傷算例**：每層讓承受傷害乘以 0.97。5 層時，100 × 0.97⁵ ≈ 85.87 點，約減少 14.13%。存續期間也減少遠距傷害；遠距命中不消耗層數。
+- **減傷算例**：每層讓承受傷害乘以 0.97。5 層時，100 × 0.97⁵ ≈ 85.87 點，約減少 14.13%。存續期間也減少遠程傷害；遠程命中不消耗層數。
 
 [詳細資料](adamant_staggers_reduce_damage_taken.md) · [返回目錄](#talent-index)
 
@@ -984,7 +984,7 @@
 
 <img src="https://github.com/user-attachments/assets/59f1504d-8b25-40c7-a582-b5de1b3278cf" width="72" height="72" alt="罪孽判官天賦圖示">
 
-- **疊層與重新計時**：近戰或遠距命中弱點後獲得 1 層，每層增加 2% 弱點威力，最多 8 層。再次命中重設全部層數的 10 秒。
+- **疊層與重新計時**：近戰或遠程命中弱點後獲得 1 層，每層增加 2% 弱點威力，最多 8 層。再次命中重設全部層數的 10 秒。
 
 - **威力算例**：只計這個威力階段，原本 500、滿層 16% 時為 500 × (1 + 8 × 2%) = 580；若已有同階段 20% 威力加成，則由 600 變成 680。
 
@@ -999,7 +999,7 @@
 
 <img src="https://github.com/user-attachments/assets/88c5f583-d739-484e-a7cd-89b79a90334d" width="72" height="72" alt="恰如其分天賦圖示">
 
-- **觸發與消耗**：擊殺菁英或專家敵人後，下次換彈速度提高 20%；重複擊殺不累積倍率。效果保留到完成換彈並離開換彈動作。
+- **觸發與消耗**：擊殺精英或專家敵人後，下次換彈速度提高 20%；重複擊殺不累積倍率。效果保留到完成換彈並離開換彈動作。
 
 - **換彈算例**：只計受換彈速度影響的動作段，原本 3 秒變成 3 ÷ 1.2 = 2.5 秒；加速 20% 不等於時間減少 20%。
 
@@ -1012,7 +1012,7 @@
 
 <img src="https://github.com/user-attachments/assets/8f0bcba7-48bd-4d61-ad19-b03a65160eb5" width="72" height="72" alt="行軍之志天賦圖示">
 
-- **觸發與重新計時**：遠距攻擊命中敵人後，移動速度提高 15%，持續 3 秒；再次命中重設時間。
+- **觸發與重新計時**：遠程攻擊命中敵人後，移動速度提高 15%，持續 3 秒；再次命中重設時間。
 
 - **移速算例**：單計此倍率，原本每秒移動 5 公尺，變成 5 × 1.15 = 5.75 公尺；其他動作減速仍照常處理。
 
@@ -1025,7 +1025,7 @@
 
 <img src="https://github.com/user-attachments/assets/6d045fa3-97bc-4943-9e6e-0f703e68288d" width="72" height="72" alt="無處可逃天賦圖示">
 
-- **觸發與重新計時**：擊殺菁英或專家敵人後，傷害與移動速度提高 10%，持續 4 秒；再次擊殺重設時間。
+- **觸發與重新計時**：擊殺精英或專家敵人後，傷害與移動速度提高 10%，持續 4 秒；再次擊殺重設時間。
 
 - **效果算例**：單計本效果，100 點傷害變成 110 點；每秒移動 5 公尺變成 5 × 1.1 = 5.5 公尺。若已有同階段 25% 增傷，則為 100 × (1 + 25% + 10%) = 135 點。
 
@@ -1066,7 +1066,7 @@
 
 <img src="https://github.com/user-attachments/assets/bff83e5a-48a0-4f4c-b280-3093df526c5d" width="72" height="72" alt="重如律法天賦圖示">
 
-- **觸發與重新計時**：近戰重擊至少命中一名敵人，揮擊結束後傷害提高 15%，持續 5 秒；再次重擊命中可重新計時。加成也適用於後續遠距攻擊。
+- **觸發與重新計時**：近戰重擊至少命中一名敵人，揮擊結束後傷害提高 15%，持續 5 秒；再次重擊命中可重新計時。加成也適用於後續遠程攻擊。
 
 - **傷害算例**：只比較增益生效後的攻擊，基礎 100 點變成 100 × (1 + 15%) = 115 點；已有同階段 25% 加成時，125 點變成 140 點。
 
@@ -1081,7 +1081,7 @@
 
 - **運作方式**：對踉蹌敵人的近戰攻擊獲得 15% 撕裂，直接套用在符合條件的命中；不會留下一層持續增益。
 
-- **護甲算例**：先隔離護甲階段，假設傷害基準 100、甲殼護甲倍率 0.5，原本 50 點變成 100 × (0.5 + 0.15) = 65 點，此階段提高 30%。其他爆擊、弱點與增傷再依各自階段計算。
+- **護甲算例**：先隔離護甲階段，假設傷害基準 100、甲殼護甲倍率 0.5，原本 50 點變成 100 × (0.5 + 0.15) = 65 點，此階段提高 30%。其他暴擊、弱點與增傷再依各自階段計算。
 
 - **超出護甲缺口**：若原甲殼倍率已達 1，超出部分只按四分之一換算；本項變成 100 × (1 + 0.15 × 0.25) = 103.75 點。不同武器與敵人的實際增幅會不同。
 
@@ -1094,7 +1094,7 @@
 
 <img src="https://github.com/user-attachments/assets/c776951e-d8de-46cb-ad58-7c14af6b0997" width="72" height="72" alt="狂熱信仰天賦圖示">
 
-- **疊層與重新計時**：每次擊殺獲得 1 層，每層增加 2 個百分點爆擊機率，最多 8 層；再次擊殺重設全部層數的 10 秒，滿層也能重新計時。
+- **疊層與重新計時**：每次擊殺獲得 1 層，每層增加 2 個百分點爆擊率，最多 8 層；再次擊殺重設全部層數的 10 秒，滿層也能重新計時。
 
 - **機率算例**：原本爆擊率 5%，滿層後為 5% + 8 × 2% = 21%；不是把原本 5% 乘以 1.16。
 
@@ -1107,9 +1107,9 @@
 
 <img src="https://github.com/user-attachments/assets/e650aa60-14d1-446d-9fa3-fed8dd633716" width="72" height="72" alt="制裁重擊天賦圖示">
 
-- **運作方式**：遠距爆擊獲得 20% 撕裂，直接套用在符合條件的命中；不會留下一層持續增益。
+- **運作方式**：遠程暴擊獲得 20% 撕裂，直接套用在符合條件的命中；不會留下一層持續增益。
 
-- **護甲算例**：先隔離護甲階段，假設傷害基準 100、甲殼護甲倍率 0.5，原本 50 點變成 100 × (0.5 + 0.2) = 70 點，此階段提高 40%。其他爆擊、弱點與增傷再依各自階段計算。
+- **護甲算例**：先隔離護甲階段，假設傷害基準 100、甲殼護甲倍率 0.5，原本 50 點變成 100 × (0.5 + 0.2) = 70 點，此階段提高 40%。其他暴擊、弱點與增傷再依各自階段計算。
 
 - **超出護甲缺口**：若原甲殼倍率已達 1，超出部分只按四分之一換算；本項變成 100 × (1 + 0.2 × 0.25) = 105 點。不同武器與敵人的實際增幅會不同。
 
@@ -1141,7 +1141,7 @@
 
 - **傷害算例**：對符合類型的目標，基礎 100 點傷害變成 100 × (1 + 20%) = 120 點；已有同階段 25% 加成時，為 100 × (1 + 25% + 20%) = 145 點。
 
-- **作用範圍**：近戰與遠距皆可；敵人同時符合兩種類型也只套用一次加成。
+- **作用範圍**：近戰與遠程皆可；敵人同時符合兩種類型也只套用一次加成。
 
 [詳細資料](adamant_monster_hunter.md) · [返回目錄](#talent-index)
 
@@ -1165,7 +1165,7 @@
 
 <img src="https://github.com/user-attachments/assets/4b7cf064-ea83-4334-a484-a222e22af7a3" width="72" height="72" alt="篩選目標天賦圖示">
 
-- **觸發方式**：你或自己的電子獒犬擊殺牠正在壓制的菁英或專家敵人後，接下來 8 秒對菁英與專家敵人的傷害提高 15%。
+- **觸發方式**：你或自己的電子獒犬擊殺牠正在壓制的精英或專家敵人後，接下來 8 秒對精英與專家敵人的傷害提高 15%。
 
 - **重新計時與限制**：再次觸發重設 8 秒，不累積增傷；普通敵人的死亡不會觸發，對普通敵人也沒有這項增傷。
 
@@ -1193,7 +1193,7 @@
 
 <img src="https://github.com/user-attachments/assets/fc2bbfe4-50b8-4c9c-b775-20f1c2c33792" width="72" height="72" alt="猛犬氣場天賦圖示">
 
-- **觸發方式**：你或自己的電子獒犬擊殺牠正在壓制的敵人後，你與當時協同範圍內的隊友獲得效果；不限定菁英或專家敵人。
+- **觸發方式**：你或自己的電子獒犬擊殺牠正在壓制的敵人後，你與當時協同範圍內的隊友獲得效果；不限定精英或專家敵人。
 
 - **恢復與減傷**：持續 5 秒，承受的韌性傷害降低 20%，並每秒恢復最大韌性的 2%。再次觸發重新計時，不增加恢復速率或疊加減傷。
 
@@ -1221,9 +1221,9 @@
 
 <img src="https://github.com/user-attachments/assets/75cf7e7e-044e-432f-b7cb-b73e53164425" width="72" height="72" alt="最後通牒天賦圖示">
 
-- **觸發與重新計時**：近戰攻擊或推擊使敵人踉蹌後，遠距傷害提高 15%，持續 5 秒；再次觸發重設時間。搭配震盪攻擊，符合條件的近戰弱點命中也可觸發。
+- **觸發與重新計時**：近戰攻擊或推擊使敵人踉蹌後，遠程傷害提高 15%，持續 5 秒；再次觸發重設時間。搭配震盪攻擊，符合條件的近戰弱點命中也可觸發。
 
-- **傷害算例**：基礎 100 點遠距傷害變成 115 點；同階段原有 25% 加成時，由 125 點變成 100 × (1 + 25% + 15%) = 140 點。
+- **傷害算例**：基礎 100 點遠程傷害變成 115 點；同階段原有 25% 加成時，由 125 點變成 100 × (1 + 25% + 15%) = 140 點。
 
 [詳細資料](adamant_ranged_damage_on_melee_stagger.md) · [返回目錄](#talent-index)
 
@@ -1249,7 +1249,7 @@
 
 - **傷害算例**：攻擊受壓制的敵人，單計此效果，基礎 100 點傷害變成 100 × 1.25 = 125 點；原有同階段 20% 加成時，由 120 點變成 145 點。
 
-- **作用範圍**：近戰與遠距皆可；目標未受壓制時不生效。
+- **作用範圍**：近戰與遠程皆可；目標未受壓制時不生效。
 
 [詳細資料](adamant_damage_vs_suppressed.md) · [返回目錄](#talent-index)
 
