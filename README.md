@@ -1069,6 +1069,14 @@ Git 只保存文章、圖片來源 metadata 與附件對照；不得將這些圖
 - 手動維護最後下載日期：2026-09-02
 
 
+### [Simple Assets](https://www.nexusmods.com/warhammer40kdarktide/mods/1008)
+    Spidey Sense 的依賴MOD
+- MOD 網站最後更新日期：Last updated 29 August 2026, 3:13 am
+- MOD 版本：2.0.0
+- MOD 檔案名稱：NoBrainer 896 3.1.4 2026-08-28T19-13Z 3OsdoOUuY
+- 手動維護最後下載日期：2026-09-02
+
+
 # 移除的MOD
 
 ### [Curios Auspex](https://www.nexusmods.com/warhammer40kdarktide/mods/1226)

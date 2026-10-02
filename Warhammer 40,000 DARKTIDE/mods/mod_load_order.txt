@@ -30,6 +30,7 @@ markers_aio
 NumericUI
 ImprovedHavocTags
 better_hud_info_view
+SimpleAssets
 Spidey Sense
 custom_hud
 quick_level_mastery
