@@ -45,3 +45,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Go Get 'Em!](adamant_companion_focus_ranged.md) / `adamant_companion_focus_ranged` | Keystone |
 | [Unleashed Brutality](adamant_companion_focus_elite.md) / `adamant_companion_focus_elite` | Keystone |
 | [Writ of Judgement](adamant_terminus_warrant_improved_combined.md) / `adamant_terminus_warrant_improved_combined` | Keystone |
+| [Man and Cyber-Mastiff](adamant_toughness_regen_near_companion.md) / `adamant_toughness_regen_near_companion` | Passive talent |

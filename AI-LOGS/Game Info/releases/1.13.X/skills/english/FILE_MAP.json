@@ -100,7 +100,8 @@
         "adamant_pinning_dog_bonus_moving_towards",
         "adamant_companion_focus_ranged",
         "adamant_companion_focus_elite",
-        "adamant_terminus_warrant_improved_combined"
+        "adamant_terminus_warrant_improved_combined",
+        "adamant_toughness_regen_near_companion"
       ],
       "checks": []
     },
@@ -149,7 +150,8 @@
         "adamant_pinning_dog_bonus_moving_towards",
         "adamant_companion_focus_ranged",
         "adamant_companion_focus_elite",
-        "adamant_terminus_warrant_improved_combined"
+        "adamant_terminus_warrant_improved_combined",
+        "adamant_toughness_regen_near_companion"
       ],
       "checks": []
     },
@@ -198,7 +200,8 @@
         "adamant_pinning_dog_bonus_moving_towards",
         "adamant_companion_focus_ranged",
         "adamant_companion_focus_elite",
-        "adamant_terminus_warrant_improved_combined"
+        "adamant_terminus_warrant_improved_combined",
+        "adamant_toughness_regen_near_companion"
       ],
       "checks": []
     },
@@ -247,7 +250,8 @@
         "adamant_pinning_dog_bonus_moving_towards",
         "adamant_companion_focus_ranged",
         "adamant_companion_focus_elite",
-        "adamant_terminus_warrant_improved_combined"
+        "adamant_terminus_warrant_improved_combined",
+        "adamant_toughness_regen_near_companion"
       ],
       "checks": []
     },
@@ -1445,9 +1449,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "2439d9d85f9b2a375062654d847c62c0b8da7f9c",
       "chinese_sha256": "436e85ec7a23aa54f499e83fe53562aff4af47b38b6dbe4b5dc738bc7a86bf3f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_toughness_regen_near_companion"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_toughness_regen_near_companion.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_whistle.md",
@@ -10553,6 +10564,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_improved_combined.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_terminus_warrant_improved_combined.md"
+    },
+    {
+      "id": "adamant_toughness_regen_near_companion",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_toughness_regen_near_companion.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_toughness_regen_near_companion.md"
     }
   ],
   "pending_chinese_corrections": [

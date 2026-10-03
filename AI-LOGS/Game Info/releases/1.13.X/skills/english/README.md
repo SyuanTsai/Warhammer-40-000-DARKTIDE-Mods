@@ -298,3 +298,5 @@ Five-item checkpoint (skills 113–117): 844 seconds (14m 04s), measured between
 - [Unleashed Brutality](arbites_adamant_companion_focus_elite.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - [Writ of Judgement](arbites_adamant_terminus_warrant_improved_combined.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- [Man and Cyber-Mastiff](arbites_adamant_toughness_regen_near_companion.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
