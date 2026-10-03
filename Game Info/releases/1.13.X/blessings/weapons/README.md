@@ -21,7 +21,7 @@
 | [電弧步槍](ranged/電弧步槍/README.md)<br>- Arc Rifle | 遠程 | 庫巴爾電弧步槍 |
 | [槍托自動槍](ranged/槍托自動槍/README.md)<br>- Braced Autogun | 遠程 | 哥倫努Mk II槍托自動槍、格拉亞Mk IV槍托自動槍、阿格里皮娜Mk VIII槍托自動槍 |
 | [矛頭爆矢槍](ranged/矛頭爆矢槍/README.md)<br>- Spearhead Boltgun | 遠程 | 矛頭爆矢槍 洛克 Mk IIb、矛頭爆矢槍 洛克 Mk III |
-| [重伐木槍](ranged/重伐木槍/README.md)<br>- Heavy Stubber | 遠程 | 布蘭克斯樣式重伐木槍、寬口布蘭克斯樣式重伐木槍、災變布蘭克斯樣式重伐木槍 |
+| [重伐木槍](ranged/重伐木槍/README.md)<br>- Heavy Stubber | 遠程 | 重伐木槍 克魯克 Mk IIa、重伐木槍 戈爾貢努姆 Mk IIIa、重伐木槍 阿克利斯 Mk II |
 | [撕裂槍](ranged/撕裂槍/README.md)<br>- Ripper Gun | 遠程 | 撕裂槍 碎敵 Mk II、撕裂槍 碎敵 Mk V、撕裂槍 碎敵 Mk VI |
 | [上古神刃](melee/上古神刃/README.md)<br>- Relic Blade | 近戰 | 上古神刃 軍務部 Mk X、上古神刃 軍務部 Mk II |
 | [動力彎刀](melee/動力彎刀/README.md)<br>- Power Falchion | 近戰 | 動力彎刀 阿里丁 Mk I、動力彎刀 執法者 Mk IIb |
@@ -59,3 +59,6 @@
 | [戰鬥霰彈槍](ranged/戰鬥霰彈槍/README.md)<br>- Combat Shotgun | 遠程 | 戰鬥霰彈槍 紮羅娜 Mk VI、戰鬥霰彈槍 阿格里皮娜 Mk VII、戰鬥霰彈槍 奧克塔蘭 Mk IX |
 | [獵人霰彈槍](ranged/獵人霰彈槍/README.md)<br>- Huntsman's Shotgun | 遠程 | 獵人霰彈槍 奧克塔蘭 Mk III |
 | [法務官電擊鎚](melee/法務官電擊鎚/README.md)<br>- Arbites Shock Maul | 近戰 | 法務官電擊鎚 布蘭克斯 Mk III |
+| [步兵鐳射槍](ranged/步兵鐳射槍/README.md)<br>- Infantry Lasgun | 遠程 | 步兵鐳射槍 卡特雷爾 Mk VII、步兵鐳射槍 卡特雷爾 Mk IIb、步兵鐳射槍 卡特雷爾 Mk IX |
+| [冥潮鐳射槍](ranged/冥潮鐳射槍/README.md)<br>- Helbore Lasgun | 遠程 | 冥潮鐳射槍 盧修斯 MK IIIa、冥潮鐳射槍 盧修斯 MK V、冥潮鐳射槍 盧修斯 Mk IV |
+| [磷光爆破手槍](ranged/磷光爆破手槍/README.md)<br>- Phosphor Blast Pistol | 遠程 | 磷光爆破手槍 布蘭克斯 Mk XI |

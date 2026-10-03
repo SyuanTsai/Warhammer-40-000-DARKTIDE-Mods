@@ -125,3 +125,7 @@
 - 出血穿透本機 Commit：`2b067e224b7731e02e8cf062ceb029a9ffefcd3b`。
 
 - [閃電反射](2026-10-03-LIGHTNING-REFLEXES_ACCEPTANCE.json)：新增4變體、6型號關聯；共4變體、6關聯。
+
+- 閃電反射全部變體與型號的本機 Commit：`513f708c8c0072f24f14a4896982ed8df990c0af`。
+
+- [煉獄](2026-10-03-INFERNUS_ACCEPTANCE.json)：新增5變體、12型號關聯；共5變體、12關聯。

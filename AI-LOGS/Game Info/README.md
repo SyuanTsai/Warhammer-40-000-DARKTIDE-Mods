@@ -118,3 +118,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [出血穿透全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-PUNCTURE_ACCEPTANCE.json)
 
 - [閃電反射全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-LIGHTNING-REFLEXES_ACCEPTANCE.json)
+
+- [煉獄全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-INFERNUS_ACCEPTANCE.json)

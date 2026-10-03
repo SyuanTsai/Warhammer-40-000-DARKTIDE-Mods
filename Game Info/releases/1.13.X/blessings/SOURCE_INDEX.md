@@ -33,3 +33,4 @@
 | [撕碎](entries/撕碎/README.md) | [來源索引](entries/撕碎/SOURCE_INDEX.md) |
 | [出血穿透](entries/出血穿透/README.md) | [來源索引](entries/出血穿透/SOURCE_INDEX.md) |
 | [閃電反射](entries/閃電反射/README.md) | [來源索引](entries/閃電反射/SOURCE_INDEX.md) |
+| [煉獄](entries/煉獄/README.md) | [來源索引](entries/煉獄/SOURCE_INDEX.md) |

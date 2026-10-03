@@ -35,5 +35,6 @@
 | <img src="https://github.com/user-attachments/assets/c3b80cbc-5c0a-4281-abc5-14ab66716a72" width="32" height="32" alt="撕碎祝福圖示"> [撕碎](entries/撕碎/README.md)<br>- Lacerate<br>[完整說明](entries/撕碎/README.md) | <ul><li>符合條件的非弱點近戰命中依等級對目標施加1／2／3／4層流血。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/0fbf88fb-7c0c-4b57-ac56-9687c1e5198d" width="32" height="32" alt="出血穿透祝福圖示"> [出血穿透](entries/出血穿透/README.md)<br>- Puncture<br>[完整說明](entries/出血穿透/README.md) | <ul><li>遠程直接命中造成傷害時施加1／2／3／4層流血；不要求暴擊或穿透，子爆炸與近戰推擊不觸發，最多16層。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/a5db31b7-608a-488a-8d23-6ccfec4c2f3f" width="32" height="32" alt="閃電反射祝福圖示"> [閃電反射](entries/閃電反射/README.md)<br>- Lightning Reflexes<br>[完整說明](entries/閃電反射/README.md) | <ul><li>格擋近戰後獲得+10%／15%／20%／25%近戰威力；電弧鎚持續5秒，其他武器3秒。完美格擋另對攻擊者施加3秒電擊，生效期間不再觸發。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/55a772ae-58cf-4db6-9a47-7dbb7fd230cd" width="32" height="32" alt="煉獄祝福圖示"> [煉獄](entries/煉獄/README.md)<br>- Infernus<br>[完整說明](entries/煉獄/README.md) | <ul><li>遠程暴擊造成傷害時添加燃燒；一般武器 I–IV 每次1／2／3／4層，上限3／6／9／12層；磷光爆破手槍每次2／3／4／5層，上限4／9／12／15層。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

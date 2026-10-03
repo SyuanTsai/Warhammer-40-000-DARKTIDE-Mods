@@ -424,6 +424,7 @@
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rending_from_dot_burning`，hash `e02d8784`；英文／繁中RAW配對確認。
 - Showstopper - 嘆為觀止
 - Infernus - 煉獄
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_burninating_on_crit`，hash `fa25b219`；英文／繁中RAW配對確認。
 - Efficiency - 效率
 - Concentrated Fire - 集中火力
 - Desperado - 亡命之徒
