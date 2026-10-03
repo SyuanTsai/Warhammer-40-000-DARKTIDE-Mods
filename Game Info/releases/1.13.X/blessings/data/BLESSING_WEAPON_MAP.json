@@ -72,6 +72,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/63f0f4f1-edb0-4269-84ee-ac75d14d1c92",
       "effect": "新的暴擊判定成功時，從備彈轉入彈匣最多2／3／4／5發；不需命中，受彈匣缺額與備彈限制，延續暴擊不逐發觸發。"
+    },
+    {
+      "id": "inspiring-barrage",
+      "name_zh_tw": "振奮彈幕",
+      "name_en": "Inspiring Barrage",
+      "name_key": "loc_trait_bespoke_toughness_on_continuous_fire",
+      "description_key": "loc_trait_bespoke_toughness_on_continuous_fire_desc",
+      "name_hash": "ee616ba9",
+      "description_hash": "10c63621",
+      "page": "entries/振奮彈幕/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/6c280f68-08ec-4f4b-a377-34050fcf4a27",
+      "effect": "連射每跨過約10%總彈匣容量的射擊次數門檻，恢復最大韌性的1／2／3／4%乘目前步數，最多五倍；滿步後仍可觸發。"
     }
   ],
   "weapons": [
@@ -495,6 +508,42 @@
         "start_line": 41,
         "end_line": 41
       }
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p1_toughness_on_continuous_fire",
+      "blessing_id": "inspiring-barrage",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "page": "entries/振奮彈幕/weapon_trait_bespoke_ogryn_heavystubber_p1_toughness_on_continuous_fire.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每步觸發基礎最大韌性百分比",
+        "base_max_toughness_percent": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "max_step_multiplier": 5,
+        "shots_per_step": "max(1,floor(total_clip_capacity*0.1))",
+        "continuous_after_fifth_step": true,
+        "healing_modifiers_ignored": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p1.lua",
+        "start_line": 9,
+        "end_line": 47
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p1_buff_templates.lua",
+        "start_line": 11,
+        "end_line": 14
+      }
     }
   ],
   "bindings": [
@@ -826,6 +875,48 @@
       "mark_id": "ogryn_heavystubber_p1_m3",
       "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_ammo_from_reserve_on_crit",
       "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/ammo_refill_from_reserve_on_crit",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 881
+      }
+    },
+    {
+      "blessing_id": "inspiring-barrage",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_toughness_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/toughness_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "inspiring-barrage",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_toughness_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/toughness_on_continuous_fire",
+      "trait_category": "bespoke_ogryn_heavystubber_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 857
+      }
+    },
+    {
+      "blessing_id": "inspiring-barrage",
+      "weapon_id": "ogryn_heavystubber_p1",
+      "mark_id": "ogryn_heavystubber_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p1_toughness_on_continuous_fire",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p1/toughness_on_continuous_fire",
       "trait_category": "bespoke_ogryn_heavystubber_p1",
       "available_tiers": null,
       "source": {

@@ -6,3 +6,4 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/a11fa52e-95d6-46e4-bfd1-5fb7bb132120" width="32" height="32" alt="達姆彈祝福圖示"> [達姆彈](../entries/達姆彈/README.md)<br>- Dumdum | <ul><li>本武器連續命中累積近距離傷害，每層4.5／5／5.5／6%，最多5層；有效層期限2秒，12.5公尺內完整、到30公尺歸零。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/63f0f4f1-edb0-4269-84ee-ac75d14d1c92" width="32" height="32" alt="魔力彈藥祝福圖示"> [魔力彈藥](../entries/魔力彈藥/README.md)<br>- Charmed Reload | <ul><li>新的暴擊判定成功時，從備彈轉入彈匣最多2／3／4／5發；不需命中，受彈匣缺額與備彈限制，延續暴擊不逐發觸發。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/6c280f68-08ec-4f4b-a377-34050fcf4a27" width="32" height="32" alt="振奮彈幕祝福圖示"> [振奮彈幕](../entries/振奮彈幕/README.md)<br>- Inspiring Barrage | <ul><li>連射每跨過約10%總彈匣容量的射擊次數門檻，恢復最大韌性的1／2／3／4%乘目前步數，最多五倍；滿步後仍可觸發。</li></ul> | 遠程 |

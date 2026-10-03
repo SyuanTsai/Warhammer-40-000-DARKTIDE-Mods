@@ -11,3 +11,4 @@
 | [野蠻攻勢](entries/野蠻攻勢/README.md) | [來源索引](entries/野蠻攻勢/SOURCE_INDEX.md) |
 | [達姆彈](entries/達姆彈/README.md) | [來源索引](entries/達姆彈/SOURCE_INDEX.md) |
 | [魔力彈藥](entries/魔力彈藥/README.md) | [來源索引](entries/魔力彈藥/SOURCE_INDEX.md) |
+| [振奮彈幕](entries/振奮彈幕/README.md) | [來源索引](entries/振奮彈幕/SOURCE_INDEX.md) |

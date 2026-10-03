@@ -1,0 +1,95 @@
+{
+  "date": "2026-10-03",
+  "blessing": "inspiring-barrage",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/振奮彈幕/README.md",
+  "variants": [
+    "weapon_trait_bespoke_ogryn_heavystubber_p1_toughness_on_continuous_fire"
+  ],
+  "binding_count": 3,
+  "primary_review": "Sol直接核對固定Git物件、所有等級、核心觸發、結算與算例；Luna/max協助本項唯讀證據複核。FASTER無可用設定欄位。",
+  "validation": {
+    "gfm_parse": {
+      "files": 55,
+      "tables": 44,
+      "rows": 341,
+      "lists": 21
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 157,
+      "source_files": 53,
+      "bindings": 27,
+      "variants": 9,
+      "formula_checks": "passed"
+    },
+    "gameplay_test": "not run",
+    "available_tiers": null,
+    "game-info": {
+      "markdown_files": 755,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 32,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 3,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 55,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "formulas": {
+      "C100_T200_tier4_steps_1_to_6": [
+        8,
+        16,
+        24,
+        32,
+        40,
+        40
+      ],
+      "first_five_total": 120,
+      "C119_shots_per_step": 11,
+      "C119_fifth_step_shots": 55,
+      "requested40_current195_max200_actual": 5,
+      "general_replenish_modifier": "ignored by explicit ignore_stat_buffs=true"
+    }
+  },
+  "image": {
+    "id": "inspiring-barrage",
+    "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_127.png",
+    "icon_path": "content/ui/textures/icons/traits/weapon_trait_127",
+    "sha256": "d2af7a055b6ed802ef4112082bd938285b16fe373ec10b2432522bed65b8427e",
+    "size": 7371,
+    "content_type": "image/png",
+    "width": 128,
+    "height": 128,
+    "attachment": "https://github.com/user-attachments/assets/6c280f68-08ec-4f4b-a377-34050fcf4a27",
+    "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+    "public_download_status": 200,
+    "hash_verified": true,
+    "display": "original and public attachment inspected"
+  },
+  "limitations": [
+    "MasterItems138291 Steam Build association unverified",
+    "Backend available tiers remain null",
+    "Other same-name variants not reviewed",
+    "No in-game tests"
+  ],
+  "previous_local_commit": "c76fd80a33aa2de62fd306fe5ea773ef1fde1866",
+  "localization_review": {
+    "name_hash": "ee616ba9",
+    "description_hash": "10c63621",
+    "alternative_name_hash": "02d303b6",
+    "alternative_name": "激勵彈幕",
+    "explicit_difference": "Actual shooting counter includes zero-ammo-consumption shots; template says magazine spent",
+    "agent_review": "Luna/max final matched main source review; switching may retain shared counter before current spread clear timeout",
+    "raw_resource_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026"
+  }
+}

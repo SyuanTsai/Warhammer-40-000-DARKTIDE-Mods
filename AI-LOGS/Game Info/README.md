@@ -54,3 +54,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [達姆彈驗收](releases/1.13.X/blessings/2026-10-03-DUMDUM_ACCEPTANCE.json)
 
 - [魔力彈藥驗收](releases/1.13.X/blessings/2026-10-03-CHARMED-RELOAD_ACCEPTANCE.json)
+
+- [振奮彈幕驗收](releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE_ACCEPTANCE.json)
