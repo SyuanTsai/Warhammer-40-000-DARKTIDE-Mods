@@ -22,6 +22,7 @@
 | <img src="https://github.com/user-attachments/assets/27a74ed8-eb51-4774-ae8e-2089aa7b1686" width="32" height="32" alt="Bloodlust talent icon"> [Bloodlust](#adamant_stance_dog_bloodlust) | <ul><li>Activating Castigator's Stance gives your Cyber-Mastiff 75% more damage for the base stance duration of 10s.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/53dd2864-62b6-4e6c-9d62-e79831b33c78" width="32" height="32" alt="Inspiring Recitation talent icon"> [Inspiring Recitation](#adamant_drone_buff_talent) | <ul><li>Allies affected within the Nuncio-Aquila's area additionally gain 30% Toughness Damage Reduction, 30% Revive Speed and 10% Attack Speed.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/483804fa-b052-4baa-b3d7-5e7dbfbe44f4" width="32" height="32" alt="Fear of Justice talent icon"> [Fear of Justice](#adamant_drone_debuff_talent) | <ul><li>Enemies within the Nuncio-Aquila's area deal 25% less melee damage and have 25% lower melee attack speed.</li><li>Isolating this effect, an adjustable attack action taking 1s instead takes about 1.33s.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573" width="32" height="32" alt="Commendation from Condemnation talent icon"> [Commendation from Condemnation](#adamant_charge_toughness) | <ul><li>Each distinct Elite, Specialist or Monstrosity hit by the charge replenishes 20% Toughness and 15% Stamina.</li><li>One charge replenishes at most 100% Toughness and 75% Stamina; the same enemy does not count twice.</li></ul> | Ability |
 
 ## Blitz
 
@@ -228,3 +229,17 @@
 - The reconstructed English states that the time between affected enemies' melee attacks increases by 50%. The accepted fixed-source evidence supplies a 0.75 attack-speed multiplier, giving about 33.3% longer adjustable actions when no minimum-duration limit applies. A 50% increase in a 1s interval would give 1.5s; it is not the same result. The display mapping explicitly returns 50, independently of the stat value. This is a discrepancy in static evidence; game behavior remains unobserved.
 
 [Details](adamant_drone_debuff_talent.md) · [Back to index](#talent-index)
+
+<a id="adamant_charge_toughness"></a>
+
+### Commendation from Condemnation
+
+<img src="https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573" width="72" height="72" alt="Commendation from Condemnation talent icon">
+
+- **Trigger condition**: Break the Line hits on Elites, Specialists or Monstrosities count distinct enemies. The same target counts only once in a single charge.
+
+- **Recovery and caps**: Recovery is applied together when the charge ends. Each distinct eligible target replenishes 20% of maximum Toughness and 15% of maximum Stamina, capped at 100% of maximum Toughness and 75% of maximum Stamina. Neither recovery exceeds the resource's current deficit.
+
+- **Example**: Hitting three distinct eligible targets replenishes `3 × 20% = 60% Toughness` and `3 × 15% = 45% Stamina`. Hitting the same enemy again does not increase the recovery.
+
+[Details](adamant_charge_toughness.md) · [Back to index](#talent-index)

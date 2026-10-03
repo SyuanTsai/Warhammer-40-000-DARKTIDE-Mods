@@ -77,7 +77,8 @@
         "adamant_stance_elite_kills_stack_damage",
         "adamant_stance_dog_bloodlust",
         "adamant_drone_buff_talent",
-        "adamant_drone_debuff_talent"
+        "adamant_drone_debuff_talent",
+        "adamant_charge_toughness"
       ],
       "checks": []
     },
@@ -103,7 +104,8 @@
         "adamant_stance_elite_kills_stack_damage",
         "adamant_stance_dog_bloodlust",
         "adamant_drone_buff_talent",
-        "adamant_drone_debuff_talent"
+        "adamant_drone_debuff_talent",
+        "adamant_charge_toughness"
       ],
       "checks": []
     },
@@ -129,7 +131,8 @@
         "adamant_stance_elite_kills_stack_damage",
         "adamant_stance_dog_bloodlust",
         "adamant_drone_buff_talent",
-        "adamant_drone_debuff_talent"
+        "adamant_drone_debuff_talent",
+        "adamant_charge_toughness"
       ],
       "checks": []
     },
@@ -155,7 +158,8 @@
         "adamant_stance_elite_kills_stack_damage",
         "adamant_stance_dog_bloodlust",
         "adamant_drone_buff_talent",
-        "adamant_drone_debuff_talent"
+        "adamant_drone_debuff_talent",
+        "adamant_charge_toughness"
       ],
       "checks": []
     },
@@ -268,9 +272,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f3b671e69b6241e633619ef85baad9853c0f5122",
       "chinese_sha256": "1b9405f6f3501af1b8f6e3bb07000b224d3d2f56e54ebbb0ba5b6be968b89470",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_charge_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge_toughness.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_cleave_after_push.md",
@@ -10116,6 +10127,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_drone_debuff_talent.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_drone_debuff_talent.md"
+    },
+    {
+      "id": "adamant_charge_toughness",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge_toughness.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_charge_toughness.md"
     }
   ],
   "pending_chinese_corrections": [
