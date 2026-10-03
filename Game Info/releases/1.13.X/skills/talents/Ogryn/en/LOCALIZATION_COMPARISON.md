@@ -925,6 +925,18 @@ Full raw template and formatting: [source evidence](ogryn_melee_attacks_give_mtd
 | Stack gain, value and cap | +4% Damage Resistance from Melee Attacks on Successful Melee Attack. Stacks 5 times.; `ui / loc_talent_ogryn_melee_attacks_give_mtdr_desc / 7ced0743` | on_sweep_finish with num_hit_units > 0 adds one stack, maximum five, each with melee_damage_taken_multiplier 0.96. [Fixed source and line references](ogryn_melee_attacks_give_mtdr.md#fixed-source-evidence) | Consistent | The independently read English matches the successful-attack trigger, melee-only reduction and cap. |
 | Removal, counting and calculation | Stacks are removed upon taking Damage from a Melee Attack; no self-only qualifier, duration or formula is stated.; `ui / loc_talent_ogryn_melee_attacks_give_mtdr_desc / 7ced0743` | on_damage_taken uses on_melee_hit without attacked_unit == self; team-wide dispatch also clears stacks after ally melee damage. Multiple hits in one sweep add only one stack; no countdown. At five stacks, 100 × 0.96⁵ ≈ 81.54 (18.46% reduction), not flat 20%; ranged damage is unaffected. [Fixed source and line references](ogryn_melee_attacks_give_mtdr.md#fixed-source-evidence) | Not covered by the description | The ally-removal condition and counting/calculation details supplement the English. The existing cross-source removal question remains unobserved in game. |
 
+
+<a id="ogryn_pushing_applies_brittleness"></a>
+
+## Brutish Strength
+
+Full raw template and formatting: [source evidence](ogryn_pushing_applies_brittleness.md#original-english-template-and-reconstruction). Name hash `353eeb71`. Every row uses `ui / loc_talent_ogryn_pushing_applies_brittlenes_desc / f63bfc12`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Push application | 4 Stacks of Brittleness on Push.; `ui / loc_talent_ogryn_pushing_applies_brittlenes_desc / f63bfc12` | on_push_hit adds four rending_debuff stacks to the living target. [Fixed source and line references](ogryn_pushing_applies_brittleness.md#fixed-source-evidence) | Consistent | The independently read English matches the trigger and stack count. |
+| Debuff scope, limits and calculation | No per-stack value, cap, duration or armour formula is stated.; `ui / loc_talent_ogryn_pushing_applies_brittlenes_desc / f63bfc12` | Each stack contributes 2.5%, maximum sixteen / 40%, for 5s with refresh. The target debuff benefits allies and combines with attacker Rending. At original Carapace multiplier 0.5 and base 100, four stacks give 60 and sixteen give 90; excess above 1 follows excess-Rending rules. [Fixed source and line references](ogryn_pushing_applies_brittleness.md#fixed-source-evidence) | Not covered by the description | These accepted shared-debuff and armour details supplement the English; final damage is not increased by a uniform equivalent percentage. |
+
 ## Comparison totals
 
 The 224 listed rules comprise **94 Consistent**, **4 Explicit contradictions**, **119 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

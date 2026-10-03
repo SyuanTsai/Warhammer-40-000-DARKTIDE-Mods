@@ -77,6 +77,7 @@
 | <img src="https://github.com/user-attachments/assets/d61a8184-294b-4ade-9847-3c5241828792" width="32" height="32" alt="For the Lil'Uns talent icon"> [For the Lil'Uns](#ogryn_protect_allies) | <ul><li>Another ally's Toughness break grants +10% Power and 25% Toughness damage reduction for 10s; a downed ally separately grants Revive Speed and Stun immunity.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c5cc14b1-1227-4449-a1d9-de912e048e6e" width="32" height="32" alt="Simple Minded talent icon"> [Simple Minded](#ogryn_corruption_resistance) | <ul><li>Reduce damage-calculated Corruption taken by 40%; existing Corruption and ordinary damage are unaffected by this modifier.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/fca0827b-6dac-4c44-b92e-8aba309ff4ca" width="32" height="32" alt="Focused Fighter talent icon"> [Focused Fighter](#ogryn_melee_attacks_give_mtdr) | <ul><li>Successful melee sweeps build up to five multiplicative 4% melee-damage reduction stacks; melee damage to you or an ally clears them.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/024bec9b-772c-4313-b7b8-d119efdcf8f1" width="32" height="32" alt="Brutish Strength talent icon"> [Brutish Strength](#ogryn_pushing_applies_brittleness) | <ul><li>Push hits apply four Brittleness stacks (10%) to a living enemy; maximum sixteen (40%) for 5s with refresh, benefiting allies.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1217,3 +1218,19 @@
 - **Removal**: Stacks have no fixed countdown. Melee damage to you or an ally clears them. This reduction affects only melee damage you take, not ranged damage.
 
 [Details](ogryn_melee_attacks_give_mtdr.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_pushing_applies_brittleness"></a>
+
+### Brutish Strength
+
+<img src="https://github.com/user-attachments/assets/024bec9b-772c-4313-b7b8-d119efdcf8f1" width="72" height="72" alt="Brutish Strength talent icon">
+
+- **Trigger and stacks**: Pushing a still-living enemy applies 4 Brittleness stacks, each worth 2.5%, for 10% total. Maximum 16 stacks / 40%, lasting 5s; another application refreshes the duration.
+
+- **Effect**: The debuff stays on the enemy, so allies also benefit. Brittleness combines with the attacker's Rending to improve armour multipliers; it does not grant a fixed equivalent increase to final damage.
+
+- **Damage example**: Assuming an original Carapace Armour multiplier of 0.5 and base damage of 100, one push gives `100 × (0.5 + 4 × 2.5%) = 60`. At all 16 stacks it gives 90. The part exceeding an armour multiplier of 1 follows the excess-Rending rules.
+
+[Details](ogryn_pushing_applies_brittleness.md) · [Back to index](#talent-index)
