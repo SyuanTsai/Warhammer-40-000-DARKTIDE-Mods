@@ -12,6 +12,7 @@
 | <img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="32" height="32" alt="Overwatch talent icon"> [Overwatch](#veteran_combat_ability_extra_charge) | <ul><li>Store two Infiltrate uses; each fully missing use takes about 53.2 seconds to refill without other cooldown effects.</li><li>Both uses share recharge progress and refill sequentially; recovery continues during stealth.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="Long Range Assassin talent icon"> [Long Range Assassin](#veteran_snipers_focus_increased_stacks) | <ul><li>Raise Marksman's Focus's effective stack cap from 10 to 15.</li><li>At 15 stacks, gain 112.5% ranged finesse strength and 15% reload speed; the whole-hit increase depends on the extra component.</li></ul> | Keystone modifier |
+| <img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="32" height="32" alt="Chink in their Armour talent icon"> [Chink in their Armour](#veteran_snipers_focus_rending_bonus) | <ul><li>At 10 or more Focus stacks, gain 15% Rending; lose it below 10 stacks.</li><li>The threshold stays 10 with Long Range Assassin. Damage gain depends on armor and existing Rending.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907" width="32" height="32" alt="Exhilarating Takedown talent icon"> [Exhilarating Takedown](#veteran_replenish_toughness_on_weakspot_kill) | <ul><li>Ranged weakspot kills replenish 15% of maximum Toughness and grant stacking Toughness damage reduction.</li><li>Up to three effective stacks: 10%, 19% or 27.1% reduction; refresh the 8-second timer on each qualifying kill, then decay one stack at a time.</li></ul> | Passive talent |
 
@@ -134,6 +135,27 @@ Assume a noncritical ranged weakspot hit with base component 100 and unmodified 
 - **Reload time**: for an affected action with a hypothetical four-second baseline, no other speed factors and no binding limit, `4 / 1.15 ≈ 3.48 seconds`. This saves about **13.04% of the time**, not 15%.
 
 [Details and source evidence](veteran_snipers_focus_increased_stacks.md) · [Back to index](#talent-index)
+
+<a id="veteran_snipers_focus_rending_bonus"></a>
+
+<img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="72" height="72" alt="Chink in their Armour talent icon">
+
+### Chink in their Armour
+
+- **At 10 or more Focus stacks, gain 15% Rending.** It is removed below 10 stacks or when Focus ends.
+- With [Long Range Assassin](#veteran_snipers_focus_increased_stacks), the threshold remains **10 stacks**.
+- Rending improves applicable armor damage multipliers. Its damage benefit depends on the weapon, target armor and existing Rending.
+
+#### Armor and damage examples
+
+Compare only this talent's Rending. Assume a noncritical hit that does not hit a weakspot, 100 damage units before armor, a Carapace target with the stated original armor multiplier, no other modifiers or later multipliers, and no cap binding.
+
+- **Original armor multiplier 0.5**: `100 × 0.5 = 50` becomes `100 × (0.5 + 0.15) = 65` damage units, a `15 / 50 = 30%` increase.
+- **Original armor multiplier 0.8**: 80 becomes `100 × (0.8 + 0.15) = 95` damage units, a `15 / 80 = 18.75%` increase.
+- **Existing 10% Rending with original multiplier 0.5**: `100 × (0.5 + 0.1) = 60` becomes `100 × (0.5 + 0.1 + 0.15) = 75` damage units. This addition gives `15 / 60 = 25%` more damage.
+- **Ranged critical or weakspot hits**: include the extra damage component and Marksman's Focus's finesse bonus as well. These armor-stage examples do not represent the total gain from ten Focus stacks or a fixed gain for every build.
+
+[Details and source evidence](veteran_snipers_focus_rending_bonus.md) · [Back to index](#talent-index)
 
 ## Passive talents
 
