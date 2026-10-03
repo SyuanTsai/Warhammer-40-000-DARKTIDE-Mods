@@ -5,6 +5,7 @@
 | 祝福 | 本武器主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/7e29e9f4-bfe0-4550-8c11-71cc30d70b99" width="32" height="32" alt="粉碎祝福圖示"> [粉碎](../../../entries/粉碎/README.md)<br>- Shred<br>[完整說明](../../../entries/粉碎/README.md) | <ul><li>近戰揮擊命中後每層增加2.5／3／3.5／4個百分點爆擊率，最多5層；命中刷新3.5秒，揮空清空。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/ce4a8d9f-8ffc-4194-bfbd-ef4db317aaf5" width="32" height="32" alt="偏轉祝福圖示"> [偏轉](../../../entries/偏轉/README.md)<br>- Deflector<br>[完整說明](../../../entries/偏轉/README.md) | <ul><li>持用並格擋時，可格擋正面左右各約59.4°內的合格遠程攻擊；I–IV 格擋消耗降低22.5%／25%／27.5%／30%。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/bc5a089b-7227-4993-882a-a5fe0085e6f2" width="32" height="32" alt="驅魔者祝福圖示"> [驅魔者](../../../entries/驅魔者/README.md)<br>- Exorcist<br>[完整說明](../../../entries/驅魔者/README.md) | <ul><li>持用烈焰力場劍，首次弱點揮擊建立計數，連段中的後續弱點揮擊結束時各降低2／3／4／5個百分點反噬；每次揮擊最多一次。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/6b4dbf18-065c-4d5f-af6e-a06a6bb4adca" width="32" height="32" alt="行刑者祝福圖示"> [行刑者](../../../entries/行刑者/README.md)<br>- Executor<br>[完整說明](../../../entries/行刑者/README.md) | <ul><li>近戰弱點命中每次獲得1層威力；I–IV每層+4.5%／5%／5.5%／6%，最多5層，含滿層命中刷新2.5秒；首個近戰目標未命中弱點會清層。朦朧／戴莫斯黏附每段弱點命中也可疊層，伊利斯依一般揮擊。</li></ul> | 近戰 |
 
@@ -12,7 +13,7 @@
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 烈焰力場劍 朦朧 Mk II | [粉碎](../../../entries/粉碎/weapon_trait_bespoke_forcesword_p1_chained_hits_increases_crit_chance.md)、[驅魔者](../../../entries/驅魔者/weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge.md)、[行刑者](../../../entries/行刑者/weapon_trait_bespoke_forcesword_p1_chained_weakspot_hits_increases_power.md) | I–IV |
+| 烈焰力場劍 朦朧 Mk II | [粉碎](../../../entries/粉碎/weapon_trait_bespoke_forcesword_p1_chained_hits_increases_crit_chance.md)、[驅魔者](../../../entries/驅魔者/weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge.md)、[行刑者](../../../entries/行刑者/weapon_trait_bespoke_forcesword_p1_chained_weakspot_hits_increases_power.md)、[偏轉](../../../entries/偏轉/weapon_trait_bespoke_forcesword_p1_can_block_ranged.md) | I–IV |
 | 烈焰力場劍 戴莫斯 Mk IV | [粉碎](../../../entries/粉碎/weapon_trait_bespoke_forcesword_p1_chained_hits_increases_crit_chance.md)、[驅魔者](../../../entries/驅魔者/weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge.md)、[行刑者](../../../entries/行刑者/weapon_trait_bespoke_forcesword_p1_chained_weakspot_hits_increases_power.md) | I–IV |
 | 烈焰力場劍 伊利斯 Mk V | [粉碎](../../../entries/粉碎/weapon_trait_bespoke_forcesword_p1_chained_hits_increases_crit_chance.md)、[驅魔者](../../../entries/驅魔者/weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge.md)、[行刑者](../../../entries/行刑者/weapon_trait_bespoke_forcesword_p1_chained_weakspot_hits_increases_power.md) | I–IV |
 

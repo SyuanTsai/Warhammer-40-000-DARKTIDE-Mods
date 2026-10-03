@@ -34,7 +34,6 @@
 | Mk VIII trait append | [Mk VIII trait append](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua#L2708-L2712) |
 | Current UI name assembly | [Current UI name assembly](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/items.lua#L315-L327) |
 | Current UI reads family/pattern/mark localization references | [Current UI reads family/pattern/mark localization references](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/items.lua#L378-L426) |
-| Outside same-name trait source candidate | [Outside same-name trait source candidate](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua#L53-L80) |
 | Conditional stats override and stacking | [Conditional stats override and stacking](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L747) |
 | Slot held gate | [Slot held gate](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/helper_functions/conditional_functions.lua#L43-L60) |
 | Cost endpoint resolution | [Cost endpoint resolution](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/utilities/weapon_tweak_templates.lua#L371-L405) |
@@ -56,7 +55,7 @@
 
 - Wrapper clone `can_block_ranged`。conditional keyword gate fallback使用 `conditional_stat_buffs_func = is_item_slot_wielded`，持用時即加入can_block_ranged；`check_active_func = all(is_item_slot_wielded,is_blocking)` 只標示Buff活動狀態。Block先要求blocking state，再只在 `attack_type == ranged` 時放寬允許類型，仍檢查角度及成本項目。後續 `attack_is_blockable` 保留unblockable例外判定。
 
-- 兩型號均未設定block_angles，且採 `linesman_rangedblock`。遠程成本表只有inner；沒有outer成本，故遠程格擋需符合inner。
+- 兩個巨劍型號採 `linesman_rangedblock`；單手型號採 `forcesword_p1_m1`。三型號均未設定block_angles。遠程成本表只有inner；沒有outer成本，故遠程格擋需符合inner。
 
 - `_calculate_block_angle` 計算面向與攻擊者水平位置方向的Vector3.angle，閾值 `0.33π` 是單側夾角59.4°，左右合計118.8°；不是總扇形59.4°，也不是子彈軌跡入射角。極近距離／無攻擊者時函式回傳0。
 
@@ -66,7 +65,7 @@
 
 - 最後Block成本再由Stamina.drain乘 `stamina_cost_multiplier` 並扣除目前體力；其他可用的支付方式由Block後續處理，此祝福本身不提供那些能力。
 
-- 兩型號的defence stat映射共用thunderhammer_p1_m1_defence_stat，僅涵蓋default內外圈、push與sprint，沒有ranged路徑。遠程成本以fallback t=0.5解析為0.5。
+- 兩個巨劍型號的defence stat映射共用thunderhammer_p1_m1_defence_stat，僅涵蓋default內外圈、push與sprint；單手型號沒有stamina base-stat映射。三型號都未提供ranged路徑的插值t，遠程成本以fallback t=0.5解析為0.5。
 
 - I–IV倍率 `m = 0.775／0.75／0.725／0.7`；減免百分比 `(1 − m) × 100` 為22.5%／25%／27.5%／30%。
 
@@ -80,7 +79,7 @@
 
 - inner單側閾值 `0.33π ≈ 59.4°`，左右總扇形約118.8°。outer預設π，但遠程成本表沒有outer項目，超出inner時has_block_cost不成立。
 
-- 正式兩型號的遠程inner成本未由defence stat調整，fallback t=0.5故解析值0.5；沒有其他成本倍率／支付改動時，I–IV成本0.3875／0.375／0.3625／0.35。
+- 三個正式型號的遠程inner成本都沒有base-stat映射調整，fallback t=0.5故解析值0.5；沒有其他成本倍率／支付改動時，I–IV成本0.3875／0.375／0.3625／0.35。
 
 ## 圖示
 
@@ -99,3 +98,21 @@
 | 烈焰力場巨劍 誓約 Mk VI接入 | [烈焰力場巨劍 誓約 Mk VI接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua#L2795-L2797) |
 | 烈焰力場巨劍 誓約 Mk VIII匯入 | [烈焰力場巨劍 誓約 Mk VIII匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua#L15) |
 | 烈焰力場巨劍 誓約 Mk VIII接入 | [烈焰力場巨劍 誓約 Mk VIII接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua#L2710-L2712) |
+
+## 單手型號差異來源
+
+| 用途 | 固定原始碼 |
+|---|---|
+| 烈焰力場劍等級覆寫 | [烈焰力場劍等級覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua#L53-L95) |
+| 烈焰力場劍Buff接入 | [烈焰力場劍Buff接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua#L17) |
+| UI 烈焰力場劍 | [UI 烈焰力場劍](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ui/ui_weapon_pattern_settings.lua#L263) |
+| 烈焰力場劍 朦朧 Mk II匯入 | [烈焰力場劍 朦朧 Mk II匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua#L15) |
+| 烈焰力場劍 朦朧 Mk II接入 | [烈焰力場劍 朦朧 Mk II接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua#L1745-L1747) |
+| 單手體力成本端點 | [單手體力成本端點](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/stamina/weapon_stamina_templates.lua#L255-L282) |
+| 單手特殊模式 | [單手特殊模式](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua#L1477-L1483) |
+| 單手體力模板 | [單手體力模板](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua#L1503-L1508) |
+| 單手完整base_stats無stamina目標 | [單手完整base_stats無stamina目標](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua#L1537-L1742) |
+| 實際item.base_stats輸入 | [實際item.base_stats輸入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/weapon.lua#L68-L75) |
+| base-stat路由 | [base-stat路由](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/utilities/weapon_tweak_templates.lua#L123-L139) |
+| base-stat目標應用 | [base-stat目標應用](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/utilities/weapon_tweak_templates.lua#L456-L479) |
+| 單手格擋動作 | [單手格擋動作](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua#L1189-L1197) |

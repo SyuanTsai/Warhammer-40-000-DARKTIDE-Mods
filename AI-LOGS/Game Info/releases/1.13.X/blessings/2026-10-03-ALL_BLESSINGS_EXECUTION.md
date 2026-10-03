@@ -168,7 +168,7 @@
 
 - 破片四濺本機Commit：`cd5cd1ed6539671b220904712ac50149b7ad676f`。
 
-- [精確型號restriction盤點修正](2026-10-03-INVENTORY_MARK_RESTRICTION_CORRECTION.json)：新增17變體、17型號關聯，盤點改為167名稱／605變體／1185關聯；交集外定義88，原58缺口保留。偏轉、掃射火力新增變體需補驗收；各機制仍逐祝福完成。
+- [精確型號restriction盤點修正](2026-10-03-INVENTORY_MARK_RESTRICTION_CORRECTION.json)：新增17變體、17型號關聯，盤點改為167名稱／605變體／1185關聯；交集外定義88，原58缺口保留。偏轉、掃射新增變體需補驗收；各機制仍逐祝福完成。
 
 - 精確型號restriction盤點修正本機Commit：`55a743f4d4f3d1fb84af457dc4e646f0e8a800df`。
 
@@ -177,3 +177,7 @@
 - 創傷本機Commit：`4081b7459d0ddba6b04647472d4a166792949e28`；效率調整後第1項已Commit，5變體／11型號關聯，43來源檔案全部沿用已驗證Git物件快取。
 
 - [遊擊](2026-10-03-HIT-AND-RUN_ACCEPTANCE.json)：新增5變體、10型號關聯；共5變體、10關聯。
+
+- 遊擊本機Commit：`498ee3f6c3e86d22e64a60875eece8a4542fbf82`；效率調整後第2項已Commit，5變體／10型號關聯，36來源檔案全部命中Git物件快取。
+
+- [偏轉](2026-10-03-DEFLECTOR_ACCEPTANCE.json)：新增1變體、1型號關聯；共2變體、3關聯。
