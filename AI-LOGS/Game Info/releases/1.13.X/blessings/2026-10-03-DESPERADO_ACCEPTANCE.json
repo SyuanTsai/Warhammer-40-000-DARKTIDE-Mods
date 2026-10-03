@@ -271,6 +271,44 @@
       "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-preflight-formatter-change-full-scan.json",
       "sha256": "0aeecc40d7d5a5b2aab4f8e31e0f050e4c890efd6ed0c61f9dcef2cab33d7eb3",
       "trigger": "desperado-preflight-formatter-change"
+    },
+    "immediate_full_scan_after_commit_guard_change": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-commit-completeness-guard-full-scan.json",
+      "sha256": "276ab672c4b14457cabc29592878ed271e6ba63e808bd5c736a3ee081a9af21b",
+      "trigger": "desperado-commit-completeness-guard"
+    },
+    "content_repair_checks": {
+      "source_mapping": {
+        "source_ranges_verified": 39,
+        "source_files": 21,
+        "bindings": 327,
+        "variants": 171,
+        "formula_checks": "passed",
+        "scope": "focused",
+        "markdown_files": 11,
+        "source_object_cache": {
+          "cache_hits": 21,
+          "git_objects_read": 0
+        },
+        "global_shared_map_consistency": true
+      },
+      "gfm": {
+        "files": 15,
+        "tables": 13,
+        "rows": 176,
+        "lists": 113,
+        "scope": "focused"
+      },
+      "links": {
+        "scope": "focused",
+        "markdown_files": 15,
+        "local_references": 436,
+        "remote_references": 251,
+        "errors": [],
+        "existing_errors": 0,
+        "new_errors": []
+      },
+      "exact_global_partition": true
     }
   },
   "remaining_counts": {
@@ -430,5 +468,11 @@
     ],
     "boundary": "Only the Laspistol P1 M1 trait ID is in this remaining name-key group. The Dual Stubpistols and Needle Pistol definitions reuse the same display/description localization keys but have different trait IDs and remain outside this one-variant scope. No claim is made that the outside definitions are unused."
   },
-  "execution_batch_started_on": "2026-10-03"
+  "execution_batch_started_on": "2026-10-03",
+  "commit_repair": {
+    "metadata_only_commit": "65611cd38818c9db1ef4ca61116f79cce153f6f7",
+    "reason": "The staging allowlist omitted the authorized workflow document; PowerShell continued after the staging script failed. This corrective commit adds all already reviewed player content and shared records for Desperado only.",
+    "history_preserved": true,
+    "guard": "Dependent QA/stage/commit now uses checked subprocess calls. Round counting requires this blessing player content and acceptance in the same commit, with a clean worktree."
+  }
 }

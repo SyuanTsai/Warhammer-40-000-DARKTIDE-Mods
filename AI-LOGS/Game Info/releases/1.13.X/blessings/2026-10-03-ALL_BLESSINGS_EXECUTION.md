@@ -207,3 +207,9 @@
 - 2026-10-04 精確打擊起爆距離補充：主控新查明基礎5／3公尺還乘其他來源倍率，Luna/max只複核3檔差異；直接射擊及生成爆炸的爆擊結論不變。已加入固定SHA共通證據快取，保留既有tier、RAW、UI與5圖驗收，來源／格式／全域170變體326綁定及精確分割通過，獨立本機Commit。主控與同儕收據見同項驗收的 supplemental_reviews。
 
 - 2026-10-04 近身平射爆彈手槍適用補充：主控核對自身完整tier／wrapper及兩個實際mark，複用已驗收爆炸鏈；Luna/max只複核3檔新差異。直接射擊讀取遠程爆擊加成，配置生成爆炸固定非爆擊，基礎5／3公尺另乘倍率。原RAW／UI／圖119驗收保留，新增圖片0；全域170變體326綁定與精確分割通過，單項本機Commit後進行第4輪完整掃描。主控及同儕收據見同項 supplemental_reviews。
+
+- 第4輪三項已Commit後完整掃描通過：pulverise (`d8a0dd3b5f2e5b6220b6762dbcc653907566f80a`)、surgical (`7ea55d33423a13797ee7a7b05a91d9d6d839dd74`)、point-blank (`d081cbeb62f5113539f1708a6cb7afe548a43e45`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-004-full-scan.json`／SHA-256 `05b926fe3be2b24aed5544bb387b8b7353cd8b9099568643ee8bffd980cbec2e`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [亡命之徒](2026-10-03-DESPERADO_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
+
+- 2026-10-04 Desperado commit repair: `65611cd38818c9db1ef4ca61116f79cce153f6f7` contained only acceptance metadata after a staging allowlist failure. The corrective Desperado-only content commit preserves history and completes the reviewed player pages, indices, RAW glossary and common-cache/workflow changes. The metadata-only commit is excluded from completed totals. Commit completeness guard was added; immediate full scan passed with no new errors.

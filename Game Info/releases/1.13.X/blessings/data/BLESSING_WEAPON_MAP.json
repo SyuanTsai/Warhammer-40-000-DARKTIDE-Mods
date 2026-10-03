@@ -597,6 +597,19 @@
         "raw_zh_tw": "粉碎",
         "reason": "本體 Shred 與 Pulverise 均譯為「粉碎」；文件用英文原名區分同名祝福，RAW名稱保持原樣。"
       }
+    },
+    {
+      "id": "desperado",
+      "name_zh_tw": "亡命之徒",
+      "name_en": "Desperado",
+      "name_key": "loc_trait_bespoke_crit_chance_on_successful_dodge",
+      "description_key": "loc_trait_bespoke_crit_chance_on_successful_dodge_desc",
+      "name_hash": "54cd474d",
+      "description_hash": "3770d553",
+      "page": "entries/亡命之徒/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/f38673e8-c0ad-4bfb-801b-05501784a1a5",
+      "effect": "成功閃避後，爆擊率提高 12.5／15／17.5／20 個百分點，持續 6 秒；四級數值各自為 I／II／III／IV。"
     }
   ],
   "weapons": [
@@ -11380,6 +11393,59 @@
       "icon": "https://github.com/user-attachments/assets/aa25ecae-6e09-442c-9eed-d14e3cadc750",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_146",
       "effect": "持用擲彈兵臂鎧時，以這把臂鎧的近戰攻擊擊殺敵人後，爆擊率提高10／15／20／25個百分點，持續3秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_laspistol_p1_dodge_grants_critical_strike_chance",
+      "blessing_id": "desperado",
+      "weapon_id": "laspistol_p1",
+      "page": "entries/亡命之徒/weapon_trait_bespoke_laspistol_p1_dodge_grants_critical_strike_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "weapon_id": "laspistol_p1",
+        "actual_mark_ids": [
+          "laspistol_p1_m1"
+        ],
+        "variant_id": "weapon_trait_bespoke_laspistol_p1_dodge_grants_critical_strike_chance",
+        "tier_bonus_percentage_points": {
+          "I": 12.5,
+          "II": 15,
+          "III": 17.5,
+          "IV": 20
+        },
+        "active_duration_seconds_by_tier": {
+          "I": 6,
+          "II": 6,
+          "III": 6,
+          "IV": 6
+        },
+        "proc_event": "on_successful_dodge",
+        "requires_wielded_slot": true,
+        "restriction_key": "weapon_type_restriction",
+        "restriction_values": [
+          "laspistol_p1_m1"
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "start_line": 371,
+        "end_line": 420
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "start_line": 20,
+        "end_line": 20
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_on_successful_dodge_desc",
+      "description_hash": "3770d553",
+      "icon": "https://github.com/user-attachments/assets/f38673e8-c0ad-4bfb-801b-05501784a1a5",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_123",
+      "effect": "成功閃避後，爆擊率提高 12.5／15／17.5／20 個百分點，持續 6 秒；四級數值各自為 I／II／III／IV。"
     }
   ],
   "bindings": [
@@ -15945,6 +16011,20 @@
         "path": "scripts/settings/equipment/weapon_templates/grenadier_gauntlets/ogryn_gauntlet_p1_m1.lua",
         "import_line": 17,
         "append_line": 1297
+      }
+    },
+    {
+      "blessing_id": "desperado",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_dodge_grants_critical_strike_chance",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/crit_chance_on_successful_dodge",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 860
       }
     }
   ]

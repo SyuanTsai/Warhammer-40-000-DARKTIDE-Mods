@@ -532,6 +532,70 @@
         "Own hitscan damage_config must supply explosion_arming_distance; own consumers and actual explosion configurations still independently checked."
       ],
       "reuse_rule": "Reuse helper for same immutable SHA after checking own config/caller."
+    },
+    {
+      "id": "successful-dodge-event-emission",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/character_state_machine/character_states/utilities/dodge.lua",
+      "start": 181,
+      "end": 212,
+      "content_sha256": "c86610008515a4491c05b9429826fbd43cfe21b70ea42d567318ed5dc5957fcb",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/character_state_machine/character_states/utilities/dodge.lua#L181-L212",
+      "review": "Sol reviewed successful-dodge emitter and eight own actual attack/input/recognition source blocks; Luna research final source hashes verified.",
+      "conclusion": "Recognized enemy attack calls the helper; with a nonempty attack_type it queues on_successful_dodge payload including attack_type and dodge_type. Dodge input alone does not emit success.",
+      "applicability": [
+        "Own buff must subscribe to on_successful_dodge; own conditional/check gates and relevant recognized attack callers must still be verified."
+      ],
+      "reuse_rule": "Reuse fixed-SHA emitter only; do not infer incoming attack classes or filters from other traits."
+    },
+    {
+      "id": "trait-description-numeric-precision",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/trait_value_parser.lua",
+      "start": 189,
+      "end": 228,
+      "content_sha256": "2addd2937f476eab16add89874816c5fda19f33d8443e43301c7aea8ec4d2cac",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/trait_value_parser.lua#L189-L228",
+      "review": "Sol directly reviewed newly applicable numeric/percentage/rounding helpers for Desperado fractional tiers.",
+      "conclusion": "Number formatter uses explicit num_decimals or own automatic decimal selection, limited to0/1/2 places; runtime value precision and displayed precision can differ.",
+      "applicability": [
+        "Own complete formatter config/value_manipulation/values must be checked; automatic digit thresholds must be applied to actual numeric value."
+      ],
+      "reuse_rule": "Reuse fixed-SHA verified helper only after own descriptor/caller applicability check."
+    },
+    {
+      "id": "trait-description-percentage-format",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/trait_value_parser.lua",
+      "start": 8,
+      "end": 32,
+      "content_sha256": "17fb7543594b056a755328b069034e5235fd5c09be78238dd7f17059e5870428",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/trait_value_parser.lua#L8-L32",
+      "review": "Sol directly reviewed newly applicable numeric/percentage/rounding helpers for Desperado fractional tiers.",
+      "conclusion": "Percentage formatter applies value_manipulation or multiplies by100, then uses the shared number formatter and appends percent sign.",
+      "applicability": [
+        "Own format_type/value_manipulation and prefix/suffix must be checked; reuse numeric-precision record for number formatting."
+      ],
+      "reuse_rule": "Reuse fixed-SHA verified helper only after own descriptor/caller applicability check."
+    },
+    {
+      "id": "critical-rounding-half-away-from-zero",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/foundation/utilities/math.lua",
+      "start": 108,
+      "end": 116,
+      "content_sha256": "2473d25b330963384c42f381d686ab3231d70a81299ef0b971078f82e1f0f230",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/foundation/utilities/math.lua#L108-L116",
+      "review": "Sol directly reviewed newly applicable numeric/percentage/rounding helpers for Desperado fractional tiers.",
+      "conclusion": "round_with_precision uses floor(value*10^precision+0.5) for nonnegative inputs and symmetric ceil for negative inputs.",
+      "applicability": [
+        "Own caller precision and value must be checked; critical consumer passes precision2 for the clamped probability."
+      ],
+      "reuse_rule": "Reuse fixed-SHA verified helper only after own descriptor/caller applicability check."
     }
   ],
   "cache_status": "common blocks reviewed; no blessing completion asserted",
