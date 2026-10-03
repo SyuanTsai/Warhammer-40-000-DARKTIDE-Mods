@@ -5701,7 +5701,8 @@
         "veteran_combat_ability_stagger_nearby_enemies",
         "veteran_combat_ability_increase_and_restore_toughness_to_coherency",
         "veteran_combat_ability_revive_nearby_allies",
-        "veteran_elite_kills_reduce_cooldown"
+        "veteran_elite_kills_reduce_cooldown",
+        "veteran_combat_ability_stance"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5743,7 +5744,8 @@
         "veteran_combat_ability_stagger_nearby_enemies",
         "veteran_combat_ability_increase_and_restore_toughness_to_coherency",
         "veteran_combat_ability_revive_nearby_allies",
-        "veteran_elite_kills_reduce_cooldown"
+        "veteran_elite_kills_reduce_cooldown",
+        "veteran_combat_ability_stance"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5785,7 +5787,8 @@
         "veteran_combat_ability_stagger_nearby_enemies",
         "veteran_combat_ability_increase_and_restore_toughness_to_coherency",
         "veteran_combat_ability_revive_nearby_allies",
-        "veteran_elite_kills_reduce_cooldown"
+        "veteran_elite_kills_reduce_cooldown",
+        "veteran_combat_ability_stance"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5827,7 +5830,8 @@
         "veteran_combat_ability_stagger_nearby_enemies",
         "veteran_combat_ability_increase_and_restore_toughness_to_coherency",
         "veteran_combat_ability_revive_nearby_allies",
-        "veteran_elite_kills_reduce_cooldown"
+        "veteran_elite_kills_reduce_cooldown",
+        "veteran_combat_ability_stance"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6183,9 +6187,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4f78bad74a39b1094b0b8d92171202ff28ac7f14",
       "chinese_sha256": "c43fe8bafe5916aecbae302057c455fe7bd4fde15ca110ce639e600d2ddf4a5e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_combat_ability_stance"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_continous_hits_apply_rending.md",
@@ -8084,7 +8099,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_elite_kills_reduce_cooldown.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_elite_kills_reduce_cooldown.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_elite_kills_reduce_cooldown.md",
+      "commit": "1bb86c71cc78fba81eb6213138bcd2816e51b2b2"
+    },
+    {
+      "id": "veteran_combat_ability_stance",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_stance.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_stance.md"
     }
   ],
   "pending_chinese_corrections": [

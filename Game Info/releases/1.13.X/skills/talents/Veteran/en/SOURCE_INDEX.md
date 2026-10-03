@@ -9,6 +9,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | Talent / code identifier | Category |
 |---|---|
 | [Demolition Stockpile](veteran_replenish_grenades.md) / `veteran_replenish_grenades` | Blitz modifier |
+| [Volley Fire](veteran_combat_ability_stance.md) / `veteran_combat_ability_stance` | Combat ability |
 | [Infiltrate](veteran_invisibility_on_combat_ability.md) / `veteran_invisibility_on_combat_ability` | Combat ability |
 | [Low Profile](veteran_reduced_threat_after_combat_ability.md) / `veteran_reduced_threat_after_combat_ability` | Ability modifier |
 | [Hunter's Resolve](veteran_toughness_bonus_leaving_invisibility.md) / `veteran_toughness_bonus_leaving_invisibility` | Ability modifier |

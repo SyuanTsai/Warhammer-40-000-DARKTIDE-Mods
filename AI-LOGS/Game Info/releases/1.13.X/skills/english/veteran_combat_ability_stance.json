@@ -1,0 +1,186 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing Chinese mechanism translation and exact English text check; targeted reads only for the specific base/display numeric contradictions and display definitions.",
+  "static_reconstruction": "Enter Ranged Stance for 6s. When in Ranged Stance you instantly equip your ranged weapon, deal +25% Ranged Damage & +25% Ranged Weakspot Damage. Your Spread & Recoil are also greatly reduced.\n\nBase Cooldown: 30s.",
+  "comparison_rule_totals": {
+    "Consistent": 4,
+    "Explicit contradiction": 2,
+    "Not covered by the description": 6,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [
+    {
+      "rule": "Base ranged-damage amount",
+      "description_reconstruction": "+25% Ranged Damage",
+      "installed_base_effect": "+15% at the general ranged-damage stage",
+      "scope": "Base Volley Fire before upgrades",
+      "evidence": "veteran_talents.lua:206-247; talent_settings_veteran.lua:73-100; veteran_buff_templates.lua:296-315"
+    },
+    {
+      "rule": "Base weakspot bonus amount",
+      "description_reconstruction": "+25% Ranged Weakspot Damage",
+      "installed_base_effect": "+15% to the extra weakspot component",
+      "scope": "Base Volley Fire before upgrades",
+      "evidence": "veteran_talents.lua:206-247; talent_settings_veteran.lua:73-100; veteran_buff_templates.lua:296-315"
+    }
+  ],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete existing Chinese mechanism dossier and player description",
+    "Exact same-version English UI name and full two-paragraph description records",
+    "Existing icon audit",
+    "veteran_talents.lua:206-247 and talent_settings_veteran.lua:73-100 (selected base passive and display values)",
+    "veteran_buff_templates.lua:85-109,202-207,296-323 and veteran_abilities.lua:65-72 (specific base/display mismatch and associated stance definitions)"
+  ],
+  "reused_mechanism_evidence": "Existing Chinese dossier and accepted shared evidence for general and extra-finesse damage stages, equip/reload behavior, activation and recharge overlap, disabled exit, handling and immunity boundaries. Accepted number/percentage formatter reused. No full damage pipeline, action lifecycle or cooldown implementation analysis repeated.",
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_review",
+    "result": "no_actionable_text_or_evidence_defect",
+    "remaining_actionable_defects": 0
+  },
+  "unconfirmed": [
+    "Actual weapon damage and handling measured in game.",
+    "Exact update-frame activation, recharge and disabled-exit timing.",
+    "Incapacitation boundaries and final game UI observation."
+  ],
+  "unperformed": [
+    "In-game execution",
+    "Actual game UI observation",
+    "Repeated full damage/action/cooldown implementation analysis (outside clarified review scope)"
+  ],
+  "id": "veteran_combat_ability_stance",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Volley Fire",
+  "name_key": "loc_talent_veteran_2_combat_ability",
+  "name_hash": "2b30f2ca",
+  "name_entry_index": 2797,
+  "description_key": "loc_ability_veteran_base_ability_desc",
+  "description_hash": "a34966f2",
+  "description_entry_index": 10544,
+  "raw_template": "Enter Ranged Stance for {duration:%s}s. When in Ranged Stance you instantly equip your ranged weapon, deal {damage:%s} Ranged Damage & {weakspot_damage:%s} Ranged Weakspot Damage. Your Spread & Recoil are also greatly reduced.\n\nBase Cooldown: {cooldown:%s}s.",
+  "checks": [
+    {
+      "check": "exact UI export SHA256, actual key/hash/text pairs and complete raw template",
+      "result": "passed",
+      "pairs": 2
+    },
+    {
+      "check": "fixed-SHA citation bounds in current Veteran English scope",
+      "result": "passed",
+      "references": 996,
+      "unique_source_ranges": 227,
+      "source_files": 42
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 722,
+      "local_references": 6653,
+      "remote_references": 9923,
+      "errors": []
+    },
+    {
+      "check": "marked parse and headless Edge rendering of five English pages",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 18,
+        "scroll": false
+      },
+      "current_skill_comparison_table": {
+        "columns": 5,
+        "rows": 12,
+        "scroll": false
+      },
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 6,
+          "scroll": false
+        },
+        {
+          "columns": 3,
+          "rows": 4,
+          "scroll": false
+        }
+      ],
+      "all_player_icons_loaded": 36,
+      "document_horizontal_overflow": false
+    },
+    {
+      "check": "primary visual inspection of player, examples and template/parameter viewports",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous public existing Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 6876,
+      "sha256": "e28128a4e53543b8dcdb2dd06a7b6a48524515d80a4c0b2cabfffe8acacf1a37",
+      "historical_source_match": true
+    },
+    {
+      "check": "Chinese content preserved except language switch; English prose/alt, privacy and independent comparison totals",
+      "result": "passed"
+    },
+    {
+      "check": "Full two-paragraph English reconstruction, display/base mismatch and numeric units",
+      "result": "passed",
+      "display_damage_percent": 25,
+      "display_weakspot_percent": 25,
+      "base_damage_percent": 15,
+      "base_extra_weakspot_percent": 15,
+      "base_impact_percent": 50,
+      "duration_seconds": 6,
+      "base_cooldown_seconds": 30
+    },
+    {
+      "check": "Six isolated static damage, handling and recharge examples",
+      "result": "passed",
+      "general_stage_no_other_bonus": 115,
+      "general_stage_with_existing_25_percent": 140,
+      "relative_general_stage_gain_percent": 12,
+      "extra_weakspot_B100_F40_after": 146,
+      "extra_weakspot_B100_F40_gain_percent_rounded": 4.29,
+      "extra_weakspot_B100_F100_after": 215,
+      "extra_weakspot_B100_F100_gain_percent": 7.5,
+      "normalized_spread": 0.62,
+      "normalized_recoil": 0.76,
+      "normalized_sway": 0.4,
+      "remaining_recharge_at_stance_end_seconds": 24,
+      "combined_ability_gain_claimed": false
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
+      "result": "passed",
+      "markdown_files": 1,
+      "local_references": 20,
+      "remote_references": 0,
+      "errors": []
+    },
+    {
+      "check": "690 unique mappings, accepted records, support-page IDs, INDEX Git paths/IDs, privacy and ignored QA artifacts",
+      "result": "passed",
+      "accepted_skills": 18
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/volley-fire-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_stance.md"
+}

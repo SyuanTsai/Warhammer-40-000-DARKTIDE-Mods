@@ -159,5 +159,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/tactical-awareness-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_elite_kills_reduce_cooldown.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_elite_kills_reduce_cooldown.md",
+  "commit": "1bb86c71cc78fba81eb6213138bcd2816e51b2b2"
 }

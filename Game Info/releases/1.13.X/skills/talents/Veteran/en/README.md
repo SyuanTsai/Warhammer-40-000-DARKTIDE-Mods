@@ -9,6 +9,7 @@
 | Talent | Main effects | Category |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="Demolition Stockpile talent icon"> [Demolition Stockpile](#veteran_replenish_grenades) | <ul><li>While below grenade capacity, replenish one Shredder Frag Grenade or Smoke Grenade approximately every 60 seconds, or one Krak Grenade approximately every 90 seconds.</li><li>Throwing another grenade preserves the current countdown; reaching full capacity clears it.</li></ul> | Blitz modifier |
+| <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="Volley Fire talent icon"> [Volley Fire](#veteran_combat_ability_stance) | <ul><li>Equip your ranged weapon and enter a 6-second stance with +15% ranged damage, +15% extra weakspot damage and +50% ranged impact.</li><li>Reduced spread/recoil/sway and disruption protection; 30-second base cooldown starts on activation.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="Infiltrate talent icon"> [Infiltrate](#veteran_invisibility_on_combat_ability) | <ul><li>Replenish all Toughness; enter Stealth for up to 8 seconds with +25% movement speed.</li><li>Gain +30% damage during Stealth and for 8 seconds afterwards. Base cooldown: 40 seconds.</li><li>Attacking can end Stealth; leaving it suppresses nearby enemies.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="Low Profile talent icon"> [Low Profile](#veteran_reduced_threat_after_combat_ability) | <ul><li>Combat ability use reduces the affected enemy target-selection weight by 90%.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds after leaving it; an already-running countdown is not restarted by another application.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/0c033c93-a850-4295-853d-10698ec96e89" width="32" height="32" alt="Hunter's Resolve talent icon"> [Hunter's Resolve](#veteran_toughness_bonus_leaving_invisibility) | <ul><li>Infiltrate grants 50% Toughness damage reduction during Stealth and for 10 seconds after leaving it.</li><li>Separate overlapping instances multiply and keep their own countdowns.</li></ul> | Ability modifier |
@@ -63,6 +64,32 @@
 [Details and source evidence](veteran_replenish_grenades.md) · [Back to index](#talent-index)
 
 ## Combat abilities
+
+<a id="veteran_combat_ability_stance"></a>
+
+<img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="72" height="72" alt="Volley Fire talent icon">
+
+### Volley Fire
+
+- Instantly equip your ranged weapon and enter **Ranged Stance for 6 seconds**. The **30-second** base cooldown starts on activation and continues during the stance.
+- Gain **15% ranged damage**, **15% more extra weakspot damage** and **50% ranged impact** while the base stance is active. The weakspot modifier increases the extra component; the whole-hit gain varies with the weapon and target and must also account for the general ranged bonus.
+- Reduce **spread by 38%**, **recoil by 24%** and **sway by 60%**, with protection against suppression, stuns, slows and related interruptions while active.
+- Switching to melee does not itself end the stance. Being Knocked Down or otherwise disabled ends it.
+
+**Damage and cooldown examples**
+
+- Isolate the general ranged-damage stage with input 100 and no other bonuses: `100 × 1.15 = 115 damage units`.
+- Isolate only the extra weakspot modifier, holding the upstream base at 100 and extra component at 40, with no critical hit or other finesse bonuses: `100 + 40 = 140` becomes `100 + 40 × 1.15 = 146 damage units`, about `6 / 140 = 4.29%` more. If the extra component is 100, `200 → 215` gives `15 / 200 = 7.5%` more. These are separate static examples, not the combined ability gain; the general ranged modifier must also be recalculated.
+- With no other cooldown effects, after the six-second stance ends, about `30 − 6 = 24 seconds` remain before another use.
+
+**Game description errata**
+
+- The English damage field statically reconstructs as **+25% Ranged Damage**; the installed base ability grants **15%** at that stage.
+- Its weakspot field statically reconstructs as **+25% Ranged Weakspot Damage**; the installed base ability grants **15% to the extra weakspot component**. These discrepancies apply to base Volley Fire before upgrades.
+
+[Detailed sources and formulas](veteran_combat_ability_stance.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_combat_ability_stance) | [Back to index](#talent-index)
+
+---
 
 <a id="veteran_invisibility_on_combat_ability"></a>
 
