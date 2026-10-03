@@ -11,3 +11,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | Talent / code identifier | Category |
 |---|---|
 | [Bombs Away!](ogryn_box_explodes.md) / `ogryn_box_explodes` | Blitz |
+| [Frag Bomb](ogryn_grenade_frag.md) / `ogryn_grenade_frag` | Blitz |
