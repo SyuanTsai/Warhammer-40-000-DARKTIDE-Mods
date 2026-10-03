@@ -1045,6 +1045,18 @@ Full raw template and formatting: [source evidence](ogryn_toughness_while_bracin
 | Bracing or shooting replenishment | +12.5% Toughness Regeneration while bracing or shooting your Ranged weapon.; `ui / loc_talent_ogryn_toughness_regen_while_bracing_or_shooting_desc / c73dc498` | The server replenishes 0.125 ×dt of maximum Toughness while braced or shooting. [Fixed source and line references](ogryn_toughness_while_bracing.md#fixed-source-evidence) | Consistent | The independently read English matches the conditions and replenishment value. |
 | Calculation and state retention | No maximum-Toughness basis, modifier formula, shooting grace or switching guarantee is stated.; `ui / loc_talent_ogryn_toughness_regen_while_bracing_or_shooting_desc / c73dc498` | Maximum 200 gives 25/s or 50 in 2s before replenishment modifiers, capped by missing Toughness. This is additional replenishment, not a Coherency-regeneration multiplier. Shooting persists about 0.5s; is_wielded gates HUD activity only, leaving weapon-switch cleanup untested. [Fixed source and line references](ogryn_toughness_while_bracing.md#fixed-source-evidence) | Not covered by the description | These accepted calculation and state details supplement the English; the switching question remains open. |
 
+
+<a id="ogryn_ranged_damage_immunity"></a>
+
+## Can't Hit Me...Again
+
+Full raw template and formatting: [source evidence](ogryn_ranged_damage_immunity.md#original-english-template-and-reconstruction). Name hash `27d5a227`. Every row uses `ui / loc_talent_ogryn_ranged_damage_immunity_desc / 5b06263e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Ranged-hit reduction and values | +20% Damage Resistance vs Ranged for 2.5s after getting hit by a Ranged Attack. 4s Cooldown.; `ui / loc_talent_ogryn_ranged_damage_immunity_desc / 5b06263e` | Self-directed ranged on_damage_taken activates ranged_damage_taken_multiplier 0.8 for 2.5s, with cooldown 4s. [Fixed source and line references](ogryn_ranged_damage_immunity.md#fixed-source-evidence) | Consistent | The independently read English matches the trigger, scope and values. |
+| Hit resolution and cooldown timing | No Toughness-only exclusion, first-hit recalculation, active refresh or cooldown starting point is stated.; `ui / loc_talent_ogryn_ranged_damage_immunity_desc / 5b06263e` | Toughness-only damage qualifies; the triggering hit is already resolved. Active hits do not refresh. Cooldown starts after expiry: trigger 0s →end 2.5s →eligible 6.5s. Ranged damage 100 becomes 80 while active; melee is unaffected. [Fixed source and line references](ogryn_ranged_damage_immunity.md#fixed-source-evidence) | Not covered by the description | These accepted event and timing details supplement the English. |
+
 ## Comparison totals
 
 The 244 listed rules comprise **104 Consistent**, **4 Explicit contradictions**, **129 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

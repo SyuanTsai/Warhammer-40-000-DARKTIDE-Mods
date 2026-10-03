@@ -87,6 +87,7 @@
 | <img src="https://github.com/user-attachments/assets/d21c7405-647a-4da2-a396-16b9c5cd8819" width="32" height="32" alt="Concentrate talent icon"> [Concentrate](#ogryn_drain_stamina_for_handling) | <ul><li>While bracing with Stamina, reduce Sway by 60%, Spread by 20% and Recoil by 15%, draining 0.5 Stamina per second except while reloading.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6fbf8a63-5e26-482f-9964-01eb0598b142" width="32" height="32" alt="Strongman talent icon"> [Strongman](#ogryn_damage_reduction_after_elite_kill) | <ul><li>An Elite or Specialist kill grants 10% damage reduction for 5s; further qualifying kills refresh without stacking.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ce3b22d4-870e-4496-96fc-33601f9d9a62" width="32" height="32" alt="Steady Grip talent icon"> [Steady Grip](#ogryn_toughness_while_bracing) | <ul><li>While bracing or shooting, replenish 12.5% of maximum Toughness per second, with approximately 0.5s shooting-state retention.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/b7e2a92b-0a60-459a-87c9-6276b204f64e" width="32" height="32" alt="Can't Hit Me...Again talent icon"> [Can't Hit Me...Again](#ogryn_ranged_damage_immunity) | <ul><li>Taking ranged damage grants 20% ranged reduction for 2.5s; a 4s cooldown follows, without active-period refresh.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1389,3 +1390,19 @@
 - **Effect type**: This adds continuous replenishment; it does not merely increase ordinary Coherency regeneration by 12.5%.
 
 [Details](ogryn_toughness_while_bracing.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_ranged_damage_immunity"></a>
+
+### Can't Hit Me...Again
+
+<img src="https://github.com/user-attachments/assets/b7e2a92b-0a60-459a-87c9-6276b204f64e" width="72" height="72" alt="Can't Hit Me...Again talent icon">
+
+- **Trigger**: Taking ranged damage yourself grants 20% ranged damage reduction for 2.5s. Damage affecting only Toughness can trigger it. The triggering first hit has already been resolved and does not receive the reduction retroactively.
+
+- **Duration and cooldown**: Further hits during the effect do not restart the timer. A 4s cooldown begins when the effect ends. A trigger at 0s ends at 2.5s and can trigger again at 6.5s.
+
+- **Damage-reduction example**: While active, ranged damage of 100 at this stage becomes 80. Melee damage receives no reduction from this effect.
+
+[Details](ogryn_ranged_damage_immunity.md) · [Back to index](#talent-index)
