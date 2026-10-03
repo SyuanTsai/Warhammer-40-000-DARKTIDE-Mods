@@ -25,6 +25,7 @@
 | <img src="https://github.com/user-attachments/assets/8a145b7f-771a-42b6-a809-56650cd24f7e" width="32" height="32" alt="Warp Rupture talent icon"> [Warp Rupture](#psyker_discharge_damage_debuff) | <ul><li>Enemies hit by Venting Shriek deal 10% less damage and take 10% more damage for 8 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/65f7ef9b-5b0d-458e-bc7d-5aea8e948e14" width="32" height="32" alt="Creeping Flames talent icon"> [Creeping Flames](#psyker_warpfire_on_shout) | <ul><li>Venting Shriek applies 1–6 Soulblaze stacks based on Peril at activation; sleeping Daemonhosts are excluded.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/41b92eae-77a3-481e-af12-783845ce49c4" width="32" height="32" alt="Precognition talent icon"> [Precognition](#psyker_overcharge_weakspot_kill_bonuses) | <ul><li>During Scrier's Gaze, gain 1% Finesse Damage per second up to 30%, lingering 10 seconds. Weakspot Kills advance damage and Finesse Damage progress by one stack.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/f9987bfc-f9d7-48d8-9431-8c361223c50e" width="32" height="32" alt="Warp Speed talent icon"> [Warp Speed](#psyker_overcharge_increased_movement_speed) | <ul><li>Gain 20% Movement Speed while Scrier's Gaze is active; the bonus ends with Gaze.</li></ul> | Ability |
 
 ---
 
@@ -298,3 +299,17 @@
 - **Damage example**: Finesse Damage affects the extra Weakspot or Critical damage. Isolating a 30% Finesse bonus, assume base damage 100 and extra damage 50. The original 150 becomes `100 + 50 × 1.30 = 165`, a 10% increase for the whole hit; Gaze's other bonuses are calculated separately.
 
 [Details](psyker_overcharge_weakspot_kill_bonuses.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_overcharge_increased_movement_speed"></a>
+
+### Warp Speed
+
+<img src="https://github.com/user-attachments/assets/f9987bfc-f9d7-48d8-9431-8c361223c50e" width="72" height="72" alt="Warp Speed talent icon">
+
+- **Ability modifier**: While Scrier's Gaze is active, gain 20% Movement Speed. This bonus ends when Gaze ends.
+
+- **Speed example**: Isolating this effect, an original speed of 5 metres per second becomes `5 × (1 + 20%) = 6` metres per second.
+
+[Details](psyker_overcharge_increased_movement_speed.md) · [Back to index](#talent-index)

@@ -226,6 +226,18 @@ Full raw template and formatting: [source evidence](psyker_overcharge_weakspot_k
 | Credited time and Finesse bonus | Weakspot Kills count as 1s spent in Scrier's Gaze; +1% Finesse Damage per second, +30% maximum, lingering 10s; `ui / loc_ability_psyker_overcharge_weakspot_description / 492219ab` | Each eligible Weakspot Kill adds one bonus_stacks; total stacks advance damage and conditional Finesse lerps. Finesse field is 0.01 per stack, maximum 30, with a 10-second exit buff. [Fixed source and line references](psyker_overcharge_weakspot_kill_bonuses.md#fixed-source-evidence) | Consistent | Credited progress and the stated Finesse values/duration agree; counting time already spent does not promise longer active duration. |
 | Immediate progress, stop condition and damage calculation | No lerp formula, changed stop condition or whole-hit multiplier stated; `ui / loc_ability_psyker_overcharge_weakspot_description / 492219ab` | min(max_stacks, stacks+bonus_stacks)/max_stacks immediately advances both bonuses; 100% Peril still ends Gaze. At 8 stacks a Kill gives 9; isolated +30% Finesse makes 100+50×1.30=165 rather than multiplying the whole 150 by 1.30. [Fixed source and line references](psyker_overcharge_weakspot_kill_bonuses.md#fixed-source-evidence) | Not covered by the description | These progress and damage-calculation details supplement the English. |
 
+
+<a id="psyker_overcharge_increased_movement_speed"></a>
+
+## Warp Speed
+
+Full raw template and formatting: [source evidence](psyker_overcharge_increased_movement_speed.md#original-english-template-and-reconstruction). Name hash `ede1e14c`. Every row uses `ui / loc_ability_psyker_overcharge_movement_speed_description / 5f1da172`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Movement Speed value and active condition | Scrier's Gaze increases Movement Speed by +20% while active; `ui / loc_ability_psyker_overcharge_movement_speed_description / 5f1da172` | conditional_stat_buffs.movement_speed=0.2 applies only with the psyker_overcharge keyword. [Fixed source and line references](psyker_overcharge_increased_movement_speed.md#fixed-source-evidence) | Consistent | The stat, value and active-state condition agree. |
+| Calculation and separate lingering damage | No isolated speed example, other sources/caps or lingering Movement Speed stated; `ui / loc_ability_psyker_overcharge_movement_speed_description / 5f1da172` | At an original 5 m/s with no other bonuses, the example becomes 6 m/s. Other speed sources/caps may matter; the separate damage buff lingers 10 seconds, while this speed bonus ends with Gaze. [Fixed source and line references](psyker_overcharge_increased_movement_speed.md#fixed-source-evidence) | Not covered by the description | These calculation and effect-separation details supplement the English. |
+
 ## Comparison totals
 
 The 33 listed rules comprise **16 Consistent**, **0 Explicit contradictions**, **15 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.
