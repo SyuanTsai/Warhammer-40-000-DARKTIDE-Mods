@@ -64,6 +64,7 @@
 | <img src="https://github.com/user-attachments/assets/549d3657-c19a-49a6-b8ad-2c1e77080dfa" width="32" height="32" alt="Razor-Jaw Augment talent icon"> [Razor-Jaw Augment](#adamant_dog_pounces_bleed_nearby) | <ul><li>Your Cyber-Mastiff's surrounding pounce push and pinning attacks against Ogryns or Monsters can apply 6 stacks of Bleed.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d856ef6a-9f61-4b4a-b672-e60019dea866" width="32" height="32" alt="Imposing Force talent icon"> [Imposing Force](#adamant_damage_reduction_after_elite_kill) | <ul><li>An Elite or Specialist kill grants 25% Damage Resistance for 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/fd423ddb-0080-4603-8fd7-90257b583c3d" width="32" height="32" alt="Hold the Line talent icon"> [Hold the Line](#adamant_staggers_reduce_damage_taken) | <ul><li>Stagger enemies to build up to 5 damage-reduction stacks lasting 8s; a received melee hit clears them.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/d3fa1c73-0a49-42ab-920c-11b7238af849" width="32" height="32" alt="Cleave Boost talent icon"> [Cleave Boost](#base_cleave_node_buff_medium_1) | <ul><li>Increase damage and stagger cleave capacity by 25%.</li></ul> | Stat node |
 
 ## Blitz
 
@@ -798,3 +799,15 @@
 - **Damage-reduction example**: Each stack multiplies damage taken by 0.97. At 5 stacks, 100 × 0.97⁵ ≈ 85.87 points, approximately 14.13% less damage. While active, the effect also reduces ranged damage; a ranged hit does not consume the stacks.
 
 [Details](adamant_staggers_reduce_damage_taken.md) · [Back to index](#talent-index)
+
+<a id="base_cleave_node_buff_medium_1"></a>
+
+### Cleave Boost
+
+<img src="https://github.com/user-attachments/assets/d3fa1c73-0a49-42ab-920c-11b7238af849" width="72" height="72" alt="Cleave Boost talent icon">
+
+- **Cleave example**: Isolating cleave capacity, an attack that could pass through 10 units of enemy mass becomes 10 × (1 + 25%) = 12.5 units.
+
+- **Practical effect**: It becomes easier to hit several enemies with one sweep. The number hit still depends on enemy mass, armour and the weapon's own penetration limits; this is not a 25% damage increase.
+
+[Details](base_cleave_node_buff_medium_1.md) · [Back to index](#talent-index)

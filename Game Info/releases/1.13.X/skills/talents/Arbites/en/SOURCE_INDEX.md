@@ -64,3 +64,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Razor-Jaw Augment](adamant_dog_pounces_bleed_nearby.md) / `adamant_dog_pounces_bleed_nearby` | Passive talent |
 | [Imposing Force](adamant_damage_reduction_after_elite_kill.md) / `adamant_damage_reduction_after_elite_kill` | Passive talent |
 | [Hold the Line](adamant_staggers_reduce_damage_taken.md) / `adamant_staggers_reduce_damage_taken` | Passive talent |
+| [Cleave Boost](base_cleave_node_buff_medium_1.md) / `base_cleave_node_buff_medium_1` | Stat node |
