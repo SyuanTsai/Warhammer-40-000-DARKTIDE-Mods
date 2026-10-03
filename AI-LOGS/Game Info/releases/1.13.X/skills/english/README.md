@@ -324,3 +324,5 @@ Five-item checkpoint (skills 113–117): 844 seconds (14m 04s), measured between
 - [Arbites class completion](arbites_class.json): 91 mechanism documents and 97 mapped English pages complete. Previous skill acceptance reused; six shared pages checked once, with 86 public images passed. Existing runtime caveats remain.
 
 - [Ogryn Blitz 175](ogryn_blitz_175.json): Bombs Away! translated and locally committed; changed text, independent English comparison, Markdown and links passed. The unusual raw placeholder remains unconfirmed. Skills 171–174 are recorded in the Arbites class completion.
+
+- [Ogryn skills 176–180](ogryn_skills_176_180.json): Frag Bomb, Big Friendly Rock, That One Didn’t Count, Bigger Box of Hurt and Bonebreaker’s Aura. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.

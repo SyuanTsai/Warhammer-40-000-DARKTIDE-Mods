@@ -98,4 +98,4 @@ Full raw template and formatting: [source evidence](ogryn_melee_damage_coherency
 
 ## Comparison totals
 
-The 6 listed rules comprise **2 Consistent**, **0 Explicit contradiction**, **3 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**. These totals apply only to the listed rules.
+The 31 listed rules comprise **13 Consistent**, **1 Explicit contradiction**, **14 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**. The explicit English contradiction concerns the no-enemy-hit scope in That One Didn’t Count. These totals apply only to the listed rules.

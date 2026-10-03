@@ -2172,7 +2172,12 @@
       "chinese_sha256": "7149f8d42aa4aa461887c9d887718cf1ca7a3d2e92797ad21a3156293bc1f4f8",
       "status": "partial",
       "accepted_skill_ids": [
-        "ogryn_box_explodes"
+        "ogryn_box_explodes",
+        "ogryn_grenade_frag",
+        "ogryn_grenade_friend_rock",
+        "ogryn_replenish_rock_on_miss",
+        "ogryn_big_box_of_hurt_more_bombs",
+        "ogryn_melee_damage_coherency_improved"
       ],
       "checks": []
     },
@@ -2185,7 +2190,12 @@
       "chinese_sha256": "2d535f903870ea52c13fafa2a603c9c2df18bf38d5472ac75461e115b4fc2777",
       "status": "partial",
       "accepted_skill_ids": [
-        "ogryn_box_explodes"
+        "ogryn_box_explodes",
+        "ogryn_grenade_frag",
+        "ogryn_grenade_friend_rock",
+        "ogryn_replenish_rock_on_miss",
+        "ogryn_big_box_of_hurt_more_bombs",
+        "ogryn_melee_damage_coherency_improved"
       ],
       "checks": []
     },
@@ -2198,7 +2208,12 @@
       "chinese_sha256": "9f12b0409949bee000a7cb985bda7e0a484fd10c2333448d318920c8a34e3bb6",
       "status": "partial",
       "accepted_skill_ids": [
-        "ogryn_box_explodes"
+        "ogryn_box_explodes",
+        "ogryn_grenade_frag",
+        "ogryn_grenade_friend_rock",
+        "ogryn_replenish_rock_on_miss",
+        "ogryn_big_box_of_hurt_more_bombs",
+        "ogryn_melee_damage_coherency_improved"
       ],
       "checks": []
     },
@@ -2211,7 +2226,12 @@
       "chinese_sha256": "a0663320bc623b1bdb6131b9678713c54f9d491fc3faf9eb3e45d1ada4a640dd",
       "status": "partial",
       "accepted_skill_ids": [
-        "ogryn_box_explodes"
+        "ogryn_box_explodes",
+        "ogryn_grenade_frag",
+        "ogryn_grenade_friend_rock",
+        "ogryn_replenish_rock_on_miss",
+        "ogryn_big_box_of_hurt_more_bombs",
+        "ogryn_melee_damage_coherency_improved"
       ],
       "checks": []
     },
@@ -2277,9 +2297,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c8b4861f9a1e72c0cd4365a4dda31f185393d197",
       "chinese_sha256": "aa03a635947166553415fa6319ffbb11a30d84a2c09e74398a92b90af7646fc0",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_big_box_of_hurt_more_bombs"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_176_180.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_blo_ally_ranged_buffs.md",
@@ -2614,9 +2641,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "df23aac442ff209166de394be6946ee68395f0c5",
       "chinese_sha256": "f6d3e34336d32ef1d26717e814a18a77be27f4a854939f8beac81ef4f431a126",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_grenade_frag"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_176_180.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_grenade_friend_rock.md",
@@ -2625,9 +2659,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "d9dd990c883b3d2cfa9e3e364c2a3be0a5d036ef",
       "chinese_sha256": "bac25f8330eee43bcf751ecc8cc56d46f062352be6c2ef15e4ae74a1de4ee35d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_grenade_friend_rock"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_176_180.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_heavy_bleeds.md",
@@ -2845,9 +2886,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b03783ef47e0cc0585e27e09fca63cd6764f9e43",
       "chinese_sha256": "21a8736222ee39548474af924bd2b2c8934e0ea1868906df27aa33e8c04a0744",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_melee_damage_coherency_improved"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_176_180.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_melee_improves_ranged.md",
@@ -3043,9 +3091,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "177e4ca12d0c2e9e7f851761774cb57eb5738be7",
       "chinese_sha256": "e696e84490933da411ad5e0741eb771254f57af4111caf32980a93562046b536",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_replenish_rock_on_miss"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_176_180.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_revenge_damage.md",
@@ -11638,6 +11693,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_blitz_175.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_box_explodes.md"
+    },
+    {
+      "id": "ogryn_grenade_frag",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_176_180.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_grenade_frag.md"
+    },
+    {
+      "id": "ogryn_grenade_friend_rock",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_176_180.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_grenade_friend_rock.md"
+    },
+    {
+      "id": "ogryn_replenish_rock_on_miss",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_176_180.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_replenish_rock_on_miss.md"
+    },
+    {
+      "id": "ogryn_big_box_of_hurt_more_bombs",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_176_180.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_big_box_of_hurt_more_bombs.md"
+    },
+    {
+      "id": "ogryn_melee_damage_coherency_improved",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_176_180.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_melee_damage_coherency_improved.md"
     }
   ],
   "pending_chinese_corrections": [
