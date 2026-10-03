@@ -53,3 +53,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Furious](ogryn_more_hits_more_damage.md) / `ogryn_more_hits_more_damage` | Talent |
 | [Heavyweight](ogryn_ogryn_killer.md) / `ogryn_ogryn_killer` | Talent |
 | [Slam](ogryn_melee_stagger.md) / `ogryn_melee_stagger` | Talent |
+| [Soften Them Up](ogryn_targets_recieve_damage_taken_increase_debuff.md) / `ogryn_targets_recieve_damage_taken_increase_debuff` | Talent |

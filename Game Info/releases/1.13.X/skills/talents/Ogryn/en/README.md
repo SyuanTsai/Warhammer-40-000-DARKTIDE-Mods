@@ -51,6 +51,7 @@
 | <img src="https://github.com/user-attachments/assets/aeba8245-43aa-438c-9357-a7ac4556a98d" width="32" height="32" alt="Furious talent icon"> [Furious](#ogryn_more_hits_more_damage) | <ul><li>Each enemy hit by the previous melee attack adds 3% damage to the next melee attack, up to +30%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c006f0e1-3f32-4dcc-891a-8c44b4ebe6df" width="32" height="32" alt="Heavyweight talent icon"> [Heavyweight](#ogryn_ogryn_killer) | <ul><li>Deal +30% damage to Bulwarks, Crushers, Reapers and Plague Ogryns.</li><li>Take 30% less damage from those enemies.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ee98056a-b754-4821-9542-717ef68c944a" width="32" height="32" alt="Slam talent icon"> [Slam](#ogryn_melee_stagger) | <ul><li>+25% melee Impact; staggering an enemy with a melee hit or push restores 5% Stamina.</li><li>Stamina recovery has a 0.75s cooldown.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/53e0b90e-52dc-4a4a-953c-b235753aa97a" width="32" height="32" alt="Soften Them Up talent icon"> [Soften Them Up](#ogryn_targets_recieve_damage_taken_increase_debuff) | <ul><li>After your melee attack damages an enemy that survives, it takes +15% damage for 5s.</li></ul> | Talent |
 
 ## Blitz
 
@@ -771,3 +772,19 @@
 - **Example**: With maximum Stamina 8, each recovery gives `8 × 5% = 0.4`; if only 0.2 is missing, only 0.2 is restored. Considering only the Impact stage, base 100 becomes `100 × 1.25 = 125`. Whether the target staggers still depends on the enemy and attack.
 
 [Details](ogryn_melee_stagger.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_targets_recieve_damage_taken_increase_debuff"></a>
+
+### Soften Them Up
+
+<img src="https://github.com/user-attachments/assets/53e0b90e-52dc-4a4a-953c-b235753aa97a" width="72" height="72" alt="Soften Them Up talent icon">
+
+- **Trigger**: Damage an enemy with a melee attack while it survives the hit. The enemy takes 15% more damage for 5s, benefiting teammates' subsequent attacks too.
+
+- **Refresh**: Another qualifying melee-damage hit restarts the 5s duration. The effect has at most 1 stack; repeated hits do not raise it to 30%.
+
+- **Damage example**: After the debuff is applied, damage of 100 becomes `100 × (1 + 15%) = 115`. With another +20% at the same damage-taken stage, it becomes 135. The first triggering hit is not recalculated retroactively.
+
+[Details](ogryn_targets_recieve_damage_taken_increase_debuff.md) · [Back to index](#talent-index)
