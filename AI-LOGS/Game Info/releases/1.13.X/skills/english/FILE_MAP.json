@@ -5746,7 +5746,8 @@
         "veteran_replenish_toughness_and_boost_allies",
         "veteran_ally_kills_increase_damage",
         "veteran_elite_kills_replenish_toughness",
-        "veteran_increased_damage_based_on_range"
+        "veteran_increased_damage_based_on_range",
+        "veteran_ads_drain_stamina"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5833,7 +5834,8 @@
         "veteran_replenish_toughness_and_boost_allies",
         "veteran_ally_kills_increase_damage",
         "veteran_elite_kills_replenish_toughness",
-        "veteran_increased_damage_based_on_range"
+        "veteran_increased_damage_based_on_range",
+        "veteran_ads_drain_stamina"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5920,7 +5922,8 @@
         "veteran_replenish_toughness_and_boost_allies",
         "veteran_ally_kills_increase_damage",
         "veteran_elite_kills_replenish_toughness",
-        "veteran_increased_damage_based_on_range"
+        "veteran_increased_damage_based_on_range",
+        "veteran_ads_drain_stamina"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6007,7 +6010,8 @@
         "veteran_replenish_toughness_and_boost_allies",
         "veteran_ally_kills_increase_damage",
         "veteran_elite_kills_replenish_toughness",
-        "veteran_increased_damage_based_on_range"
+        "veteran_increased_damage_based_on_range",
+        "veteran_ads_drain_stamina"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6075,9 +6079,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6cd6e5fbc2ca560872175c1a6ab157a7d1d12697",
       "chinese_sha256": "88b430b6372626d144029585edb25c733969e42c9befe3522f8f6662f583f81a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_ads_drain_stamina"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_all_kills_replenish_toughness.md",
@@ -9292,7 +9311,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_damage_based_on_range.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_damage_based_on_range.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_damage_based_on_range.md",
+      "commit": "164560ca67c3c498c79a9761a8fc0dd6cb0459c0"
+    },
+    {
+      "id": "veteran_ads_drain_stamina",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_ads_drain_stamina.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ads_drain_stamina.md"
     }
   ],
   "pending_chinese_corrections": [

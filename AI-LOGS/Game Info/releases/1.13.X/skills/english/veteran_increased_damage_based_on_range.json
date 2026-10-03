@@ -117,5 +117,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/longshot-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_damage_based_on_range.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_damage_based_on_range.md",
+  "commit": "164560ca67c3c498c79a9761a8fc0dd6cb0459c0"
 }
