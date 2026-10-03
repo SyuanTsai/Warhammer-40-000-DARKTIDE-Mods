@@ -347,6 +347,7 @@
 - Overload - 超載
   - 本體1.13.1名稱鍵 `loc_explosion_on_overheat_lockout`，hash `1809b21c`；英文／繁中RAW配對確認。
 - Energy Leakage - 能量洩漏
+  - 本體1.13.1名稱鍵 `loc_power_bonus_scaled_on_heat`，hash `b56e85e7`；英文／繁中RAW配對確認。
 - Heatsink - 散熱器
 - Syphon - 虹吸
 - Energy Transfer - 能量轉換

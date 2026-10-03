@@ -82,3 +82,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [顱骨落地全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-CRANIAL-GROUNDING_ACCEPTANCE.json)
 
 - [超載全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-OVERLOAD_ACCEPTANCE.json)
+
+- [能量洩漏全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-ENERGY-LEAKAGE_ACCEPTANCE.json)

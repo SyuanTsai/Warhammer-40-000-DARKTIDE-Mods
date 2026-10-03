@@ -51,3 +51,7 @@
 - 顱骨落地本機Commit：`e8ed0842e407a531c963bc3c142da39eed784c4c`；文件、Issue圖片與88條累積型號關聯驗收完成。
 
 - [超載](2026-10-03-OVERLOAD_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
+
+- 超載本機Commit：`f565eb1a0b236d5db70580de37951f036ddb3e0a`；文件、Issue圖片及92條累積型號關聯驗收完成。
+
+- [能量洩漏](2026-10-03-ENERGY-LEAKAGE_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。

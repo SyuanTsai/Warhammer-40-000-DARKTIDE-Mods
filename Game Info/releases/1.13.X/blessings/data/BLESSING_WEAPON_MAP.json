@@ -124,6 +124,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/c05b0b5b-2f43-48d2-a309-370bcdb98a57",
       "effect": "熱量達100%進入鎖定時在身周爆炸，立即減少10／15／20／25個百分點熱量；爆炸半徑3／3.5／4／4.5公尺，仍需散熱至0%解除鎖定。"
+    },
+    {
+      "id": "energy-leakage",
+      "name_zh_tw": "能量洩漏",
+      "name_en": "Energy Leakage",
+      "name_key": "loc_power_bonus_scaled_on_heat",
+      "description_key": "loc_power_bonus_scaled_on_heat_desc",
+      "name_hash": "b56e85e7",
+      "description_hash": "f3f274cf",
+      "page": "entries/能量洩漏/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/8709846a-8fcd-47ed-8a5b-6d57b666b45e",
+      "effect": "依持用武器目前熱量分成0–5段威力加成；I–IV每段1.5%／2%／3%／4%，最高7.5%／10%／15%／20%；切出停止生效。"
     }
   ],
   "weapons": [
@@ -2590,6 +2603,94 @@
       "icon": "https://github.com/user-attachments/assets/c05b0b5b-2f43-48d2-a309-370bcdb98a57",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_242",
       "effect": "熱量達100%進入鎖定時在身周爆炸，立即減少10／15／20／25個百分點熱量；爆炸半徑3／3.5／4／4.5公尺，仍需散熱至0%解除鎖定。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_2h_p1_power_bonus_scaled_on_heat",
+      "blessing_id": "energy-leakage",
+      "weapon_id": "powersword_2h_p1",
+      "page": "entries/能量洩漏/weapon_trait_bespoke_powersword_2h_p1_power_bonus_scaled_on_heat.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_step": [
+          0.015,
+          0.02,
+          0.03,
+          0.04
+        ],
+        "max_steps": 5,
+        "normalized_heat_min": 0.1,
+        "normalized_heat_range": 0.9,
+        "step_rounding": "floor(x+0.5)",
+        "maximum_power_bonus": [
+          0.075,
+          0.1,
+          0.15,
+          0.2
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_2h_p1.lua",
+        "start_line": 11,
+        "end_line": 53
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_2h_p1_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 66
+      },
+      "icon": "https://github.com/user-attachments/assets/8709846a-8fcd-47ed-8a5b-6d57b666b45e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_238",
+      "effect": "依持用武器目前熱量分成0–5段威力加成；I–IV每段1.5%／2%／3%／4%，最高7.5%／10%／15%／20%；切出停止生效。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p2_power_bonus_scaled_on_heat",
+      "blessing_id": "energy-leakage",
+      "weapon_id": "powersword_p2",
+      "page": "entries/能量洩漏/weapon_trait_bespoke_powersword_p2_power_bonus_scaled_on_heat.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_step": [
+          0.015,
+          0.02,
+          0.03,
+          0.04
+        ],
+        "max_steps": 5,
+        "normalized_heat_min": 0.1,
+        "normalized_heat_range": 0.9,
+        "step_rounding": "floor(x+0.5)",
+        "maximum_power_bonus": [
+          0.075,
+          0.1,
+          0.15,
+          0.2
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p2.lua",
+        "start_line": 11,
+        "end_line": 53
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p2_buff_templates.lua",
+        "start_line": 27,
+        "end_line": 66
+      },
+      "icon": "https://github.com/user-attachments/assets/8709846a-8fcd-47ed-8a5b-6d57b666b45e",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_238",
+      "effect": "依持用武器目前熱量分成0–5段威力加成；I–IV每段1.5%／2%／3%／4%，最高7.5%／10%／15%／20%；切出停止生效。"
     }
   ],
   "bindings": [
@@ -3873,6 +3974,62 @@
       "mark_id": "powersword_p2_m2",
       "variant_id": "weapon_trait_bespoke_powersword_p2_explosion_on_overheat_lockout",
       "trait_item": "content/items/traits/bespoke_powersword_p2/explosion_on_overheat_lockout",
+      "trait_category": "bespoke_powersword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m2.lua",
+        "import_line": 11,
+        "append_line": 2025
+      }
+    },
+    {
+      "blessing_id": "energy-leakage",
+      "weapon_id": "powersword_2h_p1",
+      "mark_id": "powersword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_2h_p1_power_bonus_scaled_on_heat",
+      "trait_item": "content/items/traits/bespoke_powersword_2h_p1/power_bonus_scaled_on_heat",
+      "trait_category": "bespoke_powersword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2304
+      }
+    },
+    {
+      "blessing_id": "energy-leakage",
+      "weapon_id": "powersword_2h_p1",
+      "mark_id": "powersword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_2h_p1_power_bonus_scaled_on_heat",
+      "trait_item": "content/items/traits/bespoke_powersword_2h_p1/power_bonus_scaled_on_heat",
+      "trait_category": "bespoke_powersword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2457
+      }
+    },
+    {
+      "blessing_id": "energy-leakage",
+      "weapon_id": "powersword_p2",
+      "mark_id": "powersword_p2_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p2_power_bonus_scaled_on_heat",
+      "trait_item": "content/items/traits/bespoke_powersword_p2/power_bonus_scaled_on_heat",
+      "trait_category": "bespoke_powersword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m1.lua",
+        "import_line": 11,
+        "append_line": 1743
+      }
+    },
+    {
+      "blessing_id": "energy-leakage",
+      "weapon_id": "powersword_p2",
+      "mark_id": "powersword_p2_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_p2_power_bonus_scaled_on_heat",
+      "trait_item": "content/items/traits/bespoke_powersword_p2/power_bonus_scaled_on_heat",
       "trait_category": "bespoke_powersword_p2",
       "available_tiers": null,
       "source": {
