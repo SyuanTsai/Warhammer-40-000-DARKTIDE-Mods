@@ -88,3 +88,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Rapid Movement](adamant_sprinting_sliding.md) / `adamant_sprinting_sliding` | Passive talent |
 | [Final Warning](adamant_ranged_damage_on_melee_stagger.md) / `adamant_ranged_damage_on_melee_stagger` | Passive talent |
 | [Priority Endowment](adamant_clip_size.md) / `adamant_clip_size` | Passive talent |
+| [Cower, Miscreants!](adamant_damage_vs_suppressed.md) / `adamant_damage_vs_suppressed` | Passive talent |

@@ -88,6 +88,7 @@
 | <img src="https://github.com/user-attachments/assets/8a0b3c73-0e7e-4d31-9f7d-385634eae6e3" width="32" height="32" alt="Rapid Movement talent icon"> [Rapid Movement](#adamant_sprinting_sliding) | <ul><li>After a slide ends, gain 5% Sprint Speed for 5s. Kills restore 5% of maximum Stamina, with a 0.75s cooldown.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/75cf7e7e-044e-432f-b7cb-b73e53164425" width="32" height="32" alt="Final Warning talent icon"> [Final Warning](#adamant_ranged_damage_on_melee_stagger) | <ul><li>Staggering an enemy with a melee attack or push grants 15% Ranged Damage for 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/03af9ca3-e4f4-4383-9650-f8ac659cfadd" width="32" height="32" alt="Priority Endowment talent icon"> [Priority Endowment](#adamant_clip_size) | <ul><li>Clip Size increases by 15%, rounded up.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="Cower, Miscreants! talent icon"> [Cower, Miscreants!](#adamant_damage_vs_suppressed) | <ul><li>Damage against Suppressed enemies increases by 25%.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -1124,3 +1125,15 @@
 - **Scope**: This increases the magazine capacity. Reserve ammunition capacity is determined by other effects.
 
 [Details](adamant_clip_size.md) · [Back to index](#talent-index)
+
+<a id="adamant_damage_vs_suppressed"></a>
+
+### Cower, Miscreants!
+
+<img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="72" height="72" alt="Cower, Miscreants! talent icon">
+
+- **Damage example**: Against a Suppressed enemy, this effect alone changes base damage 100 to 100 × 1.25 = 125. With an existing same-stage 20% bonus, damage rises from 120 to 100 × (1 + 20% + 25%) = 145.
+
+- **Scope**: Melee and ranged attacks both qualify. The bonus does not apply when the target is not Suppressed.
+
+[Details](adamant_damage_vs_suppressed.md) · [Back to index](#talent-index)
