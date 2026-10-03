@@ -36,6 +36,7 @@
 | <img src="https://github.com/user-attachments/assets/bc3b59ed-a142-4807-86f9-f75d65b367b4" width="32" height="32" alt="Arbites Vigilant talent icon"> [Arbites Vigilant](#adamant_forceful_ability_damage) | <ul><li>Using your Combat Ability converts current Forceful stacks into a 12s Strength bonus.</li><li>Up to 10 stacks grant +2.5% each; triggering this effect consumes the Forceful stacks.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/62f41d0b-cd55-459d-b4d7-c8c155da410f" width="32" height="32" alt="Judicial Force talent icon"> [Judicial Force](#adamant_forceful_stagger_on_low_high) | <ul><li>Cause an explosion that staggers nearby enemies when Forceful rises from below maximum to 10 stacks or falls from a positive count to zero.</li><li>The maximum-stack and zero-stack triggers each have a 5s cooldown.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/7b782337-07db-4ff4-9a85-ba21d1fcfe6b" width="32" height="32" alt="Obstinate talent icon"> [Obstinate](#adamant_terminus_warrant_cdr) | <ul><li>After spending all 20 Justice stacks, restore an additional 0.33s of Combat Ability cooldown each second for 12s.</li><li>Retriggering refreshes the timer; nominal additional restoration totals 3.96s.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/053a0db6-481b-4944-9077-d1d9a05759dd" width="32" height="32" alt="Terminal Decree talent icon"> [Terminal Decree](#adamant_terminus_warrant_support) | <ul><li>Whenever Terminus Warrant stacks are spent, restore Toughness to you and Allies in Coherency according to the actual count spent.</li><li>Each stack restores 1% of maximum Toughness; the base stack cap is 20.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -430,3 +431,15 @@
 - **Cooldown example**: Restore an additional 0.33s of Combat Ability cooldown each second, nominally 3.96s over 12s. Starting with 20s remaining, after 12s and 12 restoration ticks the remainder is 20 − 12 − 12 × 0.33 = 4.04s. Restoration is limited to the unregenerated cooldown; expiry update order may result in one fewer tick. Retriggering refreshes the duration without increasing the restoration rate.
 
 [Details](adamant_terminus_warrant_cdr.md) · [Back to index](#talent-index)
+
+<a id="adamant_terminus_warrant_support"></a>
+
+### Terminal Decree
+
+<img src="https://github.com/user-attachments/assets/053a0db6-481b-4944-9077-d1d9a05759dd" width="72" height="72" alt="Terminal Decree talent icon">
+
+- **Trigger and recipients**: Spending Melee Justice or Ranged Justice restores Toughness to you and Allies in Coherency. Spending fewer than 20 stacks scales the recovery by the actual count spent.
+
+- **Recovery example**: Each stack restores 1% of maximum Toughness; spending 20 stacks restores 20%. At 100 maximum Toughness this is 20 points, or 7 points when spending seven stacks. Each recipient remains limited by their own missing Toughness.
+
+[Details](adamant_terminus_warrant_support.md) · [Back to index](#talent-index)

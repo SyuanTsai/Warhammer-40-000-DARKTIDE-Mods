@@ -91,7 +91,8 @@
         "adamant_forceful_offensive",
         "adamant_forceful_ability_damage",
         "adamant_forceful_stagger_on_low_high",
-        "adamant_terminus_warrant_cdr"
+        "adamant_terminus_warrant_cdr",
+        "adamant_terminus_warrant_support"
       ],
       "checks": []
     },
@@ -131,7 +132,8 @@
         "adamant_forceful_offensive",
         "adamant_forceful_ability_damage",
         "adamant_forceful_stagger_on_low_high",
-        "adamant_terminus_warrant_cdr"
+        "adamant_terminus_warrant_cdr",
+        "adamant_terminus_warrant_support"
       ],
       "checks": []
     },
@@ -171,7 +173,8 @@
         "adamant_forceful_offensive",
         "adamant_forceful_ability_damage",
         "adamant_forceful_stagger_on_low_high",
-        "adamant_terminus_warrant_cdr"
+        "adamant_terminus_warrant_cdr",
+        "adamant_terminus_warrant_support"
       ],
       "checks": []
     },
@@ -211,7 +214,8 @@
         "adamant_forceful_offensive",
         "adamant_forceful_ability_damage",
         "adamant_forceful_stagger_on_low_high",
-        "adamant_terminus_warrant_cdr"
+        "adamant_terminus_warrant_cdr",
+        "adamant_terminus_warrant_support"
       ],
       "checks": []
     },
@@ -1335,9 +1339,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c08ea67ab69a5f3b2660b00c03aa49b1abdcc50a",
       "chinese_sha256": "76ebbf339ffc510ba3559ab4d7316016110e29c4233e7d7ae870dfb60ab93b7c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_terminus_warrant_support"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_support.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_toughness_regen_near_companion.md",
@@ -10382,6 +10393,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_cdr.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_terminus_warrant_cdr.md"
+    },
+    {
+      "id": "adamant_terminus_warrant_support",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_support.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_terminus_warrant_support.md"
     }
   ],
   "pending_chinese_corrections": [
