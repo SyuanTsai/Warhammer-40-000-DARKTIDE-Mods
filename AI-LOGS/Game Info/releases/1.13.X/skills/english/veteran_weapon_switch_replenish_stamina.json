@@ -1,0 +1,120 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing-mechanism translation and exact English text check; only missing display mappings read from the fixed-source modifier definition.",
+  "static_reconstruction": "Activating Melee Specialist restores 20% Stamina and grants 25% Stamina Cost Reduction for 3s.",
+  "comparison_rule_totals": {
+    "Consistent": 4,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 4,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Invigorated dossier and player section",
+    "Exact same-version English name and full raw description",
+    "Fixed-SHA veteran_talents.lua lines 2827–2872: exact UI keys, literal 0.20 and stamina-cost/duration lookup formatting"
+  ],
+  "reused_evidence": [
+    "Accepted Chinese fixed-source mechanism, conditions, exceptions and examples",
+    "Accepted shared formatting and corpus version verification",
+    "Reused accepted Invigorated WebP audit: 288×288, 3274 bytes, SHA-256 ab40de0de776388a570588cec931e72370377a3ca4d81f8f2444a122fc695383; existing Media-Assets Issue attachment.",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Read-only child verified exact same-version name/key/hash/raw, stored-stack gate, accepted recovery and cost examples, cap, duration refresh and persistence after switching away. Primary resolved the three display mappings narrowly, reused accepted 0.75/3-second buff values and shared formatting, and independently classified maximum basis/cap and repeat-activation details as omissions. Primary reviews the full staged diff before commit."
+  },
+  "static_examples": [
+    [
+      "Maximum 6 points; current 3 points",
+      "Requested recovery `6 × 0.20 = 1.2 points`; resulting Stamina `3 + 1.2 = 4.2 points`.",
+      "The effect restores 1.2 points, using maximum Stamina as the basis."
+    ],
+    [
+      "Maximum 6 points; current 5.5 points",
+      "Deficit `6 − 5.5 = 0.5 points`; actual recovery `min(1.2, 0.5) = 0.5 points`; result `6 points`.",
+      "Recovery stops at the maximum; the unused 0.7 requested points are not added above the cap."
+    ],
+    [
+      "Otherwise 2-point action cost; buff active; other cost factors 1",
+      "Cost `2 × 0.75 = 1.5 points`; saving `2 − 1.5 = 0.5 points`, or `0.5 / 2 = 25%`.",
+      "The 25% reduction applies to the action cost for the 3-second effect duration."
+    ]
+  ],
+  "category_section": "Keystones",
+  "unconfirmed": [
+    "These examples assume the listed maximum/current Stamina and an eligible activation with a stored Melee Specialist stack. The cost example isolates this multiplier with other cost factors equal to 1; it does not assert a universal final cost for every action. Per-action interactions, exact game-update expiry timing and gameplay outcomes were not measured."
+  ],
+  "unperformed": [
+    "Repeated full implementation/call-chain analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game mechanism/damage/UI measurements"
+  ],
+  "id": "veteran_weapon_switch_replenish_stamina",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Invigorated",
+  "name_key": "loc_talent_veteran_weapon_switch_replenish_stamina",
+  "name_hash": "4de41062",
+  "description_key": "loc_talent_veteran_weapon_switch_replenish_stamina_new_description",
+  "description_hash": "6ac67293",
+  "raw_template": "Activating Melee Specialist restores {stamina:%s} Stamina and grants {stamina_reduction:%s} Stamina Cost Reduction for {duration:%s}s.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 206,
+        "Explicit contradiction": 8,
+        "Not covered by the description": 231,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 9
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 534,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 73,
+      "comparison_rows": 8,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 3
+        },
+        {
+          "columns": 3,
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/invigorated-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_weapon_switch_replenish_stamina.md"
+}

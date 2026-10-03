@@ -124,5 +124,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/always-prepared-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_weapon_switch_replenish_ammo.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_weapon_switch_replenish_ammo.md",
+  "commit": "ee223324b640f3614ff3b8c4924f1d11e1c5ac34"
 }
