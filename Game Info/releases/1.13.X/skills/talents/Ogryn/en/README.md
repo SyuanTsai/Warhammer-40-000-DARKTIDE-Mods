@@ -41,6 +41,7 @@
 | <img src="https://github.com/user-attachments/assets/5c8fc9b0-2f06-4311-87f7-511d4c6ce6d5" width="32" height="32" alt="Back Off! talent icon"> [Back Off!](#ogryn_blo_melee) | <ul><li>Melee kills increase the next shot’s Lucky Bullet chance by 10 percentage points per stack.</li><li>Maximum 10 stacks; the next shot clears them, even if Lucky Bullet makes that shot free.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/83bead6b-330f-466e-8c25-c7d383843b1c" width="32" height="32" alt="Don't Feel a Thing talent icon"> [Don't Feel a Thing](#ogryn_heavy_hitter_tdr) | <ul><li>Each Heavy Hitter stack grants 1.25% Toughness damage reduction.</li><li>At 8 stacks, Toughness damage is reduced by 10%.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/9c42800c-a3bc-469c-be04-1231b90bca3b" width="32" height="32" alt="Great Cleaver talent icon"> [Great Cleaver](#ogryn_heavy_hitter_cleave) | <ul><li>Each Heavy Hitter stack grants +12.5% melee cleave capacity.</li><li>At 8 stacks, capacity doubles; this does not directly determine the number of enemies hit.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/82795688-8a0b-4db1-871c-1302a8f33299" width="32" height="32" alt="Unstoppable talent icon"> [Unstoppable](#ogryn_heavy_hitter_max_stacks_improves_toughness) | <ul><li>Each Heavy Hitter stack adds 15% to Toughness recovered from melee kills.</li><li>Maximum 8 stacks; full stacks give 2.2 times the base melee-kill recovery.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -599,3 +600,19 @@
 - **Example**: At 4 stacks, cleave capacity increases by 50%. At 8 stacks, a base capacity of 10 becomes `10 × 2 = 20`.
 
 [Details](ogryn_heavy_hitter_cleave.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_heavy_hitter_max_stacks_improves_toughness"></a>
+
+### Unstoppable
+
+<img src="https://github.com/user-attachments/assets/82795688-8a0b-4db1-871c-1302a8f33299" width="72" height="72" alt="Unstoppable talent icon">
+
+- **Requirement**: The bonus applies only to Toughness recovered from melee kills. Other sources of Toughness recovery receive no bonus from this node.
+
+- **Formula and cap**: Each Heavy Hitter stack adds 15%, up to 8 stacks. At full stacks, the increase is 120%, giving 2.2 times the base melee-kill recovery.
+
+- **Example**: If the base melee-kill recovery is 10 Toughness, 8 stacks recover `10 × (1 + 8 × 15%) = 22` Toughness, capped by the amount missing.
+
+[Details](ogryn_heavy_hitter_max_stacks_improves_toughness.md) · [Back to index](#talent-index)

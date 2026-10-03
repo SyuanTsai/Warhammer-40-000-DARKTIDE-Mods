@@ -43,3 +43,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Back Off!](ogryn_blo_melee.md) / `ogryn_blo_melee` | Keystone |
 | [Don't Feel a Thing](ogryn_heavy_hitter_tdr.md) / `ogryn_heavy_hitter_tdr` | Keystone |
 | [Great Cleaver](ogryn_heavy_hitter_cleave.md) / `ogryn_heavy_hitter_cleave` | Keystone |
+| [Unstoppable](ogryn_heavy_hitter_max_stacks_improves_toughness.md) / `ogryn_heavy_hitter_max_stacks_improves_toughness` | Keystone |
