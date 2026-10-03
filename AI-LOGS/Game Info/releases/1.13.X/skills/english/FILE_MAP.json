@@ -86,7 +86,8 @@
         "adamant_terminus_warrant",
         "adamant_forceful",
         "adamant_disable_companion",
-        "adamant_forceful_toughness_regen_per_stack"
+        "adamant_forceful_toughness_regen_per_stack",
+        "adamant_forceful_stun_immune_and_block_all"
       ],
       "checks": []
     },
@@ -121,7 +122,8 @@
         "adamant_terminus_warrant",
         "adamant_forceful",
         "adamant_disable_companion",
-        "adamant_forceful_toughness_regen_per_stack"
+        "adamant_forceful_toughness_regen_per_stack",
+        "adamant_forceful_stun_immune_and_block_all"
       ],
       "checks": []
     },
@@ -156,7 +158,8 @@
         "adamant_terminus_warrant",
         "adamant_forceful",
         "adamant_disable_companion",
-        "adamant_forceful_toughness_regen_per_stack"
+        "adamant_forceful_toughness_regen_per_stack",
+        "adamant_forceful_stun_immune_and_block_all"
       ],
       "checks": []
     },
@@ -191,7 +194,8 @@
         "adamant_terminus_warrant",
         "adamant_forceful",
         "adamant_disable_companion",
-        "adamant_forceful_toughness_regen_per_stack"
+        "adamant_forceful_toughness_regen_per_stack",
+        "adamant_forceful_stun_immune_and_block_all"
       ],
       "checks": []
     },
@@ -799,9 +803,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "18d69a69da8e615952bcf8382eba2c205ee02642",
       "chinese_sha256": "382f1e01cebb529ef2cb459cec4728cb77a24b7dcfafb676824129c438435ea3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_forceful_stun_immune_and_block_all"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_stun_immune_and_block_all.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_forceful_toughness_regen_per_stack.md",
@@ -10287,6 +10298,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_toughness_regen_per_stack.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_forceful_toughness_regen_per_stack.md"
+    },
+    {
+      "id": "adamant_forceful_stun_immune_and_block_all",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_stun_immune_and_block_all.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_forceful_stun_immune_and_block_all.md"
     }
   ],
   "pending_chinese_corrections": [

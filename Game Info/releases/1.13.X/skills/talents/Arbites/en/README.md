@@ -31,6 +31,7 @@
 | <img src="https://github.com/user-attachments/assets/b838686c-aaa0-49a2-bbea-fc9e074bb6cf" width="32" height="32" alt="Forceful talent icon"> [Forceful](#adamant_forceful) | <ul><li>Staggering hits or blocks build up to 10 stacks, each granting 5% Impact and lowering the damage-taken multiplier.</li><li>Stacks share a 5s timer; taking damage removes at most one stack every 0.25s.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/a2aadd19-f969-47d7-96f3-3021eb1fb5c8" width="32" height="32" alt="Lone Wolf talent icon"> [Lone Wolf](#adamant_disable_companion) | <ul><li>Removes your Cyber-Mastiff in exchange for +20% Damage, +10% Attack Speed, 15% Toughness Damage Reduction and +1 maximum Blitz charge.</li><li>While charges are missing, replenish one grenade every 45s, or one Voltaic Shock Mine every 90s.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/1016875d-cc4c-44f2-8a06-c93155d482d4" width="32" height="32" alt="Will of the Lex talent icon"> [Will of the Lex](#adamant_forceful_toughness_regen_per_stack) | <ul><li>When selected, each Forceful stack replenishes 0.5% of maximum Toughness per second.</li><li>Recovery scales with the current Forceful stack count, up to the base cap of 10.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/92922b1c-4991-480e-86af-e050b9faa496" width="32" height="32" alt="Adamant Will talent icon"> [Adamant Will](#adamant_forceful_stun_immune_and_block_all) | <ul><li>At maximum Forceful stacks, gain Stun and Slowdown Immunity.</li><li>The effects remain for 3s after leaving maximum stacks; perfect blocks additionally gain the ability to block normally unblockable attacks.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -365,3 +366,15 @@
 - **Full-stack example**: At 10 stacks, replenish `10 × 0.5% = 5% of maximum Toughness per second`. With maximum Toughness 100, that is theoretically 5 points per second, but actual replenishment cannot exceed the current Toughness deficit.
 
 [Details](adamant_forceful_toughness_regen_per_stack.md) · [Back to index](#talent-index)
+
+<a id="adamant_forceful_stun_immune_and_block_all"></a>
+
+### Adamant Will
+
+<img src="https://github.com/user-attachments/assets/92922b1c-4991-480e-86af-e050b9faa496" width="72" height="72" alt="Adamant Will talent icon">
+
+- **Trigger and duration**: At 10 Forceful stacks, gain Stun Immunity and Slowdown Immunity. These effects remain for 3s after leaving maximum stacks.
+
+- **Perfect blocks**: While the effect is active, perfect blocks can block attacks that are normally unblockable. Ordinary blocks do not gain the same capability. Attacks must still meet the shared blocking checks; this effect does not imply continuous invulnerability.
+
+[Details](adamant_forceful_stun_immune_and_block_all.md) · [Back to index](#talent-index)
