@@ -93,6 +93,7 @@
 | <img src="https://github.com/user-attachments/assets/af381ce2-1360-49a1-931d-6db3fb174166" width="32" height="32" alt="Suppression Force talent icon"> [Suppression Force](#adamant_staggered_enemies_deal_less_damage) | <ul><li>Hitting a Staggered enemy with a melee attack or push reduces its Damage by 20% for 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/2577c784-85c4-473c-b9ba-a88f8de35355" width="32" height="32" alt="Concussive talent icon"> [Concussive](#adamant_melee_weakspot_hits_count_as_stagger) | <ul><li>Melee Weakspot Hits make the target count as Staggered for 4s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/aa78a41a-3cea-4e8d-ba36-4496c3619be7" width="32" height="32" alt="Target the Weak talent icon"> [Target the Weak](#adamant_staggering_enemies_take_more_damage) | <ul><li>Hitting a Staggered enemy with a melee attack or push makes it take 15% more Melee Damage for 5s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/96221430-4610-4bf3-9b19-4fd056c99e74" width="32" height="32" alt="Retaliatory Force talent icon"> [Retaliatory Force](#adamant_perfect_block_damage_boost) | <ul><li>Block Stamina cost is reduced by 15%. Perfect Blocks grant 15% Damage and Attack Speed for 8s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -1189,3 +1190,17 @@
 - **Damage examples**: Isolating the target damage-taken stage, melee damage 100 becomes 115. With a separate 25% attacker damage bonus, the stages multiply: 100 × 1.25 × 1.15 = 143.75. If the target instead already has a same-stage 25% damage-taken increase, damage is 100 × (1 + 25% + 15%) = 140.
 
 [Details](adamant_staggering_enemies_take_more_damage.md) · [Back to index](#talent-index)
+
+<a id="adamant_perfect_block_damage_boost"></a>
+
+### Retaliatory Force
+
+<img src="https://github.com/user-attachments/assets/96221430-4610-4bf3-9b19-4fd056c99e74" width="72" height="72" alt="Retaliatory Force talent icon">
+
+- **Block cost**: Block Stamina cost is reduced by 15%. A base cost of 2 Stamina becomes 2 × 0.85 = 1.7 with this effect alone.
+
+- **Perfect Block buff**: Perfect Blocks grant 15% Damage and Attack Speed for 8s. Another Perfect Block resets the duration.
+
+- **Buff examples**: Base damage 100 becomes 115. A 1s action affected by Attack Speed becomes 1 ÷ 1.15 ≈ 0.870s. With an existing same-stage 25% damage bonus, damage is 100 × (1 + 25% + 15%) = 140.
+
+[Details](adamant_perfect_block_damage_boost.md) · [Back to index](#talent-index)
