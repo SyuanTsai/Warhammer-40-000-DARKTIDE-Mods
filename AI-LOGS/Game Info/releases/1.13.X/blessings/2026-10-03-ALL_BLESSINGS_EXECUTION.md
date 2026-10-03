@@ -47,3 +47,7 @@
 - 反擊全部UI交集變體本機Commit：`4f618e421572b3573a178230cee738159e48a9ba`；型號名稱依當前UI組名與RAW修正。
 
 - [顱骨落地](2026-10-03-CRANIAL-GROUNDING_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
+
+- 顱骨落地本機Commit：`e8ed0842e407a531c963bc3c142da39eed784c4c`；文件、Issue圖片與88條累積型號關聯驗收完成。
+
+- [超載](2026-10-03-OVERLOAD_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。

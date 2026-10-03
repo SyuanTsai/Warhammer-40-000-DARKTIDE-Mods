@@ -14,3 +14,4 @@
 | [振奮彈幕](entries/振奮彈幕/README.md) | [來源索引](entries/振奮彈幕/SOURCE_INDEX.md) |
 | [反擊](entries/反擊/README.md) | [來源索引](entries/反擊/SOURCE_INDEX.md) |
 | [顱骨落地](entries/顱骨落地/README.md) | [來源索引](entries/顱骨落地/SOURCE_INDEX.md) |
+| [超載](entries/超載/README.md) | [來源索引](entries/超載/SOURCE_INDEX.md) |

@@ -345,6 +345,7 @@
 - Cranial Grounding - 顱骨落地
   - 本體1.13.1名稱鍵 `loc_chained_weakspot_hits_increase_finesse_and_reduce_overheat`，hash `96f66ae3`；英文／繁中RAW配對確認。
 - Overload - 超載
+  - 本體1.13.1名稱鍵 `loc_explosion_on_overheat_lockout`，hash `1809b21c`；英文／繁中RAW配對確認。
 - Energy Leakage - 能量洩漏
 - Heatsink - 散熱器
 - Syphon - 虹吸
