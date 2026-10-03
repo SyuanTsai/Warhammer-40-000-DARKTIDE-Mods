@@ -48,6 +48,7 @@
 | <img src="https://github.com/user-attachments/assets/bdf5653a-6df6-4998-a781-ae623083055a" width="32" height="32" alt="Smash 'Em! talent icon"> [Smash 'Em!](#ogryn_single_heavy_toughness) | <ul><li>Hitting exactly 1 enemy with one melee attack restores 5% maximum Toughness.</li><li>A qualifying heavy attack restores 15% instead.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/47f9eea2-c58f-4ed3-8678-e42d2ec1701f" width="32" height="32" alt="Lynchpin talent icon"> [Lynchpin](#ogryn_increased_coherency_toughness) | <ul><li>Your own Coherency Toughness regeneration rate increases by 100%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/f61476bf-8738-40b1-8c66-63980d690cc7" width="32" height="32" alt="Keep Shooting talent icon"> [Keep Shooting](#ogryn_reload_speed_on_empty) | <ul><li>Starting a reload with an empty clip grants +20% Reload Speed.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/aeba8245-43aa-438c-9357-a7ac4556a98d" width="32" height="32" alt="Furious talent icon"> [Furious](#ogryn_more_hits_more_damage) | <ul><li>Each enemy hit by the previous melee attack adds 3% damage to the next melee attack, up to +30%.</li></ul> | Talent |
 
 ## Blitz
 
@@ -720,3 +721,19 @@
 - **Persistence**: The empty-clip condition is checked before reloading. That result is retained during the reload, so inserting ammunition does not immediately remove the bonus.
 
 [Details](ogryn_reload_speed_on_empty.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_more_hits_more_damage"></a>
+
+### Furious
+
+<img src="https://github.com/user-attachments/assets/aeba8245-43aa-438c-9357-a7ac4556a98d" width="72" height="72" alt="Furious talent icon">
+
+- **How it works**: When a melee attack ends, each enemy hit by that attack adds 3% damage to the next melee attack. At most 10 enemies count, for a maximum of +30%.
+
+- **Damage example**: Hitting 4 enemies makes the next attack's base 100 become `100 × (1 + 4 × 3%) = 112`. Hitting 10 or more gives 130. With an existing +20% bonus at the same stage, the four-enemy bonus gives 132.
+
+- **Updates**: Each sweep replaces the previous bonus with its own hit count; counts do not accumulate. A miss resets it to zero. After hitting 4 enemies, hitting only 1 on the next sweep leaves +3% for the following attack.
+
+[Details](ogryn_more_hits_more_damage.md) · [Back to index](#talent-index)

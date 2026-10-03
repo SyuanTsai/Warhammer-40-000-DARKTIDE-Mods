@@ -50,3 +50,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Smash 'Em!](ogryn_single_heavy_toughness.md) / `ogryn_single_heavy_toughness` | Talent |
 | [Lynchpin](ogryn_increased_coherency_toughness.md) / `ogryn_increased_coherency_toughness` | Talent |
 | [Keep Shooting](ogryn_reload_speed_on_empty.md) / `ogryn_reload_speed_on_empty` | Talent |
+| [Furious](ogryn_more_hits_more_damage.md) / `ogryn_more_hits_more_damage` | Talent |
