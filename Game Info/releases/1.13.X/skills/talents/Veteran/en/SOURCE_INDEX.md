@@ -1,6 +1,6 @@
 # Veteran: sources and technical index
 
-[繁體中文](../SOURCE_INDEX.md) | [Player descriptions](README.md) | [Version and evidence limits](../../../../README.md)
+[繁體中文](../SOURCE_INDEX.md) | [Player descriptions](README.md) | [Version and evidence limits](../../../../README.md) | [Definitions without independent nodes](UNUSED_DEFINITIONS.md)
 
 [Original English description comparison](LOCALIZATION_COMPARISON.md) | [Percentage and calculation review](DAMAGE_PERCENTAGE_REVIEW.md)
 

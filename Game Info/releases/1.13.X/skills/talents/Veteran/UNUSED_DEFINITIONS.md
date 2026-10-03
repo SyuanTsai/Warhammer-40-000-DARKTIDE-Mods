@@ -1,5 +1,7 @@
 # 老兵：當前技能樹未直接使用的定義
 
+[English](en/UNUSED_DEFINITIONS.md)
+
 [返回技術索引](SOURCE_INDEX.md)
 
 比對固定 SHA `7e662fcda16219d775b84af50322be2e9cd9d62e` 的老兵技能樹、職業基礎天賦與天賦定義。此表只表示「沒有獨立節點直接引用這個 talent ID」，不表示相同效果或其底層增益完全未使用。
