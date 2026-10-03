@@ -2187,7 +2187,12 @@
         "ogryn_charge_applies_bleed",
         "ogryn_taunt_staggers_reduce_cooldown",
         "ogryn_special_ammo_armor_pen",
-        "ogryn_special_ammo_fire_shots"
+        "ogryn_special_ammo_fire_shots",
+        "ogryn_taunt_damage_taken_increase",
+        "ogryn_ranged_stance_toughness_regen",
+        "ogryn_taunt_restore_toughness",
+        "ogryn_charge_trample",
+        "ogryn_leadbelcher_no_ammo_chance"
       ],
       "checks": []
     },
@@ -2215,7 +2220,12 @@
         "ogryn_charge_applies_bleed",
         "ogryn_taunt_staggers_reduce_cooldown",
         "ogryn_special_ammo_armor_pen",
-        "ogryn_special_ammo_fire_shots"
+        "ogryn_special_ammo_fire_shots",
+        "ogryn_taunt_damage_taken_increase",
+        "ogryn_ranged_stance_toughness_regen",
+        "ogryn_taunt_restore_toughness",
+        "ogryn_charge_trample",
+        "ogryn_leadbelcher_no_ammo_chance"
       ],
       "checks": []
     },
@@ -2243,7 +2253,12 @@
         "ogryn_charge_applies_bleed",
         "ogryn_taunt_staggers_reduce_cooldown",
         "ogryn_special_ammo_armor_pen",
-        "ogryn_special_ammo_fire_shots"
+        "ogryn_special_ammo_fire_shots",
+        "ogryn_taunt_damage_taken_increase",
+        "ogryn_ranged_stance_toughness_regen",
+        "ogryn_taunt_restore_toughness",
+        "ogryn_charge_trample",
+        "ogryn_leadbelcher_no_ammo_chance"
       ],
       "checks": []
     },
@@ -2271,7 +2286,12 @@
         "ogryn_charge_applies_bleed",
         "ogryn_taunt_staggers_reduce_cooldown",
         "ogryn_special_ammo_armor_pen",
-        "ogryn_special_ammo_fire_shots"
+        "ogryn_special_ammo_fire_shots",
+        "ogryn_taunt_damage_taken_increase",
+        "ogryn_ranged_stance_toughness_regen",
+        "ogryn_taunt_restore_toughness",
+        "ogryn_charge_trample",
+        "ogryn_leadbelcher_no_ammo_chance"
       ],
       "checks": []
     },
@@ -2541,9 +2561,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "69b528f05a49882f85ddd66a810839a6896fa719",
       "chinese_sha256": "ffaf1262bc74ff7fc626bd6402544450e82fa363eb18407d5fa19b22a0c9f9ed",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_charge_trample"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_191_195.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_coherency_radius_increase.md",
@@ -2892,9 +2919,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "806f332feb8d3f730a3f0718fffc4dac262c0e97",
       "chinese_sha256": "eeac511d79d781d3fe84877da11274e12d6e8c54ef8fbdc6ba99ca377be19195",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_leadbelcher_no_ammo_chance"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_191_195.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_longer_charge.md",
@@ -3115,9 +3149,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f475fc57b66087aefd053b741aa48ff8c601eecc",
       "chinese_sha256": "e7f02a57385ca5988a742d85393a58d99c1f18353990a52541ec7dd8b1d42a36",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_ranged_stance_toughness_regen"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_191_195.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_reload_speed_on_empty.md",
@@ -3286,9 +3327,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "2031c3bb89299bc019b835cae368ce8884358778",
       "chinese_sha256": "109c39d88c1960f37703155f8079693c0ac1b0f91e46572ae78d7577581201db",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_taunt_damage_taken_increase"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_191_195.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_taunt_restore_toughness.md",
@@ -3297,9 +3345,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "04f706705c3031fa9cb9d3d4287ad55a35565b48",
       "chinese_sha256": "779087394375182aad1c0161ab28434f99dbf1b1d1d1c95fdc3f4d4daa6a88a1",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_taunt_restore_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_191_195.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_taunt_shout.md",
@@ -11923,6 +11978,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_186_190.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_special_ammo_fire_shots.md"
+    },
+    {
+      "id": "ogryn_taunt_damage_taken_increase",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_191_195.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_taunt_damage_taken_increase.md"
+    },
+    {
+      "id": "ogryn_ranged_stance_toughness_regen",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_191_195.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_ranged_stance_toughness_regen.md"
+    },
+    {
+      "id": "ogryn_taunt_restore_toughness",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_191_195.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_taunt_restore_toughness.md"
+    },
+    {
+      "id": "ogryn_charge_trample",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_191_195.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_charge_trample.md"
+    },
+    {
+      "id": "ogryn_leadbelcher_no_ammo_chance",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_191_195.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_leadbelcher_no_ammo_chance.md"
     }
   ],
   "pending_chinese_corrections": [

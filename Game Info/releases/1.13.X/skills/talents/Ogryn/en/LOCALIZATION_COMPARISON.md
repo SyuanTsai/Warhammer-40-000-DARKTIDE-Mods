@@ -316,4 +316,4 @@ Full raw template and formatting: [source evidence](ogryn_leadbelcher_no_ammo_ch
 
 ## Comparison totals
 
-The 77 listed rules comprise **32 Consistent**, **1 Explicit contradiction**, **39 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**. The explicit English contradiction concerns the no-enemy-hit scope in That One Didn’t Count. These totals apply only to the listed rules.
+The 99 listed rules comprise **40 Consistent**, **2 Explicit contradictions**, **52 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count and the duration displayed for No Pain! These totals apply only to the listed rules.
