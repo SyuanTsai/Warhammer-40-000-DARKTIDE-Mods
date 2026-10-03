@@ -1,0 +1,126 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing-mechanism translation and exact English text check; only missing max-stacks display lookup read narrowly.",
+  "static_reconstruction": "Focus Target Max Stacks increased to 6.",
+  "comparison_rule_totals": {
+    "Consistent": 1,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 4,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Focused Fire dossier and player section",
+    "Exact same-version English name and full raw description",
+    "Fixed-SHA veteran_talents.lua lines 3075–3096: exact keys and target-debuff max_stacks display lookup",
+    "Exact same-version Target Down! and Redirect Fire! name keys/hashes: 76b4ca1d and 16f9e496"
+  ],
+  "reused_evidence": [
+    "Accepted Chinese fixed-source mechanism, conditions, exceptions and examples",
+    "Accepted shared formatting and corpus version verification",
+    "Reused accepted Focused Fire WebP audit: 288×288, 6608 bytes, SHA-256 bfd33a74c3a16e734f8d2b6e842851a7f567f4eb90942f8fbf720adf1c551374; existing Media-Assets Issue attachment.",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Read-only child verified exact same-version name/key/hash/raw and accepted six-stack cap, unchanged timing/multiplier, re-tag requirement and conditional optional-modifier interactions. Primary resolved the display lookup narrowly, reused accepted six-stack/settings/buff values and common formatting, and preserved full compound and relative-damage examples. No English erratum inherited or invented. Primary reviews the full staged diff before commit."
+  },
+  "static_examples": [
+    [
+      "6 applied stacks; otherwise 100 damage",
+      "`100 × 1.05^6 = 134.0095640625 damage`, about `134.01`; gain about `34.01%`.",
+      "The target takes about 34.01% more damage than the stated unmarked baseline."
+    ],
+    [
+      "Compare 4 and 6 applied stacks at the same 100-point baseline",
+      "4 stacks: `121.550625 damage`; 6 stacks: `134.0095640625`; ratio `1.05^6 / 1.05^4 = 1.1025`.",
+      "The two additional stacks give 10.25% more damage relative to the four-stack result."
+    ],
+    [
+      "Storage starts at 1 and reaches 6",
+      "`(6 − 1) × 1.5 = 7.5 seconds`.",
+      "Five gain intervals are needed; server-update timing may be slightly later."
+    ],
+    [
+      "6-stack marked death with the named optional modifier also selected",
+      "Target Down!: `0.05 × 6 = 0.30`, or `30%` nominal maximum-Toughness/Stamina recovery. Redirect Fire!: `0.025 × 6 = 0.15`, or `15%` damage-stat contribution.",
+      "These are conditional benefits of the separate modifiers. Actual recovery is subject to its limits; a damage-stat contribution is not a universal whole-hit gain."
+    ]
+  ],
+  "category_section": "Keystones",
+  "unconfirmed": [
+    "The damage examples isolate one owner's target multiplier. Timing is theoretical and server-update dependent. The Target Down! and Redirect Fire! calculations require those separate modifiers and a qualifying marked-target death; they describe nominal fractions/stat contributions rather than universal final outcomes. Multiple-owner interactions and gameplay/UI outcomes were not measured."
+  ],
+  "unperformed": [
+    "Repeated full implementation/call-chain analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game mechanism/damage/UI measurements"
+  ],
+  "id": "veteran_improved_tag_more_damage",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Focused Fire",
+  "name_key": "loc_talent_veteran_improved_tag_more_damage",
+  "name_hash": "6de468b6",
+  "description_key": "loc_talent_veteran_improved_tag_more_damage_description",
+  "description_hash": "dd75ed2b",
+  "raw_template": "Focus Target Max Stacks increased to {max_stacks:%s}.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 210,
+        "Explicit contradiction": 9,
+        "Not covered by the description": 242,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 9
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 548,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 75,
+      "comparison_rows": 5,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 4
+        },
+        {
+          "columns": 3,
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/focused-fire-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_tag_more_damage.md"
+}

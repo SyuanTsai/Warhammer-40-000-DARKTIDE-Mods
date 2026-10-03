@@ -139,5 +139,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/focus-target-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_tag.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_tag.md",
+  "commit": "0166dd249dab012acc0fa50aa520fa37f8f39aaf"
 }
