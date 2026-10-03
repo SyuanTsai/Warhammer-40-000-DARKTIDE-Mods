@@ -40,5 +40,6 @@
 | <img src="https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f" width="32" height="32" alt="憤怒祝福圖示"> [憤怒](entries/憤怒/README.md)<br>- Wrath<br>[完整說明](entries/憤怒/README.md) | <ul><li>近戰揮擊命中後獲得1層順劈，最多5層；每次命中含滿層刷新3.5秒，揮空或逾時清層；武器每層數值不同。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/bc5a089b-7227-4993-882a-a5fe0085e6f2" width="32" height="32" alt="驅魔者祝福圖示"> [驅魔者](entries/驅魔者/README.md)<br>- Exorcist<br>[完整說明](entries/驅魔者/README.md) | <ul><li>持用烈焰力場劍，首次弱點揮擊建立計數，連段中的後續弱點揮擊結束時各降低2／3／4／5個百分點反噬；每次揮擊最多一次。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/6b4dbf18-065c-4d5f-af6e-a06a6bb4adca" width="32" height="32" alt="行刑者祝福圖示"> [行刑者](entries/行刑者/README.md)<br>- Executor<br>[完整說明](entries/行刑者/README.md) | <ul><li>近戰弱點命中每次獲得1層威力；I–IV每層+4.5%／5%／5.5%／6%，最多5層，含滿層命中刷新2.5秒；首個近戰目標未命中弱點會清層。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/c028ae7c-f62f-4407-b9b2-7420eebf0fe8" width="32" height="32" alt="歎為觀止祝福圖示"> [歎為觀止](entries/歎為觀止/README.md)<br>- Showstopper<br>[完整說明](entries/歎為觀止/README.md) | <ul><li>符合精英／專家與燃燒來源條件的擊殺，有14%／16%／18%／20%機率在死亡位置引發武器專屬爆炸；爆炸威力與範圍依武器而異。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

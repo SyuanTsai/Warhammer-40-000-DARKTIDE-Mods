@@ -38,3 +38,4 @@
 | [憤怒](entries/憤怒/README.md) | [來源索引](entries/憤怒/SOURCE_INDEX.md) |
 | [驅魔者](entries/驅魔者/README.md) | [來源索引](entries/驅魔者/SOURCE_INDEX.md) |
 | [行刑者](entries/行刑者/README.md) | [來源索引](entries/行刑者/SOURCE_INDEX.md) |
+| [歎為觀止](entries/歎為觀止/README.md) | [來源索引](entries/歎為觀止/SOURCE_INDEX.md) |

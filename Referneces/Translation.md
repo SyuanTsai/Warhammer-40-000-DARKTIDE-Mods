@@ -426,7 +426,9 @@
 - Blazing Spirit - 燃燒靈魂
 - Penetrating Flame - 穿透火焰
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rending_from_dot_burning`，hash `e02d8784`；英文／繁中RAW配對確認。
-- Showstopper - 嘆為觀止
+- Showstopper - 歎為觀止
+  - 既有詞表異體拼字「嘆為觀止」；同hash本體RAW使用「歎為觀止」。
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_chance_to_explode_elites_on_kill`，hash `2fb3b568`；英文／繁中RAW配對確認。
 - Infernus - 煉獄
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_burninating_on_crit`，hash `fa25b219`；英文／繁中RAW配對確認。
 - Efficiency - 效率

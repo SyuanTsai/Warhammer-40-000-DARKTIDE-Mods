@@ -1,0 +1,914 @@
+{
+  "date": "2026-10-03",
+  "blessing": "showstopper",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/歎為觀止/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_flamer_p1_chance_to_explode_elites_on_kill",
+    "weapon_trait_bespoke_forcestaff_p2_chance_to_explode_elites_on_kill",
+    "weapon_trait_bespoke_phosphor_pistol_p1_chance_to_explode_elites_on_kill"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 3,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "peer_review": {
+      "id": "showstopper",
+      "reviewer": "Luna/max",
+      "reviewed_at": "2026-10-03",
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "complete": true,
+      "accepted": true,
+      "required_corrections": [],
+      "summary": "Cross-review of the primary config and all nine formal Showstopper pages found the stated trigger gates, three variant tier tables, source attribution, explosion parameters, RAW/UI mapping, and image receipt consistent with the fixed source and evidence receipts. No player-relevant correction remains.",
+      "reviewed_files": [
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/showstopper-config.json",
+          "sha256": "7ea32873d209e5c1aa4cffc6cc956c70a2b1b7fc0bd61f07532802444b7828a9",
+          "bytes": 42224
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/歎為觀止/README.md",
+          "sha256": "bafccb22bf3159bb12be1ef5410a3de9ca8e24bdf4da231132413e44eeaab1f5",
+          "bytes": 4278
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/歎為觀止/WEAPON_COMPATIBILITY.md",
+          "sha256": "5f43a6296280b416aeb6cba3ac832271816b240110775f66eabecb19621308d5",
+          "bytes": 2562
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/歎為觀止/TIER_VALUES.md",
+          "sha256": "6fa941577b6e4bed91373e9c7197c75c1b51b09bc42f8a699ef497a0214dac2b",
+          "bytes": 1618
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/歎為觀止/DAMAGE_PERCENTAGE_REVIEW.md",
+          "sha256": "1aa699e02261933ad10a46fade346c863ec3905fa9d3c17aeddbd577d3d08925",
+          "bytes": 2340
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/歎為觀止/LOCALIZATION_COMPARISON.md",
+          "sha256": "877ce5aecd5d1d269115fd393f07d28b68f9af003f85d18833cd1650549f0070",
+          "bytes": 9248
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/歎為觀止/SOURCE_INDEX.md",
+          "sha256": "1fe4d8f6500d57951fce590a86e121e90223d4ee7e063f86e513fec5fe5f878b",
+          "bytes": 24007
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/歎為觀止/weapon_trait_bespoke_flamer_p1_chance_to_explode_elites_on_kill.md",
+          "sha256": "c9a8c5540cacbf0dc1800e1bbd82fc0f929087c7e2dea4617f1265a54707c6b5",
+          "bytes": 2162
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/歎為觀止/weapon_trait_bespoke_forcestaff_p2_chance_to_explode_elites_on_kill.md",
+          "sha256": "7e0eb444b304cfe5d2736ce5c90ea6b1af53b143b703f71c90103b297d001c98",
+          "bytes": 2194
+        },
+        {
+          "path": "Game Info/releases/1.13.X/blessings/entries/歎為觀止/weapon_trait_bespoke_phosphor_pistol_p1_chance_to_explode_elites_on_kill.md",
+          "sha256": "c1b10b00e81421ef8c149c04a3faf7261dadd81c9e93ad1fb519359c41a54905",
+          "bytes": 2218
+        }
+      ],
+      "fixed_source_refs_read_with_git_show": [
+        {
+          "label": "trait tiers/format values: flamer",
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_flamer_p1.lua",
+          "lines": "240-278"
+        },
+        {
+          "label": "trait tiers/format values: force staff",
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcestaff_p2.lua",
+          "lines": "343-381"
+        },
+        {
+          "label": "trait tiers/format values: phosphor pistol",
+          "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_phosphor_pistol_p1.lua",
+          "lines": "473-511"
+        },
+        {
+          "label": "wrapper clone + per-variant proc data: flamer",
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_flamer_p1_buff_templates.lua",
+          "lines": "51-59"
+        },
+        {
+          "label": "wrapper clone + per-variant proc data: force staff",
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcestaff_p2_buff_templates.lua",
+          "lines": "44-52"
+        },
+        {
+          "label": "wrapper clone + per-variant proc data: phosphor pistol",
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_phosphor_pistol_p1_buff_templates.lua",
+          "lines": "25-33"
+        },
+        {
+          "label": "common target/item/burn/source gate and explosion call",
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua",
+          "lines": "2865-2915"
+        },
+        {
+          "label": "on-kill event generation and owner routing",
+          "path": "scripts/utilities/attack/attack.lua",
+          "lines": "669-710"
+        },
+        {
+          "label": "proc activation without cooldown and chance sampling",
+          "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+          "lines": "173-184, 304-380"
+        },
+        {
+          "label": "flamer burn source item",
+          "path": "scripts/extension_systems/weapon/actions/action_flamer_gas.lua",
+          "lines": "360-382"
+        },
+        {
+          "label": "flamer burst burn source item",
+          "path": "scripts/extension_systems/weapon/actions/action_flamer_gas_burst.lua",
+          "lines": "313-328"
+        },
+        {
+          "label": "phosphor burn application source item",
+          "path": "scripts/settings/buff/buff_utils.lua",
+          "lines": "48-77"
+        },
+        {
+          "label": "burn tick attack item forwarding: flamer",
+          "path": "scripts/settings/buff/weapon_buff_templates.lua",
+          "lines": "50-78"
+        },
+        {
+          "label": "burn tick attack item forwarding: warp fire",
+          "path": "scripts/settings/buff/weapon_buff_templates.lua",
+          "lines": "101-128"
+        },
+        {
+          "label": "burn tick attack item forwarding: phosphor",
+          "path": "scripts/settings/buff/weapon_buff_templates.lua",
+          "lines": "2440-2470"
+        },
+        {
+          "label": "existing stack preserves context and refreshes time",
+          "path": "scripts/extension_systems/buff/buff_extension_base.lua",
+          "lines": "434-471, 560-597"
+        },
+        {
+          "label": "explosion parameters: flamer and force staff",
+          "path": "scripts/settings/damage/explosion_templates/player_weapon_explosion_templates.lua",
+          "lines": "446-497"
+        },
+        {
+          "label": "explosion parameters: phosphor pistol",
+          "path": "scripts/settings/damage/explosion_templates/player_weapon_explosion_templates.lua",
+          "lines": "632-657"
+        },
+        {
+          "label": "charge radius, close radius default, common radius modifier",
+          "path": "scripts/utilities/attack/explosion.lua",
+          "lines": "430-502"
+        },
+        {
+          "label": "cover raycast, distance adjustment, square then clamp falloff",
+          "path": "scripts/extension_systems/weapon/weapon_system.lua",
+          "lines": "254-304"
+        },
+        {
+          "label": "default grenade profile and near/far attack power",
+          "path": "scripts/settings/damage/damage_profiles/demolitions_damage_profile_templates.lua",
+          "lines": "19-90"
+        }
+      ],
+      "verified_findings": {
+        "common_trigger": {
+          "events": "Only a died on_kill event is sent through the attacking owner buff extension; event includes attacking_item.",
+          "gates": [
+            "attacking_item name equals the trait item name",
+            "target breed has elite or special tag",
+            "target has the variant keyword, or the trait holder directly kills with burning damage",
+            "burn/source owner or attacker is the trait holder"
+          ],
+          "burn_keywords_by_variant": {
+            "flamer_p1": "burning",
+            "forcestaff_p2": "warpfire_burning",
+            "phosphor_pistol_p1": "burning"
+          },
+          "direct_burning_kill": "The common gate accepts a holder-owned burning-damage kill without a pre-existing validation keyword; the player page correctly calls out the flamer direct-burning case.",
+          "switching": "No currently-wielded gate is added by the wrappers. The three burn application paths carry source_item; ticks forward it to Attack.execute. Existing stack/refresh paths reuse the existing buff instance/context, so a burn from this trait weapon can still trigger after switching; a new unrelated same-template application does not replace that existing source context.",
+          "chance": "Every variant uses on_kill override tiers 0.14/0.16/0.18/0.20 (14/16/18/20%). The wrapper clones the shared template and only supplies the variant fire_buff_id, explosion_template, and validation_keywords. No critical-hit gate or cooldown is present."
+        },
+        "variants": [
+          {
+            "weapon_id": "flamer_p1",
+            "trait_id": "weapon_trait_bespoke_flamer_p1_chance_to_explode_elites_on_kill",
+            "restriction": [
+              "flamer_p1"
+            ],
+            "tiers": [
+              14,
+              16,
+              18,
+              20
+            ],
+            "burn": "flamer_assault; base duration setting 4s, interval 0.5s, max 31 stacks, burning damage type/profile",
+            "explosion": "trait_buff_flamer_p1_minion_explosion; static power 1000; base radius 3; no distance damage falloff"
+          },
+          {
+            "weapon_id": "forcestaff_p2",
+            "trait_id": "weapon_trait_bespoke_forcestaff_p2_chance_to_explode_elites_on_kill",
+            "restriction": [
+              "forcestaff_p2"
+            ],
+            "tiers": [
+              14,
+              16,
+              18,
+              20
+            ],
+            "burn": "warp_fire; base duration setting 8s, interval 0.75s, max 31 stacks, burning and warpfire_burning keywords, warpfire damage type/profile",
+            "explosion": "trait_buff_forcestaff_p2_minion_explosion; static power 600; base radius 4; distance falloff"
+          },
+          {
+            "weapon_id": "phosphor_pistol_p1",
+            "trait_id": "weapon_trait_bespoke_phosphor_pistol_p1_chance_to_explode_elites_on_kill",
+            "restriction": [
+              "phosphor_pistol_p1"
+            ],
+            "tiers": [
+              14,
+              16,
+              18,
+              20
+            ],
+            "burn": "phosphor_burn; base duration setting 20s, interval 0.55s, max 1 stack, burning damage type/profile",
+            "explosion": "trait_buff_phosphor_pistol_p1_minion_explosion; static power 600; base radius 4; distance falloff"
+          }
+        ],
+        "explosion_math": "All three templates use default_grenade and these static power values are damage inputs, not guaranteed HP damage. The proc calls at charge_level 1; explosion parser resolves close_radius=0 because the templates omit close_radius. min_radius is the charge interpolation lower bound, not an inner damage radius; common explosion_radius_modifier multiplies radius. For falloff variants, code adjusts hit distance by breed.explosion_radius, computes x=(adjusted_distance-close_radius)/(radius-close_radius), then clamps x^2 to [0,1]. Cover raycast remains active. README/example uses 1-(1-0.14)^5 = 52.95729824%, rounded to 52.96%.",
+        "localization": {
+          "name_key": "loc_trait_bespoke_chance_to_explode_elites_on_kill",
+          "name_en": "Showstopper",
+          "name_zh_tw": "歎為觀止",
+          "description_key": "loc_trait_bespoke_chance_to_explode_elites_on_kill_desc",
+          "description_en": "{proc_chance:%s} chance Elite and Special enemies Explode on kill.",
+          "description_zh_tw": "精英和專家敵人被擊殺後有{proc_chance:%s}幾率爆炸。",
+          "errata": "No explicit contradiction; unspecified source/burn, chance detail and explosion details are appropriately categorized as not covered rather than errata.",
+          "name_hash": "2fb3b568",
+          "description_hash": "6044aa55",
+          "same_hash_raw_verified": true
+        },
+        "ui_binding_mapping": [
+          {
+            "weapon_id": "flamer_p1",
+            "model_id": "flamer_p1_m1",
+            "name_zh_tw": "淨化噴火器 奧特米亞 Mk III",
+            "loc_ids": [
+              "loc_weapon_family_flamer_p1_m1",
+              "loc_weapon_pattern_flamer_p1_m1",
+              "loc_weapon_mark_flamer_p1_m1"
+            ],
+            "hashes": [
+              "3a1829fc",
+              "8c443428",
+              "a5333762"
+            ],
+            "trait_import_ukeys_append": [
+              14,
+              745,
+              747
+            ]
+          },
+          {
+            "weapon_id": "forcestaff_p2",
+            "model_id": "forcestaff_p2_m1",
+            "name_zh_tw": "烈焰力場法杖 裂隙避難所 Mk II",
+            "loc_ids": [
+              "loc_weapon_family_forcestaff_p2_m1",
+              "loc_weapon_pattern_forcestaff_p2_m1",
+              "loc_weapon_mark_forcestaff_p2_m1"
+            ],
+            "hashes": [
+              "a10ef2c3",
+              "04a6318c",
+              "d1986bf7"
+            ],
+            "trait_import_ukeys_append": [
+              13,
+              1223,
+              1225
+            ]
+          },
+          {
+            "weapon_id": "phosphor_pistol_p1",
+            "model_id": "phosphor_pistol_p1_m1",
+            "name_zh_tw": "磷光爆破手槍 布蘭克斯 Mk XI",
+            "loc_ids": [
+              "loc_weapon_family_phosphor_pistol_p1_m1",
+              "loc_weapon_pattern_phosphor_pistol_p1_m1",
+              "loc_weapon_mark_phosphor_pistol_p1_m1"
+            ],
+            "hashes": [
+              "82c751cf",
+              "9b6d5431",
+              "4a084207"
+            ],
+            "trait_import_ukeys_append": [
+              16,
+              1141,
+              1143
+            ]
+          }
+        ],
+        "metadata_and_outside": "Config records exactly 3 bound metadata items and 3 bindings, matching per-weapon restrictions and empty weapon-template restrictions; current inventory scan returns no same-key/item/trait candidates outside the intersection (0 outside/unresolved) and explicitly does not infer unused status.",
+        "image_mapping": {
+          "item_icon": "content/ui/textures/icons/traits/weapon_trait_161",
+          "image_sha256": "c1444f61296d8f31c6c09c7e7477e005085e6322135351675844e4f34944315b",
+          "dimensions": [
+            128,
+            128
+          ],
+          "public_status": 200,
+          "hash_verified": true,
+          "display_verified": true,
+          "issue_attachment": "https://github.com/user-attachments/assets/c028ae7c-f62f-4407-b9b2-7420eebf0fe8"
+        }
+      },
+      "evidence_receipts_read": [
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/showstopper-primary-ui-review.json",
+          "finding": "3 current metadata bindings, exact triple UI loc_id components/hashes, and import/ukeys/append lines; no exact-name metadata outside."
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/showstopper-primary-ui-raw-verification.json",
+          "finding": "RAW name and description same-hash English/zh-TW plus all three current UI family/pattern/mark key values."
+        },
+        {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/showstopper-image.json",
+          "finding": "weapon_trait_161 public status 200, matching SHA-256, 128x128 PNG and display review verified."
+        }
+      ]
+    },
+    "primary_config_integrated": true,
+    "primary_source_ui_review": "showstopper-primary-ui-review.json",
+    "primary_image_display_verified": true
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/c028ae7c-f62f-4407-b9b2-7420eebf0fe8",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "showstopper",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_161",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_161.png",
+      "attachment": "https://github.com/user-attachments/assets/c028ae7c-f62f-4407-b9b2-7420eebf0fe8",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5968142583",
+      "acquired_date": "2026-10-03",
+      "sha256": "c1444f61296d8f31c6c09c7e7477e005085e6322135351675844e4f34944315b",
+      "content_type": "image/png",
+      "size": 8209,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "歎為觀止祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Primary inspected public attachment pixels; source/public hash match and 128x128 authentic mask icon preserved."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 396,
+      "tables": 322,
+      "rows": 3192,
+      "lists": 554
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 1347,
+      "source_files": 377,
+      "bindings": 244,
+      "variants": 127,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 1096,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 396,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 131,
+    "not_started_name_groups": 131,
+    "partial_name_groups": 0,
+    "remaining_variants": 461,
+    "remaining_bindings": 924,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "ef52f6c9dd7438a36d20ef5665070b30d3139b6f46326b7f39546d8c8e8af25d"
+  },
+  "previous_local_commit": "9ad543848cf12af47103b4348e2ce335f407c999",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "reviewer": "Sol",
+    "fixed_source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "reviewed_source_ranges": 61,
+    "all_three_tiers_and_wrappers_directly_read": true,
+    "proc_roll_before_gate_read": true,
+    "kill_source_owner_and_item_directly_read": true,
+    "burn_source_context_first_instance_preserved": true,
+    "burning_damage_fallback_read": true,
+    "explosion_queue_no_item_no_chain_read": true,
+    "boss_tag_audit_read": true,
+    "base_radius_and_modifier_consumer_read": true,
+    "damage_falloff_squared_before_clamp": true,
+    "iid_example_5_I_probability": 0.5295729824,
+    "explicit_source_based_player_conditions": true
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 3,
+    "bindings": [
+      {
+        "weapon_id": "flamer_p1",
+        "mark_id": "flamer_p1_m1",
+        "metadata_item": "content/items/weapons/player/ranged/flamer_p1_m1",
+        "trait_id": "weapon_trait_bespoke_flamer_p1_chance_to_explode_elites_on_kill",
+        "trait_item": "content/items/traits/bespoke_flamer_p1/chance_to_explode_elites_on_kill",
+        "trait_category": "bespoke_flamer_p1",
+        "loc_ids": [
+          "loc_weapon_family_flamer_p1_m1",
+          "loc_weapon_pattern_flamer_p1_m1",
+          "loc_weapon_mark_flamer_p1_m1"
+        ],
+        "name_zh_tw": "淨化噴火器 奧特米亞 Mk III",
+        "name_en": "Purgation Flamer Artemia Mk III",
+        "template_file": "scripts/settings/equipment/weapon_templates/flamers/flamer_p1_m1.lua",
+        "import_line": 14,
+        "ukeys_line": 745,
+        "append_line": 747,
+        "raw_components": {
+          "loc_weapon_family_flamer_p1_m1": {
+            "0": [
+              {
+                "text": "Purgation Flamer",
+                "hash": "3a1829fc",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "淨化噴火器",
+                "hash": "3a1829fc",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_flamer_p1_m1": {
+            "0": [
+              {
+                "text": "Artemia",
+                "hash": "8c443428",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "奧特米亞",
+                "hash": "8c443428",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_flamer_p1_m1": {
+            "0": [
+              {
+                "text": "Mk III",
+                "hash": "a5333762",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk III",
+                "hash": "a5333762",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "forcestaff_p2",
+        "mark_id": "forcestaff_p2_m1",
+        "metadata_item": "content/items/weapons/player/ranged/forcestaff_p2_m1",
+        "trait_id": "weapon_trait_bespoke_forcestaff_p2_chance_to_explode_elites_on_kill",
+        "trait_item": "content/items/traits/bespoke_forcestaff_p2/chance_to_explode_elites_on_kill",
+        "trait_category": "bespoke_forcestaff_p2",
+        "loc_ids": [
+          "loc_weapon_family_forcestaff_p2_m1",
+          "loc_weapon_pattern_forcestaff_p2_m1",
+          "loc_weapon_mark_forcestaff_p2_m1"
+        ],
+        "name_zh_tw": "烈焰力場法杖 裂隙避難所 Mk II",
+        "name_en": "Inferno Force Staff Rifthaven Mk II",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p2_m1.lua",
+        "import_line": 13,
+        "ukeys_line": 1223,
+        "append_line": 1225,
+        "raw_components": {
+          "loc_weapon_family_forcestaff_p2_m1": {
+            "0": [
+              {
+                "text": "Inferno Force Staff",
+                "hash": "a10ef2c3",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "烈焰力場法杖",
+                "hash": "a10ef2c3",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_forcestaff_p2_m1": {
+            "0": [
+              {
+                "text": "Rifthaven",
+                "hash": "04a6318c",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "裂隙避難所",
+                "hash": "04a6318c",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_forcestaff_p2_m1": {
+            "0": [
+              {
+                "text": "Mk II",
+                "hash": "d1986bf7",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk II",
+                "hash": "d1986bf7",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "weapon_id": "phosphor_pistol_p1",
+        "mark_id": "phosphor_pistol_p1_m1",
+        "metadata_item": "content/items/weapons/player/ranged/phosphor_pistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_phosphor_pistol_p1_chance_to_explode_elites_on_kill",
+        "trait_item": "content/items/traits/bespoke_phosphor_pistol_p1/chance_to_explode_elites_on_kill",
+        "trait_category": "bespoke_phosphor_pistol_p1",
+        "loc_ids": [
+          "loc_weapon_family_phosphor_pistol_p1_m1",
+          "loc_weapon_pattern_phosphor_pistol_p1_m1",
+          "loc_weapon_mark_phosphor_pistol_p1_m1"
+        ],
+        "name_zh_tw": "磷光爆破手槍 布蘭克斯 Mk XI",
+        "name_en": "Phosphor Blast Pistol Branx Mk XI",
+        "template_file": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 1141,
+        "append_line": 1143,
+        "raw_components": {
+          "loc_weapon_family_phosphor_pistol_p1_m1": {
+            "0": [
+              {
+                "text": "Phosphor Blast Pistol",
+                "hash": "82c751cf",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "磷光爆破手槍",
+                "hash": "82c751cf",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_pattern_phosphor_pistol_p1_m1": {
+            "0": [
+              {
+                "text": "Branx",
+                "hash": "9b6d5431",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "布蘭克斯",
+                "hash": "9b6d5431",
+                "resource": "content/localization/items"
+              }
+            ]
+          },
+          "loc_weapon_mark_phosphor_pistol_p1_m1": {
+            "0": [
+              {
+                "text": "Mk XI",
+                "hash": "4a084207",
+                "resource": "content/localization/items"
+              }
+            ],
+            "16": [
+              {
+                "text": "Mk XI",
+                "hash": "4a084207",
+                "resource": "content/localization/items"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "exact_name_key_metadata_items": 3,
+    "outside_exact_items": [],
+    "raw_name": {
+      "0": [
+        {
+          "text": "Showstopper",
+          "hash": "2fb3b568",
+          "resource": "content/localization/items"
+        }
+      ],
+      "16": [
+        {
+          "text": "歎為觀止",
+          "hash": "2fb3b568",
+          "resource": "content/localization/items"
+        }
+      ]
+    },
+    "raw_description": {
+      "0": [
+        {
+          "text": "{proc_chance:%s} chance Elite and Special enemies Explode on kill.",
+          "hash": "6044aa55",
+          "resource": "content/localization/items"
+        }
+      ],
+      "16": [
+        {
+          "text": "精英和專家敵人被擊殺後有{proc_chance:%s}幾率爆炸。",
+          "hash": "6044aa55",
+          "resource": "content/localization/items"
+        }
+      ]
+    },
+    "raw_verification": {
+      "resource": "content/localization/items",
+      "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "records": [
+        {
+          "key": "loc_flamer_p1_m1",
+          "hash": "fc4cb7dd",
+          "locale": 0,
+          "text": "Artemia Mk III Purgation Flamer"
+        },
+        {
+          "key": "loc_flamer_p1_m1",
+          "hash": "fc4cb7dd",
+          "locale": 16,
+          "text": "奧特米亞Mk III淨化噴火器"
+        },
+        {
+          "key": "loc_forcestaff_p2_m1",
+          "hash": "b89dc932",
+          "locale": 0,
+          "text": "Rifthaven Mk II Purgatus Force Staff"
+        },
+        {
+          "key": "loc_forcestaff_p2_m1",
+          "hash": "b89dc932",
+          "locale": 16,
+          "text": "裂隙避難所Mk II淨化力場法杖"
+        },
+        {
+          "key": "loc_phosphor_pistol_p1_m1",
+          "hash": "6d71f67a",
+          "locale": 0,
+          "text": "Ofoid Phosphor Blast Pistol"
+        },
+        {
+          "key": "loc_phosphor_pistol_p1_m1",
+          "hash": "6d71f67a",
+          "locale": 16,
+          "text": "歐佛伊德磷光爆破手槍"
+        },
+        {
+          "key": "loc_trait_bespoke_chance_to_explode_elites_on_kill",
+          "hash": "2fb3b568",
+          "locale": 0,
+          "text": "Showstopper"
+        },
+        {
+          "key": "loc_trait_bespoke_chance_to_explode_elites_on_kill",
+          "hash": "2fb3b568",
+          "locale": 16,
+          "text": "歎為觀止"
+        },
+        {
+          "key": "loc_trait_bespoke_chance_to_explode_elites_on_kill_desc",
+          "hash": "6044aa55",
+          "locale": 0,
+          "text": "{proc_chance:%s} chance Elite and Special enemies Explode on kill."
+        },
+        {
+          "key": "loc_trait_bespoke_chance_to_explode_elites_on_kill_desc",
+          "hash": "6044aa55",
+          "locale": 16,
+          "text": "精英和專家敵人被擊殺後有{proc_chance:%s}幾率爆炸。"
+        },
+        {
+          "key": "loc_weapon_family_flamer_p1_m1",
+          "hash": "3a1829fc",
+          "locale": 0,
+          "text": "Purgation Flamer"
+        },
+        {
+          "key": "loc_weapon_family_flamer_p1_m1",
+          "hash": "3a1829fc",
+          "locale": 16,
+          "text": "淨化噴火器"
+        },
+        {
+          "key": "loc_weapon_family_forcestaff_p2_m1",
+          "hash": "a10ef2c3",
+          "locale": 0,
+          "text": "Inferno Force Staff"
+        },
+        {
+          "key": "loc_weapon_family_forcestaff_p2_m1",
+          "hash": "a10ef2c3",
+          "locale": 16,
+          "text": "烈焰力場法杖"
+        },
+        {
+          "key": "loc_weapon_family_phosphor_pistol_p1_m1",
+          "hash": "82c751cf",
+          "locale": 0,
+          "text": "Phosphor Blast Pistol"
+        },
+        {
+          "key": "loc_weapon_family_phosphor_pistol_p1_m1",
+          "hash": "82c751cf",
+          "locale": 16,
+          "text": "磷光爆破手槍"
+        },
+        {
+          "key": "loc_weapon_mark_flamer_p1_m1",
+          "hash": "a5333762",
+          "locale": 0,
+          "text": "Mk III"
+        },
+        {
+          "key": "loc_weapon_mark_flamer_p1_m1",
+          "hash": "a5333762",
+          "locale": 16,
+          "text": "Mk III"
+        },
+        {
+          "key": "loc_weapon_mark_forcestaff_p2_m1",
+          "hash": "d1986bf7",
+          "locale": 0,
+          "text": "Mk II"
+        },
+        {
+          "key": "loc_weapon_mark_forcestaff_p2_m1",
+          "hash": "d1986bf7",
+          "locale": 16,
+          "text": "Mk II"
+        },
+        {
+          "key": "loc_weapon_mark_phosphor_pistol_p1_m1",
+          "hash": "4a084207",
+          "locale": 0,
+          "text": "Mk XI"
+        },
+        {
+          "key": "loc_weapon_mark_phosphor_pistol_p1_m1",
+          "hash": "4a084207",
+          "locale": 16,
+          "text": "Mk XI"
+        },
+        {
+          "key": "loc_weapon_pattern_flamer_p1_m1",
+          "hash": "8c443428",
+          "locale": 0,
+          "text": "Artemia"
+        },
+        {
+          "key": "loc_weapon_pattern_flamer_p1_m1",
+          "hash": "8c443428",
+          "locale": 16,
+          "text": "奧特米亞"
+        },
+        {
+          "key": "loc_weapon_pattern_forcestaff_p2_m1",
+          "hash": "04a6318c",
+          "locale": 0,
+          "text": "Rifthaven"
+        },
+        {
+          "key": "loc_weapon_pattern_forcestaff_p2_m1",
+          "hash": "04a6318c",
+          "locale": 16,
+          "text": "裂隙避難所"
+        },
+        {
+          "key": "loc_weapon_pattern_phosphor_pistol_p1_m1",
+          "hash": "9b6d5431",
+          "locale": 0,
+          "text": "Branx"
+        },
+        {
+          "key": "loc_weapon_pattern_phosphor_pistol_p1_m1",
+          "hash": "9b6d5431",
+          "locale": 16,
+          "text": "布蘭克斯"
+        }
+      ]
+    }
+  },
+  "outside_intersection_review": {
+    "status": "reviewed_no_matching_exact_candidates",
+    "scope": "Current inventory exact name_key and trait-id candidate scan",
+    "bound_exact_variants": [
+      "weapon_trait_bespoke_flamer_p1_chance_to_explode_elites_on_kill",
+      "weapon_trait_bespoke_forcestaff_p2_chance_to_explode_elites_on_kill",
+      "weapon_trait_bespoke_phosphor_pistol_p1_chance_to_explode_elites_on_kill"
+    ],
+    "same_name_candidates_outside_inventory": [],
+    "same_name_candidates_in_unresolved": [],
+    "matching_unbound_trait_definitions": [],
+    "counts_reviewed": {
+      "bindings": 1168,
+      "unresolved": 58,
+      "definitions_not_bound": 105
+    },
+    "interpretation": "These are outside-intersection search results only; no candidate is labelled unused.",
+    "primary_exact_name_key_metadata_items": 3,
+    "primary_exact_outside_items": [],
+    "primary_confirmed": true
+  },
+  "name_translation_review": {
+    "name_key": "loc_trait_bespoke_chance_to_explode_elites_on_kill",
+    "name_hash": "2fb3b568",
+    "same_hash_en": "Showstopper",
+    "same_hash_zh_tw": "歎為觀止",
+    "formal_name": "歎為觀止",
+    "previous_glossary_spelling": "嘆為觀止",
+    "previous_spelling_preserved_as_alias": true,
+    "primary_raw_verified": true
+  },
+  "primary_review_of_agent_receipt": {
+    "name_and_description_hashes_corrected_by_agent_before_commit": true,
+    "agent_peer_receipt_sha256": "a35d1ab2961b1b14c018251749104f586d53c2917b45410c5f9c830f4fa0a94b"
+  }
+}

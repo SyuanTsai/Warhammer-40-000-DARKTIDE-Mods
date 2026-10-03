@@ -128,3 +128,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [驅魔者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-EXORCIST_ACCEPTANCE.json)
 
 - [行刑者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-EXECUTOR_ACCEPTANCE.json)
+
+- [歎為觀止全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SHOWSTOPPER_ACCEPTANCE.json)
