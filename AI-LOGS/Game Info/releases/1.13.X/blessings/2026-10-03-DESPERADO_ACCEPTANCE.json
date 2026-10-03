@@ -1,0 +1,434 @@
+{
+  "date": "2026-10-04",
+  "blessing": "desperado",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/亡命之徒/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_laspistol_p1_dodge_grants_critical_strike_chance"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "complete": true,
+    "accepted": true,
+    "issues": [],
+    "corrections": [],
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "review_scope": "Seven current Desperado formal markdown pages; root config and extension draft; existing fixed-SHA trait/event/UI/mode/special-push/formatter receipts; image receipt; shared map/navigation and exact remaining partition; current inventory/metadata/localization and common mechanism cache. Reused previously accepted immutable ProcBuff and critical chance evidence.",
+    "file_sha256": {
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-agent-config.json": "02580c641f9f8a46b66e9389c28c7d4fddf761f049054c09ce7b0afd791bf5f1",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-agent-evidence.json": "abedee08b8fb0ae77cae383352165e3b04c4df5e346915790390c5da472c9034",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-agent-hash-audit.json": "ff6420d6eae8a181843aa80e7fbca603da5d18e582d9a1ce535add8a3e3dec72",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-config.json": "15aa92b244e2377b38e975460e29e26ffa685b44ed53b621cc745dac634c1616",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-extension-draft.json": "63e34c94ec9185f3667188013120c510f0b0613e31880fb1b2a9f6e3fcf0bd2c",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-extension-raw-verification.json": "b4f7067ac85a0b5a897be2f537fc74bacd2a3bd59eac6a969392270ac689efb3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-image-upload-journal.json": "0c3bf0c5697f94032d1e1fcb101da47d82c068644f6ea5bc4640340e74eda71b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-image.json": "f214afebbd7d3dead10a6e04c87b18fcbc77356b520e524df3e0736f176babd2",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-preflight-formatter-change-ai-logs-validation.json": "2fe9f2642d81731fbd896e6ab13547465f22fb9da4a3bd214a3c9db92304510b",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-preflight-formatter-change-blessings-validation.json": "0a8da2ae557a7af742c16f4c23a1a04ca0dbf949e9347938107736e64e165a40",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-preflight-formatter-change-full-scan.json": "0aeecc40d7d5a5b2aab4f8e31e0f050e4c890efd6ed0c61f9dcef2cab33d7eb3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-preflight-formatter-change-game-info-validation.json": "d1760798e3d6c8fb53c95c984bfe41f6e611afd146f961cb180899ee9f08e355",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-preflight-formatter-change-prompt-validation.json": "5401c67bb86c7da5f8a3fff09c1987b9ed0a8b12cc2b0b218c2f02dc8e9f1932",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-formatter-rounding-review.json": "41fcbaf6a109d2a97171e2bb7b706a26e298a39dbb09ccc3c6ad4d008a9e1ca9",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-shot-mode-review.json": "a658b747e5dcd78d7995f83fac51b2a3aae38503df6ddbd82753e9a4164021f3",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-special-push-review.json": "12582fa3c15541b6fb7e159e4490ee2bd577792ce6ed11f3c9e3a2d09a080e59",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-traits-events-review.json": "6312b8a12fb0378c01f55e7a5c2deeb4292a5adc3b8ba90fdc105acef9ea3f01",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-ui-raw-verification.json": "f602613a15a84ee3fbf44a3ba988a867c6327d3f696464b468c3fc0528de5c7f",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-ui-review.json": "e889dce3af8d38d349e6867923b81656fee46d35e58bdf38aa91854c22978556",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-raw-verification.json": "b8cca1294317eae7340162a48e4742d4bb2b656eae0d81c9af52a4dcbaa23075",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/inventory.json": "df28ce6433d151555ae6fa39376aa59378202631483849d22db9c9e5e15a57b7",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/item_metadata.json": "ab47f7705562dedad695ec59f0e06e616e3340dbdab861ede48d909ee3606551",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/localized_keys.json": "45314f135acc27411f7908e43ea5ae55f8e8c2940a51518b76ca52b4a8c310a4",
+      "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json": "86c025137ef15e72cd7d6fcde9e260c22b165454dd280b1fe34159de479bad52",
+      "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json": "4b1490ba48c8ded6352ad140875d4922ef3e84f78903b4e1bb858cf577f2851d",
+      "Game Info/releases/1.13.X/blessings/data/BLESSING_WEAPON_MAP.json": "5460dda993575a26e98e4637b3d31cafd91c2484307531c5b7500cc810c2fa9a",
+      "Game Info/releases/1.13.X/blessings/entries/亡命之徒/DAMAGE_PERCENTAGE_REVIEW.md": "9cd9b1369844fb2008729de559cf805c42265630955cc854105a395fb9a16b7c",
+      "Game Info/releases/1.13.X/blessings/entries/亡命之徒/LOCALIZATION_COMPARISON.md": "5ab8a482766083d528cd794bb1e0fe1c91bb48f574162e1b53d63a43dc462b36",
+      "Game Info/releases/1.13.X/blessings/entries/亡命之徒/README.md": "3460d33eb12f303175001951cf98764ad429798ea064fe19f76a888e34057031",
+      "Game Info/releases/1.13.X/blessings/entries/亡命之徒/SOURCE_INDEX.md": "bbdc26b0e092c19478ca7f828811b13d4f3adda65283608bdcd419dd8675550c",
+      "Game Info/releases/1.13.X/blessings/entries/亡命之徒/TIER_VALUES.md": "9d6ebe1cf24605b3a8867e3463aee5db05ae3921060f89813617e88be256a1aa",
+      "Game Info/releases/1.13.X/blessings/entries/亡命之徒/WEAPON_COMPATIBILITY.md": "2f9f6a6016c395ce0524fd3241dc4f95fa727e6d88aa87027eaf659320d3f768",
+      "Game Info/releases/1.13.X/blessings/entries/亡命之徒/weapon_trait_bespoke_laspistol_p1_dodge_grants_critical_strike_chance.md": "79c4dcb0b6f6c342255614dfc75fce185cbd6e8ddfc299927cbeb0821e70f1f7",
+      "Game Info/releases/1.13.X/blessings/ranged/README.md": "065eebc6a68fd8ee40f96c54ba88475e36985266327811c94c4c7b974b116c20",
+      "Game Info/releases/1.13.X/blessings/README.md": "099b4d7e2e9897b6f57ca7fa5cc502423ddfcdcefa12cf966177c055ec84f1bf",
+      "Game Info/releases/1.13.X/blessings/SOURCE_INDEX.md": "13c559ffb8c97227a2061295df7d276d01b4fbea4a9e925661b88de01f106bc2"
+    },
+    "verified_summary": {
+      "formal_markdown_count": 7,
+      "variant_count": 1,
+      "binding_count": 1,
+      "binding": "重型鐳射手槍 奧克塔蘭MG Mk II (laspistol_p1_m1)",
+      "actual_ui_loc_ids": [
+        "loc_weapon_family_laspistol_p1_m1",
+        "loc_weapon_pattern_laspistol_p1_m1",
+        "loc_weapon_mark_laspistol_p1_m1"
+      ],
+      "metadata_restriction": {
+        "weapon_template_restriction": [],
+        "weapon_type_restriction": [
+          "laspistol_p1_m1"
+        ]
+      },
+      "trait_import": "laspistol_p1_m1 imports bespoke laspistol P1 traits; table.ukeys is appended to weapon_template.traits.",
+      "tiers": {
+        "defined": [
+          "I",
+          "II",
+          "III",
+          "IV"
+        ],
+        "bonus_percentage_points": [
+          12.5,
+          15,
+          17.5,
+          20
+        ],
+        "duration_seconds": [
+          6,
+          6,
+          6,
+          6
+        ]
+      },
+      "trigger": "The on_successful_dodge event, only while the bound item slot is wielded; a dodge-button press alone is not the event. Verified emitter paths include melee attacks, ranged dodge windows, nets and pounce/grab/charge events.",
+      "refresh": "No cooldown and no stacks. A valid dodge while active resets the six-second timer.",
+      "weapon_switch": "The timer continues while switched away; the item-slot-wielded conditional pauses this ProcBuff stat, and switching back before expiry restores its remaining duration. Other weapons do not receive the bonus.",
+      "crit_pool": "The bonus adds generic critical chance in percentage points, then the chance consumer clamps to 0–1, conditionally applies critical-chance-to-damage conversion, and rounds before PRD.",
+      "checked_examples": "Eight player examples match the declared assumptions: no-effect before first event; I–IV pools from 20%; IV refresh at t=4; switch-out at t=5 and return at t=8 before t=10 expiry; 90% pool clamped at 100%; expiry; and 32.5%/37.5% rounding to 33%/38%.",
+      "special_push": "Normal and Psyker push routes do not pass a critical flag; Attack.execute defaults is_critical_strike=false, so the generic chance does not make the special push critical.",
+      "raw": {
+        "name": "Desperado / 亡命之徒",
+        "name_hash": "54cd474d",
+        "description_hash": "3770d553",
+        "raw_resource_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026"
+      },
+      "icon": {
+        "icon_id": "weapon_trait_123",
+        "image_receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-image.json",
+        "display_verified": true,
+        "hash_verified": true
+      },
+      "outside_scope": "One exact bound variant/binding. Two exact same-localization-key metadata definitions (Dual Stubpistols P1 and Needle Pistol P1) have different trait IDs and are preserved outside this exact remaining-group scope; the unresolved dual-stubpistols candidate remains unresolved. No claim that these definitions are unused.",
+      "shared_integration": "Shared blessings README, shared SOURCE_INDEX and ranged README each link the formal Desperado entry; map has one Desperado row and the single Laspistol P1 trait/binding. Exact group is absent from remaining target partition as recorded by current config/draft.",
+      "common_cache": "Reused accepted fixed-SHA ProcBuff/critical consumer cache; new successful-dodge emission, own wrapper/tier, UI binding, shot modes and special push were already covered by primary receipts."
+    },
+    "verified_source_refs": [
+      {
+        "end": 420,
+        "start": 371,
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "claim": "Laspistol P1 trait tier overrides and format"
+      },
+      {
+        "end": 20,
+        "start": 20,
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "claim": "Laspistol P1 wrapper cloning shared dodge ProcBuff"
+      },
+      {
+        "end": 2467,
+        "start": 2455,
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua",
+        "claim": "Shared dodge ProcBuff template values"
+      },
+      {
+        "end": 253,
+        "start": 247,
+        "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+        "claim": "Active ProcBuff held condition gates proc stats"
+      },
+      {
+        "end": 212,
+        "start": 100,
+        "path": "scripts/extension_systems/character_state_machine/character_states/utilities/dodge.lua",
+        "claim": "Successful dodge event recognition and emission"
+      },
+      {
+        "end": 39,
+        "start": 13,
+        "path": "scripts/utilities/attack/critical_strike.lua",
+        "claim": "Critical chance clamp, generic addition and conversion"
+      },
+      {
+        "end": 10,
+        "start": 5,
+        "path": "scripts/utilities/attack/critical_strike.lua",
+        "claim": "Critical roll rounding and PRD"
+      },
+      {
+        "end": 16,
+        "start": 16,
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "claim": "Laspistol M1 imports bespoke Laspistol P1 traits"
+      },
+      {
+        "end": 860,
+        "start": 858,
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "claim": "Laspistol M1 obtains bespoke trait keys and appends them"
+      },
+      {
+        "end": 87,
+        "start": 80,
+        "path": "scripts/utilities/attack/push_attack.lua",
+        "claim": "Push attack invokes Attack.execute without a critical flag"
+      },
+      {
+        "end": 73,
+        "start": 45,
+        "path": "scripts/utilities/attack/attack.lua",
+        "claim": "Attack.execute defaults is_critical_strike to false"
+      }
+    ],
+    "review_receipts": {
+      "primary_traits": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-traits-events-review.json",
+      "primary_ui": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-ui-review.json",
+      "primary_modes": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-shot-mode-review.json",
+      "primary_push": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-special-push-review.json",
+      "primary_rounding": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-formatter-rounding-review.json",
+      "raw": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-ui-raw-verification.json",
+      "image": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-image.json"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/f38673e8-c0ad-4bfb-801b-05501784a1a5",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "desperado",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_123",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_123.png",
+      "attachment": "https://github.com/user-attachments/assets/f38673e8-c0ad-4bfb-801b-05501784a1a5",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5972589498",
+      "acquired_date": "2026-10-04",
+      "sha256": "ffeec4c6fb1b4cb6531ed0d973fbd3e778c8cdeff3a2cafd020781be07e4c81d",
+      "content_type": "image/png",
+      "size": 6249,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "亡命之徒祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "visual_review": "Root viewed original icon rendered over a dark inspection background; split dodge arrows and projectile intact, actual public PNG128x128 unchanged"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 14,
+      "tables": 13,
+      "rows": 176,
+      "lists": 111,
+      "scope": "focused"
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 39,
+      "source_files": 21,
+      "bindings": 327,
+      "variants": 171,
+      "formula_checks": "passed",
+      "scope": "focused",
+      "markdown_files": 11,
+      "source_object_cache": {
+        "cache_hits": 21,
+        "git_objects_read": 0
+      },
+      "global_shared_map_consistency": true
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "focused_links": {
+      "scope": "focused",
+      "markdown_files": 15,
+      "local_references": 436,
+      "remote_references": 251,
+      "errors": [],
+      "existing_errors": 0,
+      "new_errors": []
+    },
+    "full_scan_policy": {
+      "frequency": "after every three committed blessing items; immediately on validator/common-structure change",
+      "completed_items_in_current_round": 0,
+      "current_round": 5,
+      "latest_full_scan": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-preflight-formatter-change-full-scan.json",
+        "sha256": "0aeecc40d7d5a5b2aab4f8e31e0f050e4c890efd6ed0c61f9dcef2cab33d7eb3",
+        "trigger": "desperado-preflight-formatter-change"
+      },
+      "common_mechanism_cache": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-COMMON_MECHANISM_CACHE.json"
+    },
+    "immediate_full_scan_after_preflight_change": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-preflight-formatter-change-full-scan.json",
+      "sha256": "0aeecc40d7d5a5b2aab4f8e31e0f050e4c890efd6ed0c61f9dcef2cab33d7eb3",
+      "trigger": "desperado-preflight-formatter-change"
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 122,
+    "not_started_name_groups": 122,
+    "partial_name_groups": 0,
+    "remaining_variants": 434,
+    "remaining_bindings": 858,
+    "unresolved": 58,
+    "definitions_outside_intersection": 88
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "86c025137ef15e72cd7d6fcde9e260c22b165454dd280b1fe34159de479bad52"
+  },
+  "previous_local_commit": "d081cbeb62f5113539f1708a6cb7afe548a43e45",
+  "current_blessing_formula_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "scope": "Own full tier/wrapper/base; successful dodge event/callers; generic12.5/15/17.5/20pp6sec refresh/held conditions; actual hip/ADS full modes and normal/Psyker noncritical pushes; exact RAW/UI/mark restriction; current8examples including verified rounding",
+    "primary_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-traits-events-review.json",
+        "sha256": "6312b8a12fb0378c01f55e7a5c2deeb4292a5adc3b8ba90fdc105acef9ea3f01"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-ui-review.json",
+        "sha256": "e889dce3af8d38d349e6867923b81656fee46d35e58bdf38aa91854c22978556"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-shot-mode-review.json",
+        "sha256": "a658b747e5dcd78d7995f83fac51b2a3aae38503df6ddbd82753e9a4164021f3"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-special-push-review.json",
+        "sha256": "12582fa3c15541b6fb7e159e4490ee2bd577792ce6ed11f3c9e3a2d09a080e59"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-formatter-rounding-review.json",
+        "sha256": "41fcbaf6a109d2a97171e2bb7b706a26e298a39dbb09ccc3c6ad4d008a9e1ca9"
+      }
+    ],
+    "agent_research_receipts": [
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-agent-config.json",
+        "sha256": "02580c641f9f8a46b66e9389c28c7d4fddf761f049054c09ce7b0afd791bf5f1"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-agent-evidence.json",
+        "sha256": "abedee08b8fb0ae77cae383352165e3b04c4df5e346915790390c5da472c9034"
+      },
+      {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-agent-hash-audit.json",
+        "sha256": "ff6420d6eae8a181843aa80e7fbca603da5d18e582d9a1ce535add8a3e3dec72"
+      }
+    ],
+    "numeric_check": {
+      "I_to_IV_pp": [
+        12.5,
+        15,
+        17.5,
+        20
+      ],
+      "duration": 6,
+      "base20_IV_pool": 40,
+      "relative_increase_percent": 100,
+      "raw90_IV_clamped": 100,
+      "base20_I_III_roll": [
+        33,
+        38
+      ]
+    },
+    "common_cache_reuse": "Existing ProcBuff timer/stat-table/held gates and critical chance/PRD; new own successful-dodge emitter and numeric/rounding helper applicability directly checked",
+    "input_schema_correction": "Agent item kind weapon_trait replaced with actual bound weapon classification ranged; exact partial generation resumed without duplicate relation or resetting unrelated files",
+    "formal_presentation_postprocess": "Known I–IV stated directly; metadata restriction keys omitted from player prose; generic stat does not imply special pushes can critical",
+    "full_receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-extension-draft.json",
+      "sha256": "63e34c94ec9185f3667188013120c510f0b0613e31880fb1b2a9f6e3fcf0bd2c"
+    }
+  },
+  "ui_name_review": {
+    "complete": true,
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "binding_count": 1,
+    "receipt": {
+      "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/desperado-primary-ui-review.json",
+      "sha256": "e889dce3af8d38d349e6867923b81656fee46d35e58bdf38aa91854c22978556"
+    },
+    "bindings": [
+      {
+        "weapon_id": "laspistol_p1",
+        "mark_id": "laspistol_p1_m1",
+        "trait_id": "weapon_trait_bespoke_laspistol_p1_dodge_grants_critical_strike_chance",
+        "template_file": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "ukeys_line": 858,
+        "append_line": 860,
+        "loc_ids": [
+          "loc_weapon_family_laspistol_p1_m1",
+          "loc_weapon_pattern_laspistol_p1_m1",
+          "loc_weapon_mark_laspistol_p1_m1"
+        ],
+        "name_zh_tw": "重型鐳射手槍 奧克塔蘭MG Mk II",
+        "name_en": "Heavy Laspistol Accatran MG Mk II"
+      }
+    ]
+  },
+  "outside_intersection_review": {
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "inventory_counts": {
+      "display_name_groups": 167,
+      "trait_definitions_bound": 605,
+      "mark_bindings": 1185,
+      "unresolved": 58,
+      "definitions_outside_intersection": 88
+    },
+    "exact_name_key_bound_bindings": 1,
+    "exact_name_key_variants": 1,
+    "exact_name_key_metadata_items": [
+      "content/items/traits/bespoke_laspistol_p1/crit_chance_on_successful_dodge"
+    ],
+    "exact_outside_metadata_items": [
+      {
+        "item": "content/items/traits/bespoke_dual_stubpistols_p1/crit_chance_on_successful_dodge",
+        "trait_id": "weapon_trait_bespoke_dual_stubpistols_p1_dodge_grants_critical_strike_chance",
+        "name_key": "loc_trait_bespoke_crit_chance_on_successful_dodge",
+        "description_key": "loc_trait_bespoke_crit_chance_on_successful_dodge_desc",
+        "weapon_type_restriction": [
+          "dual_stubpistols_p1"
+        ],
+        "inventory_classification": "definitions_not_bound and definitions_outside_intersection; not a binding in this exact group",
+        "source_path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_stubpistols_p1.lua",
+        "source_line": 394,
+        "icon": "content/ui/textures/icons/traits/weapon_trait_123"
+      },
+      {
+        "item": "content/items/traits/bespoke_needlepistol_p1/crit_chance_on_successful_dodge",
+        "trait_id": "weapon_trait_bespoke_needlepistol_p1_dodge_grants_critical_strike_chance",
+        "name_key": "loc_trait_bespoke_crit_chance_on_successful_dodge",
+        "description_key": "loc_trait_bespoke_crit_chance_on_successful_dodge_desc",
+        "weapon_type_restriction": [
+          "needle_pistol_p1_m1"
+        ],
+        "inventory_classification": "definitions_not_bound and definitions_outside_intersection; not a binding in this exact group",
+        "source_path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua",
+        "source_line": 409,
+        "icon": "content/ui/textures/icons/traits/weapon_trait_123"
+      }
+    ],
+    "exact_unresolved_candidates": [
+      {
+        "kind": "trait_not_imported",
+        "item": "content/items/weapons/player/ranged/dual_stubpistols_p1_m1",
+        "trait_id": "weapon_trait_bespoke_dual_stubpistols_p1_dodge_grants_critical_strike_chance",
+        "note": "One of the same-localization-key candidates; retain in unresolved, do not count as a Desperado binding."
+      }
+    ],
+    "boundary": "Only the Laspistol P1 M1 trait ID is in this remaining name-key group. The Dual Stubpistols and Needle Pistol definitions reuse the same display/description localization keys but have different trait IDs and remain outside this one-variant scope. No claim is made that the outside definitions are unused."
+  },
+  "execution_batch_started_on": "2026-10-03"
+}
