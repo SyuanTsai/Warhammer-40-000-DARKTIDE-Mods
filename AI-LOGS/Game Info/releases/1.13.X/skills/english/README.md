@@ -320,3 +320,5 @@ Five-item checkpoint (skills 113–117): 844 seconds (14m 04s), measured between
 - [Arbites passives 161–165](arbites_passives_161_165.json): Rapid Movement, Final Warning, Priority Endowment, Cower, Miscreants! and Justified Measures. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
 
 - [Arbites skills 166–170](arbites_skills_166_170.json): Suppression Force, Concussive, Target the Weak, Retaliatory Force and base Arbites Grenade. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
+
+- [Arbites class completion](arbites_class.json): 91 mechanism documents and 97 mapped English pages complete. Previous skill acceptance reused; six shared pages checked once, with 86 public images passed. Existing runtime caveats remain.

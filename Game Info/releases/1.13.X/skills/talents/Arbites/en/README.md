@@ -2,6 +2,8 @@
 
 [繁體中文](../README.md) | [Sources and technical index](SOURCE_INDEX.md) | [Skills](../../../README.en.md) | [Version information](../../../../README.md)
 
+[Character base effects](BASE_EFFECTS.md)
+
 <a id="talent-index"></a>
 
 ## Talent index

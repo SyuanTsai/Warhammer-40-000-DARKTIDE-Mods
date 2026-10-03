@@ -2,7 +2,7 @@
 
 [繁體中文](../DAMAGE_PERCENTAGE_REVIEW.md) | [Player descriptions](README.md) | [Technical index](SOURCE_INDEX.md)
 
-Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. Entries distinguish the actual quantity and calculation assumptions. Examples are static derivations, not in-game measurements.
+Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. Entries distinguish Damage from Power, additional critical damage, same-stage addition from separate multiplication, speed from action time, maximum Toughness from its deficit, and natural countdown from additional cooldown recovery. Examples are static derivations, not in-game measurements.
 
 | Talent | Quantity and calculation | Conclusion |
 |---|---|---|

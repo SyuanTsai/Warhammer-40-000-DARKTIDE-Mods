@@ -2,9 +2,13 @@
 
 [繁體中文](../SOURCE_INDEX.md) | [Player descriptions](README.md) | [Version and evidence limits](../../../../README.md)
 
+[Character base effects](BASE_EFFECTS.md) | [Definitions not directly referenced](UNUSED_DEFINITIONS.md)
+
 [Original English comparison](LOCALIZATION_COMPARISON.md) | [Percentage and calculation review](DAMAGE_PERCENTAGE_REVIEW.md)
 
 Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The current tree has 86 selectable one-point nodes; a build can allocate at most 30 points. Internal tree version 19 is not the game release number. [Class and base talents](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/archetype/archetypes/adamant_archetype.lua#L50-L74); [Tree settings](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/ui/views/talent_builder_view/layouts/adamant_tree.lua#L3-L10).
+
+Names use the same-build English resources. Mechanisms reuse the fixed-version evidence and have not been tested in game.
 
 | Talent / code identifier | Category |
 |---|---|
@@ -94,8 +98,13 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Concussive](adamant_melee_weakspot_hits_count_as_stagger.md) / `adamant_melee_weakspot_hits_count_as_stagger` | Passive talent |
 | [Target the Weak](adamant_staggering_enemies_take_more_damage.md) / `adamant_staggering_enemies_take_more_damage` | Passive talent |
 | [Retaliatory Force](adamant_perfect_block_damage_boost.md) / `adamant_perfect_block_damage_boost` | Passive talent |
-| [Arbites Grenade](adamant_grenade.md) / `adamant_grenade` | Base effect |
+
+## Base effects
+
+| Effect / code identifier | Category |
+|---|---|
 | [Nuncio-Aquila](adamant_area_buff_drone.md) / `adamant_area_buff_drone` | Base effect |
 | [Cyber-Mastiff tag command](adamant_command_dog_with_tag.md) / `adamant_command_dog_with_tag` | Base effect |
 | [Companion Aura](adamant_companion_aura.md) / `adamant_companion_aura` | Base effect |
 | [Companion Damage per Level](adamant_companion_damage_per_level.md) / `adamant_companion_damage_per_level` | Base effect |
+| [Arbites Grenade](adamant_grenade.md) / `adamant_grenade` | Base effect |

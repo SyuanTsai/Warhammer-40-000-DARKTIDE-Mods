@@ -51,9 +51,20 @@
       "kind": "class_support",
       "chinese_blob_sha": "a098d9dff033760304ece6356777b0f0e165c5b0",
       "chinese_sha256": "0661d52afc55b2792d3fc35b6aeae5e564974af07c8792da52553c94b85d74f9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_area_buff_drone",
+        "adamant_command_dog_with_tag",
+        "adamant_companion_aura",
+        "adamant_companion_damage_per_level",
+        "adamant_grenade"
+      ],
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/DAMAGE_PERCENTAGE_REVIEW.md",
@@ -62,7 +73,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "95f8069b9c6fc7bb809f8b6b3f5007b6e2ddd493",
       "chinese_sha256": "802f767b073b1351f3c577fbe69e0ea3f9936580bf7b2fb3514225f74a825d98",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "adamant_whistle",
         "adamant_grenade_improved",
@@ -150,9 +161,18 @@
         "adamant_melee_weakspot_hits_count_as_stagger",
         "adamant_staggering_enemies_take_more_damage",
         "adamant_perfect_block_damage_boost",
-        "adamant_grenade"
+        "adamant_grenade",
+        "adamant_area_buff_drone",
+        "adamant_command_dog_with_tag",
+        "adamant_companion_aura",
+        "adamant_companion_damage_per_level"
       ],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/LOCALIZATION_COMPARISON.md",
@@ -161,7 +181,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "241d75819cd3698b42a3ebcd53169f54ec43068e",
       "chinese_sha256": "b618648ec1c480d54191ebfac6f0537de806ebb190996c63b0296f0aadcbf2ab",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "adamant_whistle",
         "adamant_grenade_improved",
@@ -249,9 +269,18 @@
         "adamant_melee_weakspot_hits_count_as_stagger",
         "adamant_staggering_enemies_take_more_damage",
         "adamant_perfect_block_damage_boost",
-        "adamant_grenade"
+        "adamant_grenade",
+        "adamant_area_buff_drone",
+        "adamant_command_dog_with_tag",
+        "adamant_companion_aura",
+        "adamant_companion_damage_per_level"
       ],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/README.md",
@@ -260,7 +289,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "4ebe81fcba06b8b18c36abeecf0cbb07047ee9a7",
       "chinese_sha256": "e7f56b238087a4d8fcddaf3270ce7f92f024aeec40495b81a6a79ba5b0a0057d",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "adamant_whistle",
         "adamant_grenade_improved",
@@ -348,9 +377,18 @@
         "adamant_melee_weakspot_hits_count_as_stagger",
         "adamant_staggering_enemies_take_more_damage",
         "adamant_perfect_block_damage_boost",
-        "adamant_grenade"
+        "adamant_grenade",
+        "adamant_area_buff_drone",
+        "adamant_command_dog_with_tag",
+        "adamant_companion_aura",
+        "adamant_companion_damage_per_level"
       ],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/SOURCE_INDEX.md",
@@ -359,7 +397,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "d1ba52251feec900b0b04bf4d9758e7d77307a03",
       "chinese_sha256": "d27b68355984f408df759a0b35b2860f653a3c45bb8db04f9c8c904a42409792",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "adamant_whistle",
         "adamant_grenade_improved",
@@ -447,9 +485,18 @@
         "adamant_melee_weakspot_hits_count_as_stagger",
         "adamant_staggering_enemies_take_more_damage",
         "adamant_perfect_block_damage_boost",
-        "adamant_grenade"
+        "adamant_grenade",
+        "adamant_area_buff_drone",
+        "adamant_command_dog_with_tag",
+        "adamant_companion_aura",
+        "adamant_companion_damage_per_level"
       ],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/UNUSED_DEFINITIONS.md",
@@ -458,9 +505,14 @@
       "kind": "class_support",
       "chinese_blob_sha": "ab63211254d53113ba1379bd383acec1e15f39d5",
       "chinese_sha256": "c8e7bc354edd0d4108425046449bfb90a44b457fb8f663422012d2508216b1e1",
-      "status": "pending",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [],
-      "checks": []
+      "checks": [
+        "completed_shared_text",
+        "shared_Markdown_and_local_links",
+        "shared_structure_and_images"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_ammo_belt.md",
@@ -487,9 +539,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c2c8fecad79515043f821aee49095fe4a01701cb",
       "chinese_sha256": "beae954a688037dc0c4c43f5eb70bca7dfa578cf40e7a68db5f134baf2513193",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_area_buff_drone"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_area_buff_drone_improved.md",
@@ -660,9 +719,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "979887913a00d6558c10c54fd24ed24f7cc45845",
       "chinese_sha256": "65e3c80c30ff9cb12d0f42fe02f6fc1aca0df875f8cd7a7fdb91b6253b145c28",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_command_dog_with_tag"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_companion_aura.md",
@@ -671,9 +737,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "aac75467757254dc9663c8f92a769ec4ab00f2b7",
       "chinese_sha256": "5e02fbcacc38b8c82722b8d2a8a495a34f349f611726ff27fa2b482584d340ec",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_companion_aura"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_companion_coherency.md",
@@ -700,9 +773,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "0614752c6a8818b34fee200335f90b051ed99be0",
       "chinese_sha256": "a4e515b3f75381f60a216bdecedda7d9a27f45a249b18bf473d84ea55169b9b9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_companion_damage_per_level"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_companion_focus_elite.md",
@@ -11503,6 +11583,38 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_skills_166_170.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_grenade.md"
+    },
+    {
+      "id": "adamant_area_buff_drone",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_area_buff_drone.md"
+    },
+    {
+      "id": "adamant_command_dog_with_tag",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_command_dog_with_tag.md"
+    },
+    {
+      "id": "adamant_companion_aura",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_companion_aura.md"
+    },
+    {
+      "id": "adamant_companion_damage_per_level",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_companion_damage_per_level.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -1,5 +1,7 @@
 # 法務官：目前技能樹與職業基礎清單未直接引用的定義
 
+[English](en/UNUSED_DEFINITIONS.md)
+
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
 [固定來源版本](https://github.com/Aussiemon/Darktide-Source-Code/tree/7e662fcda16219d775b84af50322be2e9cd9d62e)；完整 SHA：`7e662fcda16219d775b84af50322be2e9cd9d62e`。

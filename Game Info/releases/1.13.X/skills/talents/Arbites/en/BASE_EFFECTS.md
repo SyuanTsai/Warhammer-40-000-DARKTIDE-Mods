@@ -4,18 +4,6 @@
 
 These effects come from the base character configuration. Combat abilities, Blitzes and auras can be replaced by the loadout.
 
-<a id="adamant_grenade"></a>
-
-## Arbites Grenade
-
-- **Detonation and range**: Detonates on impact after being thrown. The explosion radius is 10m, with higher close damage in the central 2.5m and damage falloff farther out.
-
-- **Damage example**: Isolating the central explosion armour stage, base damage 1,500 gives 1,500 × 1 = 1,500 against Unarmoured, 1,500 × 0.5 = 750 against Flak Armour and 1,500 × 0.2 = 300 against Carapace Armour. Hit location, blast obstruction and other damage modifiers still affect actual damage.
-
-- **Capacity and replenishment**: Carry up to 3 grenades; each throw consumes one. The base ability has no timed replenishment. Selecting the improved talent-tree version raises capacity to 4.
-
-[Source evidence and example assumptions](adamant_grenade.md)
-
 <a id="adamant_area_buff_drone"></a>
 
 ## Nuncio-Aquila
@@ -59,3 +47,15 @@ These effects come from the base character configuration. Combat abilities, Blit
 - **Damage example**: With other conditions unchanged, an attack dealing 100 at low level becomes 100 × (1 + 2 ÷ 6) ≈ 133.33 at level 10 and 100 × 2 = 200 at level 30. Bleeding damage does not receive this multiplier.
 
 [Source evidence and example assumptions](adamant_companion_damage_per_level.md)
+
+<a id="adamant_grenade"></a>
+
+## Arbites Grenade
+
+- **Detonation and range**: Detonates on impact after being thrown. The explosion radius is 10m, with higher close damage in the central 2.5m and damage falloff farther out.
+
+- **Damage example**: Isolating the central explosion armour stage, base damage 1,500 gives 1,500 × 1 = 1,500 against Unarmoured, 1,500 × 0.5 = 750 against Flak Armour and 1,500 × 0.2 = 300 against Carapace Armour. Hit location, blast obstruction and other damage modifiers still affect actual damage.
+
+- **Capacity and replenishment**: Carry up to 3 grenades; each throw consumes one. The base ability has no timed replenishment. Selecting the improved talent-tree version raises capacity to 4.
+
+[Source evidence and example assumptions](adamant_grenade.md)

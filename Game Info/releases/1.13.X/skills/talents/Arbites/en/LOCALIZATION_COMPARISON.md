@@ -4,6 +4,8 @@
 
 Implementation: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. English: Steam Build `25606770`, `content/localization/ui`, resource hash `63564edcb7c3c5ee`, language `en` (code `0`). English UI export SHA-256 `fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668`.
 
+The local UI resource was extracted on 2026-10-02. Full source text remains in the Git-ignored version archive `source/SteamBuild_25606770_1.13.1/`. English and implementation sources both correspond to 1.13.1; runtime differences still require an in-game check.
+
 Judge English meaning against existing fixed-version mechanism evidence. Missing details are supplementary; only explicit English contradictions receive a player erratum. Chinese verdicts are not inherited. Placeholder substitution is reconstruction rather than an observed game screen.
 
 <a id="adamant_whistle"></a>
@@ -1314,4 +1316,4 @@ Full raw text and formatting: [source evidence](adamant_companion_damage_per_lev
 
 ## Comparison totals
 
-The 470 listed rules comprise **233 Consistent**, **1 Explicit contradiction**, **223 Not covered by the description**, **0 No corresponding implementation evidence found** and **13 Cannot confirm**. The explicit English contradiction concerns the melee attack-interval value in Fear of Justice. These totals apply only to the listed rules.
+The 487 listed rules comprise **239 Consistent**, **1 Explicit contradiction**, **234 Not covered by the description**, **0 No corresponding implementation evidence found** and **13 Cannot confirm**. The explicit English contradiction concerns the melee attack-interval value in Fear of Justice. These totals apply only to the listed rules.
