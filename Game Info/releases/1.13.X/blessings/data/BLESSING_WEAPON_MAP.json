@@ -610,6 +610,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/f38673e8-c0ad-4bfb-801b-05501784a1a5",
       "effect": "成功閃避後，爆擊率提高 12.5／15／17.5／20 個百分點，持續 6 秒；四級數值各自為 I／II／III／IV。"
+    },
+    {
+      "id": "concentrated-fire",
+      "name_zh_tw": "集中火力",
+      "name_en": "Concentrated Fire",
+      "name_key": "loc_trait_bespoke_crit_chance_on_chained_weakspot_hits",
+      "description_key": "loc_trait_bespoke_crit_chance_on_chained_weakspot_hits_desc",
+      "name_hash": "cc0b463d",
+      "description_hash": "4c483691",
+      "page": "entries/集中火力/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/b66dd253-275d-4c41-8ec0-8543458fa629",
+      "effect": "持用這把手槍連續命中遠程弱點時，每次射擊結果增加一層一般爆擊率；最高五層，下一次非弱點射擊結果立即重設。"
     }
   ],
   "weapons": [
@@ -11446,6 +11459,143 @@
       "icon": "https://github.com/user-attachments/assets/f38673e8-c0ad-4bfb-801b-05501784a1a5",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_123",
       "effect": "成功閃避後，爆擊率提高 12.5／15／17.5／20 個百分點，持續 6 秒；四級數值各自為 I／II／III／IV。"
+    },
+    {
+      "id": "weapon_trait_bespoke_laspistol_p1_chained_weakspot_hits_increases_crit_chance",
+      "blessing_id": "concentrated-fire",
+      "weapon_id": "laspistol_p1",
+      "page": "entries/集中火力/weapon_trait_bespoke_laspistol_p1_chained_weakspot_hits_increases_crit_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "per_effective_stack_critical_strike_chance_fraction_by_tier": [
+          0.02,
+          0.03,
+          0.04,
+          0.05
+        ],
+        "per_effective_stack_percentage_points_by_tier": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "maximum_effective_stacks": 5,
+        "maximum_additive_bonus_fraction_by_tier": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "maximum_additive_bonus_percentage_points_by_tier": [
+          10,
+          15,
+          20,
+          25
+        ],
+        "initial_effective_stacks": 0,
+        "duration_seconds": null,
+        "time_based_decay": false,
+        "reset_on_next_non_weakspot_shoot_event": true,
+        "stacks_added_per_weakspot_shoot_event": 1,
+        "stat_key": "critical_strike_chance",
+        "marks": [
+          "laspistol_p1_m1"
+        ],
+        "metadata_mark_restriction": [
+          "laspistol_p1_m1"
+        ],
+        "bonus_active_only_while_item_slot_wielded": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "start_line": 421,
+        "end_line": 472
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 25
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_on_chained_weakspot_hits_desc",
+      "description_hash": "4c483691",
+      "icon": "https://github.com/user-attachments/assets/b66dd253-275d-4c41-8ec0-8543458fa629",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_110",
+      "effect": "奧克塔蘭MG Mk II：每次遠程弱點射擊結果加一層；依 I–IV 每層 +2/+3/+4/+5 個百分點，最多五層。下一個非弱點射擊結果重設；無時間衰減。"
+    },
+    {
+      "id": "weapon_trait_bespoke_needlepistol_p1_chained_weakspot_hits_increases_crit_chance",
+      "blessing_id": "concentrated-fire",
+      "weapon_id": "needlepistol_p1",
+      "page": "entries/集中火力/weapon_trait_bespoke_needlepistol_p1_chained_weakspot_hits_increases_crit_chance.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "per_effective_stack_critical_strike_chance_fraction_by_tier": [
+          0.02,
+          0.03,
+          0.04,
+          0.05
+        ],
+        "per_effective_stack_percentage_points_by_tier": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "maximum_effective_stacks": 5,
+        "maximum_additive_bonus_fraction_by_tier": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "maximum_additive_bonus_percentage_points_by_tier": [
+          10,
+          15,
+          20,
+          25
+        ],
+        "initial_effective_stacks": 0,
+        "duration_seconds": null,
+        "time_based_decay": false,
+        "reset_on_next_non_weakspot_shoot_event": true,
+        "stacks_added_per_weakspot_shoot_event": 1,
+        "stat_key": "critical_strike_chance",
+        "marks": [
+          "needlepistol_p1_m1",
+          "needlepistol_p1_m2"
+        ],
+        "metadata_weapon_type_restriction": [
+          "needlepistol_p1"
+        ],
+        "bonus_active_only_while_item_slot_wielded": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua",
+        "start_line": 359,
+        "end_line": 408
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_needlepistol_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_on_chained_weakspot_hits_desc",
+      "description_hash": "4c483691",
+      "icon": "https://github.com/user-attachments/assets/b66dd253-275d-4c41-8ec0-8543458fa629",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_110",
+      "effect": "布蘭克斯 MkVI 與 MKII：普通、瞄準及化學模式射擊依每發弱點結果加一層，I–IV 每層 +2/+3/+4/+5 個百分點，最多五層。下一個非弱點射擊結果重設；無時間衰減。"
     }
   ],
   "bindings": [
@@ -16025,6 +16175,48 @@
         "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
         "import_line": 16,
         "append_line": 860
+      }
+    },
+    {
+      "blessing_id": "concentrated-fire",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_chained_weakspot_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/crit_chance_on_chained_weakspot_hits",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 860
+      }
+    },
+    {
+      "blessing_id": "concentrated-fire",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_chained_weakspot_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/crit_chance_on_chained_weakspot_hits",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 793
+      }
+    },
+    {
+      "blessing_id": "concentrated-fire",
+      "weapon_id": "needlepistol_p1",
+      "mark_id": "needlepistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_needlepistol_p1_chained_weakspot_hits_increases_crit_chance",
+      "trait_item": "content/items/traits/bespoke_needlepistol_p1/crit_chance_on_chained_weakspot_hits",
+      "trait_category": "bespoke_needlepistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/needlepistols/needlepistol_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 790
       }
     }
   ]

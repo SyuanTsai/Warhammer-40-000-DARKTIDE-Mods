@@ -51,3 +51,4 @@
 | [克魯錫安輪盤](entries/克魯錫安輪盤/README.md) | [來源索引](entries/克魯錫安輪盤/SOURCE_INDEX.md) |
 | [粉碎（Pulverise）](entries/粉碎（Pulverise）/README.md) | [來源索引](entries/粉碎（Pulverise）/SOURCE_INDEX.md) |
 | [亡命之徒](entries/亡命之徒/README.md) | [來源索引](entries/亡命之徒/SOURCE_INDEX.md) |
+| [集中火力](entries/集中火力/README.md) | [來源索引](entries/集中火力/SOURCE_INDEX.md) |

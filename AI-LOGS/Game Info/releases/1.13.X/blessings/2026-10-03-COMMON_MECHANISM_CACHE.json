@@ -596,6 +596,70 @@
         "Own caller precision and value must be checked; critical consumer passes precision2 for the clamped probability."
       ],
       "reuse_rule": "Reuse fixed-SHA verified helper only after own descriptor/caller applicability check."
+    },
+    {
+      "id": "parent-trait-overrides-child",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/buff.lua",
+      "start": 145,
+      "end": 184,
+      "content_sha256": "7ed5453aed865a404a4b2489c76f0aac927d589c49b71fc3b372c839cd2b6979",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L145-L184",
+      "review": "Sol / xhigh directly reviewed fixed-source blocks during current Concentrated Fire primary review",
+      "conclusion": "Child context.parent_buff_template lets the matching parent trait rarity overrides merge into the child override_data.",
+      "applicability": [
+        "Verify the child creator supplies the actual parent template name, rarity and item slot; only matching names merge. Verify whether each stat key exists in the child template and which conditional table is consumed."
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "parent-placeholder-stack",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/weapon_trait_parent_proc_buff.lua",
+      "start": 10,
+      "end": 39,
+      "content_sha256": "85afa27668e56938ab20085f56b9e3690aa294d4030928f8d319fa2c565b5427",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/weapon_trait_parent_proc_buff.lua#L10-L39",
+      "review": "Sol / xhigh directly reviewed fixed-source blocks during current Concentrated Fire primary review",
+      "conclusion": "Server parent initialization adds one child placeholder. Capacity includes the child stack offset; the placeholder effect depends on the actual offset.",
+      "applicability": [
+        "Verify own parent class inheritance, child template, max_stacks and stack_offset; do not treat the placeholder as an effective player stack."
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "parent-child-slot-context",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/weapon_trait_parent_proc_buff.lua",
+      "start": 134,
+      "end": 163,
+      "content_sha256": "b86f1d920136a94f57a7b019923b0c855a24da7715ed6c741c1c042304b20f7b",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/weapon_trait_parent_proc_buff.lua#L134-L163",
+      "review": "Sol / xhigh directly reviewed fixed-source blocks during current Concentrated Fire primary review",
+      "conclusion": "Parent creates externally controlled child buffs with its item_slot_name and parent_buff_template, and starts a removal timer only when child_duration is configured.",
+      "applicability": [
+        "Verify own child_duration override/template and child conditional stat gate; absence of duration does not exclude explicit clear/reset/destroy events."
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "activated-parent-hit-clear",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/buff/buffs/weapon_trait_activated_parent_proc_buff.lua",
+      "start": 38,
+      "end": 77,
+      "content_sha256": "5ff8029184855e4ba3d5b0a290f39d4a20f178eac5496a60e9c1cc74f20b23e9",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/weapon_trait_activated_parent_proc_buff.lua#L38-L77",
+      "review": "Sol / xhigh directly reviewed fixed-source blocks during current Concentrated Fire primary review",
+      "conclusion": "A checked, condition-valid parent event updates active using its own predicate, adds children only when active, and otherwise removes extras while keeping one placeholder.",
+      "applicability": [
+        "Verify own event chance, check_proc_func, conditional_proc_func, active_proc_func and child-add rule. The activation predicate is specific to the current blessing."
+      ],
+      "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
     }
   ],
   "cache_status": "common blocks reviewed; no blessing completion asserted",

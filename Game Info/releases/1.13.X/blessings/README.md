@@ -53,5 +53,6 @@
 | <img src="https://github.com/user-attachments/assets/590356c8-aa5c-40dc-8cf5-ee127c7925ab" width="32" height="32" alt="克魯錫安輪盤祝福圖示"> [克魯錫安輪盤](entries/克魯錫安輪盤/README.md)<br>- Crucian Roulette<br>[完整說明](entries/克魯錫安輪盤/README.md) | <ul><li>持用裝有此祝福的武器時，依彈匣消耗數提高通用爆擊機率；換彈期間或彈匣打空時加成歸零。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/aa25ecae-6e09-442c-9eed-d14e3cadc750" width="32" height="32" alt="粉碎（Pulverise）祝福圖示"> [粉碎（Pulverise）](entries/粉碎（Pulverise）/README.md)<br>- Pulverise<br>[完整說明](entries/粉碎（Pulverise）/README.md) | <ul><li>持用擲彈兵臂鎧時，以這把臂鎧的近戰攻擊擊殺敵人後，爆擊率提高10／15／20／25個百分點，持續3秒。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/f38673e8-c0ad-4bfb-801b-05501784a1a5" width="32" height="32" alt="亡命之徒祝福圖示"> [亡命之徒](entries/亡命之徒/README.md)<br>- Desperado<br>[完整說明](entries/亡命之徒/README.md) | <ul><li>成功閃避後，爆擊率提高 12.5／15／17.5／20 個百分點，持續 6 秒；四級數值各自為 I／II／III／IV。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/b66dd253-275d-4c41-8ec0-8543458fa629" width="32" height="32" alt="集中火力祝福圖示"> [集中火力](entries/集中火力/README.md)<br>- Concentrated Fire<br>[完整說明](entries/集中火力/README.md) | <ul><li>持用這把手槍連續命中遠程弱點時，每次射擊結果增加一層一般爆擊率；最高五層，下一次非弱點射擊結果立即重設。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)
