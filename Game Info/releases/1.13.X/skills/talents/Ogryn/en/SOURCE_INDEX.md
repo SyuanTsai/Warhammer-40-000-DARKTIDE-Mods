@@ -42,3 +42,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Heat of Battle](ogryn_blo_wield_speed.md) / `ogryn_blo_wield_speed` | Keystone |
 | [Back Off!](ogryn_blo_melee.md) / `ogryn_blo_melee` | Keystone |
 | [Don't Feel a Thing](ogryn_heavy_hitter_tdr.md) / `ogryn_heavy_hitter_tdr` | Keystone |
+| [Great Cleaver](ogryn_heavy_hitter_cleave.md) / `ogryn_heavy_hitter_cleave` | Keystone |

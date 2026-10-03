@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/a9ec95cc-0b91-4558-81b5-faefcf1207d7" width="32" height="32" alt="Heat of Battle talent icon"> [Heat of Battle](#ogryn_blo_wield_speed) | <ul><li>Heat of Battle adds 1.5% ranged fire rate per Burst Limiter Override stack.</li><li>Uses the existing ranged-kill stacks, maximum 10, with refreshed 10s duration; full stacks grant 15% fire rate.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/5c8fc9b0-2f06-4311-87f7-511d4c6ce6d5" width="32" height="32" alt="Back Off! talent icon"> [Back Off!](#ogryn_blo_melee) | <ul><li>Melee kills increase the next shot’s Lucky Bullet chance by 10 percentage points per stack.</li><li>Maximum 10 stacks; the next shot clears them, even if Lucky Bullet makes that shot free.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/83bead6b-330f-466e-8c25-c7d383843b1c" width="32" height="32" alt="Don't Feel a Thing talent icon"> [Don't Feel a Thing](#ogryn_heavy_hitter_tdr) | <ul><li>Each Heavy Hitter stack grants 1.25% Toughness damage reduction.</li><li>At 8 stacks, Toughness damage is reduced by 10%.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/9c42800c-a3bc-469c-be04-1231b90bca3b" width="32" height="32" alt="Great Cleaver talent icon"> [Great Cleaver](#ogryn_heavy_hitter_cleave) | <ul><li>Each Heavy Hitter stack grants +12.5% melee cleave capacity.</li><li>At 8 stacks, capacity doubles; this does not directly determine the number of enemies hit.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -580,3 +581,21 @@
 - **Example**: At 4 stacks the multiplier is 0.95, turning 100 Toughness damage into 95. At 8 stacks, 100 becomes 90.
 
 [Details](ogryn_heavy_hitter_tdr.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_heavy_hitter_cleave"></a>
+
+### Great Cleaver
+
+<img src="https://github.com/user-attachments/assets/9c42800c-a3bc-469c-be04-1231b90bca3b" width="72" height="72" alt="Great Cleaver talent icon">
+
+- **Per stack**: Each Heavy Hitter stack increases melee cleave capacity by 12.5%.
+
+- **Maximum**: At 8 stacks, the increase reaches 100%, doubling the base cleave capacity. This bonus follows the current Heavy Hitter stack count.
+
+- **Limit**: Enemies consume different amounts of cleave mass. Doubling capacity does not guarantee hitting twice as many enemies.
+
+- **Example**: At 4 stacks, cleave capacity increases by 50%. At 8 stacks, a base capacity of 10 becomes `10 × 2 = 20`.
+
+[Details](ogryn_heavy_hitter_cleave.md) · [Back to index](#talent-index)
