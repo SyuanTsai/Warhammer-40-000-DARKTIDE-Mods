@@ -1167,6 +1167,18 @@ Full raw template and formatting: [source evidence](ogryn_melee_damage_coherency
 | Value and recipients | +7.5% ... for you and Allies in Coherency.; `ui / loc_talent_ogryn_2_base_4_description_new / 36195984` | melee_damage 0.075; new_chain includes the owner and linked Coherency allies. [Fixed source and line references](ogryn_melee_damage_coherency.md#fixed-source-evidence) | Consistent | The independently read English agrees with the value and recipients. |
 | Replacement and additive calculation | No priority or combined-damage formula is stated.; `ui / loc_talent_ogryn_2_base_4_description_new / 36195984` | ogryn_aura priority 1/max_stacks 1 is replaced by the upgraded priority-2 10% version or other aura choices; it does not become 17.5%. Base 100 →107.5, or 127.5 with same-stage +20%. [Fixed source and line references](ogryn_melee_damage_coherency.md#fixed-source-evidence) | Not covered by the description | These accepted aura and calculation details supplement the English. |
 
+
+<a id="ogryn_helping_hand"></a>
+
+## Loyal Protector (base effect)
+
+Full raw template and formatting: [source evidence](ogryn_helping_hand.md#original-english-template-and-reconstruction). Name hash `acede63a`. Every row uses `ui / loc_talent_bonebreaker_revive_uninterruptible_desc / bdd83157`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Revive/assist interruption | Being damaged while Reviving or Assisting allies no longer interrupts you.; `ui / loc_talent_bonebreaker_revive_uninterruptible_desc / bdd83157` | ogryn_passive_revive grants uninterruptible during pull_up/remove_net/rescue/revive interactions. [Fixed source and line references](ogryn_helping_hand.md#fixed-source-evidence) | Consistent | The independently read English agrees with rescue-interaction protection. |
+| Push reduction and immunity limits | No push-speed percentage, rescue-speed bonus or damage immunity is stated.; `ui / loc_talent_bonebreaker_revive_uninterruptible_desc / bdd83157` | push_speed_modifier −0.9 reduces incoming push speed 10 →1; it does not speed up pushing enemies. The old +25% revive/assist template is absent. Uninterruptible is not damage immunity or guaranteed immunity to every special disable; those have not been individually tested. [Fixed source and line references](ogryn_helping_hand.md#fixed-source-evidence) | Not covered by the description | These accepted scope and calculation details supplement the English. |
+
 ## Comparison totals
 
 The 264 listed rules comprise **114 Consistent**, **4 Explicit contradictions**, **139 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

@@ -47,3 +47,15 @@ These effects come from the class's base configuration. Combat Abilities, Blitze
 - **Replacement**: Selecting the upgraded melee aura changes the value to 10%; the two do not add to 17.5%. Other aura choices also replace this base aura.
 
 [Source evidence and example assumptions](ogryn_melee_damage_coherency.md)
+
+---
+
+<a id="ogryn_helping_hand"></a>
+
+## Loyal Protector
+
+- **Rescue protection**: Gain an uninterruptible effect while reviving a downed ally, pulling up a hanging ally, removing a net or rescuing a captured ally. It ends when the rescue interaction ends.
+
+- **Push example**: While rescuing, incoming push speed falls to 10% of its original value. With other conditions unchanged, speed 10 becomes `10 × (1 − 90%) = 1`. This does not grant damage immunity.
+
+[Source evidence and example assumptions](ogryn_helping_hand.md)
