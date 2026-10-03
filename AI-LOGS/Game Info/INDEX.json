@@ -1690,6 +1690,14 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_156_160.json",
       "date": "2026-10-04",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_passives_161_165",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_161_165.json",
+      "date": "2026-10-04",
+      "storage": "git"
     }
   ],
   "pending": [

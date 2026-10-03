@@ -140,7 +140,12 @@
         "adamant_first_melee_hit_increased_damage",
         "adamant_pinning_dog_elite_damage",
         "adamant_increased_damage_to_high_health",
-        "adamant_pinning_dog_kills_buff_allies"
+        "adamant_pinning_dog_kills_buff_allies",
+        "adamant_sprinting_sliding",
+        "adamant_ranged_damage_on_melee_stagger",
+        "adamant_clip_size",
+        "adamant_damage_vs_suppressed",
+        "adamant_stacking_damage"
       ],
       "checks": []
     },
@@ -229,7 +234,12 @@
         "adamant_first_melee_hit_increased_damage",
         "adamant_pinning_dog_elite_damage",
         "adamant_increased_damage_to_high_health",
-        "adamant_pinning_dog_kills_buff_allies"
+        "adamant_pinning_dog_kills_buff_allies",
+        "adamant_sprinting_sliding",
+        "adamant_ranged_damage_on_melee_stagger",
+        "adamant_clip_size",
+        "adamant_damage_vs_suppressed",
+        "adamant_stacking_damage"
       ],
       "checks": []
     },
@@ -318,7 +328,12 @@
         "adamant_first_melee_hit_increased_damage",
         "adamant_pinning_dog_elite_damage",
         "adamant_increased_damage_to_high_health",
-        "adamant_pinning_dog_kills_buff_allies"
+        "adamant_pinning_dog_kills_buff_allies",
+        "adamant_sprinting_sliding",
+        "adamant_ranged_damage_on_melee_stagger",
+        "adamant_clip_size",
+        "adamant_damage_vs_suppressed",
+        "adamant_stacking_damage"
       ],
       "checks": []
     },
@@ -407,7 +422,12 @@
         "adamant_first_melee_hit_increased_damage",
         "adamant_pinning_dog_elite_damage",
         "adamant_increased_damage_to_high_health",
-        "adamant_pinning_dog_kills_buff_allies"
+        "adamant_pinning_dog_kills_buff_allies",
+        "adamant_sprinting_sliding",
+        "adamant_ranged_damage_on_melee_stagger",
+        "adamant_clip_size",
+        "adamant_damage_vs_suppressed",
+        "adamant_stacking_damage"
       ],
       "checks": []
     },
@@ -584,9 +604,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "31a60bdd9e1e8a71b065d2607c17f1e9f8eb4d3a",
       "chinese_sha256": "3178daddc1359964c1edd722030b283a0886abc06f3bd68dc6b4ae8302f69849",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_clip_size"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_161_165.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_close_kills_restore_toughness.md",
@@ -790,9 +817,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "89bbea052324985006240ad913b6f204aa5b692c",
       "chinese_sha256": "b4c09d0c810425d5b9e8523f307cf01d4c1c77c69075be8c3ca6900caf508033",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_damage_vs_suppressed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_161_165.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_disable_companion.md",
@@ -1500,9 +1534,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "38fb2adf36682ce0fcd53f86a7c86ca8fb07ceda",
       "chinese_sha256": "1b8960ed04cd395613ae7e737a968255f0593e1105bc7e5767a50a3ede689ce2",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_ranged_damage_on_melee_stagger"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_161_165.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_rebreather.md",
@@ -1583,9 +1624,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4722cd7112736710dac2d3f177f95fc7660b30d8",
       "chinese_sha256": "ce9d36d63d7b37b3f9e19dc3fb315f1e865312e5b1333dd6d5139813e45be798",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_sprinting_sliding"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_161_165.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_stacking_damage.md",
@@ -1594,9 +1642,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4f66959e3a9529cb4f77ffd3348938f8b9396533",
       "chinese_sha256": "16d307f7902fbf4f4805f00b0bb466fa951cd87c38622952bd716d346c5d626a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_stacking_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_161_165.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_stacking_weakspot_strength.md",
@@ -11313,6 +11368,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_156_160.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_pinning_dog_kills_buff_allies.md"
+    },
+    {
+      "id": "adamant_sprinting_sliding",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_161_165.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_sprinting_sliding.md"
+    },
+    {
+      "id": "adamant_ranged_damage_on_melee_stagger",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_161_165.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_ranged_damage_on_melee_stagger.md"
+    },
+    {
+      "id": "adamant_clip_size",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_161_165.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_clip_size.md"
+    },
+    {
+      "id": "adamant_damage_vs_suppressed",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_161_165.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_damage_vs_suppressed.md"
+    },
+    {
+      "id": "adamant_stacking_damage",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_161_165.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stacking_damage.md"
     }
   ],
   "pending_chinese_corrections": [

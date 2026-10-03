@@ -1191,4 +1191,4 @@ Full raw text and formatting: [source evidence](adamant_stacking_damage.md#origi
 
 ## Comparison totals
 
-The 425 listed rules comprise **214 Consistent**, **1 Explicit contradiction**, **197 Not covered by the description**, **0 No corresponding implementation evidence found** and **13 Cannot confirm**. The explicit English contradiction concerns the melee attack-interval value in Fear of Justice. These totals apply only to the listed rules.
+The 445 listed rules comprise **223 Consistent**, **1 Explicit contradiction**, **208 Not covered by the description**, **0 No corresponding implementation evidence found** and **13 Cannot confirm**. The explicit English contradiction concerns the melee attack-interval value in Fear of Justice. These totals apply only to the listed rules.
