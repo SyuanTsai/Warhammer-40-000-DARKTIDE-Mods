@@ -99,7 +99,8 @@
         "adamant_execution_order_permastack",
         "adamant_pinning_dog_bonus_moving_towards",
         "adamant_companion_focus_ranged",
-        "adamant_companion_focus_elite"
+        "adamant_companion_focus_elite",
+        "adamant_terminus_warrant_improved_combined"
       ],
       "checks": []
     },
@@ -147,7 +148,8 @@
         "adamant_execution_order_permastack",
         "adamant_pinning_dog_bonus_moving_towards",
         "adamant_companion_focus_ranged",
-        "adamant_companion_focus_elite"
+        "adamant_companion_focus_elite",
+        "adamant_terminus_warrant_improved_combined"
       ],
       "checks": []
     },
@@ -195,7 +197,8 @@
         "adamant_execution_order_permastack",
         "adamant_pinning_dog_bonus_moving_towards",
         "adamant_companion_focus_ranged",
-        "adamant_companion_focus_elite"
+        "adamant_companion_focus_elite",
+        "adamant_terminus_warrant_improved_combined"
       ],
       "checks": []
     },
@@ -243,7 +246,8 @@
         "adamant_execution_order_permastack",
         "adamant_pinning_dog_bonus_moving_towards",
         "adamant_companion_focus_ranged",
-        "adamant_companion_focus_elite"
+        "adamant_companion_focus_elite",
+        "adamant_terminus_warrant_improved_combined"
       ],
       "checks": []
     },
@@ -1405,9 +1409,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "632eed2261cc32a476fadab7267c9b1034196bb2",
       "chinese_sha256": "95434a476dcd822e9f7471fa8413ec36074a6cd5861be457f0726bd542df6f97",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_terminus_warrant_improved_combined"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_improved_combined.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_terminus_warrant_support.md",
@@ -10534,6 +10545,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_companion_focus_elite.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_companion_focus_elite.md"
+    },
+    {
+      "id": "adamant_terminus_warrant_improved_combined",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant_improved_combined.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_terminus_warrant_improved_combined.md"
     }
   ],
   "pending_chinese_corrections": [
