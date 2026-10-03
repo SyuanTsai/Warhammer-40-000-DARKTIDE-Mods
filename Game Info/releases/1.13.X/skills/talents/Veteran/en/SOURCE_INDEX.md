@@ -59,6 +59,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Opening Salvo](veteran_bonus_crit_chance_on_ammo.md) / `veteran_bonus_crit_chance_on_ammo` | Passive talent |
 | [Kill Zone](veteran_ranged_power_out_of_melee.md) / `veteran_ranged_power_out_of_melee` | Passive talent |
 | [Shock Trooper](veteran_no_ammo_consumption_on_lasweapon_crit.md) / `veteran_no_ammo_consumption_on_lasweapon_crit` | Passive talent |
+| [Withering Fire](veteran_increased_ranged_cleave.md) / `veteran_increased_ranged_cleave` | Passive talent |
 | [Precision Strikes](veteran_increased_weakspot_damage.md) / `veteran_increased_weakspot_damage` | Passive talent |
 | [Trench Fighter Drill](veteran_attack_speed.md) / `veteran_attack_speed` | Passive talent |
 | [One Motion](veteran_reduce_swap_time.md) / `veteran_reduce_swap_time` | Passive talent |

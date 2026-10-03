@@ -59,6 +59,7 @@
 | <img src="https://github.com/user-attachments/assets/4193f147-bd40-49f8-92d4-a2b83fa1ad5b" width="32" height="32" alt="Opening Salvo talent icon"> [Opening Salvo](#veteran_bonus_crit_chance_on_ammo) | <ul><li>While wielding a ranged weapon with at least 80% of its clip ammunition remaining, gain 10 percentage points of Ranged Critical Hit Chance.</li><li>Reserve ammunition does not affect the threshold; a 30-round clip qualifies at 24 rounds, but not 23.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/8cc616f0-d225-4b5f-81a4-8780f478d471" width="32" height="32" alt="Kill Zone talent icon"> [Kill Zone](#veteran_ranged_power_out_of_melee) | <ul><li>After more than 8 seconds without receiving a melee hit, gain +15% Base Ranged Damage.</li><li>A qualifying melee hit resets the wait; enemy proximity, your own melee attacks and ranged hits do not by themselves interrupt it.</li><li>The bonus adds to other same-category damage bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/cba2a46d-298c-434a-883d-e048f5ede32d" width="32" height="32" alt="Shock Trooper talent icon"> [Shock Trooper](#veteran_no_ammo_consumption_on_lasweapon_crit) | <ul><li>Critical shots with an eligible Las-weapon consume no ammunition, even if they miss.</li><li>You must be holding the weapon with at least one round in its clip. Empty clips cannot fire through this effect; noncritical shots retain their normal cost.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/ba2f9f5e-0466-433d-a93d-68b1f9606dd7" width="32" height="32" alt="Withering Fire talent icon"> [Withering Fire](#veteran_increased_ranged_cleave) | <ul><li>Increase ranged attack cleave capacity by 50%.</li><li>Penetration still depends on the weapon and each target’s resistance; this does not directly increase single-target damage.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1155,6 +1156,24 @@ Actual final damage also depends on armor, damage profiles, weakspot/critical ef
 - With one round remaining, an eligible critical shot uses zero rounds and leaves `1 − 0 = 1 round`, even if it misses. This effect does not refill the clip or let it fire from empty.
 
 [Detailed sources and formulas](veteran_no_ammo_consumption_on_lasweapon_crit.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_no_ammo_consumption_on_lasweapon_crit) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_increased_ranged_cleave"></a>
+
+<img src="https://github.com/user-attachments/assets/ba2f9f5e-0466-433d-a93d-68b1f9606dd7" width="72" height="72" alt="Withering Fire talent icon">
+
+### Withering Fire
+
+- **Increase ranged attack cleave capacity by 50%.**
+- How many enemies a shot penetrates still depends on the weapon and each enemy’s resistance. The bonus does not directly increase damage against one target.
+
+**Penetration example**
+
+- Assuming a base penetration budget of 6 units and only this bonus, `6 × (1 + 50%) = 9 units`.
+- The larger budget handles more penetration resistance; it does not guarantee exactly 50% more enemies hit. The assumed base value of 6 is an example, not a shared value for every weapon.
+
+[Detailed sources and formulas](veteran_increased_ranged_cleave.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_increased_ranged_cleave) | [Back to index](#talent-index)
 
 ---
 
