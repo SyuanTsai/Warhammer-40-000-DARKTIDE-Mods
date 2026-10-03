@@ -775,7 +775,10 @@ SkitariusOmnissiah.maybe_convert_desire = function(self, current_action, desired
         end
     end
 
-    if desired_action == "idle" and (engram:get_setting("MODE") == "special_action" or engram:get_setting("MODE") == "special_standard") and string.find(weapon_name, "dual_stubpistols") then
+    -- continuous special actions for stubs and plasma
+    if desired_action == "idle" and 
+    ((engram:get_setting("MODE") == "special_action" or engram:get_setting("MODE") == "special_standard") and string.find(weapon_name, "dual_stubpistols") or
+    (engram:get_setting("MODE") == "special_action" and armoury and armoury.continuous_special and armoury.continuous_special[weapon_name] and weapon_manager.warp > 0)) then
         return "special_action"
     end
 
@@ -845,6 +848,15 @@ SkitariusOmnissiah.resolve_conflicts = function(self, input, user, omnissiah, cu
                     return true
                 end
             end
+        end
+    end
+
+    -- continuous-special weapons
+    if desired_action and string.find(desired_action, "special") and armoury and armoury.continuous_special and armoury.continuous_special[weapon_name] then
+        if input == "weapon_extra_hold" then
+            return true
+        elseif input == "weapon_extra_pressed" then
+            return false
         end
     end
 

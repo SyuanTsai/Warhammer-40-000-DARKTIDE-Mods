@@ -278,6 +278,12 @@ local localizations = {
     big_hammer = {
         en = Localize("loc_weapon_family_ogryn_hammer_2h_p1_m1")
     },
+    small_hammer = {
+        en = Localize("loc_weapon_family_thunderhammer_2h_p1_m1")
+    },
+    unstoppable = {
+        en = Localize("loc_trait_bespoke_pass_past_armor_on_heavy_attack"),
+    },
     heavy_buff_stacks = {
         en = "Heavy Buff Stacks",
         ["zh-tw"] = "重擊強化層數",
@@ -289,7 +295,10 @@ local localizations = {
             cf(Localize("loc_trait_bespoke_power_bonus_based_on_charge_time") .. " / " .. Localize("loc_weapon_family_crowbar_p1_m1") .. ":","terminal_text_body") .. " 3\n" ..
             cf(Localize("loc_trait_bespoke_toughness_on_hit_based_on_charge_time") .. ":","terminal_text_body") .. " 3\n" ..
             cf(Localize("loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger") .. ":","terminal_text_body") .. " 4\n" ..
-            cf(Localize("loc_weapon_family_powersword_p3_m1") .. ":","terminal_text_body") .. " 4\n"
+            cf(Localize("loc_weapon_family_ogryn_hammer_2h_p1_m1") .. ":","terminal_text_body") .. " 4\n" ..
+            cf(Localize("loc_weapon_family_thunderhammer_2h_p1_m1") .. ":","terminal_text_body") .. " 3\n" ..
+            cf(Localize("loc_weapon_family_powersword_p3_m1") .. ":","terminal_text_body") .. " 4\n" ..
+            cf(Localize("loc_trait_bespoke_pass_past_armor_on_heavy_attack") .. ":","terminal_text_body") .. " N/A\n"
         )
     },
     heavy_buff_special = {
