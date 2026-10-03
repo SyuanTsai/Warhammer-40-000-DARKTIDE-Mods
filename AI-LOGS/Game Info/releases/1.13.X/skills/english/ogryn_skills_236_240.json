@@ -1,0 +1,71 @@
+{
+  "id": "ogryn_skills_236_240",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing display mappings in ogryn_talents.lua L1280–1313, L1089–1109, L1824–1847, L1875–1908 and L1008–1029 were read. Existing mechanisms, values, formulas, source links and common formatting reused.",
+  "questions": [
+    "Final game UI remains unobserved. No new explicit English contradiction in this batch."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_rending_on_elite_kills",
+      "name": "Dominate",
+      "name_hash": "111d199c",
+      "description_hash": "4203de9c",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_rending_on_elite_kills.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_rending_on_elite_kills.md",
+      "commit": "4d50c4c63"
+    },
+    {
+      "id": "ogryn_reloading_grants_damage",
+      "name": "Reloaded and Ready",
+      "name_hash": "d7ac6751",
+      "description_hash": "a8bc8a04",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_reloading_grants_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_reloading_grants_damage.md",
+      "commit": "6770a6432"
+    },
+    {
+      "id": "ogryn_increase_explosion_radius",
+      "name": "Big Boom",
+      "name_hash": "515cf8be",
+      "description_hash": "15f7867d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_increase_explosion_radius.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_increase_explosion_radius.md",
+      "commit": "e81b0dce5"
+    },
+    {
+      "id": "ogryn_blocking_reduces_push_cost",
+      "name": "No Pushover",
+      "name_hash": "4594653e",
+      "description_hash": "3278e768",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_blocking_reduces_push_cost.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_blocking_reduces_push_cost.md",
+      "commit": "f4382dbd4"
+    },
+    {
+      "id": "ogryn_blocking_ranged_taunts",
+      "name": "Attention Seeker",
+      "name_hash": "0bd15ece",
+      "description_hash": "a01a7f7f",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_blocking_ranged_taunts.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_blocking_ranged_taunts.md",
+      "commit": "0cc6f0554"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 204,
+    "from_commit": "3f3478688",
+    "to_commit": "0cc6f0554",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

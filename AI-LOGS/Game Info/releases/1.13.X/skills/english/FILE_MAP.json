@@ -2231,7 +2231,12 @@
         "ogryn_windup_reduces_damage_taken",
         "ogryn_windup_is_uninterruptible",
         "ogryn_kills_grant_crit_chance",
-        "ogryn_revenge_damage"
+        "ogryn_revenge_damage",
+        "ogryn_rending_on_elite_kills",
+        "ogryn_reloading_grants_damage",
+        "ogryn_increase_explosion_radius",
+        "ogryn_blocking_reduces_push_cost",
+        "ogryn_blocking_ranged_taunts"
       ],
       "checks": []
     },
@@ -2304,7 +2309,12 @@
         "ogryn_windup_reduces_damage_taken",
         "ogryn_windup_is_uninterruptible",
         "ogryn_kills_grant_crit_chance",
-        "ogryn_revenge_damage"
+        "ogryn_revenge_damage",
+        "ogryn_rending_on_elite_kills",
+        "ogryn_reloading_grants_damage",
+        "ogryn_increase_explosion_radius",
+        "ogryn_blocking_reduces_push_cost",
+        "ogryn_blocking_ranged_taunts"
       ],
       "checks": []
     },
@@ -2377,7 +2387,12 @@
         "ogryn_windup_reduces_damage_taken",
         "ogryn_windup_is_uninterruptible",
         "ogryn_kills_grant_crit_chance",
-        "ogryn_revenge_damage"
+        "ogryn_revenge_damage",
+        "ogryn_rending_on_elite_kills",
+        "ogryn_reloading_grants_damage",
+        "ogryn_increase_explosion_radius",
+        "ogryn_blocking_reduces_push_cost",
+        "ogryn_blocking_ranged_taunts"
       ],
       "checks": []
     },
@@ -2450,7 +2465,12 @@
         "ogryn_windup_reduces_damage_taken",
         "ogryn_windup_is_uninterruptible",
         "ogryn_kills_grant_crit_chance",
-        "ogryn_revenge_damage"
+        "ogryn_revenge_damage",
+        "ogryn_rending_on_elite_kills",
+        "ogryn_reloading_grants_damage",
+        "ogryn_increase_explosion_radius",
+        "ogryn_blocking_reduces_push_cost",
+        "ogryn_blocking_ranged_taunts"
       ],
       "checks": []
     },
@@ -2613,9 +2633,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a9eeb9a559fe23d7aa1c031bb615b3caf4d252bb",
       "chinese_sha256": "1705d6ab2ed15b7163fe8ee9069cdf669f3d2a93d7784dc1dbadd28fe3647f94",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_blocking_ranged_taunts"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_236_240.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_blocking_reduces_push_cost.md",
@@ -2624,9 +2651,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "82d8859ea97a9550965b75785230c15b8e1ac2c8",
       "chinese_sha256": "f06db0cf59ec7d7caf68216ee3b3a5cb2c43eb8742ed47e6186e2195b60e5bcf",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_blocking_reduces_push_cost"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_236_240.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_box_explodes.md",
@@ -3127,9 +3161,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "0d58d6ae72a95875632f3a85a4d6aec76124e0f5",
       "chinese_sha256": "c7c7cdd624df0a584e6cae71b92447252404d2f248c1991891e8e7d14040c6ff",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_increase_explosion_radius"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_236_240.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_increased_ammo_reserve.md",
@@ -3568,9 +3609,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6570753a05ec11665234894bb6f845d2ebf99fe5",
       "chinese_sha256": "44acb20e0c678639bdc486acb068f3c8cafb4f229f6673fadaeca9402e1a7c04",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_reloading_grants_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_236_240.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_rending_on_elite_kills.md",
@@ -3579,9 +3627,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "fadbc72a0be8e8500cd1712a7a0c26b8cca82c4c",
       "chinese_sha256": "7f1d1863e31fe9ad02d972c2862142a691d9222183f22cf7c7e106b59e52bcf3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_rending_on_elite_kills"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_236_240.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_replenish_rock_on_miss.md",
@@ -12777,6 +12832,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_231_235.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_revenge_damage.md"
+    },
+    {
+      "id": "ogryn_rending_on_elite_kills",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_236_240.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_rending_on_elite_kills.md"
+    },
+    {
+      "id": "ogryn_reloading_grants_damage",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_236_240.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_reloading_grants_damage.md"
+    },
+    {
+      "id": "ogryn_increase_explosion_radius",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_236_240.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_increase_explosion_radius.md"
+    },
+    {
+      "id": "ogryn_blocking_reduces_push_cost",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_236_240.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_blocking_reduces_push_cost.md"
+    },
+    {
+      "id": "ogryn_blocking_ranged_taunts",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_236_240.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_blocking_ranged_taunts.md"
     }
   ],
   "pending_chinese_corrections": [
