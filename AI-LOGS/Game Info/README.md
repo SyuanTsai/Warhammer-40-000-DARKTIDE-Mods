@@ -138,3 +138,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [致命零距離全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-LETHAL-PROXIMITY_ACCEPTANCE.json)
 
 - [破片四濺全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SHRAPNEL_ACCEPTANCE.json)
+
+- [祝福精確型號限制盤點修正](releases/1.13.X/blessings/2026-10-03-INVENTORY_MARK_RESTRICTION_CORRECTION.json)。
