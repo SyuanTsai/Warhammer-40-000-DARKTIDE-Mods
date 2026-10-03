@@ -17,3 +17,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Bigger Box of Hurt](ogryn_big_box_of_hurt_more_bombs.md) / `ogryn_big_box_of_hurt_more_bombs` | Blitz |
 | [Bonebreaker's Aura](ogryn_melee_damage_coherency_improved.md) / `ogryn_melee_damage_coherency_improved` | Aura |
 | [Coward Culling](ogryn_damage_vs_suppressed_coherency.md) / `ogryn_damage_vs_suppressed_coherency` | Aura |
+| [Stay Close!](ogryn_toughness_regen_aura.md) / `ogryn_toughness_regen_aura` | Aura |
