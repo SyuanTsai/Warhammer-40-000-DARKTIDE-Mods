@@ -69,6 +69,7 @@
 | <img src="https://github.com/user-attachments/assets/e65e3909-4dac-413f-827d-f5db9138e5e2" width="32" height="32" alt="Deadshot talent icon"> [Deadshot](#veteran_ads_drain_stamina) | <ul><li>With Stamina remaining in ranged alternate fire: +25 percentage points critical chance, 60% less Sway, 19% less spread and 12% less recoil.</li><li>Spend 0.33 Stamina points per second and 0.1 per shooting event; bonuses end when Stamina is exhausted.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/8567315b-bea7-4be4-aaec-22d7096945a9" width="32" height="32" alt="Duck and Dive talent icon"> [Duck and Dive](#veteran_dodging_grants_stamina) | <ul><li>Gain 5% movement speed continuously.</li><li>A successful ranged-attack dodge can restore 30% of maximum Stamina, at most once every 3 seconds; recovery is capped.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/ae882322-f266-4e2c-8168-09f85a5c9285" width="32" height="32" alt="Keep Their Heads Down! talent icon"> [Keep Their Heads Down!](#veteran_increase_suppression) | <ul><li>Increase suppression you deal by 75%.</li><li>Enemy thresholds and immunity determine the reaction; this does not increase damage by 75%.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/1ef34fb3-ac4e-47d1-b7c1-0d13f10e3173" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_2) | <ul><li>Increase maximum Toughness by 25 points.</li><li>The points are added before percentage maximum-Toughness modifiers.</li></ul> | Stat node |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1463,3 +1464,27 @@ Assume an attack would deal 100 Toughness-damage units before this effect, enoug
 - For a hypothetical sequence with affected 0.3s unwield and 0.9s wield parts plus an unchanged 0.2s part, `1.4s` becomes `0.3 / 1.5 + 0.9 / 1.5 + 0.2 = 1.0s`, about **28.57%** shorter overall. This is an illustrative sequence; actual weapon timings vary. Hold all other scale factors at 1 and assume no limit binds.
 
 [Detailed sources and formulas](veteran_reduce_swap_time.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_reduce_swap_time) | [Back to index](#talent-index)
+
+## Stat nodes
+
+<a id="base_toughness_node_buff_medium_2"></a>
+
+<img src="https://github.com/user-attachments/assets/1ef34fb3-ac4e-47d1-b7c1-0d13f10e3173" width="72" height="72" alt="Toughness Boost talent icon">
+
+### Toughness Boost
+
+- **Increase maximum Toughness by 25 points.** This raises capacity; it is not a +25% modifier or a stated 25-point recovery of current Toughness.
+- The bonus is added before percentage maximum-Toughness modifiers. The calculation rounds up before adding any separate post-ceiling flat bonuses.
+
+#### Maximum Toughness examples
+
+Assume a base maximum of 100 points, no other added points or post-ceiling flat bonuses, and only the modifier stated below.
+
+- **No percentage bonus:** `ceil((100 + 25) × 1) = 125 points`, up from 100.
+- **An existing +20% maximum-Toughness bonus:** the maximum changes from `ceil(100 × 1.2) = 120` to `ceil((100 + 25) × 1.2) = 150 points`. The node adds 30 points to that already-modified maximum.
+
+These examples calculate capacity, not current Toughness recovery.
+
+[Detailed sources and formulas](base_toughness_node_buff_medium_2.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#base_toughness_node_buff_medium_2) | [Back to index](#talent-index)
+
+---

@@ -106,5 +106,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/keep-their-heads-down-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increase_suppression.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increase_suppression.md",
+  "commit": "5ae3d56184ea6325d9074fafd976d32ee34afc96"
 }

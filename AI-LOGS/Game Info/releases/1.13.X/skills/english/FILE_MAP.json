@@ -5749,7 +5749,8 @@
         "veteran_increased_damage_based_on_range",
         "veteran_ads_drain_stamina",
         "veteran_dodging_grants_stamina",
-        "veteran_increase_suppression"
+        "veteran_increase_suppression",
+        "base_toughness_node_buff_medium_2"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5839,7 +5840,8 @@
         "veteran_increased_damage_based_on_range",
         "veteran_ads_drain_stamina",
         "veteran_dodging_grants_stamina",
-        "veteran_increase_suppression"
+        "veteran_increase_suppression",
+        "base_toughness_node_buff_medium_2"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5929,7 +5931,8 @@
         "veteran_increased_damage_based_on_range",
         "veteran_ads_drain_stamina",
         "veteran_dodging_grants_stamina",
-        "veteran_increase_suppression"
+        "veteran_increase_suppression",
+        "base_toughness_node_buff_medium_2"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6019,7 +6022,8 @@
         "veteran_increased_damage_based_on_range",
         "veteran_ads_drain_stamina",
         "veteran_dodging_grants_stamina",
-        "veteran_increase_suppression"
+        "veteran_increase_suppression",
+        "base_toughness_node_buff_medium_2"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6076,9 +6080,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "e3f884bb9229276152a644e2eb83f12a439034b0",
       "chinese_sha256": "282cc8eaeb3296a63ee05b0d96d33f258082eecb724af331f79cb78fc362860a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_toughness_node_buff_medium_2"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_ads_drain_stamina.md",
@@ -9376,7 +9395,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increase_suppression.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increase_suppression.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increase_suppression.md",
+      "commit": "5ae3d56184ea6325d9074fafd976d32ee34afc96"
+    },
+    {
+      "id": "base_toughness_node_buff_medium_2",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/base_toughness_node_buff_medium_2.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/base_toughness_node_buff_medium_2.md"
     }
   ],
   "pending_chinese_corrections": [

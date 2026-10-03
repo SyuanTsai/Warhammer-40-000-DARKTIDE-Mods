@@ -1,0 +1,115 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing-mechanism translation and exact English text check; only missing display mapping read from the fixed-source talent definition.",
+  "static_reconstruction": "+25 Toughness.",
+  "comparison_rule_totals": {
+    "Consistent": 1,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Toughness Boost dossier and player section",
+    "Exact same-version English name and full raw description",
+    "Fixed-SHA base_talents.lua lines 206–229: tier-aware Toughness display lookup, number formatting and + prefix"
+  ],
+  "reused_evidence": [
+    "Accepted Chinese fixed-source mechanism, conditions, exceptions and examples",
+    "Accepted shared formatting and corpus version verification",
+    "Reused accepted Toughness Boost WebP audit: 288×288, 4428 bytes, SHA-256 2c0b1f33804d13d580ac4f509d01684e8ee0245f2fcfd26bbdbef6b8d420df0f; existing Media-Assets Issue attachment.",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Read-only child verified exact English name/hash/raw, Stat node classification, +25 pre-percentage maximum capacity, rounding order and both accepted examples. Child left rendered value unconfirmed pending the display lookup; primary resolved that specific gap from base_talents.lua 206–229 and reused the accepted tier override and common formatter. The English omits maximum/current specificity and calculation order; no explicit contradiction is supported. Primary reviews the full staged diff before commit."
+  },
+  "static_examples": [
+    [
+      "Base 100 points; percentage multiplier 1; flat 0",
+      "Before: `ceil(100 × 1) = 100`; after: `ceil((100 + 25) × 1) = 125 points`.",
+      "Maximum Toughness rises by 25 points."
+    ],
+    [
+      "Base 100 points; existing +20% maximum-Toughness modifier; flat 0",
+      "Before: `ceil(100 × 1.2) = 120`; after: `ceil((100 + 25) × 1.2) = 150 points`.",
+      "The node raises this already-modified maximum by 30 points because its +25 is applied before the 1.2 multiplier."
+    ]
+  ],
+  "category_section": "Stat nodes",
+  "unconfirmed": [
+    "The 100-point base and +20% modifier are explicit example assumptions. The formula describes maximum capacity, not immediate current Toughness recovery. Live changes to current Toughness when activating or removing a node were not measured; no such recovery amount is claimed."
+  ],
+  "unperformed": [
+    "Repeated full implementation/call-chain analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game mechanism/damage/UI measurements"
+  ],
+  "id": "base_toughness_node_buff_medium_2",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Toughness Boost",
+  "name_key": "loc_talent_toughness_boost_medium",
+  "name_hash": "65a72c01",
+  "description_key": "loc_talent_toughness_boost_medium_desc",
+  "description_hash": "329702b6",
+  "raw_template": "{toughness:%s} Toughness.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 180,
+        "Explicit contradiction": 8,
+        "Not covered by the description": 214,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 8
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 485,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 66,
+      "comparison_rows": 4,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 2
+        },
+        {
+          "columns": 3,
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/toughness-boost-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/base_toughness_node_buff_medium_2.md"
+}
