@@ -111,5 +111,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/rending-strikes-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_rending_bonus.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_rending_bonus.md",
+  "commit": "f09b38f5d30aefe394316cf02681a2e77a7b7602"
 }

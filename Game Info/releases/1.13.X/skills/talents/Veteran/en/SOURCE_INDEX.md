@@ -41,6 +41,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Tactical Reload](veteran_faster_reload_on_non_empty_clips.md) / `veteran_faster_reload_on_non_empty_clips` | Passive talent |
 | [Volley Adept](veteran_reload_speed_on_elite_kill.md) / `veteran_reload_speed_on_elite_kill` | Passive talent |
 | [Rending Strikes](veteran_rending_bonus.md) / `veteran_rending_bonus` | Passive talent |
+| [Close Order Drill](veteran_reduced_toughness_damage_in_coherency.md) / `veteran_reduced_toughness_damage_in_coherency` | Passive talent |
 | [Precision Strikes](veteran_increased_weakspot_damage.md) / `veteran_increased_weakspot_damage` | Passive talent |
 | [Trench Fighter Drill](veteran_attack_speed.md) / `veteran_attack_speed` | Passive talent |
 | [One Motion](veteran_reduce_swap_time.md) / `veteran_reduce_swap_time` | Passive talent |
