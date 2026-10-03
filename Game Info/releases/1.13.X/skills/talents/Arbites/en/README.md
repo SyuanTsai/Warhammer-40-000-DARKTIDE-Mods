@@ -86,6 +86,7 @@
 | <img src="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47" width="32" height="32" alt="Target Priority talent icon"> [Target Priority](#adamant_increased_damage_to_high_health) | <ul><li>Deal 15% more damage to enemies above 75% Health.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/fc2bbfe4-50b8-4c9c-b775-20f1c2c33792" width="32" height="32" alt="Canine Morale talent icon"> [Canine Morale](#adamant_pinning_dog_kills_buff_allies) | <ul><li>Killing an enemy pinned by your own Cyber-Mastiff grants you and allies in Coherency 20% Toughness Damage Reduction and 10% of maximum Toughness over 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/8a0b3c73-0e7e-4d31-9f7d-385634eae6e3" width="32" height="32" alt="Rapid Movement talent icon"> [Rapid Movement](#adamant_sprinting_sliding) | <ul><li>After a slide ends, gain 5% Sprint Speed for 5s. Kills restore 5% of maximum Stamina, with a 0.75s cooldown.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/75cf7e7e-044e-432f-b7cb-b73e53164425" width="32" height="32" alt="Final Warning talent icon"> [Final Warning](#adamant_ranged_damage_on_melee_stagger) | <ul><li>Staggering an enemy with a melee attack or push grants 15% Ranged Damage for 5s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -1098,3 +1099,15 @@
 - **Kill recovery**: Kills restore 5% of maximum Stamina, at most once every 0.75s. No prior slide is required. With maximum Stamina 6, each trigger restores 6 × 5% = 0.3 points, capped at full Stamina.
 
 [Details](adamant_sprinting_sliding.md) · [Back to index](#talent-index)
+
+<a id="adamant_ranged_damage_on_melee_stagger"></a>
+
+### Final Warning
+
+<img src="https://github.com/user-attachments/assets/75cf7e7e-044e-432f-b7cb-b73e53164425" width="72" height="72" alt="Final Warning talent icon">
+
+- **Trigger and refresh**: Melee attacks or pushes that Stagger an enemy grant 15% Ranged Damage for 5s. Another trigger resets the duration. With Concussive, qualifying melee Weakspot Hits can also trigger it.
+
+- **Damage example**: Base ranged damage 100 becomes 115. With an existing same-stage 25% bonus, damage rises from 125 to 100 × (1 + 25% + 15%) = 140.
+
+[Details](adamant_ranged_damage_on_melee_stagger.md) · [Back to index](#talent-index)

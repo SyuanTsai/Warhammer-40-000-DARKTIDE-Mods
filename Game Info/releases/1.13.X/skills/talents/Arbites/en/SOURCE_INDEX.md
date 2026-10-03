@@ -86,3 +86,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Target Priority](adamant_increased_damage_to_high_health.md) / `adamant_increased_damage_to_high_health` | Passive talent |
 | [Canine Morale](adamant_pinning_dog_kills_buff_allies.md) / `adamant_pinning_dog_kills_buff_allies` | Passive talent |
 | [Rapid Movement](adamant_sprinting_sliding.md) / `adamant_sprinting_sliding` | Passive talent |
+| [Final Warning](adamant_ranged_damage_on_melee_stagger.md) / `adamant_ranged_damage_on_melee_stagger` | Passive talent |
