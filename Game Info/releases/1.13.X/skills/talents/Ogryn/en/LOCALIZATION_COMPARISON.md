@@ -769,6 +769,18 @@ Full raw template and formatting: [source evidence](ogryn_damage_taken_by_all_in
 | Full-stack Toughness reduction | +15% Toughness Damage Reduction on Max Stacks.; `ui / loc_talent_ogryn_damage_taken_by_all_increases_strength_tdr_desc / 05e8af7e` | At five stacks, the child buff applies toughness_damage_taken_multiplier 0.85; current_stacks < 5 ends it. [Fixed source and line references](ogryn_damage_taken_by_all_increases_strength_tdr.md#fixed-source-evidence) | Consistent | The independently read English explicitly conditions the correct reduction on maximum stacks. |
 | Refresh and calculation | No refresh rule or Power/final-damage formula is stated.; `ui / loc_talent_ogryn_damage_taken_by_all_increases_strength_tdr_desc / 05e8af7e` | Triggers refresh the 10s duration. Power 500 becomes 550 at five stacks; weapon curves and armour still affect final damage. Full-stack Toughness damage 100 becomes 85, or 68 with another independent 20% reduction. [Fixed source and line references](ogryn_damage_taken_by_all_increases_strength_tdr.md#fixed-source-evidence) | Not covered by the description | These accepted timing and calculation details supplement the English Strength and damage-reduction values. |
 
+
+<a id="ogryn_ally_movement_boost_on_ability"></a>
+
+## Get Stuck In
+
+Full raw template and formatting: [source evidence](ogryn_ally_movement_boost_on_ability.md#original-english-template-and-reconstruction). Name hash `58c6ea3b`. Every row uses `ui / loc_talent_ogryn_ability_movement_speed_desc / 2156e8e1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, recipients and effects | On activating your Combat Ability, you and Allies in Coherency gain +20% Movement Speed and are also Immune to Stuns & Suppression for 6s.; `ui / loc_talent_ogryn_ability_movement_speed_desc / 2156e8e1` | on_combat_ability applies the 6s child to in_coherence_units, with movement_speed 0.2 and both immunity keywords. [Fixed source and line references](ogryn_ally_movement_boost_on_ability.md#fixed-source-evidence) | Consistent | The independently read English matches the activation-time recipients, values and immunities. |
+| Lifetime and calculation | No departure, refresh or stacking rule is stated.; `ui / loc_talent_ogryn_ability_movement_speed_desc / 2156e8e1` | Leaving Coherency does not immediately remove the child; maximum one stack with refresh prevents a 40% bonus. Isolated speed 5m/s becomes 6m/s. [Fixed source and line references](ogryn_ally_movement_boost_on_ability.md#fixed-source-evidence) | Not covered by the description | These accepted duration and calculation details supplement the English wording. |
+
 ## Comparison totals
 
 The 204 listed rules comprise **84 Consistent**, **4 Explicit contradictions**, **109 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

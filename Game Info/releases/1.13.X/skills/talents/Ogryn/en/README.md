@@ -64,6 +64,7 @@
 | <img src="https://github.com/user-attachments/assets/669fb8b0-a444-4216-abe1-74f4acc4af85" width="32" height="32" alt="Delight in Destruction talent icon"> [Delight in Destruction](#ogryn_nearby_bleeds_reduce_damage_taken) | <ul><li>Each bleeding enemy within 8m grants 5% damage reduction, up to six enemies / 30%; teammate Bleed also counts.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/a51567af-44cb-46ba-9908-3e3502dcbcdb" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>Reduce incoming Toughness damage by 10%; maximum Toughness and Health damage are unchanged by this stat.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/9af41f8c-0f0e-4b2b-965e-c0d01fea2746" width="32" height="32" alt="No Hurting Friends! talent icon"> [No Hurting Friends!](#ogryn_damage_taken_by_all_increases_strength_tdr) | <ul><li>Damage to you or Coherency allies builds up to five +2% Strength stacks for 10s; full stacks also grant 15% Toughness damage reduction.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/895c3ccd-387f-4862-9a2b-b429ff5d6432" width="32" height="32" alt="Get Stuck In talent icon"> [Get Stuck In](#ogryn_ally_movement_boost_on_ability) | <ul><li>Activating your Combat Ability grants you and current Coherency allies +20% Movement Speed and Stun/Suppression immunity for 6s.</li></ul> | Talent |
 
 ## Blitz
 
@@ -998,3 +999,19 @@
 - The Chinese description limits the trigger to Health damage, which is too narrow: Toughness-only damage also builds stacks without prior Health loss. The English wording says Damage Taken and does not impose that restriction.
 
 [Details](ogryn_damage_taken_by_all_increases_strength_tdr.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_ally_movement_boost_on_ability"></a>
+
+### Get Stuck In
+
+<img src="https://github.com/user-attachments/assets/895c3ccd-387f-4862-9a2b-b429ff5d6432" width="72" height="72" alt="Get Stuck In talent icon">
+
+- **Trigger**: Activating your Combat Ability grants you and allies currently in Coherency +20% Movement Speed and immunity to Stuns and Suppression for 6s.
+
+- **Timing and stacking**: Leaving Coherency does not immediately remove the effect. Receiving it again restarts the duration; the speed bonus does not stack to 40%.
+
+- **Speed example**: Starting at 5m/s, with only this bonus, speed becomes `5 × (1 + 20%) = 6m/s`.
+
+[Details](ogryn_ally_movement_boost_on_ability.md) · [Back to index](#talent-index)

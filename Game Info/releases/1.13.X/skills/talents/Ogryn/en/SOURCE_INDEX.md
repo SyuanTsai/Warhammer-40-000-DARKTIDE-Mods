@@ -66,3 +66,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Delight in Destruction](ogryn_nearby_bleeds_reduce_damage_taken.md) / `ogryn_nearby_bleeds_reduce_damage_taken` | Talent |
 | [Toughness Damage Reduction](base_toughness_damage_reduction_node_buff_medium_1.md) / `base_toughness_damage_reduction_node_buff_medium_1` | Talent |
 | [No Hurting Friends!](ogryn_damage_taken_by_all_increases_strength_tdr.md) / `ogryn_damage_taken_by_all_increases_strength_tdr` | Talent |
+| [Get Stuck In](ogryn_ally_movement_boost_on_ability.md) / `ogryn_ally_movement_boost_on_ability` | Talent |
