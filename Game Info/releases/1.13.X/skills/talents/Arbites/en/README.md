@@ -74,6 +74,7 @@
 | <img src="https://github.com/user-attachments/assets/8f0bcba7-48bd-4d61-ad19-b03a65160eb5" width="32" height="32" alt="March talent icon"> [March](#adamant_movement_speed_on_block) | <ul><li>On a ranged hit, gain 15% Movement Speed for 3s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/6d045fa3-97bc-4943-9e6e-0f703e68288d" width="32" height="32" alt="No Escape talent icon"> [No Escape](#adamant_elite_special_kills_offensive_boost) | <ul><li>After an Elite or Specialist Kill, gain 10% Damage and Movement Speed for 4s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/7b24cc5d-1975-4762-8b77-8899c0713175" width="32" height="32" alt="Drive them Back talent icon"> [Drive them Back](#adamant_cleave_after_push) | <ul><li>A push hitting an enemy grants 75% more melee damage cleave capacity for 5s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/e51d3184-42e7-434f-8369-0ae7a6568619" width="32" height="32" alt="Shield Plates talent icon"> [Shield Plates](#adamant_shield_plates) | <ul><li>Blocking restores 15% of maximum Toughness over 3s; Perfect Block also restores 10% instantly, with a 1s cooldown on that immediate recovery.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -932,3 +933,17 @@
 - **Cleave example**: Isolating this effect, an original capacity to pass through 10 units of enemy mass becomes 10 × 1.75 = 17.5 units. This increases damage penetration capacity without also increasing stagger penetration capacity.
 
 [Details](adamant_cleave_after_push.md) · [Back to index](#talent-index)
+
+<a id="adamant_shield_plates"></a>
+
+### Shield Plates
+
+<img src="https://github.com/user-attachments/assets/e51d3184-42e7-434f-8369-0ae7a6568619" width="72" height="72" alt="Shield Plates talent icon">
+
+- **Recovery on Block**: Blocking an attack restores 15% of maximum Toughness over 3s. Another block resets the duration without increasing the recovery rate.
+
+- **Perfect Block**: It also instantly restores 10% of maximum Toughness, with more than 1s required between these immediate recoveries. The continuous recovery is not limited by this cooldown.
+
+- **Recovery example**: With maximum Toughness 100, sufficient missing Toughness and no other recovery bonuses, one Perfect Block triggering both effects restores 100 × 10% + 100 × 15% = 25 points: 10 immediately and 15 over 3s.
+
+[Details](adamant_shield_plates.md) · [Back to index](#talent-index)
