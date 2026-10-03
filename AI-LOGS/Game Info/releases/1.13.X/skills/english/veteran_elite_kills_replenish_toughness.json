@@ -111,5 +111,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/confirmed-kill-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_elite_kills_replenish_toughness.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_elite_kills_replenish_toughness.md",
+  "commit": "999c589e6d1edeffdcdd8e4a02b1114d7183f813"
 }

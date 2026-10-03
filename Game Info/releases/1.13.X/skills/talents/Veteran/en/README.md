@@ -65,6 +65,7 @@
 | <img src="https://github.com/user-attachments/assets/8c1dadf2-9263-4efa-a710-9da08a41eb3e" width="32" height="32" alt="Covering Fire talent icon"> [Covering Fire](#veteran_replenish_toughness_and_boost_allies) | <ul><li>A ranged kill can restore 15% of maximum Toughness and grant +15% base damage for 6 seconds to one other ally near the victim.</li><li>The initial search radius is 8 metres; a selection defect can choose an ally outside it. The buff refreshes without stacking.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/284f479c-7f5d-463f-bf50-1003d34b9f5b" width="32" height="32" alt="Competitive Urge talent icon"> [Competitive Urge](#veteran_ally_kills_increase_damage) | <ul><li>Ally kills have a 2.5% chance to grant +20% base damage, melee impact and suppression for 8 seconds.</li><li>No Coherency or distance requirement. Reapplication refreshes the duration without stacking.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/706a5b5b-5f7b-43bc-bbd0-7debf024671b" width="32" height="32" alt="Confirmed Kill talent icon"> [Confirmed Kill](#veteran_elite_kills_replenish_toughness) | <ul><li>An Elite or Specialist kill immediately restores 10% of maximum Toughness.</li><li>Each kill adds 2% of maximum Toughness per second for 10 seconds; independent effects can overlap.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/f7517509-e85f-47fb-b775-234a6aa0950a" width="32" height="32" alt="Longshot talent icon"> [Longshot](#veteran_increased_damage_based_on_range) | <ul><li>Gain +10% ranged damage within 12.5 metres, rising to +25% total at 30 metres.</li><li>The middle-distance bonus follows a square-root curve; other damage bonuses affect the relative gain.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1283,6 +1284,25 @@ Actual final damage also depends on armor, damage profiles, weakspot/critical ef
 - While two effects overlap, their combined rate is `100 × 2% × 2 = 4 Toughness/s`. When one reaches its own 10-second expiry, the remaining effect continues at `100 × 2% = 2 Toughness/s` until its own expiry. These are static rates; actual recovery stops at the maximum.
 
 [Detailed sources and formulas](veteran_elite_kills_replenish_toughness.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_elite_kills_replenish_toughness) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_increased_damage_based_on_range"></a>
+
+<img src="https://github.com/user-attachments/assets/f7517509-e85f-47fb-b775-234a6aa0950a" width="72" height="72" alt="Longshot talent icon">
+
+### Longshot
+
+- **Gain +10% ranged damage at and below 12.5 metres.**
+- Beyond that distance, an additional bonus increases along a square-root curve, reaching **+25% total ranged damage at 30 metres**. The bonus does not increase further beyond 30 metres.
+- The total is the close-range 10% plus up to 15% more from distance. Other bonuses and later damage calculations affect final hit damage.
+
+**Distance and damage examples**
+
+- Isolating this talent on a starting value of 100: at or below 12.5 metres, `100 × 1.10 = 110`; at or beyond 30 metres, `100 × 1.25 = 125`.
+- At 21.25 metres, the distance ratio is `(21.25 − 12.5) / (30 − 12.5) = 0.5`. The result is `100 × [1 + 10% + 15% × sqrt(0.5)] ≈ 120.61`. These examples exclude other modifiers and later damage processing.
+
+[Detailed sources and formulas](veteran_increased_damage_based_on_range.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_increased_damage_based_on_range) | [Back to index](#talent-index)
 
 ---
 
