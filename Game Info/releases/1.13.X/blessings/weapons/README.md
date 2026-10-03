@@ -68,3 +68,4 @@
 | [雷鎚](melee/雷鎚/README.md)<br>- Thunder Hammer | 近戰 | 雷鎚 十字星 Mk II、雷鎚 鐵盔 Mk IV |
 | [機動自動槍](ranged/機動自動槍/README.md)<br>- Vigilant Autogun | 遠程 | 機動自動槍 哥倫努 Mk III、機動自動槍 格拉亞 Mk VII、機動自動槍 阿格里皮娜 Mk IX |
 | [滅絕者霰彈槍](ranged/滅絕者霰彈槍/README.md)<br>- Exterminator Shotgun | 遠程 | 滅絕者霰彈槍 鐵腕 Mk III、滅絕者霰彈槍 鐵腕 Mk VIII |
+| [砍刀](melee/砍刀/README.md)<br>- Cleaver | 近戰 | 砍刀 克魯克 Mk VI、砍刀 蠻牛屠夫 Mk III、砍刀 克魯克 Mk IV |

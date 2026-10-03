@@ -373,6 +373,7 @@
 - Confident Strike - 堅定打擊
 - No Guts, No Glory - 不入虎穴，焉得虎子
 - Bash - 猛撞
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_on_push`，hash `71cd141b`；英文／繁中RAW配對確認。
 - Tenderiser - 肉槌
 - Unstoppable Force - 勢不可擋
 - Torment - 凌遲

@@ -56,5 +56,6 @@
 | <img src="https://github.com/user-attachments/assets/b66dd253-275d-4c41-8ec0-8543458fa629" width="32" height="32" alt="集中火力祝福圖示"> [集中火力](entries/集中火力/README.md)<br>- Concentrated Fire<br>[完整說明](entries/集中火力/README.md) | <ul><li>持用這把手槍連續命中遠程弱點時，每次射擊結果增加一層一般爆擊率；最高五層，下一次非弱點射擊結果立即重設。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/61b31e74-8402-4d31-84da-ddd9c5763b3b" width="32" height="32" alt="散彈祝福圖示"> [散彈](entries/散彈/README.md)<br>- Scattershot<br>[完整說明](entries/散彈/README.md) | <ul><li>單發散彈命中至少兩個不同可受傷目標後，按目標數增加遠程爆擊率層數，最多五層。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376" width="32" height="32" alt="還擊祝福圖示"> [還擊](entries/還擊/README.md)<br>- Riposte<br>[完整說明](entries/還擊/README.md) | <ul><li>成功閃避敵方攻擊後，爆擊率提高；一般變體依 I–IV 增加 12.5／15／17.5／20 個百分點，持續 6 秒。穿音速雙刀變體增加 10／12／14／16 個百分點，持續 4 秒。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/3adb99c8-c2dd-48f4-9632-ec9607f38d3a" width="32" height="32" alt="猛撞祝福圖示"> [猛撞](entries/猛撞/README.md)<br>- Bash<br>[完整說明](entries/猛撞/README.md) | <ul><li>推擊處理到至少一個合格目標後，撬棍 I–IV 的近戰爆擊率增加 5／7.5／10／12.5 個百分點，砍刀增加 7.5／10／12.5／15 個百分點；均持續 3 秒。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

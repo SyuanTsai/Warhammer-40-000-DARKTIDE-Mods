@@ -54,3 +54,4 @@
 | [集中火力](entries/集中火力/README.md) | [來源索引](entries/集中火力/SOURCE_INDEX.md) |
 | [散彈](entries/散彈/README.md) | [來源索引](entries/散彈/SOURCE_INDEX.md) |
 | [還擊](entries/還擊/README.md) | [來源索引](entries/還擊/SOURCE_INDEX.md) |
+| [猛撞](entries/猛撞/README.md) | [來源索引](entries/猛撞/SOURCE_INDEX.md) |

@@ -225,3 +225,5 @@
 - [還擊](2026-10-03-RIPOSTE_ACCEPTANCE.json)：新增6變體、13型號關聯；共6變體、13關聯。
 
 - [粉碎型號名稱同步](2026-10-04-SHRED_UI_NAME_CORRECTION.json)：依已驗證 family／pattern／mark 更新五份文件中的四個型號標籤；機制、階級、關聯及圖片未變，不增加完成項數。
+
+- [猛撞](2026-10-03-BASH_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。

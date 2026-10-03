@@ -649,6 +649,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376",
       "effect": "成功閃避敵方攻擊後，爆擊率提高；一般變體依 I–IV 增加 12.5／15／17.5／20 個百分點，持續 6 秒。穿音速雙刀變體增加 10／12／14／16 個百分點，持續 4 秒。"
+    },
+    {
+      "id": "bash",
+      "name_zh_tw": "猛撞",
+      "name_en": "Bash",
+      "name_key": "loc_trait_bespoke_crit_chance_on_push",
+      "description_key": "loc_trait_bespoke_crit_chance_on_push_desc",
+      "name_hash": "71cd141b",
+      "description_hash": "2141b458",
+      "page": "entries/猛撞/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/3adb99c8-c2dd-48f4-9632-ec9607f38d3a",
+      "effect": "推擊處理到至少一個合格目標後，撬棍 I–IV 的近戰爆擊率增加 5／7.5／10／12.5 個百分點，砍刀增加 7.5／10／12.5／15 個百分點；均持續 3 秒。"
     }
   ],
   "weapons": [
@@ -2850,6 +2863,55 @@
             "weapon_family_display_name": "loc_weapon_family_shotgun_p4_m2",
             "weapon_pattern_display_name": "loc_weapon_pattern_shotgun_p4_m2",
             "weapon_mark_display_name": "loc_weapon_mark_shotgun_p4_m2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ogryn_combatblade_p1",
+      "name_zh_tw": "砍刀",
+      "name_en": "Cleaver",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_ogryn_combatblade_p1_m1",
+      "page": "weapons/melee/砍刀/README.md",
+      "marks": [
+        {
+          "id": "ogryn_combatblade_p1_m1",
+          "item": "content/items/weapons/player/melee/ogryn_combatblade_p1_m1",
+          "name": "砍刀 克魯克 Mk VI",
+          "name_en": "Cleaver Krourk Mk VI",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m1.lua",
+          "trait_category": "bespoke_ogryn_combatblade_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_combatblade_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_combatblade_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_combatblade_p1_m1"
+          }
+        },
+        {
+          "id": "ogryn_combatblade_p1_m2",
+          "item": "content/items/weapons/player/melee/ogryn_combatblade_p1_m2",
+          "name": "砍刀 蠻牛屠夫 Mk III",
+          "name_en": "Cleaver Bull Butcher Mk III",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m2.lua",
+          "trait_category": "bespoke_ogryn_combatblade_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_combatblade_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_combatblade_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_combatblade_p1_m2"
+          }
+        },
+        {
+          "id": "ogryn_combatblade_p1_m3",
+          "item": "content/items/weapons/player/melee/ogryn_combatblade_p1_m3",
+          "name": "砍刀 克魯克 Mk IV",
+          "name_en": "Cleaver Krourk Mk IV",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m3.lua",
+          "trait_category": "bespoke_ogryn_combatblade_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_combatblade_p1_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_combatblade_p1_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_combatblade_p1_m3"
           }
         }
       ]
@@ -12460,6 +12522,104 @@
       "icon": "https://github.com/user-attachments/assets/0ca33a46-e0ab-4da3-abb3-ae014acaa376",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_186",
       "effect": "成功閃避敵方攻擊後，提高10／12／14／16個百分點的爆擊率，持續4秒；再次合格閃避刷新，切出時加成暫停、期限繼續。"
+    },
+    {
+      "id": "weapon_trait_bespoke_crowbar_p1_crit_chance_on_push",
+      "blessing_id": "bash",
+      "weapon_id": "crowbar_p1",
+      "page": "entries/猛撞/weapon_trait_bespoke_crowbar_p1_crit_chance_on_push.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_crowbar_p1_crit_chance_on_push",
+        "melee_critical_strike_chance_by_tier": [
+          0.05,
+          0.075,
+          0.1,
+          0.125
+        ],
+        "displayed_bonus_percentage_points_by_tier": [
+          5,
+          7.5,
+          10,
+          12.5
+        ],
+        "active_duration_seconds": 3,
+        "marks": [
+          "crowbar_p1_m1"
+        ],
+        "all_marks_share_values": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_crowbar_p1.lua",
+        "start_line": 615,
+        "end_line": 666
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_crowbar_p1_buff_templates.lua",
+        "start_line": 123,
+        "end_line": 140
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_on_push_desc",
+      "description_hash": "2141b458",
+      "icon": "https://github.com/user-attachments/assets/3adb99c8-c2dd-48f4-9632-ec9607f38d3a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_097",
+      "effect": "推擊處理到至少一個目標後，近戰爆擊率提高 5／7.5／10／12.5 個百分點，持續 3 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_combatblade_p1_crit_chance_on_push",
+      "blessing_id": "bash",
+      "weapon_id": "ogryn_combatblade_p1",
+      "page": "entries/猛撞/weapon_trait_bespoke_ogryn_combatblade_p1_crit_chance_on_push.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "trait_id": "weapon_trait_bespoke_ogryn_combatblade_p1_crit_chance_on_push",
+        "melee_critical_strike_chance_by_tier": [
+          0.075,
+          0.1,
+          0.125,
+          0.15
+        ],
+        "displayed_bonus_percentage_points_by_tier": [
+          7.5,
+          10,
+          12.5,
+          15
+        ],
+        "active_duration_seconds": 3,
+        "marks": [
+          "ogryn_combatblade_p1_m1",
+          "ogryn_combatblade_p1_m2",
+          "ogryn_combatblade_p1_m3"
+        ],
+        "all_marks_share_values": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_combatblade_p1.lua",
+        "start_line": 10,
+        "end_line": 59
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_combatblade_p1_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 29
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_on_push_desc",
+      "description_hash": "2141b458",
+      "icon": "https://github.com/user-attachments/assets/3adb99c8-c2dd-48f4-9632-ec9607f38d3a",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_097",
+      "effect": "推擊處理到至少一個目標後，近戰爆擊率提高 7.5／10／12.5／15 個百分點，持續 3 秒。"
     }
   ],
   "bindings": [
@@ -17389,6 +17549,62 @@
         "path": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
         "import_line": 16,
         "append_line": 3179
+      }
+    },
+    {
+      "blessing_id": "bash",
+      "weapon_id": "crowbar_p1",
+      "mark_id": "crowbar_p1_m1",
+      "variant_id": "weapon_trait_bespoke_crowbar_p1_crit_chance_on_push",
+      "trait_item": "content/items/traits/bespoke_crowbar_p1/crit_chance_on_push",
+      "trait_category": "bespoke_crowbar_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 2189
+      }
+    },
+    {
+      "blessing_id": "bash",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_crit_chance_on_push",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/crit_chance_on_push",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1333
+      }
+    },
+    {
+      "blessing_id": "bash",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_crit_chance_on_push",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/crit_chance_on_push",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1367
+      }
+    },
+    {
+      "blessing_id": "bash",
+      "weapon_id": "ogryn_combatblade_p1",
+      "mark_id": "ogryn_combatblade_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_combatblade_p1_crit_chance_on_push",
+      "trait_item": "content/items/traits/bespoke_ogryn_combatblade_p1/crit_chance_on_push",
+      "trait_category": "bespoke_ogryn_combatblade_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1311
       }
     }
   ]
