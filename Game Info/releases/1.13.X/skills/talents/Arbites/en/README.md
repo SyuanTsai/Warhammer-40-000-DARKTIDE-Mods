@@ -56,6 +56,7 @@
 | <img src="https://github.com/user-attachments/assets/d4c3f66c-8fa8-419f-8a46-f94c842a9b4e" width="32" height="32" alt="True Grit talent icon"> [True Grit](#adamant_limit_dmg_taken_from_hits) | <ul><li>Health damage from one attack is capped at 50 points; instant kills bypass the cap.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/af78e688-7708-4d00-88f0-913478235d41" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>Increase Toughness Damage Reduction by 10 percentage points.</li></ul> | Stat node |
 | <img src="https://github.com/user-attachments/assets/d25eaf26-cb8b-4009-80ac-af75d049fb9f" width="32" height="32" alt="Arbitrator Armour talent icon"> [Arbitrator Armour](#adamant_armor) | <ul><li>Increase maximum Toughness by 25 points.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/90c9bff4-baf3-4b53-b160-16945870dd88" width="32" height="32" alt="Ammo Belt talent icon"> [Ammo Belt](#adamant_ammo_belt) | <ul><li>Increase Reserve ammunition capacity by 25%.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -696,3 +697,15 @@
 - **Bonus order**: Add these 25 points to base Toughness before applying percentage bonuses to maximum Toughness. With another 20% maximum-Toughness bonus, the result is (100 + 25) × 1.2 = 150 points.
 
 [Details](adamant_armor.md) · [Back to index](#talent-index)
+
+<a id="adamant_ammo_belt"></a>
+
+### Ammo Belt
+
+<img src="https://github.com/user-attachments/assets/90c9bff4-baf3-4b53-b160-16945870dd88" width="72" height="72" alt="Ammo Belt talent icon">
+
+- **Capacity example**: If the weapon originally carries 400 rounds in Reserve, capacity becomes 400 × (1 + 25%) = 500. For an original 101 rounds, 101 × 1.25 = 126.25 is rounded down to an integer capacity of 126.
+
+- **Scope**: Increase maximum Reserve ammunition; Clip capacity is unchanged.
+
+[Details](adamant_ammo_belt.md) · [Back to index](#talent-index)
