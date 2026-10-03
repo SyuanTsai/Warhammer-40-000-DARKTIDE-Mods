@@ -65,6 +65,7 @@
 | <img src="https://github.com/user-attachments/assets/d856ef6a-9f61-4b4a-b672-e60019dea866" width="32" height="32" alt="Imposing Force talent icon"> [Imposing Force](#adamant_damage_reduction_after_elite_kill) | <ul><li>An Elite or Specialist kill grants 25% Damage Resistance for 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/fd423ddb-0080-4603-8fd7-90257b583c3d" width="32" height="32" alt="Hold the Line talent icon"> [Hold the Line](#adamant_staggers_reduce_damage_taken) | <ul><li>Stagger enemies to build up to 5 damage-reduction stacks lasting 8s; a received melee hit clears them.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d3fa1c73-0a49-42ab-920c-11b7238af849" width="32" height="32" alt="Cleave Boost talent icon"> [Cleave Boost](#base_cleave_node_buff_medium_1) | <ul><li>Increase damage and stagger cleave capacity by 25%.</li></ul> | Stat node |
+| <img src="https://github.com/user-attachments/assets/e8b31492-509e-479a-9369-203e36e1e1e4" width="32" height="32" alt="Impact Boost talent icon"> [Impact Boost](#base_impact_node_buff_medium_1) | <ul><li>Increase Impact by 25%, making enemies easier to stagger.</li></ul> | Stat node |
 
 ## Blitz
 
@@ -811,3 +812,15 @@
 - **Practical effect**: It becomes easier to hit several enemies with one sweep. The number hit still depends on enemy mass, armour and the weapon's own penetration limits; this is not a 25% damage increase.
 
 [Details](base_cleave_node_buff_medium_1.md) · [Back to index](#talent-index)
+
+<a id="base_impact_node_buff_medium_1"></a>
+
+### Impact Boost
+
+<img src="https://github.com/user-attachments/assets/e8b31492-509e-479a-9369-203e36e1e1e4" width="72" height="72" alt="Impact Boost talent icon">
+
+- **Impact example**: Isolating the impact multiplier, 100 units of stagger strength becomes 100 × (1 + 25%) = 125 units.
+
+- **Scope**: This affects whether the attack reaches an enemy's stagger threshold. It is not a health-damage bonus and does not guarantee a stronger stagger against every enemy.
+
+[Details](base_impact_node_buff_medium_1.md) · [Back to index](#talent-index)
