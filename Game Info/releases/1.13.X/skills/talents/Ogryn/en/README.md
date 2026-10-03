@@ -63,6 +63,7 @@
 | <img src="https://github.com/user-attachments/assets/e9d72852-9fa6-4e02-aded-e261adb660f0" width="32" height="32" alt="Crunch! talent icon"> [Crunch!](#ogryn_fully_charged_attacks_gain_damage_and_stagger) | <ul><li>Charging a heavy attack builds up to +30% melee damage and Impact across four stacks; the bonus ends after that sweep.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/669fb8b0-a444-4216-abe1-74f4acc4af85" width="32" height="32" alt="Delight in Destruction talent icon"> [Delight in Destruction](#ogryn_nearby_bleeds_reduce_damage_taken) | <ul><li>Each bleeding enemy within 8m grants 5% damage reduction, up to six enemies / 30%; teammate Bleed also counts.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/a51567af-44cb-46ba-9908-3e3502dcbcdb" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>Reduce incoming Toughness damage by 10%; maximum Toughness and Health damage are unchanged by this stat.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/9af41f8c-0f0e-4b2b-965e-c0d01fea2746" width="32" height="32" alt="No Hurting Friends! talent icon"> [No Hurting Friends!](#ogryn_damage_taken_by_all_increases_strength_tdr) | <ul><li>Damage to you or Coherency allies builds up to five +2% Strength stacks for 10s; full stacks also grant 15% Toughness damage reduction.</li></ul> | Talent |
 
 ## Blitz
 
@@ -975,3 +976,25 @@
 - **Damage-reduction example**: With only this bonus, Toughness damage of 100 becomes `100 × (1 − 10%) = 90`. With an existing 20% reduction at the same calculation stage, it becomes `100 × (1 − 20% − 10%) = 70`. Other independent reduction multipliers apply separately.
 
 [Details](base_toughness_damage_reduction_node_buff_medium_1.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_damage_taken_by_all_increases_strength_tdr"></a>
+
+### No Hurting Friends!
+
+<img src="https://github.com/user-attachments/assets/9af41f8c-0f0e-4b2b-965e-c0d01fea2746" width="72" height="72" alt="No Hurting Friends! talent icon">
+
+- **Trigger**: When you or an ally in Coherency take damage, you gain one Strength stack. Toughness-only damage also triggers it; losing Health is not required.
+
+- **Stacks and timing**: Each stack grants +2% Strength, up to 5 stacks / 10%, for 10s. Further triggers restart the duration. At all 5 stacks, also gain 15% Toughness damage reduction; that bonus ends below full stacks.
+
+- **Power example**: With only this bonus, Power of 500 becomes `500 × (1 + 5 × 2%) = 550`. Power affects damage, Impact and cleave. Actual damage still uses weapon curves and target armour; final damage cannot always be multiplied by 1.1.
+
+- **Damage-reduction example**: At full stacks, Toughness damage of 100 at this stage becomes `100 × 0.85 = 85`, or 68 with another independent 20% reduction.
+
+#### Chinese localization note
+
+- The Chinese description limits the trigger to Health damage, which is too narrow: Toughness-only damage also builds stacks without prior Health loss. The English wording says Damage Taken and does not impose that restriction.
+
+[Details](ogryn_damage_taken_by_all_increases_strength_tdr.md) · [Back to index](#talent-index)
