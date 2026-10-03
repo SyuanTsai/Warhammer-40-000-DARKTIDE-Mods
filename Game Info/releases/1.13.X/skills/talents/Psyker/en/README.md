@@ -31,6 +31,7 @@
 | <img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="32" height="32" alt="Telekine Shield talent icon"> [Telekine Shield](#psyker_combat_ability_force_field) | <ul><li>Deploy a forward shield that blocks Enemy Ranged Attacks while you and Allies can shoot through. Maximum duration 17.5 seconds; base cooldown 40 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/72b10287-7ce1-47a1-a57f-a88c56c51f9f" width="32" height="32" alt="Bolstered Shield talent icon"> [Bolstered Shield](#psyker_shield_extra_charge) | <ul><li>Telekine Shield gains one extra charge, holding up to 2; charges share the same cooldown-resource pool.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0" width="32" height="32" alt="Sanctuary talent icon"> [Sanctuary](#psyker_boost_allies_in_sphere) | <ul><li>With Telekine Dome, you and Allies inside recover 10% of maximum Toughness per second. Players still inside when it dissipates gain 50% Toughness Damage Reduction for 5 seconds.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/60e6d4b2-0696-4215-8afd-8c9725d4801f" width="32" height="32" alt="Telekine Dome talent icon"> [Telekine Dome](#psyker_sphere_shield) | <ul><li>Telekine Shield becomes a spherical barrier of about 6 metres radius, lasting up to 25 seconds with a 60-second base cooldown; durability remains 20 accepted hits.</li></ul> | Ability |
 
 ---
 
@@ -400,3 +401,17 @@
 - **Recovery and reduction example**: At 100 maximum Toughness, recover `100 × 10% = 10` per second, up to 30 over 3 seconds, capped by missing Toughness. During the reduction effect, an original 40 Toughness damage becomes `40 × 0.5 = 20`.
 
 [Details](psyker_boost_allies_in_sphere.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_sphere_shield"></a>
+
+### Telekine Dome
+
+<img src="https://github.com/user-attachments/assets/60e6d4b2-0696-4215-8afd-8c9725d4801f" width="72" height="72" alt="Telekine Dome talent icon">
+
+- **Ability modifier**: Telekine Shield becomes a spherical barrier around the casting position, with a radius of about 6 metres. It lasts up to 25 seconds; base cooldown becomes 60 seconds. The shield can still disappear early when its durability is exhausted.
+
+- **Time comparison**: Compared with the original shield, duration increases by `25 − 17.5 = 7.5` seconds and cooldown by `60 − 40 = 20` seconds. Durability still supports 20 accepted removals.
+
+[Details](psyker_sphere_shield.md) · [Back to index](#talent-index)

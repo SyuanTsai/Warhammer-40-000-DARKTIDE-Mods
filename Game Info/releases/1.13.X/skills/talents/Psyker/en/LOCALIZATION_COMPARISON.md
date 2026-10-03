@@ -298,6 +298,18 @@ Full raw template and formatting: [source evidence](psyker_boost_allies_in_spher
 | Inside recovery and dissipation bonus | Allies inside Telekine Shield replenish 10% Toughness per second; those inside when it dissipates gain +50% Toughness Damage Reduction for 5s; `ui / loc_talent_psyker_force_field_grants_toughness_desc / fe5dbdd8` | The sphere's inside buff restores 0.1 of maximum Toughness per second. Players still in _players_inside at dissipation receive duration=5 and toughness_damage_taken_multiplier=0.5. [Fixed source and line references](psyker_boost_allies_in_sphere.md#fixed-source-evidence) | Consistent | The effects, values and at-dissipation presence condition agree. |
 | Sphere prerequisite, recipients and calculation basis | Parent Shield name used; no Dome prerequisite, caster exclusion or maximum-Toughness basis stated; `ui / loc_talent_psyker_force_field_grants_toughness_desc / fe5dbdd8` | ForceFieldUnitExtension requires sphere_shield as well as Sanctuary. Eligible players include the caster. At maximum Toughness 100, 3 seconds restores up to 30; an original 40 Toughness damage becomes 20 during the end buff. [Fixed source and line references](psyker_boost_allies_in_sphere.md#fixed-source-evidence) | Not covered by the description | The spherical-shield prerequisite, full recipient set and arithmetic supplement the wording; the English does not explicitly promise wall-shape effects. |
 
+
+<a id="psyker_sphere_shield"></a>
+
+## Telekine Dome
+
+Full raw template and formatting: [source evidence](psyker_sphere_shield.md#original-english-template-and-reconstruction). Name hash `8dd9e6d1`. Every row uses `ui / loc_talent_psyker_force_field_dome_increased_cd_desc / 0b13a4ee`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Shape, duration and increased cooldown | Telekine Shield becomes a spherical shield lasting 25s; cooldown increases to 60s; `ui / loc_talent_psyker_force_field_dome_increased_cd_desc / 0b13a4ee` | psyker_force_field_dome and psyker_sphere_shield replace the wall. sphere_duration=25 and cooldown/resource_cost_per_charge=60. [Fixed source and line references](psyker_sphere_shield.md#fixed-source-evidence) | Consistent | The sphere form and both time values agree. |
+| Radius, durability and comparison limits | No radius, increased durability, guaranteed survival or wall comparison arithmetic stated; `ui / loc_talent_psyker_force_field_dome_increased_cd_desc / 0b13a4ee` | SPHERE_UNIT_RADIUS=6; collision checks include player-unit radius. sphere_health=20 and damage-throttling rules are shared. Relative to wall duration 17.5/cooldown 40, Dome adds 7.5 seconds of duration and 20 seconds of cooldown; early exhaustion is possible. [Fixed source and line references](psyker_sphere_shield.md#fixed-source-evidence) | Not covered by the description | These geometry, durability and time-comparison details supplement the English. |
+
 ## Comparison totals
 
 The 43 listed rules comprise **21 Consistent**, **0 Explicit contradictions**, **20 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.
