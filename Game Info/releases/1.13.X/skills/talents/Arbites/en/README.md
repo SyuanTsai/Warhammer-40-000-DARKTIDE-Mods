@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/2f99cb20-a83e-4a7c-98ee-f43949811f84" width="32" height="32" alt="Ruthless Efficiency talent icon"> [Ruthless Efficiency](#adamant_reload_speed_aura) | <ul><li>You and Allies in Coherency gain an additional 12.5% Reload Speed.</li><li>Your Cyber-Mastiff no longer counts towards Coherency while this aura is selected.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/57af1e74-7cc5-45bb-a332-11d2e5fde909" width="32" height="32" alt="Breaking Dissent talent icon"> [Breaking Dissent](#adamant_damage_vs_staggered_aura) | <ul><li>You and Allies in Coherency deal 10% more damage to Staggered enemies.</li><li>Isolating this effect, 100 damage becomes 110; it gives no bonus against a target that is not Staggered.</li><li>Your Cyber-Mastiff no longer counts towards Coherency while this aura is selected.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="32" height="32" alt="Break the Line talent icon"> [Break the Line](#adamant_charge) | <ul><li>Step forward and Bash; count as Blocking during the charge, then gain Damage and Impact bonuses for 6s.</li><li>Base cooldown 20s; one charge.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="Nuncio-Aquila talent icon"> [Nuncio-Aquila](#adamant_area_buff_drone_improved) | <ul><li>Deploy for 20s in a 7.5m radius; 60s cooldown, one charge.</li><li>The improved version restores 7.5% maximum Toughness per second increases Suppression and Impact, and reduces Recoil; it grants immunity to Stun, Slowdown and Suppression.</li><li>Enemies within range take 15% more damage.</li></ul> | Ability |
 
 ## Blitz
 
@@ -119,3 +120,17 @@
 - **Damage and Impact**: After the charge ends, gain 25% Damage and 50% Impact for 6s. Isolating these bonuses, 100 damage becomes 125 and 100 units of Impact become 150. With an existing same-stage 25% damage bonus, `100 × (1 + 25% + 25%) = 150 damage`. Triggering the buff again restarts its duration.
 
 [Details](adamant_charge.md) · [Back to index](#talent-index)
+
+<a id="adamant_area_buff_drone_improved"></a>
+
+### Nuncio-Aquila
+
+<img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="72" height="72" alt="Nuncio-Aquila talent icon">
+
+- **Deployment and cooldown**: Aim to deploy in the target direction. A quick tap deploys it at your position and makes it follow you. The drone lasts 20s, has a 7.5m radius and a 60s cooldown.
+
+- **Ally support**: The improved version replenishes 7.5% of maximum Toughness per second, grants 30% more Suppression Dealt and Impact, and reduces Recoil by 25%. It also grants immunity to Stun, Slowdown and Suppression. Staying within range for 2s theoretically restores `7.5% × 2 = 15% of maximum Toughness`; actual restoration is capped by missing Toughness.
+
+- **Enemy vulnerability**: Enemies within range take 15% more damage. Isolating this effect with other conditions unchanged, 100 damage becomes `100 × 1.15 = 115 damage`.
+
+[Details](adamant_area_buff_drone_improved.md) · [Back to index](#talent-index)

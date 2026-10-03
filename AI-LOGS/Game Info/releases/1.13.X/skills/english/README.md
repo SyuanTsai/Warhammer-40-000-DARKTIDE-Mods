@@ -228,3 +228,5 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Break the Line](arbites_adamant_charge.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - Timing checkpoint: the five Arbites items from Grenade through Breaking Dissent were committed in a 1,903s interval after Remote Detonation (31m43s, including existing-draft continuation). At that checkpoint 595 mapped files remained: 557 mechanism, 36 class support, 2 shared. Provisional remaining execution estimate: 40–60h from this observed sample; no fixed deadline promised.
+
+- [Nuncio-Aquila](arbites_adamant_area_buff_drone_improved.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
