@@ -25,5 +25,6 @@
 | <img src="https://github.com/user-attachments/assets/4a057aec-b5c7-4d9c-8399-a70094eb498a" width="32" height="32" alt="永燃烈焰祝福圖示"> [永燃烈焰](entries/永燃烈焰/README.md)<br>- Everlasting Flame<br>[完整說明](entries/永燃烈焰/README.md) | <ul><li>新的暴擊判定成功時，I–IV從備彈移入燃料箱最多2／3／4／5單位；未命中也可觸發，受燃料箱缺額與備彈限制。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/493a9f0e-5e68-4416-bbf3-d99bdfc85b1b" width="32" height="32" alt="電靈超載祝福圖示"> [電靈超載](entries/電靈超載/README.md)<br>- Voltagheist Overload<br>[完整說明](entries/電靈超載/README.md) | <ul><li>電弧命中仍存活的人型敵人時，I–IV各有5%／7.5%／10%／12.5%機率處決；不作用於歐格林、魔物及首領。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/e292ed7d-8b36-4da5-9f39-528bed983004" width="32" height="32" alt="機會主義者祝福圖示"> [機會主義者](entries/機會主義者/README.md)<br>- Opportunist<br>[完整說明](entries/機會主義者/README.md) | <ul><li>對傷害結算前已踉蹌或被視為踉蹌的敵人，I–IV提供10%／15%／20%／25%近戰撕裂；本擊才造成踉蹌不回溯加成。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/73b6c65e-a09c-4c98-9002-22e0c8cfd0c1" width="32" height="32" alt="超級充能祝福圖示"> [超級充能](entries/超級充能/README.md)<br>- Supercharge<br>[完整說明](entries/超級充能/README.md) | <ul><li>充能近戰命中後使目標疊加脆弱；動力劍每次1／2／3／4層，動力錘10／12／14／16層。每層2.5%，最高16層，刷新5秒。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

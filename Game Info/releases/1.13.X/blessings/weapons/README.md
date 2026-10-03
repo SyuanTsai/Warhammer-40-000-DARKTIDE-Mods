@@ -16,7 +16,7 @@
 | [烈焰力場劍](melee/烈焰力場劍/README.md)<br>- Blaze Force Sword | 近戰 | 朦朧Mk II烈焰力場劍、火衛二Mk IV烈焰力場劍、伊利斯Mk V烈焰力場劍 |
 | [骨鋸](melee/骨鋸/README.md)<br>- Bone Saw | 近戰 | 外科醫師Mk IV骨鋸 |
 | [穿音速雙刀](melee/穿音速雙刀/README.md)<br>- Paired Transonic Blades | 近戰 | 西福爾穿音速刀刃 |
-| [動力劍](melee/動力劍/README.md)<br>- Power Sword | 近戰 | 軍務部Mk III動力劍、軍務部Mk VI動力劍 |
+| [動力劍](melee/動力劍/README.md)<br>- Power Sword | 近戰 | 動力劍 斯干達 Mk III、動力劍 阿克利斯 Mk VI |
 | [偵察鐳射槍](ranged/偵察鐳射槍/README.md)<br>- Recon Lasgun | 遠程 | 奧克塔蘭Mk II偵察鐳射槍、奧克塔蘭Mk VId偵察鐳射槍、奧克塔蘭Mk VIIa偵察鐳射槍 |
 | [電弧步槍](ranged/電弧步槍/README.md)<br>- Arc Rifle | 遠程 | 庫巴爾電弧步槍 |
 | [槍托自動槍](ranged/槍托自動槍/README.md)<br>- Braced Autogun | 遠程 | 哥倫努Mk II槍托自動槍、格拉亞Mk IV槍托自動槍、阿格里皮娜Mk VIII槍托自動槍 |
@@ -50,3 +50,4 @@
 | [碾壓者](melee/碾壓者/README.md)<br>- Crusher | 近戰 | 碾壓者 憤怒 Mk IVe、碾壓者 克魯克 Mk VII |
 | [電擊錘](melee/電擊錘/README.md)<br>- Shock Maul | 近戰 | 電擊錘 阿格尼 Mk Ia、電擊錘 軍務部 Mk III |
 | [法務官電擊鎚和鎮壓護盾](melee/法務官電擊鎚和鎮壓護盾/README.md)<br>- Shock Maul and Suppression Shield | 近戰 | 法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk VI、法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk XI |
+| [機械神教動力劍](melee/機械神教動力劍/README.md)<br>- Mechanicus Power Sword | 近戰 | 機械神教動力劍 布蘭克斯 Mk VI |

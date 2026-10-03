@@ -1,0 +1,188 @@
+{
+  "date": "2026-10-03",
+  "blessing": "supercharge",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/超級充能/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_ogryn_powermaul_p1_targets_receive_rending_debuff_on_weapon_special_attacks",
+    "weapon_trait_bespoke_powersword_p1_targets_receive_rending_debuff_on_weapon_special_attacks",
+    "weapon_trait_bespoke_powersword_p3_targets_receive_rending_debuff_on_weapon_special_attacks"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 3,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_bindings",
+    "scope": "Supercharge three variants/four bindings source research and ignored complete config draft, followed by read-only cross-review of primary draft",
+    "findings": [
+      "All three actual wrappers clone weapon-special target debuff; same-item+weapon-special check and held proc gate.",
+      "Ogryn10/12/14/16 stacks; powerswordP1/P3 1/2/3/4 stacks.",
+      "Target2.5% perstack cap16/5s shared refresh; other weapons and teammates read target rending.",
+      "Weapon-special flag is damage-profile field; Ogryn explosion profiles lack it and do not add this blessing stacks.",
+      "Attack damage is completed before queued on_hit applies new target debuff."
+    ],
+    "primary_review": "Directly read fixed Git tier definitions, wrapper spans, common gates and target debuff helper, queued event ordering, all four template imports/ukeys/append chains, all metadata/RAW/UI keys and actual special melee/Explosion source chain; independent arithmetic checks.",
+    "parallel_execution": {
+      "groups": [
+        "supercharge",
+        "shattering-impact",
+        "can-opener"
+      ],
+      "max_groups": 3,
+      "user_authorized": true,
+      "shared_files_written_by": "primary only"
+    },
+    "final_document_review": {
+      "primary_result": "accepted after verified configuration corrections",
+      "agent_result": "player/examples/math accepted; requested explicit per-weapon values and additional config references",
+      "required_corrections": [],
+      "resolved_corrections": [
+        "Configuration now lists all three values_by_weapon entries; formal map already contained distinct correct per-variant values.",
+        "Added both PowerSword active-profile references to config and formal SOURCE_INDEX; all three trait/wrapper references were already generated in formal source table and are now explicit config refs too."
+      ]
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/73b6c65e-a09c-4c98-9002-22e0c8cfd0c1",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "supercharge",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_202",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_202.png",
+      "attachment": "https://github.com/user-attachments/assets/73b6c65e-a09c-4c98-9002-22e0c8cfd0c1",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5966417943",
+      "acquired_date": "2026-10-03",
+      "sha256": "e877a2a2b3ad6163448d6178d51a0599734dfe1510f05cd66c0b4fdee32b1b54",
+      "content_type": "image/png",
+      "size": 5208,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "超級充能祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 245,
+      "tables": 206,
+      "rows": 1590,
+      "lists": 309
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 746,
+      "source_files": 273,
+      "bindings": 150,
+      "variants": 79,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 945,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 245,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 146,
+    "not_started_name_groups": 146,
+    "partial_name_groups": 0,
+    "remaining_variants": 509,
+    "remaining_bindings": 1018,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "54d7add24fa2c30f3250300d5b42bb3d179e941c15ccc4798337a73d97442eee"
+  },
+  "previous_local_commit": "051898b93c56d597584c656bfc787aa631726a91",
+  "current_blessing_formula_review": {
+    "primary_direct_fixed_source_read": true,
+    "same_sha_shared_rending_formula_reused": true,
+    "single_proc_stacks_verified_by_weapon": {
+      "ogryn_powermaul_p1": [
+        10,
+        12,
+        14,
+        16
+      ],
+      "powersword_p1": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "powersword_p3": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "target_stack_cap": 16,
+    "rending_per_stack": 0.025,
+    "duration_seconds": 5,
+    "full_stack_brittleness": 0.4,
+    "source_cap_distinction": "Parent31 is not actual target16; totalrendingcap1 is separate.",
+    "first_hit_not_retroactive": true,
+    "examples_independent_arithmetic_checked": true,
+    "gameplay_test": "not run",
+    "special_profile_flags_primary_read": {
+      "powersword_p1": [
+        238,
+        242
+      ],
+      "powersword_p3": [
+        3062,
+        3067
+      ]
+    }
+  },
+  "ui_name_review": {
+    "primary_current_three_key_names_checked": true,
+    "mark_count": 4,
+    "exact_trait_metadata_records": 3,
+    "raw_name_hash": "ede57171",
+    "raw_description_hash": "814feacc",
+    "fixed_registry_lines": [
+      62,
+      76,
+      78
+    ]
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 3,
+    "bound_variants": 3,
+    "same_name_candidates": [],
+    "status": "primary exact inventory and metadata checked"
+  }
+}

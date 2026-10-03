@@ -23,3 +23,4 @@
 | [永燃烈焰](entries/永燃烈焰/README.md) | [來源索引](entries/永燃烈焰/SOURCE_INDEX.md) |
 | [電靈超載](entries/電靈超載/README.md) | [來源索引](entries/電靈超載/SOURCE_INDEX.md) |
 | [機會主義者](entries/機會主義者/README.md) | [來源索引](entries/機會主義者/SOURCE_INDEX.md) |
+| [超級充能](entries/超級充能/README.md) | [來源索引](entries/超級充能/SOURCE_INDEX.md) |

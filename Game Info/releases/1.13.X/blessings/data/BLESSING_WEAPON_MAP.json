@@ -233,6 +233,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/e292ed7d-8b36-4da5-9f39-528bed983004",
       "effect": "對傷害結算前已踉蹌或被視為踉蹌的敵人，I–IV提供10%／15%／20%／25%近戰撕裂；本擊才造成踉蹌不回溯加成。"
+    },
+    {
+      "id": "supercharge",
+      "name_zh_tw": "超級充能",
+      "name_en": "Supercharge",
+      "name_key": "loc_trait_bespoke_armor_rend_on_activated_attacks",
+      "description_key": "loc_trait_bespoke_armor_rend_on_activated_attacks_desc",
+      "name_hash": "ede57171",
+      "description_hash": "814feacc",
+      "page": "entries/超級充能/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/73b6c65e-a09c-4c98-9002-22e0c8cfd0c1",
+      "effect": "充能近戰命中後使目標疊加脆弱；動力劍每次1／2／3／4層，動力錘10／12／14／16層。每層2.5%，最高16層，刷新5秒。"
     }
   ],
   "weapons": [
@@ -607,18 +620,28 @@
         {
           "id": "powersword_p1_m1",
           "item": "content/items/weapons/player/melee/powersword_p1_m1",
-          "name": "軍務部Mk III動力劍",
-          "name_en": "Munitorum Mk III Power Sword",
+          "name": "動力劍 斯干達 Mk III",
+          "name_en": "Power Sword Scandar Mk III",
           "template_file": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua",
-          "trait_category": "bespoke_powersword_p1"
+          "trait_category": "bespoke_powersword_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_powersword_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_powersword_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_powersword_p1_m1"
+          }
         },
         {
           "id": "powersword_p1_m2",
           "item": "content/items/weapons/player/melee/powersword_p1_m2",
-          "name": "軍務部Mk VI動力劍",
-          "name_en": "Munitorum Mk VI Power Sword",
+          "name": "動力劍 阿克利斯 Mk VI",
+          "name_en": "Power Sword Achlys Mk VI",
           "template_file": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
-          "trait_category": "bespoke_powersword_p1"
+          "trait_category": "bespoke_powersword_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_powersword_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_powersword_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_powersword_p1_m2"
+          }
         }
       ]
     },
@@ -1614,6 +1637,29 @@
             "weapon_family_display_name": "loc_weapon_family_powermaul_shield_p1_m2",
             "weapon_pattern_display_name": "loc_weapon_pattern_powermaul_shield_p1_m1",
             "weapon_mark_display_name": "loc_weapon_mark_powermaul_shield_p1_m2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "powersword_p3",
+      "name_zh_tw": "機械神教動力劍",
+      "name_en": "Mechanicus Power Sword",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_powersword_p3_m1",
+      "page": "weapons/melee/機械神教動力劍/README.md",
+      "marks": [
+        {
+          "id": "powersword_p3_m1",
+          "item": "content/items/weapons/player/melee/powersword_p3_m1",
+          "name": "機械神教動力劍 布蘭克斯 Mk VI",
+          "name_en": "Mechanicus Power Sword Branx Mk VI",
+          "template_file": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p3_m1.lua",
+          "trait_category": "bespoke_powersword_p3",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_powersword_p3_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_powersword_p3_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_powersword_p3_m1"
           }
         }
       ]
@@ -4738,6 +4784,135 @@
       "icon": "https://github.com/user-attachments/assets/e292ed7d-8b36-4da5-9f39-528bed983004",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_201",
       "effect": "對傷害結算前已踉蹌或被視為踉蹌的敵人，I–IV提供10%／15%／20%／25%近戰撕裂；本擊才造成踉蹌不回溯加成。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_powermaul_p1_targets_receive_rending_debuff_on_weapon_special_attacks",
+      "blessing_id": "supercharge",
+      "weapon_id": "ogryn_powermaul_p1",
+      "page": "entries/超級充能/weapon_trait_bespoke_ogryn_powermaul_p1_targets_receive_rending_debuff_on_weapon_special_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc": [
+          10,
+          12,
+          14,
+          16
+        ],
+        "rending_per_stack": 0.025,
+        "max_stacks": 16,
+        "duration": 5,
+        "refresh_duration_on_stack": true,
+        "condition": "on_hit, same item, held at proc processing, params.weapon_special, target alive with buff extension",
+        "proc_cooldown": null,
+        "total_rending_cap": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_powermaul_p1.lua",
+        "start_line": 202,
+        "end_line": 272
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_powermaul_p1_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 12
+      },
+      "description_key": "loc_trait_bespoke_armor_rend_on_activated_attacks_desc",
+      "description_hash": "814feacc",
+      "icon": "https://github.com/user-attachments/assets/73b6c65e-a09c-4c98-9002-22e0c8cfd0c1",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_202",
+      "effect": "充能近戰命中後施加10／12／14／16層脆弱，每層2.5%，最高16層，刷新5秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p1_targets_receive_rending_debuff_on_weapon_special_attacks",
+      "blessing_id": "supercharge",
+      "weapon_id": "powersword_p1",
+      "page": "entries/超級充能/weapon_trait_bespoke_powersword_p1_targets_receive_rending_debuff_on_weapon_special_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "rending_per_stack": 0.025,
+        "max_stacks": 16,
+        "duration": 5,
+        "refresh_duration_on_stack": true,
+        "condition": "on_hit, same item, held at proc processing, params.weapon_special, target alive with buff extension",
+        "proc_cooldown": null,
+        "total_rending_cap": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p1.lua",
+        "start_line": 225,
+        "end_line": 295
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_armor_rend_on_activated_attacks_desc",
+      "description_hash": "814feacc",
+      "icon": "https://github.com/user-attachments/assets/73b6c65e-a09c-4c98-9002-22e0c8cfd0c1",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_202",
+      "effect": "充能命中後施加1／2／3／4層脆弱，每層2.5%，最高16層，刷新5秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p3_targets_receive_rending_debuff_on_weapon_special_attacks",
+      "blessing_id": "supercharge",
+      "weapon_id": "powersword_p3",
+      "page": "entries/超級充能/weapon_trait_bespoke_powersword_p3_targets_receive_rending_debuff_on_weapon_special_attacks.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "rending_per_stack": 0.025,
+        "max_stacks": 16,
+        "duration": 5,
+        "refresh_duration_on_stack": true,
+        "condition": "on_hit, same item, held at proc processing, params.weapon_special, target alive with buff extension",
+        "proc_cooldown": null,
+        "total_rending_cap": 1
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p3.lua",
+        "start_line": 10,
+        "end_line": 80
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p3_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_armor_rend_on_activated_attacks_desc",
+      "description_hash": "814feacc",
+      "icon": "https://github.com/user-attachments/assets/73b6c65e-a09c-4c98-9002-22e0c8cfd0c1",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_202",
+      "effect": "充能命中後施加1／2／3／4層脆弱，每層2.5%，最高16層，刷新5秒。"
     }
   ],
   "bindings": [
@@ -6783,6 +6958,62 @@
         "path": "scripts/settings/equipment/weapon_templates/power_maul_shields/powermaul_shield_p1_m2.lua",
         "import_line": 16,
         "append_line": 1830
+      }
+    },
+    {
+      "blessing_id": "supercharge",
+      "weapon_id": "ogryn_powermaul_p1",
+      "mark_id": "ogryn_powermaul_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_p1_targets_receive_rending_debuff_on_weapon_special_attacks",
+      "trait_item": "content/items/traits/bespoke_ogryn_powermaul_p1/armor_rend_on_activated_attacks",
+      "trait_category": "bespoke_ogryn_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_power_mauls/ogryn_powermaul_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 2346
+      }
+    },
+    {
+      "blessing_id": "supercharge",
+      "weapon_id": "powersword_p1",
+      "mark_id": "powersword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p1_targets_receive_rending_debuff_on_weapon_special_attacks",
+      "trait_item": "content/items/traits/bespoke_powersword_p1/armor_rend_on_activated_attacks",
+      "trait_category": "bespoke_powersword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua",
+        "import_line": 12,
+        "append_line": 1268
+      }
+    },
+    {
+      "blessing_id": "supercharge",
+      "weapon_id": "powersword_p1",
+      "mark_id": "powersword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_p1_targets_receive_rending_debuff_on_weapon_special_attacks",
+      "trait_item": "content/items/traits/bespoke_powersword_p1/armor_rend_on_activated_attacks",
+      "trait_category": "bespoke_powersword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
+        "import_line": 12,
+        "append_line": 1626
+      }
+    },
+    {
+      "blessing_id": "supercharge",
+      "weapon_id": "powersword_p3",
+      "mark_id": "powersword_p3_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p3_targets_receive_rending_debuff_on_weapon_special_attacks",
+      "trait_item": "content/items/traits/bespoke_powersword_p3/armor_rend_on_activated_attacks",
+      "trait_category": "bespoke_powersword_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 3374
       }
     }
   ]
