@@ -113,5 +113,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/fully-loaded-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ammo_increase.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ammo_increase.md",
+  "commit": "722ac4656036aa5c906326ee6cdaa236dfcfa71b"
 }

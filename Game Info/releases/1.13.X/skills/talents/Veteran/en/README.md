@@ -37,6 +37,7 @@
 | <img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="32" height="32" alt="Chink in their Armour talent icon"> [Chink in their Armour](#veteran_snipers_focus_rending_bonus) | <ul><li>At 10 or more Focus stacks, gain 15% Rending; lose it below 10 stacks.</li><li>The threshold stays 10 with Long Range Assassin. Damage gain depends on armor and existing Rending.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f" width="32" height="32" alt="Tunnel Vision talent icon"> [Tunnel Vision](#veteran_snipers_focus_toughness_bonus) | <ul><li>Each effective Focus stack increases applicable Toughness replenishment by 4%.</li><li>Ranged weakspot kills restore 10% of maximum Stamina, limited by the deficit.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/4087a451-e4ae-429b-afe6-75369e2903f3" width="32" height="32" alt="Fully Loaded talent icon"> [Fully Loaded](#veteran_ammo_increase) | <ul><li>Increase maximum reserve ammo by 25%.</li><li>Does not increase magazine capacity; fractional rounds are rounded down.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/6632d16b-faac-444e-8139-99057e2f613a" width="32" height="32" alt="Lock and Load talent icon"> [Lock and Load](#veteran_clip_size) | <ul><li>Increase magazine capacity by 25%; fractional rounds are rounded down.</li><li>Does not directly increase maximum reserve ammo.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -654,6 +655,30 @@ Compare only this talent's Rending. Assume a noncritical hit that does not hit a
 - At base 100 with an existing 20% bonus at the same additive stage, maximum reserve changes from `100 × 1.20 = 120` to `100 × (1 + 0.20 + 0.25) = 145 rounds`. The new gain over 120 is `25 ÷ 120 ≈ 20.83%`; the magazine is unaffected by this talent.
 
 [Detailed sources and formulas](veteran_ammo_increase.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_ammo_increase) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_clip_size"></a>
+
+<img src="https://github.com/user-attachments/assets/6632d16b-faac-444e-8139-99057e2f613a" width="72" height="72" alt="Lock and Load talent icon">
+
+### Lock and Load
+
+- Increase **magazine capacity by 25%**.
+- Fractional rounds are rounded down. This does not directly increase maximum reserve ammo; magazine hard limits still apply.
+
+**Capacity examples**
+
+With no other magazine-size modifier and a hard limit above the result:
+
+- A 40-round base magazine becomes `floor(40 × 1.25) = 50 rounds`.
+- A 7-round base magazine gives `floor(7 × 1.25) = floor(8.75) = 8 rounds`.
+
+**Game description erratum**
+
+- The English tooltip says **“rounded up”**. The implementation rounds down: the 7-round example gives **8 rounds**, rather than 9.
+
+[Detailed sources and formulas](veteran_clip_size.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_clip_size) | [Back to index](#talent-index)
 
 ---
 

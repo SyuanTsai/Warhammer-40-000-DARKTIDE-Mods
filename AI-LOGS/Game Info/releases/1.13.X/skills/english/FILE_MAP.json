@@ -5717,7 +5717,8 @@
         "veteran_increased_damage_coherency",
         "veteran_movement_speed_coherency",
         "veteran_aura_gain_ammo_on_elite_kill_improved",
-        "veteran_ammo_increase"
+        "veteran_ammo_increase",
+        "veteran_clip_size"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5775,7 +5776,8 @@
         "veteran_increased_damage_coherency",
         "veteran_movement_speed_coherency",
         "veteran_aura_gain_ammo_on_elite_kill_improved",
-        "veteran_ammo_increase"
+        "veteran_ammo_increase",
+        "veteran_clip_size"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5833,7 +5835,8 @@
         "veteran_increased_damage_coherency",
         "veteran_movement_speed_coherency",
         "veteran_aura_gain_ammo_on_elite_kill_improved",
-        "veteran_ammo_increase"
+        "veteran_ammo_increase",
+        "veteran_clip_size"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5891,7 +5894,8 @@
         "veteran_increased_damage_coherency",
         "veteran_movement_speed_coherency",
         "veteran_aura_gain_ammo_on_elite_kill_improved",
-        "veteran_ammo_increase"
+        "veteran_ammo_increase",
+        "veteran_clip_size"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6143,9 +6147,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "df3f617c9fa842042d888033c7759f65b80adf80",
       "chinese_sha256": "392008d4c7dc2b01be50e183b2cf7b7f1ff519f7bd1d52828fd409958a85544e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_clip_size"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_coherency_outlines.md",
@@ -8480,7 +8499,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_ammo_increase.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ammo_increase.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ammo_increase.md",
+      "commit": "722ac4656036aa5c906326ee6cdaa236dfcfa71b"
+    },
+    {
+      "id": "veteran_clip_size",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_clip_size.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_clip_size.md"
     }
   ],
   "pending_chinese_corrections": [
