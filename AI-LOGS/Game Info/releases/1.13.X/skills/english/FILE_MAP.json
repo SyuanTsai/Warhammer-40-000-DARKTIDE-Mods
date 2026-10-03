@@ -5757,7 +5757,8 @@
         "veteran_weapon_switch_passive",
         "veteran_weapon_switch_replenish_toughness",
         "veteran_weapon_switch_replenish_ammo",
-        "veteran_weapon_switch_replenish_stamina"
+        "veteran_weapon_switch_replenish_stamina",
+        "veteran_improved_tag"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5855,7 +5856,8 @@
         "veteran_weapon_switch_passive",
         "veteran_weapon_switch_replenish_toughness",
         "veteran_weapon_switch_replenish_ammo",
-        "veteran_weapon_switch_replenish_stamina"
+        "veteran_weapon_switch_replenish_stamina",
+        "veteran_improved_tag"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5953,7 +5955,8 @@
         "veteran_weapon_switch_passive",
         "veteran_weapon_switch_replenish_toughness",
         "veteran_weapon_switch_replenish_ammo",
-        "veteran_weapon_switch_replenish_stamina"
+        "veteran_weapon_switch_replenish_stamina",
+        "veteran_improved_tag"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6051,7 +6054,8 @@
         "veteran_weapon_switch_passive",
         "veteran_weapon_switch_replenish_toughness",
         "veteran_weapon_switch_replenish_ammo",
-        "veteran_weapon_switch_replenish_stamina"
+        "veteran_weapon_switch_replenish_stamina",
+        "veteran_improved_tag"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6986,9 +6990,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "e5dcc3a7071b197cdeaae72a39a081a5803d3e69",
       "chinese_sha256": "26a558421e37eacd8e9a27a95d1096593071dc84abc006baef282f23540b996d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_improved_tag"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_improved_tag_dead_bonus.md",
@@ -9600,7 +9619,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_weapon_switch_replenish_stamina.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_weapon_switch_replenish_stamina.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_weapon_switch_replenish_stamina.md",
+      "commit": "43896a61173f5d50aea146fea878bae0cbcf4331"
+    },
+    {
+      "id": "veteran_improved_tag",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_improved_tag.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_tag.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -36,6 +36,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [On Your Toes](veteran_weapon_switch_replenish_toughness.md) / `veteran_weapon_switch_replenish_toughness` | Keystone modifier |
 | [Always Prepared](veteran_weapon_switch_replenish_ammo.md) / `veteran_weapon_switch_replenish_ammo` | Keystone modifier |
 | [Invigorated](veteran_weapon_switch_replenish_stamina.md) / `veteran_weapon_switch_replenish_stamina` | Keystone modifier |
+| [Focus Target!](veteran_improved_tag.md) / `veteran_improved_tag` | Keystone |
 | [Marksman's Focus](veteran_snipers_focus.md) / `veteran_snipers_focus` | Keystone |
 | [Long Range Assassin](veteran_snipers_focus_increased_stacks.md) / `veteran_snipers_focus_increased_stacks` | Keystone modifier |
 | [Chink in their Armour](veteran_snipers_focus_rending_bonus.md) / `veteran_snipers_focus_rending_bonus` | Keystone modifier |

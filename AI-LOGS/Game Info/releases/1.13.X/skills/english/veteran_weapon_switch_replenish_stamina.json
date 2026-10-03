@@ -116,5 +116,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/invigorated-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_weapon_switch_replenish_stamina.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_weapon_switch_replenish_stamina.md",
+  "commit": "43896a61173f5d50aea146fea878bae0cbcf4331"
 }

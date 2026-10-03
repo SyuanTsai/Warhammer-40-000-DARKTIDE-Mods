@@ -36,6 +36,7 @@
 | <img src="https://github.com/user-attachments/assets/a6e24eb8-063a-45a5-8796-acde81d1f734" width="32" height="32" alt="On Your Toes talent icon"> [On Your Toes](#veteran_weapon_switch_replenish_toughness) | <ul><li>Activating either Specialist restores 20% of maximum Toughness, subject to recovery modifiers and the deficit.</li><li>Each weapon direction has its own 3-second cooldown; stored stacks are consumed even if that cooldown blocks recovery.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/842c2a40-8bb4-45fa-a1e2-672fedf80d78" width="32" height="32" alt="Always Prepared talent icon"> [Always Prepared](#veteran_weapon_switch_replenish_ammo) | <ul><li>Activating Ranged Specialist transfers Reserve ammo into the Clip based on 3.3% of current missing Clip ammo per stored stack.</li><li>Round the calculated total up; transfer is limited by Reserve ammo and the Clip deficit, then stored stacks are consumed.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/bc2a44d8-866d-4f29-a680-f84e98b72b01" width="32" height="32" alt="Invigorated talent icon"> [Invigorated](#veteran_weapon_switch_replenish_stamina) | <ul><li>Activating Melee Specialist restores 20% of maximum Stamina, limited by the deficit.</li><li>Gain 25% stamina-cost reduction for 3 seconds; it persists through weapon switches and refreshes on a new qualifying activation.</li></ul> | Keystone modifier |
+| <img src="https://github.com/user-attachments/assets/85048589-7642-40e7-9d4b-ab325da2ea25" width="32" height="32" alt="Focus Target! talent icon"> [Focus Target!](#veteran_improved_tag) | <ul><li>Store one stack every 1.5 seconds, starting at 1 and normally capping at 4; a tag applies the stored amount to the target.</li><li>Each applied stack multiplies target damage taken by 1.05. Same-target re-tags upgrade only to a higher stored count; the mark lasts 25 seconds.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="Long Range Assassin talent icon"> [Long Range Assassin](#veteran_snipers_focus_increased_stacks) | <ul><li>Raise Marksman's Focus's effective stack cap from 10 to 15.</li><li>At 15 stacks, gain 112.5% ranged finesse strength and 15% reload speed; the whole-hit increase depends on the extra component.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="32" height="32" alt="Chink in their Armour talent icon"> [Chink in their Armour](#veteran_snipers_focus_rending_bonus) | <ul><li>At 10 or more Focus stacks, gain 15% Rending; lose it below 10 stacks.</li><li>The threshold stays 10 with Long Range Assassin. Damage gain depends on armor and existing Rending.</li></ul> | Keystone modifier |
@@ -763,6 +764,25 @@ Assume maximum Stamina is 6 points and the activation has a stored Melee Special
 - **An otherwise 2-point action cost:** with other cost factors equal to 1, `2 × (1 − 25%) = 1.5 points`, saving 0.5 points during the effect.
 
 [Detailed sources and formulas](veteran_weapon_switch_replenish_stamina.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_weapon_switch_replenish_stamina) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_improved_tag"></a>
+
+<img src="https://github.com/user-attachments/assets/85048589-7642-40e7-9d4b-ab325da2ea25" width="72" height="72" alt="Focus Target! talent icon">
+
+### Focus Target!
+
+- **Start with 1 stored stack and gain 1 every 1.5 seconds, up to 4.** Tag an enemy to apply your stored stacks, increasing damage it takes from you and your allies. A new or stronger application resets storage to 1.
+- **Each applied stack multiplies damage taken by 1.05.** At four stacks, an otherwise 100-point hit becomes `100 × 1.05^4 ≈ 121.55 damage`, about 21.55% more. Reaching four stored stacks from the initial one takes about `(4 − 1) × 1.5 = 4.5 seconds`.
+- Maintain one marked target for 25 seconds. Re-tagging the same enemy refreshes that timer; if storage exceeds its applied stacks, add only the difference. Natural storage gains do not automatically strengthen the target. Tagging a different enemy removes your old target's debuff.
+- **Upgrade example:** a target with 2 stacks and storage of 4 gains `4 − 2 = 2`, reaching 4; storage then resets to 1. If storage is only 1, the target stays at 2 and only the timer refreshes.
+- **No-reset example:** re-tag a four-stack target with three stored stacks: the target stays at 4, storage stays at 3 and the timer refreshes.
+- If your currently marked enemy dies before expiry, storage becomes at least 2: `max(current storage,2)`. A higher amount is preserved, and you do not need the killing blow.
+
+**Game-description erratum:** the English says tagging resets storage to 1 without stating an exception. Same-target re-tags that add no stacks only refresh the timer and preserve storage; the reset follows a new or stronger application.
+
+[Detailed sources and formulas](veteran_improved_tag.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_improved_tag) | [Back to index](#talent-index)
 
 ---
 
