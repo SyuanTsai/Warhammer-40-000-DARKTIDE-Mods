@@ -21,6 +21,7 @@
 | <img src="https://github.com/user-attachments/assets/1a42e740-0c91-48e5-9092-e88d3f06b532" width="32" height="32" alt="Point-Blank Barrage talent icon"> [Point-Blank Barrage](#ogryn_special_ammo) | <ul><li>Swap to and reload the ranged weapon; +25% Rate of Fire and +65% Reload Speed for 12s.</li><li>+15% Close Range Damage, halved braced slowdown, and 50% of counted ammunition returned at the end.</li><li>Base cooldown 60s.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/0932d1f6-96b1-47d9-ad81-861fe9914d9a" width="32" height="32" alt="Stomping Boots talent icon"> [Stomping Boots](#ogryn_charge_toughness) | <ul><li>Each enemy hit during the charge restores 10% of maximum Toughness.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/9194fb70-c794-460d-af2a-068ae6c4fd31" width="32" height="32" alt="Pulverise talent icon"> [Pulverise](#ogryn_charge_applies_bleed) | <ul><li>A charge hit applies 5 Bleed stacks, once per enemy in the same charge.</li></ul> | Combat ability |
+| <img src="https://github.com/user-attachments/assets/a6d612af-aed7-465e-aa07-e23fc7255876" width="32" height="32" alt="Go Again! talent icon"> [Go Again!](#ogryn_taunt_staggers_reduce_cooldown) | <ul><li>A melee or push Stagger restores 1.5% ability charge, at most once every 0.1s.</li></ul> | Combat ability |
 
 ## Blitz
 
@@ -243,3 +244,17 @@
 - **Damage example**: Against an Unarmoured target and without other modifiers, 5 stacks deal 87.5 × (5 ÷ 16)² × [3 − 2 × (5 ÷ 16)] ≈ 20.29 per tick; 8 stacks deal 43.75. Bleed damage is not directly proportional to stack count.
 
 [Details](ogryn_charge_applies_bleed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_taunt_staggers_reduce_cooldown"></a>
+
+### Go Again!
+
+<img src="https://github.com/user-attachments/assets/a6d612af-aed7-465e-aa07-e23fc7255876" width="72" height="72" alt="Go Again! talent icon">
+
+- **Trigger**: A melee attack or push that Staggers an enemy restores 1.5% of one combat ability charge. Triggers must be at least 0.1s apart. Ranged hits and the taunt itself do not trigger this effect.
+
+- **Cooldown example**: Loyal Protector has a base cooldown of 50s. One qualifying trigger restores 50 × 1.5% = 0.75s; 10 restore 7.5s, in addition to natural cooldown recovery during that time.
+
+[Details](ogryn_taunt_staggers_reduce_cooldown.md) · [Back to index](#talent-index)
