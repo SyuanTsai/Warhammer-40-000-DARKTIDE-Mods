@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/1016875d-cc4c-44f2-8a06-c93155d482d4" width="32" height="32" alt="Will of the Lex talent icon"> [Will of the Lex](#adamant_forceful_toughness_regen_per_stack) | <ul><li>When selected, each Forceful stack replenishes 0.5% of maximum Toughness per second.</li><li>Recovery scales with the current Forceful stack count, up to the base cap of 10.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/92922b1c-4991-480e-86af-e050b9faa496" width="32" height="32" alt="Adamant Will talent icon"> [Adamant Will](#adamant_forceful_stun_immune_and_block_all) | <ul><li>At maximum Forceful stacks, gain Stun and Slowdown Immunity.</li><li>The effects remain for 3s after leaving maximum stacks; perfect blocks additionally gain the ability to block normally unblockable attacks.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/3ecc49e6-a4c7-4d77-926d-623e4f8f34f6" width="32" height="32" alt="Targets Acquired talent icon"> [Targets Acquired](#adamant_forceful_offensive) | <ul><li>At 10 Forceful stacks, gain Attack Speed and Cleave bonuses.</li><li>The bonuses remain for 3s after leaving maximum stacks.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/bc3b59ed-a142-4807-86f9-f75d65b367b4" width="32" height="32" alt="Arbites Vigilant talent icon"> [Arbites Vigilant](#adamant_forceful_ability_damage) | <ul><li>Using your Combat Ability converts current Forceful stacks into a 12s Strength bonus.</li><li>Up to 10 stacks grant +2.5% each; triggering this effect consumes the Forceful stacks.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -391,3 +392,15 @@
 - **Speed and Cleave examples**: With this effect alone, an attack action that normally takes 1s and supports speed scaling takes 1 ÷ 1.1 ≈ 0.91s. A damaging Cleave hit-mass budget of 10 becomes 10 × 1.5 = 15. This does not guarantee hitting 50% more enemies and does not also increase the stagger Cleave budget.
 
 [Details](adamant_forceful_offensive.md) · [Back to index](#talent-index)
+
+<a id="adamant_forceful_ability_damage"></a>
+
+### Arbites Vigilant
+
+<img src="https://github.com/user-attachments/assets/bc3b59ed-a142-4807-86f9-f75d65b367b4" width="72" height="72" alt="Arbites Vigilant talent icon">
+
+- **Trigger and consumption**: Using your Combat Ability consumes all current Forceful stacks. Each stack grants +2.5% Strength (PowerLevel) for 12s.
+
+- **Strength example**: Six stacks grant +15%, and 10 stacks grant +25%. With this effect alone, 500 PowerLevel at 10 stacks becomes 500 × 1.25 = 625. Damage, Impact and Cleave then use their respective formulas; their final results cannot all be multiplied directly by 1.25.
+
+[Details](adamant_forceful_ability_damage.md) · [Back to index](#talent-index)

@@ -33,3 +33,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Will of the Lex](adamant_forceful_toughness_regen_per_stack.md) / `adamant_forceful_toughness_regen_per_stack` | Keystone |
 | [Adamant Will](adamant_forceful_stun_immune_and_block_all.md) / `adamant_forceful_stun_immune_and_block_all` | Keystone |
 | [Targets Acquired](adamant_forceful_offensive.md) / `adamant_forceful_offensive` | Keystone |
+| [Arbites Vigilant](adamant_forceful_ability_damage.md) / `adamant_forceful_ability_damage` | Keystone |
