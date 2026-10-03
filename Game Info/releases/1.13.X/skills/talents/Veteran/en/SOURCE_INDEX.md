@@ -49,6 +49,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Desperado](veteran_increased_melee_crit_chance_and_melee_finesse.md) / `veteran_increased_melee_crit_chance_and_melee_finesse` | Passive talent |
 | [Out for Blood](veteran_all_kills_replenish_toughness.md) / `veteran_all_kills_replenish_toughness` | Passive talent |
 | [Skirmisher](veteran_increase_damage_after_sprinting.md) / `veteran_increase_damage_after_sprinting` | Passive talent |
+| [Exploit Weakness](veteran_crits_apply_rending.md) / `veteran_crits_apply_rending` | Passive talent |
 | [Precision Strikes](veteran_increased_weakspot_damage.md) / `veteran_increased_weakspot_damage` | Passive talent |
 | [Trench Fighter Drill](veteran_attack_speed.md) / `veteran_attack_speed` | Passive talent |
 | [One Motion](veteran_reduce_swap_time.md) / `veteran_reduce_swap_time` | Passive talent |

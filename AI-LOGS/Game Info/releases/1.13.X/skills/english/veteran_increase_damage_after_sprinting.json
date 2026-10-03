@@ -114,5 +114,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/skirmisher-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increase_damage_after_sprinting.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increase_damage_after_sprinting.md",
+  "commit": "774908f5563a0b6220a28e7b524fd5d65324e6f5"
 }

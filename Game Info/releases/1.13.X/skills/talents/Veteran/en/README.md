@@ -49,6 +49,7 @@
 | <img src="https://github.com/user-attachments/assets/7be19cb4-a1cb-4211-b9f2-d754f3c95b6c" width="32" height="32" alt="Desperado talent icon"> [Desperado](#veteran_increased_melee_crit_chance_and_melee_finesse) | <ul><li>Add 10 percentage points to melee critical hit chance.</li><li>Gain +25% on the extra-damage multiplier for melee critical or weakspot hits; apply once on a combined critical weakspot hit.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d6402640-110e-4d25-b1b3-780a49b1c4e1" width="32" height="32" alt="Out for Blood talent icon"> [Out for Blood](#veteran_all_kills_replenish_toughness) | <ul><li>Your melee and ranged kills restore an additional 5% of maximum Toughness.</li><li>Actual restoration is capped at the missing Toughness.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/dca385d7-a54e-4bf5-b67d-f3d29ef82234" width="32" height="32" alt="Skirmisher talent icon"> [Skirmisher](#veteran_increase_damage_after_sprinting) | <ul><li>Sprinting or sliding builds +6.25% Base Damage per stack, up to 4 stacks (+25%).</li><li>Continuous movement builds about one stack per second; stacking applications refresh a shared 10-second duration, including at the cap.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/fd178238-be59-4c18-8631-12423f5506fb" width="32" height="32" alt="Exploit Weakness talent icon"> [Exploit Weakness](#veteran_crits_apply_rending) | <ul><li>Melee critical hits grant +20% Damage for 6 seconds; subsequent melee and ranged attacks can benefit.</li><li>Further melee critical hits refresh the duration without stacking the bonus.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -933,6 +934,24 @@ Assume base damage 100 and only this bonus, with no armor or later modifiers.
 The stacks add into this damage multiplier. Actual final damage depends on the weapon, target and other modifiers.
 
 [Detailed sources and formulas](veteran_increase_damage_after_sprinting.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_increase_damage_after_sprinting) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_crits_apply_rending"></a>
+
+<img src="https://github.com/user-attachments/assets/fd178238-be59-4c18-8631-12423f5506fb" width="72" height="72" alt="Exploit Weakness talent icon">
+
+### Exploit Weakness
+
+- **Melee critical hits grant +20% Damage for 6 seconds.**
+- Melee and ranged attacks can benefit while the effect is active. Further melee critical hits refresh the duration without stacking the bonus.
+
+**Damage and duration examples**
+
+- Assume the effect is already active, base damage 100 and no other damage bonuses, armor or later modifiers: `100 × 1.20 = 120 damage`.
+- If a qualifying melee critical hit triggers at 0 seconds and another at 4 seconds, the refreshed period lasts until about `4 + 6 = 10 seconds`; it retains the 20% bonus.
+
+[Detailed sources and formulas](veteran_crits_apply_rending.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_crits_apply_rending) | [Back to index](#talent-index)
 
 ---
 
