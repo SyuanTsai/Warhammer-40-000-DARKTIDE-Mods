@@ -33,6 +33,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Close Quarters Killzone](veteran_increased_close_damage_after_combat_ability.md) / `veteran_increased_close_damage_after_combat_ability` | Ability modifier |
 | [Overwatch](veteran_combat_ability_extra_charge.md) / `veteran_combat_ability_extra_charge` | Ability modifier |
 | [Weapons Specialist](veteran_weapon_switch_passive.md) / `veteran_weapon_switch_passive` | Keystone |
+| [On Your Toes](veteran_weapon_switch_replenish_toughness.md) / `veteran_weapon_switch_replenish_toughness` | Keystone modifier |
 | [Marksman's Focus](veteran_snipers_focus.md) / `veteran_snipers_focus` | Keystone |
 | [Long Range Assassin](veteran_snipers_focus_increased_stacks.md) / `veteran_snipers_focus_increased_stacks` | Keystone modifier |
 | [Chink in their Armour](veteran_snipers_focus_rending_bonus.md) / `veteran_snipers_focus_rending_bonus` | Keystone modifier |

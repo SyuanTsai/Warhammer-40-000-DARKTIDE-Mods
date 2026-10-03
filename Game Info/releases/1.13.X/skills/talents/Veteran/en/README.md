@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/1181fe6e-4066-4d75-b996-a0eb01d7583d" width="32" height="32" alt="Close Quarters Killzone talent icon"> [Close Quarters Killzone](#veteran_increased_close_damage_after_combat_ability) | <ul><li>Combat ability use grants up to 15% close damage for 10 seconds; melee and ranged attacks can benefit.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds afterwards. Full bonus within 12.5m; fades to zero at 30m.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="32" height="32" alt="Overwatch talent icon"> [Overwatch](#veteran_combat_ability_extra_charge) | <ul><li>Store two Infiltrate uses; each fully missing use takes about 53.2 seconds to refill without other cooldown effects.</li><li>Both uses share recharge progress and refill sequentially; recovery continues during stealth.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/80917bab-ea62-4a9a-a0fa-f9b443ee1b0b" width="32" height="32" alt="Weapons Specialist talent icon"> [Weapons Specialist](#veteran_weapon_switch_passive) | <ul><li>Kills while holding melee store up to 10 ranged stacks; switching to ranged grants 2% attack/reload speed and 33 percentage points of first-shot critical chance per stack.</li><li>A kill while holding ranged stores one melee stack; switching to melee grants 15% attack speed and 10% dodge speed/distance.</li><li>Both buffs last up to 10 seconds and end when switching away from their corresponding weapon.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/a6e24eb8-063a-45a5-8796-acde81d1f734" width="32" height="32" alt="On Your Toes talent icon"> [On Your Toes](#veteran_weapon_switch_replenish_toughness) | <ul><li>Activating either Specialist restores 20% of maximum Toughness, subject to recovery modifiers and the deficit.</li><li>Each weapon direction has its own 3-second cooldown; stored stacks are consumed even if that cooldown blocks recovery.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="Long Range Assassin talent icon"> [Long Range Assassin](#veteran_snipers_focus_increased_stacks) | <ul><li>Raise Marksman's Focus's effective stack cap from 10 to 15.</li><li>At 15 stacks, gain 112.5% ranged finesse strength and 15% reload speed; the whole-hit increase depends on the extra component.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="32" height="32" alt="Chink in their Armour talent icon"> [Chink in their Armour](#veteran_snipers_focus_rending_bonus) | <ul><li>At 10 or more Focus stacks, gain 15% Rending; lose it below 10 stacks.</li><li>The threshold stays 10 with Long Range Assassin. Damage gain depends on armor and existing Rending.</li></ul> | Keystone modifier |
@@ -695,6 +696,28 @@ Assume the required stacks are stored, the relevant buff is active and no other 
 - **Dodge distance:** assuming a 3-metre starting distance and no other distance modifier, `3 × 1.10 = 3.3 metres`, a 0.3-metre gain. Actual weapon timings and dodge behavior vary.
 
 [Detailed sources and formulas](veteran_weapon_switch_passive.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_weapon_switch_passive) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_weapon_switch_replenish_toughness"></a>
+
+<img src="https://github.com/user-attachments/assets/a6e24eb8-063a-45a5-8796-acde81d1f734" width="72" height="72" alt="On Your Toes talent icon">
+
+### On Your Toes
+
+- **Activating Melee Specialist or Ranged Specialist restores 20% of maximum Toughness.** You need at least one stored stack for that side, then switch to the corresponding weapon. The amount is per activation and does not grow with stack count.
+- Each weapon direction has its **own 3-second cooldown**. Switching still consumes the relevant stored stacks if that side's cooldown blocks recovery.
+- Normal Toughness recovery modifiers affect the grant, which cannot exceed missing Toughness. The timer check requires more than 3 seconds since the side's prior recovery timestamp; exact boundary behavior depends on update timing.
+
+#### Recovery examples
+
+Assume a qualifying activation, its cooldown check passes and recovery is allowed. Maximum Toughness is 100 points.
+
+- **At 70/100, no recovery modifier:** `100 × 20% = 20 points`, reaching 90/100.
+- **At 90/100, no recovery modifier:** only `100 − 90 = 10 points` are missing, so actual recovery is 10 and you reach 100/100.
+- **At 70/100 with an illustrative applicable +25% recovery modifier:** `100 × 20% × 1.25 = 25 points`, reaching 95/100. Extra stored stacks do not multiply these amounts.
+
+[Detailed sources and formulas](veteran_weapon_switch_replenish_toughness.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_weapon_switch_replenish_toughness) | [Back to index](#talent-index)
 
 ---
 

@@ -134,5 +134,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/weapons-specialist-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_weapon_switch_passive.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_weapon_switch_passive.md",
+  "commit": "e3cb85202daf74cc3113e79b07883e2638c530bf"
 }
