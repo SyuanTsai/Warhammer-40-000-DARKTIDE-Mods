@@ -98,7 +98,8 @@
         "adamant_execution_order_rending",
         "adamant_execution_order_permastack",
         "adamant_pinning_dog_bonus_moving_towards",
-        "adamant_companion_focus_ranged"
+        "adamant_companion_focus_ranged",
+        "adamant_companion_focus_elite"
       ],
       "checks": []
     },
@@ -145,7 +146,8 @@
         "adamant_execution_order_rending",
         "adamant_execution_order_permastack",
         "adamant_pinning_dog_bonus_moving_towards",
-        "adamant_companion_focus_ranged"
+        "adamant_companion_focus_ranged",
+        "adamant_companion_focus_elite"
       ],
       "checks": []
     },
@@ -192,7 +194,8 @@
         "adamant_execution_order_rending",
         "adamant_execution_order_permastack",
         "adamant_pinning_dog_bonus_moving_towards",
-        "adamant_companion_focus_ranged"
+        "adamant_companion_focus_ranged",
+        "adamant_companion_focus_elite"
       ],
       "checks": []
     },
@@ -239,7 +242,8 @@
         "adamant_execution_order_rending",
         "adamant_execution_order_permastack",
         "adamant_pinning_dog_bonus_moving_towards",
-        "adamant_companion_focus_ranged"
+        "adamant_companion_focus_ranged",
+        "adamant_companion_focus_elite"
       ],
       "checks": []
     },
@@ -468,9 +472,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c1b7d148bc4cad51df5a507900a948b6e5bc769f",
       "chinese_sha256": "7604a32ed9d044a0adceaf646b2df618f28acd33e25d73b557f99398e855fe78",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_companion_focus_elite"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_companion_focus_elite.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_companion_focus_ranged.md",
@@ -10515,6 +10526,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_companion_focus_ranged.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_companion_focus_ranged.md"
+    },
+    {
+      "id": "adamant_companion_focus_elite",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_companion_focus_elite.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_companion_focus_elite.md"
     }
   ],
   "pending_chinese_corrections": [
