@@ -163,6 +163,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/71e66fb6-ddd3-461a-9283-4dbdfa7e5d96",
       "effect": "一般格擋後5秒內，I–IV持續產熱減少16%／18%／20%／22%，自然散熱速度增加3%／4%／5%／6%；再格擋刷新，不疊加。"
+    },
+    {
+      "id": "raking-fire",
+      "name_zh_tw": "掃射",
+      "name_en": "Raking Fire",
+      "name_key": "loc_trait_bespoke_allow_flanking_and_increased_damage_when_flanking",
+      "description_key": "loc_trait_bespoke_allow_flanking_and_increased_damage_when_flanking_desc",
+      "name_hash": "955b61e0",
+      "description_hash": "96eca2d3",
+      "page": "entries/掃射/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/8ad696a1-e0d1-4a5b-a352-4597b5c71b90",
+      "effect": "從敵人背面半圈射擊時，I–IV傷害增加32.5%／35%／37.5%／40%；持用期間逐次判定，沒有疊層或倒數。"
     }
   ],
   "weapons": [
@@ -691,32 +704,6 @@
       ]
     },
     {
-      "id": "laspistol_p1",
-      "name_zh_tw": "重型鐳射手槍",
-      "name_en": "Heavy Laspistol",
-      "kind": "ranged",
-      "name_key": "loc_weapon_family_laspistol_p1_m1",
-      "page": "weapons/ranged/重型鐳射手槍/README.md",
-      "marks": [
-        {
-          "id": "laspistol_p1_m1",
-          "item": "content/items/weapons/player/ranged/laspistol_p1_m1",
-          "name": "奧克塔蘭MG Mk II重型鐳射手槍",
-          "name_en": "Accatran MG Mk II Heavy Laspistol",
-          "template_file": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
-          "trait_category": "bespoke_laspistol_p1"
-        },
-        {
-          "id": "laspistol_p1_m3",
-          "item": "content/items/weapons/player/ranged/laspistol_p1_m3",
-          "name": "卡特雷爾Mk X重型鐳射手槍",
-          "name_en": "Kantrael Mk X Heavy Laspistol",
-          "template_file": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m3.lua",
-          "trait_category": "bespoke_laspistol_p1"
-        }
-      ]
-    },
-    {
       "id": "arc_rifle_p1",
       "name_zh_tw": "電弧步槍",
       "name_en": "Arc Rifle",
@@ -769,24 +756,6 @@
       ]
     },
     {
-      "id": "autopistol_p1",
-      "name_zh_tw": "撕裂者自動手槍",
-      "name_en": "Shredder Autopistol",
-      "kind": "ranged",
-      "name_key": "loc_weapon_family_autopistol_p1_m1",
-      "page": "weapons/ranged/撕裂者自動手槍/README.md",
-      "marks": [
-        {
-          "id": "autopistol_p1_m1",
-          "item": "content/items/weapons/player/ranged/autopistol_p1_m1",
-          "name": "尤斯Mk III撕裂者自動手槍",
-          "name_en": "Ius Mk III Shredder Autopistol",
-          "template_file": "scripts/settings/equipment/weapon_templates/autopistols/autopistol_p1_m1.lua",
-          "trait_category": "bespoke_autopistol_p1"
-        }
-      ]
-    },
-    {
       "id": "bolter_p1",
       "name_zh_tw": "矛頭爆矢槍",
       "name_en": "Spearhead Boltgun",
@@ -809,24 +778,6 @@
           "name_en": "Locke Mk III Spearhead Boltgun",
           "template_file": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua",
           "trait_category": "bespoke_bolter_p1"
-        }
-      ]
-    },
-    {
-      "id": "dual_autopistols_p1",
-      "name_zh_tw": "雙持自動手槍",
-      "name_en": "Dual Autopistols",
-      "kind": "ranged",
-      "name_key": "loc_weapon_family_dual_autopistols_p1_m1",
-      "page": "weapons/ranged/雙持自動手槍/README.md",
-      "marks": [
-        {
-          "id": "dual_autopistols_p1_m1",
-          "item": "content/items/weapons/player/ranged/dual_autopistols_p1_m1",
-          "name": "布蘭克斯MkIII雙持自動手槍",
-          "name_en": "Branx MkIII Dual Autopistols",
-          "template_file": "scripts/settings/equipment/weapon_templates/dual_autopistols/dual_autopistols_p1_m1.lua",
-          "trait_category": "bespoke_dual_autopistols_p1"
         }
       ]
     },
@@ -1020,6 +971,88 @@
             "weapon_family_display_name": "loc_weapon_family_powersword_p2_m2",
             "weapon_pattern_display_name": "loc_weapon_pattern_powersword_p2_m2",
             "weapon_mark_display_name": "loc_weapon_mark_powersword_p2_m2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "autopistol_p1",
+      "name_zh_tw": "撕裂者自動手槍",
+      "name_en": "Shredder Autopistol",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_autopistol_p1_m1",
+      "page": "weapons/ranged/撕裂者自動手槍/README.md",
+      "marks": [
+        {
+          "id": "autopistol_p1_m1",
+          "item": "content/items/weapons/player/ranged/autopistol_p1_m1",
+          "name": "撕裂者自動手槍 尤斯 Mk IV",
+          "name_en": "Shredder Autopistol Ius Mk IV",
+          "template_file": "scripts/settings/equipment/weapon_templates/autopistols/autopistol_p1_m1.lua",
+          "trait_category": "bespoke_autopistol_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_autopistol_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_autopistol_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_autopistol_p1_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dual_autopistols_p1",
+      "name_zh_tw": "雙持自動手槍",
+      "name_en": "Dual Autopistols",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_dual_autopistols_p1_m1",
+      "page": "weapons/ranged/雙持自動手槍/README.md",
+      "marks": [
+        {
+          "id": "dual_autopistols_p1_m1",
+          "item": "content/items/weapons/player/ranged/dual_autopistols_p1_m1",
+          "name": "雙持自動手槍 布蘭克斯 MkIII",
+          "name_en": "Dual Autopistols Branx MkIII",
+          "template_file": "scripts/settings/equipment/weapon_templates/dual_autopistols/dual_autopistols_p1_m1.lua",
+          "trait_category": "bespoke_dual_autopistols_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_dual_autopistols_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_dual_autopistols_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_dual_autopistols_p1_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "laspistol_p1",
+      "name_zh_tw": "重型鐳射手槍",
+      "name_en": "Heavy Laspistol",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_laspistol_p1_m1",
+      "page": "weapons/ranged/重型鐳射手槍/README.md",
+      "marks": [
+        {
+          "id": "laspistol_p1_m1",
+          "item": "content/items/weapons/player/ranged/laspistol_p1_m1",
+          "name": "重型鐳射手槍 奧克塔蘭MG Mk II",
+          "name_en": "Heavy Laspistol Accatran MG Mk II",
+          "template_file": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+          "trait_category": "bespoke_laspistol_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_laspistol_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_laspistol_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_laspistol_p1_m1"
+          }
+        },
+        {
+          "id": "laspistol_p1_m3",
+          "item": "content/items/weapons/player/ranged/laspistol_p1_m3",
+          "name": "重型鐳射手槍 卡特雷爾 Mk X",
+          "name_en": "Heavy Laspistol Kantrael Mk X",
+          "template_file": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m3.lua",
+          "trait_category": "bespoke_laspistol_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_laspistol_p1_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_laspistol_p1_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_laspistol_p1_m3"
           }
         }
       ]
@@ -2889,6 +2922,123 @@
       "icon": "https://github.com/user-attachments/assets/71e66fb6-ddd3-461a-9283-4dbdfa7e5d96",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_241",
       "effect": "一般格擋後5秒內，I–IV持續產熱減少16%／18%／20%／22%，自然散熱速度增加3%／4%／5%／6%；再格擋刷新，不疊加。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autopistol_p1_allow_flanking_and_increased_damage_when_flanking",
+      "blessing_id": "raking-fire",
+      "weapon_id": "autopistol_p1",
+      "page": "entries/掃射/weapon_trait_bespoke_autopistol_p1_allow_flanking_and_increased_damage_when_flanking.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "flanking_damage": [
+            0.325,
+            0.35,
+            0.375,
+            0.4
+          ]
+        },
+        "keyword": "allow_flanking",
+        "condition": "item_slot_wielded and ranged attack with dot(attack_direction,target_forward)>0",
+        "stacking": "constant one effect; additive with other flanking_damage"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autopistol_p1.lua",
+        "start_line": 261,
+        "end_line": 300
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autopistol_p1_buff_templates.lua",
+        "start_line": 32,
+        "end_line": 32
+      },
+      "icon": "https://github.com/user-attachments/assets/8ad696a1-e0d1-4a5b-a352-4597b5c71b90",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_041",
+      "effect": "從敵人背面半圈射擊時，I–IV傷害增加32.5%／35%／37.5%／40%；持用期間逐次判定，沒有疊層或倒數。"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_autopistols_p1_allow_flanking_and_increased_damage_when_flanking",
+      "blessing_id": "raking-fire",
+      "weapon_id": "dual_autopistols_p1",
+      "page": "entries/掃射/weapon_trait_bespoke_dual_autopistols_p1_allow_flanking_and_increased_damage_when_flanking.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "flanking_damage": [
+            0.325,
+            0.35,
+            0.375,
+            0.4
+          ]
+        },
+        "keyword": "allow_flanking",
+        "condition": "item_slot_wielded and ranged attack with dot(attack_direction,target_forward)>0",
+        "stacking": "constant one effect; additive with other flanking_damage"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_autopistols_p1.lua",
+        "start_line": 261,
+        "end_line": 300
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_autopistols_p1_buff_templates.lua",
+        "start_line": 32,
+        "end_line": 32
+      },
+      "icon": "https://github.com/user-attachments/assets/8ad696a1-e0d1-4a5b-a352-4597b5c71b90",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_041",
+      "effect": "從敵人背面半圈射擊時，I–IV傷害增加32.5%／35%／37.5%／40%；持用期間逐次判定，沒有疊層或倒數。"
+    },
+    {
+      "id": "weapon_trait_bespoke_laspistol_p1_allow_flanking_and_increased_damage_when_flanking",
+      "blessing_id": "raking-fire",
+      "weapon_id": "laspistol_p1",
+      "page": "entries/掃射/weapon_trait_bespoke_laspistol_p1_allow_flanking_and_increased_damage_when_flanking.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "stat_buffs": {
+          "flanking_damage": [
+            0.325,
+            0.35,
+            0.375,
+            0.4
+          ]
+        },
+        "keyword": "allow_flanking",
+        "condition": "item_slot_wielded and ranged attack with dot(attack_direction,target_forward)>0",
+        "stacking": "constant one effect; additive with other flanking_damage"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "start_line": 190,
+        "end_line": 229
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "icon": "https://github.com/user-attachments/assets/8ad696a1-e0d1-4a5b-a352-4597b5c71b90",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_041",
+      "effect": "從敵人背面半圈射擊時，I–IV傷害增加32.5%／35%／37.5%／40%；持用期間逐次判定，沒有疊層或倒數。"
     }
   ],
   "bindings": [
@@ -4346,6 +4496,62 @@
         "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m2.lua",
         "import_line": 11,
         "append_line": 2025
+      }
+    },
+    {
+      "blessing_id": "raking-fire",
+      "weapon_id": "autopistol_p1",
+      "mark_id": "autopistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autopistol_p1_allow_flanking_and_increased_damage_when_flanking",
+      "trait_item": "content/items/traits/bespoke_autopistol_p1/allow_flanking_and_increased_damage_when_flanking",
+      "trait_category": "bespoke_autopistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autopistols/autopistol_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 745
+      }
+    },
+    {
+      "blessing_id": "raking-fire",
+      "weapon_id": "dual_autopistols_p1",
+      "mark_id": "dual_autopistols_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_autopistols_p1_allow_flanking_and_increased_damage_when_flanking",
+      "trait_item": "content/items/traits/bespoke_dual_autopistols_p1/allow_flanking_and_increased_damage_when_flanking",
+      "trait_category": "bespoke_dual_autopistols_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_autopistols/dual_autopistols_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 751
+      }
+    },
+    {
+      "blessing_id": "raking-fire",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_allow_flanking_and_increased_damage_when_flanking",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/allow_flanking_and_increased_damage_when_flanking",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 860
+      }
+    },
+    {
+      "blessing_id": "raking-fire",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m3",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_allow_flanking_and_increased_damage_when_flanking",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/allow_flanking_and_increased_damage_when_flanking",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 864
       }
     }
   ]

@@ -20,5 +20,6 @@
 | <img src="https://github.com/user-attachments/assets/8709846a-8fcd-47ed-8a5b-6d57b666b45e" width="32" height="32" alt="能量洩漏祝福圖示"> [能量洩漏](entries/能量洩漏/README.md)<br>- Energy Leakage<br>[完整說明](entries/能量洩漏/README.md) | <ul><li>依持用武器目前熱量分成0–5段威力加成；I–IV每段1.5%／2%／3%／4%，最高7.5%／10%／15%／20%；切出停止生效。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/ba35493b-2c99-4ff6-9b8b-17ec82be4b2b" width="32" height="32" alt="散熱器祝福圖示"> [散熱器](entries/散熱器/README.md)<br>- Heatsink<br>[完整說明](entries/散熱器/README.md) | <ul><li>攻擊首個目標的弱點或暴擊擊殺觸發3秒定期散熱；I–IV鎖定時每秒扣約1.333／2／2.667／3.333個百分點，非鎖定速度為四分之一；再次觸發刷新。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/71e66fb6-ddd3-461a-9283-4dbdfa7e5d96" width="32" height="32" alt="能量轉換祝福圖示"> [能量轉換](entries/能量轉換/README.md)<br>- Energy Transfer<br>[完整說明](entries/能量轉換/README.md) | <ul><li>一般格擋後5秒內，I–IV持續產熱減少16%／18%／20%／22%，自然散熱速度增加3%／4%／5%／6%；再格擋刷新，不疊加。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/8ad696a1-e0d1-4a5b-a352-4597b5c71b90" width="32" height="32" alt="掃射祝福圖示"> [掃射](entries/掃射/README.md)<br>- Raking Fire<br>[完整說明](entries/掃射/README.md) | <ul><li>從敵人背面半圈射擊時，I–IV傷害增加32.5%／35%／37.5%／40%；持用期間逐次判定，沒有疊層或倒數。</li></ul> | 遠程 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

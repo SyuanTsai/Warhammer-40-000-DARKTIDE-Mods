@@ -374,6 +374,7 @@
 ### 遠程武器祝福
 
 - Raking Fire - 掃射
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_allow_flanking_and_increased_damage_when_flanking`，hash `955b61e0`；英文／繁中RAW配對確認。
 - Dumdum - 達姆彈
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_consecutive_hits_increases_close_damage`，hash `ad18b72c`；英文／繁中RAW配對確認。
 - Hit & Run /  Hit and Run - 游擊

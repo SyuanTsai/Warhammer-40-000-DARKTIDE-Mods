@@ -63,3 +63,7 @@
 - 散熱器本機Commit：`abb90df73bfac79d98fed9d7d1a721b63e280f4e`；文件、Issue圖片及100條累積型號關聯驗收完成。
 
 - [能量轉換](2026-10-03-ENERGY-TRANSFER_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
+
+- 能量轉換本機 Commit：`709fd9715e2a42e44f524c3151a41f5c26ce4fdc`；完成後才派工掃射。
+
+- [掃射](2026-10-03-RAKING-FIRE_ACCEPTANCE.json)：新增3變體、4型號關聯；共3變體、4關聯。

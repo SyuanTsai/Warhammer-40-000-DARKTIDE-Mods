@@ -1,0 +1,175 @@
+{
+  "date": "2026-10-03",
+  "blessing": "raking-fire",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/掃射/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_autopistol_p1_allow_flanking_and_increased_damage_when_flanking",
+    "weapon_trait_bespoke_dual_autopistols_p1_allow_flanking_and_increased_damage_when_flanking",
+    "weapon_trait_bespoke_laspistol_p1_allow_flanking_and_increased_damage_when_flanking"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 3,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_evidence",
+    "scope": "Raking Fire evidence and final written docs; read-only",
+    "findings": [
+      "3 formal variants, 4 bindings; 5 matching metadata items with 3 outside candidates including source-only Needlepistol.",
+      "Trait .325/.35/.375/.4 overrides base .5; stat and allow_flanking keyword are wielded-only.",
+      "Ranged-only dot>0; strict side boundary excluded; no proc, duration, cooldown or stacking.",
+      "Damage examples restricted to flanking calculation phase after finesse; same-stat additive.",
+      "Autogun mark-ID restriction not proven by source consumer; dual stub template imports Stubrevolver category; Needlepistol lacks metadata and wrapper."
+    ],
+    "final_document_review": {
+      "result": "accepted",
+      "required_corrections": [],
+      "response": "Accepted; no required corrections. Config has 3 formal variants and compatibility 4 model bindings. Autogun only outside candidate."
+    },
+    "primary_resolution": "Primary directly reviewed all formal overrides, shared buff, keyword/stat gates, direction/damage consumers and candidate template imports. Corrected agent initial wording that listed candidate Autogun alongside formal traits; final review explicitly confirms it outside formal map."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/8ad696a1-e0d1-4a5b-a352-4597b5c71b90",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "raking-fire",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_041",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_041.png",
+      "attachment": "https://github.com/user-attachments/assets/8ad696a1-e0d1-4a5b-a352-4597b5c71b90",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5965792301",
+      "acquired_date": "2026-10-03",
+      "sha256": "26695bfc06b25c222c0e3836a5689c16c81f9fac1c824c35c4febf5718e0cb07",
+      "content_type": "image/png",
+      "size": 5010,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "掃射祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 170,
+      "tables": 147,
+      "rows": 1140,
+      "lists": 203
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 556,
+      "source_files": 206,
+      "bindings": 108,
+      "variants": 51,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 870,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 170,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 151,
+    "not_started_name_groups": 151,
+    "partial_name_groups": 0,
+    "remaining_variants": 537,
+    "remaining_bindings": 1060,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "eced7e9297949054a053fd63456fa58a4f1ffe521615cb48e77d7d02d71cda47"
+  },
+  "previous_local_commit": "709fd9715e2a42e44f524c3151a41f5c26ce4fdc",
+  "current_blessing_formula_review": {
+    "primary_review_complete": true,
+    "tiers": [
+      0.325,
+      0.35,
+      0.375,
+      0.4
+    ],
+    "base_template_override_verified": true,
+    "flank_dot_threshold": 0,
+    "strict_greater_than": true,
+    "ranged_only": true,
+    "keyword_and_stats_held_only": true,
+    "finesse_before_flank": true,
+    "same_stat_additive": true,
+    "examples_damage_phase_only": true,
+    "examples": [
+      {
+        "D": 100,
+        "q": 0.4,
+        "s": 0,
+        "result": 140
+      },
+      {
+        "D": 150,
+        "q": 0.4,
+        "s": 0,
+        "result": 210
+      },
+      {
+        "D": 100,
+        "q": 0.4,
+        "s": 0.2,
+        "result": 160,
+        "relative_gain": 0.3333333333333333
+      }
+    ],
+    "candidate_count": 3
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 5,
+    "bound_variants": 3,
+    "same_name_candidates": [
+      {
+        "trait": "weapon_trait_bespoke_autogun_p1_allow_flanking_and_increased_damage_when_flanking",
+        "reason": "weapon_type_restriction contains mark ID autogun_p1_m1 rather than family autogun_p1; no client consumer proves backend matching semantics; retain outside intersection without classifying unused",
+        "fixed_template": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua#L17,L768-L770"
+      },
+      {
+        "trait": "weapon_trait_bespoke_dual_stubpistols_p1_allow_flanking_and_increased_damage_when_flanking",
+        "reason": "metadata present but inventory records trait_not_imported",
+        "fixed_template": "scripts/settings/equipment/weapon_templates/dual_stub_pistols/dual_stubpistols_p1_m1.lua#L14,L1146-L1150"
+      },
+      {
+        "trait": "weapon_trait_bespoke_needlepistol_p1_allow_flanking_and_increased_damage_when_flanking",
+        "reason": "definition exists without matching exact trait item in metadata",
+        "definition": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_needlepistol_p1.lua#L208-L247"
+      }
+    ],
+    "status": "reviewed boundary; not classified unused"
+  }
+}
