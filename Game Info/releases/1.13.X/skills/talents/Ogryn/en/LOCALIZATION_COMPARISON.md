@@ -1033,6 +1033,18 @@ Full raw template and formatting: [source evidence](ogryn_damage_reduction_after
 | Kill-triggered reduction | +10% Damage Resistance on Elite Kill or Specialist Kill. Lasts 5s.; `ui / loc_talent_ogryn_damage_reduction_after_elite_kill_desc / fb76eb37` | on_elite_or_special_kill activates damage_taken_multiplier 0.9 for 5s. [Fixed source and line references](ogryn_damage_reduction_after_elite_kill.md#fixed-source-evidence) | Consistent | The independently read English matches the qualifying kills and values. |
 | Refresh and combined reduction | No stacking or combined-reduction formula is stated.; `ui / loc_talent_ogryn_damage_reduction_after_elite_kill_desc / fb76eb37` | allow_proc_while_active refreshes rather than stacking. Damage 100 becomes 90; with an independent 20% reduction, 100 ×0.9 ×0.8 =72. [Fixed source and line references](ogryn_damage_reduction_after_elite_kill.md#fixed-source-evidence) | Not covered by the description | These accepted duration and calculation details supplement the English. |
 
+
+<a id="ogryn_toughness_while_bracing"></a>
+
+## Steady Grip
+
+Full raw template and formatting: [source evidence](ogryn_toughness_while_bracing.md#original-english-template-and-reconstruction). Name hash `e009e53e`. Every row uses `ui / loc_talent_ogryn_toughness_regen_while_bracing_or_shooting_desc / c73dc498`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Bracing or shooting replenishment | +12.5% Toughness Regeneration while bracing or shooting your Ranged weapon.; `ui / loc_talent_ogryn_toughness_regen_while_bracing_or_shooting_desc / c73dc498` | The server replenishes 0.125 ×dt of maximum Toughness while braced or shooting. [Fixed source and line references](ogryn_toughness_while_bracing.md#fixed-source-evidence) | Consistent | The independently read English matches the conditions and replenishment value. |
+| Calculation and state retention | No maximum-Toughness basis, modifier formula, shooting grace or switching guarantee is stated.; `ui / loc_talent_ogryn_toughness_regen_while_bracing_or_shooting_desc / c73dc498` | Maximum 200 gives 25/s or 50 in 2s before replenishment modifiers, capped by missing Toughness. This is additional replenishment, not a Coherency-regeneration multiplier. Shooting persists about 0.5s; is_wielded gates HUD activity only, leaving weapon-switch cleanup untested. [Fixed source and line references](ogryn_toughness_while_bracing.md#fixed-source-evidence) | Not covered by the description | These accepted calculation and state details supplement the English; the switching question remains open. |
+
 ## Comparison totals
 
 The 244 listed rules comprise **104 Consistent**, **4 Explicit contradictions**, **129 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

@@ -88,3 +88,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Beat Them Back](ogryn_melee_damage_after_heavy.md) / `ogryn_melee_damage_after_heavy` | Talent |
 | [Concentrate](ogryn_drain_stamina_for_handling.md) / `ogryn_drain_stamina_for_handling` | Talent |
 | [Strongman](ogryn_damage_reduction_after_elite_kill.md) / `ogryn_damage_reduction_after_elite_kill` | Talent |
+| [Steady Grip](ogryn_toughness_while_bracing.md) / `ogryn_toughness_while_bracing` | Talent |

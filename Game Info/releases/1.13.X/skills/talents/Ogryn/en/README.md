@@ -86,6 +86,7 @@
 | <img src="https://github.com/user-attachments/assets/373afc07-72d5-4815-91c0-0e5d0d02d279" width="32" height="32" alt="Beat Them Back talent icon"> [Beat Them Back](#ogryn_melee_damage_after_heavy) | <ul><li>A successful heavy melee sweep grants +15% melee damage for 5s after it finishes; further heavy hits refresh.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d21c7405-647a-4da2-a396-16b9c5cd8819" width="32" height="32" alt="Concentrate talent icon"> [Concentrate](#ogryn_drain_stamina_for_handling) | <ul><li>While bracing with Stamina, reduce Sway by 60%, Spread by 20% and Recoil by 15%, draining 0.5 Stamina per second except while reloading.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/6fbf8a63-5e26-482f-9964-01eb0598b142" width="32" height="32" alt="Strongman talent icon"> [Strongman](#ogryn_damage_reduction_after_elite_kill) | <ul><li>An Elite or Specialist kill grants 10% damage reduction for 5s; further qualifying kills refresh without stacking.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/ce3b22d4-870e-4496-96fc-33601f9d9a62" width="32" height="32" alt="Steady Grip talent icon"> [Steady Grip](#ogryn_toughness_while_bracing) | <ul><li>While bracing or shooting, replenish 12.5% of maximum Toughness per second, with approximately 0.5s shooting-state retention.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1372,3 +1373,19 @@
 - **Damage-reduction example**: With this effect alone, damage of 100 becomes 90. With another independent 20% reduction, it becomes `100 × 0.9 × 0.8 = 72`.
 
 [Details](ogryn_damage_reduction_after_elite_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_toughness_while_bracing"></a>
+
+### Steady Grip
+
+<img src="https://github.com/user-attachments/assets/ce3b22d4-870e-4496-96fc-33601f9d9a62" width="72" height="72" alt="Steady Grip talent icon">
+
+- **Replenishment condition**: Continuously replenish Toughness while bracing a ranged weapon or shooting. The shooting condition remains for approximately 0.5s after shooting stops.
+
+- **Replenishment example**: With maximum Toughness of 200, base replenishment per second is `200 × 12.5% = 25`; 2s gives 50. Toughness replenishment bonuses can further modify this amount, which cannot exceed missing Toughness.
+
+- **Effect type**: This adds continuous replenishment; it does not merely increase ordinary Coherency regeneration by 12.5%.
+
+[Details](ogryn_toughness_while_bracing.md) · [Back to index](#talent-index)
