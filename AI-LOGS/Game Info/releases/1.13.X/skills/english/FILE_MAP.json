@@ -110,7 +110,12 @@
         "adamant_dog_attacks_electrocute",
         "adamant_stamina_spent_replenish_toughness",
         "adamant_limit_dmg_taken_from_hits",
-        "base_toughness_damage_reduction_node_buff_medium_1"
+        "base_toughness_damage_reduction_node_buff_medium_1",
+        "adamant_armor",
+        "adamant_ammo_belt",
+        "adamant_rebreather",
+        "adamant_hitting_multiple_gives_tdr",
+        "base_ranged_damage_node_buff_medium_1"
       ],
       "checks": []
     },
@@ -169,7 +174,12 @@
         "adamant_dog_attacks_electrocute",
         "adamant_stamina_spent_replenish_toughness",
         "adamant_limit_dmg_taken_from_hits",
-        "base_toughness_damage_reduction_node_buff_medium_1"
+        "base_toughness_damage_reduction_node_buff_medium_1",
+        "adamant_armor",
+        "adamant_ammo_belt",
+        "adamant_rebreather",
+        "adamant_hitting_multiple_gives_tdr",
+        "base_ranged_damage_node_buff_medium_1"
       ],
       "checks": []
     },
@@ -228,7 +238,12 @@
         "adamant_dog_attacks_electrocute",
         "adamant_stamina_spent_replenish_toughness",
         "adamant_limit_dmg_taken_from_hits",
-        "base_toughness_damage_reduction_node_buff_medium_1"
+        "base_toughness_damage_reduction_node_buff_medium_1",
+        "adamant_armor",
+        "adamant_ammo_belt",
+        "adamant_rebreather",
+        "adamant_hitting_multiple_gives_tdr",
+        "base_ranged_damage_node_buff_medium_1"
       ],
       "checks": []
     },
@@ -287,7 +302,12 @@
         "adamant_dog_attacks_electrocute",
         "adamant_stamina_spent_replenish_toughness",
         "adamant_limit_dmg_taken_from_hits",
-        "base_toughness_damage_reduction_node_buff_medium_1"
+        "base_toughness_damage_reduction_node_buff_medium_1",
+        "adamant_armor",
+        "adamant_ammo_belt",
+        "adamant_rebreather",
+        "adamant_hitting_multiple_gives_tdr",
+        "base_ranged_damage_node_buff_medium_1"
       ],
       "checks": []
     },
@@ -309,9 +329,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "fffc66b72602876fbe4c3ecb333e2e441690d9cd",
       "chinese_sha256": "b4bbf3bc6aab3ea4005cf442e8fbeaa40150d7b02643efd5c11baff74a0e01dc",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_ammo_belt"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_131_135.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_area_buff_drone.md",
@@ -349,9 +376,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5f2e77024293e3940e99d181e611c1a3cecf31e3",
       "chinese_sha256": "e96c45b3df13678d8c14576f7c14afdbc8eb70133372809d259f526e454431d8",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_armor"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_131_135.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_charge.md",
@@ -1062,9 +1096,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "710a3c10899205c8e9c5c58e7f4fa490a955f067",
       "chinese_sha256": "80122ae5fed9cc7708d3d997f01148bb8f4d8b3dee1111c97a20098b3aa9ae52",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_hitting_multiple_gives_tdr"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_131_135.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_increased_damage_to_high_health.md",
@@ -1237,9 +1278,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4b35c86406a0dd1b68074ba2491727af254d5f33",
       "chinese_sha256": "e9d34e1c274e5c13dfa42e26fd9746ce320c3619fcaaa7bc2fcee2001d2d818a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_rebreather"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_131_135.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_reload_speed_aura.md",
@@ -1610,9 +1658,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "d43c179afefeffd24ba34718dd73d7d2793f1aca",
       "chinese_sha256": "f9f911f9d84ad09a99a79c36f7085cd1d6a73bd4741e0ce3412cd586ea49cb51",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_ranged_damage_node_buff_medium_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_131_135.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/base_toughness_damage_reduction_node_buff_medium_1.md",
@@ -10743,6 +10798,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_126_130.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/base_toughness_damage_reduction_node_buff_medium_1.md"
+    },
+    {
+      "id": "adamant_armor",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_131_135.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_armor.md"
+    },
+    {
+      "id": "adamant_ammo_belt",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_131_135.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_ammo_belt.md"
+    },
+    {
+      "id": "adamant_rebreather",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_131_135.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_rebreather.md"
+    },
+    {
+      "id": "adamant_hitting_multiple_gives_tdr",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_131_135.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_hitting_multiple_gives_tdr.md"
+    },
+    {
+      "id": "base_ranged_damage_node_buff_medium_1",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_131_135.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/base_ranged_damage_node_buff_medium_1.md"
     }
   ],
   "pending_chinese_corrections": [
