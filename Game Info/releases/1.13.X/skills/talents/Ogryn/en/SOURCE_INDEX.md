@@ -33,3 +33,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Burst Limiter Override](ogryn_leadbelcher_no_ammo_chance.md) / `ogryn_leadbelcher_no_ammo_chance` | Keystone |
 | [Feel No Pain](ogryn_carapace_armor.md) / `ogryn_carapace_armor` | Keystone |
 | [Heavy Hitter](ogryn_passive_heavy_hitter.md) / `ogryn_passive_heavy_hitter` | Keystone |
+| [Pained Outburst](ogryn_carapace_armor_trigger_on_zero_stacks.md) / `ogryn_carapace_armor_trigger_on_zero_stacks` | Keystone |

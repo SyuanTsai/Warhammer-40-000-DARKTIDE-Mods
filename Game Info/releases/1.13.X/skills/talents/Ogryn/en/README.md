@@ -31,6 +31,7 @@
 | <img src="https://github.com/user-attachments/assets/ea712cab-0dd4-47fa-a2c5-98edb7e41783" width="32" height="32" alt="Burst Limiter Override talent icon"> [Burst Limiter Override](#ogryn_leadbelcher_no_ammo_chance) | <ul><li>Ranged attacks have a 15% base Lucky Bullet chance; a successful shot consumes no ammunition.</li><li>Each ranged kill adds 2% ranged damage, up to 10 stacks, with duration reset to 10s on further kills.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/9436a125-4e9f-4655-ae8f-4975db2f4af1" width="32" height="32" alt="Feel No Pain talent icon"> [Feel No Pain](#ogryn_carapace_armor) | <ul><li>Start with 10 stacks; each adds Toughness replenishment and multiplies Toughness damage by 0.97.</li><li>Eligible damage removes at most one stack per second; stacks restore at 2s intervals when the restoration conditions are met.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/6ad5a8ad-f1c2-4c43-997a-02b89543ebd9" width="32" height="32" alt="Heavy Hitter talent icon"> [Heavy Hitter](#ogryn_passive_heavy_hitter) | <ul><li>Melee hits build Heavy Hitter: ordinary hits add 1 stack and heavy hits add 2.</li><li>Each stack grants 3% melee damage, maximum 8; adding stacks resets the 7.5s duration.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c" width="32" height="32" alt="Pained Outburst talent icon"> [Pained Outburst](#ogryn_carapace_armor_trigger_on_zero_stacks) | <ul><li>After Feel No Pain loses a stack and falls to 4 visible stacks or fewer, push back nearby enemies and restore 50% of maximum Toughness; English says 5 stacks or below.</li><li>At most once every 30s; the pushback burst deals no direct damage.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -421,3 +422,21 @@
 - **Refresh and example**: Adding stacks resets the 7.5s duration. Four ordinary hits grant 12%; at 8 stacks, 100 base melee damage becomes 100 × (1 + 24%) = 124.
 
 [Details](ogryn_passive_heavy_hitter.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_carapace_armor_trigger_on_zero_stacks"></a>
+
+### Pained Outburst
+
+<img src="https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c" width="72" height="72" alt="Pained Outburst talent icon">
+
+- **Trigger**: With Pained Outburst selected, losing a Feel No Pain stack must leave 4 visible stacks or fewer, and at least 30s must have passed since the previous proc.
+
+- **Effect**: Push back enemies within 2.5m and restore 50% of maximum Toughness. This is a pushback burst and deals no direct damage. Restoration applies Feel No Pain's replenishment bonus and is capped by missing Toughness.
+
+- **Example**: After losing a stack and falling to 4, without Toughest!, the base restoration is 50% × (1 + 4 × 3%) = 56% of maximum Toughness. At maximum Toughness 100 and with sufficient deficit, 100 × 56% = 56 is restored. This restoration is skipped while knocked down.
+
+- **English threshold difference**: The same-build English says 5 stacks or below. The accepted internal threshold, after the stack offset, is 4 visible stacks or fewer.
+
+[Details](ogryn_carapace_armor_trigger_on_zero_stacks.md) · [Back to index](#talent-index)
