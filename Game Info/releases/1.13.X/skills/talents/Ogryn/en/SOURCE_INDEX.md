@@ -80,3 +80,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Simple Minded](ogryn_corruption_resistance.md) / `ogryn_corruption_resistance` | Talent |
 | [Focused Fighter](ogryn_melee_attacks_give_mtdr.md) / `ogryn_melee_attacks_give_mtdr` | Talent |
 | [Brutish Strength](ogryn_pushing_applies_brittleness.md) / `ogryn_pushing_applies_brittleness` | Talent |
+| [Fire Away](ogryn_explosions_burn.md) / `ogryn_explosions_burn` | Talent |

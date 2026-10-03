@@ -937,6 +937,18 @@ Full raw template and formatting: [source evidence](ogryn_pushing_applies_brittl
 | Push application | 4 Stacks of Brittleness on Push.; `ui / loc_talent_ogryn_pushing_applies_brittlenes_desc / f63bfc12` | on_push_hit adds four rending_debuff stacks to the living target. [Fixed source and line references](ogryn_pushing_applies_brittleness.md#fixed-source-evidence) | Consistent | The independently read English matches the trigger and stack count. |
 | Debuff scope, limits and calculation | No per-stack value, cap, duration or armour formula is stated.; `ui / loc_talent_ogryn_pushing_applies_brittlenes_desc / f63bfc12` | Each stack contributes 2.5%, maximum sixteen / 40%, for 5s with refresh. The target debuff benefits allies and combines with attacker Rending. At original Carapace multiplier 0.5 and base 100, four stacks give 60 and sixteen give 90; excess above 1 follows excess-Rending rules. [Fixed source and line references](ogryn_pushing_applies_brittleness.md#fixed-source-evidence) | Not covered by the description | These accepted shared-debuff and armour details supplement the English; final damage is not increased by a uniform equivalent percentage. |
 
+
+<a id="ogryn_explosions_burn"></a>
+
+## Fire Away
+
+Full raw template and formatting: [source evidence](ogryn_explosions_burn.md#original-english-template-and-reconstruction). Name hash `9c8e3f4e`. Every row uses `ui / loc_talent_ogryn_explosions_burn_close_desc / 2024bc9e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Burn application and cap | Your Explosions apply 1 Stack(s) of Burn. 2 Stack(s) if close range. Max Stacks 8.; `ui / loc_talent_ogryn_explosions_burn_close_desc / 2024bc9e` | close_explosion_hit selects close_stacks 2 instead of stacks 1; application cap is 8. [Fixed source and line references](ogryn_explosions_burn.md#fixed-source-evidence) | Consistent | The independently read English presents two as the close-hit stack total, without saying additional; the Chinese-only wording correction is not inherited. |
+| Target limits, timing and damage curve | No Power Maul exception, duration, tick interval or damage formula is stated.; `ui / loc_talent_ogryn_explosions_burn_close_desc / 2024bc9e` | Damaged targets must remain alive; powermaul_explosion is excluded. The shared flamer_assault curve uses cap 31, duration 4s with refresh even at eight, 0.5s intervals and progressive stack removal. Unarmoured isolated ticks use 600 × (stacks/31)² × [3 − 2 × (stacks/31)]: two ≈7.17, eight ≈99.25; armour/modifiers alter these, and one tick is not total damage. [Fixed source and line references](ogryn_explosions_burn.md#fixed-source-evidence) | Not covered by the description | These accepted explosion, timing and shared-curve details supplement the English application values. |
+
 ## Comparison totals
 
 The 224 listed rules comprise **94 Consistent**, **4 Explicit contradictions**, **119 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
