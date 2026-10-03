@@ -1057,6 +1057,18 @@ Full raw template and formatting: [source evidence](ogryn_ranged_damage_immunity
 | Ranged-hit reduction and values | +20% Damage Resistance vs Ranged for 2.5s after getting hit by a Ranged Attack. 4s Cooldown.; `ui / loc_talent_ogryn_ranged_damage_immunity_desc / 5b06263e` | Self-directed ranged on_damage_taken activates ranged_damage_taken_multiplier 0.8 for 2.5s, with cooldown 4s. [Fixed source and line references](ogryn_ranged_damage_immunity.md#fixed-source-evidence) | Consistent | The independently read English matches the trigger, scope and values. |
 | Hit resolution and cooldown timing | No Toughness-only exclusion, first-hit recalculation, active refresh or cooldown starting point is stated.; `ui / loc_talent_ogryn_ranged_damage_immunity_desc / 5b06263e` | Toughness-only damage qualifies; the triggering hit is already resolved. Active hits do not refresh. Cooldown starts after expiry: trigger 0s →end 2.5s →eligible 6.5s. Ranged damage 100 becomes 80 while active; melee is unaffected. [Fixed source and line references](ogryn_ranged_damage_immunity.md#fixed-source-evidence) | Not covered by the description | These accepted event and timing details supplement the English. |
 
+
+<a id="ogryn_wield_speed_increase"></a>
+
+## Dedicated Practice
+
+Full raw template and formatting: [source evidence](ogryn_wield_speed_increase.md#original-english-template-and-reconstruction). Name hash `b44ee911`. Every row uses `ui / loc_talent_ogryn_wield_speed_increase_desc / 6349b08e`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Weapon Swap Speed | +35% Weapon Swap Speed.; `ui / loc_talent_ogryn_wield_speed_increase_desc / 6349b08e` | wield_speed 0.35 contributes to ActionHandler time_scale for use_wield_speed actions. [Fixed source and line references](ogryn_wield_speed_increase.md#fixed-source-evidence) | Consistent | The independently read English states an increase to speed, matching the accepted stat; the existing correction concerns Chinese wording only. |
+| Action timing and scope | No action-duration formula or Reload Speed bonus is stated.; `ui / loc_talent_ogryn_wield_speed_increase_desc / 6349b08e` | Applicable weapon-draw actions use time/time_scale. One second becomes 1 ÷1.35 ≈0.741s, about 25.9% shorter or 74.1% of the original; not 35% remaining or a direct 35% reduction. Reload Speed is not increased. [Fixed source and line references](ogryn_wield_speed_increase.md#fixed-source-evidence) | Not covered by the description | These accepted scope and timing details supplement the English. |
+
 ## Comparison totals
 
 The 244 listed rules comprise **104 Consistent**, **4 Explicit contradictions**, **129 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

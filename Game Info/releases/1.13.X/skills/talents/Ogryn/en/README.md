@@ -88,6 +88,7 @@
 | <img src="https://github.com/user-attachments/assets/6fbf8a63-5e26-482f-9964-01eb0598b142" width="32" height="32" alt="Strongman talent icon"> [Strongman](#ogryn_damage_reduction_after_elite_kill) | <ul><li>An Elite or Specialist kill grants 10% damage reduction for 5s; further qualifying kills refresh without stacking.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/ce3b22d4-870e-4496-96fc-33601f9d9a62" width="32" height="32" alt="Steady Grip talent icon"> [Steady Grip](#ogryn_toughness_while_bracing) | <ul><li>While bracing or shooting, replenish 12.5% of maximum Toughness per second, with approximately 0.5s shooting-state retention.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/b7e2a92b-0a60-459a-87c9-6276b204f64e" width="32" height="32" alt="Can't Hit Me...Again talent icon"> [Can't Hit Me...Again](#ogryn_ranged_damage_immunity) | <ul><li>Taking ranged damage grants 20% ranged reduction for 2.5s; a 4s cooldown follows, without active-period refresh.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/5974d1c4-5b31-42b8-af90-022202c4614e" width="32" height="32" alt="Dedicated Practice talent icon"> [Dedicated Practice](#ogryn_wield_speed_increase) | <ul><li>Increase Weapon Swap Speed by 35%; a scaled 1s weapon-draw action takes approximately 0.741s, without increasing Reload Speed.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1406,3 +1407,21 @@
 - **Damage-reduction example**: While active, ranged damage of 100 at this stage becomes 80. Melee damage receives no reduction from this effect.
 
 [Details](ogryn_ranged_damage_immunity.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_wield_speed_increase"></a>
+
+### Dedicated Practice
+
+<img src="https://github.com/user-attachments/assets/5974d1c4-5b31-42b8-af90-022202c4614e" width="72" height="72" alt="Dedicated Practice talent icon">
+
+- **Effect**: Increase Weapon Swap Speed by 35%, reducing the duration of weapon-draw actions controlled by this speed stat. Reload Speed is not increased.
+
+- **Timing example**: An original 1s action becomes `1 ÷ 1.35 ≈ 0.741s`, approximately 25.9% shorter. It does not become 35% of the original duration or receive a direct 35% duration reduction.
+
+#### Existing Traditional Chinese wording correction
+
+- The Chinese wording “武器切換速度縮短為 +35%” confuses speed with duration. It should mean Weapon Swap Speed increases by 35%; the same action takes approximately 74.1% of its original duration.
+
+[Details](ogryn_wield_speed_increase.md) · [Back to index](#talent-index)
