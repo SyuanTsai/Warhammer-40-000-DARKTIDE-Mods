@@ -9,3 +9,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | Talent / code identifier | Category |
 |---|---|
 | [Remote Detonation](adamant_whistle.md) / `adamant_whistle` | Blitz |
+| [Arbites Grenade](adamant_grenade_improved.md) / `adamant_grenade_improved` | Blitz |

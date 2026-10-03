@@ -1,0 +1,37 @@
+{
+  "id": "adamant_grenade_improved",
+  "class": "Arbites",
+  "date": "2026-10-03",
+  "name": "Arbites Grenade",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_grenade_improved.md",
+  "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_grenade_improved.md",
+  "name_key": "loc_talent_ability_adamant_grenade_improved",
+  "name_hash": "1502f5e7",
+  "description_key": "loc_talent_ability_adamant_grenade_improved_description",
+  "description_hash": "6a2ea9db",
+  "additional_name": {
+    "key": "loc_talent_ability_adamant_grenade",
+    "hash": "f50a5b6d",
+    "text": "Arbites Grenade"
+  },
+  "checks": {
+    "translation_values_conditions_examples": "passed",
+    "independent_English_comparison": {
+      "Consistent": 3,
+      "Not covered by the description": 4
+    },
+    "changed_Markdown_fragments": 6,
+    "changed_local_links": 11,
+    "Chinese_content": "language_switch_only",
+    "git_diff_check": "passed",
+    "read_only_text_draft": "reviewed"
+  },
+  "source_reads": "Necessary missing display mapping only: adamant_talents.lua#L403-L427. Existing capacity value, mechanisms, citations, shared formatting and icons reused.",
+  "questions": [
+    "Short delay has no fixed starting point or numerical duration in the English template; supplementary timing explanation retained.",
+    "Game execution and final game UI observation were not performed."
+  ],
+  "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_grenade_improved.md"
+}

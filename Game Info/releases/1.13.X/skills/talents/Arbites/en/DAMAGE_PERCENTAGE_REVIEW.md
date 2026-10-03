@@ -7,3 +7,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. Entries di
 | Talent | Quantity and calculation | Conclusion |
 |---|---|---|
 | [Remote Detonation](adamant_whistle.md) | Electrocution multiplies the target damage-taken stage by 1.1; armour, blast and recovery calculations are separate. | Isolated damage 100 → 110; with a separate 25% attacker bonus, 100 × 1.25 × 1.1 = 137.5. Central blast: 600 Unarmoured or 600 × 0.5 = 300 Flak damage before other effects. Two charges recover sequentially in 50/100s without other modifiers. |
+| [Arbites Grenade](adamant_grenade_improved.md) | Distinguish blast PowerLevel from the central damage-profile baseline, armour modifiers and separate upgrade nodes. | Isolated central damage 1,500 × armour modifier: 1,500 Unarmoured, 750 Flak, 300 Carapace. Capacity 3 → 4; no automatic cooldown refill from this ability alone. |
