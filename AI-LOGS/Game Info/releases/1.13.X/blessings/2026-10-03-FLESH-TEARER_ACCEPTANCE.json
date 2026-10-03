@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-03",
+  "blessing": "flesh-tearer",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/血肉撕裂者/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_combatknife_p1_bleed_on_crit",
+    "weapon_trait_bespoke_dual_shivs_p1_bleed_on_crit"
+  ],
+  "added_binding_count": 4,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_evidence",
+    "scope": "two variant/four binding research and independent ignored agent config; primary source/prose integration",
+    "findings": [
+      "Both tiers5/6/7/8",
+      "Both wrappers override allow_weapon_special=false; parent true does not determine final behavior",
+      "Combatknife special jab excluded; Dual Shivs special throw not melee",
+      "Each unique damaged melee-critical target triggers; no first-target check",
+      "Shared bleed16cap, .5tick,1.5before decay; one stack removed after each expired tick"
+    ],
+    "draft_corrections": [
+      "Agent identified per-weapon special exclusion; primary revised initial base-derived special inclusion before formal acceptance and reread both wrappers and actual special action wiring",
+      "Primary uses exact current RAW 型號1/型號3 labels for Dual Shivs instead of legacy Mk labels"
+    ],
+    "parallel_execution": {
+      "groups": [
+        "bloodletter",
+        "flesh-tearer",
+        "flechette"
+      ],
+      "max_groups": 3,
+      "shared_files_written_by": "primary only"
+    },
+    "final_document_review": {
+      "primary_result": "accepted",
+      "agent_result": "accepted except one timing clarification; primary implemented requested phase ranges",
+      "required_corrections": [
+        "Label ideal5/9s plus retained .5s tick phase; primary now gives nominal5–5.5/9–9.5s and fixed-update delay"
+      ],
+      "scope": "current primary config and formal player/examples/math"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/5fb9da44-aabb-4e67-94b0-caa0a9d335a8",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "flesh-tearer",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_194",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_194.png",
+      "attachment": "https://github.com/user-attachments/assets/5fb9da44-aabb-4e67-94b0-caa0a9d335a8",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5966881257",
+      "acquired_date": "2026-10-03",
+      "sha256": "7304f1c6fef38c97053a7fcbab342cfb2fc4951ceffad4fff8cce37b87f8347a",
+      "content_type": "image/png",
+      "size": 4824,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "血肉撕裂者祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 284,
+      "tables": 239,
+      "rows": 1928,
+      "lists": 370
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 885,
+      "source_files": 308,
+      "bindings": 166,
+      "variants": 89,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 984,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 284,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 142,
+    "not_started_name_groups": 142,
+    "partial_name_groups": 0,
+    "remaining_variants": 499,
+    "remaining_bindings": 1002,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "b487f9d23bdeb45397c952b6c00342edbc3966d2b1a31f6186e0bc36ecacc8a3"
+  },
+  "previous_local_commit": "2a1702183ce1ab36077d8488442a1987eb749f01",
+  "current_blessing_formula_review": {
+    "result": "passed",
+    "scope": "current capped stacks, input-power curve and nominal decay duration, independently computed by primary",
+    "checks": [
+      {
+        "n": 0,
+        "q": 8,
+        "new_stacks": 8
+      },
+      {
+        "n": 8,
+        "q": 8,
+        "new_stacks": 16
+      },
+      {
+        "n": 16,
+        "q": 8,
+        "new_stacks": 16
+      },
+      {
+        "n": 4,
+        "power": 78.125
+      },
+      {
+        "n": 8,
+        "power": 250,
+        "nominal_duration": 5
+      },
+      {
+        "n": 12,
+        "power": 421.875
+      },
+      {
+        "n": 16,
+        "power": 500,
+        "nominal_duration": 9
+      }
+    ],
+    "power_is_final_damage": false,
+    "decay": "callback damage first, one stack removed afterward; not whole-buff expiry",
+    "refresh_preserves_interval_schedule": true,
+    "refresh_phase_nominal_extra_seconds": [
+      0,
+      0.5
+    ],
+    "nominal_duration_ranges": {
+      "8": [
+        5,
+        5.5
+      ],
+      "16": [
+        9,
+        9.5
+      ]
+    }
+  },
+  "ui_name_review": {
+    "result": "passed",
+    "scope": "four current RAW family/pattern/mark UI names, exact metadata restrictions/icon, fixed imports/appends",
+    "dual_shiv_mark_labels": "型號1／型號3 per current RAW, no legacy Mk labels"
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 2,
+    "bound_variants": 2,
+    "bindings": 4,
+    "same_name_candidates": [],
+    "unresolved_related_but_different_key": [],
+    "status": "Exact localization-key intersection reviewed; both exact-key metadata items are bound and no exact-key outside candidate was found.",
+    "available_tiers": null
+  }
+}

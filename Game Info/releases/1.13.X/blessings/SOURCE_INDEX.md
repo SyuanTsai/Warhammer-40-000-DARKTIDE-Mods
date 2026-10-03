@@ -27,3 +27,4 @@
 | [開罐器](entries/開罐器/README.md) | [來源索引](entries/開罐器/SOURCE_INDEX.md) |
 | [破碎衝擊](entries/破碎衝擊/README.md) | [來源索引](entries/破碎衝擊/SOURCE_INDEX.md) |
 | [穿透火焰](entries/穿透火焰/README.md) | [來源索引](entries/穿透火焰/SOURCE_INDEX.md) |
+| [血肉撕裂者](entries/血肉撕裂者/README.md) | [來源索引](entries/血肉撕裂者/SOURCE_INDEX.md) |

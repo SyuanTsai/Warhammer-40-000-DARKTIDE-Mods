@@ -54,3 +54,5 @@
 | [擲彈兵臂鎧](ranged/擲彈兵臂鎧/README.md)<br>- Grenadier Gauntlet | 遠程 | 擲彈兵臂鎧 布拉斯托姆 Mk III |
 | [震盪槍](ranged/震盪槍/README.md)<br>- Rumbler | 遠程 | 震盪槍 洛倫茲 Mk VI |
 | [電漿槍](ranged/電漿槍/README.md)<br>- Plasma Gun | 遠程 | 電漿槍 M35熔岩核心 Mk II、電漿槍 M35熔岩核心 Mk III |
+| [戰刃](melee/戰刃/README.md)<br>- Combat Blade | 近戰 | 戰刃 卡塔昌 Mk III、戰刃 卡塔昌 Mk VI |
+| [短刀](melee/短刀/README.md)<br>- Shivs | 近戰 | 短刀 臨時拼湊 型號1、短刀 臨時拼湊 型號3 |

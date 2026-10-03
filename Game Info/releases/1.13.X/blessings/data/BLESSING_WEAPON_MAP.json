@@ -293,6 +293,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/0836e233-112e-4757-85cb-ee040d1bd4f7",
       "effect": "直接火焰命中施加1／2／3／4層脆弱；每層提供1個百分點撕裂，最多20層、持續5秒。再次命中刷新期限；燃燒跳傷不觸發。"
+    },
+    {
+      "id": "flesh-tearer",
+      "name_zh_tw": "血肉撕裂者",
+      "name_en": "Flesh Tearer",
+      "name_key": "loc_trait_bespoke_bleed_on_crit_melee",
+      "description_key": "loc_trait_bespoke_bleed_on_crit_melee_desc",
+      "name_hash": "6f0bf4f9",
+      "description_hash": "435886f7",
+      "page": "entries/血肉撕裂者/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/5fb9da44-aabb-4e67-94b0-caa0a9d335a8",
+      "effect": "近戰暴擊命中對目標施加5／6／7／8層流血，最多16層；流血每約0.5秒跳傷，停止施加約1.5秒後逐次退1層。"
     }
   ],
   "weapons": [
@@ -1814,6 +1827,78 @@
             "weapon_family_display_name": "loc_weapon_family_plasmagun_p1_m2",
             "weapon_pattern_display_name": "loc_weapon_pattern_plasmagun_p1_m2",
             "weapon_mark_display_name": "loc_weapon_mark_plasmagun_p1_m2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "combatknife_p1",
+      "name_zh_tw": "戰刃",
+      "name_en": "Combat Blade",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_combatknife_p1_m1",
+      "page": "weapons/melee/戰刃/README.md",
+      "marks": [
+        {
+          "id": "combatknife_p1_m1",
+          "item": "content/items/weapons/player/melee/combatknife_p1_m1",
+          "name": "戰刃 卡塔昌 Mk III",
+          "name_en": "Combat Blade Catachan Mk III",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+          "trait_category": "bespoke_combatknife_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combatknife_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combatknife_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_combatknife_p1_m1"
+          }
+        },
+        {
+          "id": "combatknife_p1_m2",
+          "item": "content/items/weapons/player/melee/combatknife_p1_m2",
+          "name": "戰刃 卡塔昌 Mk VI",
+          "name_en": "Combat Blade Catachan Mk VI",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+          "trait_category": "bespoke_combatknife_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combatknife_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combatknife_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_combatknife_p1_m2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "dual_shivs_p1",
+      "name_zh_tw": "短刀",
+      "name_en": "Shivs",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_dual_shivs_p1_m1",
+      "page": "weapons/melee/短刀/README.md",
+      "marks": [
+        {
+          "id": "dual_shivs_p1_m1",
+          "item": "content/items/weapons/player/melee/dual_shivs_p1_m1",
+          "name": "短刀 臨時拼湊 型號1",
+          "name_en": "Shivs Improvised Mk I",
+          "template_file": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+          "trait_category": "bespoke_dual_shivs_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_dual_shivs_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_dual_shivs_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_dual_shivs_p1_m1"
+          }
+        },
+        {
+          "id": "dual_shivs_p1_m2",
+          "item": "content/items/weapons/player/melee/dual_shivs_p1_m2",
+          "name": "短刀 臨時拼湊 型號3",
+          "name_en": "Shivs Improvised Mk III",
+          "template_file": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+          "trait_category": "bespoke_dual_shivs_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_dual_shivs_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_dual_shivs_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_dual_shivs_p1_m2"
           }
         }
       ]
@@ -5521,6 +5606,98 @@
       "icon": "https://github.com/user-attachments/assets/0836e233-112e-4757-85cb-ee040d1bd4f7",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_164",
       "effect": "烈焰力場法杖的短按火焰爆發或蓄力火焰攻擊直接命中時，依等級疊加1／2／3／4層脆弱。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatknife_p1_bleed_on_crit",
+      "blessing_id": "flesh-tearer",
+      "weapon_id": "combatknife_p1",
+      "page": "entries/血肉撕裂者/weapon_trait_bespoke_combatknife_p1_bleed_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "target_buff_template": "bleed",
+        "target_stack_cap": 16,
+        "duration_before_decay_seconds": 1.5,
+        "damage_and_decay_interval_seconds": 0.5,
+        "refresh_duration_on_stack": true,
+        "decay_one_stack_per_interval": true,
+        "power_formula": "500*(n/16)^2*(3-2*n/16)",
+        "proc_condition": "item match + damage>0 + melee critical hit, current item slot wielded at queued proc processing",
+        "allow_weapon_special": false,
+        "first_target_only": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatknife_p1.lua",
+        "start_line": 333,
+        "end_line": 371
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatknife_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_bleed_on_crit_melee_desc",
+      "description_hash": "435886f7",
+      "icon": "https://github.com/user-attachments/assets/5fb9da44-aabb-4e67-94b0-caa0a9d335a8",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_194",
+      "effect": "近戰暴擊命中對目標施加5／6／7／8層流血，最多16層；流血每約0.5秒跳傷，停止施加約1.5秒後逐次退1層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_shivs_p1_bleed_on_crit",
+      "blessing_id": "flesh-tearer",
+      "weapon_id": "dual_shivs_p1",
+      "page": "entries/血肉撕裂者/weapon_trait_bespoke_dual_shivs_p1_bleed_on_crit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "num_stacks_on_proc": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "target_buff_template": "bleed",
+        "target_stack_cap": 16,
+        "duration_before_decay_seconds": 1.5,
+        "damage_and_decay_interval_seconds": 0.5,
+        "refresh_duration_on_stack": true,
+        "decay_one_stack_per_interval": true,
+        "power_formula": "500*(n/16)^2*(3-2*n/16)",
+        "proc_condition": "item match + damage>0 + melee critical hit, current item slot wielded at queued proc processing",
+        "allow_weapon_special": false,
+        "first_target_only": false
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_shivs_p1.lua",
+        "start_line": 333,
+        "end_line": 371
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_shivs_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_bleed_on_crit_melee_desc",
+      "description_hash": "435886f7",
+      "icon": "https://github.com/user-attachments/assets/5fb9da44-aabb-4e67-94b0-caa0a9d335a8",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_194",
+      "effect": "近戰暴擊命中對目標施加5／6／7／8層流血，最多16層；流血每約0.5秒跳傷，停止施加約1.5秒後逐次退1層。"
     }
   ],
   "bindings": [
@@ -7790,6 +7967,62 @@
         "path": "scripts/settings/equipment/weapon_templates/force_staffs/forcestaff_p2_m1.lua",
         "import_line": 13,
         "append_line": 1225
+      }
+    },
+    {
+      "blessing_id": "flesh-tearer",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_bleed_on_crit",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/bleed_on_crit",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1436
+      }
+    },
+    {
+      "blessing_id": "flesh-tearer",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_bleed_on_crit",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/bleed_on_crit",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1526
+      }
+    },
+    {
+      "blessing_id": "flesh-tearer",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_bleed_on_crit",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/bleed_on_crit",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1502
+      }
+    },
+    {
+      "blessing_id": "flesh-tearer",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m2",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_bleed_on_crit",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/bleed_on_crit",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1581
       }
     }
   ]

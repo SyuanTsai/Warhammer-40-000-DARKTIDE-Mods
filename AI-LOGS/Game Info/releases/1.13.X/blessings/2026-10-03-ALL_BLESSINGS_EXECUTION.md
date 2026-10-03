@@ -101,3 +101,7 @@
 - 破碎衝擊本機 Commit：`02b990f5d6a6eec6888844570a075f62da326761`。
 
 - [穿透火焰](2026-10-03-PENETRATING-FLAME_ACCEPTANCE.json)：新增2變體、2型號關聯；共2變體、2關聯。
+
+- 穿透火焰本機 Commit：`2a1702183ce1ab36077d8488442a1987eb749f01`。
+
+- [血肉撕裂者](2026-10-03-FLESH-TEARER_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。

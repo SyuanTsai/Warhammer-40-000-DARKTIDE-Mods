@@ -310,6 +310,7 @@
 - Slaughter Spree - 殺戮狂潮
 - Relentless Strikes - 持續打擊
 - Flesh Tearer - 血肉撕裂者
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_bleed_on_crit_melee`，hash `6f0bf4f9`；英文／繁中RAW配對確認。
 - Lacerate - 撕碎
 - Executor - 行刑者
 - Riposte - 還擊
