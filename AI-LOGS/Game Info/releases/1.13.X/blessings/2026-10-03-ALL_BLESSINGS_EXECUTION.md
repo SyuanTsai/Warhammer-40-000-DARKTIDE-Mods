@@ -149,3 +149,7 @@
 - 行刑者本機 Commit：`9ad543848cf12af47103b4348e2ce335f407c999`。
 
 - [歎為觀止](2026-10-03-SHOWSTOPPER_ACCEPTANCE.json)：新增3變體、3型號關聯；共3變體、3關聯。
+
+- 歎為觀止本機 Commit：`c09be8a8e1e483a15ab89d7d3d865188ce439694`。
+
+- [大口徑彈藥](2026-10-03-MANSTOPPER_ACCEPTANCE.json)：新增5變體、8型號關聯；共5變體、8關聯。

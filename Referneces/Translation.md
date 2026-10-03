@@ -438,6 +438,7 @@
 - Flechette - 飛鏢彈
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_bleed_on_crit_ranged`，hash `d1d03cff`；英文／繁中RAW配對確認。
 - Man-Stopper - 大口徑彈藥
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_cleave_on_crit`，hash `69135934`；英文／繁中RAW配對確認。
 - Scattershot - 散彈
 - Full Bore - 全孔射擊
 - Both Barrels - 雙管齊發

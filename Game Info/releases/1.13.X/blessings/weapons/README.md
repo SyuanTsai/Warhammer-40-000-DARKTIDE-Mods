@@ -64,3 +64,4 @@
 | [磷光爆破手槍](ranged/磷光爆破手槍/README.md)<br>- Phosphor Blast Pistol | 遠程 | 磷光爆破手槍 布蘭克斯 Mk XI |
 | [重劍](melee/重劍/README.md)<br>- Heavy Sword | 近戰 | 重劍 圖妥斯基 Mk VI、重劍 圖妥斯基 Mk VII、重劍 圖妥斯基 Mk IX |
 | [戴維爾戰鎬](melee/戴維爾戰鎬/README.md)<br>- Delver's Pickaxe | 近戰 | 戴維爾戰鎬 布蘭克斯 Mk Ia、戴維爾戰鎬 博羅維安 Mk III、戴維爾戰鎬 卡索拉斯 Mk II |
+| [電能步槍](ranged/電能步槍/README.md)<br>- Galvanic Rifle | 遠程 | 電能步槍 布蘭克斯 Mk CV |

@@ -5,11 +5,12 @@
 | 祝福 | 本武器主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9" width="32" height="32" alt="連跑帶打祝福圖示"> [連跑帶打](../../../entries/連跑帶打/README.md)<br>- Run 'n' Gun<br>[完整說明](../../../entries/連跑帶打/README.md) | <ul><li>可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/019dc966-034d-47aa-8564-a4308bb0bca8" width="32" height="32" alt="大口徑彈藥祝福圖示"> [大口徑彈藥](../../../entries/大口徑彈藥/README.md)<br>- Man-Stopper<br>[完整說明](../../../entries/大口徑彈藥/README.md) | <ul><li>持用時遠程衝擊提高10%／15%／20%／25%；暴擊使該次傷害順劈預算為無限，仍受護甲與碰撞規則限制。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 衝覆者霰彈手槍和防暴盾牌 審判 Mk IV | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_shotpistol_shield_p1_hipfire_while_sprinting.md) | I–IV |
+| 衝覆者霰彈手槍和防暴盾牌 審判 Mk IV | [連跑帶打](../../../entries/連跑帶打/weapon_trait_bespoke_shotpistol_shield_p1_hipfire_while_sprinting.md)、[大口徑彈藥](../../../entries/大口徑彈藥/weapon_trait_bespoke_shotpistol_shield_p1_cleave_on_crit.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。
