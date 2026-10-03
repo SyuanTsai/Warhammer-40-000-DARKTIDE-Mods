@@ -84,6 +84,7 @@
 | <img src="https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc" width="32" height="32" alt="The Emperor's Fist talent icon"> [The Emperor's Fist](#adamant_first_melee_hit_increased_damage) | <ul><li>The first target hit by each melee sweep receives 15% more Melee Damage and 30% more Impact.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4b7cf064-ea83-4334-a484-a222e22af7a3" width="32" height="32" alt="Target Selection talent icon"> [Target Selection](#adamant_pinning_dog_elite_damage) | <ul><li>Killing an Elite or Specialist pinned by your own Cyber-Mastiff grants 15% Damage against Elites and Specialists for 8s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47" width="32" height="32" alt="Target Priority talent icon"> [Target Priority](#adamant_increased_damage_to_high_health) | <ul><li>Deal 15% more damage to enemies above 75% Health.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/fc2bbfe4-50b8-4c9c-b775-20f1c2c33792" width="32" height="32" alt="Canine Morale talent icon"> [Canine Morale](#adamant_pinning_dog_kills_buff_allies) | <ul><li>Killing an enemy pinned by your own Cyber-Mastiff grants you and allies in Coherency 20% Toughness Damage Reduction and 10% of maximum Toughness over 5s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -1070,3 +1071,17 @@
 - **Damage example**: With target maximum Health 1000 and current Health 800, base damage 100 becomes 100 × 1.15 = 115. At current Health 750, it remains 100. With an existing same-stage 25% bonus and the threshold met, 125 becomes 140.
 
 [Details](adamant_increased_damage_to_high_health.md) · [Back to index](#talent-index)
+
+<a id="adamant_pinning_dog_kills_buff_allies"></a>
+
+### Canine Morale
+
+<img src="https://github.com/user-attachments/assets/fc2bbfe4-50b8-4c9c-b775-20f1c2c33792" width="72" height="72" alt="Canine Morale talent icon">
+
+- **Trigger and recipients**: When you or your own Cyber-Mastiff kill an enemy it is currently pinning, you and allies in Coherency at that moment receive the buff. The enemy does not need to be an Elite or Specialist.
+
+- **Recovery and reduction**: For 5s, take 20% less Toughness damage and recover 2% of maximum Toughness per second. Another trigger refreshes the duration without increasing the recovery rate or stacking the reduction.
+
+- **Examples**: With maximum Toughness 100, recovery is 100 × 10% ÷ 5 = 2 points per second, or 10 over the full 5s, capped at missing Toughness. An isolated incoming Toughness-damage value of 100 becomes 100 × 0.8 = 80.
+
+[Details](adamant_pinning_dog_kills_buff_allies.md) · [Back to index](#talent-index)
