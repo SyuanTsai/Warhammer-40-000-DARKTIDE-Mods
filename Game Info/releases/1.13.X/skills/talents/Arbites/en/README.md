@@ -25,6 +25,7 @@
 | <img src="https://github.com/user-attachments/assets/a0f08b1e-586b-4a65-b271-29d79874f573" width="32" height="32" alt="Commendation from Condemnation talent icon"> [Commendation from Condemnation](#adamant_charge_toughness) | <ul><li>Each distinct Elite, Specialist or Monstrosity hit by the charge replenishes 20% Toughness and 15% Stamina.</li><li>One charge replenishes at most 100% Toughness and 75% Stamina; the same enemy does not count twice.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/d2b1945d-2300-4993-a649-00c1e3858e0d" width="32" height="32" alt="Targeted Brutality talent icon"> [Targeted Brutality](#adamant_charge_cooldown_reduction) | <ul><li>Each effective charge hit on an ordinary enemy restores 0.5s of Combat Ability Cooldown; each hit on an Elite, Specialist or Monstrosity restores 1s.</li><li>One charge restores at most 5s of cooldown.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="32" height="32" alt="Engage talent icon"> [Engage](#adamant_charge_longer_distance) | <ul><li>Adds 3.75m to the charge's base distance of 3.75m, raising the target distance limit to 7.5m.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="32" height="32" alt="Kill Order talent icon"> [Kill Order](#adamant_dog_damage_after_ability) | <ul><li>After using your Combat Ability, your Cyber-Mastiff gains 50% more damage for 12s; using the ability again while the effect is active refreshes its duration.</li></ul> | Ability |
 
 ## Blitz
 
@@ -271,3 +272,17 @@
 - **Example**: `3.75m base distance + 3.75m increase = 7.5m`. Actual displacement may be shorter because of collisions along the path or cancellation before completion.
 
 [Details](adamant_charge_longer_distance.md) · [Back to index](#talent-index)
+
+<a id="adamant_dog_damage_after_ability"></a>
+
+### Kill Order
+
+<img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="72" height="72" alt="Kill Order talent icon">
+
+- **Activation effect**: Using your Combat Ability grants your Cyber-Mastiff +50% Damage for 12s.
+
+- **Example**: For base non-Bleed Cyber-Mastiff damage of 100, isolating this upgrade gives `100 × (1 + 50%) = 150 damage`. If Bloodlust's +75% is active in the same additive stage, the result is `100 × (1 + 50% + 75%) = 225 damage`, before target defenses.
+
+- **Refresh and limits**: Using your Combat Ability again resets the 12s duration without stacking this upgrade's bonus with itself. Bleed damage does not receive this companion-damage bonus.
+
+[Details](adamant_dog_damage_after_ability.md) · [Back to index](#talent-index)

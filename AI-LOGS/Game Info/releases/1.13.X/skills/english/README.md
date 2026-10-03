@@ -250,3 +250,7 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Engage](arbites_adamant_charge_longer_distance.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - Measured checkpoint (skills 91–95): commit interval e416c091 → 47337f5b was 1,694s (28m 14s), including continuation from the existing draft. At that checkpoint: 95 accepted skills; 589 mapped documents remained (551 mechanisms, 36 class support, 2 shared). Current measured-rate estimate remained 40–60 hours of continuous execution. Work continued without awaiting confirmation.
+
+- [Kill Order](arbites_adamant_dog_damage_after_ability.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- Measured checkpoint (skills 96–100): commit interval 47337f5b → ad6b104a was 915s (15m 15s). At that checkpoint: 100 accepted skills; 584 mapped documents remained (546 mechanisms, 36 class support, 2 shared). The overall estimate remained approximately 40–60 hours of continuous execution; work continued with Kill Order.

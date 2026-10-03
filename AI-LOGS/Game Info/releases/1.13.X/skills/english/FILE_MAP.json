@@ -80,7 +80,8 @@
         "adamant_drone_debuff_talent",
         "adamant_charge_toughness",
         "adamant_charge_cooldown_reduction",
-        "adamant_charge_longer_distance"
+        "adamant_charge_longer_distance",
+        "adamant_dog_damage_after_ability"
       ],
       "checks": []
     },
@@ -109,7 +110,8 @@
         "adamant_drone_debuff_talent",
         "adamant_charge_toughness",
         "adamant_charge_cooldown_reduction",
-        "adamant_charge_longer_distance"
+        "adamant_charge_longer_distance",
+        "adamant_dog_damage_after_ability"
       ],
       "checks": []
     },
@@ -138,7 +140,8 @@
         "adamant_drone_debuff_talent",
         "adamant_charge_toughness",
         "adamant_charge_cooldown_reduction",
-        "adamant_charge_longer_distance"
+        "adamant_charge_longer_distance",
+        "adamant_dog_damage_after_ability"
       ],
       "checks": []
     },
@@ -167,7 +170,8 @@
         "adamant_drone_debuff_talent",
         "adamant_charge_toughness",
         "adamant_charge_cooldown_reduction",
-        "adamant_charge_longer_distance"
+        "adamant_charge_longer_distance",
+        "adamant_dog_damage_after_ability"
       ],
       "checks": []
     },
@@ -546,9 +550,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "ca1ee5085ecba11fb100cad656e07fa1b968ae3c",
       "chinese_sha256": "c38998dd068d05b01159c4bc7652e8993f01fcda4025daf09e8149644b9dc399",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_dog_damage_after_ability"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_dog_damage_after_ability.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_dog_pounces_bleed_nearby.md",
@@ -10173,6 +10184,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge_longer_distance.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_charge_longer_distance.md"
+    },
+    {
+      "id": "adamant_dog_damage_after_ability",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_dog_damage_after_ability.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_dog_damage_after_ability.md"
     }
   ],
   "pending_chinese_corrections": [
