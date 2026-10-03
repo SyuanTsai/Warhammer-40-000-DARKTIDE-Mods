@@ -164,5 +164,6 @@
     "Repeated full ability/Toughness/buff implementation analysis (outside clarified review scope)"
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/duty-and-honour-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_increase_and_restore_toughness_to_coherency.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_increase_and_restore_toughness_to_coherency.md",
+  "commit": "f0e2a2871324375943c9f08d4a01e8e86683572c"
 }
