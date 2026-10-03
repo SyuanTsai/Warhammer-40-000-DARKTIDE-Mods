@@ -98,3 +98,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Nuncio-Aquila](adamant_area_buff_drone.md) / `adamant_area_buff_drone` | Base effect |
 | [Cyber-Mastiff tag command](adamant_command_dog_with_tag.md) / `adamant_command_dog_with_tag` | Base effect |
 | [Companion Aura](adamant_companion_aura.md) / `adamant_companion_aura` | Base effect |
+| [Companion Damage per Level](adamant_companion_damage_per_level.md) / `adamant_companion_damage_per_level` | Base effect |

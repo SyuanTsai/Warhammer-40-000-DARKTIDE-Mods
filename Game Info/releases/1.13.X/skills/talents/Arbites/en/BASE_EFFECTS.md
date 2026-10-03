@@ -49,3 +49,13 @@ These effects come from the base character configuration. Combat abilities, Blit
 - **Base scope**: This base aura does not directly apply a numerical effect such as Toughness Damage Reduction. The companion's Coherency eligibility and additional numerical aura bonuses are separate effects.
 
 [Source evidence and example assumptions](adamant_companion_aura.md)
+
+<a id="adamant_companion_damage_per_level"></a>
+
+## Companion Damage per Level
+
+- **Level scaling**: Your Cyber-Mastiff's non-Bleeding damage gains one sixth of the baseline damage for every full 5 levels. Levels 1–4 use multiplier 1; level 10 is approximately 1.33 and level 30 is 2.
+
+- **Damage example**: With other conditions unchanged, an attack dealing 100 at low level becomes 100 × (1 + 2 ÷ 6) ≈ 133.33 at level 10 and 100 × 2 = 200 at level 30. Bleeding damage does not receive this multiplier.
+
+[Source evidence and example assumptions](adamant_companion_damage_per_level.md)
