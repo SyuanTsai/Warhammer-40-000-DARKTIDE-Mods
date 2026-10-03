@@ -293,7 +293,9 @@ local _update_team_player_entry = function(self)
         local true_levels = mod.get_true_levels(character_id)
 
         if not true_levels and not mod._havoc_promises[account_id] then
-            local progression_promise = Managers.backend.interfaces.progression:get_progression("character", character_id)
+            local progression_promise = Managers.backend.interfaces.characters:fetch_account_character(account_id, character_id, false, true):next(function(data)
+                return data._embedded.progression
+            end)
             local rank_promise = Managers.data_service.havoc:havoc_rank_cadence_high(account_id)
 
             Promise.all(progression_promise, rank_promise):next(function(data)
