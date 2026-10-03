@@ -135,7 +135,12 @@
         "adamant_melee_attacks_on_staggered_rend",
         "adamant_crit_chance_on_kill",
         "adamant_crits_rend",
-        "adamant_dodge_improvement"
+        "adamant_dodge_improvement",
+        "adamant_monster_hunter",
+        "adamant_first_melee_hit_increased_damage",
+        "adamant_pinning_dog_elite_damage",
+        "adamant_increased_damage_to_high_health",
+        "adamant_pinning_dog_kills_buff_allies"
       ],
       "checks": []
     },
@@ -219,7 +224,12 @@
         "adamant_melee_attacks_on_staggered_rend",
         "adamant_crit_chance_on_kill",
         "adamant_crits_rend",
-        "adamant_dodge_improvement"
+        "adamant_dodge_improvement",
+        "adamant_monster_hunter",
+        "adamant_first_melee_hit_increased_damage",
+        "adamant_pinning_dog_elite_damage",
+        "adamant_increased_damage_to_high_health",
+        "adamant_pinning_dog_kills_buff_allies"
       ],
       "checks": []
     },
@@ -303,7 +313,12 @@
         "adamant_melee_attacks_on_staggered_rend",
         "adamant_crit_chance_on_kill",
         "adamant_crits_rend",
-        "adamant_dodge_improvement"
+        "adamant_dodge_improvement",
+        "adamant_monster_hunter",
+        "adamant_first_melee_hit_increased_damage",
+        "adamant_pinning_dog_elite_damage",
+        "adamant_increased_damage_to_high_health",
+        "adamant_pinning_dog_kills_buff_allies"
       ],
       "checks": []
     },
@@ -387,7 +402,12 @@
         "adamant_melee_attacks_on_staggered_rend",
         "adamant_crit_chance_on_kill",
         "adamant_crits_rend",
-        "adamant_dodge_improvement"
+        "adamant_dodge_improvement",
+        "adamant_monster_hunter",
+        "adamant_first_melee_hit_increased_damage",
+        "adamant_pinning_dog_elite_damage",
+        "adamant_increased_damage_to_high_health",
+        "adamant_pinning_dog_kills_buff_allies"
       ],
       "checks": []
     },
@@ -1087,9 +1107,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "378eb708cdf4f271d4b65ffa424b23d5afa09085",
       "chinese_sha256": "f9fdbfab27610823ddd1f7700c308c23d30b76faae3477c58975da51feebc773",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_first_melee_hit_increased_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_156_160.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_forceful.md",
@@ -1271,9 +1298,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "833d3f8c6a0a370241edfc3bd4680864ed081ca4",
       "chinese_sha256": "a5c6c5a1305391caea763aed90883df3f99ffe1dcae64d99a82546b72af9a5e9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_increased_damage_to_high_health"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_156_160.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_limit_dmg_taken_from_hits.md",
@@ -1329,9 +1363,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "cc75d7552dc90dc331a61d20ff362f642af4d6be",
       "chinese_sha256": "6f9f6ed0706abe7681235bb2bcc313e7e92e66ff2d37bfd321ed9e2577f73f95",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_monster_hunter"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_156_160.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_movement_speed_on_block.md",
@@ -1405,9 +1446,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "7167d971df575beccf0d5d08739917759f63fb45",
       "chinese_sha256": "ede49bb91c4c0d04b2d989103bed106164a2d09b59e3d587040507e686c4c465",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_pinning_dog_elite_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_156_160.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_pinning_dog_kills_buff_allies.md",
@@ -1416,9 +1464,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "c82c6e70eb2803dcba5e2e466720c876c219540d",
       "chinese_sha256": "277e9d6ec550d0bfaef4a5b510e0820f8f410d00bea3ed54ca59f6cd7fa07395",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_pinning_dog_kills_buff_allies"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_156_160.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_plasteel_plates.md",
@@ -11218,6 +11273,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_151_155.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_dodge_improvement.md"
+    },
+    {
+      "id": "adamant_monster_hunter",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_156_160.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_monster_hunter.md"
+    },
+    {
+      "id": "adamant_first_melee_hit_increased_damage",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_156_160.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_first_melee_hit_increased_damage.md"
+    },
+    {
+      "id": "adamant_pinning_dog_elite_damage",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_156_160.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_pinning_dog_elite_damage.md"
+    },
+    {
+      "id": "adamant_increased_damage_to_high_health",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_156_160.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_increased_damage_to_high_health.md"
+    },
+    {
+      "id": "adamant_pinning_dog_kills_buff_allies",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_156_160.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_pinning_dog_kills_buff_allies.md"
     }
   ],
   "pending_chinese_corrections": [

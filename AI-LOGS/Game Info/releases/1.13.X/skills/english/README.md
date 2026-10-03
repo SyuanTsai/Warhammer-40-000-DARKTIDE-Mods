@@ -314,3 +314,5 @@ Five-item checkpoint (skills 113–117): 844 seconds (14m 04s), measured between
 - [Arbites passives 146–150](arbites_passives_146_150.json): Judicious Efficiency, March, No Escape, Drive them Back and Shield Plates. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
 
 - [Arbites passives 151–155](arbites_passives_151_155.json): Weight of the Lex, Strike Down, Zealous Dedication, Prosecution Blow and Street Smarts. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
+
+- [Arbites passives 156–160](arbites_passives_156_160.json): Monstrosity Hunter, The Emperor's Fist, Target Selection, Target Priority and Canine Morale. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
