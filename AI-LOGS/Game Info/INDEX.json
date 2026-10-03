@@ -815,6 +815,22 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-CHARMED-RELOAD_EXTENSION_ACCEPTANCE.json",
       "date": "2026-10-03",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-INVENTORY_CATEGORY_CORRECTION",
+      "kind": "inventory",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INVENTORY_CATEGORY_CORRECTION.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE_EXTENSION_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-INSPIRING-BARRAGE_EXTENSION_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
     }
   ],
   "pending": [

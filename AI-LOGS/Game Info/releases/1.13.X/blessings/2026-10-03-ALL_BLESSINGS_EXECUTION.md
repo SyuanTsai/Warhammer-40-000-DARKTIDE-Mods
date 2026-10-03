@@ -32,3 +32,10 @@
 - 達姆彈全部UI交集變體本機Commit：`1c06016b9c2cba9575dec46922cff2efbc47df0e`；針彈手槍保留缺項目關聯與跨族群child引用的來源候選。
 
 - [魔力彈藥](2026-10-03-CHARMED-RELOAD_EXTENSION_ACCEPTANCE.json)：新增1變體、1型號關聯；共2變體、4關聯。
+
+
+- [盤點對應修正](2026-10-03-INVENTORY_CATEGORY_CORRECTION.json)：補回23變體、39關聯及7名稱鍵；現範圍164名稱鍵、588變體、1168關聯，58原缺口保留、交集外定義105個。原盤點完整副本與SHA保留。
+
+- 魔力彈藥全部UI交集變體本機Commit：`99a43d8b1f520212f8b677d1b690da734f89f3d0`；重伐木槍P2保留來源候選。
+
+- [振奮彈幕](2026-10-03-INSPIRING-BARRAGE_EXTENSION_ACCEPTANCE.json)：新增8變體、15型號關聯；共9變體、18關聯。

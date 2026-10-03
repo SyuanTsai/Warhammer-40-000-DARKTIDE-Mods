@@ -22,3 +22,10 @@ Steam Build25606770（1.13.1），2026-10-02擷取，資源content/localization/
 | 可取得等級 | 四組定義 | 有效位元未知；[stickerBook](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/backend/crafting.lua#L62-L89) | 無法確認 | null。 |
 
 未執行遊戲內驗證。MOD只作格式參考，不作名稱、機制或本體原文證據。
+
+
+## 武器格式值差異
+
+- 原文的ammo格式值：重伐木槍P2顯示10%，實際wrapper以5%計算；撕裂槍格式值與專用步幅都是8%。
+
+- 反衝者與惡棍槍的項目使用另一名稱／描述鍵`loc_trait_bespoke_toughness_on_continuous_fire_alternative`與其`_desc`，本體繁中為「激勵彈幕」、英文同為Inspiring Barrage；不可將其use_combo變體混入本頁射擊次數門檻。

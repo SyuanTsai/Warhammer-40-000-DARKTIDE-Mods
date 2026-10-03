@@ -24,3 +24,10 @@
 | [偵察鐳射槍](ranged/偵察鐳射槍/README.md)<br>- Recon Lasgun | 遠程 | 奧克塔蘭Mk II偵察鐳射槍、奧克塔蘭Mk VId偵察鐳射槍、奧克塔蘭Mk VIIa偵察鐳射槍 |
 | [重型鐳射手槍](ranged/重型鐳射手槍/README.md)<br>- Heavy Laspistol | 遠程 | 奧克塔蘭MG Mk II重型鐳射手槍、卡特雷爾Mk X重型鐳射手槍 |
 | [電弧步槍](ranged/電弧步槍/README.md)<br>- Arc Rifle | 遠程 | 庫巴爾電弧步槍 |
+| [槍托自動槍](ranged/槍托自動槍/README.md)<br>- Braced Autogun | 遠程 | 哥倫努Mk II槍托自動槍、格拉亞Mk IV槍托自動槍、阿格里皮娜Mk VIII槍托自動槍 |
+| [撕裂者自動手槍](ranged/撕裂者自動手槍/README.md)<br>- Shredder Autopistol | 遠程 | 尤斯Mk III撕裂者自動手槍 |
+| [矛頭爆矢槍](ranged/矛頭爆矢槍/README.md)<br>- Spearhead Boltgun | 遠程 | 洛克Mk IIb矛頭爆矢槍、洛克Mk III矛頭爆矢槍 |
+| [雙持自動手槍](ranged/雙持自動手槍/README.md)<br>- Dual Autopistols | 遠程 | 布蘭克斯MkIII雙持自動手槍 |
+| [淨化噴火器](ranged/淨化噴火器/README.md)<br>- Purgation Flamer | 遠程 | 奧特米亞Mk III淨化噴火器 |
+| [重伐木槍](ranged/重伐木槍/README.md)<br>- Heavy Stubber | 遠程 | 布蘭克斯樣式重伐木槍、寬口布蘭克斯樣式重伐木槍、災變布蘭克斯樣式重伐木槍 |
+| [撕裂槍](ranged/撕裂槍/README.md)<br>- Ripper Gun | 遠程 | 碎敵Mk II撕裂槍、碎敵Mk V撕裂槍、碎敵Mk VI撕裂槍 |
