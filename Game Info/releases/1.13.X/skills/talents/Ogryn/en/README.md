@@ -29,6 +29,7 @@
 | <img src="https://github.com/user-attachments/assets/80ee299a-c486-4957-bf40-6b1d631fd748" width="32" height="32" alt="No Pain! talent icon"> [No Pain!](#ogryn_taunt_restore_toughness) | <ul><li>Each taunt immediately restores 10% of maximum Toughness.</li><li>Each affected enemy adds 0.5% per second, up to 10% per second, for 3.25s; English displays 3s.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/fa5d9c18-f792-4a86-812f-8547ba3cf89e" width="32" height="32" alt="Trample talent icon"> [Trample](#ogryn_charge_trample) | <ul><li>Each charge hit adds 2.5% damage, up to 20 stacks / 50%, for 10s.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/ea712cab-0dd4-47fa-a2c5-98edb7e41783" width="32" height="32" alt="Burst Limiter Override talent icon"> [Burst Limiter Override](#ogryn_leadbelcher_no_ammo_chance) | <ul><li>Ranged attacks have a 15% base Lucky Bullet chance; a successful shot consumes no ammunition.</li><li>Each ranged kill adds 2% ranged damage, up to 10 stacks, with duration reset to 10s on further kills.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/9436a125-4e9f-4655-ae8f-4975db2f4af1" width="32" height="32" alt="Feel No Pain talent icon"> [Feel No Pain](#ogryn_carapace_armor) | <ul><li>Start with 10 stacks; each adds Toughness replenishment and multiplies Toughness damage by 0.97.</li><li>Eligible damage removes at most one stack per second; stacks restore at 2s intervals when the restoration conditions are met.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -381,3 +382,25 @@
 - **Example**: Five ranged kills grant 10% ranged damage; 10 stacks grant 20%. With base damage 100, the full-stack result is 100 × 1.20 = 120.
 
 [Details](ogryn_leadbelcher_no_ammo_chance.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_carapace_armor"></a>
+
+### Feel No Pain
+
+<img src="https://github.com/user-attachments/assets/9436a125-4e9f-4655-ae8f-4975db2f4af1" width="72" height="72" alt="Feel No Pain talent icon">
+
+- **Starting stacks and restoration**: Feel No Pain starts with 10 stacks. After losing a stack, at least 2s must pass before one is restored; more than 2s must also have passed since the previous addition.
+
+- **Losing stacks from damage**: Taking damage, including damage absorbed by Toughness, removes one stack. Blocked attacks do not remove a stack. These damage triggers can remove a stack at most once per second.
+
+- **Each stack**: Gain 3% Toughness replenishment; Toughness damage is multiplied by 0.97. Selecting Toughest! adds a further 2.5% Toughness replenishment per stack.
+
+- **Full-stack example**: At 10 stacks, replenishment is multiplied by 1 + 10 × 3% = 1.30, or 1.55 with Toughest! Toughness damage is multiplied by 0.97^10 ≈ 0.737, so 100 becomes about 73.7. A replenishment amount of 20 becomes 20 × 1.3 = 26, or 31 with Toughest!, capped by the missing amount.
+
+- **When knocked down**: Current effective Feel No Pain stacks are cleared, then restored one at a time.
+
+- **English damage scope**: The original English says Damage Reduction without specifying the damage type. The accepted evidence confirms reduction of Toughness damage; it does not reduce Health damage.
+
+[Details](ogryn_carapace_armor.md) · [Back to index](#talent-index)
