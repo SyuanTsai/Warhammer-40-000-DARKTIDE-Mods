@@ -2170,8 +2170,10 @@
       "kind": "class_support",
       "chinese_blob_sha": "85d29593fabdff084f85887753d05f60e925d1e8",
       "chinese_sha256": "7149f8d42aa4aa461887c9d887718cf1ca7a3d2e92797ad21a3156293bc1f4f8",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "ogryn_box_explodes"
+      ],
       "checks": []
     },
     {
@@ -2181,8 +2183,10 @@
       "kind": "class_support",
       "chinese_blob_sha": "4ea17af5fdf8d9aaf88b1038be2272d902e71336",
       "chinese_sha256": "2d535f903870ea52c13fafa2a603c9c2df18bf38d5472ac75461e115b4fc2777",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "ogryn_box_explodes"
+      ],
       "checks": []
     },
     {
@@ -2192,8 +2196,10 @@
       "kind": "class_support",
       "chinese_blob_sha": "2fa0e4fa11a3bed6c829b72f551b0092bbad55da",
       "chinese_sha256": "9f12b0409949bee000a7cb985bda7e0a484fd10c2333448d318920c8a34e3bb6",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "ogryn_box_explodes"
+      ],
       "checks": []
     },
     {
@@ -2203,8 +2209,10 @@
       "kind": "class_support",
       "chinese_blob_sha": "40952d8adbad40eec3b4a56a46c7bcf8886ae0e7",
       "chinese_sha256": "a0663320bc623b1bdb6131b9678713c54f9d491fc3faf9eb3e45d1ada4a640dd",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "ogryn_box_explodes"
+      ],
       "checks": []
     },
     {
@@ -2346,9 +2354,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "aeff52ad7f7e88d34ec99df3a37b3ce74a616c12",
       "chinese_sha256": "b20724ef4851e6d0361df5d34816d7e9a779db15bc16218ffca579fa5fc84e5b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_box_explodes"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_blitz_175.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_bracing_reduces_damage_taken.md",
@@ -11615,6 +11630,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_class.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_companion_damage_per_level.md"
+    },
+    {
+      "id": "ogryn_box_explodes",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_blitz_175.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_box_explodes.md"
     }
   ],
   "pending_chinese_corrections": [
