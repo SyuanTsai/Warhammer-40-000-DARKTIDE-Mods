@@ -69,6 +69,7 @@
 | <img src="https://github.com/user-attachments/assets/d80b562f-7fc2-4daf-85e4-ae25f8171a89" width="32" height="32" alt="No Stopping Me! talent icon"> [No Stopping Me!](#ogryn_windup_is_uninterruptible) | <ul><li>Become Uninterruptible and remove the heavy melee action's Movement Speed penalty while charging; damage still applies.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/7e27b3b4-5eca-49b5-aafd-c8abc6635b14" width="32" height="32" alt="Massacre talent icon"> [Massacre](#ogryn_kills_grant_crit_chance) | <ul><li>Kills grant +2 percentage points of Critical Chance per stack for 12s, up to eight stacks; further kills refresh the duration.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5d6152a6-dedb-49c4-a7d2-328d082084c0" width="32" height="32" alt="Payback Time talent icon"> [Payback Time](#ogryn_revenge_damage) | <ul><li>A successful melee dodge or damaging melee hit, including Toughness-absorbed damage, grants +15% melee and ranged damage for 5s; triggers refresh.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/0eb640b4-e206-4d0b-a982-f74b33baf5b2" width="32" height="32" alt="Dominate talent icon"> [Dominate](#ogryn_rending_on_elite_kills) | <ul><li>Elite kills grant +15% Rending for 10s with refresh; actual damage depends on the original armour multiplier.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1079,3 +1080,23 @@
 - **Damage example**: Base damage of 100 becomes 115. With another +20% at the same stage, it becomes `100 × (1 + 20% + 15%) = 135`.
 
 [Details](ogryn_revenge_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_rending_on_elite_kills"></a>
+
+### Dominate
+
+<img src="https://github.com/user-attachments/assets/0eb640b4-e206-4d0b-a982-f74b33baf5b2" width="72" height="72" alt="Dominate talent icon">
+
+- **Trigger**: Killing an Elite grants +15% Rending for 10s. Further triggers refresh the duration without increasing the bonus.
+
+- **Effect**: Rending improves an attack's damage multiplier against certain armour types. The actual increase depends on the weapon's existing armour multiplier; final damage cannot uniformly be multiplied by 1.15.
+
+- **Damage example**: With an original Carapace Armour multiplier of 0.5, base damage of 100 deals 50. Adding 15% Rending gives `100 × (0.5 + 0.15) = 65`, a relative increase of 30%. If the original multiplier is already 1, excess Rending contributes only one quarter: `100 × (1 + 0.15 × 0.25) = 103.75`.
+
+#### Chinese localization note
+
+- The Chinese text adds a times unit after the Rending percentage, which is incorrect. The effect grants 15% Rending; it does not make Rending 15 times as large.
+
+[Details](ogryn_rending_on_elite_kills.md) · [Back to index](#talent-index)

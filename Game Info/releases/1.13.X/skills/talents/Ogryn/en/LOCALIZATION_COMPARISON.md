@@ -829,6 +829,18 @@ Full raw template and formatting: [source evidence](ogryn_revenge_damage.md#orig
 | Trigger events, bonus and duration | +15% Damage for 5s after a Successful Dodge, or being Hit by an Attack.; `ui / loc_talent_ogryn_revenge_damage_new_desc / 2474ccf6` | on_player_hit_received and on_successful_dodge can apply a one-stack child granting damage 0.15 for 5s. [Fixed source and line references](ogryn_revenge_damage.md#fixed-source-evidence) | Consistent | The independently read English matches the two event categories and displayed bonus/duration; its attack wording does not specify a type. |
 | Melee filter, absorption, scope and calculation | No attack type, absorption rule, refresh rule or calculation formula is stated.; `ui / loc_talent_ogryn_revenge_damage_new_desc / 2474ccf6` | Both events use CheckProcFunctions.on_melee_hit, accepting damage > 0, damage_absorbed > 0 or a dodge without a damage field. Melee and ranged damage benefit; triggers refresh rather than stack. Base 100 becomes 115, or 135 with same-stage +20%. [Fixed source and line references](ogryn_revenge_damage.md#fixed-source-evidence) | Not covered by the description | These accepted trigger and calculation details supplement the English. The existing cross-source melee-filter question remains unobserved in game. |
 
+
+<a id="ogryn_rending_on_elite_kills"></a>
+
+## Dominate
+
+Full raw template and formatting: [source evidence](ogryn_rending_on_elite_kills.md#original-english-template-and-reconstruction). Name hash `111d199c`. Every row uses `ui / loc_talent_ogryn_rending_on_elite_kills_desc / 4203de9c`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Elite-kill Rending | +15% Rending for 10s on Elite Kill.; `ui / loc_talent_ogryn_rending_on_elite_kills_desc / 4203de9c` | on_elite_kill activates rending_multiplier 0.15 for 10s, with allow_proc_while_active. [Fixed source and line references](ogryn_rending_on_elite_kills.md#fixed-source-evidence) | Consistent | The independently read English matches the value and duration and does not contain the Chinese times-unit error. |
+| Refresh, armour scope and calculation | No refresh, armour-type list or damage formula is stated.; `ui / loc_talent_ogryn_rending_on_elite_kills_desc / 4203de9c` | Triggers refresh rather than stack. armored, super_armor, resistant and berserker support Rending; below 1 it first fills the deficit, with excess contributing at the overdamage coefficient. Base 100 at 0.5 becomes 65 instead of 50 (+30% relative); at 1 it becomes 103.75 using 0.25 for excess. [Fixed source and line references](ogryn_rending_on_elite_kills.md#fixed-source-evidence) | Not covered by the description | These accepted Rending details supplement the percentage wording; the bonus is not uniform final damage ×1.15. |
+
 ## Comparison totals
 
 The 214 listed rules comprise **89 Consistent**, **4 Explicit contradictions**, **114 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
