@@ -5750,7 +5750,8 @@
         "veteran_ads_drain_stamina",
         "veteran_dodging_grants_stamina",
         "veteran_increase_suppression",
-        "base_toughness_node_buff_medium_2"
+        "base_toughness_node_buff_medium_2",
+        "base_melee_damage_node_buff_high_2"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5841,7 +5842,8 @@
         "veteran_ads_drain_stamina",
         "veteran_dodging_grants_stamina",
         "veteran_increase_suppression",
-        "base_toughness_node_buff_medium_2"
+        "base_toughness_node_buff_medium_2",
+        "base_melee_damage_node_buff_high_2"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5932,7 +5934,8 @@
         "veteran_ads_drain_stamina",
         "veteran_dodging_grants_stamina",
         "veteran_increase_suppression",
-        "base_toughness_node_buff_medium_2"
+        "base_toughness_node_buff_medium_2",
+        "base_melee_damage_node_buff_high_2"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6023,7 +6026,8 @@
         "veteran_ads_drain_stamina",
         "veteran_dodging_grants_stamina",
         "veteran_increase_suppression",
-        "base_toughness_node_buff_medium_2"
+        "base_toughness_node_buff_medium_2",
+        "base_melee_damage_node_buff_high_2"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6058,9 +6062,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f2a956988e7b80e32ef441fa5558ea424239bb67",
       "chinese_sha256": "cf25ed36a6788ad756737c2eb45dd8bda4732002505c60ac03d124b3cec808fb",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_melee_damage_node_buff_high_2"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/base_toughness_damage_reduction_node_buff_medium_1.md",
@@ -9404,7 +9423,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/base_toughness_node_buff_medium_2.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/base_toughness_node_buff_medium_2.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/base_toughness_node_buff_medium_2.md",
+      "commit": "28a101f8089aefdfd7e1ee3411cdca9d2b8b7250"
+    },
+    {
+      "id": "base_melee_damage_node_buff_high_2",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/base_melee_damage_node_buff_high_2.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/base_melee_damage_node_buff_high_2.md"
     }
   ],
   "pending_chinese_corrections": [

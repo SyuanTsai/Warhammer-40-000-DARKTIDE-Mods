@@ -70,6 +70,7 @@
 | <img src="https://github.com/user-attachments/assets/8567315b-bea7-4be4-aaec-22d7096945a9" width="32" height="32" alt="Duck and Dive talent icon"> [Duck and Dive](#veteran_dodging_grants_stamina) | <ul><li>Gain 5% movement speed continuously.</li><li>A successful ranged-attack dodge can restore 30% of maximum Stamina, at most once every 3 seconds; recovery is capped.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/ae882322-f266-4e2c-8168-09f85a5c9285" width="32" height="32" alt="Keep Their Heads Down! talent icon"> [Keep Their Heads Down!](#veteran_increase_suppression) | <ul><li>Increase suppression you deal by 75%.</li><li>Enemy thresholds and immunity determine the reaction; this does not increase damage by 75%.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/1ef34fb3-ac4e-47d1-b7c1-0d13f10e3173" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_2) | <ul><li>Increase maximum Toughness by 25 points.</li><li>The points are added before percentage maximum-Toughness modifiers.</li></ul> | Stat node |
+| <img src="https://github.com/user-attachments/assets/b0fb41b1-81da-4263-8d21-101a3af0cbdb" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_high_2) | <ul><li>Increase Melee Damage by 15%.</li><li>The bonus adds to other applicable bonuses at the same damage-stat stage.</li></ul> | Stat node |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1486,5 +1487,27 @@ Assume a base maximum of 100 points, no other added points or post-ceiling flat 
 These examples calculate capacity, not current Toughness recovery.
 
 [Detailed sources and formulas](base_toughness_node_buff_medium_2.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#base_toughness_node_buff_medium_2) | [Back to index](#talent-index)
+
+---
+
+<a id="base_melee_damage_node_buff_high_2"></a>
+
+<img src="https://github.com/user-attachments/assets/b0fb41b1-81da-4263-8d21-101a3af0cbdb" width="72" height="72" alt="Melee Damage Boost talent icon">
+
+### Melee Damage Boost
+
+- **Increase Melee Damage by 15%.** The damage calculation applies this stat to melee attacks.
+- This bonus adds to other applicable bonuses at the same damage-stat stage.
+
+#### Melee-damage examples
+
+Assume a melee attack with a 100 damage-unit input at that stage. Hold other factors at 1 and assume no limit or cap binds.
+
+- **This node alone:** `100 × 1.15 = 115 damage units`, up from 100.
+- **An existing +25% bonus at the same stage:** `100 × (1 + 0.25 + 0.15) = 140 damage units`, up from `100 × 1.25 = 125`. This is a `(140 − 125) / 125 = 12%` increase over the already-modified value.
+
+These examples isolate the damage-stat stage; actual final damage depends on the weapon, attack, target and other modifiers.
+
+[Detailed sources and formulas](base_melee_damage_node_buff_high_2.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#base_melee_damage_node_buff_high_2) | [Back to index](#talent-index)
 
 ---

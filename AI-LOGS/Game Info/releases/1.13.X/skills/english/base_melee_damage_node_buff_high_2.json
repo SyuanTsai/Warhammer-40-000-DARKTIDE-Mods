@@ -9,63 +9,63 @@
   "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
   "status": "accepted_with_caveats",
   "review_mode": "Existing-mechanism translation and exact English text check; only missing display mapping read from the fixed-source talent definition.",
-  "static_reconstruction": "+25 Toughness.",
+  "static_reconstruction": "+15% Melee Damage.",
   "comparison_rule_totals": {
-    "Consistent": 1,
+    "Consistent": 2,
     "Explicit contradiction": 0,
-    "Not covered by the description": 3,
+    "Not covered by the description": 1,
     "No corresponding implementation evidence found": 0,
     "Cannot confirm": 0
   },
   "english_errata": [],
   "chinese_mechanism_corrections": [],
   "primary_direct_reads": [
-    "Complete Chinese Toughness Boost dossier and player section",
+    "Complete Chinese Melee Damage Boost dossier and player section",
     "Exact same-version English name and full raw description",
-    "Fixed-SHA base_talents.lua lines 206–229: tier-aware Toughness display lookup, number formatting and + prefix"
+    "Fixed-SHA base_talents.lua lines 1181–1204: exact medium UI keys and tier-aware percentage lookup with + prefix"
   ],
   "reused_evidence": [
     "Accepted Chinese fixed-source mechanism, conditions, exceptions and examples",
     "Accepted shared formatting and corpus version verification",
-    "Reused accepted Toughness Boost WebP audit: 288×288, 4428 bytes, SHA-256 2c0b1f33804d13d580ac4f509d01684e8ee0245f2fcfd26bbdbef6b8d420df0f; existing Media-Assets Issue attachment.",
+    "Reused accepted Melee Damage Boost WebP audit: 288×288, 4428 bytes, SHA-256 2c0b1f33804d13d580ac4f509d01684e8ee0245f2fcfd26bbdbef6b8d420df0f; existing Media-Assets Issue attachment.",
     "Accepted common Markdown layout; final public-image/layout checks remain due"
   ],
   "review": {
     "agent_model": "gpt-6-luna",
     "effort": "max",
     "mode": "read_only_text_draft",
-    "result": "Read-only child verified exact English name/hash/raw, Stat node classification, +25 pre-percentage maximum capacity, rounding order and both accepted examples. Child left rendered value unconfirmed pending the display lookup; primary resolved that specific gap from base_talents.lua 206–229 and reused the accepted tier override and common formatter. The English omits maximum/current specificity and calculation order; no explicit contradiction is supported. Primary reviews the full staged diff before commit."
+    "result": "Read-only child verified exact same-version name/key/hash/raw, Stat node category, melee scope and additive 100→115 and 125→140 examples, including the 12% relative gain. Primary resolved the remaining placeholder mapping from base_talents.lua 1181–1204, reused the accepted tier value/common formatter and independently recorded the stacking omission. Primary reviews the full staged diff before commit."
   },
   "static_examples": [
     [
-      "Base 100 points; percentage multiplier 1; flat 0",
-      "Before: `ceil(100 × 1) = 100`; after: `ceil((100 + 25) × 1) = 125 points`.",
-      "Maximum Toughness rises by 25 points."
+      "Melee input 100 damage units; no existing bonus",
+      "Before: `100 × 1 = 100`; after: `100 × 1.15 = 115 damage units`.",
+      "The stage gains 15 damage units, or 15%."
     ],
     [
-      "Base 100 points; existing +20% maximum-Toughness modifier; flat 0",
-      "Before: `ceil(100 × 1.2) = 120`; after: `ceil((100 + 25) × 1.2) = 150 points`.",
-      "The node raises this already-modified maximum by 30 points because its +25 is applied before the 1.2 multiplier."
+      "Melee input 100 damage units; existing applicable +25% at the same stage",
+      "Before: `100 × 1.25 = 125`; after: `100 × (1 + 0.25 + 0.15) = 140 damage units`; relative gain `(140 − 125) / 125 = 12%`.",
+      "The bonuses add to +40%; the node raises the already-modified value by 12%, not a further multiplicative 15%."
     ]
   ],
   "category_section": "Stat nodes",
   "unconfirmed": [
-    "The 100-point base and +20% modifier are explicit example assumptions. The formula describes maximum capacity, not immediate current Toughness recovery. Live changes to current Toughness when activating or removing a node were not measured; no such recovery amount is claimed."
+    "The 100 damage-unit input and existing +25% bonus are example assumptions. The calculations isolate the shared damage-stat stage with other factors fixed and no limit binding; actual final damage depends on weapon, attack, target and other modifiers and was not measured here."
   ],
   "unperformed": [
     "Repeated full implementation/call-chain analysis",
     "New icon retrieval/screenshots; shared evidence reused, final checks due",
     "In-game mechanism/damage/UI measurements"
   ],
-  "id": "base_toughness_node_buff_medium_2",
+  "id": "base_melee_damage_node_buff_high_2",
   "class": "Veteran",
   "date": "2026-10-03",
-  "name": "Toughness Boost",
-  "name_key": "loc_talent_toughness_boost_medium",
-  "name_hash": "65a72c01",
-  "description_key": "loc_talent_toughness_boost_medium_desc",
-  "description_hash": "329702b6",
-  "raw_template": "{toughness:%s} Toughness.",
+  "name": "Melee Damage Boost",
+  "name_key": "loc_talent_melee_damage_boost_medium",
+  "name_hash": "cb9e7b48",
+  "description_key": "loc_talent_melee_damage_boost_medium_desc",
+  "description_hash": "7b5da013",
+  "raw_template": "{melee_damage:%s} Melee Damage.",
   "checks": [
     {
       "check": "exact same-version English key/hash pairs and full raw template",
@@ -75,9 +75,9 @@
       "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
       "result": "passed",
       "global_comparison_totals": {
-        "Consistent": 180,
+        "Consistent": 182,
         "Explicit contradiction": 8,
-        "Not covered by the description": 214,
+        "Not covered by the description": 215,
         "No corresponding implementation evidence found": 0,
         "Cannot confirm": 8
       }
@@ -86,14 +86,14 @@
       "check": "changed-document navigation",
       "result": "passed",
       "files": 6,
-      "local_references": 485,
+      "local_references": 492,
       "errors": []
     },
     {
       "check": "actual marked Markdown parse and HTML generation; existing layout reused",
       "result": "passed",
-      "player_rows": 66,
-      "comparison_rows": 4,
+      "player_rows": 67,
+      "comparison_rows": 3,
       "technical_tables": [
         {
           "columns": 3,
@@ -110,7 +110,6 @@
       "result": "passed"
     }
   ],
-  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/toughness-boost-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/base_toughness_node_buff_medium_2.md",
-  "commit": "28a101f8089aefdfd7e1ee3411cdca9d2b8b7250"
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/melee-damage-boost-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/base_melee_damage_node_buff_high_2.md"
 }
