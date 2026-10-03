@@ -2192,7 +2192,12 @@
         "ogryn_ranged_stance_toughness_regen",
         "ogryn_taunt_restore_toughness",
         "ogryn_charge_trample",
-        "ogryn_leadbelcher_no_ammo_chance"
+        "ogryn_leadbelcher_no_ammo_chance",
+        "ogryn_carapace_armor",
+        "ogryn_passive_heavy_hitter",
+        "ogryn_carapace_armor_trigger_on_zero_stacks",
+        "ogryn_carapace_armor_add_stack_on_push",
+        "ogryn_carapace_armor_more_toughness"
       ],
       "checks": []
     },
@@ -2225,7 +2230,12 @@
         "ogryn_ranged_stance_toughness_regen",
         "ogryn_taunt_restore_toughness",
         "ogryn_charge_trample",
-        "ogryn_leadbelcher_no_ammo_chance"
+        "ogryn_leadbelcher_no_ammo_chance",
+        "ogryn_carapace_armor",
+        "ogryn_passive_heavy_hitter",
+        "ogryn_carapace_armor_trigger_on_zero_stacks",
+        "ogryn_carapace_armor_add_stack_on_push",
+        "ogryn_carapace_armor_more_toughness"
       ],
       "checks": []
     },
@@ -2258,7 +2268,12 @@
         "ogryn_ranged_stance_toughness_regen",
         "ogryn_taunt_restore_toughness",
         "ogryn_charge_trample",
-        "ogryn_leadbelcher_no_ammo_chance"
+        "ogryn_leadbelcher_no_ammo_chance",
+        "ogryn_carapace_armor",
+        "ogryn_passive_heavy_hitter",
+        "ogryn_carapace_armor_trigger_on_zero_stacks",
+        "ogryn_carapace_armor_add_stack_on_push",
+        "ogryn_carapace_armor_more_toughness"
       ],
       "checks": []
     },
@@ -2291,7 +2306,12 @@
         "ogryn_ranged_stance_toughness_regen",
         "ogryn_taunt_restore_toughness",
         "ogryn_charge_trample",
-        "ogryn_leadbelcher_no_ammo_chance"
+        "ogryn_leadbelcher_no_ammo_chance",
+        "ogryn_carapace_armor",
+        "ogryn_passive_heavy_hitter",
+        "ogryn_carapace_armor_trigger_on_zero_stacks",
+        "ogryn_carapace_armor_add_stack_on_push",
+        "ogryn_carapace_armor_more_toughness"
       ],
       "checks": []
     },
@@ -2470,9 +2490,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "8e05029b9db5b33487244f473f22dfcf574cee25",
       "chinese_sha256": "930c667b85ed7939cc2ebe6e152a46b2c307249e021e6dc06d69261a784bda17",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_carapace_armor"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_196_200.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_carapace_armor_add_stack_on_push.md",
@@ -2481,9 +2508,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "9a0de243f746ff407f8562f59c7cff5eba33f121",
       "chinese_sha256": "cf3993854f84078c666a27dc256510001e409a1c68ad98064a65911f2b6439dd",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_carapace_armor_add_stack_on_push"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_196_200.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_carapace_armor_more_toughness.md",
@@ -2492,9 +2526,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "df0cad79cbd4969904de4467308334948d2a30d6",
       "chinese_sha256": "536c708069c003bfda7661aab6e83f7fff5ff05be7abd932438dc2edf652bb54",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_carapace_armor_more_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_196_200.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_carapace_armor_trigger_on_zero_stacks.md",
@@ -2503,9 +2544,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6024a3a39e24b4a5487c019d778ade907ed1e564",
       "chinese_sha256": "2a8b41d5a6dff62b14e6a31a2b38f66717e8f544577beea23d31a12554004c86",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_carapace_armor_trigger_on_zero_stacks"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_196_200.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_charge.md",
@@ -3094,9 +3142,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b65bfacf71b5ab937fcc6dc6e57c690d346ff1d5",
       "chinese_sha256": "bbb7c9666ba46799fe3fc897e7d02efaaae0269a6976817874135af45d6f5a42",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_passive_heavy_hitter"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_196_200.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_protect_allies.md",
@@ -12018,6 +12073,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_191_195.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_leadbelcher_no_ammo_chance.md"
+    },
+    {
+      "id": "ogryn_carapace_armor",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_196_200.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_carapace_armor.md"
+    },
+    {
+      "id": "ogryn_passive_heavy_hitter",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_196_200.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_passive_heavy_hitter.md"
+    },
+    {
+      "id": "ogryn_carapace_armor_trigger_on_zero_stacks",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_196_200.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_carapace_armor_trigger_on_zero_stacks.md"
+    },
+    {
+      "id": "ogryn_carapace_armor_add_stack_on_push",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_196_200.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_carapace_armor_add_stack_on_push.md"
+    },
+    {
+      "id": "ogryn_carapace_armor_more_toughness",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_196_200.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_carapace_armor_more_toughness.md"
     }
   ],
   "pending_chinese_corrections": [
