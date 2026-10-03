@@ -29,4 +29,5 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Chink in their Armour](veteran_snipers_focus_rending_bonus.md) / `veteran_snipers_focus_rending_bonus` | Keystone modifier |
 | [Tunnel Vision](veteran_snipers_focus_toughness_bonus.md) / `veteran_snipers_focus_toughness_bonus` | Keystone modifier |
 | [Precision Strikes](veteran_increased_weakspot_damage.md) / `veteran_increased_weakspot_damage` | Passive talent |
+| [Trench Fighter Drill](veteran_attack_speed.md) / `veteran_attack_speed` | Passive talent |
 | [Exhilarating Takedown](veteran_replenish_toughness_on_weakspot_kill.md) / `veteran_replenish_toughness_on_weakspot_kill` | Passive talent |

@@ -5706,7 +5706,8 @@
         "veteran_combat_ability_elite_and_special_outlines",
         "veteran_combat_ability_coherency_outlines",
         "veteran_combat_ability_ranged_roamer_outlines",
-        "veteran_combat_ability_ogryn_outlines"
+        "veteran_combat_ability_ogryn_outlines",
+        "veteran_attack_speed"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5753,7 +5754,8 @@
         "veteran_combat_ability_elite_and_special_outlines",
         "veteran_combat_ability_coherency_outlines",
         "veteran_combat_ability_ranged_roamer_outlines",
-        "veteran_combat_ability_ogryn_outlines"
+        "veteran_combat_ability_ogryn_outlines",
+        "veteran_attack_speed"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5800,7 +5802,8 @@
         "veteran_combat_ability_elite_and_special_outlines",
         "veteran_combat_ability_coherency_outlines",
         "veteran_combat_ability_ranged_roamer_outlines",
-        "veteran_combat_ability_ogryn_outlines"
+        "veteran_combat_ability_ogryn_outlines",
+        "veteran_attack_speed"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5847,7 +5850,8 @@
         "veteran_combat_ability_elite_and_special_outlines",
         "veteran_combat_ability_coherency_outlines",
         "veteran_combat_ability_ranged_roamer_outlines",
-        "veteran_combat_ability_ogryn_outlines"
+        "veteran_combat_ability_ogryn_outlines",
+        "veteran_attack_speed"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5970,9 +5974,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4c994ebea901d7ff31e63007a12d9edc7babb0b7",
       "chinese_sha256": "e9ccb038070b9bb61c3842da9d2c2402ab769396067354d23efbe7935e399ae3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_attack_speed"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_aura_elite_kills_restore_grenade.md",
@@ -8204,7 +8219,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_ogryn_outlines.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_ogryn_outlines.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_ogryn_outlines.md",
+      "commit": "93c7c476663d430005a5cd3b88c23af0d4bae170"
+    },
+    {
+      "id": "veteran_attack_speed",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_attack_speed.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_attack_speed.md"
     }
   ],
   "pending_chinese_corrections": [

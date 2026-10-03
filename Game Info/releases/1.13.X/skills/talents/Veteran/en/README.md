@@ -29,6 +29,7 @@
 | <img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="32" height="32" alt="Chink in their Armour talent icon"> [Chink in their Armour](#veteran_snipers_focus_rending_bonus) | <ul><li>At 10 or more Focus stacks, gain 15% Rending; lose it below 10 stacks.</li><li>The threshold stays 10 with Long Range Assassin. Damage gain depends on armor and existing Rending.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f" width="32" height="32" alt="Tunnel Vision talent icon"> [Tunnel Vision](#veteran_snipers_focus_toughness_bonus) | <ul><li>Each effective Focus stack increases applicable Toughness replenishment by 4%.</li><li>Ranged weakspot kills restore 10% of maximum Stamina, limited by the deficit.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907" width="32" height="32" alt="Exhilarating Takedown talent icon"> [Exhilarating Takedown](#veteran_replenish_toughness_on_weakspot_kill) | <ul><li>Ranged weakspot kills replenish 15% of maximum Toughness and grant stacking Toughness damage reduction.</li><li>Up to three effective stacks: 10%, 19% or 27.1% reduction; refresh the 8-second timer on each qualifying kill, then decay one stack at a time.</li></ul> | Passive talent |
 
 ---
@@ -524,3 +525,20 @@ Assume an attack would deal 100 Toughness-damage units before this effect, enoug
 - With exactly three stacks after the last qualifying kill and no further triggers or forced removal, approximately **8 seconds** later two stacks remain, **16 seconds** later one remains, and **24 seconds** later the effect ends. Update timing makes these approximate intervals.
 
 [Details and source evidence](veteran_replenish_toughness_on_weakspot_kill.md) · [Back to index](#talent-index)
+
+---
+
+<a id="veteran_attack_speed"></a>
+
+<img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="72" height="72" alt="Trench Fighter Drill talent icon">
+
+### Trench Fighter Drill
+
+- Increase **Melee Attack Speed by 10%**.
+
+**Attack-time examples**
+
+- Assume an affected action normally takes 1 second, with no other speed bonuses: `1 / 1.10 ≈ 0.91 seconds`, about **9.1% less time**. Actual attack-chain timing depends on the weapon.
+- If that same action already has +20% to this speed stat, it changes from `1 / 1.20 ≈ 0.83s` to `1 / 1.30 ≈ 0.77s`, saving about **7.69%** relative to the already faster action. Hold all other scale factors at 1 and assume no limit binds.
+
+[Detailed sources and formulas](veteran_attack_speed.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_attack_speed) | [Back to index](#talent-index)

@@ -168,5 +168,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/the-bigger-they-are-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_ogryn_outlines.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_ogryn_outlines.md",
+  "commit": "93c7c476663d430005a5cd3b88c23af0d4bae170"
 }
