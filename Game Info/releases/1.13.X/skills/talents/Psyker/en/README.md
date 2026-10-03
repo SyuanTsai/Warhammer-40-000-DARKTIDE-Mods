@@ -28,6 +28,7 @@
 | <img src="https://github.com/user-attachments/assets/f9987bfc-f9d7-48d8-9431-8c361223c50e" width="32" height="32" alt="Warp Speed talent icon"> [Warp Speed](#psyker_overcharge_increased_movement_speed) | <ul><li>Gain 20% Movement Speed while Scrier's Gaze is active; the bonus ends with Gaze.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="32" height="32" alt="Psykinetic's Aura talent icon"> [Psykinetic's Aura](#psyker_2_tier_3_name_2) | <ul><li>Your Elite or Specialist Kills grant an extra 0.5 seconds of Combat Ability cooldown recovery about once per second for 3 seconds; triggering again refreshes the duration.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/123c7e4e-3844-4ff0-94c0-5cf7f7772b8f" width="32" height="32" alt="Reality Anchor talent icon"> [Reality Anchor](#psyker_overcharge_reduced_warp_charge) | <ul><li>While Scrier's Gaze is active, generate 20% less Peril and shorten the time to Quell the same amount by 30%.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="32" height="32" alt="Telekine Shield talent icon"> [Telekine Shield](#psyker_combat_ability_force_field) | <ul><li>Deploy a forward shield that blocks Enemy Ranged Attacks while you and Allies can shoot through. Maximum duration 17.5 seconds; base cooldown 40 seconds.</li></ul> | Ability |
 
 ---
 
@@ -351,3 +352,19 @@
 - The Chinese phrase “reduces already generated Peril” describes removing existing Peril. The corresponding English and accepted implementation refer to generating less new Peril while Gaze is active.
 
 [Details](psyker_overcharge_reduced_warp_charge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_combat_ability_force_field"></a>
+
+### Telekine Shield
+
+<img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="72" height="72" alt="Telekine Shield talent icon">
+
+- **Ability**: Deploy a psychic shield in front of you, blocking Enemy Ranged Attacks while you and Allies can still shoot through. It lasts up to 17.5 seconds; base cooldown: 40 seconds.
+
+- **Shield durability**: The shield withstands 20 hits that are accepted for durability removal. After each removal, no further durability is removed for 0.33 seconds. Heavy attack pressure may destroy the shield early.
+
+- **Durability example**: After 12 accepted durability removals, `20 − 12 = 8` remain. This counts shield hits and is separate from your Health or Toughness.
+
+[Details](psyker_combat_ability_force_field.md) · [Back to index](#talent-index)
