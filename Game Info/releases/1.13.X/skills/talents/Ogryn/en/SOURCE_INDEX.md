@@ -30,3 +30,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Bullet Bravado](ogryn_ranged_stance_toughness_regen.md) / `ogryn_ranged_stance_toughness_regen` | Combat ability |
 | [No Pain!](ogryn_taunt_restore_toughness.md) / `ogryn_taunt_restore_toughness` | Combat ability |
 | [Trample](ogryn_charge_trample.md) / `ogryn_charge_trample` | Combat ability |
+| [Burst Limiter Override](ogryn_leadbelcher_no_ammo_chance.md) / `ogryn_leadbelcher_no_ammo_chance` | Keystone |

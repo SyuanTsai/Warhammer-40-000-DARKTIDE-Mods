@@ -28,6 +28,7 @@
 | <img src="https://github.com/user-attachments/assets/53442500-ad2a-446b-9f9b-0d26aa2438d9" width="32" height="32" alt="Bullet Bravado talent icon"> [Bullet Bravado](#ogryn_ranged_stance_toughness_regen) | <ul><li>During Point-Blank Barrage, each shot restores 2.5% of maximum Toughness and each reload restores 15%.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/80ee299a-c486-4957-bf40-6b1d631fd748" width="32" height="32" alt="No Pain! talent icon"> [No Pain!](#ogryn_taunt_restore_toughness) | <ul><li>Each taunt immediately restores 10% of maximum Toughness.</li><li>Each affected enemy adds 0.5% per second, up to 10% per second, for 3.25s; English displays 3s.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/fa5d9c18-f792-4a86-812f-8547ba3cf89e" width="32" height="32" alt="Trample talent icon"> [Trample](#ogryn_charge_trample) | <ul><li>Each charge hit adds 2.5% damage, up to 20 stacks / 50%, for 10s.</li></ul> | Combat ability |
+| <img src="https://github.com/user-attachments/assets/ea712cab-0dd4-47fa-a2c5-98edb7e41783" width="32" height="32" alt="Burst Limiter Override talent icon"> [Burst Limiter Override](#ogryn_leadbelcher_no_ammo_chance) | <ul><li>Ranged attacks have a 15% base Lucky Bullet chance; a successful shot consumes no ammunition.</li><li>Each ranged kill adds 2% ranged damage, up to 10 stacks, with duration reset to 10s on further kills.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -362,3 +363,21 @@
 - **Counting hits**: Each charge-hit event can add a stack. If the same enemy is hit separately during the charge and its ending impact, it may count for more than one stack.
 
 [Details](ogryn_charge_trample.md) · [Back to index](#talent-index)
+
+---
+
+## Keystone
+
+<a id="ogryn_leadbelcher_no_ammo_chance"></a>
+
+### Burst Limiter Override
+
+<img src="https://github.com/user-attachments/assets/ea712cab-0dd4-47fa-a2c5-98edb7e41783" width="72" height="72" alt="Burst Limiter Override talent icon">
+
+- **Lucky Bullet**: Ranged attacks with ammunition use a 15% base proc chance. A successful proc makes that shot consume no ammunition: a shot that normally uses 1 round uses 0. The chance adjusts with previous checks; shots are not independent fixed-probability rolls.
+
+- **Damage from kills**: Each ranged kill adds one stack of 2% ranged damage, up to 10 stacks. Further kills reset the 10s duration.
+
+- **Example**: Five ranged kills grant 10% ranged damage; 10 stacks grant 20%. With base damage 100, the full-stack result is 100 × 1.20 = 120.
+
+[Details](ogryn_leadbelcher_no_ammo_chance.md) · [Back to index](#talent-index)
