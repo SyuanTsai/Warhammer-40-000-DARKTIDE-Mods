@@ -70,3 +70,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Implacable](ogryn_windup_reduces_damage_taken.md) / `ogryn_windup_reduces_damage_taken` | Talent |
 | [No Stopping Me!](ogryn_windup_is_uninterruptible.md) / `ogryn_windup_is_uninterruptible` | Talent |
 | [Massacre](ogryn_kills_grant_crit_chance.md) / `ogryn_kills_grant_crit_chance` | Talent |
+| [Payback Time](ogryn_revenge_damage.md) / `ogryn_revenge_damage` | Talent |

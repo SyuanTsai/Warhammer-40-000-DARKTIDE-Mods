@@ -817,6 +817,18 @@ Full raw template and formatting: [source evidence](ogryn_kills_grant_crit_chanc
 | Kill bonus, duration and cap | Killing an Enemy grants +2% Critical Chance for 12s. Stacks 8 times.; `ui / loc_talent_ogryn_crit_chance_on_kill_desc / 4e716e92` | on_hit passing on_kill adds a 12s child, maximum eight stacks, with critical_strike_chance 0.02 per stack. [Fixed source and line references](ogryn_kills_grant_crit_chance.md#fixed-source-evidence) | Consistent | The independently read English matches the trigger and all displayed values. |
 | Refresh and chance calculation | No refresh or probability formula is stated.; `ui / loc_talent_ogryn_crit_chance_on_kill_desc / 4e716e92` | Further kills refresh the duration. Base 5% plus eight × 2 percentage points gives 21%, not 5% × 1.16; critical hits are not guaranteed. [Fixed source and line references](ogryn_kills_grant_crit_chance.md#fixed-source-evidence) | Not covered by the description | These accepted timing and probability details supplement the stated Critical Chance bonus. |
 
+
+<a id="ogryn_revenge_damage"></a>
+
+## Payback Time
+
+Full raw template and formatting: [source evidence](ogryn_revenge_damage.md#original-english-template-and-reconstruction). Name hash `b8069177`. Every row uses `ui / loc_talent_ogryn_revenge_damage_new_desc / 2474ccf6`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger events, bonus and duration | +15% Damage for 5s after a Successful Dodge, or being Hit by an Attack.; `ui / loc_talent_ogryn_revenge_damage_new_desc / 2474ccf6` | on_player_hit_received and on_successful_dodge can apply a one-stack child granting damage 0.15 for 5s. [Fixed source and line references](ogryn_revenge_damage.md#fixed-source-evidence) | Consistent | The independently read English matches the two event categories and displayed bonus/duration; its attack wording does not specify a type. |
+| Melee filter, absorption, scope and calculation | No attack type, absorption rule, refresh rule or calculation formula is stated.; `ui / loc_talent_ogryn_revenge_damage_new_desc / 2474ccf6` | Both events use CheckProcFunctions.on_melee_hit, accepting damage > 0, damage_absorbed > 0 or a dodge without a damage field. Melee and ranged damage benefit; triggers refresh rather than stack. Base 100 becomes 115, or 135 with same-stage +20%. [Fixed source and line references](ogryn_revenge_damage.md#fixed-source-evidence) | Not covered by the description | These accepted trigger and calculation details supplement the English. The existing cross-source melee-filter question remains unobserved in game. |
+
 ## Comparison totals
 
 The 204 listed rules comprise **84 Consistent**, **4 Explicit contradictions**, **109 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
