@@ -60,6 +60,7 @@
 | <img src="https://github.com/user-attachments/assets/8cc616f0-d225-4b5f-81a4-8780f478d471" width="32" height="32" alt="Kill Zone talent icon"> [Kill Zone](#veteran_ranged_power_out_of_melee) | <ul><li>After more than 8 seconds without receiving a melee hit, gain +15% Base Ranged Damage.</li><li>A qualifying melee hit resets the wait; enemy proximity, your own melee attacks and ranged hits do not by themselves interrupt it.</li><li>The bonus adds to other same-category damage bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/cba2a46d-298c-434a-883d-e048f5ede32d" width="32" height="32" alt="Shock Trooper talent icon"> [Shock Trooper](#veteran_no_ammo_consumption_on_lasweapon_crit) | <ul><li>Critical shots with an eligible Las-weapon consume no ammunition, even if they miss.</li><li>You must be holding the weapon with at least one round in its clip. Empty clips cannot fire through this effect; noncritical shots retain their normal cost.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/ba2f9f5e-0466-433d-a93d-68b1f9606dd7" width="32" height="32" alt="Withering Fire talent icon"> [Withering Fire](#veteran_increased_ranged_cleave) | <ul><li>Increase ranged attack cleave capacity by 50%.</li><li>Penetration still depends on the weapon and each target’s resistance; this does not directly increase single-target damage.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/1a08688e-e370-4eac-a27e-fd48da3b3965" width="32" height="32" alt="Born Leader talent icon"> [Born Leader](#veteran_allies_in_coherency_share_toughness_gain) | <ul><li>Increase your Coherency radius by 50%.</li><li>When you trigger Toughness recovery, other allies in Coherency each receive 20% of the amount originally requested, with their own modifiers and caps. Shared recovery does not share again.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1174,6 +1175,27 @@ Actual final damage also depends on armor, damage profiles, weakspot/critical ef
 - The larger budget handles more penetration resistance; it does not guarantee exactly 50% more enemies hit. The assumed base value of 6 is an example, not a shared value for every weapon.
 
 [Detailed sources and formulas](veteran_increased_ranged_cleave.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_increased_ranged_cleave) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_allies_in_coherency_share_toughness_gain"></a>
+
+<img src="https://github.com/user-attachments/assets/1a08688e-e370-4eac-a27e-fd48da3b3965" width="72" height="72" alt="Born Leader talent icon">
+
+### Born Leader
+
+- **Increase your Coherency radius by 50%.**
+- When you trigger Toughness recovery, each other ally in Coherency receives **20% of the amount originally requested**.
+- The sharing basis remains that requested amount even when your own Toughness fills before all of it can be restored. Each ally’s recovery modifiers and Toughness cap still apply.
+- Shared Toughness cannot be shared again.
+
+**Radius and recovery examples**
+
+- Assuming a starting Coherency radius of 8 metres and no other radius bonuses, `8 × 1.5 = 12 metres`.
+- A recovery request of 20 Toughness when you are missing only 2 restores 2 to you, but each eligible ally’s base recovery request remains `20 × 20% = 4 Toughness`.
+- An ally with an additional 25% recovery bonus and enough missing Toughness can recover `4 × 1.25 = 5 Toughness`, capped at their own maximum.
+
+[Detailed sources and formulas](veteran_allies_in_coherency_share_toughness_gain.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_allies_in_coherency_share_toughness_gain) | [Back to index](#talent-index)
 
 ---
 

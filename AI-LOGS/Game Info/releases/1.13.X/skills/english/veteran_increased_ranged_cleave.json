@@ -106,5 +106,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/withering-fire-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_ranged_cleave.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_ranged_cleave.md",
+  "commit": "eca4408cc03ecc488119b795d80332edfbfede94"
 }
