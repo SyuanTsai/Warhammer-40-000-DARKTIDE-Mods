@@ -328,3 +328,5 @@ Five-item checkpoint (skills 113–117): 844 seconds (14m 04s), measured between
 - [Ogryn skills 176–180](ogryn_skills_176_180.json): Frag Bomb, Big Friendly Rock, That One Didn’t Count, Bigger Box of Hurt and Bonebreaker’s Aura. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
 
 - [Ogryn skills 181–185](ogryn_skills_181_185.json): Coward Culling, Stay Close!, Loyal Protector, Indomitable and Point-Blank Barrage. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
+
+- [Ogryn skills 186–190](ogryn_skills_186_190.json): Stomping Boots, Pulverise, Go Again!, Hail of Fire and Light ’em Up. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
