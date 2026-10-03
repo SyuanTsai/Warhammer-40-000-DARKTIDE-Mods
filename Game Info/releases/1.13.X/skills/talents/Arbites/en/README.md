@@ -76,6 +76,7 @@
 | <img src="https://github.com/user-attachments/assets/7b24cc5d-1975-4762-8b77-8899c0713175" width="32" height="32" alt="Drive them Back talent icon"> [Drive them Back](#adamant_cleave_after_push) | <ul><li>A push hitting an enemy grants 75% more melee damage cleave capacity for 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/e51d3184-42e7-434f-8369-0ae7a6568619" width="32" height="32" alt="Shield Plates talent icon"> [Shield Plates](#adamant_shield_plates) | <ul><li>Blocking restores 15% of maximum Toughness over 3s; Perfect Block also restores 10% instantly, with a 1s cooldown on that immediate recovery.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/bff83e5a-48a0-4f4c-b280-3093df526c5d" width="32" height="32" alt="Weight of the Lex talent icon"> [Weight of the Lex](#adamant_heavy_attacks_increase_damage) | <ul><li>After a heavy melee hit, gain 15% Damage for 5s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/fcb8d517-7a08-452a-a577-1ab15af469cb" width="32" height="32" alt="Strike Down talent icon"> [Strike Down](#adamant_melee_attacks_on_staggered_rend) | <ul><li>Melee attacks against staggered enemies gain 15% Rending.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -960,3 +961,17 @@
 - **Damage example**: Considering only attacks after the buff becomes active, base damage 100 becomes 100 × (1 + 15%) = 115. With an existing same-stage 25% bonus, 125 becomes 140.
 
 [Details](adamant_heavy_attacks_increase_damage.md) · [Back to index](#talent-index)
+
+<a id="adamant_melee_attacks_on_staggered_rend"></a>
+
+### Strike Down
+
+<img src="https://github.com/user-attachments/assets/fcb8d517-7a08-452a-a577-1ab15af469cb" width="72" height="72" alt="Strike Down talent icon">
+
+- **How it works**: Melee attacks against staggered enemies gain 15% Rending, applied directly to the qualifying hit. This does not leave a timed buff stack behind.
+
+- **Armour example**: Isolating the armour stage, assume damage basis 100 and a Carapace armour modifier of 0.5. The original 50 becomes 100 × (0.5 + 0.15) = 65, a 30% increase at this stage. Other critical-hit, weakspot and damage bonuses are calculated in their respective stages.
+
+- **Beyond the armour deficit**: If the original Carapace modifier is already 1, the excess is converted at one quarter. This effect gives 100 × (1 + 0.15 × 0.25) = 103.75 points. Actual increases vary with the weapon and enemy.
+
+[Details](adamant_melee_attacks_on_staggered_rend.md) · [Back to index](#talent-index)
