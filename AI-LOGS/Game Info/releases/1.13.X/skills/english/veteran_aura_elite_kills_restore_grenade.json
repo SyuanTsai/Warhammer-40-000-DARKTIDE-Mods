@@ -112,5 +112,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/demolition-team-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_aura_elite_kills_restore_grenade.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_aura_elite_kills_restore_grenade.md",
+  "commit": "57210e0eb955b3d62dfd2ec1b82e3a0b883c38b0"
 }

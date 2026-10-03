@@ -32,6 +32,7 @@
 | <img src="https://github.com/user-attachments/assets/56d61b06-dd20-4832-8293-0220d1f3960c" width="32" height="32" alt="Duty and Honour talent icon"> [Duty and Honour](#veteran_combat_ability_increase_and_restore_toughness_to_coherency) | <ul><li>Voice of Command grants you and allies in Coherency +75 maximum and current Toughness for 10 seconds.</li><li>The caster also refills to the enlarged maximum. Separate grants can overlap and expire independently.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/1181fe6e-4066-4d75-b996-a0eb01d7583d" width="32" height="32" alt="Close Quarters Killzone talent icon"> [Close Quarters Killzone](#veteran_increased_close_damage_after_combat_ability) | <ul><li>Combat ability use grants up to 15% close damage for 10 seconds; melee and ranged attacks can benefit.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds afterwards. Full bonus within 12.5m; fades to zero at 30m.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="32" height="32" alt="Overwatch talent icon"> [Overwatch](#veteran_combat_ability_extra_charge) | <ul><li>Store two Infiltrate uses; each fully missing use takes about 53.2 seconds to refill without other cooldown effects.</li><li>Both uses share recharge progress and refill sequentially; recovery continues during stealth.</li></ul> | Ability modifier |
+| <img src="https://github.com/user-attachments/assets/80917bab-ea62-4a9a-a0fa-f9b443ee1b0b" width="32" height="32" alt="Weapons Specialist talent icon"> [Weapons Specialist](#veteran_weapon_switch_passive) | <ul><li>Kills while holding melee store up to 10 ranged stacks; switching to ranged grants 2% attack/reload speed and 33 percentage points of first-shot critical chance per stack.</li><li>A kill while holding ranged stores one melee stack; switching to melee grants 15% attack speed and 10% dodge speed/distance.</li><li>Both buffs last up to 10 seconds and end when switching away from their corresponding weapon.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="Long Range Assassin talent icon"> [Long Range Assassin](#veteran_snipers_focus_increased_stacks) | <ul><li>Raise Marksman's Focus's effective stack cap from 10 to 15.</li><li>At 15 stacks, gain 112.5% ranged finesse strength and 15% reload speed; the whole-hit increase depends on the extra component.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="32" height="32" alt="Chink in their Armour talent icon"> [Chink in their Armour](#veteran_snipers_focus_rending_bonus) | <ul><li>At 10 or more Focus stacks, gain 15% Rending; lose it below 10 stacks.</li><li>The threshold stays 10 with Long Range Assassin. Damage gain depends on armor and existing Rending.</li></ul> | Keystone modifier |
@@ -671,6 +672,31 @@ Compare only this talent's Rending. Assume a noncritical hit that does not hit a
 - **Stamina**: maximum Stamina 6 gives a requested `6 × 10% = 0.6 units` per qualifying ranged weakspot kill. If only 0.2 is missing, the actual return is **0.2 units**.
 
 [Details and source evidence](veteran_snipers_focus_toughness_bonus.md) · [Back to index](#talent-index)
+
+<a id="veteran_weapon_switch_passive"></a>
+
+<img src="https://github.com/user-attachments/assets/80917bab-ea62-4a9a-a0fa-f9b443ee1b0b" width="72" height="72" alt="Weapons Specialist talent icon">
+
+### Weapons Specialist
+
+- **While holding a melee weapon:** your kills store up to 10 Ranged Specialist stacks. Switch to a ranged weapon to consume them. Each stack grants **2% Ranged Attack Speed and 2% Reload Speed for up to 10 seconds**, plus **33 percentage points of Ranged Critical Hit Chance on your next shot**.
+- After the first shot, the extra critical chance is removed; the attack/reload speed bonuses remain. Some automatic weapons can retain an already-rolled critical burst result, so later bullets in that burst are not necessarily noncritical. Switching away from the ranged weapon ends this buff early.
+- **While holding a ranged weapon:** your kills store up to one Melee Specialist stack. Switch to melee to consume it for **15% Melee Attack Speed, 10% Dodge Speed and 10% Dodge Distance for up to 10 seconds**. Switching away from melee ends this buff early.
+- The stored side depends on the weapon held when the enemy dies, including kills from damage over time or an earlier-thrown grenade. With no stored stack, switching does not create the corresponding buff.
+
+#### Critical chance, time and distance examples
+
+Assume the required stacks are stored, the relevant buff is active and no other modifiers change. The critical examples refer to the first shot before the extra chance is consumed.
+
+- **One ranged stack, starting 10% critical chance:** `10% + 33 percentage points = 43%`.
+- **Three ranged stacks, starting 10% critical chance:** `min(10% + 3 × 33 percentage points, 100%) = 100%`; the unclamped sum is 109%. This does not guarantee a new roll for every automatic-burst bullet.
+- **Ten ranged stacks:** `10 × 2% = 20%` Ranged Attack Speed and Reload Speed. With other time-scale factors at 1 and no binding limit, an illustrative 3-second reload becomes `3 / 1.20 = 2.5 seconds`, saving 0.5 seconds (16.67%).
+- **Melee Specialist:** under the same timing assumptions, an illustrative 1-second affected melee action becomes `1 / 1.15 ≈ 0.87 seconds`, about 13.04% less time.
+- **Dodge distance:** assuming a 3-metre starting distance and no other distance modifier, `3 × 1.10 = 3.3 metres`, a 0.3-metre gain. Actual weapon timings and dodge behavior vary.
+
+[Detailed sources and formulas](veteran_weapon_switch_passive.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_weapon_switch_passive) | [Back to index](#talent-index)
+
+---
 
 ## Passive talents
 
