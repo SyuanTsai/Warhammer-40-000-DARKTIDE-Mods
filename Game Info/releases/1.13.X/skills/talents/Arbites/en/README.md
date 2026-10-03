@@ -52,6 +52,7 @@
 | <img src="https://github.com/user-attachments/assets/3098a511-fa0f-444e-a9e2-8e6591688115" width="32" height="32" alt="Up Close talent icon"> [Up Close](#adamant_close_kills_restore_toughness) | <ul><li>Killing an enemy within 12.5m restores 5% of maximum Toughness.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/898ad4c6-3f99-404d-8ff9-b15a9820f8e9" width="32" height="32" alt="Force of Will talent icon"> [Force of Will](#adamant_staggers_replenish_toughness) | <ul><li>A melee attack that Staggers its first hit target restores 7.5% of maximum Toughness.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4ce13efe-7a81-48cd-9bb6-47dfb55f63b8" width="32" height="32" alt="Voltaic Mandibles Augment talent icon"> [Voltaic Mandibles Augment](#adamant_dog_attacks_electrocute) | <ul><li>Your Cyber-Mastiff's pounce and pinning attacks Electrocute the target for 5s; continued attacks can refresh the effect.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/4c4b06a3-049f-4272-b1d2-a8a472f541b0" width="32" height="32" alt="Walk It Off talent icon"> [Walk It Off](#adamant_stamina_spent_replenish_toughness) | <ul><li>Each accumulated 1 point of Stamina spent restores 10% of maximum Toughness over 3s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -644,3 +645,15 @@
 - **Damage example**: With no other bonus and an ordinary Unarmoured hit zone, baseline damage per tick is 57.5 × 0.5 = 28.75. Using the baseline Flak armour modifier of 1 gives 57.5. Actual damage still depends on enemy hit zones, resistances and other damage bonuses.
 
 [Details](adamant_dog_attacks_electrocute.md) · [Back to index](#talent-index)
+
+<a id="adamant_stamina_spent_replenish_toughness"></a>
+
+### Walk It Off
+
+<img src="https://github.com/user-attachments/assets/4c4b06a3-049f-4272-b1d2-a8a472f541b0" width="72" height="72" alt="Walk It Off talent icon">
+
+- **Trigger and refresh**: Each accumulated 1 point of Stamina spent starts Toughness recovery lasting 3s. Spending another full point during the effect resets the 3s duration; the recovery rate does not stack.
+
+- **Recovery example**: At maximum Toughness 100, with sufficient deficit and no other recovery bonus, recovery is about 100 × 10% ÷ 3 = 3.33 points per second. Triggering again after 2s and continuing until expiry gives about 3.33 × 5 ≈ 16.67 points in total using the unrounded rate, rather than instantly restoring 20 points.
+
+[Details](adamant_stamina_spent_replenish_toughness.md) · [Back to index](#talent-index)

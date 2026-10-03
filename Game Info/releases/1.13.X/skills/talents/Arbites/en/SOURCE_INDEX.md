@@ -52,3 +52,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Up Close](adamant_close_kills_restore_toughness.md) / `adamant_close_kills_restore_toughness` | Passive talent |
 | [Force of Will](adamant_staggers_replenish_toughness.md) / `adamant_staggers_replenish_toughness` | Passive talent |
 | [Voltaic Mandibles Augment](adamant_dog_attacks_electrocute.md) / `adamant_dog_attacks_electrocute` | Passive talent |
+| [Walk It Off](adamant_stamina_spent_replenish_toughness.md) / `adamant_stamina_spent_replenish_toughness` | Passive talent |
