@@ -27,6 +27,7 @@
 | <img src="https://github.com/user-attachments/assets/41b92eae-77a3-481e-af12-783845ce49c4" width="32" height="32" alt="Precognition talent icon"> [Precognition](#psyker_overcharge_weakspot_kill_bonuses) | <ul><li>During Scrier's Gaze, gain 1% Finesse Damage per second up to 30%, lingering 10 seconds. Weakspot Kills advance damage and Finesse Damage progress by one stack.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/f9987bfc-f9d7-48d8-9431-8c361223c50e" width="32" height="32" alt="Warp Speed talent icon"> [Warp Speed](#psyker_overcharge_increased_movement_speed) | <ul><li>Gain 20% Movement Speed while Scrier's Gaze is active; the bonus ends with Gaze.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="32" height="32" alt="Psykinetic's Aura talent icon"> [Psykinetic's Aura](#psyker_2_tier_3_name_2) | <ul><li>Your Elite or Specialist Kills grant an extra 0.5 seconds of Combat Ability cooldown recovery about once per second for 3 seconds; triggering again refreshes the duration.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/123c7e4e-3844-4ff0-94c0-5cf7f7772b8f" width="32" height="32" alt="Reality Anchor talent icon"> [Reality Anchor](#psyker_overcharge_reduced_warp_charge) | <ul><li>While Scrier's Gaze is active, generate 20% less Peril and shorten the time to Quell the same amount by 30%.</li></ul> | Ability |
 
 ---
 
@@ -330,3 +331,23 @@
 - **Full recovery amount**: With normal frame-by-frame updates and no interruption, three extra ticks restore `0.5 × 3 = 1.5` seconds in total, in addition to the cooldown time that naturally passes during this interval.
 
 [Details](psyker_2_tier_3_name_2.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_overcharge_reduced_warp_charge"></a>
+
+### Reality Anchor
+
+<img src="https://github.com/user-attachments/assets/123c7e4e-3844-4ff0-94c0-5cf7f7772b8f" width="72" height="72" alt="Reality Anchor talent icon">
+
+- **Ability modifier**: While Scrier's Gaze is active, generate 20% less Peril and take 30% less time to Quell the same amount of Peril.
+
+- **Generation example**: An original gain of 10 Peril percentage points becomes `10 × 0.8 = 8` points. Existing accumulated Peril is not directly removed.
+
+- **Quell example**: An original 10-second Quell process becomes `10 × 0.7 = 7` seconds. Expressed as a rate per second, this is `1 ÷ 0.7 ≈ 1.429` times the original rate, about 42.9% faster.
+
+#### Chinese wording erratum
+
+- The Chinese phrase “reduces already generated Peril” describes removing existing Peril. The corresponding English and accepted implementation refer to generating less new Peril while Gaze is active.
+
+[Details](psyker_overcharge_reduced_warp_charge.md) · [Back to index](#talent-index)

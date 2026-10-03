@@ -250,6 +250,18 @@ Full raw template and formatting: [source evidence](psyker_2_tier_3_name_2.md#or
 | Trigger, recipient, regeneration and duration | 50% Cooldown Regeneration for 3s when you kill an Elite or Specialist Enemy; `ui / loc_talent_psyker_cooldown_on_elite_kills_desc / eaf79e38` | Owner's Elite/Specialist Kill grants a three-second, one-stack buff restoring 0.5 Combat Ability resource per approximately one-second tick. The existing example uses normal recovery of 1 second per second. [Fixed source and line references](psyker_2_tier_3_name_2.md#fixed-source-evidence) | Consistent | The trigger and duration agree; 0.5 extra resource relative to the example's normal one-second recovery corresponds to 50% regeneration. No Ally benefit is claimed. |
 | Discrete timing, refresh, expiry and update delays | No instant percentage removal, stronger repeated-Kill stacking, tick order or delayed-update behavior stated; `ui / loc_talent_psyker_cooldown_on_elite_kills_desc / eaf79e38` | Reapplication refreshes duration, not tick strength. Normal updates give 3 × 0.5 = 1.5 extra seconds; the third tick runs before removal. A single if handles at most one tick per update, so delayed updates do not catch up multiple ticks. [Fixed source and line references](psyker_2_tier_3_name_2.md#fixed-source-evidence) | Not covered by the description | These recovery and timing rules supplement the description. |
 
+
+<a id="psyker_overcharge_reduced_warp_charge"></a>
+
+## Reality Anchor
+
+Full raw template and formatting: [source evidence](psyker_overcharge_reduced_warp_charge.md#original-english-template-and-reconstruction). Name hash `ed1671b1`. Every row uses `ui / loc_ability_psyker_overcharge_reduced_warp_charge_vent_speed_description / 93f0b5f7`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Generation effect and active state | Scrier's Gaze reduces `Peril Generated` by the displayed -20% label while active; `ui / loc_ability_psyker_overcharge_reduced_warp_charge_vent_speed_description / 93f0b5f7` | warp_charge_amount=0.8 applies only with the psyker_overcharge keyword; new generation of 10 percentage points becomes 8. [Fixed source and line references](psyker_overcharge_reduced_warp_charge.md#fixed-source-evidence) | Consistent | The wording concerns new generation and agrees with the active-state reduction; it does not claim direct removal of accumulated Peril. |
+| Quelling percentage basis and calculation limits | `increases Quellling by +30%` does not specify a rate-per-second basis or interval/duration formula; `ui / loc_ability_psyker_overcharge_reduced_warp_charge_vent_speed_description / 93f0b5f7` | vent_warp_charge_speed=0.7 multiplies vent_interval and vent_duration: 10 seconds becomes 7. For the same removal, 1/0.7≈1.429 gives about +42.9% rate. The effects do not linger with the exit damage buff. [Fixed source and line references](psyker_overcharge_reduced_warp_charge.md#fixed-source-evidence) | Not covered by the description | The 30% label is derived from shortened time. The detailed time/rate basis and example assumptions supplement the English; no explicit per-second-rate claim is contradicted. |
+
 ## Comparison totals
 
 The 43 listed rules comprise **21 Consistent**, **0 Explicit contradictions**, **20 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.
