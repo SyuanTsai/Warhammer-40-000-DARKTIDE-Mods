@@ -76,7 +76,8 @@
         "adamant_stance_ranged_kills_transfer_ammo",
         "adamant_stance_elite_kills_stack_damage",
         "adamant_stance_dog_bloodlust",
-        "adamant_drone_buff_talent"
+        "adamant_drone_buff_talent",
+        "adamant_drone_debuff_talent"
       ],
       "checks": []
     },
@@ -101,7 +102,8 @@
         "adamant_stance_ranged_kills_transfer_ammo",
         "adamant_stance_elite_kills_stack_damage",
         "adamant_stance_dog_bloodlust",
-        "adamant_drone_buff_talent"
+        "adamant_drone_buff_talent",
+        "adamant_drone_debuff_talent"
       ],
       "checks": []
     },
@@ -126,7 +128,8 @@
         "adamant_stance_ranged_kills_transfer_ammo",
         "adamant_stance_elite_kills_stack_damage",
         "adamant_stance_dog_bloodlust",
-        "adamant_drone_buff_talent"
+        "adamant_drone_buff_talent",
+        "adamant_drone_debuff_talent"
       ],
       "checks": []
     },
@@ -151,7 +154,8 @@
         "adamant_stance_ranged_kills_transfer_ammo",
         "adamant_stance_elite_kills_stack_damage",
         "adamant_stance_dog_bloodlust",
-        "adamant_drone_buff_talent"
+        "adamant_drone_buff_talent",
+        "adamant_drone_debuff_talent"
       ],
       "checks": []
     },
@@ -549,9 +553,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "24ae7f8c2921d539ed5f6175a6081066891637cf",
       "chinese_sha256": "13aaed448d0b597990ae613f6d845d500e1a1cc1f8782340aad1116a3683e085",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_drone_debuff_talent"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_drone_debuff_talent.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_elite_special_kills_offensive_boost.md",
@@ -10097,6 +10108,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_drone_buff_talent.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_drone_buff_talent.md"
+    },
+    {
+      "id": "adamant_drone_debuff_talent",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_drone_debuff_talent.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_drone_debuff_talent.md"
     }
   ],
   "pending_chinese_corrections": [

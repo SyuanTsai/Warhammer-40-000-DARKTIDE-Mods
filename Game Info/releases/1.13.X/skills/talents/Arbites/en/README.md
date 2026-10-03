@@ -21,6 +21,7 @@
 | <img src="https://github.com/user-attachments/assets/f7454987-ea7e-474e-bb22-3c3ead9adb1b" width="32" height="32" alt="Writ of Execution talent icon"> [Writ of Execution](#adamant_stance_elite_kills_stack_damage) | <ul><li>During Castigator's Stance, each Elite or Specialist kill grants +7.5% Damage for 12s, up to six stacks.</li><li>Full stacks give +45% Damage; acquired stacks can continue counting down after the stance ends.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/27a74ed8-eb51-4774-ae8e-2089aa7b1686" width="32" height="32" alt="Bloodlust talent icon"> [Bloodlust](#adamant_stance_dog_bloodlust) | <ul><li>Activating Castigator's Stance gives your Cyber-Mastiff 75% more damage for the base stance duration of 10s.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/53dd2864-62b6-4e6c-9d62-e79831b33c78" width="32" height="32" alt="Inspiring Recitation talent icon"> [Inspiring Recitation](#adamant_drone_buff_talent) | <ul><li>Allies affected within the Nuncio-Aquila's area additionally gain 30% Toughness Damage Reduction, 30% Revive Speed and 10% Attack Speed.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/483804fa-b052-4baa-b3d7-5e7dbfbe44f4" width="32" height="32" alt="Fear of Justice talent icon"> [Fear of Justice](#adamant_drone_debuff_talent) | <ul><li>Enemies within the Nuncio-Aquila's area deal 25% less melee damage and have 25% lower melee attack speed.</li><li>Isolating this effect, an adjustable attack action taking 1s instead takes about 1.33s.</li></ul> | Ability |
 
 ## Blitz
 
@@ -209,3 +210,21 @@
 - **Speed examples**: Isolating this effect, a revive taking 5s instead takes `5 ÷ 1.3 ≈ 3.85s`, and an attack action with adjustable speed taking 1s instead takes `1 ÷ 1.1 ≈ 0.91s`. Leaving the Nuncio-Aquila's area removes these bonuses.
 
 [Details](adamant_drone_buff_talent.md) · [Back to index](#talent-index)
+
+<a id="adamant_drone_debuff_talent"></a>
+
+### Fear of Justice
+
+<img src="https://github.com/user-attachments/assets/483804fa-b052-4baa-b3d7-5e7dbfbe44f4" width="72" height="72" alt="Fear of Justice talent icon">
+
+- **Melee damage**: Enemies affected by the Nuncio-Aquila deal 25% less melee damage. Isolating this effect, base melee damage of 100 becomes `100 × (1 − 25%) = 75 damage`.
+
+- **Melee attack-speed example**: Enemy melee attack speed is reduced by 25%. When the action's minimum-duration limit does not apply, an action taking 1s instead takes `1 ÷ 0.75 ≈ 1.33s`, an increase in duration of about 33.3%.
+
+- **Area condition**: This debuff is bound to the Nuncio-Aquila's area and is removed when the enemy leaves its range.
+
+#### English description discrepancy
+
+- The reconstructed English states that the time between affected enemies' melee attacks increases by 50%. The accepted fixed-source evidence supplies a 0.75 attack-speed multiplier, giving about 33.3% longer adjustable actions when no minimum-duration limit applies. A 50% increase in a 1s interval would give 1.5s; it is not the same result. The display mapping explicitly returns 50, independently of the stat value. This is a discrepancy in static evidence; game behavior remains unobserved.
+
+[Details](adamant_drone_debuff_talent.md) · [Back to index](#talent-index)
