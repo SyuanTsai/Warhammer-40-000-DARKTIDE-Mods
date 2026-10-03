@@ -19,6 +19,7 @@
 | <img src="https://github.com/user-attachments/assets/01a8e7be-dff3-4d81-a426-5e38ae352606" width="32" height="32" alt="Loyal Protector talent icon"> [Loyal Protector](#ogryn_taunt_shout) | <ul><li>Taunt enemies within 12m for 15s, repeating at 3s and 6s.</li><li>Only the initial cast Staggers; base cooldown 50s.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/582a28cf-14c5-4757-a51c-cb5924dbf0a3" width="32" height="32" alt="Indomitable talent icon"> [Indomitable](#ogryn_longer_charge) | <ul><li>Charge up to 24m, stopping on a Monstrosity; base cooldown 25s.</li><li>For 5s after the charge ends, gain +25% Melee Attack Speed and Movement Speed.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/1a42e740-0c91-48e5-9092-e88d3f06b532" width="32" height="32" alt="Point-Blank Barrage talent icon"> [Point-Blank Barrage](#ogryn_special_ammo) | <ul><li>Swap to and reload the ranged weapon; +25% Rate of Fire and +65% Reload Speed for 12s.</li><li>+15% Close Range Damage, halved braced slowdown, and 50% of counted ammunition returned at the end.</li><li>Base cooldown 60s.</li></ul> | Combat ability |
+| <img src="https://github.com/user-attachments/assets/0932d1f6-96b1-47d9-ad81-861fe9914d9a" width="32" height="32" alt="Stomping Boots talent icon"> [Stomping Boots](#ogryn_charge_toughness) | <ul><li>Each enemy hit during the charge restores 10% of maximum Toughness.</li></ul> | Combat ability |
 
 ## Blitz
 
@@ -211,3 +212,17 @@
 - **Ammunition return**: At effect end, restore 50% of the counted ammunition to reserves. For example, 20 counted rounds return 20 × 50% = 10. Ammunition saved by Lucky Bullets also counts; the returned amount remains limited by total ammunition capacity.
 
 [Details](ogryn_special_ammo.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_charge_toughness"></a>
+
+### Stomping Boots
+
+<img src="https://github.com/user-attachments/assets/0932d1f6-96b1-47d9-ad81-861fe9914d9a" width="72" height="72" alt="Stomping Boots talent icon">
+
+- **Replenishment condition**: Each enemy hit during the charge restores 10% of maximum Toughness. Hits after the charge ends no longer provide this restoration.
+
+- **Replenishment example**: With maximum Toughness 100, three consecutive qualifying hits and enough missing Toughness restore 100 × 10% × 3 = 30. With a deficit of only 20, restore only 20. Other Toughness replenishment bonuses are calculated separately.
+
+[Details](ogryn_charge_toughness.md) · [Back to index](#talent-index)
