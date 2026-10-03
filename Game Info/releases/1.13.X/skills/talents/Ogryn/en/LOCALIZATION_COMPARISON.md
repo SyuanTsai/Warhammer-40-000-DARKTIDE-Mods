@@ -853,6 +853,18 @@ Full raw template and formatting: [source evidence](ogryn_reloading_grants_damag
 | Reload bonus and scope | +15% Ranged Damage for 8s on reload.; `ui / loc_talent_ogryn_ranged_damage_on_reload_desc / a8bc8a04` | on_reload activates ranged_damage 0.15 for active_duration 8; melee damage is unaffected. [Fixed source and line references](ogryn_reloading_grants_damage.md#fixed-source-evidence) | Consistent | The independently read English matches the current values and damage scope, rather than the obsolete internal name. |
 | Refresh and calculation | No refresh or stacking formula is stated.; `ui / loc_talent_ogryn_ranged_damage_on_reload_desc / a8bc8a04` | Further reloads refresh the duration without stacking. Base ranged damage 100 becomes 115, or 135 with another same-stage +20%. [Fixed source and line references](ogryn_reloading_grants_damage.md#fixed-source-evidence) | Not covered by the description | These accepted timing and additive details supplement the English. |
 
+
+<a id="ogryn_increase_explosion_radius"></a>
+
+## Big Boom
+
+Full raw template and formatting: [source evidence](ogryn_increase_explosion_radius.md#original-english-template-and-reconstruction). Name hash `515cf8be`. Every row uses `ui / loc_talent_ogryn_increase_explosion_radius_desc / 15f7867d`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Explosion radius | Increase explosion radius by +27.5%.; `ui / loc_talent_ogryn_increase_explosion_radius_desc / 15f7867d` | explosion_radius_modifier 0.275 scales radius and close_radius through Explosion._calculate_radii. [Fixed source and line references](ogryn_increase_explosion_radius.md#fixed-source-evidence) | Consistent | The independently read English matches the radius value; it does not describe a damage increase. |
+| Radii, combination and area | No central-radius, addition, obstruction or area formula is stated.; `ui / loc_talent_ogryn_increase_explosion_radius_desc / 15f7867d` | Both outer and central high-damage radii use the accumulated modifier. Radius 4m becomes 5.1m; an unobstructed planar circle has 1.275² ≈ 1.626 times the area (+62.6%). Terrain and hit detection still affect coverage. [Fixed source and line references](ogryn_increase_explosion_radius.md#fixed-source-evidence) | Not covered by the description | These accepted scope and geometric details supplement the radius wording. |
+
 ## Comparison totals
 
 The 214 listed rules comprise **89 Consistent**, **4 Explicit contradictions**, **114 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

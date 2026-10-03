@@ -71,6 +71,7 @@
 | <img src="https://github.com/user-attachments/assets/5d6152a6-dedb-49c4-a7d2-328d082084c0" width="32" height="32" alt="Payback Time talent icon"> [Payback Time](#ogryn_revenge_damage) | <ul><li>A successful melee dodge or damaging melee hit, including Toughness-absorbed damage, grants +15% melee and ranged damage for 5s; triggers refresh.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/0eb640b4-e206-4d0b-a982-f74b33baf5b2" width="32" height="32" alt="Dominate talent icon"> [Dominate](#ogryn_rending_on_elite_kills) | <ul><li>Elite kills grant +15% Rending for 10s with refresh; actual damage depends on the original armour multiplier.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/27fcc279-9828-4df7-b895-04956bb2463b" width="32" height="32" alt="Reloaded and Ready talent icon"> [Reloaded and Ready](#ogryn_reloading_grants_damage) | <ul><li>Reloading grants +15% ranged damage for 8s; further reloads refresh the duration without stacking.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/c6421034-209b-4fab-857d-541fa0667d8b" width="32" height="32" alt="Big Boom talent icon"> [Big Boom](#ogryn_increase_explosion_radius) | <ul><li>Increase explosion outer and central high-damage radii by 27.5%; damage values themselves are unchanged.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1115,3 +1116,19 @@
 - **Damage example**: Base ranged damage of 100 becomes 115. With another +20% at the same stage, it becomes `100 × (1 + 20% + 15%) = 135`. Melee damage does not receive this bonus.
 
 [Details](ogryn_reloading_grants_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_increase_explosion_radius"></a>
+
+### Big Boom
+
+<img src="https://github.com/user-attachments/assets/c6421034-209b-4fab-857d-541fa0667d8b" width="72" height="72" alt="Big Boom talent icon">
+
+- **Effect**: Increase both an explosion's outer radius and its central high-damage radius by 27.5%. This does not directly increase the damage value of each explosion.
+
+- **Area example**: An original radius of 4m becomes `4 × 1.275 = 5.1m`. Assuming an unobstructed planar circle, area becomes `1.275² ≈ 1.626` times the original, an increase of about 62.6%.
+
+- **Combination**: Other explosion-radius bonuses at the same stage add together. Terrain obstruction and the explosion's own hit detection still affect actual coverage.
+
+[Details](ogryn_increase_explosion_radius.md) · [Back to index](#talent-index)
