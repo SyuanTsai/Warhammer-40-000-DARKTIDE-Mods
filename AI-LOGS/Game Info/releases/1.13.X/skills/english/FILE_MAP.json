@@ -5691,7 +5691,8 @@
         "veteran_snipers_focus",
         "veteran_combat_ability_extra_charge",
         "veteran_snipers_focus_increased_stacks",
-        "veteran_snipers_focus_rending_bonus"
+        "veteran_snipers_focus_rending_bonus",
+        "veteran_snipers_focus_toughness_bonus"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5723,7 +5724,8 @@
         "veteran_snipers_focus",
         "veteran_combat_ability_extra_charge",
         "veteran_snipers_focus_increased_stacks",
-        "veteran_snipers_focus_rending_bonus"
+        "veteran_snipers_focus_rending_bonus",
+        "veteran_snipers_focus_toughness_bonus"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5755,7 +5757,8 @@
         "veteran_snipers_focus",
         "veteran_combat_ability_extra_charge",
         "veteran_snipers_focus_increased_stacks",
-        "veteran_snipers_focus_rending_bonus"
+        "veteran_snipers_focus_rending_bonus",
+        "veteran_snipers_focus_toughness_bonus"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5787,7 +5790,8 @@
         "veteran_snipers_focus",
         "veteran_combat_ability_extra_charge",
         "veteran_snipers_focus_increased_stacks",
-        "veteran_snipers_focus_rending_bonus"
+        "veteran_snipers_focus_rending_bonus",
+        "veteran_snipers_focus_toughness_bonus"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6713,9 +6717,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1a9a31a1036ad9384636c5be3066d601a475c68b",
       "chinese_sha256": "db3e7521eccace0dcdec4c0e98badae1672070823f431f43a94e63f384c12531",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_snipers_focus_toughness_bonus"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_supression_immunity.md",
@@ -7835,7 +7850,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_snipers_focus_rending_bonus.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus_rending_bonus.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus_rending_bonus.md",
+      "commit": "2fedcd6218437fd52e44201094a2d0d31b7bc790"
+    },
+    {
+      "id": "veteran_snipers_focus_toughness_bonus",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_snipers_focus_toughness_bonus.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus_toughness_bonus.md"
     }
   ],
   "pending_chinese_corrections": [],

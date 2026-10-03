@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="Long Range Assassin talent icon"> [Long Range Assassin](#veteran_snipers_focus_increased_stacks) | <ul><li>Raise Marksman's Focus's effective stack cap from 10 to 15.</li><li>At 15 stacks, gain 112.5% ranged finesse strength and 15% reload speed; the whole-hit increase depends on the extra component.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="32" height="32" alt="Chink in their Armour talent icon"> [Chink in their Armour](#veteran_snipers_focus_rending_bonus) | <ul><li>At 10 or more Focus stacks, gain 15% Rending; lose it below 10 stacks.</li><li>The threshold stays 10 with Long Range Assassin. Damage gain depends on armor and existing Rending.</li></ul> | Keystone modifier |
+| <img src="https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f" width="32" height="32" alt="Tunnel Vision talent icon"> [Tunnel Vision](#veteran_snipers_focus_toughness_bonus) | <ul><li>Each effective Focus stack increases applicable Toughness replenishment by 4%.</li><li>Ranged weakspot kills restore 10% of maximum Stamina, limited by the deficit.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907" width="32" height="32" alt="Exhilarating Takedown talent icon"> [Exhilarating Takedown](#veteran_replenish_toughness_on_weakspot_kill) | <ul><li>Ranged weakspot kills replenish 15% of maximum Toughness and grant stacking Toughness damage reduction.</li><li>Up to three effective stacks: 10%, 19% or 27.1% reduction; refresh the 8-second timer on each qualifying kill, then decay one stack at a time.</li></ul> | Passive talent |
 
@@ -156,6 +157,23 @@ Compare only this talent's Rending. Assume a noncritical hit that does not hit a
 - **Ranged critical or weakspot hits**: include the extra damage component and Marksman's Focus's finesse bonus as well. These armor-stage examples do not represent the total gain from ten Focus stacks or a fixed gain for every build.
 
 [Details and source evidence](veteran_snipers_focus_rending_bonus.md) · [Back to index](#talent-index)
+
+<a id="veteran_snipers_focus_toughness_bonus"></a>
+
+<img src="https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f" width="72" height="72" alt="Tunnel Vision talent icon">
+
+### Tunnel Vision
+
+- **Each effective Focus stack increases applicable Toughness replenishment by 4%.** Gaining stacks does not directly restore Toughness; an existing recovery event receives the bonus.
+- **Ranged weakspot kills restore 10% of maximum Stamina.** The actual return is limited by missing Stamina.
+- Applicable Toughness recovery benefits from the modifier; effects that explicitly ignore recovery stat buffs do not. Toughness and Stamina cannot exceed their respective maximums.
+
+#### Recovery examples
+
+- **Toughness**: an event normally restoring 20 points, five effective stacks, no other recovery modifiers and enough missing Toughness gives `20 × (1 + 5 × 0.04) = 24 points`. With one stack, it gives `20 × 1.04 = 20.8 points`.
+- **Stamina**: maximum Stamina 6 gives a requested `6 × 10% = 0.6 units` per qualifying ranged weakspot kill. If only 0.2 is missing, the actual return is **0.2 units**.
+
+[Details and source evidence](veteran_snipers_focus_toughness_bonus.md) · [Back to index](#talent-index)
 
 ## Passive talents
 
