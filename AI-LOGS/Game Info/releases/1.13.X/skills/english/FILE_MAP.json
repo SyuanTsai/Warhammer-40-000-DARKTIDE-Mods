@@ -125,7 +125,12 @@
         "adamant_plasteel_plates",
         "adamant_dog_applies_brittleness",
         "adamant_dodge_grants_damage",
-        "adamant_stacking_weakspot_strength"
+        "adamant_stacking_weakspot_strength",
+        "adamant_elite_special_kills_reload_speed",
+        "adamant_movement_speed_on_block",
+        "adamant_elite_special_kills_offensive_boost",
+        "adamant_cleave_after_push",
+        "adamant_shield_plates"
       ],
       "checks": []
     },
@@ -199,7 +204,12 @@
         "adamant_plasteel_plates",
         "adamant_dog_applies_brittleness",
         "adamant_dodge_grants_damage",
-        "adamant_stacking_weakspot_strength"
+        "adamant_stacking_weakspot_strength",
+        "adamant_elite_special_kills_reload_speed",
+        "adamant_movement_speed_on_block",
+        "adamant_elite_special_kills_offensive_boost",
+        "adamant_cleave_after_push",
+        "adamant_shield_plates"
       ],
       "checks": []
     },
@@ -273,7 +283,12 @@
         "adamant_plasteel_plates",
         "adamant_dog_applies_brittleness",
         "adamant_dodge_grants_damage",
-        "adamant_stacking_weakspot_strength"
+        "adamant_stacking_weakspot_strength",
+        "adamant_elite_special_kills_reload_speed",
+        "adamant_movement_speed_on_block",
+        "adamant_elite_special_kills_offensive_boost",
+        "adamant_cleave_after_push",
+        "adamant_shield_plates"
       ],
       "checks": []
     },
@@ -347,7 +362,12 @@
         "adamant_plasteel_plates",
         "adamant_dog_applies_brittleness",
         "adamant_dodge_grants_damage",
-        "adamant_stacking_weakspot_strength"
+        "adamant_stacking_weakspot_strength",
+        "adamant_elite_special_kills_reload_speed",
+        "adamant_movement_speed_on_block",
+        "adamant_elite_special_kills_offensive_boost",
+        "adamant_cleave_after_push",
+        "adamant_shield_plates"
       ],
       "checks": []
     },
@@ -506,9 +526,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "78df9c19295874728ac6862f92e04ed612070580",
       "chinese_sha256": "38334f9903fcd8904890475411dcbbc50062030c9b8cac944e0ef270a3d55d6f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_cleave_after_push"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_146_150.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_clip_size.md",
@@ -875,9 +902,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f4ff9b3b1af5b9965173b5adc0cf056e0e079941",
       "chinese_sha256": "04db10ddfa7d8bec3fed538b022df9232b384a9d735e91e407b95dc705539382",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_elite_special_kills_offensive_boost"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_146_150.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_elite_special_kills_reload_speed.md",
@@ -886,9 +920,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "2af8a89b2830cefc6da829872cea15eb1503bb02",
       "chinese_sha256": "d1a132f7bcada01f951bbee76cf83a1d87875652c86166ab2f35b027216099da",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_elite_special_kills_reload_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_146_150.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_elite_special_kills_replenish_toughness.md",
@@ -1244,9 +1285,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "30ac8a7a126bd8be74b7ba783c4fb6968c089163",
       "chinese_sha256": "9d55724c3ccf0eefba5b9cf98f8823ced3765f50a76a1bbdc401a0d39612a2c3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_movement_speed_on_block"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_146_150.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_multiple_hits_attack_speed.md",
@@ -1389,9 +1437,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "de06b7070a6c789277f0cfb42c4f72f10e0fbc58",
       "chinese_sha256": "90e20703732b75251709d382593abce9d01657223e24174e7e6d046c948766c2",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_shield_plates"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_146_150.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_shock_mine.md",
@@ -11028,6 +11083,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_141_145.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stacking_weakspot_strength.md"
+    },
+    {
+      "id": "adamant_elite_special_kills_reload_speed",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_146_150.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_elite_special_kills_reload_speed.md"
+    },
+    {
+      "id": "adamant_movement_speed_on_block",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_146_150.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_movement_speed_on_block.md"
+    },
+    {
+      "id": "adamant_elite_special_kills_offensive_boost",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_146_150.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_elite_special_kills_offensive_boost.md"
+    },
+    {
+      "id": "adamant_cleave_after_push",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_146_150.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_cleave_after_push.md"
+    },
+    {
+      "id": "adamant_shield_plates",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_146_150.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_shield_plates.md"
     }
   ],
   "pending_chinese_corrections": [

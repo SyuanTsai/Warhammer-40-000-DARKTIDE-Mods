@@ -310,3 +310,5 @@ Five-item checkpoint (skills 113–117): 844 seconds (14m 04s), measured between
 - [Arbites passives 136–140](arbites_passives_136_140.json): Melee Damage Boost, Razor-Jaw Augment, Imposing Force, Hold the Line and Cleave Boost. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
 
 - [Arbites passives 141–145](arbites_passives_141_145.json): Impact Boost, Plasteel Plates, Serrated Maw, Arbites Revelatum and Soulguilt Scan. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
+
+- [Arbites passives 146–150](arbites_passives_146_150.json): Judicious Efficiency, March, No Escape, Drive them Back and Shield Plates. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.

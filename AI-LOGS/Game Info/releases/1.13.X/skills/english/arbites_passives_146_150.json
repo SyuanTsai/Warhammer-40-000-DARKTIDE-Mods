@@ -1,0 +1,65 @@
+{
+  "id": "arbites_passives_146_150",
+  "date": "2026-10-04",
+  "scope": "Arbites",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing English display mappings. Mechanism, numerical, shared formatting and image evidence reused. Source pointers are in each English document.",
+  "questions": [
+    "Final game UI and runtime behavior were not observed."
+  ],
+  "skills": [
+    {
+      "id": "adamant_elite_special_kills_reload_speed",
+      "name": "Judicious Efficiency",
+      "name_hash": "183ba616",
+      "description_hash": "79ad9249",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_elite_special_kills_reload_speed.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_elite_special_kills_reload_speed.md",
+      "commit": "941cb025"
+    },
+    {
+      "id": "adamant_movement_speed_on_block",
+      "name": "March",
+      "name_hash": "ba21ad6e",
+      "description_hash": "f2ea4140",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_movement_speed_on_block.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_movement_speed_on_block.md",
+      "commit": "80753b11"
+    },
+    {
+      "id": "adamant_elite_special_kills_offensive_boost",
+      "name": "No Escape",
+      "name_hash": "6f331228",
+      "description_hash": "ea8040eb",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_elite_special_kills_offensive_boost.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_elite_special_kills_offensive_boost.md",
+      "commit": "71710e35"
+    },
+    {
+      "id": "adamant_cleave_after_push",
+      "name": "Drive them Back",
+      "name_hash": "f4653e5e",
+      "description_hash": "1389250b",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_cleave_after_push.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_cleave_after_push.md",
+      "commit": "e0a56dd6"
+    },
+    {
+      "id": "adamant_shield_plates",
+      "name": "Shield Plates",
+      "name_hash": "3032bbe2",
+      "description_hash": "0ce5d555",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_shield_plates.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_shield_plates.md",
+      "commit": "82cbacae"
+    }
+  ]
+}
