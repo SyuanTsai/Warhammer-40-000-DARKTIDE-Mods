@@ -82,7 +82,8 @@
         "adamant_charge_cooldown_reduction",
         "adamant_charge_longer_distance",
         "adamant_dog_damage_after_ability",
-        "adamant_execution_order"
+        "adamant_execution_order",
+        "adamant_terminus_warrant"
       ],
       "checks": []
     },
@@ -113,7 +114,8 @@
         "adamant_charge_cooldown_reduction",
         "adamant_charge_longer_distance",
         "adamant_dog_damage_after_ability",
-        "adamant_execution_order"
+        "adamant_execution_order",
+        "adamant_terminus_warrant"
       ],
       "checks": []
     },
@@ -144,7 +146,8 @@
         "adamant_charge_cooldown_reduction",
         "adamant_charge_longer_distance",
         "adamant_dog_damage_after_ability",
-        "adamant_execution_order"
+        "adamant_execution_order",
+        "adamant_terminus_warrant"
       ],
       "checks": []
     },
@@ -175,7 +178,8 @@
         "adamant_charge_cooldown_reduction",
         "adamant_charge_longer_distance",
         "adamant_dog_damage_after_ability",
-        "adamant_execution_order"
+        "adamant_execution_order",
+        "adamant_terminus_warrant"
       ],
       "checks": []
     },
@@ -1203,9 +1207,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3232efa20056533bd4c1f5b0652b94f4e589d9a2",
       "chinese_sha256": "d0f7293207f2a34c14c8980479750592c5fa1ebe49a7603f6e64336e0fc1cd5e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_terminus_warrant"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_terminus_warrant_cdr.md",
@@ -10211,6 +10222,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_execution_order.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_execution_order.md"
+    },
+    {
+      "id": "adamant_terminus_warrant",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_terminus_warrant.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_terminus_warrant.md"
     }
   ],
   "pending_chinese_corrections": [

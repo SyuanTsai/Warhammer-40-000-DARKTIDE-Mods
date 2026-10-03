@@ -27,6 +27,7 @@
 | <img src="https://github.com/user-attachments/assets/7b78f1c1-2250-44c0-9642-315fd105575a" width="32" height="32" alt="Engage talent icon"> [Engage](#adamant_charge_longer_distance) | <ul><li>Adds 3.75m to the charge's base distance of 3.75m, raising the target distance limit to 7.5m.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/6283df18-7a2a-4a7b-adac-4a13c5cd6315" width="32" height="32" alt="Kill Order talent icon"> [Kill Order](#adamant_dog_damage_after_ability) | <ul><li>After using your Combat Ability, your Cyber-Mastiff gains 50% more damage for 12s; using the ability again while the effect is active refreshes its duration.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/66f3dd5d-68b9-415a-8330-b6daf3fb427c" width="32" height="32" alt="Execution Order talent icon"> [Execution Order](#adamant_execution_order) | <ul><li>Automatically marks Elites, Specialists or Bosses within 40m in front of you.</li><li>You or your Cyber-Mastiff killing a marked target replenishes 15% of maximum Toughness and grants damage and attack-speed bonuses for 8s.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/47d0c2b2-0d8e-4906-a528-48f9488353e9" width="32" height="32" alt="Terminus Warrant talent icon"> [Terminus Warrant](#adamant_terminus_warrant) | <ul><li>Ranged attacks build Melee Justice for each enemy hit per shot, granting three stacks on a weakspot hit; melee hits build Ranged Justice, each capped at 20 stacks.</li><li>Wielding the corresponding weapon consumes those stacks to activate a fixed 12s buff.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -305,3 +306,19 @@
 - **Examples**: With maximum Toughness 100, replenish 15 points, capped at full Toughness. Isolating the damage bonuses, player base damage 100 becomes 110 and companion base damage 100 becomes 250. With an existing same-stage 25% player-damage bonus, `100 × (1 + 25% + 10%) = 135 damage`. An attack action with adjustable speed taking 1s instead takes `1 ÷ 1.1 ≈ 0.91s`.
 
 [Details](adamant_execution_order.md) · [Back to index](#talent-index)
+
+<a id="adamant_terminus_warrant"></a>
+
+### Terminus Warrant
+
+<img src="https://github.com/user-attachments/assets/47d0c2b2-0d8e-4906-a528-48f9488353e9" width="72" height="72" alt="Terminus Warrant talent icon">
+
+- **Accumulation and caps**: Each ranged enemy hit grants one Melee Justice stack; a weakspot hit on that enemy grants three instead. Each shot counts a given target only once, up to 20 stacks. Each melee hit grants one Ranged Justice stack, up to 20.
+
+- **Switching and consumption**: Wielding the melee weapon consumes Melee Justice and grants +10% Melee Strength (PowerLevel) and 20% Toughness Damage Reduction for 12s. Wielding the ranged weapon consumes Ranged Justice and grants +10% Ranged Strength (PowerLevel), +50% Suppression and +50% Ranged Cleave for 12s. These core bonuses have fixed values; their magnitude does not scale with the number of stacks spent.
+
+- **Toughness example**: The melee effect sets the Toughness-damage multiplier to 0.8, changing base Toughness damage of 100 to 80 points. It applies only while the 12s effect remains active.
+
+- **Duration and PowerLevel examples**: Wielding the other weapon category ends the current buff early. Isolating this bonus, `PowerLevel 500 × 1.1 = 550`. With an existing same-stage 20% PowerLevel bonus, the value rises from 600 to 650. Both one stack and 20 stacks activate the same fixed core bonuses; the stack count separately affects selected upgrades.
+
+[Details](adamant_terminus_warrant.md) · [Back to index](#talent-index)
