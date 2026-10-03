@@ -1,0 +1,71 @@
+{
+  "id": "ogryn_skills_256_260",
+  "date": "2026-10-04",
+  "scope": "Ogryn",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing display mappings in ogryn_talents.lua L2578–2602, L2554–2577, L1352–1372, L2633–2648 and L957–982 were read, plus Bruiser's missing display value in talent_settings_ogryn.lua L343–348. Accepted mechanisms, formulas, sources and common formatting were reused.",
+  "questions": [
+    "Bruiser's expiry/final-tick ordering remains qualified; the four-tick example is conditional. Final game UI remains unobserved."
+  ],
+  "skills": [
+    {
+      "id": "ogryn_ranged_improves_melee",
+      "name": "Spray and Slay",
+      "name_hash": "49b80f06",
+      "description_hash": "7ba7e606",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_ranged_improves_melee.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_ranged_improves_melee.md",
+      "commit": "985a94c3a"
+    },
+    {
+      "id": "ogryn_melee_improves_ranged",
+      "name": "Bash and Blast",
+      "name_hash": "3a7fe3c8",
+      "description_hash": "01fff66e",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_melee_improves_ranged.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_melee_improves_ranged.md",
+      "commit": "acc34fec4"
+    },
+    {
+      "id": "ogryn_ally_elite_kills_grant_cooldown",
+      "name": "Bruiser",
+      "name_hash": "b17401b3",
+      "description_hash": "d14f6cb0",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_ally_elite_kills_grant_cooldown.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_ally_elite_kills_grant_cooldown.md",
+      "commit": "6c96f48a6"
+    },
+    {
+      "id": "ogryn_weakspot_damage",
+      "name": "Strike True",
+      "name_hash": "d427f84f",
+      "description_hash": "658a5b8e",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_weakspot_damage.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_weakspot_damage.md",
+      "commit": "1e2aa7403"
+    },
+    {
+      "id": "ogryn_bracing_reduces_damage_taken",
+      "name": "Mobile Emplacement",
+      "name_hash": "d5fdb21f",
+      "description_hash": "7467e28d",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_bracing_reduces_damage_taken.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_bracing_reduces_damage_taken.md",
+      "commit": "228255c2f"
+    }
+  ],
+  "timing": {
+    "commit_interval_seconds": 203,
+    "from_commit": "4d6628117",
+    "to_commit": "228255c2f",
+    "interruptions": "No handoff, pause or model-capacity failure in this batch; earlier interruption excluded."
+  }
+}

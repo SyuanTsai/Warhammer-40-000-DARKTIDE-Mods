@@ -2251,7 +2251,12 @@
         "ogryn_damage_reduction_after_elite_kill",
         "ogryn_toughness_while_bracing",
         "ogryn_ranged_damage_immunity",
-        "ogryn_wield_speed_increase"
+        "ogryn_wield_speed_increase",
+        "ogryn_ranged_improves_melee",
+        "ogryn_melee_improves_ranged",
+        "ogryn_ally_elite_kills_grant_cooldown",
+        "ogryn_weakspot_damage",
+        "ogryn_bracing_reduces_damage_taken"
       ],
       "checks": []
     },
@@ -2344,7 +2349,12 @@
         "ogryn_damage_reduction_after_elite_kill",
         "ogryn_toughness_while_bracing",
         "ogryn_ranged_damage_immunity",
-        "ogryn_wield_speed_increase"
+        "ogryn_wield_speed_increase",
+        "ogryn_ranged_improves_melee",
+        "ogryn_melee_improves_ranged",
+        "ogryn_ally_elite_kills_grant_cooldown",
+        "ogryn_weakspot_damage",
+        "ogryn_bracing_reduces_damage_taken"
       ],
       "checks": []
     },
@@ -2437,7 +2447,12 @@
         "ogryn_damage_reduction_after_elite_kill",
         "ogryn_toughness_while_bracing",
         "ogryn_ranged_damage_immunity",
-        "ogryn_wield_speed_increase"
+        "ogryn_wield_speed_increase",
+        "ogryn_ranged_improves_melee",
+        "ogryn_melee_improves_ranged",
+        "ogryn_ally_elite_kills_grant_cooldown",
+        "ogryn_weakspot_damage",
+        "ogryn_bracing_reduces_damage_taken"
       ],
       "checks": []
     },
@@ -2530,7 +2545,12 @@
         "ogryn_damage_reduction_after_elite_kill",
         "ogryn_toughness_while_bracing",
         "ogryn_ranged_damage_immunity",
-        "ogryn_wield_speed_increase"
+        "ogryn_wield_speed_increase",
+        "ogryn_ranged_improves_melee",
+        "ogryn_melee_improves_ranged",
+        "ogryn_ally_elite_kills_grant_cooldown",
+        "ogryn_weakspot_damage",
+        "ogryn_bracing_reduces_damage_taken"
       ],
       "checks": []
     },
@@ -2570,9 +2590,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "09cc6db3b1839dad6d7843da9450b19ab3d241a7",
       "chinese_sha256": "2d62cb297a69d0a0b8a572a6f6ddba8f5ab3cfedaf3af750368200c9bf459c19",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_ally_elite_kills_grant_cooldown"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_256_260.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_ally_movement_boost_on_ability.md",
@@ -2754,9 +2781,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "ff0d4a3574ba57bbd61d235c3b39e8a99d265b67",
       "chinese_sha256": "796d2f6fe6d55cf8322aec236e2c88d9b6ff2262e6b9af28fef50fa73a20facd",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_bracing_reduces_damage_taken"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_256_260.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_carapace_armor.md",
@@ -3497,9 +3531,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4083780c4cb9ff27b7d0c04d2d0029d131296cd7",
       "chinese_sha256": "c336dfdcaa671ad688b2ef3fcc23a496b75184af237879a8b8607d673154eb6c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_melee_improves_ranged"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_256_260.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_melee_stagger.md",
@@ -3706,9 +3747,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "84f3e80f07d6ad44f96fc0f359b6f2852d020103",
       "chinese_sha256": "dc14d55bf9350f9712798a50e1fc79868ab7cd0d2f66f869a15d832b74659923",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_ranged_improves_melee"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_256_260.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_ranged_stance_toughness_regen.md",
@@ -4077,9 +4125,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "029fadf052c9a654a46edbe5ef2a0fd6af4ba058",
       "chinese_sha256": "577359667cd844037e82f45c14efa1222bac6472c0afe3218e16bd3f34a3bfde",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_weakspot_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_256_260.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_wield_speed_increase.md",
@@ -13157,6 +13212,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_251_255.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_wield_speed_increase.md"
+    },
+    {
+      "id": "ogryn_ranged_improves_melee",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_256_260.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_ranged_improves_melee.md"
+    },
+    {
+      "id": "ogryn_melee_improves_ranged",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_256_260.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_melee_improves_ranged.md"
+    },
+    {
+      "id": "ogryn_ally_elite_kills_grant_cooldown",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_256_260.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_ally_elite_kills_grant_cooldown.md"
+    },
+    {
+      "id": "ogryn_weakspot_damage",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_256_260.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_weakspot_damage.md"
+    },
+    {
+      "id": "ogryn_bracing_reduces_damage_taken",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_256_260.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_bracing_reduces_damage_taken.md"
     }
   ],
   "pending_chinese_corrections": [
