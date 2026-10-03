@@ -63,6 +63,7 @@
 | <img src="https://github.com/user-attachments/assets/1a08688e-e370-4eac-a27e-fd48da3b3965" width="32" height="32" alt="Born Leader talent icon"> [Born Leader](#veteran_allies_in_coherency_share_toughness_gain) | <ul><li>Increase your Coherency radius by 50%.</li><li>When you trigger Toughness recovery, other allies in Coherency each receive 20% of the amount originally requested, with their own modifiers and caps. Shared recovery does not share again.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/aba3bef3-ec36-4b94-8097-95a2f43d593e" width="32" height="32" alt="Field Improvisation talent icon"> [Field Improvisation](#veteran_better_deployables) | <ul><li>Team Ammo Crates refill eligible Grenades.</li><li>Medi-Packs heal 100% faster, remove eligible Corruption and replenish 1% of maximum Toughness per second. Lost health segments remain lost.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/8c1dadf2-9263-4efa-a710-9da08a41eb3e" width="32" height="32" alt="Covering Fire talent icon"> [Covering Fire](#veteran_replenish_toughness_and_boost_allies) | <ul><li>A ranged kill can restore 15% of maximum Toughness and grant +15% base damage for 6 seconds to one other ally near the victim.</li><li>The initial search radius is 8 metres; a selection defect can choose an ally outside it. The buff refreshes without stacking.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/284f479c-7f5d-463f-bf50-1003d34b9f5b" width="32" height="32" alt="Competitive Urge talent icon"> [Competitive Urge](#veteran_ally_kills_increase_damage) | <ul><li>Ally kills have a 2.5% chance to grant +20% base damage, melee impact and suppression for 8 seconds.</li><li>No Coherency or distance requirement. Reapplication refreshes the duration without stacking.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1242,6 +1243,26 @@ Actual final damage also depends on armor, damage profiles, weakspot/critical ef
 - The stated 8-metre limit is not guaranteed for the final recipient because of the squared-distance selection defect.
 
 [Detailed sources and formulas](veteran_replenish_toughness_and_boost_allies.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_replenish_toughness_and_boost_allies) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_ally_kills_increase_damage"></a>
+
+<img src="https://github.com/user-attachments/assets/284f479c-7f5d-463f-bf50-1003d34b9f5b" width="72" height="72" alt="Competitive Urge talent icon">
+
+### Competitive Urge
+
+- **Ally kills have a 2.5% chance to grant you +20% base damage, melee impact and suppression for 8 seconds.**
+- This talent has no Coherency or distance requirement.
+- The effect does not stack. A new proc resets its 8-second duration.
+
+**Damage and chance examples**
+
+- Isolating this damage bonus on a starting value of 100 gives `100 × 1.2 = 120`. Other bonuses and later damage calculations affect final hit damage.
+- Across 40 qualifying opportunities with the stated chance, the expected proc count is `40 × 2.5% = 1`. This does not guarantee a proc after 40 kills.
+- If the effect triggers at time 0 and again at 6 seconds, with no later proc, its expiry moves from about `0 + 8 = 8 seconds` to `6 + 8 = 14 seconds`; it remains one stack.
+
+[Detailed sources and formulas](veteran_ally_kills_increase_damage.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_ally_kills_increase_damage) | [Back to index](#talent-index)
 
 ---
 

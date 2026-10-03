@@ -5743,7 +5743,8 @@
         "veteran_increased_ranged_cleave",
         "veteran_allies_in_coherency_share_toughness_gain",
         "veteran_better_deployables",
-        "veteran_replenish_toughness_and_boost_allies"
+        "veteran_replenish_toughness_and_boost_allies",
+        "veteran_ally_kills_increase_damage"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5827,7 +5828,8 @@
         "veteran_increased_ranged_cleave",
         "veteran_allies_in_coherency_share_toughness_gain",
         "veteran_better_deployables",
-        "veteran_replenish_toughness_and_boost_allies"
+        "veteran_replenish_toughness_and_boost_allies",
+        "veteran_ally_kills_increase_damage"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5911,7 +5913,8 @@
         "veteran_increased_ranged_cleave",
         "veteran_allies_in_coherency_share_toughness_gain",
         "veteran_better_deployables",
-        "veteran_replenish_toughness_and_boost_allies"
+        "veteran_replenish_toughness_and_boost_allies",
+        "veteran_ally_kills_increase_damage"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5995,7 +5998,8 @@
         "veteran_increased_ranged_cleave",
         "veteran_allies_in_coherency_share_toughness_gain",
         "veteran_better_deployables",
-        "veteran_replenish_toughness_and_boost_allies"
+        "veteran_replenish_toughness_and_boost_allies",
+        "veteran_ally_kills_increase_damage"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6126,9 +6130,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "2c52df2abb025871c3b66928e5f56e84390d0436",
       "chinese_sha256": "828a652a6ccae1f082f930619aceda074b6d5e34a9c924526d2d346d5393130f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_ally_kills_increase_damage"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_ammo_increase.md",
@@ -9208,7 +9227,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_replenish_toughness_and_boost_allies.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_toughness_and_boost_allies.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_toughness_and_boost_allies.md",
+      "commit": "04a381488321709007412eb84421cbf9766d79b9"
+    },
+    {
+      "id": "veteran_ally_kills_increase_damage",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_ally_kills_increase_damage.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ally_kills_increase_damage.md"
     }
   ],
   "pending_chinese_corrections": [

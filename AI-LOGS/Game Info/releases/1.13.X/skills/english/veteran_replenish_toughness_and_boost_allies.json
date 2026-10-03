@@ -118,5 +118,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/covering-fire-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_toughness_and_boost_allies.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_toughness_and_boost_allies.md",
+  "commit": "04a381488321709007412eb84421cbf9766d79b9"
 }
