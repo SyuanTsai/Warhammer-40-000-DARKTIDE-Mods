@@ -55,3 +55,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Slam](ogryn_melee_stagger.md) / `ogryn_melee_stagger` | Talent |
 | [Soften Them Up](ogryn_targets_recieve_damage_taken_increase_debuff.md) / `ogryn_targets_recieve_damage_taken_increase_debuff` | Talent |
 | [Too Stubborn to Die](ogryn_toughness_on_low_health.md) / `ogryn_toughness_on_low_health` | Talent |
+| [Batter](ogryn_heavy_bleeds.md) / `ogryn_heavy_bleeds` | Talent |

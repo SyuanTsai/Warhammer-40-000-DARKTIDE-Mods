@@ -53,6 +53,7 @@
 | <img src="https://github.com/user-attachments/assets/ee98056a-b754-4821-9542-717ef68c944a" width="32" height="32" alt="Slam talent icon"> [Slam](#ogryn_melee_stagger) | <ul><li>+25% melee Impact; staggering an enemy with a melee hit or push restores 5% Stamina.</li><li>Stamina recovery has a 0.75s cooldown.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/53e0b90e-52dc-4a4a-953c-b235753aa97a" width="32" height="32" alt="Soften Them Up talent icon"> [Soften Them Up](#ogryn_targets_recieve_damage_taken_increase_debuff) | <ul><li>After your melee attack damages an enemy that survives, it takes +15% damage for 5s.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/72cbf891-ecd4-425c-8d46-97cb4d4863f9" width="32" height="32" alt="Too Stubborn to Die talent icon"> [Too Stubborn to Die](#ogryn_toughness_on_low_health) | <ul><li>While below 50% Health, increase eligible Toughness replenishment amounts by 100%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/dbfbaef7-b829-41cf-96cb-a9d09192cfbd" width="32" height="32" alt="Batter talent icon"> [Batter](#ogryn_heavy_bleeds) | <ul><li>Melee hits apply 1 Bleed stack; heavy hits apply 4, up to 16 stacks.</li></ul> | Talent |
 
 ## Blitz
 
@@ -805,3 +806,21 @@
 - **Scope**: Increases recovery amounts that use Toughness replenishment modifiers. It does not generate a recovery by itself or double all natural Coherency regeneration rates.
 
 [Details](ogryn_toughness_on_low_health.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_heavy_bleeds"></a>
+
+### Batter
+
+<img src="https://github.com/user-attachments/assets/dbfbaef7-b829-41cf-96cb-a9d09192cfbd" width="72" height="72" alt="Batter talent icon">
+
+- **Trigger**: A melee hit that damages an enemy which survives applies 1 Bleed stack; a heavy hit applies 4 stacks. Maximum 16 stacks.
+
+- **Stacks and timing**: Applying Bleed again adds stacks and resets the 1.5s duration. Bleed deals damage about every 0.5s. Once stacks stop being added and the duration ends, each tick gradually removes 1 stack.
+
+- **Damage formula**: Bleed damage increases nonlinearly with stacks. Against Unarmoured targets with no other modifiers, each tick deals `87.5 × (stacks ÷ 16)² × [3 − 2 × (stacks ÷ 16)]`.
+
+- **Damage example**: At 4 stacks, `87.5 × 0.25² × 2.5 ≈ 13.67` damage; 8 stacks deal 43.75 and 16 deal 87.5. Thus 8 stacks do not deal twice the damage of 4. Other armour types and damage bonuses change the result.
+
+[Details](ogryn_heavy_bleeds.md) · [Back to index](#talent-index)
