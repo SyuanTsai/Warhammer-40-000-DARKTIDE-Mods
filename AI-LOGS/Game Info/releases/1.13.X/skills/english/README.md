@@ -290,3 +290,7 @@ Five-item checkpoint (skills 108–112): 745 seconds (12m 25s), measured between
 - [Keeping Protocol](arbites_adamant_execution_order_permastack.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - [Not Far Behind](arbites_adamant_pinning_dog_bonus_moving_towards.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+Five-item checkpoint (skills 113–117): 844 seconds (14m 04s), measured between commits 9f19e233 and 429f9a73. 117 accepted skills; 567 mapped files pending (529 mechanisms, 36 class-support, 2 shared). Provisional remaining continuous execution estimate: 30–45h. Continued without awaiting confirmation.
+
+- [Go Get 'Em!](arbites_adamant_companion_focus_ranged.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.

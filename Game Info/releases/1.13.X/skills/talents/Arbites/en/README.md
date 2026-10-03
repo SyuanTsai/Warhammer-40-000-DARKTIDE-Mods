@@ -42,6 +42,7 @@
 | <img src="https://github.com/user-attachments/assets/ab53bec8-fd00-470c-8c5d-46cc58904f13" width="32" height="32" alt="No Lenience talent icon"> [No Lenience](#adamant_execution_order_rending) | <ul><li>Killing a Marked enemy grants a Rending bonus for 8s.</li><li>The +10% Rending modifier feeds the shared armor-damage calculation.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/eeb40551-fbea-4de0-8e46-0a07e4bfcec6" width="32" height="32" alt="Keeping Protocol talent icon"> [Keeping Protocol](#adamant_execution_order_permastack) | <ul><li>Each Marked Kill permanently increases Damage and defense against Monstrosities, up to 30 stacks.</li><li>Each stack adds +1% Damage against Monstrosities; damage taken from them is reduced multiplicatively per stack.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/0633a2b7-e8e9-4215-85a9-f54ae4d95809" width="32" height="32" alt="Not Far Behind talent icon"> [Not Far Behind](#adamant_pinning_dog_bonus_moving_towards) | <ul><li>Each Cyber-Mastiff Pounce grants the player Movement Speed and Damage bonuses for 5s.</li><li>Both bonuses are +10%; retriggering refreshes the single-stack duration.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/6208ebde-9eb1-4a4d-923c-823a0e511bf9" width="32" height="32" alt="Go Get 'Em! talent icon"> [Go Get 'Em!](#adamant_companion_focus_ranged) | <ul><li>The Cyber-Mastiff favors Ranged Enemies and gains +50% Damage against them.</li><li>Ranged focus increases their target-selection score and extends the selection distances.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -510,3 +511,15 @@
 - **Examples and refresh**: With this effect alone, base damage 100 becomes 110; with another +25% bonus in the same stage, it becomes 135. Base movement of 5m/s becomes 5 × 1.1 = 5.5m/s. Another Pounce resets the 5s countdown without increasing the bonus magnitude.
 
 [Details](adamant_pinning_dog_bonus_moving_towards.md) · [Back to index](#talent-index)
+
+<a id="adamant_companion_focus_ranged"></a>
+
+### Go Get 'Em!
+
+<img src="https://github.com/user-attachments/assets/6208ebde-9eb1-4a4d-923c-823a0e511bf9" width="72" height="72" alt="Go Get 'Em! talent icon">
+
+- **Target priority**: The Cyber-Mastiff prioritizes Ranged Enemies. Distance, threat and its current target still influence selection; choosing a Ranged Enemy is not guaranteed every time.
+
+- **Damage examples**: Cyber-Mastiff Damage against Ranged Enemies increases by 50%. With this bonus alone, base damage 100 becomes 150. With another +25% bonus in the same stage, the result is 100 × (1 + 25% + 50%) = 175.
+
+[Details](adamant_companion_focus_ranged.md) · [Back to index](#talent-index)

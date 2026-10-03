@@ -97,7 +97,8 @@
         "adamant_execution_order_cdr",
         "adamant_execution_order_rending",
         "adamant_execution_order_permastack",
-        "adamant_pinning_dog_bonus_moving_towards"
+        "adamant_pinning_dog_bonus_moving_towards",
+        "adamant_companion_focus_ranged"
       ],
       "checks": []
     },
@@ -143,7 +144,8 @@
         "adamant_execution_order_cdr",
         "adamant_execution_order_rending",
         "adamant_execution_order_permastack",
-        "adamant_pinning_dog_bonus_moving_towards"
+        "adamant_pinning_dog_bonus_moving_towards",
+        "adamant_companion_focus_ranged"
       ],
       "checks": []
     },
@@ -189,7 +191,8 @@
         "adamant_execution_order_cdr",
         "adamant_execution_order_rending",
         "adamant_execution_order_permastack",
-        "adamant_pinning_dog_bonus_moving_towards"
+        "adamant_pinning_dog_bonus_moving_towards",
+        "adamant_companion_focus_ranged"
       ],
       "checks": []
     },
@@ -235,7 +238,8 @@
         "adamant_execution_order_cdr",
         "adamant_execution_order_rending",
         "adamant_execution_order_permastack",
-        "adamant_pinning_dog_bonus_moving_towards"
+        "adamant_pinning_dog_bonus_moving_towards",
+        "adamant_companion_focus_ranged"
       ],
       "checks": []
     },
@@ -475,9 +479,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a4477591c0240d843fb6de7850f386d15bfac151",
       "chinese_sha256": "0d9ce2beb61826d862ae8fe07ae4f51fd3ec02c3f5581abb3b6b5e1694d1120e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_companion_focus_ranged"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_companion_focus_ranged.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_crit_chance_on_kill.md",
@@ -10496,6 +10507,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_pinning_dog_bonus_moving_towards.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_pinning_dog_bonus_moving_towards.md"
+    },
+    {
+      "id": "adamant_companion_focus_ranged",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_companion_focus_ranged.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_companion_focus_ranged.md"
     }
   ],
   "pending_chinese_corrections": [
