@@ -1,0 +1,127 @@
+{
+  "date": "2026-10-03",
+  "blessing": "charmed-reload",
+  "scope": "remaining same-name weapon variants",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/魔力彈藥/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_arc_rifle_p1_ammo_from_reserve_on_crit"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 2,
+  "total_bindings": 4,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings and shared execution-chain applicability.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "mode": "read-only",
+    "reviewed_variants": [
+      "weapon_trait_bespoke_arc_rifle_p1_ammo_from_reserve_on_crit"
+    ],
+    "findings": [
+      "All four Arc tiers transfer at most1 round; format_values display ammo amount only.",
+      "Top-level reload_speed=.06/.09/.12/.15 is neither a stat buff nor consumed by the shared proc; not advertised as reload speed.",
+      "Hip and braced max_critical_shots=1; new critical decision is before firing and does not require a hit.",
+      "Arc chain damage reuses current critical state without a new critical-decision event, so chain targets do not trigger multiple transfers.",
+      "Actual trait item uses ammo_refill_from_reserve_on_crit while implementation ID uses ammo_from_reserve_on_crit; icon143 and name/description keys match."
+    ],
+    "files_modified": false
+  },
+  "image": {
+    "receipt_reused_from": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-CHARMED-RELOAD_ACCEPTANCE.json",
+    "attachment": "https://github.com/user-attachments/assets/63f0f4f1-edb0-4269-84ee-ac75d14d1c92",
+    "icon_consistency_verified": true,
+    "prior_validation": {
+      "id": "charmed-reload",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_143.png",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_143",
+      "sha256": "cbb29c9a6a0c261b1df8d127e28daf186acb99f6eea1a7245a31944047909005",
+      "size": 3218,
+      "content_type": "image/png",
+      "width": 128,
+      "height": 128,
+      "attachment": "https://github.com/user-attachments/assets/63f0f4f1-edb0-4269-84ee-ac75d14d1c92",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display": "original and public attachment inspected"
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 92,
+      "tables": 86,
+      "rows": 609,
+      "lists": 79
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 325,
+      "source_files": 139,
+      "bindings": 63,
+      "variants": 27,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 792,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 92,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 152,
+    "not_started_name_groups": 151,
+    "partial_name_groups": 1,
+    "remaining_variants": 538,
+    "remaining_bindings": 1066,
+    "unresolved": 58,
+    "definitions_outside_intersection": 128
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "2252b3bc885c5521f24b39a7917c0e64f8fa4a4bf307fb9f7a05ad74220ea624"
+  },
+  "previous_local_commit": "1c06016b9c2cba9575dec46922cff2efbc47df0e",
+  "outside_intersection_review": {
+    "trait_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_ammo_from_reserve_on_crit",
+    "state": "source candidate; no matching MasterItems trait item",
+    "trait_source": {
+      "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p2.lua",
+      "start_line": 366,
+      "end_line": 399
+    },
+    "buff_source": {
+      "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p2_buff_templates.lua",
+      "start_line": 58,
+      "end_line": 58
+    },
+    "top_level_reload_speed": [
+      0.06,
+      0.09,
+      0.12,
+      0.15
+    ],
+    "reload_speed_consumed": false,
+    "player_binding_added": false,
+    "excluded_as_unused": false
+  }
+}

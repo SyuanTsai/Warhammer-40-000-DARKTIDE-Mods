@@ -72,3 +72,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [野蠻攻勢全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BRUTAL-MOMENTUM_EXTENSION_ACCEPTANCE.json)
 
 - [達姆彈全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-DUMDUM_EXTENSION_ACCEPTANCE.json)
+
+- [魔力彈藥全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-CHARMED-RELOAD_EXTENSION_ACCEPTANCE.json)

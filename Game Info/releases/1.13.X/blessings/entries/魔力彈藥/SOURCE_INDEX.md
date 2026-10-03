@@ -41,6 +41,34 @@ Release1.13.1，固定SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`，機制僅
 
 令N為等級值，C／M為效果執行時總彈匣現值／上限，R為備彈。`a=min(N,M−C,R)`，`C'=C+a`，`R'=R−a`；於合法容量狀態下`C'+R'=C+R`。[轉移算式](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua#L2985-L2998)。假設N=5,C=80,M=100,R=50，a=5，結果85／45、總130發；C=98時a=2，100／48總148；R=2時a=2，82／0總82。單位是發數，沒有傷害或最大備彈百分比倍率。
 
+## 電弧步槍差異
+
+- I–IV每次新暴擊判定最多轉移1發；共同公式仍受彈匣缺額與備彈限制。
+
+- hip／braced處理模板max_critical_shots均1。[電弧射擊設定](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_handling_templates/weapon_handling_templates.lua#L656-L685)。
+
+- 連鎖沿用當時的is_active暴擊狀態，直接呼叫Attack，沒有重新執行ActionWeaponBase的暴擊判定；命中多個連鎖目標不額外觸發轉移。[連鎖傷害](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/utilities/chain_lightning_action.lua#L258-L282)；[Attack接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/chain_lightning.lua#L500-L510)。
+
+- 四級top-level `reload_speed=.06/.09/.12/.15`不在stat_buffs或conditional_stat_buffs內；共用proc只讀num_ammmo_to_move，沒有使用這個欄位。[轉移欄位讀取](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua#L2985-L2998)；[Buff stat接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L695-L747)。
+
+- 因此該欄位完整保留為來源紀錄，不列成玩家換彈速度加成。
+
 ## 圖示
 
 item.icon `content/ui/textures/icons/traits/weapon_trait_143`；[原圖](https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_143.png)｜[Issue #14](https://github.com/SyuanTsai/Media-Assets/issues/14)｜[實際附件](https://github.com/user-attachments/assets/63f0f4f1-edb0-4269-84ee-ac75d14d1c92)。只作辨識，不作機制依據。
+
+
+## 其他武器變體
+
+| 用途 | 固定原始碼 |
+|---|---|
+| 電弧步槍等級覆寫 | [電弧步槍等級覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_arc_rifle_p1.lua#L156-L189) |
+| 電弧步槍Buff接入 | [電弧步槍Buff接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_arc_rifle_p1_buff_templates.lua#L27) |
+| UI 電弧步槍 | [UI 電弧步槍](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ui/ui_weapon_pattern_settings.lua#L635) |
+| 庫巴爾電弧步槍匯入 | [庫巴爾電弧步槍匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/arc_rifle/arc_rifle_p1_m1.lua#L20) |
+| 庫巴爾電弧步槍接入 | [庫巴爾電弧步槍接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/arc_rifle/arc_rifle_p1_m1.lua#L1059-L1061) |
+
+
+## 交集外来源候選
+
+- [重伐木槍P2來源定義](weapon_trait_bespoke_ogryn_heavystubber_p2_ammo_from_reserve_on_crit.md)：三型號模板保留定義，但快取缺少對應祝福項目。

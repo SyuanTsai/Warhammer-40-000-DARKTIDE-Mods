@@ -28,3 +28,7 @@
 - 野蠻攻勢全部UI交集變體本機Commit：`6290812ae24ec51e161fb8b2bbc05fcff1c3408e`。
 
 - [達姆彈](2026-10-03-DUMDUM_EXTENSION_ACCEPTANCE.json)：新增3變體、6型號關聯；共4變體、9關聯。
+
+- 達姆彈全部UI交集變體本機Commit：`1c06016b9c2cba9575dec46922cff2efbc47df0e`；針彈手槍保留缺項目關聯與跨族群child引用的來源候選。
+
+- [魔力彈藥](2026-10-03-CHARMED-RELOAD_EXTENSION_ACCEPTANCE.json)：新增1變體、1型號關聯；共2變體、4關聯。

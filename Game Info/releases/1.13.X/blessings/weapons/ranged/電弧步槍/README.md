@@ -5,11 +5,12 @@
 | 祝福 | 本武器主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/a11fa52e-95d6-46e4-bfd1-5fb7bb132120" width="32" height="32" alt="達姆彈祝福圖示"> [達姆彈](../../../entries/達姆彈/README.md)<br>- Dumdum<br>[完整說明](../../../entries/達姆彈/README.md) | <ul><li>每層1／2／3／4%，5層，IV級滿層20%；連鎖每批只計首個目標</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/63f0f4f1-edb0-4269-84ee-ac75d14d1c92" width="32" height="32" alt="魔力彈藥祝福圖示"> [魔力彈藥](../../../entries/魔力彈藥/README.md)<br>- Charmed Reload<br>[完整說明](../../../entries/魔力彈藥/README.md) | <ul><li>I–IV每次新暴擊判定最多轉移1發；連鎖傷害不額外補彈</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 庫巴爾電弧步槍 | [達姆彈](../../../entries/達姆彈/weapon_trait_bespoke_arc_rifle_p1_consecutive_hits_increases_close_damage.md) | I–IV |
+| 庫巴爾電弧步槍 | [達姆彈](../../../entries/達姆彈/weapon_trait_bespoke_arc_rifle_p1_consecutive_hits_increases_close_damage.md)、[魔力彈藥](../../../entries/魔力彈藥/weapon_trait_bespoke_arc_rifle_p1_ammo_from_reserve_on_crit.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。
