@@ -95,7 +95,8 @@
         "adamant_terminus_warrant_support",
         "adamant_execution_order_crit",
         "adamant_execution_order_cdr",
-        "adamant_execution_order_rending"
+        "adamant_execution_order_rending",
+        "adamant_execution_order_permastack"
       ],
       "checks": []
     },
@@ -139,7 +140,8 @@
         "adamant_terminus_warrant_support",
         "adamant_execution_order_crit",
         "adamant_execution_order_cdr",
-        "adamant_execution_order_rending"
+        "adamant_execution_order_rending",
+        "adamant_execution_order_permastack"
       ],
       "checks": []
     },
@@ -183,7 +185,8 @@
         "adamant_terminus_warrant_support",
         "adamant_execution_order_crit",
         "adamant_execution_order_cdr",
-        "adamant_execution_order_rending"
+        "adamant_execution_order_rending",
+        "adamant_execution_order_permastack"
       ],
       "checks": []
     },
@@ -227,7 +230,8 @@
         "adamant_terminus_warrant_support",
         "adamant_execution_order_crit",
         "adamant_execution_order_cdr",
-        "adamant_execution_order_rending"
+        "adamant_execution_order_rending",
+        "adamant_execution_order_permastack"
       ],
       "checks": []
     },
@@ -765,9 +769,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "9a6ce26082ab1860e0f374264d4d083d2aba69c5",
       "chinese_sha256": "b68cca6af3b35c6cf1bd4d103de532d0a8253ba4e866f0a8e3231ba0d663260e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_execution_order_permastack"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_execution_order_permastack.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_execution_order_rending.md",
@@ -10458,6 +10469,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_execution_order_rending.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_execution_order_rending.md"
+    },
+    {
+      "id": "adamant_execution_order_permastack",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_execution_order_permastack.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_execution_order_permastack.md"
     }
   ],
   "pending_chinese_corrections": [

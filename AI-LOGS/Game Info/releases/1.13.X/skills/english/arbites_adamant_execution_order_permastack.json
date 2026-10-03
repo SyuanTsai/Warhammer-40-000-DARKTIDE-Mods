@@ -1,0 +1,33 @@
+{
+  "id": "adamant_execution_order_permastack",
+  "class": "Arbites",
+  "date": "2026-10-03",
+  "name": "Keeping Protocol",
+  "status": "accepted_with_caveats",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_execution_order_permastack.md",
+  "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_execution_order_permastack.md",
+  "name_key": "loc_talent_execution_order_perma_buff",
+  "name_hash": "7222d71d",
+  "description_key": "loc_talent_execution_order_perma_buff_new_description",
+  "description_hash": "aaa5ea87",
+  "checks": {
+    "translation_values_conditions_examples": "passed",
+    "independent_English_comparison": {
+      "Consistent": 5,
+      "Not covered by the description": 1,
+      "Cannot confirm": 1
+    },
+    "changed_Markdown_fragments": 6,
+    "changed_local_links": 11,
+    "Chinese_content": "language_switch_only",
+    "git_diff_check": "passed",
+    "read_only_text_draft": "reviewed"
+  },
+  "source_reads": "Necessary missing display mappings only: adamant_talents.lua#L2211-L2238. Existing mechanisms, numerical values, citations, shared formatting and icons reused.",
+  "questions": [
+    "Game execution and final game UI observation were not performed.",
+    "Exact enemy-set equivalence between Monstrosities and breed monster tags remains unconfirmed in the existing evidence."
+  ],
+  "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_execution_order_permastack.md"
+}

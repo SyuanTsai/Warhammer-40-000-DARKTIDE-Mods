@@ -40,6 +40,7 @@
 | <img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="32" height="32" alt="Efficient Killer talent icon"> [Efficient Killer](#adamant_execution_order_crit) | <ul><li>Killing a Marked enemy grants Critical Hit Chance and Critical Hit Damage bonuses for 8s.</li><li>The bonuses are +10 percentage points of Critical Hit Chance and +25% additional critical damage.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="32" height="32" alt="Malocator talent icon"> [Malocator](#adamant_execution_order_cdr) | <ul><li>After you or your Cyber-Mastiff kills a Marked target, restore an additional 0.5s of Combat Ability cooldown each second for 8s.</li><li>Retriggering refreshes the timer; nominal additional restoration totals 4s.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/ab53bec8-fd00-470c-8c5d-46cc58904f13" width="32" height="32" alt="No Lenience talent icon"> [No Lenience](#adamant_execution_order_rending) | <ul><li>Killing a Marked enemy grants a Rending bonus for 8s.</li><li>The +10% Rending modifier feeds the shared armor-damage calculation.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/eeb40551-fbea-4de0-8e46-0a07e4bfcec6" width="32" height="32" alt="Keeping Protocol talent icon"> [Keeping Protocol](#adamant_execution_order_permastack) | <ul><li>Each Marked Kill permanently increases Damage and defense against Monstrosities, up to 30 stacks.</li><li>Each stack adds +1% Damage against Monstrosities; damage taken from them is reduced multiplicatively per stack.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -484,3 +485,15 @@
 - **Damage examples**: At base damage 100 and an original armor-damage coefficient of 0.5, damage rises from 50 to 100 × (0.5 + 0.1) = 60, a 20% increase. If the coefficient is already 1 and the armor supports excess conversion, the result is 100 × (1 + 0.1 × 0.25) = 102.5.
 
 [Details](adamant_execution_order_rending.md) · [Back to index](#talent-index)
+
+<a id="adamant_execution_order_permastack"></a>
+
+### Keeping Protocol
+
+<img src="https://github.com/user-attachments/assets/eeb40551-fbea-4de0-8e46-0a07e4bfcec6" width="72" height="72" alt="Keeping Protocol talent icon">
+
+- **Accumulation and removal**: Each Marked Kill adds one stack, up to 30. The effect lasts until the end of the mission.
+
+- **Maximum-stack example**: At 30 stacks, gain +30% Damage against Monstrosities. Damage taken from them has multiplier 0.99^30 ≈ 0.740, about a 26.0% reduction with this effect alone. For example, base damage of 100 against a Monstrosity becomes 130; incoming damage of 100 from one becomes about 73.97.
+
+[Details](adamant_execution_order_permastack.md) · [Back to index](#talent-index)
