@@ -63,6 +63,7 @@
 | <img src="https://github.com/user-attachments/assets/8c224499-f2ca-420c-bcf6-39034e6a35b2" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_1) | <ul><li>Increase Melee Damage by 10%.</li></ul> | Stat node |
 | <img src="https://github.com/user-attachments/assets/549d3657-c19a-49a6-b8ad-2c1e77080dfa" width="32" height="32" alt="Razor-Jaw Augment talent icon"> [Razor-Jaw Augment](#adamant_dog_pounces_bleed_nearby) | <ul><li>Your Cyber-Mastiff's surrounding pounce push and pinning attacks against Ogryns or Monsters can apply 6 stacks of Bleed.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d856ef6a-9f61-4b4a-b672-e60019dea866" width="32" height="32" alt="Imposing Force talent icon"> [Imposing Force](#adamant_damage_reduction_after_elite_kill) | <ul><li>An Elite or Specialist kill grants 25% Damage Resistance for 5s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/fd423ddb-0080-4603-8fd7-90257b583c3d" width="32" height="32" alt="Hold the Line talent icon"> [Hold the Line](#adamant_staggers_reduce_damage_taken) | <ul><li>Stagger enemies to build up to 5 damage-reduction stacks lasting 8s; a received melee hit clears them.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -785,3 +786,15 @@
 - **Damage-reduction example**: For an original 100 incoming damage, this effect alone gives 100 × 0.75 = 75. With another independent 20% damage reduction, the result is 100 × 0.75 × 0.8 = 60.
 
 [Details](adamant_damage_reduction_after_elite_kill.md) · [Back to index](#talent-index)
+
+<a id="adamant_staggers_reduce_damage_taken"></a>
+
+### Hold the Line
+
+<img src="https://github.com/user-attachments/assets/fd423ddb-0080-4603-8fd7-90257b583c3d" width="72" height="72" alt="Hold the Line talent icon">
+
+- **Stacks and removal**: Staggering an ordinary enemy grants 1 stack; Staggering an Ogryn or Monster grants 5, up to a maximum of 5. Another trigger resets the 8s countdown. A received melee hit clears all stacks.
+
+- **Damage-reduction example**: Each stack multiplies damage taken by 0.97. At 5 stacks, 100 × 0.97⁵ ≈ 85.87 points, approximately 14.13% less damage. While active, the effect also reduces ranged damage; a ranged hit does not consume the stacks.
+
+[Details](adamant_staggers_reduce_damage_taken.md) · [Back to index](#talent-index)
