@@ -23,5 +23,6 @@
 | <img src="https://github.com/user-attachments/assets/8ad696a1-e0d1-4a5b-a352-4597b5c71b90" width="32" height="32" alt="掃射祝福圖示"> [掃射](entries/掃射/README.md)<br>- Raking Fire<br>[完整說明](entries/掃射/README.md) | <ul><li>從敵人背面半圈射擊時，I–IV傷害增加32.5%／35%／37.5%／40%；持用期間逐次判定，沒有疊層或倒數。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/c00f0d06-a32b-43c4-a438-76598dd7c8f9" width="32" height="32" alt="連跑帶打祝福圖示"> [連跑帶打](entries/連跑帶打/README.md)<br>- Run 'n' Gun<br>[完整說明](entries/連跑帶打/README.md) | <ul><li>可在衝刺時腰射；I–IV衝刺近距離傷害+6%／9%／12%／15%；散布常駐減少30%，雙管霰彈槍為10%。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/4a057aec-b5c7-4d9c-8399-a70094eb498a" width="32" height="32" alt="永燃烈焰祝福圖示"> [永燃烈焰](entries/永燃烈焰/README.md)<br>- Everlasting Flame<br>[完整說明](entries/永燃烈焰/README.md) | <ul><li>新的暴擊判定成功時，I–IV從備彈移入燃料箱最多2／3／4／5單位；未命中也可觸發，受燃料箱缺額與備彈限制。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/493a9f0e-5e68-4416-bbf3-d99bdfc85b1b" width="32" height="32" alt="電靈超載祝福圖示"> [電靈超載](entries/電靈超載/README.md)<br>- Voltagheist Overload<br>[完整說明](entries/電靈超載/README.md) | <ul><li>電弧命中仍存活的人型敵人時，I–IV各有5%／7.5%／10%／12.5%機率處決；不作用於歐格林、魔物及首領。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

@@ -45,3 +45,4 @@
 | [衝覆者霰彈手槍和防暴盾牌](ranged/衝覆者霰彈手槍和防暴盾牌/README.md)<br>- Subductor Shotpistol and Riot Shield | 遠程 | 衝覆者霰彈手槍和防暴盾牌 審判 Mk IV |
 | [快拔左輪手槍](ranged/快拔左輪手槍/README.md)<br>- Quickdraw Stub Revolver | 遠程 | 快拔左輪手槍 紮羅娜 Mk IIa、快拔左輪手槍 阿格里皮娜 Mk XIV |
 | [淨化噴火器](ranged/淨化噴火器/README.md)<br>- Purgation Flamer | 遠程 | 淨化噴火器 奧特米亞 Mk III |
+| [電弧鎚](melee/電弧鎚/README.md)<br>- Arc Maul | 近戰 | 電弧鎚 布蘭克斯 Mk III |

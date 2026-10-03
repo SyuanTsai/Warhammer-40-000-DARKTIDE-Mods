@@ -94,3 +94,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [連跑帶打全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-RUN-N-GUN_ACCEPTANCE.json)
 
 - [永燃烈焰全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-EVERLASTING-FLAME_ACCEPTANCE.json)
+
+- [電靈超載全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-VOLTAGHEIST-OVERLOAD_ACCEPTANCE.json)

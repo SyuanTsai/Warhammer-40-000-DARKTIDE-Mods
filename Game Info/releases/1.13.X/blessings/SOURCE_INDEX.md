@@ -21,3 +21,4 @@
 | [掃射](entries/掃射/README.md) | [來源索引](entries/掃射/SOURCE_INDEX.md) |
 | [連跑帶打](entries/連跑帶打/README.md) | [來源索引](entries/連跑帶打/SOURCE_INDEX.md) |
 | [永燃烈焰](entries/永燃烈焰/README.md) | [來源索引](entries/永燃烈焰/SOURCE_INDEX.md) |
+| [電靈超載](entries/電靈超載/README.md) | [來源索引](entries/電靈超載/SOURCE_INDEX.md) |

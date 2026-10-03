@@ -1,0 +1,198 @@
+{
+  "date": "2026-10-03",
+  "blessing": "voltagheist-overload",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/電靈超載/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_powermaul_p3_arc_has_killing_blow_chance"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_evidence",
+    "scope": "Voltagheist Overload same-blessing mechanics and player examples; read-only",
+    "findings": [
+      "I–IV .05/.075/.10/.125 per qualified arc on_hit, held and matching weapon item.",
+      "Predicate alive/valid breed excludes captain/monster/ogryn/cultist_captain.",
+      "Direct sweep melee and special push shout are separate; one chain per sweep, each alive depth>0 node gets arc hit; no DoT ticks.",
+      "Instakill call omits item; no recursive same blessing, no blanket generic proc suppression.",
+      "Invulnerable minion remains alive at zero damage; on_kill only died, on_damage_dealt only damage>0.",
+      "Independent-trial probability examples confirmed."
+    ],
+    "collaborators": [
+      {
+        "agent": "/root/blessing_bindings",
+        "model": "gpt-6-luna",
+        "reasoning_effort": "max",
+        "complete": true,
+        "scope": "same blessing exact metadata/RAW/UI/import and candidates; read-only",
+        "findings": [
+          "Name hash b54f57d4 and description hash4e75d43d: both locales unchanged English.",
+          "One exact metadata item icon250, restriction powermaul_p3.",
+          "One binding, current UI 電弧鎚 布蘭克斯 Mk III; registration73/import16/append2631.",
+          "No additional exact-key outside/unresolved candidate in inspected index."
+        ],
+        "translation_candidates": [
+          "伏特幽靈超載",
+          "電壓幽靈超載"
+        ],
+        "primary_resolution": "文件譯名採電靈超載，Voltagheist用簡潔意譯，Overload沿用詞表超載；不推測官方命名由來，保留原RAW名稱/描述與hash，不宣稱官方繁中。"
+      }
+    ],
+    "final_document_review": {
+      "agent_result": "accepted after exact event-wording correction",
+      "required_correction": "Qualify on_hit/on_kill/on_damage_dealt by actual conditions",
+      "primary_correction_completed": true,
+      "primary_result": "accepted after direct source and corrected player wording review",
+      "initial_agent_result": "withheld for unconditional generic-event wording only; other mechanics and examples confirmed",
+      "final_response": "Accepted。唯一必要修正已完成；其他核心說明與算例可驗收。"
+    },
+    "primary_review": "Directly read trait overrides, proc predicate/execute, item match, actual sweep/shout paths, per-target chain execution, Attack queue/event and max-health instakill, minion invulnerability and current UI/template imports."
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/493a9f0e-5e68-4416-bbf3-d99bdfc85b1b",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "voltagheist-overload",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_250",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_250.png",
+      "attachment": "https://github.com/user-attachments/assets/493a9f0e-5e68-4416-bbf3-d99bdfc85b1b",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5966184746",
+      "acquired_date": "2026-10-03",
+      "sha256": "9109a9a8296def33f6b69937a23be05a90d12fcd28b1c86f9135a718cd765502",
+      "content_type": "image/png",
+      "size": 6055,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "電靈超載祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 216,
+      "tables": 186,
+      "rows": 1403,
+      "lists": 265
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 676,
+      "source_files": 250,
+      "bindings": 129,
+      "variants": 67,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 916,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 216,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 148,
+    "not_started_name_groups": 148,
+    "partial_name_groups": 0,
+    "remaining_variants": 521,
+    "remaining_bindings": 1039,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "7238ab1fe4b7ebbcdd99796939d5671d67fa957ff1e87410672fa5dfd66c6f1a"
+  },
+  "previous_local_commit": "7eaf7332f6dc0d9052079f56d53fb2e655b31cc4",
+  "current_blessing_formula_review": {
+    "primary_direct_source_review": true,
+    "tiers": [
+      0.05,
+      0.075,
+      0.1,
+      0.125
+    ],
+    "event_chance_per_qualified_target": true,
+    "conditions": [
+      "held",
+      "item match",
+      "alive at proc processing",
+      "attack_type arc",
+      "valid breed",
+      "not captain/monster/ogryn/cultist_captain"
+    ],
+    "independent_trials_examples": {
+      "p": 0.125,
+      "four_at_least_one": 0.413818359375,
+      "eight_all_failure": 0.34360891580581665,
+      "eight_expected_successes": 1
+    },
+    "instakill_call_item_omitted_no_inference_in_Attack_execute": true,
+    "generic_events_still_generated": {
+      "on_hit": "normal eligibility",
+      "on_kill": "result died",
+      "on_damage_dealt": "damage>0"
+    },
+    "no_global_instakill_proc_suppression": true,
+    "actual_arc_chain_each_depth_positive_alive_target": "ChainLightningAction243-285, ChainLightning500-510",
+    "special_pushfollow_shout_not_arc": "ActionWeaponShout187/207-219 consumes shout type; template chain_damage_settings not consumed here",
+    "gameplay_test": "not run"
+  },
+  "ui_name_review": {
+    "primary_direct_review": true,
+    "current_ui_name": "電弧鎚 布蘭克斯 Mk III",
+    "keys": [
+      "loc_weapon_family_powermaul_p3_m1",
+      "loc_weapon_pattern_powermaul_p3_m1",
+      "loc_weapon_mark_powermaul_p3_m1"
+    ],
+    "hashes": [
+      "c726a592",
+      "7ab1b189",
+      "523af6db"
+    ],
+    "legacy_direct_display_name_not_used": true
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 1,
+    "bound_variants": 1,
+    "same_name_candidates": [],
+    "status": "primary and binding agent exact metadata/inventory/fixed-source checked; no additional exact-key candidate in inspected scope"
+  },
+  "name_translation_review": {
+    "name": "電靈超載",
+    "status": "document_translation",
+    "raw_zh_tw": "Voltagheist Overload",
+    "original_name_hash": "b54f57d4",
+    "primary_choice": "Voltagheist uses concise descriptive 電靈; Overload follows existing glossary 超載. Original RAW preserved, not presented as official locale value."
+  }
+}

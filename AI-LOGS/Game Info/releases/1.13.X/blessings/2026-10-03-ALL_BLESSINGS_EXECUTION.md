@@ -75,3 +75,7 @@
 - 連跑帶打本機 Commit：`914d08e004185d76f8c4dff159f8b5fd019844bc`；完成後才派工永燃烈焰，按使用者授權以兩位Luna／max分查機制與型號／原文。
 
 - [永燃烈焰](2026-10-03-EVERLASTING-FLAME_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
+
+- 永燃烈焰本機Commit：`7eaf7332f6dc0d9052079f56d53fb2e655b31cc4`。
+
+- [電靈超載](2026-10-03-VOLTAGHEIST-OVERLOAD_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
