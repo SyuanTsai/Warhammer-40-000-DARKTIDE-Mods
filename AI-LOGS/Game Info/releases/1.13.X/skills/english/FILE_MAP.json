@@ -2197,7 +2197,12 @@
         "ogryn_passive_heavy_hitter",
         "ogryn_carapace_armor_trigger_on_zero_stacks",
         "ogryn_carapace_armor_add_stack_on_push",
-        "ogryn_carapace_armor_more_toughness"
+        "ogryn_carapace_armor_more_toughness",
+        "ogryn_leadbelcher_cooldown_reduction",
+        "ogryn_leadbelcher_crits",
+        "ogryn_blo_ally_ranged_buffs",
+        "ogryn_blo_wield_speed",
+        "ogryn_blo_melee"
       ],
       "checks": []
     },
@@ -2235,7 +2240,12 @@
         "ogryn_passive_heavy_hitter",
         "ogryn_carapace_armor_trigger_on_zero_stacks",
         "ogryn_carapace_armor_add_stack_on_push",
-        "ogryn_carapace_armor_more_toughness"
+        "ogryn_carapace_armor_more_toughness",
+        "ogryn_leadbelcher_cooldown_reduction",
+        "ogryn_leadbelcher_crits",
+        "ogryn_blo_ally_ranged_buffs",
+        "ogryn_blo_wield_speed",
+        "ogryn_blo_melee"
       ],
       "checks": []
     },
@@ -2273,7 +2283,12 @@
         "ogryn_passive_heavy_hitter",
         "ogryn_carapace_armor_trigger_on_zero_stacks",
         "ogryn_carapace_armor_add_stack_on_push",
-        "ogryn_carapace_armor_more_toughness"
+        "ogryn_carapace_armor_more_toughness",
+        "ogryn_leadbelcher_cooldown_reduction",
+        "ogryn_leadbelcher_crits",
+        "ogryn_blo_ally_ranged_buffs",
+        "ogryn_blo_wield_speed",
+        "ogryn_blo_melee"
       ],
       "checks": []
     },
@@ -2311,7 +2326,12 @@
         "ogryn_passive_heavy_hitter",
         "ogryn_carapace_armor_trigger_on_zero_stacks",
         "ogryn_carapace_armor_add_stack_on_push",
-        "ogryn_carapace_armor_more_toughness"
+        "ogryn_carapace_armor_more_toughness",
+        "ogryn_leadbelcher_cooldown_reduction",
+        "ogryn_leadbelcher_crits",
+        "ogryn_blo_ally_ranged_buffs",
+        "ogryn_blo_wield_speed",
+        "ogryn_blo_melee"
       ],
       "checks": []
     },
@@ -2395,9 +2415,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "29742fb26035c3880fa6d0afb40ba08463940c48",
       "chinese_sha256": "c6f1016aedd9d4f909f9a624c0f0b470aa76dcd055a22bce9e29b72facfa392b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_blo_ally_ranged_buffs"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_201_205.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_blo_melee.md",
@@ -2406,9 +2433,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6377e565b808a1a4f8766f4ef44d0acac48958c4",
       "chinese_sha256": "10700d83ae8ca273cd167a80cde2c48c2641bae3bee932705f10e2ce233ea950",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_blo_melee"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_201_205.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_blo_wield_speed.md",
@@ -2417,9 +2451,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "22af31333ba87122884c0bf4bcd58549da42e81d",
       "chinese_sha256": "caf1d6691991eb07279778273cd47cdd149d23482aef22d1d32016dfb097056b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_blo_wield_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_201_205.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_block_all_attacks.md",
@@ -2945,9 +2986,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1232e341a106acc3d4e6ac376ba2b8075e3cae54",
       "chinese_sha256": "64c820be826df6afe6639a34b9d9df8616043690d95de1a6b302b93d8be86e04",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_leadbelcher_cooldown_reduction"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_201_205.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_leadbelcher_crits.md",
@@ -2956,9 +3004,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "968eb12362737caa7d1b810d0d5f9d8fe8ee8d22",
       "chinese_sha256": "42c761dfcc29c167431f911b4cb94f5528423b72808ee7bf0acfef6bac7ee17c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_leadbelcher_crits"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_201_205.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_leadbelcher_no_ammo_chance.md",
@@ -12113,6 +12168,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_196_200.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_carapace_armor_more_toughness.md"
+    },
+    {
+      "id": "ogryn_leadbelcher_cooldown_reduction",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_201_205.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_leadbelcher_cooldown_reduction.md"
+    },
+    {
+      "id": "ogryn_leadbelcher_crits",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_201_205.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_leadbelcher_crits.md"
+    },
+    {
+      "id": "ogryn_blo_ally_ranged_buffs",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_201_205.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_blo_ally_ranged_buffs.md"
+    },
+    {
+      "id": "ogryn_blo_wield_speed",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_201_205.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_blo_wield_speed.md"
+    },
+    {
+      "id": "ogryn_blo_melee",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_201_205.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_blo_melee.md"
     }
   ],
   "pending_chinese_corrections": [

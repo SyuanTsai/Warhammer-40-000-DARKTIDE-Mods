@@ -334,3 +334,5 @@ Five-item checkpoint (skills 113–117): 844 seconds (14m 04s), measured between
 - [Ogryn skills 191–195](ogryn_skills_191_195.json): Valuable Distraction, Bullet Bravado, No Pain!, Trample and Burst Limiter Override. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
 
 - [Ogryn skills 196–200](ogryn_skills_196_200.json): Feel No Pain, Heavy Hitter, Pained Outburst, Strongest! and Toughest!. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
+
+- [Ogryn skills 201–205](ogryn_skills_201_205.json): Maximum Firepower, Good Shootin’, Bulletstorm, Heat of Battle and Back Off!. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
