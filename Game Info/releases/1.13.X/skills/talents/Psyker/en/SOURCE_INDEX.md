@@ -38,3 +38,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Telekine Dome](psyker_sphere_shield.md) / `psyker_sphere_shield` | Ability |
 | [Enervating Threshold](psyker_shield_stun_passive.md) / `psyker_shield_stun_passive` | Ability |
 | [Warp Unbound](psyker_overcharge_stance_infinite_casting.md) / `psyker_overcharge_stance_infinite_casting` | Ability |
+| [Warp Siphon](psyker_passive_souls_from_elite_kills.md) / `psyker_passive_souls_from_elite_kills` | Keystone |

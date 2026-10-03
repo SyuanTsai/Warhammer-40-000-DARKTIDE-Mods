@@ -334,6 +334,18 @@ Full raw template and formatting: [source evidence](psyker_overcharge_stance_inf
 | Post-Gaze overload protection | Scrier's Gaze prevents overloading from Perils of the Warp during its lingering effect; `ui / loc_talent_psyker_overcharge_infinite_casting_desc / 10334171` | On Gaze stop, the selected special rule applies the psychic_fortress protection buff instead of normal cool_off. [Fixed source and line references](psyker_overcharge_stance_infinite_casting.md#fixed-source-evidence) | Consistent | The protective effect and post-active-state timing agree. |
 | Protection duration and unchanged Peril behavior | No numeric protection duration, halted Peril Generation or extended active-state duration stated; `ui / loc_talent_psyker_overcharge_infinite_casting_desc / 10334171` | Protection lasts post_stance_duration 10 + cooloff_duration 1.5 = 11.5 seconds after stop. Peril still accumulates; active Gaze still ends at 100%. [Fixed source and line references](psyker_overcharge_stance_infinite_casting.md#fixed-source-evidence) | Not covered by the description | The total duration, buffer and Peril-state limits supplement the English. |
 
+
+<a id="psyker_passive_souls_from_elite_kills"></a>
+
+## Warp Siphon
+
+Full raw template and formatting: [source evidence](psyker_passive_souls_from_elite_kills.md#original-english-template-and-reconstruction). Name hash `7f1f1d93`. Every row uses `ui / loc_talent_psyker_souls_new_desc / 9ea525d4`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Kills, stacks and ability benefit | Elite or Specialist kill; 25s; four stacks; +4% Base Damage and 7.5% cooldown reduction per Warp Charge; `ui / loc_talent_psyker_souls_new_desc / 9ea525d4` | Qualifying kill gives one stack; base cap four and duration 25; Damage is 0.24 / 6 per stack; ability event restores 0.075 × N of one charge and spends all stacks. [Fixed source and line references](psyker_passive_souls_from_elite_kills.md#fixed-source-evidence) | Consistent | The stated triggers, values and effect directions match the accepted evidence. |
+| Timer and resource details | Does not specify shared timer refresh, gradual decay, the Damage denominator or ability-resource overflow; `ui / loc_talent_psyker_souls_new_desc / 9ea525d4` | Stack events refresh the timer even at cap; expiry removes one and restarts it. Damage uses max_souls_talent = 6. Restoration is a proportion of one ability charge and can carry over to later charges. [Fixed source and line references](psyker_passive_souls_from_elite_kills.md#fixed-source-evidence) | Not covered by the description | These explain the verified examples and boundaries without contradicting the English. Two stacks per kill and the six-stack cap require other talents. |
+
 ## Comparison totals
 
 The 53 listed rules comprise **26 Consistent**, **0 Explicit contradictions**, **25 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.

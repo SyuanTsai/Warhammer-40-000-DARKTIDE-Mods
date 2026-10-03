@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/60e6d4b2-0696-4215-8afd-8c9725d4801f" width="32" height="32" alt="Telekine Dome talent icon"> [Telekine Dome](#psyker_sphere_shield) | <ul><li>Telekine Shield becomes a spherical barrier of about 6 metres radius, lasting up to 25 seconds with a 60-second base cooldown; durability remains 20 accepted hits.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191" width="32" height="32" alt="Enervating Threshold talent icon"> [Enervating Threshold](#psyker_shield_stun_passive) | <ul><li>Enemies passing through your Telekine Shield have a 20% Electrocution chance. Specialists and Monsters trigger with 100% chance; Specialists also damage the shield.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/810110f9-a360-4a69-8754-0e3502a0bef8" width="32" height="32" alt="Warp Unbound talent icon"> [Warp Unbound](#psyker_overcharge_stance_infinite_casting) | <ul><li>After Scrier's Gaze ends, gain protection from Peril overload for 11.5 seconds; Peril continues to accumulate normally.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/07eff6fd-5c1a-49f2-8a72-d689ec6bb42e" width="32" height="32" alt="Warp Siphon talent icon"> [Warp Siphon](#psyker_passive_souls_from_elite_kills) | <ul><li>Personal Elite or Specialist kills grant Warp Charges: +4% Damage per charge, with all charges spent by a Combat Ability to restore 7.5% of one charge's cooldown per Warp Charge.</li></ul> | Keystone |
 
 ---
 
@@ -447,3 +448,21 @@
 - **Duration**: The 10-second post-Gaze effect plus a 1.5-second buffer gives `10 + 1.5 = 11.5` seconds. Gaze itself still ends at 100% Peril.
 
 [Details](psyker_overcharge_stance_infinite_casting.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_passive_souls_from_elite_kills"></a>
+
+### Warp Siphon
+
+<img src="https://github.com/user-attachments/assets/07eff6fd-5c1a-49f2-8a72-d689ec6bb42e" width="72" height="72" alt="Warp Siphon talent icon">
+
+- **Gaining and retaining charges:** Personally kill an Elite or Specialist Enemy to gain one Warp Charge, up to four stacks, lasting 25 seconds. Gaining another charge resets the shared timer. Expiry removes one stack and restarts the 25-second countdown.
+
+- **Damage example:** Each stack adds 4% Damage. With no other bonuses, four stacks turn 100 Damage into `100 × (1 + 4% × 4) = 116`; six stacks with Warp Battery give 124.
+
+- **Cooldown example:** Using a Combat Ability spends every Warp Charge. Each restores 7.5% of the cooldown required for one use of that ability. For a 30-second cooldown and four stacks, this immediately restores `30 × 7.5% × 4 = 9` seconds of progress, leaving about 21 seconds.
+
+- **Abilities with multiple charges:** Restoration first fills the charge currently counting down; any progress exceeding the amount required for that charge carries over to subsequent charges.
+
+[Details](psyker_passive_souls_from_elite_kills.md) · [Back to index](#talent-index)
