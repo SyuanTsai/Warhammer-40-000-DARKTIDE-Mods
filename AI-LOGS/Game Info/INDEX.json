@@ -1394,6 +1394,14 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance.json",
       "date": "2026-10-03",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_stance_ranged_kills_transfer_ammo",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance_ranged_kills_transfer_ammo.json",
+      "date": "2026-10-03",
+      "storage": "git"
     }
   ],
   "pending": [

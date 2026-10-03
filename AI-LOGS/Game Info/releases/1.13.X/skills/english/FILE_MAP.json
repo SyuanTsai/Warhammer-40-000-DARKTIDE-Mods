@@ -72,7 +72,8 @@
         "adamant_damage_vs_staggered_aura",
         "adamant_charge",
         "adamant_area_buff_drone_improved",
-        "adamant_stance"
+        "adamant_stance",
+        "adamant_stance_ranged_kills_transfer_ammo"
       ],
       "checks": []
     },
@@ -93,7 +94,8 @@
         "adamant_damage_vs_staggered_aura",
         "adamant_charge",
         "adamant_area_buff_drone_improved",
-        "adamant_stance"
+        "adamant_stance",
+        "adamant_stance_ranged_kills_transfer_ammo"
       ],
       "checks": []
     },
@@ -114,7 +116,8 @@
         "adamant_damage_vs_staggered_aura",
         "adamant_charge",
         "adamant_area_buff_drone_improved",
-        "adamant_stance"
+        "adamant_stance",
+        "adamant_stance_ranged_kills_transfer_ammo"
       ],
       "checks": []
     },
@@ -135,7 +138,8 @@
         "adamant_damage_vs_staggered_aura",
         "adamant_charge",
         "adamant_area_buff_drone_improved",
-        "adamant_stance"
+        "adamant_stance",
+        "adamant_stance_ranged_kills_transfer_ammo"
       ],
       "checks": []
     },
@@ -1082,9 +1086,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "61c2b47f78de6e3f4d3a463dc46ca3cb6ab8433a",
       "chinese_sha256": "af922a7c257a2e0587039fbc838ce5cc0e0c0cbcbbf27de126336241726b9f47",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_stance_ranged_kills_transfer_ammo"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance_ranged_kills_transfer_ammo.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_terminus_warrant.md",
@@ -10021,6 +10032,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stance.md"
+    },
+    {
+      "id": "adamant_stance_ranged_kills_transfer_ammo",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_stance_ranged_kills_transfer_ammo.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stance_ranged_kills_transfer_ammo.md"
     }
   ],
   "pending_chinese_corrections": [

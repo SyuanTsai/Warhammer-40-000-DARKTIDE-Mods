@@ -232,3 +232,5 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Nuncio-Aquila](arbites_adamant_area_buff_drone_improved.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - [Castigator's Stance](arbites_adamant_stance.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- [Blessed Armament](arbites_adamant_stance_ranged_kills_transfer_ammo.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.

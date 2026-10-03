@@ -17,6 +17,7 @@
 | <img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="32" height="32" alt="Break the Line talent icon"> [Break the Line](#adamant_charge) | <ul><li>Step forward and Bash; count as Blocking during the charge, then gain Damage and Impact bonuses for 6s.</li><li>Base cooldown 20s; one charge.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="Nuncio-Aquila talent icon"> [Nuncio-Aquila](#adamant_area_buff_drone_improved) | <ul><li>Deploy for 20s in a 7.5m radius; 60s cooldown, one charge.</li><li>The improved version restores 7.5% maximum Toughness per second, increases Suppression and Impact, and reduces Recoil; it grants immunity to Stun, Slowdown and Suppression.</li><li>Enemies within range take 15% more damage.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/4eb18874-83b0-4e2f-bf2b-c91001a15371" width="32" height="32" alt="Castigator's Stance talent icon"> [Castigator's Stance](#adamant_stance) | <ul><li>Replenish all Toughness on activation. For 10s, gain 15% Movement Speed and 20% Strength (PowerLevel), and take 70% less damage; cannot Sprint.</li><li>50s cooldown, one charge; damage reduction continues for 2s after the stance ends.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/8c312d8e-8b49-45cd-828e-62cffc6d0a25" width="32" height="32" alt="Blessed Armament talent icon"> [Blessed Armament](#adamant_stance_ranged_kills_transfer_ammo) | <ul><li>During Castigator's Stance, ranged kills transfer 10% of Clip capacity from Reserve, rounded upward and capped by missing Clip ammunition.</li><li>The base stance lasts 10s.</li></ul> | Ability |
 
 ## Blitz
 
@@ -151,3 +152,17 @@
 - **Power and movement example**: Isolating this effect, PowerLevel 500 becomes `500 × 1.2 = 600`, and movement speed 5m/s becomes `5 × 1.15 = 5.75m/s`. PowerLevel then enters the separate Damage, Impact and Cleave formulas; these outputs do not all simply increase by 20%.
 
 [Details](adamant_stance.md) · [Back to index](#talent-index)
+
+<a id="adamant_stance_ranged_kills_transfer_ammo"></a>
+
+### Blessed Armament
+
+<img src="https://github.com/user-attachments/assets/8c312d8e-8b49-45cd-828e-62cffc6d0a25" width="72" height="72" alt="Blessed Armament talent icon">
+
+- **Trigger**: Ranged kills replenish ammunition only during Castigator's Stance. Ammunition transfers from Reserve into the Clip.
+
+- **Transfer calculation**: Each trigger calculates 10% of Clip capacity and rounds upward. A 30-round Clip gives `30 × 10% = 3 rounds`; if only one round is missing, transfer only one. If Reserve is insufficient, transfer only the ammunition remaining there; this effect does not create ammunition.
+
+- **Active period**: The effect operates with Castigator's Stance, whose base duration is 10s.
+
+[Details](adamant_stance_ranged_kills_transfer_ammo.md) · [Back to index](#talent-index)
