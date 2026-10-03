@@ -17,3 +17,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Ethereal Shards](psyker_throwing_knives_piercing.md) / `psyker_throwing_knives_piercing` | Blitz |
 | [Smite](psyker_grenade_chain_lightning.md) / `psyker_grenade_chain_lightning` | Blitz |
 | [Kinetic Resonance](psyker_ability_increase_brain_burst_speed.md) / `psyker_ability_increase_brain_burst_speed` | Blitz |
+| [Quick Shards](psyker_throwing_knives_cast_speed.md) / `psyker_throwing_knives_cast_speed` | Blitz |

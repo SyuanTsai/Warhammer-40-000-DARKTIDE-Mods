@@ -80,6 +80,18 @@ Full raw template and formatting: [source evidence](psyker_ability_increase_brai
 | Trigger, duration, charge speed and generated Peril | `Using your Combat Ability`; `Brain Rupture charge +75% faster`; `generate 50% less Peril for 10s`; `ui / loc_talent_psyker_ability_increase_brain_burst_speed_desc / ee94ffdd` | `on_combat_ability` adds `psyker_efficient_smites` for 10 seconds; `smite_attack_speed=0.75` and `warp_charge_amount_smite=0.5`. [Fixed source and line references](psyker_ability_increase_brain_burst_speed.md#fixed-source-evidence) | Consistent | The English's trigger, duration and effect directions/values agree. |
 | Reciprocal timing and example assumptions | `charge ... faster`, without a percentage decrease in charge time; `ui / loc_talent_psyker_ability_increase_brain_burst_speed_desc / ee94ffdd` | Speed 1+0.75=1.75 divides the original duration: 2÷1.75≈1.14 seconds, about 42.86% less time; actual timing/cost depends on action and other modifiers. [Fixed source and line references](psyker_ability_increase_brain_burst_speed.md#fixed-source-evidence) | Not covered by the description | The formula and limits clarify the effect without contradicting the speed wording. |
 
+
+<a id="psyker_throwing_knives_cast_speed"></a>
+
+## Quick Shards
+
+Full raw template and formatting: [source evidence](psyker_throwing_knives_cast_speed.md#original-english-template-and-reconstruction). Name hash `55e1656b`. Every row uses `ui / loc_talent_psyker_throwing_knives_cast_speed_description / da103b93`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Charge replenishment rate | `Assail charges Replenish {recharge%s} faster`; mapped value `30%`; `ui / loc_talent_psyker_throwing_knives_cast_speed_description / da103b93` | The current passive installs `psyker_reduced_throwing_knife_cooldown`, providing regeneration multiplier 1+0.3=1.3; it does not install the retained stacking-speed proc. [Fixed source and line references](psyker_throwing_knives_cast_speed.md#fixed-source-evidence) | Consistent | Charge replenishment and its mapped increase agree; static substitution does not claim observed game rendering. |
+| Time conversion, recovery limits and unused fields | No wait-time percentage reduction or stacking-speed benefit stated; `ui / loc_talent_psyker_throwing_knives_cast_speed_description / da103b93` | One use takes 3÷1.3≈2.31 seconds; a 30% rate increase reduces the wait by about 23.08%. Other modifiers/pauses apply; retained 8-second/5-stack/5%-per-stack speed definitions are inactive here. [Fixed source and line references](psyker_throwing_knives_cast_speed.md#fixed-source-evidence) | Not covered by the description | These omitted formulas, limits and unused definitions do not contradict the English. |
+
 ## Comparison totals
 
 The 11 listed rules comprise **5 Consistent**, **0 Explicit contradictions**, **5 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.

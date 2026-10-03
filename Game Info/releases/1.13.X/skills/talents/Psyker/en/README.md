@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/ae86e2bb-6971-4dfe-b678-0aa814ccdfa1" width="32" height="32" alt="Ethereal Shards talent icon"> [Ethereal Shards](#psyker_throwing_knives_piercing) | <ul><li>Assail's damage and impact penetration capacities increase by 50%.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/981d6617-da53-4f4d-8c85-c2e64dddab43" width="32" height="32" alt="Smite talent icon"> [Smite](#psyker_grenade_chain_lightning) | <ul><li>Channel lightning into a target and nearby enemies; charging accelerates spread and damage buildup.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9" width="32" height="32" alt="Kinetic Resonance talent icon"> [Kinetic Resonance](#psyker_ability_increase_brain_burst_speed) | <ul><li>For 10 seconds after using your Combat Ability, Brain Rupture charges 75% faster and generates 50% less Peril.</li></ul> | Blitz |
+| <img src="https://github.com/user-attachments/assets/7db7b0d7-3d96-4b42-8f50-f9112f80badc" width="32" height="32" alt="Quick Shards talent icon"> [Quick Shards](#psyker_throwing_knives_cast_speed) | <ul><li>Assail uses replenish 30% faster; base recovery per use falls from 3 seconds to about 2.31.</li></ul> | Blitz |
 
 ---
 
@@ -111,3 +112,17 @@
 - **Charging example**: With an original 2-second charge and no other bonuses, 2 ÷ 1.75 ≈ 1.14 seconds. An original 10 Peril percentage points becomes 10 × 0.5 = 5 points.
 
 [Details](psyker_ability_increase_brain_burst_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_throwing_knives_cast_speed"></a>
+
+### Quick Shards
+
+<img src="https://github.com/user-attachments/assets/7db7b0d7-3d96-4b42-8f50-f9112f80badc" width="72" height="72" alt="Quick Shards talent icon">
+
+- **How it works**: Assail's use-recovery rate increases by 30%.
+
+- **Recovery example**: With only this talent, the original 3 seconds per use becomes 3 ÷ 1.3 ≈ 2.31 seconds. Refilling 10 uses from empty takes about 30 ÷ 1.3 ≈ 23.08 seconds. A 30% faster recovery rate does not mean a 30% shorter wait.
+
+[Details](psyker_throwing_knives_cast_speed.md) · [Back to index](#talent-index)
