@@ -1,0 +1,169 @@
+{
+  "date": "2026-10-03",
+  "blessing": "everlasting-flame",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/永燃烈焰/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_flamer_p1_ammo_from_reserve_on_crit"
+  ],
+  "added_binding_count": 1,
+  "total_variants": 1,
+  "total_bindings": 1,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_evidence",
+    "scope": "Everlasting Flame single-blessing mechanics and final player-document check; read-only",
+    "findings": [
+      "Trait/wrapper/base transfer verified; I–IV 2/3/4/5 units.",
+      "New successful critical decision enqueues on_critical_strike, no hit requirement.",
+      "T=min(tier amount, capacity-current fuel, reserve) at event processing; equal reserve reduction.",
+      "Normal burst proc before delayed shot; normal auto shot cost in same pass and proc next buff update.",
+      "Auto max3 critical shots from one decision sends one transfer event.",
+      "Held slot gate at proc; no duration, cooldown or stacking."
+    ],
+    "collaborators": [
+      {
+        "agent": "/root/blessing_bindings",
+        "model": "gpt-6-luna",
+        "reasoning_effort": "max",
+        "scope": "same current blessing metadata, RAW keys/hashes, current UI names and exact fixed-source template imports; read-only",
+        "complete": true,
+        "findings": [
+          "Everlasting Flame/永燃烈焰 hash fc0e6843; description hash e0eb4441, content/localization/items.",
+          "One exact metadata item, icon159, restriction flamer_p1.",
+          "One formal variant/binding, Flamer Artemia MkIII; registration41, template import14 and append743–747.",
+          "No additional exact name-key candidates in inspected inventory/metadata/fixed source; similar ammo_refill keys not merged."
+        ],
+        "primary_resolution": "Retain backend available_tiers=null only in technical map; player tiers I–IV from exact four trait overrides. No acquisition uncertainty added."
+      }
+    ],
+    "primary_review": "Directly read exact tier overrides, wrapper, proc transfer, event queue and processing, weapon handling, action start/prepare/shoot/spend and system update order. Player examples use source-timing inference; no gameplay test.",
+    "final_document_review": {
+      "primary_result": "accepted",
+      "agent_result": "accepted after replacing ambiguous 射空 with 未命中",
+      "mechanics_and_examples": "confirmed by agent",
+      "required_corrections_completed": [
+        "Replaced 射空也可觸發 with 未命中也可觸發 in current player entry, map and indexes."
+      ]
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/4a057aec-b5c7-4d9c-8399-a70094eb498a",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "everlasting-flame",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_159",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_159.png",
+      "attachment": "https://github.com/user-attachments/assets/4a057aec-b5c7-4d9c-8399-a70094eb498a",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5966001680",
+      "acquired_date": "2026-10-03",
+      "sha256": "918b7bd5f2eefb5c562635d899042d8c2df3faa29e338b25f83f2a3762976818",
+      "content_type": "image/png",
+      "size": 6350,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "永燃烈焰祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 208,
+      "tables": 179,
+      "rows": 1365,
+      "lists": 253
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 657,
+      "source_files": 245,
+      "bindings": 128,
+      "variants": 66,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 908,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 208,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 149,
+    "not_started_name_groups": 149,
+    "partial_name_groups": 0,
+    "remaining_variants": 522,
+    "remaining_bindings": 1040,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "6d4b22a798965642c805e6b1613fb75d81e184d2788cf1caa75ccee1c3ee765a"
+  },
+  "previous_local_commit": "914d08e004185d76f8c4dff159f8b5fd019844bc",
+  "current_blessing_formula_review": {
+    "primary_direct_source_review": true,
+    "transfer": "T=min(N,M-C,R), C_new=C+T, R_new=R-T at proc processing",
+    "tiers": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "queue_not_immediate": true,
+    "normal_fixed_update_timing": {
+      "burst": "start event; proc before delayed shot; full clip T0 then cost1",
+      "auto": "prepare event and cost1 same pass; next buff update T=min(N,deficit,reserve); full initial clip T1 if reserve>=1"
+    },
+    "auto_three_critical_shots_one_new_decision_event": true,
+    "full_clip_examples": {
+      "burst": [
+        39,
+        60
+      ],
+      "auto_first_after_proc": [
+        40,
+        59
+      ],
+      "auto_three_shots": [
+        38,
+        59
+      ]
+    },
+    "gameplay_test": "not run"
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 1,
+    "bound_variants": 1,
+    "same_name_candidates": [],
+    "status": "exact key and trait inventory/metadata/fixed-source checked; similar ammo_refill names not merged"
+  }
+}

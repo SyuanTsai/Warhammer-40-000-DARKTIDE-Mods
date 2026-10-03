@@ -25,7 +25,6 @@
 | [電弧步槍](ranged/電弧步槍/README.md)<br>- Arc Rifle | 遠程 | 庫巴爾電弧步槍 |
 | [槍托自動槍](ranged/槍托自動槍/README.md)<br>- Braced Autogun | 遠程 | 哥倫努Mk II槍托自動槍、格拉亞Mk IV槍托自動槍、阿格里皮娜Mk VIII槍托自動槍 |
 | [矛頭爆矢槍](ranged/矛頭爆矢槍/README.md)<br>- Spearhead Boltgun | 遠程 | 洛克Mk IIb矛頭爆矢槍、洛克Mk III矛頭爆矢槍 |
-| [淨化噴火器](ranged/淨化噴火器/README.md)<br>- Purgation Flamer | 遠程 | 奧特米亞Mk III淨化噴火器 |
 | [重伐木槍](ranged/重伐木槍/README.md)<br>- Heavy Stubber | 遠程 | 布蘭克斯樣式重伐木槍、寬口布蘭克斯樣式重伐木槍、災變布蘭克斯樣式重伐木槍 |
 | [撕裂槍](ranged/撕裂槍/README.md)<br>- Ripper Gun | 遠程 | 碎敵Mk II撕裂槍、碎敵Mk V撕裂槍、碎敵Mk VI撕裂槍 |
 | [法務官電擊鎚和鎮壓護盾](melee/法務官電擊鎚和鎮壓護盾/README.md)<br>- Shock Maul and Suppression Shield | 近戰 | 法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk VI、法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk XI |
@@ -45,3 +44,4 @@
 | [雙管霰彈槍](ranged/雙管霰彈槍/README.md)<br>- Double-Barrelled Shotgun | 遠程 | 雙管霰彈槍 十字星 Mk XI、雙管霰彈槍 克魯克 Mk IV |
 | [衝覆者霰彈手槍和防暴盾牌](ranged/衝覆者霰彈手槍和防暴盾牌/README.md)<br>- Subductor Shotpistol and Riot Shield | 遠程 | 衝覆者霰彈手槍和防暴盾牌 審判 Mk IV |
 | [快拔左輪手槍](ranged/快拔左輪手槍/README.md)<br>- Quickdraw Stub Revolver | 遠程 | 快拔左輪手槍 紮羅娜 Mk IIa、快拔左輪手槍 阿格里皮娜 Mk XIV |
+| [淨化噴火器](ranged/淨化噴火器/README.md)<br>- Purgation Flamer | 遠程 | 淨化噴火器 奧特米亞 Mk III |

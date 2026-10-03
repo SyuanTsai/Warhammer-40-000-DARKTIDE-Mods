@@ -71,3 +71,7 @@
 - 掃射本機 Commit：`f6e39490b107d95d288db4e9d47e7aaac32ce947`；完成後才派工連跑帶打。
 
 - [連跑帶打](2026-10-03-RUN-N-GUN_ACCEPTANCE.json)：新增14變體、19型號關聯；共14變體、19關聯。
+
+- 連跑帶打本機 Commit：`914d08e004185d76f8c4dff159f8b5fd019844bc`；完成後才派工永燃烈焰，按使用者授權以兩位Luna／max分查機制與型號／原文。
+
+- [永燃烈焰](2026-10-03-EVERLASTING-FLAME_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
