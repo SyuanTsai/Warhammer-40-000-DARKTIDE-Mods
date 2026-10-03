@@ -26,3 +26,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Go Again!](ogryn_taunt_staggers_reduce_cooldown.md) / `ogryn_taunt_staggers_reduce_cooldown` | Combat ability |
 | [Hail of Fire](ogryn_special_ammo_armor_pen.md) / `ogryn_special_ammo_armor_pen` | Combat ability |
 | [Light 'em Up](ogryn_special_ammo_fire_shots.md) / `ogryn_special_ammo_fire_shots` | Combat ability |
+| [Valuable Distraction](ogryn_taunt_damage_taken_increase.md) / `ogryn_taunt_damage_taken_increase` | Combat ability |

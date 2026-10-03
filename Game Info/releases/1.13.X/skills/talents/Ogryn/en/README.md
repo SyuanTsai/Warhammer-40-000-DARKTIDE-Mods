@@ -24,6 +24,7 @@
 | <img src="https://github.com/user-attachments/assets/a6d612af-aed7-465e-aa07-e23fc7255876" width="32" height="32" alt="Go Again! talent icon"> [Go Again!](#ogryn_taunt_staggers_reduce_cooldown) | <ul><li>A melee or push Stagger restores 1.5% ability charge, at most once every 0.1s.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/708231ab-86cd-44b4-8f01-0d0fe8413ede" width="32" height="32" alt="Hail of Fire talent icon"> [Hail of Fire](#ogryn_special_ammo_armor_pen) | <ul><li>During Point-Blank Barrage, gain +15% ranged Damage and 15% Rending.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/6f504222-c9bf-4dff-a549-138c3be3bde4" width="32" height="32" alt="Light 'em Up talent icon"> [Light 'em Up](#ogryn_special_ammo_fire_shots) | <ul><li>During Point-Blank Barrage, ranged hits apply 4 Burn stacks, adding up to 16 stacks.</li></ul> | Combat ability |
+| <img src="https://github.com/user-attachments/assets/594ab4d6-12e3-4941-bf1a-c5812b128b23" width="32" height="32" alt="Valuable Distraction talent icon"> [Valuable Distraction](#ogryn_taunt_damage_taken_increase) | <ul><li>Enemies affected by Loyal Protector take 20% more damage for 15s.</li></ul> | Combat ability |
 
 ## Blitz
 
@@ -292,3 +293,17 @@
 - **Damage example**: Against an Unarmoured target without other modifiers, each Burn tick deals 600 × (stacks ÷ 31)² × [3 − 2 × (stacks ÷ 31)]. Four stacks deal about 27.39, and 16 about 314.51. These are single-tick values, not total damage over the entire Burn.
 
 [Details](ogryn_special_ammo_fire_shots.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_taunt_damage_taken_increase"></a>
+
+### Valuable Distraction
+
+<img src="https://github.com/user-attachments/assets/594ab4d6-12e3-4941-bf1a-c5812b128b23" width="72" height="72" alt="Valuable Distraction talent icon">
+
+- **Effect and duration**: Enemies affected by a Loyal Protector taunt wave take 20% more damage from all sources for 15s. You and your teammates benefit. Subsequent taunt waves restart the timer without adding percentages.
+
+- **Damage example**: With other conditions fixed, 100 damage becomes 100 × 1.2 = 120. If the enemy also has Soften Them Up's 15% damage-taken increase, the two act at different stages: 100 × 1.15 × 1.2 = 138.
+
+[Details](ogryn_taunt_damage_taken_increase.md) · [Back to index](#talent-index)
