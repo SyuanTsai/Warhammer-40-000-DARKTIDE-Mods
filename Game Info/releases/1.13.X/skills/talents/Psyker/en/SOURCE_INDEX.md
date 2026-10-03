@@ -24,3 +24,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Seer's Presence](psyker_cooldown_aura_improved.md) / `psyker_cooldown_aura_improved` | Aura |
 | [Prescience](psyker_aura_crit_chance_aura.md) / `psyker_aura_crit_chance_aura` | Aura |
 | [Venting Shriek](psyker_shout_vent_warp_charge.md) / `psyker_shout_vent_warp_charge` | Ability |
+| [Scrier's Gaze](psyker_combat_ability_stance.md) / `psyker_combat_ability_stance` | Ability |

@@ -20,6 +20,7 @@
 | <img src="https://github.com/user-attachments/assets/61a749ff-c64c-47a7-8607-e19b59a688b3" width="32" height="32" alt="Seer's Presence talent icon"> [Seer's Presence](#psyker_cooldown_aura_improved) | <ul><li>You and Allies in Coherency have 10% shorter Combat Ability cooldowns.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="Prescience talent icon"> [Prescience](#psyker_aura_crit_chance_aura) | <ul><li>You and Allies in Coherency gain 5 percentage points of Critical Hit Chance.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/d0500b6b-c91c-4c34-857a-6c144800fe37" width="32" height="32" alt="Venting Shriek talent icon"> [Venting Shriek](#psyker_shout_vent_warp_charge) | <ul><li>Staggers Enemies in front of you and immediately Quells 50 percentage points of Peril; base cooldown 30 seconds.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a" width="32" height="32" alt="Scrier's Gaze talent icon"> [Scrier's Gaze](#psyker_combat_ability_stance) | <ul><li>Quell 50 percentage points of Peril on activation; gain damage, Critical Chance, Weakspot Damage, Toughness protection/recovery and Suppression Immunity. Damage builds while active and lingers for 10 seconds.</li></ul> | Ability |
 
 ---
 
@@ -216,3 +217,22 @@
 - **Peril examples**: With no other simultaneous Peril changes, 80% Peril becomes 80% − 50 percentage points = 30%. At 40% Peril, subtracting 50 percentage points reaches the lower limit of 0%.
 
 [Details](psyker_shout_vent_warp_charge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_combat_ability_stance"></a>
+
+### Scrier's Gaze
+
+<img src="https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a" width="72" height="72" alt="Scrier's Gaze talent icon">
+
+- **Ability**: Activating Scrier's Gaze Quells 50 percentage points of Peril. While active, gain +10% Damage, 20 percentage points of Critical Chance, +10% Weakspot Damage, 20% Toughness Damage Reduction and Suppression Immunity.
+- Gain another 1% Damage per second, up to +30%, and recover 2.5% of maximum Toughness per second. Peril builds while active; enemy Kills briefly slow its accumulation. At 100% Peril, Gaze ends, and the accumulated damage bonus remains for 10 seconds.
+- **Damage example**: With no other bonuses, a non-Critical, non-Weakspot hit of 100 becomes `100 × (1 + 10% + 30%) = 140` at full stacks. After Gaze ends, only the accumulated 30% remains, giving 130.
+- **Weakspot example**: Isolating the Weakspot Damage bonus, assume base damage 100 and extra Weakspot damage 50. The original 150 becomes `100 + 50 × 1.10 = 155`, about a 3.33% increase for the whole hit. Gaze's other damage bonuses are calculated separately.
+- **Recovery and chance examples**: At 100 maximum Toughness, recover `100 × 2.5% = 2.5` per second, capped by missing Toughness. An original 5% Critical Chance becomes `5% + 20 percentage points = 25%`.
+- Base cooldown: 25 seconds. Cooldown recovery pauses while the active Gaze buff exists and resumes after it ends, without other cooldown modifiers.
+
+**Note on the Chinese wording**: The Chinese description says entering/leaving Gaze's “area,” which may suggest a ground zone. The corresponding English and accepted implementation describe the character entering and ending the Gaze state.
+
+[Details](psyker_combat_ability_stance.md) · [Back to index](#talent-index)

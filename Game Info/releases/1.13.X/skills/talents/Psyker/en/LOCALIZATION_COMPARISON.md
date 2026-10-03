@@ -164,6 +164,19 @@ Full raw template and formatting: [source evidence](psyker_shout_vent_warp_charg
 | Effects, value and cooldown | Forward wave Staggers Enemies; `Quells 50% Peril`; `Base Cooldown: 30s`; augmented Psykinetic's Wrath; `ui / loc_talent_psyker_shout_vent_warp_charge_description / 7d4501be` | The improved shout immediately removes 0.5 from normalized Peril and uses a 30-second base cooldown; forward targets receive the shout effect. [Fixed source and line references](psyker_shout_vent_warp_charge.md#fixed-source-evidence) | Consistent | The stated effects and base values agree; the Quell wording does not claim multiplication of current Peril. |
 | Calculation, targeting and event order | No percentage-point examples, clamp, angle/range filter or event order stated; `ui / loc_talent_psyker_shout_vent_warp_charge_description / 7d4501be` | `current_percentage - 0.5` clamps to 0–1; 80% becomes 30%, 40% becomes 0%. Direction, angle and range filter targets, with a nearby exception; `on_combat_ability` precedes Quell. [Fixed source and line references](psyker_shout_vent_warp_charge.md#fixed-source-evidence) | Not covered by the description | These calculation and execution details supplement the English. |
 
+
+<a id="psyker_combat_ability_stance"></a>
+
+## Scrier's Gaze
+
+Full raw template and formatting: [source evidence](psyker_combat_ability_stance.md#original-english-template-and-reconstruction). Name hash `b664d880`. Every row uses `ui / loc_talent_psyker_combat_ability_overcharge_stance_improved_description / 00d42220`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Activation effects and values | Quells 50% Peril; +10% Damage, +20% Critical Chance, +10% Weakspot Damage, +20% Toughness Damage Reduction, Suppression Immunity and 2.5% Toughness per second; `ui / loc_talent_psyker_combat_ability_overcharge_stance_improved_description / 00d42220` | Accepted values are 0.5 Quell, +0.10 damage, +0.20 critical chance, +0.10 extra Weakspot damage, 0.8 Toughness damage multiplier and 0.025 of maximum Toughness per second. [Fixed source and line references](psyker_combat_ability_stance.md#fixed-source-evidence) | Consistent | The stated effects and magnitudes agree with the accepted fields. |
+| State, growth, end and lingering effect | Entering/leaving Gaze; +1% Damage each second up to +30%, lingering 10s; Kills slow Peril build-up; ends at 100%; base cooldown 25s; `ui / loc_talent_psyker_combat_ability_overcharge_stance_improved_description / 00d42220` | Gaze is a character state; damage grows to +30% and stacks determine a 10-second exit buff. Kills offset the rising Peril rate; 100% stops the active buff. Base cooldown is 25 seconds. [Fixed source and line references](psyker_combat_ability_stance.md#fixed-source-evidence) | Consistent | State wording, growth, duration and end condition agree. The Chinese area wording is not an English error. |
+| Calculation and additional limits | No full damage formula, maximum-Toughness basis, cooldown pause, Precognition bonus-stack condition or guaranteed duration stated; `ui / loc_talent_psyker_combat_ability_overcharge_stance_improved_description / 00d42220` | Extra Weakspot damage receives +10%; full-stack general damage is +40%. Recovery uses maximum Toughness, chance adds percentage points; Precognition enables bonus_stacks. Cooldown pauses during Gaze; duration depends on Peril and other factors. [Fixed source and line references](psyker_combat_ability_stance.md#fixed-source-evidence) | Not covered by the description | These calculations and conditions supplement the stated effects. |
+
 ## Comparison totals
 
 The 21 listed rules comprise **10 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.
