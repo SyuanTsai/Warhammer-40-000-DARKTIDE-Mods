@@ -340,6 +340,7 @@
 - Unstable Power - 不穩定能量
 - Warp Slice - 亞空間斬擊
 - Exorcist - 驅魔者
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge`，hash `e6a1baba`；英文／繁中RAW配對確認。
 - Superiority - 優勢
 - Lightning Reflexes - 閃電反射
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_block_has_chance_to_stun`，hash `c728ed68`；英文／繁中RAW配對確認。

@@ -38,5 +38,6 @@
 | <img src="https://github.com/user-attachments/assets/55a772ae-58cf-4db6-9a47-7dbb7fd230cd" width="32" height="32" alt="煉獄祝福圖示"> [煉獄](entries/煉獄/README.md)<br>- Infernus<br>[完整說明](entries/煉獄/README.md) | <ul><li>遠程暴擊造成傷害時添加燃燒；一般武器 I–IV 每次1／2／3／4層，上限3／6／9／12層；磷光爆破手槍每次2／3／4／5層，上限4／9／12／15層。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/ce4a8d9f-8ffc-4194-bfbd-ef4db317aaf5" width="32" height="32" alt="偏轉祝福圖示"> [偏轉](entries/偏轉/README.md)<br>- Deflector<br>[完整說明](entries/偏轉/README.md) | <ul><li>持用並格擋時，可格擋正面左右各約59.4°內的合格遠程攻擊；I–IV 格擋消耗降低22.5%／25%／27.5%／30%。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f" width="32" height="32" alt="憤怒祝福圖示"> [憤怒](entries/憤怒/README.md)<br>- Wrath<br>[完整說明](entries/憤怒/README.md) | <ul><li>近戰揮擊命中後獲得1層順劈，最多5層；每次命中含滿層刷新3.5秒，揮空或逾時清層；武器每層數值不同。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/bc5a089b-7227-4993-882a-a5fe0085e6f2" width="32" height="32" alt="驅魔者祝福圖示"> [驅魔者](entries/驅魔者/README.md)<br>- Exorcist<br>[完整說明](entries/驅魔者/README.md) | <ul><li>持用烈焰力場劍，首次弱點揮擊建立計數，連段中的後續弱點揮擊結束時各降低2／3／4／5個百分點反噬；每次揮擊最多一次。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

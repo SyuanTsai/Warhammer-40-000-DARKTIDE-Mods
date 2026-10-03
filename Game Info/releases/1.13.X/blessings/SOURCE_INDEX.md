@@ -36,3 +36,4 @@
 | [煉獄](entries/煉獄/README.md) | [來源索引](entries/煉獄/SOURCE_INDEX.md) |
 | [偏轉](entries/偏轉/README.md) | [來源索引](entries/偏轉/SOURCE_INDEX.md) |
 | [憤怒](entries/憤怒/README.md) | [來源索引](entries/憤怒/SOURCE_INDEX.md) |
+| [驅魔者](entries/驅魔者/README.md) | [來源索引](entries/驅魔者/SOURCE_INDEX.md) |

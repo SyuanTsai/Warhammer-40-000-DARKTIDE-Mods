@@ -410,6 +410,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
       "effect": "近戰揮擊命中後獲得1層順劈，最多5層；每次命中含滿層刷新3.5秒，揮空或逾時清層；武器每層數值不同。"
+    },
+    {
+      "id": "exorcist",
+      "name_zh_tw": "驅魔者",
+      "name_en": "Exorcist",
+      "name_key": "loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge",
+      "description_key": "loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc",
+      "name_hash": "e6a1baba",
+      "description_hash": "f03d2925",
+      "page": "entries/驅魔者/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/bc5a089b-7227-4993-882a-a5fe0085e6f2",
+      "effect": "持用烈焰力場劍，首次弱點揮擊建立計數，連段中的後續弱點揮擊結束時各降低2／3／4／5個百分點反噬；每次揮擊最多一次。"
     }
   ],
   "weapons": [
@@ -749,26 +762,41 @@
         {
           "id": "forcesword_p1_m1",
           "item": "content/items/weapons/player/melee/forcesword_p1_m1",
-          "name": "朦朧Mk II烈焰力場劍",
-          "name_en": "Obscurus Mk II Blaze Force Sword",
+          "name": "烈焰力場劍 朦朧 Mk II",
+          "name_en": "Blaze Force Sword Obscurus Mk II",
           "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
-          "trait_category": "bespoke_forcesword_p1"
+          "trait_category": "bespoke_forcesword_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_forcesword_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_forcesword_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_forcesword_p1_m1"
+          }
         },
         {
           "id": "forcesword_p1_m2",
           "item": "content/items/weapons/player/melee/forcesword_p1_m2",
-          "name": "火衛二Mk IV烈焰力場劍",
-          "name_en": "Deimos Mk IV Blaze Force Sword",
+          "name": "烈焰力場劍 戴莫斯 Mk IV",
+          "name_en": "Blaze Force Sword Deimos Mk IV",
           "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
-          "trait_category": "bespoke_forcesword_p1"
+          "trait_category": "bespoke_forcesword_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_forcesword_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_forcesword_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_forcesword_p1_m2"
+          }
         },
         {
           "id": "forcesword_p1_m3",
           "item": "content/items/weapons/player/melee/forcesword_p1_m3",
-          "name": "伊利斯Mk V烈焰力場劍",
-          "name_en": "Illisi Mk V Blaze Force Sword",
+          "name": "烈焰力場劍 伊利斯 Mk V",
+          "name_en": "Blaze Force Sword Illisi Mk V",
           "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
-          "trait_category": "bespoke_forcesword_p1"
+          "trait_category": "bespoke_forcesword_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_forcesword_p1_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_forcesword_p1_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_forcesword_p1_m3"
+          }
         }
       ]
     },
@@ -8077,6 +8105,69 @@
       "icon": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_168",
       "effect": "近戰揮擊命中後每層順劈+10%／15%／20%／25%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge",
+      "blessing_id": "exorcist",
+      "weapon_id": "forcesword_p1",
+      "page": "entries/驅魔者/weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "format_type": "percentage",
+        "prefix": "+",
+        "field": "vent_percentage",
+        "tiers": [
+          {
+            "tier": "I",
+            "value": 0.02,
+            "display_percent": 2,
+            "peril_percentage_points": 2
+          },
+          {
+            "tier": "II",
+            "value": 0.03,
+            "display_percent": 3,
+            "peril_percentage_points": 3
+          },
+          {
+            "tier": "III",
+            "value": 0.04,
+            "display_percent": 4,
+            "peril_percentage_points": 4
+          },
+          {
+            "tier": "IV",
+            "value": 0.05,
+            "display_percent": 5,
+            "peril_percentage_points": 5
+          }
+        ],
+        "behavior": "Immediate subtraction from current Peril, clamped at 0; not a proportional reduction of the current Peril value.",
+        "first_weakspot_sweep_only_initializes": true,
+        "counting_unit": "one qualifying on_sweep_finish event",
+        "default_combo_reset_duration_after_ended_action_seconds": 0.2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua",
+        "start_line": 543,
+        "end_line": 573
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua",
+        "start_line": 66,
+        "end_line": 107
+      },
+      "description_key": "loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc",
+      "description_hash": "f03d2925",
+      "icon": "https://github.com/user-attachments/assets/bc5a089b-7227-4993-882a-a5fe0085e6f2",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_002",
+      "effect": "持用烈焰力場劍，首次弱點揮擊建立計數，連段中的後續弱點揮擊結束時各降低2／3／4／5個百分點反噬；每次揮擊最多一次。"
     }
   ],
   "bindings": [
@@ -11312,6 +11403,48 @@
         "path": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
         "import_line": 14,
         "append_line": 1835
+      }
+    },
+    {
+      "blessing_id": "exorcist",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_weakspot_hits_vents_warpcharge",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1747
+      }
+    },
+    {
+      "blessing_id": "exorcist",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_weakspot_hits_vents_warpcharge",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1673
+      }
+    },
+    {
+      "blessing_id": "exorcist",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_weakspot_hits_vents_warpcharge",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1541
       }
     }
   ]

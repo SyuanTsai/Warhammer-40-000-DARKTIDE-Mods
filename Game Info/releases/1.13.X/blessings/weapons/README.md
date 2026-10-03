@@ -13,7 +13,7 @@
 | [「惡魔之爪」劍](melee/「惡魔之爪」劍/README.md)<br>- "Devil's Claw" Sword | 近戰 | 「惡魔之爪」劍 卡塔昌 Mk I、「惡魔之爪」劍 卡塔昌 Mk IV、「惡魔之爪」劍 卡塔昌 Mk VII |
 | [決鬥劍](melee/決鬥劍/README.md)<br>- Duelling Sword | 近戰 | 馬卡比安Mk II決鬥劍、馬卡比安Mk IV決鬥劍、馬卡比安Mk V決鬥劍 |
 | [烈焰力場巨劍](melee/烈焰力場巨劍/README.md)<br>- Blaze Force Greatsword | 近戰 | 烈焰力場巨劍 誓約 Mk VI、烈焰力場巨劍 誓約 Mk VIII |
-| [烈焰力場劍](melee/烈焰力場劍/README.md)<br>- Blaze Force Sword | 近戰 | 朦朧Mk II烈焰力場劍、火衛二Mk IV烈焰力場劍、伊利斯Mk V烈焰力場劍 |
+| [烈焰力場劍](melee/烈焰力場劍/README.md)<br>- Blaze Force Sword | 近戰 | 烈焰力場劍 朦朧 Mk II、烈焰力場劍 戴莫斯 Mk IV、烈焰力場劍 伊利斯 Mk V |
 | [骨鋸](melee/骨鋸/README.md)<br>- Bone Saw | 近戰 | 骨鋸 外科醫師 型號4 |
 | [穿音速雙刀](melee/穿音速雙刀/README.md)<br>- Paired Transonic Blades | 近戰 | 西福爾穿音速刀刃 |
 | [動力劍](melee/動力劍/README.md)<br>- Power Sword | 近戰 | 動力劍 斯干達 Mk III、動力劍 阿克利斯 Mk VI |

@@ -1,0 +1,588 @@
+{
+  "date": "2026-10-03",
+  "blessing": "exorcist",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/驅魔者/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge"
+  ],
+  "added_binding_count": 3,
+  "total_variants": 1,
+  "total_bindings": 3,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_bindings",
+    "scope": "one bound variant /3 bindings and primary-config cross-review",
+    "final_document_review": {
+      "id": "exorcist-peer-review",
+      "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "reviewed_config": "AI-LOGS/Game Info/local/blessings/2026-10-03/exorcist-config.json",
+      "scope": [
+        "player",
+        "examples",
+        "math",
+        "rules",
+        "weapon switching",
+        "combo reset timing"
+      ],
+      "status": "accepted",
+      "primary_config_accepted": true,
+      "accepted": {
+        "player": true,
+        "examples": true,
+        "math": true,
+        "rules": true,
+        "switching": true,
+        "combo_reset_0_2s": true
+      },
+      "required_corrections": [],
+      "findings": [
+        {
+          "area": "First eligible weakspot and restart behavior",
+          "result": "accepted",
+          "detail": "The first weakspot event initializes the blessing counter to 1 without reducing Peril. A later eligible weakspot event with combo_count > 0 reduces Peril. Body-hit and miss events fail the weakspot check before proc_func, so they do not execute the counter-reset branch. The restart example correctly conditions reinitialization on game combo_count having returned to 0."
+        },
+        {
+          "area": "Multi-target sweep behavior",
+          "result": "accepted",
+          "detail": "ActionSweep OR-aggregates weakspot results across targets and emits one on_sweep_finish event per completed sweep. The examples correctly state that multiple weakspot targets in one swing still allow only one reduction."
+        },
+        {
+          "area": "Peril arithmetic",
+          "result": "accepted",
+          "detail": "Tier values 0.02/0.03/0.04/0.05 are represented as 2/3/4/5 percentage points of the full gauge. The 40% to 35% example, max(0, 3%-5pp)=0% lower-bound example, and contrast with proportional multiplication are correct."
+        },
+        {
+          "area": "Body hit between weakspot hits",
+          "result": "accepted",
+          "detail": "The example explicitly assumes the game combo remains active. A body-hit sweep does not pass the weakspot check and therefore does not clear the blessing counter; a subsequent weakspot event can continue the count while combo_count remains positive."
+        },
+        {
+          "area": "Switching and return",
+          "result": "accepted",
+          "detail": "Switching away suppresses proc processing through the held-slot condition, while the on_equip buff and its internal counter remain. Returning does not itself vent Peril; if combo_count has reset to 0, the next weakspot event only starts the counter again. The current player text states this condition and does not promise immediate reduction."
+        },
+        {
+          "area": "0.2-second combo reset",
+          "result": "accepted",
+          "detail": "The text correctly describes the default combo timeout as idle time after an ended, non-looping action, not a timer since the last weakspot hit. The reset is evaluated only when combo_count is positive; the three Force Sword templates do not override the default duration."
+        },
+        {
+          "area": "Rules classifications",
+          "result": "accepted",
+          "detail": "The table uses the workflow classifications consistently: the RAW Traditional Chinese direction is an explicit contradiction; numerical implementation details omitted from the description are marked as not covered; the tier values align with the tooltip/code."
+        }
+      ],
+      "evidence": [
+        {
+          "area": "Proc check precedes the proc function",
+          "path": "scripts/extension_systems/buff/buffs/proc_buff.lua",
+          "start": 311,
+          "end": 339
+        },
+        {
+          "area": "Weakspot check",
+          "path": "scripts/settings/buff/helper_functions/check_proc_functions.lua",
+          "start": 473,
+          "end": 475
+        },
+        {
+          "area": "Wrapper counter logic",
+          "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua",
+          "start": 66,
+          "end": 105
+        },
+        {
+          "area": "ActionSweep captures combo_count",
+          "path": "scripts/extension_systems/weapon/actions/action_sweep.lua",
+          "start": 217,
+          "end": 220
+        },
+        {
+          "area": "Weakspot aggregation and one finish event",
+          "path": "scripts/extension_systems/weapon/actions/action_sweep.lua",
+          "start": 786,
+          "end": 793
+        },
+        {
+          "area": "Single sweep-finish event",
+          "path": "scripts/extension_systems/weapon/actions/action_sweep.lua",
+          "start": 944,
+          "end": 963
+        },
+        {
+          "area": "Combo count update",
+          "path": "scripts/utilities/action/action_handler.lua",
+          "start": 494,
+          "end": 512
+        },
+        {
+          "area": "Idle combo reset check",
+          "path": "scripts/utilities/action/action_handler.lua",
+          "start": 1149,
+          "end": 1161
+        },
+        {
+          "area": "Immediate Peril reduction",
+          "path": "scripts/utilities/warp_charge.lua",
+          "start": 94,
+          "end": 114
+        },
+        {
+          "area": "Subtraction and clamp",
+          "path": "scripts/utilities/shared_overheat_and_warp_charge_functions.lua",
+          "start": 18,
+          "end": 24
+        }
+      ],
+      "review_notes": [
+        "Reviewed the specified player-facing and equation/rule fields only; no source or formal files were changed.",
+        "The primary config retains the detailed source evidence for weapon switching, model templates, and tooltip tiers."
+      ]
+    },
+    "draft_corrections": [
+      "Primary changed player/exam prose to blank-separated bullets.",
+      "Primary replaced freeform rule labels with workflow classification set.",
+      "Switch-back does not guarantee immediate quelling when action combo has reset.",
+      "Default0.2s applies after ended actions, not since last weakspot hit.",
+      "Peer fixed ActionHandler evidence range to actual fixed-SHA1149–1161."
+    ],
+    "parallel_execution": {
+      "groups": [
+        "executor",
+        "exorcist",
+        "showstopper"
+      ],
+      "max_groups": 3,
+      "shared_files_written_by": "primary only"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/bc5a089b-7227-4993-882a-a5fe0085e6f2",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "exorcist",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_002",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_002.png",
+      "attachment": "https://github.com/user-attachments/assets/bc5a089b-7227-4993-882a-a5fe0085e6f2",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5967957349",
+      "acquired_date": "2026-10-03",
+      "sha256": "fd620ab8ae6f009027e3c021b233b01b19b00dd71c30b66aceeba895c234e157",
+      "content_type": "image/png",
+      "size": 4420,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "驅魔者祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Primary inspected public Issue attachment pixels at128×128;actual source/public SHA-256 match."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 378,
+      "tables": 310,
+      "rows": 2944,
+      "lists": 525
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 1225,
+      "source_files": 359,
+      "bindings": 234,
+      "variants": 121,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 1078,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 378,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 133,
+    "not_started_name_groups": 133,
+    "partial_name_groups": 0,
+    "remaining_variants": 467,
+    "remaining_bindings": 934,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "45d76284a42fdc57e939c5057c4c6b13ee428418a6949e70a7afbecee378ce4f"
+  },
+  "previous_local_commit": "65203411dc9d418978896527f4e86b586a60776f",
+  "current_blessing_formula_review": {
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "primary_direct_review": true,
+    "reviewed": "Fixed-SHA wrapper66–105, tier543–573, ProcBuff dispatch311–339, weakspot check473–475, ActionSweep snapshot/OR/singlefinish/sticky guards, ActionHandler reset494–512/1149–1161, WarpCharge94–114/SharedFunctions18–24, all actual UI three-key and binding import/ukeys/append lines.",
+    "equation": "R_next=max(0,R−q), q=.02/.03/.04/.05; first qualifying weakspot sweep only initializes counter.",
+    "examples": {
+      "IV40_to35": true,
+      "IV3_to0": true,
+      "multi_target_once": true,
+      "body_between_weakspots_if_combo_retained": true,
+      "switch_back_if_combo_zero_reinitializes": true,
+      "idle_reset_after_ended_action_not_last_weakspot": true
+    }
+  },
+  "ui_name_review": {
+    "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+    "bindings": [
+      {
+        "weapon_id": "forcesword_p1",
+        "model_id": "forcesword_p1_m1",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge",
+        "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_weakspot_hits_vents_warpcharge",
+        "trait_category": "bespoke_forcesword_p1",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_forcesword_p1_m1",
+          "loc_weapon_pattern_forcesword_p1_m1",
+          "loc_weapon_mark_forcesword_p1_m1"
+        ],
+        "ui_name_components_en": [
+          "Blaze Force Sword",
+          "Obscurus",
+          "Mk II"
+        ],
+        "ui_name_components": [
+          "烈焰力場劍",
+          "朦朧",
+          "Mk II"
+        ],
+        "ui_name_zh_tw": "烈焰力場劍 朦朧 Mk II",
+        "source_binding_lines": [
+          15,
+          1745,
+          1747
+        ]
+      },
+      {
+        "weapon_id": "forcesword_p1",
+        "model_id": "forcesword_p1_m2",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge",
+        "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_weakspot_hits_vents_warpcharge",
+        "trait_category": "bespoke_forcesword_p1",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_forcesword_p1_m2",
+          "loc_weapon_pattern_forcesword_p1_m2",
+          "loc_weapon_mark_forcesword_p1_m2"
+        ],
+        "ui_name_components_en": [
+          "Blaze Force Sword",
+          "Deimos",
+          "Mk IV"
+        ],
+        "ui_name_components": [
+          "烈焰力場劍",
+          "戴莫斯",
+          "Mk IV"
+        ],
+        "ui_name_zh_tw": "烈焰力場劍 戴莫斯 Mk IV",
+        "source_binding_lines": [
+          15,
+          1671,
+          1673
+        ]
+      },
+      {
+        "weapon_id": "forcesword_p1",
+        "model_id": "forcesword_p1_m3",
+        "trait_id": "weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge",
+        "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_weakspot_hits_vents_warpcharge",
+        "trait_category": "bespoke_forcesword_p1",
+        "template_file": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "primary_actual_loc_ids": [
+          "loc_weapon_family_forcesword_p1_m3",
+          "loc_weapon_pattern_forcesword_p1_m3",
+          "loc_weapon_mark_forcesword_p1_m3"
+        ],
+        "ui_name_components_en": [
+          "Blaze Force Sword",
+          "Illisi",
+          "Mk V"
+        ],
+        "ui_name_components": [
+          "烈焰力場劍",
+          "伊利斯",
+          "Mk V"
+        ],
+        "ui_name_zh_tw": "烈焰力場劍 伊利斯 Mk V",
+        "source_binding_lines": [
+          15,
+          1539,
+          1541
+        ]
+      }
+    ],
+    "raw_verification": {
+      "resource": "content/localization/items",
+      "raw_sha256": "c0719a6933c4f3d472a569a8ec841df819eb1b1a03d09d83c5cee05a2a861026",
+      "records": [
+        {
+          "key": "loc_forcesword_p1_m1",
+          "hash": "9cccfaf0",
+          "locale": 0,
+          "text": "Obscurus Mk II Blaze Force Sword"
+        },
+        {
+          "key": "loc_forcesword_p1_m1",
+          "hash": "9cccfaf0",
+          "locale": 16,
+          "text": "朦朧Mk II烈焰力場劍"
+        },
+        {
+          "key": "loc_forcesword_p1_m2",
+          "hash": "4a7ba511",
+          "locale": 0,
+          "text": "Deimos Mk IV Blaze Force Sword"
+        },
+        {
+          "key": "loc_forcesword_p1_m2",
+          "hash": "4a7ba511",
+          "locale": 16,
+          "text": "火衛二Mk IV烈焰力場劍"
+        },
+        {
+          "key": "loc_forcesword_p1_m3",
+          "hash": "6f72a162",
+          "locale": 0,
+          "text": "Illisi Mk V Blaze Force Sword"
+        },
+        {
+          "key": "loc_forcesword_p1_m3",
+          "hash": "6f72a162",
+          "locale": 16,
+          "text": "伊利斯Mk V烈焰力場劍"
+        },
+        {
+          "key": "loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge",
+          "hash": "e6a1baba",
+          "locale": 0,
+          "text": "Exorcist"
+        },
+        {
+          "key": "loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge",
+          "hash": "e6a1baba",
+          "locale": 16,
+          "text": "驅魔者"
+        },
+        {
+          "key": "loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc",
+          "hash": "f03d2925",
+          "locale": 0,
+          "text": "Quell {warp_charge:%s} of Peril on Repeated Weak Spot Hit."
+        },
+        {
+          "key": "loc_trait_bespoke_chained_weakspot_hits_vents_warpcharge_desc",
+          "hash": "f03d2925",
+          "locale": 16,
+          "text": "重複命中弱點後，增加{warp_charge:%s}反噬。"
+        },
+        {
+          "key": "loc_weapon_family_forcesword_p1_m1",
+          "hash": "936eb9dc",
+          "locale": 0,
+          "text": "Blaze Force Sword"
+        },
+        {
+          "key": "loc_weapon_family_forcesword_p1_m1",
+          "hash": "936eb9dc",
+          "locale": 16,
+          "text": "烈焰力場劍"
+        },
+        {
+          "key": "loc_weapon_family_forcesword_p1_m2",
+          "hash": "58f7dfcf",
+          "locale": 0,
+          "text": "Blaze Force Sword"
+        },
+        {
+          "key": "loc_weapon_family_forcesword_p1_m2",
+          "hash": "58f7dfcf",
+          "locale": 16,
+          "text": "烈焰力場劍"
+        },
+        {
+          "key": "loc_weapon_family_forcesword_p1_m3",
+          "hash": "cba51c49",
+          "locale": 0,
+          "text": "Blaze Force Sword"
+        },
+        {
+          "key": "loc_weapon_family_forcesword_p1_m3",
+          "hash": "cba51c49",
+          "locale": 16,
+          "text": "烈焰力場劍"
+        },
+        {
+          "key": "loc_weapon_mark_forcesword_p1_m1",
+          "hash": "a0f22c2e",
+          "locale": 0,
+          "text": "Mk II"
+        },
+        {
+          "key": "loc_weapon_mark_forcesword_p1_m1",
+          "hash": "a0f22c2e",
+          "locale": 16,
+          "text": "Mk II"
+        },
+        {
+          "key": "loc_weapon_mark_forcesword_p1_m2",
+          "hash": "7247522d",
+          "locale": 0,
+          "text": "Mk IV"
+        },
+        {
+          "key": "loc_weapon_mark_forcesword_p1_m2",
+          "hash": "7247522d",
+          "locale": 16,
+          "text": "Mk IV"
+        },
+        {
+          "key": "loc_weapon_mark_forcesword_p1_m3",
+          "hash": "fe655b2d",
+          "locale": 0,
+          "text": "Mk V"
+        },
+        {
+          "key": "loc_weapon_mark_forcesword_p1_m3",
+          "hash": "fe655b2d",
+          "locale": 16,
+          "text": "Mk V"
+        },
+        {
+          "key": "loc_weapon_pattern_forcesword_p1_m1",
+          "hash": "d158bba6",
+          "locale": 0,
+          "text": "Obscurus"
+        },
+        {
+          "key": "loc_weapon_pattern_forcesword_p1_m1",
+          "hash": "d158bba6",
+          "locale": 16,
+          "text": "朦朧"
+        },
+        {
+          "key": "loc_weapon_pattern_forcesword_p1_m2",
+          "hash": "3e6d37c3",
+          "locale": 0,
+          "text": "Deimos"
+        },
+        {
+          "key": "loc_weapon_pattern_forcesword_p1_m2",
+          "hash": "3e6d37c3",
+          "locale": 16,
+          "text": "戴莫斯"
+        },
+        {
+          "key": "loc_weapon_pattern_forcesword_p1_m3",
+          "hash": "3cc92a21",
+          "locale": 0,
+          "text": "Illisi"
+        },
+        {
+          "key": "loc_weapon_pattern_forcesword_p1_m3",
+          "hash": "3cc92a21",
+          "locale": 16,
+          "text": "伊利斯"
+        }
+      ]
+    },
+    "primary_review": "actual metadata family/pattern/mark loc_id and fixed-SHA import/table.ukeys/append lines independently read",
+    "refs": [
+      [
+        "烈焰力場劍 朦朧 Mk II接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        15,
+        15
+      ],
+      [
+        "烈焰力場劍 朦朧 Mk II接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        1745,
+        1745
+      ],
+      [
+        "烈焰力場劍 朦朧 Mk II接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        1747,
+        1747
+      ],
+      [
+        "烈焰力場劍 戴莫斯 Mk IV接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        15,
+        15
+      ],
+      [
+        "烈焰力場劍 戴莫斯 Mk IV接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        1671,
+        1671
+      ],
+      [
+        "烈焰力場劍 戴莫斯 Mk IV接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        1673,
+        1673
+      ],
+      [
+        "烈焰力場劍 伊利斯 Mk V接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        15,
+        15
+      ],
+      [
+        "烈焰力場劍 伊利斯 Mk V接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        1539,
+        1539
+      ],
+      [
+        "烈焰力場劍 伊利斯 Mk V接入",
+        "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        1541,
+        1541
+      ]
+    ]
+  },
+  "outside_intersection_review": {
+    "matching_exact_key_metadata_items": 1,
+    "bound_variants": 1,
+    "bindings": 3,
+    "unresolved_exact_key_candidates": [],
+    "candidates": [],
+    "status": "The indexed inventory has one exact metadata-backed item, one variant, and three bindings. Exact name key and trait ID searches in definitions_not_bound, unresolved, and definitions_outside_intersection returned no matches. Pinned-source git grep for the exact trait ID found its single Force Sword definition/tier and buff wrapper only. This records the searched index/source boundary and does not establish that no other asset or unindexed candidate exists."
+  }
+}
