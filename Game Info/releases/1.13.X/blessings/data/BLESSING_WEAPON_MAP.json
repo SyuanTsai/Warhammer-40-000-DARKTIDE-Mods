@@ -246,6 +246,27 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/73b6c65e-a09c-4c98-9002-22e0c8cfd0c1",
       "effect": "充能近戰命中後使目標疊加脆弱；動力劍每次1／2／3／4層，動力錘10／12／14／16層。每層2.5%，最高16層，刷新5秒。"
+    },
+    {
+      "id": "can-opener",
+      "name_zh_tw": "開罐器",
+      "name_en": "Can Opener",
+      "name_key": "loc_trait_bespoke_armor_rending_bayonette",
+      "description_key": "loc_trait_bespoke_armor_rending_bayonette_desc",
+      "name_hash": "9011c283",
+      "description_hash": "7826a666",
+      "page": "entries/開罐器/README.md",
+      "kind": "mixed",
+      "icon": "https://github.com/user-attachments/assets/06518882-7971-44c2-a245-2bc1a344a659",
+      "effect": "撬棍次要模式命中每次1／2／3／4層，撕裂槍刺刀每次10／12／14／16層脆弱；每層2.5%，最高16層，合格命中刷新5秒。",
+      "description_keys": [
+        "loc_trait_bespoke_armor_rending_bayonette_crowbar_desc",
+        "loc_trait_bespoke_armor_rending_bayonette_desc"
+      ],
+      "kinds": [
+        "melee",
+        "ranged"
+      ]
     }
   ],
   "weapons": [
@@ -802,26 +823,41 @@
         {
           "id": "ogryn_rippergun_p1_m1",
           "item": "content/items/weapons/player/ranged/ogryn_rippergun_p1_m1",
-          "name": "碎敵Mk II撕裂槍",
-          "name_en": "Foe-Rend Mk II Ripper Gun",
+          "name": "撕裂槍 碎敵 Mk II",
+          "name_en": "Ripper Gun Foe-Rend Mk II",
           "template_file": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m1.lua",
-          "trait_category": "bespoke_rippergun_p1"
+          "trait_category": "bespoke_rippergun_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_rippergun_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_rippergun_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_rippergun_p1_m1"
+          }
         },
         {
           "id": "ogryn_rippergun_p1_m2",
           "item": "content/items/weapons/player/ranged/ogryn_rippergun_p1_m2",
-          "name": "碎敵Mk V撕裂槍",
-          "name_en": "Foe-Rend Mk V Ripper Gun",
+          "name": "撕裂槍 碎敵 Mk V",
+          "name_en": "Ripper Gun Foe-Rend Mk V",
           "template_file": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m2.lua",
-          "trait_category": "bespoke_rippergun_p1"
+          "trait_category": "bespoke_rippergun_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_rippergun_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_rippergun_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_rippergun_p1_m2"
+          }
         },
         {
           "id": "ogryn_rippergun_p1_m3",
           "item": "content/items/weapons/player/ranged/ogryn_rippergun_p1_m3",
-          "name": "碎敵Mk VI撕裂槍",
-          "name_en": "Foe-Rend Mk VI Ripper Gun",
+          "name": "撕裂槍 碎敵 Mk VI",
+          "name_en": "Ripper Gun Foe-Rend Mk VI",
           "template_file": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m3.lua",
-          "trait_category": "bespoke_rippergun_p1"
+          "trait_category": "bespoke_rippergun_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_rippergun_p1_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_rippergun_p1_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_rippergun_p1_m3"
+          }
         }
       ]
     },
@@ -4913,6 +4949,142 @@
       "icon": "https://github.com/user-attachments/assets/73b6c65e-a09c-4c98-9002-22e0c8cfd0c1",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_202",
       "effect": "充能命中後施加1／2／3／4層脆弱，每層2.5%，最高16層，刷新5秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_crowbar_p1_targets_receive_rending_debuff_on_weapon_special",
+      "blessing_id": "can-opener",
+      "weapon_id": "crowbar_p1",
+      "page": "entries/開罐器/weapon_trait_bespoke_crowbar_p1_targets_receive_rending_debuff_on_weapon_special.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "target_buff_template": "rending_debuff",
+        "target_stat_buff": "rending_multiplier",
+        "rending_per_stack": 0.025,
+        "rending_percent_per_stack": 2.5,
+        "duration_seconds": 5,
+        "duration_refresh_on_stack": true,
+        "actual_target_stack_cap": 16,
+        "trait_target_buff_data_default_max_stacks": 31,
+        "proc_cooldown_seconds": null,
+        "num_stacks_on_proc": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "target_rending_added_per_proc": [
+          0.025,
+          0.05,
+          0.075,
+          0.1
+        ],
+        "rending_percent_added_per_proc": [
+          2.5,
+          5,
+          7.5,
+          10
+        ],
+        "condition": {
+          "event": "proc_events.on_hit",
+          "check_proc": [
+            "attacking item matches trait item",
+            "attack_type == melee",
+            "damage_type != blunt"
+          ],
+          "conditional_proc_func": "ConditionalFunctions.melee_weapon_special_active",
+          "held_slot_gate_in_wrapper": false,
+          "weapon_special_flag_gate": false
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_crowbar_p1.lua",
+        "start_line": 545,
+        "end_line": 614
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_crowbar_p1_buff_templates.lua",
+        "start_line": 108,
+        "end_line": 122
+      },
+      "description_key": "loc_trait_bespoke_armor_rending_bayonette_crowbar_desc",
+      "description_hash": "2bf30b00",
+      "icon": "https://github.com/user-attachments/assets/06518882-7971-44c2-a245-2bc1a344a659",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_059",
+      "effect": "次要模式的合格近戰命中每次1／2／3／4層脆弱；每層2.5%，最高16層，刷新5秒；推擊後接擊不觸發。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_rippergun_p1_targets_receive_rending_debuff_on_weapon_special",
+      "blessing_id": "can-opener",
+      "weapon_id": "ogryn_rippergun_p1",
+      "page": "entries/開罐器/weapon_trait_bespoke_ogryn_rippergun_p1_targets_receive_rending_debuff_on_weapon_special.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "target_buff_template": "rending_debuff",
+        "target_stat_buff": "rending_multiplier",
+        "rending_per_stack": 0.025,
+        "rending_percent_per_stack": 2.5,
+        "duration_seconds": 5,
+        "duration_refresh_on_stack": true,
+        "actual_target_stack_cap": 16,
+        "trait_target_buff_data_default_max_stacks": 31,
+        "proc_cooldown_seconds": null,
+        "num_stacks_on_proc": [
+          10,
+          12,
+          14,
+          16
+        ],
+        "target_rending_added_per_proc": [
+          0.25,
+          0.3,
+          0.35,
+          0.4
+        ],
+        "rending_percent_added_per_proc": [
+          25,
+          30,
+          35,
+          40
+        ],
+        "condition": {
+          "event": "proc_events.on_hit",
+          "check_proc": [
+            "attacking item matches trait item",
+            "attack_type == melee"
+          ],
+          "conditional_proc_func": "base is_item_slot_wielded",
+          "held_slot_gate_in_wrapper": true,
+          "weapon_special_flag_gate": false,
+          "actual_special_action": "action_stab"
+        }
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_rippergun_p1.lua",
+        "start_line": 156,
+        "end_line": 225
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_rippergun_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_armor_rending_bayonette_desc",
+      "description_hash": "7826a666",
+      "icon": "https://github.com/user-attachments/assets/06518882-7971-44c2-a245-2bc1a344a659",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_059",
+      "effect": "刺刀命中每次10／12／14／16層脆弱；每層2.5%，最高16層，刷新5秒；射擊不觸發。"
     }
   ],
   "bindings": [
@@ -7014,6 +7186,62 @@
         "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p3_m1.lua",
         "import_line": 15,
         "append_line": 3374
+      }
+    },
+    {
+      "blessing_id": "can-opener",
+      "weapon_id": "crowbar_p1",
+      "mark_id": "crowbar_p1_m1",
+      "variant_id": "weapon_trait_bespoke_crowbar_p1_targets_receive_rending_debuff_on_weapon_special",
+      "trait_item": "content/items/traits/bespoke_crowbar_p1/armor_rending_bayonette",
+      "trait_category": "bespoke_crowbar_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/crowbars/crowbar_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 2189
+      }
+    },
+    {
+      "blessing_id": "can-opener",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_targets_receive_rending_debuff_on_weapon_special",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/armor_rending_bayonette",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 913
+      }
+    },
+    {
+      "blessing_id": "can-opener",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_targets_receive_rending_debuff_on_weapon_special",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/armor_rending_bayonette",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 908
+      }
+    },
+    {
+      "blessing_id": "can-opener",
+      "weapon_id": "ogryn_rippergun_p1",
+      "mark_id": "ogryn_rippergun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_rippergun_p1_targets_receive_rending_debuff_on_weapon_special",
+      "trait_item": "content/items/traits/bespoke_rippergun_p1/armor_rending_bayonette",
+      "trait_category": "bespoke_rippergun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ripperguns/ogryn_rippergun_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 891
       }
     }
   ]

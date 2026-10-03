@@ -1776,3 +1776,6 @@
 
 - Opportunist - 機會主義者
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_penetration_against_staggered`，hash `738f6c19`；英文／繁中RAW配對確認。
+
+- Can Opener - 開罐器
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_rending_bayonette`，hash `9011c283`；英文／繁中RAW配對確認。

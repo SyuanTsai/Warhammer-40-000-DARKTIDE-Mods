@@ -22,7 +22,7 @@
 | [槍托自動槍](ranged/槍托自動槍/README.md)<br>- Braced Autogun | 遠程 | 哥倫努Mk II槍托自動槍、格拉亞Mk IV槍托自動槍、阿格里皮娜Mk VIII槍托自動槍 |
 | [矛頭爆矢槍](ranged/矛頭爆矢槍/README.md)<br>- Spearhead Boltgun | 遠程 | 洛克Mk IIb矛頭爆矢槍、洛克Mk III矛頭爆矢槍 |
 | [重伐木槍](ranged/重伐木槍/README.md)<br>- Heavy Stubber | 遠程 | 布蘭克斯樣式重伐木槍、寬口布蘭克斯樣式重伐木槍、災變布蘭克斯樣式重伐木槍 |
-| [撕裂槍](ranged/撕裂槍/README.md)<br>- Ripper Gun | 遠程 | 碎敵Mk II撕裂槍、碎敵Mk V撕裂槍、碎敵Mk VI撕裂槍 |
+| [撕裂槍](ranged/撕裂槍/README.md)<br>- Ripper Gun | 遠程 | 撕裂槍 碎敵 Mk II、撕裂槍 碎敵 Mk V、撕裂槍 碎敵 Mk VI |
 | [上古神刃](melee/上古神刃/README.md)<br>- Relic Blade | 近戰 | 上古神刃 軍務部 Mk X、上古神刃 軍務部 Mk II |
 | [動力彎刀](melee/動力彎刀/README.md)<br>- Power Falchion | 近戰 | 動力彎刀 阿里丁 Mk I、動力彎刀 執法者 Mk IIb |
 | [撕裂者自動手槍](ranged/撕裂者自動手槍/README.md)<br>- Shredder Autopistol | 遠程 | 撕裂者自動手槍 尤斯 Mk IV |
