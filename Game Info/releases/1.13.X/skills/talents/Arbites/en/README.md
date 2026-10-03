@@ -39,6 +39,7 @@
 | <img src="https://github.com/user-attachments/assets/053a0db6-481b-4944-9077-d1d9a05759dd" width="32" height="32" alt="Terminal Decree talent icon"> [Terminal Decree](#adamant_terminus_warrant_support) | <ul><li>Whenever Terminus Warrant stacks are spent, restore Toughness to you and Allies in Coherency according to the actual count spent.</li><li>Each stack restores 1% of maximum Toughness; the base stack cap is 20.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="32" height="32" alt="Efficient Killer talent icon"> [Efficient Killer](#adamant_execution_order_crit) | <ul><li>Killing a Marked enemy grants Critical Hit Chance and Critical Hit Damage bonuses for 8s.</li><li>The bonuses are +10 percentage points of Critical Hit Chance and +25% additional critical damage.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/83df9392-fcfa-43e9-b9e0-ceef6f50ade7" width="32" height="32" alt="Malocator talent icon"> [Malocator](#adamant_execution_order_cdr) | <ul><li>After you or your Cyber-Mastiff kills a Marked target, restore an additional 0.5s of Combat Ability cooldown each second for 8s.</li><li>Retriggering refreshes the timer; nominal additional restoration totals 4s.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/ab53bec8-fd00-470c-8c5d-46cc58904f13" width="32" height="32" alt="No Lenience talent icon"> [No Lenience](#adamant_execution_order_rending) | <ul><li>Killing a Marked enemy grants a Rending bonus for 8s.</li><li>The +10% Rending modifier feeds the shared armor-damage calculation.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -471,3 +472,15 @@
 - **Cooldown example**: Restore an additional 0.5s of Combat Ability cooldown each second, nominally 4s over 8s. Starting with 20s remaining, after 8s and eight restoration ticks the remainder is 20 − 8 − 8 × 0.5 = 8s. Restoration is limited to the unregenerated cooldown; expiry update order may result in one fewer tick. Retriggering refreshes the duration without increasing the restoration rate.
 
 [Details](adamant_execution_order_cdr.md) · [Back to index](#talent-index)
+
+<a id="adamant_execution_order_rending"></a>
+
+### No Lenience
+
+<img src="https://github.com/user-attachments/assets/ab53bec8-fd00-470c-8c5d-46cc58904f13" width="72" height="72" alt="No Lenience talent icon">
+
+- **Trigger and duration**: Killing a Marked enemy grants +10% Rending for 8s. Retriggering refreshes the duration.
+
+- **Damage examples**: At base damage 100 and an original armor-damage coefficient of 0.5, damage rises from 50 to 100 × (0.5 + 0.1) = 60, a 20% increase. If the coefficient is already 1 and the armor supports excess conversion, the result is 100 × (1 + 0.1 × 0.25) = 102.5.
+
+[Details](adamant_execution_order_rending.md) · [Back to index](#talent-index)

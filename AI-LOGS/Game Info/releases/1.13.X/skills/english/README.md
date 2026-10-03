@@ -284,3 +284,5 @@ Five-item checkpoint (skills 108–112): 745 seconds (12m 25s), measured between
 - [Efficient Killer](arbites_adamant_execution_order_crit.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - [Malocator](arbites_adamant_execution_order_cdr.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+- [No Lenience](arbites_adamant_execution_order_rending.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
