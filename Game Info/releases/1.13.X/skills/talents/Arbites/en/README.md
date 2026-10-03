@@ -62,6 +62,7 @@
 | <img src="https://github.com/user-attachments/assets/62b0bee6-3606-40bc-9d78-06f072535e59" width="32" height="32" alt="Ranged Damage Boost talent icon"> [Ranged Damage Boost](#base_ranged_damage_node_buff_medium_1) | <ul><li>Increase Ranged Damage by 10%.</li></ul> | Stat node |
 | <img src="https://github.com/user-attachments/assets/8c224499-f2ca-420c-bcf6-39034e6a35b2" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_medium_1) | <ul><li>Increase Melee Damage by 10%.</li></ul> | Stat node |
 | <img src="https://github.com/user-attachments/assets/549d3657-c19a-49a6-b8ad-2c1e77080dfa" width="32" height="32" alt="Razor-Jaw Augment talent icon"> [Razor-Jaw Augment](#adamant_dog_pounces_bleed_nearby) | <ul><li>Your Cyber-Mastiff's surrounding pounce push and pinning attacks against Ogryns or Monsters can apply 6 stacks of Bleed.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/d856ef6a-9f61-4b4a-b672-e60019dea866" width="32" height="32" alt="Imposing Force talent icon"> [Imposing Force](#adamant_damage_reduction_after_elite_kill) | <ul><li>An Elite or Specialist kill grants 25% Damage Resistance for 5s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -772,3 +773,15 @@
 - **Damage example**: At the Unarmoured baseline with no other modifiers, let the stack fraction be n ÷ 16. Damage per tick is 87.5 × (n ÷ 16)² × [3 − 2 × (n ÷ 16)]. Six stacks give approximately 27.69 points, 12 give 73.83 and 16 give 87.5. Twelve stacks do not deal twice the damage of six.
 
 [Details](adamant_dog_pounces_bleed_nearby.md) · [Back to index](#talent-index)
+
+<a id="adamant_damage_reduction_after_elite_kill"></a>
+
+### Imposing Force
+
+<img src="https://github.com/user-attachments/assets/d856ef6a-9f61-4b4a-b672-e60019dea866" width="72" height="72" alt="Imposing Force talent icon">
+
+- **Trigger and refresh**: After killing an Elite or Specialist, take 25% less damage for 5s. Another qualifying kill resets the duration; the multiplier does not stack.
+
+- **Damage-reduction example**: For an original 100 incoming damage, this effect alone gives 100 × 0.75 = 75. With another independent 20% damage reduction, the result is 100 × 0.75 × 0.8 = 60.
+
+[Details](adamant_damage_reduction_after_elite_kill.md) · [Back to index](#talent-index)
