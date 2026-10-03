@@ -51,6 +51,7 @@
 | <img src="https://github.com/user-attachments/assets/fc3f3a29-7b71-45d4-aec6-c72036ba9831" width="32" height="32" alt="Target Neutralised talent icon"> [Target Neutralised](#adamant_elite_special_kills_replenish_toughness) | <ul><li>An Elite or Specialist kill instantly restores 10% of maximum Toughness, then another 10% over 4s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/3098a511-fa0f-444e-a9e2-8e6591688115" width="32" height="32" alt="Up Close talent icon"> [Up Close](#adamant_close_kills_restore_toughness) | <ul><li>Killing an enemy within 12.5m restores 5% of maximum Toughness.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/898ad4c6-3f99-404d-8ff9-b15a9820f8e9" width="32" height="32" alt="Force of Will talent icon"> [Force of Will](#adamant_staggers_replenish_toughness) | <ul><li>A melee attack that Staggers its first hit target restores 7.5% of maximum Toughness.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/4ce13efe-7a81-48cd-9bb6-47dfb55f63b8" width="32" height="32" alt="Voltaic Mandibles Augment talent icon"> [Voltaic Mandibles Augment](#adamant_dog_attacks_electrocute) | <ul><li>Your Cyber-Mastiff's pounce and pinning attacks Electrocute the target for 5s; continued attacks can refresh the effect.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -629,3 +630,17 @@
 - **Recovery example**: At maximum Toughness 100 with no other recovery bonus, each proc restores 100 × 7.5% = 7.5 points. An attack hitting 3 enemies still restores at most 7.5 points, capped by the deficit.
 
 [Details](adamant_staggers_replenish_toughness.md) · [Back to index](#talent-index)
+
+<a id="adamant_dog_attacks_electrocute"></a>
+
+### Voltaic Mandibles Augment
+
+<img src="https://github.com/user-attachments/assets/4ce13efe-7a81-48cd-9bb6-47dfb55f63b8" width="72" height="72" alt="Voltaic Mandibles Augment talent icon">
+
+- **Trigger and duration**: Your Cyber-Mastiff's pounce and pinning attacks apply Electrocution on hit for 5s. Continued attacks can refresh the duration; they do not stack multiple copies of Electrocution.
+
+- **Damage cadence**: After each damage tick, the next interval is random between 0.3 and 0.8s. The first tick also has a short update delay. A 5s effect therefore cannot be treated as a fixed tick count or fixed damage per second.
+
+- **Damage example**: With no other bonus and an ordinary Unarmoured hit zone, baseline damage per tick is 57.5 × 0.5 = 28.75. Using the baseline Flak armour modifier of 1 gives 57.5. Actual damage still depends on enemy hit zones, resistances and other damage bonuses.
+
+[Details](adamant_dog_attacks_electrocute.md) · [Back to index](#talent-index)
