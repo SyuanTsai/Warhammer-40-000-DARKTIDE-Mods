@@ -44,3 +44,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Don't Feel a Thing](ogryn_heavy_hitter_tdr.md) / `ogryn_heavy_hitter_tdr` | Keystone |
 | [Great Cleaver](ogryn_heavy_hitter_cleave.md) / `ogryn_heavy_hitter_cleave` | Keystone |
 | [Unstoppable](ogryn_heavy_hitter_max_stacks_improves_toughness.md) / `ogryn_heavy_hitter_max_stacks_improves_toughness` | Keystone |
+| [Impactful](ogryn_heavy_hitter_stagger.md) / `ogryn_heavy_hitter_stagger` | Keystone |
