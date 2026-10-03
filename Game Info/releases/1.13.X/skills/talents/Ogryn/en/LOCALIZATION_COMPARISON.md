@@ -683,6 +683,19 @@ Full raw template and formatting: [source evidence](ogryn_increased_ammo_reserve
 | Reserve capacity | Increase your ammo reserve by +25%.; `ui / loc_talent_ogryn_increased_ammo_desc / 1a862478` | ammo_reserve_capacity 0.25 increases maximum reserve; magazine capacity uses clip_size_modifier separately. [Fixed source and line references](ogryn_increased_ammo_reserve.md#fixed-source-evidence) | Consistent | The independently read English identifies the reserve and matches the accepted value. |
 | Rounding and related replenishment | No rounding, additive-capacity formula or replenishment base is stated.; `ui / loc_talent_ogryn_increased_ammo_desc / 1a862478` | Maximum reserve is floor(base_max_ammo × capacity_modifier). Base 200 becomes 250 rounds; base 101 gives 126.25, floored to 126. Other same-stage capacity bonuses add, and reserve-percentage replenishment uses the increased maximum. [Fixed source and line references](ogryn_increased_ammo_reserve.md#fixed-source-evidence) | Not covered by the description | These accepted calculations supplement the reserve-capacity increase. |
 
+
+<a id="ogryn_multi_hits_grant_reload_speed"></a>
+
+## Pacemaker
+
+Full raw template and formatting: [source evidence](ogryn_multi_hits_grant_reload_speed.md#original-english-template-and-reconstruction). Name hash `3e43fc29`. Every row uses `ui / loc_talent_ogryn_reload_speed_on_multiple_hits_new_desc / 61042337`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Count, bonus and next reload | Hitting 3 or more Enemies ... grants +15% Reload Speed on your next Reload.; `ui / loc_talent_ogryn_reload_speed_on_multiple_hits_new_desc / 61042337` | num_hit_units >= 3 grants a child buff with reload_speed 0.15, consumed after the next reload ends. [Fixed source and line references](ogryn_multi_hits_grant_reload_speed.md#fixed-source-evidence) | Consistent | The independently read English matches the required count, bonus and next-reload use. |
+| Single-attack requirement | ... with a single Attack ...; `ui / loc_talent_ogryn_reload_speed_on_multiple_hits_new_desc / 61042337` | on_hit counts distinct struck units whose individual t + 0.5 expiries have not passed. It has no same-attack identifier restriction and no attack-type filter. [Fixed source and line references](ogryn_multi_hits_grant_reload_speed.md#fixed-source-evidence) | Explicit contradiction | The explicit English requirement is narrower than the accepted time-window counter. Both sources correspond to 1.13.1; actual game behavior remains unobserved. |
+| Deduplication, persistence and calculation | No target-expiry window, stack cap, exit-state rule or time formula is stated.; `ui / loc_talent_ogryn_reload_speed_on_multiple_hits_new_desc / 61042337` | Repeated hits update a unit's expiry, rather than adding another target. The child buff has one stack and no duration; done plus exit from reload_shotgun/reload_state/ranged_load_special removes it. Configured duration 5 is unused. A 3s scaled action becomes about 2.61s, or 2.22s with another +20%. [Fixed source and line references](ogryn_multi_hits_grant_reload_speed.md#fixed-source-evidence) | Not covered by the description | These accepted counter, consumption and timing details supplement the next-reload bonus. |
+
 ## Comparison totals
 
 The 182 listed rules comprise **73 Consistent**, **3 Explicit contradictions**, **99 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain! and the visible-stack threshold in Pained Outburst. These totals apply only to the listed rules.

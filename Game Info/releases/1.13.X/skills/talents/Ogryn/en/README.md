@@ -57,6 +57,7 @@
 | <img src="https://github.com/user-attachments/assets/206be198-2a5f-426f-944a-8d85fd74f1d6" width="32" height="32" alt="Hard Knocks talent icon"> [Hard Knocks](#ogryn_staggering_increases_damage) | <ul><li>Enemies staggered by melee attacks take +15% melee damage for 5s; teammates' melee attacks also benefit.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/01fd23cb-46d2-41fa-bfc3-d8b1d17f43a3" width="32" height="32" alt="Unstoppable Momentum talent icon"> [Unstoppable Momentum](#ogryn_movement_speed_after_ranged_kills) | <ul><li>A ranged kill grants +20% Movement Speed for 3s; further ranged kills restart the duration.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/fab49cb9-e155-47d2-8b8c-2ad8235a0f48" width="32" height="32" alt="Ammo Stash talent icon"> [Ammo Stash](#ogryn_increased_ammo_reserve) | <ul><li>Increase maximum ammo reserve by 25%; magazine capacity is unchanged.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/cf916d47-2e00-43d4-98b7-307222a056e6" width="32" height="32" alt="Pacemaker talent icon"> [Pacemaker](#ogryn_multi_hits_grant_reload_speed) | <ul><li>Hit at least 3 different enemies within about 0.5s for +15% Reload Speed on the next reload. English instead says a single attack.</li></ul> | Talent |
 
 ## Blitz
 
@@ -873,3 +874,21 @@
 - **Calculation**: Add other reserve-capacity bonuses at the same stage. Replenishment based on a percentage of maximum ammo reserve also uses the increased maximum.
 
 [Details](ogryn_increased_ammo_reserve.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_multi_hits_grant_reload_speed"></a>
+
+### Pacemaker
+
+<img src="https://github.com/user-attachments/assets/cf916d47-2e00-43d4-98b7-307222a056e6" width="72" height="72" alt="Pacemaker talent icon">
+
+- **Trigger**: Hit at least 3 different enemies within about 0.5s to gain +15% Reload Speed for the next reload. Melee and ranged hits both count; repeated hits on one enemy do not count as multiple enemies.
+
+- **Consumption**: The bonus lasts until the next reload ends, then is removed. Repeated triggers do not stack it to +30%.
+
+- **Time example**: A 3s action affected by Reload Speed becomes `3 ÷ 1.15 ≈ 2.61s`. With another +20% at the same stage, it becomes `3 ÷ (1 + 15% + 20%) ≈ 2.22s`.
+
+- **English erratum**: English says the enemies must be hit with a single attack. The accepted fixed-version implementation counts different targets within about 0.5s without a same-attack identifier restriction. Actual in-game behavior remains unobserved.
+
+[Details](ogryn_multi_hits_grant_reload_speed.md) · [Back to index](#talent-index)
