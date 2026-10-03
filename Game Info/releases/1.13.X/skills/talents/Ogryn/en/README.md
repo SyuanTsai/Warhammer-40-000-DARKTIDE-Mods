@@ -37,6 +37,7 @@
 | <img src="https://github.com/user-attachments/assets/47256097-2109-4fe4-89b7-b4a224ff1200" width="32" height="32" alt="Maximum Firepower talent icon"> [Maximum Firepower](#ogryn_leadbelcher_cooldown_reduction) | <ul><li>A Lucky Bullet proc grants about 1 extra second of combat-ability cooldown recovery per second for 2.5s.</li><li>Further procs refresh the duration without increasing the restoration per tick.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/048770ea-349f-42a0-b5a1-c582fbfde7f8" width="32" height="32" alt="Good Shootin' talent icon"> [Good Shootin'](#ogryn_leadbelcher_crits) | <ul><li>The shot that triggers Lucky Bullet is guaranteed critical if it hits.</li><li>A miss does not produce a critical hit; the effect does not change Lucky Bullet chance.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760" width="32" height="32" alt="Bulletstorm talent icon"> [Bulletstorm](#ogryn_blo_ally_ranged_buffs) | <ul><li>Lucky Bullet grants you and allies in Coherency +15% ranged damage for 8s.</li><li>Further procs restart the 8s duration.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/a9ec95cc-0b91-4558-81b5-faefcf1207d7" width="32" height="32" alt="Heat of Battle talent icon"> [Heat of Battle](#ogryn_blo_wield_speed) | <ul><li>Heat of Battle adds 1.5% ranged fire rate per Burst Limiter Override stack.</li><li>Uses the existing ranged-kill stacks, maximum 10, with refreshed 10s duration; full stacks grant 15% fire rate.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -527,3 +528,19 @@
 - **Damage example**: Base ranged damage 100 becomes 100 × (1 + 15%) = 115. Another 20% at the same stage gives 135. This damage buff does not accumulate stacks.
 
 [Details](ogryn_blo_ally_ranged_buffs.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_blo_wield_speed"></a>
+
+### Heat of Battle
+
+<img src="https://github.com/user-attachments/assets/a9ec95cc-0b91-4558-81b5-faefcf1207d7" width="72" height="72" alt="Heat of Battle talent icon">
+
+- **Prerequisite**: Build Burst Limiter Override stacks through ranged kills. This node follows those stacks; it does not generate stacks or extend their duration by itself. The existing limit is 10 stacks, with duration reset to 10s on each stack addition.
+
+- **Per-stack effect**: Gain 1.5% ranged fire rate per stack, up to 10 stacks.
+
+- **Example**: Six stacks grant 9% ranged fire rate; 10 grant 15%. If the base firing interval is 1s, at full stacks it becomes about 1 ÷ 1.15 = 0.87s.
+
+[Details](ogryn_blo_wield_speed.md) · [Back to index](#talent-index)
