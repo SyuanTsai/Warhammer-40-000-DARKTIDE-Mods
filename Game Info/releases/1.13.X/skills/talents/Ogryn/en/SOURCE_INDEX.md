@@ -60,3 +60,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Unstoppable Momentum](ogryn_movement_speed_after_ranged_kills.md) / `ogryn_movement_speed_after_ranged_kills` | Talent |
 | [Ammo Stash](ogryn_increased_ammo_reserve.md) / `ogryn_increased_ammo_reserve` | Talent |
 | [Pacemaker](ogryn_multi_hits_grant_reload_speed.md) / `ogryn_multi_hits_grant_reload_speed` | Talent |
+| [Found Some More](ogryn_free_reload_after_ability.md) / `ogryn_free_reload_after_ability` | Talent |

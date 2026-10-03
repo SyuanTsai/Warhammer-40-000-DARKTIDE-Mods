@@ -58,6 +58,7 @@
 | <img src="https://github.com/user-attachments/assets/01fd23cb-46d2-41fa-bfc3-d8b1d17f43a3" width="32" height="32" alt="Unstoppable Momentum talent icon"> [Unstoppable Momentum](#ogryn_movement_speed_after_ranged_kills) | <ul><li>A ranged kill grants +20% Movement Speed for 3s; further ranged kills restart the duration.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/fab49cb9-e155-47d2-8b8c-2ad8235a0f48" width="32" height="32" alt="Ammo Stash talent icon"> [Ammo Stash](#ogryn_increased_ammo_reserve) | <ul><li>Increase maximum ammo reserve by 25%; magazine capacity is unchanged.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/cf916d47-2e00-43d4-98b7-307222a056e6" width="32" height="32" alt="Pacemaker talent icon"> [Pacemaker](#ogryn_multi_hits_grant_reload_speed) | <ul><li>Hit at least 3 different enemies within about 0.5s for +15% Reload Speed on the next reload. English instead says a single attack.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/5a19ac08-20bc-41ee-8af1-bbc6194fa852" width="32" height="32" alt="Found Some More talent icon"> [Found Some More](#ogryn_free_reload_after_ability) | <ul><li>Replenish 1% of maximum ammo reserve about every 15s; no ability use or reload required.</li></ul> | Talent |
 
 ## Blitz
 
@@ -892,3 +893,19 @@
 - **English erratum**: English says the enemies must be hit with a single attack. The accepted fixed-version implementation counts different targets within about 0.5s without a same-attack identifier restriction. Actual in-game behavior remains unobserved.
 
 [Details](ogryn_multi_hits_grant_reload_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_free_reload_after_ability"></a>
+
+### Found Some More
+
+<img src="https://github.com/user-attachments/assets/5a19ac08-20bc-41ee-8af1-bbc6194fa852" width="72" height="72" alt="Found Some More talent icon">
+
+- **Replenishment**: Restore reserve ammunition about every 15s, based on 1% of maximum ammo reserve. No combat-ability use or reload is required.
+
+- **Integer example**: With maximum reserve 200, each tick grants `200 × 1% = 2` rounds. With maximum reserve 75, each tick accumulates 0.75 rounds; the fractional remainder carries forward. The first four grants are 0, 1, 1 and 1 rounds, totalling 3.
+
+- **Ammo limit**: Ammunition is added to the reserve, not directly to the magazine. While the magazine is missing ammunition, the same deficit can temporarily be stored in the reserve; combined magazine and reserve ammo still cannot exceed their combined capacities.
+
+[Details](ogryn_free_reload_after_ability.md) · [Back to index](#talent-index)

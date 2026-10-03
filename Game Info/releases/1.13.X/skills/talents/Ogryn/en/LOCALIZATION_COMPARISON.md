@@ -696,6 +696,18 @@ Full raw template and formatting: [source evidence](ogryn_multi_hits_grant_reloa
 | Single-attack requirement | ... with a single Attack ...; `ui / loc_talent_ogryn_reload_speed_on_multiple_hits_new_desc / 61042337` | on_hit counts distinct struck units whose individual t + 0.5 expiries have not passed. It has no same-attack identifier restriction and no attack-type filter. [Fixed source and line references](ogryn_multi_hits_grant_reload_speed.md#fixed-source-evidence) | Explicit contradiction | The explicit English requirement is narrower than the accepted time-window counter. Both sources correspond to 1.13.1; actual game behavior remains unobserved. |
 | Deduplication, persistence and calculation | No target-expiry window, stack cap, exit-state rule or time formula is stated.; `ui / loc_talent_ogryn_reload_speed_on_multiple_hits_new_desc / 61042337` | Repeated hits update a unit's expiry, rather than adding another target. The child buff has one stack and no duration; done plus exit from reload_shotgun/reload_state/ranged_load_special removes it. Configured duration 5 is unused. A 3s scaled action becomes about 2.61s, or 2.22s with another +20%. [Fixed source and line references](ogryn_multi_hits_grant_reload_speed.md#fixed-source-evidence) | Not covered by the description | These accepted counter, consumption and timing details supplement the next-reload bonus. |
 
+
+<a id="ogryn_free_reload_after_ability"></a>
+
+## Found Some More
+
+Full raw template and formatting: [source evidence](ogryn_free_reload_after_ability.md#original-english-template-and-reconstruction). Name hash `e56eeef1`. Every row uses `ui / loc_talent_cryptic_passive_ammo_replenishment_desc / 41aa3ba1`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Periodic reserve replenishment | Every 15s, replenish 1% of your Max Ammo Reserve.; `ui / loc_talent_cryptic_passive_ammo_replenishment_desc / 41aa3ba1` | ogryn_passive_ammo_replenishment has interval 15 and percent 0.01; the server calls Ammo.add_to_all_slots. No ability or reload is needed. [Fixed source and line references](ogryn_free_reload_after_ability.md#fixed-source-evidence) | Consistent | The independently read English matches the current passive, rather than the obsolete internal name comment. |
+| Integer carryover, placement and limits | No rounding, remainder, reserve-cap or initial-offset rule is stated.; `ui / loc_talent_cryptic_passive_ammo_replenishment_desc / 41aa3ba1` | Each slot uses amount = 0.01 × max_reserve + carryover, grants the floor and retains the fraction. Reserve cap is max_reserve + missing_clip. Maximum 200 grants 2 rounds per tick; maximum 75 grants 0, 1, 1, 1 over four ticks from zero carryover. Server updates and a small initialization offset affect timing. [Fixed source and line references](ogryn_free_reload_after_ability.md#fixed-source-evidence) | Not covered by the description | These accepted calculations supplement the periodic percentage. The example assumes sufficient missing ammo; ammo enters reserve rather than the magazine. |
+
 ## Comparison totals
 
 The 182 listed rules comprise **73 Consistent**, **3 Explicit contradictions**, **99 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain! and the visible-stack threshold in Pained Outburst. These totals apply only to the listed rules.
