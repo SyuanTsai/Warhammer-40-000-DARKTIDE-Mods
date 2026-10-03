@@ -793,6 +793,18 @@ Full raw template and formatting: [source evidence](ogryn_windup_reduces_damage_
 | Charging condition and reduction | +15% Damage Reduction while charging Melee Attacks.; `ui / loc_talent_ogryn_windup_reduces_damage_taken_desc / fed4526c` | action_settings.kind == windup enables damage_taken_multiplier 0.85. [Fixed source and line references](ogryn_windup_reduces_damage_taken.md#fixed-source-evidence) | Consistent | The independently read English matches the charging condition and 15% reduction. |
 | End condition and calculation | No separate duration, stacking or combined-reduction formula is stated.; `ui / loc_talent_ogryn_windup_reduces_damage_taken_desc / fed4526c` | The reduction ends with windup, without covering the entire subsequent swing. No extra stacks or duration. Damage 100 becomes 85, or 68 with another independent 20% reduction. [Fixed source and line references](ogryn_windup_reduces_damage_taken.md#fixed-source-evidence) | Not covered by the description | These accepted lifetime and calculation details supplement the charging wording. |
 
+
+<a id="ogryn_windup_is_uninterruptible"></a>
+
+## No Stopping Me!
+
+Full raw template and formatting: [source evidence](ogryn_windup_is_uninterruptible.md#original-english-template-and-reconstruction). Name hash `c63c5e99`. Every row uses `ui / loc_talent_ogryn_windup_is_uninterruptible_unslowed_desc / 6704b700`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Charging effects | Become Uninterruptible while charging Heavy Melee Attacks. Remove 100% of Heavy Melee Attack Movement Speed penalties.; `ui / loc_talent_ogryn_windup_is_uninterruptible_unslowed_desc / 6704b700` | Windup controls the uninterruptible keyword and weapon_action_movespeed_reduction_multiplier 0. [Fixed source and line references](ogryn_windup_is_uninterruptible.md#fixed-source-evidence) | Consistent | The independently read English specifies the charging condition and removes the action penalty rather than increasing general speed. |
+| Conditional fallback and limits | No initialization fallback, invulnerability claim or numerical speed example is stated.; `ui / loc_talent_ogryn_windup_is_uninterruptible_unslowed_desc / 6704b700` | conditional_stat_buffs_func also supplies the keyword condition, so effects end with windup. Damage still applies. A 50% charging penalty taking 5m/s to 2.5m/s is removed, restoring 5m/s. [Fixed source and line references](ogryn_windup_is_uninterruptible.md#fixed-source-evidence) | Not covered by the description | These accepted implementation and example details supplement the wording; Uninterruptible does not imply invulnerability. |
+
 ## Comparison totals
 
 The 204 listed rules comprise **84 Consistent**, **4 Explicit contradictions**, **109 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

@@ -66,6 +66,7 @@
 | <img src="https://github.com/user-attachments/assets/9af41f8c-0f0e-4b2b-965e-c0d01fea2746" width="32" height="32" alt="No Hurting Friends! talent icon"> [No Hurting Friends!](#ogryn_damage_taken_by_all_increases_strength_tdr) | <ul><li>Damage to you or Coherency allies builds up to five +2% Strength stacks for 10s; full stacks also grant 15% Toughness damage reduction.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/895c3ccd-387f-4862-9a2b-b429ff5d6432" width="32" height="32" alt="Get Stuck In talent icon"> [Get Stuck In](#ogryn_ally_movement_boost_on_ability) | <ul><li>Activating your Combat Ability grants you and current Coherency allies +20% Movement Speed and Stun/Suppression immunity for 6s.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/bb088b60-c1e8-42a7-b68e-3ef59f5d9eb9" width="32" height="32" alt="Implacable talent icon"> [Implacable](#ogryn_windup_reduces_damage_taken) | <ul><li>Gain 15% damage reduction during melee windup; the bonus ends when charging ends.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/d80b562f-7fc2-4daf-85e4-ae25f8171a89" width="32" height="32" alt="No Stopping Me! talent icon"> [No Stopping Me!](#ogryn_windup_is_uninterruptible) | <ul><li>Become Uninterruptible and remove the heavy melee action's Movement Speed penalty while charging; damage still applies.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1030,3 +1031,19 @@
 - **Damage-reduction example**: With only this effect, damage of 100 becomes `100 × 0.85 = 85`. With another independent 20% reduction, it becomes `100 × 0.85 × 0.8 = 68`.
 
 [Details](ogryn_windup_reduces_damage_taken.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_windup_is_uninterruptible"></a>
+
+### No Stopping Me!
+
+<img src="https://github.com/user-attachments/assets/d80b562f-7fc2-4daf-85e4-ae25f8171a89" width="72" height="72" alt="No Stopping Me! talent icon">
+
+- **Condition**: While charging a heavy melee attack, become Uninterruptible and remove that action's Movement Speed penalty. Both effects end when charging ends.
+
+- **Speed example**: Assume normal speed is 5m/s and charging normally imposes a 50% penalty, reducing it to 2.5m/s. Removing that penalty restores 5m/s; it does not add 100% to all Movement Speed.
+
+- **Limit**: This does not grant invulnerability; you still take damage while charging.
+
+[Details](ogryn_windup_is_uninterruptible.md) · [Back to index](#talent-index)

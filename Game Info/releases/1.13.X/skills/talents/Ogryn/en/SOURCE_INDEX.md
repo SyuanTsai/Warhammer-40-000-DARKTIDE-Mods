@@ -68,3 +68,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [No Hurting Friends!](ogryn_damage_taken_by_all_increases_strength_tdr.md) / `ogryn_damage_taken_by_all_increases_strength_tdr` | Talent |
 | [Get Stuck In](ogryn_ally_movement_boost_on_ability.md) / `ogryn_ally_movement_boost_on_ability` | Talent |
 | [Implacable](ogryn_windup_reduces_damage_taken.md) / `ogryn_windup_reduces_damage_taken` | Talent |
+| [No Stopping Me!](ogryn_windup_is_uninterruptible.md) / `ogryn_windup_is_uninterruptible` | Talent |
