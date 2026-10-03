@@ -2177,7 +2177,12 @@
         "ogryn_grenade_friend_rock",
         "ogryn_replenish_rock_on_miss",
         "ogryn_big_box_of_hurt_more_bombs",
-        "ogryn_melee_damage_coherency_improved"
+        "ogryn_melee_damage_coherency_improved",
+        "ogryn_damage_vs_suppressed_coherency",
+        "ogryn_toughness_regen_aura",
+        "ogryn_taunt_shout",
+        "ogryn_longer_charge",
+        "ogryn_special_ammo"
       ],
       "checks": []
     },
@@ -2195,7 +2200,12 @@
         "ogryn_grenade_friend_rock",
         "ogryn_replenish_rock_on_miss",
         "ogryn_big_box_of_hurt_more_bombs",
-        "ogryn_melee_damage_coherency_improved"
+        "ogryn_melee_damage_coherency_improved",
+        "ogryn_damage_vs_suppressed_coherency",
+        "ogryn_toughness_regen_aura",
+        "ogryn_taunt_shout",
+        "ogryn_longer_charge",
+        "ogryn_special_ammo"
       ],
       "checks": []
     },
@@ -2213,7 +2223,12 @@
         "ogryn_grenade_friend_rock",
         "ogryn_replenish_rock_on_miss",
         "ogryn_big_box_of_hurt_more_bombs",
-        "ogryn_melee_damage_coherency_improved"
+        "ogryn_melee_damage_coherency_improved",
+        "ogryn_damage_vs_suppressed_coherency",
+        "ogryn_toughness_regen_aura",
+        "ogryn_taunt_shout",
+        "ogryn_longer_charge",
+        "ogryn_special_ammo"
       ],
       "checks": []
     },
@@ -2231,7 +2246,12 @@
         "ogryn_grenade_friend_rock",
         "ogryn_replenish_rock_on_miss",
         "ogryn_big_box_of_hurt_more_bombs",
-        "ogryn_melee_damage_coherency_improved"
+        "ogryn_melee_damage_coherency_improved",
+        "ogryn_damage_vs_suppressed_coherency",
+        "ogryn_toughness_regen_aura",
+        "ogryn_taunt_shout",
+        "ogryn_longer_charge",
+        "ogryn_special_ammo"
       ],
       "checks": []
     },
@@ -2564,9 +2584,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a1f4a9a2672524aaaa216de89ef652c69e69dc78",
       "chinese_sha256": "6e26223b810cb15106ca2254b087d717d05ad7b2487e2fa329fab0827e8a820d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_damage_vs_suppressed_coherency"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_181_185.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_dodge_stagger.md",
@@ -2842,9 +2869,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "ce44a6e726ae382ea2c28d822293583fb91dd96d",
       "chinese_sha256": "7989325e47032511dc5f4555c2924d010e2ffd0947ed0e45bf83c70cf6e38ac9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_longer_charge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_181_185.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_melee_attacks_give_mtdr.md",
@@ -3131,9 +3165,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6c30270a185979a75808cad4df42332ef3265761",
       "chinese_sha256": "1899a5d74566ae33f7c16a048eb894b6049afd632b0cfb31a569b4c1909d5dc7",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_special_ammo"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_181_185.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_special_ammo_armor_pen.md",
@@ -3219,9 +3260,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "4ef536680418b15874dcccb2f7fff3cf4edbcc4c",
       "chinese_sha256": "7e032f2aadc9e25c88ad107d776f004019c7d2aa72815573cf9322bf025046a3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_taunt_shout"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_181_185.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_taunt_staggers_reduce_cooldown.md",
@@ -3252,9 +3300,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6f05d4c1dac8555deda3817a2e565435a2159eed",
       "chinese_sha256": "bb466df4749b415cff99e99849429953c77b3ac5003eeb2c5a353867a48c1ee6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_toughness_regen_aura"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_181_185.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_toughness_while_bracing.md",
@@ -11733,6 +11788,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_176_180.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_melee_damage_coherency_improved.md"
+    },
+    {
+      "id": "ogryn_damage_vs_suppressed_coherency",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_181_185.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_damage_vs_suppressed_coherency.md"
+    },
+    {
+      "id": "ogryn_toughness_regen_aura",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_181_185.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_toughness_regen_aura.md"
+    },
+    {
+      "id": "ogryn_taunt_shout",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_181_185.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_taunt_shout.md"
+    },
+    {
+      "id": "ogryn_longer_charge",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_181_185.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_longer_charge.md"
+    },
+    {
+      "id": "ogryn_special_ammo",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_181_185.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_special_ammo.md"
     }
   ],
   "pending_chinese_corrections": [

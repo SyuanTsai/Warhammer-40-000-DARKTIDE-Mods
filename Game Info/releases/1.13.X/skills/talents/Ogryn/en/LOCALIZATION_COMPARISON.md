@@ -175,4 +175,4 @@ Full raw template and formatting: [source evidence](ogryn_special_ammo.md#origin
 
 ## Comparison totals
 
-The 31 listed rules comprise **13 Consistent**, **1 Explicit contradiction**, **14 Not covered by the description**, **0 No corresponding implementation evidence found** and **3 Cannot confirm**. The explicit English contradiction concerns the no-enemy-hit scope in That One Didn’t Count. These totals apply only to the listed rules.
+The 58 listed rules comprise **26 Consistent**, **1 Explicit contradiction**, **26 Not covered by the description**, **0 No corresponding implementation evidence found** and **5 Cannot confirm**. The explicit English contradiction concerns the no-enemy-hit scope in That One Didn’t Count. These totals apply only to the listed rules.
