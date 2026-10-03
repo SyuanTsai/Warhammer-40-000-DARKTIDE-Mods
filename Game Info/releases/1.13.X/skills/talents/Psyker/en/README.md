@@ -11,6 +11,7 @@
 | <img src="https://github.com/user-attachments/assets/215cb557-8544-4d05-876a-871e70dc093a" width="32" height="32" alt="Brain Rupture talent icon"> [Brain Rupture](#psyker_brain_burst_improved) | <ul><li>Charge a single-target attack with 50% more damage than the base Blitz.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/a0c17626-2777-4302-bc7e-9b3a48aadcd0" width="32" height="32" alt="Assail talent icon"> [Assail](#psyker_grenade_throwing_knives) | <ul><li>Throw homing psychic shards, or aim to select a target; holds 10 uses and restores one every 3 seconds.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/ae86e2bb-6971-4dfe-b678-0aa814ccdfa1" width="32" height="32" alt="Ethereal Shards talent icon"> [Ethereal Shards](#psyker_throwing_knives_piercing) | <ul><li>Assail's damage and impact penetration capacities increase by 50%.</li></ul> | Blitz |
+| <img src="https://github.com/user-attachments/assets/981d6617-da53-4f4d-8c85-c2e64dddab43" width="32" height="32" alt="Smite talent icon"> [Smite](#psyker_grenade_chain_lightning) | <ul><li>Channel lightning into a target and nearby enemies; charging accelerates spread and damage buildup.</li></ul> | Blitz |
 
 ---
 
@@ -77,3 +78,21 @@
 - **Penetration example**: With no other penetration modifiers, a capacity of 2 mass units becomes 2 × 1.5 = 3 mass units. Enemy masses vary, so this does not guarantee one additional enemy hit.
 
 [Details](psyker_throwing_knives_piercing.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_grenade_chain_lightning"></a>
+
+### Smite
+
+<img src="https://github.com/user-attachments/assets/981d6617-da53-4f4d-8c85-c2e64dddab43" width="72" height="72" alt="Smite talent icon">
+
+- **How it works**: Channel psychic lightning, electrocuting a target and spreading to nearby enemies. Whether enemies remain staggered depends on their resistance and actions. Charged casting accelerates propagation and damage buildup.
+
+- **Spread**: Subsequent propagation reaches 5 + 1 = 6 metres. Quick casting starts with at most one jump and increases to 2, 3 and 4 jumps at 1.2, 1.8 and 2.7 seconds. Charged casting reaches those same limits at 0.4, 0.6 and 0.9 seconds. Enemy positions and line of sight still limit actual numbers.
+
+- **Sustained damage**: Electrocution deals damage at random intervals of 0.1–0.3 seconds. Quick casting takes about 5 seconds to reach maximum intensity; charged casting takes about 2. Targets with greater resistance to penetration start taking damage later. Final damage also depends on enemy armour and bonuses.
+
+- **Peril example**: Without other modifiers, quick casting adds about 0.75 Peril percentage points during its first 0.1 seconds, then about 22.5 points per second. Maintaining it for 0.35 seconds adds about 0.75 + 22.5 × 0.25 = 6.375 points. Completing the 0.8-second preparatory charge phase adds about 5 points during that phase.
+
+[Details](psyker_grenade_chain_lightning.md) · [Back to index](#talent-index)

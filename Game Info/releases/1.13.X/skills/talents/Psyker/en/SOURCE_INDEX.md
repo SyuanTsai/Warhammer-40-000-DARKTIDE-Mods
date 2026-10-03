@@ -15,3 +15,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Brain Rupture](psyker_brain_burst_improved.md) / `psyker_brain_burst_improved` | Blitz |
 | [Assail](psyker_grenade_throwing_knives.md) / `psyker_grenade_throwing_knives` | Blitz |
 | [Ethereal Shards](psyker_throwing_knives_piercing.md) / `psyker_throwing_knives_piercing` | Blitz |
+| [Smite](psyker_grenade_chain_lightning.md) / `psyker_grenade_chain_lightning` | Blitz |
