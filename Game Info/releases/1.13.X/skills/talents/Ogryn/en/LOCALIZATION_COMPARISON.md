@@ -1009,6 +1009,18 @@ Full raw template and formatting: [source evidence](ogryn_melee_damage_after_hea
 | Heavy-hit damage bonus | +15% Melee Damage on Successful Heavy Melee Attack. Lasts 5s.; `ui / loc_talent_ogryn_melee_damage_after_heavy_desc / ee301680` | sweep_finish with num_hit_units >0 and is_heavy activates melee_damage 0.15 for 5s. [Fixed source and line references](ogryn_melee_damage_after_heavy.md#fixed-source-evidence) | Consistent | The independently read English matches the heavy-hit condition, bonus and duration. |
 | Activation, refresh and calculation | No retroactive application, multi-target stacking or formula is stated.; `ui / loc_talent_ogryn_melee_damage_after_heavy_desc / ee301680` | Activation follows sweep completion, so the triggering hit is not recalculated. Further heavy hits refresh rather than increase the percentage; ordinary melee attacks also benefit while active. Base 100 becomes 115, or 135 with same-stage +20%. [Fixed source and line references](ogryn_melee_damage_after_heavy.md#fixed-source-evidence) | Not covered by the description | These accepted timing, scope and calculation details supplement the English. |
 
+
+<a id="ogryn_drain_stamina_for_handling"></a>
+
+## Concentrate
+
+Full raw template and formatting: [source evidence](ogryn_drain_stamina_for_handling.md#original-english-template-and-reconstruction). Name hash `d4a809fa`. Every row uses `ui / loc_talent_ogryn_drain_stamina_for_handling_desc / 6c43172c`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Braced handling and drain | +60% Sway Reduction, +20% Spread Reduction, and +15% Recoil Reduction while bracing your Ranged Weapon, but lose 0.5 Stamina per second.; `ui / loc_talent_ogryn_drain_stamina_for_handling_desc / 6c43172c` | The wielded-weapon/alternate_fire helper applies sway 0.4, spread −0.2 and recoil −0.15; update drains 0.5 × dt Stamina. [Fixed source and line references](ogryn_drain_stamina_for_handling.md#fixed-source-evidence) | Consistent | The independently read English matches the effects, values and braced condition. |
+| Gating, reload and parameter scope | No Stamina-exhaustion condition, reload exception or accuracy formula is stated.; `ui / loc_talent_ogryn_drain_stamina_for_handling_desc / 6c43172c` | Stamina >0 gates the stats; reload stops drain but the stat helper has no reload check. There is no additional Critical Chance. Five Stamina lasts at most 10s without other modifiers; isolated parameters 100 become 40/80/85, with weapon curves affecting actual handling. [Fixed source and line references](ogryn_drain_stamina_for_handling.md#fixed-source-evidence) | Not covered by the description | These accepted conditions and limits supplement the English; no fixed accuracy or angle increase is inferred. |
+
 ## Comparison totals
 
 The 244 listed rules comprise **104 Consistent**, **4 Explicit contradictions**, **129 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

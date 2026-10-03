@@ -84,6 +84,7 @@
 | <img src="https://github.com/user-attachments/assets/de5091de-3dd6-455b-875a-55228eb4d67e" width="32" height="32" alt="Lucky Streak talent icon"> [Lucky Streak](#ogryn_crit_damage_increase) | <ul><li>Add 75% to the additional critical-damage component; the effect on total damage depends on weapon, armour and hit location.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5f6d651a-4c88-40ea-a96b-3133459df2f4" width="32" height="32" alt="Frenzied Blows talent icon"> [Frenzied Blows](#ogryn_stacking_attack_speed) | <ul><li>Chained melee hits from the second successful sweep build up to five +2.5% melee Attack Speed stacks for 5s; a miss clears them.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/373afc07-72d5-4815-91c0-0e5d0d02d279" width="32" height="32" alt="Beat Them Back talent icon"> [Beat Them Back](#ogryn_melee_damage_after_heavy) | <ul><li>A successful heavy melee sweep grants +15% melee damage for 5s after it finishes; further heavy hits refresh.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/d21c7405-647a-4da2-a396-16b9c5cd8819" width="32" height="32" alt="Concentrate talent icon"> [Concentrate](#ogryn_drain_stamina_for_handling) | <ul><li>While bracing with Stamina, reduce Sway by 60%, Spread by 20% and Recoil by 15%, draining 0.5 Stamina per second except while reloading.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1340,3 +1341,19 @@
 - **Damage example**: Base damage of 100 becomes 115. With another +20% at the same stage, it becomes `100 × (1 + 20% + 15%) = 135`.
 
 [Details](ogryn_melee_damage_after_heavy.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_drain_stamina_for_handling"></a>
+
+### Concentrate
+
+<img src="https://github.com/user-attachments/assets/d21c7405-647a-4da2-a396-16b9c5cd8819" width="72" height="72" alt="Concentrate talent icon">
+
+- **Condition**: While bracing your ranged weapon with Stamina remaining, reduce Sway by 60%, Spread by 20% and Recoil by 15%. These bonuses are lost when Stamina runs out.
+
+- **Stamina drain**: Drain 0.5 Stamina per second; reloading stops this drain. With 5 Stamina and no other drain or drain modifiers, this can last at most `5 ÷ 0.5 = 10s`.
+
+- **Handling example**: Isolating other modifiers, Sway, Spread and Recoil parameters initially at 100 become 40, 80 and 85 respectively. These are handling parameters, not fixed percentage increases to accuracy.
+
+[Details](ogryn_drain_stamina_for_handling.md) · [Back to index](#talent-index)
