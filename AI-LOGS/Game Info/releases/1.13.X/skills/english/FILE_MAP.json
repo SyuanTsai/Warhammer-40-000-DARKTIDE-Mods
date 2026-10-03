@@ -5760,7 +5760,8 @@
         "veteran_weapon_switch_replenish_stamina",
         "veteran_improved_tag",
         "veteran_improved_tag_more_damage",
-        "veteran_improved_tag_dead_bonus"
+        "veteran_improved_tag_dead_bonus",
+        "veteran_improved_tag_dead_coherency_bonus"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5861,7 +5862,8 @@
         "veteran_weapon_switch_replenish_stamina",
         "veteran_improved_tag",
         "veteran_improved_tag_more_damage",
-        "veteran_improved_tag_dead_bonus"
+        "veteran_improved_tag_dead_bonus",
+        "veteran_improved_tag_dead_coherency_bonus"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5962,7 +5964,8 @@
         "veteran_weapon_switch_replenish_stamina",
         "veteran_improved_tag",
         "veteran_improved_tag_more_damage",
-        "veteran_improved_tag_dead_bonus"
+        "veteran_improved_tag_dead_bonus",
+        "veteran_improved_tag_dead_coherency_bonus"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6063,7 +6066,8 @@
         "veteran_weapon_switch_replenish_stamina",
         "veteran_improved_tag",
         "veteran_improved_tag_more_damage",
-        "veteran_improved_tag_dead_bonus"
+        "veteran_improved_tag_dead_bonus",
+        "veteran_improved_tag_dead_coherency_bonus"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -7050,9 +7054,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "747c9ba70b9462dba8067805ae692d55063c0d1f",
       "chinese_sha256": "28622eece63c1b8d3dd33368f080807b6f1a7f57f9705d606e3598cc9f613c0a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_improved_tag_dead_coherency_bonus"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_improved_tag_more_damage.md",
@@ -9684,7 +9703,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_improved_tag_dead_bonus.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_tag_dead_bonus.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_tag_dead_bonus.md",
+      "commit": "b994a422255cae0d26ea86c6807d7a4706b8a8d0"
+    },
+    {
+      "id": "veteran_improved_tag_dead_coherency_bonus",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_improved_tag_dead_coherency_bonus.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_tag_dead_coherency_bonus.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -126,5 +126,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/target-down-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_tag_dead_bonus.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_tag_dead_bonus.md",
+  "commit": "b994a422255cae0d26ea86c6807d7a4706b8a8d0"
 }

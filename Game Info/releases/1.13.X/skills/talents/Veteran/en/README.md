@@ -39,6 +39,7 @@
 | <img src="https://github.com/user-attachments/assets/85048589-7642-40e7-9d4b-ab325da2ea25" width="32" height="32" alt="Focus Target! talent icon"> [Focus Target!](#veteran_improved_tag) | <ul><li>Store one stack every 1.5 seconds, starting at 1 and normally capping at 4; a tag applies the stored amount to the target.</li><li>Each applied stack multiplies target damage taken by 1.05. Same-target re-tags upgrade only to a higher stored count; the mark lasts 25 seconds.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/a95c5ea6-546f-462d-a073-56f9d1a21103" width="32" height="32" alt="Focused Fire talent icon"> [Focused Fire](#veteran_improved_tag_more_damage) | <ul><li>Raise maximum stored Focus Target stacks from 4 to 6; stack gain remains one every 1.5 seconds.</li><li>Six applied stacks multiply target damage taken by 1.05^6, about 1.3401; re-tag to apply stronger storage.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/47cc6995-f2fa-407d-9cb0-4dd91fcdc10d" width="32" height="32" alt="Target Down! talent icon"> [Target Down!](#veteran_improved_tag_dead_bonus) | <ul><li>When your currently marked enemy dies, you and allies in Coherency regain 5% of maximum Toughness and Stamina per applied Focus Target stack.</li><li>Four applied stacks request 20%; with Focused Fire, six request 30%. Deficits limit recovery, and the owner need not land the kill.</li></ul> | Keystone modifier |
+| <img src="https://github.com/user-attachments/assets/48ecea96-bdaa-49e6-b9b7-ee3ac26fc1c5" width="32" height="32" alt="Redirect Fire! talent icon"> [Redirect Fire!](#veteran_improved_tag_dead_coherency_bonus) | <ul><li>A currently marked enemy death grants you and allies in Coherency 2.5% damage per applied Focus Target stack for 10 seconds.</li><li>Rewards add stacks and refresh the duration, with 4 effective stacks normally or 6 with Focused Fire; damage adds to other same-stage bonuses.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="Long Range Assassin talent icon"> [Long Range Assassin](#veteran_snipers_focus_increased_stacks) | <ul><li>Raise Marksman's Focus's effective stack cap from 10 to 15.</li><li>At 15 stacks, gain 112.5% ranged finesse strength and 15% reload speed; the whole-hit increase depends on the extra component.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="32" height="32" alt="Chink in their Armour talent icon"> [Chink in their Armour](#veteran_snipers_focus_rending_bonus) | <ul><li>At 10 or more Focus stacks, gain 15% Rending; lose it below 10 stacks.</li><li>The threshold stays 10 with Long Range Assassin. Damage gain depends on armor and existing Rending.</li></ul> | Keystone modifier |
@@ -817,6 +818,22 @@ Assume maximum Stamina is 6 points and the activation has a stored Melee Special
 - If the mark expires or you mark another enemy first, the previous target's death no longer triggers this reward.
 
 [Detailed sources and formulas](veteran_improved_tag_dead_bonus.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_improved_tag_dead_bonus) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_improved_tag_dead_coherency_bonus"></a>
+
+<img src="https://github.com/user-attachments/assets/48ecea96-bdaa-49e6-b9b7-ee3ac26fc1c5" width="72" height="72" alt="Redirect Fire! talent icon">
+
+### Redirect Fire!
+
+- **When your currently marked enemy dies, you and allies in Coherency gain damage for 10 seconds.** You do not need the killing blow. Each Focus Target stack actually applied to the enemy grants one damage-buff stack, worth **2.5% damage**.
+- **Accumulate and refresh:** further qualifying marked deaths add stacks to the existing buff and reset the duration to 10 seconds. Effective stacks normally cap at 4; another reward can refresh the timer at the cap. A lower-stack enemy does not replace the existing stronger bonus with its lower count.
+- **Damage examples:** four stacks contribute `4 × 2.5% = 10%`; an otherwise 100-point result becomes `100 × (1+0.10)=110`. With an existing same-stage 25% bonus, it becomes `100 × (1+0.25+0.10)=135`, an 8% gain from the previous 125.
+- **Refresh example:** gain two stacks at 0 seconds, then one more at 6 seconds: three effective stacks remain until about `6+10=16 seconds`, assuming no later reward.
+- **With Focused Fire:** the effective cap becomes 6, contributing up to `6 × 2.5% = 15%` to the damage stat. An expired or replaced mark cannot grant a new reward from its former target.
+
+[Detailed sources and formulas](veteran_improved_tag_dead_coherency_bonus.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_improved_tag_dead_coherency_bonus) | [Back to index](#talent-index)
 
 ---
 
