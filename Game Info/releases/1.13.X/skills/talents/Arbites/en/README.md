@@ -68,6 +68,7 @@
 | <img src="https://github.com/user-attachments/assets/e8b31492-509e-479a-9369-203e36e1e1e4" width="32" height="32" alt="Impact Boost talent icon"> [Impact Boost](#base_impact_node_buff_medium_1) | <ul><li>Increase Impact by 25%, making enemies easier to stagger.</li></ul> | Stat node |
 | <img src="https://github.com/user-attachments/assets/170599ce-ad50-4760-93b2-da650c6deac8" width="32" height="32" alt="Plasteel Plates talent icon"> [Plasteel Plates](#adamant_plasteel_plates) | <ul><li>Increase maximum Toughness by 25 points.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/5df365c7-8213-4c06-acc5-2b00f0cda022" width="32" height="32" alt="Serrated Maw talent icon"> [Serrated Maw](#adamant_dog_applies_brittleness) | <ul><li>Cyber-Mastiff pounce applies 15% Brittleness for 5s; shared cap 40%.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/9a87f145-d4a8-4554-b8ca-f5fbb2a58944" width="32" height="32" alt="Arbites Revelatum talent icon"> [Arbites Revelatum](#adamant_dodge_grants_damage) | <ul><li>After successfully dodging an enemy attack, gain 15% Damage for 5s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -852,3 +853,15 @@
 - **Damage examples**: With base damage 100 and an original armour modifier of 0.5, damage is 50. Adding 15% Brittleness gives 100 × (0.5 + 0.15) = 65, an actual 30% increase. If the armour supports excess-rending conversion and the original modifier is already 1, the result is 100 × (1 + 0.15 × 0.25) = 103.75. This is not a fixed 15% increase to final damage.
 
 [Details](adamant_dog_applies_brittleness.md) · [Back to index](#talent-index)
+
+<a id="adamant_dodge_grants_damage"></a>
+
+### Arbites Revelatum
+
+<img src="https://github.com/user-attachments/assets/9a87f145-d4a8-4554-b8ca-f5fbb2a58944" width="72" height="72" alt="Arbites Revelatum talent icon">
+
+- **Trigger and refresh**: Successfully dodging an enemy attack grants 15% Damage for 5s. Another successful dodge resets the duration. Performing a dodge movement alone does not trigger the effect.
+
+- **Damage example**: With base damage 100 and no other modifiers, damage becomes 100 × (1 + 15%) = 115 points. With an existing same-stage 25% bonus, 125 points becomes 140.
+
+[Details](adamant_dodge_grants_damage.md) · [Back to index](#talent-index)
