@@ -190,6 +190,18 @@ Full raw template and formatting: [source evidence](psyker_shout_reduces_warp_ch
 | Tier-dependent per-stack value | `{warp_generation:%s}` uses tier-aware formatting; the 0.99 scenario reconstructs 1%; `ui / loc_talent_psyker_shout_reduces_warp_charge_generation_description / 57df8e08` | Default/first override use warp_charge_amount=0.99; second override uses 0.98. The display mapping converts these to 1% or 2%. [Fixed source and line references](psyker_shout_reduces_warp_charge_generation.md#fixed-source-evidence) | Cannot confirm | Which tier/configuration the client uses is unresolved; one value cannot be asserted for all configurations. |
 | Stack calculation and targeting limits | No additive formula, existing-Peril Quell or duplicate-hit behavior stated; `ui / loc_talent_psyker_shout_reduces_warp_charge_generation_description / 57df8e08` | The coefficient multiplies per stack: 0.99^10 ≈ 0.9044 and 0.99^25 ≈ 0.7778. Target filtering determines hit count; special duplicate counting is unverified. Existing Peril is not directly removed. [Fixed source and line references](psyker_shout_reduces_warp_charge_generation.md#fixed-source-evidence) | Not covered by the description | These calculations and limits supplement the stated Peril Generation reduction. |
 
+
+<a id="psyker_discharge_damage_debuff"></a>
+
+## Warp Rupture
+
+Full raw template and formatting: [source evidence](psyker_discharge_damage_debuff.md#original-english-template-and-reconstruction). Name hash `dc5e455f`. Every row uses `ui / loc_talent_psyker_discharge_damage_debuff_description / c5561004`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Target, two effects, values and duration | Enemies hit by Venting Shriek deal 10% less damage and take 10% more damage for 8s; `ui / loc_talent_psyker_discharge_damage_debuff_description / c5561004` | Targets receive damage=−0.1 and damage_taken_multiplier=1.1 for 8 seconds. [Fixed source and line references](psyker_discharge_damage_debuff.md#fixed-source-evidence) | Consistent | The English preserves both offensive and defensive effects on the hit Enemy. |
+| Arithmetic and application limits | No isolated damage examples, stack cap or refresh boundary stated; `ui / loc_talent_psyker_discharge_damage_debuff_description / c5561004` | At an original 100, example Damage Dealt becomes 90 and Damage Taken becomes 110. Maximum 1 stack; exact reapplication timing remains untested, and other combat modifiers affect final results. [Fixed source and line references](psyker_discharge_damage_debuff.md#fixed-source-evidence) | Not covered by the description | These calculation and application limits supplement the stated debuff. |
+
 ## Comparison totals
 
 The 33 listed rules comprise **16 Consistent**, **0 Explicit contradictions**, **15 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.

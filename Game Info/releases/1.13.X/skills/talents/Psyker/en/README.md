@@ -22,6 +22,7 @@
 | <img src="https://github.com/user-attachments/assets/d0500b6b-c91c-4c34-857a-6c144800fe37" width="32" height="32" alt="Venting Shriek talent icon"> [Venting Shriek](#psyker_shout_vent_warp_charge) | <ul><li>Staggers Enemies in front of you and immediately Quells 50 percentage points of Peril; base cooldown 30 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a" width="32" height="32" alt="Scrier's Gaze talent icon"> [Scrier's Gaze](#psyker_combat_ability_stance) | <ul><li>Quell 50 percentage points of Peril on activation; gain damage, Critical Chance, Weakspot Damage, Toughness protection/recovery and Suppression Immunity. Damage builds while active and lingers for 10 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/b89da8f0-2d3d-4a87-bc92-43e2438e28c8" width="32" height="32" alt="Becalming Eruption talent icon"> [Becalming Eruption](#psyker_shout_reduces_warp_charge_generation) | <ul><li>Venting Shriek hits grant Peril Generation reduction for 5 seconds, up to 25 stacks; in the 0.99-per-stack scenario, reductions multiply.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/8a145b7f-771a-42b6-a809-56650cd24f7e" width="32" height="32" alt="Warp Rupture talent icon"> [Warp Rupture](#psyker_discharge_damage_debuff) | <ul><li>Enemies hit by Venting Shriek deal 10% less damage and take 10% more damage for 8 seconds.</li></ul> | Ability |
 
 ---
 
@@ -251,3 +252,17 @@
 - This reduces new Peril Generation; it does not directly Quell existing Peril. The source also contains a 0.98 tier override. The examples use 0.99 and cannot be applied unchanged to a different tier/configuration.
 
 [Details](psyker_shout_reduces_warp_charge_generation.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_discharge_damage_debuff"></a>
+
+### Warp Rupture
+
+<img src="https://github.com/user-attachments/assets/8a145b7f-771a-42b6-a809-56650cd24f7e" width="72" height="72" alt="Warp Rupture talent icon">
+
+- **Ability modifier**: Enemies hit by Venting Shriek deal 10% less damage and take 10% more damage for 8 seconds.
+
+- **Damage example**: With no other bonuses, an Enemy originally dealing 100 damage now deals `100 × 0.9 = 90`; originally taking 100 damage, it now takes `100 × 1.1 = 110`.
+
+[Details](psyker_discharge_damage_debuff.md) · [Back to index](#talent-index)
