@@ -841,6 +841,18 @@ Full raw template and formatting: [source evidence](ogryn_rending_on_elite_kills
 | Elite-kill Rending | +15% Rending for 10s on Elite Kill.; `ui / loc_talent_ogryn_rending_on_elite_kills_desc / 4203de9c` | on_elite_kill activates rending_multiplier 0.15 for 10s, with allow_proc_while_active. [Fixed source and line references](ogryn_rending_on_elite_kills.md#fixed-source-evidence) | Consistent | The independently read English matches the value and duration and does not contain the Chinese times-unit error. |
 | Refresh, armour scope and calculation | No refresh, armour-type list or damage formula is stated.; `ui / loc_talent_ogryn_rending_on_elite_kills_desc / 4203de9c` | Triggers refresh rather than stack. armored, super_armor, resistant and berserker support Rending; below 1 it first fills the deficit, with excess contributing at the overdamage coefficient. Base 100 at 0.5 becomes 65 instead of 50 (+30% relative); at 1 it becomes 103.75 using 0.25 for excess. [Fixed source and line references](ogryn_rending_on_elite_kills.md#fixed-source-evidence) | Not covered by the description | These accepted Rending details supplement the percentage wording; the bonus is not uniform final damage ×1.15. |
 
+
+<a id="ogryn_reloading_grants_damage"></a>
+
+## Reloaded and Ready
+
+Full raw template and formatting: [source evidence](ogryn_reloading_grants_damage.md#original-english-template-and-reconstruction). Name hash `d7ac6751`. Every row uses `ui / loc_talent_ogryn_ranged_damage_on_reload_desc / a8bc8a04`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Reload bonus and scope | +15% Ranged Damage for 8s on reload.; `ui / loc_talent_ogryn_ranged_damage_on_reload_desc / a8bc8a04` | on_reload activates ranged_damage 0.15 for active_duration 8; melee damage is unaffected. [Fixed source and line references](ogryn_reloading_grants_damage.md#fixed-source-evidence) | Consistent | The independently read English matches the current values and damage scope, rather than the obsolete internal name. |
+| Refresh and calculation | No refresh or stacking formula is stated.; `ui / loc_talent_ogryn_ranged_damage_on_reload_desc / a8bc8a04` | Further reloads refresh the duration without stacking. Base ranged damage 100 becomes 115, or 135 with another same-stage +20%. [Fixed source and line references](ogryn_reloading_grants_damage.md#fixed-source-evidence) | Not covered by the description | These accepted timing and additive details supplement the English. |
+
 ## Comparison totals
 
 The 214 listed rules comprise **89 Consistent**, **4 Explicit contradictions**, **114 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

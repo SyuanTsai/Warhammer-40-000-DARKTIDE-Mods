@@ -70,6 +70,7 @@
 | <img src="https://github.com/user-attachments/assets/7e27b3b4-5eca-49b5-aafd-c8abc6635b14" width="32" height="32" alt="Massacre talent icon"> [Massacre](#ogryn_kills_grant_crit_chance) | <ul><li>Kills grant +2 percentage points of Critical Chance per stack for 12s, up to eight stacks; further kills refresh the duration.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5d6152a6-dedb-49c4-a7d2-328d082084c0" width="32" height="32" alt="Payback Time talent icon"> [Payback Time](#ogryn_revenge_damage) | <ul><li>A successful melee dodge or damaging melee hit, including Toughness-absorbed damage, grants +15% melee and ranged damage for 5s; triggers refresh.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/0eb640b4-e206-4d0b-a982-f74b33baf5b2" width="32" height="32" alt="Dominate talent icon"> [Dominate](#ogryn_rending_on_elite_kills) | <ul><li>Elite kills grant +15% Rending for 10s with refresh; actual damage depends on the original armour multiplier.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/27fcc279-9828-4df7-b895-04956bb2463b" width="32" height="32" alt="Reloaded and Ready talent icon"> [Reloaded and Ready](#ogryn_reloading_grants_damage) | <ul><li>Reloading grants +15% ranged damage for 8s; further reloads refresh the duration without stacking.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1100,3 +1101,17 @@
 - The Chinese text adds a times unit after the Rending percentage, which is incorrect. The effect grants 15% Rending; it does not make Rending 15 times as large.
 
 [Details](ogryn_rending_on_elite_kills.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_reloading_grants_damage"></a>
+
+### Reloaded and Ready
+
+<img src="https://github.com/user-attachments/assets/27fcc279-9828-4df7-b895-04956bb2463b" width="72" height="72" alt="Reloaded and Ready talent icon">
+
+- **Trigger**: Reloading grants +15% ranged damage for 8s. Reloading again refreshes the duration without adding stacks.
+
+- **Damage example**: Base ranged damage of 100 becomes 115. With another +20% at the same stage, it becomes `100 × (1 + 20% + 15%) = 135`. Melee damage does not receive this bonus.
+
+[Details](ogryn_reloading_grants_damage.md) · [Back to index](#talent-index)

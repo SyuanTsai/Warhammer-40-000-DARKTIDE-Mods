@@ -72,3 +72,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Massacre](ogryn_kills_grant_crit_chance.md) / `ogryn_kills_grant_crit_chance` | Talent |
 | [Payback Time](ogryn_revenge_damage.md) / `ogryn_revenge_damage` | Talent |
 | [Dominate](ogryn_rending_on_elite_kills.md) / `ogryn_rending_on_elite_kills` | Talent |
+| [Reloaded and Ready](ogryn_reloading_grants_damage.md) / `ogryn_reloading_grants_damage` | Talent |
