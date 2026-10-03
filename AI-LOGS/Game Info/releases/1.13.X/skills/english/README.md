@@ -210,3 +210,5 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Determined](veteran_supression_immunity.json): existing base-effect translation and independent English comparison; changed Markdown and links checked. Commit is recoverable through the English file history.
 
 - [Practiced Efficiency](veteran_survivalist_passive.json): existing base-effect translation and independent English comparison; changed Markdown and links checked. Commit is recoverable through the English file history.
+
+- [Veteran class acceptance](veteran_class.json): 89 mapped English pages, 77 tree nodes, 6 base effects and 19 excluded definitions; references, Markdown/HTML structure and 77 public images checked once at class completion. Existing interpretation gaps remain explicit. Five-item timing checkpoint: 16m 43s; provisional remaining continuous execution estimate 20–30h.

@@ -6,6 +6,8 @@
 
 Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. Mechanism descriptions combine source-confirmed behavior and explicitly identified static derivation. In-game execution and final UI rendering have not been tested.
 
+The current player tree has **77 nodes**: 76 one-point nodes and one zero-point starting node. A build can allocate at most 30 points; the index does not imply that all 77 talents can be selected together. The six class base effects are listed separately below.
+
 | Talent / code identifier | Category |
 |---|---|
 | [Smoke Grenade](veteran_smoke_grenade.md) / `veteran_smoke_grenade` | Blitz |
@@ -92,7 +94,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 |---|---|
 | [Scavenger](veteran_aura_gain_ammo_on_elite_kill.md) / `veteran_aura_gain_ammo_on_elite_kill` | Base aura |
 | [Guardsman](veteran_base_ranged_damage.md) / `veteran_base_ranged_damage` | Base passive |
-| [Low Profile](veteran_cover_peeking.md) / `veteran_cover_peeking` | Base cover-peeking rule |
+| [Low Profile](veteran_cover_peeking.md) (base cover peeking) / `veteran_cover_peeking` | Base cover-peeking rule |
 | [Frag Grenade](veteran_frag_grenade.md) / `veteran_frag_grenade` | Base Blitz |
 | [Determined](veteran_supression_immunity.md) / `veteran_supression_immunity` | Base suppression immunity |
 | [Practiced Efficiency](veteran_survivalist_passive.md) / `veteran_survivalist_passive` | Base personal Ammo passive |

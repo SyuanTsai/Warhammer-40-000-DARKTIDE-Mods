@@ -4,6 +4,15 @@
 
 Source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. Review entries below identify the actual quantity and example assumptions. They do not inherit the Chinese review's counts or certify talents absent from this table. Examples are static derivation, not in-game measurements.
 
+## Shared calculation basis
+
+- For a weakspot or Critical Hit extra-damage component F, add applicable bonuses before multiplying F, then add the base component B. With an existing bonus s and a new bonus a, compare `B + F × (1 + s)` with `B + F × (1 + s + a)`. The relative increase at this stage is `a × F / [B + F × (1 + s)]`, provided the original value is greater than zero. Hold other conditions and subsequent calculation stages fixed.
+- B and F belong to the same hit, with the same armour, hit location, weapon damage settings, Critical Hit status and other attack conditions. Body-shot damage is not automatically the B of a weakspot hit. A stance's general Ranged Damage bonus affects an earlier stage, so a single-component example is not the ability's complete benefit.
+- PowerLevel changes the input and damage curve; Rending modifies armour multipliers. Neither can be treated as an effect that only scales F.
+- Without a specified weapon variant, attack or charge mode and target, these examples do not establish a fixed 15% benefit for a Lucius lasgun or a universally larger benefit for autoguns. Weapon-specific final damage, rounding and game outcomes remain unmeasured.
+
+## Individual calculations
+
 | Talent | Quantity and calculation | Conclusion |
 |---|---|---|
 | [Smoke Grenade](veteran_smoke_grenade.md) | No base damage percentage is described. Separate base fuse, cloud duration, charge capacity and concealment linger. | Base timeline 1.5 + 15 = 16.5s; Grenade Tinkerer cloud 15 × 2 = 30s and timeline 31.5s. One throw: 3 → 2 charges. The 10m detonation blast is not the 4.5m sight-blocking core. |
@@ -85,7 +94,7 @@ Source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. Re
 | [Hunter's Resolve](veteran_toughness_bonus_leaving_invisibility.md) | Active Toughness-damage factors multiply: one instance `0.5`, two `0.5² = 0.25`. Each instance begins its own 10s exit countdown. | Isolated 100 Toughness damage becomes 50 or, with two active instances, 25 (75% total reduction). Eight seconds in Stealth gives about 18s total coverage; exit at 2s gives about 12s. This stat does not improve health damage taken or maximum Toughness. |
 | [Scavenger](veteran_aura_gain_ammo_on_elite_kill.md) | Maximum reserve Ammo is the denominator; fractions carry over and payouts go to the reserve. | 400 × 0.25% = 1 round before the reserve ceiling. Survivalist replaces 0.25% with 0.5%; it does not add both rates. |
 | [Guardsman](veteran_base_ranged_damage.md) | The 25% bonus is additive at the ranged-damage calculation stage. | With stage base damage 100 and other multipliers 1: 100 → 125 alone; another 15% at the same stage gives 140. |
-| [Low Profile](veteran_cover_peeking.md) | No damage or recovery percentage is described; this is a conditional movement/view rule. | Preserve the ledge-height and distance gates. No all-weapon or all-cover guarantee is supported. |
+| [Low Profile](veteran_cover_peeking.md) (base cover peeking) | No damage or recovery percentage is described; this is a conditional movement/view rule. | Preserve the ledge-height and distance gates. No all-weapon or all-cover guarantee is supported. |
 | [Frag Grenade](veteran_frag_grenade.md) | Separate PowerLevel normalization, the blast's base damage and armour-damage modifiers. | With other modifiers excluded: 500 × (500 × 20 / 10,000) × 1 = 500 Unarmoured damage; multiplying by Carapace's 0.2 gives 100. |
 | [Determined](veteran_supression_immunity.md) | No damage-reduction percentage is described. | The keyword prevents Suppression accumulation; it does not reduce bullet damage or imply immunity to other control effects. |
 | [Practiced Efficiency](veteran_survivalist_passive.md) | Use maximum reserve Ammo, not current Ammo or the reserve deficit. | 400 × 1% = 4 rounds. If a separate 0.5% aura also applies, 400 × (1% + 0.5%) = 6 rounds before the reserve ceiling. |

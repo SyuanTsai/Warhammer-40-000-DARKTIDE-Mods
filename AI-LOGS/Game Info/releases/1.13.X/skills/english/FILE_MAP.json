@@ -5672,7 +5672,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "85368832669f03c140bf3031417fe5ca64038573",
       "chinese_sha256": "7e5c5b9b054dac632cc2f6790b2c5bfd0d92d152bb3091d90514fb8ea32064bf",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "veteran_aura_gain_ammo_on_elite_kill",
         "veteran_base_ranged_damage",
@@ -5681,7 +5681,8 @@
         "veteran_supression_immunity",
         "veteran_survivalist_passive"
       ],
-      "checks": []
+      "checks": [],
+      "class_acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/DAMAGE_PERCENTAGE_REVIEW.md",
@@ -5690,7 +5691,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "0d2ad90bfabdc97e5aae5e7a6ce775f629e6f409",
       "chinese_sha256": "33bed185ee436c5b2c686c90c9c44161f1098e0ae9a48eec8702994612d1e4d9",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "veteran_replenish_grenades",
         "veteran_increased_weakspot_damage",
@@ -5789,7 +5790,8 @@
         "independent_english_text_comparison",
         "fixed_source_citation_bounds",
         "read_only_text_review"
-      ]
+      ],
+      "class_acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/LOCALIZATION_COMPARISON.md",
@@ -5798,7 +5800,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "869fffb6f905b687839e79d621511769be6b4856",
       "chinese_sha256": "944715a4d73626118f82ea73467a381d47ad44524b7d690e72e2323620639222",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "veteran_replenish_grenades",
         "veteran_increased_weakspot_damage",
@@ -5897,7 +5899,8 @@
         "independent_english_text_comparison",
         "fixed_source_citation_bounds",
         "read_only_text_review"
-      ]
+      ],
+      "class_acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/README.md",
@@ -5906,7 +5909,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "b5d6df2d5bf62e92a5a54e683b1e1b82d545faa9",
       "chinese_sha256": "f002fadcbd8e3afb9b47d22ba8eb7ed62d9fe2bfdfdf3c9df0564f26f3592f06",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "veteran_replenish_grenades",
         "veteran_increased_weakspot_damage",
@@ -5999,7 +6002,8 @@
         "independent_english_text_comparison",
         "fixed_source_citation_bounds",
         "read_only_text_review"
-      ]
+      ],
+      "class_acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/SOURCE_INDEX.md",
@@ -6008,7 +6012,7 @@
       "kind": "class_support",
       "chinese_blob_sha": "fbd47a042dc1498942486565673b16887c8516ab",
       "chinese_sha256": "7ad7c268fe52386b44313061aa63bf865cfabda30d3b694c6adea2518ff6648b",
-      "status": "partial",
+      "status": "accepted_with_caveats",
       "accepted_skill_ids": [
         "veteran_replenish_grenades",
         "veteran_increased_weakspot_damage",
@@ -6107,7 +6111,8 @@
         "independent_english_text_comparison",
         "fixed_source_citation_bounds",
         "read_only_text_review"
-      ]
+      ],
+      "class_acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/UNUSED_DEFINITIONS.md",
@@ -6130,7 +6135,8 @@
         "fixed_source_classification",
         "accepted_English_names"
       ],
-      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_unused_definitions.json"
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_unused_definitions.json",
+      "class_acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_class.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/base_melee_damage_node_buff_high_2.md",
