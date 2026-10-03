@@ -59,6 +59,7 @@
 | <img src="https://github.com/user-attachments/assets/fab49cb9-e155-47d2-8b8c-2ad8235a0f48" width="32" height="32" alt="Ammo Stash talent icon"> [Ammo Stash](#ogryn_increased_ammo_reserve) | <ul><li>Increase maximum ammo reserve by 25%; magazine capacity is unchanged.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/cf916d47-2e00-43d4-98b7-307222a056e6" width="32" height="32" alt="Pacemaker talent icon"> [Pacemaker](#ogryn_multi_hits_grant_reload_speed) | <ul><li>Hit at least 3 different enemies within about 0.5s for +15% Reload Speed on the next reload. English instead says a single attack.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5a19ac08-20bc-41ee-8af1-bbc6194fa852" width="32" height="32" alt="Found Some More talent icon"> [Found Some More](#ogryn_free_reload_after_ability) | <ul><li>Replenish 1% of maximum ammo reserve about every 15s; no ability use or reload required.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/58952102-1822-4093-81f9-48b8cbc8f8a7" width="32" height="32" alt="Won't Give In talent icon"> [Won't Give In](#ogryn_knocked_allies_grant_damage_reduction) | <ul><li>Each ally needing help less than 20m away grants 20% damage reduction, up to three allies in a standard team.</li></ul> | Talent |
 
 ## Blitz
 
@@ -909,3 +910,17 @@
 - **Ammo limit**: Ammunition is added to the reserve, not directly to the magazine. While the magazine is missing ammunition, the same deficit can temporarily be stored in the reserve; combined magazine and reserve ammo still cannot exceed their combined capacities.
 
 [Details](ogryn_free_reload_after_ability.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_knocked_allies_grant_damage_reduction"></a>
+
+### Won't Give In
+
+<img src="https://github.com/user-attachments/assets/58952102-1822-4093-81f9-48b8cbc8f8a7" width="72" height="72" alt="Won't Give In talent icon">
+
+- **Condition**: Each ally less than 20m away who needs help, such as while downed, disabled or hanging from a ledge, reduces the damage you take by 20%. That ally's contribution disappears when rescued or out of range.
+
+- **Damage-reduction example**: With 1, 2 or 3 qualifying allies, damage of 100 at this stage becomes 80, 60 or 40. Three allies give `100 × (1 − 3 × 20%) = 40`.
+
+[Details](ogryn_knocked_allies_grant_damage_reduction.md) · [Back to index](#talent-index)

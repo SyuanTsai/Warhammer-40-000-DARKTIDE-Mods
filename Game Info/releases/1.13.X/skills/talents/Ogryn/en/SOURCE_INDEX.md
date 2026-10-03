@@ -61,3 +61,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Ammo Stash](ogryn_increased_ammo_reserve.md) / `ogryn_increased_ammo_reserve` | Talent |
 | [Pacemaker](ogryn_multi_hits_grant_reload_speed.md) / `ogryn_multi_hits_grant_reload_speed` | Talent |
 | [Found Some More](ogryn_free_reload_after_ability.md) / `ogryn_free_reload_after_ability` | Talent |
+| [Won't Give In](ogryn_knocked_allies_grant_damage_reduction.md) / `ogryn_knocked_allies_grant_damage_reduction` | Talent |

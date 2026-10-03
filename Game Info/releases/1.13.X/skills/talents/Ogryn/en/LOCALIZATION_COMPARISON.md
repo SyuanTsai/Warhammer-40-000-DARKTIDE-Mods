@@ -708,6 +708,18 @@ Full raw template and formatting: [source evidence](ogryn_free_reload_after_abil
 | Periodic reserve replenishment | Every 15s, replenish 1% of your Max Ammo Reserve.; `ui / loc_talent_cryptic_passive_ammo_replenishment_desc / 41aa3ba1` | ogryn_passive_ammo_replenishment has interval 15 and percent 0.01; the server calls Ammo.add_to_all_slots. No ability or reload is needed. [Fixed source and line references](ogryn_free_reload_after_ability.md#fixed-source-evidence) | Consistent | The independently read English matches the current passive, rather than the obsolete internal name comment. |
 | Integer carryover, placement and limits | No rounding, remainder, reserve-cap or initial-offset rule is stated.; `ui / loc_talent_cryptic_passive_ammo_replenishment_desc / 41aa3ba1` | Each slot uses amount = 0.01 × max_reserve + carryover, grants the floor and retains the fraction. Reserve cap is max_reserve + missing_clip. Maximum 200 grants 2 rounds per tick; maximum 75 grants 0, 1, 1, 1 over four ticks from zero carryover. Server updates and a small initialization offset affect timing. [Fixed source and line references](ogryn_free_reload_after_ability.md#fixed-source-evidence) | Not covered by the description | These accepted calculations supplement the periodic percentage. The example assumes sufficient missing ammo; ammo enters reserve rather than the magazine. |
 
+
+<a id="ogryn_knocked_allies_grant_damage_reduction"></a>
+
+## Won't Give In
+
+Full raw template and formatting: [source evidence](ogryn_knocked_allies_grant_damage_reduction.md#original-english-template-and-reconstruction). Name hash `229fa257`. Every row uses `ui / loc_talent_ogryn_tanky_with_downed_allies_desc / 3845cefa`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Per-ally reduction and range | +20% Damage Reduction for each Knocked Down or Incapacitated Ally within 20 metres.; `ui / loc_talent_ogryn_tanky_with_downed_allies_desc / 3845cefa` | Other valid player units with PlayerUnitStatus.requires_help and squared distance < 20² each contribute 20% reduction. [Fixed source and line references](ogryn_knocked_allies_grant_damage_reduction.md#fixed-source-evidence) | Consistent | The independently read English matches the per-ally value and nearby-help condition; it does not limit the bonus to Coherency. |
+| Help states, updates and calculation | No exhaustive help-state list, strict boundary, update interval or stacking formula is stated.; `ui / loc_talent_ogryn_tanky_with_downed_allies_desc / 3845cefa` | Checks every 0.1s. count / 3 interpolates damage_taken_multiplier from 1 to 0.4, with up to three other players in a standard team. Downed, disabled and ledge-hanging allies qualify; rescue or leaving range removes their contribution. Base 100 becomes 80, 60 or 40 for one, two or three. [Fixed source and line references](ogryn_knocked_allies_grant_damage_reduction.md#fixed-source-evidence) | Not covered by the description | These accepted status, boundary and calculation details supplement the English conditions. |
+
 ## Comparison totals
 
 The 193 listed rules comprise **78 Consistent**, **4 Explicit contradictions**, **104 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
