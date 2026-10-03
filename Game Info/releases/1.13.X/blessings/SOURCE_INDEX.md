@@ -9,3 +9,4 @@
 | [屠戮者](entries/屠戮者/README.md) | [來源索引](entries/屠戮者/SOURCE_INDEX.md) |
 | [粉碎](entries/粉碎/README.md) | [來源索引](entries/粉碎/SOURCE_INDEX.md) |
 | [野蠻攻勢](entries/野蠻攻勢/README.md) | [來源索引](entries/野蠻攻勢/SOURCE_INDEX.md) |
+| [達姆彈](entries/達姆彈/README.md) | [來源索引](entries/達姆彈/SOURCE_INDEX.md) |

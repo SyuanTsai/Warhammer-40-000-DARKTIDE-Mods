@@ -46,6 +46,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/6c47b470-d79e-4ffd-bf34-7d0b080ad5c0",
       "effect": "近戰弱點額外傷害增加7.5／10／12.5／15%；同次揮擊前三次擊殺中，非歐格林敵人的弱點擊殺不累加該敵人命中質量。"
+    },
+    {
+      "id": "dumdum",
+      "name_zh_tw": "達姆彈",
+      "name_en": "Dumdum",
+      "name_key": "loc_trait_bespoke_consecutive_hits_increases_close_damage",
+      "description_key": "loc_trait_bespoke_consecutive_hits_increases_close_damage_desc",
+      "name_hash": "ad18b72c",
+      "description_hash": "3d294b66",
+      "page": "entries/達姆彈/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/a11fa52e-95d6-46e4-bfd1-5fb7bb132120",
+      "effect": "本武器連續命中累積近距離傷害，每層4.5／5／5.5／6%，最多5層；有效層期限2秒，12.5公尺內完整、到30公尺歸零。"
     }
   ],
   "weapons": [
@@ -114,6 +127,40 @@
           "name_en": "Atrox Mk VII Tactical Axe",
           "template_file": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m3.lua",
           "trait_category": "bespoke_combataxe_p2"
+        }
+      ]
+    },
+    {
+      "id": "autogun_p1",
+      "name_zh_tw": "步兵自動槍",
+      "name_en": "Infantry Autogun",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_autogun_p1_m1",
+      "page": "weapons/ranged/步兵自動槍/README.md",
+      "marks": [
+        {
+          "id": "autogun_p1_m1",
+          "item": "content/items/weapons/player/ranged/autogun_p1_m1",
+          "name": "阿格里皮娜Mk I步兵自動槍",
+          "name_en": "Agripinaa Mk I Infantry Autogun",
+          "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+          "trait_category": "bespoke_autogun_p1"
+        },
+        {
+          "id": "autogun_p1_m2",
+          "item": "content/items/weapons/player/ranged/autogun_p1_m2",
+          "name": "哥倫努Mk V步兵自動槍",
+          "name_en": "Columnus Mk V Infantry Autogun",
+          "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+          "trait_category": "bespoke_autogun_p1"
+        },
+        {
+          "id": "autogun_p1_m3",
+          "item": "content/items/weapons/player/ranged/autogun_p1_m3",
+          "name": "格拉亞Mk VIII步兵自動槍",
+          "name_en": "Graia Mk VIII Infantry Autogun",
+          "template_file": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+          "trait_category": "bespoke_autogun_p1"
         }
       ]
     }
@@ -325,6 +372,45 @@
         "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p2_buff_templates.lua",
         "start_line": 17,
         "end_line": 17
+      }
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p1_consecutive_hits_increases_close_damage",
+      "blessing_id": "dumdum",
+      "weapon_id": "autogun_p1",
+      "page": "entries/達姆彈/weapon_trait_bespoke_autogun_p1_consecutive_hits_increases_close_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層近距離傷害百分比",
+        "per_stack_percent": [
+          4.5,
+          5,
+          5.5,
+          6
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 2,
+        "full_effect_distance_m": 12.5,
+        "zero_effect_distance_m": 30,
+        "distance_interpolation": "sqrt(clamp((distance-12.5)/17.5,0,1))",
+        "cold_start_first_effective_hit": 3,
+        "after_expiry_first_effective_hit": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p1.lua",
+        "start_line": 14,
+        "end_line": 63
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 14
       }
     }
   ],
@@ -579,6 +665,48 @@
         "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p2_m3.lua",
         "import_line": 13,
         "append_line": 1360
+      }
+    },
+    {
+      "blessing_id": "dumdum",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_consecutive_hits_increases_close_damage",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/consecutive_hits_increases_close_damage",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 770
+      }
+    },
+    {
+      "blessing_id": "dumdum",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_consecutive_hits_increases_close_damage",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/consecutive_hits_increases_close_damage",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 766
+      }
+    },
+    {
+      "blessing_id": "dumdum",
+      "weapon_id": "autogun_p1",
+      "mark_id": "autogun_p1_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p1_consecutive_hits_increases_close_damage",
+      "trait_item": "content/items/traits/bespoke_autogun_p1/consecutive_hits_increases_close_damage",
+      "trait_category": "bespoke_autogun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 767
       }
     }
   ]

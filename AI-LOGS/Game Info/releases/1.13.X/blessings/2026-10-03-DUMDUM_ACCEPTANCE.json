@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-03",
+  "blessing": "dumdum",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/達姆彈/README.md",
+  "variants": [
+    "weapon_trait_bespoke_autogun_p1_consecutive_hits_increases_close_damage"
+  ],
+  "binding_count": 3,
+  "primary_review": "Sol直接核對固定Git物件、所有等級、核心觸發、結算與算例；Luna/max協助本項唯讀證據複核。FASTER無可用設定欄位。",
+  "validation": {
+    "gfm_parse": {
+      "files": 40,
+      "tables": 32,
+      "rows": 241,
+      "lists": 15
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 103,
+      "source_files": 41,
+      "bindings": 21,
+      "variants": 7,
+      "formula_checks": "passed"
+    },
+    "gameplay_test": "not run",
+    "available_tiers": null,
+    "game-info": {
+      "markdown_files": 740,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 32,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 3,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 40,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "formulas": "TierIV 5×6%=30%; d16.875m: sqrt(.25)=.5 yields15%;100→130/115/100; existing20%:120→150 (+25%)"
+  },
+  "image": {
+    "id": "dumdum",
+    "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_058.png",
+    "icon_path": "content/ui/textures/icons/traits/weapon_trait_058",
+    "sha256": "b92cda029e402d909a6d6b98ae99f4ab0e4febba550176a282fb37b891865a9a",
+    "size": 2889,
+    "content_type": "image/png",
+    "width": 128,
+    "height": 128,
+    "attachment": "https://github.com/user-attachments/assets/a11fa52e-95d6-46e4-bfd1-5fb7bb132120",
+    "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+    "public_download_status": 200,
+    "hash_verified": true,
+    "display": "original and public attachment inspected"
+  },
+  "limitations": [
+    "MasterItems138291 Steam Build association unverified",
+    "Backend available tiers remain null",
+    "Other same-name variants not reviewed",
+    "No in-game tests"
+  ],
+  "previous_local_commit": "f1148695df0cf468c350180a444c2e91e8885bf8",
+  "localization_review": "Close Range被翻成近戰；實際依距離damage_near。初次第三次/逾期後第二次合格命中、穿透各目標計數已沿實際執行鏈核對，未遊戲內測試。"
+}

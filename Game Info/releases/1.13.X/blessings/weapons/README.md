@@ -6,3 +6,4 @@
 |---|---|---|
 | [戰鬥斧](melee/戰鬥斧/README.md)<br>- Combat Axe | 近戰 | 拉沙德Mk II戰鬥斧、安塔克斯Mk V戰鬥斧、阿克利斯Mk VIII戰鬥斧 |
 | [戰術斧](melee/戰術斧/README.md)<br>- Tactical Axe | 近戰 | 埃托克斯Mk II戰術斧、埃托克斯Mk IV戰術斧、埃托克斯Mk VII戰術斧 |
+| [步兵自動槍](ranged/步兵自動槍/README.md)<br>- Infantry Autogun | 遠程 | 阿格里皮娜Mk I步兵自動槍、哥倫努Mk V步兵自動槍、格拉亞Mk VIII步兵自動槍 |
