@@ -90,3 +90,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Priority Endowment](adamant_clip_size.md) / `adamant_clip_size` | Passive talent |
 | [Cower, Miscreants!](adamant_damage_vs_suppressed.md) / `adamant_damage_vs_suppressed` | Passive talent |
 | [Justified Measures](adamant_stacking_damage.md) / `adamant_stacking_damage` | Passive talent |
+| [Suppression Force](adamant_staggered_enemies_deal_less_damage.md) / `adamant_staggered_enemies_deal_less_damage` | Passive talent |
