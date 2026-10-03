@@ -22,6 +22,7 @@
 | <img src="https://github.com/user-attachments/assets/0932d1f6-96b1-47d9-ad81-861fe9914d9a" width="32" height="32" alt="Stomping Boots talent icon"> [Stomping Boots](#ogryn_charge_toughness) | <ul><li>Each enemy hit during the charge restores 10% of maximum Toughness.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/9194fb70-c794-460d-af2a-068ae6c4fd31" width="32" height="32" alt="Pulverise talent icon"> [Pulverise](#ogryn_charge_applies_bleed) | <ul><li>A charge hit applies 5 Bleed stacks, once per enemy in the same charge.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/a6d612af-aed7-465e-aa07-e23fc7255876" width="32" height="32" alt="Go Again! talent icon"> [Go Again!](#ogryn_taunt_staggers_reduce_cooldown) | <ul><li>A melee or push Stagger restores 1.5% ability charge, at most once every 0.1s.</li></ul> | Combat ability |
+| <img src="https://github.com/user-attachments/assets/708231ab-86cd-44b4-8f01-0d0fe8413ede" width="32" height="32" alt="Hail of Fire talent icon"> [Hail of Fire](#ogryn_special_ammo_armor_pen) | <ul><li>During Point-Blank Barrage, gain +15% ranged Damage and 15% Rending.</li></ul> | Combat ability |
 
 ## Blitz
 
@@ -258,3 +259,19 @@
 - **Cooldown example**: Loyal Protector has a base cooldown of 50s. One qualifying trigger restores 50 × 1.5% = 0.75s; 10 restore 7.5s, in addition to natural cooldown recovery during that time.
 
 [Details](ogryn_taunt_staggers_reduce_cooldown.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_special_ammo_armor_pen"></a>
+
+### Hail of Fire
+
+<img src="https://github.com/user-attachments/assets/708231ab-86cd-44b4-8f01-0d0fe8413ede" width="72" height="72" alt="Hail of Fire talent icon">
+
+- **Activation**: During Point-Blank Barrage's 12s effect, gain +15% ranged Damage and 15% Rending.
+
+- **Damage example**: Assume base damage 100, a Carapace target with an original armour modifier of 0.5, and no other modifiers. The original damage is 50; with both this talent's damage bonus and Rending, it is 100 × 1.15 × (0.5 + 0.15) = 74.75.
+
+- **Armour differences**: Rending improves a weapon's damage modifier against particular armour. Once the original modifier reaches 1, only one quarter of the excess is used. Rending is therefore not a uniform +15% final damage bonus.
+
+[Details](ogryn_special_ammo_armor_pen.md) · [Back to index](#talent-index)

@@ -24,3 +24,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Stomping Boots](ogryn_charge_toughness.md) / `ogryn_charge_toughness` | Combat ability |
 | [Pulverise](ogryn_charge_applies_bleed.md) / `ogryn_charge_applies_bleed` | Combat ability |
 | [Go Again!](ogryn_taunt_staggers_reduce_cooldown.md) / `ogryn_taunt_staggers_reduce_cooldown` | Combat ability |
+| [Hail of Fire](ogryn_special_ammo_armor_pen.md) / `ogryn_special_ammo_armor_pen` | Combat ability |
