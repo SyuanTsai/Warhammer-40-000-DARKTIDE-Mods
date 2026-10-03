@@ -310,6 +310,18 @@ Full raw template and formatting: [source evidence](psyker_sphere_shield.md#orig
 | Shape, duration and increased cooldown | Telekine Shield becomes a spherical shield lasting 25s; cooldown increases to 60s; `ui / loc_talent_psyker_force_field_dome_increased_cd_desc / 0b13a4ee` | psyker_force_field_dome and psyker_sphere_shield replace the wall. sphere_duration=25 and cooldown/resource_cost_per_charge=60. [Fixed source and line references](psyker_sphere_shield.md#fixed-source-evidence) | Consistent | The sphere form and both time values agree. |
 | Radius, durability and comparison limits | No radius, increased durability, guaranteed survival or wall comparison arithmetic stated; `ui / loc_talent_psyker_force_field_dome_increased_cd_desc / 0b13a4ee` | SPHERE_UNIT_RADIUS=6; collision checks include player-unit radius. sphere_health=20 and damage-throttling rules are shared. Relative to wall duration 17.5/cooldown 40, Dome adds 7.5 seconds of duration and 20 seconds of cooldown; early exhaustion is possible. [Fixed source and line references](psyker_sphere_shield.md#fixed-source-evidence) | Not covered by the description | These geometry, durability and time-comparison details supplement the English. |
 
+
+<a id="psyker_shield_stun_passive"></a>
+
+## Enervating Threshold
+
+Full raw template and formatting: [source evidence](psyker_shield_stun_passive.md#original-english-template-and-reconstruction). Name hash `122cfc3a`. Every row uses `ui / loc_talent_psyker_force_field_stun_increased_new_description / 900d2430`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Contact trigger, chances and Specialist shield damage | Telekine Shield Electrocutes passing Enemies with 20% chance; Specialists have 100% and also damage the shield; `ui / loc_talent_psyker_force_field_stun_increased_new_description / 900d2430` | Owner's on_unit_touch_force_field uses proc_chance=0.2, or special_proc_chance=1 for special/monster. Successful special-tag triggers call shield add_damage(8). [Fixed source and line references](psyker_shield_stun_passive.md#fixed-source-evidence) | Consistent | The stated crossing trigger, ordinary/Specialist probabilities and Specialist damage effect agree. |
+| Monster exception, tags, durability and probability limits | No Monster exception, guaranteed interruption, eight-durability loss or periodic guaranteed trigger stated; `ui / loc_talent_psyker_force_field_stun_increased_new_description / 900d2430` | Monsters also use 100%; the extra damage branch checks special only. Shield HealthExtension removes 1 per permitted 0.33-second window. Expected ordinary triggers over 100 eligible crossings are 20, without guaranteeing one every five. [Fixed source and line references](psyker_shield_stun_passive.md#fixed-source-evidence) | Not covered by the description | These tag exceptions, damage-handling and probability details supplement the English. |
+
 ## Comparison totals
 
 The 53 listed rules comprise **26 Consistent**, **0 Explicit contradictions**, **25 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.

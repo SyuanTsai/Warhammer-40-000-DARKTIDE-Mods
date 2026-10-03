@@ -32,6 +32,7 @@
 | <img src="https://github.com/user-attachments/assets/72b10287-7ce1-47a1-a57f-a88c56c51f9f" width="32" height="32" alt="Bolstered Shield talent icon"> [Bolstered Shield](#psyker_shield_extra_charge) | <ul><li>Telekine Shield gains one extra charge, holding up to 2; charges share the same cooldown-resource pool.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0" width="32" height="32" alt="Sanctuary talent icon"> [Sanctuary](#psyker_boost_allies_in_sphere) | <ul><li>With Telekine Dome, you and Allies inside recover 10% of maximum Toughness per second. Players still inside when it dissipates gain 50% Toughness Damage Reduction for 5 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/60e6d4b2-0696-4215-8afd-8c9725d4801f" width="32" height="32" alt="Telekine Dome talent icon"> [Telekine Dome](#psyker_sphere_shield) | <ul><li>Telekine Shield becomes a spherical barrier of about 6 metres radius, lasting up to 25 seconds with a 60-second base cooldown; durability remains 20 accepted hits.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191" width="32" height="32" alt="Enervating Threshold talent icon"> [Enervating Threshold](#psyker_shield_stun_passive) | <ul><li>Enemies passing through your Telekine Shield have a 20% Electrocution chance. Specialists and Monsters trigger with 100% chance; Specialists also damage the shield.</li></ul> | Ability |
 
 ---
 
@@ -415,3 +416,19 @@
 - **Time comparison**: Compared with the original shield, duration increases by `25 − 17.5 = 7.5` seconds and cooldown by `60 − 40 = 20` seconds. Durability still supports 20 accepted removals.
 
 [Details](psyker_sphere_shield.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_shield_stun_passive"></a>
+
+### Enervating Threshold
+
+<img src="https://github.com/user-attachments/assets/0cacb110-bf24-451f-ad19-f55ee7bd6191" width="72" height="72" alt="Enervating Threshold talent icon">
+
+- **Ability modifier**: Enemies passing through your Telekine Shield have a 20% chance to be Electrocuted. Specialist Enemies and Monsters always trigger the effect; whether it interrupts an action still depends on the Enemy's resistance.
+
+- **Shield cost**: A Specialist trigger also damages the shield, subject to its 0.33-second durability-removal interval.
+
+- **Chance example**: Each eligible ordinary-Enemy crossing has a 20% chance. Across 100 crossings, expected triggers are `100 × 20% = 20`, rather than a guaranteed trigger every five crossings.
+
+[Details](psyker_shield_stun_passive.md) · [Back to index](#talent-index)

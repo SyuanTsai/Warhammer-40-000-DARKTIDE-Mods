@@ -36,3 +36,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Bolstered Shield](psyker_shield_extra_charge.md) / `psyker_shield_extra_charge` | Ability |
 | [Sanctuary](psyker_boost_allies_in_sphere.md) / `psyker_boost_allies_in_sphere` | Ability |
 | [Telekine Dome](psyker_sphere_shield.md) / `psyker_sphere_shield` | Ability |
+| [Enervating Threshold](psyker_shield_stun_passive.md) / `psyker_shield_stun_passive` | Ability |
