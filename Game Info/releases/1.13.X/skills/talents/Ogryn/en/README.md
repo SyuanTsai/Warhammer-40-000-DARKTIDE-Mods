@@ -73,6 +73,7 @@
 | <img src="https://github.com/user-attachments/assets/27fcc279-9828-4df7-b895-04956bb2463b" width="32" height="32" alt="Reloaded and Ready talent icon"> [Reloaded and Ready](#ogryn_reloading_grants_damage) | <ul><li>Reloading grants +15% ranged damage for 8s; further reloads refresh the duration without stacking.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c6421034-209b-4fab-857d-541fa0667d8b" width="32" height="32" alt="Big Boom talent icon"> [Big Boom](#ogryn_increase_explosion_radius) | <ul><li>Increase explosion outer and central high-damage radii by 27.5%; damage values themselves are unchanged.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/b35eb9be-169c-48cf-a295-329eae3a3610" width="32" height="32" alt="No Pushover talent icon"> [No Pushover](#ogryn_blocking_reduces_push_cost) | <ul><li>A ready push gains +250% Impact; finishing it consumes the bonus and starts an 8s cooldown, even without an enemy hit.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/119478f3-6425-4e96-9f26-e0df95a4bf1e" width="32" height="32" alt="Attention Seeker talent icon"> [Attention Seeker](#ogryn_blocking_ranged_taunts) | <ul><li>Blocking or hitting with a push Taunts the enemy for 8s; Monsters and already-Taunted enemies are excluded.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1149,3 +1150,19 @@
 - **Consumption**: Cooldown starts when the push finishes. Even a push that hits no enemy consumes the empowered push.
 
 [Details](ogryn_blocking_reduces_push_cost.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_blocking_ranged_taunts"></a>
+
+### Attention Seeker
+
+<img src="https://github.com/user-attachments/assets/119478f3-6425-4e96-9f26-e0df95a4bf1e" width="72" height="72" alt="Attention Seeker talent icon">
+
+- **Trigger**: Blocking an enemy's attack or hitting it with a push makes that enemy prioritize attacking you for 8s.
+
+- **Limits**: Monsters are excluded. An enemy already Taunted does not receive this short Taunt again or have its duration refreshed.
+
+- **Timing example**: If first Taunted at 0s, pushing the same still-Taunted enemy at 4s does not move the end to 12s. Taunt may end early if you die, become imperceptible to the enemy, or similar conditions apply.
+
+[Details](ogryn_blocking_ranged_taunts.md) · [Back to index](#talent-index)

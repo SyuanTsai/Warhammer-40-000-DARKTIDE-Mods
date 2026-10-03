@@ -877,6 +877,18 @@ Full raw template and formatting: [source evidence](ogryn_blocking_reduces_push_
 | Push strength and cooldown | Your Pushes have +250% Stagger. Can only trigger once every 8s.; `ui / loc_talent_ogryn_empowered_pushes_desc / 3278e768` | ogryn_empowered_push applies conditional push_impact_modifier 2.5 while not on cooldown; cooldown_duration is 8s. [Fixed source and line references](ogryn_blocking_reduces_push_cost.md#fixed-source-evidence) | Consistent | The independently read English matches the empowered-push strength and cooldown. |
 | Consumption and calculation | No push-finish or hit requirement is stated.; `ui / loc_talent_ogryn_empowered_pushes_desc / 3278e768` | on_push_finish consumes the bonus even with no enemy hit. Ordinary cooldown pushes do not extend the countdown. Base push Impact 100 becomes 350; this is stagger strength rather than damage. [Fixed source and line references](ogryn_blocking_reduces_push_cost.md#fixed-source-evidence) | Not covered by the description | These accepted consumption and calculation details supplement the English limit. |
 
+
+<a id="ogryn_blocking_ranged_taunts"></a>
+
+## Attention Seeker
+
+Full raw template and formatting: [source evidence](ogryn_blocking_ranged_taunts.md#original-english-template-and-reconstruction). Name hash `0bd15ece`. Every row uses `ui / loc_talent_ranged_enemies_taunt_description / a01a7f7f`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Block/push Taunt and duration | Blocking or Pushing Enemies Taunts them for 8s.; `ui / loc_talent_ranged_enemies_taunt_description / a01a7f7f` | on_block / on_push_hit applies taunted_short to attacking_unit / pushed_unit, with duration 8s. [Fixed source and line references](ogryn_blocking_ranged_taunts.md#fixed-source-evidence) | Consistent | The independently read English matches the two trigger categories and duration. |
+| Target exclusions and lifetime | No Monster exception, already-Taunted rule or early-exit condition is stated.; `ui / loc_talent_ranged_enemies_taunt_description / a01a7f7f` | Monsters and units with taunted are excluded. A second push at 4s after the first Taunt at 0s does not extend the end to 12s. Owner death, invisible/unperceivable status or disabling conditions can end Taunt early. [Fixed source and line references](ogryn_blocking_ranged_taunts.md#fixed-source-evidence) | Not covered by the description | These accepted targeting and lifetime details supplement the broad enemy wording. |
+
 ## Comparison totals
 
 The 214 listed rules comprise **89 Consistent**, **4 Explicit contradictions**, **114 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
