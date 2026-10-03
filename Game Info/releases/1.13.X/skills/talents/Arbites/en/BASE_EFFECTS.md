@@ -39,3 +39,13 @@ These effects come from the base character configuration. Combat abilities, Blit
 - **Limits**: An unaggroed Daemonhost is not a valid new command target. Entering a moving platform cancels the command. Target survival, attack eligibility and pathing still limit the actual chase.
 
 [Source evidence and example assumptions](adamant_command_dog_with_tag.md)
+
+<a id="adamant_companion_aura"></a>
+
+## Companion Aura
+
+- **Coherency membership**: The base passive lets your Cyber-Mastiff count as a squad member for Coherency.
+
+- **Base scope**: This base aura does not directly apply a numerical effect such as Toughness Damage Reduction. The companion's Coherency eligibility and additional numerical aura bonuses are separate effects.
+
+[Source evidence and example assumptions](adamant_companion_aura.md)
