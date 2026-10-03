@@ -89,6 +89,7 @@
 | <img src="https://github.com/user-attachments/assets/75cf7e7e-044e-432f-b7cb-b73e53164425" width="32" height="32" alt="Final Warning talent icon"> [Final Warning](#adamant_ranged_damage_on_melee_stagger) | <ul><li>Staggering an enemy with a melee attack or push grants 15% Ranged Damage for 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/03af9ca3-e4f4-4383-9650-f8ac659cfadd" width="32" height="32" alt="Priority Endowment talent icon"> [Priority Endowment](#adamant_clip_size) | <ul><li>Clip Size increases by 15%, rounded up.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/a72c3f5b-2dde-48d0-8f5c-1af4ba20a044" width="32" height="32" alt="Cower, Miscreants! talent icon"> [Cower, Miscreants!](#adamant_damage_vs_suppressed) | <ul><li>Damage against Suppressed enemies increases by 25%.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="32" height="32" alt="Justified Measures talent icon"> [Justified Measures](#adamant_stacking_damage) | <ul><li>After an attack hits its first target, gain 2% Damage per stack, up to 5 stacks, lasting 5s.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -1137,3 +1138,15 @@
 - **Scope**: Melee and ranged attacks both qualify. The bonus does not apply when the target is not Suppressed.
 
 [Details](adamant_damage_vs_suppressed.md) · [Back to index](#talent-index)
+
+<a id="adamant_stacking_damage"></a>
+
+### Justified Measures
+
+<img src="https://github.com/user-attachments/assets/d3c96bd5-6464-499a-a742-cd58ddf1fa02" width="72" height="72" alt="Justified Measures talent icon">
+
+- **Stacks and refresh**: After an attack hits its first target, gain one stack of 2% Damage, up to 5 stacks. Another trigger refreshes the 5s duration of all stacks. Later targets in the same attack do not add more stacks.
+
+- **Damage example**: Maximum stacks grant 5 × 2% = 10%, changing base damage 100 to 110. With an existing same-stage 25% bonus, damage rises from 125 to 100 × (1 + 25% + 10%) = 135.
+
+[Details](adamant_stacking_damage.md) · [Back to index](#talent-index)
