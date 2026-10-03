@@ -16,3 +16,9 @@
 | 重金屬 | `debriefing_08` | [閱讀](en/events/debriefing_08.html) | [閱讀](zh-tw/events/debriefing_08.html) | [來源](source/debriefing_08.md) |
 | 冰冷陷阱 | `debriefing_09` | [閱讀](en/events/debriefing_09.html) | [閱讀](zh-tw/events/debriefing_09.html) | [來源](source/debriefing_09.md) |
 | 嘉年華之夜 | `debriefing_10` | [閱讀](en/events/debriefing_10.html) | [閱讀](zh-tw/events/debriefing_10.html) | [來源](source/debriefing_10.md) |
+
+## 任務通訊 / Mission vox
+
+| 編號 | 任務與分支 | 整理 ID | 英文 | 繁中 | 來源 |
+|---:|---|---|---|---|---|
+| 01 | 克蘭岱斯提恩·格洛里亞納：升降梯通訊 01（哈德隆） | `mission_core_elevator_conversation_01_hadron` | [閱讀](en/events/mission_core_elevator_conversation_01_hadron.html) | [閱讀](zh-tw/events/mission_core_elevator_conversation_01_hadron.html) | [來源](source/mission_core_elevator_conversation_01_hadron.md) |

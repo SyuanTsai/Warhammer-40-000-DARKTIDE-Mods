@@ -22,3 +22,9 @@ Official event dialogue with character portraits and subtitles.
 | Carnival Nights | Sergeant Major Morrow | [Read](events/debriefing_10.html) |
 
 [Sources](../SOURCE_INDEX.md)｜[Game Info](../../README.md)
+
+## Mission vox
+
+| # | Mission / branch | Speakers | Dialogue |
+|---:|---|---|---|
+| 01 | Clandestium Gloriana: Elevator vox 01 · Hadron | Hadron Omega-7-7 · Swagger | [Read](events/mission_core_elevator_conversation_01_hadron.html) |

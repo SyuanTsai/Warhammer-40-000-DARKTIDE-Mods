@@ -22,3 +22,9 @@
 | 嘉年華之夜 | 莫羅軍士長 | [閱讀](events/debriefing_10.html) |
 
 [來源依據](../SOURCE_INDEX.md)｜[Game Info](../../README.md)
+
+## 任務通訊
+
+| # | 任務／分支 | 角色 | 對話 |
+|---:|---|---|---|
+| 01 | 克蘭岱斯提恩·格洛里亞納：升降梯通訊 01 · 哈德隆 | 哈德隆歐米伽7-7 · 斯瓦格爾 | [閱讀](events/mission_core_elevator_conversation_01_hadron.html) |
