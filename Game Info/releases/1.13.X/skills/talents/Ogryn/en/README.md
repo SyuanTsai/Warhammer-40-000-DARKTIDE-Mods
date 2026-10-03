@@ -62,6 +62,7 @@
 | <img src="https://github.com/user-attachments/assets/58952102-1822-4093-81f9-48b8cbc8f8a7" width="32" height="32" alt="Won't Give In talent icon"> [Won't Give In](#ogryn_knocked_allies_grant_damage_reduction) | <ul><li>Each ally needing help less than 20m away grants 20% damage reduction, up to three allies in a standard team.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/e9d72852-9fa6-4e02-aded-e261adb660f0" width="32" height="32" alt="Crunch! talent icon"> [Crunch!](#ogryn_fully_charged_attacks_gain_damage_and_stagger) | <ul><li>Charging a heavy attack builds up to +30% melee damage and Impact across four stacks; the bonus ends after that sweep.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/669fb8b0-a444-4216-abe1-74f4acc4af85" width="32" height="32" alt="Delight in Destruction talent icon"> [Delight in Destruction](#ogryn_nearby_bleeds_reduce_damage_taken) | <ul><li>Each bleeding enemy within 8m grants 5% damage reduction, up to six enemies / 30%; teammate Bleed also counts.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/a51567af-44cb-46ba-9908-3e3502dcbcdb" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>Reduce incoming Toughness damage by 10%; maximum Toughness and Health damage are unchanged by this stat.</li></ul> | Talent |
 
 ## Blitz
 
@@ -960,3 +961,17 @@
 - **Updates**: Nearby bleeding enemies are recounted about once per second. Their contribution disappears after death, Bleed ending or leaving range.
 
 [Details](ogryn_nearby_bleeds_reduce_damage_taken.md) · [Back to index](#talent-index)
+
+---
+
+<a id="base_toughness_damage_reduction_node_buff_medium_1"></a>
+
+### Toughness Damage Reduction
+
+<img src="https://github.com/user-attachments/assets/a51567af-44cb-46ba-9908-3e3502dcbcdb" width="72" height="72" alt="Toughness Damage Reduction talent icon">
+
+- **Effect**: Reduce incoming Toughness damage by 10%. This does not directly increase maximum Toughness or reduce Health damage.
+
+- **Damage-reduction example**: With only this bonus, Toughness damage of 100 becomes `100 × (1 − 10%) = 90`. With an existing 20% reduction at the same calculation stage, it becomes `100 × (1 − 20% − 10%) = 70`. Other independent reduction multipliers apply separately.
+
+[Details](base_toughness_damage_reduction_node_buff_medium_1.md) · [Back to index](#talent-index)
