@@ -112,5 +112,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/desperado-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_melee_crit_chance_and_melee_finesse.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_melee_crit_chance_and_melee_finesse.md",
+  "commit": "c864e15c5fa3d5027a1e355cf9e81d1a7810d1af"
 }
