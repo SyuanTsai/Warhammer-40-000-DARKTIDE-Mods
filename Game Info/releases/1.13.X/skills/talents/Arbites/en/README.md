@@ -18,6 +18,7 @@
 | <img src="https://github.com/user-attachments/assets/18c1f301-d18b-4469-9fbf-bb5ede1b3353" width="32" height="32" alt="Nuncio-Aquila talent icon"> [Nuncio-Aquila](#adamant_area_buff_drone_improved) | <ul><li>Deploy for 20s in a 7.5m radius; 60s cooldown, one charge.</li><li>The improved version restores 7.5% maximum Toughness per second, increases Suppression and Impact, and reduces Recoil; it grants immunity to Stun, Slowdown and Suppression.</li><li>Enemies within range take 15% more damage.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/4eb18874-83b0-4e2f-bf2b-c91001a15371" width="32" height="32" alt="Castigator's Stance talent icon"> [Castigator's Stance](#adamant_stance) | <ul><li>Replenish all Toughness on activation. For 10s, gain 15% Movement Speed and 20% Strength (PowerLevel), and take 70% less damage; cannot Sprint.</li><li>50s cooldown, one charge; damage reduction continues for 2s after the stance ends.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/8c312d8e-8b49-45cd-828e-62cffc6d0a25" width="32" height="32" alt="Blessed Armament talent icon"> [Blessed Armament](#adamant_stance_ranged_kills_transfer_ammo) | <ul><li>During Castigator's Stance, ranged kills transfer 10% of Clip capacity from Reserve, rounded upward and capped by missing Clip ammunition.</li><li>The base stance lasts 10s.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/f7454987-ea7e-474e-bb22-3c3ead9adb1b" width="32" height="32" alt="Writ of Execution talent icon"> [Writ of Execution](#adamant_stance_elite_kills_stack_damage) | <ul><li>During Castigator's Stance, each Elite or Specialist kill grants +7.5% Damage for 12s, up to six stacks.</li><li>Full stacks give +45% Damage; acquired stacks can continue counting down after the stance ends.</li></ul> | Ability |
 
 ## Blitz
 
@@ -166,3 +167,17 @@
 - **Active period**: The effect operates with Castigator's Stance, whose base duration is 10s.
 
 [Details](adamant_stance_ranged_kills_transfer_ammo.md) · [Back to index](#talent-index)
+
+<a id="adamant_stance_elite_kills_stack_damage"></a>
+
+### Writ of Execution
+
+<img src="https://github.com/user-attachments/assets/f7454987-ea7e-474e-bb22-3c3ead9adb1b" width="72" height="72" alt="Writ of Execution talent icon">
+
+- **Trigger**: During Castigator's Stance, each Elite or Specialist kill grants one stack of the damage bonus.
+
+- **Stacks and duration**: Each stack gives +7.5% Damage, up to six stacks. Adding a stack resets the 12s duration. After the stance ends, existing stacks still expire according to their own remaining duration.
+
+- **Example**: Six stacks give `6 × 7.5% = 45%`. With base damage 100 and an existing +25% bonus in the same damage stage, `100 × (1 + 45% + 25%) = 170 damage`.
+
+[Details](adamant_stance_elite_kills_stack_damage.md) · [Back to index](#talent-index)
