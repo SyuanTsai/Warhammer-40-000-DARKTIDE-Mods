@@ -11,6 +11,7 @@
 | <img src="https://github.com/user-attachments/assets/7b9b7141-a7fa-4f3b-944f-5f1141cdc04e" width="32" height="32" alt="Smoke Grenade talent icon"> [Smoke Grenade](#veteran_smoke_grenade) | <ul><li>Create a 15-second smoke cloud after a roughly 1.5-second fuse; base capacity: three grenades.</li><li>The 4.5m smoke core blocks sight for susceptible enemies; the cloud has a 5.5m outer radius.</li><li>Concealment lingers for about 0.5s after leaving; smoke does not make you invulnerable.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/2bec21d1-d677-4386-942d-2c2697c285d1" width="32" height="32" alt="Grenadier talent icon"> [Grenadier](#veteran_extra_grenade) | <ul><li>Carry one extra grenade: base capacity 3 → 4 without other capacity changes.</li><li>Each throw has a 20% chance to produce one additional grenade while consuming only one charge; applies to all three Veteran grenade types.</li></ul> | Blitz modifier |
 | <img src="https://github.com/user-attachments/assets/5179b403-3945-41a4-9c68-5278b6968c24" width="32" height="32" alt="Grenade Tinkerer talent icon"> [Grenade Tinkerer](#veteran_improved_grenades) | <ul><li>Shredder Frag Grenade: +25% explosion damage and radius; the bonus does not increase bleed damage.</li><li>Krak Grenade: +75% explosion damage.</li><li>Smoke Grenade: +100% smoke duration, normally 15s → 30s with this modifier alone.</li></ul> | Blitz modifier |
+| <img src="https://github.com/user-attachments/assets/b0967626-73da-49a8-a1b9-1f4d6c1daffa" width="32" height="32" alt="Krak Grenade talent icon"> [Krak Grenade](#veteran_krak_grenade) | <ul><li>Seek suitable Flak, Carapace or Unyielding armor hit zones and stick; base capacity: three grenades.</li><li>Collision/sticking starts a roughly one-second fuse; without collision, two seconds of flight precede that fuse.</li><li>Close blast radius 1.5m, outer blast 5m; close blast penetrates shields. Damage varies with armor, boss and blast conditions.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="Demolition Stockpile talent icon"> [Demolition Stockpile](#veteran_replenish_grenades) | <ul><li>While below grenade capacity, replenish one Shredder Frag Grenade or Smoke Grenade approximately every 60 seconds, or one Krak Grenade approximately every 90 seconds.</li><li>Throwing another grenade preserves the current countdown; reaching full capacity clears it.</li></ul> | Blitz modifier |
 | <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="Volley Fire talent icon"> [Volley Fire](#veteran_combat_ability_stance) | <ul><li>Equip your ranged weapon and enter a 6-second stance with +15% ranged damage, +15% extra weakspot damage and +50% ranged impact.</li><li>Reduced spread/recoil/sway and disruption protection; 30-second base cooldown starts on activation.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="Infiltrate talent icon"> [Infiltrate](#veteran_invisibility_on_combat_ability) | <ul><li>Replenish all Toughness; enter Stealth for up to 8 seconds with +25% movement speed.</li><li>Gain +30% damage during Stealth and for 8 seconds afterwards. Base cooldown: 40 seconds.</li><li>Attacking can end Stealth; leaving it suppresses nearby enemies.</li></ul> | Combat ability |
@@ -100,6 +101,26 @@ The extra projectile has a slightly offset direction and a base-fuse override de
 - Holding bleed stacks, armor and other modifiers fixed, a separate 100-unit bleed result remains 100 under this explosion modifier. Actual damage still depends on the enemy and other damage stages.
 
 [Detailed sources and formulas](veteran_improved_grenades.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_improved_grenades) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_krak_grenade"></a>
+
+<img src="https://github.com/user-attachments/assets/b0967626-73da-49a8-a1b9-1f4d6c1daffa" width="72" height="72" alt="Krak Grenade talent icon">
+
+### Krak Grenade
+
+- Throw a grenade that seeks suitable **Flak Armoured, Carapace Armoured or Unyielding** hit zones and sticks to the target. Base capacity: **three grenades**.
+- Collision or sticking starts a roughly **one-second fuse**. Without collision, approximately two seconds of flight precede that fuse.
+- The close blast reaches **1.5m** and can penetrate shields; the outer blast extends to **5m**. Damage varies with armor, hit zone, boss status and blast distance.
+
+**Damage and timing examples**
+
+- For the close explosion against a non-boss, ordinary hit zone with no other modifiers: unarmoured damage is **2,400**. With Carapace's armor multiplier of 2, `2,400 × 2 = 4,800 damage units`. Bosses and the outer blast use different conditions.
+- Stick at 0.4s after projectile spawn: detonation occurs at approximately `0.4 + 1 = 1.4 seconds`. With no collision, the approximate timeline is `2 + 1 = 3 seconds`.
+- Start with three charges, without an extra-projectile roll or replenishment: one throw leaves `3 − 1 = 2 grenade charges`.
+
+[Detailed sources and formulas](veteran_krak_grenade.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_krak_grenade) | [Back to index](#talent-index)
 
 ---
 

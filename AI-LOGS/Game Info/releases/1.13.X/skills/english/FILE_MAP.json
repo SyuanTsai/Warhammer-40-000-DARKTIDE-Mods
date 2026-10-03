@@ -5711,7 +5711,8 @@
         "veteran_reduce_swap_time",
         "veteran_extra_grenade",
         "veteran_improved_grenades",
-        "veteran_smoke_grenade"
+        "veteran_smoke_grenade",
+        "veteran_krak_grenade"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5763,7 +5764,8 @@
         "veteran_reduce_swap_time",
         "veteran_extra_grenade",
         "veteran_improved_grenades",
-        "veteran_smoke_grenade"
+        "veteran_smoke_grenade",
+        "veteran_krak_grenade"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5815,7 +5817,8 @@
         "veteran_reduce_swap_time",
         "veteran_extra_grenade",
         "veteran_improved_grenades",
-        "veteran_smoke_grenade"
+        "veteran_smoke_grenade",
+        "veteran_krak_grenade"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5867,7 +5870,8 @@
         "veteran_reduce_swap_time",
         "veteran_extra_grenade",
         "veteran_improved_grenades",
-        "veteran_smoke_grenade"
+        "veteran_smoke_grenade",
+        "veteran_krak_grenade"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6712,9 +6716,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b1d506c82ece96415eca7a2d2c4fdef87944f2a2",
       "chinese_sha256": "4ebb242bee2b0968a0de7dce97f541035de443e3f81c7121b168ce8e434cde6c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_krak_grenade"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_movement_speed_coherency.md",
@@ -8324,7 +8339,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_smoke_grenade.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_smoke_grenade.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_smoke_grenade.md",
+      "commit": "f631cefac2180e23bf5f637f859c5e454033b0c6"
+    },
+    {
+      "id": "veteran_krak_grenade",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_krak_grenade.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_krak_grenade.md"
     }
   ],
   "pending_chinese_corrections": [

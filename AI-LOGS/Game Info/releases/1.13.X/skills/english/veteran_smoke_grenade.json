@@ -177,5 +177,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/smoke-grenade-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_smoke_grenade.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_smoke_grenade.md",
+  "commit": "f631cefac2180e23bf5f637f859c5e454033b0c6"
 }
