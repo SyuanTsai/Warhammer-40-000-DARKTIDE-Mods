@@ -33,6 +33,7 @@
 | <img src="https://github.com/user-attachments/assets/6ad5a8ad-f1c2-4c43-997a-02b89543ebd9" width="32" height="32" alt="Heavy Hitter talent icon"> [Heavy Hitter](#ogryn_passive_heavy_hitter) | <ul><li>Melee hits build Heavy Hitter: ordinary hits add 1 stack and heavy hits add 2.</li><li>Each stack grants 3% melee damage, maximum 8; adding stacks resets the 7.5s duration.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c" width="32" height="32" alt="Pained Outburst talent icon"> [Pained Outburst](#ogryn_carapace_armor_trigger_on_zero_stacks) | <ul><li>After Feel No Pain loses a stack and falls to 4 visible stacks or fewer, push back nearby enemies and restore 50% of maximum Toughness; English says 5 stacks or below.</li><li>At most once every 30s; the pushback burst deals no direct damage.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/3d442f9a-0143-43d7-a6e2-10a5d6b8a9f8" width="32" height="32" alt="Strongest! talent icon"> [Strongest!](#ogryn_carapace_armor_add_stack_on_push) | <ul><li>Pushing at least one enemy restores 1 Feel No Pain stack.</li><li>Maximum 10 visible stacks; pushing several enemies at once still restores only 1.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/d6e55419-0e35-49cc-9bd6-163bdff037d4" width="32" height="32" alt="Toughest! talent icon"> [Toughest!](#ogryn_carapace_armor_more_toughness) | <ul><li>Toughest! adds 2.5% Toughness replenishment per Feel No Pain stack.</li><li>Added to the base 3% per stack; 10 stacks give a total 55% increase.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -457,3 +458,19 @@
 - **Example**: At 6 stacks, pushing either 1 or 3 enemies restores you to 7. At 10 stacks, another successful push leaves you at 10.
 
 [Details](ogryn_carapace_armor_add_stack_on_push.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_carapace_armor_more_toughness"></a>
+
+### Toughest!
+
+<img src="https://github.com/user-attachments/assets/d6e55419-0e35-49cc-9bd6-163bdff037d4" width="72" height="72" alt="Toughest! talent icon">
+
+- **Requirement**: With both Feel No Pain and Toughest! selected, each Feel No Pain stack grants an additional 2.5% Toughness replenishment.
+
+- **Formula and limit**: At N stacks, this node adds 2.5% × N, alongside Feel No Pain's 3% × N, up to 10 stacks.
+
+- **Example**: At 10 stacks, the replenishment multiplier is 1 + 10 × 5.5% = 1.55. A base restoration of 20 would restore 31, capped by missing Toughness.
+
+[Details](ogryn_carapace_armor_more_toughness.md) · [Back to index](#talent-index)

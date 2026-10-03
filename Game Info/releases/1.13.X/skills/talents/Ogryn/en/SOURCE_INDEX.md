@@ -35,3 +35,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Heavy Hitter](ogryn_passive_heavy_hitter.md) / `ogryn_passive_heavy_hitter` | Keystone |
 | [Pained Outburst](ogryn_carapace_armor_trigger_on_zero_stacks.md) / `ogryn_carapace_armor_trigger_on_zero_stacks` | Keystone |
 | [Strongest!](ogryn_carapace_armor_add_stack_on_push.md) / `ogryn_carapace_armor_add_stack_on_push` | Keystone |
+| [Toughest!](ogryn_carapace_armor_more_toughness.md) / `ogryn_carapace_armor_more_toughness` | Keystone |
