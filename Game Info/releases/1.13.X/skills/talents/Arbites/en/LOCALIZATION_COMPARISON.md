@@ -1056,4 +1056,4 @@ Full raw text and formatting: [source evidence](adamant_dodge_improvement.md#ori
 
 ## Comparison totals
 
-The 376 listed rules comprise **193 Consistent**, **1 Explicit contradiction**, **172 Not covered by the description**, **0 No corresponding implementation evidence found** and **10 Cannot confirm**. The explicit English contradiction concerns the melee attack-interval value in Fear of Justice. These totals apply only to the listed rules.
+The 400 listed rules comprise **204 Consistent**, **1 Explicit contradiction**, **185 Not covered by the description**, **0 No corresponding implementation evidence found** and **10 Cannot confirm**. The explicit English contradiction concerns the melee attack-interval value in Fear of Justice. These totals apply only to the listed rules.

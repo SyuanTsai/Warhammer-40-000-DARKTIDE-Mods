@@ -130,7 +130,12 @@
         "adamant_movement_speed_on_block",
         "adamant_elite_special_kills_offensive_boost",
         "adamant_cleave_after_push",
-        "adamant_shield_plates"
+        "adamant_shield_plates",
+        "adamant_heavy_attacks_increase_damage",
+        "adamant_melee_attacks_on_staggered_rend",
+        "adamant_crit_chance_on_kill",
+        "adamant_crits_rend",
+        "adamant_dodge_improvement"
       ],
       "checks": []
     },
@@ -209,7 +214,12 @@
         "adamant_movement_speed_on_block",
         "adamant_elite_special_kills_offensive_boost",
         "adamant_cleave_after_push",
-        "adamant_shield_plates"
+        "adamant_shield_plates",
+        "adamant_heavy_attacks_increase_damage",
+        "adamant_melee_attacks_on_staggered_rend",
+        "adamant_crit_chance_on_kill",
+        "adamant_crits_rend",
+        "adamant_dodge_improvement"
       ],
       "checks": []
     },
@@ -288,7 +298,12 @@
         "adamant_movement_speed_on_block",
         "adamant_elite_special_kills_offensive_boost",
         "adamant_cleave_after_push",
-        "adamant_shield_plates"
+        "adamant_shield_plates",
+        "adamant_heavy_attacks_increase_damage",
+        "adamant_melee_attacks_on_staggered_rend",
+        "adamant_crit_chance_on_kill",
+        "adamant_crits_rend",
+        "adamant_dodge_improvement"
       ],
       "checks": []
     },
@@ -367,7 +382,12 @@
         "adamant_movement_speed_on_block",
         "adamant_elite_special_kills_offensive_boost",
         "adamant_cleave_after_push",
-        "adamant_shield_plates"
+        "adamant_shield_plates",
+        "adamant_heavy_attacks_increase_damage",
+        "adamant_melee_attacks_on_staggered_rend",
+        "adamant_crit_chance_on_kill",
+        "adamant_crits_rend",
+        "adamant_dodge_improvement"
       ],
       "checks": []
     },
@@ -660,9 +680,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a7b3236c7c0a34b4d7541957ee39b99100e0b9c5",
       "chinese_sha256": "32f3f8c95924ef747bf512ac1472710fe1bdf37c7fb006a59065963bd6b1aae0",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_crit_chance_on_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_151_155.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_crits_rend.md",
@@ -671,9 +698,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "0c27221a1f4c4752be3232694809252811307e7b",
       "chinese_sha256": "bdc053c5ad71cab0648f09046cd7bbb9831131cb3ae79019abf907f0a377efec",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_crits_rend"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_151_155.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_damage_after_reloading.md",
@@ -783,9 +817,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "9fd5040c3c765e54503ce34fb3f7343296e3250f",
       "chinese_sha256": "88c35b817cbd4f1fe3385a7998aec1593a9d99d5ede5a0754ac5e1ba4c158c0b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_dodge_improvement"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_151_155.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_dog_applies_brittleness.md",
@@ -1194,9 +1235,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "346a9c7d26c04163d4658df2c5c96bea2bea7da1",
       "chinese_sha256": "84cd943c96ab25af5e27f4ffa96bec8ff1c372a560ca9459924a13d4162912d5",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_heavy_attacks_increase_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_151_155.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_hitting_multiple_gives_tdr.md",
@@ -1252,9 +1300,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "12e32eca42dbf77bc551e87a5058fa0f28f19b7a",
       "chinese_sha256": "b0ef6ed8cdf15dc5c927bd85e6a8be3609526b538d80a5925ea98df2e47c5f15",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_melee_attacks_on_staggered_rend"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_151_155.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_melee_weakspot_hits_count_as_stagger.md",
@@ -11123,6 +11178,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_146_150.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_shield_plates.md"
+    },
+    {
+      "id": "adamant_heavy_attacks_increase_damage",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_151_155.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_heavy_attacks_increase_damage.md"
+    },
+    {
+      "id": "adamant_melee_attacks_on_staggered_rend",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_151_155.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_melee_attacks_on_staggered_rend.md"
+    },
+    {
+      "id": "adamant_crit_chance_on_kill",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_151_155.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_crit_chance_on_kill.md"
+    },
+    {
+      "id": "adamant_crits_rend",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_151_155.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_crits_rend.md"
+    },
+    {
+      "id": "adamant_dodge_improvement",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_151_155.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_dodge_improvement.md"
     }
   ],
   "pending_chinese_corrections": [
