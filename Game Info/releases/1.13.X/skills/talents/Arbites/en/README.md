@@ -37,6 +37,7 @@
 | <img src="https://github.com/user-attachments/assets/62f41d0b-cd55-459d-b4d7-c8c155da410f" width="32" height="32" alt="Judicial Force talent icon"> [Judicial Force](#adamant_forceful_stagger_on_low_high) | <ul><li>Cause an explosion that staggers nearby enemies when Forceful rises from below maximum to 10 stacks or falls from a positive count to zero.</li><li>The maximum-stack and zero-stack triggers each have a 5s cooldown.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/7b782337-07db-4ff4-9a85-ba21d1fcfe6b" width="32" height="32" alt="Obstinate talent icon"> [Obstinate](#adamant_terminus_warrant_cdr) | <ul><li>After spending all 20 Justice stacks, restore an additional 0.33s of Combat Ability cooldown each second for 12s.</li><li>Retriggering refreshes the timer; nominal additional restoration totals 3.96s.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/053a0db6-481b-4944-9077-d1d9a05759dd" width="32" height="32" alt="Terminal Decree talent icon"> [Terminal Decree](#adamant_terminus_warrant_support) | <ul><li>Whenever Terminus Warrant stacks are spent, restore Toughness to you and Allies in Coherency according to the actual count spent.</li><li>Each stack restores 1% of maximum Toughness; the base stack cap is 20.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="32" height="32" alt="Efficient Killer talent icon"> [Efficient Killer](#adamant_execution_order_crit) | <ul><li>Killing a Marked enemy grants Critical Hit Chance and Critical Hit Damage bonuses for 8s.</li><li>The bonuses are +10 percentage points of Critical Hit Chance and +25% additional critical damage.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -443,3 +444,17 @@
 - **Recovery example**: Each stack restores 1% of maximum Toughness; spending 20 stacks restores 20%. At 100 maximum Toughness this is 20 points, or 7 points when spending seven stacks. Each recipient remains limited by their own missing Toughness.
 
 [Details](adamant_terminus_warrant_support.md) · [Back to index](#talent-index)
+
+<a id="adamant_execution_order_crit"></a>
+
+### Efficient Killer
+
+<img src="https://github.com/user-attachments/assets/5c90d0a5-8150-4c04-84cf-9b0ae1d6e28f" width="72" height="72" alt="Efficient Killer talent icon">
+
+- **Trigger and duration**: Killing a Marked enemy triggers the effect for 8s. Retriggering refreshes the duration.
+
+- **Critical Hit Chance**: Adds 10 percentage points; for example, 5% becomes 15%.
+
+- **Critical Hit Damage examples**: The +25% bonus affects the additional critical damage. If a normal hit deals 100 and a critical hit deals 150, the result is 100 + (150 − 100) × 1.25 = 162.5, about an 8.33% increase to the whole critical hit. If another weapon instead deals 200 on a critical hit, the result is 225, a 12.5% increase. Actual gains vary with the weapon and armor.
+
+[Details](adamant_execution_order_crit.md) · [Back to index](#talent-index)

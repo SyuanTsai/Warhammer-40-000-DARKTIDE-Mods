@@ -37,3 +37,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Judicial Force](adamant_forceful_stagger_on_low_high.md) / `adamant_forceful_stagger_on_low_high` | Keystone |
 | [Obstinate](adamant_terminus_warrant_cdr.md) / `adamant_terminus_warrant_cdr` | Keystone |
 | [Terminal Decree](adamant_terminus_warrant_support.md) / `adamant_terminus_warrant_support` | Keystone |
+| [Efficient Killer](adamant_execution_order_crit.md) / `adamant_execution_order_crit` | Keystone |
