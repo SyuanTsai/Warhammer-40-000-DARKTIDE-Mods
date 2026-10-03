@@ -40,3 +40,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Good Shootin'](ogryn_leadbelcher_crits.md) / `ogryn_leadbelcher_crits` | Keystone |
 | [Bulletstorm](ogryn_blo_ally_ranged_buffs.md) / `ogryn_blo_ally_ranged_buffs` | Keystone |
 | [Heat of Battle](ogryn_blo_wield_speed.md) / `ogryn_blo_wield_speed` | Keystone |
+| [Back Off!](ogryn_blo_melee.md) / `ogryn_blo_melee` | Keystone |

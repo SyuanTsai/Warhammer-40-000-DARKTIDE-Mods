@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/048770ea-349f-42a0-b5a1-c582fbfde7f8" width="32" height="32" alt="Good Shootin' talent icon"> [Good Shootin'](#ogryn_leadbelcher_crits) | <ul><li>The shot that triggers Lucky Bullet is guaranteed critical if it hits.</li><li>A miss does not produce a critical hit; the effect does not change Lucky Bullet chance.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/11755251-3d1b-4b31-867c-47acaea88760" width="32" height="32" alt="Bulletstorm talent icon"> [Bulletstorm](#ogryn_blo_ally_ranged_buffs) | <ul><li>Lucky Bullet grants you and allies in Coherency +15% ranged damage for 8s.</li><li>Further procs restart the 8s duration.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/a9ec95cc-0b91-4558-81b5-faefcf1207d7" width="32" height="32" alt="Heat of Battle talent icon"> [Heat of Battle](#ogryn_blo_wield_speed) | <ul><li>Heat of Battle adds 1.5% ranged fire rate per Burst Limiter Override stack.</li><li>Uses the existing ranged-kill stacks, maximum 10, with refreshed 10s duration; full stacks grant 15% fire rate.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/5c8fc9b0-2f06-4311-87f7-511d4c6ce6d5" width="32" height="32" alt="Back Off! talent icon"> [Back Off!](#ogryn_blo_melee) | <ul><li>Melee kills increase the next shot’s Lucky Bullet chance by 10 percentage points per stack.</li><li>Maximum 10 stacks; the next shot clears them, even if Lucky Bullet makes that shot free.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -544,3 +545,21 @@
 - **Example**: Six stacks grant 9% ranged fire rate; 10 grant 15%. If the base firing interval is 1s, at full stacks it becomes about 1 ÷ 1.15 = 0.87s.
 
 [Details](ogryn_blo_wield_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_blo_melee"></a>
+
+### Back Off!
+
+<img src="https://github.com/user-attachments/assets/5c8fc9b0-2f06-4311-87f7-511d4c6ce6d5" width="72" height="72" alt="Back Off! talent icon">
+
+- **Building stacks**: A melee kill adds 1 stack. Even if one swing kills several enemies, it adds at most 1 stack.
+
+- **Extra chance**: Each stack adds 10 percentage points, up to 10 stacks. The bonus is added to Burst Limiter Override's 15% base chance.
+
+- **Consumption and example**: The next shot clears the stacks, including a free Lucky Bullet shot. Five stacks give 15% + 5 × 10% = 65%. Nine give 105%, guaranteeing a proc. Stacks have no fixed countdown.
+
+- **Probability limit**: Below the guaranteed threshold, the game adjusts the proc sequence based on earlier checks. Shots cannot be treated as independent fixed-probability rolls.
+
+[Details](ogryn_blo_melee.md) · [Back to index](#talent-index)
