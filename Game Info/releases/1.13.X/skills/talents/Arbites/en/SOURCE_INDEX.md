@@ -57,3 +57,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Toughness Damage Reduction](base_toughness_damage_reduction_node_buff_medium_1.md) / `base_toughness_damage_reduction_node_buff_medium_1` | Stat node |
 | [Arbitrator Armour](adamant_armor.md) / `adamant_armor` | Passive talent |
 | [Ammo Belt](adamant_ammo_belt.md) / `adamant_ammo_belt` | Passive talent |
+| [Rebreather](adamant_rebreather.md) / `adamant_rebreather` | Passive talent |
