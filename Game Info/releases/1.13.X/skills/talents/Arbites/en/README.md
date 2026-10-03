@@ -55,6 +55,7 @@
 | <img src="https://github.com/user-attachments/assets/4c4b06a3-049f-4272-b1d2-a8a472f541b0" width="32" height="32" alt="Walk It Off talent icon"> [Walk It Off](#adamant_stamina_spent_replenish_toughness) | <ul><li>Each accumulated 1 point of Stamina spent restores 10% of maximum Toughness over 3s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d4c3f66c-8fa8-419f-8a46-f94c842a9b4e" width="32" height="32" alt="True Grit talent icon"> [True Grit](#adamant_limit_dmg_taken_from_hits) | <ul><li>Health damage from one attack is capped at 50 points; instant kills bypass the cap.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/af78e688-7708-4d00-88f0-913478235d41" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>Increase Toughness Damage Reduction by 10 percentage points.</li></ul> | Stat node |
+| <img src="https://github.com/user-attachments/assets/d25eaf26-cb8b-4009-80ac-af75d049fb9f" width="32" height="32" alt="Arbitrator Armour talent icon"> [Arbitrator Armour](#adamant_armor) | <ul><li>Increase maximum Toughness by 25 points.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -683,3 +684,15 @@
 - **Scope**: This changes Toughness damage only. Other independent damage-reduction multipliers are then multiplied separately.
 
 [Details](base_toughness_damage_reduction_node_buff_medium_1.md) · [Back to index](#talent-index)
+
+<a id="adamant_armor"></a>
+
+### Arbitrator Armour
+
+<img src="https://github.com/user-attachments/assets/d25eaf26-cb8b-4009-80ac-af75d049fb9f" width="72" height="72" alt="Arbitrator Armour talent icon">
+
+- **Effect and example**: Increase maximum Toughness by 25 points. An original 100 points, with no percentage modifier, becomes 100 + 25 = 125.
+
+- **Bonus order**: Add these 25 points to base Toughness before applying percentage bonuses to maximum Toughness. With another 20% maximum-Toughness bonus, the result is (100 + 25) × 1.2 = 150 points.
+
+[Details](adamant_armor.md) · [Back to index](#talent-index)
