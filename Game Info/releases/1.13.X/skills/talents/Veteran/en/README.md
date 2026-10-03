@@ -71,6 +71,7 @@
 | <img src="https://github.com/user-attachments/assets/ae882322-f266-4e2c-8168-09f85a5c9285" width="32" height="32" alt="Keep Their Heads Down! talent icon"> [Keep Their Heads Down!](#veteran_increase_suppression) | <ul><li>Increase suppression you deal by 75%.</li><li>Enemy thresholds and immunity determine the reaction; this does not increase damage by 75%.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/1ef34fb3-ac4e-47d1-b7c1-0d13f10e3173" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_2) | <ul><li>Increase maximum Toughness by 25 points.</li><li>The points are added before percentage maximum-Toughness modifiers.</li></ul> | Stat node |
 | <img src="https://github.com/user-attachments/assets/b0fb41b1-81da-4263-8d21-101a3af0cbdb" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_high_2) | <ul><li>Increase Melee Damage by 15%.</li><li>The bonus adds to other applicable bonuses at the same damage-stat stage.</li></ul> | Stat node |
+| <img src="https://github.com/user-attachments/assets/20744626-5cef-4e5c-afef-0474fde5a4b5" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>Reduce Toughness damage taken by 10%.</li><li>Same-type reductions add; independent Toughness-damage multipliers apply separately.</li></ul> | Stat node |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1509,5 +1510,27 @@ Assume a melee attack with a 100 damage-unit input at that stage. Hold other fac
 These examples isolate the damage-stat stage; actual final damage depends on the weapon, attack, target and other modifiers.
 
 [Detailed sources and formulas](base_melee_damage_node_buff_high_2.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#base_melee_damage_node_buff_high_2) | [Back to index](#talent-index)
+
+---
+
+<a id="base_toughness_damage_reduction_node_buff_medium_1"></a>
+
+<img src="https://github.com/user-attachments/assets/20744626-5cef-4e5c-afef-0474fde5a4b5" width="72" height="72" alt="Toughness Damage Reduction talent icon">
+
+### Toughness Damage Reduction
+
+- **Reduce Toughness damage taken by 10%.** This stat applies to Toughness damage; these examples do not establish an equal health-damage reduction.
+- Same-type reductions add together. Independent Toughness-damage multipliers apply separately.
+
+#### Toughness-damage examples
+
+Assume 100 incoming Toughness-damage units before this stage, enough Toughness remains, independent multipliers are 1 and no limit binds.
+
+- **This node alone:** `100 × (1 − 0.10) = 90 Toughness-damage units`, preventing 10 units.
+- **An existing same-type 20% reduction:** damage changes from `100 × 0.80 = 80` to `100 × (1 − 0.20 − 0.10) = 70 Toughness-damage units`. This prevents 10 more units, a `(80 − 70) / 80 = 12.5%` reduction relative to the already-modified incoming value.
+
+Apply any independent multipliers separately; these are isolated Toughness-damage calculations.
+
+[Detailed sources and formulas](base_toughness_damage_reduction_node_buff_medium_1.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#base_toughness_damage_reduction_node_buff_medium_1) | [Back to index](#talent-index)
 
 ---
