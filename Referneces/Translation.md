@@ -1772,3 +1772,6 @@
 
 - Voltagheist Overload - 電靈超載
   - 文件譯名；本體1.13.1繁中仍為「Voltagheist Overload」。名稱鍵 `loc_trait_bespoke_arc_has_killing_blow_chance`，hash `b54f57d4`；保留同hash中英RAW原文與文件翻譯分層。
+
+- Opportunist - 機會主義者
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_armor_penetration_against_staggered`，hash `738f6c19`；英文／繁中RAW配對確認。

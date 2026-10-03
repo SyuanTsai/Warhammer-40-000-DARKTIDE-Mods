@@ -79,3 +79,7 @@
 - 永燃烈焰本機Commit：`7eaf7332f6dc0d9052079f56d53fb2e655b31cc4`。
 
 - [電靈超載](2026-10-03-VOLTAGHEIST-OVERLOAD_ACCEPTANCE.json)：新增1變體、1型號關聯；共1變體、1關聯。
+
+- 電靈超載本機Commit：`3f1a195c0768f12d21da9d80f98f4f48d38d6654`。
+
+- [機會主義者](2026-10-03-OPPORTUNIST_ACCEPTANCE.json)：新增9變體、17型號關聯；共9變體、17關聯。

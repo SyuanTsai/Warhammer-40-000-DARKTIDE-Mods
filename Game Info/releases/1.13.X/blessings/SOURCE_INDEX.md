@@ -22,3 +22,4 @@
 | [連跑帶打](entries/連跑帶打/README.md) | [來源索引](entries/連跑帶打/SOURCE_INDEX.md) |
 | [永燃烈焰](entries/永燃烈焰/README.md) | [來源索引](entries/永燃烈焰/SOURCE_INDEX.md) |
 | [電靈超載](entries/電靈超載/README.md) | [來源索引](entries/電靈超載/SOURCE_INDEX.md) |
+| [機會主義者](entries/機會主義者/README.md) | [來源索引](entries/機會主義者/SOURCE_INDEX.md) |

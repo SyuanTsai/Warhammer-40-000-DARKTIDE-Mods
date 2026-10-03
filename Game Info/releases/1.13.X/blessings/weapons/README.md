@@ -9,7 +9,6 @@
 | [步兵自動槍](ranged/步兵自動槍/README.md)<br>- Infantry Autogun | 遠程 | 阿格里皮娜Mk I步兵自動槍、哥倫努Mk V步兵自動槍、格拉亞Mk VIII步兵自動槍 |
 | [雙鏈重型機槍](ranged/雙鏈重型機槍/README.md)<br>- Twin-Linked Heavy Stubber | 遠程 | 克魯克Mk V二聯重機槍、戈爾工Mk IV二聯重機槍、阿克利斯MK V二聯重機槍 |
 | [工兵鏟](melee/工兵鏟/README.md)<br>- Sapper Shovel | 近戰 | 軍務部標配工兵鏟、軍務部Mk III工兵鏟、軍務部Mk VII工兵鏟 |
-| [重型開膛劍](melee/重型開膛劍/README.md)<br>- Heavy Eviscerator | 近戰 | 提格魯斯Mk II重型開膛劍、提格魯斯Mk XV重型開膛劍 |
 | [突擊鏈鋸劍](melee/突擊鏈鋸劍/README.md)<br>- Assault Chainsword | 近戰 | 卡迪亞Mk IV突擊鏈鋸劍、卡迪亞Mk XIIIg突擊鏈鋸劍 |
 | [「惡魔之爪」劍](melee/「惡魔之爪」劍/README.md)<br>- "Devil's Claw" Sword | 近戰 | 卡塔昌Mk I「惡魔之爪」戰鬥劍、卡塔昌Mk IV「惡魔之爪」戰鬥劍、卡塔昌Mk VII「惡魔之爪」戰鬥劍 |
 | [決鬥劍](melee/決鬥劍/README.md)<br>- Duelling Sword | 近戰 | 馬卡比安Mk II決鬥劍、馬卡比安Mk IV決鬥劍、馬卡比安Mk V決鬥劍 |
@@ -17,9 +16,6 @@
 | [烈焰力場劍](melee/烈焰力場劍/README.md)<br>- Blaze Force Sword | 近戰 | 朦朧Mk II烈焰力場劍、火衛二Mk IV烈焰力場劍、伊利斯Mk V烈焰力場劍 |
 | [骨鋸](melee/骨鋸/README.md)<br>- Bone Saw | 近戰 | 外科醫師Mk IV骨鋸 |
 | [穿音速雙刀](melee/穿音速雙刀/README.md)<br>- Paired Transonic Blades | 近戰 | 西福爾穿音速刀刃 |
-| [廁所鏟](melee/廁所鏟/README.md)<br>- Latrine Shovel | 近戰 | 兇殘Mk III廁所鏟、兇殘Mk XIX廁所鏟、兇殘Mk V廁所鏟 |
-| [動力錘](melee/動力錘/README.md)<br>- Power Maul | 近戰 | 阿克利斯Mk I動力錘 |
-| [作戰大錘&板盾](melee/作戰大錘&板盾/README.md)<br>- Battle Maul & Slab Shield | 近戰 | 歐洛克斯Mk II戰槌&Mk III板盾、果羅姆 Mk I 戰槌與 Mk V 板盾 |
 | [動力劍](melee/動力劍/README.md)<br>- Power Sword | 近戰 | 軍務部Mk III動力劍、軍務部Mk VI動力劍 |
 | [偵察鐳射槍](ranged/偵察鐳射槍/README.md)<br>- Recon Lasgun | 遠程 | 奧克塔蘭Mk II偵察鐳射槍、奧克塔蘭Mk VId偵察鐳射槍、奧克塔蘭Mk VIIa偵察鐳射槍 |
 | [電弧步槍](ranged/電弧步槍/README.md)<br>- Arc Rifle | 遠程 | 庫巴爾電弧步槍 |
@@ -27,7 +23,6 @@
 | [矛頭爆矢槍](ranged/矛頭爆矢槍/README.md)<br>- Spearhead Boltgun | 遠程 | 洛克Mk IIb矛頭爆矢槍、洛克Mk III矛頭爆矢槍 |
 | [重伐木槍](ranged/重伐木槍/README.md)<br>- Heavy Stubber | 遠程 | 布蘭克斯樣式重伐木槍、寬口布蘭克斯樣式重伐木槍、災變布蘭克斯樣式重伐木槍 |
 | [撕裂槍](ranged/撕裂槍/README.md)<br>- Ripper Gun | 遠程 | 碎敵Mk II撕裂槍、碎敵Mk V撕裂槍、碎敵Mk VI撕裂槍 |
-| [法務官電擊鎚和鎮壓護盾](melee/法務官電擊鎚和鎮壓護盾/README.md)<br>- Shock Maul and Suppression Shield | 近戰 | 法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk VI、法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk XI |
 | [上古神刃](melee/上古神刃/README.md)<br>- Relic Blade | 近戰 | 上古神刃 軍務部 Mk X、上古神刃 軍務部 Mk II |
 | [動力彎刀](melee/動力彎刀/README.md)<br>- Power Falchion | 近戰 | 動力彎刀 阿里丁 Mk I、動力彎刀 執法者 Mk IIb |
 | [撕裂者自動手槍](ranged/撕裂者自動手槍/README.md)<br>- Shredder Autopistol | 遠程 | 撕裂者自動手槍 尤斯 Mk IV |
@@ -46,3 +41,12 @@
 | [快拔左輪手槍](ranged/快拔左輪手槍/README.md)<br>- Quickdraw Stub Revolver | 遠程 | 快拔左輪手槍 紮羅娜 Mk IIa、快拔左輪手槍 阿格里皮娜 Mk XIV |
 | [淨化噴火器](ranged/淨化噴火器/README.md)<br>- Purgation Flamer | 遠程 | 淨化噴火器 奧特米亞 Mk III |
 | [電弧鎚](melee/電弧鎚/README.md)<br>- Arc Maul | 近戰 | 電弧鎚 布蘭克斯 Mk III |
+| [突擊鏈斧](melee/突擊鏈斧/README.md)<br>- Assault Chainaxe | 近戰 | 突擊鏈斧 奧瑞斯特斯 Mk IV、突擊鏈斧 奧瑞斯特斯 Mk XII |
+| [重型開膛劍](melee/重型開膛劍/README.md)<br>- Heavy Eviscerator | 近戰 | 重型開膛劍 泰格魯斯 Mk III、重型開膛劍 泰格魯斯 Mk XV |
+| [撬棍](melee/撬棍/README.md)<br>- Crowbar | 近戰 | 撬棍 科技教士 型號6 |
+| [廁所鏟](melee/廁所鏟/README.md)<br>- Latrine Shovel | 近戰 | 廁所鏟 兇殘 Mk III、廁所鏟 兇殘 Mk XIX、廁所鏟 兇殘 Mk V |
+| [動力錘](melee/動力錘/README.md)<br>- Power Maul | 近戰 | 動力錘 阿克利斯 Mk I |
+| [作戰大錘&板盾](melee/作戰大錘&板盾/README.md)<br>- Battle Maul & Slab Shield | 近戰 | 作戰大錘&板盾 歐洛克斯 Mk II & Mk III、作戰大錘&板盾 果羅姆 Mk I & Mk V |
+| [碾壓者](melee/碾壓者/README.md)<br>- Crusher | 近戰 | 碾壓者 憤怒 Mk IVe、碾壓者 克魯克 Mk VII |
+| [電擊錘](melee/電擊錘/README.md)<br>- Shock Maul | 近戰 | 電擊錘 阿格尼 Mk Ia、電擊錘 軍務部 Mk III |
+| [法務官電擊鎚和鎮壓護盾](melee/法務官電擊鎚和鎮壓護盾/README.md)<br>- Shock Maul and Suppression Shield | 近戰 | 法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk VI、法務官電擊鎚和鎮壓護盾 布蘭克斯 Mk XI |
