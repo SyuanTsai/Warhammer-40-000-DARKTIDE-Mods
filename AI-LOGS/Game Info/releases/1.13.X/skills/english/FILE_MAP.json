@@ -5695,7 +5695,8 @@
         "veteran_snipers_focus_toughness_bonus",
         "veteran_invisibility_on_combat_ability",
         "veteran_toughness_bonus_leaving_invisibility",
-        "veteran_reduced_threat_after_combat_ability"
+        "veteran_reduced_threat_after_combat_ability",
+        "veteran_increased_close_damage_after_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5731,7 +5732,8 @@
         "veteran_snipers_focus_toughness_bonus",
         "veteran_invisibility_on_combat_ability",
         "veteran_toughness_bonus_leaving_invisibility",
-        "veteran_reduced_threat_after_combat_ability"
+        "veteran_reduced_threat_after_combat_ability",
+        "veteran_increased_close_damage_after_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5767,7 +5769,8 @@
         "veteran_snipers_focus_toughness_bonus",
         "veteran_invisibility_on_combat_ability",
         "veteran_toughness_bonus_leaving_invisibility",
-        "veteran_reduced_threat_after_combat_ability"
+        "veteran_reduced_threat_after_combat_ability",
+        "veteran_increased_close_damage_after_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5803,7 +5806,8 @@
         "veteran_snipers_focus_toughness_bonus",
         "veteran_invisibility_on_combat_ability",
         "veteran_toughness_bonus_leaving_invisibility",
-        "veteran_reduced_threat_after_combat_ability"
+        "veteran_reduced_threat_after_combat_ability",
+        "veteran_increased_close_damage_after_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6355,9 +6359,22 @@
       "kind": "mechanism",
       "chinese_blob_sha": "dbc99ef13581fbf5021223d232975ec7f9d6c5ca",
       "chinese_sha256": "20b2f988b5502e269a0a01ba72753f881d104f9a0f915d15111d6946d52a4ba8",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_increased_close_damage_after_combat_ability"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "targeted_display_parameter_check",
+        "targeted_english_contradiction_check",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_increased_damage_based_on_range.md",
@@ -7934,9 +7951,31 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_reduced_threat_after_combat_ability.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduced_threat_after_combat_ability.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduced_threat_after_combat_ability.md",
+      "commit": "72550d39a3fd8b6e03a27097cb7ba04922bce3fb"
+    },
+    {
+      "id": "veteran_increased_close_damage_after_combat_ability",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_close_damage_after_combat_ability.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_close_damage_after_combat_ability.md"
     }
   ],
-  "pending_chinese_corrections": [],
+  "pending_chinese_corrections": [
+    {
+      "id": "veteran_increased_close_damage_after_combat_ability",
+      "type": "localization_metadata",
+      "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_increased_close_damage_after_combat_ability.md",
+      "field": "English description entry_index",
+      "recorded_value": 2009,
+      "verified_value": 2010,
+      "description_key": "loc_talent_veteran_ability_assault_desc",
+      "description_hash": "1eb58318",
+      "evidence": "Game Info/releases/1.13.X/source/SteamBuild_25606770_1.13.1/jsonl/en/ui.jsonl",
+      "status": "pending_separate_chinese_revision"
+    }
+  ],
   "review_mode": "Translate existing verified Chinese mechanisms and check exact English text; targeted fixed-source reads only for discrepancies or evidence gaps, per user clarification."
 }

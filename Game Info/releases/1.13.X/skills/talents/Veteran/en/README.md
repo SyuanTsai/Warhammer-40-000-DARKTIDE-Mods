@@ -12,6 +12,7 @@
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="Infiltrate talent icon"> [Infiltrate](#veteran_invisibility_on_combat_ability) | <ul><li>Replenish all Toughness; enter Stealth for up to 8 seconds with +25% movement speed.</li><li>Gain +30% damage during Stealth and for 8 seconds afterwards. Base cooldown: 40 seconds.</li><li>Attacking can end Stealth; leaving it suppresses nearby enemies.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="Low Profile talent icon"> [Low Profile](#veteran_reduced_threat_after_combat_ability) | <ul><li>Combat ability use reduces the affected enemy target-selection weight by 90%.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds after leaving it; an already-running countdown is not restarted by another application.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/0c033c93-a850-4295-853d-10698ec96e89" width="32" height="32" alt="Hunter's Resolve talent icon"> [Hunter's Resolve](#veteran_toughness_bonus_leaving_invisibility) | <ul><li>Infiltrate grants 50% Toughness damage reduction during Stealth and for 10 seconds after leaving it.</li><li>Separate overlapping instances multiply and keep their own countdowns.</li></ul> | Ability modifier |
+| <img src="https://github.com/user-attachments/assets/1181fe6e-4066-4d75-b996-a0eb01d7583d" width="32" height="32" alt="Close Quarters Killzone talent icon"> [Close Quarters Killzone](#veteran_increased_close_damage_after_combat_ability) | <ul><li>Combat ability use grants up to 15% close damage for 10 seconds; melee and ranged attacks can benefit.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds afterwards. Full bonus within 12.5m; fades to zero at 30m.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="32" height="32" alt="Overwatch talent icon"> [Overwatch](#veteran_combat_ability_extra_charge) | <ul><li>Store two Infiltrate uses; each fully missing use takes about 53.2 seconds to refill without other cooldown effects.</li><li>Both uses share recharge progress and refill sequentially; recovery continues during stealth.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="Long Range Assassin talent icon"> [Long Range Assassin](#veteran_snipers_focus_increased_stacks) | <ul><li>Raise Marksman's Focus's effective stack cap from 10 to 15.</li><li>At 15 stacks, gain 112.5% ranged finesse strength and 15% reload speed; the whole-hit increase depends on the extra component.</li></ul> | Keystone modifier |
@@ -111,6 +112,26 @@ Assume one use, no other recovery/damage/cooldown modifiers, no overlapping abil
 - **Multiple uses**: if extra uses or a shorter cooldown make two instances overlap, each keeps its own timer and their factors multiply. A 100-Toughness-damage attack becomes `100 × 0.5 × 0.5 = 25`, under the same isolated assumptions. An already started countdown continues if you re-enter Stealth.
 
 [Details and source evidence](veteran_toughness_bonus_leaving_invisibility.md) · [Back to index](#talent-index)
+
+<a id="veteran_increased_close_damage_after_combat_ability"></a>
+
+<img src="https://github.com/user-attachments/assets/1181fe6e-4066-4d75-b996-a0eb01d7583d" width="72" height="72" alt="Close Quarters Killzone talent icon">
+
+### Close Quarters Killzone
+
+- Combat ability use grants a close damage bonus for **10 seconds**. With [Infiltrate](#veteran_invisibility_on_combat_ability), the effect is active **during Stealth**, then for **10 seconds after leaving it**.
+- Gain **15%** at distances up to **12.5 metres**. Beyond 12.5 metres, the bonus fades by a square-root curve, reaching zero at **30 metres**. Both close melee and ranged attacks can benefit.
+- With a 100-damage baseline at the affected stage and no other bonuses or downstream modifiers, damage within 12.5m becomes `100 × 1.15 = 115`. At 16.875m, the contribution is `15% × (1 − sqrt((16.875 − 12.5) / 17.5)) = 7.5%`, giving **107.5 damage units**.
+- With an existing 25% additive bonus at the same stage, close damage is `100 × (1 + 0.25 + 0.15) = 140`, compared with 125 beforehand: **12% more** than that already-bonused baseline.
+- The effect does not stack. Reapplying during an already-started ten-second countdown does not restart it.
+
+#### Game description erratum
+
+The original English says that, with Infiltrate, the effect **“begins on leaving Stealth.”** It actually starts during Stealth; leaving Stealth starts its separate ten-second countdown.
+
+[Detailed sources and formulas](veteran_increased_close_damage_after_combat_ability.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_increased_close_damage_after_combat_ability) | [Back to index](#talent-index)
+
+---
 
 <a id="veteran_combat_ability_extra_charge"></a>
 

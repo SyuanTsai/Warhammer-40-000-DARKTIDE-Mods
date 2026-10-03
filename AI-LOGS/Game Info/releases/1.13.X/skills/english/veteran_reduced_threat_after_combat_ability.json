@@ -142,5 +142,6 @@
     "Repeated full implementation call-chain analysis (outside clarified review scope)"
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/low-profile-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduced_threat_after_combat_ability.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduced_threat_after_combat_ability.md",
+  "commit": "72550d39a3fd8b6e03a27097cb7ba04922bce3fb"
 }
