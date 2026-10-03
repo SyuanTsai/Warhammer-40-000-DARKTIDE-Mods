@@ -662,6 +662,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/3adb99c8-c2dd-48f4-9632-ec9607f38d3a",
       "effect": "推擊處理到至少一個合格目標後，撬棍 I–IV 的近戰爆擊率增加 5／7.5／10／12.5 個百分點，砍刀增加 7.5／10／12.5／15 個百分點；均持續 3 秒。"
+    },
+    {
+      "id": "gets-hot",
+      "name_zh_tw": "燃起來！",
+      "name_en": "Gets Hot!",
+      "name_key": "loc_trait_bespoke_crit_chance_scaled_on_heat",
+      "description_key": "loc_trait_bespoke_crit_chance_scaled_on_heat_desc",
+      "name_hash": "0ecf6094",
+      "description_hash": "d4cd4a65",
+      "page": "entries/燃起來！/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/f71da10a-4d18-4981-be0e-6c4d185e59db",
+      "effect": "持用電漿槍時，依目前熱能階數提高一般爆擊機率與遠程爆擊傷害；最多五階，散熱／裝填或切換離手時停用。"
     }
   ],
   "weapons": [
@@ -12620,6 +12633,81 @@
       "icon": "https://github.com/user-attachments/assets/3adb99c8-c2dd-48f4-9632-ec9607f38d3a",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_097",
       "effect": "推擊處理到至少一個目標後，近戰爆擊率提高 7.5／10／12.5／15 個百分點，持續 3 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat",
+      "blessing_id": "gets-hot",
+      "weapon_id": "plasmagun_p1",
+      "page": "entries/燃起來！/weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "variant_id": "weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat",
+        "marks": [
+          "plasmagun_p1_m1",
+          "plasmagun_p1_m2"
+        ],
+        "tier_values": {
+          "I": {
+            "critical_strike_chance_fraction_per_heat_step": 0.055,
+            "critical_strike_chance_percentage_points_per_heat_step": 5.5,
+            "ranged_critical_strike_damage_fraction_per_heat_step": 0.04,
+            "ranged_critical_strike_damage_percent_per_heat_step": 4,
+            "max_critical_strike_chance_percentage_points_at_5_steps": 27.5,
+            "max_ranged_critical_strike_damage_percent_at_5_steps": 20
+          },
+          "II": {
+            "critical_strike_chance_fraction_per_heat_step": 0.07,
+            "critical_strike_chance_percentage_points_per_heat_step": 7,
+            "ranged_critical_strike_damage_fraction_per_heat_step": 0.06,
+            "ranged_critical_strike_damage_percent_per_heat_step": 6,
+            "max_critical_strike_chance_percentage_points_at_5_steps": 35,
+            "max_ranged_critical_strike_damage_percent_at_5_steps": 30
+          },
+          "III": {
+            "critical_strike_chance_fraction_per_heat_step": 0.085,
+            "critical_strike_chance_percentage_points_per_heat_step": 8.5,
+            "ranged_critical_strike_damage_fraction_per_heat_step": 0.08,
+            "ranged_critical_strike_damage_percent_per_heat_step": 8,
+            "max_critical_strike_chance_percentage_points_at_5_steps": 42.5,
+            "max_ranged_critical_strike_damage_percent_at_5_steps": 40
+          },
+          "IV": {
+            "critical_strike_chance_fraction_per_heat_step": 0.1,
+            "critical_strike_chance_percentage_points_per_heat_step": 10,
+            "ranged_critical_strike_damage_fraction_per_heat_step": 0.1,
+            "ranged_critical_strike_damage_percent_per_heat_step": 10,
+            "max_critical_strike_chance_percentage_points_at_5_steps": 50,
+            "max_ranged_critical_strike_damage_percent_at_5_steps": 50
+          }
+        },
+        "max_steps": 5,
+        "model_action_modes": [
+          "normal shoot_hit_scan",
+          "charged shoot_hit_scan"
+        ],
+        "immediate_single_shot_handling_bonus_percentage_points": 5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_plasmagun_p1.lua",
+        "start_line": 201,
+        "end_line": 256
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_plasmagun_p1_buff_templates.lua",
+        "start_line": 63,
+        "end_line": 103
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_scaled_on_heat_desc",
+      "description_hash": "d4cd4a65",
+      "icon": "https://github.com/user-attachments/assets/f71da10a-4d18-4981-be0e-6c4d185e59db",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_157",
+      "effect": "電漿槍 M35熔岩核心 Mk II（`plasmagun_p1_m1`）與 Mk III（`plasmagun_p1_m2`）共用 I–IV 數值。每熱階增加一般爆擊機率 +5.5／+7／+8.5／+10 個百分點，以及遠程爆擊傷害 +4／+6／+8／+10%；最多五階，兩種射擊模式都是單發 hit-scan。"
     }
   ],
   "bindings": [
@@ -17605,6 +17693,34 @@
         "path": "scripts/settings/equipment/weapon_templates/combat_blades/ogryn_combatblade_p1_m3.lua",
         "import_line": 16,
         "append_line": 1311
+      }
+    },
+    {
+      "blessing_id": "gets-hot",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m1",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/crit_chance_scaled_on_heat",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m1.lua",
+        "import_line": 18,
+        "append_line": 987
+      }
+    },
+    {
+      "blessing_id": "gets-hot",
+      "weapon_id": "plasmagun_p1",
+      "mark_id": "plasmagun_p1_m2",
+      "variant_id": "weapon_trait_bespoke_plasmagun_p1_crit_chance_scaled_on_heat",
+      "trait_item": "content/items/traits/bespoke_plasmagun_p1/crit_chance_scaled_on_heat",
+      "trait_category": "bespoke_plasmagun_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/plasma_rifles/plasmagun_p1_m2.lua",
+        "import_line": 18,
+        "append_line": 987
       }
     }
   ]
