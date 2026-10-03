@@ -1370,6 +1370,14 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_damage_vs_staggered_aura.json",
       "date": "2026-10-03",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_charge",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge.json",
+      "date": "2026-10-03",
+      "storage": "git"
     }
   ],
   "pending": [

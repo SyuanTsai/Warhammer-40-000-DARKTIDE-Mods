@@ -14,6 +14,7 @@
 | <img src="https://github.com/user-attachments/assets/ab5c4535-3182-4aa9-a388-faffff1d0faa" width="32" height="32" alt="Part of the Squad talent icon"> [Part of the Squad](#adamant_companion_coherency) | <ul><li>Your Cyber-Mastiff counts towards Coherency; you and Allies in Coherency gain an additional 7.5% Toughness Damage Reduction.</li><li>Isolating this effect, 100 incoming Toughness damage becomes 92.5.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/2f99cb20-a83e-4a7c-98ee-f43949811f84" width="32" height="32" alt="Ruthless Efficiency talent icon"> [Ruthless Efficiency](#adamant_reload_speed_aura) | <ul><li>You and Allies in Coherency gain an additional 12.5% Reload Speed.</li><li>Your Cyber-Mastiff no longer counts towards Coherency while this aura is selected.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/57af1e74-7cc5-45bb-a332-11d2e5fde909" width="32" height="32" alt="Breaking Dissent talent icon"> [Breaking Dissent](#adamant_damage_vs_staggered_aura) | <ul><li>You and Allies in Coherency deal 10% more damage to Staggered enemies.</li><li>Isolating this effect, 100 damage becomes 110; it gives no bonus against a target that is not Staggered.</li><li>Your Cyber-Mastiff no longer counts towards Coherency while this aura is selected.</li></ul> | Aura |
+| <img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="32" height="32" alt="Break the Line talent icon"> [Break the Line](#adamant_charge) | <ul><li>Step forward and Bash; count as Blocking during the charge, then gain Damage and Impact bonuses for 6s.</li><li>Base cooldown 20s; one charge.</li></ul> | Ability |
 
 ## Blitz
 
@@ -102,3 +103,19 @@
 - **Coherency condition**: Selecting this aura means your Cyber-Mastiff no longer counts towards unit Coherency. Allies still need to satisfy the usual Coherency conditions to receive the bonus.
 
 [Details](adamant_damage_vs_staggered_aura.md) · [Back to index](#talent-index)
+
+## Ability
+
+<a id="adamant_charge"></a>
+
+### Break the Line
+
+<img src="https://github.com/user-attachments/assets/a0aad2f2-d03d-486c-b583-1307a9780ac2" width="72" height="72" alt="Break the Line talent icon">
+
+- **Activation and cooldown**: Each activation consumes one ability charge; the base cooldown is 20s.
+
+- **Bash and protection**: The charge strikes enemies near its path, then ends with a stagger effect on enemies in front. During the charge you count as Blocking and can dodge Trapper nets and Pox Hound pounces.
+
+- **Damage and Impact**: After the charge ends, gain 25% Damage and 50% Impact for 6s. Isolating these bonuses, 100 damage becomes 125 and 100 units of Impact become 150. With an existing same-stage 25% damage bonus, `100 × (1 + 25% + 25%) = 150 damage`. Triggering the buff again restarts its duration.
+
+[Details](adamant_charge.md) · [Back to index](#talent-index)

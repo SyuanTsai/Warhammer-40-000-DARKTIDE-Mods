@@ -69,7 +69,8 @@
         "adamant_shock_mine",
         "adamant_companion_coherency",
         "adamant_reload_speed_aura",
-        "adamant_damage_vs_staggered_aura"
+        "adamant_damage_vs_staggered_aura",
+        "adamant_charge"
       ],
       "checks": []
     },
@@ -87,7 +88,8 @@
         "adamant_shock_mine",
         "adamant_companion_coherency",
         "adamant_reload_speed_aura",
-        "adamant_damage_vs_staggered_aura"
+        "adamant_damage_vs_staggered_aura",
+        "adamant_charge"
       ],
       "checks": []
     },
@@ -105,7 +107,8 @@
         "adamant_shock_mine",
         "adamant_companion_coherency",
         "adamant_reload_speed_aura",
-        "adamant_damage_vs_staggered_aura"
+        "adamant_damage_vs_staggered_aura",
+        "adamant_charge"
       ],
       "checks": []
     },
@@ -123,7 +126,8 @@
         "adamant_shock_mine",
         "adamant_companion_coherency",
         "adamant_reload_speed_aura",
-        "adamant_damage_vs_staggered_aura"
+        "adamant_damage_vs_staggered_aura",
+        "adamant_charge"
       ],
       "checks": []
     },
@@ -189,9 +193,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "0d6c44ee089e53417a255f2905b561732df8e941",
       "chinese_sha256": "16495ed9f094bf5b1e2b692245ba52408da2d972c23c38e1186a06d97ad86a69",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_charge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_charge_cooldown_reduction.md",
@@ -9964,6 +9975,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_damage_vs_staggered_aura.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_damage_vs_staggered_aura.md"
+    },
+    {
+      "id": "adamant_charge",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_charge.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_charge.md"
     }
   ],
   "pending_chinese_corrections": [
