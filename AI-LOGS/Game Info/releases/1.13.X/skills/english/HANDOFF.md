@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 245 completed on 2026-10-04. [Receipt](ogryn_skills_241_245.json) and [FILE_MAP](FILE_MAP.json) now record 245 accepted mechanisms. Next item: **246, Unbreakable**, `ogryn_block_all_attacks`. The full goal remains active and unfinished.
+Checkpoint 250 completed on 2026-10-04. [Receipt](ogryn_skills_246_250.json) and [FILE_MAP](FILE_MAP.json) now record 250 accepted mechanisms. Next item: **251, Concentrate**, `ogryn_drain_stamina_for_handling`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 401 mechanisms + 30 class-support files + 2 shared files = 433 mapped files. Ogryn has 22 mechanisms and six support files remaining. Ogryn comparison totals: 234 = 99 Consistent / 4 Explicit contradictions / 124 Not covered / 0 No implementation / 7 Cannot confirm. The added English contradiction concerns Pacemaker's single-attack restriction. Latest clean batch: 250s (4m 10s) between 55d539180 and 9a496f000.
+Remaining: 396 mechanisms + 30 class-support files + 2 shared files = 428 mapped files. Ogryn has 17 mechanisms and six support files remaining. Ogryn comparison totals: 244 = 104 Consistent / 4 Explicit contradictions / 129 Not covered / 0 No implementation / 7 Cannot confirm. The added English contradiction concerns Pacemaker's single-attack restriction. Latest clean batch: 348s (5m 48s) between 884794236 and 37bf56400.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 
