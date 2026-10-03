@@ -168,5 +168,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/fire-team-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_damage_coherency.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_damage_coherency.md",
+  "commit": "58512e57f0ca41f41d89392368d25f11b70a8036"
 }

@@ -5714,7 +5714,8 @@
         "veteran_smoke_grenade",
         "veteran_krak_grenade",
         "veteran_grenade_apply_bleed",
-        "veteran_increased_damage_coherency"
+        "veteran_increased_damage_coherency",
+        "veteran_movement_speed_coherency"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5769,7 +5770,8 @@
         "veteran_smoke_grenade",
         "veteran_krak_grenade",
         "veteran_grenade_apply_bleed",
-        "veteran_increased_damage_coherency"
+        "veteran_increased_damage_coherency",
+        "veteran_movement_speed_coherency"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5824,7 +5826,8 @@
         "veteran_smoke_grenade",
         "veteran_krak_grenade",
         "veteran_grenade_apply_bleed",
-        "veteran_increased_damage_coherency"
+        "veteran_increased_damage_coherency",
+        "veteran_movement_speed_coherency"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5879,7 +5882,8 @@
         "veteran_smoke_grenade",
         "veteran_krak_grenade",
         "veteran_grenade_apply_bleed",
-        "veteran_increased_damage_coherency"
+        "veteran_increased_damage_coherency",
+        "veteran_movement_speed_coherency"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6768,9 +6772,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1f663e6bc8dcd9f957d169d3e710fc05cd5db12a",
       "chinese_sha256": "be0ef6c93c223b602ef8d7071bc1d04e0715119630ff5689f570a6559cf9c3a7",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_movement_speed_coherency"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_movement_speed_towards_downed.md",
@@ -8396,7 +8415,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_damage_coherency.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_damage_coherency.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_damage_coherency.md",
+      "commit": "58512e57f0ca41f41d89392368d25f11b70a8036"
+    },
+    {
+      "id": "veteran_movement_speed_coherency",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_movement_speed_coherency.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_movement_speed_coherency.md"
     }
   ],
   "pending_chinese_corrections": [

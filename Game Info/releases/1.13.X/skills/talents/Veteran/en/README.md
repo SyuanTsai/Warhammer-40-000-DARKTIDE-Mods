@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="Demolition Stockpile talent icon"> [Demolition Stockpile](#veteran_replenish_grenades) | <ul><li>While below grenade capacity, replenish one Shredder Frag Grenade or Smoke Grenade approximately every 60 seconds, or one Krak Grenade approximately every 90 seconds.</li><li>Throwing another grenade preserves the current countdown; reaching full capacity clears it.</li></ul> | Blitz modifier |
 | <img src="https://github.com/user-attachments/assets/6fa67f08-3b19-4bee-8a32-d5815db7297f" width="32" height="32" alt="Shredder Frag Grenade talent icon"> [Shredder Frag Grenade](#veteran_grenade_apply_bleed) | <ul><li>Damaging Frag explosions apply six Bleed stacks to surviving enemies.</li><li>Base capacity three; about 1.7s fuse, 2m inner blast and 10m outer blast with damage falloff.</li><li>Bleed caps at 16 stacks; ticks about every 0.5s, refreshes its 1.5s duration on reapplication and then loses stacks over successive ticks.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/9a3da9ac-d8f1-4745-9af6-25852f52834a" width="32" height="32" alt="Fire Team talent icon"> [Fire Team](#veteran_increased_damage_coherency) | <ul><li>Gain +7.5% Damage for you and Allies in Coherency.</li><li>Identical Fire Team auras do not stack; replaces your Scavenger aura.</li></ul> | Aura |
+| <img src="https://github.com/user-attachments/assets/f8c278c8-72a1-476c-93d1-6656268ba8e4" width="32" height="32" alt="Close and Kill talent icon"> [Close and Kill](#veteran_movement_speed_coherency) | <ul><li>Gain +7.5% Movement Speed for you and Allies in Coherency.</li><li>Identical copies do not stack; replaces your Scavenger aura.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="Volley Fire talent icon"> [Volley Fire](#veteran_combat_ability_stance) | <ul><li>Equip your ranged weapon and enter a 6-second stance with +15% ranged damage, +15% extra weakspot damage and +50% ranged impact.</li><li>Reduced spread/recoil/sway and disruption protection; 30-second base cooldown starts on activation.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="Infiltrate talent icon"> [Infiltrate](#veteran_invisibility_on_combat_ability) | <ul><li>Replenish all Toughness; enter Stealth for up to 8 seconds with +25% movement speed.</li><li>Gain +30% damage during Stealth and for 8 seconds afterwards. Base cooldown: 40 seconds.</li><li>Attacking can end Stealth; leaving it suppresses nearby enemies.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="Low Profile talent icon"> [Low Profile](#veteran_reduced_threat_after_combat_ability) | <ul><li>Combat ability use reduces the affected enemy target-selection weight by 90%.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds after leaving it; an already-running countdown is not restarted by another application.</li></ul> | Ability modifier |
@@ -197,6 +198,25 @@ The extra projectile has a slightly offset direction and a base-fuse override de
 - With two Veterans providing this same aura and no other same-stage bonus, one effective copy still gives `100 × 1.075 = 107.5 damage units`.
 
 [Detailed sources and formulas](veteran_increased_damage_coherency.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_increased_damage_coherency) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_movement_speed_coherency"></a>
+
+<img src="https://github.com/user-attachments/assets/f8c278c8-72a1-476c-93d1-6656268ba8e4" width="72" height="72" alt="Close and Kill talent icon">
+
+### Close and Kill
+
+- You and Allies in Coherency gain **+7.5% Movement Speed**.
+- Identical copies of this aura do not stack. Selecting it replaces your own **Scavenger** aura.
+
+**Movement examples**
+
+- With a 5 m/s base speed and no other speed bonus, `5 × (1 + 0.075) = 5.375 m/s`.
+- At that constant speed, a straight 5m journey changes from `5 ÷ 5 = 1s` to `5 ÷ 5.375 ≈ 0.9302s`: about **6.98% less travel time**. A 7.5% speed increase does not directly mean 7.5% less time.
+- Two identical aura providers still give one effective copy: `5 × 1.075 = 5.375 m/s` under the same assumptions.
+
+[Detailed sources and formulas](veteran_movement_speed_coherency.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_movement_speed_coherency) | [Back to index](#talent-index)
 
 ---
 
