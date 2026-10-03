@@ -83,6 +83,7 @@
 | <img src="https://github.com/user-attachments/assets/62b4954d-42c3-4eab-a6ea-a17719414e19" width="32" height="32" alt="Monstrosity Hunter talent icon"> [Monstrosity Hunter](#adamant_monster_hunter) | <ul><li>Deal 20% more damage to Ogryns and Monstrosities.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/6f3ef825-f018-482c-b511-60f87907cefc" width="32" height="32" alt="The Emperor's Fist talent icon"> [The Emperor's Fist](#adamant_first_melee_hit_increased_damage) | <ul><li>The first target hit by each melee sweep receives 15% more Melee Damage and 30% more Impact.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4b7cf064-ea83-4334-a484-a222e22af7a3" width="32" height="32" alt="Target Selection talent icon"> [Target Selection](#adamant_pinning_dog_elite_damage) | <ul><li>Killing an Elite or Specialist pinned by your own Cyber-Mastiff grants 15% Damage against Elites and Specialists for 8s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47" width="32" height="32" alt="Target Priority talent icon"> [Target Priority](#adamant_increased_damage_to_high_health) | <ul><li>Deal 15% more damage to enemies above 75% Health.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -1057,3 +1058,15 @@
 - **Damage example**: Against a qualifying target, base damage 100 becomes 115. With an existing same-stage 25% bonus, damage is 100 × (1 + 25% + 15%) = 140.
 
 [Details](adamant_pinning_dog_elite_damage.md) · [Back to index](#talent-index)
+
+<a id="adamant_increased_damage_to_high_health"></a>
+
+### Target Priority
+
+<img src="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47" width="72" height="72" alt="Target Priority talent icon">
+
+- **Condition**: If the target's remaining Health before the hit is above 75% of its maximum, that attack deals 15% more damage. Exactly 75% does not qualify.
+
+- **Damage example**: With target maximum Health 1000 and current Health 800, base damage 100 becomes 100 × 1.15 = 115. At current Health 750, it remains 100. With an existing same-stage 25% bonus and the threshold met, 125 becomes 140.
+
+[Details](adamant_increased_damage_to_high_health.md) · [Back to index](#talent-index)
