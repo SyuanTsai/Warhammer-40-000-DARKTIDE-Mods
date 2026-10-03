@@ -82,6 +82,7 @@
 | <img src="https://github.com/user-attachments/assets/3ff7d7eb-6206-4d77-91c5-483259320072" width="32" height="32" alt="Unbreakable talent icon"> [Unbreakable](#ogryn_block_all_attacks) | <ul><li>Perfect Blocks can block otherwise unblockable melee attacks and grant +20% damage to the next melee sweep for at most 5s.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/15edb762-d209-407d-8bd5-fc0672bd5ef8" width="32" height="32" alt="Pumped Up talent icon"> [Pumped Up](#ogryn_damage_reduction_on_high_stamina) | <ul><li>Gain 12.5% damage reduction while Stamina is strictly above 75% of maximum; no stacks or cooldown.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/de5091de-3dd6-455b-875a-55228eb4d67e" width="32" height="32" alt="Lucky Streak talent icon"> [Lucky Streak](#ogryn_crit_damage_increase) | <ul><li>Add 75% to the additional critical-damage component; the effect on total damage depends on weapon, armour and hit location.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/5f6d651a-4c88-40ea-a96b-3133459df2f4" width="32" height="32" alt="Frenzied Blows talent icon"> [Frenzied Blows](#ogryn_stacking_attack_speed) | <ul><li>Chained melee hits from the second successful sweep build up to five +2.5% melee Attack Speed stacks for 5s; a miss clears them.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1306,3 +1307,19 @@
 - **Critical Weakspot hits**: When a hit is both critical and on a Weakspot, the shared additional damage is calculated first, then the critical and Weakspot bonuses are applied. Do not multiply by separate critical and Weakspot multipliers once each.
 
 [Details](ogryn_crit_damage_increase.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_stacking_attack_speed"></a>
+
+### Frenzied Blows
+
+<img src="https://github.com/user-attachments/assets/5f6d651a-4c88-40ea-a96b-3133459df2f4" width="72" height="72" alt="Frenzied Blows talent icon">
+
+- **Gaining stacks**: Consecutive melee sweeps hitting enemies grant one stack per sweep starting with the second successful sweep. Hitting multiple enemies in one sweep still grants only one stack.
+
+- **Duration and interruption**: Each stack grants +2.5% melee Attack Speed, up to 5 stacks / 12.5%, for 5s. Further hits refresh the duration; a missed sweep clears the bonus and resets the chain.
+
+- **Speed example**: At full stacks, an Attack-Speed-scaled 1s action becomes `1 ÷ (1 + 5 × 2.5%) ≈ 0.889s`, rather than a direct 12.5% duration reduction to 0.875s.
+
+[Details](ogryn_stacking_attack_speed.md) · [Back to index](#talent-index)

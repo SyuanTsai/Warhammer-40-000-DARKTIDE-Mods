@@ -985,6 +985,18 @@ Full raw template and formatting: [source evidence](ogryn_crit_damage_increase.m
 | Critical damage stat | +75% Critical Strike Damage.; `ui / loc_talent_ogryn_crit_damage_increase_desc / c90c5cb1` | critical_strike_damage 0.75 contributes to critical_damage_stat_buff in _finesse_boost_damage. [Fixed source and line references](ogryn_crit_damage_increase.md#fixed-source-evidence) | Consistent | The independently read English matches the stat and value, without specifying a total-damage formula. |
 | Additional component and combined Finesse | No base/additional split, Critical Chance increase or Weakspot formula is stated.; `ui / loc_talent_ogryn_crit_damage_increase_desc / c90c5cb1` | The bonus applies to base_finesse_damage and adds with Weakspot/Finesse bonuses, not the full base_damage. Fixed 100 + 50 becomes 187.5 from 150 (+25% relative); 100 + 20 becomes 135 from 120 (+12.5%). Examples ignore later reductions, armour changes and floors; critical Weakspot hits use shared additional damage rather than multiplying both bonuses independently. [Fixed source and line references](ogryn_crit_damage_increase.md#fixed-source-evidence) | Not covered by the description | These accepted scope and calculation details supplement the short stat wording; Critical Chance is not increased. |
 
+
+<a id="ogryn_stacking_attack_speed"></a>
+
+## Frenzied Blows
+
+Full raw template and formatting: [source evidence](ogryn_stacking_attack_speed.md#original-english-template-and-reconstruction). Name hash `fae480df`. Every row uses `ui / loc_talent_ogryn_stacking_attack_speed_desc / 2909d3df`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Chained-hit speed bonus | +2.5% Melee Attack Speed on Chained Hit for 5s. Stacks 5 times.; `ui / loc_talent_ogryn_stacking_attack_speed_desc / 2909d3df` | The chain-dependent child grants melee_attack_speed 0.025 per stack, maximum five, duration 5s. [Fixed source and line references](ogryn_stacking_attack_speed.md#fixed-source-evidence) | Consistent | The independently read English matches the chain condition, value, duration and cap. |
+| Chain counting, miss removal and timing | No first-eligible-sweep, per-sweep count, refresh or reciprocal formula is stated.; `ui / loc_talent_ogryn_stacking_attack_speed_desc / 2909d3df` | Successful sweep_finish increments chained; chained >1 adds one stack per sweep even with multiple targets. A miss resets the chain and clears the child. Further hits refresh. Full stacks give 1 ÷ (1 + 5 × 2.5%) ≈0.889s for a scaled 1s action, not 0.875s. [Fixed source and line references](ogryn_stacking_attack_speed.md#fixed-source-evidence) | Not covered by the description | These accepted counting and timing details supplement the chained-hit wording. |
+
 ## Comparison totals
 
 The 234 listed rules comprise **99 Consistent**, **4 Explicit contradictions**, **124 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
