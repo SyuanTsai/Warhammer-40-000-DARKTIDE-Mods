@@ -53,6 +53,7 @@
 | <img src="https://github.com/user-attachments/assets/898ad4c6-3f99-404d-8ff9-b15a9820f8e9" width="32" height="32" alt="Force of Will talent icon"> [Force of Will](#adamant_staggers_replenish_toughness) | <ul><li>A melee attack that Staggers its first hit target restores 7.5% of maximum Toughness.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4ce13efe-7a81-48cd-9bb6-47dfb55f63b8" width="32" height="32" alt="Voltaic Mandibles Augment talent icon"> [Voltaic Mandibles Augment](#adamant_dog_attacks_electrocute) | <ul><li>Your Cyber-Mastiff's pounce and pinning attacks Electrocute the target for 5s; continued attacks can refresh the effect.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4c4b06a3-049f-4272-b1d2-a8a472f541b0" width="32" height="32" alt="Walk It Off talent icon"> [Walk It Off](#adamant_stamina_spent_replenish_toughness) | <ul><li>Each accumulated 1 point of Stamina spent restores 10% of maximum Toughness over 3s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/d4c3f66c-8fa8-419f-8a46-f94c842a9b4e" width="32" height="32" alt="True Grit talent icon"> [True Grit](#adamant_limit_dmg_taken_from_hits) | <ul><li>Health damage from one attack is capped at 50 points; instant kills bypass the cap.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -657,3 +658,15 @@
 - **Recovery example**: At maximum Toughness 100, with sufficient deficit and no other recovery bonus, recovery is about 100 × 10% ÷ 3 = 3.33 points per second. Triggering again after 2s and continuing until expiry gives about 3.33 × 5 ≈ 16.67 points in total using the unrounded rate, rather than instantly restoring 20 points.
 
 [Details](adamant_stamina_spent_replenish_toughness.md) · [Back to index](#talent-index)
+
+<a id="adamant_limit_dmg_taken_from_hits"></a>
+
+### True Grit
+
+<img src="https://github.com/user-attachments/assets/d4c3f66c-8fa8-419f-8a46-f94c842a9b4e" width="72" height="72" alt="True Grit talent icon">
+
+- **Protection**: A normal attack can deal at most 50 Health damage to you in one hit. This does not cap Toughness damage or prevent an instant kill.
+
+- **Damage example**: After other Health damage reductions have been applied, an incoming 120 points becomes min(120, 50) = 50 points; an incoming 30 remains 30. This is a fixed cap, not 50% damage reduction.
+
+[Details](adamant_limit_dmg_taken_from_hits.md) · [Back to index](#talent-index)
