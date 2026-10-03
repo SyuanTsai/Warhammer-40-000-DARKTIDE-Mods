@@ -26,6 +26,7 @@
 | <img src="https://github.com/user-attachments/assets/6f504222-c9bf-4dff-a549-138c3be3bde4" width="32" height="32" alt="Light 'em Up talent icon"> [Light 'em Up](#ogryn_special_ammo_fire_shots) | <ul><li>During Point-Blank Barrage, ranged hits apply 4 Burn stacks, adding up to 16 stacks.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/594ab4d6-12e3-4941-bf1a-c5812b128b23" width="32" height="32" alt="Valuable Distraction talent icon"> [Valuable Distraction](#ogryn_taunt_damage_taken_increase) | <ul><li>Enemies affected by Loyal Protector take 20% more damage for 15s.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/53442500-ad2a-446b-9f9b-0d26aa2438d9" width="32" height="32" alt="Bullet Bravado talent icon"> [Bullet Bravado](#ogryn_ranged_stance_toughness_regen) | <ul><li>During Point-Blank Barrage, each shot restores 2.5% of maximum Toughness and each reload restores 15%.</li></ul> | Combat ability |
+| <img src="https://github.com/user-attachments/assets/80ee299a-c486-4957-bf40-6b1d631fd748" width="32" height="32" alt="No Pain! talent icon"> [No Pain!](#ogryn_taunt_restore_toughness) | <ul><li>Each taunt immediately restores 10% of maximum Toughness.</li><li>Each affected enemy adds 0.5% per second, up to 10% per second, for 3.25s; English displays 3s.</li></ul> | Combat ability |
 
 ## Blitz
 
@@ -324,3 +325,23 @@
 - **Counting triggers**: Replenishment follows shooting and reload actions, rather than restoring once per individual shotgun pellet. Automatic fire, bursts and special weapon firing methods affect the actual number of triggers.
 
 [Details](ogryn_ranged_stance_toughness_regen.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_taunt_restore_toughness"></a>
+
+### No Pain!
+
+<img src="https://github.com/user-attachments/assets/80ee299a-c486-4957-bf40-6b1d631fd748" width="72" height="72" alt="No Pain! talent icon">
+
+- **Immediate replenishment**: Loyal Protector and its two repeats at 3s and 6s each restore 10% of maximum Toughness immediately, even with no enemies nearby.
+
+- **Restoration over time**: Each enemy affected by a taunt adds one stack that restores 0.5% of maximum Toughness per second. The limit is 20 stacks, or 10% per second. The effect lasts 3.25s; adding stacks restarts the duration.
+
+- **Step-by-step example**: With maximum Toughness 100 and four enemies affected by each of three taunts, immediate replenishment totals 100 × 10% × 3 = 30. Restoration stacks rise from 4 to 8 to 12, giving 2, 4 and 6 Toughness per second.
+
+- **Total example**: Ignoring update error, assuming sufficient missing Toughness throughout and no other replenishment bonuses, the first 3s restore 2 × 3 = 6, the next 3s restore 4 × 3 = 12, and the final 3.25s restore 6 × 3.25 = 19.5. Including immediate replenishment gives 67.5. Actual restoration is capped by missing Toughness at each point in time.
+
+- **English duration difference**: The same-build English displays 3s; the accepted buff duration is 3.25s. The examples use the buff duration.
+
+[Details](ogryn_taunt_restore_toughness.md) · [Back to index](#talent-index)

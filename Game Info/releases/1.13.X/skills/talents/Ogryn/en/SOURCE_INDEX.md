@@ -28,3 +28,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Light 'em Up](ogryn_special_ammo_fire_shots.md) / `ogryn_special_ammo_fire_shots` | Combat ability |
 | [Valuable Distraction](ogryn_taunt_damage_taken_increase.md) / `ogryn_taunt_damage_taken_increase` | Combat ability |
 | [Bullet Bravado](ogryn_ranged_stance_toughness_regen.md) / `ogryn_ranged_stance_toughness_regen` | Combat ability |
+| [No Pain!](ogryn_taunt_restore_toughness.md) / `ogryn_taunt_restore_toughness` | Combat ability |
