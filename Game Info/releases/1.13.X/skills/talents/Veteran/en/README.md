@@ -12,6 +12,7 @@
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="Infiltrate talent icon"> [Infiltrate](#veteran_invisibility_on_combat_ability) | <ul><li>Replenish all Toughness; enter Stealth for up to 8 seconds with +25% movement speed.</li><li>Gain +30% damage during Stealth and for 8 seconds afterwards. Base cooldown: 40 seconds.</li><li>Attacking can end Stealth; leaving it suppresses nearby enemies.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="Low Profile talent icon"> [Low Profile](#veteran_reduced_threat_after_combat_ability) | <ul><li>Combat ability use reduces the affected enemy target-selection weight by 90%.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds after leaving it; an already-running countdown is not restarted by another application.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/0c033c93-a850-4295-853d-10698ec96e89" width="32" height="32" alt="Hunter's Resolve talent icon"> [Hunter's Resolve](#veteran_toughness_bonus_leaving_invisibility) | <ul><li>Infiltrate grants 50% Toughness damage reduction during Stealth and for 10 seconds after leaving it.</li><li>Separate overlapping instances multiply and keep their own countdowns.</li></ul> | Ability modifier |
+| <img src="https://github.com/user-attachments/assets/57d6b442-9cee-45c3-ba74-4a191649eddb" width="32" height="32" alt="Tactical Awareness talent icon"> [Tactical Awareness](#veteran_elite_kills_reduce_cooldown) | <ul><li>Specialist Enemy kills grant 3 seconds of extra combat ability recovery: one additional baseline cooldown second per second.</li><li>Further qualifying kills refresh the duration while keeping the tick cadence; the recovery rate does not stack.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/73961902-95ea-4316-bda1-13b23dac1789" width="32" height="32" alt="Voice of Command talent icon"> [Voice of Command](#veteran_combat_ability_stagger_nearby_enemies) | <ul><li>Shout to apply stagger to enemies within 9 metres and immediately replenish all of your missing Toughness.</li><li>Base cooldown: 40 seconds, starting on use. Individual enemy reactions can vary.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/a8bcdde1-34e3-449d-9b46-e9130865b285" width="32" height="32" alt="Only In Death Does Duty End talent icon"> [Only In Death Does Duty End](#veteran_combat_ability_revive_nearby_allies) | <ul><li>Voice of Command automatically revives Knocked Down allies within 9 metres, including multiple allies in one use.</li><li>Without other modifiers, the base cooldown remains 40 seconds; other incapacitated states are not covered.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/fc16005a-fb09-4db6-bd15-e18d45c6d935" width="32" height="32" alt="Marksman talent icon"> [Marksman](#veteran_increased_weakspot_power_after_combat_ability) | <ul><li>Combat ability use adds 20 percentage points of attack power on melee and ranged weakspot hits for 10 seconds.</li><li>With Infiltrate, the effect is active during Stealth and for 10 seconds afterwards. It does not increase the cleave budget.</li></ul> | Ability modifier |
@@ -116,6 +117,21 @@ Assume one use, no other recovery/damage/cooldown modifiers, no overlapping abil
 - **Multiple uses**: if extra uses or a shorter cooldown make two instances overlap, each keeps its own timer and their factors multiply. A 100-Toughness-damage attack becomes `100 × 0.5 × 0.5 = 25`, under the same isolated assumptions. An already started countdown continues if you re-enter Stealth.
 
 [Details and source evidence](veteran_toughness_bonus_leaving_invisibility.md) · [Back to index](#talent-index)
+
+<a id="veteran_elite_kills_reduce_cooldown"></a>
+
+<img src="https://github.com/user-attachments/assets/57d6b442-9cee-45c3-ba74-4a191649eddb" width="72" height="72" alt="Tactical Awareness talent icon">
+
+### Tactical Awareness
+
+- Killing a **Specialist Enemy** grants **3 seconds** of combat ability recovery. With the unmodified recovery rate, gain **one additional second of cooldown progress per second**, delivered through extra ticks. Ordinary Elite kills do not trigger it.
+- Another qualifying kill resets the effect's duration to 3 seconds while its existing tick cadence continues. The extra recovery rate does not stack.
+- With no other recovery/cost effects, enough missing resource and 25 seconds remaining when triggered, after about 3 seconds the natural cooldown advances 3 seconds and the talent adds another 3: `25 − 3 − 3 = 19 seconds remaining`. This is not an instant six-second reduction on the kill.
+- Recovery beyond full ability capacity is discarded. With two ability uses, recovery continues toward any use still missing until both are full.
+
+[Detailed sources and formulas](veteran_elite_kills_reduce_cooldown.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_elite_kills_reduce_cooldown) | [Back to index](#talent-index)
+
+---
 
 <a id="veteran_combat_ability_stagger_nearby_enemies"></a>
 

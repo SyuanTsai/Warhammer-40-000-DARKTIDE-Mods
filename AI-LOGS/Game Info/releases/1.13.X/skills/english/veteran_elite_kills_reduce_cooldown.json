@@ -8,18 +8,10 @@
   "language_code": 0,
   "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
   "status": "accepted_with_caveats",
-  "review_mode": "Existing Chinese mechanism translation and exact English text check; targeted reads only for used and unused display parameters.",
-  "static_reconstruction": "Voice of Command revives Knocked Down Allies within Radius.",
-  "additional_english_pairs": [
-    {
-      "key": "loc_talent_veteran_combat_ability_stagger_nearby_enemies",
-      "hash": "36c11826",
-      "text": "Voice of Command",
-      "usage": "talent_name display parameter"
-    }
-  ],
+  "review_mode": "Existing Chinese mechanism translation and exact English text check; targeted reads only for display parameters and their values.",
+  "static_reconstruction": "+100% Cooldown Regeneneration for 3s on Specialist Enemy Kill.",
   "comparison_rule_totals": {
-    "Consistent": 2,
+    "Consistent": 3,
     "Explicit contradiction": 0,
     "Not covered by the description": 4,
     "No corresponding implementation evidence found": 0,
@@ -29,11 +21,11 @@
   "chinese_mechanism_corrections": [],
   "primary_direct_reads": [
     "Complete existing Chinese mechanism dossier and player description",
-    "Exact same-version English UI name/description and Voice of Command display-name records",
+    "Exact same-version English UI name and full description records",
     "Existing icon audit",
-    "veteran_talents.lua:565-605 (display parameters only)"
+    "veteran_talents.lua:746-774 and talent_settings_veteran.lua:54-58 (display parameters/values only)"
   ],
-  "reused_mechanism_evidence": "Existing Chinese dossier for automatic Knocked Down assistance, radial allied query, multiple allies, excluded states, passive-loadout routing, unattached cost/radius buff and 9m/40s baseline. Accepted formatter evidence reused; no full revive or loadout implementation analysis repeated.",
+  "reused_mechanism_evidence": "Existing Chinese dossier for special-kill gating, discrete one-unit recovery ticks, three-second duration, terminal-frame update order, single-instance duration refresh, unchanged tick cadence and ability-resource limits. Accepted percentage formatter and multiple-use capacity evidence reused. No full cooldown, buff lifecycle or resource implementation analysis repeated.",
   "review": {
     "agent_model": "gpt-6-luna",
     "effort": "max",
@@ -42,44 +34,44 @@
     "remaining_actionable_defects": 0
   },
   "unconfirmed": [
-    "9m/40s baseline measured in game.",
-    "Exact assistance timing and target-state boundaries measured in game."
+    "Exact fixed-frame tick/end timing.",
+    "Repeated-kill refresh and saturation measured in game."
   ],
   "unperformed": [
     "In-game execution",
     "Actual game UI observation",
-    "Repeated full revive/loadout implementation analysis (outside clarified review scope)"
+    "Repeated full cooldown/buff/resource implementation analysis (outside clarified review scope)"
   ],
-  "id": "veteran_combat_ability_revive_nearby_allies",
+  "id": "veteran_elite_kills_reduce_cooldown",
   "class": "Veteran",
   "date": "2026-10-03",
-  "name": "Only In Death Does Duty End",
-  "name_key": "loc_talent_veteran_combat_ability_revives",
-  "name_hash": "9533a7e9",
-  "name_entry_index": 9644,
-  "description_key": "loc_talent_veteran_combat_ability_revives_new_description",
-  "description_hash": "1ae25548",
-  "description_entry_index": 1751,
-  "raw_template": "{talent_name:%s} revives Knocked Down Allies within Radius.",
+  "name": "Tactical Awareness",
+  "name_key": "loc_talent_veteran_elite_kills_reduce_cooldown",
+  "name_hash": "3a17b4f8",
+  "name_entry_index": 3761,
+  "description_key": "loc_talent_veteran_elite_kills_reduce_cooldown_alt_desc",
+  "description_hash": "83519bd4",
+  "description_entry_index": 8536,
+  "raw_template": "{regen:%s} Cooldown Regeneneration for {time:%s}s on Specialist Enemy Kill.",
   "checks": [
     {
       "check": "exact UI export SHA256, actual key/hash/text pairs and complete raw template",
       "result": "passed",
-      "pairs": 3
+      "pairs": 2
     },
     {
       "check": "fixed-SHA citation bounds in current Veteran English scope",
       "result": "passed",
-      "references": 862,
-      "unique_source_ranges": 204,
+      "references": 911,
+      "unique_source_ranges": 214,
       "source_files": 42
     },
     {
       "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
       "result": "passed",
-      "markdown_files": 720,
-      "local_references": 6629,
-      "remote_references": 9779,
+      "markdown_files": 721,
+      "local_references": 6641,
+      "remote_references": 9833,
       "errors": []
     },
     {
@@ -87,27 +79,27 @@
       "result": "passed",
       "player_table": {
         "columns": 3,
-        "rows": 16,
+        "rows": 17,
         "scroll": false
       },
       "current_skill_comparison_table": {
         "columns": 5,
-        "rows": 6,
+        "rows": 7,
         "scroll": false
       },
       "technical_tables": [
         {
           "columns": 3,
-          "rows": 3,
+          "rows": 4,
           "scroll": false
         },
         {
           "columns": 3,
-          "rows": 3,
+          "rows": 4,
           "scroll": false
         }
       ],
-      "all_player_icons_loaded": 32,
+      "all_player_icons_loaded": 34,
       "document_horizontal_overflow": false
     },
     {
@@ -119,8 +111,8 @@
       "result": "passed",
       "http_status": 200,
       "content_type": "image/webp",
-      "bytes": 5206,
-      "sha256": "171dba6714a0c8364e6b61f3a08caddacb123831ab1370d6b1eca76f897397bc",
+      "bytes": 5492,
+      "sha256": "aacde15273c12e77ef8bf14e3e58f9f694829a2915e2b0dff931345de8141373",
       "historical_source_match": true
     },
     {
@@ -128,40 +120,44 @@
       "result": "passed"
     },
     {
-      "check": "ability-name reconstruction and unused numeric display parameters",
+      "check": "signed percentage/three-second reconstruction and raw source spelling",
       "result": "passed",
-      "numeric_range_or_cooldown_tokens_in_raw_template": false
+      "regen_percent": 100,
+      "duration_seconds": 3,
+      "source_spelling_preserved": "Regeneneration"
     },
     {
-      "check": "range and unmodified recharge arithmetic",
+      "check": "four static cooldown/refresh/capacity examples",
       "result": "passed",
-      "inside_distances_metres": [
-        5,
-        8
-      ],
-      "outside_distance_metres": 10,
-      "baseline_radius_metres": 9,
-      "baseline_recharge_seconds": 40
+      "initial_remaining_seconds": 25,
+      "after_three_seconds": 19,
+      "natural_only_remaining_seconds": 22,
+      "refresh_at_seconds": 1.5,
+      "refreshed_expiry_seconds": 4.5,
+      "extra_ticks_counted": 4,
+      "remaining_after_refreshed_example_seconds": 16.5,
+      "capped_return_units": 0.4,
+      "discarded_units": 0.6,
+      "two_use_missing_units_after_extra_tick": 19
     },
     {
       "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
       "result": "passed",
       "markdown_files": 1,
-      "local_references": 18,
+      "local_references": 19,
       "remote_references": 0,
       "errors": []
     },
     {
       "check": "690 unique mappings, accepted records, support-page IDs, INDEX Git paths/IDs, privacy and ignored QA artifacts",
       "result": "passed",
-      "accepted_skills": 16
+      "accepted_skills": 17
     },
     {
       "check": "Git diff whitespace",
       "result": "passed"
     }
   ],
-  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/only-in-death-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_revive_nearby_allies.md",
-  "commit": "a39b4e917c2d2de9cdc81b86f46235708ef67406"
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/tactical-awareness-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_elite_kills_reduce_cooldown.md"
 }
