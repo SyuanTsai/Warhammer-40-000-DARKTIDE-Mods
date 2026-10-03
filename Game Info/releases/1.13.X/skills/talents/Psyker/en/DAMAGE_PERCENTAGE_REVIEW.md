@@ -25,3 +25,4 @@
 | Talent | Mechanism | Example / verification conclusion |
 |---|---|---|
 | [Kinetic Flayer](psyker_smite_on_hit.md) | Qualifying hits have a configured 100% event chance outside a 12-second cooldown; target and damage checks still apply. | A proc at t=0 prevents another at t=11; the next qualifying hit at t≥12 can trigger again. |
+| [Brain Rupture](psyker_brain_burst_improved.md) | The `smite` damage multiplier is 1.5; charge modes, timing and Peril costs retain their separate conditions. | With no other modifiers, full charge generates about 20 Peril points, a successful hit adds 25, totaling 45; full-charge holding adds 9 points/second. With the same target, charge and bonuses, damage 100 × 1.5 = 150 illustrates the multiplier, not universal damage. |
