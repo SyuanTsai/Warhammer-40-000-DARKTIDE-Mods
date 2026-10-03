@@ -36,3 +36,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Pained Outburst](ogryn_carapace_armor_trigger_on_zero_stacks.md) / `ogryn_carapace_armor_trigger_on_zero_stacks` | Keystone |
 | [Strongest!](ogryn_carapace_armor_add_stack_on_push.md) / `ogryn_carapace_armor_add_stack_on_push` | Keystone |
 | [Toughest!](ogryn_carapace_armor_more_toughness.md) / `ogryn_carapace_armor_more_toughness` | Keystone |
+| [Maximum Firepower](ogryn_leadbelcher_cooldown_reduction.md) / `ogryn_leadbelcher_cooldown_reduction` | Keystone |

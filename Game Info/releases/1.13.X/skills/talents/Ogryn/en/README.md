@@ -34,6 +34,7 @@
 | <img src="https://github.com/user-attachments/assets/ee3a1966-a7c3-442f-a852-74a8b8ada09c" width="32" height="32" alt="Pained Outburst talent icon"> [Pained Outburst](#ogryn_carapace_armor_trigger_on_zero_stacks) | <ul><li>After Feel No Pain loses a stack and falls to 4 visible stacks or fewer, push back nearby enemies and restore 50% of maximum Toughness; English says 5 stacks or below.</li><li>At most once every 30s; the pushback burst deals no direct damage.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/3d442f9a-0143-43d7-a6e2-10a5d6b8a9f8" width="32" height="32" alt="Strongest! talent icon"> [Strongest!](#ogryn_carapace_armor_add_stack_on_push) | <ul><li>Pushing at least one enemy restores 1 Feel No Pain stack.</li><li>Maximum 10 visible stacks; pushing several enemies at once still restores only 1.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d6e55419-0e35-49cc-9bd6-163bdff037d4" width="32" height="32" alt="Toughest! talent icon"> [Toughest!](#ogryn_carapace_armor_more_toughness) | <ul><li>Toughest! adds 2.5% Toughness replenishment per Feel No Pain stack.</li><li>Added to the base 3% per stack; 10 stacks give a total 55% increase.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/47256097-2109-4fe4-89b7-b4a224ff1200" width="32" height="32" alt="Maximum Firepower talent icon"> [Maximum Firepower](#ogryn_leadbelcher_cooldown_reduction) | <ul><li>A Lucky Bullet proc grants about 1 extra second of combat-ability cooldown recovery per second for 2.5s.</li><li>Further procs refresh the duration without increasing the restoration per tick.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -474,3 +475,19 @@
 - **Example**: At 10 stacks, the replenishment multiplier is 1 + 10 × 5.5% = 1.55. A base restoration of 20 would restore 31, capped by missing Toughness.
 
 [Details](ogryn_carapace_armor_more_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_leadbelcher_cooldown_reduction"></a>
+
+### Maximum Firepower
+
+<img src="https://github.com/user-attachments/assets/47256097-2109-4fe4-89b7-b4a224ff1200" width="72" height="72" alt="Maximum Firepower talent icon">
+
+- **Trigger**: A Lucky Bullet proc starts the effect. Ordinary shots do not trigger it.
+
+- **Effect and refresh**: For 2.5s, restore about 1 extra second of combat-ability cooldown each second. Another proc resets the 2.5s duration without increasing the amount restored per tick.
+
+- **Timing example**: If two complete restoration ticks occur while the ability is still cooling down, total progress over 2.5s is 2.5 + 2 × 1 = 4.5s. The extra restoration is applied in one-second ticks; the 2.5s window cannot simply be treated as 5s of cooldown progress.
+
+[Details](ogryn_leadbelcher_cooldown_reduction.md) · [Back to index](#talent-index)
