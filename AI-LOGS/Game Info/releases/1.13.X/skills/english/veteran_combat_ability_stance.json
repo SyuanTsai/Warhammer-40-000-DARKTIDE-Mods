@@ -182,5 +182,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/volley-fire-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_stance.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_stance.md",
+  "commit": "18ffc9554ecdd274d9e1b17c4b82146f57f6d50d"
 }

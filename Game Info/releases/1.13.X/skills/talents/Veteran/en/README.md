@@ -12,6 +12,7 @@
 | <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="Volley Fire talent icon"> [Volley Fire](#veteran_combat_ability_stance) | <ul><li>Equip your ranged weapon and enter a 6-second stance with +15% ranged damage, +15% extra weakspot damage and +50% ranged impact.</li><li>Reduced spread/recoil/sway and disruption protection; 30-second base cooldown starts on activation.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="Infiltrate talent icon"> [Infiltrate](#veteran_invisibility_on_combat_ability) | <ul><li>Replenish all Toughness; enter Stealth for up to 8 seconds with +25% movement speed.</li><li>Gain +30% damage during Stealth and for 8 seconds afterwards. Base cooldown: 40 seconds.</li><li>Attacking can end Stealth; leaving it suppresses nearby enemies.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="Low Profile talent icon"> [Low Profile](#veteran_reduced_threat_after_combat_ability) | <ul><li>Combat ability use reduces the affected enemy target-selection weight by 90%.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds after leaving it; an already-running countdown is not restarted by another application.</li></ul> | Ability modifier |
+| <img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="32" height="32" alt="Executioner's Stance talent icon"> [Executioner's Stance](#veteran_combat_ability_elite_and_special_outlines) | <ul><li>Upgrade base ranged damage and extra weakspot modifiers to 25% each, and ranged impact to 100%.</li><li>Six-second stance; replenish 10% of maximum Toughness per second. Outline eligible Elites and Specialists; qualifying kills refresh the stance.</li><li>30-second base cooldown; retained handling improvements.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/0c033c93-a850-4295-853d-10698ec96e89" width="32" height="32" alt="Hunter's Resolve talent icon"> [Hunter's Resolve](#veteran_toughness_bonus_leaving_invisibility) | <ul><li>Infiltrate grants 50% Toughness damage reduction during Stealth and for 10 seconds after leaving it.</li><li>Separate overlapping instances multiply and keep their own countdowns.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/57d6b442-9cee-45c3-ba74-4a191649eddb" width="32" height="32" alt="Tactical Awareness talent icon"> [Tactical Awareness](#veteran_elite_kills_reduce_cooldown) | <ul><li>Specialist Enemy kills grant 3 seconds of extra combat ability recovery: one additional baseline cooldown second per second.</li><li>Further qualifying kills refresh the duration while keeping the tick cadence; the recovery rate does not stack.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/73961902-95ea-4316-bda1-13b23dac1789" width="32" height="32" alt="Voice of Command talent icon"> [Voice of Command](#veteran_combat_ability_stagger_nearby_enemies) | <ul><li>Shout to apply stagger to enemies within 9 metres and immediately replenish all of your missing Toughness.</li><li>Base cooldown: 40 seconds, starting on use. Individual enemy reactions can vary.</li></ul> | Combat ability |
@@ -129,6 +130,28 @@ Assume one use, no other recovery/damage/cooldown modifiers, no overlapping abil
 - Leaving Infiltrate at about 3 seconds keeps the effect until about `3 + 10 = 13 seconds` after activation, ignoring update-frame boundaries.
 
 [Detailed sources and formulas](veteran_reduced_threat_after_combat_ability.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_reduced_threat_after_combat_ability) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_combat_ability_elite_and_special_outlines"></a>
+
+<img src="https://github.com/user-attachments/assets/f89a6abd-27a9-4099-9a5c-cd778cbe34ba" width="72" height="72" alt="Executioner's Stance talent icon">
+
+### Executioner's Stance
+
+- Upgrade Volley Fire's **ranged damage and extra weakspot modifiers from 15% to 25% each**, and **ranged impact from 50% to 100%**. The damage modifiers each gain ten percentage points; the weakspot bonus still applies to the extra component.
+- The stance lasts **6 seconds**, with a **30-second** base cooldown. Replenish **10% of maximum Toughness per second**, subject to recovery modifiers and the amount missing.
+- Highlight eligible human-sized Elites and Specialists. Ogryns, Monsters and bosses require the additional large-enemy outline modifier. Ordinary eligible Elites must be **less than 50 metres** away when outline candidates are built; Specialists bypass this distance limit.
+- Your kills of enemies eligible for the selected outline categories **reset the stance to six seconds**. Recharge continues; spread, recoil, sway and interruption protection are inherited from Volley Fire.
+
+**Damage, recovery and refresh examples**
+
+- General damage stage only, input 100 and no other modifiers: base `100 × 1.15 = 115` becomes `100 × 1.25 = 125 damage units`, about `10 / 115 = 8.70%` more.
+- Extra weakspot upgrade only, fixed upstream base 100 and unbonused extra component 40, with no critical hit or other finesse bonuses: `146 → 150 damage units`, about `4 / 146 = 2.74%` more. The detailed example shows substitution. These isolated gains cannot be added together; general ranged damage must also be recalculated for a complete hit.
+- Maximum Toughness 100, at least 60 points missing and no recovery modifier: `100 × 10% = 10 points/s`, giving up to `10 × 6 = 60 points` over an uninterrupted six seconds.
+- A qualifying kill at 4s resets the remaining two seconds to six: expiry becomes about `4 + 6 = 10s`. It does not become eight seconds remaining. With no cooldown modifier, baseline recharge still ends at about 30s, leaving about `30 − 10 = 20s` after this stance ends.
+
+[Detailed sources and formulas](veteran_combat_ability_elite_and_special_outlines.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_combat_ability_elite_and_special_outlines) | [Back to index](#talent-index)
 
 ---
 

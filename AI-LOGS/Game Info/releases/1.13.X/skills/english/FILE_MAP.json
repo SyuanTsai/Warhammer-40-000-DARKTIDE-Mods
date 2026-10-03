@@ -5702,7 +5702,8 @@
         "veteran_combat_ability_increase_and_restore_toughness_to_coherency",
         "veteran_combat_ability_revive_nearby_allies",
         "veteran_elite_kills_reduce_cooldown",
-        "veteran_combat_ability_stance"
+        "veteran_combat_ability_stance",
+        "veteran_combat_ability_elite_and_special_outlines"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5745,7 +5746,8 @@
         "veteran_combat_ability_increase_and_restore_toughness_to_coherency",
         "veteran_combat_ability_revive_nearby_allies",
         "veteran_elite_kills_reduce_cooldown",
-        "veteran_combat_ability_stance"
+        "veteran_combat_ability_stance",
+        "veteran_combat_ability_elite_and_special_outlines"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5788,7 +5790,8 @@
         "veteran_combat_ability_increase_and_restore_toughness_to_coherency",
         "veteran_combat_ability_revive_nearby_allies",
         "veteran_elite_kills_reduce_cooldown",
-        "veteran_combat_ability_stance"
+        "veteran_combat_ability_stance",
+        "veteran_combat_ability_elite_and_special_outlines"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5831,7 +5834,8 @@
         "veteran_combat_ability_increase_and_restore_toughness_to_coherency",
         "veteran_combat_ability_revive_nearby_allies",
         "veteran_elite_kills_reduce_cooldown",
-        "veteran_combat_ability_stance"
+        "veteran_combat_ability_stance",
+        "veteran_combat_ability_elite_and_special_outlines"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6064,9 +6068,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f9a8031254d0d78baa9be09cd1b131401b123d06",
       "chinese_sha256": "63f823946c38eadfefad85aadc23d877c31edaba6d931258b927edcee5cbc770",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_combat_ability_elite_and_special_outlines"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_combat_ability_extra_charge.md",
@@ -8108,7 +8123,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_stance.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_stance.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_stance.md",
+      "commit": "18ffc9554ecdd274d9e1b17c4b82146f57f6d50d"
+    },
+    {
+      "id": "veteran_combat_ability_elite_and_special_outlines",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_combat_ability_elite_and_special_outlines.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_combat_ability_elite_and_special_outlines.md"
     }
   ],
   "pending_chinese_corrections": [
