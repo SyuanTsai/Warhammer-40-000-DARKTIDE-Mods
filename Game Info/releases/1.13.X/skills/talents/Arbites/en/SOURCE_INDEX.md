@@ -60,3 +60,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Rebreather](adamant_rebreather.md) / `adamant_rebreather` | Passive talent |
 | [Suppression Protocols](adamant_hitting_multiple_gives_tdr.md) / `adamant_hitting_multiple_gives_tdr` | Passive talent |
 | [Ranged Damage Boost](base_ranged_damage_node_buff_medium_1.md) / `base_ranged_damage_node_buff_medium_1` | Stat node |
+| [Melee Damage Boost](base_melee_damage_node_buff_medium_1.md) / `base_melee_damage_node_buff_medium_1` | Stat node |
