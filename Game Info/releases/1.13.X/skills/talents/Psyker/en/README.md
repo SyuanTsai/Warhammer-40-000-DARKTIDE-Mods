@@ -15,6 +15,7 @@
 | <img src="https://github.com/user-attachments/assets/6092228c-b394-42c6-831b-da4dc72024b9" width="32" height="32" alt="Kinetic Resonance talent icon"> [Kinetic Resonance](#psyker_ability_increase_brain_burst_speed) | <ul><li>For 10 seconds after using your Combat Ability, Brain Rupture charges 75% faster and generates 50% less Peril.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/7db7b0d7-3d96-4b42-8f50-f9112f80badc" width="32" height="32" alt="Quick Shards talent icon"> [Quick Shards](#psyker_throwing_knives_cast_speed) | <ul><li>Assail uses replenish 30% faster; base recovery per use falls from 3 seconds to about 2.31.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/0519f0ec-0ce9-4846-8ed4-95a0b9c092de" width="32" height="32" alt="Enfeeble talent icon"> [Enfeeble](#psyker_chain_lightning_improved_target_buff) | <ul><li>Enemies electrocuted by you take 10% more damage from all sources.</li></ul> | Blitz |
+| <img src="https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e" width="32" height="32" alt="Charged Strike talent icon"> [Charged Strike](#psyker_chain_lightning_heavy_attacks) | <ul><li>Melee heavy hits electrocute enemies for 2 seconds, dealing damage over that duration.</li></ul> | Blitz |
 
 ---
 
@@ -141,3 +142,17 @@
 - **Damage example**: Isolating this target damage-taken multiplier with all other conditions equal, original damage of 100 becomes 100 × 1.1 = 110. The bonus ends when the electrocution effect is removed.
 
 [Details](psyker_chain_lightning_improved_target_buff.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_chain_lightning_heavy_attacks"></a>
+
+### Charged Strike
+
+<img src="https://github.com/user-attachments/assets/e21d55d1-68fa-4d4d-a19b-2b6050753a7e" width="72" height="72" alt="Charged Strike talent icon">
+
+- **Trigger**: After a melee heavy attack hits an enemy, it electrocutes that target for 2 seconds and deals damage over that duration.
+
+- **With Enfeeble**: This 2-second electrocution also increases the target's damage taken by 10%. Isolating that damage-taken multiplier, original damage of 100 becomes 100 × 1.1 = 110.
+
+[Details](psyker_chain_lightning_heavy_attacks.md) · [Back to index](#talent-index)

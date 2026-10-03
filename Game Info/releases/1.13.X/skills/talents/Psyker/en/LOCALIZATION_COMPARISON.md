@@ -104,6 +104,18 @@ Full raw template and formatting: [source evidence](psyker_chain_lightning_impro
 | Affected target, value and all-source scope | `Enemies Electrocuted by you take +10% increased Base Damage from all sources`; `ui / loc_talent_psyker_chain_lightning_improved_target_buff_alt_description / da40a0a2` | The improved target template sets `damage_taken_multiplier=1.1`; shared calculation multiplies base damage by the target multiplier, including attacks from teammates/other sources. [Fixed source and line references](psyker_chain_lightning_improved_target_buff.md#fixed-source-evidence) | Consistent | Target, affected calculation stage, magnitude and source scope agree. |
 | Removal and Charged Strike interaction | No removal rule or heavy-attack interaction stated; `ui / loc_talent_psyker_chain_lightning_improved_target_buff_alt_description / da40a0a2` | Smite removes the controlled electrocution effect when the target leaves the chain; Charged Strike can apply the improved 2-second version under this special rule. [Fixed source and line references](psyker_chain_lightning_improved_target_buff.md#fixed-source-evidence) | Not covered by the description | The omitted duration/removal and talent interaction supplement the wording. |
 
+
+<a id="psyker_chain_lightning_heavy_attacks"></a>
+
+## Charged Strike
+
+Full raw template and formatting: [source evidence](psyker_chain_lightning_heavy_attacks.md#original-english-template-and-reconstruction). Name hash `b2c5eb1f`. Every row uses `ui / loc_talent_psyker_chain_lightning_damage_heavy_attacks_desc / e84d2a21`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Heavy melee hit and electrocution damage | `Your Heavy Melee Attacks electrocute enemies hit, damaging them`; `ui / loc_talent_psyker_chain_lightning_damage_heavy_attacks_desc / e84d2a21` | `CheckProcFunctions.on_heavy_hit` filters the proc; the hit target receives `psyker_heavy_swings_shock`, which deals sustained electrocution damage. [Fixed source and line references](psyker_chain_lightning_heavy_attacks.md#fixed-source-evidence) | Consistent | The trigger and damage effect agree with the accepted evidence. |
+| Duration, stacking and Enfeeble | No duration, stack limit or Enfeeble interaction stated; `ui / loc_talent_psyker_chain_lightning_damage_heavy_attacks_desc / e84d2a21` | Electrocution lasts 2 seconds with maximum 1 stack; Enfeeble selects the improved all-source 1.1 damage-taken variant. Damage is not a universal fixed melee bonus. [Fixed source and line references](psyker_chain_lightning_heavy_attacks.md#fixed-source-evidence) | Not covered by the description | Omitted duration, limits and interaction are supplementary. |
+
 ## Comparison totals
 
 The 11 listed rules comprise **5 Consistent**, **0 Explicit contradictions**, **5 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.
