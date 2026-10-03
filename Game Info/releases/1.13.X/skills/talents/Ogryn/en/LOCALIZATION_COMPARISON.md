@@ -1117,6 +1117,18 @@ Full raw template and formatting: [source evidence](ogryn_weakspot_damage.md#ori
 | Melee Weakspot Strength | +10% Melee Weakspot Strength; `ui / loc_talent_ogryn_weakspot_damage_desc / 658a5b8e` | melee_weakspot_power_modifier 0.1 applies only to melee Weakspot hits through PowerLevel. [Fixed source and line references](ogryn_weakspot_damage.md#fixed-source-evidence) | Consistent | The independently read English matches the stat, condition and value. |
 | Addition and curve-based results | No final-damage multiplier or combined-Strength formula is stated.; `ui / loc_talent_ogryn_weakspot_damage_desc / 658a5b8e` | The modifier adds with general/melee power modifiers and excludes ranged or non-Weakspot hits. Strength 500 →550, or 650 with same-stage +20%; weapon damage/Impact curves then use this Strength, so final damage is not uniformly ×1.1. [Fixed source and line references](ogryn_weakspot_damage.md#fixed-source-evidence) | Not covered by the description | These accepted scope and calculation details supplement the English Strength wording. |
 
+
+<a id="ogryn_bracing_reduces_damage_taken"></a>
+
+## Mobile Emplacement
+
+Full raw template and formatting: [source evidence](ogryn_bracing_reduces_damage_taken.md#original-english-template-and-reconstruction). Name hash `d5fdb21f`. Every row uses `ui / loc_talent_ogryn_bracing_or_shooting_reduces_damage_taken_desc / 7467e28d`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Conditional damage reduction | You take 25% reduced Damage while bracing or shooting a Ranged Weapon.; `ui / loc_talent_ogryn_bracing_or_shooting_reduces_damage_taken_desc / 7467e28d` | Conditional damage_taken_multiplier 0.75 applies while braced or shooting, without an incoming attack-type restriction. [Fixed source and line references](ogryn_bracing_reduces_damage_taken.md#fixed-source-evidence) | Consistent | The independently read English matches the conditions, scope and reduction. |
+| State retention and combined reduction | No shooting grace, stacks, cooldown or combined formula is stated.; `ui / loc_talent_ogryn_bracing_or_shooting_reduces_damage_taken_desc / 7467e28d` | The condition also accepts t <=end +0.5, without extra stacks or fixed cooldown. Damage 100 ×0.75 =75, or 60 with another independent 20% reduction. [Fixed source and line references](ogryn_bracing_reduces_damage_taken.md#fixed-source-evidence) | Not covered by the description | These accepted condition and calculation details supplement the English. |
+
 ## Comparison totals
 
 The 254 listed rules comprise **109 Consistent**, **4 Explicit contradictions**, **134 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

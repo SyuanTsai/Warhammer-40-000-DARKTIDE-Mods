@@ -93,6 +93,7 @@
 | <img src="https://github.com/user-attachments/assets/fdf1eb1f-b76f-4452-beac-f2205fc32d2b" width="32" height="32" alt="Bash and Blast talent icon"> [Bash and Blast](#ogryn_melee_improves_ranged) | <ul><li>Melee kills build up to five +3% ranged damage stacks / 15% for 10s; further melee kills refresh.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/9e138d4c-f301-46c6-9eef-5aff038efc7c" width="32" height="32" alt="Bruiser talent icon"> [Bruiser](#ogryn_ally_elite_kills_grant_cooldown) | <ul><li>Your or a Coherency ally's Elite kill grants about 0.5s extra cooldown recovery per second for 4s; refreshes without stacking.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/dae8db6d-b212-4abd-a84b-246c0910e0b3" width="32" height="32" alt="Strike True talent icon"> [Strike True](#ogryn_weakspot_damage) | <ul><li>Gain +10% Strength on melee Weakspot hits, additive with same-stage Strength modifiers; weapon curves determine final damage and Impact.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/38b1d6e0-b6a5-4692-92a2-fe6caf0b9083" width="32" height="32" alt="Mobile Emplacement talent icon"> [Mobile Emplacement](#ogryn_bracing_reduces_damage_taken) | <ul><li>Take 25% less damage while bracing or shooting, with about 0.5s shooting-state retention and no extra stacks or fixed cooldown.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1491,3 +1492,19 @@
 - **Damage calculation**: The bonus applies to Strength before the weapon's damage, Impact and other curves. It differs from effects that only increase additional Weakspot damage; do not assume final damage is always multiplied by 1.1.
 
 [Details](ogryn_weakspot_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_bracing_reduces_damage_taken"></a>
+
+### Mobile Emplacement
+
+<img src="https://github.com/user-attachments/assets/38b1d6e0-b6a5-4692-92a2-fe6caf0b9083" width="72" height="72" alt="Mobile Emplacement talent icon">
+
+- **Condition**: Take 25% less damage while bracing a ranged weapon or shooting. The shooting condition remains for approximately 0.5s after shooting stops.
+
+- **Damage-reduction example**: Damage of 100 at this stage becomes `100 × 0.75 = 75`. With another independent 20% reduction, it becomes 60.
+
+- **Duration**: Active whenever the bracing or shooting condition is met, without extra stacks or a fixed cooldown.
+
+[Details](ogryn_bracing_reduces_damage_taken.md) · [Back to index](#talent-index)
