@@ -111,5 +111,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/born-leader-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_allies_in_coherency_share_toughness_gain.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_allies_in_coherency_share_toughness_gain.md",
+  "commit": "9be6edfd532cfe8ff5e072311795dc4f790a0486"
 }

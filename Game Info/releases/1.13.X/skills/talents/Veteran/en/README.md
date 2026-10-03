@@ -61,6 +61,7 @@
 | <img src="https://github.com/user-attachments/assets/cba2a46d-298c-434a-883d-e048f5ede32d" width="32" height="32" alt="Shock Trooper talent icon"> [Shock Trooper](#veteran_no_ammo_consumption_on_lasweapon_crit) | <ul><li>Critical shots with an eligible Las-weapon consume no ammunition, even if they miss.</li><li>You must be holding the weapon with at least one round in its clip. Empty clips cannot fire through this effect; noncritical shots retain their normal cost.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/ba2f9f5e-0466-433d-a93d-68b1f9606dd7" width="32" height="32" alt="Withering Fire talent icon"> [Withering Fire](#veteran_increased_ranged_cleave) | <ul><li>Increase ranged attack cleave capacity by 50%.</li><li>Penetration still depends on the weapon and each target’s resistance; this does not directly increase single-target damage.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/1a08688e-e370-4eac-a27e-fd48da3b3965" width="32" height="32" alt="Born Leader talent icon"> [Born Leader](#veteran_allies_in_coherency_share_toughness_gain) | <ul><li>Increase your Coherency radius by 50%.</li><li>When you trigger Toughness recovery, other allies in Coherency each receive 20% of the amount originally requested, with their own modifiers and caps. Shared recovery does not share again.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/aba3bef3-ec36-4b94-8097-95a2f43d593e" width="32" height="32" alt="Field Improvisation talent icon"> [Field Improvisation](#veteran_better_deployables) | <ul><li>Team Ammo Crates refill eligible Grenades.</li><li>Medi-Packs heal 100% faster, remove eligible Corruption and replenish 1% of maximum Toughness per second. Lost health segments remain lost.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1196,6 +1197,26 @@ Actual final damage also depends on armor, damage profiles, weakspot/critical ef
 - An ally with an additional 25% recovery bonus and enough missing Toughness can recover `4 × 1.25 = 5 Toughness`, capped at their own maximum.
 
 [Detailed sources and formulas](veteran_allies_in_coherency_share_toughness_gain.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_allies_in_coherency_share_toughness_gain) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_better_deployables"></a>
+
+<img src="https://github.com/user-attachments/assets/aba3bef3-ec36-4b94-8097-95a2f43d593e" width="72" height="72" alt="Field Improvisation talent icon">
+
+### Field Improvisation
+
+- **Team Ammo Crates refill eligible Grenades.** A class whose special rule prevents grenade pickups cannot receive that supply.
+- **Medi-Packs heal 100% faster and replenish 1% of maximum Toughness per second.** Crates placed by teammates can receive these benefits.
+- Medi-Packs also remove eligible Corruption, but cannot restore already lost full Health segments. Their healing radius, reserve and lifetime are unchanged. Downed healing still has its separate reduced rate.
+
+**Supply and recovery examples**
+
+- With a grenade capacity of 4 and 1 remaining, an eligible Ammo Crate replenishes `4 − 1 = 3 Grenades`.
+- With maximum Health 200, while standing and without other healing modifiers, the base rate is `200 × 6% = 12 Health/s`; the improved rate is `200 × 6% × 2 = 24 Health/s`. With enough missing Health and removable Corruption, this can remove `24 × 0.5 = 12 Health` of Corruption per second, subject to the lost-segment limit.
+- With maximum Toughness 150 and enough missing Toughness, recovery is `150 × 1% = 1.5 Toughness/s`, capped at your maximum. The medical crate must still have reserve and time remaining.
+
+[Detailed sources and formulas](veteran_better_deployables.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_better_deployables) | [Back to index](#talent-index)
 
 ---
 
