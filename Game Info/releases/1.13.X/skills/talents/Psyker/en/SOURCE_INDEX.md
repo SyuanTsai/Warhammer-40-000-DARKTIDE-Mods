@@ -34,3 +34,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Reality Anchor](psyker_overcharge_reduced_warp_charge.md) / `psyker_overcharge_reduced_warp_charge` | Ability |
 | [Telekine Shield](psyker_combat_ability_force_field.md) / `psyker_combat_ability_force_field` | Ability |
 | [Bolstered Shield](psyker_shield_extra_charge.md) / `psyker_shield_extra_charge` | Ability |
+| [Sanctuary](psyker_boost_allies_in_sphere.md) / `psyker_boost_allies_in_sphere` | Ability |

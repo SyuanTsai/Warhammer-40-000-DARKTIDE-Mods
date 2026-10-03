@@ -30,6 +30,7 @@
 | <img src="https://github.com/user-attachments/assets/123c7e4e-3844-4ff0-94c0-5cf7f7772b8f" width="32" height="32" alt="Reality Anchor talent icon"> [Reality Anchor](#psyker_overcharge_reduced_warp_charge) | <ul><li>While Scrier's Gaze is active, generate 20% less Peril and shorten the time to Quell the same amount by 30%.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/e328d953-886b-4527-9c23-e8bfc90ada6f" width="32" height="32" alt="Telekine Shield talent icon"> [Telekine Shield](#psyker_combat_ability_force_field) | <ul><li>Deploy a forward shield that blocks Enemy Ranged Attacks while you and Allies can shoot through. Maximum duration 17.5 seconds; base cooldown 40 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/72b10287-7ce1-47a1-a57f-a88c56c51f9f" width="32" height="32" alt="Bolstered Shield talent icon"> [Bolstered Shield](#psyker_shield_extra_charge) | <ul><li>Telekine Shield gains one extra charge, holding up to 2; charges share the same cooldown-resource pool.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0" width="32" height="32" alt="Sanctuary talent icon"> [Sanctuary](#psyker_boost_allies_in_sphere) | <ul><li>With Telekine Dome, you and Allies inside recover 10% of maximum Toughness per second. Players still inside when it dissipates gain 50% Toughness Damage Reduction for 5 seconds.</li></ul> | Ability |
 
 ---
 
@@ -383,3 +384,19 @@
 - **Cooldown example**: After both charges are exhausted, recover the first after 40 seconds and the second after another 40, for `40 × 2 = 80` seconds in total. Other cooldown bonuses are calculated separately.
 
 [Details](psyker_shield_extra_charge.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_boost_allies_in_sphere"></a>
+
+### Sanctuary
+
+<img src="https://github.com/user-attachments/assets/57b73353-bc2c-4313-b488-cb9a1ac7c9f0" width="72" height="72" alt="Sanctuary talent icon">
+
+- **Ability modifier**: With Telekine Dome selected, you and Allies inside the spherical shield recover 10% of maximum Toughness per second.
+
+- **Dissipation effect**: When the shield dissipates, players still inside gain 50% Toughness Damage Reduction for 5 seconds. Leaving early does not grant this dissipation bonus.
+
+- **Recovery and reduction example**: At 100 maximum Toughness, recover `100 × 10% = 10` per second, up to 30 over 3 seconds, capped by missing Toughness. During the reduction effect, an original 40 Toughness damage becomes `40 × 0.5 = 20`.
+
+[Details](psyker_boost_allies_in_sphere.md) · [Back to index](#talent-index)
