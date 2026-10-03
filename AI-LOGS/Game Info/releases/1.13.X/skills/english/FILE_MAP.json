@@ -5748,7 +5748,8 @@
         "veteran_elite_kills_replenish_toughness",
         "veteran_increased_damage_based_on_range",
         "veteran_ads_drain_stamina",
-        "veteran_dodging_grants_stamina"
+        "veteran_dodging_grants_stamina",
+        "veteran_increase_suppression"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5837,7 +5838,8 @@
         "veteran_elite_kills_replenish_toughness",
         "veteran_increased_damage_based_on_range",
         "veteran_ads_drain_stamina",
-        "veteran_dodging_grants_stamina"
+        "veteran_dodging_grants_stamina",
+        "veteran_increase_suppression"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5926,7 +5928,8 @@
         "veteran_elite_kills_replenish_toughness",
         "veteran_increased_damage_based_on_range",
         "veteran_ads_drain_stamina",
-        "veteran_dodging_grants_stamina"
+        "veteran_dodging_grants_stamina",
+        "veteran_increase_suppression"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6015,7 +6018,8 @@
         "veteran_elite_kills_replenish_toughness",
         "veteran_increased_damage_based_on_range",
         "veteran_ads_drain_stamina",
-        "veteran_dodging_grants_stamina"
+        "veteran_dodging_grants_stamina",
+        "veteran_increase_suppression"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6986,9 +6990,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "9d7a78612fd191d95d2a60a51b1d69c5047e8111",
       "chinese_sha256": "56bc7eb91f72373b591ea8edc938e19897c16e069cefcf8c942798b621a5bc4b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_increase_suppression"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_increased_close_damage_after_combat_ability.md",
@@ -9348,7 +9367,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_dodging_grants_stamina.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_dodging_grants_stamina.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_dodging_grants_stamina.md",
+      "commit": "a7691f9da942792dd40b6f613b763d1943c5aab5"
+    },
+    {
+      "id": "veteran_increase_suppression",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increase_suppression.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increase_suppression.md"
     }
   ],
   "pending_chinese_corrections": [

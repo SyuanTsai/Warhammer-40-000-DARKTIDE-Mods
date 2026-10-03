@@ -115,5 +115,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/duck-and-dive-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_dodging_grants_stamina.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_dodging_grants_stamina.md",
+  "commit": "a7691f9da942792dd40b6f613b763d1943c5aab5"
 }
