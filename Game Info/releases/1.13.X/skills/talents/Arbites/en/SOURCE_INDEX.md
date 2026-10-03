@@ -80,3 +80,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Zealous Dedication](adamant_crit_chance_on_kill.md) / `adamant_crit_chance_on_kill` | Passive talent |
 | [Prosecution Blow](adamant_crits_rend.md) / `adamant_crits_rend` | Passive talent |
 | [Street Smarts](adamant_dodge_improvement.md) / `adamant_dodge_improvement` | Passive talent |
+| [Monstrosity Hunter](adamant_monster_hunter.md) / `adamant_monster_hunter` | Passive talent |
