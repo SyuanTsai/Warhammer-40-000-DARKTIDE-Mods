@@ -238,6 +238,18 @@ Full raw template and formatting: [source evidence](psyker_overcharge_increased_
 | Movement Speed value and active condition | Scrier's Gaze increases Movement Speed by +20% while active; `ui / loc_ability_psyker_overcharge_movement_speed_description / 5f1da172` | conditional_stat_buffs.movement_speed=0.2 applies only with the psyker_overcharge keyword. [Fixed source and line references](psyker_overcharge_increased_movement_speed.md#fixed-source-evidence) | Consistent | The stat, value and active-state condition agree. |
 | Calculation and separate lingering damage | No isolated speed example, other sources/caps or lingering Movement Speed stated; `ui / loc_ability_psyker_overcharge_movement_speed_description / 5f1da172` | At an original 5 m/s with no other bonuses, the example becomes 6 m/s. Other speed sources/caps may matter; the separate damage buff lingers 10 seconds, while this speed bonus ends with Gaze. [Fixed source and line references](psyker_overcharge_increased_movement_speed.md#fixed-source-evidence) | Not covered by the description | These calculation and effect-separation details supplement the English. |
 
+
+<a id="psyker_2_tier_3_name_2"></a>
+
+## Psykinetic's Aura
+
+Full raw template and formatting: [source evidence](psyker_2_tier_3_name_2.md#original-english-template-and-reconstruction). Name hash `11cf3850`. Every row uses `ui / loc_talent_psyker_cooldown_on_elite_kills_desc / eaf79e38`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, recipient, regeneration and duration | 50% Cooldown Regeneration for 3s when you kill an Elite or Specialist Enemy; `ui / loc_talent_psyker_cooldown_on_elite_kills_desc / eaf79e38` | Owner's Elite/Specialist Kill grants a three-second, one-stack buff restoring 0.5 Combat Ability resource per approximately one-second tick. The existing example uses normal recovery of 1 second per second. [Fixed source and line references](psyker_2_tier_3_name_2.md#fixed-source-evidence) | Consistent | The trigger and duration agree; 0.5 extra resource relative to the example's normal one-second recovery corresponds to 50% regeneration. No Ally benefit is claimed. |
+| Discrete timing, refresh, expiry and update delays | No instant percentage removal, stronger repeated-Kill stacking, tick order or delayed-update behavior stated; `ui / loc_talent_psyker_cooldown_on_elite_kills_desc / eaf79e38` | Reapplication refreshes duration, not tick strength. Normal updates give 3 × 0.5 = 1.5 extra seconds; the third tick runs before removal. A single if handles at most one tick per update, so delayed updates do not catch up multiple ticks. [Fixed source and line references](psyker_2_tier_3_name_2.md#fixed-source-evidence) | Not covered by the description | These recovery and timing rules supplement the description. |
+
 ## Comparison totals
 
 The 33 listed rules comprise **16 Consistent**, **0 Explicit contradictions**, **15 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.

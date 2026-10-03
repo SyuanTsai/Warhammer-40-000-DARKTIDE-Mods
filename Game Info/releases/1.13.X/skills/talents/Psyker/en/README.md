@@ -26,6 +26,7 @@
 | <img src="https://github.com/user-attachments/assets/65f7ef9b-5b0d-458e-bc7d-5aea8e948e14" width="32" height="32" alt="Creeping Flames talent icon"> [Creeping Flames](#psyker_warpfire_on_shout) | <ul><li>Venting Shriek applies 1–6 Soulblaze stacks based on Peril at activation; sleeping Daemonhosts are excluded.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/41b92eae-77a3-481e-af12-783845ce49c4" width="32" height="32" alt="Precognition talent icon"> [Precognition](#psyker_overcharge_weakspot_kill_bonuses) | <ul><li>During Scrier's Gaze, gain 1% Finesse Damage per second up to 30%, lingering 10 seconds. Weakspot Kills advance damage and Finesse Damage progress by one stack.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/f9987bfc-f9d7-48d8-9431-8c361223c50e" width="32" height="32" alt="Warp Speed talent icon"> [Warp Speed](#psyker_overcharge_increased_movement_speed) | <ul><li>Gain 20% Movement Speed while Scrier's Gaze is active; the bonus ends with Gaze.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="32" height="32" alt="Psykinetic's Aura talent icon"> [Psykinetic's Aura](#psyker_2_tier_3_name_2) | <ul><li>Your Elite or Specialist Kills grant an extra 0.5 seconds of Combat Ability cooldown recovery about once per second for 3 seconds; triggering again refreshes the duration.</li></ul> | Ability |
 
 ---
 
@@ -313,3 +314,19 @@
 - **Speed example**: Isolating this effect, an original speed of 5 metres per second becomes `5 × (1 + 20%) = 6` metres per second.
 
 [Details](psyker_overcharge_increased_movement_speed.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_2_tier_3_name_2"></a>
+
+### Psykinetic's Aura
+
+<img src="https://github.com/user-attachments/assets/547fa734-789a-404c-9c48-aa1671d3605c" width="72" height="72" alt="Psykinetic's Aura talent icon">
+
+- **Trigger**: After personally killing an Elite or Specialist Enemy, gain an extra 0.5 seconds of Combat Ability cooldown recovery about once per second for 3 seconds. Triggering it again resets the effect's duration without increasing the amount restored by each tick.
+
+- **Cooldown example**: With 20 seconds remaining, after 1 second of normal recovery and one extra recovery tick, the remaining cooldown becomes `20 − 1 − 0.5 = 18.5` seconds.
+
+- **Full recovery amount**: With normal frame-by-frame updates and no interruption, three extra ticks restore `0.5 × 3 = 1.5` seconds in total, in addition to the cooldown time that naturally passes during this interval.
+
+[Details](psyker_2_tier_3_name_2.md) · [Back to index](#talent-index)

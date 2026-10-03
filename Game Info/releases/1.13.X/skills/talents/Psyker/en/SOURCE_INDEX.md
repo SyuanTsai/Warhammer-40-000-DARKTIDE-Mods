@@ -30,3 +30,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Creeping Flames](psyker_warpfire_on_shout.md) / `psyker_warpfire_on_shout` | Ability |
 | [Precognition](psyker_overcharge_weakspot_kill_bonuses.md) / `psyker_overcharge_weakspot_kill_bonuses` | Ability |
 | [Warp Speed](psyker_overcharge_increased_movement_speed.md) / `psyker_overcharge_increased_movement_speed` | Ability |
+| [Psykinetic's Aura](psyker_2_tier_3_name_2.md) / `psyker_2_tier_3_name_2` | Ability |
