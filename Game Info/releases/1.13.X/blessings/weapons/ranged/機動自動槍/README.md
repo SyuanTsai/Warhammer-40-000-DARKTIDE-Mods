@@ -5,13 +5,14 @@
 | 祝福 | 本武器主要效果 | 分類 |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/6b238342-7828-4bb3-af20-1e092a318887" width="32" height="32" alt="幽靈祝福圖示"> [幽靈](../../../entries/幽靈/README.md)<br>- Ghost<br>[完整說明](../../../entries/幽靈/README.md) | <ul><li>持用時，以該武器命中弱點觸發 0.6／0.8／1.0／1.2 秒的遠程攻擊閃避效果；只有實際可閃避的遠程攻擊會被視為閃避。</li></ul> | 遠程 |
+| <img src="https://github.com/user-attachments/assets/3c72aebd-2519-435b-985f-d11739c4ebea" width="32" height="32" alt="精確打擊祝福圖示"> [精確打擊](../../../entries/精確打擊/README.md)<br>- Surgical<br>[完整說明](../../../entries/精確打擊/README.md) | <ul><li>每步+10個百分點，最多10步；I–IV間隔 0.350/0.300/0.250/0.200 秒。</li></ul> | 遠程 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 機動自動槍 哥倫努 Mk III | [幽靈](../../../entries/幽靈/weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot.md) | I–IV |
-| 機動自動槍 格拉亞 Mk VII | [幽靈](../../../entries/幽靈/weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot.md) | I–IV |
-| 機動自動槍 阿格里皮娜 Mk IX | [幽靈](../../../entries/幽靈/weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot.md) | I–IV |
+| 機動自動槍 哥倫努 Mk III | [幽靈](../../../entries/幽靈/weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot.md)、[精確打擊](../../../entries/精確打擊/weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time.md) | I–IV |
+| 機動自動槍 格拉亞 Mk VII | [幽靈](../../../entries/幽靈/weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot.md)、[精確打擊](../../../entries/精確打擊/weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time.md) | I–IV |
+| 機動自動槍 阿格里皮娜 Mk IX | [幽靈](../../../entries/幽靈/weapon_trait_bespoke_autogun_p3_count_as_dodge_vs_ranged_on_weakspot.md)、[精確打擊](../../../entries/精確打擊/weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。

@@ -47,3 +47,4 @@
 | [遊擊](entries/遊擊/README.md) | [來源索引](entries/遊擊/SOURCE_INDEX.md) |
 | [幽靈](entries/幽靈/README.md) | [來源索引](entries/幽靈/SOURCE_INDEX.md) |
 | [近身平射](entries/近身平射/README.md) | [來源索引](entries/近身平射/SOURCE_INDEX.md) |
+| [精確打擊](entries/精確打擊/README.md) | [來源索引](entries/精確打擊/SOURCE_INDEX.md) |

@@ -553,6 +553,19 @@
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/1f0e089c-39ab-4e22-952e-fedd5e91f0d9",
       "effect": "近戰擊殺後，遠程爆擊率提高14／16／18／20個百分點；爆彈手槍與針彈手槍持續3.5秒，快拔左輪手槍持續2.5秒。"
+    },
+    {
+      "id": "surgical",
+      "name_zh_tw": "精確打擊",
+      "name_en": "Surgical",
+      "name_key": "loc_trait_bespoke_crit_chance_based_on_aim_time",
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_aim_time_desc",
+      "name_hash": "6abd0dd5",
+      "description_hash": "4a242066",
+      "page": "entries/精確打擊/README.md",
+      "kind": "ranged",
+      "icon": "https://github.com/user-attachments/assets/0c2dd6e6-a2b0-4c6c-bee0-315c476fcabd",
+      "effect": "瞄準時依型號的間隔逐步增加爆擊率；每步+10個百分點，最多10步；射擊後依最近射擊時間重算。"
     }
   ],
   "weapons": [
@@ -10558,6 +10571,501 @@
       "icon": "https://github.com/user-attachments/assets/1f0e089c-39ab-4e22-952e-fedd5e91f0d9",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_119",
       "effect": "近戰擊殺後，遠程爆擊率提高14／16／18／20個百分點，持續2.5秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time",
+      "blessing_id": "surgical",
+      "weapon_id": "autogun_p3",
+      "page": "entries/精確打擊/weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "crit_chance_bonus_percentage_points": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "duration_per_stack_seconds": [
+          0.35,
+          0.3,
+          0.25,
+          0.2
+        ],
+        "max_effective_steps": 10,
+        "full_10_step_time_seconds": [
+          3.5,
+          3.0,
+          2.5,
+          2.0
+        ],
+        "formatter": {
+          "time": "duration_per_stack",
+          "crit_chance": "stat override ×100 with + prefix",
+          "stacks": "10"
+        },
+        "wrapper": "plain shared-base clone"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_autogun_p3.lua",
+        "start_line": 260,
+        "end_line": 317
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p3_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 16
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_aim_time_desc",
+      "description_hash": "4a242066",
+      "icon": "https://github.com/user-attachments/assets/3c72aebd-2519-435b-985f-d11739c4ebea",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_103",
+      "effect": "每步+10個百分點，最多10步；I–IV間隔 0.350/0.300/0.250/0.200 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time",
+      "blessing_id": "surgical",
+      "weapon_id": "bolter_p1",
+      "page": "entries/精確打擊/weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "crit_chance_bonus_percentage_points": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "duration_per_stack_seconds": [
+          0.35,
+          0.3,
+          0.25,
+          0.2
+        ],
+        "max_effective_steps": 10,
+        "full_10_step_time_seconds": [
+          3.5,
+          3.0,
+          2.5,
+          2.0
+        ],
+        "formatter": {
+          "time": "duration_per_stack",
+          "crit_chance": "stat override ×100 with + prefix",
+          "stacks": "10"
+        },
+        "wrapper": "plain shared-base clone"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_bolter_p1.lua",
+        "start_line": 134,
+        "end_line": 191
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_bolter_p1_buff_templates.lua",
+        "start_line": 17,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_aim_time_desc",
+      "description_hash": "4a242066",
+      "icon": "https://github.com/user-attachments/assets/c8a14285-3ff3-46d0-affc-b4a7eb99fdd5",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_150",
+      "effect": "每步+10個百分點，最多10步；I–IV間隔 0.350/0.300/0.250/0.200 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time",
+      "blessing_id": "surgical",
+      "weapon_id": "boltpistol_p1",
+      "page": "entries/精確打擊/weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "crit_chance_bonus_percentage_points": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "duration_per_stack_seconds": [
+          0.45,
+          0.4,
+          0.35,
+          0.3
+        ],
+        "max_effective_steps": 10,
+        "full_10_step_time_seconds": [
+          4.5,
+          4.0,
+          3.5,
+          3.0
+        ],
+        "formatter": {
+          "time": "duration_per_stack",
+          "crit_chance": "stat override ×100 with + prefix",
+          "stacks": "10"
+        },
+        "wrapper": "plain shared-base clone"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_boltpistol_p1.lua",
+        "start_line": 168,
+        "end_line": 225
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_boltpistol_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_aim_time_desc",
+      "description_hash": "4a242066",
+      "icon": "https://github.com/user-attachments/assets/96ad3e4a-33a4-4fb1-9b15-4d4fe0d816cc",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_104",
+      "effect": "每步+10個百分點，最多10步；I–IV間隔 0.450/0.400/0.350/0.300 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time",
+      "blessing_id": "surgical",
+      "weapon_id": "lasgun_p2",
+      "page": "entries/精確打擊/weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "crit_chance_bonus_percentage_points": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "duration_per_stack_seconds": [
+          0.45,
+          0.4,
+          0.35,
+          0.3
+        ],
+        "max_effective_steps": 10,
+        "full_10_step_time_seconds": [
+          4.5,
+          4.0,
+          3.5,
+          3.0
+        ],
+        "formatter": {
+          "time": "duration_per_stack",
+          "crit_chance": "stat override ×100 with + prefix",
+          "stacks": "10"
+        },
+        "wrapper": "plain shared-base clone"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p2.lua",
+        "start_line": 120,
+        "end_line": 177
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p2_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_aim_time_desc",
+      "description_hash": "4a242066",
+      "icon": "https://github.com/user-attachments/assets/0c2dd6e6-a2b0-4c6c-bee0-315c476fcabd",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_102",
+      "effect": "每步+10個百分點，最多10步；I–IV間隔 0.450/0.400/0.350/0.300 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time",
+      "blessing_id": "surgical",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "page": "entries/精確打擊/weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "crit_chance_bonus_percentage_points": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "duration_per_stack_seconds": [
+          0.35,
+          0.3,
+          0.25,
+          0.2
+        ],
+        "max_effective_steps": 10,
+        "full_10_step_time_seconds": [
+          3.5,
+          3.0,
+          2.5,
+          2.0
+        ],
+        "formatter": {
+          "time": "duration_per_stack",
+          "crit_chance": "stat override ×100 with + prefix",
+          "stacks": "10"
+        },
+        "wrapper": "plain shared-base clone"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_heavystubber_p2.lua",
+        "start_line": 565,
+        "end_line": 622
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p2_buff_templates.lua",
+        "start_line": 67,
+        "end_line": 67
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_aim_time_desc",
+      "description_hash": "4a242066",
+      "icon": "https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_140",
+      "effect": "每步+10個百分點，最多10步；I–IV間隔 0.350/0.300/0.250/0.200 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p1_crit_chance_based_on_aim_time",
+      "blessing_id": "surgical",
+      "weapon_id": "ogryn_thumper_p1",
+      "page": "entries/精確打擊/weapon_trait_bespoke_ogryn_thumper_p1_crit_chance_based_on_aim_time.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "crit_chance_bonus_percentage_points": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "duration_per_stack_seconds": [
+          0.35,
+          0.3,
+          0.25,
+          0.2
+        ],
+        "max_effective_steps": 10,
+        "full_10_step_time_seconds": [
+          3.5,
+          3.0,
+          2.5,
+          2.0
+        ],
+        "formatter": {
+          "time": "duration_per_stack",
+          "crit_chance": "stat override ×100 with + prefix",
+          "stacks": "10"
+        },
+        "wrapper": "plain shared-base clone"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p1.lua",
+        "start_line": 212,
+        "end_line": 269
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p1_buff_templates.lua",
+        "start_line": 25,
+        "end_line": 25
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_aim_time_desc",
+      "description_hash": "4a242066",
+      "icon": "https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_140",
+      "effect": "每步+10個百分點，最多10步；I–IV間隔 0.350/0.300/0.250/0.200 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_thumper_p3_crit_chance_based_on_aim_time",
+      "blessing_id": "surgical",
+      "weapon_id": "ogryn_thumper_p3",
+      "page": "entries/精確打擊/weapon_trait_bespoke_ogryn_thumper_p3_crit_chance_based_on_aim_time.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "crit_chance_bonus_percentage_points": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "duration_per_stack_seconds": [
+          0.35,
+          0.3,
+          0.25,
+          0.2
+        ],
+        "max_effective_steps": 10,
+        "full_10_step_time_seconds": [
+          3.5,
+          3.0,
+          2.5,
+          2.0
+        ],
+        "formatter": {
+          "time": "duration_per_stack",
+          "crit_chance": "stat override ×100 with + prefix",
+          "stacks": "10"
+        },
+        "wrapper": "plain shared-base clone"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_thumper_p3.lua",
+        "start_line": 212,
+        "end_line": 269
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_thumper_p3_buff_templates.lua",
+        "start_line": 26,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_aim_time_desc",
+      "description_hash": "4a242066",
+      "icon": "https://github.com/user-attachments/assets/c32c7942-1996-482c-999d-276ef7388898",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_140",
+      "effect": "每步+10個百分點，最多10步；I–IV間隔 0.350/0.300/0.250/0.200 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_aim_time",
+      "blessing_id": "surgical",
+      "weapon_id": "phosphor_pistol_p1",
+      "page": "entries/精確打擊/weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_aim_time.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "crit_chance_bonus_percentage_points": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "duration_per_stack_seconds": [
+          0.45,
+          0.4,
+          0.35,
+          0.325
+        ],
+        "max_effective_steps": 10,
+        "full_10_step_time_seconds": [
+          4.5,
+          4.0,
+          3.5,
+          3.25
+        ],
+        "formatter": {
+          "time": "duration_per_stack",
+          "crit_chance": "stat override ×100 with + prefix",
+          "stacks": "10"
+        },
+        "wrapper": "plain shared-base clone"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_phosphor_pistol_p1.lua",
+        "start_line": 344,
+        "end_line": 401
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_phosphor_pistol_p1_buff_templates.lua",
+        "start_line": 23,
+        "end_line": 23
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_aim_time_desc",
+      "description_hash": "4a242066",
+      "icon": "https://github.com/user-attachments/assets/c8a14285-3ff3-46d0-affc-b4a7eb99fdd5",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_150",
+      "effect": "每步+10個百分點，最多10步；I–IV間隔 0.450/0.400/0.350/0.325 秒。"
+    },
+    {
+      "id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_aim_time",
+      "blessing_id": "surgical",
+      "weapon_id": "stubrevolver_p1",
+      "page": "entries/精確打擊/weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_aim_time.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "crit_chance_bonus_percentage_points": [
+          10,
+          10,
+          10,
+          10
+        ],
+        "duration_per_stack_seconds": [
+          0.45,
+          0.4,
+          0.35,
+          0.3
+        ],
+        "max_effective_steps": 10,
+        "full_10_step_time_seconds": [
+          4.5,
+          4.0,
+          3.5,
+          3.0
+        ],
+        "formatter": {
+          "time": "duration_per_stack",
+          "crit_chance": "stat override ×100 with + prefix",
+          "stacks": "10"
+        },
+        "wrapper": "plain shared-base clone"
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_stubrevolver_p1.lua",
+        "start_line": 190,
+        "end_line": 247
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_stubrevolver_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_crit_chance_based_on_aim_time_desc",
+      "description_hash": "4a242066",
+      "icon": "https://github.com/user-attachments/assets/96ad3e4a-33a4-4fb1-9b15-4d4fe0d816cc",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_104",
+      "effect": "每步+10個百分點，最多10步；I–IV間隔 0.450/0.400/0.350/0.300 秒。"
     }
   ],
   "bindings": [
@@ -14767,6 +15275,258 @@
       "mark_id": "stubrevolver_p1_m2",
       "variant_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_bonus_on_melee_kills",
       "trait_item": "content/items/traits/bespoke_stubrevolver_p1/crit_chance_bonus_on_melee_kills",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 887
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m1.lua",
+        "import_line": 17,
+        "append_line": 1033
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m2.lua",
+        "import_line": 17,
+        "append_line": 1096
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "autogun_p3",
+      "mark_id": "autogun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_autogun_p3_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_autogun_p3/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_autogun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/autoguns/autogun_p3_m3.lua",
+        "import_line": 17,
+        "append_line": 1041
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m1",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 764
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "bolter_p1",
+      "mark_id": "bolter_p1_m2",
+      "variant_id": "weapon_trait_bespoke_bolter_p1_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_bolter_p1/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_bolter_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolters/bolter_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 759
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "boltpistol_p1",
+      "mark_id": "boltpistol_p1_m2",
+      "variant_id": "weapon_trait_bespoke_boltpistol_p1_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_boltpistol_p1/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_boltpistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 771
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "lasgun_p2",
+      "mark_id": "lasgun_p2_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_lasgun_p2/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_lasgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 1335
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "lasgun_p2",
+      "mark_id": "lasgun_p2_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_lasgun_p2/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_lasgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 1329
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "lasgun_p2",
+      "mark_id": "lasgun_p2_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p2_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_lasgun_p2/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_lasgun_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 1246
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m1.lua",
+        "import_line": 15,
+        "append_line": 796
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m2.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "ogryn_heavystubber_p2",
+      "mark_id": "ogryn_heavystubber_p2_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_heavystubber_p2_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_ogryn_heavystubber_p2/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_ogryn_heavystubber_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p2_m3.lua",
+        "import_line": 15,
+        "append_line": 817
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "ogryn_thumper_p1",
+      "mark_id": "ogryn_thumper_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p1_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_thumper_p1/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_thumper_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 842
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "ogryn_thumper_p3",
+      "mark_id": "ogryn_thumper_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_thumper_p3_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_thumper_p3/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_thumper_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/thumpers/ogryn_thumper_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 834
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "phosphor_pistol_p1",
+      "mark_id": "phosphor_pistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_phosphor_pistol_p1_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_phosphor_pistol_p1/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_phosphor_pistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/phosphor_pistol/phosphor_pistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1143
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m1",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/crit_chance_based_on_aim_time",
+      "trait_category": "bespoke_stubrevolver_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/stub_pistols/stubrevolver_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 984
+      }
+    },
+    {
+      "blessing_id": "surgical",
+      "weapon_id": "stubrevolver_p1",
+      "mark_id": "stubrevolver_p1_m2",
+      "variant_id": "weapon_trait_bespoke_stubrevolver_p1_crit_chance_based_on_aim_time",
+      "trait_item": "content/items/traits/bespoke_stubrevolver_p1/crit_chance_based_on_aim_time",
       "trait_category": "bespoke_stubrevolver_p1",
       "available_tiers": null,
       "source": {

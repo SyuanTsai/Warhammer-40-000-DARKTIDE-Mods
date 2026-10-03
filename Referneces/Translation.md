@@ -402,6 +402,7 @@
 - Ghost - 幽靈
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_count_as_dodge_vs_ranged_on_weakspot`，hash `b358bc4e`；英文／繁中RAW配對確認。
 - Surgical - 精確打擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_crit_chance_based_on_aim_time`，hash `6abd0dd5`；英文／繁中RAW配對確認。
 - Crucian Roulette - 克魯錫安輪盤
 - Deadly Accurate - 致命精準
 - No Respite - 刻不容緩

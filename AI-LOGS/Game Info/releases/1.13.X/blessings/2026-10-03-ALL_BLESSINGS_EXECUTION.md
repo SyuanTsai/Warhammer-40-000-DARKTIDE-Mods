@@ -191,3 +191,7 @@
 - 2026-10-04：固定 SHA 共通定義盤點快取涵蓋70個 tier 檔案、693個唯一實作；605個已綁定，88個交集外定義（21個有 metadata、67個無精確 metadata），與既有 inventory 分割完全一致。快取回條：`AI-LOGS/Game Info/local/blessings/2026-10-03/source-definition-catalog.json`，SHA-256 `e9a3f21f70fdfce4347450eb1d4c51e1520ff49716f7092248cb4e1b1282c4d5`；未擴大已驗收範圍。
 
 - [近身平射](2026-10-03-POINT-BLANK_ACCEPTANCE.json)：新增3變體、6型號關聯；共3變體、6關聯。
+
+- 第2輪三項已Commit後完整掃描通過：raking-fire (`a33a78b0d9685b39c3ac9a27d3989b0fd2f20e3d`)、ghost (`85738bb0b0c333783f1f01b0a71573f2b1251d6d`)、point-blank (`cc20da268bd99fc421526ba590039c87ce53e638`)；收據 `AI-LOGS/Game Info/local/blessings/2026-10-03/round-002-full-scan.json`／SHA-256 `f852197153f38f4b1ac331191607201d611aec881b008d3d23267729975e1a97`；Game Info既有1錯誤、AI-LOGS既有8錯誤，新增0。
+
+- [精確打擊](2026-10-03-SURGICAL_ACCEPTANCE.json)：新增9變體、18型號關聯；共9變體、18關聯。
