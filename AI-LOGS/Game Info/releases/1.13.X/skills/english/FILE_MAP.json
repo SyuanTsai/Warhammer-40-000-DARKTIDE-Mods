@@ -4333,7 +4333,12 @@
         "psyker_aura_crit_chance_aura",
         "psyker_shout_vent_warp_charge",
         "psyker_combat_ability_stance",
-        "psyker_shout_reduces_warp_charge_generation"
+        "psyker_shout_reduces_warp_charge_generation",
+        "psyker_discharge_damage_debuff",
+        "psyker_warpfire_on_shout",
+        "psyker_overcharge_weakspot_kill_bonuses",
+        "psyker_overcharge_increased_movement_speed",
+        "psyker_2_tier_3_name_2"
       ],
       "checks": []
     },
@@ -4360,7 +4365,12 @@
         "psyker_aura_crit_chance_aura",
         "psyker_shout_vent_warp_charge",
         "psyker_combat_ability_stance",
-        "psyker_shout_reduces_warp_charge_generation"
+        "psyker_shout_reduces_warp_charge_generation",
+        "psyker_discharge_damage_debuff",
+        "psyker_warpfire_on_shout",
+        "psyker_overcharge_weakspot_kill_bonuses",
+        "psyker_overcharge_increased_movement_speed",
+        "psyker_2_tier_3_name_2"
       ],
       "checks": []
     },
@@ -4387,7 +4397,12 @@
         "psyker_aura_crit_chance_aura",
         "psyker_shout_vent_warp_charge",
         "psyker_combat_ability_stance",
-        "psyker_shout_reduces_warp_charge_generation"
+        "psyker_shout_reduces_warp_charge_generation",
+        "psyker_discharge_damage_debuff",
+        "psyker_warpfire_on_shout",
+        "psyker_overcharge_weakspot_kill_bonuses",
+        "psyker_overcharge_increased_movement_speed",
+        "psyker_2_tier_3_name_2"
       ],
       "checks": []
     },
@@ -4414,7 +4429,12 @@
         "psyker_aura_crit_chance_aura",
         "psyker_shout_vent_warp_charge",
         "psyker_combat_ability_stance",
-        "psyker_shout_reduces_warp_charge_generation"
+        "psyker_shout_reduces_warp_charge_generation",
+        "psyker_discharge_damage_debuff",
+        "psyker_warpfire_on_shout",
+        "psyker_overcharge_weakspot_kill_bonuses",
+        "psyker_overcharge_increased_movement_speed",
+        "psyker_2_tier_3_name_2"
       ],
       "checks": []
     },
@@ -4469,9 +4489,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "8239223a670b731636ad51fb1e67c7ef9d75cbdf",
       "chinese_sha256": "88e4fdd201003ef3ff37f71cf381a03fcf7d028ea14d252983eada73e2a931d4",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_2_tier_3_name_2"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_283_287.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_ability_increase_brain_burst_speed.md",
@@ -4778,9 +4805,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "439e239959245f4abff71b4d49102e929c67fec9",
       "chinese_sha256": "427430e62bfe129b1cff28679cb0fe949f22ad312967e1cdab0fb84f0c1cb55b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_discharge_damage_debuff"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_283_287.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_dodge_after_crits.md",
@@ -5089,9 +5123,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1dc3cb46ed7049aee3f73756ce8259504e557845",
       "chinese_sha256": "a538ba6b4b8241453d45ff477dd4487e6fcdaf74fa63f3fb860c95ad1a742937",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_overcharge_increased_movement_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_283_287.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_overcharge_reduced_warp_charge.md",
@@ -5122,9 +5163,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "330f487d32982677edbd017dffe41b93f1f27115",
       "chinese_sha256": "8dab40305b4e6d086231fb5a5bf76bf7499d6e940fb53d1f044738243cf8379a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_overcharge_weakspot_kill_bonuses"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_283_287.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_passive_souls_from_elite_kills.md",
@@ -5410,9 +5458,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3b3d9935f7ba3584f25de32acc1977e174f08a17",
       "chinese_sha256": "56c404182b7026e4cac247d0be44a2390b554321a9df1152be14ff125c9ea5f0",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_warpfire_on_shout"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_283_287.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_weapon_attacks_peril_equilibrium.md",
@@ -13706,6 +13761,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_278_282.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_shout_reduces_warp_charge_generation.md"
+    },
+    {
+      "id": "psyker_discharge_damage_debuff",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_283_287.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_discharge_damage_debuff.md"
+    },
+    {
+      "id": "psyker_warpfire_on_shout",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_283_287.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_warpfire_on_shout.md"
+    },
+    {
+      "id": "psyker_overcharge_weakspot_kill_bonuses",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_283_287.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_overcharge_weakspot_kill_bonuses.md"
+    },
+    {
+      "id": "psyker_overcharge_increased_movement_speed",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_283_287.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_overcharge_increased_movement_speed.md"
+    },
+    {
+      "id": "psyker_2_tier_3_name_2",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_283_287.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_2_tier_3_name_2.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 282 completed on 2026-10-04. [Receipt](psyker_skills_278_282.json) and [FILE_MAP](FILE_MAP.json) record 282 accepted mechanisms. Next item: **283, Warp Rupture**, `psyker_discharge_damage_debuff`. The full goal remains active and unfinished.
+Checkpoint 287 completed on 2026-10-04. [Receipt](psyker_skills_283_287.json) and [FILE_MAP](FILE_MAP.json) record 287 accepted mechanisms. Next item: **288, Reality Anchor**, `psyker_overcharge_reduced_warp_charge`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 364 mechanisms + 24 class-support files + 2 shared files = 390 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 15/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 33 = 16 Consistent / 0 Explicit contradictions / 15 Not covered / 0 No implementation / 2 Cannot confirm. Latest batch commit interval: 605s (10m 05s), b99c231b1→833435463. No explicit English contradiction established. Scrier's Gaze retains the Chinese-only area-wording note; English describes a character state. Becalming Eruption tier/configuration uncertainty is preserved.
+Remaining: 359 mechanisms + 24 class-support files + 2 shared files = 385 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 20/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 43 = 21 Consistent / 0 Explicit contradictions / 20 Not covered / 0 No implementation / 2 Cannot confirm. Latest batch commit interval: 370s (6m 10s), 34668196b→3836c2fb0. No explicit English mechanism contradiction established. Precognition's malformed placeholder and Psykinetic's Aura's original spelling are preserved; existing timing and target limitations remain.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 
