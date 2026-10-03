@@ -295,6 +295,7 @@
 - Thrust - 推進
 - Thunderous - 雷鳴
 - Wrath - 憤怒
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_hits_increases_cleave`，hash `fd5eeb07`；英文／繁中RAW配對確認。
 - Shred - 粉碎
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_chained_hits_increases_crit_chance`，hash `39e910d6`；英文／繁中RAW配對確認。
 - Savage Sweep - 野蠻橫掃

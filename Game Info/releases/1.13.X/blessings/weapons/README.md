@@ -10,11 +10,11 @@
 | [雙鏈重型機槍](ranged/雙鏈重型機槍/README.md)<br>- Twin-Linked Heavy Stubber | 遠程 | 克魯克Mk V二聯重機槍、戈爾工Mk IV二聯重機槍、阿克利斯MK V二聯重機槍 |
 | [工兵鏟](melee/工兵鏟/README.md)<br>- Sapper Shovel | 近戰 | 軍務部標配工兵鏟、軍務部Mk III工兵鏟、軍務部Mk VII工兵鏟 |
 | [突擊鏈鋸劍](melee/突擊鏈鋸劍/README.md)<br>- Assault Chainsword | 近戰 | 突擊鏈鋸劍 卡迪亞 Mk IV、突擊鏈鋸劍 卡迪亞 Mk XIIIg |
-| [「惡魔之爪」劍](melee/「惡魔之爪」劍/README.md)<br>- "Devil's Claw" Sword | 近戰 | 卡塔昌Mk I「惡魔之爪」戰鬥劍、卡塔昌Mk IV「惡魔之爪」戰鬥劍、卡塔昌Mk VII「惡魔之爪」戰鬥劍 |
+| [「惡魔之爪」劍](melee/「惡魔之爪」劍/README.md)<br>- "Devil's Claw" Sword | 近戰 | 「惡魔之爪」劍 卡塔昌 Mk I、「惡魔之爪」劍 卡塔昌 Mk IV、「惡魔之爪」劍 卡塔昌 Mk VII |
 | [決鬥劍](melee/決鬥劍/README.md)<br>- Duelling Sword | 近戰 | 馬卡比安Mk II決鬥劍、馬卡比安Mk IV決鬥劍、馬卡比安Mk V決鬥劍 |
 | [烈焰力場巨劍](melee/烈焰力場巨劍/README.md)<br>- Blaze Force Greatsword | 近戰 | 烈焰力場巨劍 誓約 Mk VI、烈焰力場巨劍 誓約 Mk VIII |
 | [烈焰力場劍](melee/烈焰力場劍/README.md)<br>- Blaze Force Sword | 近戰 | 朦朧Mk II烈焰力場劍、火衛二Mk IV烈焰力場劍、伊利斯Mk V烈焰力場劍 |
-| [骨鋸](melee/骨鋸/README.md)<br>- Bone Saw | 近戰 | 外科醫師Mk IV骨鋸 |
+| [骨鋸](melee/骨鋸/README.md)<br>- Bone Saw | 近戰 | 骨鋸 外科醫師 型號4 |
 | [穿音速雙刀](melee/穿音速雙刀/README.md)<br>- Paired Transonic Blades | 近戰 | 西福爾穿音速刀刃 |
 | [動力劍](melee/動力劍/README.md)<br>- Power Sword | 近戰 | 動力劍 斯干達 Mk III、動力劍 阿克利斯 Mk VI |
 | [偵察鐳射槍](ranged/偵察鐳射槍/README.md)<br>- Recon Lasgun | 遠程 | 奧克塔蘭Mk II偵察鐳射槍、奧克塔蘭Mk VId偵察鐳射槍、奧克塔蘭Mk VIIa偵察鐳射槍 |
@@ -62,3 +62,5 @@
 | [步兵鐳射槍](ranged/步兵鐳射槍/README.md)<br>- Infantry Lasgun | 遠程 | 步兵鐳射槍 卡特雷爾 Mk VII、步兵鐳射槍 卡特雷爾 Mk IIb、步兵鐳射槍 卡特雷爾 Mk IX |
 | [冥潮鐳射槍](ranged/冥潮鐳射槍/README.md)<br>- Helbore Lasgun | 遠程 | 冥潮鐳射槍 盧修斯 MK IIIa、冥潮鐳射槍 盧修斯 MK V、冥潮鐳射槍 盧修斯 Mk IV |
 | [磷光爆破手槍](ranged/磷光爆破手槍/README.md)<br>- Phosphor Blast Pistol | 遠程 | 磷光爆破手槍 布蘭克斯 Mk XI |
+| [重劍](melee/重劍/README.md)<br>- Heavy Sword | 近戰 | 重劍 圖妥斯基 Mk VI、重劍 圖妥斯基 Mk VII、重劍 圖妥斯基 Mk IX |
+| [戴維爾戰鎬](melee/戴維爾戰鎬/README.md)<br>- Delver's Pickaxe | 近戰 | 戴維爾戰鎬 布蘭克斯 Mk Ia、戴維爾戰鎬 博羅維安 Mk III、戴維爾戰鎬 卡索拉斯 Mk II |

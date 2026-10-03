@@ -37,5 +37,6 @@
 | <img src="https://github.com/user-attachments/assets/a5db31b7-608a-488a-8d23-6ccfec4c2f3f" width="32" height="32" alt="閃電反射祝福圖示"> [閃電反射](entries/閃電反射/README.md)<br>- Lightning Reflexes<br>[完整說明](entries/閃電反射/README.md) | <ul><li>格擋近戰後獲得+10%／15%／20%／25%近戰威力；電弧鎚持續5秒，其他武器3秒。完美格擋另對攻擊者施加3秒電擊，生效期間不再觸發。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/55a772ae-58cf-4db6-9a47-7dbb7fd230cd" width="32" height="32" alt="煉獄祝福圖示"> [煉獄](entries/煉獄/README.md)<br>- Infernus<br>[完整說明](entries/煉獄/README.md) | <ul><li>遠程暴擊造成傷害時添加燃燒；一般武器 I–IV 每次1／2／3／4層，上限3／6／9／12層；磷光爆破手槍每次2／3／4／5層，上限4／9／12／15層。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/ce4a8d9f-8ffc-4194-bfbd-ef4db317aaf5" width="32" height="32" alt="偏轉祝福圖示"> [偏轉](entries/偏轉/README.md)<br>- Deflector<br>[完整說明](entries/偏轉/README.md) | <ul><li>持用並格擋時，可格擋正面左右各約59.4°內的合格遠程攻擊；I–IV 格擋消耗降低22.5%／25%／27.5%／30%。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f" width="32" height="32" alt="憤怒祝福圖示"> [憤怒](entries/憤怒/README.md)<br>- Wrath<br>[完整說明](entries/憤怒/README.md) | <ul><li>近戰揮擊命中後獲得1層順劈，最多5層；每次命中含滿層刷新3.5秒，揮空或逾時清層；武器每層數值不同。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

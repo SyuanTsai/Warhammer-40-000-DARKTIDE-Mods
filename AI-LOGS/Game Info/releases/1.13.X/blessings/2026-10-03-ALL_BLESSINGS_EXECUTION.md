@@ -133,3 +133,7 @@
 - 煉獄全部變體與型號的本機 Commit：`b6ae97337d073a2219ffebfd3f39b90c0b7d3d03`。
 
 - [偏轉](2026-10-03-DEFLECTOR_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。
+
+- 偏轉全部變體與型號的本機 Commit：`ea8874d8c0fe837310b0c2c940412e6a450fa48a`。
+
+- [憤怒](2026-10-03-WRATH_ACCEPTANCE.json)：新增10變體、22型號關聯；共10變體、22關聯。

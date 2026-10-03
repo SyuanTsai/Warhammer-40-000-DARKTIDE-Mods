@@ -397,6 +397,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/ce4a8d9f-8ffc-4194-bfbd-ef4db317aaf5",
       "effect": "持用並格擋時，可格擋正面左右各約59.4°內的合格遠程攻擊；I–IV 格擋消耗降低22.5%／25%／27.5%／30%。"
+    },
+    {
+      "id": "wrath",
+      "name_zh_tw": "憤怒",
+      "name_en": "Wrath",
+      "name_key": "loc_trait_bespoke_chained_hits_increases_cleave",
+      "description_key": "loc_trait_bespoke_chained_hits_increases_cleave_desc",
+      "name_hash": "fd5eeb07",
+      "description_hash": "a2e0518c",
+      "page": "entries/憤怒/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
+      "effect": "近戰揮擊命中後獲得1層順劈，最多5層；每次命中含滿層刷新3.5秒，揮空或逾時清層；武器每層數值不同。"
     }
   ],
   "weapons": [
@@ -617,26 +630,41 @@
         {
           "id": "combatsword_p1_m1",
           "item": "content/items/weapons/player/melee/combatsword_p1_m1",
-          "name": "卡塔昌Mk I「惡魔之爪」戰鬥劍",
-          "name_en": "Catachan Mk I \"Devil's Claw\" Sword",
+          "name": "「惡魔之爪」劍 卡塔昌 Mk I",
+          "name_en": "\"Devil's Claw\" Sword Catachan Mk I",
           "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
-          "trait_category": "bespoke_combatsword_p1"
+          "trait_category": "bespoke_combatsword_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combatsword_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combatsword_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_combatsword_p1_m1"
+          }
         },
         {
           "id": "combatsword_p1_m2",
           "item": "content/items/weapons/player/melee/combatsword_p1_m2",
-          "name": "卡塔昌Mk IV「惡魔之爪」戰鬥劍",
-          "name_en": "Catachan Mk IV \"Devil's Claw\" Sword",
+          "name": "「惡魔之爪」劍 卡塔昌 Mk IV",
+          "name_en": "\"Devil's Claw\" Sword Catachan Mk IV",
           "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
-          "trait_category": "bespoke_combatsword_p1"
+          "trait_category": "bespoke_combatsword_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combatsword_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combatsword_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_combatsword_p1_m2"
+          }
         },
         {
           "id": "combatsword_p1_m3",
           "item": "content/items/weapons/player/melee/combatsword_p1_m3",
-          "name": "卡塔昌Mk VII「惡魔之爪」戰鬥劍",
-          "name_en": "Catachan Mk VII \"Devil's Claw\" Sword",
+          "name": "「惡魔之爪」劍 卡塔昌 Mk VII",
+          "name_en": "\"Devil's Claw\" Sword Catachan Mk VII",
           "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
-          "trait_category": "bespoke_combatsword_p1"
+          "trait_category": "bespoke_combatsword_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combatsword_p1_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combatsword_p1_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_combatsword_p1_m3"
+          }
         }
       ]
     },
@@ -755,10 +783,15 @@
         {
           "id": "saw_p1_m1",
           "item": "content/items/weapons/player/melee/saw_p1_m1",
-          "name": "外科醫師Mk IV骨鋸",
-          "name_en": "Chirurgeon's Mk IV Bone Saw",
+          "name": "骨鋸 外科醫師 型號4",
+          "name_en": "Bone Saw Chirurgeon's Mk IV",
           "template_file": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
-          "trait_category": "bespoke_saw_p1"
+          "trait_category": "bespoke_saw_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_saw_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_saw_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_saw_p1_m1"
+          }
         }
       ]
     },
@@ -2241,6 +2274,104 @@
             "weapon_family_display_name": "loc_weapon_family_phosphor_pistol_p1_m1",
             "weapon_pattern_display_name": "loc_weapon_pattern_phosphor_pistol_p1_m1",
             "weapon_mark_display_name": "loc_weapon_mark_phosphor_pistol_p1_m1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "combatsword_p2",
+      "name_zh_tw": "重劍",
+      "name_en": "Heavy Sword",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_combatsword_p2_m1",
+      "page": "weapons/melee/重劍/README.md",
+      "marks": [
+        {
+          "id": "combatsword_p2_m1",
+          "item": "content/items/weapons/player/melee/combatsword_p2_m1",
+          "name": "重劍 圖妥斯基 Mk VI",
+          "name_en": "Heavy Sword Turtolsky Mk VI",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m1.lua",
+          "trait_category": "bespoke_combatsword_p2",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combatsword_p2_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combatsword_p2_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_combatsword_p2_m1"
+          }
+        },
+        {
+          "id": "combatsword_p2_m2",
+          "item": "content/items/weapons/player/melee/combatsword_p2_m2",
+          "name": "重劍 圖妥斯基 Mk VII",
+          "name_en": "Heavy Sword Turtolsky Mk VII",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m2.lua",
+          "trait_category": "bespoke_combatsword_p2",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combatsword_p2_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combatsword_p2_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_combatsword_p2_m2"
+          }
+        },
+        {
+          "id": "combatsword_p2_m3",
+          "item": "content/items/weapons/player/melee/combatsword_p2_m3",
+          "name": "重劍 圖妥斯基 Mk IX",
+          "name_en": "Heavy Sword Turtolsky Mk IX",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m3.lua",
+          "trait_category": "bespoke_combatsword_p2",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_combatsword_p2_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_combatsword_p2_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_combatsword_p2_m3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ogryn_pickaxe_2h_p1",
+      "name_zh_tw": "戴維爾戰鎬",
+      "name_en": "Delver's Pickaxe",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_ogryn_pickaxe_2h_p1_m1",
+      "page": "weapons/melee/戴維爾戰鎬/README.md",
+      "marks": [
+        {
+          "id": "ogryn_pickaxe_2h_p1_m1",
+          "item": "content/items/weapons/player/melee/ogryn_pickaxe_2h_p1_m1",
+          "name": "戴維爾戰鎬 布蘭克斯 Mk Ia",
+          "name_en": "Delver's Pickaxe Branx Mk Ia",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+          "trait_category": "bespoke_ogryn_pickaxe_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_pickaxe_2h_p1_m1",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_pickaxe_2h_p1_m1",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_pickaxe_2h_p1_m1"
+          }
+        },
+        {
+          "id": "ogryn_pickaxe_2h_p1_m2",
+          "item": "content/items/weapons/player/melee/ogryn_pickaxe_2h_p1_m2",
+          "name": "戴維爾戰鎬 博羅維安 Mk III",
+          "name_en": "Delver's Pickaxe Borovian Mk III",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+          "trait_category": "bespoke_ogryn_pickaxe_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_pickaxe_2h_p1_m2",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_pickaxe_2h_p1_m2",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_pickaxe_2h_p1_m2"
+          }
+        },
+        {
+          "id": "ogryn_pickaxe_2h_p1_m3",
+          "item": "content/items/weapons/player/melee/ogryn_pickaxe_2h_p1_m3",
+          "name": "戴維爾戰鎬 卡索拉斯 Mk II",
+          "name_en": "Delver's Pickaxe Karsolas Mk II",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+          "trait_category": "bespoke_ogryn_pickaxe_p1",
+          "name_keys": {
+            "weapon_family_display_name": "loc_weapon_family_ogryn_pickaxe_2h_p1_m3",
+            "weapon_pattern_display_name": "loc_weapon_pattern_ogryn_pickaxe_2h_p1_m3",
+            "weapon_mark_display_name": "loc_weapon_mark_ogryn_pickaxe_2h_p1_m3"
           }
         }
       ]
@@ -7146,6 +7277,806 @@
       "icon": "https://github.com/user-attachments/assets/ce4a8d9f-8ffc-4194-bfbd-ef4db317aaf5",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_081",
       "effect": "持用並格擋時，可格擋正面左右各約59.4°內的合格遠程攻擊；I–IV 格擋消耗降低22.5%／25%／27.5%／30%。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_2h_p1_chained_hits_increases_melee_cleave",
+      "blessing_id": "wrath",
+      "weapon_id": "chainsword_2h_p1",
+      "page": "entries/憤怒/weapon_trait_bespoke_chainsword_2h_p1_chained_hits_increases_melee_cleave.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "proc_chance": 1.0,
+        "proc_event": "on_sweep_finish",
+        "success_condition": "num_hit_units > 0",
+        "effective_stacks_added_per_successful_sweep": 1,
+        "effective_stack_cap": 5,
+        "initial_hidden_child_stack_count": 1,
+        "child_template_max_stacks": 5,
+        "child_stack_offset": -1,
+        "internal_child_stack_limit": 6,
+        "child_duration_seconds": 3.5,
+        "refresh_timer_on_each_successful_add": true,
+        "miss_clears_effective_stacks": true,
+        "expiry_removes_active_stacks_together": true,
+        "decay_update_condition": "remove_t < t; next server update after 3.5 seconds",
+        "stat_key": "max_hit_mass_attack_modifier",
+        "stat_type": "additive_multiplier",
+        "cleave_hit_mass_only": true,
+        "affects_impact_mass": false,
+        "wielded_item_slot_required": true,
+        "refresh_timer_on_successful_sweep_even_at_cap": true,
+        "tier_cleave_bonus_percent": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "tier_cleave_bonus_fraction": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "max_hit_mass_attack_modifier_multiplier_at_cap": {
+          "I": 2.25,
+          "II": 2.5,
+          "III": 2.75,
+          "IV": 3.0
+        },
+        "max_hit_mass_attack_modifier": [
+          0.25,
+          0.3,
+          0.35,
+          0.4
+        ],
+        "full_stack_bonus_percent": [
+          125,
+          150,
+          175,
+          200
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_2h_p1.lua",
+        "start_line": 327,
+        "end_line": 376
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_2h_p1_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_chained_hits_increases_cleave_desc",
+      "description_hash": "a2e0518c",
+      "icon": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_168",
+      "effect": "近戰揮擊命中後每層順劈+25%／30%／35%／40%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_chainsword_p1_chained_hits_increases_melee_cleave",
+      "blessing_id": "wrath",
+      "weapon_id": "chainsword_p1",
+      "page": "entries/憤怒/weapon_trait_bespoke_chainsword_p1_chained_hits_increases_melee_cleave.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "proc_chance": 1.0,
+        "proc_event": "on_sweep_finish",
+        "success_condition": "num_hit_units > 0",
+        "effective_stacks_added_per_successful_sweep": 1,
+        "effective_stack_cap": 5,
+        "initial_hidden_child_stack_count": 1,
+        "child_template_max_stacks": 5,
+        "child_stack_offset": -1,
+        "internal_child_stack_limit": 6,
+        "child_duration_seconds": 3.5,
+        "refresh_timer_on_each_successful_add": true,
+        "miss_clears_effective_stacks": true,
+        "expiry_removes_active_stacks_together": true,
+        "decay_update_condition": "remove_t < t; next server update after 3.5 seconds",
+        "stat_key": "max_hit_mass_attack_modifier",
+        "stat_type": "additive_multiplier",
+        "cleave_hit_mass_only": true,
+        "affects_impact_mass": false,
+        "wielded_item_slot_required": true,
+        "refresh_timer_on_successful_sweep_even_at_cap": true,
+        "tier_cleave_bonus_percent": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "tier_cleave_bonus_fraction": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "max_hit_mass_attack_modifier_multiplier_at_cap": {
+          "I": 2.25,
+          "II": 2.5,
+          "III": 2.75,
+          "IV": 3.0
+        },
+        "max_hit_mass_attack_modifier": [
+          0.25,
+          0.3,
+          0.35,
+          0.4
+        ],
+        "full_stack_bonus_percent": [
+          125,
+          150,
+          175,
+          200
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_chainsword_p1.lua",
+        "start_line": 186,
+        "end_line": 235
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_chainsword_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 18
+      },
+      "description_key": "loc_trait_bespoke_chained_hits_increases_cleave_desc",
+      "description_hash": "a2e0518c",
+      "icon": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_168",
+      "effect": "近戰揮擊命中後每層順劈+25%／30%／35%／40%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_melee_cleave",
+      "blessing_id": "wrath",
+      "weapon_id": "combatsword_p1",
+      "page": "entries/憤怒/weapon_trait_bespoke_combatsword_p1_chained_hits_increases_melee_cleave.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "proc_chance": 1.0,
+        "proc_event": "on_sweep_finish",
+        "success_condition": "num_hit_units > 0",
+        "effective_stacks_added_per_successful_sweep": 1,
+        "effective_stack_cap": 5,
+        "initial_hidden_child_stack_count": 1,
+        "child_template_max_stacks": 5,
+        "child_stack_offset": -1,
+        "internal_child_stack_limit": 6,
+        "child_duration_seconds": 3.5,
+        "refresh_timer_on_each_successful_add": true,
+        "miss_clears_effective_stacks": true,
+        "expiry_removes_active_stacks_together": true,
+        "decay_update_condition": "remove_t < t; next server update after 3.5 seconds",
+        "stat_key": "max_hit_mass_attack_modifier",
+        "stat_type": "additive_multiplier",
+        "cleave_hit_mass_only": true,
+        "affects_impact_mass": false,
+        "wielded_item_slot_required": true,
+        "refresh_timer_on_successful_sweep_even_at_cap": true,
+        "tier_cleave_bonus_percent": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "tier_cleave_bonus_fraction": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "max_hit_mass_attack_modifier_multiplier_at_cap": {
+          "I": 2.25,
+          "II": 2.5,
+          "III": 2.75,
+          "IV": 3.0
+        },
+        "max_hit_mass_attack_modifier": [
+          0.25,
+          0.3,
+          0.35,
+          0.4
+        ],
+        "full_stack_bonus_percent": [
+          125,
+          150,
+          175,
+          200
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p1.lua",
+        "start_line": 10,
+        "end_line": 59
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 15
+      },
+      "description_key": "loc_trait_bespoke_chained_hits_increases_cleave_desc",
+      "description_hash": "a2e0518c",
+      "icon": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_168",
+      "effect": "近戰揮擊命中後每層順劈+25%／30%／35%／40%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave",
+      "blessing_id": "wrath",
+      "weapon_id": "combatsword_p2",
+      "page": "entries/憤怒/weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "proc_chance": 1.0,
+        "proc_event": "on_sweep_finish",
+        "success_condition": "num_hit_units > 0",
+        "effective_stacks_added_per_successful_sweep": 1,
+        "effective_stack_cap": 5,
+        "initial_hidden_child_stack_count": 1,
+        "child_template_max_stacks": 5,
+        "child_stack_offset": -1,
+        "internal_child_stack_limit": 6,
+        "child_duration_seconds": 3.5,
+        "refresh_timer_on_each_successful_add": true,
+        "miss_clears_effective_stacks": true,
+        "expiry_removes_active_stacks_together": true,
+        "decay_update_condition": "remove_t < t; next server update after 3.5 seconds",
+        "stat_key": "max_hit_mass_attack_modifier",
+        "stat_type": "additive_multiplier",
+        "cleave_hit_mass_only": true,
+        "affects_impact_mass": false,
+        "wielded_item_slot_required": true,
+        "refresh_timer_on_successful_sweep_even_at_cap": true,
+        "tier_cleave_bonus_percent": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "tier_cleave_bonus_fraction": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "max_hit_mass_attack_modifier_multiplier_at_cap": {
+          "I": 2.25,
+          "II": 2.5,
+          "III": 2.75,
+          "IV": 3.0
+        },
+        "max_hit_mass_attack_modifier": [
+          0.25,
+          0.3,
+          0.35,
+          0.4
+        ],
+        "full_stack_bonus_percent": [
+          125,
+          150,
+          175,
+          200
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatsword_p2.lua",
+        "start_line": 136,
+        "end_line": 185
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatsword_p2_buff_templates.lua",
+        "start_line": 15,
+        "end_line": 17
+      },
+      "description_key": "loc_trait_bespoke_chained_hits_increases_cleave_desc",
+      "description_hash": "a2e0518c",
+      "icon": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_168",
+      "effect": "近戰揮擊命中後每層順劈+25%／30%／35%／40%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_2h_p1_chained_hits_increases_melee_cleave",
+      "blessing_id": "wrath",
+      "weapon_id": "forcesword_2h_p1",
+      "page": "entries/憤怒/weapon_trait_bespoke_forcesword_2h_p1_chained_hits_increases_melee_cleave.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "proc_chance": 1.0,
+        "proc_event": "on_sweep_finish",
+        "success_condition": "num_hit_units > 0",
+        "effective_stacks_added_per_successful_sweep": 1,
+        "effective_stack_cap": 5,
+        "initial_hidden_child_stack_count": 1,
+        "child_template_max_stacks": 5,
+        "child_stack_offset": -1,
+        "internal_child_stack_limit": 6,
+        "child_duration_seconds": 3.5,
+        "refresh_timer_on_each_successful_add": true,
+        "miss_clears_effective_stacks": true,
+        "expiry_removes_active_stacks_together": true,
+        "decay_update_condition": "remove_t < t; next server update after 3.5 seconds",
+        "stat_key": "max_hit_mass_attack_modifier",
+        "stat_type": "additive_multiplier",
+        "cleave_hit_mass_only": true,
+        "affects_impact_mass": false,
+        "wielded_item_slot_required": true,
+        "refresh_timer_on_successful_sweep_even_at_cap": true,
+        "tier_cleave_bonus_percent": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "tier_cleave_bonus_fraction": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "max_hit_mass_attack_modifier_multiplier_at_cap": {
+          "I": 2.25,
+          "II": 2.5,
+          "III": 2.75,
+          "IV": 3.0
+        },
+        "max_hit_mass_attack_modifier": [
+          0.25,
+          0.3,
+          0.35,
+          0.4
+        ],
+        "full_stack_bonus_percent": [
+          125,
+          150,
+          175,
+          200
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_2h_p1.lua",
+        "start_line": 296,
+        "end_line": 345
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_2h_p1_buff_templates.lua",
+        "start_line": 26,
+        "end_line": 28
+      },
+      "description_key": "loc_trait_bespoke_chained_hits_increases_cleave_desc",
+      "description_hash": "a2e0518c",
+      "icon": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_168",
+      "effect": "近戰揮擊命中後每層順劈+25%／30%／35%／40%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_chained_hits_increases_melee_cleave",
+      "blessing_id": "wrath",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "page": "entries/憤怒/weapon_trait_bespoke_ogryn_pickaxe_2h_p1_chained_hits_increases_melee_cleave.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "proc_chance": 1.0,
+        "proc_event": "on_sweep_finish",
+        "success_condition": "num_hit_units > 0",
+        "effective_stacks_added_per_successful_sweep": 1,
+        "effective_stack_cap": 5,
+        "initial_hidden_child_stack_count": 1,
+        "child_template_max_stacks": 5,
+        "child_stack_offset": -1,
+        "internal_child_stack_limit": 6,
+        "child_duration_seconds": 3.5,
+        "refresh_timer_on_each_successful_add": true,
+        "miss_clears_effective_stacks": true,
+        "expiry_removes_active_stacks_together": true,
+        "decay_update_condition": "remove_t < t; next server update after 3.5 seconds",
+        "stat_key": "max_hit_mass_attack_modifier",
+        "stat_type": "additive_multiplier",
+        "cleave_hit_mass_only": true,
+        "affects_impact_mass": false,
+        "wielded_item_slot_required": true,
+        "refresh_timer_on_successful_sweep_even_at_cap": true,
+        "tier_cleave_bonus_percent": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "tier_cleave_bonus_fraction": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "max_hit_mass_attack_modifier_multiplier_at_cap": {
+          "I": 2.25,
+          "II": 2.5,
+          "III": 2.75,
+          "IV": 3.0
+        },
+        "max_hit_mass_attack_modifier": [
+          0.25,
+          0.3,
+          0.35,
+          0.4
+        ],
+        "full_stack_bonus_percent": [
+          125,
+          150,
+          175,
+          200
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_pickaxe_2h_p1.lua",
+        "start_line": 316,
+        "end_line": 365
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_pickaxe_2h_p1_buff_templates.lua",
+        "start_line": 24,
+        "end_line": 26
+      },
+      "description_key": "loc_trait_bespoke_chained_hits_increases_cleave_desc",
+      "description_hash": "a2e0518c",
+      "icon": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_168",
+      "effect": "近戰揮擊命中後每層順劈+25%／30%／35%／40%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_2h_p1_chained_hits_increases_melee_cleave",
+      "blessing_id": "wrath",
+      "weapon_id": "powersword_2h_p1",
+      "page": "entries/憤怒/weapon_trait_bespoke_powersword_2h_p1_chained_hits_increases_melee_cleave.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "proc_chance": 1.0,
+        "proc_event": "on_sweep_finish",
+        "success_condition": "num_hit_units > 0",
+        "effective_stacks_added_per_successful_sweep": 1,
+        "effective_stack_cap": 5,
+        "initial_hidden_child_stack_count": 1,
+        "child_template_max_stacks": 5,
+        "child_stack_offset": -1,
+        "internal_child_stack_limit": 6,
+        "child_duration_seconds": 3.5,
+        "refresh_timer_on_each_successful_add": true,
+        "miss_clears_effective_stacks": true,
+        "expiry_removes_active_stacks_together": true,
+        "decay_update_condition": "remove_t < t; next server update after 3.5 seconds",
+        "stat_key": "max_hit_mass_attack_modifier",
+        "stat_type": "additive_multiplier",
+        "cleave_hit_mass_only": true,
+        "affects_impact_mass": false,
+        "wielded_item_slot_required": true,
+        "refresh_timer_on_successful_sweep_even_at_cap": true,
+        "tier_cleave_bonus_percent": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "tier_cleave_bonus_fraction": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "max_hit_mass_attack_modifier_multiplier_at_cap": {
+          "I": 2.25,
+          "II": 2.5,
+          "III": 2.75,
+          "IV": 3.0
+        },
+        "max_hit_mass_attack_modifier": [
+          0.25,
+          0.3,
+          0.35,
+          0.4
+        ],
+        "full_stack_bonus_percent": [
+          125,
+          150,
+          175,
+          200
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_2h_p1.lua",
+        "start_line": 243,
+        "end_line": 292
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_2h_p1_buff_templates.lua",
+        "start_line": 185,
+        "end_line": 187
+      },
+      "description_key": "loc_trait_bespoke_chained_hits_increases_cleave_desc",
+      "description_hash": "a2e0518c",
+      "icon": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_168",
+      "effect": "近戰揮擊命中後每層順劈+25%／30%／35%／40%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p1_chained_hits_increases_melee_cleave",
+      "blessing_id": "wrath",
+      "weapon_id": "powersword_p1",
+      "page": "entries/憤怒/weapon_trait_bespoke_powersword_p1_chained_hits_increases_melee_cleave.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "proc_chance": 1.0,
+        "proc_event": "on_sweep_finish",
+        "success_condition": "num_hit_units > 0",
+        "effective_stacks_added_per_successful_sweep": 1,
+        "effective_stack_cap": 5,
+        "initial_hidden_child_stack_count": 1,
+        "child_template_max_stacks": 5,
+        "child_stack_offset": -1,
+        "internal_child_stack_limit": 6,
+        "child_duration_seconds": 3.5,
+        "refresh_timer_on_each_successful_add": true,
+        "miss_clears_effective_stacks": true,
+        "expiry_removes_active_stacks_together": true,
+        "decay_update_condition": "remove_t < t; next server update after 3.5 seconds",
+        "stat_key": "max_hit_mass_attack_modifier",
+        "stat_type": "additive_multiplier",
+        "cleave_hit_mass_only": true,
+        "affects_impact_mass": false,
+        "wielded_item_slot_required": true,
+        "refresh_timer_on_successful_sweep_even_at_cap": true,
+        "tier_cleave_bonus_percent": {
+          "I": 35,
+          "II": 40,
+          "III": 45,
+          "IV": 50
+        },
+        "tier_cleave_bonus_fraction": {
+          "I": 0.35,
+          "II": 0.4,
+          "III": 0.45,
+          "IV": 0.5
+        },
+        "max_hit_mass_attack_modifier_multiplier_at_cap": {
+          "I": 2.75,
+          "II": 3.0,
+          "III": 3.25,
+          "IV": 3.5
+        },
+        "max_hit_mass_attack_modifier": [
+          0.35,
+          0.4,
+          0.45,
+          0.5
+        ],
+        "full_stack_bonus_percent": [
+          175,
+          200,
+          225,
+          250
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p1.lua",
+        "start_line": 10,
+        "end_line": 59
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p1_buff_templates.lua",
+        "start_line": 8,
+        "end_line": 10
+      },
+      "description_key": "loc_trait_bespoke_chained_hits_increases_cleave_desc",
+      "description_hash": "a2e0518c",
+      "icon": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_168",
+      "effect": "近戰揮擊命中後每層順劈+35%／40%／45%／50%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p2_chained_hits_increases_melee_cleave",
+      "blessing_id": "wrath",
+      "weapon_id": "powersword_p2",
+      "page": "entries/憤怒/weapon_trait_bespoke_powersword_p2_chained_hits_increases_melee_cleave.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "proc_chance": 1.0,
+        "proc_event": "on_sweep_finish",
+        "success_condition": "num_hit_units > 0",
+        "effective_stacks_added_per_successful_sweep": 1,
+        "effective_stack_cap": 5,
+        "initial_hidden_child_stack_count": 1,
+        "child_template_max_stacks": 5,
+        "child_stack_offset": -1,
+        "internal_child_stack_limit": 6,
+        "child_duration_seconds": 3.5,
+        "refresh_timer_on_each_successful_add": true,
+        "miss_clears_effective_stacks": true,
+        "expiry_removes_active_stacks_together": true,
+        "decay_update_condition": "remove_t < t; next server update after 3.5 seconds",
+        "stat_key": "max_hit_mass_attack_modifier",
+        "stat_type": "additive_multiplier",
+        "cleave_hit_mass_only": true,
+        "affects_impact_mass": false,
+        "wielded_item_slot_required": true,
+        "refresh_timer_on_successful_sweep_even_at_cap": true,
+        "tier_cleave_bonus_percent": {
+          "I": 25,
+          "II": 30,
+          "III": 35,
+          "IV": 40
+        },
+        "tier_cleave_bonus_fraction": {
+          "I": 0.25,
+          "II": 0.3,
+          "III": 0.35,
+          "IV": 0.4
+        },
+        "max_hit_mass_attack_modifier_multiplier_at_cap": {
+          "I": 2.25,
+          "II": 2.5,
+          "III": 2.75,
+          "IV": 3.0
+        },
+        "max_hit_mass_attack_modifier": [
+          0.25,
+          0.3,
+          0.35,
+          0.4
+        ],
+        "full_stack_bonus_percent": [
+          125,
+          150,
+          175,
+          200
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p2.lua",
+        "start_line": 242,
+        "end_line": 290
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p2_buff_templates.lua",
+        "start_line": 185,
+        "end_line": 187
+      },
+      "description_key": "loc_trait_bespoke_chained_hits_increases_cleave_desc",
+      "description_hash": "a2e0518c",
+      "icon": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_168",
+      "effect": "近戰揮擊命中後每層順劈+25%／30%／35%／40%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_saw_p1_chained_hits_increases_melee_cleave",
+      "blessing_id": "wrath",
+      "weapon_id": "saw_p1",
+      "page": "entries/憤怒/weapon_trait_bespoke_saw_p1_chained_hits_increases_melee_cleave.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "proc_chance": 1.0,
+        "proc_event": "on_sweep_finish",
+        "success_condition": "num_hit_units > 0",
+        "effective_stacks_added_per_successful_sweep": 1,
+        "effective_stack_cap": 5,
+        "initial_hidden_child_stack_count": 1,
+        "child_template_max_stacks": 5,
+        "child_stack_offset": -1,
+        "internal_child_stack_limit": 6,
+        "child_duration_seconds": 3.5,
+        "refresh_timer_on_each_successful_add": true,
+        "miss_clears_effective_stacks": true,
+        "expiry_removes_active_stacks_together": true,
+        "decay_update_condition": "remove_t < t; next server update after 3.5 seconds",
+        "stat_key": "max_hit_mass_attack_modifier",
+        "stat_type": "additive_multiplier",
+        "cleave_hit_mass_only": true,
+        "affects_impact_mass": false,
+        "wielded_item_slot_required": true,
+        "refresh_timer_on_successful_sweep_even_at_cap": true,
+        "tier_cleave_bonus_percent": {
+          "I": 10,
+          "II": 15,
+          "III": 20,
+          "IV": 25
+        },
+        "tier_cleave_bonus_fraction": {
+          "I": 0.1,
+          "II": 0.15,
+          "III": 0.2,
+          "IV": 0.25
+        },
+        "max_hit_mass_attack_modifier_multiplier_at_cap": {
+          "I": 1.5,
+          "II": 1.75,
+          "III": 2.0,
+          "IV": 2.25
+        },
+        "max_hit_mass_attack_modifier": [
+          0.1,
+          0.15,
+          0.2,
+          0.25
+        ],
+        "full_stack_bonus_percent": [
+          50,
+          75,
+          100,
+          125
+        ]
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_saw_p1.lua",
+        "start_line": 480,
+        "end_line": 531
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_saw_p1_buff_templates.lua",
+        "start_line": 66,
+        "end_line": 70
+      },
+      "description_key": "loc_trait_bespoke_chained_hits_increases_cleave_desc",
+      "description_hash": "a2e0518c",
+      "icon": "https://github.com/user-attachments/assets/48e41633-a873-48b4-9818-796d3437e85f",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_168",
+      "effect": "近戰揮擊命中後每層順劈+10%／15%／20%／25%，最多5層；含滿層命中刷新3.5秒，揮空或逾時清層。"
     }
   ],
   "bindings": [
@@ -10073,6 +11004,314 @@
         "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
         "import_line": 15,
         "append_line": 2712
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1539
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "chainsword_2h_p1",
+      "mark_id": "chainsword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_2h_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_chainsword_2h_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_chainsword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords_2h/chainsword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1540
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2426
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "chainsword_p1",
+      "mark_id": "chainsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_chainsword_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_chainsword_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_chainsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2032
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1506
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1439
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "combatsword_p1",
+      "mark_id": "combatsword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_combatsword_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_combatsword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1348
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m1",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/chained_hits_increases_cleave",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m1.lua",
+        "import_line": 16,
+        "append_line": 1599
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m2",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/chained_hits_increases_cleave",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m2.lua",
+        "import_line": 16,
+        "append_line": 1583
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "combatsword_p2",
+      "mark_id": "combatsword_p2_m3",
+      "variant_id": "weapon_trait_bespoke_combatsword_p2_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_combatsword_p2/chained_hits_increases_cleave",
+      "trait_category": "bespoke_combatsword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_swords/combatsword_p2_m3.lua",
+        "import_line": 16,
+        "append_line": 1671
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2797
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "forcesword_2h_p1",
+      "mark_id": "forcesword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_2h_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_forcesword_2h_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_forcesword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 2712
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1571
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m2.lua",
+        "import_line": 16,
+        "append_line": 1568
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "ogryn_pickaxe_2h_p1",
+      "mark_id": "ogryn_pickaxe_2h_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_pickaxe_2h_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_ogryn_pickaxe_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_ogryn_pickaxe_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_pickaxes_2h/ogryn_pickaxe_2h_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 1882
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "powersword_2h_p1",
+      "mark_id": "powersword_2h_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_2h_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_powersword_2h_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_powersword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 2304
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "powersword_2h_p1",
+      "mark_id": "powersword_2h_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_2h_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_powersword_2h_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_powersword_2h_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords_2h/powersword_2h_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 2457
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "powersword_p1",
+      "mark_id": "powersword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_powersword_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_powersword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua",
+        "import_line": 12,
+        "append_line": 1268
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "powersword_p1",
+      "mark_id": "powersword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_powersword_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_powersword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
+        "import_line": 12,
+        "append_line": 1626
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "powersword_p2",
+      "mark_id": "powersword_p2_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p2_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_powersword_p2/chained_hits_increases_cleave",
+      "trait_category": "bespoke_powersword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m1.lua",
+        "import_line": 11,
+        "append_line": 1743
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "powersword_p2",
+      "mark_id": "powersword_p2_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_p2_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_powersword_p2/chained_hits_increases_cleave",
+      "trait_category": "bespoke_powersword_p2",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p2_m2.lua",
+        "import_line": 11,
+        "append_line": 2025
+      }
+    },
+    {
+      "blessing_id": "wrath",
+      "weapon_id": "saw_p1",
+      "mark_id": "saw_p1_m1",
+      "variant_id": "weapon_trait_bespoke_saw_p1_chained_hits_increases_melee_cleave",
+      "trait_item": "content/items/traits/bespoke_saw_p1/chained_hits_increases_cleave",
+      "trait_category": "bespoke_saw_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1835
       }
     }
   ]

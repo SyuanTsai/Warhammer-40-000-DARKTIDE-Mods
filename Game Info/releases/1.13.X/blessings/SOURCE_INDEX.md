@@ -35,3 +35,4 @@
 | [閃電反射](entries/閃電反射/README.md) | [來源索引](entries/閃電反射/SOURCE_INDEX.md) |
 | [煉獄](entries/煉獄/README.md) | [來源索引](entries/煉獄/SOURCE_INDEX.md) |
 | [偏轉](entries/偏轉/README.md) | [來源索引](entries/偏轉/SOURCE_INDEX.md) |
+| [憤怒](entries/憤怒/README.md) | [來源索引](entries/憤怒/SOURCE_INDEX.md) |
