@@ -332,6 +332,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/cb07e9cd-d287-452c-bbcd-827d4808e0df",
       "effect": "啟動鏈鋸後造成傷害的斬擊與鋸擊可施加流血，層數依武器與I–IV等級分列；同一目標最多16層。重型開膛劍MkXV普通輕擊首段鋸擊也能觸發。"
+    },
+    {
+      "id": "lacerate",
+      "name_zh_tw": "撕碎",
+      "name_en": "Lacerate",
+      "name_key": "loc_trait_bespoke_bleed_on_non_weakspot_hit",
+      "description_key": "loc_trait_bespoke_bleed_on_non_weakspot_hit_desc",
+      "name_hash": "d83d803a",
+      "description_hash": "4d1dd2bd",
+      "page": "entries/撕碎/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/c3b80cbc-5c0a-4281-abc5-14ab66716a72",
+      "effect": "符合條件的非弱點近戰命中依等級對目標施加1／2／3／4層流血。"
     }
   ],
   "weapons": [
@@ -6206,6 +6219,92 @@
       "icon": "https://github.com/user-attachments/assets/cb07e9cd-d287-452c-bbcd-827d4808e0df",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_199",
       "effect": "啟動後每次符合條件的斬擊或鋸擊新增11／12／13／14層流血。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatknife_p1_bleed_on_non_weakspot_hit",
+      "blessing_id": "lacerate",
+      "weapon_id": "combatknife_p1",
+      "page": "entries/撕碎/weapon_trait_bespoke_combatknife_p1_bleed_on_non_weakspot_hit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "values_scope": "Both bound variants share identical I–IV overrides.",
+        "num_stacks_on_proc": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "effective_target_bleed_cap": 16,
+        "shared_bleed_duration_seconds": 1.5,
+        "shared_bleed_tick_and_decay_interval_seconds": 0.5,
+        "refresh_duration_on_stack": true,
+        "first_stack_removal": "At the first existing bleed tick after the 1.5-second expiry; refreshing does not reset tick phase.",
+        "source_available_tiers": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatknife_p1.lua",
+        "start_line": 294,
+        "end_line": 332
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatknife_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 19
+      },
+      "description_key": "loc_trait_bespoke_bleed_on_non_weakspot_hit_desc",
+      "description_hash": "4d1dd2bd",
+      "icon": "https://github.com/user-attachments/assets/c3b80cbc-5c0a-4281-abc5-14ab66716a72",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_193",
+      "effect": "符合條件的非弱點近戰命中依等級對目標施加1／2／3／4層流血。"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_shivs_p1_bleed_on_non_weakspot_hit",
+      "blessing_id": "lacerate",
+      "weapon_id": "dual_shivs_p1",
+      "page": "entries/撕碎/weapon_trait_bespoke_dual_shivs_p1_bleed_on_non_weakspot_hit.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "values_scope": "Both bound variants share identical I–IV overrides.",
+        "num_stacks_on_proc": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "effective_target_bleed_cap": 16,
+        "shared_bleed_duration_seconds": 1.5,
+        "shared_bleed_tick_and_decay_interval_seconds": 0.5,
+        "refresh_duration_on_stack": true,
+        "first_stack_removal": "At the first existing bleed tick after the 1.5-second expiry; refreshing does not reset tick phase.",
+        "source_available_tiers": null
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_shivs_p1.lua",
+        "start_line": 294,
+        "end_line": 332
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_shivs_p1_buff_templates.lua",
+        "start_line": 19,
+        "end_line": 19
+      },
+      "description_key": "loc_trait_bespoke_bleed_on_non_weakspot_hit_desc",
+      "description_hash": "4d1dd2bd",
+      "icon": "https://github.com/user-attachments/assets/c3b80cbc-5c0a-4281-abc5-14ab66716a72",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_193",
+      "effect": "符合條件的非弱點近戰命中依等級對目標施加1／2／3／4層流血。"
     }
   ],
   "bindings": [
@@ -8741,6 +8840,62 @@
         "path": "scripts/settings/equipment/weapon_templates/chain_swords/chainsword_p1_m2.lua",
         "import_line": 14,
         "append_line": 2032
+      }
+    },
+    {
+      "blessing_id": "lacerate",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_bleed_on_non_weakspot_hit",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/bleed_on_non_weakspot_hit",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1436
+      }
+    },
+    {
+      "blessing_id": "lacerate",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_bleed_on_non_weakspot_hit",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/bleed_on_non_weakspot_hit",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1526
+      }
+    },
+    {
+      "blessing_id": "lacerate",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_bleed_on_non_weakspot_hit",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/bleed_on_non_weakspot_hit",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1502
+      }
+    },
+    {
+      "blessing_id": "lacerate",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m2",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_bleed_on_non_weakspot_hit",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/bleed_on_non_weakspot_hit",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1581
       }
     }
   ]

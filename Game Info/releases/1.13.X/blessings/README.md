@@ -32,5 +32,6 @@
 | <img src="https://github.com/user-attachments/assets/5fb9da44-aabb-4e67-94b0-caa0a9d335a8" width="32" height="32" alt="血肉撕裂者祝福圖示"> [血肉撕裂者](entries/血肉撕裂者/README.md)<br>- Flesh Tearer<br>[完整說明](entries/血肉撕裂者/README.md) | <ul><li>近戰暴擊命中對目標施加5／6／7／8層流血，最多16層；流血每約0.5秒跳傷，停止施加約1.5秒後逐次退1層。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/ded2c83c-1daf-4bce-9e73-d85c11228095" width="32" height="32" alt="飛鏢彈祝福圖示"> [飛鏢彈](entries/飛鏢彈/README.md)<br>- Flechette<br>[完整說明](entries/飛鏢彈/README.md) | <ul><li>暴擊彈丸射擊對每名受傷目標施加3／4／5／6層流血；同一目標同次射擊只施加一組，不依命中彈丸數倍增，最多16層。</li></ul> | 遠程 |
 | <img src="https://github.com/user-attachments/assets/cb07e9cd-d287-452c-bbcd-827d4808e0df" width="32" height="32" alt="放血者祝福圖示"> [放血者](entries/放血者/README.md)<br>- Bloodletter<br>[完整說明](entries/放血者/README.md) | <ul><li>啟動鏈鋸後造成傷害的斬擊與鋸擊可施加流血，層數依武器與I–IV等級分列；同一目標最多16層。重型開膛劍MkXV普通輕擊首段鋸擊也能觸發。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/c3b80cbc-5c0a-4281-abc5-14ab66716a72" width="32" height="32" alt="撕碎祝福圖示"> [撕碎](entries/撕碎/README.md)<br>- Lacerate<br>[完整說明](entries/撕碎/README.md) | <ul><li>符合條件的非弱點近戰命中依等級對目標施加1／2／3／4層流血。</li></ul> | 近戰 |
 
 [近戰祝福](melee/README.md)｜[遠程祝福](ranged/README.md)

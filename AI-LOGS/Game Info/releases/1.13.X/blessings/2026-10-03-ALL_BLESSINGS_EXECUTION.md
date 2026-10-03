@@ -113,3 +113,7 @@
 - 飛鏢彈本機 Commit：`0ad31fa097da2356cc6ef59e56eab9efc420749e`。
 
 - [放血者](2026-10-03-BLOODLETTER_ACCEPTANCE.json)：新增3變體、6型號關聯；共3變體、6關聯。
+
+- 放血者本機 Commit：`8b5f4dd32542bda05b64b25a27b0a86765090c2e`。
+
+- [撕碎](2026-10-03-LACERATE_ACCEPTANCE.json)：新增2變體、4型號關聯；共2變體、4關聯。
