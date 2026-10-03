@@ -19,6 +19,18 @@
 | 實際UI型號組名 | [實際UI型號組名](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/items.lua#L315-L327) |
 | UI名稱欄位讀取 | [UI名稱欄位讀取](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/items.lua#L378-L426) |
 
+## 爆彈手槍爆炸限制來源
+
+| 用途 | 固定原始碼 |
+|---|---|
+| 爆彈手槍M1爆炸配置 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/settings_templates/boltpistol_hitscan_templates.lua#L11-L26) |
+| 爆彈手槍M2爆炸配置 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/settings_templates/boltpistol_hitscan_templates.lua#L42-L57) |
+| 起爆距離基礎值及倍率 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/ranged_action.lua#L31-L43) |
+| 擊殺／停止爆炸條件與非爆擊參數 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/ranged_action.lua#L86-L139) |
+| 直接命中沿用爆擊旗標 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/hit_scan.lua#L226) |
+| 穿透停止爆炸固定非爆擊 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/hit_scan.lua#L290-L301) |
+| 爆炸參數對應 | [固定來源](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/explosion.lua#L57) |
+
 ## 執行與計算
 
 - 三個武器專屬 trait wrapper 都複製共同的 melee-kill proc 模板。共用模板監聽擊殺事件，預設提供遠程爆擊率；各武器 tier override 將此數值改為14%、16%、18%、20%，並提供該武器型號的持續時間。
@@ -38,6 +50,8 @@
 - 本祝福的 `p_PointBlank` 為I級0.14、II級0.16、III級0.18、IV級0.20；這是直接加入機率的百分點，不是把既有機率乘以1.14至1.20。近戰分支使用另一個 melee 機率欄位，因此不套用此加成。
 
 - ProcBuff 活性判定為 `t < active_start_time + active_duration`。合格近戰擊殺在效果期間發生時，新的事件時間取代 `active_start_time`；不增加額外層數。
+
+- 爆彈手槍M1／M2的腰射與瞄準射擊接入各自hitscan，直接命中可沿用射擊爆擊結果；配置的擊殺／停止與穿透停止爆炸另行生成且固定非爆擊。命中質量耗盡爆炸受伺服器、起爆距離及耗盡條件控制。M1基礎起爆距離5公尺、M2為3公尺，再乘其他來源起爆距離倍率；沒有配置穿透出口爆炸。
 
 ## 圖示
 

@@ -661,5 +661,100 @@
     },
     "boundary": "只對固定 SHA inventory 的 exact name_key 綁定、item_metadata exact records、definitions_not_bound 與 unresolved 做交集；檔案或相似後綴候選本身不作為未使用結論。"
   },
-  "execution_batch_started_on": "2026-10-03"
+  "execution_batch_started_on": "2026-10-03",
+  "supplemental_reviews": [
+    {
+      "date": "2026-10-04",
+      "scope": "New explosion applicability only; immutable original tier/RAW/UI/attachment acceptance retained",
+      "previous_local_commit": "7ea55d33423a13797ee7a7b05a91d9d6d839dd74",
+      "primary_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-impact-primary-review.json",
+        "sha256": "b42083c091eb3e99f78b8621fb3a6933cb3f9056acfbcdf70c67ec8718872604"
+      },
+      "research_receipt": {
+        "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-impact-crit-agent-review.json",
+        "sha256": "33c6f68f88f20ee63d24c63f3d4334b00c424632d09da70f6e70facc7ae07689"
+      },
+      "formal_peer": {
+        "model": "gpt-6-luna",
+        "reasoning_effort": "max",
+        "complete": true,
+        "accepted": true,
+        "issues": [],
+        "corrections": [],
+        "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+        "scope": "只複核 Point Blank 爆彈手槍 explosion delta 的三個正式檔案與七個精確固定來源引用；未重審 tiers、RAW、6 UI、圖示或其他變體。",
+        "primary_receipt": {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-impact-primary-review.json",
+          "sha256": "b42083c091eb3e99f78b8621fb3a6933cb3f9056acfbcdf70c67ec8718872604"
+        },
+        "findings": [
+          "README 與爆彈手槍 variant page 清楚區分有效中的遠程爆擊加成可作用於直接射擊，以及另行生成的擊殺／停止與穿透停止爆炸固定非爆擊。",
+          "SOURCE_INDEX 明確說明 M1/M2 配置的 5/3 公尺是基礎起爆距離，還會乘起爆距離倍率；沒有將基礎距離寫成無條件最終距離，亦沒有聲稱配置穿透出口爆炸。",
+          "SOURCE_INDEX 的七個引用逐一對應 primary receipt 的固定來源範圍，涵蓋兩個 hitscan 配置、起爆距離倍率、hitmass 爆炸 gate/非爆擊參數、直接命中旗標、穿透停止爆炸及 Explosion 參數定義。"
+        ],
+        "new_arming_condition_receipt": {
+          "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/surgical-arming-primary-review.json",
+          "sha256": "68d53c0ce4c9aa707e72936f214148793a9acc49254b4c2fe398a15a12008a6b",
+          "cache_id": "explosion-arming-distance-multiplier"
+        },
+        "file_sha256": {
+          "Game Info/releases/1.13.X/blessings/entries/近身平射/README.md": "0d620944f31a61bdbb278ba1765102a48d9f70eac7470f7f2ddbb56eb74dbf89",
+          "Game Info/releases/1.13.X/blessings/entries/近身平射/SOURCE_INDEX.md": "4b01b16f6b6e9ab125f96f4eba92240d85178af64611aaac35f15ec6ba92e869",
+          "Game Info/releases/1.13.X/blessings/entries/近身平射/weapon_trait_bespoke_boltpistol_p1_crit_chance_bonus_on_melee_kills.md": "0e3ffd8351aa34080e75719c71d9766f644b3448895ee1f2eacbf4a3cb24977b",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-impact-primary-review.json": "b42083c091eb3e99f78b8621fb3a6933cb3f9056acfbcdf70c67ec8718872604",
+          "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-impact-crit-agent-review.json": "33c6f68f88f20ee63d24c63f3d4334b00c424632d09da70f6e70facc7ae07689"
+        },
+        "receipt_sha256": "e0ddf31176f7c6430764a795954c04eb3b90c6a3611cbe19b726fae6ff85b7f3"
+      },
+      "unchanged_image_acceptance_reused": [
+        {
+          "receipt": "AI-LOGS/Game Info/local/blessings/2026-10-03/point-blank-image.json",
+          "sha256": "afe30a3a72c7631c8c6086a643c5f389cf75186978e4c36f10dcbc994820b712",
+          "attachment": "https://github.com/user-attachments/assets/1f0e089c-39ab-4e22-952e-fedd5e91f0d9",
+          "original_file_sha256": "1de29a30a72c8a187a79bdb74cef181ea1585a8df25c310206bb0157eab64266"
+        }
+      ],
+      "new_issue_attachment": false,
+      "validation": {
+        "source_mapping_checks": {
+          "source_ranges_verified": 45,
+          "source_files": 23,
+          "bindings": 326,
+          "variants": 170,
+          "formula_checks": "passed",
+          "scope": "focused",
+          "markdown_files": 3,
+          "source_object_cache": {
+            "cache_hits": 23,
+            "git_objects_read": 0
+          },
+          "global_shared_map_consistency": true
+        },
+        "gfm_parse": {
+          "files": 3,
+          "tables": 4,
+          "rows": 42,
+          "lists": 7,
+          "scope": "focused"
+        },
+        "global_exact_remaining_partition": true,
+        "focused_links": {
+          "scope": "focused",
+          "markdown_files": 4,
+          "local_references": 73,
+          "remote_references": 50,
+          "errors": [],
+          "existing_errors": 0,
+          "new_errors": []
+        }
+      },
+      "current_inventory": {
+        "names": 44,
+        "variants": 170,
+        "bindings": 326
+      },
+      "faster_enabled": false
+    }
+  ]
 }

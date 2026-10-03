@@ -20,6 +20,8 @@
 - [boltpistol_p1_m2 action_shoot_zoomed](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua#L290-L370)。
 - [boltpistol_p1_m2 action_push](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/bolt_pistols/boltpistol_p1_m2.lua#L454-L547)。
 
+- 直接射擊可受本祝福加成；另行生成的擊殺／停止及穿透停止爆炸固定非爆擊。M1／M2基礎起爆距離為5／3公尺，另套用其他來源倍率。完整配置與條件見[爆炸限制來源](SOURCE_INDEX.md#爆彈手槍爆炸限制來源)。
+
 - 等級與數值：[集中等級表](TIER_VALUES.md)。
 - 結算與算例：[百分比檢核](DAMAGE_PERCENTAGE_REVIEW.md)。
 - 原文比較：[同一名稱與描述鍵](LOCALIZATION_COMPARISON.md)。
