@@ -154,5 +154,18 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/trench-fighter-drill-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_attack_speed.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_attack_speed.md",
+  "corrections": [
+    {
+      "date": "2026-10-03",
+      "change": "Corrected the percentage-formatting citation from number/localized-string lines 405-427 to percentage lines 379-404. Values, prose and independent verdicts are unchanged.",
+      "source": "scripts/ui/views/talent_builder_view/utilities/talent_layout_parser.lua:379-427",
+      "checks": [
+        "targeted fixed-SHA source read",
+        "exact English text and citation bounds",
+        "Game Info links/anchors",
+        "Git diff whitespace"
+      ]
+    }
+  ]
 }
