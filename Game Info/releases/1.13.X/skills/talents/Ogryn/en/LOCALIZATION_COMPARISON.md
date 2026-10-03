@@ -732,6 +732,18 @@ Full raw template and formatting: [source evidence](ogryn_fully_charged_attacks_
 | Charge-dependent damage and Impact | Up to +30% Damage bonus & +30% Impact bonus to your charged Melee Attack, based on charge time.; `ui / loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger_new_desc / d8632c1b` | The active windup parent/child builds four stacks, each adding 0.075 melee_damage and melee_impact_modifier, for maxima of 30% each. [Fixed source and line references](ogryn_fully_charged_attacks_gain_damage_and_stagger.md#fixed-source-evidence) | Consistent | The independently read English matches the current gradual bonuses and their maxima. |
 | Stack timing, sweep lifetime and calculations | No first-trigger rule, stack interval, automatic completion or additive formula is stated.; `ui / loc_talent_ogryn_fully_charged_attacks_gain_damage_and_stagger_new_desc / d8632c1b` | ActionWindup uses latest_chain_time for the first trigger, then normally 0.25s intervals. auto_completed fills four stacks at sweep start; sweep_finish removes them. Base damage 100 becomes 130, or 150 with another same-stage +20%. Impact 100 becomes 130; enemy thresholds still determine stagger. [Fixed source and line references](ogryn_fully_charged_attacks_gain_damage_and_stagger.md#fixed-source-evidence) | Not covered by the description | These accepted timing and calculation details supplement the charge-time wording; Impact remains separate from damage. |
 
+
+<a id="ogryn_nearby_bleeds_reduce_damage_taken"></a>
+
+## Delight in Destruction
+
+Full raw template and formatting: [source evidence](ogryn_nearby_bleeds_reduce_damage_taken.md#original-english-template-and-reconstruction). Name hash `3984145b`. Every row uses `ui / loc_talent_ogryn_damage_reduction_per_bleed_desc / 2f439ba8`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Bleeding-enemy reduction and cap | +5% Damage Resistance per Bleeding Enemy in Melee range. Stacks 6 times.; `ui / loc_talent_ogryn_damage_reduction_per_bleed_desc / 2f439ba8` | An 8m search counts enemies with the bleeding keyword. clamp(n / 6, 0, 1) interpolates damage_taken_multiplier from 1 to 0.7. [Fixed source and line references](ogryn_nearby_bleeds_reduce_damage_taken.md#fixed-source-evidence) | Consistent | The independently read English counts bleeding enemies and matches the 5% contribution and six-enemy maximum. |
+| Ownership, updates and calculation | No numeric radius, Bleed-owner requirement, update interval or multiplier formula is stated.; `ui / loc_talent_ogryn_damage_reduction_per_bleed_desc / 2f439ba8` | Bleed ownership is not checked; one enemy counts once despite multiple stacks. Recounts every second. Death, expiry or leaving 8m removes contributions. Three enemies turn 100 into 85; six or more turn it into 70; another independent 20% gives 56. [Fixed source and line references](ogryn_nearby_bleeds_reduce_damage_taken.md#fixed-source-evidence) | Not covered by the description | These accepted range, counting and calculation details supplement the English per-enemy wording. |
+
 ## Comparison totals
 
 The 193 listed rules comprise **78 Consistent**, **4 Explicit contradictions**, **104 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

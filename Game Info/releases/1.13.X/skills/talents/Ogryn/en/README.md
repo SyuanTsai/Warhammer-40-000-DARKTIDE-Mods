@@ -61,6 +61,7 @@
 | <img src="https://github.com/user-attachments/assets/5a19ac08-20bc-41ee-8af1-bbc6194fa852" width="32" height="32" alt="Found Some More talent icon"> [Found Some More](#ogryn_free_reload_after_ability) | <ul><li>Replenish 1% of maximum ammo reserve about every 15s; no ability use or reload required.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/58952102-1822-4093-81f9-48b8cbc8f8a7" width="32" height="32" alt="Won't Give In talent icon"> [Won't Give In](#ogryn_knocked_allies_grant_damage_reduction) | <ul><li>Each ally needing help less than 20m away grants 20% damage reduction, up to three allies in a standard team.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/e9d72852-9fa6-4e02-aded-e261adb660f0" width="32" height="32" alt="Crunch! talent icon"> [Crunch!](#ogryn_fully_charged_attacks_gain_damage_and_stagger) | <ul><li>Charging a heavy attack builds up to +30% melee damage and Impact across four stacks; the bonus ends after that sweep.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/669fb8b0-a444-4216-abe1-74f4acc4af85" width="32" height="32" alt="Delight in Destruction talent icon"> [Delight in Destruction](#ogryn_nearby_bleeds_reduce_damage_taken) | <ul><li>Each bleeding enemy within 8m grants 5% damage reduction, up to six enemies / 30%; teammate Bleed also counts.</li></ul> | Talent |
 
 ## Blitz
 
@@ -943,3 +944,19 @@
 - **Impact example**: Base Impact of 100 becomes 130 at full stacks. Whether the enemy staggers still depends on its threshold; Impact is not itself damage.
 
 [Details](ogryn_fully_charged_attacks_gain_damage_and_stagger.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_nearby_bleeds_reduce_damage_taken"></a>
+
+### Delight in Destruction
+
+<img src="https://github.com/user-attachments/assets/669fb8b0-a444-4216-abe1-74f4acc4af85" width="72" height="72" alt="Delight in Destruction talent icon">
+
+- **Condition**: Each bleeding enemy within 8m reduces the damage you take by 5%, counting at most 6 enemies. Bleed applied by teammates also qualifies; multiple Bleed stacks on one enemy still count as one enemy.
+
+- **Damage-reduction example**: Three enemies grant 15% reduction, turning damage of 100 into 85. Six or more give `100 × (1 − 30%) = 70`. With another independent 20% reduction, it becomes `100 × 0.7 × 0.8 = 56`.
+
+- **Updates**: Nearby bleeding enemies are recounted about once per second. Their contribution disappears after death, Bleed ending or leaving range.
+
+[Details](ogryn_nearby_bleeds_reduce_damage_taken.md) · [Back to index](#talent-index)
