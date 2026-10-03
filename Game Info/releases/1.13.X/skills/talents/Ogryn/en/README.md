@@ -47,6 +47,7 @@
 | <img src="https://github.com/user-attachments/assets/67294825-4742-461c-8445-8eabf69981d3" width="32" height="32" alt="The Best Defence talent icon"> [The Best Defence](#ogryn_multi_heavy_toughness) | <ul><li>Hitting at least 2 enemies with one melee attack restores 5% maximum Toughness.</li><li>A qualifying heavy attack restores 15% instead.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/bdf5653a-6df6-4998-a781-ae623083055a" width="32" height="32" alt="Smash 'Em! talent icon"> [Smash 'Em!](#ogryn_single_heavy_toughness) | <ul><li>Hitting exactly 1 enemy with one melee attack restores 5% maximum Toughness.</li><li>A qualifying heavy attack restores 15% instead.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/47f9eea2-c58f-4ed3-8678-e42d2ec1701f" width="32" height="32" alt="Lynchpin talent icon"> [Lynchpin](#ogryn_increased_coherency_toughness) | <ul><li>Your own Coherency Toughness regeneration rate increases by 100%.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/f61476bf-8738-40b1-8c66-63980d690cc7" width="32" height="32" alt="Keep Shooting talent icon"> [Keep Shooting](#ogryn_reload_speed_on_empty) | <ul><li>Starting a reload with an empty clip grants +20% Reload Speed.</li></ul> | Talent |
 
 ## Blitz
 
@@ -703,3 +704,19 @@
 - **Requirement**: Coherency regeneration conditions and the waiting period still apply. This talent changes only the regeneration rate.
 
 [Details](ogryn_increased_coherency_toughness.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_reload_speed_on_empty"></a>
+
+### Keep Shooting
+
+<img src="https://github.com/user-attachments/assets/f61476bf-8738-40b1-8c66-63980d690cc7" width="72" height="72" alt="Keep Shooting talent icon">
+
+- **Trigger**: Start reloading with an empty clip to gain +20% Reload Speed for that reload. Reloading early while ammunition remains does not gain this bonus.
+
+- **Time example**: With only this bonus, a 3s action affected by Reload Speed becomes `3 ÷ (1 + 20%) = 2.5s`, about 16.7% shorter. This is not a direct 20% reduction in duration.
+
+- **Persistence**: The empty-clip condition is checked before reloading. That result is retained during the reload, so inserting ammunition does not immediately remove the bonus.
+
+[Details](ogryn_reload_speed_on_empty.md) · [Back to index](#talent-index)

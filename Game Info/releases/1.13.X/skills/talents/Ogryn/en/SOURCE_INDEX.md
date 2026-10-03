@@ -49,3 +49,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [The Best Defence](ogryn_multi_heavy_toughness.md) / `ogryn_multi_heavy_toughness` | Talent |
 | [Smash 'Em!](ogryn_single_heavy_toughness.md) / `ogryn_single_heavy_toughness` | Talent |
 | [Lynchpin](ogryn_increased_coherency_toughness.md) / `ogryn_increased_coherency_toughness` | Talent |
+| [Keep Shooting](ogryn_reload_speed_on_empty.md) / `ogryn_reload_speed_on_empty` | Talent |
