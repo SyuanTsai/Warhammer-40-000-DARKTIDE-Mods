@@ -223,6 +223,58 @@
           "trait_category": "bespoke_ogryn_heavystubber_p1"
         }
       ]
+    },
+    {
+      "id": "combataxe_p3",
+      "name_zh_tw": "工兵鏟",
+      "name_en": "Sapper Shovel",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_combataxe_p3_m1",
+      "page": "weapons/melee/工兵鏟/README.md",
+      "marks": [
+        {
+          "id": "combataxe_p3_m1",
+          "item": "content/items/weapons/player/melee/combataxe_p3_m1",
+          "name": "軍務部標配工兵鏟",
+          "name_en": "Standard-issue Munitorum Sapper Shovel",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+          "trait_category": "bespoke_combataxe_p3"
+        },
+        {
+          "id": "combataxe_p3_m2",
+          "item": "content/items/weapons/player/melee/combataxe_p3_m2",
+          "name": "軍務部Mk III工兵鏟",
+          "name_en": "Munitorum Mk III Sapper Shovel",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+          "trait_category": "bespoke_combataxe_p3"
+        },
+        {
+          "id": "combataxe_p3_m3",
+          "item": "content/items/weapons/player/melee/combataxe_p3_m3",
+          "name": "軍務部Mk VII工兵鏟",
+          "name_en": "Munitorum Mk VII Sapper Shovel",
+          "template_file": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+          "trait_category": "bespoke_combataxe_p3"
+        }
+      ]
+    },
+    {
+      "id": "saw_p1",
+      "name_zh_tw": "骨鋸",
+      "name_en": "Bone Saw",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_saw_p1_m1",
+      "page": "weapons/melee/骨鋸/README.md",
+      "marks": [
+        {
+          "id": "saw_p1_m1",
+          "item": "content/items/weapons/player/melee/saw_p1_m1",
+          "name": "外科醫師Mk IV骨鋸",
+          "name_en": "Chirurgeon's Mk IV Bone Saw",
+          "template_file": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
+          "trait_category": "bespoke_saw_p1"
+        }
+      ]
     }
   ],
   "variants": [
@@ -543,6 +595,74 @@
         "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_heavystubber_p1_buff_templates.lua",
         "start_line": 11,
         "end_line": 14
+      }
+    },
+    {
+      "id": "weapon_trait_bespoke_combataxe_p3_chained_hits_increases_power",
+      "blessing_id": "decimator",
+      "weapon_id": "combataxe_p3",
+      "page": "entries/屠戮者/weapon_trait_bespoke_combataxe_p3_chained_hits_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層近戰威力",
+        "per_stack_percent": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "max_effective_stacks": 10,
+        "shared_duration_seconds": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p3.lua",
+        "start_line": 10,
+        "end_line": 63
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p3_buff_templates.lua",
+        "start_line": 14,
+        "end_line": 16
+      }
+    },
+    {
+      "id": "weapon_trait_bespoke_saw_p1_chained_hits_increases_power",
+      "blessing_id": "decimator",
+      "weapon_id": "saw_p1",
+      "page": "entries/屠戮者/weapon_trait_bespoke_saw_p1_chained_hits_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層近戰威力",
+        "per_stack_percent": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "max_effective_stacks": 10,
+        "shared_duration_seconds": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_saw_p1.lua",
+        "start_line": 10,
+        "end_line": 63
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_saw_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 15
       }
     }
   ],
@@ -923,6 +1043,62 @@
         "path": "scripts/settings/equipment/weapon_templates/ogryn_heavystubbers/ogryn_heavystubber_p1_m3.lua",
         "import_line": 16,
         "append_line": 881
+      }
+    },
+    {
+      "blessing_id": "decimator",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m1",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_chained_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/chained_hits_increases_power",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 1185
+      }
+    },
+    {
+      "blessing_id": "decimator",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m2",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_chained_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/chained_hits_increases_power",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 1687
+      }
+    },
+    {
+      "blessing_id": "decimator",
+      "weapon_id": "combataxe_p3",
+      "mark_id": "combataxe_p3_m3",
+      "variant_id": "weapon_trait_bespoke_combataxe_p3_chained_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_combataxe_p3/chained_hits_increases_power",
+      "trait_category": "bespoke_combataxe_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua",
+        "import_line": 15,
+        "append_line": 1691
+      }
+    },
+    {
+      "blessing_id": "decimator",
+      "weapon_id": "saw_p1",
+      "mark_id": "saw_p1_m1",
+      "variant_id": "weapon_trait_bespoke_saw_p1_chained_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_saw_p1/chained_hits_increases_power",
+      "trait_category": "bespoke_saw_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1835
       }
     }
   ]

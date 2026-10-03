@@ -4,7 +4,7 @@
 
 <img src="https://github.com/user-attachments/assets/646a2076-d80d-4594-a07c-90f95e230e80" width="72" height="72" alt="屠戮者祝福圖示">
 
-- **觸發方式**：使用帶有此祝福的戰鬥斧或戰術斧，近戰揮擊命中敵人後取得一層。
+- **觸發方式**：使用帶有此祝福的戰鬥斧、戰術斧、工兵鏟或骨鋸，近戰揮擊命中敵人後取得一層。
 
 - 每次揮擊最多取得一層，命中多名敵人仍只取得一層。
 
@@ -25,6 +25,10 @@
 - **切換武器**：離開此武器時加成停止，倒數仍繼續。
 
 - 期限內切回可沿用剩餘層數。
+
+- **特殊攻擊**：軍務部標配工兵鏟的上勾攻擊命中時，也能取得一層。
+
+- Mk III／VII工兵鏟的模式切換、骨鋸的塗層切換本身不取得層數。
 
 ## 威力計算與算例
 
@@ -62,5 +66,7 @@
 |---|---|---|---|
 | [戰鬥斧](../../weapons/melee/戰鬥斧/README.md) | 拉沙德Mk II、安塔克斯Mk V、阿克利斯Mk VIII | I–IV | 每層2／3／4／5%，最多10層 |
 | [戰術斧](../../weapons/melee/戰術斧/README.md) | 埃托克斯Mk II、Mk IV、Mk VII | I–IV | 與本頁戰鬥斧變體相同 |
+| [工兵鏟](../../weapons/melee/工兵鏟/README.md) | 軍務部標配工兵鏟、軍務部Mk III工兵鏟、軍務部Mk VII工兵鏟 | I–IV | 每層2／3／4／5%近戰威力，最多10層；命中刷新2秒、揮空清層 |
+| [骨鋸](../../weapons/melee/骨鋸/README.md) | 外科醫師Mk IV骨鋸 | I–IV | 每層2／3／4／5%近戰威力，最多10層；命中刷新2秒、揮空清層 |
 
 [逐型號與實作](WEAPON_COMPATIBILITY.md)｜[等級數值](TIER_VALUES.md)｜[本體原文比較](LOCALIZATION_COMPARISON.md)｜[百分比檢核](DAMAGE_PERCENTAGE_REVIEW.md)｜[返回祝福目錄](../../README.md)

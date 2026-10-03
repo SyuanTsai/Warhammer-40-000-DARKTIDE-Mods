@@ -56,3 +56,23 @@
 - [切出只移除on_wield](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/player_unit_weapon_extension.lua#L743-L785)。
 
 trait父Buff歸入on_equip，在切出時保留；從配裝卸除武器才移除。子層的持用條件與共同期限因此可支持期限內切回沿用層數。
+
+
+## 其他武器變體
+
+| 用途 | 固定原始碼 |
+|---|---|
+| 工兵鏟等級覆寫 | [工兵鏟等級覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combataxe_p3.lua#L10-L63) |
+| 工兵鏟Buff接入 | [工兵鏟Buff接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combataxe_p3_buff_templates.lua#L14-L16) |
+| UI 工兵鏟 | [UI 工兵鏟](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ui/ui_weapon_pattern_settings.lua#L104) |
+| 軍務部標配工兵鏟匯入 | [軍務部標配工兵鏟匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua#L15) |
+| 軍務部標配工兵鏟接入 | [軍務部標配工兵鏟接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m1.lua#L1183-L1185) |
+| 軍務部Mk III工兵鏟匯入 | [軍務部Mk III工兵鏟匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua#L15) |
+| 軍務部Mk III工兵鏟接入 | [軍務部Mk III工兵鏟接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m2.lua#L1685-L1687) |
+| 軍務部Mk VII工兵鏟匯入 | [軍務部Mk VII工兵鏟匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua#L15) |
+| 軍務部Mk VII工兵鏟接入 | [軍務部Mk VII工兵鏟接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/combat_axes/combataxe_p3_m3.lua#L1689-L1691) |
+| 骨鋸等級覆寫 | [骨鋸等級覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_saw_p1.lua#L10-L63) |
+| 骨鋸Buff接入 | [骨鋸Buff接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_saw_p1_buff_templates.lua#L13-L15) |
+| UI 骨鋸 | [UI 骨鋸](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ui/ui_weapon_pattern_settings.lua#L565) |
+| 外科醫師Mk IV骨鋸匯入 | [外科醫師Mk IV骨鋸匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua#L14) |
+| 外科醫師Mk IV骨鋸接入 | [外科醫師Mk IV骨鋸接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/saws/saw_p1_m1.lua#L1833-L1835) |
