@@ -60,3 +60,15 @@ These effects are provided by the class base configuration. The equipped Blitz a
 [Source evidence and example assumptions](veteran_supression_immunity.md) | [English comparison](LOCALIZATION_COMPARISON.md#veteran_supression_immunity) | [Back to talents](README.md)
 
 ---
+
+<a id="veteran_survivalist_passive"></a>
+
+## Practiced Efficiency
+
+- Your Elite or Specialist kills replenish 1% of your maximum reserve Ammo, at most once every 5s.
+- With 400 maximum reserve rounds and sufficient room, one payout supplies `400 × 1% = 4 rounds`. Fractional rounds carry over; Ammo goes directly into the reserve without loading the magazine.
+- This personal payout is separate from Scavenger or Survivalist. If the 1% passive and the 0.5% Survivalist aura both apply to the same kill, a 400-round maximum reserve gives `400 × (1% + 0.5%) = 6 rounds` for you, subject to the replenishment ceiling.
+
+[Source evidence and example assumptions](veteran_survivalist_passive.md) | [English comparison](LOCALIZATION_COMPARISON.md#veteran_survivalist_passive) | [Back to talents](README.md)
+
+---

@@ -5678,7 +5678,8 @@
         "veteran_base_ranged_damage",
         "veteran_cover_peeking",
         "veteran_frag_grenade",
-        "veteran_supression_immunity"
+        "veteran_supression_immunity",
+        "veteran_survivalist_passive"
       ],
       "checks": []
     },
@@ -5772,7 +5773,8 @@
         "veteran_base_ranged_damage",
         "veteran_cover_peeking",
         "veteran_frag_grenade",
-        "veteran_supression_immunity"
+        "veteran_supression_immunity",
+        "veteran_survivalist_passive"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5879,7 +5881,8 @@
         "veteran_base_ranged_damage",
         "veteran_cover_peeking",
         "veteran_frag_grenade",
-        "veteran_supression_immunity"
+        "veteran_supression_immunity",
+        "veteran_survivalist_passive"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6088,7 +6091,8 @@
         "veteran_base_ranged_damage",
         "veteran_cover_peeking",
         "veteran_frag_grenade",
-        "veteran_supression_immunity"
+        "veteran_supression_immunity",
+        "veteran_survivalist_passive"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -7963,9 +7967,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "db644b099eb77098f3ee0ac01fd45493af656174",
       "chinese_sha256": "0dc4a7b4b85879038ea81f998a1f967b0a35a345ad72cd08fff7af278f018439",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_survivalist_passive"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "added_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_survivalist_passive.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_tdr_on_high_toughness.md",
@@ -9821,6 +9832,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_supression_immunity.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_supression_immunity.md"
+    },
+    {
+      "id": "veteran_survivalist_passive",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_survivalist_passive.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_survivalist_passive.md"
     }
   ],
   "pending_chinese_corrections": [

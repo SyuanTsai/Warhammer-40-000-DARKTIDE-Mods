@@ -208,3 +208,5 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Frag Grenade](veteran_frag_grenade.json): existing base-effect translation and independent English comparison; changed Markdown and links checked. Commit is recoverable through the English file history.
 
 - [Determined](veteran_supression_immunity.json): existing base-effect translation and independent English comparison; changed Markdown and links checked. Commit is recoverable through the English file history.
+
+- [Practiced Efficiency](veteran_survivalist_passive.json): existing base-effect translation and independent English comparison; changed Markdown and links checked. Commit is recoverable through the English file history.
