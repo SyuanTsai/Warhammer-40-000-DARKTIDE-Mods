@@ -85,6 +85,7 @@
 | <img src="https://github.com/user-attachments/assets/4b7cf064-ea83-4334-a484-a222e22af7a3" width="32" height="32" alt="Target Selection talent icon"> [Target Selection](#adamant_pinning_dog_elite_damage) | <ul><li>Killing an Elite or Specialist pinned by your own Cyber-Mastiff grants 15% Damage against Elites and Specialists for 8s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/29a7dad3-3f9c-4679-a37d-680025796f47" width="32" height="32" alt="Target Priority talent icon"> [Target Priority](#adamant_increased_damage_to_high_health) | <ul><li>Deal 15% more damage to enemies above 75% Health.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/fc2bbfe4-50b8-4c9c-b775-20f1c2c33792" width="32" height="32" alt="Canine Morale talent icon"> [Canine Morale](#adamant_pinning_dog_kills_buff_allies) | <ul><li>Killing an enemy pinned by your own Cyber-Mastiff grants you and allies in Coherency 20% Toughness Damage Reduction and 10% of maximum Toughness over 5s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/8a0b3c73-0e7e-4d31-9f7d-385634eae6e3" width="32" height="32" alt="Rapid Movement talent icon"> [Rapid Movement](#adamant_sprinting_sliding) | <ul><li>After a slide ends, gain 5% Sprint Speed for 5s. Kills restore 5% of maximum Stamina, with a 0.75s cooldown.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -1085,3 +1086,15 @@
 - **Examples**: With maximum Toughness 100, recovery is 100 × 10% ÷ 5 = 2 points per second, or 10 over the full 5s, capped at missing Toughness. An isolated incoming Toughness-damage value of 100 becomes 100 × 0.8 = 80.
 
 [Details](adamant_pinning_dog_kills_buff_allies.md) · [Back to index](#talent-index)
+
+<a id="adamant_sprinting_sliding"></a>
+
+### Rapid Movement
+
+<img src="https://github.com/user-attachments/assets/8a0b3c73-0e7e-4d31-9f7d-385634eae6e3" width="72" height="72" alt="Rapid Movement talent icon">
+
+- **Slide speed**: After a slide ends, Sprint Speed increases by 5% for 5s. Another slide restarts the duration. With a starting sprint speed of 6 metres/s, this effect alone gives 6 × 1.05 = 6.3 metres/s.
+
+- **Kill recovery**: Kills restore 5% of maximum Stamina, at most once every 0.75s. No prior slide is required. With maximum Stamina 6, each trigger restores 6 × 5% = 0.3 points, capped at full Stamina.
+
+[Details](adamant_sprinting_sliding.md) · [Back to index](#talent-index)
