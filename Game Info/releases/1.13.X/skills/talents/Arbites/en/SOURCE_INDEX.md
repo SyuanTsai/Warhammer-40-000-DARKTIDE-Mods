@@ -78,3 +78,4 @@ Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be2e9cd9d62e`. The curren
 | [Weight of the Lex](adamant_heavy_attacks_increase_damage.md) / `adamant_heavy_attacks_increase_damage` | Passive talent |
 | [Strike Down](adamant_melee_attacks_on_staggered_rend.md) / `adamant_melee_attacks_on_staggered_rend` | Passive talent |
 | [Zealous Dedication](adamant_crit_chance_on_kill.md) / `adamant_crit_chance_on_kill` | Passive talent |
+| [Prosecution Blow](adamant_crits_rend.md) / `adamant_crits_rend` | Passive talent |

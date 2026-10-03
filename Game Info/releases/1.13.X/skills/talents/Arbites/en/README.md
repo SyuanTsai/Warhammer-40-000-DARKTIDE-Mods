@@ -78,6 +78,7 @@
 | <img src="https://github.com/user-attachments/assets/bff83e5a-48a0-4f4c-b280-3093df526c5d" width="32" height="32" alt="Weight of the Lex talent icon"> [Weight of the Lex](#adamant_heavy_attacks_increase_damage) | <ul><li>After a heavy melee hit, gain 15% Damage for 5s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/fcb8d517-7a08-452a-a577-1ab15af469cb" width="32" height="32" alt="Strike Down talent icon"> [Strike Down](#adamant_melee_attacks_on_staggered_rend) | <ul><li>Melee attacks against staggered enemies gain 15% Rending.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/c776951e-d8de-46cb-ad58-7c14af6b0997" width="32" height="32" alt="Zealous Dedication talent icon"> [Zealous Dedication](#adamant_crit_chance_on_kill) | <ul><li>Kills grant 2 percentage points of Critical Strike Chance per stack, up to 8 stacks, for 10s.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/e650aa60-14d1-446d-9fa3-fed8dd633716" width="32" height="32" alt="Prosecution Blow talent icon"> [Prosecution Blow](#adamant_crits_rend) | <ul><li>Ranged Critical Strikes gain 20% Rending.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -988,3 +989,17 @@
 - **Chance example**: An original 5% Critical Strike Chance becomes 5% + 8 × 2% = 21% at full stacks. This does not multiply the original 5% by 1.16.
 
 [Details](adamant_crit_chance_on_kill.md) · [Back to index](#talent-index)
+
+<a id="adamant_crits_rend"></a>
+
+### Prosecution Blow
+
+<img src="https://github.com/user-attachments/assets/e650aa60-14d1-446d-9fa3-fed8dd633716" width="72" height="72" alt="Prosecution Blow talent icon">
+
+- **How it works**: Ranged Critical Strikes gain 20% Rending, applied directly to the qualifying hit. This does not leave a timed buff stack behind.
+
+- **Armour example**: Isolating the armour stage, assume damage basis 100 and a Carapace armour modifier of 0.5. The original 50 becomes 100 × (0.5 + 0.2) = 70, a 40% increase at this stage. Other critical-hit, weakspot and damage bonuses are calculated in their respective stages.
+
+- **Beyond the armour deficit**: If the original Carapace modifier is already 1, the excess is converted at one quarter. This effect gives 100 × (1 + 0.2 × 0.25) = 105 points. Actual increases vary with the weapon and enemy.
+
+[Details](adamant_crits_rend.md) · [Back to index](#talent-index)
