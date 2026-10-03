@@ -62,8 +62,10 @@
       "kind": "class_support",
       "chinese_blob_sha": "95f8069b9c6fc7bb809f8b6b3f5007b6e2ddd493",
       "chinese_sha256": "802f767b073b1351f3c577fbe69e0ea3f9936580bf7b2fb3514225f74a825d98",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "adamant_whistle"
+      ],
       "checks": []
     },
     {
@@ -73,8 +75,10 @@
       "kind": "class_support",
       "chinese_blob_sha": "241d75819cd3698b42a3ebcd53169f54ec43068e",
       "chinese_sha256": "b618648ec1c480d54191ebfac6f0537de806ebb190996c63b0296f0aadcbf2ab",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "adamant_whistle"
+      ],
       "checks": []
     },
     {
@@ -84,8 +88,10 @@
       "kind": "class_support",
       "chinese_blob_sha": "4ebe81fcba06b8b18c36abeecf0cbb07047ee9a7",
       "chinese_sha256": "e7f56b238087a4d8fcddaf3270ce7f92f024aeec40495b81a6a79ba5b0a0057d",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "adamant_whistle"
+      ],
       "checks": []
     },
     {
@@ -95,8 +101,10 @@
       "kind": "class_support",
       "chinese_blob_sha": "d1ba52251feec900b0b04bf4d9758e7d77307a03",
       "chinese_sha256": "d27b68355984f408df759a0b35b2860f653a3c45bb8db04f9c8c904a42409792",
-      "status": "pending",
-      "accepted_skill_ids": [],
+      "status": "partial",
+      "accepted_skill_ids": [
+        "adamant_whistle"
+      ],
       "checks": []
     },
     {
@@ -1052,9 +1060,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a5eb78555a46e313e03059b1b8dd12d362ef94c8",
       "chinese_sha256": "4985f33d90ac6918d773c77411e2285ba76a6ff03a064165ecfda850d5209409",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_whistle"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_whistle.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/base_cleave_node_buff_medium_1.md",
@@ -9846,6 +9861,14 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_survivalist_passive.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_survivalist_passive.md"
+    },
+    {
+      "id": "adamant_whistle",
+      "scope": "Arbites",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_whistle.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_whistle.md"
     }
   ],
   "pending_chinese_corrections": [
