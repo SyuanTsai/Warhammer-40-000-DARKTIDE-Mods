@@ -55,6 +55,7 @@
 | <img src="https://github.com/user-attachments/assets/72cbf891-ecd4-425c-8d46-97cb4d4863f9" width="32" height="32" alt="Too Stubborn to Die talent icon"> [Too Stubborn to Die](#ogryn_toughness_on_low_health) | <ul><li>While below 50% Health, increase eligible Toughness replenishment amounts by 100%.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/dbfbaef7-b829-41cf-96cb-a9d09192cfbd" width="32" height="32" alt="Batter talent icon"> [Batter](#ogryn_heavy_bleeds) | <ul><li>Melee hits apply 1 Bleed stack; heavy hits apply 4, up to 16 stacks.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/206be198-2a5f-426f-944a-8d85fd74f1d6" width="32" height="32" alt="Hard Knocks talent icon"> [Hard Knocks](#ogryn_staggering_increases_damage) | <ul><li>Enemies staggered by melee attacks take +15% melee damage for 5s; teammates' melee attacks also benefit.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/01fd23cb-46d2-41fa-bfc3-d8b1d17f43a3" width="32" height="32" alt="Unstoppable Momentum talent icon"> [Unstoppable Momentum](#ogryn_movement_speed_after_ranged_kills) | <ul><li>A ranged kill grants +20% Movement Speed for 3s; further ranged kills restart the duration.</li></ul> | Talent |
 
 ## Blitz
 
@@ -841,3 +842,17 @@
 - **Damage example**: Base melee damage of 100 becomes 115 with this effect alone. With Soften Them Up also active, it becomes `100 × (1 + 15% + 15%) = 130`. Ranged damage does not receive this melee damage-taken bonus.
 
 [Details](ogryn_staggering_increases_damage.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_movement_speed_after_ranged_kills"></a>
+
+### Unstoppable Momentum
+
+<img src="https://github.com/user-attachments/assets/01fd23cb-46d2-41fa-bfc3-d8b1d17f43a3" width="72" height="72" alt="Unstoppable Momentum talent icon">
+
+- **Trigger**: A ranged kill grants +20% Movement Speed for 3s. Another ranged kill restarts the duration without increasing the bonus further.
+
+- **Speed example**: A base speed of 5m/s becomes `5 × 1.2 = 6m/s` with no other modifiers. With an existing +10% at the same stage, it becomes `5 × (1 + 10% + 20%) = 6.5m/s`.
+
+[Details](ogryn_movement_speed_after_ranged_kills.md) · [Back to index](#talent-index)

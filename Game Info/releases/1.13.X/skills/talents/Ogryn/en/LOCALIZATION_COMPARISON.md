@@ -659,6 +659,18 @@ Full raw template and formatting: [source evidence](ogryn_staggering_increases_d
 | Melee stagger and target bonus | Enemies staggered by your Melee Attacks take +15% more Melee Damage for 5s.; `ui / loc_talent_ogryn_big_bully_heavy_hits_new_desc / 45b6dfbf` | A surviving target staggered by a melee hit receives melee_damage_taken_modifier 0.15 for 5s; subsequent teammate melee attacks also benefit. [Fixed source and line references](ogryn_staggering_increases_damage.md#fixed-source-evidence) | Consistent | The independently read English describes the accepted target bonus, melee restriction and duration. |
 | Push applicability, refresh and calculation | No push-event rule, survival filter, stack maximum or additive formula is stated.; `ui / loc_talent_ogryn_big_bully_heavy_hits_new_desc / 45b6dfbf` | on_push_hit also qualifies for a minion currently staggered; the debuff has one stack and refreshed duration. Base melee 100 becomes 115, or 130 alongside Soften Them Up's +15%. Ranged damage receives no melee-only bonus. [Fixed source and line references](ogryn_staggering_increases_damage.md#fixed-source-evidence) | Not covered by the description | These accepted applicability limits and calculations supplement the melee-stagger wording. |
 
+
+<a id="ogryn_movement_speed_after_ranged_kills"></a>
+
+## Unstoppable Momentum
+
+Full raw template and formatting: [source evidence](ogryn_movement_speed_after_ranged_kills.md#original-english-template-and-reconstruction). Name hash `683f61ec`. Every row uses `ui / loc_talent_ogryn_ranged_kill_grant_movement_speed_desc / b22afedc`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Ranged-kill speed bonus | +20% Movement Speed for 3s on Ranged Kill.; `ui / loc_talent_ogryn_ranged_kill_grant_movement_speed_desc / b22afedc` | on_ranged_kill activates movement_speed 0.2 for active_duration 3. [Fixed source and line references](ogryn_movement_speed_after_ranged_kills.md#fixed-source-evidence) | Consistent | The independently read English matches the trigger, stat and values. |
+| Refresh and speed calculation | No refresh rule, additive formula or movement-state limits are stated.; `ui / loc_talent_ogryn_ranged_kill_grant_movement_speed_desc / b22afedc` | No cooldown prevents another proc; it overwrites _active_start_time without stacking the bonus. Base 5m/s becomes 6m/s, or 6.5m/s with another same-stage +10%. Movement state, weapon and other limits still affect actual speed. [Fixed source and line references](ogryn_movement_speed_after_ranged_kills.md#fixed-source-evidence) | Not covered by the description | These accepted timing and calculation details supplement the English bonus. |
+
 ## Comparison totals
 
 The 182 listed rules comprise **73 Consistent**, **3 Explicit contradictions**, **99 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain! and the visible-stack threshold in Pained Outburst. These totals apply only to the listed rules.
