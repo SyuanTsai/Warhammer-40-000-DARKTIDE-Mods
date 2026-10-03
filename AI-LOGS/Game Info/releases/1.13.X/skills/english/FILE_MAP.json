@@ -4328,7 +4328,12 @@
         "psyker_throwing_knives_cast_speed",
         "psyker_chain_lightning_improved_target_buff",
         "psyker_chain_lightning_heavy_attacks",
-        "psyker_aura_damage_vs_elites"
+        "psyker_aura_damage_vs_elites",
+        "psyker_cooldown_aura_improved",
+        "psyker_aura_crit_chance_aura",
+        "psyker_shout_vent_warp_charge",
+        "psyker_combat_ability_stance",
+        "psyker_shout_reduces_warp_charge_generation"
       ],
       "checks": []
     },
@@ -4350,7 +4355,12 @@
         "psyker_throwing_knives_cast_speed",
         "psyker_chain_lightning_improved_target_buff",
         "psyker_chain_lightning_heavy_attacks",
-        "psyker_aura_damage_vs_elites"
+        "psyker_aura_damage_vs_elites",
+        "psyker_cooldown_aura_improved",
+        "psyker_aura_crit_chance_aura",
+        "psyker_shout_vent_warp_charge",
+        "psyker_combat_ability_stance",
+        "psyker_shout_reduces_warp_charge_generation"
       ],
       "checks": []
     },
@@ -4372,7 +4382,12 @@
         "psyker_throwing_knives_cast_speed",
         "psyker_chain_lightning_improved_target_buff",
         "psyker_chain_lightning_heavy_attacks",
-        "psyker_aura_damage_vs_elites"
+        "psyker_aura_damage_vs_elites",
+        "psyker_cooldown_aura_improved",
+        "psyker_aura_crit_chance_aura",
+        "psyker_shout_vent_warp_charge",
+        "psyker_combat_ability_stance",
+        "psyker_shout_reduces_warp_charge_generation"
       ],
       "checks": []
     },
@@ -4394,7 +4409,12 @@
         "psyker_throwing_knives_cast_speed",
         "psyker_chain_lightning_improved_target_buff",
         "psyker_chain_lightning_heavy_attacks",
-        "psyker_aura_damage_vs_elites"
+        "psyker_aura_damage_vs_elites",
+        "psyker_cooldown_aura_improved",
+        "psyker_aura_crit_chance_aura",
+        "psyker_shout_vent_warp_charge",
+        "psyker_combat_ability_stance",
+        "psyker_shout_reduces_warp_charge_generation"
       ],
       "checks": []
     },
@@ -4489,9 +4509,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "fc3d63ce289a2ce14f943076b6d036405e544057",
       "chinese_sha256": "a38ab5012782dec02df2f56820970f3c98cc176cea32a7e1d215312aa2b2277a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_aura_crit_chance_aura"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_278_282.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_aura_damage_vs_elites.md",
@@ -4649,9 +4676,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "20161b15b6062e25c093d1cf345f2cb0c77f2f1c",
       "chinese_sha256": "0a8e82a45a321af126b973467b5b385ce0fc2f564470642d1c9f07ab2053f80a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_combat_ability_stance"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_278_282.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_cooldown_aura_improved.md",
@@ -4660,9 +4694,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "35f9d34a907a5ff061760b20d90be29280efe61b",
       "chinese_sha256": "9461c75f1ee578444f44b663de17e8796e06d7e1ebb2cea1de840a56a0eca4ec",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_cooldown_aura_improved"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_278_282.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_crits_empower_next_attack.md",
@@ -5147,9 +5188,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f9725eed369a2da79eae611ff8f2d1f53e408976",
       "chinese_sha256": "0ed089cf18141d8dc3c9425539b3e9cc203b0f1949ff7acda2cd7277388ca54a",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_shout_reduces_warp_charge_generation"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_278_282.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_shout_vent_warp_charge.md",
@@ -5158,9 +5206,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "48060bf226049dfc3ea79a83b2c17860fe87a706",
       "chinese_sha256": "6141128cbd47cc7dac3ba31a14336deab92d02116bdb051d9bcce278bc24636e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_shout_vent_warp_charge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_278_282.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_smite_on_hit.md",
@@ -13611,6 +13666,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_273_277.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_aura_damage_vs_elites.md"
+    },
+    {
+      "id": "psyker_cooldown_aura_improved",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_278_282.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_cooldown_aura_improved.md"
+    },
+    {
+      "id": "psyker_aura_crit_chance_aura",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_278_282.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_aura_crit_chance_aura.md"
+    },
+    {
+      "id": "psyker_shout_vent_warp_charge",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_278_282.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_shout_vent_warp_charge.md"
+    },
+    {
+      "id": "psyker_combat_ability_stance",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_278_282.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_combat_ability_stance.md"
+    },
+    {
+      "id": "psyker_shout_reduces_warp_charge_generation",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_278_282.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_shout_reduces_warp_charge_generation.md"
     }
   ],
   "pending_chinese_corrections": [

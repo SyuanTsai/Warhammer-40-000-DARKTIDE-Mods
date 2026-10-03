@@ -1,10 +1,10 @@
 # English documentation: current continuation
 
-Checkpoint 277 completed on 2026-10-04. [Receipt](psyker_skills_273_277.json) and [FILE_MAP](FILE_MAP.json) record 277 accepted mechanisms. Next item: **278, Seer's Presence**, `psyker_cooldown_aura_improved`. The full goal remains active and unfinished.
+Checkpoint 282 completed on 2026-10-04. [Receipt](psyker_skills_278_282.json) and [FILE_MAP](FILE_MAP.json) record 282 accepted mechanisms. Next item: **283, Warp Rupture**, `psyker_discharge_damage_debuff`. The full goal remains active and unfinished.
 
 The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
 
-Remaining: 369 mechanisms + 24 class-support files + 2 shared files = 395 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 10/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 21 = 10 Consistent / 0 Explicit contradictions / 10 Not covered / 0 No implementation / 1 Cannot confirm. Latest batch commit interval: 448s (7m 28s), 8330f4174→50b0e8d9b. No new confirmed English contradiction. Quick Shards' original token was preserved, with explicit manual reconstruction and unobserved game rendering.
+Remaining: 364 mechanisms + 24 class-support files + 2 shared files = 390 mapped files. Veteran, Arbites and Ogryn class closeouts are accepted; do not repeat them. Psyker has 15/81 accepted mechanisms; its shared-page class check remains for closeout. Psyker comparison totals: 33 = 16 Consistent / 0 Explicit contradictions / 15 Not covered / 0 No implementation / 2 Cannot confirm. Latest batch commit interval: 605s (10m 05s), b99c231b1→833435463. No explicit English contradiction established. Scrier's Gaze retains the Chinese-only area-wording note; English describes a character state. Becalming Eruption tier/configuration uncertainty is preserved.
 
 The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
 

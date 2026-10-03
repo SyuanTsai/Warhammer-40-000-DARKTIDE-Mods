@@ -192,4 +192,4 @@ Full raw template and formatting: [source evidence](psyker_shout_reduces_warp_ch
 
 ## Comparison totals
 
-The 21 listed rules comprise **10 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.
+The 33 listed rules comprise **16 Consistent**, **0 Explicit contradictions**, **15 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.
