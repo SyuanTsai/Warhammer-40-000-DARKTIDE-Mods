@@ -2226,7 +2226,12 @@
         "ogryn_fully_charged_attacks_gain_damage_and_stagger",
         "ogryn_nearby_bleeds_reduce_damage_taken",
         "base_toughness_damage_reduction_node_buff_medium_1",
-        "ogryn_damage_taken_by_all_increases_strength_tdr"
+        "ogryn_damage_taken_by_all_increases_strength_tdr",
+        "ogryn_ally_movement_boost_on_ability",
+        "ogryn_windup_reduces_damage_taken",
+        "ogryn_windup_is_uninterruptible",
+        "ogryn_kills_grant_crit_chance",
+        "ogryn_revenge_damage"
       ],
       "checks": []
     },
@@ -2294,7 +2299,12 @@
         "ogryn_fully_charged_attacks_gain_damage_and_stagger",
         "ogryn_nearby_bleeds_reduce_damage_taken",
         "base_toughness_damage_reduction_node_buff_medium_1",
-        "ogryn_damage_taken_by_all_increases_strength_tdr"
+        "ogryn_damage_taken_by_all_increases_strength_tdr",
+        "ogryn_ally_movement_boost_on_ability",
+        "ogryn_windup_reduces_damage_taken",
+        "ogryn_windup_is_uninterruptible",
+        "ogryn_kills_grant_crit_chance",
+        "ogryn_revenge_damage"
       ],
       "checks": []
     },
@@ -2362,7 +2372,12 @@
         "ogryn_fully_charged_attacks_gain_damage_and_stagger",
         "ogryn_nearby_bleeds_reduce_damage_taken",
         "base_toughness_damage_reduction_node_buff_medium_1",
-        "ogryn_damage_taken_by_all_increases_strength_tdr"
+        "ogryn_damage_taken_by_all_increases_strength_tdr",
+        "ogryn_ally_movement_boost_on_ability",
+        "ogryn_windup_reduces_damage_taken",
+        "ogryn_windup_is_uninterruptible",
+        "ogryn_kills_grant_crit_chance",
+        "ogryn_revenge_damage"
       ],
       "checks": []
     },
@@ -2430,7 +2445,12 @@
         "ogryn_fully_charged_attacks_gain_damage_and_stagger",
         "ogryn_nearby_bleeds_reduce_damage_taken",
         "base_toughness_damage_reduction_node_buff_medium_1",
-        "ogryn_damage_taken_by_all_increases_strength_tdr"
+        "ogryn_damage_taken_by_all_increases_strength_tdr",
+        "ogryn_ally_movement_boost_on_ability",
+        "ogryn_windup_reduces_damage_taken",
+        "ogryn_windup_is_uninterruptible",
+        "ogryn_kills_grant_crit_chance",
+        "ogryn_revenge_damage"
       ],
       "checks": []
     },
@@ -2481,9 +2501,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b9fdf9da18ac020cbe7c708e01ee4decded618e3",
       "chinese_sha256": "1a4bd899412f07b30b00e489e9d08ce7a19be306ef8f69f16b3dbc47126cf404",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_ally_movement_boost_on_ability"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_231_235.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_base_tank_passive.md",
@@ -3147,9 +3174,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "8ebe309ba191b8aa5be516fe720e729debde19fc",
       "chinese_sha256": "b5870339b751071df0c0b6516f6a988b717e7845c0f587f850acd142ef099ec6",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_kills_grant_crit_chance"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_231_235.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_knocked_allies_grant_damage_reduction.md",
@@ -3574,9 +3608,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "37bcd19b5c5021bee2c38750a0b82faa6f870144",
       "chinese_sha256": "c0da7cc664cdcdc0ca5bed2d8fad763d70c479cf9a6569cb44160bbb23549b1d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_revenge_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_231_235.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_single_heavy_toughness.md",
@@ -3845,9 +3886,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a7bcea4817ea60dcbc31eeedee083264e3e274a7",
       "chinese_sha256": "0214830ae6cdfe6b6d4c0675a2dcb3d636b766237fed43b46aac045a520a3bf5",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_windup_is_uninterruptible"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_231_235.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_windup_reduces_damage_taken.md",
@@ -3856,9 +3904,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "7a831d50d33da5386f2b3d96fb0d39bda22e18db",
       "chinese_sha256": "6db3fd9a4242fc584d6979b2713d8b5f7a26bd35414e4f8c6513158b5518f3c9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_windup_reduces_damage_taken"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_231_235.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/BASE_EFFECTS.md",
@@ -12682,6 +12737,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_226_230.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_damage_taken_by_all_increases_strength_tdr.md"
+    },
+    {
+      "id": "ogryn_ally_movement_boost_on_ability",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_231_235.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_ally_movement_boost_on_ability.md"
+    },
+    {
+      "id": "ogryn_windup_reduces_damage_taken",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_231_235.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_windup_reduces_damage_taken.md"
+    },
+    {
+      "id": "ogryn_windup_is_uninterruptible",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_231_235.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_windup_is_uninterruptible.md"
+    },
+    {
+      "id": "ogryn_kills_grant_crit_chance",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_231_235.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_kills_grant_crit_chance.md"
+    },
+    {
+      "id": "ogryn_revenge_damage",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_231_235.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_revenge_damage.md"
     }
   ],
   "pending_chinese_corrections": [
