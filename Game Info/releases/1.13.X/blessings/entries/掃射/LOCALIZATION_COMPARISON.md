@@ -19,7 +19,7 @@
 | 規則 | 本體／既有文件描述與位置 | 程式行為與檔案／方法／行號 | 比較結果 | 理由 |
 |---|---|---|---|
 | 觸發條件 | 同hash中英為shooting enemies in the back／從背後射擊 | [遠程背面判定](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attack_positioning.lua#L9-L65) | 一致 | 只接受ranged且有效背面判定。 |
-| I–IV數值 | trait format_values.damage讀stat_buffs.flanking_damage | 三trait等級覆寫，詳見各實作頁 | 一致 | 32.5/35/37.5/40%，不是template預設50%。 |
+| I–IV數值 | trait format_values.damage讀stat_buffs.flanking_damage | 四trait等級覆寫，詳見各實作頁 | 一致 | 32.5/35/37.5/40%，不是template預設50%。 |
 | 背面範圍 | 本體未列角度 | [遠程背面判定](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/attack_positioning.lua#L9-L65) | 文件未涵蓋 | dot>0涵蓋後半圈；正側面邊界不含。 |
 | 傷害階段 | 本體只寫Damage／傷害 | [先精準後背面加成](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L89-L109)、[背面傷害增量](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L857-L861) | 文件未涵蓋 | 包含finesse後的整筆damage，不只弱點額外部分。 |
 | 同類組合 | 本體未列 | [加算型別](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/buff_settings.lua#L815-L821)、[條件數值與trait覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L689-L747) | 文件未涵蓋 | flanking_damage採基底1的加算。 |

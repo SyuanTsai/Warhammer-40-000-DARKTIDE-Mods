@@ -881,14 +881,6 @@
       "storage": "git"
     },
     {
-      "id": "releases/1.13.X/blessings/2026-10-03-RAKING-FIRE_ACCEPTANCE",
-      "kind": "validation",
-      "scope": "releases/1.13.X/blessings",
-      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-RAKING-FIRE_ACCEPTANCE.json",
-      "date": "2026-10-03",
-      "storage": "git"
-    },
-    {
       "id": "releases/1.13.X/blessings/2026-10-03-RUN-N-GUN_ACCEPTANCE",
       "kind": "validation",
       "scope": "releases/1.13.X/blessings",
@@ -1117,6 +1109,14 @@
       "kind": "validation",
       "scope": "releases/1.13.X/blessings",
       "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-DEFLECTOR_ACCEPTANCE.json",
+      "date": "2026-10-03",
+      "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/blessings/2026-10-03-RAKING-FIRE_ACCEPTANCE",
+      "kind": "validation",
+      "scope": "releases/1.13.X/blessings",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/blessings/2026-10-03-RAKING-FIRE_ACCEPTANCE.json",
       "date": "2026-10-03",
       "storage": "git"
     }
