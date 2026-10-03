@@ -17,3 +17,7 @@
 | [烈焰力場劍](melee/烈焰力場劍/README.md)<br>- Blaze Force Sword | 近戰 | 朦朧Mk II烈焰力場劍、火衛二Mk IV烈焰力場劍、伊利斯Mk V烈焰力場劍 |
 | [骨鋸](melee/骨鋸/README.md)<br>- Bone Saw | 近戰 | 外科醫師Mk IV骨鋸 |
 | [穿音速雙刀](melee/穿音速雙刀/README.md)<br>- Paired Transonic Blades | 近戰 | 西福爾穿音速刀刃 |
+| [廁所鏟](melee/廁所鏟/README.md)<br>- Latrine Shovel | 近戰 | 兇殘Mk III廁所鏟、兇殘Mk XIX廁所鏟、兇殘Mk V廁所鏟 |
+| [動力錘](melee/動力錘/README.md)<br>- Power Maul | 近戰 | 阿克利斯Mk I動力錘 |
+| [作戰大錘&板盾](melee/作戰大錘&板盾/README.md)<br>- Battle Maul & Slab Shield | 近戰 | 歐洛克斯Mk II戰槌&Mk III板盾、果羅姆 Mk I 戰槌與 Mk V 板盾 |
+| [動力劍](melee/動力劍/README.md)<br>- Power Sword | 近戰 | 軍務部Mk III動力劍、軍務部Mk VI動力劍 |

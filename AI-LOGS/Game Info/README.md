@@ -68,3 +68,5 @@ INDEX.json的records記錄id、kind、scope、path、date、storage；path以Rep
 - [屠戮者全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-DECIMATOR_EXTENSION_ACCEPTANCE.json)
 
 - [粉碎全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-SHRED_EXTENSION_ACCEPTANCE.json)
+
+- [野蠻攻勢全部武器變體驗收](releases/1.13.X/blessings/2026-10-03-BRUTAL-MOMENTUM_EXTENSION_ACCEPTANCE.json)

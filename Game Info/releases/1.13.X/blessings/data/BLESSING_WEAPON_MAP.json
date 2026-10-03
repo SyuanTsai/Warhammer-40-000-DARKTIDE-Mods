@@ -473,6 +473,110 @@
           "trait_category": "bespoke_transonic_sword_transonic_knife_p1"
         }
       ]
+    },
+    {
+      "id": "ogryn_club_p1",
+      "name_zh_tw": "廁所鏟",
+      "name_en": "Latrine Shovel",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_ogryn_club_p1_m1",
+      "page": "weapons/melee/廁所鏟/README.md",
+      "marks": [
+        {
+          "id": "ogryn_club_p1_m1",
+          "item": "content/items/weapons/player/melee/ogryn_club_p1_m1",
+          "name": "兇殘Mk III廁所鏟",
+          "name_en": "Brute-Brainer Mk III Latrine Shovel",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m1.lua",
+          "trait_category": "bespoke_ogryn_club_p1"
+        },
+        {
+          "id": "ogryn_club_p1_m2",
+          "item": "content/items/weapons/player/melee/ogryn_club_p1_m2",
+          "name": "兇殘Mk XIX廁所鏟",
+          "name_en": "Brute-Brainer Mk XIX Latrine Shovel",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m2.lua",
+          "trait_category": "bespoke_ogryn_club_p1"
+        },
+        {
+          "id": "ogryn_club_p1_m3",
+          "item": "content/items/weapons/player/melee/ogryn_club_p1_m3",
+          "name": "兇殘Mk V廁所鏟",
+          "name_en": "Brute-Brainer Mk V Latrine Shovel",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m3.lua",
+          "trait_category": "bespoke_ogryn_club_p1"
+        }
+      ]
+    },
+    {
+      "id": "ogryn_powermaul_p1",
+      "name_zh_tw": "動力錘",
+      "name_en": "Power Maul",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_ogryn_powermaul_p1_m1",
+      "page": "weapons/melee/動力錘/README.md",
+      "marks": [
+        {
+          "id": "ogryn_powermaul_p1_m1",
+          "item": "content/items/weapons/player/melee/ogryn_powermaul_p1_m1",
+          "name": "阿克利斯Mk I動力錘",
+          "name_en": "Achlys Mk I Power Maul",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_power_mauls/ogryn_powermaul_p1_m1.lua",
+          "trait_category": "bespoke_ogryn_powermaul_p1"
+        }
+      ]
+    },
+    {
+      "id": "ogryn_powermaul_slabshield_p1",
+      "name_zh_tw": "作戰大錘&板盾",
+      "name_en": "Battle Maul & Slab Shield",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_ogryn_powermaul_slabshield_p1_m1",
+      "page": "weapons/melee/作戰大錘&板盾/README.md",
+      "marks": [
+        {
+          "id": "ogryn_powermaul_slabshield_p1_m1",
+          "item": "content/items/weapons/player/melee/ogryn_powermaul_slabshield_p1_m1",
+          "name": "歐洛克斯Mk II戰槌&Mk III板盾",
+          "name_en": "Orox Mk II Battle Maul & Mk III Slab Shield",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m1.lua",
+          "trait_category": "bespoke_ogryn_slabshield_p1"
+        },
+        {
+          "id": "ogryn_powermaul_slabshield_p1_m2",
+          "item": "content/items/weapons/player/melee/ogryn_powermaul_slabshield_p1_m2",
+          "name": "果羅姆 Mk I 戰槌與 Mk V 板盾",
+          "name_en": "Gromm Mk I Battlemaul & Mk V Slab Shield",
+          "template_file": "scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m2.lua",
+          "trait_category": "bespoke_ogryn_slabshield_p1"
+        }
+      ]
+    },
+    {
+      "id": "powersword_p1",
+      "name_zh_tw": "動力劍",
+      "name_en": "Power Sword",
+      "kind": "melee",
+      "name_key": "loc_weapon_family_powersword_p1_m1",
+      "page": "weapons/melee/動力劍/README.md",
+      "marks": [
+        {
+          "id": "powersword_p1_m1",
+          "item": "content/items/weapons/player/melee/powersword_p1_m1",
+          "name": "軍務部Mk III動力劍",
+          "name_en": "Munitorum Mk III Power Sword",
+          "template_file": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua",
+          "trait_category": "bespoke_powersword_p1"
+        },
+        {
+          "id": "powersword_p1_m2",
+          "item": "content/items/weapons/player/melee/powersword_p1_m2",
+          "name": "軍務部Mk VI動力劍",
+          "name_en": "Munitorum Mk VI Power Sword",
+          "template_file": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
+          "trait_category": "bespoke_powersword_p1"
+        }
+      ]
     }
   ],
   "variants": [
@@ -1150,6 +1254,158 @@
       },
       "icon": "https://github.com/user-attachments/assets/5c459ca2-a946-4f54-b8b5-91c8f0e5b69a",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_169"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_club_p1_infinite_melee_cleave_on_weakspot_kill",
+      "blessing_id": "brutal-momentum",
+      "weapon_id": "ogryn_club_p1",
+      "page": "entries/野蠻攻勢/weapon_trait_bespoke_ogryn_club_p1_infinite_melee_cleave_on_weakspot_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "近戰弱點額外傷害百分比",
+        "percent": [
+          7.5,
+          10,
+          12.5,
+          15
+        ],
+        "eligible_prior_kills_maximum": 2,
+        "duration_seconds": null,
+        "stacks": null,
+        "exclude_ogryn_hit_mass": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p1.lua",
+        "start_line": 161,
+        "end_line": 200
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p1_buff_templates.lua",
+        "start_line": 13,
+        "end_line": 13
+      },
+      "icon": "https://github.com/user-attachments/assets/6c47b470-d79e-4ffd-bf34-7d0b080ad5c0",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_178"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_powermaul_p1_infinite_melee_cleave_on_weakspot_kill",
+      "blessing_id": "brutal-momentum",
+      "weapon_id": "ogryn_powermaul_p1",
+      "page": "entries/野蠻攻勢/weapon_trait_bespoke_ogryn_powermaul_p1_infinite_melee_cleave_on_weakspot_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "近戰弱點額外傷害百分比",
+        "percent": [
+          7.5,
+          10,
+          12.5,
+          15
+        ],
+        "eligible_prior_kills_maximum": 2,
+        "duration_seconds": null,
+        "stacks": null,
+        "exclude_ogryn_hit_mass": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_powermaul_p1.lua",
+        "start_line": 101,
+        "end_line": 140
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_powermaul_p1_buff_templates.lua",
+        "start_line": 10,
+        "end_line": 10
+      },
+      "icon": "https://github.com/user-attachments/assets/6c47b470-d79e-4ffd-bf34-7d0b080ad5c0",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_178"
+    },
+    {
+      "id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_infinite_melee_cleave_on_weakspot_kill",
+      "blessing_id": "brutal-momentum",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "page": "entries/野蠻攻勢/weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_infinite_melee_cleave_on_weakspot_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "近戰弱點額外傷害百分比",
+        "percent": [
+          7.5,
+          10,
+          12.5,
+          15
+        ],
+        "eligible_prior_kills_maximum": 2,
+        "duration_seconds": null,
+        "stacks": null,
+        "exclude_ogryn_hit_mass": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_powermaul_slabshield_p1.lua",
+        "start_line": 101,
+        "end_line": 140
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_powermaul_slabshield_p1_buff_templates.lua",
+        "start_line": 21,
+        "end_line": 21
+      },
+      "icon": "https://github.com/user-attachments/assets/6c47b470-d79e-4ffd-bf34-7d0b080ad5c0",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_178"
+    },
+    {
+      "id": "weapon_trait_bespoke_powersword_p1_infinite_melee_cleave_on_weakspot_kill",
+      "blessing_id": "brutal-momentum",
+      "weapon_id": "powersword_p1",
+      "page": "entries/野蠻攻勢/weapon_trait_bespoke_powersword_p1_infinite_melee_cleave_on_weakspot_kill.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "近戰弱點額外傷害百分比",
+        "percent": [
+          7.5,
+          10,
+          12.5,
+          15
+        ],
+        "eligible_prior_kills_maximum": 2,
+        "duration_seconds": null,
+        "stacks": null,
+        "exclude_ogryn_hit_mass": true
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p1.lua",
+        "start_line": 125,
+        "end_line": 164
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p1_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 12
+      },
+      "icon": "https://github.com/user-attachments/assets/6c47b470-d79e-4ffd-bf34-7d0b080ad5c0",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_178"
     }
   ],
   "bindings": [
@@ -1823,6 +2079,118 @@
         "path": "scripts/settings/equipment/weapon_templates/transonic_sword_transonic_knife/transonic_sword_transonic_knife_p1_m1.lua",
         "import_line": 16,
         "append_line": 3179
+      }
+    },
+    {
+      "blessing_id": "brutal-momentum",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_infinite_melee_cleave_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/infinite_melee_cleave_on_weakspot_kill",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 1397
+      }
+    },
+    {
+      "blessing_id": "brutal-momentum",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_infinite_melee_cleave_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/infinite_melee_cleave_on_weakspot_kill",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1670
+      }
+    },
+    {
+      "blessing_id": "brutal-momentum",
+      "weapon_id": "ogryn_club_p1",
+      "mark_id": "ogryn_club_p1_m3",
+      "variant_id": "weapon_trait_bespoke_ogryn_club_p1_infinite_melee_cleave_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_club_p1/infinite_melee_cleave_on_weakspot_kill",
+      "trait_category": "bespoke_ogryn_club_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m3.lua",
+        "import_line": 17,
+        "append_line": 1659
+      }
+    },
+    {
+      "blessing_id": "brutal-momentum",
+      "weapon_id": "ogryn_powermaul_p1",
+      "mark_id": "ogryn_powermaul_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_p1_infinite_melee_cleave_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_powermaul_p1/infinite_melee_cleave_on_weakspot_kill",
+      "trait_category": "bespoke_ogryn_powermaul_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_power_mauls/ogryn_powermaul_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 2346
+      }
+    },
+    {
+      "blessing_id": "brutal-momentum",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "mark_id": "ogryn_powermaul_slabshield_p1_m1",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_infinite_melee_cleave_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_slabshield_p1/infinite_melee_cleave_on_weakspot_kill",
+      "trait_category": "bespoke_ogryn_slabshield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m1.lua",
+        "import_line": 17,
+        "append_line": 1773
+      }
+    },
+    {
+      "blessing_id": "brutal-momentum",
+      "weapon_id": "ogryn_powermaul_slabshield_p1",
+      "mark_id": "ogryn_powermaul_slabshield_p1_m2",
+      "variant_id": "weapon_trait_bespoke_ogryn_powermaul_slabshield_p1_infinite_melee_cleave_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_ogryn_slabshield_p1/infinite_melee_cleave_on_weakspot_kill",
+      "trait_category": "bespoke_ogryn_slabshield_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m2.lua",
+        "import_line": 17,
+        "append_line": 1399
+      }
+    },
+    {
+      "blessing_id": "brutal-momentum",
+      "weapon_id": "powersword_p1",
+      "mark_id": "powersword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_powersword_p1_infinite_melee_cleave_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_powersword_p1/infinite_melee_cleave_on_weakspot_kill",
+      "trait_category": "bespoke_powersword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua",
+        "import_line": 12,
+        "append_line": 1268
+      }
+    },
+    {
+      "blessing_id": "brutal-momentum",
+      "weapon_id": "powersword_p1",
+      "mark_id": "powersword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_powersword_p1_infinite_melee_cleave_on_weakspot_kill",
+      "trait_item": "content/items/traits/bespoke_powersword_p1/infinite_melee_cleave_on_weakspot_kill",
+      "trait_category": "bespoke_powersword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
+        "import_line": 12,
+        "append_line": 1626
       }
     }
   ]

@@ -52,3 +52,44 @@ item.icon `content/ui/textures/icons/traits/weapon_trait_178`；[原圖](https:/
 
 
 關鍵字條件沿用conditional_stat_buffs_func：[初始化](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L130-L144)、[條件關鍵字](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L815-L840)。
+
+
+## 其他武器變體
+
+| 用途 | 固定原始碼 |
+|---|---|
+| 廁所鏟等級覆寫 | [廁所鏟等級覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_club_p1.lua#L161-L200) |
+| 廁所鏟Buff接入 | [廁所鏟Buff接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_club_p1_buff_templates.lua#L13) |
+| UI 廁所鏟 | [UI 廁所鏟](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ui/ui_weapon_pattern_settings.lua#L286) |
+| 兇殘Mk III廁所鏟匯入 | [兇殘Mk III廁所鏟匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m1.lua#L16) |
+| 兇殘Mk III廁所鏟接入 | [兇殘Mk III廁所鏟接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m1.lua#L1395-L1397) |
+| 兇殘Mk XIX廁所鏟匯入 | [兇殘Mk XIX廁所鏟匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m2.lua#L17) |
+| 兇殘Mk XIX廁所鏟接入 | [兇殘Mk XIX廁所鏟接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m2.lua#L1668-L1670) |
+| 兇殘Mk V廁所鏟匯入 | [兇殘Mk V廁所鏟匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m3.lua#L17) |
+| 兇殘Mk V廁所鏟接入 | [兇殘Mk V廁所鏟接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_clubs/ogryn_club_p1_m3.lua#L1657-L1659) |
+| 動力錘等級覆寫 | [動力錘等級覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_powermaul_p1.lua#L101-L140) |
+| 動力錘Buff接入 | [動力錘Buff接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_powermaul_p1_buff_templates.lua#L10) |
+| UI 動力錘 | [UI 動力錘](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ui/ui_weapon_pattern_settings.lua#L374) |
+| 阿克利斯Mk I動力錘匯入 | [阿克利斯Mk I動力錘匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_power_mauls/ogryn_powermaul_p1_m1.lua#L16) |
+| 阿克利斯Mk I動力錘接入 | [阿克利斯Mk I動力錘接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_power_mauls/ogryn_powermaul_p1_m1.lua#L2344-L2346) |
+| 作戰大錘&板盾等級覆寫 | [作戰大錘&板盾等級覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_ogryn_powermaul_slabshield_p1.lua#L101-L140) |
+| 作戰大錘&板盾Buff接入 | [作戰大錘&板盾Buff接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_ogryn_powermaul_slabshield_p1_buff_templates.lua#L21) |
+| UI 作戰大錘&板盾 | [UI 作戰大錘&板盾](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ui/ui_weapon_pattern_settings.lua#L387) |
+| 歐洛克斯Mk II戰槌&Mk III板盾匯入 | [歐洛克斯Mk II戰槌&Mk III板盾匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m1.lua#L17) |
+| 歐洛克斯Mk II戰槌&Mk III板盾接入 | [歐洛克斯Mk II戰槌&Mk III板盾接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m1.lua#L1771-L1773) |
+| 果羅姆 Mk I 戰槌與 Mk V 板盾匯入 | [果羅姆 Mk I 戰槌與 Mk V 板盾匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m2.lua#L17) |
+| 果羅姆 Mk I 戰槌與 Mk V 板盾接入 | [果羅姆 Mk I 戰槌與 Mk V 板盾接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m2.lua#L1397-L1399) |
+| 動力劍等級覆寫 | [動力劍等級覆寫](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_powersword_p1.lua#L125-L164) |
+| 動力劍Buff接入 | [動力劍Buff接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_powersword_p1_buff_templates.lua#L12) |
+| UI 動力劍 | [UI 動力劍](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/ui/ui_weapon_pattern_settings.lua#L516) |
+| 軍務部Mk III動力劍匯入 | [軍務部Mk III動力劍匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua#L12) |
+| 軍務部Mk III動力劍接入 | [軍務部Mk III動力劍接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m1.lua#L1266-L1268) |
+| 軍務部Mk VI動力劍匯入 | [軍務部Mk VI動力劍匯入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua#L12) |
+| 軍務部Mk VI動力劍接入 | [軍務部Mk VI動力劍接入](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua#L1624-L1626) |
+
+
+## 預設值與特殊動作
+
+- [覆寫值讀取](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L695-L712)以trait stat_buffs覆寫value；[條件屬性](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/buff/buffs/buff.lua#L735-L747)使用同一函式。共用0.5被7.5／10／12.5／15%取代，不另外增加50%。
+- [盾推](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m1.lua#L1289-L1295)為push；[推後攻擊](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/settings/equipment/weapon_templates/ogryn_powermaul_slabshield/ogryn_powermaul_slabshield_p1_m1.lua#L1346-L1360)為sweep。質量與順位回退在ActionSweep，不是ActionPush。
+- [動力錘特殊爆炸](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/special_classes/weapon_special_explode_on_impact_cooldown.lua#L69-L103)傳入attack_types.explosion，未執行ActionSweep的回退分支。弱點加成的近戰判定見[結算](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/attack/damage_calculation.lua#L713-L724)。
