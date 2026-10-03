@@ -312,4 +312,4 @@ Full raw template and formatting: [source evidence](psyker_sphere_shield.md#orig
 
 ## Comparison totals
 
-The 43 listed rules comprise **21 Consistent**, **0 Explicit contradictions**, **20 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.
+The 53 listed rules comprise **26 Consistent**, **0 Explicit contradictions**, **25 Not covered by the description**, **0 No corresponding implementation evidence found** and **2 Cannot confirm**.

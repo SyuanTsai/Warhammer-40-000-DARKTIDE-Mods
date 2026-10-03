@@ -4338,7 +4338,12 @@
         "psyker_warpfire_on_shout",
         "psyker_overcharge_weakspot_kill_bonuses",
         "psyker_overcharge_increased_movement_speed",
-        "psyker_2_tier_3_name_2"
+        "psyker_2_tier_3_name_2",
+        "psyker_overcharge_reduced_warp_charge",
+        "psyker_combat_ability_force_field",
+        "psyker_shield_extra_charge",
+        "psyker_boost_allies_in_sphere",
+        "psyker_sphere_shield"
       ],
       "checks": []
     },
@@ -4370,7 +4375,12 @@
         "psyker_warpfire_on_shout",
         "psyker_overcharge_weakspot_kill_bonuses",
         "psyker_overcharge_increased_movement_speed",
-        "psyker_2_tier_3_name_2"
+        "psyker_2_tier_3_name_2",
+        "psyker_overcharge_reduced_warp_charge",
+        "psyker_combat_ability_force_field",
+        "psyker_shield_extra_charge",
+        "psyker_boost_allies_in_sphere",
+        "psyker_sphere_shield"
       ],
       "checks": []
     },
@@ -4402,7 +4412,12 @@
         "psyker_warpfire_on_shout",
         "psyker_overcharge_weakspot_kill_bonuses",
         "psyker_overcharge_increased_movement_speed",
-        "psyker_2_tier_3_name_2"
+        "psyker_2_tier_3_name_2",
+        "psyker_overcharge_reduced_warp_charge",
+        "psyker_combat_ability_force_field",
+        "psyker_shield_extra_charge",
+        "psyker_boost_allies_in_sphere",
+        "psyker_sphere_shield"
       ],
       "checks": []
     },
@@ -4434,7 +4449,12 @@
         "psyker_warpfire_on_shout",
         "psyker_overcharge_weakspot_kill_bonuses",
         "psyker_overcharge_increased_movement_speed",
-        "psyker_2_tier_3_name_2"
+        "psyker_2_tier_3_name_2",
+        "psyker_overcharge_reduced_warp_charge",
+        "psyker_combat_ability_force_field",
+        "psyker_shield_extra_charge",
+        "psyker_boost_allies_in_sphere",
+        "psyker_sphere_shield"
       ],
       "checks": []
     },
@@ -4594,9 +4614,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "78a0a1b61f7f96937e4a41b4a11ac9fba7d70b89",
       "chinese_sha256": "0643741ef54be93fa15ad541dade361096589f41e3e27710dbe4ccc47dcc9f99",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_boost_allies_in_sphere"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_288_292.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_brain_burst_improved.md",
@@ -4692,9 +4719,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6c84bb31c41f4be25f647738d061bd173e1022cc",
       "chinese_sha256": "5f3bde7165c20dd2505428e627e55a074041fa1112c87c7ad0bdd2d70eaa7568",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_combat_ability_force_field"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_288_292.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_combat_ability_stance.md",
@@ -5141,9 +5175,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "94fcf5ca3894ac16d28ce1a488db54c3e02f2865",
       "chinese_sha256": "ceffd9f12a4f1060880544059c412cf85c899a6a8d3b8b95556820aab9b8b481",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_overcharge_reduced_warp_charge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_288_292.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_overcharge_stance_infinite_casting.md",
@@ -5214,9 +5255,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "397c5aa066f61e205cf528495ec97571a5c8c981",
       "chinese_sha256": "d6c158b1f7458b09e87c424f6b42d0c3705d0d071bc9a130794c835771b1990e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_shield_extra_charge"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_288_292.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_shield_stun_passive.md",
@@ -5290,9 +5338,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "7ba21bdeadf2420360eaafea42d766d9dc3fa683",
       "chinese_sha256": "7fa22797e045ac6fee26a25bab85753eb351972e68d0e6c495ee202855fe127d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "psyker_sphere_shield"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_288_292.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Psyker/psyker_spread_warpfire_on_kill.md",
@@ -13801,6 +13856,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_283_287.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_2_tier_3_name_2.md"
+    },
+    {
+      "id": "psyker_overcharge_reduced_warp_charge",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_288_292.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_overcharge_reduced_warp_charge.md"
+    },
+    {
+      "id": "psyker_combat_ability_force_field",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_288_292.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_combat_ability_force_field.md"
+    },
+    {
+      "id": "psyker_shield_extra_charge",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_288_292.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_shield_extra_charge.md"
+    },
+    {
+      "id": "psyker_boost_allies_in_sphere",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_288_292.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_boost_allies_in_sphere.md"
+    },
+    {
+      "id": "psyker_sphere_shield",
+      "scope": "Psyker",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/psyker_skills_288_292.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Psyker/en/psyker_sphere_shield.md"
     }
   ],
   "pending_chinese_corrections": [
