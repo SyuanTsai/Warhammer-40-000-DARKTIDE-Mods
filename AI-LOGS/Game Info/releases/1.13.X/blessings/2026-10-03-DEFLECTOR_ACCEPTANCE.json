@@ -1,0 +1,398 @@
+{
+  "date": "2026-10-03",
+  "blessing": "deflector",
+  "scope": "all same-name variants in corrected UI/item/template intersection",
+  "source_commit": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "source_version": "1.13.1",
+  "player_page": "Game Info/releases/1.13.X/blessings/entries/偏轉/README.md",
+  "added_variants": [
+    "weapon_trait_bespoke_forcesword_2h_p1_can_block_ranged"
+  ],
+  "added_binding_count": 2,
+  "total_variants": 1,
+  "total_bindings": 2,
+  "primary_review": "Sol directly reviewed fixed Git objects, all tier overrides, actual template bindings, execution-chain applicability and the current player examples.",
+  "collaboration": {
+    "complete": true,
+    "model": "gpt-6-luna",
+    "reasoning_effort": "max",
+    "agent": "/root/blessing_bindings",
+    "scope": "oneboundvariant/2bindings independent research plus primary cross-review",
+    "final_document_review": {
+      "primary_config_accepted": true,
+      "required_corrections": [],
+      "supplement_file": "AI-LOGS/Game Info/local/blessings/2026-10-03/deflector-agent-supplement.json",
+      "findings": [
+        {
+          "topic": "block angle",
+          "conclusion": "Block._calculate_block_angle compares the player's horizontal facing with the horizontal direction from the player to the attacking unit's position; it does not use a projectile's incoming trajectory. The default inner threshold is 0.33π = 59.4° to either side of facing, for a total front cone of 118.8°.",
+          "refs": [
+            {
+              "path": "scripts/utilities/attack/block.lua",
+              "start": 27,
+              "end": 30
+            },
+            {
+              "path": "scripts/utilities/attack/block.lua",
+              "start": 322,
+              "end": 356
+            }
+          ]
+        },
+        {
+          "topic": "ranged block-cost interpolation",
+          "conclusion": "In linesman_rangedblock, block_cost_ranged.inner lerp_basic=0.75 and lerp_perfect=0.25 are interpolation endpoints, not ordinary/perfect block costs. The two supported force-sword variants use this template. Their defence stat maps to stamina_trait_templates.thunderhammer_p1_m1_defence_stat, which adjusts block_cost_default inner/outer, push_cost, and sprint cost but has no block_cost_ranged target. With no ranged-target lerp value, the resolver uses DEFAULT_FALLBACK_LERP_VALUE=0.5, producing resolved ranged inner cost lerp(0.75,0.25,0.5)=0.5. With all other cost and payment modifiers equal to 1, Deflector I–IV therefore yield 0.3875, 0.375, 0.3625, and 0.35 stamina points before a separate stamina_cost_multiplier.",
+          "refs": [
+            {
+              "path": "scripts/settings/stamina/weapon_stamina_templates.lua",
+              "start": 81,
+              "end": 107
+            },
+            {
+              "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+              "start": 2475,
+              "end": 2479
+            },
+            {
+              "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+              "start": 2390,
+              "end": 2394
+            },
+            {
+              "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m1.lua",
+              "start": 2768,
+              "end": 2775
+            },
+            {
+              "path": "scripts/settings/equipment/weapon_templates/force_swords_2h/forcesword_2h_p1_m2.lua",
+              "start": 2683,
+              "end": 2690
+            },
+            {
+              "path": "scripts/settings/equipment/weapon_templates/weapon_trait_templates/stamina_trait_templates.lua",
+              "start": 17,
+              "end": 48
+            },
+            {
+              "path": "scripts/settings/equipment/weapon_templates/weapon_tweak_template_settings.lua",
+              "start": 7,
+              "end": 11
+            },
+            {
+              "path": "scripts/extension_systems/weapon/utilities/weapon_tweak_templates.lua",
+              "start": 85,
+              "end": 143
+            },
+            {
+              "path": "scripts/extension_systems/weapon/utilities/weapon_tweak_templates.lua",
+              "start": 371,
+              "end": 405
+            },
+            {
+              "path": "scripts/extension_systems/weapon/utilities/weapon_tweak_templates.lua",
+              "start": 484,
+              "end": 500
+            },
+            {
+              "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_2h_p1.lua",
+              "start": 112,
+              "end": 132
+            },
+            {
+              "path": "scripts/utilities/attack/block.lua",
+              "start": 130,
+              "end": 145
+            },
+            {
+              "path": "scripts/utilities/attack/block.lua",
+              "start": 275,
+              "end": 311
+            },
+            {
+              "path": "scripts/utilities/attack/stamina.lua",
+              "start": 14,
+              "end": 27
+            }
+          ]
+        },
+        {
+          "topic": "conditional stat and keyword gates",
+          "conclusion": "The conditional block_cost_multiplier uses is_item_slot_wielded and the per-tier override replaces the base conditional value 1 with 0.775/0.75/0.725/0.7. The cost reduction applies while the matching weapon slot is wielded and does not require active blocking; after switching away, the held-slot condition prevents this item's multiplier and ranged keyword from contributing at the next buff-stat/keyword update. Separately, the conditional keyword inherits the held-slot predicate; check_active_func controls the buff's active/inactive status, not its stat or keyword calculation. Block.is_blocking itself requires an active block state before it accepts the ranged keyword. The parent config reflects this separation.",
+          "refs": [
+            {
+              "path": "scripts/settings/buff/weapon_traits_buff_templates/base_weapon_trait_buff_templates.lua",
+              "start": 3001,
+              "end": 3012
+            },
+            {
+              "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_2h_p1.lua",
+              "start": 112,
+              "end": 132
+            },
+            {
+              "path": "scripts/settings/buff/helper_functions/conditional_functions.lua",
+              "start": 43,
+              "end": 60
+            },
+            {
+              "path": "scripts/settings/buff/helper_functions/conditional_functions.lua",
+              "start": 216,
+              "end": 236
+            },
+            {
+              "path": "scripts/extension_systems/buff/buffs/buff.lua",
+              "start": 135,
+              "end": 142
+            },
+            {
+              "path": "scripts/extension_systems/buff/buffs/buff.lua",
+              "start": 689,
+              "end": 747
+            },
+            {
+              "path": "scripts/extension_systems/buff/buffs/buff.lua",
+              "start": 808,
+              "end": 838
+            },
+            {
+              "path": "scripts/extension_systems/buff/buffs/buff.lua",
+              "start": 936,
+              "end": 950
+            },
+            {
+              "path": "scripts/extension_systems/buff/buffs/buff.lua",
+              "start": 1015,
+              "end": 1030
+            },
+            {
+              "path": "scripts/extension_systems/buff/buff_extension_base.lua",
+              "start": 330,
+              "end": 354
+            },
+            {
+              "path": "scripts/extension_systems/buff/player_unit_buff_extension.lua",
+              "start": 131,
+              "end": 145
+            },
+            {
+              "path": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+              "start": 685,
+              "end": 727
+            },
+            {
+              "path": "scripts/extension_systems/weapon/player_unit_weapon_extension.lua",
+              "start": 743,
+              "end": 778
+            },
+            {
+              "path": "scripts/utilities/attack/block.lua",
+              "start": 71,
+              "end": 100
+            }
+          ]
+        }
+      ]
+    },
+    "draft_corrections": [
+      "Primary corrected single-side59.4 versus total118.8 degrees",
+      "Primary replaced falsely named perfect-block cost with actual template interpolation/fallback.5",
+      "Primary traced held conditional-stat tier override and separate keyword/Block blocking gates",
+      "Peer corrected keyword gate versus Buff activity;primary directly verified and updated"
+    ],
+    "parallel_execution": {
+      "groups": [
+        "deflector",
+        "wrath",
+        "executor"
+      ],
+      "max_groups": 3,
+      "shared_files_written_by": "primary only"
+    }
+  },
+  "image": {
+    "new_issue_attachment": true,
+    "attachment": "https://github.com/user-attachments/assets/ce4a8d9f-8ffc-4194-bfbd-ef4db317aaf5",
+    "icon_consistency_verified": true,
+    "attachment_validation": {
+      "id": "deflector",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_081",
+      "source": "https://gameslantern.com/storage/sites/darktide/exporter/content/ui/textures/icons/traits/weapon_trait_081.png",
+      "attachment": "https://github.com/user-attachments/assets/ce4a8d9f-8ffc-4194-bfbd-ef4db317aaf5",
+      "issue": "https://github.com/SyuanTsai/Media-Assets/issues/14",
+      "comment": "https://github.com/SyuanTsai/Media-Assets/issues/14#issuecomment-5967781697",
+      "acquired_date": "2026-10-03",
+      "sha256": "9309886adfa54143fcc2197d632f57543eaffed5b1d90f7b4d2b6c55fc5761b7",
+      "content_type": "image/png",
+      "size": 3947,
+      "dimensions": [
+        128,
+        128
+      ],
+      "alt": "偏轉祝福圖示",
+      "public_download_status": 200,
+      "hash_verified": true,
+      "display_verified": true,
+      "display_review": "Primary inspected actual public Issue attachment pixels;128×128 and matching source/public SHA-256."
+    }
+  },
+  "validation": {
+    "gfm_parse": {
+      "files": 353,
+      "tables": 294,
+      "rows": 2616,
+      "lists": 484
+    },
+    "source_mapping_checks": {
+      "source_ranges_verified": 1095,
+      "source_files": 344,
+      "bindings": 209,
+      "variants": 110,
+      "formula_checks": "passed"
+    },
+    "remaining_inventory_exact_partition": true,
+    "gameplay_test": "not run",
+    "faster_enabled": false,
+    "game-info": {
+      "markdown_files": 1053,
+      "existing_errors": 1,
+      "new_errors": 0
+    },
+    "ai-logs": {
+      "markdown_files": 38,
+      "existing_errors": 8,
+      "new_errors": 0
+    },
+    "prompt": {
+      "markdown_files": 4,
+      "existing_errors": 0,
+      "new_errors": 0
+    },
+    "blessings": {
+      "markdown_files": 353,
+      "existing_errors": 0,
+      "new_errors": 0
+    }
+  },
+  "remaining_counts": {
+    "name_groups": 135,
+    "not_started_name_groups": 135,
+    "partial_name_groups": 0,
+    "remaining_variants": 478,
+    "remaining_bindings": 959,
+    "unresolved": 58,
+    "definitions_outside_intersection": 105
+  },
+  "remaining_receipt": {
+    "path": "AI-LOGS/Game Info/local/blessings/2026-10-03/remaining-tasks.json",
+    "sha256": "86d286732c0ffe3c1fd49036aef035123eaf31c527977aba6ef1e9171352ba84"
+  },
+  "previous_local_commit": "b6ae97337d073a2219ffebfd3f39b90c0b7d3d03",
+  "current_blessing_formula_review": {
+    "reviewed_by": "Sol/xhigh",
+    "fixed_source_read": true,
+    "angles": {
+      "single_side_degrees": 59.4,
+      "total_cone_degrees": 118.8,
+      "based_on": "player facing and attacker horizontal position"
+    },
+    "ranged_cost": {
+      "resolved_inner": 0.5,
+      "fallback_lerp": 0.5,
+      "tier_results": [
+        0.3875,
+        0.375,
+        0.3625,
+        0.35
+      ],
+      "lerp_perfect_does_not_mean_perfect_block": true
+    },
+    "tier_multiplier": [
+      0.775,
+      0.75,
+      0.725,
+      0.7
+    ],
+    "cost_condition": "tier overrides conditional_stat_buffs through held gate",
+    "keyword_condition": "held fallback gate; actual block additionally requiresblocking then type/angle/cost/blockable",
+    "stack_cooldown_duration": "none",
+    "gameplay_test": "not run"
+  },
+  "ui_name_review": {
+    "bindings": [
+      {
+        "weapon_id": "forcesword_2h_p1",
+        "mark_id": "forcesword_2h_p1_m1",
+        "display_name_en": "Blaze Force Greatsword Covenant Mk VI",
+        "display_name_zh_tw": "烈焰力場巨劍 誓約 Mk VI",
+        "current_name_keys": [
+          [
+            "loc_weapon_family_forcesword_2h_p1_m1",
+            "Blaze Force Greatsword",
+            "烈焰力場巨劍",
+            "67f4f52c"
+          ],
+          [
+            "loc_weapon_pattern_forcesword_2h_p1_m1",
+            "Covenant",
+            "誓約",
+            "4d5623a6"
+          ],
+          [
+            "loc_weapon_mark_forcesword_2h_p1_m1",
+            "Mk VI",
+            "Mk VI",
+            "61d4537d"
+          ]
+        ],
+        "legacy_metadata_display_name_key": "loc_forcesword_2h_p1_m1"
+      },
+      {
+        "weapon_id": "forcesword_2h_p1",
+        "mark_id": "forcesword_2h_p1_m2",
+        "display_name_en": "Blaze Force Greatsword Covenant Mk VIII",
+        "display_name_zh_tw": "烈焰力場巨劍 誓約 Mk VIII",
+        "current_name_keys": [
+          [
+            "loc_weapon_family_forcesword_2h_p1_m2",
+            "Blaze Force Greatsword",
+            "烈焰力場巨劍",
+            "f6519cb6"
+          ],
+          [
+            "loc_weapon_pattern_forcesword_2h_p1_m2",
+            "Covenant",
+            "誓約",
+            "41cb3cb1"
+          ],
+          [
+            "loc_weapon_mark_forcesword_2h_p1_m2",
+            "Mk VIII",
+            "Mk VIII",
+            "c80ffcba"
+          ]
+        ],
+        "legacy_metadata_display_name_key": "loc_forcesword_2h_p1_m2"
+      }
+    ],
+    "primary_review": "direct actual metadata3loc_id+same-hash RAW, both template imports/ukeys/append/blockkind/stamina binding/no custom block_angles",
+    "guessed_mark_keys": false
+  },
+  "outside_intersection_review": {
+    "matching_metadata_items": 2,
+    "bound_variants": 1,
+    "bound_bindings": 2,
+    "unresolved_exact_key_candidates": [],
+    "definitions_not_bound_exact_key_candidate": {
+      "trait_id": "weapon_trait_bespoke_forcesword_p1_can_block_ranged",
+      "source": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua#L53-L80",
+      "item_path": "content/items/traits/bespoke_forcesword_p1/can_block_ranged",
+      "matching_name_key": "loc_trait_bespoke_can_block_ranged",
+      "weapon_type_restriction": [
+        "forcesword_p1_m1"
+      ],
+      "binding_found": false,
+      "note": "Exact-name metadata/source candidate outside this inventory-bound group; absence from its binding intersection is not evidence of unused status."
+    },
+    "status": "One exact-key bound variant with two bindings; one separate same-key metadata/source candidate is outside the bound group."
+  }
+}

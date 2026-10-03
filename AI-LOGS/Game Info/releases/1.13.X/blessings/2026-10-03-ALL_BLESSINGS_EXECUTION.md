@@ -129,3 +129,7 @@
 - 閃電反射全部變體與型號的本機 Commit：`513f708c8c0072f24f14a4896982ed8df990c0af`。
 
 - [煉獄](2026-10-03-INFERNUS_ACCEPTANCE.json)：新增5變體、12型號關聯；共5變體、12關聯。
+
+- 煉獄全部變體與型號的本機 Commit：`b6ae97337d073a2219ffebfd3f39b90c0b7d3d03`。
+
+- [偏轉](2026-10-03-DEFLECTOR_ACCEPTANCE.json)：新增1變體、2型號關聯；共1變體、2關聯。

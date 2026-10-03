@@ -332,6 +332,7 @@
 - Perfect Strike - 完美一擊
 - Bladed Momentum - 利刃攻勢
 - Deflector - 偏轉
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_can_block_ranged`，hash `40ed157d`；英文／繁中RAW配對確認。
 - Momentum - 勢頭
 - Murderous Tranquility - 兇殘之寧
 - Blazing Spirit - 燃燒靈魂

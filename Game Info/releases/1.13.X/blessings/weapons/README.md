@@ -12,7 +12,7 @@
 | [突擊鏈鋸劍](melee/突擊鏈鋸劍/README.md)<br>- Assault Chainsword | 近戰 | 突擊鏈鋸劍 卡迪亞 Mk IV、突擊鏈鋸劍 卡迪亞 Mk XIIIg |
 | [「惡魔之爪」劍](melee/「惡魔之爪」劍/README.md)<br>- "Devil's Claw" Sword | 近戰 | 卡塔昌Mk I「惡魔之爪」戰鬥劍、卡塔昌Mk IV「惡魔之爪」戰鬥劍、卡塔昌Mk VII「惡魔之爪」戰鬥劍 |
 | [決鬥劍](melee/決鬥劍/README.md)<br>- Duelling Sword | 近戰 | 馬卡比安Mk II決鬥劍、馬卡比安Mk IV決鬥劍、馬卡比安Mk V決鬥劍 |
-| [烈焰力場巨劍](melee/烈焰力場巨劍/README.md)<br>- Blaze Force Greatsword | 近戰 | 誓約Mk VI烈焰力場巨劍、誓約Mk VIII烈焰力場巨劍 |
+| [烈焰力場巨劍](melee/烈焰力場巨劍/README.md)<br>- Blaze Force Greatsword | 近戰 | 烈焰力場巨劍 誓約 Mk VI、烈焰力場巨劍 誓約 Mk VIII |
 | [烈焰力場劍](melee/烈焰力場劍/README.md)<br>- Blaze Force Sword | 近戰 | 朦朧Mk II烈焰力場劍、火衛二Mk IV烈焰力場劍、伊利斯Mk V烈焰力場劍 |
 | [骨鋸](melee/骨鋸/README.md)<br>- Bone Saw | 近戰 | 外科醫師Mk IV骨鋸 |
 | [穿音速雙刀](melee/穿音速雙刀/README.md)<br>- Paired Transonic Blades | 近戰 | 西福爾穿音速刀刃 |
