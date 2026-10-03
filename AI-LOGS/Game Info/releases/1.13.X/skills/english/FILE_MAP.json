@@ -5719,7 +5719,8 @@
         "veteran_aura_gain_ammo_on_elite_kill_improved",
         "veteran_ammo_increase",
         "veteran_clip_size",
-        "veteran_faster_reload_on_non_empty_clips"
+        "veteran_faster_reload_on_non_empty_clips",
+        "veteran_reload_speed_on_elite_kill"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5779,7 +5780,8 @@
         "veteran_aura_gain_ammo_on_elite_kill_improved",
         "veteran_ammo_increase",
         "veteran_clip_size",
-        "veteran_faster_reload_on_non_empty_clips"
+        "veteran_faster_reload_on_non_empty_clips",
+        "veteran_reload_speed_on_elite_kill"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5839,7 +5841,8 @@
         "veteran_aura_gain_ammo_on_elite_kill_improved",
         "veteran_ammo_increase",
         "veteran_clip_size",
-        "veteran_faster_reload_on_non_empty_clips"
+        "veteran_faster_reload_on_non_empty_clips",
+        "veteran_reload_speed_on_elite_kill"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5899,7 +5902,8 @@
         "veteran_aura_gain_ammo_on_elite_kill_improved",
         "veteran_ammo_increase",
         "veteran_clip_size",
-        "veteran_faster_reload_on_non_empty_clips"
+        "veteran_faster_reload_on_non_empty_clips",
+        "veteran_reload_speed_on_elite_kill"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6963,9 +6967,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "fdd4653ddbcb65415ec5f5954ea27a5f5adb4173",
       "chinese_sha256": "84a5ef821c39bbd1fe199e39a35cd91247c46935cc15e562ae9b11e4b3fa3a15",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_reload_speed_on_elite_kill"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_rending_bonus.md",
@@ -8536,7 +8555,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_faster_reload_on_non_empty_clips.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_faster_reload_on_non_empty_clips.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_faster_reload_on_non_empty_clips.md",
+      "commit": "0765725c7e0a96cc0f37fd47d3ef885be72ac72f"
+    },
+    {
+      "id": "veteran_reload_speed_on_elite_kill",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_reload_speed_on_elite_kill.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reload_speed_on_elite_kill.md"
     }
   ],
   "pending_chinese_corrections": [

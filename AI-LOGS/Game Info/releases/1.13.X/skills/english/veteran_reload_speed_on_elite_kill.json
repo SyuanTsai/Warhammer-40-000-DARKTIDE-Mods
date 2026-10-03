@@ -9,7 +9,7 @@
   "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
   "status": "accepted_with_caveats",
   "review_mode": "Incremental existing-mechanism translation and exact English text check; display-field read only.",
-  "static_reconstruction": "+25% Reload Speed if your weapon contains Ammo.",
+  "static_reconstruction": "+30% Reload Speed on Elite & Specialist Enemy Kill.",
   "comparison_rule_totals": {
     "Consistent": 2,
     "Explicit contradiction": 0,
@@ -19,53 +19,50 @@
   },
   "english_errata": [],
   "chinese_mechanism_corrections": [],
-  "export_annotations": {
-    "description_suffix": "[Writer]",
-    "role": "resource metadata excluded from displayed-text reconstruction"
-  },
   "primary_direct_reads": [
-    "Complete Chinese Tactical Reload dossier and player section",
+    "Complete Chinese Volley Adept dossier and player section",
     "Exact same-version English name and full raw description",
-    "veteran_talents.lua:2362-2378, display field only"
+    "veteran_talents.lua:987-1003, display field only"
   ],
   "reused_evidence": [
-    "Existing non-empty reload activation and retention evidence",
-    "Accepted shared reload-speed stat/action-time scaling evidence",
-    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 4402 bytes, SHA256 27241e322bf25fa725c8adfc06fc61a0a9a28efec2bb0d000df4b9cd00eef048",
+    "Existing Elite/Specialist kill trigger, pending-use and reload-retention evidence",
+    "Accepted shared additive reload-speed/action-time scaling and Tactical Reload evidence",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 5190 bytes, SHA256 b52dee1f55bea8b6d23431af2849622e7cb1f8a5aea7ae6e00ede9d8b1ba0c5e",
     "Accepted common Markdown layout; final public-image/layout checks remain due"
   ],
   "review": {
     "agent_model": "gpt-6-luna",
     "effort": "max",
     "mode": "read_only_text_draft",
-    "result": "exact pairing, non-empty condition, retention and speed/time distinction checked; primary final text review"
+    "result": "exact pairing, kill categories, no banked uses, ammo-insertion consumption, reload retention and additive speed/time examples checked in read-only draft; primary final text review"
   },
   "static_examples": {
     "affected_action_before_s": 4,
-    "nonempty_start_after_s": 3.2,
-    "saved_s": 0.8,
-    "time_reduction_percent": 20,
-    "empty_start_own_baseline_s": 4,
-    "empty_start_result_from_talent_alone_s": 4
+    "alone_speed_multiplier": 1.3,
+    "alone_after_s": 3.0769230769230766,
+    "alone_time_reduction_percent": 23.076923076923084,
+    "with_tactical_reload_nonempty_start_speed_multiplier": 1.55,
+    "combined_after_s": 2.5806451612903225,
+    "combined_time_reduction_percent": 35.483870967741936
   },
   "category_section": "Passive talents",
   "unconfirmed": [
-    "Weapon-specific reload phases, interruptions, special reload modes and game UI."
+    "Exact weapon-specific ammo-insertion timing, interruption behavior, full reload phases and final game UI."
   ],
   "unperformed": [
     "Repeated full implementation/source-range analysis",
     "New icon retrieval/screenshots; shared evidence reused, final checks due",
     "In-game reload/UI measurements"
   ],
-  "id": "veteran_faster_reload_on_non_empty_clips",
+  "id": "veteran_reload_speed_on_elite_kill",
   "class": "Veteran",
   "date": "2026-10-03",
-  "name": "Tactical Reload",
-  "name_key": "loc_talent_ranger_reload_speed_empty_mag",
-  "name_hash": "2be2baca",
-  "description_key": "loc_talent_veteran_reload_speed_non_empty_mag_desc",
-  "description_hash": "09e8437d",
-  "raw_template": "{reload_speed:%s} Reload Speed if your weapon contains Ammo.",
+  "name": "Volley Adept",
+  "name_key": "loc_talent_veteran_reload_speed_on_elite_kill",
+  "name_hash": "a07849b9",
+  "description_key": "loc_talent_veteran_reload_speed_on_elite_kill_desc",
+  "description_hash": "7c429a4b",
+  "raw_template": "{reload_speed:%s} Reload Speed on Elite & Specialist Enemy Kill.",
   "checks": [
     {
       "check": "exact same-version English key/hash pairs and full raw template",
@@ -75,9 +72,9 @@
       "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
       "result": "passed",
       "global_comparison_totals": {
-        "Consistent": 95,
+        "Consistent": 97,
         "Explicit contradiction": 6,
-        "Not covered by the description": 132,
+        "Not covered by the description": 134,
         "No corresponding implementation evidence found": 0,
         "Cannot confirm": 4
       }
@@ -86,13 +83,13 @@
       "check": "changed-document navigation",
       "result": "passed",
       "files": 6,
-      "local_references": 268,
+      "local_references": 275,
       "errors": []
     },
     {
       "check": "actual marked Markdown parse and HTML generation; existing layout reused",
       "result": "passed",
-      "player_rows": 35,
+      "player_rows": 36,
       "comparison_rows": 4,
       "technical_tables": [
         {
@@ -110,7 +107,6 @@
       "result": "passed"
     }
   ],
-  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/tactical-reload-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_faster_reload_on_non_empty_clips.md",
-  "commit": "0765725c7e0a96cc0f37fd47d3ef885be72ac72f"
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/volley-adept-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reload_speed_on_elite_kill.md"
 }
