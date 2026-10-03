@@ -2221,7 +2221,12 @@
         "ogryn_movement_speed_after_ranged_kills",
         "ogryn_increased_ammo_reserve",
         "ogryn_multi_hits_grant_reload_speed",
-        "ogryn_free_reload_after_ability"
+        "ogryn_free_reload_after_ability",
+        "ogryn_knocked_allies_grant_damage_reduction",
+        "ogryn_fully_charged_attacks_gain_damage_and_stagger",
+        "ogryn_nearby_bleeds_reduce_damage_taken",
+        "base_toughness_damage_reduction_node_buff_medium_1",
+        "ogryn_damage_taken_by_all_increases_strength_tdr"
       ],
       "checks": []
     },
@@ -2284,7 +2289,12 @@
         "ogryn_movement_speed_after_ranged_kills",
         "ogryn_increased_ammo_reserve",
         "ogryn_multi_hits_grant_reload_speed",
-        "ogryn_free_reload_after_ability"
+        "ogryn_free_reload_after_ability",
+        "ogryn_knocked_allies_grant_damage_reduction",
+        "ogryn_fully_charged_attacks_gain_damage_and_stagger",
+        "ogryn_nearby_bleeds_reduce_damage_taken",
+        "base_toughness_damage_reduction_node_buff_medium_1",
+        "ogryn_damage_taken_by_all_increases_strength_tdr"
       ],
       "checks": []
     },
@@ -2347,7 +2357,12 @@
         "ogryn_movement_speed_after_ranged_kills",
         "ogryn_increased_ammo_reserve",
         "ogryn_multi_hits_grant_reload_speed",
-        "ogryn_free_reload_after_ability"
+        "ogryn_free_reload_after_ability",
+        "ogryn_knocked_allies_grant_damage_reduction",
+        "ogryn_fully_charged_attacks_gain_damage_and_stagger",
+        "ogryn_nearby_bleeds_reduce_damage_taken",
+        "base_toughness_damage_reduction_node_buff_medium_1",
+        "ogryn_damage_taken_by_all_increases_strength_tdr"
       ],
       "checks": []
     },
@@ -2410,7 +2425,12 @@
         "ogryn_movement_speed_after_ranged_kills",
         "ogryn_increased_ammo_reserve",
         "ogryn_multi_hits_grant_reload_speed",
-        "ogryn_free_reload_after_ability"
+        "ogryn_free_reload_after_ability",
+        "ogryn_knocked_allies_grant_damage_reduction",
+        "ogryn_fully_charged_attacks_gain_damage_and_stagger",
+        "ogryn_nearby_bleeds_reduce_damage_taken",
+        "base_toughness_damage_reduction_node_buff_medium_1",
+        "ogryn_damage_taken_by_all_increases_strength_tdr"
       ],
       "checks": []
     },
@@ -2432,9 +2452,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "31811109c94ef007a1e2460631df44fa481e3662",
       "chinese_sha256": "3f82d5af1da23d8fe6446f0b582fd2b84f145b353ac26e031bac4242699a80c9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_toughness_damage_reduction_node_buff_medium_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_226_230.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_ally_elite_kills_grant_cooldown.md",
@@ -2802,9 +2829,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "ceac828599d489441f732ead1fae48b92433c9e4",
       "chinese_sha256": "6cad8b651756fcfb7c0146c22ccafc7f6afd6b4bc2f4c819be42e65a92f90756",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_damage_taken_by_all_increases_strength_tdr"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_226_230.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_damage_vs_suppressed_coherency.md",
@@ -2882,9 +2916,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "9158343c98c72167d1a174e5ddc6fa3541685e62",
       "chinese_sha256": "7f0eb6defcf64e5a198cd078e24db25e358b6483f82229ab3ceb60a3b8657405",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_fully_charged_attacks_gain_damage_and_stagger"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_226_230.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_grenade_box.md",
@@ -3117,9 +3158,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "da158ddca12b643595695efb68bbf208c287b4ae",
       "chinese_sha256": "ee21f3a7ac293de011c72e1e830833ef15f52ff4a980a2c3eb9dad5975220222",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_knocked_allies_grant_damage_reduction"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_226_230.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_leadbelcher_cooldown_reduction.md",
@@ -3352,9 +3400,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "816caaa43e9a6d5ae5184c001bc1c20039bce8b4",
       "chinese_sha256": "edc22ae973d5fd7b3cf19051fea73366c6cad8c034b245204ea13b681016d761",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_nearby_bleeds_reduce_damage_taken"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_226_230.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_ogryn_killer.md",
@@ -12587,6 +12642,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_221_225.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_free_reload_after_ability.md"
+    },
+    {
+      "id": "ogryn_knocked_allies_grant_damage_reduction",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_226_230.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_knocked_allies_grant_damage_reduction.md"
+    },
+    {
+      "id": "ogryn_fully_charged_attacks_gain_damage_and_stagger",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_226_230.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_fully_charged_attacks_gain_damage_and_stagger.md"
+    },
+    {
+      "id": "ogryn_nearby_bleeds_reduce_damage_taken",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_226_230.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_nearby_bleeds_reduce_damage_taken.md"
+    },
+    {
+      "id": "base_toughness_damage_reduction_node_buff_medium_1",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_226_230.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/base_toughness_damage_reduction_node_buff_medium_1.md"
+    },
+    {
+      "id": "ogryn_damage_taken_by_all_increases_strength_tdr",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_226_230.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_damage_taken_by_all_increases_strength_tdr.md"
     }
   ],
   "pending_chinese_corrections": [
