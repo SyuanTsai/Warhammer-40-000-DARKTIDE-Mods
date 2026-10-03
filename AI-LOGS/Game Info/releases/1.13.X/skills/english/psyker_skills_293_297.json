@@ -12,7 +12,7 @@
     "full_diff_review_once_per_skill_passed"
   ],
   "source_reads": [
-    "Missing display mappings only: psyker_talents.lua L279–291, L521–531, L410–444, L1957–2061 and L616–712. Empowered Psionics display-only formatter lookup: talent_layout_parser.lua L438–509 and power_level_settings.lua L9; same-build localized Blitz names. Accepted mechanisms and common formatting reused; no buff/event/calculation-chain retrace."
+    "Missing display mappings only: psyker_talents.lua L1351–1369, L521–531, L410–444, L1957–2061 and L616–712. Empowered Psionics display-only formatter lookup: talent_layout_parser.lua L438–509 and power_level_settings.lua L9; same-build localized Blitz names. Accepted mechanisms and common formatting reused; no buff/event/calculation-chain retrace."
   ],
   "questions": [
     "Disrupt Destiny: English 'chance' versus accepted selection/update conditions remains ambiguous, pending in-game comparison.",
