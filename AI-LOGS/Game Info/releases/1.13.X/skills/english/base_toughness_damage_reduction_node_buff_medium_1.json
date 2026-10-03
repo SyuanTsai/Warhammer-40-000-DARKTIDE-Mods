@@ -111,5 +111,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/toughness-damage-reduction-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/base_toughness_damage_reduction_node_buff_medium_1.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/base_toughness_damage_reduction_node_buff_medium_1.md",
+  "commit": "862bba1bd9b2fc0d52baa5bb621f81ee8c4eb5f9"
 }

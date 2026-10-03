@@ -1,0 +1,116 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing-mechanism translation and exact English text check; only missing chance display mapping and its cited leaf value read from fixed source.",
+  "static_reconstruction": "You have a 5% chance to replenish a Grenade when you or an Ally in Coherency Kills an Elite or Specialist Enemy.",
+  "comparison_rule_totals": {
+    "Consistent": 4,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 2,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Demolition Team dossier and player section",
+    "Exact same-version English name and full raw description",
+    "Fixed-SHA veteran_talents.lua lines 2196–2211: exact UI keys and chance formatting",
+    "Fixed-SHA talent_settings_veteran.lua lines 161–163 and 141–147: 0.05 display chance and distinction from shared stockpile cooldown/restoration settings"
+  ],
+  "reused_evidence": [
+    "Accepted Chinese fixed-source mechanism, conditions, exceptions and examples",
+    "Accepted shared formatting and corpus version verification",
+    "Reused accepted Demolition Team WebP audit: 288×288, 6148 bytes, SHA-256 ea9044deaa47681633e9593bb999606a3e57a7b5f00bce2872b469cc6c7ddbe6; existing Media-Assets Issue attachment.",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Read-only child verified exact same-version name/key/hash/raw, Passive talent category, holder-only restoration and eligible killer/enemy wording. Primary resolved the 5% placeholder from the narrow definition/settings reads, retained the 20-opportunity expectation with capacity assumptions and the 3/4→4/4 example, and did not inherit the Chinese teammate-restoration erratum. Primary reviews the full staged diff before commit."
+  },
+  "static_examples": [
+    [
+      "20 qualifying kill opportunities; 5% chance each; space for one grenade at every success",
+      "Expected successful procs: `20 × 0.05 = 1`; under the stated capacity assumption, expected restoration is `1 grenade`.",
+      "This is an average expectation, not a guaranteed success on the twentieth kill or in any particular sequence."
+    ],
+    [
+      "Successful proc; hypothetical capacity 4 grenades, current count 3",
+      "`min(3 + 1, 4) = 4 grenades`.",
+      "The holder receives one grenade and reaches the carry limit; teammates do not receive this proc's grenade."
+    ]
+  ],
+  "category_section": "Passive talents",
+  "unconfirmed": [
+    "The 20-event expectation assumes that each qualifying opportunity is evaluated and that every successful proc has room to restore one grenade. Actual restoration can be limited by capacity. The four-grenade capacity is an explicit illustrative assumption. Live grenade-loadout changes, random sequences and gameplay outcomes were not measured."
+  ],
+  "unperformed": [
+    "Repeated full implementation/call-chain analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game mechanism/damage/UI measurements"
+  ],
+  "id": "veteran_aura_elite_kills_restore_grenade",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Demolition Team",
+  "name_key": "loc_talent_ranger_grenade_on_elite_kills_coop",
+  "name_hash": "45acd50d",
+  "description_key": "loc_talent_veteran_grenade_on_elite_kills_coop_desc",
+  "description_hash": "6839ad59",
+  "raw_template": "You have a {chance:%s} chance to replenish a Grenade when you or an Ally in Coherency Kills an Elite or Specialist Enemy.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 188,
+        "Explicit contradiction": 8,
+        "Not covered by the description": 219,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 8
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 506,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 69,
+      "comparison_rows": 6,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 2
+        },
+        {
+          "columns": 3,
+          "rows": 1
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/demolition-team-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_aura_elite_kills_restore_grenade.md"
+}

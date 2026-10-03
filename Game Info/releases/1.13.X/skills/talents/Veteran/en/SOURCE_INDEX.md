@@ -72,6 +72,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Toughness Boost](base_toughness_node_buff_medium_2.md) / `base_toughness_node_buff_medium_2` | Stat node |
 | [Melee Damage Boost](base_melee_damage_node_buff_high_2.md) / `base_melee_damage_node_buff_high_2` | Stat node |
 | [Toughness Damage Reduction](base_toughness_damage_reduction_node_buff_medium_1.md) / `base_toughness_damage_reduction_node_buff_medium_1` | Stat node |
+| [Demolition Team](veteran_aura_elite_kills_restore_grenade.md) / `veteran_aura_elite_kills_restore_grenade` | Passive talent |
 | [Precision Strikes](veteran_increased_weakspot_damage.md) / `veteran_increased_weakspot_damage` | Passive talent |
 | [Trench Fighter Drill](veteran_attack_speed.md) / `veteran_attack_speed` | Passive talent |
 | [One Motion](veteran_reduce_swap_time.md) / `veteran_reduce_swap_time` | Passive talent |

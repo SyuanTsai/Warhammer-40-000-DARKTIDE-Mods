@@ -72,6 +72,7 @@
 | <img src="https://github.com/user-attachments/assets/1ef34fb3-ac4e-47d1-b7c1-0d13f10e3173" width="32" height="32" alt="Toughness Boost talent icon"> [Toughness Boost](#base_toughness_node_buff_medium_2) | <ul><li>Increase maximum Toughness by 25 points.</li><li>The points are added before percentage maximum-Toughness modifiers.</li></ul> | Stat node |
 | <img src="https://github.com/user-attachments/assets/b0fb41b1-81da-4263-8d21-101a3af0cbdb" width="32" height="32" alt="Melee Damage Boost talent icon"> [Melee Damage Boost](#base_melee_damage_node_buff_high_2) | <ul><li>Increase Melee Damage by 15%.</li><li>The bonus adds to other applicable bonuses at the same damage-stat stage.</li></ul> | Stat node |
 | <img src="https://github.com/user-attachments/assets/20744626-5cef-4e5c-afef-0474fde5a4b5" width="32" height="32" alt="Toughness Damage Reduction talent icon"> [Toughness Damage Reduction](#base_toughness_damage_reduction_node_buff_medium_1) | <ul><li>Reduce Toughness damage taken by 10%.</li><li>Same-type reductions add; independent Toughness-damage multipliers apply separately.</li></ul> | Stat node |
+| <img src="https://github.com/user-attachments/assets/3ec21db4-4013-4522-850f-14c583e25ea7" width="32" height="32" alt="Demolition Team talent icon"> [Demolition Team](#veteran_aura_elite_kills_restore_grenade) | <ul><li>You have a 5% chance to restore one grenade when you or an ally in Coherency kills an Elite or Specialist.</li><li>The grenade is restored to you, up to your carry limit.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1366,6 +1367,25 @@ Actual final damage also depends on armor, damage profiles, weakspot/critical ef
 - This increases outgoing suppression rather than health damage; it is not a 75% damage bonus.
 
 [Detailed sources and formulas](veteran_increase_suppression.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_increase_suppression) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_aura_elite_kills_restore_grenade"></a>
+
+<img src="https://github.com/user-attachments/assets/3ec21db4-4013-4522-850f-14c583e25ea7" width="72" height="72" alt="Demolition Team talent icon">
+
+### Demolition Team
+
+- **You have a 5% chance to restore one grenade when you or an ally in Coherency kills an Elite or Specialist.**
+- The successful proc restores your grenade, up to your carry limit. It does not grant that grenade to the teammate who made the kill.
+- Each eligible kill is a chance; this passive has no separate proc cooldown.
+
+#### Chance and capacity examples
+
+- **20 qualifying kill opportunities:** `20 × 5% = 1` expected successful proc. If each success has room to restore a grenade, that is an expected one grenade received. This does not guarantee a proc on the twentieth kill or in any specific sequence.
+- **A successful proc at 3/4 grenades:** with a hypothetical four-grenade carry limit, `min(3 + 1, 4) = 4 grenades`. You receive one and reach the limit.
+
+[Detailed sources and formulas](veteran_aura_elite_kills_restore_grenade.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_aura_elite_kills_restore_grenade) | [Back to index](#talent-index)
 
 ---
 
