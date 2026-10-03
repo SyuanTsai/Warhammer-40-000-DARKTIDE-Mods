@@ -13,3 +13,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Bombs Away!](ogryn_box_explodes.md) / `ogryn_box_explodes` | Blitz |
 | [Frag Bomb](ogryn_grenade_frag.md) / `ogryn_grenade_frag` | Blitz |
 | [Big Friendly Rock](ogryn_grenade_friend_rock.md) / `ogryn_grenade_friend_rock` | Blitz |
+| [That One Didn't Count](ogryn_replenish_rock_on_miss.md) / `ogryn_replenish_rock_on_miss` | Blitz |
