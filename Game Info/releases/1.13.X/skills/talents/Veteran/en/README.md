@@ -53,6 +53,7 @@
 | <img src="https://github.com/user-attachments/assets/a882268c-6f4f-42ee-8973-a64dd6e882e7" width="32" height="32" alt="Leave No One Behind talent icon"> [Leave No One Behind](#veteran_movement_speed_towards_downed) | <ul><li>Gain +20% Movement Speed and Stun Immunity while looking toward an ally who needs help, within about 60° either side.</li><li>Gain +20% speed for reviving, pulling up, removing a net and rescuing.</li><li>An ally you revive receives 33% Damage Reduction for 5 seconds.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/980ba0fa-2a34-4f97-b592-05651671933b" width="32" height="32" alt="Reciprocity talent icon"> [Reciprocity](#veteran_dodging_grants_crit) | <ul><li>Each successful dodge adds 5 percentage points of Critical Hit Chance, up to 5 stacks.</li><li>An 8-second shared duration refreshes on another successful dodge; simply performing a dodge adds no stack.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/a7c3f5a6-113a-404a-873d-985481ec316b" width="32" height="32" alt="Agile Engagement talent icon"> [Agile Engagement](#veteran_kill_grants_damage_to_other_slot) | <ul><li>Melee kills grant +25% Ranged Damage; ranged kills grant +25% Melee Damage.</li><li>Each bonus lasts 6 seconds and can coexist with the other; same-type kills refresh the corresponding timer without stacking.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/8378bd8a-7c90-41fd-83c7-40c135c75caa" width="32" height="32" alt="Serrated Blade talent icon"> [Serrated Blade](#veteran_hits_cause_bleed) | <ul><li>A damaging melee hit applies 2 Bleed stacks to a target that survives the hit.</li><li>Bleed caps at 16 stacks and ticks about every 0.5s; reapplication refreshes a 1.5s timer, after which ticks remove one stack if not reapplied.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -1025,6 +1026,27 @@ These are additive percentage points, not a relative 5% increase per stack.
 Each effect applies to its own damage type, so having both active does not apply two 25% multipliers to the same hit.
 
 [Detailed sources and formulas](veteran_kill_grants_damage_to_other_slot.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_kill_grants_damage_to_other_slot) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_hits_cause_bleed"></a>
+
+<img src="https://github.com/user-attachments/assets/8378bd8a-7c90-41fd-83c7-40c135c75caa" width="72" height="72" alt="Serrated Blade talent icon">
+
+### Serrated Blade
+
+- **A damaging melee hit applies 2 Bleed stacks to a target that survives the hit.**
+- Bleed caps at **16 stacks** and deals damage about every **0.5 seconds**. Reapplication refreshes a **1.5-second timer**; after it expires without reapplication, each subsequent tick removes one stack.
+
+**Stack and damage examples**
+
+- Ignoring stack loss between eligible hits, four hits build `2 × 4 = 8 stacks`.
+- For the recorded Bleeding profile against an unarmored target, with no other modifiers, eight active stacks deal `175 × [(8 / 16)² × (3 − 2 × 8 / 16)] × 0.5 = 43.75 damage per tick`. The 0.5 factor is this example’s unarmored armor multiplier.
+- Under the same assumptions, two active stacks deal about **3.76 damage per tick**. Bleed follows a nonlinear curve; eight-stack damage is not four times two-stack damage.
+
+Actual tick damage varies with armor, the damage profile and other modifiers. These examples do not give total damage over a decaying stack sequence.
+
+[Detailed sources and formulas](veteran_hits_cause_bleed.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_hits_cause_bleed) | [Back to index](#talent-index)
 
 ---
 

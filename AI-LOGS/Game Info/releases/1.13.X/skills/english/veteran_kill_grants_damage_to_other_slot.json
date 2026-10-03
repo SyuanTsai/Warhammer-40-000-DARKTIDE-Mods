@@ -113,5 +113,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/agile-engagement-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_kill_grants_damage_to_other_slot.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_kill_grants_damage_to_other_slot.md",
+  "commit": "a5acf9dc878c8ac40ec1a1a22844a23df776c1cc"
 }

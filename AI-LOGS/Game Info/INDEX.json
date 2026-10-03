@@ -1034,6 +1034,14 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_kill_grants_damage_to_other_slot.json",
       "date": "2026-10-03",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/veteran_hits_cause_bleed",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Veteran",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_hits_cause_bleed.json",
+      "date": "2026-10-03",
+      "storage": "git"
     }
   ],
   "pending": [
