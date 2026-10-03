@@ -9,6 +9,7 @@
 | Talent | Main effects | Category |
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="Demolition Stockpile talent icon"> [Demolition Stockpile](#veteran_replenish_grenades) | <ul><li>While below grenade capacity, replenish one Shredder Frag Grenade or Smoke Grenade approximately every 60 seconds, or one Krak Grenade approximately every 90 seconds.</li><li>Throwing another grenade preserves the current countdown; reaching full capacity clears it.</li></ul> | Blitz modifier |
+| <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907" width="32" height="32" alt="Exhilarating Takedown talent icon"> [Exhilarating Takedown](#veteran_replenish_toughness_on_weakspot_kill) | <ul><li>Ranged weakspot kills replenish 15% of maximum Toughness and grant stacking Toughness damage reduction.</li><li>Up to three effective stacks: 10%, 19% or 27.1% reduction; refresh the 8-second timer on each qualifying kill, then decay one stack at a time.</li></ul> | Passive talent |
 
@@ -47,6 +48,36 @@
 - **Full capacity**: if another supply fills your grenades halfway through a countdown, that progress is cleared when full capacity is observed. A later throw starts a fresh full interval.
 
 [Details and source evidence](veteran_replenish_grenades.md) · [Back to index](#talent-index)
+
+## Keystones
+
+<a id="veteran_snipers_focus"></a>
+
+<img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="72" height="72" alt="Marksman's Focus talent icon">
+
+### Marksman's Focus
+
+- **Ranged weakspot kills add three Focus stacks**, up to **10 effective stacks** for the base skill.
+
+- Each stack grants **7.5% ranged finesse strength** and **1% reload speed**. Finesse strengthens the extra component on ranged critical or weakspot hits; it does not increase the whole hit by that fixed percentage.
+
+- While Focus is active, **any weakspot hit refreshes its shared five-second timer**, including a melee weakspot hit. Nonlethal hits refresh existing stacks without adding new ones.
+
+- Without another weakspot hit, Focus loses one effective stack approximately every five seconds. Movement, crouching or landing does not directly add or remove stacks in this version.
+
+#### Damage and reload examples
+
+Assume the same ranged weakspot hit and target, no other bonuses or later damage changes, and illustrative base damage `100` plus an unmodified extra component `40`.
+
+- **10 stacks**: before `100 + 40 = 140`; after `100 + 40 × (1 + 10 × 0.075) = 170`. Gain **30 damage units**, or `30 / 140 ≈ 21.43%` of the whole hit.
+
+- With equal base and extra components of `100`, the same 10 stacks give `100 + 100 × 1.75 = 275`, compared with 200 before: **37.5% more whole-hit damage**. The component's size changes the final benefit.
+
+- For an affected reload action with a hypothetical **four-second** baseline, no other speed factors and no limit binding, 10 stacks give `4 / 1.10 ≈ 3.64 seconds`. The **10% speed increase saves about 0.36 seconds**, or **9.09% of the time**.
+
+- With exactly three stacks after the last refresh, no further weakspot hits or forced removal, two remain after approximately **5 seconds**, one after **10 seconds**, and the effect ends after **15 seconds**. Update timing makes these intervals approximate.
+
+[Details, optional branches and source evidence](veteran_snipers_focus.md) · [Back to index](#talent-index)
 
 ## Passive talents
 

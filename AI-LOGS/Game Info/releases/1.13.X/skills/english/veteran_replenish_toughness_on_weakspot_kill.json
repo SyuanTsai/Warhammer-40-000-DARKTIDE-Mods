@@ -165,5 +165,6 @@
     "Full separate acceptance of the related toughness-sharing talent"
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/exhilarating-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_toughness_on_weakspot_kill.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_toughness_on_weakspot_kill.md",
+  "commit": "7a8f9dbb3086a9f19336c99c7d5eedaa6798bfd1"
 }

@@ -9,5 +9,6 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | Talent / code identifier | Category |
 |---|---|
 | [Demolition Stockpile](veteran_replenish_grenades.md) / `veteran_replenish_grenades` | Blitz modifier |
+| [Marksman's Focus](veteran_snipers_focus.md) / `veteran_snipers_focus` | Keystone |
 | [Precision Strikes](veteran_increased_weakspot_damage.md) / `veteran_increased_weakspot_damage` | Passive talent |
 | [Exhilarating Takedown](veteran_replenish_toughness_on_weakspot_kill.md) / `veteran_replenish_toughness_on_weakspot_kill` | Passive talent |

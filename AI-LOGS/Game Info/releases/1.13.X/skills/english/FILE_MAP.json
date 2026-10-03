@@ -5687,7 +5687,8 @@
       "accepted_skill_ids": [
         "veteran_replenish_grenades",
         "veteran_increased_weakspot_damage",
-        "veteran_replenish_toughness_on_weakspot_kill"
+        "veteran_replenish_toughness_on_weakspot_kill",
+        "veteran_snipers_focus"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5711,7 +5712,8 @@
       "accepted_skill_ids": [
         "veteran_replenish_grenades",
         "veteran_increased_weakspot_damage",
-        "veteran_replenish_toughness_on_weakspot_kill"
+        "veteran_replenish_toughness_on_weakspot_kill",
+        "veteran_snipers_focus"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5735,7 +5737,8 @@
       "accepted_skill_ids": [
         "veteran_replenish_grenades",
         "veteran_increased_weakspot_damage",
-        "veteran_replenish_toughness_on_weakspot_kill"
+        "veteran_replenish_toughness_on_weakspot_kill",
+        "veteran_snipers_focus"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5759,7 +5762,8 @@
       "accepted_skill_ids": [
         "veteran_replenish_grenades",
         "veteran_increased_weakspot_damage",
-        "veteran_replenish_toughness_on_weakspot_kill"
+        "veteran_replenish_toughness_on_weakspot_kill",
+        "veteran_snipers_focus"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6604,9 +6608,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3cc9077ba7f425870fe9d59661f7ab0a6bf552dd",
       "chinese_sha256": "710e98fe0f0bf2807b983e08bc39eb5328122a0d0a3efe26f3447d3d8750f7c2",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_snipers_focus"
+      ],
+      "checks": [
+        "primary_direct_evidence",
+        "exact_english_key_hash",
+        "independent_english_comparison",
+        "source_lines",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_snipers_focus_increased_stacks.md",
@@ -7723,7 +7738,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_replenish_toughness_on_weakspot_kill.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_toughness_on_weakspot_kill.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_replenish_toughness_on_weakspot_kill.md",
+      "commit": "7a8f9dbb3086a9f19336c99c7d5eedaa6798bfd1"
+    },
+    {
+      "id": "veteran_snipers_focus",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_snipers_focus.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_snipers_focus.md"
     }
   ],
   "pending_chinese_corrections": []
