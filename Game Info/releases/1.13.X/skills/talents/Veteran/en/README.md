@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f" width="32" height="32" alt="Tunnel Vision talent icon"> [Tunnel Vision](#veteran_snipers_focus_toughness_bonus) | <ul><li>Each effective Focus stack increases applicable Toughness replenishment by 4%.</li><li>Ranged weakspot kills restore 10% of maximum Stamina, limited by the deficit.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/4087a451-e4ae-429b-afe6-75369e2903f3" width="32" height="32" alt="Fully Loaded talent icon"> [Fully Loaded](#veteran_ammo_increase) | <ul><li>Increase maximum reserve ammo by 25%.</li><li>Does not increase magazine capacity; fractional rounds are rounded down.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/6632d16b-faac-444e-8139-99057e2f613a" width="32" height="32" alt="Lock and Load talent icon"> [Lock and Load](#veteran_clip_size) | <ul><li>Increase magazine capacity by 25%; fractional rounds are rounded down.</li><li>Does not directly increase maximum reserve ammo.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/a5b64063-ac9d-404d-98ac-528f24aafb65" width="32" height="32" alt="Tactical Reload talent icon"> [Tactical Reload](#veteran_faster_reload_on_non_empty_clips) | <ul><li>Start reloading with ammo in the magazine to gain +25% Reload Speed for that reload.</li><li>An empty-magazine start does not activate this bonus.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -679,6 +680,26 @@ With no other magazine-size modifier and a hard limit above the result:
 - The English tooltip says **“rounded up”**. The implementation rounds down: the 7-round example gives **8 rounds**, rather than 9.
 
 [Detailed sources and formulas](veteran_clip_size.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_clip_size) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_faster_reload_on_non_empty_clips"></a>
+
+<img src="https://github.com/user-attachments/assets/a5b64063-ac9d-404d-98ac-528f24aafb65" width="72" height="72" alt="Tactical Reload talent icon">
+
+### Tactical Reload
+
+- Start reloading with ammo in the magazine to gain **+25% Reload Speed** for that reload.
+- Starting with an empty magazine does not activate the bonus.
+
+**Reload action examples**
+
+- Isolate an affected reload action with a 4-second baseline and no other speed modifier: `4 ÷ 1.25 = 3.2s`. It saves **0.8s**, or **20%** of that action’s baseline time; +25% speed does not mean 25% less time.
+- If an empty-start action has its own 4-second baseline, this talent adds no speed bonus: `4 ÷ 1 = 4s`.
+
+Weapon-specific phases and interruptions can change the complete reload sequence; these examples isolate the affected action.
+
+[Detailed sources and formulas](veteran_faster_reload_on_non_empty_clips.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_faster_reload_on_non_empty_clips) | [Back to index](#talent-index)
 
 ---
 

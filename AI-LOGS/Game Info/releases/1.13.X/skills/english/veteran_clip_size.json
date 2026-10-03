@@ -115,5 +115,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/lock-and-load-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_clip_size.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_clip_size.md",
+  "commit": "8b2dbfcb98758553e1f607f7502a114c9f741813"
 }
