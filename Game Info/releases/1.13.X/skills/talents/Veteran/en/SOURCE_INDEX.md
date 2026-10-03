@@ -8,6 +8,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 
 | Talent / code identifier | Category |
 |---|---|
+| [Smoke Grenade](veteran_smoke_grenade.md) / `veteran_smoke_grenade` | Blitz |
 | [Grenadier](veteran_extra_grenade.md) / `veteran_extra_grenade` | Blitz modifier |
 | [Grenade Tinkerer](veteran_improved_grenades.md) / `veteran_improved_grenades` | Blitz modifier |
 | [Demolition Stockpile](veteran_replenish_grenades.md) / `veteran_replenish_grenades` | Blitz modifier |

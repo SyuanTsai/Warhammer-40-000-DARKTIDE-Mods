@@ -201,5 +201,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/grenade-tinkerer-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_grenades.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_grenades.md",
+  "commit": "bccbe5dcce63395a32fd85fefd1863811ed2c5d6"
 }

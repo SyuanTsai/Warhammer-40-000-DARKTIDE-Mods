@@ -1,0 +1,181 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing Chinese mechanism translation and exact English text check; targeted display-field read and the existing cited sight-check range only for the English sight-range evidence gap.",
+  "static_reconstruction": "Throw a grenade that creates a lingering smoke cloud for 15s. The cloud blocks line of sight for most enemies and reduces the sight range of enemies inside it.",
+  "comparison_rule_totals": {
+    "Consistent": 2,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 5,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 1
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete existing Chinese Smoke Grenade dossier and player description",
+    "Existing Chinese localization comparison as a locator only",
+    "Exact same-version English name and full raw description",
+    "Existing icon audit",
+    "veteran_talents.lua:65-84 (display duration and unused talent-name field)",
+    "smoke_fog_system.lua:220-284 (existing sight-blocking citation, targeted only for the English enemy sight-range claim)"
+  ],
+  "reused_mechanism_evidence": "Existing Smoke Grenade dossier for one-point ability replacement, three-charge capacity, 1.5s base fuse, 15s spawn-duration override, 4.5/5.5m smoke radii, concealment and 0.5s leaving-smoke effect, breed exceptions and separate 10m impact/suppression blast. Accepted Grenade Tinkerer and common number/localized-name formatting evidence reused. Complete smoke, projectile and enemy perception chains were not reanalyzed.",
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_review",
+    "result": "no_actionable_text_or_evidence_defect",
+    "remaining_actionable_defects": 0
+  },
+  "unconfirmed": [
+    "Original English claim of an independent enemy sight-range reduction inside smoke; the bounded existing evidence establishes sight blocking rather than that separate effect.",
+    "Individual enemy behavior, already-launched attacks, exact cloud/linger update timing and final game UI."
+  ],
+  "unperformed": [
+    "Complete enemy perception or smoke-system implementation analysis (outside clarified review scope)",
+    "In-game smoke behavior, timing and sight-distance measurements",
+    "Actual game UI observation"
+  ],
+  "id": "veteran_smoke_grenade",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Smoke Grenade",
+  "name_key": "loc_ability_smoke_grenade",
+  "name_hash": "c98e8baf",
+  "name_entry_index": 13009,
+  "description_key": "loc_ability_smoke_grenade_description",
+  "description_hash": "f80c5f1d",
+  "description_entry_index": 16114,
+  "raw_template": "Throw a grenade that creates a lingering smoke cloud for {duration:%s}s. The cloud blocks line of sight for most enemies and reduces the sight range of enemies inside it.",
+  "checks": [
+    {
+      "check": "exact UI export SHA256, actual key/hash/text pairs and complete raw template",
+      "result": "passed",
+      "pairs": 2
+    },
+    {
+      "check": "fixed-SHA citation bounds in current Veteran English scope",
+      "result": "passed",
+      "references": 1480,
+      "unique_source_ranges": 303,
+      "source_files": 55
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
+      "result": "passed",
+      "markdown_files": 731,
+      "local_references": 6775,
+      "remote_references": 10452,
+      "errors": []
+    },
+    {
+      "check": "marked parse and headless Edge rendering of five English pages",
+      "result": "passed",
+      "player_table": {
+        "columns": 3,
+        "rows": 27,
+        "scroll": false
+      },
+      "current_skill_comparison_table": {
+        "columns": 5,
+        "rows": 8,
+        "scroll": false
+      },
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 4,
+          "scroll": false
+        },
+        {
+          "columns": 3,
+          "rows": 2,
+          "scroll": false
+        }
+      ],
+      "all_player_icons_loaded": 54,
+      "document_horizontal_overflow": false
+    },
+    {
+      "check": "primary visual inspection of player, examples and template/parameter viewports",
+      "result": "passed"
+    },
+    {
+      "check": "anonymous public existing Issue attachment retrieval",
+      "result": "passed",
+      "http_status": 200,
+      "content_type": "image/webp",
+      "bytes": 4036,
+      "sha256": "33e22a756ea07088b13de157f120367f820bbc2f75997593a26efe468ed62ec7",
+      "historical_source_match": true
+    },
+    {
+      "check": "Chinese content preserved except language switch; English prose/alt, privacy and independent comparison totals",
+      "result": "passed"
+    },
+    {
+      "check": "Full exact English template and static duration reconstruction",
+      "result": "passed",
+      "parameter_fields": 2,
+      "used_fields": [
+        "duration"
+      ],
+      "unused_fields": [
+        "talent_name"
+      ],
+      "base_duration_seconds": 15,
+      "trailing_unit_from_raw_template": "s",
+      "modified_runtime_duration_in_base_field": false
+    },
+    {
+      "check": "Four static fuse/cloud, duration-upgrade, charge and concealment-linger examples",
+      "result": "passed",
+      "base_timeline_seconds": 16.5,
+      "tinkerer_cloud_seconds": 30,
+      "tinkerer_timeline_seconds": 31.5,
+      "one_throw_charges": [
+        3,
+        2
+      ],
+      "leave_at_5_seconds_approximate_concealment_end": 5.5,
+      "guaranteed_invulnerability_claim": false
+    },
+    {
+      "check": "Independent split between qualified sight blocking and inside-enemy sight-range claim",
+      "result": "passed",
+      "qualified_sight_blocking": "Consistent",
+      "independent_enemy_sight_range": "Cannot confirm",
+      "English_erratum": false,
+      "smoke_inner_radius_metres": 4.5,
+      "smoke_outer_radius_metres": 5.5,
+      "separate_detonation_radius_metres": 10
+    },
+    {
+      "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
+      "result": "passed",
+      "markdown_files": 1,
+      "local_references": 29,
+      "remote_references": 0,
+      "errors": []
+    },
+    {
+      "check": "690 unique mappings, accepted records, support-page IDs, INDEX Git paths/IDs, privacy and ignored QA artifacts",
+      "result": "passed",
+      "accepted_skills": 27
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/smoke-grenade-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_smoke_grenade.md"
+}

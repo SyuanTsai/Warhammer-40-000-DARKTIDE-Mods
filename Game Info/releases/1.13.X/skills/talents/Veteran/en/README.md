@@ -8,6 +8,7 @@
 
 | Talent | Main effects | Category |
 |---|---|---|
+| <img src="https://github.com/user-attachments/assets/7b9b7141-a7fa-4f3b-944f-5f1141cdc04e" width="32" height="32" alt="Smoke Grenade talent icon"> [Smoke Grenade](#veteran_smoke_grenade) | <ul><li>Create a 15-second smoke cloud after a roughly 1.5-second fuse; base capacity: three grenades.</li><li>The 4.5m smoke core blocks sight for susceptible enemies; the cloud has a 5.5m outer radius.</li><li>Concealment lingers for about 0.5s after leaving; smoke does not make you invulnerable.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/2bec21d1-d677-4386-942d-2c2697c285d1" width="32" height="32" alt="Grenadier talent icon"> [Grenadier](#veteran_extra_grenade) | <ul><li>Carry one extra grenade: base capacity 3 → 4 without other capacity changes.</li><li>Each throw has a 20% chance to produce one additional grenade while consuming only one charge; applies to all three Veteran grenade types.</li></ul> | Blitz modifier |
 | <img src="https://github.com/user-attachments/assets/5179b403-3945-41a4-9c68-5278b6968c24" width="32" height="32" alt="Grenade Tinkerer talent icon"> [Grenade Tinkerer](#veteran_improved_grenades) | <ul><li>Shredder Frag Grenade: +25% explosion damage and radius; the bonus does not increase bleed damage.</li><li>Krak Grenade: +75% explosion damage.</li><li>Smoke Grenade: +100% smoke duration, normally 15s → 30s with this modifier alone.</li></ul> | Blitz modifier |
 | <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="Demolition Stockpile talent icon"> [Demolition Stockpile](#veteran_replenish_grenades) | <ul><li>While below grenade capacity, replenish one Shredder Frag Grenade or Smoke Grenade approximately every 60 seconds, or one Krak Grenade approximately every 90 seconds.</li><li>Throwing another grenade preserves the current countdown; reaching full capacity clears it.</li></ul> | Blitz modifier |
@@ -38,6 +39,27 @@
 ---
 
 ## Blitz
+
+<a id="veteran_smoke_grenade"></a>
+
+<img src="https://github.com/user-attachments/assets/7b9b7141-a7fa-4f3b-944f-5f1141cdc04e" width="72" height="72" alt="Smoke Grenade talent icon">
+
+### Smoke Grenade
+
+- Throw a grenade that creates a **15-second smoke cloud** after a roughly **1.5-second fuse**. Base capacity: **three grenades**.
+- The central **4.5m radius** blocks sight for enemies susceptible to smoke; the cloud's outer radius is **5.5m**. Enemy behavior can vary.
+- Entering the cloud grants concealment, which lasts for about **0.5 seconds** after leaving. Smoke does not make you invulnerable, and already-launched attacks can still hit.
+
+**Duration and charge examples**
+
+- With grenade spawn/fuse start at time zero and no duration modifiers, cloud expiry is approximately `1.5 + 15 = 16.5 seconds`. The smoke itself lasts 15 seconds.
+- With [Grenade Tinkerer](#veteran_improved_grenades) as the only duration modifier, the cloud lasts `15 × 2 = 30 seconds`, and the same timeline reaches expiry at approximately `1.5 + 30 = 31.5 seconds`.
+- With three charges, no extra-projectile roll and no replenishment, one throw leaves `3 − 1 = 2 grenade charges`.
+- Leave an active cloud at time 5s without re-entering: concealment lasts to approximately `5 + 0.5 = 5.5 seconds`; the half-second interval does not prevent incoming damage.
+
+[Detailed sources and formulas](veteran_smoke_grenade.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_smoke_grenade) | [Back to index](#talent-index)
+
+---
 
 <a id="veteran_extra_grenade"></a>
 
