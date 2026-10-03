@@ -1801,3 +1801,6 @@
 
 - Shrapnel - 破片四濺
   - 本體1.13.1名稱鍵 `loc_trait_bespoke_close_explosion_applies_bleed`，hash `151b51b2`；英文／繁中RAW配對確認。
+
+- Hit & Run - 遊擊
+  - 本體1.13.1名稱鍵 `loc_trait_bespoke_count_as_dodge_vs_ranged_on_close_kill`，hash `c20a63ba`；英文／繁中RAW配對確認。

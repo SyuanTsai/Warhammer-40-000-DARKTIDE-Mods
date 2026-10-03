@@ -340,6 +340,54 @@
         "metadata快取版本與Steam Build歸屬另記；不能由日期推定同版。"
       ],
       "reuse_rule": "Only reuse after current trait/wrapper/action satisfies every applicability condition; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "ranged-action-dispatch",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/utilities/action/ranged_action.lua",
+      "start": 22,
+      "end": 28,
+      "content_sha256": "57d65a635af8b81adba45acedbb8e56939bc7b38af7172a8a9b55ae4be06aae0",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/utilities/action/ranged_action.lua#L22-L28",
+      "review": "Sol / xhigh directly reviewed this new shared block while checking Hit & Run mode differences.",
+      "conclusion": "RangedAction.execute_attack明確設定ranged並傳item、hit position、target index/number至Attack.execute。",
+      "applicability": [
+        "實際動作必須呼叫此helper；profile旗標、skip_on_hit_proc與本祝福自己的gate仍核對。"
+      ],
+      "reuse_rule": "Only reuse when the current actual action/profile satisfies all conditions; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "pellet-attack-dispatch",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/weapon/actions/action_shoot_pellets.lua",
+      "start": 518,
+      "end": 523,
+      "content_sha256": "d5b954325a721b8eec3f4a798d3ef9fb010205b410fbae180dd45d927014ce7c",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_shoot_pellets.lua#L518-L523",
+      "review": "Sol / xhigh directly reviewed this new shared block while checking Hit & Run mode differences.",
+      "conclusion": "彈丸命中按縮放profile走RangedAction，傳入武器item及target_number，之後遞增目標序號。",
+      "applicability": [
+        "適用該pellet helper段；每顆彈丸與每目標計數、聚合與去重仍按本項consumer核對，不能外推固定逐pellet觸發。"
+      ],
+      "reuse_rule": "Only reuse when the current actual action/profile satisfies all conditions; differences or doubts reopen the affected block."
+    },
+    {
+      "id": "melee-sweep-dispatch",
+      "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+      "path": "scripts/extension_systems/weapon/actions/action_sweep.lua",
+      "start": 1498,
+      "end": 1501,
+      "content_sha256": "e48f4b52f08b4e21a33d571816d02c3344cac08a37430bae09d5e2d0dc68a924",
+      "hash_encoding": "UTF-8; LF; inclusive lines; one final LF",
+      "source_url": "https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/scripts/extension_systems/weapon/actions/action_sweep.lua#L1498-L1501",
+      "review": "Sol / xhigh directly reviewed this new shared block while checking Hit & Run mode differences.",
+      "conclusion": "ActionSweep指定melee，將武器item、命中位置與num_hit_enemies送入Attack.execute。",
+      "applicability": [
+        "須實際sweep命中；profile.count_as_ranged_attack可以影響個別Buff gate，必須讀本項實際profile。"
+      ],
+      "reuse_rule": "Only reuse when the current actual action/profile satisfies all conditions; differences or doubts reopen the affected block."
     }
   ],
   "cache_status": "common blocks reviewed; no blessing completion asserted",

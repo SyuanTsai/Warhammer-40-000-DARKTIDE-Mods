@@ -6,7 +6,7 @@
 |---|---|---|
 | [戰鬥斧](melee/戰鬥斧/README.md)<br>- Combat Axe | 近戰 | 拉沙德Mk II戰鬥斧、安塔克斯Mk V戰鬥斧、阿克利斯Mk VIII戰鬥斧 |
 | [戰術斧](melee/戰術斧/README.md)<br>- Tactical Axe | 近戰 | 埃托克斯Mk II戰術斧、埃托克斯Mk IV戰術斧、埃托克斯Mk VII戰術斧 |
-| [步兵自動槍](ranged/步兵自動槍/README.md)<br>- Infantry Autogun | 遠程 | 阿格里皮娜Mk I步兵自動槍、哥倫努Mk V步兵自動槍、格拉亞Mk VIII步兵自動槍 |
+| [步兵自動槍](ranged/步兵自動槍/README.md)<br>- Infantry Autogun | 遠程 | 步兵自動槍 阿格里皮娜 Mk I、步兵自動槍 弗拉克斯 Mk V、步兵自動槍 哥倫努 Mk VIII |
 | [雙鏈重型機槍](ranged/雙鏈重型機槍/README.md)<br>- Twin-Linked Heavy Stubber | 遠程 | 克魯克Mk V二聯重機槍、戈爾工Mk IV二聯重機槍、阿克利斯MK V二聯重機槍 |
 | [工兵鏟](melee/工兵鏟/README.md)<br>- Sapper Shovel | 近戰 | 工兵鏟 軍務部 Mk I、工兵鏟 軍務部 Mk III、工兵鏟 軍務部 Mk VII |
 | [突擊鏈鋸劍](melee/突擊鏈鋸劍/README.md)<br>- Assault Chainsword | 近戰 | 突擊鏈鋸劍 卡迪亞 Mk IV、突擊鏈鋸劍 卡迪亞 Mk XIIIg |
@@ -17,9 +17,9 @@
 | [骨鋸](melee/骨鋸/README.md)<br>- Bone Saw | 近戰 | 骨鋸 外科醫師 型號4 |
 | [穿音速雙刀](melee/穿音速雙刀/README.md)<br>- Paired Transonic Blades | 近戰 | 西福爾穿音速刀刃 |
 | [動力劍](melee/動力劍/README.md)<br>- Power Sword | 近戰 | 動力劍 斯干達 Mk III、動力劍 阿克利斯 Mk VI |
-| [偵察鐳射槍](ranged/偵察鐳射槍/README.md)<br>- Recon Lasgun | 遠程 | 奧克塔蘭Mk II偵察鐳射槍、奧克塔蘭Mk VId偵察鐳射槍、奧克塔蘭Mk VIIa偵察鐳射槍 |
+| [偵察鐳射槍](ranged/偵察鐳射槍/README.md)<br>- Recon Lasgun | 遠程 | 偵察鐳射槍 奧克塔蘭 Mk VIc、偵察鐳射槍 奧克塔蘭 Mk XII、偵察鐳射槍 奧克塔蘭 Mk XIV |
 | [電弧步槍](ranged/電弧步槍/README.md)<br>- Arc Rifle | 遠程 | 庫巴爾電弧步槍 |
-| [槍托自動槍](ranged/槍托自動槍/README.md)<br>- Braced Autogun | 遠程 | 哥倫努Mk II槍托自動槍、格拉亞Mk IV槍托自動槍、阿格里皮娜Mk VIII槍托自動槍 |
+| [槍托自動槍](ranged/槍托自動槍/README.md)<br>- Braced Autogun | 遠程 | 槍托自動槍 弗拉克斯 Mk II、槍托自動槍 格拉亞 Mk IV、槍托自動槍 阿格里皮娜 Mk VIII |
 | [矛頭爆矢槍](ranged/矛頭爆矢槍/README.md)<br>- Spearhead Boltgun | 遠程 | 矛頭爆矢槍 洛克 Mk IIb、矛頭爆矢槍 洛克 Mk III |
 | [重伐木槍](ranged/重伐木槍/README.md)<br>- Heavy Stubber | 遠程 | 重伐木槍 克魯克 Mk IIa、重伐木槍 戈爾貢努姆 Mk IIIa、重伐木槍 阿克利斯 Mk II |
 | [撕裂槍](ranged/撕裂槍/README.md)<br>- Ripper Gun | 遠程 | 撕裂槍 碎敵 Mk II、撕裂槍 碎敵 Mk V、撕裂槍 碎敵 Mk VI |

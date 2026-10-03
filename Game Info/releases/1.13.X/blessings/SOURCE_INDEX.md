@@ -44,3 +44,4 @@
 | [致命零距離](entries/致命零距離/README.md) | [來源索引](entries/致命零距離/SOURCE_INDEX.md) |
 | [破片四濺](entries/破片四濺/README.md) | [來源索引](entries/破片四濺/SOURCE_INDEX.md) |
 | [創傷](entries/創傷/README.md) | [來源索引](entries/創傷/SOURCE_INDEX.md) |
+| [遊擊](entries/遊擊/README.md) | [來源索引](entries/遊擊/SOURCE_INDEX.md) |

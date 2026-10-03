@@ -173,3 +173,7 @@
 - 精確型號restriction盤點修正本機Commit：`55a743f4d4f3d1fb84af457dc4e646f0e8a800df`。
 
 - [創傷](2026-10-03-TRAUMA_ACCEPTANCE.json)：新增5變體、11型號關聯；共5變體、11關聯。
+
+- 創傷本機Commit：`4081b7459d0ddba6b04647472d4a166792949e28`；效率調整後第1項已Commit，5變體／11型號關聯，43來源檔案全部沿用已驗證Git物件快取。
+
+- [遊擊](2026-10-03-HIT-AND-RUN_ACCEPTANCE.json)：新增5變體、10型號關聯；共5變體、10關聯。
