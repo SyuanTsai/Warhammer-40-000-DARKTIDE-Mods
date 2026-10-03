@@ -72,6 +72,7 @@
 | <img src="https://github.com/user-attachments/assets/0eb640b4-e206-4d0b-a982-f74b33baf5b2" width="32" height="32" alt="Dominate talent icon"> [Dominate](#ogryn_rending_on_elite_kills) | <ul><li>Elite kills grant +15% Rending for 10s with refresh; actual damage depends on the original armour multiplier.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/27fcc279-9828-4df7-b895-04956bb2463b" width="32" height="32" alt="Reloaded and Ready talent icon"> [Reloaded and Ready](#ogryn_reloading_grants_damage) | <ul><li>Reloading grants +15% ranged damage for 8s; further reloads refresh the duration without stacking.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c6421034-209b-4fab-857d-541fa0667d8b" width="32" height="32" alt="Big Boom talent icon"> [Big Boom](#ogryn_increase_explosion_radius) | <ul><li>Increase explosion outer and central high-damage radii by 27.5%; damage values themselves are unchanged.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/b35eb9be-169c-48cf-a295-329eae3a3610" width="32" height="32" alt="No Pushover talent icon"> [No Pushover](#ogryn_blocking_reduces_push_cost) | <ul><li>A ready push gains +250% Impact; finishing it consumes the bonus and starts an 8s cooldown, even without an enemy hit.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1132,3 +1133,19 @@
 - **Combination**: Other explosion-radius bonuses at the same stage add together. Terrain obstruction and the explosion's own hit detection still affect actual coverage.
 
 [Details](ogryn_increase_explosion_radius.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_blocking_reduces_push_cost"></a>
+
+### No Pushover
+
+<img src="https://github.com/user-attachments/assets/b35eb9be-169c-48cf-a295-329eae3a3610" width="72" height="72" alt="No Pushover talent icon">
+
+- **Trigger**: While the effect is ready, your push gains +250% Impact. Completing that push starts an 8s cooldown; ordinary pushes during cooldown do not restart the countdown.
+
+- **Impact example**: Base push Impact of 100 becomes `100 × (1 + 250%) = 350`. This is stagger strength, not 350 damage.
+
+- **Consumption**: Cooldown starts when the push finishes. Even a push that hits no enemy consumes the empowered push.
+
+[Details](ogryn_blocking_reduces_push_cost.md) · [Back to index](#talent-index)

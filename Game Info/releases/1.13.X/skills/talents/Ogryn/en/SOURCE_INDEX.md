@@ -74,3 +74,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Dominate](ogryn_rending_on_elite_kills.md) / `ogryn_rending_on_elite_kills` | Talent |
 | [Reloaded and Ready](ogryn_reloading_grants_damage.md) / `ogryn_reloading_grants_damage` | Talent |
 | [Big Boom](ogryn_increase_explosion_radius.md) / `ogryn_increase_explosion_radius` | Talent |
+| [No Pushover](ogryn_blocking_reduces_push_cost.md) / `ogryn_blocking_reduces_push_cost` | Talent |

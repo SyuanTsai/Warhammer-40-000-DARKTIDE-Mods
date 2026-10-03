@@ -865,6 +865,18 @@ Full raw template and formatting: [source evidence](ogryn_increase_explosion_rad
 | Explosion radius | Increase explosion radius by +27.5%.; `ui / loc_talent_ogryn_increase_explosion_radius_desc / 15f7867d` | explosion_radius_modifier 0.275 scales radius and close_radius through Explosion._calculate_radii. [Fixed source and line references](ogryn_increase_explosion_radius.md#fixed-source-evidence) | Consistent | The independently read English matches the radius value; it does not describe a damage increase. |
 | Radii, combination and area | No central-radius, addition, obstruction or area formula is stated.; `ui / loc_talent_ogryn_increase_explosion_radius_desc / 15f7867d` | Both outer and central high-damage radii use the accumulated modifier. Radius 4m becomes 5.1m; an unobstructed planar circle has 1.275² ≈ 1.626 times the area (+62.6%). Terrain and hit detection still affect coverage. [Fixed source and line references](ogryn_increase_explosion_radius.md#fixed-source-evidence) | Not covered by the description | These accepted scope and geometric details supplement the radius wording. |
 
+
+<a id="ogryn_blocking_reduces_push_cost"></a>
+
+## No Pushover
+
+Full raw template and formatting: [source evidence](ogryn_blocking_reduces_push_cost.md#original-english-template-and-reconstruction). Name hash `4594653e`. Every row uses `ui / loc_talent_ogryn_empowered_pushes_desc / 3278e768`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Push strength and cooldown | Your Pushes have +250% Stagger. Can only trigger once every 8s.; `ui / loc_talent_ogryn_empowered_pushes_desc / 3278e768` | ogryn_empowered_push applies conditional push_impact_modifier 2.5 while not on cooldown; cooldown_duration is 8s. [Fixed source and line references](ogryn_blocking_reduces_push_cost.md#fixed-source-evidence) | Consistent | The independently read English matches the empowered-push strength and cooldown. |
+| Consumption and calculation | No push-finish or hit requirement is stated.; `ui / loc_talent_ogryn_empowered_pushes_desc / 3278e768` | on_push_finish consumes the bonus even with no enemy hit. Ordinary cooldown pushes do not extend the countdown. Base push Impact 100 becomes 350; this is stagger strength rather than damage. [Fixed source and line references](ogryn_blocking_reduces_push_cost.md#fixed-source-evidence) | Not covered by the description | These accepted consumption and calculation details supplement the English limit. |
+
 ## Comparison totals
 
 The 214 listed rules comprise **89 Consistent**, **4 Explicit contradictions**, **114 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
