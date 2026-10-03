@@ -1,0 +1,118 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Incremental existing-mechanism translation and exact English text check; display-field and fractional display-precision read only.",
+  "static_reconstruction": "+6.25% to all Base Damage for 10s after Sprinting or Sliding. Stacks 4 times.",
+  "comparison_rule_totals": {
+    "Consistent": 3,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 3,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Skirmisher dossier and player section",
+    "Exact same-version English name and full raw description",
+    "veteran_talents.lua:943-986, display fields only",
+    "talent_layout_parser.lua:354-377 and 379-425, exact 6.25 display-precision check only"
+  ],
+  "reused_evidence": [
+    "Accepted sprinting/sliding accumulator, initial 0 and inactive 0.5, approximate stack cadence",
+    "Accepted damage = 0.0625, max 4 stacks, shared 10-second duration and refresh at the cap",
+    "Accepted additive damage stage and shared buff stack/expiry handling",
+    "Accepted buff-value lookup and interpolation; fractional display precision checked narrowly",
+    "Historical icon audit: 2026-10-02-SEPARATED_RECORDS.json, 4836 bytes, SHA256 90256db7bf0de7b766304bc08ce349db5ac9f86aa9896c0f6713c565796c6181",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Read-only draft checked exact English pairs, stack/cadence/shared-timer text and existing 100→125 example. Primary checked display precision; final acceptance uses the complete staged diff review."
+  },
+  "static_examples": {
+    "base_damage": 100,
+    "per_stack_bonus": 0.0625,
+    "max_stacks": 4,
+    "one_stack_damage": 106.25,
+    "four_stack_bonus": 0.25,
+    "four_stack_damage": 125,
+    "shared_duration_seconds": 10,
+    "initial_accumulator_seconds": 0,
+    "inactive_accumulator_seconds": 0.5
+  },
+  "category_section": "Passive talents",
+  "unconfirmed": [
+    "Exact in-game first-stack and update-frame boundaries.",
+    "Final damage with other modifiers and final game UI."
+  ],
+  "unperformed": [
+    "Repeated full implementation/source-range analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game movement/timing/damage/UI measurements"
+  ],
+  "id": "veteran_increase_damage_after_sprinting",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Skirmisher",
+  "name_key": "loc_talent_veteran_damage_damage_after_sprinting",
+  "name_hash": "0c863da8",
+  "description_key": "loc_talent_veteran_damage_damage_after_sprinting_or_sliding_desc",
+  "description_hash": "dc400859",
+  "raw_template": "{base_damage:%s} to all Base Damage for {duration:%s}s after Sprinting or Sliding. Stacks {stacks:%s} times.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 118,
+        "Explicit contradiction": 6,
+        "Not covered by the description": 158,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 4
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 338,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 45,
+      "comparison_rows": 6,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 2
+        },
+        {
+          "columns": 3,
+          "rows": 3
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/skirmisher-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increase_damage_after_sprinting.md"
+}

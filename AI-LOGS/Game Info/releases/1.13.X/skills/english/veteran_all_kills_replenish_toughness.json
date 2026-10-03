@@ -110,5 +110,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/out-for-blood-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_all_kills_replenish_toughness.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_all_kills_replenish_toughness.md",
+  "commit": "ef21eac34a9495d087efc532643340c3748641cf"
 }

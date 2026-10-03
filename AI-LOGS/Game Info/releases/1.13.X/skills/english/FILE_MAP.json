@@ -5728,7 +5728,8 @@
         "veteran_big_game_hunter",
         "veteran_increased_damage_when_flanking",
         "veteran_increased_melee_crit_chance_and_melee_finesse",
-        "veteran_all_kills_replenish_toughness"
+        "veteran_all_kills_replenish_toughness",
+        "veteran_increase_damage_after_sprinting"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5797,7 +5798,8 @@
         "veteran_big_game_hunter",
         "veteran_increased_damage_when_flanking",
         "veteran_increased_melee_crit_chance_and_melee_finesse",
-        "veteran_all_kills_replenish_toughness"
+        "veteran_all_kills_replenish_toughness",
+        "veteran_increase_damage_after_sprinting"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5866,7 +5868,8 @@
         "veteran_big_game_hunter",
         "veteran_increased_damage_when_flanking",
         "veteran_increased_melee_crit_chance_and_melee_finesse",
-        "veteran_all_kills_replenish_toughness"
+        "veteran_all_kills_replenish_toughness",
+        "veteran_increase_damage_after_sprinting"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5935,7 +5938,8 @@
         "veteran_big_game_hunter",
         "veteran_increased_damage_when_flanking",
         "veteran_increased_melee_crit_chance_and_melee_finesse",
-        "veteran_all_kills_replenish_toughness"
+        "veteran_all_kills_replenish_toughness",
+        "veteran_increase_damage_after_sprinting"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6689,9 +6693,24 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1f36d863de9429dea105eb53712c161de9fc9f9b",
       "chinese_sha256": "df4b803f0da7303d44bea04a6973acf189fc60fddd29e3d3645397c2a4ca700e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_increase_damage_after_sprinting"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "changed_document_navigation",
+        "marked_parse",
+        "read_only_text_draft"
+      ],
+      "reused_checks": [
+        "fixed_source_citations",
+        "shared_formatting",
+        "icon_audit",
+        "shared_layout"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_increase_damage_vs_elites.md",
@@ -8788,7 +8807,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_all_kills_replenish_toughness.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_all_kills_replenish_toughness.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_all_kills_replenish_toughness.md",
+      "commit": "ef21eac34a9495d087efc532643340c3748641cf"
+    },
+    {
+      "id": "veteran_increase_damage_after_sprinting",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increase_damage_after_sprinting.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increase_damage_after_sprinting.md"
     }
   ],
   "pending_chinese_corrections": [
