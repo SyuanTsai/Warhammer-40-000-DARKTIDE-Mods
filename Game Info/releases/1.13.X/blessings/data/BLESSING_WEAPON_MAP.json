@@ -423,6 +423,19 @@
       "kind": "melee",
       "icon": "https://github.com/user-attachments/assets/bc5a089b-7227-4993-882a-a5fe0085e6f2",
       "effect": "持用烈焰力場劍，首次弱點揮擊建立計數，連段中的後續弱點揮擊結束時各降低2／3／4／5個百分點反噬；每次揮擊最多一次。"
+    },
+    {
+      "id": "executor",
+      "name_zh_tw": "行刑者",
+      "name_en": "Executor",
+      "name_key": "loc_trait_bespoke_chained_weakspot_hits_increases_power",
+      "description_key": "loc_trait_bespoke_chained_weakspot_hits_increases_power_desc",
+      "name_hash": "dd9dc2c9",
+      "description_hash": "46b9cfe2",
+      "page": "entries/行刑者/README.md",
+      "kind": "melee",
+      "icon": "https://github.com/user-attachments/assets/6b4dbf18-065c-4d5f-af6e-a06a6bb4adca",
+      "effect": "近戰弱點命中每次獲得1層威力；I–IV每層+4.5%／5%／5.5%／6%，最多5層，含滿層命中刷新2.5秒；首個近戰目標未命中弱點會清層。"
     }
   ],
   "weapons": [
@@ -8168,6 +8181,204 @@
       "icon": "https://github.com/user-attachments/assets/bc5a089b-7227-4993-882a-a5fe0085e6f2",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_002",
       "effect": "持用烈焰力場劍，首次弱點揮擊建立計數，連段中的後續弱點揮擊結束時各降低2／3／4／5個百分點反噬；每次揮擊最多一次。"
+    },
+    {
+      "id": "weapon_trait_bespoke_combatknife_p1_chained_weakspot_hits_increases_power",
+      "blessing_id": "executor",
+      "weapon_id": "combatknife_p1",
+      "page": "entries/行刑者/weapon_trait_bespoke_combatknife_p1_chained_weakspot_hits_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_stack": [
+          0.045,
+          0.05,
+          0.055,
+          0.06
+        ],
+        "display_percent_per_stack": [
+          4.5,
+          5,
+          5.5,
+          6
+        ],
+        "max_effective_stacks": 5,
+        "max_total_modifier_by_tier": [
+          0.225,
+          0.25,
+          0.275,
+          0.3
+        ],
+        "max_total_percent_by_tier": [
+          22.5,
+          25,
+          27.5,
+          30
+        ],
+        "child_duration_seconds": 2.5,
+        "stacks_to_remove_on_expiry": 5,
+        "child_stack_offset": -1,
+        "parent_placeholder_children": 1,
+        "proc_event": "on_hit",
+        "stack_condition": "attack_type == melee and hit_weakspot == true",
+        "reset_condition": "A melee non-weakspot on_hit with target_index <= 1 removes all effective child stacks; later target_index body hits do not reset.",
+        "available_tiers": null,
+        "refreshes_at_stack_cap": true,
+        "nonqualifying_hit_refreshes_child_timer": false,
+        "effective_max_stacks": 5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_combatknife_p1.lua",
+        "start_line": 80,
+        "end_line": 139
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_combatknife_p1_buff_templates.lua",
+        "start_line": 9,
+        "end_line": 11
+      },
+      "description_key": "loc_trait_bespoke_chained_weakspot_hits_increases_power_desc",
+      "description_hash": "46b9cfe2",
+      "icon": "https://github.com/user-attachments/assets/6b4dbf18-065c-4d5f-af6e-a06a6bb4adca",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_030",
+      "effect": "近戰弱點命中每次獲得1層威力；I–IV每層+4.5%／5%／5.5%／6%，最多5層，含滿層命中刷新2.5秒；首個近戰目標未命中弱點會清層。"
+    },
+    {
+      "id": "weapon_trait_bespoke_dual_shivs_p1_chained_weakspot_hits_increases_power",
+      "blessing_id": "executor",
+      "weapon_id": "dual_shivs_p1",
+      "page": "entries/行刑者/weapon_trait_bespoke_dual_shivs_p1_chained_weakspot_hits_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_stack": [
+          0.045,
+          0.05,
+          0.055,
+          0.06
+        ],
+        "display_percent_per_stack": [
+          4.5,
+          5,
+          5.5,
+          6
+        ],
+        "max_effective_stacks": 5,
+        "max_total_modifier_by_tier": [
+          0.225,
+          0.25,
+          0.275,
+          0.3
+        ],
+        "max_total_percent_by_tier": [
+          22.5,
+          25,
+          27.5,
+          30
+        ],
+        "child_duration_seconds": 2.5,
+        "stacks_to_remove_on_expiry": 5,
+        "child_stack_offset": -1,
+        "parent_placeholder_children": 1,
+        "proc_event": "on_hit",
+        "stack_condition": "attack_type == melee and hit_weakspot == true",
+        "reset_condition": "A melee non-weakspot on_hit with target_index <= 1 removes all effective child stacks; later target_index body hits do not reset.",
+        "available_tiers": null,
+        "refreshes_at_stack_cap": true,
+        "nonqualifying_hit_refreshes_child_timer": false,
+        "effective_max_stacks": 5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_dual_shivs_p1.lua",
+        "start_line": 80,
+        "end_line": 139
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_dual_shivs_p1_buff_templates.lua",
+        "start_line": 9,
+        "end_line": 11
+      },
+      "description_key": "loc_trait_bespoke_chained_weakspot_hits_increases_power_desc",
+      "description_hash": "46b9cfe2",
+      "icon": "https://github.com/user-attachments/assets/6b4dbf18-065c-4d5f-af6e-a06a6bb4adca",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_030",
+      "effect": "近戰弱點命中每次獲得1層威力；I–IV每層+4.5%／5%／5.5%／6%，最多5層，含滿層命中刷新2.5秒；首個近戰目標未命中弱點會清層。投擲不加層，但沿用開始投擲時的既有威力。"
+    },
+    {
+      "id": "weapon_trait_bespoke_forcesword_p1_chained_weakspot_hits_increases_power",
+      "blessing_id": "executor",
+      "weapon_id": "forcesword_p1",
+      "page": "entries/行刑者/weapon_trait_bespoke_forcesword_p1_chained_weakspot_hits_increases_power.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "power_level_modifier_per_stack": [
+          0.045,
+          0.05,
+          0.055,
+          0.06
+        ],
+        "display_percent_per_stack": [
+          4.5,
+          5,
+          5.5,
+          6
+        ],
+        "max_effective_stacks": 5,
+        "max_total_modifier_by_tier": [
+          0.225,
+          0.25,
+          0.275,
+          0.3
+        ],
+        "max_total_percent_by_tier": [
+          22.5,
+          25,
+          27.5,
+          30
+        ],
+        "child_duration_seconds": 2.5,
+        "stacks_to_remove_on_expiry": 5,
+        "child_stack_offset": -1,
+        "parent_placeholder_children": 1,
+        "proc_event": "on_hit",
+        "stack_condition": "attack_type == melee and hit_weakspot == true",
+        "reset_condition": "A melee non-weakspot on_hit with target_index <= 1 removes all effective child stacks; later target_index body hits do not reset.",
+        "available_tiers": null,
+        "refreshes_at_stack_cap": true,
+        "nonqualifying_hit_refreshes_child_timer": false,
+        "effective_max_stacks": 5
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_forcesword_p1.lua",
+        "start_line": 483,
+        "end_line": 542
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_forcesword_p1_buff_templates.lua",
+        "start_line": 62,
+        "end_line": 64
+      },
+      "description_key": "loc_trait_bespoke_chained_weakspot_hits_increases_power_desc",
+      "description_hash": "46b9cfe2",
+      "icon": "https://github.com/user-attachments/assets/6b4dbf18-065c-4d5f-af6e-a06a6bb4adca",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_030",
+      "effect": "近戰弱點命中每次獲得1層威力；I–IV每層+4.5%／5%／5.5%／6%，最多5層，含滿層命中刷新2.5秒；首個近戰目標未命中弱點會清層。朦朧／戴莫斯黏附每段弱點命中也可疊層，伊利斯依一般揮擊。"
     }
   ],
   "bindings": [
@@ -11439,6 +11650,104 @@
       "mark_id": "forcesword_p1_m3",
       "variant_id": "weapon_trait_bespoke_forcesword_p1_chained_hits_vents_warpcharge",
       "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_weakspot_hits_vents_warpcharge",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m3.lua",
+        "import_line": 15,
+        "append_line": 1541
+      }
+    },
+    {
+      "blessing_id": "executor",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m1",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_chained_weakspot_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/chained_weakspot_hits_increases_power",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1436
+      }
+    },
+    {
+      "blessing_id": "executor",
+      "weapon_id": "combatknife_p1",
+      "mark_id": "combatknife_p1_m2",
+      "variant_id": "weapon_trait_bespoke_combatknife_p1_chained_weakspot_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_combatknife_p1/chained_weakspot_hits_increases_power",
+      "trait_category": "bespoke_combatknife_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/combat_knives/combatknife_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1526
+      }
+    },
+    {
+      "blessing_id": "executor",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m1",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_chained_weakspot_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/chained_weakspot_hits_increases_power",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m1.lua",
+        "import_line": 14,
+        "append_line": 1502
+      }
+    },
+    {
+      "blessing_id": "executor",
+      "weapon_id": "dual_shivs_p1",
+      "mark_id": "dual_shivs_p1_m2",
+      "variant_id": "weapon_trait_bespoke_dual_shivs_p1_chained_weakspot_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_dual_shivs_p1/chained_weakspot_hits_increases_power",
+      "trait_category": "bespoke_dual_shivs_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/dual_shivs/dual_shivs_p1_m2.lua",
+        "import_line": 14,
+        "append_line": 1581
+      }
+    },
+    {
+      "blessing_id": "executor",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m1",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_chained_weakspot_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_weakspot_hits_increases_power",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m1.lua",
+        "import_line": 15,
+        "append_line": 1747
+      }
+    },
+    {
+      "blessing_id": "executor",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m2",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_chained_weakspot_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_weakspot_hits_increases_power",
+      "trait_category": "bespoke_forcesword_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/force_swords/forcesword_p1_m2.lua",
+        "import_line": 15,
+        "append_line": 1673
+      }
+    },
+    {
+      "blessing_id": "executor",
+      "weapon_id": "forcesword_p1",
+      "mark_id": "forcesword_p1_m3",
+      "variant_id": "weapon_trait_bespoke_forcesword_p1_chained_weakspot_hits_increases_power",
+      "trait_item": "content/items/traits/bespoke_forcesword_p1/chained_weakspot_hits_increases_power",
       "trait_category": "bespoke_forcesword_p1",
       "available_tiers": null,
       "source": {

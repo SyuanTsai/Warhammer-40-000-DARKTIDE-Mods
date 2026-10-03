@@ -6,12 +6,13 @@
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/5fb9da44-aabb-4e67-94b0-caa0a9d335a8" width="32" height="32" alt="血肉撕裂者祝福圖示"> [血肉撕裂者](../../../entries/血肉撕裂者/README.md)<br>- Flesh Tearer<br>[完整說明](../../../entries/血肉撕裂者/README.md) | <ul><li>近戰暴擊命中對目標施加5／6／7／8層流血，最多16層；流血每約0.5秒跳傷，停止施加約1.5秒後逐次退1層。</li></ul> | 近戰 |
 | <img src="https://github.com/user-attachments/assets/c3b80cbc-5c0a-4281-abc5-14ab66716a72" width="32" height="32" alt="撕碎祝福圖示"> [撕碎](../../../entries/撕碎/README.md)<br>- Lacerate<br>[完整說明](../../../entries/撕碎/README.md) | <ul><li>符合條件的非弱點近戰命中依等級對目標施加1／2／3／4層流血。</li></ul> | 近戰 |
+| <img src="https://github.com/user-attachments/assets/6b4dbf18-065c-4d5f-af6e-a06a6bb4adca" width="32" height="32" alt="行刑者祝福圖示"> [行刑者](../../../entries/行刑者/README.md)<br>- Executor<br>[完整說明](../../../entries/行刑者/README.md) | <ul><li>近戰弱點命中每次獲得1層威力；I–IV每層+4.5%／5%／5.5%／6%，最多5層，含滿層命中刷新2.5秒；首個近戰目標未命中弱點會清層。</li></ul> | 近戰 |
 
 ## 逐型號對應
 
 | 型號 | 祝福實作 | 等級 |
 |---|---|---|
-| 戰刃 卡塔昌 Mk III | [血肉撕裂者](../../../entries/血肉撕裂者/weapon_trait_bespoke_combatknife_p1_bleed_on_crit.md)、[撕碎](../../../entries/撕碎/weapon_trait_bespoke_combatknife_p1_bleed_on_non_weakspot_hit.md) | I–IV |
-| 戰刃 卡塔昌 Mk VI | [血肉撕裂者](../../../entries/血肉撕裂者/weapon_trait_bespoke_combatknife_p1_bleed_on_crit.md)、[撕碎](../../../entries/撕碎/weapon_trait_bespoke_combatknife_p1_bleed_on_non_weakspot_hit.md) | I–IV |
+| 戰刃 卡塔昌 Mk III | [血肉撕裂者](../../../entries/血肉撕裂者/weapon_trait_bespoke_combatknife_p1_bleed_on_crit.md)、[撕碎](../../../entries/撕碎/weapon_trait_bespoke_combatknife_p1_bleed_on_non_weakspot_hit.md)、[行刑者](../../../entries/行刑者/weapon_trait_bespoke_combatknife_p1_chained_weakspot_hits_increases_power.md) | I–IV |
+| 戰刃 卡塔昌 Mk VI | [血肉撕裂者](../../../entries/血肉撕裂者/weapon_trait_bespoke_combatknife_p1_bleed_on_crit.md)、[撕碎](../../../entries/撕碎/weapon_trait_bespoke_combatknife_p1_bleed_on_non_weakspot_hit.md)、[行刑者](../../../entries/行刑者/weapon_trait_bespoke_combatknife_p1_chained_weakspot_hits_increases_power.md) | I–IV |
 
 表內依各型號列出對應祝福；各祝福的等級為I–IV。
