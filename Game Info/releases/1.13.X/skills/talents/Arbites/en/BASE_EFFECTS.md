@@ -15,3 +15,15 @@ These effects come from the base character configuration. Combat abilities, Blit
 - **Capacity and replenishment**: Carry up to 3 grenades; each throw consumes one. The base ability has no timed replenishment. Selecting the improved talent-tree version raises capacity to 4.
 
 [Source evidence and example assumptions](adamant_grenade.md)
+
+<a id="adamant_area_buff_drone"></a>
+
+## Nuncio-Aquila
+
+- **Deployment and charge**: After deployment, the Nuncio-Aquila follows you and lasts 20s. The base ability has one charge and a 60s cooldown.
+
+- **Allied Toughness**: Allies within 7.5m recover 5% of maximum Toughness per second. With maximum Toughness 100 and continuous presence in range, the theoretical recovery over 20s is 100 points, capped at missing Toughness.
+
+- **Enemy damage taken**: Enemies in range take 15% more damage. Isolating this multiplier, damage 100 becomes 115.
+
+[Source evidence and example assumptions](adamant_area_buff_drone.md)
