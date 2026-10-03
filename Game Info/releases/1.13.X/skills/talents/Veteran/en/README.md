@@ -38,6 +38,7 @@
 | <img src="https://github.com/user-attachments/assets/bc2a44d8-866d-4f29-a680-f84e98b72b01" width="32" height="32" alt="Invigorated talent icon"> [Invigorated](#veteran_weapon_switch_replenish_stamina) | <ul><li>Activating Melee Specialist restores 20% of maximum Stamina, limited by the deficit.</li><li>Gain 25% stamina-cost reduction for 3 seconds; it persists through weapon switches and refreshes on a new qualifying activation.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/85048589-7642-40e7-9d4b-ab325da2ea25" width="32" height="32" alt="Focus Target! talent icon"> [Focus Target!](#veteran_improved_tag) | <ul><li>Store one stack every 1.5 seconds, starting at 1 and normally capping at 4; a tag applies the stored amount to the target.</li><li>Each applied stack multiplies target damage taken by 1.05. Same-target re-tags upgrade only to a higher stored count; the mark lasts 25 seconds.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/a95c5ea6-546f-462d-a073-56f9d1a21103" width="32" height="32" alt="Focused Fire talent icon"> [Focused Fire](#veteran_improved_tag_more_damage) | <ul><li>Raise maximum stored Focus Target stacks from 4 to 6; stack gain remains one every 1.5 seconds.</li><li>Six applied stacks multiply target damage taken by 1.05^6, about 1.3401; re-tag to apply stronger storage.</li></ul> | Keystone modifier |
+| <img src="https://github.com/user-attachments/assets/47cc6995-f2fa-407d-9cb0-4dd91fcdc10d" width="32" height="32" alt="Target Down! talent icon"> [Target Down!](#veteran_improved_tag_dead_bonus) | <ul><li>When your currently marked enemy dies, you and allies in Coherency regain 5% of maximum Toughness and Stamina per applied Focus Target stack.</li><li>Four applied stacks request 20%; with Focused Fire, six request 30%. Deficits limit recovery, and the owner need not land the kill.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/426b1945-b7fc-40e8-9db1-3bda08514bab" width="32" height="32" alt="Long Range Assassin talent icon"> [Long Range Assassin](#veteran_snipers_focus_increased_stacks) | <ul><li>Raise Marksman's Focus's effective stack cap from 10 to 15.</li><li>At 15 stacks, gain 112.5% ranged finesse strength and 15% reload speed; the whole-hit increase depends on the extra component.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/136d0a92-5459-4218-a2b3-324f367ba69d" width="32" height="32" alt="Chink in their Armour talent icon"> [Chink in their Armour](#veteran_snipers_focus_rending_bonus) | <ul><li>At 10 or more Focus stacks, gain 15% Rending; lose it below 10 stacks.</li><li>The threshold stays 10 with Long Range Assassin. Damage gain depends on armor and existing Rending.</li></ul> | Keystone modifier |
@@ -799,6 +800,23 @@ Assume maximum Stamina is 6 points and the activation has a stored Melee Special
 - **Optional combinations:** with Target Down!, a six-stack marked death gives a nominal recovery amount of 30% of maximum Toughness and Stamina, subject to recovery limits. With Redirect Fire!, its damage-buff cap becomes six stacks, contributing 15% to its damage stat. These require the respective modifier as well as Focused Fire.
 
 [Detailed sources and formulas](veteran_improved_tag_more_damage.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_improved_tag_more_damage) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_improved_tag_dead_bonus"></a>
+
+<img src="https://github.com/user-attachments/assets/47cc6995-f2fa-407d-9cb0-4dd91fcdc10d" width="72" height="72" alt="Target Down! talent icon">
+
+### Target Down!
+
+- **When your currently marked enemy dies, you and allies in Coherency recover Toughness and Stamina.** You do not need the killing blow.
+- Each stack actually applied to that enemy restores **5% of each recipient's maximum Toughness and Stamina**. Stored stacks that have not been applied do not count. Recovery stops at each resource's maximum; this Toughness reward ignores general Toughness-replenishment stat bonuses.
+- **Four-stack example:** with maximum Toughness 100, current 50, maximum Stamina 6 and current 2, the 20% reward gives `100 × 20% = 20 Toughness` and `6 × 20% = 1.2 Stamina`, resulting in `70/100` and `3.2/6`.
+- **Near-full example:** at `95/100` Toughness and `5.8/6` Stamina, the same request restores only 5 Toughness and 0.2 Stamina, reaching both maxima.
+- **With Focused Fire:** six applied stacks request `6 × 5% = 30%`, or 30 Toughness and 1.8 Stamina at those maxima with sufficient deficits. Two applied stacks still request only 10%, even if you have six stored stacks.
+- If the mark expires or you mark another enemy first, the previous target's death no longer triggers this reward.
+
+[Detailed sources and formulas](veteran_improved_tag_dead_bonus.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_improved_tag_dead_bonus) | [Back to index](#talent-index)
 
 ---
 

@@ -122,5 +122,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/focused-fire-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_tag_more_damage.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_tag_more_damage.md",
+  "commit": "8ec2237354e83cc075a9435c79dad2c2e468b54f"
 }

@@ -1,0 +1,130 @@
+{
+  "main_baseline_sha": "447df87057d1002d9dfec701be1074595e230211",
+  "source_sha": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "steam_build": "25606770",
+  "english_resource": "content/localization/ui",
+  "resource_hash": "63564edcb7c3c5ee",
+  "locale": "en",
+  "language_code": 0,
+  "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
+  "status": "accepted_with_caveats",
+  "review_mode": "Existing-mechanism translation and exact English text check; only missing resource-percentage display mapping read narrowly.",
+  "static_reconstruction": "If an Enemy you have Tagged dies, replenish 5% Toughness and 5% Stamina for each stack of Focus Target applied, to you and Allies in Coherency.",
+  "comparison_rule_totals": {
+    "Consistent": 3,
+    "Explicit contradiction": 0,
+    "Not covered by the description": 5,
+    "No corresponding implementation evidence found": 0,
+    "Cannot confirm": 0
+  },
+  "english_errata": [],
+  "chinese_mechanism_corrections": [],
+  "primary_direct_reads": [
+    "Complete Chinese Target Down! dossier and player section",
+    "Exact same-version English name and full raw description",
+    "Fixed-SHA veteran_talents.lua lines 3021–3040: exact keys and two literal 0.05 percentage display values"
+  ],
+  "reused_evidence": [
+    "Accepted Chinese fixed-source mechanism, conditions, exceptions and examples",
+    "Accepted shared formatting and corpus version verification",
+    "Reused accepted Target Down! WebP audit: 288×288, 5704 bytes, SHA-256 e2090eb3212889dd5477286cea22f4dc535b515dac610bb358dee3aa606ad6b4; existing Media-Assets Issue attachment.",
+    "Accepted common Markdown layout; final public-image/layout checks remain due"
+  ],
+  "review": {
+    "agent_model": "gpt-6-luna",
+    "effort": "max",
+    "mode": "read_only_text_draft",
+    "result": "Read-only child verified exact same-version name/key/hash/raw, owner and Coherency recipients, no killing-blow restriction, applied-stack basis, maximum-resource recovery, deficit cap, general Toughness-stat bypass and current-mark expiry/replacement. Primary resolved only the two display mappings, reused accepted implementation/formatting evidence and retained complete resource-state examples. No English erratum supported. Primary reviews the full staged diff before commit."
+  },
+  "static_examples": [
+    [
+      "4 applied stacks; current Toughness 50/100 and Stamina 2/6",
+      "Fraction `4 × 0.05 = 0.20`; Toughness `100 × 0.20 = 20 points`, giving `70/100`; Stamina `6 × 0.20 = 1.2 points`, giving `3.2/6`.",
+      "Both resources use the recipient's own maximum and restore the full request when the deficit is sufficient."
+    ],
+    [
+      "4 applied stacks; current Toughness 95/100 and Stamina 5.8/6",
+      "Toughness grant `min(20,100−95)=5 points`; Stamina grant `min(1.2,6−5.8)=0.2 points`; results `100/100` and `6/6`.",
+      "The same nominal 20% recovery does not overfill either resource."
+    ],
+    [
+      "Focused Fire selected; 2 applied stacks; 6 stored but unapplied; sufficient deficits",
+      "Fraction `2 × 0.05 = 0.10`; requests `100 × 0.10 = 10 Toughness points` and `6 × 0.10 = 0.6 Stamina points`.",
+      "The six stored stacks do not make this a 30% reward; only the two applied to the dead target count."
+    ],
+    [
+      "Focused Fire selected; 6 applied stacks; sufficient deficits",
+      "Fraction `6 × 0.05 = 0.30`; requests `100 × 0.30 = 30 Toughness points` and `6 × 0.30 = 1.8 Stamina points`.",
+      "The separate six-stack modifier permits a larger reward when six stacks were actually applied."
+    ],
+    [
+      "4 applied stacks; maximum Toughness 100; deficit at least 20; illustrative general +25% recovery stat",
+      "Requested Toughness `100 × 0.20 = 20 points`; the general modifier is bypassed, so the grant is `20`, not `20 × 1.25 = 25 points`.",
+      "This specific reward ignores general Toughness-replenishment stat bonuses."
+    ]
+  ],
+  "category_section": "Keystones",
+  "unconfirmed": [
+    "Examples assume a valid current mark, qualifying Coherency membership, allowed recovery and the stated resource values. Any six-stack storage/application example requires Focused Fire; the 30% example also requires six stacks actually applied to the enemy. Runtime membership/event ordering, gameplay outcomes and final UI appearance were not measured."
+  ],
+  "unperformed": [
+    "Repeated full implementation/call-chain analysis",
+    "New icon retrieval/screenshots; shared evidence reused, final checks due",
+    "In-game mechanism/damage/UI measurements"
+  ],
+  "id": "veteran_improved_tag_dead_bonus",
+  "class": "Veteran",
+  "date": "2026-10-03",
+  "name": "Target Down!",
+  "name_key": "loc_talent_veteran_improved_tag_dead_bonus",
+  "name_hash": "76b4ca1d",
+  "description_key": "loc_talent_veteran_improved_tag_dead_bonus_description",
+  "description_hash": "57da5a14",
+  "raw_template": "If an Enemy you have Tagged dies, replenish {toughness:%s} Toughness and {stamina:%s} Stamina for each stack of Focus Target applied, to you and Allies in Coherency.",
+  "checks": [
+    {
+      "check": "exact same-version English key/hash pairs and full raw template",
+      "result": "passed"
+    },
+    {
+      "check": "Chinese switch-only preservation, English prose/privacy and comparison totals",
+      "result": "passed",
+      "global_comparison_totals": {
+        "Consistent": 213,
+        "Explicit contradiction": 9,
+        "Not covered by the description": 247,
+        "No corresponding implementation evidence found": 0,
+        "Cannot confirm": 9
+      }
+    },
+    {
+      "check": "changed-document navigation",
+      "result": "passed",
+      "files": 6,
+      "local_references": 556,
+      "errors": []
+    },
+    {
+      "check": "actual marked Markdown parse and HTML generation; existing layout reused",
+      "result": "passed",
+      "player_rows": 76,
+      "comparison_rows": 8,
+      "technical_tables": [
+        {
+          "columns": 3,
+          "rows": 5
+        },
+        {
+          "columns": 3,
+          "rows": 2
+        }
+      ]
+    },
+    {
+      "check": "Git diff whitespace",
+      "result": "passed"
+    }
+  ],
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/target-down-incremental-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_improved_tag_dead_bonus.md"
+}
