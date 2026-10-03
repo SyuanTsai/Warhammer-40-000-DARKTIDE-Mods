@@ -79,6 +79,7 @@
 | <img src="https://github.com/user-attachments/assets/fcb8d517-7a08-452a-a577-1ab15af469cb" width="32" height="32" alt="Strike Down talent icon"> [Strike Down](#adamant_melee_attacks_on_staggered_rend) | <ul><li>Melee attacks against staggered enemies gain 15% Rending.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/c776951e-d8de-46cb-ad58-7c14af6b0997" width="32" height="32" alt="Zealous Dedication talent icon"> [Zealous Dedication](#adamant_crit_chance_on_kill) | <ul><li>Kills grant 2 percentage points of Critical Strike Chance per stack, up to 8 stacks, for 10s.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/e650aa60-14d1-446d-9fa3-fed8dd633716" width="32" height="32" alt="Prosecution Blow talent icon"> [Prosecution Blow](#adamant_crits_rend) | <ul><li>Ranged Critical Strikes gain 20% Rending.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/cd883557-4048-43f0-a3b7-3a90bbc6ffe8" width="32" height="32" alt="Street Smarts talent icon"> [Street Smarts](#adamant_dodge_improvement) | <ul><li>Gain 1 additional Effective Dodge; extend the grace period after a melee dodge ends by 25%.</li></ul> | Passive talent |
 
 ## Blitz
 
@@ -1003,3 +1004,15 @@
 - **Beyond the armour deficit**: If the original Carapace modifier is already 1, the excess is converted at one quarter. This effect gives 100 × (1 + 0.2 × 0.25) = 105 points. Actual increases vary with the weapon and enemy.
 
 [Details](adamant_crits_rend.md) · [Back to index](#talent-index)
+
+<a id="adamant_dodge_improvement"></a>
+
+### Street Smarts
+
+<img src="https://github.com/user-attachments/assets/cd883557-4048-43f0-a3b7-3a90bbc6ffe8" width="72" height="72" alt="Street Smarts talent icon">
+
+- **Dodge count**: Gain 1 additional Effective Dodge. For example, a weapon originally allowing 3 consecutive Effective Dodges allows 3 + 1 = 4.
+
+- **Timing**: The grace period after a melee dodge ends increases from 0.2s to 0.2 × 1.25 = 0.25s, an extra 0.05s. This does not extend the entire dodge action by 25%.
+
+[Details](adamant_dodge_improvement.md) · [Back to index](#talent-index)
