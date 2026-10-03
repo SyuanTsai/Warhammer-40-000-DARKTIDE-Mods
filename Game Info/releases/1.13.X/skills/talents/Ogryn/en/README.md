@@ -89,6 +89,7 @@
 | <img src="https://github.com/user-attachments/assets/ce3b22d4-870e-4496-96fc-33601f9d9a62" width="32" height="32" alt="Steady Grip talent icon"> [Steady Grip](#ogryn_toughness_while_bracing) | <ul><li>While bracing or shooting, replenish 12.5% of maximum Toughness per second, with approximately 0.5s shooting-state retention.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/b7e2a92b-0a60-459a-87c9-6276b204f64e" width="32" height="32" alt="Can't Hit Me...Again talent icon"> [Can't Hit Me...Again](#ogryn_ranged_damage_immunity) | <ul><li>Taking ranged damage grants 20% ranged reduction for 2.5s; a 4s cooldown follows, without active-period refresh.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/5974d1c4-5b31-42b8-af90-022202c4614e" width="32" height="32" alt="Dedicated Practice talent icon"> [Dedicated Practice](#ogryn_wield_speed_increase) | <ul><li>Increase Weapon Swap Speed by 35%; a scaled 1s weapon-draw action takes approximately 0.741s, without increasing Reload Speed.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/eeae1229-b245-43fc-9840-960c36f5787e" width="32" height="32" alt="Spray and Slay talent icon"> [Spray and Slay](#ogryn_ranged_improves_melee) | <ul><li>Emptying the current clip through ammunition consumption grants +15% melee damage and +7.5% melee Attack Speed for 6s; retriggers refresh.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1425,3 +1426,19 @@
 - The Chinese wording “武器切換速度縮短為 +35%” confuses speed with duration. It should mean Weapon Swap Speed increases by 35%; the same action takes approximately 74.1% of its original duration.
 
 [Details](ogryn_wield_speed_increase.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_ranged_improves_melee"></a>
+
+### Spray and Slay
+
+<img src="https://github.com/user-attachments/assets/eeae1229-b245-43fc-9840-960c36f5787e" width="72" height="72" alt="Spray and Slay talent icon">
+
+- **Trigger**: Consuming ammunition that empties the current weapon's clip grants +15% melee damage and +7.5% melee Attack Speed for 6s. Switching to a melee weapon then lets you use the bonuses.
+
+- **Stacks and refresh**: Another qualifying trigger restarts the timer without stacking percentages. Simply continuing to hold an empty clip does not repeatedly trigger the effect.
+
+- **Calculation example**: Base melee damage of 100 becomes 115. An Attack-Speed-scaled 1s action becomes `1 ÷ 1.075 ≈ 0.930s`. Other same-stage damage and speed bonuses add within their respective stats.
+
+[Details](ogryn_ranged_improves_melee.md) · [Back to index](#talent-index)

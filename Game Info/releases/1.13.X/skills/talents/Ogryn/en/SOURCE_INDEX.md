@@ -91,3 +91,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Steady Grip](ogryn_toughness_while_bracing.md) / `ogryn_toughness_while_bracing` | Talent |
 | [Can't Hit Me...Again](ogryn_ranged_damage_immunity.md) / `ogryn_ranged_damage_immunity` | Talent |
 | [Dedicated Practice](ogryn_wield_speed_increase.md) / `ogryn_wield_speed_increase` | Talent |
+| [Spray and Slay](ogryn_ranged_improves_melee.md) / `ogryn_ranged_improves_melee` | Talent |

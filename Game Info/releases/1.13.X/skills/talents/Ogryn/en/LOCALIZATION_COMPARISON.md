@@ -1069,6 +1069,18 @@ Full raw template and formatting: [source evidence](ogryn_wield_speed_increase.m
 | Weapon Swap Speed | +35% Weapon Swap Speed.; `ui / loc_talent_ogryn_wield_speed_increase_desc / 6349b08e` | wield_speed 0.35 contributes to ActionHandler time_scale for use_wield_speed actions. [Fixed source and line references](ogryn_wield_speed_increase.md#fixed-source-evidence) | Consistent | The independently read English states an increase to speed, matching the accepted stat; the existing correction concerns Chinese wording only. |
 | Action timing and scope | No action-duration formula or Reload Speed bonus is stated.; `ui / loc_talent_ogryn_wield_speed_increase_desc / 6349b08e` | Applicable weapon-draw actions use time/time_scale. One second becomes 1 ÷1.35 ≈0.741s, about 25.9% shorter or 74.1% of the original; not 35% remaining or a direct 35% reduction. Reload Speed is not increased. [Fixed source and line references](ogryn_wield_speed_increase.md#fixed-source-evidence) | Not covered by the description | These accepted scope and timing details supplement the English. |
 
+
+<a id="ogryn_ranged_improves_melee"></a>
+
+## Spray and Slay
+
+Full raw template and formatting: [source evidence](ogryn_ranged_improves_melee.md#original-english-template-and-reconstruction). Name hash `49b80f06`. Every row uses `ui / loc_talent_ogryn_ranged_improves_melee_desc / 7ba7e606`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Empty-clip bonuses | +15% Melee Damage and +7.5% Melee Attack Speed for 6s after emptying your Clip.; `ui / loc_talent_ogryn_ranged_improves_melee_desc / 7ba7e606` | on_ammo_consumed with current_slot_clip_percentage ==0 activates melee_damage 0.15 and melee_attack_speed 0.075 for 6s. [Fixed source and line references](ogryn_ranged_improves_melee.md#fixed-source-evidence) | Consistent | The independently read English matches the trigger and bonuses. |
+| Event, refresh and calculation | No persistent-empty-clip trigger, stacking or calculation formula is stated.; `ui / loc_talent_ogryn_ranged_improves_melee_desc / 7ba7e606` | A qualifying ammunition-consumption event can refresh without cooldown or percentage stacking; holding an empty clip does not repeatedly trigger. Base melee damage 100 →115; a scaled 1s action becomes 1 ÷1.075 ≈0.930s. Same-stage modifiers add within their respective stats. [Fixed source and line references](ogryn_ranged_improves_melee.md#fixed-source-evidence) | Not covered by the description | These accepted event and calculation details supplement the English. |
+
 ## Comparison totals
 
 The 254 listed rules comprise **109 Consistent**, **4 Explicit contradictions**, **134 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
