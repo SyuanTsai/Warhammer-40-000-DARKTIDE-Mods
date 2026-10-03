@@ -722,4 +722,4 @@ Full raw text and formatting: [source evidence](base_toughness_damage_reduction_
 
 ## Comparison totals
 
-The 265 listed rules comprise **150 Consistent**, **1 Explicit contradiction**, **108 Not covered by the description**, **0 No corresponding implementation evidence found** and **6 Cannot confirm**. The explicit English contradiction concerns the melee attack-interval value in Fear of Justice. These totals apply only to the listed rules.
+The 291 listed rules comprise **160 Consistent**, **1 Explicit contradiction**, **123 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradiction concerns the melee attack-interval value in Fear of Justice. These totals apply only to the listed rules.

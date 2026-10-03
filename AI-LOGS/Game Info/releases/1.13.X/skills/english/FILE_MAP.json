@@ -105,7 +105,12 @@
         "adamant_damage_after_reloading",
         "adamant_multiple_hits_attack_speed",
         "adamant_elite_special_kills_replenish_toughness",
-        "adamant_close_kills_restore_toughness"
+        "adamant_close_kills_restore_toughness",
+        "adamant_staggers_replenish_toughness",
+        "adamant_dog_attacks_electrocute",
+        "adamant_stamina_spent_replenish_toughness",
+        "adamant_limit_dmg_taken_from_hits",
+        "base_toughness_damage_reduction_node_buff_medium_1"
       ],
       "checks": []
     },
@@ -159,7 +164,12 @@
         "adamant_damage_after_reloading",
         "adamant_multiple_hits_attack_speed",
         "adamant_elite_special_kills_replenish_toughness",
-        "adamant_close_kills_restore_toughness"
+        "adamant_close_kills_restore_toughness",
+        "adamant_staggers_replenish_toughness",
+        "adamant_dog_attacks_electrocute",
+        "adamant_stamina_spent_replenish_toughness",
+        "adamant_limit_dmg_taken_from_hits",
+        "base_toughness_damage_reduction_node_buff_medium_1"
       ],
       "checks": []
     },
@@ -213,7 +223,12 @@
         "adamant_damage_after_reloading",
         "adamant_multiple_hits_attack_speed",
         "adamant_elite_special_kills_replenish_toughness",
-        "adamant_close_kills_restore_toughness"
+        "adamant_close_kills_restore_toughness",
+        "adamant_staggers_replenish_toughness",
+        "adamant_dog_attacks_electrocute",
+        "adamant_stamina_spent_replenish_toughness",
+        "adamant_limit_dmg_taken_from_hits",
+        "base_toughness_damage_reduction_node_buff_medium_1"
       ],
       "checks": []
     },
@@ -267,7 +282,12 @@
         "adamant_damage_after_reloading",
         "adamant_multiple_hits_attack_speed",
         "adamant_elite_special_kills_replenish_toughness",
-        "adamant_close_kills_restore_toughness"
+        "adamant_close_kills_restore_toughness",
+        "adamant_staggers_replenish_toughness",
+        "adamant_dog_attacks_electrocute",
+        "adamant_stamina_spent_replenish_toughness",
+        "adamant_limit_dmg_taken_from_hits",
+        "base_toughness_damage_reduction_node_buff_medium_1"
       ],
       "checks": []
     },
@@ -670,9 +690,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1d501dd0adda9460c6a938fe21848ac582832dcd",
       "chinese_sha256": "7a5319f9977ed1342450f23813269ca3a8ad6768041889a38bbbb2c786bd3450",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_dog_attacks_electrocute"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_126_130.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_dog_damage_after_ability.md",
@@ -1057,9 +1084,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "579a8b9ad4adc2c3fa761fa7bc1c5430d26ef9e9",
       "chinese_sha256": "13faca771348d33ca8eff286f90f7a78d62efb8195a3aa6228253222c77e3a4f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_limit_dmg_taken_from_hits"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_126_130.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_melee_attacks_on_staggered_rend.md",
@@ -1327,9 +1361,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "e663e138f1be1501f108d7d93f7fde2ab5f4e2f6",
       "chinese_sha256": "2e23a417f00cb0799d8ba60c8de000a2c273fe8a8b5f750bc1de1c1ca8f0a988",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_staggers_replenish_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_126_130.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_stamina_spent_replenish_toughness.md",
@@ -1338,9 +1379,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "697e327b8d4897a9e3dd094e99e12e577adeb12b",
       "chinese_sha256": "8c03f3d53dc92a657a3899012b676237fb7dd0e336c1d796faa81d6fd3b03d88",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_stamina_spent_replenish_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_126_130.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_stance.md",
@@ -1573,9 +1621,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "1297fc12d70014ba1e51460cfbb85af6ac55d91a",
       "chinese_sha256": "cc5cbaebeec3f8ba58194990ad03b4d5f82ddc529912a982912bbf272c1eab2d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_toughness_damage_reduction_node_buff_medium_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_126_130.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/BASE_EFFECTS.md",
@@ -10648,6 +10703,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_122_125.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_close_kills_restore_toughness.md"
+    },
+    {
+      "id": "adamant_staggers_replenish_toughness",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_126_130.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_staggers_replenish_toughness.md"
+    },
+    {
+      "id": "adamant_dog_attacks_electrocute",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_126_130.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_dog_attacks_electrocute.md"
+    },
+    {
+      "id": "adamant_stamina_spent_replenish_toughness",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_126_130.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stamina_spent_replenish_toughness.md"
+    },
+    {
+      "id": "adamant_limit_dmg_taken_from_hits",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_126_130.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_limit_dmg_taken_from_hits.md"
+    },
+    {
+      "id": "base_toughness_damage_reduction_node_buff_medium_1",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_126_130.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/base_toughness_damage_reduction_node_buff_medium_1.md"
     }
   ],
   "pending_chinese_corrections": [
