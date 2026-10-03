@@ -1093,6 +1093,18 @@ Full raw template and formatting: [source evidence](ogryn_melee_improves_ranged.
 | Melee-kill ranged stacks | +3% Ranged Damage on Melee Kill. Lasts 10s. Max Stacks 5.; `ui / loc_talent_ogryn_melee_improves_ranged_desc / 01fff66e` | on_melee_kill adds one child stack: ranged_damage 0.03, maximum five, duration 10s. [Fixed source and line references](ogryn_melee_improves_ranged.md#fixed-source-evidence) | Consistent | The independently read English matches the trigger, stat, duration and cap. |
 | Refresh and additive calculation | No refresh or combined-damage formula is stated.; `ui / loc_talent_ogryn_melee_improves_ranged_desc / 01fff66e` | Further melee kills refresh. Full stacks give 15%: base 100 →115, or 100 ×(1 +20% +5 ×3%) =135 with another same-stage +20%. [Fixed source and line references](ogryn_melee_improves_ranged.md#fixed-source-evidence) | Not covered by the description | These accepted refresh and calculation details supplement the English. |
 
+
+<a id="ogryn_ally_elite_kills_grant_cooldown"></a>
+
+## Bruiser
+
+Full raw template and formatting: [source evidence](ogryn_ally_elite_kills_grant_cooldown.md#original-english-template-and-reconstruction). Name hash `b17401b3`. Every row uses `ui / loc_talent_ogryn_cooldown_on_elite_kills_new_desc / d14f6cb0`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Elite kill and cooldown regeneration | +50% Ability Cooldown Regeneration for 4s after you or an Ally in Coherency kill an Elite Enemy.; `ui / loc_talent_ogryn_cooldown_on_elite_kills_new_desc / d14f6cb0` | Elite on_minion_death with attacker in in_coherence_units adds a 4s child that restores 0.5s per approximately one-second tick. [Fixed source and line references](ogryn_ally_elite_kills_grant_cooldown.md#fixed-source-evidence) | Consistent | The independently read English describes increased regeneration, matching the accepted periodic recovery. |
+| Refresh, exclusions and tick timing | No stack behavior, exact tick ordering or immediate fractional cooldown reduction is stated.; `ui / loc_talent_ogryn_cooldown_on_elite_kills_new_desc / d14f6cb0` | The child has one stack and refreshes to 4s; Specialists qualify only if Elite. t >timer starts after t +1. With all four ticks, normal 4s plus 4 ×0.5s yields 6s recovery /2s extra; full cooldown and expiry/update ordering can limit actual recovery. [Fixed source and line references](ogryn_ally_elite_kills_grant_cooldown.md#fixed-source-evidence) | Not covered by the description | These accepted event and calculation details supplement the English; the four-tick example remains conditional. |
+
 ## Comparison totals
 
 The 254 listed rules comprise **109 Consistent**, **4 Explicit contradictions**, **134 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

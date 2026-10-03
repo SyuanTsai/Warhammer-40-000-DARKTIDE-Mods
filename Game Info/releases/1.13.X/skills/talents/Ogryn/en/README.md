@@ -91,6 +91,7 @@
 | <img src="https://github.com/user-attachments/assets/5974d1c4-5b31-42b8-af90-022202c4614e" width="32" height="32" alt="Dedicated Practice talent icon"> [Dedicated Practice](#ogryn_wield_speed_increase) | <ul><li>Increase Weapon Swap Speed by 35%; a scaled 1s weapon-draw action takes approximately 0.741s, without increasing Reload Speed.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/eeae1229-b245-43fc-9840-960c36f5787e" width="32" height="32" alt="Spray and Slay talent icon"> [Spray and Slay](#ogryn_ranged_improves_melee) | <ul><li>Emptying the current clip through ammunition consumption grants +15% melee damage and +7.5% melee Attack Speed for 6s; retriggers refresh.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/fdf1eb1f-b76f-4452-beac-f2205fc32d2b" width="32" height="32" alt="Bash and Blast talent icon"> [Bash and Blast](#ogryn_melee_improves_ranged) | <ul><li>Melee kills build up to five +3% ranged damage stacks / 15% for 10s; further melee kills refresh.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/9e138d4c-f301-46c6-9eef-5aff038efc7c" width="32" height="32" alt="Bruiser talent icon"> [Bruiser](#ogryn_ally_elite_kills_grant_cooldown) | <ul><li>Your or a Coherency ally's Elite kill grants about 0.5s extra cooldown recovery per second for 4s; refreshes without stacking.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1457,3 +1458,19 @@
 - **Damage example**: At full stacks, base ranged damage of 100 becomes 115. With another +20% at the same stage, it becomes `100 × (1 + 20% + 5 × 3%) = 135`.
 
 [Details](ogryn_melee_improves_ranged.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_ally_elite_kills_grant_cooldown"></a>
+
+### Bruiser
+
+<img src="https://github.com/user-attachments/assets/9e138d4c-f301-46c6-9eef-5aff038efc7c" width="72" height="72" alt="Bruiser talent icon">
+
+- **Trigger**: When you or an ally in Coherency kills an Elite, restore approximately 0.5s of additional Combat Ability cooldown per second for 4s. Specialists that are not Elites do not trigger it.
+
+- **Refresh**: Another qualifying kill resets the 4s countdown without increasing the restoration per second. The effect has a maximum of one stack.
+
+- **Timing example**: Normal cooldown recovery restores 1s per second, with an additional 0.5s per tick. If all four extra ticks are received, 4s advances cooldown by `4 + 4 × 0.5 = 6s`, saving an additional 2s. Actual recovery depends on whether cooldown is already full and on update timing.
+
+[Details](ogryn_ally_elite_kills_grant_cooldown.md) · [Back to index](#talent-index)

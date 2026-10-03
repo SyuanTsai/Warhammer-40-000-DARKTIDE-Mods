@@ -93,3 +93,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Dedicated Practice](ogryn_wield_speed_increase.md) / `ogryn_wield_speed_increase` | Talent |
 | [Spray and Slay](ogryn_ranged_improves_melee.md) / `ogryn_ranged_improves_melee` | Talent |
 | [Bash and Blast](ogryn_melee_improves_ranged.md) / `ogryn_melee_improves_ranged` | Talent |
+| [Bruiser](ogryn_ally_elite_kills_grant_cooldown.md) / `ogryn_ally_elite_kills_grant_cooldown` | Talent |
