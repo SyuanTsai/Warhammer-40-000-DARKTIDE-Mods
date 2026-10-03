@@ -115,7 +115,12 @@
         "adamant_ammo_belt",
         "adamant_rebreather",
         "adamant_hitting_multiple_gives_tdr",
-        "base_ranged_damage_node_buff_medium_1"
+        "base_ranged_damage_node_buff_medium_1",
+        "base_melee_damage_node_buff_medium_1",
+        "adamant_dog_pounces_bleed_nearby",
+        "adamant_damage_reduction_after_elite_kill",
+        "adamant_staggers_reduce_damage_taken",
+        "base_cleave_node_buff_medium_1"
       ],
       "checks": []
     },
@@ -179,7 +184,12 @@
         "adamant_ammo_belt",
         "adamant_rebreather",
         "adamant_hitting_multiple_gives_tdr",
-        "base_ranged_damage_node_buff_medium_1"
+        "base_ranged_damage_node_buff_medium_1",
+        "base_melee_damage_node_buff_medium_1",
+        "adamant_dog_pounces_bleed_nearby",
+        "adamant_damage_reduction_after_elite_kill",
+        "adamant_staggers_reduce_damage_taken",
+        "base_cleave_node_buff_medium_1"
       ],
       "checks": []
     },
@@ -243,7 +253,12 @@
         "adamant_ammo_belt",
         "adamant_rebreather",
         "adamant_hitting_multiple_gives_tdr",
-        "base_ranged_damage_node_buff_medium_1"
+        "base_ranged_damage_node_buff_medium_1",
+        "base_melee_damage_node_buff_medium_1",
+        "adamant_dog_pounces_bleed_nearby",
+        "adamant_damage_reduction_after_elite_kill",
+        "adamant_staggers_reduce_damage_taken",
+        "base_cleave_node_buff_medium_1"
       ],
       "checks": []
     },
@@ -307,7 +322,12 @@
         "adamant_ammo_belt",
         "adamant_rebreather",
         "adamant_hitting_multiple_gives_tdr",
-        "base_ranged_damage_node_buff_medium_1"
+        "base_ranged_damage_node_buff_medium_1",
+        "base_melee_damage_node_buff_medium_1",
+        "adamant_dog_pounces_bleed_nearby",
+        "adamant_damage_reduction_after_elite_kill",
+        "adamant_staggers_reduce_damage_taken",
+        "base_cleave_node_buff_medium_1"
       ],
       "checks": []
     },
@@ -633,9 +653,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "0aaf0dc1cea515d81d0572b587add5f464677541",
       "chinese_sha256": "ee7a703eaedfbd2388652f17fd33ca4ab3d29a0a9c948a63e03e5afaaa7015d3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_damage_reduction_after_elite_kill"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_136_140.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_damage_vs_staggered_aura.md",
@@ -760,9 +787,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "6c2efef61f58cd101c3cd8f8d269bcdd7a95681f",
       "chinese_sha256": "2f5dd6af3104df4337f8ccf6755ca282cbea2446c03193d26f39fd602917f720",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_dog_pounces_bleed_nearby"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_136_140.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_drone_buff_talent.md",
@@ -1398,9 +1432,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "bbaf54b366bd1715ab1198537c9d9a9cfc7f2aae",
       "chinese_sha256": "61783a58da5edefc600b54da15b95d613bf9402aea9c48569cfe51eccd95a2dc",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_staggers_reduce_damage_taken"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_136_140.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_staggers_replenish_toughness.md",
@@ -1625,9 +1666,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "9f9a29bfe4ee835cf53054628cdb78ef6fa452f9",
       "chinese_sha256": "a0aef07bb9feee660d83a98fba0ac935a2644d67676fde1d4ab2100b860a581e",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_cleave_node_buff_medium_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_136_140.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/base_impact_node_buff_medium_1.md",
@@ -1647,9 +1695,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5af46ea794ec4b61c442b1b5f6a45b57cd2093e2",
       "chinese_sha256": "df786ebbea6f7803cae6f12f2beb1d90178073d4bff7cad5a6e271a6c088cb1c",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "base_melee_damage_node_buff_medium_1"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_136_140.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/base_ranged_damage_node_buff_medium_1.md",
@@ -10838,6 +10893,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_131_135.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/base_ranged_damage_node_buff_medium_1.md"
+    },
+    {
+      "id": "base_melee_damage_node_buff_medium_1",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_136_140.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/base_melee_damage_node_buff_medium_1.md"
+    },
+    {
+      "id": "adamant_dog_pounces_bleed_nearby",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_136_140.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_dog_pounces_bleed_nearby.md"
+    },
+    {
+      "id": "adamant_damage_reduction_after_elite_kill",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_136_140.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_damage_reduction_after_elite_kill.md"
+    },
+    {
+      "id": "adamant_staggers_reduce_damage_taken",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_136_140.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_staggers_reduce_damage_taken.md"
+    },
+    {
+      "id": "base_cleave_node_buff_medium_1",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_136_140.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/base_cleave_node_buff_medium_1.md"
     }
   ],
   "pending_chinese_corrections": [

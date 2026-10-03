@@ -851,4 +851,4 @@ Full raw text and formatting: [source evidence](base_cleave_node_buff_medium_1.m
 
 ## Comparison totals
 
-The 307 listed rules comprise **167 Consistent**, **1 Explicit contradiction**, **132 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradiction concerns the melee attack-interval value in Fear of Justice. These totals apply only to the listed rules.
+The 330 listed rules comprise **175 Consistent**, **1 Explicit contradiction**, **145 Not covered by the description**, **0 No corresponding implementation evidence found** and **9 Cannot confirm**. The explicit English contradiction concerns the melee attack-interval value in Fear of Justice. These totals apply only to the listed rules.

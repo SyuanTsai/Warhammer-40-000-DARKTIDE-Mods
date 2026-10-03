@@ -1,0 +1,67 @@
+{
+  "id": "arbites_passives_136_140",
+  "date": "2026-10-04",
+  "scope": "Arbites",
+  "source_SHA": "7e662fcda16219d775b84af50322be2e9cd9d62e",
+  "English_build": "25606770",
+  "checks": [
+    "translation_text_and_values_passed",
+    "independent_English_comparison_passed",
+    "changed_Markdown_and_local_links_passed",
+    "Chinese_language_switch_only_passed",
+    "full_diff_review_once_per_skill_passed"
+  ],
+  "source_reads": "Only missing English display mappings. Mechanism, numerical, shared formatting and image evidence reused. Source pointers are in each English document.",
+  "questions": [
+    "Razor-Jaw Augment: exact English knocked-away category versus accepted profile flags and actual displacement is unconfirmed.",
+    "Hold the Line: exact English Non-Human Sized coverage versus Ogryn/Monster tags is unconfirmed.",
+    "Final game UI and runtime behavior were not observed."
+  ],
+  "skills": [
+    {
+      "id": "base_melee_damage_node_buff_medium_1",
+      "name": "Melee Damage Boost",
+      "name_hash": "cb9e7b48",
+      "description_hash": "7b5da013",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/base_melee_damage_node_buff_medium_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/base_melee_damage_node_buff_medium_1.md",
+      "commit": "3ff9e9aa"
+    },
+    {
+      "id": "adamant_dog_pounces_bleed_nearby",
+      "name": "Razor-Jaw Augment",
+      "name_hash": "fd617d6e",
+      "description_hash": "549c0cdb",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_dog_pounces_bleed_nearby.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_dog_pounces_bleed_nearby.md",
+      "commit": "002eb76c"
+    },
+    {
+      "id": "adamant_damage_reduction_after_elite_kill",
+      "name": "Imposing Force",
+      "name_hash": "79940084",
+      "description_hash": "368927ce",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_damage_reduction_after_elite_kill.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_damage_reduction_after_elite_kill.md",
+      "commit": "b8876a82"
+    },
+    {
+      "id": "adamant_staggers_reduce_damage_taken",
+      "name": "Hold the Line",
+      "name_hash": "7186f17f",
+      "description_hash": "0f55ddc6",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_staggers_reduce_damage_taken.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_staggers_reduce_damage_taken.md",
+      "commit": "e7fd3785"
+    },
+    {
+      "id": "base_cleave_node_buff_medium_1",
+      "name": "Cleave Boost",
+      "name_hash": "5583cb92",
+      "description_hash": "88737f68",
+      "source_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/base_cleave_node_buff_medium_1.md",
+      "english_pointer": "Game Info/releases/1.13.X/skills/talents/Arbites/en/base_cleave_node_buff_medium_1.md",
+      "commit": "0af5b54b"
+    }
+  ]
+}

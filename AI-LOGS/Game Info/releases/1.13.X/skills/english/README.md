@@ -306,3 +306,5 @@ Five-item checkpoint (skills 113–117): 844 seconds (14m 04s), measured between
 - [Arbites passives 126–130](arbites_passives_126_130.json): Force of Will, Voltaic Mandibles Augment, Walk It Off, True Grit and Toughness Damage Reduction. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
 
 - [Arbites passives 131–135](arbites_passives_131_135.json): Arbitrator Armour, Ammo Belt, Rebreather, Suppression Protocols and Ranged Damage Boost. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
+
+- [Arbites passives 136–140](arbites_passives_136_140.json): Melee Damage Boost, Razor-Jaw Augment, Imposing Force, Hold the Line and Cleave Boost. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
