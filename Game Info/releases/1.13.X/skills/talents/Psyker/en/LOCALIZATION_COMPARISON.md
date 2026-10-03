@@ -177,6 +177,19 @@ Full raw template and formatting: [source evidence](psyker_combat_ability_stance
 | State, growth, end and lingering effect | Entering/leaving Gaze; +1% Damage each second up to +30%, lingering 10s; Kills slow Peril build-up; ends at 100%; base cooldown 25s; `ui / loc_talent_psyker_combat_ability_overcharge_stance_improved_description / 00d42220` | Gaze is a character state; damage grows to +30% and stacks determine a 10-second exit buff. Kills offset the rising Peril rate; 100% stops the active buff. Base cooldown is 25 seconds. [Fixed source and line references](psyker_combat_ability_stance.md#fixed-source-evidence) | Consistent | State wording, growth, duration and end condition agree. The Chinese area wording is not an English error. |
 | Calculation and additional limits | No full damage formula, maximum-Toughness basis, cooldown pause, Precognition bonus-stack condition or guaranteed duration stated; `ui / loc_talent_psyker_combat_ability_overcharge_stance_improved_description / 00d42220` | Extra Weakspot damage receives +10%; full-stack general damage is +40%. Recovery uses maximum Toughness, chance adds percentage points; Precognition enables bonus_stacks. Cooldown pauses during Gaze; duration depends on Peril and other factors. [Fixed source and line references](psyker_combat_ability_stance.md#fixed-source-evidence) | Not covered by the description | These calculations and conditions supplement the stated effects. |
 
+
+<a id="psyker_shout_reduces_warp_charge_generation"></a>
+
+## Becalming Eruption
+
+Full raw template and formatting: [source evidence](psyker_shout_reduces_warp_charge_generation.md#original-english-template-and-reconstruction). Name hash `cc0d1ec0`. Every row uses `ui / loc_talent_psyker_shout_reduces_warp_charge_generation_description / 57df8e08`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Trigger, affected stat, cap and duration | Venting Shriek decreases Peril Generation for each Enemy hit, stacking 25 times for 5s; `ui / loc_talent_psyker_shout_reduces_warp_charge_generation_description / 57df8e08` | The shout-end event grants num_hits stacks of a Peril Generation buff, lasting 5 seconds with maximum 25 stacks. [Fixed source and line references](psyker_shout_reduces_warp_charge_generation.md#fixed-source-evidence) | Consistent | Trigger, affected stat, cap and duration agree. |
+| Tier-dependent per-stack value | `{warp_generation:%s}` uses tier-aware formatting; the 0.99 scenario reconstructs 1%; `ui / loc_talent_psyker_shout_reduces_warp_charge_generation_description / 57df8e08` | Default/first override use warp_charge_amount=0.99; second override uses 0.98. The display mapping converts these to 1% or 2%. [Fixed source and line references](psyker_shout_reduces_warp_charge_generation.md#fixed-source-evidence) | Cannot confirm | Which tier/configuration the client uses is unresolved; one value cannot be asserted for all configurations. |
+| Stack calculation and targeting limits | No additive formula, existing-Peril Quell or duplicate-hit behavior stated; `ui / loc_talent_psyker_shout_reduces_warp_charge_generation_description / 57df8e08` | The coefficient multiplies per stack: 0.99^10 ≈ 0.9044 and 0.99^25 ≈ 0.7778. Target filtering determines hit count; special duplicate counting is unverified. Existing Peril is not directly removed. [Fixed source and line references](psyker_shout_reduces_warp_charge_generation.md#fixed-source-evidence) | Not covered by the description | These calculations and limits supplement the stated Peril Generation reduction. |
+
 ## Comparison totals
 
 The 21 listed rules comprise **10 Consistent**, **0 Explicit contradictions**, **10 Not covered by the description**, **0 No corresponding implementation evidence found** and **1 Cannot confirm**.

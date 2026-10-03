@@ -25,3 +25,4 @@ Names use the corresponding game English entries. Mechanisms reuse fixed-version
 | [Prescience](psyker_aura_crit_chance_aura.md) / `psyker_aura_crit_chance_aura` | Aura |
 | [Venting Shriek](psyker_shout_vent_warp_charge.md) / `psyker_shout_vent_warp_charge` | Ability |
 | [Scrier's Gaze](psyker_combat_ability_stance.md) / `psyker_combat_ability_stance` | Ability |
+| [Becalming Eruption](psyker_shout_reduces_warp_charge_generation.md) / `psyker_shout_reduces_warp_charge_generation` | Ability |

@@ -21,6 +21,7 @@
 | <img src="https://github.com/user-attachments/assets/44e929da-988f-4845-b68b-95320025d339" width="32" height="32" alt="Prescience talent icon"> [Prescience](#psyker_aura_crit_chance_aura) | <ul><li>You and Allies in Coherency gain 5 percentage points of Critical Hit Chance.</li></ul> | Aura |
 | <img src="https://github.com/user-attachments/assets/d0500b6b-c91c-4c34-857a-6c144800fe37" width="32" height="32" alt="Venting Shriek talent icon"> [Venting Shriek](#psyker_shout_vent_warp_charge) | <ul><li>Staggers Enemies in front of you and immediately Quells 50 percentage points of Peril; base cooldown 30 seconds.</li></ul> | Ability |
 | <img src="https://github.com/user-attachments/assets/a56d3b3f-6e4e-4aed-83fc-0317ac57364a" width="32" height="32" alt="Scrier's Gaze talent icon"> [Scrier's Gaze](#psyker_combat_ability_stance) | <ul><li>Quell 50 percentage points of Peril on activation; gain damage, Critical Chance, Weakspot Damage, Toughness protection/recovery and Suppression Immunity. Damage builds while active and lingers for 10 seconds.</li></ul> | Ability |
+| <img src="https://github.com/user-attachments/assets/b89da8f0-2d3d-4a87-bc92-43e2438e28c8" width="32" height="32" alt="Becalming Eruption talent icon"> [Becalming Eruption](#psyker_shout_reduces_warp_charge_generation) | <ul><li>Venting Shriek hits grant Peril Generation reduction for 5 seconds, up to 25 stacks; in the 0.99-per-stack scenario, reductions multiply.</li></ul> | Ability |
 
 ---
 
@@ -236,3 +237,17 @@
 **Note on the Chinese wording**: The Chinese description says entering/leaving Gaze's “area,” which may suggest a ground zone. The corresponding English and accepted implementation describe the character entering and ending the Gaze state.
 
 [Details](psyker_combat_ability_stance.md) · [Back to index](#talent-index)
+
+---
+
+<a id="psyker_shout_reduces_warp_charge_generation"></a>
+
+### Becalming Eruption
+
+<img src="https://github.com/user-attachments/assets/b89da8f0-2d3d-4a87-bc92-43e2438e28c8" width="72" height="72" alt="Becalming Eruption talent icon">
+
+- **Ability modifier**: Each Enemy hit by Venting Shriek grants one stack of Peril Generation reduction for 5 seconds, up to 25 stacks.
+- **Stack examples**: Using the accepted 0.99 coefficient per stack and no other Peril Generation modifiers, 10 eligible hits give `0.99^10 ≈ 0.9044`: about 90.44% of original generation, or 9.56% less. A gain of 10 Peril percentage points becomes `10 × 0.99^10 ≈ 9.04` points. At 25 stacks, `0.99^25 ≈ 0.7778`: about 77.78% of original generation, or 22.22% less; a gain of 10 points becomes about 7.78 points.
+- This reduces new Peril Generation; it does not directly Quell existing Peril. The source also contains a 0.98 tier override. The examples use 0.99 and cannot be applied unchanged to a different tier/configuration.
+
+[Details](psyker_shout_reduces_warp_charge_generation.md) · [Back to index](#talent-index)
