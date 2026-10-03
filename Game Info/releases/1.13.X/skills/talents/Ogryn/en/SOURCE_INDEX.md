@@ -102,3 +102,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | Base effect / identifier | Category |
 |---|---|
 | [Bull Rush](ogryn_charge.md) / `ogryn_charge` | Base effect |
+| [Big Box of Hurt](ogryn_grenade_box.md) / `ogryn_grenade_box` | Base effect |

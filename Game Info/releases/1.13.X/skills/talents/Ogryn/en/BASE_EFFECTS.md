@@ -19,3 +19,17 @@ These effects come from the class's base configuration. Combat Abilities, Blitze
 - **Protection during the charge**: Also gain 25% damage reduction while charging. With this effect alone, damage 100 becomes `100 × 0.75 = 75`. Other base protections resolve at their own stages.
 
 [Source evidence and example assumptions](ogryn_charge.md)
+
+---
+
+<a id="ogryn_grenade_box"></a>
+
+## Big Box of Hurt
+
+- **Throwing**: Throw an entire box of grenades as a projectile at an enemy. Carry up to 3 boxes; throwing one leaves `3 − 1 = 2`. Boxes do not replenish automatically over time and require grenade supplies.
+
+- **Damage example**: For the box's direct hit only, with no Critical Hit, Weakspot hit or other bonus, an Unarmoured target takes `1850 × 1 = 1850` damage; Carapace Armour takes `1850 × 0.15 = 277.5`.
+
+- **Upgrade difference**: Under the ordinary base configuration, the box does not release grenades. Selecting Bombs Away! replaces it with the version that releases child grenades after a hit.
+
+[Source evidence and example assumptions](ogryn_grenade_box.md)

@@ -1142,6 +1142,18 @@ Full raw template and formatting: [source evidence](ogryn_charge.md#original-eng
 | Stop-category equivalence | Charge is stopped on collision with Carapace Armoured Enemies, Unyielding Enemies and Monstrosities.; `ui / loc_ability_ogryn_charge_description_new / 8e6bf564` | Accepted stopping armour types are super_armor /void_shield /resistant. [Fixed source and line references](ogryn_charge.md#fixed-source-evidence) | Cannot confirm | The documents establish identifiers but do not fully map the English enemy categories to every stopping target; no new mechanism tracing was performed. |
 | Distance, cancellation and protection | No exact distance, cancellation timing, direct-damage amount or charge-protection formula is stated.; `ui / loc_ability_ogryn_charge_description_new / 8e6bf564` | Maximum 12m, terrain-limited; cancel by block after 0.5s or backwards movement after 0.8s. Collision/finish damage is zero. While lunging, damage_taken_multiplier 0.75 and melee_heavy_damage 0.5 apply; that heavy stat is not collision damage. After the charge, 1s/1.25 =0.8s and 5m/s ×1.25 =6.25m/s; charge-only damage 100 ×0.75 =75. [Fixed source and line references](ogryn_charge.md#fixed-source-evidence) | Not covered by the description | These accepted conditions, scopes and examples supplement the English; is_dodging alone does not guarantee all dodge passives. |
 
+
+<a id="ogryn_grenade_box"></a>
+
+## Big Box of Hurt (base effect)
+
+Full raw template and formatting: [source evidence](ogryn_grenade_box.md#original-english-template-and-reconstruction). Name hash `848c694f`. Every row uses `ui / loc_ability_ogryn_grenade_box_description / 77e8d4ed`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Direct-hit box | Throw a box of grenades with great strength and enthusiasm for high Damage against a Single Enemy.; `ui / loc_ability_ogryn_grenade_box_description / 77e8d4ed` | ogryn_grenade_box uses ogryn_grenade_box_impact with attack 1850. [Fixed source and line references](ogryn_grenade_box.md#fixed-source-evidence) | Consistent | The independently read English describes the accepted direct-hit projectile without promising a cluster explosion. |
+| Capacity, damage and mode scope | No capacity, replenishment, armour formula or mode-specific cluster rule is stated.; `ui / loc_ability_ogryn_grenade_box_description / 77e8d4ed` | Carry three, use one per throw, and require supplies. Fixed direct hits give 1850 Unarmoured or 277.5 Carapace damage, excluding other modifiers. Ordinary base configuration lacks ogryn_basic_box_spawns_cluster; Bombs Away! supplies the upgraded version, and Hordes can separately grant the keyword to enable conditional_cluster. [Fixed source and line references](ogryn_grenade_box.md#fixed-source-evidence) | Not covered by the description | These accepted capacity, calculation and mode limits supplement the English. |
+
 ## Comparison totals
 
 The 264 listed rules comprise **114 Consistent**, **4 Explicit contradictions**, **139 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.
