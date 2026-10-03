@@ -12,6 +12,7 @@
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="Infiltrate talent icon"> [Infiltrate](#veteran_invisibility_on_combat_ability) | <ul><li>Replenish all Toughness; enter Stealth for up to 8 seconds with +25% movement speed.</li><li>Gain +30% damage during Stealth and for 8 seconds afterwards. Base cooldown: 40 seconds.</li><li>Attacking can end Stealth; leaving it suppresses nearby enemies.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="Low Profile talent icon"> [Low Profile](#veteran_reduced_threat_after_combat_ability) | <ul><li>Combat ability use reduces the affected enemy target-selection weight by 90%.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds after leaving it; an already-running countdown is not restarted by another application.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/0c033c93-a850-4295-853d-10698ec96e89" width="32" height="32" alt="Hunter's Resolve talent icon"> [Hunter's Resolve](#veteran_toughness_bonus_leaving_invisibility) | <ul><li>Infiltrate grants 50% Toughness damage reduction during Stealth and for 10 seconds after leaving it.</li><li>Separate overlapping instances multiply and keep their own countdowns.</li></ul> | Ability modifier |
+| <img src="https://github.com/user-attachments/assets/fc16005a-fb09-4db6-bd15-e18d45c6d935" width="32" height="32" alt="Marksman talent icon"> [Marksman](#veteran_increased_weakspot_power_after_combat_ability) | <ul><li>Combat ability use adds 20 percentage points of attack power on melee and ranged weakspot hits for 10 seconds.</li><li>With Infiltrate, the effect is active during Stealth and for 10 seconds afterwards. It does not increase the cleave budget.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/1181fe6e-4066-4d75-b996-a0eb01d7583d" width="32" height="32" alt="Close Quarters Killzone talent icon"> [Close Quarters Killzone](#veteran_increased_close_damage_after_combat_ability) | <ul><li>Combat ability use grants up to 15% close damage for 10 seconds; melee and ranged attacks can benefit.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds afterwards. Full bonus within 12.5m; fades to zero at 30m.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/29160cac-e32b-4037-bc8c-3a0765e3a6df" width="32" height="32" alt="Overwatch talent icon"> [Overwatch](#veteran_combat_ability_extra_charge) | <ul><li>Store two Infiltrate uses; each fully missing use takes about 53.2 seconds to refill without other cooldown effects.</li><li>Both uses share recharge progress and refill sequentially; recovery continues during stealth.</li></ul> | Ability modifier |
 | <img src="https://github.com/user-attachments/assets/4376889f-d2eb-4efe-836a-5e0ce5ae27f4" width="32" height="32" alt="Marksman's Focus talent icon"> [Marksman's Focus](#veteran_snipers_focus) | <ul><li>Ranged weakspot kills add three Focus stacks, up to 10 effective stacks.</li><li>Each stack grants 7.5% ranged finesse strength and 1% reload speed; weakspot hits refresh the 5-second timer, then stacks decay one at a time.</li></ul> | Keystone |
@@ -112,6 +113,28 @@ Assume one use, no other recovery/damage/cooldown modifiers, no overlapping abil
 - **Multiple uses**: if extra uses or a shorter cooldown make two instances overlap, each keeps its own timer and their factors multiply. A 100-Toughness-damage attack becomes `100 × 0.5 × 0.5 = 25`, under the same isolated assumptions. An already started countdown continues if you re-enter Stealth.
 
 [Details and source evidence](veteran_toughness_bonus_leaving_invisibility.md) · [Back to index](#talent-index)
+
+<a id="veteran_increased_weakspot_power_after_combat_ability"></a>
+
+<img src="https://github.com/user-attachments/assets/fc16005a-fb09-4db6-bd15-e18d45c6d935" width="72" height="72" alt="Marksman talent icon">
+
+### Marksman
+
+- Combat ability use increases the attack power of **melee and ranged weakspot hits by 20%** for **10 seconds**. With [Infiltrate](#veteran_invisibility_on_combat_ability), it is active **during Stealth**, then for **10 seconds after leaving it**.
+- This increases the weakspot hit's power before damage and impact are calculated. [Precision Strikes](#veteran_increased_weakspot_damage) instead increases the extra weakspot damage component. Actual damage gain still depends on the weapon, target and existing power bonuses.
+- **Power example:** with the default curve and no other power bonuses, 500 power becomes `500 × 1.20 = 600`. The weakspot hit's base damage and impact inputs can increase.
+- **Base-damage example:** under the stated unarmored, linear default-profile assumptions, excluding extra finesse and later modifiers, 100 damage becomes 120. With an existing 25% additive power bonus, 125 becomes `100 × (1 + 0.25 + 0.20) = 145`: `(145 − 125) / 125 = 16%` more than that baseline. The complete weakspot hit still needs its extra damage and hit-location calculations.
+- **Impact example:** the isolated default input rises from 5 to 6; this does not guarantee 20% longer stagger, which also depends on the target's resistance and thresholds.
+- The effect does not stack. An already-started ten-second countdown is not restarted by another application: reapplying at about 4 seconds still ends near the original 10-second deadline, ignoring frame boundaries.
+- A weakspot hit is required. This modifier does not increase the cleave budget or add cleave/penetration targets through that calculation.
+
+#### Game description erratum
+
+The original English says that, with Infiltrate, the effect **“is applied after leaving Stealth.”** It is already applied during Stealth; leaving it starts the separate ten-second countdown.
+
+[Detailed sources and formulas](veteran_increased_weakspot_power_after_combat_ability.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_increased_weakspot_power_after_combat_ability) | [Back to index](#talent-index)
+
+---
 
 <a id="veteran_increased_close_damage_after_combat_ability"></a>
 

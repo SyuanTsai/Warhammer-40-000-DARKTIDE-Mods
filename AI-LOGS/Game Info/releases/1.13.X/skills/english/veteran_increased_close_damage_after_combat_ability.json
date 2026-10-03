@@ -185,5 +185,6 @@
     "Repeated full implementation call-chain analysis (outside clarified review scope)"
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/close-quarters-killzone-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_close_damage_after_combat_ability.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_close_damage_after_combat_ability.md",
+  "commit": "1e2e88ab53b20de9f69578064c745d61f409ac9b"
 }

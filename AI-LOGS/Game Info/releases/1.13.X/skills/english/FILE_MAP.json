@@ -5696,7 +5696,8 @@
         "veteran_invisibility_on_combat_ability",
         "veteran_toughness_bonus_leaving_invisibility",
         "veteran_reduced_threat_after_combat_ability",
-        "veteran_increased_close_damage_after_combat_ability"
+        "veteran_increased_close_damage_after_combat_ability",
+        "veteran_increased_weakspot_power_after_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5733,7 +5734,8 @@
         "veteran_invisibility_on_combat_ability",
         "veteran_toughness_bonus_leaving_invisibility",
         "veteran_reduced_threat_after_combat_ability",
-        "veteran_increased_close_damage_after_combat_ability"
+        "veteran_increased_close_damage_after_combat_ability",
+        "veteran_increased_weakspot_power_after_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5770,7 +5772,8 @@
         "veteran_invisibility_on_combat_ability",
         "veteran_toughness_bonus_leaving_invisibility",
         "veteran_reduced_threat_after_combat_ability",
-        "veteran_increased_close_damage_after_combat_ability"
+        "veteran_increased_close_damage_after_combat_ability",
+        "veteran_increased_weakspot_power_after_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5807,7 +5810,8 @@
         "veteran_invisibility_on_combat_ability",
         "veteran_toughness_bonus_leaving_invisibility",
         "veteran_reduced_threat_after_combat_ability",
-        "veteran_increased_close_damage_after_combat_ability"
+        "veteran_increased_close_damage_after_combat_ability",
+        "veteran_increased_weakspot_power_after_combat_ability"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6460,9 +6464,22 @@
       "kind": "mechanism",
       "chinese_blob_sha": "fa1e192e88d949792db91241b5798c1fba49cd2e",
       "chinese_sha256": "73b8f8943b25bf2222b0651b3206589369274a22f89a9f58292c6835d2d4fe6d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_increased_weakspot_power_after_combat_ability"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "targeted_display_parameter_check",
+        "targeted_english_contradiction_check",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_invisibility_on_combat_ability.md",
@@ -7960,7 +7977,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_close_damage_after_combat_ability.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_close_damage_after_combat_ability.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_close_damage_after_combat_ability.md",
+      "commit": "1e2e88ab53b20de9f69578064c745d61f409ac9b"
+    },
+    {
+      "id": "veteran_increased_weakspot_power_after_combat_ability",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_increased_weakspot_power_after_combat_ability.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_increased_weakspot_power_after_combat_ability.md"
     }
   ],
   "pending_chinese_corrections": [
