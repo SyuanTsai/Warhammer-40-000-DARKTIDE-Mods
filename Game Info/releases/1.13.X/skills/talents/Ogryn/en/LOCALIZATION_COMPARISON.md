@@ -805,6 +805,18 @@ Full raw template and formatting: [source evidence](ogryn_windup_is_uninterrupti
 | Charging effects | Become Uninterruptible while charging Heavy Melee Attacks. Remove 100% of Heavy Melee Attack Movement Speed penalties.; `ui / loc_talent_ogryn_windup_is_uninterruptible_unslowed_desc / 6704b700` | Windup controls the uninterruptible keyword and weapon_action_movespeed_reduction_multiplier 0. [Fixed source and line references](ogryn_windup_is_uninterruptible.md#fixed-source-evidence) | Consistent | The independently read English specifies the charging condition and removes the action penalty rather than increasing general speed. |
 | Conditional fallback and limits | No initialization fallback, invulnerability claim or numerical speed example is stated.; `ui / loc_talent_ogryn_windup_is_uninterruptible_unslowed_desc / 6704b700` | conditional_stat_buffs_func also supplies the keyword condition, so effects end with windup. Damage still applies. A 50% charging penalty taking 5m/s to 2.5m/s is removed, restoring 5m/s. [Fixed source and line references](ogryn_windup_is_uninterruptible.md#fixed-source-evidence) | Not covered by the description | These accepted implementation and example details supplement the wording; Uninterruptible does not imply invulnerability. |
 
+
+<a id="ogryn_kills_grant_crit_chance"></a>
+
+## Massacre
+
+Full raw template and formatting: [source evidence](ogryn_kills_grant_crit_chance.md#original-english-template-and-reconstruction). Name hash `b46db274`. Every row uses `ui / loc_talent_ogryn_crit_chance_on_kill_desc / 4e716e92`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Kill bonus, duration and cap | Killing an Enemy grants +2% Critical Chance for 12s. Stacks 8 times.; `ui / loc_talent_ogryn_crit_chance_on_kill_desc / 4e716e92` | on_hit passing on_kill adds a 12s child, maximum eight stacks, with critical_strike_chance 0.02 per stack. [Fixed source and line references](ogryn_kills_grant_crit_chance.md#fixed-source-evidence) | Consistent | The independently read English matches the trigger and all displayed values. |
+| Refresh and chance calculation | No refresh or probability formula is stated.; `ui / loc_talent_ogryn_crit_chance_on_kill_desc / 4e716e92` | Further kills refresh the duration. Base 5% plus eight × 2 percentage points gives 21%, not 5% × 1.16; critical hits are not guaranteed. [Fixed source and line references](ogryn_kills_grant_crit_chance.md#fixed-source-evidence) | Not covered by the description | These accepted timing and probability details supplement the stated Critical Chance bonus. |
+
 ## Comparison totals
 
 The 204 listed rules comprise **84 Consistent**, **4 Explicit contradictions**, **109 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

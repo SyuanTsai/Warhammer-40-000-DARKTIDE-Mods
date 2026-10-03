@@ -69,3 +69,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Get Stuck In](ogryn_ally_movement_boost_on_ability.md) / `ogryn_ally_movement_boost_on_ability` | Talent |
 | [Implacable](ogryn_windup_reduces_damage_taken.md) / `ogryn_windup_reduces_damage_taken` | Talent |
 | [No Stopping Me!](ogryn_windup_is_uninterruptible.md) / `ogryn_windup_is_uninterruptible` | Talent |
+| [Massacre](ogryn_kills_grant_crit_chance.md) / `ogryn_kills_grant_crit_chance` | Talent |

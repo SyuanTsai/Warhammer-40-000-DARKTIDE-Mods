@@ -67,6 +67,7 @@
 | <img src="https://github.com/user-attachments/assets/895c3ccd-387f-4862-9a2b-b429ff5d6432" width="32" height="32" alt="Get Stuck In talent icon"> [Get Stuck In](#ogryn_ally_movement_boost_on_ability) | <ul><li>Activating your Combat Ability grants you and current Coherency allies +20% Movement Speed and Stun/Suppression immunity for 6s.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/bb088b60-c1e8-42a7-b68e-3ef59f5d9eb9" width="32" height="32" alt="Implacable talent icon"> [Implacable](#ogryn_windup_reduces_damage_taken) | <ul><li>Gain 15% damage reduction during melee windup; the bonus ends when charging ends.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d80b562f-7fc2-4daf-85e4-ae25f8171a89" width="32" height="32" alt="No Stopping Me! talent icon"> [No Stopping Me!](#ogryn_windup_is_uninterruptible) | <ul><li>Become Uninterruptible and remove the heavy melee action's Movement Speed penalty while charging; damage still applies.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/7e27b3b4-5eca-49b5-aafd-c8abc6635b14" width="32" height="32" alt="Massacre talent icon"> [Massacre](#ogryn_kills_grant_crit_chance) | <ul><li>Kills grant +2 percentage points of Critical Chance per stack for 12s, up to eight stacks; further kills refresh the duration.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1047,3 +1048,17 @@
 - **Limit**: This does not grant invulnerability; you still take damage while charging.
 
 [Details](ogryn_windup_is_uninterruptible.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_kills_grant_crit_chance"></a>
+
+### Massacre
+
+<img src="https://github.com/user-attachments/assets/7e27b3b4-5eca-49b5-aafd-c8abc6635b14" width="72" height="72" alt="Massacre talent icon">
+
+- **Trigger and stacks**: Killing an enemy grants one stack, adding 2 percentage points of Critical Chance per stack, up to 8 stacks, for 12s. Another kill restarts the duration.
+
+- **Chance example**: Starting at 5% Critical Chance, full stacks give `5% + 8 × 2% = 21%`, rather than `5% × 1.16`. The bonus increases Critical Chance; it does not guarantee a critical hit on every attack.
+
+[Details](ogryn_kills_grant_crit_chance.md) · [Back to index](#talent-index)
