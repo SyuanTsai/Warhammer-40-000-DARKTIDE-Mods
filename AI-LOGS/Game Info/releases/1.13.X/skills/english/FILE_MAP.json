@@ -145,7 +145,12 @@
         "adamant_ranged_damage_on_melee_stagger",
         "adamant_clip_size",
         "adamant_damage_vs_suppressed",
-        "adamant_stacking_damage"
+        "adamant_stacking_damage",
+        "adamant_staggered_enemies_deal_less_damage",
+        "adamant_melee_weakspot_hits_count_as_stagger",
+        "adamant_staggering_enemies_take_more_damage",
+        "adamant_perfect_block_damage_boost",
+        "adamant_grenade"
       ],
       "checks": []
     },
@@ -239,7 +244,12 @@
         "adamant_ranged_damage_on_melee_stagger",
         "adamant_clip_size",
         "adamant_damage_vs_suppressed",
-        "adamant_stacking_damage"
+        "adamant_stacking_damage",
+        "adamant_staggered_enemies_deal_less_damage",
+        "adamant_melee_weakspot_hits_count_as_stagger",
+        "adamant_staggering_enemies_take_more_damage",
+        "adamant_perfect_block_damage_boost",
+        "adamant_grenade"
       ],
       "checks": []
     },
@@ -333,7 +343,12 @@
         "adamant_ranged_damage_on_melee_stagger",
         "adamant_clip_size",
         "adamant_damage_vs_suppressed",
-        "adamant_stacking_damage"
+        "adamant_stacking_damage",
+        "adamant_staggered_enemies_deal_less_damage",
+        "adamant_melee_weakspot_hits_count_as_stagger",
+        "adamant_staggering_enemies_take_more_damage",
+        "adamant_perfect_block_damage_boost",
+        "adamant_grenade"
       ],
       "checks": []
     },
@@ -427,7 +442,12 @@
         "adamant_ranged_damage_on_melee_stagger",
         "adamant_clip_size",
         "adamant_damage_vs_suppressed",
-        "adamant_stacking_damage"
+        "adamant_stacking_damage",
+        "adamant_staggered_enemies_deal_less_damage",
+        "adamant_melee_weakspot_hits_count_as_stagger",
+        "adamant_staggering_enemies_take_more_damage",
+        "adamant_perfect_block_damage_boost",
+        "adamant_grenade"
       ],
       "checks": []
     },
@@ -1267,9 +1287,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "8c62b109d5941a131828def483b00c7565e0c9ec",
       "chinese_sha256": "c87876e5b2c1862bf2d49d1a7f84675fea1ff400171be18e77cde52b265fcdcb",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_grenade"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_skills_166_170.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_grenade_improved.md",
@@ -1386,9 +1413,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "a1b06fae0145bf73546d37d56de46f4b0ac775f6",
       "chinese_sha256": "229b23f10858029558553ea4ea142e08f15ea9011eb4ff5846aedb2cc9c3a1dd",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_melee_weakspot_hits_count_as_stagger"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_skills_166_170.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_monster_hunter.md",
@@ -1451,9 +1485,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "f9e5adac06859ec2c6c6b5e1ea3dc7eb55e666b9",
       "chinese_sha256": "68fffae4fca1e431f01efce4b19398d18c2c5026d7aa5dcceee79c6e79a31382",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_perfect_block_damage_boost"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_skills_166_170.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_pinning_dog_bonus_moving_towards.md",
@@ -1678,9 +1719,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "aab69cd31a4649c67b7b32b4f1590afb35e40f9b",
       "chinese_sha256": "ed3adb15e5472d40cd9b628f8e110dfc494bddff0d09bd64d2ffad234c23fff1",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_staggered_enemies_deal_less_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_skills_166_170.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_staggering_enemies_take_more_damage.md",
@@ -1689,9 +1737,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "79e500bfd042c94d4ac14ef6dd30361a33715e3b",
       "chinese_sha256": "6efecfe5f93ef8a120fc276e077fdb669903a2a3df687b22e31f54da1b33691f",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "adamant_staggering_enemies_take_more_damage"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_skills_166_170.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Arbites/adamant_staggers_reduce_damage_taken.md",
@@ -11408,6 +11463,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_passives_161_165.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_stacking_damage.md"
+    },
+    {
+      "id": "adamant_staggered_enemies_deal_less_damage",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_skills_166_170.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_staggered_enemies_deal_less_damage.md"
+    },
+    {
+      "id": "adamant_melee_weakspot_hits_count_as_stagger",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_skills_166_170.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_melee_weakspot_hits_count_as_stagger.md"
+    },
+    {
+      "id": "adamant_staggering_enemies_take_more_damage",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_skills_166_170.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_staggering_enemies_take_more_damage.md"
+    },
+    {
+      "id": "adamant_perfect_block_damage_boost",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_skills_166_170.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_perfect_block_damage_boost.md"
+    },
+    {
+      "id": "adamant_grenade",
+      "scope": "Arbites",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_skills_166_170.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Arbites/en/adamant_grenade.md"
     }
   ],
   "pending_chinese_corrections": [

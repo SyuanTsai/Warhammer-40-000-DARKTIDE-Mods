@@ -318,3 +318,5 @@ Five-item checkpoint (skills 113–117): 844 seconds (14m 04s), measured between
 - [Arbites passives 156–160](arbites_passives_156_160.json): Monstrosity Hunter, The Emperor's Fist, Target Selection, Target Priority and Canine Morale. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
 
 - [Arbites passives 161–165](arbites_passives_161_165.json): Rapid Movement, Final Warning, Priority Endowment, Cower, Miscreants! and Justified Measures. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
+
+- [Arbites skills 166–170](arbites_skills_166_170.json): Suppression Force, Concussive, Target the Weak, Retaliatory Force and base Arbites Grenade. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.

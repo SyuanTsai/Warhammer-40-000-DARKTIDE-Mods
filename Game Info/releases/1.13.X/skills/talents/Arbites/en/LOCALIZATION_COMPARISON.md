@@ -1261,4 +1261,4 @@ Full raw text and formatting: [source evidence](adamant_grenade.md#original-engl
 
 ## Comparison totals
 
-The 445 listed rules comprise **223 Consistent**, **1 Explicit contradiction**, **208 Not covered by the description**, **0 No corresponding implementation evidence found** and **13 Cannot confirm**. The explicit English contradiction concerns the melee attack-interval value in Fear of Justice. These totals apply only to the listed rules.
+The 470 listed rules comprise **233 Consistent**, **1 Explicit contradiction**, **223 Not covered by the description**, **0 No corresponding implementation evidence found** and **13 Cannot confirm**. The explicit English contradiction concerns the melee attack-interval value in Fear of Justice. These totals apply only to the listed rules.
