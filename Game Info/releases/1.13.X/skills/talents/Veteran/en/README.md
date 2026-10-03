@@ -30,6 +30,7 @@
 | <img src="https://github.com/user-attachments/assets/62660bca-751b-435a-9d60-48590aadd37f" width="32" height="32" alt="Tunnel Vision talent icon"> [Tunnel Vision](#veteran_snipers_focus_toughness_bonus) | <ul><li>Each effective Focus stack increases applicable Toughness replenishment by 4%.</li><li>Ranged weakspot kills restore 10% of maximum Stamina, limited by the deficit.</li></ul> | Keystone modifier |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/c7ac403a-7fac-4ce9-bc80-8a7df2af7907" width="32" height="32" alt="Exhilarating Takedown talent icon"> [Exhilarating Takedown](#veteran_replenish_toughness_on_weakspot_kill) | <ul><li>Ranged weakspot kills replenish 15% of maximum Toughness and grant stacking Toughness damage reduction.</li><li>Up to three effective stacks: 10%, 19% or 27.1% reduction; refresh the 8-second timer on each qualifying kill, then decay one stack at a time.</li></ul> | Passive talent |
 
 ---
@@ -542,3 +543,20 @@ Assume an attack would deal 100 Toughness-damage units before this effect, enoug
 - If that same action already has +20% to this speed stat, it changes from `1 / 1.20 ≈ 0.83s` to `1 / 1.30 ≈ 0.77s`, saving about **7.69%** relative to the already faster action. Hold all other scale factors at 1 and assume no limit binds.
 
 [Detailed sources and formulas](veteran_attack_speed.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_attack_speed) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_reduce_swap_time"></a>
+
+<img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="72" height="72" alt="One Motion talent icon">
+
+### One Motion
+
+- Increase **Weapon Swap Speed by 50%**. Reload and attack speed are separate.
+
+**Swap-time examples**
+
+- Assume an affected swap action originally takes 0.9 seconds, with no other speed effects: `0.9 / 1.5 = 0.6 seconds`. This saves `0.3 / 0.9 ≈ 33.3%` of its time.
+- For a hypothetical sequence with affected 0.3s unwield and 0.9s wield parts plus an unchanged 0.2s part, `1.4s` becomes `0.3 / 1.5 + 0.9 / 1.5 + 0.2 = 1.0s`, about **28.57%** shorter overall. This is an illustrative sequence; actual weapon timings vary. Hold all other scale factors at 1 and assume no limit binds.
+
+[Detailed sources and formulas](veteran_reduce_swap_time.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_reduce_swap_time) | [Back to index](#talent-index)

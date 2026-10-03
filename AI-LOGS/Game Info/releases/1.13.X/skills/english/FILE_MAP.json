@@ -5707,7 +5707,8 @@
         "veteran_combat_ability_coherency_outlines",
         "veteran_combat_ability_ranged_roamer_outlines",
         "veteran_combat_ability_ogryn_outlines",
-        "veteran_attack_speed"
+        "veteran_attack_speed",
+        "veteran_reduce_swap_time"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5755,7 +5756,8 @@
         "veteran_combat_ability_coherency_outlines",
         "veteran_combat_ability_ranged_roamer_outlines",
         "veteran_combat_ability_ogryn_outlines",
-        "veteran_attack_speed"
+        "veteran_attack_speed",
+        "veteran_reduce_swap_time"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5803,7 +5805,8 @@
         "veteran_combat_ability_coherency_outlines",
         "veteran_combat_ability_ranged_roamer_outlines",
         "veteran_combat_ability_ogryn_outlines",
-        "veteran_attack_speed"
+        "veteran_attack_speed",
+        "veteran_reduce_swap_time"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -5851,7 +5854,8 @@
         "veteran_combat_ability_coherency_outlines",
         "veteran_combat_ability_ranged_roamer_outlines",
         "veteran_combat_ability_ogryn_outlines",
-        "veteran_attack_speed"
+        "veteran_attack_speed",
+        "veteran_reduce_swap_time"
       ],
       "checks": [
         "primary_direct_evidence",
@@ -6729,9 +6733,20 @@
       "kind": "mechanism",
       "chinese_blob_sha": "966a64737e2b035a92c67d306906853a4910bab7",
       "chinese_sha256": "4f74f89a0d685b8a915517021d1d6bf6fe105a182bed9334e6bcf2e1b1e5a77d",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "veteran_reduce_swap_time"
+      ],
+      "checks": [
+        "existing_mechanism_translation",
+        "exact_english_key_hash",
+        "independent_english_text_comparison",
+        "fixed_source_citation_bounds",
+        "links_anchors",
+        "marked_parse_render",
+        "icon_public_read",
+        "read_only_text_review"
+      ]
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_reduced_threat_after_combat_ability.md",
@@ -8228,7 +8243,16 @@
       "date": "2026-10-03",
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_attack_speed.json",
-      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_attack_speed.md"
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_attack_speed.md",
+      "commit": "614f5a0cbc28246024856720051dc262d99b68c9"
+    },
+    {
+      "id": "veteran_reduce_swap_time",
+      "scope": "Veteran",
+      "date": "2026-10-03",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/veteran_reduce_swap_time.json",
+      "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduce_swap_time.md"
     }
   ],
   "pending_chinese_corrections": [

@@ -8,8 +8,8 @@
   "language_code": 0,
   "english_export_sha256": "fb54bb69880e08b3a6e1c359bd970ed2416748bf5513d45c4b8a39c545e8c668",
   "status": "accepted_with_caveats",
-  "review_mode": "Existing Chinese mechanism translation and exact English text check; targeted read only to fill the display-format parameter gap.",
-  "static_reconstruction": "+10% Melee Attack Speed.",
+  "review_mode": "Existing Chinese mechanism translation and exact English text check; targeted read only to fill the actual description-key and display-format gaps.",
+  "static_reconstruction": "+50% Weapon Swap Speed.",
   "comparison_rule_totals": {
     "Consistent": 1,
     "Explicit contradiction": 0,
@@ -19,13 +19,24 @@
   },
   "english_errata": [],
   "chinese_mechanism_corrections": [],
+  "chinese_metadata_followups": [
+    {
+      "source": "Game Info/releases/1.13.X/skills/talents/Veteran/veteran_reduce_swap_time.md",
+      "field": "English entry_index",
+      "existing": 9186,
+      "verified": 9191,
+      "key": "loc_talent_veteran_reduce_swap_time_desc",
+      "hash": "8de5cb15",
+      "scope": "Localization metadata only; Chinese content preserved."
+    }
+  ],
   "primary_direct_reads": [
     "Complete existing Chinese mechanism dossier and player description",
     "Exact same-version English UI name and full raw description",
     "Existing icon audit",
-    "veteran_talents.lua:2551-2574 (display-format parameter gap only)"
+    "veteran_talents.lua:1898-1924 (actual desc key and display parameter only)"
   ],
-  "reused_mechanism_evidence": "Existing Chinese dossier for the +0.10 baseline-one additive melee attack-speed stat, representative Crowbar action and shared inverse action-time conversion. Previously accepted action-time and percentage formatter evidence reused; no complete weapon/action analysis repeated.",
+  "reused_mechanism_evidence": "Existing Chinese dossier for installed wield_speed=0.5, listed wield/unwield action types, inverse affected-action timing and separate reload/attack speed. Accepted formatter/config/interpolation evidence reused. The formatter lines 379-427 were read during the specific shared citation correction; no complete weapon/action analysis repeated.",
   "review": {
     "agent_model": "gpt-6-luna",
     "effort": "max",
@@ -34,24 +45,24 @@
     "remaining_actionable_defects": 0
   },
   "unconfirmed": [
-    "Actual weapon timings, complete attack-chain behavior and final game UI."
+    "Actual swap timings, input/transition effects, complete weapon sequences and final game UI."
   ],
   "unperformed": [
     "In-game timing measurements",
     "Actual game UI observation",
     "Repeated complete weapon/action implementation analysis (outside clarified review scope)"
   ],
-  "id": "veteran_attack_speed",
+  "id": "veteran_reduce_swap_time",
   "class": "Veteran",
   "date": "2026-10-03",
-  "name": "Trench Fighter Drill",
-  "name_key": "loc_talent_veteran_attack_speed",
-  "name_hash": "4a711ae2",
-  "name_entry_index": 4830,
-  "description_key": "loc_talent_veteran_attack_speed_description",
-  "description_hash": "dff95aa9",
-  "description_entry_index": 14529,
-  "raw_template": "{melee_attack_speed:%s} Melee Attack Speed.",
+  "name": "One Motion",
+  "name_key": "loc_talent_veteran_reduce_swap_time",
+  "name_hash": "834ffcca",
+  "name_entry_index": 8535,
+  "description_key": "loc_talent_veteran_reduce_swap_time_desc",
+  "description_hash": "8de5cb15",
+  "description_entry_index": 9191,
+  "raw_template": "{swap_speed} Weapon Swap Speed.",
   "checks": [
     {
       "check": "exact UI export SHA256, actual key/hash/text pairs and complete raw template",
@@ -61,16 +72,16 @@
     {
       "check": "fixed-SHA citation bounds in current Veteran English scope",
       "result": "passed",
-      "references": 1280,
-      "unique_source_ranges": 264,
+      "references": 1308,
+      "unique_source_ranges": 270,
       "source_files": 45
     },
     {
       "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"Game Info\"",
       "result": "passed",
-      "markdown_files": 727,
-      "local_references": 6724,
-      "remote_references": 10232,
+      "markdown_files": 728,
+      "local_references": 6736,
+      "remote_references": 10265,
       "errors": []
     },
     {
@@ -78,7 +89,7 @@
       "result": "passed",
       "player_table": {
         "columns": 3,
-        "rows": 23,
+        "rows": 24,
         "scroll": false
       },
       "current_skill_comparison_table": {
@@ -98,7 +109,7 @@
           "scroll": false
         }
       ],
-      "all_player_icons_loaded": 46,
+      "all_player_icons_loaded": 48,
       "document_horizontal_overflow": false
     },
     {
@@ -110,8 +121,8 @@
       "result": "passed",
       "http_status": 200,
       "content_type": "image/webp",
-      "bytes": 5402,
-      "sha256": "58f0b6c55a59269819e9d3dca579d083da6a0b4d3c7ac3581c61db4ca4cd15b2",
+      "bytes": 5132,
+      "sha256": "c91bdaa24246bcaeb35b511424b9a8ef4a06952331df7e6d5d6ce794a31ea01e",
       "historical_source_match": true
     },
     {
@@ -119,55 +130,46 @@
       "result": "passed"
     },
     {
-      "check": "Exact original English name and signed percentage reconstruction",
+      "check": "Exact raw placeholder, outer custom conversion and signed percentage reconstruction",
       "result": "passed",
       "parameter_fields": 1,
-      "speed_delta": 0.1,
-      "reconstructed_speed": "+10%"
+      "raw_placeholder": "{swap_speed}",
+      "speed_delta": 0.5,
+      "custom_conversion": 50,
+      "reconstructed_speed": "+50%",
+      "double_percentage_conversion": false,
+      "stale_internal_annotation_is_English_claim": false
     },
     {
-      "check": "Two static action-time examples with explicit baselines and scale assumptions",
+      "check": "Two static swap-time examples with explicit affected and unchanged components",
       "result": "passed",
-      "isolated_duration_seconds": 0.9090909090909091,
-      "isolated_time_saving_fraction": 0.09090909090909094,
-      "existing_20_percent_duration_seconds": 0.8333333333333334,
-      "combined_duration_seconds": 0.7692307692307692,
-      "relative_existing_bonus_time_saving_fraction": 0.07692307692307698,
-      "whole_combo_or_DPS_claim": false
+      "isolated_before_seconds": 0.9,
+      "isolated_after_seconds": 0.6,
+      "isolated_time_saving_fraction": 0.3333333333333333,
+      "hypothetical_sequence_before_seconds": 1.4,
+      "hypothetical_sequence_after_seconds": 1,
+      "unchanged_component_seconds": 0.2,
+      "sequence_time_saving_fraction": 0.2857142857142857,
+      "universal_weapon_delay_claim": false
     },
     {
       "command": "python -X utf8 scripts/game-info/validate_game_info.py --root \"AI-LOGS/Game Info/releases/1.13.X/skills/english\"",
       "result": "passed",
       "markdown_files": 1,
-      "local_references": 25,
+      "local_references": 26,
       "remote_references": 0,
       "errors": []
     },
     {
       "check": "690 unique mappings, accepted records, support-page IDs, INDEX Git paths/IDs, privacy and ignored QA artifacts",
       "result": "passed",
-      "accepted_skills": 23
+      "accepted_skills": 24
     },
     {
       "check": "Git diff whitespace",
       "result": "passed"
     }
   ],
-  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/trench-fighter-drill-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_attack_speed.md",
-  "corrections": [
-    {
-      "date": "2026-10-03",
-      "change": "Corrected the percentage-formatting citation from number/localized-string lines 405-427 to percentage lines 379-404. Values, prose and independent verdicts are unchanged.",
-      "source": "scripts/ui/views/talent_builder_view/utilities/talent_layout_parser.lua:379-427",
-      "checks": [
-        "targeted fixed-SHA source read",
-        "exact English text and citation bounds",
-        "Game Info links/anchors",
-        "Git diff whitespace"
-      ]
-    }
-  ],
-  "initial_commit": "7da01bd4f49bd1e733fe4f3d7cbdbe8a51ef1a8a",
-  "commit": "614f5a0cbc28246024856720051dc262d99b68c9"
+  "local_artifacts": "AI-LOGS/Game Info/local/skills-english/one-motion-*",
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_reduce_swap_time.md"
 }
