@@ -2212,7 +2212,11 @@
         "ogryn_single_heavy_toughness",
         "ogryn_increased_coherency_toughness",
         "ogryn_reload_speed_on_empty",
-        "ogryn_more_hits_more_damage"
+        "ogryn_more_hits_more_damage",
+        "ogryn_ogryn_killer",
+        "ogryn_melee_stagger",
+        "ogryn_targets_recieve_damage_taken_increase_debuff",
+        "ogryn_heavy_bleeds"
       ],
       "checks": []
     },
@@ -2265,7 +2269,12 @@
         "ogryn_single_heavy_toughness",
         "ogryn_increased_coherency_toughness",
         "ogryn_reload_speed_on_empty",
-        "ogryn_more_hits_more_damage"
+        "ogryn_more_hits_more_damage",
+        "ogryn_ogryn_killer",
+        "ogryn_melee_stagger",
+        "ogryn_targets_recieve_damage_taken_increase_debuff",
+        "ogryn_toughness_on_low_health",
+        "ogryn_heavy_bleeds"
       ],
       "checks": []
     },
@@ -2318,7 +2327,12 @@
         "ogryn_single_heavy_toughness",
         "ogryn_increased_coherency_toughness",
         "ogryn_reload_speed_on_empty",
-        "ogryn_more_hits_more_damage"
+        "ogryn_more_hits_more_damage",
+        "ogryn_ogryn_killer",
+        "ogryn_melee_stagger",
+        "ogryn_targets_recieve_damage_taken_increase_debuff",
+        "ogryn_toughness_on_low_health",
+        "ogryn_heavy_bleeds"
       ],
       "checks": []
     },
@@ -2371,7 +2385,12 @@
         "ogryn_single_heavy_toughness",
         "ogryn_increased_coherency_toughness",
         "ogryn_reload_speed_on_empty",
-        "ogryn_more_hits_more_damage"
+        "ogryn_more_hits_more_damage",
+        "ogryn_ogryn_killer",
+        "ogryn_melee_stagger",
+        "ogryn_targets_recieve_damage_taken_increase_debuff",
+        "ogryn_toughness_on_low_health",
+        "ogryn_heavy_bleeds"
       ],
       "checks": []
     },
@@ -2894,9 +2913,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "fc0063b53a75be4cb610ec1e020dbd8cdea7bae1",
       "chinese_sha256": "4b52e4075420d3f561b8e5b1ab057c654087b195cbff9f3f9f1cf4ead85036b8",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_heavy_bleeds"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_216_220.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_heavy_hitter_cleave.md",
@@ -3202,9 +3228,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "3c7036cfbe4ecd4ce00b371d3509b1702884161a",
       "chinese_sha256": "b6ff575b5ab85f7c2553541a6d5f6c4c85348ec498824759dcf2229269798703",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_melee_stagger"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_216_220.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_more_hits_more_damage.md",
@@ -3282,9 +3315,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "b5654b7f037749c5fa85d32acb7bc91350ab7277",
       "chinese_sha256": "0a90fab6bd572c88915e6f45093cc2d6a21b54c36282acc7f7a07e571c25d3b3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_ogryn_killer"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_216_220.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_passive_heavy_hitter.md",
@@ -3536,9 +3576,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "839e9617b2f3d83512c432c78cd92b7a45038d7c",
       "chinese_sha256": "a66cafd08226fc44a8c00516e9f0e1e436ffb3eddc777323e62dad31bfeae5a2",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_targets_recieve_damage_taken_increase_debuff"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_216_220.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_taunt_damage_taken_increase.md",
@@ -3619,9 +3666,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "be2339a8abdbcf148d4615d1a0dfc6544ee8cbb0",
       "chinese_sha256": "58bbb25b2de40798dd32b880869d9d4f30da68a66726261e2a1a38e23f4e5dc9",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_toughness_on_low_health"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_216_220.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_toughness_regen_aura.md",
@@ -12398,6 +12452,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_211_215.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_more_hits_more_damage.md"
+    },
+    {
+      "id": "ogryn_ogryn_killer",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_216_220.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_ogryn_killer.md"
+    },
+    {
+      "id": "ogryn_melee_stagger",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_216_220.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_melee_stagger.md"
+    },
+    {
+      "id": "ogryn_targets_recieve_damage_taken_increase_debuff",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_216_220.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_targets_recieve_damage_taken_increase_debuff.md"
+    },
+    {
+      "id": "ogryn_toughness_on_low_health",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_216_220.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_toughness_on_low_health.md"
+    },
+    {
+      "id": "ogryn_heavy_bleeds",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_216_220.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_heavy_bleeds.md"
     }
   ],
   "pending_chinese_corrections": [

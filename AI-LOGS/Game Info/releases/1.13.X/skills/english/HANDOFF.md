@@ -1,3 +1,15 @@
+# English documentation: current continuation
+
+Checkpoint 220 completed on 2026-10-04. [Receipt](ogryn_skills_216_220.json) and [FILE_MAP](FILE_MAP.json) now record 220 accepted mechanisms. Next item: **221, Hard Knocks**, `ogryn_staggering_increases_damage`. The full goal remains active and unfinished.
+
+The original dedicated checkout disappeared after the initial handoff reads. With explicit user authorization it was restored at exactly the same path on `codex/skills-english`, retaining `264e15242` and all prior commits. Items 219/220 are locally committed as `8954e14fe`/`8717b2a92`. No push, PR, merge, reset, source update or agent review.
+
+Remaining: 426 mechanisms + 30 class-support files + 2 shared files = 458 mapped files. Ogryn has 47 mechanisms and six support files remaining. Ogryn comparison totals: 182 = 73 Consistent / 3 Explicit contradictions / 99 Not covered / 0 No implementation / 7 Cannot confirm.
+
+The prior handoff below is retained as historical context. Its next-item, counts and estimate are superseded by this checkpoint and the current user's instructions.
+
+---
+
 # English documentation: local handoff
 
 Updated: 2026-10-04T05:32:47+08:00. Translation stopped at the user's request for a local handoff. The full English-documentation goal is unfinished.

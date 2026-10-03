@@ -342,3 +342,5 @@ Five-item checkpoint (skills 113–117): 844 seconds (14m 04s), measured between
 - [Ogryn skills 211–215](ogryn_skills_211_215.json): The Best Defence, Smash ’Em!, Lynchpin, Keep Shooting and Furious. Changed text/links and independent English comparison checked; one full diff review and local commit per skill. Progress and statistics updated once for the batch.
 
 - [Local handoff](HANDOFF.md): 218 mechanisms committed; FILE_MAP checkpoint 215. Resume item 219, then finish and batch 216–220. No pending translation edits.
+
+- [Ogryn skills 216–220](ogryn_skills_216_220.json): Heavyweight, Slam and Soften Them Up acceptance reused; Too Stubborn to Die and Batter translated, independently compared and locally committed. Changed text, Markdown and local links passed. 220/646 mechanisms accepted; 458 mapped files remain (426 mechanisms, 30 class-support, 2 shared). Resumed 219–220 session to final skill commit: 629s (10m 29s), including the unmeasured worktree interruption and tool setup; excluded from speed estimation. The clean 219→220 commit interval is 161s (2m 41s). Handoff gap excluded; no new completion estimate. Continue item 221, Hard Knocks.

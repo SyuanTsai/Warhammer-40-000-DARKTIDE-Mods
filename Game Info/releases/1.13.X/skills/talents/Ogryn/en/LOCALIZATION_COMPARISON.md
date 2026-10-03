@@ -649,4 +649,4 @@ Full raw template and formatting: [source evidence](ogryn_heavy_bleeds.md#origin
 
 ## Comparison totals
 
-The 168 listed rules comprise **66 Consistent**, **3 Explicit contradictions**, **92 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain! and the visible-stack threshold in Pained Outburst. These totals apply only to the listed rules.
+The 182 listed rules comprise **73 Consistent**, **3 Explicit contradictions**, **99 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain! and the visible-stack threshold in Pained Outburst. These totals apply only to the listed rules.
