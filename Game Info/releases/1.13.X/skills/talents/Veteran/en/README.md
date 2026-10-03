@@ -13,6 +13,7 @@
 | <img src="https://github.com/user-attachments/assets/5179b403-3945-41a4-9c68-5278b6968c24" width="32" height="32" alt="Grenade Tinkerer talent icon"> [Grenade Tinkerer](#veteran_improved_grenades) | <ul><li>Shredder Frag Grenade: +25% explosion damage and radius; the bonus does not increase bleed damage.</li><li>Krak Grenade: +75% explosion damage.</li><li>Smoke Grenade: +100% smoke duration, normally 15s → 30s with this modifier alone.</li></ul> | Blitz modifier |
 | <img src="https://github.com/user-attachments/assets/b0967626-73da-49a8-a1b9-1f4d6c1daffa" width="32" height="32" alt="Krak Grenade talent icon"> [Krak Grenade](#veteran_krak_grenade) | <ul><li>Seek suitable Flak, Carapace or Unyielding armor hit zones and stick; base capacity: three grenades.</li><li>Collision/sticking starts a roughly one-second fuse; without collision, two seconds of flight precede that fuse.</li><li>Close blast radius 1.5m, outer blast 5m; close blast penetrates shields. Damage varies with armor, boss and blast conditions.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/511ac082-cbea-4af3-8f8e-3dfeab7ca2bf" width="32" height="32" alt="Demolition Stockpile talent icon"> [Demolition Stockpile](#veteran_replenish_grenades) | <ul><li>While below grenade capacity, replenish one Shredder Frag Grenade or Smoke Grenade approximately every 60 seconds, or one Krak Grenade approximately every 90 seconds.</li><li>Throwing another grenade preserves the current countdown; reaching full capacity clears it.</li></ul> | Blitz modifier |
+| <img src="https://github.com/user-attachments/assets/6fa67f08-3b19-4bee-8a32-d5815db7297f" width="32" height="32" alt="Shredder Frag Grenade talent icon"> [Shredder Frag Grenade](#veteran_grenade_apply_bleed) | <ul><li>Damaging Frag explosions apply six Bleed stacks to surviving enemies.</li><li>Base capacity three; about 1.7s fuse, 2m inner blast and 10m outer blast with damage falloff.</li><li>Bleed caps at 16 stacks; ticks about every 0.5s, refreshes its 1.5s duration on reapplication and then loses stacks over successive ticks.</li></ul> | Blitz |
 | <img src="https://github.com/user-attachments/assets/61ed9652-570a-48ad-9a3b-4961c131dd36" width="32" height="32" alt="Volley Fire talent icon"> [Volley Fire](#veteran_combat_ability_stance) | <ul><li>Equip your ranged weapon and enter a 6-second stance with +15% ranged damage, +15% extra weakspot damage and +50% ranged impact.</li><li>Reduced spread/recoil/sway and disruption protection; 30-second base cooldown starts on activation.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/0f9d7c51-7e6a-4f3d-a367-5c22d0adf308" width="32" height="32" alt="Infiltrate talent icon"> [Infiltrate](#veteran_invisibility_on_combat_ability) | <ul><li>Replenish all Toughness; enter Stealth for up to 8 seconds with +25% movement speed.</li><li>Gain +30% damage during Stealth and for 8 seconds afterwards. Base cooldown: 40 seconds.</li><li>Attacking can end Stealth; leaving it suppresses nearby enemies.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/7a72c16f-0170-458e-9bd4-4d585cf523d3" width="32" height="32" alt="Low Profile talent icon"> [Low Profile](#veteran_reduced_threat_after_combat_ability) | <ul><li>Combat ability use reduces the affected enemy target-selection weight by 90%.</li><li>With Infiltrate, it is active during Stealth and for 10 seconds after leaving it; an already-running countdown is not restarted by another application.</li></ul> | Ability modifier |
@@ -155,6 +156,27 @@ The extra projectile has a slightly offset direction and a base-fuse override de
 - **Full capacity**: if another supply fills your grenades halfway through a countdown, that progress is cleared when full capacity is observed. A later throw starts a fresh full interval.
 
 [Details and source evidence](veteran_replenish_grenades.md) · [Back to index](#talent-index)
+
+<a id="veteran_grenade_apply_bleed"></a>
+
+<img src="https://github.com/user-attachments/assets/6fa67f08-3b19-4bee-8a32-d5815db7297f" width="72" height="72" alt="Shredder Frag Grenade talent icon">
+
+### Shredder Frag Grenade
+
+- A damaging Frag explosion applies **six Bleed stacks** to enemies that survive the hit. Physical contact with the projectile alone does not apply bleed.
+- Base capacity: **three grenades**. The fuse is about **1.7 seconds**, with a **2m** high-damage inner blast and **10m** outer blast that loses damage with distance.
+- Bleed caps at **16 stacks** and deals damage about every **0.5 seconds**. Reapplication refreshes its **1.5-second** duration; after expiry, stacks fall off over successive ticks rather than all disappearing at once.
+
+**Explosion and bleed examples**
+
+- For a close explosion on an ordinary non-boss hit zone, with no other modifiers: Unarmoured damage is **500**; Carapace's 0.2 armor multiplier gives `500 × 0.2 = 100 damage units`. Bleed is separate.
+- Three qualifying explosions against the same surviving enemy, with no decay between grants: `6 → 12 → min(18, 16) = 16 Bleed stacks`.
+- Isolate bleed on an Unarmoured target with no other modifiers. At six stacks, `175 × [(6 ÷ 16)² × (3 − 2 × 6 ÷ 16)] × 0.5 ≈ 27.69 damage units per tick`; at sixteen, `175 × 1 × 0.5 = 87.5`. This is bleed alone, not explosion damage or fixed DPS.
+- [Grenade Tinkerer](#veteran_improved_grenades) increases the explosion damage and radius, while the separate bleed damage receives no Frag explosion bonus.
+
+[Detailed sources and formulas](veteran_grenade_apply_bleed.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_grenade_apply_bleed) | [Back to index](#talent-index)
+
+---
 
 ## Combat abilities
 

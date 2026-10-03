@@ -13,6 +13,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Grenade Tinkerer](veteran_improved_grenades.md) / `veteran_improved_grenades` | Blitz modifier |
 | [Krak Grenade](veteran_krak_grenade.md) / `veteran_krak_grenade` | Blitz |
 | [Demolition Stockpile](veteran_replenish_grenades.md) / `veteran_replenish_grenades` | Blitz modifier |
+| [Shredder Frag Grenade](veteran_grenade_apply_bleed.md) / `veteran_grenade_apply_bleed` | Blitz |
 | [Volley Fire](veteran_combat_ability_stance.md) / `veteran_combat_ability_stance` | Combat ability |
 | [Infiltrate](veteran_invisibility_on_combat_ability.md) / `veteran_invisibility_on_combat_ability` | Combat ability |
 | [Low Profile](veteran_reduced_threat_after_combat_ability.md) / `veteran_reduced_threat_after_combat_ability` | Ability modifier |

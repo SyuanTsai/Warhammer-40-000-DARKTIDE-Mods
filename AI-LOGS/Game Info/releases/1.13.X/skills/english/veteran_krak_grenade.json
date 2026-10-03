@@ -178,5 +178,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/krak-grenade-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_krak_grenade.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_krak_grenade.md",
+  "commit": "a93131a29c29412f561017e4332d6f73f97acc10"
 }
