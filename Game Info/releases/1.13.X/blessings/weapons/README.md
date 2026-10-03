@@ -21,3 +21,6 @@
 | [動力錘](melee/動力錘/README.md)<br>- Power Maul | 近戰 | 阿克利斯Mk I動力錘 |
 | [作戰大錘&板盾](melee/作戰大錘&板盾/README.md)<br>- Battle Maul & Slab Shield | 近戰 | 歐洛克斯Mk II戰槌&Mk III板盾、果羅姆 Mk I 戰槌與 Mk V 板盾 |
 | [動力劍](melee/動力劍/README.md)<br>- Power Sword | 近戰 | 軍務部Mk III動力劍、軍務部Mk VI動力劍 |
+| [電弧步槍](ranged/電弧步槍/README.md)<br>- Arc Rifle | 遠程 | 庫巴爾電弧步槍 |
+| [偵察鐳射槍](ranged/偵察鐳射槍/README.md)<br>- Recon Lasgun | 遠程 | 奧克塔蘭Mk II偵察鐳射槍、奧克塔蘭Mk VId偵察鐳射槍、奧克塔蘭Mk VIIa偵察鐳射槍 |
+| [重型鐳射手槍](ranged/重型鐳射手槍/README.md)<br>- Heavy Laspistol | 遠程 | 奧克塔蘭MG Mk II重型鐳射手槍、卡特雷爾Mk X重型鐳射手槍 |

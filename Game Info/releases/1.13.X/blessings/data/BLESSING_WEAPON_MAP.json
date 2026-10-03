@@ -58,7 +58,7 @@
       "page": "entries/達姆彈/README.md",
       "kind": "ranged",
       "icon": "https://github.com/user-attachments/assets/a11fa52e-95d6-46e4-bfd1-5fb7bb132120",
-      "effect": "本武器連續命中累積近距離傷害，每層4.5／5／5.5／6%，最多5層；有效層期限2秒，12.5公尺內完整、到30公尺歸零。"
+      "effect": "本武器合格命中累積近距離傷害，最多5層、共同2秒期限；電弧步槍每層1／2／3／4%，其餘適用武器4.5／5／5.5／6%；12.5公尺內完整、30公尺起歸零。"
     },
     {
       "id": "charmed-reload",
@@ -577,6 +577,84 @@
           "trait_category": "bespoke_powersword_p1"
         }
       ]
+    },
+    {
+      "id": "arc_rifle_p1",
+      "name_zh_tw": "電弧步槍",
+      "name_en": "Arc Rifle",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_arc_rifle_p1_m1",
+      "page": "weapons/ranged/電弧步槍/README.md",
+      "marks": [
+        {
+          "id": "arc_rifle_p1_m1",
+          "item": "content/items/weapons/player/ranged/arc_rifle_p1_m1",
+          "name": "庫巴爾電弧步槍",
+          "name_en": "Kobal Arc Rifle",
+          "template_file": "scripts/settings/equipment/weapon_templates/arc_rifle/arc_rifle_p1_m1.lua",
+          "trait_category": "bespoke_arc_rifle_p1"
+        }
+      ]
+    },
+    {
+      "id": "lasgun_p3",
+      "name_zh_tw": "偵察鐳射槍",
+      "name_en": "Recon Lasgun",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_lasgun_p3_m1",
+      "page": "weapons/ranged/偵察鐳射槍/README.md",
+      "marks": [
+        {
+          "id": "lasgun_p3_m1",
+          "item": "content/items/weapons/player/ranged/lasgun_p3_m1",
+          "name": "奧克塔蘭Mk II偵察鐳射槍",
+          "name_en": "Accatran Mk II Recon Lasgun",
+          "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m1.lua",
+          "trait_category": "bespoke_lasgun_p3"
+        },
+        {
+          "id": "lasgun_p3_m2",
+          "item": "content/items/weapons/player/ranged/lasgun_p3_m2",
+          "name": "奧克塔蘭Mk VId偵察鐳射槍",
+          "name_en": "Accatran Mk VId Recon Lasgun",
+          "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m2.lua",
+          "trait_category": "bespoke_lasgun_p3"
+        },
+        {
+          "id": "lasgun_p3_m3",
+          "item": "content/items/weapons/player/ranged/lasgun_p3_m3",
+          "name": "奧克塔蘭Mk VIIa偵察鐳射槍",
+          "name_en": "Accatran Mk VIIa Recon Lasgun",
+          "template_file": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m3.lua",
+          "trait_category": "bespoke_lasgun_p3"
+        }
+      ]
+    },
+    {
+      "id": "laspistol_p1",
+      "name_zh_tw": "重型鐳射手槍",
+      "name_en": "Heavy Laspistol",
+      "kind": "ranged",
+      "name_key": "loc_weapon_family_laspistol_p1_m1",
+      "page": "weapons/ranged/重型鐳射手槍/README.md",
+      "marks": [
+        {
+          "id": "laspistol_p1_m1",
+          "item": "content/items/weapons/player/ranged/laspistol_p1_m1",
+          "name": "奧克塔蘭MG Mk II重型鐳射手槍",
+          "name_en": "Accatran MG Mk II Heavy Laspistol",
+          "template_file": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+          "trait_category": "bespoke_laspistol_p1"
+        },
+        {
+          "id": "laspistol_p1_m3",
+          "item": "content/items/weapons/player/ranged/laspistol_p1_m3",
+          "name": "卡特雷爾Mk X重型鐳射手槍",
+          "name_en": "Kantrael Mk X Heavy Laspistol",
+          "template_file": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m3.lua",
+          "trait_category": "bespoke_laspistol_p1"
+        }
+      ]
     }
   ],
   "variants": [
@@ -825,7 +903,8 @@
         "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_autogun_p1_buff_templates.lua",
         "start_line": 12,
         "end_line": 14
-      }
+      },
+      "effect": "本武器合格命中每層4.5／5／5.5／6%，最多5層；共同2秒期限，12.5公尺內完整、30公尺起歸零。"
     },
     {
       "id": "weapon_trait_bespoke_ogryn_heavystubber_p1_ammo_from_reserve_on_crit",
@@ -1406,6 +1485,132 @@
       },
       "icon": "https://github.com/user-attachments/assets/6c47b470-d79e-4ffd-bf34-7d0b080ad5c0",
       "icon_path": "content/ui/textures/icons/traits/weapon_trait_178"
+    },
+    {
+      "id": "weapon_trait_bespoke_arc_rifle_p1_consecutive_hits_increases_close_damage",
+      "blessing_id": "dumdum",
+      "weapon_id": "arc_rifle_p1",
+      "page": "entries/達姆彈/weapon_trait_bespoke_arc_rifle_p1_consecutive_hits_increases_close_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層近距離傷害百分比",
+        "per_stack_percent": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 2,
+        "full_effect_distance_m": 12.5,
+        "zero_effect_distance_m": 30,
+        "distance_interpolation": "sqrt(clamp((distance-12.5)/17.5,0,1))",
+        "cold_start_first_effective_hit": 3,
+        "after_expiry_first_effective_hit": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_arc_rifle_p1.lua",
+        "start_line": 10,
+        "end_line": 59
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_arc_rifle_p1_buff_templates.lua",
+        "start_line": 12,
+        "end_line": 14
+      },
+      "icon": "https://github.com/user-attachments/assets/a11fa52e-95d6-46e4-bfd1-5fb7bb132120",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_058",
+      "effect": "每層1／2／3／4%，5層，IV級滿層20%；連鎖每批只計首個目標"
+    },
+    {
+      "id": "weapon_trait_bespoke_lasgun_p3_consecutive_hits_increases_close_damage",
+      "blessing_id": "dumdum",
+      "weapon_id": "lasgun_p3",
+      "page": "entries/達姆彈/weapon_trait_bespoke_lasgun_p3_consecutive_hits_increases_close_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層近距離傷害百分比",
+        "per_stack_percent": [
+          4.5,
+          5,
+          5.5,
+          6
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 2,
+        "full_effect_distance_m": 12.5,
+        "zero_effect_distance_m": 30,
+        "distance_interpolation": "sqrt(clamp((distance-12.5)/17.5,0,1))",
+        "cold_start_first_effective_hit": 3,
+        "after_expiry_first_effective_hit": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_lasgun_p3.lua",
+        "start_line": 278,
+        "end_line": 327
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_lasgun_p3_buff_templates.lua",
+        "start_line": 18,
+        "end_line": 20
+      },
+      "icon": "https://github.com/user-attachments/assets/a11fa52e-95d6-46e4-bfd1-5fb7bb132120",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_058",
+      "effect": "每層4.5／5／5.5／6%，5層，距離衰減相同"
+    },
+    {
+      "id": "weapon_trait_bespoke_laspistol_p1_consecutive_hits_increases_close_damage",
+      "blessing_id": "dumdum",
+      "weapon_id": "laspistol_p1",
+      "page": "entries/達姆彈/weapon_trait_bespoke_laspistol_p1_consecutive_hits_increases_close_damage.md",
+      "defined_tiers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "available_tiers": null,
+      "values": {
+        "unit": "每層近距離傷害百分比",
+        "per_stack_percent": [
+          4.5,
+          5,
+          5.5,
+          6
+        ],
+        "max_effective_stacks": 5,
+        "shared_duration_seconds": 2,
+        "full_effect_distance_m": 12.5,
+        "zero_effect_distance_m": 30,
+        "distance_interpolation": "sqrt(clamp((distance-12.5)/17.5,0,1))",
+        "cold_start_first_effective_hit": 3,
+        "after_expiry_first_effective_hit": 2
+      },
+      "trait_source": {
+        "path": "scripts/settings/equipment/weapon_traits/weapon_traits_bespoke_laspistol_p1.lua",
+        "start_line": 290,
+        "end_line": 339
+      },
+      "buff_source": {
+        "path": "scripts/settings/buff/weapon_traits_buff_templates/weapon_traits_bespoke_laspistol_p1_buff_templates.lua",
+        "start_line": 16,
+        "end_line": 18
+      },
+      "icon": "https://github.com/user-attachments/assets/a11fa52e-95d6-46e4-bfd1-5fb7bb132120",
+      "icon_path": "content/ui/textures/icons/traits/weapon_trait_058",
+      "effect": "每層4.5／5／5.5／6%，5層，距離衰減相同"
     }
   ],
   "bindings": [
@@ -2191,6 +2396,90 @@
         "path": "scripts/settings/equipment/weapon_templates/power_swords/powersword_p1_m2.lua",
         "import_line": 12,
         "append_line": 1626
+      }
+    },
+    {
+      "blessing_id": "dumdum",
+      "weapon_id": "arc_rifle_p1",
+      "mark_id": "arc_rifle_p1_m1",
+      "variant_id": "weapon_trait_bespoke_arc_rifle_p1_consecutive_hits_increases_close_damage",
+      "trait_item": "content/items/traits/bespoke_arc_rifle_p1/consecutive_hits_increases_close_damage",
+      "trait_category": "bespoke_arc_rifle_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/arc_rifle/arc_rifle_p1_m1.lua",
+        "import_line": 20,
+        "append_line": 1061
+      }
+    },
+    {
+      "blessing_id": "dumdum",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m1",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_consecutive_hits_increases_close_damage",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/consecutive_hits_increases_close_damage",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m1.lua",
+        "import_line": 15,
+        "append_line": 732
+      }
+    },
+    {
+      "blessing_id": "dumdum",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m2",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_consecutive_hits_increases_close_damage",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/consecutive_hits_increases_close_damage",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m2.lua",
+        "import_line": 15,
+        "append_line": 742
+      }
+    },
+    {
+      "blessing_id": "dumdum",
+      "weapon_id": "lasgun_p3",
+      "mark_id": "lasgun_p3_m3",
+      "variant_id": "weapon_trait_bespoke_lasgun_p3_consecutive_hits_increases_close_damage",
+      "trait_item": "content/items/traits/bespoke_lasgun_p3/consecutive_hits_increases_close_damage",
+      "trait_category": "bespoke_lasgun_p3",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/lasguns/lasgun_p3_m3.lua",
+        "import_line": 15,
+        "append_line": 728
+      }
+    },
+    {
+      "blessing_id": "dumdum",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m1",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_consecutive_hits_increases_close_damage",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/consecutive_hits_increases_close_damage",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m1.lua",
+        "import_line": 16,
+        "append_line": 860
+      }
+    },
+    {
+      "blessing_id": "dumdum",
+      "weapon_id": "laspistol_p1",
+      "mark_id": "laspistol_p1_m3",
+      "variant_id": "weapon_trait_bespoke_laspistol_p1_consecutive_hits_increases_close_damage",
+      "trait_item": "content/items/traits/bespoke_laspistol_p1/consecutive_hits_increases_close_damage",
+      "trait_category": "bespoke_laspistol_p1",
+      "available_tiers": null,
+      "source": {
+        "path": "scripts/settings/equipment/weapon_templates/laspistols/laspistol_p1_m3.lua",
+        "import_line": 16,
+        "append_line": 864
       }
     }
   ]

@@ -24,3 +24,7 @@
 - 粉碎全部UI交集變體本機Commit：`3c8a75c98e1efce70cee8d8314d48c83a85ca85a`；動力劍P2候選保留來源，沒有假設已排除。
 
 - [野蠻攻勢](2026-10-03-BRUTAL-MOMENTUM_EXTENSION_ACCEPTANCE.json)：新增4變體、8型號關聯；共6變體、14關聯。
+
+- 野蠻攻勢全部UI交集變體本機Commit：`6290812ae24ec51e161fb8b2bbc05fcff1c3408e`。
+
+- [達姆彈](2026-10-03-DUMDUM_EXTENSION_ACCEPTANCE.json)：新增3變體、6型號關聯；共4變體、9關聯。
