@@ -30,6 +30,7 @@
 | <img src="https://github.com/user-attachments/assets/fa5d9c18-f792-4a86-812f-8547ba3cf89e" width="32" height="32" alt="Trample talent icon"> [Trample](#ogryn_charge_trample) | <ul><li>Each charge hit adds 2.5% damage, up to 20 stacks / 50%, for 10s.</li></ul> | Combat ability |
 | <img src="https://github.com/user-attachments/assets/ea712cab-0dd4-47fa-a2c5-98edb7e41783" width="32" height="32" alt="Burst Limiter Override talent icon"> [Burst Limiter Override](#ogryn_leadbelcher_no_ammo_chance) | <ul><li>Ranged attacks have a 15% base Lucky Bullet chance; a successful shot consumes no ammunition.</li><li>Each ranged kill adds 2% ranged damage, up to 10 stacks, with duration reset to 10s on further kills.</li></ul> | Keystone |
 | <img src="https://github.com/user-attachments/assets/9436a125-4e9f-4655-ae8f-4975db2f4af1" width="32" height="32" alt="Feel No Pain talent icon"> [Feel No Pain](#ogryn_carapace_armor) | <ul><li>Start with 10 stacks; each adds Toughness replenishment and multiplies Toughness damage by 0.97.</li><li>Eligible damage removes at most one stack per second; stacks restore at 2s intervals when the restoration conditions are met.</li></ul> | Keystone |
+| <img src="https://github.com/user-attachments/assets/6ad5a8ad-f1c2-4c43-997a-02b89543ebd9" width="32" height="32" alt="Heavy Hitter talent icon"> [Heavy Hitter](#ogryn_passive_heavy_hitter) | <ul><li>Melee hits build Heavy Hitter: ordinary hits add 1 stack and heavy hits add 2.</li><li>Each stack grants 3% melee damage, maximum 8; adding stacks resets the 7.5s duration.</li></ul> | Keystone |
 
 ## Blitz
 
@@ -404,3 +405,19 @@
 - **English damage scope**: The original English says Damage Reduction without specifying the damage type. The accepted evidence confirms reduction of Toughness damage; it does not reduce Health damage.
 
 [Details](ogryn_carapace_armor.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_passive_heavy_hitter"></a>
+
+### Heavy Hitter
+
+<img src="https://github.com/user-attachments/assets/6ad5a8ad-f1c2-4c43-997a-02b89543ebd9" width="72" height="72" alt="Heavy Hitter talent icon">
+
+- **Building stacks**: Melee hits add stacks. Pushes do not count, and later targets cleaved by the same swing do not add further stacks.
+
+- **Stacks and damage**: An ordinary hit adds 1 stack; a heavy hit adds 2. Each stack grants 3% melee damage, up to 8 stacks, or 24% at maximum.
+
+- **Refresh and example**: Adding stacks resets the 7.5s duration. Four ordinary hits grant 12%; at 8 stacks, 100 base melee damage becomes 100 × (1 + 24%) = 124.
+
+[Details](ogryn_passive_heavy_hitter.md) · [Back to index](#talent-index)

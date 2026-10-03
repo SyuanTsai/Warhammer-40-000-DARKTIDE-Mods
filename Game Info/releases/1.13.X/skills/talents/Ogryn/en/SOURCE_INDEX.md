@@ -32,3 +32,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Trample](ogryn_charge_trample.md) / `ogryn_charge_trample` | Combat ability |
 | [Burst Limiter Override](ogryn_leadbelcher_no_ammo_chance.md) / `ogryn_leadbelcher_no_ammo_chance` | Keystone |
 | [Feel No Pain](ogryn_carapace_armor.md) / `ogryn_carapace_armor` | Keystone |
+| [Heavy Hitter](ogryn_passive_heavy_hitter.md) / `ogryn_passive_heavy_hitter` | Keystone |
