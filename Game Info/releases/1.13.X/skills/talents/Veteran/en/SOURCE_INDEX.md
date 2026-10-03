@@ -44,6 +44,7 @@ Implementation source: Release 1.13.1, fixed SHA `7e662fcda16219d775b84af50322be
 | [Close Order Drill](veteran_reduced_toughness_damage_in_coherency.md) / `veteran_reduced_toughness_damage_in_coherency` | Passive talent |
 | [Iron Will](veteran_tdr_on_high_toughness.md) / `veteran_tdr_on_high_toughness` | Passive talent |
 | [Superiority Complex](veteran_increase_damage_vs_elites.md) / `veteran_increase_damage_vs_elites` | Passive talent |
+| [Bring it Down!](veteran_big_game_hunter.md) / `veteran_big_game_hunter` | Passive talent |
 | [Precision Strikes](veteran_increased_weakspot_damage.md) / `veteran_increased_weakspot_damage` | Passive talent |
 | [Trench Fighter Drill](veteran_attack_speed.md) / `veteran_attack_speed` | Passive talent |
 | [One Motion](veteran_reduce_swap_time.md) / `veteran_reduce_swap_time` | Passive talent |

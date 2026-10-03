@@ -44,6 +44,7 @@
 | <img src="https://github.com/user-attachments/assets/139120eb-e9c5-41ea-b87c-bf4737b53f49" width="32" height="32" alt="Close Order Drill talent icon"> [Close Order Drill](#veteran_reduced_toughness_damage_in_coherency) | <ul><li>Gain 11% Toughness Damage Reduction per Coherency teammate, up to 33% with three.</li><li>The effect follows the current teammate count and multiplies with separate active reductions.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d56c3a6f-0fed-4e37-bb08-aa3c87f5624d" width="32" height="32" alt="Iron Will talent icon"> [Iron Will](#veteran_tdr_on_high_toughness) | <ul><li>Take 50% less Toughness damage while current Toughness is above 75% of maximum.</li><li>Exactly 75% does not qualify; separate active reduction multipliers multiply.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/915cdbef-5b88-4d3b-a4f1-e29e8a8f0f07" width="32" height="32" alt="Superiority Complex talent icon"> [Superiority Complex](#veteran_increase_damage_vs_elites) | <ul><li>Gain +15% damage against Elite enemies for eligible melee and ranged attacks.</li><li>Specialist-only targets do not qualify; the bonus adds to other same-stage damage bonuses.</li></ul> | Passive talent |
+| <img src="https://github.com/user-attachments/assets/fc1e80c9-c17b-4e96-909d-bab403221f03" width="32" height="32" alt="Bring it Down! talent icon"> [Bring it Down!](#veteran_big_game_hunter) | <ul><li>Gain +20% damage against Ogryns and Monstrosities with melee and ranged attacks.</li><li>The bonus adds to other same-stage damage bonuses; enemy classification determines eligibility.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/d10f9131-4785-4bff-91a6-af630759b2dd" width="32" height="32" alt="Precision Strikes talent icon"> [Precision Strikes](#veteran_increased_weakspot_damage) | <ul><li>Add 30 percentage points to the extra-damage multiplier on melee and ranged weakspot hits.</li><li>The whole-hit increase depends on the extra component and existing bonuses.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/4a13cdee-8f88-4412-8b56-e3b3b5590459" width="32" height="32" alt="Trench Fighter Drill talent icon"> [Trench Fighter Drill](#veteran_attack_speed) | <ul><li>Increase Melee Attack Speed by 10%.</li><li>An affected 1s action takes about 0.91s without other speed bonuses; full attack-chain timing depends on the weapon.</li></ul> | Passive talent |
 | <img src="https://github.com/user-attachments/assets/f51a3100-c73f-4d71-833e-a71bb9e002bc" width="32" height="32" alt="One Motion talent icon"> [One Motion](#veteran_reduce_swap_time) | <ul><li>Increase Weapon Swap Speed by 50%.</li><li>An affected 0.9s swap action takes 0.6s without other speed effects; reload and attack speed are separate.</li></ul> | Passive talent |
@@ -817,6 +818,29 @@ Assume an eligible Elite, 100 damage before the stated additive stage, unchanged
 These examples cover the shared damage calculation; special damage sources and additional modifiers can require separate treatment.
 
 [Detailed sources and formulas](veteran_increase_damage_vs_elites.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_increase_damage_vs_elites) | [Back to index](#talent-index)
+
+---
+
+<a id="veteran_big_game_hunter"></a>
+
+<img src="https://github.com/user-attachments/assets/fc1e80c9-c17b-4e96-909d-bab403221f03" width="72" height="72" alt="Bring it Down! talent icon">
+
+### Bring it Down!
+
+- Gain **+20% damage against Ogryns and Monstrosities** with melee and ranged attacks.
+- Eligibility follows the enemy’s Ogryn or Monster classification, rather than visual size.
+
+**Additive damage examples**
+
+Assume a qualifying target, 100 damage before this additive stage and no other or later modifiers.
+
+- This talent alone: `100 × (1 + 0.20) = 120 damage`.
+- With an existing **15% bonus at the same stage**: `115` becomes `100 × (1 + 0.15 + 0.20) = 135 damage`. That adds **20 damage**, about **17.39%** more than 115.
+- A hypothetical target with neither qualifying classification receives no bonus from this talent, even if it looks large.
+
+The bonus joins the existing damage stage; the complete hit’s increase can vary with other modifiers.
+
+[Detailed sources and formulas](veteran_big_game_hunter.md) | [Original English comparison](LOCALIZATION_COMPARISON.md#veteran_big_game_hunter) | [Back to index](#talent-index)
 
 ---
 
