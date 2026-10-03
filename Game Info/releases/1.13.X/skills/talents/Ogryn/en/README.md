@@ -76,6 +76,7 @@
 | <img src="https://github.com/user-attachments/assets/119478f3-6425-4e96-9f26-e0df95a4bf1e" width="32" height="32" alt="Attention Seeker talent icon"> [Attention Seeker](#ogryn_blocking_ranged_taunts) | <ul><li>Blocking or hitting with a push Taunts the enemy for 8s; Monsters and already-Taunted enemies are excluded.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/d61a8184-294b-4ade-9847-3c5241828792" width="32" height="32" alt="For the Lil'Uns talent icon"> [For the Lil'Uns](#ogryn_protect_allies) | <ul><li>Another ally's Toughness break grants +10% Power and 25% Toughness damage reduction for 10s; a downed ally separately grants Revive Speed and Stun immunity.</li></ul> | Talent |
 | <img src="https://github.com/user-attachments/assets/c5cc14b1-1227-4449-a1d9-de912e048e6e" width="32" height="32" alt="Simple Minded talent icon"> [Simple Minded](#ogryn_corruption_resistance) | <ul><li>Reduce damage-calculated Corruption taken by 40%; existing Corruption and ordinary damage are unaffected by this modifier.</li></ul> | Talent |
+| <img src="https://github.com/user-attachments/assets/fca0827b-6dac-4c44-b92e-8aba309ff4ca" width="32" height="32" alt="Focused Fighter talent icon"> [Focused Fighter](#ogryn_melee_attacks_give_mtdr) | <ul><li>Successful melee sweeps build up to five multiplicative 4% melee-damage reduction stacks; melee damage to you or an ally clears them.</li></ul> | Talent |
 
 ## Blitz
 
@@ -1200,3 +1201,19 @@
 - **Corruption example**: An original increase of 20 Corruption becomes `20 × 0.6 = 12`. With another independent 20% Corruption reduction, it becomes `20 × 0.6 × 0.8 = 9.6`.
 
 [Details](ogryn_corruption_resistance.md) · [Back to index](#talent-index)
+
+---
+
+<a id="ogryn_melee_attacks_give_mtdr"></a>
+
+### Focused Fighter
+
+<img src="https://github.com/user-attachments/assets/fca0827b-6dac-4c44-b92e-8aba309ff4ca" width="72" height="72" alt="Focused Fighter talent icon">
+
+- **Gaining stacks**: Each melee sweep that hits at least one enemy adds one stack, up to 5. Hitting multiple enemies in the same sweep still grants only one stack.
+
+- **Damage-reduction example**: Each stack multiplies incoming melee damage by 0.96. At five stacks, `100 × 0.96⁵ ≈ 81.54`, about 18.46% total reduction rather than a flat 20%.
+
+- **Removal**: Stacks have no fixed countdown. Melee damage to you or an ally clears them. This reduction affects only melee damage you take, not ranged damage.
+
+[Details](ogryn_melee_attacks_give_mtdr.md) · [Back to index](#talent-index)

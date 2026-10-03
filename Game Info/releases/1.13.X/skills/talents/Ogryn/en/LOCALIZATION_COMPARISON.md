@@ -913,6 +913,18 @@ Full raw template and formatting: [source evidence](ogryn_corruption_resistance.
 | Corruption resistance | +40% Corruption Resistance.; `ui / loc_talent_ogryn_corruption_resistance_desc / ca230578` | corruption_taken_multiplier 0.6 applies to permanent_damage in _calculate_health_damage_player, not ordinary health_damage. [Fixed source and line references](ogryn_corruption_resistance.md#fixed-source-evidence) | Consistent | The independently read English names the correct resistance and value. |
 | Path limits and calculation | No damage-path scope, cleansing effect or combined-reduction formula is stated.; `ui / loc_talent_ogryn_corruption_resistance_desc / ca230578` | Existing Corruption is not cleared. The example covers paths reading this modifier, without asserting all direct-script Corruption changes. Original Corruption 20 becomes 12, or 9.6 with another independent 20% reduction. [Fixed source and line references](ogryn_corruption_resistance.md#fixed-source-evidence) | Not covered by the description | These accepted scope limits and calculation details supplement the resistance wording. |
 
+
+<a id="ogryn_melee_attacks_give_mtdr"></a>
+
+## Focused Fighter
+
+Full raw template and formatting: [source evidence](ogryn_melee_attacks_give_mtdr.md#original-english-template-and-reconstruction). Name hash `25803371`. Every row uses `ui / loc_talent_ogryn_melee_attacks_give_mtdr_desc / 7ced0743`.
+
+| Rule | Original game English and resource / key / hash | Code behavior and fixed source / method / lines | Result | Reason |
+|---|---|---|---|---|
+| Stack gain, value and cap | +4% Damage Resistance from Melee Attacks on Successful Melee Attack. Stacks 5 times.; `ui / loc_talent_ogryn_melee_attacks_give_mtdr_desc / 7ced0743` | on_sweep_finish with num_hit_units > 0 adds one stack, maximum five, each with melee_damage_taken_multiplier 0.96. [Fixed source and line references](ogryn_melee_attacks_give_mtdr.md#fixed-source-evidence) | Consistent | The independently read English matches the successful-attack trigger, melee-only reduction and cap. |
+| Removal, counting and calculation | Stacks are removed upon taking Damage from a Melee Attack; no self-only qualifier, duration or formula is stated.; `ui / loc_talent_ogryn_melee_attacks_give_mtdr_desc / 7ced0743` | on_damage_taken uses on_melee_hit without attacked_unit == self; team-wide dispatch also clears stacks after ally melee damage. Multiple hits in one sweep add only one stack; no countdown. At five stacks, 100 × 0.96⁵ ≈ 81.54 (18.46% reduction), not flat 20%; ranged damage is unaffected. [Fixed source and line references](ogryn_melee_attacks_give_mtdr.md#fixed-source-evidence) | Not covered by the description | The ally-removal condition and counting/calculation details supplement the English. The existing cross-source removal question remains unobserved in game. |
+
 ## Comparison totals
 
 The 224 listed rules comprise **94 Consistent**, **4 Explicit contradictions**, **119 Not covered by the description**, **0 No corresponding implementation evidence found** and **7 Cannot confirm**. The explicit English contradictions concern the no-enemy-hit scope in That One Didn’t Count, the duration displayed for No Pain!, the visible-stack threshold in Pained Outburst and the single-attack restriction in Pacemaker. These totals apply only to the listed rules.

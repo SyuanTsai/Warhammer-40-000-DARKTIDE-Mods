@@ -78,3 +78,4 @@ Names use the same-build English resources. Mechanisms reuse the fixed-version e
 | [Attention Seeker](ogryn_blocking_ranged_taunts.md) / `ogryn_blocking_ranged_taunts` | Talent |
 | [For the Lil'Uns](ogryn_protect_allies.md) / `ogryn_protect_allies` | Talent |
 | [Simple Minded](ogryn_corruption_resistance.md) / `ogryn_corruption_resistance` | Talent |
+| [Focused Fighter](ogryn_melee_attacks_give_mtdr.md) / `ogryn_melee_attacks_give_mtdr` | Talent |
