@@ -46,6 +46,10 @@ These effects come from the class's base configuration. Combat Abilities, Blitze
 
 - **Replacement**: Selecting the upgraded melee aura changes the value to 10%; the two do not add to 17.5%. Other aura choices also replace this base aura.
 
+### English description erratum
+
+The original English says “Heavy Melee Attack Damage”, but the verified aura increases all melee damage. [English comparison](LOCALIZATION_COMPARISON.md#ogryn_melee_damage_coherency).
+
 [Source evidence and example assumptions](ogryn_melee_damage_coherency.md)
 
 ---
@@ -73,6 +77,10 @@ These effects come from the class's base configuration. Combat Abilities, Blitze
 - **Consecutive dodges**: Starting another dodge within 0.25s of the previous dodge's end makes the two 50% reductions multiply during overlap. With the above base protection alone, general damage 100 becomes `100 × 0.8 × 0.5 × 0.5 = 20`; Toughness damage additionally multiplies by 0.75, giving 15.
 
 - **Movement limits**: Remove the weapon's fixed movement slowdown. Aiming, attack actions and slowdowns from other sources follow their respective effects.
+
+### English description erratum
+
+The reconstructed English says “a further +40% Damage Resistance” while dodging. The verified additional reduction is 50%; the displayed 40% is the remaining general-damage fraction after base and dodge protection. [English comparison](LOCALIZATION_COMPARISON.md#ogryn_base_tank_passive).
 
 [Source evidence and example assumptions](ogryn_base_tank_passive.md)
 

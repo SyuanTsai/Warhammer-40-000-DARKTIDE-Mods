@@ -1,5 +1,7 @@
 # 歐格林：百分比與算例盤點
 
+[English](en/DAMAGE_PERCENTAGE_REVIEW.md)
+
 [返回玩家說明](README.md)｜[技術索引](SOURCE_INDEX.md)
 
 以下為固定來源的靜態核對；區分傷害與威力、額外暴擊傷害、同階段加算與獨立乘算、速度與動作時間，以及最大韌性與缺額。未執行遊戲內測試。
