@@ -2202,7 +2202,12 @@
         "ogryn_leadbelcher_crits",
         "ogryn_blo_ally_ranged_buffs",
         "ogryn_blo_wield_speed",
-        "ogryn_blo_melee"
+        "ogryn_blo_melee",
+        "ogryn_heavy_hitter_tdr",
+        "ogryn_heavy_hitter_cleave",
+        "ogryn_heavy_hitter_max_stacks_improves_toughness",
+        "ogryn_heavy_hitter_stagger",
+        "ogryn_heavy_hitter_max_stacks_improves_attack_speed"
       ],
       "checks": []
     },
@@ -2245,7 +2250,12 @@
         "ogryn_leadbelcher_crits",
         "ogryn_blo_ally_ranged_buffs",
         "ogryn_blo_wield_speed",
-        "ogryn_blo_melee"
+        "ogryn_blo_melee",
+        "ogryn_heavy_hitter_tdr",
+        "ogryn_heavy_hitter_cleave",
+        "ogryn_heavy_hitter_max_stacks_improves_toughness",
+        "ogryn_heavy_hitter_stagger",
+        "ogryn_heavy_hitter_max_stacks_improves_attack_speed"
       ],
       "checks": []
     },
@@ -2288,7 +2298,12 @@
         "ogryn_leadbelcher_crits",
         "ogryn_blo_ally_ranged_buffs",
         "ogryn_blo_wield_speed",
-        "ogryn_blo_melee"
+        "ogryn_blo_melee",
+        "ogryn_heavy_hitter_tdr",
+        "ogryn_heavy_hitter_cleave",
+        "ogryn_heavy_hitter_max_stacks_improves_toughness",
+        "ogryn_heavy_hitter_stagger",
+        "ogryn_heavy_hitter_max_stacks_improves_attack_speed"
       ],
       "checks": []
     },
@@ -2331,7 +2346,12 @@
         "ogryn_leadbelcher_crits",
         "ogryn_blo_ally_ranged_buffs",
         "ogryn_blo_wield_speed",
-        "ogryn_blo_melee"
+        "ogryn_blo_melee",
+        "ogryn_heavy_hitter_tdr",
+        "ogryn_heavy_hitter_cleave",
+        "ogryn_heavy_hitter_max_stacks_improves_toughness",
+        "ogryn_heavy_hitter_stagger",
+        "ogryn_heavy_hitter_max_stacks_improves_attack_speed"
       ],
       "checks": []
     },
@@ -2865,9 +2885,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "5fd158c197defc6bc54552cf3816bbcc4337aeef",
       "chinese_sha256": "a818f206b84a9cd1c6eb92d22d61a62eb2d723e0b46c4df24e3830e4220c8e7b",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_heavy_hitter_cleave"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_206_210.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_heavy_hitter_max_stacks_improves_attack_speed.md",
@@ -2876,9 +2903,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "e1d8ae078115b7d112e3e5f91400d754002dd598",
       "chinese_sha256": "a8e857efb280b94dea1d054b85b6227d1176b276a884f569a065c245242f35a3",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_heavy_hitter_max_stacks_improves_attack_speed"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_206_210.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_heavy_hitter_max_stacks_improves_toughness.md",
@@ -2887,9 +2921,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "ee23e7ce7c1b5790c83814e6f0b407f96a829321",
       "chinese_sha256": "3bf864d7003ba73455710dd1fb5c86a2ad957cba05a1632c6fb9d15185b73d16",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_heavy_hitter_max_stacks_improves_toughness"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_206_210.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_heavy_hitter_stagger.md",
@@ -2898,9 +2939,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "51f9b59490eb7eb1308067317baba75b1863e3c7",
       "chinese_sha256": "ecbb4f654bab4e3ea47cf9ba45053cb1b45951cd86db985838b3ba808dbff1db",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_heavy_hitter_stagger"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_206_210.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_heavy_hitter_tdr.md",
@@ -2909,9 +2957,16 @@
       "kind": "mechanism",
       "chinese_blob_sha": "eaa02628ad2e70f5d725e92ad9cbc7d5ef7a44dc",
       "chinese_sha256": "2fe28a79f49ad14c393083bf33d40e4fb05f4189efa82147f5bae5eab91063bb",
-      "status": "pending",
-      "accepted_skill_ids": [],
-      "checks": []
+      "status": "accepted_with_caveats",
+      "accepted_skill_ids": [
+        "ogryn_heavy_hitter_tdr"
+      ],
+      "checks": [
+        "translation_text",
+        "independent_English_comparison",
+        "changed_Markdown_and_links"
+      ],
+      "acceptance_record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_206_210.json"
     },
     {
       "source": "Game Info/releases/1.13.X/skills/talents/Ogryn/ogryn_helping_hand.md",
@@ -12208,6 +12263,46 @@
       "status": "accepted_with_caveats",
       "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_201_205.json",
       "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_blo_melee.md"
+    },
+    {
+      "id": "ogryn_heavy_hitter_tdr",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_206_210.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_heavy_hitter_tdr.md"
+    },
+    {
+      "id": "ogryn_heavy_hitter_cleave",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_206_210.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_heavy_hitter_cleave.md"
+    },
+    {
+      "id": "ogryn_heavy_hitter_max_stacks_improves_toughness",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_206_210.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_heavy_hitter_max_stacks_improves_toughness.md"
+    },
+    {
+      "id": "ogryn_heavy_hitter_stagger",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_206_210.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_heavy_hitter_stagger.md"
+    },
+    {
+      "id": "ogryn_heavy_hitter_max_stacks_improves_attack_speed",
+      "scope": "Ogryn",
+      "date": "2026-10-04",
+      "status": "accepted_with_caveats",
+      "record": "AI-LOGS/Game Info/releases/1.13.X/skills/english/ogryn_skills_206_210.json",
+      "commit_path": "Game Info/releases/1.13.X/skills/talents/Ogryn/en/ogryn_heavy_hitter_max_stacks_improves_attack_speed.md"
     }
   ],
   "pending_chinese_corrections": [
