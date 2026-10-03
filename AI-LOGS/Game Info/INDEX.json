@@ -1514,6 +1514,14 @@
       "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_stun_immune_and_block_all.json",
       "date": "2026-10-03",
       "storage": "git"
+    },
+    {
+      "id": "releases/1.13.X/skills/english/arbites_adamant_forceful_offensive",
+      "kind": "acceptance",
+      "scope": "releases/1.13.X/skills/english/Arbites",
+      "path": "AI-LOGS/Game Info/releases/1.13.X/skills/english/arbites_adamant_forceful_offensive.json",
+      "date": "2026-10-03",
+      "storage": "git"
     }
   ],
   "pending": [

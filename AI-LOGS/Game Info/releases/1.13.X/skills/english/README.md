@@ -266,3 +266,7 @@ The latest user instruction supersedes earlier tracing and detailed-record requi
 - [Will of the Lex](arbites_adamant_forceful_toughness_regen_per_stack.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
 
 - [Adamant Will](arbites_adamant_forceful_stun_immune_and_block_all.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
+
+Five-item checkpoint (skills 103–107): 1350 seconds (22m 30s), measured between commits 7d957bd2 and 664a1312. 107 accepted skills; 577 mapped files pending (539 mechanisms, 36 class-support, 2 shared). Estimated remaining continuous execution: 40–60h, provisional. Continued without awaiting confirmation.
+
+- [Targets Acquired](arbites_adamant_forceful_offensive.json): existing mechanism translation and independent English judgement; changed Markdown/links checked. Commit is recoverable through the English file history.
