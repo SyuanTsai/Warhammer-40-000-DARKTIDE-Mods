@@ -116,5 +116,6 @@
     }
   ],
   "local_artifacts": "AI-LOGS/Game Info/local/skills-english/competitive-urge-incremental-*",
-  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ally_kills_increase_damage.md"
+  "commit_lookup": "git log --format=%H -- Game Info/releases/1.13.X/skills/talents/Veteran/en/veteran_ally_kills_increase_damage.md",
+  "commit": "8a397e0bd5aafddedef8ede266f2fd0b29b340a7"
 }
