@@ -1,36 +1,20 @@
-# Darktide English dialogues
+# Darktide dialogue archive
 
-Official event dialogue with character portraits and subtitles.
+[開啟分類聊天頁](index.html)
 
-[Open dialogue browser](../index.html)｜[繁體中文](../zh-tw/README.md)
+| 類型 | 群組數 | 閱讀 |
+|---|---:|---|
+| Mission debriefs | 23 | [閱讀](catalog/mission-debrief/001.html) |
+| Fixed cinematic subtitles | 19 | [閱讀](catalog/cinematic/001.html) |
+| Cinematic dialogue and manual subtitles | 109 | [閱讀](catalog/cinematic-dialogue/001.html) |
+| Mission briefings | 34 | [閱讀](catalog/mission-brief/001.html) |
+| Mission vox | 941 | [閱讀](catalog/mission-vox/001.html) |
+| Hub conversations | 239 | [閱讀](catalog/hub-conversation/001.html) |
+| NPC interactions | 78 | [閱讀](catalog/npc-interaction/001.html) |
+| Player conversations | 4412 | [閱讀](catalog/player-conversation/001.html) |
+| Player callouts and replies | 505 | [閱讀](catalog/player-vo/001.html) |
+| Enemy voices | 83 | [閱讀](catalog/enemy-vo/001.html) |
+| Unlinked text candidates | 10 | [閱讀](catalog/unlinked-vo/001.html) |
+| Unlinked subtitles | 14251 | [閱讀](catalog/unlinked-subtitles/001.html) |
 
-## Event types
-
-### Mission debrief
-
-| Event | Speaker | Dialogue |
-|---|---|---|
-| Railroaded | Sergeant Major Morrow | [Read](events/debriefing_01.html) |
-| Purge and Purify | Sergeant Major Morrow | [Read](events/debriefing_02.html) |
-| False Truths | Sergeant Major Morrow | [Read](events/debriefing_03.html) |
-| Enforcer's Siege | Interrogator Rannick | [Read](events/debriefing_04.html) |
-| Quarantine Breach | Sergeant Major Morrow | [Read](events/debriefing_05.html) |
-| Vox Ghosts | Interrogator Rannick | [Read](events/debriefing_06.html) |
-| Pressure Cooker | Sergeant Major Morrow | [Read](events/debriefing_07.html) |
-| Heavy Metal | Hadron Omega-7-7 | [Read](events/debriefing_08.html) |
-| Ice Trap | Hadron Omega-7-7 | [Read](events/debriefing_09.html) |
-| Carnival Nights | Sergeant Major Morrow | [Read](events/debriefing_10.html) |
-
-[Sources](../SOURCE_INDEX.md)｜[Game Info](../../README.md)
-
-## Mission vox
-
-| # | Mission / branch | Speakers | Dialogue |
-|---:|---|---|---|
-| 01 | Clandestium Gloriana: Elevator vox 01 · Hadron | Hadron Omega-7-7 · Swagger | [Read](events/mission_core_elevator_conversation_01_hadron.html) |
-
-## Hub conversations
-
-| # | Conversation | Participants | Dialogue |
-|---:|---|---|---|
-| 01 | Hub conversation 42 | Hadron Omega-7-7 · Flight Lieutenant Masozi · Alice Hallowette | [Read](events/hub_idle_2nd_phase_conversation_fortytwo.html) |
+[來源索引](../SOURCE_INDEX.md)｜[角色與圖示](../SPEAKERS.md)

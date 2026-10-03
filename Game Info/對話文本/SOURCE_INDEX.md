@@ -1,30 +1,20 @@
 # Darktide 對話來源索引
 
-[對話入口](README.md)｜[角色與頭像](SPEAKERS.md)
+[聊天入口](index.html)｜[角色與圖示](SPEAKERS.md)｜[來源涵蓋與缺口](COVERAGE.md)
 
-## 任務結束簡報 / Mission debrief
+依事件類型分頁，每頁最多 50 組。技術 ID、觸發與候選條件保存在逐事件來源 MD。
 
-| 官方事件 | 事件 ID | 英文 | 繁中 | 來源 |
-|---|---|---|---|---|
-| 臨陣磨兵 | `debriefing_01` | [閱讀](en/events/debriefing_01.html) | [閱讀](zh-tw/events/debriefing_01.html) | [來源](source/debriefing_01.md) |
-| 淨化 | `debriefing_02` | [閱讀](en/events/debriefing_02.html) | [閱讀](zh-tw/events/debriefing_02.html) | [來源](source/debriefing_02.md) |
-| 虛假的真相 | `debriefing_03` | [閱讀](en/events/debriefing_03.html) | [閱讀](zh-tw/events/debriefing_03.html) | [來源](source/debriefing_03.md) |
-| 執行者攻堅 | `debriefing_04` | [閱讀](en/events/debriefing_04.html) | [閱讀](zh-tw/events/debriefing_04.html) | [來源](source/debriefing_04.md) |
-| 違反隔離管制 | `debriefing_05` | [閱讀](en/events/debriefing_05.html) | [閱讀](zh-tw/events/debriefing_05.html) | [來源](source/debriefing_05.md) |
-| 幽靈通訊器 | `debriefing_06` | [閱讀](en/events/debriefing_06.html) | [閱讀](zh-tw/events/debriefing_06.html) | [來源](source/debriefing_06.md) |
-| 壓力鍋 | `debriefing_07` | [閱讀](en/events/debriefing_07.html) | [閱讀](zh-tw/events/debriefing_07.html) | [來源](source/debriefing_07.md) |
-| 重金屬 | `debriefing_08` | [閱讀](en/events/debriefing_08.html) | [閱讀](zh-tw/events/debriefing_08.html) | [來源](source/debriefing_08.md) |
-| 冰冷陷阱 | `debriefing_09` | [閱讀](en/events/debriefing_09.html) | [閱讀](zh-tw/events/debriefing_09.html) | [來源](source/debriefing_09.md) |
-| 嘉年華之夜 | `debriefing_10` | [閱讀](en/events/debriefing_10.html) | [閱讀](zh-tw/events/debriefing_10.html) | [來源](source/debriefing_10.md) |
-
-## 任務通訊 / Mission vox
-
-| 編號 | 任務與分支 | 整理 ID | 英文 | 繁中 | 來源 |
-|---:|---|---|---|---|---|
-| 01 | 克蘭岱斯提恩·格洛里亞納：升降梯通訊 01（哈德隆） | `mission_core_elevator_conversation_01_hadron` | [閱讀](en/events/mission_core_elevator_conversation_01_hadron.html) | [閱讀](zh-tw/events/mission_core_elevator_conversation_01_hadron.html) | [來源](source/mission_core_elevator_conversation_01_hadron.md) |
-
-## 艦內閒談 / Hub conversations
-
-| 編號 | 閱讀標題 | 官方規則共用 ID | 英文 | 繁中 | 來源 |
-|---:|---|---|---|---|---|
-| 01 | 艦內閒談 42 | `hub_idle_2nd_phase_conversation_fortytwo` | [閱讀](en/events/hub_idle_2nd_phase_conversation_fortytwo.html) | [閱讀](zh-tw/events/hub_idle_2nd_phase_conversation_fortytwo.html) | [來源](source/hub_idle_2nd_phase_conversation_fortytwo.md) |
+| 類型 | 群組數 | 分頁來源索引 |
+|---|---:|---|
+| 任務結束簡報 / Mission debriefs | 23 | [索引](source-catalog/mission-debrief/001.md) |
+| 固定影片字幕 / Fixed cinematic subtitles | 19 | [索引](source-catalog/cinematic/001.md) |
+| 過場語音與手動字幕 / Cinematic dialogue and manual subtitles | 109 | [索引](source-catalog/cinematic-dialogue/001.md) |
+| 任務簡報 / Mission briefings | 34 | [索引](source-catalog/mission-brief/001.md) |
+| 任務通訊 / Mission vox | 941 | [索引](source-catalog/mission-vox/001.md) |
+| 艦內閒談 / Hub conversations | 239 | [索引](source-catalog/hub-conversation/001.md) |
+| NPC 互動 / NPC interactions | 78 | [索引](source-catalog/npc-interaction/001.md) |
+| 玩家閒談 / Player conversations | 4412 | [索引](source-catalog/player-conversation/001.md) |
+| 玩家呼喊與回應 / Player callouts and replies | 505 | [索引](source-catalog/player-vo/001.md) |
+| 敵方聲音 / Enemy voices | 83 | [索引](source-catalog/enemy-vo/001.md) |
+| 未連結文字候選 / Unlinked text candidates | 10 | [索引](source-catalog/unlinked-vo/001.md) |
+| 未對應事件字幕 / Unlinked subtitles | 14251 | [索引](source-catalog/unlinked-subtitles/001.md) |

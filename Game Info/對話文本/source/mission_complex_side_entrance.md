@@ -1,0 +1,82 @@
+# 任務通訊 · mission complex side entrance · 對話來源
+
+[英文](../en/events/mission_complex_side_entrance.html)｜[繁中](../zh-tw/events/mission_complex_side_entrance.html)
+
+- Release 1.13.1／Steam Build 25606770。
+- Source Code：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
+- 整理群組：`root:dialogues/generated/mission_vo_hm_complex.lua#L715:mission_complex_side_entrance`。
+- 閱讀標題由來源 database、concept、response ID 整理，並非官方 UI 事件名稱。
+- 編號採依賴偏序及來源行號；多根、同層、分支與循環不代表每次播放的時間線。
+- sound_events 是候選池，保留所有 key、profile、slot 與語系記錄；不按文字去重或接成必然連續播放的台詞。
+- 玩家用官方職業圖示＋性格名稱；圖示不是固定人物肖像。未提供官方名稱或肖像的資料不補造。
+
+## 結構
+
+- 回應節點：1；根節點：1；關係：0。
+- Cyclic：False；cross_database：False；unresolved inbound：0。
+
+
+## `mission_complex_side_entrance`
+
+[官方 rule](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/mission_vo_hm_complex.lua#L715-L765)
+
+| context | field | operator | value / args |
+|---|---|---|---|
+| query_context | concept | OP.EQ | `{"4": "mission_info"}` |
+| query_context | trigger_id | OP.EQ | `{"4": "mission_complex_side_entrance"}` |
+| user_context | class_name | OP.SET_INCLUDES | `{}` |
+| faction_memory | mission_complex_side_entrance | OP.EQ | `{"4": 0}` |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/mission_vo_hm_complex_explicator_a.lua#L89-L105)
+- 聲線：`explicator_a`；角色：刑訊員左拉 / Explicator Zola；排版側邊：left。
+- 正式 runtime database：`mission_vo_hm_complex`；原始暫存切分：`mission_vo_hm_complex`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`explicit_speaker_predicates_unresolved`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：4；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_explicator_a__mission_complex_side_entrance_01` | `d8452cac` | 124305 | 124280 | 5.924813 |
+| 2 | `loc_explicator_a__mission_complex_side_entrance_02` | `e918c02b` | 133947 | 133919 | 4.912688 |
+| 3 | `loc_explicator_a__mission_complex_side_entrance_03` | `734d423d` | 65789 | 65776 | 5.018729 |
+| 4 | `loc_explicator_a__mission_complex_side_entrance_04` | `517deb36` | 46533 | 46526 | 4.959438 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/mission_vo_hm_complex_pilot_a.lua#L140-L156)
+- 聲線：`pilot_a`；角色：飛行中尉馬索茲 / Flight Lieutenant Masozi；排版側邊：right。
+- 正式 runtime database：`mission_vo_hm_complex`；原始暫存切分：`mission_vo_hm_complex`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`explicit_speaker_predicates_unresolved`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：4；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_pilot_a__mission_complex_side_entrance_01` | `4782c914` | 40731 | 40726 | 4.988333 |
+| 2 | `loc_pilot_a__mission_complex_side_entrance_02` | `5c5ea405` | 52864 | 52855 | 5.253375 |
+| 3 | `loc_pilot_a__mission_complex_side_entrance_03` | `8c136075` | 80054 | 80039 | 4.647375 |
+| 4 | `loc_pilot_a__mission_complex_side_entrance_04` | `c335caaa` | 112119 | 112095 | 5.26175 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/mission_vo_hm_complex_sergeant_a.lua#L89-L105)
+- 聲線：`sergeant_a`；角色：莫羅軍士長 / Sergeant Major Morrow；排版側邊：left。
+- 正式 runtime database：`mission_vo_hm_complex`；原始暫存切分：`mission_vo_hm_complex`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`explicit_speaker_predicates_unresolved`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：4；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_sergeant_a__mission_complex_side_entrance_01` | `4d4c4e95` | 44093 | 44087 | 4.675875 |
+| 2 | `loc_sergeant_a__mission_complex_side_entrance_02` | `6e157d4c` | 62880 | 62867 | 3.690188 |
+| 3 | `loc_sergeant_a__mission_complex_side_entrance_03` | `59d2e43b` | 51370 | 51362 | 3.410083 |
+| 4 | `loc_sergeant_a__mission_complex_side_entrance_04` | `660b5d79` | 58320 | 58308 | 5.002104 |
+
+## heard_speak 回應關係
+
+| 前句 response | 回應 response | 欄位／operator | 原始 key | 狀態 |
+|---|---|---|---|---|
+
+## 證據限制
+
+頁面是固定來源的文本整理，不保證觸發、角色組成或每次播放相同。字幕缺失、未解析關係、孤立候選及缺 payload 原樣保留。沒有依 key 前綴猜人名、补寫字幕或補出跨事件時間線。尚未逐場遊戲內播放確認。

@@ -1,0 +1,83 @@
+# 任務通訊 · mission station end event conversation two a · 對話來源
+
+[英文](../en/events/mission_station_end_event_conversation_two_a--0002-1.html)｜[繁中](../zh-tw/events/mission_station_end_event_conversation_two_a--0002-1.html)
+
+- Release 1.13.1／Steam Build 25606770。
+- Source Code：`7e662fcda16219d775b84af50322be2e9cd9d62e`。
+- 整理群組：`root:dialogues/generated/mission_vo_km_station.lua#L1111:mission_station_end_event_conversation_two_a`。
+- 閱讀標題由來源 database、concept、response ID 整理，並非官方 UI 事件名稱。
+- 編號採依賴偏序及來源行號；多根、同層、分支與循環不代表每次播放的時間線。
+- sound_events 是候選池，保留所有 key、profile、slot 與語系記錄；不按文字去重或接成必然連續播放的台詞。
+- 玩家用官方職業圖示＋性格名稱；圖示不是固定人物肖像。未提供官方名稱或肖像的資料不補造。
+
+## 結構
+
+- 回應節點：3；根節點：1；關係：2。
+- Cyclic：False；cross_database：False；unresolved inbound：0。
+
+
+## `mission_station_end_event_conversation_two_b`
+
+[官方 rule](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/mission_vo_km_station.lua#L1161-L1212)
+
+| context | field | operator | value / args |
+|---|---|---|---|
+| query_context | concept | OP.EQ | `{"4": "heard_speak"}` |
+| query_context | dialogue_name | OP.SET_INCLUDES | `{}` |
+| user_context | class_name | OP.SET_INCLUDES | `{}` |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/mission_vo_km_station_explicator_a.lua#L112-L128)
+- 聲線：`explicator_a`；角色：刑訊員左拉 / Explicator Zola；排版側邊：left。
+- 正式 runtime database：`mission_vo_km_station`；原始暫存切分：`mission_vo_km_station`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`explicit_speaker_predicates_unresolved`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：4；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_explicator_a__mission_station_end_event_conversation_two_b_01` | `6f71b669` | 63606 | 63593 | 2.671896 |
+| 2 | `loc_explicator_a__mission_station_end_event_conversation_two_b_02` | `f762410b` | 142001 | 141972 | 3.914979 |
+| 3 | `loc_explicator_a__mission_station_end_event_conversation_two_b_03` | `b438a0f8` | 103409 | 103388 | 2.710833 |
+| 4 | `loc_explicator_a__mission_station_end_event_conversation_two_b_04` | `c7bdafa3` | 114819 | 114795 | 3.428938 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/mission_vo_km_station_pilot_a.lua#L112-L128)
+- 聲線：`pilot_a`；角色：飛行中尉馬索茲 / Flight Lieutenant Masozi；排版側邊：right。
+- 正式 runtime database：`mission_vo_km_station`；原始暫存切分：`mission_vo_km_station`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`explicit_speaker_predicates_unresolved`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：4；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_pilot_a__mission_station_end_event_conversation_two_b_01` | `5bdb7273` | 52567 | 52558 | 2.823417 |
+| 2 | `loc_pilot_a__mission_station_end_event_conversation_two_b_02` | `51a4c65f` | 46612 | 46605 | 3.335938 |
+| 3 | `loc_pilot_a__mission_station_end_event_conversation_two_b_03` | `4ff4d12d` | 45642 | 45636 | 3.660229 |
+| 4 | `loc_pilot_a__mission_station_end_event_conversation_two_b_04` | `fb0b51a2` | 144101 | 144071 | 4.199979 |
+
+[官方 payload](https://github.com/Aussiemon/Darktide-Source-Code/blob/7e662fcda16219d775b84af50322be2e9cd9d62e/dialogues/generated/mission_vo_km_station_sergeant_a.lua#L112-L128)
+- 聲線：`sergeant_a`；角色：莫羅軍士長 / Sergeant Major Morrow；排版側邊：left。
+- 正式 runtime database：`mission_vo_km_station`；原始暫存切分：`mission_vo_km_station`。
+- Database 證據：Inventory profile is non-null and resource basename is raw database + "_" + profile; fixed VO cache uses rule-group + voice-template resource naming.。
+- Speaker predicate：`explicit_speaker_predicates_unresolved`；字幕設定：`subtitles_enabled_true`。
+- 原池 sound_events_n：4；randomize_indexes_n：0；weights：`null`。
+- 下列 slot 只表示候選資源順序；duration 是音訊長度，不是字幕起點。
+
+| slot | 字幕 key | hash | en entry_index | zh-tw entry_index | duration 秒 |
+|---:|---|---|---|---|---:|
+| 1 | `loc_sergeant_a__mission_station_end_event_conversation_two_b_01` | `58afb40f` | 50725 | 50717 | 3.473917 |
+| 2 | `loc_sergeant_a__mission_station_end_event_conversation_two_b_02` | `8a082f00` | 78845 | 78830 | 4.237625 |
+| 3 | `loc_sergeant_a__mission_station_end_event_conversation_two_b_03` | `96ebbff4` | 86399 | 86382 | 3.618771 |
+| 4 | `loc_sergeant_a__mission_station_end_event_conversation_two_b_04` | `59518599` | 51089 | 51081 | 3.659333 |
+
+## heard_speak 回應關係
+
+| 前句 response | 回應 response | 欄位／operator | 原始 key | 狀態 |
+|---|---|---|---|---|
+| `mission_station_end_event_conversation_two_a` | `mission_station_end_event_conversation_two_b` | dialogue_name / OP.SET_INCLUDES | `mission_station_end_event_conversation_two_a` | resolved |
+| `mission_station_end_event_conversation_two_b` | `mission_station_end_event_conversation_two_c` | dialogue_name / OP.SET_INCLUDES | `mission_station_end_event_conversation_two_b` | resolved |
+
+## 證據限制
+
+頁面是固定來源的文本整理，不保證觸發、角色組成或每次播放相同。字幕缺失、未解析關係、孤立候選及缺 payload 原樣保留。沒有依 key 前綴猜人名、补寫字幕或補出跨事件時間線。尚未逐場遊戲內播放確認。
